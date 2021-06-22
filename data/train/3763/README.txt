@@ -1,0 +1,1 @@
+Replace ellipsis with `pass`.
