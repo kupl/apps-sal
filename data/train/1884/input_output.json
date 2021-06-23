@@ -1,0 +1,1 @@
+{"fn_name": "findLadders", "inputs": [["hit","cog",["hot","dot","dog","lot","log","cog"]], ["hit","cog",["hot","dot","dog","lot","log"]]], "outputs": [[["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]], [[]]]}
