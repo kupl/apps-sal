@@ -1,0 +1,1 @@
+{"fn_name": "solveEquation", "inputs": [["x+5-3+x=6+x-2"], ["x=x"], ["2x=x"], ["2x+3x-6x=x+2"], ["x=x+2"]], "outputs": [["x=2"], ["Infinite solutions"], ["x=0"], ["x=-1"], ["No solution"]]}
