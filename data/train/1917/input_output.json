@@ -1,0 +1,1 @@
+{"fn_name": "countOfAtoms", "inputs": [["H2O"], ["Mg(OH)2"], ["K4(ON(SO3)2)2"]], "outputs": [["H2O"], ["H2MgO2"], ["K4N2O14S4"]]}

@@ -1,0 +1,1 @@
+{"fn_name": "findNumOfValidWords", "inputs": [[["aaaa","asas","able","ability","actt","actor","access"],["aboveyz","abrodyz","abslute","absoryz","actresz","gaswxyz"]]], "outputs": [[[1,1,3,2,4,0]]]}
