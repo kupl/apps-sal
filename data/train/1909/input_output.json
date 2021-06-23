@@ -1,0 +1,1 @@
+{"fn_name": "largest1BorderedSquare", "inputs": [[[1,1,1],[1,0,1],[1,1,1]], [[[1,1,0,0]]]], "outputs": [[9], [1]]}
