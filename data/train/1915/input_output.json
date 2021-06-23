@@ -1,0 +1,1 @@
+{"fn_name": "movesToStamp", "inputs": [["abc","ababc"], ["abca","aabcaca"]], "outputs": [[[0,2]], [[3,0,1]]]}
