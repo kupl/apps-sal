@@ -1,1 +1,1 @@
-{"fn_name": "smallestStringWithSwaps", "inputs": [["dcab"[[0,3],[1,2]]], ["dcab",[[0,3],[1,2],[0,2]]], ["cba",[[0,1],[1,2]]]], "outputs": [["bacd"], ["abcd"], ["abc"]]}
+{"fn_name": "smallestStringWithSwaps", "inputs": [["dcab",[[0,3],[1,2]]], ["dcab",[[0,3],[1,2],[0,2]]], ["cba",[[0,1],[1,2]]]], "outputs": [["bacd"], ["abcd"], ["abc"]]}
