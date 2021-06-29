@@ -1,1 +1,1 @@
-{"fn_name": "dbl_linear", "inputs": [], "outputs": []}
+{"fn_name": "dbl_linear", "inputs": [[10]], "outputs": [[20]]}
