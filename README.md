@@ -6,5 +6,5 @@ The original contents can be found in [here](https://github.com/hendrycks/apps).
 We (SAL, Software Analysis Laboratory) refined the original dataset.
 All the modified data have `README.txt` in directory.
 The major modifications are as follows:
-* Make missing `input_output.json`.
+* Fill missing `input_output.json`.
 * Use ellipsis (`...`) as placeholder in `starter_code.py`.
