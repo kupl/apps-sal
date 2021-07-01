@@ -1,0 +1,1 @@
+{"fn_name": "removeSubfolders", "inputs": [[["/a","/a/b","/c/d","/c/d/e","/c/f"]], [["/a","/a/b/c","/a/b/d"]], [["/a/b/c","/a/b/ca","/a/b/d"]]], "outputs": [[["/a","/c/d","/c/f"]], [["/a"]], [["/a/b/c","/a/b/ca","/a/b/d"]]]}

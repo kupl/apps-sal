@@ -1,0 +1,1 @@
+{"fn_name": "shortestCompletingWord", "inputs": [["1s3 PSt",["step", "steps", "stripe", "stepple"]], ["1s3 456",["looks", "pest", "stew", "show"]]], "outputs": [["steps"], ["pest"]]}

@@ -1,0 +1,1 @@
+{"fn_name": "pyramidTransition", "inputs": [["XYZ",["XYD", "YZE", "DEA", "FFF"]], ["XXYX",["XXX", "XXY", "XYX", "XYY", "YXZ"]]], "outputs": [["True"], ["False"]]}

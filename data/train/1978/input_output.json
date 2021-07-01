@@ -1,0 +1,1 @@
+{"fn_name": "findAndReplacePattern", "inputs": [[["abc","deq","mee","aqq","dkd","ccc"],"abb"]], "outputs": [[["mee","aqq"]]]}
