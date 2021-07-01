@@ -1,14 +1,11 @@
 from typing import List
-import random
 
 from apps_sal.dataelement import DataElement
 
 class DataIterator:
 
-    def __init__(self, data: List[DataElement], shuffle: bool=False) -> None:
+    def __init__(self, data: List[DataElement]) -> None:
         self.data: List[DataElement] = list(data)
-        if shuffle:
-            random.shuffle(self.data)
         self.index: int = 0
 
     def __len__(self) -> int:

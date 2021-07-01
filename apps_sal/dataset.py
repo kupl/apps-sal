@@ -9,17 +9,16 @@ from apps_sal.dataiterator import DataIterator
 
 class Dataset:
 
-    def __init__(self, path: Union[str, Path], shuffle: bool=False) -> None:
+    def __init__(self, path: Union[str, Path]) -> None:
         self.path: Path = Path(path)
         self.data: List[DataElement] = list(map(DataElement, self.path.glob('*')))
-        self.shuffle: bool = shuffle
         self.index: int = 0
 
     def __len__(self) -> int:
         return len(self.data)
 
     def __iter__(self) -> DataIterator:
-        return DataIterator(self.data, self.shuffle)
+        return DataIterator(self.data)
 
     def __repr__(self) -> str:
         return f'Dataset("{self.path}")'
