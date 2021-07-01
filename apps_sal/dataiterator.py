@@ -12,10 +12,10 @@ class DataIterator:
         self.index: int = 0
 
     def __len__(self) -> int:
-        return len(self.list)
+        return len(self.data)
 
     def __next__(self) -> DataElement:
-        if self.index >= len(self.list):
+        if self.index >= len(self.data):
             raise StopIteration
         current = self.data[self.index]
         self.index += 1
