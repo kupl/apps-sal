@@ -38,3 +38,7 @@ class DataElement:
 
     def __repr__(self) -> str:
         return f'DataElement("{self.path}")'
+
+    def score(self, program: str) -> float:
+        raise NotImplementedError(
+            'app_sal.dataelement.DataElement.score is not implemeted.')
