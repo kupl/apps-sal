@@ -3,6 +3,8 @@ from typing import Dict
 from typing import List
 from typing import Union
 import json
+import logging
+
 
 class DataElement:
 
@@ -17,11 +19,16 @@ class DataElement:
         # Load metadata
         with (self.path / 'metadata.json').open() as f:
             self.metadata: Dict[str, str] = json.load(f)
-        
+
         # Load input output examples
-        with (self.path / 'input_output.json').open() as f:
-            self.input_output: Dict[str, str] = json.load(f)
-        
+        self.input_output: Dict[str, str] = {}
+        input_output_json = self.path / 'input_output.json'
+        if input_output_json.exists():
+            with input_output_json.open() as f:
+                self.input_output = json.load(f)
+        else:
+            logging.warning(f'No such file: "{input_output_json}"')
+
         # Load solutions
         self.solutions: List[str] = []
         solutions_json = self.path / 'solutions.json'
