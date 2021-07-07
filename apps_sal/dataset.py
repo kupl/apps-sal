@@ -23,8 +23,18 @@ class Dataset:
         return DataIterator(self.data)
 
     def __repr__(self) -> str:
-        return f'Dataset("{self.path}")'
+        return f'Dataset("{self.path.name}")'
 
 
 def load_dataset(path: Union[str, Path]) -> Dataset:
     return Dataset(path)
+
+
+def load_train_dataset() -> Dataset:
+    filepath = Path(__file__).parent
+    return load_dataset(filepath / 'data/train')
+
+
+def load_test_dataset() -> Dataset:
+    filepath = Path(__file__).parent
+    return load_dataset(filepath / 'data/test')
