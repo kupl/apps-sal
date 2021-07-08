@@ -2,6 +2,7 @@ from typing import List
 
 from apps_sal.dataelement import DataElement
 
+
 class DataIterator:
 
     def __init__(self, data: List[DataElement]) -> None:
