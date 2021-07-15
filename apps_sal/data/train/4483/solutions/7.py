@@ -1,0 +1,2 @@
+FRUIT_NAMES = {'blueberry', 'pear', 'durian', 'ginkgo', 'peach', 'apple', 'cantaloupe', 'fig', 'mangosteen', 'watermelon', 'pineapple', 'cherry', 'pomegranate', 'carambola', 'hawthorn', 'persimmon', 'apricot', 'plum', 'litchi', 'mango', 'jujube', 'lemon', 'orange', 'tomato', 'banana', 'coconut', 'grape', 'pitaya'}
+cut_fruits=lambda f,c=__import__('math').ceil,l=[]:l.clear()or f and[l.extend([e[:c(len(e)/2)],e[c(len(e)/2):]])if e in FRUIT_NAMES else l.append(e)for e in f][0]or l

@@ -1,0 +1,2 @@
+# It is possible in one short line without hard coding! Have a nice day ;)
+HQ9 = lambda c, b=(lambda x: "{} bottle{} of beer".format(x if x > 0 else "no more", "s" if x!=1 else "")): {'H':'Hello World!', 'Q':'Q', '9':"".join("{0}{2}, {1} on the wall.\n".format("{0} on the wall, {0}.\n".format(b(i)).capitalize(), b(i-1) if i else b(99), "Take one down and pass it around" if i else "Go to the store and buy some more") for i in range(99, -1, -1))[:-1]}.get(c, None)

@@ -1,0 +1,5 @@
+def get_size(w,h,d):
+    area = (2*(h*w)+2*(d*h)+2*(d*w))
+    volume = w*h*d
+    L = [area, volume]
+    return L

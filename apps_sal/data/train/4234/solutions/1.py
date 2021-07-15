@@ -1,0 +1,33 @@
+def num_blocks(w, l, h):
+    return w*l*h + (w+l) * (h-1)*h//2 + (h-1)*h*(2*h-1)//6
+    
+"""
+For those who wonder:
+
+first layer being of size w*l, the total number of blocks, SB, is:
+
+       SB = w*l + (w+1)*(l+1) + (w+2)*(l+2) + ... + (w+h-1)*(l+h-1)
+
+So:    SB = " Sum from i=0 to h-1 of (w+i)*(l+i) "
+
+Let's use the following notation for this:  SB = S(i)[ (w+i)*(l+i) ]
+
+Then:
+       SB = S(i)[ w*l + i(w+l) + i**2 ]
+          
+          = S(i)[ w*l ] + S(i)[ i(w+l) ] + S(i)[ i**2 ]
+          
+          =    w*l*h    + (w+l) * S(i)[ i ] + S(i)[ i**2 ]
+
+
+Here, you find two classic sums of sequences (see wiki or equivalent for the demonstrations):
+
+    S(i)[ i ]    = sum of all integers from 1 to x = x*(x+1) // 2
+    S(i)[ i**2 ] = sum of all squares of integers from 1 to x = x*(x+1)*(2*x+1) // 6
+
+Since on our side we do the sum from 0 (which doesn't affect at all the result)
+to h-1 in place of x, we get:
+
+        SB = w*l*h + (w+l) * (h-1)*h//2 + (h-1)*h*(2*h-1)//6
+
+"""

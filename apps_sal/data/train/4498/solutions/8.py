@@ -1,0 +1,15 @@
+def solution(roman):
+    if roman == "": return 0
+    if roman[:2] == "IV": return 4 + solution(roman[2:])
+    if roman[:2] == "IX": return 9 + solution(roman[2:])
+    if roman[:2] == "XL": return 40 + solution(roman[2:])
+    if roman[:2] == "XC": return 90 + solution(roman[2:])
+    if roman[:2] == "CD": return 400 + solution(roman[2:])
+    if roman[:2] == "CM": return 900 + solution(roman[2:])
+    if roman[0] == "I": return 1 + solution(roman[1:])
+    if roman[0] == "V": return 5 + solution(roman[1:])
+    if roman[0] == "X": return 10 + solution(roman[1:])
+    if roman[0] == "L": return 50 + solution(roman[1:])
+    if roman[0] == "C": return 100 + solution(roman[1:])
+    if roman[0] == "D": return 500 + solution(roman[1:])
+    if roman[0] == "M": return 1000 + solution(roman[1:])
