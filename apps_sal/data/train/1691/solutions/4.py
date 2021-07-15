@@ -1,0 +1,68 @@
+import sys
+##from random import randint
+n,m,c = [int(i) for i in input().split()]
+matrix = [[0]*(m+1) for i in range(n+1)]
+cc = 1
+nn= 1
+mm = 1
+for nn in range(1,n+1) :
+    for mm in range(1,m+1) :
+        if cc <= c :
+            print("2", end=' ')
+            print(nn,nn,mm,mm)
+            sys.stdout.flush()
+            matrix[nn][mm] = int(input())
+            cc += 1
+        else :
+            break
+    if cc > c :
+        break
+###print matrix
+
+for nnn in range(nn,n+1) :
+    for mmm in range(mm,m+1) :
+        if c < 499990 :
+            x = 1
+            y = 25
+            z = 51
+            while matrix[nnn][mmm] == 0 :
+                if abs(x-y) == 1 :
+                    print("1", end=' ')
+                    print(nnn,nnn,mmm,mmm,x,x)
+                    sys.stdout.flush()
+                    c += 1
+                    value = int(input())
+                    if value == 1 :
+                        matrix[nnn][mmm] = x
+                    else :
+                        matrix[nnn][mmm] = y
+                    break
+                else :
+                    print("1", end=' ')
+                    print(nnn,nnn,mmm,mmm,x,y)
+                    sys.stdout.flush()
+                    c += 1
+                    value = int(input())
+                    if value == 1 :
+                        z = y
+                        y = (x+y)/2
+                    else :
+                        x = y
+                        y = (y+z)/2 
+              
+        else :
+            break
+        
+        
+    if c >= 499980 :
+        break
+print("3")
+sys.stdout.flush()
+for nn in range(1,n+1) :
+    for mm in range(1,m+1) :
+        if matrix[nn][mm] < 1 or matrix[nn][mm] > 50 :
+            print("25", end=' ')
+        else :
+            print(matrix[nn][mm], end=' ')
+    sys.stdout.flush()
+    print()

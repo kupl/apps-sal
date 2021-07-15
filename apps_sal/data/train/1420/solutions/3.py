@@ -1,0 +1,58 @@
+import math
+
+
+def find_interleavings_2(a, b, i, j):
+ try:
+  return lev_memo[(i, j)]
+ except KeyError:
+  pass
+ to_return = []
+ if i == len(a) and j == len(b):
+  return [[]]
+ elif i == len(a):
+  for leaf in find_interleavings_2(a, b, i, j + 1):
+   to_return.append([b[j]] + leaf)
+ elif j == len(b):
+  for leaf in find_interleavings_2(a, b, i + 1, j):
+   to_return.append([a[i]] + leaf)
+ else:
+  for leaf in find_interleavings_2(a, b, i, j + 1):
+   to_return.append([b[j]] + leaf)
+  for leaf in find_interleavings_2(a, b, i + 1, j):
+   to_return.append([a[i]] + leaf)
+ lev_memo[(i, j)] = to_return
+ return to_return
+
+
+for _ in range(int(input())):
+ n, m, k = list(map(int, input().split(" ")))
+ a = list(map(int, input().split(" ")))
+ b = list(map(int, input().split(" ")))
+ res = 0
+
+ lev_memo = dict()
+ ils = find_interleavings_2(a, b, 0, 0)
+ ils = [tuple(x) for x in ils]
+ # print(ils)
+ memo = dict()
+ for c in ils:
+  try:
+   res += memo[c]
+   continue
+  except KeyError:
+   pass
+  num_blocks = 0
+  prev = math.inf
+  for i in c:
+   if i != prev:
+    num_blocks += 1
+   prev = i
+  # num_blocks += 1
+  if num_blocks == k:
+   res += 1
+   memo[c] = 1
+  else:
+   memo[c] = 0
+
+ print(res)
+

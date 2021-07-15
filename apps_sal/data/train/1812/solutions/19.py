@@ -1,0 +1,22 @@
+class MajorityChecker:
+    def __init__(self, arr: List[int]):
+        self.pos = collections.defaultdict(list) 
+        for k, v in enumerate(arr):
+            self.pos[v].append(k)
+        self.runtime = 20
+        self.a = arr
+
+    def query(self, left: int, right: int, threshold: int) -> int:
+    
+        for i in range(self.runtime):
+           # //calculate the frequence of a randomly picked value in the given range
+            val = self.a[random.randint(left, right)]
+            ll = bisect.bisect_left(self.pos[val], left)
+            rr = bisect.bisect_right(self.pos[val], right)
+            if (rr-ll) >= threshold:
+                return val
+        return -1
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)
+
