@@ -1,0 +1,10 @@
+class Solution:
+    def minDeletionSize(self, A: List[str]) -> int:
+      n = len(A[0])
+      dp = [1 for _ in range(n)]
+      for i in range(1, n):
+        for j in range(i):
+          if all(a[j] <= a[i] for a in A):
+            dp[i] = max(dp[i], dp[j] + 1)
+      
+      return n - max(dp)

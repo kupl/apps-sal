@@ -1,0 +1,28 @@
+class Solution:
+    def maxUniqueSplit(self, s: str) -> int:
+        N = len(s)
+        
+        res = 0
+        for mask in itertools.product('10', repeat=N-1):
+            mask = list(mask) + ['1']
+            substr = set()
+            begin = 0
+            i = 0
+            valid = True
+            # print('mask', mask)
+            while True:
+                try:
+                    idx = mask.index('1', begin)
+                    # print('idx', idx, i, s[i:idx+1])
+                    begin = idx+1
+                    if s[i:idx+1] in substr:
+                        valid = False
+                        break
+                    substr.add(s[i:idx+1])
+                    i = idx+1
+                except ValueError:
+                    break
+            if valid:
+                res = max(res, mask.count('1'))
+            # print('substr', substr, valid)
+        return res

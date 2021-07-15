@@ -1,0 +1,12 @@
+class Solution:
+    def lastSubstring(self, s: str) -> str:
+        if len(s) == 1:
+            return s
+        res = s
+        for i in range(1,len(s)):
+            if s[i:] > res:
+                res = s[i:]
+        return res
+            
+        
+

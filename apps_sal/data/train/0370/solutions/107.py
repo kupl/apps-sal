@@ -1,0 +1,98 @@
+def get_primes(max_num):
+    return []
+#     primes = []
+#     possible_primes = [True for _ in range(max_num + 1)]
+#     value = 2
+#     while value <= max_num:
+#         if possible_primes[value]:
+#             primes.append(value)
+#             for multiplier in range(2, max_num // value + 1):
+#                 possible_primes[multiplier * value] = False
+                
+#         value += 1
+        
+#     return primes
+
+
+def get_prime_factors(num, primes):
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return list(set(get_prime_factors(num // i, primes) + [i]))
+                
+            
+    return [num]
+#     if num == 1:
+#         return [1]
+    
+#     prime_factors = set()
+    
+#     for prime in primes:
+#         if num < prime:
+#             break
+#         while num % prime == 0:
+#             num = num // prime
+#             prime_factors.add(prime)
+            
+#     return list(prime_factors)
+
+
+class DisjointSet:
+    def __init__(self, primes):
+        self.primes = primes
+        self.prime_parents = {}
+        self.parent_to_count = {}
+        
+    def get_parent(self, prime):
+        if prime not in self.prime_parents:
+            self.prime_parents[prime] = -1
+            return prime
+        
+        current = prime
+        while self.prime_parents[current] > 0:
+            current = self.prime_parents[current]
+            
+        return current
+    
+    def join(self, left, right):
+        left_parent = self.get_parent(left)
+        right_parent = self.get_parent(right)
+
+        if left_parent == right_parent:
+            return
+        
+        if self.prime_parents[left_parent] < self.prime_parents[right_parent]:
+            larger = left_parent
+            smaller = right_parent
+        else:
+            larger = right_parent
+            smaller = left_parent
+            
+        self.prime_parents[larger] += self.prime_parents[smaller]
+        self.parent_to_count[larger] = self.parent_to_count.get(larger, 0) + self.parent_to_count.get(smaller, 0)
+        self.prime_parents[smaller] = larger
+            
+    
+    def add(self, val):
+        prime_factors = get_prime_factors(val, self.primes)
+        for l, r in zip(prime_factors, prime_factors[1:]):
+            self.join(l, r)
+            
+        parent = self.get_parent(prime_factors[0])
+        self.parent_to_count[parent] = self.parent_to_count.get(parent, 0) + 1
+           
+
+    
+    def get_largest_set_size(self):
+        return max(self.parent_to_count.values())
+    
+
+class Solution:
+    def largestComponentSize(self, A: List[int]) -> int:
+        max_val = max(A)
+        primes = get_primes(max_val)
+        
+        dj_set = DisjointSet(primes)
+        for val in A:
+            dj_set.add(val)
+            
+        return dj_set.get_largest_set_size()
