@@ -1,0 +1,1 @@
+word_mesh=lambda a,f=(lambda c,d,h=[]:h.clear()or[h.extend(d[:i]for i in range(len(c))if c.endswith(d[:i]))]*0 or sorted(h,key=len)[-1]),g=[]:g.clear()or g.extend(f(x,y)for x,y in zip(a,a[1:]))or(''.join(g)if '' not in g else 'failed to mesh') 

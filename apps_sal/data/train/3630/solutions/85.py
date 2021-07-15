@@ -1,0 +1,9 @@
+def arithmetic(a, b, operator):
+    if 'add' == operator:
+        return a + b
+    if 'subtract' == operator:
+        return a - b
+    if 'multiply' == operator:
+        return a * b
+    if 'divide' == operator:
+        return a / b

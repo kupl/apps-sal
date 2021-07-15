@@ -1,0 +1,11 @@
+def grader(score):
+    if 0.9 <= score <= 1:
+        return 'A'
+    elif 0.8 <= score < 0.9:
+        return 'B'
+    elif 0.7 <= score < 0.8:
+        return 'C'
+    elif 0.6 <= score < 0.7:
+        return 'D'
+    elif score > 1 or score < 0.6:
+        return 'F'

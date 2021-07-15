@@ -1,0 +1,1 @@
+calculate_tip = lambda a, r, t={'excellent': .20, 'great': .15, 'good': .10, 'poor': .05, 'terrible': 0}, m=__import__('math'): m.ceil(a * t[r.lower()]) if r.lower() in t.keys() else 'Rating not recognised'

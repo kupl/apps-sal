@@ -1,0 +1,1 @@
+square=lambda n:1<<n-1

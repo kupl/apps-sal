@@ -1,0 +1,2 @@
+quotable = '{} said: "{}"'.format
+

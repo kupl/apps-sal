@@ -1,0 +1,1 @@
+alternateCase = str.swapcase

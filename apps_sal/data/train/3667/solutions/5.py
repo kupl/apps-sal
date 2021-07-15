@@ -1,0 +1,1 @@
+from re import findall; from functools import reduce; mid_endian=lambda n: reduce(lambda a,b: b[1]+a if b[0]%2 else a+b[1], enumerate(findall(r".{2}", (lambda h: ("0" if len(h)%2 else "")+h)(hex(n)[2:].upper()))), "")
