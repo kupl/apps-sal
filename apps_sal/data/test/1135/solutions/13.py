@@ -1,0 +1,18 @@
+from collections import defaultdict
+import sys, os, math
+
+def __starting_point():
+    #n, m = list(map(int, input().split()))
+    n = int(input())
+    s = input()
+    ans = ""
+    if len(s) % 2 == 1:
+        ans += s[0]
+        s = s[1:]
+    for i in range(len(s)):
+        if i % 2 == 0:
+            ans = s[i] + ans
+        else:
+            ans = ans + s[i]
+    print(ans)
+__starting_point()

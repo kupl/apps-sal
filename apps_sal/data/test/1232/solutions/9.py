@@ -1,0 +1,7 @@
+na,nb=map(int,input().split())
+k,m=map(int,input().split())
+nas=map(int,input().split())
+nbs=map(int,input().split())
+nas=list(sorted(nas))
+nbs=list(sorted(nbs))
+print("YES" if nas[k-1]<nbs[nb-1-(m-1)] else "NO")

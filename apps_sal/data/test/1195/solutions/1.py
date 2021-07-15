@@ -1,0 +1,5 @@
+kk=lambda:map(int,input().split())
+k2=lambda:map(lambda x:int(x)-1, input().split())
+ll=lambda:list(kk())
+n, ls = int(input()), ll()
+print(2 + (ls[2] ^ min(ls)))

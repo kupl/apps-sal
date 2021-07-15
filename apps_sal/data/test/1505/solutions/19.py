@@ -1,0 +1,24 @@
+import math
+
+
+ln = input().split(" ")
+px = int(ln[0])
+py = int(ln[1])
+vx = int(ln[2])
+vy = int(ln[3])
+a = int(ln[4])
+b = int(ln[5])
+c = int(ln[6])
+d = int(ln[7])
+
+x_dir = vx / math.sqrt(vx ** 2 + vy ** 2)
+y_dir = vy / math.sqrt(vx ** 2 + vy ** 2)
+
+print(px + b * x_dir, py + b * y_dir)
+print(px - a / 2 * y_dir, py + a / 2 * x_dir)
+print(px - c / 2 * y_dir, py + c / 2 * x_dir)
+print(px - c / 2 * y_dir - d * x_dir, py + c / 2 * x_dir - d * y_dir)
+print(px + c / 2 * y_dir - d * x_dir, py - c / 2 * x_dir - d * y_dir)
+print(px + c / 2 * y_dir, py - c / 2 * x_dir)
+print(px + a / 2 * y_dir, py - a / 2 * x_dir)
+

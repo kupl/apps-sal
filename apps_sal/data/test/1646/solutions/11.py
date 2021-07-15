@@ -1,0 +1,5 @@
+n = int(input())
+s = input()
+z = s.count('0')
+o = s.count('1')
+print('1' * min(1, o) + '0' * z)

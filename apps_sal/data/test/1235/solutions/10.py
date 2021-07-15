@@ -1,0 +1,7 @@
+_=input()
+a=list(map(int,input().split()))
+_=input()
+b=list(map(int,input().split()))
+a.sort()
+b.sort()
+print(a[-1],b[-1])

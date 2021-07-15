@@ -1,0 +1,9 @@
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+d = list(map(lambda x, y: x-y, a, b))
+d.sort()
+kk = sum([x < 0 for x in d])
+kk = max(k, kk)
+print(sum(b) + sum(d[:kk]))      
+

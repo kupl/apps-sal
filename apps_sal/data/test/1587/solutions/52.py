@@ -1,0 +1,5 @@
+N=int(input())
+c=input()
+R=c.count('R')
+RR=c[0:R].count('R')
+print(min(R-RR,R,N-R))

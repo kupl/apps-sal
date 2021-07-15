@@ -1,0 +1,7 @@
+S = input()
+N = len(S)
+print(3)
+print(f"L {2}")
+print(f"R {2}")
+print(f"R {2*N-1}")
+

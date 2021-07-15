@@ -1,0 +1,39 @@
+import sys
+
+# import numpy as np
+# from numba import njit
+#
+# read = sys.stdin.read
+readline = sys.stdin.readline
+
+
+# readlines = sys.stdin.readlines
+
+
+def solve(n, x, m):
+    a = [x]
+    a_set = {x}
+    ai = x
+    for _ in range(m):
+        ai = ai ** 2 % m
+        if ai in a_set:
+            start = a.index(ai)
+            loop = a[start:]
+            lall = len(a)
+            lloop = len(loop)
+            break
+        else:
+            a.append(ai)
+            a_set.add(ai)
+
+    if n - 1 <= lall:
+        ans = sum(a[:n])
+    else:
+        q, r = divmod(n - lall, lloop)
+        ans = sum(a) + sum(loop) * q + sum(loop[:r])
+
+    return ans
+
+
+n, x, m = map(int, readline().split())
+print(solve(n, x, m))

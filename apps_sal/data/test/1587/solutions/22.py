@@ -1,0 +1,5 @@
+n=int(input())
+S=input()
+c=S.count("R")
+s=S[:c].count("R")
+print(c-s)
