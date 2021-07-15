@@ -1,6 +1,6 @@
 from pathlib import Path
 from typing import Dict
-from typing import List
+from typing import Iterable
 from typing import Union
 import json
 import logging
@@ -30,11 +30,11 @@ class DataElement:
             logging.warning(f'No such file: "{input_output_json}"')
 
         # Load solutions
-        self.solutions: List[str] = []
-        solutions_json = self.path / 'solutions.json'
-        if solutions_json.exists():
-            with solutions_json.open() as f:
-                self.solutions = json.load(f)
+        self.solutions: Iterable[str] = []
+        solutions_dir = self.path / 'solutions'
+        if solutions_dir.exists():
+            self.solutions = map(lambda py: py.read_text(),
+                                 solutions_dir.glob('*'))
 
     def __repr__(self) -> str:
         return f'DataElement("{self.path}")'
