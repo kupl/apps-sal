@@ -1,0 +1,9 @@
+n = int(input())
+arr = list(int(x) for x in input().split(' '))
+mi = min(arr)
+ma = max(arr)
+arr.remove(mi)
+arr.remove(ma)
+arr.sort()
+print(' '.join(map(str,[ma] + arr + [mi])))
+

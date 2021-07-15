@@ -1,0 +1,3 @@
+input()
+print(25)
+

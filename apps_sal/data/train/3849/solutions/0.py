@@ -1,0 +1,1 @@
+spacify = " ".join

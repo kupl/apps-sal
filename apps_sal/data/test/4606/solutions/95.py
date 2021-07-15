@@ -1,0 +1,2 @@
+print(("ABC"+input()))
+

@@ -1,0 +1,5 @@
+A = input()
+B = input()
+candidate = set(('1', '2', '3'))
+exclude = set((A, B))
+print((candidate - exclude).pop())

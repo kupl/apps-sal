@@ -1,0 +1,17 @@
+N = int(input())
+T = ("3","5","7")
+
+from collections import deque
+que = deque(list(T))
+
+ans = 0
+while que:
+  num = que.pop()
+  if int(num) > N:
+    continue
+  if len(set(num)) == 3:
+    ans += 1
+  for t in T:
+    que.append(num + t)
+
+print(ans)

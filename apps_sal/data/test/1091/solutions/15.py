@@ -1,0 +1,5 @@
+n = int(input())
+a = list(map(int, input().split()))
+p = a.index(max(a))
+a.pop(p)
+print(p+1, max(a))

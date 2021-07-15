@@ -1,0 +1,13 @@
+N = int(input())
+
+S = [input() for i in range(N)]
+
+c0 = (S.count("AC"))
+c1 = (S.count("WA"))
+c2 = (S.count("TLE"))
+c3 = (S.count("RE"))
+
+print("AC x " + str(c0))
+print("WA x " + str(c1))
+print("TLE x " + str(c2))
+print("RE x " + str(c3))

@@ -1,0 +1,5 @@
+n = int(input())
+d = list(map(int, input().split()))
+l = sorted(d)
+u = int(n/2)
+print(l[u]-l[u-1])

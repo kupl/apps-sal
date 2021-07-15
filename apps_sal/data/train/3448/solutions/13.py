@@ -1,0 +1,1 @@
+f = lambda n: n * (n + 1) / 2 if type(n) is int and n > 0 else None

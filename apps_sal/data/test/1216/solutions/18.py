@@ -1,0 +1,11 @@
+import re
+n = input()
+s = input()
+s = re.sub(r"[a]+", "a", s)
+s = re.sub(r"[o]{3,}", "o", s)
+s = re.sub(r"[e]{3,}", "e", s)
+s = re.sub(r"[u]+", "u", s)
+s = re.sub(r"[y]+", "y", s)
+s = re.sub(r"[i]+", "i", s)
+print(s);
+

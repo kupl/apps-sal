@@ -1,0 +1,7 @@
+n,m,X,Y=map(int,input().split())
+x=list(map(int,input().split()))
+y=list(map(int,input().split()))
+if min(Y,min(y))-max(X,max(x))>=1:
+    print("No War")
+else:
+    print("War")

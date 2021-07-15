@@ -1,0 +1,7 @@
+n, m, k = list(map(int, input().split()))
+A = sorted(map(int, input().split()))
+a, b = A[-1], A[-2]
+time = m // (k + 1)
+ans = time * (a * k + b)
+print(ans + a * (m % (k + 1)))
+

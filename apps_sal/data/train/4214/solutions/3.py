@@ -1,0 +1,1 @@
+spin_solve=lambda s:' '.join([[[[i,'0'][len(i)==1],i.upper()][len(i)-(i[-1].isalpha()^1)==2or i[-1]==','],i[:len(i)if i[-1].isalpha()else-1][::-1]+[i[-1],''][i[-1].isalpha()]][len(i)-(i[-1].isalpha()^1)>6or i.lower().count('t')>1] for i in s.split()])

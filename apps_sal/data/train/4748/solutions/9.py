@@ -1,0 +1,1 @@
+insert_dash2=lambda x:''.join([str(x)[i]+'-'if int(str(x)[i])%2and int(str(x)[i+1])%2else str(x)[i]+'*'if not int(str(x)[i])%2and not int(str(x)[i+1])%2and'0'not in[str(x)[i+1],str(x)[i]]else str(x)[i]for i in range(len(str(x))-1)])+str(x)[-1]

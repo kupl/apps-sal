@@ -1,0 +1,8 @@
+n,k = list(map(int, input().split()))
+ar = list(map(int, input().split()))
+ar2 = sorted(ar)
+ar3 = sorted(list(enumerate(ar)), key=lambda pair: pair[1])
+x = max(i for i in range(len(ar2) + 1) if sum(ar2[:i]) <= k)
+print (x)
+print(" ".join([str(pair[0] + 1) for pair in ar3[:x]]))
+

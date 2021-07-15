@@ -1,0 +1,5 @@
+n = int(input())
+v = list(map(int, input().split()))
+m = max(v)
+result = m * n - sum(v)
+print(result)

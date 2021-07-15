@@ -1,0 +1,5 @@
+n,k=input().strip().split(' ')
+n,k=(int(n),int(k))
+l=list(map(int,input().strip().split(' ')))
+l.sort()
+print(sum(l[:min(k,n)]))

@@ -1,0 +1,10 @@
+a=int(input())
+b=int(input())
+
+diff=max(a-b,b-a)
+
+p1=int(diff/2)
+p2=int((diff+1)/2)
+
+cost=int(p1*(p1+1)/2+p2*(p2+1)/2)
+print(cost)

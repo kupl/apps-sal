@@ -1,0 +1,5 @@
+S = list(map(str,input().split()))
+a = S[0][0].upper()
+b = S[1][0].upper()
+c = S[2][0].upper()
+print(a + b + c)

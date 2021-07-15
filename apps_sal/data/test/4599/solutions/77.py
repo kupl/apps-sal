@@ -1,0 +1,5 @@
+n = int(input())
+a = sorted(list(map(int, input().split())),reverse=True)
+Alice = sum(a[::2])
+Bob = sum(a[1::2])
+print(Alice-Bob)

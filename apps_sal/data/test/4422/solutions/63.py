@@ -1,0 +1,6 @@
+N,K = map(int,input().split())
+S = input()
+lsS = list(S)
+lsS[K-1] = lsS[K-1].lower()
+ans = ''.join(lsS)
+print(ans)

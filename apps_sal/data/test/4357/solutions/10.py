@@ -1,0 +1,10 @@
+x = list(map(int, input().split()))
+a = max(x)
+b = min(x)
+x.remove(a)
+x.remove(b)
+c = x[0]
+a = str(a)
+b = str(b)
+ab = int(a+b)
+print(ab+c)

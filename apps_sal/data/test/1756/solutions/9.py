@@ -1,0 +1,38 @@
+import sys
+input = sys.stdin.readline
+
+n,x=list(map(int,input().split()))
+D=list(map(int,input().split()))
+
+D2=[x*(x+1)//2 for x in D]
+
+from itertools import accumulate
+
+S=[0]+list(accumulate(D+D))
+S2=[0]+list(accumulate(D2+D2))
+
+ANS=0
+
+import bisect
+
+for i in range(2*n+1):
+    if S[i]-x<0:
+        continue
+    y=bisect.bisect_left(S,S[i]-x)
+
+    score=S2[i]-S2[y]
+    rest=x-(S[i]-S[y])
+
+    #print(score,i,rest,D[(y-1)%n])
+    MAX=D[(y-1)%n]
+
+    score+=(MAX+(MAX-rest+1))*rest//2
+
+    #print(score)
+
+    ANS=max(ANS,score)
+
+print(ANS)
+    
+    
+

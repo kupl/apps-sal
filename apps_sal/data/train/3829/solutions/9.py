@@ -1,0 +1,1 @@
+build_square=lambda sq,A=lambda x,y:all(y.count(i)>=x.count(i)for i in x):next((0for _ in range(4)if not next(([sq.pop(sq.index(l))for l in k]for k in [[4],[3,1],[2,2],[2,1,1],[1,1,1,1]]if A(k,sq)),0)),1)

@@ -1,0 +1,6 @@
+A,B = input().split()
+A = int(A)
+B1, B2 = B.split('.')
+B = int(B1)*10**len(B2)+int(B2)
+print(((A*B)//10**len(B2)))
+

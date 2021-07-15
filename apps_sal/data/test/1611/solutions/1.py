@@ -1,0 +1,5 @@
+kq = int(input())
+luv = list(map(int,input().split(' ')))
+luv.sort()
+luv.reverse()
+print(max(0, luv[0]-sum(luv[1:])+1))

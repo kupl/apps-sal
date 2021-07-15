@@ -1,0 +1,5 @@
+s=input()
+a=s.count('0')
+b=s.count('1')
+c=min(a,b)
+print(2*c)

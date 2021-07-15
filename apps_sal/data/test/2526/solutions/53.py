@@ -1,0 +1,6 @@
+x,y,a,b,c=map(int,input().split())
+p=sorted(list(map(int,input().split())),reverse=True)
+q=sorted(list(map(int,input().split())),reverse=True)
+r=sorted(list(map(int,input().split())),reverse=True)
+all=sorted(p[:x]+q[:y]+r,reverse=True)
+print(sum(all[:x+y]))

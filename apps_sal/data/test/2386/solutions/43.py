@@ -1,0 +1,21 @@
+N = int(input())
+A = [int(i) for i in input().split()]
+
+def snk(b):
+    return sum([abs(A[i]-(b+i+1)) for i in range(N)])
+    
+l = 1-N
+r = 10**9 + N
+
+while r-l > 2:
+    m = (l + r) //2
+    mm1s, ms, mp1s = [snk(m+i) for i in [-1,0,1]]
+    
+    if mm1s >= ms >= mp1s:
+        l = m
+    elif mm1s <= ms <= mp1s:
+        r = m+1
+    elif mp1s >= ms and ms <= mm1s:
+        break
+    #print(l, m, r, ls, ms, rs)
+print(ms) 

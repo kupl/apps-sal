@@ -1,0 +1,6 @@
+a, b, c = map(int, input().split())
+st = set()
+st.add(a)
+st.add(b)
+st.add(c)
+print(len(st))

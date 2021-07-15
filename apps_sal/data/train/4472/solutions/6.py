@@ -1,0 +1,1 @@
+bear_fur = lambda bears, furs={('black', 'brown'): 'dark brown', ('black', 'white'): 'grey', ('brown', 'white'): 'light brown',('white', 'white'): 'white',('brown', 'brown'): 'brown',('black', 'black'): 'black',}: furs.get(tuple(sorted(bears)), 'unknown')

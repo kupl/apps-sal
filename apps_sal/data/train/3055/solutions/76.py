@@ -1,0 +1,9 @@
+def sum_str(a, b):
+    if a!='' and b!='':
+        return str(int(a)+int(b))
+    elif a=='' and b!='':
+        return str(int(b))
+    elif b=='' and a!='':
+        return str(int(a))
+    else:
+        return '0'

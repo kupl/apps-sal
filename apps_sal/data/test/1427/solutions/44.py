@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+import sys
+import math
+import os
+import itertools
+import string
+import heapq
+import _collections
+from collections import Counter
+from collections import defaultdict
+from collections import deque
+from functools import lru_cache
+import bisect
+import re
+import queue
+import copy
+import decimal
+
+
+class Scanner():
+    @staticmethod
+    def int():
+        return int(sys.stdin.readline().rstrip())
+
+    @staticmethod
+    def string():
+        return sys.stdin.readline().rstrip()
+
+    @staticmethod
+    def map_int():
+        return [int(x) for x in Scanner.string().split()]
+
+    @staticmethod
+    def string_list(n):
+        return [Scanner.string() for i in range(n)]
+
+    @staticmethod
+    def int_list_list(n):
+        return [Scanner.map_int() for i in range(n)]
+
+    @staticmethod
+    def int_cols_list(n):
+        return [Scanner.int() for i in range(n)]
+
+
+def pop_count(x):
+    x = x - ((x >> 1) & 0x5555555555555555)
+    x = (x & 0x3333333333333333) + ((x >> 2) & 0x3333333333333333)
+    x = (x + (x >> 4)) & 0x0f0f0f0f0f0f0f0f
+    x = x + (x >> 8)
+    x = x + (x >> 16)
+    x = x + (x >> 32)
+    return x & 0x0000007f
+
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+
+
+MOD = 10**9 + 7
+
+
+def solve():
+    N = Scanner.int()
+    A = Scanner.map_int()
+    l = 1
+    for a in A:
+        l = lcm(a, l)
+    ans = 0
+    for a in A:
+        ans += l // a
+    ans %= MOD
+    print(ans)
+
+
+def main():
+    # sys.setrecursionlimit(1000000)
+    # sys.stdin = open("sample.txt")
+    # T = Scanner.int()
+    # for _ in range(T):
+    #     solve()
+    # print('YNeos'[not solve()::2])
+    solve()
+
+
+def __starting_point():
+    main()
+
+__starting_point()

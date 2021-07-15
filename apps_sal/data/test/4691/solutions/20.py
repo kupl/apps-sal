@@ -1,0 +1,13 @@
+n = int(input())
+judge_list = [input() for i in range(n)]
+
+ac_n = judge_list.count('AC')
+tle_n = judge_list.count('TLE')
+wa_n = judge_list.count('WA')
+re_n = judge_list.count('RE')
+
+print(f'AC x {ac_n}')
+print(f'WA x {wa_n}')
+print(f'TLE x {tle_n}')
+print(f'RE x {re_n}')
+

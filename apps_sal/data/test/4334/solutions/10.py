@@ -1,0 +1,5 @@
+s,t = input().split()
+a,b = map(int,input().split())
+u = input()
+print(a if u == t else a-1, end = " ")
+print(b-1 if u == t else b)

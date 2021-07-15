@@ -1,0 +1,1 @@
+c,combs=lambda s:int(s.translate({42:49,46:48}),2),lambda a,b:(lambda u,v:min(len(bin(x|y))-2for x,y in((u<<-min(0,n),v<<max(0,n))for n in range(-len(b),len(a)+1))if x&y<1))(c(a),c(b))

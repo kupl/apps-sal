@@ -1,0 +1,11 @@
+n=int(input())
+zmi=wmi=int(1e+10)
+zma=wma=int(-1e+10)
+for i in range(n):
+    xi,yi=list(map(int,input().split()))
+    zma=max(xi+yi,zma)
+    wma=max(xi-yi,wma)
+    zmi=min(xi+yi,zmi)
+    wmi=min(xi-yi,wmi)
+print((max(zma-zmi,wma-wmi)))
+

@@ -1,0 +1,1 @@
+finding_k=lambda a: max([k for k in range(1, max(a)) if eval('=='.join([str(z)+'%'+str(k) for z in a]))], default=-1)

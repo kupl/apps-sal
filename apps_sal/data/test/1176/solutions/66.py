@@ -1,0 +1,6 @@
+N = int(input())
+A = list(map(int, input().split()))
+num_minus = sum([1 if v < 0 else 0 for v in A])
+sum_abs = sum([abs(v) for v in A])
+min_abs = min([abs(v) for v in A])
+print(sum_abs if num_minus % 2 == 0 else sum_abs - min_abs * 2)

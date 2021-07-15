@@ -1,0 +1,1 @@
+(lambda N,c,t:print('Yes'if c[0]==t[0]and c[-1]==t[-1]and sorted(c[i]-c[i+1]for i in range(N-1))==sorted(t[i]-t[i+1]for i in range(N-1))else'No'))(int(input()),list(map(int,input().split())),list(map(int,input().split())))

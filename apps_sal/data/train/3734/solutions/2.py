@@ -1,0 +1,13 @@
+from regex import findall, match
+from random import randint # This is useless here seeing the test cases but let's do it well
+
+def roll(desc, verbose=False):
+    if not (isinstance(desc, str) and match(r"^(?: *(\d*d\d+|[+-]\d+))+$", desc)): return False
+    dices, modifiers = [], 0
+    for x in findall(r"(?: *(\d*d\d+|[+-]\d+))", desc):
+        if 'd' in x:
+            a, b = (1, int(x[1:])) if x[0] == 'd' else map(int, x.split('d'))
+            dices.extend(randint(1, b) for _ in range(a))
+        else:
+            modifiers += int(x)
+    return {"dice":dices, "modifier":modifiers} if verbose else sum(dices) + modifiers

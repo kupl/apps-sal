@@ -1,0 +1,6 @@
+S=input()
+List = list(S)
+zeroNum = List.count("0")
+oneNum = List.count("1")
+res = min(zeroNum,oneNum)
+print(res*2)

@@ -1,0 +1,1 @@
+custom_fib=lambda s,x,n,l=None: s[n] if len(s)>n else custom_fib((lambda p: s+[sum(p[i] for i in x)])(s[-(l or len(s)):]),x,n,l or len(s))

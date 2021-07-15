@@ -1,0 +1,5 @@
+n = int(input())
+a = list(map(int, input().split()))
+a.sort()
+ans = int(a[-1] ** (1 / (n - 1)))
+print(min(sum(abs(pow(ans, i) - a[i]) for i in range(n)), sum(abs(pow(ans + 1, i) - a[i]) for i in range(n))))

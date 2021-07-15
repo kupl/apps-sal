@@ -1,0 +1,1 @@
+N,K=map(int,input().split());f=lambda i:i*(i+1)//2;print(sum(f(N)-f(N-i)-f(i-1)+1for i in range(K,N+2))%(10**9+7))

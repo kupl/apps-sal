@@ -1,0 +1,5 @@
+n,x = map(int,input().split())
+m = list(int(input()) for i in range(n))
+m.sort()
+z = sum(m)
+print(n+(x-z)//m[0])

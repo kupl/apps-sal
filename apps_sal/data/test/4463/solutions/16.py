@@ -1,0 +1,10 @@
+s = list(map(str, input().rstrip()))
+t = list(map(str, input().rstrip()))
+
+s.sort()
+t.sort(reverse=True)
+
+s = "".join(s)
+t = "".join(t)
+
+print("Yes" if s < t else "No")

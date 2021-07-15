@@ -1,0 +1,3 @@
+whoIsWinner=lambda M,C,Z:(lambda g,X:next((w for w,y in map(lambda m:(m[-1],ord(m[0])-(65 if m[0].isupper()else 71)),M)for x in(X.__getitem__(y),)if X.__setitem__(y,X.__getitem__(y)+1)or g.__getitem__(x).__setitem__(y,w)
+                                           or any(C<=1+sum(1 for c in(-1,1)for _ in __import__("itertools").takewhile(lambda z:0<=z[0]<Z and 0<=z[1]<Z and g[z[0]][z[1]]==w,((x+c*n*dx,y+c*n*dy)for n in __import__("itertools").count(1))))for dx,dy in((0,1),(1,1),(1,0),(-1,1)))),"Draw")
+                         )(*([['']*Z for _ in range(Z)],[0]*Z))

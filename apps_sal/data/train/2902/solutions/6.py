@@ -1,0 +1,1 @@
+opposite = lambda x: -x

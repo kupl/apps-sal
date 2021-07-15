@@ -1,0 +1,5 @@
+a, b = map(int, input().split())
+x, y, z = map(int, input().split())
+yo = max(0, x * 2 + y - a)
+oy = max(0, y + z * 3 - b)
+print(yo + oy)

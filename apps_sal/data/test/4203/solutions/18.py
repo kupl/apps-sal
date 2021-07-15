@@ -1,0 +1,36 @@
+import sys
+import math
+
+#https://atcoder.jp/contests/agc008/submissions/15248942
+sys.setrecursionlimit(10 ** 8)
+ini = lambda: int(sys.stdin.readline())
+inm = lambda: map(int, sys.stdin.readline().split())
+inl = lambda: list(inm())
+ins = lambda: sys.stdin.readline().rstrip()
+debug = lambda *a, **kw: print("\033[33m", *a, "\033[0m", **dict(file=sys.stderr, **kw))
+
+ans = 'AC'
+S = list(input())
+
+if S.pop(0) != 'A':
+    ans = 'WA'
+if S.pop(0).isupper():
+    ans = 'WA'
+
+mid = S[0:-1]
+if mid.count('C') == 1:
+    mid.remove('C')
+    for c in mid:
+        if c.isupper():
+            print(c)
+            ans = 'WA'
+else:
+    ans = 'WA'
+
+if S[-1].isupper():
+    ans = 'WA'
+
+print(ans)
+
+
+

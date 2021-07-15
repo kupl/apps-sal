@@ -1,0 +1,10 @@
+n = int(input())
+while n != 0:
+    a = 1
+    k = 0
+    while a <= n:
+        a *= 2
+        k += 1
+    a //= 2
+    print(k,end=' ')
+    n -= a

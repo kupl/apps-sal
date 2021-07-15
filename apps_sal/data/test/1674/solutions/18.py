@@ -1,0 +1,1 @@
+(lambda N,K,n,s:(lambda c,t:[[[s[i]!=s[i-1]and[c.__setitem__(0,c[0]+sum(sorted(t)[-K:])),t.clear()],t.append(n[i])]for i in range(1,N)],print(c[0]+sum(sorted(t)[-K:]))])([0],[n[0]]))(*map(int,input().split()),list(map(int,input().split())),input())

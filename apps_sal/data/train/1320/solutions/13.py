@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    n=int(input())
+    if n%2==0:
+        print("B")
+    else:
+        if n==1:
+            print("B")
+        elif n==3:
+            print("A")
+        else:
+            print("B")

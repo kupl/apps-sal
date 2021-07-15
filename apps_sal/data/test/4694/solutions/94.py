@@ -1,0 +1,5 @@
+N = int(input())
+A = list(map(int, input().split()))
+x = max(A)
+y = min(A)
+print(x - y)

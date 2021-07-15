@@ -1,0 +1,6 @@
+a=int(input())
+d,r,l=map(int,input().split(" "))
+z,j,k=map(int,input().split(" "))
+maxx=min(l,z)+min(d,j)+min(r,k)
+minn=max(0,l-(j+k))+max(0,d-(z+k))+max(0,r-(z+j))
+print(minn,maxx)

@@ -1,0 +1,11 @@
+b = input()
+b = b.replace('A', 'a')
+b = b.replace('T', 'b')
+b = b.replace('C', 'c')
+b = b.replace('G', 'd')
+b = b.replace('a', 'T')
+b = b.replace('b', 'A')
+b = b.replace('c', 'G')
+b = b.replace('d', 'C')
+
+print(b)

@@ -1,0 +1,5 @@
+N,M,X=map(int,input().split())
+A=list(map(int,input().split()))
+cnt=len([a for a,i in enumerate(A) if i>=X])
+cnt=min(cnt,M-cnt)
+print(cnt)

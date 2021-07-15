@@ -1,0 +1,2 @@
+import re;create_report=lambda n:(lambda L:['Disqualified data']if'LABDUC'in L else L)([z for v in sorted((''.join(w[:6//len(l)+(len(l)==4 and i>=2)]for i,w in enumerate(l)),sum(b for _,b in g))
+for l,g in __import__("itertools").groupby(sorted(map(lambda x:(re.split(r'[\s-]+',x[0].upper()),int(x[1])),map(lambda s:re.findall(r'(.+?)\s+(\d+)',s)[0],n))),key=lambda t:t[0]))for z in v])

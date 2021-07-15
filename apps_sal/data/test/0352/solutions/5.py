@@ -1,0 +1,8 @@
+n = int(input())
+min1, max1 = map(int, input().split())
+min2, max2 = map(int, input().split())
+min3, max3 = map(int, input().split())
+ans1 = min(n - min2 - min3, max1)
+ans2 = min(n - ans1 - min3, max2)
+ans3 = min(n - ans1 - ans2, max3)
+print(ans1, ans2, ans3)

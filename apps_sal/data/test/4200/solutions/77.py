@@ -1,0 +1,6 @@
+n,m = map(int,input().split())
+A = list(map(int,input().split()))
+s = sum(A)
+d = s * (1/(4*m))
+t = sum(a >= d for a in A)
+print('Yes' if t >= m else 'No')

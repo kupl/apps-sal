@@ -1,0 +1,28 @@
+class MajorityChecker:
+
+    def __init__(self, arr: List[int]):
+        self.loc = collections.defaultdict(list)
+        for i, n in enumerate(arr):
+            self.loc[n].append(i)    
+        self.nums = sorted(
+            list(self.loc.keys()), 
+            key = lambda n: len(self.loc[n]), 
+            reverse=True
+        )
+        print((self.nums))
+        
+    def query(self, left: int, right: int, threshold: int) -> int:
+        # binary search every number in arr
+        # find number of num in this range [left, right]
+        for n in self.nums:
+            if len(self.loc[n]) < threshold: 
+                return -1
+            l, r = bisect.bisect_left(self.loc[n], left), bisect.bisect_right(self.loc[n], right)
+            if r - l >= threshold: 
+                return n
+        return -1
+
+# Your MajorityChecker object will be instantiated and called as such:
+# obj = MajorityChecker(arr)
+# param_1 = obj.query(left,right,threshold)
+

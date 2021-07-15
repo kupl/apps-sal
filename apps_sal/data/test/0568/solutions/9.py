@@ -1,0 +1,5 @@
+n = int(input())
+res = pow(3,3*n)
+res = res - pow(7,n)
+res = res % (1000000000 + 7)
+print(res)

@@ -25,6 +25,9 @@ class Dataset:
     def __repr__(self) -> str:
         return f'Dataset("{self.path.name}")'
 
+    def __getitem__(self, idx: int) -> DataElement:
+        return self.data[idx]
+
 
 def load_dataset(path: Union[str, Path]) -> Dataset:
     return Dataset(path)

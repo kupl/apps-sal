@@ -1,0 +1,18 @@
+class Hero(object):
+    def __init__(self, name="Hero"):
+        self.name = name
+        self.position = '00'
+        self.health = 100
+        self.damage = 5
+        self.experience = 0
+            
+    
+'''define a Hero prototype to be used in a terminal game. 
+The hero should have the following attributes:
+
+attribute   value
+name    user argument or 'Hero'
+position    '00'
+health  100
+damage  5
+experience  0'''

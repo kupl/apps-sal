@@ -1,0 +1,6 @@
+n= int(input())
+k= int(input())
+x= int(input())
+y= int(input())
+print((x*n if k>=n else (n-k)*y+x*k))
+

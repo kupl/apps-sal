@@ -1,0 +1,6 @@
+def cake_slice(n):
+    #coding and coding...
+    sum = 1
+    for i in range(n):
+        sum += i+1
+    return sum

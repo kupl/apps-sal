@@ -1,0 +1,10 @@
+def dont_give_me_five(start,end):
+    list = []
+    for i in range(start, end+1):
+        if str(i).count('5') == 0:
+            list.append(i)
+    
+    return len(list)
+    
+
+

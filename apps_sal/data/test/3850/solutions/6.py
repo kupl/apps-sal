@@ -1,0 +1,7 @@
+n, k, p = (map(int, input().split()))
+a = sorted(map(int, input().split()))
+b = sorted(map(int, input().split()))
+
+time = min([max([abs(a[j] - b[i + j]) + abs(b[i + j] - p) for j in range(n)]) for i in range(k-n+1)])
+
+print(time)

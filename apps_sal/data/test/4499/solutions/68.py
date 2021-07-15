@@ -1,0 +1,5 @@
+s = input().split()
+s1 = list(s[0])
+s2 = list(s[1])
+s3 = list(s[2])
+print(s1[0].upper()+s2[0].upper()+s3[0].upper())

@@ -1,0 +1,5 @@
+n = input()
+years = map(int, input().split(' '))
+years = list(years)
+years.sort()
+print(years[len(years)//2])

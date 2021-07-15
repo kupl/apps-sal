@@ -1,0 +1,38 @@
+import math
+import sys
+from collections import defaultdict
+
+# input = sys.stdin.readline
+rt = lambda: list(map(int, input().split()))
+ri = lambda: int(input())
+rl = lambda: list(map(int, input().split()))
+
+
+def main():
+    n, m = rt()
+    a = rl()
+
+    def greaterCount(m):
+        sums = defaultdict(int)
+        s = n
+        sums[s] = 1
+        res = 0
+        add = 0
+        for i in range(n):
+            if a[i] < m:
+                s -= 1
+                add -= sums[s]
+            else:
+                add += sums[s]
+                s += 1
+            res += add
+            sums[s] += 1
+        return res
+
+    print(greaterCount(m) - greaterCount(m+1))
+
+
+def __starting_point():
+    main()
+
+__starting_point()

@@ -1,0 +1,15 @@
+a, b = list(map(int, input().split()))
+ary = str(list(range(a, b + 1)))
+zero = ary.count('0')
+one = ary.count('1')
+two = ary.count('2')
+three = ary.count('3')
+four = ary.count('4')
+five = ary.count('5')
+six = ary.count('6')
+seven = ary.count('7')
+eight = ary.count('8')
+nine = ary.count('9')
+ans = zero*6 + one*2 + two*5 + three*5 + four*4 + five*5 + six*6 + seven*3 + eight*7 + nine*6
+print (ans)
+

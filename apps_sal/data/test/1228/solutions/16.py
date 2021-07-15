@@ -1,0 +1,28 @@
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(100000)
+
+def getN():
+    return int(input())
+def getList():
+    return list(map(int, input().split()))
+import math
+
+
+def main():
+    # something
+    # 1 3 2 4
+    n = getN()
+    if n % 4 == 1:
+        print("0 A")
+    elif n % 4 == 3:
+        print("2 A")
+    elif n % 4 == 2:
+        print("1 B")
+    else:
+        print("1 A")
+def __starting_point():
+    main()
+
+
+__starting_point()

@@ -1,0 +1,5 @@
+a=int(input())
+b=int(input())
+h=int(input())
+ans=max(a,b)*h-(abs(b-a)*h//2)
+print(ans)

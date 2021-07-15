@@ -1,0 +1,6 @@
+import re
+
+n = input()
+
+flag = re.match(r"[a-z]",n)
+print("a") if flag!= None else print('A')
