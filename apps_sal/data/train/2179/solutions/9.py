@@ -1,0 +1,5 @@
+a,b,c = map(int, input().split())
+n = int(input())
+m = map(int, input().split())
+ans = len([i for i in m if i > b and i < c])
+print(ans)

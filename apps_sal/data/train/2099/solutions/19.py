@@ -1,0 +1,9 @@
+a,b=list(map(int,input().split()))
+c=[]
+d,e=1,b+1
+while e>=d:
+    c+=[d]+([e]if d!=e else[])
+    d+=1
+    e-=1
+print(' '.join(map(str,c+list(range(b+2,a+1)))))
+

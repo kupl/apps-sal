@@ -1,0 +1,25 @@
+n,k=map(int,input().split())
+arr=list(map(int,input().split()))
+ansarr=[]
+m=0
+su=0
+ans=0
+s=sum(arr)
+le=s//k;
+if(s%k!=0):
+	print('No')
+	return
+else:
+	for i in range(n):
+		su+=arr[m]
+		m+=1
+		ans+=1
+		if(su==le):
+			ansarr.append(ans)
+			ans=0
+			su=0
+		elif(su>le):
+			print('No')
+			return
+print('Yes')
+print(*ansarr)

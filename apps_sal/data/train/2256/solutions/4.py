@@ -1,0 +1,14 @@
+import sys
+N, M = list(map(int, input().split()))
+
+Ans = [(0, 0) for  _ in range(N*M)]
+for i in range(1, N*M+1):
+    if i % 2:
+        a, b = divmod(i//2, M)
+    else:
+        a, b = divmod(N*M - i//2, M)
+    Ans[i-1] = ' '.join((str(a+1), str(b+1)))
+
+for a in Ans:
+    sys.stdout.write(f'{a}\n') 
+

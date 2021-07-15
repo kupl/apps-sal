@@ -1,0 +1,21 @@
+ii = lambda: int(input())
+mi = lambda: list(map(int, input().split()))
+li = lambda: list(mi())
+si = lambda: input()
+msi = lambda: list(map(int, stdin.readline().split()))
+lsi = lambda: list(msi())
+
+
+m = int(input())
+ 
+a = list(map(int, input().split()))
+b = list(zip(list(map(int, input().split())), list(range(m))))
+ 
+a.sort(reverse=True)
+b.sort()
+ 
+c = list(zip((t[1] for t in b), a))
+c.sort()
+ 
+print(*(t[1] for t in c))
+

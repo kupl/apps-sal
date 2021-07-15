@@ -1,0 +1,9 @@
+def opposite(number):
+# your solution here
+    if number <= 0:
+        return(abs(number))
+    else:
+        return(number - 2 * number)
+    
+opposite(1) 
+
