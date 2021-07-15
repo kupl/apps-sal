@@ -1,0 +1,6 @@
+n, m, k = map(int, input().split())
+a = list(map(int, input().split()))
+a = sorted(a, reverse=True)
+s = m // (k + 1)
+mod = m % (k + 1)
+print(s * (a[0] * k + a[1]) + mod * a[0])

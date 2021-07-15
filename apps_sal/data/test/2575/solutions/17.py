@@ -1,0 +1,10 @@
+t = int(input())
+mnogs = [60, 90, 108, 120, 135, 140, 144, 150, 156, 160, 162, 165, 168, 170, 171, 172, 174, 175, 176, 177, 178, 179]
+
+for i in range(t):
+    if int(input()) in mnogs:
+        print('YES')
+    else:
+        print('NO')
+
+
