@@ -1,0 +1,5 @@
+x1,y1=map(int,input().split())
+x2,y2=map(int,input().split())
+dx=max(2,abs(x1-x2)+1)
+dy=max(2,abs(y1-y2)+1)
+print(2*dx+2*dy)
