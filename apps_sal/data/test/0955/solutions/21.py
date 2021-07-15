@@ -1,0 +1,30 @@
+n = int(input())
+dic = {}
+dic["A"] = float("inf")
+dic["B"] = float("inf")
+dic["C"] = float("inf")
+dic["AB"] = float("inf")
+dic["BC"] = float("inf")
+dic["AC"] = float("inf")
+dic["ABC"] = float("inf")
+for i in range(n):
+    c, s = input().split()
+    c = int(c)
+    s = "".join(sorted(s))
+    dic[s] = min(dic[s], c)
+
+
+q = float("inf")
+q = min(q, dic["A"] + dic["B"] + dic["C"])
+q = min(q, dic["A"] + dic["BC"])
+q = min(q, dic["B"] + dic["AC"])
+q = min(q, dic["C"] + dic["AB"])
+q = min(q, dic["AB"] + dic["BC"])
+q = min(q, dic["AC"] + dic["BC"])
+q = min(q, dic["AC"] + dic["AB"])
+q = min(q, dic["ABC"])
+
+if q == float("inf"):
+    print(-1)
+else:
+    print(q)

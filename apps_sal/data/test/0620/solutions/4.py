@@ -1,0 +1,13 @@
+a, b = map(int, input().split())
+c, d = map(int, input().split())
+e, f = map(int, input().split())
+res = set()
+res.add((e + c - a, f + d - b))
+res.add((e - c + a, f - d + b))
+res.add((c + e - a, d + f - b))
+res.add((c - e + a, d - f + b))
+res.add((a - c + e, b - d + f))
+res.add((a + c - e, b + d - f))
+print(len(res))
+for elem in res:
+    print(elem[0], elem[1])

@@ -1,0 +1,8 @@
+n, m, r = list(map(int,input().split()))
+przed = list(map(int,input().split()))
+po = list(map(int,input().split()))
+a = min(przed)
+b = max(po)
+prof = (r // a) * (b - a)
+prof = max(prof, 0)
+print(r + prof)

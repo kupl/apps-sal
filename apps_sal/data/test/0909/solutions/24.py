@@ -1,0 +1,10 @@
+x = int(input())
+y = int(input())
+z = int(input())
+res = x+y+z
+res = max(res, x*y+z)
+res = max(res, x+y*z)
+res = max(res, x*y*z)
+res = max(res, (x+y)*z)
+res = max(res, x*(y+z))
+print (res)

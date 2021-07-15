@@ -1,0 +1,22 @@
+input()
+a=[int(x) for x in input().split()]
+
+oc=0
+ps=0
+pmo=1e6
+nmo=-1e6
+
+for x in a:
+    if x>0:
+        ps+=x
+    if x%2==1 and x>0 and pmo>x:
+        pmo=x
+    if x%2==1 and x>0:    
+        oc+=1
+    if x%2==1 and x<0 and nmo<x:
+        nmo=x
+
+if oc%2==1:
+    print(ps)
+else:
+    print(max(ps-pmo,ps+nmo))

@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+c = int(input())
+per = min(a,b//2,c//4)
+print(per*7)

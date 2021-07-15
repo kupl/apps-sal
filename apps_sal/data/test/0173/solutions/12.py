@@ -1,0 +1,7 @@
+data = input().split()
+n = int(data[0])
+m = int(data[1])
+h = input().rstrip()
+v = input().rstrip()
+f = (h[0] == '<' and v[0] == 'v' and v[-1] == '^' and h[-1] == '>') or (h[0] == '>' and v[0] == '^' and v[-1] == 'v' and h[-1] == '<')
+print('YES' if f else 'NO')

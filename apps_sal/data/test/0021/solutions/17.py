@@ -1,0 +1,5 @@
+n = int(input())
+data = list(map(int, input().split()))
+indexmax = data.index(max(data))
+indexmin = data.index(min(data))
+print(max(indexmax, indexmin, n - indexmax - 1, n - indexmin - 1))

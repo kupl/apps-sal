@@ -1,0 +1,13 @@
+a=int(input())
+b=int(input())
+c=int(input())
+m=list()
+m.append(a*b*c)
+m.append(a+b+c)
+m.append(a*b+c)
+m.append(a*(b+c))
+m.append((a+b)*c)
+m.append(a+b*c)
+print(max(m))
+
+

@@ -1,0 +1,25 @@
+import math
+
+a, b= [int(i) for i in input().split()]
+
+if a<b: print (0)
+else: 
+    if a== b: print("infinity")
+    else:               #>b and divisors of a
+        def FindAllDivisors(x, b):
+            y = 1
+            ans= []
+            while y <= int(math.sqrt(x)):
+                #print(y)
+                if x % y == 0:
+                    #print(x, int(x/y))
+                    if y!= int(x/y) :
+                        if y>b:
+                            ans.append(y)
+                        if int(x/y)>b:
+                            ans.append(int(x/y))
+                    elif y== int(x/y) and y>b:
+                        ans.append(y)
+                y += 1
+            return len(ans)
+        print(FindAllDivisors(a-b, b))

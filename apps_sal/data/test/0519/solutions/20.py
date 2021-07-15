@@ -1,0 +1,10 @@
+l = int(input())
+p = int(input())
+q = int(input())
+
+
+
+res = l * (p/(p+q))
+
+print(res)
+

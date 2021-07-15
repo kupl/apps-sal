@@ -1,0 +1,5 @@
+n,d=map(int,input().split())
+a=list(map(int,input().split()))
+m=int(input())
+a.sort()
+print(sum(a[:min(n,m)])-max(0,m-n)*d)

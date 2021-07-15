@@ -1,0 +1,6 @@
+n = input()
+a = int(n)
+b = int(n[: -2] + n[-1])
+c = int(n[: -1])
+print(max(a, b, c))
+
