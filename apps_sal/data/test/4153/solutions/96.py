@@ -1,0 +1,6 @@
+S = list(input())
+N = len(S)
+len0 = S.count('0')
+len1 = S.count('1')
+rm = min(len0,len1)
+print(2*rm)

@@ -1,0 +1,6 @@
+n = input()
+n = list(n)
+a = n.pop(0)
+b = n.pop()
+c = len(n)
+print(a+str(c)+b)

@@ -1,0 +1,5 @@
+n = int(input())
+list_s = list(input())
+if n % 2 != 0: print("No")
+elif "".join(list_s[: (n // 2)]) == "".join(list_s[(n // 2):]): print("Yes")
+else: print("No")

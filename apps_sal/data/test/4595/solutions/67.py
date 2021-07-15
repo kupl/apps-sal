@@ -1,0 +1,5 @@
+s = list(input())
+s_inv = list(reversed(s))
+a = s.index('A')
+b = s_inv.index('Z')
+print(len(s)-a-b)

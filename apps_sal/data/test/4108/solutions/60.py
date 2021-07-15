@@ -1,0 +1,5 @@
+s = input()
+t = input()
+s = sorted(map(s.count,set(s)))
+t = sorted(map(t.count,set(t)))
+print("Yes" if s==t else "No")

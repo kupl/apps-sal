@@ -1,0 +1,5 @@
+A,B,K=map(int,input().split())
+a=max(A-K,0)
+k=K-(A-a)
+b=max(B-k,0)
+print(a,b)

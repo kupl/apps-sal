@@ -1,0 +1,6 @@
+a, b, c = map(int, input().split())
+i = abs(a - b)
+j = abs(a - c)
+k = abs(b - c)
+lst = sorted([i, j, k])
+print(lst[0] + lst[1])

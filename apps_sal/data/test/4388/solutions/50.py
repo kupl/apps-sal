@@ -1,0 +1,6 @@
+n = input()
+n01 = n.replace('1', 'x')
+n02 = n01.replace('9', 'y')
+n03 = n02.replace('x', '9')
+n04 = n03.replace('y', '1')
+print(n04)

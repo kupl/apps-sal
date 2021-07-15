@@ -1,0 +1,10 @@
+from collections import Counter
+
+n = int(input())
+A = list(map(int, input().split()))
+cnt_A = Counter(A)
+
+if all([v == 2 for k, v in cnt_A.items() if k != 0]):
+    print(pow(2, n // 2, 10**9 + 7))
+else:
+    print(0)

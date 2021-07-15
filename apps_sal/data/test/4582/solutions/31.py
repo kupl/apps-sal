@@ -1,0 +1,10 @@
+# 入力
+a,b = map(str, input().split())
+
+# HHとDDはH、それ以外はD
+if a == 'H' and b == 'H':
+    print('H')
+elif a == 'D' and b == 'D':
+    print('H')
+else:
+    print('D')

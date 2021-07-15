@@ -1,0 +1,65 @@
+H, W = map(int, input().split())
+M = 10 ** 10
+
+if H == 2 and W == 2:
+    M = 1
+
+if H > 2:
+    HH = H // 3
+    S1 = HH * W
+    HH = H - H // 3
+    HHH = HH // 2
+    S2 = HHH * W
+    HHH = HH - HH // 2
+    S3 = HHH * W
+    m = max(S1, S2, S3) - min(S1, S2, S3)
+    M = min(M, m)
+
+    HH = H // 3
+    S1 = HH * W
+    WW = W // 2
+    S2 = (H - HH) * WW
+    WW = W - W // 2
+    S3 = (H - HH) * WW
+    m = max(S1, S2, S3) - min(S1, S2, S3)
+    M = min(M, m)
+
+    HH = H // 3 + 1
+    S1 = HH * W
+    WW = W // 2
+    S2 = (H - HH) * WW
+    WW = W - W // 2
+    S3 = (H - HH) * WW
+    m = max(S1, S2, S3) - min(S1, S2, S3)
+    M = min(M, m)
+
+if W > 2:
+    WW = W // 3
+    S1 = WW * H
+    WW = W - W // 3
+    WWW = WW // 2
+    S2 = WWW * H
+    WWW = WW - WW // 2
+    S3 = WWW * H
+    m = max(S1, S2, S3) - min(S1, S2, S3)
+    M = min(M, m)
+
+    WW = W // 3
+    S1 = WW * H
+    HH = H // 2
+    S2 = (W - WW) * HH
+    HH = H - H // 2
+    S3 = (W - WW) * HH
+    m = max(S1, S2, S3) - min(S1, S2, S3)
+    M = min(M, m)
+
+    WW = W // 3 + 1
+    S1 = WW * H
+    HH = H // 2
+    S2 = (W - WW) * HH
+    HH = H - H // 2
+    S3 = (W - WW) * HH
+    m = max(S1, S2, S3) - min(S1, S2, S3)
+    M = min(M, m)
+
+print(M)

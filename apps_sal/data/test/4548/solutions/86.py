@@ -1,0 +1,5 @@
+n,m,x = map(int,input().split())
+a = list(map(int,input().split()))
+a.append(x)
+a = sorted(a)
+print(len(a[:a.index(x)]) if len(a[:a.index(x)+1]) <= len(a[a.index(x)+1:]) else len(a[a.index(x)+1:]))

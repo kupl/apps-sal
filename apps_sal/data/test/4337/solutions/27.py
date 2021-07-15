@@ -1,0 +1,6 @@
+n = int(input())
+s = list(input().split())
+P = s.count("P")
+W = s.count("W")
+G = s.count("G")
+print("Three" if n==P+W+G else "Four")

@@ -1,0 +1,32 @@
+import sys
+
+read = sys.stdin.read
+readline = sys.stdin.readline
+readlines = sys.stdin.readlines
+sys.setrecursionlimit(10 ** 9)
+INF = 1 << 60
+MOD = 1000000007
+
+
+def main():
+    N = int(readline())
+
+    ans = []
+    while abs(N) > 0:
+        ans.append(N % 2)
+        N //= 2
+        N *= -1
+
+    if ans:
+        ans = ''.join(map(str, reversed(ans)))
+    else:
+        ans = 0
+
+    print(ans)
+    return
+
+
+def __starting_point():
+    main()
+
+__starting_point()

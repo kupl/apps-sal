@@ -1,0 +1,24 @@
+n = int(input())
+
+
+class Solution:
+    def __init__(self, n):
+        self.n = n
+
+    @staticmethod
+    def answer():
+        ans = 1
+        current_zero_count = 0
+        for i in range(1, n + 1):
+            target_zero_count = list(map(int, bin(i)[2:])).count(0)
+            if n == 1:
+                break
+            else:
+                if target_zero_count > current_zero_count:
+                    current_zero_count = target_zero_count
+                    ans = i
+        print(ans)
+
+
+conditions = Solution(n)
+conditions.answer()

@@ -1,0 +1,10 @@
+n,m = map(int, input().split())
+left = set()
+right = set()
+for i in range(m):
+  l,r = map(int, input().split())
+  left.add(l)
+  right.add(r)
+mini = max(left)
+maxi = min(right)
+print(len(range(mini,maxi+1)))

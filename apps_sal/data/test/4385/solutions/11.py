@@ -1,0 +1,7 @@
+a=int(input())
+input()
+input()
+input()
+e=int(input())
+k=int(input())
+print("Yay!" if k>=e-a else ":(")

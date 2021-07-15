@@ -1,0 +1,3 @@
+print(('HD'[len(set(input()))%2]))
+
+

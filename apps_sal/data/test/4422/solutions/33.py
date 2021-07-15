@@ -1,0 +1,5 @@
+n, k = map(int, input().split())
+list01 = list(input())
+list01[k - 1] = str.lower(list01[k - 1])
+a = ''.join(list01)
+print(a)

@@ -1,0 +1,13 @@
+# alpha = "abcdefghijklmnopqrstuvwxyz"
+t = 1
+for test in range(t):
+    # n,s = (map(int, input().split()))
+    n = int(input())
+    a = list(map(int, input().split()))
+    a.sort()
+    if a[1]-a[0]>a[-1]-a[-2]:
+        print(a[-1]-a[1])
+    else:
+        print(a[-2]-a[0])
+
+

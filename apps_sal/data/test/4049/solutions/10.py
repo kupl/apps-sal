@@ -1,0 +1,6 @@
+n=int(input())
+a1,a3,a2=map(int,input().split())
+b1,b3,b2=map(int,input().split())
+maxx=min(a1,b3)+min(a2,b1)+min(a3,b2)
+minn=max(0,a1-b1-b2)+max(0,a2-b2-b3)+max(0,a3-b3-b1)
+print(minn,maxx)

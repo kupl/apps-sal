@@ -1,0 +1,7 @@
+A, B ,C ,D = map(int, input().split())
+
+a = list(range(A, B))
+b = list(range(C, D))
+
+a_b_and = set(a) & set(b)
+print(len(a_b_and))
