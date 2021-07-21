@@ -1,5 +1,5 @@
 {
-    "name": "n2py-dev",
+    "name": "app-sal-devcontainer",
     "dockerFile": "Dockerfile",
     "runArgs": [ "--init" ],
 
