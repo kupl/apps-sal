@@ -4,7 +4,7 @@
     "runArgs": [ "--init" ],
 
     "settings": {
-        "#terminal.integrated.profiles.linux#": "/usr/bin/zsh",
+        "#terminal.integrated.profiles.linux#": "/usr/bin/bash",
         
         "python.pythonPath": "/usr/bin/python3",
         "python.languageServer": "Pylance",
