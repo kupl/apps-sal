@@ -17,7 +17,7 @@ RUN pip3 install --no-cache-dir \
         pylint 
 
 RUN useradd \
-        --shell $(which zsh) \
+        --shell $(which bash) \
         -G sudo \
         -m -d /home/${USERNAME} -k /etc/skel \
         ${USERNAME} && \
