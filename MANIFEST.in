@@ -1,1 +1,1 @@
-recursive-include apps_sal/data *.txt *.json
+recursive-include apps_sal/data *.txt *.json *.py
