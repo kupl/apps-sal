@@ -10,8 +10,7 @@ RUN apt-get update && \
         python3 \
         python3-pip \
         ssh-client \
-        sudo \
-        zsh && \
+        sudo && \
     apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 RUN pip3 install --no-cache-dir \
         autopep8 \
@@ -23,6 +22,3 @@ RUN useradd \
         -m -d /home/${USERNAME} -k /etc/skel \
         ${USERNAME} && \
     sed -i -e 's/%sudo.*/%sudo\tALL=(ALL:ALL)\tNOPASSWD:ALL/g' /etc/sudoers
-USER ${USERNAME}
-RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
-    sed -i -e 's/ZSH_THEME=.*/ZSH_THEME="simple"/g' ~/.zshrc
