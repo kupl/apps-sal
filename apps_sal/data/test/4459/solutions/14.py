@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def mapt(fn, *args):
     return tuple(map(fn, *args))
 

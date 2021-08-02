@@ -21,4 +21,3 @@ for index, input in enumerate(inputs, 1):
         RE += 1
 
 print(("AC x " + str(AC) + "\nWA x " + str(WA) + "\nTLE x " + str(TLE) + "\nRE x " + str(RE)))
-

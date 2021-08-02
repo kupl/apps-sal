@@ -15,4 +15,3 @@ for k in list(cnt.keys()):
     elif cnt[k] < k:
         ans += cnt[k]
 print(ans)
-

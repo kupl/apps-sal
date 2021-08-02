@@ -15,5 +15,4 @@ for i in range(N):
         E += 1
     elif S == 'RE':
         F += 1
-print('AC x '+ str(C), 'WA x ' + str(D),  'TLE x ' + str(E),  'RE x ' + str(F), sep='\n')
-
+print('AC x ' + str(C), 'WA x ' + str(D), 'TLE x ' + str(E), 'RE x ' + str(F), sep='\n')

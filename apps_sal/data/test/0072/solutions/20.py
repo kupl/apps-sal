@@ -11,11 +11,11 @@ for i in al:
     Db[i] = 0
     Dc[i] = 0
 for j in a:
-    Da[j]+=1
+    Da[j] += 1
 for j in b:
-    Db[j]+=1
+    Db[j] += 1
 for j in c:
-    Dc[j]+=1
+    Dc[j] += 1
 pa = 0
 ia = 0
 pb = 0
@@ -71,12 +71,12 @@ else:
 A = max(a1, a2)
 B = max(b1, b2)
 C = max(c1, c2)
-if (pa==t or ia==t) and n==1:
-    A = t-1
-if (pb==t or ib==t) and n==1:
-    B = t-1
-if (pc==t or ic==t) and n==1:
-    C = t-1
+if (pa == t or ia == t) and n == 1:
+    A = t - 1
+if (pb == t or ib == t) and n == 1:
+    B = t - 1
+if (pc == t or ic == t) and n == 1:
+    C = t - 1
 if A > B and A > C:
     print("Kuro")
 elif B > A and B > C:
@@ -85,4 +85,3 @@ elif C > A and C > B:
     print("Katie")
 else:
     print("Draw")
-

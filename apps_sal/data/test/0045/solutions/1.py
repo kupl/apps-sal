@@ -2,6 +2,7 @@ import sys
 
 inf = 1 << 30
 
+
 def solve():
     n, k = map(int, input().split())
 
@@ -14,7 +15,7 @@ def solve():
     d_max = 1
 
     for d in range(1, n + 1):
-        if d*d > n:
+        if d * d > n:
             break
         if n % d != 0:
             continue
@@ -40,6 +41,9 @@ def solve():
 
     print(*ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

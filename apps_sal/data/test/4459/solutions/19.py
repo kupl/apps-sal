@@ -8,6 +8,5 @@ for i, j in list(A.items()):
     if i > j:
         cnt += j
     elif i < j:
-        cnt += j-i
+        cnt += j - i
 print(cnt)
-

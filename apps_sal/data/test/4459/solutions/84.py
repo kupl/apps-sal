@@ -7,5 +7,5 @@ for i in set(a):
     if b[i] < i:
         ans += b[i]
     else:
-        ans += b[i]-i
+        ans += b[i] - i
 print(ans)

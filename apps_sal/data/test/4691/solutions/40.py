@@ -12,7 +12,7 @@ for i in range(int(input())):
         tle += 1
     elif word == "RE":
         re += 1
-        
+
 print("AC x " + str(ac))
 print("WA x " + str(wa))
 print("TLE x " + str(tle))

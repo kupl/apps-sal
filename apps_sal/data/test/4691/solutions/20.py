@@ -10,4 +10,3 @@ print(f'AC x {ac_n}')
 print(f'WA x {wa_n}')
 print(f'TLE x {tle_n}')
 print(f'RE x {re_n}')
-

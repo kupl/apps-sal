@@ -9,4 +9,3 @@ for k, v in list(cnt.items()):
     else:
         ans += v - k
 print(ans)
-

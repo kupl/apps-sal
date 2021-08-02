@@ -11,8 +11,7 @@ T = bisect.bisect_left(S, X)
 
 if T == 0:
     print((S[0]))
-elif X - S[T-1] > S[T] - X:
+elif X - S[T - 1] > S[T] - X:
     print((S[T]))
 else:
-    print((S[T-1]))
-
+    print((S[T - 1]))

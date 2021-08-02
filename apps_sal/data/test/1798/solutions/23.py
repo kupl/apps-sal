@@ -1,8 +1,9 @@
-raselBhai = lambda:list(map(int,input().split()))
+def raselBhai(): return list(map(int, input().split()))
+
 
 n = int(input())
 lst = raselBhai()
-m = 10**5+5
+m = 10**5 + 5
 dst = [-1] * m
 pst = [-1] * m
 for i in range(n):
@@ -24,4 +25,3 @@ print(cnt)
     if dst[i] != -1:
         print('\n'.join("{0} {1}".format(dst[i])))'''
 print('\n'.join("{0} {1}".format(i, dst[i]) for i in range(m) if dst[i] != -1))
-

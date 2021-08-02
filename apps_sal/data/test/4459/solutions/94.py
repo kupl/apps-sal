@@ -12,4 +12,3 @@ for k in list(ca.keys()):
         ans += ca[k]
 
 print(ans)
-

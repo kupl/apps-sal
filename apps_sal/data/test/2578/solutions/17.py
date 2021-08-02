@@ -1,12 +1,14 @@
 # coding: UTF-8
 import sys
 
+
 def find(x):
     if node[x] < 0:
         return x
     else:
         node[x] = find(node[x])
         return node[x]
+
 
 def unite(x, y):
     x = find(x)
@@ -24,11 +26,14 @@ def unite(x, y):
                 rank[y] += 1
     return ret
 
+
 def is_same(x, y):
     return find(x) == find(y)
 
+
 def size(x):
     return -node[find(x)]
+
 
 n, m = map(int, input().split())
 node = [-1 for i in range(n + 1)]
@@ -40,7 +45,3 @@ for a in query:
             unite(a[1], j)
 for i in range(1, n + 1):
     print(size(i), end=" ")
-
-
-
-

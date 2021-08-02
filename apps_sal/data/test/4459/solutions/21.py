@@ -25,11 +25,12 @@ def main():
         elif key > value:
             ans += value
         else:
-            ans += value-key
+            ans += value - key
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

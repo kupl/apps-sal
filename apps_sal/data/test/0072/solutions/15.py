@@ -39,23 +39,23 @@ else:
         maxi1 = len(s1) - 1
     else:
         maxi1 = len(s1)
-        
+
 if maxi2 + n <= len(s1):
     maxi2 += n
 else:
     if n == 1:
-        maxi2 = len(s1) - 1    
+        maxi2 = len(s1) - 1
     else:
         maxi2 = len(s1)
-                
+
 if maxi3 + n <= len(s1):
     maxi3 += n
-else:    
+else:
     if n == 1:
-        maxi3 = len(s1) - 1    
+        maxi3 = len(s1) - 1
     else:
         maxi3 = len(s1)
-        
+
 if maxi1 > maxi2 and maxi1 > maxi3:
     print('Kuro')
 elif maxi2 > maxi1 and maxi2 > maxi3:
@@ -63,5 +63,4 @@ elif maxi2 > maxi1 and maxi2 > maxi3:
 elif maxi3 > maxi1 and maxi3 > maxi2:
     print('Katie')
 else:
-    print('Draw')    
-
+    print('Draw')

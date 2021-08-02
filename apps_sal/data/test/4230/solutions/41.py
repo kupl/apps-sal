@@ -18,4 +18,3 @@ for i in range(x - 1, -101, -1):
         else:
             break
 print(a)
-

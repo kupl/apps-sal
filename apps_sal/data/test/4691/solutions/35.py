@@ -17,4 +17,3 @@ print(f"AC x {ac}")
 print(f"WA x {wa}")
 print(f"TLE x {tle}")
 print(f"RE x {re}")
-

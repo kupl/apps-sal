@@ -17,5 +17,5 @@ if mx == -1:
     print(-1)
 else:
     for i in range(k - 1):
-        print(mx * (i + 1), end= " ")
+        print(mx * (i + 1), end=" ")
     print(n - mx * k * (k - 1) // 2)

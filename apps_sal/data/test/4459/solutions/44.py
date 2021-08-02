@@ -4,16 +4,17 @@ def count(list):
         dict[list[i]] = dict.get(list[i], 0) + 1
     return dict
 
+
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 dic = count(a)
 ans = 0
 
 for i, x in dic.items():
     differ = x - i
-    if differ>0:
+    if differ > 0:
         ans += differ
-    elif differ<0:
+    elif differ < 0:
         ans += x
 
 print(ans)

@@ -14,6 +14,7 @@ def factor(n):
         rtn.append((tmp, 1))
     return rtn
 
+
 def divs(n):
     rtn = [1]
     arr = factor(n)
@@ -24,6 +25,7 @@ def divs(n):
             for t in tmp:
                 rtn.append(d * t)
     return list(sorted(rtn))
+
 
 n, k = list(map(int, input().split()))
 ds = divs(n)
@@ -43,5 +45,3 @@ else:
     ans = [d * (i + 1) for i in range(k)]
     ans[-1] += n - sum(ans)
     print(' '.join(map(str, ans)))
-
-

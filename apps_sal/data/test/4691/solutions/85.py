@@ -22,4 +22,3 @@ print(f"AC x {AC}")
 print(f"WA x {WA}")
 print(f"TLE x {TLE}")
 print(f"RE x {RE}")
-

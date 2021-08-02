@@ -1,9 +1,10 @@
 def AP(seq):
-    d = seq[1]-seq[0]
-    for i in range(1, len(seq)-1):
-        if seq[i+1]-seq[i]!=d:
+    d = seq[1] - seq[0]
+    for i in range(1, len(seq) - 1):
+        if seq[i + 1] - seq[i] != d:
             return -1
     return d
+
 
 def main():
     n = int(input())
@@ -14,9 +15,9 @@ def main():
     for i in range(0, len(s)):
         item = s[i]
         if item in data:
-            data[item]+=[i]
+            data[item] += [i]
         else:
-            data[item]=[i]
+            data[item] = [i]
 
     uniq = [int(item) for item in list(data.keys())]
     uniq.sort()
@@ -25,20 +26,20 @@ def main():
         iters = data[str(x)]
         count = len(iters)
 
-        if count==1:
+        if count == 1:
             answer.append([x, 0])
             continue
-        #else:
+        # else:
         d = AP(iters)
-        if d!=-1:
+        if d != -1:
             answer.append([x, d])
 
     t = len(answer)
     print(t)
-    s=''
-    for a,b in answer:
-        s+=str(a)+' '+str(b)+'\n'
+    s = ''
+    for a, b in answer:
+        s += str(a) + ' ' + str(b) + '\n'
     print(s[:-1])
 
-main()
 
+main()

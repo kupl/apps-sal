@@ -1,5 +1,5 @@
-x,_ = list(map(int,input().split()))
-p = list(map(int,input().split()))
+x, _ = list(map(int, input().split()))
+p = list(map(int, input().split()))
 x_l = x
 x_u = x
 while(True):

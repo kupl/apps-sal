@@ -19,10 +19,10 @@ for i in range(n):
             l[a[i]] = i
         else:
             p[a[i]] = -2
-s=""
+s = ""
 for i in range(x):
     if p[i] >= 0:
         t += 1
-        s += str(i)+" "+ str(p[i])+"\n"
+        s += str(i) + " " + str(p[i]) + "\n"
 print(t)
 print(s)

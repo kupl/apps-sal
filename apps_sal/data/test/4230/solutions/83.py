@@ -30,4 +30,3 @@ while True:
 res += x
 
 print(res)
-

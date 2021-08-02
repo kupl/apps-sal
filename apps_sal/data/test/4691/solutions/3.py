@@ -1,6 +1,6 @@
 
 n = int(input())
-AC,WA,TLE,RE = 0,0,0,0
+AC, WA, TLE, RE = 0, 0, 0, 0
 
 for x in range(n):
     s = input()
@@ -17,5 +17,3 @@ print(('AC x ' + str(AC)))
 print(('WA x ' + str(WA)))
 print(('TLE x ' + str(TLE)))
 print(('RE x ' + str(RE)))
-
-

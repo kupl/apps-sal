@@ -41,4 +41,3 @@ for g in range(m):
 ans = [find(node[x]).size for x in range(1, n + 1)]
 
 sys.stdout.write(' '.join(str(x) for x in ans) + '\n')
-

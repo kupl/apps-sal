@@ -1,12 +1,11 @@
+import collections
 n = int(input())
 a = list(map(int, input().split()))
-import collections
 a = collections.Counter(a)
 ans = 0
-for i,j in list(a.items()):
-    if i>j:
+for i, j in list(a.items()):
+    if i > j:
         ans += j
     else:
-        ans += abs(i-j)
+        ans += abs(i - j)
 print(ans)
-

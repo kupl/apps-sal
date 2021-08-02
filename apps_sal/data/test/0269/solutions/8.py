@@ -12,4 +12,3 @@ for i in range(len(s)):
         answ[a[i % 4]] += 1
 
 print(answ['R'], answ['B'], answ['Y'], answ['G'],)
-

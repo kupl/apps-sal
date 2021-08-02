@@ -15,4 +15,3 @@ while True:
         return
     l -= 1
     r += 1
-

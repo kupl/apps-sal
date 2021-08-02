@@ -19,10 +19,10 @@ for i in (a_counter.items()):
 
     if key == value:
         pass
-    
+
     elif key < value:
         ans = ans + (value - key)
     else:
-        ans = ans + (value) 
+        ans = ans + (value)
 
 print(ans)

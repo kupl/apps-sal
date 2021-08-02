@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def main():
-    from   collections import Counter
+    from collections import Counter
     import re
 
     try:
@@ -17,5 +17,5 @@ def main():
     except EOFError:
         pass
 
-main()
 
+main()

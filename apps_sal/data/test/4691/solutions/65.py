@@ -1,5 +1,5 @@
 N = int(input())
-dic = {"AC": 0, "WA": 0, "TLE": 0, "RE": 0} # キーと初期値を設定
+dic = {"AC": 0, "WA": 0, "TLE": 0, "RE": 0}  # キーと初期値を設定
 
 for i in range(N):
     S = input()
@@ -14,5 +14,3 @@ for i in range(N):
 
 for key in list(dic.keys()):
     print(("{0} x {1}".format(key, dic[key])))
-
-

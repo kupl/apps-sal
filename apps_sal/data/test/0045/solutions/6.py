@@ -37,4 +37,3 @@ s = input()
 n = int(s.split(' ')[0])
 k = int(s.split(' ')[1])
 print(to_str(get_seq_new(n, k)))
-

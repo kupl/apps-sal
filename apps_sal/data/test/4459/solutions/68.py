@@ -11,7 +11,6 @@ for k, v in list(c.items()):
     elif k > v:
         ans += v
     else:
-        ans += v-k
+        ans += v - k
 
 print(ans)
-

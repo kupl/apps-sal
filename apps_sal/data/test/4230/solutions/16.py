@@ -8,9 +8,9 @@ if P.count(X) == 0:
     print(X)
 else:
     for i in range(100):
-        if P.count(X-i) == 0:
-            print(X-i)
+        if P.count(X - i) == 0:
+            print(X - i)
             break
-        elif P.count(X+i) == 0:
-            print(X+i)
+        elif P.count(X + i) == 0:
+            print(X + i)
             break

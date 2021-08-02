@@ -1,8 +1,7 @@
 
-x,n = list(map(int,input().split()))
-l = list(map(int,input().split()))
+x, n = list(map(int, input().split()))
+l = list(map(int, input().split()))
 l.sort()
-
 
 
 result = x
@@ -28,7 +27,4 @@ for i in range(100):
             break
 
 
-
 print(result)
-
-

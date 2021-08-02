@@ -14,7 +14,7 @@ for p in itertools.permutations(pos):
 
     for i in range(len(x)):
         if x[i] == '!':
-            tmp[t[i]] += 1;
+            tmp[t[i]] += 1
             continue
 
         if x[i] == t[i]:
@@ -28,5 +28,3 @@ for p in itertools.permutations(pos):
     else:
         print("{} {} {} {}".format(tmp['R'], tmp['B'], tmp['Y'], tmp['G']))
         break
-
-

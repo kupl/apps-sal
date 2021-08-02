@@ -18,4 +18,4 @@ for i in range(len(s)):
         numRE += 1
     else:
         continue
-print("AC x {}\nWA x {}\nTLE x {}\nRE x {}".format(numAC,numWA,numTLE,numRE))
+print("AC x {}\nWA x {}\nTLE x {}\nRE x {}".format(numAC, numWA, numTLE, numRE))

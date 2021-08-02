@@ -13,6 +13,3 @@ for key, value in list(d.items()):
     else:
         ans += value
 print(ans)
-
-
-

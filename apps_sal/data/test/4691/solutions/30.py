@@ -13,7 +13,7 @@ for i in li:
         tle += 1
     elif i == 'RE':
         re += 1
-print('AC x',ac)
-print('WA x',wa)
-print('TLE x',tle)
-print('RE x',re)
+print('AC x', ac)
+print('WA x', wa)
+print('TLE x', tle)
+print('RE x', re)

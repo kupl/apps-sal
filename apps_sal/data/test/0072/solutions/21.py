@@ -12,11 +12,14 @@ if n >= ls:
     print('Draw')
     return
 
+
 def modify(sc, n, ls):
     if sc == ls and n == 1:
         return sc - 1
     else:
         return min(sc + n, ls)
+
+
 sc = [modify(scx, n, ls) for scx in sc]
 
 m = max(sc)

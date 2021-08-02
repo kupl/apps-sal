@@ -4,5 +4,3 @@ for i in range(N):
     D[input()] += 1
 for x, y in list(D.items()):
     print(("{0} x {1}".format(x, y)))
-
-

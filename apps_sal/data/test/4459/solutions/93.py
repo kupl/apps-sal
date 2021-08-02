@@ -16,6 +16,5 @@ for i in sorted(c.keys()):
     elif c[i] == i:
         continue
     elif c[i] > i:
-        ans += c[i]-i
+        ans += c[i] - i
 print(ans)
-
