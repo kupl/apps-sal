@@ -1,4 +1,3 @@
-s=min(list(map(int,input().split())))
-print(s+1)
-for i in range(s+1):print(i,s-i)
-
+s = min(list(map(int, input().split())))
+print(s + 1)
+for i in range(s + 1): print(i, s - i)

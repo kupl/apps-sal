@@ -22,16 +22,3 @@ for char in 'abcdefghijklmnopqrstuvwxyz':
         return
 else:
     print('None')
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -7,5 +7,5 @@ for i in range(97, 123):
     if not cnt in S:
         ans = cnt
         break
-        
+
 print(ans)

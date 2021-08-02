@@ -1,10 +1,9 @@
-t=int(input())
+t = int(input())
 for _ in range(t):
     n, m = list(map(int, input().split()))
-    if n==1:
+    if n == 1:
         print(0)
-    elif n==2:
+    elif n == 2:
         print(m)
     else:
-        print(2*m)
-
+        print(2 * m)

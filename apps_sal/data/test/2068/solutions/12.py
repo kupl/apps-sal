@@ -14,13 +14,12 @@ for i in range(int(input())):
             for name in line[1:-1]:
                 if name == was:
                     i = line.index(name)
-                    new_person_line = line[:i+1]
+                    new_person_line = line[:i + 1]
                     new_person_line.append(new_person)
                     result.append(new_person_line)
                     point = True
                     break
             if point: break
-                    
+
 m = max(len(line) for line in result)
 print(m)
-

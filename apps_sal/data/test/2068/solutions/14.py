@@ -12,4 +12,3 @@ for i in range(n):
     ans = max(ans, d[a[0]])
 
 print(ans)
-

@@ -1,5 +1,6 @@
 import sys
 
+
 def add_user(d, u):
     if u in d:
         return d[u]
@@ -7,8 +8,9 @@ def add_user(d, u):
         d[u] = len(d)
         return d[u]
 
+
 n = int(input())
-who = [[] for i in range(n+1)]
+who = [[] for i in range(n + 1)]
 users = {}
 answer_id = -1
 for i in range(n):
@@ -22,6 +24,7 @@ for i in range(n):
     if name_two == 'polycarp':
         answer_id = user_two
 
+
 def dfs(u):
     res = 1
     for v in who[u]:
@@ -29,6 +32,5 @@ def dfs(u):
 
     return res
 
+
 print((dfs(answer_id)));
-
-

@@ -5,8 +5,5 @@ for a in alphabet:
     if a not in S:
         print(a)
         return
-        
+
 print('None')
-
-
-

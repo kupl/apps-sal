@@ -1,7 +1,5 @@
 n, m = list(map(int, input().split()))
-lo = min([n, m])+1
+lo = min([n, m]) + 1
 print(lo)
 for i in range(lo):
-    print(i, lo-i-1)
-
-
+    print(i, lo - i - 1)

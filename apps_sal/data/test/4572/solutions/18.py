@@ -11,4 +11,3 @@ for a in alp:
         break
 else:
     print('None')
-

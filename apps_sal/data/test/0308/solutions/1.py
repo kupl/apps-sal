@@ -3,6 +3,7 @@ ii = lambda: sys.stdin.readline().strip()
 idata = lambda: [int(x) for x in ii().split()]
 sdata = lambda: list(ii())
 
+
 def solve():
     n, x, y, c = idata()
     r = n ** 2
@@ -32,6 +33,7 @@ def solve():
             l = middle
     print(r)
     return
+
 
 for t in range(1):
     solve()

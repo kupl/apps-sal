@@ -11,6 +11,7 @@ def ToLower(a):
         a[i] = lower(a[i])
     return ''.join(a)
 
+
 def main():
     n = int(input())
     people = ['polycarp']
@@ -20,4 +21,6 @@ def main():
         res[i] = res[people.index(c)] + 1
         people.append(a)
     print(max(res))
+
+
 main()

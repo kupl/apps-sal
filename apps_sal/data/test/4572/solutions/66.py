@@ -7,5 +7,5 @@ for i in range(26):
             print("None")
             break
     else:
-        print(chr(97+i))
+        print(chr(97 + i))
         break

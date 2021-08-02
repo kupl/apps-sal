@@ -7,6 +7,7 @@ def reg(s):
             s1 += i
     return s1
 
+
 s = set()
 a = int(input())
 d = dict()

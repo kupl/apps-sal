@@ -11,4 +11,3 @@ for i, aa in enumerate(a):
         return
 
 print("None")
-
