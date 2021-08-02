@@ -20,4 +20,3 @@ for _ in range(Q):
     result.append(t[q][q] + t[p - 1][p - 1] - t[p - 1][q] - t[q][p - 1])
 print(('\n'.join(str(v) for v in result)))
 #print(*result, sep='\n')
-

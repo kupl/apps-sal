@@ -12,6 +12,6 @@ for i in range(1, N + 1):
 ans = [0] * Q
 for k in range(Q):
     p, q = map(int, input().split())
-    ans[k] = trains[q][q] - trains[p-1][q] - trains[q][p-1] + trains[p-1][p-1]
+    ans[k] = trains[q][q] - trains[p - 1][q] - trains[q][p - 1] + trains[p - 1][p - 1]
 for A in ans:
     print(A)

@@ -1,7 +1,7 @@
 s = int(input())
 k = []
-for i in range(0,s):
-    a=input()
+for i in range(0, s):
+    a = input()
     k.append(a)
 amount = []
 for i in range(s):
@@ -10,4 +10,4 @@ for i in range(s):
         if k[i] == k[j]:
             amount[i] += 1
 ans = max(amount)
-print (ans)
+print(ans)

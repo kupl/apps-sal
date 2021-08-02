@@ -23,8 +23,9 @@ def invert(row):
     c = count_clean()
     for w in cleaned:
         for j in range(n):
-                room[j][w] = 1 - room[j][w]
+            room[j][w] = 1 - room[j][w]
     return c
+
 
 room = []
 m = 0

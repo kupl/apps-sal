@@ -2,19 +2,22 @@
 """
 yl3 jeopardy
 """
-a=lambda :list(map(int,input().split()))
-n,m=a()
-sa=a()
-sb=a()
-au=[]
+def a(): return list(map(int, input().split()))
+
+
+n, m = a()
+sa = a()
+sb = a()
+au = []
 
 for i in reversed(sorted(sb)):
-    au.append(sa.pop(i-1))
-su=sum(sa)
+    au.append(sa.pop(i - 1))
+su = sum(sa)
 au.sort(reverse=True)
 for i in range(m):
-    t=au.pop(0)
-    if t>su:
-        su+=t
-    else:su*=2
+    t = au.pop(0)
+    if t > su:
+        su += t
+    else:
+        su *= 2
 print(su)

@@ -22,4 +22,3 @@ for i in range(n):
 print(ans)
 print(len(masotv))
 print(*masotv)
-

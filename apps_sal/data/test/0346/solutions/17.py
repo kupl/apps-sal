@@ -1,6 +1,8 @@
 from operator import itemgetter
 
-R = lambda:list(map(int, input().split()))
+
+def R(): return list(map(int, input().split()))
+
 
 n, m = R()
 
@@ -10,7 +12,7 @@ b = [0] * n
 
 for i in R():
 
-  b[i - 1] = 1
+    b[i - 1] = 1
 
 a = sorted(enumerate(a), key=itemgetter(1), reverse=True)
 
@@ -18,13 +20,11 @@ s = sum(x for i, x in a if b[i] != 1)
 
 for i, x in a:
 
-  if b[i] == 1:
+    if b[i] == 1:
 
-    s += s if s > x else x
+        s += s if s > x else x
 
 print(s)
 
 
-
 # Made By Mostafa_Khaled
-

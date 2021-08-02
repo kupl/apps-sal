@@ -2,6 +2,7 @@ class Node:
     def __init__(self):
         self.adj = []
 
+
 def solve():
     n, x = list(map(int, input().split()))
     x -= 1
@@ -24,4 +25,3 @@ t = int(input())
 
 for _ in range(t):
     print(solve())
-

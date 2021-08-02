@@ -1,4 +1,4 @@
-# D - AtCoder Express 2 
+# D - AtCoder Express 2
 import sys
 
 N, M, Q = list(map(int, sys.stdin.readline().strip().split()))
@@ -17,6 +17,5 @@ for i in range(N):
 for _ in range(Q):
     p, q = list(map(int, sys.stdin.readline().strip().split()))  # p <= q
 
-    ans = cusum[q][q] - cusum[q][p - 1] - cusum[p - 1][q] + cusum[p- 1][p - 1]
+    ans = cusum[q][q] - cusum[q][p - 1] - cusum[p - 1][q] + cusum[p - 1][p - 1]
     print(ans)
-

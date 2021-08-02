@@ -8,7 +8,7 @@ if n > 300:
     answer = 0
     answer_1 = []
     m300 = [[-1, -10**6]]
-    for i in range(max(0, m-1)):
+    for i in range(max(0, m - 1)):
         m300.append([-1, -10**6])
     for u in range(n):
         if A[u] > min(m300)[1]:

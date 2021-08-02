@@ -16,7 +16,7 @@ def calculate_diff(i1, i2, nums, all_segments):
 def main():
     n, m = read_nums()
     nums = read_nums()
-    segments = [[x-1 for x in read_nums()] for _ in range(m)]
+    segments = [[x - 1 for x in read_nums()] for _ in range(m)]
 
     if n == 1:
         print(0)
@@ -40,5 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()
