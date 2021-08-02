@@ -5,4 +5,3 @@ res = 0
 for i in range(n):
     res += arr[i][0] * i + arr[i][1] * (n - i - 1)
 print(res)
-

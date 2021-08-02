@@ -46,6 +46,7 @@ class UnionFind():
             groups[r_to_g[self.find(i)]].append(i)
         return groups
 
+
 n, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -54,21 +55,19 @@ for _ in range(m):
     c, d = list(map(int, input().split()))
     c -= 1
     d -= 1
-    uf.union(c,d)
+    uf.union(c, d)
 
-sa = [0]*(n+1)
-sb = [0]*(n+1)
+sa = [0] * (n + 1)
+sb = [0] * (n + 1)
 
 for i in range(n):
     par = uf.find(i)
     sa[par] += a[i]
     sb[par] += b[i]
 
-for aa,bb in zip(sa,sb):
+for aa, bb in zip(sa, sb):
     if aa != bb:
         print("No")
         return
 
 print("Yes")
-
-

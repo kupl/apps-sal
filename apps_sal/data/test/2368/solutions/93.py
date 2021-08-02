@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -44,25 +45,27 @@ class UnionFind():
     def all_group_members(self):
         group_members = defaultdict(list)
         for member in range(self.n):
-          group_members[self.find(member)]=0
+            group_members[self.find(member)] = 0
         for member in range(self.n):
-            group_members[self.find(member)]+=A[member]-B[member]
-            
+            group_members[self.find(member)] += A[member] - B[member]
+
         return group_members
 
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
-N,M=map(int,input().split())
-A=list(map(int,input().split()))
-B=list(map(int,input().split()))
-L=UnionFind(N)
+
+
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+L = UnionFind(N)
 for i in range(M):
-  c,d=map(int,input().split())
-  c-=1
-  d-=1
-  L.union(c,d)
+    c, d = map(int, input().split())
+    c -= 1
+    d -= 1
+    L.union(c, d)
 for i in list(L.all_group_members().items()):
-  if i[1]!=0:
-    print("No")
-    return
+    if i[1] != 0:
+        print("No")
+        return
 print("Yes")

@@ -1,4 +1,4 @@
-a, b, c = map(int,input().split())
+a, b, c = map(int, input().split())
 
 bell_list = []
 bell_list.append(a + b)

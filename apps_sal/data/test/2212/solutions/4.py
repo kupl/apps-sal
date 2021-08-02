@@ -15,4 +15,3 @@ for i in range(n):
     m.append(row)
 for row in m:
     print(" ".join(row))
-

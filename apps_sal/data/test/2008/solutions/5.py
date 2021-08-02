@@ -10,7 +10,7 @@ R = []
 cost = 0
 for i in range(n):
     mn = min(A[i])
-    cost += mn*(n-1)
+    cost += mn * (n - 1)
     A[i][0] -= mn
     A[i][1] -= mn
 
@@ -19,8 +19,7 @@ for i in range(n):
     elif A[i][1] == 0:
         L.append(A[i][0])
 
-cost += sum(i*e for i,e in enumerate(sorted(L, reverse=True)))
-cost += sum(i*e for i,e in enumerate(sorted(R, reverse=True)))
+cost += sum(i * e for i, e in enumerate(sorted(L, reverse=True)))
+cost += sum(i * e for i, e in enumerate(sorted(R, reverse=True)))
 
 print(cost)
-

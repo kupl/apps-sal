@@ -11,4 +11,3 @@ for _ in range(t):
             l -= 1
         if u < n:
             u += 1
-

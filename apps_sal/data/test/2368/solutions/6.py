@@ -28,35 +28,35 @@ class UnionFind():
 
     def same(self, x, y):
         return self.find(x) == self.find(y)
-        
+
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-n,m=map(int,input().split())
-a=list(map(int,input().split()))
-b=list(map(int,input().split()))
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 
 uf = UnionFind(n)
 for i in range(m):
-    c,d=map(int,input().split())
-    uf.union(c-1,d-1)
+    c, d = map(int, input().split())
+    uf.union(c - 1, d - 1)
 
-sumA={}
-sumB={}
+sumA = {}
+sumB = {}
 for i in range(n):
-    g=uf.find(i)
+    g = uf.find(i)
     if g in sumA:
-        sumA[g]+=a[i]
-        sumB[g]+=b[i]
+        sumA[g] += a[i]
+        sumB[g] += b[i]
     else:
-        sumA[g]=a[i]
-        sumB[g]=b[i]
+        sumA[g] = a[i]
+        sumB[g] = b[i]
 
-ans="Yes"
+ans = "Yes"
 for k in sumA.keys():
-    if sumA[k]!=sumB[k]:
-        ans="No"
+    if sumA[k] != sumB[k]:
+        ans = "No"
         break
 
 print(ans)

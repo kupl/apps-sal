@@ -1,6 +1,7 @@
 import numpy as np
 from collections import defaultdict
 
+
 class UnionFind(object):
     def __init__(self, n):
         self.n = n
@@ -28,7 +29,7 @@ class UnionFind(object):
 
     def size(self, x):
         return self.root[self.find(x)] * -1
-    
+
     def get_all_groups(self):
         all_groups = defaultdict(list)
         for i in range(self.n):

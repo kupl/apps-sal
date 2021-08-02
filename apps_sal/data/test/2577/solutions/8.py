@@ -10,5 +10,3 @@ for cs in range(t):
             if a[i][j] % 2 != (i + j) % 2:
                 a[i][j] += 1
     print('\n'.join([' '.join(map(str, a[_])) for _ in range(n)]))
-
-

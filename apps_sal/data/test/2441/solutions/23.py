@@ -30,5 +30,4 @@ while r:
         elif w[i] < d: d, k = w[i], 1
     s += d
     t = (t * k) % m
-print(s,t)
-
+print(s, t)

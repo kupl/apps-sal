@@ -6,7 +6,7 @@ class UnionFind:
     def __init__(self, n):
         # 親ノード：parents[根] == -(その木のノード数)
         self.parents = [-1] * n
-    
+
     # ノードxが属する木の根を返す
     def find_root(self, x):
         if self.parents[x] < 0:
@@ -21,7 +21,7 @@ class UnionFind:
         root_y = self.find_root(y)
         if root_x == root_y:
             return
-        
+
         # ノード数の多い木に少ない木を繋げる
         if self.parents[root_x] > self.parents[root_y]:  # yが属する木のノード数がxのものより多いとき
             root_x, root_y = root_y, root_x
@@ -31,7 +31,7 @@ class UnionFind:
     # ノードxとノードyが同じ木に属するかを判定する
     def are_in_same(self, x, y):
         return self.find_root(x) == self.find_root(y)
-    
+
     # ノードxが含まれる木のノード数を返す
     def get_size(self, x):
         return -self.parents[self.find_root(x)]
@@ -71,4 +71,3 @@ for r in graph.get_roots():
         break
 
 print(judge)
-

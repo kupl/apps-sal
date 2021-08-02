@@ -1,4 +1,4 @@
-#same code but with using bootstrap recursion
+# same code but with using bootstrap recursion
 
 
 from collections import *
@@ -88,4 +88,3 @@ for i in range(m):
     g.addEdge(u, v)
 
 g.scc(n)
-

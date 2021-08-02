@@ -51,13 +51,14 @@ class DSU:
         result = [i for i in result if i]
         return result
 
-n,m = list(map(int, input().split()))
+
+n, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 uf = DSU(n)
 for i in range(m):
     x, y = list(map(int, input().split()))
-    uf.merge(x-1,y-1)
+    uf.merge(x - 1, y - 1)
 
 for u in uf.groups():
     diff = 0
@@ -67,4 +68,3 @@ for u in uf.groups():
         print('No')
         return
 print('Yes')
-

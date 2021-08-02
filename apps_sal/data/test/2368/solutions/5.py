@@ -59,7 +59,7 @@ for i in range(m):
     c -= 1
     d -= 1
     U.union(c, d)
-#print(U)
+# print(U)
 check = {}
 for i in range(n):
     x = U.find(i)
@@ -79,4 +79,3 @@ for i in check:
         print('No')
         return
 print('Yes')
-

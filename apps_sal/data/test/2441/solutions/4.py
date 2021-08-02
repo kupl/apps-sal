@@ -1,7 +1,9 @@
 from collections import defaultdict, deque, Counter, OrderedDict
 from heapq import heappop, heappush
-import bisect, sys, threading
-#2
+import bisect
+import sys
+import threading
+# 2
 mod = 10 ** 9 + 7
 
 
@@ -59,5 +61,6 @@ def __starting_point():
     threading.stack_size(10240000)
     thread = threading.Thread(target=main)
     thread.start()
+
 
 __starting_point()

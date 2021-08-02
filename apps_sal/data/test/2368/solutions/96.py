@@ -1,8 +1,8 @@
 class union_find():
     def __init__(self, n):
         # self.n = n
-        self.root = [-1]*(n+1)
-        self.rank = [0]*(n+1)
+        self.root = [-1] * (n + 1)
+        self.rank = [0] * (n + 1)
         self.siz = n
 
     def find_root(self, x):
@@ -42,7 +42,7 @@ b = list(map(int, input().split()))
 if sum(a) != sum(b):
     print('No')
     return
-    
+
 g = union_find(n)
 for _ in range(m):
     c, d = map(int, input().split())
@@ -51,8 +51,8 @@ for _ in range(m):
     g.unite(c, d)
 
 
-aa = [0]*n
-bb = [0]*n
+aa = [0] * n
+bb = [0] * n
 for i in range(n):
     j = g.find_root(i)
     aa[j] += a[i]

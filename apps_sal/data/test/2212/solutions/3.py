@@ -17,4 +17,3 @@ for i in range(N):
         res.append(evens[s])
         s += 1
     print(" ".join(map(str, res)))
-

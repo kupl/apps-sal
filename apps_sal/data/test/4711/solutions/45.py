@@ -2,9 +2,9 @@
 # 自転車とは別にベルも買う必要があります。 snuke 君は安全意識が高いので、ベルをどちらの手でも鳴らせるよう、両方のハンドルに 1 つずつ 付けることにしました。
 # お店にあるベルは 3 種類で、それぞれ a 円、 b 円、 c 円です。 この 3 つのうち、異なる 2 つのベルを選んで買うときの、値段の合計の最小値を求めて下さい。
 
-a,b,c = map(int,input().split())
+a, b, c = map(int, input().split())
 
-if a >= b and a >= c :
+if a >= b and a >= c:
     print(b + c)
 elif b >= a and b >= c:
     print(a + c)

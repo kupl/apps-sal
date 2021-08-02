@@ -9,4 +9,3 @@ a.sort()
 for i in range(n):
     s += a[i] * (n - i)
 print(s)
-

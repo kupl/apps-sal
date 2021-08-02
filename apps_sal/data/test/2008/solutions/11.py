@@ -19,10 +19,12 @@ def main():
     # for i in range(len(right)):
     #     x, y = right[i]
     #     ans += x * i - (n - 1 - i) * y
-    arr.sort(key = lambda a: a[1] - a[0])
+    arr.sort(key=lambda a: a[1] - a[0])
     for i in range(n):
         x, y = arr[i]
         ans += x * i + (n - 1 - i) * y
     print(ans)
     return 0
+
+
 main()

@@ -15,7 +15,6 @@ for i, v in enumerate(maps):
     a = v[1]
     b = v[2]
     j = i + 1
-    
-    ans += a * (j - 1) + b * (N - j)
-print(ans)    
 
+    ans += a * (j - 1) + b * (N - j)
+print(ans)

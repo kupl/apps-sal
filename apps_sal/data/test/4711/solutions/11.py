@@ -21,4 +21,3 @@ a, b, c = list(map(int, input().split()))
 result = [a + b, b + c, a + c]  # 結果出力用リスト
 
 print((min(result)))
-

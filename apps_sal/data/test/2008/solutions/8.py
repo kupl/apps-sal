@@ -7,6 +7,5 @@ for _ in range(n):
 
 values.sort(key=lambda x: x[0] - x[1], reverse=True)
 
-diss = sum([values[i][0]*i + values[i][1]*(n-i-1) for i in range(n)])
+diss = sum([values[i][0] * i + values[i][1] * (n - i - 1) for i in range(n)])
 print(diss)
-

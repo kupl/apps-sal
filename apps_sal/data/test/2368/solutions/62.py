@@ -22,22 +22,25 @@ class UnionFind():
 
         self.parents[x] += self.parents[y]
         self.parents[y] = x
+
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+
+
 def main():
     N, M = list(map(int, input().split()))
-    A = list(map(int,input().split()))
-    B = list(map(int,input().split()))
+    A = list(map(int, input().split()))
+    B = list(map(int, input().split()))
     if sum(A) != sum(B):
         print("No")
     else:
         f = 0
         uf = UnionFind(N)
         for _ in range(M):
-            C,D = list(map(int,input().split()))
+            C, D = list(map(int, input().split()))
             C -= 1
             D -= 1
-            uf.union(C,D)
+            uf.union(C, D)
         wa = [0 for i in range(N)]
         tle = [0 for i in range(N)]
         for i in range(N):
@@ -47,5 +50,6 @@ def main():
             print("Yes")
         else:
             print("No")
-main()
 
+
+main()

@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -62,7 +63,7 @@ for i in range(N):
 uf = UnionFind(N)
 for i in range(M):
     c, d = list(map(int, input().split()))
-    uf.union(c-1, d-1)
+    uf.union(c - 1, d - 1)
 flag = True
 sa = {}
 sb = {}
@@ -82,4 +83,3 @@ print(("Yes" if flag else "No"))
 # print(sa)
 # print(sb)
 # print(uf.parents)
-

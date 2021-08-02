@@ -3,7 +3,7 @@ class UnionFind:
         # 負  : 根であることを示す。絶対値はランクを示す
         # 非負: 根でないことを示す。値は親を示す
         self.table = [-1] * n
- 
+
     def _root(self, x):
         stack = []
         tbl = self.table
@@ -13,10 +13,10 @@ class UnionFind:
         for y in stack:
             tbl[y] = x
         return x
- 
+
     def find(self, x, y):
         return self._root(x) == self._root(y)
- 
+
     def union(self, x, y):
         r1 = self._root(x)
         r2 = self._root(y)
@@ -33,32 +33,31 @@ class UnionFind:
             self.table[r1] = r2
 
 
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 
-A=list(map(int, input().split()))
-B=list(map(int, input().split()))
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 
 G = UnionFind(n)
 
-CD=[]
+CD = []
 
 for _ in range(m):
 
-    c,d = list(map(int, input().split()))
-    G.union(c-1,d-1)
+    c, d = list(map(int, input().split()))
+    G.union(c - 1, d - 1)
 
-ansA=[0]*n
-ansB=[0]*n
+ansA = [0] * n
+ansB = [0] * n
 
 for i in range(n):
-    
-    ansA[G._root(i)] += A[i] 
-    
-    ansB[G._root(i)] += B[i] 
- 
+
+    ansA[G._root(i)] += A[i]
+
+    ansB[G._root(i)] += B[i]
+
 if ansA == ansB:
     print("Yes")
-    
+
 else:
     print("No")
-

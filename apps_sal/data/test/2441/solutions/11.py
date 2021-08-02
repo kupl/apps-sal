@@ -1,13 +1,11 @@
 __author__ = 'Gleb'
 
 
-
 from time import time
 
 from collections import defaultdict
 
 from bisect import bisect_left, bisect_right
-
 
 
 n, m = int(input()) + 1, 1000000007
@@ -77,6 +75,4 @@ while r:
 print(s, t)
 
 
-
 # Made By Mostafa_Khaled
-

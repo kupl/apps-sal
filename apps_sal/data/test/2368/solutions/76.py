@@ -77,9 +77,9 @@ class UnionFind():
 
 
 uf = UnionFind(N)
-for _ in [0]*M:
+for _ in [0] * M:
     c, d = list(map(int, readline().split()))
-    uf.union(c-1, d-1)
+    uf.union(c - 1, d - 1)
 
 for grp in list(uf.all_group_members().values()):
     a_values = [a[x] for x in grp]
@@ -91,4 +91,3 @@ for grp in list(uf.all_group_members().values()):
         return
 
 print("Yes")
-

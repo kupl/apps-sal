@@ -5,7 +5,7 @@ for i in range(t):
     l = dict()
     for i in k:
         l[i] = 1
-    
+
     for i in range(1005):
         i1 = s + i
         i2 = s - i
@@ -17,5 +17,3 @@ for i in range(t):
             if i1 not in l:
                 print(i)
                 break
-        
-

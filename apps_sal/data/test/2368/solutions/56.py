@@ -32,4 +32,3 @@ if all(sa[i] == sb[i] for i in sa):
     print("Yes")
 else:
     print("No")
-

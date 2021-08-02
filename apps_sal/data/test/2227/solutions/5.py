@@ -7,4 +7,3 @@ for i in range(0, len(str)):
     elif str[i:i + 5] == "metal":
         ans += heavy
 print(ans)
-

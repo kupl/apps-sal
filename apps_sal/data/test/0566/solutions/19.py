@@ -8,4 +8,3 @@ while right - left > 1:
     else:
         right = m
 print(left)
-

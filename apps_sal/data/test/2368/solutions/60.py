@@ -6,11 +6,11 @@ B = list(map(int, input().split()))
 
 G = [[] for _ in range(n)]
 for _ in range(m):
-    c, d = map(lambda x:int(x)-1, input().split())
+    c, d = map(lambda x: int(x) - 1, input().split())
     G[c].append(d)
     G[d].append(c)
 
-seen = [False]*n
+seen = [False] * n
 que = deque()
 
 for i in range(n):

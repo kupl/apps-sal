@@ -1,7 +1,8 @@
-N,M=list(map(int,input().split()))
+N, M = list(map(int, input().split()))
 
-a=list(map(int,input().split()))
-b=list(map(int,input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -50,32 +51,28 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-tree=UnionFind(N)
+
+tree = UnionFind(N)
 
 for i in range(M):
-  cd=list(map(int,input().split()))
-  cd[0]-=1
-  cd[1]-=1
-  tree.union(cd[0],cd[1])
+    cd = list(map(int, input().split()))
+    cd[0] -= 1
+    cd[1] -= 1
+    tree.union(cd[0], cd[1])
 
-dict={}
+dict = {}
 for i in range(N):
-  x=tree.find(i)
-  dict.setdefault(x,[])
-  dict[x].append(i)
+    x = tree.find(i)
+    dict.setdefault(x, [])
+    dict[x].append(i)
 
-ans="Yes"
+ans = "Yes"
 for i in dict:
-  asum=0
-  bsum=0
-  for j in dict[i]:
-    asum+=a[j]
-    bsum+=b[j]
-  if asum!=bsum:
-    ans="No"
+    asum = 0
+    bsum = 0
+    for j in dict[i]:
+        asum += a[j]
+        bsum += b[j]
+    if asum != bsum:
+        ans = "No"
 print(ans)
-
-
-  
-
-

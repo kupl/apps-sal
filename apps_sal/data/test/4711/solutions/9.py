@@ -5,5 +5,6 @@ def atc_066a(abc: str) -> int:
     abc_int.sort()
     return abc_int[0] + abc_int[1]
 
+
 abc = input()
 print(atc_066a(abc))

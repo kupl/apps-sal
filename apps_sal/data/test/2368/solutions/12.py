@@ -80,4 +80,3 @@ for mem in mems:
         break
 
 print(("Yes" if is_ok else "No"))
-

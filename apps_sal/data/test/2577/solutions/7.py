@@ -8,5 +8,3 @@ for case in range(t):
                 a[i][j] += 1
     for row in a:
         print(*row)
-
-

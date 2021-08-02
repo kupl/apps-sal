@@ -1,8 +1,10 @@
 from collections import defaultdict
 
+
 def Yes_No(flag):
-    if flag:    print("Yes")
-    else:       print("No")
+    if flag: print("Yes")
+    else: print("No")
+
 
 class UnionFind():
     def __init__(self, n):
@@ -54,17 +56,18 @@ class UnionFind():
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
 
-n, m = list(map(int,input().split()))
 
-aa = list(map(int,input().split()))
-bb = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 
-cds = [list(map(int,input().split())) for _ in range(m)]
+aa = list(map(int, input().split()))
+bb = list(map(int, input().split()))
+
+cds = [list(map(int, input().split())) for _ in range(m)]
 
 uf = UnionFind(n)
 for i in range(m):
     x, y = cds[i]
-    uf.union(x-1,y-1)
+    uf.union(x - 1, y - 1)
 
 ans = True
 

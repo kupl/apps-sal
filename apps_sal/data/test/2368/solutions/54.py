@@ -1,5 +1,5 @@
 import collections
-N,M = map(int,input().split())
+N, M = map(int, input().split())
 
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -8,42 +8,46 @@ l = [list(map(int, input().split())) for l in range(M)]
 
 par = [i for i in range(N)]
 
-#グループ分け
+# グループ分け
+
+
 def find(x):
     if par[x] == x:
         return x
     else:
-        par[x] = find(par[x]) #経路圧縮
+        par[x] = find(par[x])  # 経路圧縮
         return par[x]
 
-def unite(x,y):
+
+def unite(x, y):
     x = find(x)
     y = find(y)
     if x == y:
         return 0
     par[x] = y
 
-#print(par)
+
+# print(par)
 for i in l:
-  unite(i[0]-1,i[1]-1)
+    unite(i[0] - 1, i[1] - 1)
 #  print(par)
 
 for i in range(N):
-  find(i)
+    find(i)
 
-#print(par)
-      
-#何種類あるか
+# print(par)
+
+# 何種類あるか
 c = collections.Counter(par)
-#print(c)
-sumcheck = [[0]*N,[0]*N]
+# print(c)
+sumcheck = [[0] * N, [0] * N]
 
-#すべてでシグマ
+# すべてでシグマ
 for i in range(N):
-  sumcheck[0][par[i]] += a[i]
-  sumcheck[1][par[i]] += b[i]
-  
+    sumcheck[0][par[i]] += a[i]
+    sumcheck[1][par[i]] += b[i]
+
 if sumcheck[0] == sumcheck[1]:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")
