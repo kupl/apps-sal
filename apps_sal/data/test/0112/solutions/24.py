@@ -10,7 +10,7 @@ for i in range(10000):
 res = 0
 for cube in cubes:
     for face in cube:
-            taken[face] += 1
+        taken[face] += 1
 
 for cube1 in cubes:
     for cube2 in cubes:
@@ -38,4 +38,3 @@ for i in taken:
     res = iterate
     iterate += 1
 print(res)
-

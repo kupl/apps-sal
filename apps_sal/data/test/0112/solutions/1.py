@@ -21,4 +21,3 @@ x = 1
 while x in pos:
     x += 1
 print(x - 1)
-

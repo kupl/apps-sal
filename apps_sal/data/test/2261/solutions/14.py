@@ -28,4 +28,3 @@ for i in range(k - 1):
     length *= 2
 
 print('\n'.join([''.join(i) for i in answer]))
-

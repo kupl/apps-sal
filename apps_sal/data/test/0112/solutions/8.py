@@ -5,10 +5,10 @@ kostki = []
 for i in range(int(input())):
     kostki.append(input().split())
 
-l = ([ ''.join(i) for i in itertools.product(*kostki) ])
+l = ([''.join(i) for i in itertools.product(*kostki)])
 
 s = [
-    (1,2,3), (1,2),(1,3),(2,3),(1,),(2,),(3,)
+    (1, 2, 3), (1, 2), (1, 3), (2, 3), (1,), (2,), (3,)
 ]
 s1 = []
 for p in s:
@@ -20,13 +20,12 @@ for inp in l:
         num = ''
         for ind in p:
             if ind <= len(inp):
-                num += inp[ind-1]
+                num += inp[ind - 1]
         if num:
             res.add(int(num))
 
-#print(res)
+# print(res)
 for i in range(1, 1003):
     if i not in res:
-        print(i-1)
+        print(i - 1)
         break
-

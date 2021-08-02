@@ -1,23 +1,27 @@
 __author__ = 'Utena'
+
+
 def t(x):
-    a=''
+    a = ''
     for l in x:
-        if l=='+':
-            a+='*'
-        elif l=='*':
-            a+='+'
+        if l == '+':
+            a += '*'
+        elif l == '*':
+            a += '+'
     return a
-k=int(input())
-if k==0:
+
+
+k = int(input())
+if k == 0:
     print('+')
     return
-m=['++','+*']
-s=1
-for i in range(k-1):
-    m=m+m
-    s*=2
+m = ['++', '+*']
+s = 1
+for i in range(k - 1):
+    m = m + m
+    s *= 2
     for j in range(s):
-        m[j]+=m[j]
-        m[s+j]+=t(m[s+j])
+        m[j] += m[j]
+        m[s + j] += t(m[s + j])
 for y in m:
     print(y)

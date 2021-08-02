@@ -10,6 +10,7 @@ Let's introduce several definitions:
 Your task is, for any prefix of string s which matches a suffix of string s, print the number of times it occurs in string s as a substring.
 '''
 
+
 def prefix_function(s):
     n = len(s)
     pi = [0] * n
@@ -19,6 +20,7 @@ def prefix_function(s):
             j = pi[j - 1]
         pi[i] = j + (s[j] == s[i])
     return pi
+
 
 def solve(s):
     n = len(s)
@@ -42,12 +44,10 @@ def solve(s):
     for i in reversed(prefixes):
         print(i, cnt[i])
 
+
 def main():
     s = input()
     solve(s)
 
+
 main()
-    
-
-
-

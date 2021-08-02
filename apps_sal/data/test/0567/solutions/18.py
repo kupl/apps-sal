@@ -8,4 +8,3 @@ for i in range(n - 1):
     cur_ans = max(data[i] - 1, 1000000 - data[i + 1])
     ans = min(ans, cur_ans)
 print(ans)
-

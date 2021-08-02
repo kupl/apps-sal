@@ -6,7 +6,10 @@ def g(i):
             return 1
     return 0
 
-f = lambda: map(int, input().split())
+
+def f(): return map(int, input().split())
+
+
 n, m = f()
 s = k = 0
 d = [[]]
@@ -26,10 +29,12 @@ for i in f():
 p = [[] for i in range(k)]
 for q in range(m):
     a, b = f()
-    if b % 2: a, b = b, a
+    if b % 2:
+        a, b = b, a
     for x, i in d[a]:
         for y, j in d[b]:
-            if x == y: p[i].append(j)
+            if x == y:
+                p[i].append(j)
 v = [-1] * k
 for i in range(k):
     u = [1] * k

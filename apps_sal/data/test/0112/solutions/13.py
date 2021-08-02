@@ -6,12 +6,12 @@ for i in range(int(cubecount)):
 count = 0
 while count < 1000:
     p = False
-    candidate = str(count+1)
-    if count+1 < 10:
+    candidate = str(count + 1)
+    if count + 1 < 10:
         for cube in cubies:
             if candidate in cube:
                 p = True
-    elif count+1 < 100:
+    elif count + 1 < 100:
         for cube in cubies:
             if candidate[0] in cube:
                 cubieb = cubies.copy()
@@ -30,11 +30,10 @@ while count < 1000:
                         cubiec.remove(cubeb)
                         for cubec in cubiec:
                             if candidate[2] in cubec:
-                                p = True          
+                                p = True
     if p:
-        count +=1
+        count += 1
     else:
         break
 
 print(count)
-

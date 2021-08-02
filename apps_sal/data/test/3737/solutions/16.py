@@ -15,4 +15,4 @@ for i in range(n):
         mn_cnt = 1
     elif arr[i] == arr[mn_i]:
         mn_cnt += 1
-print(max(0, n - mx_cnt - mn_cnt)) 
+print(max(0, n - mx_cnt - mn_cnt))

@@ -1,12 +1,12 @@
-s=input()
-n=len(s)
-p=[0]
-for i in range(1,n):
-    j=p[i-1]
-    while j>0 and s[j]!=s[i]:
-        j=p[j-1]
-    if s[j]==s[i]:
-        j+=1
+s = input()
+n = len(s)
+p = [0]
+for i in range(1, n):
+    j = p[i - 1]
+    while j > 0 and s[j] != s[i]:
+        j = p[j - 1]
+    if s[j] == s[i]:
+        j += 1
     p.append(j)
 a = []
 k = n

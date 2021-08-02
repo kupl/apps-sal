@@ -1,3 +1,6 @@
+from itertools import accumulate
+
+
 def zfunc(s):
     n = len(s)
     z = [0] * n
@@ -11,6 +14,7 @@ def zfunc(s):
             left, right = i, i + z[i] - 1
     return z
 
+
 s = input()
 ans = set()
 z = zfunc(s)
@@ -20,7 +24,6 @@ res = [0] * (len(s) + 1)
 for i in z:
     res[i] += 1
 
-from itertools import accumulate
 res = [*accumulate(res[::-1])][::-1]
 
 for i, j in enumerate(z[::-1]):

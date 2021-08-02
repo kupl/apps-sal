@@ -17,5 +17,4 @@ for x in range(1, 1000):
     else:
         break
 
-print(x-1)
-
+print(x - 1)

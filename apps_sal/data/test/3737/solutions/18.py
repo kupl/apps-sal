@@ -7,6 +7,5 @@ M = max(a)
 
 res = n
 res -= len([x for x in a if x == m or x == M])
-    
-print(res)
 
+print(res)

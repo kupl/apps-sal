@@ -8,4 +8,3 @@ else:
     v = [str(int(n / m))] * (m - (n % m))
     v.extend([str(int(n / m) + 1)] * (n % m))
     print(" ".join(v))
-

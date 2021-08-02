@@ -11,8 +11,6 @@ for item in lst:
     mod = mod - 1
 lst.sort()
 for item in lst:
-    if k == len(lst)-1:
+    if k == len(lst) - 1:
         print(item)
-    print(item, end = ' ')
-    
-
+    print(item, end=' ')

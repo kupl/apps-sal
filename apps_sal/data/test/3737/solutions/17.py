@@ -7,4 +7,3 @@ for el in a:
     if el != m and el != M:
         count += 1
 print(count)
-

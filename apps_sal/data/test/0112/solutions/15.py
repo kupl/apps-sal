@@ -1,6 +1,7 @@
 n = int(input().strip())
 sets = [set([i for i in input().strip().split()]) for j in range(n)]
 
+
 def get_all_perm(kek):
     if (len(kek) == 1):
         return [kek]
@@ -12,12 +13,13 @@ def get_all_perm(kek):
             ans.append([kek[i]] + perm)
     return ans
 
+
 answer = 0
 while answer < 10**n:
     answer += 1
     g = list(str(answer))
     for perm in get_all_perm(sets):
-        #print(perm)
+        # print(perm)
         #print([perm[i] in sets[i] for i in range(len(perm))])
         if all([g[i] in perm[i] for i in range(len(g))]):
             break

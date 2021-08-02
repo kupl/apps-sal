@@ -6,7 +6,6 @@ l.sort()
 # 	return
 cnt = 0
 for i in range(len(l)):
-	if l[0] < l[i] < l[-1]:
-		cnt += 1
+    if l[0] < l[i] < l[-1]:
+        cnt += 1
 print(cnt)
-

@@ -10,4 +10,3 @@ for pr in a:
     ans = max(ans, min(pr - 1, 1000000 - pr))
 
 print(ans)
-

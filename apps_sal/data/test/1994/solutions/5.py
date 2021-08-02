@@ -1,5 +1,6 @@
 from itertools import accumulate
 
+
 def z_algorithm(s):
     n = len(s)
     l, d = 1, 0
@@ -20,6 +21,7 @@ def z_algorithm(s):
         d -= k
     return ans
 
+
 z = z_algorithm(input())
 n = len(z)
 ct = [0] * (n + 1)
@@ -35,4 +37,3 @@ for i, v in enumerate(ct):
         buf.append('{} {}'.format(i, v))
 print(len(buf))
 print('\n'.join(buf))
-
