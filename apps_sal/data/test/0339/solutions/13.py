@@ -22,4 +22,3 @@ while x > 1:
         cost += min(temp * a, b)
 
 print(cost)
-

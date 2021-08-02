@@ -23,4 +23,3 @@ while n != 1:
             r += b
         n //= k
 print(r)
-

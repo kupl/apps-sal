@@ -5,4 +5,3 @@ k2 -= min(k2, k5, k6)
 s += min(k2, k3) * 32
 
 print(s)
-

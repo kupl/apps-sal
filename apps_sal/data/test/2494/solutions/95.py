@@ -24,4 +24,3 @@ while que:
                 que.appendleft(v)
 
 print((dist[0]))
-

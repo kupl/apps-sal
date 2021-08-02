@@ -1,10 +1,13 @@
 import sys
 
+
 def read_int():
     return int(input())
 
+
 def read_ints():
     return [int(x) for x in input().split()]
+
 
 n = read_int()
 k = read_int()
@@ -31,4 +34,3 @@ else:
                 cost -= a
 
 print(cost)
-

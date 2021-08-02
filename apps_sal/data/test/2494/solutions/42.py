@@ -24,4 +24,3 @@ while distances[0] == INF:
     if distances[mod_k * 10 % K] == INF:
         remains.appendleft((d, mod_k * 10 % K))
 print((distances[0]))
-

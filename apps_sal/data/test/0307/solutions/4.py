@@ -7,4 +7,3 @@ rest_k2 = k2 - mn_256
 k32 = min(k3, rest_k2)
 
 print(mn_256 * 256 + k32 * 32)
-

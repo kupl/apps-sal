@@ -51,4 +51,3 @@ for edge in sorted(edges, key=lambda edge: edge[2]):
         parent[find_v] = find_u
 
 print(cost)
-

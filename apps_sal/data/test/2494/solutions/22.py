@@ -34,10 +34,10 @@ def shortestPath(g: Graph, s: int):
     dist: 始点からの距離が格納されたリスト
     prev: 始点から最短経路で移動する場合、各頂点に至る前の頂点のリスト
     """
-    dist = [INF]*g.N
+    dist = [INF] * g.N
     dist[s] = 0
 
-    prev = [None]*g.N
+    prev = [None] * g.N
     Q = []
     heapq.heappush(Q, (dist[s], s))
 
@@ -55,11 +55,11 @@ def solve(K: int):
     g = Graph(K)
     for i in range(1, K):
         # 1を加える
-        g.add_edge([i, (i+1) % K, 1])
+        g.add_edge([i, (i + 1) % K, 1])
         # 10倍する
-        g.add_edge([i, (10*i) % K, 0])
+        g.add_edge([i, (10 * i) % K, 0])
     dist, prev = shortestPath(g, 1)
-    print((dist[0]+1))
+    print((dist[0] + 1))
     return
 
 
@@ -76,5 +76,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

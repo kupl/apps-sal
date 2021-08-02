@@ -15,4 +15,3 @@ while q:
         d[r] = d[n] + 1
         q.append(r)
 print((d[0]))
-

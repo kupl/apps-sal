@@ -18,4 +18,3 @@ while n:
     r += min(b, (n - n // k) * a)
     n //= k
 pt(r - a)
-

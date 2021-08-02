@@ -74,9 +74,8 @@ class Dijkstra(object):
 g = Graph()
 N = int(input())
 for i in range(N):
-    g.add_edge(i, (i+1)%N, 1)
+    g.add_edge(i, (i + 1) % N, 1)
     g.add_edge(i, (10 * i) % N, 0)
 
 d = Dijkstra(g, 1)
-print((d.dist[0]+1))
-
+print((d.dist[0] + 1))

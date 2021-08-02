@@ -1,7 +1,9 @@
 import heapq
 
+
 def generate_graph(K):
     return [{(i + 1) % K: 1, (i * 10) % K: 0} for i in range(K)]
+
 
 def dijkstra(start, goal, graph):
     answer = [float("inf")] * len(graph)
@@ -17,7 +19,7 @@ def dijkstra(start, goal, graph):
 
     return answer[goal] + 1
 
+
 K = int(input())
 graph = generate_graph(K)
 print(dijkstra(1, 0, graph))
-

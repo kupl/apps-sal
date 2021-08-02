@@ -5,17 +5,17 @@ B = int(input())
 
 ans = 0
 if k == 1:
-	print(A*(n-1))
-	return
+    print(A * (n - 1))
+    return
 
 while n > 1:
-	subt = (n % k)
-	ans += A * subt
-	n -= (n%k)
-	ans += min(A * (n - (n // k)),B)
-	n //= k
+    subt = (n % k)
+    ans += A * subt
+    n -= (n % k)
+    ans += min(A * (n - (n // k)), B)
+    n //= k
 
 if n == 0:
-	ans -= A
+    ans -= A
 
 print(ans)

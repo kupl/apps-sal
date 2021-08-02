@@ -13,27 +13,22 @@ def main():
 
         return v
 
-
     sys.stdin = StringIO(sys.stdin.read())
     input = lambda: sys.stdin.readline().rstrip('\r\n')
 
-
     n, m = list(map(int, input().split(' ')))
     a = list(map(int, input().split(' ')))
-
 
     edges = []
     for _ in range(m):
         x, y, w = list(map(int, input().split(' ')))
         edges.append((x - 1, y - 1, w))
 
-
     min_val = min(a)
     min_ind = a.index(min_val)
 
     for i in range(n):
         edges.append((min_ind, i, min_val + a[i]))
-
 
     parent, rank = list(range(n)), [0] * n
     cost = 0
@@ -53,5 +48,5 @@ def main():
 
     print(cost)
 
-main()
 
+main()

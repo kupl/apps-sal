@@ -9,8 +9,8 @@ while a * (n // k) + b + (n % k) * a < n * a:
     ost = ost + (n % k) * a;
     res = res + b;
     n = n // k;
-#print(n);
-#print(res);
-#print(ost);
+# print(n);
+# print(res);
+# print(ost);
 res = res + (n - 1) * a + ost;
 print(res);

@@ -1,5 +1,5 @@
 n = int(input())
-k= int(input())
+k = int(input())
 a = int(input())
 b = int(input())
 res = 0
@@ -8,8 +8,8 @@ if k == 1:
 else:
     while n != 1:
         res += (n % k) * a
-        if b > (n // k)*(k - 1) * a:
-            res += (n // k)*(k - 1) * a
+        if b > (n // k) * (k - 1) * a:
+            res += (n // k) * (k - 1) * a
         else:
             res += b
         n //= k

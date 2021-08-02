@@ -1,5 +1,6 @@
 def solve(K):
     checked = [False] * K
+
     def calc(x):
         while not checked[x]:
             checked[x] = True
@@ -16,6 +17,7 @@ def solve(K):
                     return i
                 ys.append(z)
         xs = ys
+
 
 K = int(input())
 print(solve(K))

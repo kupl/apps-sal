@@ -1,6 +1,7 @@
 from collections import deque
 
-def BFS01(d,K):
+
+def BFS01(d, K):
     d[1] = 1
     q = deque([1])
     while q:
@@ -15,7 +16,8 @@ def BFS01(d,K):
             q.append(r)
     return d[0]
 
+
 K = int(input())
 d = [float('inf')] * K
 
-print(BFS01(d,K))
+print(BFS01(d, K))

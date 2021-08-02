@@ -6,7 +6,7 @@ input = sys.stdin.readline
 
 
 def solve(n, m, edges):
-    
+
     lo = 0
     hi = m
 
@@ -40,7 +40,7 @@ def solve(n, m, edges):
                 in_degree[i] -= 1
                 if in_degree[i] == 0:
                     candidates.append(i)
-        
+
         if len(res) < n:
             can_do = False
 
@@ -52,9 +52,10 @@ def solve(n, m, edges):
 
     return curr_k
 
+
 def main():
     n, m = list(map(int, input().split()))
-    
+
     edges = []
     for i in range(m):
         a, b = list(map(int, input().split()))
@@ -65,5 +66,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

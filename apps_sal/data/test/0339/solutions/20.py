@@ -5,17 +5,17 @@ b = int(input(""))
 
 ans = 0
 while not n == 1:
-	m = n % k
-	n = n - m
-	ans = ans + m*a
+    m = n % k
+    n = n - m
+    ans = ans + m * a
 
-	if (n-(n/k))*a > b:
-		n = n / k
-		ans = ans + b
-	else:
-		ans = ans + (n-1)*a
-		n = 1
-print(int(ans)) 
+    if (n - (n / k)) * a > b:
+        n = n / k
+        ans = ans + b
+    else:
+        ans = ans + (n - 1) * a
+        n = 1
+print(int(ans))
 """
 	int64 ans = 0;
 	while(n != 1){

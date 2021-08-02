@@ -28,4 +28,5 @@ def main():
             ans += w
     print(ans)
 
+
 main()

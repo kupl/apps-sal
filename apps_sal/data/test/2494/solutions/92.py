@@ -18,4 +18,3 @@ while len(q) > 0:
         q.appendleft((n10, p))
 
 print((p + 1))
-
