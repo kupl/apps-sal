@@ -6,10 +6,10 @@ for i in range(q):
     tab = list(map(int, input().split()))
 
     for indice, j in enumerate(tab):
-        var = indice +1
+        var = indice + 1
 
-        while tab[var-1] != indice+1:
-            var = tab[var-1]
+        while tab[var - 1] != indice + 1:
+            var = tab[var - 1]
             cycle[indice] += 1
-    
+
     print(*cycle)

@@ -12,4 +12,5 @@ def __starting_point():
                 break
         print("YES" if found else "NO")
 
+
 __starting_point()

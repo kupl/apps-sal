@@ -19,9 +19,9 @@ def solve(n, k, M, t):
 
     for fully_solved in range(min(n, M // T) + 1):
         # Try to fully solve fully_solved problems, remainder is for remaining subproblems
-        score_1 = fully_solved * (k + 1) # For fully solved
+        score_1 = fully_solved * (k + 1)  # For fully solved
 
-        score_2 = 0 # For partially solved
+        score_2 = 0  # For partially solved
         remaining_time = M - T * fully_solved
         remaining_problems = n - fully_solved
 
@@ -29,7 +29,7 @@ def solve(n, k, M, t):
             level = 0
             while level < k:
                 # remaining_time > 0 and level < k:
-                level_coeff = 1 if level + 1 < k else 2 # last_level
+                level_coeff = 1 if level + 1 < k else 2  # last_level
                 time_to_solve_level = t[level] * remaining_problems
                 if time_to_solve_level <= remaining_time:
                     score_2 += remaining_problems * level_coeff
@@ -42,7 +42,6 @@ def solve(n, k, M, t):
         max_score = max(score, max_score)
 
     return max_score
-
 
 
 def main():

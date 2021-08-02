@@ -8,5 +8,4 @@ else:
     for i in a:
         if x >= i:
             counter += 1
-    print(math.ceil(counter/2))
-
+    print(math.ceil(counter / 2))

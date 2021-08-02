@@ -1,6 +1,7 @@
 n, k, M = list(map(int, input().split()))
 t = sorted(map(int, input().split()))
 
+
 def calc(x):
     tot = x * sum(t)
     if tot > M:
@@ -15,5 +16,5 @@ def calc(x):
             break
     return tans
 
-print(max([calc(x) for x in range(n + 1)]))
 
+print(max([calc(x) for x in range(n + 1)]))

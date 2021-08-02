@@ -5,4 +5,4 @@ for i in range(n):
     if s in setA:
         print('NO')
     else:
-        print('YES')    
+        print('YES')

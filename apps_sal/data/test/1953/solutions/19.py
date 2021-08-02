@@ -9,4 +9,3 @@ for i in range(x):
         s += y[i]
 
 print(ct)
-

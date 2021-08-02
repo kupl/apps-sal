@@ -7,4 +7,3 @@ for i in range(n):
         sum1 += 1
         curr += ar[i]
 print(sum1)
-

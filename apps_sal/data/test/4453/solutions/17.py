@@ -3,7 +3,7 @@ AA = []
 t = int(input())
 for i in range(t):
     N.append(int(input()))
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     for j in range(len(a)):
         a[j] -= 1
     AA.append(a)

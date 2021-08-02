@@ -5,6 +5,8 @@ def check(a):
     if a in [1, 2, 4, 5, 8, 11]:
         return False
     return True
+
+
 n = int(input())
 for i in range(n):
     x = int(input())
@@ -12,4 +14,3 @@ for i in range(n):
         print('YES')
     else:
         print('NO')
-

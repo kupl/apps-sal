@@ -16,7 +16,6 @@ for i in range(n + 1):
         l -= p[j] * c
         cr += c
     ans = max(ans, cr)
-        
+
 
 print(ans)
-

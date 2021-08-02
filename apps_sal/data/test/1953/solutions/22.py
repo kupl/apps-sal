@@ -12,7 +12,7 @@ time = [0] * n
 cumsum = 0
 count = 0
 for i in range(1, n):
-    cumsum = cumsum + data[i-1]
+    cumsum = cumsum + data[i - 1]
 
     if cumsum > data[i]:
         time[i] = data[i]
@@ -21,4 +21,3 @@ for i in range(1, n):
         time[i] = cumsum
 
 print(n - data.count(0))
-

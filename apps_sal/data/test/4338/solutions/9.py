@@ -11,4 +11,3 @@ else:
         print(b // 2 + 1)
     else:
         print(b // 2)
-

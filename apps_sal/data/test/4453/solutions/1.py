@@ -20,4 +20,3 @@ for _ in range(t):
         for i in memo:
             ans[tmp] = cnt
     print(*ans)
-

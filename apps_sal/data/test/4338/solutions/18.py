@@ -8,4 +8,3 @@ for i in a:
     if i <= x:
         cnt += 1
 print((cnt + 1) // 2)
-

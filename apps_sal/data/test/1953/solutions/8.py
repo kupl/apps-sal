@@ -10,4 +10,3 @@ for i in range(len(serveTime)):
         answer += 1
 
 print(answer)
-

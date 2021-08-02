@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 for i in range(ii()):
     x = ii()
@@ -14,5 +19,3 @@ for i in range(ii()):
             break
         x -= 7
     print('YES' if ok else 'NO')
-    
-

@@ -8,10 +8,8 @@ summ = 0
 for i in sorted(list(c)):
     for j in range(d[i]):
         if summ <= i:
-            res+=1;
-            summ+=i
+            res += 1;
+            summ += i
         else:
             break
 print(res)
-
-

@@ -6,5 +6,4 @@ if x > y:
     print(n)
 else:
     k = bisect_right(line, x)
-    print(k//2 + k % 2)
-
+    print(k // 2 + k % 2)

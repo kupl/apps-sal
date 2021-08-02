@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 n = int(input())
-x = [ int(i) for i in input().split() ]
+x = [int(i) for i in input().split()]
 
 x = sorted(x)
 
@@ -15,4 +15,3 @@ for i in x:
         s += i
 
 print(m)
-

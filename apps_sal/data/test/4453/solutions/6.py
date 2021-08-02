@@ -9,4 +9,4 @@ for _ in range(int(input())):
             k = p[k]
             c += 1
         array.append(c)
-    print (*array)
+    print(*array)

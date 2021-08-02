@@ -1,11 +1,10 @@
-n,x,y = list(map(int, input().split()))
+n, x, y = list(map(int, input().split()))
 m = list(map(int, input().split()))
-if(x>y):
+if(x > y):
     print(n)
 else:
     s = 0
     for i in range(n):
-        if(m[i]<=x):
-            s+=1
-    print((s+1)//2)
-
+        if(m[i] <= x):
+            s += 1
+    print((s + 1) // 2)

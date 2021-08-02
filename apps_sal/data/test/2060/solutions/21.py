@@ -10,8 +10,11 @@ def main(x):
             return "NO"
     return "YES"
 
+
 def __starting_point():
     n = int(input())
     for i in range(n):
         print(main(int(input())))
+
+
 __starting_point()
