@@ -7,7 +7,7 @@ if xa == xb:
     if xc == xa:
         print(1)
     elif yc <= ya or yb <= yc:
-            print(2)
+        print(2)
     else:
         print(3)
 elif ya == yb:
@@ -25,4 +25,3 @@ else:
         print(2)
     else:
         print(3)
-

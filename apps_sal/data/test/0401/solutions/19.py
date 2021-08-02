@@ -18,4 +18,4 @@ for i in range(l1):
             print(str(a1[i]))
             quit()
 
-print(str(min(a1[0],a2[0]))+str(max(a1[0],a2[0])))
+print(str(min(a1[0], a2[0])) + str(max(a1[0], a2[0])))

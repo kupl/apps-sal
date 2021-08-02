@@ -16,7 +16,7 @@ for i in range(3):
         if y[j] == y[i]:
             yp.append([i, j])
             mark1[i] = True
-            mark1[j] = True            
+            mark1[j] = True
 if len(xp) == 3 or len(yp) == 3:
     print(1)
 elif len(xp) == 1:
@@ -34,8 +34,8 @@ elif len(xp) == 1:
         if y[2] >= max(y[1], y[0]) or y[2] <= min(y[1], y[0]):
             print(2)
         else:
-            print(3)    
-        
+            print(3)
+
 elif len(yp) == 1:
     if not mark1[0]:
         if x[0] >= max(x[1], x[2]) or x[0] <= min(x[1], x[2]):
@@ -51,7 +51,6 @@ elif len(yp) == 1:
         if x[2] >= max(x[1], x[0]) or x[2] <= min(x[1], x[0]):
             print(2)
         else:
-            print(3)    
+            print(3)
 else:
     print(3)
-

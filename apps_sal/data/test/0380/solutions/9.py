@@ -22,6 +22,7 @@ def get_common_x(points):
         if xs.count(xx) == 2:
             return xx
 
+
 def get_common_y(points):
     ys = [y for x, y in points]
     for yy in set(y for x, y in points):
@@ -39,14 +40,14 @@ def main():
         if has_two_points_with_same_x_coord(points):
             y = get_common_x(points)
             points = sorted(points, key=lambda p: p[0] == y)
-            if min(points[1][1], points[2][1]) < points[0][1] <  max(points[1][1], points[2][1]):
+            if min(points[1][1], points[2][1]) < points[0][1] < max(points[1][1], points[2][1]):
                 print(3)
             else:
                 print(2)
         else:
             y = get_common_y(points)
             points = sorted(points, key=lambda p: p[1] == y)
-            if min(points[1][0], points[2][0]) < points[0][0] <  max(points[1][0], points[2][0]):
+            if min(points[1][0], points[2][0]) < points[0][0] < max(points[1][0], points[2][0]):
                 print(3)
             else:
                 print(2)
@@ -54,5 +55,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

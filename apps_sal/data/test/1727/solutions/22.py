@@ -1,18 +1,19 @@
 n = int(input())
-trees = [ tuple(map(int, input().split())) for i in range(n) ]
+trees = [tuple(map(int, input().split())) for i in range(n)]
 
-prevx = -1e15;
+prevx = -1e15
 ans = 0
 for i in range(n):
-    if i == n-1: 
-        ans+=1
+    if i == n - 1:
+        ans += 1
         break
-    x,h = trees[i]
+    x, h = trees[i]
     if x - h > prevx:
         prevx = x
         ans += 1
-    elif x + h < trees[i+1][0]: 
+    elif x + h < trees[i + 1][0]:
         ans += 1
         prevx = x + h
-    else: prevx = x
+    else:
+        prevx = x
 print(ans)

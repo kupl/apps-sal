@@ -13,4 +13,4 @@ ans = 0
 if both_have_num < 10:
     print(both_have_num)
 else:
-    print(min(min_a, min_b)*10+max(min_a, min_b))
+    print(min(min_a, min_b) * 10 + max(min_a, min_b))

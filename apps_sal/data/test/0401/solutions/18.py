@@ -13,6 +13,3 @@ if c == 0:
     k = a[0]
     n = b[0]
     print(str(min(n, k)) + str(max(n, k)))
-
-    
-

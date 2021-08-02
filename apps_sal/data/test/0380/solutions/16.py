@@ -10,6 +10,7 @@
 
 """
 
+
 def calc(x1, y1, x2, y2, x3, y3):
     if x1 == x2 == x3 or y1 == y2 == y3:
         return 1
@@ -33,11 +34,11 @@ def calc(x1, y1, x2, y2, x3, y3):
         else:
             return 2
 
-    return 3    
+    return 3
+
 
 x1, y1 = [int(i) for i in input().split()]
 x2, y2 = [int(i) for i in input().split()]
 x3, y3 = [int(i) for i in input().split()]
 
 print(calc(x1, y1, x2, y2, x3, y3))
-

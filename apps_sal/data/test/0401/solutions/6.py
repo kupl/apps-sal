@@ -1,4 +1,4 @@
-a,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 
 mas1 = list(map(int, input().split()))
 mas2 = list(map(int, input().split()))
@@ -16,7 +16,6 @@ if heh != 10:
     print(heh)
     return
 if min1 < min2:
-    print(str(min1)+str(min2))
+    print(str(min1) + str(min2))
 else:
-    print(str(min2)+str(min1))
-
+    print(str(min2) + str(min1))

@@ -8,5 +8,4 @@ for i in a:
         print(i)
         break
 else:
-    print(min(a[0], b[0]), max(a[0], b[0]), sep = '')
-
+    print(min(a[0], b[0]), max(a[0], b[0]), sep='')
