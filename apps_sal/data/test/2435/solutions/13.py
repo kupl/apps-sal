@@ -9,4 +9,3 @@ for _ in range(t):
             mi = min(mi, l)
             ma = max(ma, r)
     print(ma - mi)
-

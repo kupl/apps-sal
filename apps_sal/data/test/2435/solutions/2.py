@@ -8,6 +8,7 @@ nm = lambda: map(int, readline().split())
 nl = lambda: list(map(int, readline().split()))
 prn = lambda x: print(*x, sep='\n')
 
+
 def solve():
     n, x, m = nm()
     l = r = x
@@ -17,7 +18,7 @@ def solve():
             l = p
         if p <= r <= q:
             r = q
-    print(r-l+1)
+    print(r - l + 1)
     return
 
 
@@ -26,4 +27,3 @@ def solve():
 T = ni()
 for _ in range(T):
     solve()
-

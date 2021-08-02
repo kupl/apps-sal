@@ -8,4 +8,3 @@ elif c['I'] == 1:
     print(1)
 else:
     print(c['A'])
-

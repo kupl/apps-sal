@@ -10,7 +10,7 @@ def t(b, pr):
         i, pr = 1 - i, c
     return p
 
+
 n, m = list(map(int, input().split()))
 v1, v2 = t([n - 1, m], 0), t([n, m - 1], 1)
 print(' '.join(map(str, v1 if v1[0] >= v2[0] else v2)))
-

@@ -9,4 +9,3 @@ for __ in range(T):
         if l <= j:
             j = max(j, r)
     print(j - i + 1)
-

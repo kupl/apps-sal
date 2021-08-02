@@ -1,6 +1,6 @@
 import sys
 import math
-  
+
 n = int(sys.stdin.readline())
 an = sys.stdin.readline()
 
@@ -13,7 +13,7 @@ for i in range(n):
         d[1] += 1
     elif(an[i] == 'I'):
         d[2] += 1
-   
+
 if(d[2] == 1):
     if(d[1] != 0 or d[0] != 0):
         print(d[2])

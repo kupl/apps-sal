@@ -1,6 +1,6 @@
 n = int(input())
 
-cnt = {"Tetrahedron":4,
+cnt = {"Tetrahedron": 4,
        "Cube": 6,
        "Octahedron": 8,
        "Dodecahedron": 12,

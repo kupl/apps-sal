@@ -6,4 +6,3 @@ d['Dodecahedron'] = 12
 d['Icosahedron'] = 20
 
 print(sum([d[input()] for _ in range(int(input()))]))
-

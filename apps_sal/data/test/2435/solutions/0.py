@@ -6,7 +6,7 @@ for _ in range(t):
     right = x
 
     for i in range(m):
-        l,r = list(map(int, input().split()))
+        l, r = list(map(int, input().split()))
 
         if l < left <= r:
             left = l
@@ -14,4 +14,3 @@ for _ in range(t):
             right = r
 
     print(right - left + 1)
-

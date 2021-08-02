@@ -1,6 +1,8 @@
 import sys
 f = sys.stdin
 #f = open("input.txt", "r")
+
+
 def solve():
     n = int(f.readline())
     b = f.readline()
@@ -14,4 +16,6 @@ def solve():
     else:
         b = b.replace("I", "")
         print(b.count("A"))
+
+
 solve()

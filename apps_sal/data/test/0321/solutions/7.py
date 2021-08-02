@@ -10,4 +10,4 @@ for i in range(int(input())):
     if (a - b) > 1 and (a + b) > 1:
         print('NO')
     else:
-        print('YES' if check(a**2-b**2) else 'NO')
+        print('YES' if check(a**2 - b**2) else 'NO')

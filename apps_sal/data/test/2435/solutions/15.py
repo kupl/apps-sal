@@ -11,7 +11,7 @@ for _ in range(t):
     for _ in range(m):
         l, r = map(int, input().split())
         l -= 1; r -= 1
-        if r >= minima: 
+        if r >= minima:
             minima = min(l, minima)
         if l <= maxima:
             maxima = max(r, maxima)

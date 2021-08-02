@@ -1,8 +1,9 @@
-def gcd(a, b): 
-    if(b == 0): 
-        return a 
-    else: 
-        return gcd(b, a % b) 
+def gcd(a, b):
+    if(b == 0):
+        return a
+    else:
+        return gcd(b, a % b)
+
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -17,4 +18,3 @@ for i in range(1, n):
 
 y = sum(r) // z
 print(y, z)
-

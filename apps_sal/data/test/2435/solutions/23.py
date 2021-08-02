@@ -10,5 +10,4 @@ for _ in range(t):
         if ansl <= r:
             ansl = min(l, ansl)
 
-    print(ansr-ansl+1)
-
+    print(ansr - ansl + 1)

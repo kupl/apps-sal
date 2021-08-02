@@ -7,8 +7,8 @@ def test(begin, r, b):
         rl -= 1
     last = begin
     pt = 0
-    for i in range(r+b-1):
-        if i%2 == 0:
+    for i in range(r + b - 1):
+        if i % 2 == 0:
             if last == 'b':
                 if rl > 0:
                     rl -= 1
@@ -39,13 +39,11 @@ def test(begin, r, b):
                     bl -= 1
                     last = 'b'
     return pt
-    
+
+
 inp = input().split(' ')
 r = int(inp[0])
 b = int(inp[1])
 
 best = max(test('b', r, b), test('r', r, b))
-print(best, r+b-best-1)
-
-                
-
+print(best, r + b - best - 1)

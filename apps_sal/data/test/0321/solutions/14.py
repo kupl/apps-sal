@@ -4,10 +4,11 @@ n = int(input())
 
 
 def isPrime(n):
-    return n > 1 and all(n%i for i in islice(count(2), int(sqrt(n)-1)))
+    return n > 1 and all(n % i for i in islice(count(2), int(sqrt(n) - 1)))
+
 
 def eval_(a, b):
-    if  abs(a - b)!=1:
+    if abs(a - b) != 1:
         return "NO"
     result = isPrime(a + b)
     if result:

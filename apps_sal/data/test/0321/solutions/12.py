@@ -1,11 +1,12 @@
 import sys
 
+
 def isprime(x):
     import math
     if x == 1:
         return True
 
-    for i in range(2, math.ceil(math.sqrt(x))+1):
+    for i in range(2, math.ceil(math.sqrt(x)) + 1):
         if x % i == 0:
             return False
     return True
@@ -20,9 +21,10 @@ def __starting_point():
 
         # n**2-m**2 = (n-m)*(n+m)
 
-        if n-m == 1 and isprime(n+m):
+        if n - m == 1 and isprime(n + m):
             print('YES')
         else:
             print('NO')
+
 
 __starting_point()

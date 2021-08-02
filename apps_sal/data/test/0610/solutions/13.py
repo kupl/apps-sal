@@ -9,4 +9,3 @@ def main(n, m):
 
 
 print("{} {}".format(*main(*list(map(int, input().split(' '))))))
-

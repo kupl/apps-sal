@@ -14,4 +14,3 @@ for _ in range(t):
             ansl = min(l, ansl)
             ansr = max(r, ansr)
     print(ansr - ansl)
-
