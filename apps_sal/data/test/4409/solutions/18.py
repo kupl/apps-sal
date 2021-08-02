@@ -18,18 +18,18 @@ while l >= 0:
         l -= 1
         continue
     elif A[l] < R:
-        op.append([1, l+1, l+2])
+        op.append([1, l + 1, l + 2])
     else:
-        op.append([2, l+1, l+2])
+        op.append([2, l + 1, l + 2])
     l -= 1
 while r < N:
     if A[r] == R:
         r += 1
         continue
     elif A[r] < R:
-        op.append([1, r+1, r])
+        op.append([1, r + 1, r])
     else:
-        op.append([2, r+1, r])
+        op.append([2, r + 1, r])
     r += 1
 
 if len(op):
@@ -38,4 +38,3 @@ if len(op):
         print(*l)
 else:
     print(len(op))
-

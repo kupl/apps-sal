@@ -1,3 +1,3 @@
 S = input()
 cnt = S.count('o')
-print(700+100*cnt)
+print(700 + 100 * cnt)

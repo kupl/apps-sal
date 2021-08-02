@@ -14,6 +14,7 @@ s = set()
 def okr():
     return int(100 * pr / n + 0.5)
 
+
 while pr != n:
     pr += z
     ns = okr()
@@ -44,7 +45,3 @@ while pr != n:
                 result += 1
                 s.add(t[i][0])
 print(result)
-
-    
-    
-

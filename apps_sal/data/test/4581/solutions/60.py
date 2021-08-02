@@ -5,4 +5,3 @@ for i in range(3):
         res += 100
 
 print(res)
-

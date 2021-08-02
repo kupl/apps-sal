@@ -7,4 +7,3 @@ for x in map(int, input().split()):
         cnt += 1
     last = x
 print(cnt)
-

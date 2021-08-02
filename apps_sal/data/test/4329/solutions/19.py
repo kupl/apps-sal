@@ -6,16 +6,16 @@ hantei = 0
 count = 0
 
 if SS + 1 == TT:
-  hantei += 1
+    hantei += 1
 
 for i in range(SS):
-  if S[i] == T[i]:
-    count += 1
+    if S[i] == T[i]:
+        count += 1
 
 if count == SS:
-  hantei += 1
+    hantei += 1
 
 if hantei == 2:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

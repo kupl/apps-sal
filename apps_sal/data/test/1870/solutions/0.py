@@ -8,4 +8,3 @@ for i in range(1, n):
     else:
         cnt += 1
 print(cnt)
-

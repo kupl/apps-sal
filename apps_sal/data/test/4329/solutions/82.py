@@ -6,4 +6,3 @@ if s == u:
     print('Yes')
 else:
     print('No')
-

@@ -1,6 +1,8 @@
-#Bhargey Mehta (Sophomore)
+# Bhargey Mehta (Sophomore)
 #DA-IICT, Gandhinagar
-import sys, math, queue
+import sys
+import math
+import queue
 sys.setrecursionlimit(1000000)
 #sys.stdin = open("input.txt", "r")
 
@@ -22,16 +24,16 @@ for i in range(n):
         break
 
 steps = []
-for i in range(mxi+1, n):
+for i in range(mxi + 1, n):
     if a[i] < mx:
-        steps.append((1, i+1, i))
+        steps.append((1, i + 1, i))
     elif a[i] > mx:
-        steps.append((2, i+1, i))
-for i in range(mxi-1, -1, -1):
+        steps.append((2, i + 1, i))
+for i in range(mxi - 1, -1, -1):
     if a[i] < mx:
-        steps.append((1, i+1, i+2))
+        steps.append((1, i + 1, i + 2))
     elif a[i] > mx:
-        steps.append((2, i+1, i+2))
+        steps.append((2, i + 1, i + 2))
 print(len(steps))
 for step in steps:
     print(*step)

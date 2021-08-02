@@ -6,7 +6,7 @@ while r:
 
     x, d, s, t = r.pop()
 
-    if s == m: 
+    if s == m:
 
         q = 'YES\n' + ' '.join(map(str, t))
 
@@ -19,8 +19,4 @@ while r:
 print(q)
 
 
-
-
-
 # Made By Mostafa_Khaled
-

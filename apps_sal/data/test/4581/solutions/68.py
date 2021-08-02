@@ -1,1 +1,1 @@
-print(700+100*input().count('o'))
+print(700 + 100 * input().count('o'))

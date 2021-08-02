@@ -2,6 +2,7 @@ import sys
 from collections import defaultdict, Counter
 import string
 
+
 def main():
     n, c = [int(i) for i in input().split()]
     t = [int(i) for i in input().split()]
@@ -13,7 +14,9 @@ def main():
             words += 1
     print(words)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

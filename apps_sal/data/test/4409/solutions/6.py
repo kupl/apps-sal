@@ -31,4 +31,3 @@ for i in range(first_index + 1, n):
     else:
         x = 2
     print(x, i + 1, i)
-

@@ -6,5 +6,3 @@ if S in T and S[0] == T[0]:
 
 else:
     print("No")
-
-
