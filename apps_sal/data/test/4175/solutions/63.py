@@ -2,7 +2,7 @@ n = int(input())
 w = input()
 s = set([w])
 l = w[-1]
-for i in range(n-1):
+for i in range(n - 1):
     w = input()
     if w not in s:
         s.add(w)

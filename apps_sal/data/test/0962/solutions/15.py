@@ -15,9 +15,9 @@ def dfs(N, AB):
                 elif status[n] == 0:
                     idx = stack.index(n)
                     cycle = stack[idx:]
-                    
+
                     return cycle
-            else:                  
+            else:
                 status[v] = 1
                 stack.pop()
 
@@ -33,13 +33,13 @@ def find_smaller_cycle(cycle, AB):
             if n in cycle:
                 r = cycle.index(n)
                 if i < r:
-                    cycle = cycle[:i+1] + cycle[r:]
+                    cycle = cycle[:i + 1] + cycle[r:]
                 else:
-                    cycle = cycle[r:i+1]
+                    cycle = cycle[r:i + 1]
                 i = cycle.index(v)
         else:
             i += 1
-            
+
     return cycle
 
 
@@ -49,13 +49,13 @@ AB = [[] for _ in range(N)]
 for _ in range(M):
     A, B = [int(i) - 1 for i in input().split()]
     AB[A].append(B)
-                      
+
 cycle = dfs(N, AB)
 if not cycle:
     print(-1)
 else:
     cycle = find_smaller_cycle(cycle, AB)
-            
+
     print(len(cycle))
     for v in cycle:
         print(v + 1)

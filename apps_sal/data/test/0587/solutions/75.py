@@ -21,14 +21,15 @@ for i, n in enumerate(nums):
     else:
         rest.append(n)
 ans = points + pow(len(se), 2)
-idx = len(doubled)-1
+idx = len(doubled) - 1
 for d, t in rest:
-    if idx < 0: break
-    if t in se: continue
+    if idx < 0:
+        break
+    if t in se:
+        continue
     points -= doubled[idx][0]
     idx -= 1
     points += d
     se.add(t)
-    ans = max(ans, points+pow(len(se), 2))
+    ans = max(ans, points + pow(len(se), 2))
 print(ans)
-

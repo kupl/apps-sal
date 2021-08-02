@@ -2,7 +2,7 @@ n, k = map(int, input().split())
 tds = []
 for i in range(n):
     t, d = map(int, input().split())
-    tds.append((d,t))
+    tds.append((d, t))
 tds.sort(reverse=True)
 cnt = k
 hand = []
@@ -31,10 +31,10 @@ for i in range(n):
 subs.sort()
 v_hs = len(hs)
 v_t = len(v_t)
-res += pow(v_hs,2)
+res += pow(v_hs, 2)
 final_res = res
-while v_hs+1 <= k and v_hs+1 <= v_t:
-    res += subs.pop() - hand_throw.pop() - pow(v_hs,2) + pow(v_hs+1,2)
-    final_res = max(final_res,res)
+while v_hs + 1 <= k and v_hs + 1 <= v_t:
+    res += subs.pop() - hand_throw.pop() - pow(v_hs, 2) + pow(v_hs + 1, 2)
+    final_res = max(final_res, res)
     v_hs += 1
 print(final_res)

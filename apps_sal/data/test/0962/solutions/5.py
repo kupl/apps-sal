@@ -2,6 +2,7 @@ from collections import deque
 import sys
 sys.setrecursionlimit(10**6)
 
+
 class DirectedGraph:
     def __init__(self, adj):
         self.n = len(adj)
@@ -81,6 +82,7 @@ class DirectedGraph:
             cycle.reverse()
             return cycle
 
+
 n, m = [int(item) for item in input().split()]
 edge = [[] for _ in range(n)]
 for i in range(m):
@@ -96,12 +98,12 @@ if len(cycle) == 0:
 
 while True:
     in_cycle = set(cycle)
-    deg = [0] * n 
+    deg = [0] * n
     for item in cycle:
         for v in edge[item]:
             if v in in_cycle:
                 deg[v] += 1
-    
+
     ok = True
     for i, item in enumerate(cycle):
         if deg[item] > 1:

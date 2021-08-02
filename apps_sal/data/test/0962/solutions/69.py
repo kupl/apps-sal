@@ -3,7 +3,9 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
 
-LI = lambda: list(map(int, input().split()))
+
+def LI(): return list(map(int, input().split()))
+
 
 # input
 N, M = LI()
@@ -42,12 +44,12 @@ def solve(l):
                 if (i + 1) % n == j:
                     continue
                 if j < i:
-                    l = l[j : i + 1]
+                    l = l[j: i + 1]
                 else:
                     l = l[: i + 1] + l[j:]
                 return solve(l)
     return l
-            
+
 
 def main():
     t = None
@@ -58,14 +60,15 @@ def main():
     if t is None:
         print((-1))
         return
-    
+
     ans = solve(t)
     print((len(ans)))
     for x in ans:
         print((x + 1))
-        
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

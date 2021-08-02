@@ -26,19 +26,19 @@ for si in s:
 
 
 def draw_bracket(pos, size, picture, open):
-    start = (len(picture) - 2*size - 1) // 2
+    start = (len(picture) - 2 * size - 1) // 2
     picture[start][pos] = '+'
     if open:
         picture[start][pos + 1] = '-'
     else:
         picture[start][pos - 1] = '-'
-    
+
     picture[len(picture) - start - 1][pos] = '+'
     if open:
         picture[len(picture) - start - 1][pos + 1] = '-'
     else:
         picture[len(picture) - start - 1][pos - 1] = '-'
-    
+
     for i in range(start + 1, len(picture) - start - 1):
         picture[i][pos] = '|'
 
@@ -55,7 +55,7 @@ for i in range(n):
         pic_size += 3
 
 
-picture = [[' ']*pic_size for i in range(2*max_len + 1)]
+picture = [[' '] * pic_size for i in range(2 * max_len + 1)]
 pos = 0
 for i in range(n):
     if s[i] == '[':
@@ -71,4 +71,3 @@ for i in range(n):
 
 
 draw_picture(picture)
-

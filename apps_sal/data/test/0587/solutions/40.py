@@ -37,4 +37,3 @@ while s:
         c[t] = 1
         ans = max(ans, bp + x * x)
 print(ans)
-

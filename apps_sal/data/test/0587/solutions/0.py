@@ -21,18 +21,21 @@ for i, n in enumerate(nums):
     else:
         rest.append(n)
 points = 0
-for (d, t) in a1: points += d
-for (d, t) in a2: points += d
+for (d, t) in a1:
+    points += d
+for (d, t) in a2:
+    points += d
 ans = points + pow(len(se), 2)
 a2.sort()
 idx2 = 0
 for i, (d, t) in enumerate(rest):
-    if t in se: continue
-    if len(a2) <= idx2: break
+    if t in se:
+        continue
+    if len(a2) <= idx2:
+        break
     points -= a2[idx2][0]
     idx2 += 1
     points += d
     se.add(t)
-    ans = max(ans, points+pow(len(se), 2))
+    ans = max(ans, points + pow(len(se), 2))
 print(ans)
-

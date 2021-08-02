@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     input = sys.stdin.readline
     N, K = map(int, input().split())
@@ -7,7 +8,7 @@ def solve():
     for _ in range(N):
         t, d = map(int, input().split())
         S.append((d, t))
-    S.sort(reverse = True)
+    S.sort(reverse=True)
     upperKCount = 0
     appeared = set()
     maxPoint = 0
@@ -24,7 +25,7 @@ def solve():
     typeLower = []
     others = 0
     for d, t in S:
-        if t in appeared: 
+        if t in appeared:
             typeLower.append(d)
             others += 1
         else:
@@ -33,13 +34,18 @@ def solve():
             appeared |= {t}
     typeMaxSum = [0] * (typeNum + 1)
     typeLowerSum = [0] * (others + 1)
-    for i in range(typeNum): typeMaxSum[i+1] = typeMaxSum[i] + typeMax[i]
-    for i in range(others): typeLowerSum[i+1] = typeLowerSum[i] + typeLower[i]
+    for i in range(typeNum):
+        typeMaxSum[i + 1] = typeMaxSum[i] + typeMax[i]
+    for i in range(others):
+        typeLowerSum[i + 1] = typeLowerSum[i] + typeLower[i]
     for k in range(upperKCount + 1, min(typeNum, K) + 1):
         maxPoint = max(maxPoint, k ** 2 + typeMaxSum[k] + typeLowerSum[K - k])
     print(maxPoint)
     return 0
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

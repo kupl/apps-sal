@@ -13,7 +13,7 @@ def resolve():
             eat_types.add(typ)
     ans = total + len(eat_types)**2
 
-    didx = len(eat_dups)-1
+    didx = len(eat_dups) - 1
     for i in range(K, N):
         typ, point = TD[i]
         if typ in eat_types:
@@ -24,12 +24,9 @@ def resolve():
         total += point
         didx -= 1
         eat_types.add(typ)
-        ans = max(ans, total+len(eat_types)**2)
+        ans = max(ans, total + len(eat_types)**2)
     print(ans)
-    
-    
-    
-    
+
 
 if '__main__' == __name__:
     resolve()

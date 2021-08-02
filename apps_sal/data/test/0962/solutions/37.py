@@ -68,4 +68,3 @@ else:
     ans_list = jisho[kouho_v]
     print(cycle_num)
     print(*ans_list, sep="\n")
-

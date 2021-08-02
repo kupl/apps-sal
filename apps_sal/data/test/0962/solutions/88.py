@@ -1,21 +1,22 @@
+from collections import deque, defaultdict, Counter
 import sys
 sys.setrecursionlimit(10000000)
 MOD = 10 ** 9 + 7
 INF = 10 ** 15
 
-from collections import deque,defaultdict,Counter
+
 def main():
-    N,M = map(int,input().split())
+    N, M = map(int, input().split())
     G = [[] for _ in range(N)]
     G_rev = [[] for _ in range(N)]
     for _ in range(M):
-        a,b = map(int,input().split())
+        a, b = map(int, input().split())
         a -= 1
         b -= 1
         G[a].append(b)
         G_rev[b].append(a)
-    
-    s,g = None,None
+
+    s, g = None, None
     ans = INF
     q = deque([])
     for i in range(N):
@@ -28,7 +29,7 @@ def main():
                 if i == e:
                     if ans > dist[v] + 1:
                         ans = dist[v] + 1
-                        s,g = i,v
+                        s, g = i, v
                 elif dist[e] < 0:
                     dist[e] = dist[v] + 1
                     q.append(e)
@@ -58,7 +59,11 @@ def main():
                     now = e
                     break
             route.append(now + 1)
-        print('\n'.join(map(str,route)))
+        print('\n'.join(map(str, route)))
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

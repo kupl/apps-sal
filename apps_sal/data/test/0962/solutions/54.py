@@ -6,21 +6,32 @@ from functools import cmp_to_key
 import heapq
 sys.setrecursionlimit(100000)
 
-##  input functions for me
-def rsa(sep = ''):
-    if sep == '' :
-        return input().split() 
-    else: return input().split(sep)
-def rip(sep = ''):
-    if sep == '' :
-        return list(map(int, input().split())) 
-    else: return list(map(int, input().split(sep)))
-def ria(sep = ''): 
+# input functions for me
+
+
+def rsa(sep=''):
+    if sep == '':
+        return input().split()
+    else:
+        return input().split(sep)
+
+
+def rip(sep=''):
+    if sep == '':
+        return list(map(int, input().split()))
+    else:
+        return list(map(int, input().split(sep)))
+
+
+def ria(sep=''):
     return list(rip(sep))
+
+
 def ri(): return int(input())
 def rd(): return float(input())
 def rs(): return input()
 ##
+
 
 compo = []
 cs = []
@@ -30,8 +41,9 @@ A = None
 B = None
 E = None
 
+
 def main():
-    nonlocal compo,cs,N,M,A,B,E
+    nonlocal compo, cs, N, M, A, B, E
     N, M = rip()
     A = [0] * M
     B = [0] * M
@@ -39,16 +51,17 @@ def main():
         A[i], B[i] = rip()
         A[i] -= 1
         B[i] -= 1
-    
+
     E = [[] for i in range(N)]
     for i in range(M):
         E[A[i]].append(B[i])
-    
+
     compo = [-1] * N
 
     def dfs(cmp, route, hs):
-        nonlocal compo,cs,N,M,A,B,E
-        if(len(cs) > 0) : return
+        nonlocal compo, cs, N, M, A, B, E
+        if(len(cs) > 0):
+            return
         now = route[len(route) - 1]
         for nxt in E[now]:
             if compo[nxt] == -1:
@@ -65,11 +78,11 @@ def main():
             else:
                 return
 
-
     cs = []
     c = 0
     for i in range(N):
-        if(compo[i] != -1): continue
+        if(compo[i] != -1):
+            continue
         c += 1
         a = []
         hs = set()
@@ -81,7 +94,7 @@ def main():
     if len(cs) == 0:
         print((-1))
         return
-    
+
     l = cs
     while(True):
         di = dict()
@@ -93,12 +106,12 @@ def main():
                 if di[A[i]] != B[i]:
                     edx = i
                     break
-        
+
         if edx == -1:
             print((len(l)))
             print(("\n".join([str(n + 1) for n in l])))
             return
-        
+
         di[A[edx]] = B[edx]
         nl = [A[edx], B[edx]]
         while True:
@@ -109,7 +122,9 @@ def main():
                 break
         l = nl
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

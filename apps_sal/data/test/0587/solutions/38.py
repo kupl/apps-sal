@@ -17,4 +17,3 @@ for i in range(K + 1):
         continue
     ans = max(ans, first_acc[i] + other_acc[K - i] + i * i)
 print(ans)
-

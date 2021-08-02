@@ -5,10 +5,12 @@ edges = [[] for i in range(N)]
 AB = []
 for _ in range(M):
     a, b = map(int, input().split())
-    edges[a-1].append(b-1)
-    AB.append((a-1, b-1))
+    edges[a - 1].append(b - 1)
+    AB.append((a - 1, b - 1))
+
+
 def BFS(s):
-    prev = [-1]*N
+    prev = [-1] * N
     que = deque([s])
     while que:
         v = que.pop()
@@ -16,15 +18,17 @@ def BFS(s):
             if nv == s:
                 prev[nv] = v
                 return (s, prev)
-            if prev[nv]<0:
+            if prev[nv] < 0:
                 que.append(nv)
                 prev[nv] = v
     return (-1, prev)
+
+
 for v in range(N):
     v0, prev = BFS(v)
-    if v0>=0:
+    if v0 >= 0:
         break
-if v0<0:
+if v0 < 0:
     print(-1)
     return
 circle = set()
@@ -42,4 +46,4 @@ for a, b in AB:
         prev[b] = a
 print(len(circle))
 for i in circle:
-    print(i+1)
+    print(i + 1)

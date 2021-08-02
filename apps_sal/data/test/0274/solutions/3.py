@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
-d = 0 # depth
-md = 0 # max depth
+d = 0  # depth
+md = 0  # max depth
 for i in s:
     if i == '[':
         d += 1
@@ -9,9 +9,9 @@ for i in s:
         d -= 1
     md = max(md, d)
 
-#print(md)
+# print(md)
 
-nv = md * 2 - 1 # kol-vo palok at this moment
+nv = md * 2 - 1  # kol-vo palok at this moment
 out = ""
 res = []
 i = 0
@@ -21,53 +21,53 @@ while i < n:
     out += '+'
     res.append(out)
     out = ""
-    while i != n-1 and s[i+1] == '[':
+    while i != n - 1 and s[i + 1] == '[':
         nv -= 2
-        
+
         out += '-'
         out += '+'
         out += ('|' * nv)
-        out += '+'        
-        out += '-' 
-        
+        out += '+'
+        out += '-'
+
         res.append(out)
-        out = ""     
-        
+        out = ""
+
         i += 1
     out += '-'
     out += ' ' * nv
     out += '-'
     res.append(out)
     out = ""
-    
+
     res.append(" " * (nv + 2))
     i += 1
-    
+
     out += '-'
     out += ' ' * nv
     out += '-'
     res.append(out)
-    out = ""    
-    
-    while i != n-1 and s[i+1] == ']':        
+    out = ""
+
+    while i != n - 1 and s[i + 1] == ']':
         out += '-'
         out += '+'
         out += ('|' * nv)
-        out += '+'        
-        out += '-' 
-        
+        out += '+'
+        out += '-'
+
         res.append(out)
-        out = ""     
-        
+        out = ""
+
         nv += 2
         i += 1
-    
+
     out += '+'
     out += ('|' * nv)
     out += '+'
     res.append(out)
-    out = ""    
-    #print(out)
+    out = ""
+    # print(out)
     i += 1
 
 norm = md * 2 + 1

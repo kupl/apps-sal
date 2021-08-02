@@ -10,7 +10,8 @@ for i in range(N):
 maxs = []
 rest = []
 for i in range(N):
-    if len(nums[i]) == 0: continue
+    if len(nums[i]) == 0:
+        continue
     nums[i].sort(reverse=True)
     maxs.append(nums[i][0])
     for n in nums[i][1:]:
@@ -21,23 +22,22 @@ if len(maxs) > K:
     maxs = maxs[:K]
 other = []
 idx = 0
-while len(maxs)+len(other) < K:
+while len(maxs) + len(other) < K:
     other.append(rest[idx])
     idx += 1
 rest = rest[idx:]
 
 types = len(maxs)
-for i,r in enumerate(rest):
-    diff = types*types - pow(types-1, 2)
-    if diff < r-maxs[len(maxs)-1-i]:
-        maxs[len(maxs)-1-i] = r
+for i, r in enumerate(rest):
+    diff = types * types - pow(types - 1, 2)
+    if diff < r - maxs[len(maxs) - 1 - i]:
+        maxs[len(maxs) - 1 - i] = r
         types -= 1
     else:
         break
-ans = types*types
+ans = types * types
 for num in maxs:
     ans += num
 for num in other:
     ans += num
 print(ans)
-

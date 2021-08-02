@@ -7,7 +7,7 @@ for i in range(N):
 
 # ネタ種類降順でソート
 # 同じネタの中ではおいしいものから順に並ぶ
-td = sorted(td, reverse = True)
+td = sorted(td, reverse=True)
 
 var_p1 = [0] * N   # 種類数を増やす寿司のリスト
 var_p0 = [0] * N   # 種類数を増やさない寿司のリスト
@@ -22,16 +22,17 @@ for i in range(N):
         var_p0[n_p0] = td[i][1]  # おいしさを追加
         n_p0 += 1
 
-var_p1.sort(reverse = True)
-var_p0.sort(reverse = True)
+var_p1.sort(reverse=True)
+var_p0.sort(reverse=True)
 
-val_taste = sum(var_p0[0 : K])
+val_taste = sum(var_p0[0: K])
 val_vars = 0
 ans = 0
 
 for j in range(1, K + 1):  # 種類数1〜Kを試す
     val = var_p1[j - 1]
-    if val <= 0: break  # これ以上種類を増やせない
+    if val <= 0:
+        break  # これ以上種類を増やせない
     # var_p1からn_p1個選び、var_p0からK - n_p1個選ぶ
     val_taste = val_taste + val - var_p0[K - j]
     val_vars = j * j

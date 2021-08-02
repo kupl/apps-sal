@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10**7)
 
+
 def main():
     N, M = list(map(int, input().split()))
     V = [[] for _ in range(N)]
@@ -9,6 +10,7 @@ def main():
         V[a - 1].append(b - 1)
     C = [0] * N
     loop = []
+
     def dfs(n):
         if C[n] == 2:
             return False
@@ -60,5 +62,6 @@ def main():
             break
     print(t)
     print(('\n'.join(str(i + 1) for i in loop)))
-main()
 
+
+main()

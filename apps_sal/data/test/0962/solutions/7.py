@@ -59,4 +59,3 @@ if min_size < INF:
         v = min_parents[v]
 else:
     print((-1))
-

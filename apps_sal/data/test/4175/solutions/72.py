@@ -6,7 +6,7 @@ if len(set(W)) != N:
     return
 
 for i in range(1, N):
-    if W[i-1][-1] != W[i][0]:
+    if W[i - 1][-1] != W[i][0]:
         print("No")
         return
 

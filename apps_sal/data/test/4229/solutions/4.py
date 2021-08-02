@@ -12,6 +12,7 @@ def to_fizzbuzz(number):
         return str(number)
         # return i
 
+
 def main():
     N = int(input())
     # this list concludes "FizzBuzz", "Fizz" or "Buzz"

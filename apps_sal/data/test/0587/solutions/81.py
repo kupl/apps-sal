@@ -1,9 +1,9 @@
 n, k = list(map(int, input().split()))
 td = [list(map(int, input().split())) for _ in range(n)]
 
-td.sort(key = lambda x:x[1], reverse=True)
+td.sort(key=lambda x: x[1], reverse=True)
 cand = []
-memo = [0 for i in range(n+1)]
+memo = [0 for i in range(n + 1)]
 
 ans = 0
 duplicate = []
@@ -36,4 +36,3 @@ for d, u in zip(reversed(duplicate), unique):
     ans = max(ans, tmp + num * num)
 
 print(ans)
-

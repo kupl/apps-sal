@@ -6,10 +6,12 @@ e = [[] for _ in range(n)]
 
 for _ in range(m):
     a, b = map(int, input().split())
-    e[a-1].append(b-1)
+    e[a - 1].append(b - 1)
 
 c = [0] * n
 ans = []
+
+
 def search_path(p, temp):
     c[p] = 1
     for x in e[p]:

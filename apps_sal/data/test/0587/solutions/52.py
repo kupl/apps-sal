@@ -21,5 +21,5 @@ def main():
         p = max(p, len(s) ** 2 + m)
     return p
 
-print((main()))
 
+print((main()))

@@ -31,4 +31,3 @@ for d, t in sushis[K:]:
     ans = max(ans, base + x * x)
 
 print(ans)
-

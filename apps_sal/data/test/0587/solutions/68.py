@@ -37,4 +37,3 @@ for t, d in B:
     V.add(t)
     ans = max(ans, S + len(V)**2)
 print(ans)
-

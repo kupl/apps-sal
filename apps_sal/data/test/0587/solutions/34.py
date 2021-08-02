@@ -29,10 +29,9 @@ while len(set_) < k and nx:
     if i in set_:
         continue
     d = duplicated.pop()
-    diff = j-d + 2 * c + 1
+    diff = j - d + 2 * c + 1
     set_.add(i)
     ans = max(ans, now + diff)
     now += diff
     c += 1
 print(ans)
-

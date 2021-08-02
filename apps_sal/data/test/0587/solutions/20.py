@@ -38,4 +38,3 @@ for x in range(1, k + 1):
     other = 0 if k - x - 1 < 0 else other_sushi[k - x - 1]
     ans = max(ans, x * x + max_sushi[x - 1] + other)
 print(ans)
-

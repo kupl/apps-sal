@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10 ** 7)
 
+
 def solve(G, p, ans, st, fst, arr, x):
     arr[p] = x
     cnt_1 = 0
@@ -28,23 +29,24 @@ def solve(G, p, ans, st, fst, arr, x):
             return True
     for nxt in G[p]:
         st.add(nxt)
-        if solve(G, nxt, ans, st, fst, arr, x+1):
+        if solve(G, nxt, ans, st, fst, arr, x + 1):
             return True
         st.remove(nxt)
     arr[p] = 0
     return False
 
+
 def main():
     n, m = map(int, input().split())
-    G = [[] for _ in range(n+1)]
+    G = [[] for _ in range(n + 1)]
     for _ in range(m):
         a, b = map(int, input().split())
         G[a].append(b)
     ans = []
     f = False
     st = set()
-    arr = [0]*(n+1)
-    for i in range(1, n+1):
+    arr = [0] * (n + 1)
+    for i in range(1, n + 1):
         st.add(i)
         if solve(G, i, ans, st, i, arr, 1):
             f = True
@@ -58,6 +60,9 @@ def main():
     else:
         print(-1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

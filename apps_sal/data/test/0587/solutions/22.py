@@ -10,11 +10,11 @@ can_remove = []
 d_sm = 0
 
 for t, d in td[:k]:
-	d_sm += d
-	if t in types:
-		can_remove.append(d)
-	else:
-		types.add(t)
+    d_sm += d
+    if t in types:
+        can_remove.append(d)
+    else:
+        types.add(t)
 
 type_cnt = len(types)
 
@@ -22,18 +22,17 @@ ans = d_sm + type_cnt ** 2
 
 left = []
 for t, d in td[k:]:
-	d = -d
-	heappush(left, [d, t])
+    d = -d
+    heappush(left, [d, t])
 
 while can_remove and left:
-	d, t = heappop(left)
-	d = -d
-	if t not in types:
-		types.add(t)
-		d_rmv = can_remove.pop()
-		d_sm += d - d_rmv
-		type_cnt += 1
-		ans = max(ans, d_sm + type_cnt ** 2)
+    d, t = heappop(left)
+    d = -d
+    if t not in types:
+        types.add(t)
+        d_rmv = can_remove.pop()
+        d_sm += d - d_rmv
+        type_cnt += 1
+        ans = max(ans, d_sm + type_cnt ** 2)
 
 print(ans)
-

@@ -1,23 +1,24 @@
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
+
 
 def main():
-    words=[]
+    words = []
     n = int(input())
-    words=[input().rstrip() for _ in range(n)]
+    words = [input().rstrip() for _ in range(n)]
 
-    if len(set(words))!=n:
+    if len(set(words)) != n:
         print("No")
         return
 
-    endstring=""
+    endstring = ""
     for word in words:
-        if len(endstring)==0:
-            endstring=word[-1]
+        if len(endstring) == 0:
+            endstring = word[-1]
         else:
-            if endstring==word[0]:
-                endstring=word[-1]
+            if endstring == word[0]:
+                endstring = word[-1]
             else:
                 print("No")
                 return
@@ -26,4 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

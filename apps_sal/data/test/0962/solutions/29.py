@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,9 +15,12 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 def SCC(N, edges):
     """ 強連結成分分解 """
@@ -29,6 +33,7 @@ def SCC(N, edges):
 
     T = []
     visited = [False] * N
+
     def rec1(cur):
         visited[cur] = True
         for nxt in nodes1[cur]:
@@ -45,6 +50,7 @@ def SCC(N, edges):
     visited = [False] * N
     group = [0] * N
     grpcnt = 0
+
     def rec2(cur):
         group[cur] = grpcnt
         visited[cur] = True
@@ -58,6 +64,7 @@ def SCC(N, edges):
             rec2(u)
             grpcnt += 1
     return grpcnt, group
+
 
 def bfs(N, nodes, src):
     """ BFS(一般グラフ、重みなし) """
@@ -81,9 +88,10 @@ def bfs(N, nodes, src):
             continue
         dist[u] = (c, prev)
         for v in nodes[u]:
-            que.append((v, u, c+1))
+            que.append((v, u, c + 1))
     # 経路、始点に戻ってくる最短距離、その直前の頂点を返す
     return dist, mn, end
+
 
 def get_route(s, t, res):
     """ s,t間の経路を取得 """
@@ -97,12 +105,14 @@ def get_route(s, t, res):
     StoT = StoT[::-1]
     return StoT
 
+
 N, M = MAP()
 nodes = [[] for i in range(N)]
 edges = []
 for i in range(M):
     a, b = MAP()
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     nodes[a].append(b)
     edges.append((a, b))
 
@@ -121,4 +131,3 @@ if ans != INF:
 else:
     # そもそも閉路なし
     print(-1)
-

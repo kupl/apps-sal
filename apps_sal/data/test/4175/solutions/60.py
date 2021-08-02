@@ -8,7 +8,7 @@ for i in range(N):
     if W.count(W[i]) >= 2:
         False_cnt += 1
 
-for i in range(N-1):
+for i in range(N - 1):
     x = W[i]
     y = W[i + 1]
     if not x[-1] == y[0]:

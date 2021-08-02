@@ -2,9 +2,11 @@
 import sys
 from heapq import heapify, heappop, heappush
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 # x * xをどう評価するか、heapに「おいしさ」の高い順に入れていく
 N, K = lr()
@@ -22,18 +24,17 @@ for t, d in TD[:K]:
         heappush(heap, d)
     happy += d
 
-cand = [happy+kind**2]
+cand = [happy + kind**2]
 for t, d in TD[K:]:
     if not heap:
         break
     if t in used:
         continue
     h = heappop(heap)
-    happy += (d-h)
+    happy += (d - h)
     kind += 1
     used.add(t)
-    cand.append(happy+kind**2)
+    cand.append(happy + kind**2)
 
 answer = max(cand)
 print(answer)
-

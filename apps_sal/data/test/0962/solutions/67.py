@@ -74,7 +74,7 @@ def main():
         if ord_from < ord_to:
             cycle = cycle[: ord_from + 1] + cycle[ord_to:]
         else:
-            cycle = cycle[ord_to : ord_from + 1]
+            cycle = cycle[ord_to: ord_from + 1]
 
     print((len(cycle)))
     for v in cycle:
@@ -85,5 +85,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

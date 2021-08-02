@@ -22,9 +22,8 @@ for t, d in sushi[k:]:
         break
     if t in kind:
         continue
-    val += -heapq.heappop(que) + d + len(kind)*2 + 1
+    val += -heapq.heappop(que) + d + len(kind) * 2 + 1
     kind.add(t)
     res = max(res, val)
 
 print(res)
-

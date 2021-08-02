@@ -1,7 +1,7 @@
 from heapq import heappop, heappush
 
 n, m = map(int, input().split())
-xy = [tuple(int(x)-1 for x in input().split()) for _ in range(m)]
+xy = [tuple(int(x) - 1 for x in input().split()) for _ in range(m)]
 
 R = [[] for _ in range(n)]
 h = [0] * n

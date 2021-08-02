@@ -14,4 +14,3 @@ for _ in range(n):
         seen.add(x)
         tmp = x[-1]
 print("Yes")
-

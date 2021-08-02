@@ -18,7 +18,7 @@ for i in range(n):
         for v_next in graph[v]:
             if dist[i][v_next] == -1:
                 dist[i][v_next] = c + 1
-                queue.append((v_next, c+1))
+                queue.append((v_next, c + 1))
 
 # print(dist)
 ans_len = n + 1
@@ -44,7 +44,7 @@ else:
             if dist[v_next] == -1:
                 dist[v_next] = c + 1
                 prev_v[v_next] = v
-                queue.append((v_next, c+1))
+                queue.append((v_next, c + 1))
 
     ans = []
     # print(start_v)
@@ -52,9 +52,8 @@ else:
     # print(prev_v)
     v = start_v
     for i in range(ans_len):
-        ans.append(v+1)
+        ans.append(v + 1)
         v = prev_v[v]
 
     print(ans_len)
     print(*ans, sep='\n')
-

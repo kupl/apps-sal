@@ -1,6 +1,7 @@
 import sys
 from heapq import heapify, heappop, heappush
 
+
 def solve():
     input = sys.stdin.readline
     N, K = map(int, input().split())
@@ -28,9 +29,11 @@ def solve():
     Ans = base_point + type_Num * type_Num
     while S:
         d, t = heappop(S)
-        if t in appeared_type: continue
+        if t in appeared_type:
+            continue
         else:
-            if not duplicated: continue
+            if not duplicated:
+                continue
             else:
                 remove = heappop(duplicated)
                 base_point -= d + remove
@@ -41,6 +44,9 @@ def solve():
 
     return 0
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

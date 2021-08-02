@@ -37,4 +37,3 @@ for i in range(1, k + 1):
         ans = max(ans, top_sum[i] + sub_sum[k - i] + i ** 2)
 
 print(ans)
-

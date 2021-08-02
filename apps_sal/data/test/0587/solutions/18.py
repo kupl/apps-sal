@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 
+
 def main():
     n, k = list(map(int, input().split()))
     td = []
@@ -13,7 +14,8 @@ def main():
     for t, d in td:
         tdd[t].append(d)
 
-    a = []; b = []
+    a = []
+    b = []
     for _, v in list(tdd.items()):
         a.append(v[0])
         b += v[1:]
@@ -39,7 +41,9 @@ def main():
 
     print(res)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

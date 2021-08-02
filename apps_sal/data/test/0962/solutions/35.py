@@ -4,6 +4,7 @@ from collections import defaultdict
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
+
 def main():
     def bfs(u):
         dist = [inf] * n
@@ -16,14 +17,16 @@ def main():
             nxt = []
             for v in cur:
                 for kv in to[v]:
-                    if dist[kv] != inf: continue
+                    if dist[kv] != inf:
+                        continue
                     dist[kv] = d
                     pre[kv] = v
                     nxt.append(kv)
             cur = nxt
         mn = [inf, -1]
         for v in range(n):
-            if v == u: continue
+            if v == u:
+                continue
             if u in to[v]:
                 mn = min(mn, [dist[v], v])
 
@@ -57,5 +60,5 @@ def main():
         for u in ans:
             print((u + 1))
 
-main()
 
+main()
