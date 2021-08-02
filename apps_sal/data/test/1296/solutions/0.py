@@ -22,4 +22,3 @@ while R - L > 1:
     else:
         R = m
 print(L, min_sum)
-

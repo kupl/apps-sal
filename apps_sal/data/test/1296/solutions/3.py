@@ -20,6 +20,7 @@ def binsearch():
         return r
     return l
 
+
 n, s = map(int, input().split())
 prices = list(map(int, input().split()))
 mincosts = [0 for i in range(n + 1)]

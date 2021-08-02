@@ -3,9 +3,10 @@ def newArr(a, k):
     i = 0
     n = len(a)
     while i < n:
-        b[i] += (i+1)*k
+        b[i] += (i + 1) * k
         i += 1
     return b
+
 
 def minSum(a, k):
     a.sort()
@@ -27,9 +28,9 @@ for x in inp:
     a.append(int(x))
 l = 0
 r = n
-while l<r:
-    mid = (l+r)//2
-    if l+1 == r:
+while l < r:
+    mid = (l + r) // 2
+    if l + 1 == r:
         mid = r
     b = newArr(list(a), mid)
     if minSum(b, mid) <= S:
@@ -37,5 +38,4 @@ while l<r:
     else:
         r = mid - 1
 ans = l
-print(str(ans) + ' ' + str( minSum(newArr(a, ans), ans) ))
-
+print(str(ans) + ' ' + str(minSum(newArr(a, ans), ans)))

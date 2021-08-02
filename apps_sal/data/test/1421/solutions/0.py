@@ -5,13 +5,14 @@ oo = 10**20
 n = int(input())
 a = list(map(int, input().split()))
 adj = [[] for _ in range(n)]
-for _ in range(n-1):
+for _ in range(n - 1):
     u, v = [int(i) - 1 for i in input().split()]
     adj[u].append(v)
     adj[v].append(u)
 sm = [0] * n
 mx = [-oo] * n
 best = [-oo] * n
+
 
 def dfs(start):
     stack = [(start, -1)]
@@ -38,6 +39,7 @@ def dfs(start):
                 cur = x[1] + x[2]
                 best[u] = max(best[u], cur)
             stack.pop()
+
 
 dfs(0)
 ans = max(best)

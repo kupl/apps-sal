@@ -3,7 +3,7 @@ b = list(map(int, input().split(' ')))
 
 
 def tr(m):
-    bb = [x + (i+1)*m for (i,x) in enumerate(b)]
+    bb = [x + (i + 1) * m for (i, x) in enumerate(b)]
     bb = sorted(bb)
     res = sum(bb[:m])
 
@@ -21,12 +21,12 @@ d = {}
 maxgood = -1
 
 while lo < hi:
-    mid = (lo+hi)//2
+    mid = (lo + hi) // 2
     #print("\nl m h", lo, mid, hi)
     temp = tr(mid)
     d[mid] = temp
     if temp is not None:
-        lo = mid+1
+        lo = mid + 1
         maxgood = max(maxgood, mid)
     else:
         hi = mid
@@ -48,4 +48,3 @@ if temp is not None:
     maxgood = max(maxgood, mid)
 
 print(maxgood, d[maxgood])
-

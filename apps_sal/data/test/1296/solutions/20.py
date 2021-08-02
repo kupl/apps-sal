@@ -3,6 +3,7 @@ inFile = stdin
 tokens = []
 tokens_next = 0
 
+
 def next_str():
     nonlocal tokens, tokens_next
     while tokens_next >= len(tokens):
@@ -11,8 +12,10 @@ def next_str():
     tokens_next += 1
     return tokens[tokens_next - 1]
 
+
 def nextInt():
     return int(next_str())
+
 
 def min_cost(a, k):
     if k > len(a):
@@ -21,6 +24,7 @@ def min_cost(a, k):
     new_a = [a[i] + (i + 1) * k for i in range(len(a))]
     new_a = sorted(new_a)
     return sum(new_a[:k])
+
 
 n = nextInt()
 S = nextInt()
@@ -35,4 +39,4 @@ while low + 1 < high:
     else:
         high = mid
 
-print(low, min_cost(a, low)) 
+print(low, min_cost(a, low))

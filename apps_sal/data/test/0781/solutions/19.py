@@ -1,6 +1,6 @@
 import sys
 import math
-  
+
 for i in range(8):
     st = sys.stdin.readline()
     for j in range(7):

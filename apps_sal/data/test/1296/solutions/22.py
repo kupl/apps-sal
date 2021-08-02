@@ -16,4 +16,3 @@ while lo < hi:
         hi = mid
 lo -= 1
 print(lo, sum(sorted(x + (i + 1) * lo for i, x in enumerate(a))[:lo]))
-

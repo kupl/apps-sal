@@ -1,13 +1,13 @@
+from collections import Counter, deque
+import bisect
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 MOD = 10**9 + 7
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-import bisect
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return map(int, input().split())
 def i_list(): return list(i_map())
@@ -22,20 +22,18 @@ def s_row_list(N): return [list(s_input()) for _ in range(N)]
 
 
 def main():
-  N = i_input()
-  H = i_list()
-  H.append(0)
-  ans = 0
-  for i in range(len(H) - 1):
-    if H[i] > H[i+1]:
-      ans += H[i] - H[i+1]
-  print(ans)
+    N = i_input()
+    H = i_list()
+    H.append(0)
+    ans = 0
+    for i in range(len(H) - 1):
+        if H[i] > H[i + 1]:
+            ans += H[i] - H[i + 1]
+    print(ans)
 
 
-
-
- 
- 
 def __starting_point():
     main()
+
+
 __starting_point()

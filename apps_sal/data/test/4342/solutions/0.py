@@ -6,7 +6,7 @@ a = [int(t) for t in input().split(' ')]
 mx = [[] for _ in range(n)]
 
 lines = sys.stdin.readlines()
-for i in range(n-1):
+for i in range(n - 1):
     v1, v2 = (int(t) - 1 for t in lines[i].split(' '))
     mx[v1].append(v2)
     mx[v2].append(v1)
@@ -36,7 +36,6 @@ while len(stack):
                 count[v][1] += count[nv][1]
 
         if a[v] != 0:
-            count[v][a[v]-1] += 1
+            count[v][a[v] - 1] += 1
 
 print(answer)
-

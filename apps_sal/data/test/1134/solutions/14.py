@@ -14,4 +14,3 @@ for index in range(len(integers) - 1, 0, -1):
 for index in range(len(integers)):
     marks[index] -= integers[index] + 1
 sys.stdout.write(str(sum(marks)) + "\n")
-
