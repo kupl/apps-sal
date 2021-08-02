@@ -21,7 +21,7 @@ def readlist():
 
 n = read()
 V = []
-for _ in range(n-1):
+for _ in range(n - 1):
     a, b = readmap()
     V.append(a)
     if b < n:
@@ -30,20 +30,20 @@ for _ in range(n-1):
 
 V.sort()
 
-for i in range(n-1):
+for i in range(n - 1):
     if V[i] <= i:
         print("NO")
         quit()
 
-used = [False] * (n+1)
+used = [False] * (n + 1)
 tree = []
-for i in range(n-1):
+for i in range(n - 1):
     v = V[i]
     if not used[v]:
         tree.append(v)
         used[v] = True
     else:
-        for j in range(1, n+1):
+        for j in range(1, n + 1):
             if not used[j]:
                 tree.append(j)
                 used[j] = True
@@ -51,5 +51,5 @@ for i in range(n-1):
 tree.append(n)
 
 print("YES")
-for i in range(n-1):
-    print(tree[i], tree[i+1])
+for i in range(n - 1):
+    print(tree[i], tree[i + 1])

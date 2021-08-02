@@ -1,1 +1,1 @@
-print('bwuisnt'[sum(map(int,input().split()))<22::2])
+print('bwuisnt'[sum(map(int, input().split())) < 22::2])

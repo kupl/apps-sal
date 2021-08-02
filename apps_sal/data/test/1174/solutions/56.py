@@ -7,7 +7,7 @@ heapq.heapify(A)
 
 for i in range(M):
     a = heapq.heappop(A)
-    heapq.heappush(A, -((-a)//2))
+    heapq.heappush(A, -((-a) // 2))
 
 ans = -sum(A)
 

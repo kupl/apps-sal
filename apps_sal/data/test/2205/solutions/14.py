@@ -1,20 +1,18 @@
-n,a=int(input()),list(map(int,input().split()))
+n, a = int(input()), list(map(int, input().split()))
 
-x,s=[0]*(n+1),0
+x, s = [0] * (n + 1), 0
 
-for i in range(1,n+1):
+for i in range(1, n + 1):
 
-  x[i]=i^x[i-1]
+    x[i] = i ^ x[i - 1]
 
-  if (n//i)%2:s^=x[i-1]
+    if (n // i) % 2: s ^= x[i - 1]
 
-  s^=x[n%i]
+    s ^= x[n % i]
 
-  s^=a[i-1]
+    s ^= a[i - 1]
 
 print(s)
 
 
-
 # Made By Mostafa_Khaled
-

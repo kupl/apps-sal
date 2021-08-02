@@ -5,8 +5,8 @@ import heapq
 # from math import gcd # Python3.6以降
 # --------------------------------------------------------------
 
-n,m = map(int,input().split())
-price = list(map(int,input().split()))
+n, m = map(int, input().split())
+price = list(map(int, input().split()))
 
 price = [-i for i in price]
 
@@ -14,8 +14,8 @@ heapq.heapify(price)
 
 for i in range(m):
     sm = heapq.heappop(price)
-    sm = -(-sm//2)
-    heapq.heappush(price,sm)
+    sm = -(-sm // 2)
+    heapq.heappush(price, sm)
 
 price = [-i for i in price]
 

@@ -11,4 +11,3 @@ for i in range(M):
 
 result = -sum([int(p) for p in hq])
 print(result)
-

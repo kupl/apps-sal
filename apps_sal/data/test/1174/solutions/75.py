@@ -3,6 +3,7 @@ class Heap:
     練習用に書いたクラス
     本番は'heapq'を使う
     """
+
     def __init__(self, x: list):
         # initialize
         self.heap = []
@@ -19,7 +20,7 @@ class Heap:
             # swap
             tmp = self.heap[idx_child]
             self.heap[idx_parent], self.heap[idx_child] \
-                = self.heap[idx_child], self.heap[idx_parent] 
+                = self.heap[idx_child], self.heap[idx_parent]
             idx_child = idx_parent
 
     def pop(self) -> int:
@@ -47,13 +48,14 @@ class Heap:
     def load(self) -> list:
         return self.heap
 
+
 N, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
-A = [ -a for a in A]
+A = [-a for a in A]
 heap = Heap(A)
 for _ in range(M):
     x = heap.pop()
     heap.push(x / 2)
 A = heap.load()
-A = [ int(-a) for a in A]
+A = [int(-a) for a in A]
 print(sum(A))

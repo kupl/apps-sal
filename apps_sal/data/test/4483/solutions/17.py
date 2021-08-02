@@ -8,4 +8,3 @@ while x >= b:
     x -= b
 
 print(x)
-

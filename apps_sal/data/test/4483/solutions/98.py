@@ -1,5 +1,4 @@
 X = int(input())
 A = int(input())
 B = int(input())
-print(((X-A) % B))
-
+print(((X - A) % B))

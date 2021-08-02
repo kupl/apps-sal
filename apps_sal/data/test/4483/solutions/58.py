@@ -4,6 +4,6 @@ b = int(input())
 
 x -= a
 while x >= b:
-  x -= b
-  
+    x -= b
+
 print(x)

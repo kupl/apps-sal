@@ -1,7 +1,6 @@
-a,b,c=list(map(int,input().split()))
+a, b, c = list(map(int, input().split()))
 
-if a+b+c>=22:
+if a + b + c >= 22:
     print('bust')
-else :
+else:
     print('win')
-

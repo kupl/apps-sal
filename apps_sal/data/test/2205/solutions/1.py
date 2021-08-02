@@ -20,4 +20,3 @@ for i in range(n):
     x ^= mem[m]
 
 print(x)
-

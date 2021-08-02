@@ -1,5 +1,5 @@
-x=int(input())
-a=int(input())
-b=int(input())
-x-=a
-print(x%b)
+x = int(input())
+a = int(input())
+b = int(input())
+x -= a
+print(x % b)

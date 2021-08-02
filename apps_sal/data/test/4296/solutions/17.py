@@ -1,5 +1,5 @@
-a,b,c =map(int,input().split())
-if a+b+c<=21:
-  print("win")
+a, b, c = map(int, input().split())
+if a + b + c <= 21:
+    print("win")
 else:
-  print("bust")
+    print("bust")

@@ -4,10 +4,10 @@
 # これらの買い物のあと手元に残っている金額は何円ですか。
 
 
-X = int(input()) 
+X = int(input())
 A = int(input())
 B = int(input())
 
-Y = X - A # Aを1個買って、残ったお金をY円とする。
+Y = X - A  # Aを1個買って、残ったお金をY円とする。
 
-print(Y % B)  
+print(Y % B)

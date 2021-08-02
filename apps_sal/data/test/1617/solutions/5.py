@@ -15,4 +15,4 @@ mass2 = []
 for i in mass1:
     if i not in mass2:
         mass2.append(i)
-        print(((i - 1) * n) // 2 + i, end = ' ')
+        print(((i - 1) * n) // 2 + i, end=' ')

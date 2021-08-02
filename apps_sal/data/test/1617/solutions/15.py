@@ -32,7 +32,6 @@
 #                                                             |||||  |__|__|___|
 
 
-
 n = int(input())
 b = set()
 for i in range(1, int(n ** 0.5) + 3):

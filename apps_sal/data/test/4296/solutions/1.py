@@ -1,6 +1,6 @@
 lst = list(map(int, input().split()))
 
 if sum(lst) <= 21:
-  print('win')
+    print('win')
 else:
-  print('bust')
+    print('bust')

@@ -4,4 +4,3 @@ if sum(a) <= 21:
     print('win')
 else:
     print('bust')
-

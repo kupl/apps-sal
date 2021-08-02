@@ -1,16 +1,16 @@
 from heapq import *
-n,m = map(int,input().split())
-a = list(map(int,input().split()))
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
 
 heap = []
 for i in a:
-    heappush(heap,-i)
+    heappush(heap, -i)
 
 for _ in range(m):
     tmp = heappop(heap)
-    heappush(heap,-(-tmp//2))
+    heappush(heap, -(-tmp // 2))
 
 ans = 0
 for a in heap:
-    ans += -a 
+    ans += -a
 print(ans)

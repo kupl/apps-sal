@@ -7,8 +7,8 @@ from itertools import accumulate
 R = lambda: map(int, input().split())
 
 t = int(input())
-tab = [x*x*x for x in range(2, 2*10**5)]
-l, r = 1, 5*10**15
+tab = [x * x * x for x in range(2, 2 * 10**5)]
+l, r = 1, 5 * 10**15
 while l < r:
     n = (l + r) // 2
     s = sum(n // x for x in tab)

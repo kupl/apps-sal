@@ -9,8 +9,8 @@ for i in range(n):
 heapq.heapify(a)
 
 for i in range(m):
-    ref = heapq.heappop(a)*-1
+    ref = heapq.heappop(a) * -1
     ref //= 2
     heapq.heappush(a, -ref)
 
-print(sum(a)*-1)
+print(sum(a) * -1)

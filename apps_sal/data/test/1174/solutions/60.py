@@ -8,4 +8,3 @@ for i in range(m):
     heapq.heappush(a, -(b >> 1))
 
 print((-sum(a)))
-

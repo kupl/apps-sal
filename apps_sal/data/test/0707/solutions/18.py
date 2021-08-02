@@ -19,4 +19,3 @@ for i in range(m):
         break
 else:
     print('NO')
-
