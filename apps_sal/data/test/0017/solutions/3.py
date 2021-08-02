@@ -1,7 +1,7 @@
 n, k, t = list(map(int, input().split()))
 if t <= k:
-	print(t)
+    print(t)
 elif k < t <= n:
-	print(k)
+    print(k)
 else:
-	print(k - t + n)
+    print(k - t + n)

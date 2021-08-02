@@ -1,5 +1,6 @@
 n = int(input())
 
+
 def cbt(n):
     b = bin(n)[2:]
     c = 0
@@ -20,7 +21,7 @@ def cbt(n):
         c += 1
     return c, l
 
+
 c, l = cbt(n)
 print(c)
 print((*l) if l else None)
-

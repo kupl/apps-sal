@@ -13,7 +13,7 @@ def solve(x):
     while not check(brr):
         if cnt % 2 == 0:
             n = None
-            for i in range(len(brr)-1, -1, -1):
+            for i in range(len(brr) - 1, -1, -1):
                 if brr[i] == 0:
                     n = i
                     break
@@ -34,4 +34,3 @@ def solve(x):
 
 
 solve(int(input()))
-

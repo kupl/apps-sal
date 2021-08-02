@@ -9,5 +9,4 @@ for c in s:
         wo += w
     last = c
 
-print( wow )
-
+print(wow)

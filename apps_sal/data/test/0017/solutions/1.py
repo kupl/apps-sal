@@ -1,14 +1,19 @@
 def list_input():
-    return list(map(int,input().split()))
+    return list(map(int, input().split()))
+
+
 def map_input():
-    return map(int,input().split())
+    return map(int, input().split())
+
+
 def map_string():
     return input().split()
-    
-n,k,t = map_input()
+
+
+n, k, t = map_input()
 if t <= k:
-  print(t)
+    print(t)
 elif t <= n:
-  print(k)
+    print(k)
 else:
-  print(k+n-t)
+    print(k + n - t)

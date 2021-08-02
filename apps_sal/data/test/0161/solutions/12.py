@@ -10,7 +10,7 @@ for i in range(len(x)):
         continue
     else:
         ans += 1
-        anslist.append(len(x)-i)
+        anslist.append(len(x) - i)
         for j in range(i, len(x)):
             if x[j] == "1":
                 x[j] = "0"
@@ -30,4 +30,3 @@ for i in range(len(x)):
 print(ans)
 if len(anslist) != 0:
     print(" ".join(map(str, anslist)))
-

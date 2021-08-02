@@ -1,17 +1,17 @@
 def is_palindrome(num):
-    
+
     copia = num
     if num < 10:
         return True
-    
+
     nums = []
     while(True):
         nums.append(copia % 10)
         copia //= 10
-        
+
         if copia == 0:
             break
-    
+
     digitos = len(nums) // 2
     j = len(nums) - 1
     for i in range(digitos):
@@ -20,6 +20,7 @@ def is_palindrome(num):
         j -= 1
 
     return True
+
 
 primes = [True] * 2000000
 primes[0] = False
@@ -31,13 +32,13 @@ countPrimes = 0
 countPali = 0
 
 while(i < 2000000):
-    
+
     if primes[i]:
         countPrimes += 1
-        if i * i < 2000000: 
+        if i * i < 2000000:
             for j in range(i, 2000000, i + 1):
                 primes[j] = False
-    
+
     if str(int(str(i + 1)[::-1])) == str(i + 1):
         countPali += 1
 
@@ -45,7 +46,7 @@ while(i < 2000000):
 
     if res >= countPrimes:
         resultado = i + 1
-    
+
     i += 1
 
 if resultado == 0:
@@ -53,4 +54,3 @@ if resultado == 0:
 
 else:
     print(resultado)
-

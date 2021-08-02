@@ -1,5 +1,5 @@
 ans = 0
-mod = 10**9+7
+mod = 10**9 + 7
 a, b, n = map(int, input().split())
 s = set()
 for x in range(2, 1 << 8):

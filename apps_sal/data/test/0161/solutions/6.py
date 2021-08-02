@@ -3,6 +3,7 @@ def allOnes(x):
         return True
     return False
 
+
 def main():
     x = int(input())
     ans = []
@@ -17,22 +18,21 @@ def main():
 
         if index == -1:
             break
-        index = len(xb)-index
+        index = len(xb) - index
         ans.append(index)
-        x = ((2**index)-1)^x
+        x = ((2**index) - 1) ^ x
         if allOnes(bin(x)[2:]):
             ops += 1
             break
         x += 1
         xb = bin(x)[2:]
-        #print(x,xb)
+        # print(x,xb)
         ops += 2
 
     print(ops)
 
     for i in ans:
-        print(i,end = ' ')
+        print(i, end=' ')
+
 
 main()
-        
-

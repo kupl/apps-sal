@@ -1,8 +1,8 @@
 n, k, t = map(int, input().split())
 
 if t <= k:
-	print(t)
+    print(t)
 elif t >= n:
-	print(n+k-t)
+    print(n + k - t)
 else:
-	print(k)
+    print(k)

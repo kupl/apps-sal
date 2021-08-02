@@ -1,7 +1,6 @@
-3
-
-import math
 import sys
+import math
+3
 
 
 DEBUG = False
@@ -39,5 +38,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -2,7 +2,7 @@ from itertools import accumulate
 
 v = ord('v')
 o = ord('o')
-S = [o]+[ord(s) for s in input().strip()]
+S = [o] + [ord(s) for s in input().strip()]
 
 stack = []
 pre = None
@@ -19,11 +19,10 @@ stack = stack[1:]
 
 LS = len(stack)
 w = 0
-sp = [stack[i]-1 if i % 2 else 0 for i in range(LS)]
+sp = [stack[i] - 1 if i % 2 else 0 for i in range(LS)]
 sr = list(accumulate(sp))
 sl = list(accumulate(sp[::-1]))[::-1]
 ans = 0
 for i in range(0, LS, 2):
-    ans += sr[i]*sl[i]*stack[i]
+    ans += sr[i] * sl[i] * stack[i]
 print(ans)
-

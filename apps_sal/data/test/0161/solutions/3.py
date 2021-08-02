@@ -17,4 +17,3 @@ while n & (n + 1) and cnt < 40:
 print(cnt)
 if len(res) != 0:
     print(*res)
-

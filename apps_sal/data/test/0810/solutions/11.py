@@ -38,12 +38,12 @@ def pow(a, b):
 
 
 def inverse(k):
-    return pow(k, MOD-2)
+    return pow(k, MOD - 2)
 
 
 def ncr(n, k):
     k = min(k, n - k)
-    return factorial[n] * inverse(factorial[k]) % MOD * inverse(factorial[n-k]) % MOD
+    return factorial[n] * inverse(factorial[k]) % MOD * inverse(factorial[n - k]) % MOD
 
 
 def dlen(val):
@@ -99,6 +99,7 @@ def test():
     print(time.time() - t0)
 
 # print(solve(10**6, 2, 3))
+
 
 A, B, N = map(int, input().split())
 print(solve(N, A, B))

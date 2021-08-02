@@ -16,7 +16,7 @@ for i in range(n):
     else:
         ldp[i] = ldp[i - 1]
 consec = (s[-1] == 'v')
-for i in range(n-2, -1, -1):
+for i in range(n - 2, -1, -1):
     if(s[i] == 'v'):
         consec += 1
     else:
@@ -26,12 +26,10 @@ for i in range(n-2, -1, -1):
     else:
         rdp[i] = rdp[i + 1]
 ans = 0
-#print(ldp)
-#print(rdp)
+# print(ldp)
+# print(rdp)
 for i in range(n):
     if(s[i] == 'o'):
         ans += ldp[i] * rdp[i]
 
 print(ans)
-
-

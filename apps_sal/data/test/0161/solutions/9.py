@@ -6,7 +6,7 @@ while x not in prop:
     j = x.bit_length()
     ans += 1
     Ans.append(j)
-    x ^= (1<<j) - 1
+    x ^= (1 << j) - 1
     if x in prop:
         break
     x += 1
@@ -14,4 +14,3 @@ while x not in prop:
 print(ans)
 if ans:
     print(*Ans)
-
