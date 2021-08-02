@@ -4,9 +4,11 @@ a, b = input(), input()
 
 n, m = len(a), len(b)
 
-if n > m: b = '0' * (n - m) + b
+if n > m:
+    b = '0' * (n - m) + b
 
-else: a = '0' * (m - n) + a
+else:
+    a = '0' * (m - n) + a
 
 for i in range(max(n, m)):
 
@@ -26,15 +28,17 @@ for i in range(max(n, m)):
 
 d = 2 * v + u
 
-if u == v == 0: print('=')
+if u == v == 0:
+    print('=')
 
-elif u >= 0 and d >= 0: print('>')
+elif u >= 0 and d >= 0:
+    print('>')
 
-elif u <= 0 and d <= 0: print('<')
+elif u <= 0 and d <= 0:
+    print('<')
 
-else: print('>' if (u * u > v * (v + u)) ^ (u < 0) else '<')
-
+else:
+    print('>' if (u * u > v * (v + u)) ^ (u < 0) else '<')
 
 
 # Made By Mostafa_Khaled
-

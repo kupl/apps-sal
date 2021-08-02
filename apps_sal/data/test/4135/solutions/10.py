@@ -5,5 +5,6 @@ def go():
         if n % i == 0:
             s[0:i] = s[0:i][::-1]
     return ''.join(s)
-print(go())
 
+
+print(go())

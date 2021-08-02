@@ -1,13 +1,16 @@
-#Bhargey Mehta (Senior)
+# Bhargey Mehta (Senior)
 #DA-IICT, Gandhinagar
-import sys, math
+import sys
+import math
 mod = 10**9 + 7
+
 
 def solve(test_index):
     a, b = list(map(int, input().split()))
-    ans = math.ceil(abs(a-b) / 10)
+    ans = math.ceil(abs(a - b) / 10)
     print(ans)
     return
+
 
 if 'PyPy' not in sys.version:
     sys.stdin = open('input.txt', 'r')
@@ -15,7 +18,6 @@ if 'PyPy' not in sys.version:
 sys.setrecursionlimit(100000)
 num_tests = 1
 num_tests = int(input())
-for test in range(1, num_tests+1):
-    #print("Case #{}: ".format(test), end="")
+for test in range(1, num_tests + 1):
+    # print("Case #{}: ".format(test), end="")
     solve(test)
-

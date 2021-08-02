@@ -6,19 +6,19 @@ if D < 0:
 
 if D == 0:
     Sets = set()
-    for i in range(N+1):
-        Sets.add(i*X)
+    for i in range(N + 1):
+        Sets.add(i * X)
     print(len(Sets))
     return
 
 # D>0
 ans = 0
 Mode = defaultdict(list)
-for i in range(N+1):
-    L = (i*X+D*i*(i-1)//2-i*X % D)//D
-    R = (i*X+D*i*(2*N-1-i)//2-i*X % D)//D
-    Mode[i*X % D].append((L, 1))
-    Mode[i*X % D].append((R+1, -1))
+for i in range(N + 1):
+    L = (i * X + D * i * (i - 1) // 2 - i * X % D) // D
+    R = (i * X + D * i * (2 * N - 1 - i) // 2 - i * X % D) // D
+    Mode[i * X % D].append((L, 1))
+    Mode[i * X % D].append((R + 1, -1))
 Data = []
 for key in Mode.keys():
     Mode[key].sort()
@@ -31,5 +31,5 @@ for key in Mode.keys():
 ans = 0
 for l, r, v in Data:
     if v > 0:
-        ans += r-l
+        ans += r - l
 print(ans)

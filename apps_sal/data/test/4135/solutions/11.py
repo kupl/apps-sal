@@ -6,4 +6,3 @@ for d in range(1, n + 1):
         s = s[:d][::-1] + s[d:]
 
 print(s)
-

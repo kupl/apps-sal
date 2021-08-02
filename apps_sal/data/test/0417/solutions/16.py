@@ -54,4 +54,3 @@ for k in range(n + 1):
     # print(k, ans, min_acc, max_acc, back_min, back_max)
 
 print(ans)
-

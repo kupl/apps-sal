@@ -1,8 +1,10 @@
 from fractions import gcd
 
+
 def main():
     def fmin(m):
-        return X * m + D * m *(m - 1)//2
+        return X * m + D * m * (m - 1) // 2
+
     def fmax(m):
         return X * m + D * m * (2 * N - m - 1) // 2
     N, X, D = map(int, input().split())
@@ -38,6 +40,9 @@ def main():
                     ans += (dmax - pmax) // D + (pmin - dmin) // D
         print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

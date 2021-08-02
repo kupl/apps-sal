@@ -13,4 +13,3 @@ for prev, nxt in zip(seq, seq[1:]):
         print('Yes')
         return
 print('No')
-

@@ -1,8 +1,8 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
@@ -11,9 +11,13 @@ def LLI(rows_number): return [LI() for _ in range(rows_number)]
 # d=0かつx=0のときは1、x!=0ならn+1で確定
 # d,xと-d,-xは同値なので、dを正にすることで増加数列で考える
 # d,xを同じ数で割っても答えは変わらないので、互いに素にする
+
+
 def gcd(a, b):
-    if b == 0: return a
+    if b == 0:
+        return a
     return gcd(b, a % b)
+
 
 def main():
     n, x, d = MI()
@@ -23,7 +27,8 @@ def main():
         else:
             print(n + 1)
         return
-    if d < 0: d, x = -d, -x
+    if d < 0:
+        d, x = -d, -x
     g = gcd(d, abs(x))
     d, x = d // g, x // g
     #print(x, d)
@@ -33,7 +38,7 @@ def main():
     # sはs mod d = x*k mod dが同じなので、それで分類する
     kk = list(range(n + 1))
     kk.sort(key=lambda k: (k * x % d, k))
-    #print(kk)
+    # print(kk)
     ans = 0
     pmd = -1
     pl, pr = 1, 0
@@ -41,8 +46,8 @@ def main():
         l = (k * x + (k - 1) * k // 2 * d) // d
         r = (k * x + (2 * n - k - 1) * k // 2 * d) // d
         md = x * k % d
-        if md == pmd and l <= pr and pl<=r:
-            pl,pr=min(pl,l),max(pr,r)
+        if md == pmd and l <= pr and pl <= r:
+            pl, pr = min(pl, l), max(pr, r)
         else:
             ans += pr - pl + 1
             pl, pr = l, r
@@ -51,5 +56,5 @@ def main():
     ans += pr - pl + 1
     print(ans)
 
-main()
 
+main()

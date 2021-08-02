@@ -28,6 +28,5 @@ while current_index > 0:
         out[node_out] -= 1
         if out[node_out] == 0:
             heapq.heappush(zeros, -node_out)
-    
-print(' '.join(str(final_mappings[node]) for node in range(1, num_nodes + 1)))
 
+print(' '.join(str(final_mappings[node]) for node in range(1, num_nodes + 1)))

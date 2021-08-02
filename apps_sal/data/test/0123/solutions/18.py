@@ -1,8 +1,8 @@
-n,k = [int(i) for i in input().split()]
+n, k = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 
-c = [i for i in a if i!=0]
+c = [i for i in a if i != 0]
 
 if (c != sorted(c)):
     print("Yes")
@@ -17,6 +17,3 @@ else:
             print("Yes")
     else:
         print("Yes")
-        
-    
-

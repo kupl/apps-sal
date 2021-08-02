@@ -1,9 +1,10 @@
 def divi(n):
     l = []
-    for i in range(1,n+1):
-        if(n%i==0):
+    for i in range(1, n + 1):
+        if(n % i == 0):
             l.append(i)
     return l
+
 
 n = int(input())
 s = input()
@@ -15,7 +16,6 @@ for i in l:
 
 ans = ''
 for i in sl:
-    ans+=i
+    ans += i
 
 print(ans)
-

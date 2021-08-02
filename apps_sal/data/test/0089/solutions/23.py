@@ -5,4 +5,3 @@ if n % 2 == 0:
 else:
     nn = (n - 1) // 2
     print(n * (n + 1) // 2 - nn * (nn + 1))
-

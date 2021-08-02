@@ -9,11 +9,11 @@ if d == 0:
     if x == 0:
         print(1)
     else:
-        print(n+1)
+        print(n + 1)
     return
 
-range_in_kXmodD = dict() 
-for i in range(0, n+1):
+range_in_kXmodD = dict()
+for i in range(0, n + 1):
     kXmodD = i * x % d
     start = (i * x) // d + i * (i - 1) // 2
     end = (i * x) // d + i * (n - i + n - 1) // 2 + 1
@@ -27,7 +27,7 @@ for key in range_in_kXmodD.keys():
     range_in_kXmodD[key].sort()
     ret = 0
     cnt = 0
-    prev = None 
+    prev = None
     for val, c in range_in_kXmodD[key]:
         if prev != None and cnt > 0:
             ret += val - prev

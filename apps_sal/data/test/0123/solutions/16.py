@@ -1,4 +1,6 @@
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, k = I()
 a, b = list(I()), list(I())
 if k == 1:
@@ -8,4 +10,3 @@ if k == 1:
         print('No')
         return
 print('Yes')
-

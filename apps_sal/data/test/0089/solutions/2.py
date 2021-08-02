@@ -5,4 +5,3 @@ while n > 0:
     ans += n
     n -= 2
 print(ans)
-

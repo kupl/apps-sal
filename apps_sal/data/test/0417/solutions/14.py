@@ -1,6 +1,7 @@
 from collections import defaultdict
 from operator import itemgetter
 
+
 def solve(N, X, D):
     if D < 0:
         D = -D
@@ -11,7 +12,7 @@ def solve(N, X, D):
         return N + 1
 
     s = defaultdict(list)
-    for k in range(N+1):
+    for k in range(N + 1):
         p = k * X % D
         q = k * X // D
         a = k * (k - 1) // 2
@@ -20,7 +21,8 @@ def solve(N, X, D):
 
     ans = 0
     for v in list(s.values()):
-        if not v: continue
+        if not v:
+            continue
         v.sort()
         a, b = v[0]
         for x, y in v[1:]:
@@ -36,5 +38,6 @@ def solve(N, X, D):
 def __starting_point():
     N, X, D = list(map(int, input().split()))
     print((solve(N, X, D)))
+
 
 __starting_point()

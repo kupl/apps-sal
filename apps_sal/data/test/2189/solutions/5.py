@@ -41,5 +41,5 @@ for i in range(1, n + 1):
     stringOut += str(sol[i])
     if(i != n):
         stringOut += ' '
-        
+
 print(stringOut)
