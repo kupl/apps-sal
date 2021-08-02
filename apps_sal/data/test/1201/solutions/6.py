@@ -21,7 +21,7 @@ for time in range(1, T):
                 dp[time][i] = max(dp[time][i], p[i] + dp[time - t[i]][i - 1])
             else:
                 dp[time][i] = p[i]
-b = [0, [0 ,0]]
+b = [0, [0, 0]]
 for i in range(T):
     for j in range(n):
         if b[0] < dp[i][j]:

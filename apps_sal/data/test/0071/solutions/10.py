@@ -83,5 +83,3 @@ else:
             if (k % ((2 * n - 2) * m) - n * m >= (n - 1 - x) * m + y):
                 ser += 1
     print(maxi, mini, ser)
-
-

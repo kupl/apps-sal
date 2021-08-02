@@ -11,4 +11,3 @@ for i in range(n):
         s[x] += 1
 
 print(ans)
-

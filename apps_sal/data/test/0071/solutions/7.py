@@ -47,4 +47,3 @@ else:
             print(a, a, a)
         else:
             print(a + 1, a, a + (1 if y <= k else 0))
-    

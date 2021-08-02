@@ -21,17 +21,15 @@ for i in range(n):
         if k > 0:
             a[i][j] += 1
             k -= 1
-            
+
 for i in range(n - 2, -1, -1):
     for j in range(m):
         if k > 0:
             a[i][j] += 1
             k -= 1
-            
+
 for i in range(n):
     for j in range(m):
         ma = max(ma, a[i][j])
         mi = min(mi, a[i][j])
 print(ma, mi, a[x - 1][y - 1])
-
-

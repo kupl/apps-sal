@@ -10,7 +10,7 @@ if not "(" in c:
 
 last = c.rfind("(")
 
-corr = "(" + c[:last] + c[last + 1 :]
+corr = "(" + c[:last] + c[last + 1:]
 
 sums = 0
 for br in corr:
@@ -23,5 +23,3 @@ for br in corr:
         return
 
 print("Yes" if sums == 0 else "No")
-
-

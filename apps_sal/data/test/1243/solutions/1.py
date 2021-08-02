@@ -9,7 +9,6 @@ need_one = a[-1] // n
 
 ans = 0
 for i in range(len(a) - 1):
-	ans += abs((i + 1) * need_one - a[i])
+    ans += abs((i + 1) * need_one - a[i])
 
 print(ans)
-

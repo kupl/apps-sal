@@ -12,6 +12,6 @@ s_list_c = Counter(s_list)
 
 ans = 0
 for j in list(s_list_c.values()):
-    ans += j*(j-1)//2
+    ans += j * (j - 1) // 2
 
-print(ans) 
+print(ans)

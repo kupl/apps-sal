@@ -1,5 +1,5 @@
 import sys
-import math            
+import math
 
 s = input()
 
@@ -21,6 +21,6 @@ for i in s:
                 res.append(p)
                 k = 1
             else:
-                 k = 0
+                k = 0
 
 print("".join(res))

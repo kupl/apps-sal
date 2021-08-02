@@ -1,5 +1,5 @@
 n = input()
-s=  input()
+s = input()
 
 
 if len(s) == 1:

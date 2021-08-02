@@ -16,4 +16,3 @@ for c in s:
 
 
 print("No")
-

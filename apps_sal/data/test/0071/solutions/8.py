@@ -5,7 +5,7 @@ n, m, k, x, y = list(map(int, input().split()))
 if n != 1:
     full_rounds = k // (2 * (n - 2) * m + 2 * m)
 
-    #print(full_rounds)
+    # print(full_rounds)
     #print(2 * full_rounds)
 
     k %= (2 * (n - 2) * m + 2 * m)
@@ -72,4 +72,3 @@ else:
     big = max([big] + A)
 
     print(str(big) + " " + str(small) + " " + str(serg))
-

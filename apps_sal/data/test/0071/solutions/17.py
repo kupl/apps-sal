@@ -15,7 +15,7 @@ if n == 1:
     for i in matrix:
         mx = max(mx, max(i))
         mn = min(mn, min(i))
-    print(mx, mn, matrix[x - 1][y - 1])            
+    print(mx, mn, matrix[x - 1][y - 1])
 else:
     for i in range(m):
         matrix[0][i] += k // in_cycle

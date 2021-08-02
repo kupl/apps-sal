@@ -6,7 +6,7 @@ for _ in range(n):
     lst.append("".join(s))
 c = Counter(lst)
 ans = 0
-for k,v in c.items():
-    ans += v*(v-1)//2
+for k, v in c.items():
+    ans += v * (v - 1) // 2
 
 print(ans)

@@ -6,5 +6,5 @@ def go():
             return 'Yes'
     return 'No'
 
-print(go())
 
+print(go())

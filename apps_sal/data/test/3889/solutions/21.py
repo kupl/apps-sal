@@ -1,5 +1,6 @@
 3
 
+
 def solve(N, S):
     cnt = [0] * 26
     for c in S:
@@ -21,5 +22,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

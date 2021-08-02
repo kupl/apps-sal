@@ -10,8 +10,9 @@ instrl = lambda: list(instrm())
 
 n = inint()
 
-z = {():0}
+z = {(): 0}
 ans = 0
+
 
 def combinations(n, r):
     if n < r:
@@ -19,8 +20,9 @@ def combinations(n, r):
     else:
         return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
+
 for i in range(n):
-    c = [0]*123
+    c = [0] * 123
     s = input()
     for j in range(len(s)):
         c[ord(s[j])] += 1
@@ -30,6 +32,6 @@ for i in range(n):
         z[tuple(c)] = 1
 
 for i in z:
-    ans += combinations(z[i],2)
+    ans += combinations(z[i], 2)
 
 print(ans)

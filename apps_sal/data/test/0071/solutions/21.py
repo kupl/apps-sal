@@ -28,5 +28,5 @@ else:
         sergei = a * 2
         sergei += 1 if x + (y - 1) * m <= b else 0
         sergei += 1 if x + (n * 2 - 1 - y) * m <= b else 0
-    
+
 print(maxnum, minnum, sergei)

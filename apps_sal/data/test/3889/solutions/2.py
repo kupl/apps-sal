@@ -7,5 +7,3 @@ if max(a) > 1 or n == 1:
     print("Yes")
 else:
     print("No")
-
-

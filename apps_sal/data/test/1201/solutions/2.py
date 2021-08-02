@@ -17,12 +17,12 @@ class Solver:
 
         self.backtrack = []
         sd = max(self.d) + 1
-        for i in range(n+1):
+        for i in range(n + 1):
             self.backtrack.append([])
             for j in range(sd):
                 self.backtrack[i].append(0)
 
-        triples = list(zip(self.t, self.d, self.p, list(range(1, n+1))))
+        triples = list(zip(self.t, self.d, self.p, list(range(1, n + 1))))
         triples = sorted(triples, key=lambda x: x[1])
         self.t, self.d, self.p, self.indexes = [0], [0], [0], []
         for i in range(n):
@@ -32,12 +32,12 @@ class Solver:
             self.indexes.append(triples[i][3])
 
         self.f = []
-        for i in range(n+1):
+        for i in range(n + 1):
             self.f.append([])
             for j in range(sd):
                 self.f[i].append(0)
 
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             for d in range(sd):
                 if d - self.t[i] >= 0 and d < self.d[i] and self.t[i] < self.d[i]:
                     data = self.f[i - 1][d - self.t[i]]
@@ -77,4 +77,3 @@ class Solver:
 
 
 Solver().main()
-

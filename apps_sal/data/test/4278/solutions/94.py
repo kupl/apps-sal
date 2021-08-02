@@ -21,6 +21,6 @@ for i in range(n):
         z[s] = 1
 
 for i in z:
-    ans += z[i]*(z[i]-1)//2
+    ans += z[i] * (z[i] - 1) // 2
 
 print(ans)

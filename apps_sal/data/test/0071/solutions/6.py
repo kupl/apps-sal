@@ -3,6 +3,7 @@ n, m, k, x, y = list(map(int, input().split()))
 rw = [0] * n
 pl = [[0] * m for r in range(n)]
 
+
 def call():
     nonlocal k, rw, pl
     if n == 1:
@@ -18,7 +19,7 @@ def call():
         return
 
     if k >= 30000:
-        ite = 2 * m * (n-1)
+        ite = 2 * m * (n - 1)
         t = k // ite
         for i in range(n):
             rw[i] += 2 * t;
@@ -27,7 +28,6 @@ def call():
         rw[-1] -= t
 
         k -= t * ite
-
 
     act = 0
     up = 1
@@ -55,6 +55,7 @@ def call():
                 pl[act][i] += 1
             return
 
+
 call()
 
 for i in range(n):
@@ -63,7 +64,6 @@ for i in range(n):
 
 mxges = max([max(pl[i]) for i in range(n)])
 mnges = min([min(pl[i]) for i in range(n)])
-gg = pl[x-1][y-1]
+gg = pl[x - 1][y - 1]
 
 print("{} {} {}".format(mxges, mnges, gg))
-

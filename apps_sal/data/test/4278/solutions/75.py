@@ -11,5 +11,5 @@ for i in s:
 ans = 0
 for i in d:
     if d[i] >= 2:
-        ans += factorial(d[i]) // (factorial(d[i]-2)*2)
+        ans += factorial(d[i]) // (factorial(d[i] - 2) * 2)
 print(ans)

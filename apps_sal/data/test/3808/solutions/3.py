@@ -7,4 +7,3 @@ if res:
     m = min(l)
     res &= m >= -1
 print('Yes' if res else 'No')
-

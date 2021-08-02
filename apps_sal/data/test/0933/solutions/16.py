@@ -1,5 +1,5 @@
 import sys
-import math            
+import math
 
 s = input()
 l = len(s)
@@ -21,4 +21,4 @@ for i in range(l):
                 sys.stdout.write(p)
                 k = 1
             else:
-                 k = 0
+                k = 0

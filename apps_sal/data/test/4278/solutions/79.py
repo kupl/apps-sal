@@ -7,5 +7,5 @@ D = C.most_common()
 
 ans = 0
 for i in D:
-    ans += i[1]*(i[1] - 1)//2
+    ans += i[1] * (i[1] - 1) // 2
 print(ans)

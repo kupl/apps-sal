@@ -19,4 +19,3 @@ for i in range(n):
         print("No")
         return
 print("Yes")
-
