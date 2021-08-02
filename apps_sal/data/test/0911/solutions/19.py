@@ -19,4 +19,3 @@ elif sum_l < sum_r:
     print("Radewoosh")
 else:
     print("Tie")
-

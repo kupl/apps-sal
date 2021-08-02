@@ -10,15 +10,14 @@ T = list(map(int, sys.stdin.readline().split()))
 
 tl = tr = sl = sr = 0
 for i in range(n):
-  tl += T[i]
-  tr += T[n-1-i]
-  sl += max(0, P[i] - c*tl)
-  sr += max(0, P[n-1-i] - c*tr)
+    tl += T[i]
+    tr += T[n - 1 - i]
+    sl += max(0, P[i] - c * tl)
+    sr += max(0, P[n - 1 - i] - c * tr)
 
 if sl > sr:
-  print('Limak')
+    print('Limak')
 elif sl == sr:
-  print('Tie')
+    print('Tie')
 else:
-  print('Radewoosh')
-
+    print('Radewoosh')

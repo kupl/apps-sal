@@ -1,14 +1,14 @@
+from collections import deque
 import sys
 sys.setrecursionlimit(10**7)
 input = sys.stdin.readlines
 
-from collections import deque
 
 def main():
 
     lines = input()
     n, k = list(map(int, lines[0].split()))
-    a = [[] for i in range(n+1)]
+    a = [[] for i in range(n + 1)]
 
     for i in range(1, n):
         r, l = list(map(int, lines[i].split()))
@@ -17,7 +17,7 @@ def main():
 
     que = deque()
     que.append(1)
-    colors = [-1] * (n+1)
+    colors = [-1] * (n + 1)
     colors[1] = k
     ways = k
 
@@ -32,7 +32,7 @@ def main():
                 colors[son] = now_color
                 que.append(son)
         else:
-            now_color = k-1
+            now_color = k - 1
             for son in a[p]:
                 if colors[son] < 0:
                     now_color -= 1
@@ -42,6 +42,5 @@ def main():
 
     print(ways)
 
+
 main()
-
-

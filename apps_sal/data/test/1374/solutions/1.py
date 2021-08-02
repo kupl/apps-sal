@@ -27,4 +27,3 @@ while Ri > Li + 1:
     else:
         Ri = i
 print((x[Li]))
-

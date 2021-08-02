@@ -32,4 +32,3 @@ def f(n, a):
 n = int(input())
 a = list(map(int, input().split()))
 f(n, a)
-

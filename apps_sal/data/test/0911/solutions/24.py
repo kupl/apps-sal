@@ -10,13 +10,13 @@ def first():
     it = input().split(' ')
     for i in it:
         t.append(int(i))
-    fs,ft = 0,0
-    ss,st = 0,0
+    fs, ft = 0, 0
+    ss, st = 0, 0
     for i in range(n):
         ft += t[i]
-        fs += max(0, p[i]-c*ft)
-        st += t[n-i-1]
-        ss += max(0, p[n-i-1]-c*st)
+        fs += max(0, p[i] - c * ft)
+        st += t[n - i - 1]
+        ss += max(0, p[n - i - 1] - c * st)
 
     if(fs > ss):
         print("Limak")

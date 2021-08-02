@@ -35,4 +35,3 @@ def dfs(v, v_p):
 
 ans = dfs(0, -1) * k % MOD
 print(ans)
-

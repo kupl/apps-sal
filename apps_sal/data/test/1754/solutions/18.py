@@ -1,10 +1,10 @@
 kol = 0
-n, m, k = map(int,input().split())
-p = list(map(int,input().split()))
-s = list(map(int,input().split()))
+n, m, k = map(int, input().split())
+p = list(map(int, input().split()))
+s = list(map(int, input().split()))
 for i in range(n):
     s[i] -= 1
-c = list(map(int,input().split()))
+c = list(map(int, input().split()))
 for i in range(k):
     c[i] -= 1
 sc = [[] for i in range(m)]

@@ -6,6 +6,7 @@ def solve(n, c, a1, a2):
         ans += max(0, a1[i] - c * curr)
     return ans
 
+
 n, c = map(int, input().split())
 a1 = list(map(int, input().split()))
 a2 = list(map(int, input().split()))

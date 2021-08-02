@@ -19,4 +19,3 @@ for parent, child in nx.dfs_edges(G, 0):
         ans = (ans * (K - i - 2)) % MOD
 
 print(ans)
-

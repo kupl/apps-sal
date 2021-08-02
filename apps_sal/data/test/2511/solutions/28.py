@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def permutation(n, k):
     s = 1
     for _ in range(k):
@@ -7,6 +8,7 @@ def permutation(n, k):
         s %= mod
         n -= 1
     return s
+
 
 def bfs():
     nonlocal ans
@@ -27,7 +29,8 @@ def bfs():
             return
         ans *= permutation(b, a)
         ans %= mod
-    return 
+    return
+
 
 n, k = map(int, input().split())
 T = [[] for _ in range(n + 1)]

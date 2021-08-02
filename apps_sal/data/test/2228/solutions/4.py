@@ -17,5 +17,3 @@ for i in range(len(a)):
         m = c
         y = a[i][0]
 print(y, m)
-
-

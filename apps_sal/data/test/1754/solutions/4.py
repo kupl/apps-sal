@@ -1,4 +1,4 @@
-n, m ,k = map(int, input().split())
+n, m, k = map(int, input().split())
 p = list(map(int, input().split()))
 s = list(map(int, input().split()))
 c = list(map(int, input().split()))
@@ -7,10 +7,10 @@ for i in range(n):
     d[s[i] - 1].append((p[i], i + 1))
 for i in range(m):
     d[i].sort(reverse=True)
-    
-#for i in d:
-    #print(*i)
-#print('')
+
+# for i in d:
+    # print(*i)
+# print('')
 
 ans = 0
 for i in range(m):

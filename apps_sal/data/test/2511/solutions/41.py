@@ -27,4 +27,3 @@ while D:
         if x not in visited:
             D.append(x)
 print(ans)
-

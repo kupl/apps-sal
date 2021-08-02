@@ -30,4 +30,3 @@ def dfs(cur, par, k, g):
 
 
 print((dfs(0, -1, k, g) * k % mod))
-

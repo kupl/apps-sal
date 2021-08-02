@@ -35,4 +35,3 @@ for u in order:
         ans %= mod
 
 print(ans)
-
