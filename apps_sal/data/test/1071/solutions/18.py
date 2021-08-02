@@ -20,7 +20,8 @@ def read(mode=2):
 
 
 def write(s="\n"):
-    if isinstance(s, list): s = " ".join(map(str, s))
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
 

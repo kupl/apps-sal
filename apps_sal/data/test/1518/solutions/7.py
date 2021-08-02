@@ -2,7 +2,9 @@ import sys
 import collections as cc
 import bisect as bi
 input = sys.stdin.readline
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 pr = []
 N = 10**6 + 3
 ss = [0] * (N)

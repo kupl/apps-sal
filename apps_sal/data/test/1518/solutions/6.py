@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, = I()
 l = I()

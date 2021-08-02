@@ -27,7 +27,8 @@ while cur < tot:
             cnt = b
             ans += 1
             cnt -= (a - f)
-        else: cnt -= a
+        else:
+            cnt -= a
     else:
         if cnt < a + f and cnt < tot - cur:
             if(cnt < a - f):
@@ -36,7 +37,8 @@ while cur < tot:
             cnt = b
             ans += 1
             cnt -= (f)
-        else: cnt -= a
+        else:
+            cnt -= a
     cur += a
     # print(cur,cnt,ans)
     if(cnt < 0):

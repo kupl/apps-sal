@@ -30,7 +30,8 @@ for i in range(1, n + 1):
         t = i
         step = aa[j - t + 1] - 1
         ct += 1
-        ind[lis[j - step]] = j; ind[lis[j]] = j - step
+        ind[lis[j - step]] = j
+        ind[lis[j]] = j - step
         ans.append([j - step, j])
         lis[j - step], lis[j] = lis[j], lis[j - step]
         j -= step

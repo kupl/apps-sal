@@ -27,7 +27,8 @@ for i in range(1, n + 1):
             t += 1
 #        print(j,t)
         ct += 1
-        ind[lis[j]] = t; ind[lis[t]] = j
+        ind[lis[j]] = t
+        ind[lis[t]] = j
         ans.append([t, j])
         lis[j], lis[t] = lis[t], lis[j]
         j = t
