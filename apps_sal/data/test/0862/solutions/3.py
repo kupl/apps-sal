@@ -7,11 +7,10 @@ ans = 1
 for i in range(n):
     k = arr[i] // n
     k *= n
-    while (k +  i < arr[i]):
+    while (k + i < arr[i]):
         k += n
 
     if k < m:
         m = min(m, k)
         ans = i
-print(ans+1)
-
+print(ans + 1)

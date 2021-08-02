@@ -1,5 +1,6 @@
 3
 
+
 def solve(N, A):
     mn = min(A)
     if mn > N:
@@ -26,5 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

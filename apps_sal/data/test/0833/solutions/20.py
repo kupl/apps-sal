@@ -10,7 +10,7 @@ for i in sorted(d.keys()):
     d[i] -= min(d[i], r)
     r, b = v, min(d[i], v)
     d[i] -= b
-    if i+1 in d:
+    if i + 1 in d:
         r -= b
 
 print(s - sum(d.values()))

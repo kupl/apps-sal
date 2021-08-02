@@ -17,4 +17,3 @@ for i, ai in enumerate(a):
             mini = i
 
 print(mini + 1)
-

@@ -11,11 +11,11 @@ for i in d[10: 100]:
             x = not x
         else:
             y.append(i[0])
-            p += i[2: ]
+            p += i[2:]
 k, l = len(p), len(y)
 print(l * (n - k - l))
 for i in y:
     q[i] = '2'
-for i in (p[k // 2: ] if x else p[: k // 2]):
+for i in (p[k // 2:] if x else p[: k // 2]):
     q[i] = '2'
 print(' '.join(q))

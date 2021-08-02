@@ -7,19 +7,19 @@ integer = 0
 
 dic = dict()
 
-for i in range(1,num+1):
-    a = math.gcd(i,num)
+for i in range(1, num + 1):
+    a = math.gcd(i, num)
     if a in dic:
         integer += dic[a]
     else:
-        lijst = [0]*a
-        
+        lijst = [0] * a
+
         for j in range(num):
-            b = j%a
+            b = j % a
             lijst[b] += x[j]
 
         for k in range(a):
-            if lijst[k]%2 != 0:
+            if lijst[k] % 2 != 0:
                 dic[a] = 0
                 break
         else:

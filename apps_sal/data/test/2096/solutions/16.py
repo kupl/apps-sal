@@ -2,11 +2,11 @@ from sys import stdin
 
 n = int(stdin.readline())
 a = [int(x) for x in stdin.readline().split()]
-a = sorted([(a[x], x) for x in range(n*2)])
+a = sorted([(a[x], x) for x in range(n * 2)])
 
 group = {}
 
-for x,ind in a:
+for x, ind in a:
     if x in group:
         group[x].append(ind)
     else:
@@ -22,10 +22,10 @@ g2.sort()
 left = 0
 right = 0
 
-board = [0 for x in range(n*2)]
+board = [0 for x in range(n * 2)]
 
 ind = 0
-for x,l in g2:
+for x, l in g2:
     if x == 1:
         ind += 1
         if left <= right:
@@ -42,11 +42,11 @@ if right > left:
 else:
     turn = False
 
-for x,l in g2[ind:]:
+for x, l in g2[ind:]:
     left += 1
     right += 1
 
-    if x%2 == 1:
+    if x % 2 == 1:
         last = l.pop()
         if turn:
             board[last] = '1'
@@ -57,7 +57,5 @@ for x,l in g2[ind:]:
         board[n] = '1'
     for n in l[1::2]:
         board[n] = '2'
-print(left*right)
+print(left * right)
 print(' '.join(board))
-        
-

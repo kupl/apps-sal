@@ -1,4 +1,4 @@
-R = lambda:list(map(int, input().split()))
+R = lambda: list(map(int, input().split()))
 n, v = R()
 M = 3005
 x = [0] * M

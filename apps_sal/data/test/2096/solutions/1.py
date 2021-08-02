@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-proc = sorted([ (a.count(i), i) for i in range(10, 100) if a.count(i) > 0 ])
+proc = sorted([(a.count(i), i) for i in range(10, 100) if a.count(i) > 0])
 left, right = [], []
 for cnt, val in proc:
     half = cnt // 2
@@ -15,8 +15,7 @@ print(len(set(left)) * len(set(right)))
 cnt = [0 for i in range(100)]
 for i in range(2 * n):
     if left.count(a[i]) == cnt[a[i]]:
-        print('2', end = ' ')
+        print('2', end=' ')
     else:
-        print('1', end = ' ')
+        print('1', end=' ')
         cnt[a[i]] += 1
-
