@@ -5,4 +5,3 @@ for i in range(len(s), 0, -1):
         if s[j - i + 1:j + 1] != s[j - i + 1:j + 1][::-1]:
             ans = max(ans, i)
 print(ans)
-

@@ -13,4 +13,3 @@ elif positiveCount == n or negativeCount == n:
     print(sum(absArr) - 2 * min(absArr))
 else:
     print(sum(absArr))
-

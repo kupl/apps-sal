@@ -11,4 +11,3 @@ elif ylx < xly:
     print('<')
 else:
     print('>')
-

@@ -5,4 +5,3 @@ o = 0
 for i in range(m):
     o += a[i]
 print(o)
-

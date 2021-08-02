@@ -8,4 +8,3 @@ elif y * log(x) + 1e-9 < x * log(y):
     print('<')
 else:
     print('=')
-

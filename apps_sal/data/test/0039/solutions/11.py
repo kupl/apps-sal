@@ -8,4 +8,3 @@ elif len(set(s)) == 1:
 
 else:
     print(len(s) - 1)
-
