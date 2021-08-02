@@ -15,5 +15,3 @@ else:
         print(min(x1, x2), min(y1, y2), max(x1, x2), max(y1, y2))
     else:
         print(min(x1, x2), max(y1, y2), max(x1, x2), min(y1, y2))
-
-

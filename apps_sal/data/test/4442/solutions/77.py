@@ -1,10 +1,9 @@
 
-a,b = list(map(int, input().split()))
-c=str(a)*b
-d=str(b)*a
+a, b = list(map(int, input().split()))
+c = str(a) * b
+d = str(b) * a
 
-if c>d:
+if c > d:
     print(d)
 else:
     print(c)
-

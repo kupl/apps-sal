@@ -14,8 +14,3 @@ else:
         print(x1 + delta, y1, x1 + delta, y2)
     else:
         print(-1)
-    
-
-
-            
-

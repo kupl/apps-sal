@@ -5,5 +5,3 @@ c = ord('A')
 for i in range(n):
     s[ord(u[i]) - c] += 1
 print(min(s) * k)
-   
-

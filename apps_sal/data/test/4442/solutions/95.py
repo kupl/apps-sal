@@ -1,1 +1,1 @@
-a,b=sorted(input().split());print(a*int(b))
+a, b = sorted(input().split()); print(a * int(b))

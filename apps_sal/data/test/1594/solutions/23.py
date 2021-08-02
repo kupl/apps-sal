@@ -7,7 +7,7 @@ l = [0]
 for i in range(n):
     s = input()
     t1, t2 = list(map(int, s.split(' ')))
-    l.append(l[-1] + t1*t2)
+    l.append(l[-1] + t1 * t2)
 
 xs = list(map(int, input().split(' ')))
 
@@ -19,4 +19,3 @@ while i < m:
         i += 1
     else:
         j += 1
-

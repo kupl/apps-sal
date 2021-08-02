@@ -10,5 +10,5 @@ else:
     ind = 2
     for i in range(d, n):
         ans += chr(ord('a') + ind)
-        ind +=1
+        ind += 1
     print(ans)

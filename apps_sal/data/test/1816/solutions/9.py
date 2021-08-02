@@ -12,4 +12,3 @@ for i in range(n - 1):
     sum += abs(c[i] - c[i + 1])
 
 print(sum)
-

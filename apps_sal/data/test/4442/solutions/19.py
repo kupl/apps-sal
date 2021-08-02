@@ -1,7 +1,7 @@
-a,b = input().split()
+a, b = input().split()
 
-A = (a*int(b))
-B = (b*int(a))
+A = (a * int(b))
+B = (b * int(a))
 
 if A < B:
     print(A)

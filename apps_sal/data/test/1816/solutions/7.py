@@ -9,5 +9,5 @@ lab = 1
 while lab != n:
     ans += abs(index[lab] - index[lab + 1])
     lab += 1
-    
+
 print(ans)

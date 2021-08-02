@@ -1,5 +1,6 @@
 from decimal import Decimal, getcontext
 
+
 class Trigonometry():
     def __init__(self, precision):
         getcontext().prec = precision
@@ -85,6 +86,7 @@ class Trigonometry():
             else:
                 hi = mid
         return lo
+
 
 T = Trigonometry(100)
 

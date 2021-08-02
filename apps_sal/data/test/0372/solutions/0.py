@@ -17,7 +17,7 @@ def sin(x):
     while s != lasts:
         lasts = s
         i += 2
-        fact *= i * (i-1)
+        fact *= i * (i - 1)
         num *= x * x
         sign *= -1
         s += num / fact * sign
@@ -31,7 +31,7 @@ def cos(x):
     while s != lasts:
         lasts = s
         i += 2
-        fact *= i * (i-1)
+        fact *= i * (i - 1)
         num *= x * x
         sign *= -1
         s += num / fact * sign
@@ -45,8 +45,8 @@ def pi():
     lasts, t, s, n, na, d, da = 0, three, 3, 1, 0, 0, 24
     while s != lasts:
         lasts = s
-        n, na = n+na, na+8
-        d, da = d+da, da+32
+        n, na = n + na, na + 8
+        d, da = d + da, da + 32
         t = (t * n) / d
         s += t
     decimal.getcontext().prec -= 2
@@ -55,7 +55,7 @@ def pi():
 
 def asin(x):
     decimal.getcontext().prec += 2
-    b, e = -pi()/2, pi()/2
+    b, e = -pi() / 2, pi() / 2
     while True:
         mid = (b + e) / 2
         if e == mid or b == mid:
@@ -90,7 +90,7 @@ class Circles:
         decimal.getcontext().prec = 40
 
         self.l = ((self.xb - self.xa)**2 + (self.yb - self.ya)**2).sqrt()
-        self.p = (self.ra + self.rb + self.l)/2
+        self.p = (self.ra + self.rb + self.l) / 2
 
         if self.l >= self.p:
             self.sa = 0
@@ -103,11 +103,11 @@ class Circles:
             self.sb = 0
         else:
             self.aa = 2 * acos(
-                (self.ra**2 - self.rb**2 + self.l**2) /
-                (2 * self.ra * self.l))
+                (self.ra**2 - self.rb**2 + self.l**2)
+                / (2 * self.ra * self.l))
             self.ab = 2 * acos(
-                (self.rb**2 - self.ra**2 + self.l**2) /
-                (2 * self.rb * self.l))
+                (self.rb**2 - self.ra**2 + self.l**2)
+                / (2 * self.rb * self.l))
             self.sa = self.ra**2 * (self.aa - sin(self.aa)) / 2
             self.sb = self.rb**2 * (self.ab - sin(self.ab)) / 2
 
@@ -158,7 +158,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -169,9 +169,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -183,5 +184,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Circles().calculate())
+
 
 __starting_point()

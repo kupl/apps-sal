@@ -3,4 +3,3 @@ if a > b:
     print((str(b) * a))
 else:
     print((str(a) * b))
-

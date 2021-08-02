@@ -1,24 +1,20 @@
-n,m=list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 
-A=[]
+A = []
 
 for i in range(n):
 
-	c,t=list(map(int,input().split()))
+    c, t = list(map(int, input().split()))
 
-	A.append(c*t)
+    A.append(c * t)
 
-i=p=0
+i = p = 0
 
 for v in [int(x) for x in input().split()]:
 
-	while(p<v):p,i=p+A[i],i+1
+    while(p < v): p, i = p + A[i], i + 1
 
-	print(i)
-
-
-
+    print(i)
 
 
 # Made By Mostafa_Khaled
-

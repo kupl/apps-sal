@@ -13,4 +13,4 @@ for i in string.ascii_uppercase[:k]:
 for i in input():
     if i in mp:
         mp[i] += 1
-print(min(mp.values())*k)
+print(min(mp.values()) * k)

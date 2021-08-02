@@ -1,4 +1,4 @@
-a,b = map(int,input().split())
+a, b = map(int, input().split())
 # a,bを文字列化
 a_str = str(a)
 b_str = str(b)

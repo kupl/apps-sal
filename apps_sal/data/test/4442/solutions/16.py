@@ -1,9 +1,9 @@
-a,b = input().split()
-ab = a*int(b)
-ba = b*int(a)
-s = max(len(ab),len(ba))
+a, b = input().split()
+ab = a * int(b)
+ba = b * int(a)
+s = max(len(ab), len(ba))
 
-if s == len(ab) :
+if s == len(ab):
     print(ab)
-else :
+else:
     print(ba)

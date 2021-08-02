@@ -22,4 +22,3 @@ print(moves)
 # print('moves', moves)
 
 # Solution ends.
-
