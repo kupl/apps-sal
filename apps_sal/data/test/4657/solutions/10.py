@@ -6,7 +6,7 @@ for i in range(t):
     ans = []
     has = True
     if k == 1:
-        if sum(nums) %2 ==0:
+        if sum(nums) % 2 == 0:
             print("NO")
         else:
             print("YES")
@@ -15,7 +15,7 @@ for i in range(t):
         for i in range(n):
             if cur_k == k - 1:
                 if ans[-1] != n:
-                    if sum(nums[ans[-1]:]) % 2 ==0:
+                    if sum(nums[ans[-1]:]) % 2 == 0:
                         has = False
                         break
                     else:
@@ -31,5 +31,3 @@ for i in range(t):
         else:
             print("YES")
             print(' '.join(str(i) for i in ans))
-        
-

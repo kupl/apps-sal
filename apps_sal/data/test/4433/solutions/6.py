@@ -26,14 +26,17 @@ result = []
 rank = [0, ] * (n + 1)
 parent = [0, ] * (n + 1)
 
+
 def make_set(i):
     rank[i] = 0
     parent[i] = i
+
 
 def find_set(i):
     if i != parent[i]:
         parent[i] = find_set(parent[i])
     return parent[i]
+
 
 def union_op(x, y):
     s_x = find_set(x)
@@ -45,6 +48,7 @@ def union_op(x, y):
         parent[s_y] = s_x
         if rank[s_y] == rank[s_x]:
             rank[s_x] += 1
+
 
 for i in range(1, n + 1):
     make_set(i)
@@ -60,4 +64,3 @@ for e in edges:
 
 for e in result:
     print(e[0], e[1])
-

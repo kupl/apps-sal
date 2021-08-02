@@ -1,3 +1,4 @@
+from collections import deque
 n, m = list(map(int, input().split()))
 g = [[] for i in range(n + 1)]
 for i in range(m):
@@ -10,7 +11,6 @@ for i in range(1, n + 1):
     if len(g[i]) > len(g[root]):
         root = i
 
-from collections import deque
 
 visited = [False for i in range(n + 1)]
 
@@ -24,5 +24,3 @@ while len(q) > 0:
             q.append(v)
             print(u, v)
             visited[v] = True
-
-

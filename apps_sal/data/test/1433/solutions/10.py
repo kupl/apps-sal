@@ -8,8 +8,8 @@ for i in range(n):
     a.append(x)
 
 t_a = list(map(list, zip(*a)))
-#print(a)
-#print(t_a)
+# print(a)
+# print(t_a)
 for i in range(n):
     c = a[i].count(1)
     if (c > 1):
@@ -19,8 +19,8 @@ for i in range(n):
         ans += l + (m - r - 1) + ((m - c - (l + (m - r - 1))) * 2)
     elif (c == 1):
         ans += m - 1
-    #print(ans)
-    
+    # print(ans)
+
 for i in range(m):
     c = t_a[i].count(1)
     if (c > 1):
@@ -29,5 +29,5 @@ for i in range(m):
         ans += l + (n - r - 1) + ((n - c - (l + (n - r - 1))) * 2)
     elif (c == 1):
         ans += n - 1
-    #print(ans)
+    # print(ans)
 print(ans)

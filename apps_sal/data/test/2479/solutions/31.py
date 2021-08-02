@@ -1,39 +1,56 @@
-import sys,collections as cl,bisect as bs
+import sys
+import collections as cl
+import bisect as bs
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-mod = 10**9+7
+mod = 10**9 + 7
 Max = sys.maxsize
-def l(): #intのlist
-    return list(map(int,input().split()))
-def m(): #複数文字
-    return map(int,input().split())
-def onem(): #Nとかの取得
+
+
+def l():  # intのlist
+    return list(map(int, input().split()))
+
+
+def m():  # 複数文字
+    return map(int, input().split())
+
+
+def onem():  # Nとかの取得
     return int(input())
-def s(x): #圧縮
+
+
+def s(x):  # 圧縮
     a = []
     if len(x) == 0:
         return []
     aa = x[0]
     su = 1
-    for i in range(len(x)-1):
-        if aa != x[i+1]:
-            a.append([aa,su])
-            aa = x[i+1]
+    for i in range(len(x) - 1):
+        if aa != x[i + 1]:
+            a.append([aa, su])
+            aa = x[i + 1]
             su = 1
         else:
             su += 1
-    a.append([aa,su])
+    a.append([aa, su])
     return a
-def jo(x): #listをスペースごとに分ける
-    return " ".join(map(str,x))
-def max2(x): #他のときもどうように作成可能
-    return max(map(max,x))
-def In(x,a): #aがリスト(sorted)
-    k = bs.bisect_left(a,x)
-    if k != len(a) and a[k] ==  x:
+
+
+def jo(x):  # listをスペースごとに分ける
+    return " ".join(map(str, x))
+
+
+def max2(x):  # 他のときもどうように作成可能
+    return max(map(max, x))
+
+
+def In(x, a):  # aがリスト(sorted)
+    k = bs.bisect_left(a, x)
+    if k != len(a) and a[k] == x:
         return True
     else:
         return False
+
 
 def pow_k(x, n):
     ans = 1
@@ -43,6 +60,7 @@ def pow_k(x, n):
         x *= x
         n >>= 1
     return ans
+
 
 """
 def nibu(x,n,r):
@@ -60,18 +78,18 @@ def nibu(x,n,r):
 """
 
 
-n,q = m()
+n, q = m()
 
-ans = (n-2)**2
+ans = (n - 2)**2
 
-ta = n-2
-tate = [n-2 for i in range(n-2)]
-ltate = [0 for i in range(n-2)]
-yo = n-2
-yoko = [n-2 for i in range(n-2)]
-lyoko = [0 for i in range(n-2)]
+ta = n - 2
+tate = [n - 2 for i in range(n - 2)]
+ltate = [0 for i in range(n - 2)]
+yo = n - 2
+yoko = [n - 2 for i in range(n - 2)]
+lyoko = [0 for i in range(n - 2)]
 for i in range(q):
-    a,b = m()
+    a, b = m()
     b -= 2
     if a == 1:
         if ltate[b] == 0:
@@ -79,7 +97,7 @@ for i in range(q):
         else:
             ans -= tate[b]
 
-        for j in range(b,n-2):
+        for j in range(b, n - 2):
             if ltate[j] == 0:
                 tate[j] = ta
                 ltate[j] = 1
@@ -87,13 +105,12 @@ for i in range(q):
             else:
                 break
 
-
     else:
         if lyoko[b] == 0:
             ans -= yo
         else:
             ans -= yoko[b]
-        for j in range(b,n-2):
+        for j in range(b, n - 2):
             if lyoko[j] == 0:
                 yoko[j] = yo
                 lyoko[j] = 1

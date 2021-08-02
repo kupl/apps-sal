@@ -24,7 +24,7 @@ def solve():
 
     results = find_results(players)
     if (results[0] == 1 and results[1] == 1) or (results[2] == 1 and results[3] == 1):
-        print ("Team 1")
+        print("Team 1")
     elif (results[0] == 2 or results[1] == 2) and (results[2] == 2 or results[3] == 2):
         print("Team 2")
     else:
@@ -32,4 +32,3 @@ def solve():
 
 
 solve()
-

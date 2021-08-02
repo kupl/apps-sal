@@ -19,7 +19,7 @@ class BinaryIndexedTree:
     # 初期化処理
     def __init__(self, size):
         self.size = size
-        self.dat = [0]*(size+1)
+        self.dat = [0] * (size + 1)
         self.depth = size.bit_length()
 
     def init(self, a):
@@ -30,16 +30,16 @@ class BinaryIndexedTree:
         i += 1
         while i <= self.size:
             self.dat[i] += x
-            i += i & -i # 更新すべき位置
+            i += i & -i  # 更新すべき位置
 
     # sum(r)        :閉区間 [0,r] の合計を取得する
     # sum(0)=a[0], sum(n-1)=a[0]+...+a[n-1]
     def sum(self, r):
         r += 1
         ret = 0
-        while r>0:
+        while r > 0:
             ret += self.dat[r]
-            r -= r & -r # 加算すべき位置
+            r -= r & -r  # 加算すべき位置
         return ret
 
 # sum(i) >= vとなる最小のindex
@@ -52,13 +52,13 @@ class BinaryIndexedTree:
             if k <= self.size and sum_ + self.dat[k] < x:
                 sum_ += self.dat[k]
                 pos += 1 << i
-        return pos  #0-indexed
+        return pos  # 0-indexed
 
-#### for debug
+# for debug
     def get_original_sequence(self):
         ret = self.get_aggrigate_sequence()
-        for i in range(self.size-1, 0, -1):
-            ret[i] -= ret[i-1]
+        for i in range(self.size - 1, 0, -1):
+            ret[i] -= ret[i - 1]
         return ret
 
     def get_aggrigate_sequence(self):
@@ -72,28 +72,28 @@ class BinaryIndexedTree:
         ret += 'aggrigate:' + ' '.join(map(str, seq))
         return ret
 
+
 ########################################
 n, q = list(map(int, input().split()))
-cx = BinaryIndexedTree(n+1)
-cy = BinaryIndexedTree(n+1)
-cx.add(1, n-2)
-cy.add(1, n-2)
+cx = BinaryIndexedTree(n + 1)
+cy = BinaryIndexedTree(n + 1)
+cx.add(1, n - 2)
+cy.add(1, n - 2)
 mx, my = n, n
-ret = pow(n-2,2)
+ret = pow(n - 2, 2)
 for _ in range(q):
     u, v = list(map(int, input().split()))
     if u == 1:
         ret -= cx.sum(v)
         if mx > v:
-            cy.add(1, v-mx)
-            cy.add(my, mx-v)
+            cy.add(1, v - mx)
+            cy.add(my, mx - v)
             mx = v
     else:
         ret -= cy.sum(v)
         if my > v:
-            cx.add(1, v-my)
-            cx.add(mx, my-v)
+            cx.add(1, v - my)
+            cx.add(mx, my - v)
             my = v
 
 print(ret)
-

@@ -158,4 +158,3 @@ print(count_best_positions())
 # file.close()
 
 print()
-

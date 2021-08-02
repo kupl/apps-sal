@@ -8,8 +8,9 @@ def count_place(a, n, m):
             #print(l, r, ((m - c - (l + (m - r - 1)))))
             place += l + (m - r - 1) + ((m - c - (l + (m - r - 1))) * 2)
         elif (c == 1):
-            place += m - 1  
+            place += m - 1
     return place
+
 
 n, m = map(int, input().split())
 a = []

@@ -11,4 +11,3 @@ for i in range(L, R):
         continue
     break
 print(ans)
-

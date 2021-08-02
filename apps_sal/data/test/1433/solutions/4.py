@@ -17,7 +17,7 @@ for i in range(n):
 
 for i in range(n):
     for j in range(1, m):
-       lines[i][j] += lines[i][j - 1]
+        lines[i][j] += lines[i][j - 1]
     # print(' '.join(str(n) for n in lines[i]))
 # print()
 

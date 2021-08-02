@@ -6,6 +6,7 @@ edges = [[] for _ in range(n)]
 a = []
 q = queue(a, 200000)
 
+
 def bfs(z):
     used[z] = 1
     q.append(z)
@@ -17,6 +18,7 @@ def bfs(z):
                 print(x + 1, i + 1)
                 used[i] = 1
 
+
 for i in range(m):
     a, b = list(map(int, input().split()))
     edges[a - 1].append(b - 1)
@@ -25,9 +27,8 @@ for i in range(m):
 k = 0
 for i in range(n):
     k = max(k, len(edges[i]))
-    
+
 for i in range(n):
     if len(edges[i]) == k:
         bfs(i)
         break
-

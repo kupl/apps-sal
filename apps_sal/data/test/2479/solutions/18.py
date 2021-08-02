@@ -29,4 +29,3 @@ for _ in range(Q):
         idx = bisect_descending(row, x)
         ans -= col[idx] - 2
 print(ans)
-

@@ -1,4 +1,4 @@
-#575_B
+# 575_B
 
 import time
 import sys
@@ -37,4 +37,3 @@ for i in range(0, q):
         inds.append(n)
         print("YES")
         print(" ".join([str(j) for j in inds]))
-

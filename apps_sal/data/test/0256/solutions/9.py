@@ -1,5 +1,5 @@
-    
-def play(t1, t2):    
+
+def play(t1, t2):
     r = 0
     if t1[0] > t2[1] and t1[1] > t2[0]:
         r = 1
@@ -10,27 +10,28 @@ def play(t1, t2):
     #print("play:", t1, t2, r)
     return r
 
+
 p = []
 m = []
 res = []
 
 for _ in range(4):
     a, b = map(int, input().split(" "))
-    p.append((a, b))    
+    p.append((a, b))
 
 m.append((p[0][0], p[1][1]))
 m.append((p[1][0], p[0][1]))
 m.append((p[2][0], p[3][1]))
 m.append((p[3][0], p[2][1]))
-    
+
 res.append((play(m[0], m[2]), play(m[0], m[3])))
 res.append((play(m[1], m[2]), play(m[1], m[3])))
 
-#print(res)
+# print(res)
 mm = max([max(i) for i in res])
 res = [i for i in res if max(i) == mm]
 res = [min(i) for i in res]
-#print(res)
+# print(res)
 #rr = min(res) + 1
 if 1 in res:
     rr = 2

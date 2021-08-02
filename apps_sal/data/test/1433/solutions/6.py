@@ -1,4 +1,4 @@
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 grid = [[i for i in map(int, input().split())] for _ in range(n)]
 good_spots = 0
 found1 = False
@@ -7,7 +7,7 @@ for row in grid:
     if sum(row) == 0:
         continue
     last_one = len(row) - row[::-1].index(1) - 1
-    for idx,num in enumerate(row):
+    for idx, num in enumerate(row):
         if num == 0:
             if idx < last_one:
                 good_spots += 1

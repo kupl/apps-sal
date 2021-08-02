@@ -17,4 +17,3 @@ for query in range(q):
     print("YES")
     ans.append(n)
     print(' '.join(map(str, ans[1:])))
-

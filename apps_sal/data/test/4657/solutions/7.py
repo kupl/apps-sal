@@ -29,4 +29,3 @@ for i in range(q):
         j += 1
     else:
         print("NO")
-

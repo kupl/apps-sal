@@ -4,11 +4,11 @@ ans = 0
 for i in range(a):
     first = 0
     between = 0
-    last = 0    
+    last = 0
     isactor = False
     for j in range(b):
         if scene[i][j] == 0 and isactor == False:
-                first += 1
+            first += 1
         elif isactor == True and scene[i][j] == 0:
             last += 1
         elif isactor == True and scene[i][j] == 1:
@@ -21,7 +21,7 @@ for i in range(a):
 for j in range(b):
     first = 0
     between = 0
-    last = 0    
+    last = 0
     isactor = False
     for i in range(a):
         if scene[i][j] == 0 and isactor == False:
@@ -34,5 +34,5 @@ for j in range(b):
         elif isactor == False and scene[i][j] == 1:
             isactor = True
     if isactor == True:
-        ans += first + 2 * between + last  
+        ans += first + 2 * between + last
 print(ans)

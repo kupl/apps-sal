@@ -2,6 +2,8 @@ def check(a, b, c, d):
     if a > d and b > c:
         return 1
     return 0
+
+
 a = [0 for i in range(4)]
 b = [0 for i in range(4)]
 for i in range(4):

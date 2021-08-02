@@ -23,4 +23,3 @@ for _ in range(Q):
         ans -= col[x]
 
 print(ans)
-

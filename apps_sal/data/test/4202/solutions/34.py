@@ -8,4 +8,3 @@ else:
             ans = min(ans, (i * j) % 2019)
 
 print(ans)
-
