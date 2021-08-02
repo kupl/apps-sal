@@ -1,5 +1,6 @@
 import operator
 
+
 def mx_or(mx):
     n = len(mx)
     m = len(mx[0])
@@ -13,10 +14,11 @@ def mx_or(mx):
                     result[i][k] = 1
     return result
 
+
 none = lambda iterable: all(map(operator.not_, iterable))
 
 n, m = list(map(int, input().split()))
-mx = [[ ] for i in range(n)]
+mx = [[] for i in range(n)]
 
 for i in range(n):
     mx[i] = list(map(int, input().split()))
@@ -37,4 +39,3 @@ if mx_or(result) == mx:
         print(' '.join(map(str, result[i])))
 else:
     print("NO")
-

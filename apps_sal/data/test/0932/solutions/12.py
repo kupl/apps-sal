@@ -7,33 +7,33 @@ I, J = [0] * n, [0] * m
 IS, JS = [0] * n, [0] * m
 CountI, CountJ = 0, 0
 for i in range(n):
-	IS[i] = sum(A[i])
-	if (IS[i] == m):
-		I[i] = 1
-		CountI += 1
+    IS[i] = sum(A[i])
+    if (IS[i] == m):
+        I[i] = 1
+        CountI += 1
 for j in range(m):
-	JS[j] = sum([A[i][j] for i in range(n)])
-	if (JS[j] == n):
-		J[j] = 1
-		CountJ += 1
+    JS[j] = sum([A[i][j] for i in range(n)])
+    if (JS[j] == n):
+        J[j] = 1
+        CountJ += 1
 flag = True
 i = 0
 while i < n and flag:
-	if (IS[i] != m and IS[i] != CountJ):
-		flag = False
-	i += 1
+    if (IS[i] != m and IS[i] != CountJ):
+        flag = False
+    i += 1
 j = 0
 while j < m and flag:
-	if (JS[j] != n and JS[j] != CountI):
-		flag = False
-	j += 1
+    if (JS[j] != n and JS[j] != CountI):
+        flag = False
+    j += 1
 if (flag and not (sum(I) + sum(J) > 0 and sum(I) * sum(J) == 0)):
-	print("YES")
-	for i in range(n):
-		for j in range(m):
-			print(I[i] * J[j], end = " ")
-		print()
+    print("YES")
+    for i in range(n):
+        for j in range(m):
+            print(I[i] * J[j], end=" ")
+        print()
 else:
-	print("NO")
-#fout.close()
-#fin.close()
+    print("NO")
+# fout.close()
+# fin.close()

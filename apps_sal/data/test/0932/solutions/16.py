@@ -19,6 +19,6 @@ for i in range(m):
         if tmp != B[i][j]:
             print("NO")
             return
-print("YES") 
+print("YES")
 for li in A:
     print(' '.join(map(str, li)))

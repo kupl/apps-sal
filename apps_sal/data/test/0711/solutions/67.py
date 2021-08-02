@@ -2,20 +2,22 @@ MOD = 10 ** 9 + 7
 
 N, M = list(map(int, input().split()))
 
-def factoring(k): #kを因数分解し、素因数とその個数を辞書に入れて返す。
+
+def factoring(k):  # kを因数分解し、素因数とその個数を辞書に入れて返す。
     import math
     dic = dict()
-    n = int(math.sqrt(k))+2
+    n = int(math.sqrt(k)) + 2
     for i in range(2, n):
         count = 0
-        while k%i == 0:
+        while k % i == 0:
             count += 1
-            k = k//i
+            k = k // i
         if count != 0:
             dic[i] = count
-    if k != 1: #sqrt(k)までチェックしてもkが1になっていない --> kが素因数
+    if k != 1:  # sqrt(k)までチェックしてもkが1になっていない --> kが素因数
         dic[k] = 1
     return dic
+
 
 class Factorial:
     def __init__(self, n, mod):
@@ -27,14 +29,15 @@ class Factorial:
         for j in range(n, 0, -1):
             self.i.append(self.i[-1] * j % mod)
         self.i.reverse()
+
     def factorial(self, j):
         return self.f[j]
+
     def ifactorial(self, j):
         return self.i[j]
+
     def comb(self, n, k):
         return self.f[n] * self.i[n - k] % self.mod * self.i[k] % self.mod if n >= k else 0
-
-
 
 
 C = Factorial(N + 100, MOD).comb
@@ -46,7 +49,4 @@ for tmp in dic:
     ans *= C(dic[tmp] + N - 1, dic[tmp])
     ans %= MOD
 
-print (ans)
-
-
-
+print(ans)

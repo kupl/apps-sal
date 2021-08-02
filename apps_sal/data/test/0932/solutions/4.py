@@ -13,10 +13,10 @@ c = 0
 r = 0
 for i in range(n):
     if col[i]:
-        c+=1
+        c += 1
 for j in range(m):
     if row[j]:
-        r+=1
+        r += 1
 res = []
 if (r > 0 and c > 0) or (r == 0 and c == 0):
     for i in range(m):

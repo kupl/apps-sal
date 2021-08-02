@@ -75,4 +75,3 @@ for cnt in primes:
     ans = ans * mf.nCm(cnt + N - 1, N - 1)
     ans = ans % MOD
 print(ans)
-

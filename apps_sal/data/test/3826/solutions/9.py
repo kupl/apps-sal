@@ -1,7 +1,6 @@
+from collections import defaultdict as dd
 n = int(input())
 A = [int(x) for x in input().split()]
-
-from collections import defaultdict as dd
 
 
 hsh = dd(int)
@@ -22,10 +21,9 @@ else:
         ct = 0
         for j in range(i, n):
             hsh2[A[j]] += 1
-            if hsh2[A[j]] == hsh[A[j]] - 1 and hsh[A[j]]  >= 2:
+            if hsh2[A[j]] == hsh[A[j]] - 1 and hsh[A[j]] >= 2:
                 ct += 1
             if ct == cnt:
                 ans = min(ans, abs(j - i + 1))
-                
-    print(ans)
 
+    print(ans)

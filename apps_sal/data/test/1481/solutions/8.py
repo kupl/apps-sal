@@ -9,29 +9,29 @@ while count < n:
     count += 1
 for i in range(n**2):
     total = 0
-    if i-n < 0:
+    if i - n < 0:
         pass
     else:
-        if board[i-n] == 'o':
+        if board[i - n] == 'o':
             total += 1
-    if i-1 < 0:
+    if i - 1 < 0:
         pass
     elif i % n == 0:
         pass
     else:
-        if board[i-1] == 'o':
+        if board[i - 1] == 'o':
             total += 1
-    if i+1 > n**2-1:
+    if i + 1 > n**2 - 1:
         pass
-    elif i % n == n-1:
+    elif i % n == n - 1:
         pass
     else:
-        if board[i+1] == 'o':
+        if board[i + 1] == 'o':
             total += 1
-    if i+n > n**2-1:
+    if i + n > n**2 - 1:
         pass
     else:
-        if board[i+n] == 'o':
+        if board[i + n] == 'o':
             total += 1
     if total % 2 == 1:
         fail = True

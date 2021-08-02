@@ -7,7 +7,7 @@ def factorize(n):
     '''
     if n == 1:
         raise('n >= 2')
-    
+
     factor = {}
     div = 2
     while True:
@@ -20,8 +20,6 @@ def factorize(n):
             factor[div] = factor.get(div, 0) + 1
         else:
             div += 1
-
-
 
 
 n, m = list(map(int, input().split()))
@@ -42,7 +40,7 @@ def modinv(x):
     xの逆元を求める。フェルマーの小定理より、 x の逆元は x ^ (mod - 2) に等しい。計算時間はO(log(mod))程度。
     Python標準のpowは割った余りを出すことも可能。
     '''
-    return pow(x, mod-2, mod)
+    return pow(x, mod - 2, mod)
 
 
 # 二項係数の左側の数字の最大値を max_len　とする。nとかだと他の変数と被りそうなので。
@@ -53,12 +51,12 @@ modinv_table[0] = None  # 万が一使っていたときにできるだけ早期
 factori_table = [1] * (max_len + 1)
 factori_inv_table = [1] * (max_len + 1)
 for i in range(1, max_len + 1):
-    factori_table[i] = factori_table[i-1] * (i) % mod
+    factori_table[i] = factori_table[i - 1] * (i) % mod
 
 modinv_table[1] = 1
 for i in range(2, max_len + 1):
     modinv_table[i] = (-modinv_table[mod % i] * (mod // i)) % mod
-    factori_inv_table[i] = factori_inv_table[i-1] * modinv_table[i] % mod
+    factori_inv_table[i] = factori_inv_table[i - 1] * modinv_table[i] % mod
 
 
 def binomial_coefficients(n, k):
@@ -69,15 +67,14 @@ def binomial_coefficients(n, k):
     '''
     if not 0 <= k <= n:
         return None
-    return (factori_table[n] * factori_inv_table[k] * factori_inv_table[n-k]) % mod
+    return (factori_table[n] * factori_inv_table[k] * factori_inv_table[n - k]) % mod
 
 
 ans = 1
 mod = 10**9 + 7
 for prime, power in list(factor.items()):
-    # ans *= n H power = n+power-1 C power 
-    ans *= binomial_coefficients(n+power-1, power)
+    # ans *= n H power = n+power-1 C power
+    ans *= binomial_coefficients(n + power - 1, power)
     ans %= mod
 
 print(ans)
-

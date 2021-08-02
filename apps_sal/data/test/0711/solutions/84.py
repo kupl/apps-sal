@@ -32,4 +32,3 @@ ans = 1
 for v in list(factorization(M).values()):
     ans = (ans * comb(N + v - 1, v) % MOD)
 print(ans)
-

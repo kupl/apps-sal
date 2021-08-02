@@ -14,4 +14,3 @@ for x in range(N):
             print('NO')
             return
 print('YES')
-

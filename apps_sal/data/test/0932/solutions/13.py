@@ -39,5 +39,5 @@ else:
                 res[i][i2] = 0
     for i in range(n):
         for i2 in range(m):
-            print(res[i][i2],end=' ')
+            print(res[i][i2], end=' ')
         print()

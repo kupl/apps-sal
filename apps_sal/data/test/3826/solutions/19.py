@@ -24,10 +24,10 @@ def solve(n, a):
         s.remove(a[l])
         l -= 1
         while r - 1 >= 0 and a[r - 1] not in s:
-            s.add(a[r-1])
+            s.add(a[r - 1])
             r -= 1
         res = max(res, l + 1 + n - r)
     return n - res
 
-print(str(solve(n, a)))
 
+print(str(solve(n, a)))

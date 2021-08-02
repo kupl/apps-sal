@@ -15,4 +15,3 @@ for i in range(n):
     steps += steps_i
 
 print(steps)
-

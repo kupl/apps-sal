@@ -14,7 +14,8 @@ for i in range(m):
 
 A = [[0 for x in range(n)] for y in range(m)]
 
-def transferA(B,m,n):
+
+def transferA(B, m, n):
     A = [[0 for x in range(n)] for y in range(m)]
 
     for i in range(m):
@@ -34,8 +35,11 @@ def transferA(B,m,n):
                     A[i][j] = 1
     return A
 
-A = transferA(B,m,n)
-def transfer(A,m,n):
+
+A = transferA(B, m, n)
+
+
+def transfer(A, m, n):
     C = [[0 for x in range(n)] for y in range(m)]
     for i in range(len(A)):
         for j in range(len(A[i])):
@@ -47,14 +51,13 @@ def transfer(A,m,n):
     return C
 
 
-C = transfer(A,m,n)
+C = transfer(A, m, n)
 
 if C == B:
     print("YES")
     for i in range(len(A)):
         for j in range(len(A[i])):
-            print(A[i][j],end = " ")
+            print(A[i][j], end=" ")
         print()
 else:
     print("NO")
-

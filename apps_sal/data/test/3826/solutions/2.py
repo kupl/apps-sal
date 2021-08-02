@@ -40,8 +40,3 @@ while True:
         left += 1
 
 print(ans)
-
-
-        
-    
-

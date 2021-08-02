@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -151,7 +153,7 @@ def nCr(n, r, MOD):
         warm_up_fac(MOD)
         fac_warm_up = True
     return (factorial_modP[n] * (
-                (pow(factorial_modP[r], MOD - 2, MOD) * pow(factorial_modP[n - r], MOD - 2, MOD)) % MOD)) % MOD
+        (pow(factorial_modP[r], MOD - 2, MOD) * pow(factorial_modP[n - r], MOD - 2, MOD)) % MOD)) % MOD
 
 
 def test_print(*args):
@@ -233,26 +235,26 @@ optimise_for_recursion = False  # Can not be used clubbed with TestCases WHen us
 def main():
     n = get_int()
     li = get_list()
-    l,r = 0, -1
+    l, r = 0, -1
     cnt = Counter(li)
     for i in range(n):
         st = set()
-        if cnt[li[i]]==1: continue
+        if cnt[li[i]] == 1: continue
         brk = False
-        for j in range(0,i):
+        for j in range(0, i):
             if li[j] in st:
                 brk = True
                 break
             st.add(li[j])
         if brk: continue
-        for j in range(n-1, i-1, -1):
+        for j in range(n - 1, i - 1, -1):
             if li[j] in st:
                 break
             st.add(li[j])
-        if r-l<0 or r-l>=j-i:
-            l,r = i, j
+        if r - l < 0 or r - l >= j - i:
+            l, r = i, j
             #print(l,r )
-    print(r-l+1)
+    print(r - l + 1)
 
 # --------------------------------------------------------------------- END=
 
@@ -262,4 +264,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

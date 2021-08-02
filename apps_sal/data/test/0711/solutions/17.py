@@ -29,11 +29,12 @@ def main():
     for cnt in gen(M):
         for d in range(cnt):
             ans = (ans * (N - 1 + cnt - d) % MOD) * pow(d + 1, MOD - 2, MOD) % MOD
-            
+
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

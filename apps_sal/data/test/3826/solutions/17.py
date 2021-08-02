@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 def KKK():
     n = int(input())
     d = defaultdict(int)
@@ -11,7 +13,6 @@ def KKK():
     s = 0
     while se:
         s += d[se.pop()] - 1
-
 
     minLen = 3000
     for i in range(len(a)):
@@ -26,4 +27,6 @@ def KKK():
         if r == 0:
             minLen = min(len(a) - i, minLen)
     print(minLen)
+
+
 KKK()

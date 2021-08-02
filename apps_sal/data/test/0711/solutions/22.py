@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -15,15 +17,16 @@ def prime_factorize(n):
         a.append(n)
     return a
 
-MOD=10**9+7
-n,m=map(int,input().split())
+
+MOD = 10**9 + 7
+n, m = map(int, input().split())
 c = Counter(prime_factorize(m))
-cv=list(c.values())
-ans=1
+cv = list(c.values())
+ans = 1
 for i in cv:
     for j in range(i):
-        ans*=i+n-1-j
-        ans%=MOD
-        ans*=pow(1+j,MOD-2,MOD)
-        ans%=MOD
+        ans *= i + n - 1 - j
+        ans %= MOD
+        ans *= pow(1 + j, MOD - 2, MOD)
+        ans %= MOD
 print(ans)

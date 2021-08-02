@@ -26,36 +26,35 @@ else:
 
     def make_fact_list(n, MOD):
         # make factorial list from 0 to n
-        fact = [0] * (n+1)
-        inv = [0] * (n+1)
-        factinv = [0] * (n+1)
+        fact = [0] * (n + 1)
+        inv = [0] * (n + 1)
+        factinv = [0] * (n + 1)
 
-        fact[0]=fact[1]=1
-        inv[1]=1
-        factinv[0]=factinv[1]=1
+        fact[0] = fact[1] = 1
+        inv[1] = 1
+        factinv[0] = factinv[1] = 1
 
-        for i in range(2,n+1):
-            fact[i] = fact[i-1] * i % MOD
-            inv[i] = MOD - (( inv[MOD % i] *  (MOD // i)) % MOD )
-            factinv[i] = factinv[i-1] * inv[i] % MOD
-        
+        for i in range(2, n + 1):
+            fact[i] = fact[i - 1] * i % MOD
+            inv[i] = MOD - ((inv[MOD % i] * (MOD // i)) % MOD)
+            factinv[i] = factinv[i - 1] * inv[i] % MOD
+
         return fact, factinv
 
-    def cbn(n, k, MOD, fact = [], factinv = []):
+    def cbn(n, k, MOD, fact=[], factinv=[]):
         if len(fact) == 0 and len(factinv) == 0:
             fact, factinv = make_fact_list(n, MOD)
-        return fact[n] * factinv[n-k] * factinv[k] % MOD
-
+        return fact[n] * factinv[n - k] * factinv[k] % MOD
 
     d = Counter(prime_factorize(m)).most_common()
 
-    l = d[0][1] + n 
+    l = d[0][1] + n
 
     fact, factinv = make_fact_list(l, MOD)
 
     a = 1
 
     for k, v in d:
-        a *= cbn(v + n - 1, v, MOD, fact = fact, factinv = factinv) % MOD
+        a *= cbn(v + n - 1, v, MOD, fact=fact, factinv=factinv) % MOD
 
     print(a % MOD)

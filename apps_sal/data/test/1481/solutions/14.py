@@ -20,4 +20,3 @@ for p in itertools.product(list(range(n)), repeat=2):
         return
 
 print("YES")
-

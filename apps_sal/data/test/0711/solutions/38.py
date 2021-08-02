@@ -83,4 +83,5 @@ def __starting_point():
     #     print(N, M)
     #     solve(N, M)
 
+
 __starting_point()

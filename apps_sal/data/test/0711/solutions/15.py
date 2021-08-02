@@ -1,8 +1,13 @@
+import math
+from collections import Counter
+from itertools import combinations
 from collections import defaultdict
+
+
 def factorization(n):
     arr = {}
     temp = n
-    for i in range(2, int(-(-n**0.5//1))+1):
+    for i in range(2, int(-(-n**0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
@@ -38,33 +43,33 @@ def prepare(n, MOD):
 
     return factorials, invs
 
-import math
-from itertools import combinations
-from collections import Counter
+
 MOD = 1000000007
+
 
 def solve():
     N, M = list(map(int, input().split()))
     temp = factorization(M)
-    #print(temp)
+    # print(temp)
     max_num = max(temp.values())
-    factorials, invs = prepare(N+max_num-1, MOD)
+    factorials, invs = prepare(N + max_num - 1, MOD)
     #print(factorials, invs)
     ans = 1
     for i, j in list(temp.items()):
         if i == 1:
             break
-        ans *= factorials[N+j-1]
+        ans *= factorials[N + j - 1]
         ans %= MOD
-        ans *= invs[N-1]
+        ans *= invs[N - 1]
         ans %= MOD
         ans *= invs[j]
         ans %= MOD
-        #print(ans)
+        # print(ans)
     print(ans)
 
 
 def __starting_point():
     solve()
+
 
 __starting_point()

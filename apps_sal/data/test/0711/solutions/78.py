@@ -19,7 +19,7 @@ def resolve():
         ret = fac[n] * finv[k] * finv[n - k] % MOD
         return ret
 
-    #指数:exponent
+    # 指数:exponent
     def dic_factorization(n):
         arr = []
         temp = n
@@ -36,20 +36,23 @@ def resolve():
             arr.append([n, 1])
         return arr
 
-    MOD = 10**9+7
+    MOD = 10**9 + 7
     N, M = map(int, input().split())
-    if M==1:
+    if M == 1:
         print(1)
         return
-    
+
     fact = dic_factorization(M)
     ans = 1
     for v in fact:
-        ans *= Combination(N+v[1]-1, v[1])
+        ans *= Combination(N + v[1] - 1, v[1])
         ans %= MOD
 
     print(ans)
 
+
 def __starting_point():
     resolve()
+
+
 __starting_point()
