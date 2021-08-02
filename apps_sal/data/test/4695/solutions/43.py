@@ -7,4 +7,3 @@ if (x in a and y in a) or (x in b and y in b) or (x in c and y in c):
     print('Yes')
 else:
     print('No')
-

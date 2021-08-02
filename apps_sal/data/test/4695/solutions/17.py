@@ -7,7 +7,7 @@ if x in group1 and y in group1:
     flag = True
 elif x in group2 and y in group2:
     flag = True
-    
+
 if flag:
     print('Yes')
 else:

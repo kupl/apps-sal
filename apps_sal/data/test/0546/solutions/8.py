@@ -8,7 +8,7 @@ for i in range(n):
     x = 0
     while x < len(pat) and sc < len(s):
         if pat[x] == '*':
-            dif = len(s)-len(pat)+1
+            dif = len(s) - len(pat) + 1
             cont = False
             sc -= 1
             for j in range(dif):
@@ -36,4 +36,3 @@ for i in range(n):
             print("NO")
     if q:
         print("YES")
-

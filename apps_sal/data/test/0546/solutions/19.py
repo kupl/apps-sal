@@ -27,7 +27,7 @@ for _ in range(int(input())):
                 break
             elif pat[i] == '*':
                 hasstar = True
-                if any(q[k] in good for k in range(j, j+d+1)):
+                if any(q[k] in good for k in range(j, j + d + 1)):
                     ans.append("NO")
                     answered = True
                     break
@@ -46,4 +46,3 @@ for _ in range(int(input())):
                 ans.append("YES")
                 answered = True
 print('\n'.join(ans))
-

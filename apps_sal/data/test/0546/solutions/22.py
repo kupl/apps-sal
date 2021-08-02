@@ -1,8 +1,10 @@
 def local_right_to_global(test, local_right):
     return(len(test) + local_right)
-    
+
+
 def local_left_to_global(test, local_left):
     return(local_left)
+
 
 def check_left(test, template, good_symbols):
     left_idx = -1
@@ -19,6 +21,7 @@ def check_left(test, template, good_symbols):
         except:
             return('NO')
 
+
 def check_right(test, template, good_symbols):
     right_idx = 0
     for symbol in reversed(template):
@@ -30,17 +33,18 @@ def check_right(test, template, good_symbols):
                 if template[right_idx] != '?':
                     return('NO')
                 elif test[right_idx] not in good_symbols:
-                    return('NO')            
+                    return('NO')
         except:
             return('NO')
-    
+
+
 good_symbols = set(list(input()))
 template = input()
 tests_nr = int(input())
 tests = []
 for _ in range(tests_nr):
     tests.append(input())
-    
+
 abaca = '*' not in template
 for test in tests:
     if abaca:
@@ -87,4 +91,3 @@ for test in tests:
                 break
         if flag:
             print('YES')
-

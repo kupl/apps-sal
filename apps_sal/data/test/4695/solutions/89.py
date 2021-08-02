@@ -25,6 +25,3 @@ if acount == 2 or bcount == 2 or ccount == 2:
     print("Yes")
 else:
     print("No")
-
-
-

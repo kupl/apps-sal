@@ -9,4 +9,3 @@ elif (x in group_2) and (y in group_2):
     print('Yes')
 else:
     print('No')
-

@@ -11,4 +11,3 @@ for i in range(n):
         x[sum] = 1
     ans = min(ans, n - x[sum])
 print(ans)
-

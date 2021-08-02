@@ -13,4 +13,3 @@ def solve():
 
 
 print(solve())
-

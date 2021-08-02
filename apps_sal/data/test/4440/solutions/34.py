@@ -1,7 +1,7 @@
 # import math
 # import statistics
 # import itertools
-a=int(input())
+a = int(input())
 # b=input()
 # c=[]
 # for i in a:
@@ -14,4 +14,4 @@ a=int(input())
 #     h.append(list(map(int,input().split())))
 # a = [[0] for _ in range(H)]#nizigen
 
-print((a/3)**3)
+print((a / 3)**3)

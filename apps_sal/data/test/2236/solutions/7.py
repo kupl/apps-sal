@@ -14,5 +14,3 @@ for i in range(n):
     d[s] += 1
     ans = min(ans, n - d[s])
 print(ans)
-    
-

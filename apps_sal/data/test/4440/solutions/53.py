@@ -1,4 +1,3 @@
 L = int(input())
-n = L/3
+n = L / 3
 print((n**3))
-

@@ -38,8 +38,8 @@ for line in sys.stdin:
                     diff -= 1
         elif current_pattern == '?':
             if current_letter in good_letters:
-                    query_index += 1
-                    pattern_index += 1
+                query_index += 1
+                pattern_index += 1
             else:
                 break
         else:
@@ -48,7 +48,7 @@ for line in sys.stdin:
             else:
                 query_index += 1
                 pattern_index += 1
-    
+
     if (query_index == len(query)) and (pattern_index == len(pattern) - 1) and (pattern[pattern_index] == '*'):
         result = "YES"
 
@@ -56,4 +56,3 @@ for line in sys.stdin:
         result = "YES"
 
     print(result)
-

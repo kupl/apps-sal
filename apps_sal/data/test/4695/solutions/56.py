@@ -11,4 +11,4 @@ elif x in g1 and y in g1:
 elif x in g2 and y in g2:
     print("Yes")
 else:
- print("No")
+    print("No")

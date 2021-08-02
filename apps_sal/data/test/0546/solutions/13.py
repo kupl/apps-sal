@@ -7,10 +7,10 @@ for _ in range(n):
     nl = s
     if '*' in nl:
         if len(nl) <= len(c):
-            nl = nl.replace('*', '*'*(abs(len(nl)-len(c))+1))
-        elif len(nl)==len(c)+1:
+            nl = nl.replace('*', '*' * (abs(len(nl) - len(c)) + 1))
+        elif len(nl) == len(c) + 1:
             nl = nl.replace('*', '')
-    if len(c)!=len(nl):
+    if len(c) != len(nl):
         a.append("NO")
     else:
         for i in range(len(c)):
@@ -30,4 +30,3 @@ for _ in range(n):
             a.append("YES")
 for i in a:
     print(i)
-

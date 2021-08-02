@@ -13,4 +13,3 @@ elif x in c and y in c:
     print('Yes')
 else:
     print('No')
-
