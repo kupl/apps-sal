@@ -16,4 +16,3 @@ for i in range(n):
 
 print(count)
 print(''.join(hamsters))
-

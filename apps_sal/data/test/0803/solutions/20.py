@@ -7,8 +7,8 @@ k = abs(n // 2 - a)
 print(k)
 i = 0
 while k > 0:
-  if s[i] != c:
-    s[i] = c
-    k -= 1
-  i += 1
+    if s[i] != c:
+        s[i] = c
+        k -= 1
+    i += 1
 print("".join(s))

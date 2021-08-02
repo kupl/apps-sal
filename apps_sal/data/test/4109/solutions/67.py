@@ -9,7 +9,7 @@ for _ in range(N):
     C.append(q[0])
     A.append(q[1:])
 
-#bit全探索
+# bit全探索
 
 ans = 1300000
 

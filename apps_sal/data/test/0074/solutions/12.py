@@ -8,7 +8,8 @@ for i in range(3, math.ceil(n ** 0.5) + 1):
     else:
         primes.append(i)
 
-def isprime(x): #x < n
+
+def isprime(x):  # x < n
     if x == 1: return False
     for p in primes:
         if x % p == 0 and x > p:
@@ -16,13 +17,14 @@ def isprime(x): #x < n
     else:
         return True
 
+
 if isprime(n):
     print(1)
     print(n)
 else:
     x1 = n
     while not isprime(x1):
-        x1 -=2
+        x1 -= 2
     if isprime(n - x1):
         print(2)
         print(x1, n - x1)
@@ -35,4 +37,3 @@ else:
                 break
         else:
             print('nu chto podelat...')
-

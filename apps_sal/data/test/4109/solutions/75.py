@@ -1,12 +1,14 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
+
+
 INF = 10000000000000
-N,M,X = map(int,input().split())
+N, M, X = map(int, input().split())
 
 C = []
 A = []
 for i in range(N):
-    vec = list(map(int,input().split()))
+    vec = list(map(int, input().split()))
     C.append(vec[0])
     A.append(vec[1:])
 
@@ -17,7 +19,7 @@ for bit in range(1 << N):
     skill = [0] * M
     for n in range(N):
         if bit & (1 << n):
-            for i, s in enumerate(A[n],0):
+            for i, s in enumerate(A[n], 0):
                 skill[i] += s
             sum += C[n]
 
@@ -27,7 +29,7 @@ for bit in range(1 << N):
             flag = False
             break
     if flag:
-        ans = min(ans,sum)
+        ans = min(ans, sum)
 
 if ans == INF:
     print(-1)

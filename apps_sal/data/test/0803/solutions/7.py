@@ -16,5 +16,5 @@ else:
     for i in range(n):
         if a[i] == 'X' and res:
             a[i] = 'x'
-            res -= 1    
-print(''.join(a))        
+            res -= 1
+print(''.join(a))

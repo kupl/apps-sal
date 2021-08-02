@@ -15,5 +15,4 @@ for i in range(n - 2, -1, -1):
 print(min(an[i + 1] + ap[i] for i in range(n - 1)), file=open('output.txt', 'w'))
 
 
-
 # Made By Mostafa_Khaled

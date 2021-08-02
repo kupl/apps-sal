@@ -5,9 +5,9 @@ for _ in range(N):
     l = list(map(int, input().split()))
     C.append(l[0])
     A.append(l[1:])
- 
+
 ans = -1
-for i in range((1<<N)):
+for i in range((1 << N)):
     u = [0] * M
     p = 0
     for j in range(N):

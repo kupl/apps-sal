@@ -7,7 +7,7 @@ for _ in range(N):
     A.append(l[1:])
 
 ans = -1
-for i in range((1<<N)):
+for i in range((1 << N)):
     u = [0] * M
     p = 0
     for j in range(N):
@@ -19,5 +19,3 @@ for i in range((1<<N)):
         if ans == -1 or ans > p:
             ans = p
 print(ans)
-
-

@@ -35,24 +35,25 @@ def input(): return sys.stdin.readline()
 def __starting_point():
     n = int(input())
     arr = get_array()
-    count_f = [0]*(n+2)
-    for i in range(1, n+1):
+    count_f = [0] * (n + 2)
+    for i in range(1, n + 1):
         x = 0
-        if arr[i-1] >= 0:
+        if arr[i - 1] >= 0:
             x = 1
-        count_f[i] = count_f[i-1]+x
+        count_f[i] = count_f[i - 1] + x
 
-    count_b = [0]*(n+2)
+    count_b = [0] * (n + 2)
     for i in range(n, 0, -1):
         x = 0
-        if arr[i-1] <= 0:
+        if arr[i - 1] <= 0:
             x = 1
-        count_b[i] = count_b[i+1]+x
+        count_b[i] = count_b[i + 1] + x
 
     ans = n
     for i in range(1, n):
-        if count_f[i]+count_b[i+1] < ans:
-            ans = count_f[i]+count_b[i+1]
+        if count_f[i] + count_b[i + 1] < ans:
+            ans = count_f[i] + count_b[i + 1]
     print(ans)
+
 
 __starting_point()

@@ -24,4 +24,3 @@ elif ans < 0:
                 break
 print(ans)
 print(''.join(s))
-

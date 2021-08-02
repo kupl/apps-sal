@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
-#= int(input())
-#= input()
+# = int(input())
+# = input()
 N, M, X = list(map(int, input().split()))
 CA = [list(map(int, input().split())) for _ in range(N)]
 MAX_ANS = 10**9
@@ -36,4 +36,3 @@ if ans == MAX_ANS:
     print((-1))
 else:
     print(ans)
-

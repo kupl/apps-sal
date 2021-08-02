@@ -22,4 +22,3 @@ if n:
 
     print(s + n - max(p))
 else: print(s)
-

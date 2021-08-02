@@ -3,6 +3,7 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 def exgcd(a, b):
     if (b == 0):
         return (1, 0, a)
@@ -11,6 +12,8 @@ def exgcd(a, b):
     p = q
     q = t - (a // b) * q
     return (p, q, r)
+
+
 list = input().split()
 n = int(list[0]); m = int(list[1]);
 x = int(list[2]); y = int(list[3])
@@ -57,4 +60,3 @@ if ((vx != 0) and (vy != 0)):
         if ((q + fy) % 2 == 1):
             ansy = m
         print(ansx, ansy)
-

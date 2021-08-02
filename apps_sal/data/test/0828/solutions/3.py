@@ -4,10 +4,10 @@ a = [int(x) for x in input().split()]
 
 mistakes = 0
 
-mistakes += (a[s-1] is not 0)
+mistakes += (a[s - 1] is not 0)
 a[s - 1] = 0
 
-numSuperiors = [0]*(2*100000+100)
+numSuperiors = [0] * (2 * 100000 + 100)
 
 for superiors in a:
     numSuperiors[superiors] += 1

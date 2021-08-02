@@ -22,4 +22,3 @@ for _ in range(t):
             ok = False
     if ok: print(suspect)
     else: print(-1)
-

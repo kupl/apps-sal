@@ -1,4 +1,4 @@
-N,M,X = map(int,input().split())
+N, M, X = map(int, input().split())
 C = []
 A = []
 for i in range(N):
@@ -8,13 +8,13 @@ for i in range(N):
     A.append(a)
 ans = M * (10**5) + 1
 for i in range(2**N):
-    bi = format(i,"b")
+    bi = format(i, "b")
     bistr = str(bi)
-    P = ["0"]*N
-    Q = [0]*M
+    P = ["0"] * N
+    Q = [0] * M
     m = 0
     for j in range(len(bistr)):
-        P[-1-j] = bistr[-1-j]
+        P[-1 - j] = bistr[-1 - j]
     for j in range(N):
         if(P[j] == "1"):
             m += C[j]
@@ -25,7 +25,7 @@ for i in range(2**N):
         if(Q[j] >= X):
             count += 1
         if(count >= M):
-            ans = min(ans,m)
+            ans = min(ans, m)
 if(ans >= M * (10**5) + 1):
     print(-1)
     return

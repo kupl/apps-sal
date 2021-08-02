@@ -14,10 +14,10 @@ elif X > x:
     print(c)
     for i in range(n):
         if s[i] == 'X':
-           s[i] = 'x'
-           c -= 1
-           if c == 0:
-               break
+            s[i] = 'x'
+            c -= 1
+            if c == 0:
+                break
 else:
     c = (x - X) // 2
     print(c)
@@ -28,4 +28,3 @@ else:
             if c == 0:
                 break
 print(''.join(s))
-

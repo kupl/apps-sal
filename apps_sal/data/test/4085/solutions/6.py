@@ -82,5 +82,5 @@ def main():
         else:
             write(x)
 
-main()
 
+main()

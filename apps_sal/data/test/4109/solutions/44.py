@@ -18,4 +18,3 @@ if ans == 1e9:
     print((-1))
 else:
     print(ans)
-

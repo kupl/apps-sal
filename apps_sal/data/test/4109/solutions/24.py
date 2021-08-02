@@ -22,4 +22,3 @@ if ans == 10 ** 10:
     print((-1))
 else:
     print(ans)
-

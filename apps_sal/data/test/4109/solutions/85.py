@@ -1,8 +1,10 @@
+from itertools import product
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
 #import numpy as np
-from itertools import product
+
+
 def main():
     n, m, x = list(map(int, input().split()))
     books = []
@@ -14,7 +16,7 @@ def main():
         effects = [0] * (m + 1)
         for i1 in range(n):
             if pe[i1]:
-                for i2 in range(m+1):
+                for i2 in range(m + 1):
                     effects[i2] += books[i1][i2]
         if all([e >= x for e in effects[1:]]):
             r = min(r, effects[0])
@@ -23,7 +25,9 @@ def main():
     else:
         print(r)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
