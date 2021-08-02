@@ -8,9 +8,8 @@ for i in range(len(pole)):
     if boolean:
         pole2.append(str(pole[i // 2]))
     else:
-        pole2.append(str(pole[-(i//2 + 1)]))
+        pole2.append(str(pole[-(i // 2 + 1)]))
 
     boolean = not boolean
 
 print(' '.join(pole2))
-

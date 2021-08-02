@@ -1,5 +1,5 @@
 n = int(input())
-lst = list(map(int,input().split()))
+lst = list(map(int, input().split()))
 
 s = 0
 diff_lst = []
@@ -12,7 +12,7 @@ for i in lst + [0]:
 
 su = sum(diff_lst)
 for i in range(n):
-    if sign_lst[i] * sign_lst[i+1] > 0:
+    if sign_lst[i] * sign_lst[i + 1] > 0:
         print(su)
     else:
-        print(su - diff_lst[i] - diff_lst[i+1] + abs(diff_lst[i] - diff_lst[i+1]))
+        print(su - diff_lst[i] - diff_lst[i + 1] + abs(diff_lst[i] - diff_lst[i + 1]))

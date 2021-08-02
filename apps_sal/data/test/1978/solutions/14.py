@@ -42,7 +42,7 @@ while to_id < len(a):
     if frm == to or not edge[frm][mid] + edge[mid][to] == edge[frm][to]:
         ans.append(mid + 1)
         ans_num += 1
-        frm_id = mid_id 
+        frm_id = mid_id
         to_id += 1
         mid_id += 1
     else:

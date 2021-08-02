@@ -8,4 +8,3 @@ for i in range(n):
     if k > a[i][1]:
         ans -= 1
 print(ans)
-

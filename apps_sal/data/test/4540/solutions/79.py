@@ -9,5 +9,3 @@ for i, a in enumerate(A[1:N + 2], start=1):
 
 for i, a in enumerate(A[1:N + 1], start=1):
     print((sum_all - abs(a - A[i - 1]) - abs(a - A[i + 1]) + abs(A[i + 1] - A[i - 1])))
-
-

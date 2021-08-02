@@ -9,19 +9,19 @@ def sqr(a):
     return a * a
 
 
-def dist(a, b = (0, 0)):
+def dist(a, b=(0, 0)):
     return sqrt(sqr(a[0] - b[0]) + sqr(a[1] - b[1]))
 
 
-def s_dist(a, b = (0, 0)):
+def s_dist(a, b=(0, 0)):
     return (sqr(a[0] - b[0]) + sqr(a[1] - b[1]))
 
 
-def dist3(a, b = (0, 0, 0)):
+def dist3(a, b=(0, 0, 0)):
     return sqrt(sqr(a[0] - b[0]) + sqr(a[1] - b[1]) + sqr(a[2] - b[2]))
 
 
-def s_dist3(a, b = (0, 0, 0)):
+def s_dist3(a, b=(0, 0, 0)):
     return (sqr(a[0] - b[0]) + sqr(a[1] - b[1]) + sqr(a[2] - b[2]))
 
 
@@ -83,7 +83,7 @@ n = int(stdin.readline())
 chal = []
 
 for i in range(n):
-    l, r = map(int ,stdin.readline().split())
+    l, r = map(int, stdin.readline().split())
     chal.append((l, r))
 
 k = int(stdin.readline())

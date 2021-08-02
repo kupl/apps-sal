@@ -1,16 +1,22 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 m = 1000000007
 n, b, k, x = f()
 s = [0] * x
-for q in f(): s[q % x] += 1
+for q in f():
+    s[q % x] += 1
+
 
 def g(t, d):
-    if not t: return s
+    if not t:
+        return s
     p = [0] * x
     for i, a in enumerate(t):
         for j, b in enumerate(s):
             p[(i + d * j) % x] += a * b
     return [q % m for q in p]
+
 
 t = []
 u, v = 1, 10

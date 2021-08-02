@@ -1,27 +1,24 @@
 
 
-l=[]
-r=[]
-n=int(input())
+l = []
+r = []
+n = int(input())
 for i in range(n):
 
-	s=input().split(" ")
-	l.append(int(s[0]))
-	r.append(int(s[1]))
+    s = input().split(" ")
+    l.append(int(s[0]))
+    r.append(int(s[1]))
 
-k=int(input())
+k = int(input())
 
-rem=n
+rem = n
 
 
-i=0
+i = 0
 
 
 for i in range(n):
-	if(l[i]<=k<=r[i]):
-		break
-	rem-=1
+    if(l[i] <= k <= r[i]):
+        break
+    rem -= 1
 print(rem)
-
-
-

@@ -22,5 +22,3 @@ if max_events_open > condition_value:
     print('YES')
 else:
     print('NO')
-
-

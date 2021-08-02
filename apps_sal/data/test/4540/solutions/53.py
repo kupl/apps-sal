@@ -1,7 +1,9 @@
+from copy import deepcopy
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from copy import deepcopy
+
+
 def main():
     n, *a = map(int, read().split())
 
@@ -18,7 +20,7 @@ def main():
     # 単純化のため、aにマイナス座標がある(＝左の端がマイナス)なら、
     # 左の端＝座標0のコピーをつくる。マイナスではないなら単純コピー。
     if amin < 0:
-        a2 = [i - amin for i in a] # aminが正負どちらでもこれでOK
+        a2 = [i - amin for i in a]  # aminが正負どちらでもこれでOK
     else:
         a2 = deepcopy(a)
     # aを全て回った場合のコストを出す
@@ -44,5 +46,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

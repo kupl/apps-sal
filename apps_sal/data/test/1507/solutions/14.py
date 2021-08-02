@@ -21,7 +21,6 @@ for i in s:
         return
     if do[ind] == cq[ind]:
         cntr -= 1
-    
+
 
 print('NO')
-

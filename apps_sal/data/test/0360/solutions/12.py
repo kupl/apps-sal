@@ -31,4 +31,3 @@ for l, r in ar:
     if l <= lk and r <= lk:
         cnt += 1
 print(n - cnt)
-

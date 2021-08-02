@@ -63,4 +63,3 @@ for i in range(n):
         streets_ans = max(pos1, pos2) + max((len_row[i] - pos1), (len_col[j] - pos2))
         prt.append(streets_ans)
     print(*prt)
-

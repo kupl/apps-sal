@@ -29,4 +29,3 @@ for c in data:
         opened_doors[c] = False
 
 print('NO')
-

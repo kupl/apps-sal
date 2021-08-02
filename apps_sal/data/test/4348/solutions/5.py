@@ -18,4 +18,3 @@ for char in s[::-1]:
         counter[char] -= 1
 
 print(s2[::-1])
-

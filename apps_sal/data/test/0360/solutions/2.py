@@ -9,4 +9,3 @@ for l, r in b:
     if k <= r:
         ans += 1
 print(ans)
-

@@ -1,11 +1,11 @@
 from collections import deque
 N = int(input())
-Edge = [list(map(int,input().strip())) for _ in range(N)]
+Edge = [list(map(int, input().strip())) for _ in range(N)]
 
 dist = []
 inf = 10**9
 for i in range(N):
-    d = [inf]*N
+    d = [inf] * N
     d[i] = 0
     Q = deque([i])
     unused = set(range(N))
@@ -29,7 +29,6 @@ for v in V[1:]:
         Ans.pop()
     Ans.append(v)
 
-Ans = [a+1 for a in Ans]
+Ans = [a + 1 for a in Ans]
 print(len(Ans))
 print(*Ans)
-

@@ -1,5 +1,5 @@
 def path(s):
-    s1= {s}
+    s1 = {s}
     s2 = set()
     used = [0] * (n + 1)
     used[s] = 1
@@ -22,7 +22,7 @@ graph = {i: set() for i in range(1, n + 1)}
 for i in range(n):
     for j in range(n):
         if A[i][j]:
-           graph[i + 1].add(j + 1)
+            graph[i + 1].add(j + 1)
 m = int(input())
 P = list(map(int, input().split()))
 paths = [[0] * (n + 1) for _ in range(n + 1)]
@@ -45,4 +45,3 @@ while u < m - 1:
 ans.append(P[-1])
 print(len(ans))
 print(*ans)
-

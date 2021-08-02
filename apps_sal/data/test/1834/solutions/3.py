@@ -25,6 +25,6 @@ for k in range(2, len(s) - 1):
         else:
             print('Impossible')
             Po = 0
-            break            
+            break
 if Po == 1:
     print(' '.join(map(str, s)))

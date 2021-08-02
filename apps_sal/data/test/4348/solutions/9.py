@@ -28,5 +28,3 @@ for c in s:
         result.append(c)
 
 print("".join(result))
-
-

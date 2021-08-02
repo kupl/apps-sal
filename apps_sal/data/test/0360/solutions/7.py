@@ -10,4 +10,3 @@ for ch in l:
         out += 1
 
 print(out)
-
