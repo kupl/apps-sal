@@ -5,4 +5,3 @@ for i in range(m):
     ret -= pow(i / m, n)
 
 print(ret)
-

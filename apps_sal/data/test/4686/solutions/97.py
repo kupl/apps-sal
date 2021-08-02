@@ -5,7 +5,7 @@ for i in range(97, 124):
     for j in w:
         if j == chr(i):
             cnt += 1
-    if cnt%2 != 0:
+    if cnt % 2 != 0:
         print("No")
         break
     else:

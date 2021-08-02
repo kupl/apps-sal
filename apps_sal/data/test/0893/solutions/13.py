@@ -8,7 +8,7 @@ def readInt(): return int(sys.stdin.readline())
 
 
 # def print(x):
-    # sys.stdout.write(str(x) + '\n')
+# sys.stdout.write(str(x) + '\n')
 
 
 def solve():
@@ -57,4 +57,3 @@ def main():
 
 
 main()
-

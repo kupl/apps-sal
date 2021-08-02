@@ -18,6 +18,3 @@ for i in ss:
         return
 
 print("Yes")
-
-
-

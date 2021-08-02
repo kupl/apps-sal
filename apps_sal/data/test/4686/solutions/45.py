@@ -2,7 +2,7 @@ w = str(input())
 data1 = []
 for i in range(len(w)):
     data1.append(w[i])
-    
+
 data2 = []
 for i in range(len(w)):
     if not w[i] in data2:

@@ -9,6 +9,7 @@ for j in range(n - 1):
     p[u - 1].append(v - 1)
     p[v - 1].append(u - 1)
 
+
 def g(u, x, y):
     s = 1
     for v in p[u]:
@@ -16,5 +17,5 @@ def g(u, x, y):
             if v != x: s += s * g(v, u, y) % m
     return s
 
-print(sum(g(y, -1, y) for y in range(n)) % m)
 
+print(sum(g(y, -1, y) for y in range(n)) % m)

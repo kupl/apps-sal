@@ -11,6 +11,7 @@ for j in range(n - 1):
     p[u].append(v)
     p[v].append(u)
 
+
 def g(u, x, a, b, q):
     k = 1
     for v in p[u]:

@@ -1,9 +1,9 @@
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
 for _ in range(int(input())):
     n = int(input())
-    t = sorted(map(int,input().split()))
-    cur = [0]*(2*n)
+    t = sorted(map(int, input().split()))
+    cur = [0] * (2 * n)
     for i in range(n):
         low = high = t[i]
         while low and cur[low]:

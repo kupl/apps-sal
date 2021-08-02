@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n, m, k = map(int, input().split())
     a = list(map(int, input().split()))
@@ -30,6 +31,10 @@ def main():
                 else:
                     continue
     return answer
+
+
 def __starting_point():
     print(main())
+
+
 __starting_point()

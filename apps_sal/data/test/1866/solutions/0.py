@@ -1,7 +1,10 @@
 n = int(input())
 out = []
-def p(a,b,d):
-    out.append(str(a + 1 + d) + ' ' + str(b+1+d))
+
+
+def p(a, b, d):
+    out.append(str(a + 1 + d) + ' ' + str(b + 1 + d))
+
 
 p2 = 1
 while 2 * p2 <= n:
@@ -16,4 +19,3 @@ for d in (0, n - p2):
         bit *= 2
 print(len(out))
 print('\n'.join(out))
-

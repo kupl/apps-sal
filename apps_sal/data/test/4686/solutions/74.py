@@ -1,23 +1,23 @@
 def main():
     w = str(input())
     wl = []
-    for ww in w :
+    for ww in w:
         wl.append(ww)
-    if len(w) % 2 != 0 :
+    if len(w) % 2 != 0:
         ans = "No"
-    else :
+    else:
         ans = "Yes"
-        for val in wl :
-            if wl.count(val) % 2 == 0 :
+        for val in wl:
+            if wl.count(val) % 2 == 0:
                 pass
-            else :
+            else:
                 ans = "No"
                 break
     print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

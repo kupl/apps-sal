@@ -11,11 +11,9 @@ def solve():
     ans = m - ans
     print(ans)
 
+
 def __starting_point():
     solve()
-
-
-
 
 
 __starting_point()
