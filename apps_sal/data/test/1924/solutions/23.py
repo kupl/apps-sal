@@ -28,11 +28,13 @@ def main():
 
     r1, c1, r2, c2 = list(map(int, input().split()))
 
-    answer = g(r2, c2) - g(r2, c1-1) - g(r1-1, c2) + g(r1-1, c1-1)
+    answer = g(r2, c2) - g(r2, c1 - 1) - g(r1 - 1, c2) + g(r1 - 1, c1 - 1)
     answer %= mod
     print(answer)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

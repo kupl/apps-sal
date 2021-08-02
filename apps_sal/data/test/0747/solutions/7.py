@@ -28,14 +28,6 @@ for nturn in range(2):
         turn = (turn + 1) % 2
     ans = max(ans, nw)
 print(ans)
-    
-        
-        
-            
-        
-        
-    
-    
+
 
 pass
-

@@ -23,4 +23,3 @@ for cell in line:
         else:
             break
 print(dist)
-

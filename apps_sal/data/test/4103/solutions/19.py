@@ -23,4 +23,3 @@ for ans, t in enumerate(s):
             print(ans)
             raise SystemExit(0)
 print(ans + 1)
-

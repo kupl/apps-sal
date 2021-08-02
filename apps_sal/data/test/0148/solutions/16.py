@@ -17,4 +17,5 @@ def main():
     print("NO")
     return 0
 
+
 main()

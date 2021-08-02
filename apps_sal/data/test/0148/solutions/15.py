@@ -1,8 +1,8 @@
-n,a,x,b,y=list(map(int, input().split()))
-a-=1
-x-=1
-b-=1
-y-=1
+n, a, x, b, y = list(map(int, input().split()))
+a -= 1
+x -= 1
+b -= 1
+y -= 1
 while a != x and b != y:
     if a == b:
         print('YES')
@@ -13,4 +13,3 @@ if a == b:
     print('YES')
 else:
     print('NO')
-

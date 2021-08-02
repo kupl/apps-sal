@@ -1,5 +1,6 @@
 3
 
+
 def is_prime(x):
     if x == 1:
         return False
@@ -16,4 +17,3 @@ m = 1
 while is_prime(n * m + 1):
     m += 1
 print(m)
-

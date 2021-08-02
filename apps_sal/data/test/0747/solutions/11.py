@@ -1,5 +1,6 @@
 from copy import deepcopy
 
+
 def getBetter(h, a):
     maxi = -1
     im = -1
@@ -9,6 +10,7 @@ def getBetter(h, a):
                 im = i
                 maxi = a[i][1]
     return(im, maxi)
+
 
 n, h0 = map(int, input().split())
 
@@ -27,9 +29,9 @@ lol0 = getBetter(h0, lolipops0[0])
 t1 = 0
 h1 = h0
 lol1 = getBetter(h0, lolipops0[1])
-t2 = 1 # ---- WARNING --------
+t2 = 1  # ---- WARNING --------
 h2 = h0
-while(lol0[0] >= 0 or lol1[0] >=0):
+while(lol0[0] >= 0 or lol1[0] >= 0):
     if (lol0[0] > -1):
         if (len(lolipops0[t1 % 2]) != 1 and lol0[0] != -1):
             lolipops0[t1 % 2].pop(lol0[0])

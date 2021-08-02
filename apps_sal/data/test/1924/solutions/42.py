@@ -11,4 +11,3 @@ def comb(x, y):
 
 
 print(((comb(C + R + 2, R + 1) - comb(c + R + 1, R + 1) - comb(C + r + 1, r) + comb(c + r, r)) % mod))
-

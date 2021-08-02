@@ -6,8 +6,8 @@ for i in range(n):
     candies.append([int(c) for c in input().split()])
 
 
+candies.sort(key=lambda x: x[2], reverse=True)
 
-candies.sort(key=lambda x: x[2],reverse=True)
 
 def find_best(candies, x, step):
     for i in range(len(candies)):
@@ -15,6 +15,7 @@ def find_best(candies, x, step):
             return i
 
     return -1
+
 
 eated = [0, 0]
 

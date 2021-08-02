@@ -3,9 +3,9 @@ from functools import cmp_to_key
 
 def get_max_from(data, x):
     for i, c in enumerate(data):
-            if c[0] <= x:
-                data.pop(i)
-                return c[1]
+        if c[0] <= x:
+            data.pop(i)
+            return c[1]
 
     return None
 
@@ -44,7 +44,7 @@ def __starting_point():
         else:
             data1.append(t)
 
-    cmp = lambda a, b: b[1] - a[1]
+    def cmp(a, b): return b[1] - a[1]
 
     data0.sort(key=cmp_to_key(cmp))
     data1.sort(key=cmp_to_key(cmp))
@@ -53,4 +53,6 @@ def __starting_point():
     d1 = data1.copy()
 
     print(max(test(d0, d1, x), test(data1, data0, x)))
+
+
 __starting_point()

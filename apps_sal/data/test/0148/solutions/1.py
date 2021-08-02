@@ -21,4 +21,3 @@ if any(u == v for u, v in zip(daniel, vlad)):
     print('YES')
 else:
     print('NO')
-

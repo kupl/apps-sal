@@ -28,6 +28,7 @@ def solve(currentT):
             result += 1
     return result
 
+
 candy = []
 n, x = tuple(map(int, input().split()))
 for i in range(n):
@@ -38,4 +39,3 @@ for i in range(n):
 candy = tuple(candy)
 
 print(max(solve(0), solve(1)))
-

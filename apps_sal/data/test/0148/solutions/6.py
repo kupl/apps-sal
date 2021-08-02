@@ -11,4 +11,3 @@ while a != x and b != y:
         return
 ##    print(a, b)
 print('NO')
-

@@ -1,5 +1,5 @@
 def main():
-    n, a,x,b,y = map(int, input().strip().split())
+    n, a, x, b, y = map(int, input().strip().split())
     a -= 1
     x -= 1
     b -= 1
@@ -21,6 +21,9 @@ def main():
     print('NO')
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

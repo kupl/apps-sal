@@ -12,7 +12,7 @@ for i in range(len(str(n)) + 1, 0, -1):
 
     for v, c in list(e.items()):
 
-        lim = v//u
+        lim = v // u
 
         for x in range(-1 - lim, 1 - lim):
 
@@ -23,6 +23,4 @@ for i in range(len(str(n)) + 1, 0, -1):
 print(d[0])
 
 
-
 # Made By Mostafa_Khaled
-

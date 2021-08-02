@@ -35,4 +35,3 @@ for i, sun in enumerate(s):
     ans += 1
 
 print(ans)
-

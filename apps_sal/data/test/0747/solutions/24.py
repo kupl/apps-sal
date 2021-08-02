@@ -17,6 +17,7 @@ fruit2 = fruit[::]
 caramel2 = caramel[::]
 x2 = x
 
+
 def add_to_mass(arr, x):
     candy = 0
     curr = 0
@@ -29,6 +30,7 @@ def add_to_mass(arr, x):
         return 0
     arr.pop(curr)
     return candy
+
 
 while True:
     curr = add_to_mass(fruit, x)

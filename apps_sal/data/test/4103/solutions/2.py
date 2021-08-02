@@ -1,7 +1,8 @@
 IN = input
-rint = lambda: int(IN())
-rmint = lambda: list(map(int, IN().split()))
-rlist = lambda: list(rmint())
+def rint(): return int(IN())
+def rmint(): return list(map(int, IN().split()))
+def rlist(): return list(rmint())
+
 
 n, b, a = rmint()
 y = a
@@ -38,4 +39,3 @@ for s in rlist():
     d += 1
 
 print(d)
-

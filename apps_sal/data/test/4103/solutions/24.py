@@ -1,6 +1,6 @@
-n,b,a = list(map(int,input().split()))
+n, b, a = list(map(int, input().split()))
 am = a
-s = list(map(int,input().split()))
+s = list(map(int, input().split()))
 dist = 0
 for i in s:
     if i == 0:
@@ -24,4 +24,3 @@ for i in s:
             a -= 1
             dist += 1
 print(dist)
-

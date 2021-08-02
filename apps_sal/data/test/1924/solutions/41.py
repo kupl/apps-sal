@@ -32,4 +32,3 @@ g1 = make_table(2 * 10 ** 6 + 10)
 answer = f(c2, r2) - f(c2, r1 - 1) - f(c1 - 1, r2) + f(c1 - 1, r1 - 1)
 answer %= mod
 print(answer)
-
