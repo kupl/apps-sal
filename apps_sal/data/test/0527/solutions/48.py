@@ -24,4 +24,3 @@ for e in t:
     now = nxt % len(s)
 
 print(ans)
-

@@ -23,4 +23,3 @@ if cx != cy or len(data) != 0:
 else:
     print("YES")
     print("{} {}".format(x, y))
-

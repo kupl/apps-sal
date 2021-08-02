@@ -18,4 +18,3 @@ if len(ans) == 2:
     print(' '.join(map(str, ans)))
 else:
     print("NO")
-

@@ -1,8 +1,11 @@
 USE_STDIO = False
 
 if not USE_STDIO:
-    try: import mypc
-    except: pass
+    try:
+        import mypc
+    except:
+        pass
+
 
 def check(s):
     i, j = 0, len(s) - 1
@@ -11,6 +14,7 @@ def check(s):
             return False
         i, j = i + 1, j - 1
     return True
+
 
 def main():
     T, = list(map(int, input().split(' ')))
@@ -22,8 +26,6 @@ def main():
 
 def __starting_point():
     main()
-
-
 
 
 __starting_point()

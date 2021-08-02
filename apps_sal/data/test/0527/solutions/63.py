@@ -4,9 +4,9 @@ s = input()
 t = input()
 for i, c in enumerate(s):
     if c in ind:
-        ind[c].append(i+1)
+        ind[c].append(i + 1)
     else:
-        ind[c] = [i+1]
+        ind[c] = [i + 1]
 k = len(s)
 nk = 0
 if not t[0] in ind:
@@ -19,8 +19,8 @@ for i in range(1, len(t)):
     if not c in ind:
         print(-1)
         return
-    if ind[c][-1]>pv:
-        pv = ind[c][bisect.bisect_left(ind[c], pv+1)]
+    if ind[c][-1] > pv:
+        pv = ind[c][bisect.bisect_left(ind[c], pv + 1)]
     else:
         nk += k
         pv = ind[c][0]

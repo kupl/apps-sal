@@ -1,7 +1,7 @@
+from bisect import bisect_left
+from collections import Counter, defaultdict
 import sys
 sys.setrecursionlimit(200000)
-from collections import Counter, defaultdict
-from bisect import bisect_left
 
 
 def read():
@@ -45,5 +45,6 @@ def solve(S, T):
 def __starting_point():
     inputs = read()
     print(("{}".format(solve(*inputs))))
+
 
 __starting_point()

@@ -22,4 +22,3 @@ for c in T:
     else:
         cur = pos[c][nxt] + 1
 print((loop * N + cur))
-

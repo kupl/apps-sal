@@ -14,12 +14,12 @@ perms = list(permutations(list(range(4))))
 
 def cost(board):
 
-    base1 = [1,0]*(len(board)//2)
-    base2 = [0,1]*(len(board)//2)
+    base1 = [1, 0] * (len(board) // 2)
+    base2 = [0, 1] * (len(board) // 2)
 
     board1 = []
     board2 = []
-    for i in range(len(board)//2):
+    for i in range(len(board) // 2):
         board1.append(base1)
         board1.append(base2)
 
@@ -40,10 +40,9 @@ def cost(board):
 
 min_cost = float('inf')
 for p in perms:
-    b1 = boards[p[0]]+boards[p[1]]
-    b2 = boards[p[2]]+boards[p[3]]
-    b = [a+b for a,b in zip(b1, b2)]
+    b1 = boards[p[0]] + boards[p[1]]
+    b2 = boards[p[2]] + boards[p[3]]
+    b = [a + b for a, b in zip(b1, b2)]
     min_cost = min(min_cost, cost(b))
 
 print(min_cost)
-

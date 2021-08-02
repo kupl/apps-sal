@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def solve(s):
     n = len(s)
     for i in range(n // 2):
@@ -10,6 +11,7 @@ def solve(s):
         if diff != 0 and abs(diff) != 2:
             return 'NO'
     return 'YES'
+
 
 def main():
     t = int(input())
@@ -21,4 +23,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,5 +1,5 @@
-#python3
-#utf-8
+# python3
+# utf-8
 from collections import Counter
 
 cards_nr = int(input())
@@ -18,4 +18,3 @@ else:
     else:
         print('YES')
         print(num1, num2)
-

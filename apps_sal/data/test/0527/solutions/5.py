@@ -3,7 +3,7 @@ T = input()
 
 n = len(S)
 
-al = [chr(c) for c in range(ord("a"), ord("a")+26)]
+al = [chr(c) for c in range(ord("a"), ord("a") + 26)]
 x = {a: [] for a in al}
 
 for i in range(len(S)):
@@ -11,9 +11,10 @@ for i in range(len(S)):
         if a == S[i]:
             x[a].append(i)
 
+
 def is_ok(arg):
     # 条件を満たすかどうか？問題ごとに定義
-    if x[t][arg]+c*n > i:
+    if x[t][arg] + c * n > i:
         return True
     return False
 
@@ -33,15 +34,16 @@ def meguru_bisect(ng, ok):
             ng = mid
     return ok
 
+
 i = -1
 c = 0
 for t in T:
     if not x[t]:
         print(-1)
         break
-    if x[t][-1]+c*n <= i:
+    if x[t][-1] + c * n <= i:
         c += 1
-    i = x[t][meguru_bisect(-1, len(x[t])-1)]+c*n
+    i = x[t][meguru_bisect(-1, len(x[t]) - 1)] + c * n
 
 else:
-    print(i+1)
+    print(i + 1)

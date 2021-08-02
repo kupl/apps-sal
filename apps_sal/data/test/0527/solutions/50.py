@@ -34,7 +34,7 @@ if (set_t <= set_s) is False:
     return
 alphabet2index = defaultdict(list)
 for i, alphabet in enumerate(s):
-    alphabet2index[alphabet].append(i+1)
+    alphabet2index[alphabet].append(i + 1)
 ans = 0
 pos = 0
 prev_pos = 0
@@ -42,11 +42,11 @@ base = 0
 n = -1
 c = 0
 for _t in t:
-    n = s.find(_t, n+1)
+    n = s.find(_t, n + 1)
     if (n == -1):
         c += 1
         n = s.find(_t)
-ans = n + c*len(s) + 1
+ans = n + c * len(s) + 1
 """
 
     ng_flg = True
@@ -69,4 +69,3 @@ ans = n + c*len(s) + 1
             pos = 0
     """
 print(ans)
-

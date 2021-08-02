@@ -14,5 +14,5 @@ else:
     for c in t:
         q, r = divmod(ans, n)
         x = d[c][bisect.bisect(d[c], r)]
-        ans = n*q + x
+        ans = n * q + x
     print(ans)

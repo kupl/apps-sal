@@ -23,4 +23,3 @@ for pat in var_:
     ans = min(ans, now)
 
 print(ans)
-

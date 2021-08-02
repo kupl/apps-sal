@@ -8,7 +8,7 @@ if set(s) & set(t) != set(t):
 else:
     cnt = defaultdict(list)
     for i in range(n):
-        cnt[s[i]].append(i+1)
+        cnt[s[i]].append(i + 1)
     loop = 0
     prev = 0
     for c in t:
@@ -19,5 +19,4 @@ else:
         else:
             prev = x[0]
             loop += 1
-    print((loop*n+prev))
-
+    print((loop * n + prev))

@@ -9,7 +9,7 @@ for zzz in range(t):
     s = input().strip()
     good = True
     for i in range(l):
-        j = l-i-1
+        j = l - i - 1
         diff = abs(ord(s[i]) - ord(s[j]))
         if (diff == 1 or diff > 2):
             good = False
@@ -18,4 +18,3 @@ for zzz in range(t):
         print('YES')
     else:
         print('NO')
-

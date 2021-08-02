@@ -22,9 +22,11 @@ def main():
         else:  # [2,6,7,10] 6の次は？
             ind = dic[string][bisect.bisect_right(
                 dic[string], ind)]  # n以下の個数を数える
-    print(cycle*len(s)+ind+1)
+    print(cycle * len(s) + ind + 1)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

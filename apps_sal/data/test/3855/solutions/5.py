@@ -7,4 +7,3 @@ while n > 0:
     p <<= 1
 
 print(x)
-

@@ -1,18 +1,20 @@
 import sys
 import math
 
+
 def calculate(A, k, x):
     res = 0
     if abs(k) >= 2:
         for a in reversed(A):
-            res = k*res + a
+            res = k * res + a
             if abs(res) > x:
                 return float('inf')
         return res
     else:
         for a in reversed(A):
-            res = k*res + a
+            res = k * res + a
         return res
+
 
 def solve():
     n, k = [int(x) for x in input().split()]
@@ -26,5 +28,5 @@ def solve():
         else:
             return calculate(A, k, 10000) == 0
 
-print('Yes' if solve() else 'No')
 
+print('Yes' if solve() else 'No')

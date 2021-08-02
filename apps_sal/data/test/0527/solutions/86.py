@@ -22,8 +22,8 @@ def main() -> None:
     print((rep * len(S) + now + 1))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

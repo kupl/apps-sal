@@ -1,7 +1,9 @@
 from bisect import bisect
 
+
 def ctoi(c):
     return ord(c) - ord('a')
+
 
 def solve():
     S = input()
@@ -16,5 +18,6 @@ def solve():
             return -1
         ans += idx[ctoi(c)][bisect(idx[ctoi(c)], ans % N)] - ans % N
     return ans + 1
-print((solve()))
 
+
+print((solve()))

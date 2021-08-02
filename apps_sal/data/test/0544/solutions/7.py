@@ -9,4 +9,3 @@ for _ in range(t):
             ans = False
             break
     print('YES' if ans else 'NO')
-

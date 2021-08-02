@@ -13,4 +13,3 @@ for _ in range(t):
             break
 
     print(['NO', 'YES'][ok])
-

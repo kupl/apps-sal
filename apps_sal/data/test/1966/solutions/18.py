@@ -1,6 +1,6 @@
 n = int(input())
 
-answer  = []
+answer = []
 
 for k in range(4):
     white_problems = 0
@@ -23,7 +23,6 @@ for k in range(4):
         trash = input()
 
 
-
 answer.sort()
 black = 0
 white = 0
@@ -40,4 +39,3 @@ for i in answer:
     if white == 2 and black == 2:
         break
 print(ans)
-

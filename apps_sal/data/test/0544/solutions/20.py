@@ -17,5 +17,3 @@ for i in range(t):
         break
     if ok:
         print('YES')
-    
-

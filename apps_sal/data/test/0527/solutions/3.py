@@ -29,6 +29,5 @@ def solve():
             prov = dic[t][0]
     print((turn * l + prov))
 
+
 solve()
-
-

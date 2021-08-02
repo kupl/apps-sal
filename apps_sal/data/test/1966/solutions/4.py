@@ -23,7 +23,7 @@ ret = 999999
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if A[i][j] == "0":
                 cnt += 1
         else:
@@ -31,7 +31,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if B[i][j] == "0":
                 cnt += 1
         else:
@@ -39,7 +39,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if C[i][j] == "1":
                 cnt += 1
         else:
@@ -47,7 +47,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if D[i][j] == "1":
                 cnt += 1
         else:
@@ -57,7 +57,7 @@ ret = min(ret, cnt)
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if A[i][j] == "0":
                 cnt += 1
         else:
@@ -65,7 +65,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if C[i][j] == "0":
                 cnt += 1
         else:
@@ -73,7 +73,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if B[i][j] == "1":
                 cnt += 1
         else:
@@ -81,7 +81,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if D[i][j] == "1":
                 cnt += 1
         else:
@@ -91,7 +91,7 @@ ret = min(ret, cnt)
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if A[i][j] == "0":
                 cnt += 1
         else:
@@ -99,7 +99,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if D[i][j] == "0":
                 cnt += 1
         else:
@@ -107,7 +107,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if C[i][j] == "1":
                 cnt += 1
         else:
@@ -115,7 +115,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if B[i][j] == "1":
                 cnt += 1
         else:
@@ -125,7 +125,7 @@ ret = min(ret, cnt)
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if B[i][j] == "0":
                 cnt += 1
         else:
@@ -133,7 +133,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if C[i][j] == "0":
                 cnt += 1
         else:
@@ -141,7 +141,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if A[i][j] == "1":
                 cnt += 1
         else:
@@ -149,7 +149,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if D[i][j] == "1":
                 cnt += 1
         else:
@@ -159,7 +159,7 @@ ret = min(ret, cnt)
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if D[i][j] == "0":
                 cnt += 1
         else:
@@ -167,7 +167,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if B[i][j] == "0":
                 cnt += 1
         else:
@@ -175,7 +175,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if C[i][j] == "1":
                 cnt += 1
         else:
@@ -183,7 +183,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if A[i][j] == "1":
                 cnt += 1
         else:
@@ -193,7 +193,7 @@ ret = min(ret, cnt)
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if C[i][j] == "0":
                 cnt += 1
         else:
@@ -201,7 +201,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if D[i][j] == "0":
                 cnt += 1
         else:
@@ -209,7 +209,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if A[i][j] == "1":
                 cnt += 1
         else:
@@ -217,7 +217,7 @@ for i in range(n):
                 cnt += 1
 for i in range(n):
     for j in range(n):
-        if (i+j) % 2 == 0:
+        if (i + j) % 2 == 0:
             if B[i][j] == "1":
                 cnt += 1
         else:

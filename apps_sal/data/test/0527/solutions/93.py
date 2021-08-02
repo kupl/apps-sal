@@ -8,7 +8,7 @@ n = len(s)
 s += s
 for i in range(len(s)):
     alphabet[ord(s[i]) - ord("a")].append(i)
-    
+
 ans = 0
 now = -1
 for i in range(len(t)):
@@ -22,5 +22,5 @@ for i in range(len(t)):
         if now >= n:
             now -= n
             ans += n
-            
+
 print(ans + now + 1)
