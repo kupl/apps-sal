@@ -4,5 +4,3 @@ if a <= b:
     print((x + z * (b - a)))
 else:
     print((x + z * (a - b - 1)))
-
-

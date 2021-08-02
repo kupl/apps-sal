@@ -1,4 +1,6 @@
 from math import factorial as fac
+
+
 def solve(n):
     if n <= 4:
         return fac(n) // (2 * fac(n - 2))
@@ -14,6 +16,8 @@ def solve(n):
     for p in l:
         y = min(p - 1, n)
         res += (y - (p - y) + 1) // 2
-    return res 
+    return res
+
+
 n = int(input())
 print(solve(n))

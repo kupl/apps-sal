@@ -25,4 +25,3 @@ elif n == 4:
     print(6)
 else:
     print(ans)
-

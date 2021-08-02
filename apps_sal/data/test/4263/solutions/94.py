@@ -6,7 +6,7 @@ def answer(s: str) -> int:
     result = re.findall(pattern, s)
     if not result:
         return 0
-      
+
     return len(max(result, key=len))
 
 
@@ -17,5 +17,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

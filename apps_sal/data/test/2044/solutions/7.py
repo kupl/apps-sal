@@ -9,6 +9,5 @@ for x in a:
         x -= left
         turn = 1 + x // m
         left = m - x % m
-    print(turn, end= ' ')
+    print(turn, end=' ')
 print()
-

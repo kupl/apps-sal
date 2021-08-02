@@ -1,8 +1,9 @@
 import sys
 
+
 def cnt(y, n):
     # print("in count")
-    #print(y)
+    # print(y)
     if y <= 1:
         return n
     if y > n:
@@ -11,11 +12,12 @@ def cnt(y, n):
         return 1 + cnt(2 * y, n)
     c = 0
     p = 1
-    while p*y <= n:
-        mx = min(n, p*y + 2*p - 1)
-        c += mx - p*y + 1
+    while p * y <= n:
+        mx = min(n, p * y + 2 * p - 1)
+        c += mx - p * y + 1
         p *= 2
     return c
+
 
 n, k = input().split()
 n, k = int(n), int(k)
@@ -37,7 +39,7 @@ while l < h:
     else:
         l = m + 1
 mx_even = 2 * l - 2
-    
+
 l, h = 1, n // 2
 while l < h:
     m = (l + h) // 2
@@ -63,4 +65,3 @@ while i < 20 and n - i > 0:
     i += 1
 
 print(max(mx_even, max(mx_odd, mx_heur)))
-

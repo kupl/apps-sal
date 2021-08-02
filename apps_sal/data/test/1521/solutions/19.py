@@ -4,7 +4,7 @@
 def main():
     p, n = list(map(int, input().split()))
     table = set()
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         x = int(input())
 
         if x % p in table:
@@ -21,5 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

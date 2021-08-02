@@ -4,7 +4,6 @@ pages = 0
 
 for i in a:
     pages += i
-    print(pages // m, end = ' ')
+    print(pages // m, end=' ')
     if pages >= m:
         pages %= m
-

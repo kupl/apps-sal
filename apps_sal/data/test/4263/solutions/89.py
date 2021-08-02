@@ -1,7 +1,7 @@
 L = ['A', 'C', 'G', 'T']
 
 s = input()
-cnt = [0]*len(s)
+cnt = [0] * len(s)
 
 for i in range(len(s)):
     for j in range(i, len(s)):
@@ -10,4 +10,3 @@ for i in range(len(s)):
         else:
             break
 print((max(cnt)))
-

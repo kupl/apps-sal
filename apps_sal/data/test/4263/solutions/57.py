@@ -11,5 +11,5 @@ for i in range(len(text)):
             count = 0
         else:
             count = 0
-            
-print(max(max_count,count))
+
+print(max(max_count, count))

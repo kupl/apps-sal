@@ -9,5 +9,3 @@ else:
         print((x + 2 * x * (b - a)))
     else:
         print((x + 2 * x * (a - 1 - b)))
-
-

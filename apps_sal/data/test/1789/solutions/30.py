@@ -1,9 +1,9 @@
 import math
 
-a,b,x,y = map(int, input().split())
+a, b, x, y = map(int, input().split())
 
-t = min(2*x,y)
+t = min(2 * x, y)
 
-d = abs(2*b+1-2*a)
+d = abs(2 * b + 1 - 2 * a)
 
-print(math.floor(d/2)*t + x)
+print(math.floor(d / 2) * t + x)

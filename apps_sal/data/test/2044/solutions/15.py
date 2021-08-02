@@ -7,4 +7,3 @@ for x in a:
     res.append((c + x) // m - c // m)
     c += x
 print(' '.join([str(x) for x in res]))
-

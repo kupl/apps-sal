@@ -1,12 +1,12 @@
-a,b,x,y = map(int,input().split())
+a, b, x, y = map(int, input().split())
 t = 0
 if a > b:
-  c = (a-1) -b
+    c = (a - 1) - b
 else:
-  c = b - a
+    c = b - a
 t += x
-if x*2 < y:
-  t += c*x*2
+if x * 2 < y:
+    t += c * x * 2
 else:
-  t += c*y
+    t += c * y
 print(t)

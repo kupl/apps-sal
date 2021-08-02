@@ -15,4 +15,3 @@ else:
         ans = abs(a - b) * y + x
 
 print(ans)
-

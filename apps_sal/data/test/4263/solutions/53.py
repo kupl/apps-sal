@@ -1,6 +1,6 @@
 s = input()
 
-acgt = ['A','C','G','T']
+acgt = ['A', 'C', 'G', 'T']
 i = 0
 max_ans = 0
 curr_ans = 0

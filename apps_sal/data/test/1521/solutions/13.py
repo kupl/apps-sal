@@ -23,4 +23,3 @@ if asdf != []:
     print(asdf[0])
 else:
     print(-1)
-

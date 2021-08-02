@@ -9,7 +9,7 @@ conflict = False
 insertion = 0
 for i in range(n):
     num = int(input().strip())
-    num = num%p
+    num = num % p
     if num in hashDict:
         if conflict:
             continue
@@ -20,8 +20,6 @@ for i in range(n):
         hashDict[num] = True
 
 if conflict:
-    print(insertion+1)
+    print(insertion + 1)
 else:
     print("-1")
-
-

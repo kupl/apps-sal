@@ -3,6 +3,5 @@ a = list(map(int, input().split()))
 cnt = 0
 for i in a:
     cnt += i
-    print(cnt//m, end=' ')
+    print(cnt // m, end=' ')
     cnt %= m
-

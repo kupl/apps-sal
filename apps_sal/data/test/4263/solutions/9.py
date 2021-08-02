@@ -8,16 +8,16 @@ S = input()
 N = len(S)
 ans = 0
 for i in range(N):
-  for j in range(i, N):
-    T = list(S[i:j+1])
-    M = j-i+1
-	# ACGT文字列かどうかの判定
-    flag = True
-    for k in range(M):
-      if T[k] != 'A' and T[k] != 'C' and T[k] != 'G' and T[k] != 'T':
-        flag = False
-        break
-    # ACGT文字列なら長さを更新
-    if flag: ans = max(ans, M)
-      
+    for j in range(i, N):
+        T = list(S[i:j + 1])
+        M = j - i + 1
+        # ACGT文字列かどうかの判定
+        flag = True
+        for k in range(M):
+            if T[k] != 'A' and T[k] != 'C' and T[k] != 'G' and T[k] != 'T':
+                flag = False
+                break
+        # ACGT文字列なら長さを更新
+        if flag: ans = max(ans, M)
+
 print(ans)

@@ -7,4 +7,4 @@ for i in range(len(days)):
     f1 = int(p // a)
     res.append(f1)
 
-print(' '.join(map(str,res)))
+print(' '.join(map(str, res)))

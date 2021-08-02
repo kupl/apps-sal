@@ -16,7 +16,3 @@ for i in range(n):
         break
 if not bb:
     print(-1)
-
-
-    
-

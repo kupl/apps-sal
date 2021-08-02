@@ -13,14 +13,14 @@ value = int(str(pref) + '9' * label)
 ans = 0
 
 while value <= n - 1 + n:
-    
+
     if n < 5:
         ans = n * (n - 1) // 2
         break
-    
+
     k = max(value - n, 1)
     ans += (min(n, value - 1) - k + 1) // 2
-    
+
     pref += 1
     value = int(str(pref) + '9' * label)
 

@@ -8,13 +8,15 @@ def main():
         xi = int(input())
         mod = xi % p
         if full[mod]:
-            print(i+1)
+            print(i + 1)
             return
         full[mod] = True
 
     print(-1)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

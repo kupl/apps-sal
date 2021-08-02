@@ -10,4 +10,3 @@ for i in s:
         now = 0
     ans = max(ans, now)
 print(ans)
-

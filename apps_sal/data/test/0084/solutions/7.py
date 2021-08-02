@@ -25,4 +25,3 @@ for i in range(lead_digit + 1):
     #print(desired_num, (min([n, desired_num - 1]) - max([desired_num // 2, desired_num - n])))
 
 print(result)
-

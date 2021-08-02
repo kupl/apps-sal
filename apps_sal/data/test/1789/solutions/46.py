@@ -96,4 +96,3 @@ else:
     eprint('temp1,temp2 ', end=':\n')
     eprint(temp1, temp2)
     print(min(temp1, temp2))
-

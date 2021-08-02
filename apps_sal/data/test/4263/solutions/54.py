@@ -12,4 +12,3 @@ if max < cnt:
     max = cnt
 cnt = 0
 print(max)
-

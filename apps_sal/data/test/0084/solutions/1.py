@@ -10,6 +10,7 @@ def solve(x, a):
         ans = (a - 1) // 2
     return max(0, ans)
 
+
 n = input()
 optimal_nines = len(n)
 if int(n[0]) < 5:
@@ -25,4 +26,3 @@ for i in range(0, 9):
     ans += solve(n, curr_num)
 
 print(ans)
-

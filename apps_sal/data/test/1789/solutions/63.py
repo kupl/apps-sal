@@ -7,7 +7,7 @@ else:
     if a != 1:
         aa = a - 1
         tmp = x
-        tmp += y * (aa-b)
+        tmp += y * (aa - b)
         res = min(res, tmp)
     # ro-ka
     tmp = x
@@ -19,8 +19,6 @@ else:
     elif a > b:
         res = min(res, x * (abs(a - b) * 2 - 1))
     elif a < b:
-        res = min(res, x * (abs(a-b) * 2 + 1) )
+        res = min(res, x * (abs(a - b) * 2 + 1))
 
     print(res)
-
-

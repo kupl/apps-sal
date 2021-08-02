@@ -1,6 +1,6 @@
 s = list(input()) + ["X"]
 
-l = ["A","G","C","T"]
+l = ["A", "G", "C", "T"]
 
 for i in range(len(s)):
     if s[i] in l:
@@ -12,7 +12,7 @@ cnt = 0
 li = []
 for i in range(len(s)):
     if s[i] == 1:
-        cnt +=1
+        cnt += 1
     else:
         li.append(cnt)
         cnt = 0

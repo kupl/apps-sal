@@ -11,4 +11,3 @@ for c in s:
     ans = max(length, ans)
 
 print(ans)
-

@@ -10,4 +10,6 @@ def __starting_point():
             now = 0
         ans = max(now, ans)
     print(ans)
+
+
 __starting_point()

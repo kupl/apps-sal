@@ -2,7 +2,7 @@ import sys
 n = int(sys.stdin.readline().rstrip("\n"))
 
 if n < 5:
-    res = n * (n-1) // 2
+    res = n * (n - 1) // 2
     print(res)
     return
 
@@ -24,6 +24,3 @@ for i in range(9):
     else:
         res += (1 + (sum - int(p)) // 2)
 print(res)
-
-
-

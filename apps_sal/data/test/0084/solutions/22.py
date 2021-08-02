@@ -12,7 +12,7 @@ if n == 10 ** digits - 1:
     print(n // 2)
     return
 if n >= 5 * 10 ** (digits - 1):
-    print(n - 5 * 10 ** (digits - 1) + 1) 
+    print(n - 5 * 10 ** (digits - 1) + 1)
 else:
     fst = int(str(n)[0])
     res = (fst) * (fst - 1) // 2 * 10 ** (digits - 1)
@@ -24,7 +24,5 @@ else:
         res += (n // 2)
     elif n >= 5 * 10 ** (digits - 1):
         res += (n - 5 * 10 ** (digits - 1) + 1)
-    res += (n + 1) * fst 
+    res += (n + 1) * fst
     print(res)
-
-

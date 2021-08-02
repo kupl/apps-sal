@@ -9,4 +9,3 @@ c = [(i + 1, i) for i in range(n + 1)]
 s = a + b + c
 print(len(s))
 print('\n'.join([str(x[0]) + " " + str(x[1]) for x in s]))
-

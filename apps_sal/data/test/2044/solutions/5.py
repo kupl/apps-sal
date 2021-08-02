@@ -11,4 +11,3 @@ for i in x:
     r %= m
 
 print(s)
-
