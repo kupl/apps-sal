@@ -3,7 +3,7 @@ n, m = [int(tmp) for tmp in sys.stdin.readline().split()]
 a = [0] + [int(tmp) for tmp in sys.stdin.readline().split()]
 c = [0] + [int(tmp) for tmp in sys.stdin.readline().split()]
 
-co = [tmp for tmp in range(n+1)]
+co = [tmp for tmp in range(n + 1)]
 co.sort(key=lambda z: c[z])
 cop = 1
 nb = False
@@ -29,4 +29,3 @@ for i in range(m):
         brts -= botf
         s += botf * c[co[cop]]
     print(s)
-

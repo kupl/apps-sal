@@ -5,7 +5,7 @@ types = dict()
 for i in range(n):
     types[i] = c[i]
 types = sorted(types.items(), key=lambda kv: kv[1])
-#print(types)
+# print(types)
 min_c = types[0]
 ind = 0
 for i in range(m):
@@ -13,11 +13,11 @@ for i in range(m):
     t -= 1
     summ = 0
     if a[t] < d:
-        summ += a[t]*c[t]
+        summ += a[t] * c[t]
         d -= a[t]
         a[t] = 0
         while a[min_c[0]] < d:
-            summ += a[min_c[0]]*c[min_c[0]]
+            summ += a[min_c[0]] * c[min_c[0]]
             d -= a[min_c[0]]
             a[min_c[0]] = 0
             ind += 1
@@ -28,9 +28,9 @@ for i in range(m):
             else:
                 min_c = types[ind]
         else:
-            summ += d*c[min_c[0]]
+            summ += d * c[min_c[0]]
             a[min_c[0]] -= d
     else:
-        summ += d*c[t]
+        summ += d * c[t]
         a[t] -= d
     print(summ)

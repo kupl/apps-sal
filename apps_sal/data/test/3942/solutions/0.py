@@ -1,6 +1,6 @@
 s = input()
 last = s.rfind('#')
-dif = s.count('(')-s.count(')')-s.count('#')
+dif = s.count('(') - s.count(')') - s.count('#')
 try:
     assert dif >= 0
     lev = 0
@@ -14,7 +14,7 @@ try:
         elif c == '#':
             lev -= 1
             if i == last:
-                out.append(dif+1)
+                out.append(dif + 1)
                 lev -= dif
             else:
                 out.append(1)
@@ -23,5 +23,3 @@ try:
     for x in out: print(x)
 except AssertionError:
     print(-1)
-    
-

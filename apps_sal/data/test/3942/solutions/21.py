@@ -28,5 +28,3 @@ else:
     else:
         for output in outputs:
             print(output)
-
-

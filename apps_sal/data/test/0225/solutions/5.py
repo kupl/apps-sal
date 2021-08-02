@@ -15,4 +15,3 @@ for i in range(2):
                     print('YES')
                     return
 print('NO')
-

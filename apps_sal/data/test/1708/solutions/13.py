@@ -4,7 +4,7 @@ num_dishes, num_customers = [int(x) for x in input().split()]
 dish_amounts = [int(x) for x in input().split()]
 dish_costs = [int(x) for x in input().split()]
 
-dishes_by_price = sorted(list(range(num_dishes)), key=lambda i : dish_costs[i])
+dishes_by_price = sorted(list(range(num_dishes)), key=lambda i: dish_costs[i])
 dbp_i = 0
 
 for j in range(num_customers):
@@ -32,4 +32,3 @@ for j in range(num_customers):
         cost = 0
 
     print(cost)
-

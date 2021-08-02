@@ -46,4 +46,3 @@ for i in range(m):
 
     print(price)
     # print()
-

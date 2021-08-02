@@ -11,10 +11,10 @@ if (n == 0):
     return
 while (n > 0):
     L.append(n % 2)
-    n = n//2
+    n = n // 2
 near = 1
 ans = 0
-for i in range(l, r+1):
+for i in range(l, r + 1):
     b = -1
     k = i
     d = 1
@@ -26,5 +26,3 @@ for i in range(l, r+1):
     f -= 1
     if (L[len(L) - f - 1] == 1): ans += 1
 print(ans)
-            
-

@@ -5,6 +5,7 @@
 
 import sys
 
+
 def __starting_point():
     s = input()
     leftCount = 0
@@ -40,7 +41,7 @@ def __starting_point():
                     ansFlag = False
             elif c == '#':
                 leftCount -= ansList[sharpCount]
-                sharpCount+=1
+                sharpCount += 1
                 if leftCount < 0:
                     ansFlag = False
             else:
@@ -52,5 +53,6 @@ def __starting_point():
             print(-1)
     else:
         print(-1)
+
 
 __starting_point()

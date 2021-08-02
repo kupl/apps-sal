@@ -14,4 +14,3 @@ for i in ss:
     rs.append(data[i] if i in data else i)
 
 print(''.join(rs))
-

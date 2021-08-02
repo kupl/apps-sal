@@ -8,4 +8,3 @@ s = (b1 | b2) - a
 s = {v for v in b1 | b2 if min(abs(v - vv) for vv in a) == d}
 
 print(len(s))
-

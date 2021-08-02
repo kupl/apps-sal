@@ -10,5 +10,3 @@ for i in sums:
     elif i == 2 * d:
         ans += 1
 print(ans)
-        
-

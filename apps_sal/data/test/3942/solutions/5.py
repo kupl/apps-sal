@@ -23,6 +23,6 @@ for i in range(len(a)):
         print(-1)
         quit()
 
-for i in range(hashs-1):
+for i in range(hashs - 1):
     print(1)
 print(last)

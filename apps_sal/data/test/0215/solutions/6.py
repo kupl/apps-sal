@@ -14,7 +14,6 @@ for letter in s:
         currentSet = set()
     else:
         currentSet.add(letter)
-        maxSize = max(maxSize,len(currentSet))
-        
-print(maxSize)
+        maxSize = max(maxSize, len(currentSet))
 
+print(maxSize)

@@ -10,4 +10,3 @@ for i in range(len(x)):
     else:
         y += x[i]
 print(y)
-

@@ -24,4 +24,3 @@ for i, c in enumerate(s):
         break
 for i in res:
     print(i)
-

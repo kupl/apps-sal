@@ -33,4 +33,3 @@ for _ in range(m):
             cost = 0
     # print(a)
     print(cost)
-

@@ -1,14 +1,14 @@
 s1 = input()
 s2 = input()
 s = input()
-r=''
+r = ''
 for i in s:
     if i.isalpha():
         #print (s1.index(i.lower()))
         if i.isupper():
-            r+= (s2[(s1.index(i.lower()))].upper())
+            r += (s2[(s1.index(i.lower()))].upper())
         else:
-            r+=(s2[(s1.index(i.lower()))])
+            r += (s2[(s1.index(i.lower()))])
     else:
-        r+=(i)
-print (r)
+        r += (i)
+print(r)

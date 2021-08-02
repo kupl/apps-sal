@@ -4,7 +4,7 @@ s = input()
 n = len(s)
 indices = [0 for i in range(26)]
 for i in range(26):
-    indices[ord(alpha1[i])-ord('a')] = i
+    indices[ord(alpha1[i]) - ord('a')] = i
 for i in range(n):
     if not s[i].isalpha():
         print(s[i], end="")
@@ -21,4 +21,3 @@ for i in range(n):
             l = alpha2[j]
             print(l, end="")
 print("")
-

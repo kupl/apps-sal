@@ -12,4 +12,3 @@ for c in s:
             print(d[c.lower()].upper(), end='')
     else:
         print(c, end='')
-

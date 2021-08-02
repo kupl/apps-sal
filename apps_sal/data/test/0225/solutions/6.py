@@ -36,4 +36,5 @@ def __starting_point():
         doctest.testmod()
     main()
 
+
 __starting_point()

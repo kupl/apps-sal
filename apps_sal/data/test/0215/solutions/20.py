@@ -33,17 +33,23 @@ except:
 # }}}
 
 # util {{{
+
+
 def is_odd(x):
     return x % 2 == 1
+
 
 def is_even(x):
     return x % 2 == 0
 
+
 def cmp(x, y):
     return (x > y) - (x < y)
 
+
 def sgn(x):
     return cmp(x, 0)
+
 
 def clamp(x, lo, hi):
     assert lo <= hi
@@ -54,11 +60,13 @@ def clamp(x, lo, hi):
     else:
         return x
 
+
 def chmax(xmax, x):
     if x > xmax:
         return x, True
     else:
         return xmax, False
+
 
 def chmin(xmin, x):
     if x < xmin:
@@ -66,14 +74,14 @@ def chmin(xmin, x):
     else:
         return xmin, False
 
+
 sys.setrecursionlimit(100000)
 # }}}
 
 # 適宜調整
 PINF = float("inf")
 NINF = float("-inf")
-EPS  = 1e-9
-
+EPS = 1e-9
 
 
 def main():
@@ -96,6 +104,8 @@ def main():
     ans = len(max(sets, key=len)) if sets else 0
     print(ans)
 
+
 def __starting_point(): main()
+
 
 __starting_point()

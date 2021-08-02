@@ -8,4 +8,3 @@ for i in range(n - 1):
     elif x[i + 1] - x[i] > 2 * d:
         ans += 2
 print(ans)
-

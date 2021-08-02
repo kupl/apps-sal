@@ -1,6 +1,6 @@
-n = int(input())
-s= input()
 import string
+n = int(input())
+s = input()
 sm = string.ascii_lowercase
 b = string.ascii_uppercase
 ans = 0
