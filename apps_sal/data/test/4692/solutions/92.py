@@ -1,2 +1,2 @@
 x = int(input())
-print(48-x)
+print(48 - x)

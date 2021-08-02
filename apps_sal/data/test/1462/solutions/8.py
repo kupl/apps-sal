@@ -14,5 +14,3 @@ while k > 0:
         ans += d[-1] * d[-1]
         d.pop()
 print(ans)
-    
-

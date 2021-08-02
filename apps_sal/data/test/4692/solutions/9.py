@@ -10,4 +10,3 @@ m = int(input())
 # 残り何時間か計算し、出力する
 result = 48 - m
 print(result)
-

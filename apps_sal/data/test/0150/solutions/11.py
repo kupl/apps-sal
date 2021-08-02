@@ -17,10 +17,7 @@ else:
     if n % 2 == 0:
         print(2)
     else:
-        if prime(n-2):
+        if prime(n - 2):
             print(2)
         else:
             print(3)
-
-
-

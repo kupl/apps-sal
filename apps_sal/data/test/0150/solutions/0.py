@@ -5,6 +5,8 @@ def is_izi(k):
             return 0
         i += 1
     return 1
+
+
 n = int(input())
 if (is_izi(n)):
     print(1)

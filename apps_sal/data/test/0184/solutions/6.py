@@ -7,4 +7,3 @@ for i in range(a):
         l += 1
 
 print(2 * min(l, r))
-

@@ -3,7 +3,7 @@ from collections import Counter
 
 def __starting_point():
     n, k = [int(i) for i in input().split()]
-    
+
     c = Counter(input())
 
     res = 0

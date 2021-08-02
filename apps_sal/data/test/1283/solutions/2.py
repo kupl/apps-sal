@@ -32,4 +32,3 @@ for i in range(n):
             mx = p[i][j]
 
 print(*ans)
-

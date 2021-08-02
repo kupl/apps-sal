@@ -4,7 +4,7 @@ s = input()
 aux = ord('A')
 for i in range(len(s)):
     arr[ord(s[i]) - aux] += 1
-arr.sort(reverse = True)
+arr.sort(reverse=True)
 i = 0
 sum = 0
 while k > 0:

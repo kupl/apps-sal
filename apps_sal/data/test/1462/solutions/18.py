@@ -2,7 +2,7 @@ a, b = list(map(int, input().split(' ')))
 string = input()
 chars = [x for x in string]
 chars2 = set(chars)
-chars2 = sorted(chars2, key = lambda x:chars.count(x))
+chars2 = sorted(chars2, key=lambda x: chars.count(x))
 chars2.reverse()
 
 count = [chars.count(x) for x in chars2]
@@ -14,6 +14,5 @@ for i in range(len(count)):
     else:
         cards += count[i]
         points += count[i]**2
-points += (b-cards)**2
+points += (b - cards)**2
 print(points)
-

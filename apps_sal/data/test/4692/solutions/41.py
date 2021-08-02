@@ -1,2 +1,2 @@
 h = int(input())
-print(48-h)
+print(48 - h)

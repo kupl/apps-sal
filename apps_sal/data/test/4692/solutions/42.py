@@ -1,2 +1,1 @@
-print((48-int(input())))
-
+print((48 - int(input())))

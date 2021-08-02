@@ -1,2 +1,2 @@
-m=int(input())
-print(24+24-m)
+m = int(input())
+print(24 + 24 - m)
