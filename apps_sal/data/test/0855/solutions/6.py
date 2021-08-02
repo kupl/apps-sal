@@ -37,4 +37,3 @@ while cr < k:
     a, b = al[a - 1][b - 1], bb[a - 1][b - 1]
 
 print(sa, sb)
-

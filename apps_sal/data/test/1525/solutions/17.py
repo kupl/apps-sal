@@ -21,4 +21,3 @@ for i in range(h):
                     next[j] += dp[j]
     dp = next
 print((dp[k - 1] % mod))
-

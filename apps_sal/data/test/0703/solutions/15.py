@@ -9,11 +9,11 @@ cnt = 0
 boxes = 0
 
 while cnt < a:
-    if k-1 <= b:
-        cnt += k*v
-        b -= k-1
+    if k - 1 <= b:
+        cnt += k * v
+        b -= k - 1
     elif b > 0:
-        cnt += (b+1)*v
+        cnt += (b + 1) * v
         b = 0
     else:
         cnt += v

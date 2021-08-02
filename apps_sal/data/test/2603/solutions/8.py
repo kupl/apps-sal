@@ -8,7 +8,7 @@ for _ in range(int(input())):
     flag = 0
     for i in range(N):
         if(List[i] != Sorted[i]):
-            if(gcd(List[i],Min) == Min):
+            if(gcd(List[i], Min) == Min):
                 continue
             else:
                 flag = 1

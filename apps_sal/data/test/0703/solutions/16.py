@@ -9,4 +9,3 @@ while a - v > 0:
         i = 1
         c += 1
 print(c)
-

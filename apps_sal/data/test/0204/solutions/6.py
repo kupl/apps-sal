@@ -16,4 +16,3 @@ if x * r > a or y * r > b:
     print(l)
 else:
     print(r)
-

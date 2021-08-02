@@ -1,31 +1,43 @@
+import sys
+import itertools
+import collections
+import decimal
+import numpy as np
+import math
 from bisect import bisect_left
 n, m = map(int, input().split())
-import math
-import numpy as np
-import decimal
-import collections
-import itertools
-import sys
+
+
 def find(x):
     if par[x] < 0:
         return x
     else:
         par[x] = find(par[x])
         return par[x]
+
+
 def unite(x, y):
     p = find(x)
     q = find(y)
     if p == q:
         return None
     if p > q:
-        p,q = q,p
+        p, q = q, p
     par[p] += par[q]
     par[q] = p
+
+
 def same(x, y):
     return find(x) == find(y)
+
+
 def size(x):
     return -par[find(x)]
+
+
 par = [-1 for i in range(n)]
+
+
 def prime_numbers(x):
     if x < 2:
         return []
@@ -39,6 +51,8 @@ def prime_numbers(x):
         for composite_number in range(2 * prime_number, x, prime_number):
             prime_numbers[composite_number] = 0
     return [prime_number for prime_number in prime_numbers if prime_number != 0]
+
+
 def is_prime(x):
     if x < 2:
         return False
@@ -54,17 +68,25 @@ def is_prime(x):
         prime_number += difference
         difference = 6 - difference
     return True
+
+
 BIT = [0] * (n + 1)
+
+
 def add(i, x):
     while i <= n:
         BIT[i] += x
         i += i & -i
+
+
 def query(i):
     s = 0
     while i > 0:
         s += BIT[i]
         i -= i & -i
     return s
+
+
 a = list(map(int, input().split()))
 a.sort(reverse=True)
 l, r = 0, 10 ** 6

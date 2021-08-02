@@ -1,20 +1,21 @@
+import bisect
 N, M = (int(i) for i in input().split())
 A = [int(i) for i in input().split()]
 A.sort(reverse=True)
-As = [0]*(N+1)
+As = [0] * (N + 1)
 for i in range(N):
-    As[i+1] = As[i] + A[i]
+    As[i + 1] = As[i] + A[i]
 A.reverse()
 
-import bisect
 
 def flag(x):
     ans = 0
     for i in range(N):
         a = x - A[i]
         res = bisect.bisect_left(A, a)
-        ans += (N-res)
+        ans += (N - res)
     return bool(ans >= M)
+
 
 def an(x):
     ans = 0
@@ -22,9 +23,9 @@ def an(x):
     for i in range(N):
         a = x - A[i]
         res = bisect.bisect_left(A, a)
-        m += (N-res)
-        ans += As[N-res]
-        ans += A[i] * (N-res)
+        m += (N - res)
+        ans += As[N - res]
+        ans += A[i] * (N - res)
     ans -= (m - M) * x
     return ans
 
@@ -35,7 +36,7 @@ high = 10**6
 while low <= high:
     mid = (low + high) // 2
     if flag(mid):
-        if not flag(mid+1):
+        if not flag(mid + 1):
             ans = mid
             break
         else:

@@ -12,7 +12,7 @@ if n % 3 != 0:
     hor = False
 else:
     c = "RGB"
-    used = {"R":False, "G":False, "B":False}
+    used = {"R": False, "G": False, "B": False}
     used[f[0][0]] = True
 
     cnt = 0
@@ -23,7 +23,7 @@ else:
     if not used[f[n // 3][0]]:
         used[f[n // 3][0]] = True
         if [f[n // 3][0] * m for i in range(n // 3)] == \
-           f[n // 3 : n // 3 * 2]:
+           f[n // 3: n // 3 * 2]:
             cnt += 1
 
     if not used[f[n // 3 * 2][0]]:
@@ -48,7 +48,7 @@ else:
             new_f[i] += f[j][i]
 
     c = "RGB"
-    used = {"R":False, "G":False, "B":False}
+    used = {"R": False, "G": False, "B": False}
     used[new_f[0][0]] = True
 
     cnt = 0
@@ -59,7 +59,7 @@ else:
     if not used[new_f[m // 3][0]]:
         used[new_f[m // 3][0]] = True
         if [new_f[m // 3][0] * n for i in range(m // 3)] == \
-           new_f[m // 3 : m // 3 * 2]:
+           new_f[m // 3: m // 3 * 2]:
             cnt += 1
 
     if not used[new_f[m // 3 * 2][0]]:

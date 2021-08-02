@@ -5,11 +5,11 @@ def gcd(a, b):
         b = x
     return a
 
+
 a, b, x, y = list(map(int, input().strip().split(' ')))
 
 d = gcd(x, y)
 x1 = x // d
 x2 = y // d
 
-print(min(a//x1, b//x2))
-
+print(min(a // x1, b // x2))

@@ -9,7 +9,7 @@ input = sys.stdin.readline
 
 
 def main():
-    N,M = list(map(int, input().split()))
+    N, M = list(map(int, input().split()))
     A = [int(i) for i in input().split()]
 
     A.sort()
@@ -21,7 +21,7 @@ def main():
 
         count = 0
         for a in A:
-            i = bisect_left(A, X-a)
+            i = bisect_left(A, X - a)
             count += (N - i)
 
         if count >= M:
@@ -33,7 +33,7 @@ def main():
     num = []
     append = num.append
     for a in A:
-        i = bisect_left(A, left-a)
+        i = bisect_left(A, left - a)
         count += (N - i)
         append(N - i)
 
@@ -47,5 +47,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

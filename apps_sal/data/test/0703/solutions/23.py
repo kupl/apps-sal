@@ -1,5 +1,5 @@
 otseki, nuts, raz, vmest = list(map(int, input().split()))
-maxbox = vmest*otseki
+maxbox = vmest * otseki
 boxes = 0
 curbox = vmest
 
@@ -14,4 +14,3 @@ while nuts > 0:
         boxes += 1
 #    print(nuts)
 print(boxes)
-

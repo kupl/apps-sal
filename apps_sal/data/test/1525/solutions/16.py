@@ -10,7 +10,8 @@ def main():
 
     for h in range(H):
         for bit in range(1 << (W - 1)):
-            if '11' in bin(bit): continue
+            if '11' in bin(bit):
+                continue
             toes = list(range(W))
             for j in range(W - 1):
                 if (bit >> j) & 1:
@@ -26,10 +27,11 @@ def __starting_point():
 
 # import sys
 # input = sys.stdin.readline
-# 
+#
 # sys.setrecursionlimit(10 ** 7)
-# 
+#
 # (int(x)-1 for x in input().split())
 # rstrip()
+
 
 __starting_point()

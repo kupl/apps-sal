@@ -47,4 +47,3 @@ for i, Ai in enumerate(A):
         amari = min(amari, A[i] + A[j])
 
 print((score - (cnt - M) * amari))
-

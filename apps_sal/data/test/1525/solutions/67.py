@@ -8,6 +8,7 @@ if W == 1:
     print(1)
     return
 
+
 @lru_cache(maxsize=None)
 def fib(width):
     if width < -1:
@@ -15,6 +16,7 @@ def fib(width):
     if width == -1:
         return 1
     return (fib(width - 1) + fib(width - 2)) % MOD
+
 
 dp = [0] * W
 dp[0] = 1

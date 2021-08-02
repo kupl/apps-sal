@@ -10,7 +10,7 @@ def f(x):
     # 幸福度がx未満となる組み合わせの個数を数える
     cnt = 0
     for ai in a:
-        cnt += bisect_left(a, x-ai)
+        cnt += bisect_left(a, x - ai)
     # 幸福度がx以上の組み合わせの個数がm未満かどうか
     return n * n - cnt < m
 
@@ -27,9 +27,8 @@ ans = 0
 cumsum = [0] + list(accumulate(a))
 j = 0
 for ai in a:
-    i = bisect_left(a, left-ai)
+    i = bisect_left(a, left - ai)
     j += n - i
     ans += ai * (n - i) + cumsum[-1] - cumsum[i]
 ans += (m - j) * left
 print(ans)
-

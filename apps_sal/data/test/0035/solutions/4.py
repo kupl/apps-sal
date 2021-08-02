@@ -2,18 +2,22 @@ n, m = list(map(int, input().split()))
 
 flag = []
 
+
 def letterwidth(i):
     res = flag[i][0]
     for item in flag[i]:
         if item != res:
             return None
     return res
+
+
 def letterheight(i):
     res = flag[0][i]
     for j in range(n):
         if flag[j][i] != res:
             return None
     return res
+
 
 for i in range(n):
     flag.append(input())
@@ -74,4 +78,3 @@ if(result):
     print("YES")
 else:
     print("NO")
-

@@ -17,4 +17,3 @@ if c > 0:
     res += c
 
 print(res)
-

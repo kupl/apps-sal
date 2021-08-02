@@ -16,7 +16,7 @@ y //= g
 l, r = 0, 10 ** 18 + 1
 while r - l > 1:
     m = (l + r) >> 1
-    
+
     if m * x <= a and m * y <= b:
         l = m
     else:

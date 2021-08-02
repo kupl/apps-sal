@@ -23,16 +23,16 @@ class Point:
         return Point(-self.x, -self.y)
 
     def __add__(self, other):
-        return Point(self.x+other.x, self.y+other.y)
+        return Point(self.x + other.x, self.y + other.y)
 
     def __sub__(self, other):
-        return self+(-other)
+        return self + (-other)
 
     def scalar_mul(self, mu):
-        return Point(mu*self.x, mu*self.y)
+        return Point(mu * self.x, mu * self.y)
 
     def int_divide(self, den):
-        return Point(self.x//den, self.y//den)
+        return Point(self.x // den, self.y // den)
 
 
 class Line:
@@ -47,10 +47,10 @@ class Line:
 
     @classmethod
     def between_two_points(cls, P, Q):
-        return cls(P.y-Q.y, Q.x-P.x, P.x*Q.y-P.y*Q.x)
+        return cls(P.y - Q.y, Q.x - P.x, P.x * Q.y - P.y * Q.x)
 
     def evaluate(self, P):
-        return self.a*P.x+self.b*P.y+self.c
+        return self.a * P.x + self.b * P.y + self.c
 
     def direction(self):
         if self.a == 0:
@@ -72,16 +72,16 @@ points = set()
 center = Point(0, 0)
 for i in range(n):
     row = input().split(" ")
-    cur = Point(int(row[0]), int(row[1])).scalar_mul(2*n)
+    cur = Point(int(row[0]), int(row[1])).scalar_mul(2 * n)
     center += cur
     points.add(cur)
 
 center = center.int_divide(n)
-dcenter = center+center
+dcenter = center + center
 
 sym_points_set = set()
 for p in points:
-    sym_points_set.add(dcenter-p)
+    sym_points_set.add(dcenter - p)
 nosym = list(points - sym_points_set)
 
 if len(nosym) == 0:
@@ -93,7 +93,7 @@ cnt = 0
 p0 = nosym[0]
 good_lines = set()
 for p in nosym:
-    m = (p+p0).int_divide(2)
+    m = (p + p0).int_divide(2)
     line = Line.between_two_points(m, center)
     distances = list(map(line.evaluate, nosym))
 
@@ -115,4 +115,3 @@ for p in nosym:
 print(len(good_lines))
 
 # This one is accepted on CF
-

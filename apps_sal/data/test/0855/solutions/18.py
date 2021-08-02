@@ -1,8 +1,10 @@
 import sys
 
+
 def log(s):
-#    print(s)
+    #    print(s)
     pass
+
 
 k, a, b = list(map(int, sys.stdin.readline().strip().split(' ')))
 alice = {}
@@ -20,8 +22,8 @@ for i in range(3):
     bob[(i + 1, 3)] = three
 
 score = {(1, 1): (0, 0), (2, 2): (0, 0), (3, 3): (0, 0),
-        (1, 2): (0, +1), (2, 3): (0, +1), (3, 1): (0, 1),
-        (2, 1): (1, 0), (3, 2): (1, 0), (1, 3): (1, 0)}
+         (1, 2): (0, +1), (2, 3): (0, +1), (3, 1): (0, 1),
+         (2, 1): (1, 0), (3, 2): (1, 0), (1, 3): (1, 0)}
 
 seen = []
 current = (a, b)
@@ -30,7 +32,7 @@ while current not in seen:
     current = (alice[current], bob[current])
 
 loop = seen.index(current)
-vals = [score[state] for state in seen] 
+vals = [score[state] for state in seen]
 
 a_point, b_point = (0, 0)
 a_vals, b_vals = list(zip(*vals))
@@ -44,8 +46,8 @@ b_loop_val = sum(b_vals[loop:])
 if k >= 0:
     tail = k % loop_len
     num_iters = k // loop_len
-    a_point += sum(a_vals[loop:loop+tail])
-    b_point += sum(b_vals[loop:loop+tail])
+    a_point += sum(a_vals[loop:loop + tail])
+    b_point += sum(b_vals[loop:loop + tail])
     a_point += num_iters * a_loop_val
     b_point += num_iters * b_loop_val
 
@@ -53,5 +55,3 @@ if k >= 0:
 log(a_point)
 log(b_point)
 print(round(a_point), round(b_point))
-
-

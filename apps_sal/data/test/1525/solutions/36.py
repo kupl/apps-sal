@@ -13,4 +13,3 @@ for h in range(H):
             dp[h + 1][w] += dp[h][w + 1] * h_lines[w] * h_lines[W - w - 2]
         dp[h + 1][w] %= MOD
 print((dp[H][K - 1]))
-

@@ -14,7 +14,7 @@ while a > 0:
     if b >= 0:
         if b < k:
             box['sep'] = b
-            box['place'] = b+1
+            box['place'] = b + 1
             b = 0
         elif b == 0:
             box['sep'] = 0
@@ -31,4 +31,3 @@ while a > 0:
     rezult += 1
 
 print(rezult)
-

@@ -20,4 +20,3 @@ for x in a:
     ans += b[t] + x * t
     cnt += t
 print((ans - (cnt - k) * l))
-

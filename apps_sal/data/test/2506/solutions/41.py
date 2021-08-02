@@ -2,6 +2,7 @@
 from bisect import bisect_left
 from itertools import accumulate
 
+
 def resolve():
     def getCount(x):
         cnt = 0
@@ -42,5 +43,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

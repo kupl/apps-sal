@@ -11,7 +11,9 @@ for分のj → NGパターンの列挙(隣へ繋がっているかつ、
 '''
 from collections import defaultdict
 h, w, k = map(int, input().split())
-memo = defaultdict(lambda:defaultdict(int))
+memo = defaultdict(lambda: defaultdict(int))
+
+
 def dfs(x, y):
     if y == h:
         if x == k - 1:
@@ -37,4 +39,6 @@ def dfs(x, y):
             ans %= 1000000000 + 7
     memo[x][y] = ans
     return ans
+
+
 print(dfs(0, 0))

@@ -13,10 +13,10 @@ while 1:
     else:
         nuts -= fit
         divisors -= divisors_per
-        
-    if nuts <= 0: break
-    else: boxes += 1
+
+    if nuts <= 0:
+        break
+    else:
+        boxes += 1
 
 print(boxes)
-    
-

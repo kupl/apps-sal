@@ -6,6 +6,8 @@ def judge(k, N, A):
             p -= 1
         t += (p + 1)
     return t
+
+
 def main():
     N, M = list(map(int, input().split()))
     A = list(map(int, input().split()))
@@ -14,7 +16,7 @@ def main():
     b = 0
     X = None
     while t - b > 1:
-        m = (t + b)//2
+        m = (t + b) // 2
         i = judge(m, N, A)
         if i == M:
             X = m
@@ -40,10 +42,11 @@ def main():
     p = N - 1
     k = sum(A)
     for i in A:
-        while p >= 0 and A[p] + i < X :
+        while p >= 0 and A[p] + i < X:
             k -= A[p]
             p -= 1
         r += i * (p + 1) + k
     return r - (judge(X, N, A) - M) * X
-print((main()))
 
+
+print((main()))

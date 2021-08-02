@@ -1,8 +1,8 @@
+from itertools import accumulate
+import bisect
 import sys
 input = sys.stdin.readline
 
-import bisect
-from itertools import accumulate
 
 N, M = [int(x) for x in input().split()]
 A = [int(x) for x in input().split()]
@@ -10,6 +10,7 @@ A.sort()
 
 left = -1
 right = 1 + 2 * 10 ** 5
+
 
 def shake(x):
     cnt = 0
@@ -19,6 +20,7 @@ def shake(x):
         return 1
     else:
         return 0
+
 
 while True:
     mid = (left + right) // 2
@@ -50,4 +52,3 @@ for j in A:
 happy += M * X
 
 print(happy)
-

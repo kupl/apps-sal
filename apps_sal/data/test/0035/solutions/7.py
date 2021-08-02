@@ -1,4 +1,5 @@
-import re, sys
+import re
+import sys
 
 n, m = list(map(int, input().split()))
 
@@ -7,8 +8,8 @@ d = s.split('\n')
 d.remove("")
 rgb = "RGB"
 f = True
-#print(s)
-#print(d)
+# print(s)
+# print(d)
 for c in rgb:
     t = re.findall(c + "+", d[0])
     if len(t) != 1 or len(t[0]) != m / 3:
@@ -35,4 +36,3 @@ if f:
     return
 
 print("NO")
-
