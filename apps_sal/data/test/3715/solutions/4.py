@@ -13,4 +13,3 @@ for i in range(1, x):
             a[i][j] = max(a[i - 1][:j] + a[i - 1][j + 1:]) + 1
 maxx = max(a[-1])
 print(x - maxx)
-

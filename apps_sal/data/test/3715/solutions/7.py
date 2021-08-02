@@ -16,4 +16,3 @@ for i in range(1, n):
         d[i][2] = min(d[i - 1][0], d[i - 1][1])
 
 print(min(d[-1]))
-

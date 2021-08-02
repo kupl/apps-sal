@@ -1,14 +1,16 @@
 
-from math import floor,sqrt
+from math import floor, sqrt
 from collections import Counter
 from functools import reduce
+
+
 def __starting_point():
-    a,b,c=list(map(int, input().split()))
+    a, b, c = list(map(int, input().split()))
     m = int(input())
 
-    mouse = {"USB":[], "PS/2":[]}
+    mouse = {"USB": [], "PS/2": []}
     for _ in range(m):
-        p,m = input().strip().split()
+        p, m = input().strip().split()
         mouse[m].append(int(p))
 
     for m in list(mouse.keys()):
@@ -30,12 +32,12 @@ def __starting_point():
             break
 
     for k in range(c):
-        A = ( a < len(mouse["USB"]) )
-        B = ( b < len(mouse["PS/2"]))
+        A = (a < len(mouse["USB"]))
+        B = (b < len(mouse["PS/2"]))
 
         if A:
             if B:
-                if mouse["USB"][a] < mouse ["PS/2"][b]:
+                if mouse["USB"][a] < mouse["PS/2"][b]:
                     price = mouse["USB"][a]
                     a += 1
                 else:
@@ -57,7 +59,6 @@ def __starting_point():
                 break
 
     print(str(equipped) + "  " + str(cost))
-
 
 
 __starting_point()

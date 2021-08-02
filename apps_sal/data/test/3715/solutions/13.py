@@ -9,9 +9,9 @@ from array import array
 def solve(days):
     rest_num = 0
     prev_act = 0
-    for i in range(0, len(days)-1):
+    for i in range(0, len(days) - 1):
         cur_act = days[i]
-        next_act = days[i+1]
+        next_act = days[i + 1]
         # stdout.write(str(cur_act))
         if cur_act == 0 or prev_act == cur_act:
             prev_act = 0
@@ -34,12 +34,13 @@ def __starting_point():
     days = []
     if use_stdio:
         length = int(stdin.readline())
-        days = array('i', list(map(int, stdin.readline().split()))+[3])
+        days = array('i', list(map(int, stdin.readline().split())) + [3])
         stdout.write(str(solve(days)))
     else:
         with open('input', 'r') as fin, open('output', 'w') as fout:
             length = int(fin.readline())
-            days = array('i', list(map(int, fin.readline().split()))+[3])
+            days = array('i', list(map(int, fin.readline().split())) + [3])
             fout.write(str(solve(days)))
+
 
 __starting_point()

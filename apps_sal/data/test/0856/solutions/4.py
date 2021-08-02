@@ -8,4 +8,3 @@ for _ in range(T):
         m = max(A)
         A = [m - a for a in A]
     print(*A)
-

@@ -11,10 +11,10 @@ def gcd(m, n):
 def search(x, y):
     while True:
         if x == 1:
-            ans.extend( [] if y == 1 else (str(y - 1) + 'B') )
+            ans.extend([] if y == 1 else (str(y - 1) + 'B'))
             return
         if y == 1:
-            ans.extend( [] if x == 1 else (str(x - 1) + 'A') )
+            ans.extend([] if x == 1 else (str(x - 1) + 'A'))
             return
         if x < y:
             ans.append(str(y // x) + 'B')
@@ -23,13 +23,14 @@ def search(x, y):
             ans.append(str(x // y) + 'A')
             x, y = x % y, y
 
-a, b = [ int(i) for i in input().split() ]
+
+a, b = [int(i) for i in input().split()]
 
 if gcd(a, b) != 1:
     print("Impossible")
 else:
     ans = []
     search(a, b)
-    
+
     i, length = 0, len(ans)
     print(''.join(ans))

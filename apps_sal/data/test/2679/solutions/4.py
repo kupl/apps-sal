@@ -22,8 +22,7 @@ b = get(a)
 c = get(a[::-1])[::-1]
 
 maxi = -float('inf')
-for i in range(n-1):
-    maxi = max(maxi, b[i] + c[i+1])
+for i in range(n - 1):
+    maxi = max(maxi, b[i] + c[i + 1])
 
 print(maxi)
-

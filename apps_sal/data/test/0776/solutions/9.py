@@ -1,6 +1,7 @@
 def list_from_input():
     return list(map(int, input().split()))
 
+
 class Mouse:
     def __init__(self, price, type):
         self.type = type
@@ -39,12 +40,7 @@ def main():
             purchase_amount += mouse.price
             pc_with_mouses += 1
 
-
     print(pc_with_mouses, purchase_amount)
 
+
 main()
-
-
-
-
-

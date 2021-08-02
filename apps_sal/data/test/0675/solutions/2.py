@@ -7,6 +7,7 @@ result = 0
 current = collections.deque()
 used = set()
 
+
 def main():
     nonlocal result, current
     for ghost in w:
@@ -27,5 +28,5 @@ def main():
         current = collections.deque(sorted(current))
     print(result)
 
-main()
 
+main()

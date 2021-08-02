@@ -19,4 +19,3 @@ for i in range(n):
     best = nx_best[:]
 
 print(n - max(best))
-

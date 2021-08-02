@@ -1,4 +1,4 @@
-(u,p,b) = tuple(map(int,input().split()))
+(u, p, b) = tuple(map(int, input().split()))
 n = int(input())
 equiped = 0
 fullPrice = 0
@@ -13,53 +13,53 @@ for k in range(n):
 
 arrusb.sort()
 arrpc2.sort()
-bcounter=0
-pcounter=0
+bcounter = 0
+pcounter = 0
 
 for i in range(n):
-    if bcounter==len(arrusb):
+    if bcounter == len(arrusb):
         if p > 0:
-            fullPrice+=arrpc2[pcounter]
+            fullPrice += arrpc2[pcounter]
             p -= 1
             equiped += 1
         elif b > 0:
             fullPrice += arrpc2[pcounter]
             b -= 1
             equiped += 1
-        pcounter+=1
+        pcounter += 1
         continue
 
     if pcounter == len(arrpc2):
         if u > 0:
-            fullPrice+=arrusb[bcounter]
-            u-=1
-            equiped+=1
+            fullPrice += arrusb[bcounter]
+            u -= 1
+            equiped += 1
         elif b > 0:
-            fullPrice+=arrusb[bcounter]
-            b-=1
-            equiped+=1
-        bcounter+=1
+            fullPrice += arrusb[bcounter]
+            b -= 1
+            equiped += 1
+        bcounter += 1
         continue
 
     if arrusb[bcounter] < arrpc2[pcounter]:
         if u > 0:
-            fullPrice+=arrusb[bcounter]
-            u-=1
-            equiped+=1
+            fullPrice += arrusb[bcounter]
+            u -= 1
+            equiped += 1
         elif b > 0:
-            fullPrice+=arrusb[bcounter]
-            b-=1
-            equiped+=1
-        bcounter+=1
+            fullPrice += arrusb[bcounter]
+            b -= 1
+            equiped += 1
+        bcounter += 1
     else:
         if p > 0:
-            fullPrice+=arrpc2[pcounter]
+            fullPrice += arrpc2[pcounter]
             p -= 1
             equiped += 1
         elif b > 0:
             fullPrice += arrpc2[pcounter]
             b -= 1
             equiped += 1
-        pcounter+=1
+        pcounter += 1
 
 print(str(equiped) + ' ' + str(fullPrice))

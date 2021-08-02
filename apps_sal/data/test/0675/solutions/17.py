@@ -16,4 +16,3 @@ for j in range(len(arrival)):
         print('-1')
         return
 print(len(burn))
-

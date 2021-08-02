@@ -7,6 +7,7 @@ def gcd(m, n):
         r = m % n
     return n
 
+
 def search(x, y):
     nonlocal ans
     while True:
@@ -23,7 +24,8 @@ def search(x, y):
             ans = ans + str(x // y) + 'A'
             x, y = x % y, y
 
-a, b = [ int(i) for i in input().split() ]
+
+a, b = [int(i) for i in input().split()]
 
 if gcd(a, b) != 1:
     print("Impossible")
