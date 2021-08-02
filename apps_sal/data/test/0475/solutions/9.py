@@ -8,4 +8,3 @@ ans = ans * m % 998244353
 for i in range(k):
     ans = ans * (m - 1) % 998244353
 print(ans)
-

@@ -1,8 +1,10 @@
 # IAWT
 l, r, x, y, k = list(map(int, input().split()))
+
+
 def f():
     for i in range(x, y + 1):
-        n = i*k
+        n = i * k
         if l <= n <= r:
             print("YES")
             return
@@ -11,6 +13,6 @@ def f():
             return
     print("NO")
     return
+
+
 f()
-
-

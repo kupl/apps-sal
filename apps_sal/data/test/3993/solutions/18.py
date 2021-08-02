@@ -14,4 +14,3 @@ while len(ps) > ind:
     shift += ds
 
 print(res)
-

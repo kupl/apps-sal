@@ -8,7 +8,7 @@ from copy import copy, deepcopy
 class Solver:
     def __init__(self):
         pass
-    
+
     def solve(self):
         n, k = list(map(int, input().split()))
         q = list([int(x) - 1 for x in input().split()])
@@ -46,17 +46,17 @@ class Solver:
                 degs[e] -= 1
                 if degs[e] == 0:
                     nq.append(e)
-        #print(nq)
+        # print(nq)
         if len(q) != len(nq):
             print(-1)
             return
         print(len(nq))
         print(' '.join([str(x + 1) for x in nq]))
-        
 
 
 def __starting_point():
     s = Solver()
     s.solve()
+
 
 __starting_point()

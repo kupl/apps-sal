@@ -29,18 +29,19 @@ def find_courses_sequence(member_of_node, find_nodes, edges):
 
 def __starting_point():
     n, k = map(int, input().split())
-    main_courses = [int(c)-1 for c in input().split()]
+    main_courses = [int(c) - 1 for c in input().split()]
     courses = dict()
     for index in range(n):
-        courses[index] = [int(d)-1 for d in input().split()[1:]]
+        courses[index] = [int(d) - 1 for d in input().split()[1:]]
 
     result = find_courses_sequence(n, main_courses, courses)
 
     if result:
         print(len(result))
         for v in result:
-            print(v+1, end=" ")
+            print(v + 1, end=" ")
     else:
         print(-1)
+
 
 __starting_point()

@@ -1,6 +1,8 @@
-import sys, random
+import sys
+import random
 from bisect import bisect_left, bisect_right
 input = sys.stdin.readline
+
 
 def main():
     inf = 10 ** 20
@@ -8,11 +10,11 @@ def main():
     t = int(input())
 #    t, a, b = map(int, input().split())
 #    t = 1
-    
-    for _ in range(1, t+1):
-    #    print("Case #{}: ".format(_), end = '')
+
+    for _ in range(1, t + 1):
+        #    print("Case #{}: ".format(_), end = '')
         n = int(input())
-        
+
         total = 1
         plus = 1
         ans = []
@@ -34,5 +36,6 @@ def main():
                 total += plus
         print(len(ans))
         print(' '.join(map(str, ans)))
-        
+
+
 main()

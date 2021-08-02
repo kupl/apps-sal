@@ -34,6 +34,3 @@ if a + b <= n:
 if 2 * a <= n:
     result = min(4, result)
 print(result)
-
-
-

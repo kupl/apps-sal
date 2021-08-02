@@ -9,4 +9,3 @@ R = min(r, k * y)
 L = ceil(L / k)
 R = floor(R / k)
 print('YES' if R >= L else 'NO')
-

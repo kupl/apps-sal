@@ -18,7 +18,9 @@ def woodenBarNum(n, a, b):
                 remWood = n
             remWood -= b
     return numWood
+
+
 n = int(input())
 a = int(input())
 b = int(input())
-print(woodenBarNum(n,a,b))
+print(woodenBarNum(n, a, b))

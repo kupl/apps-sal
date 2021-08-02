@@ -1,4 +1,4 @@
-n,m,k = list(map(int,input().split()))
+n, m, k = list(map(int, input().split()))
 P = [int(x) for x in input().split()]
 P.reverse()
 
@@ -17,7 +17,7 @@ while P:
 
     nxt = P[-1]
     togo = nxt - i
-    skip = togo//k*k
+    skip = togo // k * k
     i += skip
 
     space = k
@@ -33,4 +33,3 @@ while P:
         space = special
 
 print(ops)
-

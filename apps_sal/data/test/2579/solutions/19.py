@@ -1,16 +1,15 @@
-l,r,x,y,k = list(map(int,input().split()))
-
-
+l, r, x, y, k = list(map(int, input().split()))
 
 
 def samt(n):
-    if k*n > r:
+    if k * n > r:
         return 1
-    if k*n < l:
+    if k * n < l:
         return -1
     return 0
 
-av , ox = x, y
+
+av, ox = x, y
 
 while av < ox + 1:
     n = (av + ox) // 2
@@ -31,6 +30,3 @@ if found:
     print("YES")
 else:
     print("NO")
-
-
-

@@ -6,7 +6,7 @@
 3 3 0
 '''
 n, m, k = list(map(int, input().split()))
-MOD  = 998244353
+MOD = 998244353
 ans = m * pow(m - 1, k, MOD) % MOD
 '''
 for i in range(k + 1):
@@ -18,14 +18,13 @@ for i in range(k + 1):
 
 
 for i in range(n - k, n):
-	ans = ans * i
+    ans = ans * i
 for i in range(n - k, n):
-	# print(n - 1 - i)
-	ans = ans // (n - i)
+    # print(n - 1 - i)
+    ans = ans // (n - i)
 '''
 for i in range(1, k + 1):
 	print(ans)
 	ans = ans * (n - 1 - i) * pow(i, MOD - 2, MOD) % MOD
 '''
 print(ans % MOD)
-

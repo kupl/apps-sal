@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def read_int():
     return int(input())
 
@@ -31,7 +32,7 @@ for case_num in range(t):
             p = delta - 2 * k
             history.append(k)
             history.append(p)
-            weight = n  
+            weight = n
         if weight == n:
             break
     print(day)

@@ -26,4 +26,3 @@ for _ in range(t):
             res[i] = ans[i + 1] - ans[i]
         print(b - 1)
         print(' '.join(map(str, res)))
-
