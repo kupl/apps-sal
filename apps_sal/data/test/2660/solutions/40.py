@@ -50,4 +50,3 @@ ans = '\n'.join(
 
 # 出力
 print(ans)
-

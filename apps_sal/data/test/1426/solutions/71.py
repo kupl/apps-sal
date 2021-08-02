@@ -1,21 +1,21 @@
 from collections import deque
 INF = 10**9
 
-N, M = map(int,input().split())
+N, M = map(int, input().split())
 
-G = [[] for _ in range(3*N)]
+G = [[] for _ in range(3 * N)]
 for _ in range(M):
-    u, v = map(int,input().split())
-    u, v = u-1, v-1
+    u, v = map(int, input().split())
+    u, v = u - 1, v - 1
 
-    G[u].append(v+N)
-    G[u+N].append(v+2*N)
-    G[u+2*N].append(v)
+    G[u].append(v + N)
+    G[u + N].append(v + 2 * N)
+    G[u + 2 * N].append(v)
 
-s, t = map(int,input().split())
-s, t = s-1, t-1
+s, t = map(int, input().split())
+s, t = s - 1, t - 1
 
-dist = [INF] * (3*N)
+dist = [INF] * (3 * N)
 dist[s] = 0
 
 Q = deque([s])
@@ -28,5 +28,5 @@ while len(Q) > 0:
 
 if dist[t] == INF:
     print(-1)
-else: 
+else:
     print(dist[t] // 3)

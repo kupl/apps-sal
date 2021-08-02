@@ -24,4 +24,3 @@ while dq:
 
 ans = d[t] // 3
 print(ans)
-

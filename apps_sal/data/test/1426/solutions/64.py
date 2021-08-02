@@ -30,4 +30,3 @@ for _ in range(M):
     g[a].append(b)
 S, T = [int(x) - 1 for x in input().split()]
 print((bfs()))
-

@@ -27,4 +27,3 @@ while q:
     phase = (phase + 1) % 3
     q = nextq
 print((-1))
-

@@ -11,11 +11,11 @@ last = n
 ans = 0
 
 for p, i in other:
-	if i > last:
-		continue
-	ans += sum(a for a, pp in vals[i:last]) * p
-	last = i
-	if last == 0:
-		break
+    if i > last:
+        continue
+    ans += sum(a for a, pp in vals[i:last]) * p
+    last = i
+    if last == 0:
+        break
 
 print(ans)

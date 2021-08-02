@@ -42,4 +42,3 @@ ans = bfs(s)
 if ans > 0:
     ans //= 3
 print(ans)
-

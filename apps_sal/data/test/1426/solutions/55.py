@@ -21,4 +21,3 @@ while q:
         dist[nv][nr] = dist[v][r] + 1
         q.append((nv, nr))
 print((dist[T][0] // 3))
-

@@ -8,7 +8,7 @@ heapq.heapify(A_right)
 
 B_sum = 0
 for _ in range(Q):
-    query = list(map(int,input().split()))
+    query = list(map(int, input().split()))
 
     if query[0] == 1:
         now = query[1]
@@ -36,5 +36,4 @@ for _ in range(Q):
     else:
         m = -A_left[0]
         ans = len(A_left) * m - A_left_sum - len(A_right) * m + A_right_sum + B_sum
-        print(("{0} {1}".format(m,ans)))
-
+        print(("{0} {1}".format(m, ans)))

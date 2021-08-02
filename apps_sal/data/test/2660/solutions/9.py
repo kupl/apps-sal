@@ -26,7 +26,7 @@ for query in querys:
             else:
                 heappush(PQR, a)
                 c = heappop(PQR)
-                sumR += a-c
+                sumR += a - c
                 heappush(PQL, -c)
                 sumL += c
                 numL += 1
@@ -34,7 +34,7 @@ for query in querys:
             if a < -PQL[0]:
                 heappush(PQL, -a)
                 c = -heappop(PQL)
-                sumL += a-c
+                sumL += a - c
                 heappush(PQR, c)
                 sumR += c
                 numR += 1
@@ -45,8 +45,7 @@ for query in querys:
 
     else:  # 求値
         x = -PQL[0]
-        fx = numL*x - sumL + sumR - numR*x + sumB
+        fx = numL * x - sumL + sumR - numR * x + sumB
         anss.append((x, fx))
 
-print(('\n'.join([str(x[0])+' '+str(x[1]) for x in anss])))
-
+print(('\n'.join([str(x[0]) + ' ' + str(x[1]) for x in anss])))

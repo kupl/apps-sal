@@ -15,7 +15,7 @@ PATH = [[] for _ in range(N + 1)]
 for u, v in UV:
     PATH[u].append(v)
 
-dist = [[-1] * 3 for _ in range(N+1)]
+dist = [[-1] * 3 for _ in range(N + 1)]
 
 q = deque()
 q.append((S, 0))
@@ -39,4 +39,3 @@ else:
     ans = dist[T][0] // 3
 
 print(ans)
-

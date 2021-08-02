@@ -23,8 +23,7 @@ def averageSleepTime():
     for i in range(k, n):
         run = run - sleep[i - k] + sleep[i]
         runavg.append(run)
-    print('{:.10f}'.format(sum(runavg)/(n-k+1)))
+    print('{:.10f}'.format(sum(runavg) / (n - k + 1)))
 
 
 averageSleepTime()
-

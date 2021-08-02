@@ -35,4 +35,3 @@ if check(k, aas, bs, a_total % k, b_total % k):
     print(ans + 1)
 else:
     print(ans)
-

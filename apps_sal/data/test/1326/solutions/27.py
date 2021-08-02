@@ -6,4 +6,3 @@ for i in range(1, n + 1):
     m = n // i
     ans += i * ((m + 1) * m) // 2
 print(ans)
-

@@ -10,6 +10,9 @@ def solve():
         ans += (a[i] - a[i - k]) / (n - k + 1)
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

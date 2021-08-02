@@ -8,5 +8,5 @@ for i in range(n):
     v = [int(x) for x in line.split()]
     if(v[1] < menor):
         menor = v[1]
-    sum += menor*v[0]
+    sum += menor * v[0]
 print(sum)

@@ -11,7 +11,8 @@ def bfs(g, N, s, t):
         v = dq.popleft()
         d = dist[v]
         for u in g[v]:
-            if ~dist[u]: continue
+            if ~dist[u]:
+                continue
             dist[u] = d + 1
             if u == t:
                 return dist[t] // 3  # TLEしたので解を見つけたら即returnに変えた
@@ -41,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

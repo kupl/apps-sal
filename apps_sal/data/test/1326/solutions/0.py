@@ -3,6 +3,8 @@ read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 #import numpy as np
+
+
 def main():
     n = int(input())
     if n == 1:
@@ -14,7 +16,9 @@ def main():
         r += num_of_div * (num_of_div + 1) // 2 * i1
     print(r)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

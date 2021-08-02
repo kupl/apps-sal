@@ -27,7 +27,7 @@ for i in range(M):
 
 S, T = list(map(int, input().split()))
 q = deque([[S, 0]])
-visited = [[False]*3 for _ in range(N+1)]
+visited = [[False] * 3 for _ in range(N + 1)]
 visited[S][0] = True
 ans = -1
 while q:
@@ -37,6 +37,5 @@ while q:
         break
     l = kenkenpa(u, visited)
     for v in l:
-        q.append([v, c+1])
+        q.append([v, c + 1])
 print(ans)
-

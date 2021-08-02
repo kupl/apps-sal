@@ -1,10 +1,10 @@
 n = int(input())
 a, p = [], []
 for _ in range(n):
-    x,y = map(int, input().split())
+    x, y = map(int, input().split())
     a.append(x)
     p.append(y)
-    
+
 cur_min = float('inf')
 cost = 0
 

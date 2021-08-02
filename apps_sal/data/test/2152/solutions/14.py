@@ -23,4 +23,6 @@ def __starting_point():
     total += curr_p * curr
 
     print(total)
+
+
 __starting_point()

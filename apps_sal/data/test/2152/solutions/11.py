@@ -7,5 +7,3 @@ for i in range(n - 1):
     minpref = min(minpref, p)
     ans += a * minpref
 print(ans)
-    
-

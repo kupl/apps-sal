@@ -7,4 +7,3 @@ for i in range(n - k):
     s = s + a[i + k] - a[i]
     ans += s / (n - k + 1)
 print(ans)
-

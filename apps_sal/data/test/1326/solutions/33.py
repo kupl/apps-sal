@@ -12,4 +12,3 @@ def solve(N):
 
 N = int(input())
 print((solve(N)))
-

@@ -1,7 +1,9 @@
+import numba
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-import numba
+
+
 def main():
     @numba.njit
     def solve(n):
@@ -16,4 +18,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

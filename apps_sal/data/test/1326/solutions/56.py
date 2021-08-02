@@ -1,6 +1,8 @@
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
+
+
 def main():
     n = int(input())
     if n == 1:
@@ -15,4 +17,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

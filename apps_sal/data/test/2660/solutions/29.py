@@ -1,8 +1,8 @@
 import numpy as np
 import heapq
 Q = int(input())
-Qinit = list(map(int,input().split()))
-Qlist = [list(map(int,input().split())) for i in range(Q-1)]
+Qinit = list(map(int, input().split()))
+Qlist = [list(map(int, input().split())) for i in range(Q - 1)]
 
 #coef_list = []
 intercept = Qinit[2]
@@ -23,9 +23,9 @@ for query in Qlist:
         if cent_list == []:
             if median > source:
                 heapq.heappush(left_list, -source)
-                left_sum += source #
+                left_sum += source
                 tmp = -heapq.heappop(left_list)
-                left_sum -= tmp #
+                left_sum -= tmp
                 cent_list.append(tmp)
             elif right_list[0] > source:
                 cent_list.append(source)
@@ -53,7 +53,6 @@ for query in Qlist:
             count += 1
 
     else:
-        minval = np.abs(left_sum-count*median) + np.abs(right_sum-count*median) + intercept
+        minval = np.abs(left_sum - count * median) + np.abs(right_sum - count * median) + intercept
         #print(str(median) + " " + str(minval))
         print(("{} {}".format(median, minval)))
-
