@@ -5,4 +5,3 @@ while a >= b:
     ans += f
     a = a % b + f
 print(ans)
-

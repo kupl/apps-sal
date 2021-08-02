@@ -3,14 +3,14 @@ from sys import stdin
 
 n = int(stdin.readline())
 
-a = list(map(int,stdin.readline().split()))
+a = list(map(int, stdin.readline().split()))
 
 q = int(stdin.readline())
 
-lis = [0] * (10**5+10)
+lis = [0] * (10**5 + 10)
 
 four = 0
-two  = 0
+two = 0
 
 for i in a:
     lis[i] += 1
@@ -22,7 +22,7 @@ for i in a:
 
 for loop in range(q):
 
-    c,l = stdin.readline().split()
+    c, l = stdin.readline().split()
     l = int(l)
 
     if c == "+":
@@ -40,7 +40,6 @@ for loop in range(q):
         lis[l] -= 1
 
     if four >= 1 and two >= 4:
-        print ("YES")
+        print("YES")
     else:
-        print ("NO")
-
+        print("NO")

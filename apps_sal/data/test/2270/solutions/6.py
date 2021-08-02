@@ -1,6 +1,8 @@
 from collections import defaultdict
 
 spc = {2: 0, 4: 0, 6: 0, 8: 0}
+
+
 def handle(is_plus, x):
     if is_plus:
         counts[x] += 1
@@ -10,8 +12,9 @@ def handle(is_plus, x):
     else:
         counts[x] -= 1
         for v in [2, 4, 6, 8]:
-            if counts[x] == v-1:
+            if counts[x] == v - 1:
                 spc[v] -= 1
+
 
 n = int(input())
 
@@ -26,8 +29,8 @@ q = int(input())
 for _ in range(q):
     c, x = input().split()
     x = int(x)
-    
-    handle(c=="+", x)
+
+    handle(c == "+", x)
     if spc[8] >= 1:
         print("YES")
     elif spc[6] >= 1 and spc[2] >= 2:
@@ -38,4 +41,3 @@ for _ in range(q):
         print("YES")
     else:
         print("NO")
-

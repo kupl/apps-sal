@@ -14,4 +14,3 @@ else:
         pre = h
     else:
         print("Yes")
-

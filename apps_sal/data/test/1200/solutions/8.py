@@ -1,22 +1,22 @@
 def gcd(a, b):
 
-	while a != 0 and b != 0:
+    while a != 0 and b != 0:
 
-		if b > a:
-	
-			b = b % a
-	
-		else:
+        if b > a:
 
-			a = a % b
+            b = b % a
 
-	if a == 0:
+        else:
 
-		return b
+            a = a % b
 
-	else:
-		
-		return a
+    if a == 0:
+
+        return b
+
+    else:
+
+        return a
 
 
 n = int(input())
@@ -26,16 +26,16 @@ a = input()
 a = a.split()
 
 for i in range(len(a)):
-	
-	a[i] = int(a[i])
+
+    a[i] = int(a[i])
 
 a = sorted(a)
 
 b = a[1] - a[0]
 
 for i in range(0, len(a) - 1):
-	
-	b = gcd(b, a[i + 1] - a[i])
+
+    b = gcd(b, a[i + 1] - a[i])
 
 cnt = (a[len(a) - 1] - a[0]) // b + 1
 

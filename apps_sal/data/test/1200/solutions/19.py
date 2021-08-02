@@ -12,4 +12,4 @@ for i in range(n - 2):
 
 for i in range(n - 1):
     cou = int(cou + (node[i + 1] - node[i]) / l - 1)
-print (cou)
+print(cou)

@@ -20,6 +20,7 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
 

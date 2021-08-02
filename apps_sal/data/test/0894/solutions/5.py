@@ -12,4 +12,3 @@ else:
         print(-absl, 0, 0, absl)
     else:
         print(-absl, 0, 0, -absl)
-

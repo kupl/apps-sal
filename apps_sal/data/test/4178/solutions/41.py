@@ -48,7 +48,7 @@ def resolve():
     mx = H[0]
     ans = "Yes"
     for h in H[1:]:
-        if h < mx-1:
+        if h < mx - 1:
             ans = "No"
             break
         mx = max(mx, h)
@@ -59,5 +59,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

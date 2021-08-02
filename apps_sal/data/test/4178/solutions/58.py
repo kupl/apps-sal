@@ -1,8 +1,8 @@
 N = int(input())
-H = list(map(int,input().split()))
+H = list(map(int, input().split()))
 can = True
 
-for i in reversed(range(1,N)):
+for i in reversed(range(1, N)):
     if H[i - 1] - 1 == H[i]:
         H[i - 1] -= 1
     elif H[i - 1] - 1 > H[i]:

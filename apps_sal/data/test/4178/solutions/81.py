@@ -29,4 +29,3 @@ for h in h_list:
         flag = False
 
 print("Yes")
-

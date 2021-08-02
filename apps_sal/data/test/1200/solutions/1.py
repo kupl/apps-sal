@@ -4,6 +4,8 @@ def gcd(a, b):
     if b == 0:
         return a
     return gcd(b, a % b)
+
+
 n = int(input())
 a = input().split()
 for i in range(0, n):
@@ -12,4 +14,4 @@ a = sorted(a)
 d = 0
 for i in range(1, n):
     d = gcd(d, a[i] - a[i - 1])
-print(int((a[n-1] - a[0]) / d - n + 1))
+print(int((a[n - 1] - a[0]) / d - n + 1))

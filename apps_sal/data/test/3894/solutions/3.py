@@ -21,6 +21,4 @@ for a in f():
 print('Kevin' if s else 'Nicky')
 
 
-
 # Made By Mostafa_Khaled
-

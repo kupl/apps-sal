@@ -5,7 +5,7 @@ flg = True
 hmax = hl[0]
 for h in hl:
     hmax = max(hmax, h)
-    if h >= hmax-1:
+    if h >= hmax - 1:
         continue
     else:
         flg = False

@@ -1,11 +1,14 @@
 def vector(a, b, c, d):
     return([c - a, d - b])
 
+
 def cross_product(a, b):
     return(a[0] * b[1] - a[1] * b[0])
 
+
 def dot_product(a, b):
     return(a[0] * b[0] + a[1] * b[1])
+
 
 def bin_search(lo, hi):
     while (hi - lo > 1):
@@ -15,7 +18,7 @@ def bin_search(lo, hi):
         else:
             lo = mid
     return(hi)
-            
+
 
 x, y = list(map(int, input().split()));
 EPS = 1e-9

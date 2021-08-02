@@ -22,4 +22,3 @@ for i in range(1, n):
     count += (a[i] - a[i - 1]) // min_ - 1
 
 print(count)
-
