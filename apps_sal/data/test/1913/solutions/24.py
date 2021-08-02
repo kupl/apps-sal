@@ -1,6 +1,7 @@
 input()
 numbers = input().split()
 
+
 def is_non_beautiful(x):
     cnt_one = 0
     for c in x:
@@ -11,6 +12,8 @@ def is_non_beautiful(x):
         if cnt_one > 1:
             return True
     return False
+
+
 non_beautiful = ""
 zero_count = 0
 for x in numbers:
@@ -23,7 +26,6 @@ for x in numbers:
         zero_count += x.count("0")
 
 if non_beautiful == "":
-    print("1" + "0"*zero_count)
+    print("1" + "0" * zero_count)
 else:
-    print(non_beautiful + "0"*zero_count)
-
+    print(non_beautiful + "0" * zero_count)

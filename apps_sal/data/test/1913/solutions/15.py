@@ -17,4 +17,3 @@ for num_str in L:
         x = num_str
 
 print(x + '0' * zeros)
-

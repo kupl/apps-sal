@@ -21,5 +21,3 @@ for i in range(2 * n):
         e2 -= 1
     maxi = max(maxi, min(e1, e2))
 print(maxi * 2)
-        
-

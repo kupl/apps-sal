@@ -5,7 +5,8 @@ ugly = '1'
 for s in input().split():
     if s == '0':
         print('0')
-        import sys; return
+        import sys
+        return
     beautiful = True
     ones = 0
     for ch in s:
@@ -23,4 +24,3 @@ for s in input().split():
         ugly = s
 
 print(ugly + zeros * '0')
-

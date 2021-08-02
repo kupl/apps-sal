@@ -3,22 +3,22 @@
 
 import time
 
-n     = int(input())
-bm    = {}
-em    = {}
-bf    = {}
-ef    = {}
-a     = []
+n = int(input())
+bm = {}
+em = {}
+bf = {}
+ef = {}
+a = []
 
 for i in range(n):
     (s, b, e) = (i for i in input().split())
     b = int(b)
-    e = int(e)+1
+    e = int(e) + 1
 
     a.append(b)
     a.append(e)
 
-    if s =='M':
+    if s == 'M':
         if b in list(bm.keys()):
             bm[b] += 1
         else:
@@ -44,8 +44,8 @@ start = time.time()
 a = sorted(list(set(a)))
 
 ans = 0
-nf  = 0
-nm  = 0
+nf = 0
+nm = 0
 
 for i in a:
     if i in list(bm.keys()):
@@ -59,10 +59,9 @@ for i in a:
 
     t = min(nf, nm)
 
-    if ans < 2*t:
-        ans = 2*t
+    if ans < 2 * t:
+        ans = 2 * t
 
 print(ans)
 finish = time.time()
 #print(finish - start)
-

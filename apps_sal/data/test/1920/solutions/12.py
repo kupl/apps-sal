@@ -7,13 +7,11 @@ for i in range(n):
     l = int(l)
     r = int(r)
     if x == 'M':
-        for j in range(l-1, r):
+        for j in range(l - 1, r):
             m[j] += 1
     else:
-        for j in range(l-1, r):
+        for j in range(l - 1, r):
             f[j] += 1
 for i in range(366):
     res = max(res, min(m[i], f[i]))
 print(res * 2)
-
-

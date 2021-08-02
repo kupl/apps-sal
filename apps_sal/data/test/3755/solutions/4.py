@@ -11,20 +11,19 @@ else:
 oe = int(evn < odd)
 res = []
 beg = 0
-while beg%2!=oe or a[beg]<0:
+while beg % 2 != oe or a[beg] < 0:
     res.append(1)
     beg += 1
-end = n-1
-while end%2!=oe or a[end]<0:
-    res.append(end-beg+1)
+end = n - 1
+while end % 2 != oe or a[end] < 0:
+    res.append(end - beg + 1)
     end -= 1
 while beg < end:
-    if a[end-2] < 0:
-        res.append(end-beg-1)
+    if a[end - 2] < 0:
+        res.append(end - beg - 1)
     else:
-        res.append(end-beg)
+        res.append(end - beg)
     end -= 2
 print((len(res)))
 for i in res:
     print(i)
-

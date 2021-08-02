@@ -27,13 +27,13 @@ class Relative:
         l, s = self.n, 3
         inp = (" ".join(uinput() for i in range(l))).split()
         self.numm = [[(int(inp[i]) if j != 0 else inp[i] == 'M')
-                     for i in range(j, l*s, s)] for j in range(s)]
+                     for i in range(j, l * s, s)] for j in range(s)]
         self.nums, self.numa, self.numb = self.numm
 
         self.dts = []
         for i in range(self.n):
             self.dts.append((self.numa[i], 1, self.nums[i]))
-            self.dts.append((self.numb[i]+1, 0, self.nums[i]))
+            self.dts.append((self.numb[i] + 1, 0, self.nums[i]))
         self.sdts = sorted(self.dts)
 
         mcnt, fcnt = 0, 0
@@ -54,7 +54,7 @@ class Relative:
             self.fs[day] = fcnt
         self.cr = []
         for d in self.ms:
-            self.cr.append(min(self.ms[d], self.fs[d])*2)
+            self.cr.append(min(self.ms[d], self.fs[d]) * 2)
 
     def calculate(self):
         """ Main calcualtion function of the class """
@@ -105,7 +105,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -116,9 +116,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -130,5 +131,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Relative().calculate())
+
 
 __starting_point()

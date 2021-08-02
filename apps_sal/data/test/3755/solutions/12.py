@@ -19,13 +19,13 @@ https://atcoder.jp/contests/arc092/tasks/arc092_c
 import sys
 N = int(input())
 
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 esum = 0
 osum = 0
 
 if max(a) < 0:
-    #コーナーケース
+    # コーナーケース
 
     maxind = 0
     for i in range(N):
@@ -34,12 +34,12 @@ if max(a) < 0:
 
     rem = N
     print((a[maxind]))
-    print((N-1))
+    print((N - 1))
     for i in range(maxind):
         print((1))
         rem -= 1
     while rem != 1:
-        print (rem)
+        print(rem)
         rem -= 1
     return
 
@@ -51,47 +51,45 @@ oflag = [False] * N
 opicks = []
 for i in range(N):
 
-    if i % 2==0 and a[i] >= 0:
+    if i % 2 == 0 and a[i] >= 0:
         eflag[i] = True
         eve += a[i]
         epicks.append(i)
-    if i % 2==1 and a[i] >= 0:
+    if i % 2 == 1 and a[i] >= 0:
         oflag[i] = True
         odd += a[i]
         opicks.append(i)
 
 if eve > odd:
 
-    print (eve)
+    print(eve)
     ans = []
 
-    for i in range(N-1,-1,-1):
+    for i in range(N - 1, -1, -1):
 
         if i < epicks[0]:
             ans.append(1)
         elif i % 2 == 0 and eflag[i] == False:
-            ans.append(i+1)
-        elif i % 2 == 1 and eflag[i-1] == True:
-            ans.append(i+1)
+            ans.append(i + 1)
+        elif i % 2 == 1 and eflag[i - 1] == True:
+            ans.append(i + 1)
 
     print((len(ans)))
-    print(("\n".join(map(str,ans))))
+    print(("\n".join(map(str, ans))))
 
 else:
 
-    print (odd)
+    print(odd)
     ans = []
 
-    for i in range(N-1,-1,-1):
+    for i in range(N - 1, -1, -1):
 
         if i < opicks[0]:
             ans.append(1)
         elif i % 2 == 1 and oflag[i] == False:
-            ans.append(i+1)
-        elif i % 2 == 0 and oflag[i-1] == True:
-            ans.append(i+1)
+            ans.append(i + 1)
+        elif i % 2 == 0 and oflag[i - 1] == True:
+            ans.append(i + 1)
 
     print((len(ans)))
-    print(("\n".join(map(str,ans))))
-    
-
+    print(("\n".join(map(str, ans))))

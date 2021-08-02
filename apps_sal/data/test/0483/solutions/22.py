@@ -2,6 +2,7 @@
 
 inf = 1e9
 
+
 def main():
     n = int(input())
     dir = input()
@@ -21,5 +22,5 @@ def main():
     else:
         print(int(res))
 
-main()
 
+main()

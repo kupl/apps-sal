@@ -17,4 +17,3 @@ for d, x in zip(ds, xs):
         best = min(best or t, t)
 
 print(best or -1)
-

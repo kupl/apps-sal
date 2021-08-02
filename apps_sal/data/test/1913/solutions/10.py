@@ -8,11 +8,12 @@ def x():
         else:
             if not i[0] == '1':
                 res = i
-            elif not i.count('0') == len(i)-1:
+            elif not i.count('0') == len(i) - 1:
                 res = i
             else:
-                nulls += len(i)-1
+                nulls += len(i) - 1
 
-    return [res, '0'*nulls]
-print(*x(), sep = '')
+    return [res, '0' * nulls]
 
+
+print(*x(), sep='')

@@ -37,6 +37,5 @@ for i in range(1, 367):
             mm += 1
 
     maxi = max(maxi, min(mw, mm))
-    
-print(maxi*2)
 
+print(maxi * 2)

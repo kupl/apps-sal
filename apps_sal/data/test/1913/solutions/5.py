@@ -7,6 +7,7 @@ def good(s):
             return False
     return counter == 1
 
+
 def count(s):
     ans = 0
     for i in s:
@@ -32,4 +33,3 @@ if ans == '':
     print('1' + al * '0')
 else:
     print(ans + al * '0')
-

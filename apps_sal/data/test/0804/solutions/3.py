@@ -8,10 +8,9 @@ sLen = len(s)
 sSet = set(s)
 diffLet = len(sSet)
 
-if k>26 or k>sLen:
+if k > 26 or k > sLen:
     print('impossible')
-elif k<=diffLet:
+elif k <= diffLet:
     print(0)
 else:
-    print(k-diffLet)
-
+    print(k - diffLet)

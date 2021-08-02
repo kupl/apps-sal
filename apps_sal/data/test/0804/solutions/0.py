@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 s = input()
 k = int(input())
 if len(s) < k:

@@ -16,6 +16,3 @@ if n <= len(s):
         print(0)
 else:
     print('impossible')
-
-
-

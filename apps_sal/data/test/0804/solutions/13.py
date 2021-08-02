@@ -8,4 +8,3 @@ else:
         print(0)
     else:
         print(k - len(s_set))
-

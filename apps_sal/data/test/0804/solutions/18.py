@@ -1,7 +1,7 @@
 import sys
 a = list(input())
 n = int(input())
-if len(a)<n:
+if len(a) < n:
     print('impossible')
     return
 b = {}
@@ -12,10 +12,9 @@ for i in a:
         c += 1
     else:
         b[i] = 1
-if len(list(b.keys()))>= n:
+if len(list(b.keys())) >= n:
     print(0)
-elif n-len(list(b.keys()))<= c:
-    print(n-len(list(b.keys())))
+elif n - len(list(b.keys())) <= c:
+    print(n - len(list(b.keys())))
 else:
     print('impossible')
-

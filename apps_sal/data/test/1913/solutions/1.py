@@ -4,6 +4,7 @@ import re
 
 nice = re.compile(r"^10*$")
 
+
 def main():
     _ = input()
     result = 0
@@ -17,10 +18,10 @@ def main():
             mul = s
     return mul + '0' * result
 
+
 try:
     while True:
         print(main())
 
 except EOFError:
     pass
-

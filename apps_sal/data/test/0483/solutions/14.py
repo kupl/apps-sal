@@ -2,6 +2,8 @@ n = int(input())
 d = input()
 x = list(map(int, input().split()))
 inf = 10**10
+
+
 def solve():
     if n == 1:
         return -1
@@ -12,5 +14,6 @@ def solve():
     if ret == inf:
         return -1
     return ret
-print(solve())            
 
+
+print(solve())
