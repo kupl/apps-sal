@@ -1,13 +1,13 @@
 def Task485D():
-    cur_speed   = 0
+    cur_speed = 0
     is_outstrip = 0
-    err_count   = 0
+    err_count = 0
     event_speed_limit = []
 
     event_count = int(input())
 
     for a in range(event_count):
-        ev =list(map(int, input().split()))
+        ev = list(map(int, input().split()))
         if ev[0] == 1:
             cur_speed = ev[1]
             while len(event_speed_limit) > 0:
@@ -38,6 +38,9 @@ def Task485D():
 
     print(err_count)
 
+
 def __starting_point():
     Task485D()
+
+
 __starting_point()

@@ -37,5 +37,3 @@ for _ in range(n):
         ot_ignored = False
 
 print(vio)
-
-

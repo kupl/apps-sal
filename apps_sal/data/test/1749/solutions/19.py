@@ -4,6 +4,6 @@ a = input().split()
 b = input().split()
 
 if a[:l] == b[:l] and a[r:] == b[r:]:
-	print("TRUTH")
+    print("TRUTH")
 else:
-	print("LIE")
+    print("LIE")

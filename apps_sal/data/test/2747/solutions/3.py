@@ -7,7 +7,7 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
-        
+
         if len(nums) == 0:
             return [-1, -1]
 
@@ -19,7 +19,7 @@ class Solution:
 
         while l <= r:
 
-            m = (l + r)//2
+            m = (l + r) // 2
 
             if nums[m] == target and nums[m - 1] < target:
                 lbound = m
@@ -27,7 +27,7 @@ class Solution:
 
             if nums[m] < target:
                 l = m + 1
-            else: # nums[m] >= target:
+            else:  # nums[m] >= target:
                 r = m - 1
 
         if lbound == -1:
@@ -38,7 +38,7 @@ class Solution:
 
         while l <= r:
 
-            m = (l + r)//2
+            m = (l + r) // 2
 
             if nums[m] == target and nums[m + 1] > target:
                 rbound = m
@@ -46,8 +46,7 @@ class Solution:
 
             if nums[m] <= target:
                 l = m + 1
-            else: # target < nums[m]
+            else:  # target < nums[m]
                 r = m - 1
 
         return [lbound - 1, rbound - 1]
-

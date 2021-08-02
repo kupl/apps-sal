@@ -1,6 +1,7 @@
 n = int(input())
 s = input()
 
+
 def f(s):
     for i in range(len(s) - 1):
         if s[i] != '?':
@@ -17,8 +18,8 @@ def f(s):
                     return True
     return False
 
+
 if f(s):
     print("Yes")
 else:
     print("No")
-

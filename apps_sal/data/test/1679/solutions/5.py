@@ -5,4 +5,3 @@ ans = ''
 for c in s:
     ans += str(len(c))
 print(ans)
-

@@ -12,4 +12,3 @@ for curr_ans in mod___numbers:
         print(*curr_ans[:k])
         return
 print('No')
-

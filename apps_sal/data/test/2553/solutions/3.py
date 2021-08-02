@@ -21,8 +21,8 @@ def f():
         else:
             return "Yes"
 
+
 t = int(input())
 
 for _ in range(t):
     print(f())
-

@@ -5,11 +5,14 @@ speed_stack = deque()
 over_take = 0
 speed = 0
 penalty = 0
+
+
 def speed_check(penalty, x):
     while speed_stack and speed_stack[-1] < x:
         speed_stack.pop()
         penalty += 1
     return penalty
+
 
 for i in range(n):
     update = [int(j) for j in input().split()]

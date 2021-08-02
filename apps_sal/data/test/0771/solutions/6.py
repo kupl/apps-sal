@@ -1,6 +1,6 @@
-tmp = list(map(int,input().split()))
-n,k,m = tmp[0],tmp[1],tmp[2]
-a = list(map(int,input().split()))
+tmp = list(map(int, input().split()))
+n, k, m = tmp[0], tmp[1], tmp[2]
+a = list(map(int, input().split()))
 
 d = {}
 for i in a:
@@ -16,7 +16,7 @@ for i in range(m):
         OK = True
         print('Yes')
         for j in d[i][:k]:
-            print(j,end=" ")
+            print(j, end=" ")
         break
 if not OK:
     print("No")

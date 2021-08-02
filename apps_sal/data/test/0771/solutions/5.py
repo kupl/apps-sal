@@ -10,4 +10,3 @@ for i in a:
         break
 if not foundSolution:
     print('No')
-

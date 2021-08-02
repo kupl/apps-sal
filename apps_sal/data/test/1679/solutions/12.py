@@ -13,4 +13,3 @@ for i in range(le):
     ans += len(t)
 
 print(ans)
-

@@ -15,5 +15,3 @@ for q in range(0, t):
         print("No")
     else:
         print("Yes")
-
-

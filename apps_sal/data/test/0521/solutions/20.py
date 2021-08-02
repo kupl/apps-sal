@@ -11,6 +11,8 @@ def f(s):
         if s[i] == '?' and s[i - 1] == s[i + 1]:
             return True
     return False
+
+
 input()
 s = input()
 if f(s):
