@@ -1,15 +1,15 @@
 #import sys
-#sys.setrecursionlimit(10**9)
+# sys.setrecursionlimit(10**9)
 
 H, N = map(int, input().split())
 magic = [_ for _ in range(N)]
 
 for k in range(N):
-  magic[k] = list(map(int, input().split()))
-  magic[k].append(magic[k][0]/magic[k][1])
+    magic[k] = list(map(int, input().split()))
+    magic[k].append(magic[k][0] / magic[k][1])
 
-magic.sort(key = lambda x: x[2], reverse=True)
-ans = [0 for _ in range(H+1)]
+magic.sort(key=lambda x: x[2], reverse=True)
+ans = [0 for _ in range(H + 1)]
 visited = [0]
 anskouho = [float('inf')]
 ans2 = float('inf')
@@ -29,25 +29,25 @@ def solve(start, power, point, maryoku):
     solve(start+power, power, point+maryoku, maryoku)
 """
 for k in range(N):
-  for item in visited:
-    #solve(item+magic[k][0], magic[k][0], ans[item] + magic[k][1], magic[k][1])
-    start = item+magic[k][0]
-    power = magic[k][0]
-    point = ans[item]+ magic[k][1]
-    maryoku = magic[k][1]
-    for _ in range(10**5):
-      if start == H:
-        print(min(point, ans2))
-        return
-      elif start > H:
-        ans2 = min(ans2, point)
-        break
-      elif ans[start]!=0:
-        break
-      else:
-        visited.append(start)
-        ans[start] = point
-        start += power
-        point += maryoku
-      
+    for item in visited:
+        #solve(item+magic[k][0], magic[k][0], ans[item] + magic[k][1], magic[k][1])
+        start = item + magic[k][0]
+        power = magic[k][0]
+        point = ans[item] + magic[k][1]
+        maryoku = magic[k][1]
+        for _ in range(10**5):
+            if start == H:
+                print(min(point, ans2))
+                return
+            elif start > H:
+                ans2 = min(ans2, point)
+                break
+            elif ans[start] != 0:
+                break
+            else:
+                visited.append(start)
+                ans[start] = point
+                start += power
+                point += maryoku
+
 print(ans2)

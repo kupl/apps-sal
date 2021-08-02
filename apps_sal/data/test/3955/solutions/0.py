@@ -9,7 +9,7 @@ class Ortree():
             idx2 = idx << 1
             data[idx] = data[idx2] | data[idx2 + 1]
         self.data = data
-    
+
     def update(self, idx, val):
         pos = idx + self.size
         self.data[pos] = val
@@ -22,7 +22,7 @@ class Ortree():
 
 
 def solve(n, k, x, As):
-    As.sort(reverse= True)
+    As.sort(reverse=True)
     xk = x**k
     if n == 1:
         As[0] *= xk
@@ -31,7 +31,7 @@ def solve(n, k, x, As):
         As[0] *= xk
         return cumor(As)
     return complexcase(n, xk, As)
-    
+
 
 def cumor(As):
     result = 0
@@ -39,10 +39,12 @@ def cumor(As):
         result |= a
     return result
 
+
 def is_simplecase(xk, As):
     len0 = len(bin(As[0] * xk))
     len1 = len(bin(As[1] * xk))
     return len0 > len1
+
 
 def complexcase(n, xk, As):
     len0 = len(bin(As[0] * xk))
@@ -62,6 +64,7 @@ def complexcase(n, xk, As):
             record = score
         ortree.update(i, As[i])
     return record
+
 
 n, k, x = map(int, input().split())
 As = list(map(int, input().split()))

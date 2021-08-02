@@ -1,3 +1,3 @@
-N,D = map(int,input().split())
+N, D = map(int, input().split())
 
-print(-(-N//(D*2+1)))
+print(-(-N // (D * 2 + 1)))

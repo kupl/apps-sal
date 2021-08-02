@@ -3,18 +3,19 @@ input = iter(sys.stdin.read().splitlines()).__next__
 
 n = int(input())
 
+
 def prep(s):
     S = []
     lc = None
     count = 0
     for c in s:
         if c != lc and count:
-            S.append((lc,count))
+            S.append((lc, count))
             count = 0
         count += 1
         lc = c
     if count:
-        S.append((lc,count))
+        S.append((lc, count))
     return S
 
 
@@ -34,4 +35,3 @@ for _ in range(n):
         print('NO')
     else:
         print('NO')
-

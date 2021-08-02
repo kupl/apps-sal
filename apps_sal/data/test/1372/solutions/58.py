@@ -16,13 +16,14 @@ def main():
     dp[0] = 0
     for h in range(H):
         for a, b in zip(A, B):
-            if dp[h]+b < dp[h+a]:
-                dp[h+a] = dp[h]+b
+            if dp[h] + b < dp[h + a]:
+                dp[h + a] = dp[h] + b
     ans = min(dp[H:])
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

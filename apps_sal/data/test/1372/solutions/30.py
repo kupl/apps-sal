@@ -11,4 +11,3 @@ for i in range(1, h + max_a):
     dp[i] = min(dp[i - a] + b for a, b in ab)
 
 print((dp[h]))
-

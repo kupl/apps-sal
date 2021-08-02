@@ -1,7 +1,10 @@
-import math, sys
+import math
+import sys
+
 
 def mp():
     return list(map(int, input().split()))
+
 
 def main():
     n, m, k, l = mp()
@@ -15,9 +18,7 @@ def main():
         print(ans)
     else:
         print(-1)
-    
-    
-    
+
 
 deb = 0
 if deb:
@@ -30,4 +31,3 @@ main()
 
 if deb:
     file.close()
-

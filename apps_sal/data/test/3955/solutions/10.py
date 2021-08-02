@@ -20,7 +20,7 @@ elif len(lista) == 2:
                   lista[-1] * mult | acumuladaL[-2]])
     print(maximo)
 else:
-    maximo = max([lista[0] * mult | acumuladaR[1],lista[-1] * mult | acumuladaL[-2]])
+    maximo = max([lista[0] * mult | acumuladaR[1], lista[-1] * mult | acumuladaL[-2]])
     acumuladaR = acumuladaR[::-1]
 
     for i in range(1, len(lista) - 1):
@@ -30,4 +30,3 @@ else:
     print(maximo)
 
 # 1500336849347
-

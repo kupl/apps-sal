@@ -16,4 +16,6 @@ def __starting_point():
         if maxi < x[i] | numbers[i] * p | y[i]:
             maxi = x[i] | numbers[i] * p | y[i]
     print(maxi)
+
+
 __starting_point()

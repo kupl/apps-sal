@@ -74,4 +74,4 @@ for i in range(3):
 
 print(len(ans))
 for item in ans:
-    print(" ".join(map(str,item)))
+    print(" ".join(map(str, item)))

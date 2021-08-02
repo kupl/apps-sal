@@ -13,4 +13,3 @@ for i in range(3):
 print(len(ans))
 for a, b in ans:
     print(a, b)
-

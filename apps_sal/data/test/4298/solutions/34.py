@@ -1,5 +1,5 @@
-#ABC134 B
+# ABC134 B
 
-N,D = map(int,input().split())
 import math
-print(math.ceil(N/(2*D + 1)))
+N, D = map(int, input().split())
+print(math.ceil(N / (2 * D + 1)))

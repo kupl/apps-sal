@@ -4,5 +4,4 @@ per_friend = (required + m - 1) // m
 if (m * per_friend > n):
     print(-1)
 else:
-    print(per_friend)   
-
+    print(per_friend)

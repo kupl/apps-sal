@@ -5,4 +5,3 @@ if n % deco == 0:
     print((n // deco))
 else:
     print(((n // deco) + 1))
-

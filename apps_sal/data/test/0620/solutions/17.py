@@ -16,6 +16,7 @@ def mirror(x1, y1, x2, y2, x3, y3):
         y3 -= 2 * (y3 - y_mid)
     return x3, y3
 
+
 answer = []
 x, y = mirror(x1, y1, x2, y2, x3, y3)
 if int(x) == x and int(y) == y:

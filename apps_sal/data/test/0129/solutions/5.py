@@ -6,7 +6,7 @@ n, m, k, l = map(int, stdin.readline().split())
 lb, rb = 0, n // m + 1
 while rb - lb > 1:
     mid = (lb + rb) >> 1
-    
+
     if mid * m - k >= l:
         rb = mid
     else:

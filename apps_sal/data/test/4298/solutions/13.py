@@ -1,5 +1,5 @@
-3
 import sys
+3
 input = lambda: sys.stdin.readline().strip()
 n, d = [int(x) for x in input().split()]
 l = 2 * d + 1

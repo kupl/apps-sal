@@ -18,4 +18,3 @@ for i in range(0, n):
     tr |= a[i]
 
 print(ans)
-

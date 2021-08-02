@@ -12,4 +12,3 @@ for i in range(n):
         print(abs(a[i + 1] - a[i]), abs(a[i] - a[-1]))
     else:
         print(abs(a[i - 1] - a[i]), abs(a[i] - a[0]))
-

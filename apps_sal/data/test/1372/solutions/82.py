@@ -1,5 +1,10 @@
+import sys
+import numpy as np
+
+
 def numba_compile(numba_config):
-    import os, sys
+    import os
+    import sys
     if sys.argv[-1] == "ONLINE_JUDGE":
         from numba import njit
         from numba.pycc import CC
@@ -20,29 +25,28 @@ def numba_compile(numba_config):
         print("compiled!", file=sys.stderr)
 
 
-import numpy as np
-
 def solve(H, N, AB):
     # dp[n][h] := n 番目の魔法まで見て体力を h 削ったときの最小魔力
-    dp = np.empty(H+1, dtype=np.int64)
-    dp[:] = 1<<60
+    dp = np.empty(H + 1, dtype=np.int64)
+    dp[:] = 1 << 60
     dp[0] = 0
-    for n in range(1, N+1):
-        a, b = AB[n-1]
+    for n in range(1, N + 1):
+        a, b = AB[n - 1]
         for h in range(H):
-            dp[min(H, h+a)] = min(dp[min(H, h+a)], dp[h]+b)
+            dp[min(H, h + a)] = min(dp[min(H, h + a)], dp[h] + b)
     return dp[-1]
+
 
 numba_compile([
     [solve, "i8(i8,i8,i8[:,:])"],
 ])
 
-import sys
+
 def main():
     H, N = map(int, input().split())
     AB = np.array(sys.stdin.read().split(), dtype=np.int64).reshape(N, 2)
     ans = solve(H, N, AB)
     print(ans)
 
-main()
 
+main()

@@ -1,5 +1,7 @@
 import sys
 read = sys.stdin.read
+
+
 def main():
     h, n = map(int, input().split())
     m = map(int, read().split())
@@ -15,6 +17,9 @@ def main():
     r = min(dp[h:])
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()
