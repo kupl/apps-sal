@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n, m, d = [int(x) for x in input().split()]
     C = [int(x) for x in input().split()]
@@ -30,16 +31,8 @@ def main():
         print("")
 
 
-
-
-
-
-
-
-
 def __starting_point():
     main()
-
 
 
 __starting_point()

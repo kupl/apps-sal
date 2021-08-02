@@ -10,6 +10,7 @@ h = input()
 ans = 0
 ms = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
+
 def check(d):
     ps = [i for i in start]
     for l in h:
@@ -21,6 +22,7 @@ def check(d):
         if a[ps[0]][ps[1]] == 'E':
             return True
     return False
+
 
 for i in range(4):
     for j in range(4):

@@ -20,4 +20,3 @@ else:
     result = "ARC"
 
 print(result)
-

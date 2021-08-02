@@ -1,6 +1,6 @@
-S =int(input())
+S = int(input())
 
-if  S < 1200 :
+if S < 1200:
     result = "ABC"
 else:
     result = "ARC"

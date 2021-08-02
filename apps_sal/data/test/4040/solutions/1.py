@@ -38,5 +38,3 @@ while cur < n + 1:
         cur += 1
 print("YES")
 print(' '.join(str(x) for x in res))
-        
-

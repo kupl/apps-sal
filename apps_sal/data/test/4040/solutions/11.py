@@ -3,10 +3,10 @@ def gcd(a, b):
         return b
     else:
         return gcd(b % a, a)
- 
- 
+
+
 n, m, d = list(map(int, input().split()))
- 
+
 a = list(map(int, input().split()))
 j = 0
 p = m - 1
@@ -19,7 +19,7 @@ for i in range(n - 1, -1, -1):
         p -= 1
         if p == -1:
             break
-    
+
 z = 0
 
 last = -1
@@ -45,7 +45,3 @@ if d > n:
     return
 print('YES')
 print(*k)
-           
-            
-            
-

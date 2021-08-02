@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 class Dsu:
     def __init__(self, _n):
         self.n = _n
@@ -22,6 +23,7 @@ class Dsu:
         if v == u:
             return
         self.p[v] = u
+
 
 n, m = map(int, input().split())
 real = Dsu(m)
@@ -53,4 +55,4 @@ for _ in range(1, m):
         for i in idxs[v]:
             idxs[u].append(i)
             a[i] = u;
-    print(ans) 
+    print(ans)

@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def ok(n, m, v, a, l):
     x, y = -1, -1
     for i, q in enumerate(v):
@@ -22,11 +23,12 @@ def ok(n, m, v, a, l):
 
         if v[x][y] == 'E':
             return True
-    
+
     if x < 0 or x >= n or y < 0 or y >= m or v[x][y] == '#':
         return False
 
     return v[x][y] == 'E'
+
 
 n, m = map(int, input().split())
 

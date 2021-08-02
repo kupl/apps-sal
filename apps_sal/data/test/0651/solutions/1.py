@@ -29,4 +29,3 @@ for p in permutations(dirs):
             break
 
 print(ans)
-

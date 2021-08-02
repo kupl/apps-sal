@@ -7,6 +7,7 @@ def pay(coin, amount):
         return amount // coin
     return (amount - 1) // (coin + 1) + 1;
 
+
 def pay_all(coin):
     sum = 0
     for i in range(n):
@@ -15,6 +16,7 @@ def pay_all(coin):
             return -1
         sum += p
     return sum
+
 
 n = int(input())
 a = list(map(int, input().split()))

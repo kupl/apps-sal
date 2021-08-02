@@ -2,6 +2,7 @@
 
 import itertools
 
+
 def check(dirs, inst, maze, s):
     posy, posx = s
     rx = len(maze[0])
@@ -37,4 +38,3 @@ for i in itertools.permutations("NWSE"):
     c = check(i, inst, maze, s)
     t += check(i, inst, maze, s)
 print(t)
-

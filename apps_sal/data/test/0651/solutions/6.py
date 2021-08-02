@@ -11,6 +11,7 @@ for i in range(n):
 
 dd = [[-1, 0], [0, -1], [1, 0], [0, 1]]
 
+
 def solve(p):
     x = sx; y = sy
     for c in S:
@@ -22,8 +23,8 @@ def solve(p):
             return 1
     return 0
 
+
 ans = 0
 for p in permutations(list(range(4))):
     ans += solve(p)
 print(ans)
-

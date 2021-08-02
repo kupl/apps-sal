@@ -7,7 +7,7 @@ for i in range(n):
     if ("S" in a[i]):
         startx = a[i].index('S')
         starty = i
-        
+
 s = input()
 ans = 0
 for l in range(4):
@@ -29,7 +29,7 @@ for l in range(4):
                         posy += 1
                     elif (i == u):
                         posy -= 1
-                    
+
                     if (posy < 0 or posy >= n or posx < 0 or posx >= m):
                         break
                     elif (a[posy][posx] == '#'):
@@ -37,5 +37,5 @@ for l in range(4):
                     elif (a[posy][posx] == 'E'):
                         ans += 1
                         break
-                    
+
 print(ans)

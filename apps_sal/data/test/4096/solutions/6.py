@@ -23,4 +23,3 @@ def proc(n, m, a):
 
 
 print(proc(n, m, a))
-

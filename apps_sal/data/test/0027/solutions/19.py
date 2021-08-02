@@ -11,4 +11,3 @@ if c != 0:
 
 else:
     print(n)
-

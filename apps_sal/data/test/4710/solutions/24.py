@@ -1,2 +1,2 @@
-r=["ABC","ARC"]
-print(r[int(input())>=1200])
+r = ["ABC", "ARC"]
+print(r[int(input()) >= 1200])
