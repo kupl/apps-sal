@@ -21,4 +21,3 @@ for d in range(F * 2):
     if (res & (1 << d)) != 0:
         ans = min(ans, abs(d - F))
 print(ans)
-

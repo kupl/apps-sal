@@ -1,7 +1,7 @@
+import math
 import sys
 from collections import defaultdict
 input = sys.stdin.readline
-import math
 
 
 def main():
@@ -16,9 +16,9 @@ def main():
                     for cnty in range(10):
                         dig = (a + cntx * x + cnty * y) % 10
                         if cntx + cnty > 0:
-                            opt[x][y][a][dig] = min(opt[x][y][a][dig], cntx+cnty)
+                            opt[x][y][a][dig] = min(opt[x][y][a][dig], cntx + cnty)
     for i in range(1, len(s)):
-        pairs[int(s[i-1])][int(s[i])] += 1
+        pairs[int(s[i - 1])][int(s[i])] += 1
 
     res = [[0 for _ in range(10)] for _ in range(10)]
     for x in range(10):
@@ -30,7 +30,7 @@ def main():
                         if opt[x][y][p1][p2] == math.inf:
                             res[x][y] = -1
                         elif res[x][y] != -1:
-                           res[x][y] += p * (opt[x][y][p1][p2]-1)
+                            res[x][y] += p * (opt[x][y][p1][p2] - 1)
 
     for x in range(10):
         print(*res[x])

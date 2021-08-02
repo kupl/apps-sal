@@ -13,4 +13,3 @@ res += 100 * a
 res -= 50 * b
 
 print(int(res))
-

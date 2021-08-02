@@ -16,12 +16,12 @@ for i in range(h):
         d = abs(ae - be)
         bt = 0
         if i != 0:
-            bt |= dp[i-1][j] << d
-            bt |= dp[i-1][j] >> d
+            bt |= dp[i - 1][j] << d
+            bt |= dp[i - 1][j] >> d
 
         if j != 0:
-            bt |= dp[i][j-1] << d
-            bt |= dp[i][j-1] >> d
+            bt |= dp[i][j - 1] << d
+            bt |= dp[i][j - 1] >> d
 
         dp[i][j] = bt
 
@@ -32,4 +32,3 @@ can_make = [i - x for i, be in enumerate(b[::-1]) if be == "1"]
 
 ans = min(x if x >= 0 else -x for x in can_make)
 print(ans)
-

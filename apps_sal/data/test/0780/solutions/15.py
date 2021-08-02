@@ -19,9 +19,9 @@ for i in range(10):
             for v in range(11):
                 if u == 0 and v == 0:
                     continue
-                k = (i*u + j*v) % 10
-                ddp[i][j][k] = min(ddp[i][j][k], max(0,u+v-1))
-              
+                k = (i * u + j * v) % 10
+                ddp[i][j][k] = min(ddp[i][j][k], max(0, u + v - 1))
+
 
 pre = 0
 for i in range(1, len(s)):
@@ -40,5 +40,3 @@ for i in range(10):
             ans[i][j] += tt[k] * ddp[i][j][k]
         asi = asi + str(ans[i][j]) + ' '
     print(asi)
-
-

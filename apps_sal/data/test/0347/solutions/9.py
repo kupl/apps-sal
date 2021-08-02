@@ -6,4 +6,3 @@ for i in range(5):
     col = 500 * (i + 1)
     ans += max(0.3 * col, (1 - m[i] / 250) * col - 50 * w[i])
 print(int(ans))
-

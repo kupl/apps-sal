@@ -41,6 +41,5 @@ for s, t in zip(S, T):
             cnt -= 1
         cnt = min(K, cnt)
         ans += cnt
-    
-print(ans)
 
+print(ans)

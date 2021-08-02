@@ -26,4 +26,3 @@ for k in range(CONST):
         break
 
 print(ans)
-

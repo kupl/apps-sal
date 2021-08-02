@@ -32,4 +32,3 @@ can_make = np.where(dp)[0] - X
 
 answer = np.abs(can_make).min()
 print(answer)
-

@@ -10,4 +10,3 @@ else:
 
 print(len(ans))
 print(' '.join(str(v + 1) for v in ans))
-

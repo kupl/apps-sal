@@ -17,4 +17,3 @@ while res & 1 == 0:
     res >>= 1
     ans += 1
 print(ans)
-

@@ -9,4 +9,3 @@ for i in range(1, n - 1):
         locex += 1
 
 print(locex)
-

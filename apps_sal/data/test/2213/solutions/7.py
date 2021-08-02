@@ -16,4 +16,3 @@ for i in range(x, y, z):
             print(i, j)
         if k == 1 and i > j:
             print(i, j)
-

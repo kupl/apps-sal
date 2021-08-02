@@ -1,4 +1,4 @@
-#E70_B
+# E70_B
 
 st = list(input())
 
@@ -44,4 +44,3 @@ for x in range(0, 10):
         if y != 9:
             st += " "
     print(st)
-

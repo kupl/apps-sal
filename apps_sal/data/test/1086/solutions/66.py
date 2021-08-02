@@ -17,7 +17,6 @@ dp[0][0] |= 1 << (D + int(C[0][0]))
 # print ((dp[0][0]))
 
 
-
 # print (dp[0][0])
 dp = np.array(dp)
 
@@ -31,7 +30,7 @@ for h in range(H):
             dp[h][w] |= dp[h][w - 1] << tmp
             dp[h][w] |= dp[h][w - 1] >> tmp
 
-        
+
 ans = D2
 # print (ans)
 tmp = dp[H - 1][W - 1]
@@ -39,6 +38,4 @@ for i in range(D2):
     if (tmp >> i) & 1:
         ans = min(ans, abs(i - D))
 
-print (ans)
-
-
+print(ans)

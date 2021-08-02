@@ -8,4 +8,3 @@ for i in range(len(m)):
 ans += v[0] * 100
 ans -= v[1] * 50
 print(int(ans))
-

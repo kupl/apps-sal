@@ -31,14 +31,14 @@ for i in range(H):
     C.append(cs)
 
 
-X = (H+W) * 80
+X = (H + W) * 80
 L = X + X + 1
 
 dp = [[0] * W for _ in range(H)]
 dp[0][0] = np.zeros(L, np.bool)
 d = C[0][0]
-dp[0][0][X+d] = 1
-dp[0][0][X-d] = 1
+dp[0][0][X + d] = 1
+dp[0][0][X - d] = 1
 
 for r in range(H):
     for c in range(W):
@@ -49,12 +49,12 @@ for r in range(H):
         d = C[r][c]
 
         if r != 0:
-            l[d:] |= dp[r-1][c][:L-d]
-            l[:L-d] |= dp[r-1][c][d:]
+            l[d:] |= dp[r - 1][c][:L - d]
+            l[:L - d] |= dp[r - 1][c][d:]
 
         if c != 0:
-            l[d:] |= dp[r][c-1][:L-d]
-            l[:L-d] |= dp[r][c-1][d:]
+            l[d:] |= dp[r][c - 1][:L - d]
+            l[:L - d] |= dp[r][c - 1][d:]
 
         dp[r][c] = l
 
@@ -62,4 +62,3 @@ dp = dp[-1][-1]
 d = np.where(dp)[0] - X
 ans = np.abs(d).min()
 print(ans)
-
