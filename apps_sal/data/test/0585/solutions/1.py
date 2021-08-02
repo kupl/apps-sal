@@ -9,7 +9,7 @@ out = 1
 first = -1
 curr = m - 1
 
-for i in range(n - 1, -1 ,-1):
+for i in range(n - 1, -1, -1):
     while a[i] < b[curr]:
         if first > -1:
             out *= (first - i)
@@ -18,7 +18,7 @@ for i in range(n - 1, -1 ,-1):
             out = 0
         first = -1
         curr -= 1
-        
+
         if curr < 0:
             out = 0
             break
@@ -29,4 +29,3 @@ if curr == 0 and first != -1:
     print(out)
 else:
     print(0)
-

@@ -8,4 +8,3 @@ for _ in range(t):
         print('NO')
     else:
         print('YES' if len(s) - pos8 >= 11 else 'NO')
-

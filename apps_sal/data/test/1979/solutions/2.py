@@ -1,7 +1,7 @@
+from collections import Counter
 from sys import stdin
 input = stdin.readline
 
-from collections import Counter
 
 n = int(input())
 a = list(map(int, input().split()))

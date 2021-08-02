@@ -12,4 +12,3 @@ for ti in range(ts):
         print("YES")
     else:
         print("NO")
-

@@ -9,7 +9,7 @@ for i in range(n):
     else:
         cnt = 0
     mx = max(mx, cnt)
-    
+
 if mx > k:
     print("NO\n")
     return
@@ -20,17 +20,16 @@ for r in range(k, n + 1):
         continue
     if r < n and s[r] == "N":
         continue
-    
+
     bad = False
-    
+
     for i in range(l, r):
         if s[i] == "Y":
             bad = True
             break
-        
+
     if not bad:
         print("YES\n")
         return
 
 print("NO\n")
-

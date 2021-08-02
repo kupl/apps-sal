@@ -6,4 +6,3 @@ def min_possible(arr):
 n = int(input().strip())
 arr = list(map(int, input().strip().split()))
 print(min_possible(arr))
-

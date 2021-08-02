@@ -1,10 +1,10 @@
 import sys
 from collections import defaultdict
 readline = sys.stdin.readline
-        
+
 N = int(readline())
 
-XYZ = [tuple(map(int, readline().split())) for _ in range(N) ]
+XYZ = [tuple(map(int, readline().split())) for _ in range(N)]
 XYZI = [(x, y, z, i) for i, (x, y, z) in enumerate(XYZ, 1)]
 
 
@@ -38,14 +38,14 @@ for L in Di.values():
             else:
                 st = i
         D2[y] -= 1
-    
+
     if st:
         Ama.append(st)
     if pre:
         Ama.append(pre)
 Le = len(Ama)
-for i in range(Le//2):
-    Ans.append((Ama[2*i], Ama[2*i+1]))
+for i in range(Le // 2):
+    Ans.append((Ama[2 * i], Ama[2 * i + 1]))
 
 for a in Ans:
     sys.stdout.write('{} {}\n'.format(*a))

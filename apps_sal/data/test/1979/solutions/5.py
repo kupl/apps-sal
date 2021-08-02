@@ -8,4 +8,3 @@ dcount = [0] * n
 for i, b in enumerate(bb):
     dcount[(i - aid[b]) % n] += 1
 print(max(dcount))
-

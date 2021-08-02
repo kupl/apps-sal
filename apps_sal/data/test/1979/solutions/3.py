@@ -24,4 +24,3 @@ ans = 0
 for key in cnt:
     ans = max(ans, cnt[key])
 print(ans)
-

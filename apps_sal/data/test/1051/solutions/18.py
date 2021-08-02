@@ -20,4 +20,3 @@ for x in b:
     y = x
 
 print(ans)
-

@@ -18,7 +18,7 @@ if not k:
     for elem in series:
         if elem.count('N'):
             answer = True
-            
+
     print("YES" if not answer else "NO")
 else:
     for elem in series:
@@ -26,7 +26,7 @@ else:
         for i in range(m - k + 1):
             if (not i or elem[i - 1] == '?') and ((i + k - 1) == m - 1 or elem[i + k] == '?'):
                 answer = True
-        
+
         counter = 0
         for letter in elem:
             if letter == 'N':
@@ -35,5 +35,5 @@ else:
                     no_max = False
             else:
                 counter = 0
-               
+
     print("YES" if answer and no_max else "NO")

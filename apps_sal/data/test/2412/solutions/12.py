@@ -9,9 +9,11 @@ def solve():
     else:
         print("NO")
 
+
 def main():
     for _ in range(int(input())):
         solve()
     return 0
+
 
 main()

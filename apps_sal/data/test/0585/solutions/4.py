@@ -3,8 +3,10 @@ from collections import deque
 import bisect
 import heapq
 
+
 def ri():
     return int(input())
+
 
 def rl():
     return list(map(int, input().split()))
@@ -26,12 +28,12 @@ def solve():
     # for a in A[::-1]:
         # _min = min(_min, a)
         # if _min == B[ptr]:
-            # streak += 1
+        # streak += 1
         # elif _min < B[ptr]:
-            # ptr -= 1
-            # if _min < B[ptr]:
-                # print (0)
-                # return
+        # ptr -= 1
+        # if _min < B[ptr]:
+        # print (0)
+        # return
     mins = dd(int)
     _min = A[-1]
     for a in A[::-1]:
@@ -50,11 +52,7 @@ def solve():
         else:
             answer = (answer * mins[b]) % mod
 
-    print (answer)
-
-
-
-
+    print(answer)
 
 
 mode = 'S'
@@ -65,4 +63,3 @@ if mode == 'T':
         solve()
 else:
     solve()
-

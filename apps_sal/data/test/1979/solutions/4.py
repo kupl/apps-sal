@@ -17,4 +17,3 @@ for i, el in enumerate(B):
     cc[diff] += 1
 
 print(cc.most_common()[0][1])
-

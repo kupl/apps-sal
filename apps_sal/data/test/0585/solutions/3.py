@@ -24,4 +24,3 @@ for i in range(m - 1, -1, -1):
         return
     ans %= MOD
 print(ans)
-
