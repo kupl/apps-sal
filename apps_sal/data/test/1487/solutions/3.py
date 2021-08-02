@@ -13,7 +13,7 @@ for i in range(l):
         c += 1
     else:
         p += s[i]
-        
+
 if c % 2 == 1:
     print('impossible')
 else:

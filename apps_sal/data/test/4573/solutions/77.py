@@ -14,4 +14,3 @@ for i in range(n):
         ans[a[i][1]] = a[(n - 1) // 2][0]
 for y in ans:
     print(y)
-

@@ -16,4 +16,3 @@ for v in list(memory.values()):
 print(((H - 2) * (W - 2) - sum(counter.values())))
 for i in range(1, 10):
     print((counter[i]))
-

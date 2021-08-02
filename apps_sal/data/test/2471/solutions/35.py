@@ -17,4 +17,3 @@ print(((h - 2) * (w - 2) - sum(c.values())))
 
 for i in range(1, 10):
     print((c[i]))
-

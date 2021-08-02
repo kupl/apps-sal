@@ -9,11 +9,12 @@ def read_data():
         Es[b].append(a)
     return n, m, Es
 
+
 def solve(n, m, Es):
     if m == 0:
         return 3, n * (n - 1) * (n - 2) // 6
     if max(list(map(len, Es))) == 1:
-        return 2, m * (n-2)
+        return 2, m * (n - 2)
     patterns = 0
     color = [0] * n
     for u in range(n):
@@ -31,15 +32,17 @@ def solve(n, m, Es):
                     return 0, 1
                 if current_color == 0:
                     color[w] = - prev_color
-                    n_color[(prev_color + 1)//2] += 1
+                    n_color[(prev_color + 1) // 2] += 1
                     stack.append(w)
         n_even = n_color[0]
         n_odd = n_color[1]
         patterns += n_even * (n_even - 1) // 2 + n_odd * (n_odd - 1) // 2
     return 1, patterns
 
+
 def __starting_point():
     n, m, Es = read_data()
     print(*solve(n, m, Es))
+
 
 __starting_point()

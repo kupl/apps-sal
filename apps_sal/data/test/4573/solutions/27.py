@@ -10,5 +10,3 @@ for x in X:
         print((int(m1)))
     else:
         print((int(m0)))
-
-

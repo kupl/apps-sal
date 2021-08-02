@@ -9,8 +9,8 @@ N = int(input())
 X = [int(x) for x in input().split()]
 Y = X.copy()
 Y.sort()
-upper = Y[N//2]
-lower = Y[N//2-1]
+upper = Y[N // 2]
+lower = Y[N // 2 - 1]
 
 for i in range(N):
     if X[i] < upper:

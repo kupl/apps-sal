@@ -15,4 +15,3 @@ if cnt % 2 == 0:
     print(s)
 else:
     print('impossible')
-

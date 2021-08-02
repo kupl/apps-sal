@@ -13,4 +13,3 @@ for i in range(N):
         print(m1)
     else:
         print(m2)
-

@@ -11,6 +11,5 @@ for i in range(n):
     else:
         a.sort()
         for j in a:
-            print(j, end = '')
+            print(j, end='')
         print()
-

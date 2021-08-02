@@ -12,4 +12,3 @@ for x in X:
         print(median_l)
     else:
         print(median_l)
-

@@ -1,7 +1,7 @@
 import sys
 
-a = [0,]
-b = [0,]
+a = [0, ]
+b = [0, ]
 ans1 = []
 ans2 = []
 n = int(input())
@@ -16,8 +16,9 @@ nums = s.split()
 for i in range(0, k):
     b.append(int(nums[i]))
 
+
 def f(x, y, z):
-    #print(x,y,z)
+    # print(x,y,z)
     pos1 = x
     pos2 = x
     if x == y:
@@ -54,10 +55,11 @@ def f(x, y, z):
 
     return 1
 
+
 lasti = 0
 j = 1
 sum = 0
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if j > k:
         print('NO')
         return

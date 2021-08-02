@@ -21,4 +21,3 @@ for i in range(len(s)):
             p.append(s[i] if prev else t[i])
             prev = False if prev else True
 print("".join(p))
-

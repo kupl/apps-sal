@@ -1,5 +1,5 @@
 a = int(input())
-b = list(map(int,input().split()))
+b = list(map(int, input().split()))
 
 c = sorted(b, reverse=True)
 
@@ -10,6 +10,6 @@ for i, data in enumerate(b):
         anslist[i] = c[m]
     elif c[m] <= data:
         anslist[i] = c[m + 1]
-        
+
 for j in range(a):
     print(anslist[j])

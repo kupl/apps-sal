@@ -1,6 +1,6 @@
 import numpy as np
 
-A, B, C, D = map(int,input().split())
+A, B, C, D = map(int, input().split())
 
 a = [0 for _ in range(100)]
 b = [0 for _ in range(100)]

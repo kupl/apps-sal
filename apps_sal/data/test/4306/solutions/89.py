@@ -1,4 +1,4 @@
-A, B ,C ,D = map(int, input().split())
+A, B, C, D = map(int, input().split())
 
 a = list(range(A, B))
 b = list(range(C, D))

@@ -2,14 +2,14 @@ a, b, c, d = map(int, input().split())
 e = 0
 f = 0
 if a < c:
-  e = c
+    e = c
 else:
-  e = a
+    e = a
 if b < d:
-  f = b
+    f = b
 else:
-  f = d
+    f = d
 if e <= f:
-  print(f-e)
+    print(f - e)
 else:
-  print(0)
+    print(0)

@@ -1,5 +1,6 @@
 import sys
-import heapq, math
+import heapq
+import math
 from itertools import zip_longest, permutations, combinations, combinations_with_replacement
 from itertools import accumulate, dropwhile, takewhile, groupby
 from functools import lru_cache
@@ -23,6 +24,6 @@ for k, v in m.items():
     ans[v] += 1
 
 
-ans[0] = (H - 2) * (W - 2) - sum(ans[1 : 10])
+ans[0] = (H - 2) * (W - 2) - sum(ans[1: 10])
 for i in range(10):
     print(ans[i])

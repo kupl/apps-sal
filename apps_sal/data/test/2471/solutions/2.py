@@ -1,9 +1,9 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
 # sys.setrecursionlimit(10 ** 9)
 MOD = 10 ** 9 + 7
 
-from collections import defaultdict
 
 H, W, N = map(int, input().split())
 
@@ -22,7 +22,4 @@ for _ in range(N):
                     lst[tmp + 1] += 1
                     dic[((a + i, b + j))] += 1
 
-print (*lst, sep = '\n')
-    
-
-
+print(*lst, sep='\n')

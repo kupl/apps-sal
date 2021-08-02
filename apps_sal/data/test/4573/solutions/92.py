@@ -10,4 +10,3 @@ for i in range(n):
         print(med_upper)
     else:
         print(med_low)
-

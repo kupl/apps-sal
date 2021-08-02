@@ -1,6 +1,7 @@
 
 url = "https://atcoder.jp//contests/abc070/tasks/abc070_b"
 
+
 def main():
     t = list(map(int, input().split()))
     start = max(t[0], t[2])
@@ -10,7 +11,9 @@ def main():
     else:
         print((0))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

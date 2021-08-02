@@ -17,4 +17,3 @@ for v in d.values():
 
 cnt[0] = (h - 2) * (w - 2) - sum(cnt[1:])
 print(*cnt, sep="\n")
-

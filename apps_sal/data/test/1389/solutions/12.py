@@ -9,5 +9,6 @@ for i in range(1, n + 1):
         q = s + 2 * (p[-i][-j] == 'W') - 1
         t[-j] -= q
         s -= q
-        if q: k += 1
+        if q:
+            k += 1
 print(k)

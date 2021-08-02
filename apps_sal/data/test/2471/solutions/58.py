@@ -18,4 +18,3 @@ for c in cnt.values():
 
 ans[0] = (H - 2) * (W - 2) - sum(ans)
 print(*ans, sep='\n')
-

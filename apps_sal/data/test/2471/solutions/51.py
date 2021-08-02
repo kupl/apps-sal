@@ -28,4 +28,3 @@ ans[0] = (H - 2) * (W - 2) - sum(ans[1:])
 
 for i in ans:
     print(i)
-

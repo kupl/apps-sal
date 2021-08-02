@@ -1,10 +1,10 @@
 n = int(input())
-x = list(map(int,input().split()))
+x = list(map(int, input().split()))
 y = x.copy()
 y.sort()
 z = set(x)
-t1 = y[n//2-1]
-t2 = y[n//2]
+t1 = y[n // 2 - 1]
+t2 = y[n // 2]
 idx = dict([])
 idx[y[0]] = 0
 l = y[0]
@@ -20,7 +20,7 @@ for i in y:
 
 for i in x:
     t = idx[i]
-    if t<n//2:
+    if t < n // 2:
         print(t2)
     else:
         print(t1)

@@ -1,13 +1,13 @@
 A, B, C, D = map(int, input().split())
-if C>=B or A>=D:
+if C >= B or A >= D:
     print(0)
-elif C>=A:
+elif C >= A:
     if D >= B:
-        print(B-C)
+        print(B - C)
     else:
-        print(D-C)
+        print(D - C)
 elif A > C:
     if D >= B:
-        print(B-A)
+        print(B - A)
     else:
-        print(D-A)
+        print(D - A)

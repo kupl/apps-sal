@@ -18,4 +18,3 @@ if index1 == index2:
     print(ans)
 else:
     print("impossible")
-

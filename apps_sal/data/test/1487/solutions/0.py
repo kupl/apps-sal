@@ -23,4 +23,3 @@ else:
                 ans += t[i]
                 c = 0
     print(ans)
-
