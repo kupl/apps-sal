@@ -13,7 +13,7 @@ while z != x:
         x = z
     else:
         y = z
-    z = (x + y)//2
+    z = (x + y) // 2
 m1 = z
 k = math.floor(math.log10(m1)) + 1
 
@@ -26,7 +26,7 @@ try:
 
     D[c1] -= 1
     _prefix = [c1]
-    
+
     for c in range(c2):
         _prefix += [c] * D[c]
     _suffix = []
@@ -38,15 +38,14 @@ try:
 
     if c2 == 0:
         print((min(prefix + substr + num + suffix,
-                  prefix + num + substr + suffix)))
+                   prefix + num + substr + suffix)))
     else:
         D[c1] += 1
         st = []
         for c in range(10):
             st += [c] * D[c]
         print((min(prefix + substr + num + suffix,
-                  prefix + num + substr + suffix,
-                  substr + ''.join(map(str, st)))))
+                   prefix + num + substr + suffix,
+                   substr + ''.join(map(str, st)))))
 except ValueError:
-    print(substr + '0'*D[0])
-
+    print(substr + '0' * D[0])

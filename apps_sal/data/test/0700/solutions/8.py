@@ -5,17 +5,20 @@ def rotate(L):
             L1[n - j - 1] += L[i][j]
     return L1
 
+
 def flip_v(L):
     L1 = []
     for i in range(n):
         L1.append(L[i][::-1])
     return L1
 
+
 def flip_h(L):
     L1 = []
     for i in range(n):
         L1.append(L[n - i - 1])
     return L1
+
 
 n = int(input())
 L = []

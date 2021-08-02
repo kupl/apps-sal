@@ -22,14 +22,14 @@ def readlist():
 n, h = readmap()
 seg = []
 c, b = readmap()
-seg.append((0, b-c))
-for _ in range(n-1):
+seg.append((0, b - c))
+for _ in range(n - 1):
     a, b = readmap()
-    seg.append((a-c, b-c))
+    seg.append((a - c, b - c))
 
 cumu = [0] * n
 for i in range(1, n):
-    cumu[i] = cumu[i-1] + seg[i][0] - seg[i-1][1]
+    cumu[i] = cumu[i - 1] + seg[i][0] - seg[i - 1][1]
 
 ans = 0
 for i in range(n):
@@ -42,4 +42,3 @@ for i in range(n):
         ans = max(ans, can)
 
 print(ans)
-

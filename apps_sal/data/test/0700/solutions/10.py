@@ -1,6 +1,7 @@
 def check(x, y):
     return ''.join([''.join(s) for s in x]) == ''.join([''.join(s) for s in y])
 
+
 n = int(input())
 a = [list(input()) for i in range(n)]
 b = [list(input()) for i in range(n)]

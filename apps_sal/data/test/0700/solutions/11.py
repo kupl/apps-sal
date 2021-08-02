@@ -14,4 +14,3 @@ maps.append([[map_2[N - 1 - j][i] for j in range(N)] for i in range(N)])
 maps.append([[map_2[N - 1 - j][N - 1 - i] for j in range(N)] for i in range(N)])
 
 print(('No', 'Yes')[any(map_1 == el for el in maps)])
-

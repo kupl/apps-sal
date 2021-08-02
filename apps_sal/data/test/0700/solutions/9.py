@@ -1,6 +1,7 @@
 def check(x, y):
     return ''.join([''.join(s) for s in x]) == ''.join([''.join(s) for s in y])
 
+
 n = int(input())
 a = [list(input()) for i in range(n)]
 b = [list(input()) for i in range(n)]
@@ -24,4 +25,3 @@ for i in range(4):
         print('Yes')
         return
 print('No')
-

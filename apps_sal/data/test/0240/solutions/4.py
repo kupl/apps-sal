@@ -12,7 +12,7 @@ for x in a:
     d[ord(x) - ord('0')] += 1
 for x in b:
     d[ord(x) - ord('0')] -= 1
-if sum(d)==0:
+if sum(d) == 0:
     print(b)
 else:
     A = []
@@ -29,7 +29,7 @@ else:
         t += 1
     oo = ord('0')
     if t < len(d):
-        B.append(chr(oo+t))
+        B.append(chr(oo + t))
         d[t] -= 1
         for j in range(ord(b[0]) - oo):
             for k in range(d[j]):
@@ -38,25 +38,24 @@ else:
         for j in range(ord(b[0]) - oo, 10):
             for k in range(d[j]):
                 B.append(chr(ord('0') + j))
-        
-        
-        C.append(chr(oo+t))
-        for j in range(min(ord(b[0]) - oo+1, 10)):
+
+        C.append(chr(oo + t))
+        for j in range(min(ord(b[0]) - oo + 1, 10)):
             for k in range(d[j]):
                 C.append(chr(ord('0') + j))
         C.extend(list(b))
-        for j in range(ord(b[0]) - oo+1, 10):
+        for j in range(ord(b[0]) - oo + 1, 10):
             for k in range(d[j]):
                 C.append(chr(ord('0') + j))
-        
+
     ans = []
     if len(A) > 0:
         ans.append(''.join(A))
-    
+
     if len(B) > 0:
         ans.append(''.join(B))
-    
+
     if len(C) > 0:
         ans.append(''.join(C))
-    
+
     print(min(ans))

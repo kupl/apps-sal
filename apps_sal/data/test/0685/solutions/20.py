@@ -39,5 +39,5 @@ if local <= 0:
             answer = q
         if local > 0:
             break
-        
+
 print(answer)

@@ -12,4 +12,3 @@ for i in range(n):
             joke = 0
             break
     print("YES" * joke + "NO" * (1 - joke))
-

@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     a = sys.stdin.readline().strip()
     b = sys.stdin.readline().strip()
@@ -17,13 +18,13 @@ def main():
     for i in range(1, 8):
         if i == len(str(n - i)):
             l = n - i
-            break;
+            break
 
     for s in b, str(l):
         for i in map(ord, s):
             cnt[i] -= 1
 
-    res = ["".join([b] + [chr(k) * v for k, v in enumerate(cnt) if v > 0 ])] if b[0] > "0" else []
+    res = ["".join([b] + [chr(k) * v for k, v in enumerate(cnt) if v > 0])] if b[0] > "0" else []
 
     for i in range(ord("1"), ord("9") + 1):
         if cnt[i] > 0:
@@ -35,6 +36,9 @@ def main():
 
     print(min(res))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()
