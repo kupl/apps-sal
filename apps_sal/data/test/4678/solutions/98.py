@@ -7,4 +7,3 @@ for i in range(1, N):
         result += A[i - 1] - A[i]
         A[i] = A[i - 1]
 print(result)
-

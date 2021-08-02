@@ -8,4 +8,3 @@ for i in a:
     elif mx < i:
         mx = i
 print(ans)
-

@@ -1,11 +1,11 @@
+from collections import Counter, deque
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -23,10 +23,11 @@ def main():
     n, k = i_map()
     h = [i_input() for i in range(n)]
     h.sort()
-    print((min(h[i+k-1] - h[i] for i in range(n-k+1))))
+    print((min(h[i + k - 1] - h[i] for i in range(n - k + 1))))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -11,4 +11,3 @@ for i in range(1, m):
     ans = max(ans, max(l[i][1], l[i - 1][1]) + ((dd - dh) >> 1))
 
 print(ans)
-

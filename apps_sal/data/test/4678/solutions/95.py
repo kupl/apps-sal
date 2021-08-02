@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 maximum = A[0]
 ans = 0
 

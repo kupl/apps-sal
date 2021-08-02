@@ -1,8 +1,8 @@
 n = int(input())
 x = list(input())
-a = (n-11+1)//2
-b = (n-11)//2
-for i,ch in enumerate(x):
+a = (n - 11 + 1) // 2
+b = (n - 11) // 2
+for i, ch in enumerate(x):
     if ch == '8':
         if b > 0:
             b -= 1

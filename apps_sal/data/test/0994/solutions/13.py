@@ -15,7 +15,7 @@ for i in range(1, m):
         return
     else:
         diff = arr[i][1] - last[1]
-        res = max(res, (arr[i][0]-last[0]+diff)//2 + last[1])
+        res = max(res, (arr[i][0] - last[0] + diff) // 2 + last[1])
         res = max(res, arr[i][1])
         last = arr[i]
-print(max(arr[0][1]+arr[0][0]-1, max(res, n - arr[len(arr)-1][0] + arr[len(arr)-1][1]))) 
+print(max(arr[0][1] + arr[0][0] - 1, max(res, n - arr[len(arr) - 1][0] + arr[len(arr) - 1][1])))

@@ -13,4 +13,3 @@ if num3 == -1 or num3 > num * 2:
     print("NO")
 else:
     print("YES")
-

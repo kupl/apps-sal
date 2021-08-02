@@ -8,6 +8,6 @@ for i in range(N):
         X = A[i]
     else:
         pass
-    S.append( X - A[i] )
+    S.append(X - A[i])
 
 print(sum(S))

@@ -2,7 +2,7 @@ def main():
     import sys
     tokens = [int(i) for i in sys.stdin.read().split()]
     tokens.reverse()
-    
+
     result = 0
     n, m = tokens.pop(), tokens.pop()
     pd, ph = 0, 0
@@ -22,5 +22,6 @@ def main():
             result = max(result, h + (n - d))
         pd, ph = d, h
     print(result)
-    
+
+
 main()

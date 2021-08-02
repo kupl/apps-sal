@@ -10,4 +10,3 @@ for i in range(1, m):
     l_d, l_h = n_d, n_h
 m_h = max(m_h, l_h + n - l_d)
 print(m_h)
-

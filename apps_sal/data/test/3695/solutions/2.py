@@ -7,10 +7,10 @@ intervals = []
 for i in range(n):
     start = max(0, ts[i] - i - 1)
     end = T - i - 2
-    
+
     if start > end:
         continue
-    
+
     intervals.append((start, -1))
     intervals.append((end, 1))
 

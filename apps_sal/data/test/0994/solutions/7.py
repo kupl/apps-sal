@@ -25,4 +25,3 @@ for _ in range(m):
 
 top = max(top, h + n - d)
 print(top)
-

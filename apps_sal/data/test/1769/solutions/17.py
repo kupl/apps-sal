@@ -7,4 +7,3 @@ a[u] = d + u + 1
 for i in range(u + 1, d + u + 1):
     a[i] = a[i - 1] - 1
 print(*a)
-

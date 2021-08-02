@@ -23,8 +23,8 @@ for i in range(todo):
         n.popleft()
     else:
         e.pop()
-        
-    if len(e)!= 0:
+
+    if len(e) != 0:
         e.popleft()
     else:
         n.pop()
@@ -33,6 +33,3 @@ if len(e) != 0 and (len(n) == 0 or n[0] > e[0]):
     print("YES")
 else:
     print("NO")
-
-
-

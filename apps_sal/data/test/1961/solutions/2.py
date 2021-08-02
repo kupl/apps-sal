@@ -20,4 +20,6 @@ def main():
                 print("NO")
                 return
     print("YES")
+
+
 main()

@@ -8,4 +8,3 @@ for i in range(1, n):
     else:
         tall = lst[i]
 print(ans)
-
