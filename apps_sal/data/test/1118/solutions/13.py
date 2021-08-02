@@ -19,4 +19,3 @@ for i in range(2, n + 1):
     dp1, dp2 = dp2, dp
 res = dp2[0]
 print(res)
-

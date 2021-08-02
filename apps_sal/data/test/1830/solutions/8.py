@@ -1,7 +1,7 @@
 n, m = map(int, input().split())
 
-free_verticals = set(range(1, n+1))
-free_horizontals = set(range(1, n+1))
+free_verticals = set(range(1, n + 1))
+free_horizontals = set(range(1, n + 1))
 
 
 for _ in range(m):
@@ -10,4 +10,3 @@ for _ in range(m):
     free_horizontals.discard(y)
     print(len(free_horizontals) * len(free_verticals), end=' ')
 print()
-

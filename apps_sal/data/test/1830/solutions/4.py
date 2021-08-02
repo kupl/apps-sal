@@ -15,5 +15,3 @@ for i in range(m):
     print((n * n) - (c1 * n + ((n - c1) * r1)), end=" ")
 
 print("")
-    
-

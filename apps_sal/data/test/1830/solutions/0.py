@@ -16,5 +16,4 @@ for i in range(m):
         sum -= colx
         usedy[y] = True
         coly -= 1
-    print(sum, end = ' ')
-
+    print(sum, end=' ')

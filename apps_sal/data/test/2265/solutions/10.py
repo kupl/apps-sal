@@ -14,6 +14,3 @@ for i in range(len(a) - len(b) + 1):
     if (pref[i + len(b) - 1] - pref[i - 1]) % 2 == x:
         ans += 1
 print(ans)
-    
-        
-

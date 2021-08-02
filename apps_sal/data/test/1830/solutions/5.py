@@ -15,4 +15,3 @@ for _ in range(m):
     results.append(result)
 
 print(' '.join(map(str, results)))
-

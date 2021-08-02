@@ -16,4 +16,6 @@ def main():
         if s4 == 1 or l4 == 1 or r4 == 1 or s2 == 1 or l1 == 1 or r3 == 1:
             return "YES"
     return "NO"
+
+
 print(main())

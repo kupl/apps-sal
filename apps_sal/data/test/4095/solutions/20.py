@@ -1,5 +1,5 @@
-n, m = map(int,input().split())
-a = list(map(int,input().split()))
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
 d = {}
 d[0] = 1
 has = False
@@ -13,7 +13,7 @@ for r in range(n):
     else:
         has = True
     if has:
-        ans += d.get(sx,0) + d.get(sx-1,0)
+        ans += d.get(sx, 0) + d.get(sx - 1, 0)
     else:
         t = d.get(sx, 0) + 1
         d[sx] = t

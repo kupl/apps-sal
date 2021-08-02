@@ -1,6 +1,6 @@
 a = input()
 b = input()
-q = 0 # a > b
+q = 0  # a > b
 for i in b:
     if i == '1':
         q += 1
@@ -12,4 +12,3 @@ for i in range(len(a)):
     if i + 1 >= lenb and (abs(value[i + 1] - value[i + 1 - lenb]) - q) % 2 == 0:
         ans += 1
 print(ans)
-

@@ -16,7 +16,7 @@ R = defaultdict(int)
 
 upper, lower = 0, 0
 
-for i in range(pos-1, -1, -1):
+for i in range(pos - 1, -1, -1):
     if ls[i] > m:
         upper += 1
     else:
@@ -30,7 +30,7 @@ for i in range(pos-1, -1, -1):
 
 upper, lower = 0, 0
 
-for i in range(pos+1, n):
+for i in range(pos + 1, n):
     if ls[i] > m:
         upper += 1
     else:
@@ -44,7 +44,6 @@ for i in range(pos+1, n):
 
 for i in list(L.keys()):
     cnt += L[i] * R[-i]
-    cnt += L[i] * R[-i-1]
+    cnt += L[i] * R[-i - 1]
 
 print(cnt)
-

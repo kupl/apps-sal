@@ -7,7 +7,6 @@ for i in range(m):
     t ^= (s2[i] == '0')
 res[t] += 1
 for i in range(m, n):
-    t ^= (s1[i] == '0') ^ (s1[i-m] == '0')
+    t ^= (s1[i] == '0') ^ (s1[i - m] == '0')
     res[t] += 1
 print(res[0])
-

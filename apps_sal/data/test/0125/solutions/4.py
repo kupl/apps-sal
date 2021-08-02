@@ -17,4 +17,3 @@ if d[3] == 1:
     if 1 in d[:3] or a[0] or b[1] or c[2]:
         st = True
 print('YES' if st else 'NO')
-

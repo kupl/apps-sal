@@ -3,11 +3,13 @@ b = input()
 n = len(a)
 m = len(b)
 
+
 def change(a):
     pref = [0] * (len(a))
     for i in range(1, len(a)):
         pref[i] = pref[i - 1] + (a[i] != a[i - 1])
     return pref
+
 
 equals = 0
 pref = change(a)

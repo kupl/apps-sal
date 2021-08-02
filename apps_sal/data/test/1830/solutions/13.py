@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, m = read()
 ans = [0] * m
 dx = [0] * (n + 1)
@@ -23,4 +25,3 @@ for i in range(m):
         dy[y] = 1
     ans[i] = cur
 print(*ans)
-

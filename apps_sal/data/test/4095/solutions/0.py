@@ -1,5 +1,6 @@
 def main():
     n, m = map(int, input().split())
+
     def intCompare(x):
         if int(x) == m:
             return 0
@@ -22,7 +23,9 @@ def main():
         tem += p[i]
         ret1[tem] += 1
     for i in set0:
-        ret += ret0[i] * (ret1[-i] + ret1[1-i]) 
+        ret += ret0[i] * (ret1[-i] + ret1[1 - i])
     print(ret)
     return 0
+
+
 main()

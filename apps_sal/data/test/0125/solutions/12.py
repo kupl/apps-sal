@@ -13,8 +13,10 @@ for __ in range(4):
     rs.append(r)
     ps.append(p)
 
+
 def get(ary, indx):
     return ary[indx % 4]
+
 
 accident = False
 
@@ -28,4 +30,3 @@ if accident:
     print("YES")
 else:
     print("NO")
-
