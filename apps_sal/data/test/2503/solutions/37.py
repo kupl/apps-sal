@@ -26,4 +26,3 @@ np.cumsum(grid, axis=1, out=grid)
 p1 = grid[:K, :K] + grid[k:, k:] + grid[K:k, K:k] + grid[k:, :K] + grid[:K, k:]
 p2 = grid[K:k, :K] + grid[K:k, k:] + grid[:K, K:k] + grid[k:, K:k]
 print((max(p1.max(), p2.max())))
-

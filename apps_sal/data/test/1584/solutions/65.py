@@ -11,4 +11,3 @@ for i, a in enumerate(L[2:]):
         ans += i - max(k, j) + 1
 
 print(ans)
-

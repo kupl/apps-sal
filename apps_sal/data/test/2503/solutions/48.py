@@ -5,11 +5,13 @@ N, K = map(int, input().split())
 K2 = K * 2
 Mij = [[0 for _ in range(K2 + 1)] for _ in range(K2 + 1)]
 
+
 def imos(i1, j1, i2, j2):
     Mij[i1][j1] += 1
     Mij[i1][j2] -= 1
     Mij[i2][j1] -= 1
     Mij[i2][j2] += 1
+
 
 for _ in range(N):
     i, j, s = sys.stdin.readline().split()

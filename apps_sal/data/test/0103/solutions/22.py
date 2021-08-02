@@ -20,4 +20,5 @@ def user99():
 
     print(ans)
 
+
 user99()

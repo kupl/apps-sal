@@ -11,4 +11,3 @@ for _ in range(n):
     else:
         x += amount
 print(str(x) + " " + str(distress))
-

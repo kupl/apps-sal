@@ -13,4 +13,3 @@ while ind != n:
     ind += 1
     ans = max(ans, now - 1)
 print(ans)
-

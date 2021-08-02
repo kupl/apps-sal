@@ -12,4 +12,3 @@ for i in range(t):
         continue
     else:
         print('YES')
-

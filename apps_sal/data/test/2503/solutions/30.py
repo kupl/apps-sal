@@ -21,9 +21,9 @@ for x, y, c in xyc:
 
     b[y][x] += 1
 
-b[:k, k:] = b[k:2*k, :k-1]
-b[k:2*k, k:] = b[:k, :k-1]
-b[2*k:, :] = b[:k-1, :]
+b[:k, k:] = b[k:2 * k, :k - 1]
+b[k:2 * k, k:] = b[:k, :k - 1]
+b[2 * k:, :] = b[:k - 1, :]
 
 b = np.pad(b, (1, 0), "constant")
 
@@ -33,4 +33,3 @@ b = np.cumsum(b, axis=1)
 cnt = b[k:, k:] - b[k:, :-k] - b[:-k, k:] + b[:-k, :-k]
 ans = cnt.max()
 print(ans)
-

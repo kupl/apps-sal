@@ -1,10 +1,12 @@
 import numpy as np
 
+
 def getBoundary(p, k, k2):
     if p - k + 1 >= 0:
         return [(p - k + 1, p + 1)]
     else:
         return [(0, p + 1), ((p - k + 1) % k2, k2)]
+
 
 n, k = list(map(int, input().strip().split()))
 k2 = k * 2
@@ -33,4 +35,3 @@ for i in range(k2):
 for j in range(k2):
     arr_b[:, j + 1] += arr_b[:, j]
 print((arr_b.max()))
-

@@ -1,6 +1,6 @@
 N, K = map(int, input().split())
 
-score = [[0] * (K+1) for y in range(K+1)]
+score = [[0] * (K + 1) for y in range(K + 1)]
 base_hope = 0
 
 for i in range(N):
@@ -15,7 +15,7 @@ for i in range(N):
 
 xy = [(x, y) for x in range(K) for y in range(K)]
 for x, y in xy:
-    score[y+1][x+1] += score[y+1][x] + score[y][x+1] - score[y][x]
+    score[y + 1][x + 1] += score[y + 1][x] + score[y][x + 1] - score[y][x]
 
 max_hope = 0
 for x, y in xy:

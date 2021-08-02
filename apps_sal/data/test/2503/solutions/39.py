@@ -29,4 +29,5 @@ def d_checker():
     # 最後に累積和を取ると、あるマスを正方形の角としたとき叶えられる希望の数がわかる
     return int(np.max(np.cumsum(np.cumsum(requests_black, axis=1), axis=0)))
 
+
 print(d_checker())

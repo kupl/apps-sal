@@ -1,6 +1,6 @@
 import sys
 
-#縦k、横kのマスに移動させて考える
+# 縦k、横kのマスに移動させて考える
 n, k = map(int, sys.stdin.readline().strip().split())
 x = []
 y = []
@@ -31,8 +31,8 @@ for _ in range(n):
 
 graph = [[0 for _ in range(k)] for __ in range(k)]
 
-#累積和
-#lx + lmx = n
+# 累積和
+# lx + lmx = n
 lx = len(x)
 graph[0][0] += lx
 for i in range(lx):
@@ -48,14 +48,14 @@ for i in range(lmx):
     graph[mx[i]][my[i]] -= 2
 
 for i in graph:
-    for j in range(k-1):
-        i[j+1] += i[j]
+    for j in range(k - 1):
+        i[j + 1] += i[j]
 
 for i in range(k):
-    for j in range(k-1):
-        graph[j+1][i] += graph[j][i]
+    for j in range(k - 1):
+        graph[j + 1][i] += graph[j][i]
 
-#最大値、最小値を取得
+# 最大値、最小値を取得
 big = max([max(i) for i in graph]) + lmx
 small = min([min(i) for i in graph]) - lx
 

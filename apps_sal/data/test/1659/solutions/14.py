@@ -10,4 +10,3 @@ for i in range(n):
         else:
             sad += 1
 print(x, sad)
-

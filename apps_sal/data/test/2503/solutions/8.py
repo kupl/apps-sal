@@ -30,4 +30,3 @@ for i in range(ub):
 for j in range(ub):
     b_arr[:, j + 1] += b_arr[:, j]
 print((b_arr.max()))
-

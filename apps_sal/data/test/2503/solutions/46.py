@@ -31,4 +31,3 @@ b = np.cumsum(b, axis=1)
 cnt = b[k:, k:] - b[k:, :-k] - b[:-k, k:] + b[:-k, :-k]
 ans = cnt.max()
 print(ans)
-

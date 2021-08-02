@@ -11,4 +11,3 @@ for i in range(n):
         else:
             x -= int(num)
 print(x, bad)
-

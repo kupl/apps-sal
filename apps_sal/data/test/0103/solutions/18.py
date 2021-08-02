@@ -9,9 +9,9 @@ for i in range(n):
     cnt = 0
     while i + cnt < n and vl[i + cnt] == vl[i] + cnt:
         cnt += 1
-    
+
     ans = max(ans, cnt - 2)
-        
+
 
 cnt1 = 0
 while cnt1 < n and vl[cnt1] == cnt1 + 1:

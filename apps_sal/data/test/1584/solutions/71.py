@@ -8,4 +8,3 @@ for i in range(n):
         ng = n - bisect_left(l, l[i] + l[j]) + 1
         ans += (n - j) - ng
 print(ans)
-

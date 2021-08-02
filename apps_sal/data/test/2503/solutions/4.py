@@ -1,5 +1,5 @@
 from subprocess import*
-call(('julia','-e',"""
+call(('julia', '-e', """
 const lines=readlines()
 input()=shift!(lines)
 int(s)=parse(Int32,s)

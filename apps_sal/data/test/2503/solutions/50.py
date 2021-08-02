@@ -19,14 +19,14 @@ SB = np.zeros((4 * K + 1, 4 * K + 1), np.int32)
 SW = np.zeros((4 * K + 1, 4 * K + 1), np.int32)
 # t3 = time()
 # print(t3 - t2)
-SB[0*K+1:2*K+1, 0*K+1:2*K+1] = B
-SB[0*K+1:2*K+1, 2*K+1:4*K+1] = B
-SB[2*K+1:4*K+1, 0*K+1:2*K+1] = B
-SB[2*K+1:4*K+1, 2*K+1:4*K+1] = B
-SW[0*K+1:2*K+1, 0*K+1:2*K+1] = W
-SW[0*K+1:2*K+1, 2*K+1:4*K+1] = W
-SW[2*K+1:4*K+1, 0*K+1:2*K+1] = W
-SW[2*K+1:4*K+1, 2*K+1:4*K+1] = W
+SB[0 * K + 1:2 * K + 1, 0 * K + 1:2 * K + 1] = B
+SB[0 * K + 1:2 * K + 1, 2 * K + 1:4 * K + 1] = B
+SB[2 * K + 1:4 * K + 1, 0 * K + 1:2 * K + 1] = B
+SB[2 * K + 1:4 * K + 1, 2 * K + 1:4 * K + 1] = B
+SW[0 * K + 1:2 * K + 1, 0 * K + 1:2 * K + 1] = W
+SW[0 * K + 1:2 * K + 1, 2 * K + 1:4 * K + 1] = W
+SW[2 * K + 1:4 * K + 1, 0 * K + 1:2 * K + 1] = W
+SW[2 * K + 1:4 * K + 1, 2 * K + 1:4 * K + 1] = W
 # t4 = time()
 # print(t4 - t3)
 np.cumsum(SB, 0, out=SB)
@@ -36,25 +36,24 @@ np.cumsum(SW, 1, out=SW)
 # t5 = time()
 # print(t5 - t4)
 ans = 0
-cand = SB[1*K:3*K+1, 1*K:3*K+1].copy()
-cand -= SB[0*K:2*K+1, 1*K:3*K+1]
-cand -= SB[1*K:3*K+1, 0*K:2*K+1]
-cand += SB[0*K:2*K+1, 0*K:2*K+1]
-cand += SB[2*K:4*K+1, 2*K:4*K+1]
-cand -= SB[1*K:3*K+1, 2*K:4*K+1]
-cand -= SB[2*K:4*K+1, 1*K:3*K+1]
-cand += SB[1*K:3*K+1, 1*K:3*K+1]
-cand += SW[2*K:4*K+1, 1*K:3*K+1]
-cand -= SW[1*K:3*K+1, 1*K:3*K+1]
-cand -= SW[2*K:4*K+1, 0*K:2*K+1]
-cand += SW[1*K:3*K+1, 0*K:2*K+1]
-cand += SW[1*K:3*K+1, 2*K:4*K+1]
-cand -= SW[0*K:2*K+1, 2*K:4*K+1]
-cand -= SW[1*K:3*K+1, 1*K:3*K+1]
-cand += SW[0*K:2*K+1, 1*K:3*K+1]
+cand = SB[1 * K:3 * K + 1, 1 * K:3 * K + 1].copy()
+cand -= SB[0 * K:2 * K + 1, 1 * K:3 * K + 1]
+cand -= SB[1 * K:3 * K + 1, 0 * K:2 * K + 1]
+cand += SB[0 * K:2 * K + 1, 0 * K:2 * K + 1]
+cand += SB[2 * K:4 * K + 1, 2 * K:4 * K + 1]
+cand -= SB[1 * K:3 * K + 1, 2 * K:4 * K + 1]
+cand -= SB[2 * K:4 * K + 1, 1 * K:3 * K + 1]
+cand += SB[1 * K:3 * K + 1, 1 * K:3 * K + 1]
+cand += SW[2 * K:4 * K + 1, 1 * K:3 * K + 1]
+cand -= SW[1 * K:3 * K + 1, 1 * K:3 * K + 1]
+cand -= SW[2 * K:4 * K + 1, 0 * K:2 * K + 1]
+cand += SW[1 * K:3 * K + 1, 0 * K:2 * K + 1]
+cand += SW[1 * K:3 * K + 1, 2 * K:4 * K + 1]
+cand -= SW[0 * K:2 * K + 1, 2 * K:4 * K + 1]
+cand -= SW[1 * K:3 * K + 1, 1 * K:3 * K + 1]
+cand += SW[0 * K:2 * K + 1, 1 * K:3 * K + 1]
 ans = np.max(cand)
 # t6 = time()
 # print(t6 - t5)
 
 print(ans)
-

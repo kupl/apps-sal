@@ -9,7 +9,7 @@ lr = lambda: list(map(int, sr().split()))
 # 縦K、横2*Kの長方形に全ての希望をWとして入れる
 # numpyの累積和、最後にmaxをとる
 N, K = lr()
-table = [[0] * 2*K for _ in range(K)]
+table = [[0] * 2 * K for _ in range(K)]
 for _ in range(N):
     x, y, c = sr().split()
     x = int(x); y = int(y)
@@ -34,4 +34,3 @@ table_cum[K:, :] -= prev[:-K, :]
 table_cum[K:, K:] += prev[:-K, :-K]
 answer = table_cum.max()
 print(answer)
-

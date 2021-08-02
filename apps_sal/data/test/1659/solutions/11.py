@@ -11,4 +11,3 @@ for i in range(n):
     else:
         x += b
 print(x, sad)
-

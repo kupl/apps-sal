@@ -1,11 +1,10 @@
-ans=0
-n,x=list(map(int,input().split()))
+ans = 0
+n, x = list(map(int, input().split()))
 for i in range(n):
-    c,y=input().split()
-    y=int(y)
-    if c=="+": x+=y
+    c, y = input().split()
+    y = int(y)
+    if c == "+": x += y
     else:
-        if x>=y: x-=y
-        else: ans+=1
-print(x,ans)
-
+        if x >= y: x -= y
+        else: ans += 1
+print(x, ans)

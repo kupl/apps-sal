@@ -1,5 +1,5 @@
 
 
-r=int(input())
+r = int(input())
 
 print(r**2)

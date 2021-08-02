@@ -13,4 +13,3 @@ for i in range(N - 2):
         pos = bisect_left(L, L[i] + L[j], lo=j + 1)
         ans += pos - (j + 1)
 print(ans)
-

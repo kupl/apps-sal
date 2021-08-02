@@ -3,7 +3,7 @@ import numpy as np
 N, K = map(int, input().split())
 _3K = 3 * K
 _2K = 2 * K
-G = np.zeros((_2K, _3K), dtype='int64') # 後から 2K * K に圧縮する
+G = np.zeros((_2K, _3K), dtype='int64')  # 後から 2K * K に圧縮する
 for _ in range(N):
     x, y, c = input().split()
     x, y = int(x), int(y)
@@ -30,9 +30,9 @@ for _ in range(N):
     # → いもす法を使う
     # 塗り方を 3K * 2K の範囲で考えて累積和をとった後、 2K * K の範囲に圧縮する
     G[y, x] += 1
-    G[y+K, x+K] += 1
-    G[y+K, x] -= 1
-    G[y, x+K] -= 1
+    G[y + K, x + K] += 1
+    G[y + K, x] -= 1
+    G[y, x + K] -= 1
 
 # 3K * 2K の範囲の累積和をとる
 G = G.cumsum(axis=1).cumsum(axis=0)
