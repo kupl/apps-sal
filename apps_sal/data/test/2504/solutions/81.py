@@ -10,7 +10,7 @@ g_dense = np.zeros((n, n))
 
 for _ in range(m):
     a, b, c = map(int, input().split())
-    g_dense[a-1][b-1] = c
+    g_dense[a - 1][b - 1] = c
 
 q = int(input())
 st = [list(map(int, input().split())) for _ in range(q)]
@@ -28,8 +28,8 @@ path = shortest_path(g_dense, directed=False)
 
 INF = float('inf')
 
-for s,t in st:
-    ans = path[s-1][t-1]
+for s, t in st:
+    ans = path[s - 1][t - 1]
     if ans == INF:
         print(-1)
     else:

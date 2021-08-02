@@ -8,7 +8,7 @@ def main():
     for _ in range(M):
         s, t, w = map(int, input().split())
         if w <= L:
-            graph[s-1][t-1] = graph[t-1][s-1] = w
+            graph[s - 1][t - 1] = graph[t - 1][s - 1] = w
     graph = floyd_warshall(graph, directed=False)
     graph = floyd_warshall(graph <= L, directed=False)
     graph[np.isinf(graph)] = 0
@@ -17,11 +17,12 @@ def main():
     ans = []
     for _ in range(Q):
         s, t = map(int, input().split())
-        ans.append(int(graph[s-1][t-1]) - 1)
+        ans.append(int(graph[s - 1][t - 1]) - 1)
     print(*ans, sep='\n')
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

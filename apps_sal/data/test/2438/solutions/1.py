@@ -18,7 +18,7 @@ for s in S:
             curA = 1
         else:
             curA += 1
-    
+
     else:
         if curA != 0:
             minus += curA
@@ -31,7 +31,7 @@ for i in range(n - 1, -1, -1):
     s = S[i]
     if s == 'A':
         if curB > 1:
-            
+
             minus += curB - 1
             curB = 0
             curA = 1
@@ -52,8 +52,8 @@ for i in range(n - 1, -1, -1):
             curB += 1
 
 
-print(n *(n + 1) // 2 - minus)
+print(n * (n + 1) // 2 - minus)
 '''
 6
 ABABAB
-''' 
+'''

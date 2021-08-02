@@ -16,4 +16,3 @@ for i in s:
 K.append(cnt)
 bad = 3 * n - K[0] - K[-1] - (len(K) - 1)
 print(n * (n + 1) // 2 - bad)
-

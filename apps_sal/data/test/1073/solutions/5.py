@@ -1,6 +1,6 @@
 def main():
     from collections import defaultdict
-    
+
     d = defaultdict(int)
     d[(0, 0)] += 1
     n = int(input())
@@ -14,8 +14,8 @@ def main():
         else: y -= 1
         res += d[(x, y)]
         d[(x, y)] += 1
-    
+
     print(res)
-    
-    
+
+
 main()

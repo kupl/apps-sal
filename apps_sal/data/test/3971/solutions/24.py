@@ -6,7 +6,7 @@ st = [int(x) for x in (sys.stdin.readline()).split()]
 
 for i in st:
     k[i] += 1
-    
+
 x = 0
 y = 0
 
@@ -17,5 +17,5 @@ while(j > 0):
     else:
         y = max(y + k[j] * j, x)
     j -= 1
-        
+
 print(max(x, y))

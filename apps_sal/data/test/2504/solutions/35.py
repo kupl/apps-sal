@@ -30,6 +30,6 @@ for _ in range(Q):
     s -= 1
     t -= 1
     if dist2[s][t] >= INF:
-        print (-1)
+        print(-1)
     else:
-        print (int(dist2[s][t] - 1))
+        print(int(dist2[s][t] - 1))

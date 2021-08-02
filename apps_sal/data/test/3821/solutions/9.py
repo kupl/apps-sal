@@ -7,11 +7,11 @@ p = y[0]
 prod = 1 - y[0]
 
 for i in range(1, x):
-    
-    newx = p* (1-y[i]) + prod * y[i]
+
+    newx = p * (1 - y[i]) + prod * y[i]
     if newx > p:
         prod *= (1 - y[i])
         p = newx
         l.append(y[i])
-    
+
 print(p)

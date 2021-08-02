@@ -11,4 +11,3 @@ for i in l1:
 for i in l2:
     i.sort()
 print('YES' if l1 == l2 else 'NO')
-

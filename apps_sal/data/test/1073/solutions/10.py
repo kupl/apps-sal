@@ -1,7 +1,7 @@
 n = int(input())
 inst = input()
 
-dir_ = dict(U=(0,1), D=(0,-1), L=(-1, 0), R=(1, 0))
+dir_ = dict(U=(0, 1), D=(0, -1), L=(-1, 0), R=(1, 0))
 ct = 0
 for i in range(n):
     x, y = (0, 0)
@@ -12,4 +12,3 @@ for i in range(n):
         ct += x == 0 and y == 0
 
 print(ct)
-

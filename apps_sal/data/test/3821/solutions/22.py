@@ -12,7 +12,7 @@ c1 = 1
 c2 = 0
 for i in Q:
     if (c1 * i) * (c2 + 1 / i - 1) > ans:
-         ans = (c1 * i) * (c2 + 1 / i - 1)
-         c1 *= i
-         c2 += (1 / i - 1)
+        ans = (c1 * i) * (c2 + 1 / i - 1)
+        c1 *= i
+        c2 += (1 / i - 1)
 print(ans)

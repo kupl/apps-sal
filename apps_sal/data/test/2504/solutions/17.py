@@ -14,13 +14,13 @@ n, m, l = list(map(int, input().split()))
 for _ in range(m):
     a, b, c = list(map(int, input().split()))
     cost.append(c)
-    row.append(a-1)
-    col.append(b-1)
+    row.append(a - 1)
+    col.append(b - 1)
 
 q = int(input())
 st = [list(map(int, input().split())) for _ in range(q)]
 
-csr = csr_matrix((cost, (row, col)), shape = (n, n))
+csr = csr_matrix((cost, (row, col)), shape=(n, n))
 path = floyd_warshall(csr, directed=False)
 
 cost = []
@@ -32,21 +32,16 @@ for i in range(n):
         if path[i][j] <= l:
             cost.append(1)
             row.append(i)
-            col.append(j) 
+            col.append(j)
 
-csr = csr_matrix((cost, (row, col)), shape = (n, n))
+csr = csr_matrix((cost, (row, col)), shape=(n, n))
 path = floyd_warshall(csr, directed=False)
 
 INF = float('inf')
 
-for s,t in st:
-    ans = path[s-1][t-1]
+for s, t in st:
+    ans = path[s - 1][t - 1]
     if ans == INF:
         print((-1))
     else:
         print((int(ans) - 1))
-
-
-
-
-

@@ -13,7 +13,7 @@ import sys
 # from scipy.misc import comb # (default: exact=False)
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import floyd_warshall
-import numpy as np 
+import numpy as np
 
 
 def main():
@@ -24,10 +24,10 @@ def main():
     ST = ABCQST[m * 3 + 1:]
     S, T = ST[::2], ST[1::2]
 
-    dist = csr_matrix((C, (A, B)), (n+1, n+1))
+    dist = csr_matrix((C, (A, B)), (n + 1, n + 1))
     min_dist = floyd_warshall(dist, directed=False)
 
-    filling_times = np.full((n+1, n+1), np.inf)
+    filling_times = np.full((n + 1, n + 1), np.inf)
     np.diagonal(filling_times, 0)
     filling_times[min_dist <= l] = 1
 
@@ -43,5 +43,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

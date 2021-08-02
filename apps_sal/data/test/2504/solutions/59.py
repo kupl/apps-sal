@@ -4,6 +4,7 @@ from scipy.sparse import csr_matrix
 
 INF = float('inf')
 
+
 def main():
     N, M, L = list(map(int, input().split()))
     E = [[INF] * N for _ in range(N)]
@@ -19,7 +20,6 @@ def main():
         s, t = list(map(int, input().split()))
         x = EE[s - 1][t - 1]
         print((-1 if isinf(x) else int(x) - 1))
-        
+
 
 main()
-

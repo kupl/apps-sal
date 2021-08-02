@@ -4,8 +4,8 @@ def main():
     a = [[] for i in range(n)]
     b = [[] for i in range(n)]
     aDicts = [dict() for i in range(n + m - 1)]
-    bDicts = [dict() for i in range(n + m - 1)]    
-    
+    bDicts = [dict() for i in range(n + m - 1)]
+
     for i in range(n):
         a[i] = list(map(int, input().split()))
     for i in range(n):
@@ -17,11 +17,11 @@ def main():
                 aDicts[i + j][a[i][j]] += 1
             else:
                 aDicts[i + j][a[i][j]] = 1
-    
+
             if b[i][j] in bDicts[i + j].keys():
                 bDicts[i + j][b[i][j]] += 1
             else:
-                bDicts[i + j][b[i][j]] = 1            
+                bDicts[i + j][b[i][j]] = 1
 
     for i in range(n + m - 1):
         if aDicts[i] != bDicts[i]:
@@ -29,5 +29,6 @@ def main():
             return 0
     print("YES")
     return 0
+
 
 main()

@@ -21,6 +21,9 @@ def main():
     else:
         print(max_number)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

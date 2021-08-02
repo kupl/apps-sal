@@ -23,4 +23,3 @@ Q = int(input())
 for _ in range(Q):
     S, T = list(map(int, input().split()))
     print((res - 1 if (res := way_replenishment[S - 1][T - 1]) >= 0 else -1))
-

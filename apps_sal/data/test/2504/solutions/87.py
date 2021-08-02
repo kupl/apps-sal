@@ -1,6 +1,8 @@
-#dame datta...
+# dame datta...
 from scipy.sparse.csgraph import floyd_warshall
 from scipy.sparse import csr_matrix
+
+
 def main():
     N, M, L = list(map(int, input().split()))
     l = [[0] * N for _ in range(N)]
@@ -8,8 +10,8 @@ def main():
         a, b, c = list(map(int, input().split()))
         if c > L:
             continue
-        l[a-1][b-1] = c
-        l[b-1][a-1] = c
+        l[a - 1][b - 1] = c
+        l[b - 1][a - 1] = c
     G = csr_matrix(l)
     d = floyd_warshall(G)
     l = [[0] * N for _ in range(N)]
@@ -26,8 +28,9 @@ def main():
         t -= 1
         x = d[s][t]
         if x != float('inf'):
-            print((int(x)-1))
+            print((int(x) - 1))
         else:
             print((-1))
-main()
 
+
+main()

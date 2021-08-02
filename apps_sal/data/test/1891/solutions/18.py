@@ -3,7 +3,7 @@ from functools import reduce
 
 n, k, A, B = list(map(int, input().split()))
 
-positions = sorted(list([int(s)-1 for s in input().split()]))
+positions = sorted(list([int(s) - 1 for s in input().split()]))
 
 d_h_counts = Counter(positions)
 h_indices = d_h_counts
@@ -13,6 +13,7 @@ for ind in h_indices:
 
 
 ind_filled = sorted(h_indices)
+
 
 def reduce(ind_filled, d_values, ll):
     """
@@ -28,23 +29,23 @@ def reduce(ind_filled, d_values, ll):
 
         ai = ind_filled[index]
 
-        if index == len(ind_filled)-1 or ind_filled[index] // 2 != ind_filled[index+1] // 2:
-            d_res[ai//2] = (min(A + d_values[ai][0], d_values[ai][1] * B * 2 * ll), d_values[ai][1])
-            out_ind.append(ai//2)
+        if index == len(ind_filled) - 1 or ind_filled[index] // 2 != ind_filled[index + 1] // 2:
+            d_res[ai // 2] = (min(A + d_values[ai][0], d_values[ai][1] * B * 2 * ll), d_values[ai][1])
+            out_ind.append(ai // 2)
             index += 1
 
-
-        elif ind_filled[index] // 2 == ind_filled[index+1] // 2:
+        elif ind_filled[index] // 2 == ind_filled[index + 1] // 2:
             # merge
-            anext = ind_filled[index+1]
-            d_res[ai//2] = (min(d_values[ai][0] + d_values[anext][0],
-                                   (d_values[ai][1] + d_values[anext][1]) * B * 2 * ll),
-                               d_values[ai][1] + d_values[anext][1])
-            out_ind.append(ai//2)
+            anext = ind_filled[index + 1]
+            d_res[ai // 2] = (min(d_values[ai][0] + d_values[anext][0],
+                                  (d_values[ai][1] + d_values[anext][1]) * B * 2 * ll),
+                              d_values[ai][1] + d_values[anext][1])
+            out_ind.append(ai // 2)
 
             index += 2
 
     return out_ind, d_res
+
 
 ll = 1
 
@@ -62,4 +63,3 @@ while npow < n:
 
 k = list(d_h_counts.keys())[0]
 print(d_h_counts[k][0])
-

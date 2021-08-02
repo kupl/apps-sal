@@ -6,4 +6,3 @@ for i in map(int, input().split(' ')):
 for i in range(2, N):
     x[i] = max(x[i - 1], x[i] * i + x[i - 2])
 print(x[N - 1])
-

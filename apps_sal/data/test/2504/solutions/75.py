@@ -2,6 +2,8 @@
 import numpy as np
 from scipy.sparse.csgraph import floyd_warshall
 from scipy.sparse import csr_matrix
+
+
 def resolve():
     INF = 10 ** 18
     N, M, L = list(map(int, input().split()))
@@ -32,5 +34,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

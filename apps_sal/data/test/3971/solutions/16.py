@@ -10,6 +10,9 @@ def main():
         a, b = b, max(b, a + cnt[i] * i)
     print(b)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

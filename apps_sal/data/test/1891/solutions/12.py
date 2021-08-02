@@ -18,4 +18,3 @@ def solve(l, r, a):
 
 a = list(map(int, input().split()))
 print(solve(1, 1 << n, a))
-

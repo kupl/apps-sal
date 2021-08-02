@@ -1,16 +1,18 @@
 import sys
 import math
 
+
 def sieve(n):
-    prime_factors = [[] for i in range(n+1)]
-    tmp = [True] * (n+1)
+    prime_factors = [[] for i in range(n + 1)]
+    tmp = [True] * (n + 1)
     tmp[0] = tmp[1] = False
-    for i in range(2, n+1):
+    for i in range(2, n + 1):
         if tmp[i]:
-            for k in range(i, n+1, i):
+            for k in range(i, n + 1, i):
                 tmp[k] = False
                 prime_factors[k].append(i)
     return prime_factors
+
 
 n = int(sys.stdin.readline().strip())
 a = list(map(int, sys.stdin.readline().strip().split(' ')))
@@ -44,7 +46,7 @@ for ai in a:
                         ok = False
                         break
             for f in factors:
-                forbidden_factors.add(f) 
+                forbidden_factors.add(f)
     else:
         curr = min_available
         ok = True
@@ -66,4 +68,3 @@ for ai in a:
             forbidden_factors.add(f)
     b.append(str(curr))
 print(" ".join(b))
-

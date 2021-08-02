@@ -28,4 +28,3 @@ for i, j in st:
         print((-1))
     else:
         print((int(edges[i][j]) - 1))
-

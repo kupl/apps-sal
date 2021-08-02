@@ -8,6 +8,7 @@ from collections import Counter
 # imgur.com/Pkt7iIf.png #
 #########################
 
+
 def pow(x, y, mod):
     r = 1
     x = x % mod
@@ -17,6 +18,8 @@ def pow(x, y, mod):
         y = y >> 1
         x = (x * x) % mod
     return r
+
+
 def sieve(n):
     prime = [True for i in range(n + 1)]
     p = 2
@@ -28,7 +31,9 @@ def sieve(n):
     prime[0] = prime[1] = False
     r = [p for p in range(n + 1) if prime[p]]
     return r
-def divs(n, start = 1):
+
+
+def divs(n, start=1):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
         if (n % i == 0):
@@ -37,13 +42,16 @@ def divs(n, start = 1):
             else:
                 r.extend([i, n // i])
     return r
+
+
 def cdiv(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
 def mi(): return list(map(int, input().split()))
 def li(): return list(map(int, input().split()))
 def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def prr(a, sep = ' '): print(sep.join(map(str, a)))
+def prr(a, sep=' '): print(sep.join(map(str, a)))
 def dd(): return collections.defaultdict(int)
+
 
 n = ii()
 s = input()
@@ -73,24 +81,4 @@ while i > 1:
         continue
     i -= 1
 
-print((n*(n-1))//2 - res)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print((n * (n - 1)) // 2 - res)

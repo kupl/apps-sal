@@ -5,7 +5,7 @@ count = 0
 for i in range(len(s)):
     for j in range(i, len(s)):
         x, y = 0, 0
-        for c in s[i:j+1]:
+        for c in s[i:j + 1]:
             if c == 'U':
                 y += 1
             elif c == 'D':
@@ -18,4 +18,3 @@ for i in range(len(s)):
             count += 1
 
 print(count)
-

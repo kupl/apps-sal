@@ -9,9 +9,9 @@ def main():
     _i = 0
     for j, (i, cnt) in enumerate(sorted(list(a.items()), reverse=True)):
         if i == _i - 1:
-            res[j] = max(res[j-1], res[j-2] + i * a[i])
+            res[j] = max(res[j - 1], res[j - 2] + i * a[i])
         else:
-            res[j] = res[j-1] + i * a[i]
+            res[j] = res[j - 1] + i * a[i]
         _i = i
 
     print(res[-1])
