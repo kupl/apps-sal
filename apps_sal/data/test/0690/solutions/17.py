@@ -9,4 +9,3 @@ for x in s[::-1]:
         cur += "O-|"
     cur += ''.join(['O' for j in range(n)]) + '-' + ''.join(['O' for j in range(4 - n)])
     print(cur)
-

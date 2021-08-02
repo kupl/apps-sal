@@ -1,11 +1,11 @@
 def srch(d1af, d2af):
 
     rtm = int(1e16)
-    for i1 in range(n+1):
+    for i1 in range(n + 1):
         r1m = d1af[i1]
         r2m = int(0)
 
-        for i2 in range(n+1):
+        for i2 in range(n + 1):
             if d1af[i2] <= r1m:
                 None
             else:
@@ -14,6 +14,7 @@ def srch(d1af, d2af):
         rtm = min(rtm, r1m + r2m)
 
     return rtm
+
 
 n, x1, y1, x2, y2 = list(map(int, input().split()))
 
@@ -31,4 +32,3 @@ for _ in range(n):
 
 print(srch(d1a, d2a))
 # PYPY!!!
-

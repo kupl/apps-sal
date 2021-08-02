@@ -53,4 +53,3 @@ def simulate(a__r, a__s, a__p, b__r, b__s, b__p, order):
 
 
 print(min(simulate(a_r, a_s, a_p, b_r, b_s, b_p, p) for p in permutations(list(range(6)))), a_max_win)
-

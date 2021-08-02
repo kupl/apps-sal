@@ -1,12 +1,12 @@
 import heapq
 
+
 class mcf_graph_int_cost:
 
     def __init__(self, n):
         self.n = n
         self.pos = []
         self.g = [[] for _ in range(n)]
-
 
     def add_edge(self, from_, to, cap, cost):
         # assert 0 <= from_ < self.n
@@ -17,7 +17,6 @@ class mcf_graph_int_cost:
         self.g[to].append(self.__class__._edge(from_, len(self.g[from_]) - 1, 0, -cost))
         return m
 
-
     class edge:
         def __init__(self, from_, to, cap, flow, cost):
             self.from_ = from_
@@ -26,12 +25,10 @@ class mcf_graph_int_cost:
             self.flow = flow
             self.cost = cost
 
-
     def get_edge(self, i):
         _e = self.g[self.pos[i][0]][self.pos[i][1]]
         _re = self.g[_e.to][_e.rev]
         return self.__class__.edge(self.pos[i][0], _e.to, _e.cap + _re.cap, _re.cap, _e.cost)
-
 
     def edges(self):
         ret = []
@@ -41,14 +38,13 @@ class mcf_graph_int_cost:
             ret.append(self.__class__.edge(self.pos[i][0], _e.to, _e.cap + _re.cap, _re.cap, _e.cost))
         return ret
 
-
     def _dual_ref(self, s, t):
         self.dist = [4294967295] * self.n
         self.pv = [-1] * self.n
         self.pe = [-1] * self.n
         self.vis = [False] * self.n
 
-        que = [s] # s ==  (0 << 32) + s 
+        que = [s]  # s ==  (0 << 32) + s
         self.dist[s] = 0
         while que:
             v = heapq.heappop(que) & 4294967295
@@ -74,21 +70,20 @@ class mcf_graph_int_cost:
             if not self.vis[v]:
                 continue
             self.dual[v] -= self.dist[t] - self.dist[v]
-        
-        return True
 
+        return True
 
     def slope(self, s, t, flow_limit=4294967295):
         # assert 0 <= s < self.n
         # assert 0 <= t < self.n
         # assert s != t
-        
+
         self.dual = [0] * self.n
         self.dist = [4294967295] * self.n
         self.pv = [-1] * self.n
         self.pe = [-1] * self.n
         self.vis = [False] * self.n
-        
+
         flow = 0
         cost = 0
         prev_cost = -1
@@ -116,17 +111,16 @@ class mcf_graph_int_cost:
             prev_cost = cost
         return result
 
-
     def flow(self, s, t, flow_limit=4294967295):
         return self.slope(s, t, flow_limit)[-1]
 
-    
     class _edge:
         def __init__(self, to, rev, cap, cost):
             self.to = to
             self.rev = rev
             self.cap = cap
             self.cost = cost
+
 
 INF = 10 ** 9
 
@@ -150,5 +144,3 @@ f, ans1 = g.flow(0, 7)
 
 ans2 = min(a1, b2) + min(a2, b3) + min(a3, b1)
 print(ans1, ans2)
-
-

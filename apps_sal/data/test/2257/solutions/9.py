@@ -1,7 +1,9 @@
 import math
 
+
 def dist(p1, p2):
     return (p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2
+
 
 n, x1, y1, x2, y2 = [int(x) for x in input().split()]
 p1, p2 = (x1, y1), (x2, y2)
@@ -32,4 +34,3 @@ for d in d1:
         dst = dist1 + dist2
 
 print(dst)
-

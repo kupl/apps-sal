@@ -45,4 +45,3 @@ for i in range(1, n):
             dp[i] = max(dp[i], rdp1[0][j] + rdp2[j + 1][i])
         dp[i] = max(dp[i], rdp1[0][j] + two[i + 1] - two[j + 1])
 print(dp[-1])
-

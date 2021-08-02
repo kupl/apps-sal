@@ -18,6 +18,7 @@ def srch(d1af, d2af):
 
     return rtm
 
+
 n, x1, y1, x2, y2 = list(map(int, input().split()))
 
 r1 = int(0)
@@ -37,4 +38,3 @@ for _ in range(n):
 
 rmin = min(srch(d1a, d2a), srch(d2a, d1a))
 print(rmin)
-

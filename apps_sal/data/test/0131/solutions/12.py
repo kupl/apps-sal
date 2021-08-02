@@ -17,4 +17,3 @@ if sumb <= suma:
     print('Yes')
 else:
     print('No')
-

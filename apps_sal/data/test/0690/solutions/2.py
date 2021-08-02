@@ -4,12 +4,12 @@ for k in n[::-1]:
     l = int(k)
     if l >= 5:
         l -= 5
-        ans+='-O|'
+        ans += '-O|'
     else:
-        ans+='O-|'
+        ans += 'O-|'
     for i in range(l):
-        ans+='O'
-    ans+='-'
-    for i in range(8-len(ans)):
+        ans += 'O'
+    ans += '-'
+    for i in range(8 - len(ans)):
         ans += 'O'
     print(ans)

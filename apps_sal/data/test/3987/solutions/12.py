@@ -9,7 +9,7 @@ def solve(lst):
             d = max(c, d) + 1
     return max(a, b, c, d)
 
+
 n = input()
 lst = list(map(int, input().split()))
 print(solve(lst))
-
