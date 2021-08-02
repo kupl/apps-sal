@@ -8,12 +8,12 @@ class Points(object):
                       self.z - no.z)
 
     def dot(self, no):
-        return self.x*no.x + self.y*no.y + self.z*no.z
+        return self.x * no.x + self.y * no.y + self.z * no.z
 
     def cross(self, no):
-        return Points(self.y*no.z - self.z*no.y,
-                      self.z*no.x - self.x*no.z,
-                      self.y*no.x - self.x*no.y)
-        
+        return Points(self.y * no.z - self.z * no.y,
+                      self.z * no.x - self.x * no.z,
+                      self.y * no.x - self.x * no.y)
+
     def absolute(self):
         return pow((self.x ** 2 + self.y ** 2 + self.z ** 2), 0.5)

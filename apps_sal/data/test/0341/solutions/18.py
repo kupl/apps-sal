@@ -4,8 +4,8 @@ T = input()
 
 T_split = [[] for i in range(K)]
 for i in range(N):
-    T_split[i%K].append(T[i])
-#print(T_split)
+    T_split[i % K].append(T[i])
+# print(T_split)
 
 ans = 0
 flag = 0
@@ -23,7 +23,6 @@ for i in range(len(T_split)):
             point = S
         ans += point
         if j != len(T_split[i]) - 1:
-            if T_split[i][j] == T_split[i][j+1]:
+            if T_split[i][j] == T_split[i][j + 1]:
                 flag = 1
 print(ans)
-

@@ -10,24 +10,24 @@ cnt = 0
 
 for itr, val in enumerate(t):
 
-  if itr >= k and val == li[itr % k]:
+    if itr >= k and val == li[itr % k]:
 
-    li[itr % k] = "x"
-
-  else:
-
-    if val == "r":
-
-      cnt += p
-
-    elif val == "s":
-
-      cnt += r
+        li[itr % k] = "x"
 
     else:
 
-      cnt += s
+        if val == "r":
 
-    li[itr % k] = val
+            cnt += p
+
+        elif val == "s":
+
+            cnt += r
+
+        else:
+
+            cnt += s
+
+        li[itr % k] = val
 
 print(cnt)

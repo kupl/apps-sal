@@ -21,7 +21,8 @@ class FordFulkerson:
         self.size[to] += 1
 
     def dfs(self, v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         self.used[v] = True
         for i in range(self.size[v]):
             edge = self.G[v][i]
@@ -92,5 +93,6 @@ def solve(r, w):
 
 def __starting_point():
     solve(sys.stdin, sys.stdout)
+
 
 __starting_point()

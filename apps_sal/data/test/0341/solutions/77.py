@@ -9,7 +9,7 @@ for i in range(n):
     elif t[i] == 's':
         l[i] = r
     else:
-        l[i] =s
+        l[i] = s
 
 ans = sum(l)
 for i in range(k, n):

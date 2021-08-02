@@ -3,7 +3,7 @@ R, S, P = [int(x) for x in input().split()]
 T = input()
 
 
-point = {'r':P, 's':R, 'p':S}
+point = {'r': P, 's': R, 'p': S}
 win = [False] * N
 total = 0
 for i in range(N):

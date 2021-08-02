@@ -28,12 +28,14 @@ def main():
             takahashi += 'p'
 
     for i in range(K, N):
-        if takahashi[i-K] == takahashi[i]:
-            takahashi = takahashi[:i] + '_' + takahashi[i+1:]
-    ans = takahashi.count('r')*R + takahashi.count('s')*S + takahashi.count('p')*P
+        if takahashi[i - K] == takahashi[i]:
+            takahashi = takahashi[:i] + '_' + takahashi[i + 1:]
+    ans = takahashi.count('r') * R + takahashi.count('s') * S + takahashi.count('p') * P
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

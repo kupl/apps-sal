@@ -6,4 +6,3 @@ for c in list(C.values()):
     if c % 2 == 1:
         ans += 1
 print(ans)
-

@@ -19,4 +19,3 @@ for i in list(d.keys()):
 
 
 print(min(min(a), (len(s) + 2) // 2))
-

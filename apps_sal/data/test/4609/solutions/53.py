@@ -1,4 +1,4 @@
-#20 C - Write and Erase
+# 20 C - Write and Erase
 N = int(input())
 A = [int(input()) for _ in range(N)]
 

@@ -13,4 +13,3 @@ while i < N:
     ans += count % 2
 
 print(ans)
-

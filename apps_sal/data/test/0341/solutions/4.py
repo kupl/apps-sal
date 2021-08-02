@@ -2,6 +2,7 @@ N, K = map(int, input().split())
 R, S, P = map(int, input().split())
 T = input()
 
+
 def janken(n):
     if n == "r":
         return P
@@ -9,6 +10,7 @@ def janken(n):
         return R
     else:
         return S
+
 
 ans = 0
 

@@ -1,6 +1,6 @@
 n, k = map(int, input().split())
-s, p, r = map(int, input().split()) 
-dic = {"p":p, "r":r, "s":s}
+s, p, r = map(int, input().split())
+dic = {"p": p, "r": r, "s": s}
 t = input()
 ans = 0
 for i in range(k):

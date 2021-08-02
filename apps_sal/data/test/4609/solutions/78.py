@@ -7,4 +7,3 @@ for _ in range(n):
     else:
         cnt_l[a] = 1
 print((sum(cnt_l.values())))
-

@@ -10,4 +10,3 @@ for ele in string:
     xor ^= int(ele)
 
 print("Exclusive" if xor == 0 else "Inclusive")
-

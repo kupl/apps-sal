@@ -15,11 +15,13 @@ f_size = 2 + 2 * n
 flow_matrix = [[0] * f_size for _ in range(f_size)]
 edge_list = [[] for _ in range(f_size)]
 
+
 def get_index(i, is_start):
     if is_start:
         return 2 + i
     else:
         return 2 + n + i
+
 
 for i in range(n):
     flow_matrix[0][get_index(i, True)] = starts[i]
@@ -39,6 +41,7 @@ for i in range(f_size):
     for j in range(f_size):
         if flow_matrix[i][j] != 0 or flow_matrix[j][i] != 0:
             edge_list[i].append(j)
+
 
 def run_bfs(m):
     parent = [None for _ in range(len(m))]
@@ -72,6 +75,7 @@ def run_bfs(m):
         cur = prev
     return flow
 
+
 def run_flow(m):
     total_flow = 0
     while True:
@@ -80,6 +84,7 @@ def run_flow(m):
         if flow == 0:
             break
     return total_flow
+
 
 if run_flow(flow_matrix) == num_soldiers:
     print("YES")
@@ -90,5 +95,3 @@ if run_flow(flow_matrix) == num_soldiers:
         print('')
 else:
     print("NO")
-
-

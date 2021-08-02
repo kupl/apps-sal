@@ -20,5 +20,5 @@ def main():
             checked += [s[i]]
     print(mi)
 
-main()
 
+main()

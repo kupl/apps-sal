@@ -7,8 +7,7 @@ s = input()
 # print(len(s))
 m = 1000000000
 for l in set(s):
-	x = set(s.split(l))
-	m = min(m, len(max(x, key=len)))
-print(m+1)
+    x = set(s.split(l))
+    m = min(m, len(max(x, key=len)))
+print(m + 1)
 # print(time() - start)
-

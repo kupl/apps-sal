@@ -1,5 +1,5 @@
-N,K = list(map(int, input().split()))
-R,S,P = list(map(int, input().split()))
+N, K = list(map(int, input().split()))
+R, S, P = list(map(int, input().split()))
 T = input()
 
 score_list = []
@@ -7,7 +7,7 @@ score_list = []
 ans = 0
 for i in range(K):
     pre_word = "dummy"
-    for j in range(i,N,K):
+    for j in range(i, N, K):
         if(T[j] != pre_word):
             if(T[j] == "r"):
                 ans += P
@@ -20,6 +20,6 @@ for i in range(K):
                 pre_word = "p"
         else:
             pre_word = "dummy"
-        
+
 
 print(ans)

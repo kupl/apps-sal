@@ -1,15 +1,22 @@
+from functools import partial, reduce
+from collections import Counter
 import sys
 ## io ##
 def IS(): return sys.stdin.readline().rstrip()
 def II(): return int(IS())
 def MII(): return list(map(int, IS().split()))
-from functools import partial, reduce
-from collections import Counter
+
+
 #======================================================#
+
+
 def f_chain(*args):
     return reduce(lambda x, f: f(x), args)
+
+
 def is_odd(n):
-    return n%2==1
+    return n % 2 == 1
+
 
 def main():
     n = II()
@@ -20,8 +27,11 @@ def main():
             list,
             len,
             print,
-    )
+            )
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

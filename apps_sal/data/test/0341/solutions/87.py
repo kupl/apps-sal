@@ -27,4 +27,3 @@ for i in range(0, K):
                 rsp_before = ''
 
 print(ans)
-

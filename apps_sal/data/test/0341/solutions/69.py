@@ -9,12 +9,11 @@ lose = False
 
 for j in range(k):
     point += dic[t[j]]
-    for i in range(j+k, n, k):
-        if t[i-k] != t[i] or lose:
+    for i in range(j + k, n, k):
+        if t[i - k] != t[i] or lose:
             point += dic[t[i]]
             lose = False
         else:
             lose = True
     lose = False
 print(point)
-

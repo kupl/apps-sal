@@ -6,4 +6,3 @@ ans = defaultdict(int)
 for a in A:
     ans[a] += 1
 print((sum(v % 2 for v in list(ans.values()))))
-

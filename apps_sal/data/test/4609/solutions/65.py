@@ -5,7 +5,7 @@ A.sort()
 ans = 0
 cnt = 1
 for i in range(1, N):
-    if A[i] == A[i-1]:
+    if A[i] == A[i - 1]:
         cnt += 1
     else:
         if cnt % 2 != 0:

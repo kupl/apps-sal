@@ -16,6 +16,7 @@ created by shhuan at 2017/11/9 23:05
 
 S = input()
 
+
 def check(s, k):
     for w in set(s):
         c = s[:k].count(w)
@@ -23,7 +24,7 @@ def check(s, k):
             continue
 
         for i in range(k, len(s)):
-            if s[i-k] == w:
+            if s[i - k] == w:
                 c -= 1
             if s[i] == w:
                 c += 1
@@ -43,6 +44,6 @@ while lo < hi:
     if check(S, m):
         hi = m
     else:
-        lo = m+1
+        lo = m + 1
 
 print(lo)

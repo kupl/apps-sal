@@ -8,16 +8,18 @@ l = list(map(int, input().split()))
 candidates = set()
 candidates.add(2)
 
+
 def gcd(x, y):
-    while(y): 
-       x, y = y, x % y 
+    while(y):
+        x, y = y, x % y
     return x
+
 
 def factAdd(n):
     for c in candidates:
         while n % c == 0:
             n //= c
-            
+
     test = 3
     while test * test <= n:
         while n % test == 0:
@@ -27,12 +29,13 @@ def factAdd(n):
     if n > 1:
         candidates.add(n)
 
+
 for i in range(100):
     a = random.randint(0, n - 1)
     b = random.randint(0, n - 1)
 
     diff = [-1, 0, 1]
-    
+
     for d1 in diff:
         a1 = l[a] + d1
         if a1:
@@ -52,4 +55,3 @@ for cand in candidates:
     if count < best:
         best = count
 print(best)
-

@@ -14,11 +14,11 @@ for i in range(n):
     elif t[i] == 'p':
         rsp = 's'
         point = s
-    
-    if i >= k and c[i-k] == rsp:
+
+    if i >= k and c[i - k] == rsp:
         rsp = ''
         point = 0
-    
+
     c[i] = rsp
     ans += point
 print(ans)

@@ -2,8 +2,8 @@ N, K = list(map(int, input().split()))
 pt = list(map(int, input().split()))
 T = input()
 
-pc_hand = [0]*N
-my_hand = [0]*N
+pc_hand = [0] * N
+my_hand = [0] * N
 
 for i in range(N):
     if T[i] == 'r':

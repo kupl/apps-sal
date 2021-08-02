@@ -5,6 +5,6 @@ a = []
 for _ in range(n):
     a.append(int(input()))
 ans = collections.Counter(a)
-c=list(ans.values())
-c=np.array(c)
-print(sum(c%2))
+c = list(ans.values())
+c = np.array(c)
+print(sum(c % 2))

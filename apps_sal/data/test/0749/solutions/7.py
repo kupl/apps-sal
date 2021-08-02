@@ -14,6 +14,6 @@ for i in range(n):
 for i in range(N):
     l[i] = [-1] + l[i] + [n]
 for i in range(N):
-    for j in range(1,len(l[i])):
+    for j in range(1, len(l[i])):
         r[i] = max(r[i], l[i][j] - l[i][j - 1])
 print(min(r))

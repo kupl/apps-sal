@@ -1,11 +1,12 @@
+import string
+from collections import Counter, deque
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -18,28 +19,27 @@ def s_row(N): return [s_input for _ in range(N)]
 def s_row_str(N): return [s_list() for _ in range(N)]
 def s_row_list(N): return [list(s_input()) for _ in range(N)]
 
-import string
 
 def main():
-    n,k = i_map()
-    r,s,p = i_map()
-    dic = {"r":p,"s":r,"p":s}
+    n, k = i_map()
+    r, s, p = i_map()
+    dic = {"r": p, "s": r, "p": s}
     t = list(s_input())
     ans = 0
 
-    for i,j in enumerate(t):
+    for i, j in enumerate(t):
         if i < k:
             ans += dic[j]
         else:
-            if j != t[i-k]:
+            if j != t[i - k]:
                 ans += dic[j]
             else:
                 t[i] = "z"
     print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

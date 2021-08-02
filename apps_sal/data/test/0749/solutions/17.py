@@ -14,4 +14,3 @@ for (x, y) in list(d.items()):
     d[x] = max(d[x], len(s) - d1[x])
 
 print(min(d.values()))
-

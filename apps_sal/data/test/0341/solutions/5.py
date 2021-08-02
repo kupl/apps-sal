@@ -21,4 +21,3 @@ for i in range(K):
         dp = copy.copy(new_dp)
     ans += max(dp.values())
 print(ans)
-

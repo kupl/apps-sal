@@ -1,5 +1,5 @@
-n=int(int(input()))
-s=set()
+n = int(int(input()))
+s = set()
 for i in range(n):
-    s^= {input()}
+    s ^= {input()}
 print(len(s))

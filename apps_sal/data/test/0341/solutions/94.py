@@ -10,18 +10,18 @@ for i in range(k):
             m += 1
         else:
             if l == "r":
-                a += p*(m//2)
+                a += p * (m // 2)
             elif l == "s":
-                a += r*(m//2)
+                a += r * (m // 2)
             elif l == "p":
-                a += s*(m//2)
+                a += s * (m // 2)
             l = c
             m = 2
     else:
         if l == "r":
-            a += p*(m//2)
+            a += p * (m // 2)
         elif l == "s":
-            a += r*(m//2)
+            a += r * (m // 2)
         elif l == "p":
-            a += s*(m//2)
+            a += s * (m // 2)
 print(a)
