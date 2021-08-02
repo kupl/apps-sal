@@ -33,7 +33,3 @@ while len(A) > 1:
     heapq.heappush(A, p)
     ans += p
 print(ans)
-
-
-
-

@@ -29,4 +29,3 @@ for _ in range(n - 1):
 
 ans = t + a
 print(ans)
-

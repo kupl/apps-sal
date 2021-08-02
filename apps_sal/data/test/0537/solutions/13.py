@@ -1,12 +1,12 @@
 n, k = map(int, input().split())
 
-l = -1;
+l = -1
 r = n
 
 while r - l > 1:
     m = (l + r) // 2
     if (m + m * k > n // 2):
-        r = m;
+        r = m
     else:
         l = m
 

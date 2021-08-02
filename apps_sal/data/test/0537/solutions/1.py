@@ -4,4 +4,3 @@ a = s // (k + 1)
 b = a * k
 c = n - a - b
 print(a, b, c)
-

@@ -7,8 +7,8 @@ heapq.heapify(heap)
 
 ans = 0
 for i in range(n, 1, -2):
-  x = heapq.heappop(heap) + heapq.heappop(heap) + heapq.heappop(heap)
-  heapq.heappush(heap, x)
-  ans += x
+    x = heapq.heappop(heap) + heapq.heappop(heap) + heapq.heappop(heap)
+    heapq.heappush(heap, x)
+    ans += x
 
 print(ans)

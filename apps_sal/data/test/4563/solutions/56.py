@@ -9,4 +9,3 @@ for i in range(N):
     y = A * max(p, q)
     #print(f"[{x} {y}]")
 print((x + y))
-

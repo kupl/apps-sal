@@ -14,7 +14,7 @@ while len(heap) > 1:
     mergedPileSize = 0
     for _ in range(amountToMerge):
         mergedPileSize += heapq.heappop(heap)
-    
+
     cost += mergedPileSize
     heapq.heappush(heap, mergedPileSize)
 

@@ -16,5 +16,3 @@ for i in range(n):
             t_all = t * max_diff
             a_all = a * max_diff
 print((t_all + a_all))
-        
-

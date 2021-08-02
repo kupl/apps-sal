@@ -15,4 +15,3 @@ for i in range(n):
         pre_b = pre_a * b // a
     # print(i, pre_a, pre_b)
 print((pre_a + pre_b))
-

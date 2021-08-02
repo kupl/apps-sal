@@ -1,7 +1,7 @@
 n = int(input())
 ca, cb = 0, 0
 for i in range(n):
-    a, b = list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
     x, y = 1, 1
     if ca > a:
         x = ca // a
@@ -15,4 +15,3 @@ for i in range(n):
     ca = a * x
     cb = b * x
 print((ca + cb))
-

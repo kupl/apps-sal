@@ -52,15 +52,16 @@ def resolve():
     t = R[0][0]
     a = R[0][1]
     for i in range(1, N):
-        n = max((t+R[i][0]-1)//R[i][0], (a+R[i][1]-1)//R[i][1])
-        t = n*R[i][0]
-        a = n*R[i][1]
+        n = max((t + R[i][0] - 1) // R[i][0], (a + R[i][1] - 1) // R[i][1])
+        t = n * R[i][0]
+        a = n * R[i][1]
 
-    print((t+a))
+    print((t + a))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()
