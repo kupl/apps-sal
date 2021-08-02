@@ -8,7 +8,9 @@ def main():
 
     print(year - int(n))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

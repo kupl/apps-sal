@@ -30,6 +30,3 @@ for i in wk1:
     f[i] = True
 
 print(-1)
-
-
-

@@ -13,4 +13,3 @@ while t:
         if total >= n:
             print(ans)
             break
-

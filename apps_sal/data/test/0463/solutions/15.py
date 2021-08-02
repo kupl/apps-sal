@@ -44,5 +44,3 @@ if ok:
     print(2)
 else:
     print(-1)
-
-

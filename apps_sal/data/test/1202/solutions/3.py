@@ -5,8 +5,10 @@ for i in range(n):
 k = n // 2
 i = j = k - 1
 if 2 * k < n:
-    if a[k] < b[k]: i, j = k, k - 1
-    else: i, j = k - 1, k
+    if a[k] < b[k]:
+        i, j = k, k - 1
+    else:
+        i, j = k - 1, k
 x, y = i + 1, j
 while x < n and y >= 0 and a[x] < b[y]:
     x += 1

@@ -10,4 +10,6 @@ def main():
         return result
     result = int(str(int(num[0]) + 1) + (len(num) - 1) * '0') - int(num)
     return result
+
+
 print(main())

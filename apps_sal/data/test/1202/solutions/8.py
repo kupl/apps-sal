@@ -8,7 +8,7 @@ for i in range(n):
 
 ans = ''
 for i in range(n):
-    if i < n//2 or a[i] < b[n-1-i]:
+    if i < n // 2 or a[i] < b[n - 1 - i]:
         ans += '1'
     else:
         ans += '0'
@@ -16,10 +16,9 @@ for i in range(n):
 ans += '\n'
 
 for i in range(n):
-    if i < n//2 or b[i] < a[n-1-i]:
+    if i < n // 2 or b[i] < a[n - 1 - i]:
         ans += '1'
     else:
         ans += '0'
 
 print(ans)
-

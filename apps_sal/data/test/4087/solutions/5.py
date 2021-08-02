@@ -9,11 +9,12 @@ def main():
         return 0
     import sys
     input = sys.stdin.readline
-    
+
     a = int(input())
     while not is_interesting(a):
         a += 1
     print(a)
     return 0
+
 
 main()

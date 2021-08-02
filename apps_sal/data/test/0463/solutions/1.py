@@ -1,6 +1,6 @@
-n, x= list(map(int, input().split()))
+n, x = list(map(int, input().split()))
 
-data = list(map(int,input().split()))
+data = list(map(int, input().split()))
 
 s = set(data)
 
@@ -16,7 +16,7 @@ prevs = set()
 
 for el in data:
     curr = el & x
-    
+
     if curr in prevs or el in ss:
         answer = 1
 
@@ -24,10 +24,7 @@ for el in data:
 
     if curr in ss and answer != 1:
         answer = 2
-        
+
     ss.add(curr)
 
 print(answer)
-
-    
-

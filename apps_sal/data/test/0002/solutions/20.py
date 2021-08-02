@@ -6,5 +6,3 @@ while y <= n:
     if y // 10**(d + 1) == 1:
         d += 1
 print(y - n)
-
-

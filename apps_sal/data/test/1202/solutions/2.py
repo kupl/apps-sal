@@ -9,5 +9,3 @@ for (k, (num, (j, i))) in enumerate(a):
         mk[j][i] = '1'
 
 print('\n'.join(''.join(ss) for ss in mk))
-
-

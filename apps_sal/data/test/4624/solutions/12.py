@@ -7,4 +7,3 @@ for _ in range(int(input())):
             print((n - 2) // x + 1)
         else:
             print((n - 2) // x + 2)
-

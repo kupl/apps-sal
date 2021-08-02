@@ -4,4 +4,3 @@ for _ in range(int(input())):
         print(1)
     else:
         print((n - 3) // x + 2)
-

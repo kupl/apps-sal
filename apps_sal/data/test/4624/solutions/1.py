@@ -1,7 +1,8 @@
-import sys, math
+import sys
+import math
 
 
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
 
 
 def gcd(n, f):
@@ -23,4 +24,4 @@ for i in range(int(input())):
     if n <= 0:
         print(1)
     else:
-        print(division_with_remainder_up(n,k)+1)
+        print(division_with_remainder_up(n, k) + 1)

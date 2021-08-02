@@ -7,4 +7,3 @@ p = pow(10, p10)
 years = (int(n / p) + 1) * p - n
 
 print(years)
-

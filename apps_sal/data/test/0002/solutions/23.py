@@ -6,4 +6,4 @@ while cur > 0:
     a = cur % 10
     cur //= 10
     x *= 10
-print((a+1)*x//10 - n)
+print((a + 1) * x // 10 - n)
