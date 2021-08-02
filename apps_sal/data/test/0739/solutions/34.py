@@ -1,10 +1,12 @@
-l,a,b,m = list(map(int,input().split()))
+l, a, b, m = list(map(int, input().split()))
 
 # c111 -> 1001001001みたいなやつを求める
 # n : 塊の数
 # l : 一つの塊(00..001)の長さ
 # m : mod
 # ex) n=3, l=2 -> 10101
+
+
 def c111(n, l, m):
     if n <= 0:
         return 0
@@ -20,6 +22,8 @@ def c111(n, l, m):
 # l : 一つの塊(00..001)の長さ
 # m : mod
 # ex) n=3, l=2 -> 10203
+
+
 def c123(n, l, m):
     if n <= 0:
         return 0
@@ -29,6 +33,7 @@ def c123(n, l, m):
         return (c123(n - 1, l, m) + c111(n, l, m)) % m
     half = c123(n // 2, l, m)
     return (half * pow(10, (n // 2) * l, m) + half + (n // 2) * c111(n // 2, l, m)) % m
+
 
 fst, lst = a, a + b * (l - 1)
 
@@ -50,4 +55,3 @@ for keta in reversed(list(range(fst_l, lst_l + 1))):
     res += (pow(10, margin, m) * (_111 + _123)) % m
     margin += sz * keta
 print((res % m))
-

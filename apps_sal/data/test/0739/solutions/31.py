@@ -138,4 +138,3 @@ ans, _ = reduce(
 )
 
 print(ans)
-

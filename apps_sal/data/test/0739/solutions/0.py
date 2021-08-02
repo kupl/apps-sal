@@ -7,7 +7,7 @@ ni = lambda: int(ns())
 na = lambda: list(map(int, stdin.readline().split()))
 ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
 
-L,A,B,mod = na()
+L, A, B, mod = na()
 
 low = 1
 high = 10
@@ -17,7 +17,7 @@ def matpow(M, v, e, mod):
     A = copy.deepcopy(M)
     w = copy.deepcopy(v)
     while e > 0:
-        if e&1:
+        if e & 1:
             w = mulv(A, w, mod)
         A = mul(A, A, mod)
         e >>= 1
@@ -60,8 +60,8 @@ v = [0, A, B]
 ra = A
 
 while low < 1e18:
-    mat = [[high%mod, 1, 0], [0, 1, 1], [0, 0, 1]]
-    step = max(0, min(L, (high-ra+B-1)//B))
+    mat = [[high % mod, 1, 0], [0, 1, 1], [0, 0, 1]]
+    step = max(0, min(L, (high - ra + B - 1) // B))
     v = matpow(mat, v, step, mod)
     # print(low, high, step, ra + B*step, v)
     ra = ra + B * step
@@ -71,4 +71,3 @@ while low < 1e18:
     high *= 10
 
 print((v[0]))
-

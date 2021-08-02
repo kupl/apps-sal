@@ -1,6 +1,7 @@
 """
 NTC here
 """
+from bisect import bisect_right
 from sys import setcheckinterval, stdin
 setcheckinterval(1000)
 
@@ -10,24 +11,23 @@ iin = lambda: int(stdin.readline())
 lin = lambda: list(map(int, stdin.readline().split()))
 
 
-s,b=lin()
-sa=lin()
-ba=[lin() for i in range(b)]
+s, b = lin()
+sa = lin()
+ba = [lin() for i in range(b)]
 ba.sort()
-ans=[]
-sol=[]
-for i,j in ba:
+ans = []
+sol = []
+for i, j in ba:
     sol.append(i)
     ans.append(j)
-for i in range(1,b):
-    ans[i]+=ans[i-1]
+for i in range(1, b):
+    ans[i] += ans[i - 1]
 
-from bisect import bisect_right
-a=[]
+a = []
 for i in sa:
-    x=bisect_right(sol,i)-1
-    #print(x,ans)
-    if x<0:
+    x = bisect_right(sol, i) - 1
+    # print(x,ans)
+    if x < 0:
         a.append(0)
     else:
         a.append(ans[x])

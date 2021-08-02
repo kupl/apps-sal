@@ -15,4 +15,3 @@ for i in range(7):
         l[cost[j]] -= 1
     maxdays = max(maxdays, days)
 print(weeks * 7 + maxdays)
-

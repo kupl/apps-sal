@@ -1,5 +1,5 @@
 a, b, c = list(map(int, input().split()))
-weeks = min(a//3, b//2, c//2)
+weeks = min(a // 3, b // 2, c // 2)
 a -= weeks * 3
 b -= weeks * 2
 c -= weeks * 2
@@ -39,4 +39,3 @@ for i in range(7):
 
 ans += weeks * 7
 print(ans)
-

@@ -32,4 +32,3 @@ for s in range(7):
 
 
 print(ans + g)
-

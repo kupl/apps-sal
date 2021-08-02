@@ -9,20 +9,21 @@ def rec(r, b, c, a0, n, mod):
         if m:
             a = (a * r + b * n_ + c) % mod
             n_ += diff
-        r, b, c = r*r%mod, (r*b+b)%mod, (r*c+b*diff+c)%mod
+        r, b, c = r * r % mod, (r * b + b) % mod, (r * c + b * diff + c) % mod
         diff <<= 1
     return a
+
 
 def main():
     L, A, B, M = list(map(int, input().split()))
 
     def bis(d):
         # d 桁以上になる最小の項
-        n = 10**(d-1)
+        n = 10**(d - 1)
         ng = -1
         ok = L
         while ng + 1 < ok:
-            c = ok+ng >> 1
+            c = ok + ng >> 1
             s_c = A + B * c
             if s_c >= n:
                 ok = c
@@ -41,10 +42,10 @@ def main():
         s_l = A + B * l
         n = r - l
         ratio = 10**d
-        a = rec(ratio, B, s_l, s_l, n-1, M)
+        a = rec(ratio, B, s_l, s_l, n - 1, M)
         #print(d, a)
-        ans = (ans * pow(10, d*n, M) + a) % M
+        ans = (ans * pow(10, d * n, M) + a) % M
     print(ans)
 
-main()
 
+main()

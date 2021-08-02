@@ -1,6 +1,6 @@
 n = int(input())
 show = [list(map(int, input().split())) for _ in range(n)]
-show.sort(key=lambda x:x[0])
+show.sort(key=lambda x: x[0])
 tv1 = tv2 = -1
 ans = True
 for i in range(n):
@@ -12,6 +12,3 @@ for i in range(n):
         ans = False
         break
 print("YES" if ans else "NO")
-        
-    
-

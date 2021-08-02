@@ -1,2 +1,2 @@
-a = [*map(int,input().split())]
+a = [*map(int, input().split())]
 print(len(set(a)))

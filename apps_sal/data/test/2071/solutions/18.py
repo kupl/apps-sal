@@ -27,11 +27,11 @@ current_weight = -1
 for t in range(0, 2 * n, 2):
     remain = t % 4
     #print(t, snake_weight, a[t//2], b[t//2])
-    if remain == 0 :
-        current_weight = sums[t//2] * t + curl_ud_weights[t // 2] + snake_weight
+    if remain == 0:
+        current_weight = sums[t // 2] * t + curl_ud_weights[t // 2] + snake_weight
         snake_weight += (a[t // 2] * t + b[t // 2] * (t + 1))
     elif remain == 2:
-        current_weight = sums[t//2] * t + curl_du_weights[t // 2] + snake_weight
+        current_weight = sums[t // 2] * t + curl_du_weights[t // 2] + snake_weight
         snake_weight += (b[t // 2] * t + a[t // 2] * (t + 1))
 
     if current_weight > max_weight:
@@ -39,9 +39,9 @@ for t in range(0, 2 * n, 2):
         #print(max_weight, t)
 
 print(max_weight)
-#print(curl_ud_weights)
-#print(curl_du_weights)
-#print(sums)
+# print(curl_ud_weights)
+# print(curl_du_weights)
+# print(sums)
 
 """
 3

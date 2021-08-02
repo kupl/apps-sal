@@ -30,6 +30,5 @@ for i in range(7):
     v = G[0]
     del(G[0])
     G.append(v)
-    #print(G)
+    # print(G)
 print(j * 7 + ma)
-

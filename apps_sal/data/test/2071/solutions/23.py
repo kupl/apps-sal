@@ -16,7 +16,7 @@ for i in range(n):
     q2[i + n] = u1[n - i - 1] * (n + i) + q2[i + n - 1]
 ans = q1[-1]
 cur = 0
-#print(ans)
+# print(ans)
 for i in range(n):
     ans1 = (a1[-1] - a1[i] + a2[-1] - a2[i]) * (i + 1)
     if i % 2 == 0:
@@ -38,4 +38,3 @@ print(ans)
 12 8 12 17 20 5
 17 4 8 8 8 4
 '''
-

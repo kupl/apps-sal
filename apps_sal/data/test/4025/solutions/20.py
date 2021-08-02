@@ -1,6 +1,7 @@
 def mp():
     return list(map(int, input().split()))
 
+
 a, b, c = mp()
 
 k = min(a // 3, b // 2, c // 2)
@@ -23,9 +24,8 @@ for i in range(7):
         d = (d + 1) % 7
         cnt += 1
     cnt -= 1
-    #print(cnt)
+    # print(cnt)
     m = max(m, cnt)
     cnt = 0
-    
-print(7 * k + m)
 
+print(7 * k + m)

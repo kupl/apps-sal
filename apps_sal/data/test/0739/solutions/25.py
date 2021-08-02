@@ -56,4 +56,3 @@ while size < L:
     digits += 1
     size += cnt
 print((vec[0]))
-

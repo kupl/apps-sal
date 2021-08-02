@@ -57,4 +57,3 @@ def matmul(a, b, mod):
 
 L, A, B, M = list(map(int, input().split()))
 print((solve(L, A, B, M)))
-

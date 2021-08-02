@@ -34,11 +34,10 @@ if n != 1:
                 if j % 2 == 1:
                     ans = max(ans, pref_up[0][j + 1] + sum_up[0][j + 1] * (4 * (j // 2 + 1) - 1) + pref_down[1][j + 1] - sum_up[1][j + 1] + sum_up[1][j + 1] * (4 * (j // 2 + 1) - 1 + n - j) + zig[0][j])
                 else:
-                    ans = max(ans, pref_up[1][j + 1] - sum_up[1][j + 1] + sum_up[1][j + 1] * (4 * (j // 2) + 2) +
-                              pref_down[0][j + 1] - sum_up[0][j + 1] + sum_up[0][j + 1] * (
-                                          4 * (j // 2) + 2 - 1 + n - j) + zig[1][j])
+                    ans = max(ans, pref_up[1][j + 1] - sum_up[1][j + 1] + sum_up[1][j + 1] * (4 * (j // 2) + 2)
+                              + pref_down[0][j + 1] - sum_up[0][j + 1] + sum_up[0][j + 1] * (
+                        4 * (j // 2) + 2 - 1 + n - j) + zig[1][j])
     ans = max(ans, pref_up[1][0] + pref_down[0][1] + sum_up[0][1] * n)
     print(ans)
 else:
     print(a[1][0])
-

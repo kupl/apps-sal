@@ -1,2 +1,2 @@
-a=set(input().split())
+a = set(input().split())
 print(len(a))

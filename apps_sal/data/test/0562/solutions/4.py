@@ -10,13 +10,12 @@ events = sorted(events)
 bal = 0
 result = True
 for item in events:
-    #print(item)
-    bal += item[1]*(-1)
-    #print(bal)
+    # print(item)
+    bal += item[1] * (-1)
+    # print(bal)
     if bal > 2:
         result = False
         print("NO")
         break
 if(result):
     print("YES")
-

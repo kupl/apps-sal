@@ -17,9 +17,9 @@ def g(x):
         a[f] -= 1
         v += 1
     u = min([a[0] // 3, a[1] // 2, a[2] // 2])
-    a[0] -= u*3
-    a[1] -= u*2
-    a[2] -= u*2
+    a[0] -= u * 3
+    a[1] -= u * 2
+    a[2] -= u * 2
     v += u * 7
     for f in w:
         if not a[f]: return v
@@ -30,4 +30,3 @@ def g(x):
 
 for i in range(7): ans = max(ans, g(i))
 print(ans)
-

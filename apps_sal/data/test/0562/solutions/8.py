@@ -7,7 +7,7 @@ for i in range(n):
 
 shows = sorted(shows)
 
-t = [-1,-1]
+t = [-1, -1]
 violate = False
 
 for s in shows:
@@ -23,5 +23,3 @@ if not violate:
     print('YES')
 else:
     print('NO')
-
-

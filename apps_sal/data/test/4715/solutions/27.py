@@ -1,2 +1,2 @@
-s=set(map(int,input().split()))
+s = set(map(int, input().split()))
 print(len(s))

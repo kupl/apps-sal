@@ -1,6 +1,7 @@
 from numpy.linalg import matrix_power
 from numpy import dot
 
+
 class mint:
     def __init__(self, n):
         self.n = n % mod

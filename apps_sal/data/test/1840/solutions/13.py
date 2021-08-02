@@ -20,4 +20,3 @@ while p1 < len(a):
     ans[a[p1][1]] = s
     p1 += 1
 print(" ".join(list(map(str, ans))))
-

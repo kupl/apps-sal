@@ -13,5 +13,4 @@ for a, b in d:
     if t > 2:
         print("NO")
         return
-print("YES")        
-
+print("YES")

@@ -7,6 +7,7 @@ def iroha():
     else:
         print((2))
 
+
 def __starting_point():
     iroha()
 
