@@ -15,7 +15,6 @@
 # 標準入力から A, B の値を取得する
 a, b = list(map(int, input().split()))
 
-result_list = [a + b, a - b, a * b] # 結果格納用リスト
+result_list = [a + b, a - b, a * b]  # 結果格納用リスト
 
 print((max(result_list)))
-

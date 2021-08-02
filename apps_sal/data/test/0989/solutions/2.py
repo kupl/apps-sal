@@ -18,4 +18,3 @@ while True:
     if not ans:
         break
 print(ans)
-

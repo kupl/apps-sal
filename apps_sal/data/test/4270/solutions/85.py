@@ -1,7 +1,7 @@
 N = int(input())
 V = list(map(int, input().split()))
 if N == 2:
-    print((V[0]+ V[1])/2)
+    print((V[0] + V[1]) / 2)
 else:
     V.sort()
     kati = V[0]

@@ -30,4 +30,3 @@ while i < j:
             a_max = a[j]
 
 print(a_max - a_min)
-

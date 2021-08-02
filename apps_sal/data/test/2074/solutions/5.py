@@ -7,4 +7,3 @@ for a in range(0, n):
     streets.append(min(street))
 
 print(max(streets))
-

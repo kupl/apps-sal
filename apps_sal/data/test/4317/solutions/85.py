@@ -5,4 +5,3 @@ j = a - b
 k = a * b
 
 print((max(i, j, k)))
-

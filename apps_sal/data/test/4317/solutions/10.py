@@ -1,7 +1,7 @@
 A, B = map(int, input().split())
-plus = A+B
-minus = A-B
-mult = A*B
+plus = A + B
+minus = A - B
+mult = A * B
 
 if plus >= minus and plus >= mult:
     print(plus)

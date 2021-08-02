@@ -7,5 +7,5 @@ def solve():
     print((A[-1]))
     return
 
-solve()
 
+solve()

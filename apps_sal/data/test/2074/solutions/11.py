@@ -5,4 +5,3 @@ c = [list(map(int, input().split(' ')[:m])) for _ in range(n)]
 mins = list(map(min, c))
 
 print(max(mins))
-

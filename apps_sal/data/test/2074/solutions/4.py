@@ -20,12 +20,11 @@ for i in range(n):
 ma = 0
 
 for i in range(n):
-    ml = 1e10 # bigger than any
+    ml = 1e10  # bigger than any
 
     for j in range(m):
         ml = min(ml, city[i][j])
 
     ma = max(ma, ml)
 
-print(ma)    
-
+print(ma)

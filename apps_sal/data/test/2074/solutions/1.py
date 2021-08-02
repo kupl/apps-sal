@@ -6,4 +6,3 @@ for i in range(n):
     cur = min(c[i])
     if cur > ans: ans = cur
 print(ans)
-

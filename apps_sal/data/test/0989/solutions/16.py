@@ -19,7 +19,7 @@ while (k > 0):
     while (num[lat - 1] == latt and pre < lat - 1):
         lat -= 1
         latn += 1
-    if (pren > k and latn > k): 
+    if (pren > k and latn > k):
         break;
     if (pree < latt):
         if (pren < latn):
@@ -28,7 +28,7 @@ while (k > 0):
                 pre += 1
                 pren += 1
                 pree = num[pre]
-            else: 
+            else:
                 pree += k // pren
                 k %= pren
         else:
@@ -42,7 +42,5 @@ while (k > 0):
                 k %= latn
     else:
         break;
-    
-print(latt-pree)
 
-
+print(latt - pree)

@@ -2,7 +2,7 @@ from itertools import combinations
 n, l, r, x = list(map(int, input().split()))
 C = list(map(int, input().split()))
 ans = 0
-for i in range(2, n+1):
+for i in range(2, n + 1):
     for c in combinations(C, i):
         s = sum(c)
         if s < l or r < s:
@@ -11,4 +11,3 @@ for i in range(2, n+1):
             continue
         ans += 1
 print(ans)
-

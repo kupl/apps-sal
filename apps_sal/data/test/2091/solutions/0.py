@@ -37,13 +37,13 @@ def main():
             print(S)
             continue
         ii = -1
-        for i in range(N//2):
-            if S[i] != S[N-1-i]:
+        for i in range(N // 2):
+            if S[i] != S[N - 1 - i]:
                 break
             ii = i
         if ii >= 0:
-            ss = S[:ii+1]
-            S = S[ii+1:N-ii-1]
+            ss = S[:ii + 1]
+            S = S[ii + 1:N - ii - 1]
         else:
             ss = ''
         N = len(S)
@@ -54,23 +54,23 @@ def main():
         M = 0
         iii = 0
         for i in range(N):
-            if R[i*2] > M:
-                if R[i*2]%2 == 0:
+            if R[i * 2] > M:
+                if R[i * 2] % 2 == 0:
                     continue
-                k = R[i*2] // 2
-                if i-k == 0 or i+k == N-1:
-                    M = R[i*2]
+                k = R[i * 2] // 2
+                if i - k == 0 or i + k == N - 1:
+                    M = R[i * 2]
                     iii = i
-        for i in range(N-1):
-            if R[i*2+1] > M:
-                if R[i*2+1]%2 == 1:
+        for i in range(N - 1):
+            if R[i * 2 + 1] > M:
+                if R[i * 2 + 1] % 2 == 1:
                     continue
-                k = R[i*2+1] // 2
-                if i-k+1 == 0 or i+k == N-1:
-                    M = R[i*2+1]
+                k = R[i * 2 + 1] // 2
+                if i - k + 1 == 0 or i + k == N - 1:
+                    M = R[i * 2 + 1]
                     iii = i
         if M & 1:
-            ans = S[iii - M//2: iii + M // 2 + 1]
+            ans = S[iii - M // 2: iii + M // 2 + 1]
         else:
             ans = S[iii - M // 2 + 1: iii + M // 2 + 1]
         print(''.join([ss, ans, ss[::-1]]))
@@ -79,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

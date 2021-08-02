@@ -8,9 +8,9 @@ def generate(made, lis):
         generate(made + 1, lis + [a[made]])
         generate(made + 1, lis)
 
+
 n, l, r, x = list(map(int, input().split()))
 a = sorted(map(int, input().split()))
 res = 0
 generate(0, [])
 print(res)
-

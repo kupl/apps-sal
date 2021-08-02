@@ -5,4 +5,3 @@ sub = a - b
 multi = a * b
 
 print((max(add, sub, multi)))
-

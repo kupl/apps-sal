@@ -13,4 +13,3 @@ for i in range(n - 1):
         wk = h[i + 1]
 
 print(cnt)
-

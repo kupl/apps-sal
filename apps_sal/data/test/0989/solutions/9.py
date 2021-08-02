@@ -2,10 +2,11 @@
     Author : thekushalghosh
     Team   : CodeDiggers
 '''
-import sys,math
+import sys
+import math
 input = sys.stdin.readline
-n,k = map(int,input().split())
-a = list(map(int,input().split()))
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
 a.sort()
 i = 1
 while i > 0:

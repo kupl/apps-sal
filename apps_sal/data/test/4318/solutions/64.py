@@ -5,7 +5,7 @@ ans = 0
 num = 0
 for i in H:
     if num <= i:
-       ans += 1
-       num = i
+        ans += 1
+        num = i
 
 print(ans)

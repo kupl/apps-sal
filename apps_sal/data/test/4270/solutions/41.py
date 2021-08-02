@@ -16,4 +16,3 @@ class Solution:
 
 conditions = Solution(n, vn)
 conditions.answer()
-

@@ -6,12 +6,12 @@ def solve(k, a):
     q1 = []
     q2 = []
     for i in range(1, len(a)):
-        if a[i] != a[i-1]:
-            q1.append([i, a[i] - a[i-1]])
+        if a[i] != a[i - 1]:
+            q1.append([i, a[i] - a[i - 1]])
     a = a[::-1]
     for i in range(1, len(a)):
-        if a[i] != a[i-1]:
-            q2.append([i, a[i-1] - a[i]])
+        if a[i] != a[i - 1]:
+            q2.append([i, a[i - 1] - a[i]])
     i1, i2 = 0, 0
     while k >= min(q1[i1][0], q2[i2][0]) and ans > 0:
         if q1[i1][0] <= q2[i2][0]:
@@ -36,4 +36,3 @@ def main():
 
 
 main()
-

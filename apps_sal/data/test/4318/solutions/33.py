@@ -1,5 +1,5 @@
 N = int(input())
-H = list(map(int,input().split()))
+H = list(map(int, input().split()))
 
 h_list = [H[0]]
 cnt = 1

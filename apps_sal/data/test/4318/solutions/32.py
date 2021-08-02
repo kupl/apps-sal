@@ -5,8 +5,8 @@ c = 1
 h = H[0]
 
 for i in range(1, N):
-  if h <= H[i]:
-    h = H[i]
-    c = c + 1
-    
+    if h <= H[i]:
+        h = H[i]
+        c = c + 1
+
 print(c)

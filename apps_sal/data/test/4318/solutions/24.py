@@ -12,6 +12,6 @@ for i in H:
     if i >= height:
         answer += 1
 
-    height = max(i,height)
+    height = max(i, height)
 
 print(answer)

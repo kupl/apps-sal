@@ -7,4 +7,3 @@ for i in range(1, n):
         ans += 1
         highest = h[i]
 print(ans)
-

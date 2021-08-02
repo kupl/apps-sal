@@ -11,4 +11,3 @@ for i in range(1, num):
         maxi = table[i]
         count += 1
 print(count)
-

@@ -5,4 +5,3 @@ for h in map(int, input().split()):
         ans += 1
         prev = h
 print(ans)
-

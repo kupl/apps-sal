@@ -9,4 +9,3 @@ for h in H:
         max_ = h
 
 print(cnt)
-

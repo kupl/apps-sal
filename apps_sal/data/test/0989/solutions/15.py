@@ -78,4 +78,3 @@ for i in range(n - 1, -1, -1):
     best_diff = min(best_diff, max_a - min_a)
 
 print(best_diff)
-

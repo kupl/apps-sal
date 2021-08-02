@@ -7,7 +7,7 @@ arr.sort()
 dif = [0] * n
 
 for i in range(n - 1):
-  dif[i] = arr[i + 1] - arr[i]
+    dif[i] = arr[i + 1] - arr[i]
 
 i = 0
 j = n - 2
@@ -17,44 +17,44 @@ right = 1
 last = -1
 
 while(k > 0 and i <= j):
-  if(dif[i]) == 0:
-    left += 1
-    i += 1
-    continue
-  if(dif[j]) == 0:
-    right += 1
-    j -= 1
-    continue
+    if(dif[i]) == 0:
+        left += 1
+        i += 1
+        continue
+    if(dif[j]) == 0:
+        right += 1
+        j -= 1
+        continue
 
-  if(i == j):
-    last = i
+    if(i == j):
+        last = i
 
-  if(left <= right):
-    difToSubstract = min(dif[i], k // left)
+    if(left <= right):
+        difToSubstract = min(dif[i], k // left)
 
-    if(difToSubstract == 0):
-      k = 0
-      break
+        if(difToSubstract == 0):
+            k = 0
+            break
 
-    k -= left * difToSubstract
-    dif[i] -= difToSubstract
-  else:
-    difToSubstract = min(dif[j], k // right)
+        k -= left * difToSubstract
+        dif[i] -= difToSubstract
+    else:
+        difToSubstract = min(dif[j], k // right)
 
-    if(difToSubstract == 0):
-      k = 0
-      break
+        if(difToSubstract == 0):
+            k = 0
+            break
 
-    k -= right * difToSubstract
-    dif[j] -= difToSubstract
-      
+        k -= right * difToSubstract
+        dif[j] -= difToSubstract
+
 if(i <= j):
-  sol = 0
+    sol = 0
 
-  for u in range(i, j + 1):
-    sol += dif[u]
+    for u in range(i, j + 1):
+        sol += dif[u]
 
-  print(sol)
+    print(sol)
 
 else:
-  print(dif[last])
+    print(dif[last])
