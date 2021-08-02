@@ -6,4 +6,3 @@ else:
     ans = (k // 2) * (k // 2 + 1)
 
 print((int(ans)))
-

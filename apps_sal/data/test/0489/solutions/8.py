@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def main():
     int(input())
     a = list(map(int, input().split()))
@@ -21,5 +22,5 @@ def main():
 
     print(ans)
 
-main()
 
+main()

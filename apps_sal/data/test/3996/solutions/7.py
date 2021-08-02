@@ -7,6 +7,7 @@ class Matrix:
             for i in range(n):
                 for j in range(m):
                     self.arr[i][j] = arr[i][j]
+
     def __mul__(self, other):
         assert self.m == other.n
         ans = Matrix(self.n, other.m)
@@ -15,9 +16,11 @@ class Matrix:
                 for k in range(self.m):
                     ans.arr[i][j] = (ans.arr[i][j] + self.arr[i][k] * other.arr[k][j]) % (10 ** 9 + 7)
         return ans
+
     def __imul__(self, other):
         self = self * other
         return self
+
     def __pow__(self, n):
         if n == 0:
             ans = Matrix(self.n, self.n)
@@ -29,9 +32,11 @@ class Matrix:
         else:
             t = self ** (n >> 1)
             return t * t
+
     def __ipow__(self, n):
         self = self ** n
         return self
+
     def __eq__(self, other):
         if self.n != other.n or self.m != other.m:
             return False
@@ -40,6 +45,8 @@ class Matrix:
                 if self.arr[i][j] != other.arr[i][j]:
                     return False
         return True
+
+
 def fpow(a, n):
     if n == 0:
         return 1
@@ -48,6 +55,8 @@ def fpow(a, n):
     else:
         t = fpow(a, n >> 1)
         return (t * t) % (10 ** 9 + 7)
+
+
 transform = Matrix(2, 2, [[1, 1], [0, 4]])
 mtx = transform
 k = int(input())
@@ -63,4 +72,3 @@ else:
     y = (x - 1) % (10 ** 9 + 6)
     ans = (transform ** (y // 2)) * Matrix(2, 1, [[0], [1]])
     print("%d/%d" % ((ans.arr[0][0] * 2 + 1) % (10 ** 9 + 7), (ans.arr[1][0] * 2) % (10 ** 9 + 7)))
-

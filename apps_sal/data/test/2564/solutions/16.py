@@ -6,4 +6,3 @@ for _ in range(t):
         a, b = a + b, max(a, b)
         ans += 1
     print(ans)
-

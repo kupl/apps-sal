@@ -1,5 +1,6 @@
 3
 
+
 class Matrix:
     def __init__(self, n, m, arr=None):
         self.n = n
@@ -98,5 +99,3 @@ else:
     y = (x - 1) % (10 ** 9 + 6)
     ans = (transform ** (y // 2)) * Matrix(2, 1, [[0], [1]])
     print("%d/%d" % ((ans.arr[0][0] * 2 + 1) % (10 ** 9 + 7), (ans.arr[1][0] * 2) % (10 ** 9 + 7)))
-    
-

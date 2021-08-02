@@ -5,4 +5,3 @@ for i in range(a, -1, -1):
         print('Yes')
         return
 print('No')
-

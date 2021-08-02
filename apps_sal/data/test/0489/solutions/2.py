@@ -1,5 +1,6 @@
 import math
 
+
 def newton(n, k):
     if k == n:
         return 1
@@ -10,7 +11,7 @@ def newton(n, k):
     a = math.factorial(n)
     b = math.factorial(k)
     c = math.factorial(n - k)
-    return (a//(b * c))
+    return (a // (b * c))
 
 
 n = int(input())
@@ -36,4 +37,3 @@ for e in L:
         print(newton(S[e], S[e] - (3 - cnt2)))
         break
     cnt2 += S[e]
-

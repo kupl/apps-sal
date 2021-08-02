@@ -8,4 +8,3 @@ else:
     odd_count = even_count + 1
 
 print((odd_count * even_count))
-

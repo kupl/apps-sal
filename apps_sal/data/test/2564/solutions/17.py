@@ -7,4 +7,4 @@ for _ in range(int(input())):
         else:
             a += b
         cnt += 1
-    print(cnt-1)
+    print(cnt - 1)

@@ -17,14 +17,14 @@ for a in nums:
 
 if mins[0] == mins[1]:
     if mins[1] == mins[2]:
-        reps = {mins[0] : 3}
+        reps = {mins[0]: 3}
     else:
-        reps = {mins[0] : 2, mins[2] : 1}
+        reps = {mins[0]: 2, mins[2]: 1}
 else:
     if mins[1] == mins[2]:
-        reps = {mins[0] : 1, mins[1]: 2}
+        reps = {mins[0]: 1, mins[1]: 2}
     else:
-        reps = {mins[0] : 1, mins[1]: 1, mins[2] : 1}
+        reps = {mins[0]: 1, mins[1]: 1, mins[2]: 1}
 
 ans = 1
 for key, m in reps.items():

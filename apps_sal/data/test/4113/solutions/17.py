@@ -9,4 +9,3 @@ if cnt > 0:
     print("Yes")
 else:
     print("No")
-

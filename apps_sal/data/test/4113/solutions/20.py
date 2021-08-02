@@ -5,9 +5,8 @@ n = int(input())
 
 flag = 'No'
 
-for i in range(0, n//4+2):  # cake
-    for j in range(0, n//7+2):  # donuts
-        if 4*i + 7*j == n:
+for i in range(0, n // 4 + 2):  # cake
+    for j in range(0, n // 7 + 2):  # donuts
+        if 4 * i + 7 * j == n:
             flag = 'Yes'
 print(flag)
-

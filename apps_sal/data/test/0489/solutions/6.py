@@ -6,6 +6,7 @@ def f(n, r):
     else:
         return n * (n - 1) * (n - 2) // 6
 
+
 n = int(input())
 a = list(map(int, input().split()))
 
@@ -28,4 +29,3 @@ while 0 < cnt:
     i += 1
 
 print(ans)
-

@@ -11,4 +11,3 @@ for d in range(N // 7 + 1):
 
 # 結果出力
 print(ans)
-
