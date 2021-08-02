@@ -18,9 +18,7 @@ for i in range(la):
     if i != la - 1:
         if b[i] == '1':
             cur -= 1
-        if b[lb-la+i+1] == '1':
+        if b[lb - la + i + 1] == '1':
             cur += 1
 
 print(sum)
-
-

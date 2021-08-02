@@ -7,10 +7,9 @@ while n and lst[0] <= k:
     n -= 1
     cnt += 1
 
-while n and lst[n-1] <= k:
-    lst.pop(n-1)
+while n and lst[n - 1] <= k:
+    lst.pop(n - 1)
     n -= 1
     cnt += 1
 
 print(cnt)
-

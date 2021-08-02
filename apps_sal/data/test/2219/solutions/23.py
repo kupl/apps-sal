@@ -1,29 +1,33 @@
 from collections import defaultdict as dd
 import math
+
+
 def nn():
-	return int(input())
+    return int(input())
+
 
 def li():
-	return list(input())
+    return list(input())
+
 
 def mi():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
 
 def lm():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
 
 
-q=nn()
+q = nn()
 
 
 for _ in range(q):
-	n,k=mi()
-	moves=0
-	while n>=k:
-		moves+=n%k+1
+    n, k = mi()
+    moves = 0
+    while n >= k:
+        moves += n % k + 1
 
-		n=n//k
-		#print(n)
-	moves+=n
-	print(moves)
-
+        n = n // k
+        # print(n)
+    moves += n
+    print(moves)

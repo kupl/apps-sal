@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 a = sorted(read())
 T = int(input())
@@ -9,4 +11,3 @@ for i in range(n):
         j += 1
     ans = max(ans, j - i)
 print(ans)
-

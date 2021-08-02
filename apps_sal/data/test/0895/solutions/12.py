@@ -11,4 +11,3 @@ n = int(input())
 b = [int(x) for x in input().split()]
 T = int(input())
 print(halyava(b, T))
-

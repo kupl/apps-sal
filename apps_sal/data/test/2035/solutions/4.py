@@ -28,17 +28,17 @@ for i in range(n):
 max_ = max(cnt_1, cnt_2, cnt_3, cnt_4)
 if max_ == cnt_1:
     print(cnt_1)
-    print(sx+1, sy)
+    print(sx + 1, sy)
     return
 if max_ == cnt_2:
     print(cnt_2)
-    print(sx, sy-1)
+    print(sx, sy - 1)
     return
 if max_ == cnt_3:
     print(cnt_3)
-    print(sx-1, sy)
+    print(sx - 1, sy)
     return
 if max_ == cnt_4:
     print(cnt_4)
-    print(sx, sy+1)
+    print(sx, sy + 1)
     return

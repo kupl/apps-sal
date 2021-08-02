@@ -10,4 +10,3 @@ for _ in range(t):
             cnt += n % k
             n = n - n % k
     print(cnt)
-

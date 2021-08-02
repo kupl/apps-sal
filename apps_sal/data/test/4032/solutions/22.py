@@ -6,10 +6,9 @@ for i in range(len(a)):
         c += 1
     else:
         break
-for i in range(len(a)-1, -1, -1):
+for i in range(len(a) - 1, -1, -1):
     if a[i] <= k:
         c += 1
     else:
         break
 print(min(c, len(a)))
-

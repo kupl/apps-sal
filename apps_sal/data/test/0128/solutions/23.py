@@ -8,4 +8,3 @@ t = ans
 ans += ((n - 2 * k) * k)
 
 print(ans + (k * (k - 1) // 2))
-

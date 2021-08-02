@@ -13,27 +13,26 @@ inz = 0
 fin = 1
 count = 1
 
-#print(l)
+# print(l)
 
-while fin<n:
-    #conta il num max se si parte da inz
-    while fin<n and l[fin]-l[inz]<=T:
-        count+=1
-        fin+=1
-    
-    #print(count)
-    #print(inz)
-    #print(fin)
-    #print()
-    
-    if count>M:
+while fin < n:
+    # conta il num max se si parte da inz
+    while fin < n and l[fin] - l[inz] <= T:
+        count += 1
+        fin += 1
+
+    # print(count)
+    # print(inz)
+    # print(fin)
+    # print()
+
+    if count > M:
         M = count
-    
-    inz+=1
-    count-=1
-    if fin<inz:
+
+    inz += 1
+    count -= 1
+    if fin < inz:
         fin = inz
-        count = 1              
+        count = 1
 
 print(M)
-

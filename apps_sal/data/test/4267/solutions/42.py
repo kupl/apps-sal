@@ -1,5 +1,5 @@
-x=int(input())
-if x<30:
-  print("No")
+x = int(input())
+if x < 30:
+    print("No")
 else:
-  print("Yes")
+    print("Yes")

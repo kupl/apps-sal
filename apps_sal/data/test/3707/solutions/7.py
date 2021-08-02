@@ -3,7 +3,7 @@ def bp1(time):
 
 
 def bp2(time):
-    return (time // t) * k  + (max(time - d, 0) // t) * k
+    return (time // t) * k + (max(time - d, 0) // t) * k
 
 
 n, t, k, d = map(int, input().split())

@@ -13,4 +13,3 @@ for _ in range(int(input())):
                 ans += q
                 n = n // k * k
         print(ans)
-

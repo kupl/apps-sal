@@ -7,8 +7,8 @@ k = int(k)
 m = n
 chaos = 0
 for i in range(k):
-    if i < math.floor(n/2):
-        chaos += 2*m - 3
+    if i < math.floor(n / 2):
+        chaos += 2 * m - 3
         m -= 2
     else:
         break

@@ -4,6 +4,7 @@ import sys
 # sys.stdin = open('data/B.in', 'r')
 T = 1
 
+
 def process():
     a = input()
     b = input()
@@ -25,12 +26,5 @@ def process():
     print(ans)
 
 
-
-
-
-
-
-
 for _ in range(T):
     process()
-

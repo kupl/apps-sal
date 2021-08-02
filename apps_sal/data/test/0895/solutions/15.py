@@ -34,4 +34,3 @@ else:
                         la = j
             num.append(stu)
     print(max(num))
-

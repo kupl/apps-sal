@@ -11,4 +11,3 @@ for _ in range(t):
             n -= m
             c += m
     print(c)
-

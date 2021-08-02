@@ -1,8 +1,7 @@
-s=int(input())
+s = int(input())
 
-if s>=30:
-  print("Yes")
-  
+if s >= 30:
+    print("Yes")
+
 else:
-  print("No")
-
+    print("No")

@@ -21,4 +21,3 @@ if x >= 30:
     res = "Yes"
 
 print(res)
-

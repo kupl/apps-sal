@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, t, k, d = map(int, input().split())
 
@@ -12,6 +13,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

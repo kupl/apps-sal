@@ -8,7 +8,7 @@ for elem in a:
         num_n.append(num_n[-1])
     else:
         num_one.append(num_one[-1])
-        num_n.append(num_n[-1] + 1)  
+        num_n.append(num_n[-1] + 1)
 res = 0
 la = len(a)
 lb = len(b)
