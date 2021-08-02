@@ -10,20 +10,20 @@ for elem in a:
     if elem % 2:
         nech.add(elem)
     else:
-        chet.add(elem) 
+        chet.add(elem)
 
 while len(nech) > n // 2:
     nech.pop()
 while len(chet) > n // 2:
     chet.pop()
 
-l_n =  set([i for i in range(1, min(m + 1, 1000000), 2)])
+l_n = set([i for i in range(1, min(m + 1, 1000000), 2)])
 l_ch = set([i for i in range(2, min(m + 1, 1000000), 2)])
 
 l_ch.difference_update(chet)
 l_n.difference_update(nech)
 
-#print(l_ch)
+# print(l_ch)
 #print(l_n, nech)
 
 if len(l_ch) + len(chet) < n // 2 or len(l_n) + len(nech) < n // 2:
@@ -38,12 +38,12 @@ else:
             nech.remove(a[i])
         else:
             counter += 1
-            if (n//2 - n1) > 0:
+            if (n // 2 - n1) > 0:
                 a[i] = l_ch.pop()
                 n1 += 1
             else:
                 a[i] = l_n.pop()
-                n2 += 1 
-        
-    print(counter)    
+                n2 += 1
+
+    print(counter)
     print(*a)

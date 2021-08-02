@@ -11,4 +11,4 @@ for s in S:
         else:
             stack.pop()
 
-for s in stack:print(s,end='')
+for s in stack: print(s, end='')

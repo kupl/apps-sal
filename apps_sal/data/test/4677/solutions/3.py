@@ -9,4 +9,3 @@ for i in S:
     elif i == "B":
         STR = STR[:len(STR) - 2]
 print(STR)
-

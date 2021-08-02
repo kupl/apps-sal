@@ -16,4 +16,3 @@ for a in A:
             c += cnt[2**n - a]
 
 print(c)
-

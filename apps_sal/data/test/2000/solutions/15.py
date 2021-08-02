@@ -19,4 +19,3 @@ for a in A:
             c += cnt[cur - a]
 
 print(c)
-

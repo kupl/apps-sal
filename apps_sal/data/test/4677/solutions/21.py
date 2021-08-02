@@ -1,6 +1,6 @@
 s = str(input())
 a = []
- 
+
 for i in range(len(s)):
     if s[i] == '0':
         a.append('0')
@@ -9,5 +9,5 @@ for i in range(len(s)):
     else:
         if len(a) != 0:
             a.pop()
- 
+
 print(''.join(a))

@@ -32,7 +32,7 @@ for operation in s:
         try:
             q.pop()
         except IndexError:
-            pass # 何もしない
+            pass  # 何もしない
 
 # キューの中身を順番に取り出して文字列に変換
 answer = ""
@@ -40,4 +40,3 @@ for i in q:
     answer = answer + i
 
 print(answer)
-

@@ -7,5 +7,3 @@ for i in range(len(s)):
     else:
         ans.append(s[i])
 print((''.join(ans)))
-
-

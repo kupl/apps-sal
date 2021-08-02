@@ -6,4 +6,3 @@ b = [0] * n
 for i in range(m):
     b[a[i] - 1] += 1
 print(min(b))
-

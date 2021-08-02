@@ -7,4 +7,3 @@ for _ in range(int(input())):
         x += 1
         n -= ((n + 1) // 2)
     print(ans)
-

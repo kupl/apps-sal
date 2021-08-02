@@ -14,4 +14,3 @@ for i in range(len_s):
         else:
             text = text[:-1]
 print(text)
-

@@ -1,11 +1,14 @@
 import sys
 import math
 
+
 def ii():
     return sys.stdin.readline().strip()
 
+
 def idata():
     return [int(x) for x in ii().split()]
+
 
 def bfs(graph1, root1):
     visited1 = set()
@@ -22,6 +25,7 @@ def bfs(graph1, root1):
                 if qw < vertex1[1] + 1:
                     ver, qw = neig1, vertex1[1] + 1
     return ver, qw
+
 
 def dfs(graph, ver):
     used_v = set()
@@ -40,6 +44,7 @@ def dfs(graph, ver):
         num_of_level += 1
     return depth
 
+
 def binary_search(array, x):
     left, right = -1, len(array)
     while left + 1 != right:
@@ -50,6 +55,7 @@ def binary_search(array, x):
             left = middle
     return right
 
+
 def c_mod(n1, k1, mod1):
     num = den = 1
     for i in range(n1 - k1):
@@ -57,12 +63,14 @@ def c_mod(n1, k1, mod1):
         den = (den * (i + 1)) % mod1
     return (num * pow(den, mod1 - 2, mod1)) % mod1
 
+
 def c(n1, k1):
     num = den = 1
     for i in range(n1 - k1):
         num = num * (n1 - i)
         den = den * (i + 1)
     return num // den
+
 
 def v_sistemu(x, k):
     x = int(x)
@@ -72,12 +80,14 @@ def v_sistemu(x, k):
         x //= k
     return z[::-1]
 
+
 def iz_sistemi(x, k):
     x = str(x)[::-1]
     ans = 0
     for i in range(len(x)):
         ans += int(x[i]) * pow(k, i)
     return ans
+
 
 def solve_of_problem():
     n = int(ii())
@@ -89,6 +99,6 @@ def solve_of_problem():
             return
     return
 
+
 for ______ in range(int(ii())):
     solve_of_problem()
-

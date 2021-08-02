@@ -5,4 +5,3 @@ for i in range(t):
     while n % (k - 1) != 0:
         k *= 2
     print(n // (k - 1))
-

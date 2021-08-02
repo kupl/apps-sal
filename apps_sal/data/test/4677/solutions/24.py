@@ -1,12 +1,12 @@
-S=list(input())
+S = list(input())
 
-ans=[]
+ans = []
 
 for s in S:
-  if s == "B":
-    if len(ans)>0:
-      del ans[-1]
-  else:
-    ans.append(s)
-    
+    if s == "B":
+        if len(ans) > 0:
+            del ans[-1]
+    else:
+        ans.append(s)
+
 print("".join(ans))

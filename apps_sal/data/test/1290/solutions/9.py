@@ -6,4 +6,3 @@ for i in range(n):
 for i in l:
     mas[i - 1] += 1
 print(min(mas))
-

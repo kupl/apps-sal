@@ -7,10 +7,8 @@ def solve():
             return n // k
         t += 1
 
-#----
+
+# ----
 t = int(input())
 for case in range(t):
     print(solve())
-        
-
-

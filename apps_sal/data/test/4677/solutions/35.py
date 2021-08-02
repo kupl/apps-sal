@@ -8,4 +8,3 @@ for i in range(len(S)):
     else: ret = ret[:-1]
 
 print(ret)
-

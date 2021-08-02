@@ -1,9 +1,9 @@
-s=list(input())
-ans=list()
+s = list(input())
+ans = list()
 for i in s:
-    if i=="0":
+    if i == "0":
         ans.append(0)
-    elif i=="1":
+    elif i == "1":
         ans.append(1)
     else:
         try:
@@ -11,5 +11,5 @@ for i in s:
         except:
             pass
 for i in ans:
-    print(i,end="")
+    print(i, end="")
 print()

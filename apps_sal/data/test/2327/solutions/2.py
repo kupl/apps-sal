@@ -8,9 +8,3 @@ for _ in range(t):
         cnt += n
         n = n // 2
     print(cnt)
-
-
-
-
-
-

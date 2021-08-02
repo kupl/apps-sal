@@ -23,12 +23,15 @@ def main():
     s = next(tokens)  # type: str
     print((solve(s)))
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
-    #test()
+    # test()
     main()
+
 
 __starting_point()

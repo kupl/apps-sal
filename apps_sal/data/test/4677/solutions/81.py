@@ -25,16 +25,3 @@ for i in s:
     elif ans:
         ans = ans[:-1]
 print(ans)
-
-
-
-
-
-
-
-
-
-
-
-
-

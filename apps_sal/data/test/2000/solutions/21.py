@@ -11,4 +11,3 @@ for i in k:
         if j - i in cnt:
             pair += cnt[j - i]
 print(pair)
-

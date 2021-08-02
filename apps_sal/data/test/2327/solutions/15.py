@@ -16,4 +16,3 @@ for qq in range(t):
         val += 1
         #print(s, end = ' ')
     print(s)
-

@@ -8,7 +8,7 @@ for t in a:
     else:
         b[t] = 1
 
-dva =[]
+dva = []
 for i in range(31):
     dva.append(2**i)
 
@@ -21,7 +21,5 @@ for d in dva:
                     m += b[k] * b[d - k]
             else:
                 m += b[k] * (b[k] - 1)
-                
+
 print(m // 2)
-
-
