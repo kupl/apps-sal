@@ -10,5 +10,3 @@ elif contest_num >= 1000:
     result_str = 'ABD'
 
 print(result_str)
-
-

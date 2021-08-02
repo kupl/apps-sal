@@ -11,6 +11,5 @@ i = len(s) - 1
 while i > 0 and s[i] == '0':
     i = i - 1
 if s[i] == '.':
-    i = i -1
-print(s[:i+1])
-
+    i = i - 1
+print(s[:i + 1])

@@ -15,6 +15,7 @@ def flip(d):
     elif d == 5:
         return 2
 
+
 def build(t, cubes):
     for d in str(t):
         d = int(d)
@@ -41,4 +42,3 @@ while True:
         break
 
 print(i)
-

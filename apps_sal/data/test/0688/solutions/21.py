@@ -1,3 +1,6 @@
+from collections import defaultdict as dd
+
+
 def re(s):
     t = ""
     for i in s:
@@ -8,7 +11,8 @@ def re(s):
         else:
             t += i
     return t
-from collections import defaultdict as dd
+
+
 def main():
     t = re(input())
     s = re(input())
@@ -22,4 +26,6 @@ def main():
     for i in t:
         ans = min(ans, hv[i] // req[i])
     print(ans)
+
+
 main()

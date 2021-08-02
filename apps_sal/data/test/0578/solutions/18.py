@@ -27,18 +27,18 @@ D = d.lstrip('0')
 decimals = len(d)
 
 if a == '0':
-	if d == '0':
-		print('0')
-	elif b < decimals:
-		integer_part = '0' if b == 0 else d[:b-1].lstrip('0') + d[b-1]
-		decimal_part = d[b:]
-		print(integer_part, '.', decimal_part, sep='')
-	else:
-		print(d.lstrip('0'), '0'*(b-decimals), sep='')
-else: # a > 0
-	if d == '0':
-		print(a, '0'*b, sep='')
-	elif b < decimals:
-		print(a, d[:b], '.', d[b:], sep='')
-	else:
-		print(a, d, '0'*(b-decimals), sep='')
+    if d == '0':
+        print('0')
+    elif b < decimals:
+        integer_part = '0' if b == 0 else d[:b - 1].lstrip('0') + d[b - 1]
+        decimal_part = d[b:]
+        print(integer_part, '.', decimal_part, sep='')
+    else:
+        print(d.lstrip('0'), '0' * (b - decimals), sep='')
+else:  # a > 0
+    if d == '0':
+        print(a, '0' * b, sep='')
+    elif b < decimals:
+        print(a, d[:b], '.', d[b:], sep='')
+    else:
+        print(a, d, '0' * (b - decimals), sep='')

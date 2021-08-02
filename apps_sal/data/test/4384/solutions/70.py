@@ -1,6 +1,6 @@
 # N回目のコンテストの名前の最初の３文字を出力
 
-N = int ( input ( ) )
+N = int(input())
 
 if 1 <= N <= 999:
     print("ABC")

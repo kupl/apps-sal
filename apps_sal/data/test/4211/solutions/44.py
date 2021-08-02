@@ -8,4 +8,3 @@ for i in range(1, len(B)):
 ans += B[-1]
 
 print(ans)
-

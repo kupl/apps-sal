@@ -1,10 +1,9 @@
 n = int(input())
 
 
-if n<=999 :
+if n <= 999:
     c = 'ABC'
-else :
+else:
     c = 'ABD'
 
 print(c)
-

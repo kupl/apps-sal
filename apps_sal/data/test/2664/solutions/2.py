@@ -12,20 +12,20 @@ sys.stdout.flush()
 ans = int(input().strip())
 
 if ans == 0:
-	# lucky!
-	print('2')
-	print('5')
-	sys.stdout.flush()
+    # lucky!
+    print('2')
+    print('5')
+    sys.stdout.flush()
 if ans == 2:
-	print('2')
-	print('2')
-	sys.stdout.flush()
+    print('2')
+    print('2')
+    sys.stdout.flush()
 if ans == 1:
-	print('2')
-	print('1')
+    print('2')
+    print('1')
 if ans == -1:
-	print('2')
-	print('4')
+    print('2')
+    print('4')
 if ans == -2:
-	print('2')
-	print('3')
+    print('2')
+    print('3')

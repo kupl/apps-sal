@@ -23,4 +23,3 @@ for d in list(p.keys()):
     if p[d] != 0:
         c = min(c, q[d] // p[d])
 print(c)
-

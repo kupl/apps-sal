@@ -8,4 +8,3 @@ sys.stdout.flush()
 ans = int(input())
 print("2")
 print(d[ans])
-

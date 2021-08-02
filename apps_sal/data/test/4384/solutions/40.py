@@ -1,7 +1,7 @@
-n=int(input())
+n = int(input())
 
-if n<=999:
-    ans="ABC"
+if n <= 999:
+    ans = "ABC"
 else:
-    ans="ABD"
+    ans = "ABD"
 print(ans)

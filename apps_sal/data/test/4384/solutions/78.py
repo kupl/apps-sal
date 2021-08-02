@@ -12,7 +12,7 @@ N = int(input())
 
 # N回目のコンテストの最初の三文字を出力せよ。
 
-if 1<= N <= 999:
+if 1 <= N <= 999:
     print("ABC")
 elif 1000 <= N <= 1998:
     print("ABD")

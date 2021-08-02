@@ -9,7 +9,7 @@ for i in l:
         last_n = i
     else:
         ans -= last_n
-        ans += i*2
+        ans += i * 2
         last_n = i
 ans += l[0]
 print(ans)

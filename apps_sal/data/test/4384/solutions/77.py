@@ -1,2 +1,2 @@
-n=int(input())
-print('ABC' if n <=999 else "ABD")
+n = int(input())
+print('ABC' if n <= 999 else "ABD")

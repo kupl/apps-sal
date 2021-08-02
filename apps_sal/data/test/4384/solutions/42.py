@@ -1,2 +1,2 @@
 moji = int(input())
-print(("ABC","ABD")[moji >=1000])
+print(("ABC", "ABD")[moji >= 1000])

@@ -31,6 +31,5 @@ for e in n:
         temp_result = int(d[e] / n[e])
         if temp_result < result:
             result = temp_result
-            
-print(result)
 
+print(result)

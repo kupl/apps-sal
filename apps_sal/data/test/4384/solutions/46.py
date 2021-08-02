@@ -1,6 +1,6 @@
 N = int(input())
 
-if N <= 999 :
+if N <= 999:
     print('ABC')
 
 else:

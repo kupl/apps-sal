@@ -31,4 +31,3 @@ else:
     sys.stdout.flush()
     print('5')
     sys.stdout.flush()
-

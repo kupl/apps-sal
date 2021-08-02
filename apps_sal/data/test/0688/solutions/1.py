@@ -6,4 +6,3 @@ res = 10 ** 100
 for i in t:
     res = min(res, s.count(i) // t.count(i))
 print(res)
-
