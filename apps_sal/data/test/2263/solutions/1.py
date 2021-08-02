@@ -3,7 +3,9 @@ import sys
 
 cost = []
 
+
 def readarray(): return map(int, input().split(' '))
+
 
 n = int(input())
 graph = [[] for i in range(n)]
@@ -14,7 +16,7 @@ for i in range(n - 1):
     cost.append(c)
     graph[u].append((v, i))
     graph[v].append((u, i))
-    
+
 
 order = []
 used = [0] * n
@@ -29,20 +31,19 @@ qh += 1
 while qt < qh:
     v = q[qt]
     qt += 1
-    
+
     order.append(v)
-    
+
     for (to, e) in graph[v]:
         if used[to]:
             continue
         used[to] = 1
         q[qh] = to
         qh += 1
-        
 
-        
+
 order.reverse()
-        
+
 sz = [0 for x in range(n)]
 
 for v in order:
@@ -75,7 +76,7 @@ for v in range(n):
         x = min(sz[v], sz[to])
         edgeMult[e] = x
         distanceSum += 1.0 * cost[e] * x * (n - x)
-        
+
 distanceSum /= 2.0
 
 queryCnt = int(input())
@@ -85,11 +86,11 @@ ans = []
 for i in range(queryCnt):
     x, y = readarray()
     x -= 1
-    
+
     distanceSum -= 1.0 * cost[x] * edgeMult[x] * (n - edgeMult[x])
     cost[x] = y
     distanceSum += 1.0 * cost[x] * edgeMult[x] * (n - edgeMult[x])
-    
+
     ans.append('%.10lf' % (distanceSum / n / (n - 1) * 6.0))
 
 print('\n'.join(ans))

@@ -14,5 +14,5 @@ for i in range(tl):
     if(s[j] == t[i]):
         res += 1
         j += 1
-        
+
 print(res)

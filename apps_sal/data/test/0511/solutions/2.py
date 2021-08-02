@@ -66,4 +66,3 @@ main()
 #   ans += y - max_can
 #   y = max_can
 # print(ans)
-
