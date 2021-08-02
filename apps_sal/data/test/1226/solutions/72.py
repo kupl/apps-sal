@@ -4,10 +4,11 @@ def modpow(a, n, p):
     else:
         if n % 2 == 0:
             ans = (modpow(a, n // 2, p) ** 2) % p
-        else: # n % 2 == 1
+        else:  # n % 2 == 1
             ans = (a * (modpow(a, n // 2, p) ** 2)) % p
 
     return ans
+
 
 p = 10 ** 9 + 7
 n, a, b = [int(x) for x in input().split()]
@@ -28,6 +29,6 @@ for i in range(b):
 Zb = modpow(Yb, p - 2, p)
 nCb = (Xb * Zb) % p
 
-ans = (tot - nCa -nCb - 1) % p
+ans = (tot - nCa - nCb - 1) % p
 
 print(ans)

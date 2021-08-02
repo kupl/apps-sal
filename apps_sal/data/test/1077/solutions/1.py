@@ -31,4 +31,3 @@ while minn != ideal:
     minn += 1
 print(minn, badd - bad)
 print(*A)
-

@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 
+
 class DSU:
     def __init__(self, n):
         self.parents = [i for i in range(n)]
@@ -21,15 +22,16 @@ class DSU:
             if self.ranks[v] == self.ranks[u]:
                 self.ranks[u] += 1
 
+
 n = int(input())
 dsu = DSU(n)
 colors = list(map(int, input().split(' ')))
 vertices = []
-for i in range(n-1):
-    u, v = [int(x)-1 for x in input().split(' ')]
+for i in range(n - 1):
+    u, v = [int(x) - 1 for x in input().split(' ')]
     if colors[u] == colors[v]:
         dsu.join_sets(u, v)
-    vertices.append((u,v))
+    vertices.append((u, v))
 graph = defaultdict(list)
 for u, v in vertices:
     if colors[u] != colors[v]:
@@ -51,6 +53,8 @@ def bfs(u):
                 d[v] = d[u] + 1
                 q.append(v)
     return d
+
+
 if graph:
     v = list(graph.keys())[0]
     d = bfs(v)
@@ -63,7 +67,6 @@ if graph:
     for i in d:
         if d[i] > d[w]:
             w = i
-    print((d[w]+1)//2)
+    print((d[w] + 1) // 2)
 else:
     print(0)
-

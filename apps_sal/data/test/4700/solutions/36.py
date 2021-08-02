@@ -13,4 +13,3 @@ for p in ab:
         h2.append(p[1] - 1)
 
 print((len(h) - len(list(set(h2)))))
-

@@ -28,12 +28,11 @@ for x, v in xv[::-1]:
 
 ans = max((0, m1[-1], m2[-1]))
 
-for i in range(n-1):
+for i in range(n - 1):
     ans = max((
         ans,
-        v1[i] + m2[-i-2] - xv[i][0],
-        v2[i] + m1[-i-2] + xv[-i-1][0] - c
+        v1[i] + m2[-i - 2] - xv[i][0],
+        v2[i] + m1[-i - 2] + xv[-i - 1][0] - c
     ))
 
 print(ans)
-

@@ -26,12 +26,11 @@ for e in ccw:
 
 ans = 0
 for i, e in enumerate(cw2):
-    mx = e + ccw_mx[n-i]
+    mx = e + ccw_mx[n - i]
     ans = max(ans, mx)
 
 for i, e in enumerate(ccw2):
-    mx = e + cw_mx[n-i]
+    mx = e + cw_mx[n - i]
     ans = max(ans, mx)
 
 print(ans)
-

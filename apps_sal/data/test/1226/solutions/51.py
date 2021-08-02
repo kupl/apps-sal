@@ -18,4 +18,3 @@ ans %= MOD
 ans -= 1
 ans %= MOD
 print(ans)
-

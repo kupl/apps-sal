@@ -1,5 +1,5 @@
 from itertools import *
-N,C,*XV = map(int,open(0).read().split())
+N, C, *XV = map(int, open(0).read().split())
 X = XV[::2] + [C]
 A = [0] + list(accumulate(XV[1::2]))
 ans = L = R = 0

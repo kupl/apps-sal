@@ -5,4 +5,3 @@ X %= 500
 res += X // 5 * 5
 
 print(res)
-

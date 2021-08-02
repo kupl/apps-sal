@@ -3,6 +3,7 @@ def main():
     XV = [tuple(map(int, input().split())) for _ in range(N)]
     return max(solve(N, C, XV), solve(N, C, [(C - x, v) for x, v in reversed(XV)]))
 
+
 def solve(N, C, XV):
     lv = [0] * N
     rv = [0] * N
@@ -23,5 +24,5 @@ def solve(N, C, XV):
         lv[i] += rv[N - i - 2]
     return max(lv)
 
-print((main()))
 
+print((main()))

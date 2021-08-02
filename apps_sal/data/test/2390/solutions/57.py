@@ -36,4 +36,3 @@ for i in range(n):
     ans = max(ans, tmp + left[n - i])
 
 print(ans)
-

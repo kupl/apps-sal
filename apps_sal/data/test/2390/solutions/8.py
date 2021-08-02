@@ -35,7 +35,7 @@ for i in range(n):
 
 
 total = 0
-for i in range(1, n+1):
+for i in range(1, n + 1):
     total = total + v_list[-i]
     r_one_list.append(total - (c - x_list[-i]))
     r_round_list.append(total - 2 * (c - x_list[-i]))
@@ -56,13 +56,12 @@ for i in range(n):
 
 ret = 0
 
-for i in range(n-1):
-    tmp = max(one_list[i] + r_round_list[-i-2],
-              round_list[i] + r_one_list[-i-2])
+for i in range(n - 1):
+    tmp = max(one_list[i] + r_round_list[-i - 2],
+              round_list[i] + r_one_list[-i - 2])
     if tmp > ret:
         ret = tmp
 
 ret = max(one_list[-1], r_one_list[-1], ret)
 
 print(ret)
-

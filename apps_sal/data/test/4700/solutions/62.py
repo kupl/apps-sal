@@ -13,12 +13,12 @@ for i in range(M):
         dic[b] = [a]
 
 ans = 0
-for i in range(1, N+1):
-    s = H[i-1]
+for i in range(1, N + 1):
+    s = H[i - 1]
     t = 0
     if i in dic:
         for j in range(len(dic[i])):
-            if s <= H[dic[i][j]-1]:
+            if s <= H[dic[i][j] - 1]:
                 t += 1
                 break
         if t == 0:

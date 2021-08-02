@@ -5,9 +5,12 @@ def main():
     mod = 10 ** 9 + 7
 
     def cmb(n, r):
-        if n - r < r: r = n - r
-        if r == 0: return 1
-        if r == 1: return n
+        if n - r < r:
+            r = n - r
+        if r == 0:
+            return 1
+        if r == 1:
+            return n
 
         numerator = [n - r + k + 1 for k in range(r)]
         denominator = [k + 1 for k in range(r)]
@@ -24,7 +27,7 @@ def main():
         for k in range(r):
             if numerator[k] > 1:
                 result *= int(numerator[k])
-                result %= 10**9+7
+                result %= 10**9 + 7
 
         return result
 
@@ -37,5 +40,3 @@ def main():
 
 
 main()
-
-

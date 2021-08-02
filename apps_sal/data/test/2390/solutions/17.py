@@ -9,7 +9,7 @@ now = 0
 clockwise = [(0, 0)]
 for x, v in XV:
     eat += v
-    walk += x-now
+    walk += x - now
     clockwise.append((eat, walk))
     now = x
 

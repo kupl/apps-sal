@@ -1,6 +1,6 @@
 import copy
 
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 h = [0] + list(map(int, input().split()))
 
 towers = [[] for _ in range(n + 1)]
@@ -19,5 +19,3 @@ for i in range(1, n + 1):
         cnt += 1
 
 print(cnt)
-            
-

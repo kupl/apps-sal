@@ -13,6 +13,7 @@ def modinv(a, m):
         u += m
     return u
 
+
 def nCk(N, k, mod):
     ret_val = 1
     for i in range(k):

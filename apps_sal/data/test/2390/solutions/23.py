@@ -43,10 +43,10 @@ for i, (x, v) in enumerate(sushi_set[::-1]):
 ans = max(max(right), max(left))
 # print(ans)
 # right -> left
-for i in range(N-1):
-    ans = max(ans, right_back[i] + left[N-2-i])
+for i in range(N - 1):
+    ans = max(ans, right_back[i] + left[N - 2 - i])
 # left -> right
-for i in range(N-1):
-    ans = max(ans, left_back[i] + right[N-2-i])
+for i in range(N - 1):
+    ans = max(ans, left_back[i] + right[N - 2 - i])
 
 print(max(ans, 0))

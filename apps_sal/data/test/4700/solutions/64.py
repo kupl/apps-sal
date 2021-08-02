@@ -12,6 +12,6 @@ for i in range(M):
 
 for j in range(N):
     if array[j] < H[j]:
-      ans += 1
+        ans += 1
 
 print(ans)

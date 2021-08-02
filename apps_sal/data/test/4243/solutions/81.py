@@ -8,4 +8,3 @@ while n >= 5:
     sum += 5
 
 print(sum)
-

@@ -5,7 +5,7 @@ mod = 10**9 + 7
 
 
 def cmb(n, r, m):
-    mul = lambda a,b: a*b%m
+    def mul(a, b): return a * b % m
     r = min(n - r, r)
     if r == 0:
         return 1
@@ -16,4 +16,3 @@ def cmb(n, r, m):
 
 n, a, b = list(map(int, input().split()))
 print(((pow(2, n, mod) - 1 - cmb(n, a, mod) - cmb(n, b, mod)) % mod))
-

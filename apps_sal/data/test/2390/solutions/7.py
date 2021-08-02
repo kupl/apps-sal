@@ -18,8 +18,8 @@ for i in range(1, N):
     a += v[N - 1 - i] - ((C - x[N - 1 - i]) - (C - x[N - 1 - (i - 1)]))
     a1[i] = max(a, a1[i - 1])
 
-#print(a0)
-#print(a1)
+# print(a0)
+# print(a1)
 result = -1
 if a0[N - 1] > result:
     #print("go a0[N-1]")
@@ -30,12 +30,11 @@ if a1[N - 1] > result:
 for i in range(N - 1):
     t = a0[i] - x[i] + a1[N - 1 - (i + 1)]
     if t > result:
-       #print("go a0[%d] and go a1[%d]: %d" % (i, N - 1 - (i + 1), t))
-       result = t
+        #print("go a0[%d] and go a1[%d]: %d" % (i, N - 1 - (i + 1), t))
+        result = t
 for i in range(N - 1):
     t = a1[i] - (C - x[N - 1 - i]) + a0[N - 1 - (i + 1)]
     if t > result:
-       #print("go a1[%d] and go a0[%d]: %d" % (i, N - 1 - (i + 1), t))
-       result = t
+        #print("go a1[%d] and go a0[%d]: %d" % (i, N - 1 - (i + 1), t))
+        result = t
 print(result)
-

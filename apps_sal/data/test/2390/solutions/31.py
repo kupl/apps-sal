@@ -28,4 +28,3 @@ for i in range(N):
         ccw_acc[i + 1] - (C - xv[k][0]) + cw_acc[k],
     )
 print(ans)
-

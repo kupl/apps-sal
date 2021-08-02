@@ -18,4 +18,3 @@ def cmb(n, r, m):
 
 n, a, b = list(map(int, input().split()))
 print(((pow(2, n, mod) - 1 - cmb(n, a, mod) - cmb(n, b, mod)) % mod))
-
