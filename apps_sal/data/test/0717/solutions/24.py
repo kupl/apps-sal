@@ -6,5 +6,5 @@ for i in range(n):
         cnt = a
     else:
         cnt = cnt - (cnt - a) % b + b
-    #print(cnt)
+    # print(cnt)
 print(cnt)

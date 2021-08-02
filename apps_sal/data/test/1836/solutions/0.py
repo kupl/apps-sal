@@ -14,4 +14,3 @@ ans = 0
 for i in range(n):
     ans = max(ans, dp[i] * p[i])
 print(ans)
-

@@ -7,5 +7,4 @@ for i in range(n):
     if t >= ma:
         r = i
         ma = t
-print(r+1)
-
+print(r + 1)

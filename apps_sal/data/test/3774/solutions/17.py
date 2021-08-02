@@ -21,4 +21,6 @@ def main():
         print(n * m)
         return
     print(n * m - 1)
+
+
 main()

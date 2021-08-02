@@ -12,4 +12,3 @@ for i in range(n):
     if (day - s) % d != 0:
         day += d - (day - s) % d
 print(day)
-

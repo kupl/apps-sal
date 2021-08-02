@@ -38,6 +38,5 @@ for i in range(n):
     s, d = ria()
     while s > curD or (curD - s) % d != 0:
         curD += 1
-    curD+=1
-print(curD-1)
-
+    curD += 1
+print(curD - 1)

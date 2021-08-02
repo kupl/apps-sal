@@ -16,7 +16,7 @@ for i in range(n):
 
 
 for i in range(m):
-    f,t = sys.stdin.readline().split()
+    f, t = sys.stdin.readline().split()
     f = int(f) - 1
     t = int(t) - 1
     neighbours[f] += 1

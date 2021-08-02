@@ -8,12 +8,10 @@ pre = 0
 while True:
     ans = -1
     for i in range(n):
-        if a[i]>0:
+        if a[i] > 0:
             ans = i
             a[i] -= m
-    if ans==-1:
+    if ans == -1:
         break
     pre = ans
-print(pre+1)
-
-
+print(pre + 1)

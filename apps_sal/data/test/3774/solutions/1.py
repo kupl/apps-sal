@@ -64,9 +64,8 @@ if not (restRows == 0 or restCols == 0):
         if rowsGroups >= 1 or colsGroups >= 1:
             count += 3
         else:
-            count += 2        
+            count += 2
     else:
         raise f'Unknown pair ({sn, sm})'
 
 print(2 * count)
-

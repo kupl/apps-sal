@@ -1,13 +1,17 @@
 from math import *
 
+
 def r1(t):
     return t(input())
+
 
 def r2(t):
     return [t(i) for i in input().split()]
 
+
 def r3(t):
     return [t(i) for i in input()]
+
 
 for _ in range(r1(int)):
     n, k = r2(int)
@@ -27,10 +31,9 @@ for _ in range(r1(int)):
                 ta = 0
                 for i in t:
                     ta += i // y
-                if (ta < x):    
+                if (ta < x):
                     break
-                ans = max(ans, y*x)
+                ans = max(ans, y * x)
                 y += 1
- 
-    print(ans)
 
+    print(ans)

@@ -14,4 +14,3 @@ else:
         print(n * m - (n * m) % 2)
     else:
         print(0)
-
