@@ -64,4 +64,3 @@ while q:
         q.append((x, y + 1))
 
 print(ans)
-

@@ -8,5 +8,4 @@ for i in range(m):
         s += line[j]
     if s >= 0:
         answer += s
-print(answer)    
-
+print(answer)

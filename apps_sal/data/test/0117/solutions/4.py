@@ -45,7 +45,7 @@ def cal_area(A, B, C, D, E, F, X, Y):
     for x, y1, y2 in zip(D, E, F):
         for y in range(y1, y2):
             LineX[x][y] = True
-    
+
     visit = [[False] * LenY for _ in range(LenX)]
     x = np.searchsorted(X, 0, 'right') - 1
     y = np.searchsorted(Y, 0, 'right') - 1
@@ -59,7 +59,7 @@ def cal_area(A, B, C, D, E, F, X, Y):
         if x == 0 or x == LenX - 1 or y == 0 or y == LenY - 1:
             area = 0
             break
-        
+
         area += (X[x + 1] - X[x]) * (Y[y + 1] - Y[y])
 
         if not LineX[x][y] and not visit[x - 1][y]:
@@ -79,7 +79,8 @@ def cal_area(A, B, C, D, E, F, X, Y):
 
 
 def __starting_point():
-	main()
+    main()
+
 
 return
 

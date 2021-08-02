@@ -12,5 +12,3 @@ for i in range(m):
         ans += cur
 
 print(ans)
-
-

@@ -16,5 +16,5 @@ def main():
     except EOFError:
         pass
 
-main()
 
+main()

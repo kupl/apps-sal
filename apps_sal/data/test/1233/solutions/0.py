@@ -45,4 +45,5 @@ def __starting_point():
     result = insertion_sort(n, a)
     print(*result)
 
+
 __starting_point()

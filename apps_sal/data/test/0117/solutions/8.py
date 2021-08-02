@@ -71,16 +71,16 @@ def cal_area(A, B, C, D, E, F, X, Y):
 
     q_pop = queue.pop
     q_append = queue.append
-    
+
     while queue:
         x, y = q_pop()
-        
+
         if x == 0 or x == LenX or y == 0 or y == LenY:
             area = 0
             break
-        
+
         area += DX[x] * DY[y]
-        
+
         x1 = x - 1
         if not LineX[x][y] and not visit[x1][y]:
             visit[x1][y] = True
@@ -102,7 +102,8 @@ def cal_area(A, B, C, D, E, F, X, Y):
 
 
 def __starting_point():
-	main()
+    main()
+
 
 return
 

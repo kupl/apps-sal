@@ -11,4 +11,3 @@ for i in range(m):
     if sum1 > 0:
         ans += sum1
 print(ans)
-

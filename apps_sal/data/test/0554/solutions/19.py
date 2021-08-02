@@ -11,4 +11,3 @@ for i in range(m):
         answer += t
 
 print(answer)
-
