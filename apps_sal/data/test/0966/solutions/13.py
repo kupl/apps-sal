@@ -8,6 +8,7 @@ def is_distinct(year):
             s.add(c)
     return True
 
+
 def upper_distinct(year):
     year += 1
     while(True):
@@ -15,20 +16,14 @@ def upper_distinct(year):
             return year
         else:
             year += 1
-            
 
 
 def main():
     first_line = input()
     first_line = first_line.split()
-    
+
     year = int(first_line[0])
     print(upper_distinct(year))
-    
 
 
-    
-    
-    
 main()
-

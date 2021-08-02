@@ -19,13 +19,13 @@ else:
 def ria():
     return [int(i) for i in input().split()]
 
-n=ria()[0]
+
+n = ria()[0]
 ar = []
 for i in range(1, 30):
-    ar.append(int('1' * i + '0' * (i - 1),2))
-#print(ar)
+    ar.append(int('1' * i + '0' * (i - 1), 2))
+# print(ar)
 for i in reversed(ar):
-    if n%i==0:
+    if n % i == 0:
         print(i)
         return
-

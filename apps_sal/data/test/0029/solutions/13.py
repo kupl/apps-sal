@@ -22,7 +22,7 @@ else:
                 break
     if one_flag:
         for i in range(6):
-            for j in range(i+1, 6):
+            for j in range(i + 1, 6):
                 if i < 3 and j < 3:
                     if second_sum - (first_sum - A[i] - A[j]) in double_digit_set:
                         print(2)
@@ -41,9 +41,3 @@ else:
                 break
         else:
             print(3)
-
-
-
-
-
-

@@ -13,4 +13,3 @@ while sum(r) - sum(l) > 0:
     ans += 1
 
 print(ans)
-

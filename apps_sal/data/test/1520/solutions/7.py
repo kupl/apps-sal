@@ -6,6 +6,7 @@ from collections import namedtuple
 Parsed = namedtuple("Parsed", "type p pl s sl")
 D, U = 0, 1
 
+
 def parse(s):
     pc, sc = 0, 0
 
@@ -19,13 +20,13 @@ def parse(s):
             break
         sc += 1
 
-
     if s[0] == s[-1] and pc == sc == len(s):
         tp = U
     else:
         tp = D
 
     return Parsed(tp, s[0], pc, s[-1], sc)
+
 
 def max_conti_len(s, target):
     mx = 0
@@ -38,13 +39,15 @@ def max_conti_len(s, target):
             cur = 0
     return mx
 
+
 def len_mul(nl, ol):
-    return ol*nl + ol + nl
+    return ol * nl + ol + nl
+
 
 def solve(n, ss):
     s = ss.pop()
     op = parse(s)
-    mc = max(max_conti_len(s, chr(c)) for c in range(ord('a'), ord('z')+1))
+    mc = max(max_conti_len(s, chr(c)) for c in range(ord('a'), ord('z') + 1))
 
     while ss:
         s = ss.pop()
@@ -69,11 +72,11 @@ def solve(n, ss):
 
         elif op.type == D:
             if op.p == op.s:
-                mp = op.pl+op.sl+1 if op.p in s else op.pl
+                mp = op.pl + op.sl + 1 if op.p in s else op.pl
                 ms = op.sl
             else:
-                mp = op.pl+1 if op.p in s else op.pl
-                ms = op.sl+1 if op.s in s else op.sl
+                mp = op.pl + 1 if op.p in s else op.pl
+                ms = op.sl + 1 if op.s in s else op.sl
             mc = max(mc, mp, ms)
 
     print(mc)
@@ -85,5 +88,6 @@ def solve_from_stdin():
     for _ in range(n):
         ss.append(input())
     solve(n, ss)
+
 
 solve_from_stdin()

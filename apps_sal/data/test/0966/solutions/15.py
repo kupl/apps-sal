@@ -1,5 +1,6 @@
 import sys
 
+
 def year():
     listyear = []
     year = input().split()
@@ -8,6 +9,7 @@ def year():
         listyear.append(int(year[0][i]))
     listyear.reverse()
     return(listyear)
+
 
 def nextyear(listyear):
     if listyear[0] == 9:
@@ -28,6 +30,7 @@ def nextyear(listyear):
         listyear[0] += 1
     return listyear
 
+
 def rightyear(listyear):
     nextyear(listyear)
     while len(set(listyear)) != 4:
@@ -35,7 +38,7 @@ def rightyear(listyear):
     listyear.reverse()
 
     for i in listyear:
-        print(i,end="")
-    
-rightyear(year())
+        print(i, end="")
 
+
+rightyear(year())

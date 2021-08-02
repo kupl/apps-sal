@@ -6,5 +6,4 @@ for i in range(1, 309):
         break
 print(pos)
 
-#128 7 0
-
+# 128 7 0

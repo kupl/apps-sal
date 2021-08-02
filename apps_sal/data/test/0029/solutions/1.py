@@ -2,10 +2,10 @@ s = input()
 
 ans = 6
 
-for i in range (0, 10):
-    for j in range (0, 10):
+for i in range(0, 10):
+    for j in range(0, 10):
         for k in range(0, 10):
-            for f in range (0, 10):
+            for f in range(0, 10):
                 for f1 in range(0, 10):
                     for f2 in range(0, 10):
                         if(i + j + k == f + f1 + f2):

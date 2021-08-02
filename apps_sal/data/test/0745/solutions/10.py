@@ -45,4 +45,3 @@ else:
             if col < 0:
                 col += mod
         print(ways * col * 2 % mod)
-

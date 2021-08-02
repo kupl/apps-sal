@@ -14,8 +14,6 @@ while flag:
         flag = False
         print(k)
 
-
-    if k> 100000:
+    if k > 100000:
         print(-1)
         flag = False
-

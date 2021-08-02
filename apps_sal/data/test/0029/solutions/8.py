@@ -18,5 +18,3 @@ for i in range(1000000):
         ans = min(ans, comp(n, m))
 
 print(ans)
-
-

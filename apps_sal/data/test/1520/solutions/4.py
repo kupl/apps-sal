@@ -1,8 +1,9 @@
 ALPH = 'abcdefghijklmnopqrstuvwxyz'
 MAX = 10 ** 9
 
+
 def cnt(s):
-    c = {ch : 0 for ch in ALPH}
+    c = {ch: 0 for ch in ALPH}
     i = 0
     while i < len(s):
         j = i + 1
@@ -11,6 +12,7 @@ def cnt(s):
         c[s[i]] = max(c[s[i]], j - i)
         i = j
     return c
+
 
 def nxt(c, t):
     nc = cnt(t)
@@ -31,7 +33,8 @@ def nxt(c, t):
     else:
         nc[t[0]] = max(nc[t[0]], f + (c[t[0]] > 0))
         nc[t[-1]] = max(nc[t[-1]], r + (c[t[-1]] > 0))
-    return {x : min(MAX, y) for x, y in nc.items()}
+    return {x: min(MAX, y) for x, y in nc.items()}
+
 
 n = int(input())
 c = cnt(input())

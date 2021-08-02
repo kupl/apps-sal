@@ -27,4 +27,3 @@ while count < 4:
         arr[num_max] = 0
     count += 1
 print(count)
-

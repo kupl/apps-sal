@@ -3,14 +3,16 @@ S = input()
 a = S[:3]
 b = S[3:]
 
+
 def Sum(st):
     n = 0
     for x in st:
         n += int(x)
     return n
 
-def g(s, t): # s < t
-    diff = int(t[0])+int(t[1])+int(t[2])-int(s[0])-int(s[1])-int(s[2])
+
+def g(s, t):  # s < t
+    diff = int(t[0]) + int(t[1]) + int(t[2]) - int(s[0]) - int(s[1]) - int(s[2])
     ma = 9 - int(s[0])
     c = 0
     if 9 - int(s[1]) > ma:
@@ -19,7 +21,7 @@ def g(s, t): # s < t
     if 9 - int(s[2]) > ma:
         c = 2
         ma = 9 - int(s[c])
-    
+
     mm = int(t[0])
     c2 = 0
     if int(t[1]) > mm:
@@ -27,14 +29,14 @@ def g(s, t): # s < t
         c2 = 1
     if int(t[2]) > mm:
         mm = int(t[2])
-        
+
         c2 = 2
     if ma > mm:
         C = str(int(s[c]) + min(diff, ma))
-        s = s[:c] + C + s[c+1:]
+        s = s[:c] + C + s[c + 1:]
     else:
         C = str(int(t[c2]) - min(diff, mm))
-        t = t[:c2] + C + t[c2+1:]
+        t = t[:c2] + C + t[c2 + 1:]
     return s, t
 
 
@@ -56,5 +58,5 @@ def f():
         n += 1
     print(n)
 
-f()
 
+f()

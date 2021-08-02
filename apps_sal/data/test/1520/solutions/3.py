@@ -36,13 +36,12 @@ def prog(mass, st):
                 else:
                     mass[i] = max(1, mmm[i])
     return mass
-        
-        
+
 
 def razlog(st):
     nonlocal alf
     mass = [0 for i in range(26)]
-    mass[alf.index(st[0])] = 1    
+    mass[alf.index(st[0])] = 1
     now = 1
     for i in range(1, len(st)):
         if st[i] == st[i - 1]:
@@ -50,7 +49,8 @@ def razlog(st):
         else:
             now = 1
         mass[alf.index(st[i])] = max(now, mass[alf.index(st[i])])
-    return mass 
+    return mass
+
 
 n = int(input())
 st = input()

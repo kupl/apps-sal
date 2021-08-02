@@ -10,7 +10,7 @@ def work():
     # now sum(a) < sum(b)
     a = sorted(a)
     b = sorted(b)
-    ben = [9-a[0], 9-a[1], 9-a[2], b[0], b[1], b[2]]
+    ben = [9 - a[0], 9 - a[1], 9 - a[2], b[0], b[1], b[2]]
     ben = sorted(ben)[::-1]
     k = sum(b) - sum(a)
     t = 0
@@ -20,7 +20,6 @@ def work():
         i += 1
     print(i)
     return
-        
+
 
 work()
-
