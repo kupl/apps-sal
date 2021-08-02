@@ -20,4 +20,5 @@ def main():
 
     return "NO"
 
+
 print(main())

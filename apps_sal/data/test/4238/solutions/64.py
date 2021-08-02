@@ -1,7 +1,7 @@
 N = input()
 nums = []
 length = len(N)
-for i in range(1, length+1):
+for i in range(1, length + 1):
     value = int(N[-i])
 #     print(value)
     nums.append(value)

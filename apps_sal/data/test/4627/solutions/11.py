@@ -25,5 +25,3 @@ for _ in range(T):
                 break
         ans = 'YES' if valid else 'NO'
     print(ans)
-
-

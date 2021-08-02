@@ -54,7 +54,7 @@ for _ in range(int(data())):
     r = False
     for i in odd:
         for j in even:
-            if abs(i-j) == 1:
+            if abs(i - j) == 1:
                 r = True
                 break
         if r:
@@ -63,4 +63,3 @@ for _ in range(int(data())):
         out("YES")
         continue
     out("NO")
-

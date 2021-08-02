@@ -43,4 +43,3 @@ for i in range(int(input())):
     super_ans.append(' '.join(map(str, ans * 2)))
 
 print('\n'.join(super_ans))
-

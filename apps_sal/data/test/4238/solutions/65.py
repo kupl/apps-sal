@@ -9,6 +9,9 @@ def main():
     n = list(str(input()))
     print(b176(n))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

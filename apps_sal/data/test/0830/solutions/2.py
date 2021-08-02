@@ -1,7 +1,7 @@
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-actions = [ ]
+actions = []
 for i in range(k):
     max_index = min_index = 0
     max_value = min_value = a[0]
@@ -20,4 +20,3 @@ for i in range(k):
 print(max(a) - min(a), len(actions))
 for i, j in actions:
     print(i + 1, j + 1)
-

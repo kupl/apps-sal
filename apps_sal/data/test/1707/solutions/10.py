@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 
 a = sorted(map(abs, a))
 
-#print(a)
+# print(a)
 ans = 0
 j = 1
 for i in range(n):
@@ -12,4 +12,3 @@ for i in range(n):
     #print(i, j)
     ans += j - i - 1
 print(ans)
-

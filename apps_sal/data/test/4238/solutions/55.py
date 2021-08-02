@@ -4,4 +4,3 @@ if a:
     print("Yes")
 else:
     print("No")
-

@@ -43,7 +43,4 @@ for j in enumerate(data):
 
 print("{} {}".format(max_v - min_v, i))
 for i in result:
-    print("{} {}".format(i[0]+1, i[1]+1))
-
-
-
+    print("{} {}".format(i[0] + 1, i[1] + 1))

@@ -7,6 +7,6 @@ def multiple_of_nine():
     else:
         return 'No'
 
+
 result = multiple_of_nine()
 print(result)
-

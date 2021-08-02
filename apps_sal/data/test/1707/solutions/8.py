@@ -5,7 +5,7 @@ i = 0
 j = 1
 ans = 0
 while j < N:
-    while j < N-1 and A[j+1] <= A[i] * 2:
+    while j < N - 1 and A[j + 1] <= A[i] * 2:
         j += 1
     if A[j] <= A[i] * 2:
         ans += j - i
@@ -14,4 +14,3 @@ while j < N:
         j += 1
 
 print(ans)
-

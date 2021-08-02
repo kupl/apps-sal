@@ -14,4 +14,3 @@ for i in a:
         print("YES")
         return
 print("NO")
-

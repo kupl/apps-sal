@@ -19,4 +19,3 @@ if dont_end:
     print("NO")
 else:
     print("YES")
-

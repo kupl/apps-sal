@@ -10,7 +10,7 @@ for i in t:
     morti = []
     if r == "YES": break
     for j in i:
-        if j<0 and j not in rik:
+        if j < 0 and j not in rik:
             j = abs(j)
             rik.append(j)
             if j in morti:
@@ -18,7 +18,7 @@ for i in t:
                 break
             else:
                 r = "YES"
-        elif j>0 and j not in morti:
+        elif j > 0 and j not in morti:
             morti.append(j)
             if j in rik:
                 r = "NO"

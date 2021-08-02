@@ -15,5 +15,3 @@ for _ in range(m):
         return
 
 print("NO")
-       
-

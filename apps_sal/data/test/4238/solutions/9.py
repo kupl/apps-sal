@@ -1,9 +1,8 @@
 n = input()
 num = 0
 for i in n:
-  num += int(i)
+    num += int(i)
 if num % 9 == 0:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
-
+    print('No')

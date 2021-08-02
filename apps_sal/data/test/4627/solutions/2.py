@@ -1,8 +1,10 @@
 from math import *
 import math
 
+
 def r1(t):
     return t(input())
+
 
 def r2(t):
     return [t(i) for i in input().split()]
@@ -31,5 +33,3 @@ for zzz in range(r1(int)):
             print("YES")
         else:
             print("NO")
-            
-

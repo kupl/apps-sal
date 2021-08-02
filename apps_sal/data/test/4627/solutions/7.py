@@ -7,8 +7,8 @@ for t in range(T):
     odd = [el for el in A if el % 2 == 1]
     sA = sorted(A)
     v = 0
-    for i in range(len(A)-1):
-        if sA[i+1] - sA[i] == 1:
+    for i in range(len(A) - 1):
+        if sA[i + 1] - sA[i] == 1:
             v += 1
     if len(even) % 2 == 0 and len(odd) % 2 == 0:
         print('YES')
@@ -17,4 +17,3 @@ for t in range(T):
             print('YES')
         else:
             print('NO')
-

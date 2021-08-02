@@ -12,4 +12,3 @@ for g in range(m):
         print("YES")
         return
 print("NO")
-

@@ -18,4 +18,3 @@ for t in range(T):
                 break
 
     print(res)
-

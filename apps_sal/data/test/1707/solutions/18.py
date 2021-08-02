@@ -7,12 +7,11 @@ j = 1
 res = []
 try:
     while True:
-        while ls[j]<=2*ls[i]: j+=1
-        res.append(j-i-1)
-        i+=1
+        while ls[j] <= 2 * ls[i]: j += 1
+        res.append(j - i - 1)
+        i += 1
 except:
-    while i!=n:
-        res.append(j-i-1)
-        i+=1
+    while i != n:
+        res.append(j - i - 1)
+        i += 1
 print(sum(res))
-
