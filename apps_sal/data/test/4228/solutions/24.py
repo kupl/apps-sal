@@ -1,8 +1,8 @@
-N,L = list(map(int,input().split()))
+N, L = list(map(int, input().split()))
 flavor = []
 flavorabs = []
-for i in range(1,N+1):
-    flavor.append(L+i-1)
+for i in range(1, N + 1):
+    flavor.append(L + i - 1)
 S = 0
 
 for i in flavor:
@@ -13,4 +13,3 @@ for i in range(N):
 
 a = min(flavorabs)
 print((S - flavor[flavorabs.index(a)]))
-

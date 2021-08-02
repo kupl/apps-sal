@@ -19,4 +19,3 @@ if calibration > max_capacity:
     print(0)
 else:
     print(max_capacity - calibration + 1)
-

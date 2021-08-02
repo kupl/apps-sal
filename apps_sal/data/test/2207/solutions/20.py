@@ -12,4 +12,3 @@ while i < m:
     else:
         i += 1
 print(ans)
-

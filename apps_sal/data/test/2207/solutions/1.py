@@ -1,6 +1,6 @@
 r, c = list(map(int, input().split()))
 
-for _ in range(r-1):
+for _ in range(r - 1):
     input()
 
 bottom = input()
@@ -20,4 +20,3 @@ for brick in bottom:
             looking_for_new_section = True
 
 print(sections)
-

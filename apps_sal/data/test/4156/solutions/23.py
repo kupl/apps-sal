@@ -14,4 +14,3 @@ if mx_ < 0 or mx_ < mn_ or mn_ > w or mx - mn > w or mx_ - mn_ > w or mn < -w or
     return
 
 print(mx_ - mn_ + 1)
-

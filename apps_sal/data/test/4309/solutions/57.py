@@ -1,6 +1,6 @@
 n = int(input())
 
-if n % 111 ==0:
+if n % 111 == 0:
     print(n)
     return
 

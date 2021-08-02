@@ -10,4 +10,3 @@ for i in range(n):
 
 res = max(0, w - (maxi - mini) + 1)
 print(res)
-

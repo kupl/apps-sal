@@ -9,4 +9,3 @@ for i in range(1, n + 1):
 apples.remove(min_val)
 
 print((sum(apples)))
-

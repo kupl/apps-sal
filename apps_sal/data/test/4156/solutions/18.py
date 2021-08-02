@@ -1,21 +1,25 @@
 from itertools import accumulate
 
+
 def main():
-	n, w = [int(_) for _ in input().split()]
-	a = [int(_) for _ in input().split()]
+    n, w = [int(_) for _ in input().split()]
+    a = [int(_) for _ in input().split()]
 
-	c = list(accumulate(a))
+    c = list(accumulate(a))
 
-	# print(a)
-	# print(c)
-	# print(max(c), min(c))
+    # print(a)
+    # print(c)
+    # print(max(c), min(c))
 
-	ans = min(w, w - max(c)) - max(-min(c), 0) + 1
-	if ans <= 0:
-		print(0)
-	else:
-		print(ans)
+    ans = min(w, w - max(c)) - max(-min(c), 0) + 1
+    if ans <= 0:
+        print(0)
+    else:
+        print(ans)
+
+
 def __starting_point():
-	main()
+    main()
+
 
 __starting_point()

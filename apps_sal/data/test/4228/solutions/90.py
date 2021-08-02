@@ -1,4 +1,4 @@
-N, L = list(map(int,input().split()))
+N, L = list(map(int, input().split()))
 A = []
 for i in range(N):
     x = L + i
@@ -14,6 +14,4 @@ elif L >= 0:
     print(y)
 elif L + N - 1 < 0:
     y -= B[N - 1]
-    print(y) 
-
-
+    print(y)

@@ -1,5 +1,5 @@
-a,b = input().split()
-a,b = int(a),int(b)
+a, b = input().split()
+a, b = int(a), int(b)
 
 """dic = {
 	'0': 6,
@@ -14,7 +14,7 @@ a,b = int(a),int(b)
 	'9': 6
 }"""
 
-lst = list(range(a,b+1))
+lst = list(range(a, b + 1))
 temp = str(lst)
 
 zero = temp.count('0')
@@ -29,11 +29,10 @@ eight = temp.count('8')
 nine = temp.count('9')
 
 
-ans = zero*6 + one*2 + two*5 + three*5 + four*4 + five*5 + six*6 + seven*3 + eight*7 + nine*6
-print (ans)
+ans = zero * 6 + one * 2 + two * 5 + three * 5 + four * 4 + five * 5 + six * 6 + seven * 3 + eight * 7 + nine * 6
+print(ans)
 """for i in range(a,b+1):
 	for j in str(i):
 		sum += dic[j]
 """
 #print (sum)
-

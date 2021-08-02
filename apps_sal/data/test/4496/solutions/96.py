@@ -8,4 +8,3 @@ elif day == 24:
     print('Christmas Eve')
 elif day == 25:
     print('Christmas')
-

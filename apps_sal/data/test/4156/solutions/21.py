@@ -10,4 +10,3 @@ for i in range(n):
     if summa < minin:
         minin = summa
 print(max(0, w - maxim + minin + 1))
-

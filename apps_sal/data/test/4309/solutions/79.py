@@ -4,6 +4,7 @@ def isSame(n):
     else:
         return False
 
+
 n_s = input()
 n_i = int(n_s)
 
@@ -14,4 +15,3 @@ while True:
     else:
         n_i += 1
         n_s = str(n_i)
-

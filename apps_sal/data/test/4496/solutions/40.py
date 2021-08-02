@@ -1,4 +1,4 @@
-s="Christmas"
-d=int(input())
-t=25-d
-print(s+" Eve"*t)
+s = "Christmas"
+d = int(input())
+t = 25 - d
+print(s + " Eve" * t)

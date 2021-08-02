@@ -1,8 +1,8 @@
-n,l = map(int,input().split())
+n, l = map(int, input().split())
 li = []
 ind = 0
-for i in range(1,n+1):
-    li.append(i+l-1)
+for i in range(1, n + 1):
+    li.append(i + l - 1)
 
 mi = abs(li[0])
 for i in li:
@@ -10,4 +10,4 @@ for i in li:
         mi = abs(i)
         ind = li.index(i)
 
-print(sum(li)-li[ind])
+print(sum(li) - li[ind])

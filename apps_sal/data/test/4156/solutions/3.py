@@ -13,4 +13,3 @@ for i in L:
         left += -(n + left)
 
 print(max(right - left + 1, 0))
-

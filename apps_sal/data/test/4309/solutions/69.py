@@ -2,7 +2,7 @@
 
 N = int(input())
 
-zorome_contest = [111*i for i in range(1, 10)]
+zorome_contest = [111 * i for i in range(1, 10)]
 diff_min = 10**10
 ans = 0
 
@@ -11,4 +11,3 @@ for contest in zorome_contest:
         diff_min = contest - N
         ans = contest
 print(ans)
-

@@ -5,7 +5,7 @@ total_ans = 0
 manual = 100000000
 ans = 0
 for i in range(apple_num):
-    table.append(i+1)
+    table.append(i + 1)
 
 for j in range(apple_num):
     table[j] = taste + j

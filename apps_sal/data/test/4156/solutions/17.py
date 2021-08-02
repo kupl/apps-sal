@@ -9,9 +9,7 @@ for i in range(n):
         maxim = x
     if x < min:
         min = x
-if (maxim-min) > l:
+if (maxim - min) > l:
     print(0)
 else:
-    print(l-(maxim-min)+1)
-
-
+    print(l - (maxim - min) + 1)

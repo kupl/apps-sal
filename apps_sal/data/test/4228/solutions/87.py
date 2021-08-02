@@ -6,8 +6,8 @@ L = lst[1]
 
 apple_flavours = []
 
-for i in range(1, N+1):
-    apple_flavours.append(L+i-1)
+for i in range(1, N + 1):
+    apple_flavours.append(L + i - 1)
 
 
 abs_apple_flavours = []

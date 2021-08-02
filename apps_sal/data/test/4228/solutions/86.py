@@ -4,8 +4,8 @@ def ApplePie():
     L = int(L)
     flavors = []
     for i in range(N):
-        flavors.append(L+i)
-    
+        flavors.append(L + i)
+
     if 0 in flavors:
         flavors.remove(0)
         result = 0
@@ -27,5 +27,6 @@ def ApplePie():
             result = result + i
         print(result)
         return
-        
+
+
 ApplePie()

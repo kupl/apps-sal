@@ -20,4 +20,3 @@ if w - d + 1 > 0:
     print(w - d + 1)
 else:
     print(0)
-

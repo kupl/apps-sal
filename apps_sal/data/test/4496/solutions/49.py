@@ -2,9 +2,13 @@ import math
 import collections
 from itertools import product
 
-ii = lambda : int(input())
-mi = lambda : map(int,input().split())
-li = lambda : list(map(int,input().split()))
+
+def ii(): return int(input())
+
+
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 d = ii()
 if d == 25:

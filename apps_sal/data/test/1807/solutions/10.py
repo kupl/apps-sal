@@ -11,5 +11,5 @@ six = temp.count('6')
 seven = temp.count('7')
 eight = temp.count('8')
 nine = temp.count('9')
-ans = zero*6 + one*2 + two*5 + three*5 + four*4 + five*5 + six*6 + seven*3 + eight*7 + nine*6
-print (ans)
+ans = zero * 6 + one * 2 + two * 5 + three * 5 + four * 4 + five * 5 + six * 6 + seven * 3 + eight * 7 + nine * 6
+print(ans)

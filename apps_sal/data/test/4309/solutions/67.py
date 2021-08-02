@@ -5,5 +5,5 @@ for i in range(110):
         break
     else:
         n += 1
-        
+
 print(n)

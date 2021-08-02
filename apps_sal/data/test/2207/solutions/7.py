@@ -24,5 +24,3 @@ while left <= c - 1:
 
 
 print(answer)
-
-
