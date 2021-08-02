@@ -1,3 +1,7 @@
+import heapq
+import sys
+
+
 class FTree:
     def __init__(self, f):
         self.n = len(f)
@@ -40,6 +44,7 @@ class FTree:
 
         return hi
 
+
 class RUPQ:
     def __init__(self, n):
         self.ftree = FTree([0] * n)
@@ -50,6 +55,7 @@ class RUPQ:
     def update(self, i, j, v):
         self.ftree.update(i, v)
         self.ftree.update(j + 1, -v)
+
 
 class RURQ:
     def __init__(self, n):
@@ -90,7 +96,6 @@ class RURQ:
 # print(r.query(10) == 0)
 
 
-import sys, heapq
 n, k = [int(i) for i in sys.stdin.readline().split()]
 
 mmn = 1
@@ -112,24 +117,17 @@ bds.sort()
 bind = 0
 heap = []
 ans = []
-for i in range(1, mmx+1):
+for i in range(1, mmx + 1):
     while bind < n and bds[bind][0] == i:
-        heapq.heappush(heap, (-1*bds[bind][1], bds[bind][2]))
+        heapq.heappush(heap, (-1 * bds[bind][1], bds[bind][2]))
         bind += 1
 
     while ftree.query(i) > k:
-        bd, bnd = heapq.heappop(heap) 
+        bd, bnd = heapq.heappop(heap)
         ans.append(bnd)
-        ftree.update(i,-1*bd, -1)
+        ftree.update(i, -1 * bd, -1)
 print(len(ans))
 print(*ans)
-
-    
-
-
-
-
-
 
 
 # r = RURQ(10)
@@ -155,4 +153,3 @@ print(*ans)
 #             f.u(int(a[1]) + 1, int(a[2]))
 #
 # main()
-

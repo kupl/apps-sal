@@ -5,6 +5,7 @@ Author  : chaotic_iak
 Language: Python 3.3.4
 """
 
+
 def read(mode=2):
     # 0: String
     # 1: List of strings
@@ -17,16 +18,18 @@ def read(mode=2):
     if mode == 2:
         return [int(x) for x in inputs.split()]
 
+
 def write(s="\n"):
     if isinstance(s, list): s = " ".join(s)
     s = str(s)
     print(s, end="")
 
-################################################### SOLUTION
-n,d = read()
+
+# SOLUTION
+n, d = read()
 t = read()
-s = sum(t) + 10*n - 10
+s = sum(t) + 10 * n - 10
 if s > d:
     print(-1)
 else:
-    print((d-sum(t))//5)
+    print((d - sum(t)) // 5)

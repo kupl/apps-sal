@@ -12,8 +12,8 @@ while len(ar) < n and i < len(s):
     while i < len(s) and s[i] in s1:
         ar[-1] += s[i]
         i += 1
-    
-    
+
+
 if i < len(s):
     ar[-1] += s[i:]
 if len(ar) < n:

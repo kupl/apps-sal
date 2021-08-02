@@ -26,11 +26,9 @@ def solve():
             start = pos[i + 1]
         print(s[start:])
 
+
 def __starting_point():
     solve()
-
-
-
 
 
 __starting_point()

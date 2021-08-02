@@ -23,4 +23,3 @@ else:
     starts.append(len(s))
     for i in range(len(starts) - 1):
         print(s[starts[i]:starts[i + 1]])
-

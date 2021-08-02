@@ -5,7 +5,7 @@ dp[r][s][p] = 1
 
 for i in range(r, -1, -1):
     for j in range(s, -1, -1):
-        for k in range(p,-1, -1):
+        for k in range(p, -1, -1):
 
             dnr = i * j + j * k + i * k
 
@@ -25,7 +25,3 @@ for i in range(105):
 
 
 print(roc, sci, pap)
-            
-
-            
-

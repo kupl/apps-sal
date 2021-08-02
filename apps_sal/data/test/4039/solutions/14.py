@@ -19,7 +19,7 @@ def main():
             ok = False
             break
     if ok:
-        for p in sorted(negative, key=lambda x: -x[0]-x[1]):
+        for p in sorted(negative, key=lambda x: -x[0] - x[1]):
             if p[0] <= r:
                 r += p[1]
                 if r < 0:
@@ -34,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

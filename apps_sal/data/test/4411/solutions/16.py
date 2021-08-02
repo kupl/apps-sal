@@ -3,11 +3,11 @@ N, K = [int(x) for x in input().split()]
 h = [[] for i in range(200000)]
 for i in range(N):
     l, r = [int(x) for x in input().split()]
-    h[l-1].append([-(r-1), i+1])
+    h[l - 1].append([-(r - 1), i + 1])
 g = []
 t = []
 heapq.heapify(t)
-hist = [0]*200000
+hist = [0] * 200000
 exited = 0
 for l in range(200000):
     for ri in h[l]:

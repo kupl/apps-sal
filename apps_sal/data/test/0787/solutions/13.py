@@ -16,10 +16,10 @@ if count >= n:
         if d.get(a[i]) == None:
             d[a[i]] = 1
             if a[j:i] != '':
-                count += 1 
+                count += 1
                 print(a[j:i])
                 j = i
         i += 1
-    print(a[j:])            
+    print(a[j:])
 else:
     print('NO')

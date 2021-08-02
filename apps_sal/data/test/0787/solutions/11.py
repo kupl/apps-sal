@@ -20,8 +20,7 @@ else:
         vals.append(s.index(l[i]))
 
 for i in range(n):
-    if i == n-1:
-        print(s[vals[len(vals)-1]:len(s)])
+    if i == n - 1:
+        print(s[vals[len(vals) - 1]:len(s)])
     else:
-        print(s[vals[i]:vals[i+1]])
-
+        print(s[vals[i]:vals[i + 1]])

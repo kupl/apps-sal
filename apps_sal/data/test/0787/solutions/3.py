@@ -1,5 +1,7 @@
 import time
 import string
+
+
 class Profiler(object):
     def __enter__(self):
         self._startTime = time.time()

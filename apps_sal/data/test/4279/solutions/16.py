@@ -34,4 +34,3 @@ while k_i != len(k_list):
     else:
         d_i += 1
 print('\n'.join(res))
-

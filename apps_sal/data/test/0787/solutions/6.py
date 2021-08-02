@@ -7,11 +7,11 @@ str = input()
 dic = {}
 for i in str:
     if i not in dic:
-        dic[i]  = 1
+        dic[i] = 1
     else:
         dic[i] += 1
 
-if ( k > len(dic)):
+if (k > len(dic)):
     print("NO")
 else:
     print("YES", end='')
@@ -28,5 +28,3 @@ else:
             print(i, end='')
 
     print()
-
-

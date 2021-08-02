@@ -24,7 +24,7 @@ res = []
 res_len = len(res_ind)
 for i in range(res_len - 1):
     cur_ind = res_ind[i]
-    next_ind = res_ind[i+1]
+    next_ind = res_ind[i + 1]
     if k > 1:
         res.append(string[cur_ind:next_ind])
         k -= 1
@@ -37,4 +37,3 @@ if k == 1:
 print("YES")
 for el in res:
     print(el)
-
