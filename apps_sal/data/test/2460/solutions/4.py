@@ -4,7 +4,7 @@ def solve(n, m, x, t):
     ans = [0] * m
     cr = 0
     cd = 0
-    for i in range(n+m):
+    for i in range(n + m):
         if t[i]:
             d[cd] = x[i]
             cd += 1
@@ -12,8 +12,8 @@ def solve(n, m, x, t):
             r[cr] = x[i]
             cr += 1
     cn = 0
-    for i in range(m-1):
-        mid = (d[i] + d[i+1]) // 2
+    for i in range(m - 1):
+        mid = (d[i] + d[i + 1]) // 2
         while cn < n and r[cn] <= mid:
             cn += 1
             ans[i] += 1
@@ -29,4 +29,3 @@ def main():
 
 
 main()
-

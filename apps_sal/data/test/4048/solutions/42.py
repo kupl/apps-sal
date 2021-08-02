@@ -6,4 +6,3 @@ while n % i > 0:
 j = n // i
 ans = i + j - 2
 print(ans)
-

@@ -1,5 +1,5 @@
 N = int(input())
-x = int(N**0.5)+1
+x = int(N**0.5) + 1
 ans_1 = N
 
 for i in range(x):
@@ -9,6 +9,5 @@ for i in range(x):
     else:
         x -= 1
 
-ans_2 = N//ans_1
+ans_2 = N // ans_1
 print((ans_1 + ans_2 - 2))
-

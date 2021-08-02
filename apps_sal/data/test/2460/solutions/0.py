@@ -39,4 +39,4 @@ for i in arc:
     res[nt] += 1
 
 for i in res:
-    print(i,end= ' ')
+    print(i, end=' ')

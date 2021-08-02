@@ -7,4 +7,3 @@ while i < n:
     print(s[i], end='')
     i += to_add
     to_add += 1
-

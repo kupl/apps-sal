@@ -30,4 +30,3 @@ for house, is_rider in zip(houses, is_rider):
 result[-1] += len(current_citizens)
 
 print(' '.join(map(str, result)))
-

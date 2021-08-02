@@ -8,10 +8,8 @@ for test in range(t):
     ind = 0
     cur = 1
     ans = []
-    while ind<n:
+    while ind < n:
         ans.append(s[ind])
-        ind+=cur
-        cur = cur+1
-    print(*ans,sep="")
-
-
+        ind += cur
+        cur = cur + 1
+    print(*ans, sep="")

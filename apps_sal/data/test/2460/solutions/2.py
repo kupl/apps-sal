@@ -29,4 +29,3 @@ for i in range(n + m):
     else:
         left = i
 print(*result)
-

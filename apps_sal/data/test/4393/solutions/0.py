@@ -9,4 +9,3 @@ while i < n:
     d += 1
 
 print(''.join(t))
-

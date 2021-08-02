@@ -19,18 +19,18 @@ while a:
     for i in sg:
         if csum < n:
             if i > 0:
-                v = min(n-csum, n-1)
+                v = min(n - csum, n - 1)
                 csum += v
-                rez.append(1+v)
+                rez.append(1 + v)
             else:
                 rez.append(-1)
         else:
             if i > 0:
                 rez.append(1)
             else:
-                v = min(csum - n, n-1)
+                v = min(csum - n, n - 1)
                 csum -= v
-                rez.append(-1-v)
+                rez.append(-1 - v)
     if csum == n:
         print("Possible")
         ans = str(rez[0])
@@ -43,4 +43,3 @@ while a:
         print("Impossible")
     break
     a = input()
-

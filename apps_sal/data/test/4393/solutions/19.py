@@ -11,6 +11,3 @@ while i < len(enc):
     i += k
 
 print(dec)
-
-
-

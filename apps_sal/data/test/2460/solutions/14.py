@@ -24,7 +24,7 @@ def main():
     for i in range(len(location)):
         if not flag[i]:
             lo = bs(location[i])
-            if lo != 0 and drivers[lo] - location[i] >= location[i] - drivers[lo-1]:
+            if lo != 0 and drivers[lo] - location[i] >= location[i] - drivers[lo - 1]:
                 res[lo - 1] += 1
             else:
                 res[lo] += 1
@@ -33,4 +33,3 @@ def main():
 
 
 main()
-
