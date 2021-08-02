@@ -1,7 +1,7 @@
 n = int(input())
 
 while(n):
-    
+
     S = input()
     S += "_"
     lastChar = ""
@@ -15,11 +15,11 @@ while(n):
             cur = 1
         else:
             cur += 1
-    
+
     x = list(x)
     x.sort()
     for c in x:
         print(c, end='')
     print()
-    
+
     n -= 1

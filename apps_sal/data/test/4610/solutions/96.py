@@ -11,7 +11,7 @@ def Input():
 
 def main():
     n, k = Input()
-    a = sorted(Counter(Input()).items(), key=lambda x:x[1], reverse=True)
+    a = sorted(Counter(Input()).items(), key=lambda x: x[1], reverse=True)
     temp = 0
     for i in range(min(k, len(a))):
         temp += a[i][1]

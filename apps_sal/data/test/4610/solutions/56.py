@@ -9,8 +9,7 @@ for i in range(N):
 A_dict_len = len(list(A_dict.keys()))
 ans = 0
 A_dict_sorted = sorted(list(A_dict.items()), key=lambda a: a[1])
-#print(A_dict_sorted)
+# print(A_dict_sorted)
 for i in range(max(0, A_dict_len - K)):
     ans += A_dict_sorted[i][1]
 print(ans)
-

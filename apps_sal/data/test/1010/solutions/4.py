@@ -10,7 +10,7 @@ while choco[i] == 0:
 
 while True:
     assert(choco[i] == 1)
-    j = i+1
+    j = i + 1
     while j < N and choco[j] == 0:
         j += 1
     if j == N:
@@ -19,4 +19,3 @@ while True:
         ans *= j - i
     i = j
 print(ans)
-

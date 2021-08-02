@@ -23,7 +23,7 @@ now = ans
 sm0 = 0
 sm2 = r[2]
 for i in range(1, n + 1):
-    sm0 +=(mp[i] == 0)
+    sm0 += (mp[i] == 0)
     sm2 -= (mp[i] == 2)
 
     if mp[i] == 2:

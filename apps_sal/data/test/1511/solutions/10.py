@@ -9,9 +9,9 @@ table = list(zip(*table))
 
 locked_cells = set()
 locked_procs = set()
-lock_time = [0]*n
+lock_time = [0] * n
 for t, ys in enumerate(table):
-    cnt = [0]*(k+1)
+    cnt = [0] * (k + 1)
     for i, c in enumerate(ys):
         if i not in locked_procs:
             cnt[c] += 1
@@ -21,8 +21,7 @@ for t, ys in enumerate(table):
     for i, c in enumerate(ys):
         if c in locked_cells and i not in locked_procs:
             locked_procs.add(i)
-            lock_time[i] = t+1
+            lock_time[i] = t + 1
 
 for t in lock_time:
     print(t)
-

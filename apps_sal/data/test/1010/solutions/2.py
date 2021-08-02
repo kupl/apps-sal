@@ -14,4 +14,3 @@ if l.count(1) == 0:
     print(0)
 else:
     print(ans)
-

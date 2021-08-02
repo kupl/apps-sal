@@ -13,8 +13,8 @@ def main():
     if cnt <= k:
         print(0)
     else:
-        indic_sort = sorted(indic.items(), key=lambda x:x[1])
-        #print(indic_sort)
+        indic_sort = sorted(indic.items(), key=lambda x: x[1])
+        # print(indic_sort)
         sa = cnt - k
         tmp = 0
         ans = 0
@@ -26,7 +26,8 @@ def main():
         print(ans)
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

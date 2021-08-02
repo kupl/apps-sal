@@ -1,6 +1,6 @@
 import collections
 
-n, k = map(int,input().split())
+n, k = map(int, input().split())
 a = list(map(int, input().split()))
 
 c = collections.Counter(a)
@@ -12,5 +12,5 @@ for key, val in sorted(c.items(), key=lambda x: -x[1]):
     i += 1
     if i >= k:
         break
-        
+
 print(n - cnt)

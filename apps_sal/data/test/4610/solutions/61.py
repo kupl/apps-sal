@@ -13,8 +13,8 @@ for val in A:
 ans = 0
 diff = len(set(A)) - K
 if diff > 0:
-    count_sorted = sorted(count.items(), key=lambda x:x[1])
-    for k,v in count_sorted:
+    count_sorted = sorted(count.items(), key=lambda x: x[1])
+    for k, v in count_sorted:
         ans += v
         diff -= 1
         if diff == 0:

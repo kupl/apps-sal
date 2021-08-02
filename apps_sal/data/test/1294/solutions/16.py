@@ -19,4 +19,3 @@ for i in range(q):
         if len(j) % 2:
             answer.add(j[0])
     print(''.join(sorted(answer)))
-

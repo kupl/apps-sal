@@ -13,5 +13,4 @@ for i in range(m):
     for j in range(n):
         if (cycles[i][j]) and (not active_cores[j]) and (len(temp[cycles[i][j]]) > 1 or active_memory[cycles[i][j]]):
             active_cores[j] = active_memory[cycles[i][j]] = i + 1
-print(*active_cores, sep = '\n')
-
+print(*active_cores, sep='\n')

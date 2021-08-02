@@ -15,4 +15,3 @@ for t in range(m):
 res = [i + 1 for i in res]
 for i in res:
     print(i)
-

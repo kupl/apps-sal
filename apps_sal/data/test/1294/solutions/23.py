@@ -18,4 +18,3 @@ for i in range(n):
     for f in ans:
         print(f, end='')
     print()
-

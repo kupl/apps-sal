@@ -23,7 +23,4 @@ for j in range(m):
 print(*v, sep='\n')
 
 
-
-
-
 # Made By Mostafa_Khaled

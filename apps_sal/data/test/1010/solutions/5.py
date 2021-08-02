@@ -13,4 +13,3 @@ for i in b:
     ans *= (i + 1)
 if cur == -1: ans = 0
 print(ans)
-

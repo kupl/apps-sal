@@ -11,4 +11,3 @@ for _ in range(num_inputs):
         if s in this_input:
             working_letters.append(s)
     print("".join(sorted(working_letters)))
-

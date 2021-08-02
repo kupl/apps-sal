@@ -21,4 +21,3 @@ for ball_count, ball_number in swap_balls:
         size -= 1
 
 print(count)
-

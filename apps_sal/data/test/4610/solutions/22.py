@@ -1,11 +1,11 @@
 from collections import Counter
-a,b=map(int, input().split())
+a, b = map(int, input().split())
 c = Counter(list(map(int, input().split())))
 cnt = 0
 l = []
 m = []
 
-for x,y in c.items():
+for x, y in c.items():
     l += [y]
     m += [x]
 
@@ -14,6 +14,6 @@ L = sorted(l)
 if M <= b:
     print(0)
 if M > b:
-    for i in range(M-b):
+    for i in range(M - b):
         cnt += L[i]
     print(cnt)

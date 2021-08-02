@@ -5,7 +5,7 @@ if nuts.count(1):
     ans = 1
 else:
     ans = 0
-    
+
 for i in nuts:
     if i == 1:
         if label:

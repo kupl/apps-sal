@@ -22,7 +22,7 @@ dp = [[inf] * -~n for _ in range(3)]
 for i in range(3):
     dp[i][0] = 0
     for j in range(1, n + 1):
-        dp[i][j] = dp[i][j-1] + (mp[j] != i)
+        dp[i][j] = dp[i][j - 1] + (mp[j] != i)
         if i:
             dp[i][j] = min(dp[i - 1][j], dp[i][j])
 

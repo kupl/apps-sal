@@ -4,8 +4,8 @@
 import time
 
 #   = input()
-n   = int(input())
-a   = [int(i) for i in input().split()]
+n = int(input())
+a = [int(i) for i in input().split()]
 
 start = time.time()
 
@@ -18,18 +18,17 @@ else:
     ans = 1
 
     l = 0
-    while( a[l] != 1):
+    while(a[l] != 1):
         l += 1
 
     r = l
 
-    while(r < n-1):
+    while(r < n - 1):
         r += 1
         if a[r] == 1:
-            ans *= (r-l)
+            ans *= (r - l)
             l = r
 
 print(ans)
 finish = time.time()
 #print(finish - start)
-

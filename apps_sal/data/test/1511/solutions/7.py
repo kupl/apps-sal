@@ -9,7 +9,7 @@ for i in range(m):
     for j in range(1, n + 1):
         if stat[j]:
             current_core = inf[a[j - 1][i]]
-            if current_core == 0 and a[j - 1][i]  != 0:
+            if current_core == 0 and a[j - 1][i] != 0:
                 inf[a[j - 1][i]] = j
             elif current_core == -1:
                 stat[j], time[j] = False, i + 1

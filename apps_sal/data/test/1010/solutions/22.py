@@ -15,6 +15,3 @@ if isone:
     print(ans)
 else:
     print(0)
-    
-    
-

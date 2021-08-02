@@ -14,4 +14,3 @@ for nut in isnut:
     else:
         stack += 1
 print(ans if hasnut else 0)
-

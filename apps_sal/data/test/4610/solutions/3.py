@@ -8,4 +8,3 @@ if len(aa) <= k:
     print((0))
 else:
     print((sum([x[1] for x in aa[:len(aa) - k]])))
-
