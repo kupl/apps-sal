@@ -11,5 +11,3 @@ for _ in range(t):
         if answer == 1:
             break
     print(answer)
-
-

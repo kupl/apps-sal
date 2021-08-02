@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
     x, y, p, q = map(int, input().split())
-    
+
     if p == q:
         if x != y:
             print(-1)
@@ -20,6 +20,6 @@ for i in range(t):
         else:
             print(-1)
         continue
-    
-    k = max((y - x + q - p - 1) // (q - p), (x + p - 1) // p) 
+
+    k = max((y - x + q - p - 1) // (q - p), (x + p - 1) // p)
     print(k * q - y)

@@ -5,8 +5,11 @@ def base3(n):
         array.append(n % 3)
         n //= 3
     return array
+
+
 def good(n):
     return 2 not in base3(n)
+
 
 for _ in range(int(input())):
     n = int(input())

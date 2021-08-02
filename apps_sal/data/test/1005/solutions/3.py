@@ -6,4 +6,3 @@ for _ in range(int(input())):
     for i in range(n - d + 1):
         best = min(best, len(set(data[i:i + d])))
     print(best)
-

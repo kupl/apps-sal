@@ -8,6 +8,7 @@ def gcd(a, b):
     x = y1 - (b // a) * x1;
     return g, x, y;
 
+
 def comp(da, db, t, a, b):
     ra = a + da * t
     rb = b + db * t
@@ -17,6 +18,7 @@ def comp(da, db, t, a, b):
     # assert(rb.v0 >= 0);
     # assert(rb.v1 >= 0);
     return ra + rb
+
 
 def solve():
     x, y, p, q = list(map(int, input().split()))
@@ -59,6 +61,7 @@ def main():
     t = int(input())
     for i in range(t):
         solve()
+
 
 def __starting_point():
     main()

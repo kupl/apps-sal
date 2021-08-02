@@ -7,5 +7,6 @@ def main():
                 print("#Color")
                 return
     print("#Black&White")
-        
+
+
 main()

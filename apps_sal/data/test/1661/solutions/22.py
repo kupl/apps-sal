@@ -9,4 +9,3 @@ for i in range(n):
     if st >= m:
         break
 print(ans)
-

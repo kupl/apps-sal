@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def powerOfTwo(arr):
     p2 = set()
     for i in range(32):
@@ -47,6 +48,9 @@ def main():
     arr = [int(x) for x in input().split()]
     print(powerOfTwo(arr))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

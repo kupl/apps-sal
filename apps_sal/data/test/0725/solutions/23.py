@@ -1,9 +1,6 @@
 # coding: utf-8
 
 
-
-
-
 import math
 import string
 import itertools
@@ -14,6 +11,7 @@ import re
 import array
 import bisect
 
+
 def main():
     n, m = list(map(int, input().split(" ")))
     for i in range(n):
@@ -23,5 +21,5 @@ def main():
             return
     print("#Black&White")
 
-main()
 
+main()

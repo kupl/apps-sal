@@ -10,5 +10,3 @@ for k in c:
         ans += 1
         a.pop(0)
 print(ans)
-
-

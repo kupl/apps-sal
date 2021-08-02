@@ -8,10 +8,11 @@ input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
 sys.stdout = _OUTPUT_BUFFER
 
+
 @atexit.register
 def write():
     sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
-    
+
 
 def main():
     n = int(input())
@@ -20,11 +21,10 @@ def main():
     for x in ss:
         s.add(''.join(sorted(list(set(x)))))
     print(len(s))
-        
-            
 
-    
+
 def __starting_point():
     main()
+
 
 __starting_point()

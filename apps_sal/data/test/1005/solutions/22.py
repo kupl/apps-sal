@@ -10,15 +10,14 @@ for i in range(t):
         if b[a[i]] == 0:
             count += 1
         b[a[i]] += 1
-    
+
     ans = count
     for i in range(n - d):
         if b[a[i]] == 1:
-            count -=1
+            count -= 1
         b[a[i]] -= 1
         if b[a[i + d]] == 0:
             count += 1
         b[a[i + d]] += 1
         ans = min(ans, count)
     print(ans)
-

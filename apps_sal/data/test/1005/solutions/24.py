@@ -8,4 +8,3 @@ for _ in range(t):
         var.append(set(a[g:g + d]))
     ans.append(min([len(x) for x in var]))
 print('\n'.join([str(x) for x in ans]))
-

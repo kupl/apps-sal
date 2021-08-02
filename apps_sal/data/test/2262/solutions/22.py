@@ -7,4 +7,3 @@ for x in input().split():
     s.add(tuple(x))
 
 print(len(s))
-

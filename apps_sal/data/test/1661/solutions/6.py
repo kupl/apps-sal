@@ -8,4 +8,3 @@ for i in c:
         a.pop(0)
 
 print(count)
-

@@ -5,8 +5,10 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 def works(a, b, c, d, x):
     return b <= d * x and a <= c * x and d * x - b >= c * x - a
+
 
 def solve():
     a, b, c, d = list(map(int, input().rstrip().split()))
@@ -29,9 +31,11 @@ def solve():
             low = mid
     print(d * high - b)
 
+
 def __starting_point():
     t = int(input())
     for _ in range(t):
         solve()
+
 
 __starting_point()

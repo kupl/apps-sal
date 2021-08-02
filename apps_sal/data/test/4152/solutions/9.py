@@ -14,10 +14,10 @@ for i in elems:
 
 for i in elems:
     for j in powers:
-        dif = j-i
+        dif = j - i
         if dif in list(counter.keys()):
             if dif == i:
-                if counter[dif]>1:
+                if counter[dif] > 1:
                     ans -= 1
                     break
             else:
@@ -25,4 +25,3 @@ for i in elems:
                 break
 
 print(ans)
-

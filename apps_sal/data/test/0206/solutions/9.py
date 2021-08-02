@@ -1,6 +1,6 @@
 import math
 M, A, B = map(int, input().split())
-bound = [10**9 + 7]*(A + B)
+bound = [10**9 + 7] * (A + B)
 l, r = 0, 0
 while True:
     bound[l] = r

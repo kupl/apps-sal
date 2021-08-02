@@ -21,6 +21,7 @@ def solve(x, y, p, q):
         return -1
     return R * q - y
 
+
 read = lambda: map(int, input().split())
 t = int(input())
 for i in range(t):

@@ -15,4 +15,3 @@ for _ in range(int(input())):
         g1 = (x - p * a + p - 1) // p
         g2 = ceil((x - r - p * a) / (p - q))
         print(max(g1, g2) * q - r)
-

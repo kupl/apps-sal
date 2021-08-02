@@ -10,4 +10,3 @@ for _ in range(n):
             return
 
 print("#Black&White")
-

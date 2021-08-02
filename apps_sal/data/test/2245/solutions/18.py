@@ -14,4 +14,3 @@ for _ in range(T):
         print('Alice')
     else:
         print('Bob')
-

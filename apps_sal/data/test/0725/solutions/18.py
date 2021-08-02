@@ -15,4 +15,3 @@ if flg:
     print("#Color")
 else:
     print("#Black&White")
-

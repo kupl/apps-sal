@@ -29,4 +29,3 @@ for i in ls:
     dic[i] += 1
 
 print(cnt)
-

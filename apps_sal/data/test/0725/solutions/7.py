@@ -1,4 +1,4 @@
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 color = False
 for _ in range(n):
     l = input()
@@ -6,4 +6,3 @@ for _ in range(n):
         if c in l:
             color = True
 print('#Color' if color else '#Black&White')
-

@@ -2,7 +2,7 @@ t = int(input())
 
 for i in range(t):
     x, y, p, q = [int(i) for i in input().split()]
-    
+
     if p == 0:
         if x == 0:
             print(0)
@@ -28,4 +28,3 @@ for i in range(t):
         print(-1)
     else:
         print(q * l - y)
-

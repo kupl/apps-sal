@@ -6,22 +6,22 @@ cnts = {}
 s = set()
 clear = set()
 for x in a:
-  if x not in cnts:
-    cnts[x] = 1
-    s.add(x)
-  else:
-    cnts[x] += 1
+    if x not in cnts:
+        cnts[x] = 1
+        s.add(x)
+    else:
+        cnts[x] += 1
 for x in cnts:
-  for p in pwrs:
-    if p-x in s:
-      if p-x!=x:
-        clear.add(x)
-        clear.add(p-x)
-      elif cnts[x]>1:
-        clear.add(x)
+    for p in pwrs:
+        if p - x in s:
+            if p - x != x:
+                clear.add(x)
+                clear.add(p - x)
+            elif cnts[x] > 1:
+                clear.add(x)
 ans = 0
 for x in s:
-  if x in clear:
-    continue
-  ans += cnts[x]
+    if x in clear:
+        continue
+    ans += cnts[x]
 print(ans)

@@ -13,4 +13,3 @@ for ci in c:
         break
 
 print(ans)
-

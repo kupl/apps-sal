@@ -12,4 +12,3 @@ for i in range(n):
             fout.write('#Color')
             return
 fout.write('#Black&White')
-

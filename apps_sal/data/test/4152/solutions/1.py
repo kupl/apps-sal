@@ -30,4 +30,3 @@ for i, c in x:
         count += c
 
 print(count)
-

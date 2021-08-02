@@ -8,9 +8,9 @@ for test in range(t):
     ans = 0
     index = 0
     for i in a:
-        if index>=m:
+        if index >= m:
             break
-        if b[index]>=i:
-            ans+=1
-            index+=1
+        if b[index] >= i:
+            ans += 1
+            index += 1
     print(ans)
