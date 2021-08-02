@@ -9,6 +9,7 @@ Codeforces
 import sys
 import collections
 
+
 def solve(xs):
     d = collections.defaultdict(int)
     already_in = collections.defaultdict(bool)
@@ -33,11 +34,10 @@ def solve(xs):
     return max(history)
 
 
-
 # def print_stderr(*args, **kwargs):
 #     print(*args, file=sys.stderr, **kwargs)
 
- 
+
 def main():
     n = int(input())
     xs = [input().strip().split() for _ in range(n)]
@@ -47,5 +47,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

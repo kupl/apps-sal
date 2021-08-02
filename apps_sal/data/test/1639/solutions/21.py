@@ -1,4 +1,4 @@
-#In the name of Allah
+# In the name of Allah
 
 from sys import stdin, stdout
 input = stdin.readline
@@ -10,11 +10,10 @@ ans = 1
 t = 1
 
 for i in range(1, n + 1):
-        if a[i] < a[i - 1]:
-                ans = max(ans, t)
-                t = 1
-        else:
-                t += 1
+    if a[i] < a[i - 1]:
+        ans = max(ans, t)
+        t = 1
+    else:
+        t += 1
 
 stdout.write(str(max(ans, t)))
-

@@ -12,4 +12,3 @@ for i in range(n):
         cur = a[i]
         cur_len = 1
 print(max_len)
-

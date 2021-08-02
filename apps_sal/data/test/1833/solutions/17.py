@@ -36,4 +36,3 @@ for a in A:
                 ways[x] -= MOD
 
 print((sum(ways) - 1) % MOD)
-

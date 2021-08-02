@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 t = 1
 maxt = 0
 for i in range(1, len(a)):
-    if a[i] >= a[i-1]:
+    if a[i] >= a[i - 1]:
         t += 1
     else:
         maxt = max(t, maxt)

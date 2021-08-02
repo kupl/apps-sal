@@ -10,4 +10,3 @@ for i in al:
         t = 1
     last = i
 print(max(t, res))
-

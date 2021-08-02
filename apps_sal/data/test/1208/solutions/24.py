@@ -12,4 +12,3 @@ for i in range(n):
         else:
             nowin.remove(name)
 print(res)
-

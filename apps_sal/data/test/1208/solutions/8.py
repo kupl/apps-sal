@@ -15,5 +15,4 @@ for e in range(n):
         else:
             a += 1
     a = max(a, z)
-print(a)    
-
+print(a)

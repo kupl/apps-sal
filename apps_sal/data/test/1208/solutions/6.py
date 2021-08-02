@@ -16,4 +16,3 @@ for n in range(N):
     if number > maxnum:
         maxnum = number
 print(maxnum)
-

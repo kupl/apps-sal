@@ -11,12 +11,12 @@ for tc in range(test_cases):
     count = 0;
     while(num1 != 0 and num2 != 0):
         if(num1 > num2):
-            count += int(num1/num2);
+            count += int(num1 / num2);
             num1 %= num2;
         else:
-            count += int(num2/num1);
+            count += int(num2 / num1);
             num2 %= num1;
-    
+
     sys.stdout.write(str(count));
-    if(tc < test_cases-1):
+    if(tc < test_cases - 1):
         sys.stdout.write("\n");

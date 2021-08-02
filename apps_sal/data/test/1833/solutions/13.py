@@ -33,11 +33,11 @@ def input(): return sys.stdin.readline()
 def factors(n):
     curr = []
     j = 1
-    while j*j <= n:
+    while j * j <= n:
         if n % j == 0:
             curr.append(j)
-            if j != n//j:
-                curr.append(n//j)
+            if j != n // j:
+                curr.append(n // j)
         j += 1
     curr.sort(reverse=True)
     return curr
@@ -52,7 +52,7 @@ def main():
         for j in range(len(x)):
             if x[j] == 1:
                 continue
-            dp[x[j]] += dp[x[j]-1]
+            dp[x[j]] += dp[x[j] - 1]
             dp[x[j]] %= mod
         dp[1] += 1
     ans = 0
@@ -64,5 +64,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

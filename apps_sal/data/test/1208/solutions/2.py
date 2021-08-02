@@ -15,4 +15,3 @@ for i in range(n):
         except KeyError:
             mn -= 1
 print(mx - mn)
-

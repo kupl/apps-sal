@@ -12,4 +12,3 @@ for x in a[1:]:
     result = max(result, cur)
     prev = x
 print(result)
-

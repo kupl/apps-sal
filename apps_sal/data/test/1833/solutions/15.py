@@ -2,7 +2,7 @@ n = int(input())
 a = list(map(int, input().split()))
 N = 1000005
 MOD = 10 ** 9 + 7
-dp =[0] * N
+dp = [0] * N
 dp[0] = 0
 for i in range(n):
     cur = []
@@ -25,4 +25,3 @@ for i in dp:
     ans += i
     ans %= MOD
 print(ans)
-

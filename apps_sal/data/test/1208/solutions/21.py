@@ -17,4 +17,3 @@ for i in range(0, n):
         minCapacity = capacity;
 
 print((str(minCapacity)));
-

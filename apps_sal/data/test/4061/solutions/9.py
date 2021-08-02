@@ -29,4 +29,3 @@ for i in range(m - 1):
     res = max(res, (b[i + 1] - 1) - (a[i] + 1) + 1)
 
 print(res)
-
