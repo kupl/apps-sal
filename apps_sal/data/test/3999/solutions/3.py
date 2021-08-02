@@ -2,11 +2,13 @@ import sys
 from collections import Counter
 readline = sys.stdin.readline
 
+
 def compress(L):
     L2 = list(set(L))
     L2.sort()
-    C = {v : k for k, v in enumerate(L2, 1)}
+    C = {v: k for k, v in enumerate(L2, 1)}
     return L2, C
+
 
 def order(a, b, c, d):
     if a == b == c == d:
@@ -17,17 +19,16 @@ def order(a, b, c, d):
 
 
 limit = 5
-calc = [[None]*limit for _ in range(limit*400)]
-for i in range(limit*400):
+calc = [[None] * limit for _ in range(limit * 400)]
+for i in range(limit * 400):
     calc[i][1] = i
     for j in range(2, limit):
-        calc[i][j] = calc[i][j-1]*(i-j+1)
+        calc[i][j] = calc[i][j - 1] * (i - j + 1)
 pp = [[pow(i, j) for j in range(10)] for i in range(10)]
 
 N = int(readline())
 C = [tuple(map(int, readline().split())) for _ in range(N)]
 D = Counter()
-
 
 
 Rot = []
@@ -68,7 +69,7 @@ ans = 0
 for i in range(N):
     D[Cc[i][0]] -= 1
     a, b, c, d = Lc[Cc[i][0]]
-    for j in range(i+1, N):
+    for j in range(i + 1, N):
         D[Cc[j][0]] -= 1
         for idx in range(4):
             e, f, g, h = Lc[Cc[j][idx]]
@@ -89,17 +90,16 @@ for i in range(N):
             if r4 not in Cr:
                 continue
             r4 = Base[Cr[r4]]
-            
+
             E[r1] += 1
             E[r2] += 1
             E[r3] += 1
-            E[r4] += 1            
+            E[r4] += 1
             res = 1
             for k, n in list(E.items()):
                 res *= calc[D[k]][n] * pp[Od[k]][n]
             ans += res
-        
+
         D[Cc[j][0]] += 1
 
 print(ans)
-

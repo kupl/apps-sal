@@ -4,7 +4,8 @@ ax, ay, bx, by, cx, cy = [int(t) for t in input().split()]
 n = int(input())
 dist = 0
 maxv = [[-inf, -inf], [-inf, -inf]]
-index = [[0,0], [0,0]]
+index = [[0, 0], [0, 0]]
+
 
 def update(d, idx, p):
     nonlocal maxv, index
@@ -16,6 +17,7 @@ def update(d, idx, p):
     elif d > maxv[p][1]:
         maxv[p][1] = d
         index[p][1] = idx
+
 
 for i in range(n):
     x, y = [int(t) for t in input().split()]

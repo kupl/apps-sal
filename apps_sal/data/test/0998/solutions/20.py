@@ -18,4 +18,3 @@ if b:
     b = list(b)
     a = [b[0]] + [b[i] ^ b[i + 1] for i in range(len(b) - 1)]
     print(*a)
-

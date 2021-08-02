@@ -16,4 +16,3 @@ for _ in range(t):
     e -= dif
     mn = s + e // 2 + 1
     print(mx - mn + 1)
-

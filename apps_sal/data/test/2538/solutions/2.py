@@ -8,4 +8,3 @@ for _ in range(t):
     maxeven = max(maxeven, s)
 
     print(max(s + e - maxeven + 1, 0))
-

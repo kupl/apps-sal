@@ -6,4 +6,3 @@ for _ in range(int(input())):
         print(e + 1)
     else:
         print((e + s + 1 - i) // 2)
-

@@ -11,10 +11,10 @@ for i in range(n):
     tsum += int(t[i])
 
 if ssum != tsum:
-    print (-1)
+    print(-1)
     return
 
-nex = [0,0]
+nex = [0, 0]
 
 for i in range(n):
 
@@ -34,4 +34,4 @@ for i in range(n):
         else:
             nex[1] += 1
 
-print (sum(nex))
+print(sum(nex))

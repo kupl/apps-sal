@@ -22,4 +22,3 @@ for i in range(n):
 print(len(ans))
 if ans:
     print(' '.join(map(str, ans)))
-

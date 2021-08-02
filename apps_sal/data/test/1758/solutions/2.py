@@ -17,4 +17,3 @@ if diff != 0:
     print(-1)
 else:
     print(maxDiff - minDiff)
-

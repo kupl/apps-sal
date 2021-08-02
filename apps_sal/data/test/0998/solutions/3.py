@@ -31,7 +31,9 @@ def main():
     print(len(a))
     print(' '.join(list(map(str, a))))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
