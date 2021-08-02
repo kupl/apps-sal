@@ -4,7 +4,7 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 a_dict = {}
 for i in range(n):
-    a_dict[a[i]] = i+1
+    a_dict[a[i]] = i + 1
 for i in range(n):
     b[i] = a_dict[b[i]]
 b.reverse()
@@ -18,4 +18,3 @@ for i in range(n):
         ans += 1
 
 print(ans)
-

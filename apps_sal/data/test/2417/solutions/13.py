@@ -1,4 +1,4 @@
-#TO MAKE THE PROGRAM FAST
+# TO MAKE THE PROGRAM FAST
 
 ''' ----------------------------------------------------------------------------------------------------  '''
 import sys
@@ -7,21 +7,18 @@ sys.setrecursionlimit(100000)
 ''' ----------------------------------------------------------------------------------------------------  '''
 
 
-
-
-#FOR TAKING INPUTS
+# FOR TAKING INPUTS
 
 ''' ----------------------------------------------------------------------------------------------------  '''
-def li():return [int(i) for i in input().rstrip('\n').split(' ')]
-def val():return int(input().rstrip('\n'))
-def st():return input().rstrip('\n')
-def sttoli():return [int(i) for i in input().rstrip('\n')]
+def li(): return [int(i) for i in input().rstrip('\n').split(' ')]
+def val(): return int(input().rstrip('\n'))
+def st(): return input().rstrip('\n')
+def sttoli(): return [int(i) for i in input().rstrip('\n')]
+
 ''' ----------------------------------------------------------------------------------------------------  '''
 
 
-
-
-#MAIN PROGRAM
+# MAIN PROGRAM
 
 ''' ----------------------------------------------------------------------------------------------------  '''
 
@@ -46,8 +43,6 @@ for i in l2:
         while t in s:
             t += 1
 print(tot)
-
-
 
 
 ''' ----------------------------------------------------------------------------------------------------  '''

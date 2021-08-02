@@ -1,5 +1,5 @@
-l = [0] + list(map(int, input().split()))
 from math import sqrt
+l = [0] + list(map(int, input().split()))
 k = l[6] / sqrt(l[3]**2 + l[4]**2)
 A = (l[1] + l[3] * k, l[2] + l[4] * k)
 l[3], l[4] = -l[4], l[3]
@@ -9,7 +9,7 @@ k = l[7] / (2 * sqrt(l[3]**2 + l[4]**2))
 C = (l[1] + l[3] * k, l[2] + l[4] * k)
 F = (2 * l[1] - C[0], 2 * l[2] - C[1])
 G = (2 * l[1] - B[0], 2 * l[2] - B[1])
-L = [l[3], l[4]] 
+L = [l[3], l[4]]
 l[3], l[4] = -l[4], l[3]
 R = [-l[4], l[3]]
 K = l[7] / (2 * sqrt(l[3]**2 + l[4]**2))
@@ -25,10 +25,3 @@ print(*D)
 print(*E)
 print(*F)
 print(*G)
-
-
-
-
-
-
-

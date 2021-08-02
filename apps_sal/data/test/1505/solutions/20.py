@@ -17,4 +17,3 @@ pts.append([px + (((a / 2) * vy) / l), py + ((-1 * vx * (a / 2)) / l)])
 
 for x in pts:
     print(x[0], x[1])
-

@@ -2,10 +2,13 @@ import sys
 q = int(input())
 lines = sys.stdin.readlines()
 res = []
+
+
 def getMax(numset):
     n = max(numset)
     numset = set([j for j in numset if n % j != 0])
-    return (n , numset)
+    return (n, numset)
+
 
 for i in range(q):
     n = int(lines[2 * i])
@@ -26,5 +29,3 @@ for i in range(q):
             total = sum(m)
     res.append(str(total))
 print('\n'.join(res))
-
-

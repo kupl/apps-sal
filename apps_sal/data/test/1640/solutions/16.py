@@ -19,4 +19,3 @@ for i in range(n):
     cnt[num[i]] += 1
 
 print(ans)
-

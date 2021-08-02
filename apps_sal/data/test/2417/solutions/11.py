@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -215,27 +217,18 @@ def main():
     pos = 0
     fined = set()
     for ele in ai:
-        while pos<n and bi[pos] in fined:
+        while pos < n and bi[pos] in fined:
             pos += 1
-        if ele==bi[pos]:
-            pos+=1
+        if ele == bi[pos]:
+            pos += 1
         else:
             fined.add(ele)
     print(len(fined))
 
 
-
-
-
-
-
-
 # --------------------------------------------------------------------- END=
-
-
 if TestCases:
     for i in range(get_int()):
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

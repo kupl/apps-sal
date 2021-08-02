@@ -2,13 +2,13 @@ import sys
 input = lambda: sys.stdin.readline().rstrip()
 
 N = int(input())
-A = [int(a)-1 for a in input().split()][::-1]
+A = [int(a) - 1 for a in input().split()][::-1]
 
 C = [-1] * N
 for i in range(N):
     C[A[i]] = i
 
-B = [C[int(a)-1] for a in input().split()][::-1]
+B = [C[int(a) - 1] for a in input().split()][::-1]
 
 ans, ma = 0, -1
 for i in B:
@@ -16,6 +16,3 @@ for i in B:
         ans += 1
     ma = max(ma, i)
 print(ans)
-
-
-

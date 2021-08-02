@@ -38,5 +38,3 @@ for w in range(q):
     ans.append(max(a1 + b1 + c1, a2 + b2 + c2))
 for i in range(q):
     print(ans[i])
-
-

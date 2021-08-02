@@ -1,2 +1,1 @@
-print((3*int(input())**2))
-
+print((3 * int(input())**2))

@@ -21,4 +21,3 @@ print(px - c / 2 * y_dir - d * x_dir, py + c / 2 * x_dir - d * y_dir)
 print(px + c / 2 * y_dir - d * x_dir, py - c / 2 * x_dir - d * y_dir)
 print(px + c / 2 * y_dir, py - c / 2 * x_dir)
 print(px + a / 2 * y_dir, py - a / 2 * x_dir)
-

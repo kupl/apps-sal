@@ -12,8 +12,8 @@ for i, a in enumerate(l):
 
 c = Counter()
 for a in l:
-    ans -= c[a-1]
-    ans += c[a+1]
+    ans -= c[a - 1]
+    ans += c[a + 1]
     c[a] += 1
 
 print(ans)

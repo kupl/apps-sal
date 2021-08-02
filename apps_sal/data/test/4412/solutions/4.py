@@ -1,3 +1,6 @@
+import sys
+
+
 def calcSum(first):
     nonlocal m
     s = m[first]
@@ -13,9 +16,8 @@ def calcSum(first):
             k += 1
             if k == 3: break
     return s
-    
 
-import sys
+
 nnn = int(input())
 for _ in range(nnn):
     n = int(sys.stdin.readline())
@@ -24,15 +26,15 @@ for _ in range(nnn):
         print(a[0])
         continue
     if n == 2:
-        if a[0]%a[1] == 0 or a[1]%a[0] == 0:
+        if a[0] % a[1] == 0 or a[1] % a[0] == 0:
             print(max(a))
         else:
             print(sum(a))
         continue
-    a.sort(reverse = True)
+    a.sort(reverse=True)
     m = [a[0]]
     for i in range(1, len(a)):
-        if a[i] == a[i-1]: continue
+        if a[i] == a[i - 1]: continue
         yes = True
         for j in range(1, len(m)):
             if m[j] % a[i] == 0:
@@ -43,8 +45,8 @@ for _ in range(nnn):
             if len(m) >= 10:
                 break
 
-##    print(m)
-            
+# print(m)
+
     s1 = calcSum(0)
     if len(m) > 1:
         s2 = calcSum(1)
@@ -53,13 +55,9 @@ for _ in range(nnn):
 
     s = max(s1, s2)
 
-    print (s)
-##    if nnn == 16383:
-##        if _>890:
+    print(s)
+# if nnn == 16383:
+# if _>890:
 ##            print(m, ' - ', a, '-', s)
-##    else:
-##        print(s)
-
-        
-        
-
+# else:
+# print(s)

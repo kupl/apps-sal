@@ -30,4 +30,3 @@ a = int(''.join(list(map(str, A))))
 if a < ans:
     ans = a
 print('0' * (n - len(str(ans))) + str(ans))
-

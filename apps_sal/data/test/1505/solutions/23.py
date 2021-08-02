@@ -205,14 +205,13 @@ def main():
     P = Vector(px, py)
     V = Vector(vx, vy).norm()
     A = V.mul_kk(b) + P
-    B = V.mul_kk(a/2).rotate() + P
-    C = V.mul_kk(c/2).rotate() + P
+    B = V.mul_kk(a / 2).rotate() + P
+    C = V.mul_kk(c / 2).rotate() + P
     D = C + V.rotate().rotate().mul_kk(d)
     E = D + V.rotate2().mul_kk(c)
-    F = P + V.rotate2().mul_kk(c/2)
-    G = P + V.rotate2().mul_kk(a/2)
+    F = P + V.rotate2().mul_kk(c / 2)
+    G = P + V.rotate2().mul_kk(a / 2)
     print(A, B, C, D, E, F, G, sep='\n')
 
 
 main()
-

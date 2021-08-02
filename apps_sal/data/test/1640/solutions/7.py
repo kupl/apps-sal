@@ -24,4 +24,3 @@ for val in arr:
     s -= val
     cur[val] += 1
 print(d)
-

@@ -1,81 +1,82 @@
+import math
 3
 
-import math
 
 class Vector:
-	def __init__(self, x, y):
-		self.x = x
-		self.y = y
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-	def length(self):
-		return math.hypot(self.x, self.y)
+    def length(self):
+        return math.hypot(self.x, self.y)
 
-	def normalize(self):
-		self /= self.length()
+    def normalize(self):
+        self /= self.length()
 
-	def normalized(self):
-		return self / self.length()
+    def normalized(self):
+        return self / self.length()
 
-	def rotateLeft(self):
-		x = self.x
-		y = self.y
-		self.x = -y
-		self.y = x
+    def rotateLeft(self):
+        x = self.x
+        y = self.y
+        self.x = -y
+        self.y = x
 
-	def rotatedLeft(self):
-		x = -self.y
-		y = self.x
-		return Vector(x, y)
+    def rotatedLeft(self):
+        x = -self.y
+        y = self.x
+        return Vector(x, y)
 
-	def rotateRight(self):
-		x = self.x
-		y = self.y
-		self.x = y
-		self.y = -x
+    def rotateRight(self):
+        x = self.x
+        y = self.y
+        self.x = y
+        self.y = -x
 
-	def rotatedRight(self):
-		x = self.y
-		y = -self.x
-		return Vector(x, y)
+    def rotatedRight(self):
+        x = self.y
+        y = -self.x
+        return Vector(x, y)
 
-	def __iadd__(self, other):
-		self.x += other.x
-		self.y += other.y
-		return self
+    def __iadd__(self, other):
+        self.x += other.x
+        self.y += other.y
+        return self
 
-	def __isub__(self, other):
-		self.x -= other.x
-		self.y -= other.y
-		return self
+    def __isub__(self, other):
+        self.x -= other.x
+        self.y -= other.y
+        return self
 
-	def __add__(self, other):
-		return Vector(self.x + other.x, self.y + other.y)
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
 
-	def __sub__(self, other):
-		return Vector(self.x - other.x, self.y - other.y)
+    def __sub__(self, other):
+        return Vector(self.x - other.x, self.y - other.y)
 
-	def __imul__(self, other):
-		self.x *= other
-		self.y *= other
-		return self
+    def __imul__(self, other):
+        self.x *= other
+        self.y *= other
+        return self
 
-	def __itruediv__(self, other):
-		self.x /= other
-		self.y /= other
-		return self
+    def __itruediv__(self, other):
+        self.x /= other
+        self.y /= other
+        return self
 
-	def  __mul__(self, other):
-		return Vector(self.x * other, self.y * other)
+    def __mul__(self, other):
+        return Vector(self.x * other, self.y * other)
 
-	def __truediv__(self, other):
-		return Vector(self.x / other, self.y / other)
+    def __truediv__(self, other):
+        return Vector(self.x / other, self.y / other)
 
-	def __neg__(self):
-		return Vector(-self.x, -self.y)
+    def __neg__(self):
+        return Vector(-self.x, -self.y)
 
-	def __str__(self):
-		return str(self.x) + ' ' + str(self.y)
-		# return "{:.2f} {:.2f}".format(self.x, self.y)
+    def __str__(self):
+        return str(self.x) + ' ' + str(self.y)
+        # return "{:.2f} {:.2f}".format(self.x, self.y)
+
 
 px, py, vx, vy, a, b, c, d = [int(i) for i in input().split()]
 # px, py, vx, vy, a, b, c, d = [int(i) for i in "8 8 0 2 8 3 4 5".split()]
@@ -104,4 +105,3 @@ print(D)
 print(E)
 print(F)
 print(G)
-
