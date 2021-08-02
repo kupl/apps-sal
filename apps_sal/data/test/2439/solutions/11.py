@@ -14,4 +14,3 @@ for _ in range(t):
         print(' '.join(str(x) for x in lst))
     else:
         print("NO")
-

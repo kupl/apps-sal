@@ -11,4 +11,3 @@ for _ in range(int(input())):
     ans.append("YES")
     ans.append(' '.join(map(str, u)))
 print('\n'.join(ans))
-

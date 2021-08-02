@@ -5,4 +5,3 @@ for i in range(1, k):
         t = n // i
         result = min(result, t * k + i)
 print(result)
-

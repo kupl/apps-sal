@@ -14,4 +14,3 @@ for t in range(T):
         else:
             B = sorted(A)
         print(' '.join(map(str, B)))
-

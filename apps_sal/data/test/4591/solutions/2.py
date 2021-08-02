@@ -60,7 +60,7 @@ A, B, C, X, Y = map(int, input().split())
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:

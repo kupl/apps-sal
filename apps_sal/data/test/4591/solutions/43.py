@@ -2,7 +2,7 @@ A, B, C, X, Y = map(int, input().split())
 
 price = 0
 
-m = min(A + B , C * 2)
+m = min(A + B, C * 2)
 n = min(X, Y)
 price += m * n
 

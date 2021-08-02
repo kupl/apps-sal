@@ -1,4 +1,4 @@
-A, B = int(input()),int(input())
+A, B = int(input()), int(input())
 
 res = 0
 curA = 1
@@ -17,4 +17,3 @@ while A != B:
     curB += 1
 
 print(res)
-

@@ -7,8 +7,7 @@ for _ in range(t):
         print('NO')
     elif sum(l) > 0:
         print('YES')
-        print(' '.join(map(str,l[::-1])))
+        print(' '.join(map(str, l[::-1])))
     else:
         print('YES')
-        print(' '.join(map(str,l)))
-
+        print(' '.join(map(str, l)))

@@ -7,4 +7,3 @@ for c in range(200_001):
     cost += B * max(0, Y - c // 2)
     ans = min(ans, cost)
 print(ans)
-

@@ -8,7 +8,10 @@ for i in range(k):
     x1 += 1
     x2 += 1
     x3 += 1
-    if x1 == n1: x1 = 0
-    if x2 == n2: x2 = 0
-    if x3 == n3: x3 = 0
+    if x1 == n1:
+        x1 = 0
+    if x2 == n2:
+        x2 = 0
+    if x3 == n3:
+        x3 = 0
 print(T3[x3 - 1])

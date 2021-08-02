@@ -23,4 +23,3 @@ if Y > 0:
         ret += Y * B
 
 print(ret)
-

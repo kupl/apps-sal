@@ -11,6 +11,5 @@ for wewq in range(rw):
     if sum(a) > 0:
         a.reverse()
     for i in a:
-        print(i, end = ' ')
+        print(i, end=' ')
     print('')
-

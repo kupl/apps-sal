@@ -9,4 +9,3 @@ for i in range(1, k):
     if x < ans:
         ans = x
 print(ans)
-

@@ -1,5 +1,6 @@
 import sys
 
+
 class TreeNode:
     def __init__(self, k, v):
         self.key = k
@@ -221,10 +222,10 @@ def __starting_point():
     n = int(lines[0])
     aa = [(a, i) for i, a in enumerate(map(int, lines[1].split()))]
     m = int(lines[2])
-    qs = [None]*m
-    ans = [None]*m
+    qs = [None] * m
+    ans = [None] * m
     for i in range(m):
-        k, pos = list(map(int, lines[i+3].split()))
+        k, pos = list(map(int, lines[i + 3].split()))
         qs[i] = (pos, k, i)
     qs.sort(key=lambda x: x[1])
     aa.sort(key=lambda x: x[1])

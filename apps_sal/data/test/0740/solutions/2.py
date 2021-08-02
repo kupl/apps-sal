@@ -1,5 +1,6 @@
 class step(object):
     timer = []
+
     def __init__(self, name, machin_num, step_time):
         self.machin_num = machin_num
         self.step_time = step_time
@@ -17,19 +18,19 @@ class step(object):
             #print(self.timer)
         '''
         for new_cloth in range(cloth_num):
-                self.timer.append(t)
+            self.timer.append(t)
 
     def step_run(self, t):
         tmptimer = [each_timer for each_timer in self.timer if t - each_timer < self.step_time]
         #next_num = len(self.timer) - len(tmptimer)
         self.timer = tmptimer
-        #if len(self.timer) == 0:
-            #print('%s in %d is empty' %(self.name, t))
-            #pass
+        # if len(self.timer) == 0:
+        #print('%s in %d is empty' %(self.name, t))
+        # pass
         #print('%d: %s timer:\n%s \n' %(t, self.name, self.timer))
         #print('%d: %s timer: %d \n' %(t, self.name, next_num))
-        #return next_num
-            
+        # return next_num
+
     def checkstate(self, pre_t):
         running_machine = len(self.timer)
         #output = 0
@@ -38,7 +39,7 @@ class step(object):
                 running_machine -= 1
                 #output += 1
         return self.machin_num - running_machine
-        
+
 
 def main():
     p, n1, n2, n3, t1, t2, t3 = list(map(int, input().split()))
@@ -60,7 +61,7 @@ def main():
     while True:
         pre_num1 = step1.checkstate(t)
         pre_num2 = step2.checkstate(t + t1)
-        pre_num3 = step3.checkstate(t + t1 + t2)        
+        pre_num3 = step3.checkstate(t + t1 + t2)
         step1_input = min(pre_num1, pre_num2, pre_num3)
         p -= step1_input
         step1.step_run(t)
@@ -98,7 +99,9 @@ def main():
         '''
         t += pre_t
 
-def __starting_point():  
+
+def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     alst = list(map(int, input().split()))
@@ -14,6 +15,7 @@ def main():
         print(*alst[::-1])
     else:
         print(*alst)
-    
+
+
 for _ in range(int(input())):
     main()
