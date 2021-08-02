@@ -1,9 +1,10 @@
+from collections import deque
+from heapq import heappop, heappush, heapify
 import sys
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
 
-from heapq import heappop, heappush, heapify
-from collections import deque
+
 class SWAG_Stack():
     def __init__(self, F):
         self.stack1 = deque()
@@ -40,15 +41,16 @@ class SWAG_Stack():
         else:
             return float("inf")
 
-n,p = map(int, input().split())
-t = list((j, i) for i,j in enumerate(map(int, input().split())))
+
+n, p = map(int, input().split())
+t = list((j, i) for i, j in enumerate(map(int, input().split())))
 heapify(t)
 
 stack = SWAG_Stack(min)
 
 heap = []
 cur = 0
-ans = [-1]*n
+ans = [-1] * n
 hoge = 0
 # 今追加できるやつで最も小さいものを追加
 # ここでなにもなかったら？
@@ -60,12 +62,12 @@ while hoge != n:
         j = heappop(heap)
         stack.push(j)
 
-    if stack.len==0 and t:
+    if stack.len == 0 and t:
         cur = max(cur, t[0][0])
 
-    while t and t[0][0] <= cur+p:
+    while t and t[0][0] <= cur + p:
         ti, i = heappop(t)
-        if ti == cur+p:
+        if ti == cur + p:
             # 後回し
             heappush(heap, i)
         else:

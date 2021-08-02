@@ -12,4 +12,5 @@ def __starting_point():
             book[it - 1] = 1
     print(n - max(book))
 
+
 __starting_point()

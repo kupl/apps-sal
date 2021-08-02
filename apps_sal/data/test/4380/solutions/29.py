@@ -1,5 +1,5 @@
-n,m = [int(x) for x in input().split()]
+n, m = [int(x) for x in input().split()]
 if n == 2 or m == 2:
-  print("No")
+    print("No")
 else:
-  print("Yes")
+    print("Yes")

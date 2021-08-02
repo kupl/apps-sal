@@ -1,1 +1,1 @@
-print('YNeos'['2'in input()::2])
+print('YNeos'['2' in input()::2])
