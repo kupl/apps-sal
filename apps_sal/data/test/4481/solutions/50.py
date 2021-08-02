@@ -12,9 +12,9 @@ for i in range(n):
 max_num = max(dct.values())
 ans = []
 sorted_dct = sorted(dct.items())
- 
+
 for x in sorted_dct:
     if x[1] >= max_num:
         ans.append(x[0])
- 
+
 print(*ans, sep='\n')

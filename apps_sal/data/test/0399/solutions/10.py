@@ -11,4 +11,3 @@ else:
 
     else:
         print(('No', 'Yes')[(x - a) % 2 == 0])
-

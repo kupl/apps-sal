@@ -6,7 +6,10 @@ from heapq import heappop, heappush
 from itertools import accumulate, permutations, combinations
 from sys import stdout
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n, m = R()
 nc, mc = n, m
 n -= 1

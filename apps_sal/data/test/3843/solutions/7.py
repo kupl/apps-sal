@@ -1,10 +1,12 @@
 from collections import Counter
 
+
 def getd(n):
     v = 1
     while n > 7 ** v:
         v += 1
     return v
+
 
 def getb(n, d):
     v = 0
@@ -16,6 +18,7 @@ def getb(n, d):
         n //= 7
     return v
 
+
 def getc(n, d):
     c = Counter()
     for i in range(n):
@@ -23,6 +26,7 @@ def getc(n, d):
         if cb:
             c[cb] += 1
     return c
+
 
 x, y = map(int, input().split())
 xd, yd = getd(x), getd(y)

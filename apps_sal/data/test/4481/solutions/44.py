@@ -10,7 +10,7 @@ for _ in (range(N)):
 
 max_n = max(d.values())
 ans = []
-for key,value in d.items():
+for key, value in d.items():
     if value == max_n:
         ans.append(key)
 

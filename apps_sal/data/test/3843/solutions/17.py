@@ -1,4 +1,6 @@
 from itertools import permutations as p
+
+
 def f(n, tn):
     if not n:
         tn.append(0)
@@ -9,6 +11,8 @@ def f(n, tn):
         n //= 7
         cnt += 1
     return cnt
+
+
 ans = 0
 tn, tm = [], []
 n, m = map(int, input().split())
@@ -19,7 +23,8 @@ tn, tm = tuple(tn[::-1]), tuple(tm[::-1])
 
 s = {0, 1, 2, 3, 4, 5, 6}
 if x + y > 7:
-    print(0);return
+    print(0)
+    return
 for i in p(s, x):
     if i <= tn:
         for j in p(s - set(i), y):

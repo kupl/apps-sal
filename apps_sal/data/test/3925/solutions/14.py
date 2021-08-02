@@ -15,4 +15,3 @@ for i in range(len(s) - 1):
             c = 1
     # print(s)
 print(max(mx, c))
-

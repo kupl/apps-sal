@@ -1,6 +1,7 @@
 def mni(i, n):
     return i + 1
 
+
 def check(s, b):
     res = 1
     i = b
@@ -26,4 +27,3 @@ else:
         if i == 0 or S[i] == S[(i - 1 + N) % N]:
             ans = max(ans, check(S, i))
 print(ans)
-

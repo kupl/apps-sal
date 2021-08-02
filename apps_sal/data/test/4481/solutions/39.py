@@ -12,12 +12,10 @@ for i in range(n):
 m = max(list(d.values()))
 l = []
 
-for x,y in list(d.items()):
+for x, y in list(d.items()):
     if y == m:
         l.append(x)
 l.sort()
 
 for v in l:
     print(v)
-
-

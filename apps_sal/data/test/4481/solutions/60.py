@@ -7,5 +7,5 @@ for i in range(N):
     else:
         dic[s] += 1
 max_val = max(dic.values())
-rst = [ key for key, val in dic.items() if val == max_val ]
-[ print(i) for i in sorted(rst) ]
+rst = [key for key, val in dic.items() if val == max_val]
+[print(i) for i in sorted(rst)]

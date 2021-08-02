@@ -23,4 +23,3 @@ if len(rec) >= 2:
         num = max(num, len(rec[0] + rec[-1]))
 
 print(num)
-

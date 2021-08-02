@@ -13,7 +13,7 @@ for i in range(n):
 cnt = n
 for i in range(n):
     counting[i] += counting[i - 1]
-    
+
     if counting[i]:
         cnt -= 1
 

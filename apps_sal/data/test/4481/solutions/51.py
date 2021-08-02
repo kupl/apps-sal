@@ -18,4 +18,3 @@ l.sort()
 
 for s in l:
     print(s)
-

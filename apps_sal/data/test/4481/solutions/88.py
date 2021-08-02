@@ -10,7 +10,7 @@ for i in range(n):
 
 res = []
 
-maks = max(list(cnt.items()), key=lambda x : x[1])
+maks = max(list(cnt.items()), key=lambda x: x[1])
 for item in list(cnt.items()):
     if item[1] == maks[1]:
         res.append(item[0])
@@ -18,5 +18,3 @@ for item in list(cnt.items()):
 res.sort()
 for s in res:
     print(s)
-
-

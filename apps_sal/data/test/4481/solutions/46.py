@@ -1,8 +1,8 @@
 import math
 import statistics
 import collections
-a=int(input())
-#b,c=int(input()),int(input())
+a = int(input())
+# b,c=int(input()),int(input())
 # c=[]
 #  for i in b:
 #     c.append(i)
@@ -15,30 +15,29 @@ g = [input() for _ in range(a)]
 
 g.sort()
 
-ma=0
-count=1
-#最大値求める
-for i in range(a-1):
-    if g[i]==g[i+1]:
-        count+=1
+ma = 0
+count = 1
+# 最大値求める
+for i in range(a - 1):
+    if g[i] == g[i + 1]:
+        count += 1
     else:
-        ma=max(ma,count)
-        count=1
+        ma = max(ma, count)
+        count = 1
 
-ma=max(ma,count)
-count=1
-ans=[]
-#最大値の位置
-for i in range(a-1):
-    if g[i]==g[i+1]:
-        count+=1
+ma = max(ma, count)
+count = 1
+ans = []
+# 最大値の位置
+for i in range(a - 1):
+    if g[i] == g[i + 1]:
+        count += 1
     else:
-        if count==ma:
+        if count == ma:
             ans.append(g[i])
-        count=1
-if count==ma:
+        count = 1
+if count == ma:
     ans.append(g[-1])
 
 for i in ans:
     print(i)
-

@@ -1,7 +1,7 @@
 import sys
 
 T = int(sys.stdin.readline().strip())
-for t in range (0, T):
+for t in range(0, T):
     ang = int(sys.stdin.readline().strip())
     n = 180
     if ang % 2 == 0:

@@ -14,4 +14,3 @@ for key, value in S.items():
         ans.append(key)
 ans.sort()
 print(*ans, sep="\n")
-

@@ -15,8 +15,9 @@ def main():
 
     for key, value in list(d.items()):
         l.append([key, value])
-        if max_p < value: max_p = value
-    
+        if max_p < value:
+            max_p = value
+
     l.sort(key=lambda x: (-x[1], x[0]), reverse=False)
 
     for i, j in l:
@@ -28,5 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

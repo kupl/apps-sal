@@ -12,4 +12,3 @@ for i in range(len(lengths) - 1, -1, -1):
         limit = i - lengths[i]
 
 print(result)
-

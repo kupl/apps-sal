@@ -1,6 +1,7 @@
 # = map(int, input().split())
 # = list(map(int, input().split()))
-import sys, math
+import sys
+import math
 n = int(input())
 z = list(map(int, input().split()))
 a = z[0]
@@ -17,4 +18,3 @@ if (sum_ * 2 > sum_s):
     print(*ans)
 else:
     print(0)
-

@@ -1,5 +1,6 @@
 BASE = 7
 
+
 def itov(x):
     digits = []
     if x == 0:
@@ -10,7 +11,8 @@ def itov(x):
     digits.reverse()
     return digits
 
-def gen(pos = 0, minute = False, smaller = False):
+
+def gen(pos=0, minute=False, smaller=False):
     max_val = max_minute if minute else max_hour
     if pos >= len(max_val):
         if minute:
@@ -25,6 +27,7 @@ def gen(pos = 0, minute = False, smaller = False):
                 ans += gen(pos + 1, minute, smaller or digit < max_val[pos])
                 used[digit] = False
         return ans
+
 
 n, m = map(int, input().split())
 n -= 1

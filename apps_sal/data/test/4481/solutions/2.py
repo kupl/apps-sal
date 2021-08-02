@@ -13,4 +13,3 @@ for k, v in d.items():
         ans.append(k)
 ans.sort()
 print(*ans, sep='\n')
-

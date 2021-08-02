@@ -9,4 +9,3 @@ elif (x - y) % 2 == 0:
     print('No')
 else:
     print('Yes')
-

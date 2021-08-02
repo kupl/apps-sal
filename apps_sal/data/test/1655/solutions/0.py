@@ -7,4 +7,3 @@ for i in range(n - 1, -1, -1):
         alive += 1
     left = min(left, i - a[i])
 print(alive)
-

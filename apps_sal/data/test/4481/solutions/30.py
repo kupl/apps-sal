@@ -10,4 +10,3 @@ for i in range(N):
 max_val = max(S.values())
 max_key = [key for key in S if S[key] == max_val]
 print(("\n".join(sorted(max_key))))
-

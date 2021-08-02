@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 N = int(input())
 S = []
@@ -11,9 +14,8 @@ for s in S:
         d[s] = 0
     d[s] += 1
 
-d = sorted(list(d.items()), key=lambda x:x[1], reverse=True)
+d = sorted(list(d.items()), key=lambda x: x[1], reverse=True)
 names = [v[0] for v in d if v[1] == d[0][1]]
 
 for name in sorted(names):
     print(name)
-

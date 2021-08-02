@@ -9,6 +9,6 @@ def solve(x, y):
         return False
     return True
 
+
 x, y = [int(v) for v in input().split()]
 print(["No", "Yes"][solve(x, y)])
-
