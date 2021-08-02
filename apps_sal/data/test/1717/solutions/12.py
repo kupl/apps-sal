@@ -23,4 +23,3 @@ for i in range(2, n + 1):
     #print(i, d[i])
 
 print((ans + 1))
-

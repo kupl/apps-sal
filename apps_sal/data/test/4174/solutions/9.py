@@ -1,5 +1,5 @@
-n, x = list(map(int,input().split()))
-l = list(map(int,input().split()))
+n, x = list(map(int, input().split()))
+l = list(map(int, input().split()))
 a = [0]
 for i in range(n):
     tmp = a[i] + l[i]
@@ -10,4 +10,3 @@ for i in range(n + 1):
         ans = ans + 1
 
 print(ans)
-

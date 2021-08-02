@@ -1,5 +1,5 @@
-N,X=list(map(int,input().split()))
-ls1=list(map(int,input().split()))
+N, X = list(map(int, input().split()))
+ls1 = list(map(int, input().split()))
 
 x = 0
 ii = 1
@@ -9,4 +9,3 @@ for i in ls1:
         break
     ii += 1
 print(ii)
-

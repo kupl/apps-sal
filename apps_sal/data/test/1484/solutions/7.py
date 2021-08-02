@@ -1,6 +1,6 @@
+import sys
 3.7
 
-import sys
 
 mod = 998244353
 
@@ -60,4 +60,3 @@ for arr in [a[::2], a[1::2]]:
 
 
 print(ans)
-

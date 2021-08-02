@@ -1,7 +1,7 @@
 n = int(input())
 for i in range(n):
     p = int(input())
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     a = sorted(a)
     if p == 2:
         print(0)

@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class ANastyaAndRice:
     def solve(self, tc=0):
@@ -16,4 +17,3 @@ solver = ANastyaAndRice()
 input = sys.stdin.readline
 
 solver.solve()
-

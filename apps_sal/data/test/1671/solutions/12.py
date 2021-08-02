@@ -20,4 +20,3 @@ for n in arr:
 
 seconds = (seconds + abs(offset)) // 2
 print(seconds)
-

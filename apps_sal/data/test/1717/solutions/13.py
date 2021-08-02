@@ -1,7 +1,7 @@
 N = int(input())
 
 X = 1
-for i in range(2,N+1):
+for i in range(2, N + 1):
     if X % i == 0:
         continue
     else:

@@ -5,11 +5,10 @@ s = 0
 cnt = 1
 
 for l in LS:
-  s += l
-  if s <= X:
-    cnt += 1
-  else:
-    break
+    s += l
+    if s <= X:
+        cnt += 1
+    else:
+        break
 
 print(cnt)
-

@@ -4,8 +4,10 @@ def gcd(a, b):
     else:
         return gcd(b, a % b)
 
+
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 def lcml(a):
     if len(a) == 1:
@@ -13,6 +15,6 @@ def lcml(a):
     else:
         return lcm(a[0], lcml(a[1:]))
 
-n = int(input())
-print((lcml(list(range(2, n+1)))+1))
 
+n = int(input())
+print((lcml(list(range(2, n + 1))) + 1))

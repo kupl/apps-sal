@@ -14,4 +14,3 @@ for i in range(col):
 for t in range(col, n):
     ans += abs(a[t] - z2)
 print(ans // 2)
-

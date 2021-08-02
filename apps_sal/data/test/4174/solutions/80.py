@@ -11,4 +11,3 @@ for i, l in enumerate(L, 1):
         print((i + 1))
         return
 print((n + 1))
-

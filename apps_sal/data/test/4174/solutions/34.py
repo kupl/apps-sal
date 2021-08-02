@@ -3,7 +3,7 @@ l = list(map(int, input().split()))
 
 sumList = [0]
 for i in range(n):
-    s = sumList[i]+l[i]
+    s = sumList[i] + l[i]
     if s > X:
         break
     sumList.append(s)

@@ -12,4 +12,3 @@ def LCM(a: int, b: int) -> int:
 n = int(input())
 ans = reduce(LCM, list(range(1, n + 1))) + 1
 print(ans)
-

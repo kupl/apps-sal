@@ -8,4 +8,3 @@ for n in range(1, 31):
     x = x // gcd(x, n) * n
 
 print((x + 1))
-

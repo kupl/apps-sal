@@ -11,5 +11,4 @@ for _ in range(t):
                 max1, max2 = q, max1
             elif q > max2:
                 max2 = q
-        print(max(0, min(max2-1, len(a)-2)))
-
+        print(max(0, min(max2 - 1, len(a) - 2)))

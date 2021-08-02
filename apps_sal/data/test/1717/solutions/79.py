@@ -14,4 +14,3 @@ for i in range(1, N - 1):
     ans = ans * a[i] // fractions.gcd(ans, a[i])
 
 print((ans + 1))
-

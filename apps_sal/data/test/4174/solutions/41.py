@@ -1,5 +1,5 @@
-n,x = map(int,input().split())
-l = list(map(int,input().split()))
+n, x = map(int, input().split())
+l = list(map(int, input().split()))
 d = 0
 i = 0
 while d <= x and i <= n:

@@ -4,4 +4,3 @@ for i in range(int(input())):
     data.sort()
     k0 = min(data[-2] - 1, num - 2)
     print(max(0, k0))
-

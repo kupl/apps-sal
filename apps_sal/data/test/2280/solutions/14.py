@@ -4,6 +4,7 @@ import collections
 
 # imgur.com/Pkt7iIf.png
 
+
 def getdict(n):
     d = {}
     if type(n) is list:
@@ -20,14 +21,16 @@ def getdict(n):
             else:
                 d[t] = 1
     return d
+
+
 def cdiv(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
 def mi(): return list(map(int, input().split()))
 def li(): return list(map(int, input().split()))
+
 
 t = ii()
 for i in range(t):
     n = ii()
     d = sorted(li())
     print(min(d[-2] - 1, n - 2))
-

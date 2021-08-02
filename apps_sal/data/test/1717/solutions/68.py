@@ -28,4 +28,3 @@ for i in range(1, n + 1):
             ans *= pow(k, v - f_ans[k])
 ans += 1
 print(ans)
-

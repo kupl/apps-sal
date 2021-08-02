@@ -12,4 +12,3 @@ else:
     ans = n + 1
 
 print(ans)
-
