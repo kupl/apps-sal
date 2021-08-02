@@ -1,5 +1,6 @@
 import random
 
+
 def __starting_point():
     #n, m = list(map(int, input().split()))
     n = int(input())
@@ -15,7 +16,6 @@ def __starting_point():
             else:
                 a[ord(s[i]) - ord('a')] = 1
         print(cnt)
-    
-    
+
 
 __starting_point()

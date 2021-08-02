@@ -1,7 +1,7 @@
 # ほぼ写経
 from math import gcd
 from collections import defaultdict
-mod = 10**9+7
+mod = 10**9 + 7
 n = int(input())
 mp = defaultdict(lambda: [0, 0])
 zero_zero = 0
@@ -26,4 +26,3 @@ for s, t in list(mp.values()):
     ans = (ans * now) % mod
 ans = (ans - 1 + zero_zero) % mod
 print(ans)
-

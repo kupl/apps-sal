@@ -1,6 +1,6 @@
-from collections import defaultdict
-MOD = 10**9+7
 from math import gcd
+from collections import defaultdict
+MOD = 10**9 + 7
 
 
 n = int(input())
@@ -33,10 +33,10 @@ for c, v in D:
         d, e = b, -a
     else:
         d, e = -b, a
-    ans *= pow(2, v, MOD)+pow(2, C[(d, e)], MOD)-1
+    ans *= pow(2, v, MOD) + pow(2, C[(d, e)], MOD) - 1
     ans %= MOD
     used.add((d, e))
-ans *= pow(2, C[0], MOD)+pow(2, z, MOD)-1
+ans *= pow(2, C[0], MOD) + pow(2, z, MOD) - 1
 ans += r
 ans -= 1
 ans %= MOD

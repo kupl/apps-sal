@@ -2,10 +2,12 @@ from math import gcd
 
 MOD = 1000000007
 
+
 def inv(a, b):
     if a < 0:
         a, b = -a, -b
     return (-b, a)
+
 
 def solve(n, a, b):
     zero_zero = 0
@@ -31,20 +33,21 @@ def solve(n, a, b):
             D[k] += 1
     group = set()
     for (p, q), v in D.items():
-        if not inv(p,q) in group:
-            group.add((p,q))
-    pow2 = [0] * (n+1)
+        if not inv(p, q) in group:
+            group.add((p, q))
+    pow2 = [0] * (n + 1)
     pow2[0] = 1
     for i in range(n):
-        pow2[i+1] = (pow2[i] * 2) % MOD
+        pow2[i + 1] = (pow2[i] * 2) % MOD
     ans = 1
     for p, q in group:
-        t = pow2[D[p,q]]
+        t = pow2[D[p, q]]
         if inv(p, q) in D:
             t += pow2[D[inv(p, q)]] - 1
         ans = (ans * t) % MOD
     ans *= pow2[zero] + pow2[inf] - 1
     return (ans + zero_zero - 1) % MOD
+
 
 n = int(input())
 a = [0] * n

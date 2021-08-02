@@ -1,2 +1,2 @@
-a=input().replace("2017","2018")
+a = input().replace("2017", "2018")
 print(a)

@@ -6,4 +6,3 @@ ans = a[0]
 for i in range(1, N):
     ans = math.gcd(ans, a[i])
 print(ans)
-

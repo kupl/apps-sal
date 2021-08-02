@@ -29,5 +29,3 @@ for i in range(length // 2):
 if length % 2 == 1 and string1[length // 2] != string2[length // 2]:
     changes += 1
 print(changes)
-
-

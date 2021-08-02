@@ -17,4 +17,3 @@ for i in range(n // 2 + n % 2):
             ans += 1
 
 print(ans)
-

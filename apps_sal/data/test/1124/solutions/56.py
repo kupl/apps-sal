@@ -13,4 +13,3 @@ for i in range(1, N):
     gcd_a = math.gcd(gcd_a, a[i])
 
 print(gcd_a)
-

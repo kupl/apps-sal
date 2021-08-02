@@ -6,7 +6,7 @@ ans = 0
 if n % 2 == 1 and a[n // 2] != b[n // 2]: ans += 1
 
 for i in range(n // 2):
-    t = [a[i], a[n-i-1], b[i], b[n-i-1]]
+    t = [a[i], a[n - i - 1], b[i], b[n - i - 1]]
     tmp = 0
     tmp1 = 0
     tmp2 = 0

@@ -21,7 +21,6 @@ for x, y in e:
         slope_dict[(x, y)][s] += 1
 
 for k in slope_dict:
-    ans = ans * (pow(2, slope_dict[k][0], mod) +
-                 pow(2, slope_dict[k][1], mod) - 1) % mod
+    ans = ans * (pow(2, slope_dict[k][0], mod)
+                 + pow(2, slope_dict[k][1], mod) - 1) % mod
 print(((ans + zeros - 1) % mod))
-

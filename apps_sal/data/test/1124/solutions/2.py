@@ -7,4 +7,3 @@ ans = a[0]
 for i in range(1, N):
     ans = gcd(ans, a[i])
 print(ans)
-

@@ -6,4 +6,3 @@ a = list(set(a))
 ans = 0
 x = functools.reduce(math.gcd, a)
 print(x)
-

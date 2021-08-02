@@ -61,4 +61,3 @@ if zero_zero:
 
 ans -= 1
 print((ans % mod))
-

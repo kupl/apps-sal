@@ -31,5 +31,3 @@ if not fl:
         print("NO")
     else:
         print("YES")
-                             
-

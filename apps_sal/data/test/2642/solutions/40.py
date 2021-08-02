@@ -28,8 +28,8 @@ def main():
         abs_a = abs(a)
         abs_b = abs(b)
         g = math.gcd(abs_a, abs_b)
-        abs_a = abs_a//g
-        abs_b = abs_b//g
+        abs_a = abs_a // g
+        abs_b = abs_b // g
         if a * b > 0:
             pair_plus[(abs_a, abs_b)] += 1
         else:
@@ -43,8 +43,8 @@ def main():
     for item in list(pair_plus.items()):
         a, b = item[0]
         cnt = item[1]
-        if (b,a) in pair_minus:
-            ans *= (pow(2, cnt, mod) + pow(2, pair_minus[(b,a)]) - 1) % mod
+        if (b, a) in pair_minus:
+            ans *= (pow(2, cnt, mod) + pow(2, pair_minus[(b, a)]) - 1) % mod
             ans %= mod
             del pair_minus[(b, a)]
         else:
@@ -57,7 +57,5 @@ def main():
     ans += zero_pair
     print(((ans - 1) % mod))
 
+
 main()
-
-
-

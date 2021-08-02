@@ -1,6 +1,6 @@
 from math import gcd
 from collections import defaultdict
-mod = 10**9+7
+mod = 10**9 + 7
 _, *S = open(0)
 mp = defaultdict(lambda: [0, 0])
 O = 0
@@ -21,6 +21,5 @@ for s in S:
 ans = 1
 for k in mp:
     x, y = mp[k]
-    ans = ans*(pow(2, x, mod)+pow(2, y, mod)-1) % mod
-print(((ans+O-1) % mod))
-
+    ans = ans * (pow(2, x, mod) + pow(2, y, mod) - 1) % mod
+print(((ans + O - 1) % mod))

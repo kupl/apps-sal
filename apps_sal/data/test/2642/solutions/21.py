@@ -12,7 +12,7 @@ for i in range(n):
     x //= g
     y //= g
     if y < 0: x, y = -x, -y
-    if y==0 and x<0: x, y = -x, -y
+    if y == 0 and x < 0: x, y = -x, -y
     is_rotate90 = (x <= 0)
     if is_rotate90: x, y = y, -x
     if not (x, y) in bad: bad[x, y] = [0, 0]
@@ -28,4 +28,3 @@ for x, y in bad:
 ans += zero - 1
 ans = (ans + mod) % mod
 print(ans)
-

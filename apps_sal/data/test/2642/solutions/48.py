@@ -41,4 +41,3 @@ ncomb -= 1  # 1匹も選ばない場合を除く
 ncomb += counter[(0, 0)]
 
 print((ncomb % modulus))
-

@@ -1,8 +1,8 @@
+from bisect import bisect_left, bisect_right
+from fractions import Fraction
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-from collections import defaultdict
-from fractions import Fraction
-from bisect import bisect_left, bisect_right
 
 
 def read():
@@ -45,7 +45,7 @@ def solve(N, M, AB, MOD=1000000007):
                 D[key] += 1
                 keys.add(key)
             else:
-                key = str(-1/f)
+                key = str(-1 / f)
                 INVD[key] += 1
                 keys.add(key)
 
@@ -78,4 +78,6 @@ def __starting_point():
     outputs = solve(*inputs)
     if outputs is not None:
         print("%s" % str(outputs))
+
+
 __starting_point()

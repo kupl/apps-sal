@@ -1,3 +1,3 @@
-year,month,day = map(str,input().split('/'))
+year, month, day = map(str, input().split('/'))
 
-print('2018/'+month+'/'+day)
+print('2018/' + month + '/' + day)

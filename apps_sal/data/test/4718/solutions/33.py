@@ -1,2 +1,2 @@
-a=input()
-print(a.replace("2017","2018"))
+a = input()
+print(a.replace("2017", "2018"))

@@ -29,11 +29,11 @@ def main():
         if x * y > 0:
             x = abs(x)
             y = abs(y)
-            a[(x//g, y//g)] = a.get((x//g, y//g), 0) + 1
+            a[(x // g, y // g)] = a.get((x // g, y // g), 0) + 1
         else:
             x = abs(x)
             y = abs(y)
-            b[(y//g, x//g)] = b.get((y//g, x//g), 0) + 1
+            b[(y // g, x // g)] = b.get((y // g, x // g), 0) + 1
 
     ans = 1
     s = 0
@@ -45,5 +45,5 @@ def main():
     ans *= pow(2, n - s - c, mod)
     print(((ans - 1 + c) % mod))
 
-main()
 
+main()

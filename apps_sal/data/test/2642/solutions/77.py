@@ -26,4 +26,3 @@ for k, l in list(bads.values()):
     ans *= (pow(2, k, MOD) - 1) + (pow(2, l, MOD) - 1) + 1
     ans %= MOD
 print(((ans + zeros - 1) % MOD))
-

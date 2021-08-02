@@ -4,7 +4,6 @@ def main():
     import sys
     input = sys.stdin.readline
 
-
     mod = 10 ** 9 + 7
     n = int(input())
     fishes = defaultdict(int)
@@ -33,14 +32,12 @@ def main():
             key = (a, b)
             fishes[key] += 1
 
-
     def get_bad_pair(fish):
         a, b = fish
         if a < 0:
             a *= -1
             b *= -1
         return (-b, a)
-
 
     ans = 1
     counted_key = set()
@@ -66,7 +63,9 @@ def main():
     ans -= 1
     print((ans % mod))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -2,8 +2,10 @@ from collections import deque
 from math import gcd
 import sys
 
+
 def input():
     return sys.stdin.readline().rstrip()
+
 
 MOD = 10**9 + 7
 n = int(input())
@@ -28,7 +30,7 @@ for _ in range(n):
     if (a, b) not in cnt:
         cnt[(a, b)] = [0, 0]
 
-    cnt[(a, b)][rotate%2] += 1
+    cnt[(a, b)][rotate % 2] += 1
 
 for key in cnt:
     A, B = cnt[key]
@@ -36,6 +38,5 @@ for key in cnt:
     ans %= MOD
 
 ans += zero_cnt
-ans -= 1 #for empty set
+ans -= 1  # for empty set
 print((ans % MOD))
-

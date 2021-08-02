@@ -27,7 +27,6 @@ for i in range(n + 1):
             return
         for j in range(0, len(cycles[i]), 2):
             for k in range(i):
-                p[cycles[i][j][k]] = cycles[i][j + 1][k] 
+                p[cycles[i][j][k]] = cycles[i][j + 1][k]
                 p[cycles[i][j + 1][k]] = cycles[i][j][(k + 1) % i]
 print(' '.join([str(i + 1) for i in p]))
-

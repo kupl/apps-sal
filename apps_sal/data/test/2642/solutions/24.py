@@ -57,4 +57,3 @@ for (s, a, b) in list(cnt.keys()):
 ans = (ans - 1 + M) % M  # Remove empty set
 ans = (ans + case00) % M  # Special case
 print(ans)
-

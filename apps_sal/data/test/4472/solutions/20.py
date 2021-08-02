@@ -23,10 +23,9 @@ for i in range(m + (n) % 2):
         continue
 
     if b[m + i] == b[p - i] or a[m + i] == b[m + i] or a[m + i] == b[p - i] or a[p - i] == b[m + i] or a[p - i] == b[
-        p - i]:
+            p - i]:
         count += 1
     else:
         count += 2
 
 print(count)
-

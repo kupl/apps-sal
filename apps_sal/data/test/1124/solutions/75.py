@@ -1,4 +1,4 @@
-#region Header
+# region Header
 #!/usr/bin/env python3
 # from typing import *
 
@@ -11,16 +11,17 @@ import itertools
 from queue import PriorityQueue
 import bisect
 
+
 def input():
     return sys.stdin.readline()[:-1]
 
+
 sys.setrecursionlimit(1000000)
-#endregion
+# endregion
 
 # _INPUT = """# paste here...
 # """
 # sys.stdin = io.StringIO(_INPUT)
-
 
 
 # def solve(N: int, a: List[int]) -> int:
@@ -45,7 +46,9 @@ def main():
     a1 = solve(N, a)
     print(a1)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

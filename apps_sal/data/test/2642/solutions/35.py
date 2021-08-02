@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from collections import defaultdict
+from fractions import Fraction
+import bisect
+import math
+from pprint import pformat as pf
+from pprint import pprint as pp
 import sys
 sys.setrecursionlimit(10**7)
-from pprint import pprint as pp
-from pprint import pformat as pf
 # @pysnooper.snoop()
-#import pysnooper # debug
+# import pysnooper # debug
 
-import math
-#from sortedcontainers import SortedList, SortedDict, SortedSet # no in atcoder
-import bisect
-from fractions import Fraction
-from collections import defaultdict
+# from sortedcontainers import SortedList, SortedDict, SortedSet # no in atcoder
+
 
 def is_same_sign(a, b):
     if a > 0 and b > 0:
@@ -20,6 +21,7 @@ def is_same_sign(a, b):
     if a < 0 and b < 0:
         return True
     return False
+
 
 def fraction_taple(a, b):
     g = math.gcd(a, b)
@@ -30,6 +32,7 @@ def fraction_taple(a, b):
     a = abs(a) // g
     b = abs(b) // g
     return (s, a, b)
+
 
 def mode(a, b):
     # retrun dict_key, arr_key
@@ -46,7 +49,9 @@ def mode(a, b):
     else:
         return y, 1
 
+
 MOD = 1000000007
+
 
 def __starting_point():
 
@@ -61,8 +66,8 @@ def __starting_point():
             zero += 1
         else:
             d[dkey][akey] += 1
-    #print('d') # debug
-    #pp(d) # debug
+    # print('d') # debug
+    # pp(d) # debug
 
     ans = 1
     for pair in list(d.values()):
@@ -70,9 +75,10 @@ def __starting_point():
         ans *= tmp
     ans += zero - 1
     ans %= MOD
-    #print('ans') # debug
+    # print('ans') # debug
     print(ans)
 
-    #print('\33[32m' + 'end' + '\033[0m') # debug
+    # print('\33[32m' + 'end' + '\033[0m') # debug
+
 
 __starting_point()

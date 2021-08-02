@@ -37,4 +37,3 @@ for k1, v in list(d.items()):
         ans = ans * (pow(2, v, mod) + pow(2, d[k2], mod) - 1) % mod
 ans = ans * pow(2, all, mod) % mod
 print(((ans - 1 + zero) % mod))
-

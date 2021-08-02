@@ -9,7 +9,7 @@ zz = 0
 sz = 0
 tz = 0
 for _ in range(N):
-    a,b = map(int, input().split())
+    a, b = map(int, input().split())
 
     # (a, b) = (0, 0)
     if a == 0 and b == 0:
@@ -28,19 +28,19 @@ for _ in range(N):
     if b < 0:
         a *= -1
         b *= -1
-    I.append((a//gcd,b//gcd))
+    I.append((a // gcd, b // gcd))
 
 S = []
 T = []
 C = Counter(I)
 for a, b in C.keys():
     if a > 0:
-        S.append(C[(a,b)])
-        T.append(C[(-b,a)])
+        S.append(C[(a, b)])
+        T.append(C[(-b, a)])
     else:
-        if C[(b,-a)] == 0:
+        if C[(b, -a)] == 0:
             S.append(0)
-            T.append(C[(a,b)])
+            T.append(C[(a, b)])
 
 ans = 1
 ans *= 2**sz + 2**tz - 1
