@@ -10,6 +10,6 @@ for i in range(len(s)):
     f = m - i
     if f < 0:
         break
-    r[i] = s[i] +  min(k * (n - i), f)
+    r[i] = s[i] + min(k * (n - i), f)
     r[i] /= n - i
 print(max(r))

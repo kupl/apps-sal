@@ -15,4 +15,3 @@ for i in range(one_num):
     line += '1'
 
 print(line)
-

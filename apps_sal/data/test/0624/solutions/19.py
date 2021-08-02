@@ -10,4 +10,3 @@ for i in range(n):
         continue
     ans = max(ans, float((s + min(m - (n - i - 1), (i + 1) * k)) / (i + 1)))
 print(ans)
-

@@ -23,4 +23,3 @@ if ans % 2 == 0:
     print('cslnb')
 else:
     print('sjfnb')
-

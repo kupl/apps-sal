@@ -20,4 +20,3 @@ if n - len(set(a)) == 1:
 for i in range(n):
     tmp += a[i] - i
 print('cslnb' if not tmp % 2 else 'sjfnb')
-

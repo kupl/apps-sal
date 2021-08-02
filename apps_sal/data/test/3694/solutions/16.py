@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -236,22 +238,22 @@ def main():
     li.sort()
     res = 0
     for i, ele in enumerate(li):
-        if ele<i:
+        if ele < i:
             print("cslnb")
             return
-        else: res+= ele-i
+        else: res += ele - i
     counter = Counter(li)
     cnt2 = 0
     for i in counter.keys():
-        if counter[i]>2 or counter[0]>1:
+        if counter[i] > 2 or counter[0] > 1:
             print("cslnb")
             return
-        elif counter[i]==2:
-            cnt2+=1
-            if cnt2>1 or i-1 in counter:
+        elif counter[i] == 2:
+            cnt2 += 1
+            if cnt2 > 1 or i - 1 in counter:
                 print("cslnb")
                 return
-    print("cslnb") if res%2==0 else print("sjfnb")
+    print("cslnb") if res % 2 == 0 else print("sjfnb")
 
 # --------------------------------------------------------------------- END=
 
@@ -261,4 +263,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

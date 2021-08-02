@@ -11,4 +11,3 @@ for _ in range(int(input())):
         b = posb
         a = max(a - n, x)
     print(a * b)
-

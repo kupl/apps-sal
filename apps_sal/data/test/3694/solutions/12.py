@@ -20,6 +20,7 @@ def is_winning_state(nims, n):
         return True
     return False
 
+
 def main():
     n = int(input())
     nims = list(map(int, input().split()))
@@ -32,5 +33,5 @@ def main():
         else:
             print('sjfnb')
 
-main()
 
+main()

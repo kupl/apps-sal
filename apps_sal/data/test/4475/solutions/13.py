@@ -5,7 +5,7 @@
 
 
 for _ in range(int(input())):
-    a,b,x,y,n = list(map(int,input().split()))
+    a, b, x, y, n = list(map(int, input().split()))
     if a + b - x - y < n:
         print(x * y)
     else:
@@ -16,7 +16,7 @@ for _ in range(int(input())):
             if product < minProduct:
                 minProduct = product
         else:
-            product = x * max(y,b - n + a - x)
+            product = x * max(y, b - n + a - x)
             if product < minProduct:
                 minProduct = product
         # Decreasing b first
@@ -25,8 +25,7 @@ for _ in range(int(input())):
             if product < minProduct:
                 minProduct = product
         else:
-            product = y * max(x,a - n + b - y)
+            product = y * max(x, a - n + b - y)
             if product < minProduct:
                 minProduct = product
         print(minProduct)
-

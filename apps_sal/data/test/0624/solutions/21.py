@@ -2,7 +2,7 @@ n, k, m = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
 hau = sum(A)
-heks = (sum(A) + min(m, n*k)) / n
+heks = (sum(A) + min(m, n * k)) / n
 for i in range(n - 1):
     if m > 0:
         m -= 1

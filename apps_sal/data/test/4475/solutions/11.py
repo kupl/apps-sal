@@ -4,7 +4,7 @@ for _ in range(t):
     a1 = a - min(a - x, n)
     n1 = n - min(a - x, n)
     b1 = b - min(b - y, n1)
-    
+
     b2 = b - min(b - y, n)
     n2 = n - min(b - y, n)
     a2 = a - min(a - x, n2)

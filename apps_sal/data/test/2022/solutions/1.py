@@ -1,6 +1,9 @@
-from sys import exit,stdin,stderr
+from sys import exit, stdin, stderr
+
+
 def rl():
     return [int(w) for w in stdin.readline().split()]
+
 
 n, m, k = rl()
 adj = [[] for _ in range(n + 1)]
@@ -56,4 +59,3 @@ else:
         if len(ri) >= k2:
             print(*ri[:k2])
             break
-
