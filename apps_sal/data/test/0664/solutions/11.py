@@ -8,7 +8,7 @@ for i in range(n):
 k = 0
 while (k < n - 1 and a[k] <= a[k + 1]):
     k += 1
-    
+
 i = k + 1
 flag = False
 while (i < n - 1):
@@ -18,10 +18,8 @@ while (i < n - 1):
 
 if (k < n - 1 and a[n - 1] > a[0]):
     flag = True
-    
+
 if flag == True:
     print(-1)
 else:
     print(n - 1 - k)
-    
-

@@ -1,2 +1,2 @@
-n=int(input())
-print(pow(n-2,2))
+n = int(input())
+print(pow(n - 2, 2))

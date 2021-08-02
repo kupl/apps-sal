@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 # M. The Pleasant Walk
 n, k = mi()
@@ -18,4 +23,3 @@ for ai in a:
         ans = max(ans, c)
     p = ai
 print(ans)
-

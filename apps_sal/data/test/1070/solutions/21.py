@@ -7,5 +7,5 @@ for i in range(1, n):
         label = i
     cur = i - label + 1
     if cur > ans:
-            ans = cur
-print(ans)        
+        ans = cur
+print(ans)

@@ -12,4 +12,3 @@ for i in range(n - 1):
 if m > Max:
     Max = m
 print(Max)
-
