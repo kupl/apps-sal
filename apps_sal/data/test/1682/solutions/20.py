@@ -18,5 +18,6 @@ if i == n:
 while prices_n_sales[i][1] < 0:
     total += prices_n_sales[i][0] + prices_n_sales[i][1]
     i += 1
-    if i >= n: break
+    if i >= n:
+        break
 print(total + sum(ps[0] for ps in prices_n_sales[i:]))

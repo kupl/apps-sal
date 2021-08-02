@@ -14,7 +14,8 @@ class Solution:
         # my no6, 56ms, beats 100%
         if len(intervals) == 0:
             return [newInterval]
-        start = 0; end = 0
+        start = 0
+        end = 0
         foundl = foundr = -1
         for i, n in enumerate(intervals):
             if foundl == -1 and newInterval.start <= n.end:

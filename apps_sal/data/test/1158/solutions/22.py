@@ -2,7 +2,8 @@ n, k = map(int, input().split())
 M = list(map(int, input().split()))
 
 T = [0] * 100
-for i in range(n): T[M[i] - 1] += 1
+for i in range(n):
+    T[M[i] - 1] += 1
 
 t, b = 0, 0
 for i in range(100):

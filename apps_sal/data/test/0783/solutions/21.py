@@ -1,4 +1,5 @@
-n = int(input()); li = list(map(int, input().split(" ")))
+n = int(input())
+li = list(map(int, input().split(" ")))
 lu = []
 k = 0
 for i in range(n - 1, -1, -1):
