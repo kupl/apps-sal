@@ -8,7 +8,7 @@ for d, v in t[: m]:
         if p[j]: p[j + d] = max(p[j + d], p[j] + v)
     p[d] = max(p[d], p[0] + v)
     l += d
-for d, v in t[m: ]:
+for d, v in t[m:]:
     for j in range(- d, l + 1):
         if p[j]: p[j + d] = max(p[j + d], p[j] + v)
 print(p[0] * k if p[0] else -1)

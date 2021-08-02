@@ -10,5 +10,3 @@ for c in s:
 
 ans = ["NO", "YES"][idx == len(p)]
 print(ans)
-
-

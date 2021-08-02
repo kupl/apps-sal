@@ -1,6 +1,8 @@
 import sys
 
 # @profile
+
+
 def main():
     f = sys.stdin
     # f = open('input.txt', 'r')
@@ -35,5 +37,5 @@ def main():
     else:
         print('NO')
 
-main()
 
+main()

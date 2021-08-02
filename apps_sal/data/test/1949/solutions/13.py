@@ -5,8 +5,7 @@ if 0 in a:
 q1 = 0
 for q in range(k):
     if q < len(a):
-        print(a[q]-q1)
-        q1 += a[q]-q1
+        print(a[q] - q1)
+        q1 += a[q] - q1
     else:
         print(0)
-

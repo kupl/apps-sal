@@ -14,4 +14,3 @@ for i in range(len(s)):
         print('YES')
 if f < 5:
     print('NO')
-

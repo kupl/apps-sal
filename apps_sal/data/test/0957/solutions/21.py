@@ -17,4 +17,3 @@ if a != -1:
                     print("YES")
                     return
 print("NO")
-

@@ -1,5 +1,5 @@
 n = int(input())
-ai = list(map(int,input().split()))
+ai = list(map(int, input().split()))
 mini = 0
 maxi = 0
 for i in range(n):
@@ -7,5 +7,4 @@ for i in range(n):
         maxi = i
     if ai[i] == 1:
         mini = i
-print(max(maxi,mini,n-maxi-1,n-mini-1))
-
+print(max(maxi, mini, n - maxi - 1, n - mini - 1))

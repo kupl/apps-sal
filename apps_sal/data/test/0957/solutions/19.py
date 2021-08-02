@@ -13,4 +13,3 @@ for i in range(len(s)):
         print("YES")
         return
 print("NO")
-

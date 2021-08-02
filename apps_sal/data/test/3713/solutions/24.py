@@ -8,4 +8,3 @@ def non_standard(s):
 m = int(input())
 t = input()
 print(non_standard(t))
-

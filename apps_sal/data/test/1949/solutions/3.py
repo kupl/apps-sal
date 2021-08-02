@@ -1,5 +1,5 @@
-n,k = list(map(int,input().split()))
-a = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
 a = sorted(a)
 p = 0
 cnt = 0
@@ -11,7 +11,6 @@ for i in a:
         if p >= k:
             return
 else:
-    while p!=k:
+    while p != k:
         print(0)
         p += 1
-

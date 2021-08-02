@@ -20,11 +20,8 @@ while k > 0:
     if num == subbed:
         continue
 
-    tosub = num-subbed
+    tosub = num - subbed
     print(tosub)
 
     k -= 1
     subbed = num
-
-
-

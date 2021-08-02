@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     s = input()
 
@@ -7,6 +8,7 @@ def solve():
         print('YES')
     else:
         print('NO')
+
 
 def is_subst(s, t):
     tlen = len(t)
@@ -26,6 +28,9 @@ def is_subst(s, t):
 
     return cnt == tlen
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

@@ -4,8 +4,7 @@ a.sort()
 rk = iter(list(range(k)))
 prv = 0
 for x, _ in zip(a, rk):
-	print(x - prv)
-	prv = x
+    print(x - prv)
+    prv = x
 for __ in rk:
-	print('0')
-
+    print('0')

@@ -23,7 +23,9 @@ def main():
             else:
                 break
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

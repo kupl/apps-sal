@@ -8,8 +8,7 @@ for i in range(n):
         pos_mini = arr.index(mini)
         maxi = max(arr)
         pos_maxi = arr.index(maxi)
-        
-        ans = max(ans, abs(pos_maxi-pos_mini))
+
+        ans = max(ans, abs(pos_maxi - pos_mini))
         arr[i], arr[j] = arr[j], arr[i]
 print(ans)
-

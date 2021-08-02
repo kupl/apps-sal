@@ -13,4 +13,3 @@ a = 0
 for i in range(k):
     print(max(0, s[i] - a))
     a = s[i]
-
