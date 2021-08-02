@@ -1,7 +1,7 @@
 import sys
 import math
 s = input()
-cnt = s.count("VK");
+cnt = s.count("VK")
 if s[:2] == "KK":
     cnt += 1
 elif s[-2:] == 'VV':

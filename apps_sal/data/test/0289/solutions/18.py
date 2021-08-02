@@ -15,7 +15,7 @@ for i in range(len(s)):
         if i == 1 and s[1] == 'K' and s[0] == 'K':
             k += 1
             break
-        if s[i] == 'K' and s[i- 1] == 'K' and s[i - 2] == 'K':
+        if s[i] == 'K' and s[i - 1] == 'K' and s[i - 2] == 'K':
             k += 1
             break
 print(k)

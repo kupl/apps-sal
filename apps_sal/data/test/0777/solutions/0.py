@@ -10,5 +10,4 @@
 
 """
 
-print(len(input())*25+26)
-
+print(len(input()) * 25 + 26)

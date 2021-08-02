@@ -112,9 +112,11 @@ class unitTests(unittest.TestCase):
         self.assertEqual(calculate(["a"]), 51)
         self.assertEqual(calculate(["hi"]), 76)
 
+
 def __starting_point():
     if sys.argv[-1] == "-ut":
         unittest.main(argv=[" "])
     main()
+
 
 __starting_point()

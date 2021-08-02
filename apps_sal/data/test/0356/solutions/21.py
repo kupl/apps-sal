@@ -19,4 +19,3 @@ else:
             b[-2] += b[-1]
             del b[-1]
     print(L)
-

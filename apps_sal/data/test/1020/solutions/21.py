@@ -1,4 +1,4 @@
-m, n, k = list(map(int,input().split()))
+m, n, k = list(map(int, input().split()))
 s = 0
 for i in range(k):
     s += 2 * m
@@ -6,4 +6,3 @@ for i in range(k):
     m -= 4
     n -= 4
 print(s)
-

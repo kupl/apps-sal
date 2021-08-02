@@ -17,5 +17,5 @@ def write():
 testcases = int(input())
 
 for case in range(testcases):
-    (a,b,c,d)  = [int(zax) for zax in input().split()]
-    print(b,c,c)
+    (a, b, c, d) = [int(zax) for zax in input().split()]
+    print(b, c, c)

@@ -8,6 +8,5 @@ for c in cs:
     cc[c] += 1
 
 
-total = n - abs(cc['U']-cc['D']) - abs(cc['L']-cc['R'])
+total = n - abs(cc['U'] - cc['D']) - abs(cc['L'] - cc['R'])
 print(total)
-

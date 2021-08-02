@@ -20,4 +20,4 @@ S = input()
 
 u, d, l, r = S.count('U'), S.count('D'), S.count('L'), S.count('R')
 
-print(N - abs(u-d) - abs(l-r))
+print(N - abs(u - d) - abs(l - r))

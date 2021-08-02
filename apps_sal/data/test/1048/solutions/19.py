@@ -15,4 +15,3 @@ ans += min(l, r) * 2
 ans += min(u, d) * 2
 
 print(ans)
-

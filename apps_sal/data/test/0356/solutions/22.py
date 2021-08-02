@@ -34,5 +34,5 @@ def go():
         return -1
     return len([i for i in a if i is not None])
 
-print(go())
 
+print(go())

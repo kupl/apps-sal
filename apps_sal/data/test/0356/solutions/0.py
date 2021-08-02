@@ -6,7 +6,7 @@ b = list(map(int, input().split()))
 
 ptra = 1
 ptrb = 1
-sa = a[0] 
+sa = a[0]
 sb = b[0]
 ans = 0
 
@@ -34,5 +34,3 @@ if sa != sb:
     print(-1)
     return
 print(ans + 1)
-
-

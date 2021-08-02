@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from sys import stdin,stdout
+from sys import stdin, stdout
 
 
 def ri():
@@ -16,22 +16,20 @@ if l == 1:
 
 
 count = 0
-for i in range(l-1):
+for i in range(l - 1):
     if v[i]:
         continue
-    if s[i:i+2] == "VK":
+    if s[i:i + 2] == "VK":
         v[i] = 1
-        v[i+1] = 1
+        v[i + 1] = 1
         count += 1
 
-for i in range(l-1):
-    if v[i] or v[i+1]:
+for i in range(l - 1):
+    if v[i] or v[i + 1]:
         continue
 
-    if s[i:i+2] == "VV" or s[i:i+2] == "KK":
+    if s[i:i + 2] == "VV" or s[i:i + 2] == "KK":
         count += 1
         break
 
 print(count)
-
-

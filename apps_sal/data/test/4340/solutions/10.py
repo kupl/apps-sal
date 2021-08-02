@@ -7,4 +7,5 @@ def __starting_point():
     for i in arr:
         print(i, end=" ")
 
+
 __starting_point()

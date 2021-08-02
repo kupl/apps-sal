@@ -44,7 +44,7 @@ def rlinput():
 
 def factors(n):
     return set(reduce(list.__add__,
-                      ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+                      ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
 
 
 # ----------------------------------------------------
@@ -53,6 +53,8 @@ def factors(n):
 
 def __starting_point():
     for _ in range(iinput()):
-        a,b,c,d=rinput()
-        print(b,c,c)
+        a, b, c, d = rinput()
+        print(b, c, c)
+
+
 __starting_point()
