@@ -1,1 +1,1 @@
-input();print(*(map(''.join,zip(*input().split()))),sep='')
+input(); print(*(map(''.join, zip(*input().split()))), sep='')

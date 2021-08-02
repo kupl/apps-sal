@@ -1,10 +1,14 @@
+from collections import defaultdict
+
+
 def f(x, p):
     q = []
     while x:
         q.append(x)
         x = p[x]
     return q
-from collections import defaultdict
+
+
 n, k = map(int, input().split())
 t = list(map(int, input().split()))
 p = [0] * (n + 1)

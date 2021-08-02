@@ -26,4 +26,3 @@ for i, v in enumerate(link1, 1):
 for i in range(n):
     if table[i]:
         print(i + pos)
-

@@ -9,5 +9,4 @@ a.sort()
 k = 1
 for c in a:
     if c >= k: k += 1
-print(k-1)
-
+print(k - 1)

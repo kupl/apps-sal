@@ -5,6 +5,8 @@ def isAuto(s, t):
         if j == len(t):
             return True
     return False
+
+
 def isArray(s, t):
     sarr = [0] * 256
     tarr = [0] * 256
@@ -14,6 +16,8 @@ def isArray(s, t):
         if sarr[i] != tarr[i]:
             return False
     return True
+
+
 def isBoth(s, t):
     sarr = [0] * 256
     tarr = [0] * 256
@@ -23,6 +27,7 @@ def isBoth(s, t):
         if sarr[i] < tarr[i]:
             return False
     return True
+
 
 s = input()
 t = input()

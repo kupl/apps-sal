@@ -4,14 +4,13 @@ for c in range(ct):
     li = [int(i) for i in input().split()]
 
     op = [0 for i in range(n)]
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         pos = li.index(i)
-        for j in range(pos-1, -1, -1):
-            if op[j] == 0 and li[j] > li[j+1]:
+        for j in range(pos - 1, -1, -1):
+            if op[j] == 0 and li[j] > li[j + 1]:
                 op[j] = 1
-                li[j], li[j+1] = li[j+1], li[j]
+                li[j], li[j + 1] = li[j + 1], li[j]
             else:
                 break
     # print(op)
     print(*li)
-

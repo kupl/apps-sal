@@ -126,5 +126,5 @@ def main():
     # print(dc)
     print(ans)
 
-main()
 
+main()

@@ -1,12 +1,14 @@
 s, t = input(), input()
 sx, tx = str(sorted(s)), str(sorted(t))
 
+
 def subset(s, t):
     i = 0
     for c in s:
         if c == t[i]: i += 1
         if i == len(t): break
     return i == len(t)
+
 
 if sx == tx:
     print("array")

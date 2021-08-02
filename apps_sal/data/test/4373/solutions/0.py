@@ -8,4 +8,5 @@ def main():
     print(j - 1)
     return 0
 
+
 main()

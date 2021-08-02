@@ -1,4 +1,4 @@
-def read(type = 1):
+def read(type=1):
     if type:
         file = open("input.dat", "r")
         n = int(file.readline())
@@ -25,7 +25,7 @@ def solve():
         if b[i] == "G":
             sol += 5 * a[i]
             e += a[i]
-            g += 2*a[i]
+            g += 2 * a[i]
         if b[i] == "L":
             sol += a[i]
             e -= a[i]
@@ -35,10 +35,10 @@ def solve():
                 else:
                     sol -= 5 * e
                 e = 0
-        g = min(e,g)
+        g = min(e, g)
     if e:
-        sol -= 2*g
-        sol -= (e-g)
+        sol -= 2 * g
+        sol -= (e - g)
     return int(sol)
 
 

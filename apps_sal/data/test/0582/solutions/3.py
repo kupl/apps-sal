@@ -20,6 +20,7 @@ def read_int_array():
 
 ######################################################
 
+
 n = read_int()
 a = read_int_array()
 t = read_int_array()
@@ -40,9 +41,3 @@ while cnt or i < n:
     else:
         cntValue = srt[i][0]
 print(ans)
-
-
-
-
-
-

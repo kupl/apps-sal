@@ -1,10 +1,10 @@
-n=int(input())
-a=[int(s) for s in input().split()]
+n = int(input())
+a = [int(s) for s in input().split()]
 a.sort()
-cur=1
-ans=0
+cur = 1
+ans = 0
 for i in range(n):
-    if a[i]>=cur:
-        cur+=1
-        ans+=1
+    if a[i] >= cur:
+        cur += 1
+        ans += 1
 print(ans)

@@ -6,4 +6,3 @@ for _ in range(tests):
         print(f + y)
     else:
         print(f - x + y)
-

@@ -18,6 +18,7 @@ def can_with_both(src, dst):
             return False
     return True
 
+
 s = input()
 t = input()
 
@@ -29,4 +30,3 @@ elif can_with_both(s, t):
     print("both")
 else:
     print("need tree")
-

@@ -11,7 +11,7 @@ for c in t:
     if c in _s:
         _s = _s[:_s.index(c)] + _s[_s.index(c) + 1:]
     else:
-        needTree = True 
+        needTree = True
 if needTree:
     print("need tree")
 else:
@@ -24,7 +24,7 @@ else:
                     j += 1
                 if j >= len(s):
                     both = True
-                j+=1
+                j += 1
             if both:
                 print("both")
             else:
@@ -32,4 +32,4 @@ else:
         else:
             print("array")
     else:
-        print("automaton")        
+        print("automaton")

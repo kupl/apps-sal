@@ -7,4 +7,3 @@ for i in range(n):
     new_word_list.append(t[i])
 
 print((''.join(new_word_list)))
-

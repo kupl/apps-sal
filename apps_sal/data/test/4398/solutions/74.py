@@ -1,5 +1,5 @@
 N = int(input())
-S,T = list(map(str, input().split()))
+S, T = list(map(str, input().split()))
 i = 0
 ST = ''
 while i < N:
@@ -7,4 +7,3 @@ while i < N:
     i += 1
 
 print(ST)
-

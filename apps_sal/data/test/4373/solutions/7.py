@@ -32,5 +32,5 @@ def main():
             out += 1
     write(out)
 
-main()
 
+main()

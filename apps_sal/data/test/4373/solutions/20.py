@@ -4,8 +4,7 @@ sp.sort()
 k = 1
 ind = 0
 while ind != n:
-	if sp[ind] >= k:
-		k += 1
-	ind += 1
+    if sp[ind] >= k:
+        k += 1
+    ind += 1
 print(k - 1)
-

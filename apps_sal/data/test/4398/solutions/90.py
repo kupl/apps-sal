@@ -1,4 +1,4 @@
 N = input()
-S,T = input().split()
+S, T = input().split()
 
-print(*[s+t for s,t in zip(S,T)], sep="")
+print(*[s + t for s, t in zip(S, T)], sep="")

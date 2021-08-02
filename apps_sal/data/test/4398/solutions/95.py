@@ -1,5 +1,5 @@
 N = int(input())
-S, T = map(str,input().split())
+S, T = map(str, input().split())
 res_list = []
 
 for a in range(N):

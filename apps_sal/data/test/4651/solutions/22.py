@@ -13,5 +13,5 @@ for _ in range(int(input())):
         a = a[x - 1:]
         if m in a:
             a.remove(m)
-        
+
     print(*ans)

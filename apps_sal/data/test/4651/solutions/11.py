@@ -32,4 +32,3 @@ input = lambda: sys.stdin.readline().strip()
 get_ints = lambda: list(map(int, input().split()))
 get_array = lambda: list(map(int, input().split()))
 main()
-

@@ -5,5 +5,4 @@ contest = 1
 for i in range(n):
     if a[i] >= contest:
         contest += 1
-print(contest-1)
-
+print(contest - 1)

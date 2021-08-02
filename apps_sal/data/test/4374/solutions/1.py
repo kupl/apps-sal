@@ -54,4 +54,3 @@ s, p2 = dfs(p1, 0, 0, n + 1)
 print(s)
 for item in r:
     print(item[0], item[1])
-

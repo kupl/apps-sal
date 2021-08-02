@@ -5,6 +5,8 @@ def f(a, b):
             j += 1
             if j == n: return True
     return False
+
+
 a, b = input(), input()
 t = [0] * 26
 for i in a: t[ord(i) - 97] += 1
