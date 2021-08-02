@@ -31,4 +31,3 @@ for _ in range(int(input())):
     if m < 9:
         a.append(i + 1)
 print((i // 10))
-

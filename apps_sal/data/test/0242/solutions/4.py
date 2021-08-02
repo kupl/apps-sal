@@ -21,4 +21,3 @@ m = int(input())
 l, r = find(m), find(m + 1)
 print(r - l)
 print(*list(range(l, r)))
-

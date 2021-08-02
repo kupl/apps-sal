@@ -2,6 +2,7 @@ from sys import setrecursionlimit
 setrecursionlimit(10 ** 5)
 k = int(input())
 
+
 def dfs(d, val, alls):
     alls.append(val)
     if d == 10:
@@ -17,5 +18,4 @@ alls = list()
 for i in range(1, 10):
     dfs(1, i, alls)
 alls.sort()
-print((alls[k-1]))
-
+print((alls[k - 1]))

@@ -17,22 +17,22 @@ Created on Sat Sep 12 22:49:54 2020
       100 + 0 - 1 *
 """
 
-from collections import deque
 
+from collections import deque
 K = int(input())
 
 q = deque()
-for i in range(1,10):
+for i in range(1, 10):
     q.append(i)
-    
+
 cnt = 0
-while cnt  != K:
+while cnt != K:
     cnt += 1
     ans = q.popleft()
-    #print(ans)
+    # print(ans)
     if ans % 10 != 0:
-        q.append(10*ans + ans%10 - 1)
-    q.append(10*ans + ans%10 )
+        q.append(10 * ans + ans % 10 - 1)
+    q.append(10 * ans + ans % 10)
     if ans % 10 != 9:
-        q.append(10*ans + ans%10 + 1)
+        q.append(10 * ans + ans % 10 + 1)
 print(ans)

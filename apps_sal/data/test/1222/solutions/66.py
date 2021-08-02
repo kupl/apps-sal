@@ -1,5 +1,6 @@
 k = int(input())
 
+
 def make_lunlun(lunlun_lst):
     ret_lunlun = []
     for num in lunlun_lst:
@@ -14,6 +15,7 @@ def make_lunlun(lunlun_lst):
         ret_lunlun.append(int(num_tmp))
     return ret_lunlun
 
+
 lunlun_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 while 1:
@@ -24,4 +26,3 @@ while 1:
         lunlun_lst.sort()
         print((lunlun_lst[k - 1]))
         break
-

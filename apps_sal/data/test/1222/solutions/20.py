@@ -32,4 +32,3 @@ for i in range(k - 1):
 res = tmp.popleft()
 
 print(res)
-

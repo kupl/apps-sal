@@ -6,6 +6,7 @@ def zeroes(x):
         x = d
     return n
 
+
 m = int(input())
 i = 0
 j = 500000
@@ -23,4 +24,3 @@ while j - i > 1:
         break
 else:
     print(0)
-

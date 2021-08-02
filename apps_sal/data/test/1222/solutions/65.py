@@ -20,4 +20,3 @@ while count != K:
     count += 1
 
 print(x)
-

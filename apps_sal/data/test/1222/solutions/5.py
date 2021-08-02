@@ -14,4 +14,4 @@ while True:
     b = a % 10
     for i in (-1, 0, 1):
         if 0 <= b + i <= 9:
-            q.append(a*10 + b+i)
+            q.append(a * 10 + b + i)

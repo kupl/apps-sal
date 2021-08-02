@@ -1,7 +1,9 @@
 import itertools as it
 
+
 def dist(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
 
 def spir_dist(x):
     a, b = x
@@ -9,6 +11,7 @@ def spir_dist(x):
         return b
     else:
         return 2 * b - a
+
 
 n = int(input())
 
@@ -25,7 +28,7 @@ A_g = it.groupby(A_s, key=max)
 A_t = [p + p if len(p) == 1 else [p[0], p[-1]]
        for p in [sorted(list(q[1]), key=spir_dist) for q in A_g]]
 
-B = [[0,0]]
+B = [[0, 0]]
 
 for i in range(1, len(A_t)):
     pa, pb = A_t[i]
@@ -35,4 +38,3 @@ for i in range(1, len(A_t)):
     B += [[x, y]]
 
 print(min(B[len(A_t) - 1]))
-

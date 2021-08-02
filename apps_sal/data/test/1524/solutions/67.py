@@ -8,11 +8,11 @@ now = ''
 flag1 = 0
 flag2 = 0
 
-for i in range(1,N):
+for i in range(1, N):
     now = S[i]
     if prev != now:
         if prev == 'R':
-            flag1 = i-1
+            flag1 = i - 1
             flag2 = i
         else:
             if flag1 % 2 == 0:

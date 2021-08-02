@@ -1,6 +1,6 @@
+import queue
 k = int(input())
 
-import queue
 
 que = queue.Queue()
 

@@ -19,10 +19,10 @@ for i in range(len(c)):
     odd = c[i][1] - even
 
     if c[i][0] == "R":
-        ans[index+c[i][1]-1] += odd
-        ans[index+c[i][1]] += even
+        ans[index + c[i][1] - 1] += odd
+        ans[index + c[i][1]] += even
     else:
-        ans[index-1] += even
+        ans[index - 1] += even
         ans[index] += odd
 
     index += c[i][1]

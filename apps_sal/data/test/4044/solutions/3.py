@@ -22,13 +22,13 @@ for i in range(x - 1):
 if prev == 0:
     for i in range(a):
         print(0, end='')
-    
+
     for i in range(b):
         print(1, end='')
 
 else:
     for i in range(b):
         print(1, end='')
-        
+
     for i in range(a):
         print(0, end='')

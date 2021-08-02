@@ -13,6 +13,7 @@ def cnt_zeroes(n):
         i -= 1
     return ans
 
+
 def bin_search(n):
     l = 1
     r = 1000000
@@ -27,13 +28,13 @@ def bin_search(n):
     else:
         return r
 
+
 n = int(input())
 f = bin_search(n)
 if cnt_zeroes(f) == n:
     print(5)
     for x in range(f, f + 5):
-        print(x,end=' ')
+        print(x, end=' ')
     print()
 else:
     print(0)
-

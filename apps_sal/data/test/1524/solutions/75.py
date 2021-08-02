@@ -1,5 +1,5 @@
 S = input()
-A = [0]*len(S)
+A = [0] * len(S)
 n = 0
 m = 0
 num = 0
@@ -37,10 +37,10 @@ for i in range(len(S)):
         num += 1
     else:
         if num % 2 == 0:
-            A[-(i+1)] += n
+            A[-(i + 1)] += n
             A[-i] += m
         else:
-            A[-(i+1)] += m
+            A[-(i + 1)] += m
             A[-i] += n
         n = 0
         m = 0

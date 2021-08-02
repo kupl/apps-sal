@@ -17,4 +17,3 @@ while True:
     if t[-1] != "9":
         heappush(a, int(t + str(int(t[-1]) + 1)))
 print(t)
-

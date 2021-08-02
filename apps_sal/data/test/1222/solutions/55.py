@@ -9,7 +9,7 @@ for i in range(N - 1):
     if x % 10 != 0:
         y = 10 * x + x % 10 - 1
         Q.append(y)
-    
+
     y = 10 * x + x % 10
     Q.append(y)
 

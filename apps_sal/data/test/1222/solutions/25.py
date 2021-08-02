@@ -60,7 +60,7 @@ K = int(input())
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:
@@ -77,7 +77,7 @@ for i in range(9):
         if str(val)[-1] != "9":
             tmp.append(val * 10 + int(str(val)[-1]) + 1)
     cand.append(tmp)
-        
+
 ans = []
 for l in cand:
     for i in l:

@@ -18,4 +18,3 @@ for i in range(K):
         q.append(runrun * 10 + rem + 1)
 
 print(runrun)
-

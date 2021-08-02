@@ -11,4 +11,3 @@ for _ in range(int(input())):
     if y != 9:
         D.append(10 * x + y + 1)
 print(x)
-

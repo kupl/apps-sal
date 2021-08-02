@@ -19,9 +19,6 @@ while True:
 if a1 > 0 and a2 > 0:
     print(a2 - a1)
     for i in range(a1, a2):
-        print(i, end = ' ')
+        print(i, end=' ')
 else:
     print(0)
-    
-    
-

@@ -1,6 +1,7 @@
 K = int(input())
 a = []
 
+
 def DFS(n):
     if n > 3234566667:
         return
@@ -17,8 +18,9 @@ def DFS(n):
         DFS(10 * n + l + 1)
         DFS(10 * n + l - 1)
 
+
 for i in range(1, 10):
     DFS(i)
 
 a = sorted(a)
-print(a[K-1])
+print(a[K - 1])

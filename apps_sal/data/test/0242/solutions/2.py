@@ -9,7 +9,7 @@ while cnt < a:
         cnt += 1
 if cnt == a:
     print(5)
-    for s in range(i, i+5):
+    for s in range(i, i + 5):
         print(s, end=' ')
 else:
     print(0)

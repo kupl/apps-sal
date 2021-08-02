@@ -25,4 +25,3 @@ while i + 1 < len(l):
 if l[-1][0] == 'R':
     ans[-1] = l[-1][1]
 print((*ans))
-

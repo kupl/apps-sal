@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 S = input()
@@ -30,6 +30,3 @@ li[ls - l - 1] += (r + 1) // 2 + l // 2
 li = [str(li[i]) for i in range(ls)]
 
 print((" ".join(li)))
-
-
-
