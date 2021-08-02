@@ -7,4 +7,3 @@ elif a in '0168':
     print('pon')
 else:
     print('hon')
-

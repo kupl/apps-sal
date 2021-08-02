@@ -26,5 +26,5 @@ def generate_str(start_str):
 
     return result
 
-print(generate_str('a'))
 
+print(generate_str('a'))

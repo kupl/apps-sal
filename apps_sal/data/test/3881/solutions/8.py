@@ -15,14 +15,14 @@ def dfs(c, cnt):
         return 1
     if cnt > n:
         return 0
-    
+
     nonlocal fr
     if c not in fr:
         return 0
-    
+
     ans = 0
     for i in fr[c]:
-        ans += dfs(i[0], cnt+1)
+        ans += dfs(i[0], cnt + 1)
     return ans
 
 

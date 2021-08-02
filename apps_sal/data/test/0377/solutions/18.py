@@ -6,4 +6,3 @@ else:
         print(m)
     else:
         print(1)
-

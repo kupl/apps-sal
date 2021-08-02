@@ -6,10 +6,10 @@ for i in range(m):
         d[o].append(t)
     else:
         d[o] = [t]
-    
+
 q = [('a', 0)]
 cnt = 0
-while q and q[0][1] < n :
+while q and q[0][1] < n:
     st = q[0]
     q.pop(0)
     if st[1] == n - 1:
@@ -17,6 +17,5 @@ while q and q[0][1] < n :
     if st[0][0] in d:
         for j in d[st[0][0]]:
             q.append((j + st[0][1:], st[1] + 1))
-            
-print(cnt)    
 
+print(cnt)

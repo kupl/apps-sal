@@ -12,4 +12,3 @@ for j in range(n):
         i += 1
     ans = max(ans, j - i + 1)
 print(ans)
-

@@ -17,4 +17,3 @@ for x in comb(word, repeat=n):
     if tmp == "a":
         ret.add(x)
 print(len(ret))
-

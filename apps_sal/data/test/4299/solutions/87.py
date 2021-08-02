@@ -6,4 +6,3 @@ elif int(n[-1]) in num:
     print("pon")
 else:
     print("hon")
-

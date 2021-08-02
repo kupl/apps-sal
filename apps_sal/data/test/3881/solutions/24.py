@@ -1,4 +1,4 @@
-#/usr/bin/env pypy3
+# /usr/bin/env pypy3
 # -*- coding: utf-8 -*-
 
 import collections
@@ -50,5 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

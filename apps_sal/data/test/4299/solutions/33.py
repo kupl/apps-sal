@@ -7,4 +7,3 @@ if n in [0, 1, 6, 8]:
     print("pon")
 if n in [3]:
     print("bon")
-

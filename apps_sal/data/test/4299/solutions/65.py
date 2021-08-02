@@ -1,1 +1,1 @@
-print('pphbhhphph'[int(input()[-1])]+'on')
+print('pphbhhphph'[int(input()[-1])] + 'on')

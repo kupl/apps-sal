@@ -8,4 +8,3 @@ for stop, a in enumerate(l):
         start += 1
     res.append(stop - start)
 print(max(res) + 1)
-

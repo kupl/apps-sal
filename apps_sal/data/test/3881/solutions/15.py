@@ -15,9 +15,7 @@ while len(l) > 0:
         for i in range(1):
             ch = s[i]
             for new in t[ord(ch) - ord('a')]:
-                L += [s[:i] + new + s[i+1:]]
+                L += [s[:i] + new + s[i + 1:]]
     l = set(L)
 
 print(A)
-                
-

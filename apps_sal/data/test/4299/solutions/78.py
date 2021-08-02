@@ -6,4 +6,3 @@ elif N in [0, 1, 6, 8]:
     print('pon')
 else:
     print('bon')
-

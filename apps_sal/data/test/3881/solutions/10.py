@@ -7,6 +7,8 @@ for i in range(q):
     if f in g: g[f].append(to)
     else: g[f] = [to]
 counts = dict()
+
+
 def count(s):
     if s in counts: return counts[s]
     if len(s) == n:
@@ -22,5 +24,6 @@ def count(s):
         cnt += count(new_s)
     counts[s] = cnt
     return cnt
-print(count('a'))
 
+
+print(count('a'))

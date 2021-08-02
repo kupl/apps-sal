@@ -6,4 +6,3 @@ elif pen in [0, 1, 6, 8]:
     print('pon')
 elif pen in [3]:
     print('bon')
-

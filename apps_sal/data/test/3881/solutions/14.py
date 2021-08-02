@@ -18,5 +18,3 @@ for i in range(n - 2):
             p[ord(s[0]) - ord('a')] += t[j]
     t = p
 print(sum(t))
-    
-

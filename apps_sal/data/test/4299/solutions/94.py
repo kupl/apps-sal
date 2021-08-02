@@ -25,4 +25,3 @@ else:
     res = "bon"
 
 print(res)
-
