@@ -8,10 +8,10 @@ def solve(s):
 
     S = len(s)
     for c in T:
-        S = min(S, s.count(c)//T[c])
+        S = min(S, s.count(c) // T[c])
 
     return S
-    
+
+
 s = input().rstrip()
 print(solve(s))
-

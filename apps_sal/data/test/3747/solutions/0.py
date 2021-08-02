@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def main():
     s = input()
 
@@ -14,4 +15,3 @@ def main():
 
 
 main()
-

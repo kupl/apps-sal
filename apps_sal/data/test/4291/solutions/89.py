@@ -13,4 +13,3 @@ for i, s in enumerate(S):
 for _ in range(Q):
     l, r = list(map(int, input().split()))
     print((int(s_l[r - 1] - s_l[l - 1])))
-

@@ -4,8 +4,8 @@ S = input()
 a = [0] * N
 c = 0
 
-for i in range(N-1):
-    if S[i:i+2] == "AC":
+for i in range(N - 1):
+    if S[i:i + 2] == "AC":
         c += 1
     a[i + 1] = c
 

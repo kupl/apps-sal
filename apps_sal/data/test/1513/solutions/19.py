@@ -1,11 +1,11 @@
-n,m,k = list(map(int, input().strip().split()))
+n, m, k = list(map(int, input().strip().split()))
 
 b = list(map(int, input().strip().split()))
 
 diffs = []
 
-for j in range(len(b)-1):
-    diffs.append(b[j+1] - b[j] - 1)
+for j in range(len(b) - 1):
+    diffs.append(b[j + 1] - b[j] - 1)
 
 diffs.sort()
 
@@ -19,5 +19,3 @@ while segmentov > k:
     segmentov -= 1
 
 print(tape)
-
-

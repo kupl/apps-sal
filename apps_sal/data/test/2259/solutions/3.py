@@ -1,5 +1,7 @@
 from bisect import bisect_left, bisect_right, insort
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, arr = int(input()), list(R())
 dp = []
 for i in range(n):

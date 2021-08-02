@@ -5,8 +5,8 @@ s = input()
 lr = [tuple(map(int, input().split())) for _ in range(q)]
 
 ac = []
-for i in range(n-1):
-    if s[i] == 'A' and s[i+1] == 'C':
+for i in range(n - 1):
+    if s[i] == 'A' and s[i + 1] == 'C':
         ac.append(i)
 
 if ac == []:
@@ -21,8 +21,7 @@ for l, r in lr:
     ri = bisect_right(ac, r)
     if li == ri:
         print((0))
-    elif r > ac[ri-1]:
-        print((ri-li))
+    elif r > ac[ri - 1]:
+        print((ri - li))
     else:
-        print((ri-li-1))
-
+        print((ri - li - 1))

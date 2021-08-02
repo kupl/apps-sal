@@ -1,6 +1,7 @@
 from collections import deque
 from collections import Counter
 
+
 def main():
     from sys import stdin
     lines = deque(line.strip() for line in stdin.readlines())
@@ -15,5 +16,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

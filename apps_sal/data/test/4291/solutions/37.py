@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, Q, S, LRi):
     cumulative_sum = [0, 0]
@@ -31,5 +31,6 @@ def __starting_point():
     # S = random_str(N, 'ACGT')
     # LRi = [sorted([randint(1, N) for _ in range(2)]) for _ in range(Q)]
     # solve(N, Q, S, LRi)
+
 
 __starting_point()

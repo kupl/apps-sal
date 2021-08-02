@@ -31,4 +31,5 @@ def __starting_point():
     s = Solution()
     print(s.maxIndependentSetSize(a))
 
+
 __starting_point()

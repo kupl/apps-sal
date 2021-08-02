@@ -9,4 +9,3 @@ for x, y in w.most_common():
     ans = min(ans, s[x] // y)
 
 print(ans)
-
