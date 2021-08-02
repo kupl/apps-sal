@@ -2,7 +2,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    
+
     m = []
     p = []
     cnt0 = 0
@@ -15,7 +15,7 @@ for _ in range(t):
             cnt0 += 1
     p = sorted(p, reverse=True)
     m = sorted(m)
-    
+
     # ppppp
     ans = -10 ** 20
     tmp = 1

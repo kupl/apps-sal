@@ -7,6 +7,6 @@ ka = a + (0 if ra == 0 else (k - ra))
 kb = b - rb
 
 if ka <= kb:
-	print((kb - ka) // k + 1)
+    print((kb - ka) // k + 1)
 else:
-	print(0)
+    print(0)

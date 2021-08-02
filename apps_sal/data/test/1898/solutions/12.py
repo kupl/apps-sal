@@ -9,4 +9,3 @@ for i in range(n):
     else:
         s += "it"
 print(s)
-

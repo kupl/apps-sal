@@ -1,10 +1,13 @@
 def read_line():
     return list(map(int, input().split()))
+
+
 def pr(l):
     a = 1
     for x in l:
         a *= x
     return a
+
 
 T = int(input())
 for _ in range(T):
@@ -20,6 +23,3 @@ for _ in range(T):
         if m == None or p > m:
             m = p
     print(m)
-
-
-

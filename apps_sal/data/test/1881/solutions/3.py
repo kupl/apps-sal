@@ -20,5 +20,5 @@ def solve():
 
     print(*(groups[pixel] for pixel in pixels))
 
-solve()
 
+solve()

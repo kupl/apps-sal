@@ -3,11 +3,12 @@ def main():
     p = list(map(int, input().split()))
     solve(n, k, p)
 
+
 def solve(n, k, p):
     group = 256 * [None]
     r = p[:]
     for i, pi in enumerate(p):
-#        print([(i, gi) for i, gi in enumerate(group)if gi is not None])
+        #        print([(i, gi) for i, gi in enumerate(group)if gi is not None])
         if group[pi] is not None:
             r[i] = group[pi][0]
         else:
@@ -17,7 +18,7 @@ def solve(n, k, p):
             if lo < 0 or pi - lo == k:
                 lo += 1
                 hi = pi + 1
-            else: # group[lo] is not None
+            else:  # group[lo] is not None
                 if pi - group[lo][0] < k:
                     lo = group[lo][0]
                     hi = pi + 1
@@ -30,5 +31,5 @@ def solve(n, k, p):
             r[i] = group[pi][0]
     print(" ".join(map(str, r)))
 
-main()
 
+main()

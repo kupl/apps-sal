@@ -5,7 +5,7 @@ LEVELS = ("hate", "love")
 try:
     while True:
         n = int(input())
-        s = [ ]
+        s = []
         for i in range(n):
             if i:
                 s += ["that"]
@@ -15,4 +15,3 @@ try:
 
 except EOFError:
     pass
-

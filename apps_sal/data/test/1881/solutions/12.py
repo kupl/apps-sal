@@ -11,22 +11,22 @@ for i in range(n):
         ans.append(g[p])
         f[p] = 1
     else:
-        gb= 0
+        gb = 0
         for j in range(k):
             ind = p - j
             if f[ind] is not None:
-                gb = ind +1
+                gb = ind + 1
                 break
             if ind <= 0:
                 break
-            if j == k-1:
+            if j == k - 1:
                 gb = ind
         ans.append(gb)
         for j in range(k):
-            if gb+j >= 256:
+            if gb + j >= 256:
                 break
             if f[gb + j] is None:
-                g[gb+j] = gb
+                g[gb + j] = gb
             else:
                 break
         f[gb] = 1

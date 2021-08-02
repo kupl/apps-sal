@@ -14,4 +14,3 @@ else:
         for j in range(3):
             print(subjects[j][i], end=' ')
         print()
-

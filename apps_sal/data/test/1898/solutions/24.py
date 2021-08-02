@@ -14,4 +14,3 @@ for i in range(n - 1):
 arr.append(end)
 
 print(" ".join(arr))
-

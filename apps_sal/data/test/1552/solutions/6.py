@@ -7,4 +7,3 @@ print(ans)
 if ans:
     for i in range(ans):
         print(*[students[j][i] for j in range(3)])
-

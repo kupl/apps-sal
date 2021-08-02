@@ -3,7 +3,7 @@ n = int(input())
 t = list(map(int, input().split()))
 noOfTeams = min(t.count(1), t.count(2), t.count(3))
 for i, strength in enumerate(t):
-    t[i]=(i, strength)
+    t[i] = (i, strength)
 ans = ''
 for i in range(noOfTeams):
     team = []

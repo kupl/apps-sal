@@ -35,5 +35,3 @@ s = str(color[p[0]])
 for elt in p[1:]:
     s += ' ' + str(color[elt])
 print(s)
-
-

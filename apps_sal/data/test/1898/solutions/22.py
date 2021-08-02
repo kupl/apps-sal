@@ -7,4 +7,3 @@ for i in range(1, n):
     else:
         print('that I love ', end='')
 print('it')
-

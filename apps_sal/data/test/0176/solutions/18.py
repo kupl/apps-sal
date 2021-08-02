@@ -27,4 +27,3 @@ else:
             a = b
             b = tmp
         print((b // k) + 1)
-

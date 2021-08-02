@@ -10,7 +10,7 @@ lengths = {}
 result = []
 
 for x in xs:
-    
+
     if x in mapka:
         result.append(mapka[x])
     else:
@@ -35,6 +35,5 @@ for x in xs:
                         lengths[mapka[potential_left]] += 1
 
                     break
-            
-print(' '.join(map(str, result)))
 
+print(' '.join(map(str, result)))

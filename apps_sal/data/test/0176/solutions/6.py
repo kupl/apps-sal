@@ -9,10 +9,6 @@ if a > 0 and b >= 0:
 else:
     ans += b // k
     ans += 1
-    ans += (-a)//k
+    ans += (-a) // k
 
 print(ans)
-    
-        
-    
-

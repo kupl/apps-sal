@@ -5,9 +5,8 @@ for i in range(n):
         r.append("I hate")
     else:
         r.append("I love")
-    if i == n-1:
+    if i == n - 1:
         r.append("it")
     else:
         r.append("that")
 print(" ".join(r))
-
