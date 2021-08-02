@@ -9,4 +9,3 @@ for _ in range(int(input())):
     else:
         ans.append('NET')
 print('\n'.join(ans))
-

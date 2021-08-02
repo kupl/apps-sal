@@ -12,4 +12,6 @@ def resolve():
             return
         ans += i * j
         M -= j
+
+
 resolve()

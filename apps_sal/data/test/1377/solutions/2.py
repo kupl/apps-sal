@@ -1,7 +1,7 @@
 def main():
     import sys
     input = sys.stdin.readline
-    
+
     n = int(input())
     arr = list(map(int, input().split()))
     idx = arr.index(n)
@@ -16,7 +16,8 @@ def main():
         print("YES")
     else:
         print("NO")
-    
+
     return 0
+
 
 main()

@@ -5,10 +5,9 @@ s.sort()
 
 ans = 0
 for a, b in s:
-    ans += min(a*b, a*m)
+    ans += min(a * b, a * m)
     m -= b
     if m <= 0:
         break
 
 print(ans)
-

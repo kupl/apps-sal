@@ -1,6 +1,6 @@
 # coding=utf-8
 
-#lib
+# lib
 #import copy
 #import collections
 #import sys
@@ -30,6 +30,7 @@ def input_2d_array(Row, Column):
     return array
 '''
 
+
 def __starting_point():
     N = int(input())
     Xli = list(map(int, input().split()))
@@ -40,10 +41,11 @@ def __starting_point():
         cnt = 0
 
         for j in range(N):
-            cnt += abs(Xli[j]-i)**2
+            cnt += abs(Xli[j] - i)**2
 
         ans = min(ans, cnt)
 
-
     print(ans)
+
+
 __starting_point()

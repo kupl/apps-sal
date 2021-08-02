@@ -1,5 +1,5 @@
 N = int(input())
 X = list(map(int, input().split()))
-P = round(sum(X)/N)
-ans = sum(list(map(lambda x: (x-P)**2, X)))
+P = round(sum(X) / N)
+ans = sum(list(map(lambda x: (x - P)**2, X)))
 print(ans)

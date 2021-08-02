@@ -56,4 +56,3 @@ def solve(h, w, field):
 h, w = list(map(int, input().split()))
 field = [input() for _ in range(h)]
 print(('YES' if solve(h, w, field) else 'NO'))
-

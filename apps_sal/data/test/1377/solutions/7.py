@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 rev = [-1] * (n + 1)
 for i, j in enumerate(a):
     rev[j] = i

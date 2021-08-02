@@ -5,8 +5,8 @@ ave = 0
 
 for i in X:
     ave += i
-if ((ave/N) // 0.5) % 2 == 1:
-    ave = (ave //N) + 1
+if ((ave / N) // 0.5) % 2 == 1:
+    ave = (ave // N) + 1
 else:
     ave = ave // N
 

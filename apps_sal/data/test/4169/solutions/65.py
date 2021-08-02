@@ -7,12 +7,12 @@ AB = sorted(AB)
 cnt = 0
 ans = 0
 for ab in AB:
-    if cnt+ab[1] <= M:
+    if cnt + ab[1] <= M:
         cnt += ab[1]
-        ans += ab[0]*ab[1]
+        ans += ab[0] * ab[1]
     else:
-        ans += (M-cnt)*ab[0]
-        cnt += M-cnt
+        ans += (M - cnt) * ab[0]
+        cnt += M - cnt
         break
-    
+
 print(ans)

@@ -8,4 +8,3 @@ for a, b in AB:
     bought += m
     ans += a * m
 print(ans)
-

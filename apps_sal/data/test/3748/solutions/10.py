@@ -13,25 +13,25 @@ T = [sorted(t) for t in T_]
 S = [sorted(s) for s in S_]
 cnt = 0
 for _, g in groupby(sorted(T)):
-    if len(list(g))%2:
+    if len(list(g)) % 2:
         cnt += 1
-if H%2 < cnt:
+if H % 2 < cnt:
     print("NO")
     return
 cnt = 0
 for _, g in groupby(sorted(S)):
-    if len(list(g))%2:
+    if len(list(g)) % 2:
         cnt += 1
-if W%2 < cnt:
+if W % 2 < cnt:
     print("NO")
     return
-if W%2 or H%2:
+if W % 2 or H % 2:
     print("YES")
     return
 T1 = []
 T2 = []
 for i, (_, t) in enumerate(sorted(zip(T, T_))):
-    if i%2:
+    if i % 2:
         T1.append(t)
     else:
         T2.append(t)
@@ -43,15 +43,14 @@ for t in T_p:
 S1 = []
 S2 = []
 for i, (_, s) in enumerate(sorted(zip(S, S_pp))):
-    if i%2:
+    if i % 2:
         S1.append(s)
     else:
         S2.append(s)
 S_p = S1 + S2[::-1]
 for s1, s2 in zip(S_p, S_p[::-1]):
     for c1, c2 in zip(s1, s2[::-1]):
-        if c1!=c2:
+        if c1 != c2:
             print("NO")
             return
 print("YES")
-

@@ -5,6 +5,8 @@ def solve():
         print('DA')
     else:
         print('NET')
+
+
 t = int(input())
 for _ in range(t):
     solve()

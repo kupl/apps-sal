@@ -24,4 +24,3 @@ for l in ls:
 
 
 print(ans)
-

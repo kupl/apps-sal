@@ -1,5 +1,5 @@
 a = int(input())
-b = list(map(int,input().split()))
+b = list(map(int, input().split()))
 d = set(b)
 if len(d) != a:
     print('NO')
@@ -17,4 +17,3 @@ for i in range(ima, a - 1):
         print('NO')
         return
 print('YES')
-

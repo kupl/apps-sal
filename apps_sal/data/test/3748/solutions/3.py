@@ -3,6 +3,7 @@ import copy
 
 sys.setrecursionlimit(10 ** 6)
 
+
 def main():
     def per(s, a=[]):
         if not s:
@@ -20,7 +21,8 @@ def main():
         cs = copy.deepcopy(s)
         res = []
         for uu in cs:
-            if uu < u: continue
+            if uu < u:
+                continue
             s.remove(uu)
             res += per(s, a + [u, uu])
             s.add(uu)
@@ -50,12 +52,15 @@ def main():
         mid = (w % 2 == 1)
         br = False
         for j, c0 in enumerate(zip(*t1)):
-            if fin[j]: continue
+            if fin[j]:
+                continue
             fin[j] = True
             c0 = c0[::-1]
             for jj, c1 in enumerate(zip(*t1)):
-                if jj <= j: continue
-                if fin[jj]: continue
+                if jj <= j:
+                    continue
+                if fin[jj]:
+                    continue
                 if c0 == c1:
                     fin[jj] = True
                     break
@@ -65,10 +70,11 @@ def main():
                 else:
                     br = True
                     break
-        if br: continue
+        if br:
+            continue
         print("YES")
         return
     print("NO")
 
-main()
 
+main()

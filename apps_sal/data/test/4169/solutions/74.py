@@ -24,12 +24,12 @@ def main():
     ans = [0, 0]  # (much, num)
     for p in path:
         if ans[1] + p[1] <= M:
-            ans[0] = ans[0] + p[0]*p[1]
+            ans[0] = ans[0] + p[0] * p[1]
             ans[1] += p[1]
 
         else:
-            num = M-ans[1]
-            ans[0] = ans[0] + p[0]*num
+            num = M - ans[1]
+            ans[0] = ans[0] + p[0] * num
             ans[1] = ans[1] + num
         if ans[1] == M:
             print((ans[0]))
@@ -39,5 +39,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

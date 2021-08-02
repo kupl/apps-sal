@@ -7,10 +7,12 @@ def solve():
             o += 1
         else:
             z += 1
-    c = min(o,z)
-    if c%2 == 0:
+    c = min(o, z)
+    if c % 2 == 0:
         print("NET")
     else:
         print("DA")
+
+
 for i in range(int(input())):
     solve()

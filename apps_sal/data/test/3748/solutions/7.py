@@ -19,7 +19,7 @@ def _3():
         N = len(s1)
         G = np.zeros([N, N])
         for i in range(N):
-            for j in range(i+1, N):
+            for j in range(i + 1, N):
                 if s1[i] == s2[j] and s1[j] == s2[i]:
                     G[i, j] = 1
                     G[j, i] = 1
@@ -43,7 +43,7 @@ def _3():
         if already_paired[i]:
             continue
 
-        for j in range(i+1, H):
+        for j in range(i + 1, H):
             if already_paired[j]:
                 continue
 
@@ -73,7 +73,7 @@ def _3():
             return True
 
         for i in range(N):
-            for j in range(i+1, N):
+            for j in range(i + 1, N):
                 if G[i, j] == 1:
                     l = list(range(N))
                     l.remove(i)
@@ -89,6 +89,9 @@ def _3():
     else:
         print('NO')
 
+
 def __starting_point():
     _3()
+
+
 __starting_point()

@@ -14,4 +14,3 @@ while left >= 0 or right < n:
         print("NO")
         return
 print("YES")
-

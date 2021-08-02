@@ -1,6 +1,6 @@
 n = int(input())
 data = [int(i) for i in input().split()]
-ind = [0] * (n+1)
+ind = [0] * (n + 1)
 for i in range(n):
     ind[data[i]] = i
 li = ind[n] - 1
