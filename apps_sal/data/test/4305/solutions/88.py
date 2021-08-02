@@ -1,3 +1,3 @@
 from math import ceil
 a, b = map(int, input().split())
-print(ceil(a/b))
+print(ceil(a / b))

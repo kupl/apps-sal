@@ -7,7 +7,7 @@ for m in range(1, N + 1):
     f *= m
     f %= mod
     f_list.append(f)
-inv = pow(f, mod - 2, mod)    
+inv = pow(f, mod - 2, mod)
 inv_list = [1] * (N + 1)
 inv_list[N] = inv
 

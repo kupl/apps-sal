@@ -5,6 +5,7 @@ input = sys.stdin.readline
 f_inf = float('inf')
 mod = 998244353
 
+
 class CmbMod:
     def __init__(self, n, p):
         """
@@ -59,5 +60,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

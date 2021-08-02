@@ -1,7 +1,9 @@
 import collections
 import bisect
+
+
 def f():
-    n,m  = [int(c) for c in input().split()]
+    n, m = [int(c) for c in input().split()]
     s = list(input())
 
     ll = []
@@ -21,22 +23,22 @@ def f():
                 inside = False
     if inside:
         cc += length - 1
-    
-    res = [0]*m
-    for i in range (m):
+
+    res = [0] * m
+    for i in range(m):
         line = input().split()
-        j = int(line[0])-1
+        j = int(line[0]) - 1
         c = line[1]
 
-        if (c == '.' and s[j] == '.') or ( c != '.' and s[j] != '.'):
+        if (c == '.' and s[j] == '.') or (c != '.' and s[j] != '.'):
             res[i] = cc
         else:
             e1 = False
             e2 = False
 
-            if (j > 0 and s[j-1] == '.'):
+            if (j > 0 and s[j - 1] == '.'):
                 e1 = True
-            if (j < n-1 and s[j+1] == '.'):
+            if (j < n - 1 and s[j + 1] == '.'):
                 e2 = True
 
             if e1 and e2:
@@ -47,5 +49,6 @@ def f():
             res[i] = cc
     for r in res:
         print(r)
+
 
 f()

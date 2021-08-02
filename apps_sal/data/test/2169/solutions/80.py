@@ -20,18 +20,18 @@ def main():
     Q = NI()
     querys = [NLI() for i in range(Q)]
 
-    point = [[-1,-1] for _ in range(H*W + 1)]
+    point = [[-1, -1] for _ in range(H * W + 1)]
     for h in range(H):
         for w in range(W):
             a = grid[h][w]
             point[a] = [h, w]
 
-    cost_S = [0] * (H*W + 1)
-    for c in range(H*W + 1):
+    cost_S = [0] * (H * W + 1)
+    for c in range(H * W + 1):
         if c <= D:
             continue
 
-        cost_S[c] = cost_S[c-D] + abs(point[c][0] - point[c-D][0]) + abs(point[c][1] - point[c-D][1])
+        cost_S[c] = cost_S[c - D] + abs(point[c][0] - point[c - D][0]) + abs(point[c][1] - point[c - D][1])
 
     for query in querys:
         l, r = query
@@ -40,4 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -3,7 +3,7 @@ MAX = 5 * 10 ** 5
 fac, ifac, ipow2 = [1] * MAX, [1] * MAX, [1] * MAX
 for i in range(1, MAX):
     fac[i] = fac[i - 1] * i % MOD
-    ifac[i] = pow(fac[i], MOD - 2,MOD)
+    ifac[i] = pow(fac[i], MOD - 2, MOD)
     ipow2[i] = ipow2[i - 1] * (MOD + 1) // 2 % MOD
 
 choose = lambda n, k: fac[n] * ifac[k] % MOD * ifac[n - k] % MOD

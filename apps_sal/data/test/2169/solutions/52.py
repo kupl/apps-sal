@@ -18,4 +18,3 @@ q = int(input())
 for i in range(q):
     l, r = [int(x) - 1 for x in input().split()]
     print((sc[r] - sc[l]))
-

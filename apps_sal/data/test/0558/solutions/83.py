@@ -7,8 +7,9 @@ def fast_pow(x, n, MOD):
         n >>= 1
     return res
 
+
 def prepare(n, MOD):
- 
+
     # 1! - n! の計算
     f = 1
     factorials = [1]  # 0!の分
@@ -25,20 +26,21 @@ def prepare(n, MOD):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
-     
+
     return factorials, invs
 
+
 MOD = 998244353
-fact, fact_inv = prepare(3*10**5, MOD)
+fact, fact_inv = prepare(3 * 10**5, MOD)
 
-n, m, k = map(int,input().split())
+n, m, k = map(int, input().split())
 
-dp = [0] * (n+1)
+dp = [0] * (n + 1)
 ans = 0
-for i in range(k+1):
-    color = fast_pow(m-1, n-1-i, MOD)
-    order = fact[n-1] * fact_inv[i] % MOD * fact_inv[n-1-i] % MOD
+for i in range(k + 1):
+    color = fast_pow(m - 1, n - 1 - i, MOD)
+    order = fact[n - 1] * fact_inv[i] % MOD * fact_inv[n - 1 - i] % MOD
     ans += m * color % MOD * order % MOD
-    ans %= MOD    
+    ans %= MOD
 
 print(ans)

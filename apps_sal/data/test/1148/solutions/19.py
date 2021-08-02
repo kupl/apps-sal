@@ -22,4 +22,4 @@ while pos < n:
         pos = 0
         break_on_min = True
 
-print(m*n + longest_sub)
+print(m * n + longest_sub)

@@ -17,7 +17,9 @@ def main():
         m = l % d
         print((ans[m][r // d] - ans[m][l // d]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

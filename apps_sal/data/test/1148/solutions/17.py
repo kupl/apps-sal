@@ -13,5 +13,4 @@ for i in [i for i, x in enumerate(a) if x == m]:
         l = i
 
 mdist = max(mdist, fst + (n - l) - 1)
-print(n*m + mdist)
-
+print(n * m + mdist)

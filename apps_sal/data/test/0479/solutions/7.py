@@ -10,4 +10,3 @@ for j in range(int(input())):
     a = int(input())
     p = [i + d[a - b] for b, i in list(d.items()) if a - b in d]
     print(min(p) if p and min(p) <= k else -1)
-

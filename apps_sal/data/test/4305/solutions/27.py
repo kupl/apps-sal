@@ -1,10 +1,9 @@
-#153-A
+# 153-A
 
-H,A = list(map(int,input().split()))
+H, A = list(map(int, input().split()))
 
 if H % A == 0:
     print((H // A))
 
 else:
-    print(( H//A +1))
-
+    print((H // A + 1))

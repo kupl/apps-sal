@@ -35,13 +35,13 @@ class Combination:
             res %= self.mod
         return (res * self.inv_fact[r]) % self.mod
 
+
 n, m, k = list(map(int, input().split()))
 mod = 998244353
 cmb = Combination(10**6, mod)
 
 ans = 0
-for i in range(k+1):
-    ans += m*cmb.combination(n-1, i)*pow(m-1, n-1-i, mod)
+for i in range(k + 1):
+    ans += m * cmb.combination(n - 1, i) * pow(m - 1, n - 1 - i, mod)
     ans %= mod
 print(ans)
-

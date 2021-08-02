@@ -5,6 +5,7 @@ def find_right(x, data):
             answer = i
     return answer
 
+
 def find_left(x, data):
     for i in range(len(data)):
         if data[i] == x:

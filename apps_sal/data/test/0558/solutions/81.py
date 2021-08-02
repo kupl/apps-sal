@@ -36,23 +36,23 @@ class ModCombination:
         self._maxN = maxN
         self._MOD = MOD
         self.facts = [1]
-        self.invs = [1]*(self._maxN+1)
+        self.invs = [1] * (self._maxN + 1)
 
         fact = 1
-        for i in range(1, self._maxN+1):
+        for i in range(1, self._maxN + 1):
             fact *= i
             fact %= self._MOD
             self.facts.append(fact)
 
-        inv = pow(fact, self._MOD-2, self._MOD)
+        inv = pow(fact, self._MOD - 2, self._MOD)
         self.invs[self._maxN] = inv
         for i in range(self._maxN, 1, -1):
             inv *= i
             inv %= self._MOD
-            self.invs[i-1] = inv
+            self.invs[i - 1] = inv
 
     def nCr(self, n, r):
-        return self.facts[n]*self.invs[r]*self.invs[n-r] % self._MOD
+        return self.facts[n] * self.invs[r] * self.invs[n - r] % self._MOD
 
 
 def main():
@@ -68,7 +68,7 @@ def main():
         ans *= m % MOD
         ans *= pow(m - 1, n - 1 - ki, MOD)
         ans %= MOD
-        ans *= mc.nCr(n-1, ki)
+        ans *= mc.nCr(n - 1, ki)
         ans %= MOD
         result += ans
         result %= MOD
@@ -78,5 +78,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

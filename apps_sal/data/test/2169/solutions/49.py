@@ -27,4 +27,3 @@ for _ in range(Q):
     result.append(t[i][(R - i) // D] - t[i][(L - i) // D])
 print(('\n'.join(str(i) for i in result)))
 #print(*result, sep='\n')
-

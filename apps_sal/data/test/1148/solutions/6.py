@@ -20,4 +20,3 @@ if b[0] and b[-1]:
     Max = max(L + n - R + 1, Max)
 ans = m * n + Max
 print(ans)
-

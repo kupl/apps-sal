@@ -38,8 +38,8 @@ class ModCombination:
         for i in range(2, self.n_max + 1):
             self.facts.append(self.facts[i - 1] * i % self.mod)
             self.inverses.append(
-                self.mod - self.inverses[self.mod % i] *
-                (self.mod // i) % self.mod
+                self.mod - self.inverses[self.mod % i]
+                * (self.mod // i) % self.mod
             )
             self.fact_inverses.append(
                 self.fact_inverses[i - 1] * self.inverses[i] % self.mod
@@ -73,4 +73,3 @@ for k in range(0, K + 1):
     ans %= MOD
 
 print(ans)
-

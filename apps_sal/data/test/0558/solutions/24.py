@@ -42,4 +42,3 @@ for i in range(K + 1):
     answer = (answer + cmb(N - 1, i, mod) * M * pow(M - 1, N - i - 1, mod)) % mod
 
 print(answer)
-

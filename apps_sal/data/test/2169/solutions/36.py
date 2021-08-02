@@ -25,4 +25,3 @@ ans = []
 for l, r in zip(LR[::2], LR[1::2]):
     ans += [cum[r % D][r // D] - cum[l % D][l // D]]
 print(*ans, sep='\n')
-

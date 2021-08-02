@@ -14,4 +14,3 @@ def solve():
 
 
 print(solve())
-

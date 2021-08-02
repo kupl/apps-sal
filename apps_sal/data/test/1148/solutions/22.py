@@ -11,5 +11,5 @@ for i in range(2 * n):
         tmp += 1
         if tmp > maxi: maxi = tmp
     else: tmp = 0
-    
+
 print(res + maxi)

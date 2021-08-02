@@ -7,4 +7,3 @@ for i in range(n):
     if s < 0: print('Impossible'); break
     r += [c[s].pop()]; s += 1
 else: print('Possible\n', *r)
-

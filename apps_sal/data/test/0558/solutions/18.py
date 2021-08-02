@@ -58,4 +58,3 @@ def n_pattern(i):
 
 answer = sum(n_pattern(i) for i in range(k + 1)) % MOD
 print(answer)
-

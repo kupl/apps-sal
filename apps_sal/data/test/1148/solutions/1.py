@@ -12,4 +12,3 @@ for i in range(len(a)):
         count += 1
 max_segment = max(count, max_segment)
 print(minimum * n + max_segment)
-

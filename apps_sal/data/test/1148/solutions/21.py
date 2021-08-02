@@ -22,4 +22,3 @@ while True:
     else:
         count = 0
 print(n * low + best)
-

@@ -27,7 +27,7 @@ def main():
         for i in range((s // 3) + 1):
             for j in range((s // 3) + 2):
                 if i * j * (s - i - j) == p:
-                    ans.append([i, j, s-i-j])
+                    ans.append([i, j, s - i - j])
 
         if len(ans):
             print(*ans[0])
@@ -49,5 +49,6 @@ def main():
 def __starting_point():
     # IOE()
     main()
+
 
 __starting_point()

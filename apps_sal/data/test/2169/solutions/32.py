@@ -9,7 +9,7 @@ def main():
 
     c = [0] * (h * w + 1)
     for i in range(d + 1, h * w + 1):
-        xb, yb = a[i-d]
+        xb, yb = a[i - d]
         xn, yn = a[i]
         c[i] = c[i - d] + abs(xn - xb) + abs(yn - yb)
 
@@ -25,5 +25,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

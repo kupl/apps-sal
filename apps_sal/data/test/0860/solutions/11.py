@@ -6,7 +6,7 @@ c = [[] for _ in range(n)]
 
 t = 0
 
-for i,x in enumerate(p):
+for i, x in enumerate(p):
     c[x].append(i)
 
 res = []
@@ -16,7 +16,7 @@ while True:
         t -= 3
     if t >= n or len(c[t]) == 0:
         break
-    res.append(c[t].pop()+1)
+    res.append(c[t].pop() + 1)
     t += 1
 
 if all(len(x) == 0 for x in c):
