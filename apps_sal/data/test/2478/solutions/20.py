@@ -10,4 +10,3 @@ r = len(s_) - l
 
 ans = '(' * l + s + ')' * r
 print(ans)
-

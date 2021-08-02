@@ -1,6 +1,6 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
-from collections import deque
 
 
 def read():
@@ -36,5 +36,6 @@ def solve(N, S):
 def __starting_point():
     inputs = read()
     print((solve(*inputs)))
+
 
 __starting_point()

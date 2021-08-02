@@ -36,4 +36,3 @@ while len(stack) > 0:
         stack = stack[:s]
 
 print(a)
-

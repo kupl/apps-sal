@@ -14,4 +14,3 @@ else:
                 b = n
             answer.append(str(a) + ' ' + str(b))
     print('\n'.join(answer))
-

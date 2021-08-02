@@ -9,5 +9,4 @@ for a in s:
     else:
         l += 1
 r = c
-print(("("*l + s + ")"*r))
-
+print(("(" * l + s + ")" * r))

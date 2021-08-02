@@ -5,4 +5,3 @@ if tl < min(list(map(int, input().split()))):
     print(tl)
 else:
     print(-1)
-

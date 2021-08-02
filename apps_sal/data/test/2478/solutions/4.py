@@ -2,6 +2,6 @@ N = int(input())
 S = T = input()
 
 while "()" in S:
-  S = S.replace("()","")
+    S = S.replace("()", "")
 
-print("("*S.count(")")+T+S.count("(")*")")
+print("(" * S.count(")") + T + S.count("(") * ")")

@@ -2,17 +2,19 @@
 """
 @author: H_Hoshigi
 """
+
+
 def main():
     N = int(input())
     S = input()
 
     solo_close_no = 0
     for i in range(N):
-        if S[-i-1] == ")":
+        if S[-i - 1] == ")":
             solo_close_no += 1
         elif solo_close_no >= 1:
             solo_close_no -= 1
-    
+
     solo_open_no = 0
     for i in range(N):
         if S[i] == "(":
@@ -20,8 +22,9 @@ def main():
         elif solo_open_no >= 1:
             solo_open_no -= 1
 
-    answer = "("*solo_close_no + S + ")"*solo_open_no
+    answer = "(" * solo_close_no + S + ")" * solo_open_no
     print(answer)
+
 
 def __starting_point():
     main()

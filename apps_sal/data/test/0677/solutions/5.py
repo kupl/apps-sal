@@ -6,4 +6,3 @@ for _ in range(q):
         print(p * d)
     else:
         print(d)
-

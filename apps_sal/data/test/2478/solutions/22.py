@@ -11,4 +11,3 @@ for i in range(n):
         else:
             left += 1
 print((left * '(' + s + right * ')'))
-

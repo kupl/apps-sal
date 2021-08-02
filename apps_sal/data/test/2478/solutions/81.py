@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 
 cntr = 0
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     if s[i] == ')':
         cntr += 1
     elif cntr > 0:

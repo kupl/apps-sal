@@ -15,11 +15,11 @@ while len(s_check) > 0:
             break
 
     for i in range(len(s_check)):
-        if s_check[-i-1] == '(':
+        if s_check[-i - 1] == '(':
             s = s + ')'
             s_check = s_check + ')'
             break
-        elif s_check[-i-1] == ')':
+        elif s_check[-i - 1] == ')':
             break
 
     s_check = re.sub('\(\)', '', s_check)

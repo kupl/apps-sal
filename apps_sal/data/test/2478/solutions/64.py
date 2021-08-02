@@ -27,5 +27,5 @@ for i in range(n):
             c1 += 1
 z1 = c1
 s = s[::-1]
-ans = ["("]*z0 + s + [")"]*z1
+ans = ["("] * z0 + s + [")"] * z1
 print("".join(ans))

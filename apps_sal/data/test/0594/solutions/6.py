@@ -16,4 +16,3 @@ if max(mina * 2, maxa) >= minb:
     print(-1)
 else:
     print(max(mina * 2, maxa))
-

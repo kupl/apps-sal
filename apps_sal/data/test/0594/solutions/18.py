@@ -13,10 +13,11 @@ def __starting_point():
     Lc.sort()
     Li.sort()
     ans = -1
-    if Lc[-1]>=Li[0] or Li[0]<=2*Lc[0]:
+    if Lc[-1] >= Li[0] or Li[0] <= 2 * Lc[0]:
         ans = -1
     else:
-        ans=max(2*Lc[0],Lc[-1])
+        ans = max(2 * Lc[0], Lc[-1])
     print(ans)
+
 
 __starting_point()

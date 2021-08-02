@@ -17,4 +17,3 @@ s = s + ")" * (counter_l - pairs)
 s = "(" * (counter_r - pairs) + s
 
 print(s)
-

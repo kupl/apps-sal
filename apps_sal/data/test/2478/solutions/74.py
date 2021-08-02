@@ -8,7 +8,7 @@ cnt_l = 0
 for i in range(N):
     if(S[i] == "("):
         cnt_r += 1
-        flg_l = True            
+        flg_l = True
     else:
         if(flg_l):
             if(cnt_r > 0):
@@ -18,8 +18,8 @@ for i in range(N):
                 flg_l = False
         else:
             cnt_l += 1
-    
+
 ans = ""
 
-ans += ("("*cnt_l)+S+(")"*cnt_r)
+ans += ("(" * cnt_l) + S + (")" * cnt_r)
 print(ans)

@@ -13,4 +13,4 @@ for i in range(n):
             l += 1
             opens = 0
 
-print("("*l + s + ")"*opens)
+print("(" * l + s + ")" * opens)

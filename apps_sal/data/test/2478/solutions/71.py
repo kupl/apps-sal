@@ -1,4 +1,4 @@
-n,s = open(0).read().split()
+n, s = open(0).read().split()
 
 imp_close = 0
 imp_open = 0
@@ -12,4 +12,4 @@ for char in s:
         else:
             imp_close += 1
 
-print('('*imp_close + s + ')'*imp_open)
+print('(' * imp_close + s + ')' * imp_open)

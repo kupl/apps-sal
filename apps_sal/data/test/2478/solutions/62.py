@@ -13,5 +13,5 @@ for i in range(n):
             c0 -= 1
         else:
             c1 += 1
-ans = ["("]*c1 + s + [")"]*c0
+ans = ["("] * c1 + s + [")"] * c0
 print("".join(ans))

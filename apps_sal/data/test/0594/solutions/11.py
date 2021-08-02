@@ -1,4 +1,4 @@
-#TL
+# TL
 
 data = input().split(" ")
 n = int(data[0])
@@ -9,11 +9,11 @@ wrong = input().split(" ")
 wrong = [int(x) for x in wrong]
 limit = max(max(correct), min(correct) * 2)
 for i in range(len(wrong)):
-	if wrong[i] <= limit:
-		print("-1")
-		return
+    if wrong[i] <= limit:
+        print("-1")
+        return
 for i in range(len(correct)):
-	if correct[i] > limit:
-		print("-1")
-		return
+    if correct[i] > limit:
+        print("-1")
+        return
 print(limit)

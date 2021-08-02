@@ -13,10 +13,12 @@ def main():
         else:
             cnt -= 1
         m = min(m, cnt)
-    ans = '('*(-m)+s+')'*(cnt-m)
+    ans = '(' * (-m) + s + ')' * (cnt - m)
     print(ans)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

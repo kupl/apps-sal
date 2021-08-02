@@ -14,4 +14,3 @@ for c in N:
 R = num
 
 print(('(' * L + N + ')' * R))
-

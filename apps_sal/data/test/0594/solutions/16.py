@@ -7,4 +7,3 @@ if min(B) > res:
     print(res)
 else:
     print(-1)
-

@@ -12,4 +12,3 @@ for s in S:
             left_cnt -= 1
 S = '(' * right_cnt + S + ')' * left_cnt
 print(S)
-
