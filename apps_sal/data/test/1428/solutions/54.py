@@ -1,4 +1,5 @@
-LI = lambda: list(map(int, input().split()))
+def LI(): return list(map(int, input().split()))
+
 
 N, C = LI()
 D = [LI() for _ in range(C)]
@@ -14,7 +15,7 @@ def main():
             x = (i + j) % 3
             for k in range(C):
                 w[x][k] += D[c[i][j] - 1][k]
-    
+
     ans = INF
     for i in range(C):
         for j in range(C):
@@ -29,5 +30,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -8,4 +8,3 @@ for i in range(n):
     else:
         x += t[2] == '+'
 print(2 * x - n)
-

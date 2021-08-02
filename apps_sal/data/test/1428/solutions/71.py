@@ -18,4 +18,3 @@ for b in permutations(list(range(C)), 3):
             t += a[i][j] * D[j][b[i]]
     result = min(result, t)
 print(result)
-

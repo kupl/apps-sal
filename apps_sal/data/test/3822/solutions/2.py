@@ -1,7 +1,8 @@
+import sys
 3
 
-import sys
 sys.setrecursionlimit(10 ** 9)
+
 
 def bscheck(n, l, v1, v2, k, t):
     while True:
@@ -36,4 +37,3 @@ for i in range(100):
         lt = mid
 
 print(rt)
-

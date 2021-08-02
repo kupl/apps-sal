@@ -8,14 +8,14 @@ D = [list(map(int, input().split()))for _ in range(c)]
 diago = [defaultdict(int)for _ in range(3)]
 for i in range(n):
     for j, color in enumerate(map(int, input().split())):
-        diago[(i+j) % 3][color-1] += 1
+        diago[(i + j) % 3][color - 1] += 1
 
 # 0列目をcにするときのcにするときの最小コスト
-costs = [[0]*c for _ in range(3)]
+costs = [[0] * c for _ in range(3)]
 for i in range(3):
     for j in range(c):
         for k, v in diago[i].items():
-            costs[i][j] += D[k][j]*v
+            costs[i][j] += D[k][j] * v
 
 INF = 10**18
 ans = INF

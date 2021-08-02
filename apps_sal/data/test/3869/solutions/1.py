@@ -1,15 +1,19 @@
 from math import radians, cos, sin, atan2
 
+
 def rotate(point, alpha):
     x = point[0]
     y = point[1]
     return (x * cos(alpha) - y * sin(alpha), x * sin(alpha) + y * cos(alpha))
 
+
 def crs(a, b):
     return a[0] * b[1] - a[1] * b[0]
 
+
 def m(end, start):
     return (end[0] - start[0], end[1] - start[1])
+
 
 def area(poly):
     ret = 0
@@ -20,6 +24,7 @@ def area(poly):
         ret += crs(poly[i], poly[j])
 
     return abs(ret) / 2.0
+
 
 def intersect(a, b, c, d):
     r = crs(m(c, d), m(a, d)) * crs(m(c, d), m(b, d)) <= 0
@@ -51,14 +56,13 @@ w, h, alpha = list(map(int, input().split()))
 if alpha == 0 or alpha == 180:
     print(w * h)
 else:
-    alpha = radians(alpha) 
+    alpha = radians(alpha)
     pnt = []
 
     pnt.append((w / 2, h / 2))
     pnt.append((-w / 2, h / 2))
     pnt.append((-w / 2, -h / 2))
     pnt.append((w / 2, -h / 2))
-
 
     pnt2 = []
     for p in pnt:
@@ -79,4 +83,3 @@ else:
     points_total = sorted(points_total, key=lambda x: atan2(x[1], x[0]))
 
     print(area(points_total))
-

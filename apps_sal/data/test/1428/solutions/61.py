@@ -13,14 +13,14 @@ def main():
     c = [None] * N
     for i in range(N):
         c[i] = list(map(int, input().split()))
-        c[i] = [x-1 for x in c[i]]  # 0-index
+        c[i] = [x - 1 for x in c[i]]  # 0-index
 
     STU = [[0] * C, [0] * C, [0] * C]
 
     for k in range(C):
         for i in range(N):
             for j in range(N):
-                STU[(i+j) % 3][k] += D[c[i][j]][k]
+                STU[(i + j) % 3][k] += D[c[i][j]][k]
 
     ans = 1000 * N * N
     for i in range(C):
@@ -41,4 +41,3 @@ def main():
 
 
 print((main()))
-

@@ -1,11 +1,10 @@
-n=input()
-n=int(n)
-x=0
+n = input()
+n = int(n)
+x = 0
 for i in range(n):
-    s=input()
+    s = input()
     if('+' in s):
-        x+=1
+        x += 1
     else:
-        x-=1
+        x -= 1
 print(x)
-

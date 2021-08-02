@@ -8,4 +8,4 @@ while n > 0:
         S -= 1
     n -= 1
 
-print (S)
+print(S)

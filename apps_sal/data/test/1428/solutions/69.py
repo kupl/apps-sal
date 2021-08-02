@@ -1,14 +1,24 @@
-import bisect, collections, copy, heapq, itertools, math, string, sys
-input = lambda: sys.stdin.readline().rstrip() 
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = float('inf')
 def I(): return int(input())
 def F(): return float(input())
 def SS(): return input()
 def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x)-1 for x in input().split()]
+def LI_(): return [int(x) - 1 for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LSS(): return input().split()
+
 
 def resolve():
     N, C = LI()
@@ -19,7 +29,7 @@ def resolve():
     a = [[0] * C for _ in range(3)]
     for i, j in itertools.product(list(range(N)), repeat=2):
         for k in range(C):
-            a[(i+j)%3][k] += D[c[i][j]][k]
+            a[(i + j) % 3][k] += D[c[i][j]][k]
 
     # 座標グループごとに色の割当とそのコストを全探索
     ans = INF
@@ -28,7 +38,9 @@ def resolve():
 
     print(ans)
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

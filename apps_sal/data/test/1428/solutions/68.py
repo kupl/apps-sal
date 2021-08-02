@@ -24,4 +24,3 @@ for ci in range(c):
                 ans = min(ans, cost[0][ci] + cost[1][cj] + cost[2][ck])
 
 print(ans)
-

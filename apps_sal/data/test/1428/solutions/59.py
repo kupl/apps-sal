@@ -20,4 +20,3 @@ for b in permutations(list(range(C)), 3):
             t += ai[j] * D[j][bi]
     result = min(result, t)
 print(result)
-

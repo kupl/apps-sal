@@ -1,6 +1,6 @@
 from math import sqrt, ceil
 
-MAX_N = 10 ** 6 * 2 
+MAX_N = 10 ** 6 * 2
 
 
 prime = []
@@ -37,14 +37,16 @@ def f(n):
 
     return ans
 
+
 def g(n):
     return n
+
 
 def F(n, k):
     cur = n
     for i in range(1, k + 1):
-        #print(i)
-        #print(factor(cur))
+        # print(i)
+        # print(factor(cur))
         if i == 1:
             cur = f(g(cur))
         elif i % 2 == 0:
@@ -59,7 +61,7 @@ def F(n, k):
 
     return cur % (10 ** 9 + 7)
 
+
 n, k = [int(i) for i in input().split(' ')]
 #print(factor(n - 1))
 print(F(n, k))
-
