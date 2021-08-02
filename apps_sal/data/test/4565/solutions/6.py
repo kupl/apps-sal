@@ -9,7 +9,6 @@ for ch in s:
         e += 1
     else:
         w += 1
-    m = (sE-e)+w
-    l.append(sE-e+w-1 if ch == 'W' else sE-e+w)
+    m = (sE - e) + w
+    l.append(sE - e + w - 1 if ch == 'W' else sE - e + w)
 print((min(l)))
-

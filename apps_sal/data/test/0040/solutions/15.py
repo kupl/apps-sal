@@ -3,7 +3,7 @@ L = []
 ans = "maybe"
 for _ in range(n):
     a, b = list(map(int, input().split()))
-    L.append((a,b))
+    L.append((a, b))
     if a != b:
         ans = "rated"
         break
@@ -14,4 +14,3 @@ for i in range(len(L)):
         ans = "unrated"
         break
 print(ans)
-

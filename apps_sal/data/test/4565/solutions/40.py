@@ -24,4 +24,3 @@ res = 10**9
 for i in range(n):
     res = min(res, left[i] + right[i])
 print(res)
-

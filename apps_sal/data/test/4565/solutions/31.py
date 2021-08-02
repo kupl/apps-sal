@@ -24,4 +24,3 @@ for i in range(n):
     ans = min(ans, eS[i] + wS[i])
 
 print(ans)
-

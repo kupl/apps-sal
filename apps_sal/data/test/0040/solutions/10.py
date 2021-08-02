@@ -16,4 +16,3 @@ else:
         print('maybe')
     else:
         print('unrated')
-

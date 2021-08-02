@@ -1,4 +1,6 @@
-import sys, re, os
+import sys
+import re
+import os
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians, gcd
 from itertools import permutations, combinations, product, accumulate
@@ -27,10 +29,10 @@ def main():
 
     left, right = 0, S[1:].count('E')
     ans = left + right
-    for i in range(N-1):
+    for i in range(N - 1):
         if S[i] == 'W':
             left += 1
-        if S[i+1] == 'E':
+        if S[i + 1] == 'E':
             right -= 1
 
         ans = min(ans, left + right)
@@ -40,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

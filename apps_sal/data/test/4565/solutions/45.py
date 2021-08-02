@@ -1,7 +1,7 @@
 N = int(input())
 S = list(input())
 
-lst = [0]*N
+lst = [0] * N
 Re = S.count("E")
 Lw = 0
 
@@ -15,4 +15,3 @@ for i in range(N):
 
 ans = min(lst)
 print(ans)
-

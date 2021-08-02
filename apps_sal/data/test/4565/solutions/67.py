@@ -15,4 +15,3 @@ for i in range(N):
         ans = min(ans, w_cnt + e_all - e_cnt)
 
 print(ans)
-

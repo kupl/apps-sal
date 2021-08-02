@@ -21,4 +21,3 @@ for i in range(n):
     else:
         l_e += 1
 print(res)
-

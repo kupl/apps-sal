@@ -1,7 +1,9 @@
+from itertools import accumulate
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from itertools import accumulate
+
+
 def main():
     n = int(input())
     s = list(input())
@@ -17,6 +19,9 @@ def main():
     r = n - num - 1
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

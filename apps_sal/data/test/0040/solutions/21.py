@@ -20,4 +20,3 @@ elif kek and not changed:
     print("unrated")
 else:
     print("rated")
-

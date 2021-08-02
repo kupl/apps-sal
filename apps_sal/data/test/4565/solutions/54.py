@@ -15,17 +15,16 @@ for i in range(N):
         W[i] = W_pre
         E[i] = E_pre + 1
     W_pre = W[i]
-    E_pre = E[i] 
+    E_pre = E[i]
 
 ans = N
 for i in range(N):
-    if i>0:
-        res1 = W[i-1]
+    if i > 0:
+        res1 = W[i - 1]
     else:
         res1 = 0
-    res2 = E[N-1]-E[i]
-    #print(i,res1,res2)
-    ans = min(ans,res1+res2)
+    res2 = E[N - 1] - E[i]
+    # print(i,res1,res2)
+    ans = min(ans, res1 + res2)
 
 print(ans)
-

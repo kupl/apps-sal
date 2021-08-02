@@ -14,7 +14,7 @@ for i in range(n):
     if i == 0:
         if s[-1] == "E":
             r[0] = 1
-    elif s[-i-1] == "E":
+    elif s[-i - 1] == "E":
         r[i] = r[i - 1] + 1
     else:
         r[i] = r[i - 1]

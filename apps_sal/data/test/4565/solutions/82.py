@@ -1,6 +1,6 @@
 N = int(input())
 S = input()
- 
+
 oE = S.count("E")
 Wo = 0
 
@@ -10,7 +10,7 @@ for i in range(N):
         if S[i] == "E":
             oE -= 1
     else:
-        if S[i-1] == "W":
+        if S[i - 1] == "W":
             Wo += 1
         if S[i] == "E":
             oE -= 1

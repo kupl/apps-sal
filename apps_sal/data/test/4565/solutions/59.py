@@ -24,7 +24,6 @@ def solve(N, S):
     print(ans)
 
 
-
 def __starting_point():
     N = int(input())
     S = input()
@@ -34,5 +33,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

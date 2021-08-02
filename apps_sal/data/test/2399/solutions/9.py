@@ -1,6 +1,6 @@
 test_case = int(input())
- 
- 
+
+
 def solve():
     a, b = list(map(int, input().split()))
     s = input().split('X')
@@ -18,14 +18,14 @@ def solve():
             tmp = le
         else:
             cnt += 1
- 
+
     if tmp is not 0:
         win = False
-        for i in range(tmp+1):
+        for i in range(tmp + 1):
             part2 = tmp - i - a
             if i > part2 or i >= 2 * b:
                 break
-            if 2*b <= part2 or b <= i < a or b <= part2 < a:
+            if 2 * b <= part2 or b <= i < a or b <= part2 < a:
                 continue
             ncnt = cnt
             if i >= a:
@@ -37,8 +37,7 @@ def solve():
     else:
         win = cnt % 2 == 1
     return "YES" if win else "NO"
- 
- 
+
+
 for _ in range(test_case):
     print(solve())
-

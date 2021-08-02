@@ -10,21 +10,13 @@ n = int(input())
 x = []
 f = 0
 for _ in range(n):
-	a, b = list(map(int, input().split()))
-	if a != b:
-		f = 1
-	x.append(a)
+    a, b = list(map(int, input().split()))
+    if a != b:
+        f = 1
+    x.append(a)
 if f == 1:
-	print("rated")
+    print("rated")
 elif sorted(x)[::-1] == x:
-	print("maybe")
+    print("maybe")
 else:
-	print("unrated")
-
-
-
-
-
-
-
-
+    print("unrated")

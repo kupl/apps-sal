@@ -1,6 +1,6 @@
 
 n = int(input())
-A =input()
+A = input()
 e = A.count('E')
 cnt = e
 
@@ -9,6 +9,6 @@ for i in A:
         cnt -= 1
     else:
         cnt += 1
-    e = min(e,cnt)
+    e = min(e, cnt)
 
 print(e)
