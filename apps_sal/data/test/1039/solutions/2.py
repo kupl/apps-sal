@@ -46,4 +46,3 @@ for _ in range(Q):
     x -= 1
     y -= 1
     print((d[x] + d[y]))
-

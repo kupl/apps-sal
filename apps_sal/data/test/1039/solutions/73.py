@@ -20,12 +20,11 @@ sys.setrecursionlimit(20000000)
 
 N = int(input())
 
-ARR = [list(map(int,input().split())) for i in range(N-1)]
+ARR = [list(map(int, input().split())) for i in range(N - 1)]
 
-Q, K = map(int,input().split())
+Q, K = map(int, input().split())
 
-BRR = [list(map(int,input().split())) for i in range(Q)]
-
+BRR = [list(map(int, input().split())) for i in range(Q)]
 
 
 def prepare(arr, n):

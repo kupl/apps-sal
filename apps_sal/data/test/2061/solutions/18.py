@@ -51,5 +51,4 @@ for i in range(1, n + 1):
             r += 1
 
 print(r)
-print("\n".join( "".join(m[1:-1])for m in mp[1:-1]))
-
+print("\n".join("".join(m[1:-1])for m in mp[1:-1]))

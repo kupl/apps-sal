@@ -7,6 +7,7 @@ for _ in range(N - 1):
     G[b - 1].append([c, a - 1])
 Q, K = map(int, input().split())
 
+
 def dijkstra(s, N, G):
     d = [float('inf')] * N
     d[s] = 0
@@ -21,6 +22,7 @@ def dijkstra(s, N, G):
                 d[j] = d[i] + c
                 heapq.heappush(hq, [d[j], j])
     return d
+
 
 D = dijkstra(K - 1, N, G)
 

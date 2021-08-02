@@ -1,4 +1,4 @@
-# @author 
+# @author
 
 import sys
 
@@ -32,7 +32,7 @@ class DRecoverIt:
         n = int(input())
         b = [int(item) for item in input().split()]
         b.sort(reverse=True)
-        cnt = {x : 0 for x in b}
+        cnt = {x: 0 for x in b}
         for x in b:
             cnt[x] += 1
 
@@ -67,9 +67,7 @@ class DRecoverIt:
         print(*res)
 
 
-
 solver = DRecoverIt()
 input = sys.stdin.readline
 
 solver.solve()
-

@@ -8,6 +8,8 @@ for i in range(n - 1):
     e[a - 1].append([b - 1, c])
     e[b - 1].append([a - 1, c])
 q, k = map(int, input().split())
+
+
 def dfs(cur, par, di):
     d[cur] = di
     for i in e[cur]:
@@ -15,6 +17,8 @@ def dfs(cur, par, di):
             if i == par:
                 continue
             dfs(i[0], cur, di + i[1])
+
+
 dfs(k - 1, -1, 0)
 for i in range(q):
     x, y = map(int, input().split())

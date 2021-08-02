@@ -40,4 +40,3 @@ C = data[0]
 r = abs((C - A) ^ (B - A)) / (B - A).len()
 min_ = min(min_, r)
 print(min_ / 2)
-

@@ -55,4 +55,3 @@ for i in range(t):
         print("NO")
     if i != t - 1:
         input()
-

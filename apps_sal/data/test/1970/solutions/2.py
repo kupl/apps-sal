@@ -13,4 +13,3 @@ for i in range(N):
         print("YES")
     else:
         print("NO")
-

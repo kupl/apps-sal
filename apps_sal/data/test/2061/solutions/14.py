@@ -11,9 +11,10 @@ for i in range(n):
     land.append(list(input()))
 edge = False
 
+
 def DFS(i, j, c):
     nonlocal land, n, m, k, cc, visit, edge
-    if i <= 0 or j <= 0 or i >= n-1 or j >= m-1:
+    if i <= 0 or j <= 0 or i >= n - 1 or j >= m - 1:
         edge = True
         return 0
     if visit[i][j] != 0: return 0
@@ -25,15 +26,16 @@ def DFS(i, j, c):
     if land[i][j + 1] == '.': DFS(i, j + 1, c + 1)
     if land[i][j - 1] == '.': DFS(i, j - 1, c + 1)
 
+
 def DFS2(i, j):
     nonlocal land, n, m, k, cc
     if i < 0 or j < 0 or i >= n or j >= m: return 0
     if land[i][j] != '.': return 0
     land[i][j] = '*'
-    DFS2(i+1,j)
+    DFS2(i + 1, j)
     DFS2(i - 1, j)
-    DFS2(i, j+1)
-    DFS2(i, j-1)
+    DFS2(i, j + 1)
+    DFS2(i, j - 1)
     return 0
 
 
@@ -45,7 +47,7 @@ for i in range(n):
         cc = 0
         edge = False
         if visit[i][j] == 0:
-            DFS(i,j,0)
+            DFS(i, j, 0)
             if edge is True: continue
             if cc > 0:
                 ccc.append([cc, i, j])
@@ -53,7 +55,7 @@ for i in range(n):
 
 ccc.sort()
 
-red =len(ccc) - k
+red = len(ccc) - k
 
 if red == 0:
     print(0)

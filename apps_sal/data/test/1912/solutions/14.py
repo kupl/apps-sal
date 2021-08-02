@@ -2,6 +2,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def is_ok(r, g, b, w):
     odd_cnt = 0
     if r % 2 == 1:
@@ -16,6 +17,7 @@ def is_ok(r, g, b, w):
         return True
     else:
         return False
+
 
 t = int(input())
 for _ in range(t):

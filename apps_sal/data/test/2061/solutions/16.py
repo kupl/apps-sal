@@ -24,7 +24,7 @@ def dfs(g, u, visited):
         if y >= 0 and y < n and x >= 0 and x < m \
            and g[y][x] == '.' and not visited[y][x]:
             # if u == (2, 3):
-                # print('y = {0} x = {1}'.format(y, x))
+            # print('y = {0} x = {1}'.format(y, x))
             dfs(g, (y, x), visited)
 
 
@@ -38,6 +38,7 @@ def dfs_(g, u, visited, component):
         if y >= 0 and y < n and x >= 0 and x < m \
            and g[y][x] == '.' and not visited[y][x]:
             dfs_(g, (y, x), visited, component)
+
 
 # dfs from the outer edge and mark the bad ones
 visited = [[False for j in range(m)] for i in range(n)]
@@ -78,4 +79,3 @@ print(count)
 
 for i in range(n):
     print(''.join(g[i]))
-

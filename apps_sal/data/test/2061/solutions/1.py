@@ -15,7 +15,7 @@ def main():
         while True:
             n, m, k = list(map(int, input().split()))
             grid = [list(input()) for i in range(n)]
-            lakes = [ ]
+            lakes = []
             q = deque()
             for i in range(n):
                 for j in (0, m - 1):
@@ -86,4 +86,3 @@ def main():
 
 
 main()
-

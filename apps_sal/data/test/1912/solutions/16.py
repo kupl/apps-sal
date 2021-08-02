@@ -14,11 +14,20 @@
 #    UUID     : H1wm7mv97N5BgWH3
 #    ------------------------------------------------
 #
+import re
+import copy
+import random
+import decimal
+import heapq
+import itertools
+import bisect
+import collections
+import math
+import sys
 production = True
 
-import sys, math, collections, bisect, itertools, heapq, decimal, random, copy, re
 
-def input(f = 0, m = 0):
+def input(f=0, m=0):
 
     if m > 0: return [input(f) for i in range(m)]
     else:
@@ -38,25 +47,29 @@ def input(f = 0, m = 0):
 
         return p if u else p[0]
 
-def out(l, f = 0, n = True):
+
+def out(l, f=0, n=True):
 
     if f == 0: p = str(l)
     elif f == 1: p = " ".join(map(str, l))
     elif f == 2: p = "\n".join(map(str, l))
     elif f == 3: p = "".join(map(str, l))
 
-    print(p, end = "\n" if n else "")
+    print(p, end="\n" if n else "")
+
 
 def log(*args):
     if not production:
-        print("$$$", end = "")
+        print("$$$", end="")
         print(*args)
+
 
 enu = enumerate
 ter = lambda a, b, c: b if a else c
 ceil = lambda a, b: -(-a // b)
 
-def mapl(i, f = 0):
+
+def mapl(i, f=0):
 
     if f == 0: return list(map(int, i))
     elif f == 1: return list(map(str, i))
@@ -109,4 +122,3 @@ for i in range(input(11)): solve()
 #
 #   >>>>>>>>>>>>>>>> END OF SOLUTION <<<<<<<<<<<<<<<
 #
-

@@ -29,4 +29,3 @@ for _ in range(Q):
     result.append(d[x] + d[y])
 print(*result, sep='\n')
 #print('\n'.join(str(v) for v in result))
-

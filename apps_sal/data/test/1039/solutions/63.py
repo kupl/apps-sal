@@ -9,11 +9,13 @@ for _ in range(n - 1):
     b -= 1
     edges[a].append([b, c])
     edges[b].append([a, c])
-    
+
 q, k = map(int, input().split())
 
 check = [False for _ in range(n)]
 dist = [0 for _ in range(n)]
+
+
 def dfs(pos, b_pos):
     for n_pos, c in edges[pos]:
         if n_pos == b_pos:
@@ -21,6 +23,7 @@ def dfs(pos, b_pos):
         check[n_pos] = True
         dist[n_pos] = c + dist[pos]
         dfs(n_pos, pos)
+
 
 check[k - 1] = True
 dfs(k - 1, -1)

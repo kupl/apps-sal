@@ -15,5 +15,3 @@ dist = nx.shortest_path_length(G, K - 1, weight="weight", method="bellman-ford")
 
 for x, y in XY:
     print((dist[x - 1] + dist[y - 1]))
-
-

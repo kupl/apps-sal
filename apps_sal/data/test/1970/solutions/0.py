@@ -1,6 +1,7 @@
 def check(x, y):
     return 0 <= x < 8 and 0 <= y < 8
 
+
 def dfs1(x, y, T=0):
     nonlocal first, used
     if not(check(x, y)) or used[x][y]:
@@ -9,6 +10,7 @@ def dfs1(x, y, T=0):
     first.add((x, y, T))
     for pair in (2, 2), (2, -2), (-2, 2), (-2, -2):
         dfs1(x + pair[0], y + pair[1], 1 - T)
+
 
 def dfs2(x, y, T=0):
     nonlocal second, used
@@ -51,4 +53,3 @@ for i in range(t):
     if not(IsOk):
         print("NO")
     board = []
-

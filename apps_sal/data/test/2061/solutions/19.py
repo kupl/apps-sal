@@ -1,8 +1,9 @@
+from sys import setrecursionlimit
 corr = lambda x, y: 0 <= x < n and 0 <= y < m and a[x][y] == '.'
 ocean = lambda x, y: x in (0, n - 1) or y in (0, m - 1)
 D = (0, 1), (0, -1), (1, 0), (-1, 0)
-from sys import setrecursionlimit
 setrecursionlimit(10 ** 5)
+
 
 def dfs(x, y):
     nonlocal size, flag
@@ -13,6 +14,7 @@ def dfs(x, y):
         nx, ny = x + dx, y + dy
         if corr(nx, ny) and not was[nx][ny]:
             dfs(nx, ny)
+
 
 read = lambda: map(int, input().split())
 n, m, k = read()
@@ -26,7 +28,7 @@ for i in range(n):
             flag = False
             size = 0
             dfs(i, j)
-            if not  flag:
+            if not flag:
                 s.append((size, clr))
             clr += 1
 s.sort()
@@ -42,4 +44,3 @@ for i in range(n):
             b[i][j] = '*'
 print(ans)
 [print(''.join(i)) for i in b]
-

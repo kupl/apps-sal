@@ -25,19 +25,21 @@ class DSU:
         self.parents[u] = v
         self.size[v] += self.size[u]
 
-def get_cart2line(m): 
+
+def get_cart2line(m):
     return lambda x, y: x * m + y
+
 
 def main():
     n, m, k = map(int, input().split())
     g = [list(input()) for _ in range(n)]
-    
+
     ocean = 0
     dsu = DSU(n * m)
     dsu.make(ocean)
-    
+
     line = get_cart2line(m)
-    
+
     for i in range(n):
         a, b = line(i, 0), line(i, m - 1)
         dsu.make(a)
@@ -46,22 +48,22 @@ def main():
         dsu.join(ocean, b)
 
     for i in range(m):
-        a, b = line(0, i), line(n-1, i)
+        a, b = line(0, i), line(n - 1, i)
         dsu.make(a)
         dsu.make(b)
         dsu.join(ocean, a)
         dsu.join(ocean, b)
-        
+
     for i in range(n):
         for j in range(m):
             if g[i][j] == '.':
                 dsu.make(line(i, j))
                 if j > 0:
-                    if g[i][j-1] == '.':
-                        dsu.join(line(i, j-1), line(i, j))
+                    if g[i][j - 1] == '.':
+                        dsu.join(line(i, j - 1), line(i, j))
                 if i > 0:
-                    if g[i-1][j] == '.':
-                        dsu.join(line(i-1, j), line(i, j))
+                    if g[i - 1][j] == '.':
+                        dsu.join(line(i - 1, j), line(i, j))
 
     s = set()
     for i in range(n):
@@ -85,5 +87,5 @@ def main():
     print(ans)
     print(*(''.join(r) for r in g), sep='\n')
 
-main()
 
+main()

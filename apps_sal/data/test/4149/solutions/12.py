@@ -1,7 +1,7 @@
 
 from collections import Counter
 
-lim = 2750131 + 10# 2 * 10**6 + 2
+lim = 2750131 + 10  # 2 * 10**6 + 2
 
 
 def erato():
@@ -33,9 +33,10 @@ def __starting_point():
     for b in bb:
         if cnt[e[b]] > 0 and cnt[b] > 0:
             res.append(str(b))
-            cnt.subtract({b:1, e[b]:1})
-
+            cnt.subtract({b: 1, e[b]: 1})
 
     # res = list(map(lambda x: str(e[x]), bb))
     print(" ".join(res))
+
+
 __starting_point()

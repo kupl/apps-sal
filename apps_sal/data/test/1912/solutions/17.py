@@ -12,5 +12,5 @@ def solve():
         else:
             print('Yes')
 
-[solve() for x in range(int(input()))]
 
+[solve() for x in range(int(input()))]

@@ -1,6 +1,7 @@
+from collections import deque
 n = int(input())
 G = [[] for _ in range(n)]
-for _ in range(n-1):
+for _ in range(n - 1):
     a, b, c = list(map(int, input().split()))
     a -= 1
     b -= 1
@@ -8,14 +9,13 @@ for _ in range(n-1):
     G[b].append((a, c))
 
 Q, k = tuple(map(int, input().split()))
-INF = 10**9*n + 1
+INF = 10**9 * n + 1
 dists = [INF] * n
-dists[k-1] = 0
+dists[k - 1] = 0
 
-from collections import deque
-q = deque([k-1])
+q = deque([k - 1])
 visited = [0] * n
-visited[k-1] = 1
+visited[k - 1] = 1
 
 while q:
     node = q.popleft()
@@ -29,5 +29,4 @@ while q:
 
 for _ in range(Q):
     s, g = tuple(map(int, input().split()))
-    print((dists[s-1] + dists[g-1]))
-
+    print((dists[s - 1] + dists[g - 1]))

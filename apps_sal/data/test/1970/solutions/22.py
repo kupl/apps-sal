@@ -7,7 +7,7 @@ for _ in range(t):
         s = input().strip()
         for j in range(8):
             if s[j] == 'K':
-                knights.append((i,j))
+                knights.append((i, j))
     n1 = knights[0]
     n2 = knights[1]
     """
@@ -23,4 +23,3 @@ for _ in range(t):
         print('YES')
     else:
         print('NO')
-

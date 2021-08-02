@@ -43,4 +43,3 @@ changes, new_chart = solve(n, m, k, chart)
 print(changes)
 for line in new_chart:
     print(''.join(line))
-

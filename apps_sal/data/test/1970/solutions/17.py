@@ -15,11 +15,3 @@ for t in range(n):
     else:
 
         print('NO')
-
-
-
-
-
-
-
-
