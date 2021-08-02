@@ -37,7 +37,7 @@ for i in range(a):
                         ik = j
                         break
                 ansl.append(i[0] + str(ik) + i[2:])
-                ans += 1  
+                ans += 1
                 if r == 0:
                     r = 0
                     ik = 0
@@ -48,7 +48,7 @@ for i in range(a):
                             ik = j
                             break
                     ansl.append(i[0:2] + str(ik) + i[3:])
-                    ans += 1 
+                    ans += 1
                     if r == 0:
                         r = 0
                         ik = 0
@@ -59,11 +59,10 @@ for i in range(a):
                                 ik = j
                                 break
                         ansl.append(i[0:-1] + str(ik))
-                        ans += 1                     
+                        ans += 1
         else:
             f.add(i)
             ansl.append(i)
     print(ans)
     for i in ansl:
         print(i)
-

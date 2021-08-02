@@ -9,4 +9,3 @@ for i in range(n):
             cur = max(cur, y[j] + ((4 * r * r - (x[i] - x[j]) ** 2) ** 0.5))
     y[i] = cur
 print(*y)
-

@@ -1,5 +1,6 @@
 t = int(input())
 
+
 def change(p, dct):
     if dct[p] == 1:
         return [p, 0]
@@ -10,6 +11,7 @@ def change(p, dct):
             nw = ''.join(nw)
             if nw not in dct:
                 return [nw, 1]
+
 
 for _ in range(t):
     n = int(input())

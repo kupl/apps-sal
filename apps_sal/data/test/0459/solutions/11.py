@@ -12,7 +12,7 @@ if line[4] == line[5] and line[5] == line[6] and line[6] == line[7]:
         if line[3] != line[2]:
             can = False
         else:
-            c1 += [line[3]]        
+            c1 += [line[3]]
         if line[16] != line[18]:
             can = False
         else:
@@ -20,12 +20,12 @@ if line[4] == line[5] and line[5] == line[6] and line[6] == line[7]:
         if line[8] != line[9]:
             can = False
         else:
-            c1 +=[line[8]] 
+            c1 += [line[8]]
         c2 = []
         if line[12] != line[14]:
             can = False
         else:
-            c2 += [line[14]]         
+            c2 += [line[14]]
         if line[0] != line[1]:
             can = False
         else:
@@ -33,16 +33,16 @@ if line[4] == line[5] and line[5] == line[6] and line[6] == line[7]:
         if line[17] != line[19]:
             can = False
         else:
-            c2 += [line[19]]        
+            c2 += [line[19]]
         if line[10] != line[11]:
             can = False
         else:
-            c2 += [line[11]]        
+            c2 += [line[11]]
         if can:
             for i in range(2):
                 c3 = []
                 for j in range(4):
-                    c3 += [c1[(q[i]+j)%4]]
+                    c3 += [c1[(q[i] + j) % 4]]
                 if c3 == c2:
                     yes = True
 if line[0] == line[1] and line[1] == line[2] and line[2] == line[3]:
@@ -56,7 +56,7 @@ if line[0] == line[1] and line[1] == line[2] and line[2] == line[3]:
         if line[4] != line[5]:
             can = False
         else:
-            c1 += [line[4]]        
+            c1 += [line[4]]
         if line[16] != line[17]:
             can = False
         else:
@@ -64,7 +64,7 @@ if line[0] == line[1] and line[1] == line[2] and line[2] == line[3]:
         if line[20] != line[21]:
             can = False
         else:
-            c1 += [line[21]] 
+            c1 += [line[21]]
         c2 = []
         if line[14] != line[15]:
             can = False
@@ -73,7 +73,7 @@ if line[0] == line[1] and line[1] == line[2] and line[2] == line[3]:
         if line[6] != line[7]:
             can = False
         else:
-            c2 += [line[7]]      
+            c2 += [line[7]]
         if line[18] != line[19]:
             can = False
         else:
@@ -81,12 +81,12 @@ if line[0] == line[1] and line[1] == line[2] and line[2] == line[3]:
         if line[22] != line[23]:
             can = False
         else:
-            c2 += [line[23]] 
+            c2 += [line[23]]
         if can:
             for i in range(2):
                 c3 = []
                 for j in range(4):
-                    c3 += [c1[(q[i]+j)%4]]
+                    c3 += [c1[(q[i] + j) % 4]]
                 if c3 == c2:
                     yes = True
 if line[12] == line[13] and line[13] == line[14] and line[14] == line[15]:
@@ -100,7 +100,7 @@ if line[12] == line[13] and line[13] == line[14] and line[14] == line[15]:
         if line[4] != line[6]:
             can = False
         else:
-            c1 += [line[4]]        
+            c1 += [line[4]]
         if line[8] != line[10]:
             can = False
         else:
@@ -108,7 +108,7 @@ if line[12] == line[13] and line[13] == line[14] and line[14] == line[15]:
         if line[23] != line[21]:
             can = False
         else:
-            c1 += [line[21]] 
+            c1 += [line[21]]
         c2 = []
         if line[1] != line[3]:
             can = False
@@ -117,7 +117,7 @@ if line[12] == line[13] and line[13] == line[14] and line[14] == line[15]:
         if line[5] != line[7]:
             can = False
         else:
-            c2 += [line[7]]        
+            c2 += [line[7]]
         if line[11] != line[9]:
             can = False
         else:
@@ -125,12 +125,12 @@ if line[12] == line[13] and line[13] == line[14] and line[14] == line[15]:
         if line[22] != line[20]:
             can = False
         else:
-            c2 += [line[20]]  
+            c2 += [line[20]]
         if can:
             for i in range(2):
                 c3 = []
                 for j in range(4):
-                    c3 += [c1[(q[i]+j)%4]]
+                    c3 += [c1[(q[i] + j) % 4]]
                 if c3 == c2:
                     yes = True
 if yes:

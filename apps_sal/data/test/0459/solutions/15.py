@@ -1,5 +1,6 @@
 cube = [-1] + list(map(int, input().split()))
 
+
 def ok(cube):
     counter = 0
     last = cube[1]
@@ -7,7 +8,7 @@ def ok(cube):
         if i == -1:
             continue
         elif last == i:
-            counter+=1
+            counter += 1
         else:
             if counter != 4:
                 return False
@@ -15,6 +16,7 @@ def ok(cube):
                 counter = 1
                 last = i
     return True
+
 
 def rotl(cube):
     cube_n = cube[:]
@@ -32,6 +34,7 @@ def rotl(cube):
     cube_n[14] = cube[6]
     return cube_n
 
+
 def rotr(cube):
     cube_n = cube[:]
     cube_n[1] = cube[2]
@@ -47,6 +50,7 @@ def rotr(cube):
     cube_n[13] = cube[21]
     cube_n[14] = cube[22]
     return cube_n
+
 
 def next(cube):
     cube_n = cube[:]
@@ -75,6 +79,7 @@ def next(cube):
     cube_n[23] = cube[2]
     cube_n[24] = cube[1]
     return cube_n
+
 
 def next2(cube):
     cube_n = cube[:]
@@ -120,4 +125,3 @@ for i in range(4):
         print("YES")
         return
 print("NO")
-

@@ -6,6 +6,8 @@ def check(q):
         return True
     else:
         return False
+
+
 a = [0] + [int(x) for x in input().split()]
 swaps = []
 b = a[:]
@@ -153,8 +155,3 @@ if check(b):
     print("YES")
     return
 print("NO")
-
-
-
-
-

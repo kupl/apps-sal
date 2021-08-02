@@ -7,4 +7,3 @@ if sum(a) - m <= s:
     result = "YES"
 
 print(result)
-

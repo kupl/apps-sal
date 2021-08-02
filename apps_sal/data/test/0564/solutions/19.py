@@ -6,4 +6,3 @@ if sum(sorted(map(int, str.split(input())))[:-1]) <= s:
 else:
 
     print("NO")
-

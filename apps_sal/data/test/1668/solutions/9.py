@@ -15,12 +15,12 @@ for _ in range(t):
                 count += 1
         if count > 1:
             temp = k[i]
-            for a in ['0','1','2','3','4','5','6','7','8','9']:
+            for a in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
                 if a + k[i][1:] not in k:
                     k[i] = a + k[i][1:]
                     break
             if temp == k[i]:
-                for a in ['0','1','2','3','4','5','6','7','8','9']:
+                for a in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
                     if k[i][0] + a + k[i][2:] not in k:
                         k[i] = a + k[i][1:]
                         break
@@ -28,4 +28,3 @@ for _ in range(t):
     print(total)
     for i in range(n):
         print(k[i])
-

@@ -6,7 +6,7 @@ arr.sort()
 
 #print(n, s, arr)
 
-#print(sum(arr[:-1]))
+# print(sum(arr[:-1]))
 
 if sum(arr[:-1]) <= s:
     print("YES")

@@ -1,6 +1,7 @@
 def f(a, b, c, d):
     return a == b == c == d
 
+
 a = [0]
 a.extend(list(map(int, input().split())))
 if f(a[13], a[14], a[15], a[16]) and f(a[17], a[18], a[19], a[20]):

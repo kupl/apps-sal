@@ -5,4 +5,3 @@ else:
     res1 = (n % m) * b
     res2 = (m - n % m) * a
     print(min(res1, res2))
-

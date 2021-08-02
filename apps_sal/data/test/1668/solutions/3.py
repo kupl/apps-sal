@@ -3,8 +3,8 @@ def solve():
     d = {}
     ss = [input() for i in range(n)]
     for s in ss:
-        d[s] = d.get(s,0)+1
-    ans = sum(i-1 for i in d.values())
+        d[s] = d.get(s, 0) + 1
+    ans = sum(i - 1 for i in d.values())
     print(ans)
     used = set(d.keys())
     l = []
@@ -28,6 +28,7 @@ def solve():
             l.append(s)
             used.add(s)
     print(*l, sep="\n")
+
 
 t = int(input())
 for i in range(t):

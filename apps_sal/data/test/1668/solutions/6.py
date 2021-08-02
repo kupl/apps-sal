@@ -12,7 +12,7 @@ for i in range(t):
             d[st].append(j)
         else:
             d[st] = [j]
-    
+
     poss = [i for i in range(10)]
     for j in range(n):
         poss[p[j][0]] = -1
@@ -28,6 +28,3 @@ for i in range(t):
     print(res)
     for o in p:
         print("".join(map(str, o)))
-    
-    
-

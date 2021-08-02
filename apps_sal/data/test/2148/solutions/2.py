@@ -11,4 +11,3 @@ for i in range(n):
         inc = sqrt(4 * r * r - d * d)
         y[i] = max(y[i], y[j] + inc)
 print(' '.join(map(str, y)))
-

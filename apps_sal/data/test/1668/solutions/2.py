@@ -17,8 +17,8 @@ for _ in range(t):
             res += 1
             done = False
             for i in range(4):
-                for d in range(9+1):
-                    nw = code[:i] + str(d) + code[i+1:]
+                for d in range(9 + 1):
+                    nw = code[:i] + str(d) + code[i + 1:]
                     if nw not in everything:
                         added.add(nw)
                         everything.add(nw)
@@ -28,4 +28,3 @@ for _ in range(t):
                 if done: break
     print(res)
     print('\n'.join(out))
-

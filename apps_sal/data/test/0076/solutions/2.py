@@ -6,4 +6,3 @@ else:
     k1 = n % m
     k2 = m - k1
     print(min(k1 * b, k2 * a))
-
