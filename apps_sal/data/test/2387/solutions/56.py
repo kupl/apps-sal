@@ -44,8 +44,7 @@ if min_revr == 10**20:
 if min_revl == 10**20:
     min_revl = 0
 
-if left+rev_l == rev_r+right and left >= min_revr and right >= min_revl:
+if left + rev_l == rev_r + right and left >= min_revr and right >= min_revl:
     print('Yes')
 else:
     print('No')
-

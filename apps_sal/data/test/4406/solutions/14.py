@@ -1,11 +1,12 @@
 import sys
 
+
 def main():
     def input():
         return sys.stdin.readline()[:-1]
 
-    n, k = map(int,input().split())
-    a = list(map(int,input().split()))
+    n, k = map(int, input().split())
+    a = list(map(int, input().split()))
     l = []
     for e in a:
         if len(l) == k:
@@ -19,8 +20,11 @@ def main():
             else:
                 pass
     print(len(l))
-    print(*l, sep = " ")
+    print(*l, sep=" ")
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

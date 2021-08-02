@@ -4,14 +4,14 @@ edge = []
 relation = defaultdict(set)
 for i in range(N - 1):
     a, b = map(lambda x: x - 1, map(int, input().split()))
-    edge.append((a,b))
+    edge.append((a, b))
     relation[a].add(b)
     relation[b].add(a)
 
 print(max(map(lambda x: len(relation[x]), relation)))
 answer = {}
 queue = []
-queue.append((0, 0)) # (node_id, color_id)
+queue.append((0, 0))  # (node_id, color_id)
 already = set()
 counter = 0
 already.add(0)

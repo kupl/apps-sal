@@ -4,8 +4,8 @@ N = int(input())
 # mtx = np.zeros([N, N], dtype=np.int32)
 tree = [[] for i in range(N)]
 
-key_order = [0] * (N-1)
-for i in range(N-1):
+key_order = [0] * (N - 1)
+for i in range(N - 1):
     in1, in2 = map(int, input().split())
     in1 -= 1
     in2 -= 1
@@ -39,8 +39,6 @@ def bfs(tree, p):
                 node_colors[v] = cnt
                 queue.append(v)
                 cnt += 1
-
-
 
     """
     node_colors = [set() for _ in tree]
@@ -78,4 +76,3 @@ print(max([c for key, c in edge_colors.items()]))
 # print(edge_colors)
 
 # show_tree(tree)
-

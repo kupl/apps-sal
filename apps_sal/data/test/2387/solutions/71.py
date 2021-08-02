@@ -1,5 +1,5 @@
 n = int(input())
-scop = [] #高低差,min値
+scop = []  # 高低差,min値
 scom = []
 ssum = 0
 
@@ -15,16 +15,16 @@ for i in range(n):
         if ms > sa:
             ms = sa
     if sa > 0:
-        scop.append([ms,sa])
+        scop.append([ms, sa])
     elif not sa == ms:
-        scom.append([ms,sa])
+        scom.append([ms, sa])
     ssum += sa
 
 if not ssum == 0:
     print("No")
     return
 
-scop.sort(reverse = True)
+scop.sort(reverse=True)
 scom.sort()
 
 now = 0
@@ -40,4 +40,3 @@ for i in scom:
     now += i[1]
 
 print("Yes")
-

@@ -15,7 +15,7 @@ def main():
         if height > 0:
             up_lines.append((bottom, height))
         else:
-            down_lines.append((bottom-height, -height))
+            down_lines.append((bottom - height, -height))
     up_lines.sort(reverse=True, key=lambda line: line[0])
     down_lines.sort(reverse=True, key=lambda line: line[0])
     left = 0
@@ -38,5 +38,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

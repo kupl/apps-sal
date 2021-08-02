@@ -1,5 +1,7 @@
 import math
-inp = lambda cast=int: [cast(x) for x in input().split()]
+def inp(cast=int): return [cast(x) for x in input().split()]
+
+
 printf = lambda s='', *args, **kwargs: print(str(s).format(*args), flush=True, **kwargs)
 
 n, k = inp()
@@ -14,4 +16,3 @@ for a in A:
 print(len(B))
 for b in B:
     print(b, end=' ')
-

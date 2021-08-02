@@ -10,7 +10,7 @@ def main():
     sys.setrecursionlimit(10**7)
     from collections import Counter, deque
     from itertools import combinations, permutations, accumulate, groupby, product
-    from bisect import bisect_left,bisect_right
+    from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
     #from math import gcd
@@ -35,22 +35,22 @@ def main():
         if up >= 0:
             a.append((down, up))
         else:
-            b.append((up-down, down, up))
+            b.append((up - down, down, up))
 
     a.sort(reverse=True)
-    b.sort(key=lambda a: a[0],reverse=True)
+    b.sort(key=lambda a: a[0], reverse=True)
 
     c = 0
 
     for d, u in a:
-        if c+d < 0:
+        if c + d < 0:
             print('No')
             break
         else:
             c += u
     else:
         for _, d, u in b:
-            if c+d < 0:
+            if c + d < 0:
                 print('No')
                 break
             else:
@@ -60,8 +60,10 @@ def main():
                 print('Yes')
             else:
                 print('No')
-    
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -18,7 +18,7 @@ for _ in range(N):
     if sums >= 0:
         L.append((sums, mins))
     else:
-        R.append((-sums, mins-sums))
+        R.append((-sums, mins - sums))
 
 L.sort(key=lambda x: x[1], reverse=True)
 R.sort(key=lambda x: x[1], reverse=True)

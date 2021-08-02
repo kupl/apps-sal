@@ -1,6 +1,7 @@
 import sys
 # input = sys.stdin.readline
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 n = int(input())
 s = [input() for _ in range(n)]
@@ -49,4 +50,3 @@ else:
     ans = 'Yes' if v1 == v2 else 'No'
 
 print(ans)
-

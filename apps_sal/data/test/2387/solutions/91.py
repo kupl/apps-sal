@@ -1,27 +1,27 @@
 # 入力
 N = int(input())
 
-S1 = [] # 増えるシーケンス用
-S2 = [] # 減るシーケンス用
+S1 = []  # 増えるシーケンス用
+S2 = []  # 減るシーケンス用
 
 # 入力その２
 for i in range(N):
 
     S = input()  # シーケンス
-    mid, end = 0, 0    
+    mid, end = 0, 0
 
     for s in S:
         if s == '(':
             end += 1
         else:
             end -= 1
-            
+
         mid = min(mid, end)  # 途中経過で一番減るところを探す
 
     if end > 0:
         S1.append((mid, end))
     else:
-        S2.append((mid-end, -end))
+        S2.append((mid - end, -end))
 
 S1.sort(reverse=True)
 # S2.sort(key = lambda x : (x[0], -x[1]))
@@ -47,7 +47,7 @@ for t in S2:
     if mid < 0 or end2 < 0:  # 途中で左カッコの数が右を上回る
         out = True
         break
-        
+
 if (not end1 == end2) or out:  # 右、左 の数が合わない
     print('No')
 else:

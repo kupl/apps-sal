@@ -2,7 +2,7 @@ def main():
     from sys import stdin
     input = stdin.readline
     n = int(input())
-    S = [input() for _ in [0]*n]
+    S = [input() for _ in [0] * n]
     s2 = []
     s3 = []
     for s in S:
@@ -15,7 +15,7 @@ def main():
             else:
                 now -= 1
             m = min(m, now)
-        temp = [-m, (s.count("(")-s.count(")"))-m]
+        temp = [-m, (s.count("(") - s.count(")")) - m]
         if temp[0] < temp[1]:
             s2.append(temp)
         else:
@@ -42,4 +42,3 @@ def main():
 
 
 main()
-

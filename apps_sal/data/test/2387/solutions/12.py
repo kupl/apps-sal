@@ -15,13 +15,13 @@ for i in range(n):
     min_s = ""
     for c in s:
         if c == ")":
-            b_count-=1
+            b_count -= 1
         else:
-            b_count+=1
+            b_count += 1
         if b_count < 0:
             b_count = 0
-            a_count+= 1
-    min_s = ")"* a_count + "("*b_count
+            a_count += 1
+    min_s = ")" * a_count + "(" * b_count
 
     ai = a_count
     bi = b_count
@@ -30,13 +30,13 @@ for i in range(n):
         first += min_s
     elif bi == 0:
         last += min_s
-    elif bi-ai >= 0:
-        first_list.append([min_s,ai])
+    elif bi - ai >= 0:
+        first_list.append([min_s, ai])
     else:
-        last_list.append([min_s,bi])
+        last_list.append([min_s, bi])
 
-first_list= sorted(first_list, key=lambda s: s[1])
-last_list= sorted(last_list, key=lambda s: s[1], reverse=True)
+first_list = sorted(first_list, key=lambda s: s[1])
+last_list = sorted(last_list, key=lambda s: s[1], reverse=True)
 
 ans = first
 for i in range(len(first_list)):
@@ -50,12 +50,12 @@ b_count = 0
 min_s = ""
 for c in ans:
     if c == ")":
-        b_count-=1
+        b_count -= 1
     else:
-        b_count+=1
+        b_count += 1
     if b_count < 0:
         b_count = 0
-        a_count+= 1
+        a_count += 1
 
 if a_count == 0 and b_count == 0:
     print("Yes")

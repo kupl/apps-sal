@@ -1,6 +1,6 @@
 from collections import deque
 
-n, k = map(int ,input().split())
+n, k = map(int, input().split())
 q = deque(maxlen=k)
 c = list(map(int, input().split()))
 for i in c:

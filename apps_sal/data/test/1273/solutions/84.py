@@ -1,14 +1,14 @@
 from collections import deque
 
 n = int(input())
-ab = [list(map(int, input().split())) for _ in range(n-1)]
+ab = [list(map(int, input().split())) for _ in range(n - 1)]
 
-l = [[] for _ in range(n+1)]
+l = [[] for _ in range(n + 1)]
 for a, b in ab:
     l[a].append(b)
     l[b].append(a)
 
-parents = [-1] * (n+1)
+parents = [-1] * (n + 1)
 order = []
 q = deque()
 q.append(1)
@@ -21,7 +21,7 @@ while q:
         parents[i] = c
         q.append(i)
 
-color = [-1] * (n+1)
+color = [-1] * (n + 1)
 for i in order:
     ng = color[i]
     c = 1
@@ -42,4 +42,3 @@ for a, b in ab:
 
 print((max(ans)))
 print(('\n'.join(list(map(str, ans)))))
-

@@ -41,4 +41,3 @@ print((max(colors)))
 # 辺の番号順に色を出力
 for i in G_order:
     print((colors[i]))
-

@@ -33,11 +33,10 @@ for _ in range(n):
                 loss.append((min_p, end_p))
 
 
-
 profit.sort()
 while profit:
     min_p, end_p = profit.pop()
-    if cnt+min_p < 0:
+    if cnt + min_p < 0:
         print('No')
         return
     cnt += end_p
@@ -46,10 +45,9 @@ while profit:
 loss.sort(reverse=True)
 while loss:
     min_p, end_p = loss.pop()
-    if cnt+min_p < 0:
+    if cnt + min_p < 0:
         print('No')
         return
     cnt += end_p
 
-print(('Yes' if cnt+decrement == 0 else 'No'))
-
+print(('Yes' if cnt + decrement == 0 else 'No'))

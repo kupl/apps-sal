@@ -35,8 +35,8 @@ def main():
     ans = 0
     # print(lst)
     # print(sorted([count_scan(lst) for i in lst],
-                #  reverse=True,
-                #  key=key))
+    #  reverse=True,
+    #  key=key))
     for max_min, c in sorted([count_scan(s) for s in lst],
                              reverse=True,
                              key=key):
@@ -53,4 +53,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

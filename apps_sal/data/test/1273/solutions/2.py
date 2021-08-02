@@ -1,15 +1,15 @@
 N = int(input())
-graph = [[] for _ in range(N+1)]
+graph = [[] for _ in range(N + 1)]
 AB = []
 
-for _ in range(N-1):
-  a, b = list(map(int, input().split()))
-  graph[a].append(b)
-  graph[b].append(a)
-  AB.append((a, b))
+for _ in range(N - 1):
+    a, b = list(map(int, input().split()))
+    graph[a].append(b)
+    graph[b].append(a)
+    AB.append((a, b))
 
 root = 1
-parent = [0] * (N+1)
+parent = [0] * (N + 1)
 order = []
 stack = [root]
 
@@ -22,7 +22,7 @@ while stack:
         parent[y] = x
         stack.append(y)
 
-color = [-1] * (N+1)
+color = [-1] * (N + 1)
 K = -1
 for x in order:
     ng = color[x]
@@ -46,5 +46,4 @@ for a, b in AB:
 
 print(K)
 for i in ans:
-  print(i)
-
+    print(i)

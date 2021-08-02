@@ -1,4 +1,4 @@
-n,k = [int(i) for i in input().split()]
+n, k = [int(i) for i in input().split()]
 
 msg = [int(i) for i in input().split()]
 
@@ -11,6 +11,3 @@ for i in msg:
     fila = [i] + fila
 print(len(fila))
 print(*fila)
-
-        
-

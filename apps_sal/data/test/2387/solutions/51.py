@@ -40,4 +40,3 @@ if r != 0:
     return
 
 print('Yes')
-

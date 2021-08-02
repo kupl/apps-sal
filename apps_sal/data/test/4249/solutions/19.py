@@ -31,4 +31,3 @@ while r - left > 1:
     else:
         left = mid
 print(r)
-

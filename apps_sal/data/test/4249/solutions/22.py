@@ -30,27 +30,28 @@ else:
         num_count = _counter[num]
         counter.append(num_count)
         _ = _ + num_count
-        __ = __ + num_count *num
+        __ = __ + num_count * num
         sum_list.append(_)
         whole_sum_list.append(__)
+
     def avail(k):
         parse = len(num_list) - 1
         for i in range(len(num_list)):
-            if sum_list[i]//k >= num_list[i]:
+            if sum_list[i] // k >= num_list[i]:
                 parse = i
                 break
         parse = parse - 1 if parse > 0 else 0
-        floor = sum_list[parse]//k - 1
-        token = sum_list[parse]%k
+        floor = sum_list[parse] // k - 1
+        token = sum_list[parse] % k
         # print(k, sum_list[parse], floor, token)
-        whole_sum = whole_sum_list[parse] - k * int(floor*(floor+1)//2) - token * (floor+1)
+        whole_sum = whole_sum_list[parse] - k * int(floor * (floor + 1) // 2) - token * (floor + 1)
         if whole_sum >= m:
             return True
         if len(num_list) == 1:
             return False
         floor = floor + 1
-        _value = num_list[parse+1]
-        for i in range(counter[parse+1]):
+        _value = num_list[parse + 1]
+        for i in range(counter[parse + 1]):
             if _value <= floor:
                 break
             if whole_sum >= m:
@@ -76,11 +77,11 @@ else:
                 break
             cafe = cafe + value * count
             token = token + count
-            for i in range(0, token//k):
+            for i in range(0, token // k):
                 cafe = cafe - (floor + i) * k
             floor = floor + token // k
             token = token % k
-        if cafe - floor * token>= m:
+        if cafe - floor * token >= m:
             available = True
         return available
 
@@ -92,7 +93,7 @@ else:
         if avail(k):
             start, end = start, k
         else:
-            start, end = k+1, end
+            start, end = k + 1, end
     if n == 1:
         print(1)
     else:

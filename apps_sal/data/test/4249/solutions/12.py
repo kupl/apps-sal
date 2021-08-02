@@ -23,4 +23,3 @@ while good - bad > 1:
 
 possible = check_possibility(good, m, coffee)
 print(good if possible else -1)
-

@@ -1,40 +1,42 @@
 n, m = list(map(int, input().split()))
 
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 
-l.sort(reverse = True)
+l.sort(reverse=True)
 
 left = 1
 right = n
 
-def check(k,m):
-  if m > 0:
-    lef = 0
-    z = 0
-    for i in range(n):
-      m -= max(0, l[i]-lef)
-      z += 1
-      if z == k:
+
+def check(k, m):
+    if m > 0:
+        lef = 0
         z = 0
-        lef += 1
-  if m <= 0:
-    return 1
-  else:
-    return 0
+        for i in range(n):
+            m -= max(0, l[i] - lef)
+            z += 1
+            if z == k:
+                z = 0
+                lef += 1
+    if m <= 0:
+        return 1
+    else:
+        return 0
+
 
 res = []
 
 while left <= right:
-  mid = int((left+right)/2)
-  if check(mid, m):
-    res.append(mid)
-    right = mid - 1
-  else:
-    left = mid + 1
+    mid = int((left + right) / 2)
+    if check(mid, m):
+        res.append(mid)
+        right = mid - 1
+    else:
+        left = mid + 1
 if len(res) > 0:
-  print(min(res))
+    print(min(res))
 else:
-  print("-1")
+    print("-1")
 
 """
 n, m = map(int, input().split())
@@ -86,4 +88,3 @@ else:
   print(ans)
 print(ans)
 """
-

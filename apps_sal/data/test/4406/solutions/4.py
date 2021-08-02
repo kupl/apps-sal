@@ -11,4 +11,3 @@ for i in map(int, input().split()):
     s.add(i)
 print(len(d))
 print(*d)
-

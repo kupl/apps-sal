@@ -1,5 +1,7 @@
 
 from collections import deque
+
+
 def resolve():
     N = int(input())
     G = [[] for _ in range(N)]
@@ -31,5 +33,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

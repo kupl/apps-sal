@@ -19,7 +19,7 @@ for s in S:
     else:
         HT_low.append((h, t))
 HT_high.sort(key=itemgetter(1), reverse=True)
-HT_low.sort(key=lambda x: x[0]-x[1], reverse=True)
+HT_low.sort(key=lambda x: x[0] - x[1], reverse=True)
 h0 = 0
 for h, t in HT_high + HT_low:
     if h0 + t < 0:
@@ -30,4 +30,3 @@ if h0 != 0:
     print("No")
 else:
     print("Yes")
-

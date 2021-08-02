@@ -33,5 +33,3 @@ while q:
     colors_cnt = max(colors_cnt, color - 1)
 print(colors_cnt)
 [print(ans[(a, b)]) for a, b in edges]
-
-

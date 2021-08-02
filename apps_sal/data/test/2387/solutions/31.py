@@ -1,16 +1,18 @@
 # coding: utf-8
+from heapq import heappop, heappush
 import sys
 from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
-from heapq import heappop, heappush
 #from collections import defaultdict
 sys.setrecursionlimit(10**7)
 #import math
 #from itertools import combinations, product
-#import bisect# lower_bound etc
+# import bisect# lower_bound etc
 #import numpy as np
-#import queue# queue,get(), queue.put()
+# import queue# queue,get(), queue.put()
+
+
 def run():
     N = int(input())
     current = 0
@@ -21,11 +23,11 @@ def run():
     for S in SS:
         path = [0]
         for s in S:
-            path.append(path[-1]+ dic[s])
+            path.append(path[-1] + dic[s])
         ways.append((path[-1], min(path)))
 
-    ways_pos = sorted([(a,b) for a,b in ways if a >= 0], key = lambda x:(x[1], x[0]), reverse=True)
-    ways_neg = sorted([(a,b) for a,b in ways if a < 0], key = lambda x:(x[1] - x[0], -x[0]), reverse=True)[::-1]
+    ways_pos = sorted([(a, b) for a, b in ways if a >= 0], key=lambda x: (x[1], x[0]), reverse=True)
+    ways_neg = sorted([(a, b) for a, b in ways if a < 0], key=lambda x: (x[1] - x[0], -x[0]), reverse=True)[::-1]
 
     for go, max_depth in ways_pos:
         if current + max_depth >= 0:
@@ -46,6 +48,9 @@ def run():
     else:
         print('No')
 
+
 def __starting_point():
     run()
+
+
 __starting_point()

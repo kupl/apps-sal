@@ -5,14 +5,14 @@ def main():
     from collections import deque
 
     n = int(readline())
-    ab = [list(map(int, readline().split())) for _ in range(n-1)]
+    ab = [list(map(int, readline().split())) for _ in range(n - 1)]
 
-    l = [[] for _ in range(n+1)]
+    l = [[] for _ in range(n + 1)]
     for a, b in ab:
         l[a].append(b)
         l[b].append(a)
 
-    parents = [-1] * (n+1)
+    parents = [-1] * (n + 1)
     order = []
     q = deque()
     q.append(1)
@@ -24,8 +24,8 @@ def main():
                 continue
             parents[i] = c
             q.append(i)
-    
-    color = [-1] * (n+1)
+
+    color = [-1] * (n + 1)
     for i in order:
         ng = color[i]
         c = 1
@@ -36,7 +36,7 @@ def main():
                 c += 1
             color[j] = c
             c += 1
-    
+
     ans = []
     for a, b in ab:
         if a == parents[b]:
@@ -47,6 +47,9 @@ def main():
     print(max(ans))
     print('\n'.join(list(map(str, ans))))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

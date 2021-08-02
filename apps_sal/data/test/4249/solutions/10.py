@@ -8,6 +8,7 @@ def check(d):
         done += max(0, v - i // d)
     return done >= nb_task
 
+
 if sum(caffines) < nb_task:
     print(-1)
 else:
@@ -19,5 +20,4 @@ else:
         else:
             left = mid + 1
         mid = left + rite >> 1
-    print(left)     
-
+    print(left)

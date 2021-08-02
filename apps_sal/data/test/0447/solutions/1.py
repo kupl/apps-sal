@@ -5,7 +5,7 @@ mod = 10**9 + 7
 
 
 def solve(a: list):
-    dp = [0]*m
+    dp = [0] * m
     border = a[0] % m if a[0] != d else -1
     m10 = 10 % m
 
@@ -14,7 +14,7 @@ def solve(a: list):
             dp[i % m] += 1
 
     for i, digit in enumerate(a[1:], start=1):
-        next_dp = [0]*m
+        next_dp = [0] * m
 
         if i & 1:
             t = d % m
@@ -67,13 +67,12 @@ a = list(map(int, input()))
 b = list(map(int, input()))
 a[-1] -= 1
 
-for i in range(len(a)-1, 0, -1):
+for i in range(len(a) - 1, 0, -1):
     if a[i] < 0:
         a[i] = 9
-        a[i-1] -= 1
+        a[i - 1] -= 1
     else:
         break
 
 ans = solve(b) - solve(a)
 print(ans % mod)
-

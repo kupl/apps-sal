@@ -9,17 +9,14 @@ def __starting_point():
 
     for i in l:
         if i not in a:
-            if len(a)>=k:
+            if len(a) >= k:
                 a.pop()
-            a.insert(0,i)
+            a.insert(0, i)
 
     print(len(a))
 
     for i in a:
         print(i, end=' ')
-
-
-
 
 
 __starting_point()

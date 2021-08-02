@@ -1,6 +1,7 @@
 from itertools import chain
 import sys
 
+
 def main():
     N = int(input())
     # TLEs were caused mostly by slow input (1s+)
@@ -8,8 +9,9 @@ def main():
     S = sys.stdin.read().split('\n')
     print((solve(S)))
 
+
 def get_count(args):
-    s, result = args # messy input to work with map.
+    s, result = args  # messy input to work with map.
     cum_sum = 0
     for c in s:
         if c == ')':
@@ -21,6 +23,8 @@ def get_count(args):
     return result
 
 # Made-up name, don't remember what to call this. Radix-ish
+
+
 def silly_sort(array, value_min, value_max, get_value):
     if len(array) == 0:
         return
@@ -37,9 +41,10 @@ def silly_sort(array, value_min, value_max, get_value):
         for value in values:
             yield value
 
+
 def solve(S):
-    counts = [[0,0] for _ in range(len(S))]
-    counts = list(map(get_count, list(zip(S,counts))))
+    counts = [[0, 0] for _ in range(len(S))]
+    counts = list(map(get_count, list(zip(S, counts))))
     first_group = []
     second_group = []
     min_first_group = float('inf')
@@ -71,7 +76,9 @@ def solve(S):
         return 'Yes'
     return 'No'
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,5 +1,6 @@
 from sys import stdin
 
+
 def main():
     readline = stdin.readline
     n = int(readline())
@@ -12,20 +13,23 @@ def main():
         else:
             minus.append(c)
 
-    plus.sort(key = lambda x: x.count(')'))
-    minus.sort(key = lambda x: x.count('('), reverse = True)
+    plus.sort(key=lambda x: x.count(')'))
+    minus.sort(key=lambda x: x.count('('), reverse=True)
     plus.extend(minus)
     sum = 0
     for v in plus:
         for vv in v:
             sum = sum + (1 if vv == '(' else -1)
-            if sum < 0 : return print('No')
+            if sum < 0:
+                return print('No')
     if sum != 0:
         return print('No')
 
     return print('Yes')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

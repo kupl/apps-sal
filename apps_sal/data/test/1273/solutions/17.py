@@ -3,7 +3,7 @@ sys.setrecursionlimit(10 ** 7)
 
 N = int(input())
 edge = [[] for _ in range(N)]
-for i in range(N-1):
+for i in range(N - 1):
     a, b = [int(_) - 1 for _ in input().split()]
     edge[a].append((b, i))
     edge[b].append((a, i))
@@ -23,4 +23,3 @@ def dfs(v, pv, pc):
 dfs(0, -1, -1)
 print(colors_num)
 print((*ans))
-

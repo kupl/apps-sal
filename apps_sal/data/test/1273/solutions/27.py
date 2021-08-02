@@ -30,4 +30,3 @@ while q:
 for a, b in ab:
     i, j = min(a, b), max(a, b)
     print((color[(i, j)]))
-
