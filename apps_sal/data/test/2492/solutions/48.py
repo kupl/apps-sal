@@ -10,12 +10,12 @@ def solve(*args: str) -> str:
 
     count = 0
     left, right = -10**18, 10**18
-    while left+1 < right:
-        x = (left+right)//2
-        count = (n-np.searchsorted(A, -(-x//N), side='left')).sum()
+    while left + 1 < right:
+        x = (left + right) // 2
+        count = (n - np.searchsorted(A, -(-x // N), side='left')).sum()
         count += n * (A == 0).sum() if 0 <= x else 0
-        count += np.searchsorted(A, x//P, side='right').sum()
-        count -= (A*A <= x).sum()
+        count += np.searchsorted(A, x // P, side='right').sum()
+        count -= (A * A <= x).sum()
         count //= 2
 
         if count < k:
@@ -28,5 +28,6 @@ def solve(*args: str) -> str:
 
 def __starting_point():
     print((solve(*(open(0).read().splitlines()))))
+
 
 __starting_point()

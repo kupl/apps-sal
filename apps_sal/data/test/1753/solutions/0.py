@@ -10,6 +10,3 @@ for i in range(len(towers)):
     print(len(towers[i]))
     for x, y in towers[i]:
         print(x, y)
-
-
-

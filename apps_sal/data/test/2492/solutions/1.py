@@ -5,10 +5,9 @@ def main():
     N, K = [int(x) for x in input().split()]
     A = np.array(input().split(), np.int64)
     A = np.sort(A)
-    minus = A[A<0]
-    zero = A[A==0]
-    plus = A[A>0]
-
+    minus = A[A < 0]
+    zero = A[A == 0]
+    plus = A[A > 0]
 
     def f(x):
         """number of products <=x
@@ -20,10 +19,10 @@ def main():
         res += np.searchsorted(A, x // plus, side="right").sum()
 
         # negative
-        res += (N - np.searchsorted(A, (-x-1) // (-minus), side="right")).sum()
+        res += (N - np.searchsorted(A, (-x - 1) // (-minus), side="right")).sum()
 
         # remove dup
-        res -= np.count_nonzero(A*A <= x)
+        res -= np.count_nonzero(A * A <= x)
         res //= 2
 
         return res
@@ -31,8 +30,8 @@ def main():
     l = -10**18
     r = 10**18
 
-    while l+1 < r:
-        mid = (l+r)//2
+    while l + 1 < r:
+        mid = (l + r) // 2
         if f(mid) >= K:
             r = mid
         else:
@@ -42,4 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

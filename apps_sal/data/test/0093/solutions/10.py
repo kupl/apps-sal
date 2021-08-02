@@ -6,15 +6,15 @@ for i in range(2):
         r = r[1] + r[0]
     for c in r:
         if c != 'X':
-            s1+=c
+            s1 += c
 for i in range(2):
     r = input()
     if i == 1:
-        r = r[1] + r[0]    
+        r = r[1] + r[0]
     for c in r:
         if c != 'X':
-            s2+=c
-            
+            s2 += c
+
 s2 *= 2
 k = 0
 for i in range(3):

@@ -1,8 +1,8 @@
-a,b,c = map (int, input ().split ('/'))
+a, b, c = map(int, input().split('/'))
 if a > 2019:
-  print ('TBD')
+    print('TBD')
 else:
-  if b*100+c > 430:
-    print ('TBD')
-  else:
-    print ('Heisei')
+    if b * 100 + c > 430:
+        print('TBD')
+    else:
+        print('Heisei')

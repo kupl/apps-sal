@@ -127,4 +127,3 @@ if DEBUG:
         print(("k", k, solve(k)))
 
 print((solve(K - 1)))  # K is 1-indexed
-

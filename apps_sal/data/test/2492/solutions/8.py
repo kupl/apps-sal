@@ -1,15 +1,17 @@
+import numpy as np
 import sys
 sr = lambda: sys.stdin.readline().rstrip()
 ir = lambda: int(sr())
 lr = lambda: list(map(int, sr().split()))
-import numpy as np
+
+
 def resolve():
     N, K = lr()
     A = np.sort(np.array(lr(), np.int64))
     z = A[A == 0]
     p = A[A > 0]
     n = A[A < 0]
-    
+
     def count_func(x):
         cnt = 0
         if x >= 0:
@@ -19,7 +21,7 @@ def resolve():
         cnt -= np.count_nonzero(A * A <= x)
         assert cnt % 2 == 0
         return cnt // 2
-    
+
     l = -10 ** 18
     r = 10 ** 18
     while l + 1 < r:
@@ -28,6 +30,8 @@ def resolve():
             r = x
         else:
             l = x
-    
+
     print(r)
+
+
 resolve()

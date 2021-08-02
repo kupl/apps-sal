@@ -8,6 +8,7 @@ def read(s, t):
     if (t[1] == 'X'):
         return s + t[0]
 
+
 s1 = ''.join(input().split())
 s2 = ''.join(input().split())
 t1 = ''.join(input().split())
@@ -21,4 +22,3 @@ for i in range(3):
             print("YES")
             return
 print("NO")
-

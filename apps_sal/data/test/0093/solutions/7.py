@@ -1,5 +1,6 @@
 3
 
+
 def main():
     a = input() + "".join(reversed(input()))
     b = input() + "".join(reversed(input()))
@@ -12,8 +13,8 @@ def main():
             return True
     return False
 
+
 if main():
     print("YES")
 else:
     print("NO")
-

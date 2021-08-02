@@ -4,21 +4,22 @@ L = [int(x) for x in input().split()]
 D = {}
 J = []
 S = []
-T = [0]*(n+1)
+T = [0] * (n + 1)
 for i in range(n):
     if L[i] > 0:
         D[L[i]] = i
         J.append(L[i])
-        T[i+1] = T[i]
+        T[i + 1] = T[i]
     else:
-        T[i+1] = T[i]+1
-        
+        T[i + 1] = T[i] + 1
+
+
 def I(J):
     if len(J) <= 1:
         return J, 0
     else:
-        a = J[:len(J)//2]
-        b = J[len(J)//2:]
+        a = J[:len(J) // 2]
+        b = J[len(J) // 2:]
         a, ai = I(a)
         b, bi = I(b)
         c = []
@@ -32,12 +33,13 @@ def I(J):
         else:
             c.append(b[j])
             j += 1
-            inversions += (len(a)-i)
+            inversions += (len(a) - i)
     c += a[i:]
     c += b[j:]
     return c, inversions
 
-for i in range(1,n+1):
+
+for i in range(1, n + 1):
     if not i in D:
         S.append(i)
 
@@ -48,9 +50,9 @@ if total > 0:
     themostimportantsum = 0
     for i in J:
         low = 0
-        high = total-1
-        while high-low > 1:
-            guess = (high+low)//2
+        high = total - 1
+        while high - low > 1:
+            guess = (high + low) // 2
             if S[guess] > i:
                 high = guess
             else:
@@ -60,21 +62,20 @@ if total > 0:
         elif S[high] > i:
             smaller = high
         else:
-            smaller = high+1
-        #D[i] is the position of i in the list
-        #T[D[i]] is how many -1s there are to the left of it
-        themostimportantsum += T[D[i]]*(total-smaller)+(total-T[D[i]])*(smaller)
-        num = themostimportantsum+total
+            smaller = high + 1
+        # D[i] is the position of i in the list
+        # T[D[i]] is how many -1s there are to the left of it
+        themostimportantsum += T[D[i]] * (total - smaller) + (total - T[D[i]]) * (smaller)
+        num = themostimportantsum + total
         denom = total
 
-num =(denom*(((total)*(total-1))//2)+2*num)%998244353
+num = (denom * (((total) * (total - 1)) // 2) + 2 * num) % 998244353
 denom *= 2
 if num == denom:
     if I(J)[1] == 0:
         print(0)
     else:
-        print(I(J)[1]%998244353)
-else:       
-    num += denom*I(J)[1]
-    print(((num-denom)*pow(denom%998244353,998244351,998244353))%998244353)
-
+        print(I(J)[1] % 998244353)
+else:
+    num += denom * I(J)[1]
+    print(((num - denom) * pow(denom % 998244353, 998244351, 998244353)) % 998244353)

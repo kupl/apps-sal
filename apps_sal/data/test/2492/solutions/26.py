@@ -8,6 +8,7 @@ zero = a[a == 0]
 pos = a[a > 0]
 neg = a[a < 0]
 
+
 def f(x):
     """count the number of products , <= x"""
     cnt_tpl = 0
@@ -22,6 +23,7 @@ def f(x):
     cnt_tpl -= np.count_nonzero(a * a <= x)
     assert cnt_tpl % 2 == 0
     return cnt_tpl // 2
+
 
 left = -10 ** 18
 right = 10 ** 18

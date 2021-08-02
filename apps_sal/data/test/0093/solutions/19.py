@@ -1,4 +1,6 @@
 import copy
+
+
 def g(s):
     ans = set()
     q = [s]
@@ -23,6 +25,7 @@ def g(s):
 
     return ans
 
+
 t = []
 t.append(list(input()))
 t.append(list(input()))
@@ -32,4 +35,3 @@ r.append(list(input()))
 r.append(list(input()))
 
 print('YES' if (g(r) & g(t)) else 'NO')
-

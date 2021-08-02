@@ -1,6 +1,6 @@
 import datetime
 
-s=input()
+s = input()
 
 s_date = datetime.datetime.strptime(s, '%Y/%m/%d')
 

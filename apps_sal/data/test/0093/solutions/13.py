@@ -10,13 +10,13 @@ if(s1 == 'ABC' or s1 == 'BCA' or s1 == 'CAB'):
     first = True
 else:
     first = False
-    
+
 if(s2 == 'ABC' or s2 == 'BCA' or s2 == 'CAB'):
     second = True
 else:
     second = False
-    
-    
+
+
 if(first == second):
     print('YES')
 else:

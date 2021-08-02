@@ -4,4 +4,3 @@ for i in range(1, n):
     if (n - i) % i == 0:
         ans += 1
 print(ans)
-

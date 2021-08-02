@@ -8,6 +8,7 @@ pos = A[A > 0]
 neg = A[A < 0]
 zero = len(A[A == 0])
 
+
 def cnt(x):
     """return #{a <= x | a in A}"""
     ret = 0
@@ -20,6 +21,7 @@ def cnt(x):
     ret -= ((A * A) <= x).sum()
     return ret // 2
 
+
 overEq = 10**18 + 100
 less = -10**18 - 100
 
@@ -31,4 +33,3 @@ while less + 1 < overEq:
         less = mid
 
 print(overEq)
-

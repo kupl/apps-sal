@@ -1,6 +1,6 @@
 s = input()
 
 if s > '2019/04/30':
-  print('TBD')
+    print('TBD')
 else:
-  print('Heisei')
+    print('Heisei')

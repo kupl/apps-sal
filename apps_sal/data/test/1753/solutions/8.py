@@ -1,27 +1,31 @@
 import sys
 from math import *
 
+
 def minp():
-	return sys.stdin.readline().strip()
+    return sys.stdin.readline().strip()
+
 
 def mint():
-	return int(minp())
+    return int(minp())
+
 
 def mints():
-	return map(int, minp().split())
+    return map(int, minp().split())
+
 
 n, m = mints()
 a = []
-p = [None]*n
+p = [None] * n
 for i in range(n):
-	p[i] = []
+    p[i] = []
 for i in range(m):
-	x, y = mints()
-	p[x-1].append((i+1,x))
-	p[y-1].append((i+1,y))
+    x, y = mints()
+    p[x - 1].append((i + 1, x))
+    p[y - 1].append((i + 1, y))
 for i in range(n):
-	p[i].append((m+1+i,i+1))
+    p[i].append((m + 1 + i, i + 1))
 for i in range(n):
-	print(len(p[i]))
-	for j in p[i]:
-		print(*j)
+    print(len(p[i]))
+    for j in p[i]:
+        print(*j)

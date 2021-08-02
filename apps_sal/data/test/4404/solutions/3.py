@@ -13,10 +13,12 @@
 
 """ Definitions  """
 
-def lcm(a, b):
-    return a*b//math.gcd(a, b)
 
-MOD = 10**9+7
+def lcm(a, b):
+    return a * b // math.gcd(a, b)
+
+
+MOD = 10**9 + 7
 
 # ============================================================
 
@@ -26,4 +28,3 @@ if y < 2019 or (y == 2019 and m <= 4):
     print('Heisei')
 else:
     print('TBD')
-

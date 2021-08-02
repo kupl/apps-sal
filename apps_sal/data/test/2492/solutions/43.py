@@ -10,19 +10,19 @@ def solve(*args: str) -> str:
 
     count = 0
     left, right = -10**18, 10**18
-    while left+1 < right:
-        x = (left+right)//2
+    while left + 1 < right:
+        x = (left + right) // 2
         count = 0
 
-        if k <= len(N)*len(P):
-            count += (len(P)-np.searchsorted(P, -(-x//N), side='left')).sum()
+        if k <= len(N) * len(P):
+            count += (len(P) - np.searchsorted(P, -(-x // N), side='left')).sum()
 
-        elif (n*(n-1) - len(N)*(len(N)-1) - len(P)*(len(P)-1))//2 < k:
+        elif (n * (n - 1) - len(N) * (len(N) - 1) - len(P) * (len(P) - 1)) // 2 < k:
             for D in (-(N[::-1]), P):
-                count += np.searchsorted(D, x//D, side='right').sum()
-                count -= len(D[D*D <= x])
+                count += np.searchsorted(D, x // D, side='right').sum()
+                count -= len(D[D * D <= x])
             count //= 2
-            count += (n*(n-1) - len(N)*(len(N)-1) - len(P)*(len(P)-1))//2
+            count += (n * (n - 1) - len(N) * (len(N) - 1) - len(P) * (len(P) - 1)) // 2
 
         else:
             right = 0
@@ -38,5 +38,6 @@ def solve(*args: str) -> str:
 
 def __starting_point():
     print((solve(*(open(0).read().splitlines()))))
+
 
 __starting_point()
