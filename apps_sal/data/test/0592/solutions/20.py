@@ -9,12 +9,12 @@ N = int(input())
 #N,Q = [int(x) for x in stdin.readline().split()]
 
 res = 0
-for m in range(2,N+1):
-    d = N//m
+for m in range(2, N + 1):
+    d = N // m
     d -= 1
-    res += d*m
-    
-    if d==0:
+    res += d * m
+
+    if d == 0:
         break
-    
-print(4*res)
+
+print(4 * res)

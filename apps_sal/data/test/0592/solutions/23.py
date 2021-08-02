@@ -9,4 +9,3 @@ for i in range(2, n + 1):
     ans += summ
 
 print(ans * 4)
-

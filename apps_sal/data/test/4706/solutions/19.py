@@ -4,4 +4,3 @@ for i in range(3):
     res += line[i]
 
 print(res)
-

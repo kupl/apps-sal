@@ -14,7 +14,6 @@ while t >= ma:
         if t >= ta:
             t -= ta
             k += 1
-            a[na+1].append(ta)
+            a[na + 1].append(ta)
     na += 1
 print(k)
-

@@ -1,6 +1,8 @@
 a, b, c, d, e, f = map(int, input().split())
-W = set(); S = set()
-sa = 0; wsa = a * 100
+W = set()
+S = set()
+sa = 0
+wsa = a * 100
 
 for i in range(0, f + a * 100, a * 100):
     for j in range(0, f + b * 100, b * 100):

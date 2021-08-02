@@ -1,1 +1,1 @@
-[print(input()[i],end='') for i in range(3)]
+[print(input()[i], end='') for i in range(3)]

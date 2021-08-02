@@ -4,7 +4,7 @@ def buy(n, t, c, s):
         return 0
     ans = 0
     if t >= s:
-        ans += n*(t//s)
+        ans += n * (t // s)
         t %= s
     nc = []
     for i in range(n):
@@ -28,5 +28,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

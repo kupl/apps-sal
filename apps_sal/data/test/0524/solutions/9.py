@@ -2,25 +2,23 @@ import sys
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
 
-            
+
 n = int(input())
 
-arry = list(map(int,input().split()))
+arry = list(map(int, input().split()))
 
 maxNum = max(arry)
 
-maxRecur = maxNum ** (1/(n-1))
+maxRecur = maxNum ** (1 / (n - 1))
 
-currMin=float("inf")
-#print(maxRecur)
+currMin = float("inf")
+# print(maxRecur)
 arry.sort()
-for i in range(int(maxRecur)+2):
+for i in range(int(maxRecur) + 2):
     curr = 0
     for j in range(n):
-        #print(i**j)
-        curr += abs(i**j-arry[j])
-    #print(i,curr)
-    currMin = min(currMin,curr)
+        # print(i**j)
+        curr += abs(i**j - arry[j])
+    # print(i,curr)
+    currMin = min(currMin, curr)
 print(currMin)
-
-

@@ -1,4 +1,5 @@
-import bisect, heapq
+import bisect
+import heapq
 
 a, b, c, d, e, f = map(int, input().split())
 

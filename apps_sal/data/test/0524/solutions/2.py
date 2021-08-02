@@ -14,4 +14,3 @@ for i in range(2, 10 ** 9):
     ans = min(ans, ans2)
 
 print(ans)
-
