@@ -14,6 +14,8 @@ for i, ch in enumerate(input()):
         assert ch == 'L'
         dx[i + 1] -= 1
 x, y = list(map(int, input().split()))
+
+
 def canChange(left, right):
     dx1 = dx[left]
     dy1 = dy[left]
@@ -24,6 +26,8 @@ def canChange(left, right):
     length = right - left
     free = length - (abs(dx2) + abs(dy2))
     return free >= 0 and free % 2 == 0
+
+
 result = n + 1
 ptr = n + 1
 for i in reversed(list(range(n))):
@@ -34,4 +38,3 @@ if ptr == n + 1:
     print(-1)
 else:
     print(result)
-

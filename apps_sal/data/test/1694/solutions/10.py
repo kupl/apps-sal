@@ -1,14 +1,16 @@
 import sys
 from itertools import *
 from math import *
+
+
 def solve():
-    n,m,s,f = map(int, input().split())
-    s-=1
-    f-=1
+    n, m, s, f = map(int, input().split())
+    s -= 1
+    f -= 1
     d = {}
     for _ in range(m):
-        t,l,r = map(int, input().split())
-        d[t-1] = (l - 1, r - 1)
+        t, l, r = map(int, input().split())
+        d[t - 1] = (l - 1, r - 1)
     # d = {(t - 1) : (l - 1, r - 1) for t,l,r in map(int, input().split()) for _ in range(m)}
     step = 0
     res = ""
@@ -17,16 +19,18 @@ def solve():
         canmove = True
         if step in d:
             l, r = d[step]
-            if (s >= l and s <= r) or (wantnext >= l and wantnext <= r): canmove = False
+            if (s >= l and s <= r) or (wantnext >= l and wantnext <= r):
+                canmove = False
         if canmove:
             res += 'R' if wantnext > s else 'L'
             s = wantnext
-        else: res += 'X'
+        else:
+            res += 'X'
         step += 1
     print(res)
     # print(''.join(map(str, res))) #change to string at end to see if faster
 
 
-
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 solve()

@@ -10,4 +10,3 @@ elif ab <= d and bc <= d:
     print("Yes")
 else:
     print("No")
-

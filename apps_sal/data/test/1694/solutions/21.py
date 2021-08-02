@@ -30,7 +30,7 @@ while curr != f:
                     print('R', end='')
                     curr = 2
             elif curr == n:
-                if data[k][0] <= curr-1 <= data[k][1]:
+                if data[k][0] <= curr - 1 <= data[k][1]:
                     print('X', end='')
                 else:
                     print('L', end='')
@@ -45,4 +45,3 @@ while curr != f:
     k += 1
 
 # Mon Aug 12 2019 14:53:46 GMT+0300 (MSK)
-

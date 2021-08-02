@@ -18,7 +18,7 @@ for _ in range(m):
                 break
         if flag:
             break
-    if l <= s <= r or l <= s+d <= r:
+    if l <= s <= r or l <= s + d <= r:
         ret += 'X'
     else:
         ret += step
@@ -32,4 +32,3 @@ while s != f:
     ret += step
 
 print(ret)
-

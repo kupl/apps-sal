@@ -9,8 +9,8 @@ def __starting_point():
     ans = ""
     ch = 'L'
     inc = -1
-    if s<f:
-        ch='R'
+    if s < f:
+        ch = 'R'
         inc = 1
     tm = 1
     done = False
@@ -22,24 +22,24 @@ def __starting_point():
         ct = int(arr[0])
         l = int(arr[1])
         r = int(arr[2])
-        while ct!=tm:
-            ans+=ch
-            tm+=1
-            s+=inc
-            if s==f:
+        while ct != tm:
+            ans += ch
+            tm += 1
+            s += inc
+            if s == f:
                 break
-        if s!=f and (((s+inc)>=l and (s+inc)<=r)or((s>=l)and(s<=r))):
+        if s != f and (((s + inc) >= l and (s + inc) <= r) or ((s >= l) and (s <= r))):
             ans += 'X'
-        elif s!=f:
+        elif s != f:
             ans += ch
             s += inc
-        tm+=1
-        if s==f:
+        tm += 1
+        if s == f:
             done = True
-    while s!=f:
-        s+=inc
-        ans+=ch
+    while s != f:
+        s += inc
+        ans += ch
     print(ans)
-        
+
 
 __starting_point()

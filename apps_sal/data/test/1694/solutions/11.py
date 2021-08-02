@@ -1,5 +1,6 @@
 """http://codeforces.com/problemset/problem/342/B"""
 
+
 def solve(s, f, t):
     res = ''
     step = 1 if s < f else -1
@@ -16,10 +17,12 @@ def solve(s, f, t):
         res += 'R' if step > 0 else 'L'
     return res
 
+
 def __starting_point():
-    parse = lambda: list(map(int, input().split()))
+    def parse(): return list(map(int, input().split()))
     n, m, s, f = parse()
     l = [parse() for _ in range(m)]
     print(solve(s, f, l))
+
 
 __starting_point()

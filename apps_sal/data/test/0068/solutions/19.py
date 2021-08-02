@@ -2,6 +2,7 @@
 
 import itertools
 
+
 def solve(L, n, px, py, x, y):
     for i in range(n):
         j = i + L
@@ -13,17 +14,18 @@ def solve(L, n, px, py, x, y):
             return True
     return False
 
+
 def main(args):
     n = int(input())
     d = input()
     x, y = list(map(int, input().split()))
     py = [0] + [1 if c == 'U' else (-1 if c == 'D' else 0) for c in d]
     px = [0] + [1 if c == 'R' else (-1 if c == 'L' else 0) for c in d]
-    if abs(x+ y)%2 != n%2:
+    if abs(x + y) % 2 != n % 2:
         print(-1)
         return 0
     py = list(itertools.accumulate(py))
-    px = list(itertools.accumulate(px)) 
+    px = list(itertools.accumulate(px))
     if px[-1] == x and py[-1] == y:
         print(0)
         return 0
@@ -41,8 +43,10 @@ def main(args):
     print(right)
     return 0
 
+
 def __starting_point():
     import sys
     return(main(sys.argv))
+
 
 __starting_point()

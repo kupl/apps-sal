@@ -20,4 +20,3 @@ while j != f:
         j += d
     i += 1
 print(res)
-

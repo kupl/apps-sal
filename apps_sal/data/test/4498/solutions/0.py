@@ -15,5 +15,4 @@ INF = float('inf')
 
 
 a, b, c, d = LI()
-print(('Yes' if abs(a-c) <= d or (abs(a-b) <= d and abs(b-c) <= d) else 'No'))
-
+print(('Yes' if abs(a - c) <= d or (abs(a - b) <= d and abs(b - c) <= d) else 'No'))

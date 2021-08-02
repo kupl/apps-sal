@@ -6,4 +6,3 @@ for _ in range(int(input())):
         ans += 1
         d = abs(d) - ans
     print(ans)
-

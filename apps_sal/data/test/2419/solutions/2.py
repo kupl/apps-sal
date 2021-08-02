@@ -18,4 +18,3 @@ for _ in range(t):
         if s >= b - a and (s - (b - a)) % 2 == 0:
             print(i)
             break
-

@@ -1,4 +1,4 @@
-#никита съел деда
+# никита съел деда
 
 t = int(input())
 for query in range(t):
@@ -15,4 +15,3 @@ for query in range(t):
     while right * (right + 1) // 2 % 2 != c % 2:
         right += 1
     print(right)
-

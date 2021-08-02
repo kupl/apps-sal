@@ -3,7 +3,7 @@
 # A・Cが直接的に会話できる or A・Bが直接会話でき、かつ B・Cが直接会話できる
 # 会話できるなら Yes ,できないなら No を出力
 
-a,b,c,d = map(int , input().split())
+a, b, c, d = map(int, input().split())
 # print(a)
 # print(b)
 # print(c)
@@ -11,10 +11,10 @@ a,b,c,d = map(int , input().split())
 
 
 # a と c の差の絶対値が d 以下
-if abs(c-a) <= d:
+if abs(c - a) <= d:
     print('Yes')
 # a と b の差の絶対値が d 以下かつ b と c 野さの絶対値が d 以下
-elif abs(b-a) <= d and abs(c-b) <= d:
+elif abs(b - a) <= d and abs(c - b) <= d:
     print('Yes')
 else:
     print('No')

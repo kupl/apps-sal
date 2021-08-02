@@ -16,8 +16,10 @@ if s < f:
         if s + 1 < l or s > r:
             ans += 'R'
             s += 1
-            if s == f: break
-        else: ans += 'X'
+            if s == f:
+                break
+        else:
+            ans += 'X'
 else:
     for i in range(m):
         t, l, r = list(map(int, input().split()))
@@ -33,7 +35,8 @@ else:
         if s < l or s - 1 > r:
             ans += 'L'
             s -= 1
-            if s == f: break
-        else: ans += 'X'
+            if s == f:
+                break
+        else:
+            ans += 'X'
 print(ans + ('R' * (f - s) if f > s else 'L' * (s - f)))
-
