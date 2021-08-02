@@ -10,5 +10,3 @@ for i in range(t):
         print('JAPANESE')
     if suff == 'da':
         print('KOREAN')
-
-

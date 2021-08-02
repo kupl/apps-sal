@@ -7,4 +7,3 @@ for i in range(1, n):
     else:
         x = t[i]
 print(s)
-

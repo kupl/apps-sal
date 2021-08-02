@@ -6,7 +6,7 @@ class Solution:
     def makeArrayIncreasing(self, A: List[int], B: List[int]) -> int:
         B = sorted(set(B))
         b2idx = {b: i for i, b in enumerate(B)}
-        
+
         @lru_cache(None)
         def find_larger_value_in_B(val):
             if val >= B[-1]:
@@ -39,4 +39,3 @@ class Solution:
             last_success = ops
 
         return last_success
-

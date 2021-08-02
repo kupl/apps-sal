@@ -9,7 +9,9 @@ def main():
         else:
             print("KOREAN")
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

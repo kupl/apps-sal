@@ -13,4 +13,3 @@ for n in range(1, p):
     n0 = n + i0 * (p - 1)
     ans += max(0, (x - n0 + lcm) // lcm)
 print(ans)
-

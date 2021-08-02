@@ -9,5 +9,5 @@ def main():
         else:
             print("JAPANESE")
 
-main()
 
+main()

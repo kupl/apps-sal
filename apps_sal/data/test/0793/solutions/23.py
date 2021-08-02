@@ -1,6 +1,6 @@
 def f(n, m):
-    s = list(map(int,input().split()))
-    t = list(map(int,input().split()))
+    s = list(map(int, input().split()))
+    t = list(map(int, input().split()))
     dp = [[1] * (m + 1) for _ in range(n + 1)]
     for i, sk in enumerate(s):
         dpi1 = dp[i + 1] = dp[i][:]
@@ -13,7 +13,7 @@ def f(n, m):
 #        print(*x)
     print((dp[-1][-1]))
 
+
 md = 10 ** 9 + 7
 n, m = list(map(int, input().split()))
 f(n, m)
-

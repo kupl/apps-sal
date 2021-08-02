@@ -1,24 +1,26 @@
 n, k = map(int, input().split())
-seat = {4:n, 2:n*2, 1:0}
+seat = {4: n, 2: n * 2, 1: 0}
 extra1 = 0
 a = sorted(map(int, input().split()), reverse=True)
+
 
 def sit(n, m):
     num = min(seat[n], m)
     seat[n] -= num
     return m - num
 
+
 for m in a:
     p4 = m // 4
     p3, p2, p1 = 0, 0, 0
-    if m%4 == 3:
+    if m % 4 == 3:
         p3 = 1
     else:
         p2 = int(m % 4 > 1)
         p1 = int(m % 2)
 
     extra4 = sit(4, p4)
-    p2 += extra4*2
+    p2 += extra4 * 2
     if sit(4, p3) > 0:
         p2 += 1
         p1 += 1

@@ -11,4 +11,3 @@ for i in S:
     dp[1:] = (np.cumsum(tmp * dp[:-1]) + dp[1:]) % mod
 
 print((dp[-1]))
-

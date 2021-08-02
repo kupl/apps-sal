@@ -17,4 +17,3 @@ class Solution:
                     tmp[arr2[loc]] = min(tmp[arr2[loc]], dp[key] + 1)
             dp = tmp
         return min(dp.values()) if dp else -1
-

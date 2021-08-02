@@ -7,4 +7,3 @@ for _ in range(n):
         print("KOREAN")
     else:
         print("JAPANESE")
-

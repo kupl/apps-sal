@@ -14,4 +14,6 @@ def main():
 def __starting_point():
     for i in range(t):
         main()
+
+
 __starting_point()

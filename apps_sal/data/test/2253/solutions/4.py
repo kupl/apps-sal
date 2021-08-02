@@ -2,10 +2,10 @@ n = int(input())
 for _ in range(n):
     s = input()
     if len(s) >= 2 and s[-2:] == 'po':
-        print ("FILIPINO")
+        print("FILIPINO")
     elif len(s) >= 4 and s[-4:] == 'desu':
-        print ("JAPANESE")
+        print("JAPANESE")
     elif len(s) >= 4 and s[-4:] == 'masu':
-        print ("JAPANESE")
+        print("JAPANESE")
     else:
-        print ("KOREAN")
+        print("KOREAN")

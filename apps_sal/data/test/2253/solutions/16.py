@@ -8,4 +8,3 @@ for t_i in range(t):
         print("JAPANESE")
     else:
         print("KOREAN")
-

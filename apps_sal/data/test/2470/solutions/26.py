@@ -5,7 +5,7 @@ from functools import lru_cache
 class Solution:
     def makeArrayIncreasing(self, A: List[int], B: List[int]) -> int:
         B = sorted(set(B))
-        
+
         def find_lower_val_in_B(val):
             larger_equal_idx = bisect.bisect_left(B, val)
             if larger_equal_idx > 0:
@@ -28,4 +28,3 @@ class Solution:
 
         ret = make_prefix_increasing(len(A))
         return ret if ret < float('inf') else -1
-

@@ -18,6 +18,3 @@ if 1:
             cc += 1
         cur -= 1
     print(ans)
-
-    
-

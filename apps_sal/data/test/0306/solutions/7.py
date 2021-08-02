@@ -14,4 +14,6 @@ def AC():
         rep = n + cur * (p - 1)
         ans += max(0, (x - rep + Ch) // Ch)
     print(ans)
+
+
 AC()
