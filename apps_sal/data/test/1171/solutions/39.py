@@ -5,8 +5,8 @@
 n, k = list(map(int, input().strip().split()))
 value = list(map(int, input().strip().split()))
 res = 0
-for l in range(k+1):
-    for r in range(k-l+1):
+for l in range(k + 1):
+    for r in range(k - l + 1):
         if l + r > n:
             continue
         d = k - l - r
@@ -16,8 +16,8 @@ for l in range(k+1):
             now += value[i]
             s.append(value[i])
         for i in range(r):
-            now += value[n-i-1]
-            s.append(value[n-i-1])
+            now += value[n - i - 1]
+            s.append(value[n - i - 1])
         s.sort()
         for i in range(d):
             if i >= len(s):
@@ -28,5 +28,3 @@ for l in range(k+1):
         res = max(res, now)
 
 print(res)
-
-

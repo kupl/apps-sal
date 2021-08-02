@@ -8,5 +8,3 @@ if sum_l - max_l > 0:
     print('Yes')
 else:
     print('No')
-
-

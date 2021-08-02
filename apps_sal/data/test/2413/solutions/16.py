@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -211,12 +213,12 @@ def main():
     li = list(stdin.readline().strip())
     x = 10**10
     for i, ele in enumerate(li):
-        if ele=='1':
-            x = min(n-i-1, i, x)
-    if x==10**10:
+        if ele == '1':
+            x = min(n - i - 1, i, x)
+    if x == 10**10:
         print(n)
     else:
-        print(2*(n-x))
+        print(2 * (n - x))
 
 # --------------------------------------------------------------------- END=
 
@@ -226,4 +228,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

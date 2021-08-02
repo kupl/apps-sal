@@ -13,4 +13,3 @@ if descending_L[0] < other_side:
     print('Yes')
 else:
     print('No')
-

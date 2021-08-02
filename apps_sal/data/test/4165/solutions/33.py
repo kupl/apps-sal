@@ -8,7 +8,7 @@ def atc_117b(N: int, Li_input: str) -> str:
         return "Yes"
     return "No"
 
+
 N_input_value = int(input())
 Li_input_value = input()
 print((atc_117b(N_input_value, Li_input_value)))
-

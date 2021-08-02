@@ -37,8 +37,8 @@ initial = 0
 
 if index_a > index_k:
 
-    initial = sum([2 ** x[0] * x[1] for x in enumerate(cnt[index_k + 1 : index_a + 1], index_k + 1)])
-                    
+    initial = sum([2 ** x[0] * x[1] for x in enumerate(cnt[index_k + 1: index_a + 1], index_k + 1)])
+
 
 equal = [initial, ]
 
@@ -57,4 +57,3 @@ for i in range(index_k + 1):
         ans = max(ans, best[i] + cnt[i] * 2 ** i + equal[-(i + 2)])
 
 print(ans)
-

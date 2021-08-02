@@ -1,9 +1,11 @@
 import sys
 import itertools
 
+
 def swap_rev(x, i, rev):
     if rev:
         x[i], x[len(x) - i - 1] = x[len(x) - i - 1], x[i]
+
 
 def main():
     s = sys.stdin.readline().strip()
@@ -24,11 +26,12 @@ def main():
         swap_rev(result, day, rev)
         prev = day
     for i in range(prev + 1, int((len(result) + 1) / 2)):
-            swap_rev(result, i, rev)
+        swap_rev(result, i, rev)
     print(''.join(result))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

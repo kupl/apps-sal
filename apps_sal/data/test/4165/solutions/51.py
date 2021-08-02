@@ -7,4 +7,3 @@ if mx < sum(L):
 else:
     print("No")
 pass
-

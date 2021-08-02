@@ -16,4 +16,3 @@ for a in range(num + 1):
                 break
         res = max(res, sum(s))
 print(res)
-

@@ -14,8 +14,8 @@ for i in range(100):
             cnt[i] += 1
 
 for m in range(100):
-    if 2 ** m > k+1:
-        j = m-1
+    if 2 ** m > k + 1:
+        j = m - 1
         break
 
 initial = 0
@@ -30,19 +30,18 @@ for m, c in enumerate(cnt[: j + 1]):
 K = list()
 equal = [initial, ]
 for m, c in enumerate(cnt[j::-1]):
-    y = (k+1 >> (j-m)) & 1
+    y = (k + 1 >> (j - m)) & 1
     K.append(y)
-    if y==1:
-        equal.append(equal[-1] + (n - c) * 2 ** (j-m))
+    if y == 1:
+        equal.append(equal[-1] + (n - c) * 2 ** (j - m))
     else:
-        equal.append(equal[-1] + c * 2 ** (j-m))
+        equal.append(equal[-1] + c * 2 ** (j - m))
 
 ans = 0
 K.reverse()
 
-for i in range(j+1):
+for i in range(j + 1):
     if K[i]:
         ans = max(ans, best[i] + 2 ** i * cnt[i] + equal[-(i + 2)])
 
 print(ans)
-

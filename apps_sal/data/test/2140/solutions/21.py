@@ -15,7 +15,7 @@ if 1 in m1:
 else:
     k = [0]
 
-for i in range(1, len(s)//2):
+for i in range(1, len(s) // 2):
     if i + 1 in m1:
         k.append(k[-1] + m[i + 1])
     else:
@@ -24,14 +24,11 @@ s1 = []
 for i in range(len(s)):
     s1.append(s[i])
 
-for i in range(len(s)//2):
+for i in range(len(s) // 2):
     if k[i] % 2 == 1:
         t = s1[len(s) - i - 1]
         s1[len(s) - i - 1] = s[i]
         s1[i] = t
 
 for i in range(len(s1)):
-    print(s1[i], end = '')
-        
-    
-    
+    print(s1[i], end='')

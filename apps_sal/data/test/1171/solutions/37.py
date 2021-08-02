@@ -15,4 +15,3 @@ for i in range(num + 1):
                 heappush(s, tmp)
         res = max(res, sum(s))
 print(res)
-

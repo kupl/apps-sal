@@ -50,7 +50,7 @@ def main():
             dp1[i + 1] = dp1[i] + zero * tmp
             dp2[i + 1] = dp1[i] + one * tmp
             if dp2[i] != -1:
-                dp2[i+1] = max(dp2[i+1], dp2[i] + zero * tmp, dp2[i] + one * tmp)
+                dp2[i + 1] = max(dp2[i + 1], dp2[i] + zero * tmp, dp2[i] + one * tmp)
 
         else:
             dp1[i + 1] = dp1[i] + one * tmp
@@ -62,5 +62,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

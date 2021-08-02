@@ -13,4 +13,4 @@ for _ in range(q):
     if min_pos == -1:
         print(n)
     else:
-        print(max(2*(max_pos + 1), 2*(n - min_pos)))
+        print(max(2 * (max_pos + 1), 2 * (n - min_pos)))

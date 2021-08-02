@@ -2,7 +2,7 @@ N, K = list(map(int, input().split()))
 V = list(map(int, input().split()))
 ans = 0
 
-#左からl個、右からr個取り出す
+# 左からl個、右からr個取り出す
 for l in range(K + 1):
     for r in range(K - l + 1):
         if l + r > N: continue
@@ -12,12 +12,12 @@ for l in range(K + 1):
         for i in range(l):
             now += V[i]
             having.append(V[i])
-        for i in range(N-r, N):
+        for i in range(N - r, N):
             now += V[i]
             having.append(V[i])
 
         having.sort()
-        #d回まで持っている宝石(価値がマイナス)を戻す
+        # d回まで持っている宝石(価値がマイナス)を戻す
         for i in range(d):
             if i >= len(having): break
             if having[i] >= 0: break
@@ -25,4 +25,3 @@ for l in range(K + 1):
         ans = max(ans, now)
 
 print(ans)
-

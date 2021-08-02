@@ -21,4 +21,3 @@ for i in range(n):
         ans[i] = s[i]
 
 print(''.join(ans))
-

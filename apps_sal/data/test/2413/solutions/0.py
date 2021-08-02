@@ -19,4 +19,3 @@ for _ in range(t):
             continue
         mx = max(mx, 2 * max(i + 1, n - i))
     print(mx)
-

@@ -5,4 +5,3 @@ arr = list(map(int, input().split()))
 res = sum(arr[0:-K])
 res += X * K
 print(res)
-

@@ -8,7 +8,7 @@ for left in range(N + 1):
         if left + right > N:
             break
 
-        li = V[:left] + V[N - right :]
+        li = V[:left] + V[N - right:]
         li = sorted(li)
 
         d = K - left - right
@@ -25,5 +25,3 @@ for left in range(N + 1):
         ans.append(c)
 
 print((max(ans)))
-
-

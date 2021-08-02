@@ -1,11 +1,10 @@
-N=int(input())
-L=list(map(int,input().split()))
+N = int(input())
+L = list(map(int, input().split()))
 
-x=sum(L)
+x = sum(L)
 for l in L:
-    if l>=x-l:
+    if l >= x - l:
         print("No")
         break
 else:
     print("Yes")
-

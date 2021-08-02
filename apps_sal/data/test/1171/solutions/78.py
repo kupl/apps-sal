@@ -5,8 +5,8 @@ d = deque(v)
 
 t = min(n, k)
 score = 0
-for a in range(t+1):
-    for b in range(t-a+1):
+for a in range(t + 1):
+    for b in range(t - a + 1):
         tmp_d = d.copy()
         jems = []
         for i in range(a):
@@ -14,7 +14,7 @@ for a in range(t+1):
         for i in range(b):
             jems.append(tmp_d.popleft())
         jems.sort()
-        for i in range(min(len(jems), k-b-a)):
+        for i in range(min(len(jems), k - b - a)):
             if jems[i] < 0:
                 jems[i] = 0
             else:
@@ -23,4 +23,3 @@ for a in range(t+1):
         if tmp_score > score:
             score = tmp_score
 print(score)
-

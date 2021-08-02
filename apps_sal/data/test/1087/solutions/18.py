@@ -24,7 +24,6 @@ def solve(N, K, A):
     print(ans)
 
 
-
 def __starting_point():
     N, K = list(map(int, input().split()))
     A = [int(i) for i in input().split()]
@@ -34,5 +33,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

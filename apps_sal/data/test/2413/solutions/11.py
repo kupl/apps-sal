@@ -14,4 +14,3 @@ for _ in range(int(input())):
             b = i
             break
     print(max((n - a) * 2, (b + 1) * 2, n))
-

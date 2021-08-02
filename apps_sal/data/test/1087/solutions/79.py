@@ -1,6 +1,7 @@
 def Z(): return int(input())
 def ZZ(): return [int(_) for _ in input().split()]
 
+
 def main():
     N, K = ZZ()
     A = ZZ()
@@ -23,15 +24,17 @@ def main():
     dp[0][0] = plus[i]
     plus = plus[::-1]
 
-    for i in range(msb-1):
-        dp[i+1][0] = max(dp[i+1][0], dp[i][0] + plus[i+1] * int(bK[i+1]))
-        if int(bK[i+1]) == 1: dp[i+1][1] = max(dp[i+1][1], dp[i][0])
-        dp[i+1][1] = max(dp[i+1][1], dp[i][1], dp[i][1] + plus[i+1])
-    print((max(dp[msb-1]) + sum(A)))
+    for i in range(msb - 1):
+        dp[i + 1][0] = max(dp[i + 1][0], dp[i][0] + plus[i + 1] * int(bK[i + 1]))
+        if int(bK[i + 1]) == 1: dp[i + 1][1] = max(dp[i + 1][1], dp[i][0])
+        dp[i + 1][1] = max(dp[i + 1][1], dp[i][1], dp[i][1] + plus[i + 1])
+    print((max(dp[msb - 1]) + sum(A)))
 
     return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

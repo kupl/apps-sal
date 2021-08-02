@@ -11,4 +11,3 @@ for i in range(int(input())):
     else:
         print(N)
 # Caption: Contest Time
-

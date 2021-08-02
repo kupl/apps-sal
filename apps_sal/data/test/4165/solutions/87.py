@@ -6,7 +6,9 @@ def main():
     ans = 'Yes' if m < s else 'No'
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

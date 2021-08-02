@@ -9,4 +9,4 @@ for i in range(a):
     else:
         k1 = r + 1
         k2 = b - l
-        print(max(k1, k2)*2)
+        print(max(k1, k2) * 2)

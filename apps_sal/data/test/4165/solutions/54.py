@@ -5,4 +5,3 @@ if max(L) < sum(L) - max(L):
     print('Yes')
 else:
     print('No')
-

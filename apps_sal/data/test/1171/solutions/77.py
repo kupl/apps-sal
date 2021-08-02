@@ -1,7 +1,7 @@
 import heapq
 import copy
-N,K = map(int, input().split())
-V_list= list(map(int, input().split()))
+N, K = map(int, input().split())
+V_list = list(map(int, input().split()))
 
 selected = []
 left = []
@@ -11,12 +11,12 @@ left_sum = 0
 for l in range(N):
     selected = copy.deepcopy(left)
     lr_sum = left_sum
-    for r in range(N-l+1):
+    for r in range(N - l + 1):
         # skip
-        stock = K-l-r
+        stock = K - l - r
         if stock < 0:
             break
-        ri = N-r-1
+        ri = N - r - 1
         select_cnt = len(selected)
         tmp_sum = lr_sum
         max_sum = max(max_sum, tmp_sum)
@@ -25,7 +25,7 @@ for l in range(N):
         for i in range(stock):
             if i >= select_cnt:
                 break
-            
+
             pop_v = heapq.heappop(popper)
             if pop_v > 0:
                 break

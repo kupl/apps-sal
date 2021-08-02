@@ -5,4 +5,3 @@ if max(lengths) < sum(lengths) - max(lengths):
     print("Yes")
 else:
     print("No")
-

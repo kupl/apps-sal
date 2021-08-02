@@ -8,7 +8,7 @@ for a in A:
 x = 0
 for idx, one in enumerate(ones[::-1]):
     if n - one > one:
-        xx = 2**(len(ones)-1-idx)
+        xx = 2**(len(ones) - 1 - idx)
         if x + xx > k:
             continue
         else:

@@ -1,8 +1,8 @@
 N = int(input())
-L = list(map(int,input().split()))
+L = list(map(int, input().split()))
 
-length = sum(L)-max(L)
+length = sum(L) - max(L)
 if max(L) < length:
     print('Yes')
 else:
-    print('No') 
+    print('No')
