@@ -1,6 +1,7 @@
 
-#Union-Find
+# Union-Find
 from collections import Counter
+
 
 class UnionFind():
     def __init__(self, n):
@@ -8,12 +9,14 @@ class UnionFind():
         self.par = list(range(self.n))
         self.rank = [1] * n
         self.count = n
+
     def find(self, x):
         if self.par[x] == x:
             return x
         else:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
+
     def unite(self, x, y):
         p = self.find(x)
         q = self.find(y)
@@ -24,12 +27,17 @@ class UnionFind():
         self.rank[p] += self.rank[q]
         self.par[q] = p
         self.count -= 1
+
     def same(self, x, y):
         return self.find(x) == self.find(y)
+
     def size(self, x):
         return self.rank[x]
+
     def count(self):
         return self.count
+
+
 t = int(input())
 for i in range(t):
     n, m = map(int, input().split())

@@ -3,10 +3,10 @@ arr = [input() for i in range(n)]
 x_c = []
 y_c = []
 for i in range(n):
-	for j in range(m):
-		if arr[i][j] == 'B':
-			x_c.append(i)
-			y_c.append(j)
+    for j in range(m):
+        if arr[i][j] == 'B':
+            x_c.append(i)
+            y_c.append(j)
 x_c.sort()
 y_c.sort()
 

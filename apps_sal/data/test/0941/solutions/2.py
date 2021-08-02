@@ -1,6 +1,7 @@
-ii = lambda: int(input())
-mi = lambda: list(map(int, input().split()))
-li = lambda: list(mi())
+def ii(): return int(input())
+def mi(): return list(map(int, input().split()))
+def li(): return list(mi())
+
 
 b, k = mi()
 a = li()
@@ -11,5 +12,3 @@ for x in a[::-1]:
     ans = (ans + c * x) % 2
     c *= b
 print('odd' if ans else 'even')
-
-

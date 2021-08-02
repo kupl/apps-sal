@@ -71,6 +71,5 @@ for _ in range(t):
             buf.append('Second')
         else:
             buf.append('First')
-           
-print(('\n'.join(buf)))
 
+print(('\n'.join(buf)))

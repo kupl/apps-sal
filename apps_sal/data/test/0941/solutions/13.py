@@ -13,5 +13,5 @@ def main():
         else:
             print("even")
 
-main()
 
+main()

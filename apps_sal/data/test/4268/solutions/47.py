@@ -1,4 +1,4 @@
-import itertools 
+import itertools
 N, D = map(int, input().split())
 count = 0
 lst = []

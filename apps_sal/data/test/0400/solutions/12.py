@@ -10,7 +10,7 @@ for i in range(n):
     if a < l[i]:
         a += 10
     if a < 100:
-        remain += (100-a)//10
+        remain += (100 - a) // 10
     if l[i] >= 100:
         l[i] = 0
         continue
@@ -27,4 +27,3 @@ for i in range(len(l)):
 
 skills += min(remain, (k - spent) // 10)
 print(skills)
-

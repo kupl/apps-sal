@@ -1,22 +1,25 @@
 import sys
 from math import *
 
+
 def minp():
-	return sys.stdin.readline().strip()
+    return sys.stdin.readline().strip()
+
 
 def mint():
-	return int(minp())
+    return int(minp())
+
 
 def mints():
-	return list(map(int, minp().split()))
+    return list(map(int, minp().split()))
+
 
 b, k = mints()
 z = 0
 for i in mints():
-	z = z*b + i
-	z = (z & 1)
+    z = z * b + i
+    z = (z & 1)
 if z == 0:
-	print("even")
+    print("even")
 else:
-	print("odd")
-
+    print("odd")

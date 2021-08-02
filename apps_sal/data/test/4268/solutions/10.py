@@ -7,7 +7,7 @@ def main():
     ans = 0
 
     for i, xi in enumerate(Xs):
-        for xj in Xs[i+1:]:
+        for xj in Xs[i + 1:]:
             dis = 0
             for di in range(d):
                 dis += (xi[di] - xj[di])**2
@@ -20,5 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

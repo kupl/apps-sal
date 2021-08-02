@@ -16,4 +16,3 @@ for i in range(0, n - 1):
         if norm.is_integer():
             count += 1
 print(count)
-

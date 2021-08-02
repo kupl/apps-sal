@@ -5,8 +5,8 @@ for _ in range(n):
 
 count = 0
 for i in range(n):
-    for j in range(i+1,n):
-        if i!=j :
+    for j in range(i + 1, n):
+        if i != j:
             sum = 0
             for k in range(d):
                 sum += (x[i][k] - x[j][k]) ** 2

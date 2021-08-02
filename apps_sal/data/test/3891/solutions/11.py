@@ -21,4 +21,3 @@ for x in range(n):
             y2 = y
 
 print(x1 + (x2 - x1) // 2 + 1, y1 + (y2 - y1) // 2 + 1)
-

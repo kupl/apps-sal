@@ -1,8 +1,11 @@
 USE_STDIO = False
 
 if not USE_STDIO:
-    try: import mypc
-    except: pass
+    try:
+        import mypc
+    except:
+        pass
+
 
 def main():
     n, m = list(map(int, input().split(' ')))
@@ -18,12 +21,11 @@ def main():
                 y0 = min(y0, j)
                 x1 = max(x1, i)
                 y1 = max(y1, j)
-    print((x0+x1)//2+1, (y0+y1)//2+1)
+    print((x0 + x1) // 2 + 1, (y0 + y1) // 2 + 1)
+
 
 def __starting_point():
     main()
-
-
 
 
 __starting_point()

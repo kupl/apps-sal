@@ -13,10 +13,9 @@ if k:
     for i, a in enumerate(A):
         if k <= 0:
             break
-        new = min(100-a, k)
+        new = min(100 - a, k)
         A[i] += new
         k -= new
 
-ans = sum(a//10 for a in A)
+ans = sum(a // 10 for a in A)
 print(ans)
-

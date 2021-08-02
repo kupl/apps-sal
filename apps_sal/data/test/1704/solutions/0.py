@@ -48,8 +48,6 @@ class Solution:
                     result += str(j)
                     break
         return result
-            
+
 
 print(Solution().solve())
-
-

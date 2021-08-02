@@ -20,4 +20,3 @@ if ans < 10 * n:
     print(ans)
 else:
     print(10 * n)
-

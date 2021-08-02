@@ -5,6 +5,7 @@ def calc(D, a, b):
 
     return d2**0.5
 
+
 N, D = map(int, input().split())
 lst = []
 for i in range(N):
@@ -13,7 +14,7 @@ for i in range(N):
 ans = 0
 
 for i in range(N):
-    for j in range(i+1, N):
+    for j in range(i + 1, N):
         d = calc(D, lst[i], lst[j])
         if int(d) == d:
             ans += 1

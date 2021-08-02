@@ -18,4 +18,3 @@ for i in range(len(adds)):
         ans += 1
 ans += k // 10
 print(ans)
-

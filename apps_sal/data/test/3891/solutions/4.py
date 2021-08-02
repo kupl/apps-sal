@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n, m = read()
 a = [input() for i in range(n)]
 y1 = x1 = 1e9

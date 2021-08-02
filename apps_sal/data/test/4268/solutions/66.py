@@ -15,4 +15,3 @@ for x, y in combinations(X, 2):
         res += 1
 
 print(res)
-

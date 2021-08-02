@@ -10,7 +10,3 @@ for i in range(1, n + 1):
             y = s.find('B') + 1
         k += 1
 print(x + k // 2, y + k // 2)
-
-
-        
-

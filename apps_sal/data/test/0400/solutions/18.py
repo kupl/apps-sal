@@ -14,7 +14,7 @@ for i in range(n):
     else:
         l[i][0] %= 10
 cur = 10**9
-l.sort(reverse = True)
+l.sort(reverse=True)
 for i in range(n):
     if l[i][0] >= 0:
         cur = 10 - (l[i][0] % 10)
@@ -33,5 +33,5 @@ for i in range(n):
         ans += k1[i] // 10
     else:
         ans += 10
-    
+
 print(ans + min(g, k // 10))

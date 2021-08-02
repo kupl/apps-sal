@@ -6,13 +6,17 @@ def par(a):
     for l in L:
         P[l] = a
     return a
+
+
 def unite(a, b):
     if par(a) != par(b):
         if P[par(b)] >= P[par(a)]:
-            if P[par(b)] == P[par(a)]: P[par(a)] -= 1
+            if P[par(b)] == P[par(a)]:
+                P[par(a)] -= 1
             P[par(b)] = par(a)
         else:
             P[par(a)] = par(b)
+
 
 T = int(input())
 for _ in range(T):
@@ -20,7 +24,7 @@ for _ in range(T):
     P = [-1] * N
     for _ in range(M):
         a, b = map(int, input().split())
-        a, b = a-1, b-1
+        a, b = a - 1, b - 1
         unite(a, b)
     p1, p2 = par(0), par(N - 1)
     c1, c2 = 0, 0
@@ -30,7 +34,7 @@ for _ in range(T):
             c1 ^= 1
         elif pi == p2:
             c2 ^= 1
-    
+
     if N % 4 == 1:
         if M % 2:
             print("First")

@@ -4,6 +4,7 @@ def dist(ar1, ar2):
         s += (ar1[i] - ar2[i]) ** 2
     return (s ** .5).is_integer()
 
+
 n, d = map(int, input().split())
 ans = 0
 arr = []

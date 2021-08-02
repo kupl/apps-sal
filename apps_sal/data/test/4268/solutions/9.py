@@ -50,10 +50,10 @@ def resolve():
 
     ans = 0
     for i, x1 in enumerate(X):
-        for x2 in X[i+1:]:
+        for x2 in X[i + 1:]:
             tmp = 0
             for j in range(D):
-                tmp += (x2[j]-x1[j])**2
+                tmp += (x2[j] - x1[j])**2
             tmp = sqrt(tmp)
             if tmp.is_integer() == True:
                 ans += 1
@@ -64,5 +64,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()
