@@ -7,6 +7,6 @@ B = list(map(int, input().split()))
 
 ans = 0
 for i in range(N):
-    tmp = sum(A[:i+1]) + sum(B[i:])
+    tmp = sum(A[:i + 1]) + sum(B[i:])
     ans = max(ans, tmp)
 print(ans)

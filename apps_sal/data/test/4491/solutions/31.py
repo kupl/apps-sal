@@ -9,11 +9,11 @@ for k in range(N):
     for x in range(N):
         if x < k:
             res += A[0][x]
-        elif x==k:
-            res += A[0][x]+A[1][x]
+        elif x == k:
+            res += A[0][x] + A[1][x]
         else:
             res += A[1][x]
 
-    ans = max(ans,res)
+    ans = max(ans, res)
 
 print(ans)

@@ -7,4 +7,3 @@ v[idx] = -1
 ret = max(v)
 
 print(str(idx + 1) + ' ' + str(ret))
-

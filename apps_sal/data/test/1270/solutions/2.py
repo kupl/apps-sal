@@ -9,4 +9,3 @@ ans.append(n)
 
 print(len(ans))
 print(' '.join(map(str, ans)))
-

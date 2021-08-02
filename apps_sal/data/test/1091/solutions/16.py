@@ -11,13 +11,8 @@ for i in range(n):
     if(pn[i] > vmax):
         rmax = vmax
         vmax = pn[i]
-        ind = i + 1    
+        ind = i + 1
     elif(pn[i] > rmax):
         rmax = pn[i]
-        
+
 print(ind, rmax)
-
-
-    
-
-

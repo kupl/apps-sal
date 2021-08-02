@@ -9,11 +9,11 @@ N = int(input())
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
 
-tmp = sum(A) + B[N-1]
+tmp = sum(A) + B[N - 1]
 ans = tmp
-for i in reversed(range(1,N)):
+for i in reversed(range(1, N)):
     tmp -= A[i]
-    tmp += B[i-1]
+    tmp += B[i - 1]
     if ans < tmp:
         ans = tmp
 print(ans)

@@ -4,7 +4,7 @@ def main():
     try:
         while True:
             n = int(input())
-            ls = [ ]
+            ls = []
             if n & 0x1:
                 ls.append("3")
                 n -= 3
@@ -17,5 +17,5 @@ def main():
     except EOFError:
         pass
 
-main()
 
+main()

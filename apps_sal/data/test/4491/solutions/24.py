@@ -9,7 +9,6 @@ for i in range(n):
     tmp2 = 0
     for j in range(i, n):
         tmp2 += a2[j]
-    res = max(res, tmp1+tmp2)
+    res = max(res, tmp1 + tmp2)
 
 print(res)
-

@@ -1,8 +1,8 @@
 n, q = list(map(int, input().split()))
-servers = [i for i in range(1, n+1)]
+servers = [i for i in range(1, n + 1)]
 res, used = [], {}
 for i in range(q):
-    t, s, d = list(map(int, input().split())) 
+    t, s, d = list(map(int, input().split()))
     finish = t + d
     for i in list(used.keys()):
         if t >= i:
@@ -18,6 +18,5 @@ for i in range(q):
         used[finish] += servers[:s]
     res.append(sum(servers[:s]))
     servers = servers[s:]
-for i in res: 
+for i in res:
     print(i)
-

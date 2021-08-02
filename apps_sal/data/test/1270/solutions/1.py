@@ -9,5 +9,5 @@ def main():
         print(count)
         print(' '.join(['3'] + ['2'] * (count - 1)))
 
-main()
 
+main()

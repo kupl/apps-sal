@@ -6,13 +6,15 @@ import numpy as np
 
 sys.setrecursionlimit(10**7)
 
+
 def _S(): return sys.stdin.readline().rstrip()
 def I(): return int(_S())
 def LS(): return list(_S().split())
-def LI(): return list(map(int,LS()))
+def LI(): return list(map(int, LS()))
+
 
 if os.getenv("LOCAL"):
-    inputFile = basename_without_ext = os.path.splitext(os.path.basename(__file__))[0]+'.txt'
+    inputFile = basename_without_ext = os.path.splitext(os.path.basename(__file__))[0] + '.txt'
     sys.stdin = open(inputFile, "r")
 INF = float("inf")
 
@@ -22,12 +24,12 @@ A1 = LI()
 A2 = LI()
 
 if N == 1:
-    print(A1[0]+A2[0])
+    print(A1[0] + A2[0])
     return
 
 ans = 0
 for i in range(N):
-    ans = max(ans, sum(A1[:i])+sum(A2[i-1:]))
+    ans = max(ans, sum(A1[:i]) + sum(A2[i - 1:]))
 
 
 # A1n = np.zeros(N,dtype='int')

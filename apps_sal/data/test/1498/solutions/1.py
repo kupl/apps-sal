@@ -1,9 +1,10 @@
 import math
 import sys
 
+
 def solve(n, q):
     servers = [0] * n
-    res = [None]*q
+    res = [None] * q
     for j, line in enumerate(sys.stdin):
         t, k, d = list(map(int, line.split()))
         S, m = k, k
@@ -21,9 +22,7 @@ def solve(n, q):
             servers = logs[:]
 
     return res
-            
-            
+
+
 n, q = list(map(int, input().split()))
 print('\n'.join(map(str, solve(n, q))))
-    
-

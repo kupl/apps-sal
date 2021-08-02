@@ -7,8 +7,9 @@ def main():
     else:
         print('2 ' * (n // 2 - 1) + '3')
 
- 
+
 def __starting_point():
     main()
+
 
 __starting_point()

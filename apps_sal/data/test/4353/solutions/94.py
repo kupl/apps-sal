@@ -1,2 +1,2 @@
-x,y,z= input().split(',')
-print(x,y,z)
+x, y, z = input().split(',')
+print(x, y, z)

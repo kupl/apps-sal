@@ -1,5 +1,6 @@
 M = 998244353
 
+
 def gcd(a, b):
     if (a == 0):
         return 0, 1
@@ -7,7 +8,6 @@ def gcd(a, b):
     x, y = gcd(b % a, a)
 
     return y - (b // a) * x, x
-
 
 
 k = input()
@@ -24,4 +24,3 @@ print(num * inv % M)
 
 
 #d[i + 1] = (d[i] + 1) * 100 / p
-

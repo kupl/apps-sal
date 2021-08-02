@@ -8,4 +8,3 @@ for i in range(len(s)):
         S += s[i]
 
 print(S)
-
