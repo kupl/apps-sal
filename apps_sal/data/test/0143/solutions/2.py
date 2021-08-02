@@ -7,4 +7,3 @@ for i in range(n):
         c[i] = m
         m += 1
 print(m)
-

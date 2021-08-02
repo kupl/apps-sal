@@ -3,14 +3,18 @@ from itertools import combinations
 
 eps = 10 ** -7
 
+
 def midpoint(a, b):
     return (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+
 
 def distance(a, b):
     return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
 
+
 def within(c, r, a):
     return (a[0] - c[0]) ** 2 + (a[1] - c[1]) ** 2 <= r ** 2 + eps
+
 
 def tcircle(t1, t2, t3):
     x1, y1 = t1
@@ -23,6 +27,7 @@ def tcircle(t1, t2, t3):
     y = ((x1 - x3) * (x1 ** 2 - x2 ** 2 + y1 ** 2 - y2 ** 2) - (x1 - x2) * (x1 ** 2 - x3 ** 2 + y1 ** 2 - y3 ** 2)) / -d
     r = math.sqrt((x - x1) ** 2 + (y - y1) ** 2)
     return (x, y), r
+
 
 def main():
     N = int(input())
@@ -46,5 +51,5 @@ def main():
                 br = ar
     return br
 
-print((main()))
 
+print((main()))

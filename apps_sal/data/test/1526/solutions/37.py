@@ -19,4 +19,3 @@ elif (ls[0] == (ls[2] - 1)) | (ls[1] == (ls[2] - 1)):
     cnt += 2
 
 print(cnt)
-

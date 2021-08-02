@@ -8,5 +8,3 @@ if (s % x == 0) and (s != 0):
     print(str(s // x))
 else:
     print('-1')
-
-

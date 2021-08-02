@@ -11,9 +11,12 @@ def solve():
         cnt += diff_0_2 // 2
     else:
         cnt += diff_0_2 // 2 + 1 + 1
-    
+
     print(cnt)
+
 
 def __starting_point():
     solve()
+
+
 __starting_point()

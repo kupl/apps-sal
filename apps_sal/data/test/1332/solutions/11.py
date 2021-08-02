@@ -1,4 +1,4 @@
-arr = list(map(int ,input().split()))
+arr = list(map(int, input().split()))
 l = len(arr)
 s = sum(arr)
 if s % l != 0 or s == 0:

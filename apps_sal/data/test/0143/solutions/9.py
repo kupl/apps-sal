@@ -9,8 +9,8 @@ def main():
     c = 1
     for i in range(n):
         if x[i] >= c:
-            c+=1
+            c += 1
     print(c)
 
-main()
 
+main()

@@ -16,4 +16,3 @@ else:
     ans += (abc[1] - abc[0]) // 2
     ans += abc[2] - abc[1]
 print(ans)
-

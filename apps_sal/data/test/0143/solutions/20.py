@@ -8,4 +8,3 @@ while i < n:
         mex += 1
     i += 1
 print(mex)
-

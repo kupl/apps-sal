@@ -35,4 +35,3 @@ while abs(ok - ng) > EPS:
     else:
         ng = m
 print(ok)
-

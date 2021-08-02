@@ -25,5 +25,3 @@ for i in range(n):
     sb = b[i]
 
 print(count)
-
-

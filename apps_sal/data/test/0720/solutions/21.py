@@ -18,4 +18,3 @@ for _ in range(n):
         r += min(a, b) - a_0
     a_0, b_0 = a, b
 print(r)
-

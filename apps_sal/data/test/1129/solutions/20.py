@@ -11,4 +11,3 @@ if (n % 2 == 1):
     fout.write(str(points[n // 2]))
 else:
     fout.write(str(points[n // 2 - 1]))
-

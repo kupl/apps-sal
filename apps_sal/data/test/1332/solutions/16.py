@@ -11,5 +11,3 @@ elif s % 5 == 0:
     print(s // 5)
 else:
     print(-1)
-
-

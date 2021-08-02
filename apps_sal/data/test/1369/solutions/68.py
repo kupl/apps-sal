@@ -1,15 +1,21 @@
-import bisect, collections, copy, heapq, itertools, math, string
+from collections import deque, defaultdict, Counter
+from math import sqrt
+import numpy as np
+from functools import reduce
+import heapq
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
 import sys
 def I(): return int(sys.stdin.readline().rstrip())
 def MI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def S(): return sys.stdin.readline().rstrip()
 def LS(): return list(sys.stdin.readline().rstrip().split())
-from collections import deque, defaultdict, Counter
-import heapq
-from functools import reduce
-import numpy as np
-from math import sqrt
 
 
 class Vector:
@@ -138,6 +144,8 @@ def convex_hull(points: list):
     ret = conv_upper[1:-1] + conv_lower
 
     return ret[::-1]
+
+
 def main():
     N = I()
     points = []
@@ -198,6 +206,7 @@ def main():
                 if cnt_ == X:
                     dif_list.append(dif)
     print((min(dif_list)))
+
 
 def __starting_point():
     main()

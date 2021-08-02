@@ -19,4 +19,3 @@ for _ in range(n):
         ans += min(a, b) - x
     x, y = a, b
 print(ans)
-

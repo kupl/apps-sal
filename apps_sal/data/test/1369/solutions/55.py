@@ -1,37 +1,38 @@
-#https://stackoverflow.com/questions/27673463/smallest-enclosing-circle-in-python-error-in-the-code
-#test
+# https://stackoverflow.com/questions/27673463/smallest-enclosing-circle-in-python-error-in-the-code
+# test
 
 # Smallest enclosing circle
-# 
+#
 # Copyright (c) 2014 Project Nayuki
 # https://www.nayuki.io/page/smallest-enclosing-circle
-# 
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program (see COPYING.txt).
 # If not, see <http://www.gnu.org/licenses/>.
-# 
+#
 
-import math, random
+import math
+import random
 
 
 # Data conventions: A point is a pair of floats (x, y). A circle is a triple of floats (center x, center y, radius).
 
-# 
+#
 # Returns the smallest circle that encloses all the given points. Runs in expected O(n) time, randomized.
 # Input: A sequence of pairs of floats or ints, e.g. [(0,5), (3.1,-2.7)].
 # Output: A triple of floats representing a circle.
 # Note: If 0 points are given, None is returned. If 1 point is given, a circle of radius 0 is returned.
-# 
+#
 def make_circle(points):
     # Convert to float and randomize order
     shuffled = [(float(p[0]), float(p[1])) for p in points]
@@ -41,7 +42,7 @@ def make_circle(points):
     c = None
     for (i, p) in enumerate(shuffled):
         if c is None or not _is_in_circle(c, p):
-            c = _make_circle_one_point(shuffled[0 : i + 1], p)
+            c = _make_circle_one_point(shuffled[0: i + 1], p)
     return c
 
 
@@ -53,7 +54,7 @@ def _make_circle_one_point(points, p):
             if c[2] == 0.0:
                 c = _make_diameter(p, q)
             else:
-                c = _make_circle_two_points(points[0 : i + 1], p, q)
+                c = _make_circle_two_points(points[0: i + 1], p, q)
     return c
 
 
@@ -96,6 +97,7 @@ def _make_diameter(p0, p1):
 
 _EPSILON = 1e-12
 
+
 def _is_in_circle(c, p):
     return c is not None and math.hypot(p[0] - c[0], p[1] - c[1]) < c[2] + _EPSILON
 
@@ -103,16 +105,16 @@ def _is_in_circle(c, p):
 # Returns twice the signed area of the triangle defined by (x0, y0), (x1, y1), (x2, y2)
 def _cross_product(x0, y0, x1, y1, x2, y2):
     return (x1 - x0) * (y2 - y0) - (y1 - y0) * (x2 - x0)
-  
-points= [(421640.3639270504, 4596366.353552659), (421635.79361391126, 4596369.054192241), (421632.6774913164, 4596371.131607305), (421629.14588570886, 4596374.870954419), (421625.6142801013, 4596377.779335507), (421624.99105558236, 4596382.14190714), (421630.1845932406, 4596388.062540068), (421633.3007158355, 4596388.270281575), (421637.87102897465, 4596391.8018871825), (421642.4413421138, 4596394.918009778), (421646.5961722403, 4596399.903805929), (421649.71229483513, 4596403.850894549), (421653.8940752105, 4596409.600842565), (421654.69809098693, 4596410.706364258), (421657.60647207545, 4596411.329588776), (421660.514853164, 4596409.875398233), (421661.3458191893, 4596406.136051118), (421661.5535606956, 4596403.22767003), (421658.85292111343, 4596400.94251346), (421656.5677645438, 4596399.696064423), (421655.52905701223, 4596396.164458815), (421652.82841743, 4596394.502526765), (421648.46584579715, 4596391.8018871825), (421646.38843073393, 4596388.270281575), (421645.55746470863, 4596386.400608018), (421647.21939675923, 4596384.115451449), (421649.5045533288, 4596382.661260904), (421650.7510023668, 4596378.714172284), (421647.8426212782, 4596375.8057911955), (421644.9342401897, 4596372.897410107), (421643.6877911517, 4596370.404512031), (421640.3639270504, 4596366.353552659)]
-pointss=[]
-n=int(input()
-     )
+
+
+points = [(421640.3639270504, 4596366.353552659), (421635.79361391126, 4596369.054192241), (421632.6774913164, 4596371.131607305), (421629.14588570886, 4596374.870954419), (421625.6142801013, 4596377.779335507), (421624.99105558236, 4596382.14190714), (421630.1845932406, 4596388.062540068), (421633.3007158355, 4596388.270281575), (421637.87102897465, 4596391.8018871825), (421642.4413421138, 4596394.918009778), (421646.5961722403, 4596399.903805929), (421649.71229483513, 4596403.850894549), (421653.8940752105, 4596409.600842565), (421654.69809098693, 4596410.706364258), (421657.60647207545, 4596411.329588776), (421660.514853164, 4596409.875398233), (421661.3458191893, 4596406.136051118), (421661.5535606956, 4596403.22767003), (421658.85292111343, 4596400.94251346), (421656.5677645438, 4596399.696064423), (421655.52905701223, 4596396.164458815), (421652.82841743, 4596394.502526765), (421648.46584579715, 4596391.8018871825), (421646.38843073393, 4596388.270281575), (421645.55746470863, 4596386.400608018), (421647.21939675923, 4596384.115451449), (421649.5045533288, 4596382.661260904), (421650.7510023668, 4596378.714172284), (421647.8426212782, 4596375.8057911955), (421644.9342401897, 4596372.897410107), (421643.6877911517, 4596370.404512031), (421640.3639270504, 4596366.353552659)]
+pointss = []
+n = int(input()
+        )
 for i in range(n):
-  x,y=list(map(int,input().split()))
-  
-  pointss.append((x,y))
+    x, y = list(map(int, input().split()))
 
-ans=make_circle(pointss)
+    pointss.append((x, y))
+
+ans = make_circle(pointss)
 print((ans[2]))
-

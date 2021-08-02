@@ -1,11 +1,14 @@
 N = int(input())
 XY = [tuple(map(int, input().split())) for _ in range(N)]
 
+
 def dist(x, y, u, v):
     return ((x - u)**2 + (y - v)**2)**0.5
 
+
 def mxR(x, y):
     return max([dist(x, y, u, v) for u, v in XY])
+
 
 ans = 10**18
 for i, A in enumerate(XY):
@@ -28,4 +31,3 @@ for i, A in enumerate(XY):
             ans = min(ans, mxR(x, y))
 
 print(ans)
-

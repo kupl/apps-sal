@@ -14,4 +14,3 @@ elif len(evens) == 2:
 ABC = sorted(odds + evens)
 ans += (ABC[2] - ABC[0]) // 2 + (ABC[2] - ABC[1]) // 2
 print(ans)
-

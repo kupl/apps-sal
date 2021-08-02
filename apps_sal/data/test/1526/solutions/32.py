@@ -7,4 +7,3 @@ if sub % 2 != 0:
     sub += 3
 
 print((sub // 2))
-

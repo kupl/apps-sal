@@ -12,4 +12,3 @@ for i in range(1, n):
     right -= (dot - ldot) * (n - i)
     results.append(left + right)
 print(dots[results.index(min(results))])
-

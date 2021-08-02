@@ -408,10 +408,10 @@ class Segment:
         """
         if self.is_parallel_to(s):
             # 並行なら線分の端点がもう片方の線分の上にあるかどうか
-            return (s.p1.on_segment(self.p1, self.p2, allow_side) or
-                    s.p2.on_segment(self.p1, self.p2, allow_side) or
-                    self.p1.on_segment(s.p1, s.p2, allow_side) or
-                    self.p2.on_segment(s.p1, s.p2, allow_side))
+            return (s.p1.on_segment(self.p1, self.p2, allow_side)
+                    or s.p2.on_segment(self.p1, self.p2, allow_side)
+                    or self.p1.on_segment(s.p1, s.p2, allow_side)
+                    or self.p2.on_segment(s.p1, s.p2, allow_side))
         else:
             # allow_side ならゼロを許容する
             det_upper = EPS if allow_side else -EPS
@@ -493,8 +493,8 @@ class Polygon:
         :rtype: typing.Iterator[(Point, Point, Point)]
         """
         return list(zip(self.points,
-                   self.points[1:] + self.points[:1],
-                   self.points[2:] + self.points[:2]))
+                        self.points[1:] + self.points[:1],
+                        self.points[2:] + self.points[:2]))
 
     def area(self):
         """
@@ -970,5 +970,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()
