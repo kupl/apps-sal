@@ -1,11 +1,11 @@
 s = input()
 
-d = ["z"*5010]*5
+d = ["z" * 5010] * 5
 
 k = int(input())
 for i in range(len(s)):
-    for j in range(i, i+k):
-        x = s[i:j+1]
+    for j in range(i, i + k):
+        x = s[i:j + 1]
         if x in d or x == '':
             continue
         l = 0
@@ -22,5 +22,4 @@ for i in range(len(s)):
 # if l[0] == '':
     # l = l[1:]
 
-print((d[k-1]))
-
+print((d[k - 1]))

@@ -48,4 +48,3 @@ def f(d):
 
 ans = f(d)
 print(ans)
-

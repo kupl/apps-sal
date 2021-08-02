@@ -5,7 +5,8 @@ def mat_pow(mat, count):
         if x:
             res = mat_mat_mul(res, mat)
     return res
-    
+
+
 def mat_mat_mul(mat1, mat2):
     nonlocal mod
     d = len(mat1)
@@ -19,7 +20,8 @@ def mat_mat_mul(mat1, mat2):
                 cur %= mod - 1
             res[-1].append(cur)
     return res
-    
+
+
 def mat_vec_mul(mat, vec):
     nonlocal mod
     res = []
@@ -30,6 +32,7 @@ def mat_vec_mul(mat, vec):
             cur %= mod - 1
         res.append(cur)
     return res
+
 
 mod = 10**9 + 7
 
@@ -61,12 +64,11 @@ c_mat = [
     [0, 0, 0, 0, 1]
 ]
 
-x1_count = mat_vec_mul(mat_pow(x1_mat, n-1), x1_init)[0]
-x2_count = mat_vec_mul(mat_pow(x2_mat, n-1), x2_init)[0]
-x3_count = mat_vec_mul(mat_pow(x3_mat, n-1), x3_init)[0]
-c_count = mat_vec_mul(mat_pow(c_mat, n-1), c_init)[0]
+x1_count = mat_vec_mul(mat_pow(x1_mat, n - 1), x1_init)[0]
+x2_count = mat_vec_mul(mat_pow(x2_mat, n - 1), x2_init)[0]
+x3_count = mat_vec_mul(mat_pow(x3_mat, n - 1), x3_init)[0]
+c_count = mat_vec_mul(mat_pow(c_mat, n - 1), c_init)[0]
 
 ans = pow(c, c_count, mod) * pow(x1, x1_count, mod) * pow(x2, x2_count, mod) * pow(x3, x3_count, mod)
 ans %= mod
 print(ans)
-

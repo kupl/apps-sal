@@ -19,4 +19,3 @@ if cbus:
     count += 1
 
 print(count)
-

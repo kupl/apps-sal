@@ -1,6 +1,7 @@
+import sys
 def readln(): return tuple(map(int, input().split()))
 
-import sys
+
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
 
@@ -10,4 +11,3 @@ lst.sort()
 lst.reverse()
 print(lst[k - 1][0])
 print(*list(zip(*lst[:k]))[1])
-

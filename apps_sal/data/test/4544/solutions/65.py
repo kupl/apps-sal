@@ -1,10 +1,12 @@
-from sys import stdin, stdout # only need for big input
+from sys import stdin, stdout  # only need for big input
+
 
 def increment_dict(a_dict, element):
     if element in a_dict:
         a_dict[element] = a_dict[element] + 1
     else:
         a_dict[element] = 1
+
 
 def solve():
     n = int(input())
@@ -15,8 +17,9 @@ def solve():
         increment_dict(mp, num)
         increment_dict(mp, num - 1)
         increment_dict(mp, num + 1)
-        best_count = max(best_count, mp[num], mp[num-1], mp[num+1])
+        best_count = max(best_count, mp[num], mp[num - 1], mp[num + 1])
     print(best_count)
+
 
 def main():
     solve()
@@ -24,4 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -12,12 +12,12 @@ r = 0
 ans = 0
 max_ans = 0
 sabun = 0
-#print(sort_a_list)
+# print(sort_a_list)
 
 while (r < n):
-    #print(l,r)
-    #print(ans)
-    #print(sabun)
+    # print(l,r)
+    # print(ans)
+    # print(sabun)
     if (sabun <= 2):
         if sort_a_list[r] - sort_a_list[l] > 2:
             l += 1
@@ -25,12 +25,12 @@ while (r < n):
             ans -= 1
             continue
         ans += 1
-        max_ans = max(max_ans,ans)
+        max_ans = max(max_ans, ans)
         r += 1
         if r >= n:
             break
         sabun = sort_a_list[r] - sort_a_list[l]
-        
+
     else:
         l += 1
         sabun = sort_a_list[r] - sort_a_list[l]

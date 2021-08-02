@@ -13,9 +13,9 @@ ans = 0
 for i in range(len(B)):
     count = B[i][1]
     try:
-        for j in [-1,1]:
-            if B[i+j][0] == B[i][0]+j:
-                count += B[i+j][1]
+        for j in [-1, 1]:
+            if B[i + j][0] == B[i][0] + j:
+                count += B[i + j][1]
     except IndexError:
         pass
     ans = max(ans, count)

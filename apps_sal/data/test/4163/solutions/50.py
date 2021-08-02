@@ -8,9 +8,9 @@ count = 0
 
 for i in range(times):
     zorome = cin()
-    if zorome[0] == zorome[1]: 
+    if zorome[0] == zorome[1]:
         count += 1
-    else: 
+    else:
         count = 0
     if count == 3:
         label = "Yes"

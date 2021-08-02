@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees, log, log2
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
@@ -14,24 +15,29 @@ def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10**9 + 7
 #from decimal import *
 
+
 def main():
-	s = input()
-	K = INT()
+    s = input()
+    K = INT()
 
-	strings = set()
-	for  i in range(1, K+1): #文字列の長さ : K番目で長さがK以上のを考える必要はない。
-		for j in range(len(s)-i+1): #スタート地点
-			#print(j, i)
-			strings.add(s[j:j+i])
+    strings = set()
+    for i in range(1, K + 1):  # 文字列の長さ : K番目で長さがK以上のを考える必要はない。
+        for j in range(len(s) - i + 1):  # スタート地点
+            #print(j, i)
+            strings.add(s[j:j + i])
 
-	print((sorted(strings)[K-1]))
+    print((sorted(strings)[K - 1]))
+
 
 def __starting_point():
-	main()
+    main()
+
 
 __starting_point()

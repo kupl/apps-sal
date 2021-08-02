@@ -1,7 +1,9 @@
+from collections import defaultdict
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from collections import defaultdict
+
+
 def main():
     s = list(input())
     k = int(input())
@@ -18,7 +20,7 @@ def main():
         subs.add(d2e[0])
         for d2ee in d2e[1]:
             end = min(lens + 1, d2ee + k + 2)
-            for i1 in range(d2ee+1, end):
+            for i1 in range(d2ee + 1, end):
                 subs.add("".join(s[d2ee:i1]))
         if len(subs) > k:
             subsl = list(subs)
@@ -28,6 +30,9 @@ def main():
         else:
             k -= len(subs)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

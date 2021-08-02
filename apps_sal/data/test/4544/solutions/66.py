@@ -13,4 +13,3 @@ for a in A:
         ans[a + 1] += 1
 
 print((max(ans)))
-

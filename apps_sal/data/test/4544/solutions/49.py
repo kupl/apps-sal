@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 co = [0 for i in range(100002)]
 
 for i in A:
@@ -14,4 +14,3 @@ for i in range(100001):
 
     ans = max(ans, x)
 print(ans)
-

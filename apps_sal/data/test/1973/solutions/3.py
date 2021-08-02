@@ -1,5 +1,6 @@
 NUMS = [0 for i in range(10)]
 
+
 def check(nums):
     maxi = max(nums)
     category = nums.count(maxi)
@@ -13,9 +14,9 @@ def check(nums):
             if oneof != 0 and (n != oneof or n != maxi - 1):
                 return False
             oneof = n
-    
+
         return True
-    
+
     else:
         if maxi != 1:
             if nums.count(1) != 1:
@@ -25,6 +26,7 @@ def check(nums):
             return True
         else:
             return True
+
 
 n = int(input())
 colors = list(map(int, input().split()))

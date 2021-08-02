@@ -1,5 +1,6 @@
 3
 
+
 def enc(t):
     v = 0
     for x in t:
@@ -29,7 +30,7 @@ def cnt(C, ld, ud):
                 c = dp[et]
                 t = dec(et, N)
                 if ((C[0] == 0 and all([t[i] >= 1 for i in range(1, N)]))
-                    or (C[0] > 0 and all([t[i] >= 1 for i in range(N)]))):
+                        or (C[0] > 0 and all([t[i] >= 1 for i in range(N)]))):
                     ans += c
 
         ndp = {}
@@ -55,7 +56,7 @@ def cnt(C, ld, ud):
         c = dp[et]
         t = dec(et, N)
         if ((C[0] == 0 and all([t[i] >= 1 for i in range(1, N)]))
-            or (C[0] > 0 and all([t[i] >= 1 for i in range(N)]))):
+                or (C[0] > 0 and all([t[i] >= 1 for i in range(N)]))):
             ans += c
 
     return ans
@@ -81,5 +82,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

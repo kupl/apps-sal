@@ -10,6 +10,7 @@ for i in s:
 
 ans = 0
 
+
 def calc(cur_chr, dem, do_not_take_sum, total, diff):
     nonlocal ans
     nonlocal cnt
@@ -35,6 +36,7 @@ def calc(cur_chr, dem, do_not_take_sum, total, diff):
                 continue
         calc(chr(ord(cur_chr) + 1), dem * f(cnt[cur_chr] - do_not_take), do_not_take_sum + do_not_take, total, diff)
 
+
 calc('0', 1, 0, len(s), 1)
 
 if cnt['0'] != 0:
@@ -42,4 +44,3 @@ if cnt['0'] != 0:
     calc('0', 1, 0, len(s) - 1, -1)
 
 print(ans)
-

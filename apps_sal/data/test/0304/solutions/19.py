@@ -5,6 +5,8 @@ def fact(n):
     else:
         fa[n] = fact(n - 1) * n
         return fa[n]
+
+
 fa = [-1] * 20
 fa[0] = 1
 fa[1] = 1
@@ -17,7 +19,7 @@ b = str(a)
 s = [0] * 10
 for i in range(len(b)):
     s[int(b[i])] += 1
-    
+
 for i0 in range(s[0] + 1):
     if i0 > 0 or s[0] == 0:
         for i1 in range(s[1] + 1):
@@ -46,9 +48,9 @@ for i0 in range(s[0] + 1):
                                                                                     if w2[i] > 0:
                                                                                         w2[i] -= 1
                                                                                         su -= 1
-                                                                                        
-                                                                                        res += fact(su)/(fact(w2[0]) * fact(w2[1]) * fact(w2[2]) * fact(w2[3]) * fact(w2[4]) * fact(w2[5]) * fact(w2[6]) * fact(w2[7]) * fact(w2[8]) * fact(w2[9]))
-                                                                                        
+
+                                                                                        res += fact(su) / (fact(w2[0]) * fact(w2[1]) * fact(w2[2]) * fact(w2[3]) * fact(w2[4]) * fact(w2[5]) * fact(w2[6]) * fact(w2[7]) * fact(w2[8]) * fact(w2[9]))
+
                                                                                         su += 1
                                                                                         w2[i] += 1
-print(int(res))    
+print(int(res))

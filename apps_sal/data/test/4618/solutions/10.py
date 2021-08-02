@@ -10,4 +10,3 @@ for i in range(len(s)):
 # print(f'{sorted(S)=}')
 ans = sorted(S)[K - 1]
 print(ans)
-

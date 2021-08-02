@@ -2,18 +2,17 @@ n = input()
 count = 0
 
 for i in range(int(n)):
-  roll = input()
+    roll = input()
 
-  if roll[0] == roll[2]:
-    count = count +1
-    if count == 3:
-      break
-  else:
-    count = 0
-    
-    
+    if roll[0] == roll[2]:
+        count = count + 1
+        if count == 3:
+            break
+    else:
+        count = 0
+
+
 if count >= 3:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
-
+    print("No")

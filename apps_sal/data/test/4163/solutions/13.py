@@ -17,6 +17,7 @@ def judge():
     # ダメでした
     return False
 
+
 N = int(input())
 
 if judge():

@@ -9,4 +9,4 @@ for i in range(len(a) - 1):
     else:
         b = b + a[i]
 
-print( c )
+print(c)

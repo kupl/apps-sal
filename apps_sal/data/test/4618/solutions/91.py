@@ -9,4 +9,3 @@ for i in range(len(s)):
 SUBSTRINGS = sorted(SUBSTRINGS)
 
 print((SUBSTRINGS[k - 1]))
-

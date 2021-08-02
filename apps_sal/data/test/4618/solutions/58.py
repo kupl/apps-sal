@@ -11,4 +11,3 @@ for i in range(5):
         substrings.add(s[j:j + i + 1])
 # print(substrings)
 print((sorted(substrings)[K - 1]))
-

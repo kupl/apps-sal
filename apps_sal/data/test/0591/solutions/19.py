@@ -4,7 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#349B
+# 349B
 '''
 def main():
 	from sys import stdin,stdout
@@ -40,31 +40,36 @@ def main():
 def __starting_point():
 	main()
 '''
-#234B Input and Output
+# 234B Input and Output
+
+
 def main():
-	from sys import stdin,stdout
-	import collections
-	with open('input.txt','r') as ip:
-		N,K = list(map(int,ip.readline().split()))
-		arr = list(map(int,ip.readline().split()))
-	mydict = collections.defaultdict(set)
-	for i in range(len(arr)):
-		mydict[arr[i]].add(i+1)
-	ans = []
-	i=0
-	while K>0:
-		for it in mydict[sorted(list(mydict.keys()),reverse=True)[i]]:
-			ans.append(it)
-			K-=1
-			if K<1:
-				break
-		minim=i
-		i+=1
-	with open('output.txt','w') as out:
-		out.write(str(sorted(list(mydict.keys()),reverse=True)[minim])+'\n')
-		ans=' '.join(str(x) for x in ans)
-		out.write(ans+'\n')		
+    from sys import stdin, stdout
+    import collections
+    with open('input.txt', 'r') as ip:
+        N, K = list(map(int, ip.readline().split()))
+        arr = list(map(int, ip.readline().split()))
+    mydict = collections.defaultdict(set)
+    for i in range(len(arr)):
+        mydict[arr[i]].add(i + 1)
+    ans = []
+    i = 0
+    while K > 0:
+        for it in mydict[sorted(list(mydict.keys()), reverse=True)[i]]:
+            ans.append(it)
+            K -= 1
+            if K < 1:
+                break
+        minim = i
+        i += 1
+    with open('output.txt', 'w') as out:
+        out.write(str(sorted(list(mydict.keys()), reverse=True)[minim]) + '\n')
+        ans = ' '.join(str(x) for x in ans)
+        out.write(ans + '\n')
+
+
 def __starting_point():
-	main()
+    main()
+
 
 __starting_point()

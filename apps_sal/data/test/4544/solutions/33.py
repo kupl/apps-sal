@@ -7,6 +7,6 @@ bucket = [0] * (10 ** 5 + 10)
 for a in A:
     bucket[a - 1] += 1
     bucket[a] += 1
-    bucket[a+1] += 1
+    bucket[a + 1] += 1
 
 print(max(bucket))

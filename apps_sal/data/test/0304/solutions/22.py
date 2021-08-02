@@ -18,10 +18,10 @@ answer = 0
 
 for count in product(*counts):
     answer += factorial(sum(count)) // reduce(mul, (factorial(count[digit]) for digit in range(10)))
-    
+
     if count[0] > 0:
         count = list(count)
         count[0] -= 1
         answer -= factorial(sum(count)) // reduce(mul, (factorial(count[digit]) for digit in range(10)))
-        
+
 print(answer)

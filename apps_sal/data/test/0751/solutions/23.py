@@ -10,4 +10,3 @@ for g in a:
         load = g
 
 print(ans)
-

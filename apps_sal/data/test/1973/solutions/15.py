@@ -8,7 +8,7 @@ for i in range(n):
     if nums[i] in list(eleCount.keys()):
         eleCount[nums[i]] += 1
         if len(list(eleCount.keys())) == 1:
-            possibleMax = i+1
+            possibleMax = i + 1
         else:
             x = list(eleCount.values())
             x.sort()
@@ -24,7 +24,7 @@ for i in range(n):
     else:
         eleCount[nums[i]] = 1
         if len(list(eleCount.keys())) == 1:
-            possibleMax = i+1
+            possibleMax = i + 1
         else:
             x = list(eleCount.values())
             x.sort()
@@ -38,4 +38,3 @@ for i in range(n):
                 if len(set(x)) == 1:
                     possibleMax = i + 1
 print(possibleMax)
-

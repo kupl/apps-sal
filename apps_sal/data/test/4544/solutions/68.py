@@ -17,4 +17,3 @@ for key, val in list(A_dict.items()):
         temp += A_dict.get(key + 1)
     ans = max(temp, ans)
 print(ans)
-

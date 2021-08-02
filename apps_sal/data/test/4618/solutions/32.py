@@ -10,4 +10,3 @@ for i in range(n):
 
 l = sorted(l)
 print((l[k - 1]))
-

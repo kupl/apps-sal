@@ -5,10 +5,10 @@ from collections import deque
 def search(moji):
     num = len(moji)
     setsn = set([])
-    for i in range(len(s)-num+1):
-        if s[i:i+num] == moji:
-            str_ = s[i:i+num+1]
-            if len(str_) == num+1:
+    for i in range(len(s) - num + 1):
+        if s[i:i + num] == moji:
+            str_ = s[i:i + num + 1]
+            if len(str_) == num + 1:
                 setsn.add(str_)
     sorted_setsn = sorted(setsn, reverse=True)
 
@@ -44,4 +44,3 @@ while(len(dq)):
 
     # print(sorted_setsn)
     dq.extendleft(sorted_setsn)
-

@@ -6,6 +6,8 @@ import bisect
 #
 #
 # @stop_watch
+
+
 def solve(S, K):
     n = len(S)
     l = [''] + ['あ'] * 5
@@ -35,5 +37,6 @@ def __starting_point():
     # print(S)
     # print(K)
     # solve(S, K)
+
 
 __starting_point()

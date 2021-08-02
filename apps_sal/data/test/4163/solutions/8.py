@@ -13,4 +13,3 @@ if zolo >= 3:
     print('Yes')
 else:
     print('No')
-

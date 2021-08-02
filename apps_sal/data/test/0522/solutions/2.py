@@ -50,4 +50,3 @@ f2_exp = matf[0][1]
 f1_exp = matf[0][2]
 res = pow(c, c_exp, MOD) * pow(f3, f3_exp, MOD) * pow(f2, f2_exp, MOD) * pow(f1, f1_exp, MOD)
 print(res % MOD)
-

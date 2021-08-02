@@ -13,10 +13,12 @@ def main():
         B[a + 1] += 1
 
     ans = max(B)
-    
+
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

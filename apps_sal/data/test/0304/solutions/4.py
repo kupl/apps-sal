@@ -17,7 +17,6 @@ def C(n, k):
     return result
 
 
-
 n = input()
 
 
@@ -32,7 +31,7 @@ for amounts in it.product(*[[0] if x == 0 else list(range(1, x + 1)) for x in di
     sum_no_zero = sum(amounts[1:])
     if sum_no_zero == 0:
         continue
-    #print(amounts)
+    # print(amounts)
     tmp = factorial(sum_no_zero)
     for j in amounts[1:]:
         tmp //= factorial(j)
@@ -41,4 +40,3 @@ for amounts in it.product(*[[0] if x == 0 else list(range(1, x + 1)) for x in di
 
 
 print(result)
-

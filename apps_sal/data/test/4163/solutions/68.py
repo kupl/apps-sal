@@ -10,4 +10,3 @@ for i in range(N):
     else:
         cnt = 0
 print("No")
-

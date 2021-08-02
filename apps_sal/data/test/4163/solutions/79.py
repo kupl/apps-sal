@@ -13,4 +13,3 @@ if doublets == 3:
     print("Yes")
 else:
     print("No")
-

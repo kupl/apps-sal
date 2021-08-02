@@ -15,4 +15,3 @@ for n in range(N):
         check = 3
 
 print('No')
-

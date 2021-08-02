@@ -10,4 +10,3 @@ for i in range(l):
 seq = list(seq)
 seq.sort()
 print((seq[K - 1]))
-

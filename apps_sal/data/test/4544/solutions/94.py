@@ -7,4 +7,3 @@ for i in range(n):
         number_colle[choise + j] += 1
 
 print((max(number_colle)))
-

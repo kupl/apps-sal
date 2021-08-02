@@ -14,4 +14,3 @@ if ctn_check == 3:
     print("Yes")
 else:
     print("No")
-

@@ -11,4 +11,3 @@ for i in a:
         cur += i
 if cur > 0: result += 1
 print(result)
-
