@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -208,9 +210,9 @@ optimise_for_recursion = True  # Can not be used clubbed with TestCases WHen usi
 
 def main():
     a, b, c, d, k = get_tuple()
-    x = (a+c-1)//c
-    y = (b+d-1)//d
-    if x+y<=k:
+    x = (a + c - 1) // c
+    y = (b + d - 1) // d
+    if x + y <= k:
         print(x, y)
     else: print(-1)
 # --------------------------------------------------------------------- END=
@@ -221,4 +223,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

@@ -6,6 +6,7 @@ def reverse(arr, left, right):
         left += 1
         right -= 1
 
+
 n = int(input())
 a = list(map(int, input().split()))
 b = a.copy()
@@ -31,4 +32,3 @@ for i in range(n):
         return
 print("yes")
 print(left + 1, right + 1)
-

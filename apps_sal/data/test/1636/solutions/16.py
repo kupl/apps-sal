@@ -6,7 +6,7 @@ n = int(input())
 points = []
 point_weights = defaultdict(list)
 for _ in range(n):
-    x, y = tuple(map(int,input().split()))
+    x, y = tuple(map(int, input().split()))
     points.append((x, y))
     point_weights[y - x].append((x, y))
 
@@ -39,4 +39,3 @@ print(ans)
 if ans == "YES":
     for point in ans_arr:
         print(*point)
-

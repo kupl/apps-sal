@@ -4,7 +4,7 @@ phase = 0
 l = -1
 r = -1
 for i in range(1, len(a)):
-    g = a[i] > a[i-1]
+    g = a[i] > a[i - 1]
     if phase == 0 and not g:
         l = i
         phase = 1
@@ -22,12 +22,12 @@ elif phase == 1:
     r = len(a)
 cur = -1
 f = True
-for i in range(0, l-1):
+for i in range(0, l - 1):
     if a[i] < cur:
         f = False
         break
     cur = a[i]
-for i in range(r-1, l-2, -1):
+for i in range(r - 1, l - 2, -1):
     if a[i] < cur:
         f = False
         break
@@ -42,4 +42,3 @@ if f:
     print(l, r)
 else:
     print('no')
-

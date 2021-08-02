@@ -6,4 +6,3 @@ for _ in range(int(input())):
         print(x, y)
     else:
         print(-1)
-

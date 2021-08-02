@@ -9,4 +9,3 @@ h = int(input())
 # 処理
 answer = int((a + b) * h / 2)
 print(answer)
-

@@ -34,4 +34,3 @@ for i in range(1, len(a)):
 
 print('yes')
 print(pos_L + 1, pos_R + 1)
-

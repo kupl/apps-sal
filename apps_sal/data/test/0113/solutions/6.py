@@ -8,4 +8,3 @@ while t1 < k and n % 2 == 0:
     t1 += 1
     n //= 2
 print(n * (10**k))
-

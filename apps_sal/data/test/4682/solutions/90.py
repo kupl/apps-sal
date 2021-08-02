@@ -35,11 +35,12 @@ def resolve():
     a = int(input())
     b = int(input())
     h = int(input())
-    print(((a+b)*h//2))
+    print(((a + b) * h // 2))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

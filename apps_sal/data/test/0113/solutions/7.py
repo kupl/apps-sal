@@ -8,6 +8,6 @@ def nod(a, b):
 def nok(a, b):
     return a * b // nod(a, b)
 
+
 n, k = list(map(int, input().split()))
 print(nok(n, 10 ** k))
-

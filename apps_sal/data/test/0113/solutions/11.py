@@ -4,6 +4,7 @@ def gcd(a, b):
     else:
         return gcd(b, a % b)
 
+
 n, k = map(int, input().split())
 l = 1
 for i in range(k):

@@ -1,4 +1,2 @@
-a,b,h=list(map(int,(input(),input(),input())))
-print(((a+b)*h//2))
-
-
+a, b, h = list(map(int, (input(), input(), input())))
+print(((a + b) * h // 2))

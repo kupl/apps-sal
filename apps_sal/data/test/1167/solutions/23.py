@@ -13,4 +13,3 @@ for i in range(t):
         print(x, y)
     else:
         print(-1)
-

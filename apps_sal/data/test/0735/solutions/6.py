@@ -13,7 +13,7 @@ else:
     pb = n
     while pb >= 1 and A[pb - 1] == sA[pb - 1]:
         pb = pb - 1
-    
+
     AB = A[pa - 1:pb]
     rAB = reversed(AB)
     sAB = sA[pa - 1:pb]
@@ -23,4 +23,3 @@ else:
         print(pa, pb)
     else:
         print('no')
-

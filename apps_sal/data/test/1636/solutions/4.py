@@ -1,6 +1,7 @@
 import collections
 import heapq
 
+
 class SegmentTree(object):
     def __init__(self, size):
         self.capacity = 1 << (len(bin(size - 1)) - 2)
@@ -11,7 +12,6 @@ class SegmentTree(object):
         while p:
             self.left.add(p)
             p >>= 1
-        
 
     def update(self, x, y):
         pos = self.capacity + x
@@ -19,7 +19,6 @@ class SegmentTree(object):
             if y > self.tree[pos]:
                 self.tree[pos] = y
             pos >>= 1
-
 
     def getmax(self, x):
         pos = self.capacity + x
@@ -34,7 +33,7 @@ class SegmentTree(object):
             else:
                 pos >>= 1
         return y
-    
+
 
 def read_data():
     n = int(input())
@@ -44,6 +43,7 @@ def read_data():
         heapq.heappush(sxy[y - x], x)
     ws = list(map(int, input().split()))
     return n, sxy, ws
+
 
 def solve(n, sxy, ws):
     path = []
@@ -60,6 +60,7 @@ def solve(n, sxy, ws):
     else:
         return False
 
+
 def is_valid(path):
     xys = compress(path)
     segtree = SegmentTree(len(xys))
@@ -69,7 +70,8 @@ def is_valid(path):
             return False
         segtree.update(x, y)
     return True
-        
+
+
 def compress(path):
     xset = set()
     for x, y in path:

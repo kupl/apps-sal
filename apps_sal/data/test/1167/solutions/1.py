@@ -1,7 +1,7 @@
 def main():
     import sys
     input = sys.stdin.readline
-    
+
     def solve():
         a, b, c, d, k = list(map(int, input().split()))
         x = (a + c - 1) // c
@@ -10,11 +10,11 @@ def main():
             print(-1)
         else:
             print(x, y)
-    
+
     for _ in range(int(input())):
         solve()
-    
+
     return 0
 
-main()
 
+main()

@@ -2,8 +2,8 @@ n = int(input())
 t = list(map(int, input().split()))
 p = sorted(t)
 a = b = 0
-for i in range(n): 
-    if t[i] != p[i]: 
+for i in range(n):
+    if t[i] != p[i]:
         a, b = i, n - 1
         while t[b] == p[b]: b -= 1
         break

@@ -14,10 +14,10 @@ for i in range(n):
 if f != -1:
     c = a[:f]
     if f != 0:
-        c += a[l:f - 1:-1] 
+        c += a[l:f - 1:-1]
     else:
-        c += a[l::-1] 
-        
+        c += a[l::-1]
+
     c += a[l + 1:]
 else:
     f = 0
@@ -31,6 +31,3 @@ if flag:
     print(f + 1, l + 1)
 else:
     print('no')
-
-    
-

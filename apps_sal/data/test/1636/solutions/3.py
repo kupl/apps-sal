@@ -25,7 +25,7 @@ for i in range(n):
             break
     else:
         possible = False
-        break    
+        break
 if possible:
     print("YES")
     print("\n".join([" ".join(map(str, coords)) for coords in ans]))
