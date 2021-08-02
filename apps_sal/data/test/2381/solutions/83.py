@@ -1,14 +1,14 @@
+import bisect
+from collections import deque
 import sys
 
 sys.setrecursionlimit(10 ** 7)
 # import bisect
 # import numpy as np
 # from collections import deque
-from collections import deque
 # map(int, sys.stdin.read().split())
 #import itertools
 #import heapq
-import bisect
 
 
 def input():
@@ -22,7 +22,7 @@ def main():
     A.sort()
 
     #    print(A)
-    pp = int(bisect.bisect_left(A,0))
+    pp = int(bisect.bisect_left(A, 0))
     A_minus = deque(A[:pp])
     A_plus = deque(A[pp:])
 
@@ -34,7 +34,7 @@ def main():
         ans = 1
         for i in A:
             ans *= i % mod
-            ans %=mod
+            ans %= mod
         print((ans % mod))
 
     elif K % 2 == 0:
@@ -50,25 +50,24 @@ def main():
             a2 = A_plus.pop()
             AA.append(a1 * a2)
 
-
         for i in range(K // 2):
-            if len(AAm)==0:
+            if len(AAm) == 0:
                 temp = AA.popleft()
-            elif len(AA) ==0:
+            elif len(AA) == 0:
                 temp = AAm.popleft()
             elif AAm[0] > AA[0]:
                 temp = AAm.popleft()
             else:
                 temp = AA.popleft()
             ans *= temp % mod
-            ans %=mod
+            ans %= mod
         print((ans % mod))
 
     elif len(A_plus) == 0:
         ans = 1
         for i in range(K):
             ans *= A_minus.pop() % mod
-            ans %=mod
+            ans %= mod
         print((ans % mod))
 
     else:
@@ -94,9 +93,12 @@ def main():
             else:
                 temp = AA.popleft()
             ans *= temp
-            ans %=mod
+            ans %= mod
         print((ans % mod))
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

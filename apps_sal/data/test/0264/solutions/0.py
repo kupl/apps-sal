@@ -6,4 +6,3 @@ ans = pow(2 * (n + 1), m, MOD)
 ans = (ans * (n + 1 - m)) % MOD
 ans = (ans * pow(n + 1, MOD - 2, MOD)) % MOD
 print(ans)
-

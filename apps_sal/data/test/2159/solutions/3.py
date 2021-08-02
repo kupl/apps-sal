@@ -9,4 +9,3 @@ for i in range(n):
         if s[a] > s[b] or a < b and s[a] == s[b]: b = a
         k[b] += 1
 print(*k)
-

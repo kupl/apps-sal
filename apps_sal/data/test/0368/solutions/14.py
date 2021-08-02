@@ -25,4 +25,3 @@ elif sw > sb:
     print('White')
 else:
     print('Black')
-

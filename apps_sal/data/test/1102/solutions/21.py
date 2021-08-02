@@ -1,7 +1,7 @@
-n, a = list(map(int,input().split()))
-c = list(map(int,input().split()))
-res = c[a-1]
-for i in range(1, max(n-a+1,a)):
+n, a = list(map(int, input().split()))
+c = list(map(int, input().split()))
+res = c[a - 1]
+for i in range(1, max(n - a + 1, a)):
     l, r = a - 1 - i, a - 1 + i
     if l >= 0 and r < n:
         if c[l] and c[r]:
@@ -13,4 +13,3 @@ for i in range(1, max(n-a+1,a)):
         if c[r]:
             res += 1
 print(res)
-

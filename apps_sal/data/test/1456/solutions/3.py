@@ -1,13 +1,13 @@
 def main():
     n = int(input())
     d = [input() for i in range(n)]
-    
+
     figures = []
     for i in range(n):
         for j in range(n):
             if d[i][j] == 'o':
                 figures.append([i, j])
-    
+
     result = [['x' for i in range(2 * n - 1)] for j in range(2 * n - 1)]
     result[n - 1][n - 1] = 'o'
     for i in range(n):
@@ -29,8 +29,6 @@ def main():
     print("YES")
     for i in result:
         print(''.join(i))
-                        
 
 
 main()
-

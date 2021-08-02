@@ -1,12 +1,14 @@
-from collections import defaultdict,deque,Counter,OrderedDict
+from collections import defaultdict, deque, Counter, OrderedDict
 import sys
 sys.setrecursionlimit(20000)
+
+
 def main():
-    n,he = map(int,input().split())
+    n, he = map(int, input().split())
     he -= 1
     l = [int(i) for i in input().split()]
     ans = l[he]
-    for i in range(1,100):
+    for i in range(1, 100):
         tor = he + i
         tol = he - i
         if tor < n and tol >= 0:
@@ -21,9 +23,8 @@ def main():
     print(ans)
 
 
-
-
-
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -49,7 +49,9 @@ def resolve():
 
     print(res)
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

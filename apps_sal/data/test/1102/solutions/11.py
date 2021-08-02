@@ -23,4 +23,3 @@ while i >= 0 or j < n:
 
 print(c)
 sys.stdout.flush()
-

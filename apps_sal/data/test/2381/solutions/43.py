@@ -1,6 +1,6 @@
-N,K = map(int, input().split())
+N, K = map(int, input().split())
 A = [int(a) for a in input().split()]
-mod = 10**9+7
+mod = 10**9 + 7
 
 P = []
 M = []
@@ -22,17 +22,17 @@ if len(M) == 0 or N == K:
         ans *= A[i]
         ans %= mod
 elif len(P) == 0:
-    if K%2 == 0 and len(M) >= K:
+    if K % 2 == 0 and len(M) >= K:
         for i in range(K):
             ans *= M[i]
             ans %= mod
-    elif K%2 == 1 and z == 0:
-        for i in range(-1, -K-1, -1):
+    elif K % 2 == 1 and z == 0:
+        for i in range(-1, -K - 1, -1):
             ans *= M[i]
             ans %= mod
     else:
         ans = 0
-elif N-z < K or (N-z == K and len(M)%2 == 1):
+elif N - z < K or (N - z == K and len(M) % 2 == 1):
     ans = 0
 else:
     L = []
@@ -52,7 +52,7 @@ else:
             cnt += 1
         ans *= L[i][0]
         ans %= mod
-    if cnt%2 == 1:
+    if cnt % 2 == 1:
         p = -1
         m = -1
         for i in range(K, len(L)):
@@ -63,12 +63,12 @@ else:
             elif L[i][1] < 0 and m < 0:
                 m = L[i][0]
         if p < 0:
-            ans *= m*pow(L[lp][0], mod-2, mod)
+            ans *= m * pow(L[lp][0], mod - 2, mod)
         elif m < 0:
-            ans *= p*pow(L[lm][0], mod-2, mod)
-        elif lp >= 0 and L[lm][0]*m > L[lp][0]*p:
-            ans *= m*pow(L[lp][0], mod-2, mod)
+            ans *= p * pow(L[lm][0], mod - 2, mod)
+        elif lp >= 0 and L[lm][0] * m > L[lp][0] * p:
+            ans *= m * pow(L[lp][0], mod - 2, mod)
         else:
-            ans *= p*pow(L[lm][0], mod-2, mod)
+            ans *= p * pow(L[lm][0], mod - 2, mod)
         ans %= mod
 print(ans)

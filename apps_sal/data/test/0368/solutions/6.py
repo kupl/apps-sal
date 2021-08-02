@@ -1,5 +1,5 @@
 desk = [list(input()) for i in range(8)]
-C = {'q' : 9, 'r' : 5, 'b' : 3, 'n' : 3, 'p' : 1, 'k' : 0, '.' : 0}
+C = {'q': 9, 'r': 5, 'b': 3, 'n': 3, 'p': 1, 'k': 0, '.': 0}
 p1 = 0
 p2 = 0
 for x in desk:
@@ -12,5 +12,3 @@ if p1 == p2:
     print('Draw')
 else:
     print('White' if p2 > p1 else 'Black')
-    
-

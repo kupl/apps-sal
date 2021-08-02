@@ -10,4 +10,3 @@ for d in range(max(a, n - a + 1)):
         found += c[a + d]
     ans += (directions == found) * found
 print(ans)
-

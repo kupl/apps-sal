@@ -18,4 +18,3 @@ while l >= 0 or r < n:
     l -= 1
     r += 1
 print(ans)
-

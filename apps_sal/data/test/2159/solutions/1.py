@@ -16,4 +16,3 @@ for j in range(n):
     s.pop(0)
     n -= 1
 print(*answer)
-

@@ -21,4 +21,3 @@ elif black < white:
 else:
 
     print("Draw")
-

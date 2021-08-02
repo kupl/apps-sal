@@ -8,4 +8,3 @@ if w[0] == w[1]:
     print('Draw')
 else:
     print('White' if w[0] > w[1] else 'Black')
-

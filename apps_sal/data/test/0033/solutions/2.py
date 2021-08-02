@@ -15,9 +15,9 @@ l = max(b2, l)
 od, x1, y1 = nod(a1, -a2)
 if b2 % od != 0 or l > r:
     print(0)
-else:    
+else:
     x1, y1 = x1 * (b2 // od), y1 * (b2 // od)
-    result = x1 * a1 
+    result = x1 * a1
     raznitsa = a1 * a2 // nod(a1, a2)[0]
     otvet = 0
     if result < l:
@@ -28,12 +28,11 @@ else:
     if result > r:
         vsp = (result - r) // raznitsa
         if (result - r) % raznitsa != 0:
-            vsp += 1        
-        result -= vsp * raznitsa      
+            vsp += 1
+        result -= vsp * raznitsa
     if result <= r and result >= l:
         otvet += 1
         otvet += abs(result - r) // raznitsa
         otvet += abs(result - l) // raznitsa
-    print(otvet)    
-    # 3 * (- 54) + 81 = 
-
+    print(otvet)
+    # 3 * (- 54) + 81 =

@@ -1,16 +1,21 @@
-import sys, collections
+import sys
+import collections
+
 
 def gcd(a, b):
     if b == 0: return a
     return gcd(b, a % b)
 
+
 def lcm(a, b):
     return a // gcd(a, b) * b
+
 
 def extgcd(a, b):
     if b == 0: return 1, 0
     x, y = extgcd(b, a % b)
     return y, x - a // b * y
+
 
 def prime_factor(n):
     res = collections.defaultdict(int)
@@ -27,10 +32,12 @@ def prime_factor(n):
 
     return res
 
+
 def modinv(a, mod):
     if a == 0: return -1
     if gcd(a, mod) != 1: return -1
     return extgcd(a, mod)[0] % mod
+
 
 def normalize(a1, a2):
     p1 = prime_factor(a1)
@@ -47,6 +54,7 @@ def normalize(a1, a2):
             r2 *= k ** p2[k]
     return r1, r2
 
+
 def solve(a1, b1, a2, b2):
     g = gcd(a1, a2)
     if (b1 - b2) % g != 0: return -1
@@ -56,6 +64,7 @@ def solve(a1, b1, a2, b2):
     inv = modinv(a1, a2)
     v = (b2 - u) * inv % a2
     return u + v * a1
+
 
 def f(x0, T, v):
     ok = 10 ** 36
@@ -70,6 +79,7 @@ def f(x0, T, v):
             ng = mid
 
     return ok
+
 
 a1, b1, a2, b2, L, R = map(int, input().split())
 

@@ -19,7 +19,7 @@ if k == 1:
 
 if alst[0] >= 0:
     ans = 1
-    alst.sort(reverse = True)
+    alst.sort(reverse=True)
     for i in range(k):
         ans *= alst[i]
         ans %= MOD
@@ -42,11 +42,11 @@ for num in alst:
         blst.append([abs(num), abs(num) // num])
     except ZeroDivisionError:
         blst.append([abs(num), 0])
-blst.sort(reverse = True,key = lambda x:x[0])
+blst.sort(reverse=True, key=lambda x: x[0])
 if blst[k - 1] == 0:
     print((0))
     return
-    
+
 minus = 0
 last_minus = 0
 last_plus = 0
@@ -98,7 +98,7 @@ else:
         else:
             print((0))
             return
-        
+
     elif minus_s > plus_s:
         ans_lst.remove(last_plus)
         ans_lst.append(next_minus)
@@ -109,4 +109,3 @@ else:
         ans *= num
         ans %= MOD
     print(ans)
-

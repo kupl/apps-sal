@@ -9,4 +9,3 @@ for d in range(n):
     elif i < 0 and j < n: ans += t[j]
     elif i >= 0 and j >= n: ans += t[i]
 print(ans)
-

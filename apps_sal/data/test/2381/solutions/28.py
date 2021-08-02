@@ -4,10 +4,12 @@ n, k = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 a.sort()
 
+
 def sign(v):
     if v == 0:
         return 0
     return 1 if v > 0 else -1
+
 
 pref = [(0, 1)] * (n + 1)
 suf = [(0, 1)] * (n + 1)
@@ -39,6 +41,5 @@ for i in range(1, k):
     sm = abs(pref[i][0]) + abs(suf[k - i][0])
     m = max(m, (sgn * sm, pm, sgn))
 
-    
-print((m[1]))
 
+print((m[1]))

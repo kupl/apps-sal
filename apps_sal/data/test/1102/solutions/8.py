@@ -19,4 +19,3 @@ for i in range(n):
     elif (c == 1 and p1 < 0) or (c == 1 and p2 >= n):
         ans += 1
 print(ans)
-

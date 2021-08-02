@@ -16,6 +16,8 @@ def black(a):
             if ii == "k":
                 m += 0
     return m
+
+
 def white(a):
     m = 0
     for i in a:
@@ -35,16 +37,16 @@ def white(a):
                 m += 0
     return m
 
+
 b = []
 i = 0
-while i<8:
+while i < 8:
     a = input()
     b.append(a)
-    i+=1
-if white(b)>black(b):
+    i += 1
+if white(b) > black(b):
     print("White")
-if black(b)>white(b):
+if black(b) > white(b):
     print("Black")
-if black(b)==white(b):
+if black(b) == white(b):
     print("Draw")
-

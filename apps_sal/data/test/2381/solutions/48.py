@@ -5,13 +5,14 @@ def prod(li, MOD):
         ret %= MOD
     return ret
 
+
 N, K = list(map(int, input().split()))
 MOD = 1_000_000_007
 aaa = list(map(int, input().split()))
 if N == K:
     print((prod(aaa, MOD)))
     return
-aaa.sort(key=lambda x : abs(x))
+aaa.sort(key=lambda x: abs(x))
 if sum(a < 0 for a in aaa[-K:]) % 2 == 0:
     print((prod(aaa[-K:], MOD)))
 else:
@@ -34,4 +35,3 @@ else:
             bbb.remove(x2)
             bbb.append(y2)
     print((prod(bbb, MOD)))
-

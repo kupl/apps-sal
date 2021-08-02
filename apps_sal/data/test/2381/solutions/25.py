@@ -51,6 +51,9 @@ def abc173_e():
         ans %= mod
     print(ans)
 
+
 def __starting_point():
     abc173_e()
+
+
 __starting_point()

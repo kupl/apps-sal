@@ -15,4 +15,3 @@ elif whiteStrength == blackStrength:
     print("Draw")
 else:
     print("Black")
-

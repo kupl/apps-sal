@@ -1,23 +1,30 @@
 from collections import defaultdict
-import sys, os, math
+import sys
+import os
+import math
+
 
 def gcd(a1, a2):
     if a2 == 0:
         return a1
     else:
         return gcd(a2, a1 % a2)
-        
+
 # return (g, x, y) a*x + b*y = gcd(x, y)
+
+
 def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
         g, x, y = egcd(b % a, a)
         return (g, y - (b // a) * x, x)
+
+
 def __starting_point():
     #n, m = list(map(int, input().split()))
     a1, b1, a2, b2, L, R = map(int, input().split())
-    a2 *= -1 
+    a2 *= -1
     LCM = a1 * a2 // gcd(a1, a2)
     if abs(b1 - b2) % gcd(a1, a2) != 0:
         print(0)
@@ -30,4 +37,6 @@ def __starting_point():
         print(max(0, (R - X) // LCM + 1))
     else:
         print(0)
+
+
 __starting_point()

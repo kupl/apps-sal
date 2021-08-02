@@ -1,10 +1,12 @@
 MOD = 10**9 + 7
 
+
 def prod(a):
     res = 1
     for x in a:
         res = (res * x) % MOD
     return res
+
 
 def solve(n, k, a):
     if k == 1:
@@ -24,7 +26,7 @@ def solve(n, k, a):
             for i in range(k):
                 if a[i] < 0:
                     i1 = i
-            for j in range(k,n):
+            for j in range(k, n):
                 if a[j] >= 0:
                     j1 = j
                     break
@@ -37,16 +39,15 @@ def solve(n, k, a):
                     j2 = j
                     break
             if (i1 is None) or (j1 is None):
-                return prod(a[:i2] + a[i2+1:k] + [a[j2]])
+                return prod(a[:i2] + a[i2 + 1:k] + [a[j2]])
             elif (i2 is None) or (j2 is None):
-                return prod(a[:i1] + a[i1+1:k] + [a[j1]])
+                return prod(a[:i1] + a[i1 + 1:k] + [a[j1]])
             elif abs(a[j1] * a[i2]) > abs(a[i1] * a[j2]):
-                return prod(a[:i1] + a[i1+1:k] + [a[j1]])
+                return prod(a[:i1] + a[i1 + 1:k] + [a[j1]])
             else:
-                return prod(a[:i2] + a[i2+1:k] + [a[j2]])
+                return prod(a[:i2] + a[i2 + 1:k] + [a[j2]])
+
 
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 print((solve(n, k, a)))
-
-

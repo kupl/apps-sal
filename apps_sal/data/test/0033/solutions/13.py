@@ -1,6 +1,7 @@
 a1, b1, a2, b2, L, R = list(map(int, input().split()))
 
-def xgcd(a,b):
+
+def xgcd(a, b):
     prevx, x = 1, 0
     prevy, y = 0, 1
     while b:
@@ -11,9 +12,10 @@ def xgcd(a,b):
 
     return a, prevx, prevy
 
+
 g, x, y = xgcd(a1, -a2)
 
-if (b2 - b1) // g < 0:    
+if (b2 - b1) // g < 0:
     g, x, y = -g, -x, -y
 
 if abs(b2 - b1) % abs(g) > 0:
@@ -26,7 +28,7 @@ else:
 
     if x < 0:
         y += ((abs(x) + a2g - 1) // a2g) * a1g
-        x += ((abs(x) + a2g - 1) // a2g) * a2g      
+        x += ((abs(x) + a2g - 1) // a2g) * a2g
 
     if y < 0:
         x += ((abs(y) + a1g - 1) // a1g) * a2g
@@ -46,5 +48,3 @@ else:
         print(0)
     else:
         print(R // lcm - L // lcm + (L % lcm == 0))
-
-

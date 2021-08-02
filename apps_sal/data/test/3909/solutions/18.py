@@ -1,4 +1,5 @@
-import math, decimal
+import math
+import decimal
 
 n = int(input())
 k = 0

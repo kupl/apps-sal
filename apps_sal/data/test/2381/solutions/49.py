@@ -33,4 +33,3 @@ if j:
     else:
         ans = reduce(lambda a, b: (a * b) % mod, a[:k])
 print(ans)
-
