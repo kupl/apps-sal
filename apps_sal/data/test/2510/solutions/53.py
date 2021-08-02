@@ -1,7 +1,7 @@
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        self.parents = [-1] * (n+1)
+        self.parents = [-1] * (n + 1)
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -30,7 +30,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i in range(1, self.n+1, 1) if self.parents[i] < 0]
+        return [i for i in range(1, self.n + 1, 1) if self.parents[i] < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -45,4 +45,3 @@ ans = 0
 for j in uf.roots():
     ans = max(ans, uf.size(j))
 print(ans)
-

@@ -49,7 +49,7 @@ class UnionFind:
 
 
 n, m = map(int, input().split())
-uf = UnionFind(n+1)
+uf = UnionFind(n + 1)
 
 for _ in range(m):
     a, b = map(int, input().split())

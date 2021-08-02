@@ -45,12 +45,13 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m = map(int,input().split())
-abl = [list(map(int,input().split())) for nesya in range(m)]
+
+n, m = map(int, input().split())
+abl = [list(map(int, input().split())) for nesya in range(m)]
 uf = UnionFind(n)
 for ab in abl:
-  uf.union(ab[0]-1,ab[1]-1)
+    uf.union(ab[0] - 1, ab[1] - 1)
 ans = 0
 for hoge in uf.roots():
-  ans = max(ans,uf.size(hoge))
+    ans = max(ans, uf.size(hoge))
 print(ans)

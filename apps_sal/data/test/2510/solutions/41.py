@@ -52,4 +52,3 @@ for r in roots:
     max_ = max(max_, uf.size(r))
 
 print(max_)
-

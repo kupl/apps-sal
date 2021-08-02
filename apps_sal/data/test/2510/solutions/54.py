@@ -18,6 +18,7 @@ A = [[int(i) for i in input().split()]for j in range(m)]    # nは行数
 tmp = 0
 res = 0
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -64,6 +65,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots)
 
+
 uf = UnionFind(n)
 for i in range(m):
     x, y = A[i]
@@ -72,4 +74,3 @@ for i in uf.roots:
     res = max(res, uf.size(i))
 
 print(res)
-

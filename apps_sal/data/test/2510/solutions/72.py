@@ -30,7 +30,7 @@ def main():
     AB = (input_to_int_tuple() for i in range(M))
 
     from collections import defaultdict
-    friends = defaultdict(lambda :-1)
+    friends = defaultdict(lambda: -1)
 
     def root(x):
         temp = friends[x]
@@ -63,5 +63,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

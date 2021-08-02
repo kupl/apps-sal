@@ -26,12 +26,13 @@ class UnionFind():
     def size(self, x):
         return -self.parents[self.find(x)]
 
+
 n, m = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(m)]
 uf = UnionFind(n)
 ans = 0
 for i in range(m):
-    uf.union(a[i][0]-1, a[i][1]-1)
+    uf.union(a[i][0] - 1, a[i][1] - 1)
 for i in range(n):
     ans = max(ans, uf.size(i))
 print(ans)

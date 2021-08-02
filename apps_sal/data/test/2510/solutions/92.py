@@ -1,18 +1,20 @@
 def A():
     d, t, s = list(map(int, input().split()))
-    print(("Yes" if t*s>=d else "No"))
+    print(("Yes" if t * s >= d else "No"))
+
 
 def B():
     s = input()
     t = input()
     sa = len(s) - len(t)
     ret = 10000000000
-    for i in range(sa+1):
+    for i in range(sa + 1):
         cnt = 0
         for j in range(len(t)):
-            if s[j+i] != t[j]: cnt += 1
+            if s[j + i] != t[j]: cnt += 1
         ret = min(ret, cnt)
     print(ret)
+
 
 def C():
     int(input())
@@ -20,8 +22,9 @@ def C():
     S = sum(A)
     T = 0
     for e in A:
-        T += e*e
-    print(((S * S - T)//2))
+        T += e * e
+    print(((S * S - T) // 2))
+
 
 class UF:
     def __init__(self, N):
@@ -47,13 +50,14 @@ class UF:
             self.sz[x] += self.sz[y]
             if self.d[x] == self.d[y]: self.d[x] += 1
 
+
 def D():
     n, m = list(map(int, input().split()))
-    uf = UF(n+1)
+    uf = UF(n + 1)
     for i in range(m):
         a, b = list(map(int, input().split()))
         uf.unite(a, b)
     print((max(uf.sz)))
 
-D()
 
+D()

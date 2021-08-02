@@ -1,4 +1,5 @@
-N,M = map(int, input().split())
+N, M = map(int, input().split())
+
 
 class UnionFind:
     def __init__(self, N):
@@ -27,6 +28,7 @@ class UnionFind:
     def find_max(self):
         return max(self.size)
 
+
 uf = UnionFind(N)
 
 answer = []
@@ -34,6 +36,6 @@ append = answer.append
 merge = uf.merge
 
 for i in range(M):
-    a,b = map(int, input().split())
-    merge(a,b)
+    a, b = map(int, input().split())
+    merge(a, b)
 print(uf.find_max())

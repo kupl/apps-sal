@@ -2,7 +2,7 @@ import sys
 
 n = int(input())
 prob = [list(map(float, input().split())) for _ in range(n)]
-dp = [[0.0]*(1 << n) for _ in range(n)]
+dp = [[0.0] * (1 << n) for _ in range(n)]
 dp[0][1] = 1.0
 
 for mask in range(3, 1 << n):
@@ -18,4 +18,3 @@ for mask in range(3, 1 << n):
                 )
 
 print(max(dp[i][-1] for i in range(n)))
-

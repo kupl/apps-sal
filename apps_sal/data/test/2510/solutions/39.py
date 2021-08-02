@@ -22,13 +22,14 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
+
 n, m = map(int, input().split())
 
 uf = UnionFind(n)
 
 for _ in range(m):
     a, b = map(int, input().split())
-    a, b = a-1, b-1
+    a, b = a - 1, b - 1
     uf.union(a, b)
 
-print(min(uf.parents)*-1)
+print(min(uf.parents) * -1)

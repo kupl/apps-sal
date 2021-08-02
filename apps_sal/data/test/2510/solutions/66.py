@@ -1,4 +1,7 @@
 # Union-Find
+from collections import Counter
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -23,7 +26,7 @@ class UnionFind():
             self.parents[x] = y
         return 1
 
-from collections import Counter
+
 n, m = list(map(int, input().split()))
 uf = UnionFind(n)
 for _ in range(m):
@@ -34,4 +37,3 @@ for num in uf.parents:
     roots.append(uf.find(num))
 count_roots = Counter(roots)
 print((max(count_roots.values())))
-

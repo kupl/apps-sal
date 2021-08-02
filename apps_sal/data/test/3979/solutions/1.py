@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-
 import math
 
 import collections
@@ -17,7 +16,6 @@ import random
 import itertools
 
 
-
 """
 
 created by shhuan at 2017/10/18 16:22
@@ -27,9 +25,7 @@ created by shhuan at 2017/10/18 16:22
 """
 
 
-
 M, N = list(map(int, input().split()))
-
 
 
 words = []
@@ -39,11 +35,9 @@ for i in range(M):
     words.append([int(x) for x in input().split()][1:])
 
 
-
 # all elements in C should be capitalized
 
 C = set()
-
 
 
 # E[u][v] means if we capitalize u, we must capitalize v
@@ -51,14 +45,11 @@ C = set()
 E = collections.defaultdict(list)
 
 
-
-for i in range(M-1):
+for i in range(M - 1):
 
     w1 = words[i]
 
-    w2 = words[i+1]
-
-
+    w2 = words[i + 1]
 
     if len(w1) > len(w2) and w1[:len(w2)] == w2:
 
@@ -81,7 +72,6 @@ for i in range(M-1):
             break
 
 
-
 # add all letters should be capitalized based on E
 
 A = {u for u in C}
@@ -95,16 +85,13 @@ while A:
     C |= B
 
 
-
 # check
 
-for i in range(M-1):
+for i in range(M - 1):
 
     w1 = words[i]
 
-    w2 = words[i+1]
-
-
+    w2 = words[i + 1]
 
     for j in range(min(len(w1), len(w2))):
 
@@ -133,7 +120,6 @@ for i in range(M-1):
             break
 
 
-
 print('Yes')
 
 print(len(C))
@@ -143,8 +129,4 @@ if C:
     print(" ".join(map(str, sorted(C))))
 
 
-
-
-
 # Made By Mostafa_Khaled
-

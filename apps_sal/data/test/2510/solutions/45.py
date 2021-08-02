@@ -1,6 +1,6 @@
 N, M = (int(d) for d in input().split())
 
-C = [set() for i in range(N+1)]
+C = [set() for i in range(N + 1)]
 for i in range(M):
     A, B = (int(d) for d in input().split())
     C[A].update([B])
@@ -10,7 +10,7 @@ for i in range(M):
 seen = set()
 G = []
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     if i in seen:
         continue
 
@@ -33,5 +33,3 @@ for i in range(1, N+1):
         seen.update(J)
 
 print((max([len(g) for g in G])))
-
-

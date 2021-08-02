@@ -8,4 +8,3 @@ speeds = list(map(int, input().split()))
 
 godnie = heapq.nlargest(uch, speeds)
 print(min(godnie))
-

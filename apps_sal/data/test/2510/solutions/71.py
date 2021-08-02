@@ -42,13 +42,13 @@ def size(x):
 
 # 初期化
 # 根なら-size,子なら親の頂点
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 par = [-1] * n
 ans = 0
 for i in range(m):
-    X,Y = map(int,input().split())
-    unite(X-1,Y-1)
+    X, Y = map(int, input().split())
+    unite(X - 1, Y - 1)
 
 for i in range(n):
-    ans = max(size(i),ans)
+    ans = max(size(i), ans)
 print(ans)

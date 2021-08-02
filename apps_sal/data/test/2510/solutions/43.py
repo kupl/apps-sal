@@ -44,20 +44,18 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-      
-      
-N, M = list(map(int,input().split()))
+
+
+N, M = list(map(int, input().split()))
 uf = UnionFind(N)
 for i in range(M):
-  A, B = list(map(int,input().split()))
-  A -= 1
-  B -= 1
-  uf.union(A, B)
-  
+    A, B = list(map(int, input().split()))
+    A -= 1
+    B -= 1
+    uf.union(A, B)
+
 ans = 0
 for i in range(N):
-  ans = max(ans, uf.size(i))
-  
-print(ans)
-  
+    ans = max(ans, uf.size(i))
 
+print(ans)

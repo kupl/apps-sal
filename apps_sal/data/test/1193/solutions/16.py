@@ -11,4 +11,3 @@ for i in range(n):
     if count >= k:
         maxx = max(maxx, data[i])
 print(maxx)
-

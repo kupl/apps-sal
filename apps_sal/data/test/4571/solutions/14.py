@@ -1,5 +1,5 @@
 n, m = list(map(int, input().split()))
-print(((2**m) * (1900*m + 100*(n-m))))
+print(((2**m) * (1900 * m + 100 * (n - m))))
 
 # unit = 1900*m + 100*(n-m)
 # p = 1 / (2**m)
@@ -10,4 +10,3 @@ print(((2**m) * (1900*m + 100*(n-m))))
 # (ans / p) * (1 - r) = 1 / (1 - r)
 # ans = 1 / p = 2**m
 # answer = ans * unit
-

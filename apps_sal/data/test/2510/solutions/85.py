@@ -1,4 +1,4 @@
-#Union-Find
+# Union-Find
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -16,28 +16,30 @@ class UnionFind():
         y = self.find(y)
 
         if x == y:
-            return 
+            return
 
         if self.parents[x] > self.parents[y]:
-            x,y = y,x
-        
+            x, y = y, x
+
         self.parents[x] += self.parents[y]
         self.parents[y] = x
-    
+
     def size(self, x):
         return -self.parents[self.find(x)]
 
 
 def __starting_point():
-    n,m = map(int,input().split())
+    n, m = map(int, input().split())
     unionfind = UnionFind(n)
     for _ in range(m):
-        a,b = map(int,input().split())
-        unionfind.union(a-1, b-1)
-        
+        a, b = map(int, input().split())
+        unionfind.union(a - 1, b - 1)
+
     answer = []
     for i in range(n):
         answer.append(unionfind.size(i))
 
     print(max(answer))
+
+
 __starting_point()

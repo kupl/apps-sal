@@ -23,6 +23,7 @@ class UnionFind():
     def size(self, x):
         return -self.parents[self.find(x)]
 
+
 n, m = map(int, input().split())
 u = UnionFind(n)
 for _ in range(m):

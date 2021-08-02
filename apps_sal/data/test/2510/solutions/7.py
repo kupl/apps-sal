@@ -1,8 +1,9 @@
-n,m=map(int,input().split())
-l=[]
+n, m = map(int, input().split())
+l = []
 for i in range(m):
-    a,b=map(int,input().split())
-    l.append([a,b])
+    a, b = map(int, input().split())
+    l.append([a, b])
+
 
 class UnionFind():
     def __init__(self, n):
@@ -28,15 +29,17 @@ class UnionFind():
 
         self.parents[x] += self.parents[y]
         self.parents[y] = x
+
     def size(self, x):
         return -self.parents[self.find(x)]
 
-uf=UnionFind(n)
+
+uf = UnionFind(n)
 
 for i in range(m):
-    uf.union(l[i][0]-1,l[i][1]-1)
+    uf.union(l[i][0] - 1, l[i][1] - 1)
 
-s=[]
+s = []
 for i in range(n):
     s.append(uf.size(i))
 

@@ -54,7 +54,7 @@ def __starting_point():
 
     for _ in range(m):
         a, b = list(map(int, input().split()))
-        uf.union(a-1, b-1)
+        uf.union(a - 1, b - 1)
 
     max_firiend = 0
 
@@ -63,5 +63,6 @@ def __starting_point():
         max_firiend = max(max_firiend, uf.size(r))
 
     print(max_firiend)
+
 
 __starting_point()

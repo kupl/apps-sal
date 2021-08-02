@@ -1,4 +1,4 @@
-from collections import deque 
+from collections import deque
 
 n, m = map(int, input().split())
 G = [[] for _ in range(n)]
@@ -10,6 +10,7 @@ for i in range(m):
 
 visited = [0] * n
 
+
 def friends(v):
     stack = deque([v])
     visited[v] = 1
@@ -18,16 +19,17 @@ def friends(v):
         v = stack.popleft()
         for nv in G[v]:
             if visited[nv]:
-               continue
+                continue
             visited[nv] = 1
             stack.append(nv)
             cnt += 1
     return cnt
 
+
 max_friends = 0
 for i in range(n):
     if visited[i]:
         continue
-    max_friends  = max(max_friends, friends(i))
+    max_friends = max(max_friends, friends(i))
 
 print(max_friends)

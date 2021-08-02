@@ -2,8 +2,8 @@ class union_find():
 
     def __init__(self, n):
         self.n = n
-        self.root = [-1]*(n+1)
-        self.rank = [0]*(n+1)
+        self.root = [-1] * (n + 1)
+        self.rank = [0] * (n + 1)
 
     def find_root(self, x):
         if self.root[x] < 0:
@@ -40,7 +40,7 @@ for _ in range(m):
     a, b = map(int, input().split())
     g.unite(a, b)
 
-for i in range(1, n+1):
+for i in range(1, n + 1):
     ans = max(ans, g.cnt(i))
 
 print(ans)
