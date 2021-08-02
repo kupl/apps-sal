@@ -11,10 +11,10 @@ N, M = map(int, input().split())
 A = list(map(int, input().split()))
 # B = list(map(int, input().split()))
 # tree = [[] for _ in range(N + 1)]
-B_C = [list(map(int,input().split())) for _ in range(M)]
+B_C = [list(map(int, input().split())) for _ in range(M)]
 # S = input()
 
-B_C = sorted(B_C, reverse=True, key=lambda x:x[1])
+B_C = sorted(B_C, reverse=True, key=lambda x: x[1])
 # all_cases = list(itertools.permutations(P))
 # a = list(itertools.combinations_with_replacement(range(1, M + 1), N))
 # itertools.product((0,1), repeat=n)

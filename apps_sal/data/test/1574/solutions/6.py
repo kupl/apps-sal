@@ -8,8 +8,8 @@ for i in range(n):
 
 for i in range(m):
     a, b = (int(x) for x in input().split())
-    adj[a-1].append(b - 1)
-    adj[b-1].append(a - 1)
+    adj[a - 1].append(b - 1)
+    adj[b - 1].append(a - 1)
 
 # print(adj)
 
@@ -26,4 +26,3 @@ if best == 1000000:
     best = - 1
 
 print(best)
-

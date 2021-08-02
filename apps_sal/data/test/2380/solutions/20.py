@@ -13,4 +13,3 @@ for b, c in q:
         a[idx] = c
         idx += 1
 print((sum(a)))
-

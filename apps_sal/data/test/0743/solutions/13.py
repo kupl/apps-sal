@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 n = int(input())
 a = list(map(int, input().split()))
 m = a[0]
@@ -10,5 +11,3 @@ m = a[0]
 for i in range(1, n):
     m = (gcd(a[i], m))
 print(n * m)
-        
-

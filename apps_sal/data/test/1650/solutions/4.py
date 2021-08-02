@@ -31,4 +31,3 @@ for row in dp:
     ans %= mod
 
 print(ans)
-

@@ -22,7 +22,9 @@ class CF574B:
 def main():
     CF574B().solve()
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

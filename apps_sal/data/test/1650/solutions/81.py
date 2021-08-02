@@ -28,4 +28,3 @@ for i in range(n):
 
 ans = (dp[n][0] + dp[n][1]) % MOD
 print(ans)
-

@@ -8,10 +8,10 @@ ans = 0
 
 for i, j in l:
     if j < n:
-        ans += i*j
+        ans += i * j
         n -= j
     else:
-        ans += n*i
+        ans += n * i
         break
 
 print(ans)

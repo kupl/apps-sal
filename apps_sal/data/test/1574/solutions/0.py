@@ -13,26 +13,25 @@ def solve(n, m, pairs):
     assert 3 <= n <= 4000  # number of warioor
     assert 0 <= m <= 4000  # number of pairs of warriors knowing each other
     # for (a, b) in pairs:
-    #     assert 1 <= a < b <= n 
+    #     assert 1 <= a < b <= n
 
     recognitions = defaultdict(set)
 
     for (a, b) in pairs:
-       recognitions[a].add(b)
-       recognitions[b].add(a)
+        recognitions[a].add(b)
+        recognitions[b].add(a)
 
     minr = float('inf')
 
     for candidate, recognition in [(c, rs) for c, rs in list(recognitions.items()) if len(rs) > 1]:
         for c2, c3 in [(a, b) for a, b in combinations(recognition, 2)
-                                if a in recognitions[b]]:
+                       if a in recognitions[b]]:
             sum_r = sum([len(recognitions[x]) for x in [candidate, c2, c3]])
             minr = min([sum_r, minr])
     if minr == float('inf'):
         return -1
     else:
         return minr - 2 * 3
-
 
 
 def getinput():
@@ -143,7 +142,9 @@ def getstdin_lines():
             break
     return stdin
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

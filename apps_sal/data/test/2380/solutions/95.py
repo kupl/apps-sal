@@ -3,9 +3,9 @@ A = list(map(int, input().split()))
 D = [(A[i], 1) for i in range(N)]
 
 for i in range(M):
-  B, C = (map(int, input().split()))
-  D.append((C, B))
-  
+    B, C = (map(int, input().split()))
+    D.append((C, B))
+
 D.sort()
 D.reverse()
 

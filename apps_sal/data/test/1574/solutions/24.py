@@ -26,4 +26,3 @@ if record == float('inf'):
     print(-1)
 else:
     print(record)
-

@@ -16,6 +16,5 @@ for i in bc:
                 break
     else:
         break
-        
-print((sum(a)))
 
+print((sum(a)))

@@ -24,4 +24,3 @@ else:
         for i in range(N):
             ans += 100**D
         print((ans + 10000))
-

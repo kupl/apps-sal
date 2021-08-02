@@ -11,4 +11,3 @@ for c in L[::-1]:
     t *= 3
     t %= m
 print(result)
-

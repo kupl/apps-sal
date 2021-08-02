@@ -24,4 +24,3 @@ for e in l:
 ans = sum(dp) % mod
 
 print(ans)
-

@@ -1,5 +1,7 @@
 
 from collections import Counter
+
+
 def resolve():
     N, M = list(map(int, input().split()))
     A = list(map(int, input().split()))
@@ -27,5 +29,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

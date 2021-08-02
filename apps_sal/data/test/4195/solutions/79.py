@@ -1,6 +1,6 @@
-d,n = map(int,input().split())
+d, n = map(int, input().split())
 
-if n<100:
-    print(100**d*n)
+if n < 100:
+    print(100**d * n)
 else:
-    print(100**d*101)
+    print(100**d * 101)

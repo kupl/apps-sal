@@ -1,11 +1,11 @@
 from collections import deque
 
-details = list(map(int,input().split()))
+details = list(map(int, input().split()))
 
 N = details[0]
 M = details[1]
 
-cards =  list(map(int,input().split()))
+cards = list(map(int, input().split()))
 
 ab = [list(map(int, input().split())) for _ in range(M)]
 

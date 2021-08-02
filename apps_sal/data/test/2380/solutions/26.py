@@ -4,10 +4,8 @@ def main():
 
     A.sort()
 
-
     bc = [[int(i) for i in input().split()] for _ in range(M)]
     bc.sort(key=lambda x: x[1])
-
 
     ai = N - 1
     mi = M - 1
@@ -31,8 +29,8 @@ def main():
     print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

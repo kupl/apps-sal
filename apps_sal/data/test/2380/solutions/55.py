@@ -5,7 +5,7 @@ A = list(map(int, input().split()))
 BC = [tuple(map(int, input().split())) for _ in range(M)]
 
 A = sorted(A)
-BC = sorted(BC, key = lambda x: x[1], reverse=True)
+BC = sorted(BC, key=lambda x: x[1], reverse=True)
 
 trade = []
 len_ = 0
@@ -25,4 +25,3 @@ for i in range(N):
     else:
         ans += max(trade[i], A[i])
 print(ans)
-

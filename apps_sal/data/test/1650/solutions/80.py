@@ -26,5 +26,4 @@ for i in range(1, nl + 1):
     dp[i][0] %= MOD
     dp[i][1] %= MOD
 
-print((sum(dp[-1])%MOD))
-
+print((sum(dp[-1]) % MOD))

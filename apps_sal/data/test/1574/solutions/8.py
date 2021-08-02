@@ -15,11 +15,10 @@ for i in range(n):
     for j in range(zn_kol[i] - 1):
         for z in range(j + 1, zn_kol[i]):
             if zn[i][j] in zn_edge[zn[i][z]]:
-               if zn_kol[zn[i][j]] - 2 + zn_kol[zn[i][z]] - 2 + zn_kol[i] - 2 < ans:
-                   ans = zn_kol[zn[i][j]] - 2 + zn_kol[zn[i][z]] - 2 + zn_kol[i] - 2
-        
+                if zn_kol[zn[i][j]] - 2 + zn_kol[zn[i][z]] - 2 + zn_kol[i] - 2 < ans:
+                    ans = zn_kol[zn[i][j]] - 2 + zn_kol[zn[i][z]] - 2 + zn_kol[i] - 2
+
 if ans == 100000000:
     print(-1)
 else:
     print(ans)
-

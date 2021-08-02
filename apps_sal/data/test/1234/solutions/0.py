@@ -16,7 +16,7 @@ def main():
 
     used = [0] * N
     ans = 0
-    for i in range(M*K):
+    for i in range(M * K):
         idx = B[i][1]
         used[idx] = 1
         ans += B[i][0]
@@ -27,7 +27,7 @@ def main():
         if used[i]:
             cnt += 1
         if cnt == M:
-            lst.append(i+1)
+            lst.append(i + 1)
             cnt = 0
             le += 1
             if le == K - 1:
@@ -39,5 +39,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

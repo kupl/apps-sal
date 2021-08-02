@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
 A_list = sorted(list(map(int, input().split())))
 # C の大きさ順に
-BC_list = sorted([list(map(int, input().split())) for _ in range(M)], key=lambda x:x[1], reverse=True)
+BC_list = sorted([list(map(int, input().split())) for _ in range(M)], key=lambda x: x[1], reverse=True)
 change_list_sorted = []
 for m in range(M):
     b, c = BC_list[m]

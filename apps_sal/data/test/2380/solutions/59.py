@@ -18,4 +18,3 @@ for i, v in enumerate(a):
     else:
         break
 print(ans)
-

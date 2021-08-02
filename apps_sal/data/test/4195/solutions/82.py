@@ -1,5 +1,5 @@
-a,b = map(int,input().split())
+a, b = map(int, input().split())
 if b == 100:
-    print((100**a)*101)
+    print((100**a) * 101)
     return
-print((100**a)*b)
+print((100**a) * b)

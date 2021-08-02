@@ -26,4 +26,3 @@ for i, d in enumerate(D):
         break
 
 print((sum(A)))
-

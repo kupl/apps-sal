@@ -3,7 +3,7 @@ n, m = map(int, input().split())
 a = list(map(int, input().split()))
 heapq.heapify(a)
 bc = [list(map(int, input().split())) for _ in range(m)]
-bc.sort(key = lambda x: x[1], reverse = True)
+bc.sort(key=lambda x: x[1], reverse=True)
 
 for i in range(m):
     if a[0] >= bc[i][1]:

@@ -12,4 +12,3 @@ for n in L:
     less %= MOD
 
 print(((eq + less) % MOD))
-

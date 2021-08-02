@@ -15,4 +15,3 @@ for v in V[::-1]:
     if cnt >= N:
         break
 print(ans)
-

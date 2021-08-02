@@ -1,16 +1,20 @@
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
+
 
 def main():
-    d,n = map(int,input().split())
+    d, n = map(int, input().split())
 
-    if n==100:
-        print((100**d)*101)
+    if n == 100:
+        print((100**d) * 101)
         return
     else:
-        print((100**d)*n)
+        print((100**d) * n)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()
