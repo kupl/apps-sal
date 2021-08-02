@@ -66,4 +66,3 @@ while legit(first_not_taken):
 
 print(days_count)
 print(str(assignment)[1:-1].replace(",", ""))
-

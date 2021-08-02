@@ -18,4 +18,3 @@ if (answ % 60 < 10):
 else:
     k = k + str(answ % 60)
 print(k)
-

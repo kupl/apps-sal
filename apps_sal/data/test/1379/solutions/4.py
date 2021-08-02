@@ -2,7 +2,7 @@ def check(p):
     for i in range(n - p):
         if a[i + p] - a[i] - 1 < d:
             return False
-    
+
     return True
 
 

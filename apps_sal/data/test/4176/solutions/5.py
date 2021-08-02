@@ -1,5 +1,6 @@
 a, b = map(int, input().split())
 
+
 def get_GCD(x, y):
     if x > y:
         x, y = y, x
@@ -10,5 +11,6 @@ def get_GCD(x, y):
         else:
             y += y_
     return y
+
 
 print(get_GCD(a, b))

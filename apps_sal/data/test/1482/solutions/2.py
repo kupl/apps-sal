@@ -12,4 +12,3 @@ k -= 1
 for i in range(n):
     print(str(a[i]) + ' ' + ' '.join(str(j) for j in t[x: x + k]))
     x += k
-

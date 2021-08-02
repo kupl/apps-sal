@@ -1,11 +1,16 @@
 def f(x, y):
     xx = str(x)
-    if len(xx) == 1: xx = '0' + xx
+    if len(xx) == 1:
+        xx = '0' + xx
     yy = str(y)
-    if len(yy) == 1: yy = '0' + yy
+    if len(yy) == 1:
+        yy = '0' + yy
     return yy[::-1] != xx
 
-read = lambda: map(int, input().split(':'))
+
+def read(): return map(int, input().split(':'))
+
+
 a, b = read()
 cnt = 0
 while f(a, b):

@@ -6,4 +6,4 @@ if B <= A:
 
 else:
     ans = r % A + (r // A) * B
-    print(ans) 
+    print(ans)

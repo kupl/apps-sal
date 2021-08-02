@@ -1,9 +1,11 @@
 u = input().split(':')
 h = u[0]
 m = u[1]
+
+
 def add(minute):
-    hh = minute//60 + int(h)
-    mm = minute%60 + int(m)
+    hh = minute // 60 + int(h)
+    mm = minute % 60 + int(m)
     if mm >= 60:
         mm -= 60
         hh += 1
@@ -20,9 +22,8 @@ def add(minute):
     strr = hh + mm
     return strr == strr[::-1]
 
+
 for i in range(0, 1000000):
     if add(i):
         print(i)
         break
-    
-

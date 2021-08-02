@@ -1,4 +1,4 @@
-n, m , r  = map(int, input().split())
+n, m, r = map(int, input().split())
 
 s = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]

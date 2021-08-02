@@ -31,5 +31,4 @@ b.reverse()
 a = s[0]
 z = b[0]
 
-print(max(r+(z-a)*(r//a), r))
-
+print(max(r + (z - a) * (r // a), r))

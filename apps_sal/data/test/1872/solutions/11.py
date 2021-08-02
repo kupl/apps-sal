@@ -8,4 +8,3 @@ S1 = 1 / 2 * Y * Y * math.sin(3 * math.pi / n)
 S2 = r * r * (math.pi / n - 1 / 2 * math.sin(2 * math.pi / n))
 ans = math.pi * r * r - n * (S1 + S2)
 print(ans)
-

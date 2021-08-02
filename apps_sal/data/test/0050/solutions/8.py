@@ -4,4 +4,3 @@ b = list(map(int, input().split()))
 u = min(s)
 v = max(b)
 print(max(r // u * v + r % u, r))
-

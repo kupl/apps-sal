@@ -10,9 +10,9 @@ def gcd(a,b):
         return a
     return gcd(b, a%b)
 """
-from math import gcd
 
+from math import gcd
 A, B = map(int, input().split())
 if A < B:
-    A ,B = B, A
-print(A*B//gcd(A,B))
+    A, B = B, A
+print(A * B // gcd(A, B))

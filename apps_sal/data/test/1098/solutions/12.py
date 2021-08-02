@@ -1,6 +1,6 @@
 n = int(input())
 alarms = []
-for i in range (n):
+for i in range(n):
     line = [int(x) for x in input().strip().split(':')]
     alarms.append(line[0] * 60 + line[1])
 alarms = sorted(alarms)

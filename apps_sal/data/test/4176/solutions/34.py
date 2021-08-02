@@ -7,5 +7,3 @@ while True:
         print(n)
         break
     i += 1
-
-

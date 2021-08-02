@@ -12,23 +12,18 @@ x = 1
 
 
 for i in range(n):
-	while True:
-		if i >= x and breaks_S[i] - breaks_S[i - x] < d:
-			x += 1
-		elif n - i > x and breaks_S[i + x] - breaks_S[i] < d:
-			x += 1
-		else:
-			break
+    while True:
+        if i >= x and breaks_S[i] - breaks_S[i - x] < d:
+            x += 1
+        elif n - i > x and breaks_S[i + x] - breaks_S[i] < d:
+            x += 1
+        else:
+            break
 
 
 for i in range(n):
-	answer[index_s[i]] = i % x + 1
+    answer[index_s[i]] = i % x + 1
 
 
 print(x)
 print(*answer)
-
-
-
-
-

@@ -9,10 +9,11 @@ def gcd(m, n):
         else:
             m, n = n, r
 
+
 def lcm(m, n):
-    return m*n // gcd(m, n)
+    return m * n // gcd(m, n)
+
 
 a, b = list(map(int, input().split()))
 
 print((lcm(a, b)))
-
