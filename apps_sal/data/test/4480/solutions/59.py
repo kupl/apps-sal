@@ -5,7 +5,7 @@ class Solution:
             return(False)
         else:
             cum_sum = 0
-            target = tot_sum//3
+            target = tot_sum // 3
             counter = 0
             for num in A[:-1]:
                 cum_sum += num
@@ -15,5 +15,3 @@ class Solution:
                     if counter == 2:
                         return(True)
             return(False)
-            
-

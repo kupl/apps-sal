@@ -1,20 +1,26 @@
 import sys
 input = sys.stdin.readline
- 
+
+
 def r1():
     return int(input())
+
+
 def r2():
     return list(map(int, input().split()))
+
 
 pred = {}
 size = {}
 k = 0
+
 
 def get_lead(index):
     if pred[index] == index:
         return index
     pred[index] = get_lead(pred[index])
     return pred[index]
+
 
 def merge(a, b, k):
     pred_a = get_lead(a)
@@ -27,6 +33,7 @@ def merge(a, b, k):
     pred[pred_a] = pred_b
     size[pred_b] = max(size[pred_b], size[pred_a] + 1)
     return k
+
 
 n = r1()
 for i in range(n):
@@ -41,6 +48,3 @@ for i in range(n):
             k += 1
         k = merge(item, first, k)
 print(k)
-    
-    
-

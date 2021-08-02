@@ -7,6 +7,8 @@ def get(p, x):
         path_x.append(x)
         x = p[x]
     return x, path_x
+
+
 def join(p, rank, x, y):
     x, path_x = get(p, x)
     y, path_y = get(p, y)
@@ -26,6 +28,7 @@ def join(p, rank, x, y):
             p[el] = y
         return True
 
+
 def check(p, x, y):
     x, path_x = get(p, x)
     y, path_y = get(p, y)
@@ -36,8 +39,10 @@ def check(p, x, y):
         p[el] = y
     return x == y
 
+
 def get_id(c):
     return ord(c) - 97
+
 
 # inf = open('input.txt', 'r')
 # reader = (line.rstrip() for line in inf)
@@ -51,14 +56,14 @@ for _ in range(n):
     word = next(reader)
     unq_cs = set(word)
     used.update(unq_cs)
-    
+
     c1 = unq_cs.pop()
     i1 = get_id(c1)
     while unq_cs:
         c2 = unq_cs.pop()
         i2 = get_id(c2)
         join(p, rank, i1, i2)
-        
+
 unq_gr = set()
 for c in used:
     gr_id, _ = get(p, get_id(c))
@@ -66,4 +71,3 @@ for c in used:
 print(len(unq_gr))
 
 # inf.close()
-

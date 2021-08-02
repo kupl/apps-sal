@@ -4,8 +4,10 @@ input = sys.stdin.readline
 
 
 def f(u):
-    if u != p[u]:p[u] = f(p[u])
+    if u != p[u]:
+        p[u] = f(p[u])
     return p[u]
+
 
 N = int(input())
 
@@ -23,7 +25,7 @@ for i in range(N):
         al.add(k)
         vst.add(k)
     if len(al) > 1:
-        for u,v in cb(al, 2):
+        for u, v in cb(al, 2):
             if f(u) != f(v):
                 p[f(u)] = p[f(v)]
 
@@ -32,4 +34,3 @@ for w in vst:
     q.add(p[f(w)])
 
 print(len(q))
-

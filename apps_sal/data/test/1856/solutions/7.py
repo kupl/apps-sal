@@ -2,6 +2,7 @@
 import sys
 input = sys.stdin.readline
 
+
 class DisjointSet:
     def __init__(self, n):
         self.par = [i for i in range(n)]
@@ -31,6 +32,7 @@ class DisjointSet:
             self.par[y] = x
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
+
 
 n = int(input())
 password = []

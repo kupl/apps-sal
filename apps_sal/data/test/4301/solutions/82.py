@@ -11,4 +11,3 @@ for i in range(N):
 
 for a in ans:
     print(a)
-

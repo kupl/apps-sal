@@ -10,4 +10,3 @@ for i in A:
         print(next_value)
     else:
         print(max_value)
-

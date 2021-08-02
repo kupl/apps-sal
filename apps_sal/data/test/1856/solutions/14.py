@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,17 +15,20 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 class UnionFind:
 
     def __init__(self, n):
         self.n = n
-        self.par = [i for i in range(n+1)]
-        self.rank = [0] * (n+1)
-        self.size = [1] * (n+1)
+        self.par = [i for i in range(n + 1)]
+        self.rank = [0] * (n + 1)
+        self.size = [1] * (n + 1)
 
     def find(self, x):
         if self.par[x] == x:
@@ -54,9 +58,10 @@ class UnionFind:
             return self.size[self.find(x)]
         else:
             res = set()
-            for i in range(self.n+1):
+            for i in range(self.n + 1):
                 res.add(self.find(i))
             return len(res) - 1
+
 
 N = INT()
 A = [input() for i in range(N)]
@@ -73,8 +78,7 @@ uf = UnionFind(len(tonum))
 for a in A:
     for i, c in enumerate(a[1:], 1):
         x = tonum[a[i]]
-        y = tonum[a[i-1]]
+        y = tonum[a[i - 1]]
         if not uf.is_same(x, y):
             uf.union(x, y)
 print(uf.get_size())
-

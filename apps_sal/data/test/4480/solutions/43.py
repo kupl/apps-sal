@@ -1,7 +1,8 @@
 class Solution:
     def canThreePartsEqualSum(self, li: List[int]) -> bool:
         s = sum(li)
-        if s % 3: return False
+        if s % 3:
+            return False
         ts = s // 3
         ss = 0
         chunk = 0

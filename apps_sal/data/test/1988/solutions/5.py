@@ -15,11 +15,10 @@ for _ in range(t):
             if a[i:n] + a[0:i] < tmp:
                 tmp = a[i:n] + a[0:i]
                 ans = i
-            
+
         else:
             if a[i:n] + a[0:i][::-1] < tmp:
                 tmp = a[i:n] + a[0:i][::-1]
                 ans = i
     print(tmp)
     print(ans + 1)
-

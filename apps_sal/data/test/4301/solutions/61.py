@@ -1,7 +1,7 @@
 N = int(input())
 A = [int(input()) for _ in range(N)]
 
-m,s = 0,0
+m, s = 0, 0
 for a in A:
     if a > m:
         m = a
@@ -13,4 +13,3 @@ for a in A:
         print(s)
     else:
         print(m)
-

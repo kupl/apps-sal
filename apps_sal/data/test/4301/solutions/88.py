@@ -8,4 +8,4 @@ for i in range(N):
     else:
         pop = A.pop(i)
         print(max(A))
-        A.insert(i,pop)
+        A.insert(i, pop)

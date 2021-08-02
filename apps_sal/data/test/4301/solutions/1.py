@@ -6,8 +6,7 @@ second_largest = sorted(l)[-2]
 second_largest_index = l.index(second_largest)
 
 for idx, n in enumerate(l):
-  if idx == largest_index:
-    print(second_largest)
-  else:
-    print(largest)
-
+    if idx == largest_index:
+        print(second_largest)
+    else:
+        print(largest)

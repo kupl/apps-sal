@@ -1,3 +1,6 @@
+import sys
+
+
 class UnionFind:
     def __init__(self, n):
         self.parent = [-1] * n
@@ -29,7 +32,7 @@ class UnionFind:
     def get_cnt(self):
         return self.cnt
 
-import sys
+
 input = sys.stdin.readline
 
 n = int(input())

@@ -13,4 +13,3 @@ c.append(-1)
 
 for i in range(n):
     print((max(b[i - 1], c[i + 1])))
-

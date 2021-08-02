@@ -10,9 +10,8 @@ class Solution:
             if curr == target:
                 curr = 0
                 count += 1
-                
+
             if count == 2 and ix < len(A) - 1:
                 return True
-        
-        return False
 
+        return False

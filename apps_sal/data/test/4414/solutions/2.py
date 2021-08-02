@@ -1,4 +1,5 @@
-read = lambda: [int(i) for i in input().split()]
+def read(): return [int(i) for i in input().split()]
+
 
 q = int(input())
 

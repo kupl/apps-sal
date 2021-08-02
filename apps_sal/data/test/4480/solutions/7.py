@@ -1,8 +1,8 @@
 class Solution:
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
-        if sum(A)%3 != 0:
+        if sum(A) % 3 != 0:
             return False
-        required_sum = sum(A)//3
+        required_sum = sum(A) // 3
         count_partition = 0
         curr_sum = A[0]
         i = 1

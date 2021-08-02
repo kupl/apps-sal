@@ -10,13 +10,14 @@ class Solution:
         '''
         # second solution
         total = sum(A)
-        if total%3!=0: False
-        count, temp, Sum = 1, total//3, 0
-        for i in range(len(A)-1): 
+        if total % 3 != 0:
+            False
+        count, temp, Sum = 1, total // 3, 0
+        for i in range(len(A) - 1):
             Sum += A[i]
             if Sum == temp * count:
-                count+=1
-                if count==3: return True
+                count += 1
+                if count == 3:
+                    return True
         print(A)
         return False
-

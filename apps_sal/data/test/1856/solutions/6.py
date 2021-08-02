@@ -2,7 +2,7 @@ class UnionFind(object):
     __slots__ = ['nodes']
 
     def __init__(self, n: int):
-        self.nodes = [-1]*n
+        self.nodes = [-1] * n
 
     def find(self, x: int) -> int:
         if self.nodes[x] < 0:
@@ -29,9 +29,11 @@ def __starting_point():
     uf = UnionFind(26 + n)
     cc_a = ord('a')
     for i, p in enumerate((l.rstrip() for l in sys.stdin), start=26):
-        for cc in list(map(lambda c: ord(c)-cc_a, set(p))):
+        for cc in list(map(lambda c: ord(c) - cc_a, set(p))):
             uf.unite(i, cc)
 
-    ans = sum(1 for i in range(26, 26+n) if uf.nodes[i] < 0)
+    ans = sum(1 for i in range(26, 26 + n) if uf.nodes[i] < 0)
     print(ans)
+
+
 __starting_point()
