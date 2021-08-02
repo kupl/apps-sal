@@ -35,10 +35,8 @@ def solve(val):
     for i in range(l_pos + 1, len(res)):
         r_val += val - res[i]
     return r_val <= k
-            
-      
-        
-    
+
+
 n, k = map(int, input().split())
 a = list(map(int, input().split()))
 

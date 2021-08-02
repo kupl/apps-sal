@@ -3,8 +3,10 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 def lcm(a, b):
     return a // gcd(a, b) * b
+
 
 def isPrime(x):
     if x < 2 or x % 2 == 0:
@@ -18,6 +20,7 @@ def isPrime(x):
         i += 2
     return True
 
+
 def divisor(x):
     res = []
     i = 1
@@ -29,6 +32,7 @@ def divisor(x):
         i += 1
     res = sorted(res)
     return res
+
 
 def factor(x):
     res = []
@@ -45,11 +49,9 @@ def factor(x):
     res = sorted(res)
     return res
 
-        
-
 
 def __starting_point():
-    N,K = list(map(int, input().split()))
+    N, K = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A = sorted(A)
     sum_v = sum(A)
@@ -62,11 +64,12 @@ def __starting_point():
         v = sum(b)
         v //= e
         ans = 0
-        for i in range(N-v):
+        for i in range(N - v):
             ans += b[i]
-        
+
         if ans <= K:
             print(e)
             return
+
 
 __starting_point()

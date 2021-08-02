@@ -3,11 +3,11 @@ def main():
     A = list(map(int, input().split()))
     m = sum(A)
     d = []
-    for i in range(1, int(m**0.5)+1):
+    for i in range(1, int(m**0.5) + 1):
         if m % i == 0:
             d.append(i)
             if i != m // i:
-                d.append(m//i)
+                d.append(m // i)
     d.sort(reverse=True)
     for j in d:
         if j > K + max(A):
@@ -21,5 +21,6 @@ def main():
             print(j)
             return
     print((1))
-main()
 
+
+main()

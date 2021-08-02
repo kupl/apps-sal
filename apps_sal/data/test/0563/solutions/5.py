@@ -6,10 +6,12 @@ if r - l < 2:
     print(-1)
     quit()
 
+
 def gcd(a, b):
     while b:
-        a, b = b, a%b
+        a, b = b, a % b
     return a
+
 
 for a in range(l, r + 1):
     for b in range(a + 1, r + 1):
@@ -19,4 +21,3 @@ for a in range(l, r + 1):
                 quit()
 
 print(-1)
-

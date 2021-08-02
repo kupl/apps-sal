@@ -8,4 +8,3 @@ for i in range(3):
         a[i] = m - 1
 
 print(ans)
-

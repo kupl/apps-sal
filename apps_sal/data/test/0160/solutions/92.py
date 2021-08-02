@@ -32,4 +32,3 @@ for div in divs:
             break
 
 print(ans)
-

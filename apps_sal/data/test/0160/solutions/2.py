@@ -5,7 +5,6 @@ A = list(map(int, input().split()))
 s = sum(A)
 
 
-
 def solve():
     ans = 1
     idx = 1
@@ -39,4 +38,3 @@ def ok(i):
 
 
 print((solve()))
-

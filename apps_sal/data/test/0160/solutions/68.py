@@ -2,6 +2,7 @@ N, K = map(int, input().split())
 A = list(map(int, input().split()))
 S = sum(A)
 
+
 def isOk(n):
     B = [a % n for a in A]
     B.sort()
@@ -14,6 +15,7 @@ def isOk(n):
         if now == n * (N - i - 1) - S and now <= K:
             return True
     return False
+
 
 ans = 1
 for i in range(1, int(S**0.5) + 100):

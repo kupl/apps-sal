@@ -1,7 +1,9 @@
 from math import gcd
+
+
 def check(m):
     nonlocal p, k, x, a, y, b
-    ans  = 0
+    ans = 0
     kx = m // a
     ky = m // b
     kxy = m // (a * b // gcd(a, b))
@@ -14,7 +16,7 @@ def check(m):
         for i in range(kxy, kxy + kx):
             ans += p[i] * x // 100
             #print(p[i],end = ' ')
-        
+
         for i in range(kxy + kx, kxy + kx + ky):
             ans += p[i] * y // 100
             #print(p[i],end = ' ')
@@ -22,14 +24,14 @@ def check(m):
         for i in range(kxy, kxy + ky):
             ans += p[i] * y // 100
     #        print(p[i],end = ' ')
-        
+
         for i in range(kxy + ky, kxy + kx + ky):
             ans += p[i] * x // 100
      #       print(p[i],end = ' ')
-    #print("!!!!")
+    # print("!!!!")
     #print('III', ans, m)
     return ans
-    
+
 
 p = []
 for i in range(int(input())):
@@ -42,15 +44,14 @@ for i in range(int(input())):
     r = n
     if check(n) < k:
         print(-1)
-        #print()
+        # print()
         continue
     else:
         while r - l > 1:
             m = (r + l) // 2
             if check(m) >= k:
-                r =  m
+                r = m
             else:
                 l = m
         print(r)
-        #print()
-
+        # print()

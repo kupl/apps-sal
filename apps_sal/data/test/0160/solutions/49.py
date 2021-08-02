@@ -1,4 +1,4 @@
-import  numpy as np
+import numpy as np
 
 
 def divisors(num):
@@ -7,7 +7,7 @@ def divisors(num):
     for i in range(1, limit):
         if num % i == 0:
             div1 = i
-            div2 = num//i
+            div2 = num // i
             array.append(div1)
             if div1 != div2:
                 array.append(div2)
@@ -26,8 +26,8 @@ for div in candidates:
     mods = A % div
     mods.sort()
     np.cumsum(mods, out=mods)
-    idx = mods[n-1] // div
-    count = mods[-1-idx]
+    idx = mods[n - 1] // div
+    count = mods[-1 - idx]
     if count <= k:
         print(div)
         return

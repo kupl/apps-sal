@@ -5,7 +5,7 @@ def __starting_point():
     b = arr[1]
     c = arr[2]
 
-    if a == b and  a == c:
+    if a == b and a == c:
         print('0')
         return
 
@@ -26,4 +26,6 @@ def __starting_point():
             adding += maximum - i - 1
 
     print(adding)
+
+
 __starting_point()

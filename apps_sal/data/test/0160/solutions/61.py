@@ -12,10 +12,14 @@ def LI(): return [int(x) for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LS(): return input().split()
 def II(): return int(input())
+
+
 def FLIST(n):
     res = [1]
-    for i in range(1, n+1): res.append(res[i-1]*i%DVSR)
+    for i in range(1, n + 1): res.append(res[i - 1] * i % DVSR)
     return res
+
+
 def gcd(x, y):
     if x < y: x, y = y, x
     div = x % y
@@ -24,26 +28,27 @@ def gcd(x, y):
         div = x % y
     return y
 
-N,K=LI()
-AS=LI()
-SUMM= sum(AS)
 
-DIVS=set()
-for i in range(1,40000):
+N, K = LI()
+AS = LI()
+SUMM = sum(AS)
+
+DIVS = set()
+for i in range(1, 40000):
     if SUMM % i == 0:
         DIVS.add(i)
-        DIVS.add(SUMM//i)
+        DIVS.add(SUMM // i)
 # print(DIVS)
 
-DIFF=[0]*N
+DIFF = [0] * N
 
 res = 0
 for div in DIVS:
     for i in range(N):
-        DIFF[i] = AS[i]%div
+        DIFF[i] = AS[i] % div
     DIFF.sort()
     i = 0
-    j = N-1
+    j = N - 1
     sm = 0
     cost = 0
     while i <= j:
@@ -59,4 +64,3 @@ for div in DIVS:
 
 # print(DIFF)
 print(res)
-

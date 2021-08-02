@@ -1,11 +1,13 @@
 def gcd(a, b):
     while b:
         a, b = b, a % b
-    
+
     return a
+
 
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 q = int(input())
 
@@ -45,12 +47,12 @@ while q > 0:
         while cur < tlcmk + tak + tbk:
             total += p[cur] // 100 * minper
             cur += 1
-        
+
         if total >= nsum:
             right = middle
         else:
             left = middle
-    
+
     if right == n + 1:
         print(-1)
     else:

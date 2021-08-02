@@ -1,10 +1,12 @@
 def nok(a, b):
     return (a * b) // gcd(a, b)
 
+
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
+
 
 def test(z):
     nonlocal x, a, y, b, p, k
@@ -30,11 +32,12 @@ def test(z):
         ans += (p[i] // 100) * y2
     return ans >= k
 
+
 q = int(input())
 for i in range(q):
     n = int(input())
     p = list(map(int, input().split()))
-    p.sort(reverse = True)
+    p.sort(reverse=True)
     x, a = map(int, input().split())
     y, b = map(int, input().split())
     k = int(input())

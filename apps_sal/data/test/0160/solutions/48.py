@@ -1,5 +1,6 @@
 from itertools import accumulate
 
+
 def divisors(n):
     lst = []
     for i in range(1, int(n**0.5) + 1):
@@ -7,6 +8,7 @@ def divisors(n):
             lst.append(i)
             if i != n // i: lst.append(n // i)
     return lst
+
 
 N, K = map(int, input().split())
 *A, = map(int, input().split())

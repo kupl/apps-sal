@@ -1,5 +1,6 @@
 import heapq
 
+
 def divisor(i):
     s = []
     for j in range(1, int(i ** (1 / 2)) + 1):
@@ -7,6 +8,7 @@ def divisor(i):
             s.append(i // j)
             s.append(j)
     return sorted(set(s))
+
 
 n, k = map(int, input().split())
 a = list(map(int, input().split()))

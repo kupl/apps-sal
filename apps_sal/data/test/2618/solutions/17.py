@@ -54,6 +54,3 @@ for _ in range(int(input())):
             ans = i
             break
     print(ans)
-
-
-

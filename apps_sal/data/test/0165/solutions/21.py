@@ -22,5 +22,5 @@ def f(a, b, c):
     else: c = n
     return n + f(a, b, c)
 
-print(f(*[int(i) for i in input().split()]))
 
+print(f(*[int(i) for i in input().split()]))
