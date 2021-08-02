@@ -12,7 +12,7 @@ for n in range(1, m):
     for k in range(n + 1):
         bell[n + 1] += bell[k] * binom[n][k]
         bell[n + 1] %= MOD
-#print(bell)
+# print(bell)
 
 bags = [0 for i in range(m)]
 for it in range(N):
@@ -24,4 +24,3 @@ sol = 1
 for mask in difs:
     sol = sol * bell[bags.count(mask)] % MOD
 print(sol)
-

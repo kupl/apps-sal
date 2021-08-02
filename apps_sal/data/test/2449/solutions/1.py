@@ -2,15 +2,15 @@ import sys
 
 #f = open('input', 'r')
 f = sys.stdin
-n,m = list(map(int, f.readline().split()))
+n, m = list(map(int, f.readline().split()))
 s = [f.readline().strip() for _ in range(m)]
 s = [list(x) for x in s]
 d = {}
 for k in zip(*s):
-  if k in d:
-    d[k] += 1
-  else:
-    d[k] = 1
+    if k in d:
+        d[k] += 1
+    else:
+        d[k] = 1
 
 dv = list(d.values())
 
@@ -19,8 +19,8 @@ got = [1, 2, 5, 15, 52, 203, 877, 4140, 21147, 115975, 678570, 4213597, 27644437
 MM = 10**9 + 7
 ans = 1
 for v in dv:
-  ans = ans*got[v-1]
-  ans = ans%MM
+    ans = ans * got[v - 1]
+    ans = ans % MM
 print(ans)
 '''
 t = [[0] * 1010 for _ in range(1010)]
@@ -34,4 +34,3 @@ print([sum(t[i])%MM for i in range(1,1001)])
 
 
 '''
-

@@ -9,4 +9,3 @@ for l in range(1, n + 1):
             print('yes')
             return
 print('no')
-

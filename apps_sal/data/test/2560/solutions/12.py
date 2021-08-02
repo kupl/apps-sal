@@ -4,24 +4,23 @@ sys.setrecursionlimit(1500)
 
 inst_num = int(input())
 
-#reading data
+# reading data
 n = 0
 l = 0
 r = 0
 
+
 def payment_possible(total, l, r):
-    max_coins = int(total/l)
+    max_coins = int(total / l)
     if r * max_coins >= total:
         return True
     else:
         return False
-        
-
-
 
     if total < coins[0]:
         return False
     return False
+
 
 for i in range(0, inst_num):
     line_data = input().split()

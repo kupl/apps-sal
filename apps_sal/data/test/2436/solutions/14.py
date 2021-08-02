@@ -14,7 +14,4 @@ for _ in range(t):
         if num >= one:
             ans = num
 
-    print(ans+1)
-
-
-
+    print(ans + 1)

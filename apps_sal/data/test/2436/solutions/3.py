@@ -8,4 +8,3 @@ for _ in range(t):
         if a[i] <= i + 1:
             ans = max(ans, i + 2)
     print(ans)
-

@@ -5,6 +5,4 @@ for i in range(int(input())):
     print('No' if (n // l) * r < n else 'Yes')
 
 
-
 # Made By Mostafa_Khaled
-

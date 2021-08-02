@@ -10,6 +10,3 @@ for l in range(n):
                 return
             d += 1
 print("no")
-
-
-

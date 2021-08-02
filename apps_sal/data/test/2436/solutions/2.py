@@ -7,6 +7,5 @@ for _ in range(t):
     best = 1
     for i, x in enumerate(l):
         if x <= i + 1:
-            best = i+2
+            best = i + 2
     print(best)
-
