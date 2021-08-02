@@ -4,7 +4,7 @@ seen = set()
 for a in map(int, input().split()):
     new = set()
     for b in seen:
-        new.add((a+b) % m)
+        new.add((a + b) % m)
     seen |= new
     seen.add(a % m)
     if 0 in seen:
@@ -12,4 +12,3 @@ for a in map(int, input().split()):
         break
 else:
     print('NO')
-

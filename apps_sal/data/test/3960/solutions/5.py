@@ -18,12 +18,10 @@ maxB = b[0]
 maxCurrC = c[0]
 maxC = c[0]
 
-for i in range (1, n - 1):
+for i in range(1, n - 1):
     maxCurrB = max(b[i], maxCurrB + b[i])
     maxB = max(maxB, maxCurrB)
     maxCurrC = max(c[i], maxCurrC + c[i])
     maxC = max(maxC, maxCurrC)
 
 print(int(max(maxB, maxC)))
-
-

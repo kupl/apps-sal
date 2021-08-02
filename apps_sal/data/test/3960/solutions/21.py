@@ -34,26 +34,27 @@ def main():
     n = int(input())
     arr = get_array()
     ans = 0
-    prefix_odd = [0]*n
-    for i in range(n-1):
-        prefix_odd[i] = abs(arr[i+1]-arr[i])*pow(-1, i)
-    prefix_even = [0]*n
-    for i in range(n-1):
-        prefix_even[i] = abs(arr[i+1]-arr[i])*pow(-1, i+1)
+    prefix_odd = [0] * n
+    for i in range(n - 1):
+        prefix_odd[i] = abs(arr[i + 1] - arr[i]) * pow(-1, i)
+    prefix_even = [0] * n
+    for i in range(n - 1):
+        prefix_even[i] = abs(arr[i + 1] - arr[i]) * pow(-1, i + 1)
 
     curr_mx, mx = prefix_odd[0], prefix_odd[0]
     for i in range(1, n):
-        curr_mx = max(prefix_odd[i], prefix_odd[i]+curr_mx)
+        curr_mx = max(prefix_odd[i], prefix_odd[i] + curr_mx)
         mx = max(curr_mx, mx)
 
     curr_mx = prefix_even[0]
     for i in range(1, n):
-        curr_mx = max(prefix_even[i], prefix_even[i]+curr_mx)
+        curr_mx = max(prefix_even[i], prefix_even[i] + curr_mx)
         mx = max(curr_mx, mx)
     print(mx)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

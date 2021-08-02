@@ -6,5 +6,7 @@ def f(a):
         v = max(v, c)
         m *= -1
     return v
+
+
 n, a = int(input()), list(map(int, input().split()))
 print(max(f(a), f(a[1:])))

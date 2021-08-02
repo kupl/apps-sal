@@ -15,4 +15,3 @@ for i in range(2 * n):
         an = min(an, c)
         #print(an, b)
 print(an)
-

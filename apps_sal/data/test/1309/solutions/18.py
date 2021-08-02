@@ -24,4 +24,3 @@ for i in range(0, 2 * n - 1):
             minw = rs
 
 print(minw)
-

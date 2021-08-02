@@ -6,4 +6,3 @@ for ai in a:
 for ai, aj in map(sorted, list(zip(a, a[1:]))):
     res -= ai * (n - aj)
 print(res)
-

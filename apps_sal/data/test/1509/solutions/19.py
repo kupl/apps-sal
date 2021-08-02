@@ -9,4 +9,3 @@ for i, j in zip(a[:-1], a[1:]):
     else:
         ans += j * (i - j)
 print(ans)
-

@@ -2,15 +2,17 @@ n = int(input())
 L = list(map(int, input().split()))
 P = [-1 for _ in range(2000001)]
 
+
 def premier(n):
     if P[n] >= 0:
         return P[n]
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
             P[n] = False
             return False
     P[n] = True
     return True
+
 
 e = L.count(1)
 if n == 1:
@@ -24,10 +26,10 @@ elif e > 1:
     u = i
     ok = 0
     while i < n:
-        if premier(L[i]+1):
-            print(u+1)
+        if premier(L[i] + 1):
+            print(u + 1)
             for j in range(u):
-                print(1,end=" ")
+                print(1, end=" ")
             print(L[i])
             ok = 1
             break
@@ -35,15 +37,15 @@ elif e > 1:
     if ok == 0:
         print(u)
         for i in range(u):
-            print(1,end=" ")
+            print(1, end=" ")
 else:
     ok = 0
-    for i in range(n-1):  
-        for j in range(i+1,n):
-            t = premier(L[i]+L[j])
+    for i in range(n - 1):
+        for j in range(i + 1, n):
+            t = premier(L[i] + L[j])
             if t:
                 print(2)
-                print(str(L[i])+" "+str(L[j]))
+                print(str(L[i]) + " " + str(L[j]))
                 ok = 1
                 break
         if ok:
@@ -51,4 +53,3 @@ else:
     if ok == 0:
         print(1)
         print(L[0])
-

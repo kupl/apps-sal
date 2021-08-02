@@ -19,4 +19,3 @@ for i in range(n - 1):
         a2 = 0
     max2 = max(a2, max2)
 print(max(max1, max2))
-

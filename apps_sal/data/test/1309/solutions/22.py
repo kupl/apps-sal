@@ -16,11 +16,10 @@ for i in range(0, 2 * n):
         tw.pop(i)
         tw.pop(j - 1)
 
-        td = 0  
+        td = 0
         for k in range(0, len(tw), 2):
             td += tw[k + 1] - tw[k]
 
         d.append(td)
 
 print(min(d))
-

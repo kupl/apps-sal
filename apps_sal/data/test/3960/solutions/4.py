@@ -5,8 +5,9 @@ a = list(map(int, input().split(' ')))
 def sign(n):
     return [1, -1][n % 2]
 
-b1 = [abs(a[i]-a[i-1]) for i in range(1, len(a))]
-b1 = [sign(i)*b1[i] for i in range(len(b1))]
+
+b1 = [abs(a[i] - a[i - 1]) for i in range(1, len(a))]
+b1 = [sign(i) * b1[i] for i in range(len(b1))]
 b2 = [-x for x in b1]
 
 max_ending_here = b1[0]
@@ -46,4 +47,3 @@ for i, x in enumerate(b1):
     max_so_far2 = max(max_so_far2, max_ending_here)
 
 print(max(max_so_far, max_so_far2))
-

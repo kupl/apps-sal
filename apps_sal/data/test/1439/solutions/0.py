@@ -14,13 +14,12 @@ for e in arr:
     for i in range(m):
         if t[i] == 1:
             d[i] = 1
-    #print(d)
+    # print(d)
     if d[0] == 1:
         break
 if d[0] == 1:
     print("YES")
 else:
     print("NO")
-#print(d)
-#print(arr)
-
+# print(d)
+# print(arr)

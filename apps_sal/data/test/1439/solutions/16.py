@@ -1,4 +1,4 @@
-n , m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 lst = list(map(int, input().split()))
 ans = set()
 for i in lst:
@@ -6,7 +6,7 @@ for i in lst:
         for j in ans.copy():
             ans.add((i + j) % m)
             ans.add(i % m)
-            
+
     else:
         ans.add(i % m)
     if 0 in ans:
@@ -14,5 +14,3 @@ for i in lst:
         break
 else:
     print('NO')
-    
-

@@ -18,4 +18,3 @@ for i in range(2 * n - 1):
                     tmp += w[k]
         ans = min(ans, tmp)
 print(ans)
-
