@@ -37,4 +37,3 @@ for _ in range(int(input())):
             ans.append(st(0, 1))
             ans.append(st(n - 1, n - 2))
 print('\n'.join(map(str, ans)))
-

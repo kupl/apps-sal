@@ -44,7 +44,7 @@ N, M = list(map(int, input().split()))
 adj = [set() for _ in range(N)]
 Un = UnionFind(N)
 for _ in range(M):
-    a, b = [int(x)-1 for x in input().split()]
+    a, b = [int(x) - 1 for x in input().split()]
     adj[a].add(b)
     adj[b].add(a)
 
@@ -55,7 +55,7 @@ for i in range(N):
         continue
     added.add(i)
     representative.add(i)
-    for j in range(i+1, N):
+    for j in range(i + 1, N):
         if j in added:
             continue
         if adj[i] == adj[j]:
@@ -70,9 +70,8 @@ if Un.component_NUM() == 3:
     for p in range(N):
         par = Un.find(p)
         if par not in list(group.keys()):
-            group[par] = len(group)+1
+            group[par] = len(group) + 1
         ans.append(group[par])
     print(" ".join(map(str, ans)))
 else:
     print(-1)
-

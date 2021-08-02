@@ -12,5 +12,3 @@ for i in range(0, N - 1):
         m = abs(s - 2 * data[i])
 
 print(m)
-
-

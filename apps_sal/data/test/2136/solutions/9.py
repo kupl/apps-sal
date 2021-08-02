@@ -6,15 +6,15 @@ for _ in range(t):
 
     a = arr[0][1]
     b = arr[1][0]
-    c = arr[n-2][n-1]
-    d = arr[n-1][n-2]
+    c = arr[n - 2][n - 1]
+    d = arr[n - 1][n - 2]
 
     if (a == b):
         ans = []
         if c == a:
-            ans.append([n-1, n])
+            ans.append([n - 1, n])
         if d == a:
-            ans.append([n, n-1])
+            ans.append([n, n - 1])
 
         print(len(ans))
         for item in ans:
@@ -35,10 +35,8 @@ for _ in range(t):
         if (a == c) and (b == d):
             print(2)
             print(1, 2)
-            print(n, n-1)
+            print(n, n - 1)
         else:
             print(2)
             print(2, 1)
-            print(n, n-1)
-    
-
+            print(n, n - 1)

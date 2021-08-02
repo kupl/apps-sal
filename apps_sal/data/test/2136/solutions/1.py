@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     maze = [input().strip() for _ in range(n)]
@@ -31,6 +32,7 @@ def main():
         print(len(ans))
         for row in ans:
             print(*row)
-    
+
+
 for _ in range(int(input())):
     main()

@@ -3,7 +3,7 @@ tt = int(input())
 
 for loop in range(tt):
 
-    n,k = map(int,input().split())
+    n, k = map(int, input().split())
     s = input()
 
     lis = [0] * n
@@ -15,8 +15,8 @@ for loop in range(tt):
         if s[i] == "1":
             now += 1
 
-            if i+k < n:
-                tmp[i+k] += 1
+            if i + k < n:
+                tmp[i + k] += 1
 
         lis[i] += now
 
@@ -25,13 +25,13 @@ for loop in range(tt):
     tmp = [0] * n
     now = 0
 
-    for i in range(n-1,-1,-1):
+    for i in range(n - 1, -1, -1):
 
         if s[i] == "1":
             now += 1
 
-            if i-k >= 0:
-                tmp[i-k] += 1
+            if i - k >= 0:
+                tmp[i - k] += 1
 
         lis[i] += now
         now -= tmp[i]
@@ -46,4 +46,4 @@ for loop in range(tt):
 
         tmp -= 1
 
-    print (ans)
+    print(ans)

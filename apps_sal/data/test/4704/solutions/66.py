@@ -8,4 +8,3 @@ rcum = np.cumsum(a[::-1])[:-1]
 ans = abs(cum - rcum[::-1])
 
 print((np.min(ans)))
-

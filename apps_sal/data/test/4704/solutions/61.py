@@ -10,4 +10,3 @@ for i in range(len(main) - 1):
     final = min(final, abs(beg - total))
 
 print(final)
-

@@ -1,4 +1,6 @@
-import sys, re, os
+import sys
+import re
+import os
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians, gcd
 from itertools import permutations, combinations, product, accumulate
@@ -33,13 +35,14 @@ def main():
     r = list(accumulate(reversed(A), add))
 
     ans = INF
-    for i in range(N-2):
-        ans = min(ans, abs(t[i] - r[-2-i]))
+    for i in range(N - 2):
+        ans = min(ans, abs(t[i] - r[-2 - i]))
 
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

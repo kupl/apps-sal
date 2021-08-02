@@ -31,4 +31,3 @@ for case_num in range(t):
         print(len(ans))
         for r, c in ans:
             print(r, c)
-

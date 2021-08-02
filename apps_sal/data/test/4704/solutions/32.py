@@ -37,10 +37,10 @@ def resolve():
     S = sum(A)
     T = []
     T.append(A[0])
-    for i in range(1, N-1):
-        T.append(T[i-1]+A[i])
+    for i in range(1, N - 1):
+        T.append(T[i - 1] + A[i])
     for t in T:
-        ans = min(ans, abs(S-2*t))
+        ans = min(ans, abs(S - 2 * t))
 
     print(ans)
 
@@ -48,5 +48,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

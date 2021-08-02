@@ -11,7 +11,6 @@ for i in range(n):
     r = int(p[1])
     while curr + x <= l:
         curr += x
-    tot += r-curr+1
-    curr = r+1
+    tot += r - curr + 1
+    curr = r + 1
 print(tot)
-

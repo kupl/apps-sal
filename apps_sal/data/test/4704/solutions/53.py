@@ -6,12 +6,12 @@ def main():
     cnt = 0
     ans = float('inf')
 
-    for i in range(n-1):
+    for i in range(n - 1):
         cnt += a[i]
-        ans = min(ans, abs(a_sum-cnt*2))
+        ans = min(ans, abs(a_sum - cnt * 2))
     else:
         print(ans)
 
 
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     main()

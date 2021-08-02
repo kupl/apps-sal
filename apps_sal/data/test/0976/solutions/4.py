@@ -13,4 +13,3 @@ for x in range(num):
     out += 1
     curr = end + 1
 print(out)
-

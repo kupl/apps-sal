@@ -19,4 +19,3 @@ for _ in range(t):
                 c += 1
                 prev = i
     print(c)
-

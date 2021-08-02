@@ -8,4 +8,3 @@ for _ in range(n):
     left = r + 1
 
 print(total)
-

@@ -7,4 +7,3 @@ for i in range(n):
     result += (l - cur) % x
     cur = r + 1
 print(result)
-

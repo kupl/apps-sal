@@ -13,7 +13,7 @@ for i in range(len(a)):
     while u[idx] == 0:
         u[idx] = 1
         idx = a[idx] - 1
-    
+
     if (u[idx] == 2):
         idx = i
         while u[idx] == 1:

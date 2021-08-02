@@ -10,18 +10,18 @@ class Found(Exception):
 def neighbours(M, i, j):
     res = []
     if i > 0:
-        res.append((i-1, j))
+        res.append((i - 1, j))
     if j > 0:
-        res.append((i, j-1))
-    if i+1 < len(M):
-        res.append((i+1, j))
-    if j+1 < len(M[0]):
-        res.append((i, j+1))
+        res.append((i, j - 1))
+    if i + 1 < len(M):
+        res.append((i + 1, j))
+    if j + 1 < len(M[0]):
+        res.append((i, j + 1))
     return res
 
 
 def bfs(M, i, j):
-    visited = [[False]*len(M[0]) for _ in range(len(M))]
+    visited = [[False] * len(M[0]) for _ in range(len(M))]
     visited[i][j] = True
     Q = deque()
     Q.append((i, j))
@@ -59,7 +59,7 @@ for t in range(T):
 
     try:
         if not count_G:
-            if M[n-1][m-1] == 'B':
+            if M[n - 1][m - 1] == 'B':
                 print('No')
             else:
                 print('Yes')
@@ -73,11 +73,10 @@ for t in range(T):
                             elif M[x][y] == 'G':
                                 print('No')
                                 raise Found()
-            accessible_G = bfs(M, n-1, m-1)
+            accessible_G = bfs(M, n - 1, m - 1)
             if accessible_G == count_G:
                 print('Yes')
             else:
                 print('No')
     except Found:
         pass
-

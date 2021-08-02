@@ -39,4 +39,3 @@ for i in range(n):
     ans += cur if cur < 10**5 else 0
 
 print(ans)
-

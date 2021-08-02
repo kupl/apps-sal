@@ -25,4 +25,3 @@ for t in range(T):
                     prev_one = i
 
     print(res)
-

@@ -10,4 +10,3 @@ for i in range(1, n):
     delta = abs(temp1 - temp2)
     ans = min(delta, ans)
 print(ans)
-

@@ -4,7 +4,7 @@ readline = sys.stdin.readline
 
 N = int(readline())
 C = list(map(int, readline().split()))
-A = list(map(lambda x: int(x)-1, readline().split()))
+A = list(map(lambda x: int(x) - 1, readline().split()))
 
 
 inf = 10**9
@@ -27,7 +27,7 @@ for i in range(N):
             break
         seen.add(vf)
         stack.append(vf)
-        
+
     if st is not None:
         vn = st
         cnt = C[vn]
