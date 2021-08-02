@@ -1,2 +1,2 @@
 n, x, t = map(int, input().split())
-print(-(-n//x)*t)
+print(-(-n // x) * t)

@@ -3,7 +3,7 @@ import numpy as np
 N = int(input())
 AB = [tuple(map(int, input().split())) for _ in range(N)]
 
-AB_sort = sorted(AB, key = lambda x: x[1])
+AB_sort = sorted(AB, key=lambda x: x[1])
 
 A = [x[0] for x in AB_sort]
 B = [x[1] for x in AB_sort]
@@ -16,4 +16,3 @@ for i in range(N):
         return
 
 print('Yes')
-

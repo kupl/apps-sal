@@ -1,6 +1,6 @@
 N = int(input())
-AB = [list(map(int,input().split())) for i in range(N)]
-AB.sort(key=lambda x:x[1])
+AB = [list(map(int, input().split())) for i in range(N)]
+AB.sort(key=lambda x: x[1])
 time = 0
 ans = "Yes"
 for i in range(N):

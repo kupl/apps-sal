@@ -20,8 +20,7 @@ for name in book:
     tt.add(t[-1])
 print(len(book_cool))
 for i in book_cool:
-    print(i, len(book_cool[i]), end = ' ')
+    print(i, len(book_cool[i]), end=' ')
     for j in book_cool[i]:
-        print(j[::-1], end = ' ')
+        print(j[::-1], end=' ')
     print()
-    

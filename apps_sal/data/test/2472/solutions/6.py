@@ -1,6 +1,6 @@
 n = int(input())
 al = list(list(map(int, input().split())) for _ in range(n))
-al_s = sorted(al, key=lambda x:x[1])
+al_s = sorted(al, key=lambda x: x[1])
 
 time_sum = 0
 for i in range(n):
@@ -11,4 +11,3 @@ for i in range(n):
         return
 else:
     print('Yes')
-

@@ -10,8 +10,8 @@ for i in range(n):
 print(len(d))
 for x in d:
     a = d[x]
-    a.sort(reverse = True)
-    ##print(a)
+    a.sort(reverse=True)
+    # print(a)
     b = [a[0]]
     for i in range(1, len(a)):
         if a[i - 1][:len(a[i])] != a[i]:
@@ -19,4 +19,3 @@ for x in d:
     for i in range(len(b)):
         b[i] = b[i][::-1]
     print(x, len(b), *b)
-

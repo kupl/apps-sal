@@ -1,9 +1,9 @@
 n = int(input())
-l = [0]*n
+l = [0] * n
 for i in range(n):
-    l[i] = list(map(int,input().split()))
+    l[i] = list(map(int, input().split()))
 
-l.sort(key = lambda x:x[1])
+l.sort(key=lambda x: x[1])
 
 cnt = 0
 for i in range(n):

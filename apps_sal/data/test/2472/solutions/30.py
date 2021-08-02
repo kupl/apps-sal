@@ -1,21 +1,21 @@
-time=0
-n=int(input())
-todo=[]*n
+time = 0
+n = int(input())
+todo = [] * n
 
 for i in range(n):
-  a,b=map(int, input().split())
-  todo.append([b,a])
+    a, b = map(int, input().split())
+    todo.append([b, a])
 
 todo.sort()
-d=True
+d = True
 
 for i in range(n):
-  time += todo[i][1]
-  if todo[i][0]<time:
-    d=False
-    break
+    time += todo[i][1]
+    if todo[i][0] < time:
+        d = False
+        break
 
 if d:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

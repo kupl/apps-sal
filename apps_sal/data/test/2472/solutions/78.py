@@ -3,7 +3,7 @@ t = [0] * N
 for i in range(N):
     t[i] = list(map(int, input().split()))
 
-t = sorted(t, key = lambda x: x[1])
+t = sorted(t, key=lambda x: x[1])
 
 n = 0
 d = 0

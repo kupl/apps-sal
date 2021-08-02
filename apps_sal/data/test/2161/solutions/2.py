@@ -20,4 +20,3 @@ for i in range(n):
 print(len(friends))
 for name in friends:
     print('{} {} {}'.format(name, len(friends[name]), ' '.join(friends[name])))
-

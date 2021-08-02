@@ -1,7 +1,7 @@
 N = int(input())
 Dic = dict()
 for i in range(N):
-    A,B = list(map(int,input().split()))
+    A, B = list(map(int, input().split()))
     if B not in Dic:
         Dic[B] = A
     else:
@@ -9,13 +9,12 @@ for i in range(N):
 Deadlines = sorted(Dic)
 Time = 0
 for Deadline in Deadlines:
-    if Time+Dic[Deadline] <= Deadline:
+    if Time + Dic[Deadline] <= Deadline:
         Time += Dic[Deadline]
     else:
         Ans = 'No'
 try:
-    if Ans =='No':
+    if Ans == 'No':
         print(Ans)
 except:
     print('Yes')
-

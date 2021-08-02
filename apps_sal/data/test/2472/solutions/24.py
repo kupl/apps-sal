@@ -9,9 +9,9 @@ N = int(input())
 W = list()
 for i in range(N):
     a, b = map(int, input().split())
-    W.append((a,b))
+    W.append((a, b))
 
-W.sort(key= lambda x:x[1])
+W.sort(key=lambda x: x[1])
 
 res = 0
 for i in range(N):

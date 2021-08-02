@@ -1,1 +1,1 @@
-print(1 if input()=="0" else 0)
+print(1 if input() == "0" else 0)

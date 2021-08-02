@@ -1,7 +1,7 @@
 N = int(input())
 inputs = [tuple(map(int, input().split(' '))) for i in range(N)]
 
-inputs = sorted(inputs, key=lambda x:x[1])
+inputs = sorted(inputs, key=lambda x: x[1])
 
 time = 0
 for ai, bi in inputs:
@@ -9,6 +9,6 @@ for ai, bi in inputs:
     if time > bi:
         print('No')
         break
-    
+
 if time <= bi:
     print('Yes')

@@ -3,8 +3,8 @@ N = int(input())
 work = [[] for i in range(N)]
 
 for i in range(N):
-    a,b = map(int,input().split())
-    work[i] = [b,a]
+    a, b = map(int, input().split())
+    work[i] = [b, a]
 
 work.sort()
 total = 0

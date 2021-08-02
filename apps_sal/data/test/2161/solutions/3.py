@@ -1,9 +1,12 @@
+from collections import defaultdict
 n = int(input())
+
 
 def is_suffix(phone, p):
     if len(p) <= len(phone):
         return False
     return phone == p[-len(phone):]
+
 
 def is_any_suffix(phone, phones):
     for p in phones:
@@ -11,7 +14,6 @@ def is_any_suffix(phone, phones):
             return True
     return False
 
-from collections import defaultdict
 
 name_map = defaultdict(list)
 for i in range(n):
@@ -29,4 +31,3 @@ for name in name_map:
         if not is_any_suffix(phone, phones) and phone not in final_phones:
             final_phones.add(phone)
     print(name, len(final_phones), ' '.join(final_phones))
-

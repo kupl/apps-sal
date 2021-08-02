@@ -7,7 +7,7 @@ for i in range(N):
 
     limit2time.append((limit, time))
 
-limit2time  = sorted(limit2time, key=lambda x: x[0])
+limit2time = sorted(limit2time, key=lambda x: x[0])
 
 # print(limit2time)
 cur = 0

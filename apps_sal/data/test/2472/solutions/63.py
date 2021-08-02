@@ -1,7 +1,7 @@
 n = int(input())
 l = [list(map(int, input().split())) for i in range(n)]
 
-l.sort(key=lambda l:l[1])
+l.sort(key=lambda l: l[1])
 
 t = 0
 

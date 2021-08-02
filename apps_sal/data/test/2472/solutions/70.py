@@ -15,4 +15,5 @@ def __starting_point():
         return
     print("No")
 
+
 __starting_point()

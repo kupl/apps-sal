@@ -1,4 +1,4 @@
-i = int (input())
+i = int(input())
 if i == 1:
     print(0)
 else:

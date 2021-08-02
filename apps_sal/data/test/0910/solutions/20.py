@@ -23,4 +23,3 @@ else:
 
         rev = not rev
         akt += b
-

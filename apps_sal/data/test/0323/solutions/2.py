@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 a, b = read()
 x = min(a, b)
 ans = 1

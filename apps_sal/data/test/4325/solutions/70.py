@@ -1,8 +1,8 @@
-N,X,T = map(int, input().split())
+N, X, T = map(int, input().split())
 
-if(N%X==0):
-    count = N//X
+if(N % X == 0):
+    count = N // X
 else:
-    count = N//X + 1
+    count = N // X + 1
 
 print(count * T)

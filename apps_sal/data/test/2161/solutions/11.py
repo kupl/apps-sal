@@ -13,10 +13,9 @@ for i in p:
         if not i in o:
             o[i] = []
         for z in o[i]:
-            f |= x[1]==z or (x[0]<len(z) and x[1]==z[:x[0]])
+            f |= x[1] == z or (x[0] < len(z) and x[1] == z[:x[0]])
         if not f:
             o[i].append(x[1])
 print(len(o))
 for i in o:
     print(i + ' ' + str(len(o[i])) + ' ' + ' '.join(x[::-1] for x in o[i]))
-

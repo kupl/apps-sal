@@ -4,4 +4,6 @@ def __starting_point():
         print(0)
     elif x == 0:
         print(1)
+
+
 __starting_point()

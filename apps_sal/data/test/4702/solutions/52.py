@@ -1,2 +1,2 @@
 x = int(input())
-print(1-x)
+print(1 - x)

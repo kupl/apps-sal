@@ -21,4 +21,3 @@ for k, v in d.items():
         if e != '-':
             print(e, end=' ')
     print()
-

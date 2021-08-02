@@ -8,6 +8,7 @@ def Input():
 
 def main():
     a, b = Input()
-    print(a+b if b%a==0 else b-a)
+    print(a + b if b % a == 0 else b - a)
+
 
 main()

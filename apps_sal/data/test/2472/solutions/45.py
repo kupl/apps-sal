@@ -10,7 +10,7 @@ ab = ab[ab[:, 1].argsort()]
 
 total_time = 0
 flag = 0
-for _a, _b in zip(ab[:,0], ab[:, 1]):
+for _a, _b in zip(ab[:, 0], ab[:, 1]):
     total_time += _a
     if total_time > _b:
         flag = 1
@@ -20,4 +20,3 @@ if flag:
     print('No')
 else:
     print('Yes')
-

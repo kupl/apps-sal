@@ -1,14 +1,13 @@
-N=int(input())
-li_=[]
+N = int(input())
+li_ = []
 for i in range(N):
-  A,B=list(map(int,input().split()))
-  li_.append((B,A))
+    A, B = list(map(int, input().split()))
+    li_.append((B, A))
 li_.sort()
-time=0
+time = 0
 for i in range(N):
-  time+=li_[i][1]
-  if time>li_[i][0]:
-    print("No")
-    return
+    time += li_[i][1]
+    if time > li_[i][0]:
+        print("No")
+        return
 print("Yes")
-

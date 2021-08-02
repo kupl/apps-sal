@@ -1,4 +1,4 @@
-n, x, t = map(int,input().split())
+n, x, t = map(int, input().split())
 result = n // x
 # if n > x:
 #     result += 1

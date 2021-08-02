@@ -1,6 +1,6 @@
 n = int(input())
 ab = [list(map(int, input().split())) for _ in range(n)]
-ab.sort(key = lambda x: x[1])
+ab.sort(key=lambda x: x[1])
 time = 0
 ans = "Yes"
 for i in range(n):
@@ -11,4 +11,3 @@ for i in range(n):
         ans = "No"
         break
 print(ans)
-

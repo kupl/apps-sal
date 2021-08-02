@@ -1,6 +1,7 @@
 import sys
 
-inf = 1<<30
+inf = 1 << 30
+
 
 def solve():
     n = int(input())
@@ -46,6 +47,9 @@ def solve():
     ans = dp[n]
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

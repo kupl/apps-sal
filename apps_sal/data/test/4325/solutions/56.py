@@ -12,4 +12,3 @@ T = A[2]
 
 
 print((math.ceil(N / X) * T))
-
