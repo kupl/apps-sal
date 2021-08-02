@@ -25,7 +25,7 @@ def abc168d_double_dots():
                 q.append(next_room)
                 cnt += 1
 
-    if cnt != n-1:
+    if cnt != n - 1:
         print('No')
         return
     print('Yes')

@@ -1,4 +1,4 @@
-A,B,C,K = map(int,input().split())
+A, B, C, K = map(int, input().split())
 ans = 0
 if(A >= K):
     ans = K

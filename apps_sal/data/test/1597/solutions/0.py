@@ -6,6 +6,7 @@ nodes = []
 pairs = []
 res = 0
 
+
 class Node:
     def __init__(self):
         self.ch = {}
@@ -48,12 +49,13 @@ class Node:
             res += self.d
         return res
 
+
 sys.setrecursionlimit(2000000)
 _input = sys.stdin.readlines()
 _input = [s[:-1] for s in _input]
 N = int(_input[0])
-A = _input[1 : N + 1]
-B = _input[N + 1 :]
+A = _input[1: N + 1]
+B = _input[N + 1:]
 T = Node()
 nodes.append(T)
 for i, s in enumerate(A):
@@ -64,4 +66,3 @@ for n in reversed(nodes):
     n.solve()
 print(res)
 print('\n'.join(pairs))
-

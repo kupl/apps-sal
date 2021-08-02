@@ -11,7 +11,7 @@ for i in range(m):
 
 #  print(graph)
 
-mark = [-1]*(n+1)
+mark = [-1] * (n + 1)
 mark[0] = 0
 mark[1] = 0
 

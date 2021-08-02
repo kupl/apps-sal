@@ -28,4 +28,3 @@ while d:
 print('Yes')
 for i in range(1, N):
     print((par[i] + 1))
-

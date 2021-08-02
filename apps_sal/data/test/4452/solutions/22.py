@@ -7,7 +7,6 @@ for _ in range(t):
     ans = []
     for i, c in zip(list(range(100)), reversed(n)):
         if c != '0':
-            ans.append(c + '0'*i)
+            ans.append(c + '0' * i)
     print(len(ans))
     print(*ans)
-

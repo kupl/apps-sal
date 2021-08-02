@@ -4,12 +4,12 @@ n, m = list(map(int, input().split()))
 adj_list = [[] for i in range(n)]
 
 for i in range(m):
-  _, __ = list(map(int, input().split()))
-  _ -= 1
-  __ -= 1
-  adj_list[_].append(__)
-  adj_list[__].append(_)
-  
+    _, __ = list(map(int, input().split()))
+    _ -= 1
+    __ -= 1
+    adj_list[_].append(__)
+    adj_list[__].append(_)
+
 distance = [None for i in range(n)]
 updated_from = [None for i in range(n)]
 
@@ -17,16 +17,17 @@ newly_visited = deque([0])
 distance[0] = 0
 
 while len(newly_visited) > 0:
-  now = newly_visited.popleft()
-  for i in adj_list[now]:
-    if distance[i] is not None: continue
-    newly_visited.append(i)
-    distance[i] = distance[now] + 1
-    updated_from[i] = now
+    now = newly_visited.popleft()
+    for i in adj_list[now]:
+        if distance[i] is not None:
+            continue
+        newly_visited.append(i)
+        distance[i] = distance[now] + 1
+        updated_from[i] = now
 
 # i に到達できてれば distance[i] ==（0 から i までの距離）
-# i に到達できてなければ distance[i] == None   
-    
+# i に到達できてなければ distance[i] == None
+
 """
 print(distance)
 
@@ -42,7 +43,4 @@ for i in range(n):
 
 print("Yes")
 for i in range(1, n):
-  print((updated_from[i] + 1))
-
-
-
+    print((updated_from[i] + 1))

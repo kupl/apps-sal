@@ -1,9 +1,9 @@
 # import itertools
 # import math
-import sys
-sys.setrecursionlimit(500*500)
-# import numpy as np
 from collections import deque
+import sys
+sys.setrecursionlimit(500 * 500)
+# import numpy as np
 
 # N = int(input())
 # S = input()
@@ -57,7 +57,7 @@ N, M = map(int, input().split())
 #     return arr
 
 tree = [[] for _ in range(N + 1)]
-edges = [list(map(int,input().split())) for _ in range(M)]
+edges = [list(map(int, input().split())) for _ in range(M)]
 
 for edge in edges:
     tree[edge[0]].append(edge[1])
@@ -71,13 +71,13 @@ d.append(1)
 
 ans = [0] * (N + 1)
 while d:
- v = d.popleft()
- for i in tree[v]:
-   if depth[i] != -1:
-     continue
-   depth[i] = depth[v] + 1
-   ans[i] = v
-   d.append(i)
+    v = d.popleft()
+    for i in tree[v]:
+        if depth[i] != -1:
+            continue
+        depth[i] = depth[v] + 1
+        ans[i] = v
+        d.append(i)
 
 # ans = depth[2:]
 print('Yes')

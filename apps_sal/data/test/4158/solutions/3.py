@@ -1,5 +1,5 @@
 def is_power2(num):
-	return ((num & (num - 1)) == 0)
+    return ((num & (num - 1)) == 0)
 
 
 def maybeAdd(dot, peers):
@@ -7,6 +7,7 @@ def maybeAdd(dot, peers):
         if not is_power2(abs(dot - peer)):
             return False
     peers.append(dot)
+
 
 n = int(input())
 dots = list(map(int, input().split()))
@@ -37,4 +38,3 @@ for dot in dots:
 
 print(len(ans))
 print(*ans)
-

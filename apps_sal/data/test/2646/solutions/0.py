@@ -5,8 +5,8 @@ L = [list(map(int, input().split())) for _ in range(M)]
 link = [[] for _ in range(N)]
 
 for i in range(M):
-    link[L[i][0]-1].append(L[i][1]-1)
-    link[L[i][1]-1].append(L[i][0]-1)
+    link[L[i][0] - 1].append(L[i][1] - 1)
+    link[L[i][1] - 1].append(L[i][0] - 1)
 
 checked = [-1 for _ in range(N)]
 checked[0] = 0

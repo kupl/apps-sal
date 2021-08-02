@@ -1,5 +1,7 @@
 from collections import deque
 import sys
+
+
 def bfs(graph, N, start):
     visited = [0] * N
     visited[start] = 1
@@ -12,7 +14,9 @@ def bfs(graph, N, start):
                 que.append(n)
     return visited
 
+
 input = sys.stdin.readline
+
 
 def main():
     N, M = map(int, input().split())

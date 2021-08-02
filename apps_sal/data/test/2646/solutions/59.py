@@ -2,14 +2,14 @@ from collections import deque
 
 N, M = map(int, input().split())
 
-graph = [[] for _ in range(N+1)]
+graph = [[] for _ in range(N + 1)]
 
 for i in range(M):
     A, B = map(int, input().split())
     graph[A].append(B)
     graph[B].append(A)
 
-parents = [-1] * (N+1)
+parents = [-1] * (N + 1)
 parents[0] = 0
 parents[1] = 0
 

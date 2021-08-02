@@ -1,7 +1,8 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
 
-A,B,C,K = map(int,input().split())
+
+A, B, C, K = map(int, input().split())
 
 point = 0
 

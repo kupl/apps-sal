@@ -1,7 +1,7 @@
-a,b,c,k = map(int,input().split())
+a, b, c, k = map(int, input().split())
 ans = 0
-if(a>=k):
-  ans = k
+if(a >= k):
+    ans = k
 else:
-  ans = a - ((k-a-b)*1)  
+    ans = a - ((k - a - b) * 1)
 print(ans)

@@ -1,13 +1,13 @@
 # 参考にした提出:https://atcoder.jp/contests/abc168/submissions/16604668 #
 from collections import deque
-n,m = map(int,input().split())
-l = [[] for i in range(n+1)]
+n, m = map(int, input().split())
+l = [[] for i in range(n + 1)]
 for i in range(m):
-    a,b = map(int,input().split())
+    a, b = map(int, input().split())
     l[a].append(b)
     l[b].append(a)
-d = [-1] * (n+1)
-d[0],d[1] = 0,0
+d = [-1] * (n + 1)
+d[0], d[1] = 0, 0
 queue = deque()
 queue.append(1)
 while queue:

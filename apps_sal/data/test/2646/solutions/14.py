@@ -24,4 +24,3 @@ while q:
 
 for i in range(1, N):
     print((d[i]))
-

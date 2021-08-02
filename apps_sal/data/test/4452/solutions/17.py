@@ -1,4 +1,4 @@
-from sys import stdin, stdout  
+from sys import stdin, stdout
 #input = stdin.readline
 #print = stdout.write
 
@@ -10,4 +10,3 @@ for _ in range(int(input())):
             res.append(i + '0' * (len(x) - ind - 1))
     print(len(res))
     print(*res)
-

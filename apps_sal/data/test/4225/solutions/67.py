@@ -5,4 +5,4 @@ if A >= K:
 elif A + B >= K:
     print(A)
 else:
-    print(A-(K-A-B))
+    print(A - (K - A - B))

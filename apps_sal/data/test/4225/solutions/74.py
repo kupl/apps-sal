@@ -5,4 +5,3 @@ if a >= k:
 else:
     ans = a * 1 + max(0, (k - a)) * 0 + max(0, (k - a - b)) * (-1)
 print(ans)
-

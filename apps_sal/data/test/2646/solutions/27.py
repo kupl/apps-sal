@@ -42,4 +42,3 @@ d, prev = dijkstra(0, n, es)
 print("Yes")
 for i in range(1, n):
     print((prev[i] + 1))
-

@@ -1,12 +1,12 @@
 from collections import deque
 
-n, m =map(int, input().split())
+n, m = map(int, input().split())
 
-ans = [-1 for _ in range(n+1)]
+ans = [-1 for _ in range(n + 1)]
 ans[0] = 0
 ans[1] = 0
 
-V = [[] for _ in range(n+1)]
+V = [[] for _ in range(n + 1)]
 
 for _ in range(m):
     x, y = map(int, input().split())
@@ -22,12 +22,10 @@ while d:
             continue
         ans[v] = l
         d.append(v)
-        
 
-    
+
 if ans.count(-1) > 0:
     print('No')
-else :
+else:
     print('Yes')
     print(*ans[2:], sep="\n")
-

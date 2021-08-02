@@ -6,11 +6,12 @@ def main() -> None:
     elif k <= a + b:
         print(a)
     else:
-        print((a - (k-a-b)))
+        print((a - (k - a - b)))
     return
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

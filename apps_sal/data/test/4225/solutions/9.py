@@ -10,4 +10,3 @@ k -= min(b, k)
 ans -= min(c, k)
 
 print(ans)
-

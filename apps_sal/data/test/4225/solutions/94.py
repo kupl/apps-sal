@@ -7,5 +7,6 @@ def easy_linear_programming():
     else:
         k = K - A - B
         print(A - k)
-        
+
+
 easy_linear_programming()

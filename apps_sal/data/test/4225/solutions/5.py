@@ -1,7 +1,7 @@
 a, b, c, k = map(int, input().split())
 if k <= a:
-  print(k)
+    print(k)
 elif a < k <= a + b:
-  print(a)
+    print(a)
 else:
-  print(a - (k - a - b))
+    print(a - (k - a - b))

@@ -2,7 +2,7 @@ from collections import deque
 
 N, M = map(int, input().split())
 
-G = [[] for _ in range(N+1)]
+G = [[] for _ in range(N + 1)]
 m = [tuple(map(int, input().split())) for _ in range(M)]
 
 for a, b in m:
@@ -25,4 +25,3 @@ while q:
         q.append(w)
 print('Yes')
 print(*par[2:], sep='\n')
-    

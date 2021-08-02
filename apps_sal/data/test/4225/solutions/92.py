@@ -6,4 +6,3 @@ elif k <= a + b:
     print(a)
 else:
     print((2 * a + b - k))
-

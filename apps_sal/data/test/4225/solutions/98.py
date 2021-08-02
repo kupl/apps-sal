@@ -5,5 +5,4 @@ if K <= A:
 elif A < K <= A + B:
     print(A)
 elif A + B < K <= A + B + C:
-    print((2*A+B-K))
-
+    print((2 * A + B - K))

@@ -1,8 +1,8 @@
 
+import marshal
+from collections import deque
 import sys
 input = sys.stdin.readline
-from collections import deque
-import marshal
 
 
 class Graph:
@@ -12,10 +12,10 @@ class Graph:
         self.decrement = decrement
         self.destroy = destroy
         self.edges = [set() for _ in range(self.n)]
-        self.parent = [-1]*self.n
-        self.info = [-1]*self.n
+        self.parent = [-1] * self.n
+        self.info = [-1] * self.n
         for x, y in edges:
-            self.add_edge(x,y)
+            self.add_edge(x, y)
 
     def add_edge(self, x, y):
         if self.decrement:
@@ -75,7 +75,7 @@ class Graph:
         :param start: スタート地点
         :return: スタート地点から各点への距離のリスト
         """
-        dist = [-1]*self.n
+        dist = [-1] * self.n
         if self.decrement:
             start -= 1
         if not save:
@@ -97,6 +97,7 @@ class Graph:
 
 ##################################################################################################
 
+
 N, M = map(int, input().split())
 graph = Graph(N, directed=False, decrement=True, destroy=False)
 for _ in range(M):
@@ -107,5 +108,4 @@ if -1 in graph.distance_list():
     print("No")
 else:
     print("Yes")
-    print(*list(p+1 for p in graph.parent[1:]), sep="\n")
-
+    print(*list(p + 1 for p in graph.parent[1:]), sep="\n")

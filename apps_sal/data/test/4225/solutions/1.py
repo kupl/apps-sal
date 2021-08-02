@@ -5,5 +5,4 @@ if k <= a:
 if a < k <= a + b:
     print(a)
 if a + b < k <= a + b + c:
-    print((a -(k - (a + b))))
-
+    print((a - (k - (a + b))))

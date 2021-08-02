@@ -13,5 +13,4 @@ elif k <= b:
     print(ans)
     return
 
-print((ans-k))
-
+print((ans - k))

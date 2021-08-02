@@ -3,7 +3,7 @@ def main():
 
     sum = 0
 
-    n = k-a
+    n = k - a
     if n <= 0:
         sum = k
         print(sum)
@@ -11,16 +11,16 @@ def main():
     else:
         sum = a
 
-    n = n-b
+    n = n - b
     if n <= 0:
         print(sum)
         return
-    
-    n = n-c
+
+    n = n - c
     if n <= 0:
-        sum = sum - (k-(a+b))
+        sum = sum - (k - (a + b))
         print(sum)
         return
+
 
 main()
-

@@ -13,7 +13,7 @@ from fractions import Fraction
 mod = pow(10, 9) + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
-def out(*var, end="\n"): sys.stdout.write(" ".join(map(str, var))+end)
+def out(*var, end="\n"): sys.stdout.write(" ".join(map(str, var)) + end)
 def l(): return list(sp())
 def sl(): return list(ssp())
 def sp(): return list(map(int, data().split()))
@@ -28,8 +28,7 @@ for _ in range(int(data())):
     i = 0
     while i < len(n):
         if n[i] != '0':
-            answer.append(int(n[i]) * pow(10, len(n)-i-1))
+            answer.append(int(n[i]) * pow(10, len(n) - i - 1))
         i += 1
     out(len(answer))
     out(*answer)
-

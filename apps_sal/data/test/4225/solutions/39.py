@@ -11,4 +11,3 @@ elif k <= a + b + c:
     print((2 * a + b - k))
 else:
     print((a - c))
-

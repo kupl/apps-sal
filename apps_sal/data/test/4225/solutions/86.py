@@ -2,10 +2,10 @@ A, B, C, K = list(map(int, input().split()))
 
 ans = 0
 if A > K:
-  print(K)
+    print(K)
 elif A == K:
-  print(A)
+    print(A)
 elif A + B >= K:
-  print(A)
+    print(A)
 else:
-  print(A - (K - A - B))
+    print(A - (K - A - B))

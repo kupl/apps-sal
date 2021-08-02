@@ -5,7 +5,7 @@ for zz in range(int(input())):
     cp = 10
     ans = []
     while n > 0:
-        t = (n % cp) - n % (cp//10)
+        t = (n % cp) - n % (cp // 10)
         if t > 0:
             ans.append(t)
         n -= t
@@ -14,4 +14,3 @@ for zz in range(int(input())):
 
     print(len(ans))
     print(*ans)
-
