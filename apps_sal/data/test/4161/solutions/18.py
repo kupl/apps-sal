@@ -2,6 +2,7 @@ K = int(input())
 
 ans = 0
 
+
 def gcd(x, y):
     if x == 1 or y == 1:
         return 1
@@ -14,6 +15,7 @@ def gcd(x, y):
             if x == 0 or y == 0:
                 break
         return x + y
+
 
 for i in range(1, K + 1):
     for j in range(i, K + 1):

@@ -12,4 +12,3 @@ else:
         else:
             print(x - 1)
             break
-

@@ -13,8 +13,7 @@ for i in range(1, k + 1):
 
 for a in range(1, k + 1):
     for b in range(1, k + 1):
-        _gcd = math.gcd(a,b)
+        _gcd = math.gcd(a, b)
         ans += gcd_sum[_gcd]
 
 print(ans)
-

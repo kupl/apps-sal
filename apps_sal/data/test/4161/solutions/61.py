@@ -27,4 +27,3 @@ for a in range(1, k + 1):
             res += tmp[tmp[a][b]][c]
 
 print(res)
-

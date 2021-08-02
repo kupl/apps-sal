@@ -11,4 +11,3 @@ for i in range(1, n + 1):
             ans += gcd(gcd(i, j), k)
 
 print(ans)
-

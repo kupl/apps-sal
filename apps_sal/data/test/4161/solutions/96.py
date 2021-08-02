@@ -18,4 +18,3 @@ for a in range(1, k + 1):
             else:
                 ans += 6 * gcd(c, d)
 print(ans)
-
