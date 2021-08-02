@@ -9,17 +9,20 @@ def divisor(n):
     ret.sort()
     return ret
 
+
 def gcd(a, b):
     while b != 0:
         a, b = b, a % b
     return a
 
+
 def lcm(a, b):
     return a // gcd(a, b) * b
 
+
 def solve():
     inf = 1 << 60
-    a, b = list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
     if a > b:
         a, b = b, a
     if a == b:
@@ -43,5 +46,5 @@ def solve():
                 best_k = min(best_k, k)
     return best_k
 
-print(solve())
 
+print(solve())

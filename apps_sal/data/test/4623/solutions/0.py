@@ -16,8 +16,7 @@ for _ in range(int(input())):
                 if (s - x) == x:
                     temp2 += count[x] // 2
                 else:
-                    temp += min(count[x], count[s -x])
-        
-        k = max(k, temp//2 + temp2)
-    print(k)
+                    temp += min(count[x], count[s - x])
 
+        k = max(k, temp // 2 + temp2)
+    print(k)

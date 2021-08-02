@@ -12,5 +12,3 @@ if h < max(a):
 else:
     ans += a[-1] - 1
 print(ans)
-        
-

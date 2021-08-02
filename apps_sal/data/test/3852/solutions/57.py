@@ -50,4 +50,3 @@ if len(ans) == 0:
 print((len(ans)))
 for i, j in ans:
     print((i + 1, j + 1))
-

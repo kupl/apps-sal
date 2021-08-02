@@ -21,6 +21,7 @@ def solve():
         ans = max(ans, cans)
     print(ans)
 
+
 t = int(input())
 for _ in range(t):
     solve()

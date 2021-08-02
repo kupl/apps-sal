@@ -61,4 +61,4 @@ else:
 
 print("{}".format(len(res)))
 for i in range(len(res)):
-    print("{} {}".format(res[i][0]+1, res[i][1]+1))
+    print("{} {}".format(res[i][0] + 1, res[i][1] + 1))

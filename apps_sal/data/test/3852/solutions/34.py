@@ -26,4 +26,3 @@ for x, y in ANS:
     print((x + 1, y + 1))  # 1-index
 
 # print(A)
-

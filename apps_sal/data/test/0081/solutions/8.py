@@ -13,8 +13,10 @@ while i * i <= f:
 d = list(set(d))
 d.sort()
 
+
 def f(i):
     return (a + i) * (b + i) // gcd(a + i, b + i)
+
 
 x = float('inf')
 y = 0
@@ -26,5 +28,3 @@ for i in d:
         y = k
 
 print(y)
-
-

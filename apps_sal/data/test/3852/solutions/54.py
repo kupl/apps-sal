@@ -9,6 +9,7 @@ input = sys.stdin.readline
 sys.setrecursionlimit(1000000)
 mod = 10 ** 9 + 7
 
+
 def read_values(): return list(map(int, input().split()))
 def read_index(): return [int(x) - 1 for x in input().split()]
 def read_list(): return list(read_values())
@@ -36,7 +37,6 @@ def main():
                 ans.append((i, j + 1))
         for i in range(N - 1, 0, -1):
             ans.append((i + 1, i))
-
 
     print((len(ans)))
     for a, b in ans:

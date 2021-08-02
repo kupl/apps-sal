@@ -11,4 +11,3 @@ for i in a:
         ans += i - 1
 ans -= mx - t
 print(ans)
-

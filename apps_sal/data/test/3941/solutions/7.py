@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 
+from collections import defaultdict
+
+
 def _vertex(lit):
     if lit > 0:
         return 2 * (lit - 1)
     else:
         return 2 * (-lit - 1) + 1
+
 
 def tarjan(graph):
     n = len(graph)
@@ -51,6 +55,7 @@ def tarjan(graph):
                         to_visit.append(child)
     return sccp
 
+
 def two_sat(formula):
     n = max(abs(clause[p]) for p in (0, 1) for clause in formula)
     graph = [[] for node in range(2 * n)]
@@ -64,32 +69,31 @@ def two_sat(formula):
         rep = min(component)
         for vtx in component:
             comp_id[vtx] = rep
-            #if assignment[vtx] is None:
+            # if assignment[vtx] is None:
             #    assignment[vtx] = True
             #    assignment[vtx ^ 1] = False
     for i in range(n):
         if comp_id[2 * i] == comp_id[2 * i + 1]:
             return "NO"
     return "YES"
-    #return assignment[::2]
+    # return assignment[::2]
 
 
 n, m = [int(x) for x in input().split()]
 doors_status = [int(x) for x in input().split()]
 switches = [list(map(int, input().split())) for _ in range(m)]
 
-from collections import defaultdict
 switches_of = defaultdict(list)
-for switch in range(1, m+1):
-    for door in switches[switch-1][1:]:
+for switch in range(1, m + 1):
+    for door in switches[switch - 1][1:]:
         switches_of[door].append(switch)
 
 LOCKED = 0
 UNLOCKED = 1
 formula = []
-for door in range(1, n+1):
+for door in range(1, n + 1):
     s1, s2 = switches_of[door]
-    if doors_status[door-1] == LOCKED:
+    if doors_status[door - 1] == LOCKED:
         formula.append((s1, s2))
         formula.append((-s1, -s2))
     else:
@@ -97,4 +101,3 @@ for door in range(1, n+1):
         formula.append((-s1, s2))
 
 print(two_sat(formula))
-

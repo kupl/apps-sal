@@ -3,6 +3,7 @@ read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 
+
 def main():
     N = int(readline())
     a = list(map(int, readline().split()))
@@ -34,7 +35,9 @@ def main():
     for i, j in ans:
         print((i, j))
 
+
 def __starting_point():
-   main()
+    main()
+
 
 __starting_point()

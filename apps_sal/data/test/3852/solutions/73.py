@@ -15,17 +15,16 @@ for i in range(n):
 
 if a[mx_i] > 0:
     for i in range(n - 1):
-        if a[i] > a[i+1]:
-            a[i+1] += a[i]
+        if a[i] > a[i + 1]:
+            a[i + 1] += a[i]
             ans.append([i + 1, i + 2])
 
 else:
     for i in range(n - 1, 0, -1):
-        if a[i] < a[i-1]:
-            a[i-1] += a[i]
+        if a[i] < a[i - 1]:
+            a[i - 1] += a[i]
             ans.append([i + 1, i])
 
 print((len(ans)))
 for row in ans:
     print((*row))
-

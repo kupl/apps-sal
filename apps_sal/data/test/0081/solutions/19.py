@@ -1,13 +1,16 @@
 def mp():
     return map(int, input().split())
 
+
 def gcd(a, b):
     if a == 0:
         return b
     return gcd(b % a, a)
 
+
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 a, b = mp()
 a, b = min(a, b), max(a, b)
@@ -25,7 +28,7 @@ kk = 0
 m = 10 ** 20
 for d in x:
     r = (a + d - 1) // d
-    k = r * d - a    
+    k = r * d - a
     if lcm(a + k, b + k) < m:
         m = lcm(a + k, b + k)
         kk = k

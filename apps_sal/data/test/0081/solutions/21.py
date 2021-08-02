@@ -32,4 +32,3 @@ else:
                 ans = k
 
     print(ans)
-

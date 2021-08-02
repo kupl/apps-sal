@@ -40,6 +40,7 @@ class DSU:
 
         return r1
 
+
 door_dsus = [[] for i in range(n)]
 for doors in controls:
     n = DSU()
@@ -56,7 +57,7 @@ for door, is_open in enumerate(r):
     n1, n2 = door_dsus[door]
 
     if is_open:
-         n1.unite(n2)
+        n1.unite(n2)
 
 G = {}
 for door, is_open in enumerate(r):
@@ -92,4 +93,3 @@ for v in list(G.keys()):
                 q.append(adj_v)
 
 print("YES")
-
