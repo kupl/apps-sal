@@ -11,5 +11,4 @@ for i in range(M):
 res = list(itertools.chain.from_iterable(res))
 
 for i in range(N):
-    print((res.count(i+1)))
-
+    print((res.count(i + 1)))

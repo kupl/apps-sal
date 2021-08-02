@@ -7,6 +7,5 @@ for i in range(m):
     k %= r - l
     a[l:r] = a[r - k: r] + a[l:r - k]
 for i in a:
-    print(s[i], sep = '', end = '')
+    print(s[i], sep='', end='')
 print()
-

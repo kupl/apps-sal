@@ -9,4 +9,3 @@ if N % total == 0:
 else:
     ans = "No"
 print(ans)
-

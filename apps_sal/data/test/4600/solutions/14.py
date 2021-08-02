@@ -1,10 +1,10 @@
-N,M = map(int, input().split())
-ans = [0]*N
+N, M = map(int, input().split())
+ans = [0] * N
 ac = 0
 p = 0
 
 for m in range(M):
-    a,b = map(str, input().split())
+    a, b = map(str, input().split())
     a = int(a) - 1
 
     if ans[a] != -1 and b == 'WA':
@@ -14,4 +14,4 @@ for m in range(M):
         p += ans[a]
         ans[a] = -1
 
-print(ac,p)
+print(ac, p)

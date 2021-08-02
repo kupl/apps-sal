@@ -5,5 +5,6 @@ def harshad(n):
     else:
         return False
 
+
 N = int(input())
 print('Yes' if harshad(N) else 'No')

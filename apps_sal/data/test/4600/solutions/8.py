@@ -1,13 +1,13 @@
-n, m= map(int, input().split())
-ps = [list(map(str,input().split())) for _ in range(m)]
+n, m = map(int, input().split())
+ps = [list(map(str, input().split())) for _ in range(m)]
 
-str_l = ["WA"]*n
-int_l = [0]*n
+str_l = ["WA"] * n
+int_l = [0] * n
 num = 0
 ac = 0
 
 for pp, s in ps:
-    p = int(pp)-1
+    p = int(pp) - 1
     if s == "AC":
         str_l[p] = "AC"
     else:
@@ -19,4 +19,4 @@ for i in range(n):
         num += int_l[i]
         ac += 1
 
-print(ac,num)
+print(ac, num)

@@ -4,7 +4,7 @@ wa = defaultdict(int)
 ac = {}
 for i in range(M):
     p, S = input().split()
-    if S == 'AC':        
+    if S == 'AC':
         ac[p] = True
     else:
         if p not in ac:

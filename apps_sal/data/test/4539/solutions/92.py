@@ -8,4 +8,3 @@ if N_int % N_wa == 0:
     print('Yes')
 else:
     print('No')
-

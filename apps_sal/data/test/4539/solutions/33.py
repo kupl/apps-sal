@@ -9,5 +9,5 @@ for i in str_N:
 
 if N % f == 0:
     print("Yes")
-else :
+else:
     print("No")

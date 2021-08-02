@@ -8,4 +8,3 @@ for ab in ab_list:
 
 for i in range(1, n + 1):
     print((results[i]))
-

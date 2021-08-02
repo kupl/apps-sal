@@ -16,4 +16,3 @@ elif c_wins > m_wins:
     print("Chris")
 else:
     print("Friendship is magic!^^")
-

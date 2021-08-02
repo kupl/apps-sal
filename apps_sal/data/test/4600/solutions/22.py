@@ -6,17 +6,17 @@ for i in range(m):
     p.append(int(p_i))
     s.append(s_i)
 
-correct = [0]*n
-penalty = [0]*n
+correct = [0] * n
+penalty = [0] * n
 
 for i in range(m):
     no = p[i]
-    if correct[no-1] == 1:
+    if correct[no - 1] == 1:
         continue
     elif s[i] == 'WA':
-        penalty[no-1] += 1
+        penalty[no - 1] += 1
     elif s[i] == 'AC':
-        correct[no-1] = 1
+        correct[no - 1] = 1
 
 pen = 0
 for i in range(n):

@@ -15,4 +15,3 @@ for i in map(int, stdin.readline().split()):
 if ct >= c:
     cnt = cnt + ct - c + 1
 print(cnt)
-

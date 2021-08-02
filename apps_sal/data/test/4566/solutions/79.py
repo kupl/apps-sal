@@ -1,13 +1,13 @@
 from collections import Counter
 
-n,m=map(int,input().split())
+n, m = map(int, input().split())
 
-l=[]
+l = []
 for i in range(m):
-  lis=list(map(int,input().split()))
-  l+=lis
-  
-l=Counter(l)
+    lis = list(map(int, input().split()))
+    l += lis
 
-for i in range(1,n+1):
-  print(l[i])
+l = Counter(l)
+
+for i in range(1, n + 1):
+    print(l[i])

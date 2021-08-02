@@ -10,4 +10,3 @@ for i in h:
     if cnt >= c:
         res += 1
 print(res)
-

@@ -7,7 +7,7 @@ current = 0
 for i in prisoners:
     if i > t:
         if (current >= c):
-            total += current - c + 1            
+            total += current - c + 1
         current = 0
     else:
         current += 1
@@ -16,6 +16,3 @@ if (current >= c):
     total += current - c + 1
 
 print(total)
-            
-            
-

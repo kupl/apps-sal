@@ -9,7 +9,6 @@ for i, ct in enumerate(map(int, str.split(input()))):
 
     elif i - index >= c:
 
-         count += 1
+        count += 1
 
 print(count)
-

@@ -5,4 +5,3 @@ if s.count('Danil') + s.count('Olya') + s.count('Slava') + \
     print('YES')
 else:
     print('NO')
-

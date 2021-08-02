@@ -11,6 +11,6 @@ for q in query:
     k = k % (r - l + 1)
     if l == r or k == 0:
         continue
-    word = word[0:l] + word[r-k+1:r+1] + word[l:r-k+1] + word[r+1:]
+    word = word[0:l] + word[r - k + 1:r + 1] + word[l:r - k + 1] + word[r + 1:]
 
 print(word)

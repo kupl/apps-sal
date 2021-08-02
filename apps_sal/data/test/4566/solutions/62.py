@@ -7,8 +7,8 @@ for i in range(m):
 ans = [0] * n
 
 for i in range(m):
-    ans[a[i]-1] += 1
-    ans [b[i]-1] += 1
+    ans[a[i] - 1] += 1
+    ans[b[i] - 1] += 1
 
 for i in ans:
     print(i)

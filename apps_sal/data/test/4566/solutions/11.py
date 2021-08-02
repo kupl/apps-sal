@@ -7,4 +7,3 @@ for i in range(m):
 
 for i in range(1, n + 1):
     print((counter_list[i]))
-

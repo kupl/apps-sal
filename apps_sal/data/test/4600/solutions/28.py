@@ -1,6 +1,6 @@
 N, M = map(int, input().split(' '))
 ac_set = set()
-wa_cnt, wa_cnt_ls = 0, [ 0 for i in range(N) ]
+wa_cnt, wa_cnt_ls = 0, [0 for i in range(N)]
 for i in range(M):
     p, s = input().split(' ')
     idx = int(p) - 1

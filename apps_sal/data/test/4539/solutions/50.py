@@ -1,13 +1,13 @@
-n=int(input())
+n = int(input())
 
-N=n
+N = n
 
-sum=int(0)
-while(n!=0):
-    sum+=n%10
-    n//=10
+sum = int(0)
+while(n != 0):
+    sum += n % 10
+    n //= 10
 
-if N%sum==0:
+if N % sum == 0:
     print("Yes")
 else:
     print("No")

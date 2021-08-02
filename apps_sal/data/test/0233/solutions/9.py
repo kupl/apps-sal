@@ -1,9 +1,6 @@
 # coding: utf-8
 
 
-
-
-
 import math
 import string
 import itertools
@@ -14,8 +11,10 @@ import re
 import array
 import bisect
 
-def array2d(d1, d2, init = None):
+
+def array2d(d1, d2, init=None):
     return [[init for _ in range(d2)] for _ in range(d1)]
+
 
 n = int(input())
 
@@ -35,4 +34,3 @@ elif cnt_m == cnt_c:
     print("Friendship is magic!^^")
 else:
     print("Chris")
-

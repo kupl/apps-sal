@@ -10,8 +10,7 @@ for i in range(m):
     l = l - 1
     k = range_length - k
 
-    my_string[l:r] = my_string[l+k:r] + my_string[l:l+k] 
+    my_string[l:r] = my_string[l + k:r] + my_string[l:l + k]
 
 ans = ''.join(my_string)
 print(ans)
-

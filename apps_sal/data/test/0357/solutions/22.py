@@ -1,13 +1,11 @@
 # @Date:   23-Oct-2017
 # @Last modified time: 23-Oct-2017
-s=input()
-words=["Danil","Olya","Slava","Ann","Nikita"]
-c=0
+s = input()
+words = ["Danil", "Olya", "Slava", "Ann", "Nikita"]
+c = 0
 for i in words:
-    c+=s.count(i)
-if c==1:
+    c += s.count(i)
+if c == 1:
     print("YES")
 else:
     print("NO")
-            
-

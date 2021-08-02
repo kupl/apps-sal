@@ -10,7 +10,7 @@ for i in r(n):
     elif m < c:
         b += 1
 ans = "Mishka"
-if a==b:
+if a == b:
     ans = "Friendship is magic!^^"
 
 if a < b:

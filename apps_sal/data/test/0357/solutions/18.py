@@ -1,6 +1,7 @@
 def cnt(string, substr):
     return len(string.split(substr)) - 1
 
+
 string = input()
 x = 0
 
@@ -11,4 +12,3 @@ if (x == 1):
     print('YES')
 else:
     print('NO')
-

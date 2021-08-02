@@ -13,4 +13,3 @@ if (a < b):
     print("Chris")
 if (a == b):
     print("Friendship is magic!^^")
-

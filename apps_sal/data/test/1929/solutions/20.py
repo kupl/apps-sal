@@ -1,6 +1,6 @@
 n = input("")
 
-(n,t,c) = n.split(" ")
+(n, t, c) = n.split(" ")
 
 line = input("")
 line = line.split(" ")
@@ -10,8 +10,8 @@ start = 0
 current = 0
 for x in range(len(line)):
     if int(line[x]) > int(t):
-        ans+= max(0, x-start+1-int(c))
-        start = x+1
+        ans += max(0, x - start + 1 - int(c))
+        start = x + 1
 
 
 print(ans)
