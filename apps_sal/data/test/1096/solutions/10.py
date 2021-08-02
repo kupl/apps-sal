@@ -10,4 +10,3 @@ if m == 1 or m == 8:
     else:
         ch = 3
 print(ch)
-

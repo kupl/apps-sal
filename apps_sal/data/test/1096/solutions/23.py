@@ -11,4 +11,3 @@ elif (s[0] == 'a' or s[0] == 'h' or s[1] == '1' or s[1] == '8'):
 else:
     res = 8
 fout.write(str(res))
-

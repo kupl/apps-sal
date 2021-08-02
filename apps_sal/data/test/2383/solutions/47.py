@@ -1,6 +1,6 @@
 N = int(input())
 li = list(map(int, input().split()))
-li_com = [i+1 for i in range(N)]
+li_com = [i + 1 for i in range(N)]
 an = 0
 com = 0
 for i in range(N):

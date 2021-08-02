@@ -9,4 +9,3 @@ for i in range(q):
         continue
     else:
         print(min(line) + k)
-

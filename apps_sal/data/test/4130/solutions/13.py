@@ -6,4 +6,3 @@ for a in sorted(map(int, input().split())):
     else:
         last = max(a - 1, last + 1)
 print(ans)
-

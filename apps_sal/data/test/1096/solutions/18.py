@@ -12,4 +12,3 @@ if c[1] == '1' or c[1] == '8':
     else:
         r = 5
 print(r)
-

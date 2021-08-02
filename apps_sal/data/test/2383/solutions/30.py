@@ -1,5 +1,5 @@
 a = int(input())
-b = list(map(int,input().split()))
+b = list(map(int, input().split()))
 c = 1
 ans = 0
 for i in b:

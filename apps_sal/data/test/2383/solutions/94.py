@@ -1,5 +1,5 @@
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 if 1 not in A:
     print(-1)

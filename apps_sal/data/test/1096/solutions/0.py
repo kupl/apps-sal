@@ -12,4 +12,3 @@ try:
 
 except EOFError:
     pass
-

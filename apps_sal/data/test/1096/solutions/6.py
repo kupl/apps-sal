@@ -7,4 +7,3 @@ elif c in (0, 7) or r in (0, 7):
     print(5)
 else:
     print(8)
-

@@ -1,5 +1,5 @@
 n = int(input())
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 ans = 0
 x = 1
 for i in l:
@@ -11,5 +11,4 @@ for i in l:
 if ans == len(l):
     print((-1))
 else:
-    print (ans)
-
+    print(ans)

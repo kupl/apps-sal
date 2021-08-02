@@ -8,4 +8,3 @@ if int(kingMove[1]) > 1 and int(kingMove[1]) < 8:
 if possMoves == 7:
     possMoves += 1
 print(possMoves)
-
