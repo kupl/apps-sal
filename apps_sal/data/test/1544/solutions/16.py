@@ -7,4 +7,3 @@ cn5 = (cn4 * (n - 4)) // 5
 a = cn1 + 4 * cn2 + 6 * cn3 + 4 * cn4 + cn5
 b = cn1 + 2 * cn2 + cn3
 print(a * b)
-

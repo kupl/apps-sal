@@ -1,4 +1,4 @@
-n,a,b,c,d = list(map(int, input().split()))
+n, a, b, c, d = list(map(int, input().split()))
 num = 0
 i = 0
 while n > i:
@@ -7,8 +7,7 @@ while n > i:
         continue
     if i + a - d < 1 or i + a - d > n:
         continue
-    if i + a - d + b - c  < 1 or i + a - d + b - c > n:
+    if i + a - d + b - c < 1 or i + a - d + b - c > n:
         continue
     num += 1
 print(num * n)
-

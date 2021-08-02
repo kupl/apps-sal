@@ -9,7 +9,7 @@ def __starting_point():
         print(0)
         return
     else:
-        print(n *(y - x + 1))
-    
+        print(n * (y - x + 1))
+
 
 __starting_point()

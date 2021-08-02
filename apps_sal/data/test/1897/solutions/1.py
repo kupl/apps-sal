@@ -5,7 +5,8 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-################################################### SOLUTION
+# SOLUTION
+
 
 def main():
     s = read(0)
@@ -14,19 +15,18 @@ def main():
     m1 = [0]
     m2 = [0]
     for i in range(n):
-        m1.append(m1[-1] + 1/(1+i))
-        m2.append(m2[-1] + 1/(n-i))
+        m1.append(m1[-1] + 1 / (1 + i))
+        m2.append(m2[-1] + 1 / (n - i))
     mlast = m1[-1]
-    for i in range(1,n+1):
-        m1[i] = m1[i-1]+m1[i]
-        m2[i] = m2[i-1]+m2[i]
+    for i in range(1, n + 1):
+        m1[i] = m1[i - 1] + m1[i]
+        m2[i] = m2[i - 1] + m2[i]
     sm = 0
     for i in range(n):
-        sm += m[i] * ((i+1)*mlast - m1[i] - m2[i])
+        sm += m[i] * ((i + 1) * mlast - m1[i] - m2[i])
     print(sm)
 
-#################################################### HELPERS
-
+# HELPERS
 
 
 def read(mode=2):
@@ -34,14 +34,21 @@ def read(mode=2):
     # 1: List of strings
     # 2: List of integers
     inputs = input().strip()
-    if mode == 0: return inputs
-    if mode == 1: return inputs.split()
-    if mode == 2: return list(map(int, inputs.split()))
+    if mode == 0:
+        return inputs
+    if mode == 1:
+        return inputs.split()
+    if mode == 2:
+        return list(map(int, inputs.split()))
+
 
 def write(s="\n"):
-    if s is None: s = ""
-    if isinstance(s, list): s = " ".join(map(str, s))
+    if s is None:
+        s = ""
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
+
 
 write(main())

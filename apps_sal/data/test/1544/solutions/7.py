@@ -5,5 +5,6 @@ def C(frm, what):
         ans = ans // (i + 1)
     return ans
 
+
 n = int(input())
-print (C(4 + n, n - 1) * C(2 + n, n - 1))
+print(C(4 + n, n - 1) * C(2 + n, n - 1))

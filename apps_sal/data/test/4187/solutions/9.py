@@ -35,6 +35,3 @@ for i in lst:
             large = count
         count = 0
 print(large)
-
-
-

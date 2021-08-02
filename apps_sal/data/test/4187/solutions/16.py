@@ -4,9 +4,9 @@ nums += nums
 a = 0
 res = 0
 for i in nums:
-	if i ==1:
-		a += 1
-		res = max(res, a)
-	else:
-		a = 0
+    if i == 1:
+        a += 1
+        res = max(res, a)
+    else:
+        a = 0
 print(res)

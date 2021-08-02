@@ -1,14 +1,14 @@
 n = int(input())
-x = n//4
+x = n // 4
 s = input()
 a = x - s.count('A')
 c = x - s.count('C')
 g = x - s.count('G')
 t = x - s.count('T')
 L = []
-if n%4 != 0:
+if n % 4 != 0:
     print("===")
-elif s.count('A') > x or s.count('C')>x or s.count('G') >x or s.count('T') > x:
+elif s.count('A') > x or s.count('C') > x or s.count('G') > x or s.count('T') > x:
     print("===")
 else:
     for i in range(a):
@@ -26,8 +26,8 @@ else:
             s1 += i
         elif i == '?':
             s1 += L[j]
-            j +=1
-    if s1.count('A') + s1.count('C')+s1.count('G')+s1.count('T') != n:
+            j += 1
+    if s1.count('A') + s1.count('C') + s1.count('G') + s1.count('T') != n:
         print("===")
     else:
         print(s1)

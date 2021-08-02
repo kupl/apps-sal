@@ -11,4 +11,3 @@ for e in a:
     else:
         t = 0
 print(maxt)
-

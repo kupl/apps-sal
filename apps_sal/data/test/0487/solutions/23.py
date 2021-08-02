@@ -13,4 +13,6 @@ def __starting_point():
         min_k += 1
 
     print(min_k)
+
+
 __starting_point()

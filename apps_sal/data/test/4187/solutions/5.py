@@ -10,4 +10,3 @@ for i in l:
         cl = 0
 cb = max(cb, cl)
 print(cb)
-
