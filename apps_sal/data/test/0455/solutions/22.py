@@ -11,7 +11,7 @@ input = sys.stdin.readline
 # main
 # -------------------------------------------------------------
 N = int(input())
-XY = [list(map(int,input().split())) for _ in range(N)]
+XY = [list(map(int, input().split())) for _ in range(N)]
 
 # x + y のパリティが同一かチェック, 異なる座標が存在する場合は実現不可能
 p = set()
@@ -36,12 +36,12 @@ D.sort(reverse=True)
 Ans = []
 # 順番に計算
 for i in range(N):
-    x,y = XY[i][0],XY[i][1]
-    x0,y0 = 0,0
+    x, y = XY[i][0], XY[i][1]
+    x0, y0 = 0, 0
     ans = ""
     # 原点を中心にX字で分割される領域の (上下左右) どちらかを判断し, 移動させ, 都度原点を調整
     for d in D:
-        dx,dy = x-x0,y-y0
+        dx, dy = x - x0, y - y0
         # 右
         if dy < dx and dy > -dx:
             ans += "R"
@@ -64,16 +64,12 @@ for i in range(N):
 if 0 in p:
     D.append(1)
     print((len(D)))
-    print((" ".join(map(str,D))))
+    print((" ".join(map(str, D))))
     for ans in Ans:
         print((ans + "R"))
 # パリティが 1 の場合 : そのまま出力
 else:
     print((len(D)))
-    print((" ".join(map(str,D))))
+    print((" ".join(map(str, D))))
     for ans in Ans:
         print(ans)
-
-
-
-

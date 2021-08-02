@@ -4,6 +4,8 @@ n = int(sys.stdin.readline().rstrip())
 xy = list(zip(*[map(int, sys.stdin.read().split())] * 2))
 
 mask = (1 << 31) - 1
+
+
 def solve(x, y, mode):
     u = x + y
     v = x - y
@@ -31,8 +33,9 @@ def solve(x, y, mode):
             res += 'U'
     if mode == 0:
         res += 'R'
-    
+
     return [res]
+
 
 def main():
     oe = (xy[0][0] + xy[0][1]) % 2
@@ -52,8 +55,11 @@ def main():
     for x, y in xy:
         yield solve(x, y, oe)
 
+
 def __starting_point():
     ans = main()
     for i in ans:
         print(*i, sep=' ')
+
+
 __starting_point()

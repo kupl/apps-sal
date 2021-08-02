@@ -4,6 +4,7 @@ from sys import stdout
 from bisect import bisect_left as binl
 from copy import copy, deepcopy
 
+
 def intin():
     input_tuple = input().split()
     if len(input_tuple) <= 1:
@@ -157,5 +158,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

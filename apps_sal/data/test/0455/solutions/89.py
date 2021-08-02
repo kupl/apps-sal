@@ -14,6 +14,8 @@ for coord in coords:
         max_sum = max(max_sum, abs(x) + abs(y))
 
 # partial solution (because m must not exceed 40)
+
+
 def partial_solution(max_sum, coords):
     m = max_sum
     print(m)
@@ -39,6 +41,7 @@ def partial_solution(max_sum, coords):
         print(output)
 #partial_solution(max_sum, coords)
 
+
 def padding(binary_expression):
     len_pad = 31 - len(binary_expression[2:])
     return "0" * len_pad + binary_expression[2:]
@@ -52,7 +55,7 @@ def full_solution(max_sum, coords, odd_or_even):
     rotated_coords = [(x + y, x - y) for x, y in coords]
     d = []
     for i in range(31):
-        d.append(2**i)  
+        d.append(2**i)
     if odd_or_even == 1:
         m = 31
     else:
@@ -81,5 +84,5 @@ def full_solution(max_sum, coords, odd_or_even):
             output = "".join([mode_map[flag] for flag in flags]) + "R"
             print(output)
 
-full_solution(max_sum, coords, odd_or_even)
 
+full_solution(max_sum, coords, odd_or_even)

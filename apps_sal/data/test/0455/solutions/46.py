@@ -1,3 +1,4 @@
+import math
 import sys
 
 N = int(input())
@@ -15,7 +16,8 @@ if mc[0] > 0 and mc[1] > 0:
     print((-1))
     return
 
-#print(maxl)
+# print(maxl)
+
 
 def calc(sx, sy, ex, ey, d):
     dx, dy = ex - sx, ey - sy
@@ -32,7 +34,6 @@ def calc(sx, sy, ex, ey, d):
             d, x, y = "L", sx - d, sy
     return d, x, y
 
-import math
 
 l = math.ceil(math.log(maxl + 1, 2))
 
@@ -56,5 +57,3 @@ for ex, ey in XY:
         d, x, y = calc(x, y, ex, ey, m)
         w += d
     print(w)
-
-

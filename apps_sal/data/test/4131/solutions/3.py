@@ -20,4 +20,3 @@ for k, v in list(di.items()):
         ans[yi[1]] = s + t
 
 print(("\n".join(ans)))
-

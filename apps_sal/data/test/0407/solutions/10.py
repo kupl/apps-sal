@@ -1,14 +1,15 @@
 #! /usr/bin/env python3
-#------------------------------------------------
+# ------------------------------------------------
 # Author:    krishna
 # Created:   Sun Dec 24 17:45:40 IST 2017
 # File Name: 910c.py
 # USAGE:
 #       910c.py
 # Description:
-# 
-#------------------------------------------------
-import sys, operator
+#
+# ------------------------------------------------
+import sys
+import operator
 
 
 data = []
@@ -23,7 +24,7 @@ cantTakeZero = [line[0] for line in data]
 for i in range(len(data)):
     data[i] = ('0' * (maxLen - len(data[i]))) + data[i]
 
-count = {chr(i):0 for i in range(ord('a'), ord('k'))}
+count = {chr(i): 0 for i in range(ord('a'), ord('k'))}
 
 for i in range(maxLen):
     for line in data:
@@ -32,9 +33,9 @@ for i in range(maxLen):
 
         count[line[i]] += 1
 
-    count = {k: v * 10 for (k,v) in list(count.items())}
+    count = {k: v * 10 for (k, v) in list(count.items())}
 
-count = {k: int(v / 10) for (k,v) in list(count.items())}
+count = {k: int(v / 10) for (k, v) in list(count.items())}
 
 code = {}
 counter = 1
@@ -62,4 +63,3 @@ for i in range(maxLen):
 
 # print(sorted(code.items()))
 print(int(s / 10))
-

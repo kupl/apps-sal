@@ -6,4 +6,3 @@ for i in range(min(3, r + 1)):
     g -= 1
     b -= 1
 print(ans)
-

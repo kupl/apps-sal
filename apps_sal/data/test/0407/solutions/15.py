@@ -20,15 +20,12 @@ for _ in range(n):
 
 l = sorted(list(d.items()), key=lambda v: v[1], reverse=True)
 
-for i,x in enumerate(l):
+for i, x in enumerate(l):
     if x[0] not in is_first:
         l.pop(i)
         break
 
-for i,x in enumerate(l):
-    ans += x[1] * (i+1)
+for i, x in enumerate(l):
+    ans += x[1] * (i + 1)
 
 print(ans)
-
-
-

@@ -9,24 +9,23 @@ for i in range(q):
     ey -= 1
     if sx == 1:
         if ex == 1:
-            if sy//n == ey//n:
+            if sy // n == ey // n:
                 print("YES")
             else:
                 print("NO")
         else:
-            if sy//(n) == ey//(m):
+            if sy // (n) == ey // (m):
                 print("YES")
             else:
                 print("NO")
     else:
         if ex == 1:
-            if sy//(m) == ey//(n):
+            if sy // (m) == ey // (n):
                 print("YES")
             else:
                 print("NO")
         else:
-            if sy//(m) == ey//(m):
+            if sy // (m) == ey // (m):
                 print("YES")
             else:
                 print("NO")
-

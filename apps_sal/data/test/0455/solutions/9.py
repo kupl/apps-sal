@@ -63,4 +63,3 @@ for x, y in coordinates:
 print(len(d))
 print(*d)
 print(*ans, sep='\n')
-

@@ -1,5 +1,5 @@
-n, m, q = map(int, input().split())
 from math import gcd
+n, m, q = map(int, input().split())
 g = gcd(n, m)
 out = []
 n //= g

@@ -26,4 +26,3 @@ for i in range(M):
     ans += '0' * (6 - len(str(keep2[i][1]))) + str(keep2[i][1])
     ans += '0' * (6 - len(str(keep2[i][2]))) + str(keep2[i][2])
     print(ans)
-

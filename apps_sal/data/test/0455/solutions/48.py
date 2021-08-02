@@ -39,4 +39,3 @@ for x, y in Point:
         ans += tmp_s
         x, y = next_x, next_y
     print(ans)
-

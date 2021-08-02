@@ -34,8 +34,8 @@ even, odd = 0, 0
 
 for p in range(N):
     x, y = list(map(int, input().split()))
-    U.append(x+y)
-    V.append(x-y)
+    U.append(x + y)
+    V.append(x - y)
     if (x + y) % 2 == 0:
         even += 1
     else:
@@ -53,5 +53,4 @@ else:
     for u, v in zip(U, V):
         u = (u + 2 ** 31 - 1) // 2
         v = (v + 2 ** 31 - 1) // 2
-        print((calc(u, v)+"R" if odd == 0 else calc(u, v)))
-
+        print((calc(u, v) + "R" if odd == 0 else calc(u, v)))

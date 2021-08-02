@@ -171,7 +171,7 @@ def ref(N, X, Y):
     if len(mod) != 1:
         return m, d, w
 
-    for i in range(30, 0-1, -1):
+    for i in range(30, 0 - 1, -1):
         d.append(1 << i)
     if 0 in mod:
         d.append(1)
@@ -248,5 +248,6 @@ def no_transform_xy(N, X, Y, d):
 
 def __starting_point():
     main()
+
 
 __starting_point()

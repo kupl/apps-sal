@@ -36,4 +36,3 @@ for x, y in Points:
         nx, ny = next_x, next_y
 
     print(ans)
-

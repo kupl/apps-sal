@@ -38,4 +38,3 @@ for tX, tY in Points:
         nX, nY = Next[min_diff_index]
 
     print(ans)
-

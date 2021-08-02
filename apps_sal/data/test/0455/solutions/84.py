@@ -1,16 +1,21 @@
 from math import *
 
+
 def L(xi, di):
     return xi - di
+
 
 def R(xi, di):
     return xi + di
 
+
 def D(yi, di):
     return yi - di
 
+
 def U(yi, di):
     return yi + di
+
 
 def main():
     N = int(input())
@@ -37,7 +42,7 @@ def main():
     print(" ".join(map(str, arm_list)))
 
     for c in x_list:
-        now_c = [0,0]
+        now_c = [0, 0]
         order = ""
 
         for arm in arm_list:
@@ -60,6 +65,9 @@ def main():
                     now_c[1] = D(now_c[1], arm)
         print(order)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

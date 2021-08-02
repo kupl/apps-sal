@@ -6,25 +6,23 @@ Created on Tue May 17 15:26:55 2016
 """
 from sys import stdin
 
-n,m = [int(i) for i in input().split()]
+n, m = [int(i) for i in input().split()]
 l = [int(i) for i in stdin.readline().split()]
 prev = [-1 for i in range(n)]
 re = []
-for i in range(n-1):
-    if l[i] != l[i+1]:
-        prev[i+1] = i
+for i in range(n - 1):
+    if l[i] != l[i + 1]:
+        prev[i + 1] = i
     else:
-        prev[i+1] = prev[i]
+        prev[i + 1] = prev[i]
 for _ in range(m):
-    le,ri,xi = [int(i) for i in stdin.readline().split()]
-    i = ri-1
-    if l[i]!=xi:
+    le, ri, xi = [int(i) for i in stdin.readline().split()]
+    i = ri - 1
+    if l[i] != xi:
         re.append(str(ri))
     else:
-        if prev[i]<le-1:
+        if prev[i] < le - 1:
             re.append('-1')
         else:
-            re.append(str(prev[i]+1))
+            re.append(str(prev[i] + 1))
 print('\n'.join(re))
-        
-

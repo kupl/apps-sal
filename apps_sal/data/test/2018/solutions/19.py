@@ -1,9 +1,10 @@
 def gcd(a, b):
-    if a%b == 0:
+    if a % b == 0:
         return b
-    else :
+    else:
         return gcd(b, a % b)
-        
+
+
 n, m, q = list(map(int, input().split()))
 g = gcd(n, m)
 al = n * m // g
@@ -23,12 +24,8 @@ while (q > 0):
         a2 = (y2 - 1) // xx + 1
     else:
         a2 = (y2 - 1) // yy + 1
-    
+
     if (a1 == a2):
         print('YES')
     else:
         print('NO')
-
-
-
-

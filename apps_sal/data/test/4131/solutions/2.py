@@ -24,4 +24,3 @@ for i in range(m):
     ken = str(res[i][0]).zfill(6)
     order = str(res[i][1]).zfill(6)
     print((ken + order))
-

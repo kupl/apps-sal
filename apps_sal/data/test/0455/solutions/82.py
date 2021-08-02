@@ -1,10 +1,10 @@
 N = int(input())
 XY = [tuple(map(int, input().split())) for _ in range(N)]
-R = [abs(x-y)&1 for x, y in XY]
+R = [abs(x - y) & 1 for x, y in XY]
 if not all(R[0] == r for r in R[1:]):
     print(-1)
     return
-RM = max(abs(x)+abs(y) for x, y in XY)
+RM = max(abs(x) + abs(y) for x, y in XY)
 D = [1 << i for i in range(32, -1, -1)]
 if RM & 1 == 0:
     D.append(1)

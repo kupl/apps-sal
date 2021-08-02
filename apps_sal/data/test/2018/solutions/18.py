@@ -1,7 +1,9 @@
 import math
 
+
 def func(x, y):
     return (x - 1) // y
+
 
 (n, k, q) = map(int, input().split(' '))
 gg = n * k // math.gcd(n, k)

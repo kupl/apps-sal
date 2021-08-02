@@ -49,7 +49,7 @@ if even >= 1 and odd >= 1:
 
 else:
     m = math.floor(math.log2(M)) + 1 if M != 0 else 1
-    lst = [2 ** i for i in range(m-1, -1, -1)]
+    lst = [2 ** i for i in range(m - 1, -1, -1)]
     if odd == 0:
         lst.append(1)
     print((len(lst)))
@@ -57,5 +57,4 @@ else:
     for u, v in zip(U, V):
         u = (u + 2 ** m - 1) // 2
         v = (v + 2 ** m - 1) // 2
-        print((calc(u, v, m)+"R" if odd == 0 else calc(u, v, m)))
-
+        print((calc(u, v, m) + "R" if odd == 0 else calc(u, v, m)))

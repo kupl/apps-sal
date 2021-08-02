@@ -74,4 +74,5 @@ def __starting_point():
         for ww in w:
             print(ww)
 
+
 __starting_point()

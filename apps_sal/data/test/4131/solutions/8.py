@@ -18,11 +18,10 @@ for i in li2:
         cnt = 1
         tmp = i[0]
 
-    s1 = s[0:6-len(str(i[0]))] + str(i[0])
-    s2 = s[0:6-len(str(cnt))] + str(cnt)
+    s1 = s[0:6 - len(str(i[0]))] + str(i[0])
+    s2 = s[0:6 - len(str(cnt))] + str(cnt)
     s3 = s1 + s2
     dic[i] = s3
 
 for i in li:
     print((dic[i]))
-

@@ -59,4 +59,5 @@ def __starting_point():
     # from func import random_str
     # solve()
 
+
 __starting_point()

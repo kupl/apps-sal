@@ -30,6 +30,3 @@ for x, y in xy:
             temp.append("L")
             x += d
     print((''.join(temp)))
-
-
-

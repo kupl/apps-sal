@@ -5,16 +5,16 @@ xys = [list(map(int, input().split())) for _ in range(n)]
 p = sum(xys[0]) % 2
 for xy in xys:
     x, y = xy
-    if (x + y) % 2 != p: # パリティが異なるクエリが存在するため、達成できない
+    if (x + y) % 2 != p:  # パリティが異なるクエリが存在するため、達成できない
         print(-1)
         return
 
 if p == 0:
     d = [1]
 else:
-    d= []
+    d = []
 
-d += [2 ** k for k in range(30 + 1)] # 2 ** 0 から 2 ** 30 まで
+d += [2 ** k for k in range(30 + 1)]  # 2 ** 0 から 2 ** 30 まで
 m = len(d)
 
 ws = [['' for _ in range(m)] for _ in range(n)]

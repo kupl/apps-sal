@@ -20,4 +20,3 @@ for i in range(M):
 ans.sort(key=lambda x: x[0])
 for i in range(M):
     print((ans[i][1]))
-

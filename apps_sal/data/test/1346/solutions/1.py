@@ -7,6 +7,5 @@ for i, a in enumerate(A):
     if a % P:
         for j, b in enumerate(B):
             if b % P:
-                print(i+j)
+                print(i + j)
                 return
-

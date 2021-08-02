@@ -13,7 +13,7 @@ def solve(x, y, d, m):
         else:
             ret += "L"
             x += d[i]
-    print (ret)
+    print(ret)
 
 
 def main():
@@ -30,7 +30,7 @@ def main():
     for i in range(N):
         x, y = list(map(int, input().split()))
         X += [x]; Y += [y]
-    
+
         if (abs(x) + abs(y)) % 2 == 0:
             even += 1
         else:
@@ -51,5 +51,5 @@ def main():
     for i in range(N):
         solve(X[i], Y[i], d, m)
 
-main()
 
+main()

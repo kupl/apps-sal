@@ -45,4 +45,3 @@ else:
     print((' '.join(map(str, arms))))
     for x, y in zip(X, Y):
         print((directions_str(fx=0, fy=0, tx=x, ty=y + 1, arm=arms[0]) + 'D'))
-

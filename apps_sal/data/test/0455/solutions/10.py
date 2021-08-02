@@ -15,20 +15,21 @@ def solve(n, x, y):
         for d in ds:
             if (u >= 0) and (v >= 0):
                 w += "R"
-                u, v = u-d, v-d
+                u, v = u - d, v - d
             elif (u <= 0) and (v <= 0):
                 w += "L"
-                u, v = u+d, v+d
+                u, v = u + d, v + d
             elif (u >= 0) and (v <= 0):
                 w += "U"
-                u, v = u-d, v+d
-            else: # (u < 0) and (v > 0)
+                u, v = u - d, v + d
+            else:  # (u < 0) and (v > 0)
                 w += "D"
-                u, v = u+d, v-d
+                u, v = u + d, v - d
         ws.append(w)
-    print(len(ds)) # m
+    print(len(ds))  # m
     print(" ".join(map(str, ds)))
     print("\n".join(ws))
+
 
 n = int(input())
 x = [0] * n

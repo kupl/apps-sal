@@ -16,7 +16,7 @@ def solve(x, y, d, m):
         y = y + d[i] * dy[dir]
         ret += mode[dir]
 
-    print (ret)
+    print(ret)
 
 
 def main():
@@ -53,5 +53,6 @@ def main():
 
     for i in range(N):
         solve(X[i], Y[i], d, m)
+
 
 main()

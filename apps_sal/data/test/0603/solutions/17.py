@@ -12,4 +12,3 @@ for i in range(3):
     md = max(md, d)
 
 print(md)
-

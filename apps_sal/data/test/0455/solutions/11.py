@@ -11,7 +11,7 @@ for c in coord[1:]:
 if flag:
     print(-1)
     return
-D = [2**(31-i) for i in range(32)]
+D = [2**(31 - i) for i in range(32)]
 if parity == 0:
     D.append(1)
 print(len(D))

@@ -21,5 +21,3 @@ li_id_sorted = sorted(li_id)
 
 for i in li_id_sorted:
     print((i[1]))
-
-

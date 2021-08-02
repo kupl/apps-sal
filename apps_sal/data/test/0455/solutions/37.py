@@ -12,6 +12,7 @@ def get_check(num, place):
             check_flg = dist_now
     return check_flg
 
+
 def start_process(num, place):
 
     check_flg = get_check(num, place)
@@ -42,7 +43,6 @@ def start_process(num, place):
                 print(res, end='')
             print('')
 
-
     else:
         print(-1)
 
@@ -55,4 +55,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

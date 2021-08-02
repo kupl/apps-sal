@@ -1,5 +1,5 @@
 inp = [[int(x) for x in input().split()] for _ in range(int(input()))]
-inpsum = sum(map(lambda ij: abs(ij[0]+ij[1]) % 2, inp))
+inpsum = sum(map(lambda ij: abs(ij[0] + ij[1]) % 2, inp))
 if not (inpsum == len(inp) or inpsum == 0):
     print(-1)
     return
@@ -30,4 +30,3 @@ for x, y in inp:
         # print((x,y))
         print(res, end='')
     print('')
-

@@ -7,5 +7,5 @@ for i in range(3):
         s += 1
         t[i] = x - 1
     else: t[i] = x + (t[i] - x) % 3
-        
+
 print(s + min(t))
