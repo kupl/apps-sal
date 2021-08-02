@@ -9,7 +9,7 @@ for i in a:
     elif i % 2 == 0:
         cnt2 += 1
 
-if cnt4 >= n//2:
+if cnt4 >= n // 2:
     print('Yes')
 elif 2 * cnt4 >= n - cnt2:
     print('Yes')

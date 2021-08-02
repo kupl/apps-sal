@@ -1,4 +1,4 @@
 s = input()
 n = len(s)
-x = ['x']*n
+x = ['x'] * n
 print(''.join(x))

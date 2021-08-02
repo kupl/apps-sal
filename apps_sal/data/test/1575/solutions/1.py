@@ -11,23 +11,21 @@ if n == 0:
 else:
     inp = input().split(' ')
     min_del_t = 10000000000000;
-    ans = int(inp[0])-1
+    ans = int(inp[0]) - 1
     t_cur = ts
     for tS in inp:
         t = int(tS)
-        time_waiting = t_cur-t+1
-        if t_cur < t and t_cur+T<=tf:
+        time_waiting = t_cur - t + 1
+        if t_cur < t and t_cur + T <= tf:
             ans = t_cur
             break
         else:
-            if min_del_t > time_waiting and t_cur+T <= tf:
+            if min_del_t > time_waiting and t_cur + T <= tf:
                 min_del_t = time_waiting
-                ans = t-1
+                ans = t - 1
         t_cur += T
-    #print(min_del_t)
-    if(t_cur+T<=tf):
+    # print(min_del_t)
+    if(t_cur + T <= tf):
         print(t_cur)
     else:
         print(ans)
-
-

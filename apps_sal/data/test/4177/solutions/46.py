@@ -1,2 +1,2 @@
 s = list(input())
-print('x'*len(s))
+print('x' * len(s))

@@ -7,11 +7,10 @@ for _ in range(T):
         d, h = list(map(int, input().split()))
         A = max(A, d - h)
         B = max(B, d)
-    
+
     if B >= X:
         print(1)
     elif A > 0:
         print((X - B + A - 1) // A + 1)
     else:
         print(-1)
-

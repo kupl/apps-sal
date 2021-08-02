@@ -3,5 +3,5 @@ S = str(input())
 N = len(S)
 ans = ""
 for i in range(N):
-  ans += "x"
+    ans += "x"
 print(ans)

@@ -1,2 +1,2 @@
-N=len(input())
-[print('x',end='') for i in range(N)]
+N = len(input())
+[print('x', end='') for i in range(N)]

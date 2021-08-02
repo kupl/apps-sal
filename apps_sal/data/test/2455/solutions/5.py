@@ -29,4 +29,3 @@ for _ in range(int(input())):
         count += 1
         output += ' 12x1'
     print(str(count) + output)
-

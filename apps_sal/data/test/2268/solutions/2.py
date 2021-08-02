@@ -19,4 +19,3 @@ for c, v in list(ls.items()):
     rev[v] = c
 
 print(''.join([rev[c] for c in s]))
-

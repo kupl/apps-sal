@@ -13,4 +13,3 @@ for i, h in enumerate(hhh[1:], start=1):
     dp = ndp
 
 print((dp.min()))
-

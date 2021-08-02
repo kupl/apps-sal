@@ -29,4 +29,3 @@ for additional_minutes, gain in enumerate(prefix_sum_d, start=1):
     if rest_H + gain <= 0:
         print(additional_minutes + past_minutes)
         break
-

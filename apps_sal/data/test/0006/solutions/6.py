@@ -17,4 +17,3 @@ for i in range(t):
         if x % mr:
             f += 1
         print(f)
-

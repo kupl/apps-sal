@@ -6,7 +6,7 @@ for _ in range(T):
     for i in range(n):
         d, h = list(map(int, input().split()))
         maxi.append(d)
-        damage.append(d-h)
+        damage.append(d - h)
     damage.sort(reverse=True)
     maxi.sort(reverse=True)
 
@@ -16,5 +16,4 @@ for _ in range(T):
         if maxi[0] >= x:
             print(1)
         else:
-            print((x-maxi[0]-1)//damage[0]+2)
-
+            print((x - maxi[0] - 1) // damage[0] + 2)

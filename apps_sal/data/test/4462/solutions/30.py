@@ -14,4 +14,3 @@ elif 2 * four + two >= n:
     print("Yes")
 else:
     print("No")
-

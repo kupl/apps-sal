@@ -1,5 +1,6 @@
 import math
 
+
 def test(k):
     nonlocal sm, mn, h
     return h + k * sm + mn <= 0

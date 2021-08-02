@@ -16,11 +16,10 @@ else:
 
 hp_after_full_rounds = H + required_full_rounds * hp_diff
 current_hp = hp_after_full_rounds
-for i in range(2*n):
+for i in range(2 * n):
     current_hp += d[i % n]
     if current_hp <= 0:
-        print(i+1+required_full_rounds*n)
+        print(i + 1 + required_full_rounds * n)
         return
 
 print(-1)
-

@@ -12,4 +12,3 @@ if four >= n // 2 or n - 2 * four <= two:
     print("Yes")
 else:
     print("No")
-

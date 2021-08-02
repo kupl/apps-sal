@@ -1,4 +1,4 @@
-n,a,b,k,f = [int(i) for i in input().split()]
+n, a, b, k, f = [int(i) for i in input().split()]
 pred = "_"
 d = dict()
 for i in range(n):
@@ -15,15 +15,13 @@ for i in range(n):
         d[(s1, s2)] = pr
 
     pred = s2
-    
+
 cn = k
 ans = sum(d.values())
-for i in sorted(list(d.values()), reverse = True):
+for i in sorted(list(d.values()), reverse=True):
     if cn == 0 or i <= f:
         break
     ans = ans - i + f
     cn -= 1
 
 print(ans)
-    
-

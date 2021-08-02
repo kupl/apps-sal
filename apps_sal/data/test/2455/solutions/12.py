@@ -5,10 +5,10 @@ while t > 0:
     t = t - 1
     s = input()
     for i in range(n):
-        r = i+1
-        if n%r != 0:
+        r = i + 1
+        if n % r != 0:
             continue
-        c = n//r
+        c = n // r
         flag = False
         for j in range(c):
             id = j
@@ -24,8 +24,7 @@ while t > 0:
         if flag == True:
             ans.append((r, c))
 
-    print(len(ans), end = '')
+    print(len(ans), end='')
     for i in range(len(ans)):
-        print(' ', ans[i][0], 'x', ans[i][1], sep = '', end = '')
+        print(' ', ans[i][0], 'x', ans[i][1], sep='', end='')
     print('')
-

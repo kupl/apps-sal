@@ -38,4 +38,3 @@ for i in range(m):
 for i in range(n):
     print(l[alpha[a[i]]], end="")
 print()
-

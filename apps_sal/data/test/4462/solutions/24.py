@@ -12,4 +12,3 @@ if (count + (hcount // 2)) >= (N // 2):
     print('Yes')
 else:
     print('No')
-

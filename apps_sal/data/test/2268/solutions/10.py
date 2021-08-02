@@ -28,6 +28,3 @@ for i in range(26):
             ans[j] = d[chr(ord('a') + i)]
             used[j] = False
 print(''.join(str(i) for i in ans))
-            
-    
-

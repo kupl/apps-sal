@@ -19,4 +19,3 @@ for k, v in d.items():
 
 for l in sorted(r.items()):
     print(l[1], end="")
-

@@ -5,10 +5,10 @@ H_cur = H
 dead = False
 d_acc = [0]
 for i in range(n):
-    d_acc.append(d_acc[-1]+d[i])
+    d_acc.append(d_acc[-1] + d[i])
     H_cur += d[i]
     if H_cur <= 0:
-        print(i+1)
+        print(i + 1)
         dead = True
         break
 if not dead:
@@ -16,10 +16,10 @@ if not dead:
         print(-1)
     else:
         d_acc_min = min(d_acc)
-        r = int(math.ceil((H+d_acc_min)/-d_acc[-1]))
-        H_cur = H+r*d_acc[-1]
+        r = int(math.ceil((H + d_acc_min) / -d_acc[-1]))
+        H_cur = H + r * d_acc[-1]
         for i in range(n):
             H_cur += d[i]
             if H_cur <= 0:
-                print(r*n+i+1)
+                print(r * n + i + 1)
                 break

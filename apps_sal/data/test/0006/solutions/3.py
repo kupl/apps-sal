@@ -11,5 +11,5 @@ for t in range(T):
     elif max_delta <= 0:
         c = -1
     else:
-        c = math.ceil((x - max_d)/max_delta) + 1
+        c = math.ceil((x - max_d) / max_delta) + 1
     print(c)

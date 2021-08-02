@@ -1,2 +1,2 @@
 S = str(input())
-print('x'*len(S))
+print('x' * len(S))

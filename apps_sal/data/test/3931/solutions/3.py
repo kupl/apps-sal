@@ -8,18 +8,17 @@ for i in range(n):
     if x == prev:
         price = b
     prev = y
-    p, q = (min(x,y), max(x,y))
+    p, q = (min(x, y), max(x, y))
     if (p, q) in stops:
-        stops[(p,q)] += price
+        stops[(p, q)] += price
     else:
-        stops[(p,q)] = price
+        stops[(p, q)] = price
     ans += price
-edge_cost = sorted([stops[key] for key in stops], reverse = True)
+edge_cost = sorted([stops[key] for key in stops], reverse=True)
 for i in edge_cost:
     if k > 0 and f < i:
-        ans  = ans - i + f
+        ans = ans - i + f
     else:
         break
     k -= 1
 print(ans)
-

@@ -1,4 +1,3 @@
-N=input()
-i=len(N)
-print(('x'*i))
-
+N = input()
+i = len(N)
+print(('x' * i))

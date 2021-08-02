@@ -10,9 +10,8 @@ for a in A:
         x += 1
 x += d % 2
 d -= d % 2
-if q+1 >= x:
+if q + 1 >= x:
     print('Yes')
 else:
     print('No')
 # print(d,q,x)
-

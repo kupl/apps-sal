@@ -62,7 +62,7 @@ def resolve():
         else:
             O += 1
 
-    if N-2*Q <= 0 or (N-2*Q) == 1 or N-2*Q == E:
+    if N - 2 * Q <= 0 or (N - 2 * Q) == 1 or N - 2 * Q == E:
         print("Yes")
     else:
         print("No")
@@ -71,5 +71,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

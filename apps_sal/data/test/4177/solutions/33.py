@@ -1,3 +1,3 @@
 s = input()
 l = len(s)
-print('x'*l)
+print('x' * l)

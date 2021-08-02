@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-N,M = list(map(int,input().split()))
-name=input()
+N, M = list(map(int, input().split()))
+name = input()
 
 table = [0] * 26
 for i in range(26):
@@ -9,10 +9,10 @@ for i in range(26):
 
 buffs = []
 for _ in range(M):
-    before,after = list(map(ord, input().split()))
+    before, after = list(map(ord, input().split()))
     before -= ord('a')
     after -= ord('a')
-    buffs.append((before,after))
+    buffs.append((before, after))
 buffs.reverse()
 
 for pair in buffs:
@@ -20,12 +20,6 @@ for pair in buffs:
 
 ret = ""
 for ch in name:
-    ret += chr( table[ ord(ch) - ord('a') ] + ord('a') )
+    ret += chr(table[ord(ch) - ord('a')] + ord('a'))
 
-print(ret)    
-
-
-
-    
-    
-
+print(ret)

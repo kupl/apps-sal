@@ -15,7 +15,7 @@ for i in range(0, t):
                 ans_cand = True
         if ans_cand:
             answer.append('%dx%d' % (d1, d2))
-    print(len(answer), end = ' ')
+    print(len(answer), end=' ')
     for j in range(0, len(answer)):
-        print(answer[j], end = ' ')
+        print(answer[j], end=' ')
     print()

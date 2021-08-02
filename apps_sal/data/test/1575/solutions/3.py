@@ -1,10 +1,12 @@
 import sys
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
+
 
 def solve():
     ts, tf, t = map(int, input().split())
@@ -15,7 +17,7 @@ def solve():
         return None
 
     AT = [int(i) for i in input().split()]
-    BT = [0]*n
+    BT = [0] * n
 
     for i, at in enumerate(AT):
         if i == 0:
@@ -31,7 +33,7 @@ def solve():
             else:
                 BT[i] = BT[i - 1] + t
 
-    if BT[n - 1] + 2*t <= tf:
+    if BT[n - 1] + 2 * t <= tf:
         print(BT[n - 1] + t)
         return None
 
@@ -48,6 +50,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

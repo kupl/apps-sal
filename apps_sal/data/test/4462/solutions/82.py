@@ -1,5 +1,5 @@
 n = int(input())
-li = list(map(int,input().split()))
+li = list(map(int, input().split()))
 lis = []
 x = 0
 y = 0
