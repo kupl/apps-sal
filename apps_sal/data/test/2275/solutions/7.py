@@ -16,4 +16,3 @@ for _ in range(Q):
     ans = max(ans, now)
 
     print(ans)
-

@@ -1,13 +1,24 @@
+from collections import Counter
+from collections import deque, defaultdict
+import itertools as it
+from math import gcd, floor, ceil, factorial
 import sys
 input = sys.stdin.readline
 # sys.setrecursionlimit(10**6)
 
+
 def inp():
     return int(input())
+
+
 def inps():
     return input().rstrip()
+
+
 def inpl():
     return list(map(int, input().split()))
+
+
 def inpls():
     return list(map(str, input().split()))
 
@@ -15,25 +26,30 @@ def inpls():
 # from decimal import Decimal
 # decimal.getcontext().prec = 10
 
+
 # from heapq import heappush, heappop, heapify
 # import math
-from math import gcd, floor, ceil, factorial
-import itertools as it
-from collections import deque, defaultdict
-from collections import Counter
+
 
 def lcd(a, b):
     return a * b // gcd(a, b)
 
+
 def chmin(dp, i, x):
-    if x < dp[i]: dp[i] = x; return True
+    if x < dp[i]:
+        dp[i] = x
+        return True
     return False
 
-def chmax(dp, i, x): 
-    if x > dp[i]: dp[i] = x; return True
+
+def chmax(dp, i, x):
+    if x > dp[i]:
+        dp[i] = x
+        return True
     return False
 
 # ---------------------------------------
+
 
 N, K = inpl()
 A = inpl()
@@ -67,4 +83,3 @@ for i in range(start, end + 1):
         r = (r - 0.5) // (K - 1) + 1
     ans = min(ans, int(l + r + 1))
 print(ans)
-

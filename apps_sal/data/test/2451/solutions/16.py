@@ -15,8 +15,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n, h, a, b, k = inpmap()
 for i in range(k):
@@ -32,4 +34,3 @@ for i in range(k):
     r += abs(ta - tb)
     r += abs(fa - fb)
     print(r)
-

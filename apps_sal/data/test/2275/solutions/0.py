@@ -6,4 +6,3 @@ for _ in range(int(input())):
         data = data.replace("AP", "AA")
         count += 1
     print(count)
-

@@ -12,4 +12,3 @@ for _ in range(int(input())):
         else:
             cur = max(cur, i)
     print(res)
-

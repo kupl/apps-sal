@@ -1,5 +1,5 @@
-n,k = map(int,input().split())
-a = list(map(int,input().split()))
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
 
 if k == n:
     print(1)
@@ -10,7 +10,7 @@ if k == 1:
 
 ans = 1
 n -= k
-if n%(k-1) == 0:
-    print(ans + n//(k-1))
+if n % (k - 1) == 0:
+    print(ans + n // (k - 1))
 else:
-    print(ans+1+n//(k-1))
+    print(ans + 1 + n // (k - 1))

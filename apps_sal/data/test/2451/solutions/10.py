@@ -1,6 +1,7 @@
 from sys import stdin as cin
 from sys import stdout as cout
 
+
 def main():
     n, h, a, b, k = list(map(int, cin.readline().split()))
     for i in range(k):
@@ -17,5 +18,5 @@ def main():
                 o += abs(fb - fa)
             print(o)
 
-main()
 
+main()

@@ -16,7 +16,7 @@ mc = N
 for i in range(K):
     c = 1
     if mi - i > 0:
-        c += math.ceil((mi - i) / (K-1))
+        c += math.ceil((mi - i) / (K - 1))
     if mi + K - 1 - i < N:
         c += math.ceil((N - (mi + K - 1 - i) - 1) / (K - 1))
     if c < mc:

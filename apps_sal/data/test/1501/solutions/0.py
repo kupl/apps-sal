@@ -21,7 +21,10 @@ def solve():
     answer *= powmod(n - tail)
     return answer % mod
 
+
 ok_set = set()
+
+
 def is_consistent(p, margin):
     nonlocal ok_set
     if margin in ok_set:
@@ -31,6 +34,7 @@ def is_consistent(p, margin):
         return True
     else:
         return False
+
 
 def powmod(p):
     mod = 10**9 + 7
@@ -44,5 +48,6 @@ def powmod(p):
             result *= tmp
             result %= mod
     return result
+
 
 print(solve())

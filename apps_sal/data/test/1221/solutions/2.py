@@ -21,5 +21,4 @@ def __starting_point():
     print(re)
 
 
-
 __starting_point()

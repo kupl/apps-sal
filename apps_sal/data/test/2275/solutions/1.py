@@ -8,4 +8,3 @@ for _ in range(int(input())):
         elif prev != -1:
             res = max(res, i - prev)
     print(res)
-

@@ -9,4 +9,3 @@ for _ in range(k):
         if ta > b and tb > b:
             s += 2 * min(ta - b, tb - b)
     print(s)
-

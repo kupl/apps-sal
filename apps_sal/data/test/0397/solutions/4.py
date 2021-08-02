@@ -5,4 +5,3 @@ while c * (c + 1) // 2 < k:
 while c * (c + 1) // 2 - (n - c) != k:
     c += 1
 print(n - c)
-

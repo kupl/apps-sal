@@ -7,7 +7,7 @@ b = [int(input()) for _ in range(q)]
 counts = 32 * [0]
 
 for value, count in Counter(a).items():
-    
+
     counts[value.bit_length() - 1] = count
 
 for bj in b:

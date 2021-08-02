@@ -6,9 +6,9 @@ for i in range(k):
     if (fa == fb and ta == tb):
         print(0)
         continue
-    
+
     ans = abs(fa - fb)
-    
+
     if fa == fb:
         ans += abs(ta - tb)
     elif (ta > b):
@@ -18,4 +18,3 @@ for i in range(k):
     else:
         ans += abs(ta - tb)
     print(ans)
-

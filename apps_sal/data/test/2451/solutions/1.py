@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def solve(a, b, t1, f1, t2, f2):
     if t1 == t2:
         return abs(f1 - f2)
@@ -13,6 +14,7 @@ def solve(a, b, t1, f1, t2, f2):
     else:
         return abs(t1 - t2) + abs(f1 - f2)
 
+
 def main():
     n, h, a, b, k = map(int, input().split())
     for i in range(k):
@@ -22,4 +24,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -20,5 +20,3 @@ else:
     print(c)
     print(b)
     print(a)
-    
-

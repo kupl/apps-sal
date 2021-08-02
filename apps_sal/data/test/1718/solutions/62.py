@@ -7,4 +7,3 @@ res = 1
 if N > 0:
     res += (N + (K - 1) - 1) // (K - 1)
 print(res)
-

@@ -1,6 +1,7 @@
-N, K = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 B = (-2 * N - 3)
 C = (N * N + N - 2 * K)
+
 
 def sqr(n):
     x = n
@@ -10,6 +11,6 @@ def sqr(n):
         y = (x + n // x) // 2
     return x
 
-t = sqr(B*B-4*C)
-print((-B - t)//2)
 
+t = sqr(B * B - 4 * C)
+print((-B - t) // 2)

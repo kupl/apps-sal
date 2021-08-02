@@ -9,6 +9,5 @@ for i in range(n):
         minValue = A[i]
         minIndex = i
 
-ans = ((n-2) // (k-1)) + 1
+ans = ((n - 2) // (k - 1)) + 1
 print(ans)
-

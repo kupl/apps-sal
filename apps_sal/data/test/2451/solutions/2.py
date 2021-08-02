@@ -16,4 +16,3 @@ for i in range(k):
     ans += abs(tb - ta)
     ans += abs(fb - to)
     print(ans)
-

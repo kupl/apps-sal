@@ -8,7 +8,8 @@ ans = 0
 for i in range(count_mn):
     N -= K
     ans += 1
-    if N < 0: break
+    if N < 0:
+        break
 K -= 1
 if N > 0:
     ans += N // K if N % K == 0 else N // K + 1

@@ -15,4 +15,3 @@ for x in a:
 
 candi.sort()
 print(candi[-2])
-

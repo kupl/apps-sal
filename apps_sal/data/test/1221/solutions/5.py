@@ -7,7 +7,7 @@ def solve():
     res = []
     for n in range(N):
         for m in range(M):
-            res.append([T[n]*B[m], n, m])
+            res.append([T[n] * B[m], n, m])
 
     res.sort(reverse=True)
 
@@ -18,14 +18,13 @@ def solve():
     MAX = (-1) * float('inf')
     for t in T:
         for b in B:
-            MAX = max(t*b,MAX)
+            MAX = max(t * b, MAX)
 
     print(int(MAX))
 
 
 def __starting_point():
     solve()
-
 
 
 __starting_point()

@@ -16,4 +16,3 @@ else:
     ans += e * min(a, d)
 
 print(ans)
-
