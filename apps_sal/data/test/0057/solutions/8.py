@@ -18,4 +18,3 @@ if mna == mxa or mnb == mxb:
     print(-1)
 else:
     print((mxa - mna) * (mxb - mnb))
-

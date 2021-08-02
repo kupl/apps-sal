@@ -1,6 +1,6 @@
 a, b = map(str, input().split())
 
-if a == 'H' and  b == 'H':
+if a == 'H' and b == 'H':
     print('H')
 elif a == 'D' and b == 'D':
     print('H')

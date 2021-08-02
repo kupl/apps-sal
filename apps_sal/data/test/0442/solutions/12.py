@@ -7,5 +7,3 @@ for x in range(1, ceil(sqrt(r)) + 1):
         print(x, int(y))
         return
 print('NO')
-
-

@@ -12,4 +12,3 @@ if ans == 'NO':
     print(ans)
 else:
     print(*ans)
-

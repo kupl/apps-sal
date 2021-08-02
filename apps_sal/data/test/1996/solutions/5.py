@@ -3,7 +3,7 @@ nemog = set()
 mog = set()
 for i in range(26):
     mog.add(chr(97 + i))
-    
+
 cnt = 0
 flag = False
 
@@ -30,7 +30,7 @@ for i in range(n):
         break
 if not flag:
     ans = 0
-    for i in range (save + 1, n):
+    for i in range(save + 1, n):
         s = input()
         if s[0] == '!' or (i < n - 1 and s[0] == '?'):
             ans += 1

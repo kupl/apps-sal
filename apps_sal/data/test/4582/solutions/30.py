@@ -5,7 +5,7 @@
 
 a, b = input().split()
 
-if a==b:
+if a == b:
     print("H")
 else:
     print("D")

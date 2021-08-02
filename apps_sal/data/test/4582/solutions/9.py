@@ -1,9 +1,9 @@
-a,b = input().split()
+a, b = input().split()
 
 if a == "H":
-  print(b)
+    print(b)
 else:
-  if b == "H":
-    print("D")
-  else:
-    print("H")
+    if b == "H":
+        print("D")
+    else:
+        print("H")

@@ -15,4 +15,3 @@ elif a == 'D':
         print('D')
     elif b == 'D':
         print('H')
-

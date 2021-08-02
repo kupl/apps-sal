@@ -14,8 +14,8 @@ for i in range(n - 1):
         if flag == 1:
             ans += 1
         let = let.intersection(now)
-        #print(now)
-        #print(let)
+        # print(now)
+        # print(let)
     if t == '?':
         if flag == 1:
             ans += 1

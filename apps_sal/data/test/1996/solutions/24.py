@@ -17,4 +17,3 @@ for i in range(n - 1):
     if len(poss) == 1:
         found = True
 print(strikes)
-

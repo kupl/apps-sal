@@ -12,8 +12,10 @@ def main():
             print('D')
         else:
             print('H')
-  
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

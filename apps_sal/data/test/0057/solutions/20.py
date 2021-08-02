@@ -19,4 +19,3 @@ else:
             print(abs(x3 - x1) * abs(y3 - y1))
     else:
         print(abs(x2 - x1) * abs(y2 - y1))
-

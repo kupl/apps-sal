@@ -11,4 +11,3 @@ if len(xset) == 2 and len(yset) == 2:
     print(abs(xset[0] - xset[1]) * abs(yset[0] - yset[1]))
 else:
     print(-1)
-

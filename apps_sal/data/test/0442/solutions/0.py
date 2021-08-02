@@ -1,7 +1,7 @@
-r=int(input())
-if r<=4:
+r = int(input())
+if r <= 4:
     print("NO")
-elif r%2==0:
+elif r % 2 == 0:
     print("NO")
-else :
-    print(1, (r-3)//2)
+else:
+    print(1, (r - 3) // 2)

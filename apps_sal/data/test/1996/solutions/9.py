@@ -23,4 +23,3 @@ for i in range(n - 1):
 q = input()
 
 print(k)
-

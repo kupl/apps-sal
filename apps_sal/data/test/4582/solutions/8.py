@@ -1,4 +1,4 @@
-a,b = map(str,input().split())
+a, b = map(str, input().split())
 if a == "H":
     print(b)
 else:

@@ -20,4 +20,3 @@ for i in range(n - 1):
         break
 if len(l1) > 1:
     print(0)
-

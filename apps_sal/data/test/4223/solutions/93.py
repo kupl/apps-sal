@@ -9,4 +9,3 @@ for s in S:
     pre = s
 
 print((len(res)))
-

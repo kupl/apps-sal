@@ -15,5 +15,3 @@ if (ans > 0):
     print(ans)
 else:
     print(-1)
-
-

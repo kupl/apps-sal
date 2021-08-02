@@ -7,4 +7,3 @@ for c in s:
     if c != pre: ans += 1
     pre = c
 print(ans)
-
