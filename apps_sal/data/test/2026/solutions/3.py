@@ -3,7 +3,7 @@ def main():
     s = input()
     fr = None
     sc = None
-    ans = 0 
+    ans = 0
     for elem in s:
         if (fr == None):
             fr = elem
@@ -13,7 +13,7 @@ def main():
                 if (elem == fr):
                     continue
                 else:
-                    if (fr == 'L' and elem == 'R') or (fr == 'R' and elem == 'L') or (fr == 'D' and elem == 'U') or (fr == 'U' and elem == 'D'): 
+                    if (fr == 'L' and elem == 'R') or (fr == 'R' and elem == 'L') or (fr == 'D' and elem == 'U') or (fr == 'U' and elem == 'D'):
                         ans += 1
                         fr = elem
                         sc = None
@@ -27,5 +27,6 @@ def main():
                     fr = elem
                     sc = None
     print(ans)
-main()
 
+
+main()

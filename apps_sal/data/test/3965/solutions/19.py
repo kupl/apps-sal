@@ -1,7 +1,7 @@
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 
 n = int(input())
-p = [ int(x) for x in input().split() ]
+p = [int(x) for x in input().split()]
 
 r = True
 
@@ -17,4 +17,3 @@ if r:
     print('YES')
 else:
     print('NO')
-

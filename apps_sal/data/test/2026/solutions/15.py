@@ -1,13 +1,13 @@
-n=int(input())
-s=input()
-s=list(s)
-r,l,u,d=0,0,0,0
-points=0
+n = int(input())
+s = input()
+s = list(s)
+r, l, u, d = 0, 0, 0, 0
+points = 0
 for i in s:
-    if(i=='R'):
-        r=1
-        if(l==1):
-            points+=1
+    if(i == 'R'):
+        r = 1
+        if(l == 1):
+            points += 1
             l, u, d = 0, 0, 0
     if (i == 'L'):
         l = 1
@@ -25,4 +25,4 @@ for i in s:
         if (u == 1):
             points += 1
             l, u, r = 0, 0, 0
-print(points+1)
+print(points + 1)

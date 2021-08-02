@@ -17,5 +17,5 @@ def go():
     else:
         print('NO')
 
-go()
 
+go()

@@ -1,8 +1,8 @@
 M = int(input())
 S = input()
 anticmd = {
-    'L':'R',
-    'R':'L',
+    'L': 'R',
+    'R': 'L',
     'U': 'D',
     'D': 'U'
 }

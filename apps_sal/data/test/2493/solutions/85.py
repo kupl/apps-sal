@@ -30,7 +30,6 @@ right = A[::-1].index(X)
 LR = left + right
 
 for i in range(1, N + 2):
-    ans = comb(N+1, i)-comb(LR, i-1)
+    ans = comb(N + 1, i) - comb(LR, i - 1)
     ans = (ans + mod) % mod
     print(ans)
-

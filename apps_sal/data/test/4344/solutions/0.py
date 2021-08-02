@@ -13,4 +13,3 @@ else:
     print('YES')
     b = [str(i) for i, _ in uniq[:k]]
     print(' '.join(b))
-

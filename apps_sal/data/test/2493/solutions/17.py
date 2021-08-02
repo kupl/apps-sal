@@ -39,4 +39,3 @@ for k in range(1, N + 2):
     if t >= k - 1:
         cnt -= (modFacts[t] * invs[k - 1] * invs[t - (k - 1)])
     print((cnt % MOD))
-

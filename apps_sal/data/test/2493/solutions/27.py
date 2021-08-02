@@ -33,4 +33,3 @@ def nCr(n, r):
 
 for k in range(1, N + 1 + 1):
     print(((nCr(N + 1, k) - nCr(max(0, x_l_index) + max(N + 1 - x_r_index - 1, 0), k - 1)) % MOD))
-

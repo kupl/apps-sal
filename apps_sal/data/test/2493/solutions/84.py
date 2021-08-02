@@ -20,7 +20,7 @@ class Comb(object):
 
 
 c = [0] * (n + 1)
-indexes = [[] for _ in range(n+1)]
+indexes = [[] for _ in range(n + 1)]
 for i in range(n + 1):
     c[a[i]] += 1
     indexes[a[i]].append(i)
@@ -35,4 +35,3 @@ for k in range(1, n + 2):
     y = comb.calc(m, k - 1)
     ans = (x - y) % mod
     print(ans)
-

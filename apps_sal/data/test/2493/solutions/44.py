@@ -1,5 +1,6 @@
 from collections import Counter, defaultdict
 
+
 class Combination:
     def __init__(self, size, mod=10**9 + 7):
         self.size = size + 2
@@ -31,6 +32,7 @@ class Combination:
             return 0
         return self.fact[n]
 
+
 N = int(input())
 A = list(map(int, input().split()))
 MOD = 10**9 + 7
@@ -48,4 +50,3 @@ for i in range(1, N + 2):
 
     ans = comb.ncr(N + 1, i) - comb.ncr(S, i - 1)
     print((ans % MOD))
-

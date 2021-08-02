@@ -8,6 +8,6 @@ else:
     s = set()
     for i, e in enumerate(arr):
         if k and e not in s:
-            print(i + 1, end = ' ')
+            print(i + 1, end=' ')
             k -= 1
             s.add(e)

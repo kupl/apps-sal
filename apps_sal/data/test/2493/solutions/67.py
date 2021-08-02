@@ -35,7 +35,6 @@ left_len = left
 right_len = n - right - 1
 print((n - 1))
 for i in range(2, n + 1):
-    ans = c(n, i) - (c(left_len + 1 + right_len, i) -
-                     c(left_len + right_len, i))
+    ans = c(n, i) - (c(left_len + 1 + right_len, i)
+                     - c(left_len + right_len, i))
     print((ans % mod))
-

@@ -63,13 +63,13 @@ def main():
     div2 = pow(2, MOD - 2, MOD)
     for k in range(1, N + 2):
         t = (
-                    calc.nCr(N + 1, k)
-                    - (
-                            calc.nCr(N + 1 - Y, k)
-                            - calc.nCr(N + 1 - 2 - Y, k)
-                            - calc.nCr(N + 1 - 2 - Y, k - 2)
-                    ) * div2 % MOD
-            ) % MOD
+            calc.nCr(N + 1, k) -
+                    (
+                        calc.nCr(N + 1 - Y, k) -
+                            calc.nCr(N + 1 - 2 - Y, k) -
+                calc.nCr(N + 1 - 2 - Y, k - 2)
+            ) * div2 % MOD
+        ) % MOD
         ans.append(t)
 
     print(*ans, sep='\n')
@@ -77,5 +77,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

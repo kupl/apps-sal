@@ -30,4 +30,3 @@ for i in range(0, M + 1):
     ans[i + 1] = (ans[i + 1] - comb + mod) % mod
 
 print(*ans[1:], sep="\n")
-

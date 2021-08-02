@@ -18,6 +18,5 @@ for e in s:
             count += 1
             mh = e
             mv = ''
-    
-print(count+1)
 
+print(count + 1)

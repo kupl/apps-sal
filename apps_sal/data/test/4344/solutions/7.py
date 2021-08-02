@@ -16,7 +16,6 @@ for (i, e) in enumerate(l):
 if len(d) >= n:
     print("YES")
     for e in list(d.values())[:n]:
-        print(e, end = " ")
+        print(e, end=" ")
 else:
     print("NO")
-

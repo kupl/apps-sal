@@ -10,7 +10,7 @@ for i in range(n):
         if (q <= k):
             ans.append(i + 1)
 if q >= k:
-    print("YES") 
+    print("YES")
     print(*ans)
 else:
     print("NO")
