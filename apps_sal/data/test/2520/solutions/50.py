@@ -8,11 +8,12 @@ class UnionFind():
         union: ある要素 x と y が属しているグループを結合して1つのグループとする
         msize: ある要素 x が属するグループの大きさを返す
     """
+
     def __init__(self, n):
         self.n = n
-        self.parents = [-1]*n
-        self.rank = [0]*n
-        self.size = [1]*n
+        self.parents = [-1] * n
+        self.rank = [0] * n
+        self.size = [1] * n
 
     def find(self, x):
         """
@@ -23,7 +24,7 @@ class UnionFind():
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
-    
+
     def union(self, x, y):
         """
             ある要素 x, y の属するグループを結合するメソッド
@@ -50,26 +51,29 @@ class UnionFind():
         """
         return self.size[self.find(x)]
 
+
 def main():
     N, M, K = list(map(int, input().split()))
     uf = UnionFind(N)
     friends = [0] * N
     for _ in range(M):
         A, B = list(map(int, input().split()))
-        uf.union(A-1, B-1)
-        friends[A-1] += 1
-        friends[B-1] += 1
+        uf.union(A - 1, B - 1)
+        friends[A - 1] += 1
+        friends[B - 1] += 1
     for _ in range(K):
         C, D = list(map(int, input().split()))
-        if uf.find(C-1) == uf.find(D-1):
-            friends[C-1] += 1
-            friends[D-1] += 1
+        if uf.find(C - 1) == uf.find(D - 1):
+            friends[C - 1] += 1
+            friends[D - 1] += 1
     ans = []
     for i in range(N):
         ans.append(uf.msize(i) - friends[i] - 1)
     print((*ans))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

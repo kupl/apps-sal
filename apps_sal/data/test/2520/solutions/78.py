@@ -77,5 +77,3 @@ for i in range(n):
     ans.append(num)
 
 print((*ans))
-
-

@@ -42,7 +42,7 @@ trap = []
 
 def check(x):
     avg = a[-x]
-    cost = n+1
+    cost = n + 1
     nr = 0
     for i in range(k):
         xx, y, d = trap[i]
@@ -65,7 +65,7 @@ trap.sort()
 a.sort()
 
 l = 0
-r = m+1
+r = m + 1
 
 while r - l > 1:
     mid = (l + r) // 2
@@ -115,4 +115,3 @@ print(l)
 #         hi = mid
 #
 # print(lo)
-

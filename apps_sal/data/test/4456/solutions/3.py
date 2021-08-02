@@ -48,7 +48,8 @@ b = [int(i) for i in input().split()]
 
 b = solve(a, b)
 string = ''.join(chr(min(i, 97 + 25)) for i in b)
-if len(set(string)) < k: print("NO")
+if len(set(string)) < k:
+    print("NO")
 else:
     print("YES")
     print(string)

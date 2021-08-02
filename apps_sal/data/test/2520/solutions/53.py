@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(100000000)
+
+
 class UnionFind:
     def __init__(self, n):
         self.n = n
@@ -47,21 +49,22 @@ class UnionFind:
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m,k=map(int,input().split())
-block = [0]*n
+
+n, m, k = map(int, input().split())
+block = [0] * n
 uf = UnionFind(n)
 for _ in range(m):
-  a,b=map(int,input().split())
-  block[a-1] += 1
-  block[b-1] += 1
-  uf.union(a-1,b-1)
+    a, b = map(int, input().split())
+    block[a - 1] += 1
+    block[b - 1] += 1
+    uf.union(a - 1, b - 1)
 
 uf.find(0)
 for _ in range(k):
-  c,d=map(int,input().split())
-  if uf.same(c-1,d-1):
-    block[c-1] += 1
-    block[d-1] += 1
+    c, d = map(int, input().split())
+    if uf.same(c - 1, d - 1):
+        block[c - 1] += 1
+        block[d - 1] += 1
 
 ans = [uf.size(i) - block[i] - 1 for i in range(n)]
 print(*ans)

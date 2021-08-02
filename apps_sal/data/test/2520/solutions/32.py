@@ -1,12 +1,14 @@
 class UnionFind:
     def __init__(self, n=0):
-        self.d = [-1]*n
+        self.d = [-1] * n
+
     def find(self, x):
         if self.d[x] < 0:
             return x
         else:
             self.d[x] = self.find(self.d[x])
             return self.d[x]
+
     def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -17,14 +19,17 @@ class UnionFind:
         self.d[x] += self.d[y]
         self.d[y] = x
         return True
+
     def same(self, x, y):
         return self.find(x) == self.find(y)
+
     def size(self, x):
         return -self.d[self.find(x)]
 
+
 n, m, k = map(int, input().split())
 
-deg = [0]*100005
+deg = [0] * 100005
 uf = UnionFind(n)
 for _ in range(m):
     a, b = map(int, input().split())
@@ -42,8 +47,7 @@ for _ in range(k):
         deg[d] += 1
 for i in range(n):
     print(uf.size(i) - 1 - deg[i], end="")
-    if i == n-1:
+    if i == n - 1:
         print()
     else:
         print(" ", end="")
-

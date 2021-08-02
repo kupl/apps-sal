@@ -4,11 +4,13 @@ dist = {}
 dx = [0, 0, 1, -1, 1, -1, 1, -1]
 dy = [1, -1, 0, 0, 1, -1, -1, 1]
 
+
 def calc(x, y):
     nonlocal limit
     val = x
     val = val * limit + y
     return val
+
 
 def bfs():
     nonlocal x0, y0, x1, y1, mark, dist, dx, dy
@@ -36,16 +38,16 @@ def bfs():
 
     print(-1)
 
+
 x0, y0, x1, y1 = list(map(int, input().split()))
 mark.add(calc(x0, y0))
 mark.add(calc(x1, y1))
 
 n = int(input())
 
-for i in range(1, n+1):
+for i in range(1, n + 1):
     r, a, b = list(map(int, input().split()))
-    for j in range(a, b+1):
+    for j in range(a, b + 1):
         mark.add(calc(r, j))
 
 bfs()
-

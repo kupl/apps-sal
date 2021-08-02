@@ -18,6 +18,5 @@ while d:
         if (p2 in moves) and (moves[p2] == -1):
             d.append(p2)
             moves[p2] = m + 1
-            
-print(moves[(x_end, y_end)])
 
+print(moves[(x_end, y_end)])

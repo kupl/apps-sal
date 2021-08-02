@@ -10,7 +10,7 @@ ha = [0] * (n + 1)
 har = [0] * (n + 1)
 hard = [0] * (n + 1)
 
-for i in range (1, n + 1):
+for i in range(1, n + 1):
     if s[i - 1] == 'h':
         h[i] = h[i - 1] + a[i - 1]
     else:

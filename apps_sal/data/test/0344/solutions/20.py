@@ -1,8 +1,10 @@
 import sys
 import os
 
+
 def isVowel(x):
     return x == 'a' or x == 'e' or x == 'i' or x == 'o' or x == 'u'
+
 
 def romaji(str):
     last = None
@@ -21,10 +23,14 @@ def romaji(str):
 
     return 'YES'
 
+
 def main():
     str = input()
     print(romaji(str))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

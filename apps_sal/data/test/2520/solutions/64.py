@@ -1,4 +1,5 @@
-N,M,K = list(map(int, input().split()))
+N, M, K = list(map(int, input().split()))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -46,28 +47,27 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-      
-uf = UnionFind(N)      
+
+
+uf = UnionFind(N)
 V = [[] for _ in range(N)]
 
 for _ in range(M):
-  a,b = list(map(int, input().split()))
-  a,b = a-1, b-1
-  V[a].append(b)
-  V[b].append(a)
-  uf.union(a,b)
-  
-for _ in range(K):
-  a,b = list(map(int, input().split()))
-  a,b = a-1, b-1
-  if uf.same(a,b):
+    a, b = list(map(int, input().split()))
+    a, b = a - 1, b - 1
     V[a].append(b)
     V[b].append(a)
+    uf.union(a, b)
+
+for _ in range(K):
+    a, b = list(map(int, input().split()))
+    a, b = a - 1, b - 1
+    if uf.same(a, b):
+        V[a].append(b)
+        V[b].append(a)
 
 ans = [-1] * N
 for i in range(N):
-  ans[i] = uf.size(i) - len(V[i]) - 1
-  
+    ans[i] = uf.size(i) - len(V[i]) - 1
+
 print((" ".join(list(map(str, ans)))))
-
-

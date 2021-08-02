@@ -30,4 +30,3 @@ for key, value in list(directions.items()):
     result += (total_lines - current) * current
 
 print(int(result / 2))
-

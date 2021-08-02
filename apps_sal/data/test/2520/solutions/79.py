@@ -40,4 +40,3 @@ for i in range(1, N + 1):
         ans[i] = len(link) - len(link & f[i]) - len(link & b[i]) - 1
 
 print((*ans[1:]))
-

@@ -18,4 +18,3 @@ for i in range(n):
         dp[3] += a[i]
 ans = min(dp)
 print(ans)
-

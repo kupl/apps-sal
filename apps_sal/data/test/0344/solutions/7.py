@@ -1,9 +1,9 @@
 def main():
-    #string         input()
-    #int            int(input())
-    #listOfStrings  input().split()
-    #ints           map(int, input().split())
-    #listOfInts     list(map(int, input().split()))
+    # string         input()
+    # int            int(input())
+    # listOfStrings  input().split()
+    # ints           map(int, input().split())
+    # listOfInts     list(map(int, input().split()))
     s = input()
     i = 0
     l = len(s)
@@ -25,4 +25,6 @@ def main():
             i += 1
     print("YES")
     return 0
+
+
 main()

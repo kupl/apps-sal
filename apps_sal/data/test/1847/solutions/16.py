@@ -75,5 +75,3 @@ class Solution:
 
 soln = Solution()
 print(soln.solve())
-
-

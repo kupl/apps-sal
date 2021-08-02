@@ -1,6 +1,7 @@
 import sys
 from collections import deque
 
+
 def solve():
     xadj, yadj = [0, 0, - 1, 1, -1, -1, 1, 1], [1, -1, 0, 0, -1, 1, -1, 1]
     x0, y0, x1, y1, = rv()
@@ -9,7 +10,8 @@ def solve():
     visited = dict()
     for seg in range(n):
         r, a, b, = rv()
-        for c in range(a, b + 1): good.add((r, c))
+        for c in range(a, b + 1):
+            good.add((r, c))
     points = deque()
     points.append((x0, y0, 0))
     visited[(x0, y0)] = 0
@@ -23,13 +25,11 @@ def solve():
     print(visited[(x1, y1)] if (x1, y1) in visited else - 1)
 
 
-
-
-
-
-
 def prt(l): return print(''.join(l))
 def rv(): return map(int, input().split())
 def rl(n): return [list(map(int, input().split())) for _ in range(n)]
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 solve()

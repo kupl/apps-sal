@@ -11,4 +11,3 @@ for ai, c in zip(a, s):
         cost[hard[c]] = min(cost[hard[c] - 1], cost[hard[c]] + ai)
 
 print(cost[4])
-

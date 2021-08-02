@@ -20,8 +20,8 @@ class UnionFind():
             要素数
         """
         self.n = n
-        self.root = [-1]*(n+1)
-        self.rank = [0]*(n+1)
+        self.root = [-1] * (n + 1)
+        self.rank = [0] * (n + 1)
 
     def find_root(self, x):
         """
@@ -105,14 +105,14 @@ friend = [0] * n
 
 for _ in range(m):
     a, b = list(map(int, input().split()))
-    a, b = a-1, b-1
+    a, b = a - 1, b - 1
     uf.unite(a, b)
     friend[a] += 1
     friend[b] += 1
 
 for _ in range(k):
     c, d = list(map(int, input().split()))
-    c, d = c-1, d-1
+    c, d = c - 1, d - 1
     if uf.is_samegroup(c, d):
         friend[c] += 1
         friend[d] += 1
@@ -122,4 +122,3 @@ for i in range(n):
     ans[i] = uf.count(i) - friend[i] - 1
 
 print((*ans))
-

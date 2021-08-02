@@ -33,20 +33,19 @@ def size(x):
 
 
 N, M, K = LI()
-par = [-1]*N
+par = [-1] * N
 not_kouho = [[] for _ in range(N)]
 for i in range(M):
     a, b = map(int, input().split())
     unite(a - 1, b - 1)
-    not_kouho[a-1].append(b-1)
-    not_kouho[b-1].append(a-1)
+    not_kouho[a - 1].append(b - 1)
+    not_kouho[b - 1].append(a - 1)
 
 for i in range(K):
     a, b = map(int, input().split())
-    if same(a-1, b-1):
-        not_kouho[a-1].append(b-1)
-        not_kouho[b-1].append(a-1)
+    if same(a - 1, b - 1):
+        not_kouho[a - 1].append(b - 1)
+        not_kouho[b - 1].append(a - 1)
 
 for i in range(N):
-    print(size(i)-len(not_kouho[i])-1, end=" ")
-
+    print(size(i) - len(not_kouho[i]) - 1, end=" ")

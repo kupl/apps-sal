@@ -3,7 +3,7 @@ p = [int(i) for i in input().split()]
 q = [int(i) for i in input().split()]
 offs = ord("a")
 
-ans = [chr(offs+k-1)] * n
+ans = [chr(offs + k - 1)] * n
 # ans = ""
 pmore = set()
 qmore = set()
@@ -23,13 +23,12 @@ for i in range(n):
     else:
         pmore.add(pi)
 
-    ans[pi - 1] = chr(let+offs)
+    ans[pi - 1] = chr(let + offs)
     if len(pmore) + len(qmore) == 0:
-        
+
         let += 1
         if let == k:
             break
-
 
 
 if let == k:

@@ -1,9 +1,14 @@
-INT = lambda: int(input())
-INTM = lambda: map(int,input().split())
-STRM = lambda: map(str,input().split())
-STR = lambda: str(input())
-LIST = lambda: list(map(int,input().split()))
-LISTS = lambda: list(map(str,input().split()))
+def INT(): return int(input())
+
+
+def INTM(): return map(int, input().split())
+def STRM(): return map(str, input().split())
+def STR(): return str(input())
+
+
+def LIST(): return list(map(int, input().split()))
+def LISTS(): return list(map(str, input().split()))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -52,40 +57,41 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 def do():
-    n,m,k=INTM()
-    uf=UnionFind(n)
-    fri=[[] for i in range(n)]
-    blo=[[] for i in range(n)]
+    n, m, k = INTM()
+    uf = UnionFind(n)
+    fri = [[] for i in range(n)]
+    blo = [[] for i in range(n)]
     for i in range(m):
-        a,b=INTM()
-        a-=1
-        b-=1
+        a, b = INTM()
+        a -= 1
+        b -= 1
         fri[a].append(b)
         fri[b].append(a)
-        uf.union(a,b)
+        uf.union(a, b)
     for i in range(k):
-        c,d=INTM()
-        c-=1
-        d-=1
+        c, d = INTM()
+        c -= 1
+        d -= 1
         blo[c].append(d)
         blo[d].append(c)
 
-    ans=[]
+    ans = []
 
     for i in range(n):
-        blos=0
+        blos = 0
         for j in blo[i]:
-            if uf.same(i,j):
-                blos+=1
-        
-        ans.append(uf.size(i)-1-len(fri[i])-blos)
-    
+            if uf.same(i, j):
+                blos += 1
+
+        ans.append(uf.size(i) - 1 - len(fri[i]) - blos)
+
     print(*ans)
-
-
 
 
 def __starting_point():
     do()
+
+
 __starting_point()

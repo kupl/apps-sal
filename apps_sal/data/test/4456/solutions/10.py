@@ -1,28 +1,29 @@
 n, k = list(map(int, input().split()))
 s = [0] * n
 for i, v in enumerate(map(int, input().split())):
-    s[v-1] = i
+    s[v - 1] = i
 t = [0] * n
 for i, v in enumerate(map(int, input().split())):
-    t[v-1] = i
+    t[v - 1] = i
 p = [0] * n
 for u, v in zip(s, t):
-    if u == v: continue
-    elif v < u: u, v = v, u
+    if u == v:
+        continue
+    elif v < u:
+        u, v = v, u
     p[u] += 1
     p[v] -= 1
 r = [0] * n
 cur = 0
 nxt = -1
 for i, v in enumerate(p):
-    if cur == 0 and nxt < 25: nxt += 1
+    if cur == 0 and nxt < 25:
+        nxt += 1
     r[i] = nxt
     cur += v
 
-if nxt < k-1:
+if nxt < k - 1:
     print("NO")
 else:
     print("YES")
-    print("".join([chr(ord('a')+r[x]) for x in s]))
-
-
+    print("".join([chr(ord('a') + r[x]) for x in s]))

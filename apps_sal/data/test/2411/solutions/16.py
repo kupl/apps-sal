@@ -36,4 +36,3 @@ for i in range(n):
             slope_map[slope].add(c)
             res += total - len(slope_map[slope])
 print(res)
-

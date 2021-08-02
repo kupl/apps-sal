@@ -29,10 +29,11 @@ class UnionFind:
     def same(self, u, v):
         return self.find(u) == self.find(v)
 
+
 N, M, K = map(int, input().split())
-uf = UnionFind(N+1)
-F = [0] * (N+1)
-B = [0] * (N+1)
+uf = UnionFind(N + 1)
+F = [0] * (N + 1)
+B = [0] * (N + 1)
 for _ in range(M):
     a, b = map(int, input().split())
     uf.unite(a, b)
@@ -45,7 +46,7 @@ for _ in range(K):
         B[c] += 1
         B[d] += 1
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     ans = uf.size(i) - F[i] - B[i] - 1
     print(ans, end=' ')
 

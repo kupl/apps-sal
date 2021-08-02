@@ -47,20 +47,20 @@ class UnionFind():
 
 
 n, m, k = map(int, input().split())
-fr = [0]*n
+fr = [0] * n
 uf_fr = UnionFind(n)
 
 for i in range(m):
     a, b = map(int, input().split())
-    uf_fr.union(a-1, b-1)
-    fr[a-1] += 1
-    fr[b-1] += 1
+    uf_fr.union(a - 1, b - 1)
+    fr[a - 1] += 1
+    fr[b - 1] += 1
 
 for i in range(k):
     c, d = map(int, input().split())
-    if uf_fr.find(c-1) == uf_fr.find(d-1):
-        fr[c-1] += 1
-        fr[d-1] += 1
+    if uf_fr.find(c - 1) == uf_fr.find(d - 1):
+        fr[c - 1] += 1
+        fr[d - 1] += 1
 
 ans_list = []
 for i in range(n):

@@ -9,15 +9,16 @@ def army(weak, traps, t_max, n):
             break
         alone[l - 1] += 1
         alone[r] -= 1
-        
+
     interval = 0
     for loc in range(n + 1):
         interval += alone[loc]
         if interval:
             t += 2
-            
+
 #     print(t, t_max)
     return t <= t_max
+
 
 # inf = open('input.txt', 'r')
 # reader = (map(int, line.split()) for line in inf)
@@ -47,8 +48,7 @@ while L + 1 < R:
         R = check
 #     print(L, R)
 #     print()
-    
-print(L)
-    
-# inf.close()
 
+print(L)
+
+# inf.close()

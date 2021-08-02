@@ -18,7 +18,8 @@ class Uf:
         u = self.root(x)
         v = self.root(y)
 
-        if u == v: return
+        if u == v:
+            return
 
         if self.rank[u] < self.rank[v]:
             self.p[u] = v
@@ -35,12 +36,13 @@ class Uf:
     def count(self, x):
         return self.size[self.root(x)]
 
+
 N, M, K = list(map(int, input().split()))
 AB = [list(map(int, input().split())) for _ in range(M)]
 CD = [list(map(int, input().split())) for _ in range(K)]
 
-uf = Uf(N+1)
-M = [-1] * (N+1)
+uf = Uf(N + 1)
+M = [-1] * (N + 1)
 for a, b in AB:
     uf.unite(a, b)
     M[a] -= 1
@@ -49,7 +51,6 @@ for c, d in CD:
     if uf.same(c, d):
         M[c] -= 1
         M[d] -= 1
-for i in range(1, N+1):
+for i in range(1, N + 1):
     M[i] += uf.count(i)
 print((" ".join(map(str, M[1:]))))
-

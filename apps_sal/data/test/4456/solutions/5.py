@@ -36,9 +36,7 @@ def main():
             sq.clear()
             hashq = 0
 
-
     print('NO')
 
 
 main()
-

@@ -4,6 +4,7 @@ sys.setrecursionlimit(100000)
 # スタックサイズを無制限に設定
 # resource.setrlimit(resource.RLIMIT_STACK, (-1, -1))
 
+
 class UnionFind:
     """
     子ノードには自分の親ノードIDを記録。親ノードにはグループサイズの負値を記録。
@@ -11,7 +12,7 @@ class UnionFind:
 
     def __init__(self, n):
         self.node = [-1] * n
-    
+
     def unite(self, x, y):
         """
         xとyが属するグループを統合
@@ -27,7 +28,7 @@ class UnionFind:
         # 大きい方を小さい方へ結合してしまうとノードが深くなってしまうので、
         # 計算量を削減するためのテクニック。
         if abs(self.node[_x]) < abs(self.node[_y]):
-             self.node[_x], self.node[_y] = self.node[_y], self.node[_x]
+            self.node[_x], self.node[_y] = self.node[_y], self.node[_x]
         # グループサイズ更新
         self.node[_x] += self.node[_y]
         # _yの親ノードを_xに更新
@@ -40,7 +41,7 @@ class UnionFind:
         """
         _val = self.node[x]
         # 負なら親ノードとみなして、そのインデックスを返す。
-        if _val < 0: 
+        if _val < 0:
             return x
         # グループの親ノードを再帰的に検索。
         # さらに、グループの親ノードIDを子ノードに記録しておくことで
@@ -59,9 +60,10 @@ class UnionFind:
         xが属するグループの総サイズ取得
         """
         return abs(self.node[self.find(x)])
- 
+
     def __str__(self):
         return str(self.node)
+
 
 N, M, K = map(int, input().split())
 

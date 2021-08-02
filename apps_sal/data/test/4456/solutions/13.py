@@ -41,5 +41,3 @@ else:
         ans[P[i]] = letters[min(25, color[i] - 1)]
     print('YES')
     print(''.join(ans))
-    
-

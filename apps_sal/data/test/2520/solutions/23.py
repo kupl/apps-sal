@@ -18,16 +18,20 @@ U n i o n - F i n d ち ゃ ん は 現 実 じ ゃ な い？にゃああああ
 あっあんああっああんあset様ぁあ！！さ、最小全域木ー！！Dijkstraぁああああああ！！！セグ木ぃいいい！！
 ううっうぅうう！！俺の想いよUnion-Findへ届け！！う　し　た　ぷ　に　き　あ　王　国　笑のUnion-Findへ届け！
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////"""
+
+
 class UnionFind():
     def __init__(self, n):
         self.parents = list(range(n))
         self.size = [1] * n
+
     def find(self, x):
         if self.parents[x] == x:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
+
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -39,44 +43,52 @@ class UnionFind():
         else:
             self.size[x] += self.size[y]
             self.parents[y] = x
+
     def size(self, x):
         return -self.parents[self.find(x)]
+
     def same(self, x, y):
         return self.find(x) == self.find(y)
+
     def members(self, x):
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
+
     def roots(self):
         return [i for i, x in enumerate(self.parents) if x < 0]
+
     def group_count(self):
         return len(self.roots())
+
     def all_group_members(self):
         return {r: self.members(r) for r in self.roots()}
+
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-n,m,k=list(map(int,input().split()))
-uf=UnionFind(n)
-friends=[0]*n
-for i in range(m):
-    a,b=list(map(int,input().split()))
-    uf.union(a-1,b-1)
-    friends[a-1]+=1
-    friends[b-1]+=1
-block=[[] for _ in range(n)]
-for i in range(k):
-    c,d=list(map(int,input().split()))
-    block[c-1].append(d)
-    block[d-1].append(c)
-ans=[0]*n
-cnt=[0]*n
-for i in range(n):
-    cnt[i]=uf.find(i)
-for i in range(n):
-    num1=uf.size[uf.find(i)]-friends[i]-1
-    num2=cnt[i]
-    for j in range(len(block[i])):
-        if num2==cnt[block[i][j]-1]:
-            num1-=1
-    ans[i]=num1
-print((*ans))
 
+
+n, m, k = list(map(int, input().split()))
+uf = UnionFind(n)
+friends = [0] * n
+for i in range(m):
+    a, b = list(map(int, input().split()))
+    uf.union(a - 1, b - 1)
+    friends[a - 1] += 1
+    friends[b - 1] += 1
+block = [[] for _ in range(n)]
+for i in range(k):
+    c, d = list(map(int, input().split()))
+    block[c - 1].append(d)
+    block[d - 1].append(c)
+ans = [0] * n
+cnt = [0] * n
+for i in range(n):
+    cnt[i] = uf.find(i)
+for i in range(n):
+    num1 = uf.size[uf.find(i)] - friends[i] - 1
+    num2 = cnt[i]
+    for j in range(len(block[i])):
+        if num2 == cnt[block[i][j] - 1]:
+            num1 -= 1
+    ans[i] = num1
+print((*ans))

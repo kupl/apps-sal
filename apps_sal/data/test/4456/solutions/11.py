@@ -1,18 +1,18 @@
 import math
 n = 3
 k = 2
- 
-p = [1,2,3]
-q = [1,3,2]
- 
-n,k = [int(x) for x in input().split(' ')]
-p = [int(x) -1 for x in input().split(' ')]
-q = [int(x) -1 for x in input().split(' ')]
- 
+
+p = [1, 2, 3]
+q = [1, 3, 2]
+
+n, k = [int(x) for x in input().split(' ')]
+p = [int(x) - 1 for x in input().split(' ')]
+q = [int(x) - 1 for x in input().split(' ')]
+
 
 group_ids = []
 
- 
+
 p_ids = set()
 q_ids = set()
 for i in range(n):
@@ -32,10 +32,11 @@ for i in range(n):
 if len(group_ids) < k:
     print('NO')
     return
- 
+
+
 def get_letter(_id):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    return alphabet[min(_id, len(alphabet)-1)]
+    return alphabet[min(_id, len(alphabet) - 1)]
 
 
 print('YES')
@@ -44,10 +45,9 @@ l = 0
 for i in range(len(group_ids)):
     r = group_ids[i]
     letter = get_letter(i)
-    for it in range(l, r+1):
+    for it in range(l, r + 1):
         result[p[it]] = letter
-    l = r+1
+    l = r + 1
 
 
- 
 print(''.join(result))
