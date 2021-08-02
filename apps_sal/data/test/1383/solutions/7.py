@@ -22,4 +22,3 @@ for i in variants:
         ans = i
         mx = variants[i]
 print(ans)
-

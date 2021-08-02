@@ -1,5 +1,7 @@
 def inpmap():
     return list(map(int, input().split()))
+
+
 n = int(input())
 arr = list(inpmap())
 
@@ -12,4 +14,3 @@ for i in range(n):
     dc[x] = i
 print(len(dc))
 print(*dc)
-

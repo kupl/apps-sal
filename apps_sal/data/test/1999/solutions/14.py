@@ -12,4 +12,3 @@ for i in range(n):
 
 print(len(idx))
 print(*list(idx.keys()))
-

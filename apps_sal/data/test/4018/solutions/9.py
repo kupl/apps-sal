@@ -22,4 +22,3 @@ for l in range(n, -1, -1):
 if k > 0:
     total = -1
 print(total)
-

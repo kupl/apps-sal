@@ -6,4 +6,3 @@ for i in range(int(input())):
     ln = len(use)
     ans = use * (n // ln) + use[:n % ln]
     print(ans)
-

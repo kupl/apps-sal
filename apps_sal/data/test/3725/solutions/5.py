@@ -2,6 +2,7 @@ from fractions import *
 f = lambda: map(int, input().split())
 m = int(input())
 
+
 def g(u, v):
     h, a = u
     x, y = v
@@ -20,6 +21,7 @@ def g(u, v):
         if d > m: break
 
     return s, d
+
 
 (u, x), (v, y) = g(f(), f()), g(f(), f())
 

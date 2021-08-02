@@ -1,27 +1,27 @@
 import math
 n, k = map(int, input().split())
 # print(n, k)
-dp = [[0]*102 for i in range(102)]
+dp = [[0] * 102 for i in range(102)]
 # print(len(dp))
 s = input()
 last = [-1] * 26
 for i in range(0, 101):
     dp[i][0] = 1
 
-for i in range(1, n+1):
-	for j in range(1, n+1):
-		ch = s[i-1]
-		dp[i][j] = dp[i-1][j-1] + dp[i-1][j]
-		sub = last[ord(ch)-ord('a')]
-		if sub == -1:
-			continue
-		sub -= 1
-		dp[i][j] -= dp[sub][j-1]
-	last[ord(ch)-ord('a')] = i
+for i in range(1, n + 1):
+    for j in range(1, n + 1):
+        ch = s[i - 1]
+        dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j]
+        sub = last[ord(ch) - ord('a')]
+        if sub == -1:
+            continue
+        sub -= 1
+        dp[i][j] -= dp[sub][j - 1]
+    last[ord(ch) - ord('a')] = i
 
 ans = int(0)
 
-for i in range(n, -1, -1):# Need to consider empty subsequence too
+for i in range(n, -1, -1):  # Need to consider empty subsequence too
     if dp[n][i] >= k:
         # print(i, k)
         ans += (k) * (n - i)

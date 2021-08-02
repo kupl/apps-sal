@@ -5,7 +5,7 @@ B = list(map(int, input().split()))
 A.sort()
 A = deque(A)
 B.sort()
-for _ in range(n+1):
+for _ in range(n + 1):
     d = (A[0] - B[0]) % m
     for i in range(1, n):
         if (A[i] - B[i]) % m != d:
@@ -17,4 +17,3 @@ for _ in range(n+1):
     x = A.pop()
     A.appendleft(x)
 print(-1)
-

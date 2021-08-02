@@ -9,6 +9,6 @@ for i, v in enumerate(a):
         del repeats[x]
         x *= 2
     repeats[x] = i
-    
+
 print(len(repeats))
 print(*repeats.keys())

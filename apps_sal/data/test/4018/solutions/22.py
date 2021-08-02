@@ -6,7 +6,8 @@
 # Last Modified Date: 30.08.2019
 # Last Modified By  : JCHRYS <jchrys@me.com>
 class const:
-    size = 26; # size of lowercase alphabet
+    size = 26;  # size of lowercase alphabet
+
 
 n, k = list(map(int, input().split()));
 s = input();
@@ -35,31 +36,26 @@ for length in range(2, n):
 #print(*[row for row in dp], sep="\n")
 k -= 1;
 ans = 0;
-for length in range(n-1, 0, -1):
+for length in range(n - 1, 0, -1):
     temp = 0;
     for i in range(const.size):
-        if (maxpos[n-1][i] != -1):
-            temp += dp[maxpos[n-1][i]][length];
-    
+        if (maxpos[n - 1][i] != -1):
+            temp += dp[maxpos[n - 1][i]][length];
+
     if temp >= k:
         ans += k * (n - length);
         k = 0;
         break;
     else:
         k -= temp;
-        ans += temp * (n-length);
-  
+        ans += temp * (n - length);
+
 
 if (k == 1):
     ans += n;
-    k-=1
+    k -= 1
 
 if k > 0:
     print(-1)
     return
 print(ans)
-
-
-
-
-

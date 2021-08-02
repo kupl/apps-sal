@@ -9,7 +9,7 @@ def subsequences_of_length(s):
     next_i = [[n] * len(alphabet) for i in range(n + 1)]
     for i in reversed(range(n)):
         for j, char in enumerate(alphabet):
-            next_i[i][j] = next_i[i+1][j]
+            next_i[i][j] = next_i[i + 1][j]
         next_i[i][to_int[s[i]]] = i
 
     dp = [[0] * (n + 1) for i in range(n + 1)]
@@ -19,7 +19,7 @@ def subsequences_of_length(s):
             for j in range(26):
                 if next_i[i][j] >= n:
                     continue
-                dp[k+1][next_i[i][j] + 1] += dp[k][i]
+                dp[k + 1][next_i[i][j] + 1] += dp[k][i]
 
     ans = [sum(dp[i]) for i in range(n + 1)]
     return ans

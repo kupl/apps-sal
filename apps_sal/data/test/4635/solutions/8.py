@@ -6,4 +6,3 @@ for i in range(t):
     s = al[:k] * l
     s += al[:n % k]
     print(s)
-

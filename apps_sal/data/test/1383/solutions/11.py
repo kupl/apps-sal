@@ -1,6 +1,5 @@
 
 
-
 def __starting_point():
     n, m = list(map(int, input().split()))
     a = list(map(int, input().split()))
@@ -19,7 +18,8 @@ def __starting_point():
         # print("_a:", _a)
         if _a == b:
             mindiff = min(mindiff, diff)
-    
+
     print(mindiff)
+
 
 __starting_point()
