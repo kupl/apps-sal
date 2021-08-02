@@ -7,8 +7,8 @@ for i in range(n):
     for j in range(c + 1, 26):
         res[i] = max(res[i], f[j] + 1)
     f[c] = max(f[c], res[i])
-    
+
 maxres = max(res)
 print(maxres)
 for i in res:
-    print(i, end = ' ')
+    print(i, end=' ')

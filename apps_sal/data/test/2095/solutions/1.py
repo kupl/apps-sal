@@ -5,7 +5,7 @@ for i in range(n):
     ans = []
 for i in range(n):
     for j in range(n):
-        if arr[i][j] == 1 or arr[i][j]== 3:
+        if arr[i][j] == 1 or arr[i][j] == 3:
             break
     else:
         ans.append(i + 1)

@@ -18,6 +18,7 @@ g(x) = C(x, 0) f(0) + C(x, 1) f(1) + ... + C(x, x) f(x)
 f(x) = sum( (-1) ** (x - i) * C(x, i) * g(i) for i in [0, x] )
 '''
 
+
 class CombMod:
     def __init__(self, V, p):
         self.fact = [1] * V
@@ -28,19 +29,19 @@ class CombMod:
         for i in range(V - 2, 0, -1):
             self.finv[i] = self.finv[i + 1] * (i + 1) % p
         self.p = p
-        
+
     def fact(self, a):
         return self.fact[a]
-    
+
     def finv(self, a):
         return self.finv[a]
 
     def comb(self, a, b):
         return self.fact[a] * self.finv[b] % self.p * self.finv[a - b] % self.p
-        
+
     def perm(self, a, b):
         return self.fact[a] * self.finv[a - b] % self.p
-    
+
     def hcomb(self, a, b):
         return self.comb(a + b - 1, b)
 
@@ -58,4 +59,3 @@ for i in range(0, N + 1):
     f_N = (f_N + val) % mod
 ans = tool.comb(N, N) * f_N % mod
 print(ans)
-

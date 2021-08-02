@@ -12,4 +12,3 @@ mat = [(y - x) / d for y in mat]
 mat.sort()
 med = mat[int((m * n) / 2)]
 print(int(sum([abs(y - med) for y in mat])))
-

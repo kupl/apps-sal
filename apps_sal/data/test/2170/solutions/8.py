@@ -31,14 +31,17 @@ class Combination:
             return 0
         return self.fac[n] * self.facinv[n - r] % self.mod
 
-MOD = 10**9+7
+
+MOD = 10**9 + 7
+
+
 def resolve():
     N, M = list(map(int, input().split()))
     cmb = Combination(5 * 10**5)
 
     ans = 0
-    for p in range(N+1):
-        ans += (-1)**p * cmb.nCr(N, p) * cmb.nPr(M-p, N-p)
+    for p in range(N + 1):
+        ans += (-1)**p * cmb.nCr(N, p) * cmb.nPr(M - p, N - p)
         ans %= MOD
 
     ans *= cmb.nPr(M, N)
@@ -49,5 +52,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

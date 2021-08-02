@@ -11,7 +11,7 @@ def prepare(n):
         invs[i - 1] = (invs[i] * i) % MOD
 
     return modFacts, invs
-        
+
 
 N, M = map(int, input().split())
 

@@ -12,4 +12,6 @@ def __starting_point():
     print(len(good))
     if good:
         print(' '.join(map(str, good)))
+
+
 __starting_point()

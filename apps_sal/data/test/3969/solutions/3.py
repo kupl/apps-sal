@@ -25,4 +25,3 @@ for i in range(numbers):
 
 
 print(numbers - max_length)
-

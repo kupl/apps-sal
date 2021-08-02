@@ -38,8 +38,8 @@ class FermatCmb:
 
 
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, M):
     mod = 10 ** 9 + 7
@@ -47,7 +47,7 @@ def solve(N, M):
     ans = 0
     for k in range(N + 1):
         ans += (-1) ** k * cf.nCk(N, k) * cf.nPk(M, k) * (
-                cf.nPk(M - k, N - k) ** 2)
+            cf.nPk(M - k, N - k) ** 2)
         ans %= mod
     print(ans)
 
@@ -65,5 +65,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

@@ -1,6 +1,7 @@
 N, M = map(int, input().split())
 mod = 10 ** 9 + 7
 
+
 def calc(n):
     f = 1
     factorials = [1]
@@ -16,6 +17,7 @@ def calc(n):
         inv %= mod
         invs[m - 1] = inv
     return factorials, invs
+
 
 factorials, invs = calc(M)
 mPn = (factorials[M] * invs[M - N]) % mod

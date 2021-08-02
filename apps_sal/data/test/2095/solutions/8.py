@@ -18,5 +18,4 @@ for i in range(n):
 print(num)
 for i in range(n):
     if a2[i] == 0:
-        print(i + 1,end=" ")
-
+        print(i + 1, end=" ")

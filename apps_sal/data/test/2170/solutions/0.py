@@ -1,7 +1,7 @@
 class Factorial:
     def __init__(self, max_fact, mod):
-        #mod should be prime number
-        #using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
+        # mod should be prime number
+        # using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
         f = [1] * (max_fact + 1)
         for idx in range(2, max_fact + 1):
             f[idx] = f[idx - 1] * idx
@@ -34,7 +34,7 @@ class Factorial:
         return f[n + r - 1] * fi[r] * fi[n - 1] % self.mod
 
 
-max_fact = 5*10**5
+max_fact = 5 * 10**5
 mod = 10**9 + 7
 fact_instance = Factorial(max_fact, mod)
 comb = fact_instance.combination
@@ -48,4 +48,3 @@ for p in range(N + 1):
 ans *= perm(M, N)
 ans %= mod
 print(ans)
-

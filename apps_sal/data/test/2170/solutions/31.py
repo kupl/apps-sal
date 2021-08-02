@@ -1,5 +1,6 @@
 mod = 10 ** 9 + 7
 
+
 def mod_prepare(N):
     fac = [1, 1]
     finv = [1, 1]
@@ -9,6 +10,7 @@ def mod_prepare(N):
         inv.append(mod - inv[mod % i] * (mod // i) % mod)
         finv.append(finv[i - 1] * inv[i] % mod)
     return fac, finv
+
 
 N, M = map(int, input().split())
 

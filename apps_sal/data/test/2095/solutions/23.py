@@ -19,4 +19,3 @@ if len(answer) == 0:
     return
 print(len(answer))
 print(" ".join(answer))
-

@@ -15,4 +15,4 @@ for i in range(n):
         ans1.append(i + 1)
 print(len(ans1))
 for i in range(len(ans1)):
-    print(ans1[i], end = ' ')
+    print(ans1[i], end=' ')

@@ -11,6 +11,7 @@ def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
 INF = float("inf")
 MOD = 10**9 + 7
 
+
 class Combination(object):
     def __init__(self, N, mod=MOD):
         fac, finv, inv = [0] * (N + 1), [0] * (N + 1), [0] * (N + 1)
@@ -69,5 +70,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

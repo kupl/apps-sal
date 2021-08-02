@@ -1,7 +1,7 @@
 n = int(input())
-a = list([ord(c)-97 for c in input()])
-color = [0]*26
-ans = [0]*n
+a = list([ord(c) - 97 for c in input()])
+color = [0] * 26
+ans = [0] * n
 last = -1
 
 for i, c in enumerate(a):
@@ -23,4 +23,3 @@ for i, c in enumerate(a):
 
 print(max(ans))
 print(*ans)
-

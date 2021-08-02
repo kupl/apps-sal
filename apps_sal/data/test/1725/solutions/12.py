@@ -12,5 +12,4 @@ if t:
     s = t[k // 2]
     print(sum(abs(v - s) for v in t) // d)
 else:
-  print(-1)
-
+    print(-1)

@@ -1,5 +1,6 @@
 import statistics
 
+
 def solve(array, d):
     minval = min(array)
     for i in range(len(array)):
@@ -16,6 +17,7 @@ def solve(array, d):
 
     return moves
 
+
 line = input()
 n, m, d = list(map(int, line.strip().split()))
 array = []
@@ -26,5 +28,3 @@ for i in range(n):
     array += row
 
 print(solve(array, d))
-
-

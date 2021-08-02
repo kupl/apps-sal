@@ -9,7 +9,7 @@ while ind < n:
     else:
         kol[ind] = cur
         best = s[ind]
-        for i in range(ind+1, n):
+        for i in range(ind + 1, n):
             if kol[i] != -1:
                 continue
             else:
@@ -20,4 +20,4 @@ while ind < n:
         cur += 1
 print(max(kol))
 for i in range(n):
-    print(kol[i], end = " ")
+    print(kol[i], end=" ")

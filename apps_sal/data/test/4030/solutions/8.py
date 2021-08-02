@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,20 +15,24 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 # sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
 
+
 def bisearch_min(mn, mx, func):
     ok = mx
     ng = mn
-    while ng+1 < ok:
-        mid = (ok+ng) // 2
+    while ng + 1 < ok:
+        mid = (ok + ng) // 2
         if func(mid):
             ok = mid
         else:
             ng = mid
     return ok
+
 
 def check(m):
     if m == len(B):
@@ -37,8 +42,9 @@ def check(m):
     else:
         return False
 
+
 N = INT()
-A = [ord(c)-97 for c in input()]
+A = [ord(c) - 97 for c in input()]
 
 B = [[] for i in range(1)]
 B[0].append((A[0], 0))
@@ -55,4 +61,3 @@ for a, li in enumerate(B):
         ans[idx] = a + 1
 print(len(B))
 print(*ans)
-

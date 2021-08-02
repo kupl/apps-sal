@@ -12,4 +12,3 @@ for i in s:
         cnt = 0
 
 print(ans)
-
