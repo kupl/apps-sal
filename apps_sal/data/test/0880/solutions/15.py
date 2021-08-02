@@ -13,4 +13,3 @@ else:
         mf *= m
         mf %= MOD
     print((n * mf - mxm) % MOD)
-

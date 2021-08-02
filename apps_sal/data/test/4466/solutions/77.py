@@ -2,15 +2,14 @@ import sys
 
 sys.setrecursionlimit(10**7)
 def I(): return int(sys.stdin.readline().rstrip())
-def MI(): return list(map(int,sys.stdin.readline().rstrip().split()))
-def LI(): return list(map(int,sys.stdin.readline().rstrip().split()))  #空白あり
-def LI2(): return list(map(int,sys.stdin.readline().rstrip()))  #空白なし
+def MI(): return list(map(int, sys.stdin.readline().rstrip().split()))
+def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))  # 空白あり
+def LI2(): return list(map(int, sys.stdin.readline().rstrip()))  # 空白なし
 def S(): return sys.stdin.readline().rstrip()
-def LS(): return list(sys.stdin.readline().rstrip().split())  #空白あり
-def LS2(): return list(sys.stdin.readline().rstrip())  #空白なし
+def LS(): return list(sys.stdin.readline().rstrip().split())  # 空白あり
+def LS2(): return list(sys.stdin.readline().rstrip())  # 空白なし
 
 
-X,Y,Z = MI()
+X, Y, Z = MI()
 X -= Z
-print((X//(Y+Z)))
-
+print((X // (Y + Z)))

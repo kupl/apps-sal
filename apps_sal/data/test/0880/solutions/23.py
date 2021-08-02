@@ -11,4 +11,3 @@ for i in range(1, n):
     s %= M
     f %= M
 print(s % M)
-
