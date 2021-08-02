@@ -23,4 +23,3 @@ for i, row in enumerate(S):
             return
 
 print("Yes")
-

@@ -14,4 +14,3 @@ for i in range(1, n):
         hh = a[i][1]
         wahh = a[i][2]
 print(-1, -1)
-

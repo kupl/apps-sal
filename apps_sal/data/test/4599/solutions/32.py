@@ -1,5 +1,5 @@
 n = int(input())
-li = list(map(int,input().split()))
+li = list(map(int, input().split()))
 li.sort(reverse=True)
 alice = []
 bob = []
@@ -8,4 +8,4 @@ for i in range(n):
         alice.append(li[i])
     else:
         bob.append(li[i])
-print(sum(alice)-sum(bob))
+print(sum(alice) - sum(bob))

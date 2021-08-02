@@ -4,12 +4,12 @@ s = []
 for i in range(h):
     s.append('.' + input() + '.')
 
-s = ['.'* (w+2)]  + s + ['.'*(w+2)]
+s = ['.' * (w + 2)] + s + ['.' * (w + 2)]
 
 ans = 'Yes'
 
-for i in range(1,h):
-    for j in range(1,w):
+for i in range(1, h):
+    for j in range(1, w):
         if s[i][j] == '#':
             u = s[i - 1][j]
             d = s[i + 1][j]

@@ -1,11 +1,11 @@
 from itertools import accumulate
 from itertools import product
 
-D,G = list(map(int, input().split()))
+D, G = list(map(int, input().split()))
 points = []
-for i,_ in enumerate(list(range(D)), 1):
-    P,C = list(map(int, input().split()))
-    point = list(accumulate([100*i] * P))
+for i, _ in enumerate(list(range(D)), 1):
+    P, C = list(map(int, input().split()))
+    point = list(accumulate([100 * i] * P))
     point[-1] += C
     points.append(point)
 
@@ -24,7 +24,7 @@ for completes in product(list(range(2)), repeat=D):
 
     # 目標に届かない場合、高配点を追加で解く
     if total < G:
-        for i,p in enumerate(ex_points,1):
+        for i, p in enumerate(ex_points, 1):
             if total + p >= G:
                 # 目標に届いた
                 solves += i
@@ -32,8 +32,7 @@ for completes in product(list(range(2)), repeat=D):
         else:
             # 目標に届かない
             continue
-        
-    ans = min(ans, solves)
-                
-print(ans)
 
+    ans = min(ans, solves)
+
+print(ans)

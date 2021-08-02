@@ -16,20 +16,19 @@ for i in range(H):
         ok = 0
         if masu[i][j] == ".":
             continue
-        if j+1 < W:
-            if masu[i][j+1] == "#":
+        if j + 1 < W:
+            if masu[i][j + 1] == "#":
                 ok = 1
-        if j-1 >= 0:
-            if masu[i][j-1] == "#":
+        if j - 1 >= 0:
+            if masu[i][j - 1] == "#":
                 ok = 1
-        if i+1 < H:
-            if masu[i+1][j] == "#":
+        if i + 1 < H:
+            if masu[i + 1][j] == "#":
                 ok = 1
-        if i-1 >= 0:
-            if masu[i-1][j] == "#":
+        if i - 1 >= 0:
+            if masu[i - 1][j] == "#":
                 ok = 1
         if ok == 0:
             print("No")
             return
 print("Yes")
-

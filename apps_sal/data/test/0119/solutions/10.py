@@ -3,7 +3,7 @@ def main():
     seg = []
     for i in range(n):
         l, r = map(int, input().split())
-        seg.append((l, r, i+1))
+        seg.append((l, r, i + 1))
 
     seg = sorted(seg, key=lambda x: (x[0], -x[1]))
 
@@ -21,7 +21,8 @@ def main():
         print(-1, -1)
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

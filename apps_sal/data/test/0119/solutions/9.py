@@ -4,7 +4,7 @@ n = int(sys.stdin.readline())
 intervals = list([(int(x[0]), int(x[1])) for x in list(map(str.split, sys.stdin.readlines()))])
 intervals = list(enumerate(intervals))
 
-intervals.sort(key=lambda x : 1000000009 * x[1][0] - x[1][1])
+intervals.sort(key=lambda x: 1000000009 * x[1][0] - x[1][1])
 
 r = 0
 ans1 = -1
@@ -20,5 +20,4 @@ for interval in intervals:
 if ans1 == -1:
     print('-1 -1')
 else:
-    print(ans1 +1, ans2 +1)
-
+    print(ans1 + 1, ans2 + 1)

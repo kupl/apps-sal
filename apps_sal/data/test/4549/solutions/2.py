@@ -18,4 +18,3 @@ for i, j in product(list(range(H)), list(range(W))):
         break
 else:
     print("Yes")
-

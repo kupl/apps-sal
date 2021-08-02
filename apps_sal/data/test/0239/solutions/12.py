@@ -4,8 +4,11 @@ data = [[0, i] for i in range(min(m + 1, 5))] + [[j, 0] for j in range(min(n + 1
 a, b, c, d = 0, 0, 0, 0
 r = -1
 
+
 def check(a, b, c, d):
     return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5 + ((b[0] - c[0]) ** 2 + (b[1] - c[1]) ** 2) ** 0.5 + ((c[0] - d[0]) ** 2 + (c[1] - d[1]) ** 2) ** 0.5
+
+
 for i in range(len(data)):
     for j in range(len(data)):
         for k in range(len(data)):
@@ -20,4 +23,3 @@ print(a[0], a[1])
 print(b[0], b[1])
 print(c[0], c[1])
 print(d[0], d[1])
-

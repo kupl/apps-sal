@@ -6,9 +6,9 @@ bob = 0
 a_sort = sorted(a, reverse=True)
 
 for i in range(n):
-    if i%2 == 0:
+    if i % 2 == 0:
         alice += a_sort[i]
     else:
         bob += a_sort[i]
 
-print(alice-bob)
+print(alice - bob)

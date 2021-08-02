@@ -59,7 +59,7 @@ def resolve():
         un = set(range(D))
         for i in range(D):
             if bit & 1 << i:
-                s += 100*(i+1)*PC[i][0] + PC[i][1]
+                s += 100 * (i + 1) * PC[i][0] + PC[i][1]
                 c += PC[i][0]
                 un.discard(i)
 
@@ -68,7 +68,7 @@ def resolve():
         else:
             u = max(un)
             for i in range(1, PC[u][0]):
-                if s+(u+1)*100*i >= G:
+                if s + (u + 1) * 100 * i >= G:
                     c += i
                     break
             else:
@@ -81,5 +81,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

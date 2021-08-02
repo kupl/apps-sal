@@ -8,4 +8,3 @@ for y in range(1, h + 1):
             print('No')
             return
 print('Yes')
-

@@ -37,4 +37,3 @@ for bit in range(2**d):
                 break
     ans = min(ans, count)
 print(ans)
-

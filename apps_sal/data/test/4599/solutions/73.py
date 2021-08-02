@@ -11,4 +11,4 @@ for i in range(n):
     if i % 2 == 1:
         bob_cards.append(all_cards[i])
 
-print(sum(alice_cards)-sum(bob_cards))
+print(sum(alice_cards) - sum(bob_cards))

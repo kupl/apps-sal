@@ -13,4 +13,3 @@ for i in range(len(dl)):
         ans -= dl[i]
 
 print(ans)
-

@@ -1,15 +1,15 @@
 def solution():
-    
+
     n = int(input())
     segments = []
-    for i,_ in enumerate(range(n)):
-        x,y = input().split(" ")
-        segments.append((int(x), int(y), i+1))
+    for i, _ in enumerate(range(n)):
+        x, y = input().split(" ")
+        segments.append((int(x), int(y), i + 1))
 
     segments = sorted(segments, key=lambda x: (x[0], -x[1]))
 
-    for i,seg in enumerate(segments):
-        j = i+1
+    for i, seg in enumerate(segments):
+        j = i + 1
         if j >= n:
             print("-1 -1")
             return
@@ -21,5 +21,5 @@ def solution():
     print("-1 -1")
     return
 
-solution()
 
+solution()

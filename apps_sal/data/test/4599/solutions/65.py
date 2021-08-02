@@ -1,7 +1,7 @@
 N = int(input())
 a_lst = list(map(int, input().split()))
 
-a_lst.sort(reverse = True)
+a_lst.sort(reverse=True)
 
 A_a_lst = []
 B_a_lst = []

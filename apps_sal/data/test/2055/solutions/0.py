@@ -1,25 +1,34 @@
+from collections import Counter
 import sys
 
 input = sys.stdin.readline
 
 ############ ---- Input Functions ---- ############
+
+
 def inp():
     return (int(input()))
+
+
 def instr():
     return (str(input()))
+
+
 def inlt():
     return (list(map(int, input().split())))
+
+
 def insr():
     s = input()
     return(list(map(int, list(s[:len(s) - 1]))))
 # def insr():
 #     s = input()
 #     return list(s[:len(s) - 1])
+
+
 def invr():
     return (list(map(int, input().split())))
 
-
-from collections import Counter
 
 def check(cities, stations, k, allow):
     # cities = cities.copy()
@@ -76,5 +85,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

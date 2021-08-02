@@ -1,7 +1,5 @@
 
 
-
-
 def how_much_he_eats(n, k):
     result = 0
     while n != 0:
@@ -25,4 +23,3 @@ while a < b:
         a = c + 1
 
 print(a)
-

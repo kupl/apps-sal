@@ -18,23 +18,22 @@ for tf in product([True, False], repeat=d):
         if tf[ind]:
             cnt += p[ind]
             score += (ind + 1) * p[ind] + c[ind]
-    
-    for ind in range(d-1, -1, -1):
+
+    for ind in range(d - 1, -1, -1):
         if score >= g:
             break
 
         if tf[ind]:
             continue
-        
+
         if (ind + 1) * p[ind] + score <= g:
             cnt += p[ind]
             score += (ind + 1) * p[ind]
         else:
             cnt += (g - score - 1) // (ind + 1) + 1
             score = g
-    
+
     if score >= g and ans > cnt:
         ans = cnt
 
 print(ans)
-

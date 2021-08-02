@@ -1,10 +1,15 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
-    
+
+
 def f(n, k):
     c = 0
     e = 0
@@ -14,6 +19,7 @@ def f(n, k):
         n -= n // 10
         c += 1
     return e
+
 
 n = ii()
 lo = 1

@@ -17,7 +17,7 @@ def main():
         return
 
     for i in range(1, N):
-        T[i] += T[i-1]
+        T[i] += T[i - 1]
     ans = 0
     cnt = 0
     for t in T:
@@ -25,13 +25,13 @@ def main():
             cnt += 1
         else:
             if cnt:
-                ans += cnt+1
+                ans += cnt + 1
             cnt = 0
     print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

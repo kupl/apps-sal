@@ -10,7 +10,7 @@ def main():
         S = list(input())
         for j in range(W):
             grid[i + 1][j + 1] = S[j]
-    
+
     for i in range(H):
         for j in range(W):
             if grid[i + 1][j + 1] == '#':
@@ -23,7 +23,9 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

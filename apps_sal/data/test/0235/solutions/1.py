@@ -7,10 +7,11 @@ def consumed(n, k):
         n -= n // 10
     return res
 
+
 n = int(input())
 
 lo = 1
-high = (n+1) // 2
+high = (n + 1) // 2
 
 while lo != high:
     mid = (lo + high) // 2
@@ -20,4 +21,3 @@ while lo != high:
         lo = mid + 1
 
 print(lo)
-

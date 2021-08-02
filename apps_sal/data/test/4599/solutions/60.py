@@ -12,4 +12,4 @@ while nums:
         Bob += nums.pop(0)
     i += 1
 
-print(Alice-Bob)
+print(Alice - Bob)

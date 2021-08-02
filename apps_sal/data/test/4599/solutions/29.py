@@ -13,5 +13,4 @@ for i in range(len(a)):
     else:
         y += a[i]
 
-print((x-y))
-
+print((x - y))

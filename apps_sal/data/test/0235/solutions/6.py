@@ -17,4 +17,3 @@ while l < r:
     else:
         l = m + 1
 print(l)
-

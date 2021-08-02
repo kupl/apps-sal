@@ -29,4 +29,3 @@ def binSearch(a, b):
 
 
 print(binSearch(1, n // 2))
-

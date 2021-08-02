@@ -21,7 +21,7 @@ for bit in range(1 << D):
         n = min(pc[pid][0], math.ceil((G - sum) / ((pid + 1) * 100)))
         cnt += n
         sum += n * (pid + 1) * 100
-        
+
     if sum >= G:
         ans = min(ans, cnt)
 

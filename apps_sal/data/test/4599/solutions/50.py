@@ -1,6 +1,8 @@
-getint = lambda: int(input())
-getints = lambda: map(int, input().split())
-getlist = lambda: list(getints())
+def getint(): return int(input())
+def getints(): return map(int, input().split())
+def getlist(): return list(getints())
+
+
 n = getint()
 a = getlist()
 a.sort(reverse=True)

@@ -20,4 +20,3 @@ for i, T in enumerate(S):
                 print("No")
                 return
 print("Yes")
-

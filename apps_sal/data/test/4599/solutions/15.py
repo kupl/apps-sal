@@ -16,6 +16,9 @@ def main():
     ans = alice - bob
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

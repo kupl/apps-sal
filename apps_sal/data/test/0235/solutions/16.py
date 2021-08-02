@@ -13,32 +13,50 @@ import bisect
 from statistics import mean, mode, median, median_low, median_high
 # CONFIG
 sys.setrecursionlimit(1000000000)
-# LOG 
+# LOG
+
+
 def log(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 # INPUT
+
+
 def ni():
     return map(int, input().split())
+
+
 def nio(offset):
     return map(lambda x: int(x) + offset, input().split())
+
+
 def nia():
     return list(map(int, input().split()))
 # CONVERT
+
+
 def toString(aList, sep=" "):
     return sep.join(str(x) for x in aList)
+
+
 def toMapInvertIndex(aList):
     return {k: v for v, k in enumerate(aList)}
 # SORT
+
+
 def sortId(arr):
     return sorted(range(arr), key=lambda k: arr[k])
 # MATH
-def gcd(a,b):
+
+
+def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
 # MAIN
 
+
 n, = ni()
+
 
 def check(k):
     v = 0
@@ -56,11 +74,12 @@ def check(k):
         else:
             v += x
             x = 0
-        
+
         # log(" ", x, v, p)
-    
+
     # log(k,v,p)
     return v >= p
+
 
 def bsearch(low, high):
     # log(low,high)
@@ -70,9 +89,9 @@ def bsearch(low, high):
     if check(mid):
         return bsearch(low, mid)
     else:
-        return bsearch(mid+1, high)
+        return bsearch(mid + 1, high)
 
 
-x = bsearch(1,n)
+x = bsearch(1, n)
 # log(x)
 print(x)

@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(D, G, pc):
     point_map = []
@@ -47,5 +47,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

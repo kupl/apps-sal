@@ -11,4 +11,4 @@ for i in range(n):
     else:
         b += x.pop()
 
-print(a-b)
+print(a - b)

@@ -1,5 +1,7 @@
 d, g = list(map(int, input().split()))
 pc = [0] + [list(map(int, input().split())) for i in range(d)]
+
+
 def dfs(d_, g_):
     if d_ == 0:
         return float("inf")
@@ -10,5 +12,6 @@ def dfs(d_, g_):
     if g_ > cur:
         cnt += dfs(d_ - 1, g_ - cur)
     return min(cnt, dfs(d_ - 1, g_))
-print((dfs(d, g)))
 
+
+print((dfs(d, g)))

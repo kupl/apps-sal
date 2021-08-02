@@ -15,4 +15,4 @@ while len(A) != 0:
     if len(A) == 0:
         break
 
-print(Alice-Bob)
+print(Alice - Bob)
