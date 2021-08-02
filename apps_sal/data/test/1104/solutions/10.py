@@ -33,4 +33,3 @@ if stack:
     print(*stack[0])
 else:
     print('NO')
-

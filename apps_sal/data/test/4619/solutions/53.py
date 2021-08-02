@@ -1,5 +1,5 @@
 w, h, n = map(int, input().split())
-l = [[0]*w for _ in range(h)]
+l = [[0] * w for _ in range(h)]
 count = 0
 for _ in range(n):
     x, y, a = map(int, input().split())
@@ -11,7 +11,7 @@ for _ in range(n):
                     count += 1
     if a == 2:
         for i in range(h):
-            for j in range(x,w):
+            for j in range(x, w):
                 if l[i][j] == 0:
                     l[i][j] = 1
                     count += 1
@@ -22,10 +22,10 @@ for _ in range(n):
                     l[i][j] = 1
                     count += 1
     if a == 4:
-        for i in range(y,h):
+        for i in range(y, h):
             for j in range(w):
                 if l[i][j] == 0:
                     l[i][j] = 1
                     count += 1
 
-print(w*h - count)           
+print(w * h - count)

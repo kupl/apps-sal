@@ -7,4 +7,3 @@ for i in range(n):
     r = max(min(r - 1, a[n - i - 1]), 0)
     ans += r
 print(ans)
-

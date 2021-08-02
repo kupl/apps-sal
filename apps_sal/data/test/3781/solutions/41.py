@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
@@ -49,36 +50,34 @@ N=偶数で，後手がg=0を作れるケースを考えようか．
 
 """
 
+
 def main():
-    mod=10**9+7
-    
-    T=I()
+    mod = 10**9 + 7
+
+    T = I()
     for _ in range(T):
-        N=I()
-        A=LI()
-        
-        if N%2==1:
+        N = I()
+        A = LI()
+
+        if N % 2 == 1:
             print("Second")
         else:
-            flag=1#全部偶数個か?
+            flag = 1  # 全部偶数個か?
             from collections import defaultdict
             dd = defaultdict(int)
-            
+
             for i in range(N):
-                dd[A[i]]+=1
-                
-            for k,v in list(dd.items()):
-                if v%2:
-                    flag=0
+                dd[A[i]] += 1
+
+            for k, v in list(dd.items()):
+                if v % 2:
+                    flag = 0
                     break
-                
-            if flag==1:
+
+            if flag == 1:
                 print("Second")
             else:
                 print("First")
-            
-            
-            
+
 
 main()
-

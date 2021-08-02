@@ -14,11 +14,12 @@ def main():
             board[-y:, :] = 1
         elif a == 4:
             board[:-y, :] = 1
-    ans = (w*h) - np.sum(board)
+    ans = (w * h) - np.sum(board)
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -28,4 +28,3 @@ def solve():
 T = ini()
 for i in range(T):
     print(solve())
-

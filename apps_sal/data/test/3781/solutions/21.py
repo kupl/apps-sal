@@ -6,7 +6,7 @@ for _ in range(T):
     N = int(input())
     A = list(map(int, input().split()))
     C = Counter(A)
-    
+
     if N % 2 == 1:
         ans = False
     else:
@@ -16,5 +16,3 @@ for _ in range(T):
             ans = True
     win = 'First' if ans is True else 'Second'
     print(win)
-
-

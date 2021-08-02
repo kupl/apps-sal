@@ -12,7 +12,7 @@ def read():
 
 
 def solve(W, H, N, XYA):
-    S = [[0 for j in range(W+1)] for i in range(H+1)]
+    S = [[0 for j in range(W + 1)] for i in range(H + 1)]
     for x, y, a in XYA:
         if a == 1:
             lt, rt, lb, rb = (0, 0), (x, 0), (0, H), (x, H)
@@ -26,14 +26,14 @@ def solve(W, H, N, XYA):
         S[rt[1]][rt[0]] -= 1
         S[lb[1]][lb[0]] -= 1
         S[rb[1]][rb[0]] += 1
-    
+
     for i in range(H):
-        for j in range(W+1):
-            S[i+1][j] += S[i][j]
-    for i in range(H+1):
+        for j in range(W + 1):
+            S[i + 1][j] += S[i][j]
+    for i in range(H + 1):
         for j in range(W):
-            S[i][j+1] += S[i][j]
-    
+            S[i][j + 1] += S[i][j]
+
     ans = 0
     for i in range(H):
         for j in range(W):
@@ -45,5 +45,6 @@ def solve(W, H, N, XYA):
 def __starting_point():
     inputs = read()
     print((solve(*inputs)))
+
 
 __starting_point()

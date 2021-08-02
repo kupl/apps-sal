@@ -15,7 +15,7 @@ for i in range(N):
         ymin = max(ymin, array[i][1])
     elif array[i][2] == 4:
         ymax = min(ymax, array[i][1])
-area = (xmax-xmin)*(ymax-ymin)
+area = (xmax - xmin) * (ymax - ymin)
 if area <= 0 or xmax < xmin or ymax < ymin:
     print(0)
 else:

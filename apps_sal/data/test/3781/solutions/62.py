@@ -12,4 +12,3 @@ for _ in range(q):
         if v % 2 == 1:
             flg = False
     print(("Second" if flg else "First"))
-

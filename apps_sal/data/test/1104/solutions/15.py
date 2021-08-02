@@ -38,7 +38,7 @@ for j in range(4):
                         break
                 else:
                     fl = False
-                    break        
+                    break
             if brr[i] == 0:
                 if arr[i] == 1:
                     if trr[i] == 0:
@@ -55,7 +55,7 @@ for j in range(4):
                         trr[i + 1] = 2
                     else:
                         fl = False
-                        break         
+                        break
                 else:
                     if trr[i] == 1:
                         trr[i + 1] = 2
@@ -66,7 +66,7 @@ for j in range(4):
                     else:
                         trr[i + 1] = 3
 
-    #print(trr)
+    # print(trr)
     if fl:
         print('YES')
         print(*trr)

@@ -18,21 +18,15 @@ for i in range(n):
     else:
         ro += 1
 
-res = 0        
+res = 0
 if(rc >= ro):
     res += ro
 else:
     res += rc
-    
+
 if(lc >= lo):
     res += lo
 else:
     res += lc
-    
+
 print(res)
-    
-
-        
-        
-    
-

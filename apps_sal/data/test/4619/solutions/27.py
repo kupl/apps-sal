@@ -2,7 +2,7 @@ W, H, N = map(int, input().split())
 x, y, a = [0] * N, [0] * N, [0] * N
 for i in range(N):
     x[i], y[i], a[i] = map(int, input().split())
-    
+
 xmin = 0
 xmax = W
 ymin = 0

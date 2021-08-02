@@ -7,25 +7,30 @@ for i in range(n):
     a.append(A)
 zahyou = [[1 for _ in range(h)] for __ in range(w)]
 
+
 def m1(d):
     for i in range(d):
         for j in range(h):
             zahyou[i][j] = 0
 
+
 def m2(d):
-    for i in range(w-d):
+    for i in range(w - d):
         for j in range(h):
-            zahyou[i+d][j] = 0
+            zahyou[i + d][j] = 0
+
 
 def m3(d):
     for i in range(w):
         for j in range(d):
             zahyou[i][j] = 0
 
+
 def m4(d):
     for i in range(w):
-        for j in range(h-d):
-            zahyou[i][j+d] = 0
+        for j in range(h - d):
+            zahyou[i][j + d] = 0
+
 
 for i in range(n):
     if a[i] == 1:
@@ -37,4 +42,4 @@ for i in range(n):
     else:
         m4(y[i])
 
-print(sum(map(sum,zahyou)))
+print(sum(map(sum, zahyou)))

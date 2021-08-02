@@ -14,6 +14,6 @@ for i in range(n):
     else:
         s.append(y)
 if max(p) <= min(q) and max(r) <= min(s):
-    print((min(q) - max(p))*(min(s) - max(r)))
+    print((min(q) - max(p)) * (min(s) - max(r)))
 else:
     print(0)

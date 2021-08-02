@@ -180,4 +180,3 @@ else:
                 print(*t)
             else:
                 print('NO')
-

@@ -14,4 +14,3 @@ right_0 = right.count('0')
 right_1 = right.count('1')
 
 print(min(left_0, left_1) + min(right_0, right_1))
-

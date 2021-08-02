@@ -21,4 +21,3 @@ for xya in xyas:
                 c[i][j] = 0
 
 print((sum([sum(c2) for c2 in c])))
-

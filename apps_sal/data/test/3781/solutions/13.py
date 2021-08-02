@@ -15,4 +15,3 @@ for _ in range(int(input())):
         print("Second")
     else:
         print("First")
-

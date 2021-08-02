@@ -14,4 +14,3 @@ for i in range(n):
         h_max = min(h_max, plots[i][1])
 
 print((max(0, (w_max - w_min)) * max(0, (h_max - h_min))))
-

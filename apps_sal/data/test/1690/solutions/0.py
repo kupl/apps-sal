@@ -2,6 +2,7 @@ rr = lambda: input().strip()
 rri = lambda: int(rr())
 rrm = lambda: list(map(int, rr().split()))
 
+
 def solve(N, A):
     ans = 0
     prev = float('inf')
@@ -11,8 +12,8 @@ def solve(N, A):
         prev = x
     return ans
 
-for tc in range(1):#rri()):
+
+for tc in range(1):  # rri()):
     N = rri()
     A = rrm()
     print(solve(N, A))
-

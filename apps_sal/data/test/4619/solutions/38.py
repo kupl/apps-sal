@@ -13,7 +13,7 @@ for i in range(N):
         x_max = min(x_max, x)
     elif a == 3:
         y_min = max(y_min, y)
-    else: # a == 4
+    else:  # a == 4
         y_max = min(y_max, y)
 
 area = max(0, x_max - x_min) * max(0, y_max - y_min)

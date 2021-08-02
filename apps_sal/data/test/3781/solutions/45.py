@@ -16,6 +16,7 @@ def main():
         A = lmi()
         solve(N, A)
 
+
 def rfe(S):
     for k, v in itertools.groupby(S):
         yield k, len(list(v))

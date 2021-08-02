@@ -12,7 +12,6 @@ for _ in range(n):
     elif a == 4:
         h = min(h, y)
 if sw < w and sh < h:
-    print(((w-sw) * (h-sh)))
+    print(((w - sw) * (h - sh)))
 else:
     print((0))
-

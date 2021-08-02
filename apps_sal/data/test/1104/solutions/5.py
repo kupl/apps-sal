@@ -4,12 +4,14 @@ b = [int(i) for i in input().split()]
 
 mp = [[] for i in range(64)]
 
+
 def getmp(a, b, t):
-    return mp[a + b*4 + t*16]
+    return mp[a + b * 4 + t * 16]
+
 
 for i in range(4):
     for j in range(4):
-        mp[(i | j) + (i & j) * 4 + i*16].append(j)
+        mp[(i | j) + (i & j) * 4 + i * 16].append(j)
 
 var = [0]
 
@@ -43,4 +45,3 @@ if len(var) > 0:
     print(' '.join(map(str, var)))
 else:
     print('NO')
-

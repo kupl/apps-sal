@@ -17,4 +17,3 @@ for i in range(n):
 
 res = max(0, r_w - l_w) * max(0, u_h - d_h)
 print(res)
-

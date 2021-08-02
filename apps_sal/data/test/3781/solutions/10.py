@@ -1,10 +1,9 @@
+import collections
 import sys
 
 sys.setrecursionlimit(10 ** 8)
 
 input = sys.stdin.readline
-
-import collections
 
 
 def main():
@@ -31,8 +30,8 @@ def main():
             print("First")
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

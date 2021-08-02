@@ -14,5 +14,5 @@ for _ in range(n):
 if x_pos[1] - x_pos[0] < 0 or y_pos[1] - y_pos[0] < 0:
     ans = 0
 else:
-    ans = (x_pos[1] - x_pos[0] ) * (y_pos[1] - y_pos[0])
+    ans = (x_pos[1] - x_pos[0]) * (y_pos[1] - y_pos[0])
 print(ans)

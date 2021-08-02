@@ -58,11 +58,12 @@ def resolve():
             oy = max(a[i][1], oy)
         elif a[i][2] == 4:
             H = min(a[i][1], H)
-    print((max(W-ox, 0)*max(H-oy, 0)))
+    print((max(W - ox, 0) * max(H - oy, 0)))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

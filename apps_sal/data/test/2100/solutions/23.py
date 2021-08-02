@@ -1,29 +1,35 @@
 # python2 or 3
-import sys, threading, os.path
-import collections, heapq, math,bisect
+import sys
+import threading
+import os.path
+import collections
+import heapq
+import math
+import bisect
 import string
 from platform import python_version
 sys.setrecursionlimit(10**6)
 threading.stack_size(2**27)
+
 
 def main():
     if os.path.exists('input.txt'):
         input = open('input.txt', 'r')
     else:
         input = sys.stdin
-    #--------------------------------INPUT---------------------------------
+    # --------------------------------INPUT---------------------------------
     n = int(input.readline())
-    lis,counter = [],0
-    rightc,leftc = 0,0
+    lis, counter = [], 0
+    rightc, leftc = 0, 0
     for i in range(n):
-        a,b = list(map(int, input.readline().split()))
-        if a ==0:
-            rightc+=1
+        a, b = list(map(int, input.readline().split()))
+        if a == 0:
+            rightc += 1
         if b == 0:
-            leftc+=1
-    counter = min(rightc,n-rightc)+min(leftc,n-leftc)
+            leftc += 1
+    counter = min(rightc, n - rightc) + min(leftc, n - leftc)
     output = counter
-    #-------------------------------OUTPUT----------------------------------
+    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('output.txt'):
         open('output.txt', 'w').writelines(str(output))
     else:
@@ -31,5 +37,3 @@ def main():
 
 
 threading.Thread(target=main).start()
-
-
