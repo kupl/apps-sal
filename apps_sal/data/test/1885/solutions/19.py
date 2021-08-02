@@ -15,4 +15,3 @@ for i in range(5):
     cur *= n - i
 ans += cur // factorial(5)
 print(ans)
-

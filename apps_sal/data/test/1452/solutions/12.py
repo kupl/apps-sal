@@ -2,7 +2,7 @@ h, w = list(map(int, input().split()))
 r = list(map(int, input().split()))
 c = list(map(int, input().split()))
 
-table = [[-1]*w for i in range(h)]
+table = [[-1] * w for i in range(h)]
 
 for i, row in enumerate(r):
     for j in range(row):
@@ -28,7 +28,6 @@ res = 1
 for i in range(h):
     for j in range(w):
         if table[i][j] == -1:
-            res = (res*2)%1000000007
+            res = (res * 2) % 1000000007
 
 print(res)
-

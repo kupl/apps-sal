@@ -1,7 +1,7 @@
-h, w = list(map(int,input().split()))
+h, w = list(map(int, input().split()))
 
-r = list(map(int,input().split()))
-c = list(map(int,input().split()))
+r = list(map(int, input().split()))
+c = list(map(int, input().split()))
 
 l = [-1] * (h * w)
 
@@ -32,7 +32,7 @@ for j in range(w):
             break
         l[pos] = 0
 
-M = 10**9+7
+M = 10**9 + 7
 
 if out == -1:
     print(0)
@@ -41,5 +41,4 @@ else:
     for i in l:
         if i == -1:
             count += 1
-    print(pow(2,count,M))
-
+    print(pow(2, count, M))

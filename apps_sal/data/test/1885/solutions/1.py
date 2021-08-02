@@ -7,4 +7,3 @@ ans += a // factorial(6)
 a *= (n - 6)
 ans += a // factorial(7)
 print(ans)
-

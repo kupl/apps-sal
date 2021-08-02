@@ -18,6 +18,8 @@ def sieve(n):
         if prime[p]:
             r.append(p)
     return r
+
+
 def divs(n, start=1):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
@@ -27,6 +29,8 @@ def divs(n, start=1):
             else:
                 r.extend([i, n // i])
     return r
+
+
 def cdiv(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
 def mi(): return list(map(int, input().split()))
@@ -34,6 +38,8 @@ def li(): return list(map(int, input().split()))
 def lcm(a, b): return abs(a * b) // math.gcd(a, b)
 def wr(arr): return ''.join(map(str, arr))
 def revn(n): return str(n)[::-1]
+
+
 def prime(n):
     if n == 2: return True
     if n % 2 == 0 or n <= 1: return False
@@ -41,6 +47,8 @@ def prime(n):
     for d in range(3, sqr, 2):
         if n % d == 0: return False
     return True
+
+
 def convn(number, base):
     newnumber = 0
     while number > 0:
@@ -71,4 +79,3 @@ for _ in range(t):
         print(n, 1)
         for i in range(m - n):
             print(posmin + 1, posmin1 + 1)
-

@@ -6,10 +6,12 @@ for i in range(2, 200200):
     inv.append(inv[mod % i] * (mod - mod // i) % mod)
     invfact.append(invfact[-1] * inv[-1] % mod)
 
+
 def C(n, k):
     if k < 0 or k > n:
         return 0
     return fact[n] * invfact[k] * invfact[n - k] % mod
+
 
 s = input()
 op, cl = 0, s.count(')')
@@ -23,4 +25,3 @@ for x in s:
         cl -= 1
 
 print(ans % mod)
-

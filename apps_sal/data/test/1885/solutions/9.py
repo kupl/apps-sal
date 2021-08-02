@@ -1,6 +1,7 @@
 def cnk(n, k):
     return f[n] // f[n - k] // f[k]
 
+
 n = int(input())
 
 f = [0 for i in range(n + 1)]

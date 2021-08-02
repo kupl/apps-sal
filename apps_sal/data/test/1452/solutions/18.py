@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -211,41 +213,36 @@ def main():
     hi = get_list()
     wi = get_list()
     mat = [[0 for _ in range(w)] for _ in range(h)]
-    i, j = 0,0
+    i, j = 0, 0
     for i, ele in enumerate(hi):
         for j in range(0, ele):
             mat[i][j] = 1
-        if ele<w: mat[i][ele]=-1
+        if ele < w: mat[i][ele] = -1
     #[print(li) for li in mat]
     for i, ele in enumerate(wi):
         for j in range(0, ele):
-            if mat[j][i]==-1:
+            if mat[j][i] == -1:
                 print(0)
                 return
             mat[j][i] = 1
-        if ele<h:
-            if mat[ele][i]==1:
+        if ele < h:
+            if mat[ele][i] == 1:
                 #print(ele, i)
                 print(0)
                 return
-            mat[ele][i]=-1
+            mat[ele][i] = -1
     #[print (li) for li in mat]
     res = 1
     for li in mat:
         for i in li:
-            if i==0:
-                res = (res*2)%P
+            if i == 0:
+                res = (res * 2) % P
     print(res)
 
 
-
-
 # --------------------------------------------------------------------- END=
-
-
 if TestCases:
     for i in range(get_int()):
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

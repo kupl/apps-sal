@@ -11,13 +11,12 @@ op = 0
 cl = s.count(')')
 ans = 0
 if cl > 0:
-  for c in s:
-    if c == '(':
-      op += 1
-      ans += f[op + cl - 1] * finv[cl - 1] * finv[op]
-    elif cl <= 1:
-      break
-    else:
-      cl -= 1
+    for c in s:
+        if c == '(':
+            op += 1
+            ans += f[op + cl - 1] * finv[cl - 1] * finv[op]
+        elif cl <= 1:
+            break
+        else:
+            cl -= 1
 print(ans % mod)
-

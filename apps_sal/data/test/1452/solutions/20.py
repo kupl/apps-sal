@@ -23,7 +23,7 @@ for i, j in enumerate(W):
     elif j < h:
         arr[j][i] = 'w'
 
-#for i in arr:
+# for i in arr:
 #    print(*i)
 
 if error:
@@ -33,4 +33,3 @@ else:
     for i in arr:
         count += i.count('r')
     print((2 ** count) % (10 ** 9 + 7))
-

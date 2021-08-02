@@ -45,4 +45,3 @@ for i in d:
         num %= MOD
 
 print(num)
-

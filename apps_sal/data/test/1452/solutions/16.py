@@ -28,9 +28,9 @@ if t == 0:
     print (-1)
 '''
 
-h, w = list(map(int,input().split(' ')))
-r = list(map(int,input().split(' ')))
-c = list(map(int,input().split(' ')))
+h, w = list(map(int, input().split(' ')))
+r = list(map(int, input().split(' ')))
+c = list(map(int, input().split(' ')))
 
 cnt = 0
 x = [[-1 for _ in range(w)] for _ in range(h)]
@@ -61,7 +61,7 @@ for i in range(h):
         break
     if r[i] < w:
         if x[i][r[i]] == 0 or x[i][r[i]] == -1:
-            x[i][r[i]] = 0 
+            x[i][r[i]] = 0
         else:
             cnt = -1
             break
@@ -73,5 +73,4 @@ else:
         for j in range(h):
             if x[j][i] == -1:
                 cnt = cnt + 1
-    print((1<<cnt) % 1000000007)
-
+    print((1 << cnt) % 1000000007)

@@ -14,15 +14,17 @@ for b in range(60):
     for x in a:
         if (x >> b & 1):
             cnt += 1
-    if (cnt >= 3) :
+    if (cnt >= 3):
         print(3)
         return
 g = [list() for x in range(n)]
 for i in range(n):
-    for j in range (n):
+    for j in range(n):
         if (i != j and (a[i] & a[j])):
             g[i].append(j)
 ans = 200
+
+
 def go(r):
     nonlocal ans
     d = [-1 for x in range(n)]
@@ -37,8 +39,10 @@ def go(r):
                 q.append(u)
             elif (d[u] >= d[v]):
                 ans = min(ans, d[v] + d[u] + 1)
+
+
 for r in range(n):
     go(r)
-if (ans > n) :
+if (ans > n):
     ans = -1
 print(ans)

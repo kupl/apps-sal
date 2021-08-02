@@ -19,5 +19,5 @@ if k <= n:
         ans += L[0] * (k - l)
 else:
     ans = s + (k - n) * L[0]
-    
+
 print(ans)

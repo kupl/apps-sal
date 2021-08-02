@@ -1,10 +1,13 @@
 import sys
 
+
 def read_int():
     return int(input())
 
+
 def read_ints():
     return [int(x) for x in input().split()]
+
 
 n, k = read_ints()
 s = input().strip()
@@ -30,4 +33,3 @@ else:
     t = ''.join(t)
 
 print(t)
-
