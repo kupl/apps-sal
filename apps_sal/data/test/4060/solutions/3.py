@@ -1,22 +1,30 @@
 _ = input()
 s = list(input())
 
+
 def regular(s):
     k = 0
     for c in s:
-        if c == '(': k += 1
-        elif c == ')': k -= 1
-        if k < 0: return False
+        if c == '(':
+            k += 1
+        elif c == ')':
+            k -= 1
+        if k < 0:
+            return False
     return k == 0
+
 
 def regular_sums(s):
     k = 0
     ks = []
     for c in s:
-        if c == '(': k += 1
-        elif c == ')': k -= 1
+        if c == '(':
+            k += 1
+        elif c == ')':
+            k -= 1
         ks.append(k)
     return ks
+
 
 sums = regular_sums(s)
 
@@ -54,4 +62,3 @@ elif sums[-1] == -2:
     print(k)
 else:
     print(0)
-

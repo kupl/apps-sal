@@ -11,4 +11,3 @@ for i in range(k):
     else:
         t = t * 10 + 7
 print((-1))
-

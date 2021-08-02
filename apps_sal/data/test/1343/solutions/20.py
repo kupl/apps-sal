@@ -24,4 +24,3 @@ if shortest_path_exists:
     print(shortest_path)
 else:
     print(-1)
-

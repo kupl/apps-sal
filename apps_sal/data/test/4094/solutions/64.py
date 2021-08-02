@@ -14,4 +14,3 @@ for k in range(K + 2):
     a = (a * 10 + 7) % K
 else:
     print((-1))
-

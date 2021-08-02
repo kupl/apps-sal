@@ -1,6 +1,7 @@
 from collections import namedtuple
 plan = namedtuple('plan', ['time', 'x', 'y'])
 
+
 def main():
     with open(0) as f:
         N = int(f.readline())
@@ -11,7 +12,7 @@ def main():
     current = plan(0, 0, 0)
     for p in plans:
         t = p.time - current.time
-        way = abs(p.x-current.x) + abs(p.y-current.y)
+        way = abs(p.x - current.x) + abs(p.y - current.y)
         if t < way:
             print('No')
             return None
@@ -21,5 +22,6 @@ def main():
         current = p
     else:
         print('Yes')
+
 
 main()

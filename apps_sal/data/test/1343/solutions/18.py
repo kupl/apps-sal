@@ -4,6 +4,7 @@ def update_min(v):
         if not is_whouse[u]:
             min_ = min(min_, w)
 
+
 min_ = 10000000000000000
 n, m, k = list(map(int, input().split()))
 graph = [dict() for i in range(n)]
@@ -33,4 +34,3 @@ if k:
         print(min_)
 else:
     print(-1)
-

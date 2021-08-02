@@ -12,6 +12,5 @@ for _ in range(N):
     pre_t = t
     pre_x = x
     pre_y = y
-    
-print(('Yes' if res else 'No'))
 
+print(('Yes' if res else 'No'))

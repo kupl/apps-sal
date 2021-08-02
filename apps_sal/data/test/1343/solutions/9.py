@@ -22,9 +22,9 @@ def solve(edges, stores):
     best = None
     for a, b, c in edges:
         if (
-            a in stores and b not in stores
-            or b in stores and a not in stores
-        ): 
+            a in stores and b not in stores or
+            b in stores and a not in stores
+        ):
             if best is None or c < best:
                 best = c
     return best
@@ -34,5 +34,6 @@ def __starting_point():
     edges, stores = read_graph()
     ans = solve(edges, stores)
     print(ans or -1)
+
 
 __starting_point()

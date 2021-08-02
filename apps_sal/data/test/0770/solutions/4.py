@@ -1,5 +1,5 @@
 n = int(input())
-let = list(map(int,input().split()))
+let = list(map(int, input().split()))
 inbox = 1
 ans = 0
 for l in let:
@@ -13,7 +13,6 @@ for l in let:
         else:
             ans += 1
             inbox = 1
-if ans > 0 and let[n-1] == 0:
+if ans > 0 and let[n - 1] == 0:
     ans -= 1
 print(ans)
-

@@ -20,4 +20,3 @@ if total:
     print(seqs + total - 1)
 else:
     print(0)
-

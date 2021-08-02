@@ -6,11 +6,10 @@ px, py = (0, 0)
 pt = 0
 
 for t, x, y in txy:
-  if not (x + y <= t and (x + y) % 2 == t % 2 and abs(x - px) + abs(y - py) <= t - pt):
-    print('No')
-    return
-  px, py = x, y
-  pt = t
+    if not (x + y <= t and (x + y) % 2 == t % 2 and abs(x - px) + abs(y - py) <= t - pt):
+        print('No')
+        return
+    px, py = x, y
+    pt = t
 
 print('Yes')
-

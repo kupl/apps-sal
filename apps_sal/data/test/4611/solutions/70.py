@@ -22,4 +22,3 @@ for _ in range(N):
     cx, cy = x, y
     ct = t
 print('Yes')
-

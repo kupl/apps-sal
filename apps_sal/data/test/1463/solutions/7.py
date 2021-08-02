@@ -21,4 +21,3 @@ for i in range(n):
         break
 if t:
     print("Yes")
-

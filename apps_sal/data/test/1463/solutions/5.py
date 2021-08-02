@@ -1,5 +1,6 @@
 from sys import stdin, stdout
 
+
 def main():
     n = int(stdin.readline())
     mat = []
@@ -13,11 +14,11 @@ def main():
                     if mat[i][j] == 1 or mat[i][j] == mat[u][j] + mat[i][k]:
                         st = False
                         break
-                if not st: break
+                if not st:
+                    break
             if st:
                 return False
     return True
 
 
 print('Yes' if main() else 'No')
-

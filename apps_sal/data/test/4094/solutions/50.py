@@ -7,4 +7,3 @@ for i in range(k + 1):
         break
     s = (s * 10 + 7) % k
 print(ans)
-

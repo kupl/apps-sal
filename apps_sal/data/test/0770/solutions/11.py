@@ -7,9 +7,9 @@ ar = []
 total = 0
 for i in range(n):
     if array[i] == 0:
-        total+=1
+        total += 1
     else:
-        if total>0:
+        if total > 0:
             ar.append(total)
         total = 0
 
@@ -17,18 +17,18 @@ for i in range(n):
 if array[0] == 1:
     pass
 else:
-    if len(ar)>0:
+    if len(ar) > 0:
         ar.remove(ar[0])
 
 
-#print(ar)
+# print(ar)
 
 totalread = 0
 totalmove = len(ar)
 
 for i in range(n):
-    if array[i]==1:
-        totalread+=1
+    if array[i] == 1:
+        totalread += 1
 
 
-print(totalread+totalmove)
+print(totalread + totalmove)

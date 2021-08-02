@@ -14,4 +14,3 @@ for i in range(m):
 if l[m - 1] == 0 and p > 0:
     p = p - 1
 print(p)
-

@@ -9,6 +9,7 @@ def is_good(a, n, i, j):
             return True
     return False
 
+
 n = int(input())
 a = []
 for _ in range(n):
@@ -24,4 +25,3 @@ if good:
     print("Yes")
 else:
     print("No")
-

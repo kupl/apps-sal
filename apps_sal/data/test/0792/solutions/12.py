@@ -1,14 +1,15 @@
 import os
 import sys
 
+
 def log(*args, **kwargs):
     if os.environ.get('CODEFR'):
         print(*args, **kwargs)
 
 
 #n = int(input())
-n, d = tuple(map(int,input().split()))
-a = list(map(int,input().split()))
+n, d = tuple(map(int, input().split()))
+a = list(map(int, input().split()))
 
 s = 0
 k = 0
@@ -30,4 +31,3 @@ for i in a:
         dep = min(dep, d - s)
 
 print(k)
-

@@ -9,6 +9,7 @@ def check(r, c, x):
                 break
     return rtn
 
+
 n = int(input())
 a = [list(map(int, input().split()))for _ in range(n)]
 
@@ -19,4 +20,3 @@ for i in range(n):
             ans &= check(i, j, a[i][j])
 
 print('Yes' if ans else 'No')
-

@@ -14,4 +14,3 @@ else:
             break
         i += 1
 print(ans)
-

@@ -1,6 +1,7 @@
 [n, d] = [int(x) for x in input().split(' ')]
 A = [int(a) for a in input().split(' ')]
 
+
 def solve():
     ans = 0
     bal = 0
@@ -21,5 +22,6 @@ def solve():
                 return -1
             minGap = min(minGap, d - bal)
     return ans
+
 
 print(solve())

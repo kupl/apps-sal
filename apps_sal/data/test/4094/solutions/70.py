@@ -3,7 +3,7 @@ def main():
 
     ans = -1
     r = 7 % K
-    for i in range(1, K+1):
+    for i in range(1, K + 1):
         if r == 0:
             ans = i
             break
@@ -14,5 +14,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

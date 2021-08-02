@@ -10,9 +10,9 @@ for i in range(N):
     y.append(l[2])
 
 for i in range(N):
-    move = abs(x[i+1]-x[i]) + abs(y[i+1]-y[i])
-    time = t[i+1]-t[i]
-    if time%2 ^ move%2 == 1 or time < move:
+    move = abs(x[i + 1] - x[i]) + abs(y[i + 1] - y[i])
+    time = t[i + 1] - t[i]
+    if time % 2 ^ move % 2 == 1 or time < move:
         print("No")
         return
 

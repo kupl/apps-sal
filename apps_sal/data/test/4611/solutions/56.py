@@ -13,11 +13,11 @@ flag = True
 
 for i in range(N):
     t, x, y = map(int, input().split())
-    if t%2 != (x+y)%2:
+    if t % 2 != (x + y) % 2:
         flag = False
-    if abs(x+y - prev[1] - prev[2]) > t-prev[0]:
+    if abs(x + y - prev[1] - prev[2]) > t - prev[0]:
         flag = False
-    prev = (t,x,y)
+    prev = (t, x, y)
 
 if flag:
     print("Yes")

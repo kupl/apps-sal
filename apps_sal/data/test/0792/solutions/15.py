@@ -14,11 +14,10 @@ for x in a:
         if lb < 0:
             lb = 0
     else:
-        ub = min(d, ub+x)
+        ub = min(d, ub + x)
         lb += x
         if lb > d:
             print(-1)
             return
 
 print(ans)
-

@@ -31,4 +31,3 @@ for i in range(last + 1):
         continue
 
 print(ans)
-

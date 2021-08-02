@@ -6,7 +6,7 @@ else:
     a = []
     a.append(7 % k)
     t = 0
-    for i in range(2, k+1):
+    for i in range(2, k + 1):
         x = (10 * a[i - 2] + 7) % k
         if x == 0:
             print(i)
@@ -16,4 +16,3 @@ else:
             t += 1
     if t == k - 1:
         print((-1))
-
