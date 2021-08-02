@@ -17,13 +17,10 @@ def main(r):
             print("Second")
 
 
-
-
-
-
 def __starting_point():
     t = int(input())
     for i in range(t):
         main(i)
+
 
 __starting_point()

@@ -5,7 +5,7 @@ for t in range(tests):
     count_one = 0
     for item in ls:
         if item == 1:
-            count_one+=1
+            count_one += 1
         else:
             break
     if count_one != n:
@@ -18,4 +18,3 @@ for t in range(tests):
             print('First')
         else:
             print('Second')
-

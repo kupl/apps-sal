@@ -1,5 +1,5 @@
 s = input()
-m = 10**9+7
+m = 10**9 + 7
 a = []
 j = 0
 for i in range(len(s)):
@@ -16,5 +16,5 @@ if len(a) == 0:
 
 ans = a[0]
 for i in range(1, len(a)):
-    ans = (ans+ans*a[i]+a[i])%m
+    ans = (ans + ans * a[i] + a[i]) % m
 print(ans)

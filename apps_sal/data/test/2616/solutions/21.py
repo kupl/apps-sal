@@ -14,11 +14,13 @@
 #    UUID     : ueVtZeZVGsGHjX2O
 #    ------------------------------------------------
 #
+import collections
+import math
+import sys
 production = True
 
-import sys, math, collections
 
-def input(input_format = 0, multi = 0):
+def input(input_format=0, multi=0):
 
     if multi > 0: return [input(input_format) for i in range(multi)]
     else:
@@ -39,7 +41,8 @@ def input(input_format = 0, multi = 0):
 
         return formatted_input if use_list else formatted_input[0]
 
-def out(output_line, output_format = 0, newline = True):
+
+def out(output_line, output_format=0, newline=True):
 
     formatted_output = ""
 
@@ -47,12 +50,14 @@ def out(output_line, output_format = 0, newline = True):
     elif output_format == 1: formatted_output = " ".join(map(str, output_line))
     elif output_format == 2: formatted_output = "\n".join(map(str, output_line))
 
-    print(formatted_output, end = "\n" if newline else "")
+    print(formatted_output, end="\n" if newline else "")
+
 
 def log(*args):
     if not production:
-        print("$$$", end = "")
+        print("$$$", end="")
         print(*args)
+
 
 enu = enumerate
 
@@ -60,8 +65,9 @@ ter = lambda a, b, c: b if a else c
 
 ceil = lambda a, b: -(-a // b)
 
-def mapl(iterable, format = 0):
-    
+
+def mapl(iterable, format=0):
+
     if format == 0: return list(map(int, iterable))
     elif format == 1: return list(map(str, iterable))
     elif format == 2: return list(map(list, iterable))
@@ -93,4 +99,3 @@ for i in range(input(11)): solve()
 #
 #   >>>>>>>>>>>>>>>> END OF SOLUTION <<<<<<<<<<<<<<<
 #
-

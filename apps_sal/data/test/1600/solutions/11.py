@@ -1,4 +1,4 @@
-mod = 10**9+7
+mod = 10**9 + 7
 x = int(input())
 y = list(map(int, input().split(' ')))
 z = y[:]
@@ -20,11 +20,10 @@ for i in range(x):
     prod %= mod
     prod2 %= mod
     if (prod == prod2 and sumx == sumx2):
-        b+=1
-        prod=1
-        prod2=1
-        sumx=0
-        sumx2=0
+        b += 1
+        prod = 1
+        prod2 = 1
+        sumx = 0
+        sumx2 = 0
 
 print(b)
-

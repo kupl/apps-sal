@@ -40,4 +40,5 @@ def stdin_get_string_from_line():
 def __starting_point():
     main()
 
+
 __starting_point()

@@ -10,5 +10,4 @@ for A in range(4):
                 if sum == -1 or A * a + B * b + C * c < sum:
                     sum = A * a + B * b + C * c
 
-print (sum)
-
+print(sum)

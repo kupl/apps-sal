@@ -9,7 +9,7 @@ for _ in range(N):
 
 def calc(num, a):
     a -= num * B
-    a = (a - 1)//(A - B) + 1
+    a = (a - 1) // (A - B) + 1
     if sum(a[a > 0]) <= num:
         return True
     else:
@@ -27,4 +27,3 @@ while end - start > 1:
         start = mid
 
 print(end)
-

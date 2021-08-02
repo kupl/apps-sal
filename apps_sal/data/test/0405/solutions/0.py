@@ -12,4 +12,3 @@ while r >= 0 and s[r] == '>':
     r -= 1
 
 print(ans)
-

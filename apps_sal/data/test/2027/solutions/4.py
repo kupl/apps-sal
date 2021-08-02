@@ -7,4 +7,4 @@ for i in range(n - 1, -1, -1):
     else:
         ans[i] = a[i] + a[i + 1]
 for i in ans:
-    print(i, end = " ")
+    print(i, end=" ")

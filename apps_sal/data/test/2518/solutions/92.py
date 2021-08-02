@@ -1,5 +1,7 @@
 
 from math import ceil
+
+
 def resolve():
     def chick(k):
         cnt = 0
@@ -29,5 +31,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

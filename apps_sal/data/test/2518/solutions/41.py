@@ -1,4 +1,6 @@
 import math
+
+
 def binsearch(l, r, fn):
     while r - l > 1:
         m = (l + r) // 2
@@ -8,6 +10,7 @@ def binsearch(l, r, fn):
             r = m
     return l
 
+
 def main():
     N, A, B = list(map(int, input().split()))
     l = []
@@ -15,16 +18,17 @@ def main():
     for _ in range(N):
         h = int(input())
         l.append(h)
+
     def func(i):
-        if max(l) <= B*i:
+        if max(l) <= B * i:
             return False
         r = 0
         for j in l:
-            r += max(math.ceil((j - B*i) / C), 0)
+            r += max(math.ceil((j - B * i) / C), 0)
         if r <= i:
             return False
         return True
     return 1 + binsearch(0, 1000000000, func)
 
-print((main()))
 
+print((main()))

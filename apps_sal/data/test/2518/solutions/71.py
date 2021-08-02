@@ -1,5 +1,6 @@
-N, A, B = map(int,input().split())
+N, A, B = map(int, input().split())
 H = [int(input()) for _ in range(N)]
+
 
 def solve(k):
     cnt = 0

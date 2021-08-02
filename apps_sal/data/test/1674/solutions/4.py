@@ -1,14 +1,14 @@
-n,k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 
 A = [int(x) for x in input().split()]
 A.append(-1)
-s = input()+'$'
+s = input() + '$'
 
 dmg = 0
 lc = None
 count = 0
 atk = []
-for i in range(n+1):
+for i in range(n + 1):
     c = s[i]
     a = A[i]
 
@@ -21,4 +21,3 @@ for i in range(n+1):
     lc = c
     atk.append(a)
 print(dmg)
-

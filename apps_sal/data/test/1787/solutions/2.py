@@ -9,15 +9,14 @@ ans = 1
 cur = 0
 for i in range(len(t)):
     if boo:
-        if t[i]=='a':
+        if t[i] == 'a':
             cur += 1
         else:
             ans *= cur
             ans %= 1000000007
             boo = False
     else:
-        if t[i]=='a':
+        if t[i] == 'a':
             cur = 2
             boo = True
-print((ans-1)%1000000007)
-
+print((ans - 1) % 1000000007)

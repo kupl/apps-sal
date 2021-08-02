@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def __starting_point():
     n = int(input())
     data = list(map(int, input().split()))
@@ -33,5 +34,6 @@ def __starting_point():
         counter[x] += 1
 
     print(c)
+
 
 __starting_point()

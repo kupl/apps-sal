@@ -9,11 +9,13 @@ for i in range(N):
 
 H = np.array(H)
 
+
 def binary_search(x):
     H_tmp = H - B * x
     H_tmp = H_tmp[H_tmp > 0]
     count = ((H_tmp + A - B - 1) // (A - B)).sum()
     return x >= count
+
 
 left = 0
 right = 10**10

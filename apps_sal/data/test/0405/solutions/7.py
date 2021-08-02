@@ -1,20 +1,20 @@
-n = int(input() )
+n = int(input())
 s = input()
 
 pos = s.find("><")
-if pos == -1 :
+if pos == -1:
     print(n)
-else :
+else:
     ans = 0
-    for i in s :
-        if i == '>' :
+    for i in s:
+        if i == '>':
             break;
-        else :
+        else:
             ans += 1;
-    for i in range(n-1,-1,-1) :
+    for i in range(n - 1, -1, -1):
         t = s[i]
-        if t=="<" :
+        if t == "<":
             break;
-        else :
+        else:
             ans += 1;
     print(ans)

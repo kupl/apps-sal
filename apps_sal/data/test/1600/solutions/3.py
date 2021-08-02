@@ -1,6 +1,7 @@
 n = int(input())
 hs = list(map(int, input().split()))
 
+
 def solve(n, hs):
     mins = fill_mins(n, hs)
     maxs = fill_maxs(n, hs)
@@ -8,7 +9,8 @@ def solve(n, hs):
     for i in range(n - 1):
         if maxs[i] <= mins[i + 1]:
             count += 1
-    return count    
+    return count
+
 
 def fill_mins(n, hs):
     mins = []
@@ -20,6 +22,7 @@ def fill_mins(n, hs):
     mins.reverse()
     return mins
 
+
 def fill_maxs(n, hs):
     maxs = []
     tmp = 0
@@ -28,5 +31,6 @@ def fill_maxs(n, hs):
             tmp = h
         maxs.append(tmp)
     return maxs
+
 
 print(solve(n, hs))

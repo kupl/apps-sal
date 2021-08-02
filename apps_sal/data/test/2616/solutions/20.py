@@ -13,4 +13,3 @@ for test in range(tests):
         print('First')
     else:
         print('Second')
-

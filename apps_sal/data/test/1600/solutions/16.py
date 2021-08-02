@@ -19,7 +19,7 @@ def solve(xs, n):
     max_upto = list(it.accumulate(xs, max))
     min_after = list(it.accumulate(reversed(xs), min))
     min_after.reverse()
-    count = 1 + sum(1 for i in range(1, n) if max_upto[i-1] <= min_after[i])
+    count = 1 + sum(1 for i in range(1, n) if max_upto[i - 1] <= min_after[i])
     return count
 
 
@@ -39,7 +39,7 @@ def solve_old(xs, n):
 
     count = 1
     for i in range(1, n):
-        if max_upto[i-1] <= min_after[i]:
+        if max_upto[i - 1] <= min_after[i]:
             count += 1
 
     return count
@@ -79,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

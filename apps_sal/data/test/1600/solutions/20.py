@@ -8,6 +8,8 @@ def binsearch(a, x, k):
         else:
             r = m
     return l
+
+
 n = int(input())
 k = -1
 a = [0] * n

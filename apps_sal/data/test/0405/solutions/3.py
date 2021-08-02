@@ -8,4 +8,3 @@ for i in s[::-1]:
     if i != '>': break
     cnt += 1
 print(cnt)
-

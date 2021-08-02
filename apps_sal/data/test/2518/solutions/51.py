@@ -35,7 +35,9 @@ def submit():
 
     print(max_attack)
 
-             
+
 def __starting_point():
     submit()
+
+
 __starting_point()

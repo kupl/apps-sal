@@ -6,7 +6,7 @@ for i in range(len(s)):
         p += 1;
     else:
         break;
-for i in range(len(s)-1, -1, -1):
+for i in range(len(s) - 1, -1, -1):
     if s[i] == '>':
         p += 1;
     else:

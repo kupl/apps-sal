@@ -12,7 +12,7 @@ for i in range(x):
     sumx += y[i]
     sumx2 += z[i]
     if (sumx == sumx2):
-        b+=1
+        b += 1
 
 
 print(b)

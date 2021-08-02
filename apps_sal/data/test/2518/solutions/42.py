@@ -4,17 +4,17 @@ import io
 nim, mike, kite = list(map(int, input().split()))
 H = [int(input()) for _ in range(nim)]
 
-OK = max(H)//kite+1
+OK = max(H) // kite + 1
 NG = 0
 
 ans = OK
-while OK-NG > 1:
-    mid = (OK+NG)//2  # 試行する値
+while OK - NG > 1:
+    mid = (OK + NG) // 2  # 試行する値
     cnt = 0
 
     for h in H:
-        if h > mid*kite:
-            cnt += math.ceil((h-mid*kite)/(mike-kite))
+        if h > mid * kite:
+            cnt += math.ceil((h - mid * kite) / (mike - kite))
 
     if cnt <= mid:
         OK = mid
@@ -22,4 +22,3 @@ while OK-NG > 1:
         NG = mid
 
 print(OK)
-

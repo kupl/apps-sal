@@ -7,12 +7,15 @@ def abc063_d():
         x = (upper + lower) // 2
         v = 0
         for hi in H:
-            v += (max(0, hi - x*b) + d - 1) // d
+            v += (max(0, hi - x * b) + d - 1) // d
             if v > x: break
         if v <= x: upper = x
         else: lower = x
     print(upper)
 
+
 def __starting_point():
     abc063_d()
+
+
 __starting_point()

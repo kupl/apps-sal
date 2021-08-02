@@ -10,4 +10,3 @@ for i, ai in enumerate(a[::-1]):
     b.append(bi)
 
 print(" ".join(map(str, reversed(b))))
-

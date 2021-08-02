@@ -13,4 +13,3 @@ while i >= 0 and s[i] == ">":
     i -= 1;
 
 print(ans);
-
