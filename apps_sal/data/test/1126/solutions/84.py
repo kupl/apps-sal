@@ -49,7 +49,7 @@ N, X, M = map(int, input().split())
 #         arr.append([n, 1])
 #     return arr
 
-#def make_divisors(n):
+# def make_divisors(n):
 #    lower_divisors , upper_divisors = [], []
 #    i = 1
 #    while i*i <= n:
@@ -71,7 +71,7 @@ N, X, M = map(int, input().split())
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:

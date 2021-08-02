@@ -28,4 +28,3 @@ for x, i in list(loop_dict.items()):
 
 d, m = divmod(N - tail_length, loop_length)
 print((sum(tail) + sum(loop) * d + sum(loop[:m])))
-

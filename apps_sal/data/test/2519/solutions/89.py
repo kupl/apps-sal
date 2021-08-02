@@ -4,7 +4,7 @@ p = list(map(int, input().split()))
 s = 0
 acsum = [0]
 for x in p:
-    s += (x + 1)/2
+    s += (x + 1) / 2
     acsum.append(s)
 
 ans = -1

@@ -33,5 +33,3 @@ remainder = (n - tail_len) % circle_len
 
 ans = sum(tail) + times * sum(circle) + sum(circle[:remainder])
 print(ans)
-
-

@@ -1,5 +1,5 @@
-s=str(input())
-n=int(input())
+s = str(input())
+n = int(input())
 found = False
 for i in range(n):
     a = str(input())
@@ -20,4 +20,3 @@ if found:
     print('No')
 else:
     print('Yes')
-

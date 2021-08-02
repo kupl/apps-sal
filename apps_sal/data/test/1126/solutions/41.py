@@ -6,6 +6,7 @@ n, x, m = list(map(int, input().split(" ")))
 def f(x: int, m: int) -> int:
     return x % m
 
+
 def solve1(n: int, x: int, m: int) -> int:
     d = {x: 0}
     A = [x]
@@ -33,7 +34,7 @@ def solve1(n: int, x: int, m: int) -> int:
         else:
             A.append(A_next)
             d[A_next] = i + 1
-            ans += A[i+1]
+            ans += A[i + 1]
             #print(" +", A[i+1], end="")
     else:
         #print(" )", end="")
@@ -46,4 +47,3 @@ def solve1(n: int, x: int, m: int) -> int:
 
 
 print((solve1(n, x, m)))
-

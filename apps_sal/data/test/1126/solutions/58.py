@@ -18,7 +18,7 @@ cycle = 0
 rest = cnt - mp.get(x, 0)
 for i in range(mp[x], cnt):
     cycle += a[i]
-n-= cnt
+n -= cnt
 ans = tot
 ans += (n // rest) * cycle
 n %= rest

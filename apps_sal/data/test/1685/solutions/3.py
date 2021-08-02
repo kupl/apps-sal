@@ -2,7 +2,7 @@ import math
 
 n, q = map(int, input().split())
 maxh = int(math.log(n + 1, 2))
-for i in range (q):
+for i in range(q):
     u = int(input())
     road = input()
     curh = 1

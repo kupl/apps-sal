@@ -16,4 +16,3 @@ for i in range(2, n + 1):
     visited[a] = i
     s[i] = s[i - 1] + a
 print((s[n]))
-

@@ -25,4 +25,3 @@ for j in range(n):
         print('No')
         return
 print('Yes')
-

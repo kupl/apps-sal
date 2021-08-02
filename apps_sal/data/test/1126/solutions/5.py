@@ -13,10 +13,10 @@ for i in range(m):
     d[i] = 0
 d[x] += 1
 for i in range(m):
-    x = (x**2)%m
+    x = (x**2) % m
     if d[x] == 1:
         y = l.index(x)
-        print(sum(l[:y])+sum(l[y:])*((n-y)//(len(l)-y))+sum(l[y:][:(n-y)%(len(l)-y)]))
+        print(sum(l[:y]) + sum(l[y:]) * ((n - y) // (len(l) - y)) + sum(l[y:][:(n - y) % (len(l) - y)]))
         return
     l.append(x)
     d[x] += 1

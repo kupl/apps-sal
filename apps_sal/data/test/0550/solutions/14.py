@@ -18,4 +18,3 @@ if s in logins:
     print('No')
 else:
     print('Yes')
-

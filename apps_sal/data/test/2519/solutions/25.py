@@ -12,13 +12,12 @@ for val in set(A):
 for i in range(N):
     E[i] = Elist[A[i]]
 
-#print(E)
+# print(E)
 
 En = sum(E[:K])
 Emax = En
-for j in range(1, N-K+1):
-    En = En - E[j-1] + E[j-1+K]
+for j in range(1, N - K + 1):
+    En = En - E[j - 1] + E[j - 1 + K]
     Emax = max(Emax, En)
 
-print(Emax) 
-
+print(Emax)

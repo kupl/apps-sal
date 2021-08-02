@@ -13,7 +13,7 @@ def main():
         else:
             tmp += P[i] - P[i - K]
             ans = max(ans, tmp)
-    
+
     ans = (ans + K) / 2
 
     print(ans)
@@ -21,5 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

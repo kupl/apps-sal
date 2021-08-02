@@ -17,6 +17,3 @@ while r < N:
 
 print(ans)
 return
-
-
-

@@ -3,8 +3,8 @@ def main():
     now = x
     l = [now]
     s = set([now])
-    for i in range(n-1):
-        now = now*now % m
+    for i in range(n - 1):
+        now = now * now % m
         if now in s:
             break
         else:
@@ -19,8 +19,7 @@ def main():
     ans = sum(l1)
     n -= i
     size = len(l2)
-    print((ans+((n//size)*sum(l2)+sum(l2[:n % size]))))
+    print((ans + ((n // size) * sum(l2) + sum(l2[:n % size]))))
 
 
 main()
-

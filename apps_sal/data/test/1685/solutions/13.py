@@ -36,4 +36,3 @@ for x in range(q):
             layer -= 1
             u = (2 ** (layer + 1)) * k + 2 ** layer
     print(u)
-

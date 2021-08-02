@@ -14,4 +14,3 @@ for i in range(0, n):
     logins.append(login)
 
 print("No" if new_login in logins else "Yes")
-

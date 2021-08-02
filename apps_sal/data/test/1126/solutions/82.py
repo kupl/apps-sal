@@ -4,7 +4,7 @@ loop = {A: 1}
 sums = [0, A]
 start = 0
 end = 0
-for i in range(2, M+2):
+for i in range(2, M + 2):
     A = (A ** 2) % M
     if A in loop:
         start = loop[A]

@@ -11,7 +11,7 @@ while G[x] == -1:
     G[x] = t
     t += 1
     total += x
-    x = (x*x) % m
+    x = (x * x) % m
 
 cycle = t - G[x]
 s = 0

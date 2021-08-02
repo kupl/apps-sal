@@ -6,8 +6,4 @@ for test in range(t):
     while a <= n:
         a *= 2
         cnt += 1
-    print(n*(n + 1)//2 - 2 * (2**cnt - 1))
-    
-        
-    
-
+    print(n * (n + 1) // 2 - 2 * (2**cnt - 1))

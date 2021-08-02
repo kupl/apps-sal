@@ -10,4 +10,3 @@ for i in range(n):
     logins.append(last.replace('O', '0').replace('l', '1').replace('I', '1').lower())
     logins.append(last.lower().replace('O', '0').replace('l', '1').replace('I', '1'))
 print('No' if new_login1 in logins or new_login2 in logins or new_login3 in logins else 'Yes')
-

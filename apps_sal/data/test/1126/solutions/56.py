@@ -1,3 +1,6 @@
+from operator import add
+
+
 class DoublingAggregation:
     def __init__(self, nexts, arr, max_n, op, e):
         # op はモノイド
@@ -7,7 +10,7 @@ class DoublingAggregation:
         self.op = op
         self.e = e
         self.max_n = max_n
-        for k in range(max_n.bit_length()-1):
+        for k in range(max_n.bit_length() - 1):
             perm = self.table[-1]
             perm_next = []
             dat = self.data[-1]
@@ -34,7 +37,7 @@ class DoublingAggregation:
         n = 0
         val = self.e
         op = self.op
-        for bit, t, dat in zip(list(range(len(self.table)-1, -1, -1)), self.table[::-1], self.data[::-1]):
+        for bit, t, dat in zip(list(range(len(self.table) - 1, -1, -1)), self.table[::-1], self.data[::-1]):
             val_next = op(val, dat[idx])
             if f(val_next):
                 val = val_next
@@ -45,12 +48,9 @@ class DoublingAggregation:
         return n, idx, val
 
 
-from operator import add
-
 N, X, M = list(map(int, input().split()))
-nexts = [i*i%M for i in range(M)]
+nexts = [i * i % M for i in range(M)]
 arr = list(range(M))
 doubling = DoublingAggregation(nexts, arr, N, add, 0)
 ans = doubling.prod(X, N)[1]
 print(ans)
-

@@ -24,7 +24,7 @@ LEN = len(LIST)
 if N <= LEN:
     print(sum(LIST[:N]))
 else:
-    LoopTimes, Excess = divmod(N-LEN, LEN-start)
+    LoopTimes, Excess = divmod(N - LEN, LEN - start)
     LoopSum = sum(LIST[start:]) * LoopTimes
-    ExSum = sum(LIST[start:start+Excess])
+    ExSum = sum(LIST[start:start + Excess])
     print(sum(LIST[:]) + LoopSum + ExSum)

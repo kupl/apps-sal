@@ -6,7 +6,7 @@ ss = []
 ss.append(s)
 
 for i in range(N - K):
-    s = s - p[i] + p[i+K]
+    s = s - p[i] + p[i + K]
     ss.append(s)
 
 print(K + (max(ss) - K) / 2)

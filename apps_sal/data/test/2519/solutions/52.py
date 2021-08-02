@@ -12,6 +12,5 @@ for i in range(N - K):
     if m < n:
         m = n
 
-ans = (m + K)/2
+ans = (m + K) / 2
 print(ans)
-

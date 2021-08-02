@@ -6,7 +6,7 @@ def solve(*args: str) -> str:
 
     a = x
     ret = 0
-    I = [-1]*(m+1)
+    I = [-1] * (m + 1)
     A = []
 
     for i in range(n):
@@ -16,8 +16,8 @@ def solve(*args: str) -> str:
             ret += a
         else:
             A = A[I[a]:]
-            d, r = divmod(n-i-1, len(A))
-            ret += (d+1)*sum(A[:r+1])+d*sum(A[r+1:])
+            d, r = divmod(n - i - 1, len(A))
+            ret += (d + 1) * sum(A[:r + 1]) + d * sum(A[r + 1:])
             break
         a = pow(a, 2, m)
 
@@ -26,5 +26,6 @@ def solve(*args: str) -> str:
 
 def __starting_point():
     print((solve(*(open(0).read().splitlines()))))
+
 
 __starting_point()

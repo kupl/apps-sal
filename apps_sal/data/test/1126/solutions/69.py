@@ -34,4 +34,3 @@ else:
     restTotal = sum(loopNums[:restLength])
     total = preLoopTotal + loopTotal * loopCount + restTotal
     print(total)
-
