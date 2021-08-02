@@ -13,5 +13,7 @@ for i in range(n):
             x = 0
             y += 1
 for i in range(h):
-    if i % 2 == 0: print((*l[i]))
-    else: print((*reversed(l[i])))
+    if i % 2 == 0:
+        print((*l[i]))
+    else:
+        print((*reversed(l[i])))

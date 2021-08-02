@@ -18,7 +18,8 @@ while temp:
             if c == a[cnt]:
                 cnt += 1
                 c = 1
-            else: c += 1
+            else:
+                c += 1
             g[p[0] + y][p[1] + x] = cnt + 1
             break
 for gg in g[1:-1]:

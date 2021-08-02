@@ -19,7 +19,8 @@ while(len(q)):
     v = q[0]
     q.popleft()
 
-    if(v[0] < 0 or v[0] >= n or v[1] < 0 or v[1] >= m or d[v[0]][v[1]] == 1 or v[2] < 0 or v[3] < 0 or s[v[0]][v[1]] == '*'): continue
+    if(v[0] < 0 or v[0] >= n or v[1] < 0 or v[1] >= m or d[v[0]][v[1]] == 1 or v[2] < 0 or v[3] < 0 or s[v[0]][v[1]] == '*'):
+        continue
 
     d[v[0]][v[1]] = 1
 

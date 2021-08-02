@@ -60,7 +60,8 @@ while x or y:
 
 k = 1
 for j in s:
-    while t[k] == 1: k += 1
+    while t[k] == 1:
+        k += 1
     h.append(j + ' ' + str(k))
     k += 1
 

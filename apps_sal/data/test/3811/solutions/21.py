@@ -37,6 +37,8 @@ def judge(x):
     return False
 
 
-if judge(a[0][0]): return
-if judge(a[0][1]): return
+if judge(a[0][0]):
+    return
+if judge(a[0][1]):
+    return
 print(-1)

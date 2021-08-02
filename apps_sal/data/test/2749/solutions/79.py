@@ -1,4 +1,6 @@
-h, w = map(int, input().split()); input(); a, d, MAP, w1, h1 = list(map(int, input().split())), [], [[0 for i in range(w)] for j in range(h)], 0, 0
+h, w = map(int, input().split())
+input()
+a, d, MAP, w1, h1 = list(map(int, input().split())), [], [[0 for i in range(w)] for j in range(h)], 0, 0
 for i, j in enumerate(a):
     for _ in range(j):
         if w1 < w:

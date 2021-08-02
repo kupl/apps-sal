@@ -20,7 +20,8 @@ def gen(p, q, r):
 
         nx = [0] + [-xi for xi in x]
         px = [0] + x
-        if r: nx, px = px, nx
+        if r:
+            nx, px = px, nx
 
         bad = 0
         for i in range(len(y)):
@@ -55,7 +56,8 @@ for i, j in [(1, 1), (1, -1), (-1, 1), (-1, -1)]:
         if x[-1] == 1 and y[-1] == 1:
             found = 1
             break
-    if found: break
+    if found:
+        break
 if not found:
     print(n, 'OH NO!!')
 print(len(x) - 1)

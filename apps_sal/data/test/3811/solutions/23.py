@@ -1,7 +1,9 @@
 import math
 import sys
 n = int(input())
-a = []; b = []; g = 0
+a = []
+b = []
+g = 0
 for i in range(n):
     x, y = map(int, sys.stdin.readline().split())
     a.append(x)

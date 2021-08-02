@@ -8,8 +8,10 @@ def print_poly(a):
 
 def shift_add(a, mul, b):
     c = [0] * (len(a) + 1)
-    for i in range(len(a)): c[i + 1] = a[i] * mul
-    for i in range(len(b)): c[i] += b[i]
+    for i in range(len(a)):
+        c[i + 1] = a[i] * mul
+    for i in range(len(b)):
+        c[i] += b[i]
     return c
 
 

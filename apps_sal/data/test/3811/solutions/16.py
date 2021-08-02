@@ -17,7 +17,7 @@ for i in range(n):
     else:
         gcd = math.gcd(gcd, b[i])
     if gcd == 1:
-        break;
+        break
 if gcd == 1:
     print(-1)
 else:

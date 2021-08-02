@@ -12,7 +12,8 @@ n = int(input())
 a, b = map(int, input().split())
 for i in range(n - 1):
     c, d = map(int, input().split())
-    a = gcd(c * d, a); b = gcd(c * d, b)
+    a = gcd(c * d, a)
+    b = gcd(c * d, b)
 if a != 1:
     print(divsor(a))
 elif b != 1:
