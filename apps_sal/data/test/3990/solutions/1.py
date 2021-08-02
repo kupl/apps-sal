@@ -9,12 +9,14 @@ def read_data():
         Es[v].append(u)
     return n, m, Es
 
+
 def solve(n, m, Es):
     if n - 1 not in Es[0]:
         return shortestpath(n, Es)
     else:
         Es = trans(n, Es)
         return shortestpath(n, Es)
+
 
 def trans(n, Es):
     Emat = [[False] * n for i in range(n)]
@@ -30,6 +32,7 @@ def trans(n, Es):
                 continue
             nEs[u].append(v)
     return nEs
+
 
 def shortestpath(n, Es):
     visited = [False] * n
@@ -49,6 +52,7 @@ def shortestpath(n, Es):
         fs = nfs
         steps += 1
     return -1
+
 
 n, m, Es = read_data()
 print(solve(n, m, Es))

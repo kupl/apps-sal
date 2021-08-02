@@ -11,7 +11,7 @@ def bfs_shortest_path(graph, start, goal):
                 new_path.append(neighbour)
                 queue.append(new_path)
                 if neighbour == goal:
-                    return len(new_path)-1
+                    return len(new_path) - 1
             explored.append(node)
     return -1
 
@@ -21,15 +21,15 @@ town = int(town_rail[0])
 rail = int(town_rail[1])
 railways = []
 graph = {}
-for j in range(1,town+1):
+for j in range(1, town + 1):
     graph[j] = []
 
 for i in range(rail):
     railways.append(input().split(" "))
 
-if ["1", str(town)] in railways or [str(town),"1"] in railways:
+if ["1", str(town)] in railways or [str(town), "1"] in railways:
     for key in graph:
-        for k in range(1,town+1):
+        for k in range(1, town + 1):
             if k != key:
                 graph[key].append(k)
     for pair in railways:

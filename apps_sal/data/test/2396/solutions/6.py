@@ -14,4 +14,3 @@ for _ in range(m):
     xs.append(x)
 
 print(' '.join(str(s[x]) for x in xs))
-

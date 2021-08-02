@@ -7,5 +7,4 @@ m = div[-1]
 if m == 1:
     print((len(str(n))))
 else:
-    print((max(len(str(n//m)), len(str(m)))))
-
+    print((max(len(str(n // m)), len(str(m)))))

@@ -5,4 +5,3 @@ for i in range(1, 13 * 10 ** 6):
         ans = min(ans, max(len(str(i)), len(str(N // i))))
 
 print(ans)
-

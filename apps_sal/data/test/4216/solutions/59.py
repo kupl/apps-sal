@@ -4,7 +4,7 @@ def divisor(n):
     table = []
     while i * i <= n:
         if n % i == 0:
-            f = max(len(str(i)), len(str(n//i)))
+            f = max(len(str(i)), len(str(n // i)))
             table.append(f)
         i += 1
     return table
@@ -12,4 +12,3 @@ def divisor(n):
 
 n = int(input())
 print((min(divisor(n))))
-

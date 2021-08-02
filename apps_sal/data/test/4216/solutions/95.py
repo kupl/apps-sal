@@ -1,8 +1,8 @@
 def divisor(n):
     l = []
     ll = []
-    for i in range(1, int(n**0.5)+1):
-        if n%i == 0:
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
             l.append(i)
             # ll.append(n//i)
     # l += reversed(ll)
@@ -16,9 +16,7 @@ ans = 100100100100
 
 for i in l:
     a = len(str(i))
-    b = len(str(n//i))
+    b = len(str(n // i))
     ans = min(ans, max(a, b))
 
 print(ans)
-
-

@@ -14,9 +14,9 @@ n = int(input())
 max = int(math.sqrt(n))
 fmin = len(str(n))
 
-for i in range(1, max+1):
+for i in range(1, max + 1):
     if n % i == 0:
-        tmp = f(i, int(n/i))
+        tmp = f(i, int(n / i))
         if tmp < fmin:
             fmin = tmp
 print(fmin)
