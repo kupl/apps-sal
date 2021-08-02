@@ -15,7 +15,7 @@ def main():
 
     tree = [Vertex(i) for i in range(n)]
 
-    for _ in range(n-1):
+    for _ in range(n - 1):
         u1, u2 = [int(p) - 1 for p in input().split()]
         tree[u1].neighbours.append(u2)
         tree[u2].neighbours.append(u1)
@@ -64,5 +64,6 @@ def main():
 
     for node in tree:
         print(node.color, end=' ')
+
 
 main()

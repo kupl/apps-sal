@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    n,k = list(map(int,input().split()))
-    a = list(map(int,input().split()))
+    n, k = list(map(int, input().split()))
+    a = list(map(int, input().split()))
     for i in range(60, -1, -1):
         m = k ** i
         for j in range(n):
@@ -12,4 +12,3 @@ for _ in range(t):
         print('YES')
     else:
         print('NO')
-

@@ -1,4 +1,6 @@
 from itertools import permutations
+
+
 def cost(start, C):
     prev = start
     color = 0
@@ -55,4 +57,3 @@ for p in permutations(list(range(3))):
             col = (col + 1) % 3
 print(best)
 print(' '.join(list(map(str, ans))))
-

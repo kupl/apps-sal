@@ -33,7 +33,7 @@ else:
             if c == '?' or a[c] == 1:
                 score += 1
             if score == 26:
-                for c in s[i+1:i+27]:
+                for c in s[i + 1:i + 27]:
                     if c == '?':
                         for z in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
                             if not a[z]:
@@ -42,10 +42,9 @@ else:
                                 break
                     else:
                         ans += c
-                for c in s[i+27:]:
+                for c in s[i + 27:]:
                     ans += 'A' if c == '?' else c
                 print(''.join(ans))
                 break
         else:
             print(-1)
-

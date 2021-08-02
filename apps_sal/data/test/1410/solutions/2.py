@@ -42,4 +42,3 @@ print(ans)
 for i in range(n - 1):
     print(idx[dist[i]] + 1, end=' ')
 print(idx[dist[n - 1]] + 1)
-

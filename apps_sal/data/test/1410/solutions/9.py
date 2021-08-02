@@ -45,4 +45,3 @@ for sign in range(-1, 2, 2):
 print(sum)
 for i in range(n):
     print((addsum + sorted_graph_indexes[i] * signsum) % 3 + 1, end=' ')
-

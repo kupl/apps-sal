@@ -15,4 +15,3 @@ for i in range(len(S) - len(T) + 1):
     ans = min(ans, score)
 
 print(ans)
-

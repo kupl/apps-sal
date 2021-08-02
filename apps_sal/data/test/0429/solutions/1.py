@@ -19,4 +19,3 @@ for i in range(len(s) - 25):
         print(s[i + 26:].replace('?', 'A'))
         return
 print(-1)
-

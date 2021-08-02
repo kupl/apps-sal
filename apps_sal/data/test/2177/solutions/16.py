@@ -6,4 +6,3 @@ for _ in range(t):
     if not all(k == '9' for k in str(b)):
         x -= 1
     print(a * x)
-

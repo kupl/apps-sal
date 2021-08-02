@@ -8,7 +8,7 @@ for i in range(len(s) - len(t) + 1):
     #print(s[i:i+t_length], t, sep="\n")
 
     for k in range(len(t)):
-        if s[i+k] != t[k]:
+        if s[i + k] != t[k]:
             w += 1
         """
             print("x", end="")
@@ -19,4 +19,3 @@ for i in range(len(s) - len(t) + 1):
     #print("\nw =", w, "ans = ", ans)
 
 print(ans)
-

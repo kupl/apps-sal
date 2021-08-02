@@ -5,6 +5,5 @@ for _ in range(t):
     nines = 9
     while nines <= B:
         ans += A
-        nines = nines*10 + 9
+        nines = nines * 10 + 9
     print(ans)
-

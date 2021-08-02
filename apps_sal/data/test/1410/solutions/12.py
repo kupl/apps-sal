@@ -4,11 +4,15 @@ from itertools import permutations
 from math import inf
 
 #lines = stdin.readlines()
+
+
 def rint():
     return list(map(int, sys.stdin.readline().split()))
 
+
 def input():
     return sys.stdin.readline().rstrip('\n')
+
 
 def oint():
     return int(input())
@@ -21,7 +25,7 @@ for i in range(3):
     c.append(list(rint()))
 
 adj = [set() for i in range(n)]
-for i in range(n-1):
+for i in range(n - 1):
     u, v = rint()
     u -= 1
     v -= 1
@@ -34,7 +38,7 @@ for i in range(n):
     if len(adj[i]) == 1:
         start = i
 minv = inf
-i = [0]*3
+i = [0] * 3
 ord = []
 prev = -1
 cur = start
@@ -47,18 +51,15 @@ for j in range(n):
     cur = next
 
 
-for i[0], i[1], i[2] in permutations([0,1,2]):
+for i[0], i[1], i[2] in permutations([0, 1, 2]):
     v = 0
     for j in range(n):
-        v += c[i[j%3]][ord[j]]
+        v += c[i[j % 3]][ord[j]]
     if v < minv:
         imin = i.copy()
         minv = v
-ans = [0]*n
+ans = [0] * n
 for j in range(n):
-    ans[ord[j]] = imin[j%3] + 1
+    ans[ord[j]] = imin[j % 3] + 1
 print(minv)
 print(*ans)
-
-
-

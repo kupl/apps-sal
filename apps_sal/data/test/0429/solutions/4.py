@@ -23,7 +23,7 @@ def main():
                     return False
                 ls = list(s)
                 cur = 0
-                for i, c in enumerate(s[pos-26:pos], pos - 26):
+                for i, c in enumerate(s[pos - 26:pos], pos - 26):
                     if c == '?':
                         while fq[cur] > 0:
                             assert fq[cur] == 1
@@ -57,4 +57,3 @@ def main():
 
 
 main()
-

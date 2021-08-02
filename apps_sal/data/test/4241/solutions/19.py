@@ -12,4 +12,3 @@ for i in range(s_len - t_len + 1):
                 count_max = counter
     counter = 0
 print((t_len - count_max))
-

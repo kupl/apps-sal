@@ -10,7 +10,7 @@ def main():
     c3 = list(map(int, input().split()))
     costs = [(c1[i], c2[i], c3[i]) for i in range(len(c1))]
     no_sol = False
-    for i in range(n-1):
+    for i in range(n - 1):
         a, b = list(map(int, input().split()))
         if a not in tree:
             tree[a] = [b]
@@ -33,9 +33,9 @@ def main():
         if len(tree[node]) == 1:
             start = node
             break
-            
+
     lst = [start]
-    visited = [0] * (n +1)
+    visited = [0] * (n + 1)
     visited[node] = 1
     node = start
     while len(lst) < n:
@@ -46,7 +46,7 @@ def main():
                 node = i
                 break
 
-    permutations = list(itertools.permutations([1,2,3], 3))
+    permutations = list(itertools.permutations([1, 2, 3], 3))
     cost = [0] * len(permutations)
 
     idx_permut = -1
@@ -54,13 +54,12 @@ def main():
     for permut in range(len(permutations)):
         cost_sum = 0
         for i in range(len(lst)):
-            list_cost = costs[lst[i]-1]
-            cost_sum += list_cost[permutations[permut][i % 3]-1]
+            list_cost = costs[lst[i] - 1]
+            cost_sum += list_cost[permutations[permut][i % 3] - 1]
         cost[permut] = cost_sum
         if cost_sum < min_sum:
             min_sum = cost_sum
             idx_permut = permut
-
 
     d_sol = [0] * (len(lst) + 1)
     idx = 0
@@ -77,5 +76,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

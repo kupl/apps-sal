@@ -7,8 +7,8 @@ if len(s) < 26:
     return
 
 
-for i in range(len(s)-25):
-    ss = s[i:i+26]
+for i in range(len(s) - 25):
+    ss = s[i:i + 26]
     q = 0
     switch = [0] * 26
     for k in ss:
@@ -25,7 +25,7 @@ for i in range(len(s)-25):
                         switch[j] = 1
                         sl[ii] = chr(base + j)
                         break
-        news = s[0:i].replace('?','A') + ''.join(sl) + s[i+26:].replace('?','A')
+        news = s[0:i].replace('?', 'A') + ''.join(sl) + s[i + 26:].replace('?', 'A')
         print(news)
         return
 print(-1)

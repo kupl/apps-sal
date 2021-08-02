@@ -6,5 +6,4 @@ for _ in range(t):
         i += 1
         j *= 10
         j += 9
-    print(a*i)
-
+    print(a * i)

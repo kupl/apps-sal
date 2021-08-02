@@ -5,4 +5,3 @@ for _ in range(t):
     if b != int('9' * x):
         x -= 1
     print(a * x)
-
