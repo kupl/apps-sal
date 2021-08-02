@@ -41,4 +41,3 @@ for case_num in range(t):
                     if ans == -1 or ans > nc:
                         ans = nc
     print(ans)
-

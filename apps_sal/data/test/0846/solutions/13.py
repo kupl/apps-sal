@@ -8,4 +8,3 @@ for i in range(m):
         if our_list_2[j] == 0:
             our_list_2[j] = our_list[i]
 print(' '.join(list(map(str, our_list_2[1:]))))
-

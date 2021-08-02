@@ -14,8 +14,8 @@ for i in range(n):
         vmin = l
     if(r > vmax):
         vmax = r
-        
-d.sort(key = lambda x: x[1][0])   
+
+d.sort(key=lambda x: x[1][0])
 
 k = -1
 for i in d:
@@ -25,5 +25,4 @@ for i in d:
     else:
         break
 
-print(k)    
-
+print(k)

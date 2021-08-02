@@ -24,9 +24,9 @@ for j in range(t):
     if ffail == -1:
         for i in range(k):
             if sum[i] + undef >= arr[i]:
-                print('Y', end = '')
+                print('Y', end='')
             else:
-                print('N', end = '')
+                print('N', end='')
         print()
         continue
     minu = 10 ** 6
@@ -36,10 +36,9 @@ for j in range(t):
             best = i
     for i in range(k):
         if i == best or undef - minu + sum[i] >= arr[i]:
-            print('Y', end = '')
+            print('Y', end='')
         elif bfail[i] + ubfail >= arr[i] and not used[i]:
-            print('Y', end = '')
+            print('Y', end='')
         else:
-            print('N', end = '')
+            print('N', end='')
     print()
-

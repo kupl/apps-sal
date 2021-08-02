@@ -3,8 +3,10 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 def lcm(a, b):
-    return a // gcd(a, b) * b;
+    return a // gcd(a, b) * b
+
 
 n, k = list(map(int, input().split()))
 inf = 10 ** 18
@@ -19,5 +21,3 @@ if x > inf or n % x != x - 1:
     print("No")
 else:
     print("Yes")
-
-

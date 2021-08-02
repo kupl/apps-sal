@@ -9,6 +9,7 @@ for i in range(1, int(input()) + 1):
         if b >= B:
             B = b
             ans = i
-        elif a != A: ans = -1
+        elif a != A:
+            ans = -1
         A = a
 print(ans)

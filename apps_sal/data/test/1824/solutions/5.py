@@ -18,4 +18,3 @@ for e in attempt2:
     if e not in attempt3 or attempt3[e] < attempt2[e]:
         print(e)
         break
-

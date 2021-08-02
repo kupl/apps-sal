@@ -36,4 +36,3 @@ for i in range(t):
     for j in dishes:
         sys.stdout.write("Y" if j - remove_from_all <= 0 else "N")
     print("")
-

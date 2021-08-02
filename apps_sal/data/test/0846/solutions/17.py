@@ -7,5 +7,6 @@ def main():
             if lamps[j] == 0:
                 lamps[j] = bottoms[i]
     print(' '.join(map(str, lamps)))
-    
+
+
 main()

@@ -22,4 +22,3 @@ for i in range(len(errors3)):
 
 if last == True:
     print(errors2[-1])
-

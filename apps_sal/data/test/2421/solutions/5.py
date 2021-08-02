@@ -46,7 +46,3 @@ for _ in range(int(input())):
             ans = -c4 * y + c3 * x
         gans.append(ans)
 print('\n'.join(map(str, gans)))
-        
-        
-        
-

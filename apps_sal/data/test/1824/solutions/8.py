@@ -19,4 +19,3 @@ for i in range(n - 1):
         if b[i] != a[i]:
             print(b[i])
             break
-

@@ -9,4 +9,3 @@ for _ in range(3):
     if a is not None:
 
         print(next(iter(a - b)))
-

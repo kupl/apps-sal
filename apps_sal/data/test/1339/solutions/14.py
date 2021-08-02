@@ -10,7 +10,6 @@ for i in range(a):
 
 for i in range(a):
     if bad[i][0] <= minn <= maxx <= bad[i][1]:
-        print(i+1)
+        print(i + 1)
         quit()
 print(-1)
-

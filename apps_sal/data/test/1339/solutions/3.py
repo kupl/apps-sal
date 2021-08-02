@@ -7,5 +7,6 @@ for i in range(1, int(input()) + 1):
     if b > B:
         B = b
         ans = -1
-    if a == A and b == B: ans = i
+    if a == A and b == B:
+        ans = i
 print(ans)

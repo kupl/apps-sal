@@ -9,6 +9,5 @@ for i in b:
     for j in range(i - 1, n):
         if a[j] == -1:
             a[j] = i
-    
-print(" ".join(map(str, a)))
 
+print(" ".join(map(str, a)))

@@ -55,4 +55,3 @@ for _ in range(t):
     else:
         ans -= y * c[4]
     print(ans)
-

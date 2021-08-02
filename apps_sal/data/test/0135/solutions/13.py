@@ -8,4 +8,3 @@ for i in range(2, k + 1):
     elif 1e6 < i:
         break
 print(ans)
-
