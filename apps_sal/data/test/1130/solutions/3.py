@@ -30,4 +30,3 @@ for _ in range(N - 1):
             new_best[i] = min(new_best[i], new_day_best[j] + best[i - j])
     best = new_best
 print(best[K])
-

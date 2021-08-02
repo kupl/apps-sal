@@ -23,11 +23,10 @@ while len(queue) > 0:
         if v == p:
             continue
         h[v] = h[u] + 1
-        if h[v]%2 == 0:
+        if h[v] % 2 == 0:
             h_even += 1
         else:
             h_odd += 1
         queue.append((v, u))
 
 print(h_even * h_odd - n + 1)
-

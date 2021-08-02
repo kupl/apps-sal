@@ -1,7 +1,9 @@
+from collections import defaultdict
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from collections import defaultdict
+
+
 def main():
     s = tuple(map(int, input()))
     lens = len(s)
@@ -9,7 +11,7 @@ def main():
     d1 = defaultdict(int)
     ss = 0
     num10 = 1
-    for i1 in range(1, lens+1):
+    for i1 in range(1, lens + 1):
         ss += (int(s[-i1]) * num10) % 2019
         ss = ss % 2019
         d1[ss] += 1
@@ -19,6 +21,9 @@ def main():
         r += v * (v - 1) // 2
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

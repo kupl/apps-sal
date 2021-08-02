@@ -1,6 +1,6 @@
 n = int(input())
 dist = {}
-for i in range(n-1):
+for i in range(n - 1):
     u, v = [int(e) for e in input().split()]
     if u not in dist:
         dist[u] = []
@@ -22,4 +22,3 @@ while q:
 s1 = [k for k, v in list(a.items()) if v == 1]
 s2 = [k for k, v in list(a.items()) if v == -1]
 print(len(s1) * len(s2) - n + 1)
-

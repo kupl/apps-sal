@@ -7,13 +7,12 @@ for i in range(t):
     prev = True
     num = 0
     for j in range(n):
-        if prev and a[j] != j+1:
+        if prev and a[j] != j + 1:
             num += 1
             prev = False
-        elif a[j] == j+1:
+        elif a[j] == j + 1:
             prev = True
     if num > 2:
         print(2)
     else:
         print(num)
-

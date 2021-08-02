@@ -1,7 +1,9 @@
+from collections import Counter
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from collections import Counter
+
+
 def main():
     s = input()
     n = len(s)
@@ -10,8 +12,8 @@ def main():
     ketaamari = 1
     t = 0
     for i1 in range(n):
-        t = (t + ketaamari * int(s[-i1 -1])) % 2019
-        amari[-i1-1] = t
+        t = (t + ketaamari * int(s[-i1 - 1])) % 2019
+        amari[-i1 - 1] = t
         ketaamari = (ketaamari * 10) % 2019
     amari.append(0)
     ac = Counter(amari)
@@ -20,6 +22,9 @@ def main():
         r += v * (v - 1) // 2
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

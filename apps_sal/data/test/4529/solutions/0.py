@@ -22,4 +22,3 @@ for _ in range(int(input())):
         print(-1)
     else:
         print(ans[1], ans[2])
-

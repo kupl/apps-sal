@@ -18,4 +18,3 @@ for i in list(d.values()):
         ans += i * (i - 1) / 2
 
 print((int(ans)))
-

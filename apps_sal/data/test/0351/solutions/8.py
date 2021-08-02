@@ -8,5 +8,3 @@ for i in range(n):
         ans += 1
     k = max(k, a[i])
 print(ans)
-    
-

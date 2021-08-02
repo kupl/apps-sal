@@ -40,4 +40,3 @@ for i in range(1, n):
             dp[i][j] = min(dp[i][j], dp[i - 1][z] + pre[i][j - z])
 
 print(dp[n - 1][k])
-

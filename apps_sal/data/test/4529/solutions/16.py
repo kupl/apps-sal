@@ -25,4 +25,4 @@ while t:
     if (_res == -1):
         print(_res)
     else:
-        print(_res[0] + 2, _res[1] + 1) 
+        print(_res[0] + 2, _res[1] + 1)

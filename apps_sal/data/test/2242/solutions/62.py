@@ -6,7 +6,7 @@ K = 1
 ans = 0
 
 for i in range(len(N)):
-    S += int(N[-i-1])*K
+    S += int(N[-i - 1]) * K
     S %= 2019
 
     K *= 10
@@ -14,6 +14,5 @@ for i in range(len(N)):
     M.append(S)
 
 P = Counter(M)
-for i in range(2020):ans+=P[i]*(P[i]-1)//2
+for i in range(2020): ans += P[i] * (P[i] - 1) // 2
 print(ans)
-

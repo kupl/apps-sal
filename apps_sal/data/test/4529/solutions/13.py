@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 dx = [-1, 1, 0, 0]
 dy = [0, 0, 1, -1]
-R = {'L' : 0, 'R' : 1, 'U' : 2, 'D' : 3}
+R = {'L': 0, 'R': 1, 'U': 2, 'D': 3}
 
 T = int(input())
 
@@ -12,7 +12,7 @@ for _ in range(T):
     N = int(input())
     Path = input().rstrip()
 
-    vst = {(0, 0) : 0}
+    vst = {(0, 0): 0}
     ans = []
     for i in range(N):
         #print(x, y)
@@ -30,6 +30,3 @@ for _ in range(T):
         print(ans[0][1], ans[0][2])
     else:
         print(-1)
-
-
-

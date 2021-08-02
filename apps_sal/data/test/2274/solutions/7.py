@@ -14,4 +14,3 @@ for _ in range(t):
         if a[-1][i] == 'D': o += 1
 
     print(o)
-

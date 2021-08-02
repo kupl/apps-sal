@@ -43,4 +43,3 @@ for i in range(one()):
         print(-1)
     else:
         print(*ans)
-

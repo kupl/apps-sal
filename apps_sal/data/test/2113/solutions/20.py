@@ -23,4 +23,3 @@ while stk:
             stk.append((i, 1 - u[1]))
 
 print(l[0] * l[1] - (n - 1))
-

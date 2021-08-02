@@ -10,6 +10,7 @@ def solve():
             lastline = list(s)[:-1]
     print(lastcol.count('R') + lastline.count('D'))
 
+
 t = int(input())
 for _ in range(t):
     solve()

@@ -9,4 +9,3 @@ for a in s:
             ans = ans + 1
         max = a
 print(ans)
-

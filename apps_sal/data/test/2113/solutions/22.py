@@ -26,12 +26,13 @@ def bfs(stack1):
         if not stack1:
             return
 
+
 inp = collections.defaultdict(list)
-for _ in range(n-1):
+for _ in range(n - 1):
     v1, v2 = list(map(int, input().split()))
     inp[v1].append(v2)
     inp[v2].append(v1)
-#print(inp)
+# print(inp)
 visited1, visited2 = [0] + [0] * n, [0] + [0] * n
 bfs([1])
 print(sum(visited1) * sum(visited2) - (n - 1))
@@ -44,4 +45,3 @@ print(sum(visited1) * sum(visited2) - (n - 1))
 5 2
 2 6
 """
-

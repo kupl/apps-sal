@@ -10,4 +10,3 @@ ans = 0
 for v in list(Counter(acc_mod).values()):
     ans += v * (v - 1) // 2
 print(ans)
-

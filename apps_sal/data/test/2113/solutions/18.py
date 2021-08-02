@@ -1,6 +1,6 @@
 n = int(input())
 dist = {}
-for i in range(n-1):
+for i in range(n - 1):
     u, v = [int(e) for e in input().split()]
     if u not in dist:
         dist[u] = []
@@ -21,4 +21,3 @@ while q:
             q.append(e)
 r = list(a.values()).count(1)
 print(r * (n - r) - n + 1)
-

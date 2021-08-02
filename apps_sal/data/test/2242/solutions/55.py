@@ -1,11 +1,11 @@
-s=input()
+s = input()
 
-s=s[::-1]
+s = s[::-1]
 
 counts = [0] * 2019
 counts[0] = 1
 
-num=0
+num = 0
 d = 1
 
 
@@ -15,11 +15,9 @@ for char in s:
     d *= 10
     d %= 2019
     counts[num] += 1
-    
+
 ans = 0
 for cnt in counts:
     ans += cnt * (cnt - 1) // 2
 
-print(ans) # 答えの出力   
-
-
+print(ans)  # 答えの出力

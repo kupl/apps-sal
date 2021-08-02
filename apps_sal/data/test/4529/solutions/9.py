@@ -11,12 +11,12 @@ for loop in range(t):
     y = 0
 
     dic = {}
-    dic[(0,0)] = -1
+    dic[(0, 0)] = -1
 
     ansl = float("-inf")
     ansr = float("inf")
 
-    for i,S in enumerate(s):
+    for i, S in enumerate(s):
 
         if S == "L":
             x -= 1
@@ -27,19 +27,17 @@ for loop in range(t):
         elif S == "D":
             y -= 1
 
-        if (x,y) in dic:
-            nowl = dic[(x,y)]
+        if (x, y) in dic:
+            nowl = dic[(x, y)]
             nowr = i
 
             if nowr - nowl < ansr - ansl:
                 ansl = nowl
                 ansr = nowr
-            
-        dic[(x,y)] = i
+
+        dic[(x, y)] = i
 
     if ansr == float("inf"):
         print(-1)
     else:
-        print(ansl+2,ansr+1)
-       
-
+        print(ansl + 2, ansr + 1)

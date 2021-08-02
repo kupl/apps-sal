@@ -3,8 +3,10 @@ from collections import deque
 import bisect
 import heapq
 
+
 def ri():
     return int(input())
+
 
 def rl():
     return list(map(int, input().split()))
@@ -36,10 +38,6 @@ def solve():
         print(2)
 
 
-
-
-
-
 mode = 'T'
 
 if mode == 'T':
@@ -48,4 +46,3 @@ if mode == 'T':
         solve()
 else:
     solve()
-

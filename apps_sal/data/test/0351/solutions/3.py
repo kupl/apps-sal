@@ -13,4 +13,3 @@ while curr < len(a):
         k *= 2
 
 print(ans)
-
