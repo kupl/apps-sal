@@ -1,7 +1,6 @@
+import heapq as hp
 import sys
 input = sys.stdin.readline
-
-import heapq as hp
 
 
 def main():
@@ -30,16 +29,18 @@ def main():
         for q in Qs:
             l = len(q)
             if l < K: continue
-            for _ in range(min(Q, l-K+1)):
+            for _ in range(min(Q, l - K + 1)):
                 v = hp.heappop(q)
                 P.append(v)
         if len(P) < Q:
             break
         P.sort()
-        ans = min(ans, P[Q-1]-P[0])
+        ans = min(ans, P[Q - 1] - P[0])
     print(ans)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

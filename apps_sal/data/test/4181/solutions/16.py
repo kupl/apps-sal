@@ -1,7 +1,7 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 x = sum(a)
-b = list(map(int,input().split()))
+b = list(map(int, input().split()))
 for i in range(n):
     if (a[i] < b[i]):
         tmp = b[i] - a[i]
@@ -13,4 +13,3 @@ for i in range(n):
         a[i] = a[i] - b[i]
 
 print((x - sum(a)))
-

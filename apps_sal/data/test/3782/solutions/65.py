@@ -1,6 +1,6 @@
+import heapq as hp
 import sys
 input = sys.stdin.readline
-import heapq as hp
 
 N, K, Q = list(map(int, input().split()))
 A = list(map(int, input().split()))
@@ -24,11 +24,10 @@ for x in Xs:
         P.sort()
         for i, p in enumerate(P):
             q.append(p)
-            if len(P)-K-i == 0: break
+            if len(P) - K - i == 0: break
     if len(q) < Q:
         break
     q.sort()
-    ans = min(ans, q[Q-1]-x)
+    ans = min(ans, q[Q - 1] - x)
 
 print(ans)
-

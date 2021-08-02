@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,6 +15,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
@@ -35,17 +38,16 @@ for x in A:
             tmp = []
     B.append(tmp)
     # 数列B内の各数列から、使える要素を集める
-    C =  []
+    C = []
     for li in B:
         m = len(li)
-        if m-K+1 >= 1:
+        if m - K + 1 >= 1:
             li.sort()
-            C += li[:m-K+1]
+            C += li[:m - K + 1]
     # 集めた要素からQ個をクエリで使うので、小さい方からQ番目が使う要素の最大値y
     C.sort()
     if len(C) < Q:
         continue
-    y = C[Q-1]
+    y = C[Q - 1]
     ans = min(ans, y - x)
 print(ans)
-

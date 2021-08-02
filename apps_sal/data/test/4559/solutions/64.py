@@ -1,6 +1,6 @@
 import sys
 N = int(input())
-lsA = list(map(int,input().split()))
+lsA = list(map(int, input().split()))
 if 0 in lsA:
     print(0)
     return

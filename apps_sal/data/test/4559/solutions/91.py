@@ -12,4 +12,3 @@ for i in range(n):
         print((-1))
         return
 print(ans)
-

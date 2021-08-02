@@ -22,13 +22,13 @@ def main():
         if A[i] >= B[i]:
             ans += B[i]
             A[i] -= B[i]
-        elif A[i] < B[i] and A[i+1] < B[i]-A[i]:
-            ans += A[i+1] + A[i]
-            A[i+1] = 0
+        elif A[i] < B[i] and A[i + 1] < B[i] - A[i]:
+            ans += A[i + 1] + A[i]
+            A[i + 1] = 0
             A[i] = 0
-        elif A[i] < B[i] and A[i+1] >= B[i]-A[i]:
+        elif A[i] < B[i] and A[i + 1] >= B[i] - A[i]:
             ans += B[i]
-            A[i+1] -= B[i]-A[i]
+            A[i + 1] -= B[i] - A[i]
             A[i] = 0
 #        print(A)
     print(ans)
@@ -36,5 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,14 +1,15 @@
 import random
 import time
 import copy
-import io, sys
+import io
+import sys
 
-#def pow(a, b):
+# def pow(a, b):
 #    res = 1;
 #    for ()
 
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 sum = 1
 for a_ in a:
@@ -20,4 +21,3 @@ for a_ in a:
         break
 
 print(sum)
-

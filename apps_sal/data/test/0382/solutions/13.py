@@ -1,5 +1,6 @@
 3
 
+
 def calc(l, r, layers, li):
     if r - l == 1:
         return layers[li][l]
@@ -70,5 +71,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

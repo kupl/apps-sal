@@ -1,7 +1,7 @@
 import sys
 
 n = int(input())
-li = list(map(int,input().split()))
+li = list(map(int, input().split()))
 ans = 1
 
 if 0 in li:

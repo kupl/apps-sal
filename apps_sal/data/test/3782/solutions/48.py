@@ -1,6 +1,7 @@
 N, K, Q = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
+
 def calc(x):
     grp = [[]]
     for a in A:
@@ -18,8 +19,8 @@ def calc(x):
         return 10**18
     return L[Q - 1] - x
 
+
 ans = 10**18
 for a in A:
     ans = min(ans, calc(a))
 print(ans)
-

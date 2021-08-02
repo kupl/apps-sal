@@ -9,6 +9,6 @@ for i in range(q):
     l, r = map(int, input().split())
     k = 0
     for j in range(len(arr)):
-        if arr[j] >= l - 1 and arr[j] + m - 1<= r - 1:
+        if arr[j] >= l - 1 and arr[j] + m - 1 <= r - 1:
             k = k + 1
     print(k)

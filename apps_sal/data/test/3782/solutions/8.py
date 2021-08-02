@@ -4,7 +4,7 @@ import heapq
 n, k, q = map(int, input().split())
 a = list(map(int, input().split()))
 ok = [0] * n
-d = defaultdict(lambda : set())
+d = defaultdict(lambda: set())
 h = []
 for i in range(k - 1):
     heapq.heappush(h, [a[i], i])

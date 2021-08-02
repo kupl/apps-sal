@@ -1,6 +1,7 @@
 N, K, Q = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
+
 def sol(y):
     B = [[]]
     for a in A:
@@ -17,9 +18,9 @@ def sol(y):
 
     return C[Q - 1] - y if len(C) >= Q and C[0] == y else 10**18
 
+
 ans = 10**18
 for y in A:
     ans = min(ans, sol(y))
 
 print(ans)
-

@@ -20,4 +20,3 @@ for x in A:
         B.sort()
         ans = min(ans, B[q - 1] - x)
 print(ans)
-

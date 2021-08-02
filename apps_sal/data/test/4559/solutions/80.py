@@ -1,5 +1,5 @@
 N = int(input())
-A=list(map(int, input().split()))
+A = list(map(int, input().split()))
 
 const = 10**18
 
@@ -10,7 +10,7 @@ if 0 in A:
 result = 1
 for i in A:
     result *= i
-    if result>const:
+    if result > const:
         print(-1)
         return
 print(result)

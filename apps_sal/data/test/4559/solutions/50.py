@@ -11,6 +11,3 @@ for i in A:
         break
 else:
     print(result)
-
-
-

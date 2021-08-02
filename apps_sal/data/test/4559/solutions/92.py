@@ -1,5 +1,5 @@
 n = int(input())
-l = list(map(int,input().split())) 
+l = list(map(int, input().split()))
 if 0 in l:
     print("0")
     return

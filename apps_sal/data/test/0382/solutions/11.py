@@ -9,7 +9,7 @@ def main():
     pos = []
     for i in range(len(s)):
 
-        if i + len(t) <= len(s) and s[i:i+len(t)] == t:
+        if i + len(t) <= len(s) and s[i:i + len(t)] == t:
             pos.append(1)
         else:
             pos.append(0)
@@ -41,5 +41,6 @@ def __starting_point():
     # test(1)
     # test(2)
     return(main())
+
 
 __starting_point()

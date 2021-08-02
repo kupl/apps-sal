@@ -9,14 +9,13 @@ for i in range(n):
     else:
         total += a[i]
         b[i] -= a[i]
-        if a[i+1] <= b[i]:
-            total += a[i+1]
-            a[i+1] = 0
+        if a[i + 1] <= b[i]:
+            total += a[i + 1]
+            a[i + 1] = 0
         else:
             total += b[i]
-            a[i+1] -= b[i]
+            a[i + 1] -= b[i]
 
     # print(total)
 
 print(total)
-

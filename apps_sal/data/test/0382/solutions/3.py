@@ -4,7 +4,7 @@ t = list(input())
 lt = len(t)
 ls = len(s)
 start = []
-for i in range(ls - lt +1):
+for i in range(ls - lt + 1):
     j = i
     count = 0
     while s[j] == t[count]:
@@ -31,6 +31,3 @@ for i in range(q):
             end = j
             break
     print(end - begin)
-
-
-

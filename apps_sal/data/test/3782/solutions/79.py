@@ -11,35 +11,53 @@ from functools import reduce
 from bisect import bisect_left, bisect_right
 
 import sys
+
+
 def getN():
     return int(input())
+
+
 def getNM():
     return map(int, input().split())
+
+
 def getList():
     return list(map(int, input().split()))
+
+
 def getArray(intn):
     return [int(input()) for i in range(intn)]
+
+
 def input():
     return sys.stdin.readline().rstrip()
+
+
 def rand_N(ran1, ran2):
     return random.randint(ran1, ran2)
+
+
 def rand_List(ran1, ran2, rantime):
     return [random.randint(ran1, ran2) for i in range(rantime)]
+
+
 def rand_ints_nodup(ran1, ran2, rantime):
-  ns = []
-  while len(ns) < rantime:
-    n = random.randint(ran1, ran2)
-    if not n in ns:
-      ns.append(n)
-  return sorted(ns)
+    ns = []
+    while len(ns) < rantime:
+        n = random.randint(ran1, ran2)
+        if not n in ns:
+            ns.append(n)
+    return sorted(ns)
+
 
 def rand_query(ran1, ran2, rantime):
-  r_query = []
-  while len(r_query) < rantime:
-    n_q = rand_ints_nodup(ran1, ran2, 2)
-    if not n_q in r_query:
-      r_query.append(n_q)
-  return sorted(r_query)
+    r_query = []
+    while len(r_query) < rantime:
+        n_q = rand_ints_nodup(ran1, ran2, 2)
+        if not n_q in r_query:
+            r_query.append(n_q)
+    return sorted(r_query)
+
 
 sys.setrecursionlimit(1000000000)
 mod = 998244353
@@ -94,7 +112,7 @@ ans = opt[-1] - opt[0]
 # 区切り1個以上
 for i in range(N):
     # indexの位置はlを再利用
-    flag[l[i][1]] = 1 # A[i][1]はindex
+    flag[l[i][1]] = 1  # A[i][1]はindex
     parent = []
     child = []
     # フラグの立っているところで区切る
@@ -114,7 +132,7 @@ for i in range(N):
     # 各childから取れるだけ取る
     opt = []
     for array in parent:
-        for j in range(len(array) - K + 1): # childの長さ - K + 1だけ値を取れる
+        for j in range(len(array) - K + 1):  # childの長さ - K + 1だけ値を取れる
             opt.append(array[j])
     # Q個取れたなら
     if len(opt) >= Q:

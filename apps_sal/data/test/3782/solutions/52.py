@@ -15,12 +15,12 @@ def main():
                 if temp2:
                     temp2.sort()
                     if len(temp2) >= k:
-                        for l in temp2[:len(temp2)-k+1]:
+                        for l in temp2[:len(temp2) - k + 1]:
                             temp.append(l)
                     temp2 = []
         if len(temp) >= q:
             temp.sort()
-            ans.append(temp[q-1]-i)
+            ans.append(temp[q - 1] - i)
     print(min(ans))
 
 

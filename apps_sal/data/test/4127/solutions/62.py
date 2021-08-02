@@ -11,4 +11,5 @@ def __starting_point():
     ans = main(A, B)
     print(ans)
 
+
 __starting_point()

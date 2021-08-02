@@ -10,4 +10,3 @@ ans = a * b
 ans = ans // 100
 
 print(ans)
-

@@ -1,4 +1,5 @@
-import re, bisect
+import re
+import bisect
 
 n, m, q = [int(v) for v in input().split()]
 s = input().strip()
@@ -12,4 +13,3 @@ for _ in range(q):
         print(0)
     else:
         print(bisect.bisect_right(starts, r - len(t)) - bisect.bisect_left(starts, l - 1))
-

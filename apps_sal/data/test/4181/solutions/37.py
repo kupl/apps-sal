@@ -8,8 +8,8 @@ for i in range(n):
     aa[i] -= t1
     bb[i] -= t1
     ans += t1
-    t2 = min(aa[i+1], bb[i])
-    aa[i+1] -= t2
+    t2 = min(aa[i + 1], bb[i])
+    aa[i + 1] -= t2
     bb[i] -= t2
     ans += t2
 print(ans)

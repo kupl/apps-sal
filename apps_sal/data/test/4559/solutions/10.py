@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 ans = 1
 if 0 in a:
@@ -13,4 +13,3 @@ else:
             return
 
 print(ans)
-

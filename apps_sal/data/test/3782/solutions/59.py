@@ -25,4 +25,3 @@ if ans == 10000000000000:
     print((-1))
 else:
     print(ans)
-

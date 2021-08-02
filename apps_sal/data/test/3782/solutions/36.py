@@ -4,14 +4,20 @@ from collections import defaultdict
 from bisect import bisect_left, bisect_right
 
 sys.setrecursionlimit(10**7)
+
+
 def input():
     return sys.stdin.readline()[:-1]
 
+
 mod = 10**9 + 7
+
 
 def I(): return int(input())
 def LI(): return list(map(int, input().split()))
-def LIR(row,col):
+
+
+def LIR(row, col):
     if row <= 0:
         return [[] for _ in range(col)]
     elif col == 1:
@@ -22,7 +28,8 @@ def LIR(row,col):
 
 #################
 
-N,K,Q = LI()
+
+N, K, Q = LI()
 A = LI()
 
 # 最小値を決め打ちすると区間を分割できる
@@ -39,16 +46,16 @@ for a in Aval:
         else:
             if len(now) >= K:
                 now.sort()
-                mins.extend(now[:len(now)-K+1])
-                num += len(now)-K+1
+                mins.extend(now[:len(now) - K + 1])
+                num += len(now) - K + 1
             now = []
     if len(now) >= K:
         now.sort()
-        mins.extend(now[:len(now)-K+1])
-        num += len(now)-K+1
+        mins.extend(now[:len(now) - K + 1])
+        num += len(now) - K + 1
     if num >= Q:
         mins.sort()
-        if mins[Q-1]-a < ans:
-            ans = mins[Q-1]-a
+        if mins[Q - 1] - a < ans:
+            ans = mins[Q - 1] - a
 
 print(ans)

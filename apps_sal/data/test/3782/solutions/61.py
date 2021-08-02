@@ -14,11 +14,11 @@ for i in sorted(A):
         else:
             if len(tmp) >= K:
                 tmp.sort()
-                use += tmp[:len(tmp)-K+1]
+                use += tmp[:len(tmp) - K + 1]
             tmp = []
     use.sort()
     if len(use) < Q:
         break
-    ans = min(ans, use[Q-1] - i)
+    ans = min(ans, use[Q - 1] - i)
     cannot_use.add(i)
 print(ans)

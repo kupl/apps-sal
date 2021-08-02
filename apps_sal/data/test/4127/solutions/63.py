@@ -1,4 +1,4 @@
-A,B = input().split()
+A, B = input().split()
 A = int(A)
 C = ""
 for i in range(len(B)):

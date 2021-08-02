@@ -8,7 +8,7 @@ for i, val in enumerate(B_ls):
         if A_ls[i] >= val:
             A_ls[i] -= val
         else:
-            A_ls[i + 1] -= val - A_ls[i] 
+            A_ls[i + 1] -= val - A_ls[i]
     else:
         rst += A_ls[i] + A_ls[i + 1]
         A_ls[i], A_ls[i + 1] = 0, 0

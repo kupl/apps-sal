@@ -13,7 +13,7 @@ bools = [0] * (n - m + 1 + 1)
 
 accum = 0
 for i in range(n - m, -1, -1):
-    if s[i:i+m] == t:
+    if s[i:i + m] == t:
         accum += 1
     bools[i] = accum
 
@@ -29,6 +29,3 @@ for i in range(q):
 #    for j in range(l, r+1):
 #        if bools[j]:
 #            suma += 1
-
-
-

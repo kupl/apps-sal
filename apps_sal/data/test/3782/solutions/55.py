@@ -12,9 +12,9 @@ for lb in sorted(A):
             tmp.append(a)
         else:
             if len(tmp) >= K:
-                use += sorted(tmp)[:len(tmp)-K+1]
+                use += sorted(tmp)[:len(tmp) - K + 1]
             tmp = []
     if len(use) < Q:
         break
-    ans = min(ans, sorted(use)[Q-1] - lb)
+    ans = min(ans, sorted(use)[Q - 1] - lb)
 print(ans)

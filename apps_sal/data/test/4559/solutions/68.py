@@ -13,5 +13,5 @@ for i in range(n):
     if ans > 10 ** 18:
         print(-1)
         return
-    
+
 print(ans)

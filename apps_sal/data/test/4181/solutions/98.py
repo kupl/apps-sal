@@ -4,8 +4,7 @@ B = list(map(int, input().split()))
 
 ans = 0
 for i in range(N):
-    ans += min(A[i] + A[i+1], B[i])
-    A[i+1] -= min(max(B[i] - A[i], 0), A[i+1])
+    ans += min(A[i] + A[i + 1], B[i])
+    A[i + 1] -= min(max(B[i] - A[i], 0), A[i + 1])
 
 print(ans)
-
