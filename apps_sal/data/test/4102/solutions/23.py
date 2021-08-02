@@ -4,6 +4,8 @@ def _bool(s):
         if a[int(s[i])] != int(s[len(s) - i - 1]):
             return False
     return True
+
+
 s = input()
 if _bool(s):
     print('Yes')

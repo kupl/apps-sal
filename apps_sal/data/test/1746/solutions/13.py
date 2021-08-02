@@ -1,12 +1,13 @@
 from itertools import permutations
 
-MOD = 10**9+7
+MOD = 10**9 + 7
+
 
 def main():
     n = int(input())
     parent = [0] * n
     is_leaf = [True] * n
-    for i in range(1,n):
+    for i in range(1, n):
         parent[i] = int(input()) - 1
         is_leaf[parent[i]] = False
     leafs_cnt = [0] * n
@@ -18,8 +19,8 @@ def main():
             return
     print("Yes")
 
+
 while 1:
     main()
     break
 # input()
-

@@ -1,5 +1,6 @@
 import heapq
 
+
 def tea_list(students):
     teatimes = [0] * len(students)
     events = []
@@ -19,7 +20,6 @@ def tea_list(students):
             teatimes[e] = t
     return teatimes
 
-        
 
 def main():
     T = int(input())
@@ -28,7 +28,9 @@ def main():
         students = [tuple(int(x) for x in input().split()) for _ in range(N)]
         print(*tea_list(students))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

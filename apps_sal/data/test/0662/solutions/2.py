@@ -8,4 +8,3 @@ for i in range(n):
     spec = list(set([1, 2, 3]) - set([k, spec]))[0]
 else:
     print("YES")
-

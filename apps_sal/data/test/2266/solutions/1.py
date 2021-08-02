@@ -34,4 +34,3 @@ for i in range(n - 1):
     if need[i]:
         edgeList.append(str(i + 1))
 print(' '.join(edgeList))
-

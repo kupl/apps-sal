@@ -21,4 +21,3 @@ for ____ in range(T):
         t += 1
         del a[0]
     print()
-

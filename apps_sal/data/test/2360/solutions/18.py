@@ -4,10 +4,10 @@
 ##############################################
 # Input
 
+from time import time
 t = int(input())
 ##############################################
 # Timer start
-from time import time
 start_time = time()
 ##############################################
 # Main code
@@ -18,7 +18,7 @@ for tt in range(t):
 
     stud = []
     for nn in range(n):
-        s = tuple(map(lambda x:int(x), input().split()))
+        s = tuple(map(lambda x: int(x), input().split()))
         stud.append(s)
 
     res = 0
@@ -30,7 +30,7 @@ for tt in range(t):
             continue
 
         newres = max(l, res)
-        if newres > r: # go out
+        if newres > r:  # go out
             res = newres
             print(0, end=" ")
         else:
@@ -38,9 +38,3 @@ for tt in range(t):
             res = newres + 1
 
     print()
-
-
-
-
-
-

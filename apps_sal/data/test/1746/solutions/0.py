@@ -3,7 +3,7 @@
 def main():
     class Node:
         def __init__(self):
-            self.children = [ ]
+            self.children = []
 
     n = int(input())
     nodes = [Node() for i in range(n)]
@@ -17,9 +17,9 @@ def main():
     )
     print("Yes" if ok else "No")
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

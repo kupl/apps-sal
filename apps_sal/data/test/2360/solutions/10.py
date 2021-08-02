@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
@@ -17,7 +18,7 @@ for _ in range(t):
         lc, rc = rint()
         if lc >= ct:
             ans.append(lc)
-            ct = lc+1
+            ct = lc + 1
         elif ct <= rc:
             ans.append(ct)
             ct += 1
@@ -25,4 +26,3 @@ for _ in range(t):
             ans.append(0)
 
     print(*ans)
-

@@ -12,4 +12,3 @@ for i in range(n):
             result = min([result, i + n - j - 1])
 
 print(result)
-

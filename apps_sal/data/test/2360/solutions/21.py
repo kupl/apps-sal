@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def solve(ar):
     res = []
     time = 0
@@ -15,6 +17,7 @@ def solve(ar):
             res.append(0)
     return res
 
+
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -22,4 +25,3 @@ for _ in range(t):
     for i in range(n):
         a.append(deque(int(x) for x in input().split()))
     print(*solve(a))
-

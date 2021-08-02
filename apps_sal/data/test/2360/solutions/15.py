@@ -21,7 +21,6 @@ for i in range(t):
             else:
                 current_sec = l
 
-
         if l == current_sec:
             q.put(r)
 
@@ -32,7 +31,6 @@ for i in range(t):
             current_sec += 1
         else:
             answer.append("0")
-
 
     res = " ".join(answer)
     print(res)

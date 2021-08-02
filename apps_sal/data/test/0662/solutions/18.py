@@ -12,4 +12,3 @@ for i in a:
         p2, p3 = p3, p2
 
 print('YES')
-

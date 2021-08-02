@@ -2,6 +2,7 @@ from collections import Counter, defaultdict
 import itertools
 import sys
 
+
 def main():
     n = int(input())
     spec = 3
@@ -15,6 +16,4 @@ def main():
     print('YES' if poss else 'NO')
 
 
-
 main()
-

@@ -12,8 +12,8 @@ def solution(games):
 
     return True
 
+
 n = int(input())
 games = [int(input()) for i in range(n)]
 
 print("YES" if solution(games) else "NO")
-

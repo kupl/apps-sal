@@ -15,4 +15,3 @@ for i in range(n):
                 gamers[j] = not gamers[j]
 
 print('YES')
-

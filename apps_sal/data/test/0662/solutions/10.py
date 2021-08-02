@@ -8,5 +8,3 @@ for _ in range(n):
     spectator = {1, 2, 3}.difference({spectator, cur}).pop()
 else:
     print('YES')
-
-
