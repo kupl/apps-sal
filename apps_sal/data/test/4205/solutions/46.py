@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     input = sys.stdin.readline
     N = int(input())
@@ -12,6 +13,9 @@ def solve():
 
     return 0
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

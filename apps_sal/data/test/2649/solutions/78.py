@@ -25,4 +25,3 @@ w_ans = wmax - wmin
 
 
 print(f'{max(z_ans, w_ans)}')
-

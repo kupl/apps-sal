@@ -11,26 +11,26 @@ for i in range(n):
             out.append((p, i))
         elif threes:
             p = threes.pop()
-            out.append((p,i))
-            out.append((i,i))
+            out.append((p, i))
+            out.append((i, i))
         else:
-            out.append((i,i))
+            out.append((i, i))
     elif a[i] == 2:
         if threes:
             p = threes.pop()
-            out.append((p,i))
-            out.append((i,i))
+            out.append((p, i))
+            out.append((i, i))
         else:
-            out.append((i,i))
+            out.append((i, i))
 
         twos.append(i)
     elif a[i] == 3:
         if threes:
             p = threes.pop()
-            out.append((p,i))
-            out.append((i,i))
+            out.append((p, i))
+            out.append((i, i))
         else:
-            out.append((i,i))
+            out.append((i, i))
 
         threes.append(i)
 if twos or threes:
@@ -38,4 +38,3 @@ if twos or threes:
 else:
     print(len(out))
     print('\n'.join([str(x[0] + 1) + ' ' + str(x[1] + 1) for x in out]))
-

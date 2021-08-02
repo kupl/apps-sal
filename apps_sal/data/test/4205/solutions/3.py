@@ -9,7 +9,7 @@ if p == ans:
     is_ascend = True
 
 for i in range(N):
-    for j in range(i+1,N):
+    for j in range(i + 1, N):
         p = copy.copy(pcopy)
         p[i], p[j] = p[j], p[i]
         if p == ans:
@@ -19,4 +19,3 @@ if is_ascend:
     print("YES")
 else:
     print("NO")
-

@@ -24,4 +24,3 @@ elif sum_left % 2 == 1:
     print(1)
 else:
     print(0)
-

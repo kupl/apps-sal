@@ -18,4 +18,3 @@ elif Sum_l % 2:
         print(1)
 elif Sum_l % 2 == 0:
     print(0)
-

@@ -1,6 +1,6 @@
 import copy
 n = int(input())
-li = list(map(int,input().split()))
+li = list(map(int, input().split()))
 li1 = copy.copy(li)
 li1.sort()
 cnt = 0

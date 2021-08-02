@@ -43,4 +43,3 @@ for i in range(n):
 res = max(abs(A[ul_index][0] - A[br_index][0]) + abs(A[ul_index][1] - A[br_index][1]), abs(A[ur_index][0] - A[bl_index][0]) + abs(A[ur_index][1] - A[bl_index][1]))
 
 print(res)
-

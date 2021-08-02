@@ -16,7 +16,7 @@ for i in range(n):
         else:
             ans.append((i, i))
             three.append(i)
-            
+
     elif a[i] == 2:
         if len(three) > 0:
             x = three.pop()
@@ -44,5 +44,4 @@ if len(three) > 0 or len(two) > 0:
 else:
     print(len(ans))
     for i, j in ans:
-        print(i+1, j+1)
-
+        print(i + 1, j + 1)

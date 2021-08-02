@@ -7,7 +7,7 @@ A = list(map(int, readline().split()))
 Ans = []
 one = []
 tt = []
-for i in range(N-1, -1, -1):
+for i in range(N - 1, -1, -1):
     a = A[i]
     if a == 0:
         continue
@@ -47,6 +47,3 @@ else:
     print(len(Ans))
     if Ans:
         print('\n'.join(f'{a+1} {b+1}' for a, b in Ans))
-
-
-

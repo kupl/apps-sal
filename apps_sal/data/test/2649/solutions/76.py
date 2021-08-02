@@ -15,5 +15,5 @@ def main():
         N = N - 1
     print((max(a1 - a2, b1 - b2)))
 
-main()
 
+main()

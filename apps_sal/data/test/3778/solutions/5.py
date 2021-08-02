@@ -49,4 +49,3 @@ else:
     print(len(s))
     for x in s:
         print(x[0], x[1])
-

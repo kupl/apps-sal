@@ -9,6 +9,7 @@ def main():
     Y.sort()
     print((max(X[-1] - X[0], Y[-1] - Y[0])))
 
+
 def __starting_point():
     main()
 

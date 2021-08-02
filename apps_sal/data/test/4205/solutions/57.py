@@ -13,4 +13,3 @@ if counter == 0 or counter == 2:
     print('YES')
 else:
     print('NO')
-

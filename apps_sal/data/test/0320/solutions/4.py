@@ -8,4 +8,3 @@ elif temp1 == temp2 == 1 and ([1, 0] in dominoes or [0, 1] in dominoes):
     print(1)
 else:
     print(-1)
-

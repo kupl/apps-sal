@@ -1,7 +1,7 @@
+import math
 import sys
 import string
 input = sys.stdin.readline
-import math
 #letters = list(string.ascii_lowercase)
 
 t = int(input())

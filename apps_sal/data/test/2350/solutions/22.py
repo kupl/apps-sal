@@ -12,4 +12,3 @@ for case_num in range(t):
     d1 = x2 - x1
     d2 = y2 - y1
     print(d1 * d2 + 1)
-

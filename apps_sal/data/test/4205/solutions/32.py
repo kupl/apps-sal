@@ -1,8 +1,10 @@
 n = int(input())
 a = list(map(int, input().split(' ')))
 
+
 def swap(a, b):
     return b, a
+
 
 ok = 0
 f = 1

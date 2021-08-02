@@ -1,5 +1,6 @@
 def inpl(): return list(map(int, input().split()))
 
+
 N = int(input())
 P = inpl()
 Q = sorted(P)

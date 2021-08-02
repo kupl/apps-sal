@@ -16,4 +16,3 @@ for i in range(N):
 max1 = max(xy1) - min(xy1)
 max2 = max(xy2) - min(xy2)
 print((max((max1, max2))))
-

@@ -13,7 +13,6 @@ def solve(n, m, s, lst):
             t += 1
         cnt[i] = t
 
-
     dp = [[0] * (n + 1) for _ in range(n + 1)]
     dp[0][0] = 1
     r = 0

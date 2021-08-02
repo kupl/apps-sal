@@ -16,4 +16,6 @@ def ans():
 
 def __starting_point():
     ans()
+
+
 __starting_point()

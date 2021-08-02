@@ -20,4 +20,3 @@ for _ in range(int(input())):
         break
 
     print(c)
-

@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     input = sys.stdin.readline
     N = int(input())
@@ -11,10 +12,13 @@ def solve():
         dy.append(x - y)
     dx.sort()
     dy.sort()
-    print(max(dx[N-1] - dx[0], dy[N-1] - dy[0]))
+    print(max(dx[N - 1] - dx[0], dy[N - 1] - dy[0]))
 
     return
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

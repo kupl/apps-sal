@@ -5,12 +5,13 @@ for i in range(67):
     for j in range(1, i):
         comb[i][j] = comb[i - 1][j - 1] + comb[i - 1][j]
 
+
 def calc(x):
-    cnt   = 0
+    cnt = 0
     digit = []
     while (x > 0):
         digit.append(x % 2)
-        x  //= 2
+        x //= 2
         cnt += 1
     ans, one = 0, 0
     for i in reversed(list(range(cnt))):
@@ -19,6 +20,7 @@ def calc(x):
                 ans += comb[i][k - one]
             one += 1
     return ans
+
 
 m, k = list(map(int, input().split()))
 
@@ -31,5 +33,3 @@ while (lcur + 2 <= rcur):
         rcur = mid
 
 print(rcur)
-
-

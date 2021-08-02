@@ -8,4 +8,3 @@ for _ in range(n):
 
 ans = max(max(u) - min(u), max(v) - min(v))
 print(ans)
-

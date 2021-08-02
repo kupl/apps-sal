@@ -8,7 +8,6 @@ for _ in range(t):
     dX = c - a
     dY = d - b
     out.append(dX * dY + 1)
-    
 
-print('\n'.join(map(str,out)))
 
+print('\n'.join(map(str, out)))

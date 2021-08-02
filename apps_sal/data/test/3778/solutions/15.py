@@ -39,4 +39,3 @@ else:
     print(len(targets))
     for target in targets:
         print(*target)
-

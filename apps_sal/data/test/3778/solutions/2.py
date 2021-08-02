@@ -1,10 +1,10 @@
 n = int(input())
-lst = list(map(int,input().split()))
+lst = list(map(int, input().split()))
 ans = []
 nsp = 0
 edpos = []
 twpos = []
-for i in range(n-1,-1,-1):
+for i in range(n - 1, -1, -1):
     if lst[i] == 1:
         ans.append([i, nsp])
         edpos.append([i, nsp])
