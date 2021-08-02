@@ -1,8 +1,10 @@
-#Bhargey Mehta (Sophomore)
+# Bhargey Mehta (Sophomore)
 #DA-IICT, Gandhinagar
-import sys, math, queue
+import sys
+import math
+import queue
 #sys.stdin = open("input.txt", "r")
-MOD = 10**9+7
+MOD = 10**9 + 7
 
 n = int(input())
 p = []
@@ -14,11 +16,11 @@ d = {}
 
 for i in range(n):
     x1, y1 = p[i]
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         x2, y2 = p[j]
-        if x1 != x2:  
-            m = (y2-y1)/(x2-x1)
-            c = (y1*x2-x1*y2)/(x2-x1)
+        if x1 != x2:
+            m = (y2 - y1) / (x2 - x1)
+            c = (y1 * x2 - x1 * y2) / (x2 - x1)
         else:
             m = 10**10
             c = x1
@@ -36,5 +38,5 @@ for m in d:
 s = sum(p)
 ans = 0
 for x in p:
-    ans += x*(s-x)
-print(ans//2)
+    ans += x * (s - x)
+print(ans // 2)

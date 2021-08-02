@@ -11,4 +11,3 @@ for a in range(1, 50):
             return
 
 print((-1))
-

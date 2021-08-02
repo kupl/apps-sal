@@ -14,4 +14,3 @@ for a in range(1, 41):
             return
 
 print(("{}".format(-1)))
-

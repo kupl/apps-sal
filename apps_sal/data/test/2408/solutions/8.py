@@ -19,7 +19,8 @@ for i in range(n):
 alines = []
 for i in range(n):
     for j in range(n):
-        if i >= j: continue
+        if i >= j:
+            continue
         alines.append((a[i], a[j]))
 
 lines = []
@@ -43,4 +44,3 @@ for i, l1 in enumerate(lines):
         if abs(get_k(*l1) - get_k(*l2)) > 1e-10:
             cnt += 1
 print(cnt)
-

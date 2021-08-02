@@ -92,4 +92,3 @@ for i, line1 in enumerate(lines):
         #
 
 print(cnt)
-

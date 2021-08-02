@@ -1,5 +1,5 @@
 n = int(input())
-#find A and B such that 3^A + 5^B = N
+# find A and B such that 3^A + 5^B = N
 maxA = 1
 maxB = 1
 while (3**maxA <= n):
@@ -9,10 +9,9 @@ while (5**maxB <= n):
 done = False
 for a in range(1, maxA):
     for b in range(1, maxB):
-        if (3**a+5**b == n):
-            print((str(a)+' '+str(b)))
+        if (3**a + 5**b == n):
+            print((str(a) + ' ' + str(b)))
             done = True
             break
 if not done:
     print((-1))
-

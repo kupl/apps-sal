@@ -9,7 +9,9 @@ while 3 ** a < n:
             finished = True
             break
         b += 1
-    if finished:break
+    if finished:
+        break
     a += 1
 
-if not finished: print(-1)
+if not finished:
+    print(-1)

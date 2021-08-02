@@ -24,4 +24,3 @@ for _ in range(int(input())):
                     ans += abs(elems[k] - elems[x])
 
     print(ans)
-

@@ -1,4 +1,4 @@
-[h,m] = [int(x) for x in input().split(':')]
+[h, m] = [int(x) for x in input().split(':')]
 a = int(input())
 
 newm = (m + a) % 60
@@ -14,4 +14,3 @@ elif (newh < 10):
 else:
     ans = "{}:{}".format(newh, newm)
 print(ans)
-

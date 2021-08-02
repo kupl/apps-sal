@@ -1,11 +1,13 @@
 t = int(input())
 
+
 def f(*a):
     ans = int(1e19)
     for i in a:
         ans = min(ans, sum(abs(n - i) for n in a))
     # print(a, ans)
     return ans
+
 
 for tt in range(t):
     n, m = list(map(int, input().split()))
@@ -29,4 +31,3 @@ for tt in range(t):
         i += 1
         j -= 1
     print(ans)
-

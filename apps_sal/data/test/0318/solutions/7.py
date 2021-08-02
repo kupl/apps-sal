@@ -18,6 +18,7 @@ def inc(time):
             s = '0' + s
         return f + m + s
 
+
 time = input()
 a = int(input())
 for i in range(a):

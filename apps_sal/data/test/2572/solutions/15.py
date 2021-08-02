@@ -76,30 +76,30 @@ e=time.time()
 print(e-s)
 '''
 
-t=int(input())
+t = int(input())
 for i in range(t):
-    n,m=list(map(int,input().split()))
-    arr=[]
+    n, m = list(map(int, input().split()))
+    arr = []
     for i in range(n):
-        arr.append(list(map(int,input().split())))
-    used=set()
-    ans=0
-    for i in range(n//2+1):
-        for j in range(m//2+1):
-            if (i,j) not in used:
-                tmp=set([(i,j),(n-1-i,j),(n-1-i,m-1-j),(i,m-1-j)])
-                used|=tmp
-                if len(tmp)==1:
+        arr.append(list(map(int, input().split())))
+    used = set()
+    ans = 0
+    for i in range(n // 2 + 1):
+        for j in range(m // 2 + 1):
+            if (i, j) not in used:
+                tmp = set([(i, j), (n - 1 - i, j), (n - 1 - i, m - 1 - j), (i, m - 1 - j)])
+                used |= tmp
+                if len(tmp) == 1:
                     continue
-                elif len(tmp)==2:
-                    (x,y),(a,b)=tmp
-                    ans+=abs(arr[x][y]-arr[a][b])
+                elif len(tmp) == 2:
+                    (x, y), (a, b) = tmp
+                    ans += abs(arr[x][y] - arr[a][b])
                 else:
-                    res=[]
-                    for x,y in tmp:
+                    res = []
+                    for x, y in tmp:
                         res.append(arr[x][y])
                     res.sort()
-                    ans+=min(sum(abs(res[i]-res[j]) for j in range(4)) for i in range(1,3))
+                    ans += min(sum(abs(res[i] - res[j]) for j in range(4)) for i in range(1, 3))
 
     print(ans)
 '''
@@ -140,4 +140,3 @@ else:
     ans=min(ym,ans)
 print(ans)
 '''
-

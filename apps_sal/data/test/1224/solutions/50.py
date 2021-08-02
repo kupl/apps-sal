@@ -9,4 +9,3 @@ for i in range(1, 41):
             break
 
 print((" ".join(ans)))
-

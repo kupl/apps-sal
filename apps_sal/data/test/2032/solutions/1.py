@@ -19,7 +19,7 @@ time = [[] for i in range(n)]
 for i in range(n):
     time[timing[i]].append(cas[i][2])
 for i in range(n):
-    time[timing[i]].sort(reverse = True)
+    time[timing[i]].sort(reverse=True)
 
 
 memo = {}
@@ -34,10 +34,10 @@ for i in range(n):
     for num in time[i]:
         tmp = memo2.copy()
         for j in tmp:
-            if j-1 not in memo2:
-                memo2[j-1] = tmp[j] + num
+            if j - 1 not in memo2:
+                memo2[j - 1] = tmp[j] + num
             else:
-                memo2[j-1] = max(tmp[j-1], tmp[j] + num)
+                memo2[j - 1] = max(tmp[j - 1], tmp[j] + num)
     memo = memo2.copy()
 
 ans = -1

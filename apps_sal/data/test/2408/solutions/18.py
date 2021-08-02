@@ -7,6 +7,7 @@ from fractions import Fraction, gcd
 
 INF = 10 ** 9
 
+
 def __starting_point():
     def _(f):
         for l in f:
@@ -27,7 +28,7 @@ def __starting_point():
         pts.append((x, y))
 
     lines = set()
-        
+
     for i in range(n):
         for j in range(i + 1, n):
             x0, y0, x1, y1 = (pts[i][0],
@@ -35,7 +36,7 @@ def __starting_point():
                               pts[j][0],
                               pts[j][1],
                               )
-                              
+
             dx, dy = (x1 - x0,
                       y1 - y0,
                       )
@@ -59,7 +60,7 @@ def __starting_point():
     a = list(lines)
 
     size = len(lines)
-    
+
     c = 0
 
     for i in range(size):
@@ -70,5 +71,6 @@ def __starting_point():
             c += 1
 
     print(c)
+
 
 __starting_point()

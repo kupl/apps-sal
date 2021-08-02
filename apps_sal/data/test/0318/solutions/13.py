@@ -1,10 +1,12 @@
 import sys
 
+
 def norm(num):
-	if num < 10:
-		return '0' + str(num)
-	else:
-		return str(num)
+    if num < 10:
+        return '0' + str(num)
+    else:
+        return str(num)
+
 
 h, m = [int(x) for x in input().split(':')]
 diff = int(input())
@@ -19,4 +21,3 @@ mans %= 60
 s = norm(hans) + ':' + norm(mans)
 
 print(s)
-
