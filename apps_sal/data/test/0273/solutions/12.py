@@ -7,4 +7,3 @@ for ch in name[1:]:
         break
 ans += fam[0]
 print(ans)
-

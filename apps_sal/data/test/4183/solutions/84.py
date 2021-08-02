@@ -10,4 +10,3 @@ else:
     for i in range(1, n):
         g = g // math.gcd(g, tl[i]) * tl[i]
     print(g)
-

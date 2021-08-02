@@ -5,7 +5,7 @@ XH = [list(map(int, input().split())) for _ in range(N)]
 XH.sort(key=lambda x: x[0])
 ans = 0
 
-XN = [[x, ceil(h/A)] for x, h in XH]
+XN = [[x, ceil(h / A)] for x, h in XH]
 # 左端のモンスターに攻撃が必要な回数はそこから2*Dだけ右にあるモンスターにまで波及できる
 cnum = 0
 que = deque()
@@ -19,6 +19,5 @@ for x, n in XN:
     cnum += need
 
     if need:
-        que.append([x+2*D, need])
+        que.append([x + 2 * D, need])
 print(ans)
-

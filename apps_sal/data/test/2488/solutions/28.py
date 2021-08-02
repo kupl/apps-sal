@@ -30,8 +30,7 @@ for i in range(n):
         at_num += 1
     ans += at_num
 
-    q.append((mons[i][0] + 2 * d, at_num*a))
-    dm_sum += at_num*a
+    q.append((mons[i][0] + 2 * d, at_num * a))
+    dm_sum += at_num * a
 
 print(ans)
-

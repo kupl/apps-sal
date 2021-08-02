@@ -9,8 +9,10 @@ def gcd(m, n):
         else:
             m, n = n, r
 
+
 def lcm(m, n):
-    return m*n // gcd(m, n)
+    return m * n // gcd(m, n)
+
 
 n = int(input())
 l = []
@@ -22,4 +24,3 @@ for i in range(n):
     ans = lcm(ans, t)
 
 print(ans)
-

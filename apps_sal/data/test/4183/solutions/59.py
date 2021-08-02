@@ -6,4 +6,3 @@ for _ in range(n - 1):
     ans = (ans * t) // gcd(ans, t)
 
 print(ans)
-

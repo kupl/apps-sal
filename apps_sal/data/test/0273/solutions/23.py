@@ -6,4 +6,3 @@ for i in range(len(a)):
         if (an == -1 or a[0:i + 1] + b[0: j + 1] < an):
             an = a[0:i + 1] + b[0: j + 1]
 print(an)
-

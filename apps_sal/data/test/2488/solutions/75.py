@@ -22,4 +22,3 @@ for i in range(n):
         j = bisect_right(x, x[i] + d * 2)
         s[j] -= num * a
 print(ans)
-

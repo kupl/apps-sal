@@ -1,4 +1,7 @@
-#素数関連
+# 素数関連
+from collections import deque
+
+
 def prime_numbers(x):
     if x < 2:
         return []
@@ -12,6 +15,8 @@ def prime_numbers(x):
         for composite_number in range(2 * prime_number, x, prime_number):
             prime_numbers[composite_number] = 0
     return [prime_number for prime_number in prime_numbers if prime_number != 0]
+
+
 def is_prime(x):
     if x < 2:
         return False
@@ -27,7 +32,8 @@ def is_prime(x):
         prime_number += difference
         difference = 6 - difference
     return True
-from collections import deque
+
+
 n, d, a = map(int, input().split())
 xh = [list(map(int, input().split())) for i in range(n)]
 xh.sort()

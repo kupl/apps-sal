@@ -5,7 +5,7 @@ import sys
 input = sys.stdin.readline
 
 N, D, A = list(map(int, input().split()))
-S = [0]*N
+S = [0] * N
 atack = deque()
 for i in range(N):
     x, h = list(map(int, input().split()))
@@ -24,10 +24,9 @@ for i in range(N):
 
     if S[i][1] <= dmg:
         continue
-    bomb = math.ceil((S[i][1]-dmg)/A)
-    atack.append([S[i][0]+2*D, A*bomb])
+    bomb = math.ceil((S[i][1] - dmg) / A)
+    atack.append([S[i][0] + 2 * D, A * bomb])
     cnt += bomb
-    dmg += A*bomb
+    dmg += A * bomb
 
 print(cnt)
-

@@ -5,7 +5,7 @@ def resolve():
     AB.sort()
 
     # imos
-    imos = [0] * (N+1)
+    imos = [0] * (N + 1)
     ans = 0
     R = 0
     for l in range(N):
@@ -18,13 +18,15 @@ def resolve():
             while R < N and AB[R][0] <= 2 * D + x:
                 R += 1
             d = h - imos[l]
-            cnt = (d+A-1) // A
+            cnt = (d + A - 1) // A
             imos[l] += cnt * A
             imos[R] -= cnt * A
             ans += cnt
     print(ans)
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

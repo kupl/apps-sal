@@ -1,5 +1,5 @@
 import math
-        
+
 N = int(input())
 T = []
 for i in range(N):
@@ -10,6 +10,3 @@ for i in range(1, N):
     ans = ans * T[i] // math.gcd(ans, T[i])
 
 print(ans)
-    
-
-

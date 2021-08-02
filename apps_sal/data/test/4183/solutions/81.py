@@ -3,5 +3,5 @@ n = int(input())
 t = [int(input()) for i in range(n)]
 ans = 1
 for i in range(n):
-    ans = ans*t[i]//gcd(ans, t[i])
+    ans = ans * t[i] // gcd(ans, t[i])
 print(ans)

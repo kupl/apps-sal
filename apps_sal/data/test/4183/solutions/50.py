@@ -3,9 +3,11 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 def lcm(a, b):
     g = gcd(a, b)
     return a // g * b
+
 
 N = int(input())
 T = [int(input()) for _ in range(N)]
