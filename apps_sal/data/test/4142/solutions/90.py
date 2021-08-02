@@ -7,4 +7,3 @@ if 'L' in a or 'R' in b:
 
 else:
     print('Yes')
-

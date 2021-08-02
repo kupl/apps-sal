@@ -10,4 +10,3 @@ if set(odd_s).issubset(to) and set(even_s).issubset(te):
     print('Yes')
 else:
     print('No')
-

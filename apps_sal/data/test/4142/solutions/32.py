@@ -1,6 +1,6 @@
 s = input()
-o = ['R','U','D']
-e = ['L','U','D']
+o = ['R', 'U', 'D']
+e = ['L', 'U', 'D']
 ans = 'Yes'
 for i in range(len(s)):
     if i % 2 == 0:

@@ -16,5 +16,5 @@ else:
     for i in range(n - 2, -1, -1):
         suf.append(min(suf[-1], list1[i]))
 for i in range(n):
-    ans = max(ans, pref[i] * p + q * list1[i] + suf[n - i -1] * r)
+    ans = max(ans, pref[i] * p + q * list1[i] + suf[n - i - 1] * r)
 print(ans)

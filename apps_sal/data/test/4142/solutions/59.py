@@ -1,6 +1,6 @@
-S=input()
+S = input()
 for i in range(len(S)):
-    if i%2==0:
+    if i % 2 == 0:
         if S[i] not in "RUD":
             print("No")
             break
@@ -10,4 +10,3 @@ for i in range(len(S)):
             break
 else:
     print("Yes")
-

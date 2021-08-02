@@ -10,4 +10,3 @@ for q in range(Q):
         ans = 0
 
     print(ans)
-

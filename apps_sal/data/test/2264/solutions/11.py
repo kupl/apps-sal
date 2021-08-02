@@ -11,4 +11,3 @@ for i in range(t):
     if x < 0:
         x = 0
     print(x)
-

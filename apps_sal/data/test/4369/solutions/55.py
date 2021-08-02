@@ -4,4 +4,3 @@ if n % 2 != 0:
     ans += 1
 
 print(ans)
-

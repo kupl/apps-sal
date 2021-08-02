@@ -1,7 +1,7 @@
 n, m, k = list(map(int, input().split()))
 s = []
 up = [[0] * m] * n
-left =[[0] * m] * n
+left = [[0] * m] * n
 ans = 0
 for i in range(n):
     s.append(input())
@@ -17,4 +17,3 @@ for i in range(n):
 if k == 1:
     ans //= 2
 print(ans)
-

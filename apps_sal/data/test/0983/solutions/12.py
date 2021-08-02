@@ -34,4 +34,3 @@ for i in range(n):
             m = aa[i] * r + max_from_pq[i]
 
 print(m)
-

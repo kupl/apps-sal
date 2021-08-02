@@ -19,5 +19,3 @@ if even_ok and odd_ok:
     print("Yes")
 else:
     print("No")
-
-

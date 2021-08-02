@@ -12,4 +12,3 @@ if 'R' not in even_step and 'L' not in odd_step:
     print('Yes')
 else:
     print('No')
-

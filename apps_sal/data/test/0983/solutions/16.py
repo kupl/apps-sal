@@ -1,6 +1,6 @@
 import sys
-#=int(input())
-#=list(map(int, input().split()))
+# =int(input())
+# =list(map(int, input().split()))
 n, p, q, r = list(map(int, input().split()))
 a = list(map(int, input().split()))
 minil = [0] * n
@@ -23,4 +23,3 @@ for i in range(n):
     ans += max(r * minir[i], r * maxir[i])
     tans = max(tans, ans)
 print(tans)
-

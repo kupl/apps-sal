@@ -5,4 +5,3 @@ for i in range(q):
         print(2)
     else:
         print(n % 2)
-

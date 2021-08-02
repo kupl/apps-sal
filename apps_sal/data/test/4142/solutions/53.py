@@ -1,7 +1,7 @@
 s = input()
 ans = 'Yes'
 for i in range(len(s)):
-    if (i+1) % 2 == 1:
+    if (i + 1) % 2 == 1:
         if s[i] not in ['R', 'U', 'D']:
             ans = 'No'
             break

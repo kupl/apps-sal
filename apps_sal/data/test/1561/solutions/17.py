@@ -34,4 +34,3 @@ if k == 1:
 
 
 print(count(class_map) + count(list(zip(*class_map))))
-

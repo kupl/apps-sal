@@ -10,4 +10,3 @@ for i in range(t):
         if b < min_r:
             min_r = b
     print(max(0, -min_r + max_l))
-

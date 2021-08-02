@@ -7,4 +7,3 @@ for i in range(t):
         maxl = max(l, maxl)
         minr = min(r, minr);
     print(max(maxl - minr, 0))
-

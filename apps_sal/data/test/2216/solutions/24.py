@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     (n, m, k) = list(map(int, sys.stdin.readline().split(' ')))
     l = []
@@ -15,12 +16,12 @@ def main():
     length = (n * m) // k
     i = 0
     for j in range(1, k + 1):
-        g = l[i:j*length]
+        g = l[i:j * length]
         if j == k:
             g = l[i:]
         s = ' '.join(list([' '.join(map(str, x)) for x in g]))
         sys.stdout.write('{} {}\n'.format(len(g), s))
         i = j * length
 
-main()  
 
+main()

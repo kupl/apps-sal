@@ -13,7 +13,7 @@ for y in range(n):
             e += 1
         else:
             r += max(0, ((e - b) - k))
-            b, e = x, x+1
+            b, e = x, x + 1
 
     r += max(0, (e - b) - k)
 
@@ -25,9 +25,8 @@ for x in range(m):
             e += 1
         else:
             r += max(0, ((e - b) - k))
-            b, e = x, x+1
+            b, e = x, x + 1
 
     r += max(0, (e - b) - k)
 
 print(r)
-

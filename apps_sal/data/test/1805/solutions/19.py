@@ -7,5 +7,3 @@ for i in range(n):
         print(0)
     elif a % 2 == 1:
         print(1)
-
-

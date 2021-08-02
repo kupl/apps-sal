@@ -13,4 +13,3 @@ for i in range(n):
     answer = max(answer, dp[2])
 
 print(answer)
-

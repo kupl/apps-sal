@@ -10,4 +10,3 @@ for i in range(len(S)):
             ans = 'No'
             break
 print(ans)
-

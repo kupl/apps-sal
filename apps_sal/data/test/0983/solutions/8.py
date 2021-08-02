@@ -19,4 +19,3 @@ for i in range(n):
     ans = max(ans, cans)
 
 print(ans)
-
