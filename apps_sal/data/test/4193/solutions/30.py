@@ -1,5 +1,5 @@
 a = [list(map(int, input().split())) for i in range(3)]
-n =int(input())
+n = int(input())
 
 for k in range(n):
     b = int(input())

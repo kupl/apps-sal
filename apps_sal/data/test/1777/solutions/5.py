@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def cal(x):
     left = cl = 0
     for i in x:
@@ -10,6 +12,8 @@ def cal(x):
             else:
                 cl -= 1
     return left, cl
+
+
 n = int(input())
 a = [*[x for x in [cal(input()) for i in range(n)] if x[0] == 0 or x[1] == 0]]
 left = Counter([i[1] for i in [x for x in a if x[0] == 0]])
@@ -19,6 +23,3 @@ ans = 0
 for i in list(left.keys()):
     ans += (min(left[i], right[i]) if i != 0 else left[i] // 2)
 print(ans)
-
-
-

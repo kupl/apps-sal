@@ -16,12 +16,13 @@ def score(x):
     else:
         return -1 * len(s)
 
+
 n = int(input())
 a = []
 for _ in range(n):
     x = input()
     a.append(x)
-    
+
 d = {}
 for i in a:
     j = score(i)
@@ -42,4 +43,3 @@ for i in d:
             d[-i] -= x
             c += x
 print(c)
-

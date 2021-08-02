@@ -9,10 +9,10 @@ for b in input():
             possible = False
             break
         popped = stack.pop()
-        if  (b == "}" and popped != "{") or \
+        if (b == "}" and popped != "{") or \
             (b == ">" and popped != "<") or \
             (b == ")" and popped != "(") or \
-            (b == "]" and popped != "["):
+                (b == "]" and popped != "["):
             counter += 1
 
 if possible and not stack:

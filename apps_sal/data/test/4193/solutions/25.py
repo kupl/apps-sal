@@ -17,6 +17,7 @@ def check(arr):
 
     return False
 
+
 arr = []
 for _ in range(3):
     arr.append(list(map(int, input().split(' '))))
@@ -37,4 +38,3 @@ if check(arr) == True:
     print("Yes")
 else:
     print("No")
-

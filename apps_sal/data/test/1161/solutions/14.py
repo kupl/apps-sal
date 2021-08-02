@@ -1,12 +1,13 @@
 opens = ['(', '{', '<', '[']
 closes = [')', '}', '>', ']']
 
+
 def solve(inp):
     stack = []
     res = 0
     for i, x in enumerate(inp):
         if x in opens:
-            stack.append((i,x))
+            stack.append((i, x))
         if x in closes:
             if not stack:
                 return 'Impossible'
@@ -17,5 +18,5 @@ def solve(inp):
         return 'Impossible'
     return res
 
-print(solve(input()))
 
+print(solve(input()))

@@ -22,4 +22,3 @@ if impossible:
     print("Impossible")
 else:
     print(res)
-

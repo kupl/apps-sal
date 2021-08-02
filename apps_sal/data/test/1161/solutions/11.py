@@ -16,4 +16,3 @@ for i in s:
                 answer += 1
 
 print(answer if len(stack) == 0 else 'Impossible')
-

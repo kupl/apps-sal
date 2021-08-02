@@ -30,13 +30,10 @@ for _ in range(n):
         else:
             right[r] = 1
 ans = 0
-ans += neutral_count//2
+ans += neutral_count // 2
 for l in left:
     r = 0
     if l in right:
         r = right[l]
     ans += min(left[l], r)
-print(ans) 
-
-
-
+print(ans)

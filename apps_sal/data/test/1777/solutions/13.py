@@ -9,15 +9,15 @@ for i in range(n):
     suf = True
     for j in s:
         if j == '(':
-            k +=1
+            k += 1
         else:
-            k -=1
+            k -= 1
         if k < 0:
             pr = False
     k = 0
     for j in reversed(s):
         if j == '(':
-            k +=1
+            k += 1
         else:
             k -= 1
         if k > 0:
@@ -40,4 +40,3 @@ for k in d:
         d[-k] -= mn
         ans += mn
 print(ans)
-

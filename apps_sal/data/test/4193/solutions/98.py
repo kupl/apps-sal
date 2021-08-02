@@ -1,4 +1,4 @@
-board = [list(map(int,input().split())) for i in range(3)]
+board = [list(map(int, input().split())) for i in range(3)]
 num = int(input())
 for n in range(num):
     bi = int(input())
@@ -7,12 +7,12 @@ for n in range(num):
             if board[i][j] == bi:
                 board[i][j] = 0
 
-#横
+# 横
 for i in range(3):
     if board[i][0] == board[i][1] == board[i][2] == 0:
         print("Yes")
         return
-#縦
+# 縦
 for i in range(3):
     if board[0][i] == board[1][i] == board[2][i] == 0:
         print("Yes")

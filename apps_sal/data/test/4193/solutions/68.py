@@ -28,4 +28,4 @@ elif (ct[0] + ct[4] + ct[8]) == 3 or (ct[2] + ct[4] + ct[6]) == 3:
 elif (ct[0] + ct[3] + ct[6]) == 3 or (ct[1] + ct[4] + ct[7]) == 3 or (ct[2] + ct[5] + ct[8]) == 3:
     print("Yes")
 else:
-    print("No")    
+    print("No")

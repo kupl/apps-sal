@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 A = []
 
@@ -21,4 +24,3 @@ if (A[0] == A[4] == A[8] == 0) or (A[2] == A[4] == A[6] == 0):
     bingo = 'Yes'
 
 print(bingo)
-

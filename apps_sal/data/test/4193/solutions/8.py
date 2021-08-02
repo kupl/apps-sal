@@ -13,9 +13,9 @@ def solve(A: "List[List[int]]", N: int, b: "List[int]"):
         for a__ in A_:
             if a__[0] == b_:
                 a__[1] = True
-    if (A_[0][1] and ((A_[1][1] and A_[2][1]) or \
-                        (A_[3][1] and A_[6][1]) or \
-                        (A_[4][1] and A_[8][1]))) or \
+    if (A_[0][1] and ((A_[1][1] and A_[2][1]) or
+                      (A_[3][1] and A_[6][1]) or
+                      (A_[4][1] and A_[8][1]))) or \
             (A_[1][1] and A_[4][1] and A_[7][1]) or \
             (A_[2][1] and A_[5][1] and A_[8][1]) or \
             (A_[3][1] and A_[4][1] and A_[5][1]) or \
@@ -39,7 +39,9 @@ def main():
     b = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(A, N, b)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -3,7 +3,7 @@ s = input()
 open = '[<({'
 close = ']>)}'
 
-clopen = { ']': '[', '}': '{', '>': '<', ')': '(' }
+clopen = {']': '[', '}': '{', '>': '<', ')': '('}
 popen = []
 c = 0
 for i in range(len(s)):
@@ -18,4 +18,3 @@ for i in range(len(s)):
             c += 1
 
 print(c if len(popen) == 0 else 'Impossible')
-

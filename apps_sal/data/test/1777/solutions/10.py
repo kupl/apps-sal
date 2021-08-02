@@ -33,4 +33,3 @@ for i in list(a.keys()):
         else:
             ans += a[0] // 2
 print(ans)
-

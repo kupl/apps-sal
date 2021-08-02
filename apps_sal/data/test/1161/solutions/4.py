@@ -18,6 +18,3 @@ for c in s:
         break
 if st: flag = False
 print(cnt if flag else 'Impossible')
-    
-
-

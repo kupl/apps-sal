@@ -13,11 +13,14 @@ MATCH = dict(BRACKETS)
 
 IMPOSSIBLE = 'Impossible'
 
+
 def is_opening(w):
     return w in OPENING
 
+
 def same_kind(wo, wc):
     return MATCH[wo] == wc
+
 
 def solve(word):
     temp = []
@@ -36,6 +39,6 @@ def solve(word):
     if len(temp) != 0:
         return IMPOSSIBLE
     return result
-                
-print(solve(word))
 
+
+print(solve(word))

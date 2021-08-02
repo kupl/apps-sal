@@ -1,5 +1,6 @@
 stack = []
 
+
 def main():
     s = str(input())
     open = list("<{[(")
@@ -38,6 +39,9 @@ def main():
     else:
         print(answer)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

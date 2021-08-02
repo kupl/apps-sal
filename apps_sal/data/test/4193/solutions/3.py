@@ -9,25 +9,25 @@ for i in range(3):
         bingo.append(x[j])
 
 for i in b:
-    for j in range(0,9):
+    for j in range(0, 9):
         if i == bingo[j]:
             bingo[j] = 0
 
-if bingo[0]==0 and bingo[1]==0 and bingo[2]==0:
+if bingo[0] == 0 and bingo[1] == 0 and bingo[2] == 0:
     print("Yes")
-elif bingo[3]==0 and bingo[4]==0 and bingo[5]==0:
+elif bingo[3] == 0 and bingo[4] == 0 and bingo[5] == 0:
     print("Yes")
-elif bingo[6]==0 and bingo[7]==0 and bingo[8]==0:
+elif bingo[6] == 0 and bingo[7] == 0 and bingo[8] == 0:
     print("Yes")
-elif bingo[0]==0 and bingo[3]==0 and bingo[6]==0:
+elif bingo[0] == 0 and bingo[3] == 0 and bingo[6] == 0:
     print("Yes")
-elif bingo[1]==0 and bingo[4]==0 and bingo[7]==0:
+elif bingo[1] == 0 and bingo[4] == 0 and bingo[7] == 0:
     print("Yes")
-elif bingo[2]==0 and bingo[5]==0 and bingo[8]==0:
+elif bingo[2] == 0 and bingo[5] == 0 and bingo[8] == 0:
     print("Yes")
-elif bingo[0]==0 and bingo[4]==0 and bingo[8]==0:
+elif bingo[0] == 0 and bingo[4] == 0 and bingo[8] == 0:
     print("Yes")
-elif bingo[2]==0 and bingo[4]==0 and bingo[6]==0:
+elif bingo[2] == 0 and bingo[4] == 0 and bingo[6] == 0:
     print("Yes")
 else:
     print("No")

@@ -1,4 +1,4 @@
-A = [list(map(int,input().split())) for i in range(3)]
+A = [list(map(int, input().split())) for i in range(3)]
 N = int(input())
 for i in range(N):
     b = int(input())
@@ -8,7 +8,7 @@ for i in range(N):
                 A[j][k] = 0
 ans = "No"
 for i in range(3):
-    if A[i] == [0,0,0]:
+    if A[i] == [0, 0, 0]:
         ans = "Yes"
         break
     for j in range(3):

@@ -23,5 +23,4 @@ for s in S:
     else:
         zeros += 1
 
-print(sum((c1&c2).values()) + zeros//2)
-
+print(sum((c1 & c2).values()) + zeros // 2)

@@ -1,4 +1,4 @@
-A = [[],[],[]]
+A = [[], [], []]
 A[0] = [int(s) for s in input().split(' ')]
 A[1] = [int(s) for s in input().split(' ')]
 A[2] = [int(s) for s in input().split(' ')]
@@ -22,4 +22,3 @@ for line in lines:
         print('Yes')
         return
 print('No')
-
