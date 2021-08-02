@@ -42,4 +42,3 @@ for a in A:
             return
         check.add(p)
 print('pairwise coprime')
-

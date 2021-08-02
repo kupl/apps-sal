@@ -1,5 +1,6 @@
 """ Created by Shahen Kosyan on 4/5/17 """
 
+
 def __starting_point():
     vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 
@@ -33,5 +34,6 @@ def __starting_point():
         i += 1
 
     print(answer)
+
 
 __starting_point()

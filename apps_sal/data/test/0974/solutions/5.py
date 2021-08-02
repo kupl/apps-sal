@@ -21,7 +21,7 @@ for i in range(2 * n):
         q.append(k)
         if len(q) == 1:
             continue
-        if k != q[-2] - 1:flag = 0
+        if k != q[-2] - 1: flag = 0
     else:
         #print(toBe, flag, ans)
         if q and toBe != q[-1]:
@@ -35,5 +35,5 @@ for i in range(2 * n):
             else:
                 q.pop()
         toBe += 1
-        
+
 sys.stdout.write(str(ans) + "\n")

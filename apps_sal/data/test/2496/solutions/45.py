@@ -1,7 +1,8 @@
 from math import gcd
 
+
 def make_kazu_list(n):
-    l = [0]*n
+    l = [0] * n
     l[1] = 1
     i = 2
     while i < n:
@@ -12,6 +13,7 @@ def make_kazu_list(n):
                 j += i
         i += 1
     return l
+
 
 def soinsuubunkai(n, l):
     r = []
@@ -28,8 +30,9 @@ def soinsuubunkai(n, l):
 # print(soinsuubunkai(66, l))
 # print(soinsuubunkai(72, l))
 
+
 def f(n, ais):
-    pl = [False]*1000001
+    pl = [False] * 1000001
     l = make_kazu_list(1000001)
     for n in soinsuubunkai(ais[0], l):
         pl[n] = True
@@ -58,7 +61,7 @@ def f(n, ais):
     else:
         return 'not coprime'
 
+
 n = int(input())
 ais = list(map(int, input().split(' ')))
 print((f(n, ais)))
-

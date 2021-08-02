@@ -16,4 +16,3 @@ for _ in range(2 * n):
                 boxes.pop()
         c += 1
 print(sorts)
-

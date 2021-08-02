@@ -12,4 +12,3 @@ else:
         if len(s) == len(pokemon) and oppor:
             print(pokemon)
             break
-

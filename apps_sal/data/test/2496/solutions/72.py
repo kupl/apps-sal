@@ -1,11 +1,14 @@
 from math import gcd
+
+
 class Factor:
     def __init__(self, max_element):
-        self.minFactor = [-1]*(max_element+1)
-        for i in range(2, max_element+1):
+        self.minFactor = [-1] * (max_element + 1)
+        for i in range(2, max_element + 1):
             if self.minFactor[i] == -1:
-                for j in range(i, max_element+1, i):
+                for j in range(i, max_element + 1, i):
                     self.minFactor[j] = i
+
     def getFactorSet(self, element):
         retSet = set(1)
         while element > 1:
@@ -13,12 +16,14 @@ class Factor:
             retSet.add(self.minFactor[element])
             element //= self.minFactor[element]
         return retSet
+
     def getPrimeFactorSet(self, element):
         retSet = set()
         while element > 1:
             retSet.add(self.minFactor[element])
             element //= self.minFactor[element]
         return retSet
+
     def getPrimeFactorDic(self, element):
         retDic = {}
         while element > 1:
@@ -29,6 +34,7 @@ class Factor:
                 retDic[val] = 1
             element //= val
         return retDic
+
 
 def main():
     n = int(input())
@@ -56,6 +62,9 @@ def main():
         else:
             print("not coprime")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

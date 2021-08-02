@@ -6,6 +6,7 @@ def check(v):
     fb = min(c, fa - cnt1) + b
     return (fa >= cnt1) and (fb >= cnt2)
 
+
 cnt1, cnt2, x, y = list(map(int, input().split()))
 l, r = 0, (cnt1 + cnt2) * 2
 while l <= r:
@@ -16,4 +17,3 @@ while l <= r:
     else:
         l = mid + 1
 print(ans)
-

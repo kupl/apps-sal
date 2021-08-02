@@ -16,4 +16,3 @@ elif any(sum(cnt[i::i]) > 1 for i in range(2, max(a) + 1)):
     print('setwise coprime')
 else:
     print('pairwise coprime')
-

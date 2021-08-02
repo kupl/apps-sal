@@ -1,7 +1,6 @@
 n = int(input())
 w = input()
-l = ['vaporeon', 'jolteon', 'flareon', 'espeon', 'umbreon', 'leafeon', 'glaceon'
-     ,'sylveon']
+l = ['vaporeon', 'jolteon', 'flareon', 'espeon', 'umbreon', 'leafeon', 'glaceon', 'sylveon']
 for i in l:
     if len(w) == len(i):
         p = ''
@@ -17,7 +16,3 @@ for i in l:
         if p in l:
             print(p)
             break
-       
-            
-    
-

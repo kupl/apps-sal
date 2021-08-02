@@ -1,14 +1,15 @@
 import math
 
+
 def eratosthenes():
-    erat = [0 for _ in range(max_a+1)]
+    erat = [0 for _ in range(max_a + 1)]
     #lim = int(math.sqrt(max_a))
     pair = True
-    #for i in range(2, lim+1):
-    for i in range(2, max_a+1):
+    # for i in range(2, lim+1):
+    for i in range(2, max_a + 1):
         cnt = 0
         if not erat[i]:
-            for res in range(i, max_a+1, i):
+            for res in range(i, max_a + 1, i):
                 if res in set_a:
                     cnt += 1
                 erat[res] = i
@@ -25,7 +26,7 @@ a = [int(x) for x in input().split()]
 max_a = max(a)
 set_a = set(a)
 
-if eratosthenes() and len(set_a) == n - max(0, a.count(1)-1):
+if eratosthenes() and len(set_a) == n - max(0, a.count(1) - 1):
     print('pairwise coprime')
 else:
     res = a[0]
@@ -35,4 +36,3 @@ else:
         print('setwise coprime')
     else:
         print('not coprime')
-

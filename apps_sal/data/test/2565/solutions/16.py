@@ -11,6 +11,3 @@ for _ in range(int(input())):
     ans = x * 2
     z2 = max(0, z2 - z1 - x1)
     print(ans - min(z2, y1) * 2)
-
-
-

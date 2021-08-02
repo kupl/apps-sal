@@ -5,7 +5,7 @@ def end(r, curr_s, curr_l):
         r.append(curr_s * 2)
     else:
         r.append(curr_s)
-    
+
 
 def main():
     n = int(input())
@@ -32,7 +32,9 @@ def main():
 
     print("".join(r))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

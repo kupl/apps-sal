@@ -4,7 +4,7 @@ n = int(input())
 heap = []
 ans = 0
 last_added = []
-for i in range(2*n):
+for i in range(2 * n):
     c = input()
     if c == "remove":
         out = heappop(heap)
@@ -19,4 +19,3 @@ for i in range(2*n):
         last_added.append(b)
         heappush(heap, b)
 print(ans)
-

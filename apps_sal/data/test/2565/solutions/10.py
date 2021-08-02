@@ -9,6 +9,8 @@ def solve():
     v, y = v - min(v, y), v - min(v, y)
     ans -= min(v, z) * 2
     print(ans)
+
+
 t = int(input())
 for _ in range(t):
     solve()

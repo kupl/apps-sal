@@ -1,7 +1,9 @@
 n0, n1, x, y = list(map(int, input().split()))
 
+
 def f(m, n, x, y):
     return max(0, n - (m // y - m // (x * y)))
+
 
 lo = -1
 hi = x * y * (n0 + n1)
@@ -12,4 +14,3 @@ while lo + 1 < hi:
     else:
         lo = mid
 print(hi)
-

@@ -49,20 +49,22 @@ A = list(map(int, input().split()))
 #         arr.append([n, 1])
 #     return arr
 
+
 def gcd_list(numbers):
     return reduce(math.gcd, numbers)
+
 
 if gcd_list(A) > 1:
     print("not coprime")
     return
 
 
-MAXN = 10**6+10
-sieve = [i for i in range(MAXN+1)]
+MAXN = 10**6 + 10
+sieve = [i for i in range(MAXN + 1)]
 p = 2
-while p*p <= MAXN:
+while p * p <= MAXN:
     if sieve[p] == p:
-        for q in range(2*p, MAXN+1, p):
+        for q in range(2 * p, MAXN + 1, p):
             if sieve[q] == q:
                 sieve[q] = p
     p += 1
@@ -79,4 +81,3 @@ for a in A:
             return
         st.add(p)
 print('pairwise coprime')
-

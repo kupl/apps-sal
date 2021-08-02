@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 ar = []
-gl= [ 'a', 'e', 'i','o', 'u', 'y' ]
+gl = ['a', 'e', 'i', 'o', 'u', 'y']
 i = 0
 while i < len(s):
     it = False
@@ -26,4 +26,3 @@ while i < len(s):
         ar.append(s[i]);
         i += 1;
 print(''.join(ar))
-

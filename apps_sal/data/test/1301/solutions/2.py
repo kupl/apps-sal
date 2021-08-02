@@ -10,5 +10,3 @@ for name in names:
     if flag:
         print(name)
         break
-    
-

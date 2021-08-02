@@ -40,4 +40,3 @@ for i in range(len(a)):
     if (a[i] == 1):
         ans += inp[i]
 print(ans)
-

@@ -4,4 +4,3 @@ if d - (t * s) <= 0:
     print('Yes')
 else:
     print('No')
-

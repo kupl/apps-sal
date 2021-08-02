@@ -1,14 +1,22 @@
-import bisect, collections, copy, heapq, itertools, math, string, sys
-input = lambda: sys.stdin.readline().rstrip() 
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
+import sys
+input = lambda: sys.stdin.readline().rstrip()
 sys.setrecursionlimit(10**7)
 INF = float('inf')
 def I(): return int(input())
 def F(): return float(input())
 def SS(): return input()
 def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x)-1 for x in input().split()]
+def LI_(): return [int(x) - 1 for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LSS(): return input().split()
+
 
 def primeFactorization(n):
     D = list(range(n + 1))
@@ -18,6 +26,7 @@ def primeFactorization(n):
                 if D[j] == j:
                     D[j] = i
     return D
+
 
 def resolve():
     N = I()
@@ -39,7 +48,7 @@ def resolve():
             break
         else:
             pf |= fact
-    
+
     # setwise判定
     is_sc = False
     if not is_pc:
@@ -56,7 +65,9 @@ def resolve():
     else:
         print('not coprime')
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

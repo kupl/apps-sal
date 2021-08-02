@@ -29,4 +29,3 @@ if before == 1:
     print('setwise coprime')
 else:
     print('not coprime')
-

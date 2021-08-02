@@ -6,5 +6,3 @@ S = ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon"
 for i in S:
     if P.match(i):
         print(i)
-
-

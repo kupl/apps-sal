@@ -18,6 +18,6 @@ for el in b:
         return
 if sum(used) == 0:
     for el in b:
-        print(el + x + 1, end = ' ')
+        print(el + x + 1, end=' ')
 else:
     print(-1)

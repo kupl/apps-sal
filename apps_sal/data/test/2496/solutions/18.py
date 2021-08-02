@@ -1,3 +1,4 @@
+from math import gcd
 n = int(input())
 a = list(map(int, input().split()))
 MAX_A = max(a)
@@ -5,7 +6,7 @@ divide_minimam_prime = [i for i in range(MAX_A + 1)]
 is_prime = [True for i in range(MAX_A + 1)]
 is_prime[0] = False
 is_prime[1] = False
-for div in range(2,int(MAX_A**0.5) + 1):
+for div in range(2, int(MAX_A**0.5) + 1):
     if is_prime[div]:
         # divが素数だった場合
         k = div
@@ -30,10 +31,9 @@ for i in range(n):
         div = divide_minimam_prime[k]
         while k % div == 0 and k > 1:
             k = k // div
-if pairwise_coprime: 
+if pairwise_coprime:
     print("pairwise coprime")
     return
-from math import gcd
 gcd_of_a = a[0]
 for i in range(n):
     gcd_of_a = gcd(gcd_of_a, a[i])

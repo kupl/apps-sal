@@ -5,6 +5,6 @@ i_list = list(map((lambda x: int(x)), s_list))
 min_take = i_list[0] / i_list[2]
 
 if i_list[1] >= min_take:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

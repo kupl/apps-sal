@@ -1,7 +1,8 @@
 from math import gcd
 from functools import reduce
-N=int(input())
-A=list(map(int,input().split()))
+N = int(input())
+A = list(map(int, input().split()))
+
 
 def primes(n):
     is_prime = [True] * (n + 1)
@@ -13,12 +14,13 @@ def primes(n):
             is_prime[j] = False
     return [i for i in range(n + 1) if is_prime[i]]
 
-l=primes(max(A))
-d=[0]*max(A)
+
+l = primes(max(A))
+d = [0] * max(A)
 for i in A:
-  d[i-1]=1
-if reduce(gcd,A)>1:
-  print('not coprime')
-elif all(sum(d[i-1::i])<=1 for i in l):
+    d[i - 1] = 1
+if reduce(gcd, A) > 1:
+    print('not coprime')
+elif all(sum(d[i - 1::i]) <= 1 for i in l):
     print('pairwise coprime')
-else:print('setwise coprime')
+else: print('setwise coprime')

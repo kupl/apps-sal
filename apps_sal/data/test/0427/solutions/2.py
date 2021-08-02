@@ -12,10 +12,11 @@ x = int(words[2])
 y = int(words[3])
 #print(cnt1, cnt2, x, y)
 
+
 def determine(num, x, y, cnt1, cnt2):
     like1 = num - num // x
     like2 = num - num // y
-    like1and2 = like1 + like2 - num + num // (x*y)
+    like1and2 = like1 + like2 - num + num // (x * y)
     #print(like1, like2, like1and2)
 
     friend1 = like1 - like1and2
@@ -33,6 +34,7 @@ def determine(num, x, y, cnt1, cnt2):
         return 1
     return 0
 
+
 lim = 0
 lim1 = 1
 lim2 = -1
@@ -49,4 +51,3 @@ while 1:
         lim1 = lim
     #print("(", lim1, lim2, ")")
 print(lim2)
-

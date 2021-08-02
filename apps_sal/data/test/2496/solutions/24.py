@@ -21,4 +21,3 @@ if reduce(gcd, A) == 1:
     print('setwise coprime')
 else:
     print('not coprime')
-

@@ -17,4 +17,3 @@ for _ in range(2 * int(input())):
         next_pop_num += 1
 
 print(r)
-

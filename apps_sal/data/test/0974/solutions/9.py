@@ -17,4 +17,3 @@ for i in range(2 * n):
 
         current += 1
 print(count)
-

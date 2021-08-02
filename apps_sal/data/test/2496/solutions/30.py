@@ -4,8 +4,9 @@ from functools import reduce
 n = int(input())
 a = list(map(int, input().split()))
 
+
 def eratosthenes(limit):
-    A = [i for i in range(2, limit+1)]
+    A = [i for i in range(2, limit + 1)]
     P = []
 
     while True:
@@ -28,21 +29,22 @@ def eratosthenes(limit):
 
     return P
 
+
 def factorization(n, D):
     arr = []
     temp = n
     for i in D:
-        if temp%i==0:
-            cnt=0
-            while temp%i==0:
-                cnt+=1
+        if temp % i == 0:
+            cnt = 0
+            while temp % i == 0:
+                cnt += 1
                 temp //= i
             arr.append(i)
 
-    if temp!=1:
+    if temp != 1:
         arr.append(temp)
 
-    if arr==[]:
+    if arr == []:
         arr.append(n)
 
     return arr
@@ -51,21 +53,23 @@ def factorization(n, D):
 def gcd_list(numbers):
     return reduce(math.gcd, numbers)
 
+
 def decomp(n, D):
     arr = []
     while n != 1:
         if D[n] not in arr:
             arr.append(D[n])
-        n = n//D[n]
+        n = n // D[n]
     return arr
 
-D = [i for i in range(10**6+1)]
 
-for i in range(2, 10**3+1):
-  if D[i] == i:
-    for n in range(i, 10**6+1, i):
-      if D[n] == n:
-          D[n] = i
+D = [i for i in range(10**6 + 1)]
+
+for i in range(2, 10**3 + 1):
+    if D[i] == i:
+        for n in range(i, 10**6 + 1, i):
+            if D[n] == n:
+                D[n] = i
 
 s = set()
 for i in a:
@@ -81,5 +85,3 @@ for i in a:
                 return
 
 print('pairwise coprime')
-
-

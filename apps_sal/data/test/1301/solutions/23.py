@@ -6,4 +6,3 @@ for x in ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "gla
     if match('^' + s + '$', x):
         print(x)
         return
-
