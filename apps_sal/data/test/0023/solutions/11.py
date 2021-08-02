@@ -29,4 +29,3 @@ else:
             l = c
     ans = g(ls, l, 0)
 print(ans)
-

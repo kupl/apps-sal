@@ -32,4 +32,5 @@ def main():
                     a_digits[b[i - 1]] += 1
         return b
 
+
 print(main())

@@ -2,9 +2,10 @@ import heapq
 N, C, *STC = [int(_) for _ in open(0).read().split()]
 STC = [(s, t, c) for s, t, c in zip(STC[::3], STC[1::3], STC[2::3])]
 STC.sort()
-#もしcを映しているテレビがあるならこれにしてしまうのが最適
-#cを映しているテレビがないならすでに終わっているテレビのどれかを選ぶ
-#どのテレビもすでに映しているなら新しいテレビを追加する
+# もしcを映しているテレビがあるならこれにしてしまうのが最適
+# cを映しているテレビがないならすでに終わっているテレビのどれかを選ぶ
+# どのテレビもすでに映しているなら新しいテレビを追加する
+
 
 class SegmentTree():
     def __init__(self, array, f, ti):
@@ -65,6 +66,7 @@ class SegmentTree():
             r >>= 1
         return f(vl, vr)
 
+
 ti = (10 ** 10, -10 ** 10)
 st = SegmentTree([(10 ** 10, i) for i in range(C + 1)], min, ti)
 ans = 0
@@ -77,4 +79,3 @@ for s, t, c in STC:
             ans += 1
     st.update(c, (t, c))
 print(ans)
-

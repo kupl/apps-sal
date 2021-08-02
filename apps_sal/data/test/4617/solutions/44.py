@@ -13,4 +13,3 @@ def atc_077a(input_value: str) -> str:
 C1 = input()
 C2 = input()
 print((atc_077a([C1, C2])))
-

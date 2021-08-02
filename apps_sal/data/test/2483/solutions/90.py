@@ -28,4 +28,3 @@ for c in range(1, MAX_C + 1):
 
 answer = max(n_program)
 print(answer)
-

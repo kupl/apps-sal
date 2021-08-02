@@ -1,6 +1,6 @@
 N, C = map(int, input().split())
 sch = sorted([list(map(int, input().split())) for _ in range(N)], key=lambda x: x[0])
-rec = [[0, 0] for _ in range(C+1)]
+rec = [[0, 0] for _ in range(C + 1)]
 num_rec = 1
 
 for i in range(N):
@@ -14,5 +14,5 @@ for i in range(N):
     if not start:
         num_rec += 1
         rec[num_rec] = [t, c]
-    
+
 print(num_rec)

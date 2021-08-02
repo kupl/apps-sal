@@ -64,4 +64,3 @@ while r - l > 1:
         r = m
 
 print(num_by_perm(l))
-

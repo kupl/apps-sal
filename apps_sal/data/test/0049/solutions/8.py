@@ -1,8 +1,10 @@
 def mp():
     return map(int, input().split())
 
+
 def f(i):
     return (10 ** i - 10 ** (i - 1)) * i
+
 
 n = int(input())
 

@@ -18,4 +18,3 @@ else:
             r = el
 
     print(ans)
-

@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class Imos:
     def __init__(self, n):
         self.B = [0] * n
@@ -16,7 +19,7 @@ class Imos:
         self.__init__(self.n)
         return res
 
-from collections import defaultdict
+
 d = defaultdict(list)
 imos = Imos(10 ** 5 + 1)
 
@@ -26,7 +29,7 @@ for s, t, c in D:
 for p in d.values():
     p.sort()
     ps, pt = p[0]
-    for s, t in p[1:] + [[0,0]]:
+    for s, t in p[1:] + [[0, 0]]:
         if pt == s:
             pt = t
         else:

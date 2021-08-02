@@ -5,7 +5,7 @@ channel = [[] for _ in range(30)]
 for _ in range(n):
     s, t, c = map(int, input().split())
     channel[c - 1].append([s, t])
-    
+
 for lst in channel:
     lst.sort()
     before = 0
@@ -19,4 +19,4 @@ tmp = 0
 for num in imos:
     tmp += num
     ans = max(ans, tmp)
-print(ans)    
+print(ans)

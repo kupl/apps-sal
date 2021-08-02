@@ -52,4 +52,3 @@ else:
         best = max([best, int(''.join(map(str, result)))])
 
     print(best)
-

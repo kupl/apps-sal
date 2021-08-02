@@ -1,5 +1,5 @@
-C123=list(input())
-C456=list(reversed(input()))
+C123 = list(input())
+C456 = list(reversed(input()))
 
 if C123 == (C456):
     print('YES')

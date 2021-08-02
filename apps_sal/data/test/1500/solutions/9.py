@@ -8,7 +8,7 @@ c = 0
 s = 0
 
 for i in range(len(b) - 1):
-    if b[i+1] - b[i] > a:
+    if b[i + 1] - b[i] > a:
         s = -10e5
 
 while b[try_] != b[c]:
@@ -20,4 +20,3 @@ while b[try_] != b[c]:
         try_ -= 1
 
 print(s if s > 0 else -1)
-

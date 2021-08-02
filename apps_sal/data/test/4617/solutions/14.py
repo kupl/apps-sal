@@ -9,4 +9,3 @@ if c1 == c2:
     print("YES")
 else:
     print("NO")
-

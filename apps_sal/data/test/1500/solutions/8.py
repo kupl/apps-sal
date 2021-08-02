@@ -16,4 +16,3 @@ for i in range(1, len(my_list)):
             break
 
 print(my_list[n - 1])
-

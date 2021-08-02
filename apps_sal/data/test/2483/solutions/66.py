@@ -9,7 +9,7 @@ max_t = 0
 for _ in range(N):
     s, t, c = map(int, sys.stdin.readline().split())
     # 基本的にs-1だけでよいが、同一チャンネルで録画が連続する場合の対応を入れておく
-    times[0][s-1].add(c)
+    times[0][s - 1].add(c)
     times[0][s].add(c)
     times[1][t].add(c)
     max_t = max(max_t, t)

@@ -1,7 +1,7 @@
-s=input()
-t=input()
-t=t[::-1]
-if s==t:
-  print("YES")
+s = input()
+t = input()
+t = t[::-1]
+if s == t:
+    print("YES")
 else:
-  print("NO")
+    print("NO")

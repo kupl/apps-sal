@@ -3,7 +3,7 @@ def main():
     l = []
     for _ in range(N):
         s, t, c = list(map(int, input().split()))
-        l.append((s,t,c))
+        l.append((s, t, c))
     l.sort(key=lambda x: x[0])
     r = []
     for i in l:
@@ -16,7 +16,8 @@ def main():
                 break
         else:
             r.append((i[1], i[2]))
-        r.sort(key=lambda x:x[0])
+        r.sort(key=lambda x: x[0])
     print((len(r)))
-main()
 
+
+main()

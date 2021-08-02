@@ -15,4 +15,3 @@ if c1_str == c2_str_reverse:
     print('YES')
 else:
     print('NO')
-

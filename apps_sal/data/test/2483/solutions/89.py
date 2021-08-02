@@ -8,7 +8,7 @@ mod = 10 ** 9 + 7
 
 def resolve():
     n, c = list(map(int, input().split()))
-    STC = sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x:[x[2], x[0]])
+    STC = sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x: [x[2], x[0]])
 
     STC2 = []
     tmp = STC[0]
@@ -47,5 +47,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

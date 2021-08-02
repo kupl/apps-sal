@@ -5,16 +5,16 @@ number and digit in that number.
 """
 
 # Standard input.
-k=int(input())
+k = int(input())
 
 # Initilize sequence
-num_digits=1
-num_numbers=9
+num_digits = 1
+num_numbers = 9
 
-k-=1
-while k>num_digits*num_numbers:
-    # Move sequence starting point. 
-    k -= num_numbers*num_digits
+k -= 1
+while k > num_digits * num_numbers:
+    # Move sequence starting point.
+    k -= num_numbers * num_digits
     num_digits += 1
     num_numbers *= 10
 
