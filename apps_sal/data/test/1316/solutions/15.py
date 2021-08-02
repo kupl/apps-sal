@@ -14,4 +14,3 @@ for el in input():
 if k != 0:
     a[p] += (x + 1) // k
 print(max(a.values()))
-

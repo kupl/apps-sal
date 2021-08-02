@@ -13,10 +13,12 @@ import numpy as np
 
 """ Definitions  """
 
-def lcm(a, b):
-    return a*b//math.gcd(a, b)
 
-MOD = 10**9+7
+def lcm(a, b):
+    return a * b // math.gcd(a, b)
+
+
+MOD = 10**9 + 7
 
 # ============================================================
 x = int(input())
@@ -26,4 +28,3 @@ if x in L:
     print('YES')
 else:
     print('NO')
-

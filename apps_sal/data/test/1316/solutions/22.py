@@ -15,12 +15,10 @@ for char in s:
                 d[prev] += 1
             else:
                 d[prev] = 1
-        
+
         prev = char
         cont = 1
     else:
         cont += 1
 
 print(max(list(d.values()) + [0]))
-    
-

@@ -3,8 +3,10 @@ from collections import deque, defaultdict
 from sys import stdin, stdout
 input = stdin.readline
 # print = stdout.write
-listin = lambda : list(map(int, input().split()))
-mapin = lambda : map(int, input().split())
+def listin(): return list(map(int, input().split()))
+def mapin(): return map(int, input().split())
+
+
 for _ in range(int(input())):
     n, r = mapin()
     a = listin()
@@ -14,9 +16,9 @@ for _ in range(int(input())):
     count = 0
     while z:
         z.pop()
-        count+=1
+        count += 1
         if z:
-            while z[0] <= r*count:
+            while z[0] <= r * count:
                 z.popleft()
                 if not z:
                     break

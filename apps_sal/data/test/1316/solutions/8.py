@@ -13,10 +13,13 @@ for c in s:
     prev = c
 
 res = 0
+
+
 def f(l):
-    return sum(e//k for e in l)
+    return sum(e // k for e in l)
+
+
 for l in list(d.values()):
     res = max(res, f(l))
 
 print(res)
-

@@ -2,8 +2,8 @@ from collections import defaultdict as dd, deque
 
 D = dd(list)
 
-n,k = list(map(int,input().split()))
-s = input()+'$'
+n, k = list(map(int, input().split()))
+s = input() + '$'
 
 last = None
 l = 0
@@ -15,6 +15,4 @@ for c in s:
     last = c
     l += 1
 
-print(max(sum(x//k for x in D[d]) for d in D))
-
-
+print(max(sum(x // k for x in D[d]) for d in D))

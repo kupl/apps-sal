@@ -53,7 +53,7 @@ def slv(N, R, X):
     X.sort()
     X = deque(X)
     l = 0
-    r = N-1
+    r = N - 1
     ll = 0
     while X:
         r = X.pop()
@@ -84,5 +84,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

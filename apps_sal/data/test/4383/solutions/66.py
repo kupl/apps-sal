@@ -1,4 +1,4 @@
-x=int(input())
+x = int(input())
 if x == 3:
     print("YES")
 elif x == 5:

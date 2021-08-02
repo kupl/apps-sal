@@ -8,5 +8,3 @@ if sum(used) == len(used):
     print("YES")
 else:
     print("NO")
-
-
