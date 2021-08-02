@@ -41,4 +41,3 @@ if(rt == rc and c[0] == t[0]):
     print('Yes')
 else:
     print('No')
-

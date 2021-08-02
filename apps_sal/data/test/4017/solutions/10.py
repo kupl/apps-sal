@@ -10,7 +10,7 @@ res = []
 
 for i, e in enumerate(l):
 
-    if c.get((s - e)/2, 0) > int((s - e)/2 == e):
+    if c.get((s - e) / 2, 0) > int((s - e) / 2 == e):
         res.append(str(i + 1))
 
 

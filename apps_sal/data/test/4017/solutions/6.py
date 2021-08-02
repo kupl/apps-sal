@@ -9,4 +9,3 @@ for i, ll in enumerate(l, start=1):
         pretty_indexes.append(str(i))
 print(len(pretty_indexes))
 print(" ".join(pretty_indexes))
-

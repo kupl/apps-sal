@@ -6,23 +6,26 @@ from bisect import bisect
 
 setrecursionlimit(10**7)
 
+
 def read():
-  return int(input())
+    return int(input())
+
 
 def reads():
-  return [int(x) for x in input().split()]
+    return [int(x) for x in input().split()]
+
 
 n = read()
 c = reads()
 t = reads()
 
 if c[0] != t[0] or c[-1] != t[-1]:
-  print("No"); return
+    print("No"); return
 
-dc = [c[k+1] - c[k] for k in range(n-1)]
-dt = [t[k+1] - t[k] for k in range(n-1)]
+dc = [c[k + 1] - c[k] for k in range(n - 1)]
+dt = [t[k + 1] - t[k] for k in range(n - 1)]
 
 if sorted(dc) == sorted(dt):
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

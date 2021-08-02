@@ -5,7 +5,7 @@ def main():
     n = int(input())
     arr = list(map(int, input().split()))
     summ = sum(arr)
-    ind=[]
+    ind = []
     fm, sm = arr[0], -1
     ind_fm = 0
     for i in range(len(arr)):
@@ -23,10 +23,6 @@ def main():
 
     print(len(ind))
     print(*ind)
-
-
-
-
 
 
 main()

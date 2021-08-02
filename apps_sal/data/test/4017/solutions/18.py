@@ -12,4 +12,3 @@ for i in range(n):
 print(len(results))
 if results:
     print(*results, sep=' ')
-

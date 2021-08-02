@@ -26,18 +26,18 @@ ans = []
 if vals[mxVal] > 1:
     for i, v in enumerate(A):
         rest = total - v
-        if rest-mxVal == mxVal:
-            ans.append(i+1)
+        if rest - mxVal == mxVal:
+            ans.append(i + 1)
 else:
     for i, v in enumerate(A):
         rest = total - v
         if v == mxVal:
-            second = max(max(A[:i] or [0]), max(A[i+1:] or [0]))
+            second = max(max(A[:i] or [0]), max(A[i + 1:] or [0]))
             if rest - second == second:
-                ans.append(i+1)
+                ans.append(i + 1)
         else:
             if rest - mxVal == mxVal:
-                ans.append(i+1)
+                ans.append(i + 1)
 
 if ans:
     print(len(ans))

@@ -1,5 +1,5 @@
 t = int(input())
-for _  in range(t):
+for _ in range(t):
     w = input()
     h = input()
     works = False
@@ -12,4 +12,3 @@ for _  in range(t):
         print("YES")
     else:
         print("NO")
-

@@ -15,9 +15,9 @@ def f(s1, s2):
             return
     print("NO")
 
+
 n = int(input())
 for i in range(n):
     s1 = input()
     s2 = input()
     f(s1, s2)
-
