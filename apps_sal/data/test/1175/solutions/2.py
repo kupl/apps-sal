@@ -50,4 +50,5 @@ def f_coincidence(MOD=10 ** 9 + 7):
                for s in range(2)]) % MOD
     return ans
 
+
 print(f_coincidence())

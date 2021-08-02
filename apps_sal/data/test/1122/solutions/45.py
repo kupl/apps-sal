@@ -1,7 +1,9 @@
 n, m = list(map(int, input().split()))
 
+
 def ark(a, b):
     return min(abs(a - b), n - abs(a - b))
+
 
 a, b = n, 1
 S = set()
@@ -12,4 +14,3 @@ for i in range(m):
     S.add(ark(a, b))
     a -= 1
     b += 1
-

@@ -10,5 +10,5 @@ def go():
             w = max(0, w - w2)
     return w
 
-print(go())
 
+print(go())

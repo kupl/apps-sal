@@ -9,4 +9,3 @@ for i in reversed(list(range(h + 1))):
     curr = max(0, curr + i - stones.get(i, 0))
 
 print(curr)
-

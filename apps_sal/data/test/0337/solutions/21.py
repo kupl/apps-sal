@@ -1,6 +1,7 @@
 import sys
 #input = sys.stdin.readline
 
+
 def main():
     w, h = map(int, input().split())
     u1, d1 = map(int, input().split())
@@ -17,8 +18,10 @@ def main():
         if answer < 0:
             answer = 0
     print(answer)
-    
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

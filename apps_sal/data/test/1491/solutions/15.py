@@ -14,4 +14,3 @@ for i in range(len(b) - n // 2):
 for i in range(n // 2 - len(b)):
     ans += v[i]
 print(ans)
-

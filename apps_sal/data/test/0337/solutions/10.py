@@ -1,4 +1,4 @@
-def read(type = 1):
+def read(type=1):
     if type:
         file = open("input.dat", "r")
         line1 = list(map(int, file.readline().split()))

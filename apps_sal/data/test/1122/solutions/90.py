@@ -17,4 +17,3 @@ for i in range(m):
     b = a + d
     print((a, b))
     d -= 2
-

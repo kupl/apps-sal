@@ -37,4 +37,3 @@ for d in range(ld, rd + 1):
     trb = rb if d == rd else '1' * d
     ans = (ans + count(tlb, trb)) % MOD
 print(ans)
-

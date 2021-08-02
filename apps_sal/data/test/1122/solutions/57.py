@@ -46,4 +46,3 @@ for a, b in ans:
     print((a, b))
 
 # test(ans)
-

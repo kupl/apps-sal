@@ -3,7 +3,7 @@ def main():
     if N % 2 == 1:
         for i in range(M):
             print((i + 1, N - i - 1))
-            
+
     else:
         s = set()
         t = 0
@@ -16,5 +16,5 @@ def main():
             s.add(b - a)
             s.add(N + a - b)
 
-main()
 
+main()

@@ -4,6 +4,7 @@ import math
 MOD = int(1e9 + 7)
 line = lambda: list(map(int, input().split()))
 
+
 def solve():
     n = int(input())
     x = [x for x in line()]
@@ -18,9 +19,10 @@ def solve():
         ans %= MOD
     print(ans)
 
+
 def main():
     solve()
     return
 
-main()
 
+main()

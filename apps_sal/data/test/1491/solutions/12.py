@@ -26,7 +26,3 @@ else:
             i += 1
     add.sort()
     print(sum(add[:sz - sqr]))
-    
-    
-    
-

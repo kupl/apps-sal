@@ -4,6 +4,7 @@ import math
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
+
 def main():
     md = 10 ** 9 + 7
     l, r = list(map(int, input().split()))
@@ -33,5 +34,5 @@ def main():
                             dp[i + 1][nt][nf][ng] = (dp[i + 1][nt][nf][ng] + pre) % md
     print(ans)
 
-main()
 
+main()

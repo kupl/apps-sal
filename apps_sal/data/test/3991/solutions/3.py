@@ -2,6 +2,7 @@ import sys
 
 mod = 10**9 + 7
 
+
 def solve():
     n = int(input())
     x = [int(i) for i in input().split()]
@@ -20,6 +21,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

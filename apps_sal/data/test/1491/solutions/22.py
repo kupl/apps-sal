@@ -2,6 +2,8 @@ import math as m
 n = int(input())
 a = [int(z) for z in input().split()]
 ans = 0
+
+
 def sq(a):
     tmp = int(m.sqrt(a))
     s = tmp * tmp
@@ -11,6 +13,8 @@ def sq(a):
         return abs(a - s)
     else:
         return abs(a - b)
+
+
 d = []
 for i in range(n):
     d.append((sq(a[i]), a[i]))

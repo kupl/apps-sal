@@ -15,4 +15,3 @@ else:
 
 for r0, r1 in ret[:M]:
     print((r0, r1))
-

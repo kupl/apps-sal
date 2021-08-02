@@ -4,9 +4,9 @@ def main():
     left = 1
     count = 0
     buff = 0
-    for d in range(N-1, 0, -2):
+    for d in range(N - 1, 0, -2):
 
-        if (N-1) & 1 and d <= -d % N:
+        if (N - 1) & 1 and d <= -d % N:
             buff = 1
 
         right = left + d - buff
@@ -20,5 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

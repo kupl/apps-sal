@@ -1,11 +1,13 @@
 L, R = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
-l = '{:060b}'.format(L)[::-1] # 0左詰の二進数６０桁のstr　を逆向きにスライス
-r = '{:060b}'.format(R)[::-1] # (桁数60 は　R<=10**18<2**60 より)
+l = '{:060b}'.format(L)[::-1]  # 0左詰の二進数６０桁のstr　を逆向きにスライス
+r = '{:060b}'.format(R)[::-1]  # (桁数60 は　R<=10**18<2**60 より)
 
 memo = [[[[-1 for l in range(2)] for k in range(2)] for j in range(2)] for i in range(60)]
 
 # flagZは、既にx＝y＝1の位があったかチェックしている(MSB)
+
+
 def f(pos, flagX, flagY, flagZ):
     if pos == -1:
         return 1
@@ -25,7 +27,6 @@ def f(pos, flagX, flagY, flagZ):
     memo[pos][flagX][flagY][flagZ] = ret
     return ret
 
-ans = f(59, 0, 0, 0) #最大桁からスタート
+
+ans = f(59, 0, 0, 0)  # 最大桁からスタート
 print(ans)
-
-

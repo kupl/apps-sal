@@ -17,6 +17,4 @@ for i in range(len(x)):
 print(a)
 
 
-
 # Made By Mostafa_Khaled
-

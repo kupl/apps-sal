@@ -14,4 +14,3 @@ for length in range(m, 0, -1):
         print((l2, l2 + length))
         l2 += 1
         f = True
-
