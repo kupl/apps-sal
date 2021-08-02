@@ -19,14 +19,15 @@ seg = right_i - left_i  # 使える数字たち
 done = N - right_i
 use = A - done  # 使う幅
 
+
 def combinations_count(n, r):  # 組み合わせ
     return factorial(n) // factorial(n - r) // factorial(r)
 
+
 answer = combinations_count(seg, use)
 if border == ave:
-    for x in range(use+1, min(B-done, seg)+1):
+    for x in range(use + 1, min(B - done, seg) + 1):
         answer += combinations_count(seg, x)
 
 print(answer)
 # 05
-

@@ -15,18 +15,17 @@ v = list(map(int, input().split()))
 v.sort(reverse=True)
 ave = sum(v[:a]) / a
 
-if v[0] == v[a-1]:
+if v[0] == v[a - 1]:
     sm = v.count(v[0])
     cnt = 0
     for i in range(a, b + 1):
         cnt += comb(sm, i)
 
 else:
-    last = v[a-1]
+    last = v[a - 1]
     select = v[:a].count(last)
     sm = v.count(last)
     cnt = comb(sm, select)
 
 print(ave)
 print(cnt)
-

@@ -16,9 +16,10 @@ def d_maximum_average_sets():
         # 上位 A 個のうち最も値が小さな要素の値を v_min とおき、
         # v_min が上位 A 個のうち a 個あったとする。
         # V で値が v_min である x 個から a 個選ぶ。
-        v_min = V[A-1]
+        v_min = V[A - 1]
         x, a = V.count(v_min), V[:A].count(v_min)
         count = combination(x, a)
     return '{}\n{}'.format(sum(V[:A]) / A, count)
+
 
 print(d_maximum_average_sets())

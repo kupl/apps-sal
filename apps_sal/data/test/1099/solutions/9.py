@@ -12,7 +12,7 @@ def colorize(G, color, v, c):
     color[v] = c
     for u in G[v]:
         if color[u] == NONE:  # not assigned a color yet
-            colorize(G, color, u, 1-c)
+            colorize(G, color, u, 1 - c)
 
 
 def colorize_v2(G, stack, color):
@@ -23,7 +23,7 @@ def colorize_v2(G, stack, color):
         nw += (c == WHITE)
         for u in G[v]:
             if color[u] == NONE:
-                stack.append((u, 1-c))
+                stack.append((u, 1 - c))
 
     return nw
 
@@ -32,14 +32,13 @@ n = int(input())
 
 # Adjacency list presentation of the graph, in which G[u] is a list of u's adjacent vertices.
 G = defaultdict(list)
-for _ in range(n-1):
+for _ in range(n - 1):
     u, v = (int(x) for x in input().strip().split())
     G[u].append(v)
     G[v].append(u)
 
-color = [NONE] * (n+1)
+color = [NONE] * (n + 1)
 stack = deque()
 stack.append((1, WHITE))
 nw = colorize_v2(G, stack, color)
-print(min(nw, n-nw)-1)
-
+print(min(nw, n - nw) - 1)

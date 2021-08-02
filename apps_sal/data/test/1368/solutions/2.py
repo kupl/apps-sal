@@ -27,4 +27,3 @@ for i in range(len(L)):
 
 print(('{:.6f}'.format(max_L)))
 print(num)
-

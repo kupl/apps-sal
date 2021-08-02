@@ -18,7 +18,8 @@ def main():
         print('No')
     if wewq != rw - 1:
         input()
+
+
 rw = int(input())
 for wewq in range(rw):
     main()
-

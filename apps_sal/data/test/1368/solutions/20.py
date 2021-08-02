@@ -32,4 +32,3 @@ else:
 
 print(ave)
 print(cnt)
-

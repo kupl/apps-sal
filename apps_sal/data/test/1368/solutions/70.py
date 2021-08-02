@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees, log2, gcd
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
@@ -14,9 +15,11 @@ def MAP(): return map(int, input().split())
 def LIST(): return list(map(int, input().split()))
 def TUPLE(): return tuple(map(int, input().split()))
 def ZIP(n): return zip(*(MAP() for _ in range(n)))
+
+
 sys.setrecursionlimit(10 ** 9)
-INF = 10**6#float('inf')
-#mod = 10 ** 9 + 7 
+INF = 10**6  # float('inf')
+#mod = 10 ** 9 + 7
 mod = 998244353
 #from decimal import *
 #import numpy as np
@@ -24,12 +27,13 @@ mod = 998244353
 
 #階乗#
 lim = 50
-fact = [1] * (lim+1)
-for n in range(1, lim+1):
-	fact[n] = n * fact[n-1]
+fact = [1] * (lim + 1)
+for n in range(1, lim + 1):
+    fact[n] = n * fact[n - 1]
+
 
 def C(n, r):
-	return fact[n]//fact[n-r]//fact[r]
+    return fact[n] // fact[n - r] // fact[r]
 
 
 N, A, B = MAP()
@@ -37,8 +41,8 @@ v = sorted(LIST(), reverse=True)
 
 V_cnt = Counter(v)
 V_max = Counter(v[:A])
-key = v[A-1]
-print(sum(v[:A])/A)
+key = v[A - 1]
+print(sum(v[:A]) / A)
 
 v = v[::-1]
 
@@ -50,9 +54,9 @@ m = N - k
 
 
 if m == 0:
-	ans = 0
-	for i in range(A, min(B-m, n)+1):
-		ans += C(n, i)
-	print(ans)
+    ans = 0
+    for i in range(A, min(B - m, n) + 1):
+        ans += C(n, i)
+    print(ans)
 else:
-	print(C(n, A-m))
+    print(C(n, A - m))

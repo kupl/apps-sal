@@ -29,7 +29,7 @@ def main():
     if A == N or V[A - 1] > V[A]:
         print((1))
         return
-    
+
     x = V.count(V[A])
     ans = 0
     if mx == V[A]:
@@ -43,5 +43,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

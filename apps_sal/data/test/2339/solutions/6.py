@@ -13,9 +13,7 @@ for _ in range(TC):
             if math.gcd(prev, a[j]) > cur:
                 cur = math.gcd(prev, a[j])
                 idx = j
-        mark[idx] = True 
-        prev = cur 
-        print(a[idx], end = ' ')
+        mark[idx] = True
+        prev = cur
+        print(a[idx], end=' ')
     print()
-    
-

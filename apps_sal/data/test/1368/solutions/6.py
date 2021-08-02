@@ -15,4 +15,3 @@ else:
     x = V.count(V[a - 1])
     y = a - len([v for v in V if v > V[a - 1]])
     print((C[x][y]))
-

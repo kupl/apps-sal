@@ -20,6 +20,7 @@ for v in V[A:]:
     if mx == S / cnt:
         L.append(cnt)
 
+
 def ncr(n, r):
     ret = 1
     for i in range(r):
@@ -27,6 +28,7 @@ def ncr(n, r):
     for i in range(1, r + 1):
         ret //= i
     return ret
+
 
 print(mx)
 ans = 0
@@ -38,4 +40,3 @@ for c in L:
         prd *= ncr(cntV[x], c)
     ans += prd
 print(ans)
-

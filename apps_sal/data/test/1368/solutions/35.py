@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def nCr(n, r):
     t = 1
     for i in range(n - r + 1, n + 1):
@@ -6,6 +8,7 @@ def nCr(n, r):
     for i in range(2, r + 1):
         t //= i
     return t
+
 
 def main():
     N, A, B = list(map(int, input().split()))
@@ -36,5 +39,5 @@ def main():
         r += nCr(vc, i)
     print(r)
 
-main()
 
+main()

@@ -29,4 +29,3 @@ else:
 
 print(mean)
 print(var)
-

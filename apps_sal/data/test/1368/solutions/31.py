@@ -1,4 +1,5 @@
-import itertools, bisect
+import itertools
+import bisect
 from fractions import Fraction
 from math import factorial
 
@@ -22,4 +23,3 @@ for ind in max_indices:
     C += comb(r - l, ind - l + 1)
 print((float(max_num)))
 print(C)
-
