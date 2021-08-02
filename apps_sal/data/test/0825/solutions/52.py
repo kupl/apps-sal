@@ -20,4 +20,3 @@ for v in list(d.values()):
         x += 1
     ans += x
 print(ans)
-

@@ -13,4 +13,3 @@ for i in range(n):
         ans.append(-1)
 for i in range(n):
     print(ans[i])
-

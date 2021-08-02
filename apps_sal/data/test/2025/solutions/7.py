@@ -20,8 +20,10 @@ def m(n):
     if not n % 4:
         return c + n // 4
 
+
 def __starting_point():
     for i in range(int(input())):
         print(m(int(input())))
+
 
 __starting_point()

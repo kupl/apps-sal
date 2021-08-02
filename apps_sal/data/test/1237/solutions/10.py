@@ -4,7 +4,7 @@
 # S = level of top floor
 N, S = list(map(int, input().split()))
 
-arrivals = [0 for i in range(S+1)]
+arrivals = [0 for i in range(S + 1)]
 for i in range(N):
     # f = floor
     # t = time of arrival
@@ -14,4 +14,3 @@ for i in range(N):
 for i in range(S, 0, -1):
     arrivals[i - 1] = max(arrivals[i - 1], arrivals[i] + 1)
 print(arrivals[0])
-

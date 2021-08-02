@@ -12,7 +12,7 @@ ind = [i for i in range(n)]
 p = []
 for i in range(n):
     p.append(input().split(','))
-ind.sort(key=lambda x:[d[p[x][0]], len(p[x])])
+ind.sort(key=lambda x: [d[p[x][0]], len(p[x])])
 ans = {}
 for i in ind:
     cur = p[i]
@@ -28,5 +28,3 @@ for i in ind:
 print("YES")
 for i in list(ans.keys()):
     print(ans[i])
-
-

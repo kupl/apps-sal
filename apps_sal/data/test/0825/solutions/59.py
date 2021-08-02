@@ -3,28 +3,31 @@ N = int(input())
 if N == 1:
     print(0)
     return
+
+
 def prime2(N):
     arr = []
     temp = N
     setprime = set()
-    for i in range(2, int(-(-N**0.5//1))+1):
-        if temp%i==0:
-            cnt=0
+    for i in range(2, int(-(-N**0.5 // 1)) + 1):
+        if temp % i == 0:
+            cnt = 0
             setprime.add(i)
-            while temp%i==0:
-                cnt+=1
+            while temp % i == 0:
+                cnt += 1
                 temp //= i
             arr.append([i, cnt])
-    if temp!=1:
+    if temp != 1:
         arr.append([temp, 1])
         setprime.add(temp)
 
-    if arr==[]:
+    if arr == []:
         arr.append([N, 1])
 
-    return arr,setprime
+    return arr, setprime
 
-arr,_ = prime2(N)
+
+arr, _ = prime2(N)
 ls = []
 ans = 0
 for i in arr:

@@ -1,5 +1,6 @@
 import math
 
+
 def solve():
     N = int(input())
     ans = 0
@@ -17,5 +18,5 @@ def solve():
         ans += 1
     return ans
 
-print((solve()))
 
+print((solve()))

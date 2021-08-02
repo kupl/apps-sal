@@ -8,4 +8,3 @@ for a, k in stuff:
     answer = max(answer, a + k)
 
 print(answer)
-

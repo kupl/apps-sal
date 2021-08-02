@@ -20,7 +20,7 @@ for i in order:
     if shorts[d[p[0]]] != 0:
         ans[i] = p[0]
         shorts[d[p[0]]] -= 1
-    elif len(p) == 2 and  shorts[d[p[1]]] != 0:
+    elif len(p) == 2 and shorts[d[p[1]]] != 0:
         ans[i] = p[1]
         shorts[d[p[1]]] -= 1
     else:

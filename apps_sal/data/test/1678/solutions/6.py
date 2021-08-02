@@ -53,4 +53,3 @@ for i in range(1, len(arr)):
     update(leftmost[arr[i]], 1)
 
 print(res)
-

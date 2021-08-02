@@ -4,7 +4,7 @@ dist = list(map(int, input().split()))
 
 a = [0] * 11
 
-indexes = {'S':0, 'M':1, 'L':2, 'XL':3, 'XXL':4, 'XXXL':5, 'S,M':6, 'M,L':7, 'L,XL':8, 'XL,XXL':9, 'XXL,XXXL':10}
+indexes = {'S': 0, 'M': 1, 'L': 2, 'XL': 3, 'XXL': 4, 'XXXL': 5, 'S,M': 6, 'M,L': 7, 'L,XL': 8, 'XL,XXL': 9, 'XXL,XXXL': 10}
 inv = dict(list(zip(list(indexes.values()), list(indexes.keys()))))
 
 n = int(input())
@@ -44,7 +44,7 @@ for i in range(6, 11):
 
     m = len(par_d[i])
 
-    if dist[size] + dist[size+1] < m:
+    if dist[size] + dist[size + 1] < m:
         print("NO")
         return
 
@@ -77,4 +77,3 @@ else:
 print('YES')
 for i in range(n):
     print(inv[par[i]])
-

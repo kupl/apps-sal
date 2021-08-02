@@ -3,8 +3,10 @@ from collections import deque
 import bisect
 import heapq
 
+
 def ri():
     return int(input())
+
 
 def rl():
     return list(map(int, input().split()))
@@ -24,10 +26,7 @@ def solve():
     for i in range(10):
         out += word[i] * mult[i]
 
-    print (out)
-
-
-
+    print(out)
 
 
 mode = 's'
@@ -38,4 +37,3 @@ if mode == 'T':
         solve()
 else:
     solve()
-

@@ -10,6 +10,5 @@ while tot < k:
     i += 1
     i %= len(codeforces)
 for i in range(len(codeforces)):
-    print(codeforces[i] * ans[i], end = "")
+    print(codeforces[i] * ans[i], end="")
 print()
-

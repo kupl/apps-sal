@@ -1,4 +1,4 @@
-d = {"S": 0, "M": 1, "L":2,"XL":3,"XXL":4,"XXXL":5}
+d = {"S": 0, "M": 1, "L": 2, "XL": 3, "XXL": 4, "XXXL": 5}
 
 cnt = [int(t) for t in input().split()]
 n = int(input())
@@ -6,7 +6,7 @@ ind = [i for i in range(n)]
 p = []
 for i in range(n):
     p.append(input().split(','))
-ind.sort(key=lambda x:[d[p[x][0]], len(p[x])])
+ind.sort(key=lambda x: [d[p[x][0]], len(p[x])])
 ans = {}
 for i in ind:
     cur = p[i]

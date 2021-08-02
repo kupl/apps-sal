@@ -1,10 +1,12 @@
 k = int(input())
 
+
 def product(s):
     res = 1
     for e in s:
         res *= e
     return res
+
 
 string = "codeforces"
 nums = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
@@ -22,4 +24,3 @@ for i, e in enumerate(nums):
     result += e * string[i]
 
 print(result)
-

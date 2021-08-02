@@ -13,5 +13,3 @@ for i in range(s + 1):
     res = max(res, floors[i] + i)
 
 print(res)
-    
-

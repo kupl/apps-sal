@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -16,6 +17,7 @@ def prime_factorize(n):
         a.append(n)
     return a
 
+
 n = int(input())
 
 l = prime_factorize(n)
@@ -27,6 +29,6 @@ for i in v:
     for j in range(1, 1000000):
         a += j
         if a > i:
-            ans += j-1
+            ans += j - 1
             break
 print(ans)

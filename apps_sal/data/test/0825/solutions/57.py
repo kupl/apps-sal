@@ -2,6 +2,7 @@ from collections import defaultdict
 
 N = int(input())
 
+
 def factorize(N):
     factors = defaultdict(int)
     i = 2
@@ -17,12 +18,14 @@ def factorize(N):
         factors[N] = 1
     return factors
 
+
 def to_cnt(n):
     i = 0
-    while n >= i+1:
-        n-=(i+1)
+    while n >= i + 1:
+        n -= (i + 1)
         i += 1
     return i
+
 
 ans = 0
 for _, n in factorize(N).items():

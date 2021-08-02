@@ -20,4 +20,3 @@ for f, t in sorted(list(map(int, input().split())) for x in range(n)):
     time = max(time + s - f, t)
     s = f
 print(time + s)
-

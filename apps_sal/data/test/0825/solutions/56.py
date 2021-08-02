@@ -1,5 +1,6 @@
 import collections
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -15,23 +16,24 @@ def prime_factorize(n):
     if n != 1:
         a.append(n)
     return a
-  
+
+
 count = 0
 N = int(input())
 
 if N <= 1:
-  print(0)
-  return
+    print(0)
+    return
 else:
-  c = collections.Counter(prime_factorize(N))
+    c = collections.Counter(prime_factorize(N))
 
-  K = [sum(range(1,i)) for i in range(2,11)]
-  # = [1, 3, 6, 10, 15, 21, 28, 36, 45]
- 
-  for i in c:
-    for j in range(1,len(K)):
-      if c[i] < K[j]:
-        count += j
-        break
+    K = [sum(range(1, i)) for i in range(2, 11)]
+    # = [1, 3, 6, 10, 15, 21, 28, 36, 45]
 
-  print(count)
+    for i in c:
+        for j in range(1, len(K)):
+            if c[i] < K[j]:
+                count += j
+                break
+
+    print(count)

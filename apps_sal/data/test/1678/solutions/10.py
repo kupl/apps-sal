@@ -30,12 +30,11 @@ def merge(l, mid, r):
     if i <= mid:
         tmp.extend(summ[i:mid + 1])
     if j <= r:
-        tmp.extend(summ[j:r+1])
+        tmp.extend(summ[j:r + 1])
     for i in range(l, r + 1):
         summ[i] = tmp[i - l]
 
     return ans
-
 
 
 def helper(l, r):
@@ -47,6 +46,7 @@ def helper(l, r):
     ans3 = merge(l, mid, r)
     #print(ans1, ans2, ans3)
     return ans1 + ans2 + ans3
+
 
 res = helper(0, n)
 print(res)
@@ -78,4 +78,3 @@ Output
 
 3
 '''
-

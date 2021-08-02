@@ -25,14 +25,18 @@ def distribution(available, wish):
                 return ['NO']
     return ['YES', people]
 
+
 def stock():
     return {size: amount for size, amount in zip(['S', 'M', 'L', 'XL', 'XXL', 'XXXL'], map(int, input().split()))}
+
 
 def request():
     return [input() for i in range(int(input()))]
 
+
 def solution(n):
     return [input() for i in range(n)]
+
 
 def answer():
     ans = distribution(stock(), request())
@@ -43,6 +47,7 @@ def answer():
     else:
         print('NO')
 
+
 def check(s, l):
     for size in l:
         if size not in s:
@@ -52,6 +57,7 @@ def check(s, l):
             if s[size] < 0:
                 return False
     return True
+
 
 def compare():
     s = stock()
@@ -78,5 +84,6 @@ def compare():
     else:
         print(1)
         print('Ok')
+
 
 answer()

@@ -23,4 +23,3 @@ for k, v in list(Counter(ps).items()):
             ans += i
             break
 print(ans)
-

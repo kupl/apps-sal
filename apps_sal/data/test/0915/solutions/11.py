@@ -15,4 +15,3 @@ x = ''
 
 for j, i in enumerate(s):
     print(i * c[j], end='')
-

@@ -8,4 +8,3 @@ while ans < k:
     ans *= a[cp]
     cp = (cp + 1) % n
 print(''.join([s[x] * y for x, y in enumerate(a)]))
-

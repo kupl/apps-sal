@@ -1,6 +1,6 @@
 TShirts = list(map(int, input().split()))
 NPers = int(input())
-Needs = [0,0,0,0,0]
+Needs = [0, 0, 0, 0, 0]
 T = [0 for i in range(10)]
 Pers = []
 IsFound = True
@@ -25,17 +25,17 @@ for i in range(NPers):
         Pers[-1] += 32
 
 for i in Pers:
-    if i==1 :
+    if i == 1:
         TShirts[0] -= 1
-    elif i==2 :
+    elif i == 2:
         TShirts[1] -= 1
-    elif i==4 :
+    elif i == 4:
         TShirts[2] -= 1
-    elif i==8 :
+    elif i == 8:
         TShirts[3] -= 1
-    elif i==16 :
+    elif i == 16:
         TShirts[4] -= 1
-    elif i==32 :
+    elif i == 32:
         TShirts[5] -= 1
 
 for i in TShirts:
@@ -43,27 +43,27 @@ for i in TShirts:
         IsFound = False
 
 for i in Pers:
-    if (i&1!=0) and (i&2!=0):
+    if (i & 1 != 0) and (i & 2 != 0):
         Needs[0] += 1
-    elif (i & 2!=0) and (i & 4!=0):
+    elif (i & 2 != 0) and (i & 4 != 0):
         Needs[1] += 1
-    elif (i & 4!=0) and (i & 8!=0):
+    elif (i & 4 != 0) and (i & 8 != 0):
         Needs[2] += 1
-    elif (i & 8!=0) and (i & 16!=0):
+    elif (i & 8 != 0) and (i & 16 != 0):
         Needs[3] += 1
-    elif (i & 16!=0) and (i & 32!=0):
+    elif (i & 16 != 0) and (i & 32 != 0):
         Needs[4] += 1
 
 
 for i in range(5):
-    while Needs[i] > 0 and TShirts[i]>0:
+    while Needs[i] > 0 and TShirts[i] > 0:
         Needs[i] -= 1
         TShirts[i] -= 1
-        T[2*i] += 1
-    while Needs[i] > 0 and TShirts[i+1] > 0:
+        T[2 * i] += 1
+    while Needs[i] > 0 and TShirts[i + 1] > 0:
         Needs[i] -= 1
-        TShirts[i+1] -= 1
-        T[2*i + 1] += 1
+        TShirts[i + 1] -= 1
+        T[2 * i + 1] += 1
 
 if sum(Needs) > 0:
     IsFound = False

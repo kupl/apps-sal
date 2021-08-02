@@ -19,4 +19,3 @@ if N > 1:
     ans += 1
 
 print(ans)
-
