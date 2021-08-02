@@ -23,5 +23,3 @@ for i in range(n):
         ans += c[i] * (tot - c[i])
 
 print(ans >> 1)
-    
-

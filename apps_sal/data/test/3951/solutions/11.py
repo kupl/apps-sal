@@ -10,4 +10,3 @@ while g:
     v.append(x)
     g += Counter()
 print(' '.join(map(str, v)))
-

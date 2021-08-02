@@ -26,4 +26,3 @@ for cap in capital:
     ans += cities_beauty[cap - 1] * cap_sum
 
 p(ans)
-

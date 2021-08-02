@@ -11,4 +11,3 @@ for i in range(2, 25):
         break
     a[i] = a[i - 1] + a[i - 2] - 1
 print(ans)
-

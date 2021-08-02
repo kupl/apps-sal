@@ -20,4 +20,3 @@ for i in k:
         ans -= c[i - 1] * c[i % n]
 
 print(ans)
-

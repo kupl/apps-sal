@@ -15,5 +15,5 @@ while (not a == b == c == y):
             break
     else:
         break
-    
+
 print(ans)

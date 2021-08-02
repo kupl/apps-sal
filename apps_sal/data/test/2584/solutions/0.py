@@ -27,4 +27,3 @@ for _ in range(int(input())):
         else:
             R = mid
     print(L)
-

@@ -9,5 +9,3 @@ while min(now) < x:
     o1, o2 = (ind + 1) % 3, (ind + 2) % 3
     now[ind] = now[o1] + now[o2] - 1
 print(res)
-
-

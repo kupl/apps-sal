@@ -18,10 +18,10 @@ def arg():
     tmp.remove(argmin)
     return (argmin, tmp[0], argmax)
 
+
 cnt = 0
 while l[0] != x or l[1] != x or l[2] != x:
     args = arg()
     l[args[0]] = min(x, l[args[2]] + l[args[1]] - 1)
     cnt += 1
 print(cnt)
-

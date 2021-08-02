@@ -1,7 +1,7 @@
 x, y = map(int, input().split())
 counter = 0
 
-x, y = min(x,y), max(x,y)
+x, y = min(x, y), max(x, y)
 x1 = x
 x2 = x
 x3 = x

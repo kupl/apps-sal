@@ -1,5 +1,6 @@
 3
 
+
 def transform(a, b, c, y):
     ans = 0
     while True:
@@ -9,7 +10,7 @@ def transform(a, b, c, y):
         #print(a, b, c)
         c = min(a + b - 1, y)
         ans += 1
-    
+
+
 x, y = list(map(int, input().split()))
 print(transform(y, y, y, x))
-

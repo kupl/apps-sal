@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.5
 import sys
 
+
 def read_data():
     return list(map(int, next(sys.stdin).split()))
 
@@ -10,7 +11,7 @@ def solve(f, t):
         f, t = t, f
     if f == t:
         return 0
-    a, b, c = f, f, f 
+    a, b, c = f, f, f
     count = 0
     while a < t:
         c = min(a + b - 1, t)
@@ -24,11 +25,11 @@ def solve(f, t):
             #print(t, t, t)
             count += 1
     return count
-        
 
 
 def __starting_point():
     f, t = read_data()
     print(solve(f, t))
+
 
 __starting_point()
