@@ -25,4 +25,3 @@ if ok == 1:
     print((*b))
 else:
     print("No")
-

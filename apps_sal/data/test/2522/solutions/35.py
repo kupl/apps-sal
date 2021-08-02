@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     alst = list(map(int, input().split()))
@@ -25,5 +26,6 @@ def main():
         b_total += b
     ans = blst[-cor:] + blst[:-cor]
     print(*ans)
-        
+
+
 main()

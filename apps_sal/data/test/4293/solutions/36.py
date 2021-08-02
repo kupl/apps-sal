@@ -8,5 +8,6 @@ def atc_129a(input_value: str) -> int:
 
     return min(P + Q, P + R, Q + R)
 
+
 input_value = input()
 print(atc_129a(input_value))

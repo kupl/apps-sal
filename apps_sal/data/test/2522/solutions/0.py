@@ -35,6 +35,7 @@ def main():
             bi += 1
 
     print('Yes')
-    print(' '.join(map(str, b[n-stride:] + b[:n-stride])))
+    print(' '.join(map(str, b[n - stride:] + b[:n - stride])))
+
 
 main()

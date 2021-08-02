@@ -17,4 +17,3 @@ if np.all(B[:N - l] < A[l:]):
     print((*np.roll(B, l)))
 else:
     print('No')
-

@@ -35,4 +35,3 @@ print('Yes')
 if slide > 0:
     bbb = bbb[-slide:] + bbb[:-slide]
 print((*bbb))
-

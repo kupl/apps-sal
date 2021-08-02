@@ -1,5 +1,5 @@
 import numpy as np
-import sys 
+import sys
 read = sys.stdin.readline
 n = int(input())
 a = np.fromstring(read(), dtype=np.int32, sep=' ')
@@ -25,7 +25,7 @@ for i in range(n):
             return
         else:
             j = kokan[-1]
-            b[i], b[j] = b[j], b[i] 
+            b[i], b[j] = b[j], b[i]
             kokan.pop()
 print('Yes')
 print(*b)

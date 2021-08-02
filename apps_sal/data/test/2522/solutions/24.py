@@ -1,15 +1,17 @@
 
 from collections import Counter
+
+
 def resolve():
     N = int(input())
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
 
-    CNT = Counter(A+B)
+    CNT = Counter(A + B)
     num = CNT.most_common()[0][1]
     if num > N:
         print("No")
-        return 
+        return
 
     j, pre = 0, -1
     for i in range(N):
@@ -29,4 +31,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

@@ -39,10 +39,10 @@ def main():
             return -self.root[self.find_root(x)]
 
     N = int(input())
-    adj = [[] for _ in range(N+1)]
-    UF0 = UnionFind(N+1)
-    UF1 = UnionFind(N+1)
-    for _ in range(N-1):
+    adj = [[] for _ in range(N + 1)]
+    UF0 = UnionFind(N + 1)
+    UF1 = UnionFind(N + 1)
+    for _ in range(N - 1):
         a, b, c = list(map(int, input().split()))
         adj[a].append((b, c))
         adj[b].append((a, c))
@@ -53,24 +53,24 @@ def main():
 
     ans = 0
     roots = set()
-    for v in range(1, N+1):
+    for v in range(1, N + 1):
         r = UF1.find_root(v)
         if r not in roots:
             roots.add(r)
             s = -UF1.root[r]
-            ans += s * (s-1)
-    #print(ans)
+            ans += s * (s - 1)
+    # print(ans)
 
     roots = set()
-    for v in range(1, N+1):
+    for v in range(1, N + 1):
         r = UF0.find_root(v)
         if r not in roots:
             roots.add(r)
             s = -UF0.root[r]
-            ans += s * (s-1)
-    #print(ans)
+            ans += s * (s - 1)
+    # print(ans)
 
-    for v in range(1, N+1):
+    for v in range(1, N + 1):
         W = 0
         B = 0
         flg0 = 0
@@ -94,5 +94,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

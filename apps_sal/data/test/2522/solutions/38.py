@@ -8,7 +8,7 @@ b = list(map(int, input().split()))
 all_freq = {}
 
 cnt_b = [0] * 220000
-for num in b:cnt_b[num] += 1
+for num in b: cnt_b[num] += 1
 
 
 for num in a:
@@ -32,6 +32,7 @@ for num, freq in list(all_freq.items()):
 
 ans = []
 
+
 def get_max():
     (freq, num) = heappop(heap)
     freq = -freq
@@ -40,6 +41,7 @@ def get_max():
         freq = -freq
 
     return num
+
 
 for num in a:
     most_freq_num = get_max()
@@ -58,9 +60,8 @@ for num in a:
         if cnt_b[second_freq_num] > 0:
             heappush(heap, (-all_freq[second_freq_num], second_freq_num))
     all_freq[num] -= 1
-    if cnt_b[num] == 0:continue
+    if cnt_b[num] == 0: continue
     heappush(heap, (-all_freq[num], num))
 
 print("Yes")
 print((*ans))
-

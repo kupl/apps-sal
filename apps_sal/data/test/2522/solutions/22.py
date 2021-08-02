@@ -94,4 +94,3 @@ for b, cb in list(cnt_b.items()):
 
 print('Yes')
 print((*ans))
-

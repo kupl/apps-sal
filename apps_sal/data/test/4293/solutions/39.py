@@ -1,3 +1,3 @@
-t = list(map(int,input().split()))
+t = list(map(int, input().split()))
 t.sort()
-print(t[0]+t[1])
+print(t[0] + t[1])

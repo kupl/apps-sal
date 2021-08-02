@@ -3,6 +3,7 @@ class UnionFind:
         self.par = [i for i in range(N)]
         self.rank = [1 for i in range(N)]
         self.rank[0] = 0
+
     def union(self, x, y):
         if not self.is_same_set(x, y):
             par_x = self.find_par(x)
@@ -31,14 +32,15 @@ class UnionFind:
 # lista de adj
 # verificar todos os componentes existentes e adicionar na resposta n * (n-1)
 
+
 n = int(input())
 
-adj = [[] for i in range(n+1)]
+adj = [[] for i in range(n + 1)]
 
-uf0 = UnionFind(n+1)
-uf1 = UnionFind(n+1)
+uf0 = UnionFind(n + 1)
+uf1 = UnionFind(n + 1)
 
-for i in range(n-1):
+for i in range(n - 1):
     x, y, c = list(map(int, input().split()))
 
     if c == 0:
@@ -47,7 +49,7 @@ for i in range(n-1):
         uf1.union(x, y)
     adj[x].append(y)
     adj[y].append(x)
-for i in range(n+1):
+for i in range(n + 1):
     uf0.find_par(i)
     uf1.find_par(i)
 
@@ -65,4 +67,3 @@ for i in range(len(uf0.par)):
         if uf1.rank[uf1.find_par(i)] > 1:
             resp += (uf0.rank[uf0.find_par(i)] - 1) * (uf1.rank[uf1.find_par(i)] - 1)
 print(resp)
-

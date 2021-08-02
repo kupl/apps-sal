@@ -36,4 +36,3 @@ for (i, j), (x, y) in zip(swapA, swapB):
 
 print('Yes')
 print((*ans))
-

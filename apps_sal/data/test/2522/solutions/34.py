@@ -9,7 +9,7 @@ def main():
     B = list(map(int, input().split()))
     lA = Counter(A)
     lB = Counter(B)
-    if max(Counter(A+B).values()) > N:
+    if max(Counter(A + B).values()) > N:
         print('No')
         return
 
@@ -22,11 +22,12 @@ def main():
     for i in range(1, N + 1):
         shift = max(shift, C[i] - D[i - 1])
     print('Yes')
-    ans = (B + B + B)[N-shift:2*N-shift]
+    ans = (B + B + B)[N - shift:2 * N - shift]
     print((' '.join([str(a) for a in ans])))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

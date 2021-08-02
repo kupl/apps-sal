@@ -6,9 +6,8 @@ for i in range(N):
 intervals.sort()
 mx = intervals[0][0]
 count = 1
-for i in range(1,N):
+for i in range(1, N):
     if intervals[i][1] > mx:
         count += 1
         mx = intervals[i][0]
 print(count)
-

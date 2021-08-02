@@ -1,10 +1,12 @@
+from random import randrange
+from collections import Counter
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7 # 998244353
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
-input = lambda:sys.stdin.readline().rstrip()
-from collections import Counter
-from random import randrange
+input = lambda: sys.stdin.readline().rstrip()
+
+
 def resolve():
     n = int(input())
     A = list(map(int, input().split()))
@@ -24,4 +26,6 @@ def resolve():
                 break
     print("Yes")
     print(*B)
+
+
 resolve()

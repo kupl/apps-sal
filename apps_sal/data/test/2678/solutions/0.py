@@ -20,4 +20,3 @@ for i in range(1, no_seq):
         curr[1] = min(curr[1], seqs[i][1])
 
 print(answer)
-
