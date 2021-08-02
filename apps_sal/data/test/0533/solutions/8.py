@@ -15,4 +15,3 @@ if k1 > k2:
     a1, a2 = a2, a1
     k1, k2 = k2, k1
 print(mn(a1, a2, k1, k2, n), mx(a1, a2, k1, k2, n))
-

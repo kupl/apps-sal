@@ -9,6 +9,7 @@ for i in range(2 * N - 1):
     C[i] = A[i % N] ^ A[(i + 1) % N]
     D[i % N] = B[i % N] ^ B[(i + 1) % N]
 
+
 class KMP:
 
     def __init__(self, W):
@@ -66,6 +67,7 @@ class KMP:
 #     x = A[i] ^ B[0]
 #     if ok(x, i):
 #         print(i, x)
+
 
 kmp = KMP(D)
 for x in kmp.search(C):

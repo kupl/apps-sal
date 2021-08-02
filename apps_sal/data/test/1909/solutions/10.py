@@ -11,11 +11,9 @@ for i in range(k):
     vvmin = 1001
     for j in range(i, n, k):
         vsum += an[j]
-    
+
     if(vsum < vmin):
         vmin = vsum
         rez = i + 1
-    
-print(rez)
-    
 
+print(rez)

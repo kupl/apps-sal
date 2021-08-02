@@ -12,5 +12,6 @@ def atc_136a(input_v: str) -> int:
     else:
         return D
 
+
 abc = input()
 print(atc_136a(abc))

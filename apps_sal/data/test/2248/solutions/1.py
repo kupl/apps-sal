@@ -1,6 +1,6 @@
 n, m = list(map(int, input().split()))
 cn = {}
-for i in range(1, n+1):
+for i in range(1, n + 1):
     cn[i] = set()
 for _ in range(m):
     a, b = list(map(int, input().split()))
@@ -20,9 +20,9 @@ def dfs(node):
             dist, fnode = d, node
         for i in cn[node]:
             if i not in vs:
-                q.append((d+1, i))
+                q.append((d + 1, i))
     return dist, fnode
+
 
 _, fnode = dfs(1)
 print(dfs(fnode)[0])
-

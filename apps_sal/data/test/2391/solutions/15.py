@@ -1,7 +1,7 @@
 def xor_next(values):
     result = [0] * len(values)
     for i in range(len(values)):
-        result[i] = values[i] ^ values[(i+1) % len(values)]
+        result[i] = values[i] ^ values[(i + 1) % len(values)]
     return result
 
 
@@ -12,7 +12,7 @@ def make_mp_table(values):
         while j != -1 and values[j] != values[i]:
             j = result[j]
         j += 1
-        result[i+1] = j
+        result[i + 1] = j
     return result
 
 
@@ -24,7 +24,7 @@ def mp_find(target, pattern, table):
             j = table[j]
         j += 1
         if j == len(pattern):
-            result.append(i-(j-1))
+            result.append(i - (j - 1))
             j = table[j]
     return result
 
@@ -41,7 +41,7 @@ def main():
     res = mp_find(xb, xa, mp_t)
     res.sort(reverse=True)
     for i in range(len(res)):
-        k = n-res[i]
+        k = n - res[i]
         if(k >= n):
             continue
         x = a[k] ^ b[0]
@@ -49,4 +49,3 @@ def main():
 
 
 main()
-

@@ -21,6 +21,8 @@ def getdict(n):
             else:
                 d[t] = 1
     return d
+
+
 def sieve(n):
     prime = [True for i in range(n + 1)]
     p = 2
@@ -32,25 +34,28 @@ def sieve(n):
     prime[0] = prime[1] = False
     r = [p for p in range(n + 1) if prime[p]]
     return r
+
+
 def cdiv(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
 def mi(): return map(int, input().split())
 def li(): return list(map(int, input().split()))
 def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def prr(a, sep = ' '): print(sep.join(map(str, a)))
+def prr(a, sep=' '): print(sep.join(map(str, a)))
+
 
 a = ii()
 b = ii()
 ka = ii()
 kb = ii()
 n = ii()
-t = a*(ka - 1)
-e = b*(kb - 1)
-r = min(max(0, n - e - t), a+b)
+t = a * (ka - 1)
+e = b * (kb - 1)
+r = min(max(0, n - e - t), a + b)
 if ka > kb:
-    t = min(b, n//kb)
-    n -= t*kb
-    t+= min(a, n//ka)
+    t = min(b, n // kb)
+    n -= t * kb
+    t += min(a, n // ka)
 else:
     t = min(a, n // ka)
     n -= t * ka

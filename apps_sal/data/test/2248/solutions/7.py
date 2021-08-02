@@ -12,8 +12,9 @@ def find_farest_v(v, g):
         for neib in adj_graph[current_v]:
             if neib not in visited_v:
                 queue_v.append((neib, dist + 1))
-    
+
     return order[-1]
+
 
 n, m = list(map(int, input().strip().split(" ")))
 
@@ -24,8 +25,8 @@ for i in range(m):
     v1, v2 = list(map(int, line.split(" ")))
     adj_graph[v1 - 1].append(v2 - 1)
     adj_graph[v2 - 1].append(v1 - 1)
-    
+
 v1, d1 = find_farest_v(0, adj_graph)
 v2, d2 = find_farest_v(v1, adj_graph)
 
-print(d2) 
+print(d2)

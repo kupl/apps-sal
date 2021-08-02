@@ -1,6 +1,6 @@
-a,b,c=map(int,input().split())
+a, b, c = map(int, input().split())
 
-if  a-b<c:
-  print (c+b-a)
+if a - b < c:
+    print(c + b - a)
 else:
-  print(0)
+    print(0)

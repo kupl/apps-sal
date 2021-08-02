@@ -1,6 +1,6 @@
-#136-A
+# 136-A
 
-A,B,C = list(map(int,input().split()))
+A, B, C = list(map(int, input().split()))
 
 #print(C - A + B)
 
@@ -11,4 +11,3 @@ if ans <= 0:
 
 else:
     print(ans)
-

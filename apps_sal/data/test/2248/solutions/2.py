@@ -11,6 +11,7 @@ def bfs(x, g):
                 q.append(to)
     return (q[-1], dist[q[-1]])
 
+
 n, m = list(map(int, input().split()))
 g = [[] for _ in range(n)]
 
@@ -20,4 +21,3 @@ for _ in range(m):
     g[b].append(a)
 
 print(bfs(bfs(0, g)[0], g)[1])
-

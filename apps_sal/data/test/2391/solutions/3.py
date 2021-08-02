@@ -1,8 +1,8 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
@@ -12,6 +12,7 @@ def LLI(rows_number): return [LI() for _ in range(rows_number)]
 # 文字が同じ限り右に広げて、lcpを記録しながら左に縮めていく感じ
 # 縮められなくなったら、topを右の箱の左端にして、左の箱を0までずらす
 # 箱ができていない（幅が0）のときは、右の箱を1つ右に
+
 
 def ZAlgorithm(aa):
     target = aa
@@ -42,6 +43,7 @@ def ZAlgorithm(aa):
         right -= left
         left = 0  # これも本当は不要
     return lcp
+
 
 def main():
     # 「aを左にシフト」＝「bを右にシフト」
@@ -85,7 +87,8 @@ def main():
     ll = ZAlgorithm(bx + [inf] + ax + ax[:-1])
     # lcp・・・length common prefixみたいな?
     for shift, lcp in enumerate(ll[n + 1:]):
-        if lcp == n: print(shift, aa[shift] ^ bb[0])
+        if lcp == n:
+            print(shift, aa[shift] ^ bb[0])
+
 
 main()
-

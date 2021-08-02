@@ -6,4 +6,3 @@ def water(A, B, C):
 A, B, C = list(map(int, input().split()))
 
 print((water(A, B, C)))
-

@@ -1,6 +1,6 @@
 def __starting_point():
     n = int(input())
-    a = [0] * (n+1)
+    a = [0] * (n + 1)
     a[0] = -(n + 5)
     k = list(map(int, input().split()))
     m = 0
@@ -21,4 +21,6 @@ def __starting_point():
             m1 = i
     m = max(a)
     print(a.index(m))
+
+
 __starting_point()

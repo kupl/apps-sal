@@ -26,4 +26,3 @@ aaa = list(map(int, input().split()))
 bbb = list(map(int, input().split()))
 ans = solve(n, aaa, bbb)
 print((''.join('{} {}\n'.format(*answer) for answer in ans)))
-

@@ -17,5 +17,3 @@ else:
             idx = idx - 1
 
 print((' '.join([str(A[-1]), str(A[idx])])))
-
-

@@ -6,9 +6,9 @@ n = int(input())
 
 p = a1 * (k1 - 1) + a2 * (k2 - 1)
 if p >= n:
-    print(0, end = ' ')
+    print(0, end=' ')
 else:
-    print( n - p, end = ' ')
+    print(n - p, end=' ')
 s = 0
 if k1 > k2:
     g = n // k2
@@ -28,4 +28,3 @@ else:
         print(s)
     else:
         print(g)
-

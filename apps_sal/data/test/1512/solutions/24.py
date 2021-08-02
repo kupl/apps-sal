@@ -8,4 +8,3 @@ for x in map(int, input().split()):
     elif x > m2:
         v[m1], m2 = v[m1] + 1, x
 print(v.index(max(v)))
-
