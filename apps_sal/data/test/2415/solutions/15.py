@@ -1,4 +1,4 @@
-prvky="""Ac
+prvky = """Ac
 Ag
 Al
 Am
@@ -116,24 +116,27 @@ Y
 Yb
 Zn
 Zr""".split("\n")
-d={i:[] for i in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+d = {i: [] for i in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
 for i in prvky:
     d[i[0]].append(i)
-mem={}
+mem = {}
+
+
 def f(string):
     if string in mem:
         return mem[string]
-    if not string:return ""
+    if not string: return ""
     for i in d[string[0]]:
         if string.startswith(i.upper()):
-            res=f(string[len(i):])
-            if res!=-1:
-                mem[string]=i+res
-                return i+res
+            res = f(string[len(i):])
+            if res != -1:
+                mem[string] = i + res
+                return i + res
     return -1
 
-s=input()
-r=f(s)
-if r==-1:
+
+s = input()
+r = f(s)
+if r == -1:
     print("NO")
-else:print("YES")
+else: print("YES")

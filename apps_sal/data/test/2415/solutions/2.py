@@ -123,11 +123,10 @@ for i in range(len(inp)):
     works = False
     if dp[-1] and inp[i] in l:
         works = True
-    if i and dp[-2] and inp[i-1:i+1] in l:
+    if i and dp[-2] and inp[i - 1:i + 1] in l:
         works = True
     dp.append(works)
 if dp[-1]:
     print('YES')
 else:
     print('NO')
-

@@ -1,9 +1,10 @@
 import math
 
-def min_prime(start, limit):
-    for k in range(start, limit+1):
 
-        if k%2 == 0 and k !=2:
+def min_prime(start, limit):
+    for k in range(start, limit + 1):
+
+        if k % 2 == 0 and k != 2:
             continue
 
         factor = 0
@@ -15,6 +16,6 @@ def min_prime(start, limit):
         if factor == 0:
             return k
 
+
 x = int(input())
 print((min_prime(x, 10**6)))
-

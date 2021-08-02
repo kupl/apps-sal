@@ -28,4 +28,3 @@ def sum_special(n):
 l, r = list(map(int, input().split()))
 
 print((p + sum_special(r) - sum_special(l - 1)) % p)
-

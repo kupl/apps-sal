@@ -13,5 +13,3 @@ elif 'a' in s[len(s) - len(b) // 2:]:
     # print(3)
 else:
     print(s[:len(s) - len(b) // 2])
-
-

@@ -127,7 +127,7 @@ def isPossible(s):
     if s in elements:
         return True
     for e in elements:
-        if s.startswith(e) and isPossible(s[len(e) :]):
+        if s.startswith(e) and isPossible(s[len(e):]):
             return True
     return False
 
@@ -137,5 +137,3 @@ if isPossible(S):
     print("YES")
 else:
     print("NO")
-
-

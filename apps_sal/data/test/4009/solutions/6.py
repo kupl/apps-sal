@@ -10,4 +10,5 @@ def main():
     print(int(ans))
     return 0
 
+
 main()

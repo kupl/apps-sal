@@ -13,26 +13,26 @@ def sumto(l):
             t -= n
             n = l - t
             if par:
-                S += n*o + n*(n-1)
-                o += 2*n
+                S += n * o + n * (n - 1)
+                o += 2 * n
                 n *= 2
             else:
-                S += n*e + n*(n-1)
-                e += 2*n
+                S += n * e + n * (n - 1)
+                e += 2 * n
                 n *= 2
             break
         if par:
-            S += n*o + n*(n-1)
-            o += 2*n
+            S += n * o + n * (n - 1)
+            o += 2 * n
             n *= 2
         else:
-            S += n*e + n*(n-1)
-            e += 2*n
+            S += n * e + n * (n - 1)
+            e += 2 * n
             n *= 2
         i += 1
     return S
 
-l,r = list(map(int,input().split()))
-mod = 10**9 + 7
-print((sumto(r) - sumto(l-1))%mod)
 
+l, r = list(map(int, input().split()))
+mod = 10**9 + 7
+print((sumto(r) - sumto(l - 1)) % mod)

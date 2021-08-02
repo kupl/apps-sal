@@ -14,4 +14,3 @@ while True:
     else:
         X += 1
 print(X)
-

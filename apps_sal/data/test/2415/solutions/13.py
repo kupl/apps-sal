@@ -9,8 +9,7 @@ for i in range(n):
         continue
     if s[i] in elems:
         dp[i + 1] = True
-    if i + 2 <= n and s[i:i+2] in elems:
+    if i + 2 <= n and s[i:i + 2] in elems:
         dp[i + 2] = True
 
 print('YES' if dp[n] else 'NO')
-

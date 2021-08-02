@@ -9,4 +9,3 @@ for i in range(n - x, n):
         if (s[i] == '1'):
             ans += 1
 print(ans)
-

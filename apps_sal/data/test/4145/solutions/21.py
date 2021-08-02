@@ -1,7 +1,8 @@
 # Original Submission At: https://atcoder.jp/contests/abc149/submissions/16823042
-x= int(input())
+x = int(input())
 
-def prime_check(num,count):
+
+def prime_check(num, count):
     while True:
         while num % count == 0:
             num = num + 1
@@ -12,8 +13,8 @@ def prime_check(num,count):
         else:
             count = count + 1
 
-if x==2 :
+
+if x == 2:
     print((2))
 else:
-    prime_check(x,2)
-
+    prime_check(x, 2)

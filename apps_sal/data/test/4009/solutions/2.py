@@ -10,4 +10,3 @@ for i in range(x):
         if s[i] == "1":
             ans += 1
 print(ans)
-

@@ -3,14 +3,13 @@ elems = ['H', 'HE', 'LI', 'BE', 'B', 'C', 'N', 'O', 'F', 'NE', 'NA', 'MG', 'AL',
 s = input()
 
 
-dp = [False for i in range(len(s)+1)]
+dp = [False for i in range(len(s) + 1)]
 dp[0] = True
 
 for i in range(len(s)):
     if not dp[i]: continue
     for el in elems:
         if s[i:].startswith(el):
-            dp[i+len(el)] = True
+            dp[i + len(el)] = True
 
 print('YES' if dp[-1] else 'NO')
-

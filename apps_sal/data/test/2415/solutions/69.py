@@ -43,21 +43,21 @@ Zirconium	Zr	Mercury	Hg
 """
 elems = []
 for idx, token in enumerate(s.split()):
-  if idx % 2 == 1:
-    elems.append(token.upper())
+    if idx % 2 == 1:
+        elems.append(token.upper())
 
 
 def check(s):
-  if not s:
-    return True
-  for idx in range(len(s)):
-    if s[idx:] in elems and check(s[:idx]):
-      return True
-  return False
+    if not s:
+        return True
+    for idx in range(len(s)):
+        if s[idx:] in elems and check(s[:idx]):
+            return True
+    return False
+
 
 s = input()
 if check(s):
-  print("YES")
+    print("YES")
 else:
-  print("NO")
-
+    print("NO")

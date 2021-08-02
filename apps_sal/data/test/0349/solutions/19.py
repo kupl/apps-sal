@@ -12,14 +12,14 @@ def main():
             m1[r][c], m2[r][c] = min(m1[r][c], m2[r][c]), max(m1[r][c], m2[r][c])
 
     def checkRow(row):
-        for i in range(m-1):
-            if m1[row][i] >= m1[row][i+1] or m2[row][i] >= m2[row][i+1]:
+        for i in range(m - 1):
+            if m1[row][i] >= m1[row][i + 1] or m2[row][i] >= m2[row][i + 1]:
                 return False
         return True
 
     def checkCol(col):
-        for i in range(n-1):
-            if m1[i][col] >= m1[i+1][col] or m2[i][col] >= m2[i+1][col]:
+        for i in range(n - 1):
+            if m1[i][col] >= m1[i + 1][col] or m2[i][col] >= m2[i + 1][col]:
                 return False
         return True
 
@@ -40,5 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

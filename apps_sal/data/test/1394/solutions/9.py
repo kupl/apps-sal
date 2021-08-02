@@ -16,4 +16,4 @@ else:
     if f != list(s2):
         print(":(")
     else:
-        print(s1) 
+        print(s1)

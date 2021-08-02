@@ -18,4 +18,3 @@ def check():
 
 summs = sum(ms)
 print(['NO', 'YES'][check()])
-

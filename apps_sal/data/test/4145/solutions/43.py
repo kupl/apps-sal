@@ -1,5 +1,6 @@
 X = int(input())
 
+
 def isPrime(n):
     if n <= 1:
         return False
@@ -10,7 +11,8 @@ def isPrime(n):
         p += 1
     return True
 
-for x in range(X,1000004):
+
+for x in range(X, 1000004):
     if isPrime(x):
         print(x)
         return

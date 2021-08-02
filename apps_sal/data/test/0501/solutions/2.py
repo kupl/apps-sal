@@ -26,7 +26,7 @@ def helper(n):
         tcnt += n
     ans = (pow(tcnt, 2, 1000000007) + (bcnt * (bcnt + 1))) % 1000000007
     return ans
-        
+
 
 def main():
     l, r = map(int, input().split())
@@ -35,4 +35,6 @@ def main():
         ans -= helper(l - 1)
     print(ans % 1000000007)
     return 0
+
+
 main()

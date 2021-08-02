@@ -29,4 +29,3 @@ sum2_odd = sum(ar2[::2])
 sum2_even = sum(ar2[1::2])
 p = 10 ** 9 + 7
 print((sum2_odd ** 2 + sum2_even ** 2 + sum2_even - sum1_odd ** 2 - sum1_even ** 2 - sum1_even) % p)
-

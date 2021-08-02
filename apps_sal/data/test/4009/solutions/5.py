@@ -7,4 +7,3 @@ for i in range(x):
     else:
         ans += s[n - 1 - i] == '1'
 print(ans)
-

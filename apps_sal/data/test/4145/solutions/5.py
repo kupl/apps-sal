@@ -1,5 +1,6 @@
 import math
 
+
 def is_prime(n):
     if n == 1: return False
 
@@ -9,10 +10,10 @@ def is_prime(n):
 
     return True
 
+
 x = int(input())
 
 for i in range(x, 10**5 + 4):
     if is_prime(i) == True:
         print(i)
         return
-

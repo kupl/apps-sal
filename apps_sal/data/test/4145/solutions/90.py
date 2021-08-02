@@ -3,7 +3,7 @@ n = x + (x - 1) % 2
 ans = 0
 
 found = True
- 
+
 while found:
     found = False
     if x == 2:
@@ -16,4 +16,4 @@ while found:
             break
     ans = n
     n += 2
-print(ans)       
+print(ans)

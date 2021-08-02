@@ -4,7 +4,7 @@ x = int(input())
 while True:
     f = 1
     s = int(sqrt(x))
-    for i in range(2, s+1):
+    for i in range(2, s + 1):
         if x % i == 0:
             f = 0
             break

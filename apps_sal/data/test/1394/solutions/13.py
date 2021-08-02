@@ -6,8 +6,8 @@ for i in s:
 if len(t) % 2:
     print(':(')
     return
-q = t[:len(t)//2]
-w = t[len(t)//2:]
+q = t[:len(t) // 2]
+w = t[len(t) // 2:]
 if q != w:
     print(':(')
     return

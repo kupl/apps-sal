@@ -23,7 +23,7 @@ def f(n, mod):
         return (res + n1 * n + (n * (n - 1))) % mod
     return (res + n2 * n + (n * (n - 1))) % mod
 
+
 l, r = list(map(int, input().split()))
 mod = 10 ** 9 + 7
 print((f(r, mod) - f(l - 1, mod)) % mod)
-

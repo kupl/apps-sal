@@ -35,16 +35,16 @@ def main():
             minx = min(minm[r][c], maxm[r][c])
             maxx = max(minm[r][c], maxm[r][c])
             if r:
-                if minx <= minm[r-1][c] or maxx <= maxm[r-1][c]:
+                if minx <= minm[r - 1][c] or maxx <= maxm[r - 1][c]:
                     write("Impossible")
                     return
             if c:
-                if minx <= minm[r][c-1] or maxx <= maxm[r][c-1]:
+                if minx <= minm[r][c - 1] or maxx <= maxm[r][c - 1]:
                     write("Impossible")
                     return
             minm[r][c] = minx
             maxm[r][c] = maxx
     write("Possible")
 
-main()
 
+main()

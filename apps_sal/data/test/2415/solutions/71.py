@@ -10,4 +10,3 @@ for i in range(n):
     if i > 0 and q[i - 1:i + 1] in E:
         ok[i + 1] = max(ok[i + 1], ok[i - 1])
 print('YES' if ok[n] else 'NO')
-
