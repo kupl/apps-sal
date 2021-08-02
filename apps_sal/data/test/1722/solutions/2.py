@@ -13,4 +13,5 @@ def main():
     print(ans >> 1)
     return 0
 
+
 main()

@@ -5,4 +5,3 @@ elif m - 1 >= n - m:
     print(m - 1)
 else:
     print(m + 1)
-

@@ -1,7 +1,9 @@
 from collections import defaultdict
 
+
 def pairs(n):
     return n * (n - 1) // 2
+
 
 n = int(input())
 names = [input() for _ in range(n)]

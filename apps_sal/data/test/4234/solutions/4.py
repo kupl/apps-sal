@@ -1,23 +1,21 @@
-n=int(input())
-S=input()
-
 from collections import deque
-QUE=deque(S)
-ANS=[]
+n = int(input())
+S = input()
+
+QUE = deque(S)
+ANS = []
 
 while QUE:
-    if len(QUE)==1:
+    if len(QUE) == 1:
         QUE.pop()
         break
-    if QUE[0]==QUE[1]:
+    if QUE[0] == QUE[1]:
         QUE.popleft()
-    elif QUE[0]!=QUE[1]:
-        x=QUE.popleft()
-        y=QUE.popleft()
+    elif QUE[0] != QUE[1]:
+        x = QUE.popleft()
+        y = QUE.popleft()
         ANS.append(x)
         ANS.append(y)
 
-print(n-len(ANS))
+print(n - len(ANS))
 print("".join(ANS))
-        
-

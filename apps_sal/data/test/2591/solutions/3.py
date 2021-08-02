@@ -11,4 +11,3 @@ for q in range(0, t):
         b.append(a[n // 2])
     b.reverse()
     print(*b)
-

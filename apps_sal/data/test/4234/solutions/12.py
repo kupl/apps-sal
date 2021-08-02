@@ -8,11 +8,11 @@ for q in range(1, n):
         if ans[-1] != string[q]:
             ans += string[q]
         else:
-            count+=1
+            count += 1
     else:
-        ans+=string[q]
+        ans += string[q]
 
-if len(ans)%2!=0:
+if len(ans) % 2 != 0:
     print(count + 1)
     print(ans[:-1])
 else:

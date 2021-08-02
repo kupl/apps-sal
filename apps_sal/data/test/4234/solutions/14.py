@@ -15,5 +15,5 @@ def go():
         a = a[:-1]
     return '{}\n{}'.format(n - len(a), a)
 
-print(go())
 
+print(go())

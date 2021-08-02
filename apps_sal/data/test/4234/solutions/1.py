@@ -18,4 +18,3 @@ if len(b) & 1:
     b = b[:-1]
 print(n - len(b))
 print(b)
-

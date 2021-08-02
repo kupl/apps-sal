@@ -17,4 +17,3 @@ if ans[-1] == "K":
     count += 1
 print(count)
 print("".join(ans))
-

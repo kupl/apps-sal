@@ -19,6 +19,4 @@ def main():
             print(stack[i][0], end='')
 
 
-
 main()
-

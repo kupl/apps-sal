@@ -10,4 +10,3 @@ for c_i in range(26):
     ans += (a * (a - 1)) // 2
     ans += (b * (b - 1)) // 2
 print(ans)
-

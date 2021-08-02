@@ -17,4 +17,3 @@ for _ in range(t):
             e -= 1
         c = not c
     print(" ".join(map(str, l2[::-1])))
-
