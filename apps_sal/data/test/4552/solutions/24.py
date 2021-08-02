@@ -15,4 +15,3 @@ for i in range(1, 2 ** 10):
     res = max(res, res_tmp)
 
 print(res)
-

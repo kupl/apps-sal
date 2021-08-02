@@ -16,4 +16,3 @@ for i in range(1, 1 << 10):
         tmp += P[j][count_set_bits(i & F[j])]
     ans = max(ans, tmp)
 print(ans)
-

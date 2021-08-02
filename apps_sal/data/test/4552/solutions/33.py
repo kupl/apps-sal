@@ -20,6 +20,3 @@ for schedule in schejule_list:
         res += p[i][kaburi]
     ans = max(ans, res)
 print(ans)
-
-
-

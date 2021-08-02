@@ -19,4 +19,3 @@ for i in range(1, 11):
         ans = max(ans, score)
 
 print(ans)
-

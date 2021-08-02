@@ -30,4 +30,3 @@ for j, i in enumerate(product([0, 1], repeat=10)):
     ans_tmp = sum([p[a][b] for a, b in enumerate(data_tmp)])
     ans = max(ans, ans_tmp)
 print(ans)
-

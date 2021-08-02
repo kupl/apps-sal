@@ -10,7 +10,7 @@ for _ in range(n):
 schejule_list = list(product([0, 1], repeat=10))
 ans = - float("inf")
 for schedule in schejule_list:
-    if schedule == (0,0,0,0,0,0,0,0,0,0):
+    if schedule == (0, 0, 0, 0, 0, 0, 0, 0, 0, 0):
         continue
     res = 0
     for i in range(n):
@@ -20,6 +20,3 @@ for schedule in schejule_list:
         res += p[i][kaburi]
     ans = max(ans, res)
 print(ans)
-
-
-

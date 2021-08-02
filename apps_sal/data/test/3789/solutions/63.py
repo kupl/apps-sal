@@ -42,4 +42,3 @@ while True:
     if not change:
         break
 print(sol)
-

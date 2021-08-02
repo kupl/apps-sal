@@ -21,7 +21,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -69,6 +69,5 @@ for i in range(n):
     graph.add_edge(n + 1, i, -a[i])
 for i in range(1, n + 1):
     for j in range(2 * i, n + 1, i):
-        graph.add_edge(i-1, j-1, 10**11)
-print((sum([max(0, i) for i in a])-graph.flow(n+1, n)))
-
+        graph.add_edge(i - 1, j - 1, 10**11)
+print((sum([max(0, i) for i in a]) - graph.flow(n + 1, n)))

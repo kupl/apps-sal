@@ -2,9 +2,9 @@ t = int(input())
 
 for _ in range(t):
     n = int(input())
-    a,b,c = list(map(int,input().split()))
+    a, b, c = list(map(int, input().split()))
     ss = input()
-    r,p,s = ss.count('R'),ss.count('P'),ss.count('S')
+    r, p, s = ss.count('R'), ss.count('P'), ss.count('S')
     win = min(a, s) + min(b, r) + min(c, p)
     if win < (n + 1) // 2:
         print('NO')
@@ -33,4 +33,3 @@ for _ in range(t):
                 res[i] = 'S'
                 c -= 1
     print(''.join(res))
-

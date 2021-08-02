@@ -10,9 +10,9 @@ def gcd(a, b):
 
 def divisors(n):
     d = []
-    for i in range(1, int(n**0.5)+1):
+    for i in range(1, int(n**0.5) + 1):
         if (n % i == 0):
-            d.append(i) if(i*i == n) else d.extend([i, n//i])
+            d.append(i) if(i * i == n) else d.extend([i, n // i])
     return list(sorted(d))
 
 
@@ -22,12 +22,11 @@ def solve():
         print(1, 1)
         return
     for i in divisors(n):
-        if i*i <= n or gcd(i, n//i) > 1:
+        if i * i <= n or gcd(i, n // i) > 1:
             continue
         else:
-            print(n//i, i)
+            print(n // i, i)
             return
 
 
 solve()
-

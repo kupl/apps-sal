@@ -19,4 +19,3 @@ for ci in range(1, 2**10):
         score += p[cn][cnt]
     ans = max(ans, score)
 print(ans)
-

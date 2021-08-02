@@ -3,9 +3,9 @@ f = [list(map(int, input().split())) for i in range(n)]
 p = [list(map(int, input().split())) for i in range(n)]
 ans = -float("inf")
 for i in range(1, 2**10):
-    tf = [False]*10
+    tf = [False] * 10
     for j in range(10):
-        if (i>>j)&1:
+        if (i >> j) & 1:
             tf[j] = True
     cnt1 = 0
     for j in range(n):

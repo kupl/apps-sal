@@ -25,5 +25,3 @@ for bit in range(1, 2**10):
     if ret == None or cand > ret:
         ret = cand
 print(ret)
-
-

@@ -21,7 +21,7 @@ class MaxFlow:
 
     def add_edge(self, fr, to, cap):
         self.E[fr].append(self.Edge(to, cap, len(self.E[to])))
-        self.E[to].append(self.Edge(fr, 0, len(self.E[fr])-1))
+        self.E[to].append(self.Edge(fr, 0, len(self.E[fr]) - 1))
 
     def dinic(self, source, sink, INF=10**9):
         """find max-flow"""
@@ -89,5 +89,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

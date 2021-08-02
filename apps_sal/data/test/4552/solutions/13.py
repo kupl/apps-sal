@@ -23,4 +23,3 @@ for i in range(1, num):
         temp += P[j][popcnt(i & F[j])]
     ans = max(temp, ans)
 print(ans)
-

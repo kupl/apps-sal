@@ -3,16 +3,18 @@ import sys
 sys.setrecursionlimit(10000)
 
 opr = ['#', '^', '&', '$']
-namespace = { "res" : (False, "res") }
+namespace = {"res": (False, "res")}
 rules = dict()
 lookup = dict()
 cnt = -1
+
 
 def get_tag(var):
     if var in namespace:
         return namespace[var][1]
     else:
         return var
+
 
 N = int(input())
 for _ in range(N):
@@ -42,8 +44,10 @@ if namespace["res"] == (False, "res"):
 program = []
 myvars = dict()
 
+
 def reserve():
-    return ''.join(chr(randint(0, 25) + ord('a')) for _ in range(4)) 
+    return ''.join(chr(randint(0, 25) + ord('a')) for _ in range(4))
+
 
 def implement(rule, final):
     if type(rule) == str:
@@ -61,6 +65,7 @@ def implement(rule, final):
         program.append(name + "=" + var1 + op + var2)
         return name
 
+
 seed(123)
 if namespace["res"][0]:
     implement(namespace["res"][1], True)
@@ -69,6 +74,5 @@ else:
 print(len(program))
 print("\n".join(program))
 
-#print(namespace)
-#print(rules)
-
+# print(namespace)
+# print(rules)

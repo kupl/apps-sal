@@ -14,7 +14,7 @@ for TT in range(1, int(input()) + 1):
             l[j] -= 1
             res[i] = j
             cnt += 1
-    
+
     # now assign the leftovers randomly
     j = 0
     for i in range(n):
@@ -22,7 +22,6 @@ for TT in range(1, int(input()) + 1):
         while j < 3 and l[j] == 0: j += 1
         res[i] = j
         l[j] -= 1
-
 
     valid &= cnt >= ((n + 1) // 2)
     if valid:

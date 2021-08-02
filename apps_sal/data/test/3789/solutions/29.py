@@ -4,12 +4,13 @@ read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 
+
 class EDOMONDS_KARP():
     def __init__(self, N, s, t):
         self.N = N
         self.s = s
         self.t = t
-        self.cap = [[0]*N for _ in range(N)]
+        self.cap = [[0] * N for _ in range(N)]
         self.link = [[] for _ in range(N)]
 
     def add_edge(self, u, v, c):
@@ -22,7 +23,7 @@ class EDOMONDS_KARP():
         s = self.s
         t = self.t
         f = 0
-        flow = [[0]*N for _ in range(N)]
+        flow = [[0] * N for _ in range(N)]
         while True:
             m, prev = self.bfs(flow)
             if m == 0:
@@ -32,7 +33,7 @@ class EDOMONDS_KARP():
             while v != s:
                 u = prev[v]
                 flow[u][v] += m
-                flow[v][u] -=m
+                flow[v][u] -= m
                 v = u
         return (f, flow)
 
@@ -42,8 +43,8 @@ class EDOMONDS_KARP():
         t = self.t
         cap = self.cap
         link = self.link
-        prev = [-1]*N; prev[s] = -2
-        m = [0]*N; m[s] = float('inf')
+        prev = [-1] * N; prev[s] = -2
+        m = [0] * N; m[s] = float('inf')
         q = deque([s])
         while q:
             u = q.popleft()
@@ -56,6 +57,7 @@ class EDOMONDS_KARP():
                     else:
                         return (m[t], prev)
         return (0, prev)
+
 
 def main():
     INF = float('inf')
@@ -73,11 +75,13 @@ def main():
         else:
             add(i, T, a)
         for j in range(2, N // i + 1):
-            add(i, i*j, INF)
+            add(i, i * j, INF)
     f, _ = EK.max_flow()
     print((sum([x for x in A if x > 0]) - f))
 
+
 def __starting_point():
-   main()
+    main()
+
 
 __starting_point()

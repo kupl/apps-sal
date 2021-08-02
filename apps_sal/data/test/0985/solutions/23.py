@@ -12,4 +12,3 @@ P2 = 0
 for e in D2:
     P2 += e * (e - 1) // 2
 print(P1 + P2)
-

@@ -10,5 +10,6 @@ def main():
             cnt[x + p[j][0], y + p[j][1]] += 1
     ans = sum(i * (i - 1) // 2 for i in list(cnt.values()))
     print(ans)
-main()
 
+
+main()

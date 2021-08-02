@@ -9,4 +9,3 @@ for i in range(int(input())):
         d[q] += 1
     p.append((x, y))
 print(s)
-

@@ -1,7 +1,7 @@
 # グラフに辺を追加する
 def addEdge(adjL, vFr, vTo, cap):
     adjL[vFr].append([vTo, cap, len(adjL[vTo])])
-    adjL[vTo].append([vFr, 0, len(adjL[vFr]) - 1]) # 逆辺
+    adjL[vTo].append([vFr, 0, len(adjL[vFr]) - 1])  # 逆辺
 
 
 # Ford-Fulkerson法（最大フローを求める）
@@ -27,7 +27,6 @@ def Ford_Fulkerson(adjL, vSt, vEn):
 
         # 現在の頂点からの探索先がない場合、ゼロを返す
         return 0
-
 
     numV = len(adjL)
     MaximumFlow = 0
@@ -61,4 +60,3 @@ for i in range(1, N + 1):
 # Ford-Fulkerson法（最大フローを求める）
 mf = Ford_Fulkerson(adjList, 0, N + 1)
 print((sum([A for A in As if A > 0]) - mf))
-

@@ -7,6 +7,7 @@ p2D = lambda x: print(*x, sep="\n")
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 
+
 class Dinic():
     def __init__(self, n, s, t):
         self.n, self.s, self.t = n, s, t
@@ -33,7 +34,7 @@ class Dinic():
                 if level[v] != -1: continue
                 level[v] = u_level + 1
                 if v == self.t:
-                    self.level=level
+                    self.level = level
                     return True
                 q.append([v, u_level + 1])
         return False
@@ -65,6 +66,7 @@ class Dinic():
             self.max_flow = self.calculation()
         return self.max_flow
 
+
 def main():
     n = int(input())
     aa = LI()
@@ -81,5 +83,5 @@ def main():
             mf.add_edge(i, j, 10 ** 12)
     print(max(0, max_sum - mf.get_max_flow()))
 
-main()
 
+main()

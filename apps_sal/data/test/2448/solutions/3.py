@@ -3,7 +3,7 @@ from collections import *
 t = int(input())
 for y in range(t):
     n = int(input())
-    a,b,c = map(int,input().split())
+    a, b, c = map(int, input().split())
     s = input()
     ct = 0
     l = ['0' for i in range(n)]
@@ -30,7 +30,7 @@ for y in range(t):
         elif(l[i] == '0'):
             l[i] = 'S'
             c -= 1
-    if(ct >= n/2):
+    if(ct >= n / 2):
         print("YES")
         print("".join(l))
     else:

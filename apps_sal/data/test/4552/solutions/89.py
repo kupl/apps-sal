@@ -25,4 +25,3 @@ for s in range(1, 1 << 10):
 
 
 print(max_prof)
-

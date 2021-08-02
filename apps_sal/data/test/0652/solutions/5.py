@@ -4,6 +4,7 @@ from collections import Counter
 def read_ints():
     return [int(x) for x in input().split()]
 
+
 def main():
     n, = read_ints()
     points = []

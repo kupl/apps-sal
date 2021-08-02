@@ -4,7 +4,7 @@ F = [list(map(int, input().split())) for _ in range(N)]
 P = [list(map(int, input().split())) for _ in range(N)]
 
 ans = -float('inf')
-for i in range(1,1 << 10):
+for i in range(1, 1 << 10):
     g = [0] * N
     for j in range(10):
         if i >> j & 1:

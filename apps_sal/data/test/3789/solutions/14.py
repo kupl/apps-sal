@@ -2,6 +2,7 @@
 
 import math
 
+
 def gcd(a, b):
     if a < b:
         a, b = b, a
@@ -14,6 +15,7 @@ def gcd(a, b):
 
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 MAX_N = 102
 INF = 10 ** 12

@@ -7,7 +7,5 @@ for i in range(n):
     dio2[(1000 - x) + y - 1] += 1
 ans = 0
 for i in range(1999):
-    ans += dio1[i] * (dio1[i] - 1) // 2  + dio2[i] * (dio2[i] - 1) // 2
+    ans += dio1[i] * (dio1[i] - 1) // 2 + dio2[i] * (dio2[i] - 1) // 2
 print(ans)
-
-

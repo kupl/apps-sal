@@ -10,4 +10,3 @@ for i in range(n):
 f = lambda x: x * (x - 1) // 2
 ans = sum(f(i) for i in b) + sum(f(i) for i in c)
 print(ans)
-

@@ -53,21 +53,23 @@ class Dinic:
                 f = self.dfs(s, t, self.inf)
         return flow
 
+
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    D = Dinic(n+2)
+    D = Dinic(n + 2)
     ret = 0
-    for i,e in enumerate(a, 1):
-      if e > 0:
-        ret += e
-        D.addedge(i, n+1, e)
-      else:
-        D.addedge(0, i, -e)
-    for i in range(1, n//2 + 1):
-      for j in range(i*2, n+1, i):
-        D.addedge(i, j, 10**12)
-    loss = D.flow(0, n+1)
+    for i, e in enumerate(a, 1):
+        if e > 0:
+            ret += e
+            D.addedge(i, n + 1, e)
+        else:
+            D.addedge(0, i, -e)
+    for i in range(1, n // 2 + 1):
+        for j in range(i * 2, n + 1, i):
+            D.addedge(i, j, 10**12)
+    loss = D.flow(0, n + 1)
     return ret - loss
+
 
 print(main())

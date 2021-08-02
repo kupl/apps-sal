@@ -1,5 +1,5 @@
 import networkx as nx
-from  networkx.algorithms.flow import dinitz
+from networkx.algorithms.flow import dinitz
 
 n = int(input())
 A = list(map(int, input().split()))
@@ -28,4 +28,3 @@ try:
 
 except nx.NetworkXError:
     print((0))
-

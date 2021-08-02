@@ -12,4 +12,3 @@ for _ in range(n):
     r[rdiag] += 1
 
 print(count)
-

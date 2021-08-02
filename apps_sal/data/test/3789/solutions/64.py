@@ -1,10 +1,13 @@
+from collections import deque
+import statistics
+import bisect
 from sys import stdin
 import sys
 import math
 from functools import reduce
 import functools
 import itertools
-from collections import deque,Counter,defaultdict
+from collections import deque, Counter, defaultdict
 from operator import mul
 import copy
 # ! /usr/bin/env python
@@ -13,13 +16,12 @@ import heapq
 sys.setrecursionlimit(10**6)
 # INF =  float("inf")
 INF = 10**18
-import bisect
-import statistics
-mod = 10**9+7
+mod = 10**9 + 7
 # mod = 998244353
 
 # Dinic's algorithm
-from collections import deque
+
+
 class Dinic:
     def __init__(self, N):
         self.N = N
@@ -39,7 +41,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -79,22 +81,23 @@ class Dinic:
                 flow += f
         return flow
 
+
 N = int(input())
 a = [0] + list(map(int, input().split()))
 
-dinic = Dinic(N+2)
+dinic = Dinic(N + 2)
 
-for i in range(1,N+1):
+for i in range(1, N + 1):
     x = a[i]
     if x >= 0:
         dinic.add_edge(0, i, 0)
-        dinic.add_edge(i, N+1, x)
+        dinic.add_edge(i, N + 1, x)
     else:
         dinic.add_edge(0, i, abs(x))
-        dinic.add_edge(i, N+1, 0)
+        dinic.add_edge(i, N + 1, 0)
 
-for i in range(1,N+1):
-    for j in range(2,N//i + 1):
-        dinic.add_edge(i, j*i, INF)
+for i in range(1, N + 1):
+    for j in range(2, N // i + 1):
+        dinic.add_edge(i, j * i, INF)
 
-print(sum([max(aa,0) for aa in a]) - dinic.flow(0, N+1))
+print(sum([max(aa, 0) for aa in a]) - dinic.flow(0, N + 1))

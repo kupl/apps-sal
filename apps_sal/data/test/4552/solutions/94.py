@@ -18,4 +18,3 @@ for s in itertools.product([0, 1], repeat=M):
         score += P[i][cnt]
     ans = max(ans, score)
 print(ans)
-
