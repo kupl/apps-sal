@@ -1,2 +1,2 @@
 s = input().split()
-print('A'+ s[1][0].upper() +'C')
+print('A' + s[1][0].upper() + 'C')

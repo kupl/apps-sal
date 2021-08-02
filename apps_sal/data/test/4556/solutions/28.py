@@ -1,3 +1,3 @@
-a,x,c = input().split()
+a, x, c = input().split()
 
-print('A'+x[0]+'C')
+print('A' + x[0] + 'C')

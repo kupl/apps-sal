@@ -11,6 +11,6 @@ while N != 0:
         binN += "1"
     else:
         binN += "0"
-    N += N%(-2)
+    N += N % (-2)
     N //= -2
 print(binN[::-1])

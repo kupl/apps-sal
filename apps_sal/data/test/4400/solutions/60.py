@@ -4,9 +4,12 @@ def main():
     if s[1] == "R":
         print(cnt)
     else:
-        print(min(cnt,1))
+        print(min(cnt, 1))
     return
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

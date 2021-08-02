@@ -9,7 +9,9 @@ for k in range(m):
         if a > b:
             s += 1
             break
-    if r < s: r = s
+    if r < s:
+        r = s
     else:
-        for j in range(n): p[j] += t[j][k]
+        for j in range(n):
+            p[j] += t[j][k]
 print(s)

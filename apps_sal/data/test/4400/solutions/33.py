@@ -1,6 +1,6 @@
 s = input()
 cnt = s.count("R")
 if s[1] == "R":
-	print(cnt)
+    print(cnt)
 else:
-	print(min(cnt,1))	
+    print(min(cnt, 1))

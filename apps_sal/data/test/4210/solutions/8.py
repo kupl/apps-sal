@@ -28,4 +28,3 @@ for ai in a:
         ans -= 1
 
 print(ans)
-

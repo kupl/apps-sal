@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, m = read()
 a = [input() for i in range(n)]
 ans = 0
@@ -14,4 +16,3 @@ for i in range(m):
     else:
         ind = ind2[:]
 print(ans)
-

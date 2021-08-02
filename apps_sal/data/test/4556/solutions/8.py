@@ -1,3 +1,2 @@
-x=input()
-print(("A"+x[8]+"C"))
-
+x = input()
+print(("A" + x[8] + "C"))

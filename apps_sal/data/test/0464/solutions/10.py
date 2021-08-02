@@ -5,19 +5,21 @@ for i in range(n):
 
 flag = False
 
+
 def check(x, y):
-    if s[x-1][y-1] == s[x-1][y+1] == s[x+1][y-1] == s[x+1][y+1] == '.' and s[x-1][y] == s[x][y] == s[x+1][y] == s[x][y-1] == s[x][y+1] == '*':
+    if s[x - 1][y - 1] == s[x - 1][y + 1] == s[x + 1][y - 1] == s[x + 1][y + 1] == '.' and s[x - 1][y] == s[x][y] == s[x + 1][y] == s[x][y - 1] == s[x][y + 1] == '*':
         return True
     return False
 
+
 def supercheck(x, y):
     k = 1
-    i = x-1
+    i = x - 1
     while i >= 0 and s[i][y] == '*':
         i -= 1
         k += 1
 
-    i = x+1
+    i = x + 1
     while i < n and s[i][y] == '*':
         i += 1
         k += 1
@@ -45,7 +47,8 @@ def supercheck(x, y):
 
 for i in range(1, n - 1):
     for j in range(1, m - 1):
-        if s[i][j] != '*': continue
+        if s[i][j] != '*':
+            continue
         if check(i, j):
             if supercheck(i, j):
                 print('YES')

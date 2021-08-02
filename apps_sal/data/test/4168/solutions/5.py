@@ -2,9 +2,10 @@ N = int(input())
 
 max_digit = 34
 
-bits = [0]*max_digit
+bits = [0] * max_digit
 sign = N > 0
-if N < 0: N = - N
+if N < 0:
+    N = - N
 
 for i in range(N.bit_length()):
     if (N >> i) & 1:
@@ -33,6 +34,7 @@ for i in reversed(range(max_digit)):
     elif flg:
         res += str(bits[i])
 
-if res == '': res = '0'
+if res == '':
+    res = '0'
 
 print(res)

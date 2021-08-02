@@ -21,4 +21,3 @@ for i in range(m):
         ans += 1
 
 print(str(ans))
-

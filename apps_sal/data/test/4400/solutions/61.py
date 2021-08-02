@@ -7,4 +7,3 @@ elif S == "RSS" or S == "SRS" or S == "SSR" or S == "RSR":
     print((1))
 else:
     print((0))
-

@@ -6,4 +6,3 @@ if "R" in s:
     else:
         ans += 1
 print(ans)
-

@@ -1,1 +1,1 @@
-print(*[i[0] for i in input().split()],sep='')
+print(*[i[0] for i in input().split()], sep='')

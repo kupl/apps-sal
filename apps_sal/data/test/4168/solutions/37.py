@@ -10,4 +10,3 @@ while n != 0:
 for u in reversed(d):
     print(u, end='')
 print()
-

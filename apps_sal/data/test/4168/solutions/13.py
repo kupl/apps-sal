@@ -1,4 +1,6 @@
 N = int(input())
+
+
 def solve(N):
     if N == 0:
         return '0'
@@ -8,4 +10,6 @@ def solve(N):
         N >>= 1
         N *= -1
     return ans[::-1]
+
+
 print(solve(N))

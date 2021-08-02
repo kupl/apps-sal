@@ -10,5 +10,3 @@ while N:
     N *= -1
 
 print(("".join(map(str, ans[::-1]))))
-
-

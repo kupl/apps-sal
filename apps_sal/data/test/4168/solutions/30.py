@@ -10,11 +10,10 @@ while(n != 0):
 
     rem = n % 2
 
-    n = (n-rem)//(-2)
+    n = (n - rem) // (-2)
 
     ans.append(rem)
 
 ans.reverse()
 
 print(("".join(map(str, ans))))
-

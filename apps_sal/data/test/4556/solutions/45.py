@@ -5,6 +5,7 @@ def iroha():
     heelC = heel[0]
     print((headC + Capital + heelC))
 
+
 def __starting_point():
     iroha()
 

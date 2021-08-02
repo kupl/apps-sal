@@ -6,7 +6,9 @@ def main():
         n = -(n // 2)
     print((''.join(list(map(str, ans[::-1])))))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

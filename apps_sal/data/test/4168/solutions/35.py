@@ -14,4 +14,3 @@ while abs(N) > 0:
         ans += '1'
     N *= -1
 print((ans[::-1]))
-

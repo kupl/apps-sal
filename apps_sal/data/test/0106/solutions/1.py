@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, m, k = read()
 a, b = read()
 pa = (a - 1) // (m * k) + 1
@@ -14,4 +16,3 @@ else:
     Tf = cnt1 + cnt2
 ans = Tp + Tf
 print(ans)
-

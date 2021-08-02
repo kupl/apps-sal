@@ -1,6 +1,7 @@
 def f(a, b):
     return min(abs(a - b) * 5, abs(a - b) + 10)
 
+
 def main():
     n, m, k = map(int, input().split())
     a, b = map(int, input().split())
@@ -12,7 +13,6 @@ def main():
     else:
         ans += f(ea, 0) + f(eb, 0)
     print(ans)
-    
 
 
 main()

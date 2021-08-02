@@ -11,4 +11,3 @@ for i in range(n_S):
     ma = max(ma, state_r)
 
 print(ma)
-

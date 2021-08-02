@@ -21,7 +21,9 @@ def main():
                 pairs -= 1
     print(pairs)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
