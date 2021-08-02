@@ -38,4 +38,3 @@ for i in range(ln - 1):
     ans += 1
 
 print(ans)
-

@@ -7,11 +7,13 @@ def is_line(b):
         b[i][0] -= x1
         b[i][1] -= y1
     x2 = b[1][0]
-    y2 = b[1][1]    
+    y2 = b[1][1]
     for i in range(2, len(b)):
         if (x2 * b[i][1] != y2 * b[i][0]):
             return False
     return True
+
+
 def main():
     n = int(input())
     if (n < 5):
@@ -48,4 +50,6 @@ def main():
             print("YES")
             return
     print("NO")
-main()    
+
+
+main()

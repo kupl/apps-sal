@@ -9,12 +9,14 @@ def build_graph():
         v = int(line[1])
         c = int(line[2])
         if c not in graph:
-            graph[c] = {j: [] for j in range(1, n+1)}
+            graph[c] = {j: [] for j in range(1, n + 1)}
         graph[c][u].append(v)
         graph[c][v].append(u)
     return graph
 
+
 parent_history = {}
+
 
 def no_of_paths(u, v, graph):
     x = 0
@@ -35,6 +37,7 @@ def no_of_paths(u, v, graph):
             x += 1
     return x
 
+
 def dfs_visit(i, adj_list, parent):
     for j in adj_list[i]:
         if j not in parent:
@@ -48,4 +51,6 @@ def __starting_point():
     for _ in range(int(input())):
         line = input().strip().split()
         print(no_of_paths(int(line[0]), int(line[1]), graph))
+
+
 __starting_point()

@@ -1,7 +1,9 @@
 n = int(input())
+
+
 def check(l):
-    a = b = float('inf') # max points
-    c = d = 0 # min points
+    a = b = float('inf')  # max points
+    c = d = 0  # min points
     for x, y in l:
         a = min(a, x)
         b = min(b, y)
@@ -9,7 +11,7 @@ def check(l):
         d = max(d, y)
     borders = [0] * 4
     for x, y in l:
-        
+
         if x in {a, c}:
             if y < b or y > d:
                 return False

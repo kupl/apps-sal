@@ -15,8 +15,8 @@ for lx in range(0, 50):
         for side_len in range(1, 51):
             ok, idx = True, -1
             for i in range(k):
-                if not (((x[i] == lx or x[i] == lx + side_len) and ly <= y[i] <= ly + side_len) or
-                    ((lx <= x[i] <= lx + side_len) and (y[i] == ly or y[i] == ly + side_len))):
+                if not (((x[i] == lx or x[i] == lx + side_len) and ly <= y[i] <= ly + side_len)
+                        or ((lx <= x[i] <= lx + side_len) and (y[i] == ly or y[i] == ly + side_len))):
                     if idx != -1:
                         ok = False
                     else:
@@ -24,4 +24,3 @@ for lx in range(0, 50):
             if ok:
                 print(x[idx], y[idx])
                 return
-

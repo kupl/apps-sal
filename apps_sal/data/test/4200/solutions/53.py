@@ -9,4 +9,3 @@ for i in range(M):
         return
 
 print('Yes')
-

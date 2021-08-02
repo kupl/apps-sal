@@ -5,10 +5,12 @@ for x in range(n):
     (a, b) = list(map(int, input().split()))
     lst.append((a, b))
 
+
 def scal(x1, y1, x2, y2, x3, y3):
     if (x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1) == 0:
         return True
     return False
+
 
 def check():
     for x in range(n - 2):
@@ -23,6 +25,7 @@ def check():
         if not scal(lst[s2[-3]][0], lst[s2[-3]][1], lst[s2[-2]][0], lst[s2[-2]][1], lst[s2[-1]][0], lst[s2[-1]][1]):
             return False
     return True
+
 
 flag = True
 
@@ -45,4 +48,3 @@ if flag:
     print("YES")
 else:
     print("NO")
-

@@ -4,7 +4,7 @@ line = list(map(int, input().split()))
 pairs = set()
 for i in range(m):
     a, b = list(map(int, input().split()))
-    pairs.add((a,b))
+    pairs.add((a, b))
 
 req = [line.pop()]
 
@@ -22,5 +22,3 @@ while line != []:
         req.append(nex)
 
 print(out)
-        
-

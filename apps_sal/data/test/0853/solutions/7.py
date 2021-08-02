@@ -14,4 +14,3 @@ elif m < 9:
 else:
     x = m // 9
     print('5' * 9 * x + '0' * k)
-

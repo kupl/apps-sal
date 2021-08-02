@@ -15,4 +15,5 @@ def __starting_point():
     print(ans)
     # swapable = [[int(x) for x in input().split()] for _ in range(m)]
 
+
 __starting_point()

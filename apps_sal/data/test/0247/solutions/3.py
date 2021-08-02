@@ -39,4 +39,3 @@ else:
     elif g(n - 1, i) < 0:
         ans = "YES"
 print(ans)
-

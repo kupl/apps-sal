@@ -18,4 +18,3 @@ for index, j in enumerate(l_n, 1):
         break
 
 print(ans)
-

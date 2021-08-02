@@ -7,7 +7,7 @@ for i in a:
     get += i
 
 for i in a:
-    if i*4*m >= get:
+    if i * 4 * m >= get:
         count += 1
 
 if count >= m:

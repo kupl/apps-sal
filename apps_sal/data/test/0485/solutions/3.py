@@ -15,11 +15,13 @@ xmax = max(dx.keys())
 ymin = min(dy.keys())
 ymax = max(dy.keys())
 
+
 def find(enu, f):
     for e in enu:
         if f(e):
             return e
     return None
+
 
 intruder = None
 if dx[xmin] == 1:
@@ -35,4 +37,3 @@ else:
 
 x, y = intruder
 print(x, y)
-

@@ -47,10 +47,10 @@ def main():
 
         fi = None
         si = None
-        for i in range(n-1):
+        for i in range(n - 1):
             if not st[i]:
                 fi = i
-                for j in range(i+1, n):
+                for j in range(i + 1, n):
                     if not st[j]:
                         si = j
                         break
@@ -67,8 +67,6 @@ def main():
         print('YES')
     else:
         print('NO')
-
-
 
 
 main()

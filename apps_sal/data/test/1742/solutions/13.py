@@ -1,9 +1,9 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 p = list(map(int, input().split()))
 p.insert(0, 0)
 
-vis = [0] * (n+7)
-G = [[0] for i in range(n+7)]
+vis = [0] * (n + 7)
+G = [[0] for i in range(n + 7)]
 for i in range(m):
     u, v = list(map(int, input().split()))
     G[v].append(u)
@@ -23,5 +23,3 @@ for i in range(n - 1, 0, -1):
             vis[y] += 1
 
 print(ans)
-    
-

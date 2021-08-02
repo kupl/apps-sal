@@ -6,6 +6,7 @@ def dfs_paths(graph, start, goal, path=list()):
     for vertex in graph[start] - set(path):
         yield from dfs_paths(graph, vertex, goal, path=path + [vertex])
 
+
 n, m = map(int, input().split())
 graph = {}
 

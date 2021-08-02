@@ -32,4 +32,3 @@ else:
         elif Y.count(i[1]) == 1 and (i[1] == u or i[1] == d):
             print(i[0], i[1])
             return
-

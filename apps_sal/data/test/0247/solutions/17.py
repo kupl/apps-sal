@@ -28,7 +28,7 @@ for first in range(3):
     if ok:
         break
 
-    for second in range(first+1, 3):
+    for second in range(first + 1, 3):
         other = f(v, first, second)
 
         if len(other) <= 2:
@@ -45,4 +45,3 @@ if ok:
     print("YES")
 else:
     print("NO")
-

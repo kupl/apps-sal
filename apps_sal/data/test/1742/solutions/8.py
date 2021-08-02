@@ -18,4 +18,3 @@ for i in range(n - 2, -1, -1):
         cant.add(p[i] - 1)
 # print(cant)
 print(n - len(cant))
-

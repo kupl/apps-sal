@@ -7,7 +7,7 @@ seeny = set()
 xs = []
 ys = []
 
-for _ in range(4*n + 1):
+for _ in range(4 * n + 1):
     x, y = list(map(int, input().strip().split()))
     seenx.add(x)
     seeny.add(y)
@@ -34,7 +34,7 @@ if bady == -1:
         bady = maxy
         badx = xs[ys.index(maxy)]
 
-if badx == -1: #the point is inside the square
+if badx == -1:  # the point is inside the square
     for i, x in enumerate(xs):
         if x not in (minx, maxx) and ys[i] not in (miny, maxy):
             badx = x
@@ -42,4 +42,3 @@ if badx == -1: #the point is inside the square
             break
 
 print(badx, bady)
-

@@ -14,6 +14,7 @@ class Vector:
     def mult(self, a):
         return self.y * a.x - self.x * a.y
 
+
 n = int(input())
 points = []
 for i in range(n):
@@ -35,6 +36,7 @@ def onLine(points):
         if a.mult(b) != 0:
             return False
     return True
+
 
 tmp = [points[0], points[1]]
 oth = []
@@ -74,4 +76,3 @@ if onLine(oth):
     return
 
 print('NO')
-

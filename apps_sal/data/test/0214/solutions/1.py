@@ -1,5 +1,6 @@
 3
 
+
 def o(c):
     return c == '0'
 
@@ -12,7 +13,7 @@ def solve(A, B, N):
     c = 0
     while i < N:
         if (o(A[i]) and o(A[i + 1]) and o(A[i + 2])
-            and o(B[i]) and o(B[i + 1]) and o(B[i + 2])):
+                and o(B[i]) and o(B[i + 1]) and o(B[i + 2])):
             c += 2
             i += 3
             continue
@@ -38,5 +39,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -2,6 +2,7 @@ n, m = list(map(int, input().split()))
 mx = [[0x00] * n for i in range(n)]
 used = None
 
+
 def dfs(cur, trg, color):
     if cur == trg:
         return True
@@ -12,6 +13,7 @@ def dfs(cur, trg, color):
                 if dfs(i, trg, color):
                     return True
     return False
+
 
 for i in range(m):
     a, b, c = [int(s) - 1 for s in input().split()]
@@ -27,4 +29,3 @@ for i in range(q):
         if dfs(u, v, 1 << j):
             result += 1
     print(result)
-

@@ -25,9 +25,9 @@ def convex_hull_trick(K, M, integer=True):
         hull_x: interval j and j + 1 is separated by x = hull_x[j], (hull_x[j] is the last x in interval j)
     """
     if integer:
-        intersect = lambda i, j: (M[j] - M[i]) // (K[i] - K[j])
+        def intersect(i, j): return (M[j] - M[i]) // (K[i] - K[j])
     else:
-        intersect = lambda i, j: (M[j] - M[i]) / (K[i] - K[j])
+        def intersect(i, j): return (M[j] - M[i]) / (K[i] - K[j])
 
     assert len(K) == len(M)
 
@@ -43,7 +43,8 @@ def convex_hull_trick(K, M, integer=True):
                 if M[hull_i[-1]] >= M[i]:
                     break
                 hull_i.pop()
-                if hull_x: hull_x.pop()
+                if hull_x:
+                    hull_x.pop()
             else:
                 x = intersect(i, hull_i[-1])
                 if hull_x and x <= hull_x[-1]:
@@ -57,22 +58,22 @@ def convex_hull_trick(K, M, integer=True):
 
 
 def nn2(n):
-    return n * (n+1) // 2
+    return n * (n + 1) // 2
 
 
 def solve(n, m, q, edges):
     # k < m
     # dp[v][k] - max path cost ending in v and having k edges
-    dp = [[-INF]*(m+1) for _ in range(n)]
-    mk = [0]*(m+1)
+    dp = [[-INF] * (m + 1) for _ in range(n)]
+    mk = [0] * (m + 1)
 
     dp[0][0] = 0
 
-    for k in range(1, m+1):
+    for k in range(1, m + 1):
         for e in edges:
-            if dp[e[0]][k-1] == -INF:
+            if dp[e[0]][k - 1] == -INF:
                 continue
-            dp[e[1]][k] = max(dp[e[1]][k], dp[e[0]][k-1] + e[2])
+            dp[e[1]][k] = max(dp[e[1]][k], dp[e[0]][k - 1] + e[2])
             mk[k] = max(mk[k], dp[e[1]][k])
 
     ans = sum(mk) % MOD
@@ -106,10 +107,11 @@ def solve(n, m, q, edges):
             ans = (ans + times * w) % MOD
 
             lt = until
-            if lt == q - m: break
-
+            if lt == q - m:
+                break
 
     return ans
+
 
 def main():
     n, m, q = ria()
@@ -125,5 +127,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

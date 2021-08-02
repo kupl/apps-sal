@@ -8,6 +8,7 @@ import sys
 
 input = sys.stdin.readline
 
+
 def main():
     n, m = list(map(int, input().split()))
     p = list(map(int, input().split()))
@@ -34,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

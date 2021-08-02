@@ -1,5 +1,6 @@
 def colinear(p1, p2, p3):
-    return (p1[0]*(p2[1] - p3[1]) + p2[0]*(p3[1] - p1[1]) + p3[0]*(p1[1] - p2[1])) == 0
+    return (p1[0] * (p2[1] - p3[1]) + p2[0] * (p3[1] - p1[1]) + p3[0] * (p1[1] - p2[1])) == 0
+
 
 def create_options(points):
     p0 = points[0]
@@ -34,6 +35,7 @@ def create_options(points):
             return [(p2, p3), [p0, p1]], 4
     return False, 4
 
+
 def solution(points):
     if len(points) <= 4:
         return True
@@ -42,13 +44,14 @@ def solution(points):
     if not options:
         return False
 
-    for p in points[last+1:]:
+    for p in points[last + 1:]:
         if not colinear(options[0][0], options[0][1], p):
             if len(options[1]) < 2:
                 options[1].append(p)
             elif not colinear(options[1][0], options[1][1], p):
                 return False
     return True
+
 
 def __starting_point():
     n = int(input())
@@ -57,5 +60,6 @@ def __starting_point():
         for _ in range(n)
     ]
     print("YES" if solution(points) else "NO")
+
 
 __starting_point()

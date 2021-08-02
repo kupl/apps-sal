@@ -19,5 +19,6 @@ def main():
             b[i], a[i + 1], b[i + 1] = 1, 1, 1
     print(c)
     return 0
-main()
 
+
+main()

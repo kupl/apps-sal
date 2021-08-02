@@ -10,7 +10,7 @@ for i in range(n):
 while s5 % 9 and s5:
     s5 -= 1
 if s5 and s0:
-    print(s5*'5' + '0'*s0)
+    print(s5 * '5' + '0' * s0)
 elif s0:
     print(0)
 else:

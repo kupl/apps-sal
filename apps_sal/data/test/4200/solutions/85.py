@@ -10,4 +10,3 @@ if all([x >= total / (4 * m) for x in a[:m]]):
     print('Yes')
 else:
     print('No')
-

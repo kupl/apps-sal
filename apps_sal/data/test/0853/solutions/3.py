@@ -12,4 +12,3 @@ elif Fives < 9:
     print(0)
 else:
     print("5" * (Fives // 9 * 9) + "0" * Zeros)
-
