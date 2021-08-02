@@ -13,11 +13,11 @@ for i in range(k):
     if A[i - 1][j] == 1 and A[i - 1][j + 1] == 1 and A[i][j + 1] == 1:
         print(counter)
         flag = False
-        break        
+        break
     if A[i][j - 1] == 1 and A[i + 1][j - 1] == 1 and A[i + 1][j] == 1:
         print(counter)
         flag = False
-        break        
+        break
     if A[i][j + 1] == 1 and A[i + 1][j] == 1 and A[i + 1][j + 1] == 1:
         print(counter)
         flag = False

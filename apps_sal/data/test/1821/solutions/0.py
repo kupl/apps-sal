@@ -1,10 +1,11 @@
 import sys
 
+
 def solve():
     n = int(sys.stdin.readline())
     a = [0] + [int(i) for i in sys.stdin.readline().split()]
 
-    dp = [[0]*(n + 1) for i in range(n + 1)]
+    dp = [[0] * (n + 1) for i in range(n + 1)]
     ans = 0
 
     maxnum = [0] * (10**5 + 2)
@@ -29,6 +30,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

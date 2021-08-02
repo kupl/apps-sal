@@ -9,6 +9,3 @@ for i in range(len(a)):
     for s in a[i][0].split('_'):
         x = max(x, len(s))
 print(x, y)
-    
-        
-

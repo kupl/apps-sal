@@ -1,15 +1,15 @@
 input()
 s = input()
 
-ans = [ "", "" ]
+ans = ["", ""]
 cur = 0
 for c in s:
     if c == '(':
-        ans[cur]+='_'
-        cur+=1
+        ans[cur] += '_'
+        cur += 1
     elif c == ')':
-        ans[cur]+='_'
-        cur-=1
+        ans[cur] += '_'
+        cur -= 1
     else:
         ans[cur] += c
 for i in range(2):
@@ -19,4 +19,3 @@ for i in range(2):
 # print(ans[1])
 
 print(max([0] + [len(w) for w in ans[0]]), sum(1 if w else 0 for w in ans[1]))
-

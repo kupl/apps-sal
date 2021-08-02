@@ -7,6 +7,7 @@ def count_words(s: str, balance: int):
     s = list([x for x in s.split('_') if x != ''])
     return len(s)
 
+
 def get_len(s: str, balance: int):
     if balance == 1:
         return 0
@@ -14,6 +15,7 @@ def get_len(s: str, balance: int):
     if len(s) == 0:
         return 0
     return max(list(map(len, s)))
+
 
 def main():
     n = int(input())
@@ -31,5 +33,5 @@ def main():
             balance -= 1
     print(l, q)
 
-main()
 
+main()

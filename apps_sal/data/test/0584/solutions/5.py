@@ -33,5 +33,3 @@ if st:
     st = 0
 
 print(A, B)
-
-

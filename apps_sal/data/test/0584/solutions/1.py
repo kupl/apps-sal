@@ -18,4 +18,3 @@ for i in inclam:
     count += len(list([_f for _f in i.replace("(", "_").replace(")", "_").split("_") if _f]))
 
 print(c, count)
-

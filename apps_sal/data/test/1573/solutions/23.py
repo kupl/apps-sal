@@ -14,6 +14,7 @@ while r != len(sumcute):
     while r != len(sumcute) - 1 and friends[r + 1][0] - friends[l][0] < d:
         r += 1
     ans = max(sumcute[r] - sumcute[l - 1], ans)
-    if r == len(sumcute) - 1: r += 1
+    if r == len(sumcute) - 1:
+        r += 1
     l += 1
 print(ans)

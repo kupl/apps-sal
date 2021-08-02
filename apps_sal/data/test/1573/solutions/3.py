@@ -11,5 +11,3 @@ for right in range(n):
     if cur_sum > max_sum:
         max_sum = cur_sum
 print(max_sum)
-    
-

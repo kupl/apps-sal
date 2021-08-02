@@ -21,5 +21,3 @@ for i in range(1, n):
     bestFriendship = max(bestFriendship, totalFriendship)
 
 print(bestFriendship)
-
-

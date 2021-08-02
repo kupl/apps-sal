@@ -34,4 +34,3 @@ elif o == 101:
     print(200)
 else:
     print(o)
-

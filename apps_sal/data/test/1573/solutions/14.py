@@ -23,6 +23,4 @@ for i in range(n):
             r = mi
 
     ans = max(ans, pr[l + 1] - pr[i])
-print(ans)    
-        
-
+print(ans)

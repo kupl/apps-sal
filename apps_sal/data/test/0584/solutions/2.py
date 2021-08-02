@@ -26,4 +26,3 @@ for w in word:
         mx = max(mx, len(w))
 
 print(mx, cntI)
-

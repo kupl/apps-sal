@@ -1,5 +1,6 @@
 __author__ = 'User'
 
+
 def p(x):
     l = 0
     r = n
@@ -11,6 +12,7 @@ def p(x):
             r = m
     return l
 
+
 def p2(x):
     l = -1
     r = n - 1
@@ -21,7 +23,9 @@ def p2(x):
         else:
             r = m
     return r
-n, d = list(map(int,input().split()))
+
+
+n, d = list(map(int, input().split()))
 arr = [0] * n
 summ = [0] * n
 s = 0
@@ -33,16 +37,15 @@ for i in range(n):
     s += arr[i][1]
 summ.append(0)
 mx = 0
-#print(arr)
+# print(arr)
 c = 0
 for i in arr:
     r = p(i[0] + (d - 1))
     l = p2(i[0])
     #print(l, r)
     s = summ[r] - summ[l - 1]
-    #print(s)
+    # print(s)
     mx = max(mx, s)
 print(mx)
-#print(summ)
-#print(p(70))
-
+# print(summ)
+# print(p(70))

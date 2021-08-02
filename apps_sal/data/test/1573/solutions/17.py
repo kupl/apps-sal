@@ -1,4 +1,5 @@
-r = lambda: list(map(int, input().split()))
+def r(): return list(map(int, input().split()))
+
 
 n, d = r()
 a = sorted(tuple(r()) for i in range(n))
@@ -15,6 +16,5 @@ for m, s in a:
             i += 1
         Min = a[i][0]
     Max = max(Max, cur)
-        
-print(Max)
 
+print(Max)
