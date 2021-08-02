@@ -1,6 +1,6 @@
 s = input()
 
 if ('a' in s) and ('b' in s) and ('c' in s):
-   print('Yes')
+    print('Yes')
 else:
-   print('No')
+    print('No')

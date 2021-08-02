@@ -13,4 +13,3 @@ else:
         if s % n != 0:
             k += 1
         print(mu - k)
-

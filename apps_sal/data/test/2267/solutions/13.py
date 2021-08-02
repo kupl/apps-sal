@@ -18,6 +18,7 @@ def cmp(s1, s2):
     return 0
 """
 
+
 def cmp(s1, s2):
     z1, z2 = s1 + s2, s2 + s1
     if z1 < z2:
@@ -26,6 +27,7 @@ def cmp(s1, s2):
         return 1
     else:
         return 0
+
 
 strings.sort(key=cmp_to_key(cmp))
 for string in strings:

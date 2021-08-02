@@ -1,5 +1,4 @@
-if ''.join(sorted(input()))=="abc":
+if ''.join(sorted(input())) == "abc":
     print("Yes")
 else:
     print("No")
-

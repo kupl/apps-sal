@@ -12,6 +12,3 @@ if len(abc_list) == 0:
     print('Yes')
 else:
     print('No')
-    
-
-

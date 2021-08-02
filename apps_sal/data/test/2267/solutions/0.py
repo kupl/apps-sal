@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 from functools import cmp_to_key
+
+
 def cmpEqLen(a, b):
     if a < b:
         return -1
@@ -8,6 +10,7 @@ def cmpEqLen(a, b):
         return 1
     else:
         return 0
+
 
 def compare(a, b):
     alen = len(a)
@@ -24,8 +27,8 @@ def compare(a, b):
     else:
         return compare(b[:l], b[l:])
 
+
 N = int(input())
 arr = [input() for _ in range(N)]
 arr.sort(key=cmp_to_key(compare))
 print(''.join(arr))
-

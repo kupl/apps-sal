@@ -1,9 +1,9 @@
 import numpy as np
 
-S=input()
+S = input()
 
 s = [st for st in S]
 if len(np.unique(s)) == 3:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

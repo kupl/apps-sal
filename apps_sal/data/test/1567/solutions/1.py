@@ -7,8 +7,10 @@ for i in range(1, 6 * 10 ** 5):
     curr %= MOD
     fact.append(curr)
 
+
 def inv(x):
     return pow(x, MOD - 2, MOD)
+
 
 n, k = list(map(int, input().split()))
 out = 0
@@ -23,7 +25,3 @@ for i in range(1, n + 1):
         out += binom
         out %= MOD
 print(out)
-    
-    
-    
-

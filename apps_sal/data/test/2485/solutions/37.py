@@ -17,9 +17,8 @@ ans = 0
 
 for h, sh in ih:
     for w, sw in iw:
-        if sh+sw < s or ans == s:
+        if sh + sw < s or ans == s:
             break
         b = sh + sw - ((h, w) in used)
         ans = max(ans, b)
 print(ans)
-

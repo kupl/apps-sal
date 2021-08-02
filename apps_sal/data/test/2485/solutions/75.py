@@ -9,7 +9,7 @@ for i in range(M):
     w -= 1
     col[h] += 1
     row[w] += 1
-    memo.append((h,w))
+    memo.append((h, w))
 
 col_max = col.max()
 row_max = row.max()
@@ -21,7 +21,7 @@ ans = col_max + row_max - 1
 memo = set(memo)
 for c in col_max_indexes:
     for r in row_max_indexes:
-        if (c,r) not in memo:
+        if (c, r) not in memo:
             ans = col_max + row_max
             print(int(ans))
             return

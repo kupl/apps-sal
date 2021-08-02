@@ -3,6 +3,8 @@ import math
 import sys
 
 #n, p = map(int, input().split())
+
+
 def cmp(x, y):
     if x < y:
         return -1
@@ -10,7 +12,7 @@ def cmp(x, y):
         return 1
     else:
         return 0
-    
-print(("".join(sorted([s.rstrip() for s in sys.stdin.readlines()[1:]], \
-key=functools.cmp_to_key(lambda x,y: cmp(x + y, y + x))))))
 
+
+print(("".join(sorted([s.rstrip() for s in sys.stdin.readlines()[1:]],
+                      key=functools.cmp_to_key(lambda x, y: cmp(x + y, y + x))))))

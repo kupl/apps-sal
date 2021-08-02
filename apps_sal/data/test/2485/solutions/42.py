@@ -1,6 +1,6 @@
+from collections import Counter, defaultdict
 import sys
 input = sys.stdin.readline
-from collections import Counter, defaultdict
 
 
 def read():
@@ -38,5 +38,6 @@ def __starting_point():
     outputs = solve(*inputs)
     if outputs is not None:
         print(("%s" % str(outputs)))
+
 
 __starting_point()

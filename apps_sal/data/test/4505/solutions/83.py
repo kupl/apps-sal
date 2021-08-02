@@ -1,1 +1,1 @@
-print("Yes" if "".join(sorted(input()))=="abc" else "No")
+print("Yes" if "".join(sorted(input())) == "abc" else "No")

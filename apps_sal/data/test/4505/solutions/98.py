@@ -9,6 +9,6 @@ def atc_093a(input_value):
     except ValueError:
         return "No"
 
+
 input_value = input()
 print((atc_093a(input_value)))
-

@@ -32,6 +32,6 @@ for x in e1:
         break
 
 if flag:
-    print(m1+m2-1)
+    print(m1 + m2 - 1)
 else:
-    print(m1+m2)
+    print(m1 + m2)

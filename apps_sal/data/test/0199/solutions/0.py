@@ -8,7 +8,7 @@ def doit():
     newS = S - s
     if newS < 0:
         return -1
-    return min(newS//n, min(v))
-        
-print(doit())
+    return min(newS // n, min(v))
 
+
+print(doit())

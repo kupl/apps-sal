@@ -8,7 +8,7 @@ for i in range(W):
     cols.append([i, 0])
 for i in range(M):
     y, x = map(lambda x: x - 1, map(int, input().split()))
-    bombs[(y,x)] = True
+    bombs[(y, x)] = True
     rows[y][1] += 1
     cols[x][1] += 1
 

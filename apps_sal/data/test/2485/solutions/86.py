@@ -33,4 +33,3 @@ for y in Y:
             return
 
 print((my + mx - 1))
-

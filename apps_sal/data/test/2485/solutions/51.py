@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     readline = sys.stdin.readline
     H, W, M = map(int, readline().split())
@@ -12,22 +13,25 @@ def solve():
         y -= 1
         h[y] += 1
         w[x] += 1
-        b.add(y*W+x)
+        b.add(y * W + x)
     h = sorted(zip(h, range(H)), reverse=True)
     ans = 0
     for i in range(W):
         x = w[i]
         for y, j in h:
-            if x+y > ans:
-                if j*W+i in b:
-                    ans = x+y-1
+            if x + y > ans:
+                if j * W + i in b:
+                    ans = x + y - 1
                 else:
-                    ans = x+y
+                    ans = x + y
                     break
             else:
                 break
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

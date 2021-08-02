@@ -9,4 +9,3 @@ if 'abc' == S_ascending_order:
     print('Yes')
 else:
     print('No')
-

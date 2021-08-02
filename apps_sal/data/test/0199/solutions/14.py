@@ -9,4 +9,4 @@ s -= sm - m * n
 if s <= 0:
     print(m)
 else:
-    print(m - (s + n - 1)//n)
+    print(m - (s + n - 1) // n)
