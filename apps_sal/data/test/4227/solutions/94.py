@@ -1,10 +1,10 @@
 import itertools
 
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 
-path = [[False]*n for i in range(n)]
+path = [[False] * n for i in range(n)]
 for i in range(m):
-    a,b = map(int,input().split())
+    a, b = map(int, input().split())
     a -= 1
     b -= 1
     path[a][b] = True
@@ -12,16 +12,16 @@ for i in range(m):
 
 ans = 0
 
-for i in itertools.permutations(range(n),n):
-    #頂点が0のものだけ抽出
+for i in itertools.permutations(range(n), n):
+    # 頂点が0のものだけ抽出
     if i[0] == 0:
-        #確かめる
+        # 確かめる
         for j in range(n):
             if j == n - 1:
                 ans += 1
                 break
 
-            if not path[i[j]][i[j+1]]:
+            if not path[i[j]][i[j + 1]]:
                 break
 
 print(ans)

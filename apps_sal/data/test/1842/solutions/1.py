@@ -10,4 +10,3 @@ if D == 0:
 else:
     print(max(x1, x2))
     print(min(x1, x2))
-

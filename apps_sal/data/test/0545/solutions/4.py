@@ -4,6 +4,7 @@ def f(sa, sb):
         ans += sa[i] != sb[i]
     return ans
 
+
 def third(a0, b0):
     if a0 != "a" and b0 != "a":
         return "a"
@@ -11,11 +12,13 @@ def third(a0, b0):
         return "b"
     if a0 != "c" and b0 != "c":
         return "c"
+
+
 n, t = list(map(int, input().split()))
 s1 = input()
 s2 = input()
-sovp = n - f(s1, s2) #совпадающих из нашей строки
-needsovp = n - t #необходимо совпадающих
+sovp = n - f(s1, s2)  # совпадающих из нашей строки
+needsovp = n - t  # необходимо совпадающих
 ans = [0] * n
 need1r = needsovp - sovp
 need2r = needsovp - sovp
@@ -49,4 +52,3 @@ else:
         print(-1)
     else:
         print(*ans, sep="")
-

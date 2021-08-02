@@ -1,5 +1,5 @@
-X,A = (int(x) for x in input().split())
+X, A = (int(x) for x in input().split())
 if X < A:
-  print(0)
+    print(0)
 else:
-  print(10)
+    print(10)

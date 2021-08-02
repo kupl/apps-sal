@@ -34,6 +34,8 @@ for i, j in shopD.items():
 total = sum(nList)
 coin = 0
 day = 0
+
+
 def modifyMis(t, left):
     if left == 0:
         for ii in range(len(mHis))[::-1]:
@@ -43,6 +45,8 @@ def modifyMis(t, left):
         for ii in range(len(mHis))[::-1]:
             if mHis[ii]['t'] == t:
                 mHis[ii]['n'] = left
+
+
 while total > 0 and day < maxD:
     coin += 1
     day += 1
@@ -87,10 +91,10 @@ while total > 0 and day < maxD:
                 oHis[day - 1]['n'].append(buy)
                 total -= buy
                 bList[t - 1] += buy
-                modifyMis(t, nList[t - 1] - bList[t - 1])  
+                modifyMis(t, nList[t - 1] - bList[t - 1])
                 coin -= buy
             if nList[t - 1] - bList[t - 1] > 0:
-                mHis.append({'d': day, 't': t, 'n': nList[t - 1] - bList[t - 1]}) 
+                mHis.append({'d': day, 't': t, 'n': nList[t - 1] - bList[t - 1]})
     if coin >= total * 2:
         break
 day += max(total * 2 - coin, 0)

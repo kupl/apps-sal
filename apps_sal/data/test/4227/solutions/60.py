@@ -43,7 +43,7 @@ def resolve():
     N, M = list(map(int, input().split()))
     P = [list(map(int, input().split())) for _ in range(M)]
 
-    R = itertools.permutations(list(range(1, N+1)))
+    R = itertools.permutations(list(range(1, N + 1)))
 
     ans = 0
     for r in R:
@@ -53,7 +53,7 @@ def resolve():
             break
         for i in range(1, N):
             for p in P:
-                if (r[i-1] == p[0] and r[i] == p[1]) or (r[i-1] == p[1] and r[i] == p[0]):
+                if (r[i - 1] == p[0] and r[i] == p[1]) or (r[i - 1] == p[1] and r[i] == p[0]):
                     break
             else:
                 flag = False
@@ -66,5 +66,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

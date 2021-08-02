@@ -10,6 +10,7 @@ checked = [False for _ in range(n)]
 
 ans = 0
 
+
 def dfs(v):
     nonlocal ans
     if all(checked):
@@ -22,7 +23,7 @@ def dfs(v):
             checked[u - 1] = False
     return
 
+
 checked[0] = True
 dfs(1)
 print(ans)
-

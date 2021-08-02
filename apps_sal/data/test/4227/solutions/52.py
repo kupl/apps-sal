@@ -11,7 +11,7 @@ def abc054c_one_stroke_path():
     for p in pattern:
         p_m = [1] + list(p)
         for i in range(n - 1):
-            if p_m[i+1] not in e[p_m[i]]:
+            if p_m[i + 1] not in e[p_m[i]]:
                 break
         else:
             cnt += 1

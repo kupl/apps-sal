@@ -1,1 +1,1 @@
-X,A=map(int,input().split());print((X>=A)*10)
+X, A = map(int, input().split()); print((X >= A) * 10)

@@ -7,7 +7,7 @@ N, M = [int(i) for i in input().split()]
 K = [0] + [int(i) for i in input().split()]
 
 sumK = sum(K)
-max_days = 2*sum(K)
+max_days = 2 * sum(K)
 
 day_at_sale_per_item = defaultdict(list)
 for i in range(M):
@@ -22,7 +22,7 @@ for item, days in list(day_at_sale_per_item.items()):
 L, R = 0, max_days
 answer = 0
 while L <= R:
-    m = (L+R)//2
+    m = (L + R) // 2
 
     def get_best_sales(m):
         best_sales = defaultdict(list)
@@ -42,7 +42,7 @@ while L <= R:
 
         best_sales = get_best_sales(m)
 
-        for day in range(1, m+1):
+        for day in range(1, m + 1):
             available_money += 1
             for item in best_sales[day]:
                 buy = min(cK[item], available_money)
@@ -59,8 +59,7 @@ while L <= R:
 
     if possible(m):
         answer = m
-        R = m-1
+        R = m - 1
     else:
-        L = m+1
+        L = m + 1
 print(answer)
-

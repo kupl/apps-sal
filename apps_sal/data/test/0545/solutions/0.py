@@ -1,9 +1,9 @@
 def main():
     import sys
-    
+
     n, t, s1, s2 = sys.stdin.read().split()
     n, t = int(n), int(t)
-    
+
     result = [-1] * n
     rest = n - t
     for i in range(n):
@@ -22,7 +22,7 @@ def main():
         if k == 0: break
         if result[i] == -1:
             result[i] = s2[i]
-            k -= 1    
+            k -= 1
     if k > 0:
         print(-1)
         return
@@ -32,7 +32,8 @@ def main():
                 if chr(j) != s1[i] and chr(j) != s2[i]:
                     result[i] = chr(j)
                     break
-    
+
     sys.stdout.write(''.join(result))
-    
+
+
 main()

@@ -4,4 +4,3 @@ x = (-b + D ** 0.5) / 2 / a
 y = (-b - D ** 0.5) / 2 / a
 print(max(x, y))
 print(min(x, y))
-

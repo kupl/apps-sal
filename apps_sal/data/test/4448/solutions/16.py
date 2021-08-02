@@ -5,16 +5,16 @@ def main():
     n, m = list(map(int, input().split()))
     wanted_cnt = list(map(int, input().split()))
     Order = [tuple(map(int, input().split())) for i in range(m)]
-    #count the maximum number which you can buy on sales day.
+    # count the maximum number which you can buy on sales day.
     S = sum(wanted_cnt)
 
     def ispossible_within(Day):
         sale_get_cnt = 0
-        last_sale = [0]*n
+        last_sale = [0] * n
         for day, good in Order:
             if day > Day:
                 continue
-            last_sale[good-1] = max(last_sale[good-1], day)
+            last_sale[good - 1] = max(last_sale[good - 1], day)
         Que = []
         for i in range(n):
             if wanted_cnt[i] > 0 and last_sale[i] > 0:
@@ -31,12 +31,12 @@ def main():
         left_money = Day - sale_get_cnt
         left = S - sale_get_cnt
 
-        return left_money >= 2*left
+        return left_money >= 2 * left
 
     impossible = 0
     possible = 2020
     while possible - impossible > 1:
-        m = (impossible + possible)//2
+        m = (impossible + possible) // 2
         if ispossible_within(m):
             possible = m
         else:

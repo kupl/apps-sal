@@ -11,7 +11,7 @@ for _ in range(M):
 def dfs(v, seen):
     if seen == [1] * N:
         return 1
-    
+
     res = 0
     for nv in to[v]:
         if not seen[nv]:
@@ -24,10 +24,11 @@ def dfs(v, seen):
 def main():
     seen = [0] * N
     seen[0] = 1
-    print((dfs(0, seen)))    
+    print((dfs(0, seen)))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

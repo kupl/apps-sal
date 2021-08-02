@@ -1,2 +1,2 @@
-x,a=map(int, input().split())
-print(10*(x>=a))
+x, a = map(int, input().split())
+print(10 * (x >= a))

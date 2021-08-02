@@ -5,4 +5,3 @@ ans2 = (-b - D) / (2 * a)
 if ans1 < ans2: ans1, ans2 = ans2, ans1
 print(ans1)
 print(ans2)
-

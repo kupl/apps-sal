@@ -1,16 +1,16 @@
 import copy
 from collections import deque
 
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 
 e = [[] for i in range(n)]
 for i in range(m):
-    a, b = map(int,input().split())
+    a, b = map(int, input().split())
     a -= 1
     b -= 1
     e[a].append(b)
     e[b].append(a)
-visited = [False]*n
+visited = [False] * n
 visited[0] = True
 d = deque([[0, visited]])
 
