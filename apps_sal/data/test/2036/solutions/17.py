@@ -31,4 +31,3 @@ for i in range(1, x):
             if (i, g) == (x, y):
                 continue
             print(i, g)
-

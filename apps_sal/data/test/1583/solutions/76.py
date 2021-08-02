@@ -8,4 +8,3 @@ else:
 
 theta = numpy.rad2deg(theta)
 print(theta)
-

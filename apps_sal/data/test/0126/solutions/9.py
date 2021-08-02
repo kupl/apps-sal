@@ -14,15 +14,14 @@ def works(numbers):
         return False
 
 
-n=int(input())
-line=input()
-numbers={}
-for i in range (10):
-    numbers[i]=False
+n = int(input())
+line = input()
+numbers = {}
+for i in range(10):
+    numbers[i] = False
 for ch in line:
-    numbers[int(ch)]=True
+    numbers[int(ch)] = True
 if works(numbers):
-    print ("YES")
+    print("YES")
 else:
     print("NO")
-

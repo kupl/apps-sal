@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
 from math import pi, sqrt
@@ -37,9 +38,6 @@ def lcm(a, b):
     return a / g * b
 
 
-import math
-
-
 def solve():
     A, B, X = list(map(int, input().split()))
     X /= A
@@ -62,5 +60,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

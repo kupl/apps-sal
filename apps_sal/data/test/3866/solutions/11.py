@@ -8,4 +8,3 @@ else:
     for i in range(n):
         a.append((i + i) % n)
     print(*a)
-

@@ -5,7 +5,7 @@ print(Sx, Sy)
 for x in range(1, n + 1):
     if x == Sx:
         continue
-    
+
     print(x, Sy)
 
 for y in range(1, m + 1):

@@ -12,4 +12,3 @@ else:
     rad = math.atan2(b, w)
 
 print((rad / (2 * math.pi) * 360))
-

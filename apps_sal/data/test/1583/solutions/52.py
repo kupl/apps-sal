@@ -10,4 +10,3 @@ else:
 
 ans = math.degrees(theta)
 print(ans)
-

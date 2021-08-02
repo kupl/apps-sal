@@ -21,4 +21,3 @@ while bad - good > eps:
     else:
         bad = mid
 print((degrees(good)))
-

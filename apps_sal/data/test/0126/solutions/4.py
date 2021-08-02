@@ -52,8 +52,9 @@ def main():
     }
     print('NO' if any(all(can[n] for n in seq) for can in (LEFT, RIGHT, UP, DOWN)) else 'YES')
 
-    
+
 def __starting_point():
     main()
+
 
 __starting_point()

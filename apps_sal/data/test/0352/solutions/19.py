@@ -13,6 +13,3 @@ a_2 = min(max_2, n - a_1 - min_3)
 a_3 = n - a_1 - a_2
 
 print(str(a_1) + " " + str(a_2) + " " + str(a_3))
-
-
-

@@ -7,4 +7,4 @@ d1 = min(n - min2 - min3, max1)
 d2 = min(n - d1 - min3, max2)
 d3 = n - d1 - d2
 
-print(d1,d2,d3)
+print(d1, d2, d3)

@@ -18,6 +18,3 @@ for i in range(1, n + 1):
 
 for t in result:
     print(t[0], t[1])
-        
-        
-

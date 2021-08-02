@@ -1,28 +1,28 @@
 def fact(n):
     resq = 1
-    for i in range(1,n+1):
+    for i in range(1, n + 1):
         resq *= i
     return resq
- 
+
+
 def f(n):
     l = fact(n) * n
-    ans = l * (l-n+2) // 2
-    for i in range(1,n):
-        ans -= fact(n) // fact(i+1) * n * (i * (n-i) - 1)
+    ans = l * (l - n + 2) // 2
+    for i in range(1, n):
+        ans -= fact(n) // fact(i + 1) * n * (i * (n - i) - 1)
     return ans
-  
+
+
 def g(n):
     M = 998244353
     p = n
     a = 0
-    for j in range(n,1,-1):
-        a=(a+p*(j-1)*(n-j+1)-p)%M
-        p=p*j%M
-    a=(p*(p-n+2)-a-a)%M
-    if a&1:a+=M
-    return a//2
- 
-print(g(int(input())))
-	 		
-			    		 				     	   	    	
+    for j in range(n, 1, -1):
+        a = (a + p * (j - 1) * (n - j + 1) - p) % M
+        p = p * j % M
+    a = (p * (p - n + 2) - a - a) % M
+    if a & 1: a += M
+    return a // 2
 
+
+print(g(int(input())))

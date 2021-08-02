@@ -6,4 +6,3 @@ else:
     print(*list(range(n)))
     print(*list(range(n)))
     print(*((i + i) % n for i in range(n)))
-

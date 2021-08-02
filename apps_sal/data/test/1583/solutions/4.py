@@ -8,4 +8,3 @@ if a * a * b / 2 >= x:
 else:
     c = 2 * x / a / a - b
     print((degrees(atan2(b - c, a))))
-

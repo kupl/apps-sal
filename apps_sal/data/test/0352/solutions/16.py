@@ -15,4 +15,3 @@ else:
             s += mx_2 - m_2
             ans[2] += min(n - s, mx_3 - m_3)
     print(*ans)
-

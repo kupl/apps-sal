@@ -7,7 +7,7 @@ x -= 1; y -= 1
 ans = []
 for _ in range(n):
     for j in range(m):
-        ans.append((x+1, y+1))
+        ans.append((x + 1, y + 1))
         if j != m - 1:
             y = (y + 1) % m
         else:

@@ -57,4 +57,3 @@ for digit in set('1234567890') - set(number[0]):
         break
 else:
     print('YES')
-

@@ -5,4 +5,4 @@ if n % 2 == 0:
 else:
     print(" ".join(map(str, range(n))))
     print(" ".join(map(str, range(n))))
-    print(" ".join(map(str, [2*x % n for x in range(n)])))
+    print(" ".join(map(str, [2 * x % n for x in range(n)])))

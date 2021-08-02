@@ -16,5 +16,4 @@ else:
     a = max1
     b = n - c - a
 
-print(str(a) + ' '+ str(b) + ' ' + str(c))
-
+print(str(a) + ' ' + str(b) + ' ' + str(c))

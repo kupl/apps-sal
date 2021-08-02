@@ -2,9 +2,9 @@ n = int(input())
 L = [int(x) for x in input()]
 
 C = [None] * 10
-p={}
-for i in range(1,10):
-    C[i] = ((i-1)//3, (i-1)%3)
+p = {}
+for i in range(1, 10):
+    C[i] = ((i - 1) // 3, (i - 1) % 3)
     p[C[i]] = True
 C[0] = (3, 1)
 p[C[0]] = True
@@ -26,4 +26,3 @@ if cnt == 1:
     print('YES')
 else:
     print('NO')
-
