@@ -4,13 +4,15 @@ from collections import deque
 def removeUsed(adj, used):
     to_remove = []
     for s in adj:
-        if used[s]: to_remove.append(s)
+        if used[s]:
+            to_remove.append(s)
     for s in to_remove:
         adj.remove(s)
 
 
 def solve(a, s):  # a - adjacenct list [[],[]...], seq
-    if s[0] != 0: return False
+    if s[0] != 0:
+        return False
     q = deque()
     q.append(0)
     i, n, cur = 1, len(a), -1

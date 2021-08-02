@@ -39,7 +39,8 @@ def simpl(lst):
             if streak_same == 0:
                 same_starts = pos - 1
                 streak_same = 2
-            else: streak_same += 1
+            else:
+                streak_same += 1
         else:
             if streak_same > 0:
                 res.append(Same(prv, streak_same, same_starts, pos))
@@ -82,7 +83,8 @@ def alter_col(start, size):
     for i in range(size):
         if i % 2 == 0:
             res.append(start)
-        else: res.append(oth)
+        else:
+            res.append(oth)
     return ''.join(res)
 
 
@@ -103,7 +105,8 @@ def compute_alter(size, prv_col, nxt_col, k):
 
 def simulate(splitted, k):
     res = [splitted[0].col * splitted[0].size]
-    if len(splitted) == 1: return res
+    if len(splitted) == 1:
+        return res
     for i in range(1, len(splitted) - 1):
         prv, curr, nxt = splitted[i - 1], splitted[i], splitted[i + 1]
         if isinstance(curr, Alter):
@@ -165,7 +168,8 @@ def sim_slow(lst, k):
             nB = [prv, curr, nxt].count('B')
             if nW >= 2:
                 nxt_lst[i] = 'W'
-            else: nxt_lst[i] = 'B'
+            else:
+                nxt_lst[i] = 'B'
         lst = nxt_lst
     return ''.join(lst)
 

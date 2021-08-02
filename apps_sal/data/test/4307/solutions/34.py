@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 N = int(input())
 ans = 0
 for n in range(1, N + 1, 2):

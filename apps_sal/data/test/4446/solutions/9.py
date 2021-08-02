@@ -22,12 +22,15 @@ def main():
     t = [0 for i in range(n)]
     for i in range(n):
         w = (a + b) * (q[i] % (a + b) == 0) + q[i] % (a + b)
-        if w <= a: continue
-        else: t[i] = ((w + a - 1) // a) - 1
+        if w <= a:
+            continue
+        else:
+            t[i] = ((w + a - 1) // a) - 1
     t = sorted(t)
     res = 0
     for i in range(n):
-        if t[i] > k: break
+        if t[i] > k:
+            break
         res += 1
         k -= t[i]
     print(res)

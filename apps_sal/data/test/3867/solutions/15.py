@@ -10,12 +10,16 @@ a = list(map(int, input().split()))
 
 
 def solve(a):
-    if a[0] != 1: return 'No'
+    if a[0] != 1:
+        return 'No'
     i, j = 1, 0
     while i < n and j < n:
-        if a[j] in d[a[i]]: i += 1
-        else: j += 1
-    if j == n and i != n: return 'No'
+        if a[j] in d[a[i]]:
+            i += 1
+        else:
+            j += 1
+    if j == n and i != n:
+        return 'No'
     return 'Yes'
 
 

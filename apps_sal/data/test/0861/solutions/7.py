@@ -12,9 +12,13 @@ def sum_dist(n):
 
 for i in range(1, m + 1):
     result += 2 * R
-    if i - 1 > 0: result += 2 * R + D
-    if m - i > 0: result += 2 * R + D
-    if i - 2 > 0: result += sum_dist(i - 2)
-    if m - i - 1 > 0: result += sum_dist(m - i - 1)
+    if i - 1 > 0:
+        result += 2 * R + D
+    if m - i > 0:
+        result += 2 * R + D
+    if i - 2 > 0:
+        result += sum_dist(i - 2)
+    if m - i - 1 > 0:
+        result += sum_dist(m - i - 1)
 
 print(result / m / m)

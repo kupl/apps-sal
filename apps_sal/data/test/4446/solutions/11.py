@@ -9,8 +9,10 @@ for h in H:
     if not h:
         h += a + b
     x = (h - 1) // a
-    if x: TQ.append(x)
-    else: ans += 1
+    if x:
+        TQ.append(x)
+    else:
+        ans += 1
 
 TQ.sort()
 
