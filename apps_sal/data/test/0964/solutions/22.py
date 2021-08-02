@@ -24,7 +24,7 @@ def solve(x1, y1, x2, y2, x3, y3):
 
     area = sum(x * y for (x, y) in pairs)
     side = math.floor(math.sqrt(area))
-    if side*side != area:
+    if side * side != area:
         return None
 
     count = [y1, y2, y3].count(side)
@@ -65,8 +65,8 @@ def solve(x1, y1, x2, y2, x3, y3):
             c1, (x1, y1) = result[1]
             c2, (x2, y2) = result[2]
 
-            top = [c*side for _ in range(x0)]
-            bottom = [c1*y1 + c2*y2 for _ in range(x1)]
+            top = [c * side for _ in range(x0)]
+            bottom = [c1 * y1 + c2 * y2 for _ in range(x1)]
             return top + bottom
 
     return None
@@ -87,5 +87,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

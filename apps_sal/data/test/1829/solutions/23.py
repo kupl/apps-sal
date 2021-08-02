@@ -2,6 +2,7 @@
 def ri():
     return list(map(int, input().split()))
 
+
 n, m = ri()
 
 pol = set()
@@ -18,7 +19,7 @@ for word in pol_copy:
         eny.remove(word)
         pol.remove(word)
 
-if adding%2:
+if adding % 2:
     adding = 1
 else:
     adding = 0
@@ -26,4 +27,3 @@ if len(pol) + adding > len(eny):
     print("YES")
 else:
     print("NO")
-

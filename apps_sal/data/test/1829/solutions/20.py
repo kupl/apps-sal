@@ -15,7 +15,9 @@ def solve():
         only_n += 1
     return only_n > only_m
 
+
 def __starting_point():
     print("YES" if solve() else "NO")
+
 
 __starting_point()

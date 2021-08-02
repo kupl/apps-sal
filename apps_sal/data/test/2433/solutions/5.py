@@ -1,32 +1,31 @@
 T = int(input())
 
 for t in range(T):
-	b, p, f = list(map(int, input().split()))
-	h, c = list(map(int, input().split()))
+    b, p, f = list(map(int, input().split()))
+    h, c = list(map(int, input().split()))
 
-	ans = 0
+    ans = 0
 
-	if h > c:
-		n = min(b // 2, p)
+    if h > c:
+        n = min(b // 2, p)
 
-		ans += n * h
+        ans += n * h
 
-		b -= n * 2
+        b -= n * 2
 
-		n = min(b // 2, f)
+        n = min(b // 2, f)
 
-		ans += n * c
+        ans += n * c
 
-	else:
-		n = min(b // 2, f)
+    else:
+        n = min(b // 2, f)
 
-		ans += n * c
+        ans += n * c
 
-		b -= n * 2
+        b -= n * 2
 
-		n = min(b // 2, p)
+        n = min(b // 2, p)
 
-		ans += n * h
+        ans += n * h
 
-	print(ans)
-
+    print(ans)

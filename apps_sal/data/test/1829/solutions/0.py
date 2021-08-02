@@ -40,5 +40,5 @@ def main():
 
     print("YES" if we_win else "NO")
 
-main()
 
+main()

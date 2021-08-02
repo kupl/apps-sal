@@ -1,4 +1,4 @@
-[n,m] = list(map(int, input().split(" ")))
+[n, m] = list(map(int, input().split(" ")))
 A = set()
 B = set()
 for i in range(n):
@@ -11,7 +11,7 @@ kB = len(B)
 kC = len(BOTH)
 turn = 1
 while True:
-    turn = 1-turn
+    turn = 1 - turn
     if kC > 0:
         kC -= 1
         kA -= 1
@@ -29,4 +29,3 @@ while True:
         else:
             print("YES")
             return
-

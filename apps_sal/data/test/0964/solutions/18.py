@@ -1,10 +1,12 @@
 __author__ = 'User'
+
+
 def f(arr, value, deep, vis):
     nonlocal flag
     if flag == True:
         return
     fl = False
-    #print("Num")
+    # print("Num")
     pos = (0, 0)
     for i in range(n):
         for j in range(n):
@@ -15,8 +17,8 @@ def f(arr, value, deep, vis):
                 break
         if fl == True:
             break
-    #print()    
-    #print(n, "N")    
+    # print()
+    #print(n, "N")
     #print(arr, "AAAAAA")
     #print(pos, vis)
     symbol = value[2]
@@ -39,13 +41,13 @@ def f(arr, value, deep, vis):
                     """print(tr)
                     for i in range(n):
                         print(*tarr[i])
-    
-                    print()"""                   
+
+                    print()"""
                     if deep == 0:
                         print(n)
                         flag = True
                         for i in range(n):
-                            print(*arr[i], sep = '')
+                            print(*arr[i], sep='')
                         return
                     for k in range(3):
                         if vis[k] == 0:
@@ -69,14 +71,12 @@ def f(arr, value, deep, vis):
                         break
 
 
-
-
 x1, y1, x2, y2, x3, y3 = map(int, input().split())
-val = [[(x1, y1), (y1, x1), "A"], [(x2, y2) , (y2, x2), "B"], [(x3, y3) , (y3, x3), "C"]]
+val = [[(x1, y1), (y1, x1), "A"], [(x2, y2), (y2, x2), "B"], [(x3, y3), (y3, x3), "C"]]
 s = x1 * y1 + x2 * y2 + x3 * y3
 flag = True
 mx = max(x1, x2, x3, y1, y2, y3)
-if round((s) ** (1/2)) == round((s) ** (1/2), 8):
+if round((s) ** (1 / 2)) == round((s) ** (1 / 2), 8):
     n = int(s ** 0.5)
     if n < mx:
         flag = False

@@ -20,5 +20,5 @@ def solve():
         return getprint("C", "A", "B", maxi, ost, a[0] * a[1] // (maxi - ost))
     return -1
 
-print(solve())
 
+print(solve())

@@ -6,4 +6,3 @@ common = p & q
 if len(common) % 2 == 1:
     y -= 1
 print("YES" if x > y else "NO")
-

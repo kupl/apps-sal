@@ -1,4 +1,4 @@
-#E71_A
+# E71_A
 
 t = int(input())
 
@@ -27,4 +27,3 @@ for i in range(0, t):
         m += mn * h
         b -= mn
     print(m)
-

@@ -1,13 +1,14 @@
 n = int(input())
 
+
 def naive(n):
-	c=0
-	#print(n,end='\t')
-	while n!=0:
-		c+=1
-		n-=max([int(x) for x in list(str(n))])
-		#print(n)
-	print(c)
+    c = 0
+    # print(n,end='\t')
+    while n != 0:
+        c += 1
+        n -= max([int(x) for x in list(str(n))])
+        # print(n)
+    print(c)
 
 # d=dict()
 # d[0]=0
@@ -30,5 +31,6 @@ def naive(n):
 # 	naive(x)
 # for x in range(5000,6000,100):
 # 	naive(x)
+
 
 naive(n)
