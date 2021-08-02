@@ -21,7 +21,7 @@ def s(l, r):
     else: return pr[r + 1] - pr[l]
 
 
-ans = s(0, k-1)
+ans = s(0, k - 1)
 
 
 def upd(x, y):
@@ -38,4 +38,3 @@ for i in range(1, k + 1):
         upd(i, f[i - x] + s(i - x + y, i - 1))
 
 print(ans)
-

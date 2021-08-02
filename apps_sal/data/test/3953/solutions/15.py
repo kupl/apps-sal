@@ -16,7 +16,7 @@ if n in l and n in c:
     print('-1')
     return
 
-if n in l:  
+if n in l:
     for j in range(0, n):
         i = 0
         while a[i][j] != '.': i += 1
@@ -27,4 +27,3 @@ else:
         j = 0
         while a[i][j] != '.': j += 1
         print("%i %i" % (i + 1, j + 1))
-

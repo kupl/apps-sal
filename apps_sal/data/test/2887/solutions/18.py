@@ -11,8 +11,9 @@ from itertools import *
 from io import BytesIO, IOBase
 from collections import *
 
-#<fast I/O>
+# <fast I/O>
 BUFSIZE = 8192
+
 
 class FastIO(IOBase):
     newlines = 0
@@ -57,94 +58,109 @@ class IOWrapper(IOBase):
         self.read = lambda: self.buffer.read().decode("ascii")
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
+
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-#</fast I/O>
+# </fast I/O>
 
-#<template>
-mod=(10**9)+7
-pi=3.14159265358979323846264338327950
+# <template>
+mod = (10**9) + 7
+pi = 3.14159265358979323846264338327950
 
-def i1():	#int(input())
-	return int(sys.stdin.readline())
 
-def sf():	#input()
-	return sys.stdin.readline()
+def i1():  # int(input())
+    return int(sys.stdin.readline())
 
-def mi():	#map(int(input()))
-	return map(int,sys.stdin.readline().split())
 
-def arr():	#list(map(int,input().split()))
-	return list(map(int,sys.stdin.readline().split()))
+def sf():  # input()
+    return sys.stdin.readline()
 
-def pf(ans): #print(x)
-	return sys.stdout.write(str(ans)+"\n")
 
-def gcd(a,b):
-	if a==0:
-		return b
-	elif b==0:
-		return a
-	if a>b:
-		return gcd(a%b,b)
-	else:
-		return gcd(a,b%a)
+def mi():  # map(int(input()))
+    return map(int, sys.stdin.readline().split())
 
-def lcm(a,b):
-	return (a*b)//gcd(a,b)
 
-def LogN(a,b):
-	return math.log(a)/math.log(b)
+def arr():  # list(map(int,input().split()))
+    return list(map(int, sys.stdin.readline().split()))
 
-def fpow(a,b):
-	res=1
-	while (b>0):
-		if b&1:
-			res=res*a 
-		a=a*a
-		b>>=1
-	return res
+
+def pf(ans):  # print(x)
+    return sys.stdout.write(str(ans) + "\n")
+
+
+def gcd(a, b):
+    if a == 0:
+        return b
+    elif b == 0:
+        return a
+    if a > b:
+        return gcd(a % b, b)
+    else:
+        return gcd(a, b % a)
+
+
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+
+
+def LogN(a, b):
+    return math.log(a) / math.log(b)
+
+
+def fpow(a, b):
+    res = 1
+    while (b > 0):
+        if b & 1:
+            res = res * a
+        a = a * a
+        b >>= 1
+    return res
+
 
 def sieve(n):
-    m=(n-1)//2
-    b=[True]*m
-    i,p,ps = 0,3,[2]
-    while p*p < n:
+    m = (n - 1) // 2
+    b = [True] * m
+    i, p, ps = 0, 3, [2]
+    while p * p < n:
         if b[i]:
             ps.append(p)
-            j = 2*i*i + 6*i + 3
+            j = 2 * i * i + 6 * i + 3
             while j < m:
                 b[j] = False
-                j = j + 2*i + 3
-        i+=1; p+=2
+                j = j + 2 * i + 3
+        i += 1; p += 2
     while i < m:
         if b[i]:
             ps.append(p)
-        i+=1; p+=2
+        i += 1; p += 2
     return ps
-#</template>
+# </template>
 
-#<solve>
+# <solve>
+
+
 def solve():
-	n=i1()
-	l1=arr()
-	l2=arr()
-	ans=[]
-	for i in range (n):
-		c=0
-		for j in range (i+1):
-			if l1[j]<=l2[i]:
-				c+=l1[j]
-				l1[j]=0
-			else:
-				l1[j]-=l2[i]
-				c+=l2[i]
-		ans.append(c)
-	print(*ans)
-solve()
-#</solve>
+    n = i1()
+    l1 = arr()
+    l2 = arr()
+    ans = []
+    for i in range(n):
+        c = 0
+        for j in range(i + 1):
+            if l1[j] <= l2[i]:
+                c += l1[j]
+                l1[j] = 0
+            else:
+                l1[j] -= l2[i]
+                c += l2[i]
+        ans.append(c)
+    print(*ans)
 
-#<solution>
+
+solve()
+# </solve>
+
+# <solution>
 # tc=i1()
 # for t in range (tc):
 # 	solve()
-#<solution>
+# <solution>

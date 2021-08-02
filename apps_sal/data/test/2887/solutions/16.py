@@ -6,7 +6,7 @@ list_of_lists = []
 for line in sys.stdin:
     new_list = [int(elem) for elem in line.split()]
     list_of_lists.append(new_list)
-    
+
 
 volume = list_of_lists[1]
 temperature = list_of_lists[2]
@@ -31,12 +31,9 @@ for i in range(list_of_lists[0][0]):
         temp_deduction += temperature[i]
         after_volume.append(volume[i] - temperature[i])
         # print(after_volume)
-       
+
     total_reduction.append(temp_deduction)
     temp_deduction = 0
-  
+
     # print(after_volume)
 print(*total_reduction)
-        
-    
-    

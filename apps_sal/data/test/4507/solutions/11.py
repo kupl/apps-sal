@@ -33,7 +33,7 @@ for i in range(k):
     for j in range(i):
         cursum = answer[j]
         answer[i] = min(answer[i], answer[j] + prefix_sum[i] - prefix_sum[j + (offers[i - j] if (i - j) in offers else 0)])
-    answer[i] = min(answer[i], prefix_sum[i] if (i+1) not in offers else (-prefix_sum[offers[i+1]-1] + prefix_sum[i]))
+    answer[i] = min(answer[i], prefix_sum[i] if (i + 1) not in offers else (-prefix_sum[offers[i + 1] - 1] + prefix_sum[i]))
 
 
-print(answer[k-1])
+print(answer[k - 1])

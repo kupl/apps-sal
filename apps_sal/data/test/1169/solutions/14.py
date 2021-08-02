@@ -15,4 +15,3 @@ while res2 * (res2 - 1) < (2 * m):
     res2 += 1
 
 print(res1, n - res2)
-

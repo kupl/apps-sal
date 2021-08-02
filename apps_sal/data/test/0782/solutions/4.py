@@ -5,8 +5,10 @@ def main():
         if a[i] % a[0] != 0:
             print(-1)
             return
-    print(2*m - 1)
+    print(2 * m - 1)
     print(a[0], end=' ')
     for i in range(1, m):
         print(a[i], a[0], end=' ')
+
+
 main()
