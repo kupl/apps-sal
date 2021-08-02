@@ -5,4 +5,3 @@ if d2 <= d1:
     print('YES')
 else:
     print('NO')
-

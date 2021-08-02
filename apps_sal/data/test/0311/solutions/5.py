@@ -5,4 +5,3 @@ if lift <= stairs:
     print("YES")
 else:
     print("NO")
-

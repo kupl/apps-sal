@@ -25,4 +25,3 @@ while D:
             D.append([g, value])
 
 print((*ans))
-

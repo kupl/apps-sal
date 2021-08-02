@@ -36,12 +36,12 @@ while q:
                 ones.append((a[0] + 1, a[1], v))
                 twos.append((b[0] + 1, b[1], v))
                 threes.append(c)
-        ones.sort(reverse = True)
-        twos.sort(reverse = True)
-        threes.sort(reverse = True)
+        ones.sort(reverse=True)
+        twos.sort(reverse=True)
+        threes.sort(reverse=True)
 
         bestOne = (ones[0][0], ones[0][1])
-        
+
         bestsTwo = [(NEGINF, (0, 0))]
         if len(twos) > 0:
             bestsTwo.append((twos[0][0], twos[0][1]))
@@ -70,11 +70,9 @@ while q:
                 if len(ones) > 1:
                     o2 = ones[1]
                     bestsThree.append((o2[0] + t1[0], (o2[1], t1[1][0], t1[1][1])))
-                    
 
         outs[node] = (bestOne, max(bestsTwo), max(bestsThree))
 
 final = outs[0][2]
 print(final[0])
 print(' '.join([str(x + 1) for x in final[1]]))
-

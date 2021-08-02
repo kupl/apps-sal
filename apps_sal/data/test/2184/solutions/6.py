@@ -1,6 +1,8 @@
 from heapq import *
 
 MSIZE = 1 << 8
+
+
 def GetVal(s):
     ans = 0
     for i in range(8):
@@ -8,8 +10,10 @@ def GetVal(s):
             ans = ans + (1 << i)
     return ans
 
+
 def GetNot(s):
-    return MSIZE - 1 - s;
+    return MSIZE - 1 - s
+
 
 xVal = GetVal('00001111')
 yVal = GetVal('00110011')
@@ -20,6 +24,7 @@ zVal = GetVal('01010101')
 # 2 - !
 # 3 - ()
 
+
 def Dijkstra():
     depth = [['Z' * 585 for i in range(4)] for i in range(MSIZE)]
     depth[xVal][3] = 'x'
@@ -27,16 +32,19 @@ def Dijkstra():
     depth[zVal][3] = 'z'
 
     pq = []
+
     def push(kek):
         heappush(pq, kek)
+
     def pop():
         return heappop(pq)
     push([1, xVal, 3])
     push([1, yVal, 3])
     push([1, zVal, 3])
     while len(pq) > 0:
-        l, i, j = pop();
-        if len(depth[i][j]) < l: continue
+        l, i, j = pop()
+        if len(depth[i][j]) < l:
+            continue
         for x in range(MSIZE):
             for y in range(4):
                 nxt1 = depth[i][j] + '|' + depth[x][y]
@@ -89,6 +97,8 @@ def Dijkstra():
                 ans = depth[i][j]
         answer.append(ans)
     return answer
+
+
 kek = Dijkstra()
 
 q = int(input())

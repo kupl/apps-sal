@@ -65,13 +65,12 @@ while curr != a:
                 if not visited[to]:
                     queue.append((to, d + 1))
         if add < d:
-            c, add = v, d    
+            c, add = v, d
     nxt = curr
     curr = prev[curr]
     prv = prev[curr]
-    
+
 print(ctr + add)
 print(a + 1, b + 1, c + 1)
 
 # inf.close()
-

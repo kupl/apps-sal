@@ -8,6 +8,8 @@ prv = (set(), set(), set())
 fam = 2 ** 8
 tmpl = '#' * 99
 ans = [tmpl] * fam
+
+
 def cmpr(E):
     nonlocal ans
     ans = [tmpl] * fam
@@ -15,6 +17,8 @@ def cmpr(E):
         if len(ans[e[1]]) > len(e[0]) or len(ans[e[1]]) == len(e[0]) and ans[e[1]] > e[0]:
             ans[e[1]] = e[0]
     return set((j, i) for i, j in enumerate(ans) if j != tmpl)
+
+
 while prv != (E, T, F):
     prv = E.copy(), T.copy(), F.copy()
     for f in prv[2]:
@@ -33,4 +37,4 @@ while prv != (E, T, F):
 cmpr(E)
 n = int(input())
 for i in range(n):
-	print(ans[int(input(), 2)])
+    print(ans[int(input(), 2)])

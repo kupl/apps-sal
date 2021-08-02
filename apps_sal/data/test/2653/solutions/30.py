@@ -43,21 +43,21 @@ class TestClass(unittest.TestCase):
 
 def resolve():
     N, Q = list(map(int, input().split()))
-    AB = [list(map(int, input().split())) for _ in range(N-1)]
+    AB = [list(map(int, input().split())) for _ in range(N - 1)]
     PX = [list(map(int, input().split())) for _ in range(Q)]
 
-    G = [[i+1, 0] for i in range(N)]
+    G = [[i + 1, 0] for i in range(N)]
     for ab in AB:
         a, b = ab
-        G[a-1][1] += 1
-        G[b-1][1] += 1
-        G[a-1].append(b)
-        G[b-1].append(a)
+        G[a - 1][1] += 1
+        G[b - 1][1] += 1
+        G[a - 1].append(b)
+        G[b - 1].append(a)
 
     ans = [0] * N
     for px in PX:
         p, x = px
-        ans[p-1] += x
+        ans[p - 1] += x
 
     S = deque()
 
@@ -67,15 +67,15 @@ def resolve():
 
     while S:
         p = S.pop()
-        if G[p-1][1] == 0:
+        if G[p - 1][1] == 0:
             continue
 
-        for np in G[p-1][2:]:
-            if F[np-1]:
+        for np in G[p - 1][2:]:
+            if F[np - 1]:
                 continue
             S.append(np)
-            F[np-1] = True
-            ans[np-1] += ans[p-1]
+            F[np - 1] = True
+            ans[np - 1] += ans[p - 1]
 
     print((*ans))
 
@@ -83,5 +83,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

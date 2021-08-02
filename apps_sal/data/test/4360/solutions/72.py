@@ -5,6 +5,6 @@ gyakusuu = 0
 for i in A:
     gyakusuu += 1 / i
 
-ans = 1/gyakusuu
+ans = 1 / gyakusuu
 
 print(ans)

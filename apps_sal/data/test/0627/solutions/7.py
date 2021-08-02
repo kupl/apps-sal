@@ -7,4 +7,3 @@ for i in range(n - 1):
         return
 
 print(s[:-1])
-

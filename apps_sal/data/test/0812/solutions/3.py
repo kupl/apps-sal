@@ -18,7 +18,7 @@ times = [t[1] for t in times]
 c = times[2] - times[1]
 a = times[1]
 success = True
-for i in range(2,n):
+for i in range(2, n):
     if times[i] != a + c * (i - 1):
         success = False
         break
@@ -43,16 +43,16 @@ if success:
 
 
 # check if we can remove any other
-removednum = 1 # if everything is correct (and we don't have to delete any element), we can just delete the first one
+removednum = 1  # if everything is correct (and we don't have to delete any element), we can just delete the first one
 success = True
 a = times[0]
 c = times[1] - times[0]
-for i in range(2,n):
+for i in range(2, n):
     if (removednum == 1 and times[i] != a + c * i) \
        or (removednum != 1 and times[i] != a + c * (i - 1)):
         # print(f'Found that {times[i]} is not equal to {a + c * i} {a}, {i}, {c}')
         if removednum == 1:
-            removednum = i # maybe it will still work if we remove this one; add 1 to shift index
+            removednum = i  # maybe it will still work if we remove this one; add 1 to shift index
         else:
             # otherwise, we already have removed an element,
             # so we must conclude that there is no way to make this succeed
@@ -66,6 +66,3 @@ if success:
 
 # This should only happen when everything fails:
 print(-1)
-
-
-

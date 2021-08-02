@@ -9,7 +9,10 @@ for i in range(1, n - 1):
             count += 1
 
 print(count)
+
+
 def __starting_point():
     pass
+
 
 __starting_point()

@@ -1,7 +1,7 @@
 # import itertools
 # import math
 import sys
-sys.setrecursionlimit(500*500)
+sys.setrecursionlimit(500 * 500)
 # import numpy as np
 # from collections import deque
 # import heapq
@@ -25,7 +25,7 @@ N, Q = map(int, input().split())
 # cum_A = np.cumsum(A)
 # cum_A = np.insert(cum_A, 0, 0)
 
-edges = [list(map(int,input().split())) for _ in range(N - 1)]
+edges = [list(map(int, input().split())) for _ in range(N - 1)]
 tree = [[] for _ in range(N + 1)]
 
 for edge in edges:
@@ -46,17 +46,21 @@ for i in range(Q):
 #             depth[l[0]] = depth[s] + 1
 #             dfs(tree, l[0])
 # dfs(tree, 1)
+
+
 def dfs(tree, s):
     for l in tree[s]:
         if depth[l] == -1:
             depth[l] = 0
             count[l] += count[s]
             dfs(tree, l)
+
+
 dfs(tree, 1)
 
 
 for i in count[1:]:
-    print(i, end = ' ')
+    print(i, end=' ')
 
 # def factorization(n):
 #     arr = []
@@ -73,7 +77,6 @@ for i in count[1:]:
 #     if arr==[]:
 #         arr.append([n, 1])
 #     return arr
-
 
 
 # bfs

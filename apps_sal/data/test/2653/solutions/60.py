@@ -32,4 +32,3 @@ for i in range(N):
 
 for ans in score:
     print(ans, end=' ')
-

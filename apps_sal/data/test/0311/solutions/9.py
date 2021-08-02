@@ -6,4 +6,3 @@ if tp >= pt:
     print("YES")
 else:
     print("NO")
-

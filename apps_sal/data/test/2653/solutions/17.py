@@ -1,6 +1,8 @@
 
 import sys
 sys.setrecursionlimit(10 ** 6)
+
+
 def main2():
     n, q = list(map(int, input().split()))
     tree = [[] for i in range(n)]
@@ -27,5 +29,6 @@ def main2():
 
 def __starting_point():
     main2()
+
 
 __starting_point()

@@ -10,4 +10,3 @@ if p == -1:
 else:
     s = s[:p] + s[p + 1:]
 print(s)
-

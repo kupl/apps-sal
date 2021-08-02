@@ -1,4 +1,4 @@
-val='''!x&x
+val = '''!x&x
 x&y&z
 !z&x&y
 x&y
@@ -256,11 +256,9 @@ x|y|z
 !x|x'''.split()
 
 for _ in range(int(input())):
-	n=0
-	for b in input():
-		n<<=1
-		if b=='1':
-			n|=1
-	print(val[n])
-
-
+    n = 0
+    for b in input():
+        n <<= 1
+        if b == '1':
+            n |= 1
+    print(val[n])

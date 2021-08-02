@@ -2,7 +2,7 @@ n = int(input())
 b = list(map(int, input().split()))
 b_ = []
 for i, t in enumerate(b):
-    b_.append([t, i+1])
+    b_.append([t, i + 1])
 b_.sort()
 
 
@@ -23,7 +23,7 @@ def solve(s):
         # print('b')
         return s[-1][1]
     if check([x[0] for x in s[:1] + s[2:]]):
-        # print('c') 
+        # print('c')
         return s[1][1]
     if check([x[0] for x in s[:-2] + s[-1:]]):
         # print('d')
@@ -32,7 +32,7 @@ def solve(s):
     # mid
     t = []
     for i in range(len(s) - 1):
-        t.append(s[i+1][0] - s[i][0])
+        t.append(s[i + 1][0] - s[i][0])
     # print(t)
 
     i = 0
@@ -53,10 +53,9 @@ def solve(s):
             return -1
         if i == 1 and t[0] + t[1] == t[2]:
             return s[1][1]
-        if j == len(t) - 2 and t[j] + t[j+1] == t[j - 1]:
+        if j == len(t) - 2 and t[j] + t[j + 1] == t[j - 1]:
             return s[len(t) - 1][1]
         return -1
 
 
 print(solve(b_))
-

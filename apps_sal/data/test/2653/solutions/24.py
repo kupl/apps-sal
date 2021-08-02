@@ -27,4 +27,3 @@ while len(que) > 0:
     que = tmp
 
 print((*ans))
-
