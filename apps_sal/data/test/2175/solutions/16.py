@@ -4,8 +4,10 @@ Created on 2016-4-9
 @author: chronocorax
 '''
 
+
 def line():
     return [int(c) for c in input().split()]
+
 
 n = line()[0]
 cap = line()
@@ -34,6 +36,6 @@ for _ in range(m):
     else:
         k = tup[1]
         result.append(cap0[k - 1] - cap[k - 1])
-    
+
 for res in result:
     print(res)

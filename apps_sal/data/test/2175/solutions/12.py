@@ -2,12 +2,12 @@ n = int(input())
 vessel = [int(i) for i in input().split()]
 water_amount = [0] * n
 m = int(input())
-next_vessel = [int(i) for i in range(1,n + 1)]
+next_vessel = [int(i) for i in range(1, n + 1)]
 answer = []
 
 for i in range(m):
     query = [int(j) for j in input().split()]
-    
+
     if query[0] == 1:
         k = query[1] - 1
         skip_vessel = []
@@ -23,9 +23,8 @@ for i in range(m):
                 break
         for j in skip_vessel:
             next_vessel[j] = k
-            
+
     else:
         answer.append(water_amount[query[1] - 1])
 
-print(*answer, sep = '\n')
-
+print(*answer, sep='\n')

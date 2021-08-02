@@ -10,4 +10,3 @@ for a, x in p:
     if x == i:
         i -= 1
 print(['NO', 'YES'][i == 0])
-

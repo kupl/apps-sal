@@ -1,8 +1,10 @@
 n = int(input())
 array = sorted(list(map(int, input().split())))
 
+
 def all_same(items):
     return all(x == items[0] for x in items)
+
 
 if n == 1:
     print(-1)
@@ -32,9 +34,9 @@ else:
             print(min(array) - t, max(array) + t)
 
     else:
-        if max(diff) ==  2 * min(diff) and diff.count(max(diff)) == 1:
+        if max(diff) == 2 * min(diff) and diff.count(max(diff)) == 1:
             print(1)
             print(array[diff.index(max(diff))] + min(diff))
-            
+
         else:
             print(0)

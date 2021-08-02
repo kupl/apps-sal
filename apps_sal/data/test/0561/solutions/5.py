@@ -1,7 +1,7 @@
 import sys
- 
+
 n = int(input())
-a = sorted(list(map(int,input().split())))
+a = sorted(list(map(int, input().split())))
 if n == 1:
     print(-1)
 else:
@@ -12,14 +12,14 @@ else:
     v1 = 0
     t1 = -1
     for i in range(1, n):
-        if (a[i] - a[i-1] == d):
+        if (a[i] - a[i - 1] == d):
             x += 1
-        elif (a[i] - a[i-1] == 2 * d):
+        elif (a[i] - a[i - 1] == 2 * d):
             v += 1
-            t = i-1
-        elif (2 * (a[i] - a[i-1]) == d):
+            t = i - 1
+        elif (2 * (a[i] - a[i - 1]) == d):
             v1 += 1
-            t1 = i-1
+            t1 = i - 1
         else:
             print(0)
             return
@@ -45,7 +45,7 @@ else:
     if n == 2:
         if d % 2 == 0:
             ans.append(a[0] + (d // 2))
-    ans.append(a[n-1] + d)
+    ans.append(a[n - 1] + d)
     print(len(ans))
     for i in ans:
-        print(i, end = ' ')
+        print(i, end=' ')

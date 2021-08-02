@@ -2,7 +2,7 @@ import math
 
 l, r = map(int, input().split())
 
-if l==r:
+if l == r:
     print("0")
 else:
     msb = int(math.log2(r))
@@ -10,4 +10,4 @@ else:
         if (l & (1 << i)) != (r & (1 << i)):
             break
 
-    print(2*(1<<i)-1)
+    print(2 * (1 << i) - 1)

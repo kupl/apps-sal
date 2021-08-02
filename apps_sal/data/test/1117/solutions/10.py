@@ -13,4 +13,3 @@ for i in range(n):
         cur = max(mas[i])
 else:
     print("YES")
-

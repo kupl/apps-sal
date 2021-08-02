@@ -7,5 +7,3 @@ for a in map(int, input().split()):
     for j in range(n): v[j] = (v[j] + u[j + 1]) % m
     u = v
 print((u[0] - 1) % m)
-
-

@@ -44,4 +44,3 @@ for x in a:
     else:
         out += '1 '
 print(out)
-

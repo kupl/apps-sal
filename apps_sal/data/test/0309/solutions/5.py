@@ -10,9 +10,9 @@ l = l.zfill(len(r))
 #print (r)
 i = 0
 while l[i] == r[i]:
-	if i == len(l)-1:
-		print (0)
-		return
-	i+=1
-i=len(l)-i
-print(2**i-1)		
+    if i == len(l) - 1:
+        print(0)
+        return
+    i += 1
+i = len(l) - i
+print(2**i - 1)

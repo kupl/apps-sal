@@ -27,4 +27,3 @@ for i in range(m):
 
 for i in l:
     print(i)
-

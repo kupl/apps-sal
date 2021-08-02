@@ -10,4 +10,5 @@ def __starting_point():
             dp[i][a[i]] = (dp[i][a[i]] + dp[i - 1][0] + 1) % mod
     print(dp[N][0])
 
+
 __starting_point()

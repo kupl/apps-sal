@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def turnTheRectangles(rects):
     last = 10**10
     for rect in rects:
@@ -14,6 +15,7 @@ def turnTheRectangles(rects):
             return 'NO'
     return 'YES'
 
+
 def main():
     n = int(input())
     rects = []
@@ -22,6 +24,9 @@ def main():
         rects.append([w, h])
     print(turnTheRectangles(rects))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

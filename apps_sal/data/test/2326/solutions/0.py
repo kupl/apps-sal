@@ -2,6 +2,7 @@
 
 MOD = 998244353
 
+
 def solve(N, A):
     dp = [[0] * N for _ in range(N + 1)]
     dp[0][0] = 1
@@ -33,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

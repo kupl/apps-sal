@@ -23,5 +23,5 @@ for i in range(int(input())):
             s.append(x)
         for j in s:
             p[j] = x
-        
+
 print('\n'.join(map(str, r)))
