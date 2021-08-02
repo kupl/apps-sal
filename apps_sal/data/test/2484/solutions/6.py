@@ -12,4 +12,3 @@ for l in range(n):
     else:
         su -= a[l]
 print(cnt)
-

@@ -1,6 +1,6 @@
+import sys
 3
 
-import sys
 
 slika = """+------------------------+
 |#.#.#.#.#.#.#.#.#.#.#.|D|)
@@ -8,6 +8,7 @@ slika = """+------------------------+
 |#.......................|
 |#.#.#.#.#.#.#.#.#.#.#.|.|)
 +------------------------+"""
+
 
 def __starting_point():
     st = int(sys.stdin.readline())
@@ -22,8 +23,9 @@ def __starting_point():
             if lines[l][k] == '#':
                 lines[l][k] = 'O'
                 st -= 1
-    
+
     for line in lines:
         print(''.join(line))
+
 
 __starting_point()

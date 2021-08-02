@@ -20,7 +20,7 @@ if k == 1:
     print(min(ar))
     return
 if k == 2:
-    print(max(min(ar[1:]),min(ar[:-1]), ar[0], ar[-1]))
+    print(max(min(ar[1:]), min(ar[:-1]), ar[0], ar[-1]))
     return
 
 print(max(ar))

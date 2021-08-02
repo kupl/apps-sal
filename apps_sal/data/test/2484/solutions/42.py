@@ -11,7 +11,7 @@ r = 0
 
 while 1:
     if xor == total:
-        ans += r-l+1
+        ans += r - l + 1
         r += 1
         if r == n:
             break
@@ -22,4 +22,3 @@ while 1:
         xor ^= a[l]
         l += 1
 print(ans)
-

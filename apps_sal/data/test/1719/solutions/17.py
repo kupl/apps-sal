@@ -60,8 +60,7 @@ for i in range(1, n):
         for ch in ['A', 'C', 'G', 'T']:
             my_chs1 = [ch] + chs
             if is_valid(my_chs1):
-                tmp += dp[i-1][acgt2int(my_chs1[:-1])] % (10 ** 9 + 7)
+                tmp += dp[i - 1][acgt2int(my_chs1[:-1])] % (10 ** 9 + 7)
         dp[i][j] = tmp
 
 print((sum(dp[-1]) % (10 ** 9 + 7)))
-

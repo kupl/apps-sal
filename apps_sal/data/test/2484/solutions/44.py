@@ -18,7 +18,7 @@ def main():
             continue
 
         now = now ^ a[r]
-        for new_l in range(r-1, l-1, -1):
+        for new_l in range(r - 1, l - 1, -1):
             if a[new_l] & a[r] != 0:
                 break
         # else:
@@ -29,13 +29,14 @@ def main():
         for i in range(l, new_l):
             now = now ^ a[i]
 
-        ans += (r-l) * (r-l-1) // 2 - (r-new_l) * (r-new_l-1) // 2
+        ans += (r - l) * (r - l - 1) // 2 - (r - new_l) * (r - new_l - 1) // 2
 
         l = new_l
 
     r += 1
-    ans += (r-l) * (r-l-1) // 2
+    ans += (r - l) * (r - l - 1) // 2
 
     print(ans)
+
 
 main()

@@ -27,5 +27,5 @@ else:
     print('YES')
     for i in res:
         for j in i:
-            print(j, end = ' ')
+            print(j, end=' ')
         print()

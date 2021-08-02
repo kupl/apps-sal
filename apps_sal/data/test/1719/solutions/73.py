@@ -24,15 +24,20 @@ def resolve():
                     # 最後の文字
                     for l in range(1, 5):
                         # AG*C
-                        if i == 1 and j == 2 and l == 3: continue
+                        if i == 1 and j == 2 and l == 3:
+                            continue
                         # A*GC
-                        if i == 1 and k == 2 and l == 3: continue
+                        if i == 1 and k == 2 and l == 3:
+                            continue
                         # *AGC
-                        if j == 1 and k == 2 and l == 3: continue
+                        if j == 1 and k == 2 and l == 3:
+                            continue
                         # *GAC
-                        if j == 2 and k == 1 and l == 3: continue
+                        if j == 2 and k == 1 and l == 3:
+                            continue
                         # *ACG
-                        if j == 1 and k == 3 and l == 2: continue
+                        if j == 1 and k == 3 and l == 2:
+                            continue
                         dp[n + 1][j][k][l] += dp[n][i][j][k]
                         dp[n + 1][j][k][l] %= mod
     res = 0
@@ -46,5 +51,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

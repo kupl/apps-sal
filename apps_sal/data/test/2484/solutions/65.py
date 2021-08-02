@@ -6,13 +6,13 @@ r = 0
 for i in range(n):
     ok = True
     while r < n:
-        s = format(aas[r],'020b')
-        acc_s = format(acc,'020b')
+        s = format(aas[r], '020b')
+        acc_s = format(acc, '020b')
         for j in range(20):
             if s[j] == '1':
                 if acc_s[j] == '1':
                     ok = False
-                    #print(j)
+                    # print(j)
         if ok:
             acc += aas[r]
             r += 1

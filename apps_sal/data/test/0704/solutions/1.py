@@ -17,8 +17,8 @@ ddr = dr // abs(dr) if dr != 0 else 1
 
 c = c1
 
-for i in range(abs(dr)+1):
-    r = r1 + ddr*i
+for i in range(abs(dr) + 1):
+    r = r1 + ddr * i
     c = min(c, a[r])
 
 pen1 = 0
@@ -29,7 +29,7 @@ for i in range(min(r1, r2)):
     pen1 = min(pen1, pen)
 
 pen2 = 0
-for i in range(max(r1, r2)+1, n):
+for i in range(max(r1, r2) + 1, n):
     pen = (i - max(r1, r2)) * 2
     if c > c2 and a[i] < c and a[i] <= min(a[max(r1, r2):i]):
         pen -= c - c2 - abs(a[i] - c2)
@@ -39,4 +39,4 @@ for i in range(max(r1, r2)+1, n):
 pen = abs(dr) + abs(c - c2)
 # print(dr, c, c2)
 # print(pen, pen1, pen2)
-print(min(pen + pen1, pen+ pen2))
+print(min(pen + pen1, pen + pen2))

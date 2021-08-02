@@ -12,4 +12,3 @@ for i in range(3, n + 2):
     dp[i][1] -= dp[i - 2][0] - dp[i - 3][1]
     dp[i][2] -= 3 * dp[i - 3][0]
 print((sum(dp[-1]) % mod))
-

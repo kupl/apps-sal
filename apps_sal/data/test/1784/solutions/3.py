@@ -17,5 +17,3 @@ for i in range(n):
 print('YES')
 for i in range(n):
     print(' '.join(ans[i]))
-
-

@@ -11,18 +11,18 @@ input = sys.stdin.readline
 # main
 # -------------------------------------------------------------
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 # xor と + の結果が等しいのは, 2進表記で各桁のbitが立っている数が1つしかない場合
 # しゃく取りで求められそう
 ans = 0
-xor = 0 # しゃくとり の本体
-l,r = 0,0
+xor = 0  # しゃくとり の本体
+l, r = 0, 0
 
 while r < N:
     # 右に要素を追加できるなら
     if xor ^ A[r] == xor + A[r]:
-        ans += r-l+1
+        ans += r - l + 1
         xor ^= A[r]
     # 右の要素が追加できないなら
     else:
@@ -32,8 +32,7 @@ while r < N:
             l += 1
         # 条件を満たしたので, 計算
         xor ^= A[r]
-        ans += r-l+1
+        ans += r - l + 1
     r += 1
 
 print(ans)
-

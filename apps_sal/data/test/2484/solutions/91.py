@@ -13,5 +13,5 @@ for right in range(N):
         xor ^= A[left]
         left += 1
     ans += right - left + 1
-    
+
 print(ans)

@@ -12,10 +12,15 @@ def abc098_d():
             else:
                 break
         ans += rt - lf
-        if lf == rt: rt += 1
-        else: total -= A[lf]
+        if lf == rt:
+            rt += 1
+        else:
+            total -= A[lf]
     print(ans)
+
 
 def __starting_point():
     abc098_d()
+
+
 __starting_point()

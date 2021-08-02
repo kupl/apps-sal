@@ -8,11 +8,10 @@ for l in range(n):
         s = A[r] + s
         r += 1
 
-    c += r- l
+    c += r - l
     if l == r:
         r += 1
     else:
         s -= A[l]
 
 print(c)
-

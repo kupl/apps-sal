@@ -5,7 +5,6 @@ for L in range(n):
     while R < n and not(X & A[R]):
         X ^= A[R]
         R += 1
-    ans += R-L
+    ans += R - L
     X ^= A[L]
 print(ans)
-

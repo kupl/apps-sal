@@ -15,5 +15,3 @@ elif k == 2:
     print(ans)
 else:
     print(max(a))
-    
-

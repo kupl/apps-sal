@@ -7,7 +7,7 @@ total = 4 ** N
 if N == 3:
     sub = 3
     ans = total - sub
-    
+
 elif N >= 4:
     last_three = [{} for _ in range(N - 3 + 1)]
     for n in range(N - 3 + 1):
@@ -67,4 +67,4 @@ elif N >= 4:
 
     ans = sum(last_three[N - 3].values()) % MOD
 
-print(ans)            
+print(ans)

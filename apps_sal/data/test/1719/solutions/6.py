@@ -19,4 +19,3 @@ for i, p, q, r, s in itertools.product(list(range(N)), list(range(5)), list(rang
         dp[i + 1][q][r][s] %= MOD
 
 print((sum(sum(sum(y) for y in x) for x in dp[N]) % MOD))
-

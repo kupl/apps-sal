@@ -8,8 +8,10 @@ def m(k, a):
     else:
         return max(a)
 
+
 def __starting_point():
     _, k = list(map(int, input().split()))
     print(m(k, list(map(int, input().split()))))
+
 
 __starting_point()

@@ -1,9 +1,11 @@
 # coding: utf-8
 import sys
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 # しゃくとり法
 N = ir()
@@ -14,8 +16,8 @@ right = 0
 
 temp = A[left]
 while left < N:
-    while right < N-1:
-        num = A[right+1]
+    while right < N - 1:
+        num = A[right + 1]
         if temp ^ num != temp + num:
             break
         temp += num
@@ -26,4 +28,3 @@ while left < N:
     left += 1
 
 print(answer)
-

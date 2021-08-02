@@ -11,6 +11,8 @@ string = "ACGT"
 # AG*C
 
 table = [{} for i in range(n + 1)]
+
+
 def dfs(s="", depth=n):
     if table[depth].get(s) is not None:
         return table[depth][s]
@@ -29,5 +31,5 @@ def dfs(s="", depth=n):
     table[depth][s] = cnt
     return cnt
 
-print((dfs()))
 
+print((dfs()))

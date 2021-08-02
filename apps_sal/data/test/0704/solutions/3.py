@@ -47,4 +47,3 @@ ans = float('inf')
 up()
 down()
 print(ans)
-

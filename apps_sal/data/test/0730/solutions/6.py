@@ -18,4 +18,3 @@ for i in range(len(B[0])):
 
 for i in range(6):
     print(''.join(B[i]))
-

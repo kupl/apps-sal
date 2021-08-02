@@ -26,9 +26,9 @@ else:
     if k % 3 > 1:
         second += 1
     third = k // 3 + 1
-    
-    print('|', 'O.' * first, '#.' * (11 - first), '|D|)', sep = '')
-    print('|', 'O.' * second, '#.' * (11 - second), '|.|', sep = '')
+
+    print('|', 'O.' * first, '#.' * (11 - first), '|D|)', sep='')
+    print('|', 'O.' * second, '#.' * (11 - second), '|.|', sep='')
     print('|O.......................|')
-    print('|', 'O.' * third, '#.' * (11 - third), '|.|)', sep = '')
+    print('|', 'O.' * third, '#.' * (11 - third), '|.|)', sep='')
 print('+------------------------+')

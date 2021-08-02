@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 count = 0
 r = 1
 l = 0
@@ -7,9 +7,9 @@ now = a[0]
 while l < n:
 
     while True:
-        if r < n and now + a[r] == now^a[r]:
+        if r < n and now + a[r] == now ^ a[r]:
             now += a[r]
-            count += r-l
+            count += r - l
             r += 1
         else:
             break
@@ -19,4 +19,4 @@ while l < n:
     elif l < n:
         now -= a[l]
         l += 1
-print(count+n)
+print(count + n)

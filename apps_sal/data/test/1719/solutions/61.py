@@ -41,7 +41,7 @@ MOD = 10**9 + 7
 
 # dp[i+1][j(i-2文字目)][k(i-1文字目)][l(i文字目)]：i文字目をl、一個手前をk、もう一個手前をjとした時の文字列の個数
 # j,k,lについて、A=1,C=2,G=3,T=4, 初期化の都合上0もある
-dp = [[[[0 for _ in range(5)] for _ in range(5)] for _ in range(5)] for _ in range(N+1)]
+dp = [[[[0 for _ in range(5)] for _ in range(5)] for _ in range(5)] for _ in range(N + 1)]
 dp[0][0][0][0] = 1
 A = 1
 C = 2
@@ -64,24 +64,28 @@ for i in range(N):
                     *,A,C,G
                     がアウト
                     """
-                    if p == A and q == G and s == C : continue
-                    if p == A and r == G and s == C : continue
-                    if q == A and r == G and s == C : continue
-                    if q == G and r == A and s == C : continue
-                    if q == A and r == C and s == G : continue
+                    if p == A and q == G and s == C:
+                        continue
+                    if p == A and r == G and s == C:
+                        continue
+                    if q == A and r == G and s == C:
+                        continue
+                    if q == G and r == A and s == C:
+                        continue
+                    if q == A and r == C and s == G:
+                        continue
 
-                    dp[i+1][q][r][s] += dp[i][p][q][r]
-                    dp[i+1][q][r][s] %= MOD
+                    dp[i + 1][q][r][s] += dp[i][p][q][r]
+                    dp[i + 1][q][r][s] %= MOD
 
 
 ans = 0
-for i in range(1,5):
-    for j in range(1,5):
-        for k in range(1,5):
+for i in range(1, 5):
+    for j in range(1, 5):
+        for k in range(1, 5):
             #print(i,j,k, dp[-1][i][j][k])
             ans += dp[-1][i][j][k]
             ans %= MOD
 
 
-print(ans) 
-
+print(ans)
