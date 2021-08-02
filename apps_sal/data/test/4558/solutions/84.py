@@ -1,5 +1,5 @@
 x, t = map(int, input().split())
 if x > t:
-  print(x - t)
+    print(x - t)
 else:
-  print(0)
+    print(0)

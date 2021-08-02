@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class AShortSubstrings:
     def solve(self, tc=0):
@@ -13,4 +14,3 @@ solver = AShortSubstrings()
 input = sys.stdin.readline
 
 solver.solve()
-

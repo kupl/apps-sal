@@ -16,4 +16,3 @@ for _ in range(t):
     print(ans)
 # n, m = map(int, input().split())
 # nums = list(map(int, stdin.readline().split()))
-

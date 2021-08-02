@@ -1,4 +1,4 @@
-#TRIE
+# TRIE
 
 class Node:
     def __init__(self, value):
@@ -91,26 +91,15 @@ def find(n):
 
 insertnode(0)
 
-y=int(input())
+y = int(input())
 
 for j in range(y):
-    b=list(map(str,input().split()))
-    if b[0]=="+":
+    b = list(map(str, input().split()))
+    if b[0] == "+":
         insertnode(int(b[1]))
 
-    elif b[0]=="-":
+    elif b[0] == "-":
         delete(int(b[1]))
 
     else:
         print(find(int(b[1])))
-
-
-
-
-
-
-
-
-
-
-

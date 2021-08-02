@@ -10,5 +10,6 @@ def prime_factor(n):
         factors.append(n)
     return factors
 
+
 a = int(input())
 print(''.join(map(str, prime_factor(a))))

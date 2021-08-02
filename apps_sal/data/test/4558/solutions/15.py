@@ -3,6 +3,5 @@ def LI():
 
 
 X, t = LI()
-ans = max(X-t, 0)
+ans = max(X - t, 0)
 print(ans)
-

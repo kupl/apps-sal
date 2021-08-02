@@ -1,14 +1,18 @@
+from math import floor, ceil, pi
 from collections import Counter, defaultdict
 
-BS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+BS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
 def to_base(s, b):
     res = ""
     while s:
-        res+=BS[s%b]
-        s//= b
+        res += BS[s % b]
+        s //= b
     return res[::-1] or "0"
+
+
 alpha = "abcdefghijklmnopqrstuvwxyz"
-from math import floor, ceil,pi
 
 t = int(input())
 for i in range(t):

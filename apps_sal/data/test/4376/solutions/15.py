@@ -22,4 +22,3 @@ for room in rooms:
 
 for r in result:
     print(r)
-

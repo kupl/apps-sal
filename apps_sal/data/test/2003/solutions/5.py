@@ -2,6 +2,7 @@ trie = [[-1, -1]]
 counts = [0]
 trie_size = 1
 
+
 def insert(x):
     nonlocal trie, counts, trie_size
 
@@ -22,6 +23,7 @@ def insert(x):
     counts[node] += 1
     # print('+', ''.join(out))
 
+
 def remove(x):
     nonlocal trie, counts, trie_size
     node = 0
@@ -32,6 +34,7 @@ def remove(x):
         node = trie[node][b]
 
     counts[node] -= 1
+
 
 def query(x):
     nonlocal trie, counts, trie_size
@@ -51,11 +54,12 @@ def query(x):
         else:
             node = trie[node][1 - b]
             ans |= (1 << i) * (1 - b)
-            path.append(str(1-b))
+            path.append(str(1 - b))
 
     # print(''.join(out))
     # print('path', ''.join(path))
     return ans ^ x
+
 
 def main():
     q = int(input())
@@ -73,5 +77,5 @@ def main():
         else:
             print(query(b))
 
-main()
 
+main()

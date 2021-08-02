@@ -4,13 +4,15 @@ import sys
 
 class BitTreeNode(object):
     __slots__ = ["left", "right", "count"]
+
     def __init__(self, cnt):
         self.left = None
         self.right = None
         self.count = cnt
 
+
 class BitTree(object):
-    
+
     def __init__(self):
         self.root = BitTreeNode(0)
         self.add(reversed(get_bits(0)))
@@ -48,7 +50,7 @@ class BitTree(object):
                     node.right = None
                     return
                 node = node.right
-             
+
     def examine_xor(self, bits):
         best = 0
         node = self.root
@@ -94,7 +96,7 @@ def solve_and_print(q):
     tree = BitTree()
     for _ in range(q):
         qType, number = read_query()
-        #print()
+        # print()
         #print(qType, number)
         if qType == "+":
             tree.add(reversed(get_bits(number)))
@@ -109,5 +111,6 @@ def solve_and_print(q):
 def __starting_point():
     q = int(next(sys.stdin))
     solve_and_print(q)
+
 
 __starting_point()

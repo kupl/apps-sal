@@ -9,4 +9,3 @@ if result < 0:
     result = 0
 
 print(result)
-

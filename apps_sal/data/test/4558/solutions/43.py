@@ -1,8 +1,8 @@
-a,b=map(int,input().split())
- 
-c=a-b
+a, b = map(int, input().split())
 
-if c<0:
-  print(0)
+c = a - b
+
+if c < 0:
+    print(0)
 else:
-  print(c)
+    print(c)

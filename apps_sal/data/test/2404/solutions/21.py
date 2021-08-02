@@ -4,4 +4,3 @@ for i in range(2, a):
         continue
     print(i, a // i, sep='')
     break
-

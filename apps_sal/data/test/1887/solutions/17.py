@@ -10,4 +10,3 @@ for k in range(n):
     best[0] = nextBest[0]
     best[1] = nextBest[1]
 print(max(best))
-

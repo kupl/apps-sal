@@ -1,6 +1,6 @@
-x,t=map(int,input().split())
+x, t = map(int, input().split())
 
-if x<=t:
+if x <= t:
     print(0)
 else:
-    print(x-t)
+    print(x - t)

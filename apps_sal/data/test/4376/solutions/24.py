@@ -13,4 +13,3 @@ for l in let:
     dorm = bisect_left(pref, l, lo=prev)
     prev = dorm
     print(dorm, l - pref[dorm - 1])
-

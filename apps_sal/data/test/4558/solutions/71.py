@@ -1,4 +1,4 @@
-X, t = map(int,input().split())
+X, t = map(int, input().split())
 
 if t >= X:
     print("0")

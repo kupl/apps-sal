@@ -13,7 +13,6 @@ for x in flats:
 for x in lets:
     y = bisect_left(nflats, x)
     if y != 0:
-        print(y+1, x - nflats[y-1])
+        print(y + 1, x - nflats[y - 1])
     else:
-        print(y+1, x)
-
+        print(y + 1, x)

@@ -34,11 +34,12 @@ class TestClass(unittest.TestCase):
 
 def resolve():
     X, t = list(map(int, input().split()))
-    print((max(X-t, 0)))
+    print((max(X - t, 0)))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

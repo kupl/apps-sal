@@ -22,6 +22,7 @@ class Node:
         self.left = None
         self.right = None
 
+
 N = 32
 tree = Node()
 
@@ -106,4 +107,3 @@ for qi in range(q):
     else:
         ans.append(search(v))
 print('\n'.join(map(str, ans)))
-
