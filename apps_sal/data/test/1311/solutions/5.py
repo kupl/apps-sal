@@ -7,6 +7,7 @@ def read_data():
         ranges.append((x + w, x - w))
     return n, ranges
 
+
 def solve(n, ranges):
     ranges.sort()
     n = 0
@@ -16,6 +17,7 @@ def solve(n, ranges):
             n += 1
             end = e
     return n
+
 
 n, ranges = read_data()
 print(solve(n, ranges))

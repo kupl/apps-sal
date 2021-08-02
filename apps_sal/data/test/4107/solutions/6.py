@@ -1,10 +1,10 @@
+from collections import deque
+import math
 n, k = list(map(int, input().split()))
 
 a = list(map(str, input().strip()))
 
 ans = 0
-import math
-from collections import deque
 
 dp = [math.inf] * (n + 10)
 dp[n + 1] = 0
@@ -33,4 +33,3 @@ for i in range(n, 0, -1):
         dp[max(next[i] - k, 1)] = min(dp[max(next[i] - k, 1)], dp[i + 1] + next[i])
 
 print(dp[1])
-

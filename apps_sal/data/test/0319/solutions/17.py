@@ -1,8 +1,9 @@
 R = lambda: map(int, input().split())
 
+
 def func():
     n, m = R()
-    cnt = [0]*m
+    cnt = [0] * m
     ss = []
 
     for i in range(n):

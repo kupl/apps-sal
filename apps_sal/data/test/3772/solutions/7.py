@@ -14,4 +14,3 @@ while a > 0 and b > 0:
         count += a
         a = b = 0
 print(count)
-

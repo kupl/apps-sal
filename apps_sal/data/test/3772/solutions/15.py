@@ -4,7 +4,8 @@ def f(a, b):
     elif b == 1:
         return a
     else:
-        return f(b, a%b) + a//b
+        return f(b, a % b) + a // b
+
 
 (a, b) = map(int, input().split())
 

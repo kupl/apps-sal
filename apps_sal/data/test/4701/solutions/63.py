@@ -7,12 +7,13 @@ def answer(n: int, k: int) -> int:
 
 
 def main():
-    n =int(input())
+    n = int(input())
     k = int(input())
     print((answer(n, k)))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

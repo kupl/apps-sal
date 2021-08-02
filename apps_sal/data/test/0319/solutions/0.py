@@ -16,4 +16,3 @@ if any(ignorable):
     print('YES')
 else:
     print('NO')
-

@@ -6,7 +6,7 @@ N, K = map(int, input().split())
 INF = 10**18
 que = deque()
 hq = []
-dp = [INF]*(N+1)
+dp = [INF] * (N + 1)
 dp[0] = 0
 for i in range(N):
     a = dp[i]
@@ -21,11 +21,11 @@ for i in range(N):
     que.append((i, a))
 
     if B[i]:
-        heappush(hq, (que[0][1] + (i+1), i+K+1))
+        heappush(hq, (que[0][1] + (i + 1), i + K + 1))
 
-    if que and que[0][0] <= i-K:
+    if que and que[0][0] <= i - K:
         que.popleft()
-    dp[i+1] = a + (i+1)
+    dp[i + 1] = a + (i + 1)
 while hq and hq[0][1] < N:
     heappop(hq)
 a = dp[N]

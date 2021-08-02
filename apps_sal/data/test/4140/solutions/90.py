@@ -14,4 +14,3 @@ for i in range(s_length):
     else:
         ans_2 += 1
 print((min(ans_1, ans_2)))
-

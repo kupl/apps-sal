@@ -8,7 +8,7 @@ def topological_sort(graph) -> list:
     for g in graph:
         for next_pos in g:
             degree[next_pos] += 1
-    
+
     ans = [i for i in range(n) if degree[i] == 0]
 
     stack = ans[:]
@@ -20,7 +20,6 @@ def topological_sort(graph) -> list:
                 stack.append(next_pos)
                 ans.append(next_pos)
     return ans
-
 
 
 n = int(input())

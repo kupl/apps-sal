@@ -1,7 +1,7 @@
 S = input()
-checker = '01'*100001
+checker = '01' * 100001
 keep1 = checker[:len(S)]
-keep2 = checker[1:len(S)+1]
+keep2 = checker[1:len(S) + 1]
 ans_1 = 0
 ans_2 = 0
 for i in range(len(S)):

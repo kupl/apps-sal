@@ -2,6 +2,7 @@ import sys
 
 input = sys.stdin.readline
 
+
 class SegmentTree:
     a = ord('a')
 
@@ -33,6 +34,7 @@ class SegmentTree:
             l >>= 1
             r >>= 1
         return s
+
 
 tree = SegmentTree()
 

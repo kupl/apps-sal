@@ -10,12 +10,12 @@ for i in range(m):
     b = -1
     for j in range(n):
         if Q[j][i] == '1':
-            if a==-1:
-                a=j
+            if a == -1:
+                a = j
             else:
-                b=j
+                b = j
                 break
-    if a!=-1 and b==-1:
+    if a != -1 and b == -1:
         S[a] = 1
 b = False
 for j in range(n):
@@ -26,4 +26,3 @@ if b:
     print("YES")
 else:
     print("NO")
-

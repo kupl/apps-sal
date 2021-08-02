@@ -14,4 +14,3 @@ for i in range(1, len(S)):
         left = S[i]
 
 print(ans)
-
