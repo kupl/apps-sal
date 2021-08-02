@@ -1,10 +1,10 @@
 n = int(input())
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 
 odd = []
 even = []
 for i in l:
-    if i%2:
+    if i % 2:
         odd.append(i)
     else:
         even.append(i)
@@ -15,7 +15,7 @@ even.sort()
 lo = len(odd)
 le = len(even)
 
-if lo == le or lo == le+1 or lo == le-1:
+if lo == le or lo == le + 1 or lo == le - 1:
     print(0)
 else:
 
@@ -27,4 +27,3 @@ else:
         ans = sum(odd[:diff])
 
     print(ans)
-

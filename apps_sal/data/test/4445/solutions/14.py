@@ -7,7 +7,7 @@ nc = []
 
 for i in arr:
     if i % 2 == 0:
-       ch.append(i)
+        ch.append(i)
     else:
         nc.append(i)
 if len(ch) > len(nc):

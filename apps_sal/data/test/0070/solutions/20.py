@@ -18,4 +18,3 @@ if cz < k:
     print(c - 1)
 else:
     print(min(c - 1, cc))
-

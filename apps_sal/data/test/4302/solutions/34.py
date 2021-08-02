@@ -9,4 +9,3 @@ for i in range(2):
         coin += b
         b = b - 1
 print(coin)
-

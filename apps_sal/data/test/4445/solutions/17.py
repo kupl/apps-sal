@@ -14,12 +14,11 @@ evenN = len(even)
 oddN = len(odd)
 
 ans = -1
-if abs(evenN-oddN) <= 1:
+if abs(evenN - oddN) <= 1:
     ans = 0
 else:
     if evenN > oddN:
-        ans = sum(even[:evenN-oddN-1])
+        ans = sum(even[:evenN - oddN - 1])
     else:
-        ans = sum(odd[:oddN-evenN-1])
+        ans = sum(odd[:oddN - evenN - 1])
 print(ans)
-

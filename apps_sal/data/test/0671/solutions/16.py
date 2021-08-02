@@ -7,5 +7,5 @@ def main():
         ind += 1
     print(s[n - 1])
 
-main()
 
+main()

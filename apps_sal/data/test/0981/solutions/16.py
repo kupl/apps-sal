@@ -26,4 +26,3 @@ if max_len > 0:
 else:
     current_number = "-1"
 print("".join(current_number))
-

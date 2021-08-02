@@ -4,8 +4,8 @@ for _ in range(int(input())):
     b = sorted(map(int, input().split()))
 
     for i in range(k):
-        if a[i] < b[n-i-1]:
-            a[i], b[n-i-1] = b[n-i-1], a[i]
+        if a[i] < b[n - i - 1]:
+            a[i], b[n - i - 1] = b[n - i - 1], a[i]
         else:
             break
 

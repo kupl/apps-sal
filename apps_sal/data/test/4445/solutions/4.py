@@ -17,4 +17,3 @@ else:
         print(sum(sorted(chet)[:len(chet) - len(nechet) - 1]))
     else:
         print(sum(sorted(nechet)[:len(nechet) - len(chet) - 1]))
-

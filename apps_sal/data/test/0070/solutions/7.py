@@ -16,5 +16,3 @@ if n.count('0') < k:
         print(len(n))
 else:
     print(ans)
-
-

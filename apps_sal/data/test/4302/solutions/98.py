@@ -9,10 +9,9 @@ def Input():
 def main():
     a, b = Input()
     c1 = a + b
-    c2 = a + a -1
-    c3 = b + b -1
+    c2 = a + a - 1
+    c3 = b + b - 1
     print(max(c1, c2, c3))
-
 
 
 main()

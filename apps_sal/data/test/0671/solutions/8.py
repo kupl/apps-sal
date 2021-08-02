@@ -7,4 +7,3 @@ while (len(s) < n):
         s += k[j]
     i += 1
 print(s[n - 1])
-

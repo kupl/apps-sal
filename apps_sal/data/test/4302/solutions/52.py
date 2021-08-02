@@ -10,4 +10,3 @@ for i in range(2):
         b -= 1
 
 print(res)
-

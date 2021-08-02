@@ -1,4 +1,4 @@
-A,B=(int(x) for x in input().split())
+A, B = (int(x) for x in input().split())
 if A > B:
     print(2 * A - 1)
 elif A < B:

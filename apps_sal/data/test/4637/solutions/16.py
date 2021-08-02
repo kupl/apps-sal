@@ -1,4 +1,4 @@
-from sys import stdin, stdout  
+from sys import stdin, stdout
 input = stdin.readline
 #print = stdout.write
 
@@ -11,4 +11,3 @@ for _ in range(int(input())):
             break
         a[i] = b[n - i - 1]
     print(sum(a))
-

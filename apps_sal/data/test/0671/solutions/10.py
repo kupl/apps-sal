@@ -8,5 +8,5 @@ def main():
         x += 1
     print(s[n])
 
-main()
 
+main()

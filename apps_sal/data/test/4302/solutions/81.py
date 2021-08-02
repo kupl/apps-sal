@@ -8,4 +8,3 @@ for i in range(2):
         sum += b
         b -= 1
 print(sum)
-

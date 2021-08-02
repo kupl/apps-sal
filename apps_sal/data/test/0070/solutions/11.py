@@ -14,4 +14,3 @@ else:
     ans = len(n) - 1
 
 print(ans)
-

@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, = readln()
 a = readln()
@@ -24,4 +26,3 @@ if cnt[ind + 1]:
     print()
 else:
     print(-1)
-

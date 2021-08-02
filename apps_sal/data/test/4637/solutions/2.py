@@ -16,4 +16,3 @@ for t in range(T):
 
     res = sum(sa)
     print(res)
-

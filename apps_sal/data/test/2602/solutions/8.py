@@ -8,7 +8,7 @@ def main():
 
     for _ in range(int(input())):
         A, B, N, M = list(map(int, input().split()))
-        if A+B < N+M:
+        if A + B < N + M:
             print("No")
         else:
             mi = min(A, B)
@@ -20,5 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

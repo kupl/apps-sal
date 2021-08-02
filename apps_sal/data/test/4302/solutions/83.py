@@ -6,4 +6,3 @@ elif a < b:
 else:
     ans = a + b
 print(ans)
-

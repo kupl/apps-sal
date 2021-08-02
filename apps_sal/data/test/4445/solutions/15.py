@@ -23,5 +23,3 @@ else:
         for i in range(k + 1, len(a)):
             s += a[i]
     print(s)
-        
-

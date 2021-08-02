@@ -7,4 +7,3 @@ else:
     total = max(A, B) * 2 - 1
 
 print(total)
-
