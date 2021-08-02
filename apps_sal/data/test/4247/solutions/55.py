@@ -3,10 +3,9 @@ p = input().split(' ')
 for i in range(len(p)):
     p[i] = int(p[i])
 cnt = 0
-for i in range(1,n-1):
-    if p[i-1] < p[i] and p[i] < p[i+1]:
+for i in range(1, n - 1):
+    if p[i - 1] < p[i] and p[i] < p[i + 1]:
         cnt += 1
-    elif p[i+1] < p[i] and p[i] < p[i-1]:
+    elif p[i + 1] < p[i] and p[i] < p[i - 1]:
         cnt += 1
-print(cnt)        
-
+print(cnt)

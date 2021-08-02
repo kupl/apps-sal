@@ -27,6 +27,4 @@ for i in a:
 print(max(p))
 
 
-
 # Made By Mostafa_Khaled
-

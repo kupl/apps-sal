@@ -1,7 +1,7 @@
 while True:
     n = int(input())
 
-    A=input().split()
+    A = input().split()
 
     for index in range(0, n):
         A[index] = int(A[index])
@@ -12,9 +12,8 @@ while True:
     for index in range(0, n):
         x += A[index]
 
-        if x*2 >= S:
-            print(index+1)
+        if x * 2 >= S:
+            print(index + 1)
             break
 
     break
-

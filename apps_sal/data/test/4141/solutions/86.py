@@ -13,4 +13,3 @@ if num_even == num_approved:
     print("APPROVED")
 else:
     print("DENIED")
-

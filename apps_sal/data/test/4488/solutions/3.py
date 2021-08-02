@@ -5,7 +5,7 @@ if A > B:
     print("GREATER")
 
 if A < B:
-   print("LESS")
+    print("LESS")
 
 if A == B:
     print("EQUAL")

@@ -6,6 +6,6 @@ if b < a:
 elif a < b:
     ans = 'LESS'
 else:
-    ans ='EQUAL'
+    ans = 'EQUAL'
 
 print(ans)

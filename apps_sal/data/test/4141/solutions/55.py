@@ -12,4 +12,3 @@ if ans:
     print("APPROVED")
 else:
     print("DENIED")
-

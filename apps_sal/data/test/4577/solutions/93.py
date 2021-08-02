@@ -9,4 +9,3 @@ if i[2] >= i[0] and i[1] >= i[2]:
 else:
     ans = 'No'
 print(ans)
-

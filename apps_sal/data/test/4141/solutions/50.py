@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 ans = 'APPROVED'
 for i in range(N):
     if A[i] % 2 != 0:

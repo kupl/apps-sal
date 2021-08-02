@@ -9,4 +9,3 @@ for i in range(n):
     if csum >= nsum:
         print(i + 1)
         break
-

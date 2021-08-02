@@ -16,4 +16,3 @@ if approved == len(even):
     print("APPROVED")
 else:
     print("DENIED")
-

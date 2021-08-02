@@ -1,6 +1,7 @@
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
+
 
 def main():
     a = int(input())
@@ -13,6 +14,9 @@ def main():
     else:
         print("LESS")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

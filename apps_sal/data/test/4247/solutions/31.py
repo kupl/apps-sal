@@ -1,5 +1,5 @@
 n = int(input())
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 
 ans = 0
 for i in range(n):
@@ -11,9 +11,8 @@ for i in range(n):
         a = p[i - 1]
         b = p[i]
         c = p[i + 1]
-        lst = [a, b ,c]
+        lst = [a, b, c]
         lst.sort()
         if (lst[1] == b):
             ans = ans + 1
 print(ans)
-

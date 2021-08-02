@@ -4,4 +4,3 @@ if A <= C <= B:
     print('Yes')
 else:
     print('No')
-

@@ -5,9 +5,9 @@ import itertools
 import numpy as np
 A = int(input())
 B = int(input())
-if A>B:
+if A > B:
     print("GREATER")
-elif A<B:
+elif A < B:
     print("LESS")
-elif A==B:
+elif A == B:
     print("EQUAL")

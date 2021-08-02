@@ -1,18 +1,22 @@
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
+
 
 def main():
     a = int(input())
     b = int(input())
 
-    if a > b :
+    if a > b:
         print("GREATER")
-    elif a  < b :
+    elif a < b:
         print("LESS")
-    elif a  == b :
+    elif a == b:
         print("EQUAL")
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

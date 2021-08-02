@@ -12,4 +12,3 @@ for i in range(len(a)):
     dp[i] = max(tmax[j] for j in p[a[i]]) + 1
     for j in p[a[i]]: tmax[j] = max(tmax[j], dp[i])
 print(max(dp))
-

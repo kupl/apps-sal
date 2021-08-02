@@ -7,4 +7,3 @@ while s1 * 2 < s:
     s1 += a[i]
     i += 1
 print(i)
-

@@ -19,4 +19,3 @@ else:
             ans = 'GREATER'
             break
 print(ans)
-

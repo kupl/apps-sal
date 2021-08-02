@@ -5,21 +5,21 @@ t = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
 x = int(input())
 y = list(map(int, input().split(' ')))
 
-good = [False]*(10**5+5)
+good = [False] * (10**5 + 5)
 for i in y:
     good[i] = True
 
 
-dp2 = [0]*(10**5+5)
+dp2 = [0] * (10**5 + 5)
 
-for i in range(10**5+5):
+for i in range(10**5 + 5):
     if not good[i]:
         continue
     pdiv = []
-    
+
     for a in t:
         k = 0
-        while i%a == 0:
+        while i % a == 0:
             if k == 0:
                 pdiv.append(a)
             i //= a
@@ -28,12 +28,11 @@ for i in range(10**5+5):
     if i != 1:
         pdiv.append(i)
     for i2 in pdiv:
-        maxx = max(dp2[i2]+1, maxx)
+        maxx = max(dp2[i2] + 1, maxx)
 
     for i2 in pdiv:
-        dp2[i2] = max(dp2[i2]+1, maxx)
+        dp2[i2] = max(dp2[i2] + 1, maxx)
 
     ovmaxx = max(ovmaxx, maxx)
-    
-print(max(ovmaxx, 1))
 
+print(max(ovmaxx, 1))

@@ -7,8 +7,6 @@ idx = 0
 for item in arr:
     cur += item
     idx += 1
-    if (cur >= S/2):
+    if (cur >= S / 2):
         print(idx)
         break
-
-

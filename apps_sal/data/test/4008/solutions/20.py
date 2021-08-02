@@ -15,16 +15,14 @@ if f == 0:
 else:
     z = ar[:]
     z = [[z[x], x, -1] for x in range(n)]
-    z.sort(key = lambda x: x[0])
+    z.sort(key=lambda x: x[0])
     w = 1
     for x in range(n):
         z[x][2] = w
         w = (w + 1) % k
         if w == 0:
             w = k
-    z.sort(key = lambda x: x[1])
+    z.sort(key=lambda x: x[1])
     print('YES')
     for x in z:
-        print(x[2], end = ' ')
-
-
+        print(x[2], end=' ')

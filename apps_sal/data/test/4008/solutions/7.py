@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def __starting_point():
 
     n, k = list(map(int, input().split()))
@@ -11,7 +12,7 @@ def __starting_point():
         return
 
     result = []
-    colors = set(range(1, k+1))
+    colors = set(range(1, k + 1))
 
     total_used = set()
     used = defaultdict(set)
@@ -35,5 +36,6 @@ def __starting_point():
     print("YES")
     for el in result:
         print(el, end=' ')
+
 
 __starting_point()

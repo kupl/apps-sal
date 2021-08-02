@@ -1,8 +1,8 @@
-a  = int(input());
+a = int(input());
 b = int(input());
-if a>b: 
-  print("GREATER")
+if a > b:
+    print("GREATER")
 elif a == b:
-  print("EQUAL");
+    print("EQUAL");
 else:
-  print("LESS")
+    print("LESS")

@@ -7,4 +7,3 @@ if a <= c <= b:
     print('Yes')
 else:
     print('No')
-

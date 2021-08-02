@@ -8,4 +8,3 @@ elif diff < 0:
     print("LESS")
 else:
     print("EQUAL")
-

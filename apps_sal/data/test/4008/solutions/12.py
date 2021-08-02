@@ -4,10 +4,13 @@ def find(forb, i):
             return x
     return -1
 
+
 def new_print(arr):
     for i in arr:
         print(i, end=" ")
     print()
+
+
 n, k = input().split()
 n = int(n)
 k = int(k)
@@ -39,4 +42,3 @@ elif (len(empty) != 0):
 else:
     print("YES")
     new_print(ans)
-

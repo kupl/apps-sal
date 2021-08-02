@@ -8,6 +8,5 @@ SUM_A = sum(A)
 for i in range(len(A)):
     SUM += A[i]
     if SUM >= SUM_A / 2:
-        print(i+1)
+        print(i + 1)
         quit()
-

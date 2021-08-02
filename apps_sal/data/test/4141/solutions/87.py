@@ -6,10 +6,9 @@ for i in range(n):
     if x % 2 == 0:
         bool = True
         if x % 3 != 0 and x % 5 != 0:
-           bool = False
-           break
+            bool = False
+            break
 if bool:
     print('APPROVED')
 else:
     print('DENIED')
-

@@ -8,6 +8,5 @@ s2 = 0
 for i in range(len(l)):
     s2 += l[i]
     if s2 >= s / 2:
-        print(i+1)
+        print(i + 1)
         break
-

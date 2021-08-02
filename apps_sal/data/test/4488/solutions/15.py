@@ -9,4 +9,3 @@ elif num1 > num2:
     print("GREATER")
 elif num1 < num2:
     print("LESS")
-

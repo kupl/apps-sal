@@ -14,4 +14,3 @@ for i in a:
 # 奇数だけの場合も承認する
 else:
     print('APPROVED')
-

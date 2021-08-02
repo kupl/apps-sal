@@ -13,4 +13,3 @@ if j > 0:
     print('DENIED')
 else:
     print('APPROVED')
-

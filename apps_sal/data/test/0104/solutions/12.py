@@ -7,4 +7,3 @@ for i in range(n):
     if (ss * 2 >= s):
         print(i + 1)
         break
-

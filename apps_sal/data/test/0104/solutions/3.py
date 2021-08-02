@@ -8,6 +8,5 @@ s = 0
 for i in range(n):
     s += xs[i]
     if s * 2 >= ss:
-        print(i+1)
+        print(i + 1)
         break
-

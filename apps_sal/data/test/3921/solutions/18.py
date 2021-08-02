@@ -5,7 +5,7 @@ tmax = [0 for _ in range(100005)]
 p = [[] for _ in range(100005)]
 p[1] = [1]
 for i in range(2, 100001):
-    if p[i]==[]:
+    if p[i] == []:
         for j in range(i, 100001, i):
             p[j].append(i)
 

@@ -1,5 +1,5 @@
-a=list(map(int, input().split()))
-b=list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 if len(a) > len(b):
     print('GREATER')
     return
