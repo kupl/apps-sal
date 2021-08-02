@@ -1,13 +1,17 @@
 from math import *
 
+
 def r1(t):
     return t(input().strip())
+
 
 def r2(t):
     return [t(i) for i in input().strip().split()]
 
+
 def r3(t):
     return [t(i) for i in input().strip()]
+
 
 for _ in range(int(input())):
     n, m, x, y = r2(int)
@@ -17,7 +21,7 @@ for _ in range(int(input())):
         for j in input():
             if j == '.':
                 cnt += 1
-                if 2*x <= y:
+                if 2 * x <= y:
                     ans += x
                     cnt = 0
                 elif cnt == 2:
@@ -30,6 +34,5 @@ for _ in range(int(input())):
         if cnt == 1:
             ans += x
         cnt = 0
-        
-    print(ans)
 
+    print(ans)

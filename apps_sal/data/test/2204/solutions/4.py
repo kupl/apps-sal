@@ -10,7 +10,7 @@ for case in range(t):
     aa.sort()
     acc = [0] * (m + 1)
     for i in range(m, 0, -1):
-        acc[i-1] = acc[i] + aa[i-1]
+        acc[i - 1] = acc[i] + aa[i - 1]
 
     if n > m:
         ans = 0
@@ -32,4 +32,3 @@ for case in range(t):
 
     if case != t - 1:
         input()
-

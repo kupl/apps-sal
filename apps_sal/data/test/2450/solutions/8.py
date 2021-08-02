@@ -23,4 +23,3 @@ for _ in range(int(input())):
             ans += y
             j += 2
     print(ans)
-

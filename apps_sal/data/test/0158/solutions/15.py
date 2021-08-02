@@ -5,4 +5,3 @@ if a[n - 1] == a[n]:
     print('NO')
 else:
     print('YES')
-

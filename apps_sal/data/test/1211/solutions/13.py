@@ -8,5 +8,3 @@ for i in range(k):
         ans = new
         box = i
 print(box + 1, n // L[box])
-    
-

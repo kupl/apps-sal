@@ -5,4 +5,3 @@ for i in range(k):
     if (n % a[i]) < (n % a[max_i]):
         max_i = i
 print(max_i + 1, n // a[max_i], sep=' ')
-

@@ -8,6 +8,6 @@ while True:
         break
     else:
         ans += 2**n
-        n+=1
+        n += 1
 
 print(ans)

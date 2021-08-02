@@ -20,4 +20,3 @@ for _ in range(t):
                 curr = 0
         out += x * curr
     print(out)
-

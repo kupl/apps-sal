@@ -12,7 +12,6 @@ while True:
     else:
         cnt += 1
 
-for c in range(cnt+1):
+for c in range(cnt + 1):
     ans += 2**c
 print(ans)
-

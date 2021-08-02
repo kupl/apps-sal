@@ -17,5 +17,3 @@ while True:
 
 
 print(ans)
-
-

@@ -7,6 +7,6 @@ while h > 0:
     count += 1
 
 for i in range(count):
-    ans = ans*2 + 1
+    ans = ans * 2 + 1
 
 print(ans)

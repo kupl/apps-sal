@@ -5,6 +5,3 @@ if z[n - 1] < z[n]:
     print("YES")
 else:
     print("NO")
-
-    
-
