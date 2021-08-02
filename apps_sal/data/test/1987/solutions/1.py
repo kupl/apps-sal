@@ -3,8 +3,10 @@ s = input()
 
 cnt = s.count('1')
 
+
 def price(x):
     return c1 + c2 * (x - 1) ** 2
+
 
 prices = []
 

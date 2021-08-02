@@ -1,5 +1,5 @@
 n = int(input())
-lst = list(map(int,input().split()))
+lst = list(map(int, input().split()))
 lst2 = [0 for i in range(n)]
 for i in range(n):
     x = lst[i]
@@ -7,7 +7,6 @@ for i in range(n):
 
 for i in range(n):
     if (i != n - 1):
-        print(lst2[i], end = ' ')
+        print(lst2[i], end=' ')
     else:
         print(lst2[i])
-

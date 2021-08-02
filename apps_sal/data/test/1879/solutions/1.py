@@ -16,4 +16,3 @@ while i < t:
         break
     if i == t:
         print(-1)
-

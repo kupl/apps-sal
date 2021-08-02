@@ -8,4 +8,3 @@ while 1:
         i -= 1
         break
 print(i)
-

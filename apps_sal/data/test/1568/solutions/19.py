@@ -10,4 +10,3 @@ else:
     for ti in msg:
         ret += a + (t - ti) * (c - b)
     print(ret)
-

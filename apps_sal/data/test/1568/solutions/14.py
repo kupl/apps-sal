@@ -18,4 +18,3 @@ print(max(ans1, ans2))
 for i in range(len(smth)):
     k += smth[i]
     k -= 1'''
-

@@ -11,4 +11,3 @@ while n >= 0:
     n -= m
 
 print(i - 1)
-

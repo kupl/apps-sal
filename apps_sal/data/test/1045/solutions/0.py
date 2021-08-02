@@ -12,4 +12,3 @@ while (n > 0):
         break
 
 print(ans)
-

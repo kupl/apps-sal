@@ -7,5 +7,3 @@ if c >= b:
 else:
     ans = len(time) * a
 print(ans)
-    
-

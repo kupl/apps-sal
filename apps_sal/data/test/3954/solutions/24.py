@@ -10,7 +10,7 @@ def solve(a, k):
 
     best = -float("inf")
     for i in range(len(a)):
-        for j in range(1, len(a)+1):
+        for j in range(1, len(a) + 1):
             in_range = sorted(a[i:j], reverse=True)
             out_of_range = sorted(a[:i] + a[j:])
             additional = []
@@ -23,10 +23,10 @@ def solve(a, k):
     return best
 
 
-
-
 def __starting_point():
     n, k = map(int, stdin.readline().split())
     a = [int(x) for x in stdin.readline().split()]
     stdout.write("{}\n".format(solve(a, k)))
+
+
 __starting_point()

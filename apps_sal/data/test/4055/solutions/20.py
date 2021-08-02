@@ -6,4 +6,3 @@ for i in range(1, n - 1):
         ans += 1
         u[i + 1] = 0
 print(ans)
-

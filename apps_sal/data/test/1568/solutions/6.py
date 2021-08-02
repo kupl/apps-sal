@@ -1,5 +1,7 @@
 def inpmap():
     return list(map(int, input().split()))
+
+
 n, a, b, c, t = inpmap()
 arr = inpmap()
 if b >= c:
@@ -12,4 +14,3 @@ else:
         # print(a - (t - x) * b, (t - x) * c)
         s += (t - x) * c
     print(s)
-

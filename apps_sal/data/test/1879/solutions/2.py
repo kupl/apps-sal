@@ -1,4 +1,4 @@
-i=0
+i = 0
 t, sx, sy, ex, ey = list(map(int, input().split()))
 second_string = input()
 while (sy != ey) or (sx != ex):
@@ -14,6 +14,3 @@ while (sy != ey) or (sx != ex):
     i += 1
 if (sy == ey and sx == ex) is False: print(-1)
 else: print(i)
-
-
-

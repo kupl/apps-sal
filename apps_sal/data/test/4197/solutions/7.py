@@ -9,9 +9,9 @@ key = lambda x:x[1]
 """
 N = int(input())
 A = [int(i) for i in input().split()]
-B = [(i+1,A[i]) for i in range(N)]
+B = [(i + 1, A[i]) for i in range(N)]
 B.sort(key=lambda x: x[1])
-#print(B)
+# print(B)
 res = [str(b[0]) for b in B]
-#print(res)
+# print(res)
 print(' '.join(res))

@@ -1,8 +1,9 @@
 import math
 
+
 def DegToRad(x):
-	return (math.acos(-1) / 180) * x
-	
+    return (math.acos(-1) / 180) * x
+
 
 l3, l4, l5 = map(int, input().split())
 v3 = l3 * l3 * l3 * math.sqrt(2) / 12
