@@ -8,4 +8,3 @@ for dia in dias:
     if t <= 0:
         break
 print(qtd)
-

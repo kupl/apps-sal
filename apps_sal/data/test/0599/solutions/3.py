@@ -10,7 +10,7 @@ a = input()
 a = list(a)
 lett = set(a)
 done = False
-for x in range(len(a)+1):
+for x in range(len(a) + 1):
     b = a[:]
     for t in lett:
         c = b[:x] + [t] + b[x:]
@@ -23,4 +23,3 @@ for x in range(len(a)+1):
         break
 if not(done):
     print("NA")
-

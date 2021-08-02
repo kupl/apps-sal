@@ -9,5 +9,3 @@ for i in range(n):
         p[j][i] -= d
 for i in t: print(' '.join(map(str, i)))
 for i in p: print(' '.join(map(str, i)))
-
-

@@ -36,6 +36,7 @@ for x in a:
     g[v].append((u, ec))
     ec += 1
 
+
 def bfs(p):
     d = [-1] * len(pid)
     d[p] = 0
@@ -51,6 +52,7 @@ def bfs(p):
                     d[v] = d[u] + 1
                     q2.append((v, eid))
         q = q2
+
 
 ans = -1
 for i in range(len(pid)):

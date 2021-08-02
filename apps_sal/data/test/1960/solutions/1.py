@@ -9,12 +9,14 @@ escritura = ["1"] * len(secuencia)
 # ma = max((x[0] for x in secuencia))
 bit = [0] * (ma + 1)
 
+
 def max_x(x, l):
     suma = 0
     while x != 0:
         suma = max(suma, l[x])
         x -= (x & -x)
     return suma
+
 
 def update_x(x, l, max_n, val):
     while x <= max_n:
@@ -39,11 +41,13 @@ def update_x(x, l, max_n, val):
 #                 pos += 1
 #     return pos
 
+
 def new_get_secuence(e):
     num = secuencia[e][0]
     maximo = max_x(num - 1, bit) + 1
     update_x(num, bit, ma, maximo)
     return maximo
+
 
 for e in range(n):
     secuencia[e][1] = new_get_secuence(e)
@@ -96,8 +100,3 @@ else:
     for y in usados:
         escritura[y[2]] = "2"
 print("".join(escritura))
-
-
-
-
-

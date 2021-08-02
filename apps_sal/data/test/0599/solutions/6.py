@@ -9,6 +9,7 @@ def f(s):
     s[at] = s[-at - 1]
     return ''.join(s)
 
+
 s = list(input())
 for i in range(len(s) + 1):
     s.insert(i, '@')
@@ -19,4 +20,3 @@ for i in range(len(s) + 1):
     del s[i]
 else:
     print('NA')
-

@@ -2,6 +2,7 @@ s = input()
 s1 = s[::-1]
 p = False
 
+
 def try1(a):
     q = s[:a] + s1[a] + s[a::]
     q1 = q[::-1]
@@ -10,6 +11,7 @@ def try1(a):
             return False
     return True
 
+
 def try2(a):
     q = s[:len(s) - a] + s[a] + s[len(s) - a::]
     q1 = q[::-1]
@@ -17,6 +19,7 @@ def try2(a):
         if q[i] != q1[i]:
             return False
     return True
+
 
 for i in range(len(s) // 2):
     if s[i] != s1[i]:
@@ -36,4 +39,3 @@ if p:
 else:
     d = s[:len(s) // 2] + s[len(s) // 2] + s[len(s) // 2::]
     print(d)
-
