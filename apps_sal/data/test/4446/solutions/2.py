@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 import os
 import sys
 from atexit import register
@@ -9,16 +10,17 @@ sys.stdout = StringIO()
 register(lambda: os.write(1, sys.stdout.getvalue().encode()))
 
 ###############################################################################
-import math
 ###############################################################################
-n,a,b,k = [int(k) for k in sys.stdin.readline().split()]
+n, a, b, k = [int(k) for k in sys.stdin.readline().split()]
 hs = [int(k) for k in sys.stdin.readline().split()]
 
+
 def uses(h):
-    r = h % (a+b)
+    r = h % (a + b)
     if r == 0:
-        r = a+b
-    return int(math.ceil(r/a) - 1)
+        r = a + b
+    return int(math.ceil(r / a) - 1)
+
 
 us = [uses(h) for h in hs]
 us.sort()
@@ -29,4 +31,3 @@ for u in us:
     k -= u
     ret += 1
 print(ret)
-

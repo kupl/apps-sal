@@ -12,4 +12,3 @@ for i in matrix[:N // 2]:
 print(''.join(string))
 for i in range(N // 2 - 1, -1, -1):
     print(''.join(matrix[i]))
-

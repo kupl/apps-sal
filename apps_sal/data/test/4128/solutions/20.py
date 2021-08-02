@@ -9,4 +9,4 @@ ssi = lambda: input().strip('\n').split()
 
 for _ in range(int(input())):
     n = int(input())
-    print((n-1)//2)
+    print((n - 1) // 2)

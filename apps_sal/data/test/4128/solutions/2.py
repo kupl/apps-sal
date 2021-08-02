@@ -5,4 +5,3 @@ for q in range(0, t):
         print(n // 2 - 1)
     else:
         print(n // 2)
-

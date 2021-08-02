@@ -1,7 +1,7 @@
 from queue import Queue
 n = int(input())
-g = [set() for i in range(n+1)]
-for i in range(n-1):
+g = [set() for i in range(n + 1)]
+for i in range(n - 1):
     u, v = list(map(int, input().split()))
     g[u].add(v)
     g[v].add(u)
@@ -24,6 +24,4 @@ while i < n:
             g[a[i]].remove(par)
         i += 1
     ptr += 1
-print("Yes")    
-                
-
+print("Yes")
