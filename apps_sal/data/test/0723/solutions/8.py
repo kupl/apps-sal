@@ -29,4 +29,3 @@ for H in range(1, 1001):
         ans = r
 
 print(ans)
-

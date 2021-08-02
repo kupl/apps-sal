@@ -11,7 +11,7 @@ for i in range(n):
             break
     else:
         if line[1] == "North":
-            now -= int(line[0]) 
+            now -= int(line[0])
         else:
             now += int(line[0])
         if not (now >= 0 and now <= 20000):
@@ -21,4 +21,3 @@ if marker and (now == 0):
     print("YES")
 else:
     print("NO")
-

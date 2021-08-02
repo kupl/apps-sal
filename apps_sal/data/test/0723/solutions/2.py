@@ -32,7 +32,3 @@ for i in range(heim, hei + 1):
     if (wid1 * i < last):
         last = wid1 * i
 print(last)
-
-            
-    
-

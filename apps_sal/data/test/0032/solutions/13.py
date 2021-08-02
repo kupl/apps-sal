@@ -9,12 +9,12 @@ for i in range(n):
         print("NO")
         break
     if b == "North":
-        t-=int(a)
-        if t<0:
+        t -= int(a)
+        if t < 0:
             print("NO")
             break
     if b == "South":
-        t+=int(a)
+        t += int(a)
         if t > 20000:
             print("NO")
             break

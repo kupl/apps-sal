@@ -21,4 +21,3 @@ if y != 0:
     print("NO")
     raise SystemExit
 print("YES")
-

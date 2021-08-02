@@ -38,4 +38,3 @@ else:
         for y in graph[x]:
             ans[numedge[(x, y)]] = (x > y) + 1
     print(*ans)
-

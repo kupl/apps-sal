@@ -2,13 +2,13 @@
 
 def main():
     import sys
-    
+
     tokens = [int(i) for i in sys.stdin.read().split()]
     tokens.reverse()
-    
+
     n = tokens.pop()
     people = [(tokens.pop(), tokens.pop()) for i in range(n)]
-    
+
     result = float("inf")
     for i in range(n):
         for j in range(2):
@@ -26,9 +26,8 @@ def main():
                     else:
                         S += w
             result = min(result, S * maxh)
-    
+
     print(result)
-                
-    
-    
+
+
 main()

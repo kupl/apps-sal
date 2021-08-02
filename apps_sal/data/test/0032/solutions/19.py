@@ -24,11 +24,10 @@ for i in range(int(n)):
     elif way == "East":
         now[1] -= int(step)
     if now[0] > 20000 or now[0] < 0:
-        #print("NO")
+        # print("NO")
         flag = False
         break
 if flag and now[0] == 0:
     print("YES")
 else:
     print("NO")
-

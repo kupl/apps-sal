@@ -186,4 +186,5 @@ def test_without_different_happies():
 def __starting_point():
     main()
 
+
 __starting_point()

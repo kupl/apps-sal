@@ -8,16 +8,16 @@ n = int(input())
 for i in range(n):
     t, d = input().split()
     t = int(t)
-    
+
     if d == 'North':
-        coord = coord -t
-    elif d =='South':
-        coord = coord +t
-        
-    if coord<0 or coord >20000:
+        coord = coord - t
+    elif d == 'South':
+        coord = coord + t
+
+    if coord < 0 or coord > 20000:
         print("NO")
         return
-    if coord == 0 and (d == 'East' or d =='West'):
+    if coord == 0 and (d == 'East' or d == 'West'):
         print("NO")
         return
     if coord == 20000 and (d == 'East' or d == 'West'):

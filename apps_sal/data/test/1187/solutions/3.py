@@ -4,9 +4,11 @@ visited = [False] * n
 raw = []
 for i in range(m):
     a, b = [int(item) for item in input().split()]
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     raw.append((a, b))
     edge[a].append(b)
+
 
 class DirectedGraph:
     def __init__(self, adj):

@@ -36,7 +36,7 @@ for _ in range(m):
 
 if (not containsCycle(graph)):
     print(1)
-    answer = [1]*m
+    answer = [1] * m
     print(*answer)
 else:
     print(2)
@@ -47,4 +47,3 @@ else:
         else:
             answer.append(2)
     print(*answer)
-

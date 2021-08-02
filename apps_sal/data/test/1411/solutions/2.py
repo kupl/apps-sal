@@ -37,36 +37,31 @@ def solve(ls):
     return x, y, z, n
 
 
+n, s = list(map(int, input().split()))
 
-n,s = list(map(int,input().split()))
+first = []
 
-first=[]
-
-second=[]
+second = []
 
 for i in range(n):
 
-	si, ai, bi = list(map(int,input().split()))
+    si, ai, bi = list(map(int, input().split()))
 
-	if ai>bi:
+    if ai > bi:
 
-		first.append((ai,bi,si))
+        first.append((ai, bi, si))
 
-	else:
+    else:
 
-		second.append((bi,ai,si))
+        second.append((bi, ai, si))
 
-x1,y1,z1,n1 = solve(first)
+x1, y1, z1, n1 = solve(first)
 
-x2,y2,z2,n2 = solve(second)
+x2, y2, z2, n2 = solve(second)
 
-d = x1+x2 if n1+n2>s else max(x1+y2,x2+y1)
+d = x1 + x2 if n1 + n2 > s else max(x1 + y2, x2 + y1)
 
-print(z1+z2+d)
-
-
-
+print(z1 + z2 + d)
 
 
 # Made By Mostafa_Khaled
-

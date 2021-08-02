@@ -7,9 +7,9 @@ prev = None
 for i in range(n):
     if prev and prev <= (length_):
         if a[i] > length_:
-            result+=1
+            result += 1
     if not prev and a[i] > length_:
-        result+=1
+        result += 1
 
     prev = a[i]
 
@@ -29,17 +29,15 @@ for i in range(m):
         if a[num] <= length_:
             continue
 
-        if num!=0 and num!=(n-1):
-            if a[num-1] > length_ and a[num+1] > length_:
-                result-=1
-            elif a[num-1] <= length_ and a[num+1] <= length_:
+        if num != 0 and num != (n - 1):
+            if a[num - 1] > length_ and a[num + 1] > length_:
+                result -= 1
+            elif a[num - 1] <= length_ and a[num + 1] <= length_:
                 result += 1
-        elif num == 0 and (len(a)==1 or a[1] <= length_):
-            result+=1
-        elif num == (n-1) and a[n-2] <= length_:
-            result+=1
-
-
+        elif num == 0 and (len(a) == 1 or a[1] <= length_):
+            result += 1
+        elif num == (n - 1) and a[n - 2] <= length_:
+            result += 1
 
 
 # easy = True
@@ -119,4 +117,3 @@ for i in range(m):
 #         if a[num] <= length_:
 #             continue
 #         update(1, 0, n - 1, num)
-

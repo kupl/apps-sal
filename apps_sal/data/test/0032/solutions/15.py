@@ -15,7 +15,7 @@ for i in range(n):
         x += t
     elif d == 'North':
         x -= t
-    
+
 if x != 0:
     ans = False
 
@@ -23,6 +23,3 @@ if ans:
     print('YES')
 else:
     print('NO')
-    
-    
-

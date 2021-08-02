@@ -20,7 +20,9 @@ def solve():
         return "NO"
     return "YES"
 
+
 def __starting_point():
     print(solve())
+
 
 __starting_point()

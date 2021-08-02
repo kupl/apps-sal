@@ -1,4 +1,4 @@
-gcd = lambda a, b: gcd(b, a % b) if b else a
+def gcd(a, b): return gcd(b, a % b) if b else a
 
 
 def main():
@@ -25,7 +25,4 @@ def main():
                     total += 1
 
 
-
-
 main()
-

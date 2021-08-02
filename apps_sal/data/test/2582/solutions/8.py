@@ -38,26 +38,26 @@ def main():
     N = int(input())
     P = list(map(int, input().split()))
 
-    idx = [0] * (N+1)
+    idx = [0] * (N + 1)
     for i, p in enumerate(P):
-        idx[p] = i+1
+        idx[p] = i + 1
     bit = Bit(N)
     ans = 0
     for p in range(N, 0, -1):
         i = idx[p]
         k = bit.sum(i)
-        r = bit.lower_bound(k+1)
+        r = bit.lower_bound(k + 1)
         l = bit.lower_bound(k)
         nl = i - l - 1
         nr = r - i - 1
         if nl < nr:
-            for j in range(l+1, i):
-                q = P[j-1]
+            for j in range(l + 1, i):
+                q = P[j - 1]
                 if i < idx[p - q] < r:
                     ans += 1
         else:
-            for j in range(i+1, r):
-                q = P[j-1]
+            for j in range(i + 1, r):
+                q = P[j - 1]
                 if l < idx[p - q] < i:
                     ans += 1
         bit.add(i, 1)
@@ -67,5 +67,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

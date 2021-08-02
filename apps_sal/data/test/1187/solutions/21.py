@@ -16,10 +16,15 @@ def read_int_array():
 
 ######################################################
 
+
 vn, en = read_int_array()
 al = [[] for _ in range(vn)]  # adjacency list
+
+
 def adj(v):
     return al[v]
+
+
 itoe = [None for _ in range(en)]  # index to edge
 for eid in range(en):  # eid - edge id
     v, w = read_int_array()
@@ -31,6 +36,8 @@ for eid in range(en):  # eid - edge id
 marked = set()
 stack = set()
 etoc = {}  # edge to color
+
+
 def dfs(v):  # vertex
     if v in marked:
         return
@@ -49,6 +56,7 @@ def dfs(v):  # vertex
     stack.remove(v)
     return hasbackedge
 
+
 hasbackedge = False
 for v in range(vn):
     if v not in marked:
@@ -58,11 +66,5 @@ for v in range(vn):
 print(2 if hasbackedge else 1)
 for ei in range(en):
     v, w = itoe[ei]
-    c = etoc.get((v,w), 1)
+    c = etoc.get((v, w), 1)
     print(c, end=' ')
-
-
-
-
-
-

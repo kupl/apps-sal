@@ -3,6 +3,8 @@ G = [set() for _ in range(v_n)]
 edges = []
 d_s = [-1] * v_n
 ok = False
+
+
 def dfs(u):
     nonlocal ok
     if ok:
@@ -15,6 +17,7 @@ def dfs(u):
             ok = True
     d_s[u] = 1
 
+
 for _ in range(e_n):
     u, v = tuple(map(int, input().split()))
     u -= 1
@@ -24,7 +27,7 @@ for _ in range(e_n):
 
 
 for u in range(v_n):
-    if d_s[u]==-1:
+    if d_s[u] == -1:
         dfs(u)
 
 

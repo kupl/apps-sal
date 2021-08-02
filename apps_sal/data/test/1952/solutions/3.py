@@ -21,4 +21,3 @@ for ans in ANS:
     for a in ans:
         L += [a] * ans[a]
     print(len(L), *L)
-

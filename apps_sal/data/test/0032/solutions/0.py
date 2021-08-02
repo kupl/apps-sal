@@ -5,7 +5,8 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-################################################### SOLUTION
+# SOLUTION
+
 
 def main():
     latitude = 0
@@ -29,13 +30,16 @@ def main():
         return "NO"
     return "YES"
 
-#################################################### HELPERS
+# HELPERS
+
 
 def read(callback=int):
     return list(map(callback, input().strip().split()))
 
+
 def write(value, end="\n"):
-    if value is None: return
+    if value is None:
+        return
     try:
         if not isinstance(value, str):
             value = " ".join(map(str, value))
@@ -43,5 +47,5 @@ def write(value, end="\n"):
         pass
     print(value, end=end)
 
-write(main())
 
+write(main())

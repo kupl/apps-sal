@@ -21,5 +21,5 @@ def main():
 
     print("YES" if cur == 0 else "NO")
 
-main()
 
+main()
