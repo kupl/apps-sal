@@ -1,11 +1,15 @@
 def win(s, e):
-    if e == s:return False
-    elif e == s + 1:return True
-    elif e & 1:return s & 1 == 0
-    elif e // 2 < s:return s & 1 == 1
-    elif e // 4 < s:return True
-    else:return win(s, e // 4)    
-def lose(s, e):return (True if e // 2 < s else win(s, e // 2))       
+    if e == s: return False
+    elif e == s + 1: return True
+    elif e & 1: return s & 1 == 0
+    elif e // 2 < s: return s & 1 == 1
+    elif e // 4 < s: return True
+    else: return win(s, e // 4)
+
+
+def lose(s, e): return (True if e // 2 < s else win(s, e // 2))
+
+
 def main():
     res = [False, True]
     for _ in range(int(input())):
@@ -20,4 +24,5 @@ def main():
         res = cur
     print(*[int(x) for x in res])
 
-main()  
+
+main()

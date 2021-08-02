@@ -6,4 +6,3 @@ for i in range(n):
         print('.' * (m - 1) + '#')
     else:
         print('#' + '.' * (m - 1))
-

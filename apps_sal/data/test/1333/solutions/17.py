@@ -11,4 +11,3 @@ while i < n:
         else:
             print('#' + '.' * (m - 1))
     i += 2
-

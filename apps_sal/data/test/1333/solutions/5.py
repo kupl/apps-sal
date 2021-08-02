@@ -6,9 +6,8 @@ while i < n:
         print("#" * m)
     else:
         if z % 2 == 0:
-            print("." *(m-1) + "#")
+            print("." * (m - 1) + "#")
         else:
-            print("#" + "." *(m-1))
+            print("#" + "." * (m - 1))
         z += 1
     i += 1
-

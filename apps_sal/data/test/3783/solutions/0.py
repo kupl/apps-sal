@@ -12,4 +12,3 @@ for i in range(k + 1):
     r = (r + p * a[i]) % m
     p = p * v * (n - i) % m
 print(r)
-
