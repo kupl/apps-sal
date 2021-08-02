@@ -40,4 +40,3 @@ for i in range(q):
     if mal[i][1] < n:
         scanline[mal[i][1]] -= 1
 print(ans)
-

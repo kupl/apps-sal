@@ -1,5 +1,6 @@
 n = int(input())
-if n == 1 or n & 1 == 0: print(-1)
+if n == 1 or n & 1 == 0:
+    print(-1)
 else:
     t = list(map(int, input().split()))
     s, k = 0, n // 2 - 1

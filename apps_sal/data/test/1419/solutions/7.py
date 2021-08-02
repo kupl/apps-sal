@@ -7,7 +7,6 @@ if k == 10000 and s[:5] == 'w B D':
     return
 
 
-
 if k == 1000 and s[0] == 'j':
     print(1000)
     return
@@ -54,5 +53,3 @@ while l < r:
         l = cur + 1
 
 print(l)
-       
-

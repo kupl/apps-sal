@@ -9,8 +9,9 @@ line = input()
 line = line.replace('-', ' ')
 text = line.split()
 ords = list(map(len, text))
-words = [x+1 for x in ords]
+words = [x + 1 for x in ords]
 words[-1] -= 1
+
 
 def can(limit):
     row = 0
@@ -26,6 +27,7 @@ def can(limit):
         col = 0
     return row < K or (row <= K and col == 0)
 
+
 lo = max(words)
 
 hi = len(line)
@@ -40,4 +42,3 @@ while lo < hi:
         lo = mid + 1
 
 print(hi)
-

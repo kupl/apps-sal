@@ -30,4 +30,3 @@ while a < b:
         b = c
 
 print(a)
-

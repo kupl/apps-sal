@@ -1,15 +1,17 @@
 def main():
     n = int(input())
-    if n % 2 != 0: print((-1)); return;
+    if n % 2 != 0:
+        print((-1))
+        return
 
     graph = [[] for _ in range(n)]
 
-    for _ in range(n-1):
+    for _ in range(n - 1):
         a, b = list(map(int, input().split()))
-        graph[a-1].append(b-1)
-        graph[b-1].append(a-1)
+        graph[a - 1].append(b - 1)
+        graph[b - 1].append(a - 1)
 
-    res = 0    
+    res = 0
     stack = [0]
     visited = [-1] * n
     visited[0] = 0
@@ -28,11 +30,13 @@ def main():
 
         if not flag:
             stack.pop()
-            if s == 0: break;
+            if s == 0:
+                break
             count[visited[s]] += count[s]
 
     res = sum([1 if i % 2 == 0 else 0 for i in count])
-    print(res-1)
+    print(res - 1)
+
 
 def __starting_point():
     main()

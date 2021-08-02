@@ -1,4 +1,6 @@
 import math
+
+
 def main():
     g, d, f = map(int, input().split())
     lst1 = list(map(int, input().split()))
@@ -76,5 +78,6 @@ def main():
         ans += ncr(n1, a1) * ncr(n2, a2) * ncr(n3, a3)
 
     print(ans)
+
 
 main()

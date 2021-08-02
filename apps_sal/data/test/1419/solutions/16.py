@@ -40,5 +40,5 @@ def do():
             hi = mi
     return lo
 
-print(do())
 
+print(do())

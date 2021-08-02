@@ -1,6 +1,8 @@
 n = int(input())
 xs = list([len(list(x)) + 1 for x in input().replace('-', ' ').split()])
 xs[-1] -= 1
+
+
 def f(xs, n, c):
     cnt = 1
     tmp = 0
@@ -13,6 +15,7 @@ def f(xs, n, c):
         tmp += x
     return cnt <= n
 
+
 l = 1
 r = sum(xs)
 
@@ -24,4 +27,3 @@ while l + 1 < r:
         l = c
 
 print(r)
-

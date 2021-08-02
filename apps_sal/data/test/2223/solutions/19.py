@@ -3,10 +3,12 @@ import sys
 # import bisect
 # from collections import deque
 # sys.setrecursionlimit(100000)
- 
-Ri = lambda : [int(x) for x in sys.stdin.readline().split()]
-ri = lambda : sys.stdin.readline().strip()
- 
+
+
+def Ri(): return [int(x) for x in sys.stdin.readline().split()]
+def ri(): return sys.stdin.readline().strip()
+
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -19,22 +21,24 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
- 
-n =int(ri())
+
+n = int(ri())
 lis = [[] for i in range(n)]
-for _ in range(n-1):
-    a,b = Ri()
-    a-=1
-    b-=1
+for _ in range(n - 1):
+    a, b = Ri()
+    a -= 1
+    b -= 1
     lis[a].append(b)
     lis[b].append(a)
-visit =[-1]*n
-no = [1]*n
+visit = [-1] * n
+no = [1] * n
 sta = [0]
-visit[0]= True
-if n&1 == 1:
+visit[0] = True
+if n & 1 == 1:
     print(-1)
 else:
     while len(sta) > 0:
@@ -47,13 +51,11 @@ else:
                 sta.append(lis[top][i])
         if ret:
             if top != 0:
-                no[visit[top]]+=no[top]
+                no[visit[top]] += no[top]
             sta.pop()
-    ans=0
-    no= no[1:]
+    ans = 0
+    no = no[1:]
     for i in no:
-        if i&1 == 0:
-            ans+=1
+        if i & 1 == 0:
+            ans += 1
     print(ans)
-
-

@@ -1,36 +1,35 @@
-n=int(input()) 
+n = int(input())
 
-if n==1 or n%2==0:
+if n == 1 or n % 2 == 0:
 
-	print(-1)
+    print(-1)
 
-	return
+    return
 
-A=[0]*(n+1)
+A = [0] * (n + 1)
 
-A[1:n+1]=list(map(int,input().split()))
+A[1:n + 1] = list(map(int, input().split()))
 
-ans=0
+ans = 0
 
-for i in range(n,0,-1):
+for i in range(n, 0, -1):
 
-	if(A[i]<=0):continue
+    if(A[i] <= 0):
+        continue
 
-	x=int(i/2) 
+    x = int(i / 2)
 
-	A[x]-=A[i]
+    A[x] -= A[i]
 
-	ans+=A[i]
+    ans += A[i]
 
-	if i%2==1:
+    if i % 2 == 1:
 
-		A[i-1]-=A[i]
+        A[i - 1] -= A[i]
 
-	A[i]=0  
+    A[i] = 0
 
 print(ans)
 
 
-
 # Made By Mostafa_Khaled
-

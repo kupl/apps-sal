@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 a = 'abcdefghijklmnopqrstuvwxyz'
 s = input()
 pos = 0
@@ -10,5 +11,3 @@ for i in s:
     ans += min(int(math.fabs(gg - pos)), 26 - max(gg, pos) + min(pos, gg))
     pos = gg
 print(ans)
-    
-

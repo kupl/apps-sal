@@ -29,6 +29,7 @@ for i in range(100001):
     dn[i] = dx
     fn[i] = fx
 
+
 def team_count(a, b):
     if a > 100000:
         a = 100000
@@ -43,9 +44,9 @@ def team_count(a, b):
         print(val)
     return val
 
+
 res = team_count(0, 2)
 for i in range(1, 50001):
     res += team_count(i, 2 * i + 2) - team_count(i, 2 * i)
 
 print(res)
-

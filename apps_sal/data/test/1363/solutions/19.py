@@ -68,4 +68,3 @@ while posCnt[0] > 0 and posCnt[1] > 1 and posCnt[2] > 2:
     lowerBound += 1
 
 print(finalCounter)
-

@@ -17,4 +17,3 @@ for item in s:
     ans += min(ans1, ans2)
     ind = index
 print(ans)
-

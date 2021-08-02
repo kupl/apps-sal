@@ -5,9 +5,9 @@ def C(n, k):
     if k == 1:
         return n                        # Сочетания из n по 1
     elif k == 2:
-        return n * (n-1) // 2           # Сочетания из n по 2
+        return n * (n - 1) // 2           # Сочетания из n по 2
     elif k == 3:
-        return n * (n-1) * (n-2) // 6   # Сочетания из n по 3
+        return n * (n - 1) * (n - 2) // 6   # Сочетания из n по 3
 
 
 def main():
@@ -28,7 +28,7 @@ def main():
     gmin, dmin, fmin = 0, 0, 0
     gmax, dmax, fmax = 0, 0, 0
 
-    while g-gmin >= 1 and d-dmin >= 2 and f-fmin >= 3:
+    while g - gmin >= 1 and d - dmin >= 2 and f - fmin >= 3:
         term = 1
         mn = min(gs[gmin], ds[dmin], fs[fmin])
 
@@ -45,7 +45,7 @@ def main():
             dmax += 1
         dn = dmax - dmin
         if mn == ds[dmin]:
-            term *= C(dn-1, 1)
+            term *= C(dn - 1, 1)
             dmin += 1
         else:
             term *= C(dn, 2)
@@ -54,7 +54,7 @@ def main():
             fmax += 1
         fn = fmax - fmin
         if mn == fs[fmin]:
-            term *= C(fn-1, 2)
+            term *= C(fn - 1, 2)
             fmin += 1
         else:
             term *= C(fn, 3)
@@ -98,5 +98,6 @@ def __starting_point():
 # 71 49 41
 # 64 37 58 40
 # 23 36 67 33 1 60
+
 
 __starting_point()

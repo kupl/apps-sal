@@ -50,4 +50,3 @@ def solve(s, t):
 s = input()
 t = input()
 print((solve(s, t)))
-

@@ -22,7 +22,8 @@ def do():
                 l = -1
                 if count > limit:
                     return False
-        if cur: count += 1
+        if cur:
+            count += 1
         return count <= limit
 
     lo, hi = 1, len(ad) + 1
@@ -34,5 +35,5 @@ def do():
             hi = mi
     return lo
 
-print(do())
 
+print(do())

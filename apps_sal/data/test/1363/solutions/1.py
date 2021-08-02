@@ -1,6 +1,7 @@
 import sys
 from bisect import bisect_left, bisect_right
 
+
 def binom(n, k):
     if k > n:
         return 0
@@ -24,8 +25,8 @@ def ways_to_pick(xs, wx, lo, hi):
 
 def number_of_teams(gs, wg, ds, wd, fs, wf, lo, hi):
     return ways_to_pick(gs, wg, lo, hi) * \
-           ways_to_pick(ds, wd, lo, hi) * \
-           ways_to_pick(fs, wf, lo, hi)
+        ways_to_pick(ds, wd, lo, hi) * \
+        ways_to_pick(fs, wf, lo, hi)
 
 
 ng, nd, nf = list(map(int, input().split()))
@@ -58,4 +59,3 @@ for idx, min_el in enumerate(fs):
                            fs[idx + 1:], wf - 1,
                            min_el, 2 * min_el)
 print(ans)
-

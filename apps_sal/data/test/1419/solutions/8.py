@@ -9,8 +9,12 @@ def f(r):
             return s
         s.append(ofs - prev)
         prev = ofs
+
+
 n = int(input())
 s = f(input().replace('-', ' '))
+
+
 def can(w):
     cnt, cur = 0, 0
     for l in s:
@@ -18,8 +22,10 @@ def can(w):
             return False
         ln = cur + l <= w
         cur = cur * ln + l
-        cnt += not ln 
+        cnt += not ln
     return cnt < n
+
+
 def bsearch(lo, hi):
     while lo < hi:
         mid = (lo + hi) // 2
@@ -28,5 +34,6 @@ def bsearch(lo, hi):
         else:
             lo = mid + 1
     return lo
-print(bsearch(0, sum(s)))
 
+
+print(bsearch(0, sum(s)))

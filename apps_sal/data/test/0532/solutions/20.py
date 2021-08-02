@@ -9,5 +9,5 @@ def solution():
         now = string[i]
     print(res)
 
-solution()
 
+solution()

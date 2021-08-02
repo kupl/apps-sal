@@ -67,4 +67,3 @@ for i in c:
     #     print()
 
 print(count)
-

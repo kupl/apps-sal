@@ -34,8 +34,8 @@ for i in range(d + g + f):
         roles.append(2)
         di += 1
 
-#print(numers)
-#print(roles)
+# print(numers)
+# print(roles)
 
 
 @lru_cache()
@@ -86,4 +86,3 @@ def solve(numers, roles):
 
 
 print(solve(numers, roles))
-

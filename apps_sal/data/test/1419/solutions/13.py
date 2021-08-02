@@ -39,4 +39,3 @@ while r - l > 1:
         l = mid
 
 print(r)
-

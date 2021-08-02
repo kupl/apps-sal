@@ -1,14 +1,14 @@
 
 def __starting_point():
-    N,Q = list(map(int,input().strip().split()))
-    
+    N, Q = list(map(int, input().strip().split()))
+
     painters = []
     for i in range(Q):
-        painters.append(tuple(map(int,input().strip().split())))
-    C = [[] for i in range(N+1)]
+        painters.append(tuple(map(int, input().strip().split())))
+    C = [[] for i in range(N + 1)]
     for i in range(len(painters)):
-        start,end = painters[i]
-        for j in range(start,end+1):
+        start, end = painters[i]
+        for j in range(start, end + 1):
             C[j].append(i)
     C = C[1:]
     total = sum(1 for i in C if len(i) > 0)
@@ -28,6 +28,6 @@ def __starting_point():
             if i != j and count[i][j] < mini:
                 mini = count[i][j]
     print(total - mini)
-    
+
 
 __starting_point()
