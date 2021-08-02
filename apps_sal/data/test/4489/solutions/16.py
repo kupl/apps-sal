@@ -17,4 +17,3 @@ if max(d_swap) < 0:
     print((0))
 else:
     print((max(d_swap)))
-

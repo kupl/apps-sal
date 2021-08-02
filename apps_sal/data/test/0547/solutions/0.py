@@ -12,4 +12,3 @@ for i in range(n):
     elif (len(a[i]) == len(s)):
         kmx += 1
 print((kmn - 1) // k * 5 + kmn, (kmx - 1) // k * 5 + kmx)
-

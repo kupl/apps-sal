@@ -1,4 +1,5 @@
-import sys, collections
+import sys
+import collections
 lines = [s.rstrip("\n") for s in sys.stdin.readlines()]
 n, = [int(num) for num in lines.pop(0).split(" ")]
 blue_list = lines[:n]
@@ -14,4 +15,3 @@ if len(lis):
 else:
     ans = 0
 print(ans)
-

@@ -1,7 +1,10 @@
 from collections import Counter
 from sys import stdin
+
+
 def input():
     return stdin.readline().strip()
+
 
 n = int(input())
 s = [input() for _ in range(n)]

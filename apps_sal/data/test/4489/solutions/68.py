@@ -13,4 +13,3 @@ for k, v in list(s.items()):
     tmp -= t[k]
     ans = max(ans, tmp)
 print(ans)
-

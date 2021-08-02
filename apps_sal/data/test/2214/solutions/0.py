@@ -6,6 +6,7 @@ l = []
 for _ in range(n):
     l.append(input().strip())
 
+
 def witch(s):
     out = 0
     if s[0] != s[1]:
@@ -13,6 +14,7 @@ def witch(s):
     if s[1] != s[2]:
         out += 1
     return out
+
 
 if n >= 4 and m >= 4:
     print(-1)
@@ -43,6 +45,3 @@ else:
             ll.reverse()
             ll[witch(nex)] += 1
         print(n - max(ll))
-        
-        
-

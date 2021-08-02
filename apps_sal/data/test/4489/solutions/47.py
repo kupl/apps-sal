@@ -17,4 +17,3 @@ for i in range(m):
 
 res = max(0, sorted(list(str_dict.values()))[-1])
 print(res)
-

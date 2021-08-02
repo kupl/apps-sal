@@ -1,9 +1,11 @@
-parse_int = lambda: list(map(int, input().split()))
+def parse_int(): return list(map(int, input().split()))
 
-n,k = parse_int()
+
+n, k = parse_int()
 
 passw = set()
-for _ in range(n): passw.add(input().strip())
+for _ in range(n):
+    passw.add(input().strip())
 passw = [len(el) for el in passw]
 passw.sort()
 

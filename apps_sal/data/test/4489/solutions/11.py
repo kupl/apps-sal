@@ -13,4 +13,3 @@ for blue in blues:
         max_price = price
 
 print(max_price)
-

@@ -1,7 +1,10 @@
 from collections import *
 from sys import stdin, stderr
+
+
 def rl():
     return [int(w) for w in stdin.readline().split()]
+
 
 n, m = rl()
 if n > 3:
@@ -23,4 +26,3 @@ for target in range(4):
     if total < r:
         r = total
 print(r)
-

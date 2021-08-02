@@ -1,4 +1,4 @@
-n, k = [ int(x) for x in input().split() ]
+n, k = [int(x) for x in input().split()]
 
 passwords = []
 
@@ -24,4 +24,3 @@ for i in range(0, len(passwords)):
         t += 5
 
 print(opt, pes)
-
