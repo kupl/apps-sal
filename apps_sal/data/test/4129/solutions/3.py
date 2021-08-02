@@ -45,4 +45,3 @@ for i in topo[::-1]:
         dfs(i)
 
 print(ans)
-

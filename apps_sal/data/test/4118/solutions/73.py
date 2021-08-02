@@ -1,6 +1,5 @@
-A,B=list(map(int,input().split()))
-if A>9 or B>9:
+A, B = list(map(int, input().split()))
+if A > 9 or B > 9:
     print((-1))
 else:
-    print((A*B))
-
+    print((A * B))

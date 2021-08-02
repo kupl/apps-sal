@@ -6,10 +6,11 @@ s -= 1
 g = [[] for _ in range(n)]
 for _ in range(m):
     a, b = map(int, input().split())
-    g[a-1].append(b-1)
+    g[a - 1].append(b - 1)
 
 used = [False] * 5010
 topo = []
+
 
 def topo_sort(node):
     used[node] = True
@@ -18,11 +19,13 @@ def topo_sort(node):
             topo_sort(c)
     topo.append(node)
 
+
 def dfs(node):
     used[node] = True
     for c in g[node]:
         if not used[c]:
             dfs(c)
+
 
 for i in range(n):
     if not used[i]:

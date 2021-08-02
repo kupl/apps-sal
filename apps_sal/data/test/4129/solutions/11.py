@@ -16,7 +16,7 @@ for _ in range(m):
     u, v = map(int, input().split())
     q[u - 1].append(v - 1)
 rt, topo = [True] * n, []
-for i,a in enumerate(rt):
+for i, a in enumerate(rt):
     if a:
         d(i)
 rt, res = [True] * n, 0

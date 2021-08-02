@@ -1,5 +1,5 @@
-A,B = (int(x) for x in input().split())
+A, B = (int(x) for x in input().split())
 if A <= 9 and B <= 9:
-  print(A*B)
+    print(A * B)
 else:
-  print(-1)
+    print(-1)

@@ -10,4 +10,3 @@ for i in range(n - 1, 0, -1):
     dp[i] = cur
     cur = max(cur, s[i] - dp[i])
 print(dp[1])
-

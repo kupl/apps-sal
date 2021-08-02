@@ -1,5 +1,7 @@
 from collections import defaultdict
 import sys
+
+
 def dfs(u):
     avail[u] = False
     for v in g[u]:
@@ -16,7 +18,7 @@ for _ in range(m):
     g[u - 1].append(v - 1)
 
 avail, topo = [True] * n, []
-for i,a in enumerate(avail):
+for i, a in enumerate(avail):
     if a:
         dfs(i)
 avail, res = [True] * n, 0

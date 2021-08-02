@@ -1,15 +1,15 @@
 from collections import defaultdict
 
-n,m = map(int,input().split())
-k = n//m
-l = list(map(int,input().split()))
+n, m = map(int, input().split())
+k = n // m
+l = list(map(int, input().split()))
 s = sum(l)
 #mod_list = []
 occ = defaultdict(list)
-for i,a in enumerate(l):
-    rem = a%m
+for i, a in enumerate(l):
+    rem = a % m
     occ[rem].append(i)
-    #mod_list.append(rem)
+    # mod_list.append(rem)
 
 j = 0
 for i in range(m):

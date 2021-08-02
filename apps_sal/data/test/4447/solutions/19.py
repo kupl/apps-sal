@@ -24,4 +24,3 @@ for _ in range(2):
 
 print(c)
 print(*a)
-

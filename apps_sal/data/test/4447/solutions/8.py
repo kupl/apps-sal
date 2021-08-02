@@ -12,4 +12,3 @@ for i in range(m):
         x[j % m].append(k)
 print(sum(a) - s)
 print(*a)
-

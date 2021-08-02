@@ -1,7 +1,9 @@
 target, limit = list(map(int, input().split()))
 
+
 def lowbit(x):
     return x & (x ^ (x - 1))
+
 
 ans = []
 for i in range(limit, 0, -1):
@@ -15,5 +17,3 @@ if target:
 else:
     print(len(ans))
     print(" ".join(map(str, ans)))
-        
-

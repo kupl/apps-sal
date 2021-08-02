@@ -1,7 +1,7 @@
 from collections import deque
 import sys
 sys.setrecursionlimit(1000000)
- 
+
 
 n, m, s = [int(x) for x in input().split()]
 adj = [[] for u in range(n + 1)]
@@ -9,6 +9,7 @@ vis = [False for u in range(n + 1)]
 for i in range(m):
     u, v = [int(x) for x in input().split()]
     adj[u].append(v)
+
 
 def tarjan():
     low = [-1 for u in range(n + 1)]
@@ -48,17 +49,19 @@ def tarjan():
 
     return comp[::-1]
 
+
 def visit(adj, vis, src):
     q = deque()
     q.append(src)
     vis[src] = True
-    while len(q) > 0: 
+    while len(q) > 0:
         u = q.popleft()
         for v in adj[u]:
             if vis[v] == False:
                 vis[v] = True
                 q.append(v)
-    
+
+
 ans = 0
 visit(adj, vis, s)
 tarOrd = tarjan()
@@ -69,7 +72,3 @@ for lis in tarOrd:
         ans += 1
 
 print(ans)
-
-
-
-

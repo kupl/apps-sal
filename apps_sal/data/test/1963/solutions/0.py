@@ -6,7 +6,7 @@ for i in range(1, n):
     if p[i]:
         a = b = i
         d = t[i]
-        if d == 1: 
+        if d == 1:
             s, q = n - 2, [1]
             break
         while t[a - 1] % d == 0: a -= 1

@@ -47,5 +47,3 @@ if p1 < n and p2 == n:
 print(cnt)
 for i in ls:
     print(i, end=' ')
-
-
