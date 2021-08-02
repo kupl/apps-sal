@@ -14,4 +14,3 @@ for t_num in range(t):
         print(-1)
     else:
         print(ans)
-

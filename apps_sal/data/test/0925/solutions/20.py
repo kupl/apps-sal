@@ -3,7 +3,7 @@
 #balance = 0
 #sh = 0
 #
-#for i in s:
+# for i in s:
 #    if i == "(": balance += 1
 #    if i == ")": balance -= 1
 #    if i == "#": sh += 1
@@ -37,18 +37,3 @@ if s[1] == "8": k2 = 1
 if s[1] == "9": k2 = 2
 
 print(k1 * k2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

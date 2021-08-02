@@ -8,4 +8,4 @@ for i in range(ans):
             num += "1"
         else:
             num += "0"
-    print(int(num), end = " ")
+    print(int(num), end=" ")

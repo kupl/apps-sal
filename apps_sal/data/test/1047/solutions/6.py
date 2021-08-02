@@ -2,7 +2,7 @@ k = [int(i) for i in input()]
 print(max(k))
 nums = []
 while max(k) > 0:
-    d = ['0']*len(k)
+    d = ['0'] * len(k)
     for x in range(len(k)):
         if k[x] > 0:
             k[x] -= 1
@@ -12,4 +12,3 @@ while max(k) > 0:
         n = n[1:]
     nums.append(n)
 print(' '.join(nums))
-

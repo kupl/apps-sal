@@ -18,4 +18,3 @@ def solve():
 
 
 print("Alice" if solve() else "Brown")
-

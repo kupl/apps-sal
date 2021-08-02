@@ -15,7 +15,5 @@ while s != 0:
             k += '1'
         else:
             k += '0'
-    print(k, end = ' ')
+    print(k, end=' ')
     s -= int(k)
-
-

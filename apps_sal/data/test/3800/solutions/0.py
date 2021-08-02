@@ -16,11 +16,12 @@ def f(t, k):
             if j < n: d += t[j]
             d -= t[i]
             i += 1
-            j += 1                
+            j += 1
         else:
             if j < n: d += t[j]
             j += 1
     return s
+
 
 s, n = 0, int(input())
 t = list(map(int, input()))

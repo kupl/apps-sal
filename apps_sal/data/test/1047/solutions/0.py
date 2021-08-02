@@ -1,5 +1,6 @@
 import sys
 
+
 def get_max_kvazi(n):
     s = str(n)
     ans = ''
@@ -9,6 +10,7 @@ def get_max_kvazi(n):
         else:
             ans = ans + '1'
     return int(ans)
+
 
 fin = sys.stdin
 fout = sys.stdout
@@ -24,4 +26,3 @@ while (n > 0):
     n -= cur
 print(len(ans))
 print(*ans)
-

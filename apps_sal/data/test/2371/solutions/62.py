@@ -1,4 +1,4 @@
-N,_,W = map(int, input().split())
+N, _, W = map(int, input().split())
 A = [int(i) for i in input().split()]
 
 if N == 1:

@@ -6,4 +6,3 @@ else:
     ans = "Alice"
 
 print(ans)
-

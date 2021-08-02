@@ -15,4 +15,3 @@ while sum(n) > 0:
 
 print(len(elems))
 print(*elems)
-

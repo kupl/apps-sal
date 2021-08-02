@@ -1,5 +1,5 @@
-N,Z,W = map(int,input().split())
-A = list(map(int,input().split()))
+N, Z, W = map(int, input().split())
+A = list(map(int, input().split()))
 
 ans = abs(W - A[-1])
 if N > 1:

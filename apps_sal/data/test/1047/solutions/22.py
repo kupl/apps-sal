@@ -13,5 +13,4 @@ for i in a[::-1]:
         b[k] += mult
     mult *= 10
 for i in range(j):
-    print(b[i], end = ' ')
-
+    print(b[i], end=' ')

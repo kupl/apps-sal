@@ -22,5 +22,4 @@ for i in range(len(n)):
         mylist.append(1)
     elif n[i] == '9':
         mylist.append(2)
-print(mylist[0]*mylist[1])
-
+print(mylist[0] * mylist[1])

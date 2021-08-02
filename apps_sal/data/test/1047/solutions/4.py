@@ -9,4 +9,3 @@ for i in range(len(n)):
 outs = list([_f for _f in outs if _f])
 print(len(outs))
 print(*outs)
-

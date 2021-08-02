@@ -2,12 +2,14 @@ def f(t):
     a, b, c, d = map(int, t.split('.'))
     return d + (c << 8) + (b << 16) + (a << 24)
 
+
 def g(x):
     p = [0] * 4
     for i in range(4):
         p[3 - i] = str(x % 256)
         x //= 256
     return '.'.join(p)
+
 
 n, k = map(int, input().split())
 t = [f(input()) for i in range(n)]

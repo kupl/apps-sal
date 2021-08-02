@@ -18,4 +18,3 @@ for _ in range(t):
         print((n - 1 - y + d - 1) // d + (n - 1 - x + d - 1) // d)
         continue
     print(-1)
-

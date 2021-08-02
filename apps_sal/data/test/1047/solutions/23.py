@@ -23,4 +23,3 @@ for i in range(ans):
             s += '0'
     s += ' '
 print(s[:-1])
-

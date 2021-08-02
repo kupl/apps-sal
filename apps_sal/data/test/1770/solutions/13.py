@@ -13,4 +13,3 @@ for i in range(t):
         print(min(w))
     else:
         print(-1)
-
