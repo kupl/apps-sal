@@ -10,6 +10,7 @@ def mainA():
         ans -= max((up - dow) // v + 1, 0)
         print(ans)
 
+
 def mainB():
     n, r = map(int, input().split())
     a = [int(e) for e in input().split()]
@@ -30,5 +31,6 @@ def mainB():
             print(-1)
             return
     print(ans)
+
 
 mainB()

@@ -14,4 +14,3 @@ while i < n:
         ans += 1
 
 print(ans)
-

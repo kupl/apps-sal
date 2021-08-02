@@ -4,6 +4,7 @@ import collections
 
 a = collections.OrderedDict()
 
+
 def main():
     t = int(input())
     for i in range(t):
@@ -24,7 +25,9 @@ def main():
         else:
             print(result)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

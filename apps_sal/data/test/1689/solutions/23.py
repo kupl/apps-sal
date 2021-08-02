@@ -19,4 +19,3 @@ if ans != "":
     print("\n".join(seats))
 else:
     print("NO")
-

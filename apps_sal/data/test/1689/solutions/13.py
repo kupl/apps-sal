@@ -9,16 +9,16 @@ for i in range(n):
             line += [string]
             result = True
         elif string[3] == "O" and string[4] == "O":
-            string = string[:3]+ "++"
+            string = string[:3] + "++"
             line += [string]
-            result = True  
+            result = True
         else:
             line += [string]
     else:
-        line += [string]        
+        line += [string]
 if not result:
     print("NO")
-else:    
+else:
     print("YES")
     for i in range(n):
         print(line[i])

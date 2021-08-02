@@ -9,4 +9,3 @@ for a in A:
         ans += 1
         now = 0
 print(ans)
-

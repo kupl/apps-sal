@@ -15,4 +15,3 @@ for orange in a:
         container = 0
 
 print(result)
-

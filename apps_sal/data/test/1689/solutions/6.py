@@ -6,7 +6,7 @@ for nn in range(n):
 ok = False
 
 for i in range(n):
-    a,b = seat[i].split('|')
+    a, b = seat[i].split('|')
     if ok is False:
         if a == 'OO':
             a = '++'

@@ -3,9 +3,9 @@
 
 import time
 
-n       = int(input())
-bus     = []
-flag    = True
+n = int(input())
+bus = []
+flag = True
 
 for i in range(n):
     x = list(input())
@@ -31,4 +31,3 @@ else:
         print()
 finish = time.time()
 #print(finish - start)
-

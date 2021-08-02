@@ -1,5 +1,5 @@
 q = int(input())
-for x in range(q):   
+for x in range(q):
     n = int(input())
     s = str(input())
     t = str(input())
@@ -13,6 +13,6 @@ for x in range(q):
             k = i
             for j in range(n):
                 if k < n and s[j] == t[k]:
-                    k+=1
+                    k += 1
                 ans = min(ans, n - k + i)
     print(ans)

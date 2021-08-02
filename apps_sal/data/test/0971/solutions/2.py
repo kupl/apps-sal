@@ -14,4 +14,3 @@ for cur in a:
         count += 1
         summ = 0
 fout.write(str(count))
-

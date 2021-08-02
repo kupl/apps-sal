@@ -1,4 +1,4 @@
-n,r = [int(x) for x in input().split()]
+n, r = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 idx = 0
 cb = -100000
@@ -6,15 +6,15 @@ ptr = 0
 count = 0
 flag = True
 while idx < n:
-    ptr = max(0,idx-r+1)
+    ptr = max(0, idx - r + 1)
     # hasone = False
-    while ptr < min(n,idx+r):
+    while ptr < min(n, idx + r):
         if a[ptr] == 1:
-           cb = ptr
+            cb = ptr
         #   hasone = True
         ptr += 1
         # print(idx,ptr)
-    if abs(idx-cb) >= r:
+    if abs(idx - cb) >= r:
         print(-1)
         flag = False
         break

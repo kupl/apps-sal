@@ -15,11 +15,10 @@ for _ in range(t):
         if len(p) <= 1:
             continue
 
-        for i in range(len(p)-1):
-            ans = min(p[i+1]-p[i]+1, ans)
+        for i in range(len(p) - 1):
+            ans = min(p[i + 1] - p[i] + 1, ans)
 
-
-    if ans==10000000:
+    if ans == 10000000:
         print(-1)
     else:
         print(ans)

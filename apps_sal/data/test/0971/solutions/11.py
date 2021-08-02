@@ -13,4 +13,3 @@ for i in xs:
             cur = 0
 
 print(count)
-

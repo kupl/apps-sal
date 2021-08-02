@@ -19,9 +19,8 @@ else:
     for i in range(n):
         if r == i:
             if ok == 1:
-                print("++|"+S[i][3]+S[i][4])
+                print("++|" + S[i][3] + S[i][4])
             else:
-                print(S[i][0]+S[i][1]+"|++")
+                print(S[i][0] + S[i][1] + "|++")
         else:
             print(S[i])
-

@@ -5,11 +5,11 @@ for _ in range(n):
 
 flag = 0
 for i in range(n):
-    for j in range(1,5):
-        if a[i][j]=="O" and a[i][j-1]=="O":
+    for j in range(1, 5):
+        if a[i][j] == "O" and a[i][j - 1] == "O":
             a[i][j] = "+"
-            a[i][j-1] = "+"
-            flag =1
+            a[i][j - 1] = "+"
+            flag = 1
             break
     if flag:
         break

@@ -7,14 +7,14 @@ k = n // 3
 c0 = 0
 c1 = 0
 c2 = 0
-for i in range (0, n):
+for i in range(0, n):
     if s[i] == '0':
         c0 = c0 + 1
     elif s[i] == '1':
         c1 = c1 + 1
     else:
         c2 = c2 + 1
-    A[i] = s[i] 
+    A[i] = s[i]
 
 i = 0
 while c0 < k:
@@ -27,7 +27,7 @@ while c0 < k:
         c0 = c0 + 1
         c2 = c2 - 1
     i = i + 1
-i = n-1
+i = n - 1
 while c0 > k and c2 < k:
     if A[i] == '0':
         A[i] = '2'
@@ -40,7 +40,7 @@ while c0 > k and c1 < k:
         c0 = c0 - 1
         c1 = c1 + 1
     i = i - 1
-i = n-1
+i = n - 1
 while c1 > k and c2 < k:
     if A[i] == '1':
         A[i] = '2'

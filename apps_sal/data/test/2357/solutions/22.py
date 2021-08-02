@@ -1,6 +1,8 @@
-from sys import stdin, stdout  
+from sys import stdin, stdout
 
 import collections
+
+
 def main():
     T = int(input())
     for _ in range(T):
@@ -14,6 +16,9 @@ def main():
             prev_idx[v] = i
         print(-1 if min_dist == float('inf') else min_dist)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -15,7 +15,7 @@ if counter[0] < balanced:
             break
 
 if counter[2] < balanced:
-    for i, n in zip(range(N-1, -1, -1), s[::-1]):
+    for i, n in zip(range(N - 1, -1, -1), s[::-1]):
         if n != 2 and counter[n] > balanced:
             s[i] = 2
             counter[n] -= 1
@@ -33,7 +33,7 @@ if counter[1] < balanced:
             break
 
 if counter[1] < balanced:
-    for i, n in zip(range(N-1, -1, -1), s[::-1]):
+    for i, n in zip(range(N - 1, -1, -1), s[::-1]):
         if n == 0:
             s[i] = 1
             counter[1] += 1

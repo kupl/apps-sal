@@ -28,4 +28,3 @@ while t:
     if a and b and c:
         ans += 1
     print(ans)
-
