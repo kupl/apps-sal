@@ -1,5 +1,5 @@
 s = input()
-l, r = 0, len(s)-1
+l, r = 0, len(s) - 1
 c = 0
 
 while l < r:
@@ -10,4 +10,3 @@ while l < r:
     r -= 1
 
 print(c)
-

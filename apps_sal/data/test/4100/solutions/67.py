@@ -3,7 +3,7 @@ scores = [0] * N
 
 for i in range(Q):
     A = int(input())
-    scores[A-1] += 1
+    scores[A - 1] += 1
 
 
 for j in range(N):

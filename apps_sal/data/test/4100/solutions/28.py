@@ -1,5 +1,5 @@
 n, k, q = map(int, input().split())
-correct = [0] * n 
+correct = [0] * n
 
 for i in range(q):
     a = int(input())

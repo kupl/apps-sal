@@ -8,7 +8,7 @@ def bbin(key, b):
         else:
             l = mm
     return r
-    
+
 
 n, m, ta, tb, k = map(int, input().split())
 a = list(map(int, input().split()))

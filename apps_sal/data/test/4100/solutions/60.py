@@ -1,5 +1,5 @@
 N, K, Q = map(int, input().split(' '))
-val = [ K for i in range(N) ]
+val = [K for i in range(N)]
 for i in range(Q):
     A = int(input())
     val[A - 1] += 1

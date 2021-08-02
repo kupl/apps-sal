@@ -15,7 +15,7 @@ for l in range(n):
         cur = gcd(cur, a[r])
         if cur == 1:
             minlen = min(minlen, r - l)
-            
+
 if minlen == 1000000000:
     print(-1)
 else:

@@ -18,4 +18,3 @@ else:
         print(-1)
     else:
         print(result + n - 1)
-

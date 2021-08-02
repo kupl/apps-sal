@@ -18,4 +18,3 @@ for i in range(k + 1):
     ma = max(ma, b[j + q] + tb)
 
 print(ma)
-

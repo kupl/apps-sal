@@ -22,4 +22,3 @@ else:
                 if ans == -1 or cand < ans:
                     ans = cand
     print(ans)
-

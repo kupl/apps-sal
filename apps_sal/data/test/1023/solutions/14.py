@@ -24,5 +24,3 @@ else:
             break
     else:
         print(result)
-            
-

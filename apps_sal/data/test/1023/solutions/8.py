@@ -1,8 +1,8 @@
 from bisect import bisect_left
 
-n,m,ta,tb,k=list(map(int, input().split()))
-a=[int(x)+ta for x in input().split()]
-b=[int(x) for x in input().split()]
+n, m, ta, tb, k = list(map(int, input().split()))
+a = [int(x) + ta for x in input().split()]
+b = [int(x) for x in input().split()]
 if k >= len(a) or k >= len(b):
     print(-1)
     raise SystemExit(0)
@@ -14,9 +14,10 @@ def find_ge(a, x):
         return i
     return None
 
+
 ans = 0
 for i in range(k + 1):
-    t=a[i]
+    t = a[i]
     j = find_ge(b, t)
     # print(t, b[j])
     if j is None:
@@ -31,4 +32,3 @@ for i in range(k + 1):
     # print(b[j] + tb)
     ans = max(ans, b[j] + tb)
 print(ans)
-

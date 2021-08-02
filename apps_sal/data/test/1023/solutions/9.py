@@ -27,7 +27,7 @@ def li(): return list(input().rstrip())
 def __starting_point():
 
     # write code
-    n,m,ta,tb,k = mi()
+    n, m, ta, tb, k = mi()
     a = lmi()
     b = lmi()
     if n <= k or m <= k:
@@ -39,12 +39,14 @@ def __starting_point():
     b.sort()
     # print(a)
     ans = -10**9
-    for i in range(k+1):
+    for i in range(k + 1):
         # print(b[bisect_left(b, a[i]) + (k - i)])
         if bisect_left(b, a[i]) + (k - i) >= lenb:
             print(-1)
             return
         else:
             ans = max(ans, b[bisect_left(b, a[i]) + (k - i)])
-    print(ans+tb)
+    print(ans + tb)
+
+
 __starting_point()

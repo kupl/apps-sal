@@ -1,16 +1,16 @@
 N, K, Q = map(int, input().split())
 
-#TLEを防ぐため加点方式にする
-attendee = [(K-Q)]*N
-A = [0]*Q
+# TLEを防ぐため加点方式にする
+attendee = [(K - Q)] * N
+A = [0] * Q
 
 for i in range(Q):
     A[i] = int(input())
 
 for i in range(Q):
-    attendee[A[i]-1]+=1
+    attendee[A[i] - 1] += 1
 
-#これだとTLE
+# これだとTLE
 """
 for i in range(Q):
     attendee = list(map(lambda x: x-1, attendee))

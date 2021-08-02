@@ -1,5 +1,5 @@
 # alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353 
+# prime = 998244353
 INF = 100_000_000
 
 # from heapq import heappush, heappop
@@ -7,34 +7,31 @@ INF = 100_000_000
 # from math import sqrt
 # from collections import deque
 
-t = 1#int(input())
+t = 1  # int(input())
 
 for test in range(t):
     # n = int(input())
-    n,m,ta,tb,k = (((list(map(int, input().split())))))
+    n, m, ta, tb, k = (((list(map(int, input().split())))))
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     for i in range(n):
-        a[i] = a[i]+ta
+        a[i] = a[i] + ta
 
     ans = 0
     ind = 0
-    if k>=n or k>=m:
+    if k >= n or k >= m:
         print(-1)
         continue
-    for i in range(k+1):
+    for i in range(k + 1):
         lo = a[i]
-        while ind<m and b[ind]<lo:
-            ind+=1
-        if ind==m:
+        while ind < m and b[ind] < lo:
+            ind += 1
+        if ind == m:
             ans = -1
             break
         else:
-            if ind+k-i>=m:
+            if ind + k - i >= m:
                 ans = -1
                 break
-            ans = max(ans, b[ind+(k-i)]+tb)
+            ans = max(ans, b[ind + (k - i)] + tb)
     print(ans)
-
-    
-

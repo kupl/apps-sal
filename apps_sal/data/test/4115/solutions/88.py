@@ -13,4 +13,3 @@ for i in range(len(s1)):
         ans += 1
 
 print(ans)
-

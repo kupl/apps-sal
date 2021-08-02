@@ -13,8 +13,8 @@ if x < 0:
     for _ in range(N):
         print('Yes')
 else:
-    for i in range(1, N+1):
-        if i in dct and dct[i] >= x+1:
+    for i in range(1, N + 1):
+        if i in dct and dct[i] >= x + 1:
             print('Yes')
         else:
             print('No')

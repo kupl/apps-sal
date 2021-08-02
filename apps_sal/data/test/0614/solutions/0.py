@@ -21,7 +21,6 @@ def main():
     for c in cost3:
         cost3_prefix.append(cost3_prefix[-1] + c)
 
-
     dp = [(0, 0, 0)] * (m + 1)
     dp[0] = (0, 0, 0)
 
@@ -32,7 +31,7 @@ def main():
             new_cost = cost + cost1[n1]
             if dp[i + 1][0] < new_cost:
                 dp[i + 1] = (new_cost, n1 + 1, n2)
-        
+
         if i + 2 <= m and n2 < len(cost2):
             new_cost = cost + cost2[n2]
             if dp[i + 2][0] < new_cost:
@@ -40,7 +39,6 @@ def main():
 
         if n1 == len(cost1) and n2 == len(cost2):
             break
-
 
     dp_prefix = [0]
     for x in dp[1:]:
@@ -60,5 +58,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

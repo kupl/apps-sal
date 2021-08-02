@@ -13,4 +13,3 @@ for i in range(n_rest):
     max_joy = max(max_joy, cur_joy)
 
 print(max_joy)
-

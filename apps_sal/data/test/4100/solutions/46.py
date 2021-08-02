@@ -1,10 +1,10 @@
-N,K,Q = map(int, input().split())
+N, K, Q = map(int, input().split())
 
-score = [K-Q]*N
+score = [K - Q] * N
 
 for i in range(Q):
     temp = int(input())
-    score[temp-1] += 1
+    score[temp - 1] += 1
 
 for j in score:
     if j > 0:
