@@ -13,5 +13,3 @@ for i in range(n):
     elif color == 'r' and 0 <= players[team][player] <= 1 or players[team][player] == 1:
         players[team][player] = 2
         print(a_name if team == 0 else b_name, player, t)
-
-

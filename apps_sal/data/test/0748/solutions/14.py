@@ -29,4 +29,3 @@ for i in range(b):
     print(1, 2, 6)
 for i in range(c):
     print(1, 3, 6)
-

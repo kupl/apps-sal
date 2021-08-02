@@ -18,4 +18,3 @@ for i in range(1, 100):
         if k + 1 >= max(a, b) and k >= min(a, b):
             print(i)
             return
-

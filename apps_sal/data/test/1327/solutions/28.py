@@ -19,5 +19,3 @@ def solve():
 
 
 solve()
-
-

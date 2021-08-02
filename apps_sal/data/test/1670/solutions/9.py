@@ -12,4 +12,4 @@ while n:
         fouls[player] = 3
         print(teams[details[1]], details[2], details[0])
     elif foulsByM == 2:
-            print(teams[details[1]], details[2], details[0])
+        print(teams[details[1]], details[2], details[0])

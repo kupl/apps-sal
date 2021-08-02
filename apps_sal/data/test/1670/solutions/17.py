@@ -1,6 +1,8 @@
-I   = lambda : input()
-IMI = lambda : map(int, input().split())
-P   = lambda *l : print(*l)
+def I(): return input()
+def IMI(): return map(int, input().split())
+
+
+P = lambda *l: print(*l)
 
 team1 = I()
 team2 = I()
@@ -33,4 +35,3 @@ for e in EVENTS:
         if res_team2[int(e[2])] >= 2:
             res_team2[int(e[2])] = -100000
             print(team2, e[2], e[0])
-

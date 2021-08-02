@@ -11,7 +11,7 @@ for i in range(n):
     if line[1] == 'h':
         mp[0][m] += 1
         if line[3] == 'r':
-            
+
             if mp[0][m] < 3:
                 print(n1, m, t)
             mp[0][m] = 3
@@ -29,4 +29,3 @@ for i in range(n):
         if mp[1][m] == 2:
             print(n2, m, t)
             mp[1][m] = 3
-

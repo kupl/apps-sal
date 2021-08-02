@@ -10,14 +10,15 @@ for i in range(n):
     if b != 'h':
         c += 111000
     if d == 'y':
-        if c in red: continue
+        if c in red:
+            continue
         if c in yellow:
             print(team1 if b == 'h' else team2, c2, a)
             red.add(c)
         else:
             yellow.add(c)
     if d == 'r':
-        if c in red: continue
+        if c in red:
+            continue
         print(team1 if b == 'h' else team2, c2, a)
         red.add(c)
-

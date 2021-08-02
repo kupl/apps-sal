@@ -32,6 +32,3 @@ while n > 0:
         else:
             line = h + ' ' + str(m) + line
         print(line)
-    
-    
-

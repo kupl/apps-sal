@@ -1,4 +1,4 @@
-#585_D
+# 585_D
 
 n = int(input())
 
@@ -41,4 +41,3 @@ if m:
     print("Monocarp")
 else:
     print("Bicarp")
-

@@ -14,4 +14,3 @@ else:
         print(abs(pos - r) + 1)
     else:
         print(0)
-

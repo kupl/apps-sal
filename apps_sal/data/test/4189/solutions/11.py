@@ -22,4 +22,3 @@ if s == h == p[pp] and p[pp] % 2 == 1:
     print(pp + 2)
 else:
     print(pp + 1)
-

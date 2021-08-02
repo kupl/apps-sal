@@ -34,4 +34,3 @@ for i in range(1, sum_a + 1):
             ans = min(ans, dp[N][i][j])
 
 print((ans if ans != inf else -1))
-

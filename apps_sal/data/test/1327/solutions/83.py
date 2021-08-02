@@ -23,4 +23,5 @@ def d_patisserie_abc():
               )
     return max(pts)
 
+
 print(d_patisserie_abc())

@@ -1,10 +1,10 @@
 import sys
 input = sys.stdin.readline
 
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 Cake = []
 for _ in range(n):
-    c = list(map(int,input().split()))
+    c = list(map(int, input().split()))
     Cake.append(c)
 
 total = []

@@ -10,4 +10,4 @@ for sign_x in [1, -1]:
                 point.append(v)
             point.sort(reverse=True)
             ans = max(sum(point[:m]), ans)
-print(ans) 
+print(ans)

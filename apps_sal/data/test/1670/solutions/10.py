@@ -14,6 +14,5 @@ for i in range(n):
         ans[int(inf[0])] = [inf[1], inf[2]]
 
 for i in range(1, 91):
-        if (ans[i]):
-            print(home if ans[i][0] == 'h' else away, ans[i][1], i)
-
+    if (ans[i]):
+        print(home if ans[i][0] == 'h' else away, ans[i][1], i)

@@ -29,4 +29,3 @@ while f[idx] < b:
     idx += 1
 
 print(idx)
-

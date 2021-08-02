@@ -16,7 +16,7 @@ for i in range(n):
             d1[x] = 2
         elif x not in d1:
             if ss[3] == 'r':
-                print(s1, x,t)
+                print(s1, x, t)
                 d1[x] = 2
             else:
                 d1[x] = 1

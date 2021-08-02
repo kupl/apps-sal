@@ -21,7 +21,7 @@ for i in range(n):
     l_mpm[i] = - l[i][0] + l[i][1] - l[i][2]
     l_mmp[i] = - l[i][0] - l[i][1] + l[i][2]
     l_mmm[i] = - l[i][0] - l[i][1] - l[i][2]
-    
+
 l_ppp = sorted(l_ppp, reverse=True)
 l_ppm = sorted(l_ppm, reverse=True)
 l_pmp = sorted(l_pmp, reverse=True)

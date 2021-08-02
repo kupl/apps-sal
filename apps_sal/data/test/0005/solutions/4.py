@@ -19,4 +19,3 @@ else:
 
         else:
             print(r - l + 2 + abs(pos - r))
-

@@ -7,7 +7,7 @@ for _ in range(n):
         sf += 1
     else:
         hd += 1
-for i in range(1,20):
-    if sf <= (i**2+1)//2 and hd <= (i**2+1)//2 and sf+hd<=i**2:
+for i in range(1, 20):
+    if sf <= (i**2 + 1) // 2 and hd <= (i**2 + 1) // 2 and sf + hd <= i**2:
         print(i)
         break

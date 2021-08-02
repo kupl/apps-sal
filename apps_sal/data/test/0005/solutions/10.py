@@ -8,4 +8,3 @@ elif r == n:
     print(abs(l - pos) + 1)
 else:
     print(min(abs(l - pos) + 1 + r - l + 1, abs(r - pos) + 1 + r - l + 1))
-

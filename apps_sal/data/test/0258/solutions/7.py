@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
-s1 = s[:n//2]
-s2 = s[n//2:]
+s1 = s[:n // 2]
+s2 = s[n // 2:]
 sum1 = sum(map(int, filter(str.isdigit, s1)))
 sum2 = sum(map(int, filter(str.isdigit, s2)))
 free1 = s1.count("?")

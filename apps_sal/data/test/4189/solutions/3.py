@@ -32,5 +32,3 @@ for i in range(1, 100):
     if s1 <= 0 and h1 <= 0 or s2 <= 0 and h2 <= 0:
         print(i)
         break
-
-

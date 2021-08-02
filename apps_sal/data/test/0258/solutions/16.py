@@ -9,7 +9,7 @@ for i in s[:n // 2]:
         p1 += 1
     else:
         s1 += int(i)
-        
+
 for i in s[n // 2:]:
     if i == '?':
         p2 += 1
@@ -31,4 +31,3 @@ else:
         print('Bicarp')
     else:
         print('Monocarp')
-

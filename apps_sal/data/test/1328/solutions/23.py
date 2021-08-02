@@ -22,7 +22,7 @@ for i in range(n):
         for k in range(p + 1):
             if dp[i][j][k] == inf:
                 continue
-            dp[i + 1][j][k] = min(dp[i+1][j][k], dp[i][j][k])
+            dp[i + 1][j][k] = min(dp[i + 1][j][k], dp[i][j][k])
             dp[i + 1][j + a[i]][k + b[i]
                                 ] = min(dp[i + 1][j + a[i]][k + b[i]], dp[i][j][k] + c[i])
 
@@ -35,4 +35,3 @@ for j in range(p)[1::]:
 if ans == inf:
     ans = -1
 print(ans)
-

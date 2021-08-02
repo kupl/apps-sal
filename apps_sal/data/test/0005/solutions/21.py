@@ -16,5 +16,4 @@ else:
     elif r <= pos:
         print(pos - l + 2)
     else:
-        print(min(pos + r - 2*l, 2*r - l - pos) + 2)
-
+        print(min(pos + r - 2 * l, 2 * r - l - pos) + 2)
