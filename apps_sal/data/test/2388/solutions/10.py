@@ -10,6 +10,7 @@ def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 def SI(): return sys.stdin.readline()[:-1]
 
+
 def main():
     def dfs(i):
         res = 1
@@ -34,5 +35,5 @@ def main():
         ans = ans * dfs(i) % md
     print(ans)
 
-main()
 
+main()

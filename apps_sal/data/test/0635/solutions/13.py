@@ -13,4 +13,3 @@ else:
             if a[i] + b[i] == 2:
                 ss = 'YES'
         print(ss)
-

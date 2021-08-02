@@ -11,5 +11,4 @@ def reachable(s, l, r):
 n, s = list(map(int, input().split(' ')))
 r = list(map(int, input().split(' ')))
 l = list(map(int, input().split(' ')))
-print('YES' if reachable(s-1, l, r) else 'NO')
-
+print('YES' if reachable(s - 1, l, r) else 'NO')

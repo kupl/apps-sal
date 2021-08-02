@@ -16,7 +16,7 @@ dp = [0] * (n + 1)
 dp[0] = 1
 for i, (x, d) in enumerate(xd):
     frm = x
-    too = x + d 
+    too = x + d
     too_idx = i
     while too > places[-1][0]:
         _, too_idx = places.pop()

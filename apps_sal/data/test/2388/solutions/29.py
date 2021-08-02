@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def solve():
     MOD = 998244353
 
@@ -11,13 +12,13 @@ def solve():
     Xs = [X for X, D in XDs]
 
     stack = [N]
-    dp = [0] * (N+1)
+    dp = [0] * (N + 1)
     dp[-1] = 1
     for i in reversed(list(range(N))):
         X, D = XDs[i]
-        while Xs[stack[-1]] < X+D:
+        while Xs[stack[-1]] < X + D:
             stack.pop()
-        dp[i] = dp[stack[-1]] + dp[i+1]
+        dp[i] = dp[stack[-1]] + dp[i + 1]
         dp[i] %= MOD
         stack.append(i)
 
@@ -25,4 +26,3 @@ def solve():
 
 
 solve()
-

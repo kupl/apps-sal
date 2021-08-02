@@ -53,7 +53,7 @@ def main():
     offers = collections.defaultdict(list)
     for _ in range(m):
         d, t = read_int_array()
-        offers[d].append(t-1)
+        offers[d].append(t - 1)
 
     low = total_transaction
     high = low * 2
@@ -69,4 +69,3 @@ def main():
 
 
 main()
-

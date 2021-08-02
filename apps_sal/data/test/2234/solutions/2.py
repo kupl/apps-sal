@@ -11,5 +11,3 @@ for _ in range(int(input())):
     if (n - k) % 2 == 1:
         ans += 1
     print(ans)
-
-

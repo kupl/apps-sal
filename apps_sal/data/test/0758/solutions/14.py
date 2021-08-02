@@ -1,7 +1,7 @@
 n = int(input())
 s = list(input())
 o = 0
-#s.reverse()
+# s.reverse()
 
 # while s.count("B") > 0:
 #   while s[-1] == "R":
@@ -13,11 +13,10 @@ o = 0
 #   print(s)
 
 try:
-  index = s.index("B")
-  o += pow(2, index)
-  while True:
-    index = s.index("B", index + 1)
+    index = s.index("B")
     o += pow(2, index)
+    while True:
+        index = s.index("B", index + 1)
+        o += pow(2, index)
 except:
-  print(o)
-
+    print(o)

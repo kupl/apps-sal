@@ -1,5 +1,5 @@
 n = int(input())
-s = [0]*1001
+s = [0] * 1001
 f = True
 t = list(map(int, input().split()))
 for i in range(n):

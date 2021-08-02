@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n, s = mi()
 a = li()
@@ -22,4 +27,3 @@ elif b[s] == 0:
 else:
     ok = any(a[i] == 1 and b[i] == 1 for i in range(s + 1, n))
 print('YES' if ok else 'NO')
-

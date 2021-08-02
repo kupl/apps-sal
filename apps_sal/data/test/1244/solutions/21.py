@@ -11,17 +11,15 @@ for i in an:
         d[i] += 1
     else:
         d[i] = 1
-        
+
 vmax = 0
 #vsum = 0
 for i in list(d.keys()):
     #vsum += d[i]
     if(d[i] > vmax):
         vmax = d[i]
-        
+
 if(vmax <= (n + 1) / 2):
     print("YES")
 else:
     print("NO")
-    
-

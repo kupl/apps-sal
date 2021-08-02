@@ -15,8 +15,8 @@ else:
     if fw[s] == 1:
         print("YES")
     else:
-        valid = False 
-        for i in range(s+1, len(fw)):
+        valid = False
+        for i in range(s + 1, len(fw)):
             if fw[i] and bw[i]:
                 valid = True
         if valid:

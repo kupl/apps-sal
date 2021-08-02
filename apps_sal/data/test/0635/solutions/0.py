@@ -19,4 +19,3 @@ else:
             print("YES")
             return
     print("NO")
-

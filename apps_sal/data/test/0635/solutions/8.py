@@ -17,4 +17,3 @@ elif a[s] == 0:
         print('NO')
 else:
     print('YES')
-

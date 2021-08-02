@@ -20,4 +20,3 @@ if b[s - 1]:
             return
 
 print('NO')
-

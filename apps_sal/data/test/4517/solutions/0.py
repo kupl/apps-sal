@@ -3,7 +3,7 @@ input = lambda: sys.stdin.readline().rstrip()
 
 N, M = list(map(int, input().split()))
 X = [[] for i in range(N)]
-for i in range(N-1):
+for i in range(N - 1):
     x, y = list(map(int, input().split()))
     x -= 1
     y -= 1
@@ -13,7 +13,8 @@ for i in range(N-1):
 P = [-1] * N
 DE = [0] * N
 
-def EulerTour(n, X, i0 = 0):
+
+def EulerTour(n, X, i0=0):
     Q = [~i0, i0]
     ct = -1
     ET = []
@@ -43,6 +44,7 @@ def EulerTour(n, X, i0 = 0):
                 Q.append(a)
     return (ET, ET1, ET2)
 
+
 ET, ET1, ET2 = EulerTour(N, X, 0)
 
 for _ in range(M):
@@ -59,5 +61,3 @@ for _ in range(M):
             break
     else:
         print("YES")
-
-

@@ -5,4 +5,3 @@ for it in range(t):
         print(0 if n % 2 == k % 2 else 1)
     else:
         print(k - n)
-

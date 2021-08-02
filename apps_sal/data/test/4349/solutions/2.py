@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     n, m = map(int, input().split())
     k = [int(x) for x in input().split()]
@@ -32,8 +33,12 @@ def main():
 
     print(lo)
 
+
 input = iter(sys.stdin.read().splitlines()).__next__
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

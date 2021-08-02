@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+import bisect
 import sys
 input = sys.stdin.readline
-import bisect
 MOD = 998244353
 
 n = int(input())
@@ -17,7 +17,7 @@ dp = [0] * (n + 1)
 dp[0] = 1
 for i, (x, d) in enumerate(xd):
     frm = x
-    too = x + d 
+    too = x + d
     too_idx = i
     while too > places[-1][0]:
         _, too_idx = places.pop()

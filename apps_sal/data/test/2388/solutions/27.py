@@ -3,6 +3,7 @@ sys.setrecursionlimit(10 ** 7)
 
 MOD = 998244353
 
+
 def init(G, robots, fs, p):
     q = p
     while q < len(robots) and robots[q][0] < robots[p][0] + robots[p][1]:
@@ -12,6 +13,7 @@ def init(G, robots, fs, p):
             q = init(G, robots, fs, q) - 1
         q += 1
     return q
+
 
 def calc(G, p, fs):
     fs[p] = False
@@ -24,12 +26,13 @@ def calc(G, p, fs):
     tmp += 1
     return tmp
 
+
 def main():
     n = int(input())
     robots = [list(map(int, input().split())) for _ in range(n)]
     G = [[] for _ in range(n)]
     robots.sort(key=lambda x: x[0])
-    fs = [True]*n
+    fs = [True] * n
     q = 0
     while q < n:
         if fs[q]:
@@ -37,7 +40,7 @@ def main():
             init(G, robots, fs, q)
         else:
             q += 1
-    fs = [True]*n
+    fs = [True] * n
     ans = 1
     for i in range(n):
         if fs[i]:
@@ -45,6 +48,9 @@ def main():
             ans %= MOD
     print(ans % MOD)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()
