@@ -1,5 +1,5 @@
 n = int(input())
-s =set()
+s = set()
 for i in range(n):
     k = input()
     if k in s:

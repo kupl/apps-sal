@@ -38,5 +38,3 @@ while a[l][0][k] != "S":
         y = l
 
 print(s[1:])
-
-

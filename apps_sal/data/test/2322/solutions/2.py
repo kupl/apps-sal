@@ -14,7 +14,7 @@ for i in range(n):
             x = i
             y = j
 
-X = [0, -1, 0, 1]     
+X = [0, -1, 0, 1]
 Y = [-1, 0, 1, 0]
 
 d = dict()
@@ -52,6 +52,3 @@ if y - 1 >= 0 and pole[x][y - 1] == 'S':
 if y + 1 < m and pole[x][y + 1] == 'S':
     s += 'R'
 print(s)
-
-                
-

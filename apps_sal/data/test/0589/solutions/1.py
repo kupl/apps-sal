@@ -18,4 +18,3 @@ for sym in s[1:]:
         used.remove(sym)
 
 print(ans)
-

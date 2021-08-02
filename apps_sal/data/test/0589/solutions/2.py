@@ -22,5 +22,3 @@ for t in range(len(x)):
         r *= 10 - t;
 
 print(r)
-
-

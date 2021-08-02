@@ -7,9 +7,11 @@ def main():
     else:
         a = int(input())
         b = int(input())
-        print(a+b)
-        
+        print(a + b)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

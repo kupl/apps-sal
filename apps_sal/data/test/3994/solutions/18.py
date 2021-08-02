@@ -18,4 +18,3 @@ for i in range(1, 10 ** 5 + 3):
                 z += 1
     ans = max(ans, z)
 print(ans)
-

@@ -7,4 +7,3 @@ for i in range(n):
     else:
         print('NO')
         names.add(s)
-

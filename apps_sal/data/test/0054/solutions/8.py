@@ -21,4 +21,3 @@ for i in range(99):
             carry, bits[j] = divmod(bits[j] + carry, w)
 
 print("YES")
-

@@ -1,6 +1,6 @@
 N = int(input())
 
-if N ==1:
-  print('Hello World')
+if N == 1:
+    print('Hello World')
 else:
-  print(int(input())+int(input()))
+    print(int(input()) + int(input()))

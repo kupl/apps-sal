@@ -1,5 +1,5 @@
 
-def number_rectangle (h):
+def number_rectangle(h):
     l = [0 for i in range(len(h))]
     stack = []
     dp = [0 for i in range(len(h))]
@@ -13,29 +13,29 @@ def number_rectangle (h):
             dp[i] = dp[stack[-1]] + (i - stack[-1]) * h[i]
 
         result += dp[i]
-    #print(h)
-    #print(result)
+    # print(h)
+    # print(result)
     return result
+
 
 def main():
 
     rows, cols = list(map(int, input().split()))
     rows += 1
 
-
     a = []
     a.append('-' * cols)
-    #print(a)
+    # print(a)
     for i in range(1, rows):
         a.append(input())
     h = [[0 for j in range(cols)] for i in range(rows)]
     result = 0
-    #print(a)
+    # print(a)
     #print(rows, cols)
     for i in range(1, rows):
         #print (f'i = {i}')
-        #print(s)
-        #print(a[i])
+        # print(s)
+        # print(a[i])
         last_state = (0, 0, 0, 0, 0, 0)
         same_state = 0
         sub = []
@@ -63,9 +63,8 @@ def main():
             #print (f'same_state = {same_state} curr_state = {curr_state[0], curr_state[1], curr_state[2], curr_state[3], curr_state[4]}')
         result += number_rectangle(sub)
     result = int(result)
-    #print(h)
+    # print(h)
     print(result)
+
+
 main()
-
-
-

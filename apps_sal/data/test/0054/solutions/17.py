@@ -21,4 +21,3 @@ else:
             break
     else:
         print("NO")
-

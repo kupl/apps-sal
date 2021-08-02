@@ -21,4 +21,3 @@ for i1 in range(n):
             if i3 >= 0 and u[i3][j] >= k:
                 answer += min(l[i][j] for i in range(i3 - k + 1, i1 + 1))
 print(answer)
-

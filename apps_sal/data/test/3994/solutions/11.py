@@ -1,4 +1,4 @@
-#D1_B
+# D1_B
 
 lim = 200
 arr = [0] * lim
@@ -23,4 +23,3 @@ for i in range(0, n):
             arr[j] += 1
 
 print(max(arr))
-

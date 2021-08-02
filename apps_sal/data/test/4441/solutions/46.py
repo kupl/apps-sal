@@ -1,4 +1,4 @@
-if input()=='1':
-  print('Hello World')
+if input() == '1':
+    print('Hello World')
 else:
-  print(int(input())+int(input()))
+    print(int(input()) + int(input()))

@@ -5,14 +5,14 @@ if a == 2 or a == 3:
 
 else:
     while b != 0:
-        if b%a == 0:
+        if b % a == 0:
             b //= a
 
-        elif b%a == 1:
+        elif b % a == 1:
             b -= 1
             b //= a
 
-        elif b%a == a-1:
+        elif b % a == a - 1:
             b += 1
             b //= a
 
@@ -21,4 +21,3 @@ else:
             return
 
 print("YES")
-

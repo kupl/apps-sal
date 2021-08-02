@@ -13,7 +13,7 @@ for i in range(len(s)):
             if i == 0:
                 abc[(ord(s[i]) - ord('A'))] = 1
                 ans *= 9
-                cnt1 += 1 
+                cnt1 += 1
             else:
                 abc[(ord(s[i]) - ord('A'))] = 1
                 ans *= (10 - cnt1)

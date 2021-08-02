@@ -11,4 +11,3 @@ while T < N:
     else:
         print("NO")
         names.add(name)
-

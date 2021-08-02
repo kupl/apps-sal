@@ -36,6 +36,9 @@ def main():
         if x == curr_x and y == curr_y:
             break
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

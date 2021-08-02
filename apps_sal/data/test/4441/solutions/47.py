@@ -1,7 +1,7 @@
-n = int (input ())
+n = int(input())
 if n == 1:
-  print ('Hello World')
+    print('Hello World')
 else:
-  a = int (input ())
-  b = int (input ())
-  print (a+b)
+    a = int(input())
+    b = int(input())
+    print(a + b)

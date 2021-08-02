@@ -17,4 +17,3 @@ for j in range(i):
         break
 else:
     print('YES')
-

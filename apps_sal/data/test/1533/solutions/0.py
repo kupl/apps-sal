@@ -9,5 +9,5 @@ def main():
             print('NO')
         s.add(w)
 
-main()
 
+main()

@@ -17,5 +17,3 @@ for i in range(1, 5000):
     mx = max(mx, sum(s))
 
 print(mx)
-
-

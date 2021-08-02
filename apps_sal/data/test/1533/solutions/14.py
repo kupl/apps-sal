@@ -10,8 +10,10 @@ def main():
         else:
             print("NO")
         s.add(name)
-    
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

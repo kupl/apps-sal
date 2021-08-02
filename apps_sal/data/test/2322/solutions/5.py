@@ -1,20 +1,20 @@
 def next1(x, y):
     nonlocal data, ans
     data[y][x][1] = True
-    if data[y][x - 1][0] == '*' and ( not data[y][x - 1][1]):
+    if data[y][x - 1][0] == '*' and (not data[y][x - 1][1]):
         ans += 'L'
         return x - 1, y
-    if data[y - 1][x][0] == '*' and ( not data[y - 1][x][1]):
+    if data[y - 1][x][0] == '*' and (not data[y - 1][x][1]):
         ans += 'U'
         return x, y - 1
-    if data[y][x + 1][0] == '*' and ( not data[y][x + 1][1]):
+    if data[y][x + 1][0] == '*' and (not data[y][x + 1][1]):
         ans += 'R'
         return x + 1, y
-    if data[y + 1][x][0] == '*' and ( not data[y + 1][x][1]):
+    if data[y + 1][x][0] == '*' and (not data[y + 1][x][1]):
         ans += 'D'
         return x, y + 1
     return None, None
-    
+
 
 n, m = map(int, input().split())
 data = []
@@ -43,16 +43,16 @@ for i in range(1, n + 1):
                 break
 x, y, h1, h2 = startx, starty, startx, starty
 ans = ''
-if data[y][x - 1][0] == '*' and ( not data[y][x - 1][1]):
-    x, y =  x - 1, y
+if data[y][x - 1][0] == '*' and (not data[y][x - 1][1]):
+    x, y = x - 1, y
     ans += 'L'
-elif data[y - 1][x][0] == '*' and ( not data[y - 1][x][1]):
+elif data[y - 1][x][0] == '*' and (not data[y - 1][x][1]):
     x, y = x, y - 1
     ans += 'U'
-elif data[y][x + 1][0] == '*' and ( not data[y][x + 1][1]):
+elif data[y][x + 1][0] == '*' and (not data[y][x + 1][1]):
     x, y = x + 1, y
     ans += 'R'
-elif data[y + 1][x][0] == '*' and ( not data[y + 1][x][1]):
+elif data[y + 1][x][0] == '*' and (not data[y + 1][x][1]):
     x, y = x, y + 1
     ans += 'D'
 while True:

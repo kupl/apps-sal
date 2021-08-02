@@ -1,4 +1,5 @@
-w, m = list(map(int,input().split()))
+w, m = list(map(int, input().split()))
+
 
 def bt(w, p, final, cur):
     if final == cur:
@@ -20,8 +21,8 @@ def bt(w, p, final, cur):
 
     return False
 
+
 if bt(w, w ** 35, m, 0):
     print("YES")
 else:
     print("NO")
-
