@@ -2,7 +2,7 @@ import sys
 #sys.stdin = open('inE', 'r')
 t = int(input())
 for ti in range(t):
-    n,m = list(map(int, input().split()))
+    n, m = list(map(int, input().split()))
     a = []
     for i in range(n):
         a.append(input())
@@ -44,7 +44,7 @@ for ti in range(t):
         mxc = max(top)
         cnt = ord(mxc) & 31
         sys.stdout.write('YES\n')
-        sys.stdout.write(str(cnt)+'\n')
+        sys.stdout.write(str(cnt) + '\n')
         for i in range(cnt):
             ci = chr(ord('a') + i)
             if ci not in top:
@@ -52,4 +52,3 @@ for ti in range(t):
             sys.stdout.write(f'{top[ci]+1} {l[ci]+1} {bot[ci]+1} {r[ci]+1}\n')
     else:
         sys.stdout.write('NO\n')
-

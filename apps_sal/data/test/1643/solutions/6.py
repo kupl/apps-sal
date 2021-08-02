@@ -1,4 +1,4 @@
-S = list(map(int,input().strip()))
+S = list(map(int, input().strip()))
 N = len(S)
 
 stack = []

@@ -1,6 +1,6 @@
 import copy
-h,w = map(int,input().split())
-a = [input() for  i in range(h)]
+h, w = map(int, input().split())
+a = [input() for i in range(h)]
 index = 1
 ans = copy.copy(a)
 for i in range(h):

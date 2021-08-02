@@ -30,4 +30,3 @@ for i in range(H):
         print()
     else:
         pass
-

@@ -8,11 +8,11 @@ for _ in range(T):
     mir = [2000] * 26
     mac = [-1] * 26
     mic = [2000] * 26
-    
-    X = [[-1 if a == "." else ord(a)-97 for a in input()] for i in range(N)]
-    R = [[a+1 for a in range(M)] for _ in range(N)]
-    D = [[i+1]*M for i in range(N)]
-    
+
+    X = [[-1 if a == "." else ord(a) - 97 for a in input()] for i in range(N)]
+    R = [[a + 1 for a in range(M)] for _ in range(N)]
+    D = [[i + 1] * M for i in range(N)]
+
     # print(X)
     ma = -1
     for i in range(N):
@@ -27,7 +27,7 @@ for _ in range(T):
     f = 0
     ans = 1
     ANS = []
-    for k in range(ma+1)[::-1]:
+    for k in range(ma + 1)[::-1]:
         if f and mar[k] == -1 and mir[k] == 2000:
             ANS.append(ANS[-1])
         elif mar[k] == mir[k]:
@@ -39,7 +39,7 @@ for _ in range(T):
                     break
                 c = R[r][c]
             else:
-                ANS.append((r+1, mic[k]+1, r+1, mac[k]+1))
+                ANS.append((r + 1, mic[k] + 1, r + 1, mac[k] + 1))
             R[r][mic[k]] = mac[k] + 1
             if ans == 0:
                 break
@@ -53,7 +53,7 @@ for _ in range(T):
                     break
                 r = D[r][c]
             else:
-                ANS.append((mir[k]+1, c+1, mar[k]+1, c+1))
+                ANS.append((mir[k] + 1, c + 1, mar[k] + 1, c + 1))
             D[mir[k]][c] = mar[k] + 1
             if ans == 0:
                 break
@@ -68,4 +68,3 @@ for _ in range(T):
         print(len(ANS))
         for a in ANS[::-1]:
             print(*a)
-

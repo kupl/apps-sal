@@ -18,4 +18,3 @@ while(x < len(A[0])):
 
 for row in A:
     print((''.join(row)))
-

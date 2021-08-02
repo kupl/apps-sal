@@ -22,4 +22,3 @@ for out, flag in zip(fields, ans):
 for content in tmp:
     if content != []:
         print(("".join(content)))
-

@@ -1,4 +1,4 @@
-h,w = list(map(int,input().split()))
+h, w = list(map(int, input().split()))
 masu = []
 for i in range(h):
     tmp = str(input())
@@ -8,11 +8,11 @@ tmp_h = [int(0) for i in range(h)]
 tmp_w = [int(0) for j in range(w)]
 for i in range(h):
     for j in range(w):
-        if masu[i][j]=='.':
+        if masu[i][j] == '.':
             tmp_h[i] += 1
             tmp_w[j] += 1
-#print(tmp_h)
-#print(tmp_w)
+# print(tmp_h)
+# print(tmp_w)
 
 ans = []
 for i in range(len(tmp_h)):
@@ -23,9 +23,8 @@ for i in range(len(tmp_h)):
                 tmp += masu[i][j]
         ans.append(tmp)
 
-#for i in range(h):
+# for i in range(h):
 #    print(masu[i])
-#print('-----')
+# print('-----')
 for i in range(len(ans)):
     print((ans[i]))
-

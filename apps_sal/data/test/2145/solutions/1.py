@@ -19,4 +19,3 @@ for _ in range(t):
     else:
         r = True
     print('YES' if r else 'NO')
-

@@ -6,4 +6,3 @@ aT = [x for x in aT if '#' in x]
 a = list(zip(*aT))
 for i in a:
     print((''.join(i)))
-

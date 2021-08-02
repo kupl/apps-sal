@@ -8,4 +8,3 @@ for i in exist_idx:
     st = st & set(dot_idx)
 for i in exist_idx:
     print((''.join([a for i, a in enumerate(a_list[i]) if i not in st])))
-

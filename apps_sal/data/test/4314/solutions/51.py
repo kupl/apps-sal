@@ -1,8 +1,8 @@
-h,w = map(int, input().split())
+h, w = map(int, input().split())
 a = [str(input()) for _ in range(h)]
 b = []
 for i in range(h):
-    if a[i] != '.'*w:
+    if a[i] != '.' * w:
         b.append(a[i])
 c = []
 for h in range(w):

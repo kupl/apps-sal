@@ -6,4 +6,3 @@ for n in range(N - 1):
     cnt[v - 1] += 1
 
 print(sum(x == 1 for x in cnt))
-

@@ -1,17 +1,16 @@
-n=int(input())
+n = int(input())
 
-s=input().split()
+s = input().split()
 
-A=[0,0,0]
+A = [0, 0, 0]
 for i in range(n):
-    A[i%3]+=int(s[i])
+    A[i % 3] += int(s[i])
 
-m=max(A)
+m = max(A)
 
-if(m==A[0]):
+if(m == A[0]):
     print("chest")
-elif(m==A[1]):
+elif(m == A[1]):
     print("biceps")
 else:
     print("back")
-

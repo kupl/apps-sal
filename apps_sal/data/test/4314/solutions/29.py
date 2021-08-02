@@ -1,4 +1,4 @@
-H, W = map(int,input().split())
+H, W = map(int, input().split())
 A = [input() for i in range(H)]
 i = 0
 for a in range(H):
@@ -7,7 +7,7 @@ for a in range(H):
         H -= 1
         i -= 1
     i += 1
-#ここまでで行消去
+# ここまでで行消去
 i = 0
 for a in range(W):
     f = True
@@ -17,7 +17,7 @@ for a in range(W):
             break
     if f:
         for j in range(H):
-            A[j] = A[j][:i] + A[j][i+1:]
+            A[j] = A[j][:i] + A[j][i + 1:]
         W -= 1
         i -= 1
     i += 1

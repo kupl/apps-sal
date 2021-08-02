@@ -11,4 +11,3 @@ for j in range(0, len(myList)):
     if myList[j] == 1:
         counter += 1
 print(counter)
-

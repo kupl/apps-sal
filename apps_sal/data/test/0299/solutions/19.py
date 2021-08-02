@@ -8,5 +8,5 @@ def main():
         l[i % 3] += a
     return ('chest', 'biceps', 'back')[max(0, 1, 2, key=l.__getitem__)]
 
-print(main())
 
+print(main())

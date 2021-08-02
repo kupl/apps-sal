@@ -1,6 +1,7 @@
 import sys
 import math
 
+
 def main():
     s = input()
     q = []
@@ -8,7 +9,7 @@ def main():
         if s[i] == '1':
             q.append(i)
         elif len(q) > 0:
-            q.pop();
+            q.pop()
 
     result = []
     q = set(q)
@@ -20,9 +21,9 @@ def main():
 
     print(''.join(result))
 
-    
 
 def __starting_point():
     main()
+
 
 __starting_point()

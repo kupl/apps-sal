@@ -18,7 +18,6 @@ for i in range(H):
     if row[i]:
         for j in range(W):
             if col[j]:
-                print(a[i][j],end="")
+                print(a[i][j], end="")
         print()
 pass
-

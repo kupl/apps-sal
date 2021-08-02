@@ -1,7 +1,8 @@
 # Question B. Road to Cinema
 import sys
 
-def roadToCinema(V, S, T, stations): # O(M)
+
+def roadToCinema(V, S, T, stations):  # O(M)
     """
     V       : volume of fuel tank
     S       : total distance
@@ -12,7 +13,7 @@ def roadToCinema(V, S, T, stations): # O(M)
     """
     m = len(stations)
     t = 0
-    stations.append(S) # destination
+    stations.append(S)  # destination
     prev = 0
     for cur in stations:
         dis = cur - prev
@@ -39,7 +40,8 @@ def roadToCinema(V, S, T, stations): # O(M)
 
     return True
 
-def binSearch(S, T, stations): # O(logS * M)
+
+def binSearch(S, T, stations):  # O(logS * M)
     """
     to find the least tank volume to enable the aircraft to complete the journey
     the fastest way is to complete the whole journey with the speed of 2km/min, at 2L/km
@@ -53,7 +55,7 @@ def binSearch(S, T, stations): # O(logS * M)
 
     l = max(l, S - stations[-1])
     r = 2 * l
-    
+
     if T < S:
         return float("inf")
 
@@ -63,15 +65,16 @@ def binSearch(S, T, stations): # O(logS * M)
             r = m
         else:
             l = m
-    
+
     if roadToCinema(l, S, T, stations):
         return l
     if roadToCinema(r, S, T, stations):
         return r
     return float("inf")
 
-def __starting_point(): # O(logS * M + N)
-    
+
+def __starting_point():  # O(logS * M + N)
+
     line = sys.stdin.readline()
     [N, M, S, T] = list(map(int, line.split(" ")))
 
@@ -84,7 +87,7 @@ def __starting_point(): # O(logS * M + N)
     stations.sort()
 
     minVolume = binSearch(S, T, stations)
-    
+
     if minVolume == float("inf"):
         # no aircraft can complete the journey
         print(-1)
@@ -99,4 +102,6 @@ def __starting_point(): # O(logS * M + N)
             print(-1)
         else:
             print(res)
+
+
 __starting_point()

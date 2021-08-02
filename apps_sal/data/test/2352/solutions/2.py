@@ -7,8 +7,8 @@ for _ in range(T):
     mir = [2000] * 26
     mac = [-1] * 26
     mic = [2000] * 26
-    
-    X = [[-1 if a == "." else ord(a)-97 for a in input()] for i in range(N)]
+
+    X = [[-1 if a == "." else ord(a) - 97 for a in input()] for i in range(N)]
     # print(X)
     ma = -1
     for i in range(N):
@@ -23,28 +23,28 @@ for _ in range(T):
     f = 0
     ans = 1
     ANS = []
-    for k in range(ma+1)[::-1]:
+    for k in range(ma + 1)[::-1]:
         if f and mar[k] == -1 and mir[k] == 2000:
             ANS.append(ANS[-1])
         elif mar[k] == mir[k]:
             r = mar[k]
-            for c in range(mic[k], mac[k]+1):
+            for c in range(mic[k], mac[k] + 1):
                 if X[r][c] < k:
                     ans = 0
                     break
             else:
-                ANS.append((r+1, mic[k]+1, r+1, mac[k]+1))
+                ANS.append((r + 1, mic[k] + 1, r + 1, mac[k] + 1))
             if ans == 0:
                 break
             f = 1
         elif mac[k] == mic[k]:
             c = mac[k]
-            for r in range(mir[k], mar[k]+1):
+            for r in range(mir[k], mar[k] + 1):
                 if X[r][c] < k:
                     ans = 0
                     break
             else:
-                ANS.append((mir[k]+1, c+1, mar[k]+1, c+1))
+                ANS.append((mir[k] + 1, c + 1, mar[k] + 1, c + 1))
             if ans == 0:
                 break
             f = 1

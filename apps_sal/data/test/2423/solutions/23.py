@@ -10,4 +10,3 @@ for el in pairs:
     graph[y].append(x)
 
 print(sum(1 for i in range(1, N + 1) if len(graph[i]) == 1))
-

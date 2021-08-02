@@ -9,7 +9,7 @@ for i in range(H):
 ans = []
 for j in range(W):
     for i in range(len(B)):
-        if "#" ==  B[i][j]:
+        if "#" == B[i][j]:
             ans.append(j)
             break
 
@@ -17,8 +17,3 @@ for i in range(len(B)):
     for j in ans:
         print(B[i][j], end="")
     print()
-
-
-
-
-

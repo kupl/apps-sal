@@ -6,6 +6,7 @@ for i in range(H):
     a = list(input())
     L.append(a)
 
+
 def check(n, inlist, outlist):
     """[summary]
     全て白マスの行を削除する
@@ -17,11 +18,12 @@ def check(n, inlist, outlist):
 
     Returns:
         [list]: 不要な要素を削除して転置して返す
-    """    
+    """
     for i in range(n):
         if ('#' in inlist[i]) == True:
             outlist.append(inlist[i])
     return list(map(list, zip(*outlist)))
+
 
 side = check(H, L, side)
 ver = check(len(side), side, ver)
