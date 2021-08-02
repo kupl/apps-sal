@@ -8,4 +8,3 @@ else:
     for i in range(2 * k, n):
         v[i] = (i - 2 * k) % k + 1
     print(' '.join(map(str, v)))
-

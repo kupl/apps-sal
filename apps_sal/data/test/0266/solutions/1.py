@@ -23,4 +23,3 @@ else:
 
     b = str.join("", list(map(str, num)))
     print(a, b)
-

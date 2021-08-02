@@ -1,6 +1,7 @@
 n, k = list(map(int, input().split()))
 
-if n < 3 * k: print(-1)
+if n < 3 * k:
+    print(-1)
 
 else:
 
@@ -11,6 +12,4 @@ else:
     print(''.join(t) + ''.join(i * d for i in t) + t[-1] * (n - (d + 1) * k))
 
 
-
 # Made By Mostafa_Khaled
-

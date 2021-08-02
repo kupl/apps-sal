@@ -14,4 +14,3 @@ if ans == 1:
     ans = 0
 ans += (sum(b) + 1) % 2
 print(ans)
-

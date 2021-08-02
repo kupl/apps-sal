@@ -35,7 +35,6 @@ else:
     if stretches[-1] == 0:
         del stretches[-1]
 
-
     num_ = num
     stretches_ = stretches[:-1]
     k_ = k
@@ -67,4 +66,3 @@ else:
         print(min(num, num_))
     else:
         print(num)
-

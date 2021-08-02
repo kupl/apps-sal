@@ -1,5 +1,5 @@
-n, k = list(map(int,input().split()))
-a = list([int(x)>=0 for x in input().split()])
+n, k = list(map(int, input().split()))
+a = list([int(x) >= 0 for x in input().split()])
 
 for ind_positive in range(n):
     if not a[ind_positive]:
@@ -10,11 +10,11 @@ else:
 a = a[ind_positive:]
 n = len(a)
 
-for ind_positive in range(n-1, -1, -1):
+for ind_positive in range(n - 1, -1, -1):
     if not a[ind_positive]:
         break
-a = a[:ind_positive+1]
-len_suf = n-ind_positive-1
+a = a[:ind_positive + 1]
+len_suf = n - ind_positive - 1
 n = len(a)
 #print(a, len_suf)
 
@@ -31,19 +31,19 @@ while True:
     if i >= n:
         break
 b_sort = b.copy()
-b_sort.sort(reverse = True)
+b_sort.sort(reverse=True)
 s = 0
 i = 0
-if n-s>k:
+if n - s > k:
     for i in range(len(b)):
         s += b_sort[i]
-        if n-s <= k:
+        if n - s <= k:
             i += 1
             break
-if n-s > k:
+if n - s > k:
     ans2 = -1
 else:
-    ans2 = i*2+2
+    ans2 = i * 2 + 2
 
 k -= len_suf
 if k < 0:
@@ -62,32 +62,23 @@ else:
         if i >= n:
             break
     b_sort = b.copy()
-    b_sort.sort(reverse = True)
+    b_sort.sort(reverse=True)
     s = 0
     i = 0
-    if n-s>k:
+    if n - s > k:
         for i in range(len(b)):
             s += b_sort[i]
-            if n-s <= k:
+            if n - s <= k:
                 i += 1
                 break
-    if n-s > k:
+    if n - s > k:
         ans1 = -1
     else:
-        ans1 = i*2+1
+        ans1 = i * 2 + 1
 
 if ans1 == -1:
     print(ans2)
 elif ans2 == -1:
     print(ans1)
 else:
-    print(min(ans1,ans2))
-
-
-
-
-
-
-
-
-
+    print(min(ans1, ans2))

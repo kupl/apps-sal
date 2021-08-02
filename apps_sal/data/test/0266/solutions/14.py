@@ -37,6 +37,3 @@ while s1 > 0:
     ci += 1
 
 print("".join(map(str, min_num)), "".join(map(str, max_num)))
-
-
-

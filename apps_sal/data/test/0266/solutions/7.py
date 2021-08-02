@@ -4,6 +4,7 @@ import sys
 
 #sys.stdin = open("p3.in", "r")
 
+
 def process(m, s):
     if s == 0:
         if m == 1:
@@ -30,10 +31,10 @@ def process(m, s):
         return (min, max)
 
     if cifMin < m:
-        #min
+        # min
         min = "1"
-        qmin = (s-1) // 9
-        rmin = (s-1) % 9
+        qmin = (s - 1) // 9
+        rmin = (s - 1) % 9
 
         if rmin == 0:
             cifMin2 = qmin
@@ -56,10 +57,10 @@ def process(m, s):
         max = "9" * q + str(r) + (m - q - 1) * "0"
         return(min, max)
 
+
 words = input().split()
 m = int(words[0])
 s = int(words[1])
 
 res = process(m, s)
 print(res[0], res[1])
-

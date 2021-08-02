@@ -10,4 +10,3 @@ else:
         nzi = mins.index(next(ch for ch in mins if ch != '0'))
         mins = '1' + mins[1:nzi] + str(int(mins[nzi]) - 1) + mins[nzi + 1:]
     print(mins, maxs)
-

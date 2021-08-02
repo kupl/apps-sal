@@ -1,8 +1,10 @@
 import sys
 
+
 def weather(temp):
     return temp >= 0
-    
+
+
 INF = int(1e+6)
 n, k = (int(x) for x in input().split())
 day_to_temp = [int(x) for x in input().split()]
@@ -49,7 +51,7 @@ elif curr_state == 2:
 else:
     print(0)
     return
-    
+
 mid_warms = sorted(mid_warms)
 cold_days = sum(colds)
 free_days = k - cold_days
@@ -66,13 +68,9 @@ elif len(mid_warms) > 0:
         switches_made -= 2
         free_days -= mid_warms[i]
         i += 1
-        
+
 if free_days - last_warm >= 0:
     switches_made -= 1
     free_days -= last_warm
-    
+
 print(switches_made)
-    
-
-    
-

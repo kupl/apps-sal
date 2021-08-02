@@ -3,9 +3,9 @@ import sys
 k, n = list(map(int, input().split()))
 s = [list(word.rstrip()) for word in sys.stdin]
 
-double = True if max(s[0].count(chr(i+97)) for i in range(26)) > 1 else False
+double = True if max(s[0].count(chr(i + 97)) for i in range(26)) > 1 else False
 diff = [set() for _ in range(k)]
-diff_cnt = [0]*k
+diff_cnt = [0] * k
 for i in range(1, k):
     for j in range(n):
         if s[0][j] != s[i][j]:
@@ -16,7 +16,7 @@ for i in range(1, k):
                 return
 
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         s[0][i], s[0][j] = s[0][j], s[0][i]
         for x in range(1, k):
             w = [y for y in diff[x] | {i, j} if s[0][y] != s[x][y]]
@@ -31,4 +31,3 @@ for i in range(n):
         s[0][i], s[0][j] = s[0][j], s[0][i]
 
 print(-1)
-

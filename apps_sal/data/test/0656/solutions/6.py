@@ -1,7 +1,7 @@
 n, k = list(map(int, input().split()))
 days = list(map(int, input().split()))
-a = [0 for i in range(n)] # for < 0
-b = [0 for i in range(n)] # for >= 0
+a = [0 for i in range(n)]  # for < 0
+b = [0 for i in range(n)]  # for >= 0
 asum = 0
 ia = 0
 ib = 0
@@ -34,7 +34,7 @@ if days[0] >= 0:
     b[0] = inf
 lastb = -1
 removedlastb = False
-if days[len(days) - 1] >= 0 :
+if days[len(days) - 1] >= 0:
     changes += 1
     lastb = b[ib]
 b.sort()
@@ -52,7 +52,7 @@ while (curb <= ib and asum + b[curb] <= k):
         if b[curb] == lastb:
             changes -= 1
             removedlastb = True
-        else :
+        else:
             changes -= 2
     else:
         changes -= 2
@@ -63,10 +63,9 @@ while (seccurb <= ib and secasum + b[seccurb] <= k):
         if b[seccurb] == lastb:
             secasum -= b[seccurb]
             secremovedlastb = True
-        else :
+        else:
             secchanges -= 2
     else:
         secchanges -= 2
     seccurb += 1
 print(max(min(changes, secchanges), 0))
-
