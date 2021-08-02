@@ -1,5 +1,5 @@
-s=input()
-if s[-1]=='s':
-    print(s+'es')
+s = input()
+if s[-1] == 's':
+    print(s + 'es')
 else:
-    print(s+'s')
+    print(s + 's')

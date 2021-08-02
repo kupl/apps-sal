@@ -1,7 +1,7 @@
-s=str(input())
-if s[-1]=='s':
-    s+='es'
+s = str(input())
+if s[-1] == 's':
+    s += 'es'
     print(s)
 else:
-    s+='s'
+    s += 's'
     print(s)

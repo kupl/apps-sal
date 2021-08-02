@@ -20,4 +20,3 @@ if S_len >= T_len:
     print('No')
 else:
     print('Yes')
-

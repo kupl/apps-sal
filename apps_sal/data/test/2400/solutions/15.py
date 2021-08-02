@@ -11,9 +11,9 @@ for test in range(t):
     res = 0
     for i in range(n):
         if a[i] % 2 == 0:
-            evena+=1
+            evena += 1
         else:
-            odda+=1
+            odda += 1
     for i in range(m):
         if b[i] % 2 == 0:
             evenb += 1

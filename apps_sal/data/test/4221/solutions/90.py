@@ -14,4 +14,5 @@ def __starting_point():
     S = input()
     main(S)
 
+
 __starting_point()

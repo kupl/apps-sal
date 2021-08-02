@@ -1,5 +1,5 @@
 s = sorted(input())
-t = sorted(input(),reverse = True)
+t = sorted(input(), reverse=True)
 if s < t:
     print('Yes')
 else:

@@ -61,10 +61,10 @@ def resolve():
         if flag == True:
             break
         for cy in range(101):
-            H = XYH[0][2]+abs(XYH[0][0]-cx)+abs(XYH[0][1]-cy)
+            H = XYH[0][2] + abs(XYH[0][0] - cx) + abs(XYH[0][1] - cy)
             for xyh in XYH[1:]:
                 x, y, h = xyh
-                if h != max(H - abs(x-cx) - abs(y-cy), 0):
+                if h != max(H - abs(x - cx) - abs(y - cy), 0):
                     break
             else:
                 flag = True
@@ -78,5 +78,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

@@ -1,10 +1,10 @@
 s = input()
 t = input()
 S = sorted(s)
-T = sorted(t,reverse=True)
-#print(S,T)
+T = sorted(t, reverse=True)
+# print(S,T)
 ans = "W"
-for i in range(min(len(s),len(t))):
+for i in range(min(len(s), len(t))):
     if S[i] > T[i]:
         ans = "No"
         break

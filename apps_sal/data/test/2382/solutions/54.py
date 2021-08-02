@@ -4,12 +4,12 @@ a = [int(item) for item in input().split()]
 cnt = Counter(a)
 
 key_num = len(cnt.keys())
-rank = [0] * key_num 
+rank = [0] * key_num
 keys = list(cnt.keys())
 keys.sort(reverse=True)
 for i, key in enumerate(keys):
     rank[i] = cnt[key]
-cur = [0] * key_num 
+cur = [0] * key_num
 cur[0] = 1
 for i in range(n):
     tmp = cur[:]
@@ -22,7 +22,7 @@ for i in range(n):
             else:
                 cur[j] += free
                 free = 0
-        free += tmp[j] 
+        free += tmp[j]
 if sum(cur) == 2**n:
     print("Yes")
 else:

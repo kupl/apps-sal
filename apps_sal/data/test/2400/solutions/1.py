@@ -22,4 +22,3 @@ for i in range(T):
             qodd += 1
 
     print(qeven * peven + qodd * podd)
-

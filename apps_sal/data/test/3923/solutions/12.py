@@ -2,13 +2,13 @@
 #      |        /  \       |    |   / |
 #      |       /____\      |    |  /  |
 #      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|  
+#  ========= /        \  =====  |/====|
 #  code
 
 def main():
-    n , a , b = map(int , input().split())
+    n, a, b = map(int, input().split())
     if a < b:
-        a , b = b , a
+        a, b = b, a
     s = []
     k = 1
     ok = False
@@ -40,6 +40,9 @@ def main():
     print(*s)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

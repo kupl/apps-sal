@@ -6,4 +6,3 @@ else:
     s = s + "s"
 
 print(s)
-

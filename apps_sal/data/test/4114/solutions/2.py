@@ -13,14 +13,14 @@ for _ in range(N):
 # In[4]:
 
 
-xyh.sort(key=lambda x:x[2],reverse=True)
+xyh.sort(key=lambda x: x[2], reverse=True)
 ans = []
 for cx in range(101):
     for cy in range(101):
-        x,y,h = xyh[0]
-        ch = h + abs(x-cx) + abs(y-cy)
-        if all([h == max(ch-abs(x-cx)-abs(y-cy),0) for x,y,h in xyh[1:]]):
-            ans = [cx,cy,ch]
+        x, y, h = xyh[0]
+        ch = h + abs(x - cx) + abs(y - cy)
+        if all([h == max(ch - abs(x - cx) - abs(y - cy), 0) for x, y, h in xyh[1:]]):
+            ans = [cx, cy, ch]
             break
     else:
         continue
@@ -29,8 +29,3 @@ print((*ans))
 
 
 # In[ ]:
-
-
-
-
-

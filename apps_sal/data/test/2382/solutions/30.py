@@ -1,8 +1,8 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 7)
 
-from collections import deque
 
 N = int(input())
 A = sorted((int(x) for x in input().split()))
@@ -29,5 +29,3 @@ for _ in range(N):
 bl = len(parent) == (2**N)
 answer = 'Yes' if bl else 'No'
 print(answer)
-
-

@@ -4,23 +4,23 @@ from collections import defaultdict, deque, Counter
 from copy import deepcopy
 from bisect import bisect, bisect_right, bisect_left
 from heapq import heapify, heappop, heappush
-    
+
 input = sys.stdin.readline
 def RD(): return input().rstrip()
 def F(): return float(input().rstrip())
 def I(): return int(input().rstrip())
 def MI(): return map(int, input().split())
-def MF(): return map(float,input().split())
+def MF(): return map(float, input().split())
 def LI(): return list(map(int, input().split()))
 def TI(): return tuple(map(int, input().split()))
-def LF(): return list(map(float,input().split()))
+def LF(): return list(map(float, input().split()))
 def Init(H, W, num): return [[num for i in range(W)] for j in range(H)]
-    
-    
+
+
 def main():
     N = I()
     L = [LI() for i in range(N)]
-    
+
     for x in range(101):
         for y in range(101):
             max_num = float('inf')
@@ -28,12 +28,12 @@ def main():
             res = True
             for xn, yn, hn in L:
                 if hn == 0:
-                    max_num = min(max_num, abs(x-xn)+abs(y-yn))
+                    max_num = min(max_num, abs(x - xn) + abs(y - yn))
                     if max_num == 0:
                         res = False
                         break
                 else:
-                    temp = abs(x-xn)+abs(y-yn)+hn
+                    temp = abs(x - xn) + abs(y - yn) + hn
                     if ans != 0 and ans != temp:
                         res = False
                         break
@@ -44,13 +44,14 @@ def main():
 
             if res:
                 if ans != 0:
-                    print(x,y,ans)
+                    print(x, y, ans)
                 else:
-                    print(x,y,1)
+                    print(x, y, 1)
                 return
-    
-    
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

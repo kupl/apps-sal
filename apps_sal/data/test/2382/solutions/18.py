@@ -1,6 +1,6 @@
 N = int(input())
 M = 2**N
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 A.sort(reverse=True)
 
 ar = [A[0]]

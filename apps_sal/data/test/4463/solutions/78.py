@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import sys
+
+
 def input():
     return sys.stdin.readline()[:-1]
+
 
 def main():
     s = input()
@@ -30,7 +33,9 @@ def main():
     else:
         print('No')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

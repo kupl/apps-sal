@@ -9,8 +9,8 @@ for i in range(101):
             tmp = max(h - abs(i - l[k][0]) - abs(j - l[k][1]), 0)
             if tmp != l[k][2]:
                 break
-            elif k == N-1:
+            elif k == N - 1:
                 X = i
                 Y = j
                 H = h
-print(X,Y,H)
+print(X, Y, H)

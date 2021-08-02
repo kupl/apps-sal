@@ -8,6 +8,6 @@ sa = ''.join(ss)
 ta = ''.join(tt)
 
 if sa < ta:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

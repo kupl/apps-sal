@@ -25,4 +25,3 @@ if len(parent) == 2**n:
 else:
     ans = 'No'
 print(ans)
-

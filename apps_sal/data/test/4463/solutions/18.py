@@ -8,10 +8,10 @@ def main():
     for i in range(len(t)):
         t_list.append(t[i])
     s_list.sort()
-    t_list.sort(reverse = True)
-    #print(s_list,t_list)
-    #if 'a'<'b':
-        #print ('Yes')
+    t_list.sort(reverse=True)
+    # print(s_list,t_list)
+    # if 'a'<'b':
+    #print ('Yes')
     s_l = len(s_list)
     t_l = len(t_list)
     if s_l >= t_l:
@@ -19,7 +19,7 @@ def main():
     else:
         ans = 'Yes'
 
-    for i in range(min(s_l,t_l)):
+    for i in range(min(s_l, t_l)):
         if s_list[i] == t_list[i]:
             continue
         elif s_list[i] > t_list[i]:
@@ -29,5 +29,5 @@ def main():
 
     return ans
 
-print((main()))
 
+print((main()))

@@ -25,5 +25,4 @@ for _ in range(n):
 if len(parent) == 2**n:
     print("Yes")
 else:
-    print("No") 
-
+    print("No")

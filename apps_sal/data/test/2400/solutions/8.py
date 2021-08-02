@@ -8,10 +8,10 @@ def get_cnt():
 
     return cnt
 
+
 for _ in range(int(input())):
     p = get_cnt()
     q = get_cnt()
 
     ans = p[0] * q[0] + p[1] * q[1]
     print(ans)
-

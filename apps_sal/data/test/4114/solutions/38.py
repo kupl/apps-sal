@@ -12,7 +12,7 @@ for i in range(n):
         for j in range(len(ans)):
             cx, cy, ch = ans[j]
 
-            calcH = h + abs(x-cx) + abs(y-cy)
+            calcH = h + abs(x - cx) + abs(y - cy)
             if ch == -1:
                 ans[j][2] = calcH
             else:
@@ -30,7 +30,7 @@ for x, y in zeroes:
     for j in range(len(ans)):
         cx, cy, ch = ans[j]
 
-        if ch - abs(x-cx) - abs(y-cy) > 0:
+        if ch - abs(x - cx) - abs(y - cy) > 0:
             delete.append(j)
 
     while len(delete) > 0:

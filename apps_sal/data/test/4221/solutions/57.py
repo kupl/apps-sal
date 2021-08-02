@@ -6,5 +6,3 @@ else:
     t_lang = s + "s"
 
 print(("{}".format(t_lang)))
-
-

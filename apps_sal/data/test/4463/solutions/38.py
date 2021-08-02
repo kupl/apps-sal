@@ -20,4 +20,3 @@ def checker(s, t):
 
 
 print((checker(ss, tt)))
-

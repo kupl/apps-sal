@@ -18,4 +18,3 @@ if ans[0] == t:
     print("No")
 else:
     print("Yes")
-

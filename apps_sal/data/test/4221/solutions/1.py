@@ -6,5 +6,4 @@ else:
 
     s.append("s")
 for i in range(len(s)):
-    print(s[i], end ="")
-
+    print(s[i], end="")

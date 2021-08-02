@@ -7,7 +7,7 @@ sort_s = "".join(sort_s_list)
 
 # 文字列tを逆ソート
 t_list = list(t)
-t_list.sort(reverse = True)
+t_list.sort(reverse=True)
 reverse_sort_t = "".join(t_list)
 
 if sort_s < reverse_sort_t:

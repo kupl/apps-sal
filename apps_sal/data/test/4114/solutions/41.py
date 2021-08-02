@@ -19,7 +19,7 @@ for cx in range(101):
         # 制約として必ず特定できる
         if len(h_cands) == 1:
             for x, y, h in piramids:
-                if h != max(cand - abs(x - cx) - abs(y -cy), 0):
+                if h != max(cand - abs(x - cx) - abs(y - cy), 0):
                     break
             else:
                 print(cx, cy, cand)

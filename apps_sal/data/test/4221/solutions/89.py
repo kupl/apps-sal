@@ -1,8 +1,12 @@
-s=[]
-s=str(input())
+s = []
+s = str(input())
+
+
 def plural(s):
-    if s[-1]=='s':
-        print(s+'es')
+    if s[-1] == 's':
+        print(s + 'es')
     else:
-        print(s+'s')
+        print(s + 's')
+
+
 plural(s)

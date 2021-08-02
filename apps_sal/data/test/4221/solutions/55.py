@@ -4,4 +4,3 @@ if S[-1] == "s":
 else:
     S += "s"
 print(S)
-

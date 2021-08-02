@@ -25,4 +25,3 @@ for i in range(l):
     perm += curr_cycle[1:] + curr_cycle[:1]
 
 print(*perm)
-

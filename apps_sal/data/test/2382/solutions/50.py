@@ -1,16 +1,16 @@
 N = int(input())
 S = list(map(int, input().split()))
 S.sort(reverse=True)
-Closed = [False] * (1<<N)
+Closed = [False] * (1 << N)
 Closed[0] = True
 for j in range(N):
-    num = 1<<j
+    num = 1 << j
     cnt_all = 0
     cnt = 0
     cnt_ = 0
     s_old = -1
     for i, s in enumerate(S):
-        if s_old!=s:
+        if s_old != s:
             cnt += cnt_
             cnt_ = 0
         c = Closed[i]
@@ -27,4 +27,3 @@ for j in range(N):
         print("No")
         return
 print("Yes")
-

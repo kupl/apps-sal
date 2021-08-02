@@ -6,4 +6,4 @@ if s[-1] == 's':
 else:
     s.append('s')
 
-print(''.join(s)) 
+print(''.join(s))

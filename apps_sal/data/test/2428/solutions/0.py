@@ -4,7 +4,7 @@ def main():
         s = input().strip()
         t = input().strip()
         n = len(s)
-        
+
         find = [[n] * 26 for _ in range(n + 2)]
         for i in range(n - 1, -1, -1):
             find[i][:] = find[i + 1]
@@ -32,4 +32,3 @@ def main():
 
 
 main()
-

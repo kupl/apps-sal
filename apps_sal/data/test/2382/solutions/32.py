@@ -1,10 +1,14 @@
+from sys import stderr
+from collections import defaultdict
 from sys import stderr, stdin
 input = stdin.readline
-from collections import defaultdict
-from sys import stderr
+
+
 def debug(var, name="hoge"):
-    print(name +":" + str(type(var)) + " = " + repr(var), file=stderr)
+    print(name + ":" + str(type(var)) + " = " + repr(var), file=stderr)
     return
+
+
 def main():
     N = int(input())
     S = [int(a) for a in input().split()]
@@ -34,7 +38,9 @@ def main():
         print("No")
         return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

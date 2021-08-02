@@ -2,16 +2,20 @@ N = int(input())
 S = sorted([int(a) for a in input().split()])
 X = [1] + [0] * N
 
+
 def popX(i0):
-    for i in range(i0, N+1):
+    for i in range(i0, N + 1):
         if X[i]:
             X[i] -= 1
             return i
-    return N+1
+    return N + 1
+
+
 def addX():
     for l in L:
-        for i in range(l+1, N+1):
+        for i in range(l + 1, N + 1):
             X[i] += 1
+
 
 while S:
     a = S.pop()
