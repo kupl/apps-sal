@@ -2,8 +2,8 @@ n = int(input())
 k = int(input())
 x = int(input())
 y = int(input())
-if n<=k:
-    print(n*x)
+if n <= k:
+    print(n * x)
 else:
-    tmp = (n-k) * y + k * x
+    tmp = (n - k) * y + k * x
     print(tmp)

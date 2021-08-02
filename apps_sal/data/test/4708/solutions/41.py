@@ -4,5 +4,5 @@ N -= result
 result *= X
 
 if N >= 0:
-  result += N * Y
+    result += N * Y
 print(result)

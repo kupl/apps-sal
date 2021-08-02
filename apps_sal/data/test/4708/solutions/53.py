@@ -9,4 +9,3 @@ else:
     total = N * X
 
 print(total)
-

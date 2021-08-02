@@ -1,4 +1,4 @@
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 a = list(int(input()) for _ in range(m))
 dp = [[] for _ in range(n + 1)]
 dp[0] = 1
@@ -18,7 +18,7 @@ else:
 for i in range(2, n + 1):
     # print(i, dp)
     if j < m:
-        if a[j]  == i:
+        if a[j] == i:
             dp[i] = 0
             j += 1
             continue

@@ -1,8 +1,8 @@
 N = int(input())
 present = []
 for i in range(N):
-     price = int(input())
-     present.append(price)
+    price = int(input())
+    present.append(price)
 
 present.sort(reverse=True)
 # print(present)

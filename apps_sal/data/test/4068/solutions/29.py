@@ -14,10 +14,13 @@ def main3():
         if i in ng_step:
             dp[i] = 0
         else:
-            dp[i] = dp[i - 1] + dp[i - 2] 
-    
+            dp[i] = dp[i - 1] + dp[i - 2]
+
     print(dp[N] % (10**9 + 7))
+
 
 def __starting_point():
     main3()
+
+
 __starting_point()

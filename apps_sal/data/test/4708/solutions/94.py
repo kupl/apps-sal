@@ -4,7 +4,6 @@ x = int(input())
 y = int(input())
 
 if n <= k:
-    print((n*x))
+    print((n * x))
 else:
-    print((k*x + (n-k)*y))
-
+    print((k * x + (n - k) * y))

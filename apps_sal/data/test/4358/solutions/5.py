@@ -12,4 +12,3 @@ for i in price_list:
     total_payment += i
 
 print(total_payment)
-

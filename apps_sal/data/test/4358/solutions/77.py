@@ -17,6 +17,5 @@ INF = float('inf')
 n = I()
 p = IR(n)
 p.sort()
-ans = sum(p[:-1]) + p[-1]//2
+ans = sum(p[:-1]) + p[-1] // 2
 print(ans)
-

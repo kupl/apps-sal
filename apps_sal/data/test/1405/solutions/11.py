@@ -6,6 +6,7 @@ def rec(a, b):
         d[c] += 1
     return res
 
+
 input()
 d = {}
 for i in map(int, input().split()):
@@ -24,4 +25,3 @@ for a in d:
             d[b] += 1
             ans = max(ans, cnt)
 print(ans)
-

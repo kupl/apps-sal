@@ -7,27 +7,30 @@ for x in a:
     else:
         D[x] = 1
 maxans = 0
+
+
 def check(x, y):
     num = 2
     D[x] -= 1
     D[y] -= 1
-    while x+y in D and D[x+y] > 0:
-        D[x+y] -= 1
-        x, y = y, x+y
+    while x + y in D and D[x + y] > 0:
+        D[x + y] -= 1
+        x, y = y, x + y
         num += 1
     ans = num
     while num > 2:
         D[y] += 1
-        x, y = y-x, x
+        x, y = y - x, x
         num -= 1
     D[x] += 1
     D[y] += 1
     return ans
 
+
 for x in D:
     for y in D:
-        if x == y and D[x] == 1: continue
+        if x == y and D[x] == 1:
+            continue
         maxans = max(check(x, y), maxans)
 
 print(maxans)
-

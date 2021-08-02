@@ -8,7 +8,9 @@ def iroha():
             result += special
     print(result)
 
+
 def __starting_point():
     iroha()
+
 
 __starting_point()

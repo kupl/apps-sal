@@ -25,4 +25,3 @@ for q in s:
     s[q] += 1
 
 print(n + 1)
-

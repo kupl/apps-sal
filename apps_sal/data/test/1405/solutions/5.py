@@ -35,7 +35,7 @@ for i in range(0, n):
         """
         if (a[i], a[j]) in pr:
             continue
-        if a[i]+a[j] not in pos:
+        if a[i] + a[j] not in pos:
             continue
         res = 2
         a1 = a[i]
@@ -57,10 +57,9 @@ for i in range(0, n):
         for k in range(len(m)):
             pos[m[k]] += 1
             if k > 0:
-                pr[(m[k-1], m[k])] = res - k + 1
+                pr[(m[k - 1], m[k])] = res - k + 1
         if res > max_r:
             max_r = res
         pr[(a[i], a[j])] = res
 
 print(max_r)
-

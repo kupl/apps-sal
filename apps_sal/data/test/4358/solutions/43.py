@@ -12,4 +12,5 @@ def __starting_point():
 
     print((christmas_eve_eve(prices)))
 
+
 __starting_point()

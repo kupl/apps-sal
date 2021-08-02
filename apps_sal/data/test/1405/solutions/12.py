@@ -8,7 +8,8 @@ for i in a:
     d[i] += 1
 for i in range(n):
     for j in range(n):
-        if i == j or a[i] == a[j] == 0: continue
+        if i == j or a[i] == a[j] == 0:
+            continue
         a1, a2 = a[i], a[j]
         ln, dl = 2, [a1, a2]
         d[a1] -= 1
@@ -24,4 +25,3 @@ for i in range(n):
         for v in dl:
             d[v] += 1
 print(ans)
-

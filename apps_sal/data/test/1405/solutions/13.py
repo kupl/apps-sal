@@ -5,7 +5,8 @@ n = 0
 for q in s:
     s[q] -= 1
     for a in s:
-        if not s[a]: continue
+        if not s[a]:
+            continue
         t = [a]
         s[a] -= 1
         b = q + a
@@ -14,6 +15,7 @@ for q in s:
             t.append(b)
             a, b = b, a + b
         n = max(n, len(t))
-        for c in t: s[c] += 1
+        for c in t:
+            s[c] += 1
     s[q] += 1
 print(n + 1)

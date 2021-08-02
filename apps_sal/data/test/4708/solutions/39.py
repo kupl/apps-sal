@@ -22,4 +22,3 @@ else:
     answer = n * x
 
 print(answer)
-
