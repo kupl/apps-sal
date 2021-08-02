@@ -33,7 +33,5 @@ while l + 1 < n:
     if len(d) < pc:
         break
     m = min(m, r - l)
-         
+
 print(m + 1)
-
-

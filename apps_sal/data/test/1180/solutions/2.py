@@ -10,10 +10,9 @@ if k:
     for i in range(n):
         u[i] = (p[i] * c(k - 1, n - 2 - i) + u[i - 1]) % d
         p[i + 1] = (10 * p[i]) % d
-    for i in range(n): 
+    for i in range(n):
         v = u[n - 2 - i] + p[n - 1 - i] * c(k, i)
         s = (s + t[i] * v) % d
 else:
     for i in t: s = (s * 10 + i) % d
 print(s)
-

@@ -35,12 +35,12 @@ def solve(n, m):
     ans = 0
     si = 1
 
-    for i in range(n+1):
-        nCi = fn * inv[i] * inv[n-i] % m
-        i_with = np.fromiter(a_x(pow(2, n-i, m), i, m), dtype=np.int64) 
-        i_on = (stir2[ :i+1] * i_with % m).sum() % m
-        ans = (ans + nCi * i_on % m * ex2[n-i] % m * si) % m
-        stir2[1 : i+2] = (stir2[1 : i+2] * upd[ :i+1] + stir2[ :i+1]) % m
+    for i in range(n + 1):
+        nCi = fn * inv[i] * inv[n - i] % m
+        i_with = np.fromiter(a_x(pow(2, n - i, m), i, m), dtype=np.int64)
+        i_on = (stir2[:i + 1] * i_with % m).sum() % m
+        ans = (ans + nCi * i_on % m * ex2[n - i] % m * si) % m
+        stir2[1: i + 2] = (stir2[1: i + 2] * upd[:i + 1] + stir2[:i + 1]) % m
         si *= -1
 
     return ans
@@ -48,4 +48,3 @@ def solve(n, m):
 
 N, M = list(map(int, input().split()))
 print((solve(N, M)))
-

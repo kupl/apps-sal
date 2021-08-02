@@ -15,4 +15,3 @@ else:
             return
     print(" ".join(map(str, s)))
     return
-

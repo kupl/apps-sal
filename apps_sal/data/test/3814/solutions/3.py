@@ -48,4 +48,3 @@ for i in range(n + 1):
     parity *= -1
 
 print(ans)
-

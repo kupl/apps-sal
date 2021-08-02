@@ -12,4 +12,3 @@ else:
     a.sort()
 
 print(" ".join(map(str, a)))
-

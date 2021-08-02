@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def prepare(n, m):
     f = 1
     for i in range(1, n + 1):
@@ -12,6 +13,7 @@ def prepare(n, m):
         f = f * i % m
         inv[i - 1] = f
     return fn, inv
+
 
 def a_x(a, x, m):
     ret = 1
@@ -37,14 +39,13 @@ for i in range(N):
 ans = 0
 si = 1
 
-for i in range(N+1):
-    nCi = fn * inv[i] * inv[N-i] % M
-    i_with = np.fromiter(a_x(pow(2, N-i, M), i, M), dtype=np.int64)
-    i_on = (stir2[ :i+1] * i_with % M).sum() % M
-    ans = (ans + nCi * i_on % M * ex2[N-i] % M * si) % M
-    stir2[1 : i+2] = (stir2[1 : i+2] * upd[ :i+1] + stir2[ :i+1]) % M
+for i in range(N + 1):
+    nCi = fn * inv[i] * inv[N - i] % M
+    i_with = np.fromiter(a_x(pow(2, N - i, M), i, M), dtype=np.int64)
+    i_on = (stir2[:i + 1] * i_with % M).sum() % M
+    ans = (ans + nCi * i_on % M * ex2[N - i] % M * si) % M
+    stir2[1: i + 2] = (stir2[1: i + 2] * upd[:i + 1] + stir2[:i + 1]) % M
     si *= -1
 
 
 print(ans)
-

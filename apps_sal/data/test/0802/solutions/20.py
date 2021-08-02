@@ -6,6 +6,8 @@ for c in s:
     all_types.add(c)
     count[c] = 0
 n_all_types = len(all_types)
+
+
 def solve():
     ret = n
     first = 0
@@ -25,5 +27,6 @@ def solve():
         count[s[first]] -= 1
         first += 1
     return ret
-print(solve())
 
+
+print(solve())

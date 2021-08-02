@@ -6,4 +6,3 @@ if len(A) * len(B):
     print(*sorted(X))
 else:
     print(*X)
-

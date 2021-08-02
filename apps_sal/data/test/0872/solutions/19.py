@@ -5,7 +5,7 @@ def __starting_point():
     aa = list(map(int, input().split()))
     odd, even = False, False
     for a in aa:
-        if a%2==0:
+        if a % 2 == 0:
             odd = True
         else:
             even = True
@@ -17,5 +17,6 @@ def __starting_point():
         aa.sort()
 
     print(" ".join(map(str, aa)))
+
 
 __starting_point()
