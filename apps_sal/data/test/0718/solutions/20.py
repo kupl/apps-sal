@@ -6,4 +6,3 @@ while True:
     if '8' in str(a):
         break
 print(b)
-

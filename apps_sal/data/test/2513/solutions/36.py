@@ -32,7 +32,7 @@ def solve(t):
         return l
     else:
         return None
-        
+
 
 def main():
     l = [("S", "S"), ("S", "W"), ("W", "S"), ("W", "W")]
@@ -45,9 +45,10 @@ def main():
         print((-1))
     else:
         print(("".join(ans)))
-    
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

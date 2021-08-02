@@ -1,4 +1,4 @@
-n, _, small, big =  list(map(int, input().split()))
+n, _, small, big = list(map(int, input().split()))
 m = list(map(int, input().split()))
 
 diff = n - _
@@ -23,4 +23,3 @@ if rd <= diff:
     print('Correct')
 else:
     print('Incorrect')
-

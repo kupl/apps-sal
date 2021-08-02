@@ -14,4 +14,3 @@ for x0, x1 in itertools.product((True, False), repeat=2):
         break
 else:
     print((-1))
-

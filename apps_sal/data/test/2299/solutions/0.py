@@ -20,4 +20,3 @@ for i in range(k):
         ans += "No\n"
 
 print(ans)
-

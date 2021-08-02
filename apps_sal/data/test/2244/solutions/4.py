@@ -1,17 +1,17 @@
-n,m = map(int,input().split())
-g = [set() for i in range(n)]
 from sys import stdin
+n, m = map(int, input().split())
+g = [set() for i in range(n)]
 for i in range(m):
-    a,b = map(int,stdin.readline().split())
-    g[a-1].add(b-1)
-c = [0]*n
+    a, b = map(int, stdin.readline().split())
+    g[a - 1].add(b - 1)
+c = [0] * n
 for i in range(n):
-    c[i]=i
+    c[i] = i
 for i in range(n):
-    j=i
-    while j>0 and c[j] in g[c[j-1]]:
-        c[j],c[j-1]=c[j-1],c[j]
-        j-=1
+    j = i
+    while j > 0 and c[j] in g[c[j - 1]]:
+        c[j], c[j - 1] = c[j - 1], c[j]
+        j -= 1
 res = ''
-for i in c:res+=str(i+1)+' '
+for i in c: res += str(i + 1) + ' '
 print(res)

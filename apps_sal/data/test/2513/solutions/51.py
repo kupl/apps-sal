@@ -17,104 +17,104 @@ for i in range(4):
             ans += pattern[i][j]
             continue
 
-        if s[j -
-             2] == 'o' and s[j -
-                             1] == 'o' and ans[j -
-                                               1] == 'S' and ans[j -
-                                                                 2] == 'S':
+        if s[j
+             - 2] == 'o' and s[j
+                             - 1] == 'o' and ans[j
+                                               - 1] == 'S' and ans[j
+                                                                 - 2] == 'S':
             ans += 'S'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'o' and ans[j -
-                                                 1] == 'S' and ans[j -
-                                                                   2] == 'S':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'o' and ans[j
+                                                 - 1] == 'S' and ans[j
+                                                                   - 2] == 'S':
             ans += 'S'
-        elif s[j -
-               2] == 'o' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'S' and ans[j -
-                                                                   2] == 'S':
+        elif s[j
+               - 2] == 'o' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'S' and ans[j
+                                                                   - 2] == 'S':
             ans += 'W'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'S' and ans[j -
-                                                                   2] == 'S':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'S' and ans[j
+                                                                   - 2] == 'S':
             ans += 'W'
 
-        elif s[j -
-               2] == 'o' and s[j -
-                               1] == 'o' and ans[j -
-                                                 1] == 'S' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'o' and s[j
+                               - 1] == 'o' and ans[j
+                                                 - 1] == 'S' and ans[j
+                                                                   - 2] == 'W':
             ans += 'W'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'o' and ans[j -
-                                                 1] == 'S' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'o' and ans[j
+                                                 - 1] == 'S' and ans[j
+                                                                   - 2] == 'W':
             ans += 'W'
-        elif s[j -
-               2] == 'o' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'S' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'o' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'S' and ans[j
+                                                                   - 2] == 'W':
             ans += 'S'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'S' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'S' and ans[j
+                                                                   - 2] == 'W':
             ans += 'S'
 
-        elif s[j -
-               2] == 'o' and s[j -
-                               1] == 'o' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'S':
+        elif s[j
+               - 2] == 'o' and s[j
+                               - 1] == 'o' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'S':
             ans += 'W'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'o' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'S':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'o' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'S':
             ans += 'W'
-        elif s[j -
-               2] == 'o' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'S':
+        elif s[j
+               - 2] == 'o' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'S':
             ans += 'S'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'S':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'S':
             ans += 'S'
 
-        elif s[j -
-               2] == 'o' and s[j -
-                               1] == 'o' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'o' and s[j
+                               - 1] == 'o' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'W':
             ans += 'S'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'o' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'o' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'W':
             ans += 'S'
-        elif s[j -
-               2] == 'o' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'o' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'W':
             ans += 'W'
-        elif s[j -
-               2] == 'x' and s[j -
-                               1] == 'x' and ans[j -
-                                                 1] == 'W' and ans[j -
-                                                                   2] == 'W':
+        elif s[j
+               - 2] == 'x' and s[j
+                               - 1] == 'x' and ans[j
+                                                 - 1] == 'W' and ans[j
+                                                                   - 2] == 'W':
             ans += 'W'
 
     if ans[-1] == 'S' and s[-1] == 'o' and ans[0] != ans[-2]:
@@ -141,4 +141,3 @@ if len(L) != 0:
     print((L[0]))
 else:
     print((-1))
-

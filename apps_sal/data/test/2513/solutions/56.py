@@ -42,4 +42,3 @@ for a, b in product('SW', repeat=2):
     print((''.join(t)))
     return
 print((-1))
-

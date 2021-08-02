@@ -4,4 +4,3 @@ if min_m >= min_t and max_m <= max_t and (n - m) >= ((min_m != min_t) + (max_m !
     print('Correct')
 else:
     print('Incorrect')
-

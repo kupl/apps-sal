@@ -7,22 +7,22 @@ for st in start:
     ans = st
     for i in range(1, n):
         if s[i] == "o" and ans[i] == "S":
-            if ans[i-1] == "S":
+            if ans[i - 1] == "S":
                 ans += "S"
             else:
                 ans += "W"
         elif s[i] == "x" and ans[i] == "S":
-            if ans[i-1] == "S":
+            if ans[i - 1] == "S":
                 ans += "W"
             else:
                 ans += "S"
         elif s[i] == "o" and ans[i] == "W":
-            if ans[i-1] == "S":
+            if ans[i - 1] == "S":
                 ans += "W"
             else:
                 ans += "S"
         elif s[i] == "x" and ans[i] == "W":
-            if ans[i-1] == "S":
+            if ans[i - 1] == "S":
                 ans += "S"
             else:
                 ans += "W"

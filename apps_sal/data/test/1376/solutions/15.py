@@ -16,4 +16,3 @@ for a in range(1, n + 1):
     res += dist(d, dn) + dist(s, sn)
     d, s = dn, sn
 print(res - 1)
-

@@ -28,4 +28,3 @@ for _ in range(0, q_count):
         print("Yes")
     else:
         print("No")
-

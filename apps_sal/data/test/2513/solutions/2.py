@@ -1,6 +1,6 @@
 def check(before, center, after, saying):
     return ([center, saying] in [["S", "o"], ["W", "x"]] and before == after)\
-           or ([center, saying] in [["S", "x"], ["W", "o"]] and before != after)
+        or ([center, saying] in [["S", "x"], ["W", "o"]] and before != after)
 
 
 def main():
@@ -27,5 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

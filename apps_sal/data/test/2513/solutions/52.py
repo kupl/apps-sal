@@ -1,17 +1,17 @@
 def main():
     N = int(input())
     s = input()
-    #0 sheep 1 wolf
-    for i in [[0,0],[0,1],[1,0],[1,1]]:
+    # 0 sheep 1 wolf
+    for i in [[0, 0], [0, 1], [1, 0], [1, 1]]:
         t = i[:]
         for j in s[1:]:
             if t[-1] == 0:
                 if j == 'o':
                     t.append(t[-2])
                 else:
-                    t.append(1-t[-2])
+                    t.append(1 - t[-2])
             elif j == 'o':
-                t.append(1-t[-2])
+                t.append(1 - t[-2])
             else:
                 t.append(t[-2])
         if t[-1] == t[0]:
@@ -27,5 +27,6 @@ def main():
             return
     print((-1))
     return
-main()
 
+
+main()

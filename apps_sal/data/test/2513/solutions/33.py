@@ -17,4 +17,5 @@ def d_menagerie():
             return ans[:N]
     return '-1'  # どの割り当て方も矛盾した
 
+
 print(d_menagerie())

@@ -1,6 +1,6 @@
 def next_animal(before, current, claim):
     if (before == current and claim == 'x') or \
-        (before != current and claim == 'o'):
+            (before != current and claim == 'o'):
         return 'W'
     else:
         return 'S'
@@ -37,5 +37,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()
