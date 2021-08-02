@@ -11,4 +11,3 @@ while n and m and n + m > 2:
         teams, n, m = teams + 1, n - 1, m - 2
 
 print(teams)
-

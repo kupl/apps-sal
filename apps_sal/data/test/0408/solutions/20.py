@@ -9,4 +9,3 @@ while min(n, m) >= 1 and max(n, m) >= 2:
     cnt += 1
 
 print(cnt)
-

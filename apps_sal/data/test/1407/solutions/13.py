@@ -7,8 +7,10 @@ import math
 
 R = lambda: list(map(int, input().split()))
 
+
 def is_prime(num):
     return not any([num % i == 0 for i in range(2, int(math.sqrt(num) + 1))])
+
 
 n, m = R()
 grid = [list(R()) for i in range(n)]
@@ -19,5 +21,3 @@ for i in range(n):
 min_row = min([sum(r) for r in grid])
 min_col = min([sum(c) for c in zip(*grid)])
 print(min(min_row, min_col))
-
-

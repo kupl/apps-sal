@@ -13,4 +13,3 @@ else:
      #   print("rev", col)
         col = (m - 1) - col - 1
     print(n - row + 1, 2 + col)
-

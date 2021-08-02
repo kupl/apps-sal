@@ -10,4 +10,3 @@ for a in range(len(lst)):
                 return
 
 print('NO')
-

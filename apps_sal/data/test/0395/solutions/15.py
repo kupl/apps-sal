@@ -12,4 +12,3 @@ for i in range(1 << 6):
         print('YES')
         return
 print('NO')
-

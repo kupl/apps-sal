@@ -13,7 +13,7 @@ else:
     if k % (step // 2):
         y -= 1
     k %= step
-    if k == 0: 
+    if k == 0:
         x = m
     else:
         k -= 1

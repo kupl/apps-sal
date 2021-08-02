@@ -5,10 +5,10 @@ m = n
 operations = []
 heap = []
 for i in range(n):
-    s = input() 
+    s = input()
     a = s.split()
     if a[0] == 'insert':
-        heapq.heappush(heap, int(a[1])) 
+        heapq.heappush(heap, int(a[1]))
     elif a[0] == 'removeMin':
         if heap:
             heapq.heappop(heap)
@@ -36,4 +36,3 @@ for i in range(n):
 
 print(m)
 print('\n'.join(operations))
-

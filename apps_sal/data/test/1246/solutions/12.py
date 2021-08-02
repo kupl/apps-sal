@@ -1,6 +1,8 @@
 import sys
 
-#@profile
+# @profile
+
+
 def insert(heap, val):
     idx = len(heap)
     heap.append(val)
@@ -14,7 +16,9 @@ def insert(heap, val):
 
         idx = p
 
-#@profile
+# @profile
+
+
 def removeMin(heap):
     last = heap.pop()
 
@@ -37,8 +41,10 @@ def removeMin(heap):
 
         idx = best
 
+
 answer = []
 n = int(input())
+
 
 def main():
     h = []
@@ -68,9 +74,11 @@ def main():
 
         answer.append(q)
 
+
 def print_answer():
     print(len(answer))
     print("".join(answer))
+
 
 main()
 print_answer()

@@ -10,4 +10,3 @@ else:
         print(n - d, k + 2)
     else:
         print(n - d, m - k)
-

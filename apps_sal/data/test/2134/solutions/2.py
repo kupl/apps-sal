@@ -1,14 +1,15 @@
 def bitcode(lis):
     bc = []
     for n in lis:
-        if lis[n]>1:
+        if lis[n] > 1:
             bc.append(n)
     return bc
 
+
 n = int(input())
 lis = {}
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 for bc in a:
     try:
         lis[bc] += 1
@@ -16,7 +17,7 @@ for bc in a:
         lis[bc] = 1
 
 bcs = bitcode(lis)
-if len(bcs)==0:
+if len(bcs) == 0:
     print(0)
 else:
     bsum = 0

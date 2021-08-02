@@ -1,19 +1,20 @@
-from heapq import heappush , heappop
+from heapq import heappush, heappop
+
 
 def main():
 
     heap = []
     ans = []
-    n,hsize = int(input()),0
+    n, hsize = int(input()), 0
 
     for i in range(n):
         ss = input()
         if ss != "removeMin":
-            a,bb = ss.split(); b = int(bb)
+            a, bb = ss.split(); b = int(bb)
 
             if a == "insert":
                 hsize += 1
-                heappush(heap,b)
+                heappush(heap, b)
             else:
                 while hsize > 0 and heap[0] < b:
                     ans.append('removeMin')
@@ -21,7 +22,7 @@ def main():
                     heappop(heap)
                 if hsize == 0 or heap[0] != b:
                     ans.append('insert ' + bb)
-                    heappush(heap,b)
+                    heappush(heap, b)
                     hsize += 1
 
         else:
@@ -35,10 +36,8 @@ def main():
     print("\n".join(ans))
 
 
-
-
-
-
 def __starting_point():
     main()
+
+
 __starting_point()

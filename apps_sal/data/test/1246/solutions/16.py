@@ -1,9 +1,9 @@
 import heapq
-n = int(input()); m = n; ans, hp_dgt = [], [] 
+n = int(input()); m = n; ans, hp_dgt = [], []
 for i in range(n):
-    s=input(); a=s.split()
+    s = input(); a = s.split()
     if a[0] == 'insert':
-        heapq.heappush(hp_dgt, int(a[1])) 
+        heapq.heappush(hp_dgt, int(a[1]))
     elif a[0] == 'removeMin':
         if hp_dgt:
             heapq.heappop(hp_dgt)
@@ -17,10 +17,9 @@ for i in range(n):
             else:
                 break
         else:
-            m += 1; ans.append('insert '+str(x)); heapq.heappush(hp_dgt, x)
+            m += 1; ans.append('insert ' + str(x)); heapq.heappush(hp_dgt, x)
         if hp_dgt[0] > x:
-            m += 1; ans.append('insert '+str(x)); heapq.heappush(hp_dgt, x)
+            m += 1; ans.append('insert ' + str(x)); heapq.heappush(hp_dgt, x)
     ans.append(s)
 print(m)
 print('\n'.join(ans))
-

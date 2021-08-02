@@ -34,5 +34,3 @@ for ival, skill in individuals:
     if valid:
         output += skill
 print(output)
-        
-
