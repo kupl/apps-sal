@@ -26,4 +26,3 @@ else:
     buf.extend(list(reversed(buf[:-1])))
 
 print(('\n'.join(map(str, buf))))
-

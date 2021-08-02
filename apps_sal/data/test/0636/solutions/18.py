@@ -1,4 +1,4 @@
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 list1 = list(map(int, input().split()))
 list2 = []
 sum = 0
@@ -10,7 +10,7 @@ for i in range(len(list1)):
     if sum + min(list1) <= m:
         sum += min(list1)
 
-        list2.append(list1.index(min(list1))+1)
+        list2.append(list1.index(min(list1)) + 1)
         list1[list1.index(min(list1))] = 999999999999
 print(len(list2))
 print(' '.join(map(str, list2)))

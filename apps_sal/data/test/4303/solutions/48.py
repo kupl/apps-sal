@@ -22,4 +22,3 @@ if len(ans) == 0:
     return
 
 print((min(ans)))
-

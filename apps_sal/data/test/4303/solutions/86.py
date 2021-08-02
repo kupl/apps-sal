@@ -29,4 +29,3 @@ while 1:
     if pos == -1 or k - pos == pl:
         break
 print(ans)
-

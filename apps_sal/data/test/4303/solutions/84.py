@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, K, x):
     l = [abs(xi) for xi in x if xi < 0] + [0]
@@ -31,5 +31,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

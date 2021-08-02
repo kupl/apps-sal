@@ -13,4 +13,3 @@ for c in input():
     res.append(c)
 
 print(''.join(res))
-

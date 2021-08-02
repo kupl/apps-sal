@@ -9,6 +9,5 @@ D = [Counter() for i in range(26)]
 for i in L:
     ans += D[i][score]
     score += A[i]
-    D[i][score] += 1;
+    D[i][score] += 1
 print(ans)
-

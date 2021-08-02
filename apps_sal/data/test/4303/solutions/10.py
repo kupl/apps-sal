@@ -16,4 +16,3 @@ for i in range(N - K + 1):
 
 ans = min(l)
 print(ans)
-

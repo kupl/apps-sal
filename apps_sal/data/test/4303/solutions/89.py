@@ -10,20 +10,20 @@ else:
     x.insert(pos, 0)
 
 l = pos
-r = pos+k
+r = pos + k
 
 if r >= len(x):
-    diff = r-len(x) + 1
+    diff = r - len(x) + 1
     l -= diff
     r -= diff
 
-ans = min(abs(x[l]), x[r])*2 + max(abs(x[l]), x[r])
+ans = min(abs(x[l]), x[r]) * 2 + max(abs(x[l]), x[r])
 
 while r >= pos:
     if l < 0:
         break
 
-    dist = min(abs(x[l]), x[r])*2 + max(abs(x[l]), x[r])
+    dist = min(abs(x[l]), x[r]) * 2 + max(abs(x[l]), x[r])
     if dist < ans:
         ans = dist
 

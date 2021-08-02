@@ -15,4 +15,3 @@ for i in range((n + 1) // 2):
 
 for i in range(n):
     print((ans[min(i, n - 1 - i)]))
-

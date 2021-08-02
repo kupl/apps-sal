@@ -1,2 +1,2 @@
-s,w = map(int,input().split())
-print(['safe','unsafe'][w>=s])
+s, w = map(int, input().split())
+print(['safe', 'unsafe'][w >= s])

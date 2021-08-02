@@ -4,6 +4,6 @@ Sheep = nums[0]
 Wolves = nums[1]
 
 if Sheep > Wolves:
-  print("safe")
+    print("safe")
 else:
-  print("unsafe")  
+    print("unsafe")

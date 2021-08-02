@@ -28,4 +28,3 @@ else:
         now += (2 * i - 1) * pow(2, (2 * i - 3), mod)
         ans.append(now * k % mod)
     print(*(ans + sna), sep="\n")
-

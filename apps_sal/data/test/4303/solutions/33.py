@@ -13,5 +13,5 @@ for i in range(n - k + 1):
     r = max(0, x[i + k - 1])
     if i <= neg_to_pos and neg_to_pos - 1 <= i + k - 1:
         tmp = min(-2 * l + r, -l + 2 * r)
-        res = min(res, tmp) 
+        res = min(res, tmp)
 print(res)

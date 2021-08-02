@@ -1,11 +1,11 @@
+from collections import Counter, deque
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -45,29 +45,29 @@ def main():
     #         for i in range(1, len(r)):
     #             R.append(R[i-1]+r[i])
 
-
     R_len = len(r)
     L_len = len(l)
 
     ans = INF
-    for i,j in enumerate(l):
+    for i, j in enumerate(l):
         if R_len >= k - i - 1:
             if R_len == 0:
                 ans = min(ans, j)
             else:
-                ans = min(ans,2*j+r[k-i-2])
+                ans = min(ans, 2 * j + r[k - i - 2])
 
-    for i,j in enumerate(r):
+    for i, j in enumerate(r):
         if L_len >= k - i - 1:
             if L_len == 0:
-                ans = min(ans,j)
+                ans = min(ans, j)
             else:
-                ans = min(ans,2*j+l[k-i-2])
+                ans = min(ans, 2 * j + l[k - i - 2])
 
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

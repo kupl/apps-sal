@@ -15,4 +15,3 @@ while j < len(s):
     j += 1
 
 print(result)
-

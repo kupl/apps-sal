@@ -13,4 +13,3 @@ for c in s:
         res += c
 
 print(res)
-

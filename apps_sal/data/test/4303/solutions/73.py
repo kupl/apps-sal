@@ -11,11 +11,10 @@ for i in x:
 neg.append(0)
 k += 1
 c = len(neg)
-c -= k -min(k, len(pos))
+c -= k - min(k, len(pos))
 k = min(k, len(pos))
 while c > 0 and k > 0:
     c -= 1
     k -= 1
     ans = min(ans, -neg[c] * 2 + pos[k], -neg[c] + pos[k] * 2)
 print(ans)
-

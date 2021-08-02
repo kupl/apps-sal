@@ -16,4 +16,3 @@ if n % 2 == 0:
     print((ans[-1]))
 for i in range(2, h + 1):
     print((ans[-i]))
-

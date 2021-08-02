@@ -4,5 +4,6 @@ def atc_131a(input_value: str) -> str:
             return "Bad"
     return "Good"
 
+
 input_value = input()
 print(atc_131a(input_value))

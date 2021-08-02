@@ -6,9 +6,8 @@ for day, inst in days:
     if day > k:
         break
     else:
-        ans.append(str(inst+1))
+        ans.append(str(inst + 1))
         k -= day
 print(len(ans))
 if ans != []:
     print(' '.join(ans))
-

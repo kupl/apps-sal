@@ -1,8 +1,8 @@
 S = input()
 
-D =[]
+D = []
 for i in range(3):
-    if S[i] == S[i+1]:
+    if S[i] == S[i + 1]:
         D.append(1)
         break
 
@@ -12,4 +12,3 @@ if 1 in D:
 
 else:
     print("Good")
-

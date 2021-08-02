@@ -5,10 +5,10 @@ a.sort()
 result = []
 for v, i in a:
     k -= v
-    if k < 0: break
+    if k < 0:
+        break
     result.append(i + 1)
 
 result.sort()
 print(len(result))
 print(' '.join(str(i) for i in result))
-

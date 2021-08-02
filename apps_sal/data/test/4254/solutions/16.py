@@ -3,4 +3,3 @@ if w >= s:
     print('unsafe')
 else:
     print('safe')
-
