@@ -1,10 +1,10 @@
 import sys
 
-n,m = input().split(' ')
+n, m = input().split(' ')
 dos = input().split(' ')
 current = 1
 result = 0
-circle = list(range(1,int(n)))
+circle = list(range(1, int(n)))
 for do in dos:
     tmp = int(do) - current
     if tmp < 0:
@@ -13,4 +13,3 @@ for do in dos:
         result += tmp
     current = int(do)
 print(result)
-

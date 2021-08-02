@@ -1,10 +1,12 @@
+from scipy.sparse.csgraph import maximum_bipartite_matching
+from scipy.sparse import coo_matrix
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7 # 998244353
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
-input = lambda:sys.stdin.readline().rstrip()
-from scipy.sparse import coo_matrix
-from scipy.sparse.csgraph import maximum_bipartite_matching
+def input(): return sys.stdin.readline().rstrip()
+
+
 def resolve():
     n = int(input())
     A = [tuple(map(int, input().split())) for _ in range(n)]
@@ -22,7 +24,9 @@ def resolve():
                 rows.append(i)
                 columns.append(j)
 
-    graph = coo_matrix((weights, (rows, columns)), shape = (n, n))
+    graph = coo_matrix((weights, (rows, columns)), shape=(n, n))
     ans = sum(maximum_bipartite_matching(graph) >= 0)
     print(ans)
+
+
 resolve()

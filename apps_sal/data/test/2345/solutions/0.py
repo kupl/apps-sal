@@ -1,22 +1,21 @@
 import sys
 input = sys.stdin.readline
 
-t=int(input())
+t = int(input())
 for test in range(t):
-    n=int(input())
-    A=list(map(int,input().split()))
+    n = int(input())
+    A = list(map(int, input().split()))
 
-    ANS=[]
-    SET=set()
+    ANS = []
+    SET = set()
 
-    NOW=1
+    NOW = 1
     while not (NOW in SET):
         ANS.append(NOW)
         SET.add(NOW)
-        NOW=NOW-A[NOW-1]
+        NOW = NOW - A[NOW - 1]
 
-    x=ANS.index(NOW)
+    x = ANS.index(NOW)
 
     print(len(ANS[x:]))
     print(*ANS[x:])
-

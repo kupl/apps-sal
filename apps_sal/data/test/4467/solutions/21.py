@@ -7,7 +7,7 @@ def resolve():
     reds = [[int(item) for item in input().split()] for _ in range(N)]
     blues = [[int(item) for item in input().split()] for _ in range(N)]
 
-    reds = sorted(reds, key=lambda x:x[1], reverse=True)
+    reds = sorted(reds, key=lambda x: x[1], reverse=True)
     blues.sort()
 
     que = collections.deque(blues)
@@ -27,7 +27,6 @@ def resolve():
 
 def __starting_point():
     resolve()
-
 
 
 __starting_point()

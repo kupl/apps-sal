@@ -1,6 +1,6 @@
 def resolve():
     import sys
-    
+
     readline = sys.stdin.readline    # 1行だけ文字列にする
 
     N = int(readline())
@@ -24,4 +24,3 @@ def resolve():
 
 
 resolve()
-

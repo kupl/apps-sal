@@ -1,12 +1,8 @@
 def main(a, b, l, r):
 
-    
-
     qL = (l - 1) // (2 * a + 2 * b)
 
     rL = (l - 1) % (2 * a + 2 * b) + 1
-
-    
 
     qR = (r - 1) // (2 * a + 2 * b)
 
@@ -16,7 +12,7 @@ def main(a, b, l, r):
 
     if qL == qR:
 
-        #In b segment
+        # In b segment
 
         if a < rL <= a + b and a < rR <= a + b:
 
@@ -26,7 +22,7 @@ def main(a, b, l, r):
 
             return 1
 
-        #In a segment
+        # In a segment
 
         if 1 <= rL <= a and 1 <= rR <= a:
 
@@ -36,7 +32,7 @@ def main(a, b, l, r):
 
             return rR - rL + 1
 
-        #In a + b segment
+        # In a + b segment
 
         if 1 <= rL <= a + b and 1 <= rR <= a + b:
 
@@ -66,25 +62,19 @@ def main(a, b, l, r):
 
     elif qL == qR - 1:
 
-        #abababab
+        # abababab
 
         newL = qL * (2 * a + 2 * b) + 1
 
         newR = (qR + 1) * (2 * a + 2 * b)
 
-        
-
         if 1 <= rL <= a + b and a + b + 1 <= rR:
 
-            return a + max(a - b, 0) + int(a <= b) 
-
-            
+            return a + max(a - b, 0) + int(a <= b)
 
         if a + b + 1 <= rL <= 2 * (a + b) and (2 * a + 2 * b) + 1 <= rR <= a + b:
 
             return main(a, b, l - (a + b), r - (a + b))
-
-        
 
         if 1 <= rL <= a and 1 <= rR <= a:
 
@@ -94,8 +84,6 @@ def main(a, b, l, r):
 
             return a + max(a - b, 0) + int(a <= b)
 
-        
-
         if a + 1 <= rL <= a + b and 1 <= rR <= a:
 
             return 1 + a
@@ -104,25 +92,17 @@ def main(a, b, l, r):
 
             return 1 + a + max(a - b, 0)
 
-        
-
         return main(a, b, l - (a + b), r - (a + b))
-
-        
 
     else:
 
-        return a + max(a - b, 0) + int(a <= b) # + main(a, b, l, (qL + 1) * (2 * a + 2 * b)) + main(a, b, qR * (2 * a + 2 * b) + 1, r)
-
+        return a + max(a - b, 0) + int(a <= b)  # + main(a, b, l, (qL + 1) * (2 * a + 2 * b)) + main(a, b, qR * (2 * a + 2 * b) + 1, r)
 
 
 a, b, l, r = [int(item) for item in input().split()]
 
 
-
 print(main(a, b, l, r))
 
 
-
 # Made By Mostafa_Khaled
-

@@ -4,11 +4,13 @@
 def f(x):
     return x * (x + 1) // 2
 
+
 def works(n, k, s):
     rem = k - 1 - s
     val = f(k - 1) - f(rem) + 1
 
     return val >= n
+
 
 def main():
     n, k = list(map(int, input().split()))
@@ -27,5 +29,6 @@ def main():
                 else:
                     lo = mid
             print(hi)
-main()
 
+
+main()

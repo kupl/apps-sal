@@ -11,4 +11,3 @@ for i in range(n):
             s[j] = 1
             break
 print((sum(s)))
-

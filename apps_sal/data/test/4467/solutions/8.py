@@ -20,7 +20,7 @@ for i in range(n):
 
 
 group1 = list(range(n))
-group2 = list(range(n, 2*n))
+group2 = list(range(n, 2 * n))
 
 g = nx.Graph()
 g.add_nodes_from(group1, bipartite=1)
@@ -28,7 +28,7 @@ g.add_nodes_from(group2, bipartite=0)
 
 for i, list_ in enumerate(match_list):
     for j in list_:
-        g.add_edge(i, j+n, weight=1)
+        g.add_edge(i, j + n, weight=1)
 
 # A, B = bipartite.sets(g)
 # print(A, B)
@@ -44,4 +44,3 @@ for i, list_ in enumerate(match_list):
 d = nx.max_weight_matching(g)
 
 print((len(d)))
-

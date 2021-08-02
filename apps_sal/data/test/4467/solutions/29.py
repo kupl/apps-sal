@@ -1,4 +1,5 @@
-import collections, itertools
+import collections
+import itertools
 
 
 class MaximumFlow:
@@ -51,4 +52,3 @@ for ab, cd in itertools.product(AB, CD):
 flow = MaximumFlow(G)
 fmax, Gres = flow.ford_fulkerson(-1, -2)
 print(fmax)
-

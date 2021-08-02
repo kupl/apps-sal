@@ -14,4 +14,3 @@ for c, d in cd:
             break
 
 print(ans)
-

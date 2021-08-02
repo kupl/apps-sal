@@ -1,6 +1,6 @@
 n = int(input())
-AB = list(list(map(int,input().split())) for _ in range(n))
-CD = list(list(map(int,input().split())) for _ in range(n))
+AB = list(list(map(int, input().split())) for _ in range(n))
+CD = list(list(map(int, input().split())) for _ in range(n))
 
 # print(*CD,sep='\n',end='\n---\n')
 # print(*sorted(CD, key=lambda x: x[0]),sep='\n',end='\n---\n')
@@ -36,14 +36,15 @@ for b in range(n):
 ans = 0
 
 inf = 1000000000
-vis_r = [False]*(n)
+vis_r = [False] * (n)
 for b in range(n):
     bx, by = CD[b]
     # print('b,bx,by',b,bx,by)
     max_ry = -1
     max_r = -1
     for r in dim_b[b]:
-        if vis_r[r]: continue
+        if vis_r[r]:
+            continue
         # print('r,rx,ry',r,rx,ry)
         rx, ry = AB[r]
         if max_ry < ry:
@@ -55,4 +56,3 @@ for b in range(n):
         ans += 1
     # print('---')
 print(ans)
-

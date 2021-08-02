@@ -2,14 +2,14 @@ n = int(input())
 ab = []
 cd = []
 for i in range(n):
-    ab.append(tuple(map(int,input().split())))
+    ab.append(tuple(map(int, input().split())))
 
 for g in range(n):
-    cd.append(tuple(map(int,input().split())))
+    cd.append(tuple(map(int, input().split())))
 
-ab.sort(key=lambda x: x[1], reverse = True)
+ab.sort(key=lambda x: x[1], reverse=True)
 cd.sort()
-used = [False]*n
+used = [False] * n
 
 ans = 0
 for i in range(n):

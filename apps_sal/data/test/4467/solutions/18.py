@@ -1,4 +1,6 @@
-import collections, itertools, copy
+import collections
+import itertools
+import copy
 
 
 class MaximumFlow:
@@ -46,4 +48,3 @@ for ab, cd in itertools.product(AB, CD):
         G[1000 * a + b][1000 * c + d] = 1
 flow_value, flow_dict = MaximumFlow().ford_fulkerson(G, -1, -2)
 print(flow_value)
-

@@ -23,4 +23,3 @@ for i in range(n):
             break
 
 print(ans)
-

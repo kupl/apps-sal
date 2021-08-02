@@ -14,7 +14,3 @@ for (bx, by) in cb:
             break
 
 print(npair)
-
-
-
-

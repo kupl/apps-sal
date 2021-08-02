@@ -18,5 +18,3 @@ for i in range(n):
 
 ans = nx.maximum_flow(graph, start, goal, capacity="capacity")
 print((ans[0]))
-
-

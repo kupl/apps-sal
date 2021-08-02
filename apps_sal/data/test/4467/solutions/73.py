@@ -25,4 +25,3 @@ for b in B:
             p.append((b, (x2, y2)))
             break
 print(ans)
-

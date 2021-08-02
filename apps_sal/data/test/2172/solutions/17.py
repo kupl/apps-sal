@@ -22,5 +22,5 @@ def parse():
     lecture = input().split(" ")
     return lecture, mapping
 
-main(*parse())
 
+main(*parse())

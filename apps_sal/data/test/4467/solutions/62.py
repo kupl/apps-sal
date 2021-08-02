@@ -27,4 +27,5 @@ def c_2d_plane_2n_points_bipartite_graph():
 
     return dinitz(graph, 0, 2 * N + 1).graph['flow_value']
 
+
 print(c_2d_plane_2n_points_bipartite_graph())
