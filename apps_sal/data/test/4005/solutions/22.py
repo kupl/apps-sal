@@ -6,11 +6,13 @@ def area(xmin, ymin, xmax, ymax):
     else:
         return 0
 
+
 def intersect(a_xmin, a_ymin, a_xmax, a_ymax,
-            b_xmin, b_ymin, b_xmax, b_ymax):
+              b_xmin, b_ymin, b_xmax, b_ymax):
     xmax, xmin = min(a_xmax, b_xmax), max(a_xmin, b_xmin)
     ymax, ymin = min(a_ymax, b_ymax), max(a_ymin, b_ymin)
-    return xmin, ymin, xmax, ymax    
+    return xmin, ymin, xmax, ymax
+
 
 a_xmin, a_ymin, a_xmax, a_ymax = list(map(int, input().split()))
 b_xmin, b_ymin, b_xmax, b_ymax = list(map(int, input().split()))

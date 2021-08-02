@@ -1,24 +1,27 @@
 import random
 
+
 def random_str(rango, pos):
     while True:
-        x = random.randint(65,90)
+        x = random.randint(65, 90)
         string = chr(x)
-        x = random.randint(1,10)
+        x = random.randint(1, 10)
         for i in range(x - 1):
-            rand = random.randint(97,122)
+            rand = random.randint(97, 122)
             string += chr(rand)
         if string not in rango:
             break
     return string
 
-def print_array(array):   
+
+def print_array(array):
     result = ""
     for string in array:
         result += string + " "
 
     print(result)
-    
+
+
 n, k = map(int, input().strip().split(" "))
 
 strings = input().strip().split(" ")
@@ -29,11 +32,11 @@ for i in range(n):
 
 pos = 0
 for string in strings:
-    
-    if string == "NO":        
+
+    if string == "NO":
         aux = soldiers[pos]
-        soldiers[pos + k - 1] = aux  
-              
+        soldiers[pos + k - 1] = aux
+
     pos += 1
-        
-print_array(soldiers)    
+
+print_array(soldiers)

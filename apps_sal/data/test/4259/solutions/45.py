@@ -1,9 +1,6 @@
 K = int(input())
 A, B = list(map(int, input().split()))
 if B // K * K >= A:
-  print('OK')
+    print('OK')
 else:
-  print('NG')
-
-
-
+    print('NG')

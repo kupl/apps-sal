@@ -4,9 +4,9 @@ def main():
     a = []
     for _ in range(m):
         a.append(int(input()))
-        
+
     f = int(input())
-    
+
     def bitcnt(i):
         c = 0
         while i:

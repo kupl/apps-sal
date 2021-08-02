@@ -1,4 +1,4 @@
-k=int(input())
-a,b=map(int,input().split())
+k = int(input())
+a, b = map(int, input().split())
 
-print("OK" if b>=-(-a//k)*k else "NG")
+print("OK" if b >= -(-a // k) * k else "NG")

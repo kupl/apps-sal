@@ -18,4 +18,3 @@ res += a[:max(0, m - n)]
 print(len(res))
 for i in res:
     print(i[0], i[1])
-

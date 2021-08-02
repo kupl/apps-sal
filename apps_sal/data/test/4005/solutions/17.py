@@ -1,5 +1,6 @@
 import itertools
 
+
 class Rectangle:
     def intersection(self, other):
         a, b = self, other
@@ -18,10 +19,14 @@ class Rectangle:
             return
         xs = {self.x1, self.x2}
         ys = {self.y1, self.y2}
-        if self.x1 < other.x1 < self.x2: xs.add(other.x1)
-        if self.x1 < other.x2 < self.x2: xs.add(other.x2)
-        if self.y1 < other.y1 < self.y2: ys.add(other.y1)
-        if self.y1 < other.y2 < self.y2: ys.add(other.y2)
+        if self.x1 < other.x1 < self.x2:
+            xs.add(other.x1)
+        if self.x1 < other.x2 < self.x2:
+            xs.add(other.x2)
+        if self.y1 < other.y1 < self.y2:
+            ys.add(other.y1)
+        if self.y1 < other.y2 < self.y2:
+            ys.add(other.y2)
         for (x1, x2), (y1, y2) in itertools.product(
             pairwise(sorted(xs)), pairwise(sorted(ys))
         ):
@@ -41,9 +46,9 @@ class Rectangle:
 
     def __eq__(self, other):
         return isinstance(other, Rectangle) and tuple(self) == tuple(other)
+
     def __ne__(self, other):
         return not (self == other)
-
 
 
 def pairwise(iterable):
@@ -65,4 +70,3 @@ for elem in diff1:
             found = True
 
 print('NO' if not found else 'YES')
-

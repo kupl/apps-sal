@@ -8,4 +8,3 @@ else:
         print("NG")
     else:
         print("OK")
-

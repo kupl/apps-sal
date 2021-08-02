@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 K = int(input())
@@ -12,4 +12,3 @@ for i in range(1000):
         return
 
 print("NG")
-

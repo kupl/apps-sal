@@ -11,4 +11,3 @@ for i, b in enumerate(a):
     else:
         res.append(res[i])
 print(' '.join(res))
-

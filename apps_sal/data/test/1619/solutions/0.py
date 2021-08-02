@@ -67,8 +67,8 @@ def intersect_list(poly, plain_norm, plain_point, proj_dir):
 
     u_list = []
     for i in range(len(poly)):
-        if (v[i-1] > vr) != (v[i] > vr):
-            ur = ((vr - v[i-1]) * u[i] + (v[i] - vr) * u[i-1]) / (v[i] - v[i-1])
+        if (v[i - 1] > vr) != (v[i] > vr):
+            ur = ((vr - v[i - 1]) * u[i] + (v[i] - vr) * u[i - 1]) / (v[i] - v[i - 1])
             u_list.append(ur)
 
     return u_list
@@ -94,7 +94,7 @@ def recognize_str(s):
 
     The recognising automaton is implemented
     """
-    toggle = {'a':'b', 'b':'a'}
+    toggle = {'a': 'b', 'b': 'a'}
     cross_num = 0
     top = None
     for ch in s:
@@ -162,4 +162,6 @@ def run_from_console():
 
 def __starting_point():
     run_from_console()
+
+
 __starting_point()

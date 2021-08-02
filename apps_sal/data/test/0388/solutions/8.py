@@ -7,4 +7,3 @@ for word in input().split():
     else:
         names.append(names[-k + 1])
 print(*names)
-

@@ -1,12 +1,12 @@
 n = int(input())
-N = n*n
+N = n * n
 
 a = [1] * (N + 1)
 a[1] = 0
 i = 2
 while i <= N:
     if a[i] == 1:
-        j = 2*i
+        j = 2 * i
         while j <= N:
             a[j] = 0
             j += i

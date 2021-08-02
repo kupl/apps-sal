@@ -1,6 +1,7 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
 
+
 K = int(input())
 A, B = map(int, input().split())
 

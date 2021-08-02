@@ -1,4 +1,4 @@
-names = [i for i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'] + [ 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'[i:i+2] for i in range(0, len('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'), 2)]
+names = [i for i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'] + ['AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'[i:i + 2] for i in range(0, len('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'), 2)]
 n, k = map(int, input().split())
 yes_no = input().split()
 guess = names[:n]

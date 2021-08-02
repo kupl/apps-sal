@@ -6,9 +6,6 @@ a = input().split()
 
 for i, a_i in enumerate(a):
     if a_i == 'NO':
-        names[i+k-1] = names[i]
+        names[i + k - 1] = names[i]
 
 print(' '.join(names[:n]))
-
-
-

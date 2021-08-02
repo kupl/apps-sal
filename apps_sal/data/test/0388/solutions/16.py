@@ -7,7 +7,7 @@ c1 = ord("A")
 c2 = ord("a")
 c3 = ord("a")
 
-for i in range(0, k-1):
+for i in range(0, k - 1):
     res1 = ""
     if (c1 == ord("Z") and c2 == ord("z")):
         res1 = chr(c1) + chr(c2) + chr(c3)
@@ -41,5 +41,4 @@ for i in range(len(s)):
 
 
 for i in res:
-    print(i, end = " ")
-
+    print(i, end=" ")

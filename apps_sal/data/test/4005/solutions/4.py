@@ -16,6 +16,7 @@ def read_int_array():
 
 ######################################################
 
+
 W = read_int_array()
 B1 = read_int_array()
 B2 = read_int_array()
@@ -49,10 +50,3 @@ if not found:
             found = True
             break
 print("YES" if found else "NO")
-
-
-
-
-
-
-

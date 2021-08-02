@@ -4,4 +4,3 @@ if b < k * (a // k + 1) and a % k != 0:
     print('NG')
 else:
     print('OK')
-

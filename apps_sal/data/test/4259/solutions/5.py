@@ -1,10 +1,10 @@
 def __starting_point():
 
     k = int(input())
-    a,b = list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
 
     flg = False
-    for i in range(a,b+1):
+    for i in range(a, b + 1):
         if i % k == 0:
             flg = True
             break

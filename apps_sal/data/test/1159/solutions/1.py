@@ -1,10 +1,13 @@
-import math, sys
+import math
+import sys
+
 
 def isprime(x):
     for d in range(2, int(math.sqrt(x)) + 1):
         if x % d == 0:
             return False
     return True
+
 
 n = int(input())
 
@@ -22,6 +25,3 @@ while not isprime(m):
 print(m)
 for u, v in edges:
     print(u + 1, v + 1)
-
-
-
