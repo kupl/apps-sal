@@ -21,6 +21,4 @@ while k % x == 0:
 print(pow(x, min(r, s), 1000000007))
 
 
-
 # Made By Mostafa_Khaled
-

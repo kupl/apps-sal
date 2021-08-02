@@ -20,4 +20,3 @@ else:
         sum_a -= arr[i]
         i += 1
     print(ans)
-

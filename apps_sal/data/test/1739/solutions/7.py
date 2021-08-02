@@ -28,4 +28,3 @@ while len(h) > 0:
         p = z
 
 print(pow(x, min(p, s), 10 ** 9 + 7))
-

@@ -6,7 +6,6 @@ adds.sort()
 while adds.count(adds[0]) % x == 0:
     ct = adds.count(adds[0])
     addsok = ct // x
-    adds = [adds[0]+1] * addsok + adds[ct:]
+    adds = [adds[0] + 1] * addsok + adds[ct:]
 
-print(pow(x, min(min(adds), sx), (10**9+7)))
-
+print(pow(x, min(min(adds), sx), (10**9 + 7)))

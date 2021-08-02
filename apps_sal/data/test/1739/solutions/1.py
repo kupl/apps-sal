@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, x = readln()
 a = readln()
@@ -22,6 +24,5 @@ while True:
         cnt.pop(k)
     else:
         break
-    #print(cnt)
+    # print(cnt)
 print(pow(x, ans + min(min(cnt.keys()), m), 10**9 + 7))
-

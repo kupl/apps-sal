@@ -48,4 +48,3 @@ while has_changes:
         castles[p] = cur_lvl
 
 print(' '.join(map(str, castles_count)))
-

@@ -7,6 +7,6 @@ r = 0
 while any(A):
     a = A.max()
     m = 1 << int(a).bit_length() - 1
-    A[A&m>0] ^= a
+    A[A & m > 0] ^= a
     r ^= a * (not r & m)
-print(x+r+r)
+print(x + r + r)

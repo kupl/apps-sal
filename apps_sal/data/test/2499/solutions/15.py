@@ -16,4 +16,3 @@ while any(bbb):
         ans ^= a
 
 print((2 * ans + all_x))
-

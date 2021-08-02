@@ -1,6 +1,7 @@
 import sys
 from collections import deque, Counter
 
+
 def __starting_point():
     n, m, p = list(map(int, input().split()))
     speeds = list(map(int, input().split()))
@@ -15,7 +16,6 @@ def __starting_point():
     levels = [-1] * n * m
 
     def calc(x, y): return x * m + y
-
 
     for i in range(n):
         for j in range(m):
@@ -62,7 +62,6 @@ def __starting_point():
     cnt.sort()
 
     print(" ".join([str(x[1]) for x in cnt]))
-
 
 
 __starting_point()

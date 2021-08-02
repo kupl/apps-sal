@@ -18,4 +18,3 @@ while True:
         ans ^= a
 
 print((2 * ans + all_x))
-

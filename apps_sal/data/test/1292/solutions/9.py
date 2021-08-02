@@ -1,23 +1,23 @@
 import sys
-h,w,P = [int(x) for x in input().split()]
+h, w, P = [int(x) for x in input().split()]
 S = [int(x) for x in input().split()]
 
 board = []
 inp = sys.stdin.read()
 for ind in range(len(inp)):
-    if inp[ind]=='.':
+    if inp[ind] == '.':
         board.append(-1)
-    elif 49<=ord(inp[ind])<=58:
-        board.append(ord(inp[ind])-49)
-    elif inp[ind]=='#':
+    elif 49 <= ord(inp[ind]) <= 58:
+        board.append(ord(inp[ind]) - 49)
+    elif inp[ind] == '#':
         board.append(-2)
 
 new_castles = [[] for _ in range(P)]
 new_castles_ind = [0 for _ in range(P)]
 
-for pos in range(h*w):
-    if board[pos]>=0:
-        new_castles[board[pos]].append((pos,0))
+for pos in range(h * w):
+    if board[pos] >= 0:
+        new_castles[board[pos]].append((pos, 0))
 
 player_Q = [p for p in range(P) if new_castles[p]]
 player_Q_ind = 0
@@ -30,26 +30,26 @@ while player_Q_ind != len(player_Q):
 
     goal = Q[Q_ind][1] + S[p]
     while Q_ind != len(Q) and Q[Q_ind][1] != goal:
-        pos,moves = Q[Q_ind]
+        pos, moves = Q[Q_ind]
         Q_ind += 1
-        y = pos//w
-        x = pos - y*w
-        
-        if 0<x and board[pos-1]==-1:
-            board[pos-1]=p
-            Q.append((pos-1,moves+1))
-        
-        if x<w-1 and board[pos+1]==-1:
-            board[pos+1]=p
-            Q.append((pos+1,moves+1))
-    
-        if 0<y and board[pos-w]==-1:
-            board[pos-w]=p
-            Q.append((pos-w,moves+1))
-        
-        if y<h-1 and board[pos+w]==-1:
-            board[pos+w]=p
-            Q.append((pos+w,moves+1))
+        y = pos // w
+        x = pos - y * w
+
+        if 0 < x and board[pos - 1] == -1:
+            board[pos - 1] = p
+            Q.append((pos - 1, moves + 1))
+
+        if x < w - 1 and board[pos + 1] == -1:
+            board[pos + 1] = p
+            Q.append((pos + 1, moves + 1))
+
+        if 0 < y and board[pos - w] == -1:
+            board[pos - w] = p
+            Q.append((pos - w, moves + 1))
+
+        if y < h - 1 and board[pos + w] == -1:
+            board[pos + w] = p
+            Q.append((pos + w, moves + 1))
     if Q_ind != len(Q):
         player_Q.append(p)
         new_castles_ind[p] = Q_ind

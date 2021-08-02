@@ -25,4 +25,3 @@ for base_j in base:
 # print(t)
 ans = s + t * 2
 print(ans)
-

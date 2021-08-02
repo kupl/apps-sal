@@ -31,5 +31,4 @@ ans = 0
 for i in range(rank):
     ans ^= A[i]
 
-print((ans*2 + not_important))
-
+print((ans * 2 + not_important))

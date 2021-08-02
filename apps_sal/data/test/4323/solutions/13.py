@@ -13,13 +13,12 @@ for i in range(n):
     compressed += bi
     saves.append(ai - bi)
 
-if ( compressed > m ):
+if (compressed > m):
     print(-1)
 else:
     saves.sort(reverse=True)
     z = 0
-    while ( non_compressed > m ):
+    while (non_compressed > m):
         non_compressed -= saves[z]
         z = z + 1
     print(z)
-

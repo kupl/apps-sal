@@ -1,6 +1,8 @@
+import numpy as np
 import sys
 input = sys.stdin.readline
-import numpy as np
+
+
 def print_ans(N, input_line):
     """Test Case
     >>> print_ans(3, "3 6 5")
@@ -12,22 +14,24 @@ def print_ans(N, input_line):
     """
     ar = np.array(input_line.split(), 'int64')
     X = np.bitwise_xor.reduce(ar)
-    ar = np.hstack((ar, np.array([ 1 << i for i in range(60) if X&(1 << i)],'int64')))
+    ar = np.hstack((ar, np.array([1 << i for i in range(60) if X & (1 << i)], 'int64')))
     for k in range(60)[::-1]:
         b = 1 << k
-        j = ar&b != 0
-        i = np.where(j&(ar<2 * b))[0]
+        j = ar & b != 0
+        i = np.where(j & (ar < 2 * b))[0]
         if len(i):
             i = i[0]
             x = ar[i]
-            ar[j] ^=x
+            ar[j] ^= x
             ar[i] = x
     r = np.bitwise_xor.reduce(ar)
-    print((r+(r^X)))
+    print((r + (r ^ X)))
+
 
 def __starting_point():
     N = int(input().rstrip())
     input_line = input().rstrip()
     print_ans(N, input_line)
+
 
 __starting_point()

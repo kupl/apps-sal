@@ -2,6 +2,7 @@ from functools import reduce
 from operator import xor
 import numpy as np
 
+
 def main():
     N = int(input())
     A = np.array(input().split(), np.int64)
@@ -41,7 +42,7 @@ def main():
     #   0 1 ? 0 ? ? ?
     #   0 0 0 1 ? ? ?
     #   0 0 0 0 0 0 0
-    
+
     # 行標準形の作り方
     #  1. 最大値を見つける (=a1とする)
     #  2. a1において一番左にある1がn1列目だとすると、他の行でn1列目が1になっていたら、a1とXORする
@@ -53,9 +54,8 @@ def main():
     #     (a1, a2も、n3列目が1になっている場合はa3とXORする)
     #  ....
 
-
     # 例: A = [12, 9, 7, 2] = [1100, 1001, 0111, 0010] の場合
-    # XOR(A) = 0000, A' = A = [12, 9, 7, 2] = 
+    # XOR(A) = 0000, A' = A = [12, 9, 7, 2] =
     # [1100
     #  1001
     #  0111
@@ -152,7 +152,6 @@ def main():
 
     #  ...
 
-
     # これを実装すると、以下の通りとなる
     ans = 0
     while True:
@@ -174,10 +173,12 @@ def main():
         # ans のmost_left列目が1でない場合は、ans ^= 最大値とする
         if ans & b == 0:
             ans ^= _max
-    
+
     print(2 * ans + A_xor_all)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -20,10 +20,10 @@ while True:
     a = bbb.max()
     if a == 0:
         break
-    b = 1<<(int(a).bit_length() -1)
+    b = 1 << (int(a).bit_length() - 1)
     bbb[bbb & b > 0] ^= a
     if ans & b == 0:
         ans ^= a
 
 
-print (ans*2 + all_x)
+print(ans * 2 + all_x)

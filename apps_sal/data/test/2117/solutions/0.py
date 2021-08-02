@@ -4,11 +4,11 @@ import heapq
 
 n = int(stdin.readline())
 a = [[] for _ in range(n)]
-for _ in range(n-1):
+for _ in range(n - 1):
     e = stdin.readline().split(' ')
     u, v = int(e[0]), int(e[1])
-    a[u-1].append(v-1)
-    a[v-1].append(u-1)
+    a[u - 1].append(v - 1)
+    a[v - 1].append(u - 1)
 
 
 leaves = [i for i in range(n) if len(a[i]) == 1]
@@ -25,7 +25,7 @@ def dfs_from(root):
         if visited[crt]:
             stack.pop(-1)
             if len(a[crt]) > 1:  # not a leaf
-                child[crt], depth[crt] = max([(c, depth[c]+1) for c in a[crt]
+                child[crt], depth[crt] = max([(c, depth[c] + 1) for c in a[crt]
                                               if c != parent[crt]],
                                              key=lambda x: x[1])
             else:
@@ -69,7 +69,7 @@ while len(pq) > 0:
     while c != -1:
         seen[c] = True
         c = child[c]
-        s = s+1
+        s = s + 1
     s = s + solution[-1]
     solution.append(s)
 
@@ -78,4 +78,3 @@ for _ in range(n - min(len(solution), n)):
     solution.append(n)
 
 print(' '.join([str(s) for s in solution]))
-

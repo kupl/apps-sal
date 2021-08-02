@@ -13,6 +13,4 @@ def main():
         print(total)
 
 
-
-
 main()
