@@ -15,10 +15,10 @@ for i in range(len(z)):
         if p[j] == 1:
             z[i] += 1
 for i in range(len(o)):
-    o[i] = len(o) - i 
+    o[i] = len(o) - i
     for j in range(ind_o[i] - 1, -1, -1):
         if p[j] == 0:
-            o[i] += 1 
+            o[i] += 1
 z = [0] + z
 o = [0] + o
 print(max(max(o), max(z)))

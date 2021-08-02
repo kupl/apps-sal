@@ -11,4 +11,3 @@ for i in range(n):
         x0 = x0 + 1
     ans = max(x0, x1)
 print(ans)
-

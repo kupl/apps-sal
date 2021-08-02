@@ -22,5 +22,3 @@ for i in range(n):
         z = x // y
         k = min(k, z)
 print(k)
-
-

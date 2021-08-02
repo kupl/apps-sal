@@ -12,5 +12,5 @@ for i in range(1, n):
             if a[j] == 0 and answer[j] > temp_max:
                 temp_max = answer[j]
         answer[i] = temp_max + 1
-        
+
 print(max(answer))

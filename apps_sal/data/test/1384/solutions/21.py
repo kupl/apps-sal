@@ -30,6 +30,4 @@ if n > 2:
             t_max += 1
 
 
-
 print(t_max)
-

@@ -1,5 +1,5 @@
 from sys import stdout
-from random import randint 
+from random import randint
 from math import *
 import re
 
@@ -16,4 +16,3 @@ for c in s:
     ones -= c == '1'
 
 print(mx)
-

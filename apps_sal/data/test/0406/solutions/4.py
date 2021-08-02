@@ -19,13 +19,13 @@ for i in range(1, n):
 
 l2[k] = [prev, count]
 k += 1
-for i in range(k-1, 0, -1):
-    if l2[i][1] % 2 == 1 and l2[i-1][0] == (l2[i][0] - 1):
-        l2[i-1][1] += 1
+for i in range(k - 1, 0, -1):
+    if l2[i][1] % 2 == 1 and l2[i - 1][0] == (l2[i][0] - 1):
+        l2[i - 1][1] += 1
     l2[i][1] //= 2
 l2[0][1] //= 2
-i = k-1
-j = k-1
+i = k - 1
+j = k - 1
 res = 0
 while i >= 0 and j >= 0:
     if i == j:
@@ -46,4 +46,3 @@ while i >= 0 and j >= 0:
         j = i
 
 print(res)
-

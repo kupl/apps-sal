@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 class Path():
     def __init__(self, idx, s, d):
         self.idx = idx
@@ -12,6 +13,7 @@ class Path():
 
     def __hash__(self):
         return self.s * 100000 + self.d
+
 
 def shortestPath(n, k, paths):
     ps = dict()
@@ -94,6 +96,7 @@ def shortestPath(n, k, paths):
             output[choice[len(choice) - 1]] = '0'
             output[choice[0]] = '1'
 
+
 def main():
     n, m, k = (int(x) for x in input().split())
     paths = []
@@ -102,6 +105,9 @@ def main():
         paths.append(Path(i, path[0], path[1]))
     shortestPath(n, k, paths)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

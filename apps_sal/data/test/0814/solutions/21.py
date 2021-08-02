@@ -3,7 +3,7 @@ a = list(map(int, input().split(' ')))
 a = sorted(a)
 s = ''
 for i in range(len(a)):
-    s+=str(a[i])
+    s += str(a[i])
     if i != len(a):
-        s+=' '
+        s += ' '
 print(s)

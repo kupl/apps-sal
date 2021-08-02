@@ -6,4 +6,3 @@ for i in range(1, n):
 for i in range(n - 1):
     res = min(res, min(arr[i], arr[n - 1]) // (n - 1 - i))
 print(res)
-
