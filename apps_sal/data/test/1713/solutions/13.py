@@ -5,7 +5,7 @@ if s == t:
 else:
     k = set(); ans = 0
     while 1:
-        s = p[s-1]
+        s = p[s - 1]
         if s in k:
             print(-1)
             break
@@ -14,4 +14,3 @@ else:
         if s == t:
             print(ans)
             break
-

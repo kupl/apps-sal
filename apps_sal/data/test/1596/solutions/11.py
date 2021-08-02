@@ -6,16 +6,16 @@ while len(pos) < 100001:
     a %= 1000000007
     pos.append(a)
 
+
 def solve():
 
     S = input() + "_"
-    
-    
+
     segs = []
-    
+
     lU = 0
     lN = 0
-    
+
     for s in S:
         if s == 'w' or s == 'm':
             print(0)
@@ -39,24 +39,11 @@ def solve():
             lU = 0
             lN = 0
     ans = 1
-    
+
     for s in segs:
         ans *= pos[s]
         ans %= 1000000007
     print(ans)
-    
+
+
 solve()
-                
-
-
-                
-                
-                
-                
-                
-            
-            
-            
-                    
-                
-

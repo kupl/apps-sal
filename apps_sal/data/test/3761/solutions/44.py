@@ -8,12 +8,11 @@ x -= sx[0]
 sx = sx[1:]
 
 
-
 def is_reachable(p, s):
     origin = 8000
-    if origin+p < 0:
+    if origin + p < 0:
         return False
-        
+
     n = len(s)
     reachable = [set() for i in range(n + 1)]
     reachable[0].add(origin)
@@ -23,12 +22,11 @@ def is_reachable(p, s):
             if j - s[i] >= 0:
                 reachable[i + 1].add(j - s[i])
             if j + s[i] <= origin * 2:
-                reachable[i+1].add(j + s[i])
-    return (origin+p) in reachable[n] or (origin-p) in reachable[n]
+                reachable[i + 1].add(j + s[i])
+    return (origin + p) in reachable[n] or (origin - p) in reachable[n]
 
 
 if is_reachable(x, sx) and is_reachable(y, sy):
     print('Yes')
 else:
     print('No')
-

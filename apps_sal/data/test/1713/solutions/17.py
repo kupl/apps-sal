@@ -4,7 +4,7 @@ def main():
 def __starting_point():
     main()
 '''
-#118B
+# 118B
 '''
 def main():
     from sys import stdin,stdout
@@ -44,7 +44,7 @@ def main():
 def __starting_point():
     main()
 '''
-#499B
+# 499B
 '''
 def main():
     from sys import stdin,stdout
@@ -61,7 +61,7 @@ def main():
 def __starting_point():
     main()
 '''
-#450A
+# 450A
 '''
 def main():
     from sys import stdin,stdout
@@ -80,7 +80,7 @@ def main():
 def __starting_point():
     main()
 '''
-#550C
+# 550C
 '''
 def main():
     from sys import stdin,stdout
@@ -117,7 +117,7 @@ def main():
 def __starting_point():
     main()
 '''
-#476B
+# 476B
 '''
 def main():
     from sys import stdin,stdout
@@ -182,7 +182,7 @@ def main():
 def __starting_point():
     main()
 '''
-#230B
+# 230B
 '''
 def main():
 	from sys import stdin,stdout
@@ -207,7 +207,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#489C
+# 489C
 '''
 def main():
 	import sys
@@ -258,7 +258,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#230B
+# 230B
 '''
 def main():	
 	import sys
@@ -293,7 +293,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#508B TLE
+# 508B TLE
 '''
 def main():
 	import sys
@@ -335,7 +335,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#466C
+# 466C
 '''
 def main():
 	import sys
@@ -367,30 +367,35 @@ def main():
 def __starting_point():
 	main()
 '''
-#285B
+# 285B
+
+
 def main():
-	from sys import stdin,stdout
-	import collections
-	stack=collections.deque()
-	n,s,t=list(map(int,stdin.readline().split()))
-	M=tuple(map(int,stdin.readline().split()))
-	visited=list(0 for x in range(n))
-	count=0
-	stack.appendleft(s-1)
-	while(len(stack)):
-		top=stack.popleft()
-		if top==t-1:
-			break
-		else:
-			if not visited[M[top]-1]:
-				stack.appendleft(M[top]-1)
-				visited[M[top]-1]=1
-				count+=1
-	if top==t-1:
-		stdout.write(str(count)+'\n')
-	else:
-		stdout.write('-1\n')
+    from sys import stdin, stdout
+    import collections
+    stack = collections.deque()
+    n, s, t = list(map(int, stdin.readline().split()))
+    M = tuple(map(int, stdin.readline().split()))
+    visited = list(0 for x in range(n))
+    count = 0
+    stack.appendleft(s - 1)
+    while(len(stack)):
+        top = stack.popleft()
+        if top == t - 1:
+            break
+        else:
+            if not visited[M[top] - 1]:
+                stack.appendleft(M[top] - 1)
+                visited[M[top] - 1] = 1
+                count += 1
+    if top == t - 1:
+        stdout.write(str(count) + '\n')
+    else:
+        stdout.write('-1\n')
+
+
 def __starting_point():
-	main()
+    main()
+
 
 __starting_point()

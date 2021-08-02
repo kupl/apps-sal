@@ -7,4 +7,3 @@ for i in lst:
     result += (i - avg)**2
 
 print(result)
-

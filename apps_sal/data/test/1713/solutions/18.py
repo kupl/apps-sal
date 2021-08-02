@@ -1,10 +1,10 @@
 ins = input()
 ins = ins.split()
-list(map(int,ins))
-n,s,t = list(map(int,ins))
+list(map(int, ins))
+n, s, t = list(map(int, ins))
 ins = input()
 ins = ins.split()
-ins = list(map(int,ins))
+ins = list(map(int, ins))
 p = []
 p.append(-1)
 p += ins
@@ -16,4 +16,3 @@ while(s != t):
         s = t
         ans = -1
 print(ans)
-

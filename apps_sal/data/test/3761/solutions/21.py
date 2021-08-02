@@ -63,7 +63,7 @@ def solve():
         dp_x.add(0)
 
     for x in x_move[1:]:
-        dp_x = {key+x for key in dp_x} | {key-x for key in dp_x}
+        dp_x = {key + x for key in dp_x} | {key - x for key in dp_x}
 
     dp_y = set()
     if len(y_move) == 0:
@@ -72,7 +72,7 @@ def solve():
         dp_y.add(y_move[0])
         dp_y.add(-y_move[0])
     for y in y_move[1:]:
-        dp_y = {key+y for key in dp_y} | {key-y for key in dp_y}
+        dp_y = {key + y for key in dp_y} | {key - y for key in dp_y}
 
     if GX in dp_x and GY in dp_y:
         print("Yes")
@@ -81,4 +81,3 @@ def solve():
 
 
 solve()
-

@@ -9,4 +9,3 @@ for i in range(-100, 101):
     min_cost = min(cost, min_cost)
 
 print(min_cost)
-

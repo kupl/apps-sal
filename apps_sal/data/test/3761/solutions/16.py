@@ -4,24 +4,24 @@ s = [len(_) for _ in s]
 dx = s[::2]
 dy = s[1::2]
 
-x = abs(x-dx[0])
+x = abs(x - dx[0])
 y = abs(y)
 dx = dx[1:]
 px = 0
 py = 0
-for d in reversed(sorted(dx)) :
-    if px > x :
+for d in reversed(sorted(dx)):
+    if px > x:
         px -= d
-    else :
+    else:
         px += d
 
-for d in reversed(sorted(dy)) :
-    if py > y :
+for d in reversed(sorted(dy)):
+    if py > y:
         py -= d
-    else :
+    else:
         py += d
 
-if px == x and py == y :
+if px == x and py == y:
     print('Yes')
-else :
+else:
     print('No')

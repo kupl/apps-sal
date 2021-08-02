@@ -1,4 +1,4 @@
-MOD = 10**9+7
+MOD = 10**9 + 7
 
 s = input()
 n = len(s)
@@ -8,9 +8,9 @@ if s.count('m') > 0 or s.count('w') > 0:
     return
 
 us, ns = [0], [0]
-dp = [1 for i in range(n+1)]
-for i in range(2, n+1):
-    dp[i] = (dp[i-1]+dp[i-2]) % MOD
+dp = [1 for i in range(n + 1)]
+for i in range(2, n + 1):
+    dp[i] = (dp[i - 1] + dp[i - 2]) % MOD
 
 for i in range(n):
     if s[i] == 'u':
@@ -31,7 +31,7 @@ for i in range(n):
 #print(us, ns)
 ans = 1
 for usi in us:
-    ans = (ans*dp[usi]) % MOD
+    ans = (ans * dp[usi]) % MOD
 for nsi in ns:
-    ans = (ans*dp[nsi]) % MOD
+    ans = (ans * dp[nsi]) % MOD
 print(ans)

@@ -20,22 +20,24 @@ ymoves = S[1::2]
 ymoves.sort()
 ymoves.reverse()
 
+
 def process(a, l, i, v, d, memo, r):
-  if (i,v) in memo:
-    return False
-  if l == i:
-    return v == d
-  ab = abs(d-v)
-  if ab > r:
-    ret = False
-  elif a == r:
-    ret = True
-  else:
-    ret = process(a, l, i+1, v+a[i], d, memo, r-a[i]) or process(a, l, i+1, v-a[i], d, memo, r-a[i])
-  memo[(i,v)] = ret
-  return ret
+    if (i, v) in memo:
+        return False
+    if l == i:
+        return v == d
+    ab = abs(d - v)
+    if ab > r:
+        ret = False
+    elif a == r:
+        ret = True
+    else:
+        ret = process(a, l, i + 1, v + a[i], d, memo, r - a[i]) or process(a, l, i + 1, v - a[i], d, memo, r - a[i])
+    memo[(i, v)] = ret
+    return ret
+
 
 if process(xmoves, len(xmoves), 0, x, X, {}, sum(xmoves)) and process(ymoves, len(ymoves), 0, y, Y, {}, sum(ymoves)):
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

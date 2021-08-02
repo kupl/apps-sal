@@ -3,15 +3,15 @@
 s = input()
 n = len(s)
 A = []
-mod = 10**9+7
+mod = 10**9 + 7
 
 
-L = [0,1,2]
-for i in range(10**5+3):
-    L.append((L[-1]+L[-2]) % mod)
+L = [0, 1, 2]
+for i in range(10**5 + 3):
+    L.append((L[-1] + L[-2]) % mod)
 
-nn=0
-uu=0
+nn = 0
+uu = 0
 
 for i in range(n):
     if s[i] == "n":

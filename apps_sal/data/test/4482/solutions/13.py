@@ -6,18 +6,18 @@ ave = 0
 for i in range(num):
     ave += num_line[i]
 
-if ave%num == 0:
+if ave % num == 0:
     ave //= num
 
 else:
-    if ave%num <= num/2:
+    if ave % num <= num / 2:
         ave //= num
     else:
-        ave = -(-ave//num)
+        ave = -(-ave // num)
 
 wa = 0
 for i in range(num):
     temp = num_line[i] - ave
-    wa += temp*temp
-    
+    wa += temp * temp
+
 print(wa)

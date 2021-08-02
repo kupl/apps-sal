@@ -25,4 +25,3 @@ if x in memoX and y in memoY:
     print('Yes')
 else:
     print('No')
-

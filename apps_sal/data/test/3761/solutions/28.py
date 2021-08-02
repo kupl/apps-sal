@@ -18,6 +18,7 @@ dy4, dx4 = [0, -1, 0, 1], [1, 0, -1, 0]
 def inside(y: int, x: int, H: int, W: int) -> bool: return 0 <= y < H and 0 <= x < W
 def ceil(a, b): return (a + b - 1) // b
 
+
 YES = "Yes"
 NO = "No"
 
@@ -63,7 +64,9 @@ def main():
 
     print((solve(s, x, y)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

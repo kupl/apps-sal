@@ -1,6 +1,7 @@
 import sys
 readline = sys.stdin.readline
 
+
 def main():
     s = readline()
     X, Y = list(map(int, readline().split()))
@@ -60,7 +61,9 @@ def main():
 
     print(('Yes' if X in dp_h and Y in dp_v else 'No'))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -10,5 +10,3 @@ while t > 0:
     t -= 7
     c += 1
 print(c)
-
-

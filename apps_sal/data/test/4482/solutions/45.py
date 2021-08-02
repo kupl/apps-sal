@@ -6,7 +6,7 @@ def solve(N: int, a: "List[int]"):
     ans = float("inf")
     for m in range(-100, 101):
         ans = min(ans,
-                  sum((aa-m)**2 for aa in a))
+                  sum((aa - m)**2 for aa in a))
     return ans
 
 
@@ -21,12 +21,15 @@ def main():
     a = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     print((solve(N, a)))
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
-    #test()
+    # test()
     main()
+
 
 __starting_point()

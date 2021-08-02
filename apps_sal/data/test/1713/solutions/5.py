@@ -1,7 +1,7 @@
 n, s, t = list(map(int, input().split()))
 p = [0]
 p.extend(list(map(int, input().split())))
-f = [0]*(n+1)
+f = [0] * (n + 1)
 
 f[s] = 1
 cnt = 0
@@ -14,5 +14,3 @@ if s == t:
     print(cnt)
 else:
     print(-1)
-
-

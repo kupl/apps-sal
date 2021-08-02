@@ -29,8 +29,8 @@ def main():
     for v in LR:
         temp = set()
         for u in s1:
-            temp.add(u+v)
-            temp.add(u-v)
+            temp.add(u + v)
+            temp.add(u - v)
         s1 = temp
     if x not in s1:
         return "No"
@@ -38,8 +38,8 @@ def main():
     for v in UD:
         temp = set()
         for u in s2:
-            temp.add(u+v)
-            temp.add(u-v)
+            temp.add(u + v)
+            temp.add(u - v)
         s2 = temp
     if y not in s2:
         return "No"
@@ -47,8 +47,8 @@ def main():
     return "Yes"
 
 
-
-
 def __starting_point():
     print(main())
+
+
 __starting_point()

@@ -64,8 +64,8 @@ def solve():
     for x in x_move[1:]:
         tmp = defaultdict(bool)
         for key, val in list(dp_x.items()):
-            tmp[key+x] = True
-            tmp[key-x] = True
+            tmp[key + x] = True
+            tmp[key - x] = True
         dp_x = tmp
 
     dp_y = defaultdict(bool)
@@ -77,15 +77,14 @@ def solve():
     for y in y_move[1:]:
         tmp = defaultdict(bool)
         for key, val in list(dp_y.items()):
-            tmp[key+y] = True
-            tmp[key-y] = True
+            tmp[key + y] = True
+            tmp[key - y] = True
         dp_y = tmp
 
-    if dp_x[GX]and dp_y[GY]:
+    if dp_x[GX] and dp_y[GY]:
         print("Yes")
     else:
         print("No")
 
 
 solve()
-

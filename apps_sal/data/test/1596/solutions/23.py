@@ -3,7 +3,7 @@ import math
 fibo = [1, 1, 2]
 M = 10 ** 9 + 7
 for i in range(3, 100001):
-    fibo +=  [(fibo[i-1] + fibo[i-2]) % M]
+    fibo += [(fibo[i - 1] + fibo[i - 2]) % M]
 
 s = list(input())
 check = [True] * len(s)

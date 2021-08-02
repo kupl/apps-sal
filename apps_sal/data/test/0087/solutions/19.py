@@ -13,5 +13,5 @@ if cnt % 7:
     ans = 2 + cnt // 7
 else:
     ans = 1 + cnt // 7
-    
+
 stdout.write(str(ans))

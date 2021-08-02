@@ -17,4 +17,3 @@ R = 0
 for i in aN:
     R += (i - A)**2
 print(R)
-

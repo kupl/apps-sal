@@ -14,4 +14,3 @@ while pos != t:
         break
 else:
     print(ans)
-

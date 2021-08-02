@@ -5,5 +5,5 @@ def cost(x):
 
 n = input()
 a = list(map(int, input().split()))
-ave = round(sum(a)/int(n))
+ave = round(sum(a) / int(n))
 print(sum(list(map(cost, a))))

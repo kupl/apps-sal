@@ -4,10 +4,16 @@ from collections import Counter
 input = sys.stdin.readline
 sys.setrecursionlimit(100000)
 MOD = 1000000007
+
+
 def getN():
     return int(input())
+
+
 def getList():
     return list(map(int, input().split()))
+
+
 def solve():
     # n = getN()
     seqs = []
@@ -36,13 +42,12 @@ def solve():
     if seq != 0:
         seqs.append(seq)
 
-
     nst = [0 for i in range(n + 2)]
     mst = [0 for i in range(n + 2)]
     nst[1] = 1
     for i in range(2, n + 1):
-        nst[i] = (nst[i-1] + mst[i-1]) % MOD
-        mst[i] = nst[i-1] % MOD
+        nst[i] = (nst[i - 1] + mst[i - 1]) % MOD
+        mst[i] = nst[i - 1] % MOD
 
     ans = 1
     for seq in seqs:
@@ -50,7 +55,6 @@ def solve():
         ans %= MOD
     print(ans)
     # print(nst, mst)
-
 
     return
 
@@ -60,6 +64,9 @@ def main():
     # for _ in range(q):
     solve()
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

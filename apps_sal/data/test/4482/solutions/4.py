@@ -15,4 +15,3 @@ for v in a:
     diff += (m - v) ** 2
 
 print(diff)
-
