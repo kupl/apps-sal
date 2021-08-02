@@ -28,9 +28,11 @@ class Graph:
             queue, next_queue = next_queue, set()
 
 
-def repeat(elem): 
-    while True: 
+def repeat(elem):
+    while True:
         yield elem
+
+
 def readline(types=repeat(int)):
     return map(lambda x: x[0](x[1]), zip(types, input().split()))
 
@@ -38,7 +40,7 @@ def readline(types=repeat(int)):
 def readinput():
     nodes, edges, start, finish = readline()
     start, finish = start - 1, finish - 1
-    
+
     graph = Graph(nodes)
     for i in range(edges):
         a, b = readline()
@@ -58,7 +60,7 @@ def main():
     for i in range(len(graph.nodes)):
         for j in range(i + 1, len(graph.nodes)):
             node_a, node_b = graph.nodes[i], graph.nodes[j]
-            if node_a in node_b.ways: 
+            if node_a in node_b.ways:
                 continue
             if node_a.distances[start] + 1 + node_b.distances[finish] < distance:
                 continue

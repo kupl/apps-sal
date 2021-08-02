@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def bfs(s, level):
     level[s] = 0
     stack = deque([s])
@@ -8,6 +10,8 @@ def bfs(s, level):
             if level[w] is -1:
                 stack.append(w)
                 level[w] = level[v] + 1
+
+
 n, m, s, t = map(int, input().split())
 g = []
 for i in range(n):

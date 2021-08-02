@@ -18,4 +18,3 @@ else:
         result *= 2
         result %= m
     print(result)
-

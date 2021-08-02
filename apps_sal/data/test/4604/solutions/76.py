@@ -1,4 +1,5 @@
-MOD = 10**9+7
+MOD = 10**9 + 7
+
 
 def fast_pow(x, n, MOD):
     res = 1
@@ -36,10 +37,9 @@ if n % 2:
     if d[0] != 1:
         print((0))
         return
-    print((fast_pow(2, len(d)-1, MOD)))
+    print((fast_pow(2, len(d) - 1, MOD)))
 else:
     if 0 in d:
         print((0))
         return
     print((fast_pow(2, len(d), MOD)))
-

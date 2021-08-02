@@ -22,4 +22,3 @@ for i in range(1, m + 1):
         best_as_cnt = as_cnt
         best_movie = i
 print(best_movie)
-

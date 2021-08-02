@@ -3,24 +3,24 @@ n = int(input())
 
 arr = []
 
-for i in range(n-1):
-    arr.append(list(map(int,input().strip().split())))
+for i in range(n - 1):
+    arr.append(list(map(int, input().strip().split())))
 mp = {}
 
 ans = []
-#print(arr)
-for i in range(n-1):
+# print(arr)
+for i in range(n - 1):
     a = arr[i][0]
     b = arr[i][1]
 
     if (a not in mp) and (b not in mp):
         mp[a] = len(ans)
         mp[b] = len(ans)
-        ans.append([a,b])
+        ans.append([a, b])
     else:
         if (a in mp) and (b not in mp):
             ans[mp[a]].append(b)
-            mp[b]= mp[a]
+            mp[b] = mp[a]
         else:
             if (a not in mp) and (b in mp):
                 ans[mp[b]].append(a)
@@ -30,17 +30,6 @@ for i in range(n-1):
                 for x in ans[mp[b]]:
                     mp[x] = mp[a]
 for i in range(len(ans)):
-    if len(ans[i])==n:
+    if len(ans[i]) == n:
         print(*ans[i])
         break
-
-
-
-
-
-
-
-
-
-
-

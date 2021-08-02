@@ -14,7 +14,7 @@ for i, v in snums:
     if v == count:
         count += 1
     elif v > count:
-        holes.update(j for j in range(min(n+1, count), min(n+1, v)))
+        holes.update(j for j in range(min(n + 1, count), min(n + 1, v)))
         count = v + 1
 
 while len(bonus) > 0 and len(holes) > 0:
@@ -39,4 +39,3 @@ else:
         nums[i] = x
 
 print(' '.join([str(x) for x in nums]))
-

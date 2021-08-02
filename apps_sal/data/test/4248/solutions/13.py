@@ -8,4 +8,3 @@ if l < 3:
     print(str(d) + "0" * (3 - l))
 else:
     print(d)
-

@@ -30,4 +30,3 @@ elif sum([key for key, value in list(A.items()) if value == 1]) != 0:
     print((0))
 else:
     print((mod_pow(2, N // 2, MOD)))
-

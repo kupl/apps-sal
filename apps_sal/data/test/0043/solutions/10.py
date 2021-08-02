@@ -4,21 +4,25 @@ from functools import cmp_to_key
 Vec = namedtuple("Vec", "x y index")
 Fraction = namedtuple("Fraction", "num denom")
 
+
 def fraction_comp(a, b):
-    return a.num*b.denom > b.num*a.denom
+    return a.num * b.denom > b.num * a.denom
+
 
 def angle_comp(v):
-    result = v.x / sqrt(v.x*v.x + v.y*v.y)
+    result = v.x / sqrt(v.x * v.x + v.y * v.y)
     if (v.y < 0):
         result = -2 - result
     return result
 
+
 def angle(v1, v2):
     x1, y1 = v1.x, v1.y
     x2, y2 = v2.x, v2.y
-    result = (x1*x2 + y1*y2) / (sqrt(x1*x1 + y1*y1)*sqrt(x2*x2 + y2*y2))
-    sign = -1 if (x1*x2 + y1*y2) < 0 else 1
-    return Fraction(sign*(x1*x2 + y1*y2)**2, (x1*x1 + y1*y1)*(x2*x2 + y2*y2))
+    result = (x1 * x2 + y1 * y2) / (sqrt(x1 * x1 + y1 * y1) * sqrt(x2 * x2 + y2 * y2))
+    sign = -1 if (x1 * x2 + y1 * y2) < 0 else 1
+    return Fraction(sign * (x1 * x2 + y1 * y2)**2, (x1 * x1 + y1 * y1) * (x2 * x2 + y2 * y2))
+
 
 n = int(input())
 

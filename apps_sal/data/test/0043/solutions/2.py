@@ -7,6 +7,7 @@ def getkos(x, y):
     mul = -1 if temp < 0 else 1
     return (mul * temp ** 2, (x[0] ** 2 + x[1] ** 2) * (y[0] ** 2 + y[1] ** 2))
 
+
 class Drob:
     def __init__(self, num, denom):
         self.num = num
@@ -14,6 +15,7 @@ class Drob:
 
     def __lt__(self, object):
         return self.num * object.denom < object.num * self.denom
+
 
 n = int(sys.stdin.readline())
 
@@ -26,8 +28,8 @@ for i in range(n):
     else:
         negative.append(x)
 
-positive.sort(key=lambda x: ((-1 if x[0] > 0 else 1) * x[0]**2 / (x[1] ** 2 +  x[0] ** 2)))
-negative.sort(key=lambda x: ((1 if x[0] > 0 else -1) * x[0]**2 / (x[1] ** 2 +  x[0] ** 2)))
+positive.sort(key=lambda x: ((-1 if x[0] > 0 else 1) * x[0]**2 / (x[1] ** 2 + x[0] ** 2)))
+negative.sort(key=lambda x: ((1 if x[0] > 0 else -1) * x[0]**2 / (x[1] ** 2 + x[0] ** 2)))
 #negative.sort(key=lambda x,y: x[0] - y[0] if x[0] != y[0] else (y[1] - x[1]) * x[0])
 
 all = positive + negative
@@ -52,5 +54,4 @@ for i in range(n):
     # print("{} kos1: {} kos2: {}".format(i, kos1, kos2))
 
 # print(biggest)
-print("%d %d" % (bi + 1, bj+ 1))
-
+print("%d %d" % (bi + 1, bj + 1))

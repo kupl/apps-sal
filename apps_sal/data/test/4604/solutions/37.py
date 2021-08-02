@@ -8,7 +8,7 @@ MOD = int(1e9) + 7
 if N % 2 == 0:
     c = Counter(A)
     if all(i == 2 for i in c.values()):
-        print(pow(2, N//2, MOD))
+        print(pow(2, N // 2, MOD))
     else:
         print(0)
 # 奇数の場合
@@ -17,6 +17,6 @@ else:
     A = A[1:]
     c = Counter(A)
     if all(i == 2 for i in c.values()):
-        print(pow(2, N//2, MOD))
+        print(pow(2, N // 2, MOD))
     else:
         print(0)

@@ -1,6 +1,6 @@
 N = int(input())
-K = [0 for i in range(N+1)]
-A = list(map(int,input().rstrip().split(" ")))
+K = [0 for i in range(N + 1)]
+A = list(map(int, input().rstrip().split(" ")))
 ans = 1
 for i in A:
     K[i] += 1

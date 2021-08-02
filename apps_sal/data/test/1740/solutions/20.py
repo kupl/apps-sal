@@ -51,4 +51,3 @@ for i in range(n - 1):
 ans = ds.ls[ds.find(1)]
 for a in ans:
     print(a, end=" ")
-

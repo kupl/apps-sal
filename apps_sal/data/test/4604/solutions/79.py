@@ -1,8 +1,8 @@
 n = int(input())
 A = tuple(map(int, input().split()))
-mod = 10**9+7
+mod = 10**9 + 7
 
-niseven = (n%2 == 0)
+niseven = (n % 2 == 0)
 
 cd = dict()
 for a in (A):
@@ -14,9 +14,8 @@ for a in (A):
     if a > 0 and cd[a] > 2:
         print((0))
         break
-    if (a%2==0) == niseven:
+    if (a % 2 == 0) == niseven:
         print((0))
         break
 else:
-    print((pow(2, n//2, mod)))
-
+    print((pow(2, n // 2, mod)))

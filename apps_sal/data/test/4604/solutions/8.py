@@ -24,6 +24,5 @@ for key in list(cnt.keys()):
         ans = 0
         break
 else:
-    ans = 2**(N//2) %1000000007
+    ans = 2**(N // 2) % 1000000007
 print(ans)
-

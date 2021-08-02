@@ -17,4 +17,3 @@ for i in range(n):
         print(j, end=' ')
     else:
         print(box[i], end=' ')
-        

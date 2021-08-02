@@ -22,4 +22,3 @@ if a == data:
     print(Sum)
 else:
     print((0))
-

@@ -1,24 +1,24 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 dic = {}
 for i in range(n):
-    dic.setdefault(a[i],0)
+    dic.setdefault(a[i], 0)
     dic[a[i]] += 1
 ans = 1
-for key,value in dic.items():
-    #偶数
-    if n%2==0:
-        if n > key and key%2==1 and value==2:
+for key, value in dic.items():
+    # 偶数
+    if n % 2 == 0:
+        if n > key and key % 2 == 1 and value == 2:
             ans *= 2
         else:
             ans = 0
             break
-    #奇数
+    # 奇数
     else:
-        if n > key and key%2==0:
-            if key==0 and value==1:
+        if n > key and key % 2 == 0:
+            if key == 0 and value == 1:
                 ans *= 1
-            elif value==2:
+            elif value == 2:
                 ans *= 2
             else:
                 ans = 0
@@ -26,4 +26,4 @@ for key,value in dic.items():
         else:
             ans = 0
             break
-print(ans%(10**9+7))
+print(ans % (10**9 + 7))

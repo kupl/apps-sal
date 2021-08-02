@@ -19,4 +19,3 @@ for i in range(m):
         best_score = (vs, als)
 
 print(best_index)
-
