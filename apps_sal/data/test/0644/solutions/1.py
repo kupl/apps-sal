@@ -17,4 +17,3 @@ if x >= 2**32:
     print('OVERFLOW!!!')
 else:
     print(x)
-

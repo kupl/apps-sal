@@ -11,4 +11,3 @@ if ost < 6:
 else:
     min_weekend = cel * 2 + 7 - ost
 print(min_weekend, max_weekend)
-

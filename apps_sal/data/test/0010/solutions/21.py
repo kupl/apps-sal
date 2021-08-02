@@ -6,4 +6,3 @@ if n % 7 == 6:
     a += 1
 
 print('{} {}'.format(a, b))
-

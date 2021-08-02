@@ -1,9 +1,6 @@
 # coding: utf-8
 
 
-
-
-
 import math
 import string
 import itertools
@@ -28,4 +25,3 @@ else:                           # d==6
     max_off += 2
     min_off += 1
 print("{} {}".format(min_off, max_off))
-

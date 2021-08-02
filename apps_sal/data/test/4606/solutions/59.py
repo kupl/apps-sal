@@ -1,2 +1,2 @@
-n=int(input())
-print('ABC'+str(n))
+n = int(input())
+print('ABC' + str(n))

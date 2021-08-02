@@ -17,4 +17,3 @@ for _ in range(1):
         bal = nbal
         d[bal] = i
     print(ans)
-

@@ -20,8 +20,8 @@ def main():
             nest += 1
         elif c[0] == 'add':
             x[nest] += 1
-        else: # c[0] == 'end'
-            x[nest-1] += x[nest] * stack.pop()
+        else:  # c[0] == 'end'
+            x[nest - 1] += x[nest] * stack.pop()
             x[nest] = 0
             nest -= 1
         if x[nest] >= int(2 ** 32):
@@ -32,5 +32,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

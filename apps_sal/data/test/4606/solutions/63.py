@@ -1,2 +1,2 @@
-x =input()
-print("ABC"+x)
+x = input()
+print("ABC" + x)

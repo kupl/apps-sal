@@ -3,6 +3,7 @@
 def f(n):
     return n // 7 + (n + 1) // 7
 
+
 try:
     while True:
         n = int(input())
@@ -13,4 +14,3 @@ try:
 
 except EOFError:
     pass
-
