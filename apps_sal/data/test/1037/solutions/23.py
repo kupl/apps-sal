@@ -138,4 +138,5 @@ class memoized:
         """Support instance methods."""
         return functools.partial(self.__call__, obj)
 
+
 __starting_point()

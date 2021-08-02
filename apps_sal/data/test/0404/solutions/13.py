@@ -1,5 +1,6 @@
 b = int(input())
 
+
 def factorize(n):
     fct = []  # prime factor
     b, e = 2, 0  # base, exponent
@@ -31,9 +32,9 @@ def num(fct):
         a = a * base**exponent
     return a
 
+
 primes = factorize(b)
 num_divisors = 1
 for prime, num in primes:
     num_divisors *= (num + 1)
 print(num_divisors)
-

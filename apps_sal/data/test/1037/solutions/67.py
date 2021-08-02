@@ -16,18 +16,19 @@ def main():
     # 大きい方からi個まで左右を決めて
     # 左をl回、右をr回使ったときの最大値
     # r = i - l
-    dp = [[0]*(N+1) for _ in range(N+1)]
+    dp = [[0] * (N + 1) for _ in range(N + 1)]
     for i in range(N):
         ai, pi = AP[i]
-        for l in range(i+1):
+        for l in range(i + 1):
             r = i - l
             # 左
-            if dp[i+1][l+1] < dp[i][l] + (pi-l)*ai:
-                dp[i+1][l+1] = dp[i][l] + (pi-l)*ai
+            if dp[i + 1][l + 1] < dp[i][l] + (pi - l) * ai:
+                dp[i + 1][l + 1] = dp[i][l] + (pi - l) * ai
             # 右
-            if dp[i+1][l] < dp[i][l] + ((N-r-1)-pi)*ai:
-                dp[i+1][l] = dp[i][l] + ((N-r-1)-pi)*ai
+            if dp[i + 1][l] < dp[i][l] + ((N - r - 1) - pi) * ai:
+                dp[i + 1][l] = dp[i][l] + ((N - r - 1) - pi) * ai
 
     print(max(dp[N]))
+
 
 main()

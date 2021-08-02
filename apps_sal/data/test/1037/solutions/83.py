@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
 import math
-    
+
+
 def abs(num):
     if num < 0:
         return -num
     else:
         return num
+
 
 def abc163e(n, a):
     hap_dict = dict()
@@ -18,14 +20,14 @@ def abc163e(n, a):
             tmp_list = [elem]
             hap_dict[a[elem]] = tmp_list
             hap_list.append(a[elem])
-    
+
     hap_list.sort(reverse=True)
 
     left = 0
-    right = n-1
+    right = n - 1
 
     num = 0
-    dp = [[0 for re in range(n+1)] for le in range(n+1)]
+    dp = [[0 for re in range(n + 1)] for le in range(n + 1)]
     for hap in hap_list:
         pos_list = hap_dict[hap]
 
@@ -34,22 +36,23 @@ def abc163e(n, a):
 
             num += 1
 
-            for left in range(num+1):
-                right = num-left
-                if left == num: # left end
-                    dp[left][right] = dp[left-1][right] + hap * abs(tgt-left+1)
-                elif left == 0: # right end
-                    dp[left][right] = dp[left][right-1] + hap * abs(n-right-tgt)
+            for left in range(num + 1):
+                right = num - left
+                if left == num:  # left end
+                    dp[left][right] = dp[left - 1][right] + hap * abs(tgt - left + 1)
+                elif left == 0:  # right end
+                    dp[left][right] = dp[left][right - 1] + hap * abs(n - right - tgt)
                 else:
-                    left_dp = dp[left-1][right] + hap * abs(tgt-left+1)
-                    right_dp = dp[left][right-1] + hap * abs(n-right-tgt)
+                    left_dp = dp[left - 1][right] + hap * abs(tgt - left + 1)
+                    right_dp = dp[left][right - 1] + hap * abs(n - right - tgt)
                     dp[left][right] = max(left_dp, right_dp)
-                #print("[",str(left),"][",str(right),"]=",str(dp[left][right]))
+                # print("[",str(left),"][",str(right),"]=",str(dp[left][right]))
 
     ans_list = []
-    for i in range(num+1):
-        ans_list.append(dp[i][num-i])
+    for i in range(num + 1):
+        ans_list.append(dp[i][num - i])
     return max(ans_list)
+
 
 ###
 # main
@@ -62,7 +65,6 @@ if(__name__ == '__main__'):
 
     # output
     print(ans)
-    
+
 # else:
     # do nothing
-

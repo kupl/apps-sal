@@ -1,4 +1,4 @@
-S = list(map(int,input().strip()))
+S = list(map(int, input().strip()))
 N = len(S)
 
 stack = []
@@ -13,4 +13,3 @@ for i in tuple(map(list, list(zip(*stack))))[1]:
     T[i] = 0
 
 print(''.join(map(str, T)))
-

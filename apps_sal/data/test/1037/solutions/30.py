@@ -6,7 +6,7 @@ def main():
     A = list(map(int, input().split()))
 
     B = [(A[i], i) for i in range(N)]
-    B.sort(key = lambda x: x[0], reverse = True)
+    B.sort(key=lambda x: x[0], reverse=True)
 
     DP = [[0] * (N + 1) for _ in range(N + 1)]
 
@@ -21,11 +21,14 @@ def main():
     for i in range(N + 1):
         ans = max(ans, DP[i][N - i])
 
-    print (ans)
+    print(ans)
 
     # for tmp in DP:
     #     print (tmp)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -8,4 +8,3 @@ while i * i <= n:
         s.add(n // i)
     i += 1
 print(len(s))
-

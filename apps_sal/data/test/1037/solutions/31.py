@@ -16,5 +16,4 @@ for i in range(n):
     dp[i + 1, 1:] = np.maximum(dp[i, :-1] + v * np.abs(j - np.arange(1, n + 1)), dp[i + 1, 1:])
     dp[i + 1, :-1] = np.maximum(dp[i, :-1] + v * np.abs(j - np.arange(n - i, n + n - i)), dp[i + 1, :-1])
 
-print((dp[-1,].max()))
-
+print((dp[-1, ].max()))

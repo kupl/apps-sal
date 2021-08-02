@@ -28,4 +28,6 @@ def __starting_point():
                 total += 1
 
     print(total)
+
+
 __starting_point()

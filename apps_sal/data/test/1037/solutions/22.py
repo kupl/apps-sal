@@ -16,13 +16,13 @@ def main():
     # dp[x][y]をx人を左から活性度順に並べて、y人を右から活性度順に並べた状態のスコア最大値とする
     dp = []
     for i in range(a):
-        dp.append([0]*(a-i))
+        dp.append([0] * (a - i))
 
     # dp = [[0] * a for i in range(a)]
 
     # cnt = 0
     # dp[i][j]を考える
-    for k in range(a-1):
+    for k in range(a - 1):
         vi = vilist.pop()
         v = vi[0]
         p = vi[1]
@@ -39,24 +39,23 @@ def main():
             # 最後の値は場所が特定できるのでそのまま計算させる
             if k == a - 2:
                 if j == 0:
-                    dp[i][0] = dp[i-1][0] + v * abs(p - i + 1) + vz * abs(pz - i)
+                    dp[i][0] = dp[i - 1][0] + v * abs(p - i + 1) + vz * abs(pz - i)
                 elif i == 0:
-                    dp[0][j] = dp[0][j-1] + v * abs(a - j - p) + vz * abs(a - j - 1 - pz)
+                    dp[0][j] = dp[0][j - 1] + v * abs(a - j - p) + vz * abs(a - j - 1 - pz)
                 else:
-                    dp[i][j] = max(dp[i-1][j] + v * abs(p - i + 1) + vz * abs(pz - i),
-                                   dp[i][j-1] + v * abs(a - j - p) + vz * abs(pz - i))
+                    dp[i][j] = max(dp[i - 1][j] + v * abs(p - i + 1) + vz * abs(pz - i),
+                                   dp[i][j - 1] + v * abs(a - j - p) + vz * abs(pz - i))
             else:
                 if j == 0:
-                    dp[i][0] = dp[i-1][0] + v * abs(p - i + 1)
+                    dp[i][0] = dp[i - 1][0] + v * abs(p - i + 1)
                 elif i == 0:
-                    dp[0][j] = dp[0][j-1] + v * abs(a - j - p)
+                    dp[0][j] = dp[0][j - 1] + v * abs(a - j - p)
                 else:
-                    dp[i][j] = max(dp[i-1][j] + v * abs(p - i + 1),
-                                   dp[i][j-1] + v * abs(a - j - p))
+                    dp[i][j] = max(dp[i - 1][j] + v * abs(p - i + 1),
+                                   dp[i][j - 1] + v * abs(a - j - p))
 
     # print(cnt)
     print((max([max(x) for x in dp])))
 
 
 main()
-

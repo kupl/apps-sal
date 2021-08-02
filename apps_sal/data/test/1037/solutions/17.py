@@ -22,4 +22,5 @@ def __starting_point():
     a_list = list(map(int, input().split()))
     print((f(n, a_list)))
 
+
 __starting_point()

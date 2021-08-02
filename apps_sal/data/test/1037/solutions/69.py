@@ -16,6 +16,6 @@ for i in range(1, n + 1):
             dp[x][y] = dp[x - 1][y] + a * (j - x + 1)
         else:
             dp[x][y] = max(dp[x][y - 1] + a * (n - y - j),
-                    dp[x - 1][y] + a * (j - x + 1))
+                           dp[x - 1][y] + a * (j - x + 1))
 
 print(max([dp[i][n - i] for i in range(n + 1)]))

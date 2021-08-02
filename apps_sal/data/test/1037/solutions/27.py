@@ -9,13 +9,14 @@ def solve(N, A):
 
     dp[0][0] = 0
     for i, ai in enumerate(a):
-        for l in range(i+1):
+        for l in range(i + 1):
             r = i - l
-            dp[i+1][l] = max(dp[i+1][l], dp[i][l] + ai[1] * ((N-1-r) - ai[0]))
-            dp[i+1][l+1] = max(dp[i+1][l+1], dp[i][l] + ai[1] * (ai[0] - l))
+            dp[i + 1][l] = max(dp[i + 1][l], dp[i][l] + ai[1] * ((N - 1 - r) - ai[0]))
+            dp[i + 1][l + 1] = max(dp[i + 1][l + 1], dp[i][l] + ai[1] * (ai[0] - l))
 
     print(max(dp[N]))
 
+
 N = int(input())
 A = list(map(int, input().split()))
-solve(N,A)
+solve(N, A)

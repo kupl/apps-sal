@@ -13,6 +13,7 @@ def to_prime(n):
         primes.append((n, 1))
     return primes
 
+
 n = int(input())
 
 primes = to_prime(n)
@@ -20,4 +21,3 @@ result = 1
 for p, k in primes:
     result *= k + 1
 print(result)
-

@@ -1,5 +1,5 @@
 __author__ = 'Данила'
-n, m  = map(int, input().split())
+n, m = map(int, input().split())
 mat = [['' for i in range(m)] for j in range(n)]
 
 for i in range(n):

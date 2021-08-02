@@ -8,19 +8,21 @@ def resolve():
     dp = [[0] * (N + 1) for _ in range(N + 1)]
     for i in range(N):
         j = 0
-        while i+j < N:
-            a, idx = A[i+j]
+        while i + j < N:
+            a, idx = A[i + j]
             # 左に詰める場合
             dp[i + 1][j] = max(dp[i + 1][j], dp[i][j] + (idx - i) * a)
             # 右に詰める場合
-            dp[i][j+1] = max(dp[i][j+1], dp[i][j] + ((N-1-j) - idx) * a)
+            dp[i][j + 1] = max(dp[i][j + 1], dp[i][j] + ((N - 1 - j) - idx) * a)
             j += 1
     ans = 0
-    for i in range(N+1):
-        ans = max(ans, dp[i][N-i])
+    for i in range(N + 1):
+        ans = max(ans, dp[i][N - i])
     print(ans)
 
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

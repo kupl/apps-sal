@@ -16,7 +16,5 @@ inf = float('inf')
 mod = 10**9 + 7
 
 
-a,b,c,d = rm()
-print((max([b*c, a*c, a*d, b*d])))
-
-
+a, b, c, d = rm()
+print((max([b * c, a * c, a * d, b * d])))

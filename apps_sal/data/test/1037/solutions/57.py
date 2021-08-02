@@ -19,4 +19,5 @@ def main():
 
     print(max(dp[l][N - l] for l in range(N)))
 
+
 main()

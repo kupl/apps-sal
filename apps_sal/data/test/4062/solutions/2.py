@@ -4,4 +4,3 @@ t = a * d
 u = b * c
 v = b * d
 print((max(s, t, u, v)))
-

@@ -2,25 +2,27 @@ import pprint
 N = int(input())
 A = list(map(int, input().split()))
 
+
 def student_sorting(N, A):
     student_list = [0] * N
 
     for initial_pos, activity in enumerate(A):
         student_list[initial_pos] = (activity, initial_pos)
 
-    return sorted(student_list, reverse = True)
+    return sorted(student_list, reverse=True)
+
 
 def DP(N, student_list):
     DP_map = list(list(0 for row in range(N + 1 - column)) for column in range(N + 1))
     ans_list = []
     ans = 0
 
-    for left in range(N): #初期値設定 right = 0
+    for left in range(N):  # 初期値設定 right = 0
         activity = student_list[left][0]
         distance_l = abs(left - student_list[left][1])
         DP_map[left + 1][0] = DP_map[left][0] + activity * distance_l
 
-    for right in range(N): #初期値設定 left = 0
+    for right in range(N):  # 初期値設定 left = 0
         activity = student_list[right][0]
         distance_r = abs((N - 1 - right) - student_list[right][1])
         DP_map[0][right + 1] = DP_map[0][right] + activity * distance_r
@@ -43,7 +45,7 @@ def DP(N, student_list):
 
     return ans
 
+
 student_list = student_sorting(N, A)
 ans = DP(N, student_list)
 print(ans)
-
