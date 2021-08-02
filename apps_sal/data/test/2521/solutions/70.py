@@ -1,7 +1,7 @@
+import heapq
 n = int(input())
 a = list(map(int, input().split()))
 
-import heapq
 
 lefts = a[:n]
 lefts_sums = [sum(lefts)]
@@ -35,4 +35,3 @@ for i in range(len(lefts_sums)):
     ans = max(ans, lefts_sums[i] + rights_sums[i])
 # print(lefts_sums, rights_sums)
 print(ans)
-

@@ -1,5 +1,6 @@
 import string
 
+
 def make_link(G, char1, char2):
     if char1 in G:
         if char2 in G[char1]:
@@ -8,6 +9,7 @@ def make_link(G, char1, char2):
             G[char1].append(char2)
     else:
         G[char1] = [char2]
+
 
 def make_order(G, str1, str2):
     for i in range(min(len(str1), len(str2))):
@@ -20,7 +22,8 @@ def make_order(G, str1, str2):
     else:
         return False
 
-def topological_sort(G, ans, k = '', visited = {}):
+
+def topological_sort(G, ans, k='', visited={}):
     if visited.get(k, True) == False:
         return True
     if k not in visited:
@@ -32,6 +35,7 @@ def topological_sort(G, ans, k = '', visited = {}):
         ans.insert(0, k)
     return False
 
+
 def main():
     N = int(input())
 
@@ -39,7 +43,7 @@ def main():
 
     G = {}
 
-    for i in range(N-1):
+    for i in range(N - 1):
         if not make_order(G, strs[i], strs[i + 1]):
             print("Impossible")
             return
@@ -51,5 +55,6 @@ def main():
         print("Impossible")
     else:
         print(''.join(ans))
+
 
 main()

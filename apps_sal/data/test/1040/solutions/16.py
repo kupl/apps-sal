@@ -8,4 +8,3 @@ for i in range(n):
         t.pop()
         t.pop()
 print((len(t)))
-

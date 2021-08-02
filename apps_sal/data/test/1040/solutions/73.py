@@ -11,9 +11,8 @@ for s in S:
     if len(tmp) <= 2:
         continue
     else:
-        if tmp[-1]=="x" and tmp[-2]=="o" and tmp[-3]=="f":
+        if tmp[-1] == "x" and tmp[-2] == "o" and tmp[-3] == "f":
             cnt += 1
             for _ in range(3):
                 tmp.pop()
-print((N-cnt*3))
-
+print((N - cnt * 3))

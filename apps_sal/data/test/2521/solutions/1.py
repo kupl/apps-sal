@@ -11,7 +11,7 @@ def main():
     left_sums.append(left_sum)
     heapify(left)
 
-    for a in A[n:2*n]:
+    for a in A[n:2 * n]:
         left_sum += a
         heappush(left, a)
         left_sum -= heappop(left)
@@ -19,13 +19,13 @@ def main():
 
     right_sums = []
     right = []
-    for a in A[2*n:]:
+    for a in A[2 * n:]:
         right.append(-a)
     right_sum = sum(right)
     right_sums.append(-right_sum)
     heapify(right)
 
-    for a in A[2*n-1:n-1:-1]:
+    for a in A[2 * n - 1:n - 1:-1]:
         right_sum += -a
         heappush(right, -a)
         right_sum -= heappop(right)
@@ -40,4 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -24,4 +24,3 @@ ans = float('-inf')
 for l, r in zip(max_left, min_right[::-1]):
     ans = max(l - r, ans)
 print(ans)
-

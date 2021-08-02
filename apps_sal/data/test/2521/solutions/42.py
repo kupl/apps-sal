@@ -1,4 +1,6 @@
 import heapq
+
+
 def main():
     N = int(input())
     A = list(map(int, input().split()))
@@ -29,5 +31,5 @@ def main():
         m = max(m, h - t)
     return m
 
-print((main()))
 
+print((main()))

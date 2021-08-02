@@ -4,7 +4,7 @@ N = int(input())
 A = list(map(int, input().split()))
 l, r = [], []
 ll = 0
-for i in range(3*N):
+for i in range(3 * N):
     if i < N:
         heapq.heappush(l, (A[i], i))
         ll += A[i]
@@ -16,9 +16,9 @@ for i in range(N):
     a, idx = heapq.heappop(r)
     used.add(idx)
     rr += a
-ans = ll-rr
+ans = ll - rr
 done = set()
-for i in range(N,2*N):
+for i in range(N, 2 * N):
     done.add(i)
     if A[i] > l[0][0]:
         ll -= l[0][0]
@@ -33,6 +33,5 @@ for i in range(N,2*N):
         used.add(idx)
         rr += a
     #print(i, ll, rr, l, r)
-    ans = max(ans, ll-rr)
+    ans = max(ans, ll - rr)
 print(ans)
-

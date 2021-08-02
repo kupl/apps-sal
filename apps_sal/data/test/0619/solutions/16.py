@@ -12,4 +12,3 @@ if b < x:
     if p2 > p or (p2 == p and b < q):
         p, q = p2, b
 print(p, q)
-

@@ -3,11 +3,11 @@ a = list(map(int, input().split()))
 
 b = list(enumerate(a))
 
-l = sorted(b[:2*n], key=lambda x: x[1], reverse=True)
+l = sorted(b[:2 * n], key=lambda x: x[1], reverse=True)
 r = sorted(b[n:], key=lambda x: x[1])
 
-big = [0] * (3*n)
-small = [0] * (3*n)
+big = [0] * (3 * n)
+small = [0] * (3 * n)
 
 for i, (pos, z) in enumerate(l):
     big[pos] = i
@@ -19,9 +19,9 @@ second = 0
 for pos, z in r[:n]:
     second += z
 i = 2 * n
-j = n-1
+j = n - 1
 ans = first - second
-for split in range(n, 2*n):
+for split in range(n, 2 * n):
     if big[split] < i:
         first += a[split]
         i -= 1

@@ -22,4 +22,4 @@ for i in s:
     else:
         d.append(i)
 
-print(l_s - 3*cnt)
+print(l_s - 3 * cnt)

@@ -37,4 +37,3 @@ c = c[::-1]
 
 answer = max(i - j for i, j in zip(b, c))
 print(answer)
-

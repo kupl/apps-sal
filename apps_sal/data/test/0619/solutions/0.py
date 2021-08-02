@@ -10,4 +10,3 @@ else:
         print(f'{c + 1} {z - rx}')
     else:
         print(f'{c + 1} {z - ry}')
-

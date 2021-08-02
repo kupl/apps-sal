@@ -7,4 +7,3 @@ for i in range(len(s)):
     if t.endswith('fox'):
         t = t[:-3]
 print((len(t)))
-

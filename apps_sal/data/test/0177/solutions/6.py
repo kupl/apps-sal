@@ -6,4 +6,3 @@ while len(a) < n:
     a += str(i)
 
 print(a[n - 1])
-

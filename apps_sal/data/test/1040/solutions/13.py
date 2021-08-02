@@ -10,7 +10,7 @@ q = deque()
 q.append(index)
 
 for s in S:
-        
+
     if(s == "f"):
         index = 1
         q.append(index)

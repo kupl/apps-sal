@@ -9,4 +9,3 @@ for c in s:
         t = t[:-3]
 
 print((len(t)))
-

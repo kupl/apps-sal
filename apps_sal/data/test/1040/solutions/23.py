@@ -17,5 +17,4 @@ for i in range(N):
     if R[-3:] == rep:
         ans += 1
         R = R[:-3]
-print((N-ans*3))
-
+print((N - ans * 3))

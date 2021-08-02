@@ -38,7 +38,7 @@ S.append(sum(A[:N]))
 q = HeapQueue()
 for a in A[:N]:
     q.append(a, a)
-for a in A[N:2*N]:
+for a in A[N:2 * N]:
     m = q.appendpop(a, a)
     S.append(S[-1] + a - m)
 
@@ -46,9 +46,8 @@ T.append(sum(A[-N:]))
 q = HeapQueue(reverse=True)
 for a in A[-N:]:
     q.append(a, a)
-for a in A[-N-1:N-1:-1]:
+for a in A[-N - 1:N - 1:-1]:
     m = q.appendpop(a, a)
     T.append(T[-1] + a - m)
 ans = max([S[i] - T[N - i] for i in range(N + 1)])
 print(ans)
-

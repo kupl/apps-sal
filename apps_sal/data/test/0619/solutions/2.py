@@ -9,4 +9,5 @@ def main():
         print(a + 1, min(z - x, z - y))
     return 0
 
+
 main()

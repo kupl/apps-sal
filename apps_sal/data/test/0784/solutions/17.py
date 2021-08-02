@@ -9,7 +9,7 @@ while b > a:
         b //= 2
     elif b % 10 == 1:
         ans.append(b)
-        #print(b)
+        # print(b)
         b = (b - 1) // 10
     else:
         b = -1
@@ -21,4 +21,4 @@ else:
     print("YES")
     print(len(ans))
     for i in range(len(ans) - 1, -1, -1):
-        print(ans[i], end = " ")
+        print(ans[i], end=" ")

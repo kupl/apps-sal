@@ -24,4 +24,3 @@ for i in range(2 * N - 1, N - 1, -1):
     Rmin[i - N] = Rsum
 
 print((max(Lmax[i] - Rmin[i] for i in range(N + 1))))
-

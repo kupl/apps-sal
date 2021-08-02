@@ -9,5 +9,5 @@ for i in range(n):
         stack.pop()
         stack.pop()
         stack.pop()
-    
+
 print(len(stack))

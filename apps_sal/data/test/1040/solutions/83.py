@@ -12,4 +12,3 @@ for i in range(N):
         R = R[:-3]
 
 print((len(R)))
-

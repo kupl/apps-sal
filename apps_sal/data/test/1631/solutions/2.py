@@ -1,15 +1,17 @@
 #import sys
 #sys.stdin = open('in.txt')
-#sys.setrecursionlimit(10000)
+# sys.setrecursionlimit(10000)
 def isPrefix(sa, sb):
     if len(sa) >= len(sb):
         return False
     return sa == sb[0:len(sa)]
 
+
 def getOrder(sa, sb):
     for i in range(min(len(sa), len(sb))):
         if sa[i] != sb[i]:
             return sa[i], sb[i]
+
 
 test = False
 if test:
@@ -28,13 +30,15 @@ for i in range(26):
     for j in range(26):
         g[i][j] = False
 """
+
+
 def printG():
     print(" abcdefghijklmnopqrstuvwxyz")
     for i in range(0, 26):
-        print(chr(ord('a') + i), "".join(["1" if x else "0" for x in g[i]]), sep = 
+        print(chr(ord('a') + i), "".join(["1" if x else "0" for x in g[i]]), sep="")
 
-"")
-#get a table
+
+# get a table
 for i in range(n - 1):
     if names[i] == names[i + 1] or isPrefix(names[i], names[i + 1]):
         continue
@@ -48,33 +52,34 @@ for i in range(n - 1):
             res = False
             break
         else:
-            #pass
-            #printG()
+            # pass
+            # printG()
             a = ord(ca) - ord('a')
             b = ord(cb) - ord('a')
             g[a][b] = True
-            #printG()
+            # printG()
 
 if not res:
     print("Impossible")
 else:
     def getZeroIndegreeNode():
-       for i in range(26):
-          if not vis[i] and Indegree[i] == 0:
-              return i
-       return -1
-    
-    #cacl Indegree
+        for i in range(26):
+            if not vis[i] and Indegree[i] == 0:
+                return i
+        return -1
+
+    # cacl Indegree
     strOrder = []
     vis = [False] * 26
     Indegree = [0] * 26
     for i in range(26):
         ithIndegree = 0
         for j in range(26):
-            if g[j][i]: ithIndegree += 1
+            if g[j][i]:
+                ithIndegree += 1
         Indegree[i] = ithIndegree
-    
-    #get the order string
+
+    # get the order string
     for i in range(26):
         ZeroIndegreeNode = getZeroIndegreeNode()
         if ZeroIndegreeNode == -1:
@@ -90,4 +95,3 @@ else:
         print("Impossible")
     else:
         print("".join(strOrder))
-

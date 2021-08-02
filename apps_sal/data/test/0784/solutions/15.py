@@ -19,4 +19,4 @@ else:
         print("YES")
         print(len(ans))
         for i in range(len(ans)):
-            print(ans[len(ans) - i - 1], end = " ")
+            print(ans[len(ans) - i - 1], end=" ")

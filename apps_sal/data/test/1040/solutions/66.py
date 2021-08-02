@@ -19,5 +19,4 @@ for i in range(N):
             stack = []
     else:
         stack = []
-print((N - 3*cnt))
-
+print((N - 3 * cnt))

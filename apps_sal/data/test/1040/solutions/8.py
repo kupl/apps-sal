@@ -9,4 +9,3 @@ for i in range(N):
         que.pop()
         que.pop()
 print((len(que)))
-

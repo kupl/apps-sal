@@ -1,6 +1,6 @@
+from collections import deque
 n = int(input())
 s = input().strip()
-from collections import deque
 
 d = deque([])
 t = []
@@ -20,4 +20,3 @@ while len(d) != 0:
 
 
 print((len(t)))
-

@@ -10,4 +10,3 @@ for i in range(n):
         l.pop()
 
 print((len(l)))
-
