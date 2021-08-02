@@ -15,9 +15,8 @@ for _ in range(q):
             ans = True
         for ss in s:
             if ss == '1':
-                c+=1
+                c += 1
     if ans or c % 2 == 0:
         print(n)
     else:
-        print(n-1)
-
+        print(n - 1)

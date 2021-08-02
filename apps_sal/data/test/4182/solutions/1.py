@@ -1,6 +1,7 @@
 
 url = "https://atcoder.jp//contests/abc110/tasks/abc110_b"
 
+
 def main():
     n, m, x, y = list(map(int, input().split()))
     xs = list(map(int, input().split()))
@@ -19,5 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

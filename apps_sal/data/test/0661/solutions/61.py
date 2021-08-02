@@ -4,7 +4,7 @@ def main():
     sys.setrecursionlimit(10**7)
     from collections import Counter, deque
     from itertools import combinations, permutations, accumulate, groupby, product
-    from bisect import bisect_left,bisect_right
+    from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
     #from math import gcd
@@ -12,7 +12,7 @@ def main():
     #inf = 10**17
     #mod = 10**9 + 7
 
-    m,k = map(int, input().split())
+    m, k = map(int, input().split())
     if m == 0:
         if k == 0:
             print(0, 0)
@@ -20,7 +20,7 @@ def main():
             print(-1)
     elif m == 1:
         if k == 0:
-            print(0,0,1,1)
+            print(0, 0, 1, 1)
         else:
             print(-1)
     else:
@@ -37,6 +37,9 @@ def main():
                 res = res + [0, k] + res[::-1] + [k, 0]
             print(*res)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

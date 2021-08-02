@@ -25,4 +25,3 @@ else:
         print((ans2[:-1]))
     else:
         print((-1))
-

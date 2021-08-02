@@ -18,4 +18,3 @@ A = [x for x in range(2 ** M) if x != K]
 answer = A + [K] + A[::-1] + [K]
 print((*answer))
 # 22
-

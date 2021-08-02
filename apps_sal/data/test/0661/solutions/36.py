@@ -18,4 +18,3 @@ else:
         ans[2 ** M - i - 2] = ans[2 ** M + i] = num
         num += 1
     print((*ans))
-

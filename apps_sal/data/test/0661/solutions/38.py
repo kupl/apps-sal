@@ -4,6 +4,7 @@ def power(n, m):
         ret *= n
     return ret
 
+
 M, K = map(int, input().split())
 if K >= power(2, M):
     print(-1)

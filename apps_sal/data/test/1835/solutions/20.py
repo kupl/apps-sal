@@ -14,9 +14,9 @@ for y in range(t):
         s += len(i)
         if len(i) % 2 == 1:
             flag = 1
-    if s%2 == 1:
+    if s % 2 == 1:
         print(n)
-    elif ct%2 == 0 or flag == 1:
+    elif ct % 2 == 0 or flag == 1:
         print(n)
     else:
-        print(n-1)
+        print(n - 1)

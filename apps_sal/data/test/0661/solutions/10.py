@@ -10,7 +10,7 @@ if 2**M <= K or (M == 1 and K == 1):
     print((-1)); return
 
 if K == 0:
-    answer = [x//2 for x in range(2**(M+1))]
+    answer = [x // 2 for x in range(2**(M + 1))]
 
 else:
     answer = []
@@ -23,4 +23,3 @@ else:
         answer.append(K)
 
 print((*answer))
-

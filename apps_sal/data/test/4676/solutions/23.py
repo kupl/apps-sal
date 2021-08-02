@@ -8,6 +8,9 @@ def main():
         pas += O[-1]
     print(pas)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

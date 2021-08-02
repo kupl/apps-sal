@@ -15,4 +15,3 @@ for i in range(q):
         print(n - 1)
     else:
         print(n)
-

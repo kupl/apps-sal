@@ -1,9 +1,9 @@
 n = int(input())
 
 while(n):
-    
+
     n -= 1
-    
+
     p = int(input())
     zeroes = 0
     ones = 0
@@ -21,7 +21,6 @@ while(n):
     Le.sort()
     Lo.sort()
 
-
     if zeroes % 2 == 0 and ones % 2 == 0:
         print(p)
     elif zeroes % 2 == 1 and ones % 2 == 1:
@@ -31,4 +30,3 @@ while(n):
             print(p - 1)
     else:
         print(p)
-

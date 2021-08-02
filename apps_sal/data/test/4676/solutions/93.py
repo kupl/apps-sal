@@ -4,11 +4,11 @@ E = list(input())
 le = len(E)
 w = lo + le
 
-X = ['*']*w
+X = ['*'] * w
 for i in range(le):
-  X[2*i] =O[i]
-  X[2*i+1] = E[i]
+    X[2 * i] = O[i]
+    X[2 * i + 1] = E[i]
 if lo > le:
-  X[-1] = O[-1]
-  
+    X[-1] = O[-1]
+
 print(''.join(X))

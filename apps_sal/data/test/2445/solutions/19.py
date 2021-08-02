@@ -1,5 +1,4 @@
-t=int(input())
+t = int(input())
 for you in range(t):
-    n=int(input())
-    print((n+2)//2)
-
+    n = int(input())
+    print((n + 2) // 2)

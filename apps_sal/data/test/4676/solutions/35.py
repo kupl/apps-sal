@@ -13,6 +13,6 @@ else:
         res.append(i)
         res.append(j)
     res.pop(-1)
- 
+
 pw = ''.join(res)
 print(pw)

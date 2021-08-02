@@ -18,4 +18,3 @@ else:
             if i != k:
                 ans.append(i)
         print((*ans))
-

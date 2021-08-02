@@ -19,7 +19,7 @@ def test(m):
         for i in range(1, len(v)):
             g = False
             y = 0
-            idx = i+1
+            idx = i + 1
             while idx < len(v):
                 if v[i] == v[idx]:
                     g = True
@@ -33,6 +33,7 @@ def test(m):
         if f:
             st.add(x)
             print(x, v)
+
 
 def main():
     m, k = map(int, input().split())
@@ -59,6 +60,9 @@ def main():
     else:
         print(-1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

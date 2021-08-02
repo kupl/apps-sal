@@ -23,16 +23,15 @@ cc = 0
 rk = 0
 for i in range(len(lotam)):
     ch = lotam[i]
-    nh = (mih if i >= len(lotam) - 1 else lotam[i+1])
+    nh = (mih if i >= len(lotam) - 1 else lotam[i + 1])
     cc += cotam[ch]
     if rk >= cc:
-        hrbrk = min(ch-nh, rk // cc)
+        hrbrk = min(ch - nh, rk // cc)
         rk -= cc * hrbrk
         ch -= hrbrk
     while ch > nh:
-        hrbk = min(ch-nh, k // cc)
+        hrbk = min(ch - nh, k // cc)
         sc += 1
         ch -= hrbk
         rk = k - hrbk * cc
 print(sc)
-

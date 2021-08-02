@@ -6,7 +6,6 @@ y.append(Y)
 x.sort()
 y.sort()
 if x[-1] < y[0]:
-  print("No War")
+    print("No War")
 else:
-  print("War")
-
+    print("War")

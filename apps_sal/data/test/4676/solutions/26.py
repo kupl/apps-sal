@@ -5,4 +5,3 @@ for i in range(len(o)):
     if i < len(e):
         print(e[i], end="")
 print()
-

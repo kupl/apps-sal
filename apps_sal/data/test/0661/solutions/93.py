@@ -1,7 +1,7 @@
-m,k = map(int,input().split())
+m, k = map(int, input().split())
 if m == 1:
     if k == 0:
-        print(0,0,1,1)
+        print(0, 0, 1, 1)
     else:
         print(-1)
 elif 2**m <= k:

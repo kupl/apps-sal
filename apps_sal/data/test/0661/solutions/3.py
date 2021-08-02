@@ -10,8 +10,7 @@ elif 2**m > k:
         if i == k:
             continue
         y.append(str(i))
-    ans =  ' '.join(reversed(y)) + ' ' + ans + ' ' + ' '.join(y) + ' ' +ans
+    ans = ' '.join(reversed(y)) + ' ' + ans + ' ' + ' '.join(y) + ' ' + ans
     print(ans)
 else:
     print((-1))
-

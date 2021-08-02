@@ -18,4 +18,3 @@ else:
             anss.append(A)
         anss = anss + [K] + anss[::-1] + [K]
         print((' '.join(map(str, anss))))
-

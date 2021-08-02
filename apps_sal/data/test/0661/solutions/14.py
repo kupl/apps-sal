@@ -10,10 +10,9 @@ elif m == 1:
     else:
         print(-1)
 else:
-    if k>=2**m:
+    if k >= 2**m:
         print(-1)
     else:
         L = [i for i in range(2 ** m) if i != k]
         ans = L + [k] + L[::-1] + [k]
         print(*ans, sep=' ')
-    

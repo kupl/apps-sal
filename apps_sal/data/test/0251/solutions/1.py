@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def solve(n, k, h):
     h.sort()
     top = h[len(h) - 1]
@@ -31,12 +32,14 @@ def solve(n, k, h):
     return result
 
 
-
 def main():
     n, k = (int(x) for x in input().split())
     h = list(int(x) for x in input().split())
     print(solve(n, k, h))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

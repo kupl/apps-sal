@@ -3,8 +3,10 @@ import sys
 import numpy as np
 sys.setrecursionlimit(10 ** 7)
 
+
 def int_input():
     return list(map(int, input().split()))
+
 
 m, k = int_input()
 if k == 0:
@@ -27,5 +29,3 @@ else:
     ans = m + [k] + l + [k]
     if v == k: print((*ans))
     else: print((-1))
-
-

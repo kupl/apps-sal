@@ -16,7 +16,6 @@ for _ in range(int(input())):
         print(n)
     else:
         if prob % 2 == 1:
-            print(n-1)
+            print(n - 1)
         else:
             print(n)
-

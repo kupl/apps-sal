@@ -2,8 +2,10 @@ def cell(num):
     if int(num) < num:
         return num + 1
     return num
-n, k = list(map(int,input().split()))
-hi = list(map(int,input().split()))
+
+
+n, k = list(map(int, input().split()))
+hi = list(map(int, input().split()))
 hi.sort()
 num = 0
 if n == 1:
@@ -12,7 +14,7 @@ else:
     height = hi[-1]
     sumHeight = 0
     num2 = 1
-    for i in range(n-2,-1,-1):
+    for i in range(n - 2, -1, -1):
         sumHeight2 = sumHeight + num2 * (height - hi[i])
         if sumHeight2 == k:
             num += 1
@@ -34,6 +36,3 @@ else:
     if sumHeight > 0:
         num += 1
     print(num)
-    
-        
-

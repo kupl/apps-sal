@@ -13,10 +13,10 @@ for _ in range(q):
                 cnt1 += 1
             else:
                 cnt0 += 1
-    
+
     if cnt_odd == 0:
         if cnt0 % 2 == 1 and cnt1 % 2 == 1:
-            print(n-1)
+            print(n - 1)
         else:
             print(n)
     else:

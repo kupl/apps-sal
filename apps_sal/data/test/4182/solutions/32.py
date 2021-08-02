@@ -4,7 +4,6 @@ y = list(map(int, input().split()))
 x.append(X)
 y.append(Y)
 if max(x) >= min(y):
-  print("War")
+    print("War")
 else:
-  print("No War")
-
+    print("No War")

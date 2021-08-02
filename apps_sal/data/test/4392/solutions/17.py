@@ -1,12 +1,13 @@
 from sys import stdin
 
+
 def solve():
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
     u = [0] * n
     p = list(map(int, input().split()))
     for x in p:
-        u[x-1] = 1
+        u[x - 1] = 1
     p = []
     for i in range(n):
         if u[i] == 0:
@@ -27,6 +28,6 @@ def solve():
             pos += 1
     print("YES")
 
+
 for i in range(int(input())):
     solve()
-

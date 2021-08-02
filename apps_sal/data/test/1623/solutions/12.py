@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 n, l, r = mp()
 
 min_s = n - l + 2 ** l - 1

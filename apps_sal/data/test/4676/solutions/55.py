@@ -8,4 +8,3 @@ for i in range(len(e)):
 if len(e) < len(o):
     ans += o[-1]
 print(ans)
-

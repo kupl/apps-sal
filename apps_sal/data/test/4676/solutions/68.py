@@ -9,4 +9,3 @@ for i in range(len(o) + len(e)):
         ans += e[i - ((i + 1) // 2)]
 
 print(ans)
-

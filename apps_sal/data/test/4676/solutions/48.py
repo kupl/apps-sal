@@ -11,4 +11,3 @@ if len(o) != len(e):
     ans.append(o[-1])
 
 print((''.join(ans)))
-

@@ -17,4 +17,3 @@ for _ in range(q):
     if cnt['0'] & 1 and cnt['1'] & 1 and len(odd) == 0:
         ans = n - 1
     print(ans)
-

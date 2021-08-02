@@ -1,19 +1,21 @@
 def __starting_point():
-	n,m,X,Y = map(int,input().split())
-	x = list(map(int,input().split()))
-	y = list(map(int,input().split()))
- 
-	x_max = max(x)
-	y_min = min(y)
+    n, m, X, Y = map(int, input().split())
+    x = list(map(int, input().split()))
+    y = list(map(int, input().split()))
 
-	flg = False
-	for Z in range(X+1,Y+1):
-		if x_max < Z <= y_min:
-			flg = True
-			break
+    x_max = max(x)
+    y_min = min(y)
 
-	if flg:
-		print("No War")
-	else:
-		print("War")
+    flg = False
+    for Z in range(X + 1, Y + 1):
+        if x_max < Z <= y_min:
+            flg = True
+            break
+
+    if flg:
+        print("No War")
+    else:
+        print("War")
+
+
 __starting_point()

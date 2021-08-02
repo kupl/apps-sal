@@ -34,6 +34,5 @@ for i in range(max_num):
         continue
     res.append(j)
 res.append(k)
-for i in range(2**(m+1)):
+for i in range(2**(m + 1)):
     print(res[i], end=' ')
-

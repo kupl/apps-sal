@@ -1,4 +1,4 @@
-M,K= list(map(int,input().split()))
+M, K = list(map(int, input().split()))
 
 if K >= 2**M:
     print((-1))
@@ -20,6 +20,3 @@ left = [i for i in range(2**M) if not i == K]
 ans = left + [K] + left[::-1] + [K]
 
 print((*ans))
-
-
-

@@ -1,4 +1,4 @@
-m,k = map(int, input().split())
+m, k = map(int, input().split())
 
 if k >= 2**m:
     print(-1)

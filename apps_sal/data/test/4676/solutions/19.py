@@ -6,5 +6,5 @@ for i in range(len(O) + len(E)):
         S += O[(i // 2)]
     else:
         S += E[(i // 2)]
-    
+
 print(S)

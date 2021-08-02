@@ -11,4 +11,3 @@ for i in range(n):
         s[i] = e[j]
 
 print((''.join(s)))
-

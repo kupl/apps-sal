@@ -7,4 +7,3 @@ if x < miny and miny <= y and miny > maxx:
     print("No War")
 else:
     print("War")
-

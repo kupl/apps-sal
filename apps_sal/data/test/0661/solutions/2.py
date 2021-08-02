@@ -18,5 +18,3 @@ else:
         print((' '.join(map(str, ans))))
     else:
         print((-1))
-
-

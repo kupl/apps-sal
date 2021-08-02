@@ -16,7 +16,7 @@ else:
         print(" ".join(ll))
     else:
         l = list(range(N))
-        l = l[:K] + l[K+1:]
+        l = l[:K] + l[K + 1:]
         ll = [0, K] + l + [K] + l[::-1][:-1]
         ll = [str(a) for a in ll]
-        print(" ".join(ll))   
+        print(" ".join(ll))

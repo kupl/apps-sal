@@ -1,3 +1,3 @@
 for _ in range(int(input())):
-    a=int(input())
-    print(a//2+1)
+    a = int(input())
+    print(a // 2 + 1)
