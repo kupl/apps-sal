@@ -14,7 +14,5 @@ for _ in range(n):
         return
     elif a + 1 == x:
         d[k] = x
-        
-print(r[1])
-    
 
+print(r[1])

@@ -13,7 +13,3 @@ if 2 ** cnt == n:
     print('Final!')
 else:
     print(cnt)
-    
-
-
-

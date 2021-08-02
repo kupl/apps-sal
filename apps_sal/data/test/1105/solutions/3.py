@@ -1,5 +1,6 @@
 def readln(): return tuple(map(int, input().split()))
 
+
 n, = readln()
 max_pref = [-1] * 100001
 flag = True

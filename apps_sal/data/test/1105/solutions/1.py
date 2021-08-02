@@ -8,7 +8,7 @@ for i in range(n):
 
     if k in d:
         r = d[k]
-        if x > r+1:
+        if x > r + 1:
             print('NO')
             return
         d[k] = max(r, x)

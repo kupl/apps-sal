@@ -1,5 +1,6 @@
 3
 
+
 def is_good(f, p, k):
     for i in range(p):
         if f[(k * i) % p] != (k * f[i]) % p:
@@ -30,10 +31,8 @@ def solve(p, k):
             used.add(i)
             i = (i * k) % p
     return pow(p, num - (k != 1), 10 ** 9 + 7)
-            
-    
-    
+
+
 p, k = list(map(int, input().split()))
 #print(gen([], p, k, 0))
 print(solve(p, k))
-

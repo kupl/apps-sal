@@ -1,7 +1,7 @@
+from collections import defaultdict
+import heapq
 import sys
 input = sys.stdin.readline
-import heapq
-from collections import defaultdict
 
 n, m, k = list(map(int, input().split()))
 edges = defaultdict(list)
@@ -33,4 +33,3 @@ while pq:
 print(len(res))
 if k > 0:
     print(' '.join(map(str, res)))
-

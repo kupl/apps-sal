@@ -12,5 +12,3 @@ while n >= 0:
     n = n - a
     bc += 1
 print("NO")
-
-

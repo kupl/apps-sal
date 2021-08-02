@@ -9,7 +9,7 @@ for i in range(n):
         all[k] = -1
     if all[k] >= x:
         pass
-    elif all[k]+1 != x:
+    elif all[k] + 1 != x:
         ans = False
         break
     else:

@@ -1,6 +1,6 @@
 n, a, b = [int(x) for x in input().split()]
 
-l1 = [x for x in range(1, n + 1) ]
+l1 = [x for x in range(1, n + 1)]
 l2 = []
 res = 0
 found = False
@@ -15,11 +15,9 @@ while (not found):
         if l1[i] in [a, b]:
             l2.append(l1[i])
         else:
-            l2.append(l1[i+1])
+            l2.append(l1[i + 1])
 
     l1 = l2
     l2 = []
-        
+
 print(res)
-
-

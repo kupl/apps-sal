@@ -1,24 +1,25 @@
+from itertools import accumulate
 from bisect import bisect_left as bl
 from bisect import bisect_right as br
-from heapq import heappush,heappop,heapify
+from heapq import heappush, heappop, heapify
 import math
 from collections import *
-from functools import reduce,cmp_to_key
+from functools import reduce, cmp_to_key
 import sys
 input = sys.stdin.readline
 
-from itertools import accumulate
 
 M = mod = 998244353
-def factors(n):return sorted(set(reduce(list.__add__, ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
-def inv_mod(n):return pow(n, mod - 2, mod)
- 
-def li():return [int(i) for i in input().rstrip('\n').split()]
-def st():return input().rstrip('\n')
-def val():return int(input().rstrip('\n'))
-def li2():return [i for i in input().rstrip('\n')]
-def li3():return [int(i) for i in input().rstrip('\n')]
- 
+def factors(n): return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
+def inv_mod(n): return pow(n, mod - 2, mod)
+
+
+def li(): return [int(i) for i in input().rstrip('\n').split()]
+def st(): return input().rstrip('\n')
+def val(): return int(input().rstrip('\n'))
+def li2(): return [i for i in input().rstrip('\n')]
+def li3(): return [int(i) for i in input().rstrip('\n')]
+
 
 n = val()
 s = st()
@@ -41,10 +42,10 @@ next0 = [-1]
 next1 = [-1]
 
 
-m1 =  m2 = -1
+m1 = m2 = -1
 for i in range(n):
-    if s[i] == '1':m2 = i
-    if s[i] == '0':m1 = i
+    if s[i] == '1': m2 = i
+    if s[i] == '0': m1 = i
 
     next0.append(m1)
     next1.append(m2)
@@ -70,7 +71,6 @@ for x in range(1, n + 1):
                 start = next0[start + x] if next1[start + x] > next0[start + x] else next1[start + x]
                 start += 1
 
+    if not ans: flag = 1
 
-    if not ans:flag = 1
-
-    print(ans,end = ' ')
+    print(ans, end=' ')

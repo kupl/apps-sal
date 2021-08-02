@@ -12,4 +12,3 @@ while True:
         break
     n, a, b = nn, aa, bb
     r += 1
-
