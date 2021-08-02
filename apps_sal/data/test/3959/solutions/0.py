@@ -3,17 +3,19 @@ from collections import defaultdict, Counter
 
 P = 10 ** 9 + 7
 
+
 def factmod(n):
     res = 1
-    for i in range(2, n+1):
+    for i in range(2, n + 1):
         res *= i
         res %= P
 
     return res
 
+
 def solve():
     n, m = list(map(int, input().split()))
-    colour = {i:0 for i in range(1, m+1)}
+    colour = {i: 0 for i in range(1, m + 1)}
     colour_map = {}
     for i, line in enumerate(sys.stdin):
         A = [int(x) for x in line.split()]
@@ -40,5 +42,5 @@ def solve():
 
     return res
 
-print(solve())
 
+print(solve())

@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 n = int(input())
 a = [input().strip() for i in range(n)]

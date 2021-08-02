@@ -5,7 +5,7 @@ for q in range(int(input())):
     ans = -1
     for q in range(len(a)):
         if a[q] != s[q] and ans == -1:
-            ans = s[q]-a[q]
+            ans = s[q] - a[q]
             if ans < 0:
                 print('NO')
                 break
@@ -16,4 +16,3 @@ for q in range(int(input())):
             ans = -2
     else:
         print('YES')
-

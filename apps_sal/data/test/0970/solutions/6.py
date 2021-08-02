@@ -14,6 +14,8 @@ def main():
     for i in range(n // 2):
         ans1 += abs(a[i] - b1[i])
     for i in range(n // 2):
-        ans2 += abs(a[i] - b2[i])    
+        ans2 += abs(a[i] - b2[i])
     print(min(ans1, ans2))
+
+
 main()

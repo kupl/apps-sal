@@ -38,4 +38,3 @@ print(len(second_pairs))
 for f, s in zip(first_pairs, second_pairs):
     print("{} {}".format(f[0], s[0]))
     print("{} {}".format(f[1], s[1]))
-

@@ -12,8 +12,8 @@ for i in range(len(a)):
     xx = min(a[i], b[i])
     a[i] -= xx
     b[i] -= xx
-    
+
 for i in a:
     ans += i
-            
+
 print(ans)

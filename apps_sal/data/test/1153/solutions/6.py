@@ -43,6 +43,3 @@ while ib < m:
         result += 1
 
 print(result)
-
-
-

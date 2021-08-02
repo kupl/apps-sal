@@ -30,4 +30,3 @@ while i < len(xs):
         moveY = True
 
 print(cnt)
-

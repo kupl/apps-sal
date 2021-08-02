@@ -59,4 +59,3 @@ print(min(len(leftpair), len(rightpair)))
 # print(rightpair)
 for i in range(min(len(leftpair), len(rightpair))):
     sys.stdout.write(leftpair[i][0] + ' ' + rightpair[i][0] + '\n' + leftpair[i][1] + ' ' + rightpair[i][1] + '\n')
-

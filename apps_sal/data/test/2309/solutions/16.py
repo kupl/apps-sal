@@ -59,4 +59,3 @@ gay = set()
 for char in ['a', 'e', 'o', 'i', 'u']:
     gay.add(char)
 main()
-

@@ -16,19 +16,19 @@ for i, S in enumerate(I):
             if p is None:
                 p = D[s]
             c += 1
-    A[c*geta + p].append(i)
+    A[c * geta + p].append(i)
     B[c].append(i)
 
-SA = sum(len(v)//2 for v in A.values())
-SB = sum(len(v)//2 for v in B.values())
+SA = sum(len(v) // 2 for v in A.values())
+SB = sum(len(v) // 2 for v in B.values())
 CA = []
 CB = []
 used = set()
 for v in A.values():
-    for i in range(0, len(v)-1, 2):
-        CA.append((v[i], v[i+1]))
+    for i in range(0, len(v) - 1, 2):
+        CA.append((v[i], v[i + 1]))
         used.add(v[i])
-        used.add(v[i+1])
+        used.add(v[i + 1])
 for v in B.values():
     fill = True
     T = None
@@ -40,7 +40,7 @@ for v in B.values():
             else:
                 T = i
 
-ans = min(SA, SB//2)
+ans = min(SA, SB // 2)
 print(ans)
 f = min(len(CA), len(CB))
 for i in range(f):

@@ -9,4 +9,3 @@ for i in range(n // 2):
     ansB += abs(a[i] - v)
 
 print(min(ansA, ansB))
-

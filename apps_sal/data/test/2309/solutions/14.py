@@ -24,12 +24,12 @@ for e in d:
     for s in d[e]:
         gd[last_g(s)].append(s)
     for b in gd:
-        for i in range(0, len(gd[b])-1, 2):
-            seconds.append((gd[b][i], gd[b][i+1]))
-        if len(gd[b])%2 == 1:
+        for i in range(0, len(gd[b]) - 1, 2):
+            seconds.append((gd[b][i], gd[b][i + 1]))
+        if len(gd[b]) % 2 == 1:
             pairs.append(gd[b][-1])
-    for i in range(0, len(pairs)-1, 2):
-        firsts.append((pairs[i], pairs[i+1]))
+    for i in range(0, len(pairs) - 1, 2):
+        firsts.append((pairs[i], pairs[i + 1]))
 q = len(seconds)
 m = len(firsts)
 if m >= q:
@@ -38,10 +38,10 @@ if m >= q:
         print(firsts[i][0] + ' ' + seconds[i][0])
         print(firsts[i][1] + ' ' + seconds[i][1])
 else:
-    print(m + (q - m)//2)
+    print(m + (q - m) // 2)
     for i in range(m):
         print(firsts[i][0] + ' ' + seconds[i][0])
         print(firsts[i][1] + ' ' + seconds[i][1])
-    for i in range(m, q-1, 2):
-        print(seconds[i][0] + ' ' + seconds[i+1][0])
-        print(seconds[i][1] + ' ' + seconds[i+1][1])
+    for i in range(m, q - 1, 2):
+        print(seconds[i][0] + ' ' + seconds[i + 1][0])
+        print(seconds[i][1] + ' ' + seconds[i + 1][1])

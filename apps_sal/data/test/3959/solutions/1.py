@@ -15,4 +15,3 @@ for e in list(Counter(list(map(str, x))).values()):
         ans = ans * i % MOD
 
 print(ans)
-

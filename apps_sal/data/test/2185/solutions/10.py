@@ -27,4 +27,3 @@ for case in range(t):
                 print("YES")
             else:
                 print("NO")
-

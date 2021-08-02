@@ -8,4 +8,3 @@ for i in range(n // 2):
     x += abs(p[i] - 2 * i)
     y += abs(p[i] - 2 * i - 1)
 print(min(x, y))
-

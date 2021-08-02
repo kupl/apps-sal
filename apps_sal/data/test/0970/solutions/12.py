@@ -6,4 +6,3 @@ for i in range(n // 2):
     s1 += abs(p[i] - k)
     s2 += abs(p[i] - k - 1)
 print(min(s1, s2))
-

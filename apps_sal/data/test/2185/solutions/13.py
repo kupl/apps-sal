@@ -6,11 +6,14 @@ for i in range(t):
     c = [b[i] - a[i] for i in range(n)]
     last = None
     fail = False
-    if any(x < 0 for x in c): fail = True
+    if any(x < 0 for x in c):
+        fail = True
     for item in c:
         if last == None:
-            if item == 0: continue
-            else: last = item
+            if item == 0:
+                continue
+            else:
+                last = item
         else:
             if item == 0:
                 last = 0
@@ -23,5 +26,3 @@ for i in range(t):
         print("NO")
     else:
         print("YES")
-            
-

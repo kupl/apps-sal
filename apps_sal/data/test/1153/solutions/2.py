@@ -14,17 +14,16 @@ s2 = Y[0]
 j = 1
 count = 0
 while i < N and j < M:
-  if s1 < s2:
-    s1 += X[i]
-    i += 1
-  elif s1 == s2:
-    count += 1
-    s1 += X[i]
-    s2 += Y[j]
-    i += 1
-    j += 1
-  else: # s1 > s2
-    s2 += Y[j]
-    j += 1
+    if s1 < s2:
+        s1 += X[i]
+        i += 1
+    elif s1 == s2:
+        count += 1
+        s1 += X[i]
+        s2 += Y[j]
+        i += 1
+        j += 1
+    else:  # s1 > s2
+        s2 += Y[j]
+        j += 1
 print(count + 1)
-

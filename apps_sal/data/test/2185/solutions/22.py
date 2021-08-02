@@ -8,7 +8,6 @@ for f in range(t):
     b = list(map(int, input().split()))
     cnt = [0] * n
 
-
     for i in range(n):
         cnt[i] = b[i] - a[i]
 
@@ -33,10 +32,3 @@ for f in range(t):
         print('YES')
     else:
         print('NO')
-
-
-
-
-
-
-

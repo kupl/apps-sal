@@ -21,5 +21,5 @@ while (i < n and j < m):
         i += 1
         if (i < n and j < m):
             s1 = a[i]
-            s2 = b[j]        
+            s2 = b[j]
 print(ans)

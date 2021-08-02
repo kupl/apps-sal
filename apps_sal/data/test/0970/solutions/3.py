@@ -9,4 +9,3 @@ for i in range(n // 2):
     ans1 += abs(a[i] - 2 * i)
     ans2 += abs(a[i] - 2 * i - 1)
 print(min(ans1, ans2))
-

@@ -27,4 +27,3 @@ while index_x < len(x) or index_y < len(y):
             cur_y += y[index_y]
 
 print(result)
-

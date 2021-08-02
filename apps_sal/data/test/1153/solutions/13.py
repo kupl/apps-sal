@@ -1,4 +1,4 @@
-n,m = [int(c) for c in input().split(" ")]
+n, m = [int(c) for c in input().split(" ")]
 x = [int(c) for c in input().split(" ")]
 y = [int(c) for c in input().split(" ")]
 
@@ -9,14 +9,14 @@ xis, yis = [], []
 
 while True:
 
-    #print("Iteration")
+    # print("Iteration")
     #print(ix, x[ix:])
     #print(iy, y[iy:])
 
     if sumx == sumy:
         if sumx != 0:
-            xis.append(ix-1)
-            yis.append(iy-1)
+            xis.append(ix - 1)
+            yis.append(iy - 1)
             sumx, sumy = 0, 0
         else:
             sumx += x[ix]
@@ -36,11 +36,10 @@ while True:
 
     if ix == len(x) and iy == len(y):
         break
-    
+
 if len(xis) == len(yis):
-    print(len(xis)+1)
+    print(len(xis) + 1)
     #print(xis, "\n", yis)
 
 else:
     print("error", xis, yis)
-

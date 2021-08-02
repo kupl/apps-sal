@@ -1,6 +1,7 @@
 n = input()
 a = list(map(int, input().split()))
 
+
 def main():
     a.sort()
 
@@ -14,5 +15,5 @@ def main():
 
     print(min(b, w))
 
-main()
 
+main()
