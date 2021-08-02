@@ -6,7 +6,7 @@ for _ in range(N):
     A, B = map(int, input().split())
     if A > M:
         continue
-    jobs[A-1].append(-B)
+    jobs[A - 1].append(-B)
 
 total = 0
 heap = []

@@ -56,19 +56,19 @@ for t in T:
 
     xi, xa = P[0]
     if xi != INF:
-        xmin = min(xmin, xi+t)
-        xmax = max(xmax, xa+t)
+        xmin = min(xmin, xi + t)
+        xmax = max(xmax, xa + t)
     xi, xa = P[1]
     if xi != INF:
-        xmin = min(xmin, xi-t)
-        xmax = max(xmax, xa-t)
+        xmin = min(xmin, xi - t)
+        xmax = max(xmax, xa - t)
     yi, ya = Q[0]
     if yi != INF:
-        ymin = min(ymin, yi+t)
-        ymax = max(ymax, ya+t)
+        ymin = min(ymin, yi + t)
+        ymax = max(ymax, ya + t)
     yi, ya = Q[1]
     if yi != INF:
-        ymin = min(ymin, yi-t)
-        ymax = max(ymax, ya-t)
+        ymin = min(ymin, yi - t)
+        ymax = max(ymax, ya - t)
     ans = min(ans, (xmax - xmin) * (ymax - ymin))
 print("%.10f" % ans)

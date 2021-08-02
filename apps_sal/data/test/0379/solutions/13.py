@@ -9,7 +9,7 @@ u = n
 d = 0
 l = m
 r = 0
-    
+
 for i in range(n):
     for j in range(m):
         if v[i][j] == 'X':
@@ -21,11 +21,11 @@ for i in range(n):
                 l = j
             if j > r:
                 r = j
-                
-for i in range(u,d+1):
-    for j in range(l, r+1):
+
+for i in range(u, d + 1):
+    for j in range(l, r + 1):
         if v[i][j] == ".":
             print("NO")
             return
-        
+
 print("YES")

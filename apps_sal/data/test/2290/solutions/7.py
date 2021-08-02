@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
 
+
 def dfs(s, compN):
     visited[s] = compN
     queue = set(adj[s])
@@ -12,7 +13,8 @@ def dfs(s, compN):
             maxV = max(maxV, v)
             queue.update(adj[v])
     return maxV
-            
+
+
 def countEdges(adj, n, m):
     compN = 0
     comps = []
@@ -23,7 +25,7 @@ def countEdges(adj, n, m):
             maxV = dfs(s, compN)
             comps.append((minV, compN, 0))
             comps.append((maxV, compN, 1))
-    
+
     comps.sort()
 #     print(comps)
     opened = set()
@@ -51,6 +53,5 @@ for _ in range(m):
 visited = [False] * (n + 1)
 ans = countEdges(adj, n, m)
 print(ans)
-    
-# inf.close()
 
+# inf.close()

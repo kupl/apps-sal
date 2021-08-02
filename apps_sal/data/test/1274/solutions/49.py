@@ -7,6 +7,7 @@ for _ in range(n):
     que.append((-b, a))
 que.sort(key=lambda x: x[1], reverse=True)
 
+
 def solve(que, m):
     ans = 0
     h = []
@@ -19,5 +20,6 @@ def solve(que, m):
         tmp = heapq.heappop(h)
         ans -= tmp[0]
     return ans
+
 
 print(solve(que, m))

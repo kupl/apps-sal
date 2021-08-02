@@ -1,19 +1,24 @@
-import sys, math
+import sys
+import math
 from functools import lru_cache
 import numpy as np
 import heapq
 from collections import defaultdict
 sys.setrecursionlimit(10**9)
-MOD = 10**9+7
+MOD = 10**9 + 7
+
 
 def input():
     return sys.stdin.readline()[:-1]
 
+
 def mi():
     return list(map(int, input().split()))
 
+
 def ii():
     return int(input())
+
 
 def i2(n):
     tmp = [list(mi()) for i in range(n)]
@@ -21,7 +26,7 @@ def i2(n):
 
 
 def lcm(a, b):
-    return a*b//math.gcd(a, b)
+    return a * b // math.gcd(a, b)
 
 
 def main():
@@ -36,7 +41,7 @@ def main():
     h = []
     heapq.heapify(h)
 
-    for i in range(1, M+1):
+    for i in range(1, M + 1):
         for v in d[i]:
             heapq.heappush(h, -v)
         if h:
@@ -47,8 +52,8 @@ def main():
     print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -10,4 +10,3 @@ for i in range((n - 1) // 2, n):
     ans.append(u[ind])
     ind += 1
 print(' '.join(map(str, ans)))
-

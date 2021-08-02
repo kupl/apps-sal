@@ -1,10 +1,13 @@
 from collections import defaultdict
-import sys, threading
+import sys
+import threading
 sys.setrecursionlimit(10**8)
-def inpl(k=0): return [int(x)+k for x in sys.stdin.readline().split()]
+def inpl(k=0): return [int(x) + k for x in sys.stdin.readline().split()]
 
-visited = [False]*(200100)
+
+visited = [False] * (200100)
 lines = defaultdict(set)
+
 
 def dfs(s):
     nonlocal visited
@@ -15,11 +18,12 @@ def dfs(s):
             ret = max(dfs(t), ret)
     return ret
 
+
 def main():
     nonlocal visited
-    N,M = inpl()
+    N, M = inpl()
     for _ in range(M):
-        x,y = inpl(-1)
+        x, y = inpl(-1)
         lines[x].add(y)
         lines[y].add(x)
     maxr = 0
@@ -29,7 +33,7 @@ def main():
             r = dfs(l)
             if l < maxr:
                 ans += 1
-            maxr = max(r,maxr)
+            maxr = max(r, maxr)
 
     print(ans)
 
@@ -39,5 +43,6 @@ def __starting_point():
     thread = threading.Thread(target=main)
     thread.start()
     thread.join()
+
 
 __starting_point()

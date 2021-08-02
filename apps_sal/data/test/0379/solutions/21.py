@@ -15,4 +15,3 @@ for i in hor:
             ans = False
             break
 print('YES' if ans else 'NO')
-

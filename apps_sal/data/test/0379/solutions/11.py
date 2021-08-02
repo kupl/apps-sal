@@ -15,8 +15,8 @@ for i in range(H):
             b = max(b, i)
 
 
-for i in range(u,b+1):
-    for j in range(l,r+1):
+for i in range(u, b + 1):
+    for j in range(l, r + 1):
         if p[i][j] == ".":
             print("NO")
             return

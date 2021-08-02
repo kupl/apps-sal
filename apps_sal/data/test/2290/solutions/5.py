@@ -3,6 +3,7 @@ import sys
 sys.setrecursionlimit(10**8)
 input = sys.stdin.readline
 
+
 class DisjointSet:
     def __init__(self, n):
         self.par = [i for i in range(n)]
@@ -38,6 +39,7 @@ class DisjointSet:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
+
 n, m = [int(item) for item in input().split()]
 DS = DisjointSet(n)
 for i in range(m):
@@ -51,7 +53,7 @@ for i in range(n):
         par = DS.par[i]
         goal = DS.max_member[par]
         continue
-    if DS.has_same_root(par, i): 
+    if DS.has_same_root(par, i):
         continue
     else:
         DS.unite(par, i)

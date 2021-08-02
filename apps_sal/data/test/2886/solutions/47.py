@@ -8,4 +8,3 @@ for i in range(len(s) - 1):
         print((i + 1, i + 3))
         return
 print((-1, -1))
-

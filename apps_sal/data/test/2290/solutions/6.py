@@ -1,3 +1,4 @@
+from collections import deque
 from sys import stdin
 
 input = stdin.readline
@@ -8,7 +9,6 @@ n, m = map(int, input().split())
 check = [0] * 200005
 mx = 0
 
-from collections import deque
 
 def dfs(x):
     l = deque([x])
@@ -16,7 +16,7 @@ def dfs(x):
     while len(l):
         p = l.popleft()
         nonlocal mx
-        mx = max(mx,p)
+        mx = max(mx, p)
         for i in edge[p]:
             if check[i]:
                 continue

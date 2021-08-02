@@ -23,9 +23,10 @@ for i in range(3):
     xpoints[i].sort()
     ypoints[i].sort()
 
+
 def f(t):
     if t < 0:
-        return INF 
+        return INF
     max_x = max_y = -INF
     min_x = min_y = INF
     for i, a in enumerate([0, t, -t]):
@@ -37,5 +38,6 @@ def f(t):
             min_y = min(min_y, ypoints[i][0] + a)
     return (max_x - min_x) * (max_y - min_y)
 
-ans = fmin(f, x0=10**8, ftol= 1e-9, disp=False)
+
+ans = fmin(f, x0=10**8, ftol=1e-9, disp=False)
 print(f(ans[0]))

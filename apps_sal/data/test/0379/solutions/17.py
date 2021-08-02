@@ -24,4 +24,3 @@ for i in range(n):
             print('NO')
             return
 print('YES')
-

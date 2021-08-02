@@ -71,4 +71,3 @@ def solve():
 
 
 print((solve()))
-

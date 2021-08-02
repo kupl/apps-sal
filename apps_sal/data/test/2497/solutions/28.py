@@ -98,4 +98,3 @@ for t in t_list:
     if min_mult is None or min_mult > mult:
         min_mult = mult
 print((str(min_mult)))
-

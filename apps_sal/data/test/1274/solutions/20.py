@@ -6,14 +6,14 @@ ans = 0
 
 for i in range(n):
     a, b = map(int, input().split())
-    if m-a < 0:
+    if m - a < 0:
         continue
     else:
-        A[m-a].append(b)
+        A[m - a].append(b)
 
 available = []
 
-for i in range(m-1, -1, -1):
+for i in range(m - 1, -1, -1):
     for item in A[i]:
         heapq.heappush(available, -item)
     if available:

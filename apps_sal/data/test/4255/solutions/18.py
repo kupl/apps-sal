@@ -10,4 +10,5 @@ def main():
     a, b, c = Input()
     print(b * a // 2)
 
+
 main()

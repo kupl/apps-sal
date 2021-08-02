@@ -20,4 +20,3 @@ for i in range(26):
     break
 
 print((a1, a2))
-

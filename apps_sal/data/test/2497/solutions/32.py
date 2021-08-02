@@ -21,18 +21,22 @@ x_min_ = min(x_min[2], x_min[3])
 y_max_ = max(y_max[0], y_max[1])
 y_min_ = min(y_min[0], y_min[1])
 
+
 def W(t):
     R = max(x_max[0] + t, x_max[1] - t, x_max_)
     L = min(x_min[0] + t, x_min[1] - t, x_min_)
     return R - L
+
 
 def H(t):
     U = max(y_max[2] + t, y_max[3] - t, y_max_)
     D = min(y_min[2] + t, y_min[3] - t, y_min_)
     return U - D
 
+
 def WH(t):
     return W(t) * H(t)
+
 
 ts = [
     0,
@@ -56,4 +60,3 @@ for t in ts:
         result = min(result, WH(t))
 
 print(result)
-

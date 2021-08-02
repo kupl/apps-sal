@@ -32,6 +32,6 @@ for i in range(n):
                 b = 1
         elif a[i][j] == 'X' and b == 0:
             print('NO')
-            b = 1              
+            b = 1
 if b == 0:
     print('YES')

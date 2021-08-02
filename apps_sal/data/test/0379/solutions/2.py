@@ -6,7 +6,7 @@ for i in range(n):
         if g[i][j] == 'X':
             r.add(i)
             c.add(j)
-g = g[min(r):max(r)+1]
+g = g[min(r):max(r) + 1]
 g = list([x[min(c): max(c) + 1] for x in g])
 
 good = True
@@ -16,4 +16,3 @@ for i in range(len(g)):
             good = False
             break
 print('YES' if good else 'NO')
-

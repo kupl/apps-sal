@@ -3,12 +3,12 @@ import heapq
 N, M = list(map(int, input().split()))
 
 AB = []
-can = [[] for i in range(M+1)]
+can = [[] for i in range(M + 1)]
 for i in range(N):
     a, b = list(map(int, input().split()))
     AB.append([a, b])
     if M - a >= 0:
-        can[M-a].append(-b)
+        can[M - a].append(-b)
 
 que = []
 ans = 0
@@ -20,4 +20,3 @@ for i in range(M, -1, -1):
         ans += heapq.heappop(que)
 
 print((-ans))
-

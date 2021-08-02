@@ -1,4 +1,8 @@
 # unionfind
+import sys
+from operator import itemgetter
+
+
 class Uf:
     def __init__(self, N):
         self.p = list(range(N))
@@ -35,20 +39,19 @@ class Uf:
     def count(self, x):
         return self.size[self.root(x)]
 
-import sys
-from operator import itemgetter
+
 def main():
     input = sys.stdin.readline
     N, M = list(map(int, input().split()))
     # harmonious <=> l < m < r で、l から r に辿り着けるなら、l から m に辿り着ける
 
-    uf = Uf(N+1)
-    for u, v in zip(*[iter(map(int, sys.stdin.read().split()))]*2):
+    uf = Uf(N + 1)
+    for u, v in zip(*[iter(map(int, sys.stdin.read().split()))] * 2):
         uf.unite(u, v)
 
-    L = [10**9] * (N+1)
-    R = [-1] * (N+1)
-    for i in range(1, N+1):
+    L = [10**9] * (N + 1)
+    R = [-1] * (N + 1)
+    for i in range(1, N + 1):
         r = uf.root(i)
         L[r] = min(L[r], i)
         R[r] = max(R[r], i)
@@ -67,4 +70,3 @@ def main():
 
 
 main()
-

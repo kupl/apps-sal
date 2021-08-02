@@ -16,9 +16,8 @@ for row in range(n):
             right = max(col, right)
 
 fail = False
-for row in range(top, bot+1):
+for row in range(top, bot + 1):
     for col in range(left, right + 1):
         if grid[row][col] != 'X':
             fail = True
 print('NO' if fail else 'YES')
-

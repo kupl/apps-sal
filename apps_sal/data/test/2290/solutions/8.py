@@ -1,11 +1,12 @@
 import sys
 from collections import deque
 
+
 class UnionFind(object):
     __slots__ = ['nodes']
 
     def __init__(self, n: int):
-        self.nodes = [-1]*n
+        self.nodes = [-1] * n
 
     def find(self, x: int) -> int:
         if self.nodes[x] < 0:
@@ -31,15 +32,15 @@ uf = UnionFind(n)
 adj = [[] for _ in range(n)]
 
 for u, v in (list(map(int, sys.stdin.readline().split())) for _ in range(m)):
-    u = u-1
-    v = v-1
+    u = u - 1
+    v = v - 1
     adj[u].append(v)
     adj[v].append(u)
     uf.unite(u, v)
 
 
 g_range = []
-visited = [0]*n
+visited = [0] * n
 
 for i in range(n):
     if visited[i] or not adj[i]:
@@ -73,10 +74,9 @@ checked_max = 0
 for s, t in g_range:
     if t <= checked_max:
         continue
-    for v in range(max(s, checked_max)+1, t):
+    for v in range(max(s, checked_max) + 1, t):
         if uf.unite(s, v):
             ans += 1
     checked_max = max(checked_max, t)
 
 print(ans)
-

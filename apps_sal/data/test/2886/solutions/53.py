@@ -11,4 +11,3 @@ for i in range(len(s)):
         else:
             d[s[i]] = i
 print(ans)
-

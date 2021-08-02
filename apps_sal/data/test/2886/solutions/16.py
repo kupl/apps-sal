@@ -2,6 +2,7 @@ import sys
 import collections
 input = sys.stdin.readline
 
+
 def main():
     S = input().strip()
 
@@ -28,16 +29,8 @@ def main():
         print((-1, -1))
 
 
-
-
-
-
-
-    
-
 def __starting_point():
     main()
-
 
 
 __starting_point()

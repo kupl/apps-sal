@@ -17,4 +17,3 @@ if mistake:
     print('NO')
 else:
     print('YES')
-

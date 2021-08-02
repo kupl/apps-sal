@@ -1,11 +1,11 @@
-a,b,c = map(int,input().split())
+a, b, c = map(int, input().split())
 
-ma = max(a,b,c)
-if(a==ma):
-    ans = b*c
-elif(b==ma):
-    ans = a*c
+ma = max(a, b, c)
+if(a == ma):
+    ans = b * c
+elif(b == ma):
+    ans = a * c
 else:
-    ans = a*b
+    ans = a * b
 
-print(ans//2)
+print(ans // 2)

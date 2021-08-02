@@ -10,4 +10,3 @@ for i in range(len(s) - 2):
         break
 
 print(answer)
-

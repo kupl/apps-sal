@@ -23,11 +23,11 @@ for xyd in XYD:
     else:
         yD.add(y)
         xS.add(x)
-#xmin
+# xmin
 xRmin = min(xR | {I})
 xLmin = min(xL | {I})
 xSmin = min(xS | {I})
-#xmax
+# xmax
 xRmax = max(xR | {-I})
 xLmax = max(xL | {-I})
 xSmax = max(xS | {-I})
@@ -37,11 +37,11 @@ x1m = max(xSmax - xRmin, xLmax - xSmin)
 x0 = max(xRmax - xRmin, xLmax - xLmin, xSmax - xSmin)
 x1 = max(xSmax - xLmin, xRmax - xSmin)
 x2 = xRmax - xLmin
-#ymin
+# ymin
 yUmin = min(yU | {I})
 yDmin = min(yD | {I})
 ySmin = min(yS | {I})
-#ymax
+# ymax
 yUmax = max(yU | {-I})
 yDmax = max(yD | {-I})
 ySmax = max(yS | {-I})
@@ -76,4 +76,3 @@ t += [(x2m + 2 * y1m) / 4, (y1m + 2 * x2m) / 4, (x2 + 2 * y1) / 4,
 t += [(x1m + y1m) / 2, (x1 + y1) / 2]
 
 print((min([dd(time) for time in t])))
-

@@ -1,6 +1,6 @@
 # You lost the game.
 
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 L = [str(input()) for _ in range(n)]
 
 x = y = ok = 0
@@ -19,7 +19,7 @@ while l < m and L[x][l] == 'X':
 
 ok = 0
 att = 0
-for i in range(x+1, n):
+for i in range(x + 1, n):
     vu = 0
     for j in range(m):
         if L[i][j] == 'X':
@@ -40,8 +40,3 @@ if ok == -1:
     print("NO")
 else:
     print("YES")
-
-
-
-        
-

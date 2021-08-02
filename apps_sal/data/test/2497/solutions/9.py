@@ -10,11 +10,13 @@ mapping = {
     "D": (0, -1)
 }
 
+
 def f(x, vx, t):
     if t < 0:
         return INF
     nx = x + vx * t
     return nx.max() - nx.min()
+
 
 def solve(n, x, y, d):
     x = np.asarray(x, dtype=np.float)
@@ -27,8 +29,9 @@ def solve(n, x, y, d):
     t = fmin(h, x0=10**8, ftol=1e-9, disp=False)[0]
     return h(t)
 
+
 n = int(input())
-x, y, d = [-1]*n, [-1]*n, [-1]*n
+x, y, d = [-1] * n, [-1] * n, [-1] * n
 for i in range(n):
     x[i], y[i], d[i] = input().split()
     x[i] = int(x[i])

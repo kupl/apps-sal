@@ -27,5 +27,5 @@ for i in range(n):
             elif en_j != -1 and field[i][j] == 'X' and ((j < st_j) or (j > en_j) or (i < st_i) or (i > en_i)):
                 result = "NO"
             elif en_j != -1 and field[i][j] == '.' and ((st_j <= j <= en_j) and (st_i <= i <= en_i)):
-                result = "NO"            
+                result = "NO"
 print(result)

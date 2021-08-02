@@ -53,4 +53,3 @@ inflections.add(max(0, (d_miny - u_miny) / 2))
 inflections.add(max(0, lr_miny - u_miny))
 
 print((min(list(map(check, inflections)))))
-

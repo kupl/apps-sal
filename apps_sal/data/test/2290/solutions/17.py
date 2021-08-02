@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
 
+
 def main():
     n, m = [int(x) for x in sys.stdin.readline().split(" ")]
     graph = defaultdict(list)
@@ -11,9 +12,9 @@ def main():
     # DFS for connected components in increasing order
     maxB = -1
     count = 0
-    visited = [False for v in range(0,n+1)]
+    visited = [False for v in range(0, n + 1)]
     stack = []
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         # connected components
         if visited[i]:
             continue
@@ -30,5 +31,5 @@ def main():
                     stack.append(v)
     return(count)
 
-print(main())
 
+print(main())

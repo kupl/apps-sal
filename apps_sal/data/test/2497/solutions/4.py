@@ -43,4 +43,3 @@ def cost(t):
 
 x, = fmin(cost, x0=100000, ftol=10 ** -10, disp=False)
 print(('{:.10f}'.format(cost(x))))
-

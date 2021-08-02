@@ -1,5 +1,6 @@
 import sys
-import heapq, math
+import heapq
+import math
 from itertools import zip_longest, permutations, combinations, combinations_with_replacement
 from itertools import accumulate, dropwhile, takewhile, groupby
 from functools import lru_cache
@@ -7,6 +8,7 @@ from copy import deepcopy
 
 S = input()
 L = len(S)
+
 
 def p():
     for j in range(L - 2):
@@ -21,5 +23,6 @@ def p():
         print(L - 1, L)
     else:
         print(-1, -1)
+
 
 p()

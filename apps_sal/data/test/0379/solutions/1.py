@@ -11,4 +11,3 @@ if res:
     print("YES")
 else:
     print("NO")
-

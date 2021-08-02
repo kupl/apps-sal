@@ -17,6 +17,7 @@ class SegmentTree:
     References:
         <https://en.wikipedia.org/wiki/Segment_tree>
     """
+
     def __init__(self, N, X, func, init_v):
         N_ = 1
         while N_ < N: N_ *= 2
@@ -108,5 +109,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()
