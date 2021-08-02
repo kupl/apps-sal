@@ -33,4 +33,5 @@ def __starting_point():
     # メイン処理
     main(A)
 
+
 __starting_point()

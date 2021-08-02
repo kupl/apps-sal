@@ -47,4 +47,3 @@ if a == 0 or b == 0 or (c != a and c != b):
     print("NO")
 else:
     print("YES")
-

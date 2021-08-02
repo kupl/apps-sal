@@ -12,7 +12,7 @@ for c1 in string.ascii_lowercase:
     for c2 in string.ascii_lowercase:
         curscore = 0
         for dc in d:
-            if set(dc) <= set(c1+c2):
+            if set(dc) <= set(c1 + c2):
                 curscore += d[dc]
         if curscore > best:
             best = curscore

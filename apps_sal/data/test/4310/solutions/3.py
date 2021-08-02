@@ -7,4 +7,3 @@ mid_num = list_int.pop(1)
 
 minimum_cost = abs(mid_num - min_num) + abs(max_num - mid_num)
 print(minimum_cost)
-

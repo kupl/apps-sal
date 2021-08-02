@@ -1,3 +1,3 @@
-v=list(map(int,input().split()))
+v = list(map(int, input().split()))
 v.sort()
-print(v[2]-v[0])
+print(v[2] - v[0])

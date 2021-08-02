@@ -6,15 +6,15 @@ for i in range(n):
     s = set()
     for j in range(len(arr[i])):
         s.add(arr[i][j])
-    if len(s) <= 2:    
+    if len(s) <= 2:
         try:
             d[arr[i]][0] += 1
         except:
             d[arr[i]] = [1, s]
-#print(d)    
+# print(d)
 ans = 0
-for i in range(97, 97+26):
-    for j in range(97, 97+26):
+for i in range(97, 97 + 26):
+    for j in range(97, 97 + 26):
         c = 0
         a, b = chr(i), chr(j)
         q = set([a, b])
@@ -23,5 +23,3 @@ for i in range(97, 97+26):
                 c += d[k][0] * len(k)
         ans = max(ans, c)
 print(ans)
-        
-

@@ -9,4 +9,3 @@ for i in range(n):
     if en < min_en:
         min_en = en
 print(min_en)
-

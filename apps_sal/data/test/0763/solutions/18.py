@@ -7,14 +7,13 @@ def get_for(x):
 
     ret = 0
     for i in range(n):
-        ret += (abs(x-i) + i + x) * arr[i] * 2
+        ret += (abs(x - i) + i + x) * arr[i] * 2
 
     return ret
+
 
 mn = get_for(0)
 for i in range(1, n):
     mn = min(mn, get_for(i))
 
 print(mn)
-
-

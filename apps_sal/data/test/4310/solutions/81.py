@@ -8,7 +8,7 @@ def Input():
 
 def main():
     a, b, c = Input()
-    x, y, _ = sorted([abs(a-b), abs(b-c), abs(a-c)])
+    x, y, _ = sorted([abs(a - b), abs(b - c), abs(a - c)])
     print(x + y)
 
 

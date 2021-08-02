@@ -39,4 +39,3 @@ for c1 in lets:
             ans = cans
 
 print(ans)
-

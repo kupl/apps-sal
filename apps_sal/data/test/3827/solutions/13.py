@@ -4,7 +4,7 @@ ans = 1
 aa = s.count("a")
 bb = s.count("b")
 cc = s.count("c")
-if min(aa,bb) == 0 or (bb != cc and aa != cc):
+if min(aa, bb) == 0 or (bb != cc and aa != cc):
     print("NO")
 else:
     for i in s:
@@ -30,4 +30,3 @@ else:
         print("YES")
     else:
         print("NO")
-

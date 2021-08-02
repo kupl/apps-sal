@@ -12,20 +12,21 @@ for i in range(8):
     yy.add(y)
 
 ok = 1
-if (len(xx) != 3) or (len(yy) != 3) or (len(l) != 8): ok = 0
+if (len(xx) != 3) or (len(yy) != 3) or (len(l) != 8):
+    ok = 0
 else:
     ax = list(xx)
     ay = list(yy)
     ax.sort()
     ay.sort()
-    if (ax[1], ay[1]) in l: ok = 0
+    if (ax[1], ay[1]) in l:
+        ok = 0
 
 
 if ok == 1:
     print('respectable')
 else:
     print('ugly')
-    
-#input.close()
-#output.close()
 
+# input.close()
+# output.close()

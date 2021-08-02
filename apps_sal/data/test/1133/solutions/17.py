@@ -14,5 +14,4 @@ for w in range(n):
             c[i][wset[0]] += len(word)
             c[wset[0]][i] += len(word)
             c[wset[0]][wset[0]] -= len(word)
-print(max([max(c[i]) for i in range(26)]))    
-
+print(max([max(c[i]) for i in range(26)]))

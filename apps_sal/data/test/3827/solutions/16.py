@@ -21,5 +21,5 @@ for el in s:
     if state != 3 and el == 'c':
         print("NO")
         return
-        
+
 print("YES")

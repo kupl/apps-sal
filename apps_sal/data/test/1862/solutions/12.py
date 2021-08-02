@@ -7,12 +7,11 @@ s = set()
 v = list(map(int, input().split()))
 ans = 0
 
-for i in range(0,2*N):
-  if v[i] in s:
-    s.remove(v[i])
-  else:
-    s.add(v[i])
-  ans = max(ans, len(s))
+for i in range(0, 2 * N):
+    if v[i] in s:
+        s.remove(v[i])
+    else:
+        s.add(v[i])
+    ans = max(ans, len(s))
 
 print(ans)
-

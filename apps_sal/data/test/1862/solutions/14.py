@@ -15,4 +15,3 @@ for sock in arr:
         # print("{} ini panjang".format(len(table)))
         lenTabel = len(table) if (len(table) > lenTabel) else lenTabel
 print(lenTabel)
-

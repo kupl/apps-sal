@@ -12,6 +12,6 @@ for i in range(customers):
         max_checkouts = max(max_checkouts, checkouts)
         checkouts = 0
         time = next_time
-    
+
 max_checkouts = max(max_checkouts, checkouts)
 print(max_checkouts + 1)

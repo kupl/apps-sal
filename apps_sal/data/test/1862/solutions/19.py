@@ -12,5 +12,3 @@ for s in socks:
         on.add(s)
         i += 1
 print(max(m, i))
-    
-

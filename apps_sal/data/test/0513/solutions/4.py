@@ -2,7 +2,7 @@ class Point:
     def __init__(self, x_p, y_p):
         self.x = x_p
         self.y = y_p
-        
+
 
 points = []
 sub_x = []
@@ -29,4 +29,3 @@ else:
             print('respectable')
     else:
         print('ugly')
-

@@ -22,8 +22,8 @@ def count_cash(arrivals: dict) -> int:
         j = i
 
         while j < arrivals['length'] - 1 and \
-                        arrivals['hour'][j + 1] == arrivals['hour'][j] and \
-                        arrivals['minute'][j + 1] == arrivals['minute'][j]:
+                arrivals['hour'][j + 1] == arrivals['hour'][j] and \
+                arrivals['minute'][j + 1] == arrivals['minute'][j]:
             j += 1
 
         cash = j - i + 1
@@ -34,5 +34,6 @@ def count_cash(arrivals: dict) -> int:
         i = j + 1
 
     return min_cash
+
 
 print(count_cash(input_persons()))

@@ -12,4 +12,3 @@ for i in range(2 * n):
         cnt += 1
         maxx = max(maxx, cnt)
 print(maxx)
-

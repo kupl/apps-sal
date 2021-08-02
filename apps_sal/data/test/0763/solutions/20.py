@@ -7,4 +7,3 @@ for x in range(n):
         e += a[f] * (abs(x - f) + f + x) * 2
     m = min(e, m)
 print(m)
-

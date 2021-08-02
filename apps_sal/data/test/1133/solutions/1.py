@@ -10,8 +10,8 @@ words = [(word, s) for word, s in words if len(s) <= 2]
 
 best = 0
 for c1 in alphabet:
-	for c2 in alphabet:
-		shere = set([c1, c2])
-		best = max(best, sum(len(word) for word, s in words if not (s - shere)))
+    for c2 in alphabet:
+        shere = set([c1, c2])
+        best = max(best, sum(len(word) for word, s in words if not (s - shere)))
 
 print(best)

@@ -14,12 +14,10 @@ for i in range(n - 1):
         if(count > vmax):
             vmax = count
         count = 1
-        
-    first_p = second_p;   
+
+    first_p = second_p
 
 if(count > vmax):
-    vmax = count    
+    vmax = count
 
 print(vmax)
-    
-

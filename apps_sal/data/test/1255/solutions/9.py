@@ -10,4 +10,3 @@ for i in range(n):
         j = 1
     prev = new
 print(max(ans, j))
-

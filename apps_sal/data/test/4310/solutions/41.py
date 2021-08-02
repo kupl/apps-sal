@@ -12,4 +12,3 @@ for A_1, A_2, A_3 in itertools.permutations(A, r=3):
 
 # 結果出力
 print(ans)
-
