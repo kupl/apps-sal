@@ -18,4 +18,3 @@ if len(list(trans_dict.values())) == len(set(trans_dict.values())):
     print('Yes')
 else:
     print('No')
-

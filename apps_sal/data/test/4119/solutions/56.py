@@ -11,5 +11,3 @@ ans = X[-1] - X[0] - sum(A)
 if N >= M:
     ans = 0
 print(ans)
-  
-

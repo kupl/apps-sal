@@ -6,4 +6,3 @@ side = (n - k) // 2
 for i in range(side, n, side + 1):
     a[i] = 1
 print(''.join(map(str, a)))
-

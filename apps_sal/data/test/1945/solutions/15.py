@@ -8,6 +8,6 @@ for i in range(inCount):
         prevValue = a[curStr1]
         a.pop(curStr1)
         a[curStr2] = prevValue
-print (len(a))
+print(len(a))
 for key, value in a.items():
     print(value, key)

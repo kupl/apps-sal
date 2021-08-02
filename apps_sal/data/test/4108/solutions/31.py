@@ -1,7 +1,7 @@
 S = input()
 T = input()
 
-alph = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alph = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 S_counter = []
 T_counter = []
@@ -16,4 +16,3 @@ if S_counter == T_counter:
     print('Yes')
 else:
     print('No')
-

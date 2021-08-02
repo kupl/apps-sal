@@ -20,4 +20,3 @@ for x, y in zip(s, t):
             break
 else:
     print("Yes")
-

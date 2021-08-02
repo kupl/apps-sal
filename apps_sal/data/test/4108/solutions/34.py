@@ -22,4 +22,3 @@ if ok:
     print("Yes")
 else:
     print("No")
-

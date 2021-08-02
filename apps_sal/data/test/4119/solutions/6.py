@@ -6,10 +6,10 @@ if n >= m:
     return
 
 al_s = sorted(al)
-res=[]
-for i in range(m-1):
-    res.append(al_s[i+1]-al_s[i])
+res = []
+for i in range(m - 1):
+    res.append(al_s[i + 1] - al_s[i])
 
 res_s = sorted(res)
 
-print(sum(res)-sum(res_s[m-n:]))
+print(sum(res) - sum(res_s[m - n:]))

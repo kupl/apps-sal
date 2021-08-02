@@ -1,4 +1,4 @@
-#/usr/bin/env python3
+# /usr/bin/env python3
 
 N = int(input())
 names = [input().split() for i in range(N)]
@@ -14,7 +14,6 @@ for n in names:
         c_to_old[n[1]] = old
 
 print(len(c_to_old))
-thing = sorted(list(c_to_old.items()), key = lambda x: x[1])
+thing = sorted(list(c_to_old.items()), key=lambda x: x[1])
 for c, o in thing:
     print(o, c)
-

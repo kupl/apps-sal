@@ -25,4 +25,3 @@ for i in range(len_s):
     d2[b] = a
 
 print('Yes')
-

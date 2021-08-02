@@ -10,4 +10,3 @@ while D and N > 1:
     N -= 1
     ans -= D.pop()
 print(ans)
-

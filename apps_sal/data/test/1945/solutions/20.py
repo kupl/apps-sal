@@ -1,6 +1,6 @@
 dic = {}
 s = int(input())
-i=0
+i = 0
 while (i < s):
     x = input()
     h = x.split()
@@ -8,8 +8,7 @@ while (i < s):
         dic[h[1]] = dic.pop(h[0])
     else:
         dic[h[1]] = h[0]
-    i+=1
+    i += 1
 print(len(dic))
 for x in dic:
     print(dic[x] + " " + x)
-

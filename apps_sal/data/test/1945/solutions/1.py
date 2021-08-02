@@ -12,5 +12,4 @@ for i in range(q):
         current.append(new)
 print(len(begin))
 for el in zip(begin, current):
-    print(el[0],el[1])
-
+    print(el[0], el[1])

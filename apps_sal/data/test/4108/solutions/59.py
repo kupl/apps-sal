@@ -12,11 +12,13 @@ for i in range(26):
     B.append(list())
 S = input()
 T = input()
+
+
 def solve():
     for i in range(len(S)):
-            index = ord(S[i]) - ord("a")
-            A[index].append(i)
-            
+        index = ord(S[i]) - ord("a")
+        A[index].append(i)
+
     for a_lis in A:
         flag = False
         if a_lis:
@@ -27,12 +29,12 @@ def solve():
         if flag:
             print("No")
             return
-        
+
     for i in range(len(T)):
-            index = ord(T[i]) - ord("a")
-            B[index].append(i)
-   
-    for b_lis in B :
+        index = ord(T[i]) - ord("a")
+        B[index].append(i)
+
+    for b_lis in B:
         flag = False
         if b_lis:
             tmp = S[b_lis[0]]
@@ -42,9 +44,10 @@ def solve():
         if flag:
             print("No")
             return
-    
+
     print("Yes")
-    #print(B)
-    return 
+    # print(B)
+    return
+
 
 solve()

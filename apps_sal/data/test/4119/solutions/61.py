@@ -22,4 +22,3 @@ for i in range(M - 1):
 ls.sort(reverse=True)
 
 print((X[M - 1] - X[0] - sum(ls[:N - 1])))
-

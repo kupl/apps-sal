@@ -10,13 +10,13 @@ for i in range(n):
         if s[i] == s[j]:
             s_par[i] = s_par[j]
             break
-            
+
 for i in range(n):
     for j in range(i):
         if t[i] == t[j]:
             t_par[i] = t_par[j]
             break
-            
+
 if s_par == t_par:
     print('Yes')
 else:

@@ -25,4 +25,3 @@ for i in range(N):
         else:
             pass
 print("Yes")
-

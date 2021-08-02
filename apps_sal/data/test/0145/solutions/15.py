@@ -11,8 +11,7 @@ s = []
 for c in a.lower():
     if (not c in s):
         s.append(c)
-    
-l = len (s)
+
+l = len(s)
 
 print("CHAT WITH HER!" if (l % 2 == 0) else "IGNORE HIM!")
-

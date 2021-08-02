@@ -13,5 +13,4 @@ for _ in range(n):
     a, b = list(map(int, input().split()))
     ml = max(ml, a)
     mr2 = min(mr2, b)
-print(max(0, ml-mr, ml2-mr2))
-
+print(max(0, ml - mr, ml2 - mr2))
