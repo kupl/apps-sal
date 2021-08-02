@@ -12,11 +12,14 @@ def solve(bs, gs):
         else:
             gs.pop()
     return ret
-    
+
+
 def __starting_point():
     input()
     bs = list(map(int, input().split()))
     input()
     gs = list(map(int, input().split()))
     print(solve(bs, gs))
+
+
 __starting_point()

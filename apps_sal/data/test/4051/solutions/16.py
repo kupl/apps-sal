@@ -6,4 +6,3 @@ for i in range(n - 1):
         break
 else:
     print('YES')
-

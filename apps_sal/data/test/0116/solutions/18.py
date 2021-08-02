@@ -21,4 +21,3 @@ elif l2 <= l1 and l1 <= r2 and r2 <= r1:
         print(r2 - l1 + 1)
 else:
     print(0)
-

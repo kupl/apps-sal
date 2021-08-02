@@ -17,4 +17,3 @@ else:
     if a <= k <= b:
         res -= 1
     print(res)
-

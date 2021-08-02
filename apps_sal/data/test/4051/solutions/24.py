@@ -11,4 +11,3 @@ for i in range(n):
     a.remove(max(a))
 assert b == c, (b, c)
 print('YES')
-

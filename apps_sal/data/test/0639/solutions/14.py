@@ -7,4 +7,3 @@ c = sum(b[:x])
 if x in a:
     c += 1
 print(c)
-

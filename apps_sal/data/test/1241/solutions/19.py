@@ -41,11 +41,13 @@ def main():
         if res:
             print("%d" % i)
             print((" ".join(str(x)
-                           for x in a[:start] + [1] * i + a[start + i:])))
+                            for x in a[:start] + [1] * i + a[start + i:])))
             return
+
 
 def __starting_point():
     main()
     # print(gcd(100, 2))
+
 
 __starting_point()

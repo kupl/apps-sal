@@ -28,4 +28,3 @@ for case_num in range(t):
             ok = False
 
     print('Yes' if ok else 'No')
-

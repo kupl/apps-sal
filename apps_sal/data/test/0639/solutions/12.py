@@ -3,5 +3,5 @@ arr = list(map(int, input().split()))
 ans = sum((i < x) for i in arr)
 ans = x - ans
 if x in list(arr):
-	ans += 1
+    ans += 1
 print(ans)

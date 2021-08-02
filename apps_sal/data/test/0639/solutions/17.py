@@ -1,4 +1,4 @@
-#python3
+# python3
 
 numbers_nr, evil_value = (int(x) for x in input().split())
 numbers = [int(x) for x in input().split()]
@@ -11,4 +11,3 @@ for value in range(0, evil_value):
         ans += 1
 
 print(ans)
-

@@ -1,4 +1,4 @@
-    # 1
+# 1
 # 0.1
 # True
 # "sdf"
@@ -118,7 +118,6 @@
 # print(s)
 
 
-
 n, m = list(map(int, input().split()))
 
 a = list(map(int, input().split()))
@@ -135,9 +134,8 @@ for l in range(n):
         r += 1;
         if (a[r] == 0):
             m = m - 1
-            #print(m)
-    
-    
+            # print(m)
+
     if r - l + 1 > ans:
         ans = r - l + 1
         ans_po = l
@@ -150,20 +148,4 @@ for i in range(ans_po, ans_po + ans):
     a[i] = 1;
 
 
-print(' '.join(map(str,a)))
-    
-    
-    
-    
-    
-
-
-
-
-    
-    
-
-
-
-
-
+print(' '.join(map(str, a)))

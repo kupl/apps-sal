@@ -26,9 +26,9 @@ def main():
         rear += 1
 
     nums.pop()
-    nums[maxi:maxi+maxr] = ('1' for _ in range(maxr))
+    nums[maxi:maxi + maxr] = ('1' for _ in range(maxr))
     print(maxr)
     print(' '.join(nums))
 
-main()
 
+main()

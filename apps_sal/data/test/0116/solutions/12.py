@@ -5,4 +5,3 @@ if max(l_1, l_2) <= k <= min(r_1, r_2):
 if ans < 0:
     ans = 0
 print(ans)
-

@@ -26,7 +26,7 @@ def intersect(l1, r1, l2, r2):
 
 
 def solve():
-#    print_args()
+    #    print_args()
     # m = readnlines(sys.stdin)
     line = sys.stdin.readline().strip()
     l1, r1, l2, r2, k = [int(i) for i in line.split()]
@@ -42,7 +42,8 @@ def solve():
 
 
 def __starting_point():
-   ans = solve()
-   print(ans)
+    ans = solve()
+    print(ans)
+
 
 __starting_point()

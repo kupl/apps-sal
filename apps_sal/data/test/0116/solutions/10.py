@@ -7,4 +7,3 @@ if start <= int(i[4]) <= end:
 if res < 0:
     res = 0
 print(res)
-

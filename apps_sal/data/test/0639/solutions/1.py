@@ -7,4 +7,3 @@ for i in range(n):
     if a[i] == x:
         ans += 1
 print(ans)
-

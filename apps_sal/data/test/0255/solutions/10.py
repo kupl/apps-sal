@@ -6,7 +6,7 @@ ng = int(input())
 girls = list(map(int, input().split(' ')))
 
 
-matches = [ [] for i in range(nb) ]
+matches = [[] for i in range(nb)]
 for bi, boy in enumerate(boys):
     for i in range(ng):
         if girls[i] >= boy - 1 and girls[i] <= boy + 1:
@@ -22,6 +22,7 @@ def find(idx, taken, tried):
                 return True
     return False
 
+
 def getmax():
     result = 0
     taken = {}
@@ -32,5 +33,5 @@ def getmax():
 
     return result
 
-print(getmax())
 
+print(getmax())

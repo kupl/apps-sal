@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
+
 
 n, x = rint()
 a = list(rint())
@@ -22,4 +24,3 @@ if b[x] == 1:
     cnt += 1
 
 print(cnt)
-

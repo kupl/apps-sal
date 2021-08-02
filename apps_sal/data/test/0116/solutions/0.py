@@ -5,4 +5,3 @@ L = max(l1, l2)
 ans = max(R - L + 1, 0)
 if L <= k <= R: ans = max(ans - 1, 0)
 print(ans)
-
