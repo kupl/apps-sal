@@ -35,7 +35,7 @@ num = 0
 for i in range(n):
     a, b = ord(v[i]) - ord("a"), ord(t[i]) - ord("a")
 
-    if not same(a-1, b-1):
+    if not same(a - 1, b - 1):
         unite(a - 1, b - 1)
         rec.append((v[i], t[i]))
         num += 1

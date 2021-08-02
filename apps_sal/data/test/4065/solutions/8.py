@@ -12,4 +12,6 @@ def __starting_point():
             else:
                 cur = 1
         print(ma)
+
+
 __starting_point()

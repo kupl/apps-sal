@@ -17,4 +17,3 @@ for i in range(26):
     r = fa[i]
     if l != r:
         print(g(l), g(r))
-

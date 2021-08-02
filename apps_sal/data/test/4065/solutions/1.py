@@ -6,10 +6,10 @@ for i in range(n):
 ans = 1
 curStreak = 1
 
-for i in range(1,n):
-    if s[i]<= 2*s[i-1]:
-        curStreak+=1
-        ans = max(ans,curStreak)
+for i in range(1, n):
+    if s[i] <= 2 * s[i - 1]:
+        curStreak += 1
+        ans = max(ans, curStreak)
     else:
         curStreak = 1
 

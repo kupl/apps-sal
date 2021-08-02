@@ -1,25 +1,26 @@
-def zalgo(s:str):
-  
-  l=0;r=0;n=len(s);
+def zalgo(s: str):
 
-  z = [0]*n
+    l = 0; r = 0; n = len(s);
 
-  for i in range(1,n):
+    z = [0] * n
 
-    z[i] = 0
+    for i in range(1, n):
 
-    if(i<=r): z[i]=min(r-i+1,z[i-l])
+        z[i] = 0
 
-    while(i+z[i]<n and s[z[i]]==s[i+z[i]]): z[i]+=1
+        if(i <= r): z[i] = min(r - i + 1, z[i - l])
 
-    if(i+z[i]-1>r): 
-      l = i
-      r = i+z[i]-1
-    
-    if(i+z[i]==n):
-      return z[i]
+        while(i + z[i] < n and s[z[i]] == s[i + z[i]]): z[i] += 1
 
-  return 0
+        if(i + z[i] - 1 > r):
+            l = i
+            r = i + z[i] - 1
+
+        if(i + z[i] == n):
+            return z[i]
+
+    return 0
+
 
 n = int(input())
 
@@ -28,21 +29,18 @@ s = input().split()
 txt = [s[0]]
 
 
-for i in range(1,n):
-  x = len(txt)
-  y = len(s[i])
+for i in range(1, n):
+    x = len(txt)
+    y = len(s[i])
 
-  mn = min(x,y)
-  
- # print(mn,str(txt[-mn:]),sep=' ')
-  
-  mx = zalgo(s[i] + '#' + ''.join((txt[-mn:])))
-  
- # print(mx,mn,sep=' ')
-  
-  txt.extend(s[i][mx:])
+    mn = min(x, y)
 
-print(''.join(txt)) 
+   # print(mn,str(txt[-mn:]),sep=' ')
 
+    mx = zalgo(s[i] + '#' + ''.join((txt[-mn:])))
 
+   # print(mx,mn,sep=' ')
 
+    txt.extend(s[i][mx:])
+
+print(''.join(txt))

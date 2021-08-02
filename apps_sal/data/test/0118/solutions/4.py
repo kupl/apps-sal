@@ -8,4 +8,3 @@ elif x % s == 1 and x != 1:
     print("YES")
 else:
     print("NO")
-

@@ -3,6 +3,7 @@ def getfather(x):
     fa[x] = getfather(fa[x])
     return fa[x]
 
+
 n = int(input())
 s = list(input())
 t = list(input())
@@ -18,11 +19,8 @@ for i in range(n):
     if fx != fy:
         fa[fx] = fy
         tot += 1
-        ans.append((chr(x + 97),chr(y + 97)))
+        ans.append((chr(x + 97), chr(y + 97)))
 
 print(tot)
 for i in ans:
     print(i[0] + " " + i[1])
-    
-
-

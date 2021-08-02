@@ -24,9 +24,10 @@ def main():
 
     for a, b in ans:
         print(a, b)
-        
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

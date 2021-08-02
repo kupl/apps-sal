@@ -23,4 +23,3 @@ while t <= x:
     t += s
 
 print("NO")
-

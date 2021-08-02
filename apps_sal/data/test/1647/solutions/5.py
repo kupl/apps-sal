@@ -5,6 +5,7 @@ def f(x):
     else:
         return x
 
+
 n = int(input())
 s = input()
 t = input()

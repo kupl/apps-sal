@@ -47,4 +47,3 @@ for i in range(len(str1)):
 print(len(ans))
 for x in ans:
     print(x[0] + " " + x[1])
-

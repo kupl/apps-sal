@@ -4,6 +4,7 @@ def f(x):
         return data[x]
     return x
 
+
 n = int(input())
 s = input()
 t = input()

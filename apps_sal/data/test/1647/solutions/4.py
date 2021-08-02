@@ -4,38 +4,44 @@ from random import getrandbits
 
 p = []
 
+
 def get(v):
-	nonlocal p
-	if p[v] == v:
-		return v
-	p[v] = get(p[v])
-	return p[v]
+    nonlocal p
+    if p[v] == v:
+        return v
+    p[v] = get(p[v])
+    return p[v]
+
 
 def unite(u, v):
-	nonlocal p
-	u, v = get(u), get(v)
-	if u == v:
-		return False
-	if getrandbits(1):
-		u, v = v, u
-	p[u] = v
-	return True
+    nonlocal p
+    u, v = get(u), get(v)
+    if u == v:
+        return False
+    if getrandbits(1):
+        u, v = v, u
+    p[u] = v
+    return True
+
 
 def main():
-	n = int(input())
-	nonlocal p
-	p = list(range(26))
-	s = input()
-	t = input()
-	ans = []
-	for i, x in enumerate(zip(s, t)):
-		a, b = x
-		if unite(ord(a) - ord('a'), ord(b) - ord('a')):
-			ans.append((a, b))
-	print(len(ans))
-	for x in ans:
-		print(*x)
+    n = int(input())
+    nonlocal p
+    p = list(range(26))
+    s = input()
+    t = input()
+    ans = []
+    for i, x in enumerate(zip(s, t)):
+        a, b = x
+        if unite(ord(a) - ord('a'), ord(b) - ord('a')):
+            ans.append((a, b))
+    print(len(ans))
+    for x in ans:
+        print(*x)
+
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

@@ -14,4 +14,3 @@ for i in range(n - 1):
     ans.append(t)
 
 print(max(ans))
-

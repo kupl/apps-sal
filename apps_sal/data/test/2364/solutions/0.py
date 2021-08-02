@@ -10,4 +10,3 @@ for i in range(n - 1)[::-1]:
     now *= 2
     now %= M
 print(wa % M)
-
