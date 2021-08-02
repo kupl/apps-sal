@@ -21,4 +21,6 @@ def main():
                 break
         print("".join(S[:i]) + temp * "1" + "".join(S[i:]))
     return 0
+
+
 main()

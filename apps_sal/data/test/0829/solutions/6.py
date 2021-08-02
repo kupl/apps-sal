@@ -7,4 +7,3 @@ if a.count('0') == a.count('1'):
 else:
     print(1)
     print(a)
-

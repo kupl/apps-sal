@@ -1,5 +1,6 @@
 from queue import Queue
 
+
 def main():
     N, K = map(int, input().split())
     A = list(map(int, input().split()))
@@ -26,6 +27,9 @@ def main():
     print(L)
     print(' '.join([str(a) for a in ans[::-1]]))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,5 +1,5 @@
 from collections import deque
-n, k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 
 q = deque()
 a = list(map(int, input().split()))
@@ -17,5 +17,4 @@ for i in range(n):
             vis.add(a[i])
 
 print(len(q))
-print(str(list(q)[::-1]).replace('[','').replace(']','').replace(', ',' '))
-
+print(str(list(q)[::-1]).replace('[', '').replace(']', '').replace(', ', ' '))

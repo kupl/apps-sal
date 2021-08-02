@@ -1,33 +1,32 @@
-n,k = list(map(int,input().split()))
-a = list(map(int,input().split()))
-from collections import deque
 from collections import defaultdict
+from collections import deque
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
 b = deque()
 c = defaultdict(int)
 for i in a:
-    c[i]=0
+    c[i] = 0
 l = 0
 i = 0
-while i<n:
-    if l<k:
-        if c[a[i]]==1:
-            i=i+1
+while i < n:
+    if l < k:
+        if c[a[i]] == 1:
+            i = i + 1
             continue
         else:
             b.appendleft(a[i])
-            c[a[i]]=1
-            l=l+1
-            i=i+1
+            c[a[i]] = 1
+            l = l + 1
+            i = i + 1
     else:
-        if c[a[i]]==1:
-            i=i+1
+        if c[a[i]] == 1:
+            i = i + 1
             continue
         else:
-            e=b.pop()
-            c[e]=0
-            c[a[i]]=1
+            e = b.pop()
+            c[e] = 0
+            c[a[i]] = 1
             b.appendleft(a[i])
-            i=i+1
+            i = i + 1
 print(len(b))
 print(*b)
-

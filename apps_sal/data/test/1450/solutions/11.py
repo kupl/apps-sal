@@ -32,5 +32,3 @@ while r0:
 ans.reverse()
 for i in ans:
     print(i, end='')
-
-

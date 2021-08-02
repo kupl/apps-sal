@@ -5,29 +5,23 @@ from sys import *
 from string import *
 from collections import *
 setrecursionlimit(10**7)
-dX= [-1, 1, 0, 0,-1, 1,-1, 1]
-dY= [ 0, 0,-1, 1, 1,-1,-1, 1]
-RI=lambda: list(map(int,input().split()))
-RS=lambda: input().rstrip().split()
+dX = [-1, 1, 0, 0, -1, 1, -1, 1]
+dY = [0, 0, -1, 1, 1, -1, -1, 1]
+RI = lambda: list(map(int, input().split()))
+RS = lambda: input().rstrip().split()
 #################################################
-n=RI()[0]
-ind=0
-ans1,ans2=10**6, 10**6
+n = RI()[0]
+ind = 0
+ans1, ans2 = 10**6, 10**6
 for i in range(4):
-    a,b,c,d=RI()
-    a=min(a,b)
-    c=min(c,d)
-    if a+c < ans1+ans2:
-        ind=i+1
-        ans1=a
-        ans2=c
-if n-ans1<ans2:
+    a, b, c, d = RI()
+    a = min(a, b)
+    c = min(c, d)
+    if a + c < ans1 + ans2:
+        ind = i + 1
+        ans1 = a
+        ans2 = c
+if n - ans1 < ans2:
     print(-1)
 else:
-    print(ind, ans1,n-ans1)
-
-
-
-
-
-
+    print(ind, ans1, n - ans1)

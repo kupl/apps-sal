@@ -1,9 +1,9 @@
-n=int(input())
-s=input()
+n = int(input())
+s = input()
 
-if(s.count('0')==s.count('1')):
-	print(2)
-	print(s[0],s[1:])
+if(s.count('0') == s.count('1')):
+    print(2)
+    print(s[0], s[1:])
 else:
-	print(1)
-	print(s)
+    print(1)
+    print(s)

@@ -7,14 +7,14 @@ count1 = 0
 index = 0
 found2 = False
 for c in line:
-    index +=1
+    index += 1
     if c == '0':
-        count0+=1
+        count0 += 1
     if c == '2':
         found2 = True
         break
 while count0 > 0:
-    count0-=1
+    count0 -= 1
     print('0', end='')
 for c in line:
     if c == '1':
