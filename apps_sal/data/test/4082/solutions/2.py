@@ -1,5 +1,5 @@
 n = int(input())
-a = [-1] + list(map(int,input().split()))
+a = [-1] + list(map(int, input().split()))
 
 cur = 0
 l = [0] * n
@@ -31,4 +31,3 @@ print(res)
 
 # print(l)
 # print(m)
-

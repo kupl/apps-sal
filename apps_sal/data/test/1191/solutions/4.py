@@ -36,4 +36,3 @@ x = [(people[i][2], str(sum(dp[i]) + people[i][1])) for i in range(n)]
 x.sort(key=takeFirst)
 
 print(" ".join([z[1] for z in x]))
-

@@ -1,14 +1,19 @@
 import operator
+
+
 class Knight:
     def __init__(self, power, coins, index):
         self.power = power
         self.coins = coins
         self.index = index
 
+
 class MaxKnight:
     def __init__(self, coins, index):
         self.coins = coins
         self.index = index
+
+
 nk = input().split(" ")
 n = int(nk[0])
 k = int(nk[1])
@@ -43,4 +48,3 @@ for i in range(n):
     max_knights[i] = MaxKnight(max_knights[i], knights[i].index)
 max_knights.sort(key=operator.attrgetter('index'))
 print(" ".join(str(knight.coins) for knight in max_knights))
-

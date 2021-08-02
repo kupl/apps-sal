@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
@@ -13,7 +14,7 @@ def solve():
     acost = [0] * n
     for i in range(1, n):
         valstoleft = i
-        acost[i] = acost[i-1] + valstoleft * (a[i] - a[i-1])
+        acost[i] = acost[i - 1] + valstoleft * (a[i] - a[i - 1])
     res = 10000000000000000
     for i in range(m):
         amax = n - 1
@@ -22,16 +23,17 @@ def solve():
             avg = (amin + amax + 1) // 2
             if a[avg] > b[i]: amax = avg - 1
             else: amin = avg
-        res = min(res, bcost[i] + acost[amin] + (amin+1)*(b[i] - a[amin]))
+        res = min(res, bcost[i] + acost[amin] + (amin + 1) * (b[i] - a[amin]))
     for i in range(n):
         bmax = m - 1
         bmin = 0
         while bmin < bmax:
             avg = (bmax + bmin) // 2
-            if b[avg] < a[i] : bmin = avg + 1
+            if b[avg] < a[i]: bmin = avg + 1
             else: bmax = avg
-        res = min(res, bcost[bmin] + acost[i] + (m - bmin)*(b[bmin] - a[i]))
+        res = min(res, bcost[bmin] + acost[i] + (m - bmin) * (b[bmin] - a[i]))
     return max(res, 0)
 
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+if sys.hexversion == 50594544: sys.stdin = open("test.txt")
 print(solve())

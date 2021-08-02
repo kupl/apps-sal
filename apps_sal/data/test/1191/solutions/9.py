@@ -41,4 +41,3 @@ for j in range(n):
 
 for i in range(n):
     print(ans_set[i] + c_dic[i], end=" ")
-

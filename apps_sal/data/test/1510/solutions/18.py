@@ -13,12 +13,10 @@ b = list(map(int, input().split()))
 
 inf, sup = min(a), max(b)
 while inf < sup:
-    t = (inf + sup)//2
-    if costo(a, b, t+1) - costo(a, b, t) >= 0:
+    t = (inf + sup) // 2
+    if costo(a, b, t + 1) - costo(a, b, t) >= 0:
         sup = t
     else:
         inf = t + 1
 
 print(costo(a, b, inf))
-
-
