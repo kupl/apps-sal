@@ -1,5 +1,5 @@
 import math
-A,B,H,M = map(int,input().split())
+A, B, H, M = map(int, input().split())
 Btheta = M * math.pi / 30
 Bx = B * math.cos(Btheta)
 By = B * math.sin(Btheta)

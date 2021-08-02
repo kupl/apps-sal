@@ -63,7 +63,7 @@ def slv(N, K, A):
 
     s = 0
     ans = N
-    for i in range(N-1, -1, -1):
+    for i in range(N - 1, -1, -1):
         if s + A[i] < K:
             s += A[i]
         else:
@@ -79,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

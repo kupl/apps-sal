@@ -8,5 +8,5 @@ while tmp > 0:
 
 if n % k == 0:
     print("Yes")
-else: 
+else:
     print("No")

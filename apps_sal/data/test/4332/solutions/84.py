@@ -8,4 +8,3 @@ if (N_NUMBER % N_SUM) == 0:
     print('Yes')
 else:
     print('No')
-

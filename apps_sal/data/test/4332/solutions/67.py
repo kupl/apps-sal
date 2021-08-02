@@ -8,4 +8,3 @@ def sum_digit(n):
 
 n = int(input())
 print(('Yes' if n % sum_digit(n) == 0 else 'No'))
-

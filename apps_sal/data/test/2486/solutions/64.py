@@ -23,6 +23,7 @@ def d_no_need(N, K, A):
                     updated = False
     return ans
 
+
 N, K = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
 print((d_no_need(N, K, A)))
@@ -31,4 +32,3 @@ print((d_no_need(N, K, A)))
 # 8 100
 # 1 1 8 8 8 25 26 50
 # に対して2や5を返すsubmissionが見られるとのこと(実際は0)
-

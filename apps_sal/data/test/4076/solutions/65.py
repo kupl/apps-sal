@@ -1,8 +1,8 @@
+import math
 A, B, H, M = map(int, input().split())
 
-import math
 
-H_angle =(M * math.pi) / 30
+H_angle = (M * math.pi) / 30
 M_angle = (60 * H + M) * math.pi / 360
 
 H_x, H_y = (A * math.cos(H_angle), A * math.sin(H_angle))

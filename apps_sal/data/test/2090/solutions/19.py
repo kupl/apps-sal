@@ -7,7 +7,7 @@ for _ in range(N):
     t, b = [int(s) for s in input().split()]
     beauties.add(b)
     songs.append((t, b))
-songs.sort(key= lambda x: x[1], reverse=True)
+songs.sort(key=lambda x: x[1], reverse=True)
 max_pleasure = 0
 total_length = 0
 max_lengths = []
@@ -22,5 +22,3 @@ for i in range(K, N):
         total_length = total_length - min_length + songs[i][0]
         max_pleasure = max(max_pleasure, total_length * songs[i][1])
 print(max_pleasure)
-
-

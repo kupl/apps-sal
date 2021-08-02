@@ -11,4 +11,3 @@ for i in range(n ** 2):
         cols[c] = 1
         res.append(str(i + 1))
 print(" ".join(res))
-

@@ -14,6 +14,7 @@ def d_NoNeed(N, K, A):
             t = 0
     return t
 
-N,K = [int(i) for i in input().split()]
+
+N, K = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
 print(d_NoNeed(N, K, A))

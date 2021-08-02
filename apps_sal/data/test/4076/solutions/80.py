@@ -10,4 +10,3 @@ a = np.array([A * math.sin(thetaA), A * math.cos(thetaA)])
 b = np.array([B * math.sin(thetaB), B * math.cos(thetaB)])
 
 print((round(np.linalg.norm(a - b), 11)))
-

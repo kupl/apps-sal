@@ -1,6 +1,6 @@
 n, k = map(int, input().split())
 a = list(map(int, input().split()))
-a.sort(reverse = True)
+a.sort(reverse=True)
 ans = n
 s, cnt = 0, 0
 for i in a:

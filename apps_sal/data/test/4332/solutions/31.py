@@ -5,4 +5,3 @@ if N % Sn == 0:
     print("Yes")
 else:
     print("No")
-

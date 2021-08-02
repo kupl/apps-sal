@@ -2,10 +2,13 @@ import math
 import numpy as np
 
 # tはラジアン
+
+
 def rot_rev(t, v):
-    R = np.array([[ np.cos(t), np.sin(t)],
+    R = np.array([[np.cos(t), np.sin(t)],
                   [-np.sin(t), np.cos(t)]])
     return np.dot(R, v)
+
 
 A, B, H, M = list(map(int, input().split()))
 
@@ -20,4 +23,3 @@ rot_A = rot_rev(H_rad, P_A)
 rot_B = rot_rev(M_rad, P_B)
 
 print((np.linalg.norm(rot_A - rot_B)))
-

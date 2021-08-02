@@ -6,14 +6,17 @@ n, k, *a = map(int, sys.stdin.read().split())
 a.sort()
 
 mask = (1 << k) - 1
+
+
 def is_needed(i):
     if a[i] == k:
         return True
     res = 1
-    for j in chain(a[:i], a[i+1:]):
+    for j in chain(a[:i], a[i + 1:]):
         res |= (res << j)
         res &= mask
-    return res >> (k - a[i]) 
+    return res >> (k - a[i])
+
 
 def main():
     lo = -1
@@ -24,10 +27,13 @@ def main():
             hi = i
         else:
             lo = i
-    
+
     return hi
-    
+
+
 def __starting_point():
     ans = main()
     print(ans)
+
+
 __starting_point()

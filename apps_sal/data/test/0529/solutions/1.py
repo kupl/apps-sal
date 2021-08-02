@@ -9,4 +9,3 @@ for _26 in range(len(_27)):
     else:
         _4 = _4 + _19.lower()
 print(_4)
-

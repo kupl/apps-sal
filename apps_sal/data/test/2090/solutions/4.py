@@ -17,7 +17,7 @@ heap_length = []
 for i in range(k):
     sum_length += arr[i][0]
     heapq.heappush(heap_length, arr[i][0])
-min_beauty = arr[k-1][1]
+min_beauty = arr[k - 1][1]
 answer = sum_length * min_beauty
 for i in range(k, n):
     min_beauty = arr[i][1]
@@ -35,4 +35,3 @@ for i in range(k):
     min_beauty = arr[i][1]
     answer = max(answer, sum_length * min_beauty)
 print(answer)
-

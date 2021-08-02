@@ -6,15 +6,13 @@ p = [0] * n
 
 for i in range(m):
 
-  a, b, c = R()
+    a, b, c = R()
 
-  p[a - 1] -= c
+    p[a - 1] -= c
 
-  p[b - 1] += c
+    p[b - 1] += c
 
 print(sum(i for i in p if i > 0))
 
 
-
 # Made By Mostafa_Khaled
-

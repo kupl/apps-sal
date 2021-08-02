@@ -21,6 +21,7 @@ def d_no_need(N, K, A):
                     first_update = False
     return ans
 
+
 N, K = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
 print(d_no_need(N, K, A))

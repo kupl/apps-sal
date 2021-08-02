@@ -6,4 +6,4 @@ for i in range(n * n):
         for j in range(n):
             li[j][b - 1] = 1
             li[a - 1][j] = 1
-        print(i + 1, end = ' ')
+        print(i + 1, end=' ')

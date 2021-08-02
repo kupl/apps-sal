@@ -12,4 +12,3 @@ for i in range(n):
         ans = min(ans, n - i - 1)
 
 print(ans)
-

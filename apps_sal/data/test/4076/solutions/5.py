@@ -21,4 +21,3 @@ theta = 2 * pi * (h / 12.0 + m / 720.0 - m / 60.0)
 res = sqrt(a ** 2 + b ** 2 - 2 * a * b * cos(theta))
 
 print(res)
-

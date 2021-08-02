@@ -1,6 +1,6 @@
 import math
 import numpy as np
-a,b,h,m = list(map(int, input().split()))
+a, b, h, m = list(map(int, input().split()))
 a_radian = math.radians(h * 30 + m / 2)
 a_ = np.array([a * math.cos(a_radian), a * math.sin(a_radian)])
 

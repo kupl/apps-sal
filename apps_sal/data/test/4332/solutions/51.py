@@ -4,9 +4,9 @@ def S(n):
         c += int(n[i])
     return c
 
+
 N = input()
 if int(N) % S(N) == 0:
     print('Yes')
 else:
     print('No')
-

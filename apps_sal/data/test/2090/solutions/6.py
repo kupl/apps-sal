@@ -4,6 +4,7 @@
 # @Email   : gilgemesh2012@gmail.com
 # @File    : C. Playlist.py
 
+import heapq
 import atexit
 import io
 import sys
@@ -17,9 +18,6 @@ sys.stdout = _OUTPUT_BUFFER
 @atexit.register
 def write():
     sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
-
-
-import heapq
 
 
 def main():
@@ -48,4 +46,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

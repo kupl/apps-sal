@@ -21,11 +21,10 @@ for t, v in songs:
     else:
         # print(S)
         if S[0] <= t:
-            tmpS = tmpS-S[0]+t
+            tmpS = tmpS - S[0] + t
             heapq.heappop(S)
             heapq.heappush(S, t)
             minB = v
     #print("tmp->", minB*tmpS)
-    ans = max(ans, minB*tmpS)
+    ans = max(ans, minB * tmpS)
 print(ans)
-

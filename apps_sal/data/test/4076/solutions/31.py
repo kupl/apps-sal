@@ -15,8 +15,7 @@ def main():
     x2 = b * math.cos(2 * math.pi * (m / 60))
     y2 = b * math.sin(2 * math.pi * (m / 60))
 
-    print((((x1 - x2)**2 + (y1 - y2)**2)**(1/2)))
+    print((((x1 - x2)**2 + (y1 - y2)**2)**(1 / 2)))
 
 
 main()
-
