@@ -8,4 +8,3 @@ for i in range(1, N + 1):
         ans.append(i)
 
 print((sum(ans)))
-

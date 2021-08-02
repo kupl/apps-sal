@@ -8,4 +8,3 @@ for i in l:
     if a <= sum(li) <= b:
         ans += int(i)
 print(ans)
-

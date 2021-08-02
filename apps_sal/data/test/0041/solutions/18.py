@@ -3,7 +3,7 @@ n = int(input())
 arr = input().split(' ')
 
 
-last_zeros = [0]*n
+last_zeros = [0] * n
 last_zero = -1
 for i in range(n):
     arr[i] = int(arr[i])

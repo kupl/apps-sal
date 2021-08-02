@@ -5,7 +5,7 @@ for _ in range(t):
 
     if a == b:
         print(0); continue
-    
+
     if b > a:
         if a & 1 == b & 1:
             print(2); continue

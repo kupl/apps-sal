@@ -1,6 +1,6 @@
-n,a,b = list(map(int,input().split()))
+n, a, b = list(map(int, input().split()))
 ans = 0
-for i in range(1,n+1):
+for i in range(1, n + 1):
     temp = 0
     c = str(i)
     for j in range(len(c)):
@@ -8,4 +8,3 @@ for i in range(1,n+1):
     if a <= temp and temp <= b:
         ans += i
 print(ans)
-

@@ -1,8 +1,8 @@
 n = int(input())
-a = list(map(int, input().split() ))
+a = list(map(int, input().split()))
 
-x = [0]*len(a)
-y = [0]*len(a)
+x = [0] * len(a)
+y = [0] * len(a)
 
 c1 = 0
 z1 = False
@@ -15,18 +15,18 @@ for i in range(len(a)):
         c1 = 1
     elif z1:
         x[i] = c1
-        c1+=1
+        c1 += 1
     else:
         x[i] = 0
 
-    if a[n-i-1] == 0:
+    if a[n - i - 1] == 0:
         z2 = True
         c2 = 1
     elif z2:
-        y[n-i-1] = c2
-        c2+=1
+        y[n - i - 1] = c2
+        c2 += 1
     else:
-        y[n-i-1] = 0
+        y[n - i - 1] = 0
 
 ans = ""
 for i in range(len(a)):
@@ -41,7 +41,3 @@ for i in range(len(a)):
         else:
             ans += str(min(x[i], y[i])) + " "
 print(ans)
-            
-
-        
-

@@ -1,9 +1,10 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     for _ in range(int(input())):
-        a, b = map(int,input().split()) 
+        a, b = map(int, input().split())
         if a == b:
             print(0)
             continue
@@ -12,7 +13,7 @@ def main():
                 print(2)
             else:
                 print(1)
-            
+
         else:
             if a % 2 == b % 2:
                 print(1)

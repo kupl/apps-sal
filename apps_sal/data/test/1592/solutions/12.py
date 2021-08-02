@@ -12,4 +12,3 @@ print(Last + Messages, Max)
 # Location: Mashhad for few days
 # Caption: Finally happened what should be happened
 # CodeNumber: 692
-

@@ -1,6 +1,6 @@
 N, A, B = map(int, input().split())
 lst = []
-for i in range(N+1):
+for i in range(N + 1):
     if i >= 1 and i < 10:
         if i >= A and i <= B:
             lst.append(i)

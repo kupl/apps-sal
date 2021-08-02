@@ -1,10 +1,13 @@
 import sys
 
+
 def fast_input():
     return sys.stdin.readline().strip()
 
+
 def data_input():
     return [int(x) for x in fast_input().split()]
+
 
 def binary_search(array, x):
     left, right = -1, len(array)
@@ -15,6 +18,7 @@ def binary_search(array, x):
         elif array[middle] < x:
             left = middle
     return right
+
 
 def solve_of_problem():
     a, b = data_input()
@@ -27,6 +31,7 @@ def solve_of_problem():
     else:
         print(2)
     return
+
 
 for ______ in range(int(fast_input())):
     solve_of_problem()

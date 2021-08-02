@@ -4,7 +4,8 @@ def getInt(): return int(input())
 def getVars(): return list(map(int, input().split()))
 def getList(): return list(map(int, input().split()))
 def getStr(): return input().strip()
-## -------------------------------
+# -------------------------------
+
 
 t = getInt()
 for i in range(t):
@@ -12,9 +13,8 @@ for i in range(t):
     if a == b:
         print(0)
     elif a > b:
-        if a%2 == b%2:print(1)
+        if a % 2 == b % 2: print(1)
         else: print(2)
     else:
-        if a%2 == b%2:print(2)
-        else:print(1)
-
+        if a % 2 == b % 2: print(2)
+        else: print(1)

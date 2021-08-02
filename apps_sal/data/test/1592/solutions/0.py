@@ -2,16 +2,17 @@ import re
 import itertools
 from collections import Counter, deque
 
+
 class Task:
     tasks = []
-    answer = "" 
-	
+    answer = ""
+
     def getData(self):
         numberOfTasks = int(input())
         for i in range(0, numberOfTasks):
             self.tasks += [[int(x) for x in input().split(' ')]]
         #inFile = open('input.txt', 'r')
-        #inFile.readline().rstrip()
+        # inFile.readline().rstrip()
         #self.childs = inFile.readline().rstrip()
 
     def solve(self):
@@ -27,7 +28,7 @@ class Task:
             else:
                 timeOfLastMessage = time + queueSize
                 break
-                
+
             if currentTask < len(self.tasks) and \
                     self.tasks[currentTask][0] == time:
                 queueSize += self.tasks[currentTask][1]
@@ -37,10 +38,10 @@ class Task:
     def printAnswer(self):
         print(self.answer)
         #outFile = open('output.txt', 'w')
-        #outFile.write(self.answer)
+        # outFile.write(self.answer)
+
 
 task = Task()
 task.getData()
 task.solve()
 task.printAnswer()
-

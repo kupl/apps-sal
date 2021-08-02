@@ -1,11 +1,11 @@
-n,a,b = map(int,input().split())
+n, a, b = map(int, input().split())
 ans = 0
-for i in range(1,n+1):
+for i in range(1, n + 1):
     s = str(i)
     sum = 0
     for j in s:
         t = int(j)
-        sum+=t
+        sum += t
     if a <= sum <= b:
-        ans +=i
+        ans += i
 print(ans)

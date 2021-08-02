@@ -14,4 +14,3 @@ for t in range(T):
         else:
             res = 2
     print(res)
-

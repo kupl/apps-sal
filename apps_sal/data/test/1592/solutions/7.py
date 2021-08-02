@@ -4,15 +4,14 @@ cq = 0
 mcq = 0
 
 for i in range(n):
-	t, c = list(map(int, input().split()))
-	mcq = max(cq, mcq)	
-	cq = max(cq - (t - ct), 0)
-	cq += c
-	ct = t
-	#print(cq)
-	
+    t, c = list(map(int, input().split()))
+    mcq = max(cq, mcq)
+    cq = max(cq - (t - ct), 0)
+    cq += c
+    ct = t
+    # print(cq)
+
 
 mcq = max(cq, mcq)
 ct += cq
-print(ct, mcq)	
-
+print(ct, mcq)

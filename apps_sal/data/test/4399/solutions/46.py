@@ -1,1 +1,1 @@
-print('YNeos'[input()in['AAA','BBB']::2])
+print('YNeos'[input() in ['AAA', 'BBB']::2])

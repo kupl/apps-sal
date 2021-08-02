@@ -1,1 +1,1 @@
-print('YNeos'[len(set(input()))&1::2])
+print('YNeos'[len(set(input())) & 1::2])

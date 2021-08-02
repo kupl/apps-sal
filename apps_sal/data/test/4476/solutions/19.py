@@ -9,4 +9,3 @@ for i in range(t):
         print(1)
     else:
         print(2)
-

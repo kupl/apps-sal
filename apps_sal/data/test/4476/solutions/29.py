@@ -1,6 +1,10 @@
 from math import ceil as cc
+
+
 def mi():
     return map(int, input().split())
+
+
 '''
 5
 2 3
@@ -11,14 +15,14 @@ def mi():
 '''
 n = int(input())
 for i in range(n):
-    a,b = mi()
-    if a==b:
+    a, b = mi()
+    if a == b:
         print(0)
-    elif (b-a)%2==0 and b>a:
+    elif (b - a) % 2 == 0 and b > a:
         print(2)
-    elif (b-a)%2 and b>a:
+    elif (b - a) % 2 and b > a:
         print(1)
-    elif (b-a)%2==0 and b<a:
+    elif (b - a) % 2 == 0 and b < a:
         print(1)
     else:
         print(2)

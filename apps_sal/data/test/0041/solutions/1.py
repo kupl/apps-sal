@@ -2,6 +2,7 @@ inf = 10**10
 input()
 nums = [int(x) for x in input().split()]
 
+
 def run(ns):
     curr = inf
     res = []
@@ -12,8 +13,8 @@ def run(ns):
         curr += 1
     return res
 
+
 fw = run(nums)
 rew = (run(reversed(nums)))[::-1]
 
 print(' '.join(str(min(fw[i], rew[i])) for i in range(len(nums))))
-

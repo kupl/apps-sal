@@ -13,4 +13,3 @@ for i in range(1, n):
     vmax = max(b, vmax)
 
 print(a + b, vmax)
-
