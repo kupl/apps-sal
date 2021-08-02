@@ -21,4 +21,3 @@ for x1 in range(r + 1):
                 cur = d[x2][y2] - d[x2][y1] - d[x1][y2] + d[x1][y1]
                 if cur >= k: cnt += 1
 print(cnt)
-

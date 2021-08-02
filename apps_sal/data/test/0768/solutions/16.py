@@ -10,4 +10,3 @@ for i in range(n):
             if c[j] == t:
                 r += 1
 print(r)
-

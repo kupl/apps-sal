@@ -24,4 +24,3 @@ for x1 in range(r):
                 if cnt >= k:
                     answer += 1
 print(answer)
-

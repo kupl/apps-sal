@@ -4,6 +4,8 @@
 # 2点s,tについて、最短距離であれば、D[s,t]=D[s,i]+edges[i,j]+D[j,t]を満たすi,jの組み合わせは最短経路辺である
 # 5000*1000の探索なので間に合う
 
+from itertools import combinations
+from collections import defaultdict
 from scipy.sparse import csr_matrix  # 自分で配列を作ってからcsrに入れよう(lilに打ち込んでいくのは非常に遅い)
 
 # ダイクストラ法 (正の単一始点最短経路) (全点間最短経路)
@@ -22,8 +24,6 @@ def read_ints():
 N, M = read_ints()
 adj_mat = [[0] * N for _ in range(N)]
 INF = 10 ** 9
-from collections import defaultdict
-from itertools import combinations
 edges = defaultdict(lambda: INF)
 for _ in range(M):
     a, b, c = read_ints()
@@ -64,4 +64,3 @@ for (i, j), e in list(edges.items()):
 
 print((len(edge_not_use)))
 # print(edge_not_use)
-

@@ -16,18 +16,15 @@ for i in range(n):
     else:
         j = i
         break
-    
+
 for i in range(j, n):
     res += an[i]
-          
+
 if(k > 0):
     if(j == n):
         j -= 1
     t = min(int(math.fabs(an[j])), int(math.fabs(an[j - 1])))
     if(k % 2 != 0):
         res -= t * 2
-        
-print(res)
-    
-    
 
+print(res)

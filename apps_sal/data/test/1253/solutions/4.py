@@ -13,4 +13,3 @@ if k % 2 == 0 or 0 in a:
     print(sum(a))
 else:
     print(sum(a) - 2 * a[0])
-

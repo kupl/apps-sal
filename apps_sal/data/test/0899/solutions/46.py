@@ -1,5 +1,6 @@
 def main():
     from sys import stdin
+
     def input():
         return stdin.readline().strip()
 
@@ -40,5 +41,6 @@ def main():
                         heapq.heappush(todo, (k[0] + l[0], l[1]))
 
     print(ans // 2)
+
 
 main()

@@ -1,5 +1,7 @@
 from scipy.sparse.csgraph import floyd_warshall
 from scipy.sparse import csr_matrix
+
+
 def main():
     N, M = list(map(int, input().split()))
     w = [[0] * N for i in range(N)]
@@ -9,7 +11,7 @@ def main():
         a -= 1
         b -= 1
         w[a][b] = w[b][a] = c
-        l.append((a,b,c))
+        l.append((a, b, c))
     G = csr_matrix(w)
     d = floyd_warshall(G, directed=False)
     r = 0
@@ -17,5 +19,6 @@ def main():
         if d[a][b] != c:
             r += 1
     return r
-print((main()))
 
+
+print((main()))

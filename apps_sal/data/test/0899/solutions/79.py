@@ -45,7 +45,9 @@ def resolve():
 
     print((len(k) - len(used)))
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

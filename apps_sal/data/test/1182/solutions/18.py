@@ -4,8 +4,8 @@ def cnt(x1, y1, x2, y2):
         for j in range(x1, x2 + 1):
             if lst[i][j] == 1:
                 ans += 1
-    return ans            
-            
+    return ans
+
 
 h, w, n, kk = list(map(int, input().split()))
 anss = 0
@@ -19,6 +19,4 @@ for i in range(h):
             for z in range(w):
                 if cnt(j, i, z, k) >= kk:
                     anss += 1
-print(anss)                
-    
-
+print(anss)

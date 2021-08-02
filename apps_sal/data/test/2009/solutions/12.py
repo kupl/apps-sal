@@ -10,6 +10,7 @@ c1 -= 1
 r2 -= 1
 c2 -= 1
 
+
 def dfs(r, c, mark, A):
     if r < 0 or r >= n or c < 0 or c >= n:
         return
@@ -20,7 +21,8 @@ def dfs(r, c, mark, A):
     A.append((r, c))
     MAP[r][c] = mark
     for dr, dc in ((0, 1), (0, -1), (1, 0), (-1, 0)):
-        dfs(r+dr, c+dc, mark, A)
+        dfs(r + dr, c + dc, mark, A)
+
 
 A = []
 dfs(r1, c1, 2, A)

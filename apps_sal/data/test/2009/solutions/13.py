@@ -8,7 +8,6 @@ threading.stack_size(67108864)
 def main():
     dr = [[1, 0], [0, 1], [-1, 0], [0, -1]]
 
-
     def dfs(v, i):
         used[v[0]][v[1]] = i
         cm[i - 1] += [v]
@@ -16,7 +15,6 @@ def main():
             u = [v[0] + x[0], v[1] + x[1]]
             if a[u[0]][u[1]] == 0 and used[u[0]][u[1]] == 0:
                 dfs(u, i)
-
 
     n = int(input())
     s = list(map(int, input().split()))

@@ -6,4 +6,3 @@ for g in range(f):
         q[j] += s[j] == 'Y'
 kitten = sum([x >= t for x in q])
 print(kitten)
-

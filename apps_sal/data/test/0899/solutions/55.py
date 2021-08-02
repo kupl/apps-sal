@@ -14,4 +14,3 @@ for i, j, d in G.edges(data=True):
             ans -= 1
             break
 print(ans)
-

@@ -2,8 +2,8 @@ from collections import deque
 import sys
 
 n = int(input())
-r1, c1 = map(lambda x : int(x) - 1, input().split())
-r2, c2 = map(lambda x : int(x) - 1, input().split())
+r1, c1 = map(lambda x: int(x) - 1, input().split())
+r2, c2 = map(lambda x: int(x) - 1, input().split())
 
 graph = []
 components = []
@@ -14,6 +14,7 @@ visited = set()
 for i in range(n):
     row = input()
     graph.append(row)
+
 
 def find_component(r, c):
     q = deque()
@@ -44,6 +45,7 @@ def find_component(r, c):
                 queued.add(candidate)
 
     return result
+
 
 comp1 = find_component(r1, c1)
 if (r2, c2) in comp1:

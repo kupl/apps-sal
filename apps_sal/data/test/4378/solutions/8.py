@@ -24,4 +24,3 @@ for r in ranges:
 
 print(count)
 print("".join(s))
-

@@ -18,7 +18,7 @@ for _ in range(M):
 
 def dijkstra(s):
     hq = [(0, s)]
-    heapq.heapify(hq) 
+    heapq.heapify(hq)
     cost = [[INF, []] for i in range(N)]
     cost[s][0] = 0
     while hq:
@@ -30,7 +30,7 @@ def dijkstra(s):
             if tmp < cost[u][0]:
                 cost[u][0] = tmp
                 cost[u][1] = [v]
-                heapq.heappush(hq, (tmp, u))                    
+                heapq.heappush(hq, (tmp, u))
             elif tmp == cost[u][0]:
                 cost[u][1].append(v)
                 heapq.heappush(hq, (tmp, u))
@@ -56,5 +56,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

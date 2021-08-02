@@ -6,14 +6,14 @@ n, w = map(int, input().split())
 
 edges = []
 
-d = [[float("inf")]*n for _ in range(n)]
+d = [[float("inf")] * n for _ in range(n)]
 for i in range(w):
-    x,y,z = map(int, input().split())
+    x, y, z = map(int, input().split())
     x -= 1
     y -= 1
     d[x][y] = z
     d[y][x] = z
-    edges.append((x,y,z))
+    edges.append((x, y, z))
 
 for i in range(n):
     d[i][i] = 0
@@ -26,6 +26,6 @@ ans = 0
 
 for i, j, c in edges:
     # print(i,j,c)
-    if dp[i,j] < c:
+    if dp[i, j] < c:
         ans += 1
 print(ans)

@@ -1,12 +1,12 @@
-N,M = map(int,input().split())
+N, M = map(int, input().split())
 inf = 10 ** 6
 
-d = [[inf]*N for i in range(N)]
-prev = [[N]*N for i in range(N)]
-vlist = [[0]*N for i in range(N)]
+d = [[inf] * N for i in range(N)]
+prev = [[N] * N for i in range(N)]
+vlist = [[0] * N for i in range(N)]
 
 for i in range(M):
-    a,b,c = map(int,input().split())
+    a, b, c = map(int, input().split())
     a -= 1
     b -= 1
     vlist[a][b] = 1
@@ -17,9 +17,9 @@ for i in range(M):
     prev[b][a] = b
 
 #####
-#print("d",d)
-#print("vlist",vlist)
-#print("prev",prev)
+# print("d",d)
+# print("vlist",vlist)
+# print("prev",prev)
 #####
 
 for k in range(N):
@@ -35,14 +35,14 @@ for i in range(N):
             vlist[i][j] = 0
 
 #####
-#print("d",d)
-#print("vlist",vlist)
-#print("prev",prev)
+# print("d",d)
+# print("vlist",vlist)
+# print("prev",prev)
 #####
 
 count = 0
-for i in range(N-1):
-    for j in range(i,N):
+for i in range(N - 1):
+    for j in range(i, N):
         if vlist[i][j] == 1 and vlist[j][i] == 1:
             count += 1
 

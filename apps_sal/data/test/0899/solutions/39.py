@@ -13,7 +13,7 @@ def main():
         edge.append((a, b, c))
         dp[a][b] = c
         dp[b][a] = c
-    
+
     for k in range(N):
         for i in range(N):
             for j in range(N):
@@ -23,11 +23,12 @@ def main():
     for a, b, c in edge:
         if dp[a][b] < c:
             cnt += 1
-    
+
     print(cnt)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

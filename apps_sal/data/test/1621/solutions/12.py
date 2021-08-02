@@ -15,7 +15,7 @@ max_w = max(dic.values())
 
 all_sum = 0
 for count, sym in enumerate(string):
-    all_sum += (count+1) * dic[str(sym)]
+    all_sum += (count + 1) * dic[str(sym)]
 
 for new in range(len(string) + 1, len(string) + k + 1):
     all_sum += new * max_w

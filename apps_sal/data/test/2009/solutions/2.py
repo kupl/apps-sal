@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(100000)
+
+
 def hypot(a, b):
     return a ** 2 + b ** 2
 

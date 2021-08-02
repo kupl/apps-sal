@@ -44,7 +44,6 @@ for st in range(N):
     for i in range(N):
         gp = get_path(i)
         for i in range(1, len(gp)):
-            edges[(gp[i-1], gp[i])] = False
+            edges[(gp[i - 1], gp[i])] = False
 
 print((sum(edges.values())))
-
