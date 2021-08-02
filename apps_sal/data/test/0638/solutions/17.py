@@ -7,7 +7,7 @@ res = [0]
 for i in range(1, n):
     s = arr[i]
     temp = sorted(arr[:i])
-    #print(temp)
+    # print(temp)
     cnt = 0
     for j in temp:
         if(s > m):
@@ -18,6 +18,5 @@ for i in range(1, n):
     if(s <= m):
         res.append(0)
     else:
-        res.append(i-cnt+1)
+        res.append(i - cnt + 1)
 print(*res)
-

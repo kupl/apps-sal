@@ -1,5 +1,7 @@
 def mi():
-        return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
+
 '''
 4
 5
@@ -18,6 +20,5 @@ for _ in range(int(input())):
     mintillnow = 1e99
     for i in range(n):
         mintillnow = min(mintillnow, a[i])
-        ans = max(ans, min(i+1, mintillnow))
+        ans = max(ans, min(i + 1, mintillnow))
     print(ans)
-

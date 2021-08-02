@@ -1,4 +1,4 @@
-n,m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 A = [int(x) for x in input().split()]
 
 R = []
@@ -14,4 +14,3 @@ for a in A:
     S.sort()
 
 print(*R)
-

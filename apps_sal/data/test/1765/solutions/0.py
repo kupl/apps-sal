@@ -17,5 +17,4 @@ while True:
 
 b = [i for i in a if i & v]
 print(len(b))
-print(' '.join(map(str,b)))
-
+print(' '.join(map(str, b)))

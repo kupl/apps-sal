@@ -1,9 +1,9 @@
 def main():
     def dist(x1, y1, x2, y2):
         return max(abs(x1 - x2), abs(y1 - y2))
-    
+
     xp, yp, xv, yv = [int(i) for i in input().split()]
-    
+
     win = -1
     while True:
         if xp == 0:
@@ -17,7 +17,7 @@ def main():
         if xp == 0 and yp == 0:
             win = 0
             break
-        
+
         if xv == 0:
             if xp == 0 and yv - yp == 1:
                 win = 0
@@ -37,9 +37,8 @@ def main():
         if xv == 0 and yv == 0:
             win = 1
             break
-    
-    print(["Polycarp", "Vasiliy"][win])
-        
-    
-main()
 
+    print(["Polycarp", "Vasiliy"][win])
+
+
+main()

@@ -12,5 +12,3 @@ for i in range(a):
         if co >= ans:
             ans = co
     print(ans)
-    
-

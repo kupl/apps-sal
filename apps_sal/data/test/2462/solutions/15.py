@@ -26,18 +26,18 @@ def inp():
 def solution():
     n = intinp()
     if n > 30:
-        if n-30 == 6:
+        if n - 30 == 6:
             print('YES')
             print(5, 6, 10, 15)
-        elif n-30 == 10:
+        elif n - 30 == 10:
             print('YES')
             print(6, 10, 15, 9)
-        elif n-30 == 14:
+        elif n - 30 == 14:
             print('YES')
             print(6, 10, 15, 13)
         else:
             print('YES')
-            print(6, 10, 14, n-30)
+            print(6, 10, 14, n - 30)
     else:
         print('NO')
 
@@ -46,4 +46,3 @@ testcases = 1
 testcases = intinp()
 for _ in range(testcases):
     solution()
-

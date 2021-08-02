@@ -10,8 +10,7 @@ for i in range(N):
         tt -= X[j]
         j += 1
     ANS.append(j)
-    X = sorted(X+[A[i]])[::-1]
+    X = sorted(X + [A[i]])[::-1]
     t += A[i]
 
 print(*ANS)
-

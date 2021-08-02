@@ -1,19 +1,19 @@
-n,m = map(int,input().split())
-t = list(map(int,input().split()))
+n, m = map(int, input().split())
+t = list(map(int, input().split()))
 
-print(0,end=" ")
+print(0, end=" ")
 
-for i in range(1,len(t)):
+for i in range(1, len(t)):
 
-	temp = sorted(t[:i])
+    temp = sorted(t[:i])
 
-	time = m-t[i]
+    time = m - t[i]
 
-	ptr = 0
-	while ptr<i and time-temp[ptr] >= 0:
-		time -= temp[ptr]
-		ptr += 1
+    ptr = 0
+    while ptr < i and time - temp[ptr] >= 0:
+        time -= temp[ptr]
+        ptr += 1
 
-	print(i-ptr,end=" ")
+    print(i - ptr, end=" ")
 
 print()

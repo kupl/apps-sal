@@ -1,5 +1,5 @@
 def check(ans):
-    nonlocal  a
+    nonlocal a
     cnt = 0
     for i in range(len(a)):
         if a[i] >= ans:
@@ -7,6 +7,7 @@ def check(ans):
         else:
             break
     return cnt >= ans
+
 
 k = int(input())
 for i in range(k):
@@ -26,4 +27,3 @@ for i in range(k):
         print(right)
     else:
         print(left)
-

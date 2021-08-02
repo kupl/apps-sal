@@ -9,4 +9,3 @@ for test in range(int(input())):
             print(6, 10, 14, n - c)
     else:
         print('NO')
-

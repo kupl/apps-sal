@@ -4,7 +4,7 @@ t = list(map(int, input().split()))
 prefix_sum = 0
 for i in range(n):
     max_ = M - t[i]
-    
+
     cur_sum = prefix_sum
     prefix_t = sorted(t[:i], reverse=True)
     cnt = 0

@@ -19,7 +19,7 @@ def mulinv(b, n):
 
 
 def isprime(n):
-    for d in range(2, int(math.sqrt(n))+1):
+    for d in range(2, int(math.sqrt(n)) + 1):
         if n % d == 0:
             return False
     return True
@@ -42,8 +42,8 @@ def f(p=0):
 
 class DisjointSet:
     def __init__(self, n):
-        self.parent = [i for i in range(1, n+1)]
-        self.rank = [0]*(n+1)
+        self.parent = [i for i in range(1, n + 1)]
+        self.rank = [0] * (n + 1)
 
     def find_set(self, x):
         if self.parent[x] == x:
@@ -55,15 +55,15 @@ class DisjointSet:
     def union(self, x, y):
         set_x = self.find_set(x)
         set_y = self.find_set(y)
-        if set_x!=set_y:
+        if set_x != set_y:
             if self.rank[x]:
                 pass
 
 
 def graph(n, m, edg=False):
     edges = []
-    visited = [0]*n
-    g = [list() for _ in range(n+1)]
+    visited = [0] * n
+    g = [list() for _ in range(n + 1)]
     for i in range(m):
         u, v = f(1)
         g[u].append(v)
@@ -101,23 +101,22 @@ pl = []
 count = 0
 sm = 0
 
-res= []
+res = []
 
 for i in range(n):
     sm += cl[i]
-    k = t-sm
-    j = count-1
-    while(j>-1 and k<0):
-        k+=pl[j]
-        j-=1
+    k = t - sm
+    j = count - 1
+    while(j > -1 and k < 0):
+        k += pl[j]
+        j -= 1
 
-    if k<0:
+    if k < 0:
         res.append(count)
     else:
-        res.append(count-j-1)
+        res.append(count - j - 1)
 
     bisect.insort(pl, cl[i])
-    count+=1
+    count += 1
 
 print(*res)
-

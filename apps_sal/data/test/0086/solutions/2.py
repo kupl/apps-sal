@@ -13,8 +13,7 @@ elif a > c and b > d:
 elif a < c and b < d:
     print("Polycarp")
 else:
-    if a+b<=max(c, d):
+    if a + b <= max(c, d):
         print("Polycarp")
     else:
         print("Vasiliy")
-

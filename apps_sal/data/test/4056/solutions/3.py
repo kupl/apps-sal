@@ -3,6 +3,7 @@ def gcd(a, b):
         return b
     return gcd(b % a, a)
 
+
 n = int(input())
 a = [int(c) for c in input().split()]
 
@@ -19,4 +20,3 @@ for i in range(1, int(g ** (0.5)) + 1):
             ans += 1
 
 print(ans)
-
