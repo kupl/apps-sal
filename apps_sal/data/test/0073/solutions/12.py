@@ -15,4 +15,3 @@ while last < c:
     t += 1
 
 print(t)
-

@@ -34,6 +34,8 @@ class UnionFind:
 
     def same(self, u, v):  # uとvが同じ集合に属するか否か
         return self.find(u) == self.find(v)
+
+
 ############################################
 N, M = list(map(int, input().split()))
 uf = UnionFind(N)
@@ -65,4 +67,3 @@ for i in range(M - 1):
 
 for t in total:
     print(t)
-

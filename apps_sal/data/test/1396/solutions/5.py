@@ -7,9 +7,9 @@ ans = 0
 if n == 1:
     print(0)
     return
-for i in range(0, n - 1):   
+for i in range(0, n - 1):
     if a[i] == a[i + 1] == x:
-        l = i    
+        l = i
         while l >= 0 and a[i] == a[l]:
             l -= 1
         r = i + 1
@@ -46,5 +46,5 @@ for i in range(0, n - 1):
                     r += 1
             else:
                 break
-        ans = max(ans, r - l - 1)     
+        ans = max(ans, r - l - 1)
 print(ans)

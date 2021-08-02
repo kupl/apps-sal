@@ -45,7 +45,7 @@ def main():
     N, M = [int(i) for i in input().strip().split()]
     links = [None] * M
     for i in range(M):
-        links[i] = [int(i)-1 for i in input().strip().split()]
+        links[i] = [int(i) - 1 for i in input().strip().split()]
 
     u = UnionFind(N)
     ans = list()
@@ -62,5 +62,6 @@ def main():
 def __starting_point():
     for ans in main()[::-1]:
         print(ans)
+
 
 __starting_point()

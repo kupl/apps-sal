@@ -44,7 +44,8 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-        
+
+
 n, m = map(int, input().split())
 edge = []
 uf = UnionFind(n)
@@ -59,9 +60,5 @@ for i in range(m)[::-1]:
     if not uf.same(edge[i][0], edge[i][1]):
         ans -= uf.size(edge[i][0]) * uf.size(edge[i][1])
     uf.union(edge[i][0], edge[i][1])
-    
+
 print(*ans_list[::-1], sep="\n")
-
-    
-
-    

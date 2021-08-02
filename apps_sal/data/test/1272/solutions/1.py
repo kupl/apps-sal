@@ -1,3 +1,7 @@
+import math
+from collections import deque
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -45,13 +49,13 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 def combinations_count(n, r):
-    if n<=1:
+    if n <= 1:
         return 0
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
-import math
-from collections import deque
+
 n, m = map(int, input().split())
 ms = [list(map(int, input().split())) for _ in range(m)]
 ms.reverse()
@@ -59,8 +63,8 @@ combs = combinations_count(n, 2)
 res = deque([combs])
 uf = UnionFind(n)
 for i in ms[:-1]:
-    if not (uf.same(i[0]-1,i[1]-1)):
-        combs -= uf.size(i[0]-1)*uf.size(i[1]-1)
+    if not (uf.same(i[0] - 1, i[1] - 1)):
+        combs -= uf.size(i[0] - 1) * uf.size(i[1] - 1)
     res.appendleft(combs)
     uf.union(i[0] - 1, i[1] - 1)
 for i in res:

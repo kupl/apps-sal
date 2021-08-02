@@ -23,5 +23,5 @@ else:
         else:
             i += 1
             j += 1
-    else:    
+    else:
         print("=")

@@ -11,6 +11,7 @@ def remove_zeroes(s: str):
             break
     return s[i:]
 
+
 a = remove_zeroes(a)
 b = remove_zeroes(b)
 
@@ -30,4 +31,3 @@ elif cmp2:
     print('<')
 else:
     print('=')
-

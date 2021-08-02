@@ -46,23 +46,20 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-N,M= list(map(int,input().split()))
+N, M = list(map(int, input().split()))
 AB = []
 for _ in range(M):
-    AB.append(list(map(int,input().split())))
-ans = [N*(N-1)//2]
+    AB.append(list(map(int, input().split())))
+ans = [N * (N - 1) // 2]
 uf = UnionFind(N)
 while AB:
-    A,B = AB.pop()
-    A-=1
-    B-=1
-    if not uf.same(A,B):
-        ans.append(ans[-1]-uf.size(A)*uf.size(B))
-        uf.union(A,B)
+    A, B = AB.pop()
+    A -= 1
+    B -= 1
+    if not uf.same(A, B):
+        ans.append(ans[-1] - uf.size(A) * uf.size(B))
+        uf.union(A, B)
     else:
         ans.append(ans[-1])
-for i in range(len(ans)-2,-1,-1):
+for i in range(len(ans) - 2, -1, -1):
     print((ans[i]))
-    
-    
-

@@ -3,6 +3,7 @@
 
 import time
 
+
 def nz(x):
     a = 0
     for i in range(len(x)):
@@ -12,8 +13,9 @@ def nz(x):
             break
     return x[a:]
 
-a   = list(input())
-b   = list(input())
+
+a = list(input())
+b = list(input())
 
 start = time.time()
 
@@ -39,4 +41,3 @@ else:
     print('>')
 finish = time.time()
 #print(finish - start)
-

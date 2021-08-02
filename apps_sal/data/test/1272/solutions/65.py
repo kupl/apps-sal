@@ -1,13 +1,13 @@
+from collections import defaultdict
 import sys
 import itertools
 # import numpy as np
 import time
 import math
- 
+
 sys.setrecursionlimit(10 ** 7)
- 
-from collections import defaultdict
- 
+
+
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
@@ -16,7 +16,7 @@ N, M = map(int, input().split())
 
 
 class UnionFind(object):
-    def __init__(self, n = 1):
+    def __init__(self, n=1):
         self.link = [i for i in range(n)]
         self.size = [1 for _ in range(n)]
 
@@ -42,10 +42,11 @@ class UnionFind(object):
             x, y = y, x
         self.link[y] = x
         self.size[x] += self.size[y]
-    
+
     def get_size(self, x):
         x = self.find(x)
         return self.size[x]
+
 
 es = [0] * M
 for i in range(M):
@@ -62,7 +63,7 @@ for i in range(M - 1, -1, -1):
         ans.append(pair)
         continue
     pair -= (u.get_size(a) * u.get_size(b))
-    u.unite(a ,b)
+    u.unite(a, b)
     if pair < 0:
         pair = 0
     ans.append(pair)

@@ -3,7 +3,7 @@ import sys
 
 class UnionFind:
     def __init__(self, n=0):
-        self.d = [-1]*n
+        self.d = [-1] * n
         self.u = n
 
     def root(self, x):
@@ -34,7 +34,7 @@ class UnionFind:
 
 
 def c2(n):
-    return n*(n-1)//2
+    return n * (n - 1) // 2
 
 
 N, M = list(map(int, sys.stdin.readline().split()))
@@ -52,9 +52,8 @@ for a, b in E[::-1]:
     na = u.size(a)
     nb = u.size(b)
     if u.unite(a, b):
-        r -= na*nb
+        r -= na * nb
     result.append(r)
 
 for r in result[-2::-1]:
     print(r)
-

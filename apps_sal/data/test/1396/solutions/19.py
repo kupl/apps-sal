@@ -15,11 +15,10 @@ for i in range(n):
                     if s[j] != s[p]:
                         break
                     p += 1
-                s = s[:j-2] + s[p:]
+                s = s[:j - 2] + s[p:]
                 break
         if len(s) == l:
             break
     ans = max(ans, n - len(s))
 
 print(ans)
-

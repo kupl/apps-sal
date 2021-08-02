@@ -1,6 +1,6 @@
 a, b, k = map(int, input().split())
 
-total = a+b
+total = a + b
 if total <= k:
     ans = [0, 0]
 else:

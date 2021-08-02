@@ -35,9 +35,9 @@ class UnionFind:
 
 
 n, m = list(map(int, input().split()))
-bridges = [tuple((int(i)-1 for i in input().split())) for _ in range(m)]
+bridges = [tuple((int(i) - 1 for i in input().split())) for _ in range(m)]
 islands = UnionFind(n)
-res = [n*(n-1)//2]
+res = [n * (n - 1) // 2]
 for a, b in bridges[:0:-1]:
     if islands.same(a, b):
         res.append(res[-1])
@@ -45,4 +45,3 @@ for a, b in bridges[:0:-1]:
         res.append(res[-1] - islands.size(a) * islands.size(b))
         islands.unite(a, b)
 print(('\n'.join(map(str, res[::-1]))))
-

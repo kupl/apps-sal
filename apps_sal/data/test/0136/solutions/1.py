@@ -10,6 +10,7 @@
 
 """
 
+
 def calc(a, b, l):
     for i in range(l):
         if int(a[i]) > int(b[i]):
@@ -17,7 +18,8 @@ def calc(a, b, l):
         elif int(a[i]) < int(b[i]):
             return "<"
 
-    return "="    
+    return "="
+
 
 a = input()
 b = input()
@@ -33,4 +35,3 @@ elif al > bl:
     bl = al
 
 print(calc(a, b, bl))
-

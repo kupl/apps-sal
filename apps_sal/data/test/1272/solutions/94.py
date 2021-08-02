@@ -2,6 +2,8 @@ import sys
 from itertools import combinations
 
 # https://ikatakos.com/pot/programming_algorithm/data_structure/union_find_tree
+
+
 class UnionFind:
     def __init__(self, n):
         self.table = [-1] * n
@@ -53,5 +55,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

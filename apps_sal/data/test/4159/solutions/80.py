@@ -1,10 +1,10 @@
-A,B,K=map(int, input().split())
+A, B, K = map(int, input().split())
 
-if A>=K:
-	print(A-K, B)
+if A >= K:
+    print(A - K, B)
 
 else:
-	if A+B>=K:
-		print(0,B-(K-A))
-	else:
-		print(0,0)
+    if A + B >= K:
+        print(0, B - (K - A))
+    else:
+        print(0, 0)

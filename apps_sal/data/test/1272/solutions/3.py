@@ -44,20 +44,20 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-    
-n,m = map(int, input().split())
+
+
+n, m = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(m)]
 a.reverse()
 uf = UnionFind(n)
-ans = n*(n-1)//2
+ans = n * (n - 1) // 2
 anslist = []
 for i in range(m):
     anslist.append(ans)
-    x,y = a[i][0],a[i][1]
-    if uf.same(x-1,y-1):
+    x, y = a[i][0], a[i][1]
+    if uf.same(x - 1, y - 1):
         continue
-    ans -= (uf.size(x-1) * uf.size(y-1))
-    uf.union(x-1,y-1)
+    ans -= (uf.size(x - 1) * uf.size(y - 1))
+    uf.union(x - 1, y - 1)
 anslist.reverse()
 print(*anslist, sep="\n")
-    

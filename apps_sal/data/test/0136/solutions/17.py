@@ -22,7 +22,7 @@ if flag:
             print('>')
             flag1 = False
             break
-        if  (int(a[i]) < int(b[i])):
+        if (int(a[i]) < int(b[i])):
             print("<")
             flag1 = False
             break

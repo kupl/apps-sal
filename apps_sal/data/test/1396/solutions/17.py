@@ -1,4 +1,4 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
 
 
 def dfs(a):
@@ -21,8 +21,8 @@ def dfs(a):
 
 n, k, x = R()
 a = R()
-ans=1
-for i in range(n+1):
-    ans=max(ans, dfs(a[:i]+[x]+a[i:]))
+ans = 1
+for i in range(n + 1):
+    ans = max(ans, dfs(a[:i] + [x] + a[i:]))
 
-print(ans-1)
+print(ans - 1)

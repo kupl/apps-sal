@@ -54,28 +54,30 @@ def main():
     n, m = map(int, input().split())
     abl = []
     for _ in range(m):
-        a,b = map(int, input().split())
-        abl.append([a,b])
+        a, b = map(int, input().split())
+        abl.append([a, b])
 
     uf = UnionFind(n)
     ans_r = []
     curr_ans_minus = 0
     for ab in reversed(abl):
-        a,b = ab
-        if not uf.same(a-1,b-1): 
-            a_size = uf.size(a-1)
-            b_size = uf.size(b-1)
-            curr_ans_minus += (a_size+b_size)*(a_size+b_size-1)//2
-            curr_ans_minus -= (a_size*(a_size-1)//2 + b_size*(b_size-1)//2)
-            uf.union(a-1,b-1)
+        a, b = ab
+        if not uf.same(a - 1, b - 1):
+            a_size = uf.size(a - 1)
+            b_size = uf.size(b - 1)
+            curr_ans_minus += (a_size + b_size) * (a_size + b_size - 1) // 2
+            curr_ans_minus -= (a_size * (a_size - 1) // 2 + b_size * (b_size - 1) // 2)
+            uf.union(a - 1, b - 1)
         ans_r.append(curr_ans_minus)
 
-
-    all_sum = n*(n-1)//2
+    all_sum = n * (n - 1) // 2
     for v in reversed(ans_r[:-1]):
-        print(all_sum-v)
+        print(all_sum - v)
     print(all_sum)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

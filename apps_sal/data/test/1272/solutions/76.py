@@ -45,23 +45,23 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-      
-N,M = map(int,input().split())
-ab = [list(map(int,input().split())) for _ in range(M)]
+
+N, M = map(int, input().split())
+ab = [list(map(int, input().split())) for _ in range(M)]
 ab = ab[::-1]
 uf = UnionFind(N)
-dli = [N*(N-1)//2]*M
+dli = [N * (N - 1) // 2] * M
 
-for i in range(M-1):
-  a = ab[i][0]-1
-  b = ab[i][1]-1
-  d = 0
-  if not uf.same(a,b):
-    d = uf.size(a)*uf.size(b)
-  uf.union(a,b)
-  
-  dli[i+1] = dli[i] - d
-  
+for i in range(M - 1):
+    a = ab[i][0] - 1
+    b = ab[i][1] - 1
+    d = 0
+    if not uf.same(a, b):
+        d = uf.size(a) * uf.size(b)
+    uf.union(a, b)
+
+    dli[i + 1] = dli[i] - d
+
 dli = dli[::-1]
 for el in dli:
-  print(el)
+    print(el)

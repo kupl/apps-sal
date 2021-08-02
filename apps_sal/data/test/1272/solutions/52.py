@@ -35,7 +35,7 @@ def main():
     bridge = [list(map(int, input().split())) for _ in range(M)]
 
     uf = UnionFind(N)
-    ans = [N*(N-1)//2]*M
+    ans = [N * (N - 1) // 2] * M
 
     for i in range(-1, -1 * M, -1):
         a = bridge[i][0] - 1
@@ -43,10 +43,10 @@ def main():
         root_a = uf.find(a)
         root_b = uf.find(b)
         if root_a != root_b:
-            ans[i-1] = ans[i] - uf.size(a) * uf.size(b)
+            ans[i - 1] = ans[i] - uf.size(a) * uf.size(b)
             uf.union(a, b)
         else:
-            ans[i-1] = ans[i]
+            ans[i - 1] = ans[i]
 
     for a in ans:
         print(a)
@@ -54,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

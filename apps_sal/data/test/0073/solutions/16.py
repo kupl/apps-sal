@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
+
 def main():
     c, v0, v1, a, l = list(map(int, sys.stdin.readline().split()))
     day = 0
@@ -15,5 +16,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

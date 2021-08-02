@@ -11,6 +11,7 @@ def check(start):
         return cnt
     return cnt
 
+
 n, k, x = [int(i) for i in input().split()]
 c = [int(i) for i in input().split()]
 groups = []

@@ -5,8 +5,8 @@ if a < k and k <= a + b:
     b = b - k
 elif a + b < k:
     a = 0
-    b= 0
+    b = 0
 else:
     a = a - k
 
-print(a , b)
+print(a, b)

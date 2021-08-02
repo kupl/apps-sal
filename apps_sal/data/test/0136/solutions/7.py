@@ -5,6 +5,8 @@ def c(a, b):
         elif x < y:
             return '<'
     return '='
+
+
 a, b = input(), input()
 if len(a) < len(b):
     a = '0' * (len(b) - len(a)) + a

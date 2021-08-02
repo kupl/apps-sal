@@ -29,16 +29,17 @@ class UnionFind():
     def same(self, x, y):
         return self.find(x) == self.find(y)
 
-n,m=map(int,input().split())
-e=[list(map(int,input().split())) for _ in range(m)][::-1]
-u=UnionFind(n)
-tmp=n*(n-1)//2
-ans=[]
-for a,b in e:
+
+n, m = map(int, input().split())
+e = [list(map(int, input().split())) for _ in range(m)][::-1]
+u = UnionFind(n)
+tmp = n * (n - 1) // 2
+ans = []
+for a, b in e:
     ans.append(tmp)
-    a,b=a-1,b-1
-    if u.same(a,b):
+    a, b = a - 1, b - 1
+    if u.same(a, b):
         continue
-    tmp-=u.size(a)*u.size(b)
-    u.union(a,b)
-print(*ans[::-1],sep='\n')
+    tmp -= u.size(a) * u.size(b)
+    u.union(a, b)
+print(*ans[::-1], sep='\n')

@@ -17,4 +17,3 @@ while pages_read < nrs[0]:
     days += 1
 
 print(days)
-

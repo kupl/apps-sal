@@ -43,20 +43,21 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m = map(int, input().split())
+
+n, m = map(int, input().split())
 ab = []
-uf = UnionFind(n+1)
+uf = UnionFind(n + 1)
 for i in range(m):
-    a,b = map(int, input().split())
-    ab.append((a,b))
+    a, b = map(int, input().split())
+    ab.append((a, b))
 
 ans = []
-huben = n*(n-1)//2
-for a,b in ab[::-1]:
+huben = n * (n - 1) // 2
+for a, b in ab[::-1]:
     ans.append(huben)
-    if not uf.same(a,b):
-        huben -= uf.size(a)*uf.size(b)
-        uf.union(a,b)
-    
+    if not uf.same(a, b):
+        huben -= uf.size(a) * uf.size(b)
+        uf.union(a, b)
+
 for aa in ans[::-1]:
     print(aa)

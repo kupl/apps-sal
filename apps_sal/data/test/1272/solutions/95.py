@@ -1,7 +1,9 @@
 # Union Find 木
 from sys import setrecursionlimit
 
-#要素xが属するグループの根を返す
+# 要素xが属するグループの根を返す
+
+
 def find(parent, i):
     t = parent[i]
     if t < 0:
@@ -10,7 +12,9 @@ def find(parent, i):
     parent[i] = t
     return t
 
-#xとyの木を併合
+# xとyの木を併合
+
+
 def unite(parent, i, j):
     i = find(parent, i)
     j = find(parent, j)
@@ -43,8 +47,7 @@ for a, b in AB[::-1]:
     if pa != pb:
         inconvenience -= parent[pa] * parent[pb]
 
-    #取り出した辺を併合
+    # 取り出した辺を併合
     unite(parent, a, b)
 
 print((*result[::-1]))
-
