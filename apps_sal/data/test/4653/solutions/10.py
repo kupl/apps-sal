@@ -5,4 +5,3 @@ for i in range(t):
         print(n)
     else:
         print((n // k) * k + k // 2)
-

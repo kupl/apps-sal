@@ -1,3 +1,2 @@
-h,w=list(map(int,input().split()))
-print(pow(2,h+w,998244353))
-
+h, w = list(map(int, input().split()))
+print(pow(2, h + w, 998244353))

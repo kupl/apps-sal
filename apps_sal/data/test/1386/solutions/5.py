@@ -1,6 +1,6 @@
 import sys
 
-w,h = list(map(int, sys.stdin.readline().strip().split()))
+w, h = list(map(int, sys.stdin.readline().strip().split()))
 
 p = 998244353
 b = w + h
