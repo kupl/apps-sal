@@ -35,6 +35,8 @@ def main():
             for i in range(len(b)):
                 for idx in idxs:
                     b[i] -= abs(i - idx)
-            #print(b)
+            # print(b)
         print("".join(t))
+
+
 main()

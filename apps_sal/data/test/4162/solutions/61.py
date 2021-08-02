@@ -1,8 +1,8 @@
-N=input()
-a=list(map(int,input().split()))
+N = input()
+a = list(map(int, input().split()))
 
-ans=[]
+ans = []
 for ai in a:
-  ans.append(ai-1)
+    ans.append(ai - 1)
 
 print(sum(ans))

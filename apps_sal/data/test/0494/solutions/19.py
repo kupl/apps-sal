@@ -21,4 +21,3 @@ if -1 in a or len(set(a)) != n:
     print(-1)
 else:
     print(*a)
-

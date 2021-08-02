@@ -1,9 +1,11 @@
+from functools import lru_cache
 board = []
 for i in range(10):
     board.append([int(i) for i in input().split()])
 
+
 def next_squares(x, y):
-    current_dir = 1 if x%2 else -1
+    current_dir = 1 if x % 2 else -1
     # print(x, y, current_dir)
     res = []
     for _ in range(6):
@@ -17,9 +19,6 @@ def next_squares(x, y):
     # print(x, y, res)
     return res
 
-
-
-from functools import lru_cache
 
 @lru_cache(None)
 def dp(i, j, can_climb):

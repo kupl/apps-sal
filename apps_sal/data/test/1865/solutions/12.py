@@ -7,6 +7,7 @@ def find_min(i):
             index = j
     return index
 
+
 n = int(input())
 a = input().split()
 for i in range(n):
@@ -24,7 +25,7 @@ for i in range(n):
         # �������� ��������
         ans += (i, m)
         k += 1
-    
+
 print(k)
 for i in range(0, len(ans), 2):
-    print(ans[i], ans[i+1])
+    print(ans[i], ans[i + 1])

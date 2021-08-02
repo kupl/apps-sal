@@ -1,13 +1,17 @@
 from math import *
 
+
 def r1(t):
     return t(input())
+
 
 def r2(t):
     return [t(i) for i in input().split()]
 
+
 def r3(t):
     return [t(i) for i in input()]
+
 
 for _ in range(r1(int)):
     s = r3(str)
@@ -20,7 +24,7 @@ for _ in range(r1(int)):
         mp[i] = 0
     for i in s:
         mp[i] += 1
-    
+
     t = ['' for i in range(m)]
     for i in range(m):
         ind = []
@@ -43,10 +47,9 @@ for _ in range(r1(int)):
             del mp[k]
             if len(tk) > 0:
                 break
-            
+
         for x in ind:
             t[x] = tk
         #print(mp, b, t)
 
     print(''.join(t))
-

@@ -1,6 +1,7 @@
 def R():
     return list(map(int, input().split()))
 
+
 n, m = R()
 l = list(R())
 
@@ -27,4 +28,3 @@ else:
             j += 1
             a[i] = j
     print(*a)
-

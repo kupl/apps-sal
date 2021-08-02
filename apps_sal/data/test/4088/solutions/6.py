@@ -37,6 +37,5 @@ for _ in range(tests):
         tec -= 1
         r = b.count(0)
     for i in ans:
-        print(i, end ='')
+        print(i, end='')
     print()
-

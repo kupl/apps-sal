@@ -9,5 +9,3 @@ def lcm(x, y):
 N, *A = list(map(int, open(0).read().split()))
 l = reduce(lcm, A) - 1
 print((sum(l % a for a in A)))
-
-

@@ -15,5 +15,3 @@ for i in range(n):
             print(''.join(s))
             return
 print(''.join(s))
-
-

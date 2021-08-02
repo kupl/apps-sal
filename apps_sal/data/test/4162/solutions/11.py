@@ -1,4 +1,4 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-print(sum(a)-n)
+print(sum(a) - n)

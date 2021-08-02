@@ -10,7 +10,7 @@ for t in range(T):
     Y = ['' for _ in range(M)]
     expected_scores = [0] * M
     cc = Counter(S)
-    for _c in range(ord('z'), ord('a')-1, -1):
+    for _c in range(ord('z'), ord('a') - 1, -1):
         c = chr(_c)
         if not cc[c]:
             continue
@@ -23,7 +23,7 @@ for t in range(T):
             if B[pos] == expected_scores[pos]:
                 poss.append(pos)
                 for p in range(M):
-                    next_expected_scores[p] += abs(p-pos)
+                    next_expected_scores[p] += abs(p - pos)
 
         if len(poss) <= cc[c]:
             expected_scores = next_expected_scores
@@ -32,4 +32,3 @@ for t in range(T):
         # print('after', c, Y, expected_scores)
 
     print(''.join(Y))
-

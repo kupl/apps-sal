@@ -16,4 +16,3 @@ for i in range(n):
             i += 1
         break
 print(*a, sep='')
-

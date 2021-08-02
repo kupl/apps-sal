@@ -5,5 +5,5 @@ for a in a_l:
     m *= a
 ans = 0
 for a in a_l:
-    ans += (m-1)%a 
+    ans += (m - 1) % a
 print(ans)
