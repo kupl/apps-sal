@@ -29,7 +29,7 @@ for i in range(M):
     G[b].append(a)
 
 
-group = [0] * (N+1)
+group = [0] * (N + 1)
 gi = 1
 
 # def dfs(u, fa, gi):
@@ -37,6 +37,7 @@ gi = 1
 #     for v in G[u]:
 #         if v != fa and group[v] == 0:
 #             dfs(v, u, gi)
+
 
 def makeGroup(u, gi):
     q = [u]
@@ -48,18 +49,18 @@ def makeGroup(u, gi):
                 q.append(v)
 
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     if not group[i]:
         gi += 1
         makeGroup(i, gi)
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     if group[i] == 0:
         gi += 1
         group[i] = gi
 
 minCost = {}
-for i in range(1, N+1):
+for i in range(1, N + 1):
     g = group[i]
     c = cost[i]
     if g not in minCost:
@@ -68,6 +69,3 @@ for i in range(1, N+1):
         minCost[g] = min(minCost[g], c)
 
 print(sum(list(minCost.values()) or [0]))
-
-
-

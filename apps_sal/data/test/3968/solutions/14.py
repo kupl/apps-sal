@@ -21,12 +21,11 @@ m=lis[k-1]
 print(lis.count(m))
 print(lis)
 """
-n=int(input())
-lis=input().split()
-twos=lis.count("2")
-ones=n-twos
-if(twos==0 or ones==0):
-            print(' '.join(lis))
+n = int(input())
+lis = input().split()
+twos = lis.count("2")
+ones = n - twos
+if(twos == 0 or ones == 0):
+    print(' '.join(lis))
 else:
-            print("2 1"+" 2"*(twos-1)+" 1"*(ones-1))
-
+    print("2 1" + " 2" * (twos - 1) + " 1" * (ones - 1))

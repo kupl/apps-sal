@@ -1,4 +1,4 @@
-#region Header
+# region Header
 #!/usr/bin/env python3
 # from typing import *
 
@@ -11,16 +11,17 @@ import itertools
 from queue import PriorityQueue
 import bisect
 
+
 def input():
     return sys.stdin.readline()[:-1]
 
+
 sys.setrecursionlimit(1000000)
-#endregion
+# endregion
 
 # _INPUT = """10 AAATACCGCG
 # """
 # sys.stdin = io.StringIO(_INPUT)
-
 
 
 # def solve(N: int, S: str) -> int:
@@ -45,12 +46,12 @@ def solve(N, S):
 
     # i文字目からj文字目までの（Aの数）=（Tの数）and（Cの数）=（Gの数）となる (i,j)
     n = 0
-    for i in range(-1, N-1):
+    for i in range(-1, N - 1):
         count_a = 0
         count_g = 0
         count_c = 0
         count_t = 0
-        for j in range(i+1, N):
+        for j in range(i + 1, N):
             if S[j] == 'A':
                 count_a += 1
             elif S[j] == 'G':
@@ -71,7 +72,9 @@ def main():
     a = solve(N, S)
     print(a)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

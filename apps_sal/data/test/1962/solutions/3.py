@@ -18,4 +18,3 @@ for i in range(n):
     else:
         u += k
 print(ans)
-

@@ -1,8 +1,8 @@
-_,S = input().split()
+_, S = input().split()
 N = len(S)
 
 ans = 0
-for i in range(0,N-1):
+for i in range(0, N - 1):
     AT = 0
     CG = 0
     if S[i] == 'A':
@@ -14,7 +14,7 @@ for i in range(0,N-1):
     elif S[i] == 'G':
         CG -= 1
     # print(AT,CG)
-    for j in range(i+1,N):
+    for j in range(i + 1, N):
         if S[j] == 'A':
             AT += 1
         elif S[j] == 'T':
@@ -26,5 +26,5 @@ for i in range(0,N-1):
         if AT == 0 and CG == 0:
             ans += 1
         # print(S[i:j+1],AT,CG,ans)
-            
+
 print(ans)

@@ -26,6 +26,6 @@ if boards[n - 1] - boards[0] <= l:
         barrels[ba][bo] = boards[j]
         if flag:
             ans += barrels[ba][bo]
-            flag = False  
+            flag = False
         j += 1
 print(ans)

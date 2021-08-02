@@ -16,6 +16,9 @@ def main():
 
     print('\n'.join(ans))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

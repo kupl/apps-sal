@@ -9,6 +9,9 @@ def main():
 
     print('\n'.join('{} {}'.format(n - 1 + home[teams[i][1]], n - 1 - home[teams[i][1]]) for i in range(n)))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

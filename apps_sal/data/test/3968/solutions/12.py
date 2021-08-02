@@ -8,11 +8,13 @@ def sol(tiles):
         return ' '.join(['2'] * d['2'])
     if d['2'] == 0:
         return ' '.join(['1'] * d['1'])
-    return ' '.join(['2','1'] + ['2']*(d['2']-1) + ['1']*(d['1']-1))
+    return ' '.join(['2', '1'] + ['2'] * (d['2'] - 1) + ['1'] * (d['1'] - 1))
+
 
 def __starting_point():
     _ = input()
     tiles = input()
     print(sol(tiles))
+
 
 __starting_point()

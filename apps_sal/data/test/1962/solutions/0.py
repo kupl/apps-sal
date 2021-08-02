@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 N, K, L = mi()
 A = li()
@@ -20,4 +25,3 @@ else:
         ans += B[cur]
         cur = min(cur + K, len(B) - (N - i - 1))
 print(ans)
-

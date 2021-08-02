@@ -1,4 +1,4 @@
-n,s = input().split()
+n, s = input().split()
 n = (int)(n)
 at = [0] * (n + 1)
 cg = [0] * (n + 1)
@@ -17,7 +17,7 @@ for i in range(n):
     cg[i + 1] = cg[i] + CG
 ans = 0
 for i in range(n):
-    for j in range(i + 1,n + 1):
+    for j in range(i + 1, n + 1):
         AT = at[j] - at[i]
         CG = cg[j] - cg[i]
         if AT == 0 and CG == 0:

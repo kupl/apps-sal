@@ -1,5 +1,6 @@
 import math
-read = lambda : map(int, input().split())
+read = lambda: map(int, input().split())
+
 
 def codeforce1149A():
     n = int(input())
@@ -15,19 +16,22 @@ def codeforce1149A():
             odd += 1
     if odd == 0:
         for i in p:
-            print(i, end = ' ')
+            print(i, end=' ')
     elif even == 0:
         for i in p:
-            print(i, end = ' ')
+            print(i, end=' ')
     else:
-        print(2, 1, end = ' ')
+        print(2, 1, end=' ')
         even -= 1
         odd -= 1
         for _ in range(even):
-            print(2, end = " ")
+            print(2, end=" ")
         for _ in range(odd):
-            print(1, end = ' ')
+            print(1, end=' ')
+
 
 def __starting_point():
     codeforce1149A()
+
+
 __starting_point()

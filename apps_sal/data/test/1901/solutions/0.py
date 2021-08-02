@@ -1,4 +1,4 @@
-#python3
+# python3
 # utf-8
 
 nodes_nr, edges_nr = (int(x) for x in input().split())
@@ -28,4 +28,3 @@ for node_idx in range(nodes_nr):
             node_idx___is_visited[neigh_idx] = True
     ans += cheapest_cost
 print(ans)
-

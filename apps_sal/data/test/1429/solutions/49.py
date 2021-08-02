@@ -1,9 +1,9 @@
 from collections import Counter
-N,S = input().split()
+N, S = input().split()
 N = int(N)
-AT,CG = 0,0
+AT, CG = 0, 0
 d = Counter()
-d[AT,CG] = 1
+d[AT, CG] = 1
 ans = 0
 for i in range(N):
     if S[i] == "A":
@@ -14,6 +14,6 @@ for i in range(N):
         CG += 1
     else:
         CG -= 1
-    ans += d[AT,CG]
-    d[AT,CG] += 1
+    ans += d[AT, CG]
+    d[AT, CG] += 1
 print(ans)

@@ -15,4 +15,3 @@ for i in range(N):
         if c1 == 0 and c2 == 0:
             a += 1
 print(a)
-

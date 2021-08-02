@@ -1,11 +1,13 @@
 
 from collections import deque
 
+
 class Person:
     def __init__(self):
         self.friends = []
         self.taken = False
         self.price = 0
+
 
 def fill(person):
     queue = deque([])
@@ -32,8 +34,8 @@ for i in range(0, N):
 
 for _ in range(0, M):
     u, v = map(int, input().split())
-    people[u-1].friends.append(people[v-1])
-    people[v-1].friends.append(people[u-1])
+    people[u - 1].friends.append(people[v - 1])
+    people[v - 1].friends.append(people[u - 1])
 
 cost = 0
 for p in people:

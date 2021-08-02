@@ -13,4 +13,3 @@ for i in range(n):
 cnt = Counter(cs)
 ans = sum(m * (m - 1) // 2 for m in list(cnt.values()))
 print(ans)
-

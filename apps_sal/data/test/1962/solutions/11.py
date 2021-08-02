@@ -19,7 +19,7 @@ def solve(tc):
     while pp < p:
         res += li[pp]
         if rem > 0:
-            mod = min(k-1, rem)
+            mod = min(k - 1, rem)
             pp += mod
             rem -= mod
         pp += 1

@@ -4,7 +4,7 @@ ans = 0
 for i in range(n):
     at = 0
     cg = 0
-    for j in range(i,n):
+    for j in range(i, n):
         if s[j] == 'A':
             at += 1
         elif s[j] == 'T':

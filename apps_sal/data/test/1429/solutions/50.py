@@ -11,4 +11,3 @@ for i in range(n - 1):
         if d['A'] == d['T'] and d['C'] == d['G']:
             c += 1
 print(c)
-

@@ -11,6 +11,6 @@ for i in range(N):
         cnt[S[j - 1]] += 1
         cnt[S[j]] += 1
         if cnt["A"] == cnt["T"] and cnt["C"] == cnt["G"]: answer += 1
-        #print(cnt)
-        
+        # print(cnt)
+
 print(answer)

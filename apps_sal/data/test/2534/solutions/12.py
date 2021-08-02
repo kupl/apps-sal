@@ -1,21 +1,20 @@
 # cook your dish here
-from sys import stdin,stdout
+from sys import stdin, stdout
 
-r,c = map(int,stdin.readline().strip().split())
-gift_list = [list(map(int,stdin.readline().strip().split())) for _ in range(r)]
+r, c = map(int, stdin.readline().strip().split())
+gift_list = [list(map(int, stdin.readline().strip().split())) for _ in range(r)]
 
 max_list = [max(i) for i in zip(*gift_list)]
 # print(max_list)
-found=False
+found = False
 for i in range(r):
     min_row = min(gift_list[i])
     for j in range(c):
-        if gift_list[i][j]==min_row and gift_list[i][j]==max_list[j]:
+        if gift_list[i][j] == min_row and gift_list[i][j] == max_list[j]:
             print(gift_list[i][j])
-            found=True
+            found = True
             break
     if found:
         break
 else:
     print("GUESS")
-            

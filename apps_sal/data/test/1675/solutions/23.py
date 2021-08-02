@@ -12,6 +12,6 @@ for i in range(n):
     d.append((h - 1, g - 1))
     a[h - 1] += 1
     b[g - 1] += 1
-   
+
 for i in d:
     print(str((n - 1) + (a[i[1]])) + " " + str(n - a[i[1]] - 1))

@@ -10,4 +10,3 @@ for i in range(n):
 for i in range(n):
     h = (n - 1) + (0 if not(guest[i] in home) else home[guest[i]])
     print('%s %s' % (h, ((n - 1) * 2) - h))
-

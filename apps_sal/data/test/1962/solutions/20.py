@@ -1,21 +1,27 @@
-import sys, math, os.path
+import sys
+import math
+import os.path
 
 FILE_INPUT = "C.in"
 DEBUG = os.path.isfile(FILE_INPUT)
-if DEBUG: 
-    sys.stdin = open(FILE_INPUT)    
+if DEBUG:
+    sys.stdin = open(FILE_INPUT)
+
 
 def ni():
     return list(map(int, input().split(" ")))
 
-def nia(): 
-    return list(map(int,input().split()))
+
+def nia():
+    return list(map(int, input().split()))
+
 
 def log(x):
     if (DEBUG):
         print(x)
 
-n,k,l = ni()
+
+n, k, l = ni()
 a = nia()
 # print(n,k,l)
 log(a)
@@ -23,7 +29,7 @@ log(a)
 vmin = min(a)
 log(vmin)
 
-if (n==1):
+if (n == 1):
     print(vmin)
     return
 
@@ -40,8 +46,8 @@ else:
     log(amax)
     ans = 0
     count = 0
-    lonhonMax = n*k - len(amax)
-    for i  in amax[0::k]:
+    lonhonMax = n * k - len(amax)
+    for i in amax[0::k]:
         log(f"+ {count*k}: {i}")
         ans += i
         count += 1
@@ -56,7 +62,4 @@ else:
                 ix -= 1
             ans += amax[ix]
             ix -= 1
-    print(ans)     
-        
-
-
+    print(ans)

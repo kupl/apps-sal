@@ -13,7 +13,7 @@ big.sort()
 
 
 def getResult(n, k, l, big):
-    if big[n-1] - big[0] > l:
+    if big[n - 1] - big[0] > l:
         return 0
 
     right = None
@@ -34,7 +34,7 @@ def getResult(n, k, l, big):
 
         if n_fei >= k - 1:
             i += k
-            n_fei -= k-1
+            n_fei -= k - 1
         else:
             i += n_fei + 1
             n_fei -= n_fei
@@ -42,12 +42,5 @@ def getResult(n, k, l, big):
     return result
 
 
-
-
-
-
-
-
 result = getResult(n, k, l, big)
 print(result)
-

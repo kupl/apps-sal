@@ -31,4 +31,6 @@ def main():
         i -= (k - c)
         ans += a[i + 1]
     print(ans)
+
+
 main()
