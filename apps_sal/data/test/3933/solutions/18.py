@@ -14,4 +14,3 @@ if arth == True:
     print(l[n - 1] + d)
 else:
     print(l[n - 1])
-

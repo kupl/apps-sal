@@ -8,4 +8,3 @@ for b in range(n):
             s.append(l[i])
     mx = max(mx, abs(sum(s)))
 print(mx)
-

@@ -11,4 +11,3 @@ for b in range(n):
     if abs(tans) > ans:
         ans = abs(tans)
 print(ans)
-

@@ -26,6 +26,5 @@ while(not(p in Tshirt)):
         Tshirt.append(ans + 26)
     x += 50
     hack += 1
-    
-print(hack // 2)
 
+print(hack // 2)

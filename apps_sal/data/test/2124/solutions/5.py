@@ -9,9 +9,11 @@ def dfs(ind):
             possible[ind + 1].remove(possible[ind][0])
             if len(possible[ind + 1]) == 1:
                 dfs(ind + 1)
+
+
 def Check(st, ms):
     for i in range(0, len(ms) - len(st) + 1):
-        if st == ms[i:i+len(st)]:
+        if st == ms[i:i + len(st)]:
             t = True
             if i > 0:
                 if ms[i - 1] == ' ' or ms[i - 1] == '.' or ms[i - 1] == ',' or ms[i - 1] == '?' or ms[i - 1] == '!':
@@ -26,7 +28,9 @@ def Check(st, ms):
             if t:
                 return True
     return False
-R = lambda:list(map(int, input().split(' ')))
+
+
+R = lambda: list(map(int, input().split(' ')))
 #r, w = open("input.txt", "r"), open("output.txt", "w")
 T = int(input())
 while T:
@@ -68,10 +72,5 @@ while T:
             break
     if not done:
         for i in range(m):
-            print(possible[i][0]+':'+message[i])
+            print(possible[i][0] + ':' + message[i])
     T -= 1
-
-
-    
-
-

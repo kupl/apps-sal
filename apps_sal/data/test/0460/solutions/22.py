@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 import sys
+
+
 def eligible(score, position, thresh):
     if score < thresh:
         return False
@@ -10,8 +12,9 @@ def eligible(score, position, thresh):
             return True
     return False
 
+
 def main():
-    p, x, y= list(map(int, sys.stdin.readline().split()))
+    p, x, y = list(map(int, sys.stdin.readline().split()))
     diff = 0
     for __ in range(475):
         if eligible(x + diff, p, y):
@@ -22,10 +25,10 @@ def main():
     for __ in range(475):
         if eligible(x + diff, p, y):
             succ = diff // 100
-            unsucc = (diff // 50) %2 ## if 1, we need additional success
+            unsucc = (diff // 50) % 2  # if 1, we need additional success
             print(str(succ + unsucc))
             return
         diff += 50
 
-main()
 
+main()

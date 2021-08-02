@@ -23,8 +23,7 @@ for i in range(k):
         if a[j] == -1:
             curBad += 1
         else:
-            curGood += 1 
+            curGood += 1
     ans = max(ans, abs((totBad - curBad) - (totGood - curGood)))
 
 print(ans)
-

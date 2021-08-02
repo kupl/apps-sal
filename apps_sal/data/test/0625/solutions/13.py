@@ -5,4 +5,3 @@ if n % 2 == 0:
 else:
     summ = -(n // 2 + 1)
 print(summ)
-

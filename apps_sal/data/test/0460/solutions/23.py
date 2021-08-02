@@ -3,6 +3,7 @@ from sys import stdin, stdout
 
 p, x, y = list(map(int, stdin.readline().strip().split()))
 
+
 def getScores(s):
     scores = []
     i = (s // 50) % 475
@@ -12,6 +13,7 @@ def getScores(s):
         scores.append(26 + i)
 
     return scores
+
 
 z = x
 count = 0
@@ -42,5 +44,3 @@ if dF == True or count == 0:
     print(0)
 else:
     print(count // 2 + count % 2)
-
-

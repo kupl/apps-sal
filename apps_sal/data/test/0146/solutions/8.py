@@ -16,4 +16,3 @@ for b in range(k):
     ans = max(ans, abs((tot_e - me) - (tot_s - ms)))
 
 print(ans)
-
