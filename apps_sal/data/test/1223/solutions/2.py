@@ -1,7 +1,7 @@
 N = int(input())
 P = [int(x) for x in input().split()]
 
-PIdx = sorted([(i + 1, v) for i, v in enumerate(P)], key = lambda x: x[1])
+PIdx = sorted([(i + 1, v) for i, v in enumerate(P)], key=lambda x: x[1])
 
 L = [0]
 for i in range(N + 1):

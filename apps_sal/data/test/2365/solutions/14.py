@@ -19,6 +19,3 @@ class Solution:
                     res = 't' if temp == 'f' else 'f'
                 stack[-1] = res
         return True if stack[-1] == 't' else False
-        
-        
-

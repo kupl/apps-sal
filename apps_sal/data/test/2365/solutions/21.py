@@ -15,7 +15,7 @@ class Solution:
             if expression[i] == ')':
                 bracket_balance -= 1
             if expression[i] == ',' and not bracket_balance:
-                answer.append(expression[start: i+1])
+                answer.append(expression[start: i + 1])
                 start = i + 1
         answer.append(expression[start:])
         return answer
@@ -33,5 +33,3 @@ class Solution:
         else:
             return all(map(self.parseBoolExpr,
                            self.split_by_comma(expression[2:-1])))
-
-

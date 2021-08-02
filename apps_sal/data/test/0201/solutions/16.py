@@ -17,6 +17,4 @@ for i in range(10 ** 5):
 print(ans)
 
 
-
 # Made By Mostafa_Khaled
-

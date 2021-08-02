@@ -1,6 +1,7 @@
 def argsort(a):
     return list(map(lambda z: z[1], sorted(zip(a, range(len(a))))))
 
+
 N = int(input())
 P = list(map(int, input().split()))
 
@@ -31,11 +32,11 @@ for i in range(1, N):
             LL = left[L - 2]
         else:
             LL = L - 1
-        result += ((L - 1) - LL + 1) * (R - k + 1) * i;
+        result += ((L - 1) - LL + 1) * (R - k + 1) * i
     if R + 1 < N:
         if R + 2 < N and P[R + 2] < i:
             RR = right[R + 2]
         else:
             RR = R + 1
-        result += (RR - (R + 1) + 1) * (k - L + 1) * i;
+        result += (RR - (R + 1) + 1) * (k - L + 1) * i
 print(result)

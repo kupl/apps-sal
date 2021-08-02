@@ -34,14 +34,14 @@ class Solution:
                     if ch == ')':
                         break
             return res
-        
+
         queue = collections.deque([])
         for c in expression:
             queue.appendleft(c)
         return helper(queue)
-                        
-        
+
     # slow, time: O(n^2)
+
     def parseBoolExpr(self, expression: str) -> bool:
         # j is inclusive
         def helper(exp, i, j):
@@ -71,10 +71,9 @@ class Solution:
                 k += 1
             # print('i = {0}, j = {1}, res = {2}'.format(i, j, res))
             return res
-        
+
         return helper(expression, 0, len(expression) - 1)
-    
-    
+
         # if len(expression) == 1:
         #     return expression == 't'
         # if expression[0] == '!':
@@ -101,4 +100,3 @@ class Solution:
         # if op == '&':
         #     return all(val for val in stack)
         # return any(val for val in stack)
-

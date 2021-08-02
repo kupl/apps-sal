@@ -17,10 +17,11 @@ def maxCrossingSum(arr, l, m, h):
 
     return left_sum + right_sum
 
+
 def maxSubArraySum(arr, l, h):
     if (l == h):
         return arr[l]
-    m = (l+h)//2
+    m = (l + h) // 2
     return max(maxSubArraySum(arr, l, m),
                maxSubArraySum(arr, m + 1, h),
                maxCrossingSum(arr, l, m, h))
@@ -30,10 +31,9 @@ for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     y = sum(a)
-    s1, s2 = maxSubArraySum(a, 0, n-2), maxSubArraySum(a, 1, n-1)
+    s1, s2 = maxSubArraySum(a, 0, n - 2), maxSubArraySum(a, 1, n - 1)
     #print(s1, s2, y)
     if s1 >= y or s2 >= y:
         print("NO")
     else:
         print('YES')
-

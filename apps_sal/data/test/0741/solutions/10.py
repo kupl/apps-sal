@@ -47,4 +47,3 @@ for i in range(len(light)):
 m = max(sum, m)
 
 print(m)
-

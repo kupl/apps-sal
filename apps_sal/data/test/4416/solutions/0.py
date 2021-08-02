@@ -1,13 +1,13 @@
 from sys import stdin
 
-n,k = list(map(int, stdin.readline().strip().split(' ')))
+n, k = list(map(int, stdin.readline().strip().split(' ')))
 
 AB = []
 A = []
 B = []
 
 for i in range(n):
-    t,a,b = list(map(int, stdin.readline().strip().split(' ')))
+    t, a, b = list(map(int, stdin.readline().strip().split(' ')))
     if a == 1 and b == 1:
         AB.append(t)
     elif a == 1:
@@ -49,6 +49,3 @@ if isPossible:
     print(ans)
 else:
     print(-1)
-
-
-

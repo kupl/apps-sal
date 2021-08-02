@@ -2,7 +2,7 @@ def ans(arr, n):
     left = arr[0]
     if left <= 0:
         return False
-    for i in range (1, n):
+    for i in range(1, n):
         left += arr[i]
         if left <= 0:
             return False
@@ -16,10 +16,12 @@ def ans(arr, n):
             return False
         i -= 1
     return True
+
+
 t = int(input())
 for _ in range(t):
     n = int(input())
-    arr = list(map(int,input().split()))
+    arr = list(map(int, input().split()))
     if ans(arr, n):
         print("YES")
     else:

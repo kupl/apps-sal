@@ -1,4 +1,6 @@
 from bisect import bisect_left, bisect_right, insort_right
+
+
 class SquareSkipList:
     # SkipList の層数を 2 にした感じの何か
     # std::multiset の代用になる
@@ -48,7 +50,7 @@ class SquareSkipList:
             layer1.insert(idx1, x)
             layer0_idx1 = layer0[idx1]
             idx0 = bisect_right(layer0_idx1, x)
-            layer0.insert(idx1+1, layer0_idx1[idx0:])  # layer0 は dict で管理した方が良いかもしれない
+            layer0.insert(idx1 + 1, layer0_idx1[idx0:])  # layer0 は dict で管理した方が良いかもしれない
             del layer0_idx1[idx0:]
         else:
             idx1 = bisect_right(layer1, x)
@@ -59,8 +61,8 @@ class SquareSkipList:
         idx1 = bisect_left(layer1, x)
         if layer1[idx1] == x:
             del layer1[idx1]
-            layer0[idx1] += layer0[idx1+1]
-            del layer0[idx1+1]
+            layer0[idx1] += layer0[idx1 + 1]
+            del layer0[idx1 + 1]
         else:
             layer0_idx1 = layer0[idx1]
             del layer0_idx1[bisect_left(layer0_idx1, x)]
@@ -102,9 +104,9 @@ class SquareSkipList:
         layer0_idx1 = layer0[idx1]
         idx0 = bisect_left(layer0_idx1, x)
         if idx0 == 0:  # layer0_idx1 が空の場合とすべて res で埋まっている場合
-            return layer1[idx1-1]
+            return layer1[idx1 - 1]
         else:
-            return layer0_idx1[idx0-1]
+            return layer0_idx1[idx0 - 1]
         # if res != x:  # res > x
         #     if layer0_idx1:
         #         idx0 = bisect_left(layer0_idx1, x)
@@ -128,12 +130,12 @@ class SquareSkipList:
             s += len(l0) + 1
             if s >= idx:
                 break
-        if s==idx:
-            layer0[i] += layer0[i+1]
-            del layer0[i+1]
+        if s == idx:
+            layer0[i] += layer0[i + 1]
+            del layer0[i + 1]
             return layer1.pop(i)
         else:
-            return layer0[i].pop(idx-s)
+            return layer0[i].pop(idx - s)
 
     def print(self):
         print(self.layer1)
@@ -166,4 +168,3 @@ def main():
 
 
 main()
-

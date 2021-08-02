@@ -2,13 +2,14 @@ import sys
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
 
+
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
     yasser = sum(a)
     ans = True
     cur = 0
-    for i in range(n-1):
+    for i in range(n - 1):
         cur += a[i]
         if cur <= 0:
             ans = False
@@ -24,8 +25,7 @@ def solve():
     else:
         print("NO")
 
+
 t = int(input())
 for i in range(t):
     solve()
-
-

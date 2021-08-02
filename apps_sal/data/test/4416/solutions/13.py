@@ -1,9 +1,9 @@
-n,k = map(int,input().split())
+n, k = map(int, input().split())
 ablike = []
 alike = []
 blike = []
 for i in range(n):
-    t,a,b = map(int,input().split())
+    t, a, b = map(int, input().split())
     if a == 1 and b == 1:
         ablike.append(t)
     elif a == 1:
@@ -16,7 +16,7 @@ alike.sort()
 atot = len(alike)
 blike.sort()
 btot = len(blike)
-x = min(atot,btot)
+x = min(atot, btot)
 if abtot + x < k:
     print(-1)
 else:

@@ -2,7 +2,7 @@ import bisect
 import array
 N = int(input())
 P = list(map(int, input().split()))
-P_id = [0]*(N + 1)
+P_id = [0] * (N + 1)
 
 for i in range(N):
     P_id[P[i]] = i
@@ -22,7 +22,7 @@ for i in range(N - 1, 0, - 1):
         l2 = A[j - 2]
     if r1 != N:
         r2 = A[j + 2]
-    
-    res += i*((A[j] - l1)*(r2 - r1) + (l1 - l2)*(r1 - A[j]))
+
+    res += i * ((A[j] - l1) * (r2 - r1) + (l1 - l2) * (r1 - A[j]))
 
 print(res)

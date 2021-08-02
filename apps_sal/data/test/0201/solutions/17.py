@@ -35,4 +35,3 @@ else:
         result = max(result, Pr * i + Pb * j)
         i += 1
     print(result)
-

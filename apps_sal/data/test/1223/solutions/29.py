@@ -20,4 +20,3 @@ def solve(n, ppp):
 n = int(input())
 ppp = list(map(int, input().split()))
 print((solve(n, ppp)))
-

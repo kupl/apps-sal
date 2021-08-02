@@ -30,4 +30,3 @@ class Solution:
         expr = ' '.join(expression).replace(',', 'and')
 
         return eval(expr)
-

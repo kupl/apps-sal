@@ -1,9 +1,11 @@
 #!/usr/bin/env pypy3
 
 from sys import stdin, stdout
- 
+
+
 def input():
     return stdin.readline().strip()
+
 
 N, K = input().split(' ')
 N = int(N)
@@ -19,10 +21,14 @@ for _ in range(N):
     a = int(a)
     b = int(b)
 
-    if a == 0 and b == 0: continue
-    if a == 1 and b == 1: both += [t]
-    if a == 1 and b == 0: alice_only += [t]
-    if a == 0 and b == 1: bob_only += [t]
+    if a == 0 and b == 0:
+        continue
+    if a == 1 and b == 1:
+        both += [t]
+    if a == 1 and b == 0:
+        alice_only += [t]
+    if a == 0 and b == 1:
+        bob_only += [t]
 
 hybrid = []
 
@@ -38,4 +44,3 @@ if len(candidates) < K:
     print(-1)
 else:
     print(sum(candidates[0:K]))
-

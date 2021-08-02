@@ -10,15 +10,15 @@ for i in range(n - 1, 0, -1):
     if (i < n - 2):
         diff[d] += diff[d + 2]
     d -= 1
-ontime = diff[0] 
+ontime = diff[0]
 for d in range(n - 1):
-    
+
     if (d % 2 == 0):
         prevontime = diff[0] - diff[d]
         afterofftime = 0
         if (d < n - 2):
             afterofftime += diff[d + 1]
-        ontime = max(ontime,  prevontime + afterofftime + a[d + 1] - a[d] - 1)
+        ontime = max(ontime, prevontime + afterofftime + a[d + 1] - a[d] - 1)
     else:
         if (a[d] + 1 == a[d + 1]):
             continue

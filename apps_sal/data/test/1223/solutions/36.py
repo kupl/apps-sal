@@ -11,19 +11,16 @@ p.sort(reverse=True)
 
 s = array.array('i', [-1, -1, p[0][1], n, n])
 
-#print(p)
+# print(p)
 
 ans = 0
 i = 2
 for a, x in p[1:]:
     t = bisect_left(s, x)
-    ans += a * ((x - s[t-1]) * (s[t+1] - s[t]) + (s[t] - x) * (s[t-1] - s[t-2]))
+    ans += a * ((x - s[t - 1]) * (s[t + 1] - s[t]) + (s[t] - x) * (s[t - 1] - s[t - 2]))
     #print(t, s)
     s.insert(t, x)
     i += 1
 
 
 print(ans)
-
-
-
