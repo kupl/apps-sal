@@ -1,6 +1,7 @@
 n = int(input())
 al = list(map(int, input().split()))
-ratel = [0,0,0,0,0,0,0,0,0]
+ratel = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
 
 def check(a):
     if 1 <= a <= 399:
@@ -22,6 +23,7 @@ def check(a):
     else:
         return 8
 
+
 for a in al:
     i = check(a)
     ratel[i] += 1
@@ -36,16 +38,16 @@ for i in range(8):
         ratec += 1
 
 if ratel[8] == 0:
-    print(ratec,ratec)
+    print(ratec, ratec)
 elif 1 <= ratel[8] <= 8:
     if ratec == 0:
-        print(1,ratel[8])
+        print(1, ratel[8])
     elif ratel[8] < zeroc:
-        print(ratec, ratec+ratel[8])
+        print(ratec, ratec + ratel[8])
     elif ratel[8] >= zeroc:
-        print(ratec,ratec+ratel[8])
+        print(ratec, ratec + ratel[8])
 else:
     if ratec == 0:
-        print(1,ratel[8])
+        print(1, ratel[8])
     else:
-        print(ratec,ratec+ratel[8])
+        print(ratec, ratec + ratel[8])

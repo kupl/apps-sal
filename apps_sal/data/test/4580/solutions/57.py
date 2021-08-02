@@ -32,4 +32,4 @@ for c in a:
         over += 1
 
 print(max(1, len(colors)), end=' ')
-print(len(colors)+over)
+print(len(colors) + over)

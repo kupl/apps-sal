@@ -18,17 +18,20 @@
     1 ≦ A, B, C, D ≦ 100
     入力は全て整数である
 '''
+
+
 class Monster:
     def __init__(self, hp, power):
         self.hp = hp
         self.power = power
 
-    def fight(self, power)  -> int:
+    def fight(self, power) -> int:
         self.hp -= power
         return self.hp
 
-    def is_loser(self)   -> bool:
+    def is_loser(self) -> bool:
         return self.hp <= 0
+
 
 # 標準入力から A, B, C, D を取得する
 a, b, c, d = list(map(int, input().split()))
@@ -49,4 +52,3 @@ while True:
         break
 
 print(result)
-

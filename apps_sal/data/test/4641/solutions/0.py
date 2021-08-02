@@ -22,6 +22,4 @@ for _ in range(quer):
     out.append(new)
     heappush(q, new)
 
-print('\n'.join(map(str,out)))
-    
-
+print('\n'.join(map(str, out)))

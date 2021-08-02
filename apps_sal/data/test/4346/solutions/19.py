@@ -1,5 +1,6 @@
 def mi():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
 
 '''
 4
@@ -10,16 +11,15 @@ def mi():
 '''
 
 for _ in range(int(input())):
-	L,v,l,r = mi()
-	cl = l
-	if cl>v and cl%v:
-		cl-=(cl)%v
-		cl+=v
-	elif cl<v:
-		cl = v
-	cr = r
-	if cr>v:
-		cr-=(cr%v)
+    L, v, l, r = mi()
+    cl = l
+    if cl > v and cl % v:
+        cl -= (cl) % v
+        cl += v
+    elif cl < v:
+        cl = v
+    cr = r
+    if cr > v:
+        cr -= (cr % v)
 
-	print(max(0,L//v-((cr-cl)//v+1)))
-
+    print(max(0, L // v - ((cr - cl) // v + 1)))

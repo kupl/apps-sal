@@ -28,4 +28,3 @@ for r in range(1, m + 1):
             print(name1, name2)
     else:
         print(' '.join(scores[best]))
-

@@ -27,4 +27,3 @@ while True:
         break
 
 print(res)
-

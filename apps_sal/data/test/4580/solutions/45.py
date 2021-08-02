@@ -17,7 +17,7 @@ for i in a:
         rate[4] = 1
     elif 2000 <= i < 2400:
         rate[5] = 1
-    elif 2400 <= i < 2800: 
+    elif 2400 <= i < 2800:
         rate[6] = 1
     elif 2800 <= i < 3200:
         rate[7] = 1
@@ -25,10 +25,8 @@ for i in a:
         s += 1
 
 
-
-    
-ans1 = 8-rate.count(0)
-ans2 = ans1+s
+ans1 = 8 - rate.count(0)
+ans2 = ans1 + s
 if ans1 == 0 and s != 0:
     ans1 = 1
 

@@ -1,9 +1,11 @@
-A, B, C, D = map(int,input().split())
+A, B, C, D = map(int, input().split())
+
 
 class Monster:
     def __init__(self, life, power):
         self.life = life
         self.power = power
+
 
 def answer(A: int, B: int, C: int, D: int) -> str:
     takahasi = Monster(A, B)
@@ -20,5 +22,6 @@ def answer(A: int, B: int, C: int, D: int) -> str:
         if T_HP <= 0:
             return "No"
             break
+
 
 print(answer(A, B, C, D))

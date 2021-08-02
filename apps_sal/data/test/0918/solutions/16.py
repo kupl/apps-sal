@@ -12,4 +12,3 @@ for i in range(m):
         print(' '.join([x[0][1], x[1][1]]))
     else:
         print('?')
-

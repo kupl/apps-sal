@@ -1,8 +1,10 @@
 n, m = list(map(int, input().split(' ')))
 
+
 def De(s):
     p = s.split(' ')
     return p[0], int(p[1]) - 1, int(p[2])
+
 
 l = [[] for _ in range(m)]
 t = [0] * m
@@ -33,11 +35,10 @@ for _ in range(n):
         else:
             l[r].append((p, s))
         l[r].pop()
-    
+
 
 for i in range(m):
     if len(l[i]) > 2 and l[i][1][1] == l[i][2][1]:
         print('?')
     else:
         print(l[i][0][0], l[i][1][0])
-

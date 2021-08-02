@@ -3,7 +3,7 @@
 try:
     while True:
         n, m = list(map(int, input().split()))
-        d = [[ ] for i in range(m)]
+        d = [[] for i in range(m)]
         for i in range(n):
             name, region, score = input().split()
             region = int(region) - 1
@@ -19,4 +19,3 @@ try:
 
 except EOFError:
     pass
-

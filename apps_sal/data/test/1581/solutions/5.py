@@ -1,4 +1,4 @@
-def f(n,k):
+def f(n, k):
     lim = int((n + 0.1) ** 0.5) + 1
     ws = []
     s = 0
@@ -17,7 +17,8 @@ def f(n,k):
             dp1[m - j - 1] = (s * ws[j]) % md
         dp0 = dp1[:]
     print((sum(dp0) % md))
-md=10**9+7
-n,k=list(map(int,input().split()))
-f(n,k)
 
+
+md = 10**9 + 7
+n, k = list(map(int, input().split()))
+f(n, k)

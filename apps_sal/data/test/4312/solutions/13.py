@@ -1,4 +1,4 @@
-A,B,C,D = list(map(int,input().split()))
+A, B, C, D = list(map(int, input().split()))
 while A > 0 and C > 0:
     C -= B
     if C <= 0:
@@ -8,5 +8,3 @@ while A > 0 and C > 0:
     if A <= 0:
         print('No')
         break
-
-

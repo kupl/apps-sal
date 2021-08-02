@@ -5,4 +5,3 @@ for q in range(n):
     lc = l // v + (0 if l % v == 0 else 1)
     rc = r // v
     print(ac - (rc - lc + 1))
-

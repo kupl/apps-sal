@@ -24,4 +24,3 @@ for i in range(k - 1):
     dp2 = dp12acc + dp1acc * coe % MOD
 ans = (dp1.sum() + dp2[1]) % MOD
 print(ans)
-

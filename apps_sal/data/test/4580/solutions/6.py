@@ -30,7 +30,7 @@ if len(set(color)) == 1 and rainbow > 0:
 elif rainbow == 0:
     mini = len(set(color))
 else:
-    mini = max(1, len(set(color))-1)
+    mini = max(1, len(set(color)) - 1)
 
 if rainbow > 1:
     maxi = len(set(color)) + rainbow - 1

@@ -12,6 +12,6 @@ for i in arr:
 
 res = 8 - colors.count(0)
 if res:
-    print(res, res+over)
+    print(res, res + over)
 else:
     print(1, over)

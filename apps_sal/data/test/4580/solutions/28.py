@@ -9,6 +9,5 @@ for x in a:
     else:
         free += 1
 
-Ans = [max(1, len(Set)), len(Set)+free]
+Ans = [max(1, len(Set)), len(Set) + free]
 print((*Ans))
-

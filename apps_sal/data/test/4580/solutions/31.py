@@ -1,15 +1,17 @@
-from sys import stdin, stdout # only need for big input
+from sys import stdin, stdout  # only need for big input
+
 
 def get_level(n):
-    return min( n // 400, 8)
+    return min(n // 400, 8)
+
 
 def solve():
-    n = int(input()) 
+    n = int(input())
     a = list(map(int, input().split()))
     level_num = dict()
     for i in range(9):
         level_num[i] = 0
-    
+
     for contestant in a:
         lvl = get_level(contestant)
         level_num[lvl] += 1
@@ -26,10 +28,7 @@ def solve():
         # max_num = 8
 
     print(min_num, max_num)
-        
 
-
-    
 
 def main():
     solve()
@@ -37,4 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

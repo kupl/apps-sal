@@ -1,7 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 
-cnt = [0]*8
+cnt = [0] * 8
 c = 0
 for a in A:
     if a <= 399:
@@ -22,12 +22,12 @@ for a in A:
         cnt[7] += 1
     else:
         c += 1
-        
+
 Min = len([i for i in cnt if i != 0])
 if c == 0:
     print(Min, Min)
 else:
-    Max = Min+c
+    Max = Min + c
     if Min == 0:
         print(1, Max)
     else:

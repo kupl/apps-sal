@@ -14,4 +14,3 @@ while True:
     if A <= 0:
         print('No')
         break
-

@@ -12,4 +12,3 @@ for i in range(220):
     elif a <= 0:
         print('No')
         return
-

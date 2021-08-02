@@ -4,4 +4,3 @@ for _ in range(int(input())):
     # arr = list(map(int, input().split()))
     a = n // 2
     print(a)
-

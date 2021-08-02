@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 #from operator import itemgetter
 #from heapq import heappush, heappop
 #import numpy as np
@@ -20,6 +33,6 @@ nb = lambda: list(map(float, stdin.readline().split()))
 ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
 
 A, B, C, D = na()
-t = (C + B - 1) // B 
-a = (A + D - 1) // D 
+t = (C + B - 1) // B
+a = (A + D - 1) // D
 print('Yes') if t <= a else print('No')

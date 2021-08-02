@@ -36,4 +36,3 @@ a_monster = Monster(c, d)
 
 game = Game([t_monster, a_monster])
 game.battle()
-

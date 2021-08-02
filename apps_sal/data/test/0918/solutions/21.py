@@ -1,28 +1,32 @@
 from sys import stdin as Si
 from collections import defaultdict as dt
-from operator import itemgetter as ig 
+from operator import itemgetter as ig
+
+
 def __starting_point():
-    n,m = list(map(int,Si.readline().split()))
+    n, m = list(map(int, Si.readline().split()))
     h = dt(dict)
 
     for i in range(n):
-        s,r,p = list(map(str,Si.readline().split()))
-        r,p = list(map(int,(r,p)))
-        if p in h[r]:   h[r][p]+=[s]
-        else:   h[r][p]=[s]
+        s, r, p = list(map(str, Si.readline().split()))
+        r, p = list(map(int, (r, p)))
+        if p in h[r]: h[r][p] += [s]
+        else: h[r][p] = [s]
     for da in h:
-        d = sorted(list(h[da].items()),key=ig(0),reverse=True)
-        #print(d)
-        ns,i = [],0
-        while len(ns)<2:
-            if len(d[i][1])+len(ns)>=3:
-                ns='?'
+        d = sorted(list(h[da].items()), key=ig(0), reverse=True)
+        # print(d)
+        ns, i = [], 0
+        while len(ns) < 2:
+            if len(d[i][1]) + len(ns) >= 3:
+                ns = '?'
                 break
             else:
-                ns+= d[i][1][:2-len(ns)]
-            i+=1
-            if i>=len(d):   break
+                ns += d[i][1][:2 - len(ns)]
+            i += 1
+            if i >= len(d): break
         print(' '.join(ns))
+
+
 '''
 Very soon Berland will hold a School Team Programming Olympiad. From each of the m Berland regions a team of two people is invited to participate in the olympiad. The qualifying contest to form teams was held and it was attended by n Berland students. There were at least two schoolboys participating from each of the m regions of Berland. The result of each of the participants of the qualifying competition is an integer score from 0 to 800 inclusive.
 
@@ -74,7 +78,6 @@ In the first sample region teams are uniquely determined.
 
 In the second sample the team from region 2 is uniquely determined and the team from region 1 can have three teams: "Petrov"-"Sidorov", "Ivanov"-"Sidorov", "Ivanov" -"Petrov", so it is impossible to determine a team uniquely.
 '''
-            
-        
+
 
 __starting_point()

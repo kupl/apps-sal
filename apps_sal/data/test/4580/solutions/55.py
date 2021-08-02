@@ -7,15 +7,14 @@ A.sort()
 
 j = 0
 for i in range(len(A)):
-  while j < 8:
-    if rate[j] <= A[i] < rate[j + 1]:
-      p[j] = 1
-      break
+    while j < 8:
+        if rate[j] <= A[i] < rate[j + 1]:
+            p[j] = 1
+            break
+        else:
+            j += 1
     else:
-      j += 1
-  else:
-    p[8] = len(A[i:])
-    break
+        p[8] = len(A[i:])
+        break
 
 print((str(max([sum(p[:8]), 1])) + " " + str(sum(p))))
-

@@ -1,4 +1,6 @@
 from itertools import accumulate
+
+
 def BC132_F():
     n, k = list(map(int, input().split(' ')))
     mod = 10**9 + 7

@@ -23,4 +23,3 @@ for _ in range(2, k + 1):
 
 ans = (dp_u.sum() + dp_d.sum()) % mod
 print(ans)
-

@@ -12,4 +12,3 @@ while A > 0 or C > 0:
         break
 
 print(result)
-
