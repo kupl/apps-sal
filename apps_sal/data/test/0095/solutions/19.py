@@ -26,4 +26,3 @@ for i in range(1, len(data)):
             print("NO")
             return
 print("YES")
-

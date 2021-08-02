@@ -18,6 +18,3 @@ for i in range(1, 32):
         print(i)
         return
 print(-1)
-    
-    
-

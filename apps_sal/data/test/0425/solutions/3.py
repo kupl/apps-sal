@@ -8,7 +8,6 @@ def count_1(n):
             ans += 1
         n //= 2
     return ans
-            
 
 
 n, p = list(map(int, input().split()))
@@ -20,4 +19,3 @@ for i in range(1, 40):
         print(i)
         return
 print(-1)
-

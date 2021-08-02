@@ -22,12 +22,11 @@ for s in a:
     chet = not chet
 
 good = 0
-for i in range(1, n+1):
-    sum_chet = c[i-1] + fnc - nc[i]
-    sum_nc = nc[i-1] + fc -c[i]
+for i in range(1, n + 1):
+    sum_chet = c[i - 1] + fnc - nc[i]
+    sum_nc = nc[i - 1] + fc - c[i]
     if sum_chet == sum_nc:
-        good+=1
+        good += 1
 
 
 print(good)
-

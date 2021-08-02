@@ -15,7 +15,7 @@ for N, K, A in Query:
         if a == K: exists = True
         if a >= K:
             Inds.append(i)
-    
+
     if not exists:
         ok = False
     elif N == 1:
@@ -23,12 +23,12 @@ for N, K, A in Query:
     else:
         ok = False
         for ind in Inds:
-            if ind < N-1 and A[ind+1] >= A[ind]:
+            if ind < N - 1 and A[ind + 1] >= A[ind]:
                 ok = True
-            elif ind > 0 and A[ind-1] >= A[ind]:
+            elif ind > 0 and A[ind - 1] >= A[ind]:
                 ok = True
-            elif ind > 1 and A[ind-2] >= A[ind]:
+            elif ind > 1 and A[ind - 2] >= A[ind]:
                 ok = True
-            elif ind < N-2 and A[ind+2] >= A[ind]:
+            elif ind < N - 2 and A[ind + 2] >= A[ind]:
                 ok = True
     print("yes" if ok else "no")

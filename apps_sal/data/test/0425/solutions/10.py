@@ -3,6 +3,7 @@ def get_n(n, k):
         return False
     return True
 
+
 n, p = list(map(int, input().split()))
 
 if p - n >= 0:
@@ -15,4 +16,3 @@ else:
             print(i)
             return
     print(-1)
-

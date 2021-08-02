@@ -7,4 +7,3 @@ for q in range(5757):
     n -= p
 else:
     print(-1)
-

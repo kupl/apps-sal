@@ -1,2 +1,2 @@
 li = input().split()
-print ((li.index("0")) + 1)
+print((li.index("0")) + 1)

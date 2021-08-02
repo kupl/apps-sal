@@ -2,6 +2,7 @@ from operator import neg
 n = int(input())
 a = [tuple(map(int, input().split())) for i in range(n)]
 
+
 def check(max_h):
     k = n // 2
     b = []
@@ -23,7 +24,5 @@ def check(max_h):
             r += w
     return r * max_h
 
-print(min(check(h) for h in range(1, 1001)))
-    
-        
 
+print(min(check(h) for h in range(1, 1001)))

@@ -1,6 +1,7 @@
 def f(x, k):
     return x * (x - 1) // 2 + ((2 ** k) - 1) * x
 
+
 res = []
 n = int(input())
 for k in range(0, 64):
@@ -22,4 +23,3 @@ if len(res) == 0:
     res.append(-1)
 for x in sorted(res):
     print(x)
-

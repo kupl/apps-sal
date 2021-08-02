@@ -22,4 +22,3 @@ while n - l * p > 0:
     l += 1
 if k:
     print(-1)
-

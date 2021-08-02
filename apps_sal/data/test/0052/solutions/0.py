@@ -24,4 +24,3 @@ for i in sorted(list(res)):
     print(i)
 if not list(res):
     print(-1)
-

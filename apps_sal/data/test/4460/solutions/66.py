@@ -7,4 +7,3 @@ for i in range(5):
         ans = i + 1
 
 print(ans)
-

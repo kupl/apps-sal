@@ -1,4 +1,3 @@
-x = list(map(int,input().split()))
+x = list(map(int, input().split()))
 
-print((x.index(0)+1))
-
+print((x.index(0) + 1))
