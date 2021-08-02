@@ -8,5 +8,5 @@ while True:
             flag2 = False
             break
     if flag2:
-        break            
+        break
 print(n)

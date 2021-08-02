@@ -1,25 +1,24 @@
 def ain():
-    return list(map( int, input().split() ))
-
+    return list(map(int, input().split()))
 
 
 # for _ in range( int(input()) ):
 # n = int(input())
 # python3 g.py
 
-for _ in range( int(input()) ):
+for _ in range(int(input())):
     s = input()
     t = input()
     p = input()
     fl = False
     i = 0
     for x in s:
-        while i<len(t) and t[i] != x:
-            i+=1
+        while i < len(t) and t[i] != x:
+            i += 1
         if i == len(t):
             fl = True
             break
-        i+=1
+        i += 1
     if fl:
         print('NO')
     else:
@@ -31,5 +30,3 @@ for _ in range( int(input()) ):
                 break
         if not fl:
             print('YES')
-
-

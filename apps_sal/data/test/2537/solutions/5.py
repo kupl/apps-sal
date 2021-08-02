@@ -35,9 +35,8 @@ for i in range(q):
             j += 1
         if i != n:
             ans = 0
-        
+
         if ans == 0:
             print("NO")
         else:
             print("YES")
-

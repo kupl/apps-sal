@@ -5,4 +5,3 @@ for i in range(n):
     if d**2 >= (x**2 + y**2):
         count += 1
 print(count)
-

@@ -9,4 +9,3 @@ for friend in a:
     else:
         w += 2
 print(w)
-

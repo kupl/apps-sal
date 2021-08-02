@@ -6,4 +6,3 @@ while(not l.count(r)):
     r = abs(r - k)
 l = sorted(l)
 print((str(l[0])))
-

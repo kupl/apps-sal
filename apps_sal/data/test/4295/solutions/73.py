@@ -21,4 +21,3 @@ n = n % k
 res = min(n, abs(n - k))
 
 print(res)
-

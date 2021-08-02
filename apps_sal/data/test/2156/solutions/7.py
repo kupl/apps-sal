@@ -7,4 +7,4 @@ for i in range(1, n + 1):
 q = int(input())
 for i in range(q):
     l, r = list(map(int, input().split()))
-    print((pref[r] - pref[l - 1])// 10)
+    print((pref[r] - pref[l - 1]) // 10)

@@ -1,6 +1,7 @@
 def iparse():
     return list(map(int, input().split()))
 
+
 n, k = iparse()
 d = iparse()
 
@@ -16,5 +17,3 @@ for i in range(n, 5000000):
     if f:
         print(i)
         return
-
-

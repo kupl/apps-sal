@@ -1,6 +1,6 @@
 N, K = map(int, input().split())
-residue = N%K
-if residue*2 < K:
+residue = N % K
+if residue * 2 < K:
     print(residue)
 else:
-    print(K-residue)
+    print(K - residue)

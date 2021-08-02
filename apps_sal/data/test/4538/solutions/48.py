@@ -1,5 +1,5 @@
 import math
-N, D = map(int,input().split())
+N, D = map(int, input().split())
 X = [0 for _ in range(N)]
 Y = [0 for _ in range(N)]
 Distance = []

@@ -5,6 +5,7 @@ import sys
 def resultSur97(x):
     return x % (10 ** 9 + 7)
 
+
 def __starting_point():
     # ------ 入力 ------#
     nk = list(map(int, input().split()))     # スペース区切り連続数字
@@ -34,5 +35,6 @@ def __starting_point():
     #     print("YES")
     # else:
     #     print("NO")
+
 
 __starting_point()

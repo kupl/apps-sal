@@ -2,8 +2,10 @@ total, k = list(map(int, input().split()))
 
 d = list(map(int, input().split()))
 
+
 def total_to_digits(total):
     return list(map(int, list(str(total))))
+
 
 def find_lowest_denomination(total, d):
     res = None
@@ -15,4 +17,3 @@ def find_lowest_denomination(total, d):
 
 
 find_lowest_denomination(total, d)
-

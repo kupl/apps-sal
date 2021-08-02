@@ -11,5 +11,4 @@ for a in s:
 nq = int(input())
 for i in range(nq):
     l, r = list(map(int, input().split()))
-    print((acc[r]-acc[l-1]) // 10)
-
+    print((acc[r] - acc[l - 1]) // 10)

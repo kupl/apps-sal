@@ -8,6 +8,7 @@ def check(n, D):
             return False
     return True
 
+
 def __starting_point():
     n, k = [int(x) for x in input().split(' ')]
     D = [int(x) for x in input().split(' ')]
@@ -18,5 +19,6 @@ def __starting_point():
         else:
             res += 1
     print(res)
+
 
 __starting_point()

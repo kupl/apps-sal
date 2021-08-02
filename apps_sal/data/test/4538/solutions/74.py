@@ -16,4 +16,3 @@ for input in sys.stdin:
     index += 1
 
 print(count)
-

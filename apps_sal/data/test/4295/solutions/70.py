@@ -10,4 +10,3 @@ elif n > k:
 
 m = k - n
 print((min(n, m)))
-

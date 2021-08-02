@@ -95,11 +95,12 @@ def main():
     # print(bit)
     for i in range(q):
         l, r = mi()
-        a = bit.query(l, r+1)
-        print((a-a % 10)//10)
+        a = bit.query(l, r + 1)
+        print((a - a % 10) // 10)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,4 +1,4 @@
-n,k = input().split()
+n, k = input().split()
 hate = list(input().split())
 exi = True
 t = True

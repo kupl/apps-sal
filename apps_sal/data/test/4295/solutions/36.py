@@ -1,6 +1,7 @@
 # coding=utf-8
 import sys
 
+
 def __starting_point():
     N, K = map(int, input().split())
 
@@ -10,8 +11,10 @@ def __starting_point():
 
     N = N % K
 
-    while(N > abs(N-K)):
-        N = abs(N-K)
+    while(N > abs(N - K)):
+        N = abs(N - K)
 
     print(N)
+
+
 __starting_point()

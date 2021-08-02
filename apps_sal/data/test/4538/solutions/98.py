@@ -7,4 +7,3 @@ for i in range(n):
     if math.sqrt(x[i] ** 2 + y[i] ** 2) <= d:
         count += 1
 print(count)
-

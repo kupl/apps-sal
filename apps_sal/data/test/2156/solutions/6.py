@@ -1,4 +1,7 @@
 # Binary Indexed Tree (Fenwick Tree)
+import sys
+
+
 class BIT():
     def __init__(self, n):
         '''n = 要素数
@@ -26,8 +29,6 @@ class BIT():
         return self._sum(j) - self._sum(i)
 
 
-import sys
-
 input = sys.stdin.readline
 n = int(input())
 a = list(map(int, input().split()))
@@ -41,5 +42,3 @@ for i in range(q):
     l, r = query[i]
     l -= 1
     print(bit.sum(l, r) // 10)
-
-

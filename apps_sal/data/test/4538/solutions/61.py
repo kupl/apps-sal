@@ -10,4 +10,3 @@ for x, y in x_y:
         cnt += 1
 
 print(cnt)
-

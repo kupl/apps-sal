@@ -22,4 +22,3 @@ class Solution:
 
 conditions = Solution(n, k)
 conditions.answer()
-

@@ -14,4 +14,4 @@ def i_row_list(N): return [list(map(int, input().split())) for _ in range(N)]
 
 
 n, k = i_map()
-print(min(n%k,k-n%k))
+print(min(n % k, k - n % k))

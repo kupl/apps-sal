@@ -34,7 +34,7 @@ def resolve():
     N, K = list(map(int, input().split()))
     D = list(input().split())
 
-    for i in range(N, 10*N+1):
+    for i in range(N, 10 * N + 1):
         for d in D:
             if str(i).count(d) != 0:
                 break
@@ -46,5 +46,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

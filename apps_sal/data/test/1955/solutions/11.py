@@ -8,10 +8,10 @@ Problem 732D
 import sys
 
 n, m = list(map(int, input().split(' ')))
-di = list(map(int,input().split(' ')))
-ai = list(map(int,input().split(' ')))
+di = list(map(int, input().split(' ')))
+ai = list(map(int, input().split(' ')))
 
-completed = [False] * m 
+completed = [False] * m
 
 summ = sum(ai) + m
 temp = m
@@ -31,5 +31,3 @@ for i in range(n):
                 return
 
 print(-1)
-
-

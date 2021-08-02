@@ -1,4 +1,4 @@
-def minN(N:int, usable:list, restrict=True):
+def minN(N: int, usable: list, restrict=True):
     usable.sort()
     keta = False
     if restrict:
@@ -6,11 +6,12 @@ def minN(N:int, usable:list, restrict=True):
             if i >= N:
                 return str(i)
         # 桁が増える
-        return '1'+str(usable[0])
+        return '1' + str(usable[0])
     else:
         return str(usable[0])
 
-def rote(N:list, D:set, d:set):
+
+def rote(N: list, D: set, d: set):
     ans = []
     flag = True
     lenNstr = len(N)
@@ -27,19 +28,22 @@ def rote(N:list, D:set, d:set):
             ans.append(keta * min(d))
     return sum(ans)
 
+
 def main():
     N, K = list(map(int, input().split()))
     D = set(map(int, input().split()))
-    numset = set(range(0,10))
+    numset = set(range(0, 10))
     d = list(numset.difference(D))
     d.sort()
     for _ in range(10):
         Nstr = list(str(N))
         ans = rote(Nstr, D, d)
-        N = ans    
+        N = ans
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()
