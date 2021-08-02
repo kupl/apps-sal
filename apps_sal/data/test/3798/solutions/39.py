@@ -3,6 +3,7 @@ def sum_digit(b, n):
         return n
     return sum_digit(b, n // b) + n % b
 
+
 N = int(input())
 S = int(input())
 
@@ -23,4 +24,3 @@ else:
                 print(b)
                 return
     print((-1))
-

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
- 
+
 n = int(input())
 edge = [[] for _ in range(n)]
 edge_dict = dict()
- 
+
 for i in range(n - 1):
     a, b = [int(item) - 1 for item in input().split()]
     edge[a].append(b)
@@ -14,12 +14,13 @@ for i in range(n - 1):
         edge_dict[(b, a)] = i
     else:
         edge_dict[(a, b)] = i
- 
+
 m = int(input())
 uv = []
 for _ in range(m):
     uv.append([int(item) - 1 for item in input().split()])
- 
+
+
 def dfs(p, v, dest):
     if v == dest:
         return [v]
@@ -32,7 +33,8 @@ def dfs(p, v, dest):
         if ret:
             return ret + [v]
     return False
- 
+
+
 # edge-bitset of each constraint
 target_edge = [0] * m
 for i, (u, v) in enumerate(uv):
@@ -48,7 +50,7 @@ edgest = [0] * 2**m
 for i in range(1, 2**m):
     lsb = i & (-i)
     edgest[i] = edgest[i ^ lsb] | target_edge[lsb.bit_length() - 1]
- 
+
 # dp[set of constraints]
 dp = [0] * 2**m
 dp[0] = 1 << (n - 1)

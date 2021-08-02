@@ -7,10 +7,8 @@ m = int(input())
 a.sort()
 
 if m <= n:
-	result = sum(a[:m])
+    result = sum(a[:m])
 else:
-	result = sum(a) - (m-n)*d
+    result = sum(a) - (m - n) * d
 
 print(result)
-
-

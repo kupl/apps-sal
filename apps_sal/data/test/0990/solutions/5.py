@@ -1,9 +1,9 @@
 # https://atcoder.jp/contests/abc152/submissions/9619555
 
+import numpy as np
 import sys
 readline = sys.stdin.readline
 
-import numpy as np
 
 N = int(readline())
 AB = list(list(map(int, readline().split())) for _ in range(N - 1))
@@ -62,4 +62,3 @@ n_edges = popcnt(S)
 x = 1 << (N - 1 - n_edges)
 answer = (x * sgn).sum()
 print(answer)
-

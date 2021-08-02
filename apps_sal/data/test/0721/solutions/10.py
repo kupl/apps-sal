@@ -4,5 +4,5 @@ a.sort()
 
 m = int(input())
 ans = sum(a[:m])
-ans -= (max(0,m-n))*d
+ans -= (max(0, m - n)) * d
 print(ans)

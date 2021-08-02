@@ -42,4 +42,3 @@ for f in sorted(fs_set):
         return
 else:
     print((-1))
-

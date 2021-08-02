@@ -16,6 +16,7 @@ uv = []
 for _ in range(m):
     uv.append([int(x) - 1 for x in input().split()])
 
+
 def dfs(p, v, dest):
     if v == dest:
         return [v]
@@ -28,6 +29,7 @@ def dfs(p, v, dest):
         if ret:
             return ret + [v]
     return False
+
 
 edgest = [0] * (2 ** m)
 for i, (u, v) in enumerate(uv):
@@ -54,4 +56,3 @@ for i in range(1, 2 ** m):
     else:
         ans -= dp[i]
 print(ans)
-

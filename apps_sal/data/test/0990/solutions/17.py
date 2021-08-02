@@ -40,4 +40,3 @@ for lc in link_conditions:
     for fulfilled, pattern in list(dp.items()):
         dp[fulfilled | lc] += pattern
 print((dp[(1 << m) - 1]))
-

@@ -1,7 +1,7 @@
 N = int(input())
-ab = [tuple(map(int,input().split())) for _ in range(N - 1)]
+ab = [tuple(map(int, input().split())) for _ in range(N - 1)]
 M = int(input())
-uv = [tuple(map(int,input().split())) for _ in range(M)]
+uv = [tuple(map(int, input().split())) for _ in range(M)]
 route = [[] for _ in range(N)]
 
 for i, (a, b) in enumerate(ab):
@@ -22,7 +22,7 @@ for i, (u, v) in enumerate(uv):
         s = stack.pop()
         for g, j in route[s]:
             if visited[g]:
-                continue   
+                continue
             stack.append(g)
             dire[g].append((s, j))
             visited[g] = 1
@@ -45,4 +45,3 @@ for i in range(1, 1 << M):
     judge = bin(i).count("1")
     ans += (-2 ** (N - 1 - power) if judge % 2 else 2 ** (N - 1 - power))
 print(ans)
-

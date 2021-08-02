@@ -3,7 +3,7 @@ for i in range(2**4):
     a = 0
     b = 0
     for j in range(4):
-        if (i >> j)&1:
+        if (i >> j) & 1:
             a += L[j]
         else:
             b += L[j]
@@ -12,4 +12,3 @@ for i in range(2**4):
         return
 else:
     print('No')
-

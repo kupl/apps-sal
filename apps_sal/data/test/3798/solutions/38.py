@@ -1,10 +1,12 @@
 from math import floor, sqrt
 
+
 def f(b, n):
     if n < b:
         return n
     else:
         return f(b, n // b) + n % b
+
 
 def solve(n, s):
     if s > n:
@@ -30,4 +32,3 @@ n = int(input())
 s = int(input())
 
 print((solve(n, s)))
-

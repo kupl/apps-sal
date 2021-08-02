@@ -1,5 +1,6 @@
 import sys
 
+
 def __starting_point():
 
     n, d = [int(i) for i in sys.stdin.readline().rstrip().split(' ')]
@@ -10,6 +11,7 @@ def __starting_point():
         # enough hooks
         print(sum(a_arr[:m]))
     else:
-        print(sum(a_arr)-(m-n)*d)
+        print(sum(a_arr) - (m - n) * d)
+
 
 __starting_point()

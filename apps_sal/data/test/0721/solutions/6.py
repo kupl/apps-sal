@@ -8,7 +8,7 @@ m = int(input());
 
 out = 0;
 
-for i in range(0,m):
+for i in range(0, m):
     if i < len(a):
         out = out + a[i];
     else:

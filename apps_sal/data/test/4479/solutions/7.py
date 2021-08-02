@@ -3,7 +3,7 @@ class Solution:
         d = collections.defaultdict(int)
         for x in A:
             d[x] += 1
-        
+
         res = 0
         for i in range(-100, 0):
             if i in d and k > 0:
@@ -11,7 +11,7 @@ class Solution:
                 k -= x
                 d[i] -= x
                 d[-i] += x
-            
+
         res = 0
         if k % 2 == 1:
             j = 0
@@ -23,11 +23,3 @@ class Solution:
         for i in range(-100, 101):
             res += d[i] * i
         return res
-        
-            
-                
-                    
-            
-
-                
-

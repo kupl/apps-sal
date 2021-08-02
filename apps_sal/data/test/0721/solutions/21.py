@@ -8,5 +8,4 @@ a.sort()
 if m <= n:
     print(sum(a[:m]))
 else:
-    print(sum(a) - (m-n)*d)
-
+    print(sum(a) - (m - n) * d)

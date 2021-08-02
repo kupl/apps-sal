@@ -4,6 +4,7 @@ from functools import reduce
 # https://atcoder.jp/contests/abc152/submissions/9619555
 # popcnt
 
+
 def main():
     from collections import namedtuple
     from functools import reduce
@@ -58,5 +59,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -11,4 +11,3 @@ D = int(input())
 
 ABCD = [A, B, C, D]
 print((atc_092a(ABCD)))
-

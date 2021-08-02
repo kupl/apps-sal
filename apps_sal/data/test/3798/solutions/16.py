@@ -29,20 +29,19 @@ def ds(N, b):
 
 
 i = 0
-for i in range(2, math.floor(n**(1/2)) + 1):
+for i in range(2, math.floor(n**(1 / 2)) + 1):
     if ds(n, i) == s:
         print(i)
         return
 
 if i == 0:
-    i = math.floor(n**(1/2))
+    i = math.floor(n**(1 / 2))
 c = n // (i + 1)
 for i in range(c, 0, -1):
-    if (n-s) % i == 0:
-        b = (n-s)//i + 1
-        if i < b and 0 <= s-i < b:
+    if (n - s) % i == 0:
+        b = (n - s) // i + 1
+        if i < b and 0 <= s - i < b:
             print(b)
             return
 
 print((-1))
-

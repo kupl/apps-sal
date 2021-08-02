@@ -14,22 +14,22 @@ def solve(n: int, s: int):
         return -1
 
     if s == n:
-        return n+1
+        return n + 1
 
     b = 2
     while b * b <= n:
         if f(n, b) == s:
             return b
         b += 1
-    
-    for p in range(b-1, 0, -1):
+
+    for p in range(b - 1, 0, -1):
         if (n - s) % p > 0:
             continue
 
         c = (n - s) // p + 1
         if f(n, c) == s:
             return c
-    
+
     return -1
 
 
@@ -44,7 +44,9 @@ def main():
     s = int(next(tokens))  # type: int
     print((solve(n, s)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

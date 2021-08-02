@@ -4,6 +4,8 @@ def f(_b, _n):
         ret += _n % _b
         _n = _n // _b
     return ret
+
+
 INF = 10 ** 12
 
 n = int(input())
@@ -42,4 +44,3 @@ if ans == INF:
     ans = -1
 
 print(ans)
-

@@ -1,4 +1,4 @@
-A,B,C,D=list(map(int,input().split()))
+A, B, C, D = list(map(int, input().split()))
 for i in range(2):
     for j in range(2):
         for k in range(2):
@@ -9,7 +9,7 @@ for i in range(2):
                     sum1 += A
                 else:
                     sum2 += A
-                if j ==1:
+                if j == 1:
                     sum1 += B
                 else:
                     sum2 += B
@@ -25,4 +25,3 @@ for i in range(2):
                     print("Yes")
                     return
 print("No")
-

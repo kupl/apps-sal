@@ -3,6 +3,7 @@
 
 import fileinput
 
+
 def solve():
     with fileinput.input() as stdin:
         n, d = [int(c) for c in stdin.readline().split(" ")]
@@ -20,7 +21,9 @@ def solve():
                 res += a[i]
         print(res)
 
+
 def __starting_point():
     solve()
+
 
 __starting_point()

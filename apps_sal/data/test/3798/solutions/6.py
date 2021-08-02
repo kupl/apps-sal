@@ -33,7 +33,7 @@ def submit():
     for i in range(sqrtn - 1, 0, -1):
         p = i
         q = s - p
-        sho,mod = divmod(n - q, p)
+        sho, mod = divmod(n - q, p)
         if mod == 0:
             b = sho
         else:
@@ -46,6 +46,9 @@ def submit():
 
     print(-1)
 
+
 def __starting_point():
     submit()
+
+
 __starting_point()

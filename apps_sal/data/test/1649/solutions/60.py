@@ -8,4 +8,3 @@ for p in range(1 << 4):
         print('Yes')
         return
 print('No')
-

@@ -6,4 +6,3 @@ if m < n:
     print(sum(A[:m]))
 else:
     print(sum(A) - d * (m - n))
-

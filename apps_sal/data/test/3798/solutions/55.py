@@ -8,10 +8,12 @@ if N == S:
     print(N + 1)
     return
 
+
 def f(b, n):
     if n < b:
         return n
     return f(b, n // b) + n % b
+
 
 ans = float('inf')
 

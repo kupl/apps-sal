@@ -7,5 +7,3 @@ class Solution:
             A[idx] = -A[idx]
             max_ = sum(A)
         return max_
-            
-

@@ -2,6 +2,7 @@ from functools import reduce
 # https://drken1215.hatenablog.com/entry/2020/01/26/164200
 # bit_pathの参考にした
 
+
 def main():
     from collections import namedtuple
     from functools import reduce
@@ -46,5 +47,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

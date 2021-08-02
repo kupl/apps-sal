@@ -4,9 +4,9 @@ def dfs(i, a, b):
         if a == b:
             ans = 1
     else:
-        dfs(i+1, a + t[i], b)
-        dfs(i+1, a , b+t[i])
-    
+        dfs(i + 1, a + t[i], b)
+        dfs(i + 1, a, b + t[i])
+
 
 t = list(map(int, input().split()))
 ans = 0

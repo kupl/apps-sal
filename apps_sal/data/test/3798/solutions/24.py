@@ -1,12 +1,14 @@
 import sys
 input = sys.stdin.readline
 
+
 def digit_sum(n, b):
     res = 0
     while n > 0:
         res += n % b
         n //= b
     return res
+
 
 def main():
     n = int(input())
@@ -26,7 +28,7 @@ def main():
         for i in range(1, n):
             first = digit_sum(n, start)
             end = start - n // i // (i + 1)
-            if start == end+1:
+            if start == end + 1:
                 judge = start
                 break
 
@@ -63,5 +65,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

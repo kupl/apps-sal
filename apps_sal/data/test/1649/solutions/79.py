@@ -3,7 +3,7 @@ yes = False
 for bitset in range(1, 2 ** 4):
     eat_sum = 0
     left_sum = 0
-    for j in range(4):   
+    for j in range(4):
         if ((bitset >> j) & 1) == 1:
             eat_sum += A[j]
         else:
@@ -18,4 +18,3 @@ if yes:
     print("Yes")
 else:
     print("No")
-

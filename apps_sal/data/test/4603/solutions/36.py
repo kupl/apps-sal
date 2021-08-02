@@ -1,4 +1,4 @@
-a = [[],[]]
+a = [[], []]
 for i in range(2):
     a[0].append(int(input()))
 for i in range(2):

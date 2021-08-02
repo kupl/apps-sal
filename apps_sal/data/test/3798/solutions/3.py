@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import math
 
+
 def f(b, n):
     return n if (n < b) else f(b, n // b) + n % b
+
 
 n = int(input())
 s = int(input())
@@ -23,4 +25,3 @@ else:
             if math.floor(n ** 0.5) < b <= n and f(b, n) == s:
                 ans = b
 print(ans)
-
