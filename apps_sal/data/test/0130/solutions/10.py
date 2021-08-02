@@ -21,6 +21,3 @@ if min(n, m) < l:
 else:
     ans = l * l - cnt
 print(ans)
-
-
-

@@ -1,4 +1,4 @@
-n, x, *a = map(int, open(c:=0).read().split())
+n, x, *a = map(int, open(c := 0).read().split())
 for i in range(n - 1):
     s = max(a[i] + a[i + 1] - x, 0)
     a[i + 1] -= s

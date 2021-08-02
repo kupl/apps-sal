@@ -17,4 +17,3 @@ for i in range(n - 1):
     ans += tmp
     pre = tmp
 print(ans)
-

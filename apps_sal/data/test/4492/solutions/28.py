@@ -8,9 +8,8 @@ for i in range(N):
         a[i] -= a[i] - x
 
     if i - 1 >= 0:
-        if a[i] + a[i-1] > x:
-            count += (a[i] + a[i-1]) - x
-            a[i] -= (a[i] + a[i-1]) - x
+        if a[i] + a[i - 1] > x:
+            count += (a[i] + a[i - 1]) - x
+            a[i] -= (a[i] + a[i - 1]) - x
 
 print(count)
-

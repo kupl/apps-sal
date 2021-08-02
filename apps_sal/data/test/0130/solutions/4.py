@@ -9,10 +9,10 @@ lft = m
 rht = 0
 allBlackCount = 0
 
-for i in range(0,n):
+for i in range(0, n):
     inp = input()
     grid.append(inp)
-    
+
 for i in range(0, n):
     for j in range(0, m):
         if grid[i][j] == 'B':
@@ -25,8 +25,8 @@ for i in range(0, n):
 # print(top,lft)
 # print(btm,rht)
 
-h = btm-top+1
-w = rht-lft+1
+h = btm - top + 1
+w = rht - lft + 1
 sz = max(h, w)
 
 if allBlackCount == 0:
@@ -34,4 +34,4 @@ if allBlackCount == 0:
 elif sz > n or sz > m:
     print(-1)
 else:
-    print(sz*sz-allBlackCount)
+    print(sz * sz - allBlackCount)

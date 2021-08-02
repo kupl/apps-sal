@@ -30,11 +30,11 @@ count = 0
 #                 temp_c -= 50
 #     if X < 500:
 #         break
-for a in range(A+1):
-    for b in range(B+1):
-        for c in range(C+1):
+for a in range(A + 1):
+    for b in range(B + 1):
+        for c in range(C + 1):
             total = 500 * a + 100 * b + 50 * c
             if total == X:
-                count+=1
+                count += 1
 
 print(count)

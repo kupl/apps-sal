@@ -10,12 +10,15 @@ def main():
     n, x = mi()
     a = li()
     cnt = 0
-    for i in range(1,n):
-        if a[i-1]+a[i]>x:
-            cnt += a[i-1]+a[i]-x
-            a[i] = max(0, x-a[i-1])
+    for i in range(1, n):
+        if a[i - 1] + a[i] > x:
+            cnt += a[i - 1] + a[i] - x
+            a[i] = max(0, x - a[i - 1])
     print(cnt)
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

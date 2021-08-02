@@ -22,4 +22,3 @@ for a in map(int, input().split()):
     if d[a] > d[ans]:
         ans = a
 print(ans)
-

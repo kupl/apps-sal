@@ -1,5 +1,5 @@
 def main():
-    a, b, c, x = (int(input())+1 for _ in range(4))
+    a, b, c, x = (int(input()) + 1 for _ in range(4))
     x -= 1
 
     ans = 0

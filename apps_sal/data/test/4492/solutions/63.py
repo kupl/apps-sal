@@ -14,5 +14,3 @@ for i in range(1, N):
     Sum += d
 
 print(Sum)
-
-

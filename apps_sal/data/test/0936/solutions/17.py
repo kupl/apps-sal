@@ -10,4 +10,3 @@ for x in arr:
         max_i = x
         max_n = ans[x]
 print(max_i)
-

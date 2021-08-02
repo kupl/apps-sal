@@ -14,4 +14,3 @@ for i in range(n - 1):
     res += dif
 
 print(res)
-

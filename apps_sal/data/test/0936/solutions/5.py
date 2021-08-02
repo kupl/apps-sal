@@ -10,9 +10,9 @@ for i in arr:
         d[i] += 1
     else:
         d[i] = 1
-        
+
     if m == -1 or d[i] > m:
         m = d[i]
         ans = i
-        
+
 print(ans)

@@ -12,4 +12,3 @@ for i in range(1, n):
     if (mas[a] > mas[maxi]):
         maxi = a
 print(maxi)
-

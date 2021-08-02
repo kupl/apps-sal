@@ -53,15 +53,16 @@ def resolve():
             a[i] = x
 
     for i in range(1, N):
-        if a[i-1] + a[i] > x:
-            ans += (a[i] + a[i-1] - x)
-            a[i] = x - a[i-1]
+        if a[i - 1] + a[i] > x:
+            ans += (a[i] + a[i - 1] - x)
+            a[i] = x - a[i - 1]
 
     print(ans)
 
 
 def __starting_point():
-     # unittest.main()
-     resolve()
+    # unittest.main()
+    resolve()
+
 
 __starting_point()

@@ -21,4 +21,3 @@ ans1 += temp_cnt[-1]
 
 
 print(ans1)
-
