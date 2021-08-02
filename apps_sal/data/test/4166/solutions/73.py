@@ -1,14 +1,14 @@
 N, M = list(map(int, input().split()))
 sc_list = [list(map(int, input().split())) for i in range(M)]
 
-order_list = [0]*N
+order_list = [0] * N
 ans = 0
 
 for i in range(M):
     if sc_list[i][0] == 1 and sc_list[i][1] == 0 and N > 1:
         ans = -1
         break
-    for j in range(i + 1 ,M):
+    for j in range(i + 1, M):
         if sc_list[i][0] == sc_list[j][0] and sc_list[i][1] != sc_list[j][1]:
             ans = -1
             break

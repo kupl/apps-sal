@@ -7,7 +7,7 @@ INF = float('inf')
 N = int(input())    # 数字
 A = list(map(int, input().split()))     # スペース区切り連続数字
 
-Aafter = [A[i]-(i+1) for i in range(N)]
+Aafter = [A[i] - (i + 1) for i in range(N)]
 
 minus = []
 zero_count = 0
@@ -40,4 +40,3 @@ for i in range(N):
 
 
 print(("{}".format(res)))
-

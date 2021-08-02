@@ -5,7 +5,7 @@ x = list(map(int, input().split()))
 
 value = 0
 
-for _ in range(n):    
+for _ in range(n):
     x[_] -= (_ + 1)
 
 x.sort()

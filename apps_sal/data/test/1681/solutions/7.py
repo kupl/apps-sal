@@ -31,4 +31,3 @@ for color, count in list(M.items()):
         S += min(count, N[color])
 
 print(S)
-

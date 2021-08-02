@@ -18,5 +18,6 @@ def game():
             mlist[i:i + 1] = []
             nlist[nlist.index(m[i])] = []
     print(counter)
-game()
 
+
+game()

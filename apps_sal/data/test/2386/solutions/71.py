@@ -7,4 +7,3 @@ if N % 2 == 0:
     _ans = sum(list([abs(x - A[_mid]) for x in A]))
     ans = min(ans, _ans)
 print(ans)
-

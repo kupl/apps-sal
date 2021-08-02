@@ -2,15 +2,15 @@ import math
 N = int(input())
 A = list(map(int, input().split()))
 
-#|x-a|+|x-b|+|x-c|+...を最小化するxの値はa,b,c...の中央値
+# |x-a|+|x-b|+|x-c|+...を最小化するxの値はa,b,c...の中央値
 
-for i in range(1, N+1):
-    A[i-1] -= i
+for i in range(1, N + 1):
+    A[i - 1] -= i
 
 A.sort()
 
 if N % 2 == 0:
-    mid = N//2 - 1
+    mid = N // 2 - 1
 
     ans = 0
     for i in range(N):
@@ -18,16 +18,15 @@ if N % 2 == 0:
 
     tmp = 0
     for i in range(N):
-        tmp += abs(A[i] - A[mid+1])
+        tmp += abs(A[i] - A[mid + 1])
 
     ans = min(ans, tmp)
     print(ans)
 
 else:
-    mid = N//2
+    mid = N // 2
 
     ans = 0
     for i in range(N):
         ans += abs(A[i] - A[mid])
     print(ans)
-

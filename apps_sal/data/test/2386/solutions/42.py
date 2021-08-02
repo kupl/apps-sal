@@ -9,4 +9,3 @@ ans = 0
 for a in A:
     ans += abs(a - b)
 print(ans)
-

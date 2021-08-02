@@ -4,7 +4,7 @@ for n in range(10**N):
     n = str(n)
     if len(n) != N:
         continue
-    if all([n[SC[i][0]-1] == str(SC[i][1]) for i in range(M)]):
+    if all([n[SC[i][0] - 1] == str(SC[i][1]) for i in range(M)]):
         print(n)
         return
 

@@ -32,4 +32,5 @@ def __starting_point():
 
     print(nineteen(string))
 
+
 __starting_point()

@@ -1,6 +1,6 @@
+import math
 import sys
 input = sys.stdin.readline
-import math
 
 
 def read():
@@ -41,5 +41,6 @@ def __starting_point():
     outputs = solve(*inputs)
     if outputs is not None:
         print(("%s" % str(outputs)))
+
 
 __starting_point()

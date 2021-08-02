@@ -14,4 +14,3 @@ for a in A:
     res += abs(a - b)
 
 print(res)
-

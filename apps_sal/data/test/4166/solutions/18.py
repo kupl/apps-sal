@@ -5,15 +5,20 @@ import decimal
 import itertools
 from itertools import product
 from functools import reduce
+
+
 def input():
     return sys.stdin.readline()[:-1]
-def sort_zip(a:list, b:list):
+
+
+def sort_zip(a: list, b: list):
     z = list(zip(a, b))
     z = sorted(z)
     a, b = list(zip(*z))
     a = list(a)
     b = list(b)
     return a, b
+
 
 def main():
     N, M = list(map(int, input().split()))
@@ -67,5 +72,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

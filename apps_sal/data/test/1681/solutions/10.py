@@ -14,4 +14,3 @@ if not ok:
     print(-1)
 else:
     print(s)
-

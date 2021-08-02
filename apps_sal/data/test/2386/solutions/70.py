@@ -1,15 +1,15 @@
 import math
 
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 for i in range(N):
-    A[i] -= (i+1)
+    A[i] -= (i + 1)
 
 A.sort()
 
 if N % 2 == 0:
-    b = (A[N//2-1] + A[N//2]) / 2
+    b = (A[N // 2 - 1] + A[N // 2]) / 2
     bfl = math.floor(b)
     bce = math.ceil(b)
     ansfl = 0
@@ -23,7 +23,7 @@ if N % 2 == 0:
 
 else:
     ans = 0
-    b = A[N//2]
+    b = A[N // 2]
 
     for i in range(N):
         ans += abs(A[i] - b)

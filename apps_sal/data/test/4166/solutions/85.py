@@ -6,16 +6,16 @@ def LI():
 
 
 N, M = LI()
-ans = [-1]*N
+ans = [-1] * N
 for _ in range(M):
     a, b = LI()
-    if ans[a-1] == b or ans[a-1] == -1:
-        ans[a-1] = b
+    if ans[a - 1] == b or ans[a - 1] == -1:
+        ans[a - 1] = b
     else:
         print((-1))
         return
 if ans[0] == -1:
-    if N==1:
+    if N == 1:
         print((0))
         return
     ans[0] = 1
@@ -31,4 +31,3 @@ for i in range(N):
         ans[i] = 0
     S += str(ans[i])
 print(S)
-

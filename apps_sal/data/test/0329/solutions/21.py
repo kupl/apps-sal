@@ -17,11 +17,10 @@ def main(s):
     if count['n'] > 0:
         x += "n"
     r = 0
-    for i in range(0, len(x) + 2 , 7):
-        if x[i:i+8] == 'nineteen':
+    for i in range(0, len(x) + 2, 7):
+        if x[i:i + 8] == 'nineteen':
             r += 1
     return r
-        
+
 
 print(main(list(input())))
-

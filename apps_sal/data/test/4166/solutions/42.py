@@ -4,7 +4,6 @@ for i in range(M):
     s[i], c[i] = list(map(int, input().split()))
 
 
-
 ans = 0
 l = [None] * N
 for i in range(M):
@@ -27,7 +26,7 @@ else:
             if s[i] == s[j] and c[i] != c[j]:
                 ans = -1
                 break
-    if ans != -1:   
+    if ans != -1:
         l = list(map(str, l))
         ans = "".join(l)
 print(ans)

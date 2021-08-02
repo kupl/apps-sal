@@ -8,7 +8,7 @@ def main():
             continue
         f = True
         for p, x in qry:
-            if s[p-1] != str(x):
+            if s[p - 1] != str(x):
                 f = False
                 break
         if f:
@@ -16,6 +16,9 @@ def main():
             break
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

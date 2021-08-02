@@ -11,11 +11,11 @@ def main():
             print((-1))
             return
 
-        if ans[s-1] != "x" and ans[s-1] != str(c):
+        if ans[s - 1] != "x" and ans[s - 1] != str(c):
             print((-1))
             return
 
-        ans[s-1] = str(c)
+        ans[s - 1] = str(c)
 
     if ans[0] == "x":
         ans[0] = "1"
@@ -24,5 +24,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

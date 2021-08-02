@@ -10,7 +10,7 @@ from time import sleep
 class Solver:
     def __init__(self):
         pass
-    
+
     def solve(self):
         a = list(map(int, input().split()))
         n = a[0]
@@ -24,5 +24,6 @@ class Solver:
 def __starting_point():
     s = Solver()
     s.solve()
+
 
 __starting_point()

@@ -25,4 +25,3 @@ for i in range(N):
 if ans[0] == "0" and N != 1:
     ans = '1' + ans[1:]
 print(ans)
-

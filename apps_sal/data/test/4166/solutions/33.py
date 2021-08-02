@@ -5,8 +5,11 @@ import decimal
 import itertools
 from itertools import product
 from functools import reduce
+
+
 def input():
     return sys.stdin.readline()[:-1]
+
 
 def main():
     N, M = list(map(int, input().split()))
@@ -66,9 +69,8 @@ def main():
     print(ans)
 
 
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

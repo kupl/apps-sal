@@ -1,10 +1,10 @@
 n, m = map(int, input().split())
 
-ans = [0]*(n)
+ans = [0] * (n)
 
 for i in range(m):
     a = list(map(int, input().split()))
-    if n>=2:
+    if n >= 2:
         if a[0] == 1:
             if a[1] == 0:
                 print("-1")
@@ -17,14 +17,13 @@ for i in range(m):
         print("-1")
         return
 
-if n>=2:
+if n >= 2:
     for i in range(n):
         if ans[0] == 0:
             ans[0] = 1
-            print(ans[i],end="")
+            print(ans[i], end="")
 
         else:
-            print(ans[i],end="")
+            print(ans[i], end="")
 else:
     print(ans[0])
-
