@@ -9,4 +9,3 @@ if len(game) >= n:
     print('I become the guy.')
 else:
     print('Oh, my keyboard!')
-

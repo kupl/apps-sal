@@ -6,6 +6,6 @@ answ = deque()
 answ.appendleft(n)
 while k != 1:
     answ.appendleft(k)
-    k = a[k-2]
+    k = a[k - 2]
 answ.appendleft(k)
 print(" ".join(str(x) for x in answ))

@@ -11,7 +11,6 @@ def main():
         print('I become the guy.')
 
 
-
 def __starting_point():
     main()
 

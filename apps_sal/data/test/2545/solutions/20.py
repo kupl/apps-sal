@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b= [int(x) for x in input().split()]
+    a, b = [int(x) for x in input().split()]
     if a < b:
         a, b = b, a
     c = a - b
@@ -10,4 +10,3 @@ for i in range(t):
         print("YES")
     else:
         print("NO")
-

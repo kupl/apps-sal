@@ -5,7 +5,7 @@ for i in range(n):
         tmp = a
         a = b
         b = tmp
-    
+
     if b > 2 * a:
         print("NO")
     else:

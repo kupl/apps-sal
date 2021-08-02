@@ -14,8 +14,8 @@ for i in range(len(s)):
         forward.append(i)
         rptr += 1
 
-rptr = len(t)-1
-for i in range(len(s)-1, -1, -1):
+rptr = len(t) - 1
+for i in range(len(s) - 1, -1, -1):
     if rptr == -1:
         break
     if s[i] == t[rptr]:
@@ -25,10 +25,9 @@ for i in range(len(s)-1, -1, -1):
 backward = backward[::-1]
 backward.append(forward[-1])
 
-mx = max(forward[0], len(s)-1-backward[-2], len(s)-1-forward[-1], backward[0])
-#print(mx)
+mx = max(forward[0], len(s) - 1 - backward[-2], len(s) - 1 - forward[-1], backward[0])
+# print(mx)
 for i in range(len(t)):
-    mx = max(mx, abs(forward[i] - backward[i+1])-1)
+    mx = max(mx, abs(forward[i] - backward[i + 1]) - 1)
     #print(i, mx)
 print(mx)
-

@@ -15,4 +15,3 @@ if b:
     print('"{}"'.format(','.join(b)))
 else:
     print('-')
-

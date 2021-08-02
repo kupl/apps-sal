@@ -13,4 +13,3 @@ if row % 2 == 1:
 time += time_to[col]
 
 print(time)
-

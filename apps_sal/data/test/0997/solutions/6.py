@@ -14,4 +14,3 @@ for s in ss:
 
 print('"' + ','.join(a) + '"' if len(a) else '-')
 print('"' + ','.join(b) + '"' if len(b) else '-')
-

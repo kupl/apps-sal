@@ -4,8 +4,8 @@ import re
 
 try:
     while True:
-        a = [ ]
-        b = [ ]
+        a = []
+        b = []
         for word in re.split(R"[,;]", input()):
             (a if re.match(R"^(0|[1-9][0-9]*)$", word) else b).append(word)
         print('"%s"' % ','.join(a) if a else '-')
@@ -13,4 +13,3 @@ try:
 
 except EOFError:
     pass
-

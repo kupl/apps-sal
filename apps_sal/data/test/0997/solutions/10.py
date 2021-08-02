@@ -8,6 +8,8 @@ def is_num(s):
         if not c.isdigit():
             return False
     return True
+
+
 a = list(input().split(sep=","))
 b = []
 for i in a:
@@ -34,4 +36,3 @@ else:
     print("\"", end="")
     print(*ans2, sep=",", end="")
     print("\"")
-

@@ -7,6 +7,7 @@ def get_ans(start):
 
     return ret
 
+
 s = input()
 
 seat = int(s[:-1])
@@ -29,4 +30,3 @@ elif p == 'c':
 ans += 1
 
 print(ans)
-

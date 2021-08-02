@@ -17,9 +17,8 @@ for i in l:
 if len(nums) == 0:
     print("-")
 else:
-    print("\""+",".join(nums)+"\"")
+    print("\"" + ",".join(nums) + "\"")
 if len(alpha) == 0:
     print("-")
 else:
-    print("\""+",".join(alpha)+"\"")
-
+    print("\"" + ",".join(alpha) + "\"")

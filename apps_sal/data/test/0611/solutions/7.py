@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, m = rd()
 t = (n - 1) * n // 2
 a = n - 1 >> 1
@@ -11,4 +13,3 @@ for i in range(m):
     else:
         r += tt * d + n * x
 print(r / n)
-

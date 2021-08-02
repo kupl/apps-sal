@@ -11,4 +11,3 @@ if row % 2 != 0:
 res += 'fedabc'.index(place) + 1
 
 print(res)
-

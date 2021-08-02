@@ -7,6 +7,7 @@ ans = n // 4 * 16 + n % 2 * 7
 
 for i in "fedabc":
     ans += 1
-    if s == i: break
+    if s == i:
+        break
 
 print(ans)
