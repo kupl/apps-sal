@@ -13,7 +13,7 @@ for cnt in corners:
                 ans = min(max(abs(cnt[0] - i) // a, abs(cnt[1] - j) // b), ans)
 if ans == 0:
     print(ans)
-elif not result or (i+a > n and i-a < 1) or (j+b > m and j-b < 1) or ans == -1:
+elif not result or (i + a > n and i - a < 1) or (j + b > m and j - b < 1) or ans == -1:
     print("Poor Inna and pony!")
 else:
     print(ans)

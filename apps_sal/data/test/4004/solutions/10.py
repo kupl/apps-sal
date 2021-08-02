@@ -1,7 +1,8 @@
 IN = input
-rint = lambda: int(IN())
-rmint = lambda: list(map(int, IN().split()))
-rlist = lambda: list(rmint())
+def rint(): return int(IN())
+def rmint(): return list(map(int, IN().split()))
+def rlist(): return list(rmint())
+
 
 n = rint()
 a = rlist()
@@ -13,13 +14,12 @@ elif len(b) == 1:
     print(0)
 elif len(b) == 2:
     p = b[1] - b[0]
-    if p&1:
+    if p & 1:
         print(p)
     else:
-        print(p//2)
+        print(p // 2)
 else:
-    if b[1]-b[0] == b[-1]-b[1]:
-        print(b[1]-b[0])
+    if b[1] - b[0] == b[-1] - b[1]:
+        print(b[1] - b[0])
     else:
         print(-1)
-

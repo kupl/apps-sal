@@ -1,7 +1,11 @@
 n = int(input())
 l = [*map(int, input().split())]
+
+
 def check(x):
     return [abs(e - x) for e in l if e != x]
+
+
 res = float('inf')
 for x in range(1, 101):
     c = check(x)

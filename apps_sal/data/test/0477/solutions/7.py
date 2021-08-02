@@ -1,4 +1,6 @@
 n, m, i, j, a, b = list(map(int, input().split()))
+
+
 def f(x, y):
     dx, dy = abs(x - i), abs(y - j)
     if dx % a or dy % b:
@@ -11,10 +13,11 @@ def f(x, y):
         return -1
     else:
         return max(dx // a, dy // b)
+
+
 v = -1
 for p in ((1, m), (n, 1), (n, m), (1, 1)):
     c = f(*p)
     if c != -1 and (v == -1 or c < v):
         v = c
 print(v if v != -1 else 'Poor Inna and pony!')
-

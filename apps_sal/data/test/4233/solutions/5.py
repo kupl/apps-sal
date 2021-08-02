@@ -27,4 +27,3 @@ else:
     print(len(res))
     for x in res:
         print(*x)
-

@@ -30,7 +30,6 @@ class StarCell:
         self._size_bot = None
         self._size_left = None
         self._size_right = None
-    
 
     def set_adjacents(self, cells):
         row, col = self.row, self.col
@@ -63,7 +62,7 @@ class StarCell:
             # Update cache
             self._size_top = 1 + self.top.size_top
         return self._size_top
-    
+
     @property
     def size_bot(self):
         if not self.bot:
@@ -71,7 +70,7 @@ class StarCell:
         if not self._size_bot:
             self._size_bot = 1 + self.bot.size_bot
         return self._size_bot
-    
+
     @property
     def size_left(self):
         if not self.left:
@@ -79,7 +78,7 @@ class StarCell:
         if not self._size_left:
             self._size_left = 1 + self.left.size_left
         return self._size_left
-    
+
     @property
     def size_right(self):
         if not self.right:
@@ -87,17 +86,17 @@ class StarCell:
         if not self._size_right:
             self._size_right = 1 + self.right.size_right
         return self._size_right
-    
+
     @property
     def size(self):
         if not self._size:
             self._size = min(
                 [self.size_top,
-                self.size_bot,
-                self.size_left,
-                self.size_right])
+                 self.size_bot,
+                 self.size_left,
+                 self.size_right])
         return self._size
-    
+
     def __repr__(self):
         if self.size > 0:
             return 'Star of max size {}'.format(self.size)
@@ -106,14 +105,14 @@ class StarCell:
 
 def solve(grid):
     n, m = len(grid), len(grid[0])
-    
+
     cells = {}
     for row in range(n):
         for col in range(m):
             if grid[row][col] == '.':
                 continue
             cells[(row, col)] = StarCell(row, col)
-    
+
     for key, val in list(cells.items()):
         val.set_adjacents(cells)
 
@@ -122,7 +121,6 @@ def solve(grid):
 
     # for key, val in cells.items():
     #     print(key, val)
-
 
     ans = []
     for key, val in list(cells.items()):
@@ -148,5 +146,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

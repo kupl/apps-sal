@@ -17,4 +17,3 @@ else:
         print(a[1] - a[0])
     else:
         print(-1)
-

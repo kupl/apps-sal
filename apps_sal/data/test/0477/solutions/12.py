@@ -11,7 +11,7 @@ for corner in corners:
         corners2.append(corner)
 corners.clear()
 
-#print(corners2)
+# print(corners2)
 
 if not corners2:
     print("Poor Inna and pony!")
@@ -23,7 +23,7 @@ else:
         else:
             move1 = abs(corner[0] - point[0]) // a
             move2 = abs(corner[1] - point[1]) // b
-            if (move1 - move2) % 2 == 0 and (point[0] + a in range(1, n+1) or point[0] - a  in range(1, n+1)) and (point[1] + b in range(1, m+1) or point[1] - b in range(1, m+1)):
+            if (move1 - move2) % 2 == 0 and (point[0] + a in range(1, n + 1) or point[0] - a in range(1, n + 1)) and (point[1] + b in range(1, m + 1) or point[1] - b in range(1, m + 1)):
                 corners.append(max(move1, move2))
             #print(move1, move2)
     if not corners:

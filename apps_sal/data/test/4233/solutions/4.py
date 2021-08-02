@@ -45,11 +45,7 @@ if sum([sum(f[i]) for i in range(n)]) == s:
     print(ans)
     for i in range(ans):
         for j in anslist[i]:
-            print(j, end = " ")
+            print(j, end=" ")
         print()
 else:
     print("-1")
-
-
-
-

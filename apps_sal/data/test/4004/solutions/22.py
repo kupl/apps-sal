@@ -23,6 +23,9 @@ def main():
     print(0)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

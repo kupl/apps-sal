@@ -18,4 +18,3 @@ elif len(st) == 2:
         print(b[1] - b[0])
 else:
     print(0)
-
