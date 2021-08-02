@@ -11,11 +11,13 @@ for i in range(n):
         s += x
     cnt[s] += 1
 
+
 def f1():
     if cnt['0'] > 0:
         print('YES')
     else:
         print('NO')
+
 
 def f2():
     if cnt['00'] > 0:
@@ -25,6 +27,7 @@ def f2():
         print('YES')
         return
     print('NO')
+
 
 def f3():
     if cnt['000'] > 0:
@@ -56,9 +59,9 @@ def f4():
           '0100', '1011', '1000', '0111',
           '1100', '0011', '1010', '0101',
           '1001', '0110']
-    
+
     for i in range(len(ms) // 2):
-        if cnt[ms[2*i]] > 0 and cnt[ms[2*i+1]] > 0:
+        if cnt[ms[2 * i]] > 0 and cnt[ms[2 * i + 1]] > 0:
             print('YES')
             return
     x = 0
@@ -77,18 +80,19 @@ def f4():
         ind.append(1)
     if cnt['1000'] > 0:
         ind.append(0)
-    
+
     for i in range(len(ms)):
         b = False
         for x in ind:
             if ms[i][x] == '0':
                 b = True
-        if not b: continue
+        if not b:
+            continue
         if cnt[ms[i]] > 0:
             print('YES')
             return
     print('NO')
     return
 
-[f1, f2, f3, f4][k - 1]()
 
+[f1, f2, f3, f4][k - 1]()

@@ -20,12 +20,11 @@ def nCr(n, r):
 ans = 0
 # 最大値の和
 for i, a in enumerate(A[k - 1:], k - 1):
-    ans += ((a % mod) * nCr(i, k-1)) % mod
+    ans += ((a % mod) * nCr(i, k - 1)) % mod
     ans %= mod
 # 最小値の和
 A.reverse()
 for i, a in enumerate(A[k - 1:], k - 1):
-    ans -= ((a % mod) * nCr(i, k-1)) % mod
+    ans -= ((a % mod) * nCr(i, k - 1)) % mod
     ans %= mod
 print(ans)
-

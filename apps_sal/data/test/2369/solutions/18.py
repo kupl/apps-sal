@@ -3,10 +3,13 @@ a = [int(x) for x in input().split()]
 a.sort()
 MOD = 10**9 + 7
 
+
 def cmb(n, r, p):
-    if r < 0 or n < r: return 0
+    if r < 0 or n < r:
+        return 0
     r = min(r, n - r)
-    return fact[n] * factinv[r] * factinv[n-r] % p
+    return fact[n] * factinv[r] * factinv[n - r] % p
+
 
 fact = [1, 1]
 factinv = [1, 1]
@@ -23,4 +26,3 @@ for i in range(0, n - k + 1):
     ans += a[n - i - 1] * cmb(n - i - 1, k - 1, MOD)
     ans %= MOD
 print(ans)
-

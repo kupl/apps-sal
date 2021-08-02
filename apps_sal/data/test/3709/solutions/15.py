@@ -10,8 +10,10 @@ for i in range(n):
 
 s = [0] * k
 
+
 def go(i0, used):
-    if i0 >= K: return False
+    if i0 >= K:
+        return False
     if p[i0]:
         s0 = s[:]
         ok = True
@@ -20,12 +22,16 @@ def go(i0, used):
             f = (i0 >> j) & 1
             assert f == 0 or f == 1
             s[j] += (i0 >> j) & 1
-            if s[j] * 2 > used: ok = False
-        if ok: return True
-        if go(i0+1, used): return True
+            if s[j] * 2 > used:
+                ok = False
+        if ok:
+            return True
+        if go(i0 + 1, used):
+            return True
         s[:] = s0
         used -= 1
-    return go(i0+1, used)
+    return go(i0 + 1, used)
+
 
 ans = "YES" if go(0, 0) else "NO"
 print(ans)

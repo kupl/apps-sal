@@ -10,4 +10,3 @@ for i, d in enumerate(input()):
 if prch == 'L':
     val += n - prev - 1
 print(val)
-

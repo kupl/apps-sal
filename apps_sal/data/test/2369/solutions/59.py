@@ -25,9 +25,8 @@ A.sort()
 
 ans = 0
 for i in range(N - K + 1):
-    ans += A[-1 -i] * cmb(N - i - 1, K - 1, MOD)
+    ans += A[-1 - i] * cmb(N - i - 1, K - 1, MOD)
     ans -= A[i] * cmb(N - i - 1, K - 1, MOD)
     ans %= MOD
 
 print((ans % MOD))
-

@@ -10,7 +10,7 @@ res = 0
 for i in range(len(s)):
     if s[i] == ".":
         cb += 1
-    elif s[i] == "L":            
+    elif s[i] == "L":
         if r > -1:
             if cb % 2 == 1:
                 res += 1
@@ -22,14 +22,12 @@ for i in range(len(s)):
         if r > -1:
             cb = 0
             r = i
-        else:        
+        else:
             r = i
             res += cb
             cb = 0
-        
+
 if r == -1:
     res += cb
-        
+
 print(res)
-
-

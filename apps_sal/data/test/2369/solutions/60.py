@@ -26,10 +26,11 @@ class Combination:
             return 0
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
+
 def resolve():
     # 各集合Sのmax(S) - min(S)の合計を求める
     # 各A[i]が最大値になる回数、最小値になる回数を求め、それを計算する
-    MOD = 10**9+7
+    MOD = 10**9 + 7
     N, K = list(map(int, input().split()))
     A = sorted(map(int, input().split()))
 
@@ -37,15 +38,16 @@ def resolve():
     ans = 0
     for i in range(N):
         # 最大値になる組み合わせは、A[j]: 0 < j < iからK - 1個を選ぶ組み合わせ
-        ans += Comb.nCr(i, K-1) * A[i] % MOD
+        ans += Comb.nCr(i, K - 1) * A[i] % MOD
         ans %= MOD
         # 最小値になる組み合わせは、A[j]: i < j < nからK-1個を選ぶ組み合わせ
-        ans -= Comb.nCr(N-i-1, K - 1) * A[i]% MOD
+        ans -= Comb.nCr(N - i - 1, K - 1) * A[i] % MOD
         ans %= MOD
     print(ans)
 
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

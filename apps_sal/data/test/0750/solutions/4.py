@@ -14,4 +14,3 @@ t += b_n // k
 if b_n % k != 0:
     t += 1
 print(t)
-

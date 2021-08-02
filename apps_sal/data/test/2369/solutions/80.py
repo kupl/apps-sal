@@ -36,26 +36,25 @@ factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
 inv = [0, 1]  # factinv 計算用
 
 for i in range(2, N + 1):
-  fact.append((fact[-1] * i) % mod)
-  inv.append((-inv[mod % i] * (mod // i)) % mod)
-  factinv.append((factinv[-1] * inv[-1]) % mod)
-
-
+    fact.append((fact[-1] * i) % mod)
+    inv.append((-inv[mod % i] * (mod // i)) % mod)
+    factinv.append((factinv[-1] * inv[-1]) % mod)
 
 
 def combination(n, k):
-  #foo = kaijou[n]*modinv(kaijou[k]*kaijou[n-k]%mod)%mod
-  foo = fact[n]*factinv[k]*factinv[n-k]%mod
-  return foo
+    #foo = kaijou[n]*modinv(kaijou[k]*kaijou[n-k]%mod)%mod
+    foo = fact[n] * factinv[k] * factinv[n - k] % mod
+    return foo
+
 
 ans = 0
 
-for k in range(N-K+1):
-  ans += A[k]*combination(N-k-1, K-1)
-  ans %= mod
+for k in range(N - K + 1):
+    ans += A[k] * combination(N - k - 1, K - 1)
+    ans %= mod
 
-for k in range(N-K+1):
-  ans -= A[-k-1]*combination(N-k-1, K-1)
-  ans %= mod
+for k in range(N - K + 1):
+    ans -= A[-k - 1] * combination(N - k - 1, K - 1)
+    ans %= mod
 
 print(ans)

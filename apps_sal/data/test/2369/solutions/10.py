@@ -1,5 +1,6 @@
 MOD = 10**9 + 7
 
+
 class Combination:
     def __init__(self, size):
         self.size = size + 2
@@ -25,6 +26,7 @@ class Combination:
     def nhr(self, n, r):  # 重複組合せ: x_1 + ... + x_n = r
         return self.ncr(n + r - 1, n - 1)
 
+
 N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
 comb = Combination(N + 100)
@@ -36,4 +38,3 @@ for i, a in enumerate(A):
     ans -= a * comb.ncr(N - i - 1, K - 1)
     ans %= MOD
 print(ans)
-

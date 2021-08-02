@@ -10,5 +10,3 @@ for t in s:
                 print("YES")
                 return
 print("NO")
-    
-

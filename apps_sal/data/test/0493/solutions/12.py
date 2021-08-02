@@ -34,8 +34,7 @@ while True:
                 count += r - l - 1
                 l = r
             else:
-                count += n - l -1
+                count += n - l - 1
                 break
 
 print(count)
-

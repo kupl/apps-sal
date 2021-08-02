@@ -1,5 +1,5 @@
 def prepare(n, MOD):
- 
+
     # 1! - n! の計算
     f = 1
     factorials = [1]  # 0!の分
@@ -16,15 +16,15 @@ def prepare(n, MOD):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
-     
+
     return factorials, invs
 
 
 MOD = 10**9 + 7
-f, inv = prepare(10**5+100, MOD)
+f, inv = prepare(10**5 + 100, MOD)
 
-n, k = map(int,input().split())
-a = list(map(int,input().split()))
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
 
 a.sort(reverse=True)
 
@@ -36,7 +36,7 @@ for i in range(n):
         ck = k - 1
         if cn >= ck:
             combi = f[cn] * inv[ck] % MOD * inv[cn - ck] % MOD
-            if a[i] >= 0:        
+            if a[i] >= 0:
                 p += (a[i] * combi) % MOD
             else:
                 p += (a[i] * combi) % -MOD
@@ -49,7 +49,7 @@ for i in range(n):
         ck = k - 1
         if cn >= ck:
             combi = f[cn] * inv[ck] % MOD * inv[cn - ck] % MOD
-            if a[i] >= 0:        
+            if a[i] >= 0:
                 m += (a[i] * combi) % MOD
             else:
                 m += (a[i] * combi) % -MOD
@@ -57,5 +57,5 @@ for i in range(n):
                 m %= MOD
             else:
                 m %= -MOD
-        
-print((p - m)%MOD)
+
+print((p - m) % MOD)
