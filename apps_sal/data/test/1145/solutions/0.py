@@ -11,4 +11,3 @@ for x in A:
         prev = prev + 1
         res += prev - x
 print(res)
-

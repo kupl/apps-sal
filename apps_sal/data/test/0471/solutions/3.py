@@ -31,15 +31,13 @@ for point in points:
 if n == 1:
     print(0)
 elif a >= right:
-    print(a-left2)
+    print(a - left2)
 elif a <= left:
-    print(right2-a)
+    print(right2 - a)
 
 else:
-    x1 = abs(a-left)+abs(right2-left)
-    x2 = abs(a-left2)+abs(right-left2)
-    x3 = abs(right-a)+abs(right-left2)
-    x4 = abs(right2-a)+abs(right2-left)
-    print(min((x1,x2,x3,x4)))
-    
-
+    x1 = abs(a - left) + abs(right2 - left)
+    x2 = abs(a - left2) + abs(right - left2)
+    x3 = abs(right - a) + abs(right - left2)
+    x4 = abs(right2 - a) + abs(right2 - left)
+    print(min((x1, x2, x3, x4)))

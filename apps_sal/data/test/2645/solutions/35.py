@@ -14,6 +14,3 @@ for a, t in zip(A, T):
         ans -= 1
 
 print(ans)
-
-
-

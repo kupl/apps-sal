@@ -17,4 +17,3 @@ for s in S:
             Score += 0
             PossiblePaper -= 1
 print(Score)
-

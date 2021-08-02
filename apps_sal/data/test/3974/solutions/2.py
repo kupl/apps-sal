@@ -11,4 +11,3 @@ for c in list(input()):
             inside -= 1
         outside += 1
 print(inside + outside)
-

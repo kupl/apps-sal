@@ -9,4 +9,3 @@ while i < n - 1:
         cnt += 1
     i += 1
 print(cnt)
-

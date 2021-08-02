@@ -8,13 +8,20 @@ def iarr(): return list(imap())
 def farr(): return list(fmap())
 def sarr(): return sinput().split()
 
+
 s = input()
 p = g = ans = 0
 for i in s:
-    if i=='p':
-        if p < g: p += 1
-        else: ans -= 1; g += 1
-    if i=='g':
-        if p < g: ans += 1; p += 1
-        else: g += 1
+    if i == 'p':
+        if p < g:
+            p += 1
+        else:
+            ans -= 1
+            g += 1
+    if i == 'g':
+        if p < g:
+            ans += 1
+            p += 1
+        else:
+            g += 1
 print(ans)

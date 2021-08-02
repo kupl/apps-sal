@@ -16,4 +16,3 @@ for b in bs:
     last = b
 
 print(cost)
-

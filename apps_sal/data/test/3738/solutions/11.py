@@ -18,4 +18,3 @@ for xi, yi in zip(xl, yl):
     print('Yes')
     return
 print('No')
-

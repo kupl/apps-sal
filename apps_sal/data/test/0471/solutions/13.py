@@ -20,16 +20,16 @@ def main():
 def get_result(a, left, right):
     #print(a, left, right)
     if left < a < right:
-        if abs(a-left) < abs(a-right): # go left first
-            return (abs(a-left) * 2) + abs(a-right)
+        if abs(a - left) < abs(a - right):  # go left first
+            return (abs(a - left) * 2) + abs(a - right)
         else:
-            return abs(a-left) + (abs(a-right) * 2)
+            return abs(a - left) + (abs(a - right) * 2)
 
     if a <= left:
-        return abs(a-right)
+        return abs(a - right)
 
     if a >= right:
-        return abs(a-left)
+        return abs(a - left)
 
 
 def stdin_get_ints_from_line():
@@ -46,5 +46,6 @@ def stdin_get_string_from_line():
 
 def __starting_point():
     main()
+
 
 __starting_point()

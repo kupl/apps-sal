@@ -1,5 +1,5 @@
 s = input()
-inside= 0
+inside = 0
 outside = 0
 seen = 0
 for letter in s:

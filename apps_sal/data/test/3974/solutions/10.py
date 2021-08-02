@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
 
-
-
 def main():
     s = input()
     cnt = 0
@@ -21,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

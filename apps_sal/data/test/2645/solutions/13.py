@@ -9,4 +9,3 @@ for i, c in enumerate(input().replace("g", "r")):
     else:
         z += 1
 print(z)
-

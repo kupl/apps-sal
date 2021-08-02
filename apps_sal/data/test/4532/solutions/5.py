@@ -1,5 +1,5 @@
-t = int(input())
 from collections import Counter
+t = int(input())
 
 for case in range(t):
     n, k = list(map(int, input().split()))
@@ -7,11 +7,12 @@ for case in range(t):
     w = Counter(x % k for x in a)
     v = 0
     for x, freq in list(w.items()):
-        if x == 0: continue
-        if freq == 0: continue
-        
+        if x == 0:
+            continue
+        if freq == 0:
+            continue
+
         r = (-x) % k
-        v = max(v, r + (freq-1)*k+1)
+        v = max(v, r + (freq - 1) * k + 1)
 
     print(v)
-

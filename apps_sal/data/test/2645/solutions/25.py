@@ -17,4 +17,3 @@ for i in range(n):
             charge += 1
 
 print(score)
-

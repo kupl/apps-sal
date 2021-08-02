@@ -6,5 +6,4 @@ for i in s:
         g += 1
     else:
         p += 1
-print(((g-p)//2))
-
+print(((g - p) // 2))

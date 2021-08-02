@@ -11,10 +11,13 @@ def main():
         while b in existing_badges:
             price += 1
             b += 1
-        existing_badges.add(b)  
+        existing_badges.add(b)
 
-    print (price)
+    print(price)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

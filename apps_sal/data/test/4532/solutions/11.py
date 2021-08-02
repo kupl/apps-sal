@@ -15,4 +15,3 @@ def solve():
 
 
 [solve() for i in range(int(input()))]
-

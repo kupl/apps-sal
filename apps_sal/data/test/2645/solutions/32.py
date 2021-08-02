@@ -1,2 +1,2 @@
 s = input()
-print(s.count('g')-(-((-len(s))//2)))
+print(s.count('g') - (-((-len(s)) // 2)))

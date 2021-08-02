@@ -12,4 +12,3 @@ for i in range(len(s)):
         print('Yes')
         return
 print('No')
-
