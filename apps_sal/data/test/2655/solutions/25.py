@@ -4,12 +4,12 @@ a.sort(reverse=True)
 ans = a[0]
 num = 2
 idx = 1
-while num<n:
-    if num+1==n:
+while num < n:
+    if num + 1 == n:
         ans += a[idx]
         num += 1
     else:
-        ans += a[idx]*2
+        ans += a[idx] * 2
         num += 2
         idx += 1
 print(ans)

@@ -10,4 +10,3 @@ while cur.year != 2017:
         ans += (cur.day == int(x))
     cur += datetime.timedelta(1)
 print(ans)
-

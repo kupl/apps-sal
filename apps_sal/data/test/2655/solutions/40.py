@@ -8,7 +8,7 @@ ans += A[0]
 
 # N-2個は、2,2,3,3,..i,i,...のように取る
 flag = False
-for i in range(1, len(A)-1):
+for i in range(1, len(A) - 1):
     ans += A[cnt]
     if flag == False:
         flag = True

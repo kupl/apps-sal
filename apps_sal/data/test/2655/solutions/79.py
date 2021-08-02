@@ -11,5 +11,4 @@ for i in range(1, N):
     if len(score) >= N:
         break
 
-print((sum(score[:N-1])))
-
+print((sum(score[:N - 1])))

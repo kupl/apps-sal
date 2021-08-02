@@ -16,7 +16,7 @@ while arrival < N:
         ans += score
         arrival += 1
     else:
-        ans += score*min(2, N - arrival)
+        ans += score * min(2, N - arrival)
         arrival += 2
 
 print(ans)

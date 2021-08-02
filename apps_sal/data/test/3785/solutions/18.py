@@ -1,6 +1,7 @@
 from sys import stdin
 from collections import deque
 
+
 def __starting_point():
     R, C, K = list(map(int, stdin.readline().rstrip().split()))
     maze = []
@@ -28,10 +29,10 @@ def __starting_point():
     while len(stack) > 0:
         (r, c) = stack.pop()
         order.append((r, c))
-        add_to_stack(r-1, c)
-        add_to_stack(r+1, c)
-        add_to_stack(r, c-1)
-        add_to_stack(r, c+1)
+        add_to_stack(r - 1, c)
+        add_to_stack(r + 1, c)
+        add_to_stack(r, c - 1)
+        add_to_stack(r, c + 1)
 
     for k in range(0, K):
         (r, c) = order.pop()

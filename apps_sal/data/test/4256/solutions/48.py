@@ -1,7 +1,7 @@
-A,B,C = map(int,input().split())
+A, B, C = map(int, input().split())
 
 
-if B//A >= C:
+if B // A >= C:
     print(C)
 else:
-    print(B//A)
+    print(B // A)

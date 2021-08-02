@@ -1,14 +1,17 @@
 import sys
 from collections import defaultdict
 
+
 def main():
     sys.setrecursionlimit(1 << 30)
     g = []
     adj = defaultdict(set)
     vis = set()
+
     def valid(x, y):
         nonlocal n, m
         return x >= 0 and x < n and y >= 0 and y < m
+
     def bfs(x, y):
         nonlocal g, vis, adj
         q = []
@@ -26,6 +29,7 @@ def main():
                         vis.add((nx, ny))
                         q.append((nx, ny))
         return s
+
     def bfs2(x, y):
         nonlocal g, vis, adj, count
         q = []
@@ -62,9 +66,9 @@ def main():
     vis = set()
     count = s - k
     bfs2(l[0], l[1])
-    f = lambda i: 'X' if i == '.' else ('#' if i == '#' else '.')
+    def f(i): return 'X' if i == '.' else ('#' if i == '#' else '.')
     for row in g:
         print(''.join(list(map(f, row))))
+
+
 main()
-
-

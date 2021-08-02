@@ -4,6 +4,7 @@ import collections
 import sys
 import traceback
 
+
 class Input(object):
     def __init__(self):
         self.fh = sys.stdin
@@ -14,7 +15,6 @@ class Input(object):
             if line == '\n':
                 continue
             return line
-
 
     def next_line_ints(self):
         line = self.next_line()
@@ -49,6 +49,7 @@ def get_max_influence(influence):
             t[best_id] += 1
     return result
 
+
 def main():
     input = Input()
     while True:
@@ -73,5 +74,6 @@ def main():
         except:
             traceback.print_exc(file=sys.stdout)
             print('get_min_dist failed')
+
 
 main()

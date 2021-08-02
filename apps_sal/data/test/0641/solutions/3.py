@@ -17,4 +17,3 @@ else:
         cur += 1
         cur = (cur - 1) % 7 + 1
     print(ans)
-

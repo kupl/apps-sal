@@ -8,7 +8,7 @@ def Input():
 
 def main():
     a, b, c = Input()
-    print(min(b//a, c))
+    print(min(b // a, c))
 
 
 main()

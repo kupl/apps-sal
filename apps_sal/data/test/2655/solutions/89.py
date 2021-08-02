@@ -22,4 +22,3 @@ A = sorted(A, reverse=True)
 res = A[0] + 2 * sum(A[1:n // 2]) + n % 2 * A[n // 2]
 
 print(res)
-

@@ -1,9 +1,10 @@
-#入力:N,M(int:整数)
+# 入力:N,M(int:整数)
 def input2():
-	return map(int,input().split())
+    return map(int, input().split())
 
-a,b,c=input2()
-if b//a >= c:
-	print(c)
+
+a, b, c = input2()
+if b // a >= c:
+    print(c)
 else:
-	print(b//a)
+    print(b // a)

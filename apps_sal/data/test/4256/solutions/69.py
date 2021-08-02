@@ -1,8 +1,7 @@
-a,b,c = list(map(int,input().split()))
+a, b, c = list(map(int, input().split()))
 
 oto = b // a
-if oto <= c :
+if oto <= c:
     print(oto)
-elif oto > c :
+elif oto > c:
     print(c)
-

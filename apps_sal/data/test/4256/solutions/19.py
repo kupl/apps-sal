@@ -8,4 +8,3 @@ if i > C:
     print(C)
 else:
     print(i)
-

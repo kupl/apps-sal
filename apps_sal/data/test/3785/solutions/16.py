@@ -1,5 +1,6 @@
 import sys
 
+
 def solve(n, m, k, grid, r, c):
     move = [(0, 1), (0, -1), (1, 0), (-1, 0)]
     visited = [[False for i in range(m)] for j in range(n)]
@@ -19,6 +20,7 @@ def solve(n, m, k, grid, r, c):
                 if k == 0:
                     break
 
+
 n, m, k = list(map(int, sys.stdin.readline().split()))
 grid = []
 for i in range(n):
@@ -37,13 +39,13 @@ for i in range(n):
                 r, c = i, j
                 find = True
 
-solve(n, m, cnt-k, grid, r, c)
+solve(n, m, cnt - k, grid, r, c)
 
 for i in range(n):
     for j in range(m):
         if grid[i][j] == '.':
             grid[i][j] = 'X'
-#print(grid)
+# print(grid)
 
 for i in range(n):
     for j in range(m):
@@ -52,5 +54,3 @@ for i in range(n):
 
 for i in range(n):
     print(''.join(map(str, grid[i])))
-
-

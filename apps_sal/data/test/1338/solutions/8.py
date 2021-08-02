@@ -1,5 +1,6 @@
 3
 
+
 def gen(n, start, t):
     if n == 1:
         return [start]
@@ -11,4 +12,3 @@ def gen(n, start, t):
 
 n, t = list(map(int, input().split()))
 print(" ".join(map(str, gen(n, 1, t))))
-

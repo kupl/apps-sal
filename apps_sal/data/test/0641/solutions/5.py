@@ -2,6 +2,7 @@
 
 mnthnums = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+
 def of_month(n):
     ans = 0
     for i in range(12):
@@ -25,4 +26,3 @@ if strs[-1] == "week":
     print(of_week(n))
 else:
     print(of_month(n))
-

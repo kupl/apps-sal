@@ -1,3 +1,4 @@
+from math import floor
 import sys
 input = sys.stdin.readline
 
@@ -13,14 +14,12 @@ for i in range():
     b.append(B)'''
 
 
-n=int(input())
-a=list(map(int,input().split()))
+n = int(input())
+a = list(map(int, input().split()))
 a.sort()
-#print(a)
-ans=0
-from math import floor
-for i in range(1,n):
-    ans+=a[n-1-floor(i/2)]
-    #print(ans)
+# print(a)
+ans = 0
+for i in range(1, n):
+    ans += a[n - 1 - floor(i / 2)]
+    # print(ans)
 print(ans)
-

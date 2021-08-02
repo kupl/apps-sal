@@ -1,15 +1,17 @@
 sum1 = 0
+
+
 def gen(used, pref, m, ans):
     if len(pref) == n:
         ans.append(pref)
     else:
-        for i in range(1, n+ 1):
+        for i in range(1, n + 1):
             if not used[i]:
                 used[i] = True
                 gen(used, pref + [i], m, ans)
                 used[i] = False
-            
-            
+
+
 n, m = map(int, input().split())
 used = [False] * (n + 1)
 ans = []
@@ -31,7 +33,7 @@ i = 0
 while ss <= m:
     #print(i, ss)
     if summ[i] < min1:
-        
+
         #print(i, ss, 1)
         i += 1
     else:
@@ -40,6 +42,6 @@ while ss <= m:
                 break
             #print(i, ss, 2)
             ss += 1
-            i += 1            
-#print(i)
+            i += 1
+# print(i)
 print(' '.join(map(str, ans[i])))

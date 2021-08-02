@@ -1,4 +1,4 @@
-a,b,c = map(int,input().split())
+a, b, c = map(int, input().split())
 # b/aの商がcより大きければcを出力
 if b // a > c:
     print(c)

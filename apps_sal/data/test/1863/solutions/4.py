@@ -4,7 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Journey to moon
+# Journey to moon
 '''
 def main():
 	from sys import stdin,stdout
@@ -41,7 +41,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Djikstra's
+# Djikstra's
 '''
 import collections
 class Graph:
@@ -111,7 +111,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Larget pallindrome in String
+# Larget pallindrome in String
 '''
 def main():
 	from sys import stdin,stdout
@@ -177,7 +177,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#276B
+# 276B
 '''
 def main():
 	from sys import stdin,stdout
@@ -193,7 +193,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#362B
+# 362B
 '''
 def main():
 	from sys import stdin,stdout
@@ -217,7 +217,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#279B SUM OF SUB-ARRAY
+# 279B SUM OF SUB-ARRAY
 '''
 def main():
 	from sys import stdin,stdout
@@ -252,7 +252,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#469B
+# 469B
 '''
 def main():
 	from sys import stdin,stdout
@@ -337,7 +337,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#286C
+# 286C
 '''
 def main():
 	from sys import stdin,stdout
@@ -355,7 +355,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#387B
+# 387B
 '''
 def main():
 	from sys import stdin,stdout
@@ -377,7 +377,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#365B
+# 365B
 '''
 def main():
 	from sys import stdin,stdout
@@ -398,7 +398,7 @@ def main():
 	stdout.write(str(min(maxim,n)))
 def __starting_point():
 	main()
-'''	#474D
+'''  # 474D
 '''
 def main():
 	from sys import stdin,stdout
@@ -413,7 +413,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#330B
+# 330B
 #not working
 '''
 def main():
@@ -443,7 +443,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#208D
+# 208D
 '''
 def main():
 	from sys import stdin,stdout
@@ -468,9 +468,9 @@ def main():
 def __starting_point():
 	main()
 '''
-#339D Using Al.Cash's Segment Trees
-#Segment Tree
-#not-working
+# 339D Using Al.Cash's Segment Trees
+# Segment Tree
+# not-working
 '''
 powers=1
 t=[0 for x in range(3*int(1e5))]
@@ -529,7 +529,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#330B
+# 330B
 '''
 def main():
 	from sys import stdin,stdout
@@ -551,7 +551,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#116B
+# 116B
 '''
 def main():
 	from sys import stdin,stdout
@@ -587,7 +587,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#339D using Al.Cash's Segment Tree Implementation
+# 339D using Al.Cash's Segment Tree Implementation
 '''
 def main():
 	from sys import stdin,stdout
@@ -632,7 +632,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#515C
+# 515C
 '''
 def main():
 	from sys import stdin,stdout
@@ -670,7 +670,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#313B
+# 313B
 '''
 def main():
 	from sys import stdin,stdout
@@ -695,7 +695,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#431C
+# 431C
 '''
 def main():
 	from sys import stdin,stdout
@@ -720,7 +720,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#441C
+# 441C
 '''
 def main():
 	from sys import stdin,stdout
@@ -780,7 +780,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#538B
+# 538B
 '''
 def main():
 	from sys import stdin,stdout
@@ -802,7 +802,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#486C
+# 486C
 #not working
 '''
 def main():
@@ -846,7 +846,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#4B
+# 4B
 '''
 def main():	
 	from sys import stdin,stdout
@@ -872,33 +872,38 @@ def main():
 def __starting_point():
 	main()
 '''
-#282B
+# 282B
+
+
 def main():
-	from sys import stdin,stdout
-	n=int(stdin.readline())
-	a,b=[],[]
-	for i in range(n):
-		x,y=list(map(int,stdin.readline().split()))
-		a.append(x)
-		b.append(y)
-	if a[0]>b[0]:
-		total=-1*b[0]
-		t='G'
-	else:
-		total=a[0]
-		t='A'
-	for i in range(1,n):
-		if total+a[i]>=500:
-			total-=b[i]
-			t+='G'
-		else:
-			total+=a[i]
-			t+='A'
-	if total<-500 or total >500:
-		stdout.write('-1')
-	else:
-		stdout.write(t)
+    from sys import stdin, stdout
+    n = int(stdin.readline())
+    a, b = [], []
+    for i in range(n):
+        x, y = list(map(int, stdin.readline().split()))
+        a.append(x)
+        b.append(y)
+    if a[0] > b[0]:
+        total = -1 * b[0]
+        t = 'G'
+    else:
+        total = a[0]
+        t = 'A'
+    for i in range(1, n):
+        if total + a[i] >= 500:
+            total -= b[i]
+            t += 'G'
+        else:
+            total += a[i]
+            t += 'A'
+    if total < -500 or total > 500:
+        stdout.write('-1')
+    else:
+        stdout.write(t)
+
+
 def __starting_point():
-	main()
+    main()
+
 
 __starting_point()

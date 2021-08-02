@@ -53,6 +53,7 @@ def solve(n: int, m: int, k: int, maze: List[List[str]]) -> List[List[str]]:
                 if len(path) >= empty_cell_count - k:
                     return place_blocks(n, m, k, maze, path)
 
+
 n, m, k = list(map(int, input().split()))
 maze = [list(input()) for _ in range(n)]
 

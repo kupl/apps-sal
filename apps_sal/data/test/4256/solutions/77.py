@@ -4,4 +4,3 @@ if b // a >= c:
     print(c)
 else:
     print((b // a))
-

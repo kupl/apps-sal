@@ -1,8 +1,7 @@
-a,b,c=list(map(int, input().split()))
+a, b, c = list(map(int, input().split()))
 
-if b//a>c:
+if b // a > c:
     print(c)
 
 else:
-    print((b//a))
-
+    print((b // a))

@@ -1,9 +1,9 @@
 
-a,b,c = map(int, input().split())
+a, b, c = map(int, input().split())
 
-d=b//a
+d = b // a
 
-if d>c:
+if d > c:
     print(c)
 else:
     print(d)

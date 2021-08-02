@@ -2,6 +2,7 @@
 
 from sys import stdin
 
+
 def __starting_point():
     n = int(stdin.readline())
     ans = ''
@@ -15,5 +16,6 @@ def __starting_point():
             ans += 'G'
             sum_g += g
     print(ans)
+
 
 __starting_point()

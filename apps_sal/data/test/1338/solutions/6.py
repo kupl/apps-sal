@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def f(a):
     ans = 0
     for i in range(n):
@@ -9,6 +10,7 @@ def f(a):
             ans += cur
     return ans
 
+
 n, m = list(map(int, input().split()))
 ans = max(list(map(f, permutations(list(range(1, n + 1))))))
 for a in permutations(list(range(1, n + 1))):
@@ -16,4 +18,3 @@ for a in permutations(list(range(1, n + 1))):
     if not m:
         print(*a)
         break
-

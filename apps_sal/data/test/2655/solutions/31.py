@@ -4,7 +4,7 @@ from math import ceil as C, floor as F, sqrt
 from collections import defaultdict as D, Counter as CNT
 from functools import reduce as R
 import heapq as H
-  
+
 ALP = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 alp = 'abcdefghijklmnopqrstuvwxyz'
 def _X(): return sys.stdin.readline().rstrip().split(' ')
@@ -15,7 +15,8 @@ def _I(ss): return tuple([int(s) for s in ss]) if isinstance(ss, tuple) else int
 def I(): return _I(S())
 def _Is(ss): return list(ss) if isinstance(ss, tuple) else [ss]
 def Is(): return _Is(I())
-def rec(h, w): return [[0] * w for i in range(h)] 
+def rec(h, w): return [[0] * w for i in range(h)]
+
 
 n = I()
 xs = Is()
@@ -27,8 +28,8 @@ H.heapify(seats)
 
 ans = 0
 for x in xs[1:]:
-  ans -= H.heappop(seats)
-  H.heappush(seats, -x)
-  H.heappush(seats, -x)
+    ans -= H.heappop(seats)
+    H.heappush(seats, -x)
+    H.heappush(seats, -x)
 
 print(ans)

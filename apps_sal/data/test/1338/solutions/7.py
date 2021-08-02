@@ -1,4 +1,6 @@
+import itertools
 __author__ = 'yushchenko'
+
 
 def countf(f):
     sum = 0
@@ -9,12 +11,12 @@ def countf(f):
             sum += min(f[i:j + 1])
     return sum
 
-import itertools
-n,m = input().split()
+
+n, m = input().split()
 n = int(n)
 m = int(m)
-maxf = 0;
-count = 0;
+maxf = 0
+count = 0
 save = ()
 for x in itertools.permutations(list(range(n + 1))[1:]):
     t = countf(x)
@@ -27,7 +29,3 @@ for x in itertools.permutations(list(range(n + 1))[1:]):
         if count == m:
             save = x
 print(' '.join(str(e) for e in save))
-
-
-
-

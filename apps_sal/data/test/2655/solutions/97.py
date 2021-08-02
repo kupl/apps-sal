@@ -15,4 +15,3 @@ for _ in range(n - 1):
     hq.heappush(q, sorted((b1, -p), reverse=True))
     hq.heappush(q, sorted((b2, -p), reverse=True))
 print(ans)
-
