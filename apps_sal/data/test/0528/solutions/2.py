@@ -1,9 +1,9 @@
 n, m = [int(x) for x in input().split()]
 
-l = [] 
+l = []
 for i in range(m):
     x, y = [int(x) for x in input().split()]
-    if x>y: x,y = y,x
+    if x > y: x, y = y, x
     l.append((x, y))
 l.sort(key=lambda x: x[0])
 
@@ -18,13 +18,13 @@ for x, y in l:
     if y not in labels:
         class_count[labels[x]] += 1
     labels[y] = labels[x]
-    rels_count[labels[x]]+=1
-    
+    rels_count[labels[x]] += 1
+
 flag = True
 for i in range(len(rels_count)):
     l_n = class_count[i]
     l_m = rels_count[i]
-    if l_n*(l_n-1) != 2*l_m:
+    if l_n * (l_n - 1) != 2 * l_m:
         flag = False
         break
 if flag:

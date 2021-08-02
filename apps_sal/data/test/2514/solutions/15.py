@@ -19,4 +19,5 @@ def __starting_point():
     import sys
     print((solve(sys.stdin.read().strip())))
 
+
 __starting_point()

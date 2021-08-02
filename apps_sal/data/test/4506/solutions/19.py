@@ -16,5 +16,3 @@ for i in range(n):
     ans = (ans + ar[i] * br[n - i - 1]) % MOD
 
 print(ans)
- 
-

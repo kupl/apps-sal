@@ -35,4 +35,3 @@ for i in range(q):
 res = "\n".join([str(r) for r in list(accumulate(res))[1:]])
 
 print(res)
-

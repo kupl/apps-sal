@@ -1,18 +1,18 @@
 N = int(input())
-Alist = list(map(int,input().split()))
+Alist = list(map(int, input().split()))
 sum1 = sum(Alist)
 dic = {}
 for a in Alist:
     if not a in dic:
         dic[a] = 0
-    dic[a]+=1
+    dic[a] += 1
 
 Q = int(input())
 Qlist = []
 for _ in range(Q):
-    Qlist.append(list(map(int,input().split())))
+    Qlist.append(list(map(int, input().split())))
 for q in Qlist:
-    b,c = q
+    b, c = q
     n = 0
     if b in dic:
         n = dic[b]
@@ -24,6 +24,6 @@ for q in Qlist:
         dic[c] += n
     else:
         dic[c] = n
-    sum1 += n*(c-b)
+    sum1 += n * (c - b)
 
     print(sum1)

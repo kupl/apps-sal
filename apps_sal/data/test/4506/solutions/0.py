@@ -20,4 +20,3 @@ for i in range(n):
     u = c[i] * (n - i) * (i + 1) % m
     ans = (ans + u) % m
 print(ans)
-

@@ -11,7 +11,7 @@ for i in range(len(a)):
     d[a[i]] += 1
 
 for i in range(q):
-    B,C = list(map(int,input().split()))
+    B, C = list(map(int, input().split()))
     if B not in d:
         ans_li.append(ans)
     else:
@@ -33,4 +33,3 @@ for i in range(q):
 
 for aa in ans_li:
     print(aa)
-

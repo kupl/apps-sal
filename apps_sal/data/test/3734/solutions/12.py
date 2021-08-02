@@ -12,6 +12,7 @@ days = {
     'sunday': 6
 }
 
+
 def main():
     for mon in months[:-1]:
         if (mon + days[weekday1]) % 7 == days[weekday2]:
@@ -19,5 +20,6 @@ def main():
             return
     print("NO")
     return
-    
+
+
 main()

@@ -1,4 +1,4 @@
-cal = {i:j for i, j in zip('monday tuesday wednesday thursday friday saturday sunday'.split(), range(7))}
+cal = {i: j for i, j in zip('monday tuesday wednesday thursday friday saturday sunday'.split(), range(7))}
 fst = cal[input()]
 snd = cal[input()]
 gre = {0, 2, 3}

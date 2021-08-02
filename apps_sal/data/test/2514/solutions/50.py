@@ -1,16 +1,16 @@
-f=lambda : map(int,input().split())
-N=int(input())
-*A,=f()
-Q=int(input())
-BC=[f() for _ in range(Q)]
-
 import collections
-c = collections.Counter(A)
-s=sum(A)
+f = lambda: map(int, input().split())
+N = int(input())
+*A, = f()
+Q = int(input())
+BC = [f() for _ in range(Q)]
 
-for i,j in BC:
- v=c[i]
- s+=v*(j-i)
- print(s)
- c[j]+=v
- c[i]=0
+c = collections.Counter(A)
+s = sum(A)
+
+for i, j in BC:
+    v = c[i]
+    s += v * (j - i)
+    print(s)
+    c[j] += v
+    c[i] = 0

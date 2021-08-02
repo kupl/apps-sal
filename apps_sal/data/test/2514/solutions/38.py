@@ -14,4 +14,3 @@ for _ in range(q):
         else:
             C[c] = x
     print(ans)
-

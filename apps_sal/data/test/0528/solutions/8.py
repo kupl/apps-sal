@@ -9,8 +9,9 @@ def read():
         graph[b].add(b)
     return (graph, n)
 
+
 def main():
-    graph, n = read() 
+    graph, n = read()
     seen = set()
     for i in range(1, n + 1):
         if len(graph[i]) > 0 and i not in seen:
@@ -19,10 +20,12 @@ def main():
             seen |= graph[i]
     return True
 
+
 def __starting_point():
     if main():
         print('YES')
     else:
         print('NO')
+
 
 __starting_point()

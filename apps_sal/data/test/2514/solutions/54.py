@@ -9,7 +9,7 @@ cou = Counter(a)
 s = sum(a)
 
 for b, c in bc:
-    s = s + cou[b]*(c-b)
+    s = s + cou[b] * (c - b)
     cou[c] += cou[b]
     cou[b] = 0
     print(s)

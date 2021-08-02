@@ -12,8 +12,8 @@ for i in range(n):
 for i in range(int(input())):
     b, c = map(int, input().split())
     if b in nums:
-        s -= nums[b]*b
-        s += nums[b]*c
+        s -= nums[b] * b
+        s += nums[b] * c
         if c in nums:
             nums[c] += nums[b]
         else:

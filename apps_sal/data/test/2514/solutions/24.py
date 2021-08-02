@@ -22,4 +22,3 @@ for _ in range(Q):
     total = total - num * B + num * C
     print(total)
     del counter[B]
-

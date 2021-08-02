@@ -4,13 +4,12 @@ b = list(map(int, input().split()))
 
 count = []
 for i in range(n):
-    count.append((n-i)*(i+1)*a[i])
+    count.append((n - i) * (i + 1) * a[i])
 b.sort()
-count.sort(reverse = True)
+count.sort(reverse=True)
 ans = 0
 for i in range(n):
 
-    ans += count[i]*b[i]
+    ans += count[i] * b[i]
     ans %= 998244353
 print(ans)
-

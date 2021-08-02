@@ -5,12 +5,12 @@ for x in range(m):
     a, b = input().split()
     d.setdefault(a, {a}).add(b)
     d.setdefault(b, {b}).add(a)
-res='YES'
+res = 'YES'
 for x, y in d.items():
     if x not in visited:
-        if all([d[u]==y for u in y]):
+        if all([d[u] == y for u in y]):
             visited.update(y)
         else:
-            res='NO'
+            res = 'NO'
             break
 print(res)

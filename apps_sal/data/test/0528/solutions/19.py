@@ -11,7 +11,7 @@ for i in range(m):
     else:
         d[b].add(a)
 
-not_visited = set(range(2, n+1))
+not_visited = set(range(2, n + 1))
 visited = set()
 current = set()
 stack = [1]
@@ -42,4 +42,3 @@ if succ:
     print('YES')
 else:
     print('NO')
-

@@ -3,7 +3,7 @@ def main():
     w = [c == '*' for i in range(n) for c in input()]
     nm = n * m
     q = [*[range(i, i + m) for i in range(0, nm, m)],
-            *[range(i, nm, m) for i in range(m)]]
+         *[range(i, nm, m) for i in range(m)]]
     e = [1000] * nm
     for f in True, False:
         for r in q:

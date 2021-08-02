@@ -6,9 +6,9 @@ su = sum(A)
 counter = Counter(A)
 lis = {}
 for i in range(Q):
-  B, C = map(int, input().split())
-  su -= B * counter[B]
-  su += C * counter[B]
-  counter[C] += counter[B]
-  counter[B] = 0
-  print(su)
+    B, C = map(int, input().split())
+    su -= B * counter[B]
+    su += C * counter[B]
+    counter[C] += counter[B]
+    counter[B] = 0
+    print(su)
