@@ -13,13 +13,13 @@ E = list()
 O = list()
 i = 0
 for v in input().split():
-    if i%2 == 0:
+    if i % 2 == 0:
         E.append(int(v))
     else:
         O.append(int(v))
     i += 1
-#print(E)
-#print(O)
+# print(E)
+# print(O)
 edic = {}
 odic = {}
 for e in E:
@@ -33,30 +33,30 @@ for o in O:
         odic[o] = 1
     else:
         odic[o] += 1
-        
-etmp = [(-1,0),(-1,0)]
-otmp = [(-1,0),(-1,0)]
+
+etmp = [(-1, 0), (-1, 0)]
+otmp = [(-1, 0), (-1, 0)]
 
 for key in edic.keys():
-    #first
+    # first
     if edic[key] > etmp[0][1]:
         etmp[1] = etmp[0]
         etmp[0] = (key, edic[key])
-    #second
+    # second
     elif edic[key] > etmp[1][1]:
-        etmp[1] = (key,edic[key])
+        etmp[1] = (key, edic[key])
 
 for key in odic.keys():
-    #first
+    # first
     if odic[key] > otmp[0][1]:
         otmp[1] = otmp[0]
         otmp[0] = (key, odic[key])
-    #second
+    # second
     elif odic[key] > otmp[1][1]:
-        otmp[1] = (key,odic[key])
+        otmp[1] = (key, odic[key])
 
 if etmp[0][0] == otmp[0][0]:
-    ans = max(etmp[0][1]+otmp[1][1],etmp[1][1]+otmp[0][1])
+    ans = max(etmp[0][1] + otmp[1][1], etmp[1][1] + otmp[0][1])
 else:
-    ans = etmp[0][1]+otmp[0][1]
-print(n-ans)
+    ans = etmp[0][1] + otmp[0][1]
+print(n - ans)

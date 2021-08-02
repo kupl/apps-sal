@@ -17,4 +17,3 @@ else:
     keep = kisu[0][1] + gusu[0][1]
 
 print((n - keep))
-

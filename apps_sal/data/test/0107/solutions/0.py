@@ -12,4 +12,3 @@ if cnt >= 6:
     print('yes')
 else:
     print('no')
-

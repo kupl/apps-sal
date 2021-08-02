@@ -15,16 +15,16 @@ import numpy as np
 n = int(input())
 a = list(map(int, input().split()))
 
-counter = collections.Counter(a)        #O(n)
-nums = list(counter.values())           #O(n)
-num_counter = collections.Counter(nums) #O(n)
-lastest_add = np.count_nonzero(nums)    #O(n)
+counter = collections.Counter(a)  # O(n)
+nums = list(counter.values())  # O(n)
+num_counter = collections.Counter(nums)  # O(n)
+lastest_add = np.count_nonzero(nums)  # O(n)
 building, longests = [0], [0]
-for i in range(1, n+1):                 #O(n)
-    appended = building[-1] + lastest_add   #O(1)
-    building.append(appended)               #O(1)
-    longests.append(appended // i)          #O(1)
-    lastest_add -= num_counter[i]           #O(1)
+for i in range(1, n + 1):  # O(n)
+    appended = building[-1] + lastest_add  # O(1)
+    building.append(appended)  # O(1)
+    longests.append(appended // i)  # O(1)
+    lastest_add -= num_counter[i]  # O(1)
 
 
 lastest_longest = 0
@@ -32,9 +32,9 @@ k_most = []
 for i, x in enumerate(reversed(longests)):
     while x > lastest_longest:
         lastest_longest += 1
-        k_most.append(n-i)
+        k_most.append(n - i)
 
-k_most.extend([0]*(n-len(k_most)))      # zero padding
+k_most.extend([0] * (n - len(k_most)))      # zero padding
 
 for longests_num in k_most:
     print(longests_num)
@@ -46,4 +46,3 @@ for longests_num in k_most:
 #         print(maxindexes[-1])
 #     else:
 #         print(0)
-

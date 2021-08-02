@@ -12,11 +12,12 @@ def isqrt(n):
         seen.add(x)
     return x
 
+
 def is_square(n):
     return isqrt(n) is not None
+
 
 n = int(input())
 a = [int(v) for v in input().split()]
 
 print(max(v for v in a if not is_square(v)))
-

@@ -4,7 +4,7 @@ input = sys.stdin.readline
 m, n = list(map(int, input().split()))
 Dora = []
 Swiper = []
-all = set([i for i in range(1, n+1)])
+all = set([i for i in range(1, n + 1)])
 for _ in range(m):
     a = set(list(map(int, input().split()))[1:])
     Dora.append(a)
@@ -23,4 +23,3 @@ if flag == 1:
     print("possible")
 else:
     print("impossible")
-

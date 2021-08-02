@@ -1,20 +1,20 @@
+from collections import Counter
 n = int(input())
 a = list(map(int, input().split()))
 a1 = a[::2]
 a2 = a[1::2]
 
-from collections import Counter
 c = Counter(a1)
 c1 = []
 for i in c:
-    c1.append([c[i],i])
-c1.sort(reverse = True)
+    c1.append([c[i], i])
+c1.sort(reverse=True)
 
 c = Counter(a2)
 c2 = []
 for i in c:
-    c2.append([c[i],i])
-c2.sort(reverse = True)
+    c2.append([c[i], i])
+c2.sort(reverse=True)
 
 ans = n
 if c1[0][1] != c2[0][1]:
@@ -23,9 +23,11 @@ if c1[0][1] != c2[0][1]:
 else:
     buf1 = 0
     buf1 += c1[0][0]
-    if len(c2) > 1: buf1 += c2[1][0]
+    if len(c2) > 1:
+        buf1 += c2[1][0]
     buf2 = 0
     buf2 += c2[0][0]
-    if len(c1) > 1: buf2 += c1[1][0]
-    ans -= max(buf1,buf2)
+    if len(c1) > 1:
+        buf2 += c1[1][0]
+    ans -= max(buf1, buf2)
 print(ans)

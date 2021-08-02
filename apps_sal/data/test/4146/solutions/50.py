@@ -1,6 +1,7 @@
 import collections
 url = "https://atcoder.jp//contests/abc111/tasks/arc103_a"
 
+
 def main():
     input()
     t = list(map(int, input().split()))
@@ -21,5 +22,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

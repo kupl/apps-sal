@@ -1,10 +1,9 @@
+from bisect import bisect_left
+from math import floor
+from itertools import accumulate
+from collections import Counter
 import sys
 input = sys.stdin.readline
-
-from collections import Counter
-from itertools import accumulate
-from math import floor
-from bisect import bisect_left
 
 
 def main():
@@ -40,5 +39,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

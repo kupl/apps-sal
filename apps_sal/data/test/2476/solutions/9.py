@@ -37,4 +37,3 @@ def solve(k):
 
 for k in range(1, N + 1):
     print((solve(k)))
-

@@ -3,16 +3,16 @@ A = list(map(int, input().split()))
 
 num = [0 for _ in range(N)]
 for a in A:
-    num[a-1] += 1
+    num[a - 1] += 1
 num.sort()
 cum = [0 for _ in range(N)]
 cum[0] = num[0]
 for i in range(1, N):
-    cum[i] = cum[i-1] + num[i]
+    cum[i] = cum[i - 1] + num[i]
 
 index = N - 1
 ans = N
-for k in range(1, N+1):
+for k in range(1, N + 1):
     while ans > 0:
         tmp_index = index
         while tmp_index >= 0 and num[tmp_index] > ans:

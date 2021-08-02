@@ -10,4 +10,3 @@ for i in range(m):
             print('impossible')
             return
 print('possible')
-

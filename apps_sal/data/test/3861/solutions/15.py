@@ -6,4 +6,3 @@ while x ** 2 <= 10 ** 6:
     x += 1
 
 print(max([x for x in map(int, input().split()) if x not in sqrs]))
-

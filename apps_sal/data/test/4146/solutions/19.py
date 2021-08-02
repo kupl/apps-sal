@@ -33,4 +33,3 @@ if e_max1[0] == o_max1[0]:
     print((min(n - e_max1[1] - o_max2[1], n - e_max2[1] - o_max1[1])))
 else:
     print((n - e_max1[1] - o_max1[1]))
-

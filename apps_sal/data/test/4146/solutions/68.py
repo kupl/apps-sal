@@ -13,4 +13,3 @@ else:
     a = n - o.most_common()[0][1] - max(sorted(e.values())[:-1] + [0])
     b = n - e.most_common()[0][1] - max(sorted(o.values())[:-1] + [0])
     print((min(a, b)))
-

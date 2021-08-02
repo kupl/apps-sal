@@ -6,4 +6,3 @@ for i, (el, _) in enumerate(a):
     shots += i * el + 1
 print(shots)
 print(*(i for _, i in a))
-

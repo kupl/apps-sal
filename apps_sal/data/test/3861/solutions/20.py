@@ -9,4 +9,3 @@ for i in a:
     if v * v != i and (v + 1) * (v + 1) != i and (v - 1) * (v - 1) != i:
         mn = max(mn, i)
 print(mn)
-

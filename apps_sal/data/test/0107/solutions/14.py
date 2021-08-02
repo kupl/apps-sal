@@ -5,4 +5,3 @@ for i in range(len(s)):
         return
 
 print('no')
-

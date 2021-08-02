@@ -13,4 +13,3 @@ if count >= 6:
     print("yes")
 else:
     print("no")
-

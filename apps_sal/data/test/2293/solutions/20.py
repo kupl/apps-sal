@@ -1,5 +1,5 @@
-m,n = [int(i) for i in input().split()]
-mas = set(range(1,n+1))
+m, n = [int(i) for i in input().split()]
+mas = set(range(1, n + 1))
 
 setd = []
 sets = []
@@ -10,8 +10,8 @@ for i in range(m):
     sets.append(mas.difference(s))
 
 
-#print(setd)
-#print(sets)
+# print(setd)
+# print(sets)
 
 
 flag = True

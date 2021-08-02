@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 n = int(input())
 V = list(map(int, input().split()))
 
-even = {0:0}
-odd = {0:0}
+even = {0: 0}
+odd = {0: 0}
 
 for i in range(n):
     v = V[i]
@@ -47,4 +47,3 @@ if omax != emax:
     print((n - even[emax] - odd[omax]))
 else:
     print((n - even[emax] - odd[omax] + min(even[emax] - even[enext], odd[omax] - odd[onext])))
-

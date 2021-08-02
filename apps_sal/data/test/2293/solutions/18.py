@@ -4,7 +4,7 @@ s = [0] * m
 
 for w in range(m):
     for i in list(map(int, input().split()))[1:]:
-         s[w] |= 1 << i
+        s[w] |= 1 << i
 
 for i in s:
     for j in s:
@@ -13,4 +13,3 @@ for i in s:
             return
 
 print('possible')
-

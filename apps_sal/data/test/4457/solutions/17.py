@@ -12,4 +12,3 @@ for i in range(len(a)):
     order.append(a[i][1])
 print(s)
 print(' '.join([str(i + 1) for i in order]))
-

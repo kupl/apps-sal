@@ -9,4 +9,3 @@ for i in range(m):
     if not ok:
         break
 print(("" if ok else "im") + "possible")
-
