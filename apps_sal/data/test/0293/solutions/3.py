@@ -7,9 +7,9 @@ for i in range(1, 1442250 + 10):
         break
     if mod == 0:
         ans.append((i, j))
-        if i != j: ans.append((j, i))
+        if i != j:
+            ans.append((j, i))
 ans.sort()
 print(len(ans))
 for x, y in ans:
     print(x, y)
-

@@ -13,4 +13,3 @@ if pos >= m:
     print("YES")
 else:
     print("NO")
-

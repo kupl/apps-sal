@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 q = int(input())
 for qq in range(q):
     n = int(input())

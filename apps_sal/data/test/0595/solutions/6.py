@@ -17,4 +17,3 @@ while 1:
     res += 1
 
 print(res)
-

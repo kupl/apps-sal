@@ -24,6 +24,6 @@ for ev in a:
         cnt -= 1
         if cnt == 0 and ev[0] != m:
             ok = False
-    
+
 
 print("YES" if ok else "NO")

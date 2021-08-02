@@ -13,4 +13,3 @@ for i in range(t):
         if s == 0:
             s = n
         print(s)
-

@@ -13,4 +13,3 @@ for a, b in teleports:
             reachable[i] = True
 
 print(["NO", "YES"][reachable[m]])
-

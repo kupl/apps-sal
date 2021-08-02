@@ -8,8 +8,7 @@ while t:
     s[0] = a[0]
     for i in range(1, n):
         s[i] = s[i - 1] + a[i]
-    
-    
+
     if s[-1] == 0:
         if x in s:
             print(-1)
@@ -21,4 +20,4 @@ while t:
             gap = x - s[i]
             if gap % s[-1] == 0 and gap // s[-1] >= 0:
                 res += 1
-        print(res)        
+        print(res)

@@ -1,6 +1,7 @@
 def is_leap(n):
     return n % 400 == 0 or (n % 4 == 0 and n % 100 != 0)
 
+
 curr = int(input())
 leapness = is_leap(curr)
 first = 0

@@ -14,4 +14,3 @@ while True:
     num2 += 365 + num3
     n2 += 1
 print(n2)
-

@@ -14,4 +14,3 @@ for p in parts:
         break
 else:
     print('YES')
-

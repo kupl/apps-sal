@@ -19,4 +19,3 @@ for _ in range(int(input())):
             if not xmk % bal and xmk * bal >= 0:
                 ans += cnt[k]
         print(ans)
-

@@ -7,6 +7,8 @@ def f(n):
         return True
     else:
         return False
+
+
 n = int(input())
 N = n
 c = 0
@@ -19,5 +21,3 @@ while True:
     if c % 7 == 0 and f(n) == f(N):
         break
 print(n)
-    
-

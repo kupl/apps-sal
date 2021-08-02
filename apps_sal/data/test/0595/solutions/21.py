@@ -10,4 +10,3 @@ while now != 0 or vis != (n % 400 == 0 or n % 4 == 0 and n % 100 != 0):
     else:
         now = (now + 1) % 7
 print(n)
-
