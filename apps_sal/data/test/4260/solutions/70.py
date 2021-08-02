@@ -6,14 +6,6 @@
 #l = [list(map(int,input().split())) for i in range(n)]
 #a = [input() for _ in range(n)]
 
-t,x=list(map(int,input().split()))
+t, x = list(map(int, input().split()))
 
-print((t/x))
-
-
-
-
-
-
-
-
+print((t / x))

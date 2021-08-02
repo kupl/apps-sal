@@ -1,5 +1,5 @@
 N = int(input())
-S = map(int,input().split())
+S = map(int, input().split())
 
 Number = list(S)
 

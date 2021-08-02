@@ -6,4 +6,3 @@ if numbers[1] == numbers[2]:
         return
 
 print("No")
-

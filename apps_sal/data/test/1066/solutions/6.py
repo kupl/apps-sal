@@ -4,4 +4,3 @@ if k <= m:
     print(2 * k - 1)
 else:
     print(2 * (k - m))
-

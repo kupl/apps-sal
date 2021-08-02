@@ -1,3 +1,2 @@
-T,X=list(map(int,input().split()))
-print((float(T/X)))
-
+T, X = list(map(int, input().split()))
+print((float(T / X)))

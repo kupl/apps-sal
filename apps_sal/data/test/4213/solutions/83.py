@@ -4,4 +4,3 @@ for a in A:
     mx = max(mx, a)
     mn = min(mn, a)
 print((mx - mn))
-

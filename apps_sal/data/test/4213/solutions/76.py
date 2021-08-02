@@ -1,4 +1,4 @@
 N = input()
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-print(abs(max(a)-min(a)))
+print(abs(max(a) - min(a)))

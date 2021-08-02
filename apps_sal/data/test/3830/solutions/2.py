@@ -36,10 +36,11 @@ def solve():
     S = S + S[0]
     ans = 0
     for i in range(n):
-        if S[i] == "-" or S[i+1] == "-":
+        if S[i] == "-" or S[i + 1] == "-":
             ans += 1
 
     print(ans)
+
 
 def main():
     n = getN()
@@ -52,5 +53,6 @@ def main():
 def __starting_point():
     main()
     # solve()
+
 
 __starting_point()

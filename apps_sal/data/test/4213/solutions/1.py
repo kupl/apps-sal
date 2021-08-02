@@ -1,5 +1,5 @@
 N = int(input())
-data = list(map(int,input().split()))
+data = list(map(int, input().split()))
 
 max = 0
 min = 1000000000

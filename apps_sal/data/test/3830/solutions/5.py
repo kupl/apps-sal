@@ -16,12 +16,13 @@ def main():
 
         ans = 0
         for i in range(N):
-            if S[i] == "-" or S[(i+1)%N] == "-":
+            if S[i] == "-" or S[(i + 1) % N] == "-":
                 ans += 1
         print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

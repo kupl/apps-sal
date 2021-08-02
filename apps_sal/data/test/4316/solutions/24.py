@@ -8,4 +8,3 @@ for i in list(S.values()):
         ans = "No"
     break
 print(ans)
-

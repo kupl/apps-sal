@@ -13,4 +13,3 @@ for A_i, A_j in itertools.combinations(A, r=2):
 
 # 結果出力
 print(ans)
-

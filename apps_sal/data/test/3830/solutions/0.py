@@ -16,5 +16,7 @@ def solve():
         if s[i] == "-" or s[i - 1] == '-':
             ans += 1
     print(ans)
+
+
 for i in range(int(input())):
     solve()

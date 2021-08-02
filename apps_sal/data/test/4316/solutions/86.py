@@ -1,2 +1,2 @@
 S = list(input())
-print("Yes") if len(set(S))==2 else print("No")
+print("Yes") if len(set(S)) == 2 else print("No")

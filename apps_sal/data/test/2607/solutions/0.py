@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class ABeautifulString:
     def solve(self):
@@ -20,7 +21,7 @@ class ABeautifulString:
                     print(-1)
                     break
             else:
-                x = 3 * ord('a') + 1 +2
+                x = 3 * ord('a') + 1 + 2
                 for i in range(n):
                     if s[i] == '?':
                         if (i > 0 and i < n - 1):
@@ -32,8 +33,8 @@ class ABeautifulString:
 
                 print(''.join(s))
 
+
 solver = ABeautifulString()
 input = sys.stdin.readline
 
 solver.solve()
-

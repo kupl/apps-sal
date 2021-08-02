@@ -1,9 +1,8 @@
-s=list(input())
+s = list(input())
 s.sort()
 
-if s[0]==s[1] and s[2]==s[3] and s[0]!=s[2]:
+if s[0] == s[1] and s[2] == s[3] and s[0] != s[2]:
     print("Yes")
-    
+
 else:
     print("No")
-

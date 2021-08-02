@@ -5,7 +5,7 @@ for _ in range(q):
     n = int(input())
     s = input()
     s = s[:n]
-    if s.count('>') == 0 or s.count('<')==0:
+    if s.count('>') == 0 or s.count('<') == 0:
         print(n)
     else:
         wyn = 0
@@ -13,6 +13,6 @@ for _ in range(q):
         for i in range(n):
             if s[i] == '-':
                 dasie[i] = 1
-            if s[i-1] == '-':
+            if s[i - 1] == '-':
                 dasie[i] = 1
         print(sum(dasie))

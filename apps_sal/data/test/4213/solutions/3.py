@@ -1,3 +1,3 @@
 _ = input()
-a = list(map(int,input().split()))
-print(max(a)-min(a))
+a = list(map(int, input().split()))
+print(max(a) - min(a))

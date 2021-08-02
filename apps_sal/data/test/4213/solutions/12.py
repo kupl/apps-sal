@@ -5,5 +5,5 @@ ans = 0
 for i in range(n):
     for j in range(n):
         if i == j: continue
-        ans = max(ans, abs(A[i]-A[j]))
+        ans = max(ans, abs(A[i] - A[j]))
 print(ans)

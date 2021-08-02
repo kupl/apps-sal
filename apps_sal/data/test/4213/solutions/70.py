@@ -11,4 +11,3 @@ descending_sub = sorted(set(sub), reverse=True)
 # print(descending_sub)
 
 print((descending_sub[0]))
-

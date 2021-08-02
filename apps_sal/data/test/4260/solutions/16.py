@@ -1,3 +1,2 @@
-t,x = list(map(int,input().split()))
+t, x = list(map(int, input().split()))
 print((t / x))
-

@@ -12,12 +12,12 @@ def iroha():
         else:
             count = 1
             head = num[i]
-    
+
     print('No')
-        
 
 
 def __starting_point():
     iroha()
+
 
 __starting_point()

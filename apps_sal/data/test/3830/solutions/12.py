@@ -9,10 +9,9 @@ for t in range(T):
     else:
         cnt = 0
         for i in range(N):
-            prev = i-1
+            prev = i - 1
             if prev < 0:
                 prev += N
             if s[i] == '-' or s[prev] == '-':
                 cnt += 1
         print(cnt)
-

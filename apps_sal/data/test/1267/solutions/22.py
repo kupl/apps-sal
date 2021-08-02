@@ -5,4 +5,3 @@ for c in r:
     if c != 0:
         good_results.add(c)
 print(len(good_results))
-

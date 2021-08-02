@@ -9,4 +9,3 @@ for i in range(len(S)):
         return
 
 print("Yes")
-

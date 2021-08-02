@@ -6,4 +6,3 @@ if list_word.count(list_word[0]) == 2 and list_word.count(list_word[1]) == 2 and
     print('Yes')
 else:
     print('No')
-
