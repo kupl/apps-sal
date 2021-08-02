@@ -3,6 +3,9 @@
 #  graph[u][v] = f
 #  graph[v][u] = f (if undirected) 0 (if directed)
 
+import sys
+
+
 class FordFulkerson():
     def __init__(self, start, finish, graph, INF=10**18):
         self.INF = INF
@@ -12,9 +15,9 @@ class FordFulkerson():
         self.N = len(graph)
 
     def dfs(self):
-        self.Flow = [self.INF]*self.N
-        self.used = [False]*self.N
-        self.Par = [-1]*self.N
+        self.Flow = [self.INF] * self.N
+        self.used = [False] * self.N
+        self.Par = [-1] * self.N
         self.stack = [self.start]
         self.used[self.start] = True
         while self.stack:
@@ -44,25 +47,24 @@ class FordFulkerson():
             flow += f
 
 
-import sys
 input = sys.stdin.readline
 
 INF = 10**18
 
 H, W = map(int, input().split())
-V = H+W
+V = H + W
 
 
 def make():
     state = [list(input().rstrip()) for _ in range(H)]
-    graph = [{} for _ in range(V+2)]
+    graph = [{} for _ in range(V + 2)]
 
     start = V
-    finish = V+1
+    finish = V + 1
 
     for h in range(H):
         for w in range(W):
-            u, v = h, w+H
+            u, v = h, w + H
             if state[h][w] == "o":
                 graph[u][v] = 1
                 graph[v][u] = 1
@@ -76,9 +78,8 @@ def make():
                 graph[finish][u] = INF
                 graph[v][finish] = INF
                 graph[finish][v] = INF
-    
-    return graph, start, finish
 
+    return graph, start, finish
 
 
 def main():
@@ -86,7 +87,7 @@ def main():
     ff = FordFulkerson(start, finish, graph)
     ans = ff.flow()
 
-    if ans > INF//2:
+    if ans > INF // 2:
         print(-1)
     else:
         print(ans)
@@ -94,4 +95,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -10,7 +10,7 @@ class Dinic:
 
     def add_edge(self, u, v, cap):
         self.G[u].append([v, cap, len(self.G[v])])
-        self.G[v].append([u, 0, len(self.G[u])-1])
+        self.G[v].append([u, 0, len(self.G[u]) - 1])
 
     def bfs(self, s):
         self.level = [-1] * self.N
@@ -54,24 +54,24 @@ class Dinic:
 def main():
     H, W = (int(i) for i in input().split())
     A = [input() for i in range(H)]
-    F = Dinic(H+W+2)  # 0,1,...,W-1,0,..,H-1,s,t
-    s = H+W
-    t = H+W+1
+    F = Dinic(H + W + 2)  # 0,1,...,W-1,0,..,H-1,s,t
+    s = H + W
+    t = H + W + 1
     Sh, Sw = -1, -1
     Th, Tw = -1, -1
     for h in range(H):
         for w in range(W):
             if A[h][w] == "S":
                 Sh, Sw = h, w
-                F.add_edge(s, h+W, INF)
+                F.add_edge(s, h + W, INF)
                 F.add_edge(s, w, INF)
             elif A[h][w] == "T":
                 Th, Tw = h, w
-                F.add_edge(h+W, t, INF)
+                F.add_edge(h + W, t, INF)
                 F.add_edge(w, t, INF)
             if A[h][w] != ".":
-                F.add_edge(h+W, w, 1)
-                F.add_edge(w, h+W, 1)
+                F.add_edge(h + W, w, 1)
+                F.add_edge(w, h + W, 1)
     if Sh == Th or Sw == Tw:
         return print(-1)
 
@@ -80,5 +80,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

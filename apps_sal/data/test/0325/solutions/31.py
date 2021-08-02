@@ -21,12 +21,12 @@ class bellman_ford():
         self._E += 1
 
     def shortest_path(self, s):
-        d = [10**20]*(self._V+1)
+        d = [10**20] * (self._V + 1)
         d[s] = 0
         for _ in range(self._V):
             flag = False
             for edge in self.G:
-                newlen = d[edge.From]+edge.cost
+                newlen = d[edge.From] + edge.cost
                 if newlen < d[edge.to]:
                     flag = True
                     d[edge.to] = newlen
@@ -35,12 +35,12 @@ class bellman_ford():
         return d
 
     def have_negative_circle(self):
-        d = [10**20]*(self._V+1)
+        d = [10**20] * (self._V + 1)
         d[1] = 0
-        for i in range(1, self._V+1):
+        for i in range(1, self._V + 1):
             flag = False
             for edge in self.G:
-                newlen = d[edge.From]+edge.cost
+                newlen = d[edge.From] + edge.cost
                 if newlen < d[edge.to]:
                     flag = True
                     d[edge.to] = newlen
@@ -58,18 +58,18 @@ graph = []
 d = deque()
 
 
-from_1 = [[] for i in range(N+1)]
-from_N = [[] for i in range(N+1)]
+from_1 = [[] for i in range(N + 1)]
+from_N = [[] for i in range(N + 1)]
 
 for _ in range(M):
     a, b, c = map(int, input().split())
     from_1[a].append(b)
     from_N[b].append(a)
-    d.append((a, b, P-c))
+    d.append((a, b, P - c))
 
 
-accessible_1 = [False for i in range(N+1)]
-accessible_N = [False for i in range(N+1)]
+accessible_1 = [False for i in range(N + 1)]
+accessible_N = [False for i in range(N + 1)]
 
 
 def dfs_1(s):
@@ -89,8 +89,8 @@ def dfs_N(s):
 dfs_1(1)
 dfs_N(N)
 
-isok = [False for i in range(N+1)]
-for i in range(N+1):
+isok = [False for i in range(N + 1)]
+for i in range(N + 1):
     if accessible_1[i] and accessible_N[i]:
         isok[i] = True
 G = bellman_ford(N)

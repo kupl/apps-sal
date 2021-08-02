@@ -6,7 +6,7 @@ class Dinic:
         self.INF = 10**9 + 7
         self.n = n
         self.graph = [[] for _ in range(n)]
- 
+
     def add_edge(self, _from: int, to: int, capacity: int):
         """残余グラフを構築
         1. _fromからtoへ向かう容量capacityの辺をグラフに追加する
@@ -16,7 +16,7 @@ class Dinic:
         forward[2] = backward = [_from, 0, forward]
         self.graph[_from].append(forward)
         self.graph[to].append(backward)
- 
+
     def bfs(self, s: int, t: int):
         """capacityが正の辺のみを通ってsからtに移動可能かどうかBFSで探索
         level: sからの最短路の長さ
@@ -30,7 +30,7 @@ class Dinic:
                 if capacity > 0 and self.level[to] < 0:
                     self.level[to] = self.level[_from] + 1
                     q.append(to)
- 
+
     def dfs(self, _from: int, t: int, f: int) -> int:
         """流量が増加するパスをDFSで探索
         BFSによって作られた最短路に従ってfを更新する
@@ -46,7 +46,7 @@ class Dinic:
                     reverse_edge[1] += d
                     return d
         return 0
- 
+
     def max_flow(self, s: int, t: int):
         """s-tパス上の最大流を求める
         計算量: O(|E||V|^2)

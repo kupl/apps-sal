@@ -20,7 +20,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -61,7 +61,7 @@ class Dinic:
 
 
 h, w = list(map(int, input().split()))
-dinic = Dinic((h+1)*(w+1))
+dinic = Dinic((h + 1) * (w + 1))
 maze = [list(input()) for _ in range(h)]
 start = 0
 goal = 0
@@ -74,13 +74,12 @@ for i in range(h):
         if maze[i][j] == 'S':
             start = (i + 1) * (w + 1) + j + 1
             dinic.add_edge(start, j + 1, INF)
-            dinic.add_edge(start, (i+1)*(w+1), INF)
+            dinic.add_edge(start, (i + 1) * (w + 1), INF)
         elif maze[i][j] == 'T':
             goal = (i + 1) * (w + 1) + j + 1
             dinic.add_edge(j + 1, goal, INF)
-            dinic.add_edge((i+1)*(w+1), goal, INF)
+            dinic.add_edge((i + 1) * (w + 1), goal, INF)
         dinic.add_multi_edge(j + 1, (i + 1) * (w + 1) + j + 1, 1, 1)
-        dinic.add_multi_edge((i+1)*(w+1), (i+1)*(w+1) + j+1, 1, 1)
+        dinic.add_multi_edge((i + 1) * (w + 1), (i + 1) * (w + 1) + j + 1, 1, 1)
 ans = dinic.flow(start, goal)
 print((ans if ans < 10**9 else -1))
-

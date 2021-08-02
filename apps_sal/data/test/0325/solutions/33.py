@@ -26,7 +26,7 @@ def main():
     l = {}
     for a, b, c in zip(A, B, C):
         if a in reachable and b in reachable:
-            l[(a, b)] = min(c, l.get((a, b), 10 **9))
+            l[(a, b)] = min(c, l.get((a, b), 10 ** 9))
     AA, BB, CC = [], [], []
     for (a, b), c in list(l.items()):
         AA.append(a)
@@ -41,4 +41,3 @@ def main():
 
 
 print((main()))
-

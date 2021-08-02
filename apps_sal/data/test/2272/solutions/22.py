@@ -7,8 +7,10 @@ visited_intervals = [0] * (queries + 1)
 
 intervals = {}
 
+
 def get_interval():
     return tuple(map(int, input().split()))
+
 
 def reset_search_data():
     nonlocal queries
@@ -16,16 +18,17 @@ def reset_search_data():
     del visited_intervals
     visited_intervals = [0] * queries
 
+
 def solve():
 
     nonlocal counter
     nonlocal visited_intervals
 
-    for _ in range (queries):
+    for _ in range(queries):
         query = get_interval()
         if query[0] == 1:
-           intervals[counter] = query
-           counter += 1
+            intervals[counter] = query
+            counter += 1
         elif query[0] == 2:
             q = []
             q.append(query[1])
@@ -46,7 +49,9 @@ def solve():
                             #print ("visited", index)
                             q.append(index)
             if visited_intervals[query[2]] == 1:
-                print ("YES")
+                print("YES")
             else:
-                print ("NO")
+                print("NO")
+
+
 solve()

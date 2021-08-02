@@ -52,8 +52,8 @@ def main():
     print((-1 if bellman_ford(1) else max(-D[-1], 0)))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

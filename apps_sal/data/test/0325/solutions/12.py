@@ -35,11 +35,11 @@ def main():
         rev_routes[node2].append(node1)
 
     from_start = get_reachable_nodes(0, routes)
-    if n-1 not in from_start:
+    if n - 1 not in from_start:
         print((-1))
         return
 
-    to_goal = get_reachable_nodes(n-1, rev_routes)
+    to_goal = get_reachable_nodes(n - 1, rev_routes)
 
     from_start_to_goal = from_start & to_goal
 
@@ -71,5 +71,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

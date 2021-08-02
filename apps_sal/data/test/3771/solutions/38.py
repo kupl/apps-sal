@@ -1,12 +1,13 @@
 from collections import deque
 INF = 10**9
 
+
 class Dinic:
     def __init__(self, n):
         self.n = n
         self.edge = [[] for _ in range(n)]
-        self.level = [None] * self.n 
-        self.it = [None] * self.n 
+        self.level = [None] * self.n
+        self.it = [None] * self.n
 
     def add_edge(self, fr, to, cap):
         # edge consists of [dest, cap, id of reverse edge]
@@ -24,7 +25,7 @@ class Dinic:
         self.edge[v2].append(edge2)
 
     # takes start node and terminal node
-    # create new self.level, return you can flow more or not 
+    # create new self.level, return you can flow more or not
     def bfs(self, s, t):
         self.level = [None] * self.n
         dq = deque([s])
@@ -32,7 +33,7 @@ class Dinic:
         while dq:
             v = dq.popleft()
             lv = self.level[v] + 1
-            for dest, cap, _ in self.edge[v]: 
+            for dest, cap, _ in self.edge[v]:
                 if cap > 0 and self.level[dest] is None:
                     self.level[dest] = lv
                     dq.append(dest)
@@ -66,6 +67,7 @@ class Dinic:
                 flow += f
         return flow
 
+
 N, M = [int(item) for item in input().split()]
 n = N + M + 2
 dinic = Dinic(n)
@@ -86,9 +88,9 @@ for i in range(N):
         elif ch == "T":
             v1 = i + 1
             v2 = N + j + 1
-            dinic.add_edge(v1, n-1, INF)
-            dinic.add_edge(v2, n-1, INF)
-ans = dinic.flow(0, n-1)
+            dinic.add_edge(v1, n - 1, INF)
+            dinic.add_edge(v2, n - 1, INF)
+ans = dinic.flow(0, n - 1)
 if ans >= INF:
     print(-1)
 else:

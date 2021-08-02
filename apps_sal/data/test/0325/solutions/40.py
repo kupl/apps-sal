@@ -21,9 +21,9 @@ def solve():
         A[i], B[i], C[i] = a - 1, b - 1, P - c
         to[a - 1].append(b - 1)
         reverse_to[b - 1].append(a - 1)
-    
+
     reachable = reachable_nodes(0, to) & reachable_nodes(N - 1, reverse_to)
-    
+
     edge_dict = dict()
     for a, b, c in zip(A, B, C):
         if a in reachable and b in reachable:
@@ -33,7 +33,7 @@ def solve():
         AA.append(a)
         BB.append(b)
         CC.append(c)
-    
+
     graph = csr_matrix((CC, (AA, BB)), shape=(N, N))
     try:
         bf = bellman_ford(graph, indices=[0])
@@ -44,5 +44,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

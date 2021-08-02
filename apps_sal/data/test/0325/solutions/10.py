@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def dfs(edge, s):
     used = {s}
     que = deque([s])
@@ -11,6 +12,7 @@ def dfs(edge, s):
             used.add(u)
             que.append(u)
     return used
+
 
 def bellmanFord(edges):
     coins = [float('inf')] * N
@@ -25,6 +27,7 @@ def bellmanFord(edges):
             return max(0, -coins[-1])
     return -1
 
+
 N, M, P = map(int, input().split())
 A = [[] for _ in range(N)]
 A_rev = [[] for _ in range(N)]
@@ -37,6 +40,6 @@ for i in range(M):
     A[a].append(b)
     A_rev[b].append(a)
     E[i] = (a, b, c)
-U = dfs(A, 0) & dfs(A_rev, N-1)
+U = dfs(A, 0) & dfs(A_rev, N - 1)
 F = [(a, b, c) for (a, b, c) in E if a in U and b in U]
 print(bellmanFord(F))

@@ -18,4 +18,3 @@ for i in range(0, n):
     else:
         ansa += 1
 print(ansa);
-

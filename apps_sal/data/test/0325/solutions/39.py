@@ -1,3 +1,6 @@
+from collections import deque
+
+
 def BF(v, start, edges):
     INF = 10**18
     nega = False
@@ -16,7 +19,7 @@ def BF(v, start, edges):
         nega = True
     return d, nega
 
-from collections import deque
+
 def BFS(N, graph, start):
     d = [-1 for i in range(N)]
     Q = deque([])
@@ -30,17 +33,18 @@ def BFS(N, graph, start):
                 Q.append(u)
     return d
 
+
 N, M, P = (int(i) for i in input().split())
 graph = [[] for i in range(N)]
 graphr = [[] for i in range(N)]
 edges = []
 for i in range(M):
     A, B, C = (int(i) for i in input().split())
-    graph[A-1].append(B-1)
-    graphr[B-1].append(A-1)
-    edges.append((A-1, B-1, P-C))
+    graph[A - 1].append(B - 1)
+    graphr[B - 1].append(A - 1)
+    edges.append((A - 1, B - 1, P - C))
 d_start = BFS(N, graph, 0)
-d_end = BFS(N, graphr, N-1)
+d_end = BFS(N, graphr, N - 1)
 nodes_start = [i for i in range(N) if d_start[i] >= 0]
 nodes_end = [i for i in range(N) if d_end[i] >= 0]
 new_edges = []
@@ -51,4 +55,4 @@ d, Nega = BF(N, 0, new_edges)
 if Nega == True:
     print(-1)
 else:
-    print(max(-d[N-1], 0))
+    print(max(-d[N - 1], 0))

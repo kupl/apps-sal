@@ -1,8 +1,10 @@
+from fractions import gcd
 3
 
-from fractions import gcd
 
 n = int(input())
+
+
 def dfs(u, v, nxt, vis):
     if u == v:
         return True
@@ -43,5 +45,3 @@ for i in range(n):
     ans = (ans * szs[i]) // gcd(ans, szs[i])
 
 print(ans)
-
-

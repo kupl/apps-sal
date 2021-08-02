@@ -11,7 +11,7 @@ for i in range(n):
         e += 1
     res = max(res, i - e + 1)
 e, t = 0, 0
-    
+
 for i in range(n):
     if s[i] == "a":
         t += 1
@@ -20,6 +20,6 @@ for i in range(n):
             t -= 1
         e += 1
     res = max(res, i - e + 1)
-    
+
 
 print(res)

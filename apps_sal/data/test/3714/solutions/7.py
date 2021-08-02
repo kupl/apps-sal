@@ -16,4 +16,3 @@ for i in range(1, n + 1):
         cnt //= 2
     t = t * cnt // gcd(t, cnt)
 print(t)
-

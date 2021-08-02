@@ -17,8 +17,8 @@ for i in range(h):
             G.add_edge(i, t)
             G.add_edge(j + h, t)
         elif grid[i][j] == "o":
-            G.add_edge(i, j + h, capacity = 1)
-            G.add_edge(j + h, i, capacity = 1)
+            G.add_edge(i, j + h, capacity=1)
+            G.add_edge(j + h, i, capacity=1)
 
 try:
     ans, _ = nx.maximum_flow(G, s, t)

@@ -1,11 +1,9 @@
+from collections import deque
 import sys
 
 sys.setrecursionlimit(10**7)
-def MI(): return list(map(int,sys.stdin.readline().rstrip().split()))
+def MI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def LS2(): return list(sys.stdin.readline().rstrip())
-
-
-from collections import deque
 
 
 class Dinic:
@@ -13,7 +11,7 @@ class Dinic:
         self.N = N
         self.inf = inf
         self.G = [[] for _ in range(N)]
-        self.level = [0]*N
+        self.level = [0] * N
 
     def add_edge(self, fr, to, cap):
         forward = [to, cap, None]
@@ -28,7 +26,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s):
-        self.level = [-1]*self.N
+        self.level = [-1] * self.N
         deq = deque([s])
         self.level[s] = 0
         while deq:
@@ -65,23 +63,22 @@ class Dinic:
                 flow += f
 
 
-H,W = MI()
+H, W = MI()
 inf = 10**5
-Di = Dinic(H+W+2,inf)
-s,t = H+W,H+W+1
+Di = Dinic(H + W + 2, inf)
+s, t = H + W, H + W + 1
 for i in range(H):
     S = LS2()
     for j in range(W):
         if S[j] == 'S':
-            Di.add_edge(s,i,inf)
-            Di.add_edge(s,j+H,inf)
+            Di.add_edge(s, i, inf)
+            Di.add_edge(s, j + H, inf)
         elif S[j] == 'T':
-            Di.add_edge(i,t,inf)
-            Di.add_edge(j+H,t,inf)
+            Di.add_edge(i, t, inf)
+            Di.add_edge(j + H, t, inf)
         elif S[j] == 'o':
-            Di.add_edge(i,j+H,1)
-            Di.add_edge(j+H,i,1)
+            Di.add_edge(i, j + H, 1)
+            Di.add_edge(j + H, i, 1)
 
-ans = Di.flow(s,t)
+ans = Di.flow(s, t)
 print((ans if ans < inf else -1))
-

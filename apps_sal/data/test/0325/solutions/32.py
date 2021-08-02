@@ -4,22 +4,23 @@ ii = lambda: int(input())
 mis = lambda: list(map(int, input().split()))
 lmis = lambda: list(mis())
 
+
 def main():
     N, M, P = mis()
-    
+
     to = [[] for _ in range(N)]
     ot = [[] for _ in range(N)]
     edges = []
 
     for i in range(M):
-        a,b,c = mis()
+        a, b, c = mis()
         a -= 1
         b -= 1
-        c = -(c-P)
+        c = -(c - P)
         #
         to[a].append(b)
         ot[b].append(a)
-        edges.append((a,b,c))
+        edges.append((a, b, c))
 
     reachableFrom0 = set()
     reachableToN = set()
@@ -34,16 +35,15 @@ def main():
                 nodes.append(i)
                 reachableFrom0.add(i)
 
-    #rdfs
-    reachableToN.add(N-1)
-    nodes = [N-1]
+    # rdfs
+    reachableToN.add(N - 1)
+    nodes = [N - 1]
     while nodes:
         node = nodes.pop()
         for i in ot[node]:
             if i not in reachableToN:
                 nodes.append(i)
                 reachableToN.add(i)
-
 
     ok = reachableFrom0 & reachableToN
 
@@ -70,5 +70,5 @@ def main():
     else:
         print((-1))
 
-main()
 
+main()

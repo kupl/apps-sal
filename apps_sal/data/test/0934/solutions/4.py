@@ -12,4 +12,3 @@ if out:
     print('YES')
 else:
     print('NO')
-

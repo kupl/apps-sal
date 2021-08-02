@@ -25,11 +25,13 @@ from collections import deque
 from collections import defaultdict
 import sys
 sys.setrecursionlimit(100000)
+
+
 class Dinic:
     def __init__(self):
         # self.N = N
         self.G = defaultdict(list)
-    
+
     def add_edge(self, fr, to, cap):
         """
         :param fr: 始点
@@ -83,7 +85,7 @@ class Dinic:
         :param t: 終点(sink)
         :param f: v時点でのフロー
         :return: 終点到達時のフローを返す
-        """   
+        """
         if v == t:
             return f
         level = self.level
@@ -104,7 +106,7 @@ class Dinic:
                     return d
         # 次の道が見つからなければ終了
         return 0
-    
+
     def flow(self, s, t):
         """
         :param s: 始点
@@ -123,7 +125,6 @@ class Dinic:
         return flow
 
 
-
 ans = set()
 H, W = map(int, input().split())
 fields = []
@@ -137,15 +138,15 @@ INF = 10**10
 for i in range(H):
     for j in range(W):
         if fields[i][j] == "T":
-            dinic.add_edge(i,end,INF)
-            dinic.add_edge(j+H,end,INF)
+            dinic.add_edge(i, end, INF)
+            dinic.add_edge(j + H, end, INF)
         if fields[i][j] == "S":
-            dinic.add_edge(start,i,INF)
-            dinic.add_edge(start,j+H,INF)
+            dinic.add_edge(start, i, INF)
+            dinic.add_edge(start, j + H, INF)
         if fields[i][j] != ".":
-            dinic.add_edge(i,j+H,1)
-            dinic.add_edge(j+H,i,1)
+            dinic.add_edge(i, j + H, 1)
+            dinic.add_edge(j + H, i, 1)
 
-ans = dinic.flow(start,end)
-if ans > INF:print(-1)
-else:print(ans)
+ans = dinic.flow(start, end)
+if ans > INF: print(-1)
+else: print(ans)

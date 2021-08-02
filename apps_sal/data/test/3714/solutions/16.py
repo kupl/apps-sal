@@ -24,7 +24,7 @@ def lcd(numbers):
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    crushes = {i: x for i, x in zip(list(range(1, n+1)), a)}
+    crushes = {i: x for i, x in zip(list(range(1, n + 1)), a)}
     f = make_function(n, crushes)
     numbers = list(map(int, list(map(f, crushes))))
     if -1 in numbers:
@@ -34,4 +34,3 @@ def main():
 
 
 main()
-

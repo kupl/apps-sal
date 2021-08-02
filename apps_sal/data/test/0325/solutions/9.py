@@ -52,4 +52,3 @@ try:
     print(ans)
 except NegativeCycleError:
     print((-1))
-

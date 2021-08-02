@@ -52,23 +52,22 @@ class Dinic:
                 flow += f
                 f = self.dfs(s, t, self.inf)
         return flow
-      
-      
-      
+
+
 H, W = map(int, input().split())
 dinic = Dinic(200)
 for y in range(H):
-  s = input()
-  for x in range(W):
-    if s[x] == 'o':
-      dinic.addedge(y, x+100, 1)
-      dinic.addedge(x+100, y, 1)
-    elif s[x] == 'S':
-      sy, sx = y, x
-      dinic.addedge(y, x+100, 10**5)
-      dinic.addedge(x+100, y, 10**5)
-    elif s[x] == 'T':
-      ty, tx = y, x
-      dinic.addedge(y, x+100, 10**5)
-      dinic.addedge(x+100, y, 10**5)
+    s = input()
+    for x in range(W):
+        if s[x] == 'o':
+            dinic.addedge(y, x + 100, 1)
+            dinic.addedge(x + 100, y, 1)
+        elif s[x] == 'S':
+            sy, sx = y, x
+            dinic.addedge(y, x + 100, 10**5)
+            dinic.addedge(x + 100, y, 10**5)
+        elif s[x] == 'T':
+            ty, tx = y, x
+            dinic.addedge(y, x + 100, 10**5)
+            dinic.addedge(x + 100, y, 10**5)
 print(-1 if sy == ty or sx == tx else dinic.flow(sy, ty))

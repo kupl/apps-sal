@@ -4,9 +4,10 @@ def lcm(a, b):
     small = sum - large
     for i in range(1, small + 1):
         if (large * i) % small == 0:
-          return large * i
+            return large * i
     return None
-            # dfs
+    # dfs
+
 
 n = int(input())
 crush = list(map(int, input().split(" ")))
@@ -31,7 +32,7 @@ else:
             visited[idx] = True
             idx = crush[idx] - 1  # convert values to zero index
             len1 += 1  # self loops 1. two node loop check
-        len1 = (int)(len1/2) if len1%2 == 0 else len1
+        len1 = (int)(len1 / 2) if len1 % 2 == 0 else len1
         if len1 not in graph_len:
             # we ll go for lcm. no point in having duplicates
             graph_len.append(len1)
@@ -44,4 +45,3 @@ else:
         n1 = lcm(n1, n2)
         # print('n1->', n1)
     print(n1)
-

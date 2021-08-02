@@ -12,6 +12,7 @@ for _ in range(m):
     edges1[a].append(b)
     edges2[b].append(a)
 
+
 def dfs(edges, start):
     stack = [start]
     use = {start, }
@@ -38,7 +39,7 @@ def bellman_ford(dist):
             return max(0, v[n - 1] * -1)
     return -1
 
+
 use = dfs(edges1, 0) & dfs(edges2, n - 1)
 dist2 = [(a, b, c) for a, b, c in dist1 if a in use and b in use]
 print((bellman_ford(dist2)))
-

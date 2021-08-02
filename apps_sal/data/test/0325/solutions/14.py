@@ -34,4 +34,3 @@ try:
     print((max(0, ans)))
 except NegativeCycleError:
     print((-1))
-

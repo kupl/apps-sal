@@ -8,6 +8,7 @@ def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
+
 class Dinic():
     def __init__(self, n, s, t):
         self.n, self.s, self.t = n, s, t
@@ -73,33 +74,36 @@ class Dinic():
             self.max_flow = self.calculation()
         return self.max_flow
 
-h,w=MI()
-aa=[input() for _ in range(h)]
+
+h, w = MI()
+aa = [input() for _ in range(h)]
+
 
 def main():
-    inf=10**9+7
-    s=h+w
-    t=h+w+1
-    mc=Dinic(h+w+2,s,t)
-    si,sj,ti,tj=-1,-2,-3,-4
-    for i,row in enumerate(aa):
-        for j,a in enumerate(row):
-            if a=="S":
-                if i==ti or j==tj:
+    inf = 10**9 + 7
+    s = h + w
+    t = h + w + 1
+    mc = Dinic(h + w + 2, s, t)
+    si, sj, ti, tj = -1, -2, -3, -4
+    for i, row in enumerate(aa):
+        for j, a in enumerate(row):
+            if a == "S":
+                if i == ti or j == tj:
                     print(-1)
                     return
-                si,sj=i,j
-                mc.add_edge(s,i,inf)
-                mc.add_edge(s,j+h,inf)
-            elif a=="T":
-                if i==si or j==sj:
+                si, sj = i, j
+                mc.add_edge(s, i, inf)
+                mc.add_edge(s, j + h, inf)
+            elif a == "T":
+                if i == si or j == sj:
                     print(-1)
                     return
-                ti,tj=i,j
-                mc.add_edge(i,t,inf)
-                mc.add_edge(j+h,t,inf)
-            elif a=="o":
-                mc.add_undir_edge(i,j+h,1)
+                ti, tj = i, j
+                mc.add_edge(i, t, inf)
+                mc.add_edge(j + h, t, inf)
+            elif a == "o":
+                mc.add_undir_edge(i, j + h, 1)
     print(mc.get_max_flow())
+
 
 main()

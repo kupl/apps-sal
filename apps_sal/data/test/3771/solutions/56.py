@@ -124,4 +124,3 @@ if mf >= IINF:
     print((-1))
 else:
     print(mf)
-

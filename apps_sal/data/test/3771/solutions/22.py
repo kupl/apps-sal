@@ -66,20 +66,20 @@ def main():
         line = input().rstrip('\n')
         grid.append(line)
 
-    dinic = Dinic(H+W+5)
+    dinic = Dinic(H + W + 5)
     for h in range(H):
         for w in range(W):
             if grid[h][w] == 'o':
-                dinic.add_edge(h+1, H+w+1, 1)
-                dinic.add_edge(H+w+1, h+1, 1)
+                dinic.add_edge(h + 1, H + w + 1, 1)
+                dinic.add_edge(H + w + 1, h + 1, 1)
             elif grid[h][w] == 'S':
-                dinic.add_edge(H+W+1, h+1, 10**5)
-                dinic.add_edge(H+W+1, H+w+1, 10**5)
+                dinic.add_edge(H + W + 1, h + 1, 10**5)
+                dinic.add_edge(H + W + 1, H + w + 1, 10**5)
             elif grid[h][w] == 'T':
-                dinic.add_edge(h+1, H+W+2, 10**5)
-                dinic.add_edge(H+w+1, H+W+2, 10**5)
+                dinic.add_edge(h + 1, H + W + 2, 10**5)
+                dinic.add_edge(H + w + 1, H + W + 2, 10**5)
 
-    ans = dinic.flow(H+W+1, H+W+2)
+    ans = dinic.flow(H + W + 1, H + W + 2)
     if ans > 400:
         print((-1))
     else:
@@ -88,5 +88,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

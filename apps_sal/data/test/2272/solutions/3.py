@@ -14,6 +14,3 @@ for _ in range(int(input())):
                     done[i] = True
                     que.append(i)
         print("YES" if done[cmd[2] - 1] else "NO")
-
-
-

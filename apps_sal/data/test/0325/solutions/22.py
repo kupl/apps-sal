@@ -5,6 +5,7 @@ ii = lambda: int(input())
 miis = lambda: map(int, input().split())
 lmiis = lambda: list(miis())
 
+
 def reachable_nodeset(start, inc):
     reachable = set()
     reachable.add(start)
@@ -18,6 +19,7 @@ def reachable_nodeset(start, inc):
                 reachable.add(i)
 
     return reachable
+
 
 def bellmanford(num, start, goal, edges):
     cost = [float('inf')] * num
@@ -35,6 +37,7 @@ def bellmanford(num, start, goal, edges):
 
     return max(0, -cost[goal])
 
+
 def solve():
     N, M, P = miis()
     to = [[] for _ in range(N)]
@@ -49,16 +52,19 @@ def solve():
 
         to[a].append(b)
         ot[b].append(a)
-        edges.append((a,b,c))
+        edges.append((a, b, c))
 
     reachableFromZero = reachable_nodeset(0, to)
-    reachableToN = reachable_nodeset(N-1, ot)
+    reachableToN = reachable_nodeset(N - 1, ot)
     ok = reachableFromZero.intersection(reachableToN)
 
-    edges = tuple((a,b,c) for a, b, c in edges if a in ok and b in ok)
+    edges = tuple((a, b, c) for a, b, c in edges if a in ok and b in ok)
 
-    print(bellmanford(N, 0, N-1, edges))
+    print(bellmanford(N, 0, N - 1, edges))
+
 
 def __starting_point():
     solve()
+
+
 __starting_point()

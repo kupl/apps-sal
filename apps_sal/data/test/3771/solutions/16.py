@@ -4,6 +4,7 @@ INF = 10 ** 9
 
 que = [0] * 1024
 
+
 def bfs(g, flow, parent, s1, s2, t1, t2):
 
     qf = 0
@@ -75,7 +76,6 @@ def main():
                 s = (i, h + j)
             elif ch == 'T':
                 t = (i, h + j)
-
 
     print((solve(h, w, g, s, t)))
 

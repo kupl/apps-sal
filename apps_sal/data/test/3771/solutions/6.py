@@ -1,6 +1,8 @@
 from collections import deque
 INF = float("inf")
-TO = 0;  CAP = 1;  REV = 2
+TO = 0; CAP = 1; REV = 2
+
+
 class Dinic:
     def __init__(self, N):
         self.N = N
@@ -10,11 +12,11 @@ class Dinic:
 
     def add_edge(self, u, v, cap):
         self.V[u].append([v, cap, len(self.V[v])])
-        self.V[v].append([u, 0, len(self.V[u])-1])
+        self.V[v].append([u, 0, len(self.V[u]) - 1])
 
     def add_edge_undirected(self, u, v, cap):  # 未検証
         self.V[u].append([v, cap, len(self.V[v])])
-        self.V[v].append([u, cap, len(self.V[u])-1])
+        self.V[v].append([u, cap, len(self.V[u]) - 1])
 
     def bfs(self, s: int) -> bool:
         self.level = [-1] * self.N
@@ -53,24 +55,25 @@ class Dinic:
                 flow += f
                 f = self.dfs(s, INF)
         return flow
+
+
 H, W = list(map(int, input().split()))
-dinic = Dinic(H+W+2)
+dinic = Dinic(H + W + 2)
 for i in range(H):
     a = input()
     for j, a_ in enumerate(a):
-        if a_=="S":
+        if a_ == "S":
             start = i, j
-        elif a_=="T":
+        elif a_ == "T":
             goal = i, j
-        if a_!=".":
+        if a_ != ".":
             dinic.add_edge_undirected(H + j, i, 1)
-dinic.add_edge_undirected(H+W, start[0], 1<<30)
-dinic.add_edge_undirected(H+W, start[1]+H, 1<<30)
-dinic.add_edge_undirected(H+W+1, goal[0], 1<<30)
-dinic.add_edge_undirected(H+W+1, goal[1]+H, 1<<30)
+dinic.add_edge_undirected(H + W, start[0], 1 << 30)
+dinic.add_edge_undirected(H + W, start[1] + H, 1 << 30)
+dinic.add_edge_undirected(H + W + 1, goal[0], 1 << 30)
+dinic.add_edge_undirected(H + W + 1, goal[1] + H, 1 << 30)
 
-if start[0]==goal[0] or start[1]==goal[1]:
+if start[0] == goal[0] or start[1] == goal[1]:
     print((-1))
 else:
-    print((dinic.solve(H+W, H+W+1)))
-
+    print((dinic.solve(H + W, H + W + 1)))

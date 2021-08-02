@@ -1,7 +1,9 @@
 from fractions import gcd
 
+
 def lcm(a, b):
     return (a * b) // gcd(a, b)
+
 
 n = int(input())
 go = list(map(int, input().split()))
@@ -37,4 +39,3 @@ for i in range(n):
     else:
         ans = lcm(ans, cycle // 2)
 print(ans)
-

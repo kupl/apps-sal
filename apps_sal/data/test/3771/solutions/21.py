@@ -18,4 +18,3 @@ for h, w in itertools.product(list(range(H)), list(range(W))):
         graph.add_edge((-1, w), (h, -1), capacity=1)
 ans = nx.minimum_cut_value(graph, s, t)
 print((-1 if ans >= 10**10 else ans))
-

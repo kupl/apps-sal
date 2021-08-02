@@ -3,6 +3,8 @@ input = sys.stdin.readline
 H, W = list(map(int, input().split()))
 a = [list(input())[: -1] for _ in range(H)]
 c = H + W - 1
+
+
 class FordFulkerson:
     def __init__(self, N):
         self.N = N
@@ -40,33 +42,34 @@ class FordFulkerson:
         f = INF = c
         N = self.N
         while f:
-            #print(f)
-            self.used = [0]*N
+            # print(f)
+            self.used = [0] * N
             f = self.dfs(s, t, INF)
             flow += f
         return flow
+
+
 flk = FordFulkerson(H * W * 2 + H + W + 1)
 b = H * W
 s = 0
 t = 0
 for i in range(H):
-  for j in range(W):
-    if a[i][j] != ".":
-      flk.add_edge(b + i * W + j, b * 2 + i, c)
-      flk.add_edge(b * 2 + i, i * W + j, c)
+    for j in range(W):
+        if a[i][j] != ".":
+            flk.add_edge(b + i * W + j, b * 2 + i, c)
+            flk.add_edge(b * 2 + i, i * W + j, c)
 for j in range(W):
-  for i in range(H):
-    if a[i][j] != ".":
-      flk.add_edge(b + i * W + j, b * 2 + H + j, c)
-      flk.add_edge(b * 2 + H + j, i * W + j, c)
+    for i in range(H):
+        if a[i][j] != ".":
+            flk.add_edge(b + i * W + j, b * 2 + H + j, c)
+            flk.add_edge(b * 2 + H + j, i * W + j, c)
 for i in range(H):
-  for j in range(W):
-    if a[i][j] != ".":
-      flk.add_edge(i * W + j, b + i * W + j, 1)
-    if a[i][j] == "S": s = b + i * W + j
-    if a[i][j] == "T": t = i * W + j
+    for j in range(W):
+        if a[i][j] != ".":
+            flk.add_edge(i * W + j, b + i * W + j, 1)
+        if a[i][j] == "S": s = b + i * W + j
+        if a[i][j] == "T": t = i * W + j
 if (s - b) % W != t % W and ((s - b) // W != t // W):
-  if sum([x.count("o") for x in a]) == H * W - 2: print((min(H, W) * 2 - 2))
-  else: print((flk.flow(s, t)))
+    if sum([x.count("o") for x in a]) == H * W - 2: print((min(H, W) * 2 - 2))
+    else: print((flk.flow(s, t)))
 else: print((-1))
-

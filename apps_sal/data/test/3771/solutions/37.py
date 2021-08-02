@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Dinic:
     def __init__(self, N):
         self.N = N
@@ -17,7 +19,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -56,26 +58,27 @@ class Dinic:
                 flow += f
         return flow
 
-h , w = map(int,input().split())
+
+h, w = map(int, input().split())
 a = [list(input()) for i in range(h)]
 
-sa = Dinic(h+w+2)
+sa = Dinic(h + w + 2)
 INF = 10**9 + 7
 s = 0
-t = h+w+1
+t = h + w + 1
 for i in range(h):
     for j in range(w):
         if a[i][j] == "S":
-            sa.add_edge(s,i+1,INF)
-            sa.add_edge(s,h+1+j,INF)
+            sa.add_edge(s, i + 1, INF)
+            sa.add_edge(s, h + 1 + j, INF)
         if a[i][j] == "T":
-            sa.add_edge(i+1,t,INF)
-            sa.add_edge(h+1+j,t,INF)
+            sa.add_edge(i + 1, t, INF)
+            sa.add_edge(h + 1 + j, t, INF)
         if a[i][j] != ".":
-            sa.add_edge(i+1,h+1+j,1)
-            sa.add_edge(h+1+j,i+1,1)
+            sa.add_edge(i + 1, h + 1 + j, 1)
+            sa.add_edge(h + 1 + j, i + 1, 1)
 
-if sa.flow(s,t) > h*w:
+if sa.flow(s, t) > h * w:
     print(-1)
     return
-print(sa.flow(t,s))
+print(sa.flow(t, s))

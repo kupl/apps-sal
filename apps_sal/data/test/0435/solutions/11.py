@@ -51,7 +51,7 @@ def maxsubsl(s, k):
         maxl = max(maxl, check(lengths[1:], k, full_counts[0]))
     return maxl
 
+
 _, k = list(map(int, input().split()))
 s = input()
 print(maxsubsl(s, k))
-
