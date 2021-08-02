@@ -10,4 +10,3 @@ for i in s:
     ans += chr(ascii_code)
 
 print(ans)
-

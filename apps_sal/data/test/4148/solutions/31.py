@@ -8,6 +8,6 @@ a = string.ascii_uppercase
 
 ans = ''
 for s in S:
-  ans += a[(a.index(s) + N) % len(a)]
-  
+    ans += a[(a.index(s) + N) % len(a)]
+
 print(ans)

@@ -6,7 +6,6 @@ s = input()
 res = ''
 
 for letter in s:
-    res += chr(ord('A') + (ord(letter)-ord('A')+n) % 26)
+    res += chr(ord('A') + (ord(letter) - ord('A') + n) % 26)
 
 print(res)
-

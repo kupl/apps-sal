@@ -7,5 +7,3 @@ for s in S:
     print(L[ind + N], end="")
 
 print("")
-
-

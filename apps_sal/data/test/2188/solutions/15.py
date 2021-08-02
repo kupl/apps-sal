@@ -1,6 +1,7 @@
 # from bisect import bisect_left
 import sys
 
+
 def solve(a, cmp):
     # if not a:
     #     return []

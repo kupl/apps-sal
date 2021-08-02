@@ -8,4 +8,3 @@ for i in s:
     ans += al[ind % 26]
 
 print(ans)
-

@@ -3,4 +3,3 @@ x = 2 * (c + min(a, b))
 if a != b:
     x += 1
 print(x)
-

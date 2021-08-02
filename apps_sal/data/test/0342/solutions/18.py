@@ -1,8 +1,9 @@
 from sys import stdin
 # stdin=open('input.txt')
 
+
 def input():
-	return stdin.readline().strip()
+    return stdin.readline().strip()
 
 
 # from sys import stdout
@@ -26,5 +27,3 @@ print(2 * c + 2 * min(a, b) + (a - min(a, b) > 0 or b - min(a, b) > 0))
 
 # CODE ENDS HERE....................
 # stdout.close()
-
-

@@ -11,26 +11,25 @@ for _ in range(n):
         d['+'].append([b, _])
     else:
         d['-'].append([b, _])
-        
-d['+'] = sorted(d['+'], key = lambda x: x[0], reverse=True)
-d['-'] = sorted(d['-'], key = lambda x: x[0])
+
+d['+'] = sorted(d['+'], key=lambda x: x[0], reverse=True)
+d['-'] = sorted(d['-'], key=lambda x: x[0])
 
 s = ''
 if len(d['+']) > len(d['-']):
     print(len(d['+']))
     for x in d['+']:
-        s+=str(x[1]+1) +  ' '
+        s += str(x[1] + 1) + ' '
 else:
     print(len(d['-']))
     for x in d['-']:
-        s+=str(x[1]+1) +  ' '
-        
+        s += str(x[1] + 1) + ' '
+
 print(s)
 
-#5
-#1 7
-#6 4
-#2 10
-#9 8
-#3 5
-
+# 5
+# 1 7
+# 6 4
+# 2 10
+# 9 8
+# 3 5

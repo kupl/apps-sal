@@ -7,7 +7,7 @@ N = int(input())
 S = input()
 
 # Aのascii
-base_ascii= 65
+base_ascii = 65
 
 # アルファベットリスト
 als = [chr(a) for a in range(65, 90 + 1)]
