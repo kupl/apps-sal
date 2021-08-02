@@ -13,4 +13,3 @@ for i in range(n)[::-1]:
     elif x < slice[i] + 2:
         x -= 1
 print((ans + (x > 0)))
-

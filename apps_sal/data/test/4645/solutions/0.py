@@ -16,7 +16,7 @@ for _ in range(T):
 
         for i in left:
             right.append(i)
-        
+
         for i in right:
-            print(i, end = " ")
+            print(i, end=" ")
         print("")

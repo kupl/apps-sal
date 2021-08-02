@@ -7,4 +7,3 @@ elif c != 0 and (b - a) % c == 0:
     else: ans = 'NO'
 else: ans = 'NO'
 print(ans)
-

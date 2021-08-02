@@ -7,13 +7,12 @@ for _ in range(int(input())):
     d1 = {}
     for k in l1:
         d1[k] = 1
-    
+
     while x or i in d1:
         if i in d1:
             i += 1
         else:
-            x-=1
+            x -= 1
             i += 1
-        
-    print(i - 1)
 
+    print(i - 1)

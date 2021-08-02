@@ -9,4 +9,3 @@ else:
         for j in range(i):
             s = s * (A[i] - A[j]) % M
     print(s)
-

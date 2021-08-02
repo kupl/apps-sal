@@ -1,12 +1,12 @@
-a,b,c = map(int, input().split())
+a, b, c = map(int, input().split())
 
-if c == 0 :
+if c == 0:
     ans = (a == b)
-else :
-    k = (b - a)//c
-    ans = (k >= 0 and a + c*k == b)
+else:
+    k = (b - a) // c
+    ans = (k >= 0 and a + c * k == b)
 
-if ans :
+if ans:
     print("YES")
-else :
+else:
     print("NO")

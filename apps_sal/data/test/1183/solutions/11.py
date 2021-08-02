@@ -11,4 +11,3 @@ for i in range(t):
             j += 1
         ind += 1
     print(ind - 1)
-

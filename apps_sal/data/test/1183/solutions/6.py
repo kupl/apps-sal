@@ -12,4 +12,3 @@ for case_num in range(t):
             x -= 1
         ans += 1
     print(ans)
-

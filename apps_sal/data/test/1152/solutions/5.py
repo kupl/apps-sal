@@ -12,4 +12,3 @@ if get_inp(n) == get_inp(n):
     print("Yes")
 else:
     print("No")
-

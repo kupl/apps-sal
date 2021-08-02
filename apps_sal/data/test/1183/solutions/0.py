@@ -9,4 +9,3 @@ for _ in range(t):
             print(i - 1)
             break
         x -= 1
-

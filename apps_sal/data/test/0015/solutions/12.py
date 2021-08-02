@@ -1,5 +1,5 @@
-a,b,c = list(map(int, input().split()))
- 
+a, b, c = list(map(int, input().split()))
+
 if b - a > 0 and c > 0:
     if (b - a) % c == 0:
         print("YES")
@@ -14,4 +14,3 @@ elif a - b == 0:
     print("YES")
 else:
     print("NO")
-

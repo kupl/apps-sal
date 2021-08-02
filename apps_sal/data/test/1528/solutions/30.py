@@ -47,4 +47,3 @@ def dfs(level):
 dfs(N)
 
 print(np)
-

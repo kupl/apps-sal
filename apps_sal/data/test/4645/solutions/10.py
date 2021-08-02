@@ -17,7 +17,7 @@ for _ in range(t):
             out += [3, 1, 4, 2]
             break
         elif n == 5:
-            out += [5,2,4,1,3]
+            out += [5, 2, 4, 1, 3]
             break
         elif n == 7:
             out += [7, 4, 2, 6, 3, 1, 5]
@@ -39,5 +39,3 @@ for _ in range(t):
         print(*out)
     else:
         print(-1)
-        
-

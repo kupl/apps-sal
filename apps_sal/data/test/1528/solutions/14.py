@@ -14,4 +14,3 @@ while n > 0:
         x -= 1
     n -= 1
 print((ans + (x > 0)))
-

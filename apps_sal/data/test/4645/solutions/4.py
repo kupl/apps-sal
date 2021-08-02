@@ -1,6 +1,7 @@
 def Zs(): return list(map(int, input().split()))
 def Z(): return int(input())
 
+
 def solve(n):
     if n <= 3: return None
     ans = []
@@ -19,6 +20,7 @@ def solve(n):
         ans.extend([x + k for x in [2, 0, 4, 1, 5, 3, 6]])
     return ans
 
+
 for _ in range(Z()):
     n = Z()
     ans = solve(n)
@@ -26,6 +28,3 @@ for _ in range(Z()):
         print(*ans)
     else:
         print(-1)
-
-
-
