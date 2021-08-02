@@ -8,7 +8,7 @@ for i in range(60):
     for a in A:
         if a & mask:
             cnt += 1
-    x = cnt * (N-cnt)
+    x = cnt * (N - cnt)
     x *= mask % mod
     ans += x
     ans %= mod

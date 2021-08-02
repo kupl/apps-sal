@@ -15,4 +15,3 @@ for i in range(60):
     mask <<= 1
 
 print(ans)
-

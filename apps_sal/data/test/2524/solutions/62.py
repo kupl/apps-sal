@@ -49,7 +49,7 @@ A = list(map(int, input().split()))
 #         arr.append([n, 1])
 #     return arr
 
-#def make_divisors(n):
+# def make_divisors(n):
 #    lower_divisors , upper_divisors = [], []
 #    i = 1
 #    while i*i <= n:
@@ -71,7 +71,7 @@ A = list(map(int, input().split()))
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:
@@ -82,12 +82,11 @@ A = list(map(int, input().split()))
 # coding: utf-8
 
 
-mod = 10**9+7
+mod = 10**9 + 7
 ans = 0
 for n in range(61):
-    ones = sum([1 for a in A if (a>>n)&1])
-    ans += (1<<n)*ones*(N-ones)
+    ones = sum([1 for a in A if (a >> n) & 1])
+    ans += (1 << n) * ones * (N - ones)
     ans %= mod
 
 print(ans)
-

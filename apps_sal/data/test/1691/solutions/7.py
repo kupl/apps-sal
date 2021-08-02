@@ -2,6 +2,7 @@ import sys
 
 inf = (1 << 31) - 1
 
+
 def solve():
     n, k = map(int, input().split())
 
@@ -11,7 +12,7 @@ def solve():
     s = 0
     res = 1
     a = 1
-    ans = [0]*n
+    ans = [0] * n
 
     for i in range(n):
         t = (s + k) % n
@@ -28,6 +29,9 @@ def solve():
 
     print(*ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

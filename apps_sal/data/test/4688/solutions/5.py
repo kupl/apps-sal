@@ -6,6 +6,6 @@ for i in range(N):
     if i == 0:
         res *= K
     else:
-        res *= (K-1)
+        res *= (K - 1)
 
 print(res)

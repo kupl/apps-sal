@@ -10,4 +10,3 @@ for i in range(60):
     result += (c * (N - c)) << i
     result %= m
 print(result)
-

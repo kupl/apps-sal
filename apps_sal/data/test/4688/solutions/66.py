@@ -1,5 +1,6 @@
 MOD = 10**11
 
+
 def fast_pow(x, n, MOD):
     res = 1
     while n:
@@ -10,8 +11,8 @@ def fast_pow(x, n, MOD):
     return res
 
 
-n, k = map(int,input().split())
+n, k = map(int, input().split())
 if n == 1:
     print(k)
 else:
-    print(k * fast_pow(k-1, n-1, MOD))
+    print(k * fast_pow(k - 1, n - 1, MOD))

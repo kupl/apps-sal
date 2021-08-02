@@ -24,7 +24,7 @@ def calculate(n, arr):
     else:
         mathNum = math.ceil(math.log(max(arr), 2))
 
-    oneArray =  [0] * mathNum
+    oneArray = [0] * mathNum
     zeroArray = [0] * mathNum
 
     result = 0

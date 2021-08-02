@@ -1,3 +1,10 @@
+import sys
+from io import StringIO
+from contextlib import contextmanager
+import traceback
+import time
+
+
 def r(a):
     i = 0
     while not a % 2:
@@ -13,7 +20,7 @@ def chem(n, A):
         while p != q:
             if p > q:
                 p, q = q, p
-            q, _ = r(q//2)
+            q, _ = r(q // 2)
         if q == 1:
             break
     t = 0
@@ -22,12 +29,12 @@ def chem(n, A):
         q, i = r(a)
         while q != p:
             t += i + 1
-            q, i = r(q//2)
+            q, i = r(q // 2)
         L.append(i)
 
     L.sort()
-    m = (L[n//2] + L[(n-1)//2]) // 2
-    return t + sum(abs(l-m) for l in L)
+    m = (L[n // 2] + L[(n - 1) // 2]) // 2
+    return t + sum(abs(l - m) for l in L)
 
 
 def main():
@@ -38,22 +45,17 @@ def main():
 
 ##########
 
-import sys
-import time
-import traceback
-from contextlib import contextmanager
-from io import StringIO
 
 def readint():
     return int(input())
 
 
 def readinti():
-   return map(int, input().split())
+    return map(int, input().split())
 
 
 def readintl():
-   return list(readinti())
+    return list(readinti())
 
 
 def readintll(k):
@@ -117,5 +119,6 @@ def __starting_point():
     parser.add_argument('--test', '-t', type=int, nargs='*')
     args = parser.parse_args()
     main() if args.test is None else test(args.test)
+
 
 __starting_point()

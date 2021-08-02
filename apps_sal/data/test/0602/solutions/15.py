@@ -11,4 +11,3 @@ def name(n):
 
 
 print(name(int(input())))
-

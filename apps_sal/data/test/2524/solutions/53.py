@@ -20,7 +20,8 @@ def solve(N: int, A: "List[int]"):
             else:
                 c0 += 1
         mask = mask % MOD
-        ans = (ans + mask*(c0 * c1)) % MOD 
+        ans = (ans + mask * (c0 * c1)) % MOD
+
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
@@ -29,7 +30,9 @@ def main():
     answer = solve(N, A)
     print(answer)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -12,5 +12,5 @@ def go():
     for i in range(n):
         print(s[i])
 
-go()
 
+go()

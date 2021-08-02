@@ -1,4 +1,6 @@
-MOD = 10**9+7
+MOD = 10**9 + 7
+
+
 def resolve():
     N = int(input())
     A = list(map(lambda x: bin(int(x))[2:].zfill(60), input().split()))
@@ -11,11 +13,10 @@ def resolve():
                 one_cnt += 1
             else:
                 zero_cnt += 1
-        ans += (one_cnt*zero_cnt)*(2**(59-i))
+        ans += (one_cnt * zero_cnt) * (2**(59 - i))
         ans %= MOD
     print(ans)
 
-    
 
 if '__main__' == __name__:
     resolve()

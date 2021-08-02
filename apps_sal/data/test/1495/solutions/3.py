@@ -21,4 +21,3 @@ for i in range(n):
         q.append((x // 2, y + 1))
 ans = min(step[x] for x in range(m) if cnt[x] == n)
 print(ans)
-

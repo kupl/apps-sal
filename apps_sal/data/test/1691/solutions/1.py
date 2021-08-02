@@ -1,10 +1,9 @@
 
 
-
 def __starting_point():
-    n,k = list(map(int, input().strip().split()))
+    n, k = list(map(int, input().strip().split()))
 
-    if k > n//2:
+    if k > n // 2:
         k = n - k
 
     intersection = n * [0]
@@ -12,25 +11,19 @@ def __starting_point():
     count = 1
 
     done = False
-    i=0
+    i = 0
     result = []
-    for i in range(1,n+1):
-        nn = (i*k) // n
-        j = (i*k)%n
+    for i in range(1, n + 1):
+        nn = (i * k) // n
+        j = (i * k) % n
         if j < k:
-            count += (2*nn )
+            count += (2 * nn)
         else:
-            count += (2*nn +1)
+            count += (2 * nn + 1)
         result.append(count)
 
     result[-1] -= 1
     print(" ".join([str(r) for r in result]))
-
-
-
-
-
-
 
 
 __starting_point()

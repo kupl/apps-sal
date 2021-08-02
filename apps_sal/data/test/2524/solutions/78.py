@@ -6,8 +6,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, As):
     import math
@@ -29,5 +29,6 @@ def __starting_point():
     # import random
     # As = [random.randint(2 ** 59, 2 ** 60) for _ in range(N)]
     solve(N, As)
+
 
 __starting_point()

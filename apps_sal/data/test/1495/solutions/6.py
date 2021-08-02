@@ -12,18 +12,18 @@ for j in range(minLen):
     for i in range(n):
         if l[i][j] != l[0][j]:
             flag = True
-            break    
+            break
     if flag:
         break
-    loc += 1    
+    loc += 1
 result = sum(length) - loc * n
 best = result
-change = n*[-1]
+change = n * [-1]
 for j in range(loc, maxLen):
     for i in range(n):
         if j >= length[i] or l[i][j] == '1':
             change[i] = 1
-    result += sum(change)      
+    result += sum(change)
     if result > best:
         break
     best = result

@@ -13,4 +13,3 @@ for s in arr:
 else:
     print("YES")
     print("\n".join(arr))
-

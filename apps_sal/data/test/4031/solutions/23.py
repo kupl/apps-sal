@@ -21,6 +21,6 @@ for i in range(n):
         q = True
 if not q:
     print("YES")
-    print(*ans[::-1], sep = '\n')
+    print(*ans[::-1], sep='\n')
 else:
     print("NO")

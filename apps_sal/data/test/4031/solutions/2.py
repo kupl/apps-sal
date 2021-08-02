@@ -20,4 +20,3 @@ if len(ans) == n:
         print(i)
 else:
     print('NO')
-

@@ -1,83 +1,81 @@
-n=int(input())
-if (n == 1) :
- print ("Washington")
+n = int(input())
+if (n == 1):
+    print("Washington")
 elif (n == 2):
- print ("Adams")
+    print("Adams")
 elif (n == 3):
- print ("Jefferson")
+    print("Jefferson")
 elif (n == 4):
- print ("Madison")
+    print("Madison")
 elif (n == 5):
- print ("Monroe")
+    print("Monroe")
 elif (n == 6):
- print ("Adams")
+    print("Adams")
 elif (n == 7):
- print ("Jackson")
+    print("Jackson")
 elif (n == 8):
- print ("Van Buren")
+    print("Van Buren")
 elif (n == 9):
- print("Harrison")
+    print("Harrison")
 elif (n == 10):
- print("Tyler")
+    print("Tyler")
 elif (n == 11):
- print("Polk")
+    print("Polk")
 elif (n == 12):
- print("Taylor")
+    print("Taylor")
 elif (n == 13):
- print("Fillmore")
+    print("Fillmore")
 elif (n == 14):
- print("Pierce")
+    print("Pierce")
 elif (n == 15):
- print("Buchanan")
+    print("Buchanan")
 elif (n == 16):
- print ("Lincoln")
+    print("Lincoln")
 elif (n == 17):
- print ("Johnson")
+    print("Johnson")
 elif (n == 18):
- print ("Grant")
+    print("Grant")
 elif (n == 19):
- print ("Hayes")
+    print("Hayes")
 elif (n == 20):
- print ("Garfield")
+    print("Garfield")
 elif (n == 21):
- print ("Arthur")
+    print("Arthur")
 elif (n == 22):
- print ("Cleveland")
+    print("Cleveland")
 elif (n == 23):
- print ("Harrison")
+    print("Harrison")
 elif (n == 24):
- print ("Cleveland")
+    print("Cleveland")
 elif (n == 25):
- print ("McKinley")
+    print("McKinley")
 elif (n == 26):
- print ("Roosevelt")
+    print("Roosevelt")
 elif (n == 27):
- print ("Taft")
+    print("Taft")
 elif (n == 28):
- print ("Wilson")
+    print("Wilson")
 elif (n == 29):
- print ('Harding')
+    print('Harding')
 elif (n == 30):
- print ("Coolidge")
+    print("Coolidge")
 elif (n == 31):
- print ("Hoover")
+    print("Hoover")
 elif (n == 32):
- print ("Roosevelt")
+    print("Roosevelt")
 elif (n == 33):
- print ("Truman")
+    print("Truman")
 elif (n == 34):
- print ("Eisenhower")
+    print("Eisenhower")
 elif (n == 35):
- print ("Kennedy")
+    print("Kennedy")
 elif (n == 36):
- print ("Johnson")
+    print("Johnson")
 elif (n == 37):
- print ("Nixon")
+    print("Nixon")
 elif n == 38:
- print ("Ford")
+    print("Ford")
 elif n == 39:
- print ("Carter")
+    print("Carter")
 elif n == 40:
- print ("Reagan")
-
-
+    print("Reagan")

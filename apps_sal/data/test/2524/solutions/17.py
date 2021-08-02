@@ -11,4 +11,3 @@ for bit in range(60):
     A >>= 1
     result = (result + c * (N - c) * (1 << bit)) % m
 print(result)
-
