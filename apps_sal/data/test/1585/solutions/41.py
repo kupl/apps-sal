@@ -5,6 +5,6 @@ calc = X
 
 while calc <= Y:
     cnt += 1
-    calc = X*(2**cnt)
+    calc = X * (2**cnt)
 
 print(cnt)

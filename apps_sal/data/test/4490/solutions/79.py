@@ -8,4 +8,3 @@ if b == "T":
     print("A")
 if b == "G":
     print("C")
-

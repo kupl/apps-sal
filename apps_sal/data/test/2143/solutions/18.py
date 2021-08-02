@@ -3,6 +3,7 @@
 
 from collections import defaultdict
 
+
 def main():
     n = int(input())
     nums = list(map(int, input().split()))
@@ -15,10 +16,8 @@ def main():
     print(x)
 
 
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

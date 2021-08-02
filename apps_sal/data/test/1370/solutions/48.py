@@ -48,4 +48,3 @@ for bit in range(1 << (h - 1)):
         ans = min(ans, cnt)
 
 print(ans)
-

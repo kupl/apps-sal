@@ -1,1 +1,2 @@
-input();print(input().count('ABC'))
+input()
+print(input().count('ABC'))

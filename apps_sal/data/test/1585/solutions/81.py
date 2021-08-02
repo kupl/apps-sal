@@ -5,4 +5,3 @@ while(num <= y):
     num *= 2
     cnt += 1
 print(cnt)
-

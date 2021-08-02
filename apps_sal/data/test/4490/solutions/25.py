@@ -1,13 +1,13 @@
-b = input ()
+b = input()
 
 if b == "A":
-    print ("T")
+    print("T")
 
 elif b == "C":
-    print ("G")
+    print("G")
 
 elif b == "T":
-    print ("A")
+    print("A")
 
 elif b == "G":
-    print ("C")
+    print("C")

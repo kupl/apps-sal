@@ -1,12 +1,12 @@
 a = input()
 
-if a=="A":
+if a == "A":
     print("T")
 
 elif a == "C":
     print("G")
 
-elif a =="G":
+elif a == "G":
     print("C")
 
 else:

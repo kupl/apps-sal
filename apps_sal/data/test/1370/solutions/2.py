@@ -41,4 +41,3 @@ for i in product((0, 1), repeat=H - 1):
             answer = cnt
 
 print(answer)
-

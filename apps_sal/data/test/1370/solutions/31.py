@@ -5,12 +5,12 @@ def main():
     INF = 10**9
 
     H, W, K = map(int, input().split())
-    chocolate = [ input() for _ in range(H) ]
-    
+    chocolate = [input() for _ in range(H)]
+
     loop_H = range(H)
     loop_W = range(W)
-    min_cut = INF-1
-    for div in range(1 << (H-1)):
+    min_cut = INF - 1
+    for div in range(1 << (H - 1)):
         # 横割りでグループ分け
         group = [[]]
         group_number = 0
@@ -43,5 +43,6 @@ def main():
         if cut < min_cut:
             min_cut = cut
     print(min_cut)
+
 
 main()

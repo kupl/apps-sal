@@ -5,7 +5,7 @@ def main():
     H, W, K = list(map(int, input().split(' ')))
     S = [input() for _ in range(H)]
     ans = (H - 1) * (W - 1)
-    for h_divs in itertools.product([0, 1], repeat=H-1):
+    for h_divs in itertools.product([0, 1], repeat=H - 1):
         # 例：h_patterns = [0, 0, 1, 2, 2] -> チョコを1～2、2～3番目の行で分割
         h_patterns = [0] * H
         for h in range(1, H):
@@ -42,4 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

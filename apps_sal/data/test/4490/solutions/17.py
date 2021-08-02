@@ -1,10 +1,10 @@
 s = input()
 
 if s == "A":
-  print("T")
+    print("T")
 elif s == "T":
-  print("A")
+    print("A")
 elif s == "C":
-  print("G")
+    print("G")
 else:
-  print("C")
+    print("C")

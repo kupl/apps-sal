@@ -7,5 +7,3 @@ if b == "C":
     print("G")
 if b == "G":
     print("C")
-
-

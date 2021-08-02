@@ -1,10 +1,9 @@
-b=input()
-if b=="A":
+b = input()
+if b == "A":
     print("T")
-if b=="T":
+if b == "T":
     print("A")
-if b=="C":
+if b == "C":
     print("G")
-if b=="G":
+if b == "G":
     print("C")
-

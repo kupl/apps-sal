@@ -1,1 +1,1 @@
-print('TCG A'[ord(input())%5])
+print('TCG A'[ord(input()) % 5])

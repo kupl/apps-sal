@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def main():
     H, W, K = list(map(int, input().split()))
     S = []
@@ -17,6 +18,8 @@ def main():
     print(answer)
 
 # ex. horizons = [0, 0, 1, 0, 0, 1]
+
+
 def greedy(W, S, K, horizons, current_answer):
     answer = sum(horizons)
     # ex.
@@ -55,7 +58,9 @@ def greedy(W, S, K, horizons, current_answer):
             partial_sums = current
     return answer
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

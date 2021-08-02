@@ -36,4 +36,3 @@ for pattern in product([0, 1], repeat=H - 1):
     ans = min(ans, tmp_ans)
 
 print(ans)
-

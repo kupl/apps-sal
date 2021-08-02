@@ -42,12 +42,13 @@ def __starting_point():
     # # test
     # from random import randint
     # from func import random_str
-    # 
+    #
     # H, W, K = 10, 1000, randint(1, 100)
     # Si = [random_str(W, '01') for _ in range(H)]
     # print(H, W, K)
     # for S in Si:
     #     print(S)
     # solve(H, W, K, Si)
+
 
 __starting_point()

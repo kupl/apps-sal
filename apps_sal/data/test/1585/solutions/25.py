@@ -6,4 +6,3 @@ while X <= Y:
     X *= 2
 
 print(ans)
-

@@ -1,4 +1,4 @@
-b =  input ()
+b = input()
 
 if b == "A":
     print("T")

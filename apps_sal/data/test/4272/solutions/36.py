@@ -6,4 +6,3 @@ for i in range(0, len(lst)):
         count += 1
 
 print(count)
-

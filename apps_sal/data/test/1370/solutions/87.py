@@ -5,7 +5,7 @@ def z(z_dic, v: int):
     if v == 2:
         z = 1
     elif v > 2:
-        z = int(v*(v-1)/2)
+        z = int(v * (v - 1) / 2)
     z_dic.setdefault(v, z)
     return z
 
@@ -20,7 +20,7 @@ def main():
             s_line.append(int(line[j]))
         s.append(s_line)
 
-    ok_cnt_min = h*w
+    ok_cnt_min = h * w
     op_cnt = h - 1  # すき間の個数
     for i in range(2 ** op_cnt):
         op = [False] * op_cnt
@@ -28,14 +28,14 @@ def main():
             if ((i >> j) & 1):
                 op[op_cnt - 1 - j] = True
 
-        s2 =[]
+        s2 = []
         current_sum = s[0]
         for k in range(op_cnt):
             if op[k]:
                 s2.append(current_sum)
-                current_sum = s[k+1]
+                current_sum = s[k + 1]
             else:
-                next_sum = [(current_sum[a] + s[k+1][a]) for a in range(w)]
+                next_sum = [(current_sum[a] + s[k + 1][a]) for a in range(w)]
                 current_sum = next_sum
 
         s2.append(current_sum)
@@ -49,7 +49,7 @@ def main():
         ed = 1
         cut_list = []
         dividable = True
-        for j in range(1, w+1):
+        for j in range(1, w + 1):
             _sum_max = 0
             if ed <= j:
                 ed = j
@@ -75,6 +75,4 @@ def main():
     print(ok_cnt_min)
 
 
-
 main()
-

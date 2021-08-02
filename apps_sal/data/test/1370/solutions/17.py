@@ -36,4 +36,3 @@ for bit in product([0, 1], repeat=(h - 1)):
     numlist = makelist(bit)
     ans = min(ans, solve(numlist) + sum(bit))
 print(ans)
-

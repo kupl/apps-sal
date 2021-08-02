@@ -1,4 +1,4 @@
-x,y =map(int,input().split())
+x, y = map(int, input().split())
 ans = 1
 for i in range(10**7):
     if x * 2 > y:

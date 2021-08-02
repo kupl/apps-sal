@@ -1,14 +1,14 @@
 import itertools
 # tempt
-H,W,K=list(map(int,input().split()))
-S=[input() for _ in range(H)]
+H, W, K = list(map(int, input().split()))
+S = [input() for _ in range(H)]
 
-ans=1e4 # 10000(10**4)
-for t in itertools.product([0,1],repeat=H-1):
-    cnt=t.count(1)
-    SW=[]
-    tmp=[int(s) for s in S[0] ]
-    
+ans = 1e4  # 10000(10**4)
+for t in itertools.product([0, 1], repeat=H - 1):
+    cnt = t.count(1)
+    SW = []
+    tmp = [int(s) for s in S[0]]
+
     for i, c in enumerate(t):
         if c:
             SW.append(tmp)
@@ -29,4 +29,3 @@ for t in itertools.product([0,1],repeat=H-1):
             sums = sumtmp
     ans = min(ans, cnt)
 print(ans)
-

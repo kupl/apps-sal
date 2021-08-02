@@ -2,23 +2,25 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 H, W, K = lr()
 S = np.array([list(map(int, sr())) for _ in range(H)])
 Scum = np.cumsum(S, axis=1)
 INF = 10 ** 10
 answer = INF
-for pattern in range(1<<H-1):
+for pattern in range(1 << H - 1):
     cnt = 0
     Tcum = Scum.copy()
-    for i in range(H-1):
-        if pattern>>i & 1:  # 切れ目
+    for i in range(H - 1):
+        if pattern >> i & 1:  # 切れ目
             cnt += 1
         else:
-            Tcum[i+1] += Tcum[i]
+            Tcum[i + 1] += Tcum[i]
     prev = -1
     w = 0
     Tcum = Tcum.tolist()
@@ -39,4 +41,3 @@ for pattern in range(1<<H-1):
         answer = min(answer, cnt)
 
 print(answer)
-

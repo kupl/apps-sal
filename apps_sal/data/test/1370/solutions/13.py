@@ -4,11 +4,11 @@ from collections import deque
 
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-input = lambda: sys.stdin.readline().strip()
-NI = lambda: int(input())
-NMI = lambda: map(int, input().split())
-NLI = lambda: list(NMI())
-SI = lambda: input()
+def input(): return sys.stdin.readline().strip()
+def NI(): return int(input())
+def NMI(): return map(int, input().split())
+def NLI(): return list(NMI())
+def SI(): return input()
 
 
 def make_grid(h, w, num): return [[int(num)] * w for _ in range(h)]
@@ -18,13 +18,13 @@ def main():
     H, W, K = NMI()
     choco = [SI() for _ in range(H)]
     ans = 100000
-    for case in range(2**(H-1)):
+    for case in range(2**(H - 1)):
         groups = [[0]]
-        for i in range(H-1):
+        for i in range(H - 1):
             if (case >> i) & 1:
-                groups[-1].append(i+1)
+                groups[-1].append(i + 1)
             else:
-                groups.append([i+1])
+                groups.append([i + 1])
         white = [0] * len(groups)
 
         is_badcase = False
@@ -55,7 +55,8 @@ def main():
     print(ans)
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

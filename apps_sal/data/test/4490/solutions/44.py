@@ -9,4 +9,3 @@ else:
         print('G')
     else:
         print('C')
-

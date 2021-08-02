@@ -8,4 +8,3 @@ elif b == 'C':
     print('G')
 elif b == 'G':
     print('C')
-
