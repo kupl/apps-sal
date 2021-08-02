@@ -8,7 +8,7 @@ for i in range(8):
             while curr > 0 and our[curr - 1][j] == '.':
                 curr -= 1
             if curr == 0:
-                resA= min(resA, i)
+                resA = min(resA, i)
         elif our[i][j] == 'B':
             curr = i
             while curr < 7 and our[curr + 1][j] == '.':

@@ -16,5 +16,6 @@ def main():
             r += 1
         aa += 1
     return r
-print(main())
 
+
+print(main())

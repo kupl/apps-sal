@@ -24,4 +24,3 @@ for i, skill in skills[:-1]:
     result[i] = n - next_p - quarrels[i]
 
 print(' '.join(map(str, result)))
-

@@ -12,7 +12,7 @@ for row in range(8):
             w = col
     if w != None and ("B" not in field[row][:w]):
         minW = min(minW, w)
-    
+
     b = None
     for col in range(8):
         if field[row][col] == "B":

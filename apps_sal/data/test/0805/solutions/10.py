@@ -7,4 +7,3 @@ for _ in range(n - 1):
         if (i, i + 1) in x:
             x.remove((i, i + 1))
 print(len(x))
-

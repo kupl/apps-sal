@@ -4,4 +4,3 @@ if n & 0b1:
 else:
     print("white")
     print("1 2")
-

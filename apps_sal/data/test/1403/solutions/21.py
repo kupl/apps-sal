@@ -7,7 +7,7 @@ i = 0
 while i < len(a):
     if a[i] == a[-1]:
         break
-    j = i+1
+    j = i + 1
     while a[i] == a[j]:
         j += 1
     if a[i] + K >= a[j]:

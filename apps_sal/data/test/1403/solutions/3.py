@@ -4,15 +4,15 @@ from functools import cmp_to_key
 #key=cmp_to_key(lambda x,y: 1 if x not in y else -1 )
 
 import sys
+
+
 def getIntList():
-    return list(map(int, input().split()))    
+    return list(map(int, input().split()))
 
- 
-            
-    
-n,K = getIntList()
 
-z =  getIntList()
+n, K = getIntList()
+
+z = getIntList()
 z.sort()
 
 
@@ -21,8 +21,8 @@ last = -1
 lastc = 0
 for x in z:
     if x == last:
-        lastc+=1
-    elif last+K >= x:
+        lastc += 1
+    elif last + K >= x:
         last = x
         lastc = 1
     else:
@@ -33,4 +33,3 @@ for x in z:
 res += lastc
 
 print(res)
-

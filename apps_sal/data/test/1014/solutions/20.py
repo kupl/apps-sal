@@ -4,4 +4,3 @@ if n % 2 == 1:
 else:
     print("white")
     print("1 2")
-

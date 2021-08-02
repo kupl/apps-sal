@@ -14,7 +14,7 @@ for row in field:
             nwa = row.index('W')
             wa = min(wa, nwa)
     if 'B' in row:
-        if ('W' in row) and row.rindex('W') >  row.rindex('B'):
+        if ('W' in row) and row.rindex('W') > row.rindex('B'):
             pass
         else:
             nwb = 7 - row.rindex('B')
@@ -25,4 +25,3 @@ if wa <= wb:
     print('A')
 else:
     print('B')
-

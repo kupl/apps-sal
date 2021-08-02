@@ -10,4 +10,3 @@ for t in zip(*[f() for i in range(n)]):
     s += x
     d += y
 print(s, d)
-

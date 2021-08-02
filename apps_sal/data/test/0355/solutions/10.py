@@ -4,11 +4,13 @@ def checkA(i, j):
             return 1000
     return i
 
+
 def checkB(i, j):
     for k in range(i + 1, 8):
         if arr[k][j] != '.':
             return 1000
     return 7 - i
+
 
 #fin = open('a.in', 'r')
 arr = []
@@ -28,4 +30,3 @@ if minA <= minB:
     print('A')
 else:
     print('B')
-

@@ -4,6 +4,3 @@ if n % 2 == 0:
     print(str(1) + ' ' + str(2))
 else:
     print('black')
-
-        
-

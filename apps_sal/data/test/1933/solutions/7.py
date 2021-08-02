@@ -10,7 +10,7 @@ def best_for_column(matrix, col) -> (int, int):
         if matrix[row][col] == 1:
             # We're on a 1, start counting rows downwards
             result_by_row[row] = 1
-            upper_bound = min(row+k, n)  # either + K or the end (n)
+            upper_bound = min(row + k, n)  # either + K or the end (n)
             for r2 in range(row + 1, upper_bound):
                 if matrix[r2][col] == 1:
                     result_by_row[row] += 1
@@ -35,6 +35,7 @@ def best_for_column(matrix, col) -> (int, int):
             break
 
     return best_result['result'], replacements
+
 
 n, m, k = [int(p) for p in input().split()]
 matrix = []

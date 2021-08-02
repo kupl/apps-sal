@@ -12,4 +12,3 @@ else:
     n = t // wb * m - 1 + min(t % wb + 1, m)
     g = gcd(n, t)
     print("%d/%d" % (n // g, t // g))
-

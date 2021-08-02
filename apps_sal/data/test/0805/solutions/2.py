@@ -1,6 +1,6 @@
 n, t = int(input()) - 1, [0] * 101
 a, b = map(int, input().split())
-for i in range(n) :
+for i in range(n):
     l, r = map(int, input().split())
     t[l] += 1
     t[r] -= 1

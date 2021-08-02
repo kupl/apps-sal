@@ -13,4 +13,3 @@ for i, el in enumerate(s[1:]):
         ans -= C[s[i]]
 
 print(ans)
-

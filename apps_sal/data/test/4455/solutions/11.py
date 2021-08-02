@@ -8,7 +8,7 @@ for x in input().split():
         d[x] = 0
     d[x] += 1
     a.append(x)
-    
+
 lst = sorted(d)
 lst.reverse()
 
@@ -28,4 +28,3 @@ for x in range(k):
         array[r - 1] -= 1
 
 print(*array)
-

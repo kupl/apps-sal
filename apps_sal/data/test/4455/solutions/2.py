@@ -25,4 +25,3 @@ for x in range(n):
     res[nar[x][1]] += x
 
 print(*res)
-

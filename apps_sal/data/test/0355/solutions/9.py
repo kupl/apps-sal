@@ -12,10 +12,9 @@ for i in range(8):
         if A[j][i] == "B":
             B = min(B, 8 - j)
             break
-        if A[j][i] =="W":
+        if A[j][i] == "W":
             break
 if B <= W:
     print("B")
 else:
     print("A")
-

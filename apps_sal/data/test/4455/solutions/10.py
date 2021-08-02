@@ -6,12 +6,12 @@ r = list(R())
 h = sorted(r)
 d = {}
 
-d[h[0]] = 0 # d[i]: 比i小的数字数量
+d[h[0]] = 0  # d[i]: 比i小的数字数量
 for i in range(1, n):
-    if h[i-1] != h[i]:
+    if h[i - 1] != h[i]:
         d[h[i]] = i
 
-res = [0]*n
+res = [0] * n
 for i in range(n): res[i] = d[r[i]]
 
 for i in range(k):

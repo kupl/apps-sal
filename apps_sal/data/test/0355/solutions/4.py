@@ -17,4 +17,3 @@ if amin <= bmin:
     print('A')
 else:
     print('B')
-

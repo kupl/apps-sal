@@ -24,4 +24,3 @@ for i in range(m):
     sum_remove += num_remove
 
 print(sum_score, sum_remove)
-
