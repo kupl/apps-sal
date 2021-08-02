@@ -25,4 +25,3 @@ for index, value in enumerate(arr):
 
 print(ans)
 print(" ".join([str(x) for x in arr]))
-

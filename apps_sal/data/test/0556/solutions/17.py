@@ -11,4 +11,3 @@ while f <= r:
 
 if count == 0:
     print(-1)
-

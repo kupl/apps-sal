@@ -12,7 +12,7 @@ for _ in range(T):
             s += A[i]
             if A[i] > ma:
                 ma = A[i]
-                mai = i+1
+                mai = i + 1
             if s > S:
                 print(mai)
                 break

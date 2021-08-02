@@ -9,12 +9,12 @@ for x in l:
 
 need = []
 
-for x in range(1,n+1):
+for x in range(1, n + 1):
     if count[x] == 0:
         need.append(x)
 
 pos_need = 0
-open = [False for _ in range(n+1)]
+open = [False for _ in range(n + 1)]
 actions = 0
 
 for i in range(n):
@@ -22,7 +22,7 @@ for i in range(n):
         break
     if count[l[i]] >= 2:
         if l[i] < need[pos_need]:
-            if open[l[i]]: 
+            if open[l[i]]:
                 count[l[i]] -= 1
                 l[i] = need[pos_need]
                 actions += 1
@@ -37,4 +37,3 @@ for i in range(n):
 
 print(actions)
 print(*l)
-

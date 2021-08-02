@@ -11,7 +11,7 @@ class Solver:
         a = readints()
         c = Counter(a)
         skipped = set()
-        to_be_added = sorted(set(range(1, n+1)) - set(c.keys()))
+        to_be_added = sorted(set(range(1, n + 1)) - set(c.keys()))
         changes = 0
         for i in range(n):
             if c[a[i]] > 1:
@@ -25,5 +25,5 @@ class Solver:
         print(changes)
         print(' '.join(map(str, a)))
 
-Solver().main()
 
+Solver().main()

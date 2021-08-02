@@ -8,5 +8,3 @@ for _ in range(t):
     else:
         k = (a - b + c - d - 1) // (c - d)
         print(b + k * c)
-
-

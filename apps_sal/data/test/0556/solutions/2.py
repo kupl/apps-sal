@@ -4,7 +4,7 @@ try:
     while True:
         l, r, k = list(map(int, input().split()))
         x = 1
-        ls = [ ]
+        ls = []
         while x <= r:
             if x >= l:
                 ls.append(x)
@@ -16,4 +16,3 @@ try:
 
 except EOFError:
     pass
-

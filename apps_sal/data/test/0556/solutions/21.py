@@ -13,4 +13,3 @@ if not correct:
     print("-1")
 else:
     print("")
-

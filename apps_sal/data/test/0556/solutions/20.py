@@ -8,4 +8,3 @@ while x <= r:
     x *= k
 
 print(-1 if not a else ' '.join(list(map(str, a))))
-

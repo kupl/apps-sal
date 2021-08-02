@@ -13,4 +13,3 @@ if len(numbers) > 0:
     print(' '.join(map(str, numbers)))
 else:
     print('-1')
-

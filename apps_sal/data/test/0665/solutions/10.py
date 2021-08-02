@@ -21,4 +21,3 @@ def sol():
 
 for i in range(int(input())):
     sol()
-

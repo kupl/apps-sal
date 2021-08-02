@@ -11,4 +11,3 @@ while(cnt):
     ans += 2 ** (cnt - 1)
     cnt -= 1
 print(ans)
-

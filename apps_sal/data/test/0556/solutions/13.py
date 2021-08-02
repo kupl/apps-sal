@@ -9,4 +9,3 @@ if ans:
     print(*ans)
 else:
     print(-1)
-

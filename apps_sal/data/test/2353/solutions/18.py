@@ -1,4 +1,4 @@
-t =int(input())
+t = int(input())
 for i in range(t):
     a, b, c, d = list(map(int, input().split()))
     if b >= a:
@@ -10,4 +10,3 @@ for i in range(t):
     x = c - d
     y = (a - b + c - d - 1) // x
     print(b + y * c)
-

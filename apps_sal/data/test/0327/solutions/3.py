@@ -7,5 +7,4 @@ else:
     while N > 0:
         N >>= 1
         cnt += 1
-    print((1<<cnt)-1)
-
+    print((1 << cnt) - 1)

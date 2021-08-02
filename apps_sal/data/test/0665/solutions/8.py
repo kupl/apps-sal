@@ -24,4 +24,3 @@ for _ in range(int(input())):
         print('0')
     else:
         print(ans + 1)
-

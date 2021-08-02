@@ -9,4 +9,3 @@ for _ in range(int(input())):
         print(b + t * c)
     else:
         print(-1)
-

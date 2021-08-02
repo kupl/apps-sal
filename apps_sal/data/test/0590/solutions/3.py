@@ -1,14 +1,15 @@
 def solve(printing):
 
     n = int(input())
-    nums = [int(st)-1 for st in input().split(" ")]
+    nums = [int(st) - 1 for st in input().split(" ")]
     numdupe = [0] * n
     dupeindex = []
     dupeindexindv = {}
     missing = []
 
     if printing:
-        print("nums"); print(nums)
+        print("nums")
+        print(nums)
 
     for i in range(n):
         numdupe[nums[i]] += 1
@@ -16,7 +17,7 @@ def solve(printing):
     for i in range(n):
         if numdupe[i] == 0:
             missing.append(i)
-            
+
         if numdupe[nums[i]] >= 2:
             dupeindex.append(i)
             if nums[i] in dupeindexindv:
@@ -29,8 +30,10 @@ def solve(printing):
         dupeindexindv[num][0] = len(dupeindexindv[num][1])
 
     if printing:
-        print("missing"); print(missing)
-        print("dupeindexindv"); print(dupeindexindv)
+        print("missing")
+        print(missing)
+        print("dupeindexindv")
+        print(dupeindexindv)
 
     misslen = len(missing)
     misindex = 0
@@ -45,9 +48,9 @@ def solve(printing):
             # locate original.
             dupeindexindv[nums[index]][0] -= 1
             dupeindexindv[nums[index]][2] = True
-        
+
         elif dupeindexindv[nums[index]][0] > 0:
-            
+
             if dupeindexindv[nums[index]][2] or missing[misindex] < nums[index]:
                 # num is smaller or original is already located.
                 # locate missing number.
@@ -56,13 +59,13 @@ def solve(printing):
                 misindex += 1
                 #answer += 1
 
-            else: # locate original
+            else:  # locate original
                 dupeindexindv[nums[index]][0] -= 1
                 dupeindexindv[nums[index]][2] = True
 
     print(misslen)
     for num in nums:
-        print(num+1, end = " ")
+        print(num + 1, end=" ")
+
 
 solve(False)
-

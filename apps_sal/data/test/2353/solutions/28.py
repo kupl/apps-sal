@@ -16,4 +16,3 @@ while t > 0:
         answer += c
     out += f'{answer}\n'
 print(out)
-

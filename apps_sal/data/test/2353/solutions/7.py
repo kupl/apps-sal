@@ -19,4 +19,3 @@ for t in range(T):
         else:
             cnt = (a - b - 1) // (c - d) + 1
             print(b + cnt * c)
-

@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def main():
     n = int(input())
     a = list(map(int, input().split()))
@@ -24,6 +26,6 @@ def main():
         c[v] -= 1
     print(ans)
     print(' '.join(map(str, a)))
+
+
 main()
-
-

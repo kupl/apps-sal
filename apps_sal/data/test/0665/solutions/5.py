@@ -10,7 +10,7 @@ for __ in range(int(input())):
         ans1 = 0
         flag = 0
         for i in range(n):
-            if ar[i] > lol and  flag == 0:
+            if ar[i] > lol and flag == 0:
                 lol = ar[i]
                 kek = i
             if s - ar[i] >= 0 and flag == 0:

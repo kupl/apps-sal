@@ -7,7 +7,7 @@ b = []
 for i in range(1, n + 1):
     if i not in cnt:
         b.append(i)
-b.sort(reverse = True)
+b.sort(reverse=True)
 s = set(a)
 print(len(b))
 for v in a:
@@ -22,5 +22,3 @@ for v in a:
     else:
         res.append(v)
 print(" ".join(list(map(str, res))))
-
-

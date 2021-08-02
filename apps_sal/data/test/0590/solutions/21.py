@@ -1,16 +1,16 @@
 n = int(input())
 a = list(map(int, input().split()))
 
-if sorted(a) == list(range(1, n+1)):
+if sorted(a) == list(range(1, n + 1)):
     print(0)
-    print(' '.join(map(str,a)))
+    print(' '.join(map(str, a)))
 else:
-    cnt = [0] * (n+1)
+    cnt = [0] * (n + 1)
     for i in a:
         cnt[i] += 1
 
     add = []
-    for i in range(1, n+1):  # 1 to 26
+    for i in range(1, n + 1):  # 1 to 26
         if cnt[i] == 0:
             add.append(i)
 
@@ -33,5 +33,4 @@ else:
             appeared[t] = True
 
     print(m_cnt)
-    print(' '.join(map(str,a)))
-
+    print(' '.join(map(str, a)))

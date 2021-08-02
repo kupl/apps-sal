@@ -5,8 +5,7 @@ while cur < l:
 f = False
 while cur <= r:
     f = True
-    print(cur,end=' ')
+    print(cur, end=' ')
     cur *= k
 if not f:
     print(-1)
-
