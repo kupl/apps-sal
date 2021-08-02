@@ -4,8 +4,8 @@ for _ in range(t):
     a = list(map(int, input().split()))
     a = sorted(a)
     flag = False
-    for i in range(n-1):
-        if a[i]+1 == a[i+1]:
+    for i in range(n - 1):
+        if a[i] + 1 == a[i + 1]:
             flag = True
     if flag:
         print(2)

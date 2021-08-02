@@ -7,4 +7,3 @@ for x in s:
         cnt8 += 1
 
 print(min(cnt8, n // 11))
-

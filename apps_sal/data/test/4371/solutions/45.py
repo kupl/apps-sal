@@ -11,4 +11,3 @@ for i in range(len(s) - 2):
         result = wk
 
 print(result)
-

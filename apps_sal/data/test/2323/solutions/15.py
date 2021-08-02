@@ -1,3 +1,4 @@
+from bisect import bisect
 import sys
 input = sys.stdin.readline
 stdout = sys.stdout
@@ -5,13 +6,12 @@ rr = lambda: input().strip()
 rri = lambda: int(input())
 rrm = lambda: list(map(int, input().strip().split()))
 
-from bisect import bisect
 
 N = rri()
 A = rrm()
 Q = rri()
 A.sort()
-D = sorted(A[i+1] - A[i] for i in range(N-1))
+D = sorted(A[i + 1] - A[i] for i in range(N - 1))
 P = [0]
 for x in D:
     P.append(P[-1] + x)
@@ -19,7 +19,7 @@ for x in D:
 queries = []
 for q in range(Q):
     L, R = rrm()
-    queries.append((R-L+1, q))
+    queries.append((R - L + 1, q))
 queries.sort()
 ans = [None] * len(queries)
 
@@ -32,4 +32,3 @@ for q, ix in queries:
     ans[ix] = bns
 
 print(*ans)
-

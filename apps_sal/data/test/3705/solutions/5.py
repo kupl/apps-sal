@@ -12,4 +12,3 @@ while a >= 1 and a + b >= 11:
         b = 0
     cnt += 1
 print(cnt)
-

@@ -7,4 +7,3 @@ for i in range(len(s) - 2):
     ans = min(diff, ans)
 
 print(ans)
-

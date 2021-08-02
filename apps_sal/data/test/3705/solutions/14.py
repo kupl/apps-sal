@@ -5,4 +5,3 @@ num = len([_ for _ in a if _ == 8])
 length = len(a)
 
 print(min(length // 11, num))
-

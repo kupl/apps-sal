@@ -6,7 +6,7 @@ for q in range(Q):
     L.sort()
     y = 0
     for i in range(1, n):
-        if L[i] - L[i-1] == 1:
+        if L[i] - L[i - 1] == 1:
             y = 1
     if y == 1: print(2)
     else:

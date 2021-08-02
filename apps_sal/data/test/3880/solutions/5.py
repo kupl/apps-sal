@@ -15,17 +15,19 @@ for x in data:
 seen = {}
 min_negative = negative
 
+
 def go(negative, positive):
     nonlocal n, min_negative
     if (negative, positive) in seen:
         return
     seen[(negative, positive)] = True
     min_negative = min(min_negative, negative)
-    for i in range(min(n, negative)+1):
-        for j in range(min(n-i, zero)+1):
+    for i in range(min(n, negative) + 1):
+        for j in range(min(n - i, zero) + 1):
             k = n - i - j
             if k <= positive:
-                go(negative-i+k, positive-k+i)
+                go(negative - i + k, positive - k + i)
+
 
 go(negative, positive)
 
@@ -34,5 +36,3 @@ for i in range(min_negative):
     values[i] *= -1
 
 print(sum(values))
-
-

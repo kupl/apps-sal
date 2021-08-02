@@ -28,4 +28,3 @@ for _ in range(q):
     out.append(ans[at] + remain[at] * (x - lastat[at]))
 
 print(' '.join(map(str, out)))
-

@@ -7,4 +7,5 @@ def main():
             cnt += 1
     print(min(cnt, n // 11))
 
+
 main()

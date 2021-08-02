@@ -15,5 +15,4 @@ INF = float('inf')
 
 
 a, b = LI()
-print((max(a+b, a-b, a*b)))
-
+print((max(a + b, a - b, a * b)))

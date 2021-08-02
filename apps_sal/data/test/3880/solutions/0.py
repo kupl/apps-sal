@@ -7,4 +7,3 @@ if n % 2 == 1 or neg % 2 == 0 or any(v == 0 for v in a):
     print(sum(abs_a))
 else:
     print(sum(abs_a) - 2 * min(abs_a))
-
