@@ -7,4 +7,3 @@ for ac in range(1 - N, N):
         continue
     ans += (N - abs(ac)) * (N - abs(db))
 print(ans)
-

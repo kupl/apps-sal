@@ -5,4 +5,3 @@ for i in range(1, b + 1):
         break
 else:
     print("NO")
-

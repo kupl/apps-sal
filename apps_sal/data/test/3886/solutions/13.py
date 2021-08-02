@@ -46,4 +46,3 @@ for _ in range(int(input())):
     ans += solve(n, k)
 
 print(ans)
-

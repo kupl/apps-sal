@@ -5,4 +5,3 @@ for i in range(3):
     if A[i] == P[i]:
         cnt += 1
 print(cnt)
-

@@ -6,6 +6,6 @@ for i in range(N):
 ans = 0
 
 for i in range(2 * N + 1):
-    if  0 <= (j := (K - (i - N) + N)) < 2 * N + 1:
+    if 0 <= (j := (K - (i - N) + N)) < 2 * N + 1:
         ans += table[i] * table[j]
 print(ans)

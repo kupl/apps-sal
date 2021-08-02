@@ -8,4 +8,3 @@ list02 = slist_new + tlist_new
 andlist = [x for x in list02 if list02.count(x) > 1]
 
 print((len(andlist) // 2))
-

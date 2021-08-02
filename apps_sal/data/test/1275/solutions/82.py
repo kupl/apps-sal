@@ -8,17 +8,19 @@ from collections import defaultdict, deque, Counter
 from functools import lru_cache
 sys.setrecursionlimit(10**8)
 
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(map(int, input().split()))
+
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 N, K = mi()
 
 ans = 0
 ls = []
-for i in range(-N+1, N):
-    if K-i<N and K-i>=-N+1:
+for i in range(-N + 1, N):
+    if K - i < N and K - i >= -N + 1:
         A = i
-        B = K-A
-        ans += ((N-abs(B))*(N-abs(A)))
+        B = K - A
+        ans += ((N - abs(B)) * (N - abs(A)))
 print(ans)

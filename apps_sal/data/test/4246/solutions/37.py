@@ -1,4 +1,4 @@
-#ABC139 A
+# ABC139 A
 
 S = str(input())
 T = str(input())
@@ -7,4 +7,3 @@ for i in range(3):
     if S[i] == T[i]:
         count += 1
 print(count)
-

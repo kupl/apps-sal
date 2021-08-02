@@ -10,6 +10,3 @@ if clear == 0:
     print('NO')
 else:
     print('YES')
-
-
-

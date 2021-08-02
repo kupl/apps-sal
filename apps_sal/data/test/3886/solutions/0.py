@@ -4,7 +4,8 @@ ft1, ft2, ft3 = 'What are you doing while sending "', '"? Are you busy? Will you
 flen = [2 * 10 ** 18] * (10 ** 5 + 1)
 flen[0] = len(f0)
 for i in range(1, 56):
-    flen[i] = len(ft1) + len(ft2) + len(ft3) + 2 * flen[i-1]
+    flen[i] = len(ft1) + len(ft2) + len(ft3) + 2 * flen[i - 1]
+
 
 def ans(n, k):
     while True:
@@ -13,18 +14,19 @@ def ans(n, k):
         if k < len(ft1):
             return ft1[k]
         k -= len(ft1)
-        if k < flen[n-1]:
+        if k < flen[n - 1]:
             n -= 1
             continue
-        k -= flen[n-1]
+        k -= flen[n - 1]
         if k < len(ft2):
             return ft2[k]
         k -= len(ft2)
-        if k < flen[n-1]:
+        if k < flen[n - 1]:
             n -= 1
             continue
-        k -= flen[n-1]
+        k -= flen[n - 1]
         return ft3[k]
+
 
 q = int(input())
 a = ''
@@ -36,4 +38,3 @@ for _ in range(q):
         continue
     a += ans(n, k)
 print(a)
-

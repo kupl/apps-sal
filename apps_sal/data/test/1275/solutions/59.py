@@ -7,4 +7,3 @@ for i in range(2, 2 * N + 1):
         ans += ab * cd
 
 print(ans)
-

@@ -11,7 +11,7 @@ X, Y = list(map(int, input().split()))
 def primeFact_set(n):
     factors = set()
     i = 2
-    while i*i <= n:
+    while i * i <= n:
         if n % i == 0:
             n //= i
             if i <= Y:
@@ -24,14 +24,13 @@ def primeFact_set(n):
 
 
 X_prime = primeFact_set(X)
-MOD = 10**9+7
+MOD = 10**9 + 7
 ans = 1
 for p in X_prime:
     tmp = p
     while tmp <= Y:
-        div = Y//tmp
+        div = Y // tmp
         ans *= pow(p, div, MOD)
         ans %= MOD
         tmp *= p
 print(ans)
-

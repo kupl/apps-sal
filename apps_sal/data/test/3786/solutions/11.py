@@ -10,11 +10,11 @@ nodesAtCurrLevel = [0]
 
 while nodesAtCurrLevel:
     count += len(nodesAtCurrLevel) % 2
-    
+
     nodesAtNextLevel = []
     for node in nodesAtCurrLevel:
         nodesAtNextLevel += children[node]
-    
+
     nodesAtCurrLevel = nodesAtNextLevel
 
 print(count)

@@ -30,4 +30,3 @@ def dfs(x):
 dfs(0)
 
 print(sum([x % 2 for x in dat]))
-

@@ -4,17 +4,20 @@ NTC here
 from sys import setcheckinterval, stdin, setrecursionlimit
 setcheckinterval(1000)
 setrecursionlimit(10**7)
- 
+
 # print("Case #{}: {} {}".format(i, n + m, n * m))
- 
- 
+
+
 def iin(): return int(stdin.readline())
- 
- 
+
+
 def lin(): return list(map(int, stdin.readline().split()))
 
-x,n=lin()
-md=10**9+7
+
+x, n = lin()
+md = 10**9 + 7
+
+
 def factors(a):
     fact = []
     if a % 2 == 0:
@@ -22,7 +25,7 @@ def factors(a):
             a //= 2
         fact.append(2)
     i = 3
-    while i*i <= a:
+    while i * i <= a:
         if a % i == 0:
             while a % i == 0:
                 a //= i
@@ -32,15 +35,16 @@ def factors(a):
         fact.append(a)
     return fact
 
-fact=factors(x)
-ans=1
+
+fact = factors(x)
+ans = 1
 for f in fact:
-    x=f
-    ch=0
-    while x<=n:
-        ch+=n//x
-        x*=f
-    ans=ans*pow(f,ch,md)
-    ans%=md  
-ans=ans%md
+    x = f
+    ch = 0
+    while x <= n:
+        ch += n // x
+        x *= f
+    ans = ans * pow(f, ch, md)
+    ans %= md
+ans = ans % md
 print(ans)

@@ -1,4 +1,6 @@
 from math import sqrt, ceil
+
+
 def primes(x):
     ox = x
     l = []
@@ -17,15 +19,15 @@ def primes(x):
         l.append(x)
     return l
 
-mo = 10**9+7
-x,n = list(map(int,input().split()))
+
+mo = 10**9 + 7
+x, n = list(map(int, input().split()))
 pi = primes(x)
 s = 1
 for p in pi:
     pk = p
     while pk <= n:
-        s *= pow(p,n//pk,mo)
+        s *= pow(p, n // pk, mo)
         s %= mo
         pk *= p
 print(s)
-

@@ -1,8 +1,10 @@
 MOD = 10**9 + 7
 x, n = [int(item) for item in input().split()]
+
+
 def prime_factorize(n):
     b = 2
-    fct = set() 
+    fct = set()
     while b * b <= n:
         while n % b == 0:
             n //= b
@@ -11,6 +13,7 @@ def prime_factorize(n):
     if n > 1:
         fct.add(n)
     return fct
+
 
 fac = prime_factorize(x)
 ans = 1

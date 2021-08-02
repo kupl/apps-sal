@@ -1,4 +1,4 @@
-#589_C
+# 589_C
 
 #import time
 
@@ -7,6 +7,7 @@
 import math
 
 md = (10 ** 9) + 7
+
 
 def bin(n):
     l = math.floor(math.log(n, 2))
@@ -20,6 +21,7 @@ def bin(n):
         l -= 1
     return s
 
+
 def ex(n, m):
     bn = bin(m)
     sm = n
@@ -31,17 +33,20 @@ def ex(n, m):
         sm = (sm * sm) % md
     return ssm
 
+
 ln = [int(i) for i in input().split(" ")]
 x = ln[0]
 n = ln[1]
 
 div = []
 
+
 def pf(n):
     for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             return [i] + pf(n // i)
     return [n]
+
 
 dv = pf(x)
 
@@ -69,4 +74,3 @@ for i in range(0, len(ndv)):
         sm = (sm * nn) % md
         #print(sm, i)
 print(sm)
-

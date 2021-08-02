@@ -1,6 +1,6 @@
-A,B,C = map(int,input().split())
+A, B, C = map(int, input().split())
 for i in range(B):
-  if (i+1)*A%B== C:
-    print('YES')
-    return
+    if (i + 1) * A % B == C:
+        print('YES')
+        return
 print('NO')

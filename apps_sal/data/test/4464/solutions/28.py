@@ -1,6 +1,6 @@
-#ABC060 B:Choose Integers
+# ABC060 B:Choose Integers
 
-a,b,c = map(int, input().split())
+a, b, c = map(int, input().split())
 ans = 'NO'
 
 for i in range(b):

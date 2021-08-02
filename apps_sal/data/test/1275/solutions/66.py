@@ -47,13 +47,15 @@ Nがとても小さいとき、例えばK=12, N=2なら0である。
 xは2から2Nまでの範囲を動く。
 """
 
-N, K = map(int,(input().split()))
+N, K = map(int, (input().split()))
 
-pattern = lambda x, K: max(0, min(K-1, 2*x + 1 - K)) # これをminでまとめるのかー。
+
+def pattern(x, K): return max(0, min(K - 1, 2 * x + 1 - K))  # これをminでまとめるのかー。
+
 
 res = 0
 
 for x in range(2, 2 * N + 1):
-    res += pattern(N, x) * pattern(N, x-K)
+    res += pattern(N, x) * pattern(N, x - K)
 
 print(res)

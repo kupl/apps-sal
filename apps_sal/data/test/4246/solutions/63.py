@@ -10,4 +10,3 @@ for it in S:
     i = i + 1
 
 print(count)
-

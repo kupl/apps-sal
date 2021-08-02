@@ -9,4 +9,3 @@ for i in range(1000):
         return
 
 print('NO')
-

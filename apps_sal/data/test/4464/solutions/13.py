@@ -1,16 +1,15 @@
 a, b, c = list(map(int, input().split()))
 count = 0
-#aに１～bの数をかけたリスト
+# aに１～bの数をかけたリスト
 for i in range(b + 1):
     if ((i * a) % b) == c:
-      print("YES")
-      count += 1
-      break
+        print("YES")
+        count += 1
+        break
     else:
-      pass
+        pass
 
 if count == 0:
-  print("NO")
+    print("NO")
 else:
-  pass
-
+    pass
