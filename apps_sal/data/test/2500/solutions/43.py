@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,6 +15,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 MOD = 10 ** 9 + 7
@@ -34,10 +37,9 @@ for i in range(60, 0, -1):
             # 1桁下がる時に、現在のjは 2^i = 2*2^(i-1) から、*2される
             # Nのビットが立っている桁なら1を足す
             # 今回追加するk(0~2)を引く
-            nxt = min(j*2 + N[i] - k, 2)
+            nxt = min(j * 2 + N[i] - k, 2)
             # nxtがマイナスなら繰り上がりでNを超えるので遷移させない
             if nxt >= 0:
-                dp[i-1][nxt] += dp[i][j]
-                dp[i-1][nxt] %= MOD
-print(((dp[0][0]+dp[0][1]+dp[0][2])%MOD))
-
+                dp[i - 1][nxt] += dp[i][j]
+                dp[i - 1][nxt] %= MOD
+print(((dp[0][0] + dp[0][1] + dp[0][2]) % MOD))

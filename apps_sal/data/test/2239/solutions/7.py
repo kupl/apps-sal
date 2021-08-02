@@ -5,6 +5,5 @@ for i in range(t):
     if x % 2 == 1:
         ans += 1
         x -= 3
-    ans += x//2
+    ans += x // 2
     print(ans)
-

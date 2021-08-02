@@ -1,4 +1,4 @@
-A, B = map(int,input().split())
+A, B = map(int, input().split())
 
 if A == 1 and 13 >= B >= 2:
     print("Alice")

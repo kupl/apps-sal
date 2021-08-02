@@ -10,4 +10,3 @@ while i < len(s):
         s.pop(i)
     i += 1
 print(ans)
-

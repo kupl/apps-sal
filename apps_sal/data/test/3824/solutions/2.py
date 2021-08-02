@@ -27,7 +27,7 @@ def distance(p0, p1):
 
 xq, yq = ria()
 xp, yp = ria()
-ar = [(xp + 1, yp+1), (xp - 1, yp-1), (xp-1, yp + 1), (xp+1, yp - 1)]
+ar = [(xp + 1, yp + 1), (xp - 1, yp - 1), (xp - 1, yp + 1), (xp + 1, yp - 1)]
 
 if xp == xq:
     print(2 * 2 + (abs(yp - yq) + 1) * 2)
@@ -40,8 +40,7 @@ mni = 1e+9
 for i in ar:
     x1, y1 = i
     mxx, mxy, mnx, mny = max(x1, xq), max(y1, yq), min(x1, xq), min(y1, yq)
-    #print(mxx,mxy,mnx,mny)
+    # print(mxx,mxy,mnx,mny)
     if mxx > xp and mxy > yp and mnx < xp and mny < yp:
         mni = min(mni, (mxx - mnx) * 2 + (mxy - mny) * 2)
 print(mni)
-

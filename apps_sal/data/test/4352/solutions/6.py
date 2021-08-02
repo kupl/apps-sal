@@ -14,11 +14,11 @@
 # Aliceが持っているカードに書かれている数は A、Bobが持っているカードカードに書かれている数は Bです。
 # 2人の代わりに、勝敗を判定するプログラムを作ってください。
 
-input_alice, input_bob = list(map(int,input().split()))
+input_alice, input_bob = list(map(int, input().split()))
 
 result = 'ret'  # 結果格納用
 
-if input_alice > input_bob: # Aの方がBより大きい
+if input_alice > input_bob:  # Aの方がBより大きい
     if input_bob == 1:
         result = 'Bob'  # Bobがエースなので勝ち～
     else:
@@ -32,4 +32,3 @@ else:
     result = 'Draw'         # どっちも同じ手札なので引き分け～
 
 print(result)   # 結果出力～
-

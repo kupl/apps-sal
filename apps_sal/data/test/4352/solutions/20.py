@@ -1,12 +1,12 @@
-a,b = [int(a) for a in input().split()]
+a, b = [int(a) for a in input().split()]
 
 if a == b:
-  print("Draw")
+    print("Draw")
 elif a == 1:
-  print("Alice")
+    print("Alice")
 elif b == 1:
-  print("Bob")
-elif  a > b:
-  print("Alice")
+    print("Bob")
+elif a > b:
+    print("Alice")
 else:
-  print("Bob")
+    print("Bob")

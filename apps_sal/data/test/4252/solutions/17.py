@@ -14,4 +14,3 @@ for x in s:
         cur = 0
 
 print(ans)
-

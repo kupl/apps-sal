@@ -16,4 +16,3 @@ for s in a:
         r = r + 1
 
 print(r)
-

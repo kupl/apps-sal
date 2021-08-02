@@ -11,5 +11,6 @@ def d_xor_sum(N):
     ans = f(N) % (10**9 + 7)
     return ans
 
+
 N = int(input())
 print(d_xor_sum(N))

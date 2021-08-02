@@ -1,6 +1,6 @@
 n, k = list(input().split())
 res_n_i = 0
-res = 0 
+res = 0
 for i in range(int(n)):
     n_i = input()
     for j in range(int(k) + 1):
@@ -11,5 +11,5 @@ for i in range(int(n)):
             break
         if res_n_i == int(k) + 1:
             res += 1
-            res_n_i = 0 
-print(res) 
+            res_n_i = 0
+print(res)

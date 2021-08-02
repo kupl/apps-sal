@@ -12,4 +12,3 @@ for i in s:
 if xc >= 3:
     res += xc - 2
 print(res)
-

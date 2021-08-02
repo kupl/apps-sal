@@ -142,4 +142,3 @@ for i in reversed(list(range(N.bit_length() - 1))):
     dp[i][1] %= MOD
     dp[i][2] %= MOD
 print((sum(dp[0]) % MOD))
-

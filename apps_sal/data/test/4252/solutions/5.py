@@ -7,8 +7,7 @@ for i, c in enumerate(s):
     if c == 'x':
         p += 1
     else:
-        res += max(0, p-2)
+        res += max(0, p - 2)
         p = 0
 
 print(res)
-

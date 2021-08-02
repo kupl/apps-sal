@@ -6,4 +6,4 @@ input = sys.stdin.readline
 t = int(input())
 for zzz in range(t):
     n = int(input())
-    print(n//2)
+    print(n // 2)

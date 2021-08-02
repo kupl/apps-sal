@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, k = readln()
 ans = 0
@@ -12,4 +14,3 @@ for _ in range(n):
             fl = False
     ans += fl
 print(ans)
-

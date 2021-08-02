@@ -13,4 +13,3 @@ elif A > B:
     print('Alice')
 elif B > A:
     print('Bob')
-

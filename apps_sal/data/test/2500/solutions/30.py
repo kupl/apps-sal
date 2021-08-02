@@ -13,5 +13,6 @@ def d_XorSum(N):
         return ret
     return f(N)
 
+
 N = int(input())
 print(d_XorSum(N))

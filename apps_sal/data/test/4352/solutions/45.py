@@ -10,4 +10,3 @@ elif A > B:
     print("Alice")
 else:
     print("Draw")
-

@@ -8,5 +8,5 @@ elif B == 1:
     print('Bob')
 elif A > B:
     print('Alice')
-else :
+else:
     print('Bob')
