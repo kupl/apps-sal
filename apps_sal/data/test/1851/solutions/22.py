@@ -1,31 +1,34 @@
 from collections import defaultdict as dd
 import math
+
+
 def nn():
-	return int(input())
+    return int(input())
+
 
 def li():
-	return list(input())
+    return list(input())
+
 
 def mi():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
 
 def lm():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
 
 
+n = nn()
 
-n=nn()
+l = lm()
 
-l=lm()
-
-maxsofar=0
-days=1
+maxsofar = 0
+days = 1
 
 for i, num in enumerate(l):
-	maxsofar=max(maxsofar, num)
-	#print(maxsofar)
-	if maxsofar==i+1 and i<len(l)-1:
-		days+=1 
+    maxsofar = max(maxsofar, num)
+    # print(maxsofar)
+    if maxsofar == i + 1 and i < len(l) - 1:
+        days += 1
 
 print(days)
-

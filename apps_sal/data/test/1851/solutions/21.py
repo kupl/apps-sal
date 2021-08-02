@@ -6,4 +6,4 @@ for i in range(n):
     Ka = max(Ka, A[i])
     if Ka <= i + 1:
         Cnt += 1
-print(Cnt) 
+print(Cnt)

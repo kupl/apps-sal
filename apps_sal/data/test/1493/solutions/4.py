@@ -5,7 +5,7 @@ for i in range(n):
 for i in range(n):
     for j in range(m):
         if a[i][j] is '.':
-            print('W' if (i + j) % 2 else 'B', end = '')
+            print('W' if (i + j) % 2 else 'B', end='')
         else:
-            print('-', end = '')
+            print('-', end='')
     print()

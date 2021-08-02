@@ -22,5 +22,3 @@ while True:
             x = a[i]
 print(len(stack))
 print(" ".join([str(x) for x in stack]))
-
-

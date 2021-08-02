@@ -2,21 +2,27 @@ from collections import *
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
+
 def gcd(a, b):
-    if b == 0: return a
+    if b == 0:
+        return a
     return gcd(b, a % b)
 
+
 def red(a, b, c):
-    if a == 0 and b < 0: b, c = -b, -c
-    if a < 0: a, b, c = -a, -b, -c
+    if a == 0 and b < 0:
+        b, c = -b, -c
+    if a < 0:
+        a, b, c = -a, -b, -c
     g = gcd(a, gcd(abs(b), abs(c)))
     return a // g, b // g, c // g
+
 
 def main():
     md = 998244353
@@ -34,7 +40,8 @@ def main():
             b = x1 - x0
             c = -a * x0 - b * y0
             a, b, c = red(a, b, c)
-            if (a, b, c) in counted: continue
+            if (a, b, c) in counted:
+                continue
             counted.add((a, b, c))
             cnt_online.setdefault((a, b, c), 1)
             cnt_online[(a, b, c)] += 1
@@ -48,5 +55,5 @@ def main():
     ans = pow(2, n, md) - 1 - n - sum_online
     print(ans % md)
 
-main()
 
+main()

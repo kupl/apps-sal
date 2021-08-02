@@ -8,4 +8,3 @@ for i in range(n):
     if maxi == i:
         ans += 1
 print(ans)
-

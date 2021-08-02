@@ -13,4 +13,3 @@ while ctr < m:
         left = z[ans] - min(8, z[ans])
     ans += 1
 print(ans)
-

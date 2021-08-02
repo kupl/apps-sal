@@ -6,7 +6,7 @@ for _ in range(t):
     n, m = [int(x) for x in input().split()]
 
     s = input()
-    count = {x : 0 for x in ascii_lowercase}
+    count = {x: 0 for x in ascii_lowercase}
     errors = [int(x) for x in input().split()]
 
     errors = sorted(errors)
@@ -18,4 +18,3 @@ for _ in range(t):
         count[c] += (m - e_idx) + 1
 
     print(*[count[c] for c in ascii_lowercase])
-

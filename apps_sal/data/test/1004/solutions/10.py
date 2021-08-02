@@ -1,6 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 
+
 def work():
     c, d = set(), set()
     r = [0]
@@ -21,6 +22,7 @@ def work():
                 r.append(0)
                 d = set()
     return 0 if r[-1] else r[:-1]
+
 
 ans = work()
 if ans:

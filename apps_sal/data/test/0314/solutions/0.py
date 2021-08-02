@@ -10,8 +10,7 @@ for i in range(n):
     b += x
     a -= x
     if b >= k:
-        print(i+1)
+        print(i + 1)
         break
 else:
     print(-1)
-

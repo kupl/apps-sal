@@ -14,7 +14,7 @@ for ai in a:
     if ai < 0 and (not enter[-ai] or left[-ai]):
         c = []
         break
-    
+
     s += ai
     if ai > 0:
         enter[ai] = True
@@ -28,15 +28,11 @@ for ai in a:
                 enter[x] = False
                 left[x] = False
             today = []
-    
+
     # print(s)
 
 if len(c) > 0 and s == 0:
     print(str(len(c)))
-    print(' '.join(str(x*2) for x in c))
+    print(' '.join(str(x * 2) for x in c))
 else:
     print(-1)
-
-
-
-

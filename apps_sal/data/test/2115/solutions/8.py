@@ -16,5 +16,4 @@ for a in lst:
             break
 print(len(stk))
 for a in stk:
-    print(a , end=" ")
-
+    print(a, end=" ")

@@ -1,4 +1,6 @@
-split = lambda: list(map(int, input().split()))
+def split(): return list(map(int, input().split()))
+
+
 a, b = split()
 candies = split()
 p = q = 0

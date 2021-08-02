@@ -1,6 +1,5 @@
 
 
-
 def main():
     n, k = (int(x) for x in input().split())
     xs = [int(x) for x in input().split()]
@@ -20,14 +19,13 @@ def main():
             break
 
     if bran >= k:
-        print(i+1)
+        print(i + 1)
     else:
         print(-1)
 
 
 def __starting_point():
     main()
-
 
 
 __starting_point()

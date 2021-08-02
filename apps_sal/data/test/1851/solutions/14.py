@@ -4,10 +4,10 @@ unresolved = []
 days = 0
 for i in range(n):
     unresolved.append(a[i])
-    if max(unresolved) > i+1:
+    if max(unresolved) > i + 1:
         continue
     else:
-        days +=1
+        days += 1
         continue
 
 print(days)

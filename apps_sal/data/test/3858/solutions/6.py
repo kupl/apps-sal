@@ -8,7 +8,7 @@ ans = pow(2, N, MOD) - 1 - N
 u = set()
 for i in range(N):
     xi, yi = P[i]
-    for j in range(i+1, N):
+    for j in range(i + 1, N):
         xj, yj = P[j]
         if (i, j) in u:
             continue
@@ -16,7 +16,7 @@ for i in range(N):
         Q = {i, j}
         for k in range(N):
             xk, yk = P[k]
-            if (xj - xi)*(yk - yi) == (xk - xi)*(yj - yi):
+            if (xj - xi) * (yk - yi) == (xk - xi) * (yj - yi):
                 cnt += 1
                 Q.add(k)
         for p in Q:

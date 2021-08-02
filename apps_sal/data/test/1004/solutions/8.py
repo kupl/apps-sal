@@ -21,4 +21,3 @@ try:
     print(*ans)
 except (AssertionError, KeyError):
     print('-1')
-

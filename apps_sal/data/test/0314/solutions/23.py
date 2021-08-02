@@ -1,7 +1,8 @@
-import sys, os
+import sys
+import os
 
 n, k = map(int, input().split())
-data =list(map(int, input().split()))
+data = list(map(int, input().split()))
 res = 0
 resu = 0
 for i in range(n):

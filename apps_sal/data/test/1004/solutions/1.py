@@ -1,21 +1,21 @@
-n=int(input())
-a=list(map(int, input().split()))
+n = int(input())
+a = list(map(int, input().split()))
 
 office = set()
-ans=[]
-curc=1
+ans = []
+curc = 1
 curday = []
 for i in range(n):
     if a[i] < 0:
-        if -1*a[i] not in office:
+        if -1 * a[i] not in office:
             print("-1")
             quit()
         else:
-            office.remove(-1*a[i])
+            office.remove(-1 * a[i])
             if len(office) == 0:
                 ans.append(curc)
-                curc=0
-                curday=[]
+                curc = 0
+                curday = []
     else:
         if a[i] in office:
             print(-1)

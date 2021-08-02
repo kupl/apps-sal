@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def __starting_point():
     N = int(input())
     xy_list = [list(map(int, input().split())) for _ in range(N)]
@@ -29,5 +30,6 @@ def __starting_point():
         ans -= cnt * (pow(2, i, modulo_num) - i - 1)
     ans = ans % modulo_num
     print(ans)
+
 
 __starting_point()

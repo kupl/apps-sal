@@ -20,4 +20,3 @@ for _ in range(int(input())):
             ans[c] += d[c][i]
 
     print(*list(ans.values()))
-

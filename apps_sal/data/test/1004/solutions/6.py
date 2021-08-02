@@ -1,7 +1,7 @@
 n = int(input())
 soot = set()
 usoot = set()
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 ans = []
 f = True
 c = 0
@@ -25,12 +25,10 @@ for i in a:
         ans.append(c)
         c = 0
 if len(soot) != 0:
-        f = False
+    f = False
 if f:
     print(len(ans))
     for i in ans:
-        print(i, end = " ")
+        print(i, end=" ")
 else:
     print(-1)
-        
-
