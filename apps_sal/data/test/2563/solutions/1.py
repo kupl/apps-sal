@@ -2,7 +2,7 @@
 def solve(s):
     # return list
     evens = [u for u in s if u % 2 == 0]
-    odds  = [u for u in s if u % 2 == 1]
+    odds = [u for u in s if u % 2 == 1]
     if len(odds) == 0:
         return evens
     ans = []
@@ -26,4 +26,4 @@ def solve(s):
 for _ in range(int(input())):
     s = list(map(int, list(input())))
     ans = solve(s)
-    print (''.join(map(str, ans)))
+    print(''.join(map(str, ans)))

@@ -10,4 +10,3 @@ for i in range(n):
     if total > 0:
         count += 1
 print(count)
-

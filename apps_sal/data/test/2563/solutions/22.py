@@ -8,7 +8,7 @@ n = int(input())
 for i in range(n):
     s = input().rstrip()
     odds = []
-    evens = [] 
+    evens = []
     for ch in s:
         if int(ch) % 2 == 0:
             evens.append(int(ch))

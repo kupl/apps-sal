@@ -26,4 +26,3 @@ for _ in range(int(input())):
                 output.append(str(even[j]))
                 j += 1
     print("".join(output))
-

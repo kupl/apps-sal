@@ -14,4 +14,3 @@ for i in A:
     else:
         print(stack[-1], end='')
         stack.pop()
-

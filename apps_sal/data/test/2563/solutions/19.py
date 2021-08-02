@@ -1,10 +1,15 @@
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(100000)
+
+
 def getN():
     return int(input())
+
+
 def getList():
     return list(map(int, input().split()))
+
 
 def solve():
     nums = [int(i) for i in input().strip()]
@@ -46,6 +51,7 @@ def solve():
 
     return
 
+
 def main():
     t = getN()
     for times in range(t):
@@ -54,4 +60,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

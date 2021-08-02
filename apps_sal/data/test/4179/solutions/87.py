@@ -9,11 +9,10 @@ ct = 0
 for i in range(N):
     for j in range(M):
         ans += A[i][j] * B[j]
-        if j == M-1:
+        if j == M - 1:
             ANS.append(ans)
             ans = 0
 for x in ANS:
     if x + C > 0:
         ct += 1
 print(ct)
-

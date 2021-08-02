@@ -7,5 +7,6 @@ for i in range(n):
     cnt = c
     for aa, bb in zip(a, b):
         cnt += aa * bb
-    if cnt > 0: ans += 1
+    if cnt > 0:
+        ans += 1
 print(ans)

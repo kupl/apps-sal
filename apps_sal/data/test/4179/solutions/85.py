@@ -9,4 +9,3 @@ for _ in range(n):
     if count + c > 0:
         count2 += 1
 print(count2)
-

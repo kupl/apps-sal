@@ -32,4 +32,3 @@ for i in range(q):
                 ans.append(tmp)
             break
     print("".join(map(str, ans)))
-

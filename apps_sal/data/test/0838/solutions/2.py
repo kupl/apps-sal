@@ -24,4 +24,3 @@ for i in range(m):
     ans += 2**c1 - 1
 ans -= n * m
 print(ans)
-

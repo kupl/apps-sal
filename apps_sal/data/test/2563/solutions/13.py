@@ -3,7 +3,7 @@ for _ in range(int(input())):
     e = []
     o = []
     for i in s:
-        if int(i)%2:
+        if int(i) % 2:
             o.append(int(i))
         else:
             e.append(int(i))

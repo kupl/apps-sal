@@ -1,4 +1,4 @@
-n,m,c = list(map(int, input().split()))
+n, m, c = list(map(int, input().split()))
 b = list(map(int, input().split()))
 a = []
 d = 0
@@ -9,5 +9,3 @@ for i in range(n):
         d += 1
 
 print(d)
-
-

@@ -11,8 +11,8 @@ for _ in range(int(input())):
             odd.append(i)
     #print(even, odd)
     ans = deque()
-    while len(ans)<len(x):
-        if len(even)==0:
+    while len(ans) < len(x):
+        if len(even) == 0:
             ans.append(odd.popleft())
         elif len(odd) == 0:
             ans.append(even.popleft())

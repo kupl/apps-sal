@@ -17,5 +17,5 @@ for i in row_one:
     ans += (1 << i)
 for i in column_one:
     ans += (1 << i)
-ans = ans - 2*(m+n) - m*n
+ans = ans - 2 * (m + n) - m * n
 print(ans)

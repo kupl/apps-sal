@@ -11,4 +11,3 @@ for i in range(m):
     ans += pow(2, x) + pow(2, n - x) - 2
 
 print(ans)
-

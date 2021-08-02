@@ -17,4 +17,3 @@ for _ in range(int(input())):
             print(end=s[j])
             j += 1
     print()
-

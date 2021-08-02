@@ -17,7 +17,7 @@ for _ in range(q):
             s1 = s1 + c
         else:
             s0 = s0 + c
-    
+
     l0 = 0
     l1 = 0
     while len(s0) > l0 and len(s1) > l1:
@@ -27,4 +27,4 @@ for _ in range(q):
         else:
             ans = ans + s0[l0]
             l0 = l0 + 1
-    print (ans + s1[l1:] + s0[l0:])
+    print(ans + s1[l1:] + s0[l0:])

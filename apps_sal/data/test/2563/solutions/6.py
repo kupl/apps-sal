@@ -2,7 +2,7 @@
 def solve1(s):
     # return list
     evens = [u for u in s if u % 2 == 0]
-    odds  = [u for u in s if u % 2 == 1]
+    odds = [u for u in s if u % 2 == 1]
     if len(odds) == 0:
         return evens
     ans = []
@@ -21,12 +21,13 @@ def solve1(s):
         if inserted_odd < len(odds):
             current_odd = odds[inserted_odd]
     return ans
+
 
 def solve2(s):
     # return list
     # lazy code lmao
     odds = [u for u in s if u % 2 == 0]
-    evens  = [u for u in s if u % 2 == 1]
+    evens = [u for u in s if u % 2 == 1]
     if len(odds) == 0:
         return evens
     ans = []
@@ -46,7 +47,8 @@ def solve2(s):
             current_odd = odds[inserted_odd]
     return ans
 
+
 for _ in range(int(input())):
     s = list(map(int, list(input())))
     ans = min(solve1(s), solve2(s))
-    print (''.join(map(str, ans)))
+    print(''.join(map(str, ans)))

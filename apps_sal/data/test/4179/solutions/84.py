@@ -7,11 +7,11 @@ for n in range(N):
     A = list(map(int, input().split()))
     culc = list()
     culc.append(C)
-    
+
     for i in range(M):
         d = B[i] * A[i]
         culc.append(d)
-        
+
     if sum(culc) > 0:
         count += 1
 
