@@ -8,4 +8,3 @@ ans = 0
 for i in range(1, n + 1):
     ans += a[i] * a[i]
 print(ans)
-

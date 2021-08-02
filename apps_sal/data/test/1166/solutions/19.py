@@ -12,5 +12,5 @@ for e in range(n, 0, -1):
     for j in range(i % e, n, e):
         if i != j and l[i] <= l[j] and res[j] == 'B':
             res[i] = 'A'
-            break 
+            break
 print(''.join(res))

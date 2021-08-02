@@ -1,8 +1,8 @@
 numbers = []
 highest = 0
 for _ in range(int(input())):
-	numbers.append(int(input()))
-	if highest < sum(numbers)/len(numbers): highest = sum(numbers)/len(numbers)
+    numbers.append(int(input()))
+    if highest < sum(numbers) / len(numbers): highest = sum(numbers) / len(numbers)
 print(highest)
 
 """

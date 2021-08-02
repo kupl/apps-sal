@@ -4,10 +4,10 @@ indx = [0] * n
 winners = [''] * n
 
 for i, ai in enumerate(a):
-    indx[ai-1] = i
+    indx[ai - 1] = i
 
 for ai in range(n, 0, -1):
-    i = indx[ai-1]
+    i = indx[ai - 1]
     can_win = False
 
     for j in range(i + ai, n, ai):
@@ -27,4 +27,3 @@ for ai in range(n, 0, -1):
         winners[i] = 'B'
 
 print(''.join(winners))
-

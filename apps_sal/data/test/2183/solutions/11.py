@@ -1,6 +1,5 @@
-m,n = list(map(int,input().split()))
+m, n = list(map(int, input().split()))
 if (m + n) != 3:
-    print(abs(m-n))
+    print(abs(m - n))
 else:
-    print(m+n)
-
+    print(m + n)

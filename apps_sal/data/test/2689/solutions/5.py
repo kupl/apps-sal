@@ -5,7 +5,7 @@ s = list(s.split('+'))
 w = []
 for i in range(len(s)):
     f = 0
-    for j in range(1,len(s[i])):
+    for j in range(1, len(s[i])):
         if not s[i][j].isalpha():
             w.append(s[i][:j])
             w.append(s[i][j:])
@@ -21,10 +21,9 @@ for i in range(len(w)):
         if w[i] != '':
             m = int(w[i])
     else:
-        res += m*w[i]
+        res += m * w[i]
         m = 1
 if res == res[::-1]:
     print('Return')
 else:
     print('Continue')
-

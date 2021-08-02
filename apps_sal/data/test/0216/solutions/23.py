@@ -9,4 +9,3 @@ for x in seq:
         tot += x
 
 print(tot)
-

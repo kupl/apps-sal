@@ -13,5 +13,5 @@ def go():
 
     return answer
 
-print(go())
 
+print(go())
