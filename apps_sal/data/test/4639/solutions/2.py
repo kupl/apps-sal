@@ -10,8 +10,8 @@ def calc(n, k):
     a += k
     return "".join(["b" if i == a or i == b else "a" for i in range(n)[::-1]])
 
+
 T = int(input())
 for _ in range(T):
     n, k = list(map(int, input().split()))
     print(calc(n, k))
-

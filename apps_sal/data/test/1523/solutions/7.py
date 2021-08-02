@@ -1,7 +1,7 @@
+import sys
 3
 # -*- coding: utf-8 -*-
 
-import sys
 
 def rl(proc=None):
     if proc is not None:
@@ -9,11 +9,13 @@ def rl(proc=None):
     else:
         return sys.stdin.readline().rstrip()
 
+
 def srl(proc=None):
     if proc is not None:
         return list(map(proc, rl().split()))
     else:
         return rl().split()
+
 
 def main():
     n, k = srl(int)
@@ -38,8 +40,8 @@ def main():
     print(r)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -14,7 +14,6 @@ for x, y in zip(a, b):
         tmp[x] = y
     else:
         var.append(y)
-        
+
 var.sort()
 print(sum(var[:k - len(tmp)]))
-

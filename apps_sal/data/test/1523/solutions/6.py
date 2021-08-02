@@ -1,6 +1,6 @@
-n, k = list(map(int,input().split()))
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 d = {}
 e = []
 for i in range(n):
@@ -26,14 +26,7 @@ print(e)
 '''
 
 w = k - len(set(a))
-#print(w)
+# print(w)
 
-#print(e[0:w])
+# print(e[0:w])
 print(sum(e[0:w]))
-
-
-
-
-
-
-

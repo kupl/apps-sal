@@ -14,8 +14,8 @@ def warshal_floyd(d):
 
 
 N, M, R = list(map(int, input().split()))  # N個の町, M本の道, R個の町を訪れることになった
-town = list([int(x)-1 for x in input().split()])
-distant = [[float('inf')]*N for _ in range(N)]
+town = list([int(x) - 1 for x in input().split()])
+distant = [[float('inf')] * N for _ in range(N)]
 for _ in range(M):
     a, b, c = list(map(int, input().split()))
     a -= 1
@@ -37,4 +37,3 @@ for x in itertools.permutations(town):
         now = x[i]
     ans = min(ans, tmp)
 print((int(ans)))
-

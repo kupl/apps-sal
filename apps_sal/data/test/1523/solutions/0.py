@@ -15,7 +15,7 @@ for i, time in enumerate(times):
     times_i.append((time, i))
 
 times_i.sort()
-jobs_left = k-len(counts_jobs.keys())
+jobs_left = k - len(counts_jobs.keys())
 
 ans = 0
 for time, i in times_i:

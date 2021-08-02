@@ -9,6 +9,5 @@ ABC = I[3 + R:]
 F = floyd_warshall(csr_matrix((ABC[2::3], (ABC[::3], ABC[1::3])), (N + 1, N + 1)), 0).astype(np.int64)
 ans = float('inf')
 for root in itertools.permutations(r, R):
-    ans = min(ans, sum(F[i,j] for i, j in zip(root, root[1:])))
+    ans = min(ans, sum(F[i, j] for i, j in zip(root, root[1:])))
 print(ans)
-

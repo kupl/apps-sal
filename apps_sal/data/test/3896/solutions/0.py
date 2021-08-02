@@ -1,4 +1,6 @@
 M = 10 ** 9 + 7
+
+
 def solve1(x):
     n = len(x)
     x = int(x, 2)
@@ -11,12 +13,11 @@ def solve1(x):
                 ans += 1
     return ans % M
 
+
 def solve2(x):
     return int(x, 2) * pow(2, (len(x) - 1), M) % M
+
 
 x = input()
 # print(solve1(x))
 print(solve2(x))
-
-
-

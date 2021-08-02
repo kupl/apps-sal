@@ -13,7 +13,7 @@ for i in range(1, len(b)):
         break
 
 for i in range(len(b) - 2, -1, -1):
-    postfix[i] = a.rfind(b[i], 0, postfix[i+1])
+    postfix[i] = a.rfind(b[i], 0, postfix[i + 1])
     if postfix[i] == -1:
         break
 
@@ -63,4 +63,3 @@ if res == "":
     print("-")
 else:
     print(res)
-

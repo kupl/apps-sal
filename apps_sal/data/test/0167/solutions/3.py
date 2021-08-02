@@ -1,26 +1,28 @@
-import math 
+import math
+
 
 def prefixIds(a, b):
-	prefSubsId = [math.inf] * len(b)
+    prefSubsId = [math.inf] * len(b)
 
-	# print(a)
-	# print(b)
+    # print(a)
+    # print(b)
 
-	bId = 0
-	aId = 0
+    bId = 0
+    aId = 0
 
-	while aId < len(a):
-		if bId == len(b):
-			break
+    while aId < len(a):
+        if bId == len(b):
+            break
 
-		if a[aId] == b[bId]:
-			prefSubsId[bId] = aId + 1
-			bId += 1
-			aId += 1
-		else:
-			aId += 1
+        if a[aId] == b[bId]:
+            prefSubsId[bId] = aId + 1
+            bId += 1
+            aId += 1
+        else:
+            aId += 1
 
-	return prefSubsId
+    return prefSubsId
+
 
 a = input()
 b = input()
@@ -48,29 +50,29 @@ lBorder = -1
 rBorder = n
 
 while suffLen < n and suffLens[suffLen] == math.inf:
-	suffLen += 1
+    suffLen += 1
 
 curCutLen = suffLen
 # print(curCutLen)
 if curCutLen < minCutLen:
-	minCutLen = curCutLen
-	rBorder = suffLen
+    minCutLen = curCutLen
+    rBorder = suffLen
 
 while prefLen < suffLen and prefLens[prefLen] != math.inf:
-	while suffLen < n and prefLens[prefLen] + suffLens[suffLen] > len(a):
-		# print(suffLen)
-		suffLen += 1
-	# print(prefLen)
-	# print(suffLen)
-	curCutLen = suffLen - prefLen - 1
-	# print(curCutLen)
-	if curCutLen < minCutLen:
-		minCutLen = curCutLen
-		lBorder = prefLen
-		rBorder = suffLen
-	prefLen += 1
-	# print(prefLens[prefLen])
-	# print(suffLens[suffLen])
+    while suffLen < n and prefLens[prefLen] + suffLens[suffLen] > len(a):
+        # print(suffLen)
+        suffLen += 1
+    # print(prefLen)
+    # print(suffLen)
+    curCutLen = suffLen - prefLen - 1
+    # print(curCutLen)
+    if curCutLen < minCutLen:
+        minCutLen = curCutLen
+        lBorder = prefLen
+        rBorder = suffLen
+    prefLen += 1
+    # print(prefLens[prefLen])
+    # print(suffLens[suffLen])
 # 	# print()
 
 # print("pref, suff")
@@ -83,12 +85,11 @@ while prefLen < suffLen and prefLens[prefLen] != math.inf:
 # print(rBorder)
 
 if minCutLen == n:
-	print('-')
+    print('-')
 elif minCutLen == 0:
-	print(b)
+    print(b)
 else:
-	print(b[:lBorder + 1] + b[rBorder:])
+    print(b[:lBorder + 1] + b[rBorder:])
 
 # print(maxPrefLen)
 # print(maxSuffLen)
-

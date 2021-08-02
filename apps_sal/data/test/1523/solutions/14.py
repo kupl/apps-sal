@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 def delmax(lst):
     l = len(lst)
     if l == 0:
@@ -6,9 +8,10 @@ def delmax(lst):
     m = 0
     for i in range(l):
         v = lst[i]
-        if v>m:
+        if v > m:
             m, n = v, i
     del lst[n]
+
 
 n, k = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
@@ -23,6 +26,5 @@ for key in d:
     delmax(u)
     save.extend(u)
 save.sort(reverse=True)
-del save[:n-k]
+del save[:n - k]
 print(sum(save))
-

@@ -1,5 +1,8 @@
 # https://atcoder.jp/contests/abc073/tasks/abc073_d
 
+from scipy.sparse.csgraph import dijkstra
+from scipy.sparse import csr_matrix
+from itertools import product, permutations, combinations
 import sys
 read = sys.stdin.readline
 
@@ -8,12 +11,8 @@ def read_ints():
     return list(map(int, read().split()))
 
 
-
 # default import
-from itertools import product, permutations, combinations
 
-from scipy.sparse import csr_matrix
-from scipy.sparse.csgraph import dijkstra
 
 # ダイクストラか？
 # 全点間の最小距離を取得
@@ -47,4 +46,3 @@ def get_kyori(p):
 for p in permutations(R):
     ans = min(ans, get_kyori(p))
 print((int(ans)))
-

@@ -14,10 +14,12 @@ for i in range(m):
     elB[x] = y
     elBs.add(x)
 w = elAs & elBs
-for k in w: s += max(elA[k], elB[k])
+for k in w:
+    s += max(elA[k], elB[k])
 for k in elAs:
-    if k not in w: s += elA[k]
+    if k not in w:
+        s += elA[k]
 for k in elBs:
-    if k not in w: s += elB[k]
+    if k not in w:
+        s += elB[k]
 print(s)
-

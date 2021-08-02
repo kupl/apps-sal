@@ -5,7 +5,7 @@ N, M, R = list(map(int, input().split()))
 r = tuple(map(int, input().split()))
 
 inf = 10**9
-graph = np.ones((N, N), dtype=int)*inf
+graph = np.ones((N, N), dtype=int) * inf
 for _ in range(M):
     a, b, c = list(map(int, input().split()))
     a -= 1
@@ -23,4 +23,3 @@ for p in permutations(r):
         tmp += int(fy[x][y])
     ans = min(ans, tmp)
 print(ans)
-
