@@ -12,4 +12,3 @@ if count5 == 2 and count7 == 1:
     print("YES")
 else:
     print("NO")
-

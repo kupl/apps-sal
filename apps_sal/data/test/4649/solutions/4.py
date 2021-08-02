@@ -22,14 +22,16 @@ def main():
                     if s[i + j] != "B":
                         count2 += 1
                     if s[i + j] != "R":
-                        count3 += 1 
+                        count3 += 1
                 if (i + j) % 3 == 2:
                     if s[i + j] != "B":
                         count1 += 1
                     if s[i + j] != "R":
                         count2 += 1
                     if s[i + j] != "G":
-                        count3 += 1 
+                        count3 += 1
             min_ans = min(min_ans, count1, count2, count3)
         print(min_ans)
+
+
 main()

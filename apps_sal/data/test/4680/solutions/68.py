@@ -8,4 +8,3 @@ for i, e in enumerate(x):
 
     f &= (tmp == e)
 print(("YES" if f else "NO"))
-

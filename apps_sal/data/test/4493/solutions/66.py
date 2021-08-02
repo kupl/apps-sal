@@ -14,15 +14,11 @@ for a1 in range(101):
                c[2][0] != a3 + b1 or \
                c[2][1] != a3 + b2 or \
                c[2][2] != a3 + b3:
-               ok = False
+                ok = False
             if ok:
                 ans = True
 
 if ans:
     print("Yes")
 else:
-    print("No")   
-
-
-
-
+    print("No")

@@ -1,7 +1,7 @@
 # 整数の入力
 a, b, c = map(int, input().split())
 # 合計17でないときNOを出力
-if not (a+b+c == 17):
+if not (a + b + c == 17):
     print("NO")
     return
 # 7を含まないときNOを出力

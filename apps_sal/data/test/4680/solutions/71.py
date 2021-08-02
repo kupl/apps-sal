@@ -11,4 +11,3 @@ if l5 == 2 and l7 == 1:
     print("YES")
 else:
     print("NO")
-

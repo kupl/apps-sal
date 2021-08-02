@@ -1,4 +1,4 @@
-c = [list(map(int,input().split())) for i in range(3)]
+c = [list(map(int, input().split())) for i in range(3)]
 x = [0] * 3
 y = [0] * 3
 for i in range(3):

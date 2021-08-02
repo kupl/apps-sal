@@ -9,4 +9,6 @@ def iroha():
 
 def __starting_point():
     iroha()
+
+
 __starting_point()

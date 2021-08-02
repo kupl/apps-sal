@@ -1,10 +1,8 @@
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 a.sort()
 
-if a == [5,5,7]:
+if a == [5, 5, 7]:
     print('YES')
 else:
     print('NO')
-
-

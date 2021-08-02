@@ -1,7 +1,7 @@
 c1 = list(map(int, input().split()))
 c2 = list(map(int, input().split()))
 c3 = list(map(int, input().split()))
-c = [c1,c2,c3]
+c = [c1, c2, c3]
 for a1 in range(100):
     b1 = c1[0] - a1
     b2 = c1[1] - a1

@@ -4,5 +4,6 @@ def atc_042a(input_value: str) -> str:
         return "YES"
     return "NO"
 
+
 input_value_1 = input()
 print(atc_042a(input_value_1))

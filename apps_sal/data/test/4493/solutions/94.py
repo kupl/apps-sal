@@ -5,4 +5,3 @@ if ds[0] == ds[1] == ds[2]:
     print("Yes")
 else:
     print("No")
-

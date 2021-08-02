@@ -1,11 +1,14 @@
-import heapq,sys
+import heapq
+import sys
+
+
 def __starting_point():
     path = dict()
     input()
     for line in sys.stdin:
         if line.strip() == '':
             break
-        n,m = [int(i) for i in line.strip().split()]
+        n, m = [int(i) for i in line.strip().split()]
         if n not in path:
             path[n] = [m]
         else:
@@ -24,8 +27,8 @@ def __starting_point():
             ans.append(the_next)
             visited.add(the_next)
             for i in path[the_next]:
-                heapq.heappush(pq,i)
+                heapq.heappush(pq, i)
     print(' '.join([str(i) for i in ans]))
-            
+
 
 __starting_point()

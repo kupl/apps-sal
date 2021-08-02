@@ -3,12 +3,14 @@ c = [list(map(int, input().split())) for _ in range(3)]
 a = [0, 0, 0]
 b = [0, 0, 0]
 
+
 def check(c, a, b):
     for i in range(3):
         for j in range(3):
             if a[i] + b[j] != c[i][j]:
                 return False
     return True
+
 
 for i in range(101):
     b[0] = i
@@ -23,4 +25,3 @@ for i in range(101):
         return
 
 print("No")
-

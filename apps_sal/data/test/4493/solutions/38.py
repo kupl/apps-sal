@@ -10,11 +10,11 @@ def main():
                 for l in range(3):
                     b.append(c3[l] - k)
                 for l in range(3):
-                    if j+b[l] != c2[l]:
+                    if j + b[l] != c2[l]:
                         flag = False
                         break
                 for l in range(3):
-                    if i+b[l] != c1[l]:
+                    if i + b[l] != c1[l]:
                         flag = False
                         break
                 if flag:
@@ -23,7 +23,9 @@ def main():
 
     print('No')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

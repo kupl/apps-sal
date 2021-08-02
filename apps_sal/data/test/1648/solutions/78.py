@@ -1,22 +1,25 @@
 # -*- coding: utf-8 -*-
+from functools import lru_cache, reduce
+from bisect import bisect_left, bisect_right
+import random
+import operator
+import string
 import sys
 from collections import deque, defaultdict, namedtuple
 import heapq
 from math import sqrt, factorial, gcd, ceil, atan, pi
-def input(): return sys.stdin.readline()[:-1] # warning not \n
+def input(): return sys.stdin.readline()[:-1]  # warning not \n
+
+
 # def input(): return sys.stdin.buffer.readline()[:-1] # warning bytes
 # def input(): return sys.stdin.buffer.readline().strip() # warning bytes
 # def input(): return sys.stdin.buffer.readline().decode('utf-8')
-import string
-import operator
-import random
 # string.ascii_lowercase
-from bisect import bisect_left, bisect_right
-from functools import lru_cache, reduce
-MOD = int(1e9)+7
+MOD = int(1e9) + 7
 INF = float('inf')
 
 # sys.setrecursionlimit(int(1e6))
+
 
 class Combination:
     def __init__(self, n_max, mod=10 ** 9 + 7):
@@ -34,14 +37,14 @@ class Combination:
             facinv.append(f)
         facinv.reverse()
 
- 
-    def __call__(self, n, r):  
+    def __call__(self, n, r):
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
- 
+
     def nCr(self, n, r):
         if not 0 <= r <= n:
             return 0
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
+
 
 def solve():
     # n = int(input())
@@ -58,14 +61,15 @@ def solve():
 
     def coef(n, k):
         if k > n: return 0
-        return (fact(n) * pow((fact(k) * fact(n - k))%MOD, MOD - 2, MOD)) % MOD
+        return (fact(n) * pow((fact(k) * fact(n - k)) % MOD, MOD - 2, MOD)) % MOD
 
-    for i in range(1, blue+1):
-        print(((coef(red+1, i) * coef(blue-1, i-1))%MOD))
+    for i in range(1, blue + 1):
+        print(((coef(red + 1, i) * coef(blue - 1, i - 1)) % MOD))
+
 
 T = 1
 # T = int(input())
-for case in range(1,T+1):
+for case in range(1, T + 1):
     ans = solve()
 
 
@@ -79,4 +83,3 @@ abba
 (m + 1)
 
 """
-
