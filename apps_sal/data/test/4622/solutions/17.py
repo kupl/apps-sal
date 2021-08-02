@@ -3,10 +3,9 @@ a = list(map(int, input().split()))
 a = sorted(a)
 ans = "YES"
 
-for i in range(n-1):
-    if a[i] == a[i+1]:
+for i in range(n - 1):
+    if a[i] == a[i + 1]:
         ans = "NO"
         break
 
 print(ans)
-

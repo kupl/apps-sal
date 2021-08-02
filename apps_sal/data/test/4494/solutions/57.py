@@ -1,4 +1,4 @@
-S=input()
-if S=="ABC":
+S = input()
+if S == "ABC":
     print("ARC")
-else:print("ABC")
+else: print("ABC")

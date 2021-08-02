@@ -5,4 +5,3 @@ if n == 'ABC':
 
 if n == 'ARC':
     print('ABC')
-

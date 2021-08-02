@@ -3,7 +3,6 @@ A = list(map(int, input().split()))
 
 ans = "NO"
 if N == len(set(A)):
-  ans = "YES"
+    ans = "YES"
 
 print(ans)
-

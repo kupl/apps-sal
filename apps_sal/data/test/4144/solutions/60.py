@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     N = int(input())
     mod = 7 + 10 ** 9
@@ -8,9 +9,11 @@ def solve():
     noZeroAndNine = pow(8, N, mod)
     print((total - 2 * noZeroOrNine + noZeroAndNine) % mod)
 
+    return
 
-    return 
 
 def __starting_point():
     solve()
+
+
 __starting_point()

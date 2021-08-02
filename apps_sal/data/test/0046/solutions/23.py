@@ -20,4 +20,3 @@ for x in range(5):
     ans += nf[x] * mf[y]
 
 print(ans)
-

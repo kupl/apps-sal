@@ -4,11 +4,13 @@ a = [int(x) for x in stdin.readline().split()]
 
 q = int(stdin.readline())
 
-def gcd(a,b):
+
+def gcd(a, b):
     while a != 0:
-        a,b = b%a, a
+        a, b = b % a, a
     return b
-    
+
+
 totals = {}
 new = {}
 
@@ -16,7 +18,7 @@ for x in a[::-1]:
     old = new
     new = {}
     for y in old:
-        g = gcd(x,y)
+        g = gcd(x, y)
         if g in new:
             new[g] += old[y]
         else:
@@ -30,8 +32,6 @@ for x in a[::-1]:
             totals[y] += new[y]
         else:
             totals[y] = new[y]
-    
-            
 
 
 for x in range(q):
@@ -40,4 +40,3 @@ for x in range(q):
         print(totals[c])
     else:
         print(0)
-

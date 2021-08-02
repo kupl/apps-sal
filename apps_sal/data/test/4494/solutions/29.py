@@ -1,5 +1,5 @@
-a=input()
-if a=="ABC":
-  	print("ARC")
+a = input()
+if a == "ABC":
+    print("ARC")
 else:
-  print("ABC")
+    print("ABC")

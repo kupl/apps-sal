@@ -1,7 +1,6 @@
-S=input()
+S = input()
 
-if S=='ABC':
+if S == 'ABC':
     print('ARC')
 else:
     print('ABC')
-

@@ -1,9 +1,9 @@
-n=int(input())
-S=list(map(int,input().split()))
+n = int(input())
+S = list(map(int, input().split()))
 
-S_set=set(S)
+S_set = set(S)
 
-if len(S)==len(S_set):
+if len(S) == len(S_set):
     print('YES')
 
 else:

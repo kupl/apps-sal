@@ -1,6 +1,6 @@
-s=input()
+s = input()
 
-if s.find('B')==1:
-  print('ARC')
+if s.find('B') == 1:
+    print('ARC')
 else:
-  print('ABC')
+    print('ABC')

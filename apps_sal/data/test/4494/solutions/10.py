@@ -1,5 +1,5 @@
 x = input()
 if x[1] == 'B':
-  print("ARC")
+    print("ARC")
 else:
-  print("ABC")
+    print("ABC")

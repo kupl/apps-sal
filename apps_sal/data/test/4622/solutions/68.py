@@ -1,7 +1,7 @@
 n = int(input())
-a = map(int,input().split())
+a = map(int, input().split())
 
 if len(set(a)) == n:
-  print("YES")
+    print("YES")
 else:
-  print("NO")
+    print("NO")

@@ -9,5 +9,7 @@ def main():
             d[j] += 1
     for t in d.keys():
         if (d[t] == n):
-            print(t, end = " ")
+            print(t, end=" ")
+
+
 main()
