@@ -14,4 +14,3 @@ for num, a in enumerate(A):
     DP %= mod
 
 print((DP[s]))
-

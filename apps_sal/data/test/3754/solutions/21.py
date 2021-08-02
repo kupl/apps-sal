@@ -26,4 +26,3 @@ n = int(input())
 ddd = list(map(int, input().split()))
 
 print((solve(n, ddd)))
-

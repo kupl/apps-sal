@@ -12,4 +12,3 @@ for a in A[1:]:
     dpn %= mod
     dp = dpn
 print((dp[S]))
-

@@ -14,4 +14,3 @@ for a in A:
     DP %= mod
 
 print((DP[s]))
-

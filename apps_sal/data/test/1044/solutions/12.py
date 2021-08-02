@@ -18,5 +18,4 @@ a = list(map(int, input().split(' ')))
 b = list(accumulate((~a[i] & 1 for i in range(n)), lambda i, j: i ^ j))
 
 for i in b:
-	print('2' if i == 0 else '1')
-
+    print('2' if i == 0 else '1')

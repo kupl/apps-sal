@@ -1,6 +1,6 @@
 import numpy as np
 
-N,S = map(int, input().split())
+N, S = map(int, input().split())
 A = list(map(int, input().split()))
 
 MOD = 998244353

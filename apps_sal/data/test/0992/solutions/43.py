@@ -15,4 +15,3 @@ for e in a:
 
 ans = dp[s]
 print(ans)
-

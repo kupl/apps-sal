@@ -18,5 +18,3 @@ for i in range(N - 2):
     perm %= MOD
 
 print((perm * pi_d % MOD))
-
-

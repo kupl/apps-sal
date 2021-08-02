@@ -10,4 +10,3 @@ for a in A:
     coef[a:] += coef2
     coef %= mod
 print((coef[S]))
-

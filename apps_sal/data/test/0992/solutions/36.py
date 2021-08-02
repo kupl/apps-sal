@@ -14,4 +14,5 @@ def f_knapsack_for_all_subsets_power_series(MOD=998244353, MAX=3010):
         f = f_next
     return f[S]
 
+
 print(f_knapsack_for_all_subsets_power_series())

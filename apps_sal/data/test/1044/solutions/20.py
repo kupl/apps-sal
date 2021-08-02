@@ -22,4 +22,3 @@ for i in range(1, n):
         answers.append(1)
 for i in range(n):
     print(answers[i])
-

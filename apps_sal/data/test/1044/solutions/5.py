@@ -12,4 +12,3 @@ for v in c:
         print(2)
     else:
         print(1)
-

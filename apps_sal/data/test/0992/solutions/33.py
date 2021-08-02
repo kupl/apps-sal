@@ -19,4 +19,5 @@ def main():
 
     print(dp[S])
 
+
 main()

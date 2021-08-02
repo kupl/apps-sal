@@ -2,7 +2,10 @@ import sys
 
 import numpy as np
 
-input = lambda: sys.stdin.readline().rstrip()
+
+def input(): return sys.stdin.readline().rstrip()
+
+
 MOD = 998244353
 
 N, S = list(map(int, input().split()))
@@ -17,4 +20,3 @@ for a in A:
     dp = f
 
 print((dp[S]))
-

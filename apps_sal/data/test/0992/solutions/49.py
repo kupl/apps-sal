@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def main():
     n, s = map(int, input().split())
     a = [int(i) for i in input().split()]
@@ -12,6 +13,9 @@ def main():
         dp[i + 1, ai:] = (dp[i + 1, ai:] + dp[i, :-ai]) % mod
     print(dp[n][s])
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

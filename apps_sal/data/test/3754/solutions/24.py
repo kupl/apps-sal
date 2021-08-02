@@ -16,9 +16,8 @@ for i in range(n):
 sum -= n
 answer = prod
 
-for i in range(n-2):
+for i in range(n - 2):
     prod *= sum - i
     prod %= ppp
 
 print(prod)
-

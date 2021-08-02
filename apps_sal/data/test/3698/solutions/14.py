@@ -16,7 +16,7 @@ def factorial(n):
 
 
 def choose(n, k):
-    return factorial(n) * inv(factorial(k) * factorial(n-k)) % MOD
+    return factorial(n) * inv(factorial(k) * factorial(n - k)) % MOD
 
 
 def numbers_with_bits(length, n):
@@ -58,5 +58,5 @@ def solve(n, k):
             ans %= MOD
     return ans
 
-print(solve(n=input(), k=int(input())))
 
+print(solve(n=input(), k=int(input())))

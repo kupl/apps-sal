@@ -5,4 +5,3 @@ for i in input().split():
     if a % 2 == 0:
         now = 3 - now
     print(now)
-
