@@ -9,7 +9,7 @@ max_x, max_y = 0, 0
 for _ in range(n):
     x, y = list(map(int, input().split()))
     max_x = max(max_x, x)
-    max_y = max(max_y, y)    
+    max_y = max(max_y, y)
     ref[(x, y)] = 2
     if x == 0:
         ref[(x, y)] -= 1
@@ -24,7 +24,7 @@ for w in ws:
         ans = []
         break
     x, y = front.pop(w)
-    ans.append((x, y))    
+    ans.append((x, y))
     for dx, dy in ((1, 0), (0, 1)):
         nx, ny = x + dx, y + dy
         if (nx, ny) not in ref:
@@ -38,4 +38,3 @@ if ans:
     print('\n'.join('{} {}'.format(x, y) for x, y in ans))
 else:
     print('NO')
-

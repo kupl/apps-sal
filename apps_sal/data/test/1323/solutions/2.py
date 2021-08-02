@@ -9,7 +9,7 @@ ansA = sumB
 ansB = sumA
 
 for i in range(1, n):
-    ansA += min(A[i],sumB)
+    ansA += min(A[i], sumB)
 for i in range(1, m):
     ansB += min(B[i], sumA)
-print(min(ansA,ansB))
+print(min(ansA, ansB))

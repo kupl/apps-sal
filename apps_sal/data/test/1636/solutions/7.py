@@ -6,9 +6,9 @@ def main():
         x, y = [int(i) for i in input().split(' ')]
         c = y - x
         if c > 0:
-            diag[c] = max(x+1, diag[c])
+            diag[c] = max(x + 1, diag[c])
         else:
-            diag[c] = max(y+1, diag[c])
+            diag[c] = max(y + 1, diag[c])
 
     table = set()
     for i in range(100005):
@@ -31,11 +31,11 @@ def main():
         use[v] += 1
 
         if use[v] > diag[v]:
-            print ('NO')
+            print('NO')
             return
 
-        if (x-1, y) not in table or (x, y-1) not in table:
-            print ('NO')
+        if (x - 1, y) not in table or (x, y - 1) not in table:
+            print('NO')
             return
         table.add((x, y))
         result.append((x, y))
@@ -43,5 +43,6 @@ def main():
     print('YES')
     for v in result:
         print(v[0], v[1])
+
 
 main()
