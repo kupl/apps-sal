@@ -18,4 +18,3 @@ for _ in range(t):
         print(1, ans)
     else:
         print('NO')
-

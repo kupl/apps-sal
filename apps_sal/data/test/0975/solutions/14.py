@@ -2,11 +2,11 @@ n = int(input())
 sher = str(input())
 mor = str(input())
 
-sherd = [0,0,0,0,0,0,0,0,0,0]
-mord = [0,0,0,0,0,0,0,0,0,0]
+sherd = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+mord = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-sherd2 = [0,0,0,0,0,0,0,0,0,0]
-mord2 = [0,0,0,0,0,0,0,0,0,0]
+sherd2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+mord2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 for i in range(n):
     if sher[i] == '':
@@ -29,18 +29,18 @@ for j in range(10):
     if diff > 0:
         mins += diff
     elif i > 0:
-        mord[i-1] += -diff
+        mord[i - 1] += -diff
 
 # print(mord2)
 # print(sherd2)
 
 for j in range(9):
     i = 9 - j
-    diff = mord2[i] - sherd2[i-1]
+    diff = mord2[i] - sherd2[i - 1]
     if diff > 0:
-        maxs += sherd2[i-1]
+        maxs += sherd2[i - 1]
         if i > 0:
-            mord2[i-1] += diff
+            mord2[i - 1] += diff
     else:
         maxs += mord2[i]
 

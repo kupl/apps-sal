@@ -5,4 +5,5 @@ def __starting_point():
     else:
         print("Not Weird")
 
+
 __starting_point()

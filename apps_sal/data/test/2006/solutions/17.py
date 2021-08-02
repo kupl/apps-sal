@@ -4,6 +4,8 @@ Created on 27.4.2016
 @author: Ivan
 '''
 import sys
+
+
 def main():
     line = input()
     parts = line.split(" ")
@@ -24,6 +26,10 @@ def main():
         pairs.append((y - x))
     pairs = set(pairs)
     print(str(len(pairs)))
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

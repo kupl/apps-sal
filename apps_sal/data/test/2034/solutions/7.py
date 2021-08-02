@@ -30,5 +30,5 @@ for i in range(1, n + 1):
         queue.append((i, 0))
     if not visit[i] and not bfs(i):
         ans += 1
-        
+
 sys.stdout.write(str(ans))

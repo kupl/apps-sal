@@ -36,5 +36,3 @@ for i in s:
 
 print(mi)
 print(ma)
-
-

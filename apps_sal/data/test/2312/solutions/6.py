@@ -6,4 +6,3 @@ for _ in range(int(input())):
     for i in range(1, n):
         ok |= b[i] == b[i - 1]
     print("YES" if ok else "NO")
-

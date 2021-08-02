@@ -21,4 +21,3 @@ for i in range(1, n + 1):
                 f[u] = 1
     ans += flag
 print(ans)
-

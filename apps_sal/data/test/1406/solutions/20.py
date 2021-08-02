@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 import sys
 
+
 def main():
-    n,k,d = map(int,sys.stdin.readline().split())
+    n, k, d = map(int, sys.stdin.readline().split())
 
     blocksize = n
 
     for i in range(d):
-        blocksize = blocksize//k + (blocksize%k != 0)
+        blocksize = blocksize // k + (blocksize % k != 0)
     # print(blocksize)
 
     if(blocksize > 1):
@@ -30,4 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

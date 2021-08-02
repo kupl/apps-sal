@@ -23,4 +23,3 @@ for a_i in a:
 
 print(punches)
 print(cur_b)
-

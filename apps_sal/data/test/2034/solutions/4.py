@@ -1,7 +1,7 @@
 import sys
 
 n, m = [int(x) for x in input().split()]
-E = [[] for i in range(1, n+1)]
+E = [[] for i in range(1, n + 1)]
 for line in sys.stdin:
     u, v = [int(x) - 1 for x in line.split()]
     E[u].append(v)
@@ -26,4 +26,3 @@ for v in range(n):
     ans += 0 if hasCycle else 1
 
 print(ans)
-

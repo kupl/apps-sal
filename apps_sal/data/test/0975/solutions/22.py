@@ -22,4 +22,4 @@ for i in range(n):
         marked2[idx2] = True;
         saves += 1;
 flicks_t = n - saves;
-print("%d\n%d" %(flicks_t, flicks_g));
+print("%d\n%d" % (flicks_t, flicks_g));

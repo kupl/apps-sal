@@ -12,4 +12,3 @@ for l in [input() for _ in range(n)]:
     distances[distance] = 1
 
 print(distances.count(1))
-

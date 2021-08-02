@@ -27,7 +27,7 @@ ma = ma2
 
 max_f = 0
 for nu in s:
-    for x in range(nu+1, 10):
+    for x in range(nu + 1, 10):
         if ma[x] > 0:
             ma[x] -= 1
             max_f += 1
