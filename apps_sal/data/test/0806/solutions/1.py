@@ -1,12 +1,14 @@
 import sys
-mod = 10**9+7
+mod = 10**9 + 7
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
 
+
 def main():
-    n,l,r = LI()
-    a = [1,0,0]
-    t = [0,0,0]
+    n, l, r = LI()
+    a = [1, 0, 0]
+    t = [0, 0, 0]
     k = r // 3
     t = [k] * 3
     if r % 3 > 0:
@@ -25,13 +27,10 @@ def main():
         for i in range(3):
             k = a[i]
             for j in range(3):
-                u[(i+j)%3] += k * t[j] % mod
+                u[(i + j) % 3] += k * t[j] % mod
         a = [c % mod for c in u]
 
     return a[0]
 
 
-
 print(main())
-
-

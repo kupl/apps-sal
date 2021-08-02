@@ -30,7 +30,7 @@ for i in range(n):
     if i == col:
         continue
     else:
-        #print(cursum)
+        # print(cursum)
         cursum = sum(tmat[i])
         if cursum != rowsum:
             print(-1)
@@ -60,4 +60,3 @@ if left != right or left != rowsum:
     print(-1)
     return
 print(tochange)
-

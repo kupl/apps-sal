@@ -8,4 +8,3 @@ elif sum(wn) % 200 != 0:
     print("NO")
 else:
     print("YES")
-

@@ -9,10 +9,10 @@ if n == 1:
     print(1)
     return
 
-checksum = -1;
+checksum = -1
 
 left = 0
-mis = -1;
+mis = -1
 for i, col in enumerate(grid):
     tmp = sum(col)
     if 0 in col:
@@ -37,7 +37,7 @@ for i in range(n):
     colsum = 0
     rowsum = 0
     diag1 += grid[i][i]
-    diag2 += grid[n-1-i][i]
+    diag2 += grid[n - 1 - i][i]
     for j in range(n):
         colsum += grid[i][j]
         rowsum += grid[j][i]
@@ -51,4 +51,3 @@ if diag1 != checksum or diag2 != checksum:
     return
 
 print(checksum - mis)
-

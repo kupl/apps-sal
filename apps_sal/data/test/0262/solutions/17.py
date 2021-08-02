@@ -15,7 +15,7 @@ for line in grid:
     have_zero = False
     s = 0
     for n in line:
-        if n ==0:
+        if n == 0:
             have_zero = True
         else:
             s += n
@@ -31,8 +31,8 @@ for x in range(lines):
     have_zero = False
     s = 0
     for y in range(lines):
-        n =  grid[y][x]
-        if n ==0:
+        n = grid[y][x]
+        if n == 0:
             have_zero = True
         else:
             s += n
@@ -47,8 +47,8 @@ for x in range(lines):
 s = 0
 have_zero = False
 for x in range(lines):
-    n =  grid[x][x]
-    if n ==0:
+    n = grid[x][x]
+    if n == 0:
         have_zero = True
     else:
         s += n
@@ -65,8 +65,8 @@ elif no_zero != s:
 s = 0
 have_zero = False
 for x in range(lines):
-    n =  grid[x][lines -1 - x]
-    if n ==0:
+    n = grid[x][lines - 1 - x]
+    if n == 0:
         have_zero = True
     else:
         s += n
@@ -92,4 +92,3 @@ else:
             print(no_zero - num)
     else:
         print(-1)
-

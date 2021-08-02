@@ -1,5 +1,8 @@
 from collections import defaultdict
-import sys, os, math
+import sys
+import os
+import math
+
 
 def __starting_point():
     #n, m = list(map(int, input().split()))
@@ -13,10 +16,10 @@ def __starting_point():
         for j in range(n):
             if s[i][j] == 0:
                 pos = [i, j]
-                break;
+                break
     val = sum(s[(pos[0] + 1) % n])
     s[pos[0]][pos[1]] = max(val - sum(s[pos[0]]), 1)
-    #check
+    # check
     for i in range(n):
         if sum(s[i]) != val:
             print(-1)
@@ -35,10 +38,12 @@ def __starting_point():
     if t != val or tt != val:
         print(-1)
         return
-           
+
     print(s[pos[0]][pos[1]])
     '''
     for i in range(n):
         print(' '.join(map(str, s[i])))
     '''
+
+
 __starting_point()

@@ -8,4 +8,3 @@ if one_hundred % 2 == 1 or (two_hundred % 2 == 1 and one_hundred == 0):
     print('NO')
 else:
     print('YES')
-

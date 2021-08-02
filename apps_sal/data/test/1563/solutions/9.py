@@ -12,19 +12,19 @@ for i in color:
         ans[i] = set()
 
 for i in range(m):
-    if color[x[i]-1] != color[y[i]-1]:
-        ans[color[x[i]-1]].add(color[y[i]-1])
-        ans[color[y[i]-1]].add(color[x[i]-1])
+    if color[x[i] - 1] != color[y[i] - 1]:
+        ans[color[x[i] - 1]].add(color[y[i] - 1])
+        ans[color[y[i] - 1]].add(color[x[i] - 1])
 
 for i in ans:
     Max = i
     break
 
-#print(ans)
+# print(ans)
 MaxLen = len(ans[Max])
 for i in ans:
     LAns = len(ans[i])
-    if (MaxLen < LAns) or ((MaxLen == LAns) and (Max>i)):
+    if (MaxLen < LAns) or ((MaxLen == LAns) and (Max > i)):
         Max = i
         MaxLen = LAns
 

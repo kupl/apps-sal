@@ -44,4 +44,3 @@ for j in b:
         n += calc(a[i: t + 1])
     i = t
 stdout.write(f'{n}\n')
-

@@ -14,4 +14,3 @@ if (k == int(k)):
     print('YES' if f[k] == 1 else 'NO')
 else:
     print('NO')
-

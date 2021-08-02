@@ -1,5 +1,5 @@
 n = int(input())
-cost = list(map(int,input().split()))
+cost = list(map(int, input().split()))
 sum = 0
 for a in cost:
     sum += a

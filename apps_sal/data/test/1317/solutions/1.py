@@ -11,4 +11,3 @@ for m1 in range(m):
         if (m1 * m1 + m2 * m2) % m == 0:
             res += nOfM[m1] * nOfM[m2]
 print(res)
-

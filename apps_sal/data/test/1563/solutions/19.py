@@ -3,6 +3,7 @@ from sys import stdin
 
 input = stdin.readline
 
+
 class N:
     def __init__(self, c) -> None:
         self.c = c
@@ -41,5 +42,6 @@ def __starting_point():
         print(narr[0][0])
     else:
         print(min(carr))
+
 
 __starting_point()

@@ -5,7 +5,7 @@ for i in range(n):
 list_str = []
 if line == [[0]]:
     print(1)
-else:    
+else:
     for i in range(n):
         plus = False
         answer = 0
@@ -22,8 +22,8 @@ else:
         print(-1)
     else:
         chislo1 = min(list_str) - osob
-        s1 = min(list_str)    
-        list_str = []    
+        s1 = min(list_str)
+        list_str = []
         for i in range(n):
             plus = False
             answer = 0
@@ -40,7 +40,7 @@ else:
             print(-1)
         else:
             chislo2 = min(list_str) - osob
-            s2 = min(list_str)    
+            s2 = min(list_str)
             answer = 0
             plus = False
             for i in range(n):
@@ -51,7 +51,7 @@ else:
             if not plus:
                 s3 = answer
                 chislo3 = chislo2
-            else:    
+            else:
                 s3 = s2
                 chislo3 = s2 - answer
             answer = 0
@@ -64,11 +64,10 @@ else:
             if not plus:
                 s4 = answer
                 chislo4 = chislo2
-            else:    
-                chislo4 = s2 - answer 
-                s4 = s2 
+            else:
+                chislo4 = s2 - answer
+                s4 = s2
             if s1 == s2 and s1 == s3 and s1 == s4 and chislo1 == chislo2 and chislo1 == chislo3 and chislo1 == chislo4 and s1 > 0 and chislo1 > 0:
                 print(chislo1)
             else:
                 print(-1)
-

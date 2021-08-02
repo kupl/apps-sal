@@ -1,14 +1,14 @@
-n = int( input() )
-w = list( map( int, input().split() ) )
+n = int(input())
+w = list(map(int, input().split()))
 
 w1, w2 = 0, 0
 
-w.sort( reverse = True )
+w.sort(reverse=True)
 
-for num in w: 
-    if ( w1 <= w2 ): 
+for num in w:
+    if (w1 <= w2):
         w1 += num
-    else: 
+    else:
         w2 += num
-         
-print ( "YES" ) if ( w1 == w2 ) else print ( "NO" )
+
+print("YES") if (w1 == w2) else print("NO")

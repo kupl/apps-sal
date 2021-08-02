@@ -10,4 +10,3 @@ for i in w:
         break
 if h != ans:
     print("NO")
-

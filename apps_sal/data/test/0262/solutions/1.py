@@ -35,7 +35,7 @@ s2 = 0
 s3 = 0
 for i in range(n):
     s2 += mat[i][i]
-    s3 += mat[i][n-i-1]
+    s3 += mat[i][n - i - 1]
 if s2 != s or s3 != s:
     print(-1)
     return
