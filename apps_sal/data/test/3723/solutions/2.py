@@ -1,5 +1,6 @@
 import functools
 
+
 @functools.lru_cache(maxsize=10000)
 def factor(n):
     res = []
@@ -14,6 +15,7 @@ def factor(n):
         res.append(n)
     return set(res)
 
+
 num = int(input())
 
 poks = list(map(int, input().split()))[:num]
@@ -25,7 +27,7 @@ for p in poks:
             c[d] += 1
         else:
             c[d] = 1
-            
+
 if c:
     print(max(c.values()))
 else:

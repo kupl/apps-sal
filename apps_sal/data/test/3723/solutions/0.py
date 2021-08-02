@@ -12,4 +12,3 @@ for i in range(2, N):
         p[j] = 1
         ans[i] += f[j]
 print(max(1, ans.most_common(1)[0][1]))
-

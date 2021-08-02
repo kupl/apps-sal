@@ -38,4 +38,3 @@ for i in range(N):
     useless |= (A == grid)
 
 print((A[useless != 1].sum() // 2))
-

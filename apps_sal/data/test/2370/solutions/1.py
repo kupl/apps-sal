@@ -21,4 +21,3 @@ if (impossible ^ np.eye(N, dtype=bool)).sum():
     print((-1))
 else:
     print((int(A[~useless].sum() // 2)))
-

@@ -7,13 +7,13 @@ from scipy.sparse.csgraph import floyd_warshall
 def solve():
     N = int(input())
     A = np.array([input().split() for _ in range(N)], dtype=np.int64).reshape(N, N)
-    
+
     B = floyd_warshall(csr_matrix(A), directed=False)
-    
+
     if np.any(B < A):
         print((-1))
         return
-    
+
     np.fill_diagonal(B, np.inf)
     for i in range(N - 1):
         for j in range(i + 1, N):
@@ -24,5 +24,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

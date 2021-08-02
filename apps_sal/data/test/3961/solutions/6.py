@@ -1,10 +1,10 @@
 #! python3
 numRooms = int(input())
-links = [0]+[int(x) for x in input().split()]
-portalPaths = [0]*(numRooms+2)
+links = [0] + [int(x) for x in input().split()]
+portalPaths = [0] * (numRooms + 2)
 for index in range(1, numRooms + 1):
-	portalPaths[index + 1] = (2*portalPaths[index] - portalPaths[links[index]] + 2) % 1000000007
-print(portalPaths[numRooms+1] % 1000000007)
+    portalPaths[index + 1] = (2 * portalPaths[index] - portalPaths[links[index]] + 2) % 1000000007
+print(portalPaths[numRooms + 1] % 1000000007)
 
 # print(numRooms)
 # print(links)
@@ -26,4 +26,3 @@ print(portalPaths[numRooms+1] % 1000000007)
 # 		current += 1
 
 # print(sum(crosses) % 1000000007)
-

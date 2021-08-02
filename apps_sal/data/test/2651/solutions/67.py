@@ -7,4 +7,5 @@ def d_rectangles(MOD=10**9 + 7):
     ans2 = sum([y * (2 * k - M - 1) for k, y in enumerate(Y, 1)])
     return (ans1 * ans2) % MOD
 
+
 print(d_rectangles())

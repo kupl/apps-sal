@@ -1,6 +1,7 @@
 import numpy as np
 import sys
 
+
 def read_data():
     try:
         LOCAL_FLAG
@@ -21,6 +22,7 @@ def read_data():
             lines.append(input())
     return lines
 
+
 raw_data = read_data()
 tarray = []
 for each in raw_data:
@@ -34,9 +36,11 @@ def Restoring_Road_Network2():
     not_available = False
     for k in range(0, N):
         for i in range(0, N):
-            if(k==i): continue
+            if(k == i):
+                continue
             for j in range(0, N):
-                if((i==j) or (j==k)): continue
+                if((i == j) or (j == k)):
+                    continue
                 if(A[i][k] + A[k][j] < A[i][j]):
                     not_availabel = True
                 if(A[i][k] + A[k][j] == A[i][j]):
@@ -59,27 +63,29 @@ def Restoring_Road_Network2():
                     total_dis += A[i][j]
         print(total_dis)
 
+
 def Restoring_Road_Network3():
 
     import scipy.sparse.csgraph as graph
 
-    MAX = [10000000000]*N  # should be > 2*10**9
+    MAX = [10000000000] * N  # should be > 2*10**9
     d = np.diag(MAX)
     C = A.copy()
     C += d
     total_dis = 0
     n_path = 0
-    for i in range(N-1):
-        for j in range(i+1, N):
+    for i in range(N - 1):
+        for j in range(i + 1, N):
             dis_two_node = np.min(C[i] + C[j])
-            if dis_two_node > C[i,j]:
-                total_dis += C[i,j]
+            if dis_two_node > C[i, j]:
+                total_dis += C[i, j]
                 # print(i, j)
-            elif dis_two_node < C[i,j]:
+            elif dis_two_node < C[i, j]:
                 print(-1)
                 return
 
     print(total_dis)
+
 
 def AA():
     import numpy as np
@@ -88,9 +94,9 @@ def AA():
         A[i][i] = 10000000000
 
     result = 0
-    for i in range(N-1):
-        for j, d1 in enumerate(A[i][i+1:], start=i+1):
-            d2 = np.min(A[i]+A[j])
+    for i in range(N - 1):
+        for j, d1 in enumerate(A[i][i + 1:], start=i + 1):
+            d2 = np.min(A[i] + A[j])
             # print(A[i][i+1:])
             # print (i, j, d1, d2)
             if d1 >= d2:
@@ -100,5 +106,6 @@ def AA():
             else:
                 result += d1
     print(result)
+
 
 Restoring_Road_Network3()

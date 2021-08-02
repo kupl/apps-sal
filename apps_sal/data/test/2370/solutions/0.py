@@ -30,4 +30,3 @@ if (dist == a).all():
 
 else:
     print((-1))
-

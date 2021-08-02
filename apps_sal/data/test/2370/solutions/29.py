@@ -7,7 +7,7 @@ for i in range(N):
 
 ans = 0
 for i in range(N):
-    for j in range(i+ 1, N):
+    for j in range(i + 1, N):
         dp = np.min(A[i] + A[j])
         if A[i][j] < dp:
             ans += A[i][j]
@@ -15,5 +15,4 @@ for i in range(N):
             print((-1))
             return
 
-print (ans)
-
+print(ans)

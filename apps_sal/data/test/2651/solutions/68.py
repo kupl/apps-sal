@@ -1,7 +1,7 @@
 n, m = list(map(int, input().split()))
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-mod = 10**9+7
+mod = 10**9 + 7
 
 """
 各辺を独立して組み合わせて良い。
@@ -17,17 +17,14 @@ ans = (xの取りうる辺の総和)x(yの取りうる辺の総和)
 yも同様に総和を求め、積を取れば良い
 """
 
-x_diff = [x[i]-x[i-1] for i in range(1, n)]
-y_diff = [y[i]-y[i-1] for i in range(1, m)]
+x_diff = [x[i] - x[i - 1] for i in range(1, n)]
+y_diff = [y[i] - y[i - 1] for i in range(1, m)]
 
 x_sum = 0
 for i, dx in enumerate(x_diff):
-    x_sum = (x_sum + (dx * (i+1) * (n-i-1))%mod)%mod
+    x_sum = (x_sum + (dx * (i + 1) * (n - i - 1)) % mod) % mod
 y_sum = 0
 for i, dy in enumerate(y_diff):
-    y_sum = (y_sum + (dy * (i+1) * (m-i-1))%mod)%mod
+    y_sum = (y_sum + (dy * (i + 1) * (m - i - 1)) % mod) % mod
 
-print(((x_sum*y_sum)%mod))
-
-
-
+print(((x_sum * y_sum) % mod))

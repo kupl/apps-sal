@@ -5,4 +5,3 @@ if res < 0:
     print((0))
 else:
     print(res)
-

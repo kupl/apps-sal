@@ -5,4 +5,3 @@ for v in {v for v in ds if x % v == 0}:
     ds.remove(v)
 y = max(ds)
 print(x, y)
-

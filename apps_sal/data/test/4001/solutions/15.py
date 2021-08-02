@@ -11,4 +11,3 @@ while i <= first:
     i += 1
 
 print(first, lst[-1])
-

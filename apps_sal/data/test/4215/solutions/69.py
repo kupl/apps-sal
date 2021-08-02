@@ -1,6 +1,6 @@
-A,B = map(int,input().split())
+A, B = map(int, input().split())
 
-if 2*B >= A:
+if 2 * B >= A:
     print(0)
 else:
-    print(A-2*B)
+    print(A - 2 * B)

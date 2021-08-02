@@ -1,5 +1,7 @@
 from itertools import chain
 # To draw square: if point isn't 'w', draw '+'
+
+
 def draw_square(scr, square_a, ymin, xmin):
     for i in range(square_a + 1):
         if scr[ymin][xmin + i] != 'w':
@@ -12,6 +14,8 @@ def draw_square(scr, square_a, ymin, xmin):
             scr[ymin + i] = scr[ymin + i][:xmin + square_a] + '+' + scr[ymin + i][xmin + square_a + 1:]
     return scr
 # To find the side length of a square, and if there is some point beside the edge of a square it'll print '-1'
+
+
 def find_a(pixel, y, x):
     ymax = xmax = 0
     ymin = y
@@ -59,6 +63,8 @@ def find_a(pixel, y, x):
             print('-1')
             return
     return ymax, ymin, xmax, xmin, ymaxl, yminl, xmaxl, xminl
+
+
 def main():
     y, x = list(map(int, input().split()))
     scr = []
@@ -80,8 +86,8 @@ def main():
     countx_ymin = yminl[1::2].count(xmax) + yminl[1::2].count(xmin)
     county_xmax = xmaxl[::2].count(ymax) + xmaxl[::2].count(ymin)
     county_xmin = xminl[::2].count(ymax) + xminl[::2].count(ymin)
-    #print('ymax:%d,ymin:%d,xmax:%d,xmin:%d'%(ymax,ymin,xmax,xmin))
-    #print(f'ymaxl:\n{ymaxl}\nyminl:\n{yminl}\nxmaxl:\n{xmaxl}\nxminl:\n{xminl}\ncounty_xmax:{county_xmax}\ncounty_xmin:{county_xmin}\ncountx_ymax:{countx_ymax}\ncountx_ymin:{countx_ymin}')
+    # print('ymax:%d,ymin:%d,xmax:%d,xmin:%d'%(ymax,ymin,xmax,xmin))
+    # print(f'ymaxl:\n{ymaxl}\nyminl:\n{yminl}\nxmaxl:\n{xmaxl}\nxminl:\n{xminl}\ncounty_xmax:{county_xmax}\ncounty_xmin:{county_xmin}\ncountx_ymax:{countx_ymax}\ncountx_ymin:{countx_ymin}')
     # There are three conditions:
     # 1.height > width  2.height < width    3.height == width
     # eg: 1.height > width:
@@ -199,7 +205,7 @@ def main():
                 if ymin + square_a < y:
                     ymax = ymin + square_a
                 elif ymax - square_a >= 0:
-                    ymin = ymax -square_a
+                    ymin = ymax - square_a
                 else:
                     ymin = 0
                     ymax = ymin + square_a
@@ -208,13 +214,16 @@ def main():
                 return
     elif ymax - ymin == xmax - xmin:
         square_a = xmax - xmin
-    #print('ymax:%d,ymin:%d,xmax:%d,xmin:%d,a:%d'%(ymax,ymin,xmax,xmin,square_a))
+    # print('ymax:%d,ymin:%d,xmax:%d,xmin:%d,a:%d'%(ymax,ymin,xmax,xmin,square_a))
     scr = draw_square(scr, square_a, ymin, xmin)
     for i in range(y):
         print(scr[i])
+
+
 def __starting_point():
     main()
-    #while True:
+    # while True:
     #    main()
+
 
 __starting_point()

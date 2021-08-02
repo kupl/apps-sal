@@ -7,9 +7,9 @@ result = 0
 for i in range(N):
     A[i][i] = inf
 
-for i in range(N-1):
-    for j, d1 in enumerate(A[i][i+1:], start=i+1):
-        d2 = np.min(A[i]+A[j])
+for i in range(N - 1):
+    for j, d1 in enumerate(A[i][i + 1:], start=i + 1):
+        d2 = np.min(A[i] + A[j])
         if d1 >= d2:
             if d1 > d2:
                 print((-1))
@@ -18,4 +18,3 @@ for i in range(N-1):
             result += d1
 
 print(result)
-

@@ -4,7 +4,7 @@ k = []
 p = []
 arr = [int(x) for x in input().split()]
 g = max(arr)
-print(g, end = ' ')
+print(g, end=' ')
 for i in arr:
     if (g % i == 0) and i not in k:
         k.append(i)
@@ -12,5 +12,5 @@ for i in arr:
         p.append(i)
 lcm = p[0]
 for i in p[1:]:
-    lcm = lcm*i//gcd(lcm, i)
+    lcm = lcm * i // gcd(lcm, i)
 print(lcm)

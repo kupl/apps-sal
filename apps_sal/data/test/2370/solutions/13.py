@@ -1,6 +1,7 @@
 import sys
 import numpy as np
 
+
 def main():
     input = sys.stdin.readline
     N = int(input())
@@ -29,5 +30,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

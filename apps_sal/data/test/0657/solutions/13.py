@@ -9,4 +9,3 @@ b += y
 b += 3 * z
 
 print(max(0, a - A) + max(0, b - B))
-

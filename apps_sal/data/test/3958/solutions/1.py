@@ -10,7 +10,7 @@ try:
                 r.append([j])
         else:
             p += 1
-            r[p].append(j)  
+            r[p].append(j)
 except:
     f = 1
 if f or p > -1:
@@ -19,4 +19,3 @@ else:
     print(len(r))
     for x in r:
         print(len(x), *x)
-
