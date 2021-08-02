@@ -13,6 +13,7 @@ def read_ints():
 def ilen(ll):
     return sum(1 for _ in ll)
 
+
 def solve():
     """
     13 3 2 3
@@ -27,25 +28,26 @@ def solve():
     """
     n, a, b, k = read_ints()
     s = input().strip()
-    segments = [] # (length, start)
+    segments = []  # (length, start)
     maximum_count = 0
     for start, vals in groupby(enumerate(s), key=lambda p: p[1]):
         val = next(vals)
         if val[1] == '0':
-            segments.append((val[0], 1+ilen(vals)))
-            maximum_count += segments[-1][1]//b
+            segments.append((val[0], 1 + ilen(vals)))
+            maximum_count += segments[-1][1] // b
     shots = []
     while maximum_count >= a:
         start, length = segments.pop()
-        if length//b > 0:
-            shots.append(start+b-1)
-            segments.append((start+b, length-b))
+        if length // b > 0:
+            shots.append(start + b - 1)
+            segments.append((start + b, length - b))
             maximum_count -= 1
     print(len(shots))
-    print(' '.join([str(shot+1) for shot in shots]))
+    print(' '.join([str(shot + 1) for shot in shots]))
 
-    
+
 def __starting_point():
     solve()
+
 
 __starting_point()

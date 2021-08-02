@@ -8,7 +8,6 @@ for x in range(n):
 if fixpoints == n:
     print(fixpoints)
 elif paired > 0:
-    print(fixpoints+2)
+    print(fixpoints + 2)
 else:
-    print(fixpoints+1)
-
+    print(fixpoints + 1)

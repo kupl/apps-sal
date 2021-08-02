@@ -2,6 +2,6 @@ a = [0, 2, 3, 4, 5, 6, 8, 12, 30, 32, 33, 34, 35, 36, 38, 40, 42, 43, 44, 45, 46
 
 n = int(input())
 if n in a:
-	print("YES")
+    print("YES")
 else:
-	print("NO")
+    print("NO")

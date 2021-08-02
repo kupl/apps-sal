@@ -21,4 +21,3 @@ while i <= m:
 print(k)
 for it in b:
     print(it, end=' ')
-

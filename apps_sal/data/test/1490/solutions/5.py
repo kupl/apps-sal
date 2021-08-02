@@ -12,4 +12,3 @@ while True:
 print(len(ret))
 if ret:
     print(" ".join(map(str, ret)))
-

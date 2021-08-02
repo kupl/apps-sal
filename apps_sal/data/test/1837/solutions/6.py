@@ -8,7 +8,6 @@ for i in range(n):
     elif p and A[A[i]] == i:
         count += 2
         p = False
-if p and count < n -1:
+if p and count < n - 1:
     count += 1
 print(count)
-

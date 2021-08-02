@@ -22,4 +22,3 @@ elif T:
     print(k + 2)
 else:
     print(k + 1)
-

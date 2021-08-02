@@ -11,4 +11,3 @@ elif a - b == b - c:
     result = 'YES'
 
 print(result)
-

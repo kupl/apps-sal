@@ -4,7 +4,7 @@
 import time
 
 (n, m) = (int(i) for i in input().split())
-a      = sorted([int(i) for i in input().split()])
+a = sorted([int(i) for i in input().split()])
 
 start = time.time()
 
@@ -12,16 +12,16 @@ start = time.time()
 acc = 0
 ans = []
 
-j   = 0
+j = 0
 sum = 0
 
 for i in range(1, 1000000001):
     if j < n:
         if i == a[j]:
-            j +=1
+            j += 1
             continue
 
-    if sum+i > m:
+    if sum + i > m:
         break
 
     sum += i
@@ -35,4 +35,3 @@ print()
 
 #finish = time.time()
 #print(finish - start)
-

@@ -14,4 +14,3 @@ for i, b in enumerate(a):
             m[i] = b
 count += 2 if yes else 1 if len(m) else 0
 print("%d" % count)
-

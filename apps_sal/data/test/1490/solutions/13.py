@@ -16,4 +16,3 @@ for i in range(len(a)):
         cand += 1
 
     cand = a[i] + 1
-

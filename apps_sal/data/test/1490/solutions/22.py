@@ -17,4 +17,3 @@ while m > 0:
 
 print(len(res))
 print(' '.join(res))
-

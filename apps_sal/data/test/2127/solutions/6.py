@@ -5,6 +5,7 @@ Y = 1
 H = 1
 W = 2
 
+
 def main():
     buf = input()
     n = int(buf)
@@ -17,7 +18,6 @@ def main():
         else:
             query.append([buflist[0], int(buflist[2]), int(buflist[1])])
 
-
     bill_size = [query[0][H], query[0][W]]
     for i in range(n):
         if query[i][QTYPE] == '+':
@@ -28,7 +28,9 @@ def main():
             else:
                 print("NO")
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

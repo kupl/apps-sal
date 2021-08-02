@@ -2,27 +2,24 @@
 
 
 from itertools import groupby
-n,a,b,k = map(int,input().split())
+n, a, b, k = map(int, input().split())
 s = input()
-sg = [list(g) for s,g in groupby(s)]
+sg = [list(g) for s, g in groupby(s)]
 ll = 0
 hits = []
-for i in range(0,len(sg)):
+for i in range(0, len(sg)):
     if sg[i][0] == '0' and len(sg[i]) >= b:
-        for hit in range(b-1,len(sg[i]),b):
-            hits.append(hit+ll+1)
+        for hit in range(b - 1, len(sg[i]), b):
+            hits.append(hit + ll + 1)
         ll += len(sg[i])
     else:
         ll += len(sg[i])
 # print(hits)
 # We remove number of (ships-1) from the total number of hits because we are hitting at every possible location where
-# where the ship can be placed and since we want to hit AT LEAST ONE SHIP, removing (ships-1) will still hit at least one ship 
-hits = hits[a-1:]
+# where the ship can be placed and since we want to hit AT LEAST ONE SHIP, removing (ships-1) will still hit at least one ship
+hits = hits[a - 1:]
 print(len(hits))
 print(*hits)
-
-
-
 
 
 """

@@ -1,4 +1,6 @@
 N = int(input())
+
+
 def calc(n):
     if n == 5: return "YES"
     if n == 13: return "NO"
@@ -19,9 +21,10 @@ def calc(n):
     if n <= 70: return "YES"
     if n <= 80: return "NO"
     if n <= 90: return "YES"
-    
+
     if n <= 100: return "NO"
-    
-    return 1/0
+
+    return 1 / 0
+
 
 print(calc(N))

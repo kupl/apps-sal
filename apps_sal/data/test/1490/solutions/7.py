@@ -9,4 +9,3 @@ for x in range(1, 10**9 + 1):
         m -= x
 print(len(ans))
 print(" ".join(map(str, ans)))
-

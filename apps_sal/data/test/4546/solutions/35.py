@@ -8,4 +8,3 @@ elif a - b == b - c:
     ans = 'YES'
 
 print(ans)
-

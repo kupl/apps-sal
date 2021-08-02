@@ -9,4 +9,3 @@ for i in range(n):
     elif not extra:
         extra = 1
 print(fixed + extra)
-
