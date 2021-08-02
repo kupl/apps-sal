@@ -11,12 +11,12 @@ prn = lambda x: print(*x, sep='\n')
 
 def solve():
     n, k = nm()
-    l = [1]*(k-1) + [n-k+1]
+    l = [1] * (k - 1) + [n - k + 1]
     if l[-1] > 0 and l[-1] % 2:
         print('YES')
         print(*l)
         return
-    l = [2]*(k-1) + [n - 2*(k-1)]
+    l = [2] * (k - 1) + [n - 2 * (k - 1)]
     if l[-1] > 0 and l[-1] % 2 == 0:
         print('YES')
         print(*l)
@@ -26,7 +26,7 @@ def solve():
 
 # solve()
 
+
 T = ni()
 for _ in range(T):
     solve()
-

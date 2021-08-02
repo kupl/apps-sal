@@ -6,4 +6,3 @@ for i in range(A, B + 1):
     if all(S[i] == S[-i - 1] for i in range(N // 2)):
         ans += 1
 print(ans)
-

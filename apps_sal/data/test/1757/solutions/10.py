@@ -11,6 +11,7 @@ def main():
             s += 'o'
     print(s)
 
+
 def fib():
     res = {1, 2}
     f1 = 1
@@ -21,20 +22,4 @@ def fib():
     return res
 
 
-
 main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -11,4 +11,3 @@ if (flag):
     print('YES')
 else:
     print('NO')
-

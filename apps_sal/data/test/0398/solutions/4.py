@@ -7,4 +7,3 @@ for i in range(n - 2):
         print('YES')
         return
 print('NO')
-

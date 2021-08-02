@@ -1,12 +1,12 @@
 N, M = map(int, input().split())
 
 ans = 0
-if(M//2 >= N):
+if(M // 2 >= N):
     ans += N
-    M = M - N*2    
-    ans += M//4
-    
+    M = M - N * 2
+    ans += M // 4
+
 else:
-    ans += M//2
+    ans += M // 2
 
 print(ans)

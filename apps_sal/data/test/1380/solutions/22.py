@@ -5,13 +5,15 @@ def dist(A, B):
             res += 1
     return res
 
+
 def generate_new(number):
     nonlocal n, k
     R = [0] * n
     for i in range(n):
-        R[i] = number 
+        R[i] = number
         number += k
     return R
+
 
 n, k = list(map(int, input().split()))
 A = list(map(int, input().split()))

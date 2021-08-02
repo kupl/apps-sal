@@ -13,7 +13,7 @@ def solve():
                     answer[j] += 1
     return answer
 
+
 n, m, k = tuple(map(int, input().split()))
 park = [input() for i in range(n)]
 print(' '.join(map(str, solve())))
-

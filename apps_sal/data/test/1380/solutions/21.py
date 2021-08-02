@@ -5,22 +5,22 @@ for i in range(n):
     cur = 0
     for j in range(n):
         if j > i:
-            if a[j] == a[i] + (j-i) * k:
+            if a[j] == a[i] + (j - i) * k:
                 cur += 1
         elif j < i:
-            if a[j] == a[i] - (i-j) * k:
+            if a[j] == a[i] - (i - j) * k:
                 cur += 1
     b.append(cur)
 
 t, cur = -1, -1
 for i in range(len(b)):
-    if (b[i] > cur) and (a[i] > k*i):
+    if (b[i] > cur) and (a[i] > k * i):
         cur = b[i]
         t = i
 
 res = []
 for i in range(n):
-    c = - a[i] + ((i-t) * k + a[t])
+    c = - a[i] + ((i - t) * k + a[t])
     if c != 0:
         res.append([i + 1, c])
 
@@ -30,4 +30,3 @@ for i, j in res:
         print('-', str(i), -j)
     else:
         print('+', str(i), j)
-

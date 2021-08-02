@@ -9,4 +9,3 @@ else:
     M -= 2 * N
     count += (M // 4)
     print(count)
-

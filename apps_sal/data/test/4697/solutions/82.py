@@ -31,14 +31,15 @@ class TestClass(unittest.TestCase):
 def resolve():
     N, M = list(map(int, input().split()))
 
-    if M >= 2*N:
-        print((N+(M-2*N)//4))
+    if M >= 2 * N:
+        print((N + (M - 2 * N) // 4))
     else:
-        print((M//2))
+        print((M // 2))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

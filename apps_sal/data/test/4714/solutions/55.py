@@ -6,4 +6,3 @@ for i in range(a, b + 1):
         res += 1
 
 print(res)
-

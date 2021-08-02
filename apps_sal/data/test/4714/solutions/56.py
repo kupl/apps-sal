@@ -6,9 +6,10 @@ def reverse(num):
         num = num // 10
     return test_num
 
-a,b = list(map(int,input().split()))
+
+a, b = list(map(int, input().split()))
 c = 0
-for i in range(a,b+1):
+for i in range(a, b + 1):
     if i == reverse(i):
-        c+=1
+        c += 1
 print(c)

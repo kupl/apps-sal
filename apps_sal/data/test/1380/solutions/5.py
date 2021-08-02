@@ -18,4 +18,3 @@ for i in range(len(a)):
     diff = a[i] - base_height - i * k
     if diff:
         print('{} {} {}'.format('-' if diff > 0 else '+', i + 1, abs(diff)))
-

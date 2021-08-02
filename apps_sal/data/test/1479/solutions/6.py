@@ -13,8 +13,8 @@ def f():
                 ans += 1
             if j + i < m and s[i][j + i] == 'L':
                 ans += 1
-        a.append(ans)        
+        a.append(ans)
     print(' '.join(map(str, a)))
-f()
-        
 
+
+f()
