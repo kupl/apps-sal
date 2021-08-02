@@ -7,7 +7,7 @@ n = min(n, k - 1)
 l, r = 0, n + 1
 while r - l > 1:
     m = (l + r) >> 1
-    
+
     if k - m <= n:
         r = m
     else:

@@ -20,4 +20,3 @@ if M > 0:
         print("NO")
 else:
     print("YES")
-

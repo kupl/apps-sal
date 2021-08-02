@@ -14,8 +14,7 @@ def is_pal(s):
 def solve():
     S = ins()
     n = len(S)
-    return is_pal(S) and is_pal(S[: n // 2]) and is_pal(S[n // 2 + 1 :])
+    return is_pal(S) and is_pal(S[: n // 2]) and is_pal(S[n // 2 + 1:])
 
 
 print("Yes" if solve() else "No")
-

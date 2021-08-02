@@ -7,4 +7,3 @@ if s1 == s2 == s3:
     print('Yes')
 else:
     print('No')
-

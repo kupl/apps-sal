@@ -18,4 +18,3 @@ else:
         else:
             print(n - k // 2)
             quit()
-

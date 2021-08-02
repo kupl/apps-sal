@@ -3,6 +3,7 @@ def read_data():
     As = list(map(int, input().split()))
     return n, k, p, x, y, As
 
+
 def solve(n, k, p, x, y, As):
     '''median (As + Bs) >= y
     sum(As + Bs) <= x
@@ -25,8 +26,11 @@ def solve(n, k, p, x, y, As):
         return ['-1']
     return [str(y)] * min_num_y + ['1'] * (n - k - min_num_y)
 
+
 def __starting_point():
     n, k, p, x, y, As = read_data()
     seq = solve(n, k, p, x, y, As)
     print(' '.join(seq))
+
+
 __starting_point()

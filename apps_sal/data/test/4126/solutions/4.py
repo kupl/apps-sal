@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 S = input()
 
@@ -8,4 +11,3 @@ if S[::-1] == S and s1[::-1] == s1 and s2[::-1] == s2:
     print('Yes')
 else:
     print('No')
-

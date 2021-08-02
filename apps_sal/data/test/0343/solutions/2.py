@@ -13,10 +13,7 @@ ans = [1] * min(N // 2 - lt, N - K)
 while len(ans) < N - K:
     ans.append(Y)
 
-if sum(ans+A) <= X and median(ans+A) >= Y:
+if sum(ans + A) <= X and median(ans + A) >= Y:
     print(' '.join(map(str, ans)))
 else:
     print('-1')
-
-
-

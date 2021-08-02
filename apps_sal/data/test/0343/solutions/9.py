@@ -1,4 +1,4 @@
-n,k,p,x,y=(int(x) for x in input().split())
+n, k, p, x, y = (int(x) for x in input().split())
 a = [int(x) for x in input().split()]
 
 if n == 1:
@@ -15,7 +15,7 @@ if (len(a) > med_pos) and (a[med_pos] < y):
     print(-1)
     return
 
-if s + (n-k) > x:
+if s + (n - k) > x:
     print(-1)
     return
 
@@ -36,6 +36,6 @@ if s + left + y * right > x:
     return
 
 for i in range(left):
-    print(1, end = ' ')
+    print(1, end=' ')
 for i in range(right):
-    print(y, end = ' ')
+    print(y, end=' ')

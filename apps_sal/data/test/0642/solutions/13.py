@@ -14,6 +14,8 @@ def canJump(numStairs, dirty):
     else:
         return True
     return False
+
+
 s1 = input()
 if int(s1.split(' ')[1]) == 0:
     print('YES')
@@ -23,6 +25,3 @@ else:
         print('YES')
     else:
         print('NO')
-
-
-

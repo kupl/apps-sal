@@ -9,7 +9,7 @@ def check_stairs(n, stairs):
         print('NO')
         return
     for i in range(len(stairs) - 2):
-        if stairs[i] + 1 == stairs[i+1] and stairs[i] + 2 == stairs[i+2]:
+        if stairs[i] + 1 == stairs[i + 1] and stairs[i] + 2 == stairs[i + 2]:
             print('NO')
             return
     print('YES')
@@ -24,5 +24,6 @@ def __starting_point():
         stairs = [int(c) for c in sys.stdin.readline().rstrip().split(' ')]
         stairs.sort()
     check_stairs(n, stairs)
+
 
 __starting_point()

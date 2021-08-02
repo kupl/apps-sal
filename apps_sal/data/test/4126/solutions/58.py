@@ -1,6 +1,6 @@
 s = list(input())
-s_front = s[:(len(s)//2)]
-s_back = s[::-1][:(len(s)//2)]
+s_front = s[:(len(s) // 2)]
+s_back = s[::-1][:(len(s) // 2)]
 
 result = 'Yes'
 

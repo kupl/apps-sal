@@ -15,4 +15,3 @@ if judge_kaibun(S):
         print("No")
 else:
     print("No")
-

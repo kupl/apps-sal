@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n, k = mi()
 
@@ -14,4 +19,3 @@ if x < y:
     dif = y - x
     ans = (dif + 1) // 2
 print(ans)
-

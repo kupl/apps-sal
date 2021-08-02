@@ -4,6 +4,7 @@ def solve(n, k):
 
     return max(0, last - first + k % 2)
 
+
 def brute(n, k):
     ans = 0
     for a in range(1, n + 1):
@@ -19,7 +20,7 @@ def brute(n, k):
 # k - a <= n
 # k - n <= a
 
+
 # (1, k - 1), (2, k - 2), ... (k / 2, k / 2)
 n, k = list(map(int, input().split()))
 print(solve(n, k))
-
