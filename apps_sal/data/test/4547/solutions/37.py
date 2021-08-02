@@ -6,4 +6,3 @@ if "9" in N:        # in: 含まれていたらTrue
     print("Yes")
 else:
     print("No")
-

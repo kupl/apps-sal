@@ -2,7 +2,7 @@ def solve():
     n = int(input())
     lst = list(input())
     if len(set(lst)) == 1:
-        print(n//3 + ((n%3) != 0))
+        print(n // 3 + ((n % 3) != 0))
         return 0
 
     for i in range(n - 1):
@@ -27,5 +27,7 @@ def solve():
             lcnt = 0
             ans += 1
     print(ans)
+
+
 for i in range(int(input())):
     solve()

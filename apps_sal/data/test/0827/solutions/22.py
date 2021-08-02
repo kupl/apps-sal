@@ -1,7 +1,7 @@
 N = int(input())
 T = input()
 S = "110" * (N + 2)
- 
+
 if T == "1":
     print((10 ** 10) * 2)
 elif T == "00":

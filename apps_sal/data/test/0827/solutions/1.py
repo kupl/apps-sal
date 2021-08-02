@@ -15,4 +15,3 @@ else:
             print((10 ** 10 - a))
         else:
             print((10 ** 10 - a + 1))
-

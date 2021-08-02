@@ -1,7 +1,7 @@
 n = int(input())
 a = input()
 b = input()
-mod = int(1e9+7)
+mod = int(1e9 + 7)
 x, y, z = 1, 1, 1
 for i in range(n):
     if a[i] == '?' and b[i] == '?':
@@ -20,4 +20,3 @@ for i in range(n):
         if a[i] != b[i]: z = 0
 res = pow(10, a.count('?') + b.count('?'), mod)
 print((res - x - y + z) % mod)
-

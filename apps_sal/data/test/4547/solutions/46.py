@@ -5,4 +5,3 @@ if "9" in nine:
     print("Yes")
 else:
     print("No")
-

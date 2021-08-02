@@ -1,6 +1,9 @@
-from sys import exit,stdin,stderr
+from sys import exit, stdin, stderr
+
+
 def rl():
     return [int(w) for w in stdin.readline().split()]
+
 
 T, = rl()
 for _ in range(T):
@@ -13,7 +16,7 @@ for _ in range(T):
         print((n + 2) // 3)
         continue
     r = n
-    while s[r-1] == s[0]:
+    while s[r - 1] == s[0]:
         r -= 1
     y = (n - r + l) // 3
     k = l
@@ -23,4 +26,3 @@ for _ in range(T):
             k = i
     y += (r - k) // 3
     print(y)
-

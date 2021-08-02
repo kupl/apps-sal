@@ -18,4 +18,3 @@ for (head, tail), c1 in list(cnts.items()):
     c2 = cnts.get((tail, head), 0)
     ans += c1 * c2
 print(ans)
-

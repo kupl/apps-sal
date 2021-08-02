@@ -2,7 +2,7 @@ N = int(input())
 
 num = [[0] * 10 for i in range(10)]
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     top = int(str(i)[0])
     end = int(str(i)[-1])
     num[top][end] += 1

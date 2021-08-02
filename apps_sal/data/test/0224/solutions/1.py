@@ -7,4 +7,3 @@ for i in range(len(s)):
         ans = max(ans, i - last)
         last = i
 print(ans)
-

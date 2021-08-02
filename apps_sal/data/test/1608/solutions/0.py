@@ -2,15 +2,16 @@ import sys
 
 mod = 10**9 + 7
 
+
 def solve():
     n = int(input())
     a = [int(i) for i in input().split()]
 
-    cnt = [0]*(10**5 + 1)
+    cnt = [0] * (10**5 + 1)
 
     for ai in a:
         for d in range(1, ai + 1):
-            if d*d > ai:
+            if d * d > ai:
                 break
             if ai % d == 0:
                 if d != ai // d:
@@ -27,13 +28,14 @@ def solve():
 
     print(ans)
 
+
 def mobius(x):
     assert x >= 1
 
     divcnt = 0
 
     for p in range(2, x + 1):
-        if p*p > x:
+        if p * p > x:
             break
         if x % p != 0:
             continue
@@ -50,6 +52,9 @@ def mobius(x):
 
     return (-1)**divcnt
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

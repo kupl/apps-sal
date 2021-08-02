@@ -13,4 +13,3 @@ for i, c in enumerate(word):
         result = [c] + result
 
 print("".join(result))
-

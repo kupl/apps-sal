@@ -21,5 +21,3 @@ for _ in range(T):
     else:
         X.append(c)
     print(sum([x // 3 for x in X]))
-
-

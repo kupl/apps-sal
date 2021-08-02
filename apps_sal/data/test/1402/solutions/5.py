@@ -1,5 +1,6 @@
 3
 
+
 def build(n, s, t):
     ans = 1
     for i in range(n):
@@ -43,4 +44,3 @@ elif sltt:
     print((pow(10, qm, 10 ** 9 + 7) - build(n, s, t)) % (10 ** 9 + 7))
 else:
     print((pow(10, qm, 10 ** 9 + 7) - build(n, t, s)) % (10 ** 9 + 7))
-

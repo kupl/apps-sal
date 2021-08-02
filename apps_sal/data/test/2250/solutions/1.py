@@ -3,6 +3,7 @@ def ne(c):
         return 'R'
     return 'L'
 
+
 # for _ in range(1):
 for _ in range(int(input())):
     # n, k = map(int, input().split())
@@ -28,4 +29,3 @@ for _ in range(int(input())):
             cnt += 1
     ans += cnt // 3
     print(ans)
-

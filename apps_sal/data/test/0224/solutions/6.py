@@ -9,4 +9,3 @@ for i, ch in enumerate(S):
         max_jump = max(max_jump, next_pos - prev_pos)
         prev_pos = next_pos
 print(max_jump)
-

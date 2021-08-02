@@ -5,14 +5,14 @@ if N == 1:
     if T == "0":
         print((10**10))
     else:
-        print((10**10*2))
+        print((10**10 * 2))
     return
 
 if N == 2:
     if T == "00":
         print((0))
     if T == "01":
-        print((10**10-1))
+        print((10**10 - 1))
     if T == "10":
         print((10**10))
     if T == "11":
@@ -29,7 +29,7 @@ else:
     return
 
 for i in range(N):
-    if i%3 == zi:
+    if i % 3 == zi:
         if T[i] != "0":
             print((0))
             return
@@ -38,6 +38,5 @@ for i in range(N):
             print((0))
             return
 
-m = (N+(3-zi+2)%3+2)//3
-print((10**10-m+1))
-
+m = (N + (3 - zi + 2) % 3 + 2) // 3
+print((10**10 - m + 1))

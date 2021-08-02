@@ -10,6 +10,7 @@ def main():
             break
         else:
             a = i * i
-    print(prev) 
-main()
+    print(prev)
 
+
+main()

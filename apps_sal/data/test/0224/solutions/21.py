@@ -18,4 +18,3 @@ for ch in line:
 
 max_count = max(max_count, current_count)
 print(max_count + 1)
-

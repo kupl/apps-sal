@@ -17,4 +17,3 @@ elif T in S:
         print((10 ** 10 - (N + 4) // 3 + 1))
 else:
     print((0))
-

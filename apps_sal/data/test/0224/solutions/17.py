@@ -12,4 +12,3 @@ for i in range(1, len(s)):
             ans = counter
 
 print(ans)
-

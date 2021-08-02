@@ -2,7 +2,7 @@ N = int(input())
 T = input()
 
 if T == '1':
-    print((10**10*2))
+    print((10**10 * 2))
     return
 elif T == '0' or T == '10' or T == '11':
     print((10**10))
@@ -13,7 +13,7 @@ elif T == '01':
 elif T == '00':
     print((0))
     return
-    
+
 
 left = T[:3]
 if left == '110':
@@ -31,9 +31,9 @@ f = '110'
 cnt = 0
 i = 0
 while True:
-    if i+3 > N:
+    if i + 3 > N:
         break
-    s = T[i:i+3]
+    s = T[i:i + 3]
     if s == f:
         cnt += 1
         i += 3
@@ -43,7 +43,5 @@ while True:
     else:
         i += 1
 
-ans = 10**10 - (cnt-1) - l - r
+ans = 10**10 - (cnt - 1) - l - r
 print(ans)
-    
-

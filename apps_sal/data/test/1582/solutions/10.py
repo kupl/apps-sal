@@ -10,4 +10,3 @@ for i in range(10):
     for j in range(10):
         ans += lr_cnt[i][j] * lr_cnt[j][i]
 print(ans)
-

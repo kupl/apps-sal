@@ -84,12 +84,12 @@ def count_aa(a, N):
 N = int(input())
 
 c = 0
-for i in range(1,N+1):
+for i in range(1, N + 1):
     a = int(str(i)[0])
     b = i % 10
     # print(a,b)
     if b == 0:
         continue
-    c += count(a,b,N)
+    c += count(a, b, N)
 
 print(c)
