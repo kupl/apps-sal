@@ -7,4 +7,3 @@ if x & 8: y = y | 4
 if x & 16: y = y | 1
 if x & 32: y = y | 32
 print(y)
-

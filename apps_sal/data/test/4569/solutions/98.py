@@ -1,4 +1,4 @@
-li = ['Sunny','Cloudy','Rainy','Sunny']
+li = ['Sunny', 'Cloudy', 'Rainy', 'Sunny']
 
 n = input()
 

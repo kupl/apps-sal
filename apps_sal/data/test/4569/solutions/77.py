@@ -7,4 +7,3 @@ else:
     result = 'Sunny'
 
 print(result)
-

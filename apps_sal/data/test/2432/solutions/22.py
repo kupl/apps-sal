@@ -5,5 +5,5 @@ out = 0
 for i, c in enumerate(format(a, '#08b')[2:]):
     if c == '1':
         out += mult[i]
-        
+
 print(out)

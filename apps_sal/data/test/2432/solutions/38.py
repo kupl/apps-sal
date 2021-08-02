@@ -32,4 +32,3 @@ for i in range(64):
     ans[i] = n[replacement[i]]
 ans.reverse()
 print(int(''.join(ans), 2))
-

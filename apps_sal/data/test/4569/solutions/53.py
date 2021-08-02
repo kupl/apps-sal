@@ -9,4 +9,5 @@ def __starting_point():
     else:
         print("Sunny")
 
+
 __starting_point()

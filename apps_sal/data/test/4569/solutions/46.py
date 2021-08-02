@@ -1,2 +1,2 @@
-Wet = ['Sunny','Cloudy','Rainy','Sunny']
-print(Wet[Wet.index(input())+1])
+Wet = ['Sunny', 'Cloudy', 'Rainy', 'Sunny']
+print(Wet[Wet.index(input()) + 1])

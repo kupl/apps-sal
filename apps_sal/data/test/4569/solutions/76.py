@@ -6,4 +6,3 @@ i = list.index(s)
 answer = list[i - 2]
 
 print(answer)
-

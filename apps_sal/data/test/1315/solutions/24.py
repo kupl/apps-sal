@@ -13,4 +13,3 @@ for i in range(n):
         print(':(')
         return
 print(' '.join(map(str, a)))
-

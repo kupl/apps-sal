@@ -7,9 +7,8 @@ for i in range(len(nums)):
 nums.sort()
 for i in range(len(nums)):
     nums[i] -= i
-    if i and nums[i] < nums[i-1]:
+    if i and nums[i] < nums[i - 1]:
         print(":(")
         return
 
 print(' '.join(list(map(str, nums))))
-

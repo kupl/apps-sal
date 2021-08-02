@@ -8,4 +8,3 @@ if dx % a == 0 and dy % b == 0 and (dx / a) % 2 == (dy / b) % 2:
     print('YES')
 else:
     print('NO')
-

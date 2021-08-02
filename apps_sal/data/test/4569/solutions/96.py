@@ -1,8 +1,8 @@
-s=input()
+s = input()
 
-if s=="Sunny":
+if s == "Sunny":
     print("Cloudy")
-elif s=="Cloudy":
+elif s == "Cloudy":
     print("Rainy")
-elif s=="Rainy":
+elif s == "Rainy":
     print("Sunny")

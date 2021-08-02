@@ -12,4 +12,3 @@ if len(a) != n:
 else:
     for i in range(n):
         print(a[i] - i, end=' ')
-

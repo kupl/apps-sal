@@ -14,5 +14,5 @@ def main():
 
     print("YES" if (xd % 2) == (yd % 2) else "NO")
 
-main()
 
+main()

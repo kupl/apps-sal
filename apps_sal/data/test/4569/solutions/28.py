@@ -1,7 +1,7 @@
 s = str(input())
 if s == "Sunny":
-  print("Cloudy")
+    print("Cloudy")
 elif s == "Cloudy":
-  print("Rainy")
+    print("Rainy")
 elif s == "Rainy":
-  print("Sunny")
+    print("Sunny")

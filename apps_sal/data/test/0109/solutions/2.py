@@ -3,10 +3,14 @@ n, m, r, k = map(int, input().split())
 u, v = n // 2, m // 2
 h = []
 g = lambda z, l: min(z + 1, l - z, l - r + 1, r)
+
+
 def f(x, y):
     if 0 <= x < n and 0 <= y < m:
         s = g(x, n) * g(y, m)
         heappush(h, (-s, x, y))
+
+
 f(u, v)
 t = 0
 for i in range(k):

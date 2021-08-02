@@ -1,10 +1,13 @@
 class TupleHeap(object):
     def __init__(self):
         self.heap = [0]
+
     def mult(self, i):
         return self.heap[i][0] * self.heap[i][1]
+
     def __str__(self):
         return " ".join(map(str, self.heap))
+
     def add(self, var):
         self.heap.append(var)
         if len(self.heap) > 2:
@@ -15,6 +18,7 @@ class TupleHeap(object):
                 self.heap[el], self.heap[par] = self.heap[par], self.heap[el]
                 el = par
                 par = el // 2
+
     def pop(self):
         if len(self.heap) == 1:
             return None  # Нечего брать из кучи
@@ -56,7 +60,8 @@ class TupleHeap(object):
                 var_child2 = -1
         return ans
 
-n, m, r , k = map(int, input().split())
+
+n, m, r, k = map(int, input().split())
 
 max_x = min(r, n - r + 1)
 max_y = min(r, m - r + 1)
@@ -89,10 +94,10 @@ while (curr is not None) and (curr[0] > 0) and (curr[1] > 0) and (k > 0):
     SUMM = SUMM + col * curr[0] * curr[1]
     curr = tuple_heap.pop()
 
-#print(tuple_heap)
-#print(used)
+# print(tuple_heap)
+# print(used)
 #print(max_x, max_y)
 #print(col_max_x, col_max_y)
 #print("SUMM =", SUMM)
 #print("Nr =", Nr)
-print(SUMM/Nr)
+print(SUMM / Nr)

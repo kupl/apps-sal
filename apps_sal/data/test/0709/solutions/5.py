@@ -5,7 +5,7 @@ def f(n):
         return f(n // 2) + 1
     else:
         return f(n // 2)
-    
-    
+
+
 n = int(input())
 print(f(n))

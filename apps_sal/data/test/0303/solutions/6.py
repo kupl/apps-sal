@@ -5,6 +5,6 @@ x = (x1 - x2) / a
 y = (y1 - y2) / b
 
 if x == int(x) and y == int(y) and (int(x) & 1 == int(y) & 1):
-	print('YES')
+    print('YES')
 else:
-	print('NO')
+    print('NO')

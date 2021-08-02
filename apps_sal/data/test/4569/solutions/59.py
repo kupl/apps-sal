@@ -1,5 +1,5 @@
 S = input()
-ls = ['Sunny','Cloudy','Rainy']
+ls = ['Sunny', 'Cloudy', 'Rainy']
 if S == 'Sunny':
     print(ls[1])
 elif S == 'Cloudy':
