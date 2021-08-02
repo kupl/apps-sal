@@ -1,5 +1,6 @@
 """ Created by Shahen Kosyan on 3/4/17 """
 
+
 def __starting_point():
     n = int(input())
     arr = [int(x) for x in input().split()]
@@ -39,5 +40,6 @@ def __starting_point():
     else:
         print(messages_count)
         print(output)
+
 
 __starting_point()

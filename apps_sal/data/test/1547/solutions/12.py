@@ -1,9 +1,10 @@
 n, m, k = [int(i) for i in input().split()]
-## n rows, m columns, k queries
+# n rows, m columns, k queries
 
 printops = []
 for i in range(k):
     printops.append([int(i) for i in input().split()])
+
 
 def pm():
     for r in matrix:
@@ -11,10 +12,11 @@ def pm():
             print(i, end=' ')
         print()
 
+
 row_status = [True] * n
 col_status = [True] * m
 
-matrix = [[0]*m for i in range(n)]
+matrix = [[0] * m for i in range(n)]
 for i in range(k):
     j = k - i - 1
     rc_indicator, rc, color = printops[j]
@@ -34,8 +36,7 @@ for i in range(k):
         if col_status[rc]:
             for r in range(n):
                 if row_status[r]:
-                   matrix[r][rc] = color
+                    matrix[r][rc] = color
             col_status[rc] = False
 
 pm()
-

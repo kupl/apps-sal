@@ -17,4 +17,3 @@ else:
     print(len(messages))
     for message in messages:
         print(*message)
-

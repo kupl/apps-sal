@@ -3,8 +3,8 @@ n, m, k = map(int, input().split())
 Q = [list(map(int, input().split())) for _ in range(k)]
 
 T = [[0 for _ in range(m)] for _ in range(n)]
-R = [[0,-1] for _ in range(n)]
-C = [[0,-1] for _ in range(m)]
+R = [[0, -1] for _ in range(n)]
+C = [[0, -1] for _ in range(m)]
 
 """for i in range(n):
     for j in range(m):
@@ -16,9 +16,9 @@ C = [[0,-1] for _ in range(m)]
 for i in range(k):
     q = Q[i]
     if q[0] == 1:
-        R[q[1]-1] = [q[2],i]
+        R[q[1] - 1] = [q[2], i]
     else:
-        C[q[1]-1] = [q[2],i]
+        C[q[1] - 1] = [q[2], i]
 
 for i in range(n):
     for j in range(m):
@@ -29,8 +29,5 @@ for i in range(n):
 
 for i in range(n):
     for j in range(m):
-        print(T[i][j],end=" ")
+        print(T[i][j], end=" ")
     print()
-
-    
-

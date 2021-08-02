@@ -2,7 +2,7 @@ from sys import*
 (n, m, k) = map(int, input().split())
 p = [0] + list(map(int, input().split()))
 if m == 1:
-    print(sum(sorted(p)[-k : ]))
+    print(sum(sorted(p)[-k:]))
     return
 pref = [0]
 for i in range(1, n + 1):
@@ -15,5 +15,5 @@ for i in range(1, n + 1):
         if i - m >= 0:
             dp[i][j] = max(dp[i - 1][j], dp[i - m][j - 1] + pref[i] - pref[i - m])
         else:
-            dp[i][j] = dp[i - 1][j];
+            dp[i][j] = dp[i - 1][j]
 print(dp[n][k])

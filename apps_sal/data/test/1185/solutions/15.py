@@ -33,7 +33,6 @@ if m == 1:
 mem, cum = [[-1 for j in range(k + 1)] for i in range(n + 1)], [sum(a[i:i + m]) for i in range(n - m + 1)]
 
 
-
 ans = 0
 for i in range(n):
     mem[i][0] = 0
@@ -43,4 +42,3 @@ for i in range(m, n + 1):
         mem[i][j] = mem[i - 1][j]
         mem[i][j] = max(mem[i][j], mem[i - m][j - 1] + cum[i - m])
 print(mem[n][k])
-

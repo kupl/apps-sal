@@ -8,5 +8,3 @@ for b in range(K + 1, N + 1):
 if K == 0:
     ans -= N
 print(ans)
-
-

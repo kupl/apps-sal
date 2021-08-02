@@ -3,10 +3,12 @@ def fill_column(num, color):
     for i in range(n):
         canvas[i][num] = color
 
+
 def fill_row(num, color):
     nonlocal canvas
     for i in range(m):
         canvas[num][i] = color
+
 
 (n, m, k) = map(int, input().split())
 canvas = [[0 for j in range(m)] for i in range(n)]
@@ -32,9 +34,5 @@ for i in range(k):
 
 for i in range(n):
     for j in range(m):
-        print(canvas[i][j], end = ' ')
+        print(canvas[i][j], end=' ')
     print()
-
-    
-    
-

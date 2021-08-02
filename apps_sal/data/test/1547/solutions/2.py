@@ -21,7 +21,6 @@ def main():
             else:
                 stdout.write(str(vert[j][0]) + ' ')
         stdout.write('\n')
-                
+
 
 main()
-

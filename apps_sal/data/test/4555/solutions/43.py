@@ -8,4 +8,3 @@ for a in ans:
     if a < A:
         continue
     print(a)
-

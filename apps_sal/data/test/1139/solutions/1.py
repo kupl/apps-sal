@@ -1,3 +1,4 @@
+from functools import lru_cache
 import sys
 def rs(): return sys.stdin.readline().rstrip()
 def ri(): return int(sys.stdin.readline())
@@ -5,9 +6,6 @@ def ria(): return list(map(int, sys.stdin.readline().split()))
 def ws(s): sys.stdout.write(s); sys.stdout.write('\n')
 def wi(n): sys.stdout.write(str(n)); sys.stdout.write('\n')
 def wia(a, sep=' '): sys.stdout.write(sep.join([str(x) for x in a])); sys.stdout.write('\n')
-
-
-from functools import lru_cache
 
 
 def solve(n, m, a):
@@ -34,7 +32,7 @@ def solve(n, m, a):
 
         return best
 
-    return go(0, m-1)
+    return go(0, m - 1)
 
 
 def main():
@@ -53,5 +51,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

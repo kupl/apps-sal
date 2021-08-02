@@ -1,16 +1,18 @@
 # coding: utf-8
 import sys
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 """
 全体からあまりがK未満を引く
 """
 N, K = lr()
 total = N * N
-for b in range(1, N+1):
+for b in range(1, N + 1):
     if b <= K:
         total -= N
     else:
@@ -19,4 +21,3 @@ for b in range(1, N+1):
 
 answer = total
 print(answer)
-

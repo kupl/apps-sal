@@ -34,4 +34,3 @@ for el in b:
         c += 1
         if c == n:
             return
-

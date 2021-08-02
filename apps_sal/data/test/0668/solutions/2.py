@@ -4,7 +4,7 @@ n = int(input())
 a = list(map(int, input().split()))
 a = [(a[0], 1)] + sorted(zip(a[1:], itertools.count(2)), reverse=True)
 w = 1
-ans = [ ]
+ans = []
 for r, cur in enumerate(a):
     if r == w:
         print(-1)
@@ -16,4 +16,3 @@ for r, cur in enumerate(a):
 else:
     print(len(ans))
     print('\n'.join(ans))
-

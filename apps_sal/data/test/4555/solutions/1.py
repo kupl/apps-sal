@@ -6,4 +6,3 @@ s2 = set(range(max(a, b - k + 1), b + 1))
 lis = sorted(s1 | s2)
 for i in lis:
     print(i)
-

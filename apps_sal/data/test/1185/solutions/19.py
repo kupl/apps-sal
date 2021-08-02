@@ -40,4 +40,3 @@ n, m, k = list(map(int, sys.stdin.readline().strip().split()))
 numbers = list(map(int, sys.stdin.readline().strip().split()))
 r = solve(n, m, k, numbers)
 print(r)
-

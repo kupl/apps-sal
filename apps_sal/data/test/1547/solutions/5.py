@@ -10,10 +10,10 @@ def main():
         else:
             B2[b] = [i, a, b, c]
 
-    C = sorted(B1 + B2, key = lambda x: x[0])
+    C = sorted(B1 + B2, key=lambda x: x[0])
 
     A = [[0] * m for i in range(n)]
-        
+
     for i in range(len(C)):
         x, a, b, c = C[i]
         if a == 1:

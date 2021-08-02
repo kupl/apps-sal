@@ -1,9 +1,9 @@
-n,m,k = map(int,input().split())
-t = [[0]*m for i in range(n)]
+n, m, k = map(int, input().split())
+t = [[0] * m for i in range(n)]
 used = set()
 a = []
 for i in range(k):
-    q, b, c = tuple(map(int,input().split()))
+    q, b, c = tuple(map(int, input().split()))
     b = b - 1
     a.append((q, b, c))
 
@@ -21,6 +21,5 @@ for i in range(k):
         used.add(a[i][0:2])
 for i in range(n):
     for j in range(m):
-        print(t[i][j], end = ' ')
+        print(t[i][j], end=' ')
     print()
-                

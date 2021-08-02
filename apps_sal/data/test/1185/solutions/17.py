@@ -1,4 +1,6 @@
-inp = lambda: map(int, input().rstrip().split())
+def inp(): return map(int, input().rstrip().split())
+
+
 n, m, k = inp()
 p = list(inp())
 if m == 1:
