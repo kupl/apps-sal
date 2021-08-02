@@ -18,12 +18,11 @@ else:
     nr = 1
 
 
+for m in mm:
+    if nu == nr:
 
-for m in  mm:
-    if nu==nr:
-
-        if m =="U" and side == -1:
-            ans +=1
+        if m == "U" and side == -1:
+            ans += 1
             side = 1
         elif m == "R" and side == 1:
             ans += 1
@@ -32,9 +31,7 @@ for m in  mm:
     if m == "U":
         nu += 1
     else:
-        nr +=1
+        nr += 1
 
 
 print(ans)
-
-

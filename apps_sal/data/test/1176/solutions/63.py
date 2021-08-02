@@ -10,5 +10,5 @@ for i in a:
     s += abs(i)
 if flag == 1:
     print(s)
-else :
-    print(s-2*mini)
+else:
+    print(s - 2 * mini)

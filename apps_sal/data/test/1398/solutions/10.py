@@ -7,4 +7,3 @@ for i in range(n):
         j += 1
     v = min(v, n + i - j - 1)
 open('output.txt', 'w').write(str(v))
-

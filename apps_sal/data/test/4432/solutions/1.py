@@ -1,10 +1,10 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     b = [a[0]]
     ans = 0
-    for i in range(1,n):
+    for i in range(1, n):
         if b[0] < 0 and a[i] < 0:
             b.append(a[i])
         if b[0] > 0 and a[i] > 0:
@@ -21,6 +21,3 @@ for _ in range(t):
 
 # a = list(map(int,input().split()))
 # n,m = map(int,input().split())
-
-
-

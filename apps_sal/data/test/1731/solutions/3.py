@@ -2,6 +2,7 @@ import math
 
 MOD = 1000000007
 
+
 def main():
     (n, m) = ([int(x) for x in input().split()])
     m *= 2
@@ -20,7 +21,9 @@ def main():
         result = (result + a[i]) % MOD
     print(result)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -22,4 +22,3 @@ for m in moves:
         kingdom = "lower"
 
 print(coins)
-

@@ -22,4 +22,3 @@ class Solution:
             else:
                 cur += 1
         return si
-        

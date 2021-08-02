@@ -18,4 +18,3 @@ else:
     res = res - _min - _min
 
 print(res)
-

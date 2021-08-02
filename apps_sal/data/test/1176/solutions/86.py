@@ -14,5 +14,5 @@ if cnt % 2 == 0:
     for a in A:
         ans = s
 else:
-    ans = s - 2*m
+    ans = s - 2 * m
 print(ans)

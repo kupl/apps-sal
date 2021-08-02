@@ -21,7 +21,7 @@ class Solution:
         i, j = 1, 0
         first_start = 0
         while i < len(start) and j < len(end):
-            if start[i] <= end [j]:
+            if start[i] <= end[j]:
                 make_interval += 1
                 i += 1
             else:
@@ -30,8 +30,7 @@ class Solution:
                     result.append([start[first_start], end[j]])
                     first_start = i
                 j += 1
-                    
-        if j < len(end) :
+
+        if j < len(end):
             result.append([start[first_start], end[-1]])
         return result
-                

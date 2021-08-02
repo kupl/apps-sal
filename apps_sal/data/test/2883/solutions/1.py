@@ -23,4 +23,3 @@ class Solution:
                 cur = r
         rs.append(cur)
         return rs
-        

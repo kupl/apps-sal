@@ -18,6 +18,6 @@ for i in range(n):
         neg += 1
 
 if neg % 2 == 1 and not zero:
-    print(ans-2*smallest)
+    print(ans - 2 * smallest)
 else:
     print(ans)

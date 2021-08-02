@@ -52,4 +52,3 @@ if (res < CMAX):
     print(res)
 else:
     print(-1)
-

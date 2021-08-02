@@ -6,10 +6,12 @@ a = list(map(int, input().split()))
 ans = 0
 count = 0
 for i in range(n):
-  if a[i] < 0: count += 1 # 負の値をカウント
-  a[i] = abs(a[i])
-  ans += a[i] # 全ての値を足していく
-if count%2 == 0: print(ans) # 負の値が偶数個であればそのまま出力
+    if a[i] < 0:
+        count += 1  # 負の値をカウント
+    a[i] = abs(a[i])
+    ans += a[i]  # 全ての値を足していく
+if count % 2 == 0:
+    print(ans)  # 負の値が偶数個であればそのまま出力
 else:
-  ans -= 2*min(a) # 負の値が奇数個であれば最小値の値分減らして出力
-  print(ans)
+    ans -= 2 * min(a)  # 負の値が奇数個であれば最小値の値分減らして出力
+    print(ans)

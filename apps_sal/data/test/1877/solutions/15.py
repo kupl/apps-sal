@@ -21,8 +21,3 @@ for m in s:
     k = nk
 
 print(cc)
-
-
-
-
-

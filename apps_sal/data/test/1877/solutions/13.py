@@ -16,4 +16,3 @@ for i in range(len(s) - 1):
             k += 1
 
 print(k)
-

@@ -1,5 +1,5 @@
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 law_ans = 0
 absminA = float('inf')
@@ -16,11 +16,8 @@ for a in A:
 
 cnt_0 = A.count(0)
 
-if cnt_neg%2 == 0:
+if cnt_neg % 2 == 0:
     print(law_ans)
 else:
-#０があるときはいつでもlaw_ansになるが、absminAが0だからおっけい
-    print((law_ans-2*absminA))
-    
-
-
+    # ０があるときはいつでもlaw_ansになるが、absminAが0だからおっけい
+    print((law_ans - 2 * absminA))

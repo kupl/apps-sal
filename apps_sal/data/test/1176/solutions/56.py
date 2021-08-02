@@ -16,4 +16,3 @@ if num_odd_minus % 2 == 1:
     res -= min_num * 2
 
 print(res)
-

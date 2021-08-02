@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 minus_cnt = 0
 abs_sum = 0
@@ -18,5 +18,3 @@ if minus_cnt % 2 != 0:
     B_max_sum -= (min_abs_val * 2)
 
 print(B_max_sum)
-
-

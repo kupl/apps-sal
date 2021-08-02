@@ -17,6 +17,4 @@ for i in range(n):
 open('output.txt', 'w').write(str(v))
 
 
-
 # Made By Mostafa_Khaled
-

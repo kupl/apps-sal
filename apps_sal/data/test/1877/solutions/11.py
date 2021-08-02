@@ -17,4 +17,3 @@ for i in s:
             count += 1
         kindom = 2
 print(count)
-

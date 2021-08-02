@@ -24,4 +24,3 @@ for el in S[1:]:
         exit(100500)
 
 print(ans)
-

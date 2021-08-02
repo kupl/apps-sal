@@ -7,26 +7,26 @@ total = 0
 minA = 1000000
 for v in arr:
     mark[v] += 1
-    total+=1
-for i in range(1,5001):
-    if mark[i]>0:
-        sumMark[i] = sumMark[i-1]+mark[i]
+    total += 1
+for i in range(1, 5001):
+    if mark[i] > 0:
+        sumMark[i] = sumMark[i - 1] + mark[i]
     else:
-        sumMark[i] = sumMark[i-1]
-for i in range(1,5001):
-    if i <=2500:
-        if mark[i] >0:
-            preValue = sumMark[i-1]
-            postValue = total-sumMark[i*2]
-            remove = postValue +preValue
-            ret = total-remove
-            if remove<minA:
+        sumMark[i] = sumMark[i - 1]
+for i in range(1, 5001):
+    if i <= 2500:
+        if mark[i] > 0:
+            preValue = sumMark[i - 1]
+            postValue = total - sumMark[i * 2]
+            remove = postValue + preValue
+            ret = total - remove
+            if remove < minA:
                 minA = remove
     else:
-        if mark[i] >0:
-            remove = sumMark[i-1]
-            ret = total-remove
-            if remove<minA:
+        if mark[i] > 0:
+            remove = sumMark[i - 1]
+            ret = total - remove
+            if remove < minA:
                 minA = remove
 with open('output.txt', 'w') as f:
     f.write(str(minA))

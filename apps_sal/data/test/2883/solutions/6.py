@@ -10,7 +10,8 @@ class Solution:
         :type intervals: List[Interval]
         :rtype: List[Interval]
         """
-        if not intervals: return []
+        if not intervals:
+            return []
         intervals = sorted(intervals, key=lambda x: (x.start, x.end))
         res = [Interval(intervals[0].start, intervals[0].end), ]
         for i in range(1, len(intervals)):

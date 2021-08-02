@@ -13,6 +13,8 @@ def input(): return sys.stdin.readline().strip()
 def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
@@ -22,7 +24,7 @@ A = LIST()
 
 cnt = 0
 for a in A:
-    if a< 0:
+    if a < 0:
         cnt += 1
 
 if cnt % 2 == 0:
@@ -36,4 +38,3 @@ else:
     C[C_min_id] = C[C_min_id] * (-1)
     ans = sum(C)
 print(ans)
-

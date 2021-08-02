@@ -11,4 +11,3 @@ if cnt % 2 == 0:
     print((sum(A)))
 else:
     print((sum(A) - min(A) * 2))
-
