@@ -11,4 +11,3 @@ for i in range(rem_K):
             ans[i] -= 1
 print(N)
 print((*ans))
-

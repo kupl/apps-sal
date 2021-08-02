@@ -4,7 +4,7 @@ def read_nums():
 
 def is_triangle(nums):
     for index, num in enumerate(nums):
-        if nums[nums[num-1]-1] - 1 == index:
+        if nums[nums[num - 1] - 1] - 1 == index:
             return 'YES'
     return 'NO'
 
@@ -17,5 +17,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

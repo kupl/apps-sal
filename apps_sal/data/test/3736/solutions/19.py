@@ -1,5 +1,6 @@
 import sys
 
+
 def check(text):
     legal = 'AHIMOTUVWXY'
     for i in text:
@@ -10,6 +11,7 @@ def check(text):
     if text != ''.join(rev):
         return False
     return True
+
 
 def __starting_point():
     text = sys.stdin.readline().split()[0]

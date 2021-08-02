@@ -1,7 +1,7 @@
 from collections import defaultdict
 n, flower, bee = list(map(int, input().split()))
 roads = {}
-for _ in range(n-1):
+for _ in range(n - 1):
     x, y = list(map(int, input().split()))
     if x not in roads:
         roads[x] = [y]
@@ -12,6 +12,7 @@ for _ in range(n-1):
     else:
         roads[y].append(x)
 flowers = defaultdict(int)
+
 
 def dfs(bee, flower):
     q = []
@@ -34,6 +35,8 @@ def dfs(bee, flower):
                     continue
                 q.append([y, now[1]])
     return last
+
+
 rem = dfs(bee, flower)
-flower_total = sum(flowers.values())+1
-print(n*(n-1)-(flower_total - flowers[rem])*(n-(flower_total)))
+flower_total = sum(flowers.values()) + 1
+print(n * (n - 1) - (flower_total - flowers[rem]) * (n - (flower_total)))

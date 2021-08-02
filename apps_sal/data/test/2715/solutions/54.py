@@ -14,4 +14,3 @@ for i in range(n):
         a[i] += n + 1
 print(n)
 print((*a))
-

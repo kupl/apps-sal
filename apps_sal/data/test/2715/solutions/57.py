@@ -10,4 +10,3 @@ for i in range(X - (K % X)):
 
 print(X)
 print(*A, sep=' ')
-

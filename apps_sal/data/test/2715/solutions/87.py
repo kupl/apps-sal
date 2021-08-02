@@ -26,7 +26,7 @@ def main():
 
     for i in range(l):
         ans[i] += k // l
-        
+
         tgt = k % l
         if i < tgt:
             ans[i] += l
@@ -40,5 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -12,4 +12,3 @@ for i in range(k2):
 
 print(n)
 print((*a))
-

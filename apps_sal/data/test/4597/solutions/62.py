@@ -20,4 +20,3 @@ def solve():
 
 
 print(solve())
-

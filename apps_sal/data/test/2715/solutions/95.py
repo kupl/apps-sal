@@ -1,7 +1,7 @@
 k = int(input())
 
 div, mod = divmod(k, 50)
-A = [49+div] * 50
+A = [49 + div] * 50
 
 for i in range(mod):
     A[i] += 50
@@ -12,4 +12,3 @@ for i in range(mod):
 
 print((50))
 print((*A))
-

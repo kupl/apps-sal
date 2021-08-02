@@ -8,4 +8,3 @@ if r and s == s[::-1]:
     print('YES')
 else:
     print('NO')
-

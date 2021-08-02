@@ -19,7 +19,7 @@ def solve(xs, n, k):
     if k >= n:
         return max(xs)
     ys1 = xs[:(n - k)]
-    ys2 = xs[(n - k) : 2*(n - k)]
+    ys2 = xs[(n - k): 2 * (n - k)]
     maxval = max(a + b for (a, b) in zip(ys1, ys2[::-1]))
     return max(maxval, xs[-1])
 
@@ -37,5 +37,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

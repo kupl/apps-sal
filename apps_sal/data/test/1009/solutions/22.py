@@ -8,4 +8,3 @@ for left in range(limit):
         break
     need = max(need, cows[left] + cows[right])
 print(need)
-

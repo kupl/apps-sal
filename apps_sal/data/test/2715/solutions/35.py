@@ -1,3 +1,14 @@
+import random
+import math
+import heapq
+import itertools
+import bisect
+import sys
+from collections import Counter, defaultdict, deque
+from heapq import heappop, heappush, heapify
+from copy import deepcopy
+
+
 def examA():
     S = SI()
     T = SI()
@@ -5,11 +16,12 @@ def examA():
     ans = "No"
     for i in range(N):
         cur = S[i:] + S[:i]
-        #print(cur)
-        if cur==T:
+        # print(cur)
+        if cur == T:
             ans = "Yes"
     print(ans)
     return
+
 
 def examB():
     H, W = LI()
@@ -19,18 +31,20 @@ def examB():
     print(ans)
     return
 
+
 def examC():
     L, R = LI()
     ans = inf
-    if R-L>=3000:
-        R = L+3000
+    if R - L >= 3000:
+        R = L + 3000
 
     for l in range(L, R + 1):
-        for r in range(l+1, R + 1):
-            now = (l*r) %2019
-            ans = min(ans,now)
+        for r in range(l + 1, R + 1):
+            now = (l * r) % 2019
+            ans = min(ans, now)
     print(ans)
     return
+
 
 def examD():
     T = ["dream", "dreamer", "erase", "eraser"]
@@ -41,22 +55,24 @@ def examD():
         t += s
         if t[::-1] in T:
             t = ""
-    if t=="":
+    if t == "":
         ans = "YES"
     print(ans)
     return
 
+
 def examE():
     N = 50
     K = I()
-    base = K//N
-    A = [base+i for i in range(N)]
-    rest = K%N
+    base = K // N
+    A = [base + i for i in range(N)]
+    rest = K % N
     for i in range(rest):
-        A[-i-1] += 1
+        A[-i - 1] += 1
     print(N)
-    print(" ".join(map(str,A)))
+    print(" ".join(map(str, A)))
     return
+
 
 def examF():
     L = I()
@@ -65,19 +81,18 @@ def examF():
     print(ans)
     return
 
-import sys,bisect,itertools,heapq,math,random
-from copy import deepcopy
-from heapq import heappop,heappush,heapify
-from collections import Counter,defaultdict,deque
+
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
 def I(): return int(input())
-def LI(): return list(map(int,sys.stdin.readline().split()))
-def LSI(): return list(map(str,sys.stdin.readline().split()))
+def LI(): return list(map(int, sys.stdin.readline().split()))
+def LSI(): return list(map(str, sys.stdin.readline().split()))
 def LS(): return sys.stdin.readline().split()
 def SI(): return sys.stdin.readline().strip()
-nonlocal mod,mod2,inf,alphabet,_ep
+
+
+nonlocal mod, mod2, inf, alphabet, _ep
 mod = 10**9 + 7
 mod2 = 998244353
 inf = 10**18
@@ -86,8 +101,10 @@ alphabet = [chr(ord('a') + i) for i in range(26)]
 
 sys.setrecursionlimit(10**7)
 
+
 def __starting_point():
     examE()
+
 
 """
 142

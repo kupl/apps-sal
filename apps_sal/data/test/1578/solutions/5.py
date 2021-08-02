@@ -1,6 +1,6 @@
-sigma = lambda x : x*(x+1)//2
+sigma = lambda x: x * (x + 1) // 2
 
-#--maincode----------------
+# --maincode----------------
 
 n = int(input())
-print(sigma(n-1))
+print(sigma(n - 1))

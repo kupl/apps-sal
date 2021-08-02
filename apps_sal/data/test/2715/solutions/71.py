@@ -9,7 +9,9 @@ def main():
     print(n)
     print((' '.join([str(x) for x in a])))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

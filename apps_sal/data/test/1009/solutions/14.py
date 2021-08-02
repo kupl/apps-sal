@@ -20,7 +20,7 @@ def solve(xs, n, k):
     if k >= n:
         return xs[-1]
     ys1 = it.islice(xs, n - k)
-    ys2 = it.islice(xs, n - k, 2*(n - k))
+    ys2 = it.islice(xs, n - k, 2 * (n - k))
     ys2rev = reversed(list(ys2))
     maxval = max(a + b for (a, b) in zip(ys1, ys2rev))
     return max(maxval, xs[-1])
@@ -40,5 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

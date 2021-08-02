@@ -1,10 +1,13 @@
 import sys
 
+
 def read_int():
     return int(input())
 
+
 def read_ints():
     return [int(x) for x in input().split()]
+
 
 n = read_int()
 a = read_ints()
@@ -15,4 +18,3 @@ for i in range(n):
         return
 
 print('NO')
-

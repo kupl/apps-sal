@@ -1,5 +1,5 @@
 N = int(input())
 if N % 2 == 0:
-    print((1+N)*(N//2)-N)
+    print((1 + N) * (N // 2) - N)
 else:
-    print((1+N-1)*(N//2))
+    print((1 + N - 1) * (N // 2))

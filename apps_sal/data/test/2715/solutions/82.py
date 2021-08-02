@@ -15,6 +15,5 @@ for i in range(N - tmp2):
 for j in range(i + 1, N):
     ans[j] = tmp1 + N - tmp2 + 1
 
-print (N)
-print (*ans, sep = ' ')
-
+print(N)
+print(*ans, sep=' ')

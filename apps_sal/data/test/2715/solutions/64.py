@@ -1,4 +1,4 @@
-#def test(l):
+# def test(l):
 #    n = len(l)
 #    c = 0
 #    while max(l) >= n:
@@ -26,6 +26,7 @@ def main():
     print((50))
     print((' '.join(str(i) for i in l)))
     return l
+
+
 l = main()
 #print('kotae', test(l))
-

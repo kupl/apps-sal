@@ -1,5 +1,6 @@
 import math
 
+
 def can_pack(m, b):
     nonlocal n, k
     cnt = 0

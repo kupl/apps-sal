@@ -10,8 +10,8 @@ result = ""
 
 i = 0
 
-while(i < str_len/2):
-    if((in_str[i] in good) and (in_str[i] == in_str[-1-i])):
+while(i < str_len / 2):
+    if((in_str[i] in good) and (in_str[i] == in_str[-1 - i])):
         i += 1
     else:
         result = "NO"
@@ -21,5 +21,3 @@ if(result != "NO"):
     result = "YES"
 
 print(result)
-        
-

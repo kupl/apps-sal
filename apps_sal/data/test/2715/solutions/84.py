@@ -5,7 +5,7 @@ if k == 0:
 if k == 1:
     print("2\n2 0")
     return
-n = min(50,k)
+n = min(50, k)
 a = [i for i in range(n)]
 c = k // n
 

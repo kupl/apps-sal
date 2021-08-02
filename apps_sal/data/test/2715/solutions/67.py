@@ -22,5 +22,3 @@ def solve():
 ans = solve()
 print(len(ans))
 print(*ans)
-
-

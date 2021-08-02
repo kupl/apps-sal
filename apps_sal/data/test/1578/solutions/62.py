@@ -1,3 +1,3 @@
-n = int(input())-1
+n = int(input()) - 1
 
-print(n*(n+1)//2)
+print(n * (n + 1) // 2)

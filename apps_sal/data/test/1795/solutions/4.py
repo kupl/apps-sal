@@ -1,18 +1,16 @@
 n = int(input())
-a = list(map(int,input().split()))
-if n==2:
-    print ('NO')
+a = list(map(int, input().split()))
+if n == 2:
+    print('NO')
 else:
-    f=0
+    f = 0
     for i in range(n):
-        a[i]-=1
+        a[i] -= 1
     for i in range(n):
         if a[a[a[i]]] == i:
-            f=1
+            f = 1
             break
     if f:
-        print ('YES')
+        print('YES')
     else:
-        print ('NO')
-
-
+        print('NO')

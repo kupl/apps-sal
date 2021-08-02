@@ -23,5 +23,5 @@ if solution[0] != -1:
         top = s.pop() if len(s) > 0 else n + 1
         solution.extend(reversed(range(cur, top)))
         cur = top + 1
-        
+
 print(' '.join(str(x) for x in solution))
