@@ -6,8 +6,8 @@ ans = 1;
 ind = 1
 
 for i in p:
-    if c[i-1]!=c[ind]:
-        ans+=1;
-    ind+=1 
-    
+    if c[i - 1] != c[ind]:
+        ans += 1;
+    ind += 1
+
 print(ans)

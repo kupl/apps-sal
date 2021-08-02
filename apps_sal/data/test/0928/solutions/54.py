@@ -3,7 +3,7 @@ import numpy as np
 N, K = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-a.insert(0,0)
+a.insert(0, 0)
 Acum = np.array(a).cumsum()
 
 l, r = 0, 1
@@ -21,4 +21,3 @@ while True:
         break
 
 print(ans)
-

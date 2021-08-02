@@ -15,4 +15,3 @@ for left in range(N):
     else:
         total -= A[left]
 print(ans)
-

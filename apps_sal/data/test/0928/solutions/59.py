@@ -9,6 +9,6 @@ ans = 0
 for i in a:
     if i < k:
         continue
-    ans += bisect.bisect_right(a, i-k)
+    ans += bisect.bisect_right(a, i - k)
 
 print(ans)

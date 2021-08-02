@@ -11,4 +11,3 @@ for i in range(n):
         c += n - j + 1
     s -= a[i]
 print(c)
-

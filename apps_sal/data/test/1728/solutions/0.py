@@ -13,7 +13,7 @@ for i in range(n - 1):
 
 result = 1
 
-#for i in range(n):
+# for i in range(n):
 #    print(T_inv[i])
 
 for i in range(n):
@@ -22,4 +22,3 @@ for i in range(n):
             result += 1
 
 print(result)
-

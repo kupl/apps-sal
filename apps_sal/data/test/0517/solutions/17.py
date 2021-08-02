@@ -1,5 +1,5 @@
 n, d, h = list(map(int, input().split()))
-if d == h == 1 and n == 2 or (d == h != 1 or d != h) and 2*h >= d:
+if d == h == 1 and n == 2 or (d == h != 1 or d != h) and 2 * h >= d:
     node = 1
     while node < d + 1:
         if node == h + 1:
@@ -14,4 +14,3 @@ if d == h == 1 and n == 2 or (d == h != 1 or d != h) and 2*h >= d:
         node += 1
 else:
     print(-1)
-

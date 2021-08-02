@@ -7,10 +7,10 @@ for a in A:
 
 B = dd(list)
 
-for l in range(1,n+1):
-    for i in range(n-l+1):
-        s = cA[i+l] - cA[i]
-        B[s].append((i,i+l))
+for l in range(1, n + 1):
+    for i in range(n - l + 1):
+        s = cA[i + l] - cA[i]
+        B[s].append((i, i + l))
 
 best = 0
 bestb = None
@@ -20,7 +20,7 @@ for b in sorted(B, key=lambda b: len(B[b]), reverse=True):
     A = sorted(B[b], key=lambda x: x[1])
     res = 0
     lr = -1
-    for l,r in A:
+    for l, r in A:
         if lr <= l:
             lr = r
             res += 1
@@ -33,9 +33,8 @@ print(best)
 A = sorted(B[bestb], key=lambda x: x[1])
 res = 0
 lr = -1
-for l,r in A:
+for l, r in A:
     if lr <= l:
         lr = r
         res += 1
-        print(l+1,r)
-
+        print(l + 1, r)

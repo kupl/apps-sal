@@ -9,4 +9,4 @@ if k == 1:
     print(-b[-1])
 else:
     d = sorted(b[:-1])
-    print(-sum(d[:k-1]) - b[-1])
+    print(-sum(d[:k - 1]) - b[-1])

@@ -3,9 +3,9 @@
 n, d, h = list(map(int, input().split()))
 
 if h < ((d + 1) >> 1) or (n > 2 and d == 1):
-    
+
     print(-1)
-    
+
 else:
     k = 2 if h != 1 else 1
     print(h + 1, k)
@@ -17,4 +17,3 @@ else:
         print(i, i + 1)
     for i in range(d + 2, n + 1):
         print(i, k)
-

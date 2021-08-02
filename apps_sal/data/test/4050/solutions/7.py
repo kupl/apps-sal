@@ -5,8 +5,9 @@ def get(arr):
         if i[0] > r:
             c += 1
             r = i[1]
-    return c        
-    
+    return c
+
+
 n = int(input())
 a = [int(x) for x in input().split()]
 p = [0]

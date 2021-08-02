@@ -1,9 +1,9 @@
 n = int(input())
 graph = [[] for i in range(n)]
 l = list(map(int, input().split(" ")))
-for i in range(n-1):
-    graph[i+1] += [l[i]-1]
-    graph[l[i]-1] += [i+1]
+for i in range(n - 1):
+    graph[i + 1] += [l[i] - 1]
+    graph[l[i] - 1] += [i + 1]
 cc = list(map(int, input().split(" ")))
 # for i in range(n):
 #     print (graph[i])
@@ -24,8 +24,7 @@ while(len(q) != 0):
         if (visited[j]):
             continue
         if(cc[j] != cc[u]):
-            counter+=1
+            counter += 1
         visited[j] = True
         q += [j]
-print(counter+1)
-
+print(counter + 1)

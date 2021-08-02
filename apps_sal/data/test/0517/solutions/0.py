@@ -4,6 +4,7 @@ i = input()
 i = i.split(' ')
 n, d, h = list([int(x) for x in i])
 
+
 def check(n, d, h):
     if d > 2 * h:
         print(-1)
@@ -19,8 +20,9 @@ def check(n, d, h):
         print(-1)
         return
 
+
 out = []
-#h
+# h
 check(n, d, h)
 c = 0
 # print('h')
@@ -43,7 +45,7 @@ if d == h:
     s = 2
 else:
     s = 1
-    
+
 for i in range(n - c + 1):
     out.append(str(s) + ' ' + str(c))
     # print(out[-1])
@@ -52,5 +54,3 @@ for i in range(n - c + 1):
 
 for el in out:
     print(el)
-
-

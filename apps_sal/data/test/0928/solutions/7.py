@@ -5,20 +5,20 @@ import math
 #import numpy as np
 import queue
 import bisect
-from collections import deque,defaultdict
+from collections import deque, defaultdict
 import heapq as hpq
-from sys import stdin,setrecursionlimit
+from sys import stdin, setrecursionlimit
 #from scipy.sparse.csgraph import dijkstra
 #from scipy.sparse import csr_matrix
 ipt = stdin.readline
 setrecursionlimit(10**7)
-mod = 10**9+7 #998244353
-dir = [(-1,0),(1,0),(0,-1),(0,1)]
+mod = 10**9 + 7  # 998244353
+dir = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 alp = "abcdefghijklmnopqrstuvwxyz"
 
 
 def main():
-    n,k = list(map(int,ipt().split()))
+    n, k = list(map(int, ipt().split()))
     a = [int(i) for i in ipt().split()]
     ans = 0
     sm = 0
@@ -33,7 +33,9 @@ def main():
     print(ans)
     return None
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

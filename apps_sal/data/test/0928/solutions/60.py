@@ -8,7 +8,6 @@ for ai in a[1:]:
 ans = 0
 for i in range(n):
     if s[i] >= k:
-        d = s[i]-k
-        ans += bisect_right(s, d)+1
+        d = s[i] - k
+        ans += bisect_right(s, d) + 1
 print(ans)
-

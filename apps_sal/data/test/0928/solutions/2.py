@@ -14,4 +14,3 @@ for i in range(N):
     ans -= k - i - 1
     s -= A[i]
 print(ans)
-

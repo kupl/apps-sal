@@ -1,8 +1,8 @@
 def pst(root, curr):
     nonlocal times
-    if cs[root-1] != curr:
+    if cs[root - 1] != curr:
         times += 1
-    curr = cs[root-1]
+    curr = cs[root - 1]
     if root not in vss:
         return
     chn = vss[root]
@@ -16,7 +16,6 @@ vs = [int(x) for x in input().split()]
 cs = [int(x) for x in input().split()]
 
 
-
 # vss = set()
 # for i in range(2, n + 1):
 #     vss.add((vs[i - 2], i))
@@ -25,11 +24,12 @@ cs = [int(x) for x in input().split()]
 vss = {}
 for c, p in enumerate(vs):
     if not p in vss:
-        vss[p] = [c+2]
+        vss[p] = [c + 2]
     else:
-        vss[p].append(c+2)
+        vss[p].append(c + 2)
 
 times = 0
+
 
 def flattened():
     times = 0
@@ -41,10 +41,9 @@ def flattened():
     stack = []
     while True:
 
-
         if firstpart:
 
-            if cs[root-1] != curr:
+            if cs[root - 1] != curr:
                 times += 1
             curr = cs[root - 1]
             if root not in vss:
@@ -69,8 +68,6 @@ def flattened():
                 return
             chni, curr = stack.pop()
 
-
-
         # if root in vss:
         #     chn = vss[root]
         #     chni = iter(chn)
@@ -83,5 +80,4 @@ def flattened():
 
 # pst(1, 0)
 # print(times)
-
 flattened()

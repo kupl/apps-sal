@@ -1,5 +1,5 @@
 import bisect
-N,K = map(int,input().split())
+N, K = map(int, input().split())
 A = [int(i) for i in input().split()]
 ans = 0
 '''
@@ -17,11 +17,11 @@ print(ans)
 '''
 
 cusum = [0]
-for i in range(N) :
-    cusum.append(cusum[i]+A[i])
+for i in range(N):
+    cusum.append(cusum[i] + A[i])
 
-for i in cusum :
-    if i < K :
+for i in cusum:
+    if i < K:
         continue
-    ans += bisect.bisect(cusum,i-K)
+    ans += bisect.bisect(cusum, i - K)
 print(ans)

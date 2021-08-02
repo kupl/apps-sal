@@ -12,5 +12,3 @@ heapq.heapify(s)
 for _ in range(k - 1):
     x -= heapq.heappop(s)
 print(x)
-
-

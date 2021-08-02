@@ -1,5 +1,5 @@
 n, w, h = map(int, input().split())
-if 2*h < w:
+if 2 * h < w:
     print(-1)
 elif h == w == 1 and n > 2:
     print(-1)

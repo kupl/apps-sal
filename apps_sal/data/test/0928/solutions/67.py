@@ -5,12 +5,12 @@ acsum = [0]
 for i in range(n):
     acsum.append(acsum[i] + a[i])
 
-cnt =0
+cnt = 0
 p = 0
 for i in range(n + 1):
     if acsum[i] >= k:
         p = i
-        break        
+        break
 
 if acsum[n] < k:
     pass
@@ -21,7 +21,7 @@ else:
             if acsum[i] - acsum[j] >= k:
                 j += 1
                 continue
-            else: # acsum[i] - acsum[j] < k
+            else:  # acsum[i] - acsum[j] < k
                 cnt += j
                 j = j - 1
                 break

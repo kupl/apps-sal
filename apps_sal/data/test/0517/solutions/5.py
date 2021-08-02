@@ -40,4 +40,3 @@ else:
             print(i - 1, i)
             continue
         print(2, i)
-
