@@ -1,3 +1,3 @@
 N, A, B = map(int, input().split())
 
-print(min(A*N, B))
+print(min(A * N, B))

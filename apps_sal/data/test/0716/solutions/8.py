@@ -6,4 +6,3 @@ if s[a] == s[b]:
     return
 else:
     print(1)
-

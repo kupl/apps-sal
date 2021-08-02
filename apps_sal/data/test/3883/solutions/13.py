@@ -10,4 +10,3 @@ else:
     r = (x - y) / 2
     ans = min(s / int(s / y), r / int(r / y)) if r >= y else s / int(s / y)
     print(ans)
-

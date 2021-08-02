@@ -5,4 +5,3 @@ for i in range(n):
     for j in range(0, 2 * m, 2):
         cnt += a[j] or a[j + 1]
 print(cnt)
-

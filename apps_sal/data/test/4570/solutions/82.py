@@ -4,4 +4,3 @@ if normal_cost * time < unlimited_cost:
 else:
     total_cost = unlimited_cost
 print(total_cost)
-

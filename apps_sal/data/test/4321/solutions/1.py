@@ -8,4 +8,3 @@ while k > 0:
     k -= 1
 
 print(n)
-

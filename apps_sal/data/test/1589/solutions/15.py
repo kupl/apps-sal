@@ -7,7 +7,7 @@ for i in range(n):
 for i in range(n):
     for j in range(0, 2 * m, 2):
         try:
-            if arr[i][j] == 1 or arr[i][j+1] == 1:
+            if arr[i][j] == 1 or arr[i][j + 1] == 1:
                 cnt += 1
         except:
             pass

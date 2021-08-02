@@ -5,4 +5,3 @@ else:
     x1 = a + b
     x = b
     print(x1 / (2 * (x1 // (2 * x))))
-

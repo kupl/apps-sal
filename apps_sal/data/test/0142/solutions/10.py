@@ -12,4 +12,3 @@ for i in range(n):
         poss.append(res)
     poss.append(res + pr[ber[i][1]])
 print(min(poss))
-

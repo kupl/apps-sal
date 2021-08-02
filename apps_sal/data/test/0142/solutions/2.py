@@ -1,8 +1,9 @@
 n, m = map(int, input().split())
 l = [int(x) for x in input().split()]
 for i in range(1, n):
-    l[i] = min(l[i], 2*l[i - 1])
+    l[i] = min(l[i], 2 * l[i - 1])
 c = l + [l[-1] * 2 ** i for i in range(1, 32)]
+
 
 def cost(x):
     ans = 0
@@ -10,6 +11,7 @@ def cost(x):
         if x & (1 << i):
             ans += c[i]
     return ans
+
 
 ans = cost(m)
 for i in range(32):

@@ -3,6 +3,8 @@ def minus(s):
         return s // 10
     else:
         return s - 1
+
+
 n, k = map(int, input().split())
 for i in range(k):
     n = minus(n)

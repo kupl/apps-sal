@@ -5,14 +5,15 @@ def to(a):
         a = a // 2
     return s
 
+
 def tr(a):
     s = 0
     while a % 3 == 0 and a != 0:
         s += 1
         a = a // 3
     return s
-    
-         
+
+
 n = int(input())
 a = list(map(int, input().split()))
 for i in range(n):

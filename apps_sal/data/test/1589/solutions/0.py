@@ -8,4 +8,3 @@ for _ in range(n):
             c += 1
 
 print(c)
-

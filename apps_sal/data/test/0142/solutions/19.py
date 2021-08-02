@@ -1,6 +1,7 @@
 from itertools import permutations
 
-MOD = 10**9+7
+MOD = 10**9 + 7
+
 
 def find_best(c):
     n = 2 ** len(c)
@@ -11,6 +12,7 @@ def find_best(c):
             best_c = n // (2**i) * c[i]
             best_i = i
     return best_i
+
 
 def main():
     n, l = [int(c) for c in input().split(' ')]
@@ -27,8 +29,8 @@ def main():
         n = ind
     print(min(ans))
 
+
 while 1:
     main()
     break
 # input()
-

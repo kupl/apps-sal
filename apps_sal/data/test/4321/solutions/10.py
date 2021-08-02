@@ -5,4 +5,3 @@ for i in range(k):
     else:
         n -= 1
 print(n)
-

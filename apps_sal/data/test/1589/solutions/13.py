@@ -7,4 +7,3 @@ for i in range(n):
         if a[i][2 * j + 1] == 1 or a[i][2 * j] == 1:
             cnt += 1
 print(cnt)
-

@@ -13,14 +13,14 @@ def solve(res, num, c, n):
         return
 
     if num % 3 == 0 and (num // 3) in c:
-        solve(res, num//3, c, n - 1)
+        solve(res, num // 3, c, n - 1)
         res.pop()
         c[num // 3] += 1
 
     if (num * 2) in c:
-        solve(res, num*2, c, n - 1)
+        solve(res, num * 2, c, n - 1)
         res.pop()
-        c[num*2] += 1
+        c[num * 2] += 1
 
 
 def main():
@@ -36,5 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

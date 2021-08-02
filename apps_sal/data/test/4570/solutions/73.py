@@ -9,4 +9,3 @@ if (N * A) < B:
     print((N * A))
 else:
     print(B)
-

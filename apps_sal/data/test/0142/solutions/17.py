@@ -13,8 +13,7 @@ for c in costs:
     currv *= 2
     nmainl = lt - (lt % currv)
     prevc = (maincost / mainlen) if maincost != 0 else 0
-    if prevc > (c/currv):
-
+    if prevc > (c / currv):
 
         nremlen = mainlen - nmainl
         remcost += (maincost * nremlen // mainlen)

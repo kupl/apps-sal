@@ -16,7 +16,6 @@ for i in range(n - 1, -1, -1):
     L1 -= cnt * (2**i)
 ans = min(ans, cur)
 for i in range(n - 1, -1, -1):
-    if (2**i)>=L:
+    if (2**i) >= L:
         ans = min(ans, c[i])
 print(ans)
-

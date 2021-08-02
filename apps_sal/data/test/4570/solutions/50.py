@@ -8,7 +8,7 @@ def Input():
 
 def main():
     t, a, b = Input()
-    print(min(t*a, b))
+    print(min(t * a, b))
 
 
 main()
