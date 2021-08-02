@@ -4,13 +4,15 @@ n = int(input())
 
 arr = [input() for i in range(n)]
 
+
 def compare(s1, s2):
     a = s1.count('s')
     b = s2.count('s')
 
-    if (a*len(s2)) < b*len(s1):
+    if (a * len(s2)) < b * len(s1):
         return 1
     return -1
+
 
 arr = sorted(arr, key=functools.cmp_to_key(compare))
 
@@ -24,5 +26,3 @@ for char in s:
     elif char == 'h':
         t += c
 print(t)
-
-

@@ -27,4 +27,3 @@ while True:
     next = []
 
 print(' '.join(map(str, m)))
-

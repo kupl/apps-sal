@@ -17,7 +17,7 @@ for _ in range(t):
                 tmp.append(a[i][j])
         if tmp:
             ans.append(tmp)
-            
+
     len_ans = len(ans)
     res = 0
     for i in range(len_ans // 2):
@@ -28,6 +28,3 @@ for _ in range(t):
             cnt[val] += 1
         res += min(cnt)
     print(res)
-
-      
-

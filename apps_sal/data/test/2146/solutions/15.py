@@ -16,7 +16,7 @@ import sys
 
 
 def solve(xs, n):
-    nodes = list(range(1, n+1))
+    nodes = list(range(1, n + 1))
 
     neighbors = collections.defaultdict(set)
     for from_, to_ in zip(nodes, nodes[1:]):
@@ -50,5 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

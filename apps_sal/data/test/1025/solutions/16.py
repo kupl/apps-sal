@@ -1,6 +1,7 @@
 from fractions import gcd
 import sys
 
+
 def solve():
     n = int(input())
     if n < 3:
@@ -43,6 +44,6 @@ def fact(n, k):
     for i in range(2, small + 1): res //= i
     return res
 
-    
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+if sys.hexversion == 50594544: sys.stdin = open("test.txt")
 solve()

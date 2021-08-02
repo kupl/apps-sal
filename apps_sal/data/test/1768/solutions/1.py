@@ -1,11 +1,12 @@
 import sys
 
+
 def solve():
     n = int(sys.stdin.readline().rstrip())
     s = sys.stdin.readline().rstrip()
     q = int(sys.stdin.readline().rstrip())
 
-    pfs = [[0]*(n + 1) for i in range(26)]
+    pfs = [[0] * (n + 1) for i in range(26)]
     for i in range(n):
         ch = ord(s[i]) - ord('a')
 
@@ -21,7 +22,7 @@ def solve():
     print()
     '''
 
-    dp = [[0]*(n + 1) for i in range(26)]
+    dp = [[0] * (n + 1) for i in range(26)]
 
     for c in range(26):
         for l in range(n + 1):
@@ -44,6 +45,9 @@ def solve():
         ans = dp[ci][mi]
         print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

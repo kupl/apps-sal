@@ -11,6 +11,7 @@ def solve():
         ans += min(dc[i][0] + dc[j][0], dc[i][1] + dc[j][1])
     print(ans)
 
+
 t = int(input())
 for _ in range(t):
     solve()

@@ -29,4 +29,5 @@ def __starting_point():
 
         print(' '.join(str(max_ - (i * div)) for i in range(N)))
 
+
 __starting_point()

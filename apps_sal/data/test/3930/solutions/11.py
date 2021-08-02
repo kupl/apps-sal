@@ -1,12 +1,13 @@
 import sys
 from itertools import accumulate
 
+
 def solve():
     n, k = map(int, input().split())
     a = [int(i) for i in input().split()]
 
     ps = [0] + list(accumulate(a))
-    ap = {ps[n] : 1}
+    ap = {ps[n]: 1}
     ans = 0
 
     if k == 1:
@@ -44,6 +45,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

@@ -1,4 +1,4 @@
-#coding gbk
+# coding gbk
 #!usr/bin/env
 n = int(input())
 a = [0] + [n for i in range(n)]
@@ -14,5 +14,4 @@ while q:
         if l + 1 < a[x]:
             a[x] = l + 1
             q.append((l + 1, x))
-print(*a[1:])    
-
+print(*a[1:])

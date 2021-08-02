@@ -16,19 +16,19 @@ for i in range(n):
     if h == 0:
         k = 100000
     else:
-        k = s/h
+        k = s / h
     mas.append((k, line))
 
 
 ##############################################
 # Main code
-sor = sorted(mas, key=lambda val:val[0], reverse=True)
+sor = sorted(mas, key=lambda val: val[0], reverse=True)
 str = ''
 
 for item in sor:
     str += item[1]
 
-#print(str)
+# print(str)
 
 count = 0
 count_h = all_h
@@ -41,8 +41,3 @@ for i in range(len(str)):
 
 
 print(count)
-
-
-
-
-

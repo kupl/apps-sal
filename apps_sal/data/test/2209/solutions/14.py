@@ -23,8 +23,8 @@ strings = [(s, s.count("s"), s.count("h")) for s in strings]
 def compare(u, v):
     _, su, hu = u
     _, sv, hv = v
-    suxhv = su*hv
-    svxhu = sv*hu
+    suxhv = su * hv
+    svxhu = sv * hu
     if suxhv > svxhu:
         return -1
     elif svxhu > suxhv:
@@ -46,4 +46,3 @@ for string, _, _ in strings:
             noise += ss
 
 print(noise)
-

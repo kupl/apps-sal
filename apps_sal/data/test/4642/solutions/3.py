@@ -16,9 +16,11 @@ def main():
             if ans_sub < ans:
                 ans = ans_sub
                 dd = i
-        lst = []                
+        lst = []
         for j in range(n):
             lst.append(ans)
             ans -= dd
         print(*lst)
+
+
 main()

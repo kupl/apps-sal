@@ -19,5 +19,3 @@ for _ in range(int(input())):
     # if len(brr) % 2 == 1:
     #     ans += min(brr[len(brr) // 2])
     print(ans)
-
-

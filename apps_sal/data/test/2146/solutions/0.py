@@ -15,13 +15,12 @@ while cnt < n:
         v[i] = 1
         r[i] = lvl
         cnt += 1
-        if i > 0 and not v[i-1]:
+        if i > 0 and not v[i - 1]:
             nxt.append(i - 1)
-        if i < n - 1 and not v[i+1]:
+        if i < n - 1 and not v[i + 1]:
             nxt.append(i + 1)
         if not v[a[i]]:
             nxt.append(a[i])
     curr = nxt
     lvl += 1
-print(' '.join(map(str,r)))
-
+print(' '.join(map(str, r)))
