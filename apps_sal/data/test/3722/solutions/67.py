@@ -5,6 +5,7 @@ c_BA = input()
 c_BB = input()
 MOD = 10 ** 9 + 7
 
+
 def fibonacchi(n, mod):
     dp = []
     for i in range(0, n):
@@ -13,6 +14,7 @@ def fibonacchi(n, mod):
         else:
             dp.append((dp[i - 2] + dp[i - 1]) % mod)
     return dp[-1]
+
 
 if N == 2 or N == 3:
     print((1))
@@ -33,4 +35,3 @@ else:
                 print((fibonacchi(N - 1, MOD)))
             else:
                 print((pow(2, N - 3, MOD)))
-

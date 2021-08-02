@@ -1,5 +1,6 @@
 import math
 
+
 def solve(n):
     if n == 2:
         return 3
@@ -8,7 +9,8 @@ def solve(n):
         return (2 ** math.ceil(math.log2(n)) - 1)
     else:
         return bad[math.floor(math.log2(n)) - 1]
-        
+
+
 q = int(input())
 for i in range(q):
     print(solve(int(input())))

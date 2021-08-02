@@ -4,6 +4,7 @@ def sum_l(lst):
         temp += i
     return temp
 
+
 l1 = input()
 l1 = int(l1)
 a = input()
@@ -20,12 +21,8 @@ else:
     ans -= l2[-1]
 
 #ans = sum_l(l2)
-#for i in range(l1-1):
+# for i in range(l1-1):
 #    ans += sum_l(l2)
 #    l2.pop(0)
-    
-print (ans)
-    
 
-
-
+print(ans)

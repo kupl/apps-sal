@@ -14,10 +14,10 @@ if ab == "b":
         print((1))
     else:
         if ba == "a":
-            print((pow(2, n-3, mod)))
+            print((pow(2, n - 3, mod)))
         else:
             dp_a = dp_b = 1
-            for _ in range(n-4):
+            for _ in range(n - 4):
                 dp_a, dp_b = dp_b, (dp_a + dp_b) % mod
             print(((dp_a + dp_b) % mod))
 else:
@@ -25,10 +25,9 @@ else:
         print((1))
     else:
         if ba == "b":
-            print((pow(2, n-3, mod)))
+            print((pow(2, n - 3, mod)))
         else:
             dp_a = dp_b = 1
-            for _ in range(n-4):
+            for _ in range(n - 4):
                 dp_a, dp_b = dp_b, (dp_a + dp_b) % mod
             print(((dp_a + dp_b) % mod))
-

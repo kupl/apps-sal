@@ -11,7 +11,7 @@ if X in F1:
     print(1)
 elif X in FF:
     a, b = 1, 1
-    for i in range(N-2):
+    for i in range(N - 2):
         a, b = b, a + b
         b %= mod
     print(a % mod)

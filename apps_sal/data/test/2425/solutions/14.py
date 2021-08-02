@@ -6,6 +6,7 @@
 
 import math
 
+
 def main():
     num_dict = {
         2: 3,
@@ -60,5 +61,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

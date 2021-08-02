@@ -11,5 +11,3 @@ else:
         mult += 1
     ans += (mult - 1) * a[-1]
 print(ans)
-
-

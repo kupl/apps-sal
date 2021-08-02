@@ -12,10 +12,10 @@ def main():
     mod = pow(10, 9) + 7
 
     v1 = 1
-    for i in range(N-3): v1 = v1 * 2 % mod
+    for i in range(N - 3): v1 = v1 * 2 % mod
     v2 = 1
     dp = [0, 1]
-    for i in range(N-3):
+    for i in range(N - 3):
         temp = [0, 0]
         temp[0] = dp[1]
         temp[1] = (dp[0] + dp[1]) % mod
@@ -42,4 +42,6 @@ def main():
 
 def __starting_point():
     print(main())
+
+
 __starting_point()

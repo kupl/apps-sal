@@ -1,5 +1,6 @@
 mod = 10**9 + 7
 
+
 def main():
     n = int(input())
     caa = input()
@@ -18,11 +19,12 @@ def main():
     if cab == cba:
         dp = [0] * n
         dp[1] = 1
-        for i in range(n-2):
-            dp[i+2] = (dp[i] + dp[i+1]) % mod
-        print(dp[n-1])
+        for i in range(n - 2):
+            dp[i + 2] = (dp[i] + dp[i + 1]) % mod
+        print(dp[n - 1])
         return
 
-    print(pow(2, n-3, mod))
+    print(pow(2, n - 3, mod))
+
 
 main()

@@ -5,5 +5,3 @@ if sum(a) + n - 1 == x:
     print("YES")
 else:
     print("NO")
-
-

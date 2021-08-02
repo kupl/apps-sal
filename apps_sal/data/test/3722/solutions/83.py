@@ -58,6 +58,7 @@ def main():
     #     else:
     #         pass
 
+
 def solve(N, AA, AB, BA, BB):
     pattern = ''.join([AA, AB, BA, BB])
     ans = 1
@@ -92,8 +93,10 @@ def solve(N, AA, AB, BA, BB):
 def f1(N):
     return 1
 
+
 def f2(N):
     return pow(2, max(0, N - 3), mod)
+
 
 def f3(N):
     memo = [0] * (N + 3)
@@ -103,6 +106,7 @@ def f3(N):
         memo[i] = memo[i - 1] + memo[i - 2]
         memo[i] %= mod
     return memo[N]
+
 
 def stupid(N, AA, AB, BA, BB):
     ret = set()
@@ -125,8 +129,6 @@ def stupid(N, AA, AB, BA, BB):
             stack.append(next_s)
     # print(ret)
     return len(ret)
-
-
 
 
 def __starting_point():

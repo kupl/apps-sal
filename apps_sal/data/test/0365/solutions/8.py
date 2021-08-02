@@ -4,5 +4,5 @@ def main():
     s = sum(a)
     print('YES' if s + (n - 1) == x else 'NO')
 
-main()
 
+main()

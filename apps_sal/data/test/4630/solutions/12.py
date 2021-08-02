@@ -9,17 +9,16 @@ for i in range(q):
     for indice, j in enumerate(tab):
         if cycle[indice] != 1:
             continue
-        var = indice +1
+        var = indice + 1
 
-        while tab[var-1] != indice+1:
-            var = tab[var-1]
+        while tab[var - 1] != indice + 1:
+            var = tab[var - 1]
             cycle[indice] += 1
 
-        var = indice +1
+        var = indice + 1
 
-        while tab[var-1] != indice+1:
-            var = tab[var-1]
-            cycle[var-1] = cycle[indice]
-
+        while tab[var - 1] != indice + 1:
+            var = tab[var - 1]
+            cycle[var - 1] = cycle[indice]
 
     print(*cycle)

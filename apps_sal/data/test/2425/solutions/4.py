@@ -37,4 +37,3 @@ for _ in range(ii()):
     else:
         ans = 2 ** (n.bit_length()) - 1
     print(ans)
-

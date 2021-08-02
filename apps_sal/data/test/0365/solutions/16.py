@@ -2,20 +2,21 @@
 
 def f(n, x, arr):
 
-  if x == (sum(arr) + n - 1):
-    print('YES')
-  else:
-    print('NO')
-
+    if x == (sum(arr) + n - 1):
+        print('YES')
+    else:
+        print('NO')
 
 
 def __starting_point():
-  
-  n, x = list(map(int, input().split()))
-  arr = list(map(int, input().split()))
 
-  # for i in range(n):
-  #   list(map(int, input().split()))
+    n, x = list(map(int, input().split()))
+    arr = list(map(int, input().split()))
 
-  f(n, x, arr)
+    # for i in range(n):
+    #   list(map(int, input().split()))
+
+    f(n, x, arr)
+
+
 __starting_point()

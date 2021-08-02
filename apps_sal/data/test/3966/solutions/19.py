@@ -1,19 +1,19 @@
 import math
 
-n=int(input())
-data=list(map(int,input().split()))
+n = int(input())
+data = list(map(int, input().split()))
 
-sum=0
+sum = 0
 for i in range(n):
-    sum+=data[i]
+    sum += data[i]
 
-ans=sum
+ans = sum
 data.sort()
 
-for i in range(n-1):
-    #print(ans)
+for i in range(n - 1):
+    # print(ans)
    # print(data[i:])
-    ans+=sum
-    sum-=data[i]
+    ans += sum
+    sum -= data[i]
 
 print(ans)

@@ -9,25 +9,27 @@ sys.setrecursionlimit(10 ** 6)
 mod = 1000000007
 inf = int(1e18)
 
+
 def solve(n, caa, cab, cba, cbb):
     s_list = {'AB'}
-    for i in range(n-2):
+    for i in range(n - 2):
         tmp = set()
         for s in s_list:
-            for i in range(len(s)-1):
-                if s[i:i+2] == 'AA':
-                    tmp.add(s[:i+2] + caa + s[i+2:])
-                if s[i:i+2] == 'AB':
-                    tmp.add(s[:i+2] + cab + s[i+2:])
-                if s[i:i+2] == 'BA':
-                    tmp.add(s[:i+2] + cba + s[i+2:])
-                if s[i:i+2] == 'BB':
-                    tmp.add(s[:i+2] + cbb + s[i+2:])
+            for i in range(len(s) - 1):
+                if s[i:i + 2] == 'AA':
+                    tmp.add(s[:i + 2] + caa + s[i + 2:])
+                if s[i:i + 2] == 'AB':
+                    tmp.add(s[:i + 2] + cab + s[i + 2:])
+                if s[i:i + 2] == 'BA':
+                    tmp.add(s[:i + 2] + cba + s[i + 2:])
+                if s[i:i + 2] == 'BB':
+                    tmp.add(s[:i + 2] + cbb + s[i + 2:])
         s_list = tmp
     print(("{}\t{}".format(n, len(s_list))))
 
+
 def main():
-    n=int(input())
+    n = int(input())
     caa, cab, cba, cbb = input(), input(), input(), input()
     if n <= 3:
         print((1))
@@ -42,7 +44,7 @@ def main():
                     pp, p = p, v
                 print(p)
             else:
-                print((pow(2, n-3, mod)))
+                print((pow(2, n - 3, mod)))
         else:
             print((1))
     else:
@@ -55,9 +57,9 @@ def main():
                     pp, p = p, v
                 print(p)
             else:
-                print((pow(2, n-3, mod)))
+                print((pow(2, n - 3, mod)))
         else:
             print((1))
 
-main()
 
+main()

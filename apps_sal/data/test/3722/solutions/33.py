@@ -1,29 +1,32 @@
 
-MOD = 10**9+7
+MOD = 10**9 + 7
+
+
 def calc(n):
-    dp = [ [0]*2 for _ in range(n) ]
+    dp = [[0] * 2 for _ in range(n)]
     dp[0][0] = 1
     dp[0][1] = 1
-    for i in range(n-1):
-        dp[i+1][0] = (dp[i][0] + dp[i][1])%MOD
-        dp[i+1][1] = dp[i][0]%MOD
-    return (dp[n-1][0] + dp[n-1][1])%MOD
+    for i in range(n - 1):
+        dp[i + 1][0] = (dp[i][0] + dp[i][1]) % MOD
+        dp[i + 1][1] = dp[i][0] % MOD
+    return (dp[n - 1][0] + dp[n - 1][1]) % MOD
+
 
 def calc2(n):
     if n == 1: return 2
 
-    dp = [ [0]*4 for _ in range(n) ]
-    dp[1][0] = 1 #aa
-    dp[1][1] = 1 #ab
-    dp[1][2] = 1 #ba
-    dp[1][3] = 1 #bb
-    for i in range(1,n-1):
-        dp[i+1][0] = (dp[i][0]+dp[i][2])%MOD
-        dp[i+1][1] = (dp[i][0]+dp[i][2])%MOD
-        dp[i+1][2] = (dp[i][1]+dp[i][3])%MOD
-        dp[i+1][3] = (dp[i][1])%MOD
+    dp = [[0] * 4 for _ in range(n)]
+    dp[1][0] = 1  # aa
+    dp[1][1] = 1  # ab
+    dp[1][2] = 1  # ba
+    dp[1][3] = 1  # bb
+    for i in range(1, n - 1):
+        dp[i + 1][0] = (dp[i][0] + dp[i][2]) % MOD
+        dp[i + 1][1] = (dp[i][0] + dp[i][2]) % MOD
+        dp[i + 1][2] = (dp[i][1] + dp[i][3]) % MOD
+        dp[i + 1][3] = (dp[i][1]) % MOD
     # print(dp)
-    return (sum(dp[n-1]))%MOD
+    return (sum(dp[n - 1])) % MOD
 
 
 def rev(s):
@@ -66,18 +69,18 @@ if ab == 'A':
     if aa == 'A':
         print(1)
         # print('www1')
-    else: # aa 'B
+    else:  # aa 'B
         if ba == 'A':
-            ans = calc(n-3)
+            ans = calc(n - 3)
             print(ans)
             # print('www2')
         else:
             if bb == 'A':
-                ans = pow(2,n-3,MOD)
-                print(ans%MOD)
+                ans = pow(2, n - 3, MOD)
+                print(ans % MOD)
             else:
-                ans = pow(2,n-3,MOD)
-                print(ans%MOD)
+                ans = pow(2, n - 3, MOD)
+                print(ans % MOD)
                 # else:
                 #     ans = calc2(n-3)
                 #     print(ans)
@@ -87,15 +90,15 @@ else:
     if bb == 'B':
         print(1)
         # print('www1')
-    else: # aa 'B
+    else:  # aa 'B
         if ba == 'B':
-            ans = calc(n-3)
+            ans = calc(n - 3)
             print(ans)
             # print('www2')
         else:
             if aa == 'B':
-                ans = pow(2,n-3,MOD)
-                print(ans%MOD)
+                ans = pow(2, n - 3, MOD)
+                print(ans % MOD)
             else:
-                ans = pow(2,n-3,MOD)
-                print(ans%MOD)
+                ans = pow(2, n - 3, MOD)
+                print(ans % MOD)

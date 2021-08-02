@@ -11,4 +11,3 @@ while len(a) > 1:
     s -= a.pop()
 
 print(res)
-

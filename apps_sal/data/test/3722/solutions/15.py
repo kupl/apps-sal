@@ -18,16 +18,16 @@ BA = BだとBBが連続できる
 import sys
 from sys import stdin
 
-mod = 10**9+7
+mod = 10**9 + 7
 N = int(input())
 aa = input()
 ab = input()
 ba = input()
 bb = input()
 
-dp = [1,0]
-for i in range(N-3):
-    ndp = [0,0]
+dp = [1, 0]
+for i in range(N - 3):
+    ndp = [0, 0]
     ndp[0] = (dp[0] + dp[1]) % mod
     ndp[1] = dp[0]
     dp = ndp
@@ -45,10 +45,10 @@ if ab == "A":
     else:
 
         if ba == "B":
-            print((pow(2,N-3,mod)))
+            print((pow(2, N - 3, mod)))
             return
         else:
-            print (ANSC)
+            print(ANSC)
             return
 
 else:
@@ -59,9 +59,8 @@ else:
 
     else:
         if ba == "A":
-            print((pow(2,N-3,mod)))
+            print((pow(2, N - 3, mod)))
             return
         else:
-            print (ANSC)
+            print(ANSC)
             return
-

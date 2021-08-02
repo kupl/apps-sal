@@ -6,10 +6,9 @@ for i in range(q):
     n = int(input())
 
     lis = [0] * n
-    
 
-    a = list(map(int,input().split()))
-    
+    a = list(map(int, input().split()))
+
     q = []
     ind = 0
     now = 0
@@ -33,5 +32,4 @@ for i in range(q):
 
         end += len(q)
 
-    print(" ".join(map(str,lis)))
-
+    print(" ".join(map(str, lis)))

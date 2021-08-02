@@ -5,16 +5,19 @@ import itertools
 A = 'A'
 B = 'B'
 
+
 def c(s):
     caa, cab, cba, cbb = s
     return {A: {A: caa, B: cab}, B: {A: cba, B: cbb}}
+
 
 def f(s, n, C):
     if len(s) == n:
         yield s
     else:
         for i in range(len(s) - 1):
-            yield from f(s[:i+1] + C[s[i]][s[i + 1]] + s[i+1:], n, C)
+            yield from f(s[:i + 1] + C[s[i]][s[i + 1]] + s[i + 1:], n, C)
+
 
 def g(n, s):
     return len(set(f('AB', n, c(s))))
@@ -42,8 +45,6 @@ elif X == 5:
 elif X == 1:
     print(1)
 
-for sx in itertools.product(*[[A, B]]*4):
+for sx in itertools.product(*[[A, B]] * 4):
     s = ''.join(sx)
     print(' '.join([s, *['%2d' % g(i, s) for i in range(2, 10)]]), file=sys.stderr)
-
-

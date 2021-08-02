@@ -7,4 +7,3 @@ for item in q:
     s += delta
     delta -= item
 print(s - q[-1])
-

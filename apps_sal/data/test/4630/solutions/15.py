@@ -24,10 +24,9 @@ def solve():
                     break
 
     for i in range(n):
-        print(ans   [i], end=" ")
+        print(ans[i], end=" ")
     print()
 
 
 for _ in range(int(input())):
     solve()
-
