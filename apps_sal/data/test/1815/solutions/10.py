@@ -15,4 +15,3 @@ for i in range(n):
     if (B[next] + B[next - 1] == len(calcset) and B[next] == 1) or (B[1] == 1 and B[next] == len(calcset) - 1) or (next == 1 and B[next] == len(calcset)):
         good = max(good, i)
 print(good + 1)
-

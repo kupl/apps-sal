@@ -23,4 +23,3 @@ for i in range(N):
         ans = i + 1
 
 print(ans)
-
