@@ -1,4 +1,4 @@
-x,y,z = map(int, input().split())
+x, y, z = map(int, input().split())
 a = x - y
 if a + z < 0:
     print('-')

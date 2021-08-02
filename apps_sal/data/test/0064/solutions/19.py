@@ -13,4 +13,3 @@ for v in list(cnt.values()):
         ans = "NO"
         break
 print(ans)
-

@@ -11,4 +11,3 @@ elif a == 0 and z == 0:
     print(0)
 else:
     print('?')
-

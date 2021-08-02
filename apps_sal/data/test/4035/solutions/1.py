@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 (A, B) = [int(n) for n in input().split()]
 
@@ -11,4 +14,3 @@ for i in range(10001):
         break
 
 print(answer)
-

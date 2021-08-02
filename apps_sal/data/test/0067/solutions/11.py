@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 x, y, z = map(int, input().split())
 
-base = x-y
+base = x - y
 
 if base + z > 0 and base - z > 0:
     print('+')

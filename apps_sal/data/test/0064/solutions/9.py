@@ -8,4 +8,3 @@ for c in C:
         break
 else:
     print("YES")
-

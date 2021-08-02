@@ -5,5 +5,3 @@ for x in range(max(a, b), 2000):
         print(x)
         return
 print((-1))
-
-

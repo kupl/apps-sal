@@ -1,6 +1,7 @@
-A,B=map(int,input().split())
+A, B = map(int, input().split())
 for i in range(4**6):
-    if int(i*.08)==A and int(i*.1)==B:
+    if int(i * .08) == A and int(i * .1) == B:
         print(i)
         break
-else:print(-1)
+else:
+    print(-1)

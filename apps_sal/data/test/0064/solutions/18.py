@@ -7,4 +7,3 @@ if max(m) > k:
     print("NO")
 else:
     print("YES")
-

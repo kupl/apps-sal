@@ -8,7 +8,7 @@ if z == 0:
         print('-')
 else:
     if x > y + z:
-        print('+') 
+        print('+')
     elif x + z < y:
         print('-')
     else:
