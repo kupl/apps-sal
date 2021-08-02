@@ -13,4 +13,3 @@ for n in range(1, k + 1):
     ans += z
     ans %= p
 print(ans)
-

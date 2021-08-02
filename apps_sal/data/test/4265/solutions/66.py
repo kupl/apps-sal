@@ -12,4 +12,3 @@ def counts(s, t):
 
 
 print((counts(s, t)))
-

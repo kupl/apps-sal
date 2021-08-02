@@ -23,4 +23,3 @@ for i, j in zip(s, t):
         res += 1
 
 print(res)
-

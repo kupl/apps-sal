@@ -1,4 +1,4 @@
-s = input() 
+s = input()
 t = input()
 ans = 0
 for i in range(len(s)):

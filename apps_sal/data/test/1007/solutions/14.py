@@ -15,4 +15,3 @@ for i in range(k):
     ans = (ans + zcy[i]) % p
 
 print(ans)
-

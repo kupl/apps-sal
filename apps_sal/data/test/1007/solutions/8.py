@@ -1,6 +1,5 @@
 
 
-
 def main():
     k, p = map(int, input().split())
     s = 0
@@ -13,11 +12,11 @@ def main():
     print(s % p)
 
 
-
-
 def __starting_point():
     try:
         main()
     except KeyboardInterrupt:
         pass
+
+
 __starting_point()

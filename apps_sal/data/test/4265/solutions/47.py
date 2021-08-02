@@ -6,4 +6,3 @@ for i in range(ln):
     if s[i] != t[i]:
         cnt += 1
 print(cnt)
-

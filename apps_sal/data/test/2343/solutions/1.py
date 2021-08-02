@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 for t in range(ii()):
     n, k = mi()
@@ -29,4 +34,3 @@ for t in range(ii()):
             p2 *= 2
         ans = 'YES %d' % (x,)
     print(ans)
-

@@ -7,7 +7,7 @@ class Solution:
         for i in range(ll):
             dir[numbers[i]] = i
         for i in range(ll):
-            o2 = target-numbers[i]
+            o2 = target - numbers[i]
             if o2 in dir:
                 if (dir[o2] != i):
                     ans.append(i)

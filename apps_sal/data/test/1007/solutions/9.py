@@ -14,7 +14,3 @@ while True:
         break
     x += 1
 print(vsota % p)
-
-        
-
-
