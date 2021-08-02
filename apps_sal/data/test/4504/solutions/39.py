@@ -9,4 +9,3 @@ while True:
         if s[:len(s) // 2] == s[len(s) // 2:]:
             print((len(s)))
             break
-

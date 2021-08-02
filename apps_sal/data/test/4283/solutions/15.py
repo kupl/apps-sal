@@ -16,5 +16,3 @@ for k in list(d.keys()):
     num = max(num, tmp)
 
 print(num)
-
-

@@ -2,6 +2,7 @@
 
 from fractions import Fraction
 
+
 def __starting_point():
     p, q = list(map(int, input().split()))
     n = int(input())
@@ -14,7 +15,6 @@ def __starting_point():
         f += x
 
     print(["NO", "YES"][f == Fraction(p, q)])
-
 
 
 __starting_point()

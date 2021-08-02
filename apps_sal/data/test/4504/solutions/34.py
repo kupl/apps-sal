@@ -9,4 +9,3 @@ for i in range(200):
     if s[: len(s) // 2] == s[len(s) // 2:]:
         print((len(s)))
         return
-

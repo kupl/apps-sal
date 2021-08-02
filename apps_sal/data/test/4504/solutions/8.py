@@ -46,4 +46,3 @@ else:
     while S:
         S = S[:-2]
         check(S)
-

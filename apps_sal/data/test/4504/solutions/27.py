@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from math import ceil, floor, sqrt, pi, factorial, gcd
 from copy import deepcopy
 from collections import Counter, deque
@@ -7,7 +8,7 @@ from itertools import accumulate, product, combinations, combinations_with_repla
 from bisect import bisect, bisect_left, bisect_right
 from functools import reduce
 from decimal import Decimal, getcontext
-# input = sys.stdin.readline 
+# input = sys.stdin.readline
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -20,11 +21,14 @@ def s_row(N): return [s_input for _ in range(N)]
 def s_row_str(N): return [s_list() for _ in range(N)]
 def s_row_list(N): return [list(s_input()) for _ in range(N)]
 def lcm(a, b): return a * b // gcd(a, b)
+
+
 sys.setrecursionlimit(10 ** 6)
 INF = float('inf')
 MOD = 10 ** 9 + 7
 num_list = []
 str_list = []
+
 
 def main():
     s = input()
@@ -33,14 +37,14 @@ def main():
     else:
         i = len(s) - 1
     while True:
-        if s[:int(i/2)] ==  s[int(i/2):i]:
+        if s[:int(i / 2)] == s[int(i / 2):i]:
             print(i)
             break
         i -= 2
-        
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

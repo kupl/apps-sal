@@ -12,4 +12,3 @@ if U * Q == P * V:
     print("YES")
 else:
     print("NO")
-

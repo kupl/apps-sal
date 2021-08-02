@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     n = int(sys.stdin.readline())
     a = list(map(int, sys.stdin.readline().split(' ')))
@@ -12,5 +13,5 @@ def main():
         sys.stdout.write('{}\n'.format(str(H)))
         (w1, h1) = (w2, h2)
 
-main()
 
+main()

@@ -1,8 +1,11 @@
-#Bhargey Mehta (Sophomore)
+# Bhargey Mehta (Sophomore)
 #DA-IICT, Gandhinagar
-import sys, math, queue, bisect
+import sys
+import math
+import queue
+import bisect
 #sys.stdin = open("input.txt", "r")
-MOD = 10**9+7
+MOD = 10**9 + 7
 sys.setrecursionlimit(1000000)
 
 n = int(input())

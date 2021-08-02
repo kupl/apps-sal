@@ -7,12 +7,11 @@ s = input()
 se = s.split()
 for c in se:
     e = int(c)
-    t1 = p-e*q
+    t1 = p - e * q
     t2 = q
     p = t2
     q = t1
 if q == 0:
     print('YES')
-else :
+else:
     print('NO')
-

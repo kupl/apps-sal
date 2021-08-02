@@ -11,4 +11,3 @@ for width, height in boxes:
     box_bottom = max(stair_heights[0], stair_heights[width - 1])
     print(box_bottom)
     stair_heights[0] = box_bottom + height
-
