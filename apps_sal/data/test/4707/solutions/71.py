@@ -1,13 +1,13 @@
 D = input()
 
-A="1"
-B="11"
-C="101"
-F="111"
+A = "1"
+B = "11"
+C = "101"
+F = "111"
 
 if F == D:
     print((3))
-    
+
 elif B in D:
     print((2))
 
@@ -19,4 +19,3 @@ elif A in D:
 
 else:
     print((0))
-

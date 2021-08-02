@@ -7,4 +7,3 @@ else:
     ans = 'red'
 
 print(ans)
-

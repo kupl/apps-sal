@@ -2,6 +2,7 @@ a = int(input())
 sa = str(a)
 i = 1
 
+
 def check(sa, si):
     cc = 0
     for i in range(len(sa)):
@@ -13,6 +14,8 @@ def check(sa, si):
         return True
     else:
         return False
+
+
 i = int(a ** 0.5 + 1)
 while i > 0:
     if i * i > a:
@@ -25,4 +28,3 @@ while i > 0:
         quit()
     i -= 1
 print(-1)
-

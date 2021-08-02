@@ -22,4 +22,3 @@ for team in teams:
     c += 1
 
 print(c)
-

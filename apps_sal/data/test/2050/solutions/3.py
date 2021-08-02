@@ -9,4 +9,3 @@ for i in range(1, n + 1):
     buff += str(k * (6 * i - 2)) + ' '
     buff += str(k * (6 * i - 1)) + ' '
     print(buff)
-

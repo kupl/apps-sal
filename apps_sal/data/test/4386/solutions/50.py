@@ -7,5 +7,5 @@ def solve():
         print("red")
     return
 
-solve()
 
+solve()

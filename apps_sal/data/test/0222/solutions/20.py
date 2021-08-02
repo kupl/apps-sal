@@ -16,6 +16,7 @@ def nop(a, b):
             return 0
     return 1
 
+
 a = int(input())
 b = int(math.sqrt(a))
 c = []

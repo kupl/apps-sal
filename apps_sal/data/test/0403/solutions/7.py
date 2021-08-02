@@ -22,5 +22,6 @@ def main():
         x -= cx
         cnt += 1
     print(cnt)
-main()
 
+
+main()

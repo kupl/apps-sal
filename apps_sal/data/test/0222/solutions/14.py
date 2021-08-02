@@ -3,6 +3,7 @@ from math import *
 strN = input()
 n = int(strN)
 
+
 def IsMatch(t):
     strT = str(t)
     if len(strN) == len(strT):
@@ -20,12 +21,12 @@ def IsMatch(t):
     else:
         return len(strN) - len(strT)
 
+
 N = floor(sqrt(n))
 for i in range(N, 0, -1):
-    t = i*i
+    t = i * i
     d = IsMatch(t)
     if d >= 0:
         print(d)
         return
 print(-1)
-

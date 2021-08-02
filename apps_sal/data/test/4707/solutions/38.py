@@ -1,6 +1,6 @@
-a=input()
-x=0
+a = input()
+x = 0
 for i in range(3):
-  if a[i]=="1":
-    x=x+1
+    if a[i] == "1":
+        x = x + 1
 print(x)

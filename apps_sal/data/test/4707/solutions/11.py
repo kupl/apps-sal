@@ -6,4 +6,3 @@ for i in a:
     else:
         pass
 print(count)
-

@@ -17,4 +17,3 @@ for _ in range(t):
     # print(longest)
     best = min(best, len(s) - max(longest[i][j] - (longest[i][j] % 2) for i in range(10) for j in range(10) if i != j))
     print(best)
-

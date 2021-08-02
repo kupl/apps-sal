@@ -12,4 +12,5 @@ def solve(s):
 def __starting_point():
     solve(input())
 
+
 __starting_point()
