@@ -6,8 +6,8 @@ N, M = map(int, sys.stdin.readline().split())
 edges = [[] for _ in range(N)]
 for _ in range(M):
     l, r, d = map(int, sys.stdin.readline().split())
-    edges[l-1].append((r-1, d))
-    edges[r-1].append((l-1, -d))
+    edges[l - 1].append((r - 1, d))
+    edges[r - 1].append((l - 1, -d))
 
 visited = {}
 # その人へのパスが複数あり、距離が異なる場合は矛盾
@@ -25,12 +25,12 @@ for i in range(N):
                 print("No")
                 return
             continue
-        
+
         visited[l] = c
         # dist[l] = c
 
         for r, nd in edges[l]:
-            q.append((r, c+nd))
+            q.append((r, c + nd))
     # print(dist)
 
 print("Yes")

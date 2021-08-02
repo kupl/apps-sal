@@ -56,9 +56,4 @@ if kop:
 else:
     l = len(ret)
     for i in range(0, l - 1, 1):
-        print(ret[i], end = '')
-
-    
-    
-            
-        
+        print(ret[i], end='')

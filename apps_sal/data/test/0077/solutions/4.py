@@ -11,4 +11,3 @@ for i in range(len(b)):
         mm = max(mm, s)
 # print(c)
 print(sum(c) + mm)
-

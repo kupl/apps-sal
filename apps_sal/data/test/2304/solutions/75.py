@@ -35,4 +35,3 @@ for i in range(N):
         ans &= ok(i, 0, dists)
 
 print(("Yes" if ans else "No"))
-

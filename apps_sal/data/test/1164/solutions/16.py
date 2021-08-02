@@ -1,11 +1,13 @@
 from math import *
 
+
 def remd(x):
     y = []
     for i in x:
         if i != '.':
             y.append(i)
     return ''.join(y)
+
 
 def parse(x):
     if '.' not in x:
@@ -21,6 +23,7 @@ def parse(x):
         return x1 + x2 / 100
     else:
         return int(remd(x))
+
 
 def format(y):
     y1 = int(y)
@@ -39,6 +42,7 @@ def format(y):
         yy += '.'
         yy += ('%02d' % y2)
     return yy
+
 
 s = input()
 pr = []

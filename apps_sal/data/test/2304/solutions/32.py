@@ -46,4 +46,3 @@ for L, R, D in LRD:
             print('No')
             return
 print('Yes')
-

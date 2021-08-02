@@ -31,7 +31,7 @@ if not ch:
                 a[i][j] = '!'
 for i in range(3):
     for j in range(3):
-        
+
         for p in range(3):
             for q in range(3):
                 print(a[i * 3 + j][p * 3 + q], end='')

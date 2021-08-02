@@ -23,7 +23,7 @@ if not mark:
         for j in range(9):
             if(field[i][j] == "."):
                 field[i][j] = "!"
-                
+
 for i in range(9):
     for j in range(9):
         print(field[i][j], end="")
@@ -32,6 +32,3 @@ for i in range(9):
     if((i + 1) % 3 == 0):
         print()
     print()
-    
-
-

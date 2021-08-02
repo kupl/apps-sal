@@ -19,4 +19,3 @@ for i, x in enumerate(xs):
 i = m[1]
 xs = [xs[i]] + xs[:i] + xs[i + 1:]
 print(' '.join(map(str, xs)))
-

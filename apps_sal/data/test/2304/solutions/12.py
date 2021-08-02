@@ -10,6 +10,7 @@ for i in range(m):
     g[a].append((b, k))
     g[b].append((a, -k))
 
+
 def dfs(u):
     q.append(u)
     while q:
@@ -24,6 +25,7 @@ def dfs(u):
                 q.append(x)
     return True
 
+
 for i in range(1, n + 1):
     if i not in visited:
         dist[i] = 1
@@ -31,4 +33,3 @@ for i in range(1, n + 1):
             print("No")
             return
 print("Yes")
-

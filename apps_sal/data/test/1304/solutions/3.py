@@ -19,7 +19,7 @@ if x == 1:
     x0 = 0
 if x == 2:
     x0 = 3
-    
+
 if y == 0:
     y0 = 6
 if y == 1:
@@ -37,12 +37,12 @@ if ans == False:
         for j in range(0, 9):
             if a[i][j] == '.':
                 a[i][j] = '!'
-                
+
 for i in range(0, 9):
     if i == 3 or i == 6:
         print()
     for j in range(0, 9):
         if j == 3 or j == 6:
-            print(end = " ")
-        print(a[i][j], end = "")
+            print(end=" ")
+        print(a[i][j], end="")
     print()

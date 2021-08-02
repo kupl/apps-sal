@@ -6,9 +6,8 @@ def iroha():
         if elm == letter:
             print("vowel")
             return
-    
+
     print("consonant")
-            
 
 
 def __starting_point():

@@ -32,15 +32,18 @@ def main():
 
     # 始点からのパスを処理
     for s in range(N):
-        if h[s]: continue  # sに入ってくるパスがあるので、sを始点にしない
-        if ~dist[s]: continue
+        if h[s]:
+            continue  # sに入ってくるパスがあるので、sを始点にしない
+        if ~dist[s]:
+            continue
         if not dfs(s):
             print('No')
             return
 
     # サイクルを処理（どの点も入るパスがあり、処理できていない）
     for s in range(N):
-        if ~dist[s]: continue
+        if ~dist[s]:
+            continue
         if not dfs(s):
             print('No')
             return
@@ -50,5 +53,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

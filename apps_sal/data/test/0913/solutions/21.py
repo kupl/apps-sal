@@ -14,4 +14,3 @@ else:
     if ret * pos <= neg:
         ret += 1
     print(ret)
-

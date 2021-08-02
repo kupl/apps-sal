@@ -1,4 +1,4 @@
-p=["consonant","vowel"]
-a=input()
-b="aeiou"
+p = ["consonant", "vowel"]
+a = input()
+b = "aeiou"
 print(p[a in b])

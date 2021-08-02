@@ -21,7 +21,7 @@ def dijkstra(node, edge, check):
             else:
                 continue
         # 到達した距離を記録
-        d[curr_node] = curr_d 
+        d[curr_node] = curr_d
         check[curr_node] = True
         if curr_d < curr_min:
             curr_min = curr_d
@@ -31,15 +31,15 @@ def dijkstra(node, edge, check):
         # 隣接ノードを積む
         for nxt, diff in edge[curr_node]:
             st.append((nxt, curr_d + diff))
-    
+
     return d, curr_min, curr_max, check
 
 
 def submit():
     n, m = (int(e) for e in input().split())
-    
+
     # グラフを構成
-    edge = {i : [] for i in range(1, n + 1)}
+    edge = {i: [] for i in range(1, n + 1)}
     for _ in range(m):
         l, r, d = (int(e) for e in input().split())
         edge[l].append((r, d))

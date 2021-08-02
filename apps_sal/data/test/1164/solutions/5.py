@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 s = input()
 gg = 0
 i = 0
@@ -8,13 +9,13 @@ while i < len(s):
         i += 1
         continue
     h = '000'
-    while i < len(s) and  not 'a' <= s[i] <= 'z':
+    while i < len(s) and not 'a' <= s[i] <= 'z':
         h += s[i]
         i += 1
     ans = ''
     if h[-3] == '.':
         dbl += int(h[-2:])
-        h = h[:-3] 
+        h = h[:-3]
     for z in h:
         if z != '.':
             ans += z
@@ -29,7 +30,7 @@ if dbl != 0:
     while len(dbl) < 2:
         dbl = '0' + dbl
     dd.append(dbl)
-#print(dd)
+# print(dd)
 if gg == 0:
     dd.append(0)
 while gg != 0:
@@ -39,10 +40,4 @@ while gg != 0:
             dd[-1] = '0' + dd[-1]
     gg //= 1000
 dd.reverse()
-print(*dd, sep = '.')
-    
-
-    
-            
-        
-
+print(*dd, sep='.')

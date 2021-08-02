@@ -36,4 +36,3 @@ if len(poz_impar) > 0:
 else:
     res += neg_impar[-1]
 print(res)
-

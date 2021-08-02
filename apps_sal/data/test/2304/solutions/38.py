@@ -67,4 +67,3 @@ for _ in range(m):
         PUF.unite(l, r, d)
 
 print(("No" if flag else "Yes"))
-

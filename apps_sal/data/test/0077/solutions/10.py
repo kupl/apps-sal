@@ -14,5 +14,6 @@ if s % 2 == 1:
 else:
     while i < n and a[i] % 2 == 0:
         i += 1
-    if i < n: m2 = a[i]
-    print(max(s-m1,s+m2))
+    if i < n:
+        m2 = a[i]
+    print(max(s - m1, s + m2))

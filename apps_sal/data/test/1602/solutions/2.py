@@ -25,4 +25,3 @@ for i in reversed(list(range(32))):
 print(*a)
 
 # inf.close()
-

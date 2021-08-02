@@ -13,6 +13,7 @@ for _ in range(M):
 
 ans = [None] * (N + 1)
 
+
 def calc(i):
     ans[i] = 0
     stack = [i]
@@ -27,12 +28,13 @@ def calc(i):
                     return False
     return True
 
+
 for i in range(1, N + 1):
     if ans[i] == None:
         if calc(i):
             pass
         else:
-            print ('No')
+            print('No')
             return
 
 
@@ -43,6 +45,6 @@ for i in ans[1:]:
     min_ = min(min_, i)
 
 if max_ - min_ > 10 ** 9:
-    print ('No')
+    print('No')
 else:
-    print ('Yes')
+    print('Yes')

@@ -1,6 +1,6 @@
-x=input()
+x = input()
 
 if(x == "a") | (x == "i") | (x == "u") | (x == "e") | (x == "o"):
-  print("vowel")
+    print("vowel")
 else:
-  print("consonant")
+    print("consonant")

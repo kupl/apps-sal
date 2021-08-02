@@ -1,10 +1,10 @@
 # https://at274.hatenablog.com/entry/2018/02/03/140504
 class WeightedUnionFind:
     def __init__(self, n):
-        self.par = [i for i in range(n+1)]
-        self.rank = [0] * (n+1)
+        self.par = [i for i in range(n + 1)]
+        self.rank = [0] * (n + 1)
         # 根への距離を管理
-        self.weight = [0] * (n+1)
+        self.weight = [0] * (n + 1)
 
     # 検索
     def find(self, x):
@@ -41,15 +41,16 @@ class WeightedUnionFind:
     def diff(self, x, y):
         return self.weight[x] - self.weight[y]
 
-N,M=map(int,input().split())
-uf = WeightedUnionFind(N+1)
+
+N, M = map(int, input().split())
+uf = WeightedUnionFind(N + 1)
 for i in range(M):
-  l,r,d=map(int,input().split())
-  if l>r:
-    l,r=r,l
-    d=-d
-  if uf.same(l,r) and d != uf.diff(l,r):
-    print('No')
-    return
-  uf.union(l,r,d)
+    l, r, d = map(int, input().split())
+    if l > r:
+        l, r = r, l
+        d = -d
+    if uf.same(l, r) and d != uf.diff(l, r):
+        print('No')
+        return
+    uf.union(l, r, d)
 print('Yes')

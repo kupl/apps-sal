@@ -1,3 +1,4 @@
+from collections import deque
 n, m = map(int, input().split())
 G = [[] for _ in range(n)]
 indeg = [0] * n
@@ -9,7 +10,6 @@ for _ in range(m):
     G[l].append((r, d))
     G[r].append((l, -d))
 
-from collections import deque
 ng = False
 visited = [0] * n
 visited_cost = [0] * n

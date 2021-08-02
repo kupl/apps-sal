@@ -12,8 +12,7 @@ for d in range(29, -1, -1):
             else:
                 j = i
     if count == 1:
-        print(a[j], *(a[:j] + a[j+1:]))
+        print(a[j], *(a[:j] + a[j + 1:]))
         break
 else:
     print(*a)
-

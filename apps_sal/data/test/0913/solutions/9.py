@@ -15,12 +15,14 @@ def main():
     if more == 0:
         print(-1)
         return
-    a = less/more + 1
+    a = less / more + 1
     print(int(a))
+
 
 def __starting_point():
     t = 1
     for i in range(t):
         main()
+
 
 __starting_point()

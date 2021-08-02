@@ -19,5 +19,4 @@ else:
     elif a1 == b1:
         print(2)
     else:
-        print((b1//a1)+1)
-
+        print((b1 // a1) + 1)

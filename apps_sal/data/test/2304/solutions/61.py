@@ -11,7 +11,8 @@ edge = [[] for i in range(n)]
 
 for i in range(m):
     l, r, d = list(map(int, input().split()))
-    l-=1;r-=1
+    l -= 1
+    r -= 1
     edge[l].append((r, d))
     edge[r].append((l, -d))
 
@@ -42,8 +43,10 @@ else:
 """
 
 # DFS解法
-dist = [inf]*n
-def dfs(i, totald = 0):
+dist = [inf] * n
+
+
+def dfs(i, totald=0):
     if dist[i] < inf:
         if dist[i] == totald:
             return True
@@ -52,7 +55,7 @@ def dfs(i, totald = 0):
     dist[i] = totald
     for e in edge[i]:
         nnode, d = e
-        if not dfs(nnode, totald+d):
+        if not dfs(nnode, totald + d):
             return False
     return True
 
@@ -67,4 +70,3 @@ if f:
     print('Yes')
 else:
     print('No')
-

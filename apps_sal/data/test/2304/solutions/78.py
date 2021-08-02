@@ -10,14 +10,16 @@ edge = [[] for i in range(n)]
 
 for i in range(m):
     l, r, d = list(map(int, input().split()))
-    l-=1;r-=1
+    l -= 1
+    r -= 1
     edge[l].append((r, d))
     edge[r].append((l, -d))
 
 flag = True
 dist = [inf] * n
 for i in range(n):
-    if not flag: break
+    if not flag:
+        break
     if dist[i] == inf:
         dist[i] = 0
         dq = deque([i])
@@ -36,4 +38,3 @@ if flag:
     print('Yes')
 else:
     print('No')
-

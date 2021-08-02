@@ -32,7 +32,3 @@ if answer():
     print('Yes')
 else:
     print('No')
-
-
-
-

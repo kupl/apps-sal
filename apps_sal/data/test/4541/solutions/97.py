@@ -4,5 +4,6 @@ def atc_049a(c: str) -> str:
     else:
         return "consonant"
 
+
 c = input()
 print(atc_049a(c))

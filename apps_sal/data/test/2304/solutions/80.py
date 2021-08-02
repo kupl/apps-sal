@@ -1,9 +1,9 @@
 class WeightedUnionFind:
     def __init__(self, n):
-        self.par = [i for i in range(n+1)]
-        self.rank = [0] * (n+1)
+        self.par = [i for i in range(n + 1)]
+        self.rank = [0] * (n + 1)
         # 根への距離を管理
-        self.weight = [0] * (n+1)
+        self.weight = [0] * (n + 1)
 
     # 検索
     def find(self, x):
@@ -39,18 +39,19 @@ class WeightedUnionFind:
     # xからyへのコスト
     def diff(self, x, y):
         return self.weight[x] - self.weight[y]
-    
-n,m = map(int,input().split())
+
+
+n, m = map(int, input().split())
 lrd = [[int(i) for i in input().split()] for j in range(m)]
 
 ki = WeightedUnionFind(n)
 
 for i in range(m):
-    if ki.same(lrd[i][0],lrd[i][1]):
-        if ki.diff(lrd[i][0],lrd[i][1]) != lrd[i][2]:
+    if ki.same(lrd[i][0], lrd[i][1]):
+        if ki.diff(lrd[i][0], lrd[i][1]) != lrd[i][2]:
             print('No')
             return
     else:
-        ki.union(lrd[i][0],lrd[i][1],lrd[i][2])
-    
+        ki.union(lrd[i][0], lrd[i][1], lrd[i][2])
+
 print('Yes')

@@ -1,7 +1,7 @@
 from decimal import Decimal
 check = input()
 check = check + 'a'
-bukvi = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f' ,'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm']
+bukvi = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm']
 flag = 0
 number = []
 numbers = []
@@ -27,7 +27,7 @@ for num in numbers:
                 integ += [num[i]]
     ans += Decimal(''.join(integ))
 ans = str(ans)
-if len(ans) >3 and ans[-1] == ans[-2] == '0' and ans[-3] == '.':
+if len(ans) > 3 and ans[-1] == ans[-2] == '0' and ans[-3] == '.':
     ans = ans[:-3]
 res = []
 cnt = 0
@@ -49,5 +49,3 @@ else:
         cnt += 1
     res.reverse()
 print(''.join(res))
-           
-

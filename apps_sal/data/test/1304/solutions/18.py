@@ -76,11 +76,3 @@ for i in range(3):
     ans.append(q)
 for i in range(11):
     print(ans[i])
-
-
-
-
-
-
-
-

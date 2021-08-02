@@ -10,7 +10,7 @@ oddFirst = True
 for i in tab:
     if i % 2 == 0 and i > 0:
         maxi += i
-    elif i %2 == 1:
+    elif i % 2 == 1:
         tmpOdd += i
         if tmpOdd % 2 == 1:
             if maxOdd < tmpOdd or oddFirst:
@@ -18,4 +18,3 @@ for i in tab:
                 maxOdd = tmpOdd
 maxi += maxOdd
 print(maxi)
-

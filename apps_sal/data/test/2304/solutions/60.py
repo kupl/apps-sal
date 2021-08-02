@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def dfs(s):
     stack = deque([s])
     dist[s] = 0
@@ -14,12 +15,13 @@ def dfs(s):
                     return False
     return True
 
+
 N, M = map(int, input().split())
 E = [[] for _ in range(N)]
 for _ in range(M):
     l, r, d = map(int, input().split())
-    E[l-1].append((d, r - 1))
-    E[r-1].append((-d, l - 1))
+    E[l - 1].append((d, r - 1))
+    E[r - 1].append((-d, l - 1))
 dist = [None] * N
 for i in range(N):
     if dist[i] is not None:

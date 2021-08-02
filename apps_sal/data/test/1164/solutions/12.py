@@ -11,7 +11,7 @@ for i in s:
     if len(q) == 1 or len(q[-1]) == 3:
         ans += int(''.join(q))
     else:
-        ans += int(''.join(q[:len(q)-1]))
+        ans += int(''.join(q[:len(q) - 1]))
         ans2 += int(q[-1])
 ans += ans2 // 100
 ans2 %= 100
@@ -27,4 +27,3 @@ while ans >= 1000:
 a.append(str(ans))
 a.reverse()
 print(''.join(a) + d)
-

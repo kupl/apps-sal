@@ -27,4 +27,5 @@ def __starting_point():
     ans = solve(N, R, B)
     print(ans)
 
+
 __starting_point()

@@ -53,4 +53,3 @@ for y in range(6, 9):
     for x in range(6, 9):
         print(s[y][x], end='')
     print(' ')
-
