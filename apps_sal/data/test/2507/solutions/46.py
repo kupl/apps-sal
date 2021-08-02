@@ -23,4 +23,3 @@ F = np.array(input().split(), dtype=np.int64)
 A.sort()
 F[::-1].sort()
 print((binary_search(K)))
-

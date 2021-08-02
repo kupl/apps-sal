@@ -1,5 +1,7 @@
 
 import numpy as np
+
+
 def resolve():
     # 達成スコアを決める
     # 修行回数がK以下を達成できるスコアを二分探索
@@ -32,5 +34,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

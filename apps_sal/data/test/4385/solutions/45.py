@@ -4,9 +4,11 @@
 # from collections import deque
 import numpy as np
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
+
+
 def solve(a, b, c, d, e, k):
     arr = np.array([a, b, c, d, e])
     # print(arr)

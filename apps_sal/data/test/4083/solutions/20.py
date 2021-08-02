@@ -21,6 +21,5 @@ for i in b:
     b[i].sort()
     if(len(b[i]) >= k):
         ans = min(sum(b[i][:k]), ans)
-    
-print(ans)
 
+print(ans)

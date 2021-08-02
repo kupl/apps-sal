@@ -21,4 +21,3 @@ for i in range(maxN - 1, -1, -1):
     if len(cnt[i]) == k:
         best = min(best, sum(cnt[i]))
 print(best)
-

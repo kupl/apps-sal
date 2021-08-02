@@ -50,18 +50,16 @@ A.sort()
 F.sort()
 F = F[::-1]
 
-left = -1 
+left = -1
 right = (A * F).sum()
 
-while (right-left) > 1:
+while (right - left) > 1:
     # print(left, right)
     split_line = (left + right) // 2
-    r = np.maximum(0, A-split_line // F).sum() <= k
+    r = np.maximum(0, A - split_line // F).sum() <= k
     if r:
         right = split_line
     else:
         left = split_line
 
 print(right)
-
-

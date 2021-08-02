@@ -1,11 +1,10 @@
 dis = []
 for i in range(5):
-  dis.append(int(input()))
+    dis.append(int(input()))
 
 k = int(input())
 
 if dis[4] - dis[0] <= k:
-  print('Yay!')
+    print('Yay!')
 else:
-  print(':(')
-
+    print(':(')

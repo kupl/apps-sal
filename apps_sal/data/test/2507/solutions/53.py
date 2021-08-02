@@ -1,34 +1,40 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 # 二分探索、浮き沈みの沈みに注意
 N, K = lr()
-A = np.array(lr()); A.sort()
-F = np.array(lr()); F.sort()
+A = np.array(lr())
+A.sort()
+F = np.array(lr())
+F.sort()
 F = F[::-1]
 
+
 def check(x):
-    limit = x // F # このラインまでにAを落とす
+    limit = x // F  # このラインまでにAを落とす
     Y = A - limit
     if np.any(Y > K):
         return False
-    cost = Y[Y>=0].sum()
+    cost = Y[Y >= 0].sum()
     if cost <= K:
         return True
     else:
         return False
 
-ok = 10 ** 15; ng = -1
-while abs(ng-ok) > 1:
-    mid = (ok+ng) // 2
+
+ok = 10 ** 15
+ng = -1
+while abs(ng - ok) > 1:
+    mid = (ok + ng) // 2
     if check(mid):
         ok = mid
     else:
         ng = mid
 
 print(ok)
-

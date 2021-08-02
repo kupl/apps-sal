@@ -1,7 +1,7 @@
 for ahfiuyh in range(int(input())):
     n = int(input())
-    a = [list(map(int,input().split())) for i in range(n)]
-    cc = [0,0]
+    a = [list(map(int, input().split())) for i in range(n)]
+    cc = [0, 0]
     f = True
     for i in a:
         if i[1] > i[0]:
@@ -23,5 +23,3 @@ for ahfiuyh in range(int(input())):
         cc = i
     if f:
         print("YES")
-        
-

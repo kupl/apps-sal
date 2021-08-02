@@ -9,8 +9,8 @@ for _ in range(T):
     works = True
     for _ in range(n):
         p, c = list(map(int, input().split()))
-        pDiff = p-lastP
-        cDiff = c-lastC
+        pDiff = p - lastP
+        cDiff = c - lastC
         if 0 <= cDiff <= pDiff:
             pass
         else:
@@ -21,4 +21,3 @@ for _ in range(T):
         print('YES')
     else:
         print('NO')
-

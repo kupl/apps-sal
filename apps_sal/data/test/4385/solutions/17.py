@@ -6,4 +6,6 @@ def f():
             if abs(x[i] - x[j]) > k:
                 return":("
     return "Yay!"
+
+
 print(f())

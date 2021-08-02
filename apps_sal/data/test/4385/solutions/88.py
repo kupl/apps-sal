@@ -1,6 +1,6 @@
-a=list(int(input()) for i in range(5))
-k=int(input())
-if a[4]-a[0]<=k:
+a = list(int(input()) for i in range(5))
+k = int(input())
+if a[4] - a[0] <= k:
     print("Yay!")
 else:
     print(":(")

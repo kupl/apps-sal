@@ -1,4 +1,6 @@
 import numpy as np
+
+
 def bin_search(left, right, check):
     while left + 1 < right:
         middle = (left + right) >> 1
@@ -8,10 +10,12 @@ def bin_search(left, right, check):
             left = middle
     return right
 
+
 def make_check(A, F, Z, K):
     def check(m):
         return np.maximum(A - m // F, Z).sum() <= K
     return check
+
 
 N, K = map(int, input().split())
 A = np.array(input().split(), dtype=np.int32)

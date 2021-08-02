@@ -1,16 +1,20 @@
 def int_multiple():
-    return  [int(c) for c in input().split()]
+    return [int(c) for c in input().split()]
+
 
 def int_single():
     return int(input())
 
+
 def str_multiple():
     return [c for c in input().split()]
+
 
 def str_single():
     return input()
 
 # start
+
 
 n, k = int_multiple()
 l = int_multiple()
@@ -27,11 +31,11 @@ for i in range(n):
     cnt = 0
     while (tmp != 0):
         costs[tmp].append(cnt)
-        tmp = int(tmp/2)
+        tmp = int(tmp / 2)
         cnt += 1
 
 for val in costs[1]:
-    costs[0].append(val+1)
+    costs[0].append(val + 1)
 
 
 min_cost = 9999999999999
@@ -41,8 +45,7 @@ for c in costs:
         if (cost < min_cost):
             min_cost = cost
 
-#for cc in costs:
+# for cc in costs:
 #    print(cc)
 
 print(min_cost)
-

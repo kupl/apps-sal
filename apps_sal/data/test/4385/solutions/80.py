@@ -3,6 +3,6 @@ k = int(input())
 x = 'Yay!'
 for h in num:
     for j in num:
-        if k < j-h:
+        if k < j - h:
             x = ':('
 print(x)
