@@ -22,4 +22,3 @@ for i in range(len(l) - 1, -1, -1):
     if max_change_back < change:
         max_change_back = change
 print(max(max_change_back, max_change) + init_str)
-

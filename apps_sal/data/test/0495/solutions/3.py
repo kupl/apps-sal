@@ -1,14 +1,13 @@
-a,k=list(map(int,input().split()))
+a, k = list(map(int, input().split()))
 
-a=list(str(a))
+a = list(str(a))
 
-b=""
+b = ""
 
-while(len(a)>0):
-    e=max(a[:k+1])
-    ind=a.index(e)
-    b+=e
-    k-=ind
+while(len(a) > 0):
+    e = max(a[:k + 1])
+    ind = a.index(e)
+    b += e
+    k -= ind
     a.pop(ind)
 print(b)
-

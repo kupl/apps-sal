@@ -11,4 +11,3 @@ for i in range(1, n):
     maxi += 1
 ans = max(maxi, ans)
 outs.write(str(ans))
-

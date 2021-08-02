@@ -17,10 +17,12 @@ u = defaultdict(int)
 u[0] = 1
 
 for x in t:
-    if x: l -= 1
+    if x:
+        l -= 1
     if 0 < x < 2048:
         v = u.copy()
-        for y in u: v[x ^ y] += u[y]
+        for y in u:
+            v[x ^ y] += u[y]
         u = v
 
 e = 1000000007

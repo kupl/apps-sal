@@ -3,8 +3,8 @@ a = list(map(int, input().split()))
 res = 1
 m = 1
 for i in range(1, n):
-    if  a[i] > a[i-1]:
-        res +=1
+    if a[i] > a[i - 1]:
+        res += 1
     else:
         if res > m:
             m = res
@@ -12,4 +12,3 @@ for i in range(1, n):
 if res > m:
     m = res
 print(m)
-

@@ -14,7 +14,7 @@ def main():
         return result
 
     for i in range(1, n):
-        if arr[i] > arr[i-1]:
+        if arr[i] > arr[i - 1]:
             result += 1
         else:
             results.append(result)
@@ -22,7 +22,7 @@ def main():
 
     results.append(result)
 
-    #print(results)
+    # print(results)
 
     return max(results)
 
@@ -41,5 +41,6 @@ def stdin_get_string_from_line():
 
 def __starting_point():
     print(main())
+
 
 __starting_point()

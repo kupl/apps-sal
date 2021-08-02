@@ -5,7 +5,7 @@ while a1 != 0:
     a1 //= 10
 n = len(a)
 k = n
-while 1:   
+while 1:
     if k == 0:
         break
     ma = 0
@@ -24,5 +24,4 @@ while 1:
         break
     k -= 1
 for i in range(n):
-    print(a[n - i - 1], end = '')
-    
+    print(a[n - i - 1], end='')

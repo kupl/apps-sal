@@ -15,10 +15,10 @@ for i in range(n):
     ans = max(per, ans)
 
 per = 0
-for i in range(n-1, -1,-1):
+for i in range(n - 1, -1, -1):
     if b[i] == 'A':
         per += A[i]
     else:
         per -= A[i]
     ans = max(per, ans)
-print(start+ans)
+print(start + ans)

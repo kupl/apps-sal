@@ -6,7 +6,7 @@ ans = 1
 
 
 for i in range(1, n):
-    if N[i] > N[i-1]:
+    if N[i] > N[i - 1]:
         counter += 1
     else:
         if counter > ans:
@@ -17,6 +17,3 @@ if counter > ans:
     ans = counter
 
 print(ans)
-
-
-

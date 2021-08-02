@@ -10,7 +10,7 @@ while k > 0 and a != sorted_a:
         if c in a[i:] and a[i:].index(c) <= k:
             l = a[i:].index(c)
             k -= l
-            a.insert(int(i), a.pop(i+l))
+            a.insert(int(i), a.pop(i + l))
             break
     i += 1
 

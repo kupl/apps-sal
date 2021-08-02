@@ -7,7 +7,8 @@ for i in set(map(int, input().split())):
         while i % j == 0:
             i //= j
             b ^= 1 << j
-    for j in s:b=min(b,b^j)
-    if b>0:s.append(b)
+    for j in s:
+        b = min(b, b ^ j)
+    if b > 0:
+        s.append(b)
 print(pow(2, n - len(s), 10 ** 9 + 7) - 1)
-

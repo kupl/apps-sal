@@ -7,6 +7,8 @@ for k in set(map(int, input().split())):
         while k % q == 0:
             k //= q
             d ^= 1 << q
-    for j in s: d = min(d, d ^ j)
-    if d: s.append(d)
+    for j in s:
+        d = min(d, d ^ j)
+    if d:
+        s.append(d)
 print(pow(2, n - len(s), 1000000007) - 1)

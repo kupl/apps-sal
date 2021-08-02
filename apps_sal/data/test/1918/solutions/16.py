@@ -16,4 +16,3 @@ for i in range(n)[::-1]:
     mx = max(tmp, mx)
 ans += mx
 print(ans)
-

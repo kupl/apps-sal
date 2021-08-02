@@ -19,7 +19,7 @@ for i in range(N):
 
 # suffixes
 cur = initial
-for i in range(N-1, -1, -1):
+for i in range(N - 1, -1, -1):
     if teams[i] == 'B':
         cur -= arr[i]
     else:
@@ -28,4 +28,3 @@ for i in range(N-1, -1, -1):
             best = cur
 
 print(best)
-

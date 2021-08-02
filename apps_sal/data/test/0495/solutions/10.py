@@ -26,5 +26,4 @@ for i in range(len(x) - 1):
 
 x = list(map(str, x))
 
-print( ''.join(x) )
-
+print(''.join(x))

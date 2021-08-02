@@ -17,7 +17,7 @@ for i in range(n):
     maxi = max(maxi, b)
 
 b = B
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     if qs[i] == 'A':
         b += ps[i]
     elif qs[i] == 'B':
@@ -25,4 +25,3 @@ for i in range(n-1, -1, -1):
     maxi = max(maxi, b)
 
 print(maxi)
-

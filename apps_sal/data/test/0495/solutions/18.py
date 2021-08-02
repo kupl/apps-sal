@@ -4,7 +4,7 @@ def solve(k):
     while k > 0 and last_pos != len(a):
         maxInd = 0
         if k < len(a) - last_pos:
-            maxDig = max(a[last_pos : last_pos + k + 1])
+            maxDig = max(a[last_pos: last_pos + k + 1])
             for i in range(last_pos, last_pos + k + 1):
                 if a[i] == maxDig:
                     maxInd = i
@@ -21,9 +21,9 @@ def solve(k):
             k -= (maxInd - last_pos)
         last_pos += 1
 
+
 a, k = input().split()
 k = int(k)
 a = list(map(int, [i for i in a]))
 solve(k)
 print(''.join(map(str, a)))
-
