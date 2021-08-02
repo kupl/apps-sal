@@ -5,11 +5,12 @@ def dfs(v):
         if int(s[v][g]) and not used[g]:
             dfs(g)
 
+
 n = int(input())
 p = list(map(int, input().split()))
 s = [input() for i in range(n)]
 used = [False] * n
-for j in range(n): 
+for j in range(n):
     if not used[j]:
         pos = []
         dfs(j)

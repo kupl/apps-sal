@@ -15,12 +15,11 @@ for k in range(n - 1):
 
 
 for i in range(1, m):
-    for k in range(n-1):
+    for k in range(n - 1):
         temp = messages[i][k]
-        if pairs.get(temp, None) != messages[i][k+1]:
+        if pairs.get(temp, None) != messages[i][k + 1]:
             pairs.pop(temp, None)
-    pairs.pop(messages[i][n-1], None)
-
+    pairs.pop(messages[i][n - 1], None)
 
 
 sequences = []
@@ -50,11 +49,6 @@ variants = n
 
 for seq in sequences:
     l = len(seq)
-    variants+=l*(l-1)//2
+    variants += l * (l - 1) // 2
 
 print(variants)
-
-
-
-
-

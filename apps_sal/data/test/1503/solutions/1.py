@@ -9,7 +9,6 @@ created by shhuan at 2018/10/20 22:37
 """
 
 
-
 N, M = list(map(int, input().split()))
 
 A = []
@@ -28,11 +27,10 @@ while i < N:
     ls = [loc[j][v] for j in range(M)]
     segl = 1
 
-    while all([l+segl < N for l in ls]) and all(A[il][l+segl] == A[0][ls[0]+segl] for il, l in enumerate(ls)):
+    while all([l + segl < N for l in ls]) and all(A[il][l + segl] == A[0][ls[0] + segl] for il, l in enumerate(ls)):
         segl += 1
     ans += segl * (segl + 1) // 2
     i += segl
 
 
 print(ans)
-

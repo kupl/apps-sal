@@ -5,6 +5,7 @@ n = 0
 c = []
 d = []
 
+
 def dfs(v):
     used[v] = 1
     c.append(v)
@@ -12,6 +13,8 @@ def dfs(v):
     for i in range(len(p)):
         if t[v][i] == '1' and not used[i]:
             dfs(i)
+
+
 def main():
     nonlocal n
     nonlocal p
@@ -31,10 +34,14 @@ def main():
             d = []
             dfs(i)
             k = len(c)
-            for num,val in zip(sorted(c), sorted(d)):
-                ans[num] = val 
+            for num, val in zip(sorted(c), sorted(d)):
+                ans[num] = val
     for elem in ans:
-        print(elem, end = ' ')
+        print(elem, end=' ')
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

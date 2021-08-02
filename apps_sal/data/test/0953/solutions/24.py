@@ -2,12 +2,16 @@ n = int(input())
 t = list(map(int, input().split()))
 a = [input() for i in range(n)]
 u = [0] * n
+
+
 def dfs(i):
     p.append(i)
     u[i] = 1
     for j in range(n):
         if a[i][j] == '1' and not u[j]:
             dfs(j)
+
+
 for i in range(n):
     if not u[i]:
         p = []

@@ -4,6 +4,7 @@ graph = [0] * n
 _next = [True] * n
 _next[n - 1] = False
 
+
 def read_array():
     return list([x - 1 for x in list(map(int, input().split()))])
 
@@ -28,4 +29,3 @@ for cnt in range(n):
         l = 0
 
 print(ans)
-

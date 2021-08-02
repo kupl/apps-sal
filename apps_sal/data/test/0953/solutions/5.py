@@ -5,6 +5,7 @@ def dfs(v):
         if int(s[v][g]) and not used[g]:
             dfs(g)
 
+
 n = int(input())
 p = list(map(int, input().split()))
 s = [input() for i in range(n)]

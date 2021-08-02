@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 
+
 class DFS:
     visited = None
     graph = None
@@ -16,13 +17,14 @@ class DFS:
             if v not in self.visited:
                 self.dfs(v)
 
+
 def solve(n, p, m):
     graph = defaultdict(list)
     for i in range(n):
         for j in range(n):
             if m[i][j] == '1':
                 graph[i].append(j)
-    for num in range(1, n+1):
+    for num in range(1, n + 1):
         i = p.index(num)
         d = DFS(graph)
         d.dfs(i)
@@ -31,10 +33,12 @@ def solve(n, p, m):
                 p[i], p[j] = p[j], p[i]
     return ' '.join(map(str, p))
 
+
 def __starting_point():
     n = int(input())
     p = list(map(int, input().split()))
     matrix = [input() for _ in range(n)]
     print(solve(n, p, matrix))
+
 
 __starting_point()

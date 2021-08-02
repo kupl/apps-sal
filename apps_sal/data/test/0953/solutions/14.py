@@ -5,7 +5,9 @@ s = ()
 for i in range(n):
     s += (input(),)
 z = [False] * n
-x,y = [],[]
+x, y = [], []
+
+
 def dfs(i):
     if not z[i]:
         nonlocal x
@@ -15,14 +17,13 @@ def dfs(i):
         for j in range(n):
             if s[i][j] == '1': dfs(j)
 
+
 for i in range(n):
     if not z[i]:
-        x,y = [],[]
+        x, y = [], []
         dfs(i)
         x.sort()
         y.sort()
         for j in range(len(x)): p[x[j]] = y[j]
 
 print(" ".join([str(i) for i in p]))
-
-

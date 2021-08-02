@@ -1,10 +1,14 @@
 from functools import *
 from math import gcd
 from collections import *
+
+
 def isValid(n):
     if n <= 0: return 0
     if n - int(n) != 0: return 0
     return 1
+
+
 def mu(n):
     if n == 1:
         return 1
@@ -12,6 +16,8 @@ def mu(n):
         return 0
     else:
         return (-1) ** numberOfFactors(n)
+
+
 def isDivisibleBySquare(n):
     if n % 2 == 0:
         n = n / 2
@@ -23,6 +29,8 @@ def isDivisibleBySquare(n):
         if n % i == 0:
             return True
     return False
+
+
 def factorGenerator(n):
     r = []
     while n % 2 == 0:
@@ -37,11 +45,16 @@ def factorGenerator(n):
     if n != 1:
         r.append(n)
     return r
+
+
 def numberOfFactors(n):
     return len(factorGenerator(n))
+
+
 def divisors(n):
     return set(reduce(list.__add__,
-                ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+                      ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+
 
 def calc(m, n):
     # Calculate number of integers in [1, m] coprime to n
@@ -50,6 +63,7 @@ def calc(m, n):
         s += mu(d) * (m // d)
     return s
 
+
 n = int(input())
 for _ in range(n):
     a, m = list(map(int, input().split()))
@@ -57,4 +71,3 @@ for _ in range(n):
     # print (calc(a, m))
     print(calc((m + a - 1) // g, m // g) - calc((a - 1) // g, m // g))
     # print (sum(gcd(a, m) == gcd(a + x, m) for x in range(m)))
-

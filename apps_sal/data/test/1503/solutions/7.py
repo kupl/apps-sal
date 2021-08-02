@@ -2,16 +2,14 @@
 # encoding: utf-8
 
 
-
-#----------
+# ----------
 # Constants
-#----------
+# ----------
 
 
-
-#----------
+# ----------
 # Functions
-#----------
+# ----------
 
 def summarize(val):
     return (val + 1) * val // 2
@@ -34,13 +32,13 @@ def calc(data):
     while index < n:
         val = data[0][index]
         ln = 1
-        indexes = [ reflections[i][val] for i in range(1, m) ]
-        for k in range(index+1, n):
+        indexes = [reflections[i][val] for i in range(1, m)]
+        for k in range(index + 1, n):
             d = k - index
             equal = True
             val = data[0][k]
             for i in range(1, m):
-                if indexes[i-1] + d >= n or data[i][indexes[i-1] + d] != val:
+                if indexes[i - 1] + d >= n or data[i][indexes[i - 1] + d] != val:
                     equal = False
                     break
             if equal:
@@ -56,22 +54,22 @@ def calc(data):
 # Reads a string from stdin, splits it by space chars, converts each
 # substring to int, adds it to a list and returns the list as a result.
 def get_ints():
-    return [ int(n) for n in input().split() ]
+    return [int(n) for n in input().split()]
 
 
 # Reads a string from stdin, splits it by space chars, converts each substring
 # to floating point number, adds it to a list and returns the list as a result.
 def get_floats():
-    return [ float(n) for n in input().split() ]
+    return [float(n) for n in input().split()]
 
 
 def seq2str(seq):
     return ' '.join(str(item) for item in seq)
 
 
-#----------
+# ----------
 # Execution start point
-#----------
+# ----------
 
 def __starting_point():
     a = get_ints()
@@ -86,5 +84,6 @@ def __starting_point():
 
     res = calc(data)
     print(res)
+
 
 __starting_point()

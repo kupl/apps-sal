@@ -37,4 +37,3 @@ for ex in exchange:
 
 
 print(" ".join(map(str, p)))
-

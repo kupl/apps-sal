@@ -1,33 +1,33 @@
+import sys
 n, m = [int(i) for i in input().split(' ')]
 
-import sys
 
 fconnection = [None] * n
 bconnection = [None] * n
 
 if m == 1:
-    print(int((n+1)*n/2))
+    print(int((n + 1) * n / 2))
     return
 
 svidetel = input().split(' ')
-p = int(svidetel[0])-1
+p = int(svidetel[0]) - 1
 for current_pok in svidetel[1:]:
-    q = int(current_pok)-1
+    q = int(current_pok) - 1
     fconnection[p] = q
     bconnection[q] = p
     p = q
 
 
-for i in range(m-1):
+for i in range(m - 1):
     svidetel = input().split(' ')
-    p = int(svidetel[0])-1
+    p = int(svidetel[0]) - 1
 #    try:
 #        fconnection[fconnection.index(p)] = None
 #    except ValueError:
 #        pass
     bconnection[p] = None
     for current_pok in svidetel[1:]:
-        q = int(current_pok)-1
+        q = int(current_pok) - 1
         if fconnection[p] != q:
             fconnection[p] = None
         if bconnection[q] != p:
@@ -40,8 +40,6 @@ for i in range(m-1):
 #        pass
 
 
-
-
 is_bundled = [True] + [False] * (n - 1)
 unbundled_count = n
 current_bundle = []
@@ -50,7 +48,7 @@ research_deck = [0]
 
 for i in range(n):
     if (fconnection[i] == None) and (bconnection[i] == None):
-        number_of_variants += 1 # one distinct node
+        number_of_variants += 1  # one distinct node
     elif bconnection[i] == None:
         # this is start of new run. check it.
         number_in_run = 1
@@ -61,7 +59,7 @@ for i in range(n):
         number_of_variants += int((1 + number_in_run) * number_in_run / 2)
 
 
-#while unbundled_count >= 0:
+# while unbundled_count >= 0:
 #    #print(research_deck, current_bundle)
 #    if research_deck:
 #        c = research_deck.pop()
@@ -87,4 +85,3 @@ for i in range(n):
 #        else:
 #            break
 print(number_of_variants)
-
