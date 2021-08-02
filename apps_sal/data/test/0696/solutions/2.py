@@ -7,4 +7,6 @@ def phi(n):
             t -= t // i
         i += 1
     return t - t // n if n > 1 else t
+
+
 print(phi(int(input()) - 1))

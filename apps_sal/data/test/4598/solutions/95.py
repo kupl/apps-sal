@@ -1,1 +1,1 @@
-print(sum(list(range(int(input())+1))))
+print(sum(list(range(int(input()) + 1))))

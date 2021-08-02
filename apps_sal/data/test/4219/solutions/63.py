@@ -21,10 +21,9 @@ for i in range(2 ** n):
     for k in range(len(li)):
         if (tf[k] == True):
             for l in li[k]:
-                if not(l[1] == tf[l[0]-1]):
+                if not(l[1] == tf[l[0] - 1]):
                     out = True
     if not (out):
         ans = max(ans, tf.count(True))
 
 print(ans)
-

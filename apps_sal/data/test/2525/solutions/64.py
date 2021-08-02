@@ -25,4 +25,3 @@ for line in readlines():
                 S.appendleft(c)
 
 print((''.join(S) if not rev else ''.join(S)[::-1]))
-

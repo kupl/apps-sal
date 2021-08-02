@@ -24,4 +24,3 @@ if not flg:
     S = S[::-1]
 
 print(S)
-

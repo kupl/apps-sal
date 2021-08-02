@@ -1,5 +1,5 @@
 # D - String Formation
-from collections import deque 
+from collections import deque
 S = deque(input())
 Q = int(input())
 Query = [list(input().split()) for _ in range(Q)]

@@ -64,7 +64,7 @@ def resolve():
         for i in range(N):
             if bit & (1 << i):
                 for c in C[i]:
-                    if bit & (1 << c[0]-1) != (1 << c[0]-1)*c[1]:
+                    if bit & (1 << c[0] - 1) != (1 << c[0] - 1) * c[1]:
                         f = False
                         break
         if f == True:
@@ -75,5 +75,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

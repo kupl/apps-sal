@@ -14,4 +14,3 @@ for q in range(t):
         print(tt)
     else:
         print(s)
-

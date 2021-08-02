@@ -18,4 +18,3 @@ for case_num in range(t):
         print(a)
     else:
         print(''.join(['01' for i in range(n)]))
-

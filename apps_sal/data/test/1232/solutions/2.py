@@ -8,4 +8,3 @@ if max < min:
     print('YES')
 else:
     print('NO')
-

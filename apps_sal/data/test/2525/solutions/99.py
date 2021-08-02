@@ -24,5 +24,3 @@ if flipped:
     print(("".join(q[::-1])))
 else:
     print(("".join(q)))
-
-

@@ -25,4 +25,3 @@ for _ in range(Q):
 X = "".join(D)
 
 print((X if cnt % 2 == 0 else X[::-1]))
-

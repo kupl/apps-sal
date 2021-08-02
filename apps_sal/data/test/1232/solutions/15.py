@@ -12,4 +12,4 @@ b = list(map(int, input().split()))
 assert len(a) == Na
 assert len(b) == Nb
 
-print('YES' if a[k-1] < b[-m] else 'NO')
+print('YES' if a[k - 1] < b[-m] else 'NO')

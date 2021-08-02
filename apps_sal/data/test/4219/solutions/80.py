@@ -6,7 +6,8 @@ for n in range(N):
     testimony.append({})
     for a in range(A):
         x, y = map(int, input().split())
-        testimony[n][x - 1] = y    
+        testimony[n][x - 1] = y
+
 
 def judge(truthy):
     answer = True
@@ -21,6 +22,7 @@ def judge(truthy):
     # print(answer, truthy)
     return 0 if not answer else truthy.count(1)
 
+
 def dfs(truthy, depth):
     if N == depth:
         return judge(truthy)
@@ -31,5 +33,6 @@ def dfs(truthy, depth):
     false.append(0)
     f = dfs(false, depth + 1)
     return max(t, f)
+
 
 print(dfs([], 0))

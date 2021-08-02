@@ -24,10 +24,10 @@ def main():
         for j in range(N):
             value = pick[j]
             # 下記3つの内1つでも満たしたら，仮定が間違っていると分かる.
-            if (0
-                    or (j in honest and value < 0)         # 正直者なのに嘘つきと言われる
-                    or (j not in honest and value > 0)     # 嘘つきなのに正直者と言われる
-                    or (value < 0 and value % INF != 0)):  # 正直とも嘘つきとも言われる
+            if (0 or
+                    (j in honest and value < 0) or         # 正直者なのに嘘つきと言われる
+                    (j not in honest and value > 0) or     # 嘘つきなのに正直者と言われる
+                    (value < 0 and value % INF != 0)):  # 正直とも嘘つきとも言われる
                 flag = False
                 break
         if flag:
@@ -37,5 +37,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

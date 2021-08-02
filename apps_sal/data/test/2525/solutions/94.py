@@ -30,4 +30,3 @@ if rev:
     print((end[::-1] + S[::-1] + front))
 else:
     print((front[::-1] + S + end))
-

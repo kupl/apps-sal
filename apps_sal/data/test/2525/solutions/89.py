@@ -10,6 +10,6 @@ for _ in range(Q):
         mode ^= 1
         continue
     _, F, _, C = FC
-    if int(F)+mode == 2: S.append(C)
+    if int(F) + mode == 2: S.append(C)
     else: S.appendleft(C)
 print("".join(reversed(S)if mode else S))

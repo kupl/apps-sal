@@ -9,7 +9,7 @@ def main():
         if order[i][0] == '1':
             cnt += 1
         else:
-            if cnt%2 == 0:
+            if cnt % 2 == 0:
                 if order[i][1] == '1':
                     if left_flag == 1:
                         left = order[i][2] + left
@@ -44,13 +44,13 @@ def main():
     else:
         S = S
 
-    if cnt%2 == 0:
+    if cnt % 2 == 0:
         return(S)
     else:
         S2 = S[-1]
-        for i in range(len(S)-2,-1,-1):
+        for i in range(len(S) - 2, -1, -1):
             S2 = S2 + S[i]
         return S2
 
-print((main()))
 
+print((main()))

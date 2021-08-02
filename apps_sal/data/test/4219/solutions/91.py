@@ -1,8 +1,9 @@
-from sys import stdin, stdout # only need for big input
+from sys import stdin, stdout  # only need for big input
 
 max_honest = 0
 testomonies = []
 state = []
+
 
 def dfs(person):
     nonlocal max_honest
@@ -25,9 +26,9 @@ def dfs(person):
     state[person] = 0
     dfs(person + 1)
 
-    state[person] = 1 
+    state[person] = 1
     dfs(person + 1)
-    
+
 
 def solve():
     nonlocal state
@@ -37,7 +38,7 @@ def solve():
         t = []
         for _ in range(a):
             x, y = [int(inp) for inp in input().split()]
-            t.append((x - 1,y))
+            t.append((x - 1, y))
         testomonies.append(t)
     # print(testomonies)
     state = [-1] * n
@@ -51,4 +52,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

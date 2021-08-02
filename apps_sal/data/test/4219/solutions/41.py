@@ -24,4 +24,3 @@ for i in range(2 ** N):
         continue
     ans = max(ans, tf.count(True))
 print(ans)
-

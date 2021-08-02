@@ -1,20 +1,20 @@
 from collections import deque
-S=deque(input())
-Q=int(input())
-rev=0
+S = deque(input())
+Q = int(input())
+rev = 0
 for _ in range(Q):
-    q=input()
-    if q=='1':
-        rev=1-rev
+    q = input()
+    if q == '1':
+        rev = 1 - rev
     else:
-        q1,f,c=q.split()
+        q1, f, c = q.split()
         if rev:
-            if f=='1':
+            if f == '1':
                 S.append(c)
             else:
                 S.appendleft(c)
         else:
-            if f=='1':
+            if f == '1':
                 S.appendleft(c)
             else:
                 S.append(c)

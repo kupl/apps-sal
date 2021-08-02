@@ -29,4 +29,3 @@ if isRev:
     anss.reverse()
 
 print((''.join(anss)))
-

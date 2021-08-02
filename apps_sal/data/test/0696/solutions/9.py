@@ -1,7 +1,7 @@
 def main():
     p = int(input())
     if p < 5:
-        print(1 )
+        print(1)
         return
     res, r = 0, list(range(p - 2))
     for x in range(2, p):
@@ -19,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

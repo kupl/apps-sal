@@ -4,28 +4,28 @@ s = deque(input())
 q = int(input())
 flag = True
 
-for _ in range(q) :
+for _ in range(q):
     tfc = input().split()
 
-    if tfc[0] == '1' :
-        if flag == True :
+    if tfc[0] == '1':
+        if flag == True:
             flag = False
-        else :
+        else:
             flag = True
-    else :
-        if flag == True :
-            if tfc[1] == '1' :
+    else:
+        if flag == True:
+            if tfc[1] == '1':
                 s.appendleft(tfc[2])
-            else :
+            else:
                 s.append(tfc[2])
-        else :
-            if tfc[1] == '1' :
+        else:
+            if tfc[1] == '1':
                 s.append(tfc[2])
-            else :
+            else:
                 s.appendleft(tfc[2])
 
-if flag == True :
+if flag == True:
     print(''.join(s))
-else :
+else:
     s.reverse()
     print(''.join(s))

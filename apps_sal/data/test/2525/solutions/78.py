@@ -2,9 +2,9 @@ import math
 import collections
 from itertools import product
 
-ii = lambda : int(input())
-mi = lambda : map(int,input().split())
-li = lambda : list(map(int,input().split()))
+ii = lambda: int(input())
+mi = lambda: map(int, input().split())
+li = lambda: list(map(int, input().split()))
 
 s = input()
 q = ii()

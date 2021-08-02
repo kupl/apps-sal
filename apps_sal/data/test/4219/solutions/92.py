@@ -7,8 +7,8 @@ for i in range(n):
     for _ in range(a):
         x, y = list(map(int, input().split()))
         tes[i].append([x - 1, y])
-ans = 0 
-for tf_s in itertools.product(list(range(2)), repeat = n):
+ans = 0
+for tf_s in itertools.product(list(range(2)), repeat=n):
     for i in range(n):
         if tf_s[i] == 0:
             continue
@@ -21,4 +21,3 @@ for tf_s in itertools.product(list(range(2)), repeat = n):
     else:
         ans = max(ans, tf_s.count(1))
 print(ans)
-

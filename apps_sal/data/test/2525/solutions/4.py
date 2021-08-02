@@ -24,4 +24,3 @@ for _ in range(q):
                 d.appendleft(t[2])
 
 print((''.join(list(d)[::c])))
-

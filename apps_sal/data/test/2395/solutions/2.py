@@ -5,4 +5,3 @@ for _ in range(T):
         print(s)
     else:
         print("01" * len(s))
-

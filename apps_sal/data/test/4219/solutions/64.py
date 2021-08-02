@@ -1,5 +1,5 @@
 N = int(input())
-testimo_ls = [ [] for i in range(N) ]
+testimo_ls = [[] for i in range(N)]
 rst = 0
 for i in range(N):
     A = int(input())

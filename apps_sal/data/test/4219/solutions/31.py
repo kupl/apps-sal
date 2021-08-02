@@ -11,7 +11,7 @@ for i in range(N):
     data.append(x)
 
 ans = 0
-for i in range(1<<N):
+for i in range(1 << N):
     bit = [0] * N
     cnt = 0
     for j in range(N):
@@ -26,15 +26,13 @@ for i in range(1<<N):
             continue
         for a in range(A[j]):
             x = data[j][a]
-            if bit[x[0]-1] != x[1]:
+            if bit[x[0] - 1] != x[1]:
                 flag = False
                 break
         if not flag:
             break
-    
+
     if flag:
         ans = max(ans, cnt)
 
 print(ans)
-
-

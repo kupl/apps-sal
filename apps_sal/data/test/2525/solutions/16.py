@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 S = input()
 Q = int(input())
@@ -21,4 +24,3 @@ if direction == 1:
     print(S)
 else:
     print((S[::-1]))
-

@@ -10,7 +10,7 @@ for i in sys.stdin:
 
     if i[0] == '1':
         key = -key
-    
+
     elif key == 1:
         if i[2] == '1':
             A = A + i[4]
@@ -25,4 +25,3 @@ for i in sys.stdin:
 
 ans = A[::-1] + S
 print((ans[::key]))
-

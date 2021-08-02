@@ -10,13 +10,13 @@ for i in range(n):
 
 cnt = 0
 for i in range(2**n):
-    state = format(i, "0"+str(n)+"b")
+    state = format(i, "0" + str(n) + "b")
 
     pos = True
     for j in range(n):
         if state[j] == "1":
             for x, y in statements[j]:
-                if not (state[x-1] == str(y)):
+                if not (state[x - 1] == str(y)):
                     pos = False
                     break
 

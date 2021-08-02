@@ -6,7 +6,7 @@ for i in range(n):
     z = int(input())
     a.append(z)
     for j in range(z):
-        s,r = map(int,input().split())
+        s, r = map(int, input().split())
         x.append(s)
         y.append(r)
 ans = 0
@@ -28,11 +28,11 @@ for i in range(2**n):
     while j < n:
         if t[j] == 1:
             for q in range(a[z]):
-                if t[x[p+q]-1] != y[p+q]:
+                if t[x[p + q] - 1] != y[p + q]:
                     flg = False
         p += a[z]
         j += 1
         z += 1
     if flg:
-        ans = max(ans,k)
+        ans = max(ans, k)
 print(ans)

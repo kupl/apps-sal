@@ -1,4 +1,4 @@
-a, b = list(map(int,input().split()))
+a, b = list(map(int, input().split()))
 if a <= b:
     l = 0
     r = a + 1
@@ -9,9 +9,9 @@ if a <= b:
         else:
             l = m
     n = l
-    a -= n*(n+1) // 2
+    a -= n * (n + 1) // 2
     c = 1
-    N = [i + 1 for i in range(n)]    
+    N = [i + 1 for i in range(n)]
     if a > 0:
         c = n + 1 - a
         N.pop(c - 1)
@@ -47,9 +47,9 @@ else:
         else:
             l = m
     n = l
-    a -= n*(n+1) // 2
+    a -= n * (n + 1) // 2
     c = 1
-    N = [i + 1 for i in range(n)]    
+    N = [i + 1 for i in range(n)]
     if a > 0:
         c = n + 1 - a
         N.pop(c - 1)
@@ -72,5 +72,3 @@ else:
     print(len(N))
     if len(N) != 0:
         print(*N)
-
-

@@ -5,7 +5,7 @@ for i in range(n):
     tmp = int(input())
     m.append(tmp)
     for j in range(tmp):
-        a[i].append(list(map(int,input().split())))
+        a[i].append(list(map(int, input().split())))
 
 ans = 0
 
@@ -16,7 +16,7 @@ for i in range(2**n):
         if i >> j & 1:
             cnt += 1
             for k in range(m[j]):
-                kj = (i >> (a[j][k][0]-1)) & 1
+                kj = (i >> (a[j][k][0] - 1)) & 1
                 if a[j][k][1] != kj:
                     flg = False
                     break
@@ -25,5 +25,4 @@ for i in range(2**n):
     if flg:
         ans = max(ans, cnt)
 
-print(ans)  
-
+print(ans)

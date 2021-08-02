@@ -7,9 +7,9 @@ for i in range(n):
     for j in range(A):
         x, y = list(map(int, input().split()))
         if y == 1:
-            statement[i].append([x-1, True])
+            statement[i].append([x - 1, True])
         if y == 0:
-            statement[i].append([x-1, False])
+            statement[i].append([x - 1, False])
 
 cnt = 0
 for bit in range(2**n):
@@ -29,10 +29,9 @@ for bit in range(2**n):
                 if [j, True] in statement[k]:
                     flag = False
                     break
-        
+
         if not flag:
-            break  
+            break
     if flag:
         cnt = max(cnt, len(honest))
 print(cnt)
-

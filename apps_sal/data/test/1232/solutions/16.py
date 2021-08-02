@@ -7,4 +7,3 @@ if a[k - 1] < b[-m]:
     print('YES')
 else:
     print('NO')
-

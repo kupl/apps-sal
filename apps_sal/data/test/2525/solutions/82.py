@@ -13,11 +13,11 @@ for _ in range(Q):
         F = q[1]
         C = q[2]
         if reverse == False:
-            if F =='1':
+            if F == '1':
                 left = C + left
             else:
                 right += C
-        
+
         else:
             if F == '1':
                 right += C
@@ -31,4 +31,3 @@ if reverse == False:
 else:
     print((S[::-1]))
     return
-
