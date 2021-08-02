@@ -1,4 +1,4 @@
-n,k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 a = input()
 g = 0
 t = 0
@@ -12,7 +12,7 @@ if g < t:
     g, t = t, g
 if (g - t) % k == 0:
     per = 0
-    for j in range(t, g+1, k):
+    for j in range(t, g + 1, k):
         if a[j] == '#':
             per = 1
             break
@@ -22,4 +22,3 @@ if (g - t) % k == 0:
         print('YES')
 else:
     print('NO')
-

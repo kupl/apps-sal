@@ -20,6 +20,7 @@ def f(t, c, b, w):
         c -= dt
         t += dt + 1
 
+
 a, b, w, x, c = map(int, input().split())
 t = b // x
 if a >= c - t: print(c - min(c, a))

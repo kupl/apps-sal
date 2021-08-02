@@ -12,4 +12,3 @@ for i in range(n - 1):
 for i in reversed(list(range(m, n))):
     ans[i] -= ans[i - m]
 print(*ans)
-

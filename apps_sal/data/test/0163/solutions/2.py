@@ -21,5 +21,3 @@ if a != b:
     print('NO')
 else:
     print('YES')
-    
-

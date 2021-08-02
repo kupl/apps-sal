@@ -23,4 +23,3 @@ while index < n:
     index += k
 else:
     print('NO')
-

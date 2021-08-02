@@ -8,4 +8,3 @@ for _ in range(int(input())):
         print(n)
     else:
         print(1)
-

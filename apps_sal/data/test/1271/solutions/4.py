@@ -1,22 +1,23 @@
 INF = 10e9
-n,s,k = list(map(int, input().split()))
+n, s, k = list(map(int, input().split()))
 r = list(map(int, input().split()))
 r.append(0)
 col = input()
 mat = []
-for i in range(n+1):
+for i in range(n + 1):
     adj = {}
     for j in range(n):
         if i == n:
-            adj[j] = abs((s-1)-j)
+            adj[j] = abs((s - 1) - j)
         else:
             if col[i] != col[j] and r[i] < r[j]:
-                adj[j] = abs(i-j)
+                adj[j] = abs(i - j)
     mat.append(adj)
 # print(*mat, sep='\n')
 
-mem = [{} for i in range(n+1)]
+mem = [{} for i in range(n + 1)]
 # print(mem)
+
 
 def get(s, k):
     # print(s,k)
@@ -28,7 +29,7 @@ def get(s, k):
     else:
         mi = None
         for nei in mat[s]:
-            ncost = get(nei, k-r[s])
+            ncost = get(nei, k - r[s])
             if ncost is None:
                 continue
             curr = ncost + mat[s][nei]
@@ -42,9 +43,9 @@ def get(s, k):
 
 # print(mem)
 
-ans = get(n,k)
+
+ans = get(n, k)
 if ans is None or ans >= INF:
     print(-1)
 else:
     print(ans)
-

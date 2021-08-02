@@ -16,4 +16,3 @@ for i in range(len(arr)):
             score += j
     max_score = max(max_score, score)
 print(max_score)
-

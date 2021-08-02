@@ -8,7 +8,7 @@ ans = 0
 if b // x >= d:
     print(d)
     return
-ans += (b // x + 1) 
+ans += (b // x + 1)
 d -= (b // x)
 b = w - (x - b % x)
 b0 = b

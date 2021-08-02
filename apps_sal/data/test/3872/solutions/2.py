@@ -19,6 +19,7 @@ def eq(a, b):
     b2 = b[half:]
     return (eq(a1, b2) and eq(a2, b1)) or (eq(a1, b1) and eq(a2, b2))
 
+
 if ca != cb:
     print('NO')
 elif eq(a, b):

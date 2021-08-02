@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     a, b, w, x, c = map(int, input().split())
     w -= x
@@ -10,6 +11,7 @@ def solve():
         else: small = avg + 1
     return small
 
+
 def works(val, a, b, c, w, x):
     cres = c - val
     amin = cres
@@ -18,6 +20,7 @@ def works(val, a, b, c, w, x):
     bsubtract = val - maxsubtract
     bres = b + maxsubtract * w - x * bsubtract
     return bres >= 0
-    
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+
+if sys.hexversion == 50594544: sys.stdin = open("test.txt")
 print(solve())

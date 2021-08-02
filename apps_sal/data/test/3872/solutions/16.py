@@ -1,6 +1,7 @@
 input1 = input()
 input2 = input()
 
+
 def sort(s, length):
     half, one = divmod(length, 2)
     if one == 1:

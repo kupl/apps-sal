@@ -1,4 +1,4 @@
-#600_C
+# 600_C
 
 inln = [int(i) for i in input().split(" ")]
 n = inln[0]
@@ -19,4 +19,3 @@ for i in range(0, len(ln)):
     mds[i % m] += ln[i]
 
 print(" ".join([str(i) for i in cds]))
-

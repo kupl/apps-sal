@@ -11,4 +11,3 @@ ans = [0]
 for i in range(n):
     ans.append(ans[-1] + g[i % m][i // m])
 print(*ans[1:])
-

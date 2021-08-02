@@ -1,5 +1,6 @@
 memo_dict = {}
 
+
 def equivalent(a, b):
     if a == b:
         return True
@@ -12,8 +13,8 @@ def equivalent(a, b):
     if strlen % 2 != 0:
         return False
 
-    a1, a2 = a[:strlen//2], a[strlen//2:]
-    b1, b2 = b[:strlen//2], b[strlen//2:]
+    a1, a2 = a[:strlen // 2], a[strlen // 2:]
+    b1, b2 = b[:strlen // 2], b[strlen // 2:]
 
     res = (equivalent(a1, b1) and equivalent(a2, b2)) or (equivalent(a1, b2) and equivalent(a2, b1))
 
@@ -30,4 +31,3 @@ if equivalent(a, b):
     print('YES')
 else:
     print('NO')
-

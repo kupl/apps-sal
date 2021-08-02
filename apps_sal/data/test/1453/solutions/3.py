@@ -1,9 +1,9 @@
-n,m=[int(s) for s in input().split()]
-t=[int(s) for s in input().split()]
+n, m = [int(s) for s in input().split()]
+t = [int(s) for s in input().split()]
 t.sort()
-g=[0]*m
-tot=0
+g = [0] * m
+tot = 0
 for i in range(n):
-    g[i%m]+=t[i]
-    tot+=g[i%m]
-    print(tot,end=' ')
+    g[i % m] += t[i]
+    tot += g[i % m]
+    print(tot, end=' ')

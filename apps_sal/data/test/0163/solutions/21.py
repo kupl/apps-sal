@@ -1,5 +1,6 @@
 import math
 
+
 def solve(n, k, s):
     i, j = s.index('G'), s.index('T')
     if (i - j) % k != 0:
@@ -9,8 +10,7 @@ def solve(n, k, s):
             return False
     return True
 
+
 n, k = [int(x) for x in input().split()]
 s = input()
 print('YES' if solve(n, k, s) else 'NO')
-    
-

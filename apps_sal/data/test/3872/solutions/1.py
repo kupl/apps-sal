@@ -17,10 +17,10 @@ def eq(a, b, ah, at, bh, bt):
     bm = bh + half
     return (eq(a, b, ah, am, bm, bt) and eq(a, b, am, at, bh, bm)) or (eq(a, b, ah, am, bh, bm) and eq(a, b, am, at, bm, bt))
 
+
 if ca != cb:
     print('NO')
 elif eq(a, b, 0, len(a), 0, len(b)):
     print('YES')
 else:
     print('NO')
-
