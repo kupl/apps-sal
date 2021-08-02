@@ -1,4 +1,4 @@
-n,m = [int(i) for i in input().split()]
+n, m = [int(i) for i in input().split()]
 s = [input() for i in range(n)]
 ans = ""
 i = 0
@@ -12,5 +12,5 @@ while i < len(s):
         s.remove(l[::-1])
         ans += l
 
-print(len(ans)*2+len(mid))
-print(ans+mid+ans[::-1])
+print(len(ans) * 2 + len(mid))
+print(ans + mid + ans[::-1])

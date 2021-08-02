@@ -1,6 +1,8 @@
-#Bhargey Mehta (Sophomore)
+# Bhargey Mehta (Sophomore)
 #DA-IICT, Gandhinagar
-import sys, math, queue
+import sys
+import math
+import queue
 sys.setrecursionlimit(1000000)
 #sys.stdin = open("input.txt", "r")
 
@@ -12,7 +14,7 @@ for i in range(int(input())):
     x.sort()
     ans = "Yes"
     for i in range(1, len(x)):
-        if x[i] != x[i-1]+1:
+        if x[i] != x[i - 1] + 1:
             ans = "No"
             break
     print(ans)

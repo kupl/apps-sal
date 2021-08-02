@@ -1,4 +1,4 @@
-n=int(input())
+n = int(input())
 for i in range(n):
     s = ''.join(sorted(input()))
     ans = True

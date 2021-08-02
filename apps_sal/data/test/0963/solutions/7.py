@@ -10,7 +10,7 @@ dp = [0] * (2 * N + 3)
 add = [0] * (2 * N + 3)
 height = 0
 dp[0] = dp[1] = 1
-for i in range(1, N+1):
+for i in range(1, N + 1):
     height += add[i] % MOD
     if i != 1:
         dp[i] = height

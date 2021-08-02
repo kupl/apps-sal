@@ -11,4 +11,3 @@ for i in range(n):
     k.add(new_s)
 print(2 * len(ans) + len(s))
 print(ans + s + ans[::-1])
-

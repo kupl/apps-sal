@@ -24,4 +24,3 @@ for i in range(2, N + 1):
     prefix_sum.append(prefix_sum[-1] + dp[i])
 
 print((dp[-1]))
-

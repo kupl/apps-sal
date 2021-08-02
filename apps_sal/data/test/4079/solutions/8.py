@@ -1,6 +1,7 @@
 def parse_arr():
     return list(map(int, input().split(' ')))
 
+
 n = int(input())
 
 for _ in range(n):
@@ -13,7 +14,7 @@ for _ in range(n):
     for a in line:
         if a == start:
             start = chr(ord(start) + 1)
-        
+
         else:
             print('No')
             done = True

@@ -13,8 +13,8 @@ while max(L) != min(L):
                 L[i] -= 1
             else:
                 s += '0'
-        M.append(s)    
-    else:      
+        M.append(s)
+    else:
         max_1 = 0
         max_2 = 1
         if L[max_1] < L[max_2]:

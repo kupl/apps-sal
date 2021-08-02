@@ -6,7 +6,7 @@ S = []
 for _ in range(K):
     S.append(list(map(int, input().split())))
 
-result = [0]*N
+result = [0] * N
 result[0] = 1
 result[1] = -1
 

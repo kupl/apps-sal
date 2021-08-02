@@ -21,4 +21,3 @@ if f:
     print("Yes")
 else:
     print("No")
-

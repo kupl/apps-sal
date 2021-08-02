@@ -23,12 +23,11 @@ for i in range(2, N + 1):
 
         if iter_R <= 0:
             continue
-        
+
         iter_L = max(1, iter_L)
 
         dp[i] += (cusum[iter_R] - cusum[iter_L - 1]) % mod
-    
+
     cusum[i] = (cusum[i - 1] + dp[i]) % mod
 
 print((dp[N] % mod))
-

@@ -32,4 +32,3 @@ def main():
 
 
 print("Yes" if main() else "No")
-
