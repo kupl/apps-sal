@@ -1,14 +1,14 @@
 import sys
 
 
-#def solve(a,b,c,d):
+# def solve(a,b,c,d):
 def solve(lens):
     base = ord('a')
-    wlen = max(lens)+2
-    last = ['a']*wlen
+    wlen = max(lens) + 2
+    last = ['a'] * wlen
     word_list = [''.join(last)]
     for l in lens:
-        last[l] = chr( base + (ord(last[l])-ord('a')+1)%26 )
+        last[l] = chr(base + (ord(last[l]) - ord('a') + 1) % 26)
         word_list.append(''.join(last))
     return word_list
 
@@ -21,7 +21,7 @@ def __starting_point():
     for ti in range(T):
         a = int(IN[cur])
         #a = [int(x) for x in IN[cur].split(' ')]
-        lens = [int(x) for x in IN[cur+1].split(' ')]
+        lens = [int(x) for x in IN[cur + 1].split(' ')]
         res = solve(lens)
         for w in res:
             print(w)

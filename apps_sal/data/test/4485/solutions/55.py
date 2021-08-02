@@ -7,4 +7,3 @@ for a, b in AB:
     if b == N:
         res.append(a)
 print(('IMPOSSIBLE' if len(res) == len(set(res)) else 'POSSIBLE'))
-

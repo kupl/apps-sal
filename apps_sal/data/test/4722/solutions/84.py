@@ -5,4 +5,3 @@ for i in [A, B, A + B]:
         print("Possible")
         return
 print("Impossible")
-

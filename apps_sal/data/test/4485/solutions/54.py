@@ -9,4 +9,3 @@ for i in range(M):
     elif(b == N):
         goal.add(a)
 print(("IMPOSSIBLE" if(len(start & goal) == 0) else "POSSIBLE"))
-

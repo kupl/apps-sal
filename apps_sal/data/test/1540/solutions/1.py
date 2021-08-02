@@ -1,6 +1,6 @@
 n, m, k = map(int, input().split())
 a = [set() for i in range(m)]
-b = [0 for i in range(n)] 
+b = [0 for i in range(n)]
 d = [0 for i in range(m)]
 for i in range(n):
     s = list(map(int, input().split()))
@@ -14,6 +14,6 @@ for i in range(k):
 for i in range(m):
     if d[i]:
         for elem in a[i]:
-            b[elem] += d[i]        
+            b[elem] += d[i]
 for i in range(n):
-    print(b[i], end = ' ')
+    print(b[i], end=' ')

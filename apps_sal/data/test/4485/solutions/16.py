@@ -23,6 +23,3 @@ if len(e) != 0:
     print('POSSIBLE')
 else:
     print('IMPOSSIBLE')
-
-
-

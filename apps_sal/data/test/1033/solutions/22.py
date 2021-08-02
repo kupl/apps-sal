@@ -3,6 +3,7 @@ n, H = input().split()
 n = int(n)
 H = int(H)
 
+
 def can(m):
     nonlocal n, H
     ans = 0
@@ -12,14 +13,14 @@ def can(m):
     ost = m - tt
     if ost % 2 == 0:
         up = ost // 2 - 1
-        
+
         ans += ((up + 1) * up)
         ans += up + 1
     else:
         up = ost // 2
         ans += ((up + 1) * up)
     return ans
-    
+
 
 l = 0
 r = n + H
@@ -33,4 +34,3 @@ while r - l > 1:
         r = m
 
 print(r)
-

@@ -30,4 +30,3 @@ if set(start) & set(leave):
     print("POSSIBLE")
 else:
     print("IMPOSSIBLE")
-

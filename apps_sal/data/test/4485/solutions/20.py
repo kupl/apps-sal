@@ -1,7 +1,7 @@
-N,M = map(int,input().split())
-island = [[] for i in range(N+1)]
+N, M = map(int, input().split())
+island = [[] for i in range(N + 1)]
 for i in range(M):
-    a,b = map(int,input().split())
+    a, b = map(int, input().split())
     island[a].append(b)
 
 for i in island[1]:

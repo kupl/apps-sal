@@ -16,4 +16,3 @@ for _ in range(int(input())):
         s[u[i]] = nxt(s[u[i]])
         ans.append(''.join(s))
 print('\n'.join(ans))
-

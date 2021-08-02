@@ -15,4 +15,3 @@ for i in h[k:]:
     num += i
 
 print(num)
-

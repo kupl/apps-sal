@@ -1,4 +1,4 @@
-a,b = map(int,input().split())
+a, b = map(int, input().split())
 if a % 3 == 0:
     print("Possible")
 elif b % 3 == 0:

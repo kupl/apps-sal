@@ -1,8 +1,8 @@
-def S (l):
+def S(l):
     return l * (l + 1) // 2
 
 
-def f (l, h):
+def f(l, h):
     if l <= h:
         return S(l)
     s = S(h)
@@ -25,4 +25,3 @@ while r - l > 1:
         l = md
 
 print(r)
-

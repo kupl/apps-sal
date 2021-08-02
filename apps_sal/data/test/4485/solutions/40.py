@@ -1,5 +1,5 @@
 n, m = list(map(int, input().split()))
-ab  = list(list(map(int, input().split())) for _ in range(m))
+ab = list(list(map(int, input().split())) for _ in range(m))
 
 goal = [0] * n
 start = [0] * n
@@ -16,4 +16,3 @@ for i in range(n):
         flg = True
 
 print(('POSSIBLE' if flg else 'IMPOSSIBLE'))
-

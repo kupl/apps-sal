@@ -7,4 +7,3 @@ elif a % 3 == 2 and b % 3 == 1:
     print("Possible")
 else:
     print("Impossible")
-

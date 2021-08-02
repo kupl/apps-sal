@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 N, H = mi()
 tar = N + H * (H - 1) // 2
@@ -34,5 +39,5 @@ else:
         ans = 2 * lo - H + 1
     else:
         ans = 2 * lo - H + 2
-        
+
 print(ans)

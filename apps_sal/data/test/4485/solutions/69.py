@@ -15,7 +15,7 @@ for i in range(M):
         first.append(b)
     if b == N:
         second.add(a)
-        
+
 for a in first:
     if a in second:
         print("POSSIBLE")

@@ -6,5 +6,4 @@ for u in range(n):
         z.discard(i)
 print(len(z))
 for i in z:
-    print(i, end = ' ')
-
+    print(i, end=' ')

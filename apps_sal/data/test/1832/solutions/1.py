@@ -1,4 +1,5 @@
 # ------------------- fast io --------------------
+from math import gcd, ceil
 import os
 import sys
 from io import BytesIO, IOBase
@@ -51,10 +52,10 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 # ------------------- fast io --------------------
-from math import gcd, ceil
+
 
 def pre(s):
     n = len(s)
@@ -75,6 +76,7 @@ def prod(a):
         ans = (ans * each)
     return ans
 
+
 def lcm(a, b): return a * b // gcd(a, b)
 
 
@@ -91,9 +93,9 @@ for _ in range(int(input()) if True else 1):
     a = list(map(int, input().split()))
     #b = list(map(int, input().split()))
     #s = input()
-    ans = ['a'*100]
+    ans = ['a' * 100]
     for i in range(n):
-        ans += [ans[-1][:a[i]] + chr(ord(ans[-1][a[i]])+1) if ans[-1][a[i]] != 'z' else 'a']
-        ans[-1] = ans[-1] + "a"*(100 - len(ans[-1]))
+        ans += [ans[-1][:a[i]] + chr(ord(ans[-1][a[i]]) + 1) if ans[-1][a[i]] != 'z' else 'a']
+        ans[-1] = ans[-1] + "a" * (100 - len(ans[-1]))
     for each in ans:
         print(each)

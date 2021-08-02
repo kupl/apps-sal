@@ -1,20 +1,20 @@
-n,m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 #a_to = []
 #a_from = []
 dic = {}
 isOK = False
 for i in range(m):
-    a,b = list(map(int,input().split()))
-    if a in [1,n]:
-        dic.setdefault(b,0)
+    a, b = list(map(int, input().split()))
+    if a in [1, n]:
+        dic.setdefault(b, 0)
         dic[b] += 1
-        if dic[b]==2:
+        if dic[b] == 2:
             isOK = True
             break
-    elif b in [1,n]:
-        dic.setdefault(a,0)
+    elif b in [1, n]:
+        dic.setdefault(a, 0)
         dic[a] += 1
-        if dic[a]==2:
+        if dic[a] == 2:
             isOK = True
             break
 #    if a==1:
@@ -26,14 +26,13 @@ for i in range(m):
 #    if b==n:
 #        a_from.append(a)
 
-#for j in range(len(a_to)):
+# for j in range(len(a_to)):
 #    if a_to[j] in a_from:
 #        isOK = True
 #        break
-#print(a_to)
-#print(a_from)
+# print(a_to)
+# print(a_from)
 if isOK:
     print('POSSIBLE')
 else:
     print('IMPOSSIBLE')
-

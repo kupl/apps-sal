@@ -3,8 +3,8 @@ chatsmembers = []
 chatkol = []
 for i in range(n):
     chatsmembers.append(list(map(int, input().split())))
-chatkol = [0]*m
-chatsents = [0]*n
+chatkol = [0] * m
+chatsents = [0] * n
 for i in range(k):
     a, b = map(int, input().split())
     chatsents[a - 1] += 1
@@ -14,5 +14,4 @@ for i in range(n):
     for j in range(m):
         if chatsmembers[i][j] == 1:
             t += chatkol[j]
-    print(t - chatsents[i], end = ' ')
-
+    print(t - chatsents[i], end=' ')

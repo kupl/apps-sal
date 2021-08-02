@@ -1,4 +1,6 @@
-import sys, math, random
+import sys
+import math
+import random
 from fractions import gcd
 from itertools import permutations
 
@@ -9,8 +11,10 @@ if debug:
 else:
     input = sys.stdin.readline
 
+
 def mp():
     return list(map(int, input().split()))
+
 
 def _main():
     n, m = mp()
@@ -27,5 +31,6 @@ def _main():
             ans.append(i)
     print(len(ans))
     print(*ans)
-_main()
 
+
+_main()

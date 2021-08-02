@@ -19,4 +19,3 @@ if f:
     print("POSSIBLE")
 else:
     print("IMPOSSIBLE")
-
