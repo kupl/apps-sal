@@ -2,7 +2,7 @@
 def main():
     buf = input()
     buflist = buf.split()
-    hand = buflist;
+    hand = buflist
     t = []
     for i in range(3):
         t.append([])
@@ -16,7 +16,7 @@ def main():
             idx = 1
         elif x[1] == 's':
             idx = 2
-        t[idx][int(x[0])-1] += 1
+        t[idx][int(x[0]) - 1] += 1
     max_cons = 0
     max_mult = 0
     for i in range(3):
@@ -32,7 +32,9 @@ def main():
             max_mult = max(max_mult, t[i][j])
     print(3 - max(max_cons, max_mult))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

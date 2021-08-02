@@ -13,4 +13,3 @@ while n not in previous:
     n = f(n)
 
 print(len(previous))
-

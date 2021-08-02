@@ -8,7 +8,7 @@ neg = 0
 pos = 0
 
 for i in range(n):
-    x,y = list(map(int,input().split()))
+    x, y = list(map(int, input().split()))
     if (x < 0):
         neg += 1
     else:
@@ -17,4 +17,3 @@ for i in range(n):
         print("No")
         return
 print("Yes")
-

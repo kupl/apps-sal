@@ -10,6 +10,7 @@
 # standard library
 import sys
 
+
 def main():
     # nums = list(map(int, input().split()))
     num = int(input())
@@ -22,6 +23,7 @@ def main():
         while num % 10 == 0:
             num //= 10
     print(len(seen))
+
 
 def __starting_point():
     main()

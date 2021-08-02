@@ -9,6 +9,7 @@ def generate(num, pref):
         generate(num - 1, pref + '4')
         generate(num - 1, pref + '7')
 
+
 n = input()
 num = len(n)
 res = 0

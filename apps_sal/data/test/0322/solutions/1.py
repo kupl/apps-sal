@@ -11,4 +11,3 @@ if l <= 1 or r <= 1:
     print("Yes")
 else:
     print("No")
-

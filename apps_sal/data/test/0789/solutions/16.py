@@ -5,4 +5,3 @@ for i in range(1, len(s)):
     m += 2 ** i
 
 print(int(s, 2) + m + 1)
-

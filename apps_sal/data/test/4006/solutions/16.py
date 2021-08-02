@@ -1,8 +1,9 @@
+from functools import reduce
+from collections import Counter
 import sys
 sys.setrecursionlimit(2000)
-from collections import Counter
-from functools import reduce
 # sys.stdin.readline()
+
 
 def __starting_point():
 
@@ -20,7 +21,6 @@ def __starting_point():
         n = int(n)
         count += 1
     print(count)
-
 
 
 __starting_point()

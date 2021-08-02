@@ -8,4 +8,3 @@ elif c1 == 0 and c3 > 0:
     print(0)
 else:
     print(1)
-

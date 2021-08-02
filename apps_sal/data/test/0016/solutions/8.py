@@ -9,7 +9,6 @@ def main():
         print(1)
     else:
         print(0)
- 
- 
-main()
 
+
+main()

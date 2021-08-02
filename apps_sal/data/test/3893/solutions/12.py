@@ -8,9 +8,9 @@ def main():
     count = 0
     for i in range(n):
         a, b, c = input_split(int)
-        if (a*x1+b*y1+c) * (a*x2+b*y2+c) < 0:
-            count+=1
+        if (a * x1 + b * y1 + c) * (a * x2 + b * y2 + c) < 0:
+            count += 1
     print(count)
 
-main()
 
+main()

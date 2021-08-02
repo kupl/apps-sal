@@ -3,4 +3,3 @@ b = int(input())
 c = int(input())
 d = int(input())
 print(1 if a == d and (c == 0 or (a > 0 and d > 0)) else 0)
-

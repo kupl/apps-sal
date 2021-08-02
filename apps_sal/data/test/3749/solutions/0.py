@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import functools
+
+
 def divmod(f, g):
     assert g
     h = 0
@@ -8,13 +11,14 @@ def divmod(f, g):
             h ^= 1 << i
     return h, f
 
+
 def gcd(f, g):
     while g:
         q, r = divmod(f, g)
         f, g = g, r
     return f
 
-import functools
+
 def solve(n, x, a):
     # (g) = (a_1, ..., a_n) is a principal ideal since F_2[x] is a PID
     g = functools.reduce(gcd, a)
@@ -36,8 +40,9 @@ def main():
     n, x = input().split()
     n = int(n)
     x = int(x, 2)
-    a = [ int(input(), 2) for _ in range(n) ]
+    a = [int(input(), 2) for _ in range(n)]
     print((solve(n, x, a)))
+
 
 def __starting_point():
     main()

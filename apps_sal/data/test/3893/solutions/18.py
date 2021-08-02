@@ -9,4 +9,3 @@ for i in range(n):
     if (q1 > 0 and q2 < 0) or (q1 < 0 and q2 > 0):
         r += 1
 print(r)
-

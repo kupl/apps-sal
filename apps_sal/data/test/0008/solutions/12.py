@@ -1,4 +1,6 @@
-f = lambda c: 'mps'.index(c)
+def f(c): return 'mps'.index(c)
+
+
 l = [[], [], []]
 for c in input().split():
     a, b = c
@@ -8,8 +10,10 @@ for i in range(3):
 
 res = 3
 for x in l:
-    if len(x) == 0: continue
-    elif len(x) == 1: res = min(res, 2)
+    if len(x) == 0:
+        continue
+    elif len(x) == 1:
+        res = min(res, 2)
     elif len(x) == 3:
         if len(set(x)) == 1:
             res = min(res, 0)

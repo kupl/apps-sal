@@ -6,4 +6,3 @@ while n > 9:
         n //= 10
     t += 1
 print(t + 9)
-

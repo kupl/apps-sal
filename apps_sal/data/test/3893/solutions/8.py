@@ -7,4 +7,3 @@ for i in range(n):
     if (a * x1 + b * y1 + c) * (a * x2 + b * y2 + c) < 0:
         ans += 1
 print(ans)
-

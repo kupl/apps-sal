@@ -31,7 +31,9 @@ class Main:
                 n /= 10
         print(len(rs))
 
+
 def __starting_point():
     Main().solve()
+
 
 __starting_point()

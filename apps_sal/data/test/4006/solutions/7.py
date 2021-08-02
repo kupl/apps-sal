@@ -5,6 +5,5 @@ while len(str(n)) != 1:
     n += 1
     while n % 10 == 0:
         n //= 10
-    
-print(num)
 
+print(num)

@@ -2,6 +2,7 @@ def check(a, b):
     if a[1] == b[1] and 1 <= abs(int(b[0]) - int(a[0])) <= 2:
         return True
 
+
 arr = input().split()
 d = {}
 for i in arr:
