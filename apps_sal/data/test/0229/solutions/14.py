@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 s = set()
 for el in a:
@@ -14,4 +14,3 @@ elif len(s) > 3:
 else:
     sl = sorted(list(s))
     print('YES' if sl[0] + sl[2] == 2 * sl[1] else 'NO')
-

@@ -15,4 +15,3 @@ else:
         print("No")
     else:
         print("Yes")
-

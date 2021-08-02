@@ -19,4 +19,3 @@ if 2 * aa[1] == aa[0] + aa[2]:
     print("YES")
 else:
     print("NO")
-

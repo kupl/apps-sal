@@ -11,4 +11,3 @@ pre = t[:a]
 ans = pre * (k - 1) + t
 
 print(ans)
-

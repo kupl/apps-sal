@@ -9,4 +9,3 @@ for i in range(N):
         num = P[i]
 
 print(ans)
-

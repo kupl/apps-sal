@@ -15,4 +15,3 @@ elif len(A) == 3:
         print("NO")
 else:
     print("NO")
-

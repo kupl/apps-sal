@@ -2,8 +2,10 @@ import itertools
 import math
 from collections import defaultdict
 
+
 def input_ints():
     return list(map(int, input().split()))
+
 
 def solve():
     s = input()
@@ -22,7 +24,9 @@ def solve():
             return
     print('Yes')
 
+
 def __starting_point():
     solve()
+
 
 __starting_point()

@@ -5,5 +5,5 @@ while i > 0 and t[:i] != t[-i:]:
     i -= 1
 ans = t
 for g in range(k - 1):
-    ans += t[-n+i:]
+    ans += t[-n + i:]
 print(ans)

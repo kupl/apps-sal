@@ -19,10 +19,9 @@ if len(max_prefix) == 0:
     for i in range(k):
         s = s + t
 else:
-    p = t[:n-len(max_prefix)]
-    for i in range(k-1):
+    p = t[:n - len(max_prefix)]
+    for i in range(k - 1):
         s = s + p
     s = s + t
 
 print(s)
-

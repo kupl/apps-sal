@@ -1,6 +1,7 @@
 from sys import setrecursionlimit, exit
 setrecursionlimit(1000000000)
 
+
 def main():
     n = int(input())
     p = list(map(int, input().split()))
@@ -11,5 +12,6 @@ def main():
             ans += 1
             minimum = p[i]
     print(ans)
+
 
 main()

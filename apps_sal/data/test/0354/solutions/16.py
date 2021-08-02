@@ -15,4 +15,3 @@ for a, b in zip(s, t):
         return
 
 print('Yes')
-

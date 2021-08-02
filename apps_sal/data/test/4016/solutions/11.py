@@ -9,5 +9,4 @@ for i in range(1, n):
 if not a:
     print(t * k)
 else:
-    print(t + t[n-a:]*(k-1))
-
+    print(t + t[n - a:] * (k - 1))

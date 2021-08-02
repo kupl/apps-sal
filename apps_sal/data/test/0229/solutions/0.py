@@ -7,4 +7,3 @@ for i in a:
 f1 = len(s) < 3
 f2 = len(s) == 3 and max(s) + min(s) == 2 * sorted(s)[1]
 print('YES' if f1 or f2 else 'NO')
-

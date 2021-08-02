@@ -1,5 +1,5 @@
 n = int(input())
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 ans = 0
 for i in range(n):
     if (i == 0):
@@ -13,4 +13,3 @@ for i in range(n):
             x = p[i]
 
 print(ans)
-

@@ -27,9 +27,9 @@ def intersect(l1, r1, l2, r2):
 
 def solve():
     m = readnlines(sys.stdin)
-    uniques = sorted(m) 
+    uniques = sorted(m)
     #print("len(set(m)) = {}".format(len(set(m))))
-    #print(uniques)
+    # print(uniques)
     if len(uniques) > 3:
         return "NO"
     elif len(uniques) == 3:
@@ -41,7 +41,8 @@ def solve():
 
 
 def __starting_point():
-   ans = solve()
-   print(ans)
+    ans = solve()
+    print(ans)
+
 
 __starting_point()

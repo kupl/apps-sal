@@ -1,9 +1,12 @@
 from collections import defaultdict
-import sys, os, math
+import sys
+import os
+import math
+
 
 def __starting_point():
     #n, m = list(map(int, input().split()))
-    #sys.stdout.flush()
+    # sys.stdout.flush()
     n = int(input())
     arr = list(map(int, input().split()))
     temp = []
@@ -18,5 +21,6 @@ def __starting_point():
         print("YES")
     else:
         print("NO")
+
 
 __starting_point()

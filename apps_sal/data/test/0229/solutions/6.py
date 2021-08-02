@@ -10,5 +10,3 @@ elif len(array) > 3 or array[1] - array[0] != array[2] - array[1]:
     print("NO")
 else:
     print("YES")
-
-

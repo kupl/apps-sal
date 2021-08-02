@@ -9,4 +9,3 @@ if len(s) == len(t):
             ok = 0
             break
 print('Yes' if ok else 'No')
-

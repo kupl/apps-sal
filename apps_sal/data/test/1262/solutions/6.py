@@ -1,4 +1,4 @@
-# refactored Prim's algorithm 
+# refactored Prim's algorithm
 # (with dummy 0-node)
 import sys
 
@@ -21,7 +21,7 @@ for i in range(1, n):
     for j in range(i + 1, n):
         wire = ks[i] + ks[j]
         dist = abs(cities[i][0] - cities[j][0]) + \
-                abs(cities[i][1] - cities[j][1])
+            abs(cities[i][1] - cities[j][1])
         g[i][j] = g[j][i] = wire * dist
 for i in range(1, n):
     g[0][i] = g[i][0] = cs[i]
@@ -49,7 +49,7 @@ while connCosts:
     elif fromNode > 0:
         totalCost += g[v][fromNode]
         connections.append((v, fromNode))
-        
+
     connCosts.pop(v)
     for to, cost in list(connCosts.items()):
         if g[v][to] < connCosts[to]:
@@ -68,6 +68,5 @@ myprint(str(len(connections)) + '\n')
 # print(*stations)
 # print(len(connections))
 # [print(c1, c2) for c1, c2 in connections];
-    
-# inf.close()
 
+# inf.close()
