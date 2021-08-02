@@ -6,4 +6,3 @@ for x in data:
         print(-1)
         import sys; return
 print(small)
-

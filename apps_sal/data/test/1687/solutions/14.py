@@ -1,8 +1,11 @@
 import functools
+
+
 def gcd(a, b):
     if b == 0:
         return a;
     return gcd(b, a % b)
+
 
 def main():
     n = int(input())
@@ -13,7 +16,9 @@ def main():
     else:
         print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

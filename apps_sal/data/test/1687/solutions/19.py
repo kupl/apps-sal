@@ -8,9 +8,3 @@ for x in v:
         return
 
 print(v[0])
-
-
-
-
-
-

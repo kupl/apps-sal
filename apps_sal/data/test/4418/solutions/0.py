@@ -9,4 +9,3 @@ for ai in a:
             s[i] += 1; s[i - 1] -= 1
             break
 print(n - 6 * s[-1])
-

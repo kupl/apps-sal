@@ -11,8 +11,8 @@ r = [0] * 500
 for _ in range(n):
 
     b = int(input())
-    
-    if b > prev_b:        
+
+    if b > prev_b:
         delta = b - prev_b
         i = 0
 
@@ -25,7 +25,7 @@ for _ in range(n):
     else:
         max_i = -1
         s = 0
-        
+
         while s < prev_b:
             max_i += 1
             s += r[max_i]
@@ -33,23 +33,23 @@ for _ in range(n):
         max_i += 1
         sum_ge_max_i = 0
 
-        i = max_i        
+        i = max_i
         s = 0
 
-        while b > s + r[i-1]:
-            
-            s += r[i-1]
+        while b > s + r[i - 1]:
+
+            s += r[i - 1]
             i -= 1
-            
+
             if r[i] < 9:
                 max_i = i
                 sum_ge_max_i = s
-        
+
         r[max_i] += 1
         sum_ge_max_i += 1
 
-        delta = b - sum_ge_max_i 
-        
+        delta = b - sum_ge_max_i
+
         for i in range(max_i):
             if delta > 0:
                 delta_i = min(delta, 9)
@@ -57,8 +57,8 @@ for _ in range(n):
                 delta -= delta_i
             else:
                 r[i] = 0
-                
+
     res = ''.join(map(str, reversed(r)))
     print(res.lstrip('0'))
-    
+
     prev_b = b

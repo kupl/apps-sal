@@ -9,4 +9,4 @@ for i in range(n - 1):
 cnt = 0
 for i in mass:
     cnt += (i == 1)
-print(2 *s / cnt)
+print(2 * s / cnt)

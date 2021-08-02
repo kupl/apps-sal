@@ -1,17 +1,22 @@
 import sys
 from collections import Counter
 
+
 def input():
     return sys.stdin.readline().strip()
+
 
 def dinput():
     return int(input())
 
+
 def tinput():
     return input().split()
 
+
 def rinput():
     return map(int, tinput())
+
 
 def main():
     n = int(input())

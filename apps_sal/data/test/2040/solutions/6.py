@@ -11,6 +11,7 @@ def add(c, v, p=0):
             return
     c.append(v)
 
+
 def find_min(xsum, l):
     csum = sum(l)
     if csum == xsum:
@@ -35,6 +36,7 @@ def find_min(xsum, l):
                 if csum <= xsum:
                     return find_min(xsum, l)
 
+
 n = int(input())
 
 c = [0]
@@ -43,4 +45,3 @@ for i in range(n):
     find_min(b, c)
     print(''.join(map(str, c[::-1])))
     add(c, 1)
-

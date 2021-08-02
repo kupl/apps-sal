@@ -33,10 +33,10 @@ for i in a:
             ans += 1
     elif i == 42:
         if g[23] > 0:
-            g[23]-=1
+            g[23] -= 1
         else:
             ans += 1
     else:
         ans += 1
-ans += (g[4] + 2*g[8] + 3*g[15] + 4*g[16]+ 5*g[23])
+ans += (g[4] + 2 * g[8] + 3 * g[15] + 4 * g[16] + 5 * g[23])
 print(ans)

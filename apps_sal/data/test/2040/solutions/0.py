@@ -5,16 +5,18 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-################################################### SOLUTION
+# SOLUTION
+
 
 def printing(num):
     arr = num[:]
     while len(arr) > 1 and arr[-1] == 0: arr.pop()
     print("".join(map(str, reversed(arr))))
 
+
 def main():
     n, = read()
-    last = [0]*500
+    last = [0] * 500
     for i in range(n):
         b, = read()
         last[0] += 1
@@ -40,9 +42,7 @@ def main():
         printing(last)
 
 
-
-#################################################### HELPERS
-
+# HELPERS
 
 
 def read(mode=2):
@@ -54,10 +54,12 @@ def read(mode=2):
     if mode == 1: return inputs.split()
     if mode == 2: return list(map(int, inputs.split()))
 
+
 def write(s="\n"):
     if s is None: s = ""
     if isinstance(s, list): s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
+
 
 write(main())

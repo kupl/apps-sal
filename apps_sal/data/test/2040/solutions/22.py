@@ -14,4 +14,3 @@ for q in range(int(input())):
     t[:a] = [9] * a
     t[a] += b
     print(''.join(map(str, t[k::-1])))
-

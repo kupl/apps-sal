@@ -1,3 +1,4 @@
+import math
 __author__ = 'PrimuS'
 
 n = int(input())
@@ -7,15 +8,13 @@ for i in range(n):
 
 last = 0
 
-import math
-
 
 def build_smallest(csum, length):
     if math.ceil(csum / 9) == length:
         f = csum % 9
         if f == 0:
             f = 9
-        return int(str(f) + "9" * (length-1))
+        return int(str(f) + "9" * (length - 1))
 
     csum -= 1
     s = ""
@@ -67,7 +66,7 @@ def build_greater(csum, x):
     res = list(x)
 
     res[pos] += 1
-    for i in range(pos+1):
+    for i in range(pos + 1):
         csum -= res[i]
 
     i = len(res) - 1
@@ -107,7 +106,5 @@ for i in range(n):
         if cur <= last:
             cur = build_smallest(b[i], len(str(last)) + 1)
 
-
     print(cur)
     last = cur
-

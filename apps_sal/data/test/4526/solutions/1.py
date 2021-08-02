@@ -1,6 +1,7 @@
 def Zs(): return list(map(int, input().split()))
 def Z(): return int(input())
 
+
 def solve(N, A):
     s = [0] * (N + 1)
     for i in range(N):
@@ -15,10 +16,8 @@ def solve(N, A):
         if aru[A[i]]: ans += 1
     return ans
 
+
 for _ in range(Z()):
     N = Z()
     A = Zs()
     print(solve(N, A))
-
-
-

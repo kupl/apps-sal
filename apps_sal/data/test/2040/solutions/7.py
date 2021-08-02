@@ -10,8 +10,10 @@ def getnum(digsum):
             res = 10 * res + 9
         return res
 
+
 def digsumf(n):
     return sum([int(i) for i in str(n)])
+
 
 def getnext(bnum, last):
     if last == 0:
@@ -48,9 +50,9 @@ def getnext(bnum, last):
         else:
             i += 1
 
+
 n = int(input())
 last = 0
 for i in range(n):
     last = getnext(int(input()), last)
     print(last)
-

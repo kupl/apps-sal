@@ -3,14 +3,20 @@ def nd(n):
     while n:
         n, v = n // 10, v + 1
     return v
+
+
 def sd(n):
     v = 0
     while n:
         n, v = n // 10, v + n % 10
     return v
+
+
 def mina(s):
     d9 = s // 9
     return (s % 9 + 1) * 10 ** d9 - 1
+
+
 def maxan(s, n):
     v = 0
     for i in range(n - 1, -1, -1):
@@ -18,9 +24,13 @@ def maxan(s, n):
         s -= c
         v += c * 10 ** i
     return v
+
+
 def minan(s, n):
     d9 = (s - 1) // 9
     return 10 ** d9 - 1 + 10 ** (n - 1) + (s - 1) % 9 * 10 ** d9
+
+
 def f(s, m):
     a1 = mina(s)
     if a1 > m:
@@ -43,6 +53,8 @@ def f(s, m):
         if sx == s:
             return x
     return minan(s, n + 1)
+
+
 v = 0
 for i in range(int(input())):
     v = f(int(input()), v)

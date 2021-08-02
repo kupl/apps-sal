@@ -21,10 +21,10 @@ for _ in range(T):
                 s = prefix[j] - prefix[i - 1]
                 if s <= mx:
                     m[s] = 0
-    
+
     ans = 0
     for i in arr:
         if i in m:
             ans += 1
 
-    print(ans)    
+    print(ans)
