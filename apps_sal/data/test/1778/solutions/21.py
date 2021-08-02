@@ -27,8 +27,11 @@ def gambling():
         else:
             aa.pop()
 
-    print(sa-sb)
+    print(sa - sb)
+
 
 def __starting_point():
     gambling()
+
+
 __starting_point()

@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 a = li()
@@ -31,4 +36,3 @@ for t in range(n):
     else:
         a.pop()
 print(x - y)
-

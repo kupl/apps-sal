@@ -12,6 +12,6 @@ def main():
         m = max(m, angles[i + 1] - angles[i])
     m = max(m, (angles[0] - angles[-1]) % 360)
     stdout.write('{:.15f}\n'.format((360 - m) % 360))
+
+
 main()
-
-

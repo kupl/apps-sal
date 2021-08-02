@@ -5,4 +5,4 @@ if W / 2 == x and H / 2 == y:
 else:
     a = 0
 
-print(W*H/2, a)
+print(W * H / 2, a)

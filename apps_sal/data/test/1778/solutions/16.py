@@ -41,34 +41,32 @@ else:
         print(" ")"""
 
 
-
-n=int(input())
-s1=[int(x) for x in input().split()]
-s2=[int(x) for x in input().split()]
-S1=sorted(s1)
-S2=sorted(s2)
-S1=[0]+S1
-S2=[0]+S2
-S1=S1[::-1]
-S2=S2[::-1]
-pta=0
-ptb=0
-sm1=0
-sm2=0
-for j in range(0,(2*n)+1):
-    if(j%2==0):
-        if(S2[ptb]>S1[pta]):
-            ptb=ptb+1
+n = int(input())
+s1 = [int(x) for x in input().split()]
+s2 = [int(x) for x in input().split()]
+S1 = sorted(s1)
+S2 = sorted(s2)
+S1 = [0] + S1
+S2 = [0] + S2
+S1 = S1[::-1]
+S2 = S2[::-1]
+pta = 0
+ptb = 0
+sm1 = 0
+sm2 = 0
+for j in range(0, (2 * n) + 1):
+    if(j % 2 == 0):
+        if(S2[ptb] > S1[pta]):
+            ptb = ptb + 1
         else:
-            sm1=sm1+S1[pta]
-            pta=pta+1
+            sm1 = sm1 + S1[pta]
+            pta = pta + 1
     else:
-        if(S1[pta]>S2[ptb]):
-            pta=pta+1
+        if(S1[pta] > S2[ptb]):
+            pta = pta + 1
         else:
-            sm2=sm2+S2[ptb]
-            ptb=ptb+1
-    if(pta==n+1 and ptb==n+1):
+            sm2 = sm2 + S2[ptb]
+            ptb = ptb + 1
+    if(pta == n + 1 and ptb == n + 1):
         break
-print(sm1-sm2)
-
+print(sm1 - sm2)

@@ -18,4 +18,3 @@ for i in range(2 * n):
             del a[-1]
 
 print(A - B)
-

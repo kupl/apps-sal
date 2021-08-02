@@ -1,4 +1,4 @@
-W,H,x,y = list(map(float,input().split()))
+W, H, x, y = list(map(float, input().split()))
 
 ans = W * H
 ans = float(float(ans) / 2.0)

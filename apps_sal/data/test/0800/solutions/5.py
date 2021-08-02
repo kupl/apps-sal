@@ -15,4 +15,3 @@ angles.append(angles[0] + 2 * math.pi)
 
 max_gap = max(angles[i] - angles[i - 1] for i in range(1, len(angles)))
 print(360 - 180 * max_gap / math.pi)
-

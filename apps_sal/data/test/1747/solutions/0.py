@@ -29,10 +29,4 @@ else:
         if i - l + 1 > ar - al + 1:
             ar = i
             al = l
-    print('{0} {1}'.format(al+1, ar+1))
-
-
-
-
-
-
+    print('{0} {1}'.format(al + 1, ar + 1))

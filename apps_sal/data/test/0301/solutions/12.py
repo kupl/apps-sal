@@ -14,7 +14,7 @@ else:
     w = w // 2
     if u & w == 0:
         print(2)
-        print(str(u+w)+" "+str(w))
+        print(str(u + w) + " " + str(w))
     else:
         print(3)
-        print(str(u)+" "+str(w)+" "+str(w))
+        print(str(u) + " " + str(w) + " " + str(w))

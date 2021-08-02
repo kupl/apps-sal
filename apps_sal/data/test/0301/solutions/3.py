@@ -12,9 +12,8 @@ else:
     if d + e == v and d ^ e == u:
         print(2)
         print(d, e)
-    elif a+b+c == v and a ^ b ^ c == u:
+    elif a + b + c == v and a ^ b ^ c == u:
         print(3)
         print(a, b, c)
     else:
         print(-1)
-

@@ -1,4 +1,4 @@
-def longest(n,k,a):
+def longest(n, k, a):
     f = [0] * 1000001
     d = 0
     r = 0
@@ -8,7 +8,7 @@ def longest(n,k,a):
     for r in range(0, n):
         f[a[r]] += 1
         if f[a[r]] == 1:
-            d +=1
+            d += 1
         while d > k:
             f[a[l]] -= 1
             if f[a[l]] == 0:
@@ -17,7 +17,9 @@ def longest(n,k,a):
         if ans_r - ans_l < r - l:
             ans_r = r
             ans_l = l
-    return str(ans_l + 1) + " "+ str(ans_r + 1)
+    return str(ans_l + 1) + " " + str(ans_r + 1)
+
+
 line_1 = list(map(int, input().split()))
 n = line_1[0]
 k = line_1[1]
@@ -36,4 +38,3 @@ print(longest(n, k, line_2))
 3 1
 1 2 3
 """
-

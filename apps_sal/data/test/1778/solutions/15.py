@@ -26,4 +26,3 @@ while len(l1) > 0 or len(l2) > 0:
     else:
         l1.pop()
 print(s1 - s2)
-

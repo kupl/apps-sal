@@ -10,10 +10,10 @@ right = -1
 l = 0
 r = 0
 while r < n:
-    if cnt[a[r]] > 0: # already have this one
+    if cnt[a[r]] > 0:  # already have this one
         cnt[a[r]] += 1
         r += 1
-    elif t < k: # still has capacity
+    elif t < k:  # still has capacity
         cnt[a[r]] = 1
         t += 1
         r += 1

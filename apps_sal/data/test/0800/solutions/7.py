@@ -1,5 +1,6 @@
 from math import atan2, pi
 
+
 def solve():
     n = int(input().rstrip())
     angles = []
@@ -12,7 +13,9 @@ def solve():
         maxangle = max(angles[i + 1] - angles[i], maxangle)
     return 360 - maxangle * 180 / pi
 
+
 def __starting_point():
     print(solve())
+
 
 __starting_point()

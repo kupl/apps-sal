@@ -32,4 +32,3 @@ for i in range(1, n):
     t.append(angles[i] - angles[i - 1])
 
 print(360 - max(t))
-
