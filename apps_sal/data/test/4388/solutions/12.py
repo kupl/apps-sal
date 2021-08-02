@@ -1,3 +1,3 @@
-#ABC111A
+# ABC111A
 n = input()
-print(n.replace("1","x").replace("9","1").replace("x","9"))
+print(n.replace("1", "x").replace("9", "1").replace("x", "9"))

@@ -4,4 +4,4 @@ if r <= 1199:
 elif r <= 2799:
     print('ARC')
 else:
-    print('AGC') 
+    print('AGC')

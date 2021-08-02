@@ -4,7 +4,7 @@ class DisjointSet:
         self._size = [1 for _ in range(n)]
         self._depth = [0 for _ in range(n)]
         self._root = [u for u in range(n)]
-    
+
     def root(self, u):
         if self._root[u] != u:
             self._root[u] = self.root(self._root[u])
@@ -28,6 +28,7 @@ class DisjointSet:
     def roots(self):
         return [u for u in range(self._n) if self._root[u] == u]
 
+
 ReadMany = lambda: list(map(int, input().split()))
 SubtractOne = lambda c: [x - 1 for x in c]
 C2 = lambda n: n * (n - 1) // 2
@@ -45,7 +46,6 @@ for i in range(m):
     degree[v] += 1
 
 
-
 ccDegree = [0 for _ in range(n)]
 for u in range(n):
     ccDegree[ds.root(u)] += degree[u]
@@ -61,4 +61,3 @@ for u in ds.roots():
         biggestCRoot += ds.size(u)
 
 print(answer)
-

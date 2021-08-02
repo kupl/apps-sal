@@ -6,4 +6,3 @@ elif R < 2800:
 else:
     ans = "AGC"
 print(ans)
-

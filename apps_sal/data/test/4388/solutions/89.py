@@ -8,4 +8,3 @@ for w in n:
         ans += '1'
 
 print(ans)
-

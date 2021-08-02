@@ -1,8 +1,8 @@
-n=input()
+n = input()
 
-ans=[]
+ans = []
 for i in n:
-    if i=='1':
+    if i == '1':
         ans.append('9')
     else:
         ans.append('1')

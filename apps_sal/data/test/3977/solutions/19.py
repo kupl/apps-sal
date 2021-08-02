@@ -3,22 +3,22 @@ def solve():
     length = len
     unique = set
     nodes, edges, distinct = order(map(int, input().split(" ")))
-    govt = {x-1: 1 for x in order(map(int, input().split(" ")))}
+    govt = {x - 1: 1 for x in order(map(int, input().split(" ")))}
     connections = {}
 
     # Add edges
     for _ in range(edges):
         x, y = order(map(int, input().split(" ")))
 
-        if x-1 not in connections:
-            connections[x-1] = [y-1]
+        if x - 1 not in connections:
+            connections[x - 1] = [y - 1]
         else:
-            connections[x-1].append(y-1)
+            connections[x - 1].append(y - 1)
 
-        if y-1 not in connections:
-            connections[y-1] = [x-1]
+        if y - 1 not in connections:
+            connections[y - 1] = [x - 1]
         else:
-            connections[y-1].append(x-1)
+            connections[y - 1].append(x - 1)
 
     discovered = {}
     cycles = {m: [] for m in ["G", "N"]}
@@ -71,4 +71,6 @@ def solve():
         total += length(j) * (length(j) - 1) // 2
 
     print(total - edges)
+
+
 solve()

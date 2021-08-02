@@ -6,4 +6,3 @@ n = n.replace("@", "1")
 
 
 print((int(n)))
-

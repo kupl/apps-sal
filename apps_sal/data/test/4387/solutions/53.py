@@ -6,4 +6,3 @@ elif 1200 <= rating < 2800:
     print('ARC')
 elif rating >= 2800:
     print('AGC')
-

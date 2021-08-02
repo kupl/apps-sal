@@ -5,5 +5,5 @@ def s(n):
     an = a1 + d * (n - 1)
     return (a1 + an) // 2 * n
 
-print(s(int(input())) + 1)
 
+print(s(int(input())) + 1)

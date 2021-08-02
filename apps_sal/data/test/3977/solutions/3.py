@@ -4,7 +4,7 @@ n, m, k = [int(i) for i in input().split()]
 c = [int(i) for i in input().split()]
 
 adj_dict = dict()
-for i in range(1,n+1):
+for i in range(1, n + 1):
     adj_dict[i] = []
 for i in range(m):
     u, v = [int(i) for i in input().split()]
@@ -29,5 +29,5 @@ for i in range(k):
                 visited.add(x)
 
 size_list = sorted(size)
-size_list[-1]+= remain
-print(sum([ i*(i-1)//2 for i in size_list])-m)
+size_list[-1] += remain
+print(sum([i * (i - 1) // 2 for i in size_list]) - m)

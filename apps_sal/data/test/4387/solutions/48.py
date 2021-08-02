@@ -1,7 +1,7 @@
-r = int (input ())
+r = int(input())
 if r >= 2800:
-  print ('AGC')
+    print('AGC')
 elif r >= 1200:
-  print ('ARC')
+    print('ARC')
 else:
-  print ('ABC')
+    print('ABC')

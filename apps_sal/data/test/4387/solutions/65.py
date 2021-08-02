@@ -13,4 +13,3 @@ else:
 
 # 結果出力
 print(ans)
-

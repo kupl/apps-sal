@@ -1,7 +1,7 @@
 N = int(input())
 if N < 1200:
-  print('ABC')
+    print('ABC')
 elif N < 2800:
-  print('ARC')
+    print('ARC')
 else:
-  print('AGC')
+    print('AGC')
