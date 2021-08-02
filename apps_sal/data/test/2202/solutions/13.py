@@ -10,8 +10,8 @@ s = sum(a)
 sums = 0
 for i in a:
 
-	sums+=i
+    sums += i
 
-	m = max(m, sums%p+(s-sums)%p)
+    m = max(m, sums % p + (s - sums) % p)
 
 print(m)

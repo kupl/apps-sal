@@ -4,6 +4,7 @@ all_files = [str(input()) for i in range(n)]
 
 index_to_del = [int(i) - 1 for i in (input().split())]
 
+
 def find_pattern(all_files, index_to_del):
     for i in index_to_del[1:]:
         if len(all_files[i]) != len(all_files[index_to_del[0]]):
@@ -20,7 +21,6 @@ def find_pattern(all_files, index_to_del):
         if not added:
             pattern += all_files[index_to_del[0]][i]
 
-
     for i in range(len(all_files)):
         if i not in index_to_del:
             if len(all_files[i]) == len(pattern):
@@ -35,4 +35,3 @@ def find_pattern(all_files, index_to_del):
 
 
 print(find_pattern(all_files, index_to_del))
-

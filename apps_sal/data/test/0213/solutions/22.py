@@ -1,16 +1,18 @@
 import math
 
+
 def f(m):
     nonlocal h
     f = True
     for i in range(len(h)):
         for j in h[i]:
-            if not(j <= i * m and j > (i - 1) * m ):
+            if not(j <= i * m and j > (i - 1) * m):
                 f = False
     return f
 
+
 n, m = map(int, input().split())
-h  = [[] for i in range(110)]
+h = [[] for i in range(110)]
 for i in range(m):
     a, b = map(int, input().split())
     h[b].append(a)

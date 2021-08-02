@@ -12,5 +12,4 @@ if K >= RL:
         egde = max(1, egde - K)
 else:
     RL -= K
-print((N  - 2 * RL - egde))
-
+print((N - 2 * RL - egde))

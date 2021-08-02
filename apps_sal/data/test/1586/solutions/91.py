@@ -1,6 +1,7 @@
 import math
 from decimal import *
 
+
 def cnt_prime(p, n):
     div = Decimal(str(n))
     s = 0
@@ -14,6 +15,7 @@ def cnt_prime(p, n):
         else:
             s += int(div.quantize(Decimal('0.0'), rounding=ROUND_FLOOR)) // 2
     return s
+
 
 N = int(input())
 

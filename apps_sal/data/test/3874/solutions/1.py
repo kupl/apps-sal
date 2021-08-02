@@ -1,7 +1,7 @@
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 w = [input() for _ in range(n)]
-todel = [w[i-1] for i in map(int, input().split())]
-if len(set(map(len,todel))) != 1:
+todel = [w[i - 1] for i in map(int, input().split())]
+if len(set(map(len, todel))) != 1:
     print('No')
 else:
     pat = ''.join(['?' if len(set([todel[j][p] for j in range(m)])) != 1 else todel[0][p] for p in range(len(todel[0]))])
@@ -23,4 +23,3 @@ else:
     else:
         print('Yes')
         print(pat)
-

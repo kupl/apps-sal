@@ -25,7 +25,7 @@ def multipliers(x):
     return divisors
 
 
-def count(muls, bound, viewed = None, x=1):
+def count(muls, bound, viewed=None, x=1):
 
     viewed = viewed or set()
     for i, mul in enumerate(muls):
@@ -60,4 +60,3 @@ else:
     muls = multipliers(a - b)
     r = sum(count(muls, b))
     print(r if b else r + 1)
-

@@ -16,14 +16,16 @@ def main():
             K -= 1
         else:
             pass
-    
+
     ans = 0
-    for i in range(N-1):
-        ans += S[i] == S[i+1]
-    
+    for i in range(N - 1):
+        ans += S[i] == S[i + 1]
+
     print(ans)
-  
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

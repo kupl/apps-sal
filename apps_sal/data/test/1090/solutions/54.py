@@ -1,7 +1,8 @@
 N, K = map(int, input().split())
 S = str(input())
 
-def run_length_encoding(text:str)->list:
+
+def run_length_encoding(text: str) -> list:
     text += '_'
     c = text[0]
     x = 1
@@ -15,6 +16,7 @@ def run_length_encoding(text:str)->list:
             x = 1
     return res
 
+
 rle = run_length_encoding(S)
 gr = len(rle)
 hp = 0
@@ -26,8 +28,8 @@ if gr == 1:
 elif gr == 2:
     ans = hp + 1
 else:
-    if K < gr//2:
+    if K < gr // 2:
         ans = hp + 2 * K
     else:
-        ans = hp + 2 * ((gr-1) // 2) + (gr-1) % 2
+        ans = hp + 2 * ((gr - 1) // 2) + (gr - 1) % 2
 print(ans)

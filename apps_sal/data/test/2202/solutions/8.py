@@ -5,9 +5,9 @@ mx = 0
 sm = sum(cl)
 qs = cl[0]
 for i in range(1, n):
-  y = qs%p + (sm-qs)%p
-  if y>mx:
-    mx = y
-  qs+=cl[i]
+    y = qs % p + (sm - qs) % p
+    if y > mx:
+        mx = y
+    qs += cl[i]
 
 print(mx)

@@ -38,4 +38,3 @@ for i in range(1, len(ans)):
         return
 
 print(ans[0])
-

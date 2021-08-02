@@ -2,13 +2,13 @@
 Created on May 4, 2016
 @author: Md. Rezwanul Haque
 '''
-n = int (input())
-if(n<3):print(n)
-elif(n%2==0):
-    if(n%3 == 0 and (n-3)%3 == 0):
-        print((n-1)*(n-2)*(n-3))
+n = int(input())
+if(n < 3):
+    print(n)
+elif(n % 2 == 0):
+    if(n % 3 == 0 and (n - 3) % 3 == 0):
+        print((n - 1) * (n - 2) * (n - 3))
     else:
-        print(n*(n-1)*(n-3))
+        print(n * (n - 1) * (n - 3))
 else:
-    print(n*(n-1)*(n-2))
-
+    print(n * (n - 1) * (n - 2))

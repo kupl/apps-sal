@@ -5,7 +5,7 @@ strings = []
 for i in range(m):
     strings.append(input())
 
-to_delete_index = [int(x)-1 for x in input().split()]
+to_delete_index = [int(x) - 1 for x in input().split()]
 to_delete = [strings[int(x)] for x in to_delete_index]
 
 base_len = len(to_delete[0])
@@ -23,6 +23,7 @@ for i in range(base_len):
             break
     match_string += match
 
+
 def match(s, match_string):
     if len(s) != len(match_string):
         return False
@@ -34,6 +35,7 @@ def match(s, match_string):
             return False
     return True
 
+
 for i in range(len(strings)):
     if i in to_delete_index:
         continue
@@ -43,7 +45,3 @@ for i in range(len(strings)):
 
 print("Yes")
 print(match_string)
-
-
-
-

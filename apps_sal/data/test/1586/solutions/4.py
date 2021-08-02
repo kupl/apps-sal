@@ -3,12 +3,11 @@ cnt = 0
 x = len(str(n))
 
 if n % 2 == 1:
-  print((0))
-  return
+    print((0))
+    return
 else:
-  for i in range(1,26):
-    cnt += n//((5**i)* 2)
+    for i in range(1, 26):
+        cnt += n // ((5**i) * 2)
 
 
 print(cnt)
-

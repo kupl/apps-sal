@@ -5,4 +5,3 @@ while k * k <= a - b:
         val += sum(1 for x in {k, (a - b) // k} if x > b)
     k += 1
 print('infinity' if a == b else val)
-

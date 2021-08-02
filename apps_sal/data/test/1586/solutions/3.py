@@ -56,4 +56,3 @@ while(N >= i):
     tot += N // i
     i *= 5
 print(tot)
-

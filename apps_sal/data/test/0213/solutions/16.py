@@ -1,4 +1,5 @@
-import sys, os
+import sys
+import os
 n, m = map(int, input().split())
 mi = []
 ma = []
@@ -26,7 +27,7 @@ for i in range(m):
         if a % b == 0:
             mi.append(a // b)
         else:
-            mi.append((a // b ) + 1)
+            mi.append((a // b) + 1)
 #print(mi, ma)
 mik = min(ma)
 mak = max(mi)

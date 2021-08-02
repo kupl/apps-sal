@@ -43,4 +43,3 @@ if (matches == selected):
     print("Yes\n" + res)
 else:
     print("No")
-

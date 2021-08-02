@@ -11,11 +11,10 @@ while i * 1234567 <= n:
         if (n - x) % 1234 == 0:
             ok = True
             break
-        j+=1
-    if ok: break
+        j += 1
+    if ok:
+        break
 
-    i+=1
+    i += 1
 
 print("YES" if ok else "NO")
-
-

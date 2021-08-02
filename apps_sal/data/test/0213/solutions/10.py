@@ -18,15 +18,9 @@ q = set()
 for i in range(len(boo)):
     if boo[i]:
         q.add((n - 1) // i + 1)
-        
 
 
 if len(q) == 1:
     print(q.pop())
 else:
     print(-1)
-            
-        
-        
-        
-

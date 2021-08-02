@@ -14,19 +14,18 @@ for s in S:
         cnt += 1
 q.append(cnt)
 
-J = 2*K+1
+J = 2 * K + 1
 acc = list(accumulate(q))
 acc += [acc[-1]]
 if len(q) <= J:
-    ans = acc[-1]-1
+    ans = acc[-1] - 1
 else:
-    ans = acc[J-1]-1 + acc[-1]-acc[J]-(len(q)-J)
+    ans = acc[J - 1] - 1 + acc[-1] - acc[J] - (len(q) - J)
     for i, a in enumerate(acc):
-        if i+J < len(q):
-            tot = acc[i+J]-acc[i]-1
-            tot += acc[i]+acc[-1]-acc[i+J+1]-(len(q)-J)
+        if i + J < len(q):
+            tot = acc[i + J] - acc[i] - 1
+            tot += acc[i] + acc[-1] - acc[i + J + 1] - (len(q) - J)
             if tot > ans:
                 ans = tot
 
 print(ans)
-

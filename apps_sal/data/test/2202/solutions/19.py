@@ -9,4 +9,3 @@ right = list(accumulate(A[::-1]))[::-1] + [0]
 ans = [(left[i] % p) + (right[i] % p) for i in range(N + 1)]
 
 print(max(ans))
-

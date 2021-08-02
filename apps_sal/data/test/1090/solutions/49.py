@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, K, S):
     sachi = 0
@@ -37,5 +37,6 @@ def __starting_point():
     # As = [int(i) for i in input().split()]
     # Bs = [int(i) for i in input().split()]
     solve(N, K, S)
+
 
 __starting_point()

@@ -13,13 +13,13 @@ elif len(et) == 0:
 else:
     et = [(-1, 0)] + et
     for i in range(len(et) - 1):
-        if et[i][0] <= n <= et[i+1][0] and et[i][1] == et[i+1][1]:
+        if et[i][0] <= n <= et[i + 1][0] and et[i][1] == et[i + 1][1]:
             res = et[i][1] + 1
             break
     et = et[1:]
     if res == -1 and et[-1][1] != 0:
         y = []
-        
+
         for i in range(1, et[-1][0] // et[-1][1] + 1):
             fl = True
             for j in range(len(et)):

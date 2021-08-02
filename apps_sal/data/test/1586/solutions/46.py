@@ -5,11 +5,11 @@ if N == 0 or N % 2 == 1:
     ans = 0
 else:
     # means N >= 2 and even
-    digN = round( math.log(N , 5) )
+    digN = round(math.log(N, 5))
 
     i = 1
     while i <= digN:
-        ans +=  ( N //( 5 ** i * 2 ) )
+        ans += (N // (5 ** i * 2))
         i += 1
 
 print(ans)

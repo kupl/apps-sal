@@ -6,10 +6,10 @@ n = int(input())
 
 answer = "NO"
 
-for h in range(n//HOUSE+1):
-    rest = n - h*HOUSE
-    for c in range(rest//CAR+1):
-        rest2 = rest - c*CAR
+for h in range(n // HOUSE + 1):
+    rest = n - h * HOUSE
+    for c in range(rest // CAR + 1):
+        rest2 = rest - c * CAR
         if rest2 % COMP == 0:
             answer = "YES"
             break

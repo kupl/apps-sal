@@ -12,4 +12,3 @@ for i in range(n):
 
 ans = min([k * 2 + cnt, n - 1])
 print(ans)
-

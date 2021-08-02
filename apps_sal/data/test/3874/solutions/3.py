@@ -1,11 +1,12 @@
 import sys
 
+
 def __starting_point():
     n = input().split()
     n, m = int(n[0]), int(n[1])
     _l = list()
     for _ in range(n):
-      _l.append(input())
+        _l.append(input())
     _ms = [int(x) - 1 for x in input().split()]
     common = list(_l[_ms[0]])
     reqlen = len(common)
@@ -34,4 +35,6 @@ def __starting_point():
                 return
     print('Yes')
     print(''.join(common))
+
+
 __starting_point()

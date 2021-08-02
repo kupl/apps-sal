@@ -11,10 +11,9 @@ else:
         if a % i == 0:
             if i > b:
                 ans += 1
-            if a/i > b:
+            if a / i > b:
                 ans += 1
         i += 1
     if i * i == a and i > b:
         ans += 1
     print(ans)
-

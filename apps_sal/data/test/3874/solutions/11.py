@@ -2,14 +2,18 @@
 import sys
 counter = 0
 allstrs = []
-def firstnum (inpu):
+
+
+def firstnum(inpu):
     out = ""
     for char in inpu:
         if char == ' ':
             break
         out += char
     return int(out)
-def secondnum (inpu):
+
+
+def secondnum(inpu):
     first = True
     out = ""
     for char in inpu:
@@ -63,4 +67,3 @@ for line in checklist:
         return
 print("Yes")
 print(outString)
-

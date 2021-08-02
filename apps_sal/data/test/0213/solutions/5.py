@@ -4,7 +4,7 @@ memory = []
 for i in range(m):
     a, b = list(map(int, input().split()))
     memory.append((a, b))
-#memory.sort()
+# memory.sort()
 #count = 0
 ans = -1
 gl_flag = 1
@@ -21,9 +21,8 @@ for flat in range(1, 101):
             gl_flag = 0
             break
         else:
-            ans = ans1 
+            ans = ans1
 if (gl_flag == 0):
     print(-1)
 else:
     print(ans)
-

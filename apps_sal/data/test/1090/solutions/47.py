@@ -1,6 +1,6 @@
 #coding: utf-8
 
-N, K = (int(i) for i in input().split()) 
+N, K = (int(i) for i in input().split())
 S = input()
 
 while "LL" in S:
@@ -12,7 +12,5 @@ while "RR" in S:
 sad = N - len(S)
 sad += K * 2
 
-sad = min(N-1, sad)
+sad = min(N - 1, sad)
 print(sad)
-
-
