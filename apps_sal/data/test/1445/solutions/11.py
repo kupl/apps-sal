@@ -8,4 +8,5 @@ def main():
             a[i], a[n - i - 1] = a[n - i - 1], a[i]
     print(*a)
 
+
 main()

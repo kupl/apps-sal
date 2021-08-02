@@ -5,7 +5,7 @@ for i in range(n):
     c, v = [j for j in input().split()]
     v = "".join(sorted(v))
     c = int(c)
-    #print(v)
+    # print(v)
     if v not in d:
         d[v] = c
     else:
@@ -27,7 +27,3 @@ if res == 1000000000:
     print(-1)
 else:
     print(res)
-                
-            
-    
-

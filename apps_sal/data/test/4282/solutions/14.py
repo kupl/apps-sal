@@ -24,4 +24,3 @@ while c < n:
             break
     c += 1
 print(*a)
-

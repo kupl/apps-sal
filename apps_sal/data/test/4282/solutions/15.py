@@ -12,7 +12,8 @@ else:
     c2 = b
 
 
-p = lambda x: print(x, end=' ')
+def p(x): return print(x, end=' ')
+
 
 p(c1)
 while u > 0:

@@ -1,10 +1,11 @@
 import sys
 
+
 def solve():
     a = list(map(int, input().split()))
     diffs = list()
     for i in range(3):
-        diffs.append(a[i+1]-a[i])
+        diffs.append(a[i + 1] - a[i])
     if diffs[0] == diffs[1] == diffs[2]:
         return a[3] + diffs[0]
     # print(diffs)
@@ -14,5 +15,7 @@ def solve():
             return int(val)
     return 42
 
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 print(solve())

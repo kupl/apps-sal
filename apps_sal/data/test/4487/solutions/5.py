@@ -19,4 +19,3 @@ if word_list_a.pop() == word_list_b[0] and word_list_b.pop() == word_list_c[0]:
     print('YES')
 else:
     print('NO')
-

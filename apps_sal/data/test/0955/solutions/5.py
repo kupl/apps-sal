@@ -19,4 +19,3 @@ result = min(
     mins["ABC"],
 )
 print(-1 if result == inf else result)
-

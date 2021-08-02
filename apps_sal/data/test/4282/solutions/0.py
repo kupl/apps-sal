@@ -21,7 +21,7 @@ else:
 
 while len(ans) != n:
     p = A[ans[-2]]
-    
+
     if p[0] == ans[-1]:
         ans.append(p[1])
     else:

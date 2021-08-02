@@ -6,4 +6,3 @@ elif b * b == a * c and c * c == b * d and (d * d) % c == 0:
     print((d * d) // c)
 else:
     print(42)
-

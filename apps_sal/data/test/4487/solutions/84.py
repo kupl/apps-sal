@@ -11,4 +11,3 @@ if initial_1 == end_1 and initial_2 == end_2:
     print("YES")
 else:
     print("NO")
-

@@ -5,5 +5,6 @@ def atc_060a(input_value: str) -> str:
     else:
         return "NO"
 
+
 input_value = input()
 print(atc_060a(input_value))
