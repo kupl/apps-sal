@@ -2,12 +2,12 @@
 #      |        /  \       |    |   / |
 #      |       /____\      |    |  /  |
 #      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|  
+#  ========= /        \  =====  |/====|
 #  code
 
 def main():
     k = int(input())
-    s = [1,2,4,5]
+    s = [1, 2, 4, 5]
     i = 2
     while True:
         if s[-1] > int(1e6):
@@ -25,6 +25,9 @@ def main():
         print(0)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

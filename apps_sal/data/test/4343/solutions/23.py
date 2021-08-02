@@ -20,4 +20,3 @@ for i, r in enumerate(result):
 
 r = ''.join(chr(c + 97) for c in result)
 print(r)
-

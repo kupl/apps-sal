@@ -1,8 +1,10 @@
-import string, copy
+import string
+import copy
 
 
 def _value(c):
     return ord(c) - 97
+
 
 def _char(i):
     return chr(i + 97)
@@ -15,7 +17,7 @@ def solution(s1, s2):
     # Sum
     sum_s = []
     tmp = 0
-    for i in range(len(s1)-1, -1, -1):
+    for i in range(len(s1) - 1, -1, -1):
         s = s1[i] + s2[i] + tmp
         tmp = s // 26
         sum_s.append(s % 26)
@@ -35,7 +37,6 @@ def solution(s1, s2):
     result = result[-len(s1):]
     result = [_char(i) for i in result]
     return ''.join(result)
-
 
 
 #     tmp = 0
@@ -59,11 +60,13 @@ def output(s):
 
 
 def main():
-   args = parser()
-   result = solution(*args)
-   output(result)
+    args = parser()
+    result = solution(*args)
+    output(result)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

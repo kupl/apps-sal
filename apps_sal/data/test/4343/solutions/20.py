@@ -112,10 +112,10 @@ def towords(no):
 	if int(no)>100:
 """
 
-#str_num=[]
-#n=int(input())
-#arr=input()
-#for i in arr:
+# str_num=[]
+# n=int(input())
+# arr=input()
+# for i in arr:
 #	str_num.append(int(i))
 """
 def find_sub(stri):
@@ -360,49 +360,49 @@ print(ans[N-1][N-1])
 print(path[N-1][N-1])"""
 
 
-dicti={}
+dicti = {}
 for i in range(26):
-	dicti[chr(97+i)]=i+1
+    dicti[chr(97 + i)] = i + 1
 
-#print(dicti)
+# print(dicti)
 
-k=int(input())
-str1=list(input())
-str2=list(input())
+k = int(input())
+str1 = list(input())
+str2 = list(input())
 
-delta=[]
+delta = []
 
 for i in range(k):
-	str1[i]=dicti[str1[i]]
-	str2[i]=dicti[str2[i]]
-	delta.append(str2[i]-str1[i])
+    str1[i] = dicti[str1[i]]
+    str2[i] = dicti[str2[i]]
+    delta.append(str2[i] - str1[i])
 
-for i in range(k-1,0,-1):
-	if(delta[i]<0):
-		delta[i-1]-=1
-		delta[i]+=26
+for i in range(k - 1, 0, -1):
+    if(delta[i] < 0):
+        delta[i - 1] -= 1
+        delta[i] += 26
 
-divide=[]
+divide = []
 
-for i in range(k-1):
-	divide.append(delta[i])
-	if(delta[i]%2!=0):
-		divide[i]=delta[i]//2
-		delta[i+1]+=26
-	else:
-		divide[i]=delta[i]//2
-	#print(i,divide,delta)
+for i in range(k - 1):
+    divide.append(delta[i])
+    if(delta[i] % 2 != 0):
+        divide[i] = delta[i] // 2
+        delta[i + 1] += 26
+    else:
+        divide[i] = delta[i] // 2
+    # print(i,divide,delta)
 
-divide.append(delta[-1]//2)
+divide.append(delta[-1] // 2)
 
-ans=[0 for i in range(k)] 
+ans = [0 for i in range(k)]
 
-for i in range(k-1,-1,-1):
-	sumi=str1[i]+divide[i]
-	if(sumi>26):
-		sumi-=26
-		if(i!=0):
-			divide[i-1]+=1
-	ans[i]=(chr)(96+sumi)
+for i in range(k - 1, -1, -1):
+    sumi = str1[i] + divide[i]
+    if(sumi > 26):
+        sumi -= 26
+        if(i != 0):
+            divide[i - 1] += 1
+    ans[i] = (chr)(96 + sumi)
 
-print(*ans,sep="")
+print(*ans, sep="")

@@ -6,4 +6,3 @@ for c in s:
         result += 1
 
 print(result)
-

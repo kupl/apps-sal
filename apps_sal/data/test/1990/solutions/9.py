@@ -20,16 +20,16 @@ for s in S:
             R.pop()
             Rm.pop()
             RM.pop()
-        L.append(L[-1]+d)
+        L.append(L[-1] + d)
         Lm.append(min(Lm[-1], L[-1]))
         LM.append(max(LM[-1], L[-1]))
     elif s == "L":
-        if len(L) != 1: 
+        if len(L) != 1:
             d = L[-2] - L[-1]
             L.pop()
             Lm.pop()
             LM.pop()
-            R.append(R[-1]+d)
+            R.append(R[-1] + d)
             Rm.append(min(Rm[-1], R[-1]))
             RM.append(max(RM[-1], R[-1]))
     else:
@@ -43,7 +43,7 @@ for s in S:
             R.pop()
             Rm.pop()
             RM.pop()
-        R.append(R[-1]+num)
+        R.append(R[-1] + num)
         Rm.append(min(Rm[-1], R[-1]))
         RM.append(max(RM[-1], R[-1]))
 

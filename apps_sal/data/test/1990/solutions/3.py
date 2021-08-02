@@ -2,33 +2,33 @@
 # efficient input style
 # https://codeforces.com/contest/1263/submission/66081769
 
+from collections import deque
 import sys
 reader = (s.rstrip() for s in sys.stdin)
 n = int(next(reader))
 operations = next(reader)
-from collections import deque
 
 left = deque()
 right = deque()
 cur = 0
-max_n = n+1
-left.append((0,0,0,0))
-for i in range(max_n-1):
-    right.append((0,0,0,0))
+max_n = n + 1
+left.append((0, 0, 0, 0))
+for i in range(max_n - 1):
+    right.append((0, 0, 0, 0))
 
-ans = [-1]*n
+ans = [-1] * n
 for i, c in enumerate(operations):
     if c == "R":
         cur += 1
         ci, _, _, _ = right.popleft()
         _, su, mi, ma = left[-1]
-        left.append((-ci, su-ci, min(mi, su-ci), max(ma, su-ci)))
+        left.append((-ci, su - ci, min(mi, su - ci), max(ma, su - ci)))
     elif c == "L":
         if cur:
             cur -= 1
-            ci, _,_,_ = left.pop()
+            ci, _, _, _ = left.pop()
             _, su, mi, ma = right[0]
-            right.appendleft((-ci, su-ci, min(mi, su-ci), max(ma, su-ci)))
+            right.appendleft((-ci, su - ci, min(mi, su - ci), max(ma, su - ci)))
     else:
         left.pop()
         q = 0
@@ -38,7 +38,7 @@ for i, c in enumerate(operations):
             q = -1
         if left:
             ci, su, mi, ma = left[-1]
-            left.append((q, su+q, min(mi, su+q), max(ma, su+q)))
+            left.append((q, su + q, min(mi, su + q), max(ma, su + q)))
         else:
             left.append((q, q, q, q))
     # check

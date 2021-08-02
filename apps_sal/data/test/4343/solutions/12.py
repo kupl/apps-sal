@@ -14,4 +14,3 @@ p = n
 while p:
     p -= 1
     print(ans[p], end='')
-

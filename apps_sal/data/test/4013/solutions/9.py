@@ -13,5 +13,5 @@ def go():
         return m2 - mi1
     return m1 - mi2
 
-print(go())
 
+print(go())

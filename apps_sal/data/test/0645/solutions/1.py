@@ -13,4 +13,3 @@ for z in s:
             pass
 
 print(c)
-

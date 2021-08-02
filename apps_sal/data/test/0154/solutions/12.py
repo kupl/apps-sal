@@ -10,5 +10,5 @@ while x <= n:
         return
     else:
         x = x * 2 + 1 + (x & 1)
-    
+
 print(0)

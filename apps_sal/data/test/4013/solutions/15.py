@@ -10,5 +10,4 @@ s.append(M)
 s.remove(m)
 m1 = min(s)
 i2 = M - m1
-print(min(i,i1,i2))
-
+print(min(i, i1, i2))
