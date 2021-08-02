@@ -15,15 +15,17 @@ p1s = {}
 facs[0] = decimal.Decimal(1)
 ps[0] = decimal.Decimal(1)
 p1s[0] = decimal.Decimal(1)
-for i in range(1, max(n,t) + 1):
-    facs[i] = facs[i-1] * decimal.Decimal(i)
-    ps[i] = ps[i-1] * p
-    p1s[i] = p1s[i-1] * (1-p)
+for i in range(1, max(n, t) + 1):
+    facs[i] = facs[i - 1] * decimal.Decimal(i)
+    ps[i] = ps[i - 1] * p
+    p1s[i] = p1s[i - 1] * (1 - p)
+
 
 def c(n, k):
-    return facs[n] / facs[n-k] / facs[k]
+    return facs[n] / facs[n - k] / facs[k]
 
 # print(c(2000, 1000))
+
 
 res = decimal.Decimal(0)
 up = min(n, t)

@@ -21,4 +21,3 @@ for s in arr:
         break
 if not flag:
     print("NO")
-

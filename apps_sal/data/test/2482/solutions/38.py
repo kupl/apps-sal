@@ -1,9 +1,11 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10**7)
-from collections import defaultdict
 
 # UnionFind
+
+
 class UnionFind:
     def __init__(self, n):
         self.parent = [i for i in range(n)]
@@ -24,6 +26,7 @@ class UnionFind:
     def same(self, x, y):
         return self.root(x) == self.root(y)
 
+
 N, K, L = list(map(int, input().split()))
 un1 = UnionFind(N)
 for i in range(K):
@@ -40,13 +43,12 @@ for i in range(L):
 dic = defaultdict(int)
 for i in range(N):
     a, b = un1.root(i), un2.root(i)
-    k = str(a)+":"+str(b)
+    k = str(a) + ":" + str(b)
     dic[k] += 1
 
-ans = [0]*N
+ans = [0] * N
 for i in range(N):
     a, b = un1.root(i), un2.root(i)
-    k = str(a)+":"+str(b)
+    k = str(a) + ":" + str(b)
     ans[i] = dic[k]
 print((*ans))
-

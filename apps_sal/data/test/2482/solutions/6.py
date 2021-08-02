@@ -1,6 +1,7 @@
+from collections import Counter
 import sys
 readline = sys.stdin.readline
-from collections import Counter
+
 
 class UnionFind():
     def __init__(self, n):
@@ -49,27 +50,31 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 def main():
     N, K, L = map(int, readline().rstrip().split())
     uf_road = UnionFind(N)
     uf_train = UnionFind(N)
-    
+
     for _ in range(K):
         p, q = map(int, readline().rstrip().split())
-        uf_road.union(p-1, q-1)
-    
+        uf_road.union(p - 1, q - 1)
+
     for _ in range(L):
         r, s = map(int, readline().rstrip().split())
-        uf_train.union(r-1, s-1)
-    
+        uf_train.union(r - 1, s - 1)
+
     pairs = []
     for i in range(N):
         pairs.append((uf_road.find(i), uf_train.find(i)))
-    
+
     cnt = Counter(pairs)
     res = [cnt[pair] for pair in pairs]
     print(*res)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

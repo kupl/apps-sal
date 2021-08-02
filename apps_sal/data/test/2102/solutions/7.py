@@ -16,49 +16,49 @@ def find_minimal_melody_difficulty(strings_values, notes):
     strings_values = sorted(strings_values, reverse=True)
     if len(strings_values) == 1:
         return max(notes) - min(notes)
-    
+
     frets_by_notes_indices = [[note - x for x in strings_values] for note in notes]
     # frets_by_notes_indices[i_note] is sorted for every correct i_note
     del strings_values
     del notes
-    
+
     max_from_initially_selected_frets = max(frets[0] for frets in frets_by_notes_indices)
     for frets in frets_by_notes_indices:
         i_first_interesting_fret = 0
         while i_first_interesting_fret + 1 < len(frets) \
-                and frets[i_first_interesting_fret+1] <= max_from_initially_selected_frets:
+                and frets[i_first_interesting_fret + 1] <= max_from_initially_selected_frets:
             i_first_interesting_fret += 1
         frets[:] = frets[i_first_interesting_fret:]
-    
+
     selected_frets = [frets[0] for frets in frets_by_notes_indices]
     selected_frets.sort()
     selected_frets = _deque(selected_frets)
-    
+
     available_selections = _chain.from_iterable(
         list(zip(frets[1:], frets[0:]))
         for frets in frets_by_notes_indices
     )
     available_selections = sorted(available_selections)
-    
+
     # defaultdict(int) is slower
     frets_to_unselect = dict()
     for frets in frets_by_notes_indices:
         for fret in frets:
             frets_to_unselect[fret] = 0
-    
+
     min_selected_fret = selected_frets[0]
     max_selected_fret = max(selected_frets)
     result = max_selected_fret - min_selected_fret
-    
+
     for new_fret, fret_to_unselect in available_selections:
         frets_to_unselect[fret_to_unselect] += 1
         _clean_deque_begin(selected_frets, frets_to_unselect)
         selected_frets.append(new_fret)
-        
+
         min_selected_fret = selected_frets[0]
         max_selected_fret = new_fret
         result = min(result, max_selected_fret - min_selected_fret)
-    
+
     return result
 
 
@@ -80,5 +80,6 @@ def _read_ints():
 
 def __starting_point():
     main()
+
 
 __starting_point()

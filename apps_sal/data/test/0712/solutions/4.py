@@ -9,6 +9,4 @@ for i in range(t + 1):
         else:
             dp[i + 1][j + 1] += dp[i][j] * p
             dp[i + 1][j] += dp[i][j] * (1 - p)
-print(sum(dp[t][i] * i for i in range(n + 1))) 
- 
-
+print(sum(dp[t][i] * i for i in range(n + 1)))

@@ -39,15 +39,16 @@ def main():
     b = UnionFind(n)
     for _ in range(k):
         p, q = list(map(int, input().split()))
-        a.union(p-1, q-1)
+        a.union(p - 1, q - 1)
     for _ in range(l):
         r, s = list(map(int, input().split()))
-        b.union(r-1, s-1)
+        b.union(r - 1, s - 1)
     d = Counter((a._root(i), b._root(i)) for i in range(n))
     print((*(d[(a._root(i), b._root(i))] for i in range(n))))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

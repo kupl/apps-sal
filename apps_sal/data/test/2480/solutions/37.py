@@ -1,6 +1,8 @@
 
 from itertools import accumulate
 from collections import defaultdict, deque
+
+
 def resolve():
     N, K = list(map(int, input().split()))
     A = list(map(int, input().split()))
@@ -31,5 +33,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

@@ -46,7 +46,7 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-def renketu(n , k , l , pqli , rsli):
+def renketu(n, k, l, pqli, rsli):
 
     from collections import defaultdict
 
@@ -54,28 +54,31 @@ def renketu(n , k , l , pqli , rsli):
     pquf = UnionFind(n)
     rsuf = UnionFind(n)
 
-    [pquf.unite(p - 1 , q - 1) for q , p in pqli]
-    [rsuf.unite(r - 1 , s - 1) for r , s in rsli]
+    [pquf.unite(p - 1, q - 1) for q, p in pqli]
+    [rsuf.unite(r - 1, s - 1) for r, s in rsli]
 
     ansdict = defaultdict(int)
 
     for i in range(n):
-        ansdict[(pquf.find(i) , rsuf.find(i))] += 1
+        ansdict[(pquf.find(i), rsuf.find(i))] += 1
 
     for i in range(n):
-        ans.append(ansdict[(pquf.find(i) , rsuf.find(i))])
+        ans.append(ansdict[(pquf.find(i), rsuf.find(i))])
 
     return ans
 
+
 def main():
     n, k, l = map(int, input().split())
-    pqli = [list(map(int , input().split())) for i in range(k)]
-    rsli = [list(map(int , input().split())) for i in range(l)]
-    ans = renketu(n , k , l , pqli , rsli)
+    pqli = [list(map(int, input().split())) for i in range(k)]
+    rsli = [list(map(int, input().split())) for i in range(l)]
+    ans = renketu(n, k, l, pqli, rsli)
 
     print(*ans)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

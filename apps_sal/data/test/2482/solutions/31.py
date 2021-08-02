@@ -1,5 +1,6 @@
 import sys
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -48,21 +49,21 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-N, K, L = map(int,input().split())
+N, K, L = map(int, input().split())
 uf_road = UnionFind(N)
 uf_train = UnionFind(N)
 
 for i in range(K):
-    p,q = map(int,input().split())
+    p, q = map(int, input().split())
     p -= 1
     q -= 1
-    uf_road.union(p,q)
+    uf_road.union(p, q)
 
 for i in range(L):
-    p,q = map(int,input().split())
+    p, q = map(int, input().split())
     p -= 1
     q -= 1
-    uf_train.union(p,q)
+    uf_train.union(p, q)
 
 pair_list = []
 for i in range(N):
@@ -73,7 +74,7 @@ ans = [0] * N
 
 pair = (pair_list[0][0], pair_list[0][1])
 countup_list = [pair_list[0][2]]
-for i in range(1,N):
+for i in range(1, N):
     if pair == (pair_list[i][0], pair_list[i][1]):
         countup_list.append(pair_list[i][2])
     else:
@@ -84,6 +85,6 @@ for i in range(1,N):
 
 for c in countup_list:
     ans[c] += len(countup_list)
-    
+
 for i in range(N):
     print(ans[i], end=" ")

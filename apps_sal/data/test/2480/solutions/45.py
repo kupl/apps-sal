@@ -7,7 +7,7 @@ alst = list(map(int, input().split()))
 dd = defaultdict(list)
 dd[0].append(0)
 total = 0
-for i, num in enumerate(alst, start = 1):
+for i, num in enumerate(alst, start=1):
     total += num
     total %= k
     app = total - i
@@ -20,5 +20,3 @@ for _, lst in list(dd.items()):
         pos = bisect_right(lst, num2)
         ans += pos - i - 1
 print(ans)
-
-

@@ -1,11 +1,11 @@
-N,K = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 S = []
 d = {}
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 ans = 0
-sum =0
-for i in range(1,N+1):
-    sum += A[i-1] % K
+sum = 0
+for i in range(1, N + 1):
+    sum += A[i - 1] % K
     s = (sum - i) % K
     if i > K:
         x = S.pop(0)
@@ -19,4 +19,3 @@ for i in range(1,N+1):
     d[s] += 1
     S.append(s)
 print(ans)
-

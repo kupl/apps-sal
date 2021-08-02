@@ -1,4 +1,6 @@
-N,K,L = list(map(int, input().split()))
+from collections import Counter
+N, K, L = list(map(int, input().split()))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -46,25 +48,24 @@ class UnionFind():
     def all_unions(self):
         return [self.same_union_members(r) for r in self.roots()]
 
+
 road = UnionFind(N)
 rail = UnionFind(N)
 
 for i in range(K):
     p, k = list(map(int, input().split()))
-    road.union_merge(p-1, k-1)
+    road.union_merge(p - 1, k - 1)
 
 for i in range(L):
     r, s = list(map(int, input().split()))
-    rail.union_merge(r-1, s-1)
+    rail.union_merge(r - 1, s - 1)
 
 root_combinations = []
 for i in range(N):
     root_combinations.append((road.find_root(i), rail.find_root(i)))
 
-from collections import Counter
 same_combinations = Counter(root_combinations)
 result = [same_combinations[root_combination] for root_combination in root_combinations]
 
 ans = ' '.join(map(str, result))
 print(ans)
-

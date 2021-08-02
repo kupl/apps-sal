@@ -13,8 +13,3 @@ for q in range(t):
         print((n - 5) // 3, 1, 0)
     else:
         print(-1)
-    
-    
-        
-        
-

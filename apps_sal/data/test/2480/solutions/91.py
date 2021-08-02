@@ -18,4 +18,3 @@ for right, a in enumerate(A, start=1):
     cnt[D] += 1
     que.append(D)
 print(ans)
-

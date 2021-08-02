@@ -36,4 +36,3 @@ else:
         ans += num
         shukei[temp] += 1
 print(ans)
-

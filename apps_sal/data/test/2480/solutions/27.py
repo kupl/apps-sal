@@ -25,4 +25,3 @@ if N > K:
         d[x] += 1
 
 print(ans)
-

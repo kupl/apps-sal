@@ -25,7 +25,7 @@ class UnionFind:
             if self.rank[root_i] == self.rank[root_j]:
                 self.rank[root_i] += 1
 
-                
+
 N, K, L = map(int, input().split())
 
 uf1 = UnionFind(N)

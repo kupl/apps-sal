@@ -25,7 +25,9 @@ def main():
 
     print(find_expected_people(people_count, probability, seconds))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -28,9 +28,8 @@ for i, a in enumerate(A):
     ans += cnt[x]
     cnt[x] += 1
 
-    if i >= K-1:
-        y = (A[i-K+1] - (i-K+1)) % K
+    if i >= K - 1:
+        y = (A[i - K + 1] - (i - K + 1)) % K
         cnt[y] -= 1
 
 print(ans)
-
