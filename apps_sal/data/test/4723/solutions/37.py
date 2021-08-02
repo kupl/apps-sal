@@ -26,4 +26,3 @@ if len(candidates) == 0:
     print('UNRESTORABLE')
 else:
     print((min(candidates)))
-

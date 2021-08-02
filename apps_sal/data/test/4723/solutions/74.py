@@ -1,19 +1,21 @@
 import sys
 
+
 def accept_input():
     S = input()
     T = input()
-    return S,T
+    return S, T
 
-S,T = accept_input()
+
+S, T = accept_input()
 fromhere = -1
-for i in range(len(S)-len(T)+1):
+for i in range(len(S) - len(T) + 1):
     for j in range(len(T)):
-        if S[i+j] == "?":
+        if S[i + j] == "?":
             continue
-        elif S[i+j] == T[j]:
+        elif S[i + j] == T[j]:
             continue
-        elif S[i+j] != T[j]:
+        elif S[i + j] != T[j]:
             break
     else:
         fromhere = i
@@ -27,12 +29,11 @@ for i in range(len(S)):
             sd += "a"
         else:
             sd += S[i]
-    elif i >= fromhere+len(T):
+    elif i >= fromhere + len(T):
         if S[i] == "?":
             sd += "a"
         else:
             sd += S[i]
     else:
-        sd += T[i-fromhere]
+        sd += T[i - fromhere]
 print(sd)
-

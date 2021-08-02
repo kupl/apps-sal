@@ -10,7 +10,7 @@ for index in range(0, n):
 array.sort(key=lambda x: x[1])
 index = 0
 answer = 0
-while s // n < avg :
+while s // n < avg:
     if s + r - array[index][0] >= avg * n:
         answer += array[index][1] * (avg * n - s)
         break
@@ -19,4 +19,3 @@ while s // n < avg :
     index += 1
 
 print(answer)
-

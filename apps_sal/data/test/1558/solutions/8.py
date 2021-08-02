@@ -16,7 +16,7 @@ for i in range(n):
     else:
         marks[inp[1]] = [inp[0]]
 
-if total/n >= avg:
+if total / n >= avg:
     print(0)
 else:
     out = 0
@@ -28,16 +28,14 @@ else:
         current = essays[ind]
         for i in range(len(marks[current])):
             if marks[current][i] < r:
-               x = r - marks[current][i]
-               if deficit >= x:
-                   out += current * x
-                   deficit -= x
-               else:
-                   out += current * deficit
-                   deficit = 0
-               if deficit == 0:
-                   break
+                x = r - marks[current][i]
+                if deficit >= x:
+                    out += current * x
+                    deficit -= x
+                else:
+                    out += current * deficit
+                    deficit = 0
+                if deficit == 0:
+                    break
         ind += 1
     print(out)
-                
-

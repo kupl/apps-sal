@@ -1,12 +1,12 @@
-import math 
+import math
 
-list=input().split()
+list = input().split()
 
-num=int(list[0]+list[1])
+num = int(list[0] + list[1])
 
-num_squrt=math.sqrt(num)
+num_squrt = math.sqrt(num)
 
-if num_squrt.is_integer()==True:
+if num_squrt.is_integer() == True:
     print("Yes")
 else:
     print("No")

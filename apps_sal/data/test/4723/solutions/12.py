@@ -12,4 +12,3 @@ for i in range(n - m, -1, -1):
         print((s[:i].replace('?', 'a') + t + s[i + m:].replace('?', 'a')))
         return
 print("UNRESTORABLE")
-

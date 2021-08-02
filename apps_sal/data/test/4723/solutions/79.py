@@ -8,10 +8,10 @@ Tls = list(T)
 Tls.reverse()
 Tre = ''.join(Tls)
 st = -1
-for i in range(0,len(Sd)-len(T)+1):
+for i in range(0, len(Sd) - len(T) + 1):
     f = 1
     for j in range(len(T)):
-        if Tre[j] == Sdre[i+j] or Sdre[i+j] == '?':
+        if Tre[j] == Sdre[i + j] or Sdre[i + j] == '?':
             continue
         else:
             f = 0
@@ -24,7 +24,7 @@ if st == -1:
 else:
     Sdrels = list(Sdre)
     for j in range(len(T)):
-        Sdrels[j+st] = Tre[j]
+        Sdrels[j + st] = Tre[j]
     for j in range(len(Sd)):
         if Sdrels[j] == '?':
             Sdrels[j] = 'a'

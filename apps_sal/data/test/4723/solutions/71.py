@@ -1,7 +1,7 @@
 S = input()
 T = input()
 
-for i in range(len(S) - len(T)+1):
+for i in range(len(S) - len(T) + 1):
     target = S[len(S) - len(T) - i:len(S) - i]
 
     can_search = True
@@ -19,4 +19,3 @@ for i in range(len(S) - len(T)+1):
         return
 
 print('UNRESTORABLE')
-

@@ -7,9 +7,8 @@ if not a:
 else:
     poc, l, r = len(a) - 1, a[0], (a[1:] + b).rstrip('0')
 if l:
-    print(l, end = '')
+    print(l, end='')
 else:
-    print(0, end = '')
-if r: print('.' + r, end = '')
-if poc: print('E%d' % poc, end = '')
-
+    print(0, end='')
+if r: print('.' + r, end='')
+if poc: print('E%d' % poc, end='')

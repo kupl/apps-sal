@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
-#= int(input())
+# = int(input())
 S = list(input())
 T = list(input())
 
@@ -18,7 +18,7 @@ for i in range(ls - lt, -1, -1):
             isok = False
             break
     if isok:
-        S[i:i+lt] = T
+        S[i:i + lt] = T
         ans = ""
         for s in S:
             if s == "?":
@@ -29,4 +29,3 @@ for i in range(ls - lt, -1, -1):
         return
 
 print("UNRESTORABLE")
-

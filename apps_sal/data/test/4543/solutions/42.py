@@ -5,4 +5,3 @@ if math.sqrt(s) == int(math.sqrt(s)):
     print("Yes")
 else:
     print("No")
-

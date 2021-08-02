@@ -13,5 +13,3 @@ while i < n and cur < req:
     i += 1
     cur += d
 print(ans)
-    
-

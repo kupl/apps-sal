@@ -4,14 +4,14 @@ t = input()
 ls = len(s)
 lt = len(t)
 check = False
-ans = 'z'*60
-for i in range(ls-lt+1):
+ans = 'z' * 60
+for i in range(ls - lt + 1):
     u = list(s)
     flag = True
     for j in range(lt):
-        if u[i+j] == '?':
-            u[i+j] = t[j]
-        elif u[i+j] != t[j]:
+        if u[i + j] == '?':
+            u[i + j] = t[j]
+        elif u[i + j] != t[j]:
             flag = False
             break
     if flag:

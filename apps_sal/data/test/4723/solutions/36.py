@@ -50,7 +50,7 @@ T = input()
 #         arr.append([n, 1])
 #     return arr
 
-#def make_divisors(n):
+# def make_divisors(n):
 #    lower_divisors , upper_divisors = [], []
 #    i = 1
 #    while i*i <= n:
@@ -72,7 +72,7 @@ T = input()
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:
@@ -88,7 +88,7 @@ for i in range(len(S_prime) - len(T) + 1):
             break
     else:
         start_ind = i
-    
+
 if start_ind == -1:
     print("UNRESTORABLE")
     return

@@ -1,12 +1,12 @@
 S = input()
 T = input()
 anslist = []
-for i in range(len(S)-len(T)+1):
-    kouho = [0]*len(S)
+for i in range(len(S) - len(T) + 1):
+    kouho = [0] * len(S)
     ok = 1
     for j in range(len(T)):
-        if S[i+j] == T[j] or S[i+j] == "?":
-            kouho[i+j] = T[j]
+        if S[i + j] == T[j] or S[i + j] == "?":
+            kouho[i + j] = T[j]
         else:
             ok = 0
             break
@@ -25,4 +25,3 @@ else:
     anslist.sort()
     ans = anslist[0]
 print(ans)
-

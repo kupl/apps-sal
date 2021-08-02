@@ -1,6 +1,7 @@
 def cross(x1, y1, x2, y2):
     return x1 * y2 - x2 * y1
 
+
 def gao():
     n = int(input())
     x, y = [], []
@@ -11,7 +12,7 @@ def gao():
 
     max_area = 0
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             max_left, max_right = 0, 0
             for k in range(n):
                 if i != k and j != k:
@@ -24,5 +25,6 @@ def gao():
                 max_area = max(max_area, max_left + max_right)
 
     print(max_area / 2.)
+
 
 gao()

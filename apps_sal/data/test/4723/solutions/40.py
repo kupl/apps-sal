@@ -7,16 +7,16 @@ lt = len(t)
 before = []
 after = []
 
-for i in range(ls-lt+1):
+for i in range(ls - lt + 1):
     for j in range(lt):
-        if ss[i+j]!="?":
-            if ss[i+j]!=t[j]:
+        if ss[i + j] != "?":
+            if ss[i + j] != t[j]:
                 break
     else:
-        before += [ss[:i]+t+ss[i+lt:]]
-  
+        before += [ss[:i] + t + ss[i + lt:]]
+
 for k in before:
-    after += [k.replace("?","a")]
+    after += [k.replace("?", "a")]
 
 if after:
     after = sorted(after)

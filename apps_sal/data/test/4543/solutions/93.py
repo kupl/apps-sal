@@ -6,4 +6,3 @@ for i in range(1000):
         ans = True
 
 print(("Yes" if ans else "No"))
-

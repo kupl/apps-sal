@@ -1,11 +1,11 @@
+from collections import Counter, deque
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -20,17 +20,17 @@ def s_row_list(N): return [list(s_input()) for _ in range(N)]
 
 
 def main():
-    s = input() # 暗号
-    t = input() # 含まれる文字
+    s = input()  # 暗号
+    t = input()  # 含まれる文字
 
     s_len = len(s)
     t_len = len(t)
     flg = False
 
-    for i in range(s_len - t_len,-1,-1):
+    for i in range(s_len - t_len, -1, -1):
         flg = True
         for j in range(t_len):
-            if s[i+j] != t[j] and s[i+j] != "?":
+            if s[i + j] != t[j] and s[i + j] != "?":
                 flg = False
                 break
         if flg == True:
@@ -49,7 +49,7 @@ def main():
             ans = ans + i
     ans = ans + t
 
-    for i in s[(trial+t_len):]:
+    for i in s[(trial + t_len):]:
         if i == "?":
             ans = ans + "a"
         else:
@@ -58,19 +58,8 @@ def main():
     print(ans)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

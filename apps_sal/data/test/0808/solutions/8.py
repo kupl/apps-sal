@@ -16,7 +16,6 @@ elif len(a) == 0:
     a = r[0]
     b = r[1:]
 
-if a: print (a, end = '')
-if b: print ('.' + b, end = '')
+if a: print(a, end='')
+if b: print('.' + b, end='')
 if st: print('E' + str(st))
-

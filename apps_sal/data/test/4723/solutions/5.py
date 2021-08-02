@@ -51,4 +51,3 @@ else:
     a2 = ''.join(aa)
     a3 = a2.replace('?', 'a')
     print(a3)
-

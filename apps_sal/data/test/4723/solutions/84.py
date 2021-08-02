@@ -5,13 +5,13 @@ nt = len(t)
 
 cand = []
 
-for i in range(ns-nt+1):
+for i in range(ns - nt + 1):
     j = 0
     temps = list(s)
     f1 = True
-    while j <= nt-1:
-        if temps[i+j] == '?' or temps[i+j] == t[j]:
-            temps[i+j] = t[j]
+    while j <= nt - 1:
+        if temps[i + j] == '?' or temps[i + j] == t[j]:
+            temps[i + j] = t[j]
         else:
             f1 = False
             break
@@ -26,4 +26,3 @@ else:
     cand.sort()
     ans = cand[0]
 print(ans)
-

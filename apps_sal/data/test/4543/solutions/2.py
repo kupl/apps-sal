@@ -1,15 +1,16 @@
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 import sys
 import math
-input=sys.stdin.readline
+input = sys.stdin.readline
+
 
 def main():
-    a,b = input().split()
-    number=0
+    a, b = input().split()
+    number = 0
 
-    number=int(a+b)
+    number = int(a + b)
     for i in range(100101):
-        if i * i ==number:
+        if i * i == number:
             print("Yes")
             return
         else:
@@ -19,4 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

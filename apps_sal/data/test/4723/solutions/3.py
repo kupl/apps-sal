@@ -9,7 +9,7 @@ for i in range(len(s) - len(t) + 1)[::-1]:
             q += 1
         elif s[i + j] == t[j]:
             cnt += 1
-    
+
     if cnt == len(t) - q:
         idx = i
         s = s[:idx] + t + s[idx + len(t):]

@@ -1,7 +1,7 @@
 import math
 
 a, b = input().split()
-num = int(a+b)
+num = int(a + b)
 
 if math.sqrt(num).is_integer():
     print('Yes')

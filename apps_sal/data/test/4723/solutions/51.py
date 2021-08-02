@@ -10,7 +10,7 @@ for i in range(len(S) - len(T) + 1):
         if S[i + j] != "?" and S[i + j] != T[j]:
             matched = False
             break
-    
+
     if matched:
         S = S[:i] + T + S[i + len(T):]
         flag = True

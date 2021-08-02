@@ -19,4 +19,3 @@ while len(s) < 5:
     s = '0' + s
 
 print(s)
-

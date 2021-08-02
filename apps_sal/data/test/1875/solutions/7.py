@@ -10,4 +10,3 @@ for x, i in enumerate(p, 1):
             a, b = min(d, a), max(d, b)
         if a and b: s = max(s, b - a)
 print(s / 2)
-

@@ -11,4 +11,3 @@ while need > 0 and i < n:
     need -= min(r - exams[i][1], need)
     i += 1
 print(ans)
-
