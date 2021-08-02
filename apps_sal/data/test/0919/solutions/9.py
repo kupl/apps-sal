@@ -21,4 +21,3 @@ if done == k:
 
 else:
     print(-1)
-

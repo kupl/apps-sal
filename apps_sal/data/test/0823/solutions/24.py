@@ -49,4 +49,5 @@ def __starting_point():
 
     print(point_on_spiral(x, y))
 
+
 __starting_point()

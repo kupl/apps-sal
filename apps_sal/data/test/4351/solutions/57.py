@@ -1,6 +1,6 @@
-a,b,c=input()
+a, b, c = input()
 
 if a == c:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

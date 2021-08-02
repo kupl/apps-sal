@@ -1,5 +1,6 @@
 from math import floor
 
+
 def main(xx, yy):
     if xx == 0 and yy == 0:
         return 0
@@ -21,5 +22,5 @@ def main(xx, yy):
             return i - 1
     return i - 1
 
-print(main(*list(map(int, input().split(' ')))))
 
+print(main(*list(map(int, input().split(' ')))))

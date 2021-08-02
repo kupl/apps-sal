@@ -1,8 +1,7 @@
-n=input()
-t=list(n)
-s=list(reversed(n))
-if s==t:
+n = input()
+t = list(n)
+s = list(reversed(n))
+if s == t:
     print("Yes")
 else:
     print("No")
-

@@ -11,4 +11,3 @@ if s != '0':
     print('1' + '0' * k)
 else:
     print(s)
-

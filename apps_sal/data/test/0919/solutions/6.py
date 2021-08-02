@@ -18,5 +18,3 @@ if c == k:
     print(w)
 else:
     print(-1)
-        
-

@@ -67,7 +67,3 @@ else:
                 x = 0
         print("".join(ans[0]))
         print("".join(ans[1]))
-
-
-
-

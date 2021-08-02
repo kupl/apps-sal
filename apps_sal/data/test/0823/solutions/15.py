@@ -10,5 +10,3 @@ elif x < 0 and y >= x and y <= -1 - x:
     print((-x) * 4 - 1)
 else:
     print(0)
-
-

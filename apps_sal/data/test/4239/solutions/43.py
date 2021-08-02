@@ -31,4 +31,5 @@ def __starting_point():
     # for i in range(1, 100 + 1):
     #     solve(i)
 
+
 __starting_point()

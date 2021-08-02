@@ -11,4 +11,3 @@ for i in range(N):
         dp[i + ope] = min(dp[i + ope], dp[i] + 1)
 
 print((dp[N]))
-

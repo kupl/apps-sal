@@ -1,9 +1,9 @@
 s = input()
-n = len(s)//2
+n = len(s) // 2
 
 flg = True
 for i in range(n):
-    if s[i] != s[-i-1]:
+    if s[i] != s[-i - 1]:
         flg = False
         break
 

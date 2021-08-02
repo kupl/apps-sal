@@ -3,13 +3,13 @@
 N = int(input())
 
 ans = N
-for i in range(N+1):
+for i in range(N + 1):
     n = i
     m = N - i
     res = 0
 
     nine = 1
-    while nine*9 <= n:
+    while nine * 9 <= n:
         nine *= 9
     while nine != 1:
         res += n // nine
@@ -18,7 +18,7 @@ for i in range(N+1):
     res += n
 
     six = 1
-    while six*6 <= m:
+    while six * 6 <= m:
         six *= 6
     while six != 1:
         res += m // six
@@ -29,4 +29,3 @@ for i in range(N+1):
     ans = min(ans, int(res))
 
 print(ans)
-

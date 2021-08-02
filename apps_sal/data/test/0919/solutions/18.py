@@ -17,4 +17,3 @@ if cnt == k:
     print(ans)
 else:
     print(-1)
-

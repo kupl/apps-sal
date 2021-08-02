@@ -7,5 +7,4 @@ z = s.count('0')
 if s == '0':
     print('0')
 else:
-    print('1'+'0'*z)
-
+    print('1' + '0' * z)

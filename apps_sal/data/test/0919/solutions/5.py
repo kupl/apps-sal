@@ -1,4 +1,4 @@
-a,b = list(map(int,input().split()))
+a, b = list(map(int, input().split()))
 s = sorted(input())
 
 last = '$'
@@ -17,4 +17,3 @@ if used == b:
     print(cost)
 else:
     print(-1)
-

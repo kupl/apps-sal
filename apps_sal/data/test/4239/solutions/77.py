@@ -23,7 +23,7 @@ for i in range(1, N + 1):
     for k in kouho:
         if i - k >= 0:
             dp[i] = min(dp[i], dp[i - k] + 1)
-#print(dp)
+# print(dp)
 print((dp[N]))
 # cur = 0
 # ans = 0
@@ -34,4 +34,3 @@ print((dp[N]))
 #     else:
 #         cur += 1
 # print(ans)
-

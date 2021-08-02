@@ -1,4 +1,2 @@
-n=input()
-print('Yes') if n[0]==n[2] else print("No")
-
-
+n = input()
+print('Yes') if n[0] == n[2] else print("No")
