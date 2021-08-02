@@ -34,4 +34,3 @@ for i in range(1, max_num + 1):
 
 for l, r in queries:
     print((nums_like[r] - nums_like[l - 1]))
-

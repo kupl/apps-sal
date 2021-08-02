@@ -8,7 +8,7 @@ for i in range(n):
         increased = False
         continue
 
-    if p[i] == i+1:
+    if p[i] == i + 1:
         cnt += 1
         i += 1
         increased = True

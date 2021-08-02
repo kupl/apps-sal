@@ -1,4 +1,6 @@
 import numpy as np
+
+
 def main():
     n, t = map(int, input().split())
     dt = [list(map(int, input().split())) for _ in range(n)]
@@ -6,10 +8,13 @@ def main():
     dp = np.zeros(t, dtype=int)
     ans = 0
     for a, b in dt:
-        ans = max(ans, dp[-1]+b)
-        np.maximum(dp[a:], dp[:-a]+b, out=dp[a:])
+        ans = max(ans, dp[-1] + b)
+        np.maximum(dp[a:], dp[:-a] + b, out=dp[a:])
     print(ans)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

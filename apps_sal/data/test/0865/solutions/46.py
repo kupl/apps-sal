@@ -14,4 +14,3 @@ for a, b in ab:
 
 
 print(ans)
-

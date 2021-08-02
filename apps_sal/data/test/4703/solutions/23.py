@@ -32,7 +32,7 @@ def resolve():
     L = len(S)
 
     ans = 0
-    for bit in range(1 << L-1):
+    for bit in range(1 << L - 1):
         s = ""
         for i in range(L):
             if 1 << i & bit:
@@ -48,5 +48,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

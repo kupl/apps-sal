@@ -5,8 +5,8 @@ cnt = 0
 last = -2
 
 for i in range(n):
-    if p[i] == i+1:
-        if last == i-1:
+    if p[i] == i + 1:
+        if last == i - 1:
             cnt += 0
             last = -2
         else:

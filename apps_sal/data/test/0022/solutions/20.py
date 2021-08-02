@@ -12,12 +12,14 @@ m['d'] = 'b'
 m['p'] = 'q'
 m['q'] = 'p'
 
+
 def is_sp():
     sl = len(t)
     for i in range(sl // 2 + 1):
         if m[t[i]] != t[sl - 1 - i]:
             return False
     return True
+
 
 if len(t) == len(s):
     if is_sp():
@@ -26,4 +28,3 @@ if len(t) == len(s):
         print('NIE')
 else:
     print('NIE')
-

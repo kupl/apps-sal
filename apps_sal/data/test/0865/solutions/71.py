@@ -10,6 +10,6 @@ dish.sort()
 ans = 0
 dp = np.zeros(t, dtype=int)
 for time, point in dish:
-    ans = max(ans, dp.max()+point)
-    np.maximum(dp[time:], dp[:-time]+point, out=dp[time:])
+    ans = max(ans, dp.max() + point)
+    np.maximum(dp[time:], dp[:-time] + point, out=dp[time:])
 print(ans)

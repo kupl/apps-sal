@@ -14,4 +14,3 @@ else:
             ans = False
             break
 print("TAK" if ans else "NIE")
-

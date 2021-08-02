@@ -1,4 +1,6 @@
 import numpy as np
+
+
 def solve(n, t, a, b):
     dp = np.zeros(t, dtype=int)
     candidates = []
@@ -8,6 +10,7 @@ def solve(n, t, a, b):
             continue
         dp[w:] = np.maximum(dp[:-w] + v, dp[w:])
     return np.max(candidates)
+
 
 n, t = map(int, input().split())
 a = [0] * n

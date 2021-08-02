@@ -37,4 +37,3 @@ for i in range(2 ** (n - 1)):
         else:
             now += 1
 print((sum(ans)))
-

@@ -14,6 +14,8 @@ def input(): return sys.stdin.readline().strip()
 def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
@@ -27,11 +29,10 @@ ans = 0
 i = 0
 
 while i < N:
-    if P[i] == i+1:
+    if P[i] == i + 1:
         ans += 1
-        if P[i+1] == i+2:
+        if P[i + 1] == i + 2:
             i += 1
     i += 1
 
 print(ans)
-

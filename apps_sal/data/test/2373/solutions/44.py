@@ -1,7 +1,7 @@
 from collections import Counter
 
 n = int(input())
-P = [x-1 for x in map(int, input().split())]
+P = [x - 1 for x in map(int, input().split())]
 
 ctr = Counter()
 seq = 0
@@ -16,6 +16,6 @@ ctr[seq] += 1
 
 ans = 0
 for k, v in ctr.items():
-    ans += (k+1)//2 * v
+    ans += (k + 1) // 2 * v
 
 print(ans)

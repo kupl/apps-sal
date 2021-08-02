@@ -17,4 +17,3 @@ for a, b in AB:
     dp[a:] = np.maximum(prev[a:], prev[:-a] + b)
 
 print(answer)
-

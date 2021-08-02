@@ -16,8 +16,10 @@ def main():
     if cnt in [1, 2]:
         ans += 1
     print(ans)
-        
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

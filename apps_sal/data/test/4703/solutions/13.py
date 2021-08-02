@@ -12,4 +12,3 @@ for i in range(1 << n):
     res += int(num_str)
 
 print(res)
-

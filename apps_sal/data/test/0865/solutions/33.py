@@ -12,8 +12,7 @@ AB.sort()
 dp = np.zeros(T, np.int32)
 temp_ans = 0
 for a, b in AB:
-    temp_ans = max(temp_ans, dp.max()+b)
-    dp[a:] = np.maximum(dp[a:], dp[:-a]+b)
+    temp_ans = max(temp_ans, dp.max() + b)
+    dp[a:] = np.maximum(dp[a:], dp[:-a] + b)
 
 print(temp_ans)
-

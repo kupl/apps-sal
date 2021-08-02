@@ -1,4 +1,6 @@
-import sys, re, os
+import sys
+import re
+import os
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians, gcd
 from itertools import permutations, combinations, product, accumulate
@@ -31,7 +33,7 @@ def main():
     while i < N:
         if P[i] == i + 1:
             cnt += 1
-            i += (P[i+1] == i + 2)
+            i += (P[i + 1] == i + 2)
         i += 1
 
     print(cnt)
@@ -39,5 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

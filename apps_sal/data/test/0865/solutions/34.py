@@ -16,4 +16,3 @@ for a, b in AB:
     #     dp[j] = max(dp[j], dp[j-a] + b)
 
 print(ans)
-

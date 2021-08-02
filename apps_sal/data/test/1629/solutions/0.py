@@ -10,8 +10,8 @@ else:
     t[: x] = [i - 1 for i in t[: x]]
     m = min(t)
     if m: t = [i - m for i in t]
-    i = n - 1    
+    i = n - 1
     while t[i]: i -= 1
-    t[i + 1: ] = [j - 1 for j in t[i + 1: ]]
+    t[i + 1:] = [j - 1 for j in t[i + 1:]]
     t[i] = x + m * n + n - i - 1
 print(' '.join(map(str, t)))

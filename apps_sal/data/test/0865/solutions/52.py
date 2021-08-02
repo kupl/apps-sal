@@ -19,15 +19,14 @@ for i in range(N):
     # if len(dp[i][-a+1:T]) > 0:
     # dp[i + 1][T] = max(dp[i + 1][T], max(dp[i][-a+1:T]) + b)
     now = 0
-    if i != N-1:
+    if i != N - 1:
         now = dp[i + 1][T - 1] + max(FOOD[i + 1:], key=lambda x: x[1])[1]
         #print(FOOD[i + 1:])
         #print(max(FOOD[i + 1:], key=lambda x: x[1])[1])
-        #print(now)
+        # print(now)
 
     ans = max(ans, now)
 
     # print(dp[i+1])
 
 print(ans)
-

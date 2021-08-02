@@ -1,5 +1,6 @@
 from numpy import zeros, maximum, array
 
+
 def main():
     N, T, *AB = array(open(0).read().split(), int)
 
@@ -8,5 +9,6 @@ def main():
         dp[w:T + w] = maximum(dp[w:T + w], dp[:T] + v)
 
     print(dp.max())
+
 
 main()

@@ -14,13 +14,11 @@ for i in range(q[-1]):
     res_a = (res_a + a[i] / T) / c
     real += a[i]
     if i >= T:
-        real -= a[i-T]
-    if q[q_n] == i+1:
+        real -= a[i - T]
+    if q[q_n] == i + 1:
         q_n += 1
-        r = real/T
-        print(r, res_a, abs(r-res_a)/r)
-
+        r = real / T
+        print(r, res_a, abs(r - res_a) / r)
 
 
 # Made By Mostafa_Khaled
-

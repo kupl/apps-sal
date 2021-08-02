@@ -4,12 +4,12 @@ n = len(s)
 
 sym = "AHIMOoTUVvWwXxY"
 
-if n % 2 and sym.count(s[n//2]) == 0:
+if n % 2 and sym.count(s[n // 2]) == 0:
     print("NIE")
 else:
     r = ""
     ok = 1
-    for i in range(n//2):
+    for i in range(n // 2):
         if sym.count(s[i]):
             r = s[i] + r
         elif s[i] == "b":
@@ -26,8 +26,7 @@ else:
     if ok == 0:
         print("NIE")
     else:
-        if s[n//2 + n%2:] == r:
+        if s[n // 2 + n % 2:] == r:
             print("TAK")
         else:
             print("NIE")
-

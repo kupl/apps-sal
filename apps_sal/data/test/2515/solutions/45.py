@@ -1,6 +1,8 @@
+from itertools import accumulate
 import sys
 read = sys.stdin.read
-from itertools import accumulate
+
+
 def main():
     maxa2 = 10**5 + 1
     maxa2 = max(6, maxa2)
@@ -11,7 +13,7 @@ def main():
         for is2 in range(is1 ** 2, maxa2, is1):
             p[is2] = False
     prime_list = [i for i, b in enumerate(p) if b]
-    p2017 = [0] * (10**5 * 2+1)
+    p2017 = [0] * (10**5 * 2 + 1)
     for pr in prime_list:
         if p[(pr + 1) // 2]:
             p2017[pr] = True
@@ -22,6 +24,9 @@ def main():
     for l, r in zip(m, m):
         print(p2017a[r] - p2017a[l - 1])
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

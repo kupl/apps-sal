@@ -26,4 +26,3 @@ for i in range(N):
     tmp = (l + r).max() + b
     ans = max(ans, tmp)
 print(ans)
-

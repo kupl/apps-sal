@@ -41,4 +41,3 @@ if r[::-1] == list(l) and f:
     print("TAK")
 else:
     print("NIE")
-

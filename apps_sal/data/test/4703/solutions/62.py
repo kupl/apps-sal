@@ -14,4 +14,3 @@ for adds in product([0, 1], repeat=N - 1):
             eqn[2 * i + 1] = ""
     ans += eval("".join(eqn))
 print(ans)
-

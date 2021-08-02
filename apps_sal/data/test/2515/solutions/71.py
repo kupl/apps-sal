@@ -32,4 +32,3 @@ q = int(input())
 lr = [tuple(map(int, input().split())) for i in range(q)]
 for li, ri in lr:
     print((sa[ri + 1] - sa[li]))
-

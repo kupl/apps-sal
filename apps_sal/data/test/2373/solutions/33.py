@@ -26,4 +26,3 @@ def solve():
 
 
 print(solve())
-

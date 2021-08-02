@@ -16,9 +16,9 @@ while index <= n-1:
         index += 1
 '''
 
-for i in range(n-1):
-    if p[i] == i+1:
-        p[i], p[i+1] = p[i+1], p[i]
+for i in range(n - 1):
+    if p[i] == i + 1:
+        p[i], p[i + 1] = p[i + 1], p[i]
         cnt += 1
 
 if p[-1] == n:

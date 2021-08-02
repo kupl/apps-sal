@@ -1,4 +1,4 @@
-n, dest =  list(map(int, input().split()))
+n, dest = list(map(int, input().split()))
 dest -= 1
 a = list(map(int, input().split()))
 
@@ -24,8 +24,8 @@ if m2 < m1:
             c += m2
             a[i] -= m2
         else:
-            c += (m2+1)
-            a[i] -= (m2+1)
+            c += (m2 + 1)
+            a[i] -= (m2 + 1)
     a[pos2] = c
 else:
     c = 0
@@ -37,6 +37,5 @@ else:
             c += m1
             a[i] -= m1
     a[pos1] = c
-    
-print(*a)
 
+print(*a)

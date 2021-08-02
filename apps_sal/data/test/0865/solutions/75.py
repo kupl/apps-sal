@@ -9,4 +9,3 @@ for a, b in sorted(zip(A, B)):
     dp_new[a:a + T] = np.maximum(dp[a:a + T], dp[:T] + b)
     dp = dp_new
 print((max(dp)))
-

@@ -10,4 +10,3 @@ for bit in range(1 << len(s) - 1):
             a[-1] = 10 * a[-1] + int(s[i + 1])
     ans += sum(a)
 print(ans)
-

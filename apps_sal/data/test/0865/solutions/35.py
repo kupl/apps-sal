@@ -18,4 +18,3 @@ def dp(t, ablist):
 
 
 print((dp(_t, AB)))
-

@@ -4,7 +4,7 @@ n, m = [int(x) for x in input().split()]
 v = [int(x) for x in input().split()]
 sv = [(x + 1, v[x]) for x in range(n)]
 v = [0] + v
-edges = {i:set() for i in range(1, n+1)}
+edges = {i: set() for i in range(1, n + 1)}
 for i in range(m):
     f, t = [int(x) for x in input().split()]
     edges[f].add(t)
@@ -20,4 +20,3 @@ for i, vi in sv:
             ans += v[f]
 
 print(ans)
-

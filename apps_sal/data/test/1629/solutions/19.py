@@ -22,16 +22,16 @@ def solve():
     """
     n, x = read_ints()
     a = read_ints()
-    last_min_j = x%n
-    for j in range(x, x+n):
-        if a[j%n] <= a[last_min_j]:
-            last_min_j = j%n
+    last_min_j = x % n
+    for j in range(x, x + n):
+        if a[j % n] <= a[last_min_j]:
+            last_min_j = j % n
     temp = a[last_min_j]
-    a[last_min_j] += n*temp
-    a = [a0-temp for a0 in a]
-    j = last_min_j+1
-    while j%n != x%n:
-        a[j%n] -= 1
+    a[last_min_j] += n * temp
+    a = [a0 - temp for a0 in a]
+    j = last_min_j + 1
+    while j % n != x % n:
+        a[j % n] -= 1
         j += 1
         a[last_min_j] += 1
     print(*a)
@@ -39,5 +39,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

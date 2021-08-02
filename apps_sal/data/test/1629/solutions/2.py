@@ -14,5 +14,4 @@ while a[i] != 0:
         i = n - 1
 a[i] += c + max(t - 1, 0) * n
 for i in a:
-    print(i, end = ' ')
-    
+    print(i, end=' ')

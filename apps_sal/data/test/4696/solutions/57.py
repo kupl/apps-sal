@@ -9,4 +9,5 @@ def __starting_point():
     a, b = list(map(int, input().split()))
     solve(a, b)
 
+
 __starting_point()

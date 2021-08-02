@@ -15,4 +15,3 @@ for bit in range(0, 1 << len(s) - 1):
             exp.append(s[i + 1])
     ans += sum(list(map(int, exp)))
 print(ans)
-

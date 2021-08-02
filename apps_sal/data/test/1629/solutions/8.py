@@ -23,9 +23,5 @@ for i in range(mi + 1 - (n if x < mi else 0), x + 1):
 
 print(' '.join(map(str, a)))
 
-	 	 	    	 		  			     			 			
-
-
 
 # Made By Mostafa_Khaled
-

@@ -1,9 +1,9 @@
-n, m = map( int, input().split() )
-v = list( map( int, input().split() ) )
+n, m = map(int, input().split())
+v = list(map(int, input().split()))
 
 ans = 0
-for i in range( m ):
-    x, y = map( int, input().split() )
-    ans += min( v[x - 1], v[y - 1] )
-    
-print( ans )
+for i in range(m):
+    x, y = map(int, input().split())
+    ans += min(v[x - 1], v[y - 1])
+
+print(ans)

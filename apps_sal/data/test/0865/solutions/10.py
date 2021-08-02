@@ -1,5 +1,6 @@
 from numpy import zeros, maximum, array
 
+
 def main():
     N, T, *AB = list(map(int, open(0).read().split()))
 
@@ -9,5 +10,5 @@ def main():
 
     print((dp.max()))
 
-main()
 
+main()

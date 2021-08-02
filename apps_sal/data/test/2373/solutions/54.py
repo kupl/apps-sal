@@ -12,12 +12,12 @@ P = inintl()
 
 ans = 0
 
-for i in range(n-1):
+for i in range(n - 1):
     a = P[i]
-    b = P[i+1]
-    if a == i+1:
+    b = P[i + 1]
+    if a == i + 1:
         P[i] = b
-        P[i+1] = a
+        P[i + 1] = a
         ans += 1
 
 if P[-1] == n:

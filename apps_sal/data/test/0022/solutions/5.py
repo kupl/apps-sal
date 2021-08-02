@@ -7,6 +7,7 @@ for c in s:
         print('NIE')
         return
 
+
 def trans(c):
     d = {
         'b': 'd',
@@ -18,9 +19,9 @@ def trans(c):
         return d[c]
     return c
 
+
 t = ''.join(map(trans, s[::-1]))
 if t == s:
     print('TAK')
 else:
     print('NIE')
-

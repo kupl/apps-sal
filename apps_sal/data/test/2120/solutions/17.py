@@ -2,7 +2,6 @@ __author__ = 'asmn'
 import sys
 
 
-
 n, m = tuple(map(int, input().split()))
 v = list(map(int, input().split()))
 e = [[] for i in range(n)]
@@ -21,5 +20,3 @@ for x in nx:
             ans += v[y]
     used.add(x)
 print(ans)
-
-
