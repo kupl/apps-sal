@@ -10,4 +10,3 @@ for i in range(m):
     else:
         s += str(arr[b[1] - 1] + res) + '\n'
 print(s)
-

@@ -14,7 +14,7 @@ for char in program:
         else:
             legal = False
             break
-            
+
 if legal:
     print("YES")
 else:

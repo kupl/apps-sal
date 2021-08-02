@@ -8,7 +8,6 @@ else:
             print("NO")
             break
         if ord(s[i]) > ord(maxs):
-            maxs = s[i]        
+            maxs = s[i]
     else:
         print("YES")
-

@@ -44,4 +44,3 @@ for i in range(n - 1):
     rdc = max(rdc, fp * reducible[i])
 
 print((expected[0] - rdc))
-

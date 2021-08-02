@@ -1,4 +1,6 @@
 import collections
+
+
 class UnionFind:
 
     def __init__(self, size):
@@ -35,22 +37,23 @@ class UnionFind:
                 count += 1
         return count
 
-n,m,k = map(int, input().split())
+
+n, m, k = map(int, input().split())
 c = [0] + list(map(int, input().split()))
-uf = UnionFind(n+1)
-use = [False] * (n+1)
+uf = UnionFind(n + 1)
+use = [False] * (n + 1)
 for i in range(m):
-    li,ri = map(int, input().split())
+    li, ri = map(int, input().split())
     uf.union(li, ri)
     use[li] = True
     use[ri] = True
 groups = {}
-for i in range(1,n+1):
+for i in range(1, n + 1):
     if not use[i]:
         continue
     g = uf.find(i)
     if g not in groups:
-        groups.update({g:collections.defaultdict(int)})
+        groups.update({g: collections.defaultdict(int)})
     groups[g][c[i]] += 1
 total = 0
 for g in groups.values():

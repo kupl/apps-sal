@@ -4,6 +4,7 @@ from collections import defaultdict
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
+
 def main():
     n, m = list(map(int, input().split()))
     to = defaultdict(list)
@@ -51,5 +52,5 @@ def main():
         # print(u, mx, de, nev)
     print((ev[0] - dx))
 
-main()
 
+main()

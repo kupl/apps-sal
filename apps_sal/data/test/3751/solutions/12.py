@@ -7,5 +7,3 @@ for i in range(len(s)):
         return
     m = max(m, c)
 print("YES")
-
-

@@ -11,18 +11,20 @@ References
 めるってよ
     - O(M)
 """
+
+
 def solve(n, m, s, t):
     edges = [[] for i in range(n)]
     for i in range(m):
         u, v = s[i], t[i]
-        edges[u-1].append(v-1)
+        edges[u - 1].append(v - 1)
     p = [0] * n
     p[0] = 1
     for i in range(n):
         for j in edges[i]:
             p[j] += p[i] / len(edges[i])
     E = [0] * n
-    for i in range(n-2, -1, -1):
+    for i in range(n - 2, -1, -1):
         v = [E[j] for j in edges[i]]
         E[i] = 1 + sum(v) / len(v)
     res = E[0]
@@ -32,8 +34,9 @@ def solve(n, m, s, t):
             continue
         k = max((E[j], j) for j in edges[i])[1]
         v = [E[j] for j in edges[i] if j != k]
-        res = min(res, E[0] + p[i] * (sum(v) / (deg-1) - E[k]) / deg)
+        res = min(res, E[0] + p[i] * (sum(v) / (deg - 1) - E[k]) / deg)
     return res
+
 
 n, m = map(int, input().split())
 s = [0] * m

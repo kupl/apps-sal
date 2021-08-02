@@ -8,7 +8,7 @@ def solve():
     outdegs = [0] * N
     for _ in range(M):
         s, t = list(map(int, input().split()))
-        s, t = s-1, t-1
+        s, t = s - 1, t - 1
         adjL[s].append(t)
         adjLRev[t].append(s)
         outdegs[s] += 1
@@ -22,7 +22,7 @@ def solve():
             num = expe / prob
             for v2 in adjL[v]:
                 probs[v2] += prob / outdeg
-                expes[v2] += prob * (num+1) / outdeg
+                expes[v2] += prob * (num + 1) / outdeg
 
     probRevs = [0] * N
     expeRevs = [0] * N
@@ -33,23 +33,22 @@ def solve():
             num = expe / prob
             for v0 in adjLRev[v]:
                 probRevs[v0] += prob / outdegs[v0]
-                expeRevs[v0] += prob * (num+1) / outdegs[v0]
+                expeRevs[v0] += prob * (num + 1) / outdegs[v0]
 
     ans = expes[-1]
-    for vRem in range(N-1):
+    for vRem in range(N - 1):
         if outdegs[vRem] == 1: continue
         values = []
         prob, expe, outdeg = probs[vRem], expes[vRem], outdegs[vRem]
         for v2 in adjL[vRem]:
-            value = expe*probRevs[v2] + expeRevs[v2]*prob + prob*probRevs[v2]
+            value = expe * probRevs[v2] + expeRevs[v2] * prob + prob * probRevs[v2]
             values.append(value)
         sumV = sum(values)
         ans2 = expes[-1] - sumV / outdeg
         for value in values:
-            ans = min(ans, ans2 + (sumV-value) / (outdeg-1))
+            ans = min(ans, ans2 + (sumV - value) / (outdeg - 1))
 
     print(ans)
 
 
 solve()
-

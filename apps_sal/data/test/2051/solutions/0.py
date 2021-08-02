@@ -39,4 +39,3 @@ for i in range(n):
                 c[ob] = fcol
                 ans += 1
 print(ans)
-

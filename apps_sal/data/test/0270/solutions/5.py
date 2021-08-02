@@ -40,4 +40,3 @@ for i in range(n - 1):
         probability[j] += jp
 
 print((expected[0] - max(p * r for p, r in zip(probability, reducible))))
-

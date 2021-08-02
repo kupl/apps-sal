@@ -13,5 +13,5 @@ def go():
             o += '{}\n'.format(a[data[1] - 1] + keep)
     return o
 
-print(go())
 
+print(go())

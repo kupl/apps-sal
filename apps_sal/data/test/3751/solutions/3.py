@@ -11,4 +11,3 @@ for c in s:
         next_allowed = chr(ord(next_allowed) + 1)
 
 print("YES")
-

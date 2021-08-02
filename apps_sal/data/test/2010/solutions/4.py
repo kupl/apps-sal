@@ -14,4 +14,3 @@ for i in range(m):
             res.append(str(a[data[1] - 1] + total_sum))
 
 print('\n'.join(res))
-

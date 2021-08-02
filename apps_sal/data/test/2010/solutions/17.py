@@ -12,12 +12,10 @@ for i in range(numOperations):
     param1 = command[1]
 
     if(op == 1):
-      array[param1 - 1] = command[2] - totalSum
+        array[param1 - 1] = command[2] - totalSum
     elif(op == 2):
-      totalSum += param1
+        totalSum += param1
     else:
-      s += str(array[param1 - 1] + totalSum) + '\n'
+        s += str(array[param1 - 1] + totalSum) + '\n'
 
 print(s)
-
-

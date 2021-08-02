@@ -20,7 +20,7 @@ for i in range(m):
         clusters[socks[l]].append(r)
     elif socks[r] != socks[l]:
         clusters[socks[l]] += clusters[socks[r]]
-        temp = socks[r] 
+        temp = socks[r]
         for sock in clusters[socks[r]]:
             socks[sock] = socks[l]
         clusters.pop(temp)
@@ -38,6 +38,6 @@ for i in clusters:
             colors[k] = 1
         if colors[k] > ma:
             ma = colors[k]
-    to_paint += len(clusters[i]) - ma        
+    to_paint += len(clusters[i]) - ma
 
 print(to_paint)

@@ -13,4 +13,3 @@ for c in s:
 
 if flag:
     print("YES")
-

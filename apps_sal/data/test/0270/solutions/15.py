@@ -7,7 +7,7 @@ def solve():
     outdegs = [0] * N
     for _ in range(M):
         s, t = list(map(int, input().split()))
-        s, t = s-1, t-1
+        s, t = s - 1, t - 1
         adjL[s].append(t)
         outdegs[s] += 1
 
@@ -18,7 +18,7 @@ def solve():
             probs[v2] += probs[v] / outdegs[v]
 
     dp = [0] * N
-    for v in reversed(list(range(N-1))):
+    for v in reversed(list(range(N - 1))):
         dp[v] = sum([dp[v2] for v2 in adjL[v]]) / outdegs[v] + 1
 
     ans = dp[0]
@@ -29,7 +29,7 @@ def solve():
             sumDP += dp[v2]
             if dp[v2] > maxDP:
                 maxDP = dp[v2]
-        dp2 = (sumDP-maxDP) / (outdegs[vRem]-1) + 1
+        dp2 = (sumDP - maxDP) / (outdegs[vRem] - 1) + 1
         decre = dp[vRem] - dp2
         ans2 = dp[0] - decre * probs[vRem]
         ans = min(ans, ans2)
@@ -38,4 +38,3 @@ def solve():
 
 
 solve()
-
