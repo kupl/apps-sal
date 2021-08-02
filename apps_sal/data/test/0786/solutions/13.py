@@ -24,16 +24,14 @@ for i in range(n):
         minn = max(minn, 1900)
         minn = minn + change
         maxx = maxx + change
-    else:#div 2
-        if minn >=1900:
+    else:  # div 2
+        if minn >= 1900:
             print("Impossible")
             return
         maxx = min(maxx, 1899)
         minn = minn + change
-        maxx = maxx +change
+        maxx = maxx + change
 if maxx > 10**10:
     print("Infinity")
 else:
     print(maxx)
-            
-

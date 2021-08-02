@@ -13,4 +13,3 @@ elif aa == bb:
     print('=')
 else:
     print('>')
-

@@ -26,7 +26,6 @@ def solve(xs, ys, bx, by):
         return '='
 
 
-
 # def p(*args, **kwargs):
 #     return print(*args, file=sys.stderr, **kwargs)
 
@@ -45,5 +44,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

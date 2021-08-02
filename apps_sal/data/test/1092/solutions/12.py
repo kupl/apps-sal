@@ -45,4 +45,3 @@ if a[m - 1] < n:
     ans *= invmod(f[n - a[m - 1]], MOD)
     ans %= MOD
 print(ans)
-

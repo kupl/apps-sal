@@ -10,20 +10,20 @@ for i in range(n):
             down = 1900
             wasdown = 1
         down = max(down, 1900)
-        down+=c
+        down += c
         if wasup:
-            up+=c
+            up += c
 
     if d == 2:
         if not wasup:
             up = 1899
             wasup = 1
         up = min(up, 1899)
-        up+=c
+        up += c
         if wasdown:
-            down+=c
+            down += c
     if wasup and wasdown:
-        if up<down:
+        if up < down:
             print("Impossible")
             break
 else:

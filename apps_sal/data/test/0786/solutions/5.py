@@ -15,4 +15,3 @@ elif hi > 2 ** 31:
     print('Infinity')
 else:
     print(hi)
-

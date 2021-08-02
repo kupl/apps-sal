@@ -1,6 +1,7 @@
 import sys
 import math
 
+
 def solve():
     n = int(input())
     l, r = -float('inf'), float('inf')
@@ -18,6 +19,7 @@ def solve():
     else:
         return r
 
+
 res = solve()
 if res is None:
     print('Impossible')
@@ -25,4 +27,3 @@ elif math.isinf(res):
     print('Infinity')
 else:
     print(res)
-

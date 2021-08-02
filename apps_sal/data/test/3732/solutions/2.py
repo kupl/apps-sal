@@ -3,12 +3,12 @@ if max(x, y) >= m:
     print(0)
 elif x <= 0 and y <= 0:
     print(-1)
-else:   
+else:
     if x > y:
         x, y = y, x
     ans, st = 0, 0
     add = 0
-    if x <= 0:  
+    if x <= 0:
         st = (0 - x + y - 1) // y
         x += y * st
     ans = st + (m - x + y - 1) // y
@@ -18,4 +18,3 @@ else:
         ans = min(ans, add + st + (m - x + y - 1) // y)
     ans = min(ans, add + st)
     print(ans)
-

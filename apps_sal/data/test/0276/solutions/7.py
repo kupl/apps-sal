@@ -2,6 +2,7 @@ from copy import deepcopy
 import itertools
 from bisect import bisect_left
 
+
 def read():
     return int(input())
 
@@ -27,5 +28,3 @@ print(m)
 for i in range(6):
     if not color[i] in s:
         print(gem[i])
-
-

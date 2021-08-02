@@ -1,5 +1,6 @@
 from math import inf
 
+
 def main():
     n = int(input())
     l = -inf
@@ -20,5 +21,5 @@ def main():
     else:
         print(r)
 
-main()
 
+main()

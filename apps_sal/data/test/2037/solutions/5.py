@@ -2,7 +2,7 @@ import sys
 from collections import defaultdict
 input = sys.stdin.readline
 
-n, m  = tuple(map(int, input().split()))
+n, m = tuple(map(int, input().split()))
 a = list(map(int, input().split()))
 
 s = {}
@@ -32,8 +32,3 @@ for t in a:
 
 
 print(''.join(list(map(str, ans))))
-
-
-
-
-

@@ -38,7 +38,9 @@ def solve():
         return "Infinity"
     return max_rating
 
+
 def __starting_point():
     print(solve())
+
 
 __starting_point()

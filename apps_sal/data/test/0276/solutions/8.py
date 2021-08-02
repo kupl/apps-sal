@@ -17,4 +17,3 @@ for i in range(n):
 print(len(ans))
 for a in ans:
     print(a)
-

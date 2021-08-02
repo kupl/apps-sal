@@ -6,6 +6,5 @@ for i in range(n):
     i = a.index(s)
     a.pop(i)
     b.pop(i)
-print(6-n)
-for i in b:print(i)
-
+print(6 - n)
+for i in b: print(i)

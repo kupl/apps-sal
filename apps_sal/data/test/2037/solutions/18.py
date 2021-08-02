@@ -2,12 +2,13 @@ from heapq import heappush, heappop
 from collections import defaultdict
 
 num_difs, num_probs = [int(x) for x in input().split()]
-probs = [int(x)-1 for x in input().split()]
+probs = [int(x) - 1 for x in input().split()]
 
 
 def root_not_uptodate(heap):
     val, idx = heap[0]
     return dif_counts[idx] != val
+
 
 is_round = [False for _ in range(num_probs)]
 heap = [(0, idx) for idx in range(num_difs)]
@@ -25,4 +26,3 @@ for i, dif in enumerate(probs):
         is_round[i] = True
 
 print(''.join('1' if is_r else '0' for is_r in is_round))
-

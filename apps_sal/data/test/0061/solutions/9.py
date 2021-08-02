@@ -18,5 +18,3 @@ elif ans > ans1:
     print(">")
 else:
     print("=")
-
-

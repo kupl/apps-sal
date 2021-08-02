@@ -16,4 +16,3 @@ if n1 == n2:
     print("=")
 if n1 > n2:
     print(">")
-

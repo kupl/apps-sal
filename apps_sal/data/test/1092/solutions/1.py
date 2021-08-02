@@ -8,8 +8,10 @@ for i in range(1, 1010):
     rfact.append((rfact[-1] * pow(i, MOD - 2, MOD)) % MOD)
     p2.append((p2[-1] * 2) % MOD)
 
+
 def C(n, k):
     return (fact[n] * rfact[k] * rfact[n - k]) % MOD
+
 
 n, m = list(map(int, input().split()))
 pos = sorted(list(map(int, input().split()))) + [n + 1]
@@ -26,4 +28,3 @@ for x in pos:
     n -= v
 
 print(ans)
-

@@ -47,4 +47,3 @@ elif u == inf:
     print("Infinity")
 else:
     print(u + diff)
-

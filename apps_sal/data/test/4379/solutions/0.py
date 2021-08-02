@@ -11,4 +11,3 @@ for i, x in enumerate(a):
         v += 1
 print(len(seq))
 print(*seq)
-

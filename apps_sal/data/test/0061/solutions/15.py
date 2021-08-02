@@ -20,4 +20,3 @@ elif nB > nY:
     print(">")
 else:
     print("<")
-

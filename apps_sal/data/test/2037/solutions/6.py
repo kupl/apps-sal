@@ -1,7 +1,7 @@
 n, m = map(int, input().split())
 mass = list(map(int, input().split()))
 wuneed = set()
-for i in range(1, n+1):
+for i in range(1, n + 1):
     wuneed.add(i)
 bank = dict()
 for tutu in mass:

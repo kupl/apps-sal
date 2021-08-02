@@ -15,4 +15,3 @@ elif ansx > ansy:
     print('>')
 else:
     print('<')
-

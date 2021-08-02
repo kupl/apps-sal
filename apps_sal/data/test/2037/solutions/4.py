@@ -18,4 +18,3 @@ for num in a:
     else:
         ans.append('0')
 print(''.join(ans))
-

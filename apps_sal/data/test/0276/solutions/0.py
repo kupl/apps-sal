@@ -8,4 +8,3 @@ for i in range(6):
 print(len(sol))
 for i in sol:
     print(i)
-

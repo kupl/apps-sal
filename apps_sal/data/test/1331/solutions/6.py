@@ -1,6 +1,6 @@
 from collections import deque
 
-n,m,k = [int(i) for i in input().split()]
+n, m, k = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 a = sorted(a)
 a = deque(a)
@@ -27,4 +27,3 @@ while n > 0:
     # print(e, c, s, r, result)
 
 print(result)
-

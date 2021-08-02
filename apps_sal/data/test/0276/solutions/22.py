@@ -19,4 +19,3 @@ if 'yellow' not in c:
 print(len(d))
 for i in d:
     print(i)
-

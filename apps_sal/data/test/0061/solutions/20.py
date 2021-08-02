@@ -11,8 +11,8 @@ xx = sum(v * bx**(len(x) - i - 1) for i, v in enumerate(x))
 yy = sum(v * by**(len(y) - i - 1) for i, v in enumerate(y))
 
 if xx < yy:
-	print('<')
+    print('<')
 elif xx == yy:
-	print('=')
+    print('=')
 else:
-	print('>')
+    print('>')

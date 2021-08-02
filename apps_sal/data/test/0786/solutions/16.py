@@ -7,7 +7,7 @@ else:
     x = 1899
     y = None
 proof = True
-for i in range (n - 1):
+for i in range(n - 1):
     if (x != None):
         x += c
     if (y != None):

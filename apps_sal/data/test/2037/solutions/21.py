@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
-a = list(map(lambda x: int(x)-1, input().split()))
+a = list(map(lambda x: int(x) - 1, input().split()))
 
-problems = [0]*N
+problems = [0] * N
 count = 0
 ans = []
 append = ans.append

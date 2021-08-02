@@ -13,7 +13,7 @@ for i in range(len(a)):
             z += 1
         j += 1
     if j - i - z >= k:
-        const =  j - i - k - z + 1
+        const = j - i - k - z + 1
         c = 0
         ct = 0
         while (ct < const):
@@ -25,4 +25,3 @@ for i in range(len(a)):
                     z += 1
             c += 1
 print(ans)
-
