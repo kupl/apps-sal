@@ -24,5 +24,3 @@ while i < j:
 #    print(i, j, sum1, sum2)
 
 print(ans)
-
-

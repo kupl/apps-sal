@@ -29,4 +29,3 @@ for x in range(1, m):
     ans_min = min(ans_min, ans_x)
     ans_prev = ans_x
 print(ans_min)
-

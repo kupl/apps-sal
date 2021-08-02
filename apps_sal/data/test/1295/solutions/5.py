@@ -16,7 +16,6 @@ def min_dist_to_tower(a, x):
         return w
 
 
-
 n, m = map(int, input().split())
 houses = list(map(int, input().split()))
 towers = list(map(int, input().split()))

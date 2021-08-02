@@ -17,4 +17,3 @@ while indexLeft <= indexRight:
     if totalRight == totalLeft:
         maxTotal = max(maxTotal, totalLeft)
 print(maxTotal)
-

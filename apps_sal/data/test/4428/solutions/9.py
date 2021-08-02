@@ -27,4 +27,3 @@ while i + j <= n:
         return
 
 print(ans)
-

@@ -13,6 +13,5 @@ if hh < 20:
     diff *= d
     h += diff
     res = min(res, int(ceil(h / n)) * 0.8 * c)
-    
-print(res)
 
+print(res)

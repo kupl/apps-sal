@@ -10,5 +10,6 @@ for i, q in enumerate(p):
         q.sort()
         k = q[len(q) // 2]
         d = sum(abs(i - j) - abs(k - j) for j in q)
-        if d > s: s = d
+        if d > s:
+            s = d
 print(sum(abs(t[i + 1] - t[i]) for i in range(m - 1)) - s)

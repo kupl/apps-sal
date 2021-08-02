@@ -10,4 +10,3 @@ if tm1 <= tm <= tm2:
 else:
     tm3 = tm1 - tm
     print('{:.16f}'.format(min(ans, (H + N - 1 + D * tm3) // N * after)))
-

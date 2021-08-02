@@ -7,6 +7,7 @@ def solve():
         ans += 1
     print(ans)
 
+
 t = int(input())
 for _ in range(t):
     solve()

@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 class BIT:
     def __init__(self, size):
         self.bit = [0] * (size + 1)
@@ -20,13 +21,14 @@ class BIT:
             self.bit[i] += x
             i += i & -i
 
+
 n, m = list(map(int, input().split()))
 a = list([int(x) - 1 for x in input().split()])
 
 bit0 = BIT(m)
 bit1 = BIT(m)
-for i in range(n-1):
-    x, y = a[i], a[i+1]
+for i in range(n - 1):
+    x, y = a[i], a[i + 1]
     bit1.add(0, (y - x) % m)
     if (y - x) % m < 2:
         continue
@@ -48,4 +50,3 @@ for i in range(n-1):
 
 ans = min(bit0.sum(i) * i + bit1.sum(i) for i in range(m))
 print(ans)
-

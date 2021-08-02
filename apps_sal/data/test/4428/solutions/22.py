@@ -5,7 +5,7 @@ numbers = list(map(int, input().split(' ')))
 lastResult = 0
 
 sum1, sum3 = 0, 0
-i1, i3 = 0, length-1
+i1, i3 = 0, length - 1
 
 while True:
     if i1 > i3:

@@ -17,6 +17,7 @@ def profit(a, old_val):
         sum_new += abs(i - med)
     return sum_old - sum_new
 
+
 n, m = [int(c) for c in input().split()]
 pages = [int(c) for c in input().split()]
 
@@ -44,5 +45,3 @@ for i in count:
 
 
 print(current_page_switches - max_profit)
-
-

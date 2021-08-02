@@ -14,4 +14,3 @@ if d_time <= 0:
 
 else:
     print('{:.4f}'.format(min(ceil(H / N) * C, ceil((H + D * d_time) / N) * c)))
-

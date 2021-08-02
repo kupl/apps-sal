@@ -19,7 +19,7 @@ def main():
             b[prev + 1] += 1
             b[cur] -= 1
         else:
-            if (prev+1) % M > 0:
+            if (prev + 1) % M > 0:
                 b[(prev + 1) % M] += 1
             b[0] += 1
             b[cur] -= 1
@@ -59,5 +59,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

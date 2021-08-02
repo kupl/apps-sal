@@ -18,4 +18,3 @@ for x in gor:
             r = max(r, min(vysh[vh] - x, x - vysh[vh - 1]))
 
 print(r)
-

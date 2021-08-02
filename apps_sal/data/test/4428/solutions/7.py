@@ -17,8 +17,7 @@ for i, d in enumerate(D[::-1]):
 sums1 = sorted(list(sums1.items()), reverse=True)
 answer = 0
 for s, i in sums1:
-    if s in sums2 and sums2[s]+i+2 <= n:
+    if s in sums2 and sums2[s] + i + 2 <= n:
         answer = s
         break
 print(answer)
-

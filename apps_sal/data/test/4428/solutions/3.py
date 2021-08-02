@@ -19,5 +19,3 @@ while a <= b:
         s = sum1
 
 print(s)
-
-

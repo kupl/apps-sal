@@ -1,7 +1,7 @@
+from collections import Counter
 import sys
 sys.setrecursionlimit(10**7)
 input = sys.stdin.readline
-from collections import Counter
 
 n, m = [int(item) for item in input().split()]
 a = [int(item) - 1 for item in input().split()]
@@ -23,9 +23,9 @@ for a1, a2 in zip(a, a[1:]):
         cnt_r[add] += 1
         cnt_r[sub] -= 1
         cnt_r[0] += 1
-        cnt_r[m] -=1
+        cnt_r[m] -= 1
 for i in range(m):
-    cnt_r[i+1] += cnt_r[i]
+    cnt_r[i + 1] += cnt_r[i]
 
 for i in range(1, m):
     ans[i] = ans[i - 1] - cnt_r[i] + cnt_t[i - 1]

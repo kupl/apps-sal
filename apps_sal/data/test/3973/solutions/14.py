@@ -5,6 +5,7 @@ class BIT():
     get_val: i番目の値を求める
     i, l, rは0-indexed
     """
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -27,7 +28,6 @@ class BIT():
         """区間[l, r)にvalを加える"""
         self._add(r, val)
         self._add(l, -val)
-
 
 
 n, m = map(int, input().split())

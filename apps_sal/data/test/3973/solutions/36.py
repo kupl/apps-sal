@@ -10,7 +10,6 @@ def solve(n, m, a):
         s.append((a[i], i))
     s.sort()
 
-
     r = [0] * (m + 1)
     c = 0
     t = 0

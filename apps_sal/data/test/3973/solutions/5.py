@@ -1,12 +1,13 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LI1(): return list(map(int1, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
+
 
 def main():
     n, m = MI()
@@ -37,5 +38,5 @@ def main():
     ans = min(pp[i] * i + qq[i] for i in range(m))
     print(ans)
 
-main()
 
+main()

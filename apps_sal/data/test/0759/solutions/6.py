@@ -12,4 +12,3 @@ else:
     hunger_then = (thenminutes - curminutes) * d + h
     # print('now', cost_now)
     print(min(cost_now, (hunger_then + n - 1) // n * c * 0.8))
-

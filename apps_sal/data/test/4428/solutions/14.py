@@ -11,7 +11,6 @@ while i < j:
         j -= 1
         s2 += a[j]
 
-
     else:
         i += 1
         s1 += a[i]

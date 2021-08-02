@@ -8,4 +8,3 @@ for i in range(2):
 X = int("".join(X))
 Y = int(Num[2])
 print((X + Y))
-
