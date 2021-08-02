@@ -48,15 +48,15 @@ if max3 != -inf:
             if A[q] == max3:
                 A[q] += 1;
                 cnt += 1;
-            q+= 1;
+            q += 1;
         #print(n - izm1);
-        #print(*A);
+        # print(*A);
     else:
-        #print(izm2);
+        # print(izm2);
         cnt = 0;
         q = 0;
         while cnt < izm2 // 2:
-            #print(cnt);
+            # print(cnt);
             if A[q] == max2:
                 A[q] -= 1;
                 cnt += 1;

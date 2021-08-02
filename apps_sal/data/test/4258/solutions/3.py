@@ -1,4 +1,3 @@
-a,b,t=list(map(int,input().split()))
+a, b, t = list(map(int, input().split()))
 
-print((b*(t//a)))
-
+print((b * (t // a)))

@@ -24,10 +24,10 @@ else:
         else:
             u[2] += 1
     if (min(u[0], u[1]) * 2 > u[2]):
-        while min1 == a[k] and max1 == a[-1-k]:
+        while min1 == a[k] and max1 == a[-1 - k]:
             x += [sred, sred]
             a[k] = -200001
-            a[-1-k] = -200001
+            a[-1 - k] = -200001
             i += 2
             k += 1
         print(n - i)

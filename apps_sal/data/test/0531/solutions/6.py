@@ -1,12 +1,14 @@
 import itertools
 from collections import Counter
 
+
 def from_edges(a, b, c):
     m = min(a, c)
     ap = a - m
     bp = 2 * m + b
     cp = c - m
     return ap, bp, cp
+
 
 def to_edges(a, b, c):
     h = b // 2
@@ -15,8 +17,10 @@ def to_edges(a, b, c):
     cp = c + h
     return ap, bp, cp
 
+
 def score(a, b, c, ap, bp, cp):
     return min(a, ap) + min(b, bp) + min(c, cp)
+
 
 def gen_ans(s, ap, bp, cp):
     return itertools.chain(
@@ -24,6 +28,7 @@ def gen_ans(s, ap, bp, cp):
         itertools.repeat(s, bp),
         itertools.repeat(s + 1, cp)
     )
+
 
 n = int(input())
 inp = input()
@@ -59,4 +64,3 @@ else:
         ap, bp, cp, score = ap2, bp2, cp2, score2
     print(score)
     print(' '.join(str(v) for v in gen_ans(s, ap, bp, cp)))
-

@@ -100,4 +100,3 @@ if n > 1:
     ans = ans * solve(n, 1) % 1000000007
 
 print(ans)
-

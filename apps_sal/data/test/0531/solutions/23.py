@@ -44,5 +44,3 @@ else:
         print(" ".join([str(mi)] * mi_c), end=" ")
     if ma_c > 0:
         print(" ".join([str(ma)] * ma_c), end=" ")
-
-

@@ -8,9 +8,9 @@ for i in range(2**n):
     for j in range(m):
         cnt = 0
         for l in range(1, len(ks[j])):
-            if (i>>(ks[j][l]-1))&1 == 1:
+            if (i >> (ks[j][l] - 1)) & 1 == 1:
                 cnt += 1
-        if cnt%2 == p[j]:
+        if cnt % 2 == p[j]:
             bnt += 1
     if bnt == m:
         ans += 1

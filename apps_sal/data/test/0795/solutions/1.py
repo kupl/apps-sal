@@ -1,14 +1,18 @@
 import math
 n = int(input())
+
+
 def foo(a, b):
     if b == 0:
         return a;
     else:
         return foo(b, a % b);
+
+
 sqrt_n = int(math.sqrt(n)) + 2
 res = 0;
-for i in range (1, sqrt_n):
-    for j in range (i, sqrt_n):
+for i in range(1, sqrt_n):
+    for j in range(i, sqrt_n):
         if i * i + j * j > n:
             break;
         else:
@@ -17,5 +21,4 @@ for i in range (1, sqrt_n):
                 continue;
             else:
                 res = res + (n // (i * i + j * j));
-print (res)
-
+print(res)

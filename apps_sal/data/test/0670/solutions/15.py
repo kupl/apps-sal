@@ -3,14 +3,18 @@
 from fractions import Fraction
 from math import sqrt
 
+
 def gety(a, b, c, x):
     return -Fraction(a * x + c, b)
+
 
 def getx(a, b, c, y):
     return -Fraction(b * y + c, a)
 
+
 def ds(x1, y1, x2, y2):
     return sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+
 
 a, b, c = list(map(int, input().split()))
 x1, y1, x2, y2 = list(map(int, input().split()))
@@ -40,4 +44,3 @@ dq4 = ds(nx, ny, tx, ty) + ds(nx, ny, x1, y1) + ds(tx, ty, x2, y2)
 #print([dq, dq1, dq2, dq3, dq4])
 dqmin = min([dq, dq1, dq2, dq3, dq4])
 print(dqmin)
-

@@ -1,5 +1,6 @@
 import heapq
 
+
 def run():
     n, k, d = list(map(int, input().split()))
     a = sorted(map(int, input().split()))
@@ -8,7 +9,7 @@ def run():
     start = 0
     end = 0
     while start < n:
-        while end < n-1 and a[end+1] - a[start] <= d:
+        while end < n - 1 and a[end + 1] - a[start] <= d:
             end += 1
         max_size[start] = end - start + 1
         start += 1
@@ -37,5 +38,5 @@ def run():
     else:
         print("NO")
 
-run()
 
+run()

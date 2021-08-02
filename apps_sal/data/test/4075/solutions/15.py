@@ -5,7 +5,7 @@ N, M = (int(x) for x in input().split())
 
 S = []
 for i in range(M):
-    items = [int(x)-1 for x in input().split()]
+    items = [int(x) - 1 for x in input().split()]
     S.append(items[1:])
 
 P = [int(x) for x in input().split()]
@@ -23,4 +23,3 @@ for bit in range(2**N):
     if ok:
         ret += 1
 print(ret)
-

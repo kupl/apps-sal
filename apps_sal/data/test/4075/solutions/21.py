@@ -9,7 +9,7 @@ for _ in range(M):
     S.append(ks[1:])
 p = list(map(int, input().split()))
 
-onoff = list(product([0, 1], repeat = N))
+onoff = list(product([0, 1], repeat=N))
 
 ans = 0
 for i in onoff:
@@ -17,11 +17,10 @@ for i in onoff:
     for ind, s in enumerate(S):
         state = 0
         for o in s:
-            state += i[o-1]
+            state += i[o - 1]
         if state % 2 == p[ind]:
             cnt += 1
     if cnt == M:
         ans += 1
 
 print(ans)
-

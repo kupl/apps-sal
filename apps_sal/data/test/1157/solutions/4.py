@@ -21,5 +21,3 @@ for i in range(n)[::-1]:
     ans_pos += tmp_pos
     ans_neg += tmp_neg
 print(ans_neg, ans_pos)
-
-

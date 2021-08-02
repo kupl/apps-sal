@@ -1,6 +1,6 @@
-n,m = map(int,input().split())
-s = [list(map(int,input().split())) for i in range(m)]
-p = list(map(int,input().split()))
+n, m = map(int, input().split())
+s = [list(map(int, input().split())) for i in range(m)]
+p = list(map(int, input().split()))
 ans = 0
 for i in range(2 ** n):
     t = ['off'] * n
@@ -14,8 +14,8 @@ for i in range(2 ** n):
     flg = True
     for j in range(m):
         z = 0
-        for k in range(1,s[j][0]+1):
-            if t[s[j][k]-1] == 'on':
+        for k in range(1, s[j][0] + 1):
+            if t[s[j][k] - 1] == 'on':
                 z += 1
         if z % 2 != p[j]:
             flg = False

@@ -12,7 +12,7 @@ for i in range(2**n):
     for k in range(m):
         count = 0
         for l in range(ks[k][0]):
-            if switch[ks[k][l+1]-1] == 'on':
+            if switch[ks[k][l + 1] - 1] == 'on':
                 count += 1
         if count % 2 != p[k]:
             judge = False

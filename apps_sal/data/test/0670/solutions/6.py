@@ -1,14 +1,16 @@
 from math import sqrt
 
+
 def sqr(a):
-        return a * a
+    return a * a
+
 
 a, b, c = [float(i) for i in input().split()]
 x1, y1, x2, y2 = [float(i) for i in input().split()]
 
 if a == 0 or b == 0:
-        print(abs(x1 - x2) + abs(y1 - y2))
-        return
+    print(abs(x1 - x2) + abs(y1 - y2))
+    return
 
 c1_y = -(a * x1 + c) / b
 c2_y = -(a * x2 + c) / b
@@ -30,4 +32,3 @@ now = abs(c1_x - x1) + sqrt(sqr(c1_x - x2) + sqr(y1 - c2_y)) + abs(c2_y - y2);
 ans = min(ans, now);
 
 print("%.30f" % ans)
-

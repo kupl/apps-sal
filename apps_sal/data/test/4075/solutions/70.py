@@ -17,6 +17,7 @@ def f(i):
     f(i + 1)
     return
 
+
 n, m = map(int, input().split())
 s = [list(map(int, input().split())) for _ in range(m)]
 p = list(map(int, input().split()))

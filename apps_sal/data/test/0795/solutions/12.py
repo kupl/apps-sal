@@ -5,7 +5,6 @@ def gcd(a, b):
     return gcd(b, c) if c else b
 
 
-
 n = int(input())
 
 a, b = int((n // 2) ** 0.5) + 1, int((n - 1) ** 0.5) + 1

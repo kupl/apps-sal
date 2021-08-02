@@ -8,5 +8,5 @@ for i in range(n):
     b[i] = j
 c = [0] * n
 for i in range(k - 1, n):
-    c[i] = c[i - 1] + int(i - b[i] + 1 >= k and (b[i] == 0 or c[i - k] > c[b[i] - 2] or (b[i] == 1 and c[i-k]> c[0])))
+    c[i] = c[i - 1] + int(i - b[i] + 1 >= k and (b[i] == 0 or c[i - k] > c[b[i] - 2] or (b[i] == 1 and c[i - k] > c[0])))
 print('YES' if n < 2 or c[n - 1] > c[n - 2] else 'NO')

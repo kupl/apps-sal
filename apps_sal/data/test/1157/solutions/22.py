@@ -22,5 +22,3 @@ for i in arr:
     en = newNeg
 
 print(ln + en, lp + ep)
-
-

@@ -1,3 +1,3 @@
-a,b,t = map(int,input().split())
+a, b, t = map(int, input().split())
 x = t // a
 print(x * b)

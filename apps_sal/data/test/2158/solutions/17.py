@@ -14,21 +14,24 @@ for i in range(n - 1):
     if v not in dicts:
         dicts[v] = []
     dicts[v].append((u, weight))
-maxans = 0 
+maxans = 0
 
-def dfs(cur, par = -1, sums = 0):
+
+def dfs(cur, par=-1, sums=0):
     nonlocal dicts
     nonlocal maxans
     for element in dicts[cur]:
         nextelement = element[0]
         nextweight = element[1]
         if par != nextelement:
-            sums+=nextweight
+            sums += nextweight
             if maxans <= sums:
-                maxans = sums 
-            dfs(nextelement , cur, sums)
-            sums-=nextweight
-dfs(0,-1, 0)
+                maxans = sums
+            dfs(nextelement, cur, sums)
+            sums -= nextweight
+
+
+dfs(0, -1, 0)
 print(maxans)
 print()
 
@@ -44,9 +47,4 @@ print()
 #   }
 # }
 
-#print(dicts)
-
-
-
-
-
+# print(dicts)

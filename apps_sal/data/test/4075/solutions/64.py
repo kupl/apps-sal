@@ -1,5 +1,5 @@
 N, M = list(map(int, input().split()))
-S = [0]*M
+S = [0] * M
 answer = 0
 
 for i in range(M):
@@ -14,8 +14,8 @@ for i in range(2**N):
     for j in range(M):
         on = 0
         for k in range(S[j][0]):
-            on += int(bi[-S[j][k+1]])
-        if on%2 == P[j]:
+            on += int(bi[-S[j][k + 1]])
+        if on % 2 == P[j]:
             count += 1
     if count == M:
         answer += 1

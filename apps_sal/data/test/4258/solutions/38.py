@@ -9,4 +9,3 @@ while time < t + 0.5:
     time += 1
 
 print(biscuit)
-

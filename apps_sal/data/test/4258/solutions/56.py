@@ -1,4 +1,4 @@
 a, b, c = map(int, input().split())
-d = int(c/a)
+d = int(c / a)
 
-print(b*d)
+print(b * d)

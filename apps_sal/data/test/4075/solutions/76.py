@@ -2,8 +2,8 @@ N, M = map(int, input().split())
 A = [[0 for _ in range(N)] for _ in range(M)]
 for i in range(M):
     S = list(map(int, input().split()))
-    for j in S[1:]: 
-        A[i][j-1] = 1
+    for j in S[1:]:
+        A[i][j - 1] = 1
 
 P = list(map(int, input().split()))
 
@@ -20,8 +20,8 @@ for bit in range(2**N):
     for i in range(M):
         if P[i] == X[i]:
             tmp += 1
-    
-    if tmp == M: 
+
+    if tmp == M:
         ans += 1
 
 print(ans)

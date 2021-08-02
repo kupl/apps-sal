@@ -15,6 +15,7 @@ isa = lambda: stdin.readline().strip().split()
 setrecursionlimit(100000)
 mod = 1000000007
 
+
 def getAns(d):
     queue = [[0, 0]]
     seen = set()
@@ -36,4 +37,3 @@ for i in range(n - 1):
     d.setdefault(a, []).append([b, cost])
     d.setdefault(b, []).append([a, cost])
 print(getAns(d))
-
