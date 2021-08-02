@@ -8,6 +8,6 @@ def solve(n, v):
         cost += i
     return cost
 
+
 n, v = list(map(int, input().split()))
 print(solve(n, v))
-

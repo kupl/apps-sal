@@ -19,4 +19,3 @@ for x, row in enumerate(board):
             valid = False
 
 print('YES' if valid else 'NO')
-

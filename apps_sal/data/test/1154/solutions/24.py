@@ -14,8 +14,3 @@ while num < n:
         time += d
         s = max(s - d * k, 0)
 print(time + (s + k - 1) // k)
-        
-    
-
-        
-

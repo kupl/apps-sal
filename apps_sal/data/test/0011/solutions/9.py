@@ -5,6 +5,7 @@ def gcd(a, b):
         b = c
     return b
 
+
 n, a, b, p, q = map(int, input().split())
 if (p > q):
     c1 = p

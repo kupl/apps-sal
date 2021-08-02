@@ -3,8 +3,10 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 def lcm(a, b):
     return (a * b) // gcd(a, b)
+
 
 def main():
     n, a, b, p, q = list(map(int, input().split()))
@@ -13,5 +15,5 @@ def main():
     else:
         print((n // a) * p + (n // b) * q - (n // lcm(a, b)) * min(p, q))
 
-main()
 
+main()

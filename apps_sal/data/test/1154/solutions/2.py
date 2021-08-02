@@ -18,4 +18,3 @@ while i < n:
 if rem > 0:
     ans += 1
 print(ans)
-

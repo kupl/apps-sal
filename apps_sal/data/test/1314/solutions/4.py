@@ -8,4 +8,3 @@ for _2 in range(n):
     ai, bi = list(map(int, input().split()))
     am, bm = min((ai, bi), (am, bm))
 print(am + xm, bm + ym)
-

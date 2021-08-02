@@ -12,5 +12,3 @@ for i in range(n):
 if rem != 0:
     ans += 1
 print(ans)
-    
-

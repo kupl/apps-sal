@@ -7,7 +7,7 @@ def resolve(in_):
 
     if N % 2:
         return 'No'
-    
+
     n2 = N // 2
     return 'Yes' if S[:n2] == S[n2:] else 'No'
 
@@ -19,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

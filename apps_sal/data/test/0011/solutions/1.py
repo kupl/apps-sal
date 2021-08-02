@@ -13,14 +13,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; If not, see <http://www.gnu.org/licenses/>.
 
+
 def gcd(a, b):
     while b != 0:
         a, b = b, a % b
     return a
+
 
 n, a, b, p, q = list(map(int, input().split()))
 
 s = (n // a) * p + (n // b) * q
 s -= (n // (a * b // gcd(a, b))) * min(p, q)
 print(s)
-

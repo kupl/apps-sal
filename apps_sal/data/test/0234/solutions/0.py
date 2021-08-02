@@ -22,4 +22,3 @@ for Y in range(r):
             ok = False
 
 print(["NO", "YES"][ok])
-

@@ -1,15 +1,15 @@
-#JMD
-#Nagendra Jha-4096
+# JMD
+# Nagendra Jha-4096
 
- 
+
 import sys
 import math
 
 #import fractions
 #import numpy
- 
+
 ###File Operations###
-fileoperation=0
+fileoperation = 0
 if(fileoperation):
     orig_stdout = sys.stdout
     orig_stdin = sys.stdin
@@ -19,35 +19,35 @@ if(fileoperation):
     sys.stdout = outputfile
 
 ###Defines...###
-mod=1000000007
- 
-###FUF's...###
-def nospace(l):
-    ans=''.join(str(i) for i in l)
-    return ans
- 
- 
- 
-##### Main ####
-t=1
-for tt in range(t):
-    #n=int(input())
-    n,v= map(int, sys.stdin.readline().split(' '))
-    ans=0
-    pe=0
+mod = 1000000007
 
-    for i in range(1,n+1):
-        dist=n-i
-        if(pe<dist):
-            ans+=(min(v,dist)-pe)*i
-            pe+=(min(v,dist)-pe)
-        pe-=1
+###FUF's...###
+
+
+def nospace(l):
+    ans = ''.join(str(i) for i in l)
+    return ans
+
+
+##### Main ####
+t = 1
+for tt in range(t):
+    # n=int(input())
+    n, v = map(int, sys.stdin.readline().split(' '))
+    ans = 0
+    pe = 0
+
+    for i in range(1, n + 1):
+        dist = n - i
+        if(pe < dist):
+            ans += (min(v, dist) - pe) * i
+            pe += (min(v, dist) - pe)
+        pe -= 1
     print(ans)
 
-
     #a=list(map(int,sys.stdin.readline().split(' ')))
-    
-    
+
+
 #####File Operations#####
 if(fileoperation):
     sys.stdout = orig_stdout

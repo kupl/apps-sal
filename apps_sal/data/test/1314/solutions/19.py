@@ -1,5 +1,10 @@
+from collections import Counter
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 '''
 2
 2 5
@@ -8,21 +13,19 @@ def mi():
 -1 -3
 '''
 n = int(input())
-c = [0]*n
+c = [0] * n
 for i in range(n):
     c[i] = list(mi())
-d = [0]*n
+d = [0] * n
 for i in range(n):
     d[i] = list(mi())
-possans = [0]*(n*n)
+possans = [0] * (n * n)
 k = 0
 for i in range(n):
     for j in range(n):
-        t1 = (c[i][0]+d[j][0],c[i][1]+d[j][1])
+        t1 = (c[i][0] + d[j][0], c[i][1] + d[j][1])
         possans[k] = t1
-        k+=1
-from collections import Counter
+        k += 1
 c = Counter(possans)
 c = sorted(c, key=c.get)
 print(*c[-1])
-

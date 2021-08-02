@@ -13,6 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; If not, see <http://www.gnu.org/licenses/>.
 
+
 def main():
     n, h, k = list(map(int, input().split()))
     dat = list(map(int, input().split()))
@@ -25,10 +26,10 @@ def main():
             mindecr = cur + dat[ptr] - h
             dt = (mindecr + k - 1) // k
             t += dt
-            
+
             cur = max(0, cur - dt * k)
             continue
-        
+
         while ptr != len(dat) and cur + dat[ptr] <= h:
             cur += dat[ptr]
             ptr += 1
@@ -36,5 +37,6 @@ def main():
         t += 1
     t += (cur + k - 1) // k
     print(t)
-main()
 
+
+main()

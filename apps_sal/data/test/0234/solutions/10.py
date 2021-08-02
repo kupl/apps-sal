@@ -12,15 +12,15 @@ for i in range(1, n + 1):
         else:
             arr[i].append(int(j))
     arr[i].append(0)
-    
+
 flag = True
 for i in range(1, n + 1):
     for j in range(1, m + 1):
-        #print(i, j, ((arr[i - 1][j - 1] == -1) + (arr[i - 1][j] == -1) + (arr[i - 1][j + 1] == -1) +\
+        # print(i, j, ((arr[i - 1][j - 1] == -1) + (arr[i - 1][j] == -1) + (arr[i - 1][j + 1] == -1) +\
         #   (arr[i][j - 1] == -1) + (arr[i][j + 1] == -1) +\
         #   (arr[i + 1][j - 1] == -1) + (arr[i + 1][j] == -1) + (arr[i + 1][j + 1] == -1)))
-        if (arr[i][j] != -1) and (((arr[i - 1][j - 1] == -1) + (arr[i - 1][j] == -1) + (arr[i - 1][j + 1] == -1) +\
-           (arr[i][j - 1] == -1) + (arr[i][j + 1] == -1) +\
+        if (arr[i][j] != -1) and (((arr[i - 1][j - 1] == -1) + (arr[i - 1][j] == -1) + (arr[i - 1][j + 1] == -1) +
+           (arr[i][j - 1] == -1) + (arr[i][j + 1] == -1) +
            (arr[i + 1][j - 1] == -1) + (arr[i + 1][j] == -1) + (arr[i + 1][j + 1] == -1)) != arr[i][j]):
             flag = False
             break
@@ -30,4 +30,3 @@ if flag:
     print('YES')
 else:
     print('NO')
-

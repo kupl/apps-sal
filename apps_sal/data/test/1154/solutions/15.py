@@ -9,7 +9,7 @@ for p in potatoes:
     if p + filledSpace <= h:
         filledSpace += p
     else:
-        s = math.ceil((p - (h - filledSpace))/k)
+        s = math.ceil((p - (h - filledSpace)) / k)
         if s * k > filledSpace:
             filledSpace = 0
         else:

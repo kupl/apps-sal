@@ -9,4 +9,3 @@ for i in range(1, n):
     x -= 1
 
 print(c)
-

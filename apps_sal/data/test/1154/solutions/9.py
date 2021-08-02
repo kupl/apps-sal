@@ -22,4 +22,3 @@ while True:
     if i == n:
         break
 print(ans)
-
