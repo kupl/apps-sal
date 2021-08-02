@@ -10,4 +10,4 @@ for k in range(26):
         return
     else:
         if k == 25:
-            print('A') 
+            print('A')

@@ -1,5 +1,5 @@
-b=input()
-le=("abcdefghijklmnopqrstuvwxyz")
+b = input()
+le = ("abcdefghijklmnopqrstuvwxyz")
 if b in le:
     print("a")
 else:

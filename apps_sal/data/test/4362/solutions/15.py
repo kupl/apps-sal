@@ -1,6 +1,6 @@
-poe='abcdefghijklmnopqrstuvwxyz'
+poe = 'abcdefghijklmnopqrstuvwxyz'
 
-s=input()
+s = input()
 
 if s in poe:
     print('a')

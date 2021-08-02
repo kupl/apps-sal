@@ -1,1 +1,1 @@
-print("A"if(s:=input())==s.upper()else"a")
+print("A"if(s := input()) == s.upper()else"a")

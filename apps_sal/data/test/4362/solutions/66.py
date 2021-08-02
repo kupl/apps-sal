@@ -1,5 +1,5 @@
-n  = input()
+n = input()
 if n.isupper():
-  print("A")
+    print("A")
 elif n.islower():
-  print("a")
+    print("a")

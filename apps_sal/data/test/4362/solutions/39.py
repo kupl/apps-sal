@@ -1,5 +1,5 @@
 char = input()
 if char.isupper():
-  print("A")
+    print("A")
 else:
-  print("a")
+    print("a")

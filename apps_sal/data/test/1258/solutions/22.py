@@ -16,13 +16,13 @@ for _ in range(n - 2):
     a, b, c = arr
     for e in arr:
         cnt[e] += 1
-    
+
     for p, tr in [((a, b), c), ((a, c), b), ((b, c), a)]:
         if p not in g:
             g[p] = []
         rg[tr].append(p)
         g[p].append(tr)
-    
+
 
 cur = None
 for k in cnt:
@@ -54,4 +54,3 @@ while len(res) != n:
         was.add(to)
 
 print(' '.join(res))
-

@@ -1,5 +1,5 @@
-n, m = list(map(int,input().split()))
-ij = [list(map(int,input().split())) for i in range(m)]
+n, m = list(map(int, input().split()))
+ij = [list(map(int, input().split())) for i in range(m)]
 ni = [0] * n
 for i in range(m):
     maxi = 0
@@ -15,5 +15,4 @@ for i in range(n):
     if ni[i] > maxi:
         maxi = ni[i]
         num = i
-print(num+1)
-
+print(num + 1)

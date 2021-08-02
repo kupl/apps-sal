@@ -1,5 +1,5 @@
 alp = input()
-if alp==alp.upper() :
+if alp == alp.upper():
     print("A")
-else :
+else:
     print("a")

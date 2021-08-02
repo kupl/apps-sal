@@ -13,4 +13,3 @@ for i in range(n):
     if p[i] == q:
         print(i + 1)
         break
-

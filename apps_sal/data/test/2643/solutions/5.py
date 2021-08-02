@@ -1,4 +1,5 @@
 # coding: utf-8
+import numpy as np
 import sys
 #from operator import itemgetter
 sysread = sys.stdin.readline
@@ -7,18 +8,19 @@ sysread = sys.stdin.readline
 sys.setrecursionlimit(10**7)
 #import math
 #from itertools import combinations
-import numpy as np
+
+
 def run():
-    k,q = map(int, sysread().split())
-    d = list(map(int,sysread().split()))
+    k, q = map(int, sysread().split())
+    d = list(map(int, sysread().split()))
     d = np.array(d, dtype=np.uint64)
 
-    def check(n ,x, m):
+    def check(n, x, m):
         _d = d % m
         d0 = d % m == 0
         # n_step
-        n_d = (n-1) // k
-        n_rest = (n-1) % k
+        n_d = (n - 1) // k
+        n_rest = (n - 1) % k
         x %= m
         _d_rest, d0_rest = 0, 0
         if n_rest != 0:
@@ -30,13 +32,15 @@ def run():
         # n_same
         n_same = n_d * d0.sum() + d0_rest
 
-        return n-1 - n_same - n_step
-
+        return n - 1 - n_same - n_step
 
     for _ in range(q):
-        n,x,m = map(int, sysread().split())
+        n, x, m = map(int, sysread().split())
         print(int(check(n, x, m)))
+
 
 def __starting_point():
     run()
+
+
 __starting_point()

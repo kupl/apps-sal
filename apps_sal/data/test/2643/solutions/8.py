@@ -10,5 +10,3 @@ for _ in range(q):
     ans -= np.count_nonzero(dm[a:] == 0) * ((n - 1) // k)
     ans -= (x % m + np.sum(dm[:a]) * ((n - 1) // k + 1) + np.sum(dm[a:]) * ((n - 1) // k)) // m
     print(ans)
-
-

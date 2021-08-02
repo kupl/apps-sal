@@ -44,5 +44,3 @@ for i in range(a - 2):
 
 
 print(*B)
-
-

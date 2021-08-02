@@ -1,4 +1,4 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 a = []
 answ = []
 for i in range(m):
@@ -23,6 +23,5 @@ for i in range(len(answ)):
 mn = max(answ_k)
 for i in range(n):
     if answ_k[i] == mn:
-        print(i+1)
+        print(i + 1)
         return
-

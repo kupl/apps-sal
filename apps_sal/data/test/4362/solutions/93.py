@@ -5,4 +5,3 @@ if a.isupper() == True:
 
 else:
     print("a")
-

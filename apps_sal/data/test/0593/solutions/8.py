@@ -1,6 +1,8 @@
 import collections
+
+
 def f():
-    n,m  = [int(c) for c in input().split()]
+    n, m = [int(c) for c in input().split()]
 
     r = []
     for i in range(m):
@@ -17,5 +19,6 @@ def f():
     for k in sorted(c.keys()):
         if c[k] == mm:
             return k
+
 
 print(f())
