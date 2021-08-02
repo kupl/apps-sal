@@ -28,4 +28,3 @@ for i in range(H):
         D[H - i - 1, :] = (D[H - i, :] + 1) * M[H - i - 1, :]
 
 print((max(np.max(L + R + D + U - 3), 0)))
-

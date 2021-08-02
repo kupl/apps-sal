@@ -1,7 +1,7 @@
-a,b,c = map(int,input().split())
-l = [a,b,c]
+a, b, c = map(int, input().split())
+l = [a, b, c]
 
-if len(set(l)) == 2 :
+if len(set(l)) == 2:
     print('Yes')
-else :
+else:
     print('No')

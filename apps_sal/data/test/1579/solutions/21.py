@@ -58,7 +58,7 @@ def mt(f):
 
 @mt
 def slv(N, XY):
-    g = [[] for _ in range((10**5)*2)]
+    g = [[] for _ in range((10**5) * 2)]
     offset = 10**5
     cs = set()
     for x, y in XY:
@@ -99,6 +99,7 @@ def slv(N, XY):
 
     return ans
 
+
 def main():
     N = read_int()
     XY = [read_int_n() for _ in range(N)]
@@ -107,5 +108,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

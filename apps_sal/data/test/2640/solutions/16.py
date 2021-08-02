@@ -8,13 +8,12 @@ for i in range(h):
 right = np.copy(s)
 left = np.copy(s)
 for i in range(1, w):
-    right[:, -i-1] = (right[:, -i] + 1) * s[:, -i-1]
-    left[:, i] = (left[:, i-1] + 1) * s[:, i]
+    right[:, -i - 1] = (right[:, -i] + 1) * s[:, -i - 1]
+    left[:, i] = (left[:, i - 1] + 1) * s[:, i]
 up = np.copy(s)
 down = np.copy(s)
 for i in range(1, h):
-    up[i] = (up[i-1] + 1) * s[i]
-    down[-i-1] = (down[-i] + 1) * s[-i-1]
+    up[i] = (up[i - 1] + 1) * s[i]
+    down[-i - 1] = (down[-i] + 1) * s[-i - 1]
 
 print((np.max(right + left + up + down) - 3))
-

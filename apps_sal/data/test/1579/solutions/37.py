@@ -2,8 +2,8 @@ def main():
     from collections import defaultdict
     import sys
     # functions used
-    r = lambda: sys.stdin.readline().strip()
-    R = lambda: list(map(int, r().split()))
+    def r(): return sys.stdin.readline().strip()
+    def R(): return list(map(int, r().split()))
 
     N = int(r())
     Dic = defaultdict(list)
@@ -44,6 +44,9 @@ def main():
         ans += cntx * cnty - cntdot // 2
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

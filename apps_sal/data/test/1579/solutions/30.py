@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
 
+
 class UnionFind:
     def __init__(self, n):
         self.root = [i for i in range(n)]
@@ -28,13 +29,13 @@ class UnionFind:
 
     def is_same(self, x, y):
         return self.find(x) == self.find(y)
-    
+
 
 def main():
     input = sys.stdin.readline
     V = 10**5  # max size of x
     N = int(input())
-    uft = UnionFind(2*V)
+    uft = UnionFind(2 * V)
     for _ in range(N):
         x, y = list(map(int, input().split()))
         x -= 1
@@ -43,7 +44,7 @@ def main():
 
     cnt_x = defaultdict(lambda: 0)
     cnt_y = defaultdict(lambda: 0)
-    for i in range(2*V):
+    for i in range(2 * V):
         root = uft.find(i)
         if i < V:  # node of x coordinate.
             cnt_x[root] += 1
@@ -59,5 +60,6 @@ def main():
 
 def __starting_point():
     print((main()))
+
 
 __starting_point()

@@ -1,12 +1,14 @@
 import numpy as np
+
+
 def main():
-    printl = lambda l: [print(x) for x in l]
+    def printl(l): return [print(x) for x in l]
     H, W = list(map(int, input().split()))
     A = np.array([[1 if i == '.' else 0 for i in input()] for _ in range(H)])
-    L = np.zeros((H, W), dtype = np.int)
-    R = np.zeros((H, W), dtype = np.int)
-    U = np.zeros((H, W), dtype = np.int)
-    D = np.zeros((H, W), dtype = np.int)
+    L = np.zeros((H, W), dtype=np.int)
+    R = np.zeros((H, W), dtype=np.int)
+    U = np.zeros((H, W), dtype=np.int)
+    D = np.zeros((H, W), dtype=np.int)
     L[:, 0] = A[:, 0]
     for w in range(1, W):
         L[:, w] = (L[:, w - 1] + 1) * A[:, w]
@@ -21,7 +23,9 @@ def main():
         D[h, :] = (D[h + 1, :] + 1) * A[h, :]
     print(np.max(L + R + U + D - 3))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

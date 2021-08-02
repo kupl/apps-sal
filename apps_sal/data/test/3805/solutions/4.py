@@ -10,4 +10,3 @@ for c in input():
 
 stack.pop()
 print("No" if len(stack) else "Yes")
-

@@ -31,4 +31,3 @@ y_cnt = np.bincount(components[PAD:], minlength=PAD * 2)
 # 同じ連結成分である x の数と y の数をかけた数だけその間に辺を張れる
 # すでにある分は引く
 print(((x_cnt * y_cnt).sum() - N))
-

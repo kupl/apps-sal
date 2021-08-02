@@ -2,7 +2,7 @@ import sys
 sys.setrecursionlimit(10**6)
 
 n = int(input())
-edges = [[] for i in range(2*10**5)]
+edges = [[] for i in range(2 * 10**5)]
 for i in range(n):
     xi, yi = map(int, input().split())
     xi -= 1
@@ -11,6 +11,8 @@ for i in range(n):
     edges[yi].append(xi)
 
 already = set([])
+
+
 def dfs(x, y, node):
     if node in already:
         return x, y
@@ -23,8 +25,9 @@ def dfs(x, y, node):
         x, y = dfs(x, y, next_node)
     return x, y
 
+
 num = 0
 for i in range(10**5):
     x, y = dfs(0, 0, i)
     num += x * y
-print(num-n)
+print(num - n)

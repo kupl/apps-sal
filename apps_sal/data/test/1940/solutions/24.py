@@ -11,7 +11,7 @@ for i in arr:
             counterL += 1
         else:
             counterL += (i // (2 * k))
-            y = i - (i // (2 * k))*(2*k)
+            y = i - (i // (2 * k)) * (2 * k)
             if y <= k:
                 if y != 0:
                     counterS += 1
@@ -19,4 +19,3 @@ for i in arr:
                 counterL += 1
 lastCounter = (counterS // 2) + (counterS % 2) + counterL
 print(lastCounter)
-

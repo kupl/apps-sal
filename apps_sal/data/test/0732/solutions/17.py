@@ -18,7 +18,7 @@ mod = pow(10, 9) + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
 def out(var): sys.stdout.write(str(var))
-def outln(var): sys.stdout.write(str(var)+"\n")
+def outln(var): sys.stdout.write(str(var) + "\n")
 def l(): return list(sp())
 def sl(): return list(ssp())
 def sp(): return list(map(int, data().split()))
@@ -48,4 +48,3 @@ if n == pow(10, 9):
     outln(answer[0] + 1)
     return
 outln(answer[0])
-

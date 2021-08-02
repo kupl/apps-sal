@@ -5,6 +5,7 @@ def get_group(x):
     group[g] = re = get_group(g)
     return re
 
+
 def unite(x, y):
     gx = get_group(x)
     gy = get_group(y)
@@ -16,6 +17,7 @@ def unite(x, y):
         group[gy] = gx
         if dx == dy:
             depth[gx] += 1
+
 
 n = int(input())
 group = {}
@@ -45,4 +47,3 @@ ans = 0
 for cx, cy in list(cnt.values()):
     ans += cx * cy
 print((ans - n))
-

@@ -37,4 +37,3 @@ for w in reversed(list(range(0, W - 1))):
 
 ans = np.max(up + down + left + right - 3)
 print(ans)
-

@@ -22,7 +22,6 @@ def main():
             data[y] = x
         return (x != y)
 
-
     N, *XY = map(int, open(0).read().split())
 
     for x, y in zip(*[iter(XY)] * 2):
@@ -37,4 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

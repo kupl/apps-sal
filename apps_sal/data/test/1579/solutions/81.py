@@ -83,4 +83,3 @@ for x, vx in enumerate(ufx.SIZE):
         vy = ufy.size(sxy2[x].pop())
         ans += vx * vy
 print((ans - N))
-

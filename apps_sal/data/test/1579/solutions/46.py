@@ -16,7 +16,8 @@ def main():
     visited = [0] * (M * 2)
     ans = 0
     for s in range(M * 2):
-        if visited[s]: continue
+        if visited[s]:
+            continue
         visited[s] = 1
         dq = deque()
         dq.append(s)
@@ -31,7 +32,8 @@ def main():
                 x += 1
             for u in g[v]:
                 e += 1
-                if visited[u]: continue
+                if visited[u]:
+                    continue
                 visited[u] = 1
                 dq.append(u)
         ans += (sz - x) * x - (e // 2)
@@ -42,5 +44,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

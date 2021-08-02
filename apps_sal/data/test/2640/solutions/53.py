@@ -19,4 +19,3 @@ for j in range(1, W):
     r[:, -j - 1] = (r[:, -j] + 1) * r[:, -j - 1]
 
 print(((u + d + l + r - 3).max()))
-

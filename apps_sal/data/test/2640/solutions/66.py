@@ -32,5 +32,5 @@ def main():
             m = max(m, i - b + max(t[b:i + 1]))
     print(m)
 
-main()
 
+main()

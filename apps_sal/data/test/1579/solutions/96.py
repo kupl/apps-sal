@@ -51,4 +51,3 @@ ans = -n
 for xx, yy in zip(vx, vy):
     ans += xx * yy
 print(ans)
-

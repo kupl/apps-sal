@@ -7,7 +7,7 @@ t = int(input())
 for i in range(t):
     n, k = map(int, input().split())
     for i in range(k):
-        if  (n % 2 == 0):
+        if (n % 2 == 0):
             n += 2 * (k - i)
             break
         else:

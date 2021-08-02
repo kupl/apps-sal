@@ -10,12 +10,11 @@ U = np.zeros((H, W), dtype=int)
 D = np.zeros((H, W), dtype=int)
 
 for i in range(H):
-    D[i] = (D[i-1]+1) * S[i]
-    U[-i-1] = (U[-i]+1) * S[-i-1]
+    D[i] = (D[i - 1] + 1) * S[i]
+    U[-i - 1] = (U[-i] + 1) * S[-i - 1]
 
 for i in range(W):
-    R[:, i] = (R[:, i-1]+1) * S[:, i]
-    L[:, -i-1] = (L[:, -i]+1) * S[:, -i-1]
+    R[:, i] = (R[:, i - 1] + 1) * S[:, i]
+    L[:, -i - 1] = (L[:, -i] + 1) * S[:, -i - 1]
 
-print((np.max(L+R+U+D)-3))
-
+print((np.max(L + R + U + D) - 3))

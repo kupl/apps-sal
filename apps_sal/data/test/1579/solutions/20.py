@@ -27,17 +27,18 @@ class UnionFind:
         x = self.find(x)
         return -self.ps[x]
 
+
 n = int(input())
 v = 10**5 + 5
-uf = UnionFind(v*2 + 10)
+uf = UnionFind(v * 2 + 10)
 for _ in range(n):
-  x, y = map(int, input().split())
-  uf.unite(x, y+v)
+    x, y = map(int, input().split())
+    uf.unite(x, y + v)
 d = dict()
-for i in range(v*2):
-  if uf.size(i) > 1:
-    p = uf.find(i)
-    if p not in d:
-      d[p] = [0, 0]
-    d[p][i > v] += 1
-print(sum(x*y for x,y in d.values()) - n)
+for i in range(v * 2):
+    if uf.size(i) > 1:
+        p = uf.find(i)
+        if p not in d:
+            d[p] = [0, 0]
+        d[p][i > v] += 1
+print(sum(x * y for x, y in d.values()) - n)

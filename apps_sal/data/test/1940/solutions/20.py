@@ -1,6 +1,7 @@
 def R():
     return [int(x) for x in input().split()]
 
+
 def __starting_point():
     n, k = R()
     w = R()
@@ -15,7 +16,8 @@ def __starting_point():
 
     if result % 2 == 0:
         print(result // 2)
-    else: 
+    else:
         print(result // 2 + 1)
+
 
 __starting_point()

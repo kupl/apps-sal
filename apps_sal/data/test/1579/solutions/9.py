@@ -63,4 +63,3 @@ for i in range(MAX * 2):
     ans += x_size[i] * y_size[i]
 
 print(ans)
-

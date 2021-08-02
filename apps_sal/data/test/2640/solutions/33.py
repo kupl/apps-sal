@@ -2,9 +2,11 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 H, W = lr()
 
@@ -16,13 +18,12 @@ D = np.zeros((H, W), np.int32)
 L = np.zeros((H, W), np.int32)
 R = np.zeros((H, W), np.int32)
 
-for h in range(H-1):
-    U[h+1] = (U[h] + 1) * S[h]
-    D[H-h-2] = (D[H-h-1] + 1) * S[H-h-1]
-for w in range(W-1):
-    L[:, w+1] = (L[:, w] + 1) * S[:, w]
-    R[:, W-w-2] = (R[:, W-w-1] + 1) * S[:, W-w-1]
+for h in range(H - 1):
+    U[h + 1] = (U[h] + 1) * S[h]
+    D[H - h - 2] = (D[H - h - 1] + 1) * S[H - h - 1]
+for w in range(W - 1):
+    L[:, w + 1] = (L[:, w] + 1) * S[:, w]
+    R[:, W - w - 2] = (R[:, W - w - 1] + 1) * S[:, W - w - 1]
 
 
 print((((U + D + L + R) * S).max() + 1))
-

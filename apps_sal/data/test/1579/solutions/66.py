@@ -16,4 +16,3 @@ y_cnt = np.bincount(component[U + 1:], minlength=2 * U + 2)
 pts_cnt = np.bincount(component[xy[:, 0]], minlength=2 * U + 2)
 answer = (x_cnt * y_cnt - pts_cnt).sum()
 print(answer)
-

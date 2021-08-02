@@ -1,4 +1,4 @@
-A, B, C = map(int,input().split())
+A, B, C = map(int, input().split())
 
 count = 0
 

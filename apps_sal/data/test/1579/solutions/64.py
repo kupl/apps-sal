@@ -6,21 +6,33 @@ from functools import cmp_to_key
 import heapq
 sys.setrecursionlimit(100000)
 
-##  input functions for me
-def rsa(sep = ''):
-    if sep == '' :
-        return input().split() 
-    else: return input().split(sep)
-def rip(sep = ''):
-    if sep == '' :
-        return list(map(int, input().split())) 
-    else: return list(map(int, input().split(sep)))
-def ria(sep = ''): 
+# input functions for me
+
+
+def rsa(sep=''):
+    if sep == '':
+        return input().split()
+    else:
+        return input().split(sep)
+
+
+def rip(sep=''):
+    if sep == '':
+        return list(map(int, input().split()))
+    else:
+        return list(map(int, input().split(sep)))
+
+
+def ria(sep=''):
     return list(rip(sep))
+
+
 def ri(): return int(input())
 def rd(): return float(input())
 def rs(): return input()
 ##
+
+
 class union_find:
     def __init__(self, n):
         self.N = n
@@ -34,26 +46,29 @@ class union_find:
         self._parent[a] = self.parent(self._parent[a])
         return self._parent[a]
 
-    def united(self,a, b):
+    def united(self, a, b):
         return self.parent(a) == self.parent(b)
-    
-    def unite(self,a, b):
+
+    def unite(self, a, b):
         a = self.parent(a)
         b = self.parent(b)
-        if(a == b): return False
-        if self._mem[a] > self._mem[b]: a, b = b, a
+        if(a == b):
+            return False
+        if self._mem[a] > self._mem[b]:
+            a, b = b, a
         self._parent[a] = b
         self._mem[b] += self._mem[a]
         self.compo -= 1
         return True
-    
-    def is_root(self,a):
+
+    def is_root(self, a):
         return a == self._parent[a]
-    def mem_cnt(self,a):
+
+    def mem_cnt(self, a):
         return self._mem[self.parent(a)]
+
     def dump(self):
         print((self._parent))
-
 
 
 def main():
@@ -62,15 +77,17 @@ def main():
     Y = [0] * N
     for i in range(N):
         X[i], Y[i] = rip()
-    
+
     uf = union_find(N)
     di = dict()
     for i in range(N):
-        if not X[i] in di: di[X[i]] = i
+        if not X[i] in di:
+            di[X[i]] = i
         uf.unite(i, di[X[i]])
     di.clear()
     for i in range(N):
-        if not Y[i] in di: di[Y[i]] = i
+        if not Y[i] in di:
+            di[Y[i]] = i
         uf.unite(i, di[Y[i]])
 
     hx = [set() for i in range(N)]
@@ -78,16 +95,16 @@ def main():
     for i in range(N):
         hx[uf.parent(i)].add(X[i])
         hy[uf.parent(i)].add(Y[i])
-    
+
     tot = 0
     for i in range(N):
         tot += len(hx[i]) * len(hy[i])
-    
-    print((tot - N))
 
+    print((tot - N))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -5,4 +5,3 @@ for ch in input():
     else:
         a.append(ch)
 print('Yes' if not a else 'No')
-

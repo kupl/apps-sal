@@ -20,4 +20,3 @@ for w in ws:
         free_pocket = not free_pocket
 
 print(result)
-

@@ -11,4 +11,3 @@ while i < n:
     ans += math.ceil(a[i] / k)
     i += 1
 fout.write(str(math.ceil(ans / 2)))
-

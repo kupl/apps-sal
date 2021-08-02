@@ -6,7 +6,7 @@ def main():
     input = sys.stdin.readline
 
     MX = 10 ** 5 + 10
-    
+
     *p, = [r for r in range(MX * 2)]
 
     def root(x):
@@ -49,5 +49,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

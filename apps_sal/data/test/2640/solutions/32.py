@@ -1,5 +1,5 @@
-#learnt about numpy from this code thank you nohtaray
-#source: https://atcoder.jp/contests/abc129/submissions/5850116
+# learnt about numpy from this code thank you nohtaray
+# source: https://atcoder.jp/contests/abc129/submissions/5850116
 import bisect
 import os
 from collections import Counter, deque
@@ -37,5 +37,3 @@ for w in range(1, W):
 for w in reversed(list(range(W - 1))):
     rights[:, w] = (rights[:, w + 1] + 1) * S[:, w + 1]
 print((((ups + downs + lefts + rights) * S).max() + 1))
-
-

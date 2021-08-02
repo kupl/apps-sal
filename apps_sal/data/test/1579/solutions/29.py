@@ -27,5 +27,5 @@ def main():
         r += len(tx) * len(ty)
     return r - N
 
-print((main()))
 
+print((main()))

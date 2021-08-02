@@ -1,14 +1,15 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-inpl = lambda: list(map(int,input().split()))
-from collections import defaultdict
+def inpl(): return list(map(int, input().split()))
+
 
 class UnionFind:
     def __init__(self, N=None):
         if N is None or N < 1:
             self.parent = defaultdict(lambda: -1)
         else:
-            self.parent = [-1]*int(N)
+            self.parent = [-1] * int(N)
 
     def root(self, n):
         if self.parent[n] < 0:
@@ -29,33 +30,35 @@ class UnionFind:
 
     def size(self, n):
         return -self.parent[self.root(n)]
-    
+
     def connected(self, m, n):
         return self.root(m) == self.root(n)
-    
+
     def groups(self):
-        if isinstance(self.parent,list):
-            return list(map(lambda x: x<0, self.parent)).count(True)
-        else: # self.parent: defaultdict
-            return list(map(lambda x: x<0, self.parent.values())).count(True) 
+        if isinstance(self.parent, list):
+            return list(map(lambda x: x < 0, self.parent)).count(True)
+        else:  # self.parent: defaultdict
+            return list(map(lambda x: x < 0, self.parent.values())).count(True)
+
 
 class CountUp:
     def __init__(self, start=0):
-        self.index = start-1
+        self.index = start - 1
 
     def __call__(self):
         self.index += 1
         return self.index
 
+
 N = int(input())
 uf = UnionFind()
 for _ in range(N):
     x, y = inpl()
-    uf.merge(2*x+1,2*y)
+    uf.merge(2 * x + 1, 2 * y)
 
 Ng = uf.groups()
-nx = [0]*Ng
-ny = [0]*Ng
+nx = [0] * Ng
+ny = [0] * Ng
 gi = defaultdict(CountUp())
 for k in uf.parent.keys():
     if k % 2:
@@ -63,5 +66,5 @@ for k in uf.parent.keys():
     else:
         ny[gi[uf.root(k)]] += 1
 
-ans = sum([ nx[g]*ny[g] for g in range(Ng) ]) - N
+ans = sum([nx[g] * ny[g] for g in range(Ng)]) - N
 print(ans)

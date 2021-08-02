@@ -2,9 +2,11 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 H, W = lr()
 S = [list(sr()) for _ in range(H)]
@@ -13,18 +15,17 @@ up = np.zeros((H, W), np.int32)
 down = np.zeros((H, W), np.int32)
 right = np.zeros((H, W), np.int32)
 left = np.zeros((H, W), np.int32)
-for i in range(H-1):
-    up[i+1] = (1+up[i]) * S[i]
-for i in range(H-1, 0, -1):
-    down[i-1] = (1+down[i]) * S[i]
-for i in range(W-1):
-    left[:, i+1] = (1+left[:, i]) * S[:, i]
-    #行列の列を取り出す時の記法
-for i in range(W-1, 0, -1):
-    right[:, i-1] = (1+right[:, i]) * S[:, i]
+for i in range(H - 1):
+    up[i + 1] = (1 + up[i]) * S[i]
+for i in range(H - 1, 0, -1):
+    down[i - 1] = (1 + down[i]) * S[i]
+for i in range(W - 1):
+    left[:, i + 1] = (1 + left[:, i]) * S[:, i]
+    # 行列の列を取り出す時の記法
+for i in range(W - 1, 0, -1):
+    right[:, i - 1] = (1 + right[:, i]) * S[:, i]
 
 
 answer = ((up + down + left + right) * S).max() + 1
-#自身を数えないことで特殊な場合をなくしている
+# 自身を数えないことで特殊な場合をなくしている
 print(answer)
-

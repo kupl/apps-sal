@@ -1,4 +1,4 @@
-from itertools import combinations,permutations
+from itertools import combinations, permutations
 from collections import defaultdict
 import math
 import sys
@@ -38,8 +38,7 @@ class FenwickTree(object):
         return rt - lt
 
 
-
-def solution(n,a):
+def solution(n, a):
 
     onetoi = []
     seen1i = defaultdict(int)
@@ -48,8 +47,8 @@ def solution(n,a):
         seen1i[a[i]] += 1
         onetoi.append(seen1i[a[i]])
 
-    #print(onetoi)
-    #print(seen1i)
+    # print(onetoi)
+    # print(seen1i)
 
     jton = []
     seenjn = defaultdict(int)
@@ -57,13 +56,12 @@ def solution(n,a):
         seenjn[a[j]] += 1
         jton.append(seenjn[a[j]])
 
-    #print(jton)
-    #print(seenjn)
+    # print(jton)
+    # print(seenjn)
 
     jton = jton[::-1]
 
     fw = FenwickTree(1000000)
-
 
     for v in jton:
         fw.update(v, 1)
@@ -71,15 +69,12 @@ def solution(n,a):
     for i in range(n):
         fw.update(jton[i], -1)
         t += fw.query(0, onetoi[i] - 1)
-        #print(t)
+        # print(t)
 
     return t
 
 
-
 def main():
-
-
     """a=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
     ft = FenwickTree(len(a)*3)
     for i,v in enumerate(a):
@@ -88,9 +83,9 @@ def main():
     print(ft.query(0,10))
     return"""
 
-    n=int(input())
-    arr=list(map(int,input().strip().split()))
-    print(solution(n,arr))
+    n = int(input())
+    arr = list(map(int, input().strip().split()))
+    print(solution(n, arr))
 
 
 def __starting_point():

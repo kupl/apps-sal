@@ -1,5 +1,5 @@
 import collections
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 c = collections.Counter(l)
 ans = 'No'
 

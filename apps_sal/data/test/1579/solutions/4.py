@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class UnionFind:
     def __init__(self, size):
         self.parent = list(range(size))
@@ -37,7 +40,6 @@ class UnionFind:
     def sizeOfSameRoot(self, index):
         return self.size[self.root(index)]
 
-from collections import defaultdict
 
 N = int(input())
 XY = [tuple(map(int, input().split())) for _ in range(N)]
@@ -72,4 +74,3 @@ for i in range(N):
     A = len(X) * len(Y)
     ans += A - tree.sizeOfSameRoot(i)
 print(ans)
-

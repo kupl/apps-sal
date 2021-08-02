@@ -16,7 +16,8 @@ def main():
     visited = [0] * (M * 2)
     ans = 0
     for s in range(M * 2):  # xとy+Mのsetの方が確認する数は減る?
-        if visited[s]: continue
+        if visited[s]:
+            continue
         visited[s] = 1
         dq = deque()
         dq.append(s)
@@ -29,7 +30,8 @@ def main():
             if v < M:
                 x += 1
             for u in g[v]:
-                if visited[u]: continue
+                if visited[u]:
+                    continue
                 visited[u] = 1
                 dq.append(u)
         ans += (sz - x) * x
@@ -47,5 +49,6 @@ def __starting_point():
 # cnt(x)*cnt(y)-既存の辺数の総和
 
 # 最後にN引けばよい
+
 
 __starting_point()

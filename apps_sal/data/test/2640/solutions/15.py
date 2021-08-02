@@ -58,5 +58,3 @@ ld = getld()
 m = max([0, np.max(ll + lr + lu + ld) - 3])
 
 print(m)
-
-

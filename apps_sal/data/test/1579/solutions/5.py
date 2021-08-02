@@ -17,7 +17,8 @@ class UnionFind:
         u = self.find_root(x)
         v = self.find_root(y)
 
-        if u == v: return
+        if u == v:
+            return
 
         if self.rank[u] < self.rank[v]:
             self.p[u] = v
@@ -33,6 +34,7 @@ class UnionFind:
 
     def get_size(self, x):
         return self.size[self.find_root(x)]
+
 
 n = int(input())
 xy = [tuple(int(x) for x in input().split()) for _ in range(n)]

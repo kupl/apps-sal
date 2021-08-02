@@ -1,14 +1,15 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-inpl = lambda: list(map(int,input().split()))
-from collections import defaultdict
+def inpl(): return list(map(int, input().split()))
+
 
 class UnionFind:
     def __init__(self, N=None):
         if N is None or N < 1:
             self.parent = defaultdict(lambda: -1)
         else:
-            self.parent = [-1]*int(N)
+            self.parent = [-1] * int(N)
 
     def root(self, n):
         if self.parent[n] < 0:
@@ -29,25 +30,26 @@ class UnionFind:
 
     def size(self, n):
         return -self.parent[self.root(n)]
-    
+
     def connected(self, m, n):
         return self.root(m) == self.root(n)
-    
+
     def groups(self):
-        if isinstance(self.parent,list):
-            return list(map(lambda x: x<0, self.parent)).count(True)
-        else: # self.parent: defaultdict
-            return list(map(lambda x: x<0, self.parent.values())).count(True) 
+        if isinstance(self.parent, list):
+            return list(map(lambda x: x < 0, self.parent)).count(True)
+        else:  # self.parent: defaultdict
+            return list(map(lambda x: x < 0, self.parent.values())).count(True)
+
 
 N = int(input())
 uf = UnionFind()
 for _ in range(N):
     x, y = inpl()
-    uf.merge(2*x,2*y+1)
+    uf.merge(2 * x, 2 * y + 1)
 
 nxny = defaultdict(lambda: [0, 0])
 for k in uf.parent.keys():
     nxny[uf.root(k)][k % 2] += 1
 
-ans = sum([ nx * ny for nx, ny in nxny.values() ]) - N
+ans = sum([nx * ny for nx, ny in nxny.values()]) - N
 print(ans)

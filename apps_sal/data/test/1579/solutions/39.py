@@ -1,6 +1,6 @@
 class UnionFind:
     def __init__(self, n, t, s):
-        self.par = [i for i in range(n+1)]
+        self.par = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
         self.sizex = [1] * t + [0] * s
         self.sizey = [0] * t + [1] * s
@@ -61,4 +61,3 @@ for i in range(len(dx)):
     ans += uf.sizeof(i)
     s.add(p)
 print((ans - n))
-

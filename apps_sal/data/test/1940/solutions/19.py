@@ -9,5 +9,4 @@ d = 0
 for p in peb:
     d += ceil(p / s)
 
-print(ceil(d/2))
-
+print(ceil(d / 2))

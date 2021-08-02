@@ -5,7 +5,7 @@ from collections import defaultdict
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        self.parents = [-1] * (n+1)
+        self.parents = [-1] * (n + 1)
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -51,14 +51,14 @@ class UnionFind():
 
 
 N = int(input())
-U = UnionFind(2*10**5)
+U = UnionFind(2 * 10**5)
 for i in range(N):
     x, y = map(int, input().split())
-    U.union(x, y+10**5)
+    U.union(x, y + 10**5)
 ans = 0
 Roots = U.roots()
 D = {x: [] for x in Roots}
-for i in range(2*10**5+1):
+for i in range(2 * 10**5 + 1):
     D[U.find(i)].append(i)
 for x in Roots:
     ss = D[x]
@@ -69,6 +69,6 @@ for x in Roots:
             sx += 1
         else:
             sy += 1
-    ans += sx*sy
+    ans += sx * sy
 ans -= N
 print(ans)

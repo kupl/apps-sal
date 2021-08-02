@@ -2,8 +2,8 @@ import sys
 sys.setrecursionlimit(10**6)
 def input(): return sys.stdin.readline().strip()
 
-def main():
 
+def main():
     """
     <UnionFindを使わない別解>
 
@@ -14,7 +14,7 @@ def main():
     """
 
     N = int(input())
-    V = 10 ** 5 + 1 # padding for y
+    V = 10 ** 5 + 1  # padding for y
     repn = [[] for _ in range(V * 2)]
     for _ in range(N):
         x, y = list(map(int, input().split()))
@@ -45,5 +45,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()
