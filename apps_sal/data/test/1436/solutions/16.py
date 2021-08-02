@@ -18,7 +18,7 @@ else:
     i = 0
 while i < len(l):
     if l[i] > 0:
-       pm += l[i]
+        pm += l[i]
     if l[i] == -1:
         if pm > 0:
             pm -= 1
@@ -26,4 +26,3 @@ while i < len(l):
             count += 1
     i += 1
 print(count)
-

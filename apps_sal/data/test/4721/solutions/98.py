@@ -5,4 +5,3 @@ n, m = list(map(int, input().split()))
 # X2_list = [list(map(int,input().split())) for i in range(N)]
 
 print(((n - 1) * (m - 1)))
-

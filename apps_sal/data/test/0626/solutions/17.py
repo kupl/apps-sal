@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 q = 0
 c = 0
 while len(a) > 0:
@@ -10,4 +10,4 @@ while len(a) > 0:
             de.add(i)
     c += 1
     a = [a[i] for i in reversed(range(len(a))) if i not in de]
-print(c-1)
+print(c - 1)

@@ -12,4 +12,3 @@ for i in l:
             c += 1
 
 print(c)
-

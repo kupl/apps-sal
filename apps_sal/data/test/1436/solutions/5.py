@@ -7,7 +7,7 @@ for e in map(int, str.split(input())):
 
         if cops == 0:
 
-             count += 1
+            count += 1
 
         cops = max(0, cops - 1)
 
@@ -16,4 +16,3 @@ for e in map(int, str.split(input())):
         cops += e
 
 print(count)
-

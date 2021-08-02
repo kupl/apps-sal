@@ -12,14 +12,15 @@ def main():
                     used[i] = True
                     c += 1
         else:
-            for i in range(n-1, 0-1, -1):
-                if c >= arr[i] and used[i] == False:                
+            for i in range(n - 1, 0 - 1, -1):
+                if c >= arr[i] and used[i] == False:
                     used[i] = True
-                    c += 1    
+                    c += 1
         napr = not(napr)
         if False in used:
             ans += 1
-             
+
     print(ans)
-        
+
+
 main()

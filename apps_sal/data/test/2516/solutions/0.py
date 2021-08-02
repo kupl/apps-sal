@@ -17,9 +17,12 @@ def main():
             ans += mod[current]
             mod[current] += 1
             X = X * 10 % P
-    
+
     print(ans)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

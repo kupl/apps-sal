@@ -23,9 +23,12 @@ def main():
         d %= P
     ans = 0
     for v in counter.values():
-        ans += (v * (v-1)) // 2
+        ans += (v * (v - 1)) // 2
     print(ans)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

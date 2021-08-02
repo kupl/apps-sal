@@ -16,4 +16,3 @@ while True:
         i += dir
         result += 1
 print(result)
-

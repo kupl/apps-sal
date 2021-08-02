@@ -49,4 +49,3 @@ else:
         ans += c * (c - 1) // 2
 
 print((int(ans)))
-

@@ -10,9 +10,9 @@ for i in range(int(0), int(k)):
     various.append(0)
 
 for i in range(len(array)):
-    if (array[i] == 1) :
+    if (array[i] == 1):
         various[i % k] += 1
-    else :
+    else:
         various[i % k] -= 1
 
 for i in range(int(0), int(k)):

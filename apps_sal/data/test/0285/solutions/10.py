@@ -19,11 +19,9 @@ enum_l.sort(key=lambda ord: ord_left[ord])
 enum_r.sort(key=lambda ord: ord_right[ord])
 
 
-
 if enum_l == enum_r:
     print("NO")
 else:
     print("YES")
 # for i in range(len(ord_right)):
 #   line = ord_left[i][0]
-

@@ -18,12 +18,10 @@ else:
     num = 0
 
     for i, s in enumerate(S[::-1]):
-        num  = (num + int(s) * pow(10, i, P)) % P
+        num = (num + int(s) * pow(10, i, P)) % P
         cnt += r_lst[num]
 
         r_lst[num] += 1
 
 
 print(cnt)
-
-

@@ -1,3 +1,4 @@
+from collections import Counter
 n, p = map(int, input().split())
 s = list(map(int, list(input())))
 
@@ -19,12 +20,11 @@ if p == 5:
 
 num = 1
 l = [0]
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     l.append((num * s[i] + l[-1]) % p)
     num *= 10
     num %= p
 
-from collections import Counter
 
 dic = Counter(l)
 for i in dic.values():

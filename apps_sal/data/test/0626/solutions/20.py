@@ -17,10 +17,9 @@ while True:
         visited_count += 1
     if visited_count == n:
         break
-    if dir == 1 and position == n-1 or dir == -1 and position == 0:
+    if dir == 1 and position == n - 1 or dir == -1 and position == 0:
         dir = -dir
         turns += 1
     position += dir
 
 print(turns)
-

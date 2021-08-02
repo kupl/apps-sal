@@ -6,21 +6,19 @@ coor1 = []
 coor2 = []
 eps = 0.000000001
 for i in range(n):
-   a = input().split(" ")
-   k = int(a[0])
-   b = int(a[1])
-   coor1.append((k*(x1+eps) + b, i))
-   coor2.append((k*(x2-eps) + b, i))
-#print(coor1)
-#print(coor2)
+    a = input().split(" ")
+    k = int(a[0])
+    b = int(a[1])
+    coor1.append((k * (x1 + eps) + b, i))
+    coor2.append((k * (x2 - eps) + b, i))
+# print(coor1)
+# print(coor2)
 coor1.sort()
 coor2.sort()
-#print(coor1)
-#print(coor2)
+# print(coor1)
+# print(coor2)
 s = "NO"
 for i in range(len(coor1)):
     if (coor1[i][1] != coor2[i][1]):
         s = "YES"
 print(s)
-            
-

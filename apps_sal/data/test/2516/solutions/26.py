@@ -25,4 +25,3 @@ for k, v in list(cnt.items()):
     ans += v * (v - 1) // 2
 
 print(ans)
-

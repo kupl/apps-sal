@@ -11,4 +11,4 @@ for i in range(n):
             ans += 1
     else:
         police += q
-print(ans)    
+print(ans)

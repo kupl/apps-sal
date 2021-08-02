@@ -13,4 +13,3 @@ else:
         p10 = (p10 * 10) % P
     ans = sum(v * (v - 1) // 2 for v in list(Counter(Acc).values()))
 print(ans)
-

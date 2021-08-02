@@ -6,13 +6,15 @@ n = int(f.readline())
 s = f.readline().split()
 
 total = 0
-r = 0 # нерасследованные преступления
+r = 0  # нерасследованные преступления
 for j in s:
     d = int(j)
-    if (d<0):
-        if total==0:    r += 1
-        else :          total -= 1
-    else : total += d
+    if (d < 0):
+        if total == 0:
+            r += 1
+        else:
+            total -= 1
+    else:
+        total += d
 
-print(str(r))    
-
+print(str(r))

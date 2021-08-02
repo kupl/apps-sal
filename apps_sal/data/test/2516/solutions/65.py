@@ -28,4 +28,3 @@ for i in range(len(A) - 1):
 for c in cnt:
     ans += c * (c - 1) // 2
 print(ans)
-

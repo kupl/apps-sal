@@ -8,7 +8,7 @@ while True:
     if direction == 1:
         r = list(range(n))
     else:
-        r = list(range(n-1, -1, -1))
+        r = list(range(n - 1, -1, -1))
 
     for i in r:
         if n_infos >= a[i]:
@@ -21,4 +21,3 @@ while True:
     direction = -direction
     res += 1
 print(res)
-

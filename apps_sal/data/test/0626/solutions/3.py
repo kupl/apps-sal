@@ -12,18 +12,16 @@ ind = 0
 ans = 0
 curdir = 1
 while cur < n:
-	#print("ind = ", ind)
-	if not was[ind]:
-		if lst[ind] <= cur:
-			cur += 1
-			was[ind] = True
-			if cur == n:
-				break
-	if ind == n - 1 and curdir > 0 or ind == 0 and curdir < 0:
-		curdir = -curdir
-		ans += 1
-	ind += curdir
+    #print("ind = ", ind)
+    if not was[ind]:
+        if lst[ind] <= cur:
+            cur += 1
+            was[ind] = True
+            if cur == n:
+                break
+    if ind == n - 1 and curdir > 0 or ind == 0 and curdir < 0:
+        curdir = -curdir
+        ans += 1
+    ind += curdir
 
 print(ans)
-
-

@@ -16,6 +16,3 @@ for y1, y2 in a:
     else:
         y2m = max(y2m, y2)
 print(fl)
-    
-    
-

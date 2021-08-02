@@ -19,5 +19,3 @@ else:
     for i in range(k):
         ans += min(c[i])
     print(ans)
-    
-
