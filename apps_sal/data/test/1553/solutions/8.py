@@ -1,5 +1,6 @@
 3
 
+
 def can(a, h):
     a.sort(reverse=True)
     cur = 0
@@ -20,4 +21,3 @@ while lt < rt - 1:
         rt = mid
 
 print(lt)
-

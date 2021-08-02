@@ -3,6 +3,7 @@ def abc150_d():
     A = [int(x) // 2 for x in input().split()]
 
     from math import gcd
+
     def lcm(a, b):
         return a * b // gcd(a, b)
 
@@ -16,10 +17,15 @@ def abc150_d():
             valid = False
             break
 
-    if valid: ans = (m // x + 1) // 2
-    else: ans = 0
+    if valid:
+        ans = (m // x + 1) // 2
+    else:
+        ans = 0
     print(ans)
+
 
 def __starting_point():
     abc150_d()
+
+
 __starting_point()

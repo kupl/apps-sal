@@ -10,5 +10,4 @@ for i in a:
         print((0))
         return
 #print(ceil((m // l) / 2))
-print(((m//l+1)//2))
-
+print(((m // l + 1) // 2))

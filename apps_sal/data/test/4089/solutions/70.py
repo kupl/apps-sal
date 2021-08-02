@@ -8,4 +8,3 @@ while(n):
     n //= 26
 
 print(("".join(list(ans[::-1]))))
-

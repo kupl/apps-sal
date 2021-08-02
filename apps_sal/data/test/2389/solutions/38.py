@@ -9,6 +9,7 @@ l = list()
 for n in range(N):
     l.append(input())
 
+
 def dfs(i, a, b, c):
     if i == N:
         return True
@@ -42,6 +43,7 @@ def dfs(i, a, b, c):
             ans.append('C')
             return True
     return False
+
 
 dfs(0, A, B, C)
 

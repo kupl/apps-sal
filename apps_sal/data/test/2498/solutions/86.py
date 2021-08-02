@@ -2,14 +2,14 @@ from math import gcd, ceil
 
 
 def lcm(a, b):
-    return (a*b)//gcd(a, b)
+    return (a * b) // gcd(a, b)
 
 
 n, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 for i in range(n):
-    a[i] = a[i]//2
+    a[i] = a[i] // 2
 
 lcm_v = a[0]
 for i in range(1, n):
@@ -17,11 +17,10 @@ for i in range(1, n):
 
 ok = True
 for aa in a:
-    if (lcm_v//aa) % 2 != 1:
+    if (lcm_v // aa) % 2 != 1:
         ok = False
         break
 ans = 0
 if ok:
-    ans = ((m//lcm_v)+1)//2
+    ans = ((m // lcm_v) + 1) // 2
 print(ans)
-

@@ -4,17 +4,18 @@ pos = len(k)
 ans = []
 while pos > 0:
     tmp = 0
-    l = pos-1
+    l = pos - 1
     mark = l
     while l >= 0:
         a = int(k[l:pos])
         if a >= n:
             break
         else:
-            if a != tmp: mark = l
+            if a != tmp:
+                mark = l
             tmp = a
             l -= 1
-            
+
     if tmp == 0:
         pos -= 1
         ans.append(0)
@@ -24,7 +25,6 @@ while pos > 0:
 
 aans = 0
 for i in ans[::-1]:
-    aans = aans*n + i
+    aans = aans * n + i
 
 print(aans)
-

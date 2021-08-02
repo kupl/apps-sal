@@ -16,12 +16,11 @@ for j in range(i - 1):
 n = n - 1
 for j in range(i):
     k = i - j - 1
-    x = n//(26**k)
+    x = n // (26**k)
     lst.append(x)
-    n = n - 26**k*x
+    n = n - 26**k * x
 for j in range(len(lst)):
     if (j != len(lst) - 1):
-        print(chr(int(97 + lst[j])), end = '')
+        print(chr(int(97 + lst[j])), end='')
     else:
         print(chr(int(97 + lst[j])))
-

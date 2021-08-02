@@ -11,7 +11,6 @@ def main():
         else:
             return (0, 2)
 
-
     def answer(ans):
         print('Yes')
         for a in ans:
@@ -26,7 +25,7 @@ def main():
             s[x[0]] += 1
             s[x[1]] -= 1
             ans.append(abc[x[0]])
-        
+
     n, *s = list(map(int, input().split()))
     sl = []
     for _ in range(n):
@@ -49,10 +48,10 @@ def main():
             if s[x[0]] == 0 and s[x[1]] == 0:
                 print('No')
                 return
-                
-            if i < n-1 and s[x[0]] == 1 and s[x[1]] == 1:
-                nx = sl[i+1]
-                if x != nx and sum(s)==2:
+
+            if i < n - 1 and s[x[0]] == 1 and s[x[1]] == 1:
+                nx = sl[i + 1]
+                if x != nx and sum(s) == 2:
                     if x[0] in nx:
                         s[x[0]] += 1
                         s[x[1]] -= 1
@@ -68,5 +67,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

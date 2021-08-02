@@ -28,4 +28,3 @@ for el in list(one.keys()):
     ans += one[el] * two[-el]
 
 print(ans)
-

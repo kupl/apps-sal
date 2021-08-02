@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 
 def lcm(a, b):
-    return a*b // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 def count_factor_2(num):
@@ -18,7 +18,7 @@ def count_factor_2(num):
 
 def main():
     n, m = list(map(int, input().split()))
-    A = list([int(x)//2 for x in input().split()])
+    A = list([int(x) // 2 for x in input().split()])
 
     check = len(set(map(count_factor_2, A)))
     if check != 1:
@@ -33,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

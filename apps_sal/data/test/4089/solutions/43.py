@@ -12,19 +12,19 @@ tw.append(l)
 while 1:
     if l <= N <= r:
         break
-    l, r = r+1, r+26**i
+    l, r = r + 1, r + 26**i
     tw.append(l)
     i += 1
     keta += 1
-#print(l,r,keta,tw)
+# print(l,r,keta,tw)
 
 for x in tw[::-1]:
-    twp = 26**(keta-1)
+    twp = 26**(keta - 1)
     keta -= 1
     #print("twp =",twp,"x =",x)
     a = (N - x) // twp
     #print((N - x) // twp)
-    N -= twp*(a+1)
+    N -= twp * (a + 1)
     ans += S[a]
-    #print(N)
+    # print(N)
 print(ans)

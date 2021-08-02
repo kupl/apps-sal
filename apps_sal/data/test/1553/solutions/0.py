@@ -5,6 +5,7 @@ def func(arr):
         ans += arr[i]
     return ans
 
+
 def main():
     n, h = map(int, input().split())
     arr = list(map(int, input().split()))
@@ -14,4 +15,6 @@ def main():
             break
     print(i)
     return 0
+
+
 main()

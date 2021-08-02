@@ -13,4 +13,3 @@ for i in range(n):
         a[l[i]] = len(s)
         s.add(l[i])
 print(col)
-

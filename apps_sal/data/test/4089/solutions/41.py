@@ -8,16 +8,17 @@ def __starting_point():
     while True:
         if N >= 26:
             ans.insert(0, N % 26)
-            N = N // 26 -1
+            N = N // 26 - 1
 
         else:
             ans.insert(0, N)
             break
 
-    #print(ans)
+    # print(ans)
 
-    num2alpha = lambda c: chr(c+97)
+    def num2alpha(c): return chr(c + 97)
     for i in range(len(ans)):
         print(num2alpha(ans[i]), end='')
+
 
 __starting_point()

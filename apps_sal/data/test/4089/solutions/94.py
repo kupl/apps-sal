@@ -8,4 +8,3 @@ while(N):
     N = N // 26
 ans = ''.join(list(reversed(ans)))
 print(ans)
-

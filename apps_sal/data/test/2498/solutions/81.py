@@ -44,4 +44,3 @@ tmp = M // my_lcm
 # tmp=1or2なら1個, 3or4なら2個, 5or6なら3個,...
 ans = (tmp + 1) // 2
 print(ans)
-

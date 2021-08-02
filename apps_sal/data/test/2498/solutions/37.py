@@ -6,7 +6,7 @@ N, M = map(int, input().split())
 a2 = list(map(int, input().split()))
 a = []
 for i in a2:
-    a.append(i//2)
+    a.append(i // 2)
 
 lcm = a[0]
 
@@ -22,6 +22,6 @@ for i in a:
 ans = 0
 
 if hasAns:
-    ans = ((M // lcm) + 1 )// 2
+    ans = ((M // lcm) + 1) // 2
 
 print(ans)

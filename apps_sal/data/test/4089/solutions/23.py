@@ -15,4 +15,3 @@ while n > 0:
 ans = "".join(reversed(amari_list))
 
 print(ans)
-

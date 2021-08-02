@@ -3,15 +3,16 @@ def main():
     INF = 10 ** 18 + 9
     EPS = 10 ** -7
 
-    import sys, math
+    import sys
+    import math
     #fi = open('input.txt', 'r')
     #fo = open('output.txt', 'w+')
     #fi = open(QWE +".in", "r")
     #fo = open(QWE + ".out", "w+")
-    
+
     n = input()
     ln = len(n)
-    n = int(n);
+    n = int(n)
     s = input()
     m = len(s)
     d = [0] * (m + 1)
@@ -23,7 +24,7 @@ def main():
                 if q < n:
                     d[i] = min(d[i], d[j - 1] * n + q)
     print(d[m])
-    #print(d)
+    # print(d)
+
 
 main()
-

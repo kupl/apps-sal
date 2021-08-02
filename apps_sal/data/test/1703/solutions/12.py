@@ -1,7 +1,7 @@
 n = int(input())
 ans = 0
-temp = 3*10**5
-n2 = temp *2 +1
+temp = 3 * 10**5
+n2 = temp * 2 + 1
 ar = [0] * n2
 while n > 0:
     si = input()
@@ -16,18 +16,17 @@ while n > 0:
         else:
             numCl += 1
             if numCl > numOp:
-                num = max(num,numCl-numOp)
-                last = numCl-numOp
-    n-=1
+                num = max(num, numCl - numOp)
+                last = numCl - numOp
+    n -= 1
     if numCl < numOp:
-        num2 = numCl-numOp
-    if num > last or (num > numCl-numOp and num != 0):
+        num2 = numCl - numOp
+    if num > last or (num > numCl - numOp and num != 0):
         continue
     if num2 == 0 and num >= 0:
-        ar[temp+num] += 1
+        ar[temp + num] += 1
     else:
-        ar[temp+num2] += 1
-for i in range(temp+1):
+        ar[temp + num2] += 1
+for i in range(temp + 1):
     ans += ar[i] * ar[n2 - 1 - i]
 print(ans)
-

@@ -5,13 +5,15 @@ A = list(map(int, input().split()))
 
 memo = {}
 
-def lcm(a,b):
-    return a//gcd(a,b)*b
+
+def lcm(a, b):
+    return a // gcd(a, b) * b
+
 
 b = 1
 
 for a in A:
-    b = lcm(a//2, b)
+    b = lcm(a // 2, b)
     if b > M:
         break
 

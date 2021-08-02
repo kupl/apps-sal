@@ -16,4 +16,3 @@ for i in range(n):
         count += len(d)
     used.add(a[i])
 print(count)
-

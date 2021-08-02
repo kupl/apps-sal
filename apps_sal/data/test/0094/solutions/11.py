@@ -16,4 +16,3 @@ for i in range(len(k)):
         else:
             dp[i] = min(dp[i], s)
 print(dp[len(k) - 1])
-

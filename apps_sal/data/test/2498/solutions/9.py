@@ -1,6 +1,6 @@
 def solve():
     import math
-    N,M = [int(i) for i in input().split()]
+    N, M = [int(i) for i in input().split()]
     A = list(map(int, input().split()))
 
     lcm = A[0]
@@ -14,11 +14,14 @@ def solve():
             ans_exists = False
 
     if ans_exists:
-        ans = int((M-first) // lcm + 1)
+        ans = int((M - first) // lcm + 1)
         print(ans)
     else:
         print('0')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

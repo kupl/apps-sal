@@ -36,10 +36,10 @@ def solve(writer):
 
 
 def main():
-    
+
     writer = list()
     ok = solve(writer)
-    
+
     if ok:
         print('Yes')
         for w in writer:
@@ -50,5 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

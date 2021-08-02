@@ -2,8 +2,9 @@ def check(s, n):
     ans = 0
     if s != "":
         ans = int(s)
-        
+
     return ans < n
+
 
 n = int(input())
 k = input()
@@ -21,7 +22,6 @@ while i >= 0:
         s = s[1:]
         i += 1
 
-    
     ans += int(s) * add
     add *= n
     s = ""

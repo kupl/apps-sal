@@ -8,7 +8,7 @@ n = int(n)
 a = []
 i = len(s) - 1
 l = 0
-while i - k + 1>= 0:
+while i - k + 1 >= 0:
     if int(s[i - k + 1:i + 1]) < n:
         z = len(str(int((s[i - k + 1:i + 1]))))
         a.append(int(s[i - z + 1:i + 1]))
@@ -16,9 +16,9 @@ while i - k + 1>= 0:
     else:
         z = len(str(int((s[i - k + 2:i + 1]))))
         a.append(int(s[i - z + 1:i + 1]))
-        i -= z 
+        i -= z
 else:
-    if i > - 1  and int(s[0:i + 1]) < n :
+    if i > - 1 and int(s[0:i + 1]) < n:
         a.append(int(s[0:i + 1]))
         i -= k
 

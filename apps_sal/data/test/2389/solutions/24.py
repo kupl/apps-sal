@@ -2,7 +2,7 @@ N, A, B, C = map(int, input().split())
 s = ["" for i in range(N)]
 for i in range(N):
     s[i] = input()
-   
+
 valid = True
 ans = []
 all_sum = A + B + C
@@ -38,7 +38,7 @@ if all_sum >= 3:
         if A < 0 or B < 0 or C < 0:
             valid = False
             break
-        
+
     if valid:
         print("Yes")
         for c in ans:

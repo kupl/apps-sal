@@ -88,4 +88,3 @@ elif S == 2:
     solve2([A, B, C])
 else:
     solve3([A, B, C])
-

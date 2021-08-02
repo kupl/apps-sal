@@ -20,4 +20,3 @@ for i in range(n - 1):
         answer += unique_n_backw[i + 1]
 
 print(answer)
-

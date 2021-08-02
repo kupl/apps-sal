@@ -7,7 +7,7 @@ def main():
     for _ in [0] * n:
         s = input()
         query.append((ord(s[0]) - ord('A'), ord(s[1]) - ord('A')))
-    query.append((0, 1)) # 番兵
+    query.append((0, 1))  # 番兵
 
     ans = ['A'] * n
     for i in range(n):
@@ -24,15 +24,16 @@ def main():
             abc[b] += 1
             ans[i] = chr(ord('A') + b)
         else:
-            if a in query[i+1]:
+            if a in query[i + 1]:
                 abc[a] += 1
                 abc[b] -= 1
                 ans[i] = chr(ord('A') + a)
-            else:                
+            else:
                 abc[a] -= 1
                 abc[b] += 1
                 ans[i] = chr(ord('A') + b)
     print("Yes")
     print(*ans, sep=('\n'))
+
 
 main()

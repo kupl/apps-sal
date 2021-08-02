@@ -8,4 +8,3 @@ for ai in input().split():
         break
     k += 1
 print(k)
-

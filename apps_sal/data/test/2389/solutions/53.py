@@ -4,10 +4,12 @@ s.append(["A", "B"])
 d = {"A": a, "B": b, "C": c}
 ans = []
 
+
 def calc(add, sub):
     d[add] += 1
     d[sub] -= 1
     ans.append(add)
+
 
 for i, [j, k] in enumerate(s):
     if i == n:
@@ -18,7 +20,7 @@ for i, [j, k] in enumerate(s):
         print("No")
         break
     elif j == "A" and k == "B":
-        
+
         if d[j] < d[k]:
             calc(j, k)
         elif d[j] > d[k]:
@@ -50,5 +52,3 @@ for i, [j, k] in enumerate(s):
                 calc(k, j)
             else:
                 calc(j, k)
-    
-

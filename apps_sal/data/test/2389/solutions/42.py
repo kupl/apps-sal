@@ -21,12 +21,12 @@ for i in range(N):
             if d["A"] == d["B"] == 0:
                 print("No")
                 return
-            if N > i+1:
-                if "A" in S[i+1]:
+            if N > i + 1:
+                if "A" in S[i + 1]:
                     d["B"] -= 1
                     d["A"] += 1
                     ans.append("A")
-                elif "B" in S[i+1]:
+                elif "B" in S[i + 1]:
                     d["A"] -= 1
                     d["B"] += 1
                     ans.append("B")
@@ -53,12 +53,12 @@ for i in range(N):
             if d["A"] == d["C"] == 0:
                 print("No")
                 return
-            if N > i+1:
-                if "A" in S[i+1]:
+            if N > i + 1:
+                if "A" in S[i + 1]:
                     d["C"] -= 1
                     d["A"] += 1
                     ans.append("A")
-                elif "C" in S[i+1]:
+                elif "C" in S[i + 1]:
                     d["A"] -= 1
                     d["C"] += 1
                     ans.append("C")
@@ -85,12 +85,12 @@ for i in range(N):
             if d["B"] == d["C"] == 0:
                 print("No")
                 return
-            if N > i+1:
-                if "B" in S[i+1]:
+            if N > i + 1:
+                if "B" in S[i + 1]:
                     d["C"] -= 1
                     d["B"] += 1
                     ans.append("B")
-                elif "C" in S[i+1]:
+                elif "C" in S[i + 1]:
                     d["B"] -= 1
                     d["C"] += 1
                     ans.append("C")
@@ -111,4 +111,3 @@ for i in range(N):
 print("Yes")
 for a in ans:
     print(a)
-

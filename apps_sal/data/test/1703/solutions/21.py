@@ -1,5 +1,5 @@
-#This code sucks, you know it and I know it.  
-#Move on and call me an idiot later.
+# This code sucks, you know it and I know it.
+# Move on and call me an idiot later.
 
 def check(symbolString):
     s = []
@@ -30,6 +30,7 @@ def check(symbolString):
             else:
                 return(')', tcnt)
 
+
 n = int(input())
 
 op = {}
@@ -56,7 +57,7 @@ for i in range(n):
 
 b = b ** 2
 
-for i in op: 
+for i in op:
     if i in cl:
         b += op[i] * cl[i]
 

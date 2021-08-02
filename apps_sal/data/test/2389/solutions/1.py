@@ -47,4 +47,3 @@ for i in range(N):
 print('Yes')
 for a in ans:
     print(a)
-

@@ -35,4 +35,3 @@ for ai in a_pr:
         return
 
 print((int(my_round(m // lcm_ / 2))))
-

@@ -15,11 +15,10 @@ while num:
         j += 1
         nn = nn[1:]
     l.append(int(nn))
-    num = num[:-sk+j]
-    
+    num = num[:-sk + j]
+
 p = 1
 for n in l:
     a += p * n
     p *= base
 print(a)
-

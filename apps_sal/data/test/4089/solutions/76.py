@@ -15,4 +15,3 @@ while True:
         q = (q - 1) // 26
 
 print((''.join(list(sss))))
-

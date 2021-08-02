@@ -3,6 +3,7 @@ ss = [input() for _ in range(N)]
 
 history = []
 
+
 def move_to_flatten(s):
     nonlocal A, B, C, history
     if s == "AB":
@@ -32,7 +33,7 @@ def move_to_flatten(s):
             C -= 1
             A += 1
             history.append("A")
-        
+
 
 for i, s in enumerate(ss):
     zeros = (A, B, C).count(0)
@@ -42,7 +43,7 @@ for i, s in enumerate(ss):
         if A + B + C == 2:
             if A == 0:
                 if s == "BC":
-                    if i+1 < N and 'B' in ss[i+1]: 
+                    if i + 1 < N and 'B' in ss[i + 1]:
                         C -= 1
                         B += 1
                         history.append('B')
@@ -54,7 +55,7 @@ for i, s in enumerate(ss):
                     move_to_flatten(s)
             elif B == 0:
                 if s == "AC":
-                    if i+1 < N and 'C' in ss[i+1]:
+                    if i + 1 < N and 'C' in ss[i + 1]:
                         A -= 1
                         C += 1
                         history.append('C')
@@ -66,7 +67,7 @@ for i, s in enumerate(ss):
                     move_to_flatten(s)
             elif C == 0:
                 if s == "AB":
-                    if i+1 < N and 'A' in ss[i+1]:
+                    if i + 1 < N and 'A' in ss[i + 1]:
                         B -= 1
                         A += 1
                         history.append('A')
@@ -75,7 +76,7 @@ for i, s in enumerate(ss):
                         B += 1
                         history.append('B')
                 else:
-                    move_to_flatten(s)    
+                    move_to_flatten(s)
         else:
             move_to_flatten(s)
     elif zeros == 2:
@@ -94,4 +95,4 @@ for i, s in enumerate(ss):
         return
 
 print("Yes")
-print(*history, sep = '\n')
+print(*history, sep='\n')

@@ -32,4 +32,3 @@ for k, v in list(front.items()):
     except:
         pass
 print(ans)
-

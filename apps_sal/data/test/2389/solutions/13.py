@@ -11,7 +11,7 @@ for i in range(n):
         if a == b == 0:
             print("No")
             return
-        elif a < b or (a == b and i != n - 1 and "A" in S[i+1]):
+        elif a < b or (a == b and i != n - 1 and "A" in S[i + 1]):
             ans.append("A")
             a += 1
             b -= 1
@@ -23,7 +23,7 @@ for i in range(n):
         if b == c == 0:
             print("No")
             return
-        elif c < b or (c == b and i != n - 1 and "C" in S[i+1]):
+        elif c < b or (c == b and i != n - 1 and "C" in S[i + 1]):
             ans.append("C")
             c += 1
             b -= 1
@@ -35,7 +35,7 @@ for i in range(n):
         if c == a == 0:
             print("No")
             return
-        elif c < a or (c == a and i != n - 1 and "C" in S[i+1]):
+        elif c < a or (c == a and i != n - 1 and "C" in S[i + 1]):
             ans.append("C")
             c += 1
             a -= 1

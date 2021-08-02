@@ -42,4 +42,5 @@ def __starting_point():
     # As = [random.randint(5, 5) * 2 for _ in range(N)]
     solve(N, M, As)
 
+
 __starting_point()

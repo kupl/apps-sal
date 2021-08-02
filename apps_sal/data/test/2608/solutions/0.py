@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 def pre(x, y):
     w = x * (y // 2) + (y % 2) * (x + 1) // 2
@@ -11,10 +16,12 @@ def pre(x, y):
     assert w + b == x * y
     return w
 
+
 def count(x1, y1, x2, y2):
     w = pre(x2, y2) + pre(x1 - 1, y1 - 1) - pre(x2, y1 - 1) - pre(x1 - 1, y2)
     b = (x2 - x1 + 1) * (y2 - y1 + 1) - w
     return w, b
+
 
 for t in range(ii()):
     n, m = mi()

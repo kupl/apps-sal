@@ -23,4 +23,3 @@ for i in range(len(ans)):
     ans[i] = chr(ans[i] + 96)
 
 print((''.join(ans)))
-

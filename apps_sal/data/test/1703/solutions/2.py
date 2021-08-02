@@ -43,4 +43,3 @@ for val, cnt in list(lmap.items()):
     res += cnt * rmap[val]
 
 print(res)
-

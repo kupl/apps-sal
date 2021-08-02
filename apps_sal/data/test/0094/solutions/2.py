@@ -22,4 +22,3 @@ for item in arr:
     sm += item * mul
     mul *= n
 print(sm)
-

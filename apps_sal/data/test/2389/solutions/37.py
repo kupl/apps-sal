@@ -1,12 +1,14 @@
 import numpy as np
+
+
 def resolve():
-    N,A,B,C = map(int,input().split())
+    N, A, B, C = map(int, input().split())
     Nlist = []
     YesOrNo = True
     ABC = str(input())
     for i in range(N):
         ABC_old = ABC
-        if i < N-1:
+        if i < N - 1:
             ABC = str(input())
 
         if ABC_old == "AB":
@@ -25,7 +27,7 @@ def resolve():
                 YesOrNo = False
                 print('No')
                 break
-        
+
         if ABC_old == "AC":
             if ABC == "AB":
                 add1 = np.sign(C - A + 0.1)
@@ -42,7 +44,7 @@ def resolve():
                 YesOrNo = False
                 print('No')
                 break
-        
+
         if ABC_old == "BC":
             if ABC == "AB":
                 add1 = np.sign(C - B + 0.1)
@@ -64,4 +66,6 @@ def resolve():
         print("Yes")
         s_Nlist = '\n'.join(Nlist)
         print(s_Nlist)
+
+
 resolve()

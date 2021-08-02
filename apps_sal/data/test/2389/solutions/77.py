@@ -46,4 +46,3 @@ for k, s in enumerate(S):
 print('Yes')
 for a in ans:
     print((F[a]))
-

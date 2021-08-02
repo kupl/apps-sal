@@ -9,7 +9,7 @@ for i in range(n):
     use.append(arr[i])
     use.sort()
     real_use = use[-1:-(i + 2):-2]
-    #print(real_use)
+    # print(real_use)
     if sum(real_use) > h:
         print(i)
         return
