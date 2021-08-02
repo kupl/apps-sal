@@ -19,4 +19,3 @@ while h2 > 0:
 print(n)
 for i in a:
     print(i)
-

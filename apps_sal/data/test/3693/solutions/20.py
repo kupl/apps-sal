@@ -1,6 +1,7 @@
 def check1(point):
     return sq1[0][0] <= point[0] <= sq1[3][0] and sq1[0][1] <= point[1] <= sq1[3][1]
 
+
 def check2(point):
     return point[0] + sq2[0][1] - sq2[0][0] >= point[1] and point[0] + sq2[3][1] - sq2[3][0] <= point[1] and -point[0] + sq2[3][1] + sq2[3][0] >= point[1] and -point[0] + sq2[0][1] + sq2[0][0] <= point[1]
 
@@ -18,4 +19,3 @@ for i in range(-100, 101):
             print("YES")
             return
 print("NO")
-

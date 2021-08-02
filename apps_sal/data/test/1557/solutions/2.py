@@ -16,4 +16,3 @@ while boss_health > 0:
 
 print(len(actions))
 print('\n'.join(actions))
-

@@ -12,4 +12,3 @@ for i in range(u[0], u[3] + 1):
             print('YES')
             return
 print('NO')
-

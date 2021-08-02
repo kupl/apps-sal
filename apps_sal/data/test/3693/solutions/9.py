@@ -1,35 +1,37 @@
 #     Codeforces Round #488 by NEAR (Div. 2)
+import bisect
 import collections
 from functools import cmp_to_key
 #key=cmp_to_key(lambda x,y: 1 if x not in y else -1 )
 
 import sys
-def getIntList():
-    return list(map(int, input().split()))    
 
-import bisect 
-            
-     
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
 s1 = getIntList()
 s2 = getIntList()
 
-def x8(x):
-    return x*8
- 
-s1 = list(map(x8,s1))
-s1 = list(s1)
-s1 = [ (s1[i],s1[i+1]) for i in range(0,8,2)]
-s2 = list(map(x8,s2))
-s2 = list(s2)
-s2 = [ (s2[i],s2[i+1]) for i in range(0,8,2)]
 
+def x8(x):
+    return x * 8
+
+
+s1 = list(map(x8, s1))
+s1 = list(s1)
+s1 = [(s1[i], s1[i + 1]) for i in range(0, 8, 2)]
+s2 = list(map(x8, s2))
+s2 = list(s2)
+s2 = [(s2[i], s2[i + 1]) for i in range(0, 8, 2)]
 
 
 s1x = [x[0] for x in s1]
 s1x = list(s1x)
 s1xmin = min(s1x)
 s1xmax = max(s1x)
- 
+
 
 s1y = [x[1] for x in s1]
 s1y = list(s1y)
@@ -47,13 +49,11 @@ s2xsymin = min(s2xsy)
 s2xsymax = max(s2xsy)
 
 
-
 for x in range(-800, 801):
     for y in range(-800, 801):
-        if s1xmin <= x <=s1xmax and s1ymin<= y <= s1ymax :
-            if s2xpymin <= x+y <= s2xpymax and s2xsymin <= x-y <= s2xsymax:
+        if s1xmin <= x <= s1xmax and s1ymin <= y <= s1ymax:
+            if s2xpymin <= x + y <= s2xpymax and s2xsymin <= x - y <= s2xsymax:
                 print('YES')
                 return
 
 print('NO')
-

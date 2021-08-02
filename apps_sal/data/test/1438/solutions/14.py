@@ -29,7 +29,3 @@ while True:
     else:
         break
 print(cnt)
-        
-
-    
-

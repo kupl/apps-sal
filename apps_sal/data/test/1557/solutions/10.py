@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 h1, a1, c1 = mi()
 h2, a2 = mi()

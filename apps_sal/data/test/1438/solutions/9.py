@@ -25,6 +25,7 @@ def main():
     ans = bake(n, k, ai, bi)
     print(ans)
 
+
 def __starting_point():
     main()
 

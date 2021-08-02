@@ -1,5 +1,5 @@
 n, c = list(map(int, input().split()))
-mod = 10 ** 6 +3
+mod = 10 ** 6 + 3
 inv = [0, 1]
 for i in range(2, max(n, c) + 1):
     inv.append(inv[mod % i] * (mod - mod // i) % mod)
@@ -13,5 +13,3 @@ for i in range(1, n + 1):
 ans += mod - 1
 ans %= mod
 print(ans)
-
-

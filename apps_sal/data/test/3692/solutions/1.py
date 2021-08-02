@@ -2,6 +2,8 @@ from math import sqrt
 pt = lambda *a, **k: print(*a, **k, flush=True)
 rd = lambda: map(int, input().split())
 n = int(input())
+
+
 def f(x1, y1, r1, x2, y2, r2):
     a = (r1 + r2) ** 2
     b = (r1 - r2) ** 2
@@ -16,18 +18,22 @@ def f(x1, y1, r1, x2, y2, r2):
         return 5
     else:
         return 2
+
+
 def g(x1, y1, r1, x2, y2, r2):
     ds = (x1 - x2) ** 2 + (y1 - y2) ** 2
     d = sqrt(ds)
     A = (r1 ** 2 - r2 ** 2 + ds) / (2 * d)
     h = sqrt(r1 ** 2 - A ** 2)
-    x = x1 + A * (x2 - x1) / d  
+    x = x1 + A * (x2 - x1) / d
     y = y1 + A * (y2 - y1) / d
-    x3 = x - h * (y2 - y1) / d  
+    x3 = x - h * (y2 - y1) / d
     y3 = y + h * (x2 - x1) / d
-    x4 = x + h * (y2 - y1) / d  
+    x4 = x + h * (y2 - y1) / d
     y4 = y - h * (x2 - x1) / d
-    return x3, y3, x4, y4 
+    return x3, y3, x4, y4
+
+
 if n is 1:
     pt(2)
 if n is 2:
@@ -85,4 +91,3 @@ if n is 3:
         pt(5)
     if a is 5 and b is 5 and c is 5:
         pt(4)
-

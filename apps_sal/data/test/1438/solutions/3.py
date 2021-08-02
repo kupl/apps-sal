@@ -17,4 +17,3 @@ while k:
     else: break
 ans = min(c)
 print(ans)
-
