@@ -1,7 +1,7 @@
 # スペース区切りの整数の入力
 n, k = map(int, input().split())
 # スペース区切りの整数の入力
-data =  list(map(int, input().split()))
+data = list(map(int, input().split()))
 l = sorted(data, reverse=True)
 ans = 0
 

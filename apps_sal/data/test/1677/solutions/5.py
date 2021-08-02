@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n = int(input())
 arr = list(R())
 dp = [[0] * (n + 1) for i in range(n + 1)]

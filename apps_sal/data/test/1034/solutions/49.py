@@ -54,4 +54,3 @@ for i in range(k):
         if (ni, nj, nk) not in considered:
             considered.add((ni, nj, nk))
             q.push((-(a_ls[ni] + b_ls[nj] + c_ls[nk]), ni, nj, nk))
-

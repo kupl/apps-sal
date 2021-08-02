@@ -128,4 +128,3 @@ for si in range(n):
     rhs.append(rolling(s))
 
 print((solve(n, sss, ccc, rhs)))
-

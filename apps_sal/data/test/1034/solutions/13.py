@@ -18,8 +18,8 @@ hq = []
 for i in range(x):
     for j in range(y):
         for l in range(z):
-            if (i+1)*(j+1)*(l+1)<=k:
-                heapq.heappush(hq, (A[i]+B[j]+C[l])*-1)
+            if (i + 1) * (j + 1) * (l + 1) <= k:
+                heapq.heappush(hq, (A[i] + B[j] + C[l]) * -1)
             else:
                 break
 
@@ -38,5 +38,4 @@ for i, j in itertools.product(AB, C):
 '''
 
 for _ in range(k):
-    print((heapq.heappop(hq)*-1))
-
+    print((heapq.heappop(hq) * -1))

@@ -7,4 +7,3 @@ for i in range(K):
     Sum += l[N - i - 1]
 
 print(Sum)
-

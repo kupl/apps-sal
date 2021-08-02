@@ -12,8 +12,8 @@ ABC = []
 for x in range(X):
     for y in range(Y):
         for z in range(Z):
-            if (x+1)*(y+1)*(z+1) <= K:
-                ABC.append(A[x]+B[y]+C[z])
+            if (x + 1) * (y + 1) * (z + 1) <= K:
+                ABC.append(A[x] + B[y] + C[z])
             else:
                 break
 

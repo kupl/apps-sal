@@ -31,21 +31,20 @@ b_max = min(k, len(b))
 c_max = min(k, len(c))
 
 abc = []
-for i in range(1, k+1):
+for i in range(1, k + 1):
     if i > len(a):
         break
-    for j in range(1, k//i+1):
+    for j in range(1, k // i + 1):
         if j > len(b):
             break
-        for l in range(1, k//(i*j)+1):
+        for l in range(1, k // (i * j) + 1):
             if l > len(c):
                 break
             # print(i, j, l)
-            abc.append(a[i-1]+b[j-1]+c[l-1])
+            abc.append(a[i - 1] + b[j - 1] + c[l - 1])
 
 # print(abc)
 # print(k)
 abc.sort(reverse=True)
 for i in range(k):
     print((abc[i]))
-

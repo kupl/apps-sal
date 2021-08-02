@@ -18,9 +18,9 @@ for i in range(n):
     vt[i].sort(reverse=True)
     tmp = 0
     for j in range(len(vt[i])):
-        if (i + 1)*(j + 1) > n or vt[i][j] <= 0:
+        if (i + 1) * (j + 1) > n or vt[i][j] <= 0:
             break
         tmp += vt[i][j]
     ans = max(ans, tmp)
 
-print (ans)
+print(ans)

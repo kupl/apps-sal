@@ -22,4 +22,3 @@ for _ in range(K):
     if k + 1 < z and not used[(i, j, k + 1)]:
         heapq.heappush(pq, (-(a[i] + b[j] + c[k + 1]), i, j, k + 1))
         used[(i, j, k + 1)] = True
-

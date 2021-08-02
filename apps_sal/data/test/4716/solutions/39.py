@@ -8,5 +8,5 @@ for L in l:
     sum += L
     if count == K:
         break
-    
+
 print(sum)

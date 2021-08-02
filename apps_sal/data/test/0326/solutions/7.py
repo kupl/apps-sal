@@ -1,4 +1,6 @@
-it = lambda: list(map(int, input().strip().split()))
+def it(): return list(map(int, input().strip().split()))
+
+
 INF = float('inf')
 
 
@@ -10,7 +12,7 @@ def solve():
         s, c = input().strip().split()
         S.append(s)
         C.append(int(c))
-    
+
     vis = set()
     mem = dict()
 
@@ -47,7 +49,7 @@ def solve():
         vis.discard((s, p))
         mem[s, p] = ans
         return ans
-        
+
     ans = INF
     for i in range(N):
         ans = min(ans, dp(S[i], 0) + C[i])
@@ -57,4 +59,6 @@ def solve():
 def __starting_point():
     ans = solve()
     print(ans)
+
+
 __starting_point()

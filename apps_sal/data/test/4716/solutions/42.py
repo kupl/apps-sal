@@ -9,4 +9,3 @@ bar = sorted(ll)[::-1]
 ans = sum(bar[0:k])
 
 print(ans)
-

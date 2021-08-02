@@ -20,19 +20,18 @@ used_set = set([(i, j, k)])
 for _ in range(K):
     oisi, i, j, k = heapq.heappop(heap)
     print((-oisi))
-    if (i+1, j, k) in used_set:
+    if (i + 1, j, k) in used_set:
         pass
-    elif(i+1 < len(A)):
-        used_set.add((i+1, j, k))
-        heapq.heappush(heap, (-A[i+1]-B[j]-C[k], i+1, j, k))
-    if (i, j+1, k) in used_set:
+    elif(i + 1 < len(A)):
+        used_set.add((i + 1, j, k))
+        heapq.heappush(heap, (-A[i + 1] - B[j] - C[k], i + 1, j, k))
+    if (i, j + 1, k) in used_set:
         pass
-    elif(j+1 < len(B)):
-        used_set.add((i, j+1, k))
-        heapq.heappush(heap, (-A[i] - B[j+1] - C[k], i, j+1, k))
-    if (i, j, k+1) in used_set:
+    elif(j + 1 < len(B)):
+        used_set.add((i, j + 1, k))
+        heapq.heappush(heap, (-A[i] - B[j + 1] - C[k], i, j + 1, k))
+    if (i, j, k + 1) in used_set:
         pass
-    elif(k+1 < len(C)):
-        used_set.add((i, j, k+1))
-        heapq.heappush(heap, (-A[i]-B[j]-C[k+1], i, j, k+1))
-
+    elif(k + 1 < len(C)):
+        used_set.add((i, j, k + 1))
+        heapq.heappush(heap, (-A[i] - B[j] - C[k + 1], i, j, k + 1))

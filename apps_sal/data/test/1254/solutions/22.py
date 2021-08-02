@@ -2,7 +2,7 @@
 subs = [[] for _ in range(numsub)]
 for _ in range(numcand):
     (sub, prof) = (int(i) for i in input().split())
-    subs[sub-1].append(prof)
+    subs[sub - 1].append(prof)
 for sub in subs:
     sub.sort(reverse=True)
 subs = [sub for sub in subs if sub and sub[0] > 0]
@@ -15,5 +15,3 @@ while subs:
         else:
             subs[i][0:2] = [subs[i][0] + subs[i][1]]
 print(best)
-    
-

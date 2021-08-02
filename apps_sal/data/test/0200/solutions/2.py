@@ -15,13 +15,12 @@ for i in range(8):
 
 for i in range(100000):
     for j in range(12):
-        if i&1:
+        if i & 1:
             p += a
         else:
             p -= b
         if p >= x:
-            print(ceil(i/2))
+            print(ceil(i / 2))
             return
 
 print(-1)
-

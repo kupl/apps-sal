@@ -1,7 +1,7 @@
 x, y, z, K = list(map(int, input().split()))
-a = sorted(list(map(int, input().split())), reverse = True)
-b = sorted(list(map(int, input().split())), reverse = True)
-c = sorted(list(map(int, input().split())), reverse = True)
+a = sorted(list(map(int, input().split())), reverse=True)
+b = sorted(list(map(int, input().split())), reverse=True)
+c = sorted(list(map(int, input().split())), reverse=True)
 lst = []
 
 for i in range(len(a)):
@@ -11,7 +11,6 @@ for i in range(len(a)):
                 break
             lst.append(a[i] + b[j] + c[k])
 
-new_lst = sorted(lst, reverse = True)
+new_lst = sorted(lst, reverse=True)
 for i in range(K):
     print((new_lst[i]))
-

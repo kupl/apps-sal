@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n, m = mi()
 a = [[] for i in range(m + 1)]
@@ -22,4 +27,3 @@ for i in range(1, m + 1):
 
 ans = max(ch)
 print(ans)
-

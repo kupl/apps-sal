@@ -11,15 +11,15 @@ C = list(int(c) for c in input().split())
 
 hq = []
 for i, j in itertools.product(A, B):
-    heapq.heappush(hq, (i+j)*-1)
+    heapq.heappush(hq, (i + j) * -1)
 
 AB = []
-while len(hq)>0 and len(AB)<=k:
-    AB.append(heapq.heappop(hq)*-1)
+while len(hq) > 0 and len(AB) <= k:
+    AB.append(heapq.heappop(hq) * -1)
 
 hq = []
 for i, j in itertools.product(AB, C):
-    heapq.heappush(hq, (i+j)*-1)
+    heapq.heappush(hq, (i + j) * -1)
 
 for _ in range(k):
-    print(heapq.heappop(hq)*-1)
+    print(heapq.heappop(hq) * -1)

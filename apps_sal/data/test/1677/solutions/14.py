@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 from sys import stdin
-    
-    
+
+
 def solve(tc):
     n = int(stdin.readline().strip())
     seq = list(map(int, stdin.readline().split()))
-    
+
     elems = []
     idxcnt = 0
     idx = dict()
@@ -15,11 +15,11 @@ def solve(tc):
             idxcnt += 1
             elems.append([])
         elems[idx[seq[i]]].append(i)
-    
+
     ans = 1
     for li in elems:
         ans = max(ans, len(li))
-    
+
     m = len(elems)
     for i in range(m):
         for j in range(m):
@@ -30,7 +30,7 @@ def solve(tc):
             leni, lenj = len(elems[i]), len(elems[j])
             pi, pj = 0, 0
             while True:
-                while pi<leni and elems[i][pi]<cur:
+                while pi < leni and elems[i][pi] < cur:
                     pi += 1
 
                 if pi == leni:
@@ -39,7 +39,7 @@ def solve(tc):
                 cnt += 1
                 pi += 1
 
-                while pj<lenj and elems[j][pj]<cur:
+                while pj < lenj and elems[j][pj] < cur:
                     pj += 1
 
                 if pj == lenj:
@@ -48,9 +48,9 @@ def solve(tc):
                 cnt += 1
                 pj += 1
             ans = max(ans, cnt)
-    
+
     print(ans)
-    
-    
+
+
 tc = 1
 solve(tc)

@@ -18,27 +18,27 @@ hq = []
 hqAns = []
 d = defaultdict(int)
 
-heapq.heappush(hq, ((A[0]+B[0]+C[0])*-1, 0, 0, 0))
-d[(0,0,0)] = 1
+heapq.heappush(hq, ((A[0] + B[0] + C[0]) * -1, 0, 0, 0))
+d[(0, 0, 0)] = 1
 
-while len(hqAns)<k :
+while len(hqAns) < k:
     val, l, m, n = heapq.heappop(hq)
     heapq.heappush(hqAns, val)
- 
-    if d[(l+1, m, n)]==0 and l+1 < x:
-        heapq.heappush(hq, ((A[l+1]+B[m]+C[n])*-1, l+1, m, n))
-        d[(l+1, m, n)] = 1
 
-    if d[(l, m+1, n)]==0 and m+1 < y:
-        heapq.heappush(hq, ((A[l]+B[m+1]+C[n])*-1, l, m+1, n))
-        d[(l, m+1, n)] = 1
- 
-    if d[(l, m, n+1)]==0 and n+1 < z:
-        heapq.heappush(hq, ((A[l]+B[m]+C[n+1])*-1, l, m, n+1))
-        d[(l, m, n+1)] = 1
+    if d[(l + 1, m, n)] == 0 and l + 1 < x:
+        heapq.heappush(hq, ((A[l + 1] + B[m] + C[n]) * -1, l + 1, m, n))
+        d[(l + 1, m, n)] = 1
+
+    if d[(l, m + 1, n)] == 0 and m + 1 < y:
+        heapq.heappush(hq, ((A[l] + B[m + 1] + C[n]) * -1, l, m + 1, n))
+        d[(l, m + 1, n)] = 1
+
+    if d[(l, m, n + 1)] == 0 and n + 1 < z:
+        heapq.heappush(hq, ((A[l] + B[m] + C[n + 1]) * -1, l, m, n + 1))
+        d[(l, m, n + 1)] = 1
 
 for i in range(k):
-    print((heapq.heappop(hqAns)*-1))
+    print((heapq.heappop(hqAns) * -1))
 
 '''
 # ans.2 #
@@ -81,4 +81,3 @@ for _ in range(k):
     print(heapq.heappop(hq)*-1)
 
 '''
-
