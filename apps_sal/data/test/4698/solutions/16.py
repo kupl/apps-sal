@@ -9,7 +9,7 @@ for _ in range(m):
 for drink in drinks:
     time = 0
     copy = times.copy()
-    copy[drink[0]-1] = drink[1]
+    copy[drink[0] - 1] = drink[1]
     for i in copy:
         time += i
     print(time)

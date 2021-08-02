@@ -8,4 +8,3 @@ for i in range(n - 1):
     if A[i] != A[-1]:
         ans = max(ans, n - i - 1)
 print(ans)
-

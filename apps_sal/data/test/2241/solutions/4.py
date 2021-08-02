@@ -8,4 +8,3 @@ for i in range(n):
     else:
         sum = sum + (b[i] // 2) * (b[i] - b[i] // 2)
 print(sum)
-

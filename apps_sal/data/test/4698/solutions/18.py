@@ -9,7 +9,6 @@ for i in range(m):
     for j in range(n):
         if p == j:
             cnt += x
-        else :
+        else:
             cnt += t[j]
     print(cnt)
-

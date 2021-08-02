@@ -18,4 +18,3 @@ while colors[left] == colors[right]:
 right_answer = right - left
 
 print(max(left_answer, right_answer))
-

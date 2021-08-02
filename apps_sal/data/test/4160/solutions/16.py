@@ -1,6 +1,6 @@
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
 # from math import gcd
 # from itertools import combinations,permutations,accumulate, product # (string,3) 3回
 # #from collections import deque
@@ -24,25 +24,32 @@
 # int min_x = max(0, j - 2), max_x = min(w - 1, j + 2);
 #
 #
+from sys import stdin
 import sys
 sys.setrecursionlimit(10000000)
 mod = 10**9 + 7
 #mod = 9982443453
 #mod = 998244353
 INF = float('inf')
-from sys import stdin
 readline = stdin.readline
+
+
 def readInts():
-  return list(map(int,readline().split()))
+    return list(map(int, readline().split()))
+
+
 def readTuples():
-    return tuple(map(int,readline().split()))
+    return tuple(map(int, readline().split()))
+
+
 def I():
     return int(readline())
+
+
 X = I()
 m = 100
 cnt = 0
 while m < X:
-    m += m//100
+    m += m // 100
     cnt += 1
 print(cnt)
-

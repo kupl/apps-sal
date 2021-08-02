@@ -1,6 +1,7 @@
+import math
 import sys
 def input(): return sys.stdin.readline().rstrip()
-import math
+
 
 X = int(input())
 
@@ -12,4 +13,3 @@ while money < X:
     year += 1
 
 print(year)
-

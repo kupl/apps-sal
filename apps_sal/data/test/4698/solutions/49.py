@@ -10,14 +10,14 @@ X = []
 
 # まずはドリンクを飲んだ場合の時間をXに格納する
 for i in range(M):
-    X.append(list(map(int,input().split())))
-    X[i][0] = X[i][0]-1
+    X.append(list(map(int, input().split())))
+    X[i][0] = X[i][0] - 1
 
 Y = []
 # それぞれの問題の解く時間を取得する
 for i in range(N):
     Y.append(T[i])
-    
+
 for i in range(len(X)):
     Y_copy = Y.copy()
     Y_copy[X[i][0]] = X[i][1]

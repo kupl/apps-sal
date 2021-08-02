@@ -4,11 +4,13 @@ def pref_counts(string, char):
         result.append(result[-1] + (c == char))
     return result
 
+
 def left_counts(string, char):
     result = [0]
     for c in string:
         result.append(result[-1] + 1 if c == char else 0)
     return result
+
 
 s = input().replace("C", "B")
 t = input().replace("C", "B")
@@ -26,6 +28,4 @@ for i in range(int(input())):
             answer = s_a - (s_b == 0) >= t_a
         elif s_b == t_b:
             answer = s_a >= t_a and (s_a - t_a) % 3 == 0
-    print(int(answer), end = "")
-
-
+    print(int(answer), end="")

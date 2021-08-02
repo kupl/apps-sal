@@ -13,7 +13,4 @@ if n == k: q = d & 1
 print(['Daenerys', 'Stannis'][q])
 
 
-
-
 # Made By Mostafa_Khaled
-

@@ -10,4 +10,3 @@ for i in range(n):
         res -= 1
     else: res += b[i] // 2 * (b[i] - (b[i] // 2))
 print(res)
-

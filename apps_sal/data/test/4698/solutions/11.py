@@ -4,7 +4,7 @@ m = int(input())
 
 for i in range(m):
     p, x = map(int, input().split())
-    a = t[p-1]
-    t[p-1] = x
+    a = t[p - 1]
+    t[p - 1] = x
     print(sum(t))
-    t[p-1] = a
+    t[p - 1] = a

@@ -10,4 +10,3 @@ while X > Y:
     count += 1
 
 print(count)
-

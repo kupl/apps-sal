@@ -15,4 +15,3 @@ elif ((n - k) & 1) and e <= (k >> 1):
 else:
     w = 0
 print(['Daenerys', 'Stannis'][w])
-

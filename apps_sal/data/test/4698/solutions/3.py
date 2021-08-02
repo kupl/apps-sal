@@ -8,4 +8,3 @@ for i in range(m):
     p -= 1
     ans = time - t[p] + x
     print(ans)
-

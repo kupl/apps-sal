@@ -1,7 +1,7 @@
 def main():
     s, t = input(), input()
     s_info, t_info = fast_counter(s), fast_counter(t)
-    
+
     queries = int(input())
     answer = ''
     for _ in range(queries):
@@ -48,6 +48,6 @@ def fast_counter(s):
             a_last.append(0)
             b_count.append(b_count[-1] + 1)
     return (a_last, b_count)
-            
-main()
 
+
+main()

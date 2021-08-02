@@ -6,6 +6,8 @@ def read():
         r[0][i + 1] = (r[0][i] + 1) * (s[i] == 'A')
         r[1][i + 1] = r[1][i] + (s[i] != 'A')
     return r
+
+
 s, t = read(), read()
 q = int(input())
 r = ''
@@ -20,4 +22,3 @@ for i in range(q):
     else:
         r += '1'
 print(r)
-

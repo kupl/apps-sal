@@ -1,5 +1,5 @@
 n = int(input())
-t = [int(i) for i in input().split()] #分割した文字列を順繰りにintに変換してリストに追加
+t = [int(i) for i in input().split()]  # 分割した文字列を順繰りにintに変換してリストに追加
 m = int(input())
 
 for i in range(m):
@@ -13,4 +13,3 @@ for i in range(m):
             sum += j
         count += 1
     print(sum)
-

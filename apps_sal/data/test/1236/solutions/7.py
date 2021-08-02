@@ -1,5 +1,5 @@
-R = lambda:list(map(int,input().split()))
-n,k = R()
+R = lambda: list(map(int, input().split()))
+n, k = R()
 a = R()
 nch = 0
 for i in a:
@@ -23,8 +23,8 @@ else:
             print('Stannis')
         else:
             print('Daenerys')
-    else:  
-        if c_dn >= ch and k % 2 == 0: 
+    else:
+        if c_dn >= ch and k % 2 == 0:
             print('Daenerys')
-        else: 
+        else:
             print('Stannis')

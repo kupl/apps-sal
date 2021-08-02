@@ -1,7 +1,7 @@
 def main():
     s, t = input(), input()
     s_info, t_info = fast_counter(s), fast_counter(t)
-    
+
     queries = int(input())
     answer = ''
     for _ in range(queries):
@@ -51,4 +51,3 @@ def fast_counter(s):
 
 
 main()
-

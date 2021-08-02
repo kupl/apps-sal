@@ -13,4 +13,3 @@ for i in range(M):
     ans += X[i]
     ans += sum(T[P[i]:])
     print(ans)
-

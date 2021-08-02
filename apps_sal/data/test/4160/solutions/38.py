@@ -10,4 +10,3 @@ while True:
     if X <= m:
         print(n)
         break
-

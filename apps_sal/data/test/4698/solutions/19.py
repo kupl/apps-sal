@@ -9,4 +9,4 @@ for i in range(m):
 temp = sum(t)
 
 for i in range(m):
-    print(temp + (x[i] - t[p[i]-1]))
+    print(temp + (x[i] - t[p[i] - 1]))

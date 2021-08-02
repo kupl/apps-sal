@@ -23,15 +23,3 @@ for _ in range(m):
     p, x = rm()
     p -= 1
     print((sum_ - t[p] + x))
-
-
-
-
-
-
-
-
-
-
-
-
