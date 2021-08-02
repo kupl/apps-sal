@@ -1,13 +1,13 @@
 from operator import or_, xor
 import sys
- 
+
 n, m = map(int, input().split())
 t = [list(map(int, input().split()))]
 
 for i in range(n):
     t += [[(or_, xor)[i & 1](*t[i][j: j + 2]) for j in range(0, len(t[i]), 2)]]
-    
-#print(t)
+
+# print(t)
 
 for s in sys.stdin:
     p, b = s.split()

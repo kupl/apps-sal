@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, p, m = rd()
 q, l, r = 0, 0, 0
 for i in range(n):
@@ -10,4 +12,3 @@ for i in range(n):
     q = d
 c = m - q
 print(r + max(min(c - l // p, c), 0))
-

@@ -19,9 +19,11 @@ def num_denied(a, b, groups):
                 d += 2
     return d
 
+
 def __starting_point():
     n, a, b = list(map(int, input().split()))
     groups = list(map(int, input().split()))
     print(num_denied(a, b, groups))
+
 
 __starting_point()

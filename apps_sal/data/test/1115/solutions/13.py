@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 m = int(input())
 p = []
 for i in range(m):
-    l,r = map(int, input().split())
+    l, r = map(int, input().split())
     p.append((l, r))
 rs = sum(a)
 for i in range(len(p)):

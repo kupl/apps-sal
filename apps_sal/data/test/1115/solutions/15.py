@@ -15,4 +15,3 @@ for p in period:
         time = total
         break
 print(time)
-

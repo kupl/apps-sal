@@ -1,4 +1,4 @@
-n,k = [int(x) for x in input().split()]
+n, k = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 lf = {}
 rt = {}
@@ -12,16 +12,14 @@ for x in a:
 prog = 0
 for x in a:
     try:
-        if(x%k==0):
+        if(x % k == 0):
             rt[x] -= 1
-            prog += lf[x//k]*rt[x*k]
+            prog += lf[x // k] * rt[x * k]
     except KeyError:
         pass
     finally:
-        
+
         lf[x] += 1
 
 
 print(prog)
-    
-

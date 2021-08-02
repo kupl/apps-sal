@@ -1,6 +1,7 @@
 from sys import stdin
 import re
 
+
 def readInt(count=1):
     m = re.match('\s*' + ('([+-]?\d+)\s*' * count), stdin.readline())
     if m is not None:
@@ -9,6 +10,7 @@ def readInt(count=1):
             ret.append(int(m.group(i)))
         return ret
     return None
+
 
 taskCount, = readInt()
 thinkingTime = readInt(taskCount)
@@ -27,4 +29,3 @@ for i in range(onlineCount):
         best = totalThinking
         break
 print(best)
-

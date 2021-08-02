@@ -6,6 +6,7 @@ empty_two = b
 half_two = 0
 denies = 0
 
+
 def handle(group):
     nonlocal empty_one, empty_two, half_two, denies
     if group == 1:
@@ -28,8 +29,8 @@ def handle(group):
         denies += 2
         return
 
+
 for i in range(n):
     handle(l[i])
 
 print(denies)
-

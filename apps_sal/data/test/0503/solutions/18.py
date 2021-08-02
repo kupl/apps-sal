@@ -19,5 +19,5 @@ def main():
         current_sequence[elem][1] += 1
     print(total_subsequences)
 
-main()
 
+main()

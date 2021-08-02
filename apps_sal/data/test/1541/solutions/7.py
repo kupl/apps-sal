@@ -3,9 +3,10 @@ def weight(s):
     w, i = 0, 1
     for c in s:
         if c != '=':
-            w += i*int(c)
+            w += i * int(c)
         i += 1
     return w
+
 
 def main():
     line = input()
@@ -19,6 +20,9 @@ def main():
     else:
         print('balance')
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

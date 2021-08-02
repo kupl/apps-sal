@@ -1,5 +1,8 @@
 from collections import defaultdict
-import sys, os, math
+import sys
+import os
+import math
+
 
 def __starting_point():
     #n, m = list(map(int, input().split()))
@@ -10,10 +13,11 @@ def __starting_point():
     ans = -1
     for i in range(m):
         a, b = list(map(int, input().split()))
-        if a<=sm and sm<=b:
+        if a <= sm and sm <= b:
             ans = sm
         if ans == -1 and a > sm:
             ans = a
     print(ans)
+
 
 __starting_point()

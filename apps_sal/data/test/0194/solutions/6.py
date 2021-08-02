@@ -19,4 +19,3 @@ for i in t:
         else:
             ans += 2
 print(ans)
-

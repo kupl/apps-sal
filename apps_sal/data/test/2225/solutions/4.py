@@ -20,4 +20,3 @@ for line in sys.stdin:
     ans.append(str(tree[-1][0]))
 
 print('\n'.join(ans))
-

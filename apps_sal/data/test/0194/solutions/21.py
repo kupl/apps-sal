@@ -20,5 +20,5 @@ for x in arr[:n]:
             two -= 1
         else:
             fail += 2
-        
+
 print(fail)

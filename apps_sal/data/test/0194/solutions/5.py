@@ -1,4 +1,4 @@
-n,a,b = list(map(int,input().split()))
+n, a, b = list(map(int, input().split()))
 line = input().split()
 t = []
 c = 0
@@ -18,4 +18,3 @@ for i in range(n):
     else:
         rej += t[i]
 print(rej)
-

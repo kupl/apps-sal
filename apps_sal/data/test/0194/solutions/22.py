@@ -24,4 +24,3 @@ for i in customers:
             counter += 2
 
 print(counter)
-

@@ -1,16 +1,16 @@
-s=input()
-x=s.index('^')
-ans=0
+s = input()
+x = s.index('^')
+ans = 0
 for i in range(len(s)):
-    if(s[i]=='=' or s[i]=='^'):
+    if(s[i] == '=' or s[i] == '^'):
         continue
-    if(i<x):
-        ans+=int(s[i])*(x-i)
+    if(i < x):
+        ans += int(s[i]) * (x - i)
     else:
-        ans-=int(s[i])*(i-x)
-if(ans==0):
+        ans -= int(s[i]) * (i - x)
+if(ans == 0):
     print("balance")
-elif(ans>0):
+elif(ans > 0):
     print("left")
 else:
     print("right")
