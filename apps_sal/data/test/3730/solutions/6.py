@@ -12,4 +12,3 @@ for i in range(1, len(s)):
     if c in range(2, n - 1) and max(a[c] - a[c - 2], a[c + 1] - a[c - 1]) >= 2:
         val = max(val, s[i][1] - s[i - 1][0] + 1)
 print(val)
-
