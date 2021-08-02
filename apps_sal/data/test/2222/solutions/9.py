@@ -24,4 +24,3 @@ for i in range(N - 1, -1, -1):
             d[i] = min(d[i], d[j])
 
 print(k - d[0] + 1)
-

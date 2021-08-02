@@ -18,15 +18,15 @@ for ai in a:
     for key, value in c.items():
         if key >= l:
             eq = '0'.join(s)
-            res = (res + int(eq)*value)%mod
+            res = (res + int(eq) * value) % mod
             eq = '0'.join(s) + '0'
             res = (res + int(eq) * value) % mod
         else:
             eq = []
-            for i in range(l-key, l):
-                eq.append(s[i]*2)
+            for i in range(l - key, l):
+                eq.append(s[i] * 2)
             eq = [s[:-key]] + eq
             eq = ''.join(eq)
-            res = (res + (int(eq) + int(s[:-key]+'0'*2*key)) * value) % mod
+            res = (res + (int(eq) + int(s[:-key] + '0' * 2 * key)) * value) % mod
 
 print(res)

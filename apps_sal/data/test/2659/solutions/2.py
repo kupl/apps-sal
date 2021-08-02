@@ -22,4 +22,3 @@ for k in range(K - 1):
     ans.append(f(ans[-1] + 1))
 
 print(*ans, sep='\n')
-

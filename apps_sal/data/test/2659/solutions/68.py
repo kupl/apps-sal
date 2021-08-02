@@ -4,15 +4,19 @@
 def ri():
     return int(input())
 
+
 def rl():
     return list(input().split())
+
 
 def rli():
     return list(map(int, input().split()))
 
+
 def calc(n):
     s = sum(map(int, str(n)))
     return n / s
+
 
 def main():
     k = ri()
@@ -21,15 +25,15 @@ def main():
     for n in range(1, 15):
         pow10n = pow(10, n)
         for d in range(1, 10):
-            lim = (d+1)*pow10n
+            lim = (d + 1) * pow10n
             e = 0
             while True:
-                e1 = d*pow10n+e*(last+1)+last
+                e1 = d * pow10n + e * (last + 1) + last
                 if e1 >= lim:
                     break
-                e2 = e1 + (last+1)
+                e2 = e1 + (last + 1)
                 if calc(e1) > calc(e2):
-                    last = last*10+9
+                    last = last * 10 + 9
                     e = 0
                     continue
                 cand.append(e1)
@@ -40,6 +44,7 @@ def main():
 
 def __starting_point():
     main()
+
 
 """
 1 1.0

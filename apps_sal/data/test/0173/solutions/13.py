@@ -5,7 +5,8 @@ def dfs(x, y):
     if not graph[2][x][y + graph[1][x][y]]:
         graph[2][x][y + graph[1][x][y]] = True
         dfs(x, y + graph[1][x][y])
-            
+
+
 n, m = list(map(int, input().split()))
 c = chr(0)
 flag1 = True
@@ -20,7 +21,7 @@ for i in range(n):
     else:
         for j in range(m - 1):
             graph[0][j][i] = 1
-                    
+
 s = input()
 for i in range(m):
     c = s[i]
@@ -30,7 +31,7 @@ for i in range(m):
     else:
         for j in range(n - 1):
             graph[1][i][j] = 1
-                    
+
 for i in range(n):
     for j in range(m):
         flag = False
@@ -51,15 +52,14 @@ for i in range(n):
 
 if flag1:
     print('YES')
-    
-#print()
-#for i in range(n):
-    #for j in range(m):
-        #print(graph[0][j][i], end = ' ')
-    #print()
-#print()
-#for i in range(n):
-    #for j in range(m):
-        #print(graph[1][j][i], end = ' ')
-    #print()
 
+# print()
+# for i in range(n):
+    # for j in range(m):
+    #print(graph[0][j][i], end = ' ')
+    # print()
+# print()
+# for i in range(n):
+    # for j in range(m):
+    #print(graph[1][j][i], end = ' ')
+    # print()

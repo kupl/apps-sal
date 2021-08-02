@@ -1,12 +1,14 @@
-modulo = 998244353
 from collections import Counter
+modulo = 998244353
+
 
 def conv(x):
     res = 0
     for v in x:
         res = (res * 100 + int(v)) % modulo
     return res
- 
+
+
 n = int(input())
 x = list(input().split())
 c = Counter(len(v) for v in x)
@@ -19,7 +21,6 @@ for v in x:
         else:
             d = u - w
             res += k * 11 * conv(v[d:])
-            res += k * 2 * int(v[:d]) * (10 ** (2*w))
-    res %= modulo        
+            res += k * 2 * int(v[:d]) * (10 ** (2 * w))
+    res %= modulo
 print(res)
-

@@ -2,10 +2,11 @@ from collections import Counter
 
 b = 998244353
 
+
 def __starting_point():
     n = int(input())
     arr = input().split()
-    mp = list(map(lambda x: len(x),arr))
+    mp = list(map(lambda x: len(x), arr))
     cnt = Counter(mp)
 
     s = 0
@@ -18,4 +19,6 @@ def __starting_point():
             s = (s + l2 * ln) % b
 
     print(s)
+
+
 __starting_point()

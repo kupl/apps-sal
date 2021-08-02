@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 n = int(input())
 s = input()
 a = s.count('A')
@@ -9,4 +10,3 @@ elif b > a:
     print('Danik')
 else:
     print('Anton')
-

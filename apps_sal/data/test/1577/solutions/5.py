@@ -9,4 +9,3 @@ if a == b:
     print('Friendship')
 if b > a:
     print('Danik')
-

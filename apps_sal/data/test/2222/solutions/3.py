@@ -2,13 +2,13 @@ from collections import deque
 N = int(input())
 mima = [-1] + list(map(int, input().split()))
 par = [-1, -1] + list(map(int, input().split()))
-leaf = set(range(1, N+1))
-cld = [0]*(N+1) 
+leaf = set(range(1, N + 1))
+cld = [0] * (N + 1)
 for p in par:
     cld[p] += 1
     if p in leaf:
         leaf.remove(p)
-dp = [0]*(N+1)
+dp = [0] * (N + 1)
 for i in leaf:
     dp[i] = 1
 

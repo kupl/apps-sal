@@ -2,6 +2,8 @@ n, m = map(int, input().split())
 a = input()
 b = input()
 f = True
+
+
 def dfs(x, y):
     tmp = 1
     used[x + y * 42] = 1
@@ -18,7 +20,8 @@ def dfs(x, y):
         if used[x - 1 + (y) * 42] == 0:
             tmp += dfs(x - 1, y)
     return(tmp)
-    
+
+
 for i in range(n):
     for j in range(m):
         used = [0] * 1000

@@ -16,4 +16,3 @@ for _ in range(k):
     if snuke(n + 10**d) > snuke(n + 10**(d + 1)):
         d += 1
     n += 10**d
-

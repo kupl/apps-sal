@@ -1,6 +1,6 @@
 N = int(input())
 T = [int(a) for a in input().split()]
-P = [-1] + [int(a)-1 for a in input().split()]
+P = [-1] + [int(a) - 1 for a in input().split()]
 C = [[] for i in range(N)]
 for i in range(1, N):
     C[P[i]].append(i)
@@ -28,5 +28,4 @@ while i >= 0:
     else:
         CT[i], i = CT[i] + 1, C[i][CT[i]]
 
-print(L-DP[0]+1)
-
+print(L - DP[0] + 1)

@@ -10,9 +10,9 @@ def main():
     tree_input = list(map(int, input().split()))
 
     tree = [[] for _ in range(n)]
-    for v in range(n-1):
-        parent = tree_input[v]-1
-        tree[parent].append(v+1)
+    for v in range(n - 1):
+        parent = tree_input[v] - 1
+        tree[parent].append(v + 1)
 
     leaves = [0 for _ in range(n)]
 
@@ -23,7 +23,7 @@ def main():
             stack.append(child)
         pos += 1
 
-    for pos in range(len(stack)-1, -1, -1):
+    for pos in range(len(stack) - 1, -1, -1):
         node = stack[pos]
         if len(tree[node]) == 0:
             leaves[node] = 1
@@ -32,7 +32,7 @@ def main():
                 leaves[node] += leaves[child]
 
     node_max = [0] * n
-    for pos in range(len(stack)-1, -1, -1):
+    for pos in range(len(stack) - 1, -1, -1):
         node = stack[pos]
         if len(tree[node]) == 0:
             node_max[node] = 1
@@ -46,7 +46,7 @@ def main():
             else:
                 optimal = 1
                 for child in tree[node]:
-                    optimal += node_max[child]-1
+                    optimal += node_max[child] - 1
                 node_max[node] = optimal
 
     print(node_max[0])
@@ -54,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

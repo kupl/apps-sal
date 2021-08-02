@@ -10,12 +10,10 @@ for x in line:
         Anton = Anton + 1
     else:
         Danik = Danik + 1
-        
+
 if Anton == Danik:
     print("Friendship")
 elif Anton > Danik:
     print("Anton")
 else:
     print("Danik")
-
-

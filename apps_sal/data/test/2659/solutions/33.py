@@ -17,13 +17,15 @@ candili += tmp2li
 candili = list(set(candili))
 candili.sort()
 
+
 def S(n):
     return sum(int(i) for i in str(n))
+
 
 conli = []
 
 for i in candili:
-    conli.append(i/S(i))
+    conli.append(i / S(i))
 
 ansli = []
 for i in range(len(conli)):

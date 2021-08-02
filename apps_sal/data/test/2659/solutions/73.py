@@ -5,20 +5,20 @@ Q = [n for n in range(1, 10)]
 for d in range(20):
     if d < 12:
         for m in range(10, 100):
-            P.append(int(str(m)+"9"*d))
-            Q.append(m//10+m%10+9*d)
+            P.append(int(str(m) + "9" * d))
+            Q.append(m // 10 + m % 10 + 9 * d)
     else:
         for m in range(100, 1000):
-            P.append(int(str(m)+"9"*(d-1)))
-            Q.append(sum([int(s) for s in str(m)])+9*(d-1))
+            P.append(int(str(m) + "9" * (d - 1)))
+            Q.append(sum([int(s) for s in str(m)]) + 9 * (d - 1))
 
 L = len(P)
 c = 0
 for i, (p, q) in enumerate(zip(P, Q)):
     ok = True
-    for j in range(i+1, L):
+    for j in range(i + 1, L):
         np, nq = P[j], Q[j]
-        if np*q < nq*p:
+        if np * q < nq * p:
             ok = False
             break
     if ok:

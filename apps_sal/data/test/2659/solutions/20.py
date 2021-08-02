@@ -62,27 +62,29 @@ def S(n):
     return s
 
 # @mt
+
+
 def slv(K):
-    ans = [(i, i/S(i)) for i in range(1, 10)]
+    ans = [(i, i / S(i)) for i in range(1, 10)]
     for i in range(16):
         a = i
         if a > 4:
             a = 4
         for j in range(1, 10**a):
-            b = (10**(i-a+1))*j + (10**(i-a+1)-1)
-            if b < 10**(i-1):
+            b = (10**(i - a + 1)) * j + (10**(i - a + 1) - 1)
+            if b < 10**(i - 1):
                 continue
             s = S(b)
-            
-            while ans[-1][1] > b/s or ans[-1][0] == b:
+
+            while ans[-1][1] > b / s or ans[-1][0] == b:
                 (ans.pop())
-            ans.append((b, b/s))
+            ans.append((b, b / s))
             # print(ans[-1])
     # error_print(len(ans))
     # for r in ans:
     #     error_print(r)
     error_print(len(ans))
-    
+
     return '\n'.join(map(str, map(lambda x: x[0], ans[:K])))
 
 
@@ -90,7 +92,9 @@ def main():
     K = read_int()
     print(slv(K))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

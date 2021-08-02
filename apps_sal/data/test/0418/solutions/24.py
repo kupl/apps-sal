@@ -12,4 +12,3 @@ for i in range(n):
         break
 
 print("YES" if answer else "NO")
-

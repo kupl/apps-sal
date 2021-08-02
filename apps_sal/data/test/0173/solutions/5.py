@@ -5,4 +5,3 @@ if (a[0] == '>' and b[0] == 'v') or (a[0] == '<' and b[-1] == 'v') or (a[-1] == 
     print('NO')
 else:
     print('YES')
-

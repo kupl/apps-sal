@@ -7,4 +7,3 @@ elif (hor[-1], ver[0]) == ('>', '^') or (hor[-1], ver[-1]) == ('<', '^'):
     print("NO")
 else:
     print("YES")
-

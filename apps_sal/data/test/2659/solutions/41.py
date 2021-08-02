@@ -1,7 +1,9 @@
 K = int(input())
- 
+
+
 def f(n):
     return n / sum([int(s) for s in str(n)])
+
 
 ans = [1]
 for k in range(K - 1):

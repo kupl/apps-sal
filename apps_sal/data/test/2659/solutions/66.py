@@ -8,4 +8,3 @@ while c < K:
     if (n + dn) > sum(map(int, str(n + dn))) * dn:
         dn *= 10
     n += dn
-
