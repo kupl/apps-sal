@@ -12,4 +12,3 @@ for _ in range(m):
         print("Yes")
     else:
         print("No")
-

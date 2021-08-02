@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.5
 import sys
 
+
 def read_data():
     n = int(next(sys.stdin))
     prices = list(map(int, next(sys.stdin).split()))
@@ -48,5 +49,6 @@ def __starting_point():
         print(sorting_cost)
     else:
         print(-1)
+
 
 __starting_point()

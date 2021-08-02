@@ -6,6 +6,6 @@ for _ in range(m):
     r -= 1
     x -= 1
     t = p[x]
-    a = sum(map(lambda s : s < t, p[l:r+1]))
+    a = sum(map(lambda s: s < t, p[l:r + 1]))
     if a == x - l: print("Yes")
     else: print("No")

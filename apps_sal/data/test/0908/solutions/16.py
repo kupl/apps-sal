@@ -59,5 +59,3 @@ if flag == 1:
 else:
     res = max(dp[n - 1][0], dp[n - 1][1]) if min(dp[n - 1][0], dp[n - 1][1]) == -1 else min(dp[n - 1][0], dp[n - 1][1]);
     print(res);
-
-

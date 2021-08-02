@@ -2,7 +2,7 @@ from collections import defaultdict
 import heapq
 
 n, q = map(int, input().split())
-kindergarten = defaultdict(lambda : [])
+kindergarten = defaultdict(lambda: [])
 
 best = []
 A, B = [], []
@@ -19,8 +19,8 @@ for i in kindergarten:
 
 for i in range(q):
     c, d = map(int, input().split())  # c: 幼児の番号, d: 転園先の幼稚園番号
-    kd_ori = B[c-1]
-    B[c-1] = d
+    kd_ori = B[c - 1]
+    B[c - 1] = d
 
     while kindergarten[kd_ori]:
         x = kindergarten[kd_ori][0]
@@ -29,7 +29,7 @@ for i in range(q):
             continue
         heapq.heappush(best, (-x[0], x[1]))
         break
-    heapq.heappush(kindergarten[d], (-A[c-1], c-1))
+    heapq.heappush(kindergarten[d], (-A[c - 1], c - 1))
 
     while kindergarten[d]:
         tmp = kindergarten[d][0]

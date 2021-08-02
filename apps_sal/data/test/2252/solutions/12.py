@@ -5,6 +5,8 @@ def main():
     for _ in range(m):
         l, r, x = R()
         v = p[x]
-        c = sum(map(lambda x: x < v, p[l:r+1]))
+        c = sum(map(lambda x: x < v, p[l:r + 1]))
         print('Yes' if c == x - l else 'No')
+
+
 main()

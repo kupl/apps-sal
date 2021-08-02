@@ -1,16 +1,30 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,copy,functools
-import time,random,resource
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import copy
+import functools
+import time
+import random
+import resource
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**10
-mod = 10**9+7
-dd = [(-1,0),(0,1),(1,0),(0,-1)]
-ddn = [(-1,0),(-1,1),(0,1),(1,1),(1,0),(1,-1),(0,-1),(-1,-1)]
+mod = 10**9 + 7
+dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+
 
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(): return [list(map(int, l.split())) for l in sys.stdin.readlines()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -43,19 +57,20 @@ class DQ():
 
         return None
 
+
 def main():
-    n,q = LI()
+    n, q = LI()
     ab = [LI() for _ in range(n)]
     cd = [LI() for _ in range(q)]
 
     m = 2 * 10**5 + 1
     r = DQ()
     t = [DQ() for _ in range(m)]
-    ca = [-1] * (n+1)
-    e = [-1] * (n+1)
+    ca = [-1] * (n + 1)
+    e = [-1] * (n + 1)
 
-    for c in range(1, n+1):
-        a,b = ab[c-1]
+    for c in range(1, n + 1):
+        a, b = ab[c - 1]
         ca[c] = a
         e[c] = b
         tp = t[b].top()
@@ -102,6 +117,3 @@ def main():
 
 
 print(main())
-
-
-

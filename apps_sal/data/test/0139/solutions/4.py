@@ -44,7 +44,7 @@ else:
         cycle.append(u)
         u = prev[u]
     cycle.append(cycle_begin)
-    
+
     for u in range(len(cycle) - 1, 0, -1):
         block_u = cycle[u]
         block_v = cycle[u - 1]
@@ -59,4 +59,3 @@ else:
             return
 
     print("NO")
-

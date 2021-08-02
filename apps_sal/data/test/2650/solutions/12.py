@@ -6,16 +6,16 @@ def main():
     ans = []
 
     n, q = map(int, input().split())
-    y = [[] for _ in range(2*10**5)] # i番目の幼稚園の(-rate, 幼児)
-    data = [(0, 0)]*n # i番目の(rate, 所属)
+    y = [[] for _ in range(2 * 10**5)]  # i番目の幼稚園の(-rate, 幼児)
+    data = [(0, 0)] * n  # i番目の(rate, 所属)
     import heapq
     for i in range(n):
         a, b = map(int, input().split())
         data[i] = (a, b - 1)
         heapq.heappush(y[b - 1], (-a, i))
-    max_rate = [] # (rate, 幼児, 所属)
-    max_rate_list = [()]*(2*10**5)
-    for i in range(2*10**5):
+    max_rate = []  # (rate, 幼児, 所属)
+    max_rate_list = [()] * (2 * 10**5)
+    for i in range(2 * 10**5):
         if y[i]:
             s, t = heapq.heappop(y[i])
             heapq.heappush(max_rate, (-s, t, i))
@@ -33,7 +33,7 @@ def main():
         ng_num[b].add(c)
         if c in ng_num[d]:
             ng_num[d].discard(c)
-        #print(ng_num)
+        # print(ng_num)
         while y[b]:
             s, t = heapq.heappop(y[b])
             if t not in ng_num[b]:
@@ -48,7 +48,7 @@ def main():
                 heapq.heappush(y[d], (s, t))
                 max_rate_list[d] = (-s, t)
                 break
-        #print(max_rate) 
+        # print(max_rate)
         while max_rate:
             s, t, r = heapq.heappop(max_rate)
             if t not in ng_num[r] and (s, t) == max_rate_list[r]:
@@ -56,9 +56,6 @@ def main():
                 heapq.heappush(max_rate, (s, t, r))
                 break
     print(*ans, sep="\n")
+
+
 main()
-
-
-
-
-

@@ -13,10 +13,10 @@ def main():
         a, b = map(int, input().split())
         A.append(a)
         B.append(b)
-        heappush(h[b], (-a, i)) 
+        heappush(h[b], (-a, i))
     for i in h:
         x = h[i][0]
-        heappush(saikyo, (-x[0], x[1]))       
+        heappush(saikyo, (-x[0], x[1]))
     for i in range(q):
         c, d = map(int, input().split())
         c -= 1
@@ -51,8 +51,12 @@ def main():
                 continue
             print(x[0])
             break
-    
+
     print()
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

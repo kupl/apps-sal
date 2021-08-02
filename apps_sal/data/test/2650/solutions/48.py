@@ -3,7 +3,7 @@
 def solve():
     import heapq
 
-    M = 2*(10**5)
+    M = 2 * (10**5)
     N, Q = list(map(int, input().split()))
     As, Bs = [], []
     yochien = [list() for _ in range(M)]  # 幼稚園
@@ -26,7 +26,7 @@ def solve():
     for _ in range(Q):
         # 幼児cを幼稚園dに転園させたい
         c, d = list(map(int, input().split()))
-        c, d = c-1, d-1
+        c, d = c - 1, d - 1
 
         before = Bs[c]  # 転園前の幼稚園
         Bs[c] = d
@@ -61,5 +61,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

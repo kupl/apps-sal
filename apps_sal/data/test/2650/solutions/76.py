@@ -1,8 +1,8 @@
 from heapq import heappush, heappop
 
 n, q = map(int, input().split())
-rate = [0]*n
-belong = [-1]*n
+rate = [0] * n
+belong = [-1] * n
 yochien_rates = [[] for i in range(2 * 10 ** 5 + 10)]
 delete_yochien_rates = [[] for i in range(2 * 10 ** 5 + 10)]
 yochiens = set()
@@ -52,5 +52,3 @@ for _ in range(q):
     ans.append(maxs[0])
 
 print(*ans, sep='\n')
-
-

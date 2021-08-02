@@ -1,10 +1,14 @@
-import os, sys, math
+import os
+import sys
+import math
 from _thread import start_new_thread
 from bisect import bisect_right
+
 
 class pair:
     def __init__(self, a):
         self.first, self.second = a[0], a[1]
+
 
 def main():
     INF = 10**18
@@ -31,6 +35,9 @@ def main():
     res = min(dp[n - 1].first, dp[n - 1].second)
     print([-1, res][res != INF])
 
+
 def __starting_point():
     return(int(main() or 0))
+
+
 __starting_point()

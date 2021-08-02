@@ -2,7 +2,7 @@ import sys
 import bisect
 import heapq
 
-N_MAX = 2*10**5
+N_MAX = 2 * 10**5
 A_MAX = 10**9
 
 A = []
@@ -11,8 +11,9 @@ BB = [[] for _ in range(N_MAX)]
 
 BBmax = []  # 各幼稚園の最大値
 
+
 def max_rate_in_a_kg(kg):
-    
+
     # 対象の幼稚園の最大レートを更新
     while BB[kg]:
         rate, k = BB[kg][0]
@@ -33,10 +34,12 @@ def max_rate():
             heapq.heappop(BBmax)
     return None
 
+
 def p():
     for i in range(len(BB)):
         if BB[i] != []:
             print(i, BB[i])
+
 
 def pp():
     print("BBmax : ", end="")
@@ -52,8 +55,8 @@ def main():
     for i in range(N):
         a, b = map(int, sys.stdin.readline().split())
         A.append(a)  # レート
-        B.append(b-1)  # 幼稚園番号も0からにする
-        heapq.heappush(BB[b-1],(-a,i))  # BB は最大が最も左に来るようにする
+        B.append(b - 1)  # 幼稚園番号も0からにする
+        heapq.heappush(BB[b - 1], (-a, i))  # BB は最大が最も左に来るようにする
 
     for kg_no in range(N_MAX):
         rate = max_rate_in_a_kg(kg_no)
@@ -68,8 +71,8 @@ def main():
         # print("====")
         c, d = map(int, sys.stdin.readline().split())
 
-        kid_no = c-1  # 園児番号
-        after = d-1  # 幼稚園番号
+        kid_no = c - 1  # 園児番号
+        after = d - 1  # 幼稚園番号
 
         # 転出
         before = B[kid_no]
@@ -89,6 +92,9 @@ def main():
         # pp()
         print(max_rate())
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

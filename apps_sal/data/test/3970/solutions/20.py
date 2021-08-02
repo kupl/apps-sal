@@ -10,5 +10,5 @@ b = set(a)
 if k != 1:
     for i in a:
         if i in b:
-            b.discard(i*k)
+            b.discard(i * k)
 print(len(b))

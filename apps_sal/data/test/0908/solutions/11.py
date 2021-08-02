@@ -8,7 +8,7 @@ C_nrev = 0
 last_s = input()
 last_s_rev = last_s[::-1]
 
-for i in range(1,n):
+for i in range(1, n):
     s = input()
     s_rev = s[::-1]
     new_C_nrev = float("inf")
@@ -33,4 +33,3 @@ for i in range(1,n):
     last_s_rev = s_rev
 
 print(-1 if min(C_rev, C_nrev) == float("inf") else min(C_rev, C_nrev))
-

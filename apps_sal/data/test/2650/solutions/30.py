@@ -10,15 +10,15 @@ lr = lambda: list(map(int, sr().split()))
 N, Q = lr()
 top = []
 left_top = []
-infants = [[] for _ in range(2*10**5+1)]  # 1-indexed
-left = [[] for _ in range(2*10**5+1)]
+infants = [[] for _ in range(2 * 10**5 + 1)]  # 1-indexed
+left = [[] for _ in range(2 * 10**5 + 1)]
 dic = defaultdict(tuple)
-for i in range(1, N+1):
+for i in range(1, N + 1):
     a, b = lr()
     heappush(infants[b], (-a, i))
     dic[i] = (a, b)
 
-for i in range(1, 2*10**5+1):
+for i in range(1, 2 * 10**5 + 1):
     if infants[i]:
         rate, id = infants[i][0]
         heappush(top, (-rate, id))
@@ -48,4 +48,3 @@ for _ in range(Q):
         heappop(top); heappop(left_top)
     answer = top[0][0]
     print(answer)
-

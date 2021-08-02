@@ -3,6 +3,8 @@ k = int(sys.stdin.readline().split()[1])
 t = list(map(lambda s: int(s), sys.stdin.readline().split()))
 t.sort()
 # print(t)
+
+
 def find(x, a, b):
     while True:
         if a == b:
@@ -15,6 +17,8 @@ def find(x, a, b):
             a = m + 1
         else:
             b = m
+
+
 u = [True for i in t]
 s = 0
 for i in range(len(t)):

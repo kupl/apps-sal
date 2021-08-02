@@ -10,12 +10,10 @@ for i in range(b):
     x -= 1
 
     ans = 0
-    for i in range(l, r+1):
+    for i in range(l, r + 1):
         if p[i] <= p[x]:
-            ans+=1
-    if ans == x-l+1:
+            ans += 1
+    if ans == x - l + 1:
         print("Yes")
     else:
         print("No")
-
-

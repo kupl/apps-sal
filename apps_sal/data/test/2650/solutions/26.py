@@ -62,7 +62,7 @@ def main():
     decode_smarts_rate = lambda x: x >> 36
 
     N, _, *X = list(map(int, open(0).read().split()))
-    AB, CD = X[: 2 * N], X[2 * N :]
+    AB, CD = X[: 2 * N], X[2 * N:]
     rate, belonging = [0] * (N + 1), [0] * (N + 1)
     kindy = [DeletableHeapq(is_max_heap=True) for _ in range(200_001)]
 
@@ -96,5 +96,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,10 +1,10 @@
-n,k=map(int,input().split())
-L=list(map(int,input().split()))
+n, k = map(int, input().split())
+L = list(map(int, input().split()))
 L.sort(reverse=True)
-S={}
+S = {}
 
 for i in range(n):
-    if(L[i]*k in S):
+    if(L[i] * k in S):
         continue
-    S[L[i]]=1
+    S[L[i]] = 1
 print(len(S))

@@ -8,9 +8,9 @@ nm = lambda: list(map(int, readline().split()))
 nl = lambda: list(map(int, readline().split()))
 
 n, q = nm()
-m = 2*10**5 + 5
-cur = [-1]*n
-rate = [0]*n
+m = 2 * 10**5 + 5
+cur = [-1] * n
+rate = [0] * n
 sec = [list() for _ in range(m)]
 for i in range(n):
     a, b = nm()
@@ -38,4 +38,3 @@ for _ in range(q):
     while not sec[top[0][2]] or sec[top[0][2]][0][1] != top[0][1]:
         hq.heappop(top)
     print((top[0][0]))
-

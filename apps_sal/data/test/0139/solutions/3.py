@@ -1,6 +1,7 @@
 cycle_begin, cycle_end = -1, -1
 g, mark, prev, edges = [], [], [], []
 
+
 def dfs(u):
     nonlocal cycle_begin, cycle_end
     mark[u] = 1
@@ -16,6 +17,7 @@ def dfs(u):
     mark[u] = 2
     return False
 
+
 def dfs2(u):
     mark[u] = 1
     for v in g[u]:
@@ -27,6 +29,7 @@ def dfs2(u):
                 return True
     mark[u] = 2
     return False
+
 
 n, m = list(map(int, input().split()))
 g = [[] for i in range(n)]
@@ -71,7 +74,6 @@ else:
             break
         edges.pop(0)
     if can:
-        print("YES")   
+        print("YES")
     else:
         print("NO")
-

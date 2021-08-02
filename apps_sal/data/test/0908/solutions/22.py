@@ -1,8 +1,9 @@
 
-LO_C= 0
-LO_S= 1
-HI_C= 2
-HI_S= 3
+LO_C = 0
+LO_S = 1
+HI_C = 2
+HI_S = 3
+
 
 def main():
     n = int(input())
@@ -41,5 +42,6 @@ def main():
 
 def __starting_point():
     print(main())
+
 
 __starting_point()

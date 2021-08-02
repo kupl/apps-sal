@@ -1,5 +1,6 @@
 import heapq
 
+
 class BalancingTree:
     def __init__(self):
         self.p = []
@@ -18,7 +19,7 @@ class BalancingTree:
         return self.p[0] if self.p else None
 
 
-MAX = 2*10**5
+MAX = 2 * 10**5
 n, q = list(map(int, input().split()))
 ab = []
 k = [BalancingTree() for _ in range(MAX)]
@@ -34,7 +35,7 @@ for i in range(MAX):
         k_max.insert(-v)
 
 for _ in range(q):
-    c, d = [int(x)-1 for x in input().split()]
+    c, d = [int(x) - 1 for x in input().split()]
     a, b = ab[c]
     k_max.erase(-k[b].minimum())
     if v := k[d].minimum():
@@ -48,4 +49,3 @@ for _ in range(q):
     ab[c][1] = d
 
     print((k_max.minimum()))
-

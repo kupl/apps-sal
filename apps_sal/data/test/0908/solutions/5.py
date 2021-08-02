@@ -19,16 +19,16 @@ dp[0][0] = 0
 dp[0][1] = c[0]
 
 for i in range(1, n):
-    if norm[i] >= rev[i-1]:
-        dp[i][0] = min(dp[i][0], dp[i-1][1])
-    if norm[i] >= norm[i-1]:
-        dp[i][0] = min(dp[i][0], dp[i-1][0])
-    if rev[i] >= rev[i-1]:
-        dp[i][1] = min(dp[i][1], dp[i-1][1]+c[i])
-    if rev[i] >= norm[i-1]:
-        dp[i][1] = min(dp[i][1], dp[i-1][0]+c[i])
+    if norm[i] >= rev[i - 1]:
+        dp[i][0] = min(dp[i][0], dp[i - 1][1])
+    if norm[i] >= norm[i - 1]:
+        dp[i][0] = min(dp[i][0], dp[i - 1][0])
+    if rev[i] >= rev[i - 1]:
+        dp[i][1] = min(dp[i][1], dp[i - 1][1] + c[i])
+    if rev[i] >= norm[i - 1]:
+        dp[i][1] = min(dp[i][1], dp[i - 1][0] + c[i])
 
-ans = min(dp[n-1][0], dp[n-1][1])
+ans = min(dp[n - 1][0], dp[n - 1][1])
 if ans == MAX:
     print(-1)
 else:
