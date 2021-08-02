@@ -7,4 +7,3 @@ x = sum(a)
 
 for i in range(m):
     print(x - a[n - q[i]])
-

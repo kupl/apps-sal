@@ -21,4 +21,3 @@ if odd <= even:
 else:
     diff = odd - even
     print(min(odd, even) + diff // 3)
-

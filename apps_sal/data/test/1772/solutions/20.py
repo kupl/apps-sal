@@ -13,9 +13,8 @@ if c <= uc:
     print(c)
     return
 
-b = (c-uc) // 3
+b = (c - uc) // 3
 c -= b * 3
 
 
 print(b + min(uc, c))
-

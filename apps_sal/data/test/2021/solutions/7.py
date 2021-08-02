@@ -1,37 +1,34 @@
 from collections import defaultdict as dd
 import math
+
+
 def nn():
-	return int(input())
+    return int(input())
+
 
 def li():
-	return list(input())
+    return list(input())
+
 
 def mi():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
 
 def lm():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
 
 
-n=nn()
+n = nn()
 
-l=lm()
+l = lm()
 
-q=nn()
+q = nn()
 
-qs=lm()
+qs = lm()
 
 l.sort()
 
-s=sum(l)
+s = sum(l)
 
 for c in qs:
-	print(s-l[-c])
-	
-
-
-
-
-
-
-
+    print(s - l[-c])

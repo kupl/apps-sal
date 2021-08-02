@@ -4,6 +4,7 @@ def min(a, b):
     else:
         return a
 
+
 b = 0
 n = int(input())
 a = input().split()
@@ -17,4 +18,3 @@ ans = min(b, c)
 if b < c:
     ans += ((c - b) // 3)
 print(ans)
-

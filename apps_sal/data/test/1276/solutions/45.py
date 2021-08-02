@@ -11,9 +11,9 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10**8)
 inf = 10**18
 MOD = 1000000007
-ri = lambda : int(input())
-rs = lambda : input().strip()
-rl = lambda : list(map(int, input().split()))
+ri = lambda: int(input())
+rs = lambda: input().strip()
+rl = lambda: list(map(int, input().split()))
 mod = 998244353
 
 n = ri()
@@ -27,13 +27,13 @@ for i in s:
     if i == "B":
         b_li.append(i)
 ans = len(r_li) * len(g_li) * len(b_li)
-cnt=0
-for res in range(1, n//2 + 1):
+cnt = 0
+for res in range(1, n // 2 + 1):
     for i in range(0, n):
-        if i+2*res<=n-1:
-            if s[i] != s[i+res] and s[i+res]!=s[i+res+res] and s[i+res+res]!=s[i]:
-                cnt+=1
+        if i + 2 * res <= n - 1:
+            if s[i] != s[i + res] and s[i + res] != s[i + res + res] and s[i + res + res] != s[i]:
+                cnt += 1
         else:
             break
 
-print(ans-cnt)
+print(ans - cnt)

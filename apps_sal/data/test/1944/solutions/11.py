@@ -1,5 +1,5 @@
 n = int(input())
-lst = [list(map(int,input().split())) for i in range(n)]
+lst = [list(map(int, input().split())) for i in range(n)]
 lst.sort()
 is_happy = False
 for i in range(1, n):

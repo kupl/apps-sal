@@ -21,5 +21,4 @@ def abc162d_rgb_triplets():
     print(result)
 
 
-
 abc162d_rgb_triplets()

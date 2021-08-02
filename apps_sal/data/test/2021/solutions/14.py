@@ -9,7 +9,7 @@ cl = sorted(cl)
 sm = 0
 sl = [0]
 for i in range(n):
-    sm+=cl[i]
+    sm += cl[i]
     sl.append(sm)
 
 res = []
@@ -17,7 +17,7 @@ res = []
 sm = sum(cl)
 
 for i in range(m):
-    t = sm - cl[n-cp[i]]
+    t = sm - cl[n - cp[i]]
     res.append(t)
 
 for x in res:

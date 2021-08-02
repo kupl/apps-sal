@@ -19,7 +19,7 @@ for i in range(N):
     else:
         B_list.append(i)
 #print(R_list, G_list, B_list)
-ans = len(R_list)*len(G_list)*len(B_list)
+ans = len(R_list) * len(G_list) * len(B_list)
 """
 set1 = set()
 for r in R_list:
@@ -48,15 +48,14 @@ for r in R_list:
 """
 for r in R_list:
     for g in G_list:
-        up = max(r,g)
-        down = min(r,g)
+        up = max(r, g)
+        down = min(r, g)
         diff = up - down
-        if up + diff < N and S[up+diff] == 'B':
+        if up + diff < N and S[up + diff] == 'B':
             ans -= 1
         if down - diff >= 0 and S[down - diff] == 'B':
             ans -= 1
-        if diff%2 == 0 and S[down + diff//2] =='B':
+        if diff % 2 == 0 and S[down + diff // 2] == 'B':
             ans -= 1
 
 print(ans)
-

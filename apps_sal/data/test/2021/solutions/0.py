@@ -11,5 +11,4 @@ a.sort()
 s = sum(a)
 
 for qi in q:
-	print(s - a[-qi])
-
+    print(s - a[-qi])

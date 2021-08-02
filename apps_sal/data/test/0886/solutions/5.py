@@ -17,7 +17,7 @@ def main():
         for i in range(l):
             if i == maxpos:
                 print(odd, end="")
-            elif i == l-1:
+            elif i == l - 1:
                 print(strnum[maxpos])
             else:
                 print(strnum[i], end="")
@@ -25,7 +25,7 @@ def main():
         for i in range(l):
             if i == minpos:
                 print(odd, end="")
-            elif i == l-1:
+            elif i == l - 1:
                 print(strnum[minpos])
             else:
                 print(strnum[i], end="")
@@ -34,4 +34,3 @@ def main():
 
 
 main()
-

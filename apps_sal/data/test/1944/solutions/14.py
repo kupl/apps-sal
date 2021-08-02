@@ -4,6 +4,7 @@
 def is_sorted(l, f):
     return all(f(a, b) for a, b in zip(l[:-1], l[1:]))
 
+
 def main():
     n = int(input())
 
@@ -16,6 +17,9 @@ def main():
     else:
         print("Happy Alex")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

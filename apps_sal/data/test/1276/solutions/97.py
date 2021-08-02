@@ -15,4 +15,3 @@ for j in range(1, N):
 
 print(ans)
 return
-

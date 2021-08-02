@@ -1,9 +1,7 @@
-def gcd(x,y):
-    if(y==0):
+def gcd(x, y):
+    if(y == 0):
         return x
-    return gcd(y,x%y)
-
-
+    return gcd(y, x % y)
 
 
 b = int(input())
@@ -15,7 +13,4 @@ mab = min(n, b)
 mag = min(n, g)
 cb = mab - mb
 cg = mag - mg
-print(min([cb+1, cg +1, n + 1]))
-
-        
-
+print(min([cb + 1, cg + 1, n + 1]))

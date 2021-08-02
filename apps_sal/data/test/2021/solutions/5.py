@@ -9,4 +9,3 @@ s = sum(a)
 
 for i in q:
     print(s - a[-i])
-

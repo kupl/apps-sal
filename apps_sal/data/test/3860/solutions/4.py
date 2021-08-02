@@ -1,6 +1,5 @@
-b = int(input())    
+b = int(input())
 g = int(input())
 n = int(input())
 res = sum(1 for i in range(n + 1) if b >= i and g >= (n - i))
 print(res)
-

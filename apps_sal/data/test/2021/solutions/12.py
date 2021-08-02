@@ -4,5 +4,4 @@ m = int(input())
 Q = [int(a) for a in input().split()]
 s = sum(A)
 for q in Q:
-    print(s-A[q-1])
-
+    print(s - A[q - 1])

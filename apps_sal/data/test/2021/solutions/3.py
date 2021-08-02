@@ -6,4 +6,3 @@ num = sum(A)
 A.sort(reverse=True)
 for elem in B:
     print(num - A[elem - 1])
-

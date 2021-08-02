@@ -8,7 +8,7 @@ for it in a:
         t2 = t2 + 1
     else:
         t1 = t1 + 1
-        
+
 ans = min(t1, t2)
 
 t1 -= ans

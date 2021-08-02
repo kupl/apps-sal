@@ -10,7 +10,7 @@ for i in s:
     else:
         b.append(cnt)
     cnt += 1
-rd = set(map(lambda x: x * 2, r)) #以下2つ目の条件を満たさないもの(j - i = k - j)の数え上げ
+rd = set(map(lambda x: x * 2, r))  # 以下2つ目の条件を満たさないもの(j - i = k - j)の数え上げ
 gd = set(map(lambda x: x * 2, g))
 bd = set(map(lambda x: x * 2, b))
 ddc = 0
@@ -26,4 +26,4 @@ for i in r:
     for k in b:
         if i + k in gd:
             ddc += 1
-print(len(r) * len(g) * len(b) - ddc) #1つ目の条件を満たすモノから2つ目の条件を満たさないものを引く
+print(len(r) * len(g) * len(b) - ddc)  # 1つ目の条件を満たすモノから2つ目の条件を満たさないものを引く

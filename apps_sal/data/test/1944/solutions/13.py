@@ -10,11 +10,10 @@ else:
     x.sort()
     ans = False
     for i in range(1, n):
-        if x[i][1] < x[i-1][1]:
+        if x[i][1] < x[i - 1][1]:
             ans = True
             break
     if ans == True:
         print("Happy Alex")
     else:
         print("Poor Alex")
-

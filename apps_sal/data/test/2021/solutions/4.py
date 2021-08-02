@@ -6,4 +6,3 @@ A.sort(reverse=True)
 z = sum(A)
 for i in Q:
     print(z - A[i - 1])
-

@@ -6,6 +6,3 @@ a.sort(reverse=True)
 s = sum(a)
 for i in range(m):
     print(s - a[q[i] - 1])
-
-
-

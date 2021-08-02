@@ -18,4 +18,4 @@ else:
     else:
         arr[n - 1], arr[ans2] = arr[ans2], arr[n - 1]
     for i in arr:
-        print(i, end = '')
+        print(i, end='')

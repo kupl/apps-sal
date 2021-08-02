@@ -10,11 +10,11 @@ def laptops():
         p = (x, y)
         l.append(p)
     l.sort(key=lambda x: x[0])
-    for i in range(n-1):
-        if l[i][1] > l[i+1][1]:
+    for i in range(n - 1):
+        if l[i][1] > l[i + 1][1]:
             print("Happy Alex")
             return
     print("Poor Alex")
 
-laptops()
 
+laptops()
