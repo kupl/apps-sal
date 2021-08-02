@@ -25,7 +25,7 @@ for i, c in enumerate(s):
         balance += 1
     else:
         balance -= 1
-    
+
     balance_max_pos[balance] = i
 
 
@@ -42,7 +42,7 @@ for i, c in enumerate(s):
         balance += 1
     else:
         balance -= 1
-    
+
     if balance in balance_max_pos:
         ans = max(balance_max_pos[balance] - i, ans)
 
@@ -56,8 +56,3 @@ print(ans)
 # In[46]:
 
 # In[ ]:
-
-
-
-
-

@@ -1,9 +1,8 @@
-3
-
-import array
-import math
-import os
 import sys
+import os
+import math
+import array
+3
 
 
 MOD = 10 ** 9 + 7
@@ -55,5 +54,6 @@ def dprint(*value, sep=' ', end='\n'):
 
 def __starting_point():
     main()
+
 
 __starting_point()

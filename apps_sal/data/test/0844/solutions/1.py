@@ -20,4 +20,3 @@ for i, x in enumerate(s):
         diffs[diff] = i + 1
 
 print(max_subs)
-

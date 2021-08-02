@@ -1,8 +1,11 @@
 '''
 @author: agavrikov
 '''
+
+
 def sm(x):
     return int(x * (x + 1) / 2)
+
 
 n = int(input())
 st = int(1)
@@ -17,6 +20,5 @@ while (l <= r):
         st = sum
         l = mid + 1
     else:
-        r = mid - 1              
+        r = mid - 1
 print(n - st)
-

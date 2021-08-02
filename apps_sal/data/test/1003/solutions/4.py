@@ -1,6 +1,5 @@
-3
-
 import sys
+3
 
 
 def __starting_point():
@@ -14,5 +13,6 @@ def __starting_point():
             n += 1
 
     print(d)
+
 
 __starting_point()

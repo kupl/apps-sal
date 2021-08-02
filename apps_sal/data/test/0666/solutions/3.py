@@ -1,14 +1,12 @@
+import math
 3
 
-import math
 
 n = int(input())
-x = math.floor(math.sqrt(n*2))
+x = math.floor(math.sqrt(n * 2))
 
-while n <= x*(x+1)//2:
-	x -= 1
+while n <= x * (x + 1) // 2:
+    x -= 1
 
-ans = n - x*(x+1)//2
+ans = n - x * (x + 1) // 2
 print(ans)
-
-

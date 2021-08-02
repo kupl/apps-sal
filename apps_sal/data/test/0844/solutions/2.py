@@ -17,7 +17,7 @@ ans = 0
 for i in range(n):
     value = int(s[i])
     current = i + ans
-    
+
     while current < n:
         if max(cnt[current][1] - cnt[i - 1][1], cnt[current][0] - cnt[i - 1][0]) != min(cnt[current][1] - cnt[i - 1][1], cnt[current][0] - cnt[i - 1][0]):
             current += (max(cnt[current][1] - cnt[i - 1][1], cnt[current][0] - cnt[i - 1][0]) - min(cnt[current][1] - cnt[i - 1][1], cnt[current][0] - cnt[i - 1][0]))

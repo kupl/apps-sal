@@ -1,6 +1,7 @@
 def f(m):
     return m * (m + 1) // 2
 
+
 n = int(input())
 l, r = 0, n
 while r - l > 1:

@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     q = int(input())
 
@@ -17,9 +18,12 @@ def main():
     if q == 2:
         print(1)
         return
-    
+
     print(q - ((l - 1) * (r - 1)) // 2)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()
