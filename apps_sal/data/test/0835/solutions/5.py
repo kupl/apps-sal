@@ -20,9 +20,9 @@ while r > 0:
         k[i] += 1
         n[i] = q[i] * k[i]
     if len(v) == m: break
-    
+
 if r < 0: print(u)
 else:
     u += 1
     if r > 0: u += r // sum(q[i] * p[i] for i in range(m))
-    print(u)    
+    print(u)

@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 cb = cs = cc = 0
 for c in list(input()):
@@ -19,4 +21,3 @@ while b - a > 1:
     else:
         b = m
 print(a)
-

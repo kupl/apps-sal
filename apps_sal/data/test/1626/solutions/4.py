@@ -16,10 +16,11 @@ import sys
 
 BASE = 1000000007
 
+
 def count(k, a, b):
-    x = count_multiples(a, 0, 10**k-1)
-    y = count_multiples(a, b * 10**(k-1), (b + 1) * 10**(k-1) - 1)
-    return  x - y
+    x = count_multiples(a, 0, 10**k - 1)
+    y = count_multiples(a, b * 10**(k - 1), (b + 1) * 10**(k - 1) - 1)
+    return x - y
 
 
 def count_multiples(a, _from, _to):
@@ -35,6 +36,7 @@ def solve(xs, ys, n, k):
         result = (result * count(k, a, b)) % BASE
     return result
 
+
 def main():
     [n, k] = [int(i) for i in input().strip().split()]
     xs = [int(i) for i in input().strip().split()]
@@ -46,5 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

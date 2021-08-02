@@ -11,6 +11,3 @@ for i in range(n):
     for j in range(m):
         print(answer[i][j], end=' ')
     print()
-
-            
-

@@ -9,4 +9,6 @@ def main():
                 mat[i][j] = min(col[i], row[j])
     for arr in mat: print(*arr)
     return 0
+
+
 main()

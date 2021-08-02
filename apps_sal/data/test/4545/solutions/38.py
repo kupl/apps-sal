@@ -10,4 +10,3 @@ black = n ** 2 - white
 
 #   出力
 print(black)
-

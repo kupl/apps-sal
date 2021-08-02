@@ -1,4 +1,4 @@
-#74
-N=int(input())
-A=int(input())
-print(N**2-A)
+# 74
+N = int(input())
+A = int(input())
+print(N**2 - A)

@@ -16,5 +16,3 @@ for i in range(ln):
     p = (p * tmp) % mod
 
 print(p)
-
-

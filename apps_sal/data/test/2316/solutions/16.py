@@ -7,4 +7,3 @@ for _ in range(int(input())):
             break
     x -= m * 10
     print('YES' if x <= 0 else 'NO')
-

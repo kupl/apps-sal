@@ -1,6 +1,6 @@
 n, m, h = [int(i) for i in input().split()]
-front = [int(i) for i in input().split()] # len = m
-left = [int(i) for i in input().split()] # len = n
+front = [int(i) for i in input().split()]  # len = m
+left = [int(i) for i in input().split()]  # len = n
 A = []
 for i in range(n):
     B = [int(i) for i in input().split()]
@@ -14,4 +14,3 @@ for i in range(n):
             ans[i][j] = min(front[j], left[i])
 for i in ans:
     print(*i)
-

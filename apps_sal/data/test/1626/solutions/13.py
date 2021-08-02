@@ -1,6 +1,6 @@
 n, k = list(map(int, input().split()))
-ara = list(map( int, input().split()))
-arb = list(map( int, input().split()))
+ara = list(map(int, input().split()))
+arb = list(map(int, input().split()))
 sum1 = 1;
 p_k = 10**k
 p_k1 = 10**(k - 1)
@@ -18,7 +18,6 @@ for i in range(n // k):
     #first = p_k1 * arb[i] // ara[i] * (ara[i] + 1)
     #print(p_k // ara[i] + k + 1, p_k1 * (arb[i] + 1) // ara[i], p_k1 * (arb[i]) // ara[i])
     #sum1 *= p_k // ara[i] + 1 - p_k1 // first
-    
-    sum1 = sum1 % M
-print(sum1 % (10**9+7))
 
+    sum1 = sum1 % M
+print(sum1 % (10**9 + 7))

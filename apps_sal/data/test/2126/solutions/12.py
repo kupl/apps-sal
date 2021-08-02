@@ -7,4 +7,3 @@ for i in range(N):
         if not t[i][j]: continue
         t[i][j] = min(B[i], A[j])
     print(' '.join(map(str, t[i])))
-

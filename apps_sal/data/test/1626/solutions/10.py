@@ -14,4 +14,3 @@ for i in range(n // k):
     res1 = (res1 - x + z) % q
     res = (res * res1) % q
 print(res)
-

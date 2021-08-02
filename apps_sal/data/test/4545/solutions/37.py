@@ -39,11 +39,12 @@ def resolve():
     N = int(input())
     A = int(input())
 
-    print((N*N-A))
+    print((N * N - A))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

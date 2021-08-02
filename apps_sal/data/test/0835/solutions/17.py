@@ -27,6 +27,7 @@ def check(m):
         nn -= (C - nc) * pc
     return nn >= 0
 
+
 l = 0
 r = 10 ** 12 + 1000
 while r - l > 1:

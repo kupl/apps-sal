@@ -10,4 +10,3 @@ for it in range(t):
         print("YES")
     else:
         print("NO")
-

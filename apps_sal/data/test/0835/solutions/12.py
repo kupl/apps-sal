@@ -1,5 +1,5 @@
 def main():
-    s = 'B'*10 + 'C'*20 + 'S'*40
+    s = 'B' * 10 + 'C' * 20 + 'S' * 40
     rec = input()
     nB, nS, nC = map(int, input().split())
     rB, rS, rC = map(int, input().split())
@@ -13,5 +13,6 @@ def main():
     if 'S' in rec: money += nS * rS
     if 'C' in rec: money += nC * rC
     return money // (B_c * rB + S_c * rS + C_c * rC)
+
 
 print(main())
