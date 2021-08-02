@@ -39,8 +39,10 @@ def fillit(x):
     return x
 
 
-s = stdin.readline().strip(); counter_s = fillit(Counter(s))
-t = stdin.readline().strip(); counter_t = fillit(Counter(t))
+s = stdin.readline().strip()
+counter_s = fillit(Counter(s))
+t = stdin.readline().strip()
+counter_t = fillit(Counter(t))
 t_pi_table = prefixsuffixmatch(t)
 longest_match = t_pi_table[-1]
 
@@ -51,7 +53,9 @@ counter_repeating_part = fillit(Counter(repeating_part))
 
 if len(counter_s) == 2 and len(counter_t) == 2:
     if counter_s['0'] >= counter_t['0'] and counter_s['1'] >= counter_t['1']:
-        stdout.write(t); counter_s['0'] -= counter_t['0']; counter_s['1'] -= counter_t['1'];
+        stdout.write(t)
+        counter_s['0'] -= counter_t['0']
+        counter_s['1'] -= counter_t['1']
 
     # while canprint(counter_s,counter_repeating_part)==True:
     # 	stdout.write(repeating_part);
@@ -61,7 +65,7 @@ if len(counter_s) == 2 and len(counter_t) == 2:
     if '0' in counter_repeating_part and '1' in counter_repeating_part:
         if counter_repeating_part['0'] > 0 and counter_repeating_part['1'] > 0:
             r = min(counter_s['0'] // counter_repeating_part['0'], counter_s['1'] // counter_repeating_part['1'])
-            stdout.write(repeating_part * r);
-            counter_s['0'] -= (r * counter_repeating_part['0']);
-            counter_s['1'] -= (r * counter_repeating_part['1']);
-    flushit(counter_s);
+            stdout.write(repeating_part * r)
+            counter_s['0'] -= (r * counter_repeating_part['0'])
+            counter_s['1'] -= (r * counter_repeating_part['1'])
+    flushit(counter_s)

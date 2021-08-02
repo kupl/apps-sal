@@ -14,6 +14,6 @@ arr.sort()
 c = 0
 
 for i in range(len(arr) - 1):
-    c += (arr[i + 1][0] - arr[i][0] - arr[i][1]) // a;
+    c += (arr[i + 1][0] - arr[i][0] - arr[i][1]) // a
 
 print(c)

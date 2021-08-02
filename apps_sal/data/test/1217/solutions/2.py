@@ -7,7 +7,7 @@ bp.sort()
 a.append(10**15)
 ptr = 0
 cum = 0
-ind = 0;
+ind = 0
 while ptr < len(a) and ind < len(bp):
     while (bp[ind][0] >= a[ptr]):
         ptr += 1

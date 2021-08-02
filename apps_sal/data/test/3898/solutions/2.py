@@ -1,4 +1,5 @@
-readInts = lambda: list(map(int, input().split()))
+def readInts(): return list(map(int, input().split()))
+
 
 n = int(input())
 a = readInts()
