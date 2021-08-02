@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from inspect import currentframe
 import sys  # {{{
 import os
 import time
@@ -24,23 +25,25 @@ import itertools
 sys.setrecursionlimit(10**7)
 INF = 10**20
 GOSA = 1.0 / 10**10
-MOD = 10**9+7
-ALPHABETS = [chr(i) for i in range(ord('a'), ord('z')+1)]  # can also use string module
+MOD = 10**9 + 7
+ALPHABETS = [chr(i) for i in range(ord('a'), ord('z') + 1)]  # can also use string module
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def DP(N, M, first): return [[first] * M for n in range(N)]
 def DP3(N, M, L, first): return [[[first] * L for n in range(M)] for _ in range(N)]
-from inspect import currentframe
+
+
 def dump(*args):
-    names = {id(v):k for k,v in currentframe().f_back.f_locals.items()}
-    print(', '.join(names.get(id(arg),'???')+' => '+repr(arg) for arg in args), file=sys.stderr)
+    names = {id(v): k for k, v in currentframe().f_back.f_locals.items()}
+    print(', '.join(names.get(id(arg), '???') + ' => ' + repr(arg) for arg in args), file=sys.stderr)
 # }}}
 
-def local_input():# {{{
+
+def local_input():  # {{{
     from pcm.utils import set_stdin
     import sys
     from pathlib import Path
@@ -50,6 +53,7 @@ def local_input():# {{{
         set_stdin(inputfile)
 # }}}
 
+
 def solve():
     n = int(input())
     A = list(map(int, input().split()))
@@ -58,7 +62,7 @@ def solve():
     res = 0
     c = 0
     for a in A:
-        if (a==m):
+        if (a == m):
             c += 1
             res = max(res, c)
         else:
@@ -66,12 +70,14 @@ def solve():
     print(res)
     return 0
 
-def __starting_point():# {{{
+
+def __starting_point():  # {{{
     try:
         local_input()
     except:
         pass
     solve()
 # vim: set foldmethod=marker:}}}
+
 
 __starting_point()

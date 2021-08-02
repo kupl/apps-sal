@@ -1,4 +1,4 @@
-t  =int(input())
+t = int(input())
 for i in range(t):
     n = int(input())
     s = input().split(' ')
@@ -10,5 +10,5 @@ for i in range(t):
         if i % 2 == 0:
             a[i] = -a[i]
     for i in range(n):
-        print(a[i], end = ' ')
+        print(a[i], end=' ')
     print()

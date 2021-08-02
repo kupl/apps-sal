@@ -4,4 +4,3 @@ for _ in [0] * int(input()):
     for i in range(0, n, 2):
         print(-a[i + 1], a[i], end=' ')
     print()
-

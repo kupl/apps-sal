@@ -2,6 +2,7 @@ from collections import Counter
 
 MOD = 1000000007
 
+
 def pow_m(base, pw):
     if pw == 0:
         return 1
@@ -9,6 +10,7 @@ def pow_m(base, pw):
         return (((pow_m(base, pw // 2) ** 2) % MOD) * base) % MOD
     else:
         return (pow_m(base, pw // 2) ** 2) % MOD
+
 
 m = int(input())
 p = [int(x) for x in input().split()]
@@ -31,4 +33,3 @@ prod = pow_m(base, pw)
 if is_square:
     prod = (prod * root) % MOD
 print(prod)
-

@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n = int(sys.stdin.readline().rstrip())
     a = [int(i) for i in sys.stdin.readline().split()]
@@ -7,7 +8,7 @@ def solve():
 
     for i in range(n - 1):
         u, v = map(int, sys.stdin.readline().split())
-        u, v = u-1, v-1
+        u, v = u - 1, v - 1
         Adj[u].append(v)
         Adj[v].append(u)
 
@@ -57,6 +58,9 @@ def debug(x, table):
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

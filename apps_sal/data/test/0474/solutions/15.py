@@ -11,4 +11,3 @@ for a in A:
     else:
         cur = 0
 print(streak)
-

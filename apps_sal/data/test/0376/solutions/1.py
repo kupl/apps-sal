@@ -45,4 +45,3 @@ for i in range(n):
     total_max = min(total_max, here)
 
 print(total_max)
-

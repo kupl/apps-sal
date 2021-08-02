@@ -5,4 +5,3 @@ for i in range(t):
     for i in range(0, n, 2):
         print(-a[i + 1], a[i], end=" ")
     print()
-

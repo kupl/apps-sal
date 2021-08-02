@@ -12,4 +12,5 @@ def main():
         x = x * r - d
         print(x)
 
+
 main()

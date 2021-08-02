@@ -8,4 +8,3 @@ for _ in range(int(input())):
         b.append(a[i])
 
     print(*b)
-
