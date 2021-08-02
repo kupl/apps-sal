@@ -8,5 +8,5 @@ for i in range(len(l)):
         print(i + 1)
         return
     elif l[i] == pos_max:
-            pos_max += 1
+        pos_max += 1
 print("-1")

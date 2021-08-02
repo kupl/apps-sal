@@ -1,5 +1,5 @@
 input()
-intro = sorted([(-x,i+1) for i,x in enumerate(map(int, input().split()))])
+intro = sorted([(-x, i + 1) for i, x in enumerate(map(int, input().split()))])
 extro = []
 line = input()
 sol = []

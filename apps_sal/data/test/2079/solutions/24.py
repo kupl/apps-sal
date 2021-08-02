@@ -2,7 +2,7 @@ n = int(input())
 line = input().split()
 w = []
 for i in range(n):
-    w.append((int(line[i]), i+1))
+    w.append((int(line[i]), i + 1))
 w = sorted(tuple(w))
 cur = 0
 st = []
@@ -16,5 +16,3 @@ for ch in input():
         res.append(st[-1])
         st.pop()
 print(' '.join(str(item) for item in res))
-        
-

@@ -9,6 +9,6 @@ ans = 0
 for b in bl:
     i = bisect.bisect_left(al, b)
     j = bisect.bisect_right(cl, b)
-    ans += i*(n-j)
+    ans += i * (n - j)
 
 print(ans)

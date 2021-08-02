@@ -11,5 +11,5 @@ ans = 0
 for j in range(n):
     i = bisect.bisect_left(A, B[j])
     k = n - bisect.bisect_right(C, B[j])
-    ans += int(i*k)
+    ans += int(i * k)
 print(ans)

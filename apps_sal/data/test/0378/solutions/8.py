@@ -1,4 +1,6 @@
-import sys, math, random
+import sys
+import math
+import random
 n, m = list(map(int, input().split()))
 i = 1
 while True:
@@ -6,5 +8,3 @@ while True:
         print(i)
         return
     i += 1
-    
-

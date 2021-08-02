@@ -10,4 +10,3 @@ for i in range(len(a)):
         max_el = a[i]
 
 print(er)
-

@@ -1,5 +1,6 @@
 import bisect as bs
 
+
 def main():
     with open(0) as f:
         N = int(f.readline())
@@ -9,7 +10,8 @@ def main():
 
     ans = 0
     for b in B:
-        ans += bs.bisect_left(A, b) * (N-bs.bisect_right(C, b))
+        ans += bs.bisect_left(A, b) * (N - bs.bisect_right(C, b))
     print(ans)
+
 
 main()

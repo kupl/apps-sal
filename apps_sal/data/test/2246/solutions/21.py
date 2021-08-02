@@ -1,39 +1,40 @@
 class Node:
-	def __init__(self, index):
-		self.neighbours = []
-		self.index = index
-		self.prob = 1.0
-		self.vis = False
-		self.length = 0
+    def __init__(self, index):
+        self.neighbours = []
+        self.index = index
+        self.prob = 1.0
+        self.vis = False
+        self.length = 0
 
-	def addNode(self, city):
-		self.neighbours.append(city)
-		if self.index == 1:
-			self.prob = 1.0 / len(self.neighbours)
-		else:
-			l = len(self.neighbours)
-			self.prob = 1.0  if l < 2 else (1.0 / (l - 1))
+    def addNode(self, city):
+        self.neighbours.append(city)
+        if self.index == 1:
+            self.prob = 1.0 / len(self.neighbours)
+        else:
+            l = len(self.neighbours)
+            self.prob = 1.0 if l < 2 else (1.0 / (l - 1))
+
 
 n = int(input())
 if n == 1:
-	print(0)
-	return
-	
+    print(0)
+    return
+
 cities = {}
 
-for i in range(n-1):
-	a, b = [int(k) for k in input().split()]
-	#print ("test ", a, " to ", b)
-	if a not in cities:
-		cities[a] = Node(a)
-	cities[a].addNode(b)
-	if b not in cities:
-		cities[b] = Node(b)
-	cities[b].addNode(a)
+for i in range(n - 1):
+    a, b = [int(k) for k in input().split()]
+    #print ("test ", a, " to ", b)
+    if a not in cities:
+        cities[a] = Node(a)
+    cities[a].addNode(b)
+    if b not in cities:
+        cities[b] = Node(b)
+    cities[b].addNode(a)
 
 if len(cities) == 2:
-	print(1)
-	return
+    print(1)
+    return
 
 
 # for i in range(1, n + 1, 1):
@@ -70,29 +71,26 @@ if len(cities) == 2:
 
 
 def inorder(city):
-	s = []
-	s.append(city)
-	#print ('index ', city.index)
-	#print ('neighbours ', city.neighbours)
-	while s:
-		city = s.pop()
-		city.vis = True
-		if city.neighbours:
-			if city.index == 1 or len(city.neighbours) > 1:
-				for c in city.neighbours:
-					if not cities[c].vis:
-						cities[c].length = city.length + 1
-						cities[c].prob *= city.prob
-						s.append(cities[c])
-			else:
-				yield (city.index, city.prob, city.length)
-
+    s = []
+    s.append(city)
+    #print ('index ', city.index)
+    #print ('neighbours ', city.neighbours)
+    while s:
+        city = s.pop()
+        city.vis = True
+        if city.neighbours:
+            if city.index == 1 or len(city.neighbours) > 1:
+                for c in city.neighbours:
+                    if not cities[c].vis:
+                        cities[c].length = city.length + 1
+                        cities[c].prob *= city.prob
+                        s.append(cities[c])
+            else:
+                yield (city.index, city.prob, city.length)
 
 
 test = sum([city[1] * city[2] for city in inorder(cities[1])])
 print(test)
 
 
-
 # this is a tree
-

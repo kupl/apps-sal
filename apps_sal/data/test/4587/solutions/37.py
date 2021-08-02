@@ -9,4 +9,3 @@ cnt = []
 for b in B:
     cnt.append(bisect_left(A, b) * (N - bisect_right(C, b)))
 print((sum(cnt)))
-

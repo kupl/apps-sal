@@ -18,7 +18,7 @@ c_index = 0
 bc = []
 while(b_index < len(b) and c_index < len(c)):
     if b[b_index] < c[c_index]:
-        bc.append(len(c)-c_index)
+        bc.append(len(c) - c_index)
         b_index += 1
     else:
         c_index += 1
@@ -30,7 +30,7 @@ if len(bc) == 0:
 
 bc_sum = [bc[-1]]
 for i in reversed(bc[:-1]):
-    bc_sum.append(i+bc_sum[-1])
+    bc_sum.append(i + bc_sum[-1])
 bc_sum = list(reversed(bc_sum))
 
 # print(bc)
@@ -50,4 +50,3 @@ while(a_index < len(a) and b_index < len(b) and b_index < len(bc_sum)):
 
 # print(bc)
 print((sum(ans)))
-

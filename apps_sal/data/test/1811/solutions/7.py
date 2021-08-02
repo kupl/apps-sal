@@ -9,4 +9,3 @@ for i, ch in enumerate(input()):
     else:
         rocks = 0
 print('YES')
-

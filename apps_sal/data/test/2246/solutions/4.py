@@ -4,14 +4,14 @@ from decimal import Decimal
 
 readline = sys.stdin.readline
 n = int(input())
-edges = [[]*n for _ in [None]*n]
+edges = [[] * n for _ in [None] * n]
 
-for _ in [None]*(n-1):
+for _ in [None] * (n - 1):
     a, b = map(int, readline().split())
-    edges[a-1].append(b-1)
-    edges[b-1].append(a-1)
+    edges[a - 1].append(b - 1)
+    edges[b - 1].append(a - 1)
 
-visited = [False]*n
+visited = [False] * n
 visited[0] = True
 cnt = 0
 total = 0
@@ -29,7 +29,7 @@ while dq:
         multiple /= Decimal(x)
         for v in to:
             visited[v] = True
-            append((v, l+1, multiple))
+            append((v, l + 1, multiple))
     else:
         total += Decimal(l) * multiple
 

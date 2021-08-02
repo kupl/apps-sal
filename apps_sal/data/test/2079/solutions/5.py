@@ -13,12 +13,11 @@ i = 0
 stack = deque()
 res = []
 for c in cs:
-	if c == '0':
-		stack.append(pl[i])
-		res.append(pl[i])
-		i += 1
-	else:
-		res.append(stack.pop())
+    if c == '0':
+        stack.append(pl[i])
+        res.append(pl[i])
+        i += 1
+    else:
+        res.append(stack.pop())
 
 print(' '.join(map(str, res)))
-

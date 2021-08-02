@@ -8,4 +8,3 @@ for step, elem in enumerate(a):
     else:
         mx = max(mx, elem)
 print(-1)
-

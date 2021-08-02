@@ -1,33 +1,33 @@
 n = int(input())
 
-tree = {x: [] for x in range(1, n+1)}
+tree = {x: [] for x in range(1, n + 1)}
 
-for _ in range(n-1):
-    k,l = list(map(int, input().split()))
+for _ in range(n - 1):
+    k, l = list(map(int, input().split()))
     tree[k].append(l)
     tree[l].append(k)
 
-#for i in range(99999):
+# for i in range(99999):
 #    tree[i+1].append(i+2)
 #    tree[i+2].append(i+1)
 
 visited = set()
 s = 0
 
-a = [(1,1,0)]
+a = [(1, 1, 0)]
 
 while a:
-    v,p,l = a.pop()
-    visited.add(v) 
+    v, p, l = a.pop()
+    visited.add(v)
     k = 0
     for vv in tree[v]:
         if vv not in visited:
             k += 1
     if k <= 0:
-        s += p*l
+        s += p * l
     else:
         for vv in tree[v]:
             if vv not in visited:
-                a.append((vv,p*1.0/k,l+1))
+                a.append((vv, p * 1.0 / k, l + 1))
 
 print(s)

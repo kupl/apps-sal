@@ -13,6 +13,6 @@ cnt = 0
 for b in B:
     i = bisect.bisect_left(A, b)
     j = bisect.bisect_right(C, b)
-    cnt += i * (n-j)
+    cnt += i * (n - j)
 
 print(cnt)

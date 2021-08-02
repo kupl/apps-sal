@@ -7,11 +7,11 @@ C = sorted(map(int, input().split()))
 
 C_accum = [0]
 for b in B:
-  C_accum.append(C_accum[-1] + N - bisect(C, b))
+    C_accum.append(C_accum[-1] + N - bisect(C, b))
 
 ans = 0
 for a in A:
-  i = bisect(B, a)
-  ans += C_accum[-1] - C_accum[i]
+    i = bisect(B, a)
+    ans += C_accum[-1] - C_accum[i]
 
 print(ans)

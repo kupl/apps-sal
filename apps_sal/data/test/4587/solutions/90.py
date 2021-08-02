@@ -7,8 +7,7 @@ C = sorted(list(map(int, input().split())))
 cnt = 0
 for b in B:
     i = bisect.bisect_left(A, b)
-    j = n-bisect.bisect_right(C, b)
-    cnt += i*j
+    j = n - bisect.bisect_right(C, b)
+    cnt += i * j
 
 print(cnt)
-

@@ -7,23 +7,37 @@ import itertools
 import bisect
 
 # a = get_int()
+
+
 def get_int():
     return int(input())
 # a = get_string()
+
+
 def get_string():
     return input()
 # a_list = get_int_list()
+
+
 def get_int_list():
     return [int(x) for x in input().split()]
 # a_list = get_string_list():
+
+
 def get_string_list():
     return input().split()
 # a, b = get_int_multi()
+
+
 def get_int_multi():
     return list(map(int, input().split()))
 # a_list = get_string_char_list()
+
+
 def get_string_char_list():
     return list(str(input()))
+
+
 # print("{} {}".format(a, b))
 # for num in range(0, a):
 # a_list[idx]
@@ -33,6 +47,7 @@ while (idx < n) and ():
 
     idx += 1
 '''
+
 
 def main():
     start = time.time()
@@ -61,7 +76,7 @@ def main():
         b_count.append(idx)
 
     ruikei = 0
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         ruikei += n - b_count[i]
         b_count2.append(ruikei)
 
@@ -76,9 +91,9 @@ def main():
     print(ans)
     #print(time.time() - start)
 
+
 def __starting_point():
     main()
-
 
 
 __starting_point()

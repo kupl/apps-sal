@@ -1,10 +1,10 @@
 import bisect
 import itertools
 
-N = int(input()) # それぞれのパーツの数
-A = list(map(int, input().split())) # 小さい
-B = list(map(int, input().split())) # 中くらい
-C = list(map(int, input().split())) # 大きい
+N = int(input())  # それぞれのパーツの数
+A = list(map(int, input().split()))  # 小さい
+B = list(map(int, input().split()))  # 中くらい
+C = list(map(int, input().split()))  # 大きい
 
 # Cは並び替え不要
 A.sort()
@@ -26,5 +26,3 @@ for c in C:
     total += cumsum_b_counts[count]
 
 print(total)
-
-

@@ -5,6 +5,7 @@ from math import factorial
 MOD = 10 ** 9 + 7
 INF = 10000000000
 
+
 def binary_search_section(list, min, max):
     low = 0
     high = len(list) - 1
@@ -31,6 +32,7 @@ def binary_search_section(list, min, max):
 
     return [lower, upper]
 
+
 def main():
     # ------ 入力 ------#
     # 1行入力
@@ -52,9 +54,9 @@ def main():
     #         sec2 = binary_search_section(cListSorted, b+1, cListSorted[-1])
     #         result += len(cListSorted) - (sec2[0] + 1)
     for b in bListSorted:
-        sec = binary_search_section(aListSorted, aListSorted[0], b-1)
-        sec2 = binary_search_section(cListSorted, b+1, cListSorted[-1])
-        result += (sec[1] - sec[0] - 1)*(sec2[1] - sec2[0] - 1)
+        sec = binary_search_section(aListSorted, aListSorted[0], b - 1)
+        sec2 = binary_search_section(cListSorted, b + 1, cListSorted[-1])
+        result += (sec[1] - sec[0] - 1) * (sec2[1] - sec2[0] - 1)
 
     # ------ 出力 ------#
     print(("{}".format(result)))
@@ -66,5 +68,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

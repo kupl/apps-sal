@@ -65,14 +65,14 @@ def solve(w, s):
 
     for w in sorted(enumerate(w), key=lambda x: x[1]):
         free.append([w[0] + 1, w[1]])
-    
+
     ids = [-1] * len(s)
 
     order = []
     for pid, p in enumerate(s):
         logger.debug('pid: %s', pid)
         if p == '0':
-            taken = free.popleft(), 
+            taken = free.popleft(),
             used.appendleft(taken)
             # order.append(pid, taken[0])
         else:
@@ -82,7 +82,6 @@ def solve(w, s):
         ids[pid] = taken[0]
 
     return [x for x, y in ids]
-
 
 
 def main():
@@ -96,5 +95,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

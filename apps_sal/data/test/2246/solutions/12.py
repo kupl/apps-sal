@@ -26,4 +26,3 @@ while q:
     for i in to_explore:
         q.append([i, x[1] / n, x[2] + 1])
 print(s)
-

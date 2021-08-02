@@ -13,11 +13,4 @@ for i in range(n):
 if(n + 1 - z <= k):
     print("YES")
 else:
-    print("NO")            
-
-
-
-        
-
-    
-
+    print("NO")
