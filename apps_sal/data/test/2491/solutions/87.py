@@ -1,4 +1,6 @@
 import sys
+
+
 class DSU:
     def __init__(self, n):
         self._n = n
@@ -35,6 +37,7 @@ class DSU:
         for i in range(self._n): result[leader_buf[i]].append(i)
         return [r for r in result if r != []]
 
+
 class Fenwick_Tree:
     def __init__(self, n):
         self._n = n
@@ -57,26 +60,32 @@ class Fenwick_Tree:
             s += self.data[r - 1]
             r -= r & -r
         return s
+
+
 INF = float('inf')
-def Bellmanford(n, edges, r): #r: 始点
+
+
+def Bellmanford(n, edges, r):  # r: 始点
     d = [INF] * n
     d[r] = 0
-    
+
     for i in range(n):
         for (u, v, c) in edges:
             if d[u] != INF and d[u] + c < d[v]:
                 d[v] = d[u] + c
-                if i == n-1 and v == n-1:
+                if i == n - 1 and v == n - 1:
                     return 'inf'
-    
-    return -d[n-1]
+
+    return -d[n - 1]
+
+
 N, M = map(int, sys.stdin.readline().split())
 Edges = [None] * M
 
 for i in range(M):
     ai, bi, ci = map(int, sys.stdin.readline().split())
-    Edges[i] = (ai-1, bi-1, -ci)
-    
+    Edges[i] = (ai - 1, bi - 1, -ci)
+
 ans = Bellmanford(N, Edges, 0)
 
-print(ans)  
+print(ans)

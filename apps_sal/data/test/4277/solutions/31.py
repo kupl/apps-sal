@@ -1,5 +1,5 @@
-n, a, b = map(int,input().split())
+n, a, b = map(int, input().split())
 if n * a > b:
-  print(b)
+    print(b)
 else:
-  print(n*a)
+    print(n * a)

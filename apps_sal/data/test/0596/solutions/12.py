@@ -5,7 +5,8 @@ def isLeep(year):
         if year % 4 == 0 and year % 100 != 0:
             return 1;
         return 0;
-    
+
+
 def cmp(y1, m1, d1, y2, m2, d2):
     if y1 > y2:
         return 0;
@@ -16,6 +17,7 @@ def cmp(y1, m1, d1, y2, m2, d2):
             if y1 == y2 and m1 == m2 and d1 > d2:
                 return 0;
             return 1;
+
 
 y1, m1, d1 = list(map(int, input().split(':')))
 y2, m2, d2 = list(map(int, input().split(':')))
@@ -61,6 +63,3 @@ while True:
                             d1 = 1;
 
 print(res - 1)
-            
-
-

@@ -21,4 +21,5 @@ def __starting_point():
 #             ng = mid
 #     return ok
 
+
 __starting_point()

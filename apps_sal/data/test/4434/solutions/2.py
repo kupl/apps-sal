@@ -12,14 +12,14 @@ prn = lambda x: print(*x, sep='\n')
 def solve():
     n = ni()
     c = 0
-    for i in range(n//2):
-        c += (i+1)*(i+1)*2*4
+    for i in range(n // 2):
+        c += (i + 1) * (i + 1) * 2 * 4
     print(c)
     return
 
 # solve()
 
+
 T = ni()
 for _ in range(T):
     solve()
-

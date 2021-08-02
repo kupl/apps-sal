@@ -27,4 +27,3 @@ try:
     print(ans)
 except NegativeCycleError:
     print('inf')
-

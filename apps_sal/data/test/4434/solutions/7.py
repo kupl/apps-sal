@@ -8,8 +8,11 @@ def solve():
         out += 8 * i * i
     print(out)
 
+
 def __starting_point():
     t = int(input())
     for tc in range(t):
         solve()
+
+
 __starting_point()

@@ -9,6 +9,7 @@ for i in range(n):
     for j in range(i, n):
         moves.append((i, j))
 
+
 def go(p, cnt):
     if cnt == k:
         ret = 0
@@ -28,4 +29,3 @@ def go(p, cnt):
 
 
 print(go(perm, 0) / pow(len(moves) * 1.0, k))
-

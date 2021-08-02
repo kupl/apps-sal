@@ -13,14 +13,13 @@ def main():
                 per[l: r] = reversed(per[l: r])
                 rec(k - 1)
                 per[l: r] = reversed(per[l: r])
-    
+
     n, k = [int(i) for i in input().split()]
     per = [int(i) for i in input().split()]
-    
+
     S = N = 0
     rec(k)
     print(S / N)
-    
+
 
 main()
-

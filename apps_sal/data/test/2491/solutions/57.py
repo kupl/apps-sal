@@ -8,12 +8,12 @@ def resolve():
 def BF(p, n, s):
     inf = float("inf")
     d = [inf for i in range(n)]
-    d[s-1] = 0
-    for i in range(n+1):
+    d[s - 1] = 0
+    for i in range(n + 1):
         for e in p:
-            if e[0] != inf and d[e[1]-1] > d[e[0]-1]+e[2]:
-                d[e[1]-1] = d[e[0]-1] + e[2]
-        if i == n-1:
+            if e[0] != inf and d[e[1] - 1] > d[e[0] - 1] + e[2]:
+                d[e[1] - 1] = d[e[0] - 1] + e[2]
+        if i == n - 1:
             t = d[-1]
         if i == n and t != d[-1]:
             return [0, 'inf']
@@ -22,4 +22,6 @@ def BF(p, n, s):
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

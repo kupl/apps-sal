@@ -7,5 +7,3 @@ if train < taxi:
     print(train)
 else:
     print(taxi)
-
-

@@ -13,6 +13,7 @@ import string
 # imgur.com/Pkt7iIf.png #
 #########################
 
+
 def sieve(n):
     if n < 2: return list()
     prime = [True for _ in range(n + 1)]
@@ -28,6 +29,7 @@ def sieve(n):
             r.append(p)
     return r
 
+
 def divs(n, start=1):
     divisors = []
     for i in range(start, int(math.sqrt(n) + 1)):
@@ -37,6 +39,7 @@ def divs(n, start=1):
             else:
                 divisors.extend([i, n // i])
     return divisors
+
 
 def divn(n, primes):
     divs_number = 1
@@ -49,6 +52,7 @@ def divn(n, primes):
             n //= i
         divs_number *= t
 
+
 def flin(d, x, default=-1):
     left = right = -1
     for i in range(len(d)):
@@ -59,6 +63,7 @@ def flin(d, x, default=-1):
         return default, default
     else:
         return left, right
+
 
 def ceil(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
@@ -72,13 +77,12 @@ def ddl(): return collections.defaultdict(list)
 ########################################################################################################################
 # input = sys.stdin.readline
 
+
 for _ in range(ii()):
     n = ii()
     res = 0
     cs = 8
-    for i in range(1, n//2 + 1):
+    for i in range(1, n // 2 + 1):
         res += cs * i
         cs += 8
     print(res)
-
-

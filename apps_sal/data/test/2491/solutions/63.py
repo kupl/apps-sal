@@ -17,7 +17,7 @@ for _ in range(N - 1):
         new_cost = node_cost[start[i]] + weight[i]
         if new_cost > node_cost[end[i]]:
             node_cost[end[i]] = new_cost
-ans = node_cost[N-1]
+ans = node_cost[N - 1]
 cycle = [False] * N
 for _ in range(N):
     for i in range(M):
@@ -26,6 +26,6 @@ for _ in range(N):
         new_cost = node_cost[start[i]] + weight[i]
         if new_cost > node_cost[end[i]]:
             cycle[end[i]] = True
-if cycle[N-1]:
+if cycle[N - 1]:
     ans = "inf"
 print(ans)

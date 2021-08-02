@@ -19,4 +19,3 @@ ans.append(0)
 
 for i in range(N):
     print((ans[i]))
-

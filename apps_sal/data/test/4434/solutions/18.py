@@ -9,6 +9,7 @@ def __starting_point():
     for kase in range(nofkase):
         n = int(input())
         n = n // 2
-        print(n*(n+1)*(n+n+1)*8//6)
+        print(n * (n + 1) * (n + n + 1) * 8 // 6)
+
 
 __starting_point()

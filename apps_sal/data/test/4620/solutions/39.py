@@ -12,4 +12,3 @@ for i in range(N):
         S = max(S, S_ij)  # max（j 駅のスタート時間、 ij 間の時間）
         S_ij = C + ((S - 1) // F + 1) * F
     print(S_ij)
-

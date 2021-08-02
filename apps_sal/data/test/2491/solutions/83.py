@@ -30,4 +30,3 @@ if neg[n - 1]:
     print('inf')
 else:
     print((-ans))
-

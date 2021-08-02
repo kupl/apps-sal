@@ -25,4 +25,3 @@ for i in range(N - 1):
 lst.append(0)
 for a in lst:
     print(a)
-

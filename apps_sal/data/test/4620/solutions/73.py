@@ -13,4 +13,3 @@ for i in range(N):
                 ans = (ans // f + 1) * f
         ans += c
     print(ans)
-

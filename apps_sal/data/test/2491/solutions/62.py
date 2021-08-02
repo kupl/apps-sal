@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def bellmanford(G, s):
     n = len(G)
     inf = -float('inf')
@@ -15,6 +16,7 @@ def bellmanford(G, s):
                         return -1
     return dist
 
+
 def main():
     N, M = map(int, input().split())
     graph = [[] for _ in range(N)]
@@ -27,8 +29,11 @@ def main():
     if dist == -1:
         print("inf")
     else:
-        print(dist[N-1])
+        print(dist[N - 1])
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

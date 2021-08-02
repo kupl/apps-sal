@@ -6,7 +6,7 @@ for i in range(1, n):
 
     for j in range(i):
         ans[j] = max(ans[j], s)
-        ans[j] = ((ans[j]+f-1)//f) * f
+        ans[j] = ((ans[j] + f - 1) // f) * f
         ans[j] += c
 
 for a in ans:

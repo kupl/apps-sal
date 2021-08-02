@@ -1,6 +1,7 @@
 n, m = map(int, input().split())
 graph = [tuple(map(int, input().split())) for _ in range(m)]
 
+
 def shortest_path(s):
     MIN = -1 * 10 ** 12
     d = [MIN] * (n + 1)
@@ -19,5 +20,6 @@ def shortest_path(s):
         if cnt == 2 * m: update = False
         cnt += 1
     return d[n]
+
 
 print(shortest_path(1))

@@ -5,4 +5,3 @@ taxi = b
 
 answer = min(train, taxi)
 print(answer)
-

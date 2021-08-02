@@ -1,7 +1,7 @@
 N = int(input())
 C, S, F = [], [], []
 
-for _ in range(N-1):
+for _ in range(N - 1):
     c, s, f = map(int, input().split())
     C.append(c)
     S.append(s)
@@ -11,7 +11,7 @@ for station in range(N):
     now = station
     time = 0
 
-    while now < N-1:
+    while now < N - 1:
         if time < S[now]:
             time = S[now] + C[now]
         else:

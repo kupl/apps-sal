@@ -2,7 +2,7 @@ n, m = list(map(int, input().split()))
 # from, to, cost
 edges = [list(map(int, input().split())) for _ in range(m)]
 
-score = [-float('inf')] * (n+1)
+score = [-float('inf')] * (n + 1)
 score[1] = 0
 cnt = 0
 
@@ -15,4 +15,3 @@ for i in range(n):
             score[to] = score[frm] + cost
 
 print((score[n]))
-

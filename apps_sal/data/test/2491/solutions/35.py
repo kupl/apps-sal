@@ -1,20 +1,23 @@
 import sys
 input = sys.stdin.readline
 
+
 def readlines(n):
     for _ in range(n):
         a, b, c = map(int, input().split())
         yield a, b, c
 
+
 def main():
     n, m = map(int, input().split())
-    edges = [(a-1, b-1, -c) for a, b, c in readlines(m)]
+    edges = [(a - 1, b - 1, -c) for a, b, c in readlines(m)]
     costs = bellman_ford(0, edges, n)
 
     if costs == -1:
         print("inf")
     else:
         print(-costs[-1])
+
 
 def bellman_ford(start, edges, n):
     inf = float("inf")
@@ -28,5 +31,6 @@ def bellman_ford(start, edges, n):
                     return -1
 
     return costs
+
 
 main()

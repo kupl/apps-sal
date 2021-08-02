@@ -5,6 +5,7 @@ def genrevs(n):
             ans.append((l, r))
     return ans
 
+
 def cnt_rev(p):
     n = len(p)
     ans = 0
@@ -13,6 +14,7 @@ def cnt_rev(p):
             if p[i] > p[j]:
                 ans += 1
     return ans
+
 
 def repl(l, r):
     nonlocal p
@@ -71,4 +73,3 @@ if k == 4:
             repl(rev[k2][0], rev[k2][1])
         repl(rev[k1][0], rev[k1][1])
     print(ans / (lr ** 4))
-

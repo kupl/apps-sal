@@ -7,4 +7,3 @@ for i, p in enumerate(q):
         ans[j] = c + max(s, -(-ans[j] // f) * f)
     ans[i] = c + s
 print(*ans, sep="\n")
-

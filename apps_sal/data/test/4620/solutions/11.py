@@ -5,7 +5,7 @@ cs = []
 ss = []
 fs = []
 
-for _ in range(n-1):
+for _ in range(n - 1):
     c, s, f = map(int, input().split())
     cs.append(c)
     ss.append(s)
@@ -13,7 +13,7 @@ for _ in range(n-1):
 
 for i in range(n):
     t = 0
-    for j in range(i, n-1):
+    for j in range(i, n - 1):
         if t < ss[j]:
             t = ss[j]
         t = ceil(t / fs[j]) * fs[j]

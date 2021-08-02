@@ -30,4 +30,3 @@ cost = [float("inf") for _ in range(N)]
 start = 0
 end = N - 1
 print((bellman_ford(edges, N, start, end)))
-

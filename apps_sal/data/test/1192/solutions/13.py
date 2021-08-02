@@ -2,19 +2,21 @@ import sys
 
 TESTING = False
 
+
 def reverse(a, l, r):
     res = list(a)
     while l < r:
         res[l], res[r] = res[r], res[l]
-        l+=1
-        r-=1
+        l += 1
+        r -= 1
     return res
+
 
 def inversions(a):
     res = 0
     for l in range(len(a)):
-        for r in range(l+1, len(a)):
-            if a[l] > a[r]: res+=1
+        for r in range(l + 1, len(a)):
+            if a[l] > a[r]: res += 1
     return res
 
 
@@ -33,7 +35,8 @@ def solve():
     res = 0;
     for val in al:
         res += inversions(val)
-    return res/len(al)
+    return res / len(al)
+
 
 def read(mode=2):
     inputs = input().strip()
