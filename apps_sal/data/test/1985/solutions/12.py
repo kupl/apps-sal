@@ -14,11 +14,11 @@ ans = set()
 
 for i in range(k - n + 1):
     x = values[0] - cnt[i]
-    
+
     pos = 1
     ind = i + 1
     label = 1
-    
+
     while pos < n and ind < k:
         if cnt[ind] + x < values[pos]:
             ind += 1
@@ -28,7 +28,7 @@ for i in range(k - n + 1):
         else:
             label = 0
             break
-    
+
     if label and pos == n:
         ans.add(x)
 

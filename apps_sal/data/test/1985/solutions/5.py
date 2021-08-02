@@ -1,4 +1,4 @@
-k,n = list(map(int,input().split()))
+k, n = list(map(int, input().split()))
 a = []
 b = []
 temp = input().split()
@@ -13,17 +13,17 @@ for i in range(n):
 list.sort(b)
 count = 0
 visit = set()
-for i in range(k-n+1):
-    dif = b[0]-a[0]
+for i in range(k - n + 1):
+    dif = b[0] - a[0]
     if dif not in visit:
         visit.add(dif)
         add = True
         index = 0
         for j in range(n):
             while index < len(a):
-                if a[index] == b[j]-dif:
+                if a[index] == b[j] - dif:
                     break
-                elif a[index] > b[j]-dif:
+                elif a[index] > b[j] - dif:
                     add = False
                     break
                 else:
@@ -37,4 +37,3 @@ for i in range(k-n+1):
             count += 1
     a = a[1:]
 print(count)
-

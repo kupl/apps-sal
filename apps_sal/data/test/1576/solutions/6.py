@@ -1,13 +1,17 @@
-import math, sys
+import math
+import sys
 from fractions import *
+
 
 def mp():
     return list(map(int, input().split()))
+
 
 def f(q):
     if q == -1:
         return 0
     return -1
+
 
 def main():
     a = input().strip()
@@ -24,11 +28,12 @@ def main():
             a = a[1:]
         q = f(q)
     print(ans)
-        
+
+
 deb = 0
 if deb:
     file = open('input.txt', 'w')
 else:
     input = sys.stdin.readline
-    
+
 main()

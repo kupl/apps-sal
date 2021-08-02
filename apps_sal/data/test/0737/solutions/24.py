@@ -5,7 +5,7 @@ n = int(stdin.readline())
 l, r = 0, n + 1
 while r - l > 1:
     m = (r + l) >> 1
-    
+
     if m * m > n:
         r = m
     else:

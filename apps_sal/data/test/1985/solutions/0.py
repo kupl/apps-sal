@@ -24,6 +24,6 @@ def main():
         if good:
             res.add(first)
     print(len(res))
-    
-    
+
+
 main()

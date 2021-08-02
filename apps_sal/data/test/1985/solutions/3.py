@@ -18,4 +18,3 @@ for b in b_s:
         poss = set.intersection(poss, locls)
 
 print(len(poss))
-

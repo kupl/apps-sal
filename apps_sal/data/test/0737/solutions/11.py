@@ -14,4 +14,3 @@ def min_perimeter(n):
 
 n = int(input())
 print(min_perimeter(n))
-

@@ -1,4 +1,6 @@
-import sys, time, os
+import sys
+import time
+import os
 from pprint import pprint as pp
 if os.environ.get('_ONPC_', False):
     stdin = open('input.txt', 'r')
@@ -39,4 +41,3 @@ if __flag:
     stdin.close()
 
     print(time.time() - now, file=sys.stderr)
-

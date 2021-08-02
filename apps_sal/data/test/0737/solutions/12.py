@@ -10,4 +10,3 @@ elif a * (a + 1) >= n:
     print(4 * a + 2)
 else:
     print(4 * (a + 1))
-

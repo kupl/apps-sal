@@ -14,4 +14,3 @@ for i in range(len(s)):
 
 for i in range(len(o) - 1, -1, -1):
     print(o[i], end='')
-

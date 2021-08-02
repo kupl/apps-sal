@@ -1,7 +1,6 @@
 from fractions import gcd
 
 
-
 n, m, x, y, a, b = list(map(int, input().split()))
 
 r = gcd(a, b)
@@ -19,6 +18,4 @@ dx, dy = min(n - a, max(cx, x) - cx), min(m - b, max(cy, y) - cy)
 print(dx, dy, a + dx, b + dy)
 
 
-
 # Made By Mostafa_Khaled
-

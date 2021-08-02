@@ -1,8 +1,10 @@
 def f(x, n):
     return x // n
 
+
 def ff(l, r, n):
     return f(r, n) - f(l - 1, n)
+
 
 for _ in range(int(input())):
     # n = int(input())
@@ -23,4 +25,3 @@ for _ in range(int(input())):
                 s += 1
 
     print(s)
-

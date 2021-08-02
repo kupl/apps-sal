@@ -24,4 +24,3 @@ for start_val in pos_val:
         ans += 1
 
 print(ans)
-

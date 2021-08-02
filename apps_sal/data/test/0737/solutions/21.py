@@ -13,4 +13,3 @@ a = r if r <= k else r - k
 b = r - a
 rs += (cal_add(a) + cal_add(b))
 print(rs)
-

@@ -12,10 +12,9 @@ m = cnt[b[0]]
 
 for key in b[1:]:
     m += cnt[key]
-    ans = (ans + pow(m, mod-2, mod) * key * cnt[key]) % mod
+    ans = (ans + pow(m, mod - 2, mod) * key * cnt[key]) % mod
 
-for i in range(2, n+1):
+for i in range(2, n + 1):
     ans = ans * i % mod
 
 print(ans)
-

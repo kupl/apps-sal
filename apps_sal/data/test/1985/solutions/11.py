@@ -1,6 +1,7 @@
 def read():
     return [int(x) for x in input().split()]
 
+
 k, n = read()
 a = read()
 b = read()
@@ -23,4 +24,3 @@ for x in a:
         z.add(i)
 
 print(len(z))
-

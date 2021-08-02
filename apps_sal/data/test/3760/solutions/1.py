@@ -17,4 +17,3 @@ if x1 + a > n:
 if y1 + b > m:
     y1 -= (y1 + b - m)
 print(x1, y1, x1 + a, y1 + b)
-

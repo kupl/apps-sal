@@ -7,4 +7,3 @@ for _ in range(t):
     out += k * n
     out += 1
     print(out)
-

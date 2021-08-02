@@ -11,4 +11,3 @@ elif 1 <= n - sq**2 <= sq:
     ans += 2
 
 print(ans)
-

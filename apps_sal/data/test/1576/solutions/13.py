@@ -8,4 +8,4 @@ for i in reversed(range(len(s))):
         result.append(s[-1])
         s = s[:-1]
 result.reverse()
-print(''.join(result))    
+print(''.join(result))
