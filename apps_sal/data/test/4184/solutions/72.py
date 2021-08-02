@@ -10,4 +10,3 @@ for T in range(N - 1):
     abs_min = min(abs_list)
 
 print(abs_min)
-

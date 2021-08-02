@@ -15,4 +15,3 @@ for i in range(n):
     ans += max(l[i], r[i])
 ans += n
 print(ans)
-

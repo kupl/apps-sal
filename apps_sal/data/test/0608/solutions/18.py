@@ -8,6 +8,6 @@ for x in a:
     else:
         t = 0
     cnt += t // 3
-    t %= 3    
+    t %= 3
 
 print(cnt)

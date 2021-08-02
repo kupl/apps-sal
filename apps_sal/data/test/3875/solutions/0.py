@@ -4,7 +4,7 @@ inf = 10 ** 18
 mod = 10 ** 9 + 7
 
 
-def nCr(n, r, mod=10**9+7):
+def nCr(n, r, mod=10**9 + 7):
     if r < 0 or r > n:
         return 0
     res = 1
@@ -13,7 +13,7 @@ def nCr(n, r, mod=10**9+7):
     for i in range(r):
         res = res * (n - i) % mod
         div = div * (i + 1) % mod
-    return res * pow(div, mod-2, mod) % mod
+    return res * pow(div, mod - 2, mod) % mod
 
 
 def calc_lis(A):
@@ -48,7 +48,7 @@ def main():
         for p in pair:
             v = p[-1]
             nxt.append(p + (v,))
-            nxt.append(p + (v+1,))
+            nxt.append(p + (v + 1,))
         pair = nxt
 
     ans = 0

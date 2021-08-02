@@ -15,7 +15,8 @@
     入力は全て整数である
 '''
 
-def abc129b(n:int, w_lists:int) -> int:
+
+def abc129b(n: int, w_lists: int) -> int:
     ret = max(w_lists)
     for i in range(n):
         temp = abs(sum(w_lists[:i]) - sum(w_lists[i:]))
@@ -24,7 +25,7 @@ def abc129b(n:int, w_lists:int) -> int:
 
     return ret
 
+
 n = int(input())
 w_lists = list(map(int, input().split()))
 print((abc129b(n, w_lists)))
-

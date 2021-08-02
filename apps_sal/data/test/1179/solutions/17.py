@@ -7,7 +7,7 @@ for i in range(n):
         ind = i
         cnt = number[-2]
         break
-    
+
 values = list(map(int, stdin.readline().split()))
 for i in range(ind + 1):
     if cnt + i + 1 == k:

@@ -1,6 +1,9 @@
-from collections import defaultdict,deque,Counter,OrderedDict
-from heapq import heappop,heappush
-import bisect,sys,threading
+from collections import defaultdict, deque, Counter, OrderedDict
+from heapq import heappop, heappush
+import bisect
+import sys
+import threading
+
 
 def main():
     n, m = map(int, input().split())
@@ -17,7 +20,8 @@ def main():
 
     while Q:
         w, lew, u, ei = heappop(Q)
-        if visited[u]: continue
+        if visited[u]:
+            continue
         visited[u] = 1
         ans.append(str(ei + 1))
         tw += lew
@@ -28,9 +32,12 @@ def main():
     print(tw)
     print(" ".join(ans[1:]))
 
+
 def __starting_point():
     sys.setrecursionlimit(200000)
     threading.stack_size(102400000)
     thread = threading.Thread(target=main)
     thread.start()
+
+
 __starting_point()

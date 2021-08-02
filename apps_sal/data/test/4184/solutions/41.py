@@ -1,5 +1,5 @@
 N = int(input())
-W = list(map(int,input().split()))
+W = list(map(int, input().split()))
 
 mae = []
 ushiro = []

@@ -7,7 +7,7 @@ c = 1
 d = 1
 
 while c + d <= k:
-	c += d
-	d += 1
+    c += d
+    d += 1
 
-print(id[k-c])
+print(id[k - c])

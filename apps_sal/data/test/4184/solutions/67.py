@@ -12,4 +12,3 @@ for i in range(n):
         result = wk
 
 print(result)
-

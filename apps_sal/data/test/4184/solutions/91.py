@@ -3,10 +3,10 @@ W = list(map(int, input().split()))
 
 m = 10**10
 for i in range(1, N):
-  a, b = 0, 0
-  for j in range(i):
-    a += W[j]
-  for j in range(i, N):
-    b += W[j]
-  m = min(m, abs(a-b))
+    a, b = 0, 0
+    for j in range(i):
+        a += W[j]
+    for j in range(i, N):
+        b += W[j]
+    m = min(m, abs(a - b))
 print(m)

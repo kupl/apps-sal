@@ -37,4 +37,3 @@ else:
         ans = max(ans, cursum - rightmin - d[i])
         rightmin = min(rightmin, a[i])
     print(ans)
-

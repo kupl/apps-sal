@@ -25,4 +25,3 @@ while pq:
 t = [up[u] for u in range(1, n + 1) if u != src]
 print(sum(ed[e][2] for e in t))
 print(*t)
-

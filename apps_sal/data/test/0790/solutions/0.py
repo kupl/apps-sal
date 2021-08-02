@@ -11,7 +11,7 @@ if k == 0:
     print(best)
 elif k == 1:
     best = sum(a[:-1]) - min(d[:-1])
-    
+
     other = sum(a)
     other -= sorted(d)[0]
     other -= sorted(d)[1]
@@ -23,8 +23,7 @@ elif k == 1:
         curr -= a[i]
 
     o2 = sum(a) - min(a[1:]) - d[0]
-    
-    print(max((best,other,0, o2)))
-else:
-    print(max((sum(a) - min(d[:-1]),0,a[-1] - d[-1])))
 
+    print(max((best, other, 0, o2)))
+else:
+    print(max((sum(a) - min(d[:-1]), 0, a[-1] - d[-1])))

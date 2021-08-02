@@ -16,4 +16,3 @@ for i in range(n):
     res += max(left[i], right[i])
 
 print(res)
-

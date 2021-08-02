@@ -4,8 +4,8 @@ for q in range(int(input())):
 
     idx = a.index(1)
 
-    b = a[idx : ] + a[ : idx]
-    c = a[ : idx + 1][::-1] + a[idx +1 : ][::-1]
+    b = a[idx:] + a[: idx]
+    c = a[: idx + 1][::-1] + a[idx + 1:][::-1]
 
     a.sort()
 
@@ -13,4 +13,3 @@ for q in range(int(input())):
         print("YES")
     else:
         print("NO")
-

@@ -7,5 +7,3 @@ for i in range(1, n + 1):
     else:
         break
 print(l[k - (m * (m + 1) >> 1)])
-        
-

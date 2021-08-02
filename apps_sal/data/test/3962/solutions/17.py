@@ -15,4 +15,3 @@ r.sort()
 maxes = [max(lv, rv) for lv, rv in zip(l, r)]
 
 print(n + sum(maxes))
-

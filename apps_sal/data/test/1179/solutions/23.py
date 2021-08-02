@@ -6,4 +6,3 @@ for i in range(1, n + 1):
         ans = i - 1
         break
 print(arr[k - (1 + ans) * ans // 2 - 1])
-

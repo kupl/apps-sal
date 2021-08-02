@@ -1,6 +1,7 @@
 n = int(input())
 w = list(map(int, input().split()))
 
+
 def answer(n: int, w: list) -> int:
     answer = sum(w)
     for i in range(len(w)):

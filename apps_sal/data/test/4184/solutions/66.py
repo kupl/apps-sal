@@ -14,4 +14,5 @@ def __starting_point():
     weights = list(map(int, input().split()))
     print((balance(weights, n)))
 
+
 __starting_point()

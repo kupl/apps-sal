@@ -18,4 +18,3 @@ while t:
         ans2 = False
         break
     print("YES" if ans or ans2 else "NO")
-

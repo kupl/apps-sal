@@ -9,5 +9,4 @@ while (r > l):
         l = m + 1
     else:
         r = m
-print(lst[k  - int(l * (l - 1) / 2) - 1])
-
+print(lst[k - int(l * (l - 1) / 2) - 1])
