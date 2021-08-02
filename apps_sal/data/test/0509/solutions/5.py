@@ -1,6 +1,6 @@
 
 n = int(input())
-a = [ int(input()) for x in range(0, n) ]
+a = [int(input()) for x in range(0, n)]
 
 for x in range(0, 2 ** n + 1):
     v = 0
@@ -15,5 +15,3 @@ for x in range(0, 2 ** n + 1):
         break
 else:
     print("NO")
-
-

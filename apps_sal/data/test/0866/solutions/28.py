@@ -1,6 +1,7 @@
 X, Y = map(int, input().split())
 MOD = 10 ** 9 + 7
 
+
 def modpow(x, n):
     ret = 1
     while n > 0:
@@ -10,8 +11,10 @@ def modpow(x, n):
         n >>= 1
     return ret
 
+
 def modinv(x):
     return modpow(x, MOD - 2)
+
 
 def modf(x):
     ret = 1
@@ -19,6 +22,7 @@ def modf(x):
         ret *= i
         ret %= MOD
     return ret
+
 
 ans = 0
 if (X + Y) % 3 == 0:

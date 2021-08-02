@@ -21,5 +21,3 @@ for key in telep:
         reverse[telep[key]] = key
 for i in range(1, n + 1):
     print(reverse[i])
-        
-

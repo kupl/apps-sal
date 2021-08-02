@@ -1,13 +1,13 @@
+import itertools as it
 n = int(input())
 a = []
 for _ in range(n):
     a.append(int(input()))
-import itertools as it
 if sum(a) % 2:
     print('NO')
 else:
     f = False
-    q = it.product([-1,1], repeat = n)
+    q = it.product([-1, 1], repeat=n)
     for i in q:
         s = 0
         for j in range(len(i)):

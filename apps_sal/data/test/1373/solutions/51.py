@@ -18,4 +18,3 @@ for i in range(k, n + 1):
     ans += max_s - min_s + 1
     ans %= mod
 print(ans)
-

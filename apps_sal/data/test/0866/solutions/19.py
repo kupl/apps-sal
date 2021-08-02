@@ -11,12 +11,14 @@ for i in range(2, N + 1):
     fact.append((fact[-1] * i) % p)
     inv.append((p - inv[p % i] * (p // i)) % p)
     factinv.append((factinv[-1] * inv[-1]) % p)
-    
+
+
 def combination(n, r, p):
     if r < 0 or n < r:
         return 0
-    r = min(r, n-r)
-    return fact[n] * factinv[r] * factinv[n-r] % p
+    r = min(r, n - r)
+    return fact[n] * factinv[r] * factinv[n - r] % p
+
 
 def solve(X, Y):
     if (X + Y) % 3 != 0:
@@ -25,5 +27,5 @@ def solve(X, Y):
     x = (Z + X - Y) // 2
     return combination(Z, x, p)
 
-print((solve(X, Y)))
 
+print((solve(X, Y)))

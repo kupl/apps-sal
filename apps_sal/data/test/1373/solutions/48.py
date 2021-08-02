@@ -7,6 +7,6 @@ for i in range(10 ** 5 * 3):
 ans = 1
 for i in range(K, N + 1):
     tmp_max = tmp[N] - tmp[N - i]
-    ans += tmp_max - tmp[i-1] + 1
+    ans += tmp_max - tmp[i - 1] + 1
 
 print(ans % (10 ** 9 + 7))

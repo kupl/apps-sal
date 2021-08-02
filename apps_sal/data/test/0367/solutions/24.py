@@ -5,6 +5,7 @@ from bisect import insort
 # aaab aabb
 # aaaa
 
+
 def main():
     wd = input()
     chars = dict()
@@ -16,26 +17,26 @@ def main():
     evens = list()
 
     for k, v in list(chars.items()):
-        if v%2:
-            odds.append((k,v))
+        if v % 2:
+            odds.append((k, v))
         else:
-            evens.append((k,v))
+            evens.append((k, v))
 
     odds.sort()
-    #print(odds)
+    # print(odds)
     while len(odds) > 1:
-        odds[0] = (odds[0][0], odds[0][1]+1)
-        odds[-1] = (odds[-1][0], odds[-1][1]-1)
+        odds[0] = (odds[0][0], odds[0][1] + 1)
+        odds[-1] = (odds[-1][0], odds[-1][1] - 1)
         if odds[-1][1] < 1:
             del odds[-1]
-        elif odds[-1][1]%2 == 0:
+        elif odds[-1][1] % 2 == 0:
             evens.append(odds.pop())
-        if odds[0][1]%2 == 0:
+        if odds[0][1] % 2 == 0:
             evens.append(odds[0])
             del odds[0]
 
     if len(odds) and odds[0][1] > 1:
-        evens.append((odds[0][0], odds[0][1]-1))
+        evens.append((odds[0][0], odds[0][1] - 1))
         odds[0] = (odds[0][0], 1)
 
     evens.sort()
@@ -43,7 +44,7 @@ def main():
 
     p = list()
     for x, c in evens:
-        for k in range(c//2):
+        for k in range(c // 2):
             p.append(x)
 
     if len(odds):
@@ -54,5 +55,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

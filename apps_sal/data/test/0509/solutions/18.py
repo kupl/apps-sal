@@ -16,4 +16,3 @@ if ans != 0:
     print('NO')
 else:
     print('YES')
-

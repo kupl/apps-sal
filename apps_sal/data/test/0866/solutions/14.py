@@ -5,7 +5,7 @@ Y = t[1]
 xy = 0
 
 while X >= 0:
-    if Y == 2*X:
+    if Y == 2 * X:
         break
     X -= 3
     Y -= 3

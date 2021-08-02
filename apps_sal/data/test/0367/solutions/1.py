@@ -8,7 +8,7 @@ try:
         count = [0] * 26
         for c in s:
             count[ord(c) - 97] += 1
-        odds = [ ]
+        odds = []
         for i, x in enumerate(count):
             if x & 0x1:
                 odds.append(i)
@@ -20,8 +20,8 @@ try:
                 count[odds[j]] += 1
                 count[i] -= 1
                 j += 1
-        a = [ ]
-        b = [ ]
+        a = []
+        b = []
         c = ""
         for i, x in enumerate(count):
             if x & 0x1:
@@ -35,4 +35,3 @@ try:
 
 except EOFError:
     pass
-

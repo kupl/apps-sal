@@ -19,4 +19,3 @@ if n % 2 == 1:
         sum += min(a, b)
 
 print(sum)
-

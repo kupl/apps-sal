@@ -1,8 +1,7 @@
 a = int(input())
-b=int(a/3)*2
-c=a%3
-if c==0:
+b = int(a / 3) * 2
+c = a % 3
+if c == 0:
     print(b)
 else:
-    print(b+1)
-
+    print(b + 1)

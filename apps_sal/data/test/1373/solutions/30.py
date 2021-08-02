@@ -11,7 +11,7 @@ for i in range(k):
 ans = 0
 a = k
 b = n - k
-for i in range(n+2-k):
+for i in range(n + 2 - k):
     #print(a, b, H, L)
     ans += H - L + 1
     L += a

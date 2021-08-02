@@ -31,4 +31,3 @@ for i in range(2 ** n):
         print('YES')
         return
 print('NO')
-

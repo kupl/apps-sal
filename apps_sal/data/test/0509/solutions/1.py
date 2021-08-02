@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 a = [ii() for i in range(n)]
@@ -19,4 +24,3 @@ for i in range(2 ** n):
         ans = 1
         break
 print('YES' if ans else 'NO')
-

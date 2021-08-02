@@ -33,4 +33,3 @@ for k in range(K, N + 2):
     ans += (MAX - MIN + 1) % mod
 
 print((ans % mod))
-

@@ -9,7 +9,7 @@ u = sorted(list(filter(lambda x: l[x] % 2, l.keys())))
 
 for i in range(0, int(len(u) / 2)):
     l[u[i]] += 1
-    l[u[-i-1]] -= 1
+    l[u[-i - 1]] -= 1
 
 r = ""
 for c in sorted(l.keys()):

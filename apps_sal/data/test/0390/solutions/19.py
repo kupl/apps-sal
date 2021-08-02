@@ -3,7 +3,7 @@ mas = list(map(int, input().split()))
 count = 0
 for i in range(n // 2):
     r, l = mas[i], mas[n - i - 1]
-    if (mas[i] != mas[n-i-1]) or mas[i] == 2:
+    if (mas[i] != mas[n - i - 1]) or mas[i] == 2:
         if r != 2 and l != 2:
             print(-1)
             return

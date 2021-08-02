@@ -25,6 +25,4 @@ for i in x:
     if d[i] % 2:
         flag = i
     s += i * (d[i] // 2)
-print(s, flag, s[-1::-1], sep = "")
-    
-
+print(s, flag, s[-1::-1], sep="")

@@ -1,35 +1,55 @@
-from sys import stdin, stdout 
+from sys import stdin, stdout
 from bisect import bisect_left, bisect_right
 from collections import defaultdict
 import math
 from fractions import Fraction as frac
 from random import random
 cin = stdin.readline
+
+
 def cout(x):
-	stdout.write(str(x)+'\n')
-def var(type = int):
+    stdout.write(str(x) + '\n')
+
+
+def var(type=int):
     return type(stdin.readline())
-def readline(type = int):
-    return list(map(type,stdin.readline().split()))
-def readlist(type = int):
-    return list(map(type,stdin.readline().split()))
+
+
+def readline(type=int):
+    return list(map(type, stdin.readline().split()))
+
+
+def readlist(type=int):
+    return list(map(type, stdin.readline().split()))
+
+
 def sorted_indexes(arr):
-    return sorted(list(range(len(arr))),key=arr.__getitem__)
+    return sorted(list(range(len(arr))), key=arr.__getitem__)
+
+
 def printr(arr):
-    [stdout.write(str(x)+' ')   for x in arr]
+    [stdout.write(str(x) + ' ') for x in arr]
     cout('')
-def find_lt(a, x):#'Find rightmost value less than x'
+
+
+def find_lt(a, x):  # 'Find rightmost value less than x'
     i = bisect_left(a, x)
     if i:
-        return a[i-1]
+        return a[i - 1]
     raise ValueError
-def find_gt(a, x):#'Find leftmost value greater than x'
+
+
+def find_gt(a, x):  # 'Find leftmost value greater than x'
     i = bisect_right(a, x)
     if i != len(a):
         return a[i]
     raise ValueError
-def dist(x,y):
-    return math.sqrt(x*x + y*y)
+
+
+def dist(x, y):
+    return math.sqrt(x * x + y * y)
+
+
 def binary_search(arr, x):
     i = bisect_left(arr, x)
     if i == len(arr) or arr[i] != x:
@@ -63,41 +83,30 @@ def binary_search(arr, x):
 #     dp[i][j] = [mx,mn]
 #     return [mx,mn]
 
-    
-n , a , b = readline(int)
-price = [a,b]
+
+n, a, b = readline(int)
+price = [a, b]
 arr = readlist(int)
-half = n//2
+half = n // 2
 cost = 0
 flg = True
 for i in range(half):
-    if arr[i] == arr[n-1-i] == 2:
-        cost += 2*min(a,b)
-    elif arr[i] ==2 and arr[n-1-i] <= 1:
-        cost += price[arr[n-1-i]]
-    elif arr[i] <= 1 and arr[n-1-i] == 2:
+    if arr[i] == arr[n - 1 - i] == 2:
+        cost += 2 * min(a, b)
+    elif arr[i] == 2 and arr[n - 1 - i] <= 1:
+        cost += price[arr[n - 1 - i]]
+    elif arr[i] <= 1 and arr[n - 1 - i] == 2:
         cost += price[arr[i]]
-    elif arr[i] != arr[n-1-i]:
+    elif arr[i] != arr[n - 1 - i]:
         flg = False
         break
-if n%2 == 1:
+if n % 2 == 1:
     if arr[half] == 2:
-        cost += min(a,b)
+        cost += min(a, b)
 if not flg:
     print(-1)
 else:
     print(cost)
-
-
-
-    
-
-
-
-
-
-
-
 
 
 # # def tobit(s):
@@ -109,7 +118,7 @@ else:
 
 # def power(x, y, p) :
 #     res = 1
-#     x = x % p 
+#     x = x % p
 #     while (y > 0) :
 #         if ((y & 1) == 1) :
 #             res = (res * x) % p
@@ -118,21 +127,19 @@ else:
 #     return res
 
 
-
-
 # def setCount(x):
 #     return bin(x).count('1')
 
 # for _ in range(var()):
-    
+
 #     a,b,n = readline()
-#     p = 1000000007  
+#     p = 1000000007
 #     diff = abs(a-b)
 #     mod  = power(a,n,p)
 #     mod += power(b,n,p)
 #     print(math.gcd(mod,diff)%p)
-    
-    
+
+
 #     # n = var()
 #     # # print(bin(n))
 #     # if setCount(n)==2:
@@ -155,16 +162,11 @@ else:
 #     #         if(setCount(hi)==2):
 #     #             break
 #     #         hi +=1
-        
+
 #     #     if (hi - n) < (n - lo):
 #     #         print(hi-n)
 #     #     else:
 #     #         print(n-lo)
-        
-    
-
-
-
 
 
 # #     s = cin()
@@ -187,4 +189,3 @@ else:
 # #         print("yes")
 # #     else:
 # #         print("no")
-

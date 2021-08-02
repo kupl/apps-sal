@@ -12,4 +12,3 @@ for i in range(1, N + 2):
     b += (y - i)
 
 print((ans % (10 ** 9 + 7)))
-
