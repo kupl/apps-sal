@@ -6,4 +6,3 @@ for but in x:
     if but in y:
         ans.append(but)
 print(' '.join(map(str, ans)))
-

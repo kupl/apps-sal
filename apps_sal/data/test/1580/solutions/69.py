@@ -3,7 +3,6 @@ class UnionFind:
     def __init__(self, n):
         self.par = [-1] * n
 
-
     def unite(self, x, y):
         x = self.root(x)
         y = self.root(y)
@@ -15,7 +14,6 @@ class UnionFind:
         self.par[y] = x
         return True
 
-
     def root(self, x):
         path = []
         while self.par[x] >= 0:
@@ -25,10 +23,8 @@ class UnionFind:
             self.par[y] = x
         return x
 
-
     def same(self, x, y):
         return self.root(x) == self.root(y)
-
 
     def size(self, x):
         return -self.par[self.root(x)]

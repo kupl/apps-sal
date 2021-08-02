@@ -32,14 +32,12 @@ class UnionFind():
     def group_count(self):
         return len(self.roots())
 
-N,M = list(map(int, input().split()))
+
+N, M = list(map(int, input().split()))
 
 uf = UnionFind(N)
 for i in range(M):
-    x,y,z = list(map(int, input().split()))
-    uf.union(x-1,y-1)
+    x, y, z = list(map(int, input().split()))
+    uf.union(x - 1, y - 1)
 
 print((uf.group_count()))
-
-
-

@@ -1,5 +1,5 @@
-N, K = map(int,input().split())
-friend = list(map(int,input().split()))
+N, K = map(int, input().split())
+friend = list(map(int, input().split()))
 clear = []
 
 for i in friend:

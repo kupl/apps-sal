@@ -1,7 +1,7 @@
 def abc126_e():
     n, m = map(int, input().split())
     par = [x for x in range(n)]
-    rank = [0]*n
+    rank = [0] * n
 
     def find(x):
         if par[x] == x:
@@ -22,7 +22,7 @@ def abc126_e():
 
     for _ in range(m):
         x, y, z = map(int, input().split())
-        unite(x-1, y-1)
+        unite(x - 1, y - 1)
 
     for i in range(n):
         _ = find(i)
@@ -30,6 +30,9 @@ def abc126_e():
     ans = len(set(par))
     print(ans)
 
+
 def __starting_point():
     abc126_e()
+
+
 __starting_point()

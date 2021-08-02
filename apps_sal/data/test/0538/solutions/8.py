@@ -7,5 +7,3 @@ if n == a:
     print("YES")
 else:
     print("NO")
-
-

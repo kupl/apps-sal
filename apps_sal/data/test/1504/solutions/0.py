@@ -9,16 +9,16 @@ for _ in range(t):
 
     if l2 < r1:
         # they already intersect.
-        start = (min(r1, r2) - max(l1, l2))*n
+        start = (min(r1, r2) - max(l1, l2)) * n
         if start >= k:
             print(0)
             continue
-        cheap = n*(max(r1, r2) - min(l1, l2)) - start
+        cheap = n * (max(r1, r2) - min(l1, l2)) - start
         if start + cheap >= k:
             print(k - start)
             continue
         else:
-            print(cheap + (k - start - cheap)*2)
+            print(cheap + (k - start - cheap) * 2)
             continue
 
     # they do not intersect yet.
@@ -34,8 +34,6 @@ for _ in range(t):
 
         intersection_sf += cheap
         cost_sf += cheap
-        
-        best = min(best, cost_sf + max((k - intersection_sf)*2, 0))
+
+        best = min(best, cost_sf + max((k - intersection_sf) * 2, 0))
     print(best)
-
-

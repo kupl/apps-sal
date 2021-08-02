@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(10**6)
+
+
 def grun(A, K):
     if A < K:
         return 0
@@ -8,7 +10,9 @@ def grun(A, K):
         return a
     a += 1
     r = A % a
-    return grun((((a-1)*K-r)//a)*a+r, K)
+    return grun((((a - 1) * K - r) // a) * a + r, K)
+
+
 def solve():
     N = int(input())
     X = 0
@@ -17,6 +21,9 @@ def solve():
         X ^= grun(A, K)
     print('Takahashi' if X else 'Aoki')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

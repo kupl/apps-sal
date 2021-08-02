@@ -1,7 +1,7 @@
+from math import ceil
 import sys
 
 sys.setrecursionlimit(10000000)
-from math import ceil
 
 
 def grundy(a, k):
@@ -23,4 +23,3 @@ for _ in range(n):
     a, k = list(map(int, input().split()))
     nim ^= grundy(a, k)
 print(('Takahashi' if nim > 0 else 'Aoki'))
-

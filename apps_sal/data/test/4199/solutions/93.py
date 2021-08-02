@@ -5,4 +5,3 @@ for i in h:
     if i >= k:
         ans += 1
 print(ans)
-

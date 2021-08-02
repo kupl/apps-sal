@@ -11,4 +11,3 @@ def atc_142b(NK_input: str, hi_input: str) -> int:
 NK_input_value = input()
 hi_input_value = input()
 print((atc_142b(NK_input_value, hi_input_value)))
-

@@ -24,4 +24,3 @@ if len(ans) == 0:
 else:
     print((len(ans)))
     print((' '.join(map(str, ans))))
-

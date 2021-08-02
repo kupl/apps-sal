@@ -8,8 +8,8 @@ def go():
             c.append(a.index(i))
         except:
             continue
-    
+
     return ' '.join(str(a[i]) for i in sorted(c))
 
-print(go())
 
+print(go())

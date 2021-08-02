@@ -42,4 +42,3 @@ if (M == 0):
     return
 print(M)
 print((*new_ans))
-

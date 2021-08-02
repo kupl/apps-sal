@@ -7,4 +7,3 @@ for i in range(len(x)):
         ans.append(x[i])
 for item in ans:
     print(item, end=" ")
-

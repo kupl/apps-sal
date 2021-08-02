@@ -7,4 +7,3 @@ if list(str(x)) == list(reversed(str(x))):
     print('YES')
 else:
     print('NO')
-

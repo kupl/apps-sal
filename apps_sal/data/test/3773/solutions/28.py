@@ -24,13 +24,14 @@ def SR(n): return [S() for i in range(n)]
 def LSR(n): return [LS() for i in range(n)]
 def SRL(n): return [list(S()) for i in range(n)]
 def MSRL(n): return [[int(j) for j in list(S())] for i in range(n)]
-mod = 10 ** 9 + 7
 
+
+mod = 10 ** 9 + 7
 
 
 def f(ai, ki):
     if ai < ki: return 0
-    elif ai % ki == 0 :return ai // ki
+    elif ai % ki == 0: return ai // ki
     d = ai // ki + 1
     if ai % ki % d:
         return f(ai - (ai % ki // d + 1) * d, ki)
@@ -44,4 +45,3 @@ for i in range(n):
     ret ^= f(a, k)
 
 print(("Takahashi" if ret else "Aoki"))
-

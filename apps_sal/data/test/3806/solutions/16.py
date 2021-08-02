@@ -52,4 +52,5 @@ def __starting_point():
     res = CF613A()
     print(res)
 
+
 __starting_point()

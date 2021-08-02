@@ -1,9 +1,9 @@
-n,m=(map(int,input().strip().split(' ')))
-arr=list(map(int,input().strip().split(' ')))
-brr=list(map(int,input().strip().split(' ')))
-ans=[]
+n, m = (map(int, input().strip().split(' ')))
+arr = list(map(int, input().strip().split(' ')))
+brr = list(map(int, input().strip().split(' ')))
+ans = []
 for i in arr:
-  if i in brr:
-    ans.append(i)
+    if i in brr:
+        ans.append(i)
 for i in ans:
-  print(i,end=' ')
+    print(i, end=' ')

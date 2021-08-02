@@ -5,4 +5,3 @@ for i in range(len(h)):
     if h[i] >= k:
         ans += 1
 print(ans)
-

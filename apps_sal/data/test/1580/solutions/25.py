@@ -11,7 +11,7 @@ d = {i: False for i in range(1, a[0] + 1)}
 
 for i in range(1, a[0] + 1):
     if d[i] == False:
-        j += 1 
+        j += 1
         d[i] = True
         if g[i] != []:
             Q = [i]

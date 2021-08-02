@@ -9,20 +9,21 @@ def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 def SI(): return sys.stdin.readline()[:-1]
 
-def grundy(a,k):
+
+def grundy(a, k):
     while 1:
-        if a<k:return 0
-        if a%k==0:return a//k
-        once=a//k+1
-        seg=a%k
-        cnt=(seg+once-1)//once
-        a-=cnt*once
+        if a < k: return 0
+        if a % k == 0: return a // k
+        once = a // k + 1
+        seg = a % k
+        cnt = (seg + once - 1) // once
+        a -= cnt * once
 
-win=0
+
+win = 0
 for _ in range(II()):
-    a,k=MI()
-    win^=grundy(a,k)
+    a, k = MI()
+    win ^= grundy(a, k)
 
-if win:print("Takahashi")
-else:print("Aoki")
-
+if win: print("Takahashi")
+else: print("Aoki")

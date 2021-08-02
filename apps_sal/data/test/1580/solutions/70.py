@@ -45,9 +45,10 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = map(int, input().split())
 uf = UnionFind(N)
 for _ in range(M):
-    X, Y, Z = map(lambda x: int(x)-1, input().split())
+    X, Y, Z = map(lambda x: int(x) - 1, input().split())
     uf.union(X, Y)
 print(uf.group_count())

@@ -35,7 +35,8 @@ class UnionFind():
 
     def group_count(self):
         return len(self.roots())
-      
+
+
 (n, m), *q = [list(map(int, o.split())) for o in open(0)]
 UF = UnionFind(n)
 for x, y, _ in q:

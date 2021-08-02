@@ -6,5 +6,3 @@ for _ in range(len(a)):
     a = a[-1] + a[:-1]
     razlicni.add(a)
 print(len(razlicni))
-
-

@@ -24,14 +24,14 @@ class UnionFind():
     def samegrp(self, x, y):
         return self.root(x) == self.root(y)
 
+
 n, m = [int(x) for x in input().split()]
 A = UnionFind(n)
 ans = n
 for i in range(m):
     x, y, _ = [int(z) - 1 for z in input().split()]
     if not A.samegrp(x, y):
-        ans -=1
+        ans -= 1
     A.union(x, y)
 
 print(ans)
-

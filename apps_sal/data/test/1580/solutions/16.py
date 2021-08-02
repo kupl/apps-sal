@@ -9,14 +9,15 @@ rn = 0
 
 for i in range(m):
     x, y, z = map(int, input().split())
-    x-=1; y-=1
-    c[x]+=1
-    c[y]+=1
+    x -= 1; y -= 1
+    c[x] += 1
+    c[y] += 1
     g[y].append(x)
     g[x].append(y)
 
 hq = [(c[i], i) for i in range(n)]
 heapq.heapify(hq)
+
 
 def dfs(src):
     nonlocal rn
@@ -25,6 +26,7 @@ def dfs(src):
     for nxt in g[src]:
         if not revealed[nxt]:
             dfs(nxt)
+
 
 ans = 0
 while rn < n:

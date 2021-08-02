@@ -10,9 +10,7 @@ ans = 0
 
 for i in range(N):
 
-    A,K = list(map(int,input().split()))
-
-    
+    A, K = list(map(int, input().split()))
 
     while True:
 
@@ -20,21 +18,19 @@ for i in range(N):
             ans ^= A // K
             break
 
-        elif A == K-1:
+        elif A == K - 1:
             ans ^= 0
             break
 
         else:
 
-            if A // K != (A - A//K -1) // K:
+            if A // K != (A - A // K - 1) // K:
                 A = A - A // K - 1
             else:
-                A -= (A - (A // K) * K) // (A // K+1) * (A//K+1)
+                A -= (A - (A // K) * K) // (A // K + 1) * (A // K + 1)
 
-    
 
 if ans == 0:
-    print ("Aoki")
+    print("Aoki")
 else:
-    print ("Takahashi")
-
+    print("Takahashi")

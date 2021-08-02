@@ -50,7 +50,7 @@ N, M = map(int, input().split())
 uf = UnionFind(N)
 
 for _ in range(M):
-  X, Y, Z = map(int, input().split())
-  uf.union(X-1, Y-1)
+    X, Y, Z = map(int, input().split())
+    uf.union(X - 1, Y - 1)
 
 print(uf.group_count())
