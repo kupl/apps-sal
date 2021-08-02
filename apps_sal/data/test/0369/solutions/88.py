@@ -7,7 +7,7 @@ import heapq
 from collections import deque
 sys.setrecursionlimit(4100000)
 
-MOD = int(1e9+7)
+MOD = int(1e9 + 7)
 PI = 3.14159265358979323846264338327950288
 INF = 1e18
 
@@ -42,9 +42,9 @@ now = N
 ans = []
 while now > 0:
     for step in range(M, 0, -1):
-        if now-step <0:
+        if now - step < 0:
             step = now
-        if S[now-step] == "0":
+        if S[now - step] == "0":
             ans.append(step)
             now -= step
             break
@@ -55,9 +55,6 @@ while now > 0:
 ans.reverse()
 ret = ""
 for a in ans:
-    ret+= str(a) + " "
+    ret += str(a) + " "
 
 print(ret)
-
-
-

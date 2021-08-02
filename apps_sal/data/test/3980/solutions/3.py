@@ -7,5 +7,5 @@ while s:
     t = r[n - s: n + s - k] + t
     s = k - s
 
-print(n*(n-1))
+print(n * (n - 1))
 print(*t)

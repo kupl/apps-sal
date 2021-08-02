@@ -17,4 +17,3 @@ while now > 0:
     now = nx
 
 print((*ans[::-1]))
-

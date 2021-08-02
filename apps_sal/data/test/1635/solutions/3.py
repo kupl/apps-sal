@@ -12,5 +12,6 @@ def main():
             ans = k
             mn = last[k]
     print(ans)
-main()
 
+
+main()

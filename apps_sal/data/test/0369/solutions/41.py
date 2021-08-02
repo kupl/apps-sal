@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 s = input()
-out_s='1'*(m)
+out_s = '1' * (m)
 if out_s in s:
     print(-1)
     return
@@ -33,4 +33,3 @@ while mae >= 0:
     ato = mae
     mae = pre[ato]
 print(*ans, sep=" ")
-

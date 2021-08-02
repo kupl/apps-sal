@@ -1,17 +1,17 @@
 n, m = map(int, input().split())
 s = list(str(input()))
 s = list(reversed(s))
-#print(s)
+# print(s)
 
 ds = []
 d = 1
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if s[i] == '0':
         ds.append(d)
         d = 1
     else:
         d += 1
-#print(ds)
+# print(ds)
 
 temp0 = 0
 ans = []
@@ -20,7 +20,7 @@ for i in range(len(ds)):
         print(-1)
         return
     temp1 = temp0 + ds[i]
-    #print(temp1)
+    # print(temp1)
     if temp1 > m:
         ans.append(temp0)
         temp0 = ds[i]

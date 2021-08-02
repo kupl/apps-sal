@@ -1,4 +1,4 @@
-n,m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 s = list(input())
 s.reverse()
 for i in range(m):
@@ -17,7 +17,3 @@ while p < n:
     ans.append(cnt)
 ans.reverse()
 print((*ans))
-
-
-
-

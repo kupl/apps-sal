@@ -1,7 +1,7 @@
-N,M = map(int, input().split())
+N, M = map(int, input().split())
 S = list(input())
 
-cnt,cnt1 = 0,0
+cnt, cnt1 = 0, 0
 for s in S:
     if s == "1":
         cnt1 += 1

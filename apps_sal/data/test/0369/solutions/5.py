@@ -18,7 +18,7 @@ while ptr > 0:
             return
         if ptr - me < 0:
             continue
-        if si[ptr-me] == 0:
+        if si[ptr - me] == 0:
             ret.append(me)
             ptr -= me
             break
@@ -26,4 +26,3 @@ while ptr > 0:
 ret.reverse()
 
 print((' '.join(map(str, ret))))
-

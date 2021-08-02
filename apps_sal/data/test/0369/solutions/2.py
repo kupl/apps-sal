@@ -17,8 +17,8 @@ def main():
         now = N
         while now > 0:
             for i in range(M, 0, -1):
-                j = max(now - i,-1)
-                if j>=0 and S[j]=='0':
+                j = max(now - i, -1)
+                if j >= 0 and S[j] == '0':
                     ans.append(i)
                     now = j
                     break
@@ -33,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

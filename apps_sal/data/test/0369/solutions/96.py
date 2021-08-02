@@ -1,10 +1,10 @@
+from collections import deque
 import sys
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
 sys.setrecursionlimit(10 ** 7)
 
-from collections import deque
 
 n, m = list(map(int, readline().split()))
 s = readline().rstrip().decode()[::-1]
@@ -23,4 +23,3 @@ for i in range(n):
     else:
         print((-1))
         return
-

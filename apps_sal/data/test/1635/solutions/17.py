@@ -7,4 +7,3 @@ for i in range(n - 1, -1, -1):
         s.add(l[i])
         ans = l[i]
 print(ans)
-

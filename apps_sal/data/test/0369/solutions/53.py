@@ -14,7 +14,7 @@ while True:
     for i in range(M, 0, -1):
         if cur + i > N:
             continue
-        if S[cur+i] == '0':
+        if S[cur + i] == '0':
             count += 1
             next = cur + i
             answer.append(i)
@@ -29,4 +29,3 @@ while True:
 
 answer = answer[::-1]
 print((*answer))
-

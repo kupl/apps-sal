@@ -11,4 +11,3 @@ for b, a, h in t:
     while s[j][1] <= h: s.pop(j)
     s.insert(j, (a, h))
 print(s[-2][1])
-

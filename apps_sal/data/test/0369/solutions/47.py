@@ -30,4 +30,3 @@ if answer[-1] == 0:
     answer.pop()
 answer = answer[::-1]
 print((' '.join(map(str, answer))))
-

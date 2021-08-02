@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-l = [-1 for i in range(2*10**5 + 10)]
+l = [-1 for i in range(2 * 10**5 + 10)]
 
 for i in range(n):
     l[a[i]] = i
@@ -17,6 +17,3 @@ for i in range(2 * 10 ** 5 + 5):
             min_s = i
 
 print(min_s)
-
-
-

@@ -3,7 +3,7 @@ d = []
 for i in range(n):
     a, b, h = map(int, input().split())
     d.append((b, a, h))
-    
+
 d.sort()
 
 
@@ -22,5 +22,5 @@ for i in range(n - 2, -1, -1):
     ht += d[i][2]
     if ans < ht:
         ans = ht
-        
+
 print(ans)

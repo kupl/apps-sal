@@ -17,4 +17,3 @@ while now < N:
     now = S[i]
 
 print((*ans[::-1]))
-

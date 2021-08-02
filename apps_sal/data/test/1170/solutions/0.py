@@ -14,7 +14,7 @@ for k in range(t):
             m = n // y
             if n // m != y:
                 continue
-            print(n, m)            
+            print(n, m)
             break
     else:
         print(-1)

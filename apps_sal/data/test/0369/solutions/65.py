@@ -23,4 +23,3 @@ while cur > 0:
 answer = answer[::-1]
 print((*answer))
 # 53
-

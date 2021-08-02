@@ -18,4 +18,3 @@ while pos > 0:
 
 ans = ans[::-1]
 print((*ans))
-

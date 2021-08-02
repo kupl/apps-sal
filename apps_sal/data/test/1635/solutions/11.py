@@ -11,4 +11,3 @@ while i >= 0:
         b.add(a[i])
     i -= 1
 print(c)
-
