@@ -29,7 +29,7 @@ first = a[0:n:2]
 last = a[1:n:2]
 last = last[::-1]
 answer = last + first
-if n%2 != 0:
+if n % 2 != 0:
     answer = answer[::-1]
 
 print(*answer, sep=" ")

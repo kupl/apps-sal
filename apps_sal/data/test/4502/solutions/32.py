@@ -16,11 +16,11 @@ import sys
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-    i = N-1
+    i = N - 1
 
     if N % 2 == 1:
         while i < N:
-            if i == N-1:
+            if i == N - 1:
                 print("{}".format(A[i]), end='')
             else:
                 print(" {}".format(A[i]), end='')
@@ -34,7 +34,7 @@ def main():
 
     else:
         while i < N:
-            if i == N-1:
+            if i == N - 1:
                 print("{}".format(A[i]), end='')
             else:
                 print(" {}".format(A[i]), end='')
@@ -50,5 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

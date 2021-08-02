@@ -21,4 +21,5 @@ def __starting_point():
     a = list(map(int, input().split()))
     print((' '.join(solve(a))))
 
+
 __starting_point()

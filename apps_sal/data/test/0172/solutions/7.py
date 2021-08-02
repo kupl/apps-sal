@@ -17,6 +17,6 @@ for i in range(6):
         break
     ans += abs(a_d[i] - b_d[i])
 if f:
-    print(ans//4)
+    print(ans // 4)
 else:
     print(-1)

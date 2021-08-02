@@ -9,6 +9,5 @@ for i in range(1, 6):
     if abs(n1 - n2) % 2 != 0:
         print(-1)
         return
-    ans += abs(n1 -n2)//2
-print(ans//2)
-
+    ans += abs(n1 - n2) // 2
+print(ans // 2)

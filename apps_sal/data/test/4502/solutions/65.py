@@ -11,8 +11,7 @@ for i in range(n):
     else:
         d.appendleft(a_s[i])
 
-if n%2==1:
+if n % 2 == 1:
     d.reverse()
 
 print((' '.join(map(str, d))))
-

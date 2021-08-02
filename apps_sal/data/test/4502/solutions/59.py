@@ -14,4 +14,3 @@ else:
     z = [a[j] for j in range(1, n, 2)]
 
 print((" ".join(map(str, y + z))))
-

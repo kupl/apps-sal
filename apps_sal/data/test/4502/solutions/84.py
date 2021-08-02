@@ -14,4 +14,3 @@ if n % 2 == 1:
     b.reverse()
 
 print((" ".join(map(str, b))))
-

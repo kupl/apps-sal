@@ -11,5 +11,4 @@ for i in range(1, 6):
         return
     else:
         cnt += abs(ca[i] - (ca[i] + cb[i]) / 2)
-print(int(cnt/2))
-
+print(int(cnt / 2))

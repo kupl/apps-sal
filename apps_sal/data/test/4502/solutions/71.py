@@ -1,9 +1,9 @@
 n = int(input())
-a = [ int(x) for x in input().split() ]
+a = [int(x) for x in input().split()]
 
 l = []
 if n % 2 == 1:
-    i = n-1
+    i = n - 1
     while i >= 0:
         l.append(a[i])
         i -= 2
@@ -13,7 +13,7 @@ if n % 2 == 1:
         l.append(a[j])
         j += 2
 else:
-    i = n-1
+    i = n - 1
     while i >= 0:
         l.append(a[i])
         i -= 2
@@ -24,4 +24,3 @@ else:
         j += 2
 
 print((' '.join(map(str, l))))
-

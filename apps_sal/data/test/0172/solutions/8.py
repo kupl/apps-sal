@@ -17,4 +17,3 @@ if ans == -1:
     print(-1)
 else:
     print(ans // 2)
-

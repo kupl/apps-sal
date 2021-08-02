@@ -21,4 +21,3 @@ for y in f():
 i, j = max(s - b, 0), min(s, a) + 1
 d = min(u[i:j] + v[i:j]) if i < j else n
 open('output.txt', mode='w').write(str(d if d < n else -1))
-

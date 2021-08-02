@@ -24,5 +24,5 @@ else:
     for i in range(5):
         m = (cntf[i] + cnts[i]) // 2
         ans += max(cntf[i] - m, 0)
-    
+
     stdout.write(str(ans))

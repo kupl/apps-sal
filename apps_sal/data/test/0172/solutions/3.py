@@ -24,4 +24,3 @@ else:
     for i in range(5):
         o += abs(cc[i] - aa[i])
     print(o // 2)
-

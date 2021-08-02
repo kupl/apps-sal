@@ -17,5 +17,4 @@ for i in range(5):
     else:
         print(-1)
         return
-print(c//2)
-
+print(c // 2)
