@@ -15,4 +15,3 @@ else:
         print(res)
     else:
         print(-1)
-

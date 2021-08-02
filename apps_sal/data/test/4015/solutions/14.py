@@ -5,7 +5,7 @@ if n * x < m:
 else:
     k = 0
     while x % 3 == 0:
-        x = x//3
+        x = x // 3
         k += 1
     while x % 2 == 0:
         x = x // 2

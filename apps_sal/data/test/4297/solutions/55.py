@@ -1,7 +1,6 @@
 a = int(input())
 
-if a%2 == 0:
+if a % 2 == 0:
     print(a)
 else:
-    print((a*2))
-
+    print((a * 2))

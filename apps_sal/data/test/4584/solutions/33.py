@@ -6,12 +6,13 @@ def main() -> None:
     boss_dict = collections.Counter(tuple(map(int, input().split())))
 
     for i in range(n):
-        print((boss_dict[i+1] if boss_dict[i+1] else 0))
+        print((boss_dict[i + 1] if boss_dict[i + 1] else 0))
 
     return
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

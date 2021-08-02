@@ -5,9 +5,10 @@ def main():
         print(n)
     else:
         print((2 * n))
-        
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

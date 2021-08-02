@@ -1,7 +1,7 @@
 import sys
 import math
 
-#https://atcoder.jp/contests/agc008/submissions/15248942
+# https://atcoder.jp/contests/agc008/submissions/15248942
 sys.setrecursionlimit(10 ** 8)
 ini = lambda: int(sys.stdin.readline())
 inm = lambda: map(int, sys.stdin.readline().split())
@@ -11,7 +11,7 @@ debug = lambda *a, **kw: print("\033[33m", *a, "\033[0m", **dict(file=sys.stderr
 
 N = ini()
 
-if N%2 == 0:
+if N % 2 == 0:
     print(N)
 else:
-    print(N*2)
+    print(N * 2)

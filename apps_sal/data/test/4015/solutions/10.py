@@ -18,4 +18,3 @@ elif n == m:
     print(0)
 else:
     print(fact(m // n))
-

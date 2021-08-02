@@ -5,12 +5,12 @@ if m % n:
 m //= n
 a = 0
 while m % 2 == 0:
-    m//=2
-    a+=1
+    m //= 2
+    a += 1
 while m % 3 == 0:
-    m//=3
-    a+=1
-if m==1:
+    m //= 3
+    a += 1
+if m == 1:
     print(a)
 else:
     print(-1)

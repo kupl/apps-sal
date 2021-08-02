@@ -8,9 +8,8 @@ from itertools import accumulate, product, permutations, combinations, combinati
 # _________コーディングはここから！！___________
 n = int(input())
 A = list(map(int, input().split()))
-b = [0]*(n+1)
+b = [0] * (n + 1)
 for i in A:
-    b[i]+=1
-for i in range(1, n+1):
+    b[i] += 1
+for i in range(1, n + 1):
     print((b[i]))
-

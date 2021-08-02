@@ -13,4 +13,3 @@ c = Counter(A)
 
 for i in range(N):
     print((c[i + 1]))
-

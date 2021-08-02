@@ -1,4 +1,4 @@
-a=int(input())
-b=2
 import math
-print(int(a*b/math.gcd(a, b)))
+a = int(input())
+b = 2
+print(int(a * b / math.gcd(a, b)))

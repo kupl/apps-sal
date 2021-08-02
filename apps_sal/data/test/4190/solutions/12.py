@@ -1,4 +1,6 @@
 import collections
+
+
 def solve(n, a, b):
     c = collections.Counter(b)
     nex = list(range(1, n)) + [0]
@@ -14,8 +16,8 @@ def solve(n, a, b):
         res.append((x + v) % n)
     return ' '.join(map(str, res))
 
+
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 print(solve(n, a, b))
-

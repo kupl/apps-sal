@@ -1,7 +1,7 @@
 N = int(input())
 if N % 2 == 0:
-  ans = N
+    ans = N
 else:
-  ans = 2 * N
-  
+    ans = 2 * N
+
 print(ans)

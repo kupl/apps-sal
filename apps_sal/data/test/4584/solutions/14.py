@@ -6,5 +6,5 @@ for a in A:
         dct[a] += 1
     else:
         dct[a] = 1
-for n in range(1, N+1):
+for n in range(1, N + 1):
     print(dct.get(n, 0))
