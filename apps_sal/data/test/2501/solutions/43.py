@@ -1,3 +1,4 @@
+from collections import Counter
 N = int(input())
 A = list(map(int, input().split()))
 
@@ -8,7 +9,6 @@ for i in range(N):
     p[i] = A[i] + i + 1
     m[i] = i + 1 - A[i]
 
-from collections import Counter
 
 cp = Counter(p)
 cm = Counter(m)

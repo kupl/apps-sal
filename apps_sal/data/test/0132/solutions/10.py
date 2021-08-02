@@ -6,4 +6,3 @@ for i in range(n):
         cur_s = abs(sum(slices[:i]) + sum(slices[j:]) - sum(slices[i:j]))
         answer = min(cur_s, answer)
 print(answer)
-

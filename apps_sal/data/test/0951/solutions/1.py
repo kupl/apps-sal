@@ -12,8 +12,7 @@ for i in range(len(arr)):
     if su >= k:
         break;
     else:
-        su += 9-arr[i];
+        su += 9 - arr[i];
         tf += 1;
 
 print(tf);
-

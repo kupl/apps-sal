@@ -15,4 +15,3 @@ for j in range(n):
                 ann = an
             an = 0
 print(abs(x - 2 * ann))
-

@@ -8,6 +8,3 @@ for i in range(n):
     for j in range(i, n):
         sums.append(abs(180 - (sumspref[j] - sumspref[i])))
 print(min(sums) * 2)
-    
-
-

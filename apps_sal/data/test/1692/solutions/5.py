@@ -5,4 +5,3 @@ for i in range(1, len(s)):
         cnt += i
 cnt += sum(int(i) % 4 == 0 for i in s)
 print(cnt)
-

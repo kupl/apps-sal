@@ -14,4 +14,3 @@ for i in range(n + 1):
         best = min([best, 2 * abs(180 - (pre_sum[j] - pre_sum[i - 1]))])
 
 print(best);
-

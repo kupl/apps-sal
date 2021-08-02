@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
-l = [i+a[i] for i in range(n)]
-r = [i-a[i] for i in range(n)]
+l = [i + a[i] for i in range(n)]
+r = [i - a[i] for i in range(n)]
 lc = {}
 rc = {}
 for i in range(n):
@@ -14,5 +14,5 @@ for i in range(n):
     rc[r[i]] += 1
 ans = 0
 for i in set(lc.keys()):
-    ans += rc[i]*lc[i]
+    ans += rc[i] * lc[i]
 print(ans)

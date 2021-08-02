@@ -12,6 +12,6 @@ cn = Counter(an)
 
 ans = 0
 for i in cp.keys():
-  ans += cp[i] * cn[i] 
+    ans += cp[i] * cn[i]
 
 print(ans)

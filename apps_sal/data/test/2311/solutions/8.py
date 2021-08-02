@@ -12,7 +12,8 @@ from collections import Counter
 
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-INF = 2**62-1
+INF = 2**62 - 1
+
 
 def read_int():
     return int(input())
@@ -57,7 +58,7 @@ def mt(f):
 
 
 def divisor(n):
-    for i in range(1, int(n**0.5)+1):
+    for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
             yield i
             if i != n // i:
@@ -83,12 +84,12 @@ def slv(N, M, K, A, B):
     cb = Counter(cb)
     ans += 0
     for d in divisor(K):
-        e = K//d
+        e = K // d
         for i, x in ca.items():
             for j, y in cb.items():
                 if i < d or j < e:
                     continue
-                ans += ((i-d+1) * (j-e+1)) * x * y
+                ans += ((i - d + 1) * (j - e + 1)) * x * y
     return ans
 
 
@@ -107,8 +108,8 @@ def main():
     # print(slv(N, M, K, A, B))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

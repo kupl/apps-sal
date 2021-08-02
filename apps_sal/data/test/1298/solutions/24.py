@@ -1,5 +1,6 @@
 import re
 
+
 def __starting_point():
     x = int(input())
     s = input()
@@ -8,7 +9,8 @@ def __starting_point():
         if char == '0':
             zeros += 1
         if char == '1':
-            ones += 1    
-    print(abs(zeros-ones))
+            ones += 1
+    print(abs(zeros - ones))
+
 
 __starting_point()

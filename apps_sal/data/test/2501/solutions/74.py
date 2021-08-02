@@ -25,4 +25,3 @@ for k, v in list(dict1.items()):
     if k in dict2:
         ans += v * dict2[k]
 print(ans)
-

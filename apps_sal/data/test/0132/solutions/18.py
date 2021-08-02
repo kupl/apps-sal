@@ -9,4 +9,3 @@ for _ in range(n):
             ans = temp
     sectors[:] = sectors[-1:] + sectors[:-1]
 print(ans)
-

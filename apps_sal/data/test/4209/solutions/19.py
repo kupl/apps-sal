@@ -4,6 +4,7 @@ def index(key, item, index):
     else:
         index[key] = [item]
 
+
 def schedule(times):
     index_by_b = {}
     for time in times:
@@ -15,10 +16,11 @@ def schedule(times):
     for end_time in b_keys:
         start = index_by_b[end_time][-1][0]
         if start >= a_min:
-            result.append((start, end_time)) 
+            result.append((start, end_time))
             a_min = end_time
     return result
-                
+
+
 def solve(n, a_l):
     index_by_sum = {}
     for i in range(n):
@@ -36,6 +38,7 @@ def solve(n, a_l):
             result = sub_result
     return result
 
+
 def main():
     n = int(input())
     a_l = list(map(int, input().split()))
@@ -44,6 +47,9 @@ def main():
     for a, b in result:
         print(a + 1, b)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

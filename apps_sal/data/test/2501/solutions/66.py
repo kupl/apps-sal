@@ -1,6 +1,6 @@
 # 参考 : https://atcoder.jp/contests/abc166/submissions/16829140
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 # 参加者 i,j が取引する場合、 j - i = A_i + A_j が成り立つ。
 # 変形すると -i - A_i = -j + A_j, i + A_i = j - A_j になる。
 # l = i + A_i, r = j - A_j

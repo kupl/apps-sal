@@ -9,4 +9,3 @@ while s < k:
     ans += 1
 
 print(ans)
-

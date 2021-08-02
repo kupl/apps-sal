@@ -11,4 +11,4 @@ for i in s:
     else:
         o += 1
 
-print(abs(z-o))
+print(abs(z - o))

@@ -8,10 +8,10 @@ for i in range(len(s)):
     c2 = int(s[i])
     if c2 % 4 == 0:
         ans += 1
-        #++ans
+        # ++ans
     if i == 0:
         continue
-    c1 = int(s[i-1])
-    if (c1*10 + c2)%4 == 0:
+    c1 = int(s[i - 1])
+    if (c1 * 10 + c2) % 4 == 0:
         ans += i
 print(ans)

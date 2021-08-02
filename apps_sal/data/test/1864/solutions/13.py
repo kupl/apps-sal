@@ -3,8 +3,8 @@
 
 import time
 
-n   = int(input())
-A   = [int(i) for i in input().split()]
+n = int(input())
+A = [int(i) for i in input().split()]
 
 start = time.time()
 
@@ -16,4 +16,3 @@ else:
 print(ans)
 finish = time.time()
 #print(finish - start)
-

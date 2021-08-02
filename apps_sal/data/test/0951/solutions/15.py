@@ -7,7 +7,3 @@ while l < k:
     l += 9 - d[i]
     i += 1
 print(i)
-
-
-
-

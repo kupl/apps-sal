@@ -7,7 +7,7 @@ l = list(map(int, sorted(s)))
 
 i = 0
 while k2 < k:
-	k2 += 9 - l[i]
-	i += 1
+    k2 += 9 - l[i]
+    i += 1
 
 print(i)

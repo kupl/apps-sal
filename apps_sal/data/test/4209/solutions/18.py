@@ -5,6 +5,7 @@ def index(key, item, index):
     else:
         index[key] = [item]
 
+
 def schedule_(times, n):
     "A slower implementation."
     d = [None] * (n + 1)
@@ -21,6 +22,7 @@ def schedule_(times, n):
         next_ = d[s]
     return result
 
+
 def schedule(times):
     # assume this is true as times.sort(key=lambda x: x[0])
     # times.sort(key=lambda x: x[1])
@@ -34,10 +36,11 @@ def schedule(times):
     for end_time in b_keys:
         start = index_by_b[end_time][-1][0]
         if start >= a_min:
-            result.append((start, end_time)) 
+            result.append((start, end_time))
             a_min = end_time
     return result
-                
+
+
 def test_schedule():
     i = [(0, 4), (2, 4), (0, 2), (0, 1), (1, 2), (2, 3), (3, 4)]
     result = schedule(i)
@@ -45,11 +48,12 @@ def test_schedule():
     for ele in result:
         print(ele)
 
+
 def solve(n, a_l):
     index_by_sum = {}
     # for j in range(1, n + 1):
-        # sum_ = 0
-        # for i in range(j - 1, -1, -1):
+    # sum_ = 0
+    # for i in range(j - 1, -1, -1):
     for i in range(n):
         sum_ = 0
         for j in range(i + 1, n + 1):
@@ -68,6 +72,7 @@ def solve(n, a_l):
             result = sub_result
     return result
 
+
 def main():
     n = int(input())
     a_l = list(map(int, input().split()))
@@ -81,6 +86,9 @@ def main():
     # tock = time.time()
     # print('T:', round(tock - tick, 5))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

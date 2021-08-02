@@ -10,4 +10,3 @@ for i, a in enumerate(A):
     if ai < 404040:
         L[ai] += 1
 print(ans)
-

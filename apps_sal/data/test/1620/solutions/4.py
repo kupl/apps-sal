@@ -8,8 +8,8 @@ if n % 4 == 1:
 
 if n % 4 == 2:
     ans += 'aa'
-    
+
 if n % 4 == 3:
     ans += 'aab'
-    
+
 print(ans)

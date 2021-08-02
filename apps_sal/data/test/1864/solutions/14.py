@@ -6,4 +6,6 @@ def __starting_point():
         print('-1')
     else:
         print(1)
+
+
 __starting_point()

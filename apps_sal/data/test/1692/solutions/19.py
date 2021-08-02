@@ -8,5 +8,6 @@ def main():
         if int(s[i:i + 2]) % 4 == 0:
             res += i + 1
     print(res)
-    
+
+
 main()

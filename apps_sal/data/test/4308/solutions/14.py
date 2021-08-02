@@ -7,11 +7,9 @@
 #a = [list(input()) for _ in range(n)]
 #a = [int(input()) for _ in range(n)]
 
-n,k = list(map(int, input().split()))
+n, k = list(map(int, input().split()))
 
-if (n%k==0):
+if (n % k == 0):
     print((0))
 else:
     print((1))
-
-

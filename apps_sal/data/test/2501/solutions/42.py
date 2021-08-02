@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def main():
     n = int(input())
     A = list(map(int, input().split()))
@@ -9,7 +11,9 @@ def main():
         ans += L[key] * R[key]
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
