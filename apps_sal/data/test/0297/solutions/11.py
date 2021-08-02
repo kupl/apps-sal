@@ -1,7 +1,7 @@
 import math
 n, m, k = [int(x) for x in input().split()]
 
-if 2*n*m % k != 0:
+if 2 * n * m % k != 0:
     print('NO')
 else:
     if k % 2 == 0:

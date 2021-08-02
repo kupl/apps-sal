@@ -36,4 +36,3 @@ for i in range(n):
     bad += pow(c, k, p)
 
 print((pow(n, k, p) + p - bad) % p)
-

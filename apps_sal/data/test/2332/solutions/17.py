@@ -17,11 +17,11 @@ for i in range(groups):
         minpr = min(minpr, price[words[elem - 1]])
     for elem in group:
         price[words[elem - 1]] = minpr
-        
+
 mess = stdin.readline().split()
 
 res = 0
 for elem in mess:
     res += price[elem]
-    
+
 print(res)

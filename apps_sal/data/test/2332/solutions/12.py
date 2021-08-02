@@ -9,4 +9,3 @@ for _ in range(k):
     for i in x:
         d[a[i - 1]] = m
 print(sum([d[x] for x in input().split()]))
-

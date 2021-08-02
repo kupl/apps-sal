@@ -11,4 +11,3 @@ def Calc(n, m, k):
 n, m, k = [int(x) for x in input().split()]
 
 print(max(Calc(n, m, k), Calc(m, n, k)))
-

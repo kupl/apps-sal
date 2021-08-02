@@ -8,5 +8,5 @@ for v in itertools.combinations(d, 2):
     M.append(list(v))
 
 for m in M:
-    ans += m[0]*m[1]
+    ans += m[0] * m[1]
 print(ans)

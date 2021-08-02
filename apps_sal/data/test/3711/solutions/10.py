@@ -1,7 +1,10 @@
 n, m, k = map(int, input().split())
 n, m = min(n, m), max(n, m)
+
+
 def p(i, j):
     return (n // (i + 1)) * (m // (j + 1))
+
 
 if k < n:
     print(max(p(k, 0), p(0, k)))

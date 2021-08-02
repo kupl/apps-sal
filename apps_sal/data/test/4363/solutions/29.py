@@ -7,4 +7,3 @@ for i in range(K + 1):
             Sum += 1
 
 print(Sum)
-

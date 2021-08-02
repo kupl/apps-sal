@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n, k, m = mi()
 s = [''] + input().split()
@@ -17,4 +22,3 @@ for i in range(1, k + 1):
 msg = input().split()
 ans = sum(g[p[w]] for w in msg)
 print(ans)
-

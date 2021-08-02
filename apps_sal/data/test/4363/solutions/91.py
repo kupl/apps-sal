@@ -8,4 +8,3 @@ for z in range(k + 1):
             sum += 1
 
 print(sum)
-

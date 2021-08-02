@@ -17,4 +17,3 @@ suma = 0
 for e in mensaje:
     suma += costos_minimos[palabras[e] - 1]
 print(suma)
-

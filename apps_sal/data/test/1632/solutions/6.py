@@ -12,4 +12,3 @@ for i in range(1, k):
     s += d[i] * sum(d[j] * d[-1 - i - j] for j in range(1, k - i))
 
 print(8 * s / (n * n - n) ** 3)
-

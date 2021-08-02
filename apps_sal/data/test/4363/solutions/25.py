@@ -1,4 +1,4 @@
-k,s = map(int,input().split())
+k, s = map(int, input().split())
 
 count = 0
 

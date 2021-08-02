@@ -32,4 +32,5 @@ def __starting_point():
     res = main(lines)
     print(f'{res}')
 
+
 __starting_point()

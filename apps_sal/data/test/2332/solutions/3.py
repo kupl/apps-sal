@@ -1,9 +1,10 @@
 def find_min_cost_word(words, group_words, costs):
     cost_min = 10000000000
     for word_ind in group_words:
-        cost_word = costs[word_ind-1]
+        cost_word = costs[word_ind - 1]
         cost_min = min(cost_min, cost_word)
     return cost_min
+
 
 n, k, m = list(map(int, input().split()))
 words = input().split()
@@ -15,7 +16,7 @@ for i in range(k):
     x, group_words = tmp[0], tmp[1:]
     min_cost_word = find_min_cost_word(words, group_words, costs)
     for word_ind in group_words:
-        word = words[word_ind-1]
+        word = words[word_ind - 1]
         d[word] = min_cost_word
 message = input().split()
 c = 0

@@ -1,9 +1,10 @@
+import threading
 from sys import setrecursionlimit
 setrecursionlimit(10 ** 9)
 
-import threading
 threading.stack_size(67108864)
- 
+
+
 def main():
     n, k = list(map(int, input().split()))
     uw = []
@@ -18,6 +19,7 @@ def main():
         if v == 0:
             uw[a - 1].append(b - 1)
             uw[b - 1].append(a - 1)
+
     def dfs(v):
         use[v] = 1
         com[c] += 1
@@ -38,8 +40,8 @@ def main():
         ans -= pow(com[i], k, q)
         ans %= q
     print(ans)
+
+
 thread = threading.Thread(target=main)
 thread.start()
 thread.join()
-
-

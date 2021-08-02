@@ -1,8 +1,11 @@
-import math, sys
+import math
+import sys
 from itertools import permutations
+
 
 def mp():
     return list(map(int, input().split()))
+
 
 debug = 0
 if debug:
@@ -10,6 +13,7 @@ if debug:
     input = file.readline
 else:
     input = sys.stdin.readline
+
 
 def main():
     n, m, k = mp()
@@ -46,7 +50,6 @@ def main():
         print(0, 0)
         print(2 * n, 0)
         print(0, 2 * m)
-
 
 
 main()

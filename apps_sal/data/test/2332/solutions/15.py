@@ -27,4 +27,3 @@ for x in input().split():
     ans += mass[d2[d1[x]]][0]
 
 print(ans)
-

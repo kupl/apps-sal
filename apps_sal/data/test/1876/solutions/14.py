@@ -13,18 +13,18 @@ class TreeNode:
 
 n, k = list(map(int, input().split()))
 tree = []
-for i in range(1, n+1):
+for i in range(1, n + 1):
     tree.append(TreeNode(i))
 
-for _ in range(n-1):
+for _ in range(n - 1):
     u, v, x = list(map(int, input().split()))
-    tree[u-1].add_edge(v, x)
-    tree[v-1].add_edge(u, x)
+    tree[u - 1].add_edge(v, x)
+    tree[v - 1].add_edge(u, x)
 
 visited = set()
 total = 0
 
-for node in range(1, n+1):
+for node in range(1, n + 1):
     if node in visited:
         continue
 
@@ -36,7 +36,7 @@ for node in range(1, n+1):
 
         vertex = queue.popleft()
 
-        for (e, c) in list(tree[vertex-1].edges.items()):
+        for (e, c) in list(tree[vertex - 1].edges.items()):
             if c == 0 and e not in visited:
                 queue.append(e)
                 red_vertexes = red_vertexes + 1
@@ -46,4 +46,3 @@ for node in range(1, n+1):
 
 total = (pow(n, k, mod) - total) % mod
 print(total)
-

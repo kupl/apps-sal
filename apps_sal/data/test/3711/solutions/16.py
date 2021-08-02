@@ -1,5 +1,5 @@
 n, m, k = map(int, input().split())
- 
+
 if k <= n + m - 2:
     x = min(k + 1, n)
     y = k + 2 - x

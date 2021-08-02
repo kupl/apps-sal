@@ -25,4 +25,3 @@ elif a * m <= _m:
     print(0, m * a)
 else:
     print("NO")
-

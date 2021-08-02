@@ -2,6 +2,8 @@ def HOD(a, b):
     while (b > 0):
         a, b = b, a % b
     return a
+
+
 n, m, k = map(int, input().split())
 x = HOD(n, k)
 n1 = n // x

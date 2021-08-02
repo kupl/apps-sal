@@ -17,4 +17,3 @@ message = list([wtoi[w] for w in input().split()])
 
 cost = sum([costs[i - 1] for i in message])
 print(cost)
-
