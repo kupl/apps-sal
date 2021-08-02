@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 while k1 + k2 > 0:
     max_dif = -10000000000000
-    ind = -1    
+    ind = -1
     for i in range(n):
         if (a[i] - b[i]) ** 2 > max_dif:
             max_dif = (a[i] - b[i]) ** 2

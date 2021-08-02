@@ -9,6 +9,7 @@ def decrease_max(C, D):
     else:
         C[i] += 1
 
+
 def solution(k1, k2, A, B):
     for _ in range(k1):
         decrease_max(A, B)
@@ -16,8 +17,8 @@ def solution(k1, k2, A, B):
         decrease_max(B, A)
     return sum((a - b)**2 for a, b in zip(A, B))
 
+
 n, k1, k2 = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 print(solution(k1, k2, A, B), end="")
-

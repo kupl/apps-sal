@@ -27,10 +27,9 @@ while pos + 1 < len(pairs):
 
 students[0] = [i for i in front_set - rear_set][0]
 pos = 1
-while pos + 1< len(pairs):
+while pos + 1 < len(pairs):
     i = bisect.bisect_left(fronts, students[pos - 1])
     students[pos + 1] = rears[i]
     pos += 2
 
 print(' '.join(map(str, students)))
-

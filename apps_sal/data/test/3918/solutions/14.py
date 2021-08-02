@@ -11,7 +11,7 @@ d.reverse()
 
 while moves > 0:
     if d[0] == 0:
-        print(moves%2)
+        print(moves % 2)
         break
 
     d[0] -= 1

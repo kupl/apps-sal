@@ -11,4 +11,3 @@ for it in range(k1 + k2):
             if r[i] < r[i + 1]:
                 r[i], r[i + 1] = r[i + 1], r[i]
 print(sum(x**2 for x in r))
-

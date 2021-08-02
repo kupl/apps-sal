@@ -1,7 +1,6 @@
-3
-
-from sys import stdin
 from itertools import groupby
+from sys import stdin
+3
 
 
 def f(line):
@@ -23,4 +22,3 @@ for (x, y), cnt in groups:
         continue
     ans += cnt * (total[y - x * a] - cnt)
 print(ans)
-
