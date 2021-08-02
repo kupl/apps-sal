@@ -71,16 +71,16 @@ def bfs(x, y):
         while len(d) > 0:
             s = d.popleft()
             for i in range(4):
-                if (s[1] +
-                    dy[i] >= 0 and s[1] +
-                    dy[i] < H and s[0] +
-                    dx[i] >= 0 and s[0] +
-                        dx[i] < W):
-                    if L[s[1] +
-                         dy[i]][s[0] +
-                                dx[i]] == '.' and dp[s[1] +
-                                                     dy[i]][s[0] +
-                                                            dx[i]] == 10000000:
+                if (s[1]
+                    + dy[i] >= 0 and s[1]
+                    + dy[i] < H and s[0]
+                    + dx[i] >= 0 and s[0]
+                        + dx[i] < W):
+                    if L[s[1]
+                         + dy[i]][s[0]
+                                + dx[i]] == '.' and dp[s[1]
+                                                     + dy[i]][s[0]
+                                                            + dx[i]] == 10000000:
                         d.append([s[0] + dx[i], s[1] + dy[i]])
                         dp[s[1] + dy[i]][s[0] + dx[i]] = dp[s[1]][s[0]] + 1
 
@@ -97,4 +97,3 @@ for i in range(H):
                     continue
                 max_num = max(max_num, p)
 print(max_num)
-

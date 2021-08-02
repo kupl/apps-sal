@@ -1,6 +1,7 @@
 # 深さ優先探索による迷路の最短距離計算
 
 
+import numpy as np
 import sys
 import copy
 import queue
@@ -25,8 +26,8 @@ def answer_sheet(meiro):
 def get_around_point(point, h, w):
     around_points = []
 
-    for ij in [(-1,0),(0,1),(1,0),(0,-1)]:
-        i,j=ij
+    for ij in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
+        i, j = ij
         new_i = point[0] + i
         new_j = point[1] + j
         if 0 <= new_i < h and 0 <= new_j < w:
@@ -99,8 +100,6 @@ def min_dis(start, h, w, meiro):
     return hash2minus(step(start, h, w, meiro, sheet, que))
 
 
-import numpy as np
-
 h, w = [int(i) for i in input().split()]
 meiro = []
 
@@ -111,7 +110,6 @@ ans = 0
 for i in range(h):
     for j in range(w):
         if meiro[i][j] == ".":
-            ans = max(ans, np.max(np.array(min_dis([i,j], h, w, meiro))))
+            ans = max(ans, np.max(np.array(min_dis([i, j], h, w, meiro))))
 
 print(ans)
-

@@ -6,7 +6,7 @@ ans = 0
 distancelist = []
 for i in range(H):
     maze = list(input())
-    tmplst = [0]*W
+    tmplst = [0] * W
     for j in range(W):
         if maze[j] == '#':
             tmplst[j] = -1
@@ -26,7 +26,7 @@ for x in range(H):
             h, w = d.popleft()
             now = tmpdis[h][w]
             for i, j in [[1, 0], [0, 1], [-1, 0], [0, -1]]:
-                dh, dw = h+i, w+j
+                dh, dw = h + i, w + j
                 if (0 <= dh < H) and (0 <= dw < W):
                     if (tmpdis[dh][dw] == 0) and [dh, dw] != start:
                         d.append([dh, dw])
@@ -36,5 +36,3 @@ for x in range(H):
 
 
 print(ans)
-
-

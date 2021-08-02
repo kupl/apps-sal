@@ -24,13 +24,12 @@ for sh in range(H):  # スタート位置全部試します
         while d:
             h, w = d.popleft()
             for i in move:
-                a = h+i[0]
-                b = w+i[1]
+                a = h + i[0]
+                b = w + i[1]
                 if not(0 <= a < H) or not(0 <= b < W) or Fi[a][b] == "#" or looked[a][b] != 0:
                     continue
                 d.append([a, b])
-                looked[a][b] = looked[h][w]+1
+                looked[a][b] = looked[h][w] + 1
             if len(d) == 0:
-                ans = max(ans, looked[h][w]-1)
+                ans = max(ans, looked[h][w] - 1)
 print(ans)
-

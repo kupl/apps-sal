@@ -10,4 +10,3 @@ for _ in range(t):
     for i in range(n - 1):
         out += max(0, l[i] - l[i + 1])
     print(out)
-

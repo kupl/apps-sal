@@ -7,4 +7,3 @@ while pos < X:
     pos += time
 
 print(time)
-

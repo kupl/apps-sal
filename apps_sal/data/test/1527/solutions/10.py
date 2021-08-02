@@ -23,11 +23,11 @@ def main():
                 for dh, dw in move:
                     nh = h + dh
                     nw = w + dw
-                    if (1
-                            and 0 <= nh < H
-                            and 0 <= nw < W
-                            and S[nh][nw] == '.'
-                            and distance[nh][nw] == -1):
+                    if (1 and
+                            0 <= nh < H and
+                            0 <= nw < W and
+                            S[nh][nw] == '.' and
+                            distance[nh][nw] == -1):
                         distance[nh][nw] = distance[h][w] + 1
                         queue.append((nh, nw))
             ans = max(ans, distance.max())
@@ -36,5 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -26,8 +26,3 @@ sum = 0
 for i in range(n):
     sum += 1000 * (1 - (e[i] * e[i - 1]))
 print(sum * 2)
-
-       
-    
-        
-

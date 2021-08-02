@@ -1,7 +1,7 @@
 n = int(input())
-a = list(map(lambda c: ord(c)-97, input()))
-color = [0]*26
-ans = [0]*n
+a = list(map(lambda c: ord(c) - 97, input()))
+color = [0] * 26
+ans = [0] * n
 last = -1
 
 for i, c in enumerate(a):
@@ -26,8 +26,7 @@ for i, c in enumerate(a):
                 return
 
     color[c] |= col
-    ans[i] = col-1
+    ans[i] = col - 1
 
 print('YES')
 print(*ans, sep='')
-

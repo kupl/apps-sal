@@ -1,8 +1,9 @@
 
+from collections import deque
 import sys
 
 sys.setrecursionlimit(10 ** 7)
-from collections import deque
+
 
 def resolve():
     def bfs(sy, sx):
@@ -36,11 +37,12 @@ def resolve():
             if G[i][j] == "#":
                 continue
             ans = max(ans, bfs(i, j))
-            
+
     print(ans)
 
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

@@ -13,4 +13,3 @@ for i in range(n):
     ret += (1 - probnot1 * probnot2)
 
 print(ret * 2000)
-

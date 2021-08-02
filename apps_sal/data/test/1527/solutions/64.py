@@ -18,10 +18,10 @@ def bfs(sx, sy):
         for i, j in ([1, 0], [0, 1], [-1, 0], [0, -1]):
             tx, ty = x + i, y + j
             if (
-                not (0 <= tx < H)
-                or not (0 <= ty < W)
-                or maze[tx][ty] == "#"
-                or count[tx][ty] != -1
+                not (0 <= tx < H) or
+                not (0 <= ty < W) or
+                maze[tx][ty] == "#" or
+                count[tx][ty] != -1
             ):
                 continue
             else:
@@ -36,4 +36,3 @@ for i in range(W):
         if maze[j][i] == ".":
             ans = max(ans, bfs(j, i))
 print(ans)
-

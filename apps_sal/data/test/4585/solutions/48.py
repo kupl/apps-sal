@@ -1,11 +1,10 @@
-i=1
 import copy
-X=int(input())
-s=0
+i = 1
+X = int(input())
+s = 0
 while True:
-    s+=copy.copy(i)
-    if s>=X:
+    s += copy.copy(i)
+    if s >= X:
         print(i)
         return
-    i+=1
-
+    i += 1

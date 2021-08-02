@@ -43,4 +43,3 @@ for i in range(H):
         if S[i][j] == '.':
             ans = max(ans, bfs(i, j))
 print(ans)
-

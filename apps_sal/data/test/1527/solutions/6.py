@@ -33,7 +33,7 @@ def bfs(u, S):
                 S[h][w] = S[u[0]][u[1]] + 1  # state を変更
                 m = max(m, S[h][w])
                 q.append((h, w))
-    
+
     return m
 
 
@@ -57,4 +57,3 @@ def main():
 
 
 main()
-

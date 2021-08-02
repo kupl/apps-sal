@@ -11,7 +11,7 @@ mas.sort()
 
 sum = 0
 for i in mas:
-    sum = sum + i*x
-    if(x>1):
+    sum = sum + i * x
+    if(x > 1):
         x = x - 1
 print(sum)

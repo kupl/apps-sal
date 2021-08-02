@@ -6,5 +6,5 @@ def solve():
         if now >= X:
             return i
 
-print((solve()))
 
+print((solve()))

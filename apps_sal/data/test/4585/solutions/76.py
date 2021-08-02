@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians, gcd
 from itertools import accumulate, permutations, combinations, product, groupby, combinations_with_replacement
@@ -14,10 +15,11 @@ def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
 
 X = Decimal(INT())
-print((((Decimal(-1)+(8*X).sqrt())/Decimal(2)).quantize(Decimal("0"), rounding=ROUND_CEILING)))
-
+print((((Decimal(-1) + (8 * X).sqrt()) / Decimal(2)).quantize(Decimal("0"), rounding=ROUND_CEILING)))

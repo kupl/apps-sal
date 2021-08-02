@@ -14,7 +14,7 @@ q = deque()
 dire = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 ans = 0
 for sh, sw in sl:
-    c = [[0]*w for _ in range(h)]
+    c = [[0] * w for _ in range(h)]
     q.append((sh, sw, 0))
     while q:
         ph, pw, k = q.pop()
@@ -22,9 +22,9 @@ for sh, sw in sl:
             ans = max(ans, k)
             c[ph][pw] = 1
             for dh, dw in dire:
-                hdh, wdw = ph+dh, pw+dw
+                hdh, wdw = ph + dh, pw + dw
                 if 0 <= hdh < h and 0 <= wdw < w and c[hdh][wdw] == 0:
                     if s[hdh][wdw] == '.':
-                        q.appendleft((hdh, wdw, k+1))
+                        q.appendleft((hdh, wdw, k + 1))
 
 print(ans)

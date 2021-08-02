@@ -9,4 +9,3 @@ for i in c:
     x = max(1, x - 1)
 
 print(time)
-

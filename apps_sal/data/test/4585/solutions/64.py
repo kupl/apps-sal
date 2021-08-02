@@ -5,4 +5,3 @@ for i in range(1, 10 ** 5):
     if sn >= x:
         print(i)
         break
-

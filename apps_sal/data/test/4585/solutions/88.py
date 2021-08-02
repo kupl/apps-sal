@@ -12,4 +12,3 @@ while True:
     c += t
 
 print(t)
-

@@ -34,4 +34,3 @@ for i in range(h):
         if maze[i][j] == ".":
             ans = max(ans, bfs(i, j))
 print(ans)
-
