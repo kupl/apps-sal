@@ -1,7 +1,7 @@
 import sys
 S = input()
 
-if not (S[0] == "A" and "C" in S[2:len(S)-1]):
+if not (S[0] == "A" and "C" in S[2:len(S) - 1]):
     print("WA")
     return
 

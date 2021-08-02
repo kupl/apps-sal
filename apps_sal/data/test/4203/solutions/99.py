@@ -4,18 +4,18 @@ countOfC = 0
 
 
 if S[0] != 'A':
-  print('WA')
-  return
+    print('WA')
+    return
 
 for i in range(1, len(S)):
-  if S[i].isupper():
-    if i >= 2 and i <= stl and  S[i] == 'C':
-      countOfC += 1
-    else:
-      print('WA')
-      return
+    if S[i].isupper():
+        if i >= 2 and i <= stl and S[i] == 'C':
+            countOfC += 1
+        else:
+            print('WA')
+            return
 
 if countOfC == 1:
-  print('AC')
+    print('AC')
 else:
-  print('WA')
+    print('WA')

@@ -9,10 +9,11 @@ a = 'Ashishgup'
 
 
 def prime(p):
-    for i in range(3, min(4 * 10 ** 4,p), 2):
+    for i in range(3, min(4 * 10 ** 4, p), 2):
         if p % i == 0:
             return False
     return True
+
 
 for i in range(t):
     n = int(input())
@@ -25,11 +26,9 @@ for i in range(t):
     elif (n % 4 != 2):
         print(a)
     else:
-        testp = n//2
+        testp = n // 2
 
         if prime(testp):
             print(ff)
         else:
             print(a)
-        
-

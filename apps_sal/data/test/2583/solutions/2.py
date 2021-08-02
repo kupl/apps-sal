@@ -6,6 +6,7 @@ def cf(x):
             return True
     return False
 
+
 def solve():
     n = int(input())
     if n == 1:
@@ -27,6 +28,7 @@ def solve():
             print('Ashishgup')
     else:
         print('Ashishgup')
+
 
 t = int(input())
 for _ in range(t):

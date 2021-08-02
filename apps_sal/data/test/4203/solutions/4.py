@@ -18,7 +18,9 @@ def main():
     else:
         print("WA")
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

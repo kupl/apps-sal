@@ -8,4 +8,5 @@ def isAC(S):
         return False
     return True
 
+
 print('AC' if isAC(input()) else 'WA')

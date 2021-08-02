@@ -4,11 +4,11 @@
 # モンスターに勝つことができるなら Yes を、
 # できないなら No を出力。
 
-H, N = map(int,input().split())
-A = list(map(int,input().split()))
+H, N = map(int, input().split())
+A = list(map(int, input().split()))
 answer = sum(A)
 
-if H <= answer :
-    print( "Yes" )
+if H <= answer:
+    print("Yes")
 else:
-    print( "No" )
+    print("No")

@@ -4,7 +4,7 @@ if s[0] != 'A':
     ans = 'WA'
 c_idx = None
 for i, v in enumerate(list(s)):
-    if i >= 2 and i <= len(s)-2:
+    if i >= 2 and i <= len(s) - 2:
         if v == 'C':
             if c_idx is None:
                 c_idx = i
@@ -15,6 +15,6 @@ if c_idx is None:
 else:
     s[0] = 'a'
     s[c_idx] = 'c'
-    if [ i.lower() for i in s ] != s:
+    if [i.lower() for i in s] != s:
         ans = 'WA'
 print(ans)

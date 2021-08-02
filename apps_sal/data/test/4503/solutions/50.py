@@ -1,9 +1,9 @@
 health, num = map(int, input().split())
 num_list = [num for num in list(map(int, input().split()))]
 for _ in num_list:
-  health -= _
-  
+    health -= _
+
 if health > 0:
-  print("No")
+    print("No")
 else:
-  print("Yes")
+    print("Yes")

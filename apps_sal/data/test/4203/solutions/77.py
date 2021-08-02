@@ -53,7 +53,7 @@ def resolve():
             if S[i] != "A":
                 ans = "WA"
                 break
-        elif i == 1 or i == l-1:
+        elif i == 1 or i == l - 1:
             if S[i] == "C" or S[i].isupper():
                 ans = "WA"
                 break
@@ -77,5 +77,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

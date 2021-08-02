@@ -1,23 +1,22 @@
 def check(mid):
-    need=0
+    need = 0
     for i in range(mid):
-#        print(mid,n-mid+i,i,mon,pri)
-        if mon[n-mid+i]<pri[i]:
-            need+=pri[i]-mon[n-mid+i]
-    return need<=a           
-n,m,a = list(map(int,input().split()))
-mon = sorted(map(int,input().split()))
-pri = sorted(map(int,input().split()))
-l=0
-r=min(n,m)
-#print(mon,pri)
-while l<=r:
-    mid = l +(r-l)//2
+        #        print(mid,n-mid+i,i,mon,pri)
+        if mon[n - mid + i] < pri[i]:
+            need += pri[i] - mon[n - mid + i]
+    return need <= a
+
+
+n, m, a = list(map(int, input().split()))
+mon = sorted(map(int, input().split()))
+pri = sorted(map(int, input().split()))
+l = 0
+r = min(n, m)
+# print(mon,pri)
+while l <= r:
+    mid = l + (r - l) // 2
     if check(mid):
-        l = mid+1
+        l = mid + 1
     else:
-        r = mid-1
-print(r,max(0,sum(pri[:r])-a))
-
-
-
+        r = mid - 1
+print(r, max(0, sum(pri[:r]) - a))

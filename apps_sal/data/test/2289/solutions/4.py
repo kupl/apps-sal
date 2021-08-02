@@ -16,5 +16,3 @@ for s in input().split():
         curK = 0
     else:
         print(n - index)
-    
-

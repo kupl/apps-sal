@@ -5,4 +5,3 @@ if H <= S:
     print('Yes')
 else:
     print('No')
-

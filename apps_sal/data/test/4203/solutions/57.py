@@ -1,9 +1,11 @@
 s = input()
 cnt = 0
 
+
 def end():
-  print("WA")
-  return
+    print("WA")
+    return
+
 
 if len(s) < 3:
     end()

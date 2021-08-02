@@ -8,6 +8,7 @@ def check(x):
         d += 2
     return True
 
+
 for _ in range(int(input())):
     # a, b = map(int, input().split())
     n = int(input())
@@ -30,4 +31,3 @@ for _ in range(int(input())):
             print('FastestFinger')
         else:
             print('Ashishgup')
-

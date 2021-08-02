@@ -14,4 +14,3 @@ for x in k:
     if sofar >= s[-1]:
         sofar = 0
     sys.stdout.write(str(n - bisect_right(s, sofar)) + '\n')
-

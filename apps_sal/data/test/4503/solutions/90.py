@@ -10,4 +10,3 @@ else:
     answer = 'No'
 
 print(answer)
-

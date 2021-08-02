@@ -14,4 +14,3 @@ while left <= right:
     else:
         right = mid - 1
 print(right, max(0, sum(p[:right]) - a))
-

@@ -19,4 +19,3 @@ for k in vk:
         ans.append(n - it)
 
 print('\n'.join(str(v) for v in ans))
-

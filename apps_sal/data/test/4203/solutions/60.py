@@ -14,4 +14,3 @@ if a[0] == "A":
         print("WA")
 else:
     print("WA")
-

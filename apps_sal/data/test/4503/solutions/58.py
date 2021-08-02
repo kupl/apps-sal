@@ -3,6 +3,6 @@ A = list(map(int, input().split()))
 
 attack = sum(A)
 if attack >= H:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

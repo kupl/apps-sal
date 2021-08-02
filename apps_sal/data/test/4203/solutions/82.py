@@ -11,4 +11,3 @@ if S[0] == 'A' and S[1].islower() and S[-1].islower():
             print("AC")
             return
 print("WA")
-

@@ -1,6 +1,6 @@
 s = list(input())
 if s[0] == 'A':
-    if 'C'in s[2:len(s) - 1]:
+    if 'C' in s[2:len(s) - 1]:
         s.remove('A')
         s.remove('C')
         s = ''.join(s)
