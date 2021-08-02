@@ -10,4 +10,3 @@ if s2 == '':
     print("YES")
 else:
     print("NO")
-

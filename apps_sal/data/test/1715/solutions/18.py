@@ -24,4 +24,3 @@ for k in range(Q):
                 if 0 <= ms + j <= A - 1:
                     ans.append(abs(t[mt + i] - x) + abs(s[ms + j] - t[mt + i]))
     print((min(ans)))
-

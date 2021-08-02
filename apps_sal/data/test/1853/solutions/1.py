@@ -1,11 +1,16 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
 
 # D. Similar Arrays
+
 
 n, m = mi()
 g = [[] for i in range(n + 1)]
@@ -26,7 +31,8 @@ if n > 1:
             if i != j and j not in s:
                 eq = i, j
                 break
-        if eq: break
+        if eq:
+            break
 
 if eq:
     a, b = [0] * n, [0] * n
@@ -49,4 +55,3 @@ if eq:
     print(*b)
 else:
     print('NO')
-

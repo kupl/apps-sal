@@ -14,4 +14,3 @@ for q in range(Q):
             d1, d2 = abs(S - x) + abs(T - S), abs(T - x) + abs(S - T)
             res = min(res, d1, d2)
     print(res)
-

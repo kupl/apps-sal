@@ -9,4 +9,3 @@ elif c == 1:
     print(max(a * (b + c), a + b + c))
 else:
     print(a * b * c)
-

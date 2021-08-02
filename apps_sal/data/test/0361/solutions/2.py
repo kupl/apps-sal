@@ -11,4 +11,3 @@ for i in range(len(s)):
             return
 
 print("NO")
-

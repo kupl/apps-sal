@@ -7,8 +7,10 @@ def main(s):
             return 'YES'
     return 'NO'
 
+
 def __starting_point():
     s = input()
     print(main(s))
+
 
 __starting_point()

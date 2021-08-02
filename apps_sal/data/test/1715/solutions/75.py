@@ -23,4 +23,3 @@ for i in range(Q):
     ans = min(ans, 2 * d(S[sl]) + d(T[tr]))
     ans = min(ans, d(S[sl]) + 2 * d(T[tr]))
     print(ans)
-

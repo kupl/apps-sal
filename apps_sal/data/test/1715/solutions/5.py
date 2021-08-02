@@ -14,11 +14,9 @@ for q in range(Q):
 
     res = INF
 
-    for S in [s[b-1], s[b]]:
-        for T in [t[d-1], t[d]]:
+    for S in [s[b - 1], s[b]]:
+        for T in [t[d - 1], t[d]]:
             # print(f"S{S}, T{T}")
-            d1, d2 = abs(S-x)+abs(T-S), abs(T-x)+abs(T-S)
+            d1, d2 = abs(S - x) + abs(T - S), abs(T - x) + abs(T - S)
             res = min(res, d1, d2)
     print(res)
-
-

@@ -2,6 +2,8 @@
 from math import log2
 n = int(input())
 p = [0] * (n + 1)
+
+
 def f(n):
     k = int(log2(n))
     while k:
@@ -14,6 +16,8 @@ def f(n):
         if not n:
             break
         k = int(log2(n))
+
+
 if n & 1:
     print('NO')
 else:
@@ -37,5 +41,3 @@ else:
                 print(i, end=' ')
             print(1 << k, end=' ')
             k += 1
-
-

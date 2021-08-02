@@ -14,4 +14,3 @@ if ln > cl:
     if s[:cl] == pat:
         ans = "YES"
 print(ans)
-

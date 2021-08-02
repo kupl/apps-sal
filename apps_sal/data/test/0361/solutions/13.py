@@ -1,3 +1,6 @@
+import sys
+
+
 def solve(word):
     banner = "CODEFORCES"
 
@@ -18,7 +21,7 @@ def solve(word):
             break
     return False
 
-import sys
+
 word = sys.stdin.read().strip()
 if solve(word) == True:
     print("YES")

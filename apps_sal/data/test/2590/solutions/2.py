@@ -21,9 +21,8 @@ for zz in range(int(input())):
         ps = 0
         for i in range(ans, n):
             ps += a[i]
-            if (ps + cs) < (i + 1)*x:
+            if (ps + cs) < (i + 1) * x:
                 break
             h += 1
 
         print(h)
-

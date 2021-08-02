@@ -13,4 +13,3 @@ out.append(a * (b + c))
 out.append((a + b) * c)
 
 print(max(out))
-

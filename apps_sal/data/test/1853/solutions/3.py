@@ -1,4 +1,4 @@
-def read(type = 1):
+def read(type=1):
     if type:
         file = open("input.dat", "r")
         line = list(map(int, file.readline().split()))
@@ -35,11 +35,11 @@ def write(sol, x):
 
 
 def solve(a):
-    if len(a) == n * (n-1) // 2:
+    if len(a) == n * (n - 1) // 2:
         print("NO")
         return 0
-    a = sorted(a, key = lambda x: (x[0], x[1]))
-    x = [1,2]
+    a = sorted(a, key=lambda x: (x[0], x[1]))
+    x = [1, 2]
     for t in a:
         if list(t) != x:
             break
@@ -48,11 +48,11 @@ def solve(a):
             x[1] = x[0] + 1
         else:
             x[1] += 1
-    sol = [0 for i in range(n+2)]
+    sol = [0 for i in range(n + 2)]
     sol[x[0]] = 1
     sol[x[1]] = 2
     v = 3
-    for i in range(1,n+1):
+    for i in range(1, n + 1):
         if i not in x:
             sol[i] = v
             v += 1
