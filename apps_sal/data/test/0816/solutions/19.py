@@ -19,7 +19,6 @@ else:
         else:
             s[elem] = 1
     for key in list(s.keys()):
-        if (key^x) in s:
-            ans += s[key] * s[key^x]
+        if (key ^ x) in s:
+            ans += s[key] * s[key ^ x]
 print(ans // 2)
-

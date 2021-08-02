@@ -1,4 +1,6 @@
 N, A, B = list(map(int, input().split()))
+
+
 def solve():
     if A + B - 1 <= N and N <= A * B:
         if A == 1:
@@ -19,5 +21,6 @@ def solve():
         return s
     else:
         return [-1]
-print((" ".join(map(str, solve()))))
 
+
+print((" ".join(map(str, solve()))))

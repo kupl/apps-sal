@@ -36,7 +36,7 @@ if(m > 1):
                 ultima_salida_inesperada = num
             posteriores.discard(num)
             ultimo_en_salir[num] &= not posteriores
-        continuos[num] &= cont 
+        continuos[num] &= cont
         mencionados.add(num)
 #    print("anteriores {} posteriores {} continuos {} ops {}".format(anteriores, posteriores, continuos, ops))
     if not anteriores and not posteriores:
@@ -67,8 +67,7 @@ if(m > 1):
 
 #    print("posibles jefes menc {}".format(posibles_jefes_mencionados))
     posibles_jefes -= (mencionados - posibles_jefes_mencionados)
-        
+
 print(len(posibles_jefes))
 if(len(posibles_jefes)):
     print(" ".join(map(str, sorted(posibles_jefes))))
-

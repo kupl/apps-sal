@@ -11,12 +11,12 @@ Bの中に2-増大列があれば(n+2)増大列ができる。そうでなけれ
 
 """
 
-N,A,B = map(int,input().split())
+N, A, B = map(int, input().split())
 
-if A+B-1 > N:
+if A + B - 1 > N:
     print(-1)
     return
-if A*B < N:
+if A * B < N:
     print(-1)
     return
 
@@ -25,9 +25,9 @@ if A*B < N:
 if B == 1:
     size = [1] * A
 else:
-    q,r = divmod(N-A,B-1)
+    q, r = divmod(N - A, B - 1)
     if q < A:
-        size = [B] * q + [1+r] + [1] * (A-q-1)
+        size = [B] * q + [1 + r] + [1] * (A - q - 1)
     else:
         size = [B] * A
 
@@ -35,6 +35,6 @@ answer = []
 start = 1
 for s in size:
     end = start + s
-    answer += list(range(end-1, start-1, -1))
+    answer += list(range(end - 1, start - 1, -1))
     start = end
 print(*answer)

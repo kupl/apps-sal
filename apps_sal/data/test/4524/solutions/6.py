@@ -3,6 +3,8 @@ a = list(map(int, input()))
 b = list(map(int, input()))
 
 mod = 998244353
+
+
 def binpow(a, n):
     if n == 0:
         return 1
@@ -11,6 +13,7 @@ def binpow(a, n):
     if n % 2 == 1:
         ans = (ans * a) % mod
     return ans
+
 
 c = 1
 ans = 0
@@ -21,4 +24,3 @@ for i in range(min(len(a), len(b))):
     s -= b[-1 - i]
     c = (c * 2) % mod
 print(ans)
-

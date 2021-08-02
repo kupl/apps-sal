@@ -23,4 +23,3 @@ for i in range(1, b):
     for j in range(now, prev, -1):
         ans.append(j)
 print((*reversed(ans)))
-

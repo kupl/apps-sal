@@ -1,5 +1,5 @@
 #########################
-# 
+#
 # ######
 
 N, A, B = [int(_) for _ in input().split()]
@@ -18,4 +18,3 @@ else:
         ans += list(range(f + c, f, -1))
         f += c
     print((*ans))
-

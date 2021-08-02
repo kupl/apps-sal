@@ -21,9 +21,10 @@ def modinverse(a, m):
 
     if x < 0:
         x += m0
-    
+
     return x
 # runs in log(m)
+
 
 M = (10 ** 9) + 7
 
@@ -42,11 +43,11 @@ Pkp1 = 0
 Pk = 0
 
 if a[-1] == 0 and b[-1] == 0:
-    Pkp1 = ((m-1) % M) * Mi * Ti
+    Pkp1 = ((m - 1) % M) * Mi * Ti
 elif a[-1] == 0:
-    Pkp1 = ((m-b[-1]) % M) * Mi
+    Pkp1 = ((m - b[-1]) % M) * Mi
 elif b[-1] == 0:
-    Pkp1 = ((a[-1]-1) % M) * Mi
+    Pkp1 = ((a[-1] - 1) % M) * Mi
 else:
     if a[-1] > b[-1]:
         Pkp1 = 1
@@ -57,13 +58,13 @@ Pk = Pkp1
 
 for i in range(1, n):
     j = n - (i + 1)
-    
+
     if a[j] == 0 and b[j] == 0:
-        Pk = ((2*Pkp1+m-1) % M) * Mi * Ti
+        Pk = ((2 * Pkp1 + m - 1) % M) * Mi * Ti
     elif a[j] == 0:
-        Pk = ((m-b[j]+Pkp1) % M) * Mi
+        Pk = ((m - b[j] + Pkp1) % M) * Mi
     elif b[j] == 0:
-        Pk = ((Pkp1+a[j]-1) % M) * Mi
+        Pk = ((Pkp1 + a[j] - 1) % M) * Mi
     else:
         if a[j] > b[j]:
             Pk = 1
@@ -75,4 +76,3 @@ for i in range(1, n):
     Pkp1 = Pk
 
 print(Pk % M)
-

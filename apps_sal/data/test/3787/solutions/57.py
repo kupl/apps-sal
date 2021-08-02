@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
@@ -33,58 +34,56 @@ LDS≠B
 A=4,B=5まではいける．B=5を固定したらこれがAの最小な気がする
 Aの最小値はN/Bの切り上げ，かな
 """
+
+
 def main():
-    mod=10**9+7
-    N,A,B=MI()
-    
-    if A+B>N+1:
+    mod = 10**9 + 7
+    N, A, B = MI()
+
+    if A + B > N + 1:
         print((-1))
         return
-        
-    t=(N+B-1)//B
-    if A<t:
+
+    t = (N + B - 1) // B
+    if A < t:
         print((-1))
         return
-        
-    if A==1:
-        if B==N:
-            ans=list(range(N,0,-1))
+
+    if A == 1:
+        if B == N:
+            ans = list(range(N, 0, -1))
             print((' '.join(map(str, ans))))
             return
         else:
             print((-1))
             return
-    
-    if B==1:
-        if A==N:
-            ans=list(range(1,N+1))
+
+    if B == 1:
+        if A == N:
+            ans = list(range(1, N + 1))
             print((' '.join(map(str, ans))))
             return
         else:
             print((-1))
             return
-    
-        
-    ans=[]
-    temp=list(range(N-A+1,N+1))
-    ans+=temp
-    unit=(N-A)//(B-1)
-    rem=(N-A)%(B-1)
-    
-    right=N-A #各グループの右端
-    for i in range(B-1):
-        left=right-unit
+
+    ans = []
+    temp = list(range(N - A + 1, N + 1))
+    ans += temp
+    unit = (N - A) // (B - 1)
+    rem = (N - A) % (B - 1)
+
+    right = N - A  # 各グループの右端
+    for i in range(B - 1):
+        left = right - unit
         if rem:
-            left-=1
-            rem-=1
-        temp=list(range(left+1,right+1,1))
-        ans+=temp
-        right=left
-        
+            left -= 1
+            rem -= 1
+        temp = list(range(left + 1, right + 1, 1))
+        ans += temp
+        right = left
+
     print((' '.join(map(str, ans))))
-        
-        
-        
+
 
 main()
-

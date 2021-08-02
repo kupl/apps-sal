@@ -16,13 +16,13 @@ while N > 0:
         b = list(range(N, 0, -1)) + b
         N = 0
     else:
-        b = list(range(N, N-B, -1)) + b
+        b = list(range(N, N - B, -1)) + b
         N -= B
         if A - 1 >= N:
-            a += list(range(1, N+1))
+            a += list(range(1, N + 1))
             N = 0
         else:
-            a += list(range(N-A+2, N+1))
+            a += list(range(N - A + 2, N + 1))
             N -= A - 1
     A -= 1
     B -= 1

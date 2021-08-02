@@ -27,8 +27,8 @@ def __starting_point():
 
     # write code
     n, m = mi()
-    l = [0]*m
-    r = [0]*m
+    l = [0] * m
+    r = [0] * m
     for i in range(m):
         l[i], r[i] = mi()
     lf = l[0]
@@ -57,5 +57,6 @@ def __starting_point():
                 print('YES')
                 return
     print('NO')
+
 
 __starting_point()

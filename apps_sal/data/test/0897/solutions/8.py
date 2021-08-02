@@ -25,4 +25,3 @@ for a, b in zip(s1, s2):
     elif a < b:
         break
 print(z)
-

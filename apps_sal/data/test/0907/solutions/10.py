@@ -1,9 +1,9 @@
-n,m = map(int, input().strip().split())
+n, m = map(int, input().strip().split())
 can = False
 pairs = []
-for i in range (m):
-    a,b = map(int, input().strip().split())
-    pairs.append([a,b])
+for i in range(m):
+    a, b = map(int, input().strip().split())
+    pairs.append([a, b])
 first = pairs[0][0]
 missed = []
 for i in range(m):
@@ -55,7 +55,7 @@ if missed != []:
         can = True
 else:
     can = True
-if can ==  True:
-    print ('YES')
+if can == True:
+    print('YES')
 else:
-    print ('NO')
+    print('NO')

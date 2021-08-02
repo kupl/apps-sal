@@ -7,6 +7,8 @@ def bin_pow(n, s):
             return (t * t) % 998244353
         else:
             return ((bin_pow(n, s - 1) % 998244353) * n) % 998244353
+
+
 tr, tl = list(map(int, input().split()))
 a = input()
 b = input()
@@ -21,4 +23,3 @@ for i in range(tl):
         ans += ansd
         ans %= 998244353
 print(ans % 998244353)
-

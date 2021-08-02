@@ -3,8 +3,9 @@ import collections
 import itertools
 
 sys.setrecursionlimit(10 ** 8)
-inm = lambda: list(map(int, sys.stdin.readline().split()))
+def inm(): return list(map(int, sys.stdin.readline().split()))
 # debug = lambda *a, **kw: print(*a, **kw, file=sys.stderr)
+
 
 N, A, B = inm()
 
@@ -42,4 +43,3 @@ if ans is None:
     print((-1))
 else:
     print((*ans))
-

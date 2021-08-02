@@ -1,7 +1,7 @@
 [n, m, d] = list(map(int, input().split()))
 g = {}
 for i in range(n):
-    g[i+1] = set()
+    g[i + 1] = set()
 for i in range(m):
     [v, u] = list(map(int, input().split()))
     g[u].add(v)
@@ -46,6 +46,3 @@ else:
             q.append(to)
             seen.add(to)
             print(v, " ", to)
-
-
-

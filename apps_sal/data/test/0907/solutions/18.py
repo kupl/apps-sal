@@ -35,4 +35,3 @@ for a, b in lst:
 if flag1 == 0 or flag2 == 0 or flag3 == 0 or flag4 == 0:
     ans = 'YES'
 print(ans)
-

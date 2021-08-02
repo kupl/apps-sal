@@ -1,18 +1,18 @@
-N,A,B = map(int,input().split())
-if not (A+B-1 <= N <= A*B):
+N, A, B = map(int, input().split())
+if not (A + B - 1 <= N <= A * B):
     print(-1)
     return
 if B == 1:
-    print(*list(range(1,A+1)))
+    print(*list(range(1, A + 1)))
     return
 
-n = (N-A)//(B-1)
-m = (N-A)%(B-1)
+n = (N - A) // (B - 1)
+m = (N - A) % (B - 1)
 
-stack = [1,A+1]
+stack = [1, A + 1]
 lds_cnt = 1
 while stack[-1] <= N:
-    l = n if lds_cnt > m else n+1
+    l = n if lds_cnt > m else n + 1
     stack.append(stack[-1] + l)
     lds_cnt += 1
 

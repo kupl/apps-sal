@@ -4,7 +4,7 @@ if m <= 2:
     return
 a = list({frozenset(list(map(int, input().split()))) for q in range(m)})
 x = list(a[0])[0]
-y = list(a[0]-{x})[0]
+y = list(a[0] - {x})[0]
 s = set()
 for q in a:
     if x not in q:
@@ -41,4 +41,3 @@ for q in s:
         break
 else:
     print('YES')
-

@@ -2,7 +2,8 @@ import sys
 
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
-int1 = lambda x: int(x) - 1
+def int1(x): return int(x) - 1
+
 
 def main():
     n, a, b = list(map(int, input().split()))
@@ -31,5 +32,5 @@ def main():
         x += ak
     print((*x))
 
-main()
 
+main()

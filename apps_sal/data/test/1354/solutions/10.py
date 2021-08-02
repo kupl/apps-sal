@@ -4,7 +4,10 @@ from collections import Counter, defaultdict
 from heapq import heappop, heappush
 from itertools import accumulate
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 mm, k, a = R()
 junk = int(input())
 arr = list(R())

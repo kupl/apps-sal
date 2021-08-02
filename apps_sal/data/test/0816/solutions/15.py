@@ -16,4 +16,3 @@ if x == 0:
     print(ans)
 else:
     print(ans // 2)
-

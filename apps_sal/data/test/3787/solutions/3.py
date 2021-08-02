@@ -1,10 +1,10 @@
 import sys
 input = sys.stdin.readline
-n, a, b = map(int,input().split())
+n, a, b = map(int, input().split())
 nn = n
 bb = b
 
-if (n+b-1)//b <= a <= n+1-b:
+if (n + b - 1) // b <= a <= n + 1 - b:
     ANS = []
     L = [a]
     b -= 1
@@ -14,7 +14,7 @@ if (n+b-1)//b <= a <= n+1-b:
         n -= 1
     ind = 1
     while n > 0:
-        p = min(n, a-1)
+        p = min(n, a - 1)
         L[ind] += p
         n -= p
         ind += 1
@@ -26,7 +26,7 @@ if (n+b-1)//b <= a <= n+1-b:
         i -= L[j]
         for k in range(L[j]):
             ANS.append(i + k + 1)
-        
+
     print(*ANS)
 else:
     print(-1)

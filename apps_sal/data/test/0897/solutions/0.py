@@ -20,7 +20,7 @@ for x, y in zip(a, b):
         else:
             break
     elif x:
-        res += mult * (x-1) * m_inv % mod
+        res += mult * (x - 1) * m_inv % mod
         res %= mod
         mult = mult * m_inv % mod
     elif y:
@@ -32,4 +32,3 @@ for x, y in zip(a, b):
         res %= mod
         mult = mult * m_inv % mod
 print(res)
-

@@ -6,7 +6,7 @@ def make_result(n, a, b):
     tail = []
     if n < a * b:
         if a <= b:
-            k = (a * b - n + b - 2)//(b - 1) - 1
+            k = (a * b - n + b - 2) // (b - 1) - 1
             tail = [n - i for i in range(k - 1, -1, -1)]
             n -= k
             a -= k
@@ -15,7 +15,7 @@ def make_result(n, a, b):
             n -= k
             a -= 1
         else:
-            k = (a * b - n + a - 2)//(a - 1) - 1
+            k = (a * b - n + a - 2) // (a - 1) - 1
             result = [n - i for i in range(k)]
             n -= k
             b -= k

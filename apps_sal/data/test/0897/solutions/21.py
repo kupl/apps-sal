@@ -2,10 +2,12 @@ def _pow(a, d, md):
     res = 1
     a = a % md
     while d > 0:
-        if d&1: res = res * a % md
+        if d & 1:
+            res = res * a % md
         d >>= 1
-        a = a*a % md
+        a = a * a % md
     return res
+
 
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
@@ -20,7 +22,7 @@ dp[1][-1] = 0
 for i in range(0, n):
     if a[i] == 0 and b[i] != 0:
         dp[0][i] = dp[0][i - 1] % mod
-        dp[1][i] = (dp[1][i - 1] * m + dp[0][i - 1]*(m - b[i])) % mod
+        dp[1][i] = (dp[1][i - 1] * m + dp[0][i - 1] * (m - b[i])) % mod
         base *= m
         base %= mod
     elif a[i] != 0 and b[i] == 0:
@@ -43,11 +45,11 @@ for i in range(0, n):
         else:
             dp[0][i] = dp[0][i - 1] % mod
             dp[1][i] = dp[1][i - 1] % mod
-    #print(dp[0][i], dp[1][i])        
+    #print(dp[0][i], dp[1][i])
 
 p = dp[1][n - 1]
 q = base
 p %= mod
 q %= mod
 q = _pow(q, mod - 2, mod)
-print(p*q % mod)
+print(p * q % mod)

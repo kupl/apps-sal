@@ -6,6 +6,7 @@ for i in range(m):
     g[u].append(v)
     g[v].append(u)
 
+
 def bfs(init, c, p=False):
     nonlocal color
     q = deque(init)
@@ -17,6 +18,7 @@ def bfs(init, c, p=False):
                     print(u, v)
                 q.append(v)
                 color[v] = c
+
 
 color = [-1 for i in range(n + 1)]
 color[1] = 0
@@ -30,10 +32,10 @@ for x in g[1]:
 
 if len(g[1]) < d or d < c:
     print('NO')
-else: 
+else:
     is_kid = [False for x in g[1]]
     kids = []
-    
+
     picked = [False for i in range(c)]
     for i in range(len(g[1])):
         x = g[1][i]

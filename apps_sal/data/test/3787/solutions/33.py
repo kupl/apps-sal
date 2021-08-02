@@ -18,4 +18,3 @@ for d in distributes:
     ans.extend(list(range(marker, marker + d))[::-1])
     marker += d
 print(*ans, sep=' ')
-

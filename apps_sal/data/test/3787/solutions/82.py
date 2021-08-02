@@ -15,17 +15,16 @@ else:
 if possible:
     split = [A]
     N_left = N - A
-    for i in range(B-1, 0, -1):
+    for i in range(B - 1, 0, -1):
         split.append((N_left - 1) // i + 1 + split[-1])
         N_left -= (N_left - 1) // i + 1
 
     split.insert(0, 0)
     ans = []
     for i in range(1, len(split)):
-        rev = base[split[i-1]:split[i]]
+        rev = base[split[i - 1]:split[i]]
         rev.reverse()
         ans.extend(rev)
     print((" ".join(map(str, ans))))
 else:
     print((-1))
-

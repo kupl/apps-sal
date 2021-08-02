@@ -1,5 +1,7 @@
 # でつoO(YOU PLAY WITH THE CARDS YOU'RE DEALT..)
 import sys
+
+
 def main(N, A, B):
     if A + B - 1 > N or A * B < N:
         print((-1))
@@ -20,9 +22,11 @@ def main(N, A, B):
     s = [j + 1 for i, j in s]
     print((*s))
 
+
 def __starting_point():
     input = sys.stdin.readline
     N, A, B = list(map(int, input().split()))
     main(N, A, B)
+
 
 __starting_point()

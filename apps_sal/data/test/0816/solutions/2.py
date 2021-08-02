@@ -7,8 +7,7 @@ for num in a:
 res = 0
 for num in range(1, M):
     if cnt[num] > 0:
-        s = num^x
+        s = num ^ x
         if M > s >= num:
-            res += cnt[s]*cnt[num] if s != num else (cnt[s] - 1)*cnt[s]//2
+            res += cnt[s] * cnt[num] if s != num else (cnt[s] - 1) * cnt[s] // 2
 print(res)
-

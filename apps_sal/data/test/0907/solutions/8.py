@@ -19,4 +19,3 @@ for x_ in Counter(chain(*ab)).most_common(4):
         pass
 else:
     print("NO")
-

@@ -3,4 +3,3 @@ if m >= n and k >= n:
     print('Yes')
 else:
     print('No')
-

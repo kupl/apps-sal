@@ -4,9 +4,10 @@ n, m = map(int, input().split())
 l1 = [int(x) for x in input().split()]
 l2 = [int(x) for x in input().split()]
 
-probLeft = 1 # probability that I'm continuing
+probLeft = 1  # probability that I'm continuing
 
-def modInv(x, n = MOD - 2):
+
+def modInv(x, n=MOD - 2):
     if n <= 1:
         return (x ** n) % MOD
     tmp = (modInv(x, n // 2) ** 2) % MOD
@@ -14,13 +15,16 @@ def modInv(x, n = MOD - 2):
         tmp = tmp * x % MOD
     return tmp
 
+
 dp = {}
 
-def fraction(x,y):
-    if (x,y) in dp:
-        return dp[(x,y)]
-    dp[(x,y)] = x * modInv(y) % MOD
-    return dp[(x,y)]
+
+def fraction(x, y):
+    if (x, y) in dp:
+        return dp[(x, y)]
+    dp[(x, y)] = x * modInv(y) % MOD
+    return dp[(x, y)]
+
 
 minv = fraction(1, m)
 

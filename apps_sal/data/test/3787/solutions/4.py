@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,6 +15,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
@@ -23,7 +26,7 @@ N, A, B = MAP()
 if A * B < N:
     print((-1))
     return
-if A + B > N+1:
+if A + B > N + 1:
     print((-1))
     return
 if A == 1 and B != N or B == 1 and A != N:
@@ -33,12 +36,12 @@ remain = N - A
 if remain < B - 1:
     print((-1))
     return
-d, m = divmod(remain, B-1) if B > 1 else (0, 0)
+d, m = divmod(remain, B - 1) if B > 1 else (0, 0)
 if d > A:
     print((-1))
     return
 li = [[] for i in range(B)]
-li[0] = list(range(1, A+1))
+li[0] = list(range(1, A + 1))
 j = A + 1
 for i in range(1, B):
     tmp = []
@@ -55,4 +58,3 @@ ans = []
 for grp in li:
     ans += grp
 print((*ans))
-

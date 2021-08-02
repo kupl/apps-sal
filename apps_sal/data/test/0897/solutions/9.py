@@ -17,21 +17,18 @@ class RN:
         self.u = self.u % p
         self.d = self.d % p
 
-
     def add(self, u, d):
         self.u = self.u * d + u * self.d
         self.d = self.d * d
         self.cleanup()
 
-
     def mult(self, u, d):
 
-        return (self.u * u)%p, (self.d * d)%p
+        return (self.u * u) % p, (self.d * d) % p
 
     def mult_ip(self, u, d):
         # r.cleanup()
         self.u, self.d = self.u * u, (self.d * d) % p
-
 
     def get_m_exp(self):
         self.cleanup()
@@ -59,7 +56,6 @@ def sol(s1, s2, m):
     for gr, sm, i in zip(s1, s2, list(range(len(s1)))):
 
         strgr.cleanup()
-
 
         if gr != 0 and sm != 0:
 
@@ -96,4 +92,3 @@ a = sol([0,0,0],[0,0,0], 2) # 13/16
 '''
 
 print(sol(s1, s2, m))
-
