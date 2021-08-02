@@ -7,13 +7,13 @@ for i in range(n):
         break
 
 l = len(a)
-c = [0]*l
+c = [0] * l
 c[0] = 1
 for i in range(1, l):
-    if a[i] != a[i-1]:
+    if a[i] != a[i - 1]:
         c[i] = 1
     else:
-        c[i] = c[i-1] + 1
+        c[i] = c[i - 1] + 1
 
 if l == a.count(0):
     print(0)
@@ -21,5 +21,3 @@ elif c.count(1) + c.count(2) != l:
     print(-1)
 else:
     print(c.count(2))
-
-

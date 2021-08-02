@@ -17,4 +17,3 @@ else:
     minimum = int(ceil(total / n))
 
 print(minimum, maximum)
-

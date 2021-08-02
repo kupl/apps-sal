@@ -55,4 +55,3 @@ for _ in range(q):
     q_list.append(int(input("")))
 for query in q_list:
     print(solve(query))
-

@@ -13,10 +13,9 @@ for _ in range(n):
     a_list.append(a)
 tmp = 0
 for a in a_list:
-    tmp += a_max-a
+    tmp += a_max - a
 if tmp >= m:
     a_min = a_max
 else:
-    a_min = a_max + math.ceil((m-tmp)/n)
-print(a_min, a_max+m)
-
+    a_min = a_max + math.ceil((m - tmp) / n)
+print(a_min, a_max + m)

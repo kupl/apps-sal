@@ -1,9 +1,10 @@
 def gcd(x, y):
     if y == 0:
         return x
-    
+
     r = x % y
     return gcd(y, r)
+
 
 A, B, C, D = [int(x) for x in input().split()]
 if C > D:

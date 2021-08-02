@@ -7,6 +7,7 @@ input = sys.stdin.readline
 #     par[a] = find(par[a])
 #     return par[a]
 
+
 def find(a):
     upd = []
     cur = a
@@ -16,6 +17,7 @@ def find(a):
     for x in upd:
         par[x] = cur
     return cur
+
 
 def union(a, b):
     a = find(a)
@@ -43,8 +45,9 @@ def dfs(u, par):
             dist[v] = max(dist[u], w)
             dfs(v, u)
 
+
 def bfs(u):
-    visit = [False] * (n+1)
+    visit = [False] * (n + 1)
     from collections import deque
 
     dq = deque()
@@ -67,8 +70,8 @@ a = list(map(int, input().split()))
 # a = [i for i in range(1, n+1)]
 # import random
 
-par = [0] * (n+1)
-for i in range(1, n+1):
+par = [0] * (n + 1)
+for i in range(1, n + 1):
     par[i] = i
 edges = []
 # for i in range(1, n+1):
@@ -80,13 +83,13 @@ for i in range(m):
     edges.append(edge)
 edges.sort(key=lambda x: x[2])
 edges = mst()
-adj = [list() for i in range(n+1)]
+adj = [list() for i in range(n + 1)]
 for edge in edges:
     u, v, w = edge
     adj[u].append((v, w))
     adj[v].append((u, w))
 
-dist = [0] * (n+1)
+dist = [0] * (n + 1)
 # dfs(a[0], -1)
 bfs(a[0])
 ans = 0
@@ -94,5 +97,3 @@ for x in a:
     ans = max(ans, dist[x])
 ans = [ans] * k
 print(*ans)
-
-

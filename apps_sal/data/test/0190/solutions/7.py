@@ -16,4 +16,5 @@ def main():
                 y2 = max(y2, j)
     print(max(x2 - x1, y2 - y1) + 1)
 
+
 main()

@@ -1,6 +1,6 @@
 # coding: utf-8
 n = int(input())
-id = [int(i) for i in input().split() if i!='0']
+id = [int(i) for i in input().split() if i != '0']
 id.sort()
 ans = 0
 while id:
@@ -12,4 +12,3 @@ while id:
         ans = -1
         break
 print(ans)
-

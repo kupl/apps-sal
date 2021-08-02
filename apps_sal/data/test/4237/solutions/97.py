@@ -13,5 +13,4 @@ def num(a, c, d):
 
 
 a, b, c, d = list(map(int, input().split()))
-print((num(b, c, d) - num(a-1, c, d)))
-
+print((num(b, c, d) - num(a - 1, c, d)))

@@ -10,9 +10,8 @@ heapq.heapify(hq)
 
 for i in range(M):
     m = heapq.heappop(hq)
-    heapq.heappush(hq, m+1)
+    heapq.heappush(hq, m + 1)
 while hq:
     mn = heapq.heappop(hq)
 
 print(mn, mx)
-

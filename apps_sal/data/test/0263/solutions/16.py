@@ -20,6 +20,4 @@ for i in range(n):
             arr[i] += m
             m = 0
 
-print(maxx + math.ceil(m/n), maxx + x)
-
-
+print(maxx + math.ceil(m / n), maxx + x)

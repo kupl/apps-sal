@@ -8,4 +8,3 @@ def f(x):
 A, B, C, D = list(map(int, input().split()))
 lcm = C * D // gcd(C, D)
 print((f(B) - f(A - 1)))
-

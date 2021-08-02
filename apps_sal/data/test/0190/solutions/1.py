@@ -1,5 +1,6 @@
 from sys import stdin, stdout
 
+
 def main():
     h, w = map(int, stdin.readline().split())
     ver = set()

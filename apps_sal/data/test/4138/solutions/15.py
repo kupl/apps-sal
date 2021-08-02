@@ -1,5 +1,6 @@
 def cached(func):
     _cache = {}
+
     def wrapped(*args):
         nonlocal _cache
         if args not in _cache:
@@ -75,4 +76,3 @@ for _ in range(cases):
     number = binary_search(block_len, rel_index)
     digit = rel_index - block_len(number - 1)
     print(str(number)[digit])
-

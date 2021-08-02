@@ -9,4 +9,3 @@ def calc(x):
 
 
 print((calc(b) - calc(a - 1)))
-

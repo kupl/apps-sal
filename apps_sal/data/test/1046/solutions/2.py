@@ -12,6 +12,6 @@ for i in nums:
             speaking = -1
             break
 if speaking > 0:
-    print(int(speaking/2))
+    print(int(speaking / 2))
 else:
     print(speaking)

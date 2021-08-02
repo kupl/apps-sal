@@ -8,4 +8,3 @@ if 0 < d:
     ans[0] += (d + n - 1) // n
 
 print(" ".join(map(str, ans)))
-

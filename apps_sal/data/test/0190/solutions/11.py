@@ -14,7 +14,7 @@ for i in range(n):
 for i in range(n):
     for j in range(m):
         if b[i][j] == '*':
-            if i < y1 :
+            if i < y1:
                 y1 = i
             if j < x1:
                 x1 = j
@@ -28,5 +28,3 @@ if x > y:
     print(x)
 else:
     print(y)
-    
-

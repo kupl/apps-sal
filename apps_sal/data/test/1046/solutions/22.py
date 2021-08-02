@@ -15,4 +15,3 @@ for v in list(dct.values()):
         break
 
 print(total)
-
