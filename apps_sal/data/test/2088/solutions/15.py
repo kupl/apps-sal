@@ -24,7 +24,8 @@ nodes.reverse()
 dp = {}
 for u in nodes:
     count = 0
-    if len(G[u]) == 0: count += 1
+    if len(G[u]) == 0:
+        count += 1
     for v in G[u]:
         count += dp[v]
     dp[u] = count
@@ -32,4 +33,3 @@ for u in nodes:
 
 res = sorted(dp.values())
 print(' '.join(map(str, res)))
-

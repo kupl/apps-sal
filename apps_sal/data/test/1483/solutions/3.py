@@ -21,4 +21,3 @@ for i in range(len(ans)):
     else:
         s += str(ans[i])
 print(s)
-

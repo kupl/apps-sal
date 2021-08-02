@@ -3,7 +3,8 @@ import sys
 
 MOD = 10 ** 9 + 7
 INF = 10 ** 18
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
 
 sys.setrecursionlimit(10 ** 8)
 
@@ -27,4 +28,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

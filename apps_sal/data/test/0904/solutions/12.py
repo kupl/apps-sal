@@ -8,5 +8,5 @@ for i in s:
         if ord('A') <= ord(j) <= ord('Z'):
             tmp += 1
     ans = max(tmp, ans)
-    
+
 print(ans)

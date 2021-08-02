@@ -17,6 +17,7 @@ def update_list(l, t):
     for i in range(len(l)):
         l[i] += t
 
+
 def main():
     p, q, l, r = [int(i) for i in input().split()]
     z, x = read_to_list(p), read_to_list(q)

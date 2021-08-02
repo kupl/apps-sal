@@ -18,6 +18,3 @@ for i in range(m):
             break
 
     print(result[pos - 1])
-
-
-

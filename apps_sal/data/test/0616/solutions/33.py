@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, M, ABCi):
     inf = 10 ** 5 * 12 * 2
@@ -41,5 +41,6 @@ def __starting_point():
     # for i in range(M):
     #     ABCi[i].append(sample(tmp, ABCi[i][1]))
     # solve(N, M, ABCi)
+
 
 __starting_point()

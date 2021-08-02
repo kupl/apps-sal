@@ -9,7 +9,7 @@ def main():
 
         openable = 0
         for open in to_open:
-            openable += 1 << (open-1)
+            openable += 1 << (open - 1)
 
         for opened in range(all_patterns):
             pattern = opened | openable
@@ -21,11 +21,12 @@ def main():
     ans = DP[full_open]
     if ans == 10 ** 9:
         ans = -1
-        
+
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

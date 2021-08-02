@@ -3,7 +3,7 @@ S = [int(x) for x in input().split(" ")]
 lookup = {}
 
 for i, v in enumerate(S):
-    lookup[i+1] = v
+    lookup[i + 1] = v
 
 for i in range(1, N + 1):
     visited = {}
@@ -14,4 +14,3 @@ for i in range(1, N + 1):
         student = lookup[student]
 
     print(student, end=" ")
-

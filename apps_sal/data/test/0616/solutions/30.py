@@ -9,7 +9,7 @@ def main():
 
         openable = 0
         for open in to_open:
-            openable += 1 << (open-1)
+            openable += 1 << (open - 1)
         new_updated = set()
         for opened in updated_patterns:
             pattern = opened | openable
@@ -30,5 +30,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

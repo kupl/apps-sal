@@ -12,8 +12,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n = int(input())
 arr = [x - 1 for x in inpmap()]
@@ -27,4 +29,3 @@ for i in range(n):
         vis[p] = 1
         p = arr[p]
 print()
-

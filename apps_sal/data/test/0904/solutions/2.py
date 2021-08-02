@@ -1,5 +1,5 @@
-n = int(input())
 import string
+n = int(input())
 t = input().split(' ')
 
 result = 0
@@ -11,4 +11,3 @@ for item in t:
             current += 1
     result = max(result, current)
 print(result)
-

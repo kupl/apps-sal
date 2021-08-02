@@ -10,7 +10,7 @@ def main():
         cost, types = list(map(int, input().split()))
         to_open = np.array(list(map(int, input().split())), dtype=np.int64)
 
-        openable = np.left_shift(1, to_open-1).sum()
+        openable = np.left_shift(1, to_open - 1).sum()
         new_indexes = opened | openable
         new_costs = dp + cost
         sort_index = np.argsort(new_costs)
@@ -29,5 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

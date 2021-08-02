@@ -16,4 +16,3 @@ if dp[-1] == float('inf'):
 else:
     ans = dp[-1]
 print(ans)
-

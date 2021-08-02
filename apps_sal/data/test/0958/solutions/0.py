@@ -4,6 +4,7 @@ def check(s, k):
         ans += abs(ord(s[i]) - ord(k[i]))
     return ans
 
+
 n, k = list(map(int, input().split()))
 s = input()
 cnt = 0
@@ -23,7 +24,7 @@ else:
             k = 0
         elif ps2 > k:
             ans += chr(ord(s[cr]) + k)
-            k = 0            
+            k = 0
         else:
             if ps2 >= ps1:
                 ans += 'z'
@@ -35,4 +36,3 @@ else:
 ans += s[len(ans):]
 print(ans)
 #print(check(ans, s))
-

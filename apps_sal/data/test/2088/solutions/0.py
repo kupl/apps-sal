@@ -32,6 +32,7 @@ def read_num(fin, num_type=int):
     else:
         return tuple(tmp_list)
 
+
 def read_num_list(fin, num_type=int):
     return [num_type(x) for x in fin.readline().strip().split()]
 
@@ -94,15 +95,16 @@ def solve(fin):
                 q.append(f[x])
             count[f[x]] += count[x]
 
-
     # print(chs)
     count = sorted(count)
     print(' '.join([str(x) for x in count]))
+
 
 def __starting_point():
     if SUBMIT:
         solve(sys.stdin)
     else:
         solve(open(in_file_path, 'r'))
+
 
 __starting_point()

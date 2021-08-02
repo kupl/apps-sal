@@ -9,7 +9,7 @@ for i in range(m):
         mas1.append(a[j])
     mas2 = sorted(mas1)
     mas1.reverse()
-    for j in range(n-k):
+    for j in range(n - k):
         mas1.remove(mas2[j])
     mas1.reverse()
     res.append(mas1[pos - 1])

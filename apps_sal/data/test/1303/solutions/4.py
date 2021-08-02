@@ -15,11 +15,9 @@ for i in range(p):
 for i in range(q):
     b, e = list(map(int, input().split()))
     for i in range(b, e + 1):
-        X.add(i) 
+        X.add(i)
 cnt = 0
 for i in range(r, l + 1):
     if inter(Z, X, i):
         cnt += 1
 print(cnt)
-    
-

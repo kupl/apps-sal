@@ -30,4 +30,3 @@ for j in range(i, -1, -1):
         s[q[j]] = ans
 s.sort()
 print(' '.join(list(map(str, s))))
-

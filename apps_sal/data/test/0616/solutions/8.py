@@ -7,7 +7,7 @@ for _ in range(M):
     c = list(map(int, input().split()))
     key = 0
     for tmp in c:
-        key += 2**(tmp-1)
+        key += 2**(tmp - 1)
     A.append((a, key))
 L = len(min_state)
 for a, key in A:
@@ -20,5 +20,3 @@ if min_state[-1] == 10**9:
     print((-1))
 else:
     print((min_state[-1]))
-
-

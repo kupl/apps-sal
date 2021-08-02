@@ -11,4 +11,3 @@ def volume_of(s):
 n = int(stdin.readline())
 data = stdin.readline().rstrip().split()
 print(max(list(map(volume_of, data))))
-

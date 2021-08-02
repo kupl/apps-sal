@@ -9,4 +9,3 @@ for i in range(n):
         ii = inp[ii]
     ans.append(ii + 1)
 print(*ans)
-

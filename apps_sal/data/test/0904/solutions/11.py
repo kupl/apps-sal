@@ -5,6 +5,7 @@ def count_capitals(string):
             count += 1
     return count
 
+
 n = int(input())
 
 words = [x for x in input().split()]
@@ -14,5 +15,3 @@ for word in words:
     capitals.append(count_capitals(word))
 
 print(max(capitals))
-
-

@@ -9,7 +9,7 @@ for i in range(p):
 for i in range(q):
     a, b = list(map(int, input().split()))
     y.append((a, b))
-    
+
 for i in range(l, r + 1):
     f = 0
     for j in range(q):
@@ -22,6 +22,3 @@ for i in range(l, r + 1):
             break
     cnt += f
 print(cnt)
-    
-    
-

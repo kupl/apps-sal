@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def solve():
     INF = 10**10
 
@@ -13,13 +14,13 @@ def solve():
         cs = list(map(int, input().split()))
         key = 0
         for c in cs:
-            key |= 1<<(c-1)
+            key |= 1 << (c - 1)
         keys.append(key)
 
-    dp = [INF] * (1<<N)
+    dp = [INF] * (1 << N)
     dp[0] = 0
     for key, cost in zip(keys, costs):
-        for S in reversed(list(range(1<<N))):
+        for S in reversed(list(range(1 << N))):
             S2 = S | key
             c2 = dp[S] + cost
             if c2 < dp[S2]:
@@ -32,4 +33,3 @@ def solve():
 
 
 solve()
-
