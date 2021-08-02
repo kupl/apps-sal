@@ -18,4 +18,3 @@ for c in s:
         i = int(c)
         state[i] = 0
 print(''.join(map(str, state)))
-

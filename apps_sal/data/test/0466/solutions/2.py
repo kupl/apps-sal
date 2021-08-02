@@ -5,7 +5,7 @@ n, m = map(int, input().split())
 k = int(input())
 L = 10001
 for f in range(m + 1):
-	for g in range(n * m + 1):
-		if f * n + g + k >= n * m:
-			L = min(L, f * c + g * d)
+    for g in range(n * m + 1):
+        if f * n + g + k >= n * m:
+            L = min(L, f * c + g * d)
 print(L)

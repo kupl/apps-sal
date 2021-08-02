@@ -32,4 +32,3 @@ for i in range(n):
         x1 += 1
 
 print(str.join("\n", [str.join("", t) for t in zip(*columns)]))
-

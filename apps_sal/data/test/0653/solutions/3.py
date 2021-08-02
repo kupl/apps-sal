@@ -25,5 +25,3 @@ printstring = ""
 for i in range(10):
     printstring += str(arr[i])
 print(printstring)
-        
-

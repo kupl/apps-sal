@@ -2,6 +2,7 @@ import math
 import sys
 3
 
+
 def change_char_at(ch, s, indx):
     """
     Strings in Python are immutable objects. So, it is not possible to change a
@@ -33,7 +34,7 @@ def change_char_at(ch, s, indx):
 
     length = len(s) - 1
     if not(indx >= 0 and indx <= length):
-        msg  = "string index out of range; "
+        msg = "string index out of range; "
         msg += "attempt to access index at {0}; ".format(indx)
         msg += "allowable index range 0 to {0}".format(length)
         raise IndexError(msg)
@@ -52,23 +53,17 @@ def change_char_at(ch, s, indx):
     """
 
 
+s = input()
+x = 0
+y = 0
+for i in range(0, len(s)):
 
-s=input()
-x=0
-y=0
-for i in range(0,len(s)):
-        
-        if(s[i]=='y'):
-           y+=1
-        elif(s[i]=='x'):
-           x+=1;
-if(x-y>0):
-     print("x"*(x-y))
-           
+    if(s[i] == 'y'):
+        y += 1
+    elif(s[i] == 'x'):
+        x += 1;
+if(x - y > 0):
+    print("x" * (x - y))
+
 else:
-     print("y"*(y-x))
-           
-
-
-        
-
+    print("y" * (y - x))

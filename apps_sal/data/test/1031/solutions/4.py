@@ -23,6 +23,7 @@ def add_to_kardio(index, symbol):
         kardio[i].append(tmp)
     # print('after_add',kardio)
 
+
 def add_empty_top(length):
     # print('add_top',length,[' '] * length)
     kardio.insert(0, [' '] * length)
@@ -30,6 +31,7 @@ def add_empty_top(length):
 
 def add_empty_bottom(length):
     kardio.append([' '] * length)
+
 
 current_x = 0
 current_y = -1
@@ -42,14 +44,13 @@ for i in range(len(a)):
             current_y -= 1
 
             if current_y >= 0:
-                add_to_kardio(current_y,'/')
+                add_to_kardio(current_y, '/')
             else:
                 add_empty_top(current_x)
                 current_y = 0
                 add_to_kardio(current_y, '/')
 
-
-            current_x +=1
+            current_x += 1
             # print(kardio)
     else:
         current_y -= 1
@@ -63,7 +64,7 @@ for i in range(len(a)):
                 add_empty_bottom(current_x)
                 add_to_kardio(current_y, '\\')
 
-            current_x +=1
+            current_x += 1
             # print(kardio)
 
 for i in range(len(kardio)):

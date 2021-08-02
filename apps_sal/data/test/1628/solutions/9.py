@@ -9,4 +9,3 @@ if x_count > y_count:
 else:
     char = "y"
 print(char * abs(x_count - y_count))
-

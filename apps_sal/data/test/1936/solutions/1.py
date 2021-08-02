@@ -8,5 +8,3 @@ for _ in range(int(input())):
         print(-1, -1)
     else:
         print(a, 2 * a)
-
-

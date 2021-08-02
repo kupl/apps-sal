@@ -11,7 +11,6 @@ def code_parsing(string):
     else:
         return ""
 
+
 s = input()
 print(code_parsing(s))
-
-

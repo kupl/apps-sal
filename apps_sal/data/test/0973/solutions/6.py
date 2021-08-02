@@ -30,6 +30,4 @@ if f:
 else:
     print('Yes')
     for i in range(R):
-        print(r[i].replace('.','D'))
-
-
+        print(r[i].replace('.', 'D'))

@@ -8,7 +8,7 @@ for i in range(r):
             if i != r - 1 and ls[i + 1][j] == 'S': dead = True
             if j != 0 and ls[i][j - 1] == 'S': dead = True
             if j != c - 1 and ls[i][j + 1] == 'S': dead = True
-            if dead: 
+            if dead:
                 break
         elif ls[i][j] == '.':
             ls[i][j] = 'D'
@@ -19,5 +19,3 @@ else:
     print("Yes")
     for i in range(r):
         print(''.join(ls[i]))
-
-

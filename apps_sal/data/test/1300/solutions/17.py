@@ -24,9 +24,8 @@ for num in line:
             lut[num] += 1
         else:
             lut[num] = 1
-        
+
         if lut[num] >= best_delta:
             best_delta = lut[num]
 
 print(base_ans + best_delta)
-

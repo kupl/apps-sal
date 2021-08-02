@@ -9,6 +9,8 @@ for i in range(R):
     field.append(f)
 
 lu = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+
+
 def main():
     for i in range(R):
         for j in range(C):
@@ -27,5 +29,5 @@ def main():
     for line in field:
         print(''.join(line))
 
-main()
 
+main()

@@ -4,4 +4,3 @@ if left <= 0:
     print(0)
 else:
     print(min(left // n * c + left % n * d, (left + n - 1) // n * c, left * d))
-

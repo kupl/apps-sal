@@ -25,11 +25,11 @@ def inp():
 
 def solution():
     l, r = mulinp()
-    if r < 2*l:
+    if r < 2 * l:
         print(-1, -1)
         return
     else:
-        print(l, 2*l)
+        print(l, 2 * l)
         return
 
 
@@ -37,4 +37,3 @@ testcases = 1
 testcases = intinp()
 for _ in range(testcases):
     solution()
-

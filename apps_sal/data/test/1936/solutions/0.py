@@ -6,4 +6,3 @@ while t:
     else:
         print(-1, -1)
     t -= 1
-

@@ -1,4 +1,6 @@
 def f(x, y): return x * c + y * d
+
+
 c, d = map(int, input().split())
 n, m = map(int, input().split())
 k = n * m - int(input())

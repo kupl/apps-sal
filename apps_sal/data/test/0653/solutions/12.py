@@ -17,5 +17,4 @@ for i in s:
         a[int(i)] = 0
 
 for i in a:
-    print(i, end = '')
-
+    print(i, end='')

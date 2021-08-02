@@ -8,15 +8,15 @@ uch = k
 useosn = usedop = 0
 
 while uch < f:
-    if f-uch >= n:
-        if c/n < d:
+    if f - uch >= n:
+        if c / n < d:
             result += c
             uch += n
         else:
             result += d
             uch += 1
     else:
-        if c > (d*(f-uch)):
+        if c > (d * (f - uch)):
             while uch < f:
                 result += d
                 uch += 1
@@ -25,7 +25,3 @@ while uch < f:
             uch += n
 
 print(max(0, result))
-
-
-
-

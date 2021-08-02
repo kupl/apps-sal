@@ -21,4 +21,3 @@ for i in range(2000, -1, -1):
         graph.pop(i)
 
 print('\n'.join(graph))
-

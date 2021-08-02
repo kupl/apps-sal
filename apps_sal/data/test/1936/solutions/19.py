@@ -14,7 +14,7 @@ def solve():
     if a * 2 > b:
         print(-1, -1)
     else:
-        print(a, 2*a)
+        print(a, 2 * a)
     return
 
 
@@ -23,4 +23,3 @@ def solve():
 T = ni()
 for _ in range(T):
     solve()
-
