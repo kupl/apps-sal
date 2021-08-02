@@ -19,4 +19,3 @@ for i, e in enumerate(a):
 
 ans = dp[s][2]
 print(ans)
-

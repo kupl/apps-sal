@@ -69,8 +69,7 @@ dp = np.zeros((N, V + 1), dtype=np.int64)
 cs = np.zeros(V + 1, dtype=np.int64)
 for i, a in enumerate(A):
     dp[i, a] = i + 1
-    dp[i, a + 1 : S + 1] = cs[np.arange(a + 1, S + 1) - a]
+    dp[i, a + 1: S + 1] = cs[np.arange(a + 1, S + 1) - a]
     cs = (cs + dp[i]) % M
     ans = (ans + (N - i) * dp[i, S]) % M
 print(ans)
-

@@ -11,4 +11,3 @@ for a in A:
     ans += coef[S]
     ans %= mod
 print(ans)
-

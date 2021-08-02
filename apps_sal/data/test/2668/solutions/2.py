@@ -3,12 +3,10 @@
 jacketCost, sockCost, money = list(map(int, input().split()))
 
 remainingMoney = money - jacketCost
-PairOfsocks = remainingMoney//sockCost
+PairOfsocks = remainingMoney // sockCost
 
 
-if PairOfsocks%2 == 1:
-      print("Unlucky Chef" )
+if PairOfsocks % 2 == 1:
+    print("Unlucky Chef")
 else:
-      print("Lucky Chef" )
-
-
+    print("Lucky Chef")

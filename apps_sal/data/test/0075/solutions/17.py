@@ -26,4 +26,5 @@ def main():
 
     print("NO")
 
+
 main()

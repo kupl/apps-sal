@@ -16,4 +16,5 @@ def f_knapsack_for_all_segments(MOD=998244353):
         ans %= MOD
     return ans
 
+
 print(f_knapsack_for_all_segments())

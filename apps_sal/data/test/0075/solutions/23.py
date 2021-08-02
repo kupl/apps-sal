@@ -16,4 +16,3 @@ for i in r(n):
             p("YES\n", i + 1, " ", j + 1, sep="")
             return
 p("NO")
-

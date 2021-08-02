@@ -18,4 +18,3 @@ for i, a in enumerate(aaa, start=1):
     # print(fwd_acc)
     # print(ans)
 print(ans)
-

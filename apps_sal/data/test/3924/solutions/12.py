@@ -1,6 +1,7 @@
 def read():
     return list(map(int, input().split()))
 
+
 def solve(n, k, A):
     ans, prev = 0, 0
     for a in A:
@@ -11,10 +12,11 @@ def solve(n, k, A):
         elif total >= k:
             ans += total // k
             total %= k
-        prev = total        
+        prev = total
     ans += prev // k
     ans += 1 if prev % k > 0 else 0
     return ans
+
 
 n, k = read()
 A = read()

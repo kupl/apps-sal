@@ -9,7 +9,6 @@ for p in itertools.permutations(list(range(5))):
     maximum = max(maximum, g[p[0]][p[1]] + g[p[1]][p[0]] + g[p[2]][p[3]]
             + g[p[3]][p[2]] + g[p[1]][p[2]] + g[p[2]][p[1]] + g[p[3]][p[4]]
             + g[p[4]][p[3]] + g[p[2]][p[3]] + g[p[3]][p[2]] + g[p[3]][p[4]]
-            + g[p[4]][p[3]])
+        + g[p[4]][p[3]])
 
 print(maximum)
-

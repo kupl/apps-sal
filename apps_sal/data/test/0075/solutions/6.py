@@ -17,4 +17,3 @@ for i in range(n):
             print(i + 1, j + 1)
             return
 print('NO')
-

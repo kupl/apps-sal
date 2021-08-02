@@ -6,12 +6,14 @@ def setM():
         M.append((k, m))
         k //= 2
 
+
 def modp(n):
     K2 = K // 2
     k = K // 2
     for k, m in M:
         n = (n & (~m)) + ((n & m) >> (K2 + k)) * ((1 << K2 + k) % P)
     return n
+
 
 K = 64
 P = 998244353

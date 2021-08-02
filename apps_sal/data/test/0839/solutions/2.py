@@ -1,5 +1,6 @@
 from sys import stdin
 
+
 def generator(k):
     nonlocal generation
     nonlocal resnum

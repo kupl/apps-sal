@@ -8,4 +8,3 @@ for perm in permutations(list(range(5))):
             temp += matrix[x[j]][x[j + 1]] + matrix[x[j + 1]][x[j]]
     ans = max(ans, temp)
 print(ans)
-

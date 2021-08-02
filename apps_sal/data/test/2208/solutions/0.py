@@ -3,12 +3,14 @@ from bisect import bisect
 HISENTINEL = 10**9 + 1
 LOSENTINEL = -HISENTINEL
 
+
 def main():
     length = int(input())
     a = [int(fld) for fld in input().strip().split()]
     b = [int(fld) for fld in input().strip().split()]
     print(countmaxminsubseq(a, b))
-    
+
+
 def countmaxminsubseq(a, b):
     leq, lgt = getleftbounds(a, b, 0)
     req, rgt = getleftbounds(reversed(a), reversed(b), 1)
@@ -16,9 +18,10 @@ def countmaxminsubseq(a, b):
     rgt = reverseindex(rgt)
     count = 0
     for i, (leq1, lgt1, req1, rgt1) in enumerate(zip(leq, lgt, req, rgt)):
-        count += (leq1 - lgt1)*(rgt1 - i) + (i - leq1)*(rgt1 - req1)
+        count += (leq1 - lgt1) * (rgt1 - i) + (i - leq1) * (rgt1 - req1)
     return count
-    
+
+
 def getleftbounds(a, b, bias):
     astack = [(HISENTINEL, -1)]
     bstack = [(LOSENTINEL, -1)]
@@ -46,18 +49,17 @@ def getleftbounds(a, b, bias):
                 val, pos = bstack[istack]
                 lgt = max(lgt, pos)
                 leq = max(leq, lgt)
-                
+
         leqarr.append(leq)
         lgtarr.append(lgt)
         astack.append((aelt, i))
         bstack.append((belt, i))
     return leqarr, lgtarr
-    
+
+
 def reverseindex(rind):
     pivot = len(rind) - 1
     return [pivot - i for i in reversed(rind)]
-    
-   
-main()    
 
 
+main()

@@ -51,11 +51,11 @@ def check(r, c):
 
     return len(map_y) == sum
 
+
 for c in range(y):
     if check(max_r, c) is True:
         print("YES")
-        print(max_r+1, c+1)
+        print(max_r + 1, c + 1)
         return
 
 print("NO")
-
