@@ -4,8 +4,10 @@ def getin():
         xin = input()
     return xin
 
+
 def gi():
     return [int(x) for x in getin().split()]
+
 
 input()
 
@@ -32,4 +34,3 @@ if cur > 0:
 print(len(ans))
 if len(ans) > 0:
     print(" ".join([str(x) for x in ans]))
-

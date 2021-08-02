@@ -1,1 +1,1 @@
-print(1<<int(input()).bit_length()-1)
+print(1 << int(input()).bit_length() - 1)

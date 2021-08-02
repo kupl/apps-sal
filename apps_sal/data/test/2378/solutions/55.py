@@ -5,12 +5,14 @@ sys.setrecursionlimit(300000)
 
 MOD = 1000000007  # type: int
 
+
 def calc_fraction_mod(numerator, denominator):
     '''
         returns numerator / denominator (mod MOD)
     '''
     inv = pow(denominator, MOD - 2, MOD)
     return numerator * inv % MOD
+
 
 def solve(N: int, A: "List[int]", B: "List[int]"):
     conns = [[] for _ in range(N)]
@@ -24,6 +26,7 @@ def solve(N: int, A: "List[int]", B: "List[int]"):
 
     num = [0]
     visited = [False] * N
+
     def dfs(idx):
         visited[idx] = True
         children = 0
@@ -37,7 +40,7 @@ def solve(N: int, A: "List[int]", B: "List[int]"):
         subs.append(N - children - 1)
         #tmp = pow(2, N - 1, MOD)
         tmp = pows[N - 1]
-        tmp -= 1 # all white
+        tmp -= 1  # all white
         for sub in subs:
             #tmp -= pow(2, sub, MOD) - 1
             tmp -= pows[sub] - 1
@@ -51,6 +54,7 @@ def solve(N: int, A: "List[int]", B: "List[int]"):
     ret = calc_fraction_mod(num, deno)
     print(ret)
     return
+
 
 def main():
     def iterate_tokens():
@@ -66,7 +70,9 @@ def main():
         B[i] = int(next(tokens))
     solve(N, A, B)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

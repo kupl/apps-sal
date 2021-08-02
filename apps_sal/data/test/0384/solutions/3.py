@@ -13,4 +13,3 @@ if cur != 0:
     a.append(cur)
 print(len(a))
 print(' '.join(map(str, a)))
-

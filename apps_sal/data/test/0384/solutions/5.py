@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 n = int(input())
 z = input()
 z += 'W'
@@ -17,4 +18,3 @@ for i in z:
     prev = i
 print(len(ans))
 print(*ans)
-

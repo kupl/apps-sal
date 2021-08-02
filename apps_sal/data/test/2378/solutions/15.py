@@ -3,6 +3,7 @@ import sys
 sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
 
+
 def dfs(v):
     visited[v] = True
     for i in range(len(AL[v][CHILDREN])):
@@ -13,15 +14,18 @@ def dfs(v):
         AL[v][SIZE] += dfs(u)
     return AL[v][SIZE]
 
+
 def anaaki(v):
     ret = powp - 1
     for ch in AL[v][CHILDREN]:
-        if ch is None: continue
+        if ch is None:
+            continue
         ret -= pow(2, AL[ch][SIZE], p) - 1
         ret %= p
     ret -= pow(2, n - AL[v][SIZE], p) - 1
     ret %= p
     return ret
+
 
 n = int(input())
 SIZE = 0

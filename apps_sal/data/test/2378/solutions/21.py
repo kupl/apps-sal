@@ -2,7 +2,7 @@ from sys import setrecursionlimit
 setrecursionlimit(2 * (10 ** 5))
 
 n = int(input())
-ab = [tuple([int(x)-1 for x in input().split()]) for _ in range(n-1)]
+ab = [tuple([int(x) - 1 for x in input().split()]) for _ in range(n - 1)]
 
 e = [[] for _ in range(n)]
 
@@ -13,6 +13,7 @@ for a, b in ab:
 MOD = 10 ** 9 + 7
 
 d = []
+
 
 def modinv(x):
     a = x
@@ -30,6 +31,7 @@ def modinv(x):
         u += MOD
     return u
 
+
 def dfs(x, p):
     if len(e[x]) == 1:
         if e[x][0] == p:
@@ -45,7 +47,8 @@ def dfs(x, p):
         d.append(ret)
     return ret
 
-dfs(0,-1)
+
+dfs(0, -1)
 
 f = []
 w = 1
@@ -53,20 +56,19 @@ for i in range(n + 1):
     f.append(w)
     w = (w * 2) % MOD
 
-#print(d)
+# print(d)
 
 ans = 0
 for x in d:
-    ans += ((f[x] - 1) * (f[n-x] - 1)) % MOD
+    ans += ((f[x] - 1) * (f[n - x] - 1)) % MOD
     ans %= MOD
 
-#print(ans)
+# print(ans)
 
-ans = (ans - f[n-1] * n + f[n] - 1 + MOD) % MOD
+ans = (ans - f[n - 1] * n + f[n] - 1 + MOD) % MOD
 
-#print(ans)
+# print(ans)
 
 ans = (ans * modinv(f[n])) % MOD
 
 print(ans)
-

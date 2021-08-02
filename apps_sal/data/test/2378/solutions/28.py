@@ -15,6 +15,7 @@ X = [0] * N
 visited = [False] * N
 visited[0] = True
 
+
 def dfs(u, i):
     res = 1
     for v, c in E[u]:
@@ -23,6 +24,7 @@ def dfs(u, i):
             res += dfs(v, c)
     X[i] = res
     return res
+
 
 dfs(0, -1)
 

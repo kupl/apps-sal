@@ -11,4 +11,3 @@ for i in range(1, N + 1):
         ans_max = max(ans_max, cnt)
         i //= 2
 print(ans)
-

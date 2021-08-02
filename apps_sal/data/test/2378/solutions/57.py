@@ -23,20 +23,20 @@ ans = 0
 def dfs(node, parent):
     nonlocal ans
     cnt = 1
-    
+
     for child in adj[node]:
         if child != parent:
             cnt += dfs(child, node)
-    
-    ans += (pow2[cnt] - 1) * (pow2[N-cnt] - 1)
+
+    ans += (pow2[cnt] - 1) * (pow2[N - cnt] - 1)
     ans %= mod
-    
+
     return cnt
+
 
 dfs(0, None)
 
-ans = (ans - N * pow2[N-1] + pow2[N] - 1) % mod
+ans = (ans - N * pow2[N - 1] + pow2[N] - 1) % mod
 ans = ans * pow(pow2[N], mod - 2, mod) % mod
 
 print(ans)
-

@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(2*10**5)
+sys.setrecursionlimit(2 * 10**5)
 input = sys.stdin.readline
 
 
@@ -21,7 +21,7 @@ def dfs(node, edges, seen, counts):
     return count
 
 
-def calc_blank(node, counts: list, edges, all, mod=10**9+7):
+def calc_blank(node, counts: list, edges, all, mod=10**9 + 7):
     n = len(counts)
     paths = edges[node]
     if len(paths) <= 1:
@@ -42,25 +42,26 @@ def main():
     mod = 10**9 + 7
     n = int(input())
     edges = [[] for _ in range(n)]
-    for _ in range(n-1):
+    for _ in range(n - 1):
         a, b = list(map(int, input().split()))
-        edges[a-1].append(b-1)
-        edges[b-1].append(a-1)
+        edges[a - 1].append(b - 1)
+        edges[b - 1].append(a - 1)
 
     counts = calc_counts(n, edges)
-    all = pow(2, n-1, mod)
+    all = pow(2, n - 1, mod)
     blanks = 0
     for node in range(n):
         blank = calc_blank(node, counts, edges, all)
         blanks += blank
         blanks %= mod
 
-    inv_denominator = pow(pow(2, n, mod), mod-2, mod)
+    inv_denominator = pow(pow(2, n, mod), mod - 2, mod)
     ans = blanks * inv_denominator % mod
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

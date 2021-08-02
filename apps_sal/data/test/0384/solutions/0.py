@@ -15,5 +15,4 @@ if b > 0:
     R += [b]
 print(len(R))
 for i in range(len(R)):
-    print(R[i],end=" ")
-
+    print(R[i], end=" ")

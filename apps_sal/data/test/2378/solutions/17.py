@@ -49,4 +49,3 @@ for v in reversed(order):
 denom = pow2[N]
 ans = numer * pow(denom, MOD - 2, MOD) % MOD
 print(ans)
-

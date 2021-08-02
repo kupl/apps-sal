@@ -39,4 +39,3 @@ for i in size[2:]:
 ans -= po2_inv[n] + n * po2_inv[1]
 ans %= mod
 print(ans)
-

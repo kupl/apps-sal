@@ -8,6 +8,8 @@ for i in range(n - 1):
     edges[a - 1].append((b - 1, i))
     edges[b - 1].append((a - 1, i))
 l = [0 for i in range(n)]
+
+
 def dfs(cur, x):
     res = 1
     for i in edges[cur]:
@@ -15,6 +17,8 @@ def dfs(cur, x):
             res += dfs(i[0], i[1])
     l[x] = res
     return res
+
+
 dfs(0, -1)
 l2 = [1]
 i2 = pow(2, mod - 2, mod)

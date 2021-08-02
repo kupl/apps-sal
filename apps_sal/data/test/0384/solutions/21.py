@@ -12,4 +12,3 @@ if (cnt):
     cnt = 0
 print(len(ans))
 print(*ans)
-

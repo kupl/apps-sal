@@ -8,4 +8,3 @@ while counter <= k:
         md = counter
     counter += 1
 print(md, n // md)
-

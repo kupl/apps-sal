@@ -1,2 +1,1 @@
-print((2**(len(bin(int(input()))[2:])-1)))
-
+print((2**(len(bin(int(input()))[2:]) - 1)))

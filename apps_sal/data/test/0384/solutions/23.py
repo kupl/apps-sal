@@ -9,4 +9,3 @@ for i in s:
 print(n)
 if res:
     print(res)
-
