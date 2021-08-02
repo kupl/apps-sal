@@ -4,4 +4,5 @@ def main():
     one = s.count("1")
     print(min(zero, one) * 2)
 
+
 main()

@@ -5,7 +5,7 @@ input = sys.stdin.readline
 n = int(input())
 num_edge = 0
 num_vertex = 0
-for i in range(1, n): 
+for i in range(1, n):
     u_v = list(map(int, input().split()))
     u = u_v[0]
     v = u_v[1]
@@ -18,5 +18,3 @@ for i in range(1, n):
 num_vertex += n
 
 print((num_vertex - num_edge))
-
-

@@ -9,7 +9,7 @@ def main():
         for i in range(1, d + 1):
             print(i, i + 1)
         return 0
-    if  n < d +1 or k <= 2 or d == 1:
+    if n < d + 1 or k <= 2 or d == 1:
         print("NO")
         return 0
     if d % 2 == 0:
@@ -55,5 +55,6 @@ def main():
                         return 0
             dev += 1
             leaves = new_leaves + [1 - dev + d // 2, 2 + dev + d // 2]
-main()
 
+
+main()

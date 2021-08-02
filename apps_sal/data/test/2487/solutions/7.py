@@ -6,4 +6,3 @@ for i in range(N - 1):
     a, b = min(a, b), max(a, b)
     E += a * (N - b + 1)
 print((V - E))
-

@@ -31,10 +31,8 @@ else:
     ru *= res
     res *= n
 
-
     def g(a, b, d, e):
         return a == 0 or (b if a < 0 else d) > e
-
 
     for c in s:
         res += 1
@@ -49,4 +47,3 @@ else:
         if g(xpy, ru, ld, p2) and g(xmy, dr, lu, m2):
             break
     print(res)
-

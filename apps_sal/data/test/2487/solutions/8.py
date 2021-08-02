@@ -7,4 +7,3 @@ V = 0
 for r in range(1, N + 1):
     V += r * (N - r + 1)
 print((V - M))
-

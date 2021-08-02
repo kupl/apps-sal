@@ -9,5 +9,5 @@ def main():
 
     return N * (N + 1) * (N + 2) // 6 - h
 
-print((main()))
 
+print((main()))

@@ -15,4 +15,3 @@ for s in S:
         d.append(s)
 
 print(cnt)
-

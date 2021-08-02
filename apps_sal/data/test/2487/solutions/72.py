@@ -14,4 +14,3 @@ for _ in range(N - 1):
 
 # print(V,E)
 print((V - E))
-

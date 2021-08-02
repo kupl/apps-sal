@@ -6,6 +6,7 @@ def s(x):
         tmp //= 10
     return ans
 
+
 def main(a, b, c):
     ans = []
     for i in range(82):
@@ -14,8 +15,8 @@ def main(a, b, c):
             ans.append(x)
     print(len(ans))
     for i in ans:
-        print(i, end = ' ')
+        print(i, end=' ')
 
-a, b, c = map(int, input().split()) 
+
+a, b, c = map(int, input().split())
 main(a, b, c)
-

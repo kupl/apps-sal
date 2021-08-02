@@ -5,10 +5,11 @@ Author  : chaotic_iak
 Language: Python 3.3.4
 """
 
+
 def main():
-    a,b,c = read()
+    a, b, c = read()
     res = []
-    for i in range(1, 82): # max is 999999999
+    for i in range(1, 82):  # max is 999999999
         x = b * (i**a) + c
         if x <= 0 or x >= 10**9: continue
         if sum(map(int, list(str(x)))) == i: res.append(x)
@@ -16,7 +17,8 @@ def main():
     print(len(res))
     print(" ".join(map(str, res)))
 
-################################### NON-SOLUTION STUFF BELOW
+# NON-SOLUTION STUFF BELOW
+
 
 def read(mode=2):
     # 0: String
@@ -27,10 +29,12 @@ def read(mode=2):
     if mode == 1: return inputs.split()
     if mode == 2: return list(map(int, inputs.split()))
 
+
 def write(s="\n"):
     if s is None: s = ""
     if isinstance(s, list): s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
+
 
 write(main())

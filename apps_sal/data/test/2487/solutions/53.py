@@ -1,6 +1,6 @@
 def main():
     N = int(input())
-    uv = [list(map(int, input().split())) for _ in range(N -1)]
+    uv = [list(map(int, input().split())) for _ in range(N - 1)]
 
     ans = 0
     # 頂点の足し合わせ
@@ -16,5 +16,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

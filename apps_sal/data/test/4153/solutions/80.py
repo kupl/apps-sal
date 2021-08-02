@@ -13,5 +13,5 @@ for i in range(len(S)):
         c0 += 1
     else:
         c1 += 1
-ans = len(S) - abs(c0-c1)
+ans = len(S) - abs(c0 - c1)
 print(ans)

@@ -6,4 +6,4 @@ for c in S:
         z += 1
     else:
         o += 1
-print(min([z,o])*2)
+print(min([z, o]) * 2)

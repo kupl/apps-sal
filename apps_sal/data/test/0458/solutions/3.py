@@ -5,6 +5,7 @@ def s(x):
         x //= 10
     return res
 
+
 a, b, c = list(map(int, input().split()))
 ans = []
 for i in range(100):
@@ -18,4 +19,3 @@ ans.sort()
 print(len(ans))
 if len(ans) != 0:
     print(*ans)
-

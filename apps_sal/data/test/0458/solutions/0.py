@@ -11,4 +11,3 @@ for sum in range(1, 200):
         ans.append(x)
 print(len(ans))
 print(*ans)
-

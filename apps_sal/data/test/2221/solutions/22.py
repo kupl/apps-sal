@@ -45,4 +45,3 @@ if check(x0, y0, x1, y1, max_mid):
     print(max_mid)
 else:
     print(-1)
-

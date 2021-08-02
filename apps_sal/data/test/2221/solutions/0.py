@@ -16,32 +16,34 @@ elif s[0] == 'U':
     psy[0] = +1
 
 for i in range(1, n):
-    psx[i] = psx[i-1]
-    psy[i] = psy[i-1]
-    
+    psx[i] = psx[i - 1]
+    psy[i] = psy[i - 1]
+
     if s[i] == 'L':
         psx[i] += -1
     elif s[i] == 'R':
         psx[i] += +1
-    
+
     if s[i] == 'D':
         psy[i] += -1
     elif s[i] == 'U':
         psy[i] += +1
+
 
 def valid(step):
     cycle = step // n
     rem = step % n
     x = x1
     y = y1
-    x += psx[n-1] * cycle
-    y += psy[n-1] * cycle
+    x += psx[n - 1] * cycle
+    y += psy[n - 1] * cycle
     if rem > 0:
-        x += psx[rem-1]
-        y += psy[rem-1]
+        x += psx[rem - 1]
+        y += psy[rem - 1]
     ManhattanDistance = abs(x - x2) + abs(y - y2)
     return (ManhattanDistance <= step)
-    
+
+
 def binsearch(top, bot):
     res = -1
     while top <= bot:
@@ -52,6 +54,6 @@ def binsearch(top, bot):
         else:
             top = mid + 1
     return res
-    
+
 
 print(binsearch(0, 1000000000000000000))

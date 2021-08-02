@@ -6,4 +6,3 @@ else:
     for i in range(a + 1, b + 1):
         k *= i
     print(k % 10)
-

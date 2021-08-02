@@ -9,8 +9,8 @@ try:
         line = input().split()
         u = min(int(line[0]), int(line[1])) - 1
         v = max(int(line[0]), int(line[1])) - 1
-        a -= (u + 1) * (N - v)        
+        a -= (u + 1) * (N - v)
 except:
-  pass
+    pass
 
 print(a)

@@ -1,6 +1,7 @@
 def sum_n(x):
     return sum(map(int, list(str(x))))
 
+
 a, b, c = list(map(int, input().split()))
 result = []
 for s in range(1, 82):
@@ -10,4 +11,3 @@ for s in range(1, 82):
 print(len(result))
 if len(result):
     print(" ".join(result))
-

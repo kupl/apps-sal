@@ -10,4 +10,3 @@ for i in range(N - 1):
     ans -= (N - v + 1) * u
 
 print(ans)
-

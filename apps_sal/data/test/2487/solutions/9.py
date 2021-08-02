@@ -52,4 +52,5 @@ def __starting_point():
 
     main(sys.stdin, sys.stdout)
 
+
 __starting_point()

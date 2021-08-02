@@ -12,8 +12,8 @@ from itertools import chain
 
 x1, y1 = list(map(int, input().split()))
 x2, y2 = list(map(int, input().split()))
-xx = x2-x1
-yy = y2-y1
+xx = x2 - x1
+yy = y2 - y1
 n = int(input())
 s = list(input())
 
@@ -27,9 +27,9 @@ dy = pyli[-1]
 
 def isreachable(x, y, d, divmod=divmod):
     cyc, m = divmod(d, n)
-    ddx = dx*cyc + pxli[m]
-    ddy = dy*cyc + pyli[m]
-    return abs(x-ddx)+abs(y-ddy) <= d
+    ddx = dx * cyc + pxli[m]
+    ddy = dy * cyc + pyli[m]
+    return abs(x - ddx) + abs(y - ddy) <= d
 
 
 if not isreachable(xx, yy, 10**17):
@@ -38,8 +38,8 @@ if not isreachable(xx, yy, 10**17):
 
 db = 10**17
 ds = 0
-while db-ds > 1:
-    dm = (db+ds)//2
+while db - ds > 1:
+    dm = (db + ds) // 2
     if isreachable(xx, yy, dm):
         db = dm
     else:
@@ -48,6 +48,4 @@ while db-ds > 1:
 if isreachable(xx, yy, ds):
     print(ds)
 else:
-    print(ds+1)
-
-
+    print(ds + 1)

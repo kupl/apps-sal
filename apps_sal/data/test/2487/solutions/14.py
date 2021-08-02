@@ -15,12 +15,12 @@ def main():
     ans = 0
     N = INT()
     for i in range(N):
-        ans += (N-i)*(N-i+1)//2
-    uv = ZIP(N-1)
+        ans += (N - i) * (N - i + 1) // 2
+    uv = ZIP(N - 1)
     for u, v in uv:
         if v < u:
             u, v = v, u
-        ans -= u * (N-v+1)
+        ans -= u * (N - v + 1)
     print(ans)
 
     return
@@ -28,5 +28,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

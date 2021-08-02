@@ -21,4 +21,3 @@ if s == "FRI":
 if s == "SAT":
     print((1))
     return()
-

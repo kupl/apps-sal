@@ -1,2 +1,2 @@
-S=['SUN','MON','TUE','WED','THU','FRI','SAT']
-print(7-S.index(input()))
+S = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+print(7 - S.index(input()))
