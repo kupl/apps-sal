@@ -13,4 +13,3 @@ elif ab < cd:
     result = 'Right'
 
 print(result)
-

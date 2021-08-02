@@ -9,4 +9,3 @@ elif left_weight > right_weight:
     print('Left')
 elif right_weight > left_weight:
     print('Right')
-

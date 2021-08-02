@@ -4,9 +4,9 @@ r = 'No'
 t2 = T + T
 
 if set(S) == set(T):
-  if t2.count(S) > 0:
-    r = 'Yes'
+    if t2.count(S) > 0:
+        r = 'Yes'
 else:
-  r = 'No'
-  
+    r = 'No'
+
 print(r)

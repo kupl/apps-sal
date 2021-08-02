@@ -5,4 +5,3 @@ for i in range(n):
     if b - a >= 2:
         cnt += 1
 print(cnt)
-

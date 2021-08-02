@@ -5,4 +5,3 @@ for i in range(n):
     if q - p >= 2:
         count += 1
 print(count)
-

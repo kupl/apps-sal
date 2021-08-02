@@ -15,7 +15,6 @@ count = 2
 for i in range(2, n):
     a = b
     b = now
-    now = a+b
+    now = a + b
 
 print(now)
-

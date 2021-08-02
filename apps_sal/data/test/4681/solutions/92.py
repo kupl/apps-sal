@@ -5,7 +5,7 @@ if n == 1:
 x = 2
 y = 1
 ans = 0
-for i in range(n-1):
+for i in range(n - 1):
     ans = x + y
     x = y
     y = ans

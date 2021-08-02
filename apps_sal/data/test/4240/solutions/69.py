@@ -11,12 +11,12 @@ judgment = 0
 # sの長さだけ順番入れ替えを繰り返し
 while count <= len(s):
     item = s.pop()
-    s.insert(0,item)
+    s.insert(0, item)
     if s == t:
         # s==tになったらjudgmentでカウントアップ
         judgment += 1
     # 回数をカウントアップ
-    count +=1
+    count += 1
 
 # 一回もs==tになってなければNo
 if judgment == 0:

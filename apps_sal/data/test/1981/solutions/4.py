@@ -3,9 +3,9 @@ from collections import defaultdict
 n, m = map(int, input().split())
 cats = list(map(int, input().split()))
 tree = defaultdict(list)
-vst = [0]*n
+vst = [0] * n
 
-for _ in range(n-1):
+for _ in range(n - 1):
     a, b = map(int, input().split())
     a -= 1
     b -= 1

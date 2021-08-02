@@ -4,7 +4,7 @@ def main():
     x = len(s)
 
     for index in range(x):
-        if (s[index+1:] + s[:index+1]) == t:
+        if (s[index + 1:] + s[:index + 1]) == t:
             print("Yes")
             return
 

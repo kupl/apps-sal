@@ -10,7 +10,6 @@ if s == t:
 s = s[1:] + s[0]
 
 
-
 while (s != origin):
     if s == t:
         print("Yes")
@@ -18,4 +17,3 @@ while (s != origin):
     s = s[1:] + s[0]
 
 print("No")
-

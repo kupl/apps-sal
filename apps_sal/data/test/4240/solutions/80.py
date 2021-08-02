@@ -1,11 +1,11 @@
-s=input()
-t=input()
-total=False
+s = input()
+t = input()
+total = False
 for i in range(len(s)):
-    s=s[len(s)-1]+s[0:len(s)-1]
-    if s==t:
+    s = s[len(s) - 1] + s[0:len(s) - 1]
+    if s == t:
         print("Yes")
-        total=True
+        total = True
         break
-if total==False:
+if total == False:
     print("No")

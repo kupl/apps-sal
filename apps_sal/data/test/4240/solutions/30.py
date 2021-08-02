@@ -6,5 +6,3 @@ for i in range(len(S)):
         print('Yes')
         return
 print('No')
-
-

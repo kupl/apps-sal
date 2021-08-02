@@ -7,6 +7,6 @@ T = input()
 for i in range(len(S)):
     if S[i:] + S[:i] == T:  # SとTに使われてるアルファべットが同じという証明
         print('Yes')
-        return              
+        return
 # elseでは出来なかった。一旦exitでる。
 print('No')

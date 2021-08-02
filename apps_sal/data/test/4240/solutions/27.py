@@ -8,4 +8,3 @@ for i in range(len(S)):
         break
 else:
     print('No')
-

@@ -11,8 +11,3 @@ for i in S:
         break
 
 print(ans)
-
-
-
-
-

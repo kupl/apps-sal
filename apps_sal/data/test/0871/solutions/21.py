@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, s = rd()
 a = [- s - 1]
 for _ in range(n):
@@ -10,4 +12,3 @@ for i in range(1, len(a)):
         break
     x = a[i] + s + 1
 print(x // 60, x % 60)
-

@@ -9,10 +9,13 @@ def Input():
 def main():
     a, b, c, d = Input()
     x, y = a + b, c + d
-    
-    if   x > y: print("Left")
-    elif x < y: print("Right")
-    else:       print("Balanced")
+
+    if x > y:
+        print("Left")
+    elif x < y:
+        print("Right")
+    else:
+        print("Balanced")
 
 
 main()

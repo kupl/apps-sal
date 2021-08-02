@@ -5,4 +5,3 @@ ans = a[0]
 for i in range(5):
     ans = min(ans, a[i] // d[i])
 print(ans)
-

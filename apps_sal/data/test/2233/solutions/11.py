@@ -13,8 +13,7 @@ for da in range(k):
     if len(a) != 2:
         print("No")
         continue
-    if s1[a[0]]==s1[a[1]] and s2[a[0]]==s2[a[1]]:
+    if s1[a[0]] == s1[a[1]] and s2[a[0]] == s2[a[1]]:
         print("Yes")
     else:
         print("No")
-

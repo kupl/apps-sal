@@ -8,9 +8,8 @@ for _ in range(t):
     while len(s) < n:
         for k in ks:
             if k - c > 0:
-                s.add(k-c)
+                s.add(k - c)
             if k + c <= n:
-                s.add(k+c)
+                s.add(k + c)
         c += 1
     print(c)
-

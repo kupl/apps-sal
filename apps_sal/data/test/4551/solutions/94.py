@@ -8,4 +8,3 @@ elif A + B > C + D:
     print('Left')
 else:
     print('Right')
-

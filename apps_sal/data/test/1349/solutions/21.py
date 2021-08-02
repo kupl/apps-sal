@@ -10,6 +10,6 @@ for i in range(t):
             max_delta = delta
     t_ans = max(max_delta // 2 + 1, x[0], n - x[-1] + 1)
     ans.append(t_ans)
-    
+
 for a in ans:
     print(a)

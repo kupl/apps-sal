@@ -21,6 +21,7 @@ while len(q) != 0:
         ans += 1
         continue
     for i in graf[v]:
-        if i == prev: continue
+        if i == prev:
+            continue
         q.append((i, catind, v))
 print(ans)

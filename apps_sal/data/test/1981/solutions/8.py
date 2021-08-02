@@ -46,16 +46,16 @@ class Park:
         self.nums = list(map(int, uinput().split()))
 
         # Reading multiple number of lines of the same number of elements each
-        l, s = self.n-1, 2
+        l, s = self.n - 1, 2
         inp = (" ".join(uinput() for i in range(l))).split()
-        self.numm = [[int(inp[i]) for i in range(j, l*s, s)] for j in range(s)]
+        self.numm = [[int(inp[i]) for i in range(j, l * s, s)] for j in range(s)]
         self.numa, self.numb = self.numm
 
         # Building the tree
         self.nodes = [Node(i, self.nums[i]) for i in range(len(self.nums))]
 
         for i in range(len(self.numa)):
-            self.nodes[self.numa[i]-1].add_edge(self.nodes[self.numb[i]-1])
+            self.nodes[self.numa[i] - 1].add_edge(self.nodes[self.numb[i] - 1])
 
     def calculate(self):
         """ Main calcualtion function of the class """
@@ -129,7 +129,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -140,9 +140,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -154,5 +155,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Park().calculate())
+
 
 __starting_point()

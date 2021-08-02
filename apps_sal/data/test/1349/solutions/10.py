@@ -20,4 +20,3 @@ for kekas in range(t):
     for j in range(1, k):
         maxi = max(maxi, 1 + math.floor((ar[j] - ar[j - 1]) / 2))
     print(maxi)
-

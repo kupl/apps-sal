@@ -8,4 +8,3 @@ elif left > right:
     print('Left')
 else:
     print('Right')
-

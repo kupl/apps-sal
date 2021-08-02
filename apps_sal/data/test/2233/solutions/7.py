@@ -5,12 +5,11 @@ for _ in range(K):
     T = input()
     diff = []
     for c1, c2 in zip(S, T):
-        if c1!=c2:
+        if c1 != c2:
             diff.append((c1, c2))
     f = False
-    if len(diff)==2:
+    if len(diff) == 2:
         (a, b), (c, d) = diff
-        if a==c and b==d:
+        if a == c and b == d:
             f = True
     print("Yes" if f else "No")
-

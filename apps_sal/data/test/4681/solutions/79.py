@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 @lru_cache
 def lucas(n):
     if n == 0:
@@ -7,8 +8,8 @@ def lucas(n):
     if n == 1:
         return 1
     else:
-        return lucas(n-1)+lucas(n-2)
+        return lucas(n - 1) + lucas(n - 2)
+
 
 N = int(input())
 print((lucas(N)))
-

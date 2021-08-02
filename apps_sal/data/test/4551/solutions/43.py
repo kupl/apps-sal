@@ -1,5 +1,5 @@
 # 各錘の重量を取得
-A,B,C,D = map(int,input().split())
+A, B, C, D = map(int, input().split())
 
 # 左と右の皿の重さを計算
 LWeight = A + B

@@ -27,4 +27,3 @@ while stack:
             ans += 1
 
 print(ans)
-

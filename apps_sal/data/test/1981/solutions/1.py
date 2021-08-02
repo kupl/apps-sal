@@ -3,7 +3,7 @@ n, m = tuple(map(int, input().split()))
 is_cat = tuple(map(int, input().split()))
 
 p = [[] for i in range(n)]
-for i in range(n-1):
+for i in range(n - 1):
     x, y = list(map(int, input().split()))
     p[x - 1].append(y - 1)
     p[y - 1].append(x - 1)
@@ -29,4 +29,3 @@ while len(q) > 0:
 
 
 print(res)
-

@@ -36,4 +36,3 @@ else:
     print("{} {}".format(res // 60, res % 60))
 # else:
 #     print()
-

@@ -1,6 +1,7 @@
 s = str(input())
 t = str(input())
 
+
 def answer(s: str, t: str) -> str:
     for i in range(len(s)):
         tmp = s[i:] + s[:i]
@@ -10,5 +11,5 @@ def answer(s: str, t: str) -> str:
     else:
         return 'No'
 
-print((answer(s, t)))
 
+print((answer(s, t)))

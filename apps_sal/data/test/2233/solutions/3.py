@@ -1,28 +1,27 @@
 k = int(input())
 
 for _ in range(k):
-	n = int(input())
+    n = int(input())
 
-	A = input()
-	B = input()
+    A = input()
+    B = input()
 
-	X = []
+    X = []
 
-	for i in range(n):
-		if A[i] != B[i]:
-			X.append(i)
+    for i in range(n):
+        if A[i] != B[i]:
+            X.append(i)
 
-	if len(X) == 0:
-		print("Yes")
+    if len(X) == 0:
+        print("Yes")
 
-	elif len(X) == 2:
-		x, y = X
+    elif len(X) == 2:
+        x, y = X
 
-		if A[x] == A[y] and B[y] == B[x]:
-			print("Yes")
-		else:
-			print("No")
+        if A[x] == A[y] and B[y] == B[x]:
+            print("Yes")
+        else:
+            print("No")
 
-	else:
-		print("No")
-
+    else:
+        print("No")

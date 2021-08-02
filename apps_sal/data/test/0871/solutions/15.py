@@ -21,4 +21,3 @@ if rst[1] >= 60:
     rst[0] += 1
     rst[1] -= 60
 print(rst[0], rst[1])
-

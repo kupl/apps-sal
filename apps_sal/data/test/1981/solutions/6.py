@@ -15,7 +15,6 @@ import math
 import sys
 
 
-
 def solve(cats, edges, n, m):
 
     connected = collections.defaultdict(set)
@@ -59,6 +58,7 @@ def solve(cats, edges, n, m):
         states = next_states
     return count
 
+
 def print_stderr(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
@@ -67,12 +67,13 @@ def main():
     [n, m] = [int(i) for i in input().strip().split()]
     cats = [int(i) for i in input().strip().split()]
     assert len(cats) == n
-    edges = [tuple(int(i) for i in input().strip().split()) for _ in range(n-1)]
+    edges = [tuple(int(i) for i in input().strip().split()) for _ in range(n - 1)]
     result = solve(cats, edges, n, m)
     print(result)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -9,4 +9,3 @@ for i in range(len(S)):
     else:
         temp = temp[-1] + temp[:-1]
 print("No")
-

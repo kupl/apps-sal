@@ -10,4 +10,3 @@ for i, x in enumerate(ingrs):
     min_count = min(int(x / requirements[i]), min_count)
 
 print(min_count)
-

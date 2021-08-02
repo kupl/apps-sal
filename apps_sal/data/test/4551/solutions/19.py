@@ -9,4 +9,3 @@ if 1 <= A and B and C and D <= 10:
         print('Left')
     elif A + B < C + D:
         print('Right')
-
