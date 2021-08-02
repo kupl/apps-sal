@@ -6,6 +6,7 @@ def MAP(): return map(int, input().split())
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return [LIST() for _ in range(n)]
 
+
 def main():
     from heapq import heappush, heappop, heapify
     H, W, K = MAP()
@@ -56,5 +57,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

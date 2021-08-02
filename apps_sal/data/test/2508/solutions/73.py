@@ -16,7 +16,7 @@ def solve():
     sx -= 1; sy -= 1
     gx -= 1; gy -= 1
     C = [ns() for _ in range(h)]
-    G = [[10**7]*w for _ in range(h)]
+    G = [[10**7] * w for _ in range(h)]
     G[sy][sx] = 0
     q = deque([(sy, sx)])
     while q:
@@ -39,5 +39,5 @@ def solve():
     print((-1))
     return
 
-solve()
 
+solve()

@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, = rv()
     a, = rl(1)
@@ -23,6 +24,7 @@ def solve():
         if count == 100: break
     print(-1)
 
+
 def notsorted(a):
     first, second = True, True
     for i in range(len(a) - 1):
@@ -36,9 +38,10 @@ def notsorted(a):
     return True if not first and not second else False
 
 
-
 def prt(l): return print(''.join(l))
 def rv(): return map(int, input().split())
 def rl(n): return [list(map(int, input().split())) for _ in range(n)]
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+
+if sys.hexversion == 50594544: sys.stdin = open("test.txt")
 solve()

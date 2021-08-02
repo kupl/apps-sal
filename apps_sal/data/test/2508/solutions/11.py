@@ -9,7 +9,7 @@ Q = deque([(x1 - 1, y1 - 1)])
 while Q:
     nx, ny = Q.popleft()
     if nx == x2 - 1 and ny == y2 - 1:
-        print(visited[nx][ny]);return
+        print(visited[nx][ny]); return
     for dx, dy in d:
         for i in range(k):
             p, q = nx + dx * (i + 1), ny + dy * (i + 1)

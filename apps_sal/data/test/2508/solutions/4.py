@@ -1,60 +1,61 @@
 def main():
-  ## IMPORT MODULE
-  from collections import deque
-  import sys
-  input=lambda :sys.stdin.readline().rstrip()
+    # IMPORT MODULE
+    from collections import deque
+    import sys
+    input = lambda: sys.stdin.readline().rstrip()
 
-  #sys.setrecursionlimit(100000)
+    # sys.setrecursionlimit(100000)
 
-  #f_inf=float("inf")
-  #MOD=10**9+7
-  
-  if 'get_ipython' in globals(): 
-    ## SAMPLE INPUT
-    h, w, k = 3, 5, 2
-    x1, y1, x2, y2 = 3, 2, 3, 4
-    dist = ['.....', '.@..@', '..@..']
+    # f_inf=float("inf")
+    # MOD=10**9+7
 
-  else:
-    ##INPUT 
-    h, w, k = map(int, input().split())
-    x1, y1, x2, y2 = map(int, input().split())
-    dist = [input() for _ in range(h)]
+    if 'get_ipython' in globals():
+        # SAMPLE INPUT
+        h, w, k = 3, 5, 2
+        x1, y1, x2, y2 = 3, 2, 3, 4
+        dist = ['.....', '.@..@', '..@..']
 
-  ## SUBMITION CODES HERE
-  x1-=1
-  y1-=1
-  x2-=1
-  y2-=1
+    else:
+        # INPUT
+        h, w, k = map(int, input().split())
+        x1, y1, x2, y2 = map(int, input().split())
+        dist = [input() for _ in range(h)]
 
-  ans = [[-1]*w for _ in range(h)]
-  ans[x1][y1] = 0
+    # SUBMITION CODES HERE
+    x1 -= 1
+    y1 -= 1
+    x2 -= 1
+    y2 -= 1
 
-  que = deque()
-  que.append((x1, y1))
-  direction = ((1, 0), (-1, 0), (0, -1), (0, 1))
-  while que:
-    x, y = que.popleft()
+    ans = [[-1] * w for _ in range(h)]
+    ans[x1][y1] = 0
 
-    if x == x2 and y == y2:
-      print(ans[x][y]);return
+    que = deque()
+    que.append((x1, y1))
+    direction = ((1, 0), (-1, 0), (0, -1), (0, 1))
+    while que:
+        x, y = que.popleft()
 
-    for dx, dy in direction:
-      for i in range(1, k+1):
-        kx = x + dx*i
-        ky = y + dy*i
+        if x == x2 and y == y2:
+            print(ans[x][y]); return
 
-        if not(0 <= kx < h and 0 <= ky < w) or dist[kx][ky] == "@":
-          break
+        for dx, dy in direction:
+            for i in range(1, k + 1):
+                kx = x + dx * i
+                ky = y + dy * i
 
-        if 0 <= ans[kx][ky] <= ans[x][y]:
-          break
+                if not(0 <= kx < h and 0 <= ky < w) or dist[kx][ky] == "@":
+                    break
 
-        if ans[kx][ky] == -1:
-          que.append((kx, ky))
+                if 0 <= ans[kx][ky] <= ans[x][y]:
+                    break
 
-        ans[kx][ky] = ans[x][y]+1
+                if ans[kx][ky] == -1:
+                    que.append((kx, ky))
 
-  print(-1)
+                ans[kx][ky] = ans[x][y] + 1
+
+    print(-1)
+
 
 main()

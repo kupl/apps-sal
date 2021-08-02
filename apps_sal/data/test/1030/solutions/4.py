@@ -8,9 +8,8 @@ else:
 for i in range(inf, p):
     res += "%d " % i
 res += "(%d) " % p
-for i in range(p+1, min(sup, n) + 1):
+for i in range(p + 1, min(sup, n) + 1):
     res += "%d " % i
 if sup < n:
     res += ">>"
 print(res)
-

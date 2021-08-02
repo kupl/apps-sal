@@ -10,7 +10,7 @@ def bfs(M, sy, sx):
         x1, y1 = queue.popleft()  # queueに入っていたものを消す。
         if [x1, y1] == [xg, yg]:  # もしゴールについていたならば、そのときの手数を出す。
             return M[x1][y1]
-        
+
         for dx, dy in ([1, 0], [-1, 0], [0, 1], [0, -1]):
             for k in range(1, K + 1):
                 new_x = x1 + dx * k
@@ -42,4 +42,3 @@ M = [[-1] * W for i in range(H)]
 bfs(M, xs, ys)
 
 print((M[xg][yg]))
-

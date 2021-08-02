@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     (n, k) = tuple([int(x) for x in input().split()])
     s = input()
@@ -23,5 +24,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -17,7 +17,6 @@ def main():
     V = [[float("inf")] * W for j in range(H)]
     V[X1 - 1][Y1 - 1] = 0
 
-
     while q:
         c = q.popleft()
         x = c[0]
@@ -77,5 +76,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

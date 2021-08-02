@@ -61,4 +61,3 @@ if ans[X2 - 1][Y2 - 1] == float("inf"):
     print((-1))
 else:
     print((ans[X2 - 1][Y2 - 1]))
-

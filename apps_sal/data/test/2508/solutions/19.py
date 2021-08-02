@@ -58,4 +58,3 @@ for _ in range(H):
 M = [[-1] * W for _ in range(H)]
 
 bfs(xs - 1, ys - 1, 0)
-

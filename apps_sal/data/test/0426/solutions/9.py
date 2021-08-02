@@ -22,5 +22,5 @@ for i in range(1, n):
     k -= 1
     if not k:
         break
-    
+
 print(''.join(s))

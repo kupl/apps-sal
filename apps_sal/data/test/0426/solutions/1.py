@@ -20,6 +20,5 @@ for i in s:
         cnt += 1
     else:
         print(i, end='')
-    
-    first = False
 
+    first = False

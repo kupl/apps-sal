@@ -1,11 +1,13 @@
+from collections import deque
 import sys
 sys.setrecursionlimit(10 ** 7)
 
-from collections import deque
 INF = float('inf')
+
+
 def resolve():
     H, W, K = list(map(int, input().split()))
-    sx, sy, gx, gy = [int(x)-1 for x in input().split()]
+    sx, sy, gx, gy = [int(x) - 1 for x in input().split()]
     G = [list(input()) for _ in range(H)]
 
     dist = [[INF] * W for i in range(H)]
@@ -34,7 +36,9 @@ def resolve():
                     break
     print((-1))
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

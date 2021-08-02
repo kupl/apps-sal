@@ -22,9 +22,9 @@ while q:
     if (x, y) == (x2, y2):
         break
     for vx, vy in ((0, 1), (1, 0), (0, -1), (-1, 0)):
-        for k in range(1, K+1):
-            nx = x + vx*k
-            ny = y + vy*k
+        for k in range(1, K + 1):
+            nx = x + vx * k
+            ny = y + vy * k
             if nx < 0 or nx >= H or ny < 0 or ny >= W or grid[nx][ny] == '@':
                 break
             if dist[nx][ny] != -1 and dist[nx][ny] != dist[x][y] + 1:

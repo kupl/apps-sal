@@ -5,33 +5,36 @@
 # @Last modified time: 23-03-2017
 
 
-
-#Justin Hershberger
-#Py3.5
+# Justin Hershberger
+# Py3.5
 
 import fileinput
 
+
 def test():
-	pass
+    pass
+
+
 def __starting_point():
-	n,p,k = list(map(int, input().split()))
+    n, p, k = list(map(int, input().split()))
 
-	output = ""
+    output = ""
 
-	if p - k > 1:
-		output = "<< "
+    if p - k > 1:
+        output = "<< "
 
-	for i in range(p-k,p+k+1):
-		if i == p:
-			output += "(" + str(i) + ") "
-		elif i > n:
-			break
-		elif i > 0:
-			output += str(i) + " "
+    for i in range(p - k, p + k + 1):
+        if i == p:
+            output += "(" + str(i) + ") "
+        elif i > n:
+            break
+        elif i > 0:
+            output += str(i) + " "
 
-	if p + k < n:
-		output += ">>"
+    if p + k < n:
+        output += ">>"
 
-	print(output)
+    print(output)
+
 
 __starting_point()

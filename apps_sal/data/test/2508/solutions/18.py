@@ -2,13 +2,13 @@ import sys
 from collections import deque
 def input(): return sys.stdin.readline().rstrip()
 
+
 def main():
     def bfs():
-        
 
         inf = 1e7
 
-        dist = [[inf]*w for _ in range(h)]
+        dist = [[inf] * w for _ in range(h)]
         dist[xs][ys] = 0
         que = deque([(xs, ys)])
         dx = [-1, 0, 1, 0]
@@ -25,17 +25,20 @@ def main():
                     if dist[nx][ny] > dist[x][y] + 1:
                         dist[nx][ny] = dist[x][y] + 1
                         que.append((nx, ny))
-            
+
         if dist[xg][yg] == inf:
             print(-1)
         else:
             print(dist[xg][yg])
 
     h, w, k = map(int, input().split())
-    xs, ys, xg, yg = map(lambda x: int(x)-1, input().split())
+    xs, ys, xg, yg = map(lambda x: int(x) - 1, input().split())
     field = [input() for _ in range(h)]
     bfs()
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()
