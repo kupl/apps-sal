@@ -9,5 +9,3 @@ for order in orders:
     delta = time - order
     maximum = max(maximum, delta)
 print((total - maximum))
-
-

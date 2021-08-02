@@ -16,6 +16,6 @@ for i in range(5):
     if i == a:
         ans += menu[i]
     else:
-        ans += -(-menu[i]//10)*10
+        ans += -(-menu[i] // 10) * 10
 
 print(ans)

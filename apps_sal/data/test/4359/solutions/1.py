@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def mapt(fn, *args):
     return tuple(map(fn, *args))
 
@@ -23,12 +24,11 @@ def main():
                 continue
             remain = i % 10
             if remain:
-                time += i + (10-remain)
+                time += i + (10 - remain)
             else:
                 time += i
         ans = min(ans, time)
     print(ans)
-
 
 
 main()

@@ -1,14 +1,13 @@
-H,W = list(map(int,input().split()))
+H, W = list(map(int, input().split()))
 a = ''
 for i in range(W + 2):
-  a += '#'
+    a += '#'
 L = []
 L.append(a)
 for j in range(H):
-  b = str(input())
-  c = '#' + b + '#'
-  L.append(c)
+    b = str(input())
+    c = '#' + b + '#'
+    L.append(c)
 L.append(a)
 for k in range(H + 2):
-  print((L[k]))
-
+    print((L[k]))

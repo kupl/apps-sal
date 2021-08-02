@@ -13,4 +13,3 @@ while True:
     dist = ((x1 - x0) ** 2 + (y1 - y0) ** 2) ** (1 / 2)
     print(str(math.ceil(dist / (2 * r))))
     break
-

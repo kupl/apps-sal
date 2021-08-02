@@ -12,13 +12,13 @@ d = math.ceil(D * 0.1) * 10
 e = math.ceil(E * 0.1) * 10
 
 lst1 = [A, B, C, D, E]
-lst2 = [a, b, c, d ,e]
+lst2 = [a, b, c, d, e]
 
 last = 0
 max_num = -1
 
 for i, j in zip(lst1, lst2):
-    if j - i  > max_num:
+    if j - i > max_num:
         last = i
         max_num = j - i
 

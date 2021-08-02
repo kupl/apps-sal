@@ -8,6 +8,6 @@ minimum = INF
 for order in orders:
     total = order[0]
     for i in range(1, menu):
-        total += math.ceil(order[i]/10)*10
+        total += math.ceil(order[i] / 10) * 10
     minimum = min(minimum, total)
 print(minimum)

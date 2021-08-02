@@ -8,4 +8,3 @@ print(("#" * (W + 2)))
 for i in range(H):
     print((ans[i]))
 print(("#" * (W + 2)))
-

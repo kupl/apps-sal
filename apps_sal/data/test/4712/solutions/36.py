@@ -4,4 +4,3 @@ print(("#" * (w + 2)))
 for i in a:
     print(("#" + i + "#"))
 print(("#" * (w + 2)))
-

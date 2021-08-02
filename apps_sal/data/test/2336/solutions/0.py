@@ -29,4 +29,3 @@ for query in query_in:
     l, r = query
     ans = cnts[r] - cnts[l - 1]
     print(ans)
-

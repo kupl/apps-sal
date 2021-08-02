@@ -23,4 +23,3 @@ for i in range(q):
 
 for ans in answers:
     print(ans)
-

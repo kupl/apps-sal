@@ -1,6 +1,6 @@
 h, w = list(map(int, input().split()))
 
-print(('#' * (w+2)))
+print(('#' * (w + 2)))
 for i in range(h):
     data = list(map(str, input().split()))
     data2 = ['#'] + data + ['#']
@@ -8,4 +8,3 @@ for i in range(h):
 
 
 print(('#' * (w + 2)))
-

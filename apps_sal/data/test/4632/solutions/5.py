@@ -17,4 +17,3 @@ for _ in range(int(input())):
         p.pop(0)
     else:
         print('YES', ans, sep='\n')
-

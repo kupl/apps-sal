@@ -15,7 +15,7 @@ while 10 in li: li.remove(10)
 
 li.sort()
 n = len(li)
-if n != 0: 
-    li.pop(n-1)
+if n != 0:
+    li.pop(n - 1)
 
-print(int(a)+int(b)+int(c)+int(d)+int(e)+sum(li))
+print(int(a) + int(b) + int(c) + int(d) + int(e) + sum(li))

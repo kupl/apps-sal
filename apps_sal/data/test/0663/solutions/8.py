@@ -5,5 +5,4 @@ ans = pow(dis / (d ** 2), 0.5)
 if ans ** 2 == int(ans) ** 2 + 0.0:
     print(int(ans))
 else:
-    print(int(ans)+1)
-
+    print(int(ans) + 1)

@@ -1,17 +1,17 @@
-list_x=[]
+list_x = []
 for i in range(5):
     list_x.append(int(input()))
-max_dif=0
-max_dif_indx=0
+max_dif = 0
+max_dif_indx = 0
 for i in range(5):
-    if (10-list_x[i]%10>max_dif) & (list_x[i]%10!=0):
-        max_dif=10-list_x[i]%10
-        max_dif_indx=i
-ans=list_x.pop(max_dif_indx)
-tmp=0
+    if (10 - list_x[i] % 10 > max_dif) & (list_x[i] % 10 != 0):
+        max_dif = 10 - list_x[i] % 10
+        max_dif_indx = i
+ans = list_x.pop(max_dif_indx)
+tmp = 0
 for i in range(4):
-    tmp+=list_x.pop()
-    while(tmp%10!=0):
-        tmp+=1
-ans+=tmp
+    tmp += list_x.pop()
+    while(tmp % 10 != 0):
+        tmp += 1
+ans += tmp
 print(ans)

@@ -4,6 +4,7 @@ c = int(input())
 d = int(input())
 e = int(input())
 
+
 def f(x):
     if 1 <= x and x <= 10:
         return 10
@@ -31,7 +32,8 @@ def f(x):
         return 120
     else:
         return 130
-    
+
+
 aa = a + f(b) + f(c) + f(d) + f(e)
 bb = b + f(c) + f(d) + f(e) + f(a)
 cc = c + f(d) + f(e) + f(a) + f(b)

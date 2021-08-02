@@ -15,4 +15,4 @@ for i in range(5):
         ans += x[i]
     else:
         ans += (x[i] + (10 - tmp1[i]))
-print(ans+x[m])
+print(ans + x[m])

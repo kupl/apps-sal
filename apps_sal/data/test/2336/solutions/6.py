@@ -25,4 +25,3 @@ for i in range(q):
     ans.append(str(pref[r] - pref[l - 1]))
 
 print('\n'.join(ans))
-

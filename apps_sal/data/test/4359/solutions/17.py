@@ -8,7 +8,7 @@ for i in range(10):
         if (((numbers - current) % 10) == 0):
             new_list.append(numbers)
 counter = 0
-for numbers in new_list[:len(new_list)-1]:
+for numbers in new_list[:len(new_list) - 1]:
     current = numbers
     while ((current % 10 != 0)):
         current += 1

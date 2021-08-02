@@ -3,7 +3,7 @@ menu = []
 jissai_menu = []
 for i in range(5):
     menu.append(int(input()))
-    if menu[i] % 10 == 0: 
+    if menu[i] % 10 == 0:
         jissai_menu.append(menu[i])
     else:
         jissai_menu.append(menu[i] - menu[i] % 10 + 10)

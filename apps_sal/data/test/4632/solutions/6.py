@@ -9,8 +9,8 @@ for loop in range(t):
 
     for i in range(n):
 
-        x,y = list(map(int,input().split()))
-        xy.append([x,y])
+        x, y = list(map(int, input().split()))
+        xy.append([x, y])
 
     xy.sort()
 
@@ -35,8 +35,7 @@ for loop in range(t):
             y += 1
 
     if flag:
-        print ("YES")
+        print("YES")
         print("".join(ans))
     else:
-        print ("NO")
-
+        print("NO")
