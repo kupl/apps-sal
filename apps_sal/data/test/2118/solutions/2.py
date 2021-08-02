@@ -7,10 +7,10 @@ k1 = 0
 
 def main():
     n, k = [int(x) for x in input().split()]
-    if k & 1 == 0 or k > 2*n-1:
+    if k & 1 == 0 or k > 2 * n - 1:
         print("-1")
     else:
-        lst = [0]*n
+        lst = [0] * n
 
         # k1 count how many recursions left, drain one for the initial  call
         nonlocal k1
@@ -21,7 +21,7 @@ def main():
         def fill_arr(l, r, val):
             nonlocal k1
             # list size 1, nothing to do just set the value
-            if r <= l+1:
+            if r <= l + 1:
                 lst[l] = val
             elif k1 == 0:
                 # just fill in a sorted array - no more calls here
@@ -31,9 +31,9 @@ def main():
                 # drain 2 recursion calls (for left and right path)
                 k1 -= 2
                 # call subproblems
-                m = (l+r) // 2
+                m = (l + r) // 2
                 # set initial vals for left path as [val + r-m, ... , val + r)
-                fill_arr(l, m, val+r-m)
+                fill_arr(l, m, val + r - m)
 
                 # set initial vals for right path as [val, val+1, ... , val + r-m)
                 fill_arr(m, r, val)
@@ -48,5 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

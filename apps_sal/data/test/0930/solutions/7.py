@@ -29,6 +29,7 @@ class Combination:
             return 0
         return self.fact[n]
 
+
 N, K = list(map(int, input().split()))
 K = min(K, N)
 MOD = 10**9 + 7
@@ -40,4 +41,3 @@ for k in range(K + 1):
     ans %= MOD
 
 print(ans)
-

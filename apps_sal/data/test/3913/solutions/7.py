@@ -25,5 +25,3 @@ for letter in CanLetters:
     if can:
         ans += 1
 print(ans)
-
-

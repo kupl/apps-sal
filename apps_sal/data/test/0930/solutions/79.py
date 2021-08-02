@@ -1,5 +1,6 @@
-n,k = list(map(int, input().split()))
-mod = 10**9+7
+n, k = list(map(int, input().split()))
+mod = 10**9 + 7
+
 
 def prepare():
     fact = []
@@ -11,7 +12,7 @@ def prepare():
     f *= n
     f %= mod
     fact.append(f)
-    
+
     factinv = [1, 1]
     inv = [0, 1]
 
@@ -21,6 +22,7 @@ def prepare():
 
     return fact, factinv
 
+
 def cmb(a, r, p):
     if (r < 0) or (n < r):
         return 0
@@ -29,7 +31,8 @@ def cmb(a, r, p):
     else:
         return f[a] * v[r] * v[n - r - 1] % mod
 
-f,v = prepare()
+
+f, v = prepare()
 
 ans = 1
 for i in range(1, min(k + 1, n)):
@@ -37,4 +40,3 @@ for i in range(1, min(k + 1, n)):
     ans %= mod
 
 print(ans)
-

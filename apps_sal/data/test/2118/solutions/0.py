@@ -5,7 +5,7 @@ def create_list(n, num_of_calls):
         return [2, 1], 2
     if num_of_calls == 2:
         return list(range(2, n // 2 + 2)) + [1] +\
-               list(range(n // 2 + 2, n + 1)), 2
+            list(range(n // 2 + 2, n + 1)), 2
 
     list1, num_of_calls1 = create_list(n // 2, num_of_calls - 2)
     if num_of_calls1 == num_of_calls - 2:
@@ -36,5 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

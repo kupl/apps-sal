@@ -2,7 +2,7 @@
 #      |        /  \       |    |   / |
 #      |       /____\      |    |  /  |
 #      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|  
+#  ========= /        \  =====  |/====|
 #  code
 
 def main():
@@ -25,6 +25,9 @@ def main():
         print(cnt)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

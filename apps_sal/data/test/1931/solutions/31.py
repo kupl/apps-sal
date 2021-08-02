@@ -15,4 +15,3 @@ def solve():
 tests = int(input())
 for _ in range(tests):
     print(solve())
-

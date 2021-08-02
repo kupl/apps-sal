@@ -38,20 +38,21 @@ class Combination:
 
 
 def resolve():
-    MOD = 10**9+7
+    MOD = 10**9 + 7
     N, K = list(map(int, input().split()))
 
-    r = min(N-1, K)
+    r = min(N - 1, K)
     cmb = Combination(N)
 
     ans = 0
-    for i in range(r+1):
-        ans += cmb.nCr(N, i) * cmb.nHr(N-i, i)
+    for i in range(r + 1):
+        ans += cmb.nCr(N, i) * cmb.nHr(N - i, i)
         ans %= MOD
     print(ans)
 
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

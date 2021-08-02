@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-baz = ['RGB','RBG','GBR', 'GRB', 'BRG', 'BGR']
+baz = ['RGB', 'RBG', 'GBR', 'GRB', 'BRG', 'BGR']
 for i in range(len(baz)):
     baz[i] = (baz[i] * n)[0:n]
 ans = 10 ** 9

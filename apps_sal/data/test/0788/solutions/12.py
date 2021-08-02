@@ -6,6 +6,6 @@ while (pos < len(s)):
         answer += 10
         pos += 2
     else:
-        answer += ord(s[pos]) - ord('0') 
+        answer += ord(s[pos]) - ord('0')
         pos += 1
 print(1 + answer)

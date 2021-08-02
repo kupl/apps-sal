@@ -16,10 +16,11 @@ unsort(mid, r), если нужно больше вызовов. Когда м
 попробовать использовать, чтобы получить ровно k вызовов.
 """
 
+
 def unsort(arr, left, right, k):
     if k[0] <= 0 or left >= right - 1:
         return
-    
+
     k[0] -= 2
     mid = (left + right) // 2
 
@@ -30,17 +31,16 @@ def unsort(arr, left, right, k):
 
 
 n, k = list(map(int, input().split()))
- 
+
 if k % 2 == 0:
     print(-1)
 else:
     k = [k - 1]
     arr = [i for i in range(1, n + 1)]
- 
+
     unsort(arr, 0, n, k)
 
     if not k[0]:
         print(*arr)
     else:
         print(-1)
-

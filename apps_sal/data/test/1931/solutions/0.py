@@ -8,4 +8,3 @@ for zz in range(int(input())):
             n -= cr
             cr += 3
     print(ans)
-

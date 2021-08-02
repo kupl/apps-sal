@@ -8,7 +8,7 @@ best = n
 for p in perms:
     recolors = 0
     for i in range(n):
-        if lamps[i] != p[i%3]:
+        if lamps[i] != p[i % 3]:
             recolors += 1
     if recolors < best:
         best = recolors
@@ -16,5 +16,3 @@ for p in perms:
 
 print(best)
 print(''.join(itertools.islice(itertools.cycle(bestp), n)))
-
-

@@ -17,4 +17,3 @@ ret = 0
 for m in range(min(k + 1, n)):
     ret = (ret + (cmb(n, m) * cmb(n - 1, n - m - 1)) % mod) % mod
 print(ret)
-

@@ -1,6 +1,6 @@
 def main():
-    n,k = list(map(int, input().split()))
-    MOD = 10**9+7
+    n, k = list(map(int, input().split()))
+    MOD = 10**9 + 7
 
     # 0人部屋が0~k個の時の場合の数の和
     # Σ(i=[0,k]){comb(n,i)*pow((n-i),i)} を求めれば良い
@@ -11,14 +11,14 @@ def main():
     ans = 0
     k1 = 1
     k2 = 1
-    for i in range(min(k+1,n)):
-        ans += k1*k2
+    for i in range(min(k + 1, n)):
+        ans += k1 * k2
         ans %= MOD
-        k1 *= (n-i)*pow(i+1,MOD-2,MOD)
+        k1 *= (n - i) * pow(i + 1, MOD - 2, MOD)
         k1 %= MOD
-        k2 *= (n-1-i)*pow(i+1,MOD-2,MOD)
+        k2 *= (n - 1 - i) * pow(i + 1, MOD - 2, MOD)
         k2 %= MOD
     print((int(ans)))
 
-main()
 
+main()
