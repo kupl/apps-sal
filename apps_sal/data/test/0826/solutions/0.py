@@ -4,14 +4,14 @@ import sys
 import math
 
 n = int(input())
-i = math.floor(math.sqrt(n*2))-1
+i = math.floor(math.sqrt(n * 2)) - 1
 
 while True:
-  total = (2+i) * (i+1) // 2
+    total = (2 + i) * (i + 1) // 2
 
-  if total <= n+1:
-    i += 1
-  else:
-    break
+    if total <= n + 1:
+        i += 1
+    else:
+        break
 
-print(n-i+1)
+print(n - i + 1)

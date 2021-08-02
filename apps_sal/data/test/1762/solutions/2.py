@@ -7,4 +7,4 @@ for i in range(n):
     time = max(pq[0], s) + m
     heapq.heapreplace(pq, time)
     res[i] = time
-print("\n".join(map(str, res))) 
+print("\n".join(map(str, res)))

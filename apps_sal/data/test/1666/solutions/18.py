@@ -7,9 +7,9 @@ b = l[3]
 
 
 r = []
-for i in range(a, x+1):
-    for j in range(b, y+1):
-        if i>j:
+for i in range(a, x + 1):
+    for j in range(b, y + 1):
+        if i > j:
             r.append((i, j))
         else:
             break
@@ -17,5 +17,3 @@ for i in range(a, x+1):
 print(len(r))
 for x in r:
     print(x[0], x[1])
-
-

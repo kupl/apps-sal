@@ -10,4 +10,4 @@ else:
         else:
             r = d
         d = (l + r) // 2
-    print(n-d+1)
+    print(n - d + 1)

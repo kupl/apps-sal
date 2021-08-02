@@ -17,6 +17,3 @@ while(r - l > 1):
 #         break
 #     K = k
 print((n - l + 1))
-
-
-

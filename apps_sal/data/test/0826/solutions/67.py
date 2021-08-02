@@ -1,4 +1,3 @@
 from decimal import *
 n = Decimal(input())
-print((n-int(((n * 8 + 9).sqrt()-3)/2)))
-
+print((n - int(((n * 8 + 9).sqrt() - 3) / 2)))

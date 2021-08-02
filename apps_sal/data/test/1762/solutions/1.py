@@ -13,7 +13,10 @@ def __main__(n, k):
 
     print('\n'.join(str(time) for time in times))
 
+
 def __starting_point():
     n, k = list(map(int, input().split()))
     __main__(n, k)
+
+
 __starting_point()

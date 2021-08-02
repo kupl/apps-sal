@@ -7,4 +7,3 @@ for i in range(a, x + 1):
 print(len(result))
 for x, y in result:
     print(x, y)
-

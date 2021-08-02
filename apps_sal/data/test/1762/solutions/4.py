@@ -1,5 +1,7 @@
 import heapq
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, k = f()
 p = [0] * k
 q = [0] * n

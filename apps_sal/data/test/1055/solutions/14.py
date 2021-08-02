@@ -13,4 +13,3 @@ def check(ar: list):
 n = int(input())
 a = list(map(int, input().split()))
 print(check(a))
-

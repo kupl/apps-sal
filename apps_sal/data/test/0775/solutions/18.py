@@ -1,6 +1,6 @@
 from bisect import bisect_left
 
-n,m,k = map(int, input().split(' '))
+n, m, k = map(int, input().split(' '))
 holes = list(map(int, input().split(' ')))
 curr = 1
 found = False

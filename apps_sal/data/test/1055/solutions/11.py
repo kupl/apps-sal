@@ -1,11 +1,13 @@
 n = int(input())
 l = list(map(int, input().split()))
 
+
 def isSorted(a):
     for i in range(1, len(a)):
-        if a[i] < a[i-1]:
+        if a[i] < a[i - 1]:
             return False
     return True
+
 
 def sort(a):
     if isSorted(a):
@@ -20,5 +22,5 @@ def sort(a):
     else:
         return a2
 
-print(len(sort(l)))
 
+print(len(sort(l)))

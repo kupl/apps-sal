@@ -10,4 +10,3 @@ for _ in range(k):
     elif x == p:
         x = o
 print(x)
-

@@ -20,4 +20,3 @@ while abs(ok - ng) > 1:  # 条件を満たすindex ok と 条件を満たさな�
 k_max = ok
 # eprint(k_max)
 print(N - k_max + 1)
-

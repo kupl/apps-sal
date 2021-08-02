@@ -15,5 +15,3 @@ for i in range(k):
         pos = u
 
 print(pos)
-
-

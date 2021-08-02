@@ -3,11 +3,13 @@ from sys import stdin
 
 input = stdin.readline
 
+
 def solve():
 
     n = int(input())
     left = 1
     right = n + 1
+
     def ok(x):
         return x * (x - 1) <= 2 * (n + 1)
     while left < right:
@@ -21,4 +23,6 @@ def solve():
 
 def __starting_point():
     solve()
+
+
 __starting_point()

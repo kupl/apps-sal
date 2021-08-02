@@ -8,7 +8,7 @@ now = 0
 for i in range(k):
     if b[now]:
         print(now + 1)
-        return    
+        return
     x, y = map(int, input().split())
     x -= 1
     y -= 1
@@ -16,5 +16,5 @@ for i in range(k):
         now = y
     elif now == y:
         now = x
-    
+
 print(now + 1)

@@ -10,5 +10,3 @@ while abs(ok - ng) > 1:
 
 # n+1をバラせば1~okまでカバーできる
 print((n - ok + 1))
-
-

@@ -9,6 +9,7 @@ def is_sorted(a):
 
     return True
 
+
 def solve(a):
     if len(a) == 1:
         return 1
@@ -16,12 +17,14 @@ def solve(a):
     if is_sorted(a):
         return len(a)
 
-    return max(solve(a[:len(a)//2]), solve(a[len(a)//2:]))
+    return max(solve(a[:len(a) // 2]), solve(a[len(a) // 2:]))
+
 
 def __starting_point():
     n = int(input())
     #n, m = (int(p) for p in input().split())
     a = [int(p) for p in input().split()]
     print(solve(a))
+
 
 __starting_point()

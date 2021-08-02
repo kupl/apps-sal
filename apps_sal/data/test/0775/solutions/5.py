@@ -15,4 +15,3 @@ if bone_pos not in H:
             break
 
 print(bone_pos)
-

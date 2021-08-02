@@ -1,27 +1,26 @@
 from decimal import Decimal
-n=int(input())
+n = int(input())
 
 # decimalを使う方
 # i = int((-1 + Decimal(1+8*(n+1)).sqrt())/2 )
 
 # 二部探索
 
-left=0
-right = n+1
-mid = (left+right)//2
+left = 0
+right = n + 1
+mid = (left + right) // 2
 
 for _ in range(100000):
-    
-    mid = (left+right)//2
-    
-    if mid*(mid+1)//2 > n+1:
-        right=mid
-        
+
+    mid = (left + right) // 2
+
+    if mid * (mid + 1) // 2 > n + 1:
+        right = mid
+
     else:
-        left=mid
+        left = mid
 
-i=mid
-    
+i = mid
 
-print((n-i+1))           
 
+print((n - i + 1))
