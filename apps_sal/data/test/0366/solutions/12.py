@@ -5,20 +5,20 @@ from itertools import permutations
 
 
 def li():
-	return list(map(int , input().split()))
+    return list(map(int, input().split()))
 
 
 def num():
-	return map(int , input().split())
+    return map(int, input().split())
 
 
 def nu():
-	return int(input())
+    return int(input())
 
 
-n,s=num()
-cc=0
-for i in range(n,0,-1):
-	cc+=s//i
-	s=s%i
+n, s = num()
+cc = 0
+for i in range(n, 0, -1):
+    cc += s // i
+    s = s % i
 print(cc)

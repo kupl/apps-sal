@@ -10,4 +10,3 @@ for i in range(N):
         mn = abs(now - A)
         ans = i
 print((ans + 1))
-

@@ -14,5 +14,4 @@ for j in range(len(points)):
 
 # print(subpoints)
 # print(min(subpoints))
-print((subpoints.index(min(subpoints))+1))
-
+print((subpoints.index(min(subpoints)) + 1))

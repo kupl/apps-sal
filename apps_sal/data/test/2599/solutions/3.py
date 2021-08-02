@@ -1,6 +1,7 @@
 def f(x):
     return sum(map(int, str(x)))
 
+
 def subsolve(n, k, x):
     x = max(0, x - 20)
     ans = -1
@@ -13,6 +14,7 @@ def subsolve(n, k, x):
             break
         x += 1
     return ans
+
 
 def solve():
     n, k = map(int, input().split())
@@ -42,6 +44,7 @@ def solve():
             if ans == -1 or w != -1 and w < ans:
                 ans = w
     print(ans)
+
 
 t = int(input())
 for _ in range(t):

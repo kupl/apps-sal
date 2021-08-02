@@ -7,4 +7,3 @@ for index, h in enumerate(hs):
         min_diff, answer = diff, index + 1
 
 print(answer)
-

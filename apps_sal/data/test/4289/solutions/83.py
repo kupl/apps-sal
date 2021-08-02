@@ -9,6 +9,6 @@ for i in range(len(H)):
     spot = T - H[i] * 0.006
     if abs(spot - A) < mini:
         mini = abs(spot - A)
-        res = i+1
+        res = i + 1
 
 print(res)

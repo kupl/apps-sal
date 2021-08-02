@@ -1,6 +1,6 @@
 N = int(input())
-T, A = map(int,input().split())
-H = list(map(int,input().split()))
+T, A = map(int, input().split())
+H = list(map(int, input().split()))
 
 temp_diff = []
 for i in range(N):

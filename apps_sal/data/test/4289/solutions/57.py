@@ -1,5 +1,5 @@
 n = int(input())
-t,a= list(map(int, input().split()))
+t, a = list(map(int, input().split()))
 l = list(map(int, input().split()))
 
 x = t - l[0] * 0.006
@@ -15,4 +15,3 @@ for z in tmp:
     ans.append(abs(y))
 
 print((ans.index(min(ans)) + 1))
-

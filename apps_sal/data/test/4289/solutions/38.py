@@ -6,10 +6,9 @@ nans = 0
 for i in range(N):
     ans = abs(A - (T - (H[i] * 0.006)))
     if ans == 0:
-        print((i+1))
+        print((i + 1))
         return
     elif ans < tans:
         tans = ans
         nanns = i
-print((nanns+1))
-
+print((nanns + 1))

@@ -1,15 +1,17 @@
 def f(n):
     ans = 0
     while n:
-        ans += n%10
+        ans += n % 10
         n //= 10
     return ans
 
+
 def get(n, k):
     ans = 0
-    for i in range(k+1):
-        ans += f(n+i)
+    for i in range(k + 1):
+        ans += f(n + i)
     return ans
+
 
 t = int(input())
 for tmp in range(t):
@@ -37,7 +39,7 @@ for tmp in range(t):
                             ost -= 9
 
                     else:
-                        pref += str(ost)    
+                        pref += str(ost)
                         break
                 pref = pref[::-1]
 
@@ -50,4 +52,4 @@ for tmp in range(t):
 
             c9 += 1
 
-    print(ans)    
+    print(ans)

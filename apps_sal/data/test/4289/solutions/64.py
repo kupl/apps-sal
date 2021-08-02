@@ -10,5 +10,4 @@ subpoints = []
 for j in range(len(points)):
     subpoints.append(abs(a - mypoints[j]))
 
-print((subpoints.index(min(subpoints))+1))
-
+print((subpoints.index(min(subpoints)) + 1))
