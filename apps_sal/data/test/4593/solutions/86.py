@@ -1,4 +1,6 @@
 import math
+
+
 def resolve():
     x = int(input())
     sqrt_x = int(math.sqrt(x))
@@ -10,4 +12,6 @@ def resolve():
                 break
     al = sorted(al)
     print(al[-1])
+
+
 resolve()

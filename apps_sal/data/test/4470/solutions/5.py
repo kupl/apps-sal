@@ -16,4 +16,3 @@ for _ in range(q):
         print(c)
     else:
         print(-1)
-

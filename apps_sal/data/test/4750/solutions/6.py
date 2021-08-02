@@ -5,4 +5,3 @@ for i in range(q):
         print(l1 + 1, l2, end='\n')
     else:
         print(l1, l2, end='\n')
-

@@ -9,14 +9,13 @@ for i in range(len(arr)):
 same = slots & remain
 for i in same:
     x = remain.pop()
-    if x-1 != i-1:
-        arr[i-1] = x
+    if x - 1 != i - 1:
+        arr[i - 1] = x
     else:
         y = remain.pop()
-        arr[i-1] = y
+        arr[i - 1] = y
         remain.add(x)
 for i in range(len(arr)):
     if arr[i] == 0:
         arr[i] = remain.pop()
 print(*arr, sep=" ")
-

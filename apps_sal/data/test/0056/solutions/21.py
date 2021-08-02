@@ -15,8 +15,8 @@ dp[0][0] = Fraction(T)
 for r in range(N):
     for c in range(r + 1):
         if dp[r][c] >= Fraction(1):
-            dp[r + 1][c + 0] += (dp[r][c] - Fraction(1)) / Fraction(2);
-            dp[r + 1][c + 1] += (dp[r][c] - Fraction(1)) / Fraction(2);
+            dp[r + 1][c + 0] += (dp[r][c] - Fraction(1)) / Fraction(2)
+            dp[r + 1][c + 1] += (dp[r][c] - Fraction(1)) / Fraction(2)
 
 cnt = 0
 for r in range(N):
@@ -25,4 +25,3 @@ for r in range(N):
             cnt += 1
 
 print(cnt)
-

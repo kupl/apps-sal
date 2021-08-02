@@ -8,4 +8,3 @@ res = 0
 for tt in t:
     res = tt if tt <= n else res
 print(res)
-

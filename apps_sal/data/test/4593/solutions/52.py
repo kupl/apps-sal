@@ -9,4 +9,3 @@ for i in range(2, 32):
         j *= i
 
 print((max(i for i in range(x + 1) if table[i])))
-

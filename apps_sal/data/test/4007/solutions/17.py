@@ -7,7 +7,7 @@ s = []
 f = []
 r = [0] * (n + 1)
 g = [0] * (n + 1)
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if a[i] != 0:
         g[i] = 1
         r[a[i]] = 1
@@ -16,7 +16,7 @@ for i in range(1, n + 1):
         s.append(i)
     elif g[i] == 0 and r[i] == 1:
         f.append(i)
-    elif g[i] ==0 and r[i] == 0:
+    elif g[i] == 0 and r[i] == 0:
         z.append(i)
 zp = 0
 i = 1
@@ -42,6 +42,3 @@ if len(z) > 0:
         else:
             a[ze] = st
 print(*a[1:])
-
-
-

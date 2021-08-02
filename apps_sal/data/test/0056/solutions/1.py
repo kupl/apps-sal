@@ -8,8 +8,8 @@ for t in range(T):
             if a[i][j] > 1024:
                 diff = a[i][j] - 1024
                 a[i][j] = 1024
-                a[i + 1][j] += diff//2
-                a[i + 1][j + 1] += diff//2
+                a[i + 1][j] += diff // 2
+                a[i + 1][j + 1] += diff // 2
                 if (diff % 2 != 0):
                     raise RuntimeError('whut')
 ans = 0
@@ -18,4 +18,3 @@ for i in range(n):
         if a[i][j] >= 1024:
             ans += 1
 print(ans)
-

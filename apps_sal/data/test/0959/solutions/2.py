@@ -1,11 +1,12 @@
 # // DP
-# // codeforces 489F Special Matrices 
+# // codeforces 489F Special Matrices
 
 n = 0
 m = 0
 MOD = 0
 cap = [0] * 505
 ans = [[-1] * 505 for i in range(505)]
+
 
 def f(one, two):
     if one == 0 and two == 0:
@@ -18,17 +19,18 @@ def f(one, two):
 
     temp = 0
     if two > 1:
-        x = two * (two-1) / 2 * f(one+2, two-2)
+        x = two * (two - 1) / 2 * f(one + 2, two - 2)
         temp += x % MOD
     if one > 1:
-        x = one * (one-1) / 2 * f(one-2, two)
+        x = one * (one - 1) / 2 * f(one - 2, two)
         temp += x % MOD
     if two > 0 and one > 0:
-        x = one * two * f(one, two-1)
+        x = one * two * f(one, two - 1)
         temp += x % MOD
     temp = temp % MOD
     ans[one][two] = temp
     return temp
+
 
 temp = input().split(' ')
 n = int(temp[0])
@@ -41,8 +43,8 @@ for i in range(0, m):
         if cur[j] == '1':
             cap[j] += 1
 
-n_one = 0;
-n_two = 0;
+n_one = 0
+n_two = 0
 for i in range(0, n):
     if cap[i] == 0:
         n_two += 1
@@ -50,8 +52,6 @@ for i in range(0, n):
         n_one += 1
 
 print(int(f(n_one, n_two)))
-
-
 
 
 # // F. Special Matrices
@@ -67,7 +67,7 @@ print(int(f(n_one, n_two)))
 # // An n × n square matrix is special, if:
 
 # //     it is binary, that is, each cell contains either a 0, or a 1;
-# //     the number of ones in each row and column equals 2. 
+# //     the number of ones in each row and column equals 2.
 
 # // You are given n and the first m rows of the matrix. Print the number of special n × n matrices, such that the first m rows coincide with the given ones.
 
@@ -114,4 +114,3 @@ print(int(f(n_one, n_two)))
 # // 101
 
 # // In the second test the required matrix is already fully given, so the answer is 1.
-
