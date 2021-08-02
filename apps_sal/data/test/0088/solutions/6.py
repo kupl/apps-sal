@@ -7,4 +7,3 @@ for l in range(1, 70):
         if a <= x <= b:
             ans += 1
 print(ans)
-

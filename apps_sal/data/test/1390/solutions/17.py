@@ -10,4 +10,3 @@ for i in range(1, m - n + 1, 1):
         lpd = f[i + n - 1] - f[i]
 
 print(lpd)
-

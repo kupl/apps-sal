@@ -10,5 +10,3 @@ for i in s:
         m += i
 
 print(m)
-
-

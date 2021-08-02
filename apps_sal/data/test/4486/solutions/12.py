@@ -14,4 +14,3 @@ for i in range(0, N):
     s += result[i]
 
 print(s)
-

@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, f = map(int, input().split())
     k = [0] * n
@@ -11,7 +12,7 @@ def solve():
         k[i] = ki
         l[i] = li
 
-        if 2*ki > li:
+        if 2 * ki > li:
             d[i] = max(li - ki, 0)
         else:
             d[i] = ki
@@ -23,7 +24,8 @@ def solve():
     print(ans)
 
 
-
 def __starting_point():
     solve()
+
+
 __starting_point()

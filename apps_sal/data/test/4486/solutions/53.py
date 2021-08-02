@@ -4,4 +4,3 @@ for i, c in enumerate(list(input())):
         result += c
 
 print(result)
-

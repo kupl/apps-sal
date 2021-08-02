@@ -15,4 +15,3 @@ for i in range(n):
 a.sort(key=lambda day: day.diff, reverse=True)
 
 print(sum(day.diff for day in a[:f]) + sum(day.cur for day in a))
-

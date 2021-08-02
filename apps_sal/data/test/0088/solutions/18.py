@@ -14,6 +14,7 @@ if __taskname:
     sys.stdin = open(__taskname + '.in')
     sys.stdout = open(__taskname + '.out', 'w')
 
+
 def f(n):
     result = set()
     i = 0
@@ -27,4 +28,3 @@ def f(n):
 
 a, b = list(map(int, input().split()))
 print(f(b) - f(a - 1))
-

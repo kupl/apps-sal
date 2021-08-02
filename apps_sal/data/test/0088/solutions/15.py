@@ -8,6 +8,3 @@ for i in range(2, 61):
         if a <= x <= b:
             ans += 1
 print(ans)
-            
-    
-

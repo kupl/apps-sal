@@ -1,5 +1,6 @@
 a, b = list(map(int, input().split()))
 
+
 def cnt(x):
     l = x.bit_length()
     res = 0
@@ -10,5 +11,5 @@ def cnt(x):
                 res += 1
     return res
 
-print(cnt(b) - cnt(a - 1))
 
+print(cnt(b) - cnt(a - 1))

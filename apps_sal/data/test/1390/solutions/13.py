@@ -1,6 +1,6 @@
+import sys
 3
 
-import sys
 
 n, m = list(map(int, sys.stdin.readline().strip().split()))
 pieces = list(map(int, sys.stdin.readline().strip().split()))
@@ -13,4 +13,3 @@ for i in range(0, m - n + 1):
 
 # print(diff)
 print(min(diff))
-

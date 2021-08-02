@@ -2,7 +2,6 @@ import math
 import re
 
 
-
 n, f = list(map(int, input().split()))
 k = []
 l = []
@@ -14,7 +13,7 @@ for i in range(n):
     if k >= l:
         d.append(0)
         d1.append(l)
-    elif 2*k >= l:
+    elif 2 * k >= l:
         d.append(l - k)
         d1.append(k)
     else:
@@ -22,13 +21,9 @@ for i in range(n):
         d1.append(k)
 
 
-
-
-
-d = sorted(d, reverse= True)
+d = sorted(d, reverse=True)
 
 print(sum(d[:f]) + sum(d1))
-
 
 
 # n, m = map(int, input().split())
@@ -51,7 +46,7 @@ print(sum(d[:f]) + sum(d1))
 #
 # print(A[n - 1][m])
 
-    # arr = list(map(int, input().split()))
+# arr = list(map(int, input().split()))
 # res = 0
 # a = {math.pow(2, i) for i in range(35)}
 # for i in range(n-1):
@@ -69,4 +64,3 @@ print(sum(d[:f]) + sum(d1))
 # arr1 = sorted(arr, reverse=True)
 # a = [n - arr1.index(arr[el - 1]) for el in spis]
 # print(' '.join(map(str, a)))
-

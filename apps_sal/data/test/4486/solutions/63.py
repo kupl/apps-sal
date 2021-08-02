@@ -1,4 +1,3 @@
-s=input()
+s = input()
 
-print(("".join([c for index, c in enumerate(s) if index%2==0])))
-
+print(("".join([c for index, c in enumerate(s) if index % 2 == 0])))

@@ -13,6 +13,7 @@ def vk(ch, k):
         ch //= k
     return ans[::-1]
 
+
 ans = []
 for x in range(60):
     for i in range(1, x + 1):
@@ -28,4 +29,3 @@ for i in ans:
     if i >= a and i <= b:
         answer += 1
 print(answer)
-

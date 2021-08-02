@@ -13,4 +13,3 @@ for _ in range(t):
             break
         suf_len += 1
     print(min(suf_len, pref_len))
-
