@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip() 
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = 10**20
 MOD = 10 ** 9 + 7
@@ -7,9 +9,10 @@ def I(): return int(input())
 def F(): return float(input())
 def S(): return input()
 def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x)-1 for x in input().split()]
+def LI_(): return [int(x) - 1 for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LS(): return input().split()
+
 
 def fact_mod(n, MOD):
     ret = 1
@@ -17,6 +20,7 @@ def fact_mod(n, MOD):
         ret *= i
         ret %= MOD
     return ret
+
 
 def resolve():
     N, M = LI()
@@ -35,5 +39,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

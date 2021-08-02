@@ -20,4 +20,3 @@ elif out > 1 and n == 1:
     print(out)
 else:
     print(1)
-

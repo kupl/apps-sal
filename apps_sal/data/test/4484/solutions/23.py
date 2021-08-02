@@ -11,6 +11,6 @@ elif abs(n - m) == 1:
     print(ans)
 
 else:
-    ans = 2*math.factorial(n) * math.factorial(m)
+    ans = 2 * math.factorial(n) * math.factorial(m)
     ans %= 10 ** 9 + 7
     print(ans)

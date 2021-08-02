@@ -1,4 +1,6 @@
 from math import ceil
+
+
 def find_divisor(n):
     if n == 2:
         return []
@@ -9,6 +11,7 @@ def find_divisor(n):
             ans.extend([i, n / i])
 
     return list(set(ans))
+
 
 def fans(n):
     div = find_divisor(n)
@@ -21,16 +24,16 @@ def fans(n):
             divs = divs and (x % m == 0)
             if divs == False:
                 break
-        
-        if divs: 
+
+        if divs:
             return min(div)
         else:
             return 1
 
+
 def __starting_point():
     n = int(input())
     print(fans(n))
-
 
 
 __starting_point()

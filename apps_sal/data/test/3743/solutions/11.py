@@ -11,12 +11,11 @@ else:
     for i in range(2, n):
         if i * i > n:
             break
-        if (n % i)==0:
-        
-           d = gcd(d, i)
-           d = gcd(d, n // i)
+        if (n % i) == 0:
+
+            d = gcd(d, i)
+            d = gcd(d, n // i)
 if d:
     print(d)
 else:
     print(n)
-

@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-if n < m: # n >= m
+if n < m:  # n >= m
     n, m = m, n
 
 if m + 1 == n or m == n:

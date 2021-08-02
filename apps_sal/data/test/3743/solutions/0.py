@@ -13,4 +13,3 @@ if pow(p, pw) == n:
     print(p)
 else:
     print(1)
-

@@ -34,20 +34,18 @@ totalO = 0
 
 for x in range(len(s)):
     if s[x] == 'a':
-        if x%2 == 0:
+        if x % 2 == 0:
             totalE += evenA[-1] - evenA[x]
             totalO += oddA[-1] - oddA[x]
         else:
             totalE += oddA[-1] - oddA[x]
             totalO += evenA[-1] - evenA[x]
     else:
-        if x%2 == 0:
+        if x % 2 == 0:
             totalE += evenB[-1] - evenB[x]
             totalO += oddB[-1] - oddB[x]
         else:
             totalE += oddB[-1] - oddB[x]
             totalO += evenB[-1] - evenB[x]
 
-print(totalO,totalE)
-
-
+print(totalO, totalE)

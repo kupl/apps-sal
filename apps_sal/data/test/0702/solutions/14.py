@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 n = int(input())
 a = [[j for j in input()] for i in range(n)]
 
@@ -17,10 +18,10 @@ for i in range(n):
             a[i + 1][j - 1] = '#'
         else:
             fail = True
-        
+
     if fail:
         break
-    
+
 for i in a:
     for j in i:
         if j != '#':

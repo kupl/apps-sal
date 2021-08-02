@@ -7,6 +7,7 @@ def step(a, b):
         l[a + 2] = l[a + 2][:b] + '#' + l[a + 2][b + 1:]
         return True
 
+
 n = int(input())
 l = [input() for i in range(n)]
 ans = 'YES'

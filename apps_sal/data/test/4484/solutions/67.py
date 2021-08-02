@@ -1,6 +1,6 @@
+import math
 n, m = list(map(int, input().split()))
 
-import math
 if n == m:
     dog = math.factorial(n)
     mon = math.factorial(m)
@@ -13,4 +13,3 @@ else:
     ans = 0
 
 print((ans % (10 ** 9 + 7)))
-

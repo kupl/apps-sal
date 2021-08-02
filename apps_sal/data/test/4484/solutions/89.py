@@ -5,7 +5,7 @@ n_f = math.factorial(n)
 m_f = math.factorial(m)
 mod = 1000000007
 
-if abs(n-m) > 1:
+if abs(n - m) > 1:
     print(0)
     return
 if n == m:

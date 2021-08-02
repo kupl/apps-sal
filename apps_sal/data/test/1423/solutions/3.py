@@ -22,4 +22,3 @@ for i in range(1, N):
 z = sorted(z, key=lambda t: t[3])
 _, _, res, _ = list(zip(*z))
 print(*res)
-

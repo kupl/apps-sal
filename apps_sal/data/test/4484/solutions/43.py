@@ -6,4 +6,3 @@ elif n == m:
     print(((2 * math.factorial(n) * math.factorial(m)) % (10**9 + 7)))
 else:
     print((math.factorial(n) * math.factorial(m) % (10**9 + 7)))
-
