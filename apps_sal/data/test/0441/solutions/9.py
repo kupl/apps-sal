@@ -28,4 +28,3 @@ for x in array:
         a = max(a - (x - p), 0)
 
 print(s - (a + b))
-

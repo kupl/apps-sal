@@ -1,4 +1,6 @@
 import sys
+
+
 def main(N, P):
     I = [-1] * N
     for i, p in enumerate(P): I[p] = i
@@ -26,6 +28,7 @@ def main(N, P):
         return None
     return ans
 
+
 def __starting_point():
     input = sys.stdin.readline
     N = int(input())
@@ -36,5 +39,6 @@ def __starting_point():
     else:
         for a in ans:
             print(a)
+
 
 __starting_point()

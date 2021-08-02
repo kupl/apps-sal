@@ -16,4 +16,3 @@ if all(i == P[i] for i in range(N)) and cur == N - 1:
     print(("\n".join(map(str, ans))))
 else:
     print((-1))
-

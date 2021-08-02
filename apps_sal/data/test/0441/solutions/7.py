@@ -14,7 +14,7 @@ if S[0] == ".":
 
 for i in range(1, len(S)):
     if S[i] == ".":
-        if S[i-1] == "*" or S[i-1] == ".":
+        if S[i - 1] == "*" or S[i - 1] == ".":
             if A > B:
                 S[i] = "A"
                 A -= 1
@@ -23,7 +23,7 @@ for i in range(1, len(S)):
                 S[i] = "B"
                 B -= 1
                 cnt += 1
-        elif S[i-1] == "A":
+        elif S[i - 1] == "A":
             if B > 0:
                 S[i] = "B"
                 B -= 1

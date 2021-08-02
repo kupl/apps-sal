@@ -14,4 +14,3 @@ for i in range(n):
     if i == n - 1:
         res += [p[i]]
 print(*(ans if res == lst else[-1]), sep='\n')
-

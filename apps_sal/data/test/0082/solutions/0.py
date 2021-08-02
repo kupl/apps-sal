@@ -8,4 +8,3 @@ while s / n < c:
     n += 1
     ans += 1
 print(ans)
-

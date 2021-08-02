@@ -5,7 +5,7 @@ for i in range(n):
     arr.append(line)
 m = 6
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         t1 = arr[i]
         t2 = arr[j]
         tm = 0
@@ -19,5 +19,3 @@ m //= 2
 if m < 0: m = 0
 if n == 1: m = 6
 print(m)
-
-

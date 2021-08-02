@@ -25,4 +25,3 @@ if len(ans) == n - 1:
     print(*ans, sep="\n")
 else:
     print(-1)
-

@@ -11,8 +11,7 @@ for t in re.findall(r'\.+', s):
         if a > b: a -= 1
         else: b -= 1
         t -= 1
-    a -= t/2
-    b -= t/2
+    a -= t / 2
+    b -= t / 2
 
-print(int(s0 - max(0,a) - max(0,b)))
-
+print(int(s0 - max(0, a) - max(0, b)))

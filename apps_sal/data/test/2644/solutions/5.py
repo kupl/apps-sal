@@ -5,10 +5,10 @@ n = int(input())
 p = list(map(int, input().split()))
 
 stack = deque([])
-memo = [0] * (n-1)
+memo = [0] * (n - 1)
 
-for i in range(n-1):
-    if p[i] > (i + 1) and p[i+1] < (i + 2):
+for i in range(n - 1):
+    if p[i] > (i + 1) and p[i + 1] < (i + 2):
         stack.append(i)
         memo[i] = 1
 
@@ -20,22 +20,22 @@ while stack:
         # print('p1')
         print((-1))
         return
-    p[i], p[i+1] = p[i+1], p[i]
+    p[i], p[i + 1] = p[i + 1], p[i]
     memo[i] = 2
-    ans.append(i+1)
+    ans.append(i + 1)
 
-    if i > 0 and p[i-1] > i and p[i] < (i+1) and memo[i-1] == 0:
-        stack.append(i-1)
-        memo[i-1] = 1
+    if i > 0 and p[i - 1] > i and p[i] < (i + 1) and memo[i - 1] == 0:
+        stack.append(i - 1)
+        memo[i - 1] = 1
 
-    if i+2 < n and p[i+1] > (i+2) and p[i+2] < (i+3) and memo[i+1] == 0:
-        stack.append(i+1)
-        memo[i+1] = 1
+    if i + 2 < n and p[i + 1] > (i + 2) and p[i + 2] < (i + 3) and memo[i + 1] == 0:
+        stack.append(i + 1)
+        memo[i + 1] = 1
 
 # print(p)
 # print(ans)
 
-if len(ans) != n-1:
+if len(ans) != n - 1:
     # print('p2')
     print((-1))
     return
@@ -43,7 +43,7 @@ if len(ans) != n-1:
 f = 1
 
 for i in range(n):
-    if p[i] != i+1:
+    if p[i] != i + 1:
         f = 0
         break
 
@@ -53,5 +53,3 @@ if f:
 else:
     # print('p3')
     print((-1))
-
-

@@ -15,6 +15,7 @@ def change(a, b, k):
         return x // 2 - 1
     return x // 2
 
+
 if n == 1:
     print(6)
     return

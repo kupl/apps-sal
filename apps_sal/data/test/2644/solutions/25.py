@@ -4,6 +4,7 @@ def f(left, right, ps, acc):
         ps[i], ps[i + 1] = ps[i + 1], ps[i]
         acc.append(i + 1)
 
+
 def solve(n, ps, acc):
     for i in range(n):
         if ps[i] == i + 1:
@@ -25,6 +26,7 @@ def solve(n, ps, acc):
 
     return True
 
+
 def __starting_point():
     n = int(input())
     ps = [int(p) for p in input().split()]
@@ -34,5 +36,6 @@ def __starting_point():
     else:
         for line in acc:
             print(line)
+
 
 __starting_point()

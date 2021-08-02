@@ -2,7 +2,7 @@ def check(m):
     return (s + k * m) * 2 >= (2 * k - 1) * (n + m)
 
 
-n, k = map(int,input().split())
+n, k = map(int, input().split())
 a = list(map(int, input().split()))
 
 s = sum(a)
@@ -14,5 +14,5 @@ while l < r - 1:
         r = m
     else:
         l = m
-        
+
 print(r)

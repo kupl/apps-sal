@@ -29,4 +29,3 @@ for v1, v2 in zip(maxSpeed, maxSpeed[1:]):
     upper += abs(v1 - v2)
 ans = base + upper / 2
 print((ans / 10))
-

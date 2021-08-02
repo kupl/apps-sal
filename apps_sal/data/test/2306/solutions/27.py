@@ -22,4 +22,3 @@ for i, j, k in zip(T, T[1:], v):
 
 answer = np.abs(speed_limit[1:] + speed_limit[:-1]) * 0.5 / 2
 print((answer.sum()))
-

@@ -30,4 +30,3 @@ for i in range(len(A)):
 
 for i in ans:
     print(i)
-

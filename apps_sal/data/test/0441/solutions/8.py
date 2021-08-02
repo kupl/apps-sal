@@ -15,13 +15,13 @@ while True:
 
     for c in components:
 
-        max_a_b = min( len(c)//2 + len(c)%2, max(a, b) )
+        max_a_b = min(len(c) // 2 + len(c) % 2, max(a, b))
 
-        min_a_b = min( len(c)//2, min(a, b) )
+        min_a_b = min(len(c) // 2, min(a, b))
 
         max_students += max_a_b + min_a_b
 
-        if a>=b:
+        if a >= b:
 
             a -= max_a_b
             b -= min_a_b
@@ -34,4 +34,3 @@ while True:
     print(max_students)
 
     break
-

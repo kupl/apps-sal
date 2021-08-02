@@ -14,4 +14,3 @@ else:
     res += [p[i]] + p[len(ans):-1]
     ans += tmp[::-1]
 print(*(ans if res == [i + 1 for i in range(n)] else[-1]), sep='\n')
-

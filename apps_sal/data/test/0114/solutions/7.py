@@ -5,13 +5,13 @@ for i in range(n):
 
 ans = [[0 for i in range(m)] for j in range(n)]
 anslist = []
-for i in range(n-1):
-    for j in range(m-1):
-        if mat[i][j] == 1 and mat[i][j+1] == 1 and mat[i+1][j] == 1 and mat[i+1][j+1]:
+for i in range(n - 1):
+    for j in range(m - 1):
+        if mat[i][j] == 1 and mat[i][j + 1] == 1 and mat[i + 1][j] == 1 and mat[i + 1][j + 1]:
             for k in range(2):
                 for l in range(2):
-                    ans[i+k][j+l] = 1
-            anslist.append([i+1, j+1])
+                    ans[i + k][j + l] = 1
+            anslist.append([i + 1, j + 1])
 
 
 if mat == ans:
@@ -20,4 +20,3 @@ if mat == ans:
         print(i, j)
 else:
     print(-1)
-

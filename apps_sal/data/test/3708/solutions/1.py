@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def f(u, v):
     s, l = [], len(v)
     i = j = 0
@@ -11,6 +12,7 @@ def f(u, v):
         if u[i][0] >= v[j][0]: s.append(u[i])
         else: s.append((v[j][0], u[i][1]))
     return s
+
 
 n, m = map(int, input().split())
 p = defaultdict(list)

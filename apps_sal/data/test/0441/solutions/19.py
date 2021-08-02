@@ -2,7 +2,7 @@ n, a, b = list(map(int, input().strip().split()))
 s = input().split('*')
 rslt = 0
 for segment in s:
-    less = len(segment)//2
+    less = len(segment) // 2
     more = len(segment) - less;
     x = 0
     y = 0
@@ -13,8 +13,7 @@ for segment in s:
         x = min(a, less)
         y = min(b, more)
 
-    rslt += (x+y)
+    rslt += (x + y)
     a -= x
     b -= y
 print(rslt)
-

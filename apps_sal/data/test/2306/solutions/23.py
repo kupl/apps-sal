@@ -19,4 +19,3 @@ ans = 0
 for i in range(len(MAX_V) - 1):
     ans += ((REAL_V[i] + REAL_V[i + 1]) * 0.5) / 2
 print(ans)
-

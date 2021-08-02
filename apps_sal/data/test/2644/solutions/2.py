@@ -1,11 +1,11 @@
+from bisect import bisect_right
+from sys import stdin
+from functools import reduce
+from math import sqrt, gcd
+from itertools import permutations
+from collections import defaultdict, deque, Counter
 import sys
 sys.setrecursionlimit(1000000)
-from collections import defaultdict, deque, Counter
-from itertools import permutations
-from math import sqrt, gcd
-from functools import reduce
-from sys import stdin
-from bisect import bisect_right
 
 
 def get_min(p):
@@ -19,6 +19,7 @@ def get_min(p):
         else:
             ret[i] = ret[i + 1]
     return ret
+
 
 def solve(n, p):
     p2 = get_min(p)
@@ -42,7 +43,6 @@ def solve(n, p):
     return ret
 
 
-
 n = int(input())
 p = list(map(int, input().split()))
 ans = solve(n, p)
@@ -53,5 +53,3 @@ if ans:
         print(a)
 else:
     print((-1))
-
-
