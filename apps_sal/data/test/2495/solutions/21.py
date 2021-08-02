@@ -23,4 +23,3 @@ def f(isPlus):
 a1 = f(True)
 a2 = f(False)
 print((min(a1, a2)))
-

@@ -15,7 +15,7 @@ for i in range(col):
         else:
             ch = b
         if line[st] != ch or line[ed] != ch:
-            break;
+            break
         st += 1
         ed -= 1
     if st <= ed:
@@ -23,5 +23,3 @@ for i in range(col):
         break
 else:
     print('YES')
-    
-

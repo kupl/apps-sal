@@ -23,16 +23,16 @@ def db(x):
 def count(N, A, initSum):
     # nonlocal N, A
     sm = initSum
-    cnt = abs(sm-A[0])
+    cnt = abs(sm - A[0])
     db(cnt)
-    for i in range(N-1):
-        nextSum = sm + A[i+1]
+    for i in range(N - 1):
+        nextSum = sm + A[i + 1]
         db((sm, nextSum))
         if sm > 0 and nextSum >= 0:
-            cnt += abs(nextSum)+1
+            cnt += abs(nextSum) + 1
             sm = -1
         elif sm < 0 and nextSum <= 0:
-            cnt += abs(nextSum)+1
+            cnt += abs(nextSum) + 1
             sm = 1
         else:
             sm = nextSum
@@ -60,4 +60,3 @@ def probC():
 
 debug = False
 print((probC()))
-

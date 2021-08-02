@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-import sys, math, copy
+import sys
+import math
+import copy
 # import fractions, itertools
 # import numpy as np
 # import scipy
@@ -10,6 +12,7 @@ HUGE = 2147483647
 HUGEL = 9223372036854775807
 ABC = "abcdefghijklmnopqrstuvwxyz"
 
+
 def next(su, ai, sign):
     assert sign in [-1, 1]
     if (su + ai) * sign > 0:
@@ -18,6 +21,7 @@ def next(su, ai, sign):
         nextsu = sign
         nextai = nextsu - su
         return nextai
+
 
 def main():
     n = int(input())
@@ -37,5 +41,5 @@ def main():
 
     print(ress)
 
-main()
 
+main()

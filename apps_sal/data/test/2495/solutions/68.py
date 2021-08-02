@@ -4,6 +4,7 @@ n = int(input())
 a = list(map(int, input().split()))
 # print(a)
 
+
 def f(org_a, odd):
     a = copy.copy(org_a)
     ans = 0
@@ -32,6 +33,6 @@ def f(org_a, odd):
         ans += abs(move)
     return ans
 
+
 # print(a)
 print((min(f(a, True), f(a, False))))
-

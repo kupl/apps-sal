@@ -6,4 +6,3 @@ for _ in range(int(input())):
     else:
         ans.append('YES')
 print('\n'.join(ans))
-

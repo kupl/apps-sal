@@ -17,4 +17,3 @@ if x != a:
 else:
     msg = "NO"
 print(msg)
-

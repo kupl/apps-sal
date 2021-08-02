@@ -6,4 +6,3 @@ for i in a:
 for i in a:
     b.append((i - b[-1] // 2) * 2)
 print((*b[:n]))
-

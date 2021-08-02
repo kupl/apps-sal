@@ -6,4 +6,3 @@ for a in A[:-1]:
     ans.append(a * 2 - ans[-1])
 
 print((" ".join([str(_) for _ in ans])))
-

@@ -4,6 +4,7 @@ M = 998244353
 fact = None
 factr = None
 
+
 def comb(n, k):
     if n <= 0 or k < 0 or n < k:
         return 0
@@ -32,7 +33,6 @@ def solve(k, n):
         for _ in range(3):
             print((2))
         return
-
 
     g0 = (comb(k + n - 2, k - 2) + comb(k + n - 3, k - 2)) % M
     g1 = comb(k + n - 1, k - 1)

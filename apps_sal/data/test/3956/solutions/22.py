@@ -7,8 +7,8 @@ P = 998244353
 kaizyo = [0]
 kaizyo_inv = [0]
 tmp = 1
-for i in range(1, N+K):
-    tmp = (tmp*i) % P
+for i in range(1, N + K):
+    tmp = (tmp * i) % P
     kaizyo.append(tmp)
     kaizyo_inv.append(pow(tmp, P - 2, P))
 
@@ -28,7 +28,7 @@ for i in range(2, 2 * K + 1):
     ans = 0
     n_pair = min((i - 1) // 2, (2 * K - i + 1) // 2)
     out_pair = max(0, K - i + 1, i - K - 1)
-    which_use = pow(2, n_pair+1, P)
+    which_use = pow(2, n_pair + 1, P)
     for j in range(n_pair + 1):
         if n_pair - j > N:
             which_use = (which_use * inv_2) % P
@@ -44,4 +44,3 @@ for i in range(2, 2 * K + 1):
         ans = (ans + tmp) % P
     anss += str(ans) + '\n'
 print((anss.rstrip()))
-

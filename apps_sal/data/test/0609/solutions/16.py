@@ -12,9 +12,9 @@ for i in range(n - 3):
         flag = False
         break
 if not flag or avr == bgn:
-    print ("NO")
+    print("NO")
     return
-    
+
 else:
     for j in range(n - 1):
         line = input()
@@ -28,11 +28,6 @@ else:
                 break
 
 if flag:
-    print ("YES")
+    print("YES")
 else:
-    print ("NO")
-
-
-
-    
-
+    print("NO")

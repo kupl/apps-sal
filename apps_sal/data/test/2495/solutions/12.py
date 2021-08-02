@@ -8,7 +8,7 @@ def solve(ini_val):
         ini_val *= -1
     return cnt
 
+
 n = int(input())
 a = list(map(int, input().split()))
 print((min(solve(1), solve(-1))))
-

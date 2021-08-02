@@ -8,14 +8,11 @@ for i in range(t):
         if pos >= k:
             n = pos
         else:
-            n = n-pos
-            k = k-pos
+            n = n - pos
+            k = k - pos
     else:
         n += 1
         if pos <= k:
             k += 1
     print(n, end=" ")
     print(k)
-
-
-

@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     #n = int(sys.stdin.readline().strip())
     n, m = map(int, sys.stdin.readline().split())
@@ -8,41 +9,7 @@ def main():
         print("YES")
     else:
         print("NO")
-    
-   
-        
-        
-            
-        
-                
-            
-            
-        
-            
-    
-    
-    
-    
-    
-    
-            
-                
-        
-    
-            
-        
 
-            
-        
-    
-                
-    
-    
-    
-            
-    
-        
-    
 
 for i in range(int(sys.stdin.readline().strip())):
     main()

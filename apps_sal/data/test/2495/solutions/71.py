@@ -1,10 +1,13 @@
+import sys
+
+
 class Bit:
     def __init__(self, n):
         """
         :param n: 最大の要素数
         """
         self.n = n
-        self.tree = [0]*(n+1)
+        self.tree = [0] * (n + 1)
         self.depth = n.bit_length() - 1
 
     def sum(self, i):
@@ -13,7 +16,7 @@ class Bit:
         i -= 1
         while i >= 0:
             s += self.tree[i]
-            i = (i & (i + 1) )- 1
+            i = (i & (i + 1)) - 1
         return s
 
     def built(self, array):
@@ -50,19 +53,19 @@ class Bit:
         if equal:
             for i in range(self.depth, -1, -1):
                 k = pos + (1 << i)
-                if k < self.n and sum_ + self.tree[k] <= x: # 1-indexed の時は k <= self.n
+                if k < self.n and sum_ + self.tree[k] <= x:  # 1-indexed の時は k <= self.n
                     sum_ += self.tree[k]
                     pos += 1 << i
         return pos, sum_
 
     def __getitem__(self, i):
         """ [a0, a1, a2, ...] """
-        return self.get(i, i+1)
+        return self.get(i, i + 1)
 
     def __iter__(self):
         """ [a0, a1, a2, ...] """
         for i in range(self.n):
-            yield self.get(i, i+1)
+            yield self.get(i, i + 1)
 
     def __str__(self):
         text1 = " ".join(["element:            "] + list(map(str, self)))
@@ -70,6 +73,8 @@ class Bit:
         return "\n".join((text1, text2))
 
 ###############################################################
+
+
 def solve(sign):
     B = Bit(N)
     B.built(A)
@@ -85,10 +90,9 @@ def solve(sign):
         sign *= -1
     return res
 
-import sys
+
 input = sys.stdin.readline
 
 N = int(input())
 A = list(map(int, input().split()))
 print((min(solve(-1), solve(1))))
-

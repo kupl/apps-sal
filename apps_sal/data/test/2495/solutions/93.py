@@ -25,4 +25,3 @@ for i, a in enumerate(A):
         odd_count += 1 - now
         now = 1
 print((min(even_count, odd_count)))
-

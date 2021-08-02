@@ -3,7 +3,7 @@ def main():
     n = int(input())
     lst = list(map(int, input().rstrip().split()))
     cnt = [0] * 2
-    
+
     # start with positive number
     cur = 0
     for i, j in enumerate(lst):
@@ -31,4 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

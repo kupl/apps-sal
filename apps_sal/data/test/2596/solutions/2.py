@@ -26,7 +26,7 @@ def main():
     for i in range(t):
         c, i = mi()
         if c == 1:
-            if i <= ans[0]+1:
+            if i <= ans[0] + 1:
                 ans[0] += 1
             else:
                 ans[1] += 1
@@ -35,10 +35,11 @@ def main():
                 ans[0] -= i
             else:
                 ans[1] = i - ans[0] - 1
-        print(sum(ans)+1, ans[0]+1)
+        print(sum(ans) + 1, ans[0] + 1)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

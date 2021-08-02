@@ -10,7 +10,7 @@ for a in A:
 
 
 for i in range(1, N):
-    ans[i] = 2 * A[i-1] - ans[i - 1]
+    ans[i] = 2 * A[i - 1] - ans[i - 1]
 
 print((*ans))
 
@@ -19,4 +19,3 @@ print((*ans))
 ダム2: 2( a2 - a3 + a1 )
 ダム3: 2( a3 - a1 + a2 )
 """
-

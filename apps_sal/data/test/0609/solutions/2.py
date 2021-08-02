@@ -18,4 +18,3 @@ for i in range(1, n):
         if j != p1 and j != p2 and s[j] != s2:
             ans = 'NO'
 print(ans)
-

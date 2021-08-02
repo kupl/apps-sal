@@ -40,4 +40,3 @@ for i in range(1, n):
         is_plus = tmp > 0
 
 print((min(ans1, ans2)))
-

@@ -18,5 +18,3 @@ for i in range(1, N):
     b[i] = 2 * A[i - 1] - b[i - 1]
 
 print((' '.join(map(str, b))))
-
-

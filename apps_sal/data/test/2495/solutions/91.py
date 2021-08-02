@@ -38,4 +38,4 @@ for i in range(len(arr)):
         sum += arr[i]
     curr = not curr
 
-print(min(ans,ans1))
+print(min(ans, ans1))

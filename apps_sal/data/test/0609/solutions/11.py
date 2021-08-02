@@ -6,9 +6,9 @@ for i in range(lines):
     grid.append(input())
 
 x_char = grid[0][0]
-    
+
 test = ("".join([i for i in grid]))
-    
+
 if len("".join(set(test))) > 2:
     result = "NO"
 else:
@@ -27,5 +27,5 @@ else:
             break
 if grid[lines // 2].count(x_char) > 1:
     result = "NO"
-        
-print(result)    
+
+print(result)

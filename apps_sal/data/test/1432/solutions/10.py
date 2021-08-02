@@ -16,4 +16,3 @@ x[0] = s - 2 * temp
 for i in range(1, N):
     x[i] = 2 * A[i - 1] - x[i - 1]
 print((*x))
-

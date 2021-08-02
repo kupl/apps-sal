@@ -2,10 +2,11 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     lst = tuple(map(int, input().split()))
-    
+
     # start with positive number
     cur, cnt_1 = 0, 0
     for i, j in enumerate(lst):
@@ -31,10 +32,12 @@ def main():
             cur = 1
         else:
             cur += j
-    
+
     print(min(cnt_1, cnt_2))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

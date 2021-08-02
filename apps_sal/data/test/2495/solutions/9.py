@@ -35,4 +35,3 @@ for i in range(N):
         res2 += shift
 
 print(("{}".format(min(res1, res2))))
-

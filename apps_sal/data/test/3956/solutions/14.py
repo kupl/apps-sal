@@ -52,4 +52,3 @@ else:
     ans = [solve(i // 2 - max(0, i - k - 1)) for i in range(2, k + 2)]
     print(('\n'.join(map(str, ans))))
     print(('\n'.join(map(str, ans[-2::-1]))))
-

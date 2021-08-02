@@ -13,4 +13,3 @@ for req in range(t):
             n -= i
             k -= i
     print(n, k)
-

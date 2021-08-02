@@ -18,4 +18,3 @@ for _ in range(t):
             n = pos
 
     print(n, k)
-
