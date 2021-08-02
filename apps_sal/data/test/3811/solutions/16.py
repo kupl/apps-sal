@@ -3,7 +3,7 @@ import math
 
 n = int(input())
 gcd = 0
-a = {} 
+a = {}
 b = {}
 
 for i in range(n):
@@ -22,5 +22,3 @@ if gcd == 1:
     print(-1)
 else:
     print(gcd)
-
-

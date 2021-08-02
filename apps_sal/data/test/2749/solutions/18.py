@@ -10,7 +10,7 @@ for x in range(H):
         a[i] -= 1
         if a[i] == 0:
             i += 1
-            
+
     if x % 2 == 0:
         print(*c)
     else:

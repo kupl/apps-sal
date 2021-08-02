@@ -5,17 +5,18 @@ Kushtia, Bangladesh
 
 """
 
+
 def divisors(a, b):
     Divisors = []
 
     i = 2
 
-    while(i*i<=a):
+    while(i * i <= a):
         if a % i == 0:
             Divisors.append(i)
-            while( a % i == 0):
+            while(a % i == 0):
                 a /= i
-        i+=1
+        i += 1
 
     i = 2
 
@@ -27,12 +28,12 @@ def divisors(a, b):
                 b /= i
         i += 1
 
-    if a != 1 :
+    if a != 1:
         Divisors.append(int(a))
-    if b != 1 :
+    if b != 1:
         Divisors.append(int(b))
 
-    #print(Divisors)
+    # print(Divisors)
 
     return Divisors
 
@@ -43,7 +44,7 @@ def main():
 
     A = list()
 
-    for i in range (0, n):
+    for i in range(0, n):
         b = list(map(int, input().split()))
         A += b
 
@@ -54,14 +55,15 @@ def main():
     for i in range(0, len(Prime)):
         Ok = 1
         for j in range(1, n):
-            if A[j*2] % Prime[i] != 0 and A[2*j+1] % Prime[i] != 0 :
-                #print(Prime[i])
+            if A[j * 2] % Prime[i] != 0 and A[2 * j + 1] % Prime[i] != 0:
+                # print(Prime[i])
                 Ok = 0
                 break
-        if (Ok != 0) :
+        if (Ok != 0):
             ans = Prime[i]
             break
 
     print(ans)
+
 
 main()

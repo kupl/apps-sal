@@ -14,7 +14,8 @@ ARR = [1]
 
 H, W = list(map(int, input().split()))
 N = int(input())
-ARR = list(map(int,input().split()))
+ARR = list(map(int, input().split()))
+
 
 def calculate(h, w, n, arr):
     resources = deque()
@@ -39,4 +40,3 @@ def calculate(h, w, n, arr):
 
 
 calculate(H, W, N, ARR)
-

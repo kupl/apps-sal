@@ -13,4 +13,3 @@ while l < r:
         l = cur + 1
 
 print(max(0, n - l + 1))
-

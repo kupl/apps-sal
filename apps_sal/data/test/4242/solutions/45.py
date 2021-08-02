@@ -12,4 +12,3 @@ else:
             mylist.append(i)
 
 print((mylist[-k]))
-

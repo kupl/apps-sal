@@ -6,6 +6,7 @@ def print_all():
     print(free_bottom)
     print(busy_bottom)
 
+
 n = int(input())
 top = set()
 bottom = set()
@@ -82,4 +83,3 @@ elif len(busy_top) == 0:
     busy_bottom.clear()
     for i in range(len(bottom)):
         print('move', bottom.pop(), free_bottom.pop())
-

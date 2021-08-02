@@ -12,5 +12,6 @@ def atc_120b(ABK: str) -> int:
 
     return i
 
+
 ABK_input = input()
 print(atc_120b(ABK_input))

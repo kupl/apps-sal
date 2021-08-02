@@ -15,4 +15,3 @@ print(len(A) - 1)
 print(*A)
 print(len(B) - 1)
 print(*B)
-

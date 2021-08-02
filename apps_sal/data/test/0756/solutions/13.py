@@ -17,5 +17,3 @@ for i in n:
     s += 1
 
 print(s)
-    
-

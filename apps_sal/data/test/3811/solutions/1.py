@@ -1,14 +1,13 @@
 def primes(n):
     d = 2
-    while d*d <= n:
+    while d * d <= n:
         while (n % d) == 0:
             primfac.add(d)
             n //= d
         d += 1
     if n > 1:
-       primfac.add(n)
+        primfac.add(n)
     return primfac
-
 
 
 n = int(input())
@@ -31,5 +30,3 @@ if len(li) == 0:
     print(-1)
 else:
     print(li[-1])
-
-

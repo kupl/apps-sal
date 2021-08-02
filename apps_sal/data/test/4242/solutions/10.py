@@ -8,4 +8,4 @@ for i in range(1, min_AB + 1):
         common_list.append(i)
 
 common_list.sort(reverse=True)
-print(common_list[K-1])
+print(common_list[K - 1])

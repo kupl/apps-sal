@@ -18,32 +18,30 @@ q.append((sx, sy))
 
 
 def move(px, py, s, left):
-  if (px >= 0 and px < n and py >= 0 and py < m):
-    if (smap[px][py] == '.' and mp[px][py] == -1):
-      mp[px][py] = s
-      if left:
-        q.appendleft((px, py))
-      else:
-        q.append((px, py))
-
+    if (px >= 0 and px < n and py >= 0 and py < m):
+        if (smap[px][py] == '.' and mp[px][py] == -1):
+            mp[px][py] = s
+            if left:
+                q.appendleft((px, py))
+            else:
+                q.append((px, py))
 
 
 while q:
-  px, py = q.popleft()
-  s = mp[px][py]
-  #print(s)
-  #print(s + py - r)
-  #print(s - py + r)
-  #print(s + py - r <= y * 2)
-  #print(s - py + r <= x * 2)
-  #print(x, y)
-  #return
-  ans += s + py - sy <= y * 2 and s - py + sy <= x * 2
-  
-  move(px + 1, py, s, left=True)
-  move(px - 1, py, s, left=True)
-  move(px, py + 1, s + 1, left=False)
-  move(px, py - 1, s + 1, left=False)
-  
-print(ans)
+    px, py = q.popleft()
+    s = mp[px][py]
+    # print(s)
+    #print(s + py - r)
+    #print(s - py + r)
+    #print(s + py - r <= y * 2)
+    #print(s - py + r <= x * 2)
+    #print(x, y)
+    # return
+    ans += s + py - sy <= y * 2 and s - py + sy <= x * 2
 
+    move(px + 1, py, s, left=True)
+    move(px - 1, py, s, left=True)
+    move(px, py + 1, s + 1, left=False)
+    move(px, py - 1, s + 1, left=False)
+
+print(ans)

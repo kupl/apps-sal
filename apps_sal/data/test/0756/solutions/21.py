@@ -11,8 +11,6 @@ def __starting_point():
         print(t[ans] + 15)
     else:
         print(min(90, t[-1] + 15))
-    
-    
-    
+
 
 __starting_point()

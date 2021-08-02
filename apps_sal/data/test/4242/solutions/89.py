@@ -10,4 +10,3 @@ for i in range(min(a, b), 0, -1):
             break
 
 print(i)
-

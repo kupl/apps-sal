@@ -9,4 +9,3 @@ for t in a:
     prev = t
 cur = min(cur + 15, 90)
 print(cur)
-

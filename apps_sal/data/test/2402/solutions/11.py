@@ -13,4 +13,3 @@ for _ in range(T):
     ans2 = n if x + y > n else x + y - 1
 
     print(ans1, ans2)
-

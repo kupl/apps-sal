@@ -1,6 +1,6 @@
+from collections import deque
 H, W = list(map(int, input().split()))
 N = int(input())
-from collections import deque
 
 A = deque(list(map(int, input().split())))
 nuriwake = 1
@@ -18,4 +18,3 @@ for i in range(H):
     ans.append(t)
 for a in ans:
     print((' '.join(map(str, a))))
-

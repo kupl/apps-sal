@@ -37,4 +37,3 @@ for ih, iw in zigzag(h, w):
 
 for row in color:
     print((' '.join(map(str, row))))
-

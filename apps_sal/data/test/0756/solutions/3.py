@@ -1,6 +1,7 @@
 import math
 from collections import Counter
 
+
 def solve():
     n = int(input())
     T = [int(x) for x in input().split()]
@@ -12,6 +13,5 @@ def solve():
             time = t
     return min(time + 15, 90)
 
+
 print(solve())
-
-

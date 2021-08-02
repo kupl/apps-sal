@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 from operator import itemgetter
 
 sys.setrecursionlimit(10**7)
@@ -19,9 +32,9 @@ a = na()
 ans = []
 for i in range(N):
     for _ in range(a[i]):
-        ans.append(i+1)
+        ans.append(i + 1)
 for i in range(H):
     if i % 2 == 0:
-        print(*ans[i*W:(i+1)*W])
+        print(*ans[i * W:(i + 1) * W])
     else:
-        print(*ans[i*W:(i+1)*W][::-1])
+        print(*ans[i * W:(i + 1) * W][::-1])

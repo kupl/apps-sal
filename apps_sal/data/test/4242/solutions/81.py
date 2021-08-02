@@ -1,4 +1,4 @@
-a, b, k = list(map(int,input().split()))
+a, b, k = list(map(int, input().split()))
 c = []
 
 for i in range(1, b + 1):
@@ -14,4 +14,3 @@ for i in range(1, b + 1):
 #         pass
 
 print((c[-k]))
-

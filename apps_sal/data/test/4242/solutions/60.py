@@ -7,4 +7,3 @@ for i in range(maxint, 0, -1):
     if cnt == k:
         print(i)
         break
-

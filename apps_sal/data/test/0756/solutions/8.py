@@ -15,4 +15,3 @@ for i in range(1, 91):
         break
 if c == True:
     print(90)
-

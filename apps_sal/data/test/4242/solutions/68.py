@@ -13,7 +13,6 @@ def main():
     print((sorted(yakusu, reverse=True)[K - 1]))
 
 
-
 def __starting_point():
     main()
 

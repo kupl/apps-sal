@@ -15,7 +15,9 @@ def main():
     ans = [ans[i:i + W] if i // W % 2 == 0 else ans[i + W - 1:i - 1:-1] for i in range(0, len(ans), W)]
     [print(' '.join(a)) for a in ans]
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

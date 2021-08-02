@@ -4,7 +4,7 @@ H, W = list(map(int, input().split()))
 N = int(input())
 a = list(map(int, input().split()))
 
-colors = np.array([[0]*W]*H)
+colors = np.array([[0] * W] * H)
 
 i = 0
 j = 0
@@ -12,7 +12,7 @@ flag = True
 count = 0
 for k in range(N):
     for m in range(a[k]):
-        colors[i, j] = str(k+1)
+        colors[i, j] = str(k + 1)
         count += 1
         if count % W == 0:
             i += 1
@@ -32,4 +32,3 @@ for i in range(H):
         s[j] = str(s[j])
     p = ' '.join(s)
     print(p)
-

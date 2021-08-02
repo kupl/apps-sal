@@ -6,4 +6,3 @@ for case_num in range(t):
         best = min(x + y - n + 1, n)
     worst = min(x + y - 1, n)
     print(best, worst)
-

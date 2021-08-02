@@ -9,4 +9,3 @@ for i in range(1, min_a_b + 1):
 
 divisor_list.sort(reverse=True)
 print((divisor_list[k - 1]))
-

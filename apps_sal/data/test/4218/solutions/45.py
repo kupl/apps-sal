@@ -1,5 +1,5 @@
 import math
 
-n=int(input())
+n = int(input())
 
-print((n-math.floor(n/2))/n)
+print((n - math.floor(n / 2)) / n)

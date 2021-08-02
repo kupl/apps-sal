@@ -9,17 +9,17 @@ def resolve():
     for i in range(H):
         for j in range(W):
             if reverse:
-                _j = W-1 - j
+                _j = W - 1 - j
             else:
                 _j = j
             C[i][_j] = color
             cnt += 1
-            if cnt == A[color-1]:
+            if cnt == A[color - 1]:
                 color += 1
                 cnt = 0
         reverse = not reverse
     [print(" ".join(map(str, C[i]))) for i in range(H)]
-        
+
 
 if '__main__' == __name__:
     resolve()

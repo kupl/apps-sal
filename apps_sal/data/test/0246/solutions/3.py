@@ -7,7 +7,7 @@ r = n + 1
 while r - l > 1:
     f = lambda x: sum(map(int, list(str(x))))
     m = (r + l) // 2
-    
+
     if m - f(m) >= s:
         r = m
     else:

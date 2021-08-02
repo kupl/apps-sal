@@ -5,4 +5,4 @@ for i in reversed(range(1, 101)):
         list01.append(i)
     else:
         pass
-print(list01[k-1])
+print(list01[k - 1])

@@ -3,9 +3,9 @@ with open(0) as f:
 
 line = []
 for i in range(N):
-    line += [i+1] * a[i]
-ans = [line[i*W:(i+1)*W] for i in range(H)]
+    line += [i + 1] * a[i]
+ans = [line[i * W:(i + 1) * W] for i in range(H)]
 for i, v in enumerate(ans):
-    if i&1:
+    if i & 1:
         v.reverse()
     print(*v)

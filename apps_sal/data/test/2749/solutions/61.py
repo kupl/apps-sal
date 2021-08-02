@@ -18,4 +18,3 @@ sign = 1
 for li in out:
     print((*li[::sign]))
     sign *= -1
-
