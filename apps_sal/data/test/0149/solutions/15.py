@@ -11,6 +11,6 @@ if len(a) == 0:
     return
 ans = max(a[0] - l, r - a[-1])
 for i in range(1, len(a)):
-    ans = max(ans, a[i]-a[i-1]-1)
+    ans = max(ans, a[i] - a[i - 1] - 1)
 
 print(ans)

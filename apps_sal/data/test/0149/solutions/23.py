@@ -2,6 +2,7 @@ from sys import stdin
 import re
 import math
 
+
 def readInt(count=1):
     m = re.match('\s*' + ('([+-]?\d+)\s*' * count), stdin.readline())
     if m is not None:
@@ -11,10 +12,11 @@ def readInt(count=1):
         return ret
     return None
 
+
 x, y, l, r = readInt(4)
 
 max = 0
-unhappyYears = [l-1]
+unhappyYears = [l - 1]
 xa = 1
 while xa <= r:
     yb = 1
@@ -27,10 +29,10 @@ while xa <= r:
         yb *= y
     xa *= x
 unhappyYears.sort()
-unhappyYears.append(r+1)
+unhappyYears.append(r + 1)
 
-for i in range(len(unhappyYears)-1):
-    cur = unhappyYears[i+1] - unhappyYears[i] - 1
+for i in range(len(unhappyYears) - 1):
+    cur = unhappyYears[i + 1] - unhappyYears[i] - 1
     if cur > max:
         max = cur
 print(max)

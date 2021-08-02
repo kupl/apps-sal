@@ -13,6 +13,7 @@ def is_MM(S):
     else:
         return False
 
+
 def __starting_point():
     S = input()
     top = S[:2]
@@ -25,4 +26,6 @@ def __starting_point():
         print('MMYY')
     else:
         print('NA')
+
+
 __starting_point()

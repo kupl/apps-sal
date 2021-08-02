@@ -9,7 +9,7 @@ def isMM(num):
 
 
 def hantei(number):
-    num = math.floor(number/100)
+    num = math.floor(number / 100)
     ber = number % 100
     if isMM(num) is False and isMM(ber) is False:
         return "NA"
@@ -23,4 +23,3 @@ def hantei(number):
 
 num = int(input())
 print((hantei(num)))
-

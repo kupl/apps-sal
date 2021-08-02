@@ -21,4 +21,3 @@ for delta in range(d - b + 1):
     left = max(0, b - max(delta + 1, a) + 1)
     ans += left * right
 print(ans)
-

@@ -6,9 +6,9 @@ if U == S:
     A -= 1
     A = str(A)
     B = str(B)
-    print(A+' '+B)
-else :
+    print(A + ' ' + B)
+else:
     B -= 1
     A = str(A)
     B = str(B)
-    print(A+' '+B)
+    print(A + ' ' + B)

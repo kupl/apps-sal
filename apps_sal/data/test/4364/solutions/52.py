@@ -12,4 +12,3 @@ else:
     else:
         print("NA")
 pass
-

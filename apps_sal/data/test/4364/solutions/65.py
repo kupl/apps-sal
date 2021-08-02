@@ -41,4 +41,3 @@ elif not(is_yymm(f, l)) and is_mmyy(f, l):
 
 else:
     print('NA')
-

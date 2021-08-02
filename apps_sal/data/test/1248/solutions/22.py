@@ -18,7 +18,7 @@ BIGMOD = 1000000007
 
 
 def solve(d1, d2, d3):
-    return min(d1 + d2 + d3, 2*(d1 + d2), 2*(d1 + d3), 2*(d2 + d3))
+    return min(d1 + d2 + d3, 2 * (d1 + d2), 2 * (d1 + d3), 2 * (d2 + d3))
 
 
 def p(*args, **kwargs):
@@ -33,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

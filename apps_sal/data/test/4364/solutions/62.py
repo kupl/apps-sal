@@ -1,18 +1,18 @@
-s=input()
+s = input()
 
-mae=int(s[:2])
-ushiro=int(s[2:])
+mae = int(s[:2])
+ushiro = int(s[2:])
 
-if 1<=mae<=12:
-    if 1<=ushiro<=12:
-        ans="AMBIGUOUS"
+if 1 <= mae <= 12:
+    if 1 <= ushiro <= 12:
+        ans = "AMBIGUOUS"
     else:
-        ans="MMYY"
+        ans = "MMYY"
 
-elif 1<=ushiro<=12:
-    ans="YYMM"
+elif 1 <= ushiro <= 12:
+    ans = "YYMM"
 
 else:
-    ans="NA"
-    
+    ans = "NA"
+
 print(ans)

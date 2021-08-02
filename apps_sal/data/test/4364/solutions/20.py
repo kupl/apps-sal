@@ -1,6 +1,6 @@
-S=input().strip()
-a=int(S[:2])
-b=int(S[2:])
+S = input().strip()
+a = int(S[:2])
+b = int(S[2:])
 aa = a < 13 and a != 0
 bb = b < 13 and b != 0
 
@@ -13,4 +13,3 @@ elif bb and not aa:
 else:
     ans = 'NA'
 print(ans)
-

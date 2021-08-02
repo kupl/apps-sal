@@ -1,4 +1,5 @@
-s=input()
+s = input()
+
 
 def month(n):
     if 1 <= n <= 12:
@@ -8,7 +9,7 @@ def month(n):
 
 
 if int(s[0:2]) == 0:
-    if month(int(s[2:4])) :
+    if month(int(s[2:4])):
         print("YYMM")
         return
     else:
@@ -31,7 +32,6 @@ if month(int(s[0:2])):
         print("MMYY")
 else:
     if month(int(s[2:4])):
-            print("YYMM")
+        print("YYMM")
     else:
         print("NA")
-

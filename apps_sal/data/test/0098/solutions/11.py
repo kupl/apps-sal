@@ -101,9 +101,9 @@ def get_inputs(test_inputs=None):
     # Splitting numnums into n arrays
     numa = []
     numb = []
-    for i in range(0, 2*imax, 2):
+    for i in range(0, 2 * imax, 2):
         numa.append(numnums[i])
-        numb.append(numnums[i+1])
+        numb.append(numnums[i + 1])
 
     # Decoding inputs into a list
     return [numa, numb]
@@ -180,7 +180,8 @@ class unitTests(unittest.TestCase):
         print((
             "\nTime Test: " +
             "{0:.3f}s (inp {1:.3f}s init {2:.3f}s calc {3:.3f}s)".
-            format(stop-start, init-start, calc-init, stop-calc)))
+            format(stop - start, init - start, calc - init, stop - calc)))
+
 
 def __starting_point():
 
@@ -192,5 +193,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(calculate())
+
 
 __starting_point()

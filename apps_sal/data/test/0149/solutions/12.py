@@ -22,6 +22,6 @@ ans = 0;
 for i in range(len(pivots)):
     if i == 0:
         continue;
-    ans = max(pivots[i] - pivots[i - 1] - 1,ans);
+    ans = max(pivots[i] - pivots[i - 1] - 1, ans);
 
 print(ans);

@@ -1,9 +1,9 @@
 s = input()
 
-s1 = int(s[0]+s[1])
-s2 = int(s[2]+s[3])
+s1 = int(s[0] + s[1])
+s2 = int(s[2] + s[3])
 #print(s1, s2)
-L=[]
+L = []
 
 for i in range(1, 13):
     L.append(i)
@@ -17,4 +17,3 @@ elif s1 not in L and s2 in L:
     print('YYMM')
 else:
     print('AMBIGUOUS')
-

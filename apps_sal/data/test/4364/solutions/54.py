@@ -8,8 +8,8 @@ if 13 <= a or a == 0:
     else:
         print('NA')
 else:
-    
-    if 1<= b  and b<= 12:
+
+    if 1 <= b and b <= 12:
         print('AMBIGUOUS')
     else:
         print('MMYY')

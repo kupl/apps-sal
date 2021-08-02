@@ -19,4 +19,3 @@ elif is_mmyy:
     print('MMYY')
 else:
     print('NA')
-

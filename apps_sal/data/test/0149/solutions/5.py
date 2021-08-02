@@ -31,4 +31,3 @@ for i in ress:
     lst = i
 
 print(ans)
-
