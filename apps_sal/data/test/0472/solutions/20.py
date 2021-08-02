@@ -1,11 +1,13 @@
 import math
 
+
 def digit_sum(num):
     res = 0
     while num:
         res += num % 10
         num //= 10
     return res
+
 
 R = lambda: map(int, input().split())
 n = int(input())

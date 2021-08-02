@@ -11,7 +11,7 @@ def main():
     solutions = []
     for s in range(154):
         delta = (s ** 2 + 4 * n) ** 0.5
-        x = (-s + delta)/2
+        x = (-s + delta) / 2
         if int(x) != x:
             continue
         x = int(x)
@@ -25,5 +25,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

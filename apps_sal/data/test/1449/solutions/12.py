@@ -2,7 +2,7 @@
 #       ||        //  \\        ||     ||   // ||
 #       ||       //====\\       ||     ||  //  ||
 #       ||      //      \\      ||     || //   ||
-#   ========== //        \\  ========  ||//====|| 
+#   ========== //        \\  ========  ||//====||
 #  code
 
 def solve():
@@ -12,7 +12,7 @@ def solve():
     if n == 1:
         print(1)
         return
-    
+
     diff = 1
     ans = 1
     for i, v in enumerate(a):
@@ -24,12 +24,13 @@ def solve():
                 if diff > k:
                     ans += 1
                     diff = 2
-    
+
     if diff > k:
         print(-1)
     else:
         print(ans)
     return
+
 
 def main():
     t = 1
@@ -37,6 +38,9 @@ def main():
     for _ in range(t):
         solve()
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

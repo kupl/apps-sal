@@ -26,4 +26,3 @@ elif max(len(cc[i]) for i in range(n)) <= 1 and\
     print(0)
 else:
     print(-1)
-

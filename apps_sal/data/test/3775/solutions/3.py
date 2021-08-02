@@ -42,4 +42,3 @@ else:
             ok = False
     if ok: print(0)
     else: print(-1)
-

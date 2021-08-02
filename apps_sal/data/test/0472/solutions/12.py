@@ -2,6 +2,7 @@
 
 from math import sqrt
 
+
 def sum_digits(x):
     res = 0
     while x > 0:
@@ -21,5 +22,3 @@ for i in range(max(root - 100, 1), root + 1, 1):
         return
 
 print('-1')
-
-

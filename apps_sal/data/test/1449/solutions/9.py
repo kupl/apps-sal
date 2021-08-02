@@ -76,19 +76,19 @@ e=time.time()
 print(e-s)
 '''
 
-t=int(input())
+t = int(input())
 for i in range(t):
-    n,k=list(map(int,input().split()))
-    #n=int(input())
-    a=set(map(int,input().split()))
-    n=len(a)
-    if n==1:
-        ans=1
+    n, k = list(map(int, input().split()))
+    # n=int(input())
+    a = set(map(int, input().split()))
+    n = len(a)
+    if n == 1:
+        ans = 1
     else:
-        if k==1:
-            ans=-1
+        if k == 1:
+            ans = -1
         else:
-            ans=ceil((n-1)/(k-1))
+            ans = ceil((n - 1) / (k - 1))
     print(ans)
 '''
 n,m=map(int,input().split())
@@ -141,6 +141,3 @@ while pre[node]!=-1:
 print(ans-cur)
             
 '''
-    
-
-

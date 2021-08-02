@@ -12,4 +12,3 @@ while S:
             S.remove(k)
     ans += len(S) - 1
 print(ans + 1)
-

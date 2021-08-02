@@ -9,4 +9,3 @@ for y in range(k, 10):
         print(q * (p // len(q)))
         break
 else: print('Impossible')
-

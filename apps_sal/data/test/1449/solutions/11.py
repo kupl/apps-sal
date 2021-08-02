@@ -18,4 +18,3 @@ for _ in range(int(input())):
         ans = (max(len(u) - 1 - 1, 0)) // (k - 1) + 1
     gans.append(ans)
 print('\n'.join(map(str, gans)))
-

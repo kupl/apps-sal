@@ -2,12 +2,14 @@ n = int(input())
 
 ans = 10 ** 18
 
+
 def f(x):
     s = 0
     while x > 0:
         s += x % 10
         x //= 10
     return s
+
 
 def sqr(x):
     l, r = 0, 10 ** 10
@@ -18,6 +20,7 @@ def sqr(x):
         else:
             r = m
     return l
+
 
 for s in range(100):
     if sqr(s ** 2 + 4 * n) ** 2 == s ** 2 + 4 * n:

@@ -1,5 +1,6 @@
 def readln(): return tuple(map(int, input().split()))
 
+
 n, = readln()
 for s in range(1, 180):
     d = int((s**2 + 4 * n)**0.5)
@@ -10,4 +11,3 @@ for s in range(1, 180):
             print(x)
             return
 print(-1)
-

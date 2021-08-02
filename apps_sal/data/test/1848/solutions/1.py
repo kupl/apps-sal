@@ -12,6 +12,7 @@ def seq(a, new):
         new = []
         seq(a, new)
 
+
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
@@ -19,7 +20,3 @@ new = []
 count = 0
 seq(a, new)
 print(count)
-
-    
-    
-

@@ -11,7 +11,4 @@ for y in range(k, 10):
 else: print('Impossible')
 
 
-
-
 # Made By Mostafa_Khaled
-

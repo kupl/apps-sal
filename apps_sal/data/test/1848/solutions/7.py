@@ -21,5 +21,3 @@ for i in range(n):
         cnt += 1
         #print(cur, a[ind])
 print(cnt)
-        
-

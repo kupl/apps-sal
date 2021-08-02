@@ -1,6 +1,7 @@
 n = int(input())
 x = 4 * n
 
+
 def is_square(m):
     x = 1
     for i in range(100):
@@ -10,6 +11,7 @@ def is_square(m):
         return x
     else:
         return -1
+
 
 ans = -1
 for s in range(9 * 18):
@@ -23,5 +25,3 @@ if ans == -1:
     print(-1)
 else:
     print(ans)
-
-

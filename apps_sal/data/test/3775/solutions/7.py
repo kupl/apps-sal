@@ -19,11 +19,11 @@ for num in range(1, 10):
     for x in a:
         if num in x:
             ina.append(x)
-    
+
     for x in b:
         if num in x:
             inb.append(x)
-    
+
     x = 0
     for t in ina:
         t.sort()
@@ -38,7 +38,7 @@ if len(accept) == 1:
     print(accept[0])
     return
 
-#check fst
+# check fst
 for t in a:
     z = set()
     for p in b:
@@ -49,7 +49,7 @@ for t in a:
         print(-1)
         return
 
-#check scd
+# check scd
 for t in b:
     z = set()
     for p in a:
@@ -60,6 +60,3 @@ for t in b:
         print(-1)
         return
 print(0)
-        
-
-

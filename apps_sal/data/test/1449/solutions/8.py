@@ -2,7 +2,7 @@ import sys
 readline = sys.stdin.readline
 
 T = int(readline())
-Ans = [None]*T
+Ans = [None] * T
 
 for qu in range(T):
     N, K = list(map(int, readline().split()))
@@ -13,11 +13,10 @@ for qu in range(T):
         else:
             Ans[qu] = -1
     else:
-        s = len(set(A))        
+        s = len(set(A))
         if K >= s:
             Ans[qu] = 1
         else:
-            Ans[qu] = 1-((K-s)//(K-1))
+            Ans[qu] = 1 - ((K - s) // (K - 1))
 
 print('\n'.join(map(str, Ans)))
-

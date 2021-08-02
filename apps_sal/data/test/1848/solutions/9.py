@@ -18,4 +18,3 @@ while len(b) > 0:
     b = c.copy()
     summa += (count - 1)
 print(summa)
-

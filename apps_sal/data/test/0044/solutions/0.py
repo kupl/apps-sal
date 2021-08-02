@@ -8,4 +8,3 @@ d1 = d - dd
 t4 = d1 * a + max(0, (d1 // k - 1) * t) + dd * b
 
 print(min([t1, t2, t3, t4]))
-
