@@ -2,10 +2,13 @@ class First:
     def __init__(self, seconds, cost):
         self.seconds = seconds
         self.cost = cost
+
+
 class Second:
     def __init__(self, numCreated, cost):
         self.numCreated = numCreated
         self.cost = cost
+
 
 def solve():
     potionCount, firstCount, secondCount = map(int, input().split())
@@ -34,4 +37,6 @@ def solve():
             time = moar * f.seconds
             res = min(res, time)
     print(res)
+
+
 solve()

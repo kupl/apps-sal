@@ -6,5 +6,5 @@ while n != 0:
         a *= 2
         k += 1
     a //= 2
-    print(k,end=' ')
+    print(k, end=' ')
     n -= a

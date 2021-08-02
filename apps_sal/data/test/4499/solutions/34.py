@@ -9,4 +9,3 @@ def generate_acronym(l1: list) -> str:
 
 lists = list(map(str, input().split()))
 print((generate_acronym(lists)))
-

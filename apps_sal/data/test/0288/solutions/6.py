@@ -15,11 +15,10 @@ r = 0
 while r < 4 and t <= n:
     r += 1
     t = T[r]
-    
+
 while t <= n:
     r += 1
-    t += T[r-2]
+    t += T[r - 2]
     T[r] = t
-    
-print(r-1)
 
+print(r - 1)

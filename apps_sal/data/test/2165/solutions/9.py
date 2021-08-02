@@ -13,4 +13,3 @@ if v:
         c -= x[i][1]
         v -= x[i][0] * x[i][1]
 print(c)
-

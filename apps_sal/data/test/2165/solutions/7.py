@@ -12,9 +12,10 @@ def f(t, x):
             r = s
     return l - 1
 
-n , T = [int(x) for x in input().split()]
+
+n, T = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
-t = [(int(x) - T,  a[i]) for i, x in enumerate(input().split())]
+t = [(int(x) - T, a[i]) for i, x in enumerate(input().split())]
 
 tp = list(sorted([e for e in t if e[0] > 0]))
 tm = list(sorted([(-x[0], x[1]) for x in ([e for e in t if e[0] < 0])]))
@@ -28,14 +29,12 @@ if ep > 0 and em > 0:
 
         res += sum([e[1] for e in tp])
         res += sum([e[1] for e in tm[:it]])
-        if  it < len(tm):
+        if it < len(tm):
             res += (ep - ps[it]) / tm[it][0]
     else:
         it = f(tp, em)
         res += sum([e[1] for e in tm])
         res += sum([e[1] for e in tp[:it]])
-        if  it < len(tp):
+        if it < len(tp):
             res += (em - ps[it]) / tp[it][0]
 print(res)
-
-

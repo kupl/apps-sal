@@ -10,9 +10,10 @@ def gcd(a, b):
         a, b = t, a
     return 1
 
+
 a, b = map(int, input().split())
 g = gcd(a, b)
-m = a/g * b/g
+m = a / g * b / g
 n = 0
 while m % 2 == 0:
     m /= 2

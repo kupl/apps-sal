@@ -16,9 +16,9 @@ from functools import lru_cache
 if os.getcwd() == 'C:\\Users\\User\\Desktop\\python\\Prog\\CodeForces' \
         or os.environ['COMPUTERNAME'] == 'USER145':
     import pdb
-    
+
     import sys
-    
+
     pdb = pdb.Pdb(stdin=sys.stdin, stdout=sys.stdout)
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
@@ -58,9 +58,9 @@ def main():
         k, *a = ri()
         bits = to_bits(a)
         user_masks[bits] += 1
-    
+
     ans = (float(-inf), float(inf), -1, -1)
-    
+
     for i in range(m):
         c, k, *a = ri()
         bits = to_bits(a)
@@ -69,40 +69,40 @@ def main():
         while len(pizzas[bits]) > 2:
             pizzas[bits].pop()
     # pprint(pizzas)
-    
+
     for mask_F in range(1 << 9):
         for mask_S in range(1 << 9):
             if len(pizzas[mask_F]) and len(pizzas[mask_S]) \
                     and mask_F != mask_S:
-                
+
                 mask = mask_F | mask_S
-                
+
                 satisfied_users = count_sat_users(mask)
-                
+
                 f_pizza = next(iter(pizzas[mask_F]))
                 s_pizza = next(iter(pizzas[mask_S]))
-                
+
                 summary_cost = 0
                 summary_cost += f_pizza[0]
                 summary_cost += s_pizza[0]
-                
+
                 ans = max(ans,
                           (satisfied_users,
                            -summary_cost,
                            s_pizza[1],
                            f_pizza[1]))
-                
+
                 # bruting all masks
                 bmask = mask
                 while bmask:
                     satisfied_users += user_masks[bmask]
                     bmask = (bmask - 1) & mask
-            
+
             if len(pizzas[mask_F]) == 2:
                 satisfied_users = count_sat_users(mask_F)
-                
+
                 it = iter(pizzas[mask_F])
-                
+
                 f_pizza = next(it)
                 s_pizza = next(it)
                 summary_cost = 0
@@ -112,12 +112,12 @@ def main():
                            -summary_cost,
                            s_pizza[1],
                            f_pizza[1]))
-            
+
             if len(pizzas[mask_S]) == 2:
                 satisfied_users = count_sat_users(mask_S)
-                
+
                 it = iter(pizzas[mask_S])
-                
+
                 f_pizza = next(it)
                 s_pizza = next(it)
                 summary_cost = 0
@@ -127,11 +127,10 @@ def main():
                            -summary_cost,
                            s_pizza[1],
                            f_pizza[1]))
-    
-    aans = [ans[2],ans[3]]
+
+    aans = [ans[2], ans[3]]
     aans.sort()
     print(*aans, sep=' ')
 
 
 main()
-

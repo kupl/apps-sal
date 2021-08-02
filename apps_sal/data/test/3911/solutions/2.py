@@ -6,4 +6,3 @@ for _ in range(n):
         slimes.pop()
         slimes[-1] += 1
 print(" ".join(map(str, slimes)))
-

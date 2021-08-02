@@ -21,5 +21,6 @@ def main():
         cur = (n - c[i]) * Min
         ans = min(ans, cur)
     print(ans)
-main()
 
+
+main()

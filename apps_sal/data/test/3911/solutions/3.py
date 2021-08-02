@@ -5,4 +5,3 @@ for x in range(int(input())):
         a.pop()
         a.append(a.pop() + 1)
 print(*a)
-

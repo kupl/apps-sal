@@ -6,4 +6,4 @@ A = list(s1)
 B = list(s2)
 C = list(s3)
 
-print(A[0]+B[0]+C[0])
+print(A[0] + B[0] + C[0])

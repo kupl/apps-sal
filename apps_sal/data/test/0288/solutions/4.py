@@ -8,6 +8,6 @@ def solve(n):
         f2 = f1 + t
     return k
 
+
 n = int(input())
 print(solve(n))
-

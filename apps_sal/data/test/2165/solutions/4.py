@@ -22,13 +22,13 @@ lvv = 0.0
 rvv = 0.0
 while 1:
     if lv <= rv:
-        if il ==len(l):
+        if il == len(l):
             break
         lv += l[il][0] * l[il][1]
         lvv += l[il][1]
         il += 1
     else:
-        if ir ==len(r):
+        if ir == len(r):
             break
         rv += r[ir][0] * r[ir][1]
         rvv += r[ir][1]

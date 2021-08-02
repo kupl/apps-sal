@@ -17,7 +17,7 @@ def solve():
         print(0)
         return
     g = [(t[i] - T, i) for i in range(n)]
-    h = sum((t[i] - T)*a[i] for i in range(n))
+    h = sum((t[i] - T) * a[i] for i in range(n))
     ans = sum(a)
     if h < 0:
         g.sort()
@@ -42,9 +42,9 @@ def solve():
     print(ans)
     return
 
+
 solve()
 
 # T = ni()
 # for _ in range(T):
 #     solve()
-

@@ -4,7 +4,7 @@ from operator import lt, gt, le, ge, itemgetter
 n, t = list(map(int, input().split()))
 a = list(zip(list(map(int, input().split())), list(map(int, input().split()))))
 
-nume = sum(a[i][0]*a[i][1] for i in range(n))
+nume = sum(a[i][0] * a[i][1] for i in range(n))
 deno = sum(a[i][0] for i in range(n))
 
 if nume / deno > t:
@@ -14,7 +14,7 @@ else:
 
 a.sort(key=itemgetter(1), reverse=rev)
 
-while len(a) > 1 and op1((nume - a[-1][0]*a[-1][1]) / (deno - a[-1][0]), t):
+while len(a) > 1 and op1((nume - a[-1][0] * a[-1][1]) / (deno - a[-1][0]), t):
     nume -= a[-1][0] * a[-1][1]
     deno -= a[-1][0]
     a.pop()
@@ -31,4 +31,3 @@ for _ in range(50):
         ng = mid
 
 print(deno + ok)
-

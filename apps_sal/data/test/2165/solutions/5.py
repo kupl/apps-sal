@@ -16,4 +16,3 @@ if val:
         tot -= x[i][1]
         val -= (t - x[i][0]) * x[i][1]
 print(tot)
-

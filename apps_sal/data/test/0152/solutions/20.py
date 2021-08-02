@@ -5,7 +5,7 @@ B = [0] + list(map(int, input().split()))
 C = [0] + list(map(int, input().split()))
 D = [0] + list(map(int, input().split()))
 QW = list(zip(A, B))
-QW.sort(key = lambda x : x[1])
+QW.sort(key=lambda x: x[1])
 A = [s[0] for s in QW]
 B = [s[1] for s in QW]
 
@@ -22,7 +22,6 @@ for i in range(m + 1):
         l -= 1
     if l >= 0:
         Res = min(Res, max(n - C[l], 0) * A[i])
-    
 
 
 print(Res)

@@ -5,31 +5,31 @@ def gcd(a, b):
 
 def cross(x1, y1, x2, y2):
     return x1 * y2 - x2 * y1
-    
+
 
 def line_intersection(line1, line2):
     px, py, qx, qy = line1
     rx, ry, sx, sy = line2
-    
+
     xdiff = (px - qx, rx - sx)
     ydiff = (py - qy, ry - sy)
 
     div = cross(px - qx, rx - sx, py - qy, ry - sy)
     if div == 0:
-      raise Exception('lines do not intersect')
+        raise Exception('lines do not intersect')
 
     pq, rs = cross(px, py, qx, qy), cross(rx, ry, sx, sy)
     x = cross(pq, rs, px - qx, rx - sx) / div
     y = cross(pq, rs, py - qy, ry - sy) / div
     return x, y
-    
+
+
 def online(line, x, y):
     a, b, c, d = line
     if min(a, c) <= x <= max(a, c) and min(b, d) <= y <= max(b, d):
         return True
     else:
         return False
-
 
 
 def CF1036E():
@@ -43,7 +43,7 @@ def CF1036E():
         lines.append((x1, y1, x2, y2))
     for i in range(N):
         d = set()
-        for j in range(i+1, N):
+        for j in range(i + 1, N):
             px = lines[i][0]
             py = lines[i][1]
             qx = lines[j][0]
@@ -55,9 +55,9 @@ def CF1036E():
 
             rs = cross(rx, ry, sx, sy)
             # qpr = cross(qx - px, qy - py, rx, ry)
-            
+
             if rs == 0: continue
-        
+
             # qpr = cross(qx - px, qy - py, rx, ry)
             # qps = cross(qx - px, qy - py, sx, sy)
             # t = qps / rs
@@ -66,12 +66,15 @@ def CF1036E():
             if not (x % 1 == 0 and y % 1 == 0): continue
             if not (online(lines[i], x, y) and online(lines[j], x, y)): continue
             d.add((x, y))
-            
+
         count = count - len(d)
-        
+
     return int(count)
-    
+
+
 def __starting_point():
     res = CF1036E()
     print(res)
+
+
 __starting_point()

@@ -18,5 +18,3 @@ for i in range(n):
 for i in range(len(k) - 1, -1, -1):
     if k[i]:
         print(i + 1, end=' ')
-
-

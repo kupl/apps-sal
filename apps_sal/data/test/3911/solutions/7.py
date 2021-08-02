@@ -7,4 +7,3 @@ for i in range(n):
         L.pop()
         L[-1] += 1
 print(' '.join(str(i) for i in L))
-

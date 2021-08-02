@@ -1,9 +1,9 @@
 def cost(nk):
-    
+
     ns = max(0, k - 1)
     if ns > n - 2:
         return 0
-    
+
     return f(n - ns - 1, k + 1) + 1
 
 
@@ -17,5 +17,5 @@ for i in range(2, 100):
     F[i] = F[i - 1] + F[i - 2]
     if F[i] <= n:
         ans = i
-        
+
 print(ans)

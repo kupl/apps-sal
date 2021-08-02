@@ -1,6 +1,6 @@
+import sys
 3
 
-import sys
 
 n = int(sys.stdin.readline().rstrip())
 
@@ -13,4 +13,3 @@ for i in range(n):
         A[-1] += 1
 
 print(" ".join(map(str, A)))
-

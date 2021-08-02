@@ -1,8 +1,11 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
 
+
 mem = dict()
+
 
 def calc(a, b):
     if a == b:
@@ -25,7 +28,7 @@ def calc(a, b):
     mem[(a, b)] = min(var) + (min(var) < 2**30)
     return mem[(a, b)]
 
+
 a, b = readln()
 res = calc(a, b)
 print(-1 if res == 2**30 else res)
-

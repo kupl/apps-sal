@@ -9,12 +9,12 @@ d = list(map(int, input().split(' ')))
 a.append(x)
 b.append(0)
 ans = n * x
-for i in range(m+1):
+for i in range(m + 1):
     if b[i] <= s:
         j = bisect.bisect_right(d, s - b[i])
         if j > 0:
             j -= 1
-            ans = min(ans, (n-c[j])*a[i])
+            ans = min(ans, (n - c[j]) * a[i])
         else:
-            ans = min(ans, n*a[i])
+            ans = min(ans, n * a[i])
 print(ans)

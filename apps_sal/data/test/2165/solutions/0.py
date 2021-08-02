@@ -53,7 +53,7 @@ for i in range(n):
 ks.sort()
 if up / down > ta:
 
-    if min(ts)>ta:
+    if min(ts) > ta:
         print('0')
         return
 
@@ -77,12 +77,12 @@ if up / down > ta:
         down -= v
 
         while r - l > EPS:
-            m = (l + r)/2
-            if (up + t * m) / (down + m)>ta:
-                r=m
+            m = (l + r) / 2
+            if (up + t * m) / (down + m) > ta:
+                r = m
             else:
-                l=m
-        print(down+l)
+                l = m
+        print(down + l)
         return
 
 
@@ -109,11 +109,10 @@ else:
         down -= v
 
         while r - l > EPS:
-            m = (l + r)/2
-            if (up + t * m) / (down + m)<ta:
-                r=m
+            m = (l + r) / 2
+            if (up + t * m) / (down + m) < ta:
+                r = m
             else:
-                l=m
-        print(down+l)
+                l = m
+        print(down + l)
         return
-

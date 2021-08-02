@@ -20,4 +20,4 @@ while l and (V * T - S) > V * eps and l[-1][0] < T:
     S -= x * d
     V -= d
 
-print(round(V, 7) if abs(S  - V * T) <= V * eps else 0)
+print(round(V, 7) if abs(S - V * T) <= V * eps else 0)
