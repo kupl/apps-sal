@@ -29,4 +29,3 @@ for h_p in h_patterns:
 ans = count
 
 print(ans)
-

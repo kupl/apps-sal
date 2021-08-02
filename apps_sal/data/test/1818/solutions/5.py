@@ -3,11 +3,11 @@ def main():
         if x < L:
             return prec[x]
         return f(x // 2) + x % 2
-    
+
     n = int(input())
-    
+
     a = [int(i) for i in input().split()]
-    
+
     L = 10**5
     prec = [0]
     for i in range(1, L):
@@ -15,20 +15,20 @@ def main():
             prec.append(prec[i - 1] + 1)
         else:
             prec.append(prec[i // 2])
-    
+
     d = {}
-    
+
     for i in a:
         value = f(i)
         if value not in d:
             d[value] = 0
         d[value] += 1
-    
+
     result = 0
     for i in list(d.values()):
         result += i * (i - 1) // 2
-    
+
     print(result)
 
-main()
 
+main()

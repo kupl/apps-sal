@@ -15,5 +15,6 @@ def main():
         if cnt == K:
             ans += 1
     print(ans)
-   
+
+
 main()

@@ -6,5 +6,6 @@ def solve():
     a2 = b * min(x, y) + a * d
     print(min(a1, a2))
 
+
 for i in range(int(input())):
     solve()

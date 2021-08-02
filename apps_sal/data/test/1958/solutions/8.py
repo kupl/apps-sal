@@ -7,6 +7,7 @@ for i in range(n):
     else:
         a.append(2)
 
+
 def check(x):
     for i in range(n):
         if x == 0:
@@ -18,6 +19,7 @@ def check(x):
     if x < 0:
         return 0
     return 1
+
 
 l = 0
 r = 2**100
@@ -32,4 +34,3 @@ for i in range(n):
     if a[i] == 2:
         cnt += 0.5
 print(int(r * m - cnt * m))
-

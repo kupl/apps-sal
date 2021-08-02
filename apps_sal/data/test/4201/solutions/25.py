@@ -32,7 +32,7 @@ def main():
             count = 0
             for m in range(h):
                 for l in range(w):
-                    if bh[m] == '1' and bw[l] == '1' and c[m-1][l-1] == '#':
+                    if bh[m] == '1' and bw[l] == '1' and c[m - 1][l - 1] == '#':
                         count += 1
             # print(count)
             if count == k:
@@ -43,5 +43,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

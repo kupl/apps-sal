@@ -5,8 +5,8 @@ h, w, k = map(int, input().split())
 graph = []
 
 for i in range(h):
-  row = [1 if x == '#' else 0 for x in input()]
-  graph.append(row)
+    row = [1 if x == '#' else 0 for x in input()]
+    graph.append(row)
 
 graph = np.array(graph)
 h_combi = []
@@ -20,14 +20,14 @@ for i in range(1, w + 1):
 ans = 0
 
 for hi in h_combi:
-  for wi in w_combi:
-    cnt = 0
-    for y in hi:
-      if cnt > k:
-        break
-      for x in wi:
-        cnt += graph[y][x]
-    if cnt == k:
-      ans += 1
+    for wi in w_combi:
+        cnt = 0
+        for y in hi:
+            if cnt > k:
+                break
+            for x in wi:
+                cnt += graph[y][x]
+        if cnt == k:
+            ans += 1
 
-print(ans)      
+print(ans)

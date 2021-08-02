@@ -17,47 +17,40 @@ NMI = lambda: map(int, input().split())
 NLI = lambda: list(NMI())
 SI = lambda: input()
 
+
 def main():
     H, W, K = NMI()
-    
+
     C = [list(input()) for _ in range(H)]
-    
+
     ans = 0
-    
-    
+
     for hi in range(2**H):
         for wi in range(2**W):
             CC = copy.deepcopy(C)
-            
+
             for hj in range(H):
                 if (hi >> hj) & 1:
                     for x in range(W):
                         CC[hj][x] = "R"
 
-
-
-            
             for wj in range(W):
                 if (wi >> wj) & 1:
                     for x in range(H):
                         CC[x][wj] = "R"
 
-
-            
             cnt = 0
             for h in range(H):
                 cnt += CC[h].count("#")
-            
+
             if cnt == K:
                 ans += 1
-    
-    
+
     print(ans)
 
 
-                        
-                    
-
 def __starting_point():
     main()
+
+
 __starting_point()

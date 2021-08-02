@@ -2,6 +2,7 @@
 
 mem = [-1] * 100000
 
+
 def f(x):
     if x == 0:
         return 0
@@ -15,6 +16,7 @@ def f(x):
         mem[x] = res
     return res
 
+
 n = int(input())
 a = list(map(int, input().split()))
 cnt = {}
@@ -22,4 +24,3 @@ for v in a:
     k = f(v)
     cnt[k] = cnt.get(k, 0) + 1
 print(sum([v * (v - 1) // 2 for v in list(cnt.values())]))
-

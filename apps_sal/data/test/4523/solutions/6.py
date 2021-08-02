@@ -23,5 +23,3 @@ for _ in range(tc):
             break
     else:
         print('YES')
-            
-

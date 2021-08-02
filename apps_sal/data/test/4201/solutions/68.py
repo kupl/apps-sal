@@ -40,4 +40,3 @@ for rmask in range(2**H):
             count += 1
 
 print(count)
-

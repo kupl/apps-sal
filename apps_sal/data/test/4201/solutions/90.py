@@ -1,8 +1,10 @@
+from itertools import product
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-from itertools import product
+
+
 def main():
     h, w, k = list(map(int, input().split()))
     gg = []
@@ -23,12 +25,14 @@ def main():
         t0 = 0
         for p0 in pate[0]:
             for p1 in pate[1]:
-                t0 += gg[p0*w + p1]
+                t0 += gg[p0 * w + p1]
         if t0 == k:
             r += 1
     print(r)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

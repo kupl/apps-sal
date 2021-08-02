@@ -31,8 +31,7 @@ def solve(index, ops):
 
 b = list(map(lambda x: solve(x, ops), b))
 for i in b:
-    print(str(a[i-1])+" ")
+    print(str(a[i - 1]) + " ")
 
 # Cartesian tree:
 # https://codeforces.com/contest/863/submission/30693678
-

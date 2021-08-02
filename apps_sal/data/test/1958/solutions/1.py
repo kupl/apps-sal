@@ -13,7 +13,7 @@ c = 1
 for i in range(n - 1):
     if A[i] == 1:
         ans += p * c + h
-        c = c * 2 + 1 
+        c = c * 2 + 1
     else:
         ans += c * p
         c *= 2

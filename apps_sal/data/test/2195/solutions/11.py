@@ -6,4 +6,3 @@ for i in range(t):
         print(min(x, y) * b + (x + y - 2 * min(x, y)) * a)
     else:
         print((x + y) * a)
-

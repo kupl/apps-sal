@@ -6,4 +6,3 @@ for i in arr:
     d[c] = d.get(c, 0) + 1
 res = [v * (v - 1) // 2 for v in list(d.values())]
 print(sum(res))
-

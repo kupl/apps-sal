@@ -7,4 +7,3 @@ for _ in range(T):
         print(b * y + a * (x - y))
     else:
         print(a * (x + y))
-

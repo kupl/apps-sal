@@ -12,7 +12,7 @@ for h in range(2**H):
                 if w[j] == '1': continue
                 if S[i][j] == '#':
                     cnt += 1
-        
+
         if cnt == K:
             ans += 1
 

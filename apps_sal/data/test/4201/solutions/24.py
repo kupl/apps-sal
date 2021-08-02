@@ -1,10 +1,10 @@
 from itertools import product
-h,w,k = list(map(int,input().split()))
+h, w, k = list(map(int, input().split()))
 grid = []
 for i in range(h):
     grid.append(input())
 
-pattern = list(product((0,1), repeat=h+w))
+pattern = list(product((0, 1), repeat=h + w))
 result = 0
 for p in range(len(pattern)):
     p_h = pattern[p][:h]
@@ -22,4 +22,3 @@ for p in range(len(pattern)):
         result += 1
 
 print(result)
-

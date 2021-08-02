@@ -14,4 +14,3 @@ for i in range(2**H):
             ans += 1
 
 print(ans)
-

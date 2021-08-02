@@ -3,8 +3,8 @@ H, W, K = map(int, input().split())
 c = [input() for _ in range(H)]
 
 ans = 0
-for i in range(H+1):
-    for j in range(W+1):
+for i in range(H + 1):
+    for j in range(W + 1):
         for row in itertools.combinations([x for x in range(H)], i):
             for column in itertools.combinations([x for x in range(W)], j):
                 tmp = 0
