@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class APaintTheNumbers:
     def solve(self):
@@ -19,8 +20,8 @@ class APaintTheNumbers:
 
         print(ans)
 
+
 solver = APaintTheNumbers()
 input = sys.stdin.readline
 
 solver.solve()
-

@@ -1,7 +1,7 @@
-N,T = map(int, input().split())
+N, T = map(int, input().split())
 l = []
 for _ in range(N):
-    c,t = map(int, input().split())
+    c, t = map(int, input().split())
     if T >= t:
         l.append(c)
     else:

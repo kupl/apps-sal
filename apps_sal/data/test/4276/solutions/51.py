@@ -4,7 +4,7 @@ def mapt(fn, *args):
 
 def Input():
     return mapt(int, input().split(" "))
-  
+
 
 def main():
     n, t = Input()

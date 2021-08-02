@@ -1,5 +1,6 @@
 t = int(input())
 
+
 def solve(arr, n):
     ones = 0
     twos = 0
@@ -12,8 +13,8 @@ def solve(arr, n):
     threes = abs(ones - twos) // 3
     return zeros + min(ones, twos) + threes
 
+
 for _ in range(t):
     n = int(input())
     arr = list(map(int, input().strip().split()))
     print(solve(arr, n))
-

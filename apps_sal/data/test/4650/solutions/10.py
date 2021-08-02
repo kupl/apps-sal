@@ -19,7 +19,7 @@ def mulinv(b, n):
 
 
 def isprime(n):
-    for d in range(2, int(math.sqrt(n))+1):
+    for d in range(2, int(math.sqrt(n)) + 1):
         if n % d == 0:
             return False
     return True
@@ -75,8 +75,8 @@ class DisjointSet:
 
 def graph(n, m, edg=False):
     edges = []
-    visited = [0]*n
-    g = [list() for _ in range(n+1)]
+    visited = [0] * n
+    g = [list() for _ in range(n + 1)]
     for i in range(m):
         u, v = f(1)
         g[u].append(v)
@@ -116,11 +116,11 @@ for i in range(t):
     a = 0
     b = 0
     for i in range(n):
-        if cl[i]%3==0:
-            count+=1
-        elif cl[i]%3==1:
-            a+=1
+        if cl[i] % 3 == 0:
+            count += 1
+        elif cl[i] % 3 == 1:
+            a += 1
         else:
-            b+=1
+            b += 1
 
-    print(count+min(a, b)+(max(a, b) - min(a, b))//3)
+    print(count + min(a, b) + (max(a, b) - min(a, b)) // 3)

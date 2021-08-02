@@ -7,8 +7,8 @@
 #a = [list(input()) for _ in range(n)]
 #a = [input() for _ in range(n)]
 
-n,t = list(map(int, input().split()))
-l = [list(map(int,input().split())) for i in range(n)]
+n, t = list(map(int, input().split()))
+l = [list(map(int, input().split())) for i in range(n)]
 
 costs = []
 for i in range(n):
@@ -19,5 +19,3 @@ if len(costs) == 0:
     print("TLE")
 else:
     print((min(costs)))
-
-

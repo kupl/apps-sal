@@ -7,4 +7,3 @@ elif 225 < n < 315:
     print(3)
 else:
     print(0)
-

@@ -1,6 +1,5 @@
-3
-
 from itertools import product, combinations
+3
 
 
 def process(case):
@@ -23,11 +22,12 @@ def rotate(home, position, step):
     if step == 0:
         return x, y
     if step == 1:
-        return a-(y-b), b+(x-a)
+        return a - (y - b), b + (x - a)
     if step == 2:
-        return a-(x-a), b-(y-b)
+        return a - (x - a), b - (y - b)
     if step == 3:
-        return a+(y-b), b-(x-a)
+        return a + (y - b), b - (x - a)
+
 
 n = int(input())
 for r in range(n):

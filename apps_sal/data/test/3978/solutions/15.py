@@ -10,7 +10,8 @@ def solve(n, a):
                 if a[j] % a[i] == 0:
                     col[j] = True
     return count
-    
+
+
 n = int(input())
 a = list(map(int, input().split()))
 print(solve(n, a))

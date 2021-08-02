@@ -13,4 +13,3 @@ for i in range(N):
         print((c[i]))
         return
 print('TLE')
-

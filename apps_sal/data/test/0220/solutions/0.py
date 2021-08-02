@@ -13,4 +13,3 @@ for i in p[::-1]:
     if s >= i: s -= i
 ans = 0 if s else 2 ** t - rem
 print(ans)
-

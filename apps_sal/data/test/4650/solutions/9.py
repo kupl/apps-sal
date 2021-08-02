@@ -11,6 +11,7 @@ def solve():
             p2 += 1
     return p0 + min(p1, p2) + (max(p1, p2) - min(p1, p2)) // 3
 
+
 q = int(input())
 for i in range(q):
     print(solve())

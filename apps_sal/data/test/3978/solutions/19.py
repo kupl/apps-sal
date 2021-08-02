@@ -7,4 +7,3 @@ for a in sorted(map(int, input().split())):
         for b in range(a, 101, a):
             new[b] = False  # Color all b's
 print(ans)
-

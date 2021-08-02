@@ -14,6 +14,7 @@ def brute(n):
 
     return sol
 
+
 N = int(input())
 
 sol = 0
@@ -35,5 +36,4 @@ for state in range(1, 2 ** len(primes)):
         sol -= N // prod
 
 print(N - sol)
-#print(brute(N))
-
+# print(brute(N))

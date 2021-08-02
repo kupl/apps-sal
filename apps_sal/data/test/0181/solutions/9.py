@@ -8,4 +8,3 @@ elif (x >= 135 and x <= 225):
     print(2)
 else:
     print(3)
-

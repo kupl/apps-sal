@@ -16,7 +16,7 @@ def main():
         c, t = list(map(int, readline().split()))
         if t <= T and ans > c:
             ans = c
-    
+
     if ans < INF:
         print(ans)
     else:
@@ -26,5 +26,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

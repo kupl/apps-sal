@@ -6,4 +6,3 @@ for _ in range(N):
     if t <= T and c < res:
         res = c
 print((res if res != INF else 'TLE'))
-

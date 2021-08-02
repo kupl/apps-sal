@@ -21,4 +21,3 @@ for t in range(int(input())):
         if check([f(moles[i][0], moles[i][1], moles[i][2], moles[i][3], a[i]) for i in range(4)]):
             ans = min(ans, sum(a))
     print(ans if ans != 13 else -1)
-

@@ -15,4 +15,3 @@ if ans == 100000:
     print("TLE")
 else:
     print(ans)
-

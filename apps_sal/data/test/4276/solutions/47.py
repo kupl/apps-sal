@@ -6,6 +6,5 @@ for c, t in CT:
     if t > T: continue
     ans = min(ans, c)
 if ans == 1001:
-  ans = "TLE"
+    ans = "TLE"
 print(ans)
-

@@ -8,4 +8,3 @@ if mn == 1001:
     print("TLE")
 else:
     print(mn)
-

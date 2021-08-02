@@ -1,4 +1,6 @@
 def r(t): t[0], t[1] = t[2] + t[3] - t[1], t[3] + t[0] - t[2]
+
+
 f = range(4)
 g = lambda u, v: (u[0] - v[0]) ** 2 + (u[1] - v[1]) ** 2
 h = [(i, j) for i in f for j in f if i < j]

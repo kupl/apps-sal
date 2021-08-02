@@ -8,4 +8,3 @@ for _ in range(int(input())):
     m = min(f[1], f[2])
     f[1] -= m; f[2] -= m
     print(f[0] + m + (f[1] + f[2]) // 3)
-

@@ -1,11 +1,13 @@
 import copy
 import sys
 
+
 def solve():
     n = int(input())
     for reg in range(n):
         temp = help()
         print(-1 if temp == 1000 else temp)
+
 
 def help():
     res = 1000
@@ -20,11 +22,12 @@ def help():
                     for i in range(_4): rot(l[3])
                     if square(l):
                         res = min(res, _1 + _2 + _3 + _4)
-                    for i in range(4-_1): rot(l[0])
-                    for i in range(4-_2): rot(l[1])
-                    for i in range(4-_3): rot(l[2])
-                    for i in range(4-_4): rot(l[3])
+                    for i in range(4 - _1): rot(l[0])
+                    for i in range(4 - _2): rot(l[1])
+                    for i in range(4 - _3): rot(l[2])
+                    for i in range(4 - _4): rot(l[3])
     return res
+
 
 def rot(l):
     x = l[0]
@@ -39,22 +42,25 @@ def rot(l):
     l[1] = newy
     return l
 
+
 def square(l):
     distances = list()
     for i in range(4):
         for j in range(i + 1, 4):
             distances.append(dist(l[i], l[j]))
     distances.sort()
-    if distances[0] < 0.000001: return False #same point
+    if distances[0] < 0.000001: return False  # same point
     different = 0
     for i in range(len(distances) - 1):
-        if abs(distances[i] - distances[i+1]) > 0.000001:
+        if abs(distances[i] - distances[i + 1]) > 0.000001:
             different += 1
     return different == 1
+
 
 def dist(a, b):
     return (a[0] - b[0]) * (a[0] - b[0]) + (a[1] - b[1]) * (a[1] - b[1])
 
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+if sys.hexversion == 50594544: sys.stdin = open("test.txt")
 # print(rot(rot(rot(rot([-11, -22, 2, 3])))))
 solve()

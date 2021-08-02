@@ -11,8 +11,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 a, b = inpmap()
 if b > a:
@@ -50,4 +52,3 @@ if a:
 if flag:
     res -= 2
 print(res)
-
