@@ -6,4 +6,3 @@ for i in range(N):
 set1 = set(list1)
 ans = len(set1)
 print(ans)
-

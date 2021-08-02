@@ -26,4 +26,3 @@ for i in range(n):
         if x[i][j] != 0:
             s += str(x[i][j]) + ' '
 print(s)
-

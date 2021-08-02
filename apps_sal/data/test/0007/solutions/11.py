@@ -15,4 +15,4 @@ else:
             hi = mid - 1
         else:
             lo = mid + 1
-    print (poss + init)
+    print(poss + init)

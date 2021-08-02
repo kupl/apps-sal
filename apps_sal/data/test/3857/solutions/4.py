@@ -8,4 +8,3 @@ for x in sorted(int(x) for x in input().split()):
     if len(val[-1]) > 0:
         val.append([])
 print(len(val) - 1)
-

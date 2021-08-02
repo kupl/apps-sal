@@ -3,7 +3,7 @@ d = []
 for i in range(N):
     d.append(int(input()))
 cnt = 0
-for i in range(1,101):
+for i in range(1, 101):
     qual = 0
     for j in d:
         if i == j:

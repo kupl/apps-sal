@@ -1,6 +1,5 @@
-N=int(input())
-d=set()
+N = int(input())
+d = set()
 for _ in range(N):
-  d.add(int(input()))
+    d.add(int(input()))
 print((len(d)))
-

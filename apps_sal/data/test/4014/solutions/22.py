@@ -2,7 +2,8 @@
 # from bisect import bisect_left
 # from collections import OrderedDict
 
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, m = I()
 dates = [0 for i in range(n + 1)]
@@ -14,7 +15,7 @@ for i in range(m):
         return
     dates[d[1]] = m + 1
     data.append(d)
-data.sort(key = lambda x: x[1])
+data.sort(key=lambda x: x[1])
 for s, d, c, idx in data:
     x = 0
     for i in range(s, d):

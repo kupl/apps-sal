@@ -18,4 +18,3 @@ while li1:
     li1 = li2
     li2 = []
 print(ans)
-

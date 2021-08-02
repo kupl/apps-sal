@@ -1,8 +1,8 @@
 N = int(input())
 
-d=[]
+d = []
 for i in range(N):
-	d.append(int(input()))
+    d.append(int(input()))
 
 dset = set(d)
 print(len(dset))

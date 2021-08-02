@@ -4,7 +4,7 @@ r = 10 ** 18 + 1
 d = n - m
 while r - l > 1:
     mi = (r + l) // 2
-    if d > mi *(mi + 1) // 2:
+    if d > mi * (mi + 1) // 2:
         l = mi
     else:
         r = mi

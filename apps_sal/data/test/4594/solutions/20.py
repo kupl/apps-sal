@@ -1,2 +1,2 @@
-n,*l = map(int,open(0).read().split())
+n, *l = map(int, open(0).read().split())
 print(len(set(l)))

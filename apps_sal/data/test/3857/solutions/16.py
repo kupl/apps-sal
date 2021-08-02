@@ -36,6 +36,3 @@ while len(boxes) > 0:
 
 
 print(len(piles))
-
-
-

@@ -27,4 +27,3 @@ if f:
     print(*M[1:])
 else:
     print(-1)
-

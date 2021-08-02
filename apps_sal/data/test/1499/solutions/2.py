@@ -7,7 +7,7 @@ for i in range(m):
         else:
             a[i // 2][1] = i + 1
     else:
-        if i % 2  == 0:
+        if i % 2 == 0:
             a[(i - 2 * n) // 2][2] = i + 1
         else:
             a[(i - 2 * n) // 2][3] = i + 1

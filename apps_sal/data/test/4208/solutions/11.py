@@ -52,4 +52,3 @@ while left_q < len(left[26]) and right_q < len(right[26]):
 print(len(result))
 for i, j in result:
     print(i, j)
-

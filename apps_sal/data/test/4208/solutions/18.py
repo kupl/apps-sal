@@ -46,4 +46,3 @@ if '?' in r and '?' in l:
 
 print(len(ans))
 print('\n'.join(ans))
-

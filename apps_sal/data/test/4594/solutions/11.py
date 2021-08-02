@@ -9,4 +9,3 @@ for n in range(int(i)):
 l = list(set(l))
 
 print((len(l)))
-

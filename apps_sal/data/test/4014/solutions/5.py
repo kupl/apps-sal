@@ -1,8 +1,8 @@
 # Hello World program in Python
 class exam:
     def __init__(self, tickets, ex_day, prep_days, index):
-        self.tick = tickets-1
-        self.ex_day = ex_day-1
+        self.tick = tickets - 1
+        self.ex_day = ex_day - 1
         self.prep_days = prep_days
         self.index = index
 
@@ -19,7 +19,7 @@ def task():
         return -1
     exs = sorted(exs, key=lambda x: -x.tick)
     exdays = [x.ex_day for x in exs]
-    days = [m+1 if i in exdays else 0 for i in range(0, n)]
+    days = [m + 1 if i in exdays else 0 for i in range(0, n)]
     for ex in exs:
         d = ex.ex_day
         offs = 1

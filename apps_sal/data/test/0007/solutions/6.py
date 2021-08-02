@@ -12,4 +12,3 @@ else:
         else:
             low = mid + 1
     print(low)
-

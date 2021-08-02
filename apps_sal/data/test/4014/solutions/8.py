@@ -26,4 +26,3 @@ if flag:
     print(*array[1:])
 else:
     print(-1)
-

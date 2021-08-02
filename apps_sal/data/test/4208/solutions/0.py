@@ -1,8 +1,8 @@
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(mi())
-
 from collections import defaultdict as dd
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(mi())
+
 
 n = ii()
 a, b = input().strip(), input().strip()

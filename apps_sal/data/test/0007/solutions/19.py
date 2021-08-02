@@ -9,4 +9,4 @@ while tr - tl > 1:
         tr = mid
     else:
         tl = mid
-print (tr) 
+print(tr)

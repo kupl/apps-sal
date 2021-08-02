@@ -1,4 +1,3 @@
-N=int(input())
-d=[int(input()) for _ in range(N)]
+N = int(input())
+d = [int(input()) for _ in range(N)]
 print((len(set(d))))
-

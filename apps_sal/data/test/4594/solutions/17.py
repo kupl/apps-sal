@@ -8,4 +8,3 @@ for i in range(1, len(D)):
     if D[i] != D[i - 1]:
         count += 1
 print(count)
-

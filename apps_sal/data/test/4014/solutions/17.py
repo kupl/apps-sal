@@ -5,7 +5,7 @@ isdc = []
 for i in range(a[1]):
     l = input().split(" ")
     l = [int(e) for e in l]
-    isdc.append([i+1, l[0]-1, l[1]-1, l[2]])
+    isdc.append([i + 1, l[0] - 1, l[1] - 1, l[2]])
 
 l = [0] * a[0]
 for e in isdc:
@@ -30,4 +30,3 @@ for exam in isdc:
 
 for e in l:
     print(e, end=" ")
-

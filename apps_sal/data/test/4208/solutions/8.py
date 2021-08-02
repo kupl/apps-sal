@@ -1,9 +1,9 @@
 # alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353 
+# prime = 998244353
+from collections import defaultdict
 INF = 100_000_000
 # from heapq import heappush, heappop
-from collections import defaultdict
-t = 1#int(input())
+t = 1  # int(input())
 # from math import sqrt
 
 
@@ -22,7 +22,7 @@ for test in range(t):
     quesL = []
     quesR = []
     for i in range(n):
-        if l[i]=="?":
+        if l[i] == "?":
             quesL.append(i)
             usedL[i] = True
         else:
@@ -30,13 +30,13 @@ for test in range(t):
 
     ans = []
     for i in range(n):
-        if r[i]=="?":
+        if r[i] == "?":
             quesR.append(i)
             usedR[i] = True
         else:
-            if len(L[r[i]])>0:
+            if len(L[r[i]]) > 0:
                 tmp = L[r[i]].pop()
-                ans.append((tmp+1, i+1))
+                ans.append((tmp + 1, i + 1))
                 usedL[tmp] = True
                 usedR[i] = True
 
@@ -48,15 +48,15 @@ for test in range(t):
         if not usedR[i]:
             usedR2.append(i)
 
-    while len(quesL)>0 and len(usedR2)>0:
-        ans.append((quesL.pop()+1, usedR2.pop()+1))
-    
-    while len(quesR)>0 and len(usedL2)>0:
-        ans.append((usedL2.pop()+1, quesR.pop()+1))
+    while len(quesL) > 0 and len(usedR2) > 0:
+        ans.append((quesL.pop() + 1, usedR2.pop() + 1))
 
-    while len(quesL)>0 and len(quesR)>0:
-        ans.append((quesL.pop()+1, quesR.pop()+1))
-    
+    while len(quesR) > 0 and len(usedL2) > 0:
+        ans.append((usedL2.pop() + 1, quesR.pop() + 1))
+
+    while len(quesL) > 0 and len(quesR) > 0:
+        ans.append((quesL.pop() + 1, quesR.pop() + 1))
+
     print(len(ans))
     for i in ans:
         print(i[0], i[1])

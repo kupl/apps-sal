@@ -7,7 +7,7 @@ while d_list != []:
     MAX_Value = max(d_list)
     while MAX_Value == max(d_list):
         d_list.remove(MAX_Value)
-        if d_list == [] :
+        if d_list == []:
             break
-    Height +=1
+    Height += 1
 print(Height)

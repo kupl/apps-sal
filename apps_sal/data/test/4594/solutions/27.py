@@ -1,6 +1,6 @@
 num = int(input())
 
-table  = []
+table = []
 for i in range(num):
     table.append(int(input()))
 

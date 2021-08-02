@@ -11,4 +11,3 @@ while (fday + 1 < lday):
     else:
         fday = mid
 print(min(n, m + lday))
-

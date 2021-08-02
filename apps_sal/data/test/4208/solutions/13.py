@@ -20,7 +20,6 @@ for i, e in enumerate(r):
         R[e] = [i]
 
 
-
 res = []
 
 q = '?'
@@ -50,4 +49,3 @@ if q in R:
 print(len(res))
 for e in res:
     print(*e)
-

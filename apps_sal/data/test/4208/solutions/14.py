@@ -53,4 +53,3 @@ if cntv2 != 0 and cntv1 != 0:
 print(cnt)
 for i in range(len(c)):
     print(*c[i])
-
