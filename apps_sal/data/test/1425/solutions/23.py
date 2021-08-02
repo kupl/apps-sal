@@ -6,6 +6,7 @@ from collections import deque
 n = int(input())
 a = sorted(map(int, input().strip().split()))
 
+
 def solve(a):
     d = deque()
     test = 0
@@ -35,12 +36,12 @@ def solve(a):
 #             return True
 #     return False
 
+
 solve(a)
 
 # while True:
-    # a = sorted([randint(2, 10) for _ in range(5)])
-    # if solve(a) != brute(a):
-        # print(a)
-    # else:
-        # print("ok")
-
+# a = sorted([randint(2, 10) for _ in range(5)])
+# if solve(a) != brute(a):
+# print(a)
+# else:
+# print("ok")

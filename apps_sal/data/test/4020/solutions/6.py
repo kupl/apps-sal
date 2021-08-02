@@ -6,9 +6,9 @@ t2 = h2 * 60 + m2
 
 diff = t2 - t1
 
-t = t1 + diff//2
+t = t1 + diff // 2
 
-h3 = t//60
-m3 = t%60
+h3 = t // 60
+m3 = t % 60
 
-print("{:02}:{:02}".format(h3,m3))
+print("{:02}:{:02}".format(h3, m3))

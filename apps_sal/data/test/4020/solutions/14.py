@@ -12,4 +12,3 @@ if len(h) == 1:
 if len(m) == 1:
     m = '0' + m
 print(h, m, sep=':')
-

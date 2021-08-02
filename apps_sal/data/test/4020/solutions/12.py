@@ -15,4 +15,3 @@ if m3 < 10:
     m3 = '0' + str(m3)
 
 print('{}:{}'.format(h3, m3))
-

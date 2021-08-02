@@ -2,11 +2,13 @@ n = int(input())
 l = list(map(int, input().split()))
 l.sort()
 
+
 def ok(l):
     for i in range(len(l)):
-        if l[i-1] >= l[i-2] + l[i]:
+        if l[i - 1] >= l[i - 2] + l[i]:
             return False
     return True
+
 
 if ok(l):
     print('YES')
@@ -18,4 +20,3 @@ else:
         print(*l)
     else:
         print('NO')
-

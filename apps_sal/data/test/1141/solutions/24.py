@@ -12,5 +12,3 @@ for ii in range(m):
             s[j] = c2
 
 print(''.join(s))
-
-

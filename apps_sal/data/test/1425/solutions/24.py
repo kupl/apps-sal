@@ -1,29 +1,27 @@
 from collections import deque
 from sys import stdin
-n=int(stdin.readline().strip())
-s=list(map(int,stdin.readline().strip().split()))
+n = int(stdin.readline().strip())
+s = list(map(int, stdin.readline().strip().split()))
 s.sort()
-a=deque()
+a = deque()
 a.append(s[-1])
-flag=True
+flag = True
 s.pop()
-while len(s)>0:
+while len(s) > 0:
     if flag:
         a.appendleft(s[-1])
     else:
         a.append(s[-1])
-    flag= not flag
+    flag = not flag
     s.pop()
-flag=True
+flag = True
 for i in range(n):
 
-    if (a[(i-1)%n]+a[(i+1)%n])<=a[i]:
-        flag=False
+    if (a[(i - 1) % n] + a[(i + 1) % n]) <= a[i]:
+        flag = False
         break
 if flag:
     print("YES")
     print(*a)
 else:
     print("NO")
-        
-

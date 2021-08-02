@@ -10,4 +10,3 @@ for i in range(m):
             line[j] = c2
 
 print(''.join(line))
-

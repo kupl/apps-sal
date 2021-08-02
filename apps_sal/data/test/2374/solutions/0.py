@@ -47,6 +47,8 @@ for l, r in lr:
 
 visited = [0] * (node_num + 1)
 ans = []
+
+
 def dfs(p, v):
     ret = d[v]
     for nv in edge[v]:
@@ -62,6 +64,7 @@ def dfs(p, v):
                     ans.append(switch_dict[(nv, v)])
                 ret += 1
     return ret % 2
+
 
 for i in range(node_num + 1):
     if visited[i]:

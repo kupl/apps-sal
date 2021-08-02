@@ -27,6 +27,6 @@ for i in range(m):
     l, r, a, b = input().split()
     l = int(l)
     r = int(r)
-    l-=1
-    st=st[:l]+st[l:r].replace(a,b)+st[r:]
+    l -= 1
+    st = st[:l] + st[l:r].replace(a, b) + st[r:]
 print(st)

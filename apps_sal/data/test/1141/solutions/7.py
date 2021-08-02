@@ -23,7 +23,7 @@ for i in range(M):
     l, r, c1, c2 = input().split()
     l, r = int(l), int(r)
 
-    for j in range(l-1, r):
+    for j in range(l - 1, r):
         if S[j] == c1:
             S[j] = c2
 

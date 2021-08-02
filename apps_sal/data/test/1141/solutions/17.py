@@ -6,11 +6,8 @@ for _ in range(K):
     fr, to = int(fr), int(to)
     fr, to = fr - 1, to - 1
 
-    for i in range(fr, to+1):
+    for i in range(fr, to + 1):
         if string[i] == c1:
-            string = string[:i] + c2 + string[i+1:]
+            string = string[:i] + c2 + string[i + 1:]
 
 print(string)
-    
-
-

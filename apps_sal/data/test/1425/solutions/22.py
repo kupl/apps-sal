@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class BNumberCircle:
     def solve(self):
@@ -26,8 +27,8 @@ class BNumberCircle:
 
             print(*ans)
 
+
 solver = BNumberCircle()
 input = sys.stdin.readline
 
 solver.solve()
-

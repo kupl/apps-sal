@@ -12,12 +12,11 @@ ch1 = ch1 * 60 + m1 + rz
 chas = ch1 // 60
 mn = ch1 - chas * 60
 if chas < 10:
-	s = '0'
-	s += str(chas)
-	chas = s
+    s = '0'
+    s += str(chas)
+    chas = s
 if mn < 10:
-	s = '0'
-	s += str(mn)
-	mn = s
-print(chas, mn, sep = ":")
-
+    s = '0'
+    s += str(mn)
+    mn = s
+print(chas, mn, sep=":")

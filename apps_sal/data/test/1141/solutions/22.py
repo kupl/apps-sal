@@ -6,4 +6,3 @@ for _ in range(m):
         if s[i] == c1:
             s[i] = c2
 print(''.join(s))
-

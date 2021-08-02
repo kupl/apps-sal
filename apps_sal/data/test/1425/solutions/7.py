@@ -2,7 +2,7 @@ n = int(input())
 A = [int(x) for x in input().split()]
 A.sort()
 
-B = [-1]*n
+B = [-1] * n
 
 j = 0
 for i in range(n):
@@ -14,7 +14,7 @@ for i in range(n):
 
 ok = True
 for i in range(n):
-    if B[i-1] >= B[i-2] + B[i]:
+    if B[i - 1] >= B[i - 2] + B[i]:
         ok = False
 
 if ok:
@@ -22,4 +22,3 @@ if ok:
     print(*B)
 else:
     print('NO')
-

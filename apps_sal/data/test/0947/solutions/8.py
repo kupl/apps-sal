@@ -29,4 +29,3 @@ for _ in range(int(input())):
         print(1, n - 1)
     # n, m = map(int, input().split())
     # a = list(map(int, input().split()))
-

@@ -8,4 +8,4 @@ else:
     if n % 2 == 0:
         print(*nums[-1:0:-2], *nums[0:n:2])
     else:
-        print(*nums[-1:0:-2], nums[0], *nums[1:n:2])        
+        print(*nums[-1:0:-2], nums[0], *nums[1:n:2])

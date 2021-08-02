@@ -6,20 +6,20 @@ def main():
 
     N, M = map(int, input().split())
     AB = []
-    for i in [0]*N:
+    for i in [0] * N:
         A, B = map(int, input().split())
         AB.append((A, B))
-    AB.sort(key=lambda x:x[0])
+    AB.sort(key=lambda x: x[0])
 
     POWER = 1
-    x = [0] * (N+1)
+    x = [0] * (N + 1)
     x[0] = AB[0][POWER]
-    for i in range(N-1):
-        x[i+1] = AB[i][POWER] ^ AB[i+1][POWER]
-    x[N] = AB[N-1][POWER]
+    for i in range(N - 1):
+        x[i + 1] = AB[i][POWER] ^ AB[i + 1][POWER]
+    x[N] = AB[N - 1][POWER]
 
-    graph = [ [] for _ in [0]*(N+1) ]
-    for i in range(1, M+1):
+    graph = [[] for _ in [0] * (N + 1)]
+    for i in range(1, M + 1):
         L, R = map(int, input().split())
         L = bisect_left(AB, (L, 0))
         R = bisect_right(AB, (R, 1))
@@ -29,6 +29,7 @@ def main():
     ans = []
     POS = 0
     ID = 1
+
     def dfs(v):
         used[v] = True
         res = x[v]
@@ -39,8 +40,8 @@ def main():
             res ^= r
         return res
 
-    used = [False] * (N+1)
-    for i in range(N+1):
+    used = [False] * (N + 1)
+    for i in range(N + 1):
         if used[i]: continue
         if dfs(i):
             print(-1)

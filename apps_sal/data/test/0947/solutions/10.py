@@ -11,8 +11,7 @@ for loop in range(tt):
             break
         x += 1
     else:
-        print(1,n-1)
+        print(1, n - 1)
         continue
 
-    print(n // x , n - n // x)
-
+    print(n // x, n - n // x)
