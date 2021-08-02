@@ -9,4 +9,3 @@ s += str(n - (k * (k - 1)) // 2)
 
 print(k)
 print(s)
-

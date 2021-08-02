@@ -18,7 +18,7 @@ for q in range(p):
     d = q + 1
     if u == v: ans.append(d)
 
-    for j, k in zip(c[: len(c) - m], c[m: ]):
+    for j, k in zip(c[: len(c) - m], c[m:]):
         v[j] -= 1
         if v[j] == 0: v.pop(j)
         v[k] += 1

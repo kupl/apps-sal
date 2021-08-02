@@ -6,7 +6,7 @@ for a in A[2:]:
     xor ^= a
 
 n = A[0] + A[1] - xor
-if n < 0 or n%2:
+if n < 0 or n % 2:
     print(-1)
     return
 

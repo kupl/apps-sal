@@ -7,12 +7,12 @@ def main():
     x = 0
     for i in range(2, n):
         x ^= a[i]
-    d = a[0]+a[1]-x
-    if d%2 == 1 or d < 0:
+    d = a[0] + a[1] - x
+    if d % 2 == 1 or d < 0:
         print(-1)
         return
     d >>= 1
-    if d&x != 0 or d > a[0]:
+    if d & x != 0 or d > a[0]:
         print(-1)
         return
     k = x.bit_length()
@@ -20,15 +20,16 @@ def main():
     # d^tmp はd&x=0からd|tmpと一緒
     for i in range(40, -1, -1):
         if (x >> i) & 1:
-            if tmp|1<<i <= a[0]:
-                tmp |= 1<<i
+            if tmp | 1 << i <= a[0]:
+                tmp |= 1 << i
     if 0 < tmp <= a[0]:
-        print(a[0]-tmp)
+        print(a[0] - tmp)
     else:
         print(-1)
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

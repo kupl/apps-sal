@@ -30,7 +30,7 @@ for i in range(M):
                     ns = na + nb + j
                     if ns & 1 != cs:
                         continue
-                    
+
                     # 遷移先のi, j, kを求める
                     ni = i + 1
                     nj = 1 if ns >= 2 else 0
@@ -40,7 +40,7 @@ for i in range(M):
                         nk = 0
                     else:
                         nk = k
-                    
+
                     # 遷移先を最大化
                     dp[ni][nj][nk] = max(dp[ni][nj][nk], dp[i][j][k] + na * v)
     s >>= 1
@@ -53,4 +53,3 @@ if amax <= 0:
     print((-1))
 else:
     print((A[0] - amax))
-

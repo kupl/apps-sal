@@ -6,7 +6,7 @@ for a in A[2:]:
     xor ^= a
 
 n = A[0] + A[1] - xor
-if n < 0 or n%2:
+if n < 0 or n % 2:
     print(-1)
     return
 
@@ -14,7 +14,7 @@ n //= 2
 a = b = 0
 digit = [1]
 d = []
-count = 0    
+count = 0
 while n or xor:
     n0 = n & 1; xor0 = xor & 1
     if n0:

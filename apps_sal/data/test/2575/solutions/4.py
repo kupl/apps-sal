@@ -1,7 +1,6 @@
-II = lambda:int(input())
+II = lambda: int(input())
 
 n = II()
 for i in range(n):
     if 360 % (180 - II()): print('NO')
     else: print('YES')
-

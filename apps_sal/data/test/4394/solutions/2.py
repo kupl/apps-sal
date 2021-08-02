@@ -4,10 +4,12 @@ e = sorted((w, u, v) for u, v, w in e)
 
 p, r = [i for i in range(n + 1)], [0] * (n + 1)
 
+
 def find(x):
     if p[x] != x:
         p[x] = find(p[x])
     return p[x]
+
 
 def union(x, y):
     x, y = p[x], p[y]
@@ -17,6 +19,7 @@ def union(x, y):
         p[y] = x
         if r[x] == r[y]:
             r[x] += 1
+
 
 ans = 0
 i = 0
@@ -33,4 +36,3 @@ while i < m:
     i = j
 
 print(ans)
-

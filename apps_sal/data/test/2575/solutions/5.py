@@ -11,7 +11,7 @@ def good_angle(angle):
 
 def main():
     first_line = input()
-    
+
     n = int(first_line)
     angles = []
 
@@ -21,9 +21,6 @@ def main():
 
     for a in angles:
         print(good_angle(a))
-        
-    
 
 
-main()   
-
+main()

@@ -1,7 +1,6 @@
-from sys import stdin,stdout
+from sys import stdin, stdout
 import math
-n=int(input())
+n = int(input())
 print(n)
-for i in range (n):
-    print(1,end=' ')
-
+for i in range(n):
+    print(1, end=' ')

@@ -6,7 +6,7 @@ sys.setrecursionlimit(N_MAX)
 MOD = 10**9 + 7
 
 n = int(input())
-Arr = list(map(int,input().split()))
+Arr = list(map(int, input().split()))
 
 K = 43
 

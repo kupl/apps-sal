@@ -9,22 +9,22 @@ def main():
     p = a[0]
     dp[0][0][0] = 0
     for i in range(44):
-        crrx = xor&1
-        crrs = s&1
-        crrp = p&1
+        crrx = xor & 1
+        crrs = s & 1
+        crrp = p & 1
         for j in range(2):
             for k in range(2):
                 if dp[i][j][k] == -1:
                     continue
                 for nxtp in range(2):
                     for nxtq in range(2):
-                        nxti = i+1
+                        nxti = i + 1
                         nxtj = 0
                         nxtk = k
                         if (nxtp ^ nxtq) != crrx:
                             continue
-                        nxts = nxtp+nxtq+j
-                        if nxts%2 != crrs:
+                        nxts = nxtp + nxtq + j
+                        if nxts % 2 != crrs:
                             continue
                         if nxts >= 2:
                             nxtj = 1
@@ -34,7 +34,7 @@ def main():
                             nxtk = k
                         else:
                             nxtk = 0
-                        dp[nxti][nxtj][nxtk] = max(dp[nxti][nxtj][nxtk], dp[i][j][k]+(1<<i)*nxtp)
+                        dp[nxti][nxtj][nxtk] = max(dp[nxti][nxtj][nxtk], dp[i][j][k] + (1 << i) * nxtp)
         xor //= 2
         s //= 2
         p //= 2
@@ -43,6 +43,9 @@ def main():
     else:
         print(-1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

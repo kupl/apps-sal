@@ -8,6 +8,7 @@ nm = lambda: map(int, readline().split())
 nl = lambda: list(map(int, readline().split()))
 prn = lambda x: print(*x, sep='\n')
 
+
 def solve():
     n = ni()
     f, s, *a = nm()
@@ -23,5 +24,5 @@ def solve():
     print(f - y if f >= y > 0 else -1)
     return
 
-solve()
 
+solve()

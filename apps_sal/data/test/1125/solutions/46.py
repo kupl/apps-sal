@@ -5,6 +5,7 @@ def digit(x):
         ret += 1
     return ret
 
+
 def main():
     N = int(input())
     A = list(map(int, input().split()))
@@ -29,7 +30,7 @@ def main():
     ug = g >> 20
     b0 = a0 >> 20
     b1 = a1 >> 20
-    upper_ans_0 = -1 # a0: no borrow, a1: no carry
+    upper_ans_0 = -1  # a0: no borrow, a1: no carry
     for i in range(b0):
         t0 = b0 - i
         t1 = b1 + i
@@ -37,7 +38,7 @@ def main():
             upper_ans_0 = i
             break
 
-    upper_ans_1 = -1 # a0: no borrow, a1: carry
+    upper_ans_1 = -1  # a0: no borrow, a1: carry
     for i in range(b0):
         t0 = b0 - i
         t1 = b1 + 1 + i
@@ -45,16 +46,16 @@ def main():
             upper_ans_1 = i
             break
 
-    upper_ans_2 = -1 # a0: borrow, a1: no carry
-    for i in range(b0-1):
+    upper_ans_2 = -1  # a0: borrow, a1: no carry
+    for i in range(b0 - 1):
         t0 = b0 - 1 - i
         t1 = b1 + i
         if t0 ^ t1 == ug:
             upper_ans_2 = i
             break
 
-    upper_ans_3 = -1 # a0: borrow, a1: carry
-    for i in range(b0-1):
+    upper_ans_3 = -1  # a0: borrow, a1: carry
+    for i in range(b0 - 1):
         t0 = b0 - 1 - i
         t1 = b1 + 1 + i
         if t0 ^ t1 == ug:
@@ -102,7 +103,9 @@ def main():
     answers.sort()
     print((answers[0]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
