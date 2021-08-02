@@ -17,4 +17,3 @@ for x in a:
 print()
 for x in g:
     print(x, end=" ")
-

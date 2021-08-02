@@ -1,6 +1,7 @@
 tc = int(input())
 
-def ternary (n):
+
+def ternary(n):
     if n == 0:
         return '0'
     nums = []
@@ -9,28 +10,28 @@ def ternary (n):
         nums.append(str(r))
     return list(reversed(nums))
 
+
 # print("here --> " + ternary(6561))
 # print("here --> " + ternary(3620))
 # print(ternary(4))
 while tc > 0:
-	tc -= 1
-	n = int(input());
-	rep = ['0'] + ternary(n)
-	idx = -1
-	for i in range(len(rep)):
-		if rep[i] == '2':
-			idx = i - 1;
+    tc -= 1
+    n = int(input());
+    rep = ['0'] + ternary(n)
+    idx = -1
+    for i in range(len(rep)):
+        if rep[i] == '2':
+            idx = i - 1;
 
-			while rep[idx] != '0':
-				idx -= 1
-			rep[idx] = '1'
-			for j in range(idx + 1 , len(rep)):
-				rep[j] = '0'
-	
-	# print(rep)
-	ans = 0
-	for j in rep:
-		x = ord(j) - ord('0')
-		ans = ans * 3 + x
-	print(ans)
+            while rep[idx] != '0':
+                idx -= 1
+            rep[idx] = '1'
+            for j in range(idx + 1, len(rep)):
+                rep[j] = '0'
 
+    # print(rep)
+    ans = 0
+    for j in rep:
+        x = ord(j) - ord('0')
+        ans = ans * 3 + x
+    print(ans)

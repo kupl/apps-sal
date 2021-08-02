@@ -25,4 +25,3 @@ if not out:
         print(len(h))
         print(" ".join(map(str, g)))
         print(" ".join(map(str, h)))
-

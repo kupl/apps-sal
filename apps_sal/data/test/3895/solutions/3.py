@@ -25,9 +25,8 @@ else:
     for i in range(1, n + 1):
         g[i] = x_is_f_which[f[i]]
     print(m)
+
     def print_list(l):
         print(' '.join(list(map(str, l[1:]))))
     print_list(g)
     print_list(h)
-
-

@@ -41,4 +41,3 @@ for _ in range(t):
         res.append(ans)
 
 print('\n'.join(map(str, res)))
-

@@ -20,4 +20,3 @@ for k in occs:
 print(len(h))
 print(*g)
 print(*h)
-

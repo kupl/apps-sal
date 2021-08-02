@@ -1,5 +1,7 @@
 from sys import setrecursionlimit
 setrecursionlimit(10 ** 6)
+
+
 def dynamic(i, fed):
     if d[i][fed] is not None:
         return d[i][fed]
@@ -8,6 +10,7 @@ def dynamic(i, fed):
     else:
         d[i][fed] = max(a[i] + dynamic(i + 1, True), b[i] + dynamic(i + 1, False))
     return d[i][fed]
+
 
 n = int(input())
 a = [int(i) for i in input().split()]
