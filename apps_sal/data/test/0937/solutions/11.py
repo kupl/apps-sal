@@ -15,12 +15,11 @@ for i in range(k):
     if B[i] == 0:
         mx += A[i]
 cur = mx
-for j in range(n-k):
+for j in range(n - k):
     if B[j] == 0:
         cur -= A[j]
-    if B[j+k] == 0:
-        cur += A[j+k]
+    if B[j + k] == 0:
+        cur += A[j + k]
     if cur > mx:
         mx = cur
 print(mx + sm)
-

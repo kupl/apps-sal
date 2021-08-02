@@ -18,7 +18,7 @@ for i in range(len(S)):
     if re.match(r'[0-9]', S[i]):
         count += 1
 
-if count == A+B:
+if count == A + B:
     print('Yes')
 else:
     print('No')

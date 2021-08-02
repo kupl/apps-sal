@@ -15,9 +15,10 @@ def dfs(num: list, nset: set, depth: int):
             _nset = nset.copy()
             _num.append(c)
             _nset.add(c)
-            dfs(_num, _nset, depth-1)
+            dfs(_num, _nset, depth - 1)
 
-for i in range(3,11):
+
+for i in range(3, 11):
     dfs([], set(), i)
 
 ans = 0

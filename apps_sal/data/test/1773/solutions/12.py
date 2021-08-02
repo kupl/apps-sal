@@ -25,4 +25,3 @@ all1.sort()
 for i in range(m - 1, n):
     ans += all1[i][1]
 print(ans)
-

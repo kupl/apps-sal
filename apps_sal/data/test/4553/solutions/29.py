@@ -14,9 +14,8 @@ for i in range(A):
         break
 if S[A] != "-":
     ans = "No"
-for i in range(A+1, A+B+1):
+for i in range(A + 1, A + B + 1):
     if S[i] == "-":
         ans = "No"
         break
 print(ans)
-

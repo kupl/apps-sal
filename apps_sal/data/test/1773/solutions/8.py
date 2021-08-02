@@ -14,15 +14,15 @@ d = True if len(plus) > len(minus) else False
 ans = 0
 while True:
     if d:
-        if not plus: break
+        if not plus:
+            break
         _, x = plus.pop()
         ans += x
         d = False
     else:
-        if not minus: break
+        if not minus:
+            break
         _, x = minus.pop()
         ans += x
         d = True
 print(ans)
-    
-

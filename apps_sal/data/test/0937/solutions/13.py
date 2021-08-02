@@ -1,8 +1,10 @@
 def potential(a):
     return a[0] if a[1] == 0 else 0
 
+
 def theorems(a):
     return a[0] if a[1] == 1 else 0
+
 
 n, k = list(map(int, input().split()))
 A = list(zip(
@@ -27,4 +29,3 @@ already = sum(
 )
 
 print(already + best)
-

@@ -19,4 +19,3 @@ def gen_pat(cur):
 
 gen_pat("0")
 print(ans)
-

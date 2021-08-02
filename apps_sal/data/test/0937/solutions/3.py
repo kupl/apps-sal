@@ -1,4 +1,4 @@
-n,k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 
 A = [int(x) for x in input().split()]
 T = [int(x) for x in input().split()]
@@ -12,9 +12,8 @@ for i in range(n):
 
 s = sum(A[:k])
 boost = s
-for i in range(k,n):
-    s = s - A[i-k] + A[i]
-    boost = max(s,boost)
+for i in range(k, n):
+    s = s - A[i - k] + A[i]
+    boost = max(s, boost)
 
-print(the+boost)
-
+print(the + boost)

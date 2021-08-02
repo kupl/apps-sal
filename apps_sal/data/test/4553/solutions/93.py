@@ -1,9 +1,9 @@
 A, B = map(int, input().split())
 S = list(input())
-AB = [0]*2
+AB = [0] * 2
 f = 0
 for s in S:
-    if s == "-" :
+    if s == "-":
         f = 1
         continue
     AB[f] += 1

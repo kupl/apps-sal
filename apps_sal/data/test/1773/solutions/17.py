@@ -9,7 +9,7 @@ for i in range(n):
     if x < 1:
         neg += [[-x, a]]
     else:
-        pos += [[x,a]]
+        pos += [[x, a]]
 
 neg = sorted(neg)
 pos = sorted(pos)

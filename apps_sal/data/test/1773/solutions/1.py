@@ -13,9 +13,8 @@ for i in range(n):
 neg = list(reversed(neg))
 
 if len(neg) == len(pos):
-    print(sum(neg)+sum(pos))
+    print(sum(neg) + sum(pos))
 elif len(neg) > len(pos):
-    print(sum(pos)+sum(neg[:len(pos)+1]))
+    print(sum(pos) + sum(neg[:len(pos) + 1]))
 else:
-    print(sum(neg)+sum(pos[:len(neg)+1]))
-
+    print(sum(neg) + sum(pos[:len(neg) + 1]))

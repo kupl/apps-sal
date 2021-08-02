@@ -4,6 +4,7 @@ def read_data():
     b = list(map(int, list(input().strip().split())))
     return n, m, a, b
 
+
 def solve():
     val = 0
     for i in range(n):
@@ -15,14 +16,15 @@ def solve():
     i = k
     max = val
     while i < n:
-        if b[i-k] == 0:
-            val -= a[i-k]
+        if b[i - k] == 0:
+            val -= a[i - k]
         if b[i] == 0:
             val += a[i]
         if val > max:
             max = val
         i += 1
     return max
+
 
 n, k, a, b = read_data()
 print(solve())

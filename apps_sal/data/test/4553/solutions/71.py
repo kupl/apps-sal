@@ -1,4 +1,4 @@
-a,b= map(int, input().split())
+a, b = map(int, input().split())
 s = input()
 
 if ("-" in s) and s.count("-") == 1:

@@ -12,4 +12,3 @@ for i in range(3, 10):
         if a <= N_int and s.count('3') and s.count('5') and s.count('7'):
             ans += 1
 print(ans)
-

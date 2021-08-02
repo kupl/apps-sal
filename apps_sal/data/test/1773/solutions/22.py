@@ -57,7 +57,7 @@ class Apple:
         self.nloc = []
 
         for i in range(0, len(self.list), 2):
-            loc = (self.list[i], self.list[i+1])
+            loc = (self.list[i], self.list[i + 1])
             if self.list[i] > 0:
                 self.ploc.append(loc)
             else:
@@ -163,7 +163,7 @@ class unitTests(unittest.TestCase):
         # Time limit test
         imax = 100
         test = str(imax) + "\n"
-        s = (str(i-100) + " " + str(i+1-100) for i in range(imax))
+        s = (str(i - 100) + " " + str(i + 1 - 100) for i in range(imax))
         test += "\n".join(s)
         self.assertEqual(calculate(test), "0")
 
@@ -186,5 +186,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(calculate())
+
 
 __starting_point()

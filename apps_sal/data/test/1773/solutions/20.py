@@ -26,7 +26,7 @@ def collectApple(tree):
         res += sum([x[1] for x in left[len(left) - len(right) - 1:]])
     else:
         res += sum([x[1] for x in left])
-        res += sum([x[1] for x in right[:min(len(left)+1, len(right))]])
+        res += sum([x[1] for x in right[:min(len(left) + 1, len(right))]])
     return res
 
 
@@ -36,8 +36,3 @@ tree = []
 for i in range(N):
     tree.append([int(x) for x in input().split()])
 print(collectApple(tree))
-
-
-
-
-

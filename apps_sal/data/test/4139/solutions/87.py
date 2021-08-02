@@ -6,6 +6,8 @@ from collections import deque
 #
 #
 # @stop_watch
+
+
 def solve(N):
     dq = deque([(3, [1, 0, 0]), (5, [0, 1, 0]), (7, [0, 0, 1])])
     ans = 0
@@ -38,5 +40,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

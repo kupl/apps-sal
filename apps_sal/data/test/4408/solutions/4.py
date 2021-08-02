@@ -9,6 +9,8 @@ import os.path
 sys.setrecursionlimit(10**9)
 
 # LOG
+
+
 def log(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
@@ -34,33 +36,35 @@ def toString(aList, sep=" "):
 def mapInvertIndex(aList):
     return {k: v for v, k in enumerate(aList)}
 
+
 def sortId(arr):
     return sorted(list(range(arr)), key=lambda k: arr[k])
 
 # MAIN
 
+
 n, k = ni()
 c = nia()
 f = nia()
 h = nia()
-h.insert(0,0)
+h.insert(0, 0)
 
 cc = Counter(c)
 cf = Counter(f)
 
-n1 = n+1
-k1 = k+1
+n1 = n + 1
+k1 = k + 1
 
-nk1 = n*k+1
-dp = [[0]*nk1 for _ in range(n1)]
+nk1 = n * k + 1
+dp = [[0] * nk1 for _ in range(n1)]
 
 
-for ni in range(1,n1):
-    for ki in range(1,nk1):
-        mficount = min(k,ki) + 1        
+for ni in range(1, n1):
+    for ki in range(1, nk1):
+        mficount = min(k, ki) + 1
         for kii in range(mficount):
             # log(ni,ki, kii, dp[ni][ki], dp[ni-1][ki-kii] + h[kii])
-            dp[ni][ki] = max(dp[ni][ki], dp[ni-1][ki-kii] + h[kii])
+            dp[ni][ki] = max(dp[ni][ki], dp[ni - 1][ki - kii] + h[kii])
     # log(dp[ni])
 
 # log(n,k)
@@ -72,9 +76,8 @@ for ni in range(1,n1):
 res = 0
 
 
-for fk,fv in list(cf.items()):
+for fk, fv in list(cf.items()):
     # log(fk, fv, cc.get(fk,0))
     res += dp[fv][cc[fk]]
 
 print(res)
-

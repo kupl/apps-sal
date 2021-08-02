@@ -21,4 +21,5 @@ def __starting_point():
     x, y, R = main()
     print(x, y, R)
 
+
 __starting_point()

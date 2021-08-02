@@ -20,4 +20,3 @@ if r != []:
 elif l != []:
     tot += l[0][1]
 print(tot)
-

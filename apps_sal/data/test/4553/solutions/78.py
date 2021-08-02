@@ -2,11 +2,11 @@
 A, B = list(map(int, input().split()))
 S = input()
 
-if len(S) != A+B+1:
+if len(S) != A + B + 1:
     print("No")
     return
 
-for i in range(A+B+1):
+for i in range(A + B + 1):
 
     if i == A:
         if S[i] != "-":
@@ -17,4 +17,3 @@ for i in range(A+B+1):
             print('No')
             return
 print('Yes')
-

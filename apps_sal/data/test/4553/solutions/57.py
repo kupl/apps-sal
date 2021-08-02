@@ -7,4 +7,3 @@ p = '\d{' + str(A) + '}-\d{' + str(B) + '}'
 if re.match(p, S):
     ans = 'Yes'
 print(ans)
-

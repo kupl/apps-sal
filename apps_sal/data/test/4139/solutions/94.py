@@ -2,7 +2,8 @@ N = int(input())
 
 # 4**9 = 2**18 <= 10^6
 
-def dfs(keta,x):
+
+def dfs(keta, x):
     if x > N:
         return 0
     if keta == 9:
@@ -24,11 +25,12 @@ def dfs(keta,x):
     else:
         ans = 0
         x *= 10
-        ans += dfs(keta+1,x)
-        ans += dfs(keta+1,x+3)
-        ans += dfs(keta+1,x+5)
-        ans += dfs(keta+1,x+7)
+        ans += dfs(keta + 1, x)
+        ans += dfs(keta + 1, x + 3)
+        ans += dfs(keta + 1, x + 5)
+        ans += dfs(keta + 1, x + 7)
         return ans
     return 0
 
-print(dfs(0,0))
+
+print(dfs(0, 0))

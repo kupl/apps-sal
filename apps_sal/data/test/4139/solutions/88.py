@@ -1,11 +1,11 @@
 import itertools
- 
- 
+
+
 def main():
     n = input()
     print(sev(n))
- 
- 
+
+
 def sev(n: str) -> int:
     ret = 0
     d = len(n)
@@ -16,8 +16,10 @@ def sev(n: str) -> int:
                 ret += 1
         d -= 1
     return ret
- 
- 
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

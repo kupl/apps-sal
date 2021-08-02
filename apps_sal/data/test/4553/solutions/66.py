@@ -9,7 +9,7 @@ for i in range(len(s)):
         if s[i] != '-':
             ans = 'No'
             break
-    elif not s[i].isdigit(): 
+    elif not s[i].isdigit():
         ans = 'No'
         break
 print(ans)

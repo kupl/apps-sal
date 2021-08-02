@@ -23,4 +23,3 @@ for i in range(2 * ln):
         left += 1
 
 print(ans + d)
-

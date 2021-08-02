@@ -1,5 +1,6 @@
 N = int(input())
 
+
 def DFS(s):
     if int(s) > N:
         return 0
@@ -10,5 +11,6 @@ def DFS(s):
     for c in "753":
         ret += DFS(s + c)
     return ret
+
 
 print(DFS("0"))

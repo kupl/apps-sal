@@ -16,7 +16,7 @@ def solve():
         if cnt[key] >= n1 * k:
             ans += n1 * h[k - 1]
             continue
-        dp = [[-float("INF")] * (cnt[key]+1) for _ in range(n1 + 1)]
+        dp = [[-float("INF")] * (cnt[key] + 1) for _ in range(n1 + 1)]
         dp[0][0] = 0
         for i in range(n1):
             j = i + 1
@@ -29,4 +29,3 @@ def solve():
 
 
 solve()
-

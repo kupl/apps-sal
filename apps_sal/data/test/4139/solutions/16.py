@@ -1,5 +1,6 @@
 n = int(input())
 
+
 def is_753(a):
     check = {'7': 0, '5': 0, '3': 0}
     string = str(a)
@@ -11,7 +12,7 @@ def is_753(a):
         if v == 0:
             return False
     return True
-    
+
 
 q = [3, 7, 5]
 count = 0

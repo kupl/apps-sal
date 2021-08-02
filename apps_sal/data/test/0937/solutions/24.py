@@ -10,4 +10,3 @@ for i in range(n - k):
     s += a[i + k] * (1 - t[i + k])
     ans = max(ans, s)
 print(ans)
-

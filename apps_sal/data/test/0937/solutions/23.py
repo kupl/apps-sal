@@ -10,7 +10,7 @@ def calculate_prefix_sum(a, t):
 
 def calculate_sum_on_range(s, a, b):
     assert a < b
-    return s[min(b, len(s)-1)] - s[a]
+    return s[min(b, len(s) - 1)] - s[a]
 
 
 def calculate_sums(a, t, k):
@@ -18,7 +18,7 @@ def calculate_sums(a, t, k):
     s = []
 
     for i in range(len(a)):
-        s.append(calculate_sum_on_range(psum, i, i+k))
+        s.append(calculate_sum_on_range(psum, i, i + k))
 
     return s
 
@@ -38,6 +38,8 @@ def calculate_answer(a, t, k):
     return ms + s
 
 
-r=lambda:list(map(int,input().split()))
-_,k=r()
-print(calculate_answer(r(),r(),k))
+def r(): return list(map(int, input().split()))
+
+
+_, k = r()
+print(calculate_answer(r(), r(), k))

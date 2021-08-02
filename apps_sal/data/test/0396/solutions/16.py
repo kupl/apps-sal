@@ -10,5 +10,5 @@ ans = 0
 for x in s:
     if l <= x and x <= r:
         ans += 1
-        
+
 print(ans)

@@ -60,7 +60,3 @@ if (x - x1) ** 2 + (y - y1) ** 2 < r ** 2:
     print(ax, ay, v3.get_length())
 else:
     print(x, y, r)
-
-
-
-
