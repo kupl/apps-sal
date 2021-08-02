@@ -11,4 +11,3 @@ for n in map(int, N):
     eq = e
 
 print(eq)
-

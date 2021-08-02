@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
- 
-  
+
+
 def solve(mid):
     ans = 0
     cnt = 0
@@ -15,8 +15,8 @@ def solve(mid):
             cnt += 1
         else:
             tmp.append(l)
-    tmp.sort(reverse = True)
-    nokori = (n+1) // 2 - cnt
+    tmp.sort(reverse=True)
+    nokori = (n + 1) // 2 - cnt
     for i in tmp:
         if nokori > 0:
             ans += mid
@@ -27,6 +27,7 @@ def solve(mid):
         return True
     else:
         return False
+
 
 q = int(input())
 for _ in range(q):

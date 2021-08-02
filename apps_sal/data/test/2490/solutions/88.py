@@ -14,7 +14,9 @@ def main():
     dp[1] += 1
     print((min(dp)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,12 +1,13 @@
 import sys
 input1 = sys.stdin.readline
 
+
 def solve():
     n, s = [int(i) for i in input1().split()]
     empl = []
     for i in range(n):
         empl.append([int(j) for j in input1().split()])
-    empl.sort(reverse = True)
+    empl.sort(reverse=True)
     lg = 0
     rg = 10 ** 9 + 1
     while rg - lg > 1:
@@ -30,6 +31,7 @@ def solve():
         else:
             rg = mg
     print(lg)
+
 
 t = int(input1())
 while t > 0:

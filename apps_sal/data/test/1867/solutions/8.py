@@ -20,5 +20,4 @@ for k in list(d.keys()):
     if b[k][1] - b[k][0] < m[1] - m[0]:
         m = b[k]
 
-print(m[0]+1, m[1]+1)
-
+print(m[0] + 1, m[1] + 1)

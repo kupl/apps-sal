@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 (N, K) = [int(n) for n in input().split()]
 
@@ -9,4 +12,3 @@ while a <= N:
     a *= K
 
 print(d)
-

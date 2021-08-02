@@ -16,9 +16,9 @@ def main():
         if temp > 5:
             count += 10 - temp
             flag = 1
-        elif temp ==5  and i !=S-1 and int(N[-1-i-1])>=5:
-            count+=temp
-            flag=1
+        elif temp == 5 and i != S - 1 and int(N[-1 - i - 1]) >= 5:
+            count += temp
+            flag = 1
 
         else:
             count += temp
@@ -29,5 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

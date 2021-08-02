@@ -2,10 +2,10 @@ n = int(input())
 table = []
 for i in range(2 * n - 1):
     li = list(map(int, input().split()))
-    for j in range(i+1):
-        table.append([li[j], i+2, j+1])
+    for j in range(i + 1):
+        table.append([li[j], i + 2, j + 1])
 
-table.sort(key=lambda x:(x[0]), reverse=True)
+table.sort(key=lambda x: (x[0]), reverse=True)
 res = [0 for _ in range(2 * n)]
 entry = 0
 idx = 0
@@ -18,4 +18,3 @@ while entry != n:
         entry += 1
     idx += 1
 print(" ".join(map(str, res)))
-

@@ -2,14 +2,15 @@ import sys
 stdin = sys.stdin
 sys.setrecursionlimit(10**9)
 
-ni = lambda: int(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-nn = lambda: list(stdin.readline().split())
-ns = lambda: stdin.readline().rstrip()
+
+def ni(): return int(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def nn(): return list(stdin.readline().split())
+def ns(): return stdin.readline().rstrip()
 
 
 n = ns()
-n = list(map(int,n[::-1])) + [0]
+n = list(map(int, n[::-1])) + [0]
 
 ans = 0
 
@@ -18,13 +19,13 @@ for i in range(len(n)):
     if a <= 4:
         ans += a
     elif a >= 6:
-        ans += 10-a
-        n[i+1] += 1
+        ans += 10 - a
+        n[i + 1] += 1
     else:
-        if n[i+1] <= 4:
+        if n[i + 1] <= 4:
             ans += a
         else:
             ans += a
-            n[i+1] += 1
+            n[i + 1] += 1
 
 print(ans)

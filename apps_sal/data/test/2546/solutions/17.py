@@ -1,9 +1,9 @@
 def check(x, s, a, n):
-    num = (n+1) // 2
+    num = (n + 1) // 2
     cur = 0
     sum_ = 0
 
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         l, r = a[i]
 
         if cur == num:
@@ -34,7 +34,7 @@ for _ in range(q):
     l, u = a[n // 2][0], 1000000000
 
     while u - l > 1:
-        md = (u+l) // 2
+        md = (u + l) // 2
 
         if check(md, s, a, n) == True:
             l = md
@@ -44,4 +44,3 @@ for _ in range(q):
     ans.append(str(l))
 
 print('\n'.join([x for x in ans]))
-

@@ -4,7 +4,7 @@ def main():
     sys.setrecursionlimit(10**7)
     from collections import Counter, deque
     from itertools import combinations, permutations, accumulate, groupby, product
-    from bisect import bisect_left,bisect_right
+    from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
     #from math import gcd
@@ -21,22 +21,25 @@ def main():
     for i in range(ln):
         s = int(n[i])
         s += a
-        if 0<=s<=4:
+        if 0 <= s <= 4:
             res += s
             a = 0
-        elif 6<=s:
-            res += 10-s
+        elif 6 <= s:
+            res += 10 - s
             a = 1
         else:
-            if int(n[i+1])>=5:
-                res += 10-s
+            if int(n[i + 1]) >= 5:
+                res += 10 - s
                 a = 1
             else:
                 res += s
                 a = 0
-            
+
     print(res)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

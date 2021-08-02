@@ -6,7 +6,7 @@ def input():
 
 
 def main():
-    N = list(map(int,input()))
+    N = list(map(int, input()))
     count = 0
 
     S = len(N)
@@ -16,9 +16,9 @@ def main():
         if temp > 5:
             count += 10 - temp
             flag = 1
-        elif temp ==5  and i !=S-1 and N[-1-i-1]>=5:
-            count+=temp
-            flag=1
+        elif temp == 5 and i != S - 1 and N[-1 - i - 1] >= 5:
+            count += temp
+            flag = 1
 
         else:
             count += temp
@@ -29,5 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

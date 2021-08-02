@@ -6,7 +6,7 @@ ai = len(a) - 1
 bi = len(b) - 1
 
 while ai >= 0 and bi >= 0:
-    #print('ai',ai)
+    # print('ai',ai)
     #print('bi', bi)
     if a[ai] == b[bi]:
         #print(a[ai], 'and', b[bi], 'are the same')
@@ -16,5 +16,5 @@ while ai >= 0 and bi >= 0:
         break
     ai -= 1
     bi -= 1
-#print(ans)
+# print(ans)
 print(len(a) + len(b) - ans)

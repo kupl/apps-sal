@@ -18,7 +18,7 @@ while True:
     if ans[cur[1]] == -1 and ans[cur[2]] == -1:
         ans[cur[1]] = cur[2]
         ans[cur[2]] = cur[1]
-        
+
     while ans[i] != -1 and i < n:
         i += 1
     if i == n:

@@ -1,8 +1,8 @@
 import queue
-N,K = map(int,input().split())
+N, K = map(int, input().split())
 ans = queue.Queue()
 while N >= K:
-    N,amari = divmod(N,K)
+    N, amari = divmod(N, K)
     ans.put(amari)
 ans.put(N)
 answer = ""

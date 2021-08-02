@@ -1,11 +1,16 @@
+import heapq
 import sys
 input = sys.stdin.readline
-import heapq
 sys.setrecursionlimit(100000)
+
+
 def getN():
     return int(input())
+
+
 def getList():
     return list(map(int, input().split()))
+
 
 def solve():
     ls, rs = [], []
@@ -99,6 +104,7 @@ def main():
 
 def __starting_point():
     main()
+
 
 """
 1

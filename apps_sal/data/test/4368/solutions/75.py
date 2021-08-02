@@ -7,4 +7,3 @@ while 0 < answer:
     count += 1
 
 print(count)
-

@@ -1,4 +1,4 @@
-N,K = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 
 ans = 0
 while True:
@@ -7,4 +7,3 @@ while True:
         break
     else:
         ans += 1
-

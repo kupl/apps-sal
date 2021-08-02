@@ -11,5 +11,3 @@ while abs(ind) <= s_len and abs(ind) <= t_len and s[ind] == t[ind]:
 
 
 print(ans)
-    
-

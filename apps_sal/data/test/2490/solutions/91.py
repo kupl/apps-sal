@@ -35,10 +35,4 @@ for s in S:
         ans -= max(0, count - 2)
         count = 0
 
-print (ans)
-            
-
-
-        
-    
-
+print(ans)

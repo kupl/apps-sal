@@ -25,14 +25,14 @@ class Member:
 
         # Reading a single line of multiple elements
         self.nums = []
-        for i in range(self.n*2-1):
+        for i in range(self.n * 2 - 1):
             self.nums.append(list(map(int, uinput().split())))
 
         # Translating into pairs dict
         self.pairs = []
         for i in range(len(self.nums)):
             for j in range(len(self.nums[i])):
-                self.pairs.append((self.nums[i][j], i+1, j))
+                self.pairs.append((self.nums[i][j], i + 1, j))
 
         self.spairs = reversed(sorted(self.pairs))
 
@@ -74,9 +74,9 @@ class unitTests(unittest.TestCase):
 
         # Sample test
         test = (
-            "3\n487060\n3831 161856\n845957 794650 976977\n" +
-            "83847 50566 691206 498447\n" +
-            "698377 156232 59015 382455 626960")
+            "3\n487060\n3831 161856\n845957 794650 976977\n"
+            + "83847 50566 691206 498447\n"
+            + "698377 156232 59015 382455 626960")
         self.assertEqual(Member(test).calculate(), "6 5 4 3 2 1")
 
         # Sample test
@@ -97,7 +97,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -108,9 +108,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -122,5 +123,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Member().calculate())
+
 
 __starting_point()
