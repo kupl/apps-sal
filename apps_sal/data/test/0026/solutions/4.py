@@ -19,8 +19,8 @@ a[10] = ((Decimal(z).log10()) * Decimal(Decimal(x) * Decimal(y)))
 a[11] = ((Decimal(z).log10()) * Decimal(Decimal(x) * Decimal(y)))
 maxx = a[0]
 for i in range(12):
-	if a[i] > maxx:
-		maxx = a[i]
+    if a[i] > maxx:
+        maxx = a[i]
 s = ["" for i in range(12)]
 s[0] = "x^y^z"
 s[1] = "x^z^y"
@@ -35,6 +35,6 @@ s[9] = "z^y^x"
 s[10] = "(z^x)^y"
 s[11] = "(z^y)^x"
 for i in range(12):
-	if a[i] == maxx:
-		print (s[i])
-		break
+    if a[i] == maxx:
+        print(s[i])
+        break

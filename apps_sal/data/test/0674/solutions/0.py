@@ -21,7 +21,7 @@ if wrong_str:
 
 connections = []
 for _ in range(n):
-    connections.append((-1,-1))
+    connections.append((-1, -1))
 
 changed = True
 
@@ -67,7 +67,7 @@ while changed:
 
                 if not is_ok:
                     start_index = b.find(a[0])
-                    if start_index != -1 and  b[start_index:] in a:
+                    if start_index != -1 and b[start_index:] in a:
                         strings[i] = strings[j] + strings[i][len(b) - start_index:]
                         strings[j] = None
                         is_ok = True
@@ -76,9 +76,6 @@ while changed:
                 if not is_ok:
                     print("NO")
                     return
-
-
-
 
         if wrong_str:
             print("NO")
@@ -93,7 +90,3 @@ if len(whole_str) != len(set(whole_str)):
     return
 
 print("".join(sorted(strings)))
-
-
-
-

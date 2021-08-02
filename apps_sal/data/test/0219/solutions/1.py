@@ -47,4 +47,3 @@ for i in strategy:
     else:
         print('JUMP', i)
     turn_flag = not turn_flag
-

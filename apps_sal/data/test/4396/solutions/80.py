@@ -8,4 +8,6 @@ def resolve():
         else:
             s += float(x) * 1
     print(s)
+
+
 resolve()

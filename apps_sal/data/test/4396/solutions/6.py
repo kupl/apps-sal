@@ -9,4 +9,3 @@ for _ in range(n):
     else:
         btc += float(x)
 print((jpy + btc * rate))
-

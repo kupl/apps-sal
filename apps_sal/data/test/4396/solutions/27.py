@@ -10,4 +10,3 @@ for i in range(n):
         ans += float(x) * 380000.0
 
 print(ans)
-

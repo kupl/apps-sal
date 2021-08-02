@@ -6,6 +6,5 @@ for _ in range(n):
     if u == 'JPY':
         a += int(x)
     elif u == 'BTC':
-        a += float(x)*btc
+        a += float(x) * btc
 print(a)
-

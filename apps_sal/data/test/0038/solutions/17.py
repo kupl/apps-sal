@@ -17,4 +17,3 @@ if ''.join(map(str, ki * 2)).find(''.join(map(str, si))) != -1:
     print('YES')
 else:
     print('NO')
-

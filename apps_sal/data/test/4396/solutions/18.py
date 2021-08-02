@@ -1,7 +1,7 @@
 n = int(input())
 cnt = 0
 for _ in range(n):
-    x,u = map(str, input().split())
+    x, u = map(str, input().split())
     if u == "JPY":
         cnt += float(x)
     else:

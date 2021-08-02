@@ -22,4 +22,3 @@ for i in range(1, len(points)):
         print("JUMP", points[i] - points[i - 1])
 if a[-1] + 1 != m:
     print("RUN", m - 1 - a[-1])
-

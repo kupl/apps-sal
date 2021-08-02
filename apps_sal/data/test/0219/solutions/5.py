@@ -31,4 +31,3 @@ else:
             pos = en
     else:
         print('\n'.join(commands))
-

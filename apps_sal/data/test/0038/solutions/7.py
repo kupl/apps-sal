@@ -15,4 +15,3 @@ for shift in range(N):
         return
 
 print("NO")
-

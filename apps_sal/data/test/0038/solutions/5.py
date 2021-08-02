@@ -4,6 +4,7 @@ def track(tr):
         res.append(tr[i] - tr[i - 1])
     return res
 
+
 def equals(l1, l2):
     for i in range(n):
         res = True
@@ -13,6 +14,7 @@ def equals(l1, l2):
             return True
     return False
 
+
 n, l = list(map(int, input().split()))
 a = track(list(map(int, input().split())))
 b = track(list(map(int, input().split())))
@@ -20,4 +22,3 @@ if equals(a, b):
     print("YES")
 else:
     print("NO")
-

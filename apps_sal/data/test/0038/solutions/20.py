@@ -13,5 +13,4 @@ for i in range(k):
         print("YES")
         break
 else:
-     print("NO")
-
+    print("NO")

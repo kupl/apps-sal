@@ -8,4 +8,3 @@ for i in range(N):
     else:
         gifts += float(X[i][0]) * 380000
 print(gifts)
-

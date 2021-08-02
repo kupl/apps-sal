@@ -8,4 +8,4 @@ for _ in range(n):
         j += x
     else:
         b += x
-print(j + b*380000)
+print(j + b * 380000)

@@ -7,6 +7,6 @@ for k in xu:
     if k[1] == "JPY":
         money += float(k[0])
     else:
-        money += float(k[0])*380000
+        money += float(k[0]) * 380000
 
 print(money)
