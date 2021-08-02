@@ -1,3 +1,3 @@
-a,p = map(int,input().split())
+a, p = map(int, input().split())
 tmp = a * 3 + p
-print(tmp//2)
+print(tmp // 2)

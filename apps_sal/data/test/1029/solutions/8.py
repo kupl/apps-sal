@@ -10,7 +10,7 @@ while i < len(a):
 
     c = i - 1
 
-    while i < len(a) and a[i]=='0':
+    while i < len(a) and a[i] == '0':
 
         i += 1
 
@@ -25,6 +25,4 @@ while i < len(a):
 print(ans)
 
 
-
 # Made By Mostafa_Khaled
-

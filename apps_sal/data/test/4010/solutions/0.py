@@ -8,4 +8,3 @@ for i in range(int(input())):
                 flag = True
                 break
     print("YES" if flag else "NO")
-

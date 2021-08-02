@@ -9,4 +9,3 @@ for i in range(1, N):
 for d in ds:
     print(d)
 return
-

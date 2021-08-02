@@ -69,6 +69,7 @@ def solve(x1=None, x2=None, x3=None, x4=None):
 
         return x1, x2, x3, x4
 
+
 n = int(input())
 if n == 0:
 
@@ -119,4 +120,3 @@ else:
     else:
 
         print("NO")
-

@@ -15,4 +15,3 @@ for _ in range(int(sys.stdin.readline().rstrip())):
         print('YES')
     else:
         print('NO')
-

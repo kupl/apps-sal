@@ -5,9 +5,9 @@ for loop in range(t):
 
     n = int(input())
 
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
 
-    lis = [None] * (n+1)
+    lis = [None] * (n + 1)
 
     ans = "NO"
     for i in range(n):
@@ -18,5 +18,4 @@ for loop in range(t):
             ans = "YES"
             break
 
-    print (ans)
-
+    print(ans)

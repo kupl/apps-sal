@@ -12,6 +12,7 @@ for i in range(n - 1):
 g[x - 1].append(y - 1)
 g[y - 1].append(x - 1)
 
+
 def bfs(g, n_node, start_node):
     dist = [-1] * n_node
     dist[start_node] = 0

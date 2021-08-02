@@ -2,6 +2,7 @@ import sys
 import math
 import bisect
 
+
 def solve(A):
     n = len(A)
     d = dict()
@@ -13,6 +14,7 @@ def solve(A):
                 return True
     return False
 
+
 def main():
     for _ in range(int(input())):
         n = int(input())
@@ -22,7 +24,9 @@ def main():
         else:
             print('NO')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

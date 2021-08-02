@@ -6,5 +6,3 @@ while len(t) < len(s) or (len(t) == len(s) and t < s):
     ans += 1
     t += '00'
 print(ans)
-
-

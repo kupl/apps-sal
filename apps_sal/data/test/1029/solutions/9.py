@@ -8,7 +8,7 @@ while(j >= 0):
     k = j
     while p[k] == '0':
         k -= 1
-    
+
     ln = j - k + 1
 
     if ln > k:
@@ -27,4 +27,3 @@ while(j >= 0):
         j = k - 1
 
 print(ans)
-

@@ -7,5 +7,3 @@ while b < a:
     b *= 4
     count += 1
 print(count)
-
-

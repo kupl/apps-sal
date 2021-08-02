@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 def main():
     from collections import deque
-        
+
     N, X, Y = list(map(int, input().split()))
 
     G = [[1]] + [[x - 1, x + 1] for x in range(1, N - 1)] + [[N - 2]]
@@ -28,5 +28,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()
