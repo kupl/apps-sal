@@ -4,10 +4,11 @@ input_file = sys.stdin
 
 n = int(input_file.readline())
 
+
 def factor(n):
     lst = []
     prod = 1
-    for i in range(2, n+1):
+    for i in range(2, n + 1):
         if n % i == 0:
             prod *= i
             lst.append(0)
@@ -18,6 +19,7 @@ def factor(n):
             break
     return lst, prod
 
+
 if n == 1:
     print(1, 0)
 else:
@@ -27,4 +29,3 @@ else:
         print(ans, int(log(maxi, 2)))
     else:
         print(ans, int(ceil(log(maxi, 2)) + 1))
-

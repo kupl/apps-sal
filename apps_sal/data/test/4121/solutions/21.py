@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 s = []
 for i in range(n):
     a[i] = a[i] & 1
@@ -12,4 +12,3 @@ if len(s) <= 1:
     print("YES")
 else:
     print("NO")
-

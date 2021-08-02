@@ -7,4 +7,3 @@ else:
         print('NO')
     else:
         print('YES')
-

@@ -15,4 +15,3 @@ for z in range(k):
     print(cur + 1, end=' ')
     cur = nxt[cur]
     n -= 1
-

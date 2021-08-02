@@ -18,4 +18,3 @@ for i in range(q):
     money = int(input())
     ans = bin_search(money)
     print(ans + 1 if money >= prices[0] else 0)
-

@@ -16,5 +16,4 @@ for i in range(q):
     elif m > x1:
         print(n)
     else:
-        print(bisect.bisect_left(x, m+1))
-
+        print(bisect.bisect_left(x, m + 1))

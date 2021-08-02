@@ -35,4 +35,3 @@ result = deg + 1
 if 2 ** deg == maxdegree == mindegree:
     result -= 1
 print(answer, result)
-

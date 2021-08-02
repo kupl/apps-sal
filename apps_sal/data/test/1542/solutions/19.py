@@ -8,6 +8,3 @@ for day in range(n_days):
     coins = int(input())
     N = bisect.bisect(prices, coins)
     print(N)
-
-
-

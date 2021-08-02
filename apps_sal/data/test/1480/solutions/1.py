@@ -1,5 +1,5 @@
-3
 import sys
+3
 
 n, k = list(map(int, sys.stdin.readline().split()))
 a = [int(x) for x in sys.stdin.readline().split()]
@@ -14,6 +14,5 @@ for d in a:
     p %= len(l)
     ret.append(l[p])
     del l[p]
-    
-print(' '.join(str(x) for x in ret))
 
+print(' '.join(str(x) for x in ret))

@@ -3,6 +3,7 @@ n = int(input())
 
 d = {}
 
+
 def prime_fac(n):
     nonlocal d
     i = 2
@@ -11,7 +12,8 @@ def prime_fac(n):
             n //= i
             d[i] = d.get(i, 0) + 1
         i += 1
- 
+
+
 if n == 1:
     print(1, 0)
 else:

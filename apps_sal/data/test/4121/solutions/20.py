@@ -14,4 +14,3 @@ if len(stack) > 1:
     print('NO')
 else:
     print('YES')
-

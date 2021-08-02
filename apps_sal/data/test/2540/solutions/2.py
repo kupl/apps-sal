@@ -5,7 +5,7 @@ n = int(input())
 color = list(map(int, input().split()))
 adj = [[] for _ in range(n)]
 
-for _ in range(n-1):
+for _ in range(n - 1):
     u, v = list(map(int, sys.stdin.readline().split()))
     u -= 1
     v -= 1
@@ -13,11 +13,11 @@ for _ in range(n-1):
     adj[v].append(u)
 
 count = [Counter() for _ in range(n)]
-max_cnt = [0]*n
-dp = [0]*n
+max_cnt = [0] * n
+dp = [0] * n
 
 stack = [0]
-par = [-1]*n
+par = [-1] * n
 order = []
 while stack:
     v = stack.pop()
@@ -55,4 +55,3 @@ for v in reversed(order):
         stack.append(par[v])
 
 print(*dp)
-

@@ -6,4 +6,3 @@ for ai in reversed(a):
     s += ai
 
 print(s - x, x)
-

@@ -9,8 +9,9 @@ def UpperBound(A, key):
             left = middle
     return right
 
+
 n = int(input())
-N = sorted(list(map(int,input().split())))
+N = sorted(list(map(int, input().split())))
 q = int(input())
 
 M = [0] * q
@@ -18,5 +19,3 @@ M = [0] * q
 for i in range(q):
     m = int(input())
     print(UpperBound(N, m))
-
-
