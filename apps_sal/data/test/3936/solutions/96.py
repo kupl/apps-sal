@@ -4,7 +4,7 @@ t = input()
 prev = -1
 i = 0
 ans = 1
-mod = pow(10,9)+7
+mod = pow(10, 9) + 7
 while i != n:
     if s[i] == t[i]:
         if prev == -1:

@@ -1,5 +1,11 @@
 from sys import stdin, setrecursionlimit
-import bisect, collections, copy, heapq, itertools, math, string
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
 setrecursionlimit(10**8)
 
 INF = float("inf")
@@ -8,7 +14,6 @@ MOD = 1000000007
 
 def input():
     return stdin.readline().strip()
-
 
 
 def main():
@@ -29,7 +34,7 @@ def main():
             else:
                 arrange += "y"
                 flag = True
-    
+
     flag = True
     before = ""
     for c in arrange:
@@ -40,35 +45,23 @@ def main():
                 ans *= 3
             flag = False
         else:
-            md = before+c
-            if md == "yy":  ans*=3
-            elif md == "yt":ans*=1
-            else:           ans*=2
+            md = before + c
+            if md == "yy":
+                ans *= 3
+            elif md == "yt":
+                ans *= 1
+            else:
+                ans *= 2
         before = c
         ans %= MOD
 
     print(ans)
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

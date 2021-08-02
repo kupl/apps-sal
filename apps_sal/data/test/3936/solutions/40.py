@@ -34,4 +34,3 @@ while pos < n:
         pos += 2
     tmp %= mod
 print(tmp)
-

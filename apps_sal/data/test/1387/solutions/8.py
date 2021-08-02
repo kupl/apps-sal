@@ -12,4 +12,3 @@ if n == t - 1:
     print('YES')
 else:
     print('NO')
-

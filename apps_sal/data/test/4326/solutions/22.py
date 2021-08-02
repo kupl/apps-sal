@@ -9,4 +9,3 @@ input_num = int(input())
 # 取得した N人から、3人以上のグループが最大数になるよう算出して出力する
 result = int(input_num / 3)
 print(result)
-

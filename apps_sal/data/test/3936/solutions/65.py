@@ -26,4 +26,3 @@ while idx < N:
         idx += 2
 ans %= MOD
 print(ans)
-

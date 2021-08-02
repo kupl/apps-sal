@@ -13,17 +13,23 @@ while i < n:
         i += 2
 
 cnt = 0
-if domino[0] == 'X': cnt += 3
-else: cnt += 6
+if domino[0] == 'X':
+    cnt += 3
+else:
+    cnt += 6
 
 if len(domino) == 1:
-    print(cnt%(10**9+7))
+    print(cnt % (10**9 + 7))
 else:
     for i in range(1, len(domino)):
         if domino[i] == 'X':
-            if domino[i-1] == 'X': cnt *= 2
-            else: cnt *= 1
+            if domino[i - 1] == 'X':
+                cnt *= 2
+            else:
+                cnt *= 1
         else:
-            if domino[i-1] == 'X': cnt *= 2
-            else: cnt *= 3
-    print(cnt%(10**9+7))
+            if domino[i - 1] == 'X':
+                cnt *= 2
+            else:
+                cnt *= 3
+    print(cnt % (10**9 + 7))

@@ -1,3 +1,3 @@
-N = int(input())
 import math
-print(math.floor(N/3))
+N = int(input())
+print(math.floor(N / 3))

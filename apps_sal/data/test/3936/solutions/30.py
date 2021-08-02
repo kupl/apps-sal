@@ -15,6 +15,7 @@ mod = 1000000007
 def lmi():
     return list(map(int, input().split()))
 
+
 def main():
     N = int(input())
     S1 = input()
@@ -45,5 +46,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

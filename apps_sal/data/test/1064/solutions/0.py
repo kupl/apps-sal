@@ -19,12 +19,12 @@ for i in range(n):
 
 best_cost = float('inf')
 for lamp in range(k, 0, -1):
-    min_cost = ceil(n/lamp) * costs[lamp-1]
+    min_cost = ceil(n / lamp) * costs[lamp - 1]
     if min_cost >= best_cost:
         continue
 
     # try this shit
-    cost = costs[lamp-1]
+    cost = costs[lamp - 1]
     reach = lamp
     fail = False
 
@@ -35,7 +35,7 @@ for lamp in range(k, 0, -1):
         reach = prev[reach] + lamp
         cost += costs[lamp - 1]
 
-        if cost + (ceil((n - reach)/lamp) * costs[lamp-1]) >= best_cost:
+        if cost + (ceil((n - reach) / lamp) * costs[lamp - 1]) >= best_cost:
             fail = True
             break
 
@@ -43,4 +43,3 @@ for lamp in range(k, 0, -1):
         best_cost = min(best_cost, cost)
 
 print(best_cost if best_cost != float('inf') else -1)
-

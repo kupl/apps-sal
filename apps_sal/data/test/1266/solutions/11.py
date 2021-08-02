@@ -1,8 +1,10 @@
 def is_parallel(x1, y1, x2, y2):
     return x1 == x2 or y1 == y2
 
+
 def is_diagonal(x1, y1, x2, y2):
     return abs(x1 - x2) == abs(y1 - y2)
+
 
 n = int(input())
 xs = input().split(" ")
@@ -56,8 +58,6 @@ for i in range(0, n):
                 minx[7] = t
 
 if (minx[0] != 'B' or minx[1] != 'B' or minx[2] != 'B' or minx[3] != 'B' or minx[4] != 'R' or minx[5] != 'R' or minx[6] != 'R' or minx[7] != 'R'):
-    print ("YES")
+    print("YES")
 else:
-    print ("NO")
-
-
+    print("NO")

@@ -19,4 +19,3 @@ for i in range(n):
     odd = not odd
 
 print(x)
-

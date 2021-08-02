@@ -36,4 +36,3 @@ while i < N:
         i += 2
     f_g = t_g
 print((ans % MOD))
-

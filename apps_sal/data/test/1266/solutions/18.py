@@ -29,7 +29,7 @@ for key in all_figurs.keys():
     if key[0] == king[0] or key[1] == king[1] or abs(king[0] - key[0]) == abs(king[1] - key[1]):
         figurs[key] = all_figurs[key]
 
-nearest = {k:(10**100, '?')  for k in ['l', 'lu', 'ld', 'r', 'ru', 'rd', 'u', 'd']}
+nearest = {k: (10**100, '?') for k in ['l', 'lu', 'ld', 'r', 'ru', 'rd', 'u', 'd']}
 
 for key in figurs.keys():
     distance, direction = dist(key, king)

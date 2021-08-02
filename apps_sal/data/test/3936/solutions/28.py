@@ -4,7 +4,7 @@ S1 = input().rstrip()
 S2 = input().rstrip()
 L = len(S1)
 
-if L==1:
+if L == 1:
     print((3))
     return
 
@@ -18,8 +18,8 @@ else:
     state = 1
 
 i = start
-while i<L-1:
-    if S1[i] == S1[i+1]:
+while i < L - 1:
+    if S1[i] == S1[i + 1]:
         if state == 0:
             dp *= 3
             dp %= MOD
@@ -38,4 +38,3 @@ if state == 1:
     dp *= 2
     dp %= MOD
 print(dp)
-

@@ -11,6 +11,7 @@ def simulate(init, n):
         if a[i] == 1:
             return i
 
+
 n = int(input())
 x = int(input())
 for i in range(3):

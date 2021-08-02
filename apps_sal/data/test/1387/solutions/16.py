@@ -11,4 +11,3 @@ while True:
     if cur == t:
         print('YES')
         break
-

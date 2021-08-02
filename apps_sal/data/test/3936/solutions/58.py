@@ -1,6 +1,11 @@
+from functools import reduce, lru_cache     # decorator: 関数をメモ化再起してくれる. max_size=128
+from pprint import pprint
+from collections import deque, defaultdict
+from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
+from math import ceil, floor, log2, log, sqrt, gcd
 import sys
 sys.setrecursionlimit(10 ** 9)
-input = sys.stdin.readline    ####
+input = sys.stdin.readline
 def int1(x): return int(x) - 1
 def II(): return int(input())
 def MI(): return list(map(int, input().split()))
@@ -13,15 +18,13 @@ def MS(): return input().split()
 def LS(): return list(input().strip('\n'))
 def LLS(rows_number): return [LS() for _ in range(rows_number)]
 def gen_matrix(h, w, init): return [[init] * w for _ in range(h)]
+
+
 INF = float('inf')
 # from bisect import bisect_left, bisect_right
 # from heapq import heapify, heappop, heappush
-from math import ceil, floor, log2, log, sqrt, gcd
-from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
-from collections import deque, defaultdict
-from pprint import pprint
 # import numpy as np    # cumsum
-from functools import reduce, lru_cache     # decorator: 関数をメモ化再起してくれる. max_size=128
+
 
 def solve():
     N = II()

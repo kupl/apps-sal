@@ -1,6 +1,8 @@
 import sys
 read = sys.stdin.read
 large_p = 10**9 + 7
+
+
 def main():
     n = int(input())
     s1 = tuple(input())
@@ -28,6 +30,9 @@ def main():
         ans = ans % large_p
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

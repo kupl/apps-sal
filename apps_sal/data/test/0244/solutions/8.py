@@ -12,4 +12,3 @@ res = [
 
 pos = n % 6
 print(res[pos][x])
-

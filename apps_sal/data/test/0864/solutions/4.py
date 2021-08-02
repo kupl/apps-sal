@@ -1,6 +1,6 @@
 from collections import defaultdict as dd, deque
 
-n,m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 A = [int(x) for x in input().split()]
 
 C = dd(int)
@@ -11,10 +11,8 @@ psize = 1
 while True:
     packs = 0
     for c in C:
-        packs += C[c]//psize
-    if packs < n: # Previous possible, this one not
+        packs += C[c] // psize
+    if packs < n:  # Previous possible, this one not
         break
     psize += 1
 print(psize - 1)
-
-

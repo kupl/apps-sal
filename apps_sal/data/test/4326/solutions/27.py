@@ -1,3 +1,3 @@
-N = int (input())
+N = int(input())
 
-print (int(N/3))
+print(int(N / 3))

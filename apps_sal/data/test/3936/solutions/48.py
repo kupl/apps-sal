@@ -29,4 +29,3 @@ for i in range(1, len(b)):
     ans %= mod
 
 print(ans)
-

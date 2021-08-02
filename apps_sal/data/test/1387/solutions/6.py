@@ -1,8 +1,8 @@
-n,t = list(map(int, input().split()))
+n, t = list(map(int, input().split()))
 l = input().split()
-for i in range(n-1):
+for i in range(n - 1):
     l[i] = int(l[i])
-l = [0]+l
+l = [0] + l
 now = 1
 while 1:
     now += l[now]
@@ -17,4 +17,3 @@ if ans == 0:
     print("NO")
 else:
     print("YES")
-

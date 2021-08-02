@@ -13,7 +13,7 @@ def f(df):
     return -df[0]
 
 
-d.sort(key = f)
+d.sort(key=f)
 
 
 k = 0
@@ -27,4 +27,3 @@ for i in range(n):
             mm = d[j][0] // (d[j][1] + 1)
     d[nm][1] += 1
 print(mm)
-

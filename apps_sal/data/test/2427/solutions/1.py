@@ -1,4 +1,5 @@
-import itertools, math
+import itertools
+import math
 n = int(input())
 A = list(map(int, input().split()))
 acc = [0] + list(itertools.accumulate(A))
@@ -25,4 +26,3 @@ for j in range(n - 1, 1, -1):
             ans += 1
             seen.add((i, j))
 print(ans)
-

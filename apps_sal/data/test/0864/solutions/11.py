@@ -16,5 +16,3 @@ for i in range(n):
     X[g] += 1
     r = min(r, A[g] // X[g])
 print(r)
-            
-

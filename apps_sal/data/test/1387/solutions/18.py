@@ -7,4 +7,3 @@ while current < t - 1:
     current = a[current] + current
 
 print('YES' if current == t - 1 else 'NO')
-

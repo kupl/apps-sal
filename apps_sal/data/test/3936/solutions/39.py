@@ -9,8 +9,8 @@ pattern = []
 pos = 0
 
 if N == 1:
-  print(3)
-  return
+    print(3)
+    return
 
 while True:
     if S1[pos] != S1[pos + 1]:
@@ -36,18 +36,18 @@ for i in range(1, len(pattern)):
     if pattern[i] == 0:
         if now == 0:
             ans *= 2
-            ans = ans%MOD
+            ans = ans % MOD
         else:
             ans *= 1
-            ans = ans%MOD
+            ans = ans % MOD
         now = 0
     else:
         if now == 0:
             ans *= 2
-            ans = ans%MOD
+            ans = ans % MOD
         else:
             ans *= 3
-            ans = ans%MOD
+            ans = ans % MOD
         now = 1
 
 print(ans)
