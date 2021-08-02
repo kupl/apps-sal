@@ -10,5 +10,3 @@ for i in range(1, n):
     else:
         end = arr[i][0]
 print(end)
-    
-

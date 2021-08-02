@@ -5,4 +5,3 @@ while a and b:
     a, b, count = b, a % b, count + a // b
 
 print(count)
-

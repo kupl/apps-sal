@@ -127,24 +127,20 @@ for i in range(t):
         ans=2*x
     print(ans)
 '''
-n=int(input())
-arr=input()
-mod=10**9+7
-a=b=c=0
-x=1
+n = int(input())
+arr = input()
+mod = 10**9 + 7
+a = b = c = 0
+x = 1
 for ch in arr:
-    #print(ch,a,b,c)
-    if ch=='a':
-        a=(a+x)%mod
-    elif ch=='b':
-        b=(b+a)%mod
-    elif ch=='c':
-        c=(c+b)%mod
+    # print(ch,a,b,c)
+    if ch == 'a':
+        a = (a + x) % mod
+    elif ch == 'b':
+        b = (b + a) % mod
+    elif ch == 'c':
+        c = (c + b) % mod
     else:
-        a,b,c=(3*a+x)%mod,(3*b+a)%mod,(3*c+b)%mod
-        x=(3*x)%mod
+        a, b, c = (3 * a + x) % mod, (3 * b + a) % mod, (3 * c + b) % mod
+        x = (3 * x) % mod
 print(c)
-
-    
-
-

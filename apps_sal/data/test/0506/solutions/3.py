@@ -5,5 +5,6 @@ def gcd(x, y):
         x, y = y, x % y
     return counter
 
+
 x, y = map(int, input().split())
 print(gcd(x, y))

@@ -9,5 +9,6 @@ def fun(a, b):
             break
     return cnt
 
+
 a, b = [int(c) for c in input().split()]
 print(fun(a, b))

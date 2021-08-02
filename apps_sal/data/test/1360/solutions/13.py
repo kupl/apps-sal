@@ -11,5 +11,5 @@ for i in range(info_data):
         result = data[i][0]
     else:
         result = data[i][1]
-        
+
 print(result)

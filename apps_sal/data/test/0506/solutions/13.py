@@ -7,5 +7,6 @@ def cnt(a, b):
         return 1
     return a // b + cnt(b, a % b)
 
+
 a, b = map(int, input().split())
 print(cnt(a, b))

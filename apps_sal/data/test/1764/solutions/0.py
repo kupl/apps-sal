@@ -62,4 +62,3 @@ ans.sort()
 print(int(len(ans)))
 for line in ans:
     print(str(line[0]) + ' ' + str(line[1]))
-

@@ -10,4 +10,3 @@ for a, b in s:
     else:
         m = a
 print(m)
-

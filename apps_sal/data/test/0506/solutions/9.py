@@ -3,8 +3,6 @@ def f(a, b):
         return int(a / b) + f(b, a % b)
     return int(a / b)
 
-a, b = list(map(int,input().split()))
+
+a, b = list(map(int, input().split()))
 print(f(a, b))
-
-
-

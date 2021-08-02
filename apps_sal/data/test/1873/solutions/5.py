@@ -8,4 +8,3 @@ cnt = n * (n - 1) // 2
 for i in p:
     cnt -= i * (i - 1) // 2
 print(cnt)
-
