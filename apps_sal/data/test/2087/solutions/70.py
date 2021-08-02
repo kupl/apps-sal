@@ -7,4 +7,3 @@ for i in ABC:
     total *= i * (i + 1) // 2
 
 print((total % 998244353))
-

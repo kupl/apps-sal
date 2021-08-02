@@ -8,4 +8,3 @@ else:
         print(val * pow(2, mod - 2, mod) % mod)
     else:
         print(((val - 1) * pow(2, mod - 2, mod) + 1) % mod)
-

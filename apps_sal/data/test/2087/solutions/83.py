@@ -21,14 +21,13 @@ Al = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 a, b, c = rm()
 ans = 1
-c = (c+1)*c//2
+c = (c + 1) * c // 2
 ans *= c
 ans %= mod2
-b = (b+1)*b//2
+b = (b + 1) * b // 2
 ans *= b
 ans %= mod2
-a = (a+1)*a//2
+a = (a + 1) * a // 2
 ans *= a
 ans %= mod2
 print(ans)
-

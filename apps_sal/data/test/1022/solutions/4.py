@@ -26,6 +26,3 @@ if fl == 1 and l[0] == 0 and r[n - 1] == 0:
     print(*s)
 else:
     print('NO')
-
-
-

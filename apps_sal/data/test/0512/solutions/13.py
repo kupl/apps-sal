@@ -1,12 +1,12 @@
-N = int(input())
-AB = [tuple(map(int,input().split())) for i in range(N)]
 from collections import Counter
+N = int(input())
+AB = [tuple(map(int, input().split())) for i in range(N)]
 ctr = Counter()
 pairs = {}
 starts = set()
 ends = set()
 free = 0
-for a,b in AB:
+for a, b in AB:
     if a > 0 and b > 0:
         pairs[a] = b
         ctr[a] += 1
@@ -20,19 +20,19 @@ for a,b in AB:
     else:
         free += 1
 
-if any(v>1 for v in ctr.values()):
+if any(v > 1 for v in ctr.values()):
     print('No')
     return
 
-dp = [False] * (N+1)
+dp = [False] * (N + 1)
 dp[0] = True
 for i in range(N):
     if not dp[i]: continue
-    for j in range(i+1,N+1):
+    for j in range(i + 1, N + 1):
         if dp[j]: continue
-        l = j-i
-        for s in range(2*i+1, 2*i+l+1):
-            t = s+l
+        l = j - i
+        for s in range(2 * i + 1, 2 * i + l + 1):
+            t = s + l
             if s in pairs:
                 if pairs[s] != t: break
             if s in starts and t in ends: break

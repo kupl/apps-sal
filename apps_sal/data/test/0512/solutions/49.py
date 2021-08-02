@@ -74,4 +74,5 @@ def solve(N: int, AB: List[List[int]]) -> str:
 def __starting_point():
     main()
 
+
 __starting_point()

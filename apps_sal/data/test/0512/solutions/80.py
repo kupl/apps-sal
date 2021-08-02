@@ -1,6 +1,7 @@
 import sys
 def input(): return sys.stdin.readline().strip()
 
+
 def main():
     N = int(input())
     start = []
@@ -36,7 +37,7 @@ def main():
     if ill_input:
         print("No")
         return
-    
+
     """
     重なりがある場合は乗り降りの関係が1ずつずれることに気づく。
     なので2N個のフロアをうまく偶数区間に区切って、各区間内で乗り降りが
@@ -50,19 +51,19 @@ def main():
     for s, e in zip(start, end):
         if s != -1: state[s] = 1
         if e != -1: state[e] = -1
-    
+
     ok = [[0] * (N * 2) for _ in range(N * 2)]
     for s in range(N * 2):
         for e in range(s + 1):
             ok[s][e] = -1
-    
+
     for s in start_only:
         for e in range(s + 1, N * 2):
             if e in confirmed_start or e in confirmed_end or e in end_only or e in start_set: ok[s][e] = -1
     for e in end_only:
         for s in range(e):
             if s in confirmed_start or s in confirmed_end or s in start_only or s in end_set: ok[s][e] = -1
-    
+
     for s in range(N * 2):
         if s in start_only: continue
         for e in range(s + 1, N * 2):
@@ -71,7 +72,7 @@ def main():
         if e in end_only: continue
         for s in range(e):
             if s in confirmed_start or s in confirmed_end or s in end_only: ok[s][e] = -1
-        
+
     for s, e in confirmed:
         ok[s][e] = 1
         for ns in range(N * 2):
@@ -80,9 +81,9 @@ def main():
         for ne in range(N * 2):
             if ne != e: ok[s][ne] = -1
             ok[e][ne] = -1
-    
+
     #for row in ok: print("    {}".format(row))
-    
+
     # dp-part
     dp = [False] * (N * 2 + 1)
     dp[0] = True
@@ -101,14 +102,15 @@ def main():
         if flag:
             dp[i] = True
         #print("i={}, dp={}".format(i, dp))
-    
+
     if dp[-1]:
         print("Yes")
     else:
         print("No")
-    
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

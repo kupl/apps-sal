@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(1919810)
 
+
 def dfs(i):
     if i == 2 * n + 1:
         nonlocal ans
@@ -15,6 +16,7 @@ def dfs(i):
             if ok(y[i], i):
                 dfs(i + 2 * y[i])
     return
+
 
 def ok(k, i):
     if k + i >= 2 * n + 1:
@@ -34,6 +36,7 @@ def ok(k, i):
             f = 0
             break
     return f
+
 
 n = int(input())
 ans = "Yes"

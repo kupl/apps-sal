@@ -65,7 +65,10 @@ def main(in_file):
     ans = solve(N, ab)
     return ans
 
+
 def __starting_point():
     ans = main(0)
     print('Yes' if ans else 'No')
+
+
 __starting_point()

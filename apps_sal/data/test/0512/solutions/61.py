@@ -9,7 +9,7 @@ sys.setrecursionlimit(100000)
 def dfs(f):
     if f == 2 * n + 1:
         return True
-    
+
     max_up = (2 * n - f + 1) // 2
     for up in range(1, max_up + 1):
         for i in range(f, f + up):

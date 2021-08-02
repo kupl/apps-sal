@@ -2,7 +2,7 @@ n, m = [int(i) for i in input().split()]
 a = [[int(i) for i in input().split()] for _ in range(n)]
 
 
-def test(a, n ,m):
+def test(a, n, m):
     for i in range(n):
         _or, _and = a[i][0], a[i][0]
         for j in range(m):
@@ -11,6 +11,7 @@ def test(a, n ,m):
         if _or != _and:
             return i
     return -1
+
 
 t = test(a, n, m)
 if t == -1:
@@ -33,4 +34,3 @@ else:
             print(' '.join(['1' if k != t else str(j + 1) for k in range(n)]))
             return
 print('NIE')
-

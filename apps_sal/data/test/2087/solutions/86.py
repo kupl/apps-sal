@@ -15,4 +15,3 @@ cc = (C * (C + 1) // 2) % MOD
 out = (aa * bb * cc) % MOD
 
 print(("{}".format(out)))
-

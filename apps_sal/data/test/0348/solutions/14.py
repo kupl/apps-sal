@@ -10,4 +10,3 @@ elif a == b:
     print(pow(a, t, mod) * pow(2, t - 1, mod) % mod)
 else:
     print(pow(2, mod - 2, mod) * (1 + pow(2 * a + 1, t, mod)) % mod)
-

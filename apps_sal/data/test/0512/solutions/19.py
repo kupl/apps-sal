@@ -3,8 +3,8 @@ AB = list(zip(*[iter(AB)] * 2))
 
 memo = [False] * (2 * N + 1)
 for i, (a, b) in enumerate(AB):
-    if (a != -1 and memo[a] or b != -1 and memo[b] or
-        a != -1 and b != -1 and a > b):
+    if (a != -1 and memo[a] or b != -1 and memo[b]
+            or a != -1 and b != -1 and a > b):
         print("No")
         return
 

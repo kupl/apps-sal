@@ -125,4 +125,3 @@ for b in kudari:
                     return
 
 print("Yes")
-

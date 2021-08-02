@@ -1,10 +1,12 @@
 n, m = [int(t) for t in input().split()]
 
+
 def xor(arr):
     t = 0
     for a in arr:
-        t = t^a
+        t = t ^ a
     return t
+
 
 a = []
 win = False
@@ -20,13 +22,13 @@ if not win:
         print('NIE')
     else:
         print('TAK')
-        print(' '.join(['1']*n))
+        print(' '.join(['1'] * n))
 else:
     print('TAK')
     if xor([t[0] for t in a]) != 0:
-        print(' '.join(['1']*n))
+        print(' '.join(['1'] * n))
     else:
-        ans = ['1']*n
+        ans = ['1'] * n
         k = 1
         while a[j][k] == a[j][0]:
             k += 1
