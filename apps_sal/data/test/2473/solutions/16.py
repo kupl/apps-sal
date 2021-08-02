@@ -17,4 +17,3 @@ for i in range(N - K + 1):
             ans = min(ans, x * abs(y_list[k + K - 1] - y_list[k]))
 
 print(ans)
-

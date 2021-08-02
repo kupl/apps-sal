@@ -5,7 +5,7 @@ def main():
     a.append(last)
     for ai in input().split():
         if last[0] == ai:
-            last = (ai, last[1]+1)
+            last = (ai, last[1] + 1)
             a[-1] = last
         else:
             last = (ai, 1)
@@ -44,9 +44,11 @@ def main():
     for ai in a:
         s += ai[1]
 
-    print(s*m + s1)
+    print(s * m + s1)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

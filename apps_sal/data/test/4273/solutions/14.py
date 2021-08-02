@@ -17,5 +17,5 @@ for i in range(N):
         C += 1
     elif s == "H":
         H += 1
-ans = M*A*R+M*A*C+M*A*H+M*R*C+M*R*H+M*C*H+A*R*C+A*R*H+A*C*H+R*C*H
+ans = M * A * R + M * A * C + M * A * H + M * R * C + M * R * H + M * C * H + A * R * C + A * R * H + A * C * H + R * C * H
 print(ans)

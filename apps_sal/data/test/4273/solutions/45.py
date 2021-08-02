@@ -2,6 +2,7 @@ from collections import defaultdict
 from itertools import combinations
 def inpl(): return list(map(int, input().split()))
 
+
 C = defaultdict(int)
 N = int(input())
 for _ in range(N):

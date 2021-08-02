@@ -15,6 +15,7 @@ for i in range(n):
         ans = res
         best = i
 
+
 def get(s, pos):
     ans = 0
     for i in range(len(s)):
@@ -26,9 +27,8 @@ def get(s, pos):
                 ans -= 1
     return ans
 
+
 if sum(s) >= ans:
     print(get(s, n))
 else:
     print(get(s, best))
-
-

@@ -22,6 +22,5 @@ for t in range(T):
     nbc = nb * vm
     left = N - nbc
     spaces = vm - 1
-    min_blank = left//spaces
-    print(min_blank + nb -1)
-
+    min_blank = left // spaces
+    print(min_blank + nb - 1)

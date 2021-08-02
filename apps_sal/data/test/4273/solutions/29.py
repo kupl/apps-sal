@@ -11,9 +11,10 @@ def __starting_point():
             C[s[0]] += 1
     ans = 0
     for i in range(3):
-        for j in range(i+1, 4):
-            for k in range(j+1, 5):
+        for j in range(i + 1, 4):
+            for k in range(j + 1, 5):
                 ans += C[march[i]] * C[march[j]] * C[march[k]]
     print(ans)
+
 
 __starting_point()

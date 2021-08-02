@@ -5,7 +5,7 @@ b = [int(x) for x in input().split()]
 
 r = [0]
 p = [0]
-for i in range(n-1):
+for i in range(n - 1):
     x1 = r[-1] + a[i]
 
     y1 = p[-1] + b[i]
@@ -22,7 +22,7 @@ for i in range(n-1):
         if z1 < y1:
             y1 = z1
             p[-1] = z1
-    #print("----")
+    # print("----")
     if x1 < y1:
         r.append(x1)
     else:
@@ -30,5 +30,3 @@ for i in range(n-1):
 
 print(*r)
 # print(p)
-
-

@@ -1,5 +1,6 @@
 n = int(input())
 
+
 def f(numb):
     lst = [numb]
     cap = 10
@@ -9,6 +10,7 @@ def f(numb):
         cap *= 10
 
     return lst
+
 
 def g(numb):
     lst = []

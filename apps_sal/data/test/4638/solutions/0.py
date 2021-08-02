@@ -8,4 +8,3 @@ for i in range(1, n - 1):
     dpa[i + 1], dpb[i + 1] = min(dpa[i], dpb[i]) + a[i], min(dpa[i] + c, dpb[i]) + b[i]
 
 print(*(min(dpa[i], dpb[i]) for i in range(n)))
-

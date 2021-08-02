@@ -14,4 +14,4 @@ for i in range(1, n):
 
 for i in range(n):
     print(min(w[i]), end=' ', flush=False)
-print()    
+print()

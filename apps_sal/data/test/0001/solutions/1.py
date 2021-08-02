@@ -18,4 +18,3 @@ for i in range(len(s_num)):
 
         digs[i] += 1
 print(res)
-

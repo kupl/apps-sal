@@ -10,9 +10,8 @@ for i in range(N):
 ans = 0
 
 for i in range(3):
-    for j in range(i+1, 4):
-        for k in range(j+1, 5):
+    for j in range(i + 1, 4):
+        for k in range(j + 1, 5):
             ans += m[i] * m[j] * m[k]
 
 print(ans)
-

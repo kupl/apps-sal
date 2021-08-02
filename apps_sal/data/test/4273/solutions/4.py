@@ -17,9 +17,8 @@ for i in range(N):
 
 ans = 0
 for i in range(0, 3):
-    for j in range(i+1, 4):
-        for k in range(j+1, 5):
-            ans += count[i]*count[j]*count[k]
+    for j in range(i + 1, 4):
+        for k in range(j + 1, 5):
+            ans += count[i] * count[j] * count[k]
 
 print(ans)
-

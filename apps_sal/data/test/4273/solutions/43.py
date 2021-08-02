@@ -1,5 +1,5 @@
 from collections import defaultdict
-import itertools 
+import itertools
 
 n = int(input())
 
@@ -19,4 +19,3 @@ for x in c:
     s += d[x[0]] * d[x[1]] * d[x[2]]
 
 print(s)
-

@@ -13,5 +13,3 @@ for x1, x2 in combinations(X, 2):
             continue
         ans = min(ans, (x2 - x1) * (y2s[K - 1] - y1))
 print(ans)
-
-

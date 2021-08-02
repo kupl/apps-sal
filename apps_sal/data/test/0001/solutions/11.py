@@ -37,4 +37,3 @@ def run(n):
 
 n = input()
 print(run(n))
-

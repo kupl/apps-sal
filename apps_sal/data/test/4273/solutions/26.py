@@ -13,4 +13,3 @@ for c in itertools.combinations(list('MARCH'), 3):
         a *= r[cc]
     ans += a
 print(ans)
-

@@ -1,5 +1,5 @@
 n = int(input())
-s = [0]*5
+s = [0] * 5
 ans = 0
 for i in range(n):
     x = list(input())[0]
@@ -13,10 +13,10 @@ for i in range(n):
         s[3] += 1
     if x == "H":
         s[4] += 1
-    
+
 for a in range(5):
-    for b in range(a+1,5):
-        for c in range(b+1,5):
-            ans += s[a]*s[b]*s[c]
-            
+    for b in range(a + 1, 5):
+        for c in range(b + 1, 5):
+            ans += s[a] * s[b] * s[c]
+
 print(ans)

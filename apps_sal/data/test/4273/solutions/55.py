@@ -16,7 +16,9 @@ for _ in range(n):
     if s[0] == "H":
         x[4] += 1
 
-def f(a, b): return a*b
+
+def f(a, b): return a * b
+
 
 x = [n for n in x if n != 0]
 ans = 0

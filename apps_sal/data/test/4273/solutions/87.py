@@ -30,7 +30,7 @@ for x in range(5):
         for z in range(5):
             if x == z or y == z:
                 break
-            if name[x]*name[y]*name[z] > 0:
-                ans += name[x]*name[y]*name[z]
+            if name[x] * name[y] * name[z] > 0:
+                ans += name[x] * name[y] * name[z]
 
 print(ans)

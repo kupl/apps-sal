@@ -26,14 +26,16 @@ def main():
                 for l, d in XY:
                     # d = l[1]
                     if c < d:
-                        if  e * (d - c) < ans and count(a, b, c, d, i, j):
+                        if e * (d - c) < ans and count(a, b, c, d, i, j):
                             # print ('A')
                             ans = e * (d - c)
                             # ans = min(ans, e * (d - c))
-    print (ans)
+    print(ans)
     return
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

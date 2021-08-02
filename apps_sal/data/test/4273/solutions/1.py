@@ -16,4 +16,3 @@ for k, v in list(c.items()):
     if v >= 3:
         ans -= v * (v - 1) * (v - 2) // 6
 print(ans)
-

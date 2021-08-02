@@ -1,6 +1,6 @@
 import itertools
 n = int(input())
-name = [0]*5
+name = [0] * 5
 s = []
 for i in range(n):
     st = input()
@@ -19,6 +19,6 @@ for i in range(n):
 ans = 0
 for v in itertools.combinations(name, 3):
     # print(v)
-    ans += v[0]*v[1]*v[2]
+    ans += v[0] * v[1] * v[2]
 
 print(ans)

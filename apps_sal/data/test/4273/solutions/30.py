@@ -8,4 +8,3 @@ for a, b, c in itertools.combinations("MARCH", 3):
     res += S[a] * S[b] * S[c]
 
 print(res)
-

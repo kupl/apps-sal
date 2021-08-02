@@ -26,4 +26,3 @@ for a, b, c in itertools.combinations(count, 3):
     ans += a * b * c
 
 print(ans)
-

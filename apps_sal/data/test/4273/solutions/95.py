@@ -50,7 +50,7 @@ def resolve():
     N = int(input())
     S = [input() for _ in range(N)]
 
-    C = [0]*5
+    C = [0] * 5
     for s in S:
         if s[0] == "M":
             C[0] += 1
@@ -65,9 +65,9 @@ def resolve():
 
     ans = 0
     for i, c1 in enumerate(C):
-        for j, c2 in enumerate(C[i+1:], i+1):
-            for c3 in C[j+1:]:
-                ans += c1*c2*c3
+        for j, c2 in enumerate(C[i + 1:], i + 1):
+            for c3 in C[j + 1:]:
+                ans += c1 * c2 * c3
 
     print(ans)
 
@@ -75,5 +75,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

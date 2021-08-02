@@ -31,4 +31,3 @@ for x0 in range(len(X) - 1):
                     s = (X[x1] - X[x0]) * (Y[y1] - Y[y0])
                     ans = min(ans, s)
 print(ans)
-

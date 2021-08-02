@@ -28,11 +28,11 @@ l_r = len(set_r)
 l_c = len(set_c)
 l_h = len(set_h)
 
-l_l = [l_m,l_a,l_r,l_c,l_h]
+l_l = [l_m, l_a, l_r, l_c, l_h]
 
-comb_list = list(itertools.combinations(l_l,3))
+comb_list = list(itertools.combinations(l_l, 3))
 
 for i in range(len(comb_list)):
-    ans += comb_list[i][0]*comb_list[i][1]*comb_list[i][2]
+    ans += comb_list[i][0] * comb_list[i][1] * comb_list[i][2]
 
 print(ans)

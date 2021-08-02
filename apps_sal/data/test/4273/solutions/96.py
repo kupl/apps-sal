@@ -33,4 +33,3 @@ for i in list(name_count.values()):
         total -= comb(i, 3)
 
 print(total)
-

@@ -22,4 +22,3 @@ for i in range(5):
         for k in range(j + 1, 5):
             ans += cnt[i] * cnt[j] * cnt[k]
 print(ans)
-

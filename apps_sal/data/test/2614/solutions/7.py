@@ -8,7 +8,7 @@ for t in range(T):
     m = -1
     mc = 0
     c = 1
-    for i in range (1, n):
+    for i in range(1, n):
         if a[i] == a[i - 1]:
             c = c + 1
         else:
@@ -24,4 +24,3 @@ for t in range(T):
     elif c == m:
         mc = mc + 1
     print((n - m * mc) // (m - 1) + mc - 1)
-

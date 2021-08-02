@@ -22,5 +22,5 @@ a = len(A)
 r = len(R)
 c = len(C)
 h = len(H)
-ans = m*a*r + m*a*c + m*a*h + m*r*c + m*r*h + m*c*h + a*r*c + a*r*h + a*c*h + r*c*h
+ans = m * a * r + m * a * c + m * a * h + m * r * c + m * r * h + m * c * h + a * r * c + a * r * h + a * c * h + r * c * h
 print(ans)

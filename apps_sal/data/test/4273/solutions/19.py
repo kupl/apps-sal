@@ -21,11 +21,11 @@ for i in kouho:
 total = sum(name)
 seki = 1
 for i in name:
-    seki = seki*i
+    seki = seki * i
 hikuseki = 1
 for i in name:
     if i > 1:
-        hikuseki = hikuseki*i
+        hikuseki = hikuseki * i
 
 if len(name) < 3:
     print((0))
@@ -35,6 +35,5 @@ seki = list(itertools.combinations(name, 3))
 ans = 0
 for i in seki:
     a, b, c = i
-    ans += a*b*c
+    ans += a * b * c
 print(ans)
-

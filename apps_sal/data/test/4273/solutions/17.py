@@ -1,7 +1,7 @@
 n = int(input())
 S = list(set([input() for _ in range(n)]))
 
-name = [0]*5
+name = [0] * 5
 
 for s in S:
     if s[0] == "M":
@@ -17,8 +17,8 @@ for s in S:
 
 ans = 0
 for i in range(5):
-    for j in range(i+1, 5):
-        for k in range(j+1, 5):
-            ans += name[i]*name[j]*name[k]
+    for j in range(i + 1, 5):
+        for k in range(j + 1, 5):
+            ans += name[i] * name[j] * name[k]
 
 print(ans)

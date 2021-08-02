@@ -34,8 +34,7 @@ for i in range(1, I + 1):
                 if val >= K:
                     ans = min(
                         ans,
-                        (decomp_X[k + i - 1] - decomp_X[k])
-                        * (decomp_Y[l + j - 1] - decomp_Y[l]),
+                        (decomp_X[k + i - 1] - decomp_X[k]) *
+                        (decomp_Y[l + j - 1] - decomp_Y[l]),
                     )
 print(ans)
-

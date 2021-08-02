@@ -21,6 +21,5 @@ for i in range(n):
 
 ans = 0
 for i, j, k in itertools.combinations([0, 1, 2, 3, 4], 3):
-    ans += len(data[i])*len(data[j])*len(data[k])
+    ans += len(data[i]) * len(data[j]) * len(data[k])
 print(ans)
-

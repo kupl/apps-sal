@@ -1,8 +1,8 @@
 import itertools
- 
+
 n = int(input())
- 
- 
+
+
 data = [[] for i in range(5)]
 # print(data)
 for i in range(n):
@@ -17,8 +17,8 @@ for i in range(n):
         data[3].append(tmp)
     elif tmp[0] == "H":
         data[4].append(tmp)
- 
+
 ans = 0
 for i, j, k in itertools.combinations([0, 1, 2, 3, 4], 3):
-    ans += len(data[i])*len(data[j])*len(data[k])
+    ans += len(data[i]) * len(data[j]) * len(data[k])
 print(ans)
