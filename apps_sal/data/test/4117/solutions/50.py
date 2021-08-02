@@ -7,9 +7,9 @@ def main():
         return
 
     ans = 0
-    for i in range(N-2):
-        for j in range(i+1, N-1):
-            for k in range(j+1, N):
+    for i in range(N - 2):
+        for j in range(i + 1, N - 1):
+            for k in range(j + 1, N):
                 Li = L[i]
                 Lj = L[j]
                 Lk = L[k]
@@ -22,5 +22,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -12,4 +12,3 @@ try:
         print(result)
 except EOFError:
     pass
-

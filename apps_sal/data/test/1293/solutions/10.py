@@ -16,7 +16,7 @@ import sys
 
 
 def solve(xs, n):
-    return abs(xs[0]) + sum(abs(b-a) for (a, b) in zip(xs, xs[1:]))
+    return abs(xs[0]) + sum(abs(b - a) for (a, b) in zip(xs, xs[1:]))
 
 
 # def p(*args, **kwargs):
@@ -34,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

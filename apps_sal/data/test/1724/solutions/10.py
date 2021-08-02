@@ -11,5 +11,3 @@ for i in range(n):
     sm += a[i]
 
 print(ans)
-
-

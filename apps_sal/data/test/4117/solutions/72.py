@@ -11,7 +11,7 @@ res = 0
 for k in range(N):
     for j in range(k):
         for i in range(j):
-            if L[i] == L[j] or L[j] == L[k] or L[k] == L[i] : 
+            if L[i] == L[j] or L[j] == L[k] or L[k] == L[i]:
                 continue
             if L[i] + L[j] <= L[k]:
                 continue

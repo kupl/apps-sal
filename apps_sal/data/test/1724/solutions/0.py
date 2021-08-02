@@ -18,4 +18,3 @@ for i in range(n):
         cur += a[i]
 ans = max(ans, cur)
 print(ans)
-

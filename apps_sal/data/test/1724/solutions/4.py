@@ -6,7 +6,7 @@ res, summ = 0, 0
 
 for i, bit in enumerate(m):
     if bit == '1':
-        res = max(res + a[i], summ) # try to add
+        res = max(res + a[i], summ)  # try to add
     summ += a[i]
 
 print(res)

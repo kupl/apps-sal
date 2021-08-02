@@ -1,6 +1,6 @@
 #!/c/Python34/python
 # coding: utf-8
-#Anser
+# Anser
 
 
 def main():
@@ -19,14 +19,14 @@ def main():
     for i in range(26):
         for j in range(26):
             if i != j and p[i][j] > 0 and p[j][i] > 0:
-                print(dist-2)
+                print(dist - 2)
                 print(p[i][j], p[j][i])
                 return
 
     for i in range(26):
         for j in range(26):
             if i != j and p[i][j] > 0 and max(p[j]) > 0:
-                print(dist-1)
+                print(dist - 1)
 
                 for k in range(26):
                     if p[j][k] > 0:
@@ -36,7 +36,9 @@ def main():
     print(dist)
     print(-1, -1)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

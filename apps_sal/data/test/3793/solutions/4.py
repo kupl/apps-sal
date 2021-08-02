@@ -12,6 +12,7 @@ def sp(a, b):
 def su(a, b):
     return (a[0] + b[0], a[1] + b[1], a[2] + b[2])
 
+
 a = list(tuple(map(int, input().split())) for i in range(8))
 cp = sorted(sorted(el) for el in a)
 for p1 in p(a[0]):

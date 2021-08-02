@@ -1,21 +1,21 @@
 n = int(input())
 s = input()
 t = input()
-p = 0           #used as a pointer
-dist = 0        #used as hamming distance
-m = [[] for i in range(0,26)]
+p = 0  # used as a pointer
+dist = 0  # used as hamming distance
+m = [[] for i in range(0, 26)]
 sr = []
 while p < len(s):
-    #print('...1')
+    # print('...1')
     if s[p] != t[p]:
-        m[ord(s[p])-ord('a')].append((t[p], p))
+        m[ord(s[p]) - ord('a')].append((t[p], p))
         dist += 1
     p += 1
 
-#print(m)
+# print(m)
 p = 0
 while p < len(s):
-    #print('...2')
+    # print('...2')
     if s[p] != t[p]:
         flag = False
         for i in sr:
@@ -30,18 +30,18 @@ while p < len(s):
             if i[0] == s[p]:
                 dist -= 2
                 print(dist)
-                print(p+1, i[1]+1)
+                print(p + 1, i[1] + 1)
                 quit()
     p += 1
 
 p = 0
 while p < len(s):
-    #print('...3')
+    # print('...3')
     if s[p] != t[p]:
         if len(m[ord(t[p]) - ord('a')]) > 0:
             dist -= 1
             print(dist)
-            print(p+1, m[ord(t[p]) - ord('a')][0][1]+1)
+            print(p + 1, m[ord(t[p]) - ord('a')][0][1] + 1)
             quit()
     p += 1
 print(dist)

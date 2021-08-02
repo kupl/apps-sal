@@ -9,10 +9,11 @@ def main():
             ans = max(ans + a_i, sum_)
         sum_ += a_i
 
-
     print(ans)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -25,4 +25,3 @@ for i in range(n - 2):
                 res += 1
 
 print(res)
-

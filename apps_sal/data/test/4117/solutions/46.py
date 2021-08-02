@@ -4,12 +4,15 @@ def ri(): return int(rs())
 def rs_(): return [_ for _ in rs().split()]
 def ri_(): return [int(_) for _ in rs().split()]
 
+
 N = ri()
 L = ri_()
+
 
 def f(L):
     L_ = sorted(L)
     return len(set(L_)) == 3 and L_[0] + L_[1] > L_[2]
+
 
 ans = 0
 for i in range(N):

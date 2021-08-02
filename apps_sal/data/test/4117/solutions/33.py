@@ -9,4 +9,3 @@ for i in range(n - 2):
                 if numbers[i] != numbers[j] and numbers[j] != numbers[k]:
                     count += 1
 print(count)
-

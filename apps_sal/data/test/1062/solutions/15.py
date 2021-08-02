@@ -35,4 +35,3 @@ else:
 
 print(x)
 print(i, j)
-

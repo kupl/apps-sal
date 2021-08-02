@@ -6,4 +6,3 @@ for i in range(1, n):
     ans += abs(b[i] - b[i - 1])
 
 print(ans)
-

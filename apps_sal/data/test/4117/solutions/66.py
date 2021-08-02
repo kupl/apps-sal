@@ -1,7 +1,7 @@
 import itertools
 
 N = int(input())
-L = list(map(int,input().split()))
+L = list(map(int, input().split()))
 count = 0
 pair_list = []
 for pair in itertools.combinations(L, 3):

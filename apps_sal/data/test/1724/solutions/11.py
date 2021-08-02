@@ -22,9 +22,9 @@ for i, x in enumerate(s):
 
 total = 0
 for i in range(last, 0, -1):
-    if s[i] == '0': continue
+    if s[i] == '0':
+        continue
     answ = max(answ, total + prefix[i - 1])
     total += a[i]
 
 print(answ)
-

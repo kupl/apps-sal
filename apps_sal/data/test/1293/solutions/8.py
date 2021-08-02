@@ -1,4 +1,4 @@
-s=0
+s = 0
 cur = 0
 x = int(input())
 y = list(map(int, input().split(' ')))
@@ -10,4 +10,3 @@ for i in y:
     cur += add
 
 print(s)
-

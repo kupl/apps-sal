@@ -17,4 +17,3 @@ for i in range(1, N):
         answer = max((answer, Sgood[i - 1] + Sorig[-1] - Sorig[i]))
 
 print(answer)
-
