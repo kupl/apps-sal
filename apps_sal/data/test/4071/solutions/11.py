@@ -8,4 +8,3 @@ print(a[n - 1])
 
 # FIN.close()
 # FOUT.close()
-

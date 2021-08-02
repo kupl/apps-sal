@@ -1,5 +1,4 @@
 from itertools import groupby
 S = input()
 gr = groupby(S)
-print((len(list(gr))-1))
-
+print((len(list(gr)) - 1))

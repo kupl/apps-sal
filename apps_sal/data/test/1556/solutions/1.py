@@ -37,4 +37,3 @@ for node in nodes:
     result[node[2]] = str(node[1])
 
 print(" ".join(result))
-

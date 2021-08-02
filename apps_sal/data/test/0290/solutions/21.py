@@ -8,4 +8,4 @@ while (i * j < n):
     else:
         j += 1
     k = 1 - k
-print(i+j)
+print(i + j)

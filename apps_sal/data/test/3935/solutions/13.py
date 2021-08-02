@@ -12,8 +12,7 @@ for i, v in enumerate(a):
     b[i] = tot
 m = max(count)
 idx = count.index(m)
-print(n-m)
+print(n - m)
 for i in range(n):
     if b[i] != idx:
         print(a[i], end=' ')
-

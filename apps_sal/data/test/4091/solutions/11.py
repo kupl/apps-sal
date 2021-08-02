@@ -17,4 +17,3 @@ ind.insert(0, -1)
 ans = [el - ind[i] for i, el in enumerate(ind[1:])]
 
 print(' '.join(map(str, ans)))
-

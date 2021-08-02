@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -237,17 +239,17 @@ def main():
     for i in li:
         c = 0
         k = i
-        while i%2==0:
-            i = i//2
+        while i % 2 == 0:
+            i = i // 2
             c += 1
         sets[c].add(k)
     max_i = 0
     for index in range(70):
-        if len(sets[max_i])<len(sets[index]):
+        if len(sets[max_i]) < len(sets[index]):
             max_i = index
     uni = set()
     for i, seti in enumerate(sets):
-        if i!=max_i:
+        if i != max_i:
             uni = uni.union(seti)
     print(len(uni))
     display_list(list(uni))
@@ -259,4 +261,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

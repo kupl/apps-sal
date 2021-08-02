@@ -11,8 +11,8 @@ k = ans.index(max(ans))
 ann = []
 for i in l:
     if i % (2 ** k) != 0 or i % (2 ** (k + 1)) == 0:
-        ann.append(i) 
+        ann.append(i)
     else:
-        pass  
+        pass
 print(len(ann))
 print(*ann)

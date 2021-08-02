@@ -23,4 +23,3 @@ for lst in A:
             ans.append(x)
 print(len(ans))
 print(' '.join(list(map(str, ans))))
-

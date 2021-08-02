@@ -15,10 +15,8 @@ l = -1
 for i in range(n):
     if ls[i] in st:
         if len(st) == 1:
-            print(n - 1 - l);return
+            print(n - 1 - l); return
 
         st.pop(st.index(ls[i]))
         print(i - l, end=' ')
         l = i
-
-

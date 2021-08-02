@@ -1,12 +1,13 @@
 def getS(n):
-    return int(n ** (1/2)) 
+    return int(n ** (1 / 2))
+
 
 squares = int(input())
 
 
 ans = 0
 
-    
+
 side = getS(squares)
 ans += side * 2
 

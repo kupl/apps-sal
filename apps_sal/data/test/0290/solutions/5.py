@@ -7,4 +7,3 @@ for i in range(1, int(math.sqrt(n)) + 1):
     else:
         ans = min(ans, i + n // i + 1)
 print(ans)
-

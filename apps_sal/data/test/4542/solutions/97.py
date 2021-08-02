@@ -13,4 +13,4 @@ for i in range(1, len(s)):
 
 cnt += 1
 
-print(cnt-1)
+print(cnt - 1)

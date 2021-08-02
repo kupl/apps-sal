@@ -20,4 +20,3 @@ for i in range(len(S)):
         continue
 
 print(count)
-

@@ -13,4 +13,3 @@ for x, i in s[:-1]:
     prev = i
 ans.append(n)
 print(*ans)
-

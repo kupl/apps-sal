@@ -1,7 +1,7 @@
 n = int(input())
 a = [int(i) for i in input().split()]
 b = [False, False]
-for i in range(2,n):
+for i in range(2, n):
     if a[i] == a[i - 1] + a[i - 2]:
         b.append(True)
     else:

@@ -13,8 +13,8 @@ else:
     longest = 1
     cur = 1
 
-for i in range(len(values)-2):
-    if values[i] + values[i+1] == values[i+2]:
+for i in range(len(values) - 2):
+    if values[i] + values[i + 1] == values[i + 2]:
         cur += 1
     else:
         if cur > longest:
@@ -28,4 +28,3 @@ if cur > longest:
     longest = cur
 
 print(longest)
-

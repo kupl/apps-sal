@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, = readln()
 a = readln()
@@ -12,4 +14,3 @@ for _ in range(1, n):
     else:
         l[_] = 2
 print(max(l))
-

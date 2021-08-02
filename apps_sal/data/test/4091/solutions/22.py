@@ -24,5 +24,5 @@ ans.sort()
 ans = [-1] + ans
 l = len(ans)
 for i in range(1, l - 1):
-    print(ans[i] - ans[i - 1], end = " ")
+    print(ans[i] - ans[i - 1], end=" ")
 print(n - ans[-2] - 1)

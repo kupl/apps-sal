@@ -31,4 +31,3 @@ for x in result:
             res3.append(str(y))
 
 print(' '.join(res3))
-

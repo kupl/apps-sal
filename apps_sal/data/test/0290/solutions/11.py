@@ -21,7 +21,6 @@ def input_strings():
 n = int(input())
 
 a = ceil(sqrt(n))
-b = ceil(n/a)
+b = ceil(n / a)
 
-print(a+b)
-
+print(a + b)

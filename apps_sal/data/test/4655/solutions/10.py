@@ -1,4 +1,4 @@
-q=int(input())
+q = int(input())
 for i in range(q):
-	a,b,c=map(int,input().split())
-	print ((a+b+c)//2)
+    a, b, c = map(int, input().split())
+    print((a + b + c) // 2)

@@ -8,7 +8,6 @@ for Q in range(q):
 
     total = sum(A)
 
-    each = total//2
+    each = total // 2
 
     print(each)
-

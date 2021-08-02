@@ -4,7 +4,7 @@ readline = sys.stdin.readline
 
 N = int(input())
 A = list(map(int, readline().split()))
-B = [(a&-a).bit_length() for a in A]
+B = [(a & -a).bit_length() for a in A]
 C = Counter(B).most_common(1)[0][0]
 Ans = []
 for i in range(N):
