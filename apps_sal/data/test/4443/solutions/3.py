@@ -1,4 +1,4 @@
-asd=input()
-dfg=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+asd = input()
+dfg = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-print(dfg[dfg.index(asd)+1])
+print(dfg[dfg.index(asd) + 1])

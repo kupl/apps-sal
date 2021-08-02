@@ -1,2 +1,2 @@
 s = input()
-print(chr(ord(s)+1))
+print(chr(ord(s) + 1))

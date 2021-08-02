@@ -19,4 +19,3 @@ if count == 0 or count == 3:
     print("YES")
 else:
     print("NO")
-

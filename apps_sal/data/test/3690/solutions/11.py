@@ -4,21 +4,21 @@ splits = [False] * 12
 
 m = m // 5
 s = s // 5
-splits[h%12] = True
-splits[m%12] = True
-splits[s%12] = True
+splits[h % 12] = True
+splits[m % 12] = True
+splits[s % 12] = True
 
 start = t1 % 12
 end = t2 % 12
 
 if start > end:
-	a = splits[start:] + splits[:end]
-	b = splits[end:start]
+    a = splits[start:] + splits[:end]
+    b = splits[end:start]
 else:
-	a = splits[:start] + splits[end:]
-	b = splits[start:end]
+    a = splits[:start] + splits[end:]
+    b = splits[start:end]
 
 if True in a and True in b:
-	print("NO")
+    print("NO")
 else:
-	print("YES")
+    print("YES")

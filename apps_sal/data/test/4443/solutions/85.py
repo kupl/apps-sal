@@ -1,3 +1,3 @@
 c = input()
 abc = 'abcdefghijklmnopqrstuvwxyz'
-print(abc[abc.index(c)+1])
+print(abc[abc.index(c) + 1])

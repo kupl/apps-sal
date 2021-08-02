@@ -1,9 +1,10 @@
 import sys
 read = sys.stdin.readline
 
+
 def solve(h, m, s, t1, t2):
-    h = (h % 12 + m/60 + s/3600) * 5
-    m = m + s/60
+    h = (h % 12 + m / 60 + s / 3600) * 5
+    m = m + s / 60
     t1 = (t1 % 12) * 5
     t2 = (t2 % 12) * 5
 
@@ -18,8 +19,10 @@ def solve(h, m, s, t1, t2):
         return "YES"
     return "NO"
 
+
 def run():
     h, m, s, t1, t2 = list(map(int, read().replace("\n", "").split()))
     print(solve(h, m, s, t1, t2))
+
 
 run()

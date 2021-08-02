@@ -1,4 +1,4 @@
-C=input()
-st='abcdefghijklmnopqrstuvwxyz'
+C = input()
+st = 'abcdefghijklmnopqrstuvwxyz'
 
-print(st[st.find(C)+1])
+print(st[st.find(C) + 1])

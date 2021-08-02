@@ -25,4 +25,3 @@ for i in range(t):
         print(" ".join(map(str, a)))
     else:
         print(-1)
-

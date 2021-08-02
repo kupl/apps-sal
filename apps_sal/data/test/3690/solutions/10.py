@@ -1,7 +1,10 @@
 def bet(x):
     return t1 <= x <= t2 or t2 <= x + 3600 * 12 <= t1 or t2 <= x <= t1
 
-read = lambda: map(int, input().split())
+
+def read(): return map(int, input().split())
+
+
 h, m, s, t1, t2 = read()
 h %= 12
 t1 %= 12
@@ -13,7 +16,8 @@ k2 = m * 720 + 1
 k3 = s * 720
 t1 *= 3600
 t2 *= 3600
-if t1 > t2: t1, t2 = t2, t1
+if t1 > t2:
+    t1, t2 = t2, t1
 ans = 'NO'
 flag = 1
 if bet(k1) or bet(k2) or bet(k3):

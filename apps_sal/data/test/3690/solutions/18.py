@@ -28,6 +28,9 @@ def main():
     else:
         print("NO")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

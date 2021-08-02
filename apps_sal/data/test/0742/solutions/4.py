@@ -16,4 +16,3 @@ for t in range(int(input())):
         res.append(i)
         res.append(temp + 1)
     print(*res)
-

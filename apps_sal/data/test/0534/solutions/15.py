@@ -6,7 +6,7 @@ for i in range(0, b):
     j = 0
     while j <= len(q) - 2:
         if q[j] == 'B' and q[j + 1] == 'G':
-            p = p + "GB";
+            p = p + "GB"
             j = j + 2
         else:
             p = p + q[j]
@@ -17,4 +17,3 @@ for i in range(0, b):
     p = ""
 
 print(q)
-

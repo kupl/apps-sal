@@ -12,6 +12,6 @@ for i in range(t):
         if j < n:
             a[j - 1], a[j] = 'G', 'B'
             j += 1
-        
+
 for i in a:
-    print(i, end = '')
+    print(i, end='')

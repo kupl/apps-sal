@@ -1,2 +1,2 @@
-ans = chr(ord(input())+1)
+ans = chr(ord(input()) + 1)
 print(ans)

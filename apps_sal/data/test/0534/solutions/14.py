@@ -1,13 +1,13 @@
 n, t = map(int, input().split(' '))
 queue = list(input())
- 
+
 for i in range(t):
-    j = 1 
+    j = 1
     while j < n:
-        if queue[-j] == 'G' and queue[-j-1] == 'B':
-            queue[-j], queue[-j-1] = queue[-j-1], queue[-j]
+        if queue[-j] == 'G' and queue[-j - 1] == 'B':
+            queue[-j], queue[-j - 1] = queue[-j - 1], queue[-j]
             j += 2
         else:
             j += 1
- 
+
 print(''.join(queue))

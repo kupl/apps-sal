@@ -1,2 +1,2 @@
-c=input()
-print(chr(ord(c)+1))
+c = input()
+print(chr(ord(c) + 1))

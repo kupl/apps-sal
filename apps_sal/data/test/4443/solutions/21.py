@@ -1,3 +1,3 @@
 import string
 sl = string.ascii_lowercase
-print(sl[sl.find(input())+1])
+print(sl[sl.find(input()) + 1])
