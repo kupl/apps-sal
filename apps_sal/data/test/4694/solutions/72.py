@@ -8,4 +8,3 @@ my_list_sort = sorted(my_list)
 answer = my_list_sort[-1] - my_list_sort[0]
 
 print(answer)
-

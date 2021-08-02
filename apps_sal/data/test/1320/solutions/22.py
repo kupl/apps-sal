@@ -12,4 +12,3 @@ for i in range(n):
 for r in c:
     a += r * (r - 1) >> 1
 print(a)
-

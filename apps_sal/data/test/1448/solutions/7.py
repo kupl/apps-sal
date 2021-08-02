@@ -15,4 +15,3 @@ for i in range(m):
         ans.append('NO')
 for i in range(m):
     print(ans[i])
-

@@ -11,7 +11,5 @@ for i in range(n):
             x += 1
         if a[j][i] == 'C':
             y += 1
-    res += x * (x-1) // 2 + y * (y-1) // 2
+    res += x * (x - 1) // 2 + y * (y - 1) // 2
 print(res)
-            
-

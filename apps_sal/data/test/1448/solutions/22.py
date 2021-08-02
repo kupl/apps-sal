@@ -6,4 +6,3 @@ for i in range(m):
         print("YES")
     else:
         print("NO")
-

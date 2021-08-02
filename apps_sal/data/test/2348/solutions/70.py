@@ -1,3 +1,2 @@
 inp = list(input())
-print(int(inp[6])%2)
-
+print(int(inp[6]) % 2)

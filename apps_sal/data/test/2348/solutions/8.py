@@ -1,1 +1,1 @@
-print(int(input(),16)&1)
+print(int(input(), 16) & 1)

@@ -1,2 +1,2 @@
-s=input()
-print(int(s[-1])%2)
+s = input()
+print(int(s[-1]) % 2)

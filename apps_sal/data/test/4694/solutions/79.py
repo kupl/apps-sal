@@ -4,4 +4,4 @@ n = int(input())
 a = list(map(int, input().split()))
 # 座標は正の整数のみなのでmax-minで計算できそう。
 # print(mix-min)
-print(max(a)-min(a))
+print(max(a) - min(a))

@@ -13,9 +13,10 @@ for i in range(N):
             cols[j] += 1
 #
 
+
 def blah(n):
-    return n*(n-1)//2
+    return n * (n - 1) // 2
+
 
 total = sum(map(blah, rows)) + sum(map(blah, cols))
 print(total)
-

@@ -136,10 +136,10 @@ def normal_to_line(line):
 
 
 def line_by_points(p1, p2):
-        b = p1.x - p2.x
-        a = p2.y - p1.y
-        c = -(a * p1.x + b * p1.y)
-        return Line(a, b, c)
+    b = p1.x - p2.x
+    a = p2.y - p1.y
+    c = -(a * p1.x + b * p1.y)
+    return Line(a, b, c)
 
 
 def segment_intersect(pA, pB, pC, pD):  # does AB intersect CD?

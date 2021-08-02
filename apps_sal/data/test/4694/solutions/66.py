@@ -1,4 +1,4 @@
-N=input()
-Ni=list(map(int,input().split()))
+N = input()
+Ni = list(map(int, input().split()))
 
-print(max(Ni)-min(Ni))
+print(max(Ni) - min(Ni))

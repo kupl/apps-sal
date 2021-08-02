@@ -5,4 +5,6 @@ def main_function():
 
 def __starting_point():
     main_function()
+
+
 __starting_point()

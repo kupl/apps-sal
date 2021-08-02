@@ -40,4 +40,3 @@ for now_month in range(n, n * 2):
     ans = max(ans, count_obnim)
 
 print(ans)
-

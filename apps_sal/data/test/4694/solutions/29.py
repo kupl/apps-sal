@@ -3,6 +3,6 @@
 # 好きな場所から開始し好きな場所で終了することができる時、最小の移動距離を求めなさい。
 
 N = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 print(max(a) - min(a))

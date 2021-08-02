@@ -15,4 +15,3 @@ for stlpec in stlpce:
     r += stlpec * (stlpec - 1) // 2
 
 print(r)
-
