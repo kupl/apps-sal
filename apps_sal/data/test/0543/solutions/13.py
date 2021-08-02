@@ -23,4 +23,3 @@ else:
         result = 'YES'
 
 print(result)
-

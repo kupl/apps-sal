@@ -16,4 +16,3 @@ for _ in range(int(input())):
     ansi = (cnt - 1) // 3 + 1
     ans.append(ansi)
 print('\n'.join(map(str, ans)))
-

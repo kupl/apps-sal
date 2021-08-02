@@ -27,4 +27,3 @@ for d in range(1, n):
 ans *= ncr
 ans %= mod
 print(ans)
-

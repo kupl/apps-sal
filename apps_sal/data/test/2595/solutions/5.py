@@ -12,4 +12,3 @@ for _ in range(t):
         print(-1)
         continue
     print((ops + 2) // 3)
-

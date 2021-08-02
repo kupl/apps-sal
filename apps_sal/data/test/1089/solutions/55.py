@@ -14,15 +14,18 @@ invfact[N - 1] = pow(fact[N - 1], MOD - 2, MOD)
 
 for i in range(N - 2, -1, -1):
     invfact[i] = invfact[i + 1] * (i + 1) % MOD
+
+
 def nCk(n, k):
     if k < 0 or n < k:
         return 0
     else:
         return fact[n] * invfact[k] * invfact[n - k] % MOD
-        
+
+
 ans = 0
-for i in range(n-1, 0, -1):
-    ans += m * m * (i + 1) * i // 2 
+for i in range(n - 1, 0, -1):
+    ans += m * m * (i + 1) * i // 2
     ans %= MOD
 for i in range(m - 1, 0, -1):
     ans += n * n * (i + 1) * i // 2

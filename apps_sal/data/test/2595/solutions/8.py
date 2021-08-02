@@ -17,4 +17,3 @@ for _ in range(t):
             if cnt % 3 >= 1:
                 result += 1
             print(result)
-

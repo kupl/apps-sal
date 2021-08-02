@@ -19,4 +19,3 @@ if not ok or cnt % 2 == 1:
     print("NO")
 else:
     print("YES")
-

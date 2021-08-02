@@ -12,7 +12,7 @@ if k <= 2:
     return
 
 if k < 700:
-    pairs = 2 * math.factorial(k)/(2*math.factorial(k-2))
+    pairs = 2 * math.factorial(k) / (2 * math.factorial(k - 2))
     if pairs < n:
         print("NO")
         return
@@ -21,14 +21,12 @@ if k < 700:
 print("YES")
 shift = 1
 written = 0
-for _ in range(k-1):
+for _ in range(k - 1):
     for v in range(k):
-        print("{} {}".format(str(v+1), str(((v+shift)%k)+1)))
+        print("{} {}".format(str(v + 1), str(((v + shift) % k) + 1)))
         written += 1
         if written == n:
             break
     if written == n:
         break
-    shift = (shift + 1)%k
-
-
+    shift = (shift + 1) % k
