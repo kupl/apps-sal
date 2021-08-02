@@ -1,3 +1,2 @@
-n=int(input())
-print(n//2520)
-
+n = int(input())
+print(n // 2520)

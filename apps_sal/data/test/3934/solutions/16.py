@@ -13,4 +13,3 @@ if any(x == 2 for x in list(d.values())):
     print("NO")
 else:
     print("YES")
-

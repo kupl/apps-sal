@@ -1,14 +1,16 @@
 __author__ = 'Lipen'
 
+
 def ModeReverse(mode):
-    if mode=='>':
+    if mode == '>':
         return '<='
-    elif mode=='<':
+    elif mode == '<':
         return '>='
-    elif mode=='>=':
+    elif mode == '>=':
         return '<'
-    elif mode=='<=':
+    elif mode == '<=':
         return '>'
+
 
 def main():
     n = int(input())
@@ -19,21 +21,22 @@ def main():
         mode, x, ans = input().split()
         x = int(x)
 
-        if ans=='N':
+        if ans == 'N':
             mode = ModeReverse(mode)
 
-        if mode=='>':
-            ymin = max(ymin, x+1)
-        elif mode=='<':
-            ymax = min(ymax, x-1)
-        elif mode=='>=':
+        if mode == '>':
+            ymin = max(ymin, x + 1)
+        elif mode == '<':
+            ymax = min(ymax, x - 1)
+        elif mode == '>=':
             ymin = max(ymin, x)
-        elif mode=='<=':
+        elif mode == '<=':
             ymax = min(ymax, x)
 
-    if ymin>ymax:
+    if ymin > ymax:
         print('Impossible')
     else:
         print(ymin)
+
 
 main()

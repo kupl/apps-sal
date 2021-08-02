@@ -27,5 +27,3 @@ if mx < mn:
     print("Impossible")
 else:
     print((mx + mn) // 2)
-            
-

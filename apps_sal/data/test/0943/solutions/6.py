@@ -1,8 +1,8 @@
 n = int(input())
 
-arr = list(map(int,input().split()))
+arr = list(map(int, input().split()))
 
-arr =sorted(arr)
+arr = sorted(arr)
 
 s = sum(arr)
 
@@ -18,4 +18,3 @@ else:
         print(0)
     else:
         print(s - c)
-

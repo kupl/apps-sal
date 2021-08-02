@@ -18,4 +18,3 @@ if l <= r:
     print((l + r) // 2)
 else:
     print('Impossible')
-

@@ -5,5 +5,3 @@ p = a[0]
 q = sum(a[1:])
 r = p - q + 1
 print(r)
-
-

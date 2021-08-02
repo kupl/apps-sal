@@ -8,4 +8,3 @@ for rod in l:
     gap = max(gap, rod - (total - rod))
 
 print(gap + 1)
-

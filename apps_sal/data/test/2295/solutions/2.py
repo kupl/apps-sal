@@ -2,6 +2,7 @@ n = int(input())
 arr = [0]
 arr = arr + list(map(int, input().split(' ')))
 
+
 def getCounts(arr):
     last = {}
     ans = 0.0
@@ -17,6 +18,6 @@ def getCounts(arr):
         last[arr[i]] = i
     return res
 
-ans = (2 * getCounts(arr) - n)/(n*n)
-print("%.6f" % ans)
 
+ans = (2 * getCounts(arr) - n) / (n * n)
+print("%.6f" % ans)

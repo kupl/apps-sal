@@ -13,11 +13,10 @@ ret = sum(evens)
 
 odds.sort()
 
-i = len(odds)-1
+i = len(odds) - 1
 
-while i-1 >= 0:
-    ret += odds[i] + odds[i-1]
+while i - 1 >= 0:
+    ret += odds[i] + odds[i - 1]
     i -= 2
 
 print(ret)
-

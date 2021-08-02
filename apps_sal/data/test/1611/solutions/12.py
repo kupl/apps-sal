@@ -13,4 +13,3 @@ for i in xs[2:]:
         a += i
 
 print(abs(a - b) + 1)
-

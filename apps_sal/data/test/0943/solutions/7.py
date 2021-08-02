@@ -8,4 +8,4 @@ else:
     for i in range(n):
         if a[i] % 2 == 1:
             mn = min(mn, a[i])
-    print(sum(a)-mn)
+    print(sum(a) - mn)

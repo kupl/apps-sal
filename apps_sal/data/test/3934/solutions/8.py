@@ -2,11 +2,11 @@ n = input()
 n = int(n)
 
 edges = []
-for i in range(n-1):
+for i in range(n - 1):
     edges.append(input())
 
 graph = {}
-for i in range(1,n+1):
+for i in range(1, n + 1):
     graph[i] = []
 
 for edge in edges:
@@ -28,4 +28,3 @@ if q == 1:
 
 if q == 0:
     print("YES")
-
