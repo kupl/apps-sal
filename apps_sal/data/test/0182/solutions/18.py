@@ -23,11 +23,10 @@ for i in range(3):
     else:
         ans += a[i]
 
-if ans >=0:
+if ans >= 0:
     print("Yes")
 else:
     print("No")
 
 finish = time.time()
 #print(finish - start)
-

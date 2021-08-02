@@ -6,4 +6,3 @@ def gcd(a, b):
 
 a, b, c = list(map(int, input().split()))
 print(c // ((a * b) // gcd(a, b)))
-

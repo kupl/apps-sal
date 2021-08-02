@@ -6,9 +6,9 @@ if a >= x:
 else:
     x -= a
     a = 0
-    
 
-if b >=y:
+
+if b >= y:
     b -= y
     y = 0
 else:
@@ -20,10 +20,9 @@ if c >= z:
     z = 0
 else:
     z -= c
-    c= 0
-    
+    c = 0
+
 if a // 2 + b // 2 + c // 2 >= x + y + z:
     print('Yes')
 else:
     print('No')
-

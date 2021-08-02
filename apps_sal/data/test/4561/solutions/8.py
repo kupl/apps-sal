@@ -6,4 +6,3 @@ elif B <= A + X:
     print("safe")
 else:
     print("dangerous")
-

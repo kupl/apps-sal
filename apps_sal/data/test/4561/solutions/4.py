@@ -1,9 +1,8 @@
 x, a, b = list(map(int, input().split()))
 p = b - a
 if p <= 0:
-  print("delicious")
+    print("delicious")
 elif x >= p:
-  print("safe")
+    print("safe")
 else:
-  print("dangerous")
-
+    print("dangerous")

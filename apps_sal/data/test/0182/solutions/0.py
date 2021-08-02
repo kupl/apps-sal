@@ -6,4 +6,3 @@ if sum >= col:
     print('Yes')
 else:
     print('No')
-

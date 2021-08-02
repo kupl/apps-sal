@@ -7,4 +7,4 @@ def ria():
 
 n, m, z = ria()
 
-print(z//(n*m//math.gcd(n,m)))
+print(z // (n * m // math.gcd(n, m)))

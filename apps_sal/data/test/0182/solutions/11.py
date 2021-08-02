@@ -4,6 +4,7 @@ import sys
 # sys.stdin = open('data/A.in', 'r')
 T = 1
 
+
 def process():
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
@@ -18,10 +19,5 @@ def process():
     print('Yes' if sum_delta >= delta else 'No')
 
 
-
-
-
-
 for _ in range(T):
     process()
-

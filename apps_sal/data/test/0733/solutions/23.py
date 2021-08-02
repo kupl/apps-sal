@@ -3,10 +3,11 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 def lcm(a, b):
     return a * b / gcd(a, b)
+
 
 x, y, a, b = list(map(int, input().split(' ')))
 l = lcm(x, y)
 print(int(b // l - (a - 1) // l))
-

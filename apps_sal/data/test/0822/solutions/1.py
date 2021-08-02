@@ -9,4 +9,3 @@ for q in range(1, m + 1):
 
 lcm = n * q
 print(z // (n * q))
-
