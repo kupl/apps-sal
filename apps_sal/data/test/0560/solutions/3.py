@@ -4,13 +4,13 @@ def eat_cake(cols, rows, string):
     8
     """
     result = 0
-    #each row
+    # each row
     for i in range(0, rows):
         if 'S' not in string[i]:
             result += cols
             string[i] = string[i].replace('.', 'E')
 
-    #each coloumn
+    # each coloumn
     for i in range(0, cols):
         contains = False
         all_eaten = True
@@ -20,27 +20,22 @@ def eat_cake(cols, rows, string):
                 contains = True
             if string[j][i] == '.':
                 all_eaten = False
-            
+
             if string[j][i] == 'E':
                 already_eaten += 1
-                
 
         if (all_eaten == False and contains == False):
             result += rows - already_eaten
             for row in range(0, rows):
-                string[row] = string[row][0 : i] + 'E' + string[row][i+1:]
-                
-            
+                string[row] = string[row][0: i] + 'E' + string[row][i + 1:]
 
     return result
-    
-        
 
 
 def main():
     first_line = input()
     first_line = first_line.split()
-    
+
     rows = int(first_line[0])
     coloumns = int(first_line[1])
 
@@ -48,11 +43,10 @@ def main():
     for i in range(rows):
         line = input()
         l.append(line)
-        
+
     print(eat_cake(coloumns, rows, l))
-    
+
 
 #import doctest
-#doctest.testmod()
-main()   
-
+# doctest.testmod()
+main()

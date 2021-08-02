@@ -15,7 +15,7 @@ else:
             new_m[-1] = end
             f = True
             if abs(start - end) % (n - 1) == 0:
-                step = (start - end) // (n - 1) 
+                step = (start - end) // (n - 1)
                 for i in range(1, n - 1):
                     if new_m[i - 1] - new_m[i] != step:
                         if abs(new_m[i - 1] - new_m[i] - step) == 1:

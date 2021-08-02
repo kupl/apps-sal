@@ -4,6 +4,6 @@ a_total = sum(a_list)
 ans = n - a_total
 
 if ans < 0:
-	print(-1)
+    print(-1)
 else:
-	print(ans)
+    print(ans)

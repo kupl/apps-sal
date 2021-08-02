@@ -10,4 +10,3 @@ if day > n:
     print((-1))
 else:
     print((n - day))
-

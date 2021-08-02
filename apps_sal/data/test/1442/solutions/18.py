@@ -19,7 +19,7 @@ while cnt < deaph and i < len(sell):
         ans_sell.append((i, sell[i]))
         cnt += 1
     i += 1
-for i in range(len(ans_sell)-1, 0-1, -1):
+for i in range(len(ans_sell) - 1, 0 - 1, -1):
     print("S", ans_sell[i][0], ans_sell[i][1])
 
 cnt = 0

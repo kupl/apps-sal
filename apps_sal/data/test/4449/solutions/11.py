@@ -1,4 +1,4 @@
-#579_B
+# 579_B
 
 import sys
 
@@ -26,4 +26,3 @@ for i in range(0, q):
         print("YES")
     else:
         print("NO")
-

@@ -7,6 +7,6 @@ for num in a:
 
 answer = n - sum(list)
 if n < sum(list):
-    answer =  -1
+    answer = -1
 
 print(answer)

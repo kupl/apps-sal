@@ -5,6 +5,7 @@ inf = 10**7
 n = int(input())
 b = list(R())
 
+
 def f(a):
     res = 0
 
@@ -19,6 +20,7 @@ def f(a):
         else:
             return inf
     return res
+
 
 if n <= 2:
     print(0)

@@ -22,7 +22,7 @@ items = items[:s]
 items.reverse()
 for i in items:
     print('S', i[0], i[1])
-    
+
 items = list(buy.items())
 items.sort()
 items.reverse()
@@ -32,4 +32,3 @@ for i in items:
         break
     print('B', i[0], i[1])
     c += 1
-

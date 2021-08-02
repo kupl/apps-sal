@@ -13,12 +13,12 @@ for j in range(q):
         for i in range(0, 4 * n - 1, 2):
             if a[i] == a[i + 1]:
                 b.append(a[i])
-        #print(b)
+        # print(b)
         if len(b) == 2 * n:
             x = b[0] * b[2 * n - 1]
             for i in range(1, n):
-                #print(x)
-                if b[i] * b[2 * n - i - 1]== x:
+                # print(x)
+                if b[i] * b[2 * n - i - 1] == x:
                     x = b[i] * b[2 * n - i - 1]
                 else:
                     x = 0
@@ -29,5 +29,3 @@ for j in range(q):
                 print('NO')
         else:
             print('NO')
-            
-

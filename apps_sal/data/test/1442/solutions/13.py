@@ -23,7 +23,7 @@ while len(applications_sell) > 0:
     else:
         glass_sell.append(cur)
 
-glass_buy = []    
+glass_buy = []
 if len(applications_buy):
     glass_buy.append(heapq.heappop(applications_buy))
 

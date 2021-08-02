@@ -38,4 +38,3 @@ for i in range(-1, 2):
             result = cur
 
 print(result)
-

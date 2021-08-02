@@ -46,4 +46,3 @@ for x in xs[2:]:
         return
 
 print(min(frontier, key=op.itemgetter(0))[0])
-

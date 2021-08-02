@@ -10,7 +10,7 @@ for _ in range(q):
         for key in keys:
             if c[key] % 2 != 0:
                 return False
-        temp = [[k]*c[k] for k  in keys]
+        temp = [[k] * c[k] for k in keys]
         keys = []
         for t in temp:
             keys += t
@@ -26,4 +26,3 @@ for _ in range(q):
             tail -= 1
         return True
     print("YES" if solve(a) else "NO")
-

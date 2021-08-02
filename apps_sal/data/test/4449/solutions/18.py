@@ -28,4 +28,3 @@ for Q in range(q):
                 arr2 = arr2[1:-1]
         if flag:
             print("YES")
-

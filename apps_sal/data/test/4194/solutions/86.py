@@ -6,4 +6,3 @@ if N >= sum(work):
 else:
     answer = '-1'
 print(answer)
-

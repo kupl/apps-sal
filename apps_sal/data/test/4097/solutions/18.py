@@ -2,6 +2,7 @@ n = int(input())
 ans = 200000
 a = list(map(int, input().split()))
 
+
 def test(x, y):
     if ((a[n - 1] + y) - (a[0] + x)) % (n - 1):
         return False
@@ -13,6 +14,7 @@ def test(x, y):
             return False
     return True
 
+
 def find(x, y):
     res = abs(x) + abs(y)
     first = a[0] + x
@@ -22,6 +24,7 @@ def find(x, y):
         if abs((first + i * d) - a[i]):
             res += 1
     return res
+
 
 if n <= 2:
     print(0)

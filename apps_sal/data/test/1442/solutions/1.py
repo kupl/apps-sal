@@ -22,4 +22,3 @@ if B_keys:
     for key_2 in sorted(list(B.keys()), reverse=True):
         if key_2 >= b_s:
             print("B", key_2, B[key_2])
-
