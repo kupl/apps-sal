@@ -6,7 +6,7 @@ last = 0
 cnt = 0
 for a, b in q:
     if last < a:
-        last = b-1
+        last = b - 1
         cnt += 1
 
 print(cnt)

@@ -11,4 +11,3 @@ for i in range(1, M):
         count += 1
         left = data[i][1]
 print(count)
-

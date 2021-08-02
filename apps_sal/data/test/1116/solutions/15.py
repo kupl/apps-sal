@@ -10,4 +10,3 @@ for i in range(t):
         print("REBEL")
     else:
         print("OBEY")
-

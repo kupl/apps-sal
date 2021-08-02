@@ -8,7 +8,7 @@ if A > B:
     a, b = b, a
     B, A = A, B
 A -= 1
-ANS = [[b]*w for i in range(h)]
+ANS = [[b] * w for i in range(h)]
 B -= 1
 idx = 0
 
@@ -22,10 +22,10 @@ while(B):
     for i in range(1, w, 2):
         if B == 0:
             ANS[idx][i] = a
-            ANS[idx][i+1] = a
+            ANS[idx][i + 1] = a
         else:
             ANS[idx][i] = b
-            ANS[idx][i+1] = a
+            ANS[idx][i + 1] = a
             B -= 1
     idx += 1
     for i in range(w):
@@ -48,10 +48,10 @@ while(A):
     for i in range(1, w, 2):
         if A == 0:
             ANS[idx][i] = b
-            ANS[idx][i+1] = b
+            ANS[idx][i + 1] = b
         else:
             ANS[idx][i] = a
-            ANS[idx][i+1] = b
+            ANS[idx][i + 1] = b
             A -= 1
     idx += 1
     for i in range(w):
@@ -65,4 +65,3 @@ print((h, w))
 
 for i in range(h):
     print(("".join(ANS[i])))
-

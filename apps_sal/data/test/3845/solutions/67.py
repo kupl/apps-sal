@@ -9,9 +9,9 @@ def printrow(num, s, t):
                 res.append(t)
         print(*res, sep='')
 
+
 a, b = map(int, input().split())
 
 print(100, 100)
 printrow(b, '#', '.')
 printrow(a, '.', '#')
-

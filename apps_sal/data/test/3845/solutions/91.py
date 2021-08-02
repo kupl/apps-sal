@@ -21,4 +21,3 @@ for h in range(0, 50, 2):
 print((100, 100))
 for a in ans:
     print((''.join(a)))
-

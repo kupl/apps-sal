@@ -13,4 +13,3 @@ fill(A - 1, ".", 1)
 fill(B - 1, "#", H // 2 + 1)
 print(H, W)
 [print("".join(row)) for row in ans]
-

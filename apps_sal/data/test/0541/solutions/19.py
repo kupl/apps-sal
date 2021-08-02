@@ -17,4 +17,3 @@ ans = len(bridges)
 
 # 結果出力
 print(ans)
-

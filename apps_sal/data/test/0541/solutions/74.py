@@ -1,6 +1,6 @@
 def IslandsWar():
     n, m = list(map(int, input().split()))
-    a = [list(map(int,input().split())) for _ in range(m)]
+    a = [list(map(int, input().split())) for _ in range(m)]
     a.sort(key=lambda x: x[1])
     removes = [a[0][1]]
 
@@ -13,8 +13,10 @@ def IslandsWar():
         if not check:
             removes.append(j)
     print((len(removes)))
-            
+
+
 def __starting_point():
     IslandsWar()
+
 
 __starting_point()

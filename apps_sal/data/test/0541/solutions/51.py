@@ -50,6 +50,7 @@ class SegmentTree:
             result = op(result, v)
         return result
 
+
 readline = stdin.readline
 
 N, M = list(map(int, readline().split()))
@@ -66,4 +67,3 @@ for a, b in ab:
     result += 1
     st[b - 1] = 1
 print(result)
-

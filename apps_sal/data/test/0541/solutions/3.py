@@ -10,4 +10,3 @@ for c in condition:
         ans += 1
         right_end = c[1]
 print(ans)
-

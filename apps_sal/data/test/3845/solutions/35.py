@@ -11,10 +11,11 @@ INF = 10 ** 16
 MOD = 10 ** 9 + 7
 # MOD = 998244353
 
-ni = lambda: int(sys.stdin.readline().rstrip())
-ns = lambda: map(int, sys.stdin.readline().rstrip().split())
-na = lambda: list(map(int, sys.stdin.readline().rstrip().split()))
-na1 = lambda: list(map(lambda x: int(x) - 1, sys.stdin.readline().rstrip().split()))
+
+def ni(): return int(sys.stdin.readline().rstrip())
+def ns(): return map(int, sys.stdin.readline().rstrip().split())
+def na(): return list(map(int, sys.stdin.readline().rstrip().split()))
+def na1(): return list(map(lambda x: int(x) - 1, sys.stdin.readline().rstrip().split()))
 
 
 # ===CODE===
@@ -49,9 +50,6 @@ def main():
                     breakflg = True
                     break
 
-
-
-
             for n in range(3):
                 for m in range(3):
                     mat[i + n][j + m] = center if n == 1 and m == 1 else around
@@ -66,5 +64,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

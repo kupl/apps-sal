@@ -6,24 +6,24 @@ for _ in range(t):
 
     works = True
     if n % 2:
-        if a[n//2] != b[n//2]:
+        if a[n // 2] != b[n // 2]:
             works = False
 
     pairsA = []
-    for i in range(n//2):
+    for i in range(n // 2):
         f = a[i]
         s = a[n - i - 1]
         if f > s:
             f, s = s, f
-        pairsA.append((f,s))
+        pairsA.append((f, s))
 
     pairsB = []
-    for i in range(n//2):
+    for i in range(n // 2):
         f = b[i]
         s = b[n - i - 1]
         if f > s:
             f, s = s, f
-        pairsB.append((f,s))
+        pairsB.append((f, s))
 
     pairsA.sort()
     pairsB.sort()
@@ -32,4 +32,3 @@ for _ in range(t):
         print('Yes')
     else:
         print('No')
-

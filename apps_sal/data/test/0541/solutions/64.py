@@ -12,4 +12,3 @@ for a, b in AB:
         last_b = b - 1
         cnt += 1
 print(cnt)
-

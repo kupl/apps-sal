@@ -10,6 +10,3 @@ elif c >= a + b:
     print(c - a - b + 1)
 else:
     print(0)
-
-
-

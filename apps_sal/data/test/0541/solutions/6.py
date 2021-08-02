@@ -10,4 +10,3 @@ for a, b in B:
     else:
         r = min(r, b)
 print(res)
-

@@ -1,4 +1,8 @@
 
+from bisect import bisect_left, bisect_right  # , insort_left, insort_right
+from itertools import product, permutations, combinations
+from operator import itemgetter
+from collections import defaultdict, Counter, deque
 import sys
 sys.setrecursionlimit(1 << 25)
 read = sys.stdin.readline
@@ -50,10 +54,6 @@ def read_matrix(H):
 MOD = 10**9 + 7
 INF = 2**31  # 2147483648 > 10**9
 # default import
-from collections import defaultdict, Counter, deque
-from operator import itemgetter
-from itertools import product, permutations, combinations
-from bisect import bisect_left, bisect_right  # , insort_left, insort_right
 # https://atcoder.jp/contests/arc093/tasks/arc093_b
 
 # 条件を満たすものを出力しろ
@@ -87,4 +87,3 @@ for _ in range(25):
         else:
             print('..', end='')
     print()
-

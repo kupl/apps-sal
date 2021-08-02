@@ -18,4 +18,3 @@ for i in range(M):
 
 # 結果出力
 print(ans)
-

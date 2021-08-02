@@ -4,5 +4,5 @@ a.sort(reverse=True)
 res = 0
 while(a):
     res += sum(a)
-    a = a[:len(a)//4]
+    a = a[:len(a) // 4]
 print(int(res))

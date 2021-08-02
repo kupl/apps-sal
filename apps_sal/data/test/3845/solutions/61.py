@@ -15,12 +15,16 @@ import pprint
 import itertools
 from functools import lru_cache
 
-sr = lambda: input()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return input()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 """nを素因数分解"""
 """2以上の整数n => [[素因数, 指数], ...]の2次元リスト"""
+
+
 def factorization(n):
     arr = []
     temp = n
@@ -67,6 +71,8 @@ def kaijo(n, l, mod):
     return a
 
 # Union Find
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -115,54 +121,58 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 # 約数生成
+
+
 def make_divisors(n):
     divisors = []
-    for i in range(1, int(n**0.5)+1):
+    for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
             divisors.append(i)
             if i != n // i:
-                divisors.append(n//i)
+                divisors.append(n // i)
 
     divisors.sort()
     return divisors
 
 # 区間更新のみ
+
+
 class kukankousin:
     def __init__(self, n):
         self.n = n
-        self.N0 = 2**(self.n-1).bit_length()
-        self.data = [None]*(2*self.N0)
-        self.INF = (-1, 2**31-1)
+        self.N0 = 2**(self.n - 1).bit_length()
+        self.data = [None] * (2 * self.N0)
+        self.INF = (-1, 2**31 - 1)
 
     # 区間[l, r+1)の値をxに書き換える
     # xは(t, value)という値にする (新しい値ほどtは大きくなる)
     def update(self, l, r, x):
-        L=l+self.N0;
-        R=r+self.N0
-        while L<R:
+        L = l + self.N0
+        R = r + self.N0
+        while L < R:
             if R & 1:
-                R-=1
-                self.data[R-1]=x
+                R -= 1
+                self.data[R - 1] = x
 
             if L & 1:
-                self.data[L-1]=x
-                L+=1
-            L>>=1;
-            R>>=1
-
+                self.data[L - 1] = x
+                L += 1
+            L >>= 1
+            R >>= 1
 
     # a_iの現在の値を取得
+
     def _query(self, k):
-        k+=self.N0-1
-        s=self.INF
-        while k>=0:
+        k += self.N0 - 1
+        s = self.INF
+        while k >= 0:
             if self.data[k]:
-                s=max(s, self.data[k])
-            k=(k-1)//2
+                s = max(s, self.data[k])
+            k = (k - 1) // 2
         return s
 
-
     # これを呼び出す
+
     def query(self, k):
         return self._query(k)[1]
 
@@ -172,29 +182,33 @@ mod = 10 ** 9 + 7
 # mod = 998244353
 
 # Press the green button in the gutter to run the script.
+
+
 def __starting_point():
-    a,b = lr()
-    h,w = 96,99
+    a, b = lr()
+    h, w = 96, 99
     m = [['#' for j in range(w)] for i in range(h)]
-    for i in range(48,h):
+    for i in range(48, h):
         for j in range(w):
             m[i][j] = '.'
 
-    for k in range(a-1):
-        y = k//33
-        x = k%33
-        y = y*3+1
-        x = x*3+1
+    for k in range(a - 1):
+        y = k // 33
+        x = k % 33
+        y = y * 3 + 1
+        x = x * 3 + 1
         m[y][x] = '.'
 
-    for k in range(b-1):
-        y = 16+k//33
-        x = k%33
-        y = y*3+1
-        x = x*3+1
+    for k in range(b - 1):
+        y = 16 + k // 33
+        x = k % 33
+        y = y * 3 + 1
+        x = x * 3 + 1
         m[y][x] = '#'
 
-    print(h,w)
+    print(h, w)
     for l in m:
         print(*l, sep='')
+
+
 __starting_point()

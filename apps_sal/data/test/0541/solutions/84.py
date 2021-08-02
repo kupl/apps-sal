@@ -24,4 +24,3 @@ for i in range(len(ab)):
     # print(div, ans)
 
 print(ans)
-

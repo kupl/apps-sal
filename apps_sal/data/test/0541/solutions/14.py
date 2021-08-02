@@ -1,7 +1,7 @@
 def resolve():
     import sys
     from operator import itemgetter
-    
+
     readline = sys.stdin.readline    # 1行だけ文字列にする
 
     N, M = list(map(int, readline().split()))
@@ -14,9 +14,10 @@ def resolve():
             ans += 1
             islands = right
     print(ans)
-    
+
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

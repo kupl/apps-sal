@@ -10,22 +10,26 @@ from collections import defaultdict, deque, Counter
 
 # input aliases
 input = sys.stdin.readline
-getS = lambda: input().strip()
-getN = lambda: int(input())
-getList = lambda: list(map(int, input().split()))
-getZList = lambda: [int(x) - 1 for x in input().split()]
+def getS(): return input().strip()
+def getN(): return int(input())
+def getList(): return list(map(int, input().split()))
+def getZList(): return [int(x) - 1 for x in input().split()]
+
 
 INF = float("inf")
 MOD = 10**9 + 7
-divide = lambda x: pow(x, MOD-2, MOD)
+def divide(x): return pow(x, MOD - 2, MOD)
+
 
 def nck(n, k, kaijyo):
     return (npk(n, k, kaijyo) * divide(kaijyo[k])) % MOD
 
+
 def npk(n, k, kaijyo):
     if k == 0 or k == n:
         return n % MOD
-    return (kaijyo[n] * divide(kaijyo[n-k])) % MOD
+    return (kaijyo[n] * divide(kaijyo[n - k])) % MOD
+
 
 def fact_and_inv(SIZE):
     inv = [0] * SIZE  # inv[j] = j^{-1} mod MOD
@@ -41,6 +45,7 @@ def fact_and_inv(SIZE):
 
     return fac, finv
 
+
 def renritsu(A, Y):
     # example 2x + y = 3, x + 3y = 4
     # A = [[2,1], [1,3]])
@@ -53,12 +58,13 @@ def renritsu(A, Y):
     # [1.0, 1.0]
     return X.flatten().tolist()[0]
 
+
 class TwoDimGrid:
     # 2次元座標 -> 1次元
     def __init__(self, h, w, wall="#"):
         self.h = h
         self.w = w
-        self.size = (h+2) * (w+2)
+        self.size = (h + 2) * (w + 2)
         self.wall = wall
         self.get_grid()
         # self.init_cost()
@@ -70,26 +76,33 @@ class TwoDimGrid:
 
         grid.append(self.wall * (self.w + 2))
         self.grid = grid
+
     def init_cost(self):
         self.cost = [INF] * self.size
 
     def pos(self, x, y):
         # 壁も含めて0-indexed 元々の座標だけ考えると1-indexed
         return y * (self.w + 2) + x
+
     def getgrid(self, x, y):
         return self.grid[y][x]
+
     def get(self, x, y):
         return self.cost[self.pos(x, y)]
+
     def set(self, x, y, v):
         self.cost[self.pos(x, y)] = v
         return
+
     def show(self):
-        for i in range(self.h+2):
-            print(self.cost[(self.w + 2) * i:(self.w + 2) * (i+1)])
+        for i in range(self.h + 2):
+            print(self.cost[(self.w + 2) * i:(self.w + 2) * (i + 1)])
+
     def showsome(self, tgt):
         for t in tgt:
             print(t)
         return
+
     def showsomejoin(self, tgt):
         for t in tgt:
             print("".join(t))
@@ -105,6 +118,7 @@ class TwoDimGrid:
         #         for dx, dy in move_eight:
         #             nx, ny = dx + cx, dy + cy
 
+
 def solve():
     a, b = getList()
     print(100, 100)
@@ -112,7 +126,7 @@ def solve():
         tmp = []
         for j in range(100):
             if i < 50:
-                if j % 2 == 1 or i % 2 == 1 or  a <= 1:
+                if j % 2 == 1 or i % 2 == 1 or a <= 1:
                     tmp.append("#")
                 else:
                     tmp.append(".")
@@ -127,9 +141,6 @@ def solve():
         print("".join(tmp))
 
 
-
-
-
 def main():
     n = getN()
     for _ in range(n):
@@ -138,7 +149,11 @@ def main():
         solve(s, 1, 0)
 
     return
+
+
 def __starting_point():
     # main()
     solve()
+
+
 __starting_point()

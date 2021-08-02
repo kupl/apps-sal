@@ -1,4 +1,6 @@
 from math import ceil
+
+
 def gcd(a, b):
     while a != 0 and b != 0:
         if a > b:
@@ -6,6 +8,7 @@ def gcd(a, b):
         else:
             b %= a
     return a + b
+
 
 t = int(input())
 for kkk in range(t):

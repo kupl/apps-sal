@@ -7,7 +7,9 @@ def __starting_point():
     # a is sorted in desc
     while(a):
         res += sum(a)
-        a = a[:len(a)//4]
+        a = a[:len(a) // 4]
 
     print(int(res))
+
+
 __starting_point()

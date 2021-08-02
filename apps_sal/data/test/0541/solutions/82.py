@@ -9,12 +9,13 @@ sys.setrecursionlimit(10**6)
 INF = 10**12
 m = 10**9 + 7
 
+
 def main():
     N, M = list(map(int, input().split()))
     ab = []
     for _ in range(M):
-        a, b = [int(x)-1 for x in input().split()]
-        ab.append((b,a))
+        a, b = [int(x) - 1 for x in input().split()]
+        ab.append((b, a))
     ab.sort()
     # print(ab)
     ans = 0
@@ -22,10 +23,12 @@ def main():
     for i in range(M):
         if ab[i][1] > x:
             ans += 1
-            x = ab[i][0]-1
+            x = ab[i][0] - 1
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

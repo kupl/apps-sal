@@ -3,6 +3,7 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 n = int(input())
 for i in range(n):
     r, b, k = list(map(int, input().split()))
@@ -13,4 +14,3 @@ for i in range(n):
         print("REBEL")
     else:
         print("OBEY")
-

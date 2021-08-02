@@ -1,5 +1,5 @@
 # atcoder -take a rest-(easy)
-#typical greedy
+# typical greedy
 def main():
     N, M = list(map(int, input().split()))
     conflict = [tuple(map(int, input().split())) for i in range(M)]
@@ -9,14 +9,13 @@ def main():
     for l, r in conflict:
         if not (l <= newest_destroyed < r):
             res += 1
-            newest_destroyed = r-1
+            newest_destroyed = r - 1
     print(res)
     return
 
 
 def __starting_point():
     main()
-
 
 
 __starting_point()

@@ -15,4 +15,3 @@ def solve(n):
 n, a, s = int(input()), sorted(arr_inp(), reverse=True), 0
 solve(n)
 print(int(s))
-

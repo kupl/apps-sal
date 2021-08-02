@@ -1,13 +1,13 @@
 import sys
 input = sys.stdin.readline
 
-N, M = map(int,input().split())
+N, M = map(int, input().split())
 bridges = []
 for _ in range(M):
-    a, b = map(int,input().split())
+    a, b = map(int, input().split())
     bridges.append([a, b])
 
-bridges.sort(key = lambda x: x[1])
+bridges.sort(key=lambda x: x[1])
 
 p = 0
 t = 0

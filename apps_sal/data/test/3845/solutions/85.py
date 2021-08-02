@@ -5,6 +5,7 @@ t = [['.' for j in range(L)] for i in range(K)]
 
 A, B = map(int, input().split())
 
+
 def color(s, j0, i1, c):
     j = j0
     k = j0 * 2
@@ -15,11 +16,13 @@ def color(s, j0, i1, c):
         s[j][k] = c
         k += 4
 
+
 color(s, 0, A, '.')
 color(t, 1, B, '#')
 
 print(L, L)
-f = lambda s : print('\n'.join((map(lambda s : ''.join(s), s))))
+def f(s): return print('\n'.join((map(lambda s: ''.join(s), s))))
+
+
 f(s)
 f(t)
-
