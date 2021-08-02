@@ -5,14 +5,14 @@ maxi = 5003
 i = 5
 j = 0
 if n == 1:
-      print(1)
-      print(1)
+    print(1)
+    print(1)
 elif n == 2:
     print(1)
     print(1)
 elif n == 3:
     print(2)
-    print(1,3)
+    print(1, 3)
 else:
     students[4999] = 3
     students[5000] = 1
@@ -30,8 +30,6 @@ else:
         i += 1
     print(n)
     j = 0
-    for z in range(2000,9000):
+    for z in range(2000, 9000):
         if students[z] != 0 and j == 0:
-            print(students[z],end=" ")
-            
-
+            print(students[z], end=" ")

@@ -17,4 +17,3 @@ for i in range(min(4, len(ind))):
         sol = curr
 
 print(sol)
-

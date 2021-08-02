@@ -12,6 +12,7 @@ def check(r0, c0, dr, dc):
             cnte += 1
     return cntx == 4 and cnte == 1
 
+
 cells = [list(input()) for _ in range(10)]
 drc = [(1, 0), (0, 1), (1, 1), (1, -1)]
 ans = 'NO'
@@ -21,4 +22,3 @@ for r0 in range(10):
             if check(r0, c0, dr, dc):
                 ans = 'YES'
 print(ans)
-

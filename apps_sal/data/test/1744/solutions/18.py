@@ -40,6 +40,3 @@ for elem in a:
     k += 1
 
 print(' '.join(answers))
-
-
-

@@ -11,7 +11,7 @@ for a in A:
     while s + a > M:
         t.append(heappop(h))
         s += t[-1]
-    ANS.append(len(t)+k)
+    ANS.append(len(t) + k)
     while t:
         s -= t[-1]
         heappush(h, t.pop())

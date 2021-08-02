@@ -2,10 +2,12 @@ a = []
 for i in range(10):
     a.append(input())
 
+
 def valid(x, y):
     if 0 <= x <= 9 and 0 <= y <= 9:
         return True
     return False
+
 
 def check(x, y, direction):
     ans = 1
@@ -23,6 +25,7 @@ def check(x, y, direction):
         curr_y -= direction[1]
     return ans
 
+
 curr = 0
 for i in range(10):
     for j in range(10):
@@ -34,5 +37,3 @@ if curr >= 5:
     print('YES')
 else:
     print('NO')
-            
-

@@ -15,4 +15,3 @@ else:
 
 print(len(res))
 print(str.join(" ", list(map(str, res))))
-

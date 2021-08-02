@@ -23,7 +23,7 @@ def gt_mx(d, l):
             if l > 0 and do < d[i]:
                 l -= i
                 ans += 1
-    
+
     return ans
 
 
@@ -45,7 +45,7 @@ def main(n, m, t):
         else:
             print(0, end=' ')
         d[t[i]] += 1
-        
+
         # print(ans, )
     # return ans
 
@@ -53,4 +53,3 @@ def main(n, m, t):
 n, m = ri()
 t = ri()
 main(n, m, t)
-

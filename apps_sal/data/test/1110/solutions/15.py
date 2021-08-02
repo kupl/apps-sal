@@ -1,3 +1,2 @@
 n = int(input())
-print((n*n + 5)*n // 6)
-
+print((n * n + 5) * n // 6)

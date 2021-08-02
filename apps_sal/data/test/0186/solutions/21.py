@@ -1,8 +1,8 @@
 n, m = map(int, input().split())
 
-max_m = m*3
-busy_by_m = int(m*3/6)
-max_n = (n + busy_by_m)*2*bool(n)
+max_m = m * 3
+busy_by_m = int(m * 3 / 6)
+max_n = (n + busy_by_m) * 2 * bool(n)
 
 nd = 0
 md = 0
@@ -23,7 +23,7 @@ if max_n > max_m:
         if max_m % 2 == 0:
             max_m += md
         #print ((max_n_prev, max_m_prev), (max_n, max_m))
-        #input()
+        # input()
         if max(max_n_prev, max_m_prev) < max(max_n, max_m):
             break
 
@@ -31,4 +31,4 @@ if max_n > max_m:
 else:
     maxv = max_m
 
-print (maxv)
+print(maxv)

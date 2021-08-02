@@ -1,7 +1,7 @@
 n, m = [int(i) for i in input().split()]
 line = [int(x) for x in input().split()]
 
-count = {i+1:0 for i in range(100)}
+count = {i + 1: 0 for i in range(100)}
 sum = 0
 
 for i in line:
@@ -23,5 +23,4 @@ for i in line:
                     break
     count[i] += 1
     sum += i
-    print(t, end = " ")
-
+    print(t, end=" ")

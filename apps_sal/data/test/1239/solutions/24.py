@@ -6,4 +6,3 @@ d = min(arr)
 c = arr.count(d)
 
 print(d, c)
-

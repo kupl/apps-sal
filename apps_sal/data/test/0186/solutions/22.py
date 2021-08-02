@@ -1,9 +1,7 @@
 import sys
 
 
-
-
-##Wrong answer... not finished
+# Wrong answer... not finished
 def main():
     n, m = [int(f) for f in sys.stdin.readline().split()]
 
@@ -13,7 +11,6 @@ def main():
 
     n3 = h // 3 - n_common
     n2 = h // 2 - n_common
-
 
     if (n3 + n2 + n_common) >= (m + n):
         res = h
@@ -32,9 +29,8 @@ def main():
     print(res)
 
 
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

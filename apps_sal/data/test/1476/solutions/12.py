@@ -11,9 +11,8 @@ elif a == 4:
 else:
     print(a)
     b = []
-    for i in range(a//2+a%2):
-        b.append(i*2+1)
-    for k in range(a//2):
-        b.append(k*2+2)
+    for i in range(a // 2 + a % 2):
+        b.append(i * 2 + 1)
+    for k in range(a // 2):
+        b.append(k * 2 + 2)
     print(*b)
-

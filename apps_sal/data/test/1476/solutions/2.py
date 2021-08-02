@@ -15,5 +15,3 @@ else:
         a.append(i + 1 + n // 2)
     print(len(a))
     print(*a)
-    
-

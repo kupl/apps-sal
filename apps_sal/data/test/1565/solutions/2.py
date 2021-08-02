@@ -20,4 +20,3 @@ if best2 is None:
 else:
     res2 = int(s[:best2]) + int(s[best2:])
     print(min(res, res2))
-

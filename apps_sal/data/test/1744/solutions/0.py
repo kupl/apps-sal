@@ -20,4 +20,3 @@ for i in range(n):
     tmp[t[i]] += 1
 
 print(*ans)
-

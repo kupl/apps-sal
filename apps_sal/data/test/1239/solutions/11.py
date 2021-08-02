@@ -12,11 +12,11 @@ arr = list(map(int, input().split()));
 arr = sorted(arr);
 
 minimum = int(10000000000);
-for i in range(n-1):
-    if(arr[i+1] - arr[i] < minimum):
-        minimum = arr[i+1] - arr[i];
+for i in range(n - 1):
+    if(arr[i + 1] - arr[i] < minimum):
+        minimum = arr[i + 1] - arr[i];
 count = 0;
-for i in range(n-1):
-    if(arr[i+1] - arr[i] == minimum):
-        count+=1;
-print(minimum,count);
+for i in range(n - 1):
+    if(arr[i + 1] - arr[i] == minimum):
+        count += 1;
+print(minimum, count);

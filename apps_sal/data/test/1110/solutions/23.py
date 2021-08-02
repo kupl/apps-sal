@@ -5,7 +5,9 @@ def main():
 
     print(n * (n**2 + 5) // 6)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

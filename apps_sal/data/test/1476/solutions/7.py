@@ -15,4 +15,3 @@ else:
 
     print(len(a))
     print(" ".join(map(str, a)))
-
