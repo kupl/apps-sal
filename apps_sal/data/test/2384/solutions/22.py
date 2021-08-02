@@ -15,4 +15,3 @@ if N % 2:
     print((max(dp0[N - 3], dp1[N - 2], dp2[N - 1])))
 else:
     print((max(dp0[N - 2], dp1[N - 1])))
-

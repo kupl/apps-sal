@@ -7,7 +7,7 @@ dp = [[-inf] * 4 for _ in range(N + 10)]
 dp[0][0] = 0
 for i, a in enumerate(A):
     for j in range(x + 1):
-        dp[i+1][j+1] = max(dp[i+1][j+1], dp[i][j])
+        dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i][j])
         now = dp[i][j]
         if (i + j) % 2 == 0:
             now += a

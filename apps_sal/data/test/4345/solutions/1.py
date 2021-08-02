@@ -24,4 +24,3 @@ for i in range(n):
 else:
     print('YES')
     print(*marker)
-

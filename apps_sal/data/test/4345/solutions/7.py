@@ -25,6 +25,3 @@ for i in range(n):
 
 print("YES")
 print(*answer)
-
-
-

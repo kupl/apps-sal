@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
+import math
 import sys
 from itertools import accumulate
 sys.setrecursionlimit(10**8)
 INF = float("inf")
 
-import math
-
 
 def array(*args, initial=0):
-    pre = "["*len(args)
+    pre = "[" * len(args)
     post = ""
     for a in args[::-1]:
-        post += " for _ in range("+str(a)+")]"
+        post += " for _ in range(" + str(a) + ")]"
     S = pre + str(initial) + post
     return eval(S)
 
@@ -32,11 +31,11 @@ def solve(N: int, A: "List[int]"):
         for k in range(K):
             if i == k and i < K:
                 continue
-            DP[i][k] = DP[i-2][k]
-            if k-1 >= 0:
-                DP[i][k] = max(DP[i][k], DP[i-3][k-1])
-            if k-2 >= 0:
-                DP[i][k] = max(DP[i][k], DP[i-4][k-2])
+            DP[i][k] = DP[i - 2][k]
+            if k - 1 >= 0:
+                DP[i][k] = max(DP[i][k], DP[i - 3][k - 1])
+            if k - 2 >= 0:
+                DP[i][k] = max(DP[i][k], DP[i - 4][k - 2])
             DP[i][k] += A[i]
     if N % 2 == 0:
         print((max(DP[-1][1], DP[-2][0])))
@@ -59,5 +58,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

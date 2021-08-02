@@ -37,7 +37,7 @@ for i in range(3):
     for i1 in range(3):
         l = n1[i]
         m = n2[i1]
-        n = abs(l - a) + abs(l - c) + abs(l - e) + abs(m - b) + abs(m - d) + abs(m -f)
+        n = abs(l - a) + abs(l - c) + abs(l - e) + abs(m - b) + abs(m - d) + abs(m - f)
         if n < summa:
             summa = n
             x = l
@@ -48,4 +48,3 @@ if x != -1 and y != -1:
     movetotochka(c, d, x, y)
     movetotochka(e, f, x, y)
     print(x, y)
-

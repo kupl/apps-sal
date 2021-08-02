@@ -16,4 +16,3 @@ if N % 2 == 0:
     print((max(x, y)))
 else:
     print((max(y, z)))
-

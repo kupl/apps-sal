@@ -18,4 +18,5 @@ def f_select_half():
             dp[(k, x, 1)] = dp[(k - 1, x - 1, 0)] + a
     return max(dp[(N, N // 2, f)] for f in (0, 1))
 
+
 print(f_select_half())

@@ -21,7 +21,7 @@ while True:
         mn = y
     else:
         break
-    k+=1
+    k += 1
     coor.append([x, y])
 x3, y3 = points[2][0], points[2][1]
 if mn <= y3 <= mx:
@@ -36,7 +36,7 @@ while True:
     elif y > y3:
         y -= 1
     elif x < x3:
-        x+=1
+        x += 1
     else:
         break
     k += 1

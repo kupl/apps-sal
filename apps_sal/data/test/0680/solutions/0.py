@@ -27,4 +27,3 @@ elif cx <= bx <= ax or ax <= bx <= cx:
     f(cx, bx, ax, cy, by, ay)
 elif bx <= cx <= ax or ax <= cx <= bx:
     f(bx, cx, ax, by, cy, ay)
-

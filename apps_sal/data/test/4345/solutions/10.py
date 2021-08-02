@@ -1,4 +1,4 @@
-MAX = 1+2*10**5
+MAX = 1 + 2 * 10**5
 MIN = -1
 
 ASC = 0
@@ -15,16 +15,16 @@ for i in range(n):
 
     if a[i] > asc and a[i] < dsc:
         # can place in either
-        if i+1 == n:
+        if i + 1 == n:
             res.append(DSC)
-        elif a[i] > a[i+1]:
+        elif a[i] > a[i + 1]:
             # place in dsc
             res.append(DSC)
             dsc = a[i]
         else:
             # place in asc
             res.append(ASC)
-            asc = a[i]  
+            asc = a[i]
 
     elif a[i] > asc:
         # can only place in asc
@@ -40,6 +40,6 @@ for i in range(n):
         # can't place anywhere
         print("NO")
         return
-    
+
 print("YES")
 print(*res)

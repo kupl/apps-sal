@@ -102,4 +102,3 @@ if ans.count([xc, yc]) == 0:
 print(len(ans))
 for i in ans:
     print(i[0], i[1])
-

@@ -12,4 +12,3 @@ for i, a in enumerate(A, start=1):
         dp[(i, x, 1)] = dp[(i - 1, x - 1, 0)] + a
 
 print((max(dp[(N, N // 2, 0)], dp[(N, N // 2, 1)])))
-
