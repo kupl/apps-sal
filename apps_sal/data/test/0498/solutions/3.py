@@ -5,4 +5,3 @@ if (k % 2) == 0:
     print(rad, parta, "R")
 else:
     print(rad, parta, "L")
-

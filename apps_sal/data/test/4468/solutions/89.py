@@ -1,4 +1,4 @@
-N, T = map(int,input().split())
+N, T = map(int, input().split())
 time = list(map(int, input().split())) + [float('inf')]
 
 now = 0

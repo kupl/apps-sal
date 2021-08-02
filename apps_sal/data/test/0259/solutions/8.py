@@ -2,7 +2,7 @@ from math import sqrt, ceil, floor
 from sys import stdin, stdout
 from heapq import heapify, heappush, heappop
 import string
-import bisect  
+import bisect
 
 
 n, t = list(map(int, stdin.readline().split()))
@@ -16,4 +16,3 @@ for i in range(n):
         ans = i + 1
         ans_t = s
 print(ans)
-

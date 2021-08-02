@@ -10,4 +10,3 @@ for i in range(N):
         mi = a
         ans = i + 1
 print(ans)
-

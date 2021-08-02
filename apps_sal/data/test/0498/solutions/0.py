@@ -5,4 +5,3 @@ if ((k - 1) % (2 * m) % 2 == 0):
     print("L")
 else:
     print("R")
-

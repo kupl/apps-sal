@@ -8,5 +8,4 @@ for i in range(n):
     if ans > s:
         ans = s
         ansi = i
-print(ansi+1)
-
+print(ansi + 1)

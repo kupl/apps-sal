@@ -1,6 +1,7 @@
 def readInput():
     return [int(x) for x in input().split()]
 
+
 inputdata = readInput()
 data = readInput()
 
@@ -29,4 +30,3 @@ while i + k - 1 <= n - 1:
     i += 1
 
 print(index + 1)
-

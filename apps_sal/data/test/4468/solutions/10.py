@@ -6,4 +6,3 @@ for i in range(1, n):
     res += tmp
 
 print(res)
-

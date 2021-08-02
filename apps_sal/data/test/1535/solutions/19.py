@@ -1,7 +1,7 @@
 def solo_mid(n, x0, y0, sturms=[]):
     if n == 0:
         return 0
-    
+
     res = {}
     for i in range(n):
         for_shot = sturms[:]
@@ -21,6 +21,8 @@ def solo_mid(n, x0, y0, sturms=[]):
             break
 
     return len(res)
+
+
 try:
     first = input()
     if len(first.split()) != 3:
@@ -35,12 +37,12 @@ try:
                 print(0)
                 break
             else:
-                try: s_l = tuple([int(i) for i in s.split()])
-                except: break
+                try:
+                    s_l = tuple([int(i) for i in s.split()])
+                except:
+                    break
                 sturms.append(s_l)
         else:
             print(solo_mid(n, in_f[1], in_f[2], sturms))
 except:
     print(0)
-
-

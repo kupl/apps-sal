@@ -5,7 +5,6 @@
 # -*- coding: utf-8 -*-
 
 
-
 s = input()
 
 if len(s) % 2 == 0:
@@ -34,4 +33,3 @@ else:
         else:
             break
     print((p + 1 + cnt))
-

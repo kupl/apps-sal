@@ -1,7 +1,7 @@
 n, x0, y0 = (int(x) for x in input().split())
 guys = []
 for i in range(n):
-    x, y = (int(cur) for  cur in input().split())
+    x, y = (int(cur) for cur in input().split())
     guys.append((x - x0, y - y0))
 
 answer = 0
@@ -20,4 +20,3 @@ while guys:
     answer += 1
 
 print(answer)
-

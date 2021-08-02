@@ -9,4 +9,3 @@ for i in range(1, n):
         ans = min(ans, max(i, n - i))
 
 print(ans)
-

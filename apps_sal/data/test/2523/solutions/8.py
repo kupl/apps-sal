@@ -6,7 +6,7 @@ if len(set(list(S))) == 1 and S[0] == "0":
     print(0)
     return
 """
-for i in range(l-1):
-    if S[i] != S[i+1]:
-        ans = min(ans,max(l-i-1,i+1))
+for i in range(l - 1):
+    if S[i] != S[i + 1]:
+        ans = min(ans, max(l - i - 1, i + 1))
 print(ans)

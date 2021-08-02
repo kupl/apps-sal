@@ -14,4 +14,3 @@ for i in range(1, n - k + 2):
         Min = x
         ind = i
 print(ind)
-

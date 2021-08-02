@@ -1,7 +1,7 @@
 S = input()
 
-l = (len(S)-1)//2
-r = len(S)//2
+l = (len(S) - 1) // 2
+r = len(S) // 2
 m = S[l]
 while l >= 0:
     if S[l] != m or S[r] != m:
@@ -12,5 +12,3 @@ if l < 0:
     print((len(S)))
 else:
     print(r)
-
-

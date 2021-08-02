@@ -6,13 +6,12 @@ ans = 0
 
 for i in l:
     now = i
-    #print(now,latest,t)
-    if now-latest >= t:
+    # print(now,latest,t)
+    if now - latest >= t:
         ans += t
     else:
-        ans += now-latest
-    
+        ans += now - latest
+
     latest = now
 ans += t
 print(ans)
-

@@ -3,8 +3,10 @@ def get_place(rows, dpr, k):  # n=rows; m=dpr
     dn = k // 2
     return (dn // dpr + 1, dn % dpr + 1, 'LR'[k % 2])
 
+
 def m():
     print(*get_place(*list(map(int, input().split(' ')))))
+
 
 def __starting_point():
     m()

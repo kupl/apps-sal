@@ -2,10 +2,10 @@ n, t = map(int, input().strip().split())
 mn = 10000000
 num = 0
 for i in range(n):
-    s,d = map(int, input().strip().split())
+    s, d = map(int, input().strip().split())
     temp = 0
     if s >= t:
-        temp= s - t
+        temp = s - t
     else:
         g = t - s
         md = g % d
@@ -15,5 +15,5 @@ for i in range(n):
             temp = 0
     if temp < mn:
         mn = temp
-        num = i+1
+        num = i + 1
 print(num)

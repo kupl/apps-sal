@@ -7,4 +7,3 @@ for i in range(N, 0, -1):
     if S[i] - S[N - i] in [0, 2 * i - N]:
         break
 print(i)
-
