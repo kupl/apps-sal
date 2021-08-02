@@ -9,4 +9,3 @@ for i in range(k):
     ans += price_list[i]
 
 print(ans)
-

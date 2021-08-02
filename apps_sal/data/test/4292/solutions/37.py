@@ -4,7 +4,6 @@ pArr = list(map(int, input().split()))
 pArr.sort()
 ans = 0
 for i in range(k):
-  ans += pArr[i]
+    ans += pArr[i]
 
 print(ans)
-

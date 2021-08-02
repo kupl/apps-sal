@@ -3,7 +3,6 @@
 A, B, C, D = map(int, input().split())
 
 
-
 area_ab = A * B
 area_cd = C * D
 

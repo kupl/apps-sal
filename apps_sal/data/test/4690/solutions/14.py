@@ -4,4 +4,3 @@ if A * B > C * D:
     print((A * B))
 else:
     print((C * D))
-

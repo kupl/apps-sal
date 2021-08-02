@@ -1,6 +1,6 @@
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 
-food = [0]*(m+1)
+food = [0] * (m + 1)
 for i in range(n):
     l = [int(x) for x in input().split()]
     l = set(l[1:])

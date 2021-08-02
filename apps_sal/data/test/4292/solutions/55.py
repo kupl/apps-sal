@@ -8,4 +8,3 @@ ans = 0
 for i in range(K):
     ans += p[i]
 print(ans)
-

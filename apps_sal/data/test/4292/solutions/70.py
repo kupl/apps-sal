@@ -1,6 +1,6 @@
-n,k = map(int,input().split())
+n, k = map(int, input().split())
 
-p = map(int,input().split())
+p = map(int, input().split())
 
 sp = sorted(p)
 

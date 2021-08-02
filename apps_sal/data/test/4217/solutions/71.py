@@ -12,13 +12,13 @@ L = list(itertools.chain.from_iterable(L))
 L.sort()
 L.append(100)
 
-for i in range(len(L)-1):
-    if L[i] == L[i+1]:
+for i in range(len(L) - 1):
+    if L[i] == L[i + 1]:
         cnt += 1
     else:
         if cnt == N:
             res += 1
         cnt = 1
-    
+
 
 print(res)

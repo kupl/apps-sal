@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 
 
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 
 recA = l[:2]
 recB = l[2:]
@@ -16,5 +16,3 @@ elif (areaB > areaA):
     print(areaB)
 elif(areaB == areaA):
     print(areaB)
-
-

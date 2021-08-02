@@ -1,4 +1,4 @@
-A,B,C,D = map(int, input().split())
+A, B, C, D = map(int, input().split())
 
 area1 = A * B
 area2 = C * D

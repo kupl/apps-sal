@@ -1,10 +1,12 @@
 x0, y0, ax, ay, bx, by = list(map(int, input().split()))
 xs, ys, t = list(map(int, input().split()))
 
+
 def gc(m):
     x = x0 * ax ** m + (ax ** m - 1) * bx // (ax - 1)
     y = y0 * ay ** m + (ay ** m - 1) * by // (ay - 1)
     return x, y
+
 
 coord = []
 for i in range(100):
@@ -15,6 +17,8 @@ for i in range(100):
 
 def dist(a, b, c, d):
     return abs(a - c) + abs(b - d)
+
+
 bans = 0
 for i in range(len(coord)):
     px = xs
@@ -42,4 +46,3 @@ for i in range(len(coord)):
         j += 1
     bans = max(bans, ans)
 print(bans)
-
