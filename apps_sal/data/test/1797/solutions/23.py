@@ -14,10 +14,11 @@ def dfs(v):
         v = p[v]
     return cnt
 
+
 for i in range(n):
     cnt = dfs(i)
     if cnt > 0:
         sz.append(cnt)
 
 sz.sort()
-print(sum(list(map(lambda x: x*x, sz))) + 2 * sz[-1] * sz[-2])
+print(sum(list(map(lambda x: x * x, sz))) + 2 * sz[-1] * sz[-2])

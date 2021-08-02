@@ -6,4 +6,3 @@ for i in range(n):
         if a[j] > a[j + 1]:
             print(j + 1, j + 2)
             a[j], a[j + 1] = a[j + 1], a[j]
-

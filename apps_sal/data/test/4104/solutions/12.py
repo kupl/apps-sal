@@ -8,4 +8,3 @@ for i in range(1, len(in_str) - 1):
     else:
         pass
 print(res)
-

@@ -5,4 +5,3 @@ for i in range(n):
         if s[j] > s[j + 1]:
             print(j + 1, j + 2)
             s[j], s[j + 1] = s[j + 1], s[j]
-

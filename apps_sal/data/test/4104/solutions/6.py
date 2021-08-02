@@ -7,4 +7,3 @@ for x in s:
         t = 0
     t = t * 10 + x
 print(r + f * t)
-

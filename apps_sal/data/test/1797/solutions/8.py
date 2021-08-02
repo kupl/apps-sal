@@ -33,4 +33,3 @@ else:
         print(c)
     else:
         print(nums[0] ** 2)
-

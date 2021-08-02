@@ -13,7 +13,6 @@ for i in range(n):
         if arr[j] < minn:
             minn = arr[j]
             ind = j
-    arr = arr[:i] + [arr[ind]] + arr[i:ind] + arr[ind+1:]
+    arr = arr[:i] + [arr[ind]] + arr[i:ind] + arr[ind + 1:]
     for j in range(ind - 1, i - 1, -1):
         print(j + 1, j + 2)
-

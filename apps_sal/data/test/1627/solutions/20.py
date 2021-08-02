@@ -6,4 +6,3 @@ for i in range(1, n):
         if L[j] > L[j + 1]:
             (L[j], L[j + 1]) = (L[j + 1], L[j])
             print(j + 1, j + 2)
-

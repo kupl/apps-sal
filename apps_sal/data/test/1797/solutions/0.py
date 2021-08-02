@@ -20,5 +20,3 @@ if 1 < len(ls):
     ls.pop()
 
 print(sum([x**2 for x in ls]))
-
-

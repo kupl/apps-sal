@@ -6,5 +6,3 @@ for i in range(n):
         if a[j] < a[j - 1]:
             a[j], a[j - 1] = a[j - 1], a[j]
             print(j, j + 1)
-
-

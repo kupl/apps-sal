@@ -6,4 +6,3 @@ for i in range(n):
         if tab[j] > tab[j + 1]:
             tab[j], tab[j + 1] = tab[j + 1], tab[j]
             print(str(j + 1) + " " + str(j + 2))
-

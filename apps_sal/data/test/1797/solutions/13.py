@@ -10,14 +10,13 @@ for i in range(n):
         vis[j] = True
         cnt += 1
         j = p[j] - 1
-    if cnt>0:
+    if cnt > 0:
         ls.append(cnt)
 ls.sort()
-if len(ls)>1:
+if len(ls) > 1:
     ls[-2] += ls[-1]
     ls.pop()
-ans=0
+ans = 0
 for i in ls:
-    ans=ans+i**2
+    ans = ans + i**2
 print(ans)
-

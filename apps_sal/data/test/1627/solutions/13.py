@@ -8,8 +8,8 @@ def main():
                 a[j], a[j + 1] = a[j + 1], a[j]
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()
