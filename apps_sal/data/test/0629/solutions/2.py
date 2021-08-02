@@ -15,4 +15,3 @@ for i in range(n):
     if i < n - 1:
         topBottom = topBottom + a1[i] - a2[i]
 print(ans)
-

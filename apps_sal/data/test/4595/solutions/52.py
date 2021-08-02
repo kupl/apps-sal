@@ -8,7 +8,7 @@ for i in range(N):
     else:
         a += 1
 
-for j in range(1, N+1):
+for j in range(1, N + 1):
     if S[-j] == "Z":
         break
     else:

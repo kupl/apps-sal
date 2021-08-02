@@ -8,4 +8,3 @@ for _ in range(n):
         print('Vanya')
     else:
         print('Vova')
-

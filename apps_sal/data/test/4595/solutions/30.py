@@ -13,4 +13,3 @@ for i in range(n):
         z = i
 
 print((z - a + 1))
-

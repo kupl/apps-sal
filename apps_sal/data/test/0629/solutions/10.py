@@ -10,4 +10,3 @@ for i, e in enumerate(b):
     ans.append(e + sum(a[0][:i]) + sum(a[1][i:]))
 
 print(sum(sorted(ans)[0:2]))
-

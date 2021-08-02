@@ -6,4 +6,4 @@ for i in range(len(s)):
         sta.append(i)
     elif s[i] == 'Z':
         fin.append(i)
-print(max(fin)-min(sta)+1)
+print(max(fin) - min(sta) + 1)

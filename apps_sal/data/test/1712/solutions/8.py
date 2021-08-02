@@ -3,6 +3,7 @@
 # to_zero_based = lambda x: int(x) - 1
 from fractions import gcd
 
+
 def main():
     n, x, y = list(map(int, input().split()))
     monsters = [int(input()) for _ in range(n)]
@@ -26,5 +27,5 @@ def main():
 
     print('\n'.join(results))
 
-main()
 
+main()

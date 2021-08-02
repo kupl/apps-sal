@@ -22,4 +22,3 @@ for i in range(n):
             else:
                 minimum = min(pref1[i] + post2[i] + b[i] + pref1[j] + post2[j] + b[j], minimum)
 print(minimum)
-

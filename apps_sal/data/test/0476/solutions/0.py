@@ -10,4 +10,3 @@ while n != '' and good:
     else:
         good = False
 print('YES' if good else 'NO')
-

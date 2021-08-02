@@ -8,4 +8,5 @@ def resolve():
     output = end_index - start_index + 1
     print(output)
 
+
 resolve()

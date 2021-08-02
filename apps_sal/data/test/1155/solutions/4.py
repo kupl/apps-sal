@@ -17,4 +17,4 @@ for i in range(n):
     a, b = ria()
     mini = min(mini, a / b)
 
-print(mini*m)
+print(mini * m)

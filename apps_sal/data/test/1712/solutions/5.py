@@ -15,4 +15,3 @@ for _ in range(n):
         result.append("Vova")
 
 print(*result, sep="\n")
-

@@ -5,7 +5,7 @@ ans = 0
 
 for i in range(len(s)):
     if s[i] == 'A':
-        start = min(start , i)
+        start = min(start, i)
     if s[i] == 'Z':
         end = max(end, i)
     ans = end - start + 1

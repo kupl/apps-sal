@@ -12,4 +12,3 @@ for i in range(n):
     ans = min(ans, a / b)
 
 print(ans * m)
-

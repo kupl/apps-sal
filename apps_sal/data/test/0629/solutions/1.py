@@ -3,11 +3,13 @@ a1 = [int(v) for v in input().split()]
 a2 = [int(v) for v in input().split()]
 b = [int(v) for v in input().split()]
 
+
 def make_prefixes(a):
-	pref = [0, a[0]]
-	for v in a[1:]:
-		pref.append(pref[-1] + v)
-	return pref
+    pref = [0, a[0]]
+    for v in a[1:]:
+        pref.append(pref[-1] + v)
+    return pref
+
 
 prefa1 = make_prefixes(a1)
 prefa2 = make_prefixes(a2)

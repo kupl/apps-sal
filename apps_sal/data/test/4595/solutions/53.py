@@ -6,10 +6,12 @@ def main():
             a = min(a, i)
         if t == 'Z':
             z = max(z, i)
-    ans = z-a+1
+    ans = z - a + 1
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

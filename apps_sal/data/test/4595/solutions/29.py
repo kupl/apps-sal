@@ -18,18 +18,4 @@ mod = 10**9 + 7
 s = rr()
 left = s.index('A')
 right = s.rindex('Z')
-print((right-left+1))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print((right - left + 1))

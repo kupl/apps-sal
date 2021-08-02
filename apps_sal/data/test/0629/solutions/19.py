@@ -8,4 +8,3 @@ for i in range(n - 1):
 ans.append(sum(H1) + av[-1])
 ans.sort()
 print(ans[0] + ans[1])
-

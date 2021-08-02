@@ -21,6 +21,3 @@ while i <= len(v) - 1:
     i += 1
 else:
     print('YES')
-
-
-

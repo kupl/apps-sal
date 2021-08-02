@@ -1,5 +1,6 @@
 3
 
+
 def isgood(n):
     if n == '1' or n == '14' or n == '144':
         return True
@@ -11,9 +12,9 @@ def isgood(n):
         return isgood(n[1:])
     return False
 
+
 n = input()
 if isgood(n):
     print('YES')
 else:
     print('NO')
-

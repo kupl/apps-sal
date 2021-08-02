@@ -16,5 +16,3 @@ while(cx < x and cy < y):
 
 for i in range(n):
     print(dp[(int(input()) - 1) % (x + y)])
-        
-

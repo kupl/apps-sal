@@ -6,5 +6,4 @@ for i in range(len(a)):
 for j in range(len(a)):
     if a[j] == "Z":
         c = j
-print((c-b+1))
-
+print((c - b + 1))

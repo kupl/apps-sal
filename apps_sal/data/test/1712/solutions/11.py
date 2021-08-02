@@ -8,4 +8,3 @@ for i in range(n):
     elif d > 0: res = 'Vova'
     elif d == 0: res = 'Both'
     print(res)
-
