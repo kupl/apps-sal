@@ -1,4 +1,7 @@
-# 
+#
+
+import math
+
 
 def factorize(n):
     '''
@@ -8,7 +11,7 @@ def factorize(n):
     '''
     if n == 1:
         raise('n >= 2')
-    
+
     factor = {}
     div = 2
     while True:
@@ -20,6 +23,7 @@ def factorize(n):
         else:
             div += 1
 
+
 n = int(input())
 
 if n <= 9:
@@ -27,8 +31,7 @@ if n <= 9:
     return
 
 # めんどいから掛けてしまえ。間に合うだろ
-import math
-product = math.prod(range(1, n+1))
+product = math.prod(range(1, n + 1))
 d = factorize(product)
 factor = list(d.items())
 
@@ -36,23 +39,23 @@ factor = list(d.items())
 
 ans = 0
 for i in range(len(factor)):
-    for j in range(i+1, len(factor)):
+    for j in range(i + 1, len(factor)):
         for k in range(len(factor)):
-            if factor[i][1] >= 4 and factor[j][1] >= 4 and factor[k][1] >= 2 and i!=j and j!=k and k!=i:
+            if factor[i][1] >= 4 and factor[j][1] >= 4 and factor[k][1] >= 2 and i != j and j != k and k != i:
                 ans += 1
 
 for i in range(len(factor)):
     for j in range(len(factor)):
-            if factor[i][1] >= 4 and factor[j][1] >= 14 and i!=j:
-                ans += 1
+        if factor[i][1] >= 4 and factor[j][1] >= 14 and i != j:
+            ans += 1
 
 for i in range(len(factor)):
     for j in range(len(factor)):
-            if factor[i][1] >= 2 and factor[j][1] >= 24 and i!=j:
-                ans += 1
+        if factor[i][1] >= 2 and factor[j][1] >= 24 and i != j:
+            ans += 1
 
 for i in range(len(factor)):
     if factor[i][1] >= 74:
-                ans += 1
+        ans += 1
 
 print(ans)

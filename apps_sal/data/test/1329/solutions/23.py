@@ -1,5 +1,7 @@
 import sys
 read = sys.stdin.read
+
+
 def main():
     def factorization(n):
         arr = []
@@ -44,6 +46,9 @@ def main():
         r += (o5 * (o5 - 1) // 2) * (o3 - 2)
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

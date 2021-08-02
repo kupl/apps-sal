@@ -19,7 +19,7 @@ def prime_factorize(n):
 n = int(input())
 
 d = {}
-for i in range(2, n+1):
+for i in range(2, n + 1):
     p = prime_factorize(i)
     for cp in p:
         if cp in d:
@@ -27,10 +27,10 @@ for i in range(2, n+1):
         else:
             d[cp] = 1
 
-cnt = {75:0, 25:0, 15:0, 5:0, 3:0}
+cnt = {75: 0, 25: 0, 15: 0, 5: 0, 3: 0}
 for i in d:
     for j in cnt:
-        if d[i] >= j-1:
+        if d[i] >= j - 1:
             cnt[j] += 1
-ans = cnt[75] + cnt[25]*(cnt[3]-1) + cnt[15]*(cnt[5]-1) + cnt[5]*(cnt[5]-1)//2*(cnt[3]-2)
+ans = cnt[75] + cnt[25] * (cnt[3] - 1) + cnt[15] * (cnt[5] - 1) + cnt[5] * (cnt[5] - 1) // 2 * (cnt[3] - 2)
 print(ans)

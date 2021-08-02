@@ -12,6 +12,7 @@ def make_prime_table(N):
                 sieve[j] = i
     return sieve
 
+
 N = int(input())
 
 prime_table = make_prime_table(100)
@@ -54,4 +55,3 @@ result += n24 * (n2 - 1)
 # x ^ 74 の約数の個数は75個
 result += n74
 print(result)
-

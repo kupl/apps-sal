@@ -34,11 +34,10 @@ for command in commands[:-1]:
 
 x, y = x + move[commands[-1]][0], y + move[commands[-1]][1]
 
-#print()
-#print(place)
-#print()
+# print()
+# print(place)
+# print()
 if (x < 0 or y < 0) or (x >= n or y >= m):
     print("0")
 else:
     print(n * m - len(place))
-

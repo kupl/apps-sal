@@ -66,4 +66,3 @@ else:
         fs = "".join(front)
         strs.append(fs + next(generator_o) + fs[::-1])
     print(" ".join(strs))
-

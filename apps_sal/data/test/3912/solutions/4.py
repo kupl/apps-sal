@@ -16,7 +16,7 @@ for key in d:
 if sum // 2 < len(odd):
     print(len(s))
     for c in s:
-        print(c+' ', end='')
+        print(c + ' ', end='')
     return
 while True:
     if len(odd) == 0 or (sum // 2) % len(odd) == 0:
@@ -46,4 +46,3 @@ for i in range(len(odd)):
     for j in range(i * l, (i + 1) * l):
         s = even[j] + s + even[j]
     print(s + ' ', end='')
-

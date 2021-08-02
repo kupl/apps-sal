@@ -9,13 +9,12 @@ for i in range(len(s)):
         result[i] = 1
         count -= 1
     if s[i] == 'U' and x0 > 1:
-        x0 -=1
+        x0 -= 1
     elif s[i] == 'D' and x0 < x:
-        x0 +=1
+        x0 += 1
     elif s[i] == 'L' and y0 > 1:
         y0 -= 1
     elif s[i] == 'R' and y0 < y:
         y0 += 1
-        
-print(" ".join(map(str,result)), count)
 
+print(" ".join(map(str, result)), count)

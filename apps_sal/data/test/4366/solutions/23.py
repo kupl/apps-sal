@@ -1,6 +1,6 @@
 a, b = map(int, input().split())
 
-ans = a + b;
+ans = a + b
 
 if ans >= 24:
     ans = ans - 24

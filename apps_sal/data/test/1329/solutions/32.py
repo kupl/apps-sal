@@ -6,7 +6,7 @@ n = int(input())
 def sieve(n):
     n += 1
     res = [i for i in range(n)]
-    for p in range(2, int(n**.5)+1):
+    for p in range(2, int(n**.5) + 1):
         if res[p] < p:
             continue
         for q in range(p**2, n, p):
@@ -28,7 +28,7 @@ def prime_factor(n):
 
 
 cnt = defaultdict(int)
-for i in range(1, n+1):
+for i in range(1, n + 1):
     for k, v in list(prime_factor(i).items()):
         cnt[k] += v
 
@@ -84,4 +84,3 @@ if 74 <= cnt[2]:
     ans += 1
 
 print(ans)
-

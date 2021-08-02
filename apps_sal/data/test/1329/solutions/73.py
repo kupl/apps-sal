@@ -64,4 +64,3 @@ result += n24 * (n2 - 1)
 # x ^ 74 の約数の個数は75個
 result += n74
 print(result)
-

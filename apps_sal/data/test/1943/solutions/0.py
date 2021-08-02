@@ -2,10 +2,13 @@ import functools
 n = int(input())
 
 props = []
-def preproc(a):
-    return float(a)/100.
 
-for i in range(pow(2,n)):
+
+def preproc(a):
+    return float(a) / 100.
+
+
+for i in range(pow(2, n)):
     props.append(list(map(preproc, input().split())))
 
 wining_props = []  # list of lists. First index -- number of round, second -- num of team, value -- prop of wining
@@ -29,8 +32,8 @@ for round_num in range(2, n + 1):
     for team_num in range(2 ** n):
         t = team_num // (2 ** round_num) * (2 ** (round_num))
         teams_we_meet_this_round = [t + x for x in range(2 ** round_num)]
-        t = team_num // (2 ** (round_num-1)) * (2 ** (round_num-1))
-        teams_we_meet_prev_round = [t + x for x in range(2 ** (round_num-1))]
+        t = team_num // (2 ** (round_num - 1)) * (2 ** (round_num - 1))
+        teams_we_meet_prev_round = [t + x for x in range(2 ** (round_num - 1))]
         for tt in teams_we_meet_prev_round:
             teams_we_meet_this_round.remove(tt)
 
@@ -52,7 +55,9 @@ for round_num in range(2, n + 1):
 
 # now we got props of each win on each round. Lets bet on most propable winer and calculate revenue
 
-#from left to right-1 is playing
+# from left to right-1 is playing
+
+
 @functools.lru_cache(maxsize=None)
 def revenue(round_num, teams_left, teams_right, winner=-1):
     split = ((teams_left + teams_right) // 2)
@@ -92,5 +97,5 @@ def revenue(round_num, teams_left, teams_right, winner=-1):
 
         return res
 
-print(revenue(n, 0, (2 ** n)))
 
+print(revenue(n, 0, (2 ** n)))

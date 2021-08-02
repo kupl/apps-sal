@@ -8,6 +8,7 @@ def iroha():
     else:
         print(num)
 
+
 def __starting_point():
     iroha()
 

@@ -34,12 +34,12 @@ elif len(even) % len(odd) == 0 and (len(even) // len(odd)) % 2 == 0 and (len(eve
         x.append(tail + odd[i] + tail[::-1])
     print(' '.join(x))
 else:
-    ratio = len(even)//len(odd)
+    ratio = len(even) // len(odd)
     max_length = 1
-    for i in range(1,ratio+1,2):
-        if (len(even)+len(odd)) % i == 0 and max_length < i:
+    for i in range(1, ratio + 1, 2):
+        if (len(even) + len(odd)) % i == 0 and max_length < i:
             max_length = i
-    parts = (len(even) + len(odd))//max_length
+    parts = (len(even) + len(odd)) // max_length
     print(parts)
     x = []
     indx = 0
@@ -59,4 +59,3 @@ else:
             indx += 2
         x.append(tail + middle[i] + tail[::-1])
     print(' '.join(x))
-

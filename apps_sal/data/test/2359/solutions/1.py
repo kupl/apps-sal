@@ -1,9 +1,11 @@
 from fractions import Fraction as F
 
+
 def solve():
     h, c, t = map(int, input().split())
     dt = abs(F(h - t))
     ans = 1
+
     def update(u, v):
         nonlocal dt, ans
         if u <= 0 or v < 0:
@@ -17,6 +19,7 @@ def solve():
     for x in range(ax - 3, ax + 4):
         update(x + 1, x)
     print(ans)
+
 
 t = int(input())
 for _ in range(t):

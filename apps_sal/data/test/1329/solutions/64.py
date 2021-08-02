@@ -1,3 +1,6 @@
+import collections
+
+
 class Prime:
     # https://qiita.com/daikw/items/f48d6ac374255763463d
     seed_primes = [
@@ -24,9 +27,12 @@ class Prime:
             return self.is_prime_miller_rabin(n)
 
     def is_prime_common(self, n):
-        if n == 1: return False
-        if n in Prime.seed_primes: return True
-        if any([n % x == 0 for x in self.seed_primes]): return False
+        if n == 1:
+            return False
+        if n in Prime.seed_primes:
+            return True
+        if any([n % x == 0 for x in self.seed_primes]):
+            return False
 
     def is_prime_brute_force(self, n):
         """
@@ -163,7 +169,6 @@ class Prime:
         return primes
 
 
-import collections
 N = int(input())
 c = collections.defaultdict(int)
 for i in range(1, N + 1):
@@ -171,8 +176,8 @@ for i in range(1, N + 1):
     for k, v in list(factors.items()):
         c[k] += v
 d = list(c.values())
-#3*5*5=3*25=5*15=75
-#a^b*c^dの約数は(b+1)*(d+1)個
+# 3*5*5=3*25=5*15=75
+# a^b*c^dの約数は(b+1)*(d+1)個
 n75 = sum(i >= 74 for i in d)
 n25 = sum(i >= 24 for i in d)
 n15 = sum(i >= 14 for i in d)
@@ -184,4 +189,3 @@ ans += n25 * (n3 - 1)
 ans += n15 * (n5 - 1)
 ans += n75
 print(ans)
-

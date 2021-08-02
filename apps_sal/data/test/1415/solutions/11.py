@@ -2,7 +2,8 @@
 
 # x, y, xc, yc = map(int, fin.readline().strip().split())
 x, y, xc, yc = map(int, input().strip().split())
-yc -= 1; xc -= 1
+yc -= 1
+xc -= 1
 # program = fin.readline().strip()
 program = input().strip()
 commands = {'U': (-1, 0), 'D': (1, 0), 'R': (0, 1), 'L': (0, -1)}
@@ -29,7 +30,7 @@ for i in range(len(program)):
         result.append(0)
     else:
         # print(x*y - cnt - (1 if used[xc][yc] else 0), end=' ')
-        print(x*y - cnt, end=' ')
+        print(x * y - cnt, end=' ')
     used[xc][yc] = True
     # print(xc + 1, yc + 1)
 # print()

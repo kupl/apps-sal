@@ -3,6 +3,8 @@ from collections import Counter, defaultdict
 N = int(input())
 
 # 素数のリスト
+
+
 def createPrimeList(N, isTable=True):
     isPrime = [True] * (N + 1)
     isPrime[0] = False
@@ -14,8 +16,11 @@ def createPrimeList(N, isTable=True):
             isPrime[p] = False
     return isPrime if isTable else [i for i in range(2, N) if isPrime[i]]
 
+
 # 素因数分解(複数回)
 primeList = createPrimeList(100, False)
+
+
 def primeFactorization(N):
     primes = Counter()
     for p in primeList:
@@ -23,6 +28,8 @@ def primeFactorization(N):
             N //= p
             primes[p] += 1
     return primes
+
+
 primes = Counter()
 for i in range(1, N + 1):
     primes += primeFactorization(i)
@@ -40,4 +47,3 @@ ans += cnt[25] * (cnt[3] - 1)
 ans += cnt[15] * (cnt[5] - 1)
 ans += cnt[75]
 print(ans)
-

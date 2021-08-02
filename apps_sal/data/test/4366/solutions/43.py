@@ -1,2 +1,2 @@
-x,y = map(int, input().split())
-print((x+y)%24)
+x, y = map(int, input().split())
+print((x + y) % 24)

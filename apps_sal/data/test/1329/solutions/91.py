@@ -1,12 +1,12 @@
 P = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-S = [0]*25
+S = [0] * 25
 
 N = int(input())
-for i in range(2, N+1):
+for i in range(2, N + 1):
     num = i
     j = 0
     while num > 1:
-        if num%P[j] == 0:
+        if num % P[j] == 0:
             num //= P[j]
             S[j] += 1
         else:
@@ -43,5 +43,5 @@ for num in S:
         tmp4 += 1
     if num >= 2 and num < 4:
         tmp2 += 1
-ans += tmp4*(tmp4-1)*(tmp4+tmp2-2)//2
+ans += tmp4 * (tmp4 - 1) * (tmp4 + tmp2 - 2) // 2
 print(ans)

@@ -8,7 +8,7 @@
 # A, B は整数である。
 
 # 標準入力から A時、B時を取得する
-hour_a,hour_b = list(map(int,input().split()))
+hour_a, hour_b = list(map(int, input().split()))
 
 # コンテストの開始時間を計算し出力する
 contest_start_hour = 0  # コンテスト開始時間
@@ -19,4 +19,3 @@ if contest_start_hour >= 24:    # 日付変わってるよ～
     contest_start_hour -= 24
 
 print(contest_start_hour)
-

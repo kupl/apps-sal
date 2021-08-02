@@ -10,4 +10,3 @@ for _ in range(int(input())):
         res -= 1
         j -= 1
     print(res)
-

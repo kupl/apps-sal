@@ -52,4 +52,3 @@ for move in s:
 result[-1] += x * y - nr_explore
 for r in result:
     print(r, end=" ")
-

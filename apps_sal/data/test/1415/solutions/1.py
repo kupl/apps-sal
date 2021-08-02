@@ -9,7 +9,7 @@ total = 0
 for i in range(len(moves)):
     #print(currX, currY)
     #print("Seen:", seen[currX][currY])
-    #print()
+    # print()
     if not seen[currX][currY]:
         print("1", end=" ")
         total += 1

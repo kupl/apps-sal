@@ -2,6 +2,7 @@ from collections import Counter
 
 n = int(input())
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -18,14 +19,15 @@ def prime_factorize(n):
         a.append(n)
     return a
 
+
 li = []
 
-for i in range(1,n+1):
+for i in range(1, n + 1):
     li += prime_factorize(i)
 
 C = Counter(li)
 
-a,b,c,d,e = 0,0,0,0,0
+a, b, c, d, e = 0, 0, 0, 0, 0
 
 for i in C.values():
     if i >= 74:
@@ -41,8 +43,8 @@ for i in C.values():
 
 point = 0
 point += e
-point += (d+e)*(a+b+c) + (d+e)*(d+e-1)
-point += (c+d+e)*b + (c+d+e)*(c+d+e-1)
-point += a*((b+c+d+e)*(b+c+d+e-1)//2) + (b+c+d+e)*((b+c+d+e-1)*(b+c+d+e-2)//2)
+point += (d + e) * (a + b + c) + (d + e) * (d + e - 1)
+point += (c + d + e) * b + (c + d + e) * (c + d + e - 1)
+point += a * ((b + c + d + e) * (b + c + d + e - 1) // 2) + (b + c + d + e) * ((b + c + d + e - 1) * (b + c + d + e - 2) // 2)
 
 print(point)

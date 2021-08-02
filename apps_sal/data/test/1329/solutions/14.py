@@ -36,9 +36,9 @@ def solve(N):
         return len([i for i in pf_nums if i >= m - 1])
 
     ans = num(75) + \
-          num(25) * (num(3) - 1) + \
-          num(15) * (num(5) - 1) + \
-          num(5) * (num(5) - 1) * (num(3) - 2) // 2
+        num(25) * (num(3) - 1) + \
+        num(15) * (num(5) - 1) + \
+        num(5) * (num(5) - 1) * (num(3) - 2) // 2
 
     print(ans)
 
@@ -51,5 +51,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()
