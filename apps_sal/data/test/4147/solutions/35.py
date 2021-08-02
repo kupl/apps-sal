@@ -1,7 +1,7 @@
+import itertools
 N, A, B, C = list(map(int, input().split()))
 L_list = [int(input()) for i in range(N)]
 
-import itertools
 
 Target = itertools.product([0, 1, 2, 3], repeat=N)
 
@@ -38,6 +38,5 @@ for T in Target:
 
     if min(A_sum, B_sum, C_sum) == 0: continue
 
-    ans = min(ans, abs(A - A_sum)+A_cost + abs(B - B_sum)+B_cost + abs(C - C_sum)+C_cost)
+    ans = min(ans, abs(A - A_sum) + A_cost + abs(B - B_sum) + B_cost + abs(C - C_sum) + C_cost)
 print(ans)
-

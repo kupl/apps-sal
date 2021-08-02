@@ -25,4 +25,3 @@ for prd in product(list(range(4)), repeat=N):
     if ans > (res := estimate(pieces)):
         ans = res
 print(ans)
-

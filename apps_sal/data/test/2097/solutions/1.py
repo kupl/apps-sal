@@ -6,4 +6,3 @@ for zz in range(t):
     if sum(a) + a.count(0) == 0:
         ans += 1
     print(ans)
-

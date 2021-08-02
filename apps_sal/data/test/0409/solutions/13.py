@@ -4,19 +4,19 @@ s = copy.deepcopy(si)
 
 c1 = 0
 i = 0
-while i < (len(s)-1):
-    if s[i:i+2] == ['A', 'B']:
+while i < (len(s) - 1):
+    if s[i:i + 2] == ['A', 'B']:
         s[i] = '.'
-        s[i+1] = '.'
+        s[i + 1] = '.'
         c1 = 1
         break
     i += 1
 c2 = 0
 i = 0
-while i < (len(s)-1):
-    if s[i:i+2] == ['B', 'A']:
+while i < (len(s) - 1):
+    if s[i:i + 2] == ['B', 'A']:
         s[i] = '.'
-        s[i+1] = '.'
+        s[i + 1] = '.'
         c2 = 1
         break
     i += 1
@@ -29,19 +29,19 @@ else:
 s = copy.deepcopy(si)
 c2 = 0
 i = 0
-while i < (len(s)-1):
-    if s[i:i+2] == ['B', 'A']:
+while i < (len(s) - 1):
+    if s[i:i + 2] == ['B', 'A']:
         s[i] = '.'
-        s[i+1] = '.'
+        s[i + 1] = '.'
         c2 = 1
         break
     i += 1
 c1 = 0
 i = 0
-while i < (len(s)-1):
-    if s[i:i+2] == ['A', 'B']:
+while i < (len(s) - 1):
+    if s[i:i + 2] == ['A', 'B']:
         s[i] = '.'
-        s[i+1] = '.'
+        s[i + 1] = '.'
         c1 = 1
         break
     i += 1

@@ -22,8 +22,8 @@ for i in range(n):
 for i in range(len(ss)):
     if ss[i] == '.':
         rank = 0
-        if i > 0 and ss[i-1] == 'S': rank += 1
-        if i+1 < len(ss) and ss[i+1] == 'S': rank += 1
+        if i > 0 and ss[i - 1] == 'S': rank += 1
+        if i + 1 < len(ss) and ss[i + 1] == 'S': rank += 1
         ss[i] = str(rank)
         r[rank] += 1
 
@@ -67,9 +67,9 @@ for i in range(len(ss)):
 
 for i in range(len(ss)):
     if ss[i] == 'S':
-        if i > 0 and (ss[i-1] in PASSENGERS):
+        if i > 0 and (ss[i - 1] in PASSENGERS):
             t += 1
-        if i+1 < len(ss) and (ss[i+1] in PASSENGERS):
+        if i + 1 < len(ss) and (ss[i + 1] in PASSENGERS):
             t += 1
 
 print(t)

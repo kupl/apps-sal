@@ -48,4 +48,3 @@ for groups in product(list(range(4)), repeat=N):
         ans = min(ans, cost)
 
 print(ans)
-

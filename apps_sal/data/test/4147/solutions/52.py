@@ -26,4 +26,3 @@ for x in itertools.product([0, 1, 2, 3], repeat=N):
     ans = min(ans, tmp)
 
 print(ans)
-

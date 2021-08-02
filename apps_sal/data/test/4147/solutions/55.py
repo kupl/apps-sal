@@ -13,4 +13,3 @@ for x in product(list(range(4)), repeat=n):
         continue
     ans = min(ans, t * 10 + abs(s[0] - a) + abs(s[1] - b) + abs(s[2] - c))
 print(ans)
-

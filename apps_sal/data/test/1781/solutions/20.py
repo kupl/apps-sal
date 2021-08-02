@@ -1,5 +1,6 @@
 DEBUG = False
 
+
 def print_debug(*args):
     if DEBUG:
         print(*args)
@@ -33,7 +34,7 @@ for row_i in range(n):
 
 print_debug("--------")
 print_debug(k)
-#print_res()
+# print_res()
 
 if k > 0:
     for row_i in range(n):
@@ -52,7 +53,7 @@ if k > 0:
 
 print_debug("--------")
 print_debug(k)
-#print_res()
+# print_res()
 
 if k > 0:
     for row_i in range(n):
@@ -69,5 +70,3 @@ if k > 0:
 
 print_debug(k)
 print_res()
-
-

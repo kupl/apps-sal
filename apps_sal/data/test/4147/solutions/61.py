@@ -10,11 +10,10 @@ def dfs(now, a, b, c):
     # 方法１　１つ飛ばす
     way1 = dfs(now + 1, a, b, c)
     # 方法２　合成魔法(MP10)
-    way2 = dfs(now + 1, a + l[now], b, c)+10
-    way3 = dfs(now + 1, a, b + l[now], c)+10
-    way4 = dfs(now + 1, a, b, c + l[now])+10
+    way2 = dfs(now + 1, a + l[now], b, c) + 10
+    way3 = dfs(now + 1, a, b + l[now], c) + 10
+    way4 = dfs(now + 1, a, b, c + l[now]) + 10
     return min(way1, way2, way3, way4)
 
 
 print((dfs(0, 0, 0, 0)))
-

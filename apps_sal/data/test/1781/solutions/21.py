@@ -16,7 +16,7 @@ chet = 0
 for i in range(n):
     for j in range(len(y[i])):
         if y[i][j] == '.':
-            if y[i][j-1] in top and y[i][j+1] in top and chet != k:
+            if y[i][j - 1] in top and y[i][j + 1] in top and chet != k:
                 #print(y[i][j-1], y[i][j], y[i][j+1])
                 y[i][j] = 'x'
                 chet += 1
@@ -55,7 +55,6 @@ for i in range(n):
                 kol += 1
 print(kol)
 for i in range(n):
-    for j in range(1, len(y[i])-1):
+    for j in range(1, len(y[i]) - 1):
         print(y[i][j], end='')
     print()
-

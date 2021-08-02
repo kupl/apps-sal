@@ -3,6 +3,7 @@ L_list = [int(input()) for i in range(N)]
 
 INF = 10 ** 9
 
+
 def dfs(a, b, c, n):
     if n == N:
         return abs(A - a) + abs(B - b) + abs(C - c) - 30 if min(a, b, c) > 0 else INF

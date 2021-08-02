@@ -9,21 +9,21 @@ for j in range(n):
         if c[i] == '.':
             if i == 0:
                 if c[1] == 'S':
-                    a.append([1, (j,0)])
+                    a.append([1, (j, 0)])
                 else:
-                    a.append([0, (j,0)])
+                    a.append([0, (j, 0)])
             elif i == 11:
                 if c[10] == 'S':
-                    a.append([1, (j,11)])
+                    a.append([1, (j, 11)])
                 else:
-                    a.append([0, (j,11)])
+                    a.append([0, (j, 11)])
             else:
                 k = 0
                 if c[i - 1] == 'S':
                     k += 1
                 if c[i + 1] == 'S':
                     k += 1
-                a.append([k, (j,i)])
+                a.append([k, (j, i)])
         if c[i] == 'S':
             if i == 0:
                 if c[1] not in '.-':

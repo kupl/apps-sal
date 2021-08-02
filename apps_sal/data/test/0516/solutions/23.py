@@ -76,4 +76,5 @@ def __starting_point():
     else:
         main()
 
+
 __starting_point()

@@ -14,7 +14,7 @@ for l in product([0, 1, 2, 3], repeat=N):
         if len(i) != 0: mp += (len(i) - 1) * 10
         p.append(sum(i))
     p.sort()
-    if p[0]!=0:
+    if p[0] != 0:
         for i in range(3):
             mp += abs(p[i] - abc[i])
         ans.append(mp)

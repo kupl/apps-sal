@@ -36,4 +36,3 @@ for groups in product(list(range(4)), repeat=N):
     ]))
 
 print(ans)
-

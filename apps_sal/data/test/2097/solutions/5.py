@@ -11,4 +11,3 @@ for _ in range(N):
     if sum(lst) == 0:
         ans += 1
     print(ans)
-

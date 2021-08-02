@@ -5,10 +5,10 @@ st = input()
 n = len(st)
 mx = ""
 ans = False
-a = [st[x:y] for x, y in combinations(range(len(st) + 1), r = 2)] 
+a = [st[x:y] for x, y in combinations(range(len(st) + 1), r=2)]
 for i in a:
-    for j in range(len(i)//2):
-        if i[j]==i[-1-j]:
+    for j in range(len(i) // 2):
+        if i[j] == i[-1 - j]:
             ans = True
         else:
             ans = False

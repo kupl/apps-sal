@@ -5,7 +5,7 @@ l = []
 for i in range(n):
     l.append(int(input()))
 mp = float("inf")
-for i in itertools.product([0,1,2,3], repeat = n):
+for i in itertools.product([0, 1, 2, 3], repeat=n):
     if 0 not in i or 1 not in i or 2 not in i:
         continue
     la, lb, lc = 0, 0, 0

@@ -19,4 +19,3 @@ for _ in range(t):
     print(ctr)
 
 # inf.close()
-

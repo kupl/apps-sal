@@ -14,8 +14,8 @@ for choice in product([0, 1, 2, 3], repeat=n):
         items[ch] += 1
         if items[ch] > 1:
             temp += 10
-    temp+=abs(a-totals[0])
-    temp+=abs(b-totals[1])
-    temp+=abs(c-totals[2])
+    temp += abs(a - totals[0])
+    temp += abs(b - totals[1])
+    temp += abs(c - totals[2])
     ans = min(ans, temp)
 print(ans)

@@ -4,7 +4,7 @@ n, *abc = map(int, input().split())
 llst = [int(input()) for _ in range(n)]
 
 ans = 10 ** 10
-for abc_lst in itertools.product(range(4), repeat = n):
+for abc_lst in itertools.product(range(4), repeat=n):
     tmp = 0
     labc = [[0, 0] for _ in range(3)]
     for i in range(n):

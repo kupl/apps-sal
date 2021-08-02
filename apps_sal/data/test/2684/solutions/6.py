@@ -9,7 +9,7 @@ else:
     maxLen = 0
     for i in range(n):
         for j in range(n):
-            if i +j > n: break
+            if i + j > n: break
             cur = s[i: i + j]
             if len(cur) > maxLen and cur == cur[::-1]:
                 out = cur

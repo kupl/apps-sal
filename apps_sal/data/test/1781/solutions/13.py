@@ -16,7 +16,7 @@ for i in range(a):
             row_ = ' ' + row + ' '
             if row_[j] != 'S' and row_[j + 2] != 'S':
                 if num > 0:
-                    row = row[:j] + 'x' + row[j+1:]
+                    row = row[:j] + 'x' + row[j + 1:]
                     num -= 1
             elif row_[j] != 'S' or row_[j + 2] != 'S':
                 average.append(j)
@@ -34,7 +34,7 @@ for i in range(a):
         for j in rows[i]['average']:
             if num > 0:
                 row = rows[i]['row']
-                row = row[:j] + 'x' + row[j+1:]
+                row = row[:j] + 'x' + row[j + 1:]
                 rows[i]['row'] = row
                 num -= 1
 
@@ -43,7 +43,7 @@ for i in range(a):
         for j in rows[i]['places']:
             if num > 0:
                 row = rows[i]['row']
-                row = row[:j] + 'x' + row[j+1:]
+                row = row[:j] + 'x' + row[j + 1:]
                 rows[i]['row'] = row
                 num -= 1
 
@@ -61,4 +61,3 @@ print(s)
 
 for i in range(a):
     print(rows[i]['row'])
-

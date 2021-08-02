@@ -23,4 +23,5 @@ def __starting_point():
     print(k)
     print(" ".join(map(str, positions)))
 
+
 __starting_point()

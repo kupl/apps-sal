@@ -3,6 +3,7 @@ rows = []
 for i in range(n):
     rows.append([c for c in input()])
 
+
 def nbcnt(row, col):
     res = 0
     if col != 0 and rows[row][col - 1] == 'S':
@@ -10,6 +11,7 @@ def nbcnt(row, col):
     if col != 11 and rows[row][col + 1] == 'S':
         res += 1
     return res
+
 
 for c in range(3):
     for i in range(n):
@@ -28,4 +30,3 @@ print(res)
 
 for i in range(n):
     print("".join(rows[i]))
-

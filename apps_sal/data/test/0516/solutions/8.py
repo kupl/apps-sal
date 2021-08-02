@@ -22,4 +22,3 @@ for i in range(len(min_pos) - 1):
     print(min_pos[i], end=" ")
 if(len(min_pos) > 0):
     print(min_pos[-1])
-

@@ -2,6 +2,7 @@ def main():
     n, a, b, c = list(map(int, input().split()))
     L = [int(input()) for _ in range(n)]
     INF = 1000000
+
     def dfs(i, la, lb, lc):
         if i == n:
             return abs(la - a) + abs(lb - b) + abs(lc - c) if min(la, lb, lc) > 0 else INF
@@ -13,6 +14,9 @@ def main():
         return min(res)
     print(dfs(0, 0, 0, 0))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

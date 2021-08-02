@@ -35,4 +35,4 @@ else:
         if abs(pos2 - pos3) > 1:
             print('YES')
         else:
-            print('NO')   
+            print('NO')
