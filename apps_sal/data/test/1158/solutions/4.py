@@ -20,4 +20,3 @@ for i in range(len(arr)):
 
 min_blud = ceil(max_cnt / k)
 print(min_blud * len(d) * k - n)
-

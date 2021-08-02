@@ -23,7 +23,7 @@ class Solution:
         if newInterval != None:
             res.append(newInterval)
         return res
-    
+
     def merge(self, a, b):
         if b is None or a.start > b.end or a.end < b.start:
             return False

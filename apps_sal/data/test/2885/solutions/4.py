@@ -18,6 +18,3 @@ class Solution:
             start = min(start, intervals[len(left)].start)
             end = max(end, intervals[~len(right)].end)
         return left + [Interval(start, end)] + right
-            
-                
-            

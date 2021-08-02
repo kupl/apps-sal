@@ -41,4 +41,3 @@ while k < n and new_price[k] > 0:
     k += 1
 
 print(total - win_sum)
-

@@ -20,5 +20,5 @@ class Solution:
                 right.append(i)
             else:
                 start = min(start, i.start)
-                end = max(end,i.end)
+                end = max(end, i.end)
         return left + [Interval(start, end)] + right

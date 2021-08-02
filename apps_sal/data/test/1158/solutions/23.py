@@ -10,13 +10,13 @@ maxx = -1
 for key in D.keys():
     if D[key] > maxx:
         maxx = D[key]
-#print(maxx)
+# print(maxx)
 a = maxx // m
 if maxx % m > 0:
     a += 1
 summ = a * m
 ans = 0
-#print(summ)
+# print(summ)
 for key in D.keys():
     ans += (summ - D[key])
 print(ans)

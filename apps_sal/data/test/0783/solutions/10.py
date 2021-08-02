@@ -8,4 +8,3 @@ for i in range(n):
         print(0, end=" ")
     else:
         print(suff[i] - home[i] + 1, end=" ")
-

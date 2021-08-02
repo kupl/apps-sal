@@ -13,7 +13,7 @@ class Solution:
         """
         if intervals == []:
             return [newInterval]
-        
+
         index = 0
         while index < len(intervals):
             if newInterval.start < intervals[index].start:
@@ -24,7 +24,7 @@ class Solution:
         if index == 0:
             s = newInterval.start
             e = newInterval.end
-            insert_index = index 
+            insert_index = index
         else:
             if newInterval.start <= intervals[index - 1].end:
                 s = intervals[index - 1].start
@@ -35,7 +35,7 @@ class Solution:
                 s = newInterval.start
                 e = newInterval.end
                 insert_index = index
-            
+
         while index < len(intervals):
             if intervals[index].start <= e:
                 e = max(e, intervals[index].end)
@@ -47,8 +47,5 @@ class Solution:
         while i < del_index:
             intervals.pop(insert_index)
             i += 1
-        intervals.insert(insert_index, Interval(s,e))
+        intervals.insert(insert_index, Interval(s, e))
         return intervals
-                    
-                
-        

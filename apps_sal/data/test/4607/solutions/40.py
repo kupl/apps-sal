@@ -1,7 +1,6 @@
 A, B = [int(i) for i in input().split()]
 
 if A <= B:
-  print(A)
+    print(A)
 else:
-  print((A-1))
-
+    print((A - 1))

@@ -10,4 +10,3 @@ for i in range(1, 13):
         if i <= b:
             ans += 1
 print(ans)
-

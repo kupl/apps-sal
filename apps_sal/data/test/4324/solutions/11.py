@@ -7,4 +7,3 @@ for i in range(int(input())):
         k = k + 1
         k = k % b
     print(f)
-

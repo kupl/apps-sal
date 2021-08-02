@@ -10,4 +10,3 @@ while i < n and c[i] < 0:
     ans += c[i]
     i += 1
 print(ans)
-

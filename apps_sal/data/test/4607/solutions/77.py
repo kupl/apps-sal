@@ -36,7 +36,7 @@ def resolve():
     a, b = list(map(int, input().split()))
 
     if a > b:
-        print((a-1))
+        print((a - 1))
     else:
         print(a)
 
@@ -44,5 +44,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

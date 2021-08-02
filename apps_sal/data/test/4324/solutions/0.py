@@ -8,5 +8,3 @@ while TC > 0:
     print(ans[:n])
 
     TC -= 1
-
-

@@ -5,7 +5,7 @@ c = list(map(int, input().split()))
 m = -1
 num = sum(b)
 for i in a:
-    if i == m+1:
-        num += c[m-1]
+    if i == m + 1:
+        num += c[m - 1]
     m = i
 print(num)

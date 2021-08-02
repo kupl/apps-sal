@@ -4,4 +4,3 @@ if a <= b:
     res += 1
 
 print(res)
-

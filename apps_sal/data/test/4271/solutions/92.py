@@ -7,11 +7,9 @@ ans = 0
 x = -1
 
 for i in A:
-    ans += B[i-1]
-    if x+1 == i:
-        ans += C[x-1]
+    ans += B[i - 1]
+    if x + 1 == i:
+        ans += C[x - 1]
     x = i
 
 print(ans)
-
-

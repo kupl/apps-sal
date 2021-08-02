@@ -3,4 +3,6 @@ def resolve():
     if a <= b: c = a
     else: c = a - 1
     print(c)
+
+
 resolve()

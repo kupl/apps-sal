@@ -15,4 +15,3 @@ while i < n:
     ans += b[c[i][1]]
     i += 1
 print(ans)
-

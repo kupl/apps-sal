@@ -1,11 +1,13 @@
 import sys
 from itertools import accumulate
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
+
 
 def solve():
     n, k = map(int, input().split())
@@ -22,8 +24,10 @@ def solve():
         ans = min(ans, sumB + dif[i])
 
     print(ans)
-    
+
 
 def __starting_point():
     solve()
+
+
 __starting_point()

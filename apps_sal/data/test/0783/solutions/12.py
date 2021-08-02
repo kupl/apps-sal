@@ -12,5 +12,3 @@ p = ''
 for i in ans:
     p += i.__str__() + ' '
 print(p)
-
-

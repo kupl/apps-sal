@@ -12,4 +12,4 @@ for e in d:
     if d[e] > m:
         m = d[e]
 blud_podano = (m - 1) // k + 1
-print(blud_podano*len(d)*k-n)
+print(blud_podano * len(d) * k - n)

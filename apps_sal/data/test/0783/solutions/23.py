@@ -8,4 +8,3 @@ for i in range(n - 2, -1, -1):
     else:
         ma = a[i]
 print(*b)
-

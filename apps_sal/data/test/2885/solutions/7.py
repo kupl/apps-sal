@@ -39,4 +39,3 @@ class Solution:
             else:
                 ret.append(i)
         return ret
-            

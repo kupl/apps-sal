@@ -16,4 +16,3 @@ ans = 0
 for i in p:
     ans += l - i
 print(ans)
-

@@ -11,12 +11,12 @@ for i in range(0, n):
     cnt[i][2] = b[i]
 
 cnt.sort()
-ans= 0
+ans = 0
 
-for i in range(n - 1, n - k - 1,-1):
+for i in range(n - 1, n - k - 1, -1):
     ans += cnt[i][1]
 
-for i in range(n - k - 1, -1,-1):
+for i in range(n - k - 1, -1, -1):
     ans += min(cnt[i][1], cnt[i][2])
 
 print(ans)

@@ -1,12 +1,12 @@
-n, k = map(int,input().split())
-lo = 0#Imposs
-hi = 10 ** 9#Poss
+n, k = map(int, input().split())
+lo = 0  # Imposs
+hi = 10 ** 9  # Poss
 
 
 l = list(map(int, input().split()))
 
 while hi - lo > 1:
-    test = lo + (hi - lo)//2
+    test = lo + (hi - lo) // 2
 
     odd = 0
     skip = False

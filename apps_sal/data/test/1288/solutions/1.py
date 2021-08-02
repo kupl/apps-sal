@@ -12,6 +12,7 @@ def subsolve(a, x):
         i = j
     return c
 
+
 def odd(n, k, a):
     if k >= 2 and k % 2 == 0:
         a = a[:-1]
@@ -23,6 +24,7 @@ def odd(n, k, a):
         else:
             l = mid
     return r
+
 
 def even(n, k, a):
     if k == 1:
@@ -39,9 +41,11 @@ def even(n, k, a):
             l = mid
     return r
 
+
 def solve():
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
     print(min(odd(n, k, a), even(n, k, a)))
+
 
 solve()

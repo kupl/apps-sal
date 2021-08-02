@@ -14,4 +14,3 @@ dis = ((maxD - 1) // k + 1) * k
 for i in list(d.values()):
     amount += dis - i
 print(amount)
-

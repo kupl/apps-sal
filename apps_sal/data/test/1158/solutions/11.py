@@ -12,4 +12,3 @@ while i <= 100 and pr[i] > 0:
     ans = ans + m - pr[i]
     i += 1
 print(ans)
-
