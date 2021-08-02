@@ -13,7 +13,7 @@ while 1:
     if low == high:
         ans = low
         break
-    
+
     mid = (low + high) // 2
     if np.sum((A - I) // mid) <= K:
         high = mid

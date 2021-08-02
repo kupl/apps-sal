@@ -21,7 +21,7 @@ def main():
     x0 = -1
     for i in range(N):
         x0 = max(x0, A[i] - i)
-    x1 = A[p-1]
+    x1 = A[p - 1]
     """
     if x0 >= x1:
         print(0)
@@ -31,37 +31,38 @@ def main():
 
     dic = {}
     i = 0
-    for x in range(x0, x0 + 2*10**5+1):
+    for x in range(x0, x0 + 2 * 10**5 + 1):
         while True:
-            if i == N-1:
+            if i == N - 1:
                 break
-            if A[i+1] <= x:
+            if A[i + 1] <= x:
                 i += 1
             else:
                 break
-        dic[x] = i+1
+        dic[x] = i + 1
 
-    ok = x0-1
+    ok = x0 - 1
     ng = x1
-    mid = (ok+ng)//2
+    mid = (ok + ng) // 2
     while ng - ok > 1:
         x = mid
         flg = 1
         for i in range(N):
-            if (dic[x+i] - i) % p == 0:
+            if (dic[x + i] - i) % p == 0:
                 flg = 0
                 break
         if flg:
             ok = mid
         else:
             ng = mid
-        mid = (ok+ng)//2
+        mid = (ok + ng) // 2
     print(ok - x0 + 1)
-    X = list(range(x0, ok+1))
+    X = list(range(x0, ok + 1))
     print(*X)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

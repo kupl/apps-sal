@@ -1,4 +1,4 @@
-n, k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 s = input()
 sento = 0
 ketu = 0
@@ -16,7 +16,7 @@ for i in range(n):
 
 zeroichi.append(cnt)
 
-if len(zeroichi)%2 == 0:
+if len(zeroichi) % 2 == 0:
     zeroichi.append(0)
 
 if len(zeroichi) == 1:
@@ -27,7 +27,7 @@ i = 0
 ans = 0
 ans_list = []
 j = 0
-right = min(1+k*2,len(zeroichi))
+right = min(1 + k * 2, len(zeroichi))
 left = 0
 
 while i != right:
@@ -38,12 +38,11 @@ ans_list.append(ans)
 
 while right != len(zeroichi):
     ans -= zeroichi[left]
-    ans -= zeroichi[left+1]
+    ans -= zeroichi[left + 1]
     ans += zeroichi[right]
-    ans += zeroichi[right+1]
+    ans += zeroichi[right + 1]
     ans_list.append(ans)
     left += 2
     right += 2
 
 print((max(ans_list)))
-

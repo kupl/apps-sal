@@ -9,7 +9,7 @@ for ele in s:
         cnt += 1
     else:
         ls.append(cnt)
-        now = 1 - now #1と0の切替
+        now = 1 - now  # 1と0の切替
         cnt = 1
 ls.append(cnt)
 
@@ -18,16 +18,16 @@ ls.append(cnt)
 if len(ls) % 2 == 0:
     ls.append(0)
 
-Add = 2*k+1 #[left, right)
+Add = 2 * k + 1  # [left, right)
 ans = 0
 
 left = 0
 right = 0
-tmp = 0 # [left, right)のsum
+tmp = 0  # [left, right)のsum
 
 # print(ls)
 # 1-0-1-0..の１から始める
-for i in range(0,len(ls),2):
+for i in range(0, len(ls), 2):
     nextLeft = i
     nextRight = min(i + Add, len(ls))
     # print(" value", tmp)

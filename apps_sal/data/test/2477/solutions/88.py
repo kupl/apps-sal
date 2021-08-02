@@ -14,4 +14,3 @@ def binary_search(bad, good, key):
 
 N, K, *A = list(map(int, open(0).read().split()))
 print((binary_search(0, 1_000_000_000, K)))
-

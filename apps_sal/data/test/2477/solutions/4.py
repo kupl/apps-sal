@@ -26,4 +26,3 @@ def resolve():
 
 
 resolve()
-

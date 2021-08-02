@@ -1,4 +1,4 @@
-N,K = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 S = input()
 
 beforeChar = S[0]
@@ -37,11 +37,13 @@ for i in range(sectionNumber):
     sumLength += sectionList[i][1]
     sumLengthList.append(sumLength)
 
+
 def sumLengthByRange(rangeStartSection, rangeEndSection):
     if rangeStartSection == 0:
         return sumLengthList[rangeEndSection]
     else:
         return sumLengthList[rangeEndSection] - sumLengthList[rangeStartSection - 1]
+
 
 startSection = 0
 endSection = 0

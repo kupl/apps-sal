@@ -6,7 +6,7 @@ c = 2**30
 r = 2**30
 while r:
     r //= 2
-    l = sum(-(-a//c)-1 for a in A)
+    l = sum(-(-a // c) - 1 for a in A)
     if l > K:
         c += r
     else:

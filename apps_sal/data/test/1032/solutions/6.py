@@ -3,10 +3,10 @@ a = list(map(int, input().split()))
 
 a.sort()
 left = 0
-right = 10**9+1
+right = 10**9 + 1
 while right - left > 1:
 
-    mid = left + (right - left)//2
+    mid = left + (right - left) // 2
     x = mid
 
     flag = 1
@@ -25,10 +25,10 @@ while right - left > 1:
 ansleft = right
 
 left = 0
-right = 10**9+1
+right = 10**9 + 1
 
 while right - left > 1:
-    mid = left + (right - left)//2
+    mid = left + (right - left) // 2
     x = mid
 
     flag = 1
@@ -52,7 +52,6 @@ while right - left > 1:
 
 ansright = left
 
-ans = [i for i in range(ansleft, ansright+1)]
+ans = [i for i in range(ansleft, ansright + 1)]
 print(len(ans))
 print(*ans)
-

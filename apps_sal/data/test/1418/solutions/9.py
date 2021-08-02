@@ -4,6 +4,7 @@ def prost(i):
             return x
     return 1
 
+
 l = 1
 mass = []
 for i in range(2, int(input()) + 1):

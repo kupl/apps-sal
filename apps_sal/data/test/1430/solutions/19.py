@@ -18,7 +18,7 @@ while i < n:
     j = i
     while j < n and S[i] == S[j]:
         j += 1
-    cnt.append(j-i)
+    cnt.append(j - i)
     i = j
 
 # 最後尾が0なら1が0個とみなす
@@ -38,6 +38,6 @@ lenCumCnt = len(cumCnt)
 ans = 0
 
 for left in range(0, lenCumCnt, 2):
-    right = min(left + 2*k+1, lenCumCnt-1)
+    right = min(left + 2 * k + 1, lenCumCnt - 1)
     ans = max(ans, cumCnt[right] - cumCnt[left])
 print(ans)

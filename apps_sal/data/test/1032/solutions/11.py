@@ -1,70 +1,77 @@
 import copy
 con = 10 ** 9 + 7; INF = float("inf")
 
+
 def getlist():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
 
 def Binary_Search(N, P, A, dif):
-	#初期化
-	left = 0
-	right = N - 1
-	ansleft = dif
-	ansright = -INF
-	
-	#二分探索
-	while left <= right:
-		mid = (left + right) // 2
-		jud = "Yes"
+    # 初期化
+    left = 0
+    right = N - 1
+    ansleft = dif
+    ansright = -INF
 
-		B = copy.deepcopy(A)
-		B.append(INF)
-		for t in range(N):
-			B[t] -= mid
+    # 二分探索
+    while left <= right:
+        mid = (left + right) // 2
+        jud = "Yes"
 
-		# 尺取り
-		array = [None] * N
-		i = 0; j = 0
-		while True:
-			if B[j] <= i:
-				j += 1
-			else:
-				if (j - i) % P == 0:
-					jud = "No"
-					break
-				array[i] = j - i
-				i += 1
-			if i >= N:
-				break
+        B = copy.deepcopy(A)
+        B.append(INF)
+        for t in range(N):
+            B[t] -= mid
 
-		if jud == "Yes":
-			ansright = max(ansright, dif + mid)
-			left = mid + 1
-		else:
-			right = mid - 1
+        # 尺取り
+        array = [None] * N
+        i = 0; j = 0
+        while True:
+            if B[j] <= i:
+                j += 1
+            else:
+                if (j - i) % P == 0:
+                    jud = "No"
+                    break
+                array[i] = j - i
+                i += 1
+            if i >= N:
+                break
 
-	return ansleft, ansright
+        if jud == "Yes":
+            ansright = max(ansright, dif + mid)
+            left = mid + 1
+        else:
+            right = mid - 1
 
-#処理内容
+    return ansleft, ansright
+
+# 処理内容
+
+
 def main():
-	N, P = getlist()
-	A = getlist()
-	A = sorted(A)
-	dif = 0
-	# 配列の初期化
-	for i in range(N):
-		dif = max(dif, A[i] - i)
-	for i in range(N):
-		A[i] -= dif
+    N, P = getlist()
+    A = getlist()
+    A = sorted(A)
+    dif = 0
+    # 配列の初期化
+    for i in range(N):
+        dif = max(dif, A[i] - i)
+    for i in range(N):
+        A[i] -= dif
 
-	L, R = Binary_Search(N, P, A, dif)
-	if R == -INF:
-		print(0)
-		print()
-	else:
-		Xlis = [i for i in range(L, R + 1)]
-		print(len(Xlis))
-		print(*Xlis)
+    L, R = Binary_Search(N, P, A, dif)
+    if R == -INF:
+        print(0)
+        print()
+    else:
+        Xlis = [i for i in range(L, R + 1)]
+        print(len(Xlis))
+        print(*Xlis)
+
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

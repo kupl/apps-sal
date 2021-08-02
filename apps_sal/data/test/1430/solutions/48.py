@@ -11,7 +11,7 @@ if len(S) // 2 <= K:
         if len(S) == 1:
             print((sum([j for i, j in S])))
             return
-            
+
     else:
         print((sum([j for i, j in S])))
         return
@@ -28,9 +28,9 @@ for i, j in S:
         cnt += 1
 sidx = 0
 mans = ans
-for i in range(lidx,len(S)):
+for i in range(lidx, len(S)):
     ans += S[i][1]
-    if i == len(S)-1 or S[i][0] == "1":
+    if i == len(S) - 1 or S[i][0] == "1":
         while True:
             ans -= S[sidx][1]
             sidx += 1
@@ -39,7 +39,3 @@ for i in range(lidx,len(S)):
         mans = max(mans, ans)
 
 print(mans)
-
-
-        
-

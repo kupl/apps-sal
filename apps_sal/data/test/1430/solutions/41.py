@@ -33,5 +33,3 @@ for left in range(M):
             zeros -= 1
         tot -= cs[left][1]
 print(ans)
-
-

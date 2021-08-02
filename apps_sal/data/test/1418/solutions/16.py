@@ -14,4 +14,3 @@ while p <= n:
     p += 1
 
 print(' '.join(map(str, ans[2:])))
-

@@ -6,7 +6,7 @@ start = 0
 for i in range(n):
     if s[i] == 0 and (i == 0 or s[i - 1] == 1):
         cnt += 1
-    
+
     if cnt == k + 1:
         while True:
             start += 1
@@ -16,4 +16,3 @@ for i in range(n):
     ans = max(ans, i - start + 1)
 
 print(ans)
-

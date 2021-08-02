@@ -39,4 +39,3 @@ for j in range(1, len(cumsum), 2):
     t = min(j + 2 * K, len(cumsum) - 1)
     ans = max(ans, cumsum[t] - cumsum[max(h - 1, 0)])
 print(ans)
-

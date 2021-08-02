@@ -45,4 +45,3 @@ matrix = list(map(int, input().split()))
 res = solve(n, p, matrix)
 print(len(res))
 print(" ".join(map(str, res)))
-

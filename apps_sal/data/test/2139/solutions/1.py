@@ -2,7 +2,7 @@ s = input()
 ans = 0
 li = []
 for i in range(len(s)):
-    if s[i:i+4] == 'bear':
+    if s[i:i + 4] == 'bear':
         li.append(i)
 if len(li) == 0:
     print(0)
@@ -20,7 +20,6 @@ else:
                 break
         if b:
             break
-        ans += len(s)-start-3
-        
-    print(ans)
+        ans += len(s) - start - 3
 
+    print(ans)

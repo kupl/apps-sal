@@ -16,12 +16,13 @@ NMI = lambda: map(int, input().split())
 NLI = lambda: list(NMI())
 SI = lambda: input()
 
+
 def main():
     N, K = NMI()
     A = NLI()
-    
-    ng = 0       #ng:とり得る最小の値-1
-    ok = 10**9+10  #ok:とり得る最大の値+1
+
+    ng = 0  # ng:とり得る最小の値-1
+    ok = 10**9 + 10  # ok:とり得る最大の値+1
 
     while (abs(ok - ng) > 1):
         mid = (ok + ng) // 2
@@ -29,10 +30,9 @@ def main():
         cut = 0
         for a in A:
             if a % mid == 0:
-                cut += math.floor(a/mid)-1
+                cut += math.floor(a / mid) - 1
             else:
-                cut += math.floor(a/mid)
-
+                cut += math.floor(a / mid)
 
         if cut <= K:
             ok = mid
@@ -40,8 +40,10 @@ def main():
             ng = mid
 
     print(ok)
-    
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

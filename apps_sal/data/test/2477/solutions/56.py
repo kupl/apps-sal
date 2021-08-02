@@ -12,4 +12,3 @@ while ok - ng > 1:
     else:
         ng = mid
 print(ok)
-

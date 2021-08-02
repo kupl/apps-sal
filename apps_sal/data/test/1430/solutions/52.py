@@ -35,7 +35,7 @@ def resolve():
     acc = [0] + list(accumulate(L))
     ans = 0
     # 1-0-1-0-1の配列なので間に0を含んだ数え上げ
-    # なので偶数とびに1を起点に数え上げ 
+    # なので偶数とびに1を起点に数え上げ
     for i in range(0, len(L) - length + 1, 2):
         ans = max(ans, acc[i + length] - acc[i])
 
@@ -44,5 +44,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

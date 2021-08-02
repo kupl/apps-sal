@@ -1,3 +1,6 @@
+import unittest
+
+
 def get_max_s(s):
     n = len(s)
     i = 0
@@ -5,7 +8,7 @@ def get_max_s(s):
     count = 0
 
     while i < n:
-        if s[i:i+4] == 'bear':
+        if s[i:i + 4] == 'bear':
             count += (n - (i + 4) + 1) * (i - l + 1)
             l = i + 1
             i += 4
@@ -20,7 +23,6 @@ def __starting_point():
     max_s = get_max_s(s)
     print(max_s)
 
-import unittest
 
 class TestFoo(unittest.TestCase):
     def test_world(self):

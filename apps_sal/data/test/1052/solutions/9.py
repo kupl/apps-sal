@@ -4,6 +4,7 @@ fact = [1]
 def c_n_k(k, n):
     return fact[n] // (fact[k] * fact[n - k])
 
+
 n, k = map(int, input().split())
 
 for i in range(1, n + 1):

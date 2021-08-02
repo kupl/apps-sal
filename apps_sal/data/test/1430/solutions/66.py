@@ -27,4 +27,3 @@ for i in range(window, len(lengths)):
         ans = max(ans, buf)
 
 print(ans)
-

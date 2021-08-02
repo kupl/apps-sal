@@ -5,7 +5,7 @@ n, k = list(map(int, input().split()))
 #k += 1
 #n += 1
 an = 0
-dr = [0, 0, 1, 2,9]
+dr = [0, 0, 1, 2, 9]
 for i in range(n - k, n + 1):
     r = n - i
     if r == 0:
@@ -14,4 +14,3 @@ for i in range(n - k, n + 1):
         an += dr[r] * f(n) // (f(i) * f(n - i))
    # print(an, f(nr) // (f(i) * f(n - i)))
 print(an)
-

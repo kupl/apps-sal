@@ -44,7 +44,7 @@ def trial(x):
     # print('try', x)
     num_cut = 0
     for a in A:
-        num_cut += (-(-a//x)-1)
+        num_cut += (-(-a // x) - 1)
         # print('num_cut', num_cut)
         if (num_cut > K):
             return False
@@ -62,4 +62,3 @@ while (r - l > 1):
     else:
         l = ans
 print(r)
-
