@@ -22,4 +22,3 @@ for _ in range(int(input())):
     for elem in fifi:
         ans += elem
     print(len(ar) + ans)
-

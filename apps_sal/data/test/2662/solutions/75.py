@@ -8,13 +8,12 @@ for i in range(1, N):
         continue
     ok = 0
     ng = len(S)
-    tmp = (ok+ng)
-    while ok+1 < ng:
-        tmp = (ok+ng)//2
+    tmp = (ok + ng)
+    while ok + 1 < ng:
+        tmp = (ok + ng) // 2
         if A[i] > S[tmp]:
             ok = tmp
         else:
             ng = tmp
     S[ok] = A[i]
 print((len(S)))
-

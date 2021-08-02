@@ -4,4 +4,3 @@ f = Fraction(a, b).limit_denominator(d)
 num = f.numerator
 den = f.denominator
 print(str(num) + '/' + str(den))
-

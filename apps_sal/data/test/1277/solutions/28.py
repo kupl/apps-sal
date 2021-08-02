@@ -1,35 +1,37 @@
-from collections import deque,defaultdict
+from collections import deque, defaultdict
 import copy
+
 
 def main():
     from collections import defaultdict
-    import copy 
-    n,u,v = map(int,input().split())
+    import copy
+    n, u, v = map(int, input().split())
     u -= 1
     v -= 1
     graph = defaultdict(deque)
-    for _ in range(n-1):
-        a,b = map(int,input().split())
+    for _ in range(n - 1):
+        a, b = map(int, input().split())
         a -= 1
         b -= 1
         graph[a].append(b)
         graph[b].append(a)
 
-    depth = dfs(graph,u,n)
+    depth = dfs(graph, u, n)
     # print(depth)
-    depth2 = dfs(graph,v,n)
+    depth2 = dfs(graph, v, n)
     # print(depth2)
     ans = 0
     ans2 = 10**6
-    for i,j in zip(depth,depth2):
+    for i, j in zip(depth, depth2):
         if i < j:
-            ans = max(j,ans)
+            ans = max(j, ans)
         # elif i == j:
         #     ans2 = min(j,ans2)
 
-    print(ans-1)
+    print(ans - 1)
 
-def dfs(G,s,n):
+
+def dfs(G, s, n):
     stack = deque([s])
     graph = copy.deepcopy(G)
     depth = [None] * n
@@ -46,6 +48,6 @@ def dfs(G,s,n):
             stack.pop()
 
     return depth
-    
+
 
 main()

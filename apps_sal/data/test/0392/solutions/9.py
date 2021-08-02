@@ -10,10 +10,11 @@ def factor(n):
     if n > 1:
         ans.add(n)
     return ans
+
+
 n = int(input())
 num = 1
 q_n_set = factor(n)
 for i in q_n_set:
     num *= i
 print(num)
-

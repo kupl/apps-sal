@@ -1,8 +1,7 @@
-n = int(input())
-from math import sqrt
 from math import ceil
+from math import sqrt
+n = int(input())
 
-    
 
 def prim(n):
     i = 2
@@ -11,13 +10,12 @@ def prim(n):
             return i
         i += 1
     return 1
+
+
 k = n
-while  k > 1:
+while k > 1:
     k = prim(n)
     n = n // k
-    
+
 
 print(n)
-
-
-

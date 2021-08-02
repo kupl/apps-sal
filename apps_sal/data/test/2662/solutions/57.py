@@ -15,6 +15,6 @@ for i in range(1, N):
     # elif dp[-1] < A[i]:
     #     dp[-1] = A[i]
     else:
-        dp[ind-1] = A[i]
+        dp[ind - 1] = A[i]
 
 print(len(dp))

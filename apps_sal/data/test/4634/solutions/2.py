@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     alst = list(map(int, input().split()))
@@ -13,7 +14,9 @@ def main():
             else:
                 ans += i - bef - 1
             bef = i
-        
+
     print(ans)
+
+
 for _ in range(int(input())):
     main()

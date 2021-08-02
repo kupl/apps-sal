@@ -1,7 +1,7 @@
 n, k, p = [int(c) for c in input().split()]
 a = [int(c) for c in input().split()]
 
-nech= []
+nech = []
 ch = []
 
 for i in range(len(a)):
@@ -36,4 +36,4 @@ else:
     sets[0] = sets[0] + nech + ch
 
 for i in range(len(sets)):
-    print(len(sets[i]),' '.join(map(str,sets[i])))
+    print(len(sets[i]), ' '.join(map(str, sets[i])))

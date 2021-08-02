@@ -1,10 +1,10 @@
 from collections import deque
-n , u , v = map(int,input().split())
+n, u, v = map(int, input().split())
 u -= 1
 v -= 1
 route = [[] for i in range(n)]
-for i in range(n-1):
-    a , b = map(lambda x:int(x)-1,input().split())
+for i in range(n - 1):
+    a, b = map(lambda x: int(x) - 1, input().split())
     route[a].append(b)
     route[b].append(a)
 
@@ -32,5 +32,5 @@ while d:
 ans = 0
 for i in range(n):
     if takyori[i] <= aokyori[i]:
-        ans = max(ans,aokyori[i]-1)
+        ans = max(ans, aokyori[i] - 1)
 print(ans)

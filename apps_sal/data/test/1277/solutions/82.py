@@ -2,13 +2,15 @@ import os
 import sys
 import numpy as np
 
+
 def solve(N, U, V, AB):
-    G = [[0]*0 for _ in range(N+1)]
+    G = [[0] * 0 for _ in range(N + 1)]
     for idx_ab in range(len(AB)):
         a, b = AB[idx_ab]
         G[a].append(b)
         G[b].append(a)
-    P1 = np.zeros(N+1, dtype=np.int64)
+    P1 = np.zeros(N + 1, dtype=np.int64)
+
     def dfs1(u):
         st = [u]
         while st:
@@ -26,13 +28,14 @@ def solve(N, U, V, AB):
         path_u2v.append(v)
     path_u2v.reverse()
     l = len(path_u2v)
-    half = (l-2) // 2
+    half = (l - 2) // 2
     c = path_u2v[half]
-    ng = path_u2v[half+1]
-    Depth = np.zeros(N+1, dtype=np.int64)
+    ng = path_u2v[half + 1]
+    Depth = np.zeros(N + 1, dtype=np.int64)
+
     def dfs2(c):
         st = [c]
-        P = np.zeros(N+1, dtype=np.int64)
+        P = np.zeros(N + 1, dtype=np.int64)
         while st:
             v = st.pop()
             p = P[v]
@@ -43,12 +46,12 @@ def solve(N, U, V, AB):
                     P[u] = v
                     Depth[u] = d + 1
     dfs2(c)
-    c_ = path_u2v[l-1-half]
+    c_ = path_u2v[l - 1 - half]
     v = c_
     while v != c:
         Depth[v] = 0
         v = P1[v]
-    d = l%2
+    d = l % 2
     ans = max(Depth) + half + d
     return ans
 
@@ -78,12 +81,12 @@ else:
 
 def main():
     N, u, v = map(int, input().split())
-    if N==2:
+    if N == 2:
         print(0)
         return
-    AB = np.array(sys.stdin.read().split(), dtype=np.int64).reshape(N-1, 2)
+    AB = np.array(sys.stdin.read().split(), dtype=np.int64).reshape(N - 1, 2)
     ans = solve(N, u, v, AB)
     print(ans)
 
-main()
 
+main()

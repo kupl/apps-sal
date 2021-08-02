@@ -1,7 +1,7 @@
 n = int(input())
-a = [int(input())-1 for _ in range(n)]
+a = [int(input()) - 1 for _ in range(n)]
 
-visit_node = [0]*(n)
+visit_node = [0] * (n)
 ans = 0
 curr_node = 0
 

@@ -20,4 +20,3 @@ for _ in range(int(input())):
             z = 0
 
     print(c)
-

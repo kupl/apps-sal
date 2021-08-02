@@ -12,7 +12,5 @@ else:
     if (2 * Fraction(x, y) - Fraction(x / y).limit_denominator(n)).denominator > y:
         print(Fraction(x / y).limit_denominator(n))
     else:
-        a= 2 * Fraction(x, y) - Fraction(x / y).limit_denominator(n)
-        print(str(a.numerator)+"/"+str(a.denominator))
-
-
+        a = 2 * Fraction(x, y) - Fraction(x / y).limit_denominator(n)
+        print(str(a.numerator) + "/" + str(a.denominator))

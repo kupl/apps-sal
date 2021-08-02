@@ -19,4 +19,3 @@ for _ in range(N):
     else:
         ans[idx].append(A)
 print((len(ans)))
-

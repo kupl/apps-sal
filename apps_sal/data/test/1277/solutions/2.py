@@ -8,8 +8,8 @@ input = sys.stdin.readline
 N, U, V = list(map(int, input().split()))
 U -= 1
 V -= 1
-G = [[] for _ in [0]*N]
-for _ in [0]*(N-1):
+G = [[] for _ in [0] * N]
+for _ in [0] * (N - 1):
     a, b = list(map(int, input().split()))
     a -= 1
     b -= 1
@@ -18,9 +18,9 @@ for _ in [0]*(N-1):
 
 INF = 10**10
 
-T = [INF]*N
+T = [INF] * N
 T[U] = 0
-A = [INF]*N
+A = [INF] * N
 A[V] = 0
 
 
@@ -28,7 +28,7 @@ def bfs(v, dist):
     q = deque()
     q.append(v)
     k = 0
-    visited = [0]*N
+    visited = [0] * N
     while q:
         v = q.popleft()
         visited[v] = 1
@@ -38,7 +38,7 @@ def bfs(v, dist):
             if visited[u]:
                 continue
             q.append(u)
-            dist[u] = k+1
+            dist[u] = k + 1
 
 
 bfs(U, T)
@@ -55,5 +55,4 @@ for i, (t, a) in enumerate(zip(T, A)):
         farthest = a
         node = i
 
-print((farthest-1))
-
+print((farthest - 1))

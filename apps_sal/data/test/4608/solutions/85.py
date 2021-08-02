@@ -11,4 +11,3 @@ if A[now] == 2:
     print((cnt + 1))
 else:
     print((-1))
-

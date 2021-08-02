@@ -1,6 +1,6 @@
 N = int(input())
 A = [int(input()) for _ in range(N)]
-A = [a-1 for a in A]
+A = [a - 1 for a in A]
 
 fin = set()
 cnt = 0

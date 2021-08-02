@@ -2,6 +2,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def bisect_right_reverse(L, target):
     ok = len(L)
     ng = -1
@@ -12,6 +13,7 @@ def bisect_right_reverse(L, target):
         else:
             ng = mid
     return ok
+
 
 N = int(input())
 A = [int(input()) for _ in range(N)]

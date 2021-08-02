@@ -6,10 +6,10 @@ cnt = 0
 check = False
 
 for i in range(N):
-  if j == 2:
-    check= True
-    break
-  cnt += 1
-  j = A[j]
-  
+    if j == 2:
+        check = True
+        break
+    cnt += 1
+    j = A[j]
+
 print(cnt if check else -1)

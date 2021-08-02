@@ -10,4 +10,5 @@ def __starting_point():
 
     print(total * n)
 
+
 __starting_point()

@@ -7,10 +7,10 @@ q = []
 A.reverse()
 
 for i in range(N):
-  ii = bisect(q,A[i])
-  if ii == len(q):
-    heapq.heappush(q,A[i])
-  else:
-    q[ii] = A[i]
-    
+    ii = bisect(q, A[i])
+    if ii == len(q):
+        heapq.heappush(q, A[i])
+    else:
+        q[ii] = A[i]
+
 print(len(q))

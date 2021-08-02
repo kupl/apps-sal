@@ -2,7 +2,7 @@
 # https://atcoder.jp/contests/abc065/tasks/abc065_b
 
 N = int(input())
-a = [int(input())-1 for _ in range(N)]
+a = [int(input()) - 1 for _ in range(N)]
 ans = 0
 cur = 0
 
@@ -19,4 +19,3 @@ while True:
     if cur == 1:
         print(ans)
         return
-

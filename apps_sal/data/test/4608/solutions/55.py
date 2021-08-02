@@ -7,11 +7,11 @@ p = a[0]
 if p == 2:
     print(1)
     return
-    
+
 cnt = 1
 
 for _ in range(n):
-    p = a[p-1]
+    p = a[p - 1]
     cnt += 1
     if p == 2:
         print(cnt)

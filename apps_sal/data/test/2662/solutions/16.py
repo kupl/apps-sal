@@ -13,4 +13,3 @@ for e in a:
 
 ans = len(li)
 print(ans)
-

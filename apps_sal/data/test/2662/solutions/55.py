@@ -12,6 +12,6 @@ for a in A[1:]:
     if idx == 0:
         q.appendleft(a)
     else:
-        q[idx-1] = a
+        q[idx - 1] = a
 
 print(len(q))

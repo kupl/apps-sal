@@ -7,6 +7,8 @@ for i in range(n - 1):
     a, b = map(int, input().split())
     edges[a - 1].append(b - 1)
     edges[b - 1].append(a - 1)
+
+
 def bfs(u):
     visited = [-1] * n
     Q = deque()
@@ -19,6 +21,8 @@ def bfs(u):
                 visited[v] = visited[p] + 1
                 Q.append(v)
     return visited
+
+
 tak_dist = bfs(u)
 aok_dist = bfs(v)
 ans = []

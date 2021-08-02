@@ -11,4 +11,3 @@ for a in A:
     else:
         q[idx] = a
 print((len(q)))
-

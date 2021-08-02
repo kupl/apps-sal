@@ -11,4 +11,3 @@ for i in range(1, n + 10):
         break
 else:
     print((-1))
-

@@ -23,20 +23,9 @@ if a[0] == 2:
     print((1))
     return
 while idx != -1:
-    a[idx-1], idx = -1, a[idx-1]
+    a[idx - 1], idx = -1, a[idx - 1]
     cnt += 1
-    if a[idx-1] == 2:
+    if a[idx - 1] == 2:
         print(cnt)
         return
 print((-1))
-
-
-
-
-
-
-
-
-
-
-

@@ -9,9 +9,8 @@ def resolve():
         if idx == 0:
             colormax.appendleft(A[i])
         else:
-            colormax[idx-1] = A[i]
+            colormax[idx - 1] = A[i]
     print(len(colormax))
-
 
 
 if '__main__' == __name__:

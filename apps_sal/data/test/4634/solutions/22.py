@@ -13,4 +13,3 @@ while t:
             lb = i
             c += 1
     print(lb - fb - c + 1)
-

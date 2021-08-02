@@ -25,7 +25,5 @@ for i in range(1, n + 1):
         dif = abs(x * i - na * y) / (y * i)
     #print(str(a) + " : " + str(b) + " : " + str(dif))
 ans = str(a) + "/" + str(b)
-    #print (a / b)
+#print (a / b)
 print(ans)
-    
-

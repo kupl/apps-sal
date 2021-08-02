@@ -10,6 +10,7 @@ for _ in range(n - 1):
     ab[a - 1].append(b - 1)
     ab[b - 1].append(a - 1)
 
+
 def dfs1(pos, before_pos):
     for next_pos in ab[pos]:
         if next_pos == before_pos:
@@ -21,7 +22,8 @@ def dfs1(pos, before_pos):
             root.append(pos)
             return True, root
     return False, []
-    
+
+
 root = dfs1(v, -1)[1]
 root = root[::-1]
 root.append(u)
@@ -30,6 +32,7 @@ pos = root[n]
 before_pos = root[n - 1]
 
 max_len = n
+
 
 def dfs2(pos, before_pos, cnt):
     nonlocal max_len
@@ -48,4 +51,3 @@ dfs2(pos, before_pos, n - 1)
 ans = max_len - 1
 ans = max(ans, 0)
 print(ans)
-

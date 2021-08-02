@@ -1,5 +1,5 @@
 t = int(input())
-for i10 in range (t):
+for i10 in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     k = 0
@@ -14,5 +14,3 @@ for i10 in range (t):
         else:
             k += 1
     print(s)
-        
-

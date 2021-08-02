@@ -11,7 +11,7 @@ else:
         if a[i] == 2:
             print(cnt)
             break
-        elif a[i] == i+1 or cnt > n:
+        elif a[i] == i + 1 or cnt > n:
             print('-1')
             break
-        i = a[i]-1
+        i = a[i] - 1

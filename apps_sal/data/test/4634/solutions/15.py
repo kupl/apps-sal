@@ -1,3 +1,7 @@
+import os
+import sys
+
+
 def testcase():
 
     n = int(input())
@@ -21,7 +25,6 @@ def testcase():
     return
 
 
-import sys, os
 if os.path.exists('input.txt'):
     sys.stdin = open('input.txt', 'r')
 t = int(input())

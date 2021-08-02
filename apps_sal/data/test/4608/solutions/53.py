@@ -10,6 +10,6 @@ for i in range(n):
         print(cnt)
         return
     else:
-        cnt +=1
-        x = l[x-1]
+        cnt += 1
+        x = l[x - 1]
 print('-1')

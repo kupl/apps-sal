@@ -21,9 +21,9 @@ while abs(Decimal(lo) - Decimal(hi)) > 10 ** (-10) and hrd < 10000:
 
     l = False
     h = False
-    
-    for i in [a1*d1, a1*d2, a2*d1, a2*d2]:
-        for j in [b1*c1, b1*c2, b2*c1, b2*c2]:
+
+    for i in [a1 * d1, a1 * d2, a2 * d1, a2 * d2]:
+        for j in [b1 * c1, b1 * c2, b2 * c1, b2 * c2]:
             if i - j <= 0:
                 l = True
             if i - j >= 0:

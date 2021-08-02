@@ -49,7 +49,9 @@ def main():
         res = (l - 1) // 2 + star_square + 1
     print(res)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

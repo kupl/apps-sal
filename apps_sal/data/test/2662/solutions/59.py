@@ -7,4 +7,3 @@ dp = [INF] * (n + 1)
 for e in a:
     dp[bisect.bisect_right(dp, e)] = e
 print((bisect.bisect_left(dp, INF)))
-

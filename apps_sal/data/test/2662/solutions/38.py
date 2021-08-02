@@ -11,7 +11,6 @@ for i in range(n):
     if j == 0:
         dp.appendleft(a[i])
     else:
-        dp[j-1] = a[i]
+        dp[j - 1] = a[i]
 
 print((len(dp)))
-

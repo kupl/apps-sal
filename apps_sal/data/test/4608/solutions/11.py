@@ -12,7 +12,7 @@ for i in range(len(A)):
         print(i)
         found = True
         break
-    index = A[index]-1
+    index = A[index] - 1
 
 if not found:
     print(-1)

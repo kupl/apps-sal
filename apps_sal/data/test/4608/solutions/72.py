@@ -12,4 +12,3 @@ for _ in range(n):
         break
     next_button = buttons[next_button - 1]
 print((done.count(1)))
-

@@ -15,4 +15,3 @@ for i in range(n + 1):
     tmp = A[tmp]
 else:
     print((-1))
-

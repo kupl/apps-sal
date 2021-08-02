@@ -18,19 +18,24 @@ def bisect_right_reverse(a, x):
             ng = mid
     return ok
 
+
 def main():
-  N = int(input())
-  ans = 1
-  lis_min = [int(input())]
-  for i in range(N-1):
-    a = int(input())
-    index = bisect_right_reverse(lis_min, a)
-    if index != len(lis_min):
-      lis_min[index] = a
-    else:
-      ans += 1
-      lis_min.append(a)
-  print(ans)
+    N = int(input())
+    ans = 1
+    lis_min = [int(input())]
+    for i in range(N - 1):
+        a = int(input())
+        index = bisect_right_reverse(lis_min, a)
+        if index != len(lis_min):
+            lis_min[index] = a
+        else:
+            ans += 1
+            lis_min.append(a)
+    print(ans)
+
+
 def __starting_point():
-  main()
+    main()
+
+
 __starting_point()

@@ -1,4 +1,4 @@
-a, b= list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 c, d = list(map(int, input().split()))
 if a * d - b * c == 0:
     print(0)
@@ -21,4 +21,3 @@ else:
         else:
             small = avg
     print(small)
-

@@ -9,7 +9,8 @@ def ans(books):
         if i is None:
             i = k
 
-    return sum(1-x for x in books[i:j+1])
+    return sum(1 - x for x in books[i:j + 1])
+
 
 for _ in range(int(input())):
     input()

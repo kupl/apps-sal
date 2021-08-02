@@ -6,8 +6,8 @@ def main():
     x = 1
 
     if 2 in a:
-        for _ in range(n-1):
-            x = a[x-1]
+        for _ in range(n - 1):
+            x = a[x - 1]
             cnt += 1
 
             if x == 2:
@@ -17,7 +17,7 @@ def main():
             print(-1)
     else:
         print(-1)
-        
 
-if __name__ ==  "__main__":
+
+if __name__ == "__main__":
     main()

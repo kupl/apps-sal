@@ -39,4 +39,3 @@ for i in range(n):
     if du[i] < dv[i]:
         mx = max(mx, dv[i])
 print((mx - 1))
-

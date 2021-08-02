@@ -1,5 +1,7 @@
 def gcd(a, b):
     return gcd(b % a, a) if a else b
+
+
 x, y, n = map(int, input().split())
 g = gcd(x, y)
 x, y = x // g, y // g

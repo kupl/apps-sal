@@ -10,10 +10,9 @@ for _ in range(N):
     idx = bisect_left(A, x)
     if idx == 0:
         A.insert(idx, x)
-    elif A[idx-1] == x:
+    elif A[idx - 1] == x:
         A.insert(idx, x)
     else:
-        A[idx-1] = x
+        A[idx - 1] = x
 #    print(A,x)
 print((len(A)))
-

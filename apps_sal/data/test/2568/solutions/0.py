@@ -12,6 +12,8 @@ def solve():
                 pm = cur
                 ans += i + 1
     print(ans)
+
+
 t = int(input())
 for _ in range(t):
     solve()
