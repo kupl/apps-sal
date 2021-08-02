@@ -15,4 +15,3 @@ la = ra - la + 1
 lb = rb - lb + 1
 ans = max(0, min(la - d2, lb), min(la, lb - d1))
 print(ans)
-

@@ -1,5 +1,6 @@
 import math
 
+
 def gcd(a, b):
     """Returns the greatest common divisor of a and b.
     Should be implemented using recursion.
@@ -28,13 +29,15 @@ def gcd(a, b):
 delta = gcd(ta, tb)
 # print(delta)
 
+
 def overlap(al, ar, bl, br):
     return max(0, min(ar, br) - max(al, bl) + 1)
+
 
 def eval(fst_, snd_):
     result_ = 0
 
-    k1 = math.ceil(abs(fst_[0] - snd_[0])/delta)
+    k1 = math.ceil(abs(fst_[0] - snd_[0]) / delta)
     k2 = abs(fst_[0] - snd_[0]) // delta
 
     for k in (k1, k2):
@@ -46,7 +49,6 @@ def eval(fst_, snd_):
         # print(intersection)
         # print(pos_sndl, pos_sndr, pos_fstl, pos_fstr, intersection)
         result_ = max(result_, intersection)
-
 
     # pos_sndl = snd_[0]
     # pos_sndr = snd_[1]

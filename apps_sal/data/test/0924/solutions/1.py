@@ -1,10 +1,17 @@
+import math
+
+
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
-import math
+
 
 la, ra, ta = mi()
 lb, rb, tb = mi()
@@ -22,4 +29,3 @@ off2 = off1 - dif
 ans2 = min(ra, off2 + rb - lb) - max(0, off2) + 1
 ans = max(ans1, ans2, 0)
 print(ans)
-

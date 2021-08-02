@@ -22,5 +22,3 @@ for test in range(tests):
             print(1)
         else:
             print(2)
-        
-

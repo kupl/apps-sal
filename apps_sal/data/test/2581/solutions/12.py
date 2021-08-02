@@ -1,3 +1,4 @@
+from sys import stdin
 import sys
 from functools import lru_cache, cmp_to_key
 from heapq import merge, heapify, heappop, heappush
@@ -15,13 +16,14 @@ starttime = time.time()
 mod = int(pow(10, 9) + 7)
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
-def out(*var, end="\n"): sys.stdout.write(' '.join(map(str, var))+end)
+def out(*var, end="\n"): sys.stdout.write(' '.join(map(str, var)) + end)
 def L(): return list(sp())
 def sl(): return list(ssp())
 def sp(): return list(map(int, data().split()))
 def ssp(): return list(map(str, data().split()))
 def l1d(n, val=0): return [val for i in range(n)]
 def l2d(n, m, val=0): return [l1d(n, val) for j in range(m)]
+
 
 try:
     # sys.setrecursionlimit(int(pow(10,6)))
@@ -30,41 +32,34 @@ try:
 except:
     pass
 
-from sys import stdin
 input = stdin.buffer.readline
-I = lambda : list(map(int,input().split()))
- 
-n,=I()
-l=[]
+I = lambda: list(map(int, input().split()))
+
+n, = I()
+l = []
 for i in range(n):
     l.append(I())
-d={};su={};s=0;an=[1,1,2,1]
+d = {}; su = {}; s = 0; an = [1, 1, 2, 1]
 for i in range(n):
     for j in range(n):
-        d[i-j]=d.get(i-j,0)+l[i][j]
-        su[i+j]=su.get(i+j,0)+l[i][j]
-x=0;y=0
+        d[i - j] = d.get(i - j, 0) + l[i][j]
+        su[i + j] = su.get(i + j, 0) + l[i][j]
+x = 0; y = 0
 for i in range(n):
     for j in range(n):
-        p=d[i-j]+su[i+j]-l[i][j]
-        if (i+j)%2:
-            if p>x:
-                an[0],an[1]=i+1,j+1
-                x=p
+        p = d[i - j] + su[i + j] - l[i][j]
+        if (i + j) % 2:
+            if p > x:
+                an[0], an[1] = i + 1, j + 1
+                x = p
         else:
-            if p>y:
-                an[2],an[3]=i+1,j+1
-                y=p
-s=x+y
+            if p > y:
+                an[2], an[3] = i + 1, j + 1
+                y = p
+s = x + y
 print(s)
 print(*an)
 
 
-
-
-
-
-
 endtime = time.time()
 # print(f"Runtime of the program is {endtime - starttime}")
-

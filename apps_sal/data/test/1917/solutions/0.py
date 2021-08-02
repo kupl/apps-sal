@@ -10,16 +10,17 @@ nl = lambda: list(map(int, readline().split()))
 
 eps = 10**-7
 
+
 def solve():
     n, k = nm()
     a = nl()
-    ans = [0]*n
-    ok = 10**9; ng = -4*10**18
+    ans = [0] * n
+    ok = 10**9; ng = -4 * 10**18
     while ok - ng > 1:
         mid = (ok + ng) // 2
         ck = 0
         for i in range(n):
-            d =  9 - 12 * (mid + 1 - a[i])
+            d = 9 - 12 * (mid + 1 - a[i])
             if d < 0:
                 continue
             ck += min(a[i], int((3 + d**.5) / 6 + eps))
@@ -29,7 +30,7 @@ def solve():
         else:
             ok = mid
     for i in range(n):
-        d =  9 - 12 * (ok + 1 - a[i])
+        d = 9 - 12 * (ok + 1 - a[i])
         if d < 0:
             continue
         ans[i] = min(a[i], int((3 + d**.5) / 6 + eps))

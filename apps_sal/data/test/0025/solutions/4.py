@@ -16,5 +16,3 @@ else:
                 cnt += 2
     for r in arr:
         print(' '.join(map(str, r)))
-
-

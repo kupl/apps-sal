@@ -10,4 +10,3 @@ g = gcd(ta, tb)
 lna, lnb = ra - la + 1, rb - lb + 1
 d = lb - la - (lb - la) // g * g
 print(max(0, min(lna - d, lnb), min(lna, lnb - g + d)))
-

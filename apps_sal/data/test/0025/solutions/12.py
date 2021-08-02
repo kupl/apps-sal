@@ -5,8 +5,8 @@ k = int(s.split(' ')[1])
 
 arr = []
 for i in range(n):
-    arr.append([0]*n)
-if k > n*n:
+    arr.append([0] * n)
+if k > n * n:
     print(-1)
 else:
     l = 0
@@ -24,6 +24,5 @@ else:
 
     for i in range(n):
         for j in range(n):
-           print(arr[i][j], end=' ')
+            print(arr[i][j], end=' ')
         print()
-

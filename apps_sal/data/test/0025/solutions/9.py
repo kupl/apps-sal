@@ -22,8 +22,6 @@ for i in range(n):
         if not k % 2:
             a[i + 1][i + 1] = 1
         break
-        
+
 for i in a:
     print(*i)
-    
-
