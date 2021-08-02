@@ -40,8 +40,8 @@ def main():
     print((ans_list[S]))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

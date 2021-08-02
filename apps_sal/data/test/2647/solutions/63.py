@@ -20,11 +20,11 @@ def main():
         for dy, dx in move:
             ny = y + dy
             nx = x + dx
-            if (1
-                    and 0 <= ny < H
-                    and 0 <= nx < W
-                    and distance[ny][nx] == 1
-                    and S[ny][nx] == '.'):
+            if (1 and
+                    0 <= ny < H and
+                    0 <= nx < W and
+                    distance[ny][nx] == 1 and
+                    S[ny][nx] == '.'):
                 queue.append((ny, nx))
                 distance[ny][nx] = distance[y][x] + 1
     if distance[H - 1][W - 1] == 1:
@@ -35,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

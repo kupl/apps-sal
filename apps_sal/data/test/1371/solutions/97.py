@@ -17,4 +17,3 @@ for i in range(s + 1):
     dp[i] = (dp[i - 1] + dp[i - 3]) % mod
 
 print((dp[s] % mod))
-

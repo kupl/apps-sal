@@ -45,7 +45,7 @@ def resolve():
     H, W = list(map(int, input().split()))
     S = [list(input()) for _ in range(H)]
 
-    F = [[-1]*W for _ in range(H)]
+    F = [[-1] * W for _ in range(H)]
 
     dx = [1, 0, -1, 0]
     dy = [0, 1, 0, -1]
@@ -58,7 +58,7 @@ def resolve():
         p = Q.popleft()
         x, y = p
 
-        if x == W-1 and y == H-1:
+        if x == W - 1 and y == H - 1:
             break
 
         for i in range(4):
@@ -70,17 +70,18 @@ def resolve():
             Q.append([nx, ny])
             F[ny][nx] = F[y][x] + 1
 
-    if F[H-1][W-1] == -1:
+    if F[H - 1][W - 1] == -1:
         print((-1))
     else:
         NS = 0
         for s in S:
             NS += s.count("#")
-        print((W*H-F[H-1][W-1]-NS))
+        print((W * H - F[H - 1][W - 1] - NS))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

@@ -14,7 +14,7 @@ def main():
 
     H -= 1
     W -= 1
-    
+
     # initialize
     queue.append((0, 0))
     dist[0][0] = 0
@@ -28,19 +28,22 @@ def main():
         if (vx, vy) == (W, H):
             break
 
-        dxdy = [(1,0), (0, 1), (-1, 0), (0, -1)]
+        dxdy = [(1, 0), (0, 1), (-1, 0), (0, -1)]
         for dx, dy in dxdy:
-            if (vx + dx > W) or (vy + dy > H): continue
-            elif (vx + dx < 0) or (vy + dy < 0): continue
+            if (vx + dx > W) or (vy + dy > H):
+                continue
+            elif (vx + dx < 0) or (vy + dy < 0):
+                continue
 
             elif graph[vy + dy][vx + dx] == ".":
                 if dist[vy + dy][vx + dx] == -1:
                     queue.append((vx + dx, vy + dy))
                     dist[vy + dy][vx + dx] = dist[vy][vx] + 1
-                    
 
-            elif graph[vy + dy][vx + dx] == "#": continue
-            else: continue
+            elif graph[vy + dy][vx + dx] == "#":
+                continue
+            else:
+                continue
 
     # can't goal
     if dist[H][W] == -1:
@@ -49,6 +52,9 @@ def main():
         # the number of "." - min(dist) - "." of start
         print(cnt - dist[H][W] - 1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

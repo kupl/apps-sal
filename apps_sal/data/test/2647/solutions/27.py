@@ -18,6 +18,8 @@ def abc088d_grid_repainting():
         for dx, dy in zip([0, 0, 1, -1], [1, -1, 0, 0]):
             if 0 <= x + dx < h and 0 <= y + dy < w and maze[x + dx][y + dy] != '#' and not check[x + dx][y + dy]:
                 check[x + dx][y + dy] = True
-                heapq.heappush(q, (dis+1, x + dx, y + dy))
+                heapq.heappush(q, (dis + 1, x + dx, y + dy))
     print('-1')
+
+
 abc088d_grid_repainting()

@@ -51,4 +51,5 @@ def bfs(H, W, field, dir_h, dir_w):
 def __starting_point():
     main()
 
+
 __starting_point()

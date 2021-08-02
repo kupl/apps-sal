@@ -14,6 +14,7 @@ q.append((0, 0))
 visit = [0] * (H * W)
 visit[0] = 1
 
+
 def bfs():
     while q:
         x, y = q.popleft()
@@ -21,11 +22,15 @@ def bfs():
             x2 = x + dx
             y2 = y + dy
 
-            if x2 < 0 or x2 > W - 1: continue
-            if y2 < 0 or y2 > H - 1: continue
+            if x2 < 0 or x2 > W - 1:
+                continue
+            if y2 < 0 or y2 > H - 1:
+                continue
 
-            if visit[y2 * W + x2]: continue
-            if M[y2][x2] == '#': continue
+            if visit[y2 * W + x2]:
+                continue
+            if M[y2][x2] == '#':
+                continue
 
             visit[y2 * W + x2] = visit[y * W + x] + 1
 
@@ -33,6 +38,7 @@ def bfs():
                 return visit[y2 * W + x2]
 
             q.append((x2, y2))
+
 
 steps = bfs()
 ans = -1

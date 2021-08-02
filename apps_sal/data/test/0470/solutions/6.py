@@ -6,4 +6,3 @@ for x in t:
     if t[x] > 1:
         ans = min(ans, s - x * min(3, t[x]))
 print(ans)
-

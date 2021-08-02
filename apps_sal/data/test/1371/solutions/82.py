@@ -25,4 +25,3 @@ for n in range(1, s + 1):
     ans %= MOD
 
 print(ans)
-

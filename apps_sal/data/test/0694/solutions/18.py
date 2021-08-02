@@ -15,33 +15,33 @@ mod, MOD = 1000000007, 998244353
 # from math import ceil,floor,log,sqrt,factorial,pi
 # from bisect import bisect,bisect_left,bisect_right,insort,insort_left,insort_right
 
+
 def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
 def get_ints(): return list(map(int, sys.stdin.readline().strip().split()))
 def input(): return sys.stdin.readline().strip()
 
+
 string = input()
 length = len(string)
-a,b = get_ints()
-dp1 = [0]*length
-dp2 = [0]*length
-dp1[0] = int(string[0])%a
-for i in range(1,length):
-    dp1[i] = (dp1[i-1]*10 + int(string[i]))%a
-dp2[~0] = int(string[~0])%b
+a, b = get_ints()
+dp1 = [0] * length
+dp2 = [0] * length
+dp1[0] = int(string[0]) % a
+for i in range(1, length):
+    dp1[i] = (dp1[i - 1] * 10 + int(string[i])) % a
+dp2[~0] = int(string[~0]) % b
 mul = 10
-for i in range(1,length):
-    dp2[~i] = (int(string[~i])*mul + dp2[~(i-1)])%b
-    mul = (mul*10)%b
+for i in range(1, length):
+    dp2[~i] = (int(string[~i]) * mul + dp2[~(i - 1)]) % b
+    mul = (mul * 10) % b
 
 # print(dp1)
 # print(dp2)
-for i in range(length-1):
-    if dp1[i]==0 and dp2[i+1]==0:
-        if string[i+1]!='0':
+for i in range(length - 1):
+    if dp1[i] == 0 and dp2[i + 1] == 0:
+        if string[i + 1] != '0':
             print('YES')
-            print(string[:i+1])
-            print(string[i+1 : ])
+            print(string[:i + 1])
+            print(string[i + 1:])
             return
 print('NO')
-
-

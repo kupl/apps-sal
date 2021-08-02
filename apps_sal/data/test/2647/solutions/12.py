@@ -27,5 +27,4 @@ while not que.empty():
 white = sum(sum(1 if S[x][y] == '.' else 0 for y in range(W)) for x in range(H))
 
 # 答え
-print((white - dist[H-1][W-1] - 1 if dist[H-1][W-1] != -1 else -1))
-
+print((white - dist[H - 1][W - 1] - 1 if dist[H - 1][W - 1] != -1 else -1))

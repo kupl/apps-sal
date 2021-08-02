@@ -7,7 +7,7 @@ x = 0
 for i in range(len(s)):
     x = (x * 10 + int(s[i])) % a
     left[i] = x % a
-    
+
 x = 0
 m = 1
 for i in reversed(list(range(0, len(s)))):
@@ -18,7 +18,7 @@ for i in reversed(list(range(0, len(s)))):
 pos = -1
 for i in range(len(s) - 1):
     if left[i] == 0 and right[i + 1] == 0 and s[i + 1] != '0':
-        pos = i 
+        pos = i
         break
 if pos == -1:
     print('NO')
@@ -26,4 +26,3 @@ else:
     print('YES')
     print(s[:pos + 1])
     print(s[pos + 1:])
-

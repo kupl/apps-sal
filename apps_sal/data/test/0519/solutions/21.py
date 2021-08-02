@@ -1,4 +1,4 @@
-#In the name of Allah
+# In the name of Allah
 
 from sys import stdin, stdout
 input = stdin.readline
@@ -8,4 +8,3 @@ p = int(input())
 q = int(input())
 
 stdout.write(str(p * q * l / (q) / (q + p)))
-

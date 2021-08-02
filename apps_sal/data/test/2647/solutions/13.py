@@ -10,7 +10,7 @@ def bfs():  # 最短経路を求める　→　白マスの数から最短経路
     d[0][0] = 0
     while que:
         p = que.popleft()
-        if p[0] == h-1 and p[1] == w-1:
+        if p[0] == h - 1 and p[1] == w - 1:
             break
         for i in range(4):
             nh = p[0] + dh[i]
@@ -18,7 +18,7 @@ def bfs():  # 最短経路を求める　→　白マスの数から最短経路
             if 0 <= nh < h and 0 <= nw < w and d[nh][nw] == float("inf") and c[nh][nw] == '.':
                 que.append((nh, nw))
                 d[nh][nw] = 1 + d[p[0]][p[1]]
-    return d[h-1][w-1]
+    return d[h - 1][w - 1]
 
 
 h, w = list(map(int, input().split()))
@@ -32,7 +32,6 @@ for i in range(h):
 mi = bfs()
 
 if 0 < mi < float("inf"):
-    print((count - mi -1))
+    print((count - mi - 1))
 else:
     print((-1))
-

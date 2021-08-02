@@ -26,4 +26,3 @@ if shortest_path:
     print((sum(v == "." for row in field for v in row) - len(shortest_path)))
 else:
     print((-1))
-

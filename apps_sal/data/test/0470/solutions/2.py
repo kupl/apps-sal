@@ -5,6 +5,7 @@ def count(a, x):
             ans += 1
     return ans
 
+
 a = list(map(int, input().split()))
 s = sum(a)
 ans = s
@@ -14,4 +15,3 @@ for x in a:
         ans = min(ans, s - min(v, 3) * x)
 
 print(ans)
-

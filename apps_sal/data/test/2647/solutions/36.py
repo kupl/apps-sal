@@ -1,6 +1,8 @@
+from collections import deque
 import sys
 read = sys.stdin.read
-from collections import deque
+
+
 def main():
     h, w = map(int, input().split())
     wall_cnt = 0
@@ -33,6 +35,9 @@ def main():
         ans = (h * w) - g2[h][w] - wall_cnt
         print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

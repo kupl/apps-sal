@@ -10,4 +10,4 @@ for card in cards:
         oc = min(oc, 3)
         zmensenie = max(zmensenie, oc * card)
 
-print(sum(cards)-zmensenie)
+print(sum(cards) - zmensenie)

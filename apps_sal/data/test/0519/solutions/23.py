@@ -73,5 +73,4 @@ l = read_int()
 p = read_int()
 q = read_int()
 t = l / (p + q)
-print(t*p)
-
+print(t * p)

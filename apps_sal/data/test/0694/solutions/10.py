@@ -21,6 +21,9 @@ def main():
             return
     print("NO")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

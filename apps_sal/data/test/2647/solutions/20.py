@@ -1,10 +1,11 @@
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+from sys import stdin
 from fractions import gcd
-from itertools import combinations,permutations,accumulate, product # (string,3) 3回
+from itertools import combinations, permutations, accumulate, product  # (string,3) 3回
 #from collections import deque
-from collections import deque,defaultdict,Counter
+from collections import deque, defaultdict, Counter
 import decimal
 import re
 import math
@@ -28,15 +29,22 @@ sys.setrecursionlimit(10000000)
 mod = 10**9 + 7
 #mod = 9982443453
 #mod = 998244353
-from sys import stdin
 readline = stdin.readline
+
+
 def readInts():
-  return list(map(int,readline().split()))
+    return list(map(int, readline().split()))
+
+
 def readTuples():
-    return tuple(map(int,readline().split()))
+    return tuple(map(int, readline().split()))
+
+
 def I():
-  return int(readline())
-h,w = readInts()
+    return int(readline())
+
+
+h, w = readInts()
 block = [input() for _ in range(h)]
 
 allcnt = 0
@@ -46,13 +54,15 @@ for i in range(w):
             allcnt += 1
 INF = float('inf')
 AR = [[INF] * w for _ in range(h)]
-dy = [1,0,0,-1]
-dx = [0,-1,1,0]
+dy = [1, 0, 0, -1]
+dx = [0, -1, 1, 0]
+
+
 def bfs():
     d = deque()
-    d.append([0,0])
+    d.append([0, 0])
     while d:
-        y,x = d.popleft()
+        y, x = d.popleft()
         if y == 0 and x == 0:
             AR[y][x] = 0
         for i in range(4):
@@ -62,10 +72,11 @@ def bfs():
                 continue
             if AR[ny][nx] == INF and block[ny][nx] != '#':
                 AR[ny][nx] = AR[y][x] + 1
-                d.append([ny,nx])
+                d.append([ny, nx])
+
+
 bfs()
-if AR[h-1][w-1] == INF:
+if AR[h - 1][w - 1] == INF:
     print((-1))
 else:
-    print((allcnt - (AR[h-1][w-1]+1))) # start地点の分
-
+    print((allcnt - (AR[h - 1][w - 1] + 1)))  # start地点の分

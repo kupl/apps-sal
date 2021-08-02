@@ -1,3 +1,4 @@
+from collections import deque
 H, W = list(map(int, input().split()))
 # maze = [list(map(int, input().split())) for i in range(H)]
 maze = []
@@ -7,13 +8,12 @@ for i in range(H):
     s_init_cnt += gyo.count('.')
     maze.append(gyo)
 
-#print(maze)
-#print(s_init_cnt)
+# print(maze)
+# print(s_init_cnt)
 
 direction = [(-1, 0), (0, -1), (1, 0), (0, 1)]
 reached = [[-1] * W for i in range(H)]
 reached[0][0] = 1
-from collections import deque
 
 
 def bfs():
@@ -30,11 +30,12 @@ def bfs():
             else:
                 reached[tx][ty] = reached[px][py] + 1
                 d.append([tx, ty])
+
+
 bfs()
-ans = reached[H-1][W-1]
+ans = reached[H - 1][W - 1]
 if ans == -1:
     print(ans)
 else:
     ans = s_init_cnt - ans
     print(ans)
-

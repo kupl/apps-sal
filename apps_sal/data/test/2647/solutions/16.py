@@ -29,4 +29,3 @@ while not q.empty():
             already_pass.add(i)
 else:
     print((-1))
-

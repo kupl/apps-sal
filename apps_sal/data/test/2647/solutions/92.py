@@ -5,6 +5,7 @@ masu = [list(input()) for _ in range(R)]
 sr, sc = 0, 0
 gr, gc = R - 1, C - 1
 
+
 def bfs():
     d = [[float("inf")] * C for _ in range(R)]
     dr = [0, -1, 0, 1]
@@ -23,8 +24,9 @@ def bfs():
             if (0 <= nr < R) and (0 <= nc < C) and masu[nr][nc] != "#" and d[nr][nc] == float("inf"):
                 que.append((nr, nc))
                 d[nr][nc] = d[p[0]][p[1]] + 1
-    
+
     return d[gr][gc]
+
 
 white = 0
 for i in range(R):

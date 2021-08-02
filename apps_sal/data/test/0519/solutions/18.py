@@ -1,5 +1,5 @@
 l = int(input())
-p=int(input())
+p = int(input())
 q = int(input())
-t = l/(p+q)
-print(p*t)
+t = l / (p + q)
+print(p * t)
