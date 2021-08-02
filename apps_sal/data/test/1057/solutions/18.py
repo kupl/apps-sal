@@ -20,7 +20,7 @@ rem = {S[0], S[-1]}
 
 ans = 0
 for v in rem:
-    l, r = 0, N-1
+    l, r = 0, N - 1
     while l < N and S[l] == v:
         l += 1
 
@@ -28,10 +28,10 @@ for v in rem:
         r -= 1
 
     if l > r:
-        ans += N*(N-1) // 2
+        ans += N * (N - 1) // 2
         ans %= MOD
     else:
-        ans += (l+1) * (N-r)
+        ans += (l + 1) * (N - r)
         ans %= MOD
 ans = (ans + MOD - len(rem) + 1) % MOD
 print(ans)

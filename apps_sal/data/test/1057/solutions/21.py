@@ -37,6 +37,6 @@ else:
         else:
             break
     if lcount == len(s):
-        print((n * (n - 1) // 2 + n)%mod)
+        print((n * (n - 1) // 2 + n) % mod)
     else:
         print((rcount + 1) * (lcount + 1) % mod)

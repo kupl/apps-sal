@@ -1,5 +1,7 @@
 def inpmap():
     return list(map(int, input().split()))
+
+
 n = int(input())
 b, r, p = None, None, None
 res = 0
@@ -25,4 +27,3 @@ for i in range(n):
         p = ix
         mr = mb = 0
 print(res)
-

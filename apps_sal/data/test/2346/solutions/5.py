@@ -14,6 +14,7 @@ for v, _ in enumerate(range(n)):
 r = []
 used = [False] * n
 
+
 def dfs(g, stack):
     nonlocal r, used
     while stack:
@@ -40,4 +41,3 @@ if r:
         print(el + 1, end=" ")
 else:
     print(-1)
-

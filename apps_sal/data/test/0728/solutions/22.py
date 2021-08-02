@@ -6,6 +6,8 @@ def check(n, lst, lk):
     if lk >= 0:
         return True
     return False
+
+
 n = int(input())
 lst = list(map(int, input().split()))
 left = -1
@@ -17,5 +19,3 @@ while left + 1 < right:
     else:
         left = middle
 print(right)
-            
-

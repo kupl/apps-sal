@@ -28,4 +28,3 @@ if result:
         print(i, end=' ')
 else:
     print(-1)
-

@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 s = input().strip()
@@ -20,4 +25,3 @@ if s[0] == s[-1]:
 else:
     ans = x + y + 1
 print(ans % 998244353)
-

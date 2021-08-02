@@ -9,19 +9,19 @@ sys.setrecursionlimit(10**5)
 mod = 998244353
 n = int(input())
 s = input()
-if s == s[0]*n:
-    print(n*(n+1)//2)
+if s == s[0] * n:
+    print(n * (n + 1) // 2)
     return
 g = gb(s)
 gg = gb(s[::-1])
 a = 0
-a_c,b_c = '',''
+a_c, b_c = '', ''
 b = 0
-for k,v in g:
+for k, v in g:
     a = len(list(v))
     a_c = k
     break
-for k,v in gg:
+for k, v in gg:
     b = len(list(v))
     b_c = k
     break
@@ -29,5 +29,4 @@ res = 0
 if a_c == b_c:
     res += a * b
 res += a + b + 1
-print(int(res)%mod)
-
+print(int(res) % mod)

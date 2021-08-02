@@ -5,7 +5,8 @@ B = list(map(int, input().split()))
 
 imp = fuel = 0
 for i in range(N, 0, -1):
-    if i == N: i = 0
+    if i == N:
+        i = 0
     if B[i] == 1:
         imp = 1
         break

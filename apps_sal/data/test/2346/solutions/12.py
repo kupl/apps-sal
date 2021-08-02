@@ -15,4 +15,4 @@ for i in range(n):
 if len(ans) == 0:
     ans.append(-1)
 for i in ans:
-    print(i, end = ' ')
+    print(i, end=' ')

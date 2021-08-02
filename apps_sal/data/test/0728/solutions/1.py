@@ -1,4 +1,4 @@
-#Brute
+# Brute
 
 n = int(input())
 a = [int(i) for i in input().split()]
@@ -10,7 +10,7 @@ while p <= max(a):
     p += 1
     q = max(a)
     a.remove(q)
-    a.append(q-1)
+    a.append(q - 1)
     w += 1
 
 print(w)

@@ -25,12 +25,12 @@ def main():
 
     cur = [r]
     for a, b in neg_ps:
-        nxt = [-1]*(len(cur)+1)
+        nxt = [-1] * (len(cur) + 1)
         for i, r in enumerate(cur):
             if r >= 0:
                 nxt[i] = max(nxt[i], r)
                 if r >= a:
-                    nxt[i+1] = r + b
+                    nxt[i + 1] = r + b
         while nxt[-1] < 0:
             nxt.pop()
         cur = nxt
@@ -40,5 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

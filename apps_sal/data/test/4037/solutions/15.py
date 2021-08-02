@@ -15,8 +15,10 @@ for i in range(size):
     inp = str(input()).split()
     a = int(inp[0])
     b = int(inp[1])
-    if b >= 0: pos.append((a, b))
-    else: neg.append((a,b))
+    if b >= 0:
+        pos.append((a, b))
+    else:
+        neg.append((a, b))
 pos = sorted(pos)
 projects = 0
 for ab in pos:
@@ -24,11 +26,12 @@ for ab in pos:
     if r >= a:
         r += b
         projects += 1
-    else: break
+    else:
+        break
 
-neg = sorted(neg, key = lambda ab: ab[0] + ab[1], reverse = True)
+neg = sorted(neg, key=lambda ab: ab[0] + ab[1], reverse=True)
 n = len(neg)
-dp = [[0]*(r + 1) for _ in range(n + 1)]
+dp = [[0] * (r + 1) for _ in range(n + 1)]
 dp[0][r] = projects
 for i in range(0, n):
     for j in range(0, r + 1):

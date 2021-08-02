@@ -1,6 +1,6 @@
 n = int(input())
 
-tree  = [[] for _ in range(n)]
+tree = [[] for _ in range(n)]
 inf = [0] * n
 
 for i in range(n):

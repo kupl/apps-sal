@@ -11,4 +11,3 @@ while a[0] <= m:
     m = max(b)
     mi = b.index(max(b))
 print(ans)
-

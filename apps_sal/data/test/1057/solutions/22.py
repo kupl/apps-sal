@@ -29,4 +29,3 @@ else:
     if hurufdpn == hurufblkg:
         ans += 1 + (jmlblkg - 1) + (jmldpn - 1) + (jmldpn - 1) * (jmlblkg - 1)
     print(ans % 998244353)
-
