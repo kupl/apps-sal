@@ -8,7 +8,7 @@ if p > h:
 inside = False
 ans = 0
 i = 0
-H = -1 
+H = -1
 while i <= h:
     if st[i] != st[n - 1 - i]:
         if not inside:
@@ -24,4 +24,3 @@ if h == -1:
 ans += h - l
 ans += min(abs(l - p), abs(p - h))
 print(ans)
-

@@ -10,7 +10,7 @@ while todo:
     if len(A) == N:
         total = 0
         for a, b, c, d in abcd:
-            if A[b-1] - A[a-1] == c:
+            if A[b - 1] - A[a - 1] == c:
                 total += d
         ans = max(ans, total)
         continue

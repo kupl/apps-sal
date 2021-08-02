@@ -12,4 +12,3 @@ while True:
     a.sort()
 
 print(r)
-

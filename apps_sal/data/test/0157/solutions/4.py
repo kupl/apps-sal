@@ -9,4 +9,3 @@ for x in range(a + 1):
         continue
     ans = max(ans, x + 2 * x + 4 * x)
 print(ans)
-

@@ -26,13 +26,15 @@ if X == 1 and K == 0:
 
 A.sort()
 
+
 def right(start):
     # find the end for [start, end] has K elements divisible by X
-    x = start//X if start%X != 0 else start//X-1
-    endmin = max((x+K) * X, start)
-    endmax = (x+K+1) * X - 1
+    x = start // X if start % X != 0 else start // X - 1
+    endmin = max((x + K) * X, start)
+    endmax = (x + K + 1) * X - 1
 
     return endmin, endmax
+
 
 ans = 0
 for i, v in enumerate(A):

@@ -15,8 +15,8 @@ for a in range(M):
                                         tmp = [a, b, c, d, e, f, g, h, i, j]
                                         tmp_ans = 0
                                         for q in range(Q):
-                                                if tmp[L[q][1]-1] - tmp[L[q][0]-1] == L[q][2]:
-                                                    tmp_ans += L[q][3]
+                                            if tmp[L[q][1] - 1] - tmp[L[q][0] - 1] == L[q][2]:
+                                                tmp_ans += L[q][3]
 
                                         ans = max(ans, tmp_ans)
 

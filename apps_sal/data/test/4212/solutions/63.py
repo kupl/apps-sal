@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from itertools import combinations_with_replacement
+
+
 def main():
     n, m, q = list(map(int, input().split()))
     xs = []
@@ -15,9 +17,10 @@ def main():
         if wa > max:
             max = wa
     print(max)
-    
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

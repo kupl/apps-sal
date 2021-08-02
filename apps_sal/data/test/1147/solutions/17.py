@@ -26,4 +26,3 @@ for l, r in ranges:
     # print(left_index, right_index)
 
 print(res)
-

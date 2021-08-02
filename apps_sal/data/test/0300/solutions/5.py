@@ -1,5 +1,6 @@
 def main():
     n = int(input())
+
     def ceil(x):
         if x % 1 == 0:
             return int(x)
@@ -13,5 +14,6 @@ def main():
         c += 1
     print(c)
     return 0
-main()
 
+
+main()

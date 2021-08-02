@@ -12,5 +12,6 @@ def go():
         c += 1
         if s / n >= 4.5:
             return c
-print(go())
 
+
+print(go())

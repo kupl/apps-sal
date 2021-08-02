@@ -5,13 +5,13 @@ arr = [(lambda x, y: min(abs(x - y), 26 - abs(y - x)))(ord(s[i]), ord(s[n - i - 
 p = min(p, n - p - 1)
 f, l = 0, len(arr) - 1
 for a in arr:
-	if a != 0:
-		break
-	else:
-		f += 1
+    if a != 0:
+        break
+    else:
+        f += 1
 for a in reversed(arr):
-	if a != 0:
-		break
-	else:
-		l -= 1
+    if a != 0:
+        break
+    else:
+        l -= 1
 print(sum(arr) + l - f + min(abs(p - l), abs(p - f)) if sum(arr) > 0 else 0)

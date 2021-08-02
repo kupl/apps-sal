@@ -14,9 +14,9 @@ if x != 1 or k != 0:
             xf = (k + (ar[i] - 1) // x)
             lo = bisect_left(ar, ar[i])
             # Find rightmost value less than xf*x
-            lt = bisect_left(ar, (xf+1)*x, lo)
+            lt = bisect_left(ar, (xf + 1) * x, lo)
             # Find leftmost value greater than (xf+1)*x
-            gt = bisect_right(ar, xf*x-1, lo)
+            gt = bisect_right(ar, xf * x - 1, lo)
         n_tup += lt - gt
         lk = nk
 

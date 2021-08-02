@@ -1,4 +1,6 @@
 import bisect
+
+
 def lower_bound(A, x):
     low = 0
     high = len(A)
@@ -10,6 +12,7 @@ def lower_bound(A, x):
             high = mid
     return low
 
+
 def upper_bound(A, x):
     low = 0
     high = len(A)
@@ -20,6 +23,8 @@ def upper_bound(A, x):
         else:
             high = mid
     return low
+
+
 line = input().split()
 n = int(line[0])
 x = int(line[1])
@@ -36,5 +41,3 @@ for i in a:
     ans = ans + bisect.bisect_right(a, right) - bisect.bisect_left(a, left)
     # print(left, right, ans)
 print(ans)
-
-

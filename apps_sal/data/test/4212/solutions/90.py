@@ -11,7 +11,7 @@ for i in range(Q):
     b[i] -= 1
 
 result = 0
-for A in itertools.combinations_with_replacement(range(1, M+1), N):
+for A in itertools.combinations_with_replacement(range(1, M + 1), N):
     score = 0
     for i in range(Q):
         if A[b[i]] - A[a[i]] == c[i]:

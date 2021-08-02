@@ -13,4 +13,3 @@ while mean < 4.5:
     mean = sum(s) / len(s)
 
 print(l)
-

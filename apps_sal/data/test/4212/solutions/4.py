@@ -1,8 +1,10 @@
+import numpy as np
+from itertools import combinations_with_replacement
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from itertools import combinations_with_replacement
-import numpy as np
+
+
 def main():
     n, m, q = map(int, input().split())
     A = np.array(list(combinations_with_replacement(range(1, m + 1), n)))
@@ -17,6 +19,9 @@ def main():
         # print(score)
     print(score.max())
 
+
 def __starting_point():
     main()
+
+
 __starting_point()
