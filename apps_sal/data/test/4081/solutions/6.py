@@ -19,19 +19,19 @@ while len(M) > 0:
     else:
         if M[-1] <= last and M[0] <= last:
             break
-        
+
         if M[-1] <= last:
             ans += ["L"]
             last = M[0]
             M.popleft()
             continue
-        
+
         if M[0] <= last:
             ans += ['R']
             last = M[-1]
             M.pop()
             continue
-        
+
         if M[0] <= M[-1]:
             ans += ["L"]
             last = M[0]
@@ -42,5 +42,4 @@ while len(M) > 0:
             M.pop()
 
 print(len(ans))
-print("".join(ans)) 
-
+print("".join(ans))

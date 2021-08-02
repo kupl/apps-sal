@@ -1,7 +1,10 @@
 n = int(input())
 a, b = 0, 0
 
-gi = lambda : list(map(int, input().split(' ')))
+
+def gi(): return list(map(int, input().split(' ')))
+
+
 u, v = gi()
 x, y = gi()
 for _ in range(n - 1):
@@ -14,4 +17,3 @@ for _ in range(n - 1):
     u, v, x, y = x, y, p, q
 
 print(min(a, b))
-

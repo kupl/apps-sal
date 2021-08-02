@@ -1,1 +1,1 @@
-print((int(input())-4)//2)
+print((int(input()) - 4) // 2)

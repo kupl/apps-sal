@@ -13,7 +13,7 @@ s.reverse()
 t = []
 u = []
 
-s_cnt = [0] * (ord('z')+1)
+s_cnt = [0] * (ord('z') + 1)
 for x in s:
     s_cnt[ord(x)] += 1
 
@@ -42,4 +42,3 @@ while s or t:
             u.append(x)
 
 print("".join(u))
-

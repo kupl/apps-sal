@@ -4,7 +4,7 @@ my_file = sys.stdin
 n = int(my_file.readline())
 a = [int(i) for i in my_file.readline().strip().split()]
 a.sort()
-b = list(range(1, n+1))
+b = list(range(1, n + 1))
 # for i in range(n):
 #     if a[i] <= n and a[i] >= 1:
 #         b[i], b[a[i]-1] = b[a[i]-1], b[i]

@@ -29,4 +29,3 @@ for i in range(n - 1):
             direction = 2
     x_0, y_0 = x_1, y_1
 print(counter)
-

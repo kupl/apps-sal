@@ -6,10 +6,8 @@ for i in range(n):
     km = min(k[1:])
     if km < v:
         p += 1
-        q.append(i+1)
+        q.append(i + 1)
 
 print(p)
 for x in q:
     print(x, end=' ')
-
-

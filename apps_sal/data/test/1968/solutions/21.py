@@ -6,4 +6,3 @@ for i in range(num):
         l.append(i + 1)
 print(len(l))
 print(' '.join(map(str, l)))
-

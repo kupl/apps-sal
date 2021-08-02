@@ -16,5 +16,3 @@ for i in range(n):
         minx = x
 
 print(max((maxx - minx), (maxy - miny)) ** 2)
-
-

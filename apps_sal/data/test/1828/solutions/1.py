@@ -5,6 +5,7 @@ def isLeft(x1, y1, x2, y2, x3, y3):
 def isMn(s):
     return not (True in s and False in s)
 
+
 def pr():
     for i in range(1, n - 1):
         s.append(isLeft(x[i - 1], y[i - 1], x[i], y[i], x[i + 1], y[i + 1]))

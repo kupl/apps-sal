@@ -1,6 +1,7 @@
 n = int(input())
 u = list(map(int, input().split()))
-i1 = 0; i2 = n - 1
+i1 = 0
+i2 = n - 1
 ans = []
 m = 0
 p = []
@@ -30,7 +31,6 @@ while 1 == 1:
             ans.append('R')
     if i1 > i2:
         break
-    #print(p)
+    # print(p)
 print(len(ans))
 print(''.join(ans))
-

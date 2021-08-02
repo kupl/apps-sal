@@ -20,4 +20,3 @@ while True:
     break
 print(len(ans))
 print(ans)
-

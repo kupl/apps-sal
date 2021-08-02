@@ -8,6 +8,3 @@ for i in range(n):
 dx = max(x) - min(x)
 dy = max(y) - min(y)
 print(max(dx, dy) ** 2)
-
-
-

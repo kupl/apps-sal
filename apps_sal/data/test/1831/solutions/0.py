@@ -2,6 +2,7 @@
 
 __import__("sys").setrecursionlimit(10 ** 6)
 
+
 def dfs(u, tr, used):
     used[u] = True
     ans = 1
@@ -29,4 +30,3 @@ if dfs(0, tr, used) == n:
     print("yes")
 else:
     print("no")
-

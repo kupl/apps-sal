@@ -3,8 +3,10 @@ from sys import stdin
 
 lines = list([_f for _f in stdin.read().split('\n') if _f])
 
+
 def parseline(line):
-	return list(map(int, line.split()))
+    return list(map(int, line.split()))
+
 
 lines = list(map(parseline, lines))
 
@@ -17,11 +19,10 @@ maxy = -INF
 minx = INF
 miny = INF
 
-for xi,yi in lines[1:n+1]:
-	maxx = max(maxx, xi)
-	minx = min(minx, xi)
-	maxy = max(maxy, yi)
-	miny = min(miny, yi)
+for xi, yi in lines[1:n + 1]:
+    maxx = max(maxx, xi)
+    minx = min(minx, xi)
+    maxy = max(maxy, yi)
+    miny = min(miny, yi)
 
-print( max(maxx - minx, maxy - miny) ** 2)
-
+print(max(maxx - minx, maxy - miny) ** 2)

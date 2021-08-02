@@ -1,16 +1,23 @@
-k=[0]*1001
+k = [0] * 1001
+
+
 def dfs(x):
-    k[x]+=1
+    k[x] += 1
     for i in z[x]:
-        if not(k[i]):dfs(i)
-a,b=list(map(int,input().split()))
-z=[]
-for i in range(a+1):z+=[[]]
+        if not(k[i]):
+            dfs(i)
+
+
+a, b = list(map(int, input().split()))
+z = []
+for i in range(a + 1):
+    z += [[]]
 for i in range(b):
-    x,y=list(map(int,input().split()))
+    x, y = list(map(int, input().split()))
     z[x].append(y)
     z[y].append(x)
 dfs(1)
-if sum(k)!=a or a-1!=b:print("no")
-else:print("yes")
-
+if sum(k) != a or a - 1 != b:
+    print("no")
+else:
+    print("yes")

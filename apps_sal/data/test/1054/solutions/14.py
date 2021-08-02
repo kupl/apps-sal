@@ -11,5 +11,4 @@ for i in range(n):
     minX = min(minX, t)
     maxX = max(maxX, t)
 
-print(max(maxX-minX,maxY-minY)**2)
-
+print(max(maxX - minX, maxY - minY)**2)

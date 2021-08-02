@@ -8,5 +8,5 @@ a.sort()
 res = 0
 for i in range(n):
     res += int(math.fabs(i + 1 - a[i]))
-    
+
 print(res)

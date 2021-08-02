@@ -14,4 +14,3 @@ for i in range(len(s)):
         res += l.pop()
     l.append(s[i])
 print(res + ''.join(map(str, (l[::-1]))))
-

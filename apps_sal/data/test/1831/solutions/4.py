@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(1000000)
+
+
 def dfs(v, pr):
     nonlocal used
     nonlocal p
@@ -12,6 +14,8 @@ def dfs(v, pr):
     for i in range(len(p[v])):
         if p[v][i] != pr:
             dfs(p[v][i], v)
+
+
 n, m = list(map(int, input().split()))
 p = []
 for i in range(n):
@@ -34,6 +38,3 @@ if f:
     print('yes')
 else:
     print('no')
-
-        
-

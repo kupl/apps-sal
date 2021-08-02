@@ -30,4 +30,3 @@ while curr_letter_index <= ord('z'):
 
 t.reverse()
 print("".join(u + t))
-
