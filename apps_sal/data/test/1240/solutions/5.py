@@ -13,4 +13,4 @@ for i in range(n):
     #print(abs(ans[0] - ans[1]), abs(nL - nR))
     if abs(ans[0] - ans[1]) < abs(nL - nR):
         ans = [nL, nR, i + 1]
-print(ans[2]) 
+print(ans[2])

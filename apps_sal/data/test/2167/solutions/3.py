@@ -1,6 +1,6 @@
 import sys
 import math
-  
+
 n = int(sys.stdin.readline())
 an = [int(x) for x in (sys.stdin.readline()).split()]
 

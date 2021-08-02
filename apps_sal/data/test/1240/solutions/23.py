@@ -1,6 +1,6 @@
 n = int(input())
 l, r = 0, 0
-a = [] 
+a = []
 for i in range(n):
     l_i, r_i = map(int, input().split())
     l += l_i

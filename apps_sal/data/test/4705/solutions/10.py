@@ -1,2 +1,2 @@
 N = int(input())
-print(800*N - N//15*200)
+print(800 * N - N // 15 * 200)

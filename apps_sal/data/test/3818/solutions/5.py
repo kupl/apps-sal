@@ -82,4 +82,3 @@ for _ in range(n - 1):
     links[b].add(a)
 
 print((solve(n, links)))
-

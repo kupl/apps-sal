@@ -5,4 +5,4 @@ mod = tot % x
 if mod == 0:
     print(x)
 else:
-    print(x-1)
+    print(x - 1)

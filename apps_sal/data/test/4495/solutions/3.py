@@ -1,4 +1,4 @@
-def generator(x, a): # xの倍数でaより大きいもののうちの最小値
+def generator(x, a):  # xの倍数でaより大きいもののうちの最小値
     if x >= a:
         y = x
     else:
@@ -27,4 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

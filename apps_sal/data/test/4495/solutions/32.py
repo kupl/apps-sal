@@ -6,4 +6,3 @@ if a % x == 0:
     print((b_x - a_x + 1))
 else:
     print((b_x - a_x))
-

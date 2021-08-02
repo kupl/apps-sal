@@ -1,7 +1,9 @@
 from copy import deepcopy
 
+
 def f(n, m):
     return abs(n - m)
+
 
 n = int(input())
 mas = []

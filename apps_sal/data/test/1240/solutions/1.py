@@ -14,4 +14,3 @@ for i in range(n):
         Max = cur
         ans = i + 1
 print(ans)
-

@@ -4,4 +4,3 @@ bb = b // x
 aa = (a - 1) // x
 
 print((bb - aa))
-

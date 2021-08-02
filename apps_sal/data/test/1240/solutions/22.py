@@ -17,4 +17,3 @@ for i in range(n):
         max_indx = i;
 
 print((max_indx + 1));
-

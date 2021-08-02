@@ -1,9 +1,8 @@
 a, b, x = list(map(int, input().split()))
 
-ans = (b-a)//x
+ans = (b - a) // x
 
-if (x-a % x) % x+(b % x) < x:
+if (x - a % x) % x + (b % x) < x:
     ans += 1
 
 print(ans)
-

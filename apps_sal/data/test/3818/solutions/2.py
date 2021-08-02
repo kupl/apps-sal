@@ -1,13 +1,14 @@
+from collections import deque
 import sys
 input = lambda: sys.stdin.readline().rstrip()
 
-from collections import deque
 N = int(input())
 X = [[] for _ in range(N)]
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b = map(int, input().split())
-    X[a-1].append(b-1)
-    X[b-1].append(a-1)
+    X[a - 1].append(b - 1)
+    X[b - 1].append(a - 1)
+
 
 def farthest(i):
     L = [-1] * N
@@ -23,11 +24,13 @@ def farthest(i):
                 if L[k] < 0:
                     L[k] = d
                     post.append(k)
-        
+
     return (pre[0], d - 1)
+
 
 s, _ = farthest(0)
 t, d = farthest(s)
+
 
 def BFS_dist(n, E, i0=0):
     Q = deque([i0])
@@ -40,6 +43,7 @@ def BFS_dist(n, E, i0=0):
                 D[c] = D[x] + 1
                 Q.append(c)
     return D
+
 
 D1 = BFS_dist(N, X, s)
 D2 = BFS_dist(N, X, t)

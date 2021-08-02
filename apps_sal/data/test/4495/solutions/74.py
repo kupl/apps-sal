@@ -1,4 +1,3 @@
-a,b,x = list(map(int,input().split()))
+a, b, x = list(map(int, input().split()))
 
-print((b//x-(a-1)//x))
-
+print((b // x - (a - 1) // x))
