@@ -16,8 +16,8 @@ X = np.tile(X, 2)
 Y = np.tile(Y, 2)
 Xcum = X.cumsum()
 Ycum = Y.cumsum()
-ans = (Ycum-Ycum[:, None])**2+(Xcum-Xcum[:, None])**2
+ans = (Ycum - Ycum[:, None])**2 + (Xcum - Xcum[:, None])**2
 m = 0
-for i in range(N*2):
-    m = max(m, ans[i, i:i+N+1].max())
+for i in range(N * 2):
+    m = max(m, ans[i, i:i + N + 1].max())
 print(m**0.5)

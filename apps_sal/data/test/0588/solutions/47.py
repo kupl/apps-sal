@@ -15,8 +15,8 @@ def main():
 
     for i, (x, y) in enumerate(XY):
         if x == 0:
-            katamuki =  1 / (10 ** 7)
-            katamuki2 =  - 1 / (10 ** 7)
+            katamuki = 1 / (10 ** 7)
+            katamuki2 = - 1 / (10 ** 7)
         else:
             katamuki = y / x + 1 / (10 ** 7)
             katamuki2 = y / x - 1 / (10 ** 7)
@@ -49,5 +49,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

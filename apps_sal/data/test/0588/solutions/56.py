@@ -1,7 +1,7 @@
+import math
 n = int(input())
 pi = 3.141592653589793238462643383279
 xy = [list(map(int, input().split())) for _ in range(n)]
-import math
 
 atan = [math.atan2(x[0], x[1]) for x in xy]
 d = []
@@ -9,10 +9,10 @@ d = []
 
 def hoge(a):
     ret = 0
-    if a % (2*pi) < pi:
+    if a % (2 * pi) < pi:
         ret = (a % pi)
-    elif a % (2*pi)  > pi:
-        ret = (a % pi)-pi
+    elif a % (2 * pi) > pi:
+        ret = (a % pi) - pi
     else:
         ret = (a)
     #assert pi <= ret <= pi, 'range over'
@@ -28,9 +28,9 @@ def seikika(A):
 
 gyoukaku = atan.copy()
 gyoukaku.extend(seikika([a + pi for a in atan]))
-M=60
+M = 60
 for m in range(M):
-    gyoukaku.extend(seikika([a + pi*(2*pi/M*m) for a in atan]))
+    gyoukaku.extend(seikika([a + pi * (2 * pi / M * m) for a in atan]))
 
 
 def dist(xy):
@@ -44,9 +44,8 @@ for g in gyoukaku:
     anglist = seikika(anglist)
     finalxy = []
     for i in range(n):
-        if -pi / 2 -0.000001 <= anglist[i] <= pi / 2+0.000001:
+        if -pi / 2 - 0.000001 <= anglist[i] <= pi / 2 + 0.000001:
             finalxy.append(xy[i])
     d.append(dist(finalxy))
 
 print((max(d)))
-

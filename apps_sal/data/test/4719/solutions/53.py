@@ -6,7 +6,7 @@ if n == 1:
     s.sort()
     print(*s, sep='')
 else:
-    for _ in range(n-1):
+    for _ in range(n - 1):
         tmp = ''
         si = list(input())
         if len(si) >= len(s):

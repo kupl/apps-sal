@@ -1,8 +1,8 @@
 n = int(input())
 A = list("abcdefghijklmnopqrstuvwxyz")
-B = [50]*26
+B = [50] * 26
 for i in range(n):
-    C = [0]*26
+    C = [0] * 26
     s = input()
     s = sorted(s)
     for j in range(len(s)):
@@ -11,10 +11,10 @@ for i in range(n):
                 C[k] += 1
                 break
     for m in range(26):
-        B[m] = min(B[m],C[m])
+        B[m] = min(B[m], C[m])
 
-D = [] 
+D = []
 for i in range(26):
-    D.append(A[i]*B[i])
+    D.append(A[i] * B[i])
 D.sort()
-print(*D, sep = "")
+print(*D, sep="")

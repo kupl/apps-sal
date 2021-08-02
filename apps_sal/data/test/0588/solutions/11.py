@@ -12,14 +12,16 @@ def main():
         engine[i][2] = math.atan2(engine[i][1], engine[i][0])
     engines = engine[np.argsort(engine[:, 2])]
     sumen = sum(engines)
-    ans = sumen[0]**2+sumen[1]**2
+    ans = sumen[0]**2 + sumen[1]**2
     for i in range(n):
         for j in range(i, n):
-            sump=sum(engines[i:j+1])
-            ans=max(ans,sump[0]**2+sump[1]**2,(sump[0]-sumen[0])**2+(sump[1]-sumen[1])**2)
+            sump = sum(engines[i:j + 1])
+            ans = max(ans, sump[0]**2 + sump[1]**2, (sump[0] - sumen[0])**2 + (sump[1] - sumen[1])**2)
     print(math.sqrt(ans))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

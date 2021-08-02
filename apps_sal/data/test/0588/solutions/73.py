@@ -17,4 +17,3 @@ for i in range(N):
             ans = max(ans, abs(sum(XY[:j + 1] + XY[i:])))
 
 print(ans)
-

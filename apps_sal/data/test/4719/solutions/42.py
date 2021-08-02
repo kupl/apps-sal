@@ -9,5 +9,5 @@ for i in range(n):
 
 ans = ''
 for i in range(26):
-    ans += min(cnt[i]) * chr(i+97)
+    ans += min(cnt[i]) * chr(i + 97)
 print(ans)

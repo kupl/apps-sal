@@ -15,7 +15,7 @@ for _ in range(n):
 angles = []
 
 for i in range(n):
-    cos = (np.dot(eng_list[i], np.array([0, 1]))/(np.linalg.norm(eng_list[i])))
+    cos = (np.dot(eng_list[i], np.array([0, 1])) / (np.linalg.norm(eng_list[i])))
     angle = math.degrees(math.acos(cos))
     if eng_list[i][0] < 0:
         angle = 360 - angle
@@ -23,7 +23,7 @@ for i in range(n):
 
 
 def hantei(a, b):
-    coss = np.dot(a, b)/(np.linalg.norm(a)*np.linalg.norm(b))
+    coss = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
     if coss > 1:
         coss = 1.0
     elif coss < -1:
@@ -39,7 +39,8 @@ def distance(a):
     dis = np.linalg.norm(a)
     return dis
 
-pitch = 1 # 角度
+
+pitch = 1  # 角度
 dist = []
 
 for ikisaki in np.arange(0, 360, pitch):
@@ -51,4 +52,3 @@ for ikisaki in np.arange(0, 360, pitch):
     dist.append(distance(dist_location))
 
 print((max(dist)))
-

@@ -1,4 +1,4 @@
-r,g,b = input().split()
+r, g, b = input().split()
 
 a = r + g + b
 

@@ -1,18 +1,25 @@
 from math import sqrt
 n = int(input())
+
+
 class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
         return
+
     def __lt__(self, p2):
         return self.quadrant() < p2.quadrant() or self.quadrant() == p2.quadrant() and self.x * p2.y - self.y * p2.x > 0
+
     def __repr__(self):
         return repr((self.x, self.y))
+
     def __add__(self, p2):
-        return Point(self.x+p2.x, self.y+p2.y)
+        return Point(self.x + p2.x, self.y + p2.y)
+
     def __sub__(self, p2):
-        return Point(self.x-p2.x, self.y-p2.y)
+        return Point(self.x - p2.x, self.y - p2.y)
+
     def quadrant(self):
         if self.x > 0 and self.y >= 0:
             return 1
@@ -22,8 +29,10 @@ class Point:
             return 3
         else:
             return 4
+
     def square(self):
         return self.x ** 2 + self.y ** 2
+
 
 xy = [Point(xi, yi) for xi, yi in (list(map(int, input().split())) for _ in range(n)) if not xi == yi == 0]
 
@@ -40,4 +49,3 @@ for p in xy:
     mx = max(mx, cur_point.square())
 
 print((sqrt(mx)))
-

@@ -1,3 +1,4 @@
+import math
 import sys
 from heapq import heappop, heappush
 from operator import itemgetter
@@ -8,7 +9,6 @@ sys.setrecursionlimit(10 ** 7)
 MOD = 10**9 + 7
 INF = float('inf')
 
-import math
 
 def sol():
     N = int(input())
@@ -29,5 +29,6 @@ def sol():
         ans = max(ans, length[0]**2 + length[1]**2)
 
     print(ans**0.5)
+
 
 sol()

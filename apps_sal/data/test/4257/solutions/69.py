@@ -20,4 +20,3 @@ res = 0
 res = a * b
 
 print(res)
-

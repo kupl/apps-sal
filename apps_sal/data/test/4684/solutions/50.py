@@ -1,6 +1,6 @@
 n = list(input().split())
 n = int("".join(n))
 if n % 4 == 0:
-  print("YES")
+    print("YES")
 else:
-  print("NO")
+    print("NO")

@@ -5,7 +5,7 @@ from functools import reduce
 n = int(input())
 arr = [input() for _ in range(n)]
 l = list(reduce(operator.and_, [set(i) for i in arr]))
-d = defaultdict(lambda: 1<<60)
+d = defaultdict(lambda: 1 << 60)
 l.sort()
 
 for s in arr:
@@ -15,6 +15,6 @@ for s in arr:
 
 res = []
 for k, v in d.items():
-    res.append(k*v)
+    res.append(k * v)
 ans = "".join(res)
 print(ans)

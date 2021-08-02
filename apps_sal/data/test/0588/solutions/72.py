@@ -44,4 +44,3 @@ ans = 0
 for x, y in XY:
     ans = max(ans, calc(x, y))
 print(ans)
-

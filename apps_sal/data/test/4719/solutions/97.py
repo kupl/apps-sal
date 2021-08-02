@@ -1,6 +1,6 @@
 n = int(input())
 ans = list(input())
-for i in range(n-1):
+for i in range(n - 1):
     s = list(input())
     t = []
     for j in ans:

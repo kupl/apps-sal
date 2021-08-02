@@ -4,13 +4,13 @@
 # 参考: https://matsu7874.hatenablog.com/entry/2018/12/17/025713
 def get_convex_hull(points):
     def det(p, q):
-        return (p.conjugate()*q).imag
+        return (p.conjugate() * q).imag
     points.sort(key=lambda x: (x.real, x.imag))
     ch = []
     for p in points:
         while len(ch) > 1:
-            v_cur = ch[-1]-ch[-2]
-            v_new = p-ch[-2]
+            v_cur = ch[-1] - ch[-2]
+            v_new = p - ch[-2]
             if det(v_cur, v_new) > 0:
                 break
             ch.pop()
@@ -18,8 +18,8 @@ def get_convex_hull(points):
     t = len(ch)
     for p in points[-2::-1]:
         while len(ch) > t:
-            v_cur = ch[-1]-ch[-2]
-            v_new = p-ch[-2]
+            v_cur = ch[-1] - ch[-2]
+            v_new = p - ch[-2]
             if det(v_cur, v_new) > 0:
                 break
             ch.pop()
@@ -33,10 +33,9 @@ ps = [complex(0, 0)]
 for p in XY:
     ps_new = ps[:]
     for p_ in ps:
-        ps_new.append(p+p_)
+        ps_new.append(p + p_)
     ps = get_convex_hull(ps_new)
 ans = 0
 for p in ps:
     ans = max(ans, abs(p))
 print(ans)
-

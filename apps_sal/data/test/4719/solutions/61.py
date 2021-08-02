@@ -2,13 +2,13 @@ import collections
 n = int(input())
 S = list(input())
 counterA = collections.Counter(S)
-for i in range(1,n):
+for i in range(1, n):
     counterB = collections.Counter()
     S = list(input())
     counterS = collections.Counter(S)
     for j in counterA.keys():
         if j in counterS:
-            counterB[j] = min(counterA[j],counterS[j])
+            counterB[j] = min(counterA[j], counterS[j])
         else:
             counterB[j] = 0
     counterA = counterB

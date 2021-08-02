@@ -7,4 +7,3 @@ if 1 <= r and g and b <= 9:
         print('YES')
     else:
         print('NO')
-

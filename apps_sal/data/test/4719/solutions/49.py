@@ -15,4 +15,3 @@ for i in range(26):
             ans += chr(i + 97)
 
 print(ans)
-

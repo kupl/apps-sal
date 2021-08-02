@@ -22,4 +22,3 @@ for i in range(n):
         ans = math.sqrt(tmp_x**2 + tmp_y**2)
 
 print(ans)
-

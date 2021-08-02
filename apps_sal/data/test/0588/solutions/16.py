@@ -1,5 +1,6 @@
 from math import atan2, hypot
 
+
 def solve():
     N = int(input())
     engines = [tuple(map(int, input().split())) for _ in range(N)]
@@ -8,12 +9,12 @@ def solve():
 
     ans = 0
     for L in range(N):
-        for R in range(L, L+N):
+        for R in range(L, L + N):
             x, y = 0, 0
-            for i in range(L, R+1):
+            for i in range(L, R + 1):
                 i %= N
                 dx, dy = engines[i]
-                x, y = x+dx, y+dy
+                x, y = x + dx, y + dy
             dist = hypot(x, y)
             if dist > ans:
                 ans = dist
@@ -22,4 +23,3 @@ def solve():
 
 
 solve()
-
