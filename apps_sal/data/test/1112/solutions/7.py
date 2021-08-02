@@ -4,4 +4,3 @@ arr[0][0] = s - sum(arr[0])
 arr[1][1] = s - sum(arr[1])
 arr[2][2] = s - sum(arr[2])
 print('\n'.join(' '.join([str(x) for x in l]) for l in arr))
-

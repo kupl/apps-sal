@@ -11,4 +11,3 @@ for i in range(N):
     dp[i + 1][3] = max(dp[i][3] + a, dp[i + 1][2])
     dp[i + 1][4] = max(dp[i][4], dp[i + 1][3])
 print(dp[N][4])
-

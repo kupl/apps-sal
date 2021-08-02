@@ -12,7 +12,7 @@ C.sort()
 # （C_iの個数×C_iのコスト）の総和×2**Nを求める
 sum = 0
 for i in range(N):
-	sum += (N + 1 - i) * C[i]
+    sum += (N + 1 - i) * C[i]
 sum *= 2 ** (N - 2)
 sum *= 2 ** N
 

@@ -15,6 +15,9 @@ def main() -> object:
     count += n - m
     return count
 
+
 def __starting_point():
     print(main())
+
+
 __starting_point()

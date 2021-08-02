@@ -12,4 +12,3 @@ ans *= pow(2, 2 * n - 2, mod)
 ans %= mod
 
 print(ans)
-

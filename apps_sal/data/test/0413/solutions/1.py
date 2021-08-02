@@ -14,4 +14,3 @@ else:
     num_steps += (src - dest)
 
 print(num_steps)
-

@@ -8,6 +8,7 @@ def check(w, s):
         j += 1
     return True
 
+
 n = int(input())
 s = input()
 t = input()

@@ -6,4 +6,3 @@ for a in map(int, input().split()):
     cur = max(cur + a, cur2)
     res = max(res, cur)
 print(res)
-

@@ -21,4 +21,3 @@ while i < len(q):
             q.append(q[i] * 2)
             used[q[i] * 2] = True
     i += 1
-

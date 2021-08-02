@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 s = [list(readln()) for _ in range(3)]
 for x in range(1, 10**5 + 1):
@@ -13,4 +15,3 @@ for x in range(1, 10**5 + 1):
         s[2][2] = z
         for _ in s:
             print(*tuple(_))
-

@@ -2,7 +2,7 @@ n = int(input())
 v = []
 deg1 = []
 degsum = 0
-has_v = [True]*n
+has_v = [True] * n
 for i in range(n):
     d, s = list(map(int, input().split()))
     degsum += d
@@ -27,9 +27,5 @@ while deg1 != []:
     elif v[t][0] == 0:
         has_v[t] = False
 
-print(degsum//2)
+print(degsum // 2)
 for f, t in edge: print(f, t)
-    
-    
-
-

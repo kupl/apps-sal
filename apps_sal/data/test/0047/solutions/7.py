@@ -11,4 +11,3 @@ for i in range(1, n):
     dp[2][i] = max(dp[1][i - 1] + arr[i], dp[2][i - 1] + arr[i], arr[i], 0)
     answer = max(answer, dp[0][i], dp[1][i], dp[2][i])
 print(answer)
-

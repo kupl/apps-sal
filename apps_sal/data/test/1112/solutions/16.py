@@ -4,7 +4,7 @@ def main():
 def __starting_point():
     main()
 '''
-#401
+# 401
 '''
 def main():
     import sys
@@ -57,7 +57,7 @@ def main():
 def __starting_point():
     main()
 '''
-#508B
+# 508B
 '''
 def main():
     import sys
@@ -90,7 +90,7 @@ def main():
 def __starting_point():
     main()
 '''
-#447B
+# 447B
 '''
 def main():
     import sys
@@ -107,7 +107,7 @@ def main():
 def __starting_point():
     main()
 '''
-#507B
+# 507B
 '''
 def main():
     from sys import stdin,stdout
@@ -124,8 +124,8 @@ def main():
 def __starting_point():
     main()
 '''
-#454B
-#SORT BY SHIFT
+# 454B
+# SORT BY SHIFT
 '''
 def main():
     from sys import stdin,stdout
@@ -163,7 +163,7 @@ def main():
 def __starting_point():
     main()
 '''
-#450B
+# 450B
 '''
 def main():
     from sys import stdin,stdout
@@ -175,7 +175,7 @@ def main():
 def __starting_point():
     main()
 '''
-#265B
+# 265B
 '''
 def main():
     from sys import stdin,stdout
@@ -197,7 +197,7 @@ def main():
 def __starting_point():
     main()
 '''
-#448B
+# 448B
 '''
 def main():
     from sys import stdin,stdout
@@ -237,7 +237,7 @@ def main():
 def __starting_point():
     main()
 '''
-#479C
+# 479C
 '''
 def main():
     from sys import stdin,stdout
@@ -257,7 +257,7 @@ def main():
 def __starting_point():
     main()
 '''
-#455A
+# 455A
 '''
 def main():
     from sys import stdin,stdout
@@ -273,7 +273,7 @@ def main():
 def __starting_point():
     main()
 '''
-#151A
+# 151A
 '''
 def main():
     from sys import stdin,stdout
@@ -282,7 +282,7 @@ def main():
 def __starting_point():
     main()
 '''
-#313B
+# 313B
 '''
 def main():
     from sys import stdin,stdout
@@ -300,19 +300,24 @@ def main():
 def __starting_point():
     main()
 '''
-#259B
+# 259B
+
+
 def main():
-    from sys import stdin,stdout
-    x,a,b=list(map(int,stdin.readline().split()))
-    c,y,d=list(map(int,stdin.readline().split()))
-    e,f,z=list(map(int,stdin.readline().split()))
-    x=(2*b+d-c)//2
-    z=b+e-x
-    y=x+c+e-f-a
-    stdout.write(str(x)+' '+str(a)+' '+str(b)+'\n')
-    stdout.write(str(c)+' '+str(y)+' '+str(d)+'\n')
-    stdout.write(str(e)+' '+str(f)+' '+str(z))
+    from sys import stdin, stdout
+    x, a, b = list(map(int, stdin.readline().split()))
+    c, y, d = list(map(int, stdin.readline().split()))
+    e, f, z = list(map(int, stdin.readline().split()))
+    x = (2 * b + d - c) // 2
+    z = b + e - x
+    y = x + c + e - f - a
+    stdout.write(str(x) + ' ' + str(a) + ' ' + str(b) + '\n')
+    stdout.write(str(c) + ' ' + str(y) + ' ' + str(d) + '\n')
+    stdout.write(str(e) + ' ' + str(f) + ' ' + str(z))
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

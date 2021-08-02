@@ -28,5 +28,3 @@ while len(Q) > 0:
 print(len(edge))
 for i, j in edge:
     print(i, j)
-
-

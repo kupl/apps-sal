@@ -1,6 +1,6 @@
-A,B = map(int,input().split())
+A, B = map(int, input().split())
 
-if abs(A-B) <= 1:
+if abs(A - B) <= 1:
     print("Yay!")
 else:
     print(":(")

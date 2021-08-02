@@ -5,6 +5,7 @@ sys.setrecursionlimit(300000)
 
 MOD = 1000000007  # type: int
 
+
 def solve(N: int, C: "List[int]"):
     pows = [1]
     for i in range(N):
@@ -21,6 +22,7 @@ def solve(N: int, C: "List[int]"):
     print(ret)
     return
 
+
 def main():
     def iterate_tokens():
         for line in sys.stdin:
@@ -31,7 +33,9 @@ def main():
     C = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(N, C)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
