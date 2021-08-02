@@ -11,4 +11,5 @@ def c_tak_and_cards():
             dp[k + y] += v
     return dp[0] - 1
 
+
 print(c_tak_and_cards())

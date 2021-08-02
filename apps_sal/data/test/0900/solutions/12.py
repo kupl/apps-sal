@@ -4,7 +4,7 @@ MOD = 1000000007
 S = input()[::-1]
 
 a = 10 ** np.arange(6) % 13
-b = np.tile(np.arange(10),(6, 1))
+b = np.tile(np.arange(10), (6, 1))
 c = a * b.T % 13
 c = c.T
 f = np.zeros((6, 13, 13), dtype=np.int64)

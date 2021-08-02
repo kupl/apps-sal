@@ -9,4 +9,3 @@ for i in range(len(a)):
         min_dist = min(min_dist, abs(i - m))
 
 print(min_dist * 10)
-

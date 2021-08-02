@@ -11,13 +11,13 @@ for i in range(len(s)):
     count = new
     if s[i] != "?":
         div = int(s[i])
-        count = count[-div:] +  count[:-div]
+        count = count[-div:] + count[:-div]
     else:
         new = [0 for _ in range(13)]
         pre = sum(count[:3])
         SUM = sum(count) % MOD
         for j in range(13):
-            pre += count[(j+3) % 13]
+            pre += count[(j + 3) % 13]
             pre -= count[j % 13]
             new[j] = (SUM - pre) % MOD
         count = new

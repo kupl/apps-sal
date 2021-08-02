@@ -31,5 +31,5 @@ for i in range(questions):
     n.append(max(a, b, c, d, e))
 total = 0
 for i in range(len(n)):
-    total += n[i]*weights[i]
-print (total)
+    total += n[i] * weights[i]
+print(total)

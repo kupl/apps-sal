@@ -14,7 +14,6 @@ def main():
             r = list(map(sum, list(zip(*tank))))
             *r, = [x % MOD for x in r]
 
-
         else:
             x = int(c)
             x = x * p % 13
@@ -26,5 +25,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

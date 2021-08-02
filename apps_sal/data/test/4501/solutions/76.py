@@ -6,7 +6,8 @@ dp[0][0][0] = 1
 for i in range(N):
     for j in range(N + 1):
         for k in range(N * A + 1):
-            if dp[i][j][k] == 0: continue
+            if dp[i][j][k] == 0:
+                continue
             dp[i + 1][j][k] += dp[i][j][k]
             dp[i + 1][j + 1][k + x[i]] += dp[i][j][k]
 

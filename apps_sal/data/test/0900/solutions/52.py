@@ -32,4 +32,3 @@ for keta, s in zip(cycle(list(range(6))), S[::-1]):
 
 state = irfft(state, 13)
 print((int(np.round(state[res % 13])) % mod))
-

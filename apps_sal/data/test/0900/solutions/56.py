@@ -11,7 +11,7 @@ def main():
         dp += dp
         if c == "?":
             for i in range(13):
-                ans[i] = sum(dp[i + 4 : i + 14])
+                ans[i] = sum(dp[i + 4: i + 14])
         else:
             x = int(c)
             for i in range(13):
@@ -21,4 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

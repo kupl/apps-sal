@@ -9,10 +9,10 @@ ans = 10
 while True:
     if m + i < n and challengers[m + i] and challengers[m + i] <= k:
         break
-    
+
     if m - i >= 0 and challengers[m - i] and challengers[m - i] <= k:
         break
-    
+
     ans += 10
     i += 1
 

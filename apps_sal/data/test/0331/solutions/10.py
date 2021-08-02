@@ -1,5 +1,5 @@
-n, m, k = [ int(x) for x in input().split() ]
-a = [ int(x) for x in input().split() ]
+n, m, k = [int(x) for x in input().split()]
+a = [int(x) for x in input().split()]
 
 m -= 1
 
@@ -10,4 +10,3 @@ for i, x in enumerate(a):
         r = min(r, abs(i - m) * 10)
 
 print(r)
-

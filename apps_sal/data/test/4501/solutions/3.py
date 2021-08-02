@@ -16,4 +16,3 @@ for i in range(1, n + 1):
     ans += dp[n][i][a * i]
 
 print(ans)
-

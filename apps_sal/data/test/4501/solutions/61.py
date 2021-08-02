@@ -10,5 +10,5 @@ def main():
                 dp[j][a] += dp[j - 1][a - x]
     return sum(dp[i][A * i] for i in range(1, N + 1))
 
-print((main()))
 
+print((main()))

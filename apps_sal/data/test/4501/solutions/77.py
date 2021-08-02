@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees, log2, gcd
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
@@ -14,9 +15,11 @@ def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def TUPLE(): return tuple(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
-INF = 10**6#float('inf')
-mod = 10 ** 9 + 7 
+INF = 10**6  # float('inf')
+mod = 10 ** 9 + 7
 #mod = 998244353
 #from decimal import *
 #import numpy as np
@@ -30,33 +33,32 @@ small = []
 cnt = 0
 
 for y in x:
-	if y == A:
-		cnt += 1
-	elif y < A:
-		small.append(A-y)
-	else:
-		big.append(y-A)
+    if y == A:
+        cnt += 1
+    elif y < A:
+        small.append(A - y)
+    else:
+        big.append(y - A)
 
-big_possible = [0]*2501
-small_possible = [0]*2501
+big_possible = [0] * 2501
+small_possible = [0] * 2501
 big_possible[0] = 1
 small_possible[0] = 1
 
 for a in big:
-	for i in range(2500-a, -1, -1):
-		if big_possible[i]:
-			big_possible[i+a] += big_possible[i]
+    for i in range(2500 - a, -1, -1):
+        if big_possible[i]:
+            big_possible[i + a] += big_possible[i]
 
 for b in small:
-	for i in range(2500-b, -1, -1):
-		if small_possible[i]:
-			small_possible[i+b] += small_possible[i]
+    for i in range(2500 - b, -1, -1):
+        if small_possible[i]:
+            small_possible[i + b] += small_possible[i]
 
 ans = 1
 for i in range(1, 2501):
-	ans += small_possible[i]*big_possible[i]
+    ans += small_possible[i] * big_possible[i]
 
 
 ans *= 2**cnt
-print((ans-1))
-
+print((ans - 1))

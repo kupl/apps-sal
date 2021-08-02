@@ -1,4 +1,7 @@
-import sys,math,copy
+import sys
+import math
+import copy
+
 
 def main():
     # import numpy as np
@@ -21,13 +24,13 @@ def main():
             for d in tuple10:
                 m = mod13_tuple[(d * mul)]
                 for pm in tuple13:
-                    dp[mod13_tuple[(pm+m)]] += dp_[pm]
+                    dp[mod13_tuple[(pm + m)]] += dp_[pm]
 
         else:
             si = int(s)
             m = mod13_tuple[(si * mul)]
             for pm in tuple13:
-                dp[mod13_tuple[(pm+m)]] = dp_[pm]
+                dp[mod13_tuple[(pm + m)]] = dp_[pm]
 
         # dp_ = dp % divisor
         # dp = dp * 0 # np.zeros((13), dtype=int)
@@ -36,5 +39,6 @@ def main():
             dp[j] = 0
         mul = mod13_tuple[(mul * 10)]
     print(dp_[5])
+
 
 main()

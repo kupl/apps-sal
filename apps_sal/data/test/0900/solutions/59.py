@@ -17,4 +17,3 @@ def solve(S):
 
 
 print((solve(input())))
-

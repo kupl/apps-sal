@@ -15,4 +15,3 @@ sm = cnt * a
 ans = dp[cnt, sm].sum()
 
 print(ans)
-

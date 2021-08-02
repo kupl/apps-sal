@@ -12,4 +12,3 @@ for y in Y:
         L[key + y] += value
 
 print((L[0] - 1))
-

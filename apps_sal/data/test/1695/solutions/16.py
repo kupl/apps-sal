@@ -8,8 +8,8 @@ Sum = 0
 for i in range(X[1]):
     Temp = defaultdict(int)
     for j in range(X[0]):
-        Temp[Answers[j][i]]+=1
-    Sum+=points[i]*max(Temp.values())
+        Temp[Answers[j][i]] += 1
+    Sum += points[i] * max(Temp.values())
 print(Sum)
 
 # UB_CodeForces
@@ -17,4 +17,3 @@ print(Sum)
 # Location: Behind my desk
 # Caption: Contest time
 # CodeNumber: 556
-

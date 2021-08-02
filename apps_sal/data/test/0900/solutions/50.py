@@ -34,4 +34,3 @@ for s in reversed(S):
 
 state = irfft(state, 13)
 print((int(np.round(np.real(state[res % 13]))) % mod))
-

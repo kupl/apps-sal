@@ -1,5 +1,5 @@
-M = 10**9+7
-r = tuple(tuple((j-i) * 4 % 13 for i in range(10)) for j in range(13))
+M = 10**9 + 7
+r = tuple(tuple((j - i) * 4 % 13 for i in range(10)) for j in range(13))
 d = [1] + [0] * 12
 for c in input():
     if c > "9":

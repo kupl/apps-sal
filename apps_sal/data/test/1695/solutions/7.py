@@ -10,4 +10,3 @@ for j in range(m):
         d[u[i][j]] += 1
     ans += a[j] * max(d['A'], d['B'], d['C'], d['D'], d['E'])
 print(ans)
-

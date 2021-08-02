@@ -4,6 +4,7 @@ def increase(cnt, letter):
     else:
         cnt[letter] += 1
 
+
 n, m = list(map(int, input().split()))
 
 strings = []
@@ -24,5 +25,3 @@ for qu in range(m):
     ans += points[qu] * mx
 
 print(ans)
-    
-

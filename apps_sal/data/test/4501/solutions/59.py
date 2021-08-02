@@ -29,14 +29,13 @@ def main():
     # inf = 2 ** 64 - 1               # (for fast JIT compile in PyPy) 1.84...e+19
     sys.setrecursionlimit(10**6)    # 1000 -> 1000000
     def input(): return sys.stdin.readline().rstrip()
-    def ii():    return int(input())
-    def mi():    return list(map(int, input().split()))
-    def mi_0():  return [int(x)-1 for x in input().split()]
-    def lmi():   return list(map(int, input().split()))
-    def lmi_0(): return list([int(x)-1 for x in input().split()])
-    def li():    return list(input())
-    
-    
+    def ii(): return int(input())
+    def mi(): return list(map(int, input().split()))
+    def mi_0(): return [int(x) - 1 for x in input().split()]
+    def lmi(): return list(map(int, input().split()))
+    def lmi_0(): return list([int(x) - 1 for x in input().split()])
+    def li(): return list(input())
+
     n, a = mi()
     L = lmi()
     diff = [elm - a for elm in L]
@@ -47,14 +46,14 @@ def main():
     for i in range(n):
         for j in range(5001):
             if dp[i][j]:
-                dp[i+1][j + diff[i]] += dp[i][j]
-            dp[i+1][j] += dp[i][j]
-    
+                dp[i + 1][j + diff[i]] += dp[i][j]
+            dp[i + 1][j] += dp[i][j]
 
     print((dp[n][2500] - 1))    # n 番目までを使用して和を 0 にするには？ 最初の何も選ばない 1 通りを除く
 
 
 def __starting_point():
     main()
+
 
 __starting_point()
