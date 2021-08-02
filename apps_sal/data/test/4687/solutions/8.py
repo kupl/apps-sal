@@ -14,4 +14,3 @@ for a, b in li:
     else:
         print(a)
         break
-

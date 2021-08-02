@@ -15,4 +15,3 @@ for a, b in ls:
         break
 
 print(a)
-

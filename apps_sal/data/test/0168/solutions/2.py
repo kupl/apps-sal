@@ -35,5 +35,5 @@ def main():
                 stones = 0
     write(stones)
 
-main()
 
+main()

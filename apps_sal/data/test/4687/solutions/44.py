@@ -16,6 +16,9 @@ def main2():
             print(i)
             return
 
+
 def __starting_point():
     main2()
+
+
 __starting_point()

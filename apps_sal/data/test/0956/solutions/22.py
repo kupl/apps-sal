@@ -14,7 +14,7 @@ for i in range(n):
 tmp = sorted(tmp)
 for i in tmp:
     ans = []
-    print(str(i) + ': ', end = '')
+    print(str(i) + ': ', end='')
     for j in tmp:
         if i == j or people[i].count(j) != 0:
             continue
@@ -25,8 +25,7 @@ for i in tmp:
         per = (100 * cnt) / len(people[i])
         if int(per) >= k:
             ans.append(j)
-    print(len(ans), end = ' ')
+    print(len(ans), end=' ')
     for q in ans:
-        print(q, end = ' ')
+        print(q, end=' ')
     print()
-

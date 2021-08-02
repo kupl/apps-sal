@@ -1,6 +1,8 @@
-f = lambda: map(int, input().split())
-g = lambda x, y: d.setdefault(x, set()).add(y)
-h = lambda b: a == b or b in d[a] or len(d[a] & d[b]) * 100 < k * len(d[a])
+def f(): return map(int, input().split())
+def g(x, y): return d.setdefault(x, set()).add(y)
+def h(b): return a == b or b in d[a] or len(d[a] & d[b]) * 100 < k * len(d[a])
+
+
 d = {}
 m, k = f()
 for i in range(m):

@@ -11,4 +11,6 @@ def main():
         mi = min(mi, c)
     print(c - mi)
     return 0
+
+
 main()

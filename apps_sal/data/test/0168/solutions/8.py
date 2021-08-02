@@ -8,4 +8,3 @@ for i in s:
         t = max(t - 1, 0)
 
 print(max(t, 0))
-

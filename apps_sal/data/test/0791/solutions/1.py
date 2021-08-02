@@ -13,4 +13,3 @@ for x in l:
         c += 1
 
 print(c)
-

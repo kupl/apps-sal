@@ -20,4 +20,3 @@ for i in range(N):
     if S[i] >= K:
         print((A[i]))
         break
-

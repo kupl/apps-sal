@@ -1,6 +1,7 @@
 def inp():
     return list(map(int, input().split()))
-        
+
+
 n = int(input())
 a = sorted(list(inp()))
 t = 1
@@ -12,5 +13,3 @@ while len(a) != 1:
         t = 1
         del a[0]
 print(a[0])
-
-

@@ -1,8 +1,8 @@
-N,K = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 A = []
 for i in range(N):
-    a,b = list(map(int,input().split()))
-    A.append([a,b])
+    a, b = list(map(int, input().split()))
+    A.append([a, b])
 A.sort()
 
 for i in range(N):
@@ -10,4 +10,3 @@ for i in range(N):
     if K <= 0:
         print((A[i][0]))
         return
-

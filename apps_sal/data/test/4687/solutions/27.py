@@ -12,4 +12,3 @@ for i in range(n):
     if sum_b >= k:
         print(a)
         break
-

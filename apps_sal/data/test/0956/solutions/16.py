@@ -1,7 +1,7 @@
 from collections import defaultdict
-import sys                                                                                                           
-#sys.stdin = open('inp.txt', 'r')                                                                                    
-                                                                                                                     
+import sys
+#sys.stdin = open('inp.txt', 'r')
+
 m, k = map(int, input().split())
 a, a2 = defaultdict(list), defaultdict(list)
 for i in range(m):

@@ -10,4 +10,3 @@ for op in ops:
     else:
         resp += 1
 print(resp)
-

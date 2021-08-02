@@ -1,9 +1,12 @@
 n, p = map(int, input().split())
 
+
 def f(t, k):
     a, b = min(t[k - 1], 2), min(t[k], 2)
-    if a == b: a = 1
+    if a == b:
+        a = 1
     return [3 - a - b, a, b]
+
 
 def g(t, k):
     j = t[k]
@@ -12,6 +15,7 @@ def g(t, k):
             t[k] = i
             return f(t, k)
     return None
+
 
 def h(t):
     t = [ord(c) - 97 for c in t] + [27, 27]
@@ -23,10 +27,14 @@ def h(t):
             return ''.join(chr(i + 97) for i in t)
     return 'NO'
 
+
 t = input()
 q = 'NO'
 if p == 2:
-    if t == 'a': q = 'b'
-    elif t == 'ab': q = 'ba'
-elif p > 2: q = h(t)
+    if t == 'a':
+        q = 'b'
+    elif t == 'ab':
+        q = 'ba'
+elif p > 2:
+    q = h(t)
 print(q)

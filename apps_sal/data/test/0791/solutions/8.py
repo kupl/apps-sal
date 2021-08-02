@@ -19,7 +19,9 @@ def main():
         res += (t[i] != s[i])
     print(res)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

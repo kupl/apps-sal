@@ -7,7 +7,7 @@ for i in range(m):
     friendship[a].add(b)
     friendship[b].add(a)
 
-result = { }
+result = {}
 for x, friends in friendship.items():
     s = set()
     for y in friendship:
@@ -22,4 +22,3 @@ for x, friends in friendship.items():
 for x, friends in sorted(result.items()):
     print(x, len(friends), end=' ', sep=": ")
     print(' '.join(map(str, sorted(friends))))
-

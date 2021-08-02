@@ -10,4 +10,3 @@ for i in range(len(bucket)):
     if sum_b >= k:
         print((i + 1))
         break
-

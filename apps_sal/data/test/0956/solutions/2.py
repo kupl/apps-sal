@@ -24,4 +24,3 @@ for a in sorted(friends):
         if 100 * len(common_friends) // len(a_friends) >= k:
             probable_friends.append(b)
     print("%d:" % a, len(probable_friends), " ".join(map(str, sorted(probable_friends))))
-

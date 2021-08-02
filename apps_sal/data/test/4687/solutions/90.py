@@ -12,4 +12,3 @@ for i in sorted(ar.keys()):
     if k <= 0:
         print(i)
         break
-

@@ -29,5 +29,3 @@ for x in xs:
 
 for y in sorted(list(ys.items()), key=lambda p: p[0]):
     print('{}: {} {}'.format(y[0], len(y[1]), ' '.join(list(map(str, sorted(y[1]))))))
-
-

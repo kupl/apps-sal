@@ -12,7 +12,7 @@ for i in range(n):
             res[j] = '0'
         b = False
 
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             res[j] = str[j]
 
         break
@@ -23,6 +23,6 @@ if b:
 else:
     total = 0
     for i in range(n):
-        if res[i]!=str[i]:
-            total+=1
+        if res[i] != str[i]:
+            total += 1
     print(total)

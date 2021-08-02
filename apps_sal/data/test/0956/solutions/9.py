@@ -3,15 +3,18 @@ m, k = [int(i) for i in input().split()]
 d = {}
 for i in range(m):
     a, b = [int(i) for i in input().split()]
-    if not d.get(a) : d[a] = []
-    if not d.get(b) : d[b] = []
+    if not d.get(a):
+        d[a] = []
+    if not d.get(b):
+        d[b] = []
     d[a].append(b)
     d[b].append(a)
 
 mbfriends = {}
 
 for i in d.keys():
-    if not mbfriends.get(i) : mbfriends[i] = []
+    if not mbfriends.get(i):
+        mbfriends[i] = []
     myk = len(d[i]) * k / 100
     for j in d.keys():
         if i != j and j not in d[i]:
@@ -23,5 +26,3 @@ for i in sorted(d.keys()):
     for j in sorted(mbfriends[i]):
         print(j, end=" ")
     print()
-
-

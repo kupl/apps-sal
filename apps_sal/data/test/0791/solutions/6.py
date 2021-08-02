@@ -7,5 +7,3 @@ if j < n:
     print(j + 1)
 else:
     print(n)
-
-

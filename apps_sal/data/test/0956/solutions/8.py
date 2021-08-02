@@ -38,9 +38,3 @@ for i in sorted(ans):
     for j in sorted(ans[i]):
         ansstr += str(j) + ' '
     print(ansstr)
-
-
-
-
-
-

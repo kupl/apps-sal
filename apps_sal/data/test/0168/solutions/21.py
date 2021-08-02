@@ -7,5 +7,4 @@ for q in a:
     else:
         balance -= 1
     min1 = min(min1, balance)
-print(balance-min1)
-
+print(balance - min1)

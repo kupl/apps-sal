@@ -8,4 +8,3 @@ for i in range(len(s)):
         break
     k += 1
 print(k)
-

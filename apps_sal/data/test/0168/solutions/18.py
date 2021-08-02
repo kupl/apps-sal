@@ -7,4 +7,3 @@ for x in s:
     else:
         start += 1
 print(start)
-
