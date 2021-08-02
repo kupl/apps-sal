@@ -1,13 +1,13 @@
 n, k = [int(item) for item in input().split()]
-result = [0]*n
-if k < n-1:
+result = [0] * n
+if k < n - 1:
     result[0] = n
 else:
-     result[n-1] = n
+    result[n - 1] = n
 l = 1
-for i in range(1, n-1):
+for i in range(1, n - 1):
     if i <= k:
-        result[i] = i+1
+        result[i] = i + 1
     else:
         result[-l] = n - l
         l += 1

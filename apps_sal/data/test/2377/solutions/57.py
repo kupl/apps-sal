@@ -22,4 +22,3 @@ for i in range(len(B)):
         print(ans)
         return
 print((ans + (H - 1) // A + 1))
-

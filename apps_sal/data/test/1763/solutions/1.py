@@ -37,4 +37,3 @@ for target in range(max(0, avg - 1), avg + 2):
         m if inc >= dec else inc * m + (dec - inc) * r
     ans = min(ans, min(plan_a, plan_b))
 print(ans)
-

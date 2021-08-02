@@ -11,5 +11,3 @@ for i in range(len(s)):
         else:
             u += 1
 print(u)
-
-

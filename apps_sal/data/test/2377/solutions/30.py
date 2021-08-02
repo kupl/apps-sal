@@ -1,13 +1,13 @@
-n,h = list(map(int,input().split()))
+n, h = list(map(int, input().split()))
 A = []
 B = []
 for i in range(n):
-    a,b = list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
     A.append(a)
     B.append(b)
 A.sort(reverse=True)
 B.sort(reverse=True)
-B = [ i for i in B if i > A[0] ]
+B = [i for i in B if i > A[0]]
 ans = 0
 for i in B:
     ans += 1
@@ -20,4 +20,3 @@ if h > 0:
     else:
         ans += (h // A[0]) + 1
 print(ans)
-

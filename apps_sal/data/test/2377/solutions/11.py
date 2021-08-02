@@ -7,6 +7,7 @@ for _ in range(N):
     A.append(a)
     B.append(b)
 
+
 def solver(N, H, A, B):
     x = max(A)
     B.sort()
@@ -20,7 +21,8 @@ def solver(N, H, A, B):
         ans += 1
         if H <= 0:
             return ans
-    
-    return ans + -(-H//x)
+
+    return ans + -(-H // x)
+
 
 print(solver(N, H, A, B))

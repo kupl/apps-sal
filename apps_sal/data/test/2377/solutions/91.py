@@ -21,4 +21,4 @@ while q:
         print(ans)
         return
 
-print(ans + (H+a[-1]-1)//a[-1])
+print(ans + (H + a[-1] - 1) // a[-1])

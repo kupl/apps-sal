@@ -1,4 +1,4 @@
-p = input() #name
+p = input()  # name
 s = input()
 answer = 0
 j = 0
@@ -16,7 +16,7 @@ for i in range(lengthS):
                 mini = i
 if answer > 1:
     j = lengthP - 1
-    for i in range(lengthS-1,-1,-1):
+    for i in range(lengthS - 1, -1, -1):
         if s[i] == p[j]:
             j -= 1
             if j == -1:
@@ -25,4 +25,4 @@ if answer > 1:
 if answer == 1 or answer == 0:
     print(0)
 else:
-    print(maxi-mini)
+    print(maxi - mini)

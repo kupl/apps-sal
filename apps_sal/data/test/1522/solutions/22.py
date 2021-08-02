@@ -13,4 +13,3 @@ for i in range(size):
         must_buy += 1
 
 print(must_buy)
-

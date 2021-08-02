@@ -3,8 +3,8 @@ div1 = {}
 div2 = {}
 tot = n
 ans = False
-p = -1 #max div2
-q = 100000000000 #min div1
+p = -1  # max div2
+q = 100000000000  # min div1
 for i in range(m):
     a, b = list(map(int, input().split()))
     if b > a:
@@ -27,16 +27,14 @@ for i in range(m):
 if ans:
     print(0)
 else:
-    tot = q-p-1
+    tot = q - p - 1
     if tot < 0:
         print(0)
     elif tot == 0:
         print(1)
-        
+
     elif len(div1) == 0 and len(div2) == 0:
-        print(n-1)
+        print(n - 1)
 
     else:
-        print(tot+1)
-    
-
+        print(tot + 1)

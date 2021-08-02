@@ -13,8 +13,8 @@ for i in range(n):
     if b[i] > a_big:
         bi_str.append(b[i])
 bi_str.sort(reverse=True)
-#print(bi_str)
-#print(a_big)
+# print(bi_str)
+# print(a_big)
 if h <= sum(bi_str):
     for i in bi_str:
         if h > 0:
@@ -25,7 +25,7 @@ if h <= sum(bi_str):
 else:
     h -= sum(bi_str)
     ans += len(bi_str)
-    ans += -(-h//a_big)
+    ans += -(-h // a_big)
     '''
     if round(h/a_big) == h//a_big:
         ans += h//a_big
@@ -34,5 +34,3 @@ else:
         '''
 
 print(ans)
-
-

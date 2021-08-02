@@ -5,7 +5,7 @@ j = 0
 len_name = len(name)
 len_phrase = len(phrase)
 test = False
-if len_name>=len_phrase:
+if len_name >= len_phrase:
     print(0)
     return
 for n, i in enumerate(phrase):
@@ -22,13 +22,13 @@ for n, i in enumerate(phrase):
 j = 0
 
 for n, i in enumerate(phrase[::-1]):
-    if name[len_name-1-j] == i:
+    if name[len_name - 1 - j] == i:
         if not test:
-            pos.append([len_phrase-n-1])
+            pos.append([len_phrase - n - 1])
             test = True
         j += 1
         if j == len_name:
-            pos[-1].append(len_phrase-n-1)
+            pos[-1].append(len_phrase - n - 1)
             test = False
             break
 

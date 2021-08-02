@@ -30,4 +30,4 @@ if total > h:
 
     print(ind)
 else:
-    print((h-total+wield-1)//wield + len(throw))
+    print((h - total + wield - 1) // wield + len(throw))

@@ -1,7 +1,7 @@
 from math import ceil
-n,h = map(int,input().split())
-k = [list(map(int,input().split())) for i in range(n)]
-a,b = [list(i) for i in zip(*k)]
+n, h = map(int, input().split())
+k = [list(map(int, input().split())) for i in range(n)]
+a, b = [list(i) for i in zip(*k)]
 b.sort(reverse=True)
 a = max(a)
 ans = 0

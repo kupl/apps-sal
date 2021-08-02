@@ -1,10 +1,13 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, m = read()
 a = [0] * (n + 1)
 b = [0] * (n + 1)
 for i in range(m):
     u, v = read()
-    if u > v: u, v = v, u
+    if u > v:
+        u, v = v, u
     a[u] = b[v] = 1
 L, R = 1, n
 for i in range(1, n + 1):
@@ -17,4 +20,3 @@ for i in range(n, 0, -1):
         break
 ans = max(0, R - L)
 print(ans)
-

@@ -5,7 +5,7 @@ for _ in range(n):
     a, b = map(int, input().split())
     alst.append(a)
     blst.append(b)
-blst.sort(reverse = True)
+blst.sort(reverse=True)
 a = max(alst)
 ans = 0
 for num in blst:

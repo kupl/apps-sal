@@ -9,4 +9,4 @@ for _ in range(m):
     A = max(A, u)
     B = min(B, v)
 
-print(max(B-A, 0))
+print(max(B - A, 0))

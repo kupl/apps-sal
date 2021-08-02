@@ -23,4 +23,3 @@ elif i_line - 1 == j_line:
     print(1)
 else:
     print(0)
-

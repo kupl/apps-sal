@@ -12,9 +12,8 @@ def main():
         H += -t
         cnt += 1
     if H > 0:
-        cnt += (H+max_slash-1)//max_slash
+        cnt += (H + max_slash - 1) // max_slash
     print(cnt)
 
+
 main()
-
-

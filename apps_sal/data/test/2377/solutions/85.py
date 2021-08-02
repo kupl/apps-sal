@@ -28,4 +28,3 @@ else:
     cnt += q + 1
 
 print(cnt)
-

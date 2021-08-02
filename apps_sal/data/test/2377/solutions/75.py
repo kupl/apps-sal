@@ -7,7 +7,7 @@ for _ in range(N):
     B.append(b)
 
 max_a = max(A)
-B.sort(key=lambda b:-b) # descending                                                                                                                          
+B.sort(key=lambda b: -b)  # descending
 
 ans = 0
 for b in B:
@@ -18,5 +18,5 @@ for b in B:
     if H <= 0:
         print(ans)
         return
-ans += (H-1) // max_a + 1 # ceil                                                                                                                              
+ans += (H - 1) // max_a + 1  # ceil
 print(ans)

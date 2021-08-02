@@ -11,6 +11,7 @@ def go(s, t):
                 return sb
     return None
 
+
 s = input()
 t = input()
 

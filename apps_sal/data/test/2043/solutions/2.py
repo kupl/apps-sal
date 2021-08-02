@@ -18,6 +18,6 @@ if isfind:
         right_pos = finder.rfind(i, 0, right_pos)
 
 if right_pos >= left_pos and isfind:
-    print(right_pos - left_pos+1)
+    print(right_pos - left_pos + 1)
 else:
     print(0)

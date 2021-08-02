@@ -13,6 +13,8 @@ def input(): return sys.stdin.readline().strip()
 def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
@@ -31,7 +33,7 @@ ans = 0
 
 for i in range(N):
     if max_a >= B[i]:
-        ans += -(-H//max_a)
+        ans += -(-H // max_a)
         H = 0
     else:
         H -= B[i]
@@ -40,6 +42,5 @@ for i in range(N):
         print(ans)
         break
 if H > 0:
-    ans += -(-H//max_a)
+    ans += -(-H // max_a)
     print(ans)
-

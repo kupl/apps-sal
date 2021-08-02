@@ -18,4 +18,4 @@ if sum(mb) >= h:
 else:
     cnt = len(mb)
     h -= sum(mb)
-    print(cnt + ceil(h/ma))
+    print(cnt + ceil(h / ma))

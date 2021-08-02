@@ -37,4 +37,3 @@ ans = min([ans, calc(tmp), calc(tmp + 1)])
 
 
 print(ans)
-

@@ -2,7 +2,7 @@ import sys
 import math
 a, m = list(map(int, input().split()))
 
-if a % m == 0 or 2*a % m == 0:
+if a % m == 0 or 2 * a % m == 0:
     print("Yes")
     return
 
@@ -17,4 +17,3 @@ if f:
     print("Yes")
 else:
     print("No")
-

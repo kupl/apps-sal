@@ -18,5 +18,4 @@ for blade in atk:
         if h <= 0:
             break
 
-print((ans-(-h//blade[0])))
-
+print((ans - (-h // blade[0])))

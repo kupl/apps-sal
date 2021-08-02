@@ -2,6 +2,7 @@ from collections import defaultdict
 
 d = defaultdict(int)
 
+
 def __starting_point():
     input()
 
@@ -17,4 +18,6 @@ def __starting_point():
                 d[x.lower()] -= 1
 
     print(sum_v)
+
+
 __starting_point()

@@ -1,39 +1,38 @@
 import sys
 import math
-input=sys.stdin.readline
+input = sys.stdin.readline
 
-n,h=list(map(int,input().split()))
+n, h = list(map(int, input().split()))
 
-once=[]
-infinity=[]
+once = []
+infinity = []
 
 for i in range(n):
-  a,b=list(map(int,input().split()))
-  once.append(b)
-  infinity.append(a)
-  
+    a, b = list(map(int, input().split()))
+    once.append(b)
+    infinity.append(a)
+
 once.sort(reverse=True)
 
-pin=max(infinity)
+pin = max(infinity)
 
-once2=[]
+once2 = []
 for i in range(n):
-  if once[i]>pin:
-    once2.append(once[i])
-  
-  else:
-      break
+    if once[i] > pin:
+        once2.append(once[i])
 
-ans=0
+    else:
+        break
+
+ans = 0
 for i in once2:
-    ans+=1
-    h-=i
-    if h<=0:
+    ans += 1
+    h -= i
+    if h <= 0:
         print(ans)
         return
 
-ans+=math.ceil(h/pin)
+ans += math.ceil(h / pin)
 
 
 print(ans)
-

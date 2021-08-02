@@ -51,6 +51,7 @@ def compute():
             res += 1
 
     return res
+
+
 res = compute()
 print(res)
-

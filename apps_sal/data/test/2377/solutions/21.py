@@ -15,7 +15,7 @@ for b in sorted(B, reverse=True):
         break
     H -= b
     cnt += 1
-    
+
     if H <= 0:
         print(cnt)
         return
@@ -24,4 +24,3 @@ cnt += H // a
 if H % a != 0:
     cnt += 1
 print(cnt)
-

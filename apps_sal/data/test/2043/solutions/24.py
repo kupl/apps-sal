@@ -25,4 +25,3 @@ if position_left <= position_right:
     print(position_right - position_left + 2)
 else:
     print(0)
-

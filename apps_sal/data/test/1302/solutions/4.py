@@ -20,4 +20,3 @@ else:
         print(' '.join(map(str, A)))
     else:
         print(-1)
-

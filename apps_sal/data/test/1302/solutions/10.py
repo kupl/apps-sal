@@ -6,15 +6,13 @@ count for k
     if even then hop from i=1 swapping neighbors
 non-countable cases should be caught in first line'''
 import sys
-n,k = list(map(int,input().split()))
-if k==n:
+n, k = list(map(int, input().split()))
+if k == n:
     print(-1)
     return
-elements = [i+1 for i in range(n)]
-i = 1 if (n-k)%2 else 0
-while i<n-k:
-    elements[i],elements[i+1] = elements[i+1],elements[i]
-    i+=2
+elements = [i + 1 for i in range(n)]
+i = 1 if (n - k) % 2 else 0
+while i < n - k:
+    elements[i], elements[i + 1] = elements[i + 1], elements[i]
+    i += 2
 print(' '.join([str(e) for e in elements]))
-
-
