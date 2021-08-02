@@ -6,4 +6,3 @@ while i < len(a):
         i += 1
         n -= 1
 print(ans + t - 1)
-

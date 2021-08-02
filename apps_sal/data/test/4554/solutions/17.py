@@ -6,4 +6,3 @@ elif a > b + W:
     print((a - (b + W)))
 else:
     print((0))
-

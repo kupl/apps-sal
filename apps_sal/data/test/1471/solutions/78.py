@@ -1,13 +1,13 @@
+from collections import defaultdict, deque
 n = int(input())
 visited = [False] * (n + 1)
 distance = [0] * (n + 1)
 prev = [0] * (n + 1)
 
-from collections import defaultdict, deque
 d = defaultdict(list)
 
-for _ in range(n-1):
-    u,v,w = list(map(int, input().split()))
+for _ in range(n - 1):
+    u, v, w = list(map(int, input().split()))
     d[u].append((v, w))
     d[v].append((u, w))
 
@@ -20,7 +20,7 @@ while q:
             q.append(next_node)
             # 距離を更新
             distance[next_node] = distance[node] + next_dist
-    
+
 # print(distance)
 for dist in distance[1:]:
-    print(dist%2)
+    print(dist % 2)

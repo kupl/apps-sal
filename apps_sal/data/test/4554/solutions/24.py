@@ -7,4 +7,3 @@ else:
     res = b - (a + w)
 
 print(res)
-

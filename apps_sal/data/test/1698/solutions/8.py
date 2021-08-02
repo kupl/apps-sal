@@ -24,4 +24,3 @@ while j >= 0:
     if m > 1:
         r += 2 * (m - 1)
 print(r)
-

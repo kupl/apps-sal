@@ -8,7 +8,7 @@ for i in range(N - 1):
     conn[v].append([u, w])
 
 q = deque([1])
-d = [-1]* (N + 1)
+d = [-1] * (N + 1)
 d[1] = 0
 while q:
     u = q.popleft()

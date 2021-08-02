@@ -10,4 +10,3 @@ for aij in zip(a, a[1:]):
 else:
     print('Finite')
     print(res - a.count('312'))
-

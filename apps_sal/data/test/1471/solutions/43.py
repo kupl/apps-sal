@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs(s):
     nonlocal color
     q = deque()
@@ -15,6 +16,7 @@ def bfs(s):
                     color[g[0]] = 1 - color[i]
                 q.append(g[0])
     return
+
 
 n = int(input())
 G = [[] for _ in range(n + 1)]

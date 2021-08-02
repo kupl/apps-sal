@@ -1,4 +1,4 @@
-W,a,b=map(int, input().split())
+W, a, b = map(int, input().split())
 
-dis = max(0, abs(a-b)-W)
+dis = max(0, abs(a - b) - W)
 print(dis)

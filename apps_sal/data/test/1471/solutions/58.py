@@ -1,7 +1,7 @@
 # import itertools
 # import math
 import sys
-sys.setrecursionlimit(500*500)
+sys.setrecursionlimit(500 * 500)
 # import numpy as np
 
 N = int(input())
@@ -21,7 +21,7 @@ N = int(input())
 # cum_A = np.cumsum(A)
 # cum_A = np.insert(cum_A, 0, 0)
 
-edges = [list(map(int,input().split())) for _ in range(N-1)]
+edges = [list(map(int, input().split())) for _ in range(N - 1)]
 tree = [[] for _ in range(N + 1)]
 
 for edge in edges:
@@ -33,11 +33,13 @@ for edge in edges:
 depth = [-1] * (N + 1)
 depth[1] = 0
 
+
 def dfs(tree, s):
     for l in tree[s]:
         if depth[l[0]] == -1:
             depth[l[0]] = depth[s] + l[1]
             dfs(tree, l[0])
+
 
 dfs(tree, 1)
 
@@ -48,4 +50,3 @@ for l in depth[1:]:
         print((1))
     else:
         print((0))
-

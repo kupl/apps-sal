@@ -11,4 +11,3 @@ while len(f) > 0:
             f.pop()
 
 print(res)
-

@@ -9,4 +9,3 @@ if a + W < b:
     return
 else:
     print((a - (b + W)))
-

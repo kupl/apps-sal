@@ -1,6 +1,6 @@
-n, k = map(int,input().split())
-f = list(map(int,input().split()))
-f.sort(reverse = True)
+n, k = map(int, input().split())
+f = list(map(int, input().split()))
+f.sort(reverse=True)
 ans = 0
 places = 0
 for fl in f:

@@ -6,7 +6,7 @@ def abc126_d():
 
     N = next(inp)
     G = [[] for _ in range(N)]
-    for _ in range(N-1):
+    for _ in range(N - 1):
         u = next(inp) - 1
         v = next(inp) - 1
         w = next(inp)
@@ -18,7 +18,8 @@ def abc126_d():
 
     def dfs(u):
         for v, w in G[u]:
-            if color[v] != -1: continue
+            if color[v] != -1:
+                continue
             if w % 2 == 0:
                 color[v] = color[u]
             else:
@@ -28,6 +29,9 @@ def abc126_d():
     dfs(0)
     print(*color, sep='\n')
 
+
 def __starting_point():
     abc126_d()
+
+
 __starting_point()

@@ -1,5 +1,5 @@
 n = int(input())
-L = [n-int(x) for x in input().split()]
+L = [n - int(x) for x in input().split()]
 D = {}
 for i in L:
     if i in D:
@@ -9,7 +9,7 @@ for i in L:
 s = 0
 check = True
 for i in D.keys():
-    if D[i]%i != 0:
+    if D[i] % i != 0:
         check = False
         break
     else:
@@ -25,8 +25,8 @@ else:
         small = 1
         D2 = {}
         for i in D:
-            D2[i] = list(range(small,small+(D[i]//i)))*i
-            small += D[i]//i
+            D2[i] = list(range(small, small + (D[i] // i))) * i
+            small += D[i] // i
         for i in L:
-            print(D2[i][-1],end = ' ')
+            print(D2[i][-1], end=' ')
             D2[i].pop()

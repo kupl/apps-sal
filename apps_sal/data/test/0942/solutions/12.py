@@ -15,7 +15,7 @@ while i < n:
             del hd[a[i]]
     else:
         b[i] = fh
-        hd[a[i]] = [fh, a[i]-1]
+        hd[a[i]] = [fh, a[i] - 1]
         fh += 1
     i += 1
 if len(hd) != 0:
@@ -23,4 +23,3 @@ if len(hd) != 0:
 else:
     print("Possible")
     print(*b)
-

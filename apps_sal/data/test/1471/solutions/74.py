@@ -23,4 +23,3 @@ while stack:
 
 for c in colors:
     print(c)
-

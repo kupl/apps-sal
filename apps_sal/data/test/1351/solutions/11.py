@@ -1,6 +1,6 @@
 l, r = list(map(int, input().split()))
 
-for i in range(l, r+1):
+for i in range(l, r + 1):
 
     S = str(i)
     used = set()
@@ -10,4 +10,3 @@ for i in range(l, r+1):
         print(S)
         return
 print(-1)
-

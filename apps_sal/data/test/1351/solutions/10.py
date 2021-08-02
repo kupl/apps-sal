@@ -7,4 +7,3 @@ for i in range(l, r + 1):
         answer = s
         break
 print(answer)
-
