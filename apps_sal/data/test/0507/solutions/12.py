@@ -4,12 +4,14 @@ def check(A, B):
         if A[i] != B[i]:
             diff += 1
     return diff == 1
+
+
 ip = lambda: list(map(int, input().split()))
 n = int(input())
 A = ip()
 B = ip()
 diff = 0
-left = set(range(1, n+1))
+left = set(range(1, n + 1))
 C = [0 for _ in range(n)]
 for i in range(n):
     if A[i] == B[i]:
@@ -34,5 +36,3 @@ else:
         C[j] = left[0]
 
 print(*C)
-
-

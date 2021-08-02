@@ -3,8 +3,9 @@ im = int(input())
 best_steps = 0
 best_length = 0
 
+
 def rec(m, steps, substracted):
-    nonlocal best_steps, best_length 
+    nonlocal best_steps, best_length
     if m == 0:
         if steps > best_steps:
             best_steps = steps
@@ -20,7 +21,8 @@ def rec(m, steps, substracted):
     rec(m - a**3, steps + 1, substracted + a**3)
 
     if a - 1 != 0:
-        rec(a**3-1-(a-1)**3, steps + 1, substracted + (a-1)**3)
+        rec(a**3 - 1 - (a - 1)**3, steps + 1, substracted + (a - 1)**3)
+
 
 rec(im, 0, 0)
 print(best_steps, best_length)

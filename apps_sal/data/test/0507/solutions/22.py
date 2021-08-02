@@ -10,13 +10,14 @@ b = [int(x) for x in input().split()]
 perm = [-1 for i in range(n)]
 avail = set()
 
-for i in range(1,n+1):
+for i in range(1, n + 1):
     avail.add(i)
 
 for i in range(n):
     if a[i] == b[i]:
         avail.remove(a[i])
         perm[i] = a[i]
+
 
 def difference(seq1, seq2):
     count = 0
@@ -26,6 +27,7 @@ def difference(seq1, seq2):
         if count > 1:
             return 0
     return 1
+
 
 def solve(seq, curravail):
     if not curravail:
@@ -41,4 +43,5 @@ def solve(seq, curravail):
                 if solve(newseq, newset):
                     return solve(newseq, newset)
 
-print(" ".join(map(str,solve(perm,avail))))
+
+print(" ".join(map(str, solve(perm, avail))))

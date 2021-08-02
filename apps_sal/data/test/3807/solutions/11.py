@@ -5,5 +5,7 @@ def g(m, s, n):
     a = g(m - x, s + x, n + 1)
     b = g(x - y - 1, s + y, n + 1)
     return b if a[1] < b[1] else a
+
+
 s, n = g(int(input()), 0, 0)
 print(n, s)

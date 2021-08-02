@@ -1,5 +1,6 @@
 m = int(input())
 
+
 def rec(m):
     if m < 0:
         return -1, 0
@@ -11,5 +12,6 @@ def rec(m):
     x, y = rec(u)
     q, w = rec(v)
     return max((x + 1, a ** 3 + y), (q + 1, (a - 1) ** 3 + w))
+
 
 print(*rec(m))

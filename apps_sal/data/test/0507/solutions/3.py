@@ -9,7 +9,7 @@ for i in range(n):
 sa = True
 sb = True
 di = []
-for i in range(1,n+1):
+for i in range(1, n + 1):
     di.append(i)
 s = []
 for i in range(n):
@@ -27,10 +27,7 @@ else:
     else:
         s[diff[0]] = b[diff[0]]
         s[diff[1]] = a[diff[1]]
-        
-        
+
 
 for i in range(n):
-    print(s[i], end= ' ')
-
-
+    print(s[i], end=' ')

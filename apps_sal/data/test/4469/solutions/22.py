@@ -16,4 +16,3 @@ for i in range(q - 1):
         dc[n] = r
     else:
         print(min(dc[n] - l, r - dc[n]))
-

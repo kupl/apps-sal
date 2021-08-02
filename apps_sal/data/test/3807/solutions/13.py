@@ -8,7 +8,7 @@ def steps(m):
     x = 1
     while cube(x + 1) <= m:
         x += 1
-    return  1 + steps(max(m - cube(x), cube(x) - 1 - cube(x - 1)))
+    return 1 + steps(max(m - cube(x), cube(x) - 1 - cube(x - 1)))
 
 
 class CodeforcesTask679BSolution:
@@ -44,5 +44,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

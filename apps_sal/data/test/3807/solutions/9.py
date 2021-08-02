@@ -5,4 +5,6 @@ def rec(m):
     x, y = rec(m - a ** 3)
     q, w = rec(a ** 3 - (a - 1) ** 3 - 1)
     return max((x + 1, a ** 3 + y), (q + 1, (a - 1) ** 3 + w))
+
+
 print(*rec(int(input())))

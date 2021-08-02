@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 import sys
 
+
 def rint():
     return list(map(int, sys.stdin.readline().split()))
 #lines = stdin.readlines()
 
+
 q = int(input())
 
-order = [0]*(2*10**5+1)
+order = [0] * (2 * 10**5 + 1)
 lm_order = 0
 rm_order = 0
 
@@ -28,6 +30,4 @@ for i in range(q):
             lm_order = rm_order
             not_init = 0
     else:
-        print(min(order[id]- lm_order, rm_order - order[id]))
-
-
+        print(min(order[id] - lm_order, rm_order - order[id]))

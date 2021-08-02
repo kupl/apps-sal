@@ -5,10 +5,10 @@ if k == 0 or k == n:
 else:
     mi = 1
     groups = n // 3
-    
+
     if groups >= k:
-      ma = 2 * k
+        ma = 2 * k
     else:
-      ma = n - k
-      
+        ma = n - k
+
     print(mi, ma)

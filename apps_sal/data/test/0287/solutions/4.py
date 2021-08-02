@@ -1,6 +1,6 @@
 n, k = map(int, input().split())
 mini, maxi = 0, 0
-if n > k and k != 0: 
+if n > k and k != 0:
     mini = 1
 else:
     mini = 0

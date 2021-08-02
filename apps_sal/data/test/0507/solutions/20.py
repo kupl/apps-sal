@@ -4,12 +4,12 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 counta = Counter(a)
 countb = Counter(b)
-ab = [0]*n
+ab = [0] * n
 for i in range(n):
-    if a[i] == b[i]:  ab[i] =a[i]
+    if a[i] == b[i]: ab[i] = a[i]
 
-#print(ab)
-test = set(list(range(1,n+1)))
+# print(ab)
+test = set(list(range(1, n + 1)))
 #abtup = set([])
 for i in range(n):
     setab = set(ab)
@@ -19,7 +19,7 @@ for i in range(n):
         if a[i] in setab and b[i] in setab:
             if len(realtest) != 0:
                 ab[i] = realtest.pop()
-        
+
         elif a[i] in setab:
             ab[i] = b[i]
         elif b[i] in setab:
@@ -34,10 +34,5 @@ for i in range(n):
                 ab[i] = b[i]
             elif not counta[a[i]] > 1 and countb[b[i]] > 1:
                 ab[i] = a[i]
-            
-print(" ".join(list(map(str,ab))))
 
-
-
-
-
+print(" ".join(list(map(str, ab))))

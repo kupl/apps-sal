@@ -3,7 +3,7 @@ r = l = 0
 right_pos = {}
 left_pos = {}
 for _ in range(n):
-    com,id = input().split()
+    com, id = input().split()
     if com == 'R':
         right_pos[id] = r
         r += 1
@@ -13,9 +13,9 @@ for _ in range(n):
     else:
         if id in right_pos:
             ind = right_pos[id]
-            output = min(l+ind,r-ind-1)
+            output = min(l + ind, r - ind - 1)
             print(output)
         else:
             ind = left_pos[id]
-            output = min(l-ind-1,ind+r)
+            output = min(l - ind - 1, ind + r)
             print(output)

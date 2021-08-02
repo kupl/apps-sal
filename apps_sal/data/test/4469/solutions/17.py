@@ -1,6 +1,7 @@
 # use this as the main template for python problems
 import sys
 
+
 def solution(q):
 
     placed = False;
@@ -8,7 +9,7 @@ def solution(q):
     rind = 0;
     book_map = {};
     for i in range(q):
-        
+
         op, book_ind = [val for val in sys.stdin.readline().split()]
         book_ind = int(book_ind)
 
@@ -25,10 +26,10 @@ def solution(q):
             if(not placed):
                 placed = True;
                 rind += 1;
-            
+
         elif(op == '?'):
             ldist = book_map[book_ind] - lind;
-            rdist =  rind - book_map[book_ind];
+            rdist = rind - book_map[book_ind];
             print((min(ldist, rdist) - 1));
 
 
@@ -36,10 +37,6 @@ def __starting_point():
 
     q = [int(val) for val in sys.stdin.readline().split()][0]
     solution(q);
-    
-
-
-
 
 
 __starting_point()

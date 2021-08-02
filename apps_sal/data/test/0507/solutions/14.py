@@ -1,21 +1,22 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-c = [0]*n
-d = [False]*n
+c = [0] * n
+d = [False] * n
 bad = []
 need = []
 for i in range(n):
     if a[i] == b[i]:
-        d[a[i]-1] = True
+        d[a[i] - 1] = True
         c[i] = a[i]
     else:
         bad.append(i)
 for i in range(n):
     if not d[i]:
-        need.append(i+1)
+        need.append(i + 1)
 
 d = False
+
 
 def good(c):
     nonlocal a, b
@@ -34,8 +35,12 @@ def good(c):
     else:
         return False
     return True
+
+
 fc = []
 do = False
+
+
 def f(b, n, c):
     nonlocal do, fc
     #print(b, n, c, do)
@@ -43,14 +48,15 @@ def f(b, n, c):
         if len(b) == 0 and good(c):
             do = True
             fc = c
-            #print(fc)
+            # print(fc)
         else:
             for i in range(len(b)):
                 for j in range(len(n)):
-                    nc = c+[]
+                    nc = c + []
                     nc[b[i]] = n[j]
-                    f(b[:i]+b[i+1:]+[], n[:j]+n[j+1:]+[], nc)
+                    f(b[:i] + b[i + 1:] + [], n[:j] + n[j + 1:] + [], nc)
+
 
 f(bad, need, c)
 for i in fc:
-    print(i ,end=' ')
+    print(i, end=' ')
