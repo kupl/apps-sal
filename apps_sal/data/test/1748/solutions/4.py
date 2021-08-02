@@ -14,18 +14,17 @@ for i in range(n):
 
     ans = 0
 
-    heapq.heappush(heap, tmp+V[i])
+    heapq.heappush(heap, tmp + V[i])
 
-    while len(heap) and heap[0]<=tmp+T[i]:
+    while len(heap) and heap[0] <= tmp + T[i]:
 
-        ans += heapq.heappop(heap)-tmp
+        ans += heapq.heappop(heap) - tmp
 
     tmp += T[i]
 
-    ans += T[i]*len(heap)
+    ans += T[i] * len(heap)
 
     print(ans, end=' ')
-
 
 
 # Made By Mostafa_Khaled

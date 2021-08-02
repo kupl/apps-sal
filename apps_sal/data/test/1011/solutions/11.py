@@ -30,6 +30,4 @@ if 2 * n - 2 * m > d:
     a = 2 * n
     b = 2 * m
 
-print(str(a)+":"+str(b))
-
-
+print(str(a) + ":" + str(b))

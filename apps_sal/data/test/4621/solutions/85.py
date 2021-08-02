@@ -1,5 +1,5 @@
-h,w=map(int,input().split())
+h, w = map(int, input().split())
 for _ in range(h):
-    c=input()
+    c = input()
     print(c)
     print(c)

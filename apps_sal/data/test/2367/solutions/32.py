@@ -19,4 +19,3 @@ for x in range(H - A):
     ans += comb(B - 1 + x, x) * comb(H - x - 2 + W - B, W - B - 1)
     ans %= mod
 print(ans)
-

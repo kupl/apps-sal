@@ -1,5 +1,6 @@
 H, W, A, B = map(int, open(0).read().split())
-MOD = 10**9+7
+MOD = 10**9 + 7
+
 
 def modcomb(m, n, mod):
     if n > m - n:
@@ -11,6 +12,7 @@ def modcomb(m, n, mod):
         q = q * (i + 1) % mod
     result = p * pow(q, mod - 2, mod) % mod
     return result
+
 
 total = modcomb(H + W - 2, W - 1, MOD)
 

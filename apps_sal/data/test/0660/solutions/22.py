@@ -9,10 +9,3 @@ while m > 1:
     bottles += k // 2
     m = m - k + k // 2
 print(bottles, papers)
-
-
-
-
-
-    
-

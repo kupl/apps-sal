@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n = int(input())
 a = sorted(read())[::-1]
 m = int(input())
@@ -12,5 +14,4 @@ for i in range(n):
     y1 = j + 2 * m
     if x1 - y1 > x - y or (x1 - y1 == x - y and x1 > x):
         x, y = x1, y1
-print(x, y, sep = ':')
-
+print(x, y, sep=':')

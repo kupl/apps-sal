@@ -6,12 +6,6 @@ answer = []
 k = list(d.keys())
 for i in range(len(k)):
     answer += [(d[k[i]], k[i])]
-answer.sort(reverse = True)
+answer.sort(reverse=True)
 for i in range(len(answer)):
     print(answer[i][1])
-
-
-    
-    
-    
-

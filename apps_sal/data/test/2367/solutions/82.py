@@ -38,4 +38,3 @@ for i in range(b + 1, w + 1):
     ans += number_of_paths(h - a, i) * number_of_paths(a, w - i + 1)
 
 print((int(ans % MOD)))
-

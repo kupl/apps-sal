@@ -10,4 +10,3 @@ while n != 1:
     n -= k // 2
 
 print(ans1, ans2)
-

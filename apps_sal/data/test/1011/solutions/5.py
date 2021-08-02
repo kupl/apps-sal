@@ -5,6 +5,7 @@ def read_pack():
     x.sort()
     return c, x + [0]
 
+
 n, a = read_pack()
 m, b = read_pack()
 
@@ -41,4 +42,3 @@ while i <= n and j <= m:
         j += 1
 
 print(str.format("{}:{}", pa, pb))
-

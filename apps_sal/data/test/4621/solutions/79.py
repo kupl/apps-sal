@@ -8,4 +8,3 @@ for i in range(h * 2):
     for j in range(w):
         res += c[i // 2][j]
     print(res)
-

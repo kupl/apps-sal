@@ -5,4 +5,3 @@ for name in a[::-1]:
     if name not in was:
         was.add(name)
         print(name)
-

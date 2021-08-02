@@ -1,13 +1,13 @@
 # -*- coding: utf - 8 -*-
 """""""""""""""""""""""""""""""""""""""""""""
+import bisect
+from itertools import accumulate
 |    author: mr.math - Hakimov Rahimjon     |
 |    e-mail: mr.math0777@gmail.com          |
 |    created: 10.03.2018 22:24              |
 """""""""""""""""""""""""""""""""""""""""""""
 # inp = open("input.txt", "r"); input = inp.readline; out = open("output.txt", "w"); print = out.write
 TN = 1
-from itertools import accumulate
-import bisect
 
 
 # ===========================================
@@ -30,7 +30,7 @@ def solution():
         k = bisect.bisect_right(tt, dd)
         if k < n:
             ns[k] -= 1
-    
+
             lo[k] += v[i] + a
             if k != 0:
                 lo[k] -= tt[k - 1]
@@ -47,4 +47,3 @@ while TN != 0:
 # ===========================================
 # inp.close()
 # out.close()
-

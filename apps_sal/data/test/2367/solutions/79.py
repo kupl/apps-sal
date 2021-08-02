@@ -6,12 +6,14 @@ def permutation(n, k, mod):
         n -= 1
     return s
 
+
 def factorial(n, mod):
     s = 1
     for i in range(1, n + 1):
         s *= i
         s %= mod
     return s
+
 
 h, w, a, b = map(int, input().split())
 mod = pow(10, 9) + 7

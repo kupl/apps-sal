@@ -1,9 +1,15 @@
 mod = 10 ** 9 + 7
 h, w, a, b = map(int, input().split())
+
+
 def comb(n, r):
-    if n < r:return 0
-    if n < 0 or r < 0:return 0
+    if n < r:
+        return 0
+    if n < 0 or r < 0:
+        return 0
     return fa[n] * fi[r] % mod * fi[n - r] % mod
+
+
 fa = [1] * (h + w + 1)
 fi = [1] * (h + w + 1)
 for i in range(1, h + w + 1):

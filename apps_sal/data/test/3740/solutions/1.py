@@ -2,6 +2,7 @@
 import math
 import random
 
+
 class Prime:
     seed_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
@@ -16,9 +17,12 @@ class Prime:
             return self.is_prime_mr(n)
 
     def is_prime_common(self, n):
-        if n == 1: return False
-        if n in Prime.seed_primes: return True
-        if any([n % x == 0 for x in self.seed_primes]): return False
+        if n == 1:
+            return False
+        if n in Prime.seed_primes:
+            return True
+        if any([n % x == 0 for x in self.seed_primes]):
+            return False
 
     def is_prime_bf(self, n):
         for k in range(2, int(math.sqrt(n)) + 1):
@@ -96,7 +100,7 @@ class Prime:
             d = self.gcd(abs(x - y), n)
 
         if d == n:
-            return self.find_factor(n, seed+1)
+            return self.find_factor(n, seed + 1)
         return self.find_factor(d)
 
     def find_factors(self, n):
@@ -136,6 +140,7 @@ def powmod(a, x, m):
 
     return y
 
+
 M = 10 ** 9 + 7
 prime = Prime()
 
@@ -173,7 +178,8 @@ def solve(s):
                 continue
             c_l_max = min(c_l, (res - 1) // log_l)
             while 0 < c_l_max:
-                if (res - log_l * c_l_max) % log_r == 0: break
+                if (res - log_l * c_l_max) % log_r == 0:
+                    break
                 c_l_max -= 1
             if c_l_max == 0:
                 continue
@@ -182,7 +188,6 @@ def solve(s):
                 c_l_min = (res - sum_r + log_l - 1) // log_l
             div = log_r // g
             ans += (c_l_max - c_l_min + div) // div
-
 
     factors = prime.find_factors(s)
     num_prime_factors = len(factors)
@@ -213,6 +218,7 @@ def solve(s):
                 count[i] = 0
 
     return ans
+
 
 def main():
 

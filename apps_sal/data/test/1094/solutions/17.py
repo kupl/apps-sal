@@ -18,4 +18,3 @@ while True:
     names.move_to_end(name)
 
 sys.stdout.write('\n'.join(reversed(names)))
-

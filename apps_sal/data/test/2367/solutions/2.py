@@ -1,4 +1,4 @@
-H,W,A,B = list(map(int,input().split()))
+H, W, A, B = list(map(int, input().split()))
 
 
 class Combination:
@@ -36,14 +36,12 @@ class Combination:
             modinv[i] = self.mod - self.mod // i * modinv[self.mod % i] % self.mod
         return modinv
 
+
 comb = Combination(1000000)
-MOD = 10**9+7
+MOD = 10**9 + 7
 ans = 0
-for i in range(B,W):
-    ans += comb(H-A-1+i,i)*comb(A-1+W-1-i,A-1)
+for i in range(B, W):
+    ans += comb(H - A - 1 + i, i) * comb(A - 1 + W - 1 - i, A - 1)
     ans %= MOD
-    #print(comb(H-A-1+i,i)*comb(A-1+W-1-i,A-1))
+    # print(comb(H-A-1+i,i)*comb(A-1+W-1-i,A-1))
 print(ans)
-
-
-

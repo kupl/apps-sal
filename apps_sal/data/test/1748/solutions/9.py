@@ -12,6 +12,7 @@ def findMaxTemp(psT, v, start, minus):
 
     return l, r
 
+
 def solve():
     N = int(input())
     V = list(map(int, input().split()))
@@ -34,7 +35,8 @@ def solve():
         elif r == len(psT):
             cnt[i] += 1
         else:
-            cnt[i] += 1; cnt[l + 1] -= 1
+            cnt[i] += 1
+            cnt[l + 1] -= 1
             value = V[i] - (psT[l] - minus)
             partialAns[r] += value
 
@@ -48,6 +50,7 @@ def solve():
         ans[i] += cnt[i] * T[i]
 
     return ans
+
 
 for x in solve():
     print(x, end=' ')

@@ -4,6 +4,7 @@ from math import factorial
 
 MOD = 10 ** 9 + 7
 
+
 def combInit(n):
     fact = [1]
     finv = [1]
@@ -11,6 +12,7 @@ def combInit(n):
         fact.append(fact[i - 1] * i % MOD)
         finv.append(pow(fact[i], MOD - 2, MOD))
     return [fact, finv]
+
 
 def comb(n, k, f):
     if n < k:
@@ -49,7 +51,7 @@ def main():
     f = combInit(h + w)
     res = 0
     for i in range(b, w):
-        res += comb((h-1-a)+i, i, f) * comb((a-1)+(w-1-i), w-1-i, f)
+        res += comb((h - 1 - a) + i, i, f) * comb((a - 1) + (w - 1 - i), w - 1 - i, f)
 
     out = surP(res)
     # ------ 出力 ------#
@@ -62,5 +64,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

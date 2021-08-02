@@ -14,4 +14,3 @@ for i in chat_list[::-1]:
         x -= 1
         if x == 0:
             break
-

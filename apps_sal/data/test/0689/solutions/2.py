@@ -17,11 +17,14 @@ def main():
             return
     print("YES")
 
+
 def __starting_point():
     t = int(input())
 
     for i in range(t):
         main()
+
+
 """
 60, 61
 """

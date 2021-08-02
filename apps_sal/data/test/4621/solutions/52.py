@@ -3,5 +3,3 @@ for i in range(H):
     s = input()
     print(s)
     print(s)
-
-

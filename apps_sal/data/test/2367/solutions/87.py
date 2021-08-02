@@ -37,8 +37,8 @@ while A > 0 and B > 0:
     path2 = pathVar(x, y, H - 1, W - 1)
     cnt += path1 * path2
     cnt %= MOD
-    A -= 1; B -= 1
+    A -= 1
+    B -= 1
 
 ans = pathVar(0, 0, H - 1, W - 1)
 print(((ans - cnt) % MOD))
-

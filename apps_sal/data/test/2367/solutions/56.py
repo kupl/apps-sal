@@ -41,10 +41,11 @@ def __starting_point():
     while x > 0 and y <= W:
         path1 = comb(x + y - 2, x - 1)
         path2 = comb(H - x + W - y, H - x)
-        ans = (ans + path1*path2) % mod
+        ans = (ans + path1 * path2) % mod
         x -= 1
         y += 1
 
     print(ans)
+
 
 __starting_point()

@@ -17,4 +17,3 @@ for i in range(1, 7):
         z += 1
 
 print(str(x) + ' ' + str(y) + ' ' + str(z))
-

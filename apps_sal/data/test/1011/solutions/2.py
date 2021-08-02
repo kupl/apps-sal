@@ -1,3 +1,4 @@
+import bisect
 n = int(input())
 a = list(map(int, input().split()))
 m = int(input())
@@ -6,7 +7,6 @@ b = list(map(int, input().split()))
 a = sorted(a)
 b = sorted(b)
 
-import bisect
 
 mx = -5555555555555
 aa = -5555555555555555
@@ -26,9 +26,4 @@ for v in cands:
         aa = c1
         bb = c2
 
-print(str(aa)+':'+str(bb))
-
-        
-
-        
-
+print(str(aa) + ':' + str(bb))

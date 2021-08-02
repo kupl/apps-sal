@@ -4,4 +4,3 @@ for y in range(h):
     s = input()
     print(s)
     print(s)
-

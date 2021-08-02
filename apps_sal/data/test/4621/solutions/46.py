@@ -6,5 +6,5 @@ for i in range(H):
     L.append(C)
     L.append(C)
 
-for i in range(2*H):
+for i in range(2 * H):
     print(L[i][0])

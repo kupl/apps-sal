@@ -9,7 +9,7 @@ ns = [0] * n
 lo = [0] * n
 
 tt = list(accumulate(t))
-#print(tt)
+# print(tt)
 for i in range(n):
     dd = v[i]
     a = 0
@@ -18,18 +18,17 @@ for i in range(n):
         a = tt[i - 1]
     ns[i] += 1
     k = bisect.bisect_right(tt, dd)
-    #print(dd,k)
+    # print(dd,k)
     if k < n:
         ns[k] -= 1
 
-        lo[k] +=  + v[i] + a
+        lo[k] += + v[i] + a
         if k != 0:
             lo[k] -= tt[k - 1]
-#print(lo)
+# print(lo)
 ns = list(accumulate(ns))
-#print(ns)
+# print(ns)
 for i in range(n):
     lo[i] += t[i] * ns[i]
 
 print(' '.join(list(map(str, lo))))
-

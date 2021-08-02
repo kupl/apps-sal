@@ -22,4 +22,5 @@ def __starting_point():
     inputs = read()
     solve(*inputs)
 
+
 __starting_point()

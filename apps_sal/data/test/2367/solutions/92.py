@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees, log2
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
@@ -13,29 +14,32 @@ def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
 
-lim = 2*10**6
-fact = [1]*(lim+1)
-for n in range(1, lim+1):
-	fact[n] = n*fact[n-1]%mod
+lim = 2 * 10**6
+fact = [1] * (lim + 1)
+for n in range(1, lim + 1):
+    fact[n] = n * fact[n - 1] % mod
 
-fact_inv = [1]*(lim+1)
-fact_inv[lim] = pow(fact[lim], mod-2, mod)
+fact_inv = [1] * (lim + 1)
+fact_inv[lim] = pow(fact[lim], mod - 2, mod)
 for n in range(lim, 0, -1):
-	fact_inv[n-1] = n*fact_inv[n]%mod
+    fact_inv[n - 1] = n * fact_inv[n] % mod
+
 
 def C(n, r):
-	return (fact[n]*fact_inv[r]%mod)*fact_inv[n-r]%mod
+    return (fact[n] * fact_inv[r] % mod) * fact_inv[n - r] % mod
+
 
 H, W, A, B = MAP()
 
 ans = 0
 for n in range(B, W):
-	way = C(H-A-1+n, n)*C(W-n-1+A-1, A-1)%mod
-	ans = (ans+way)%mod
+    way = C(H - A - 1 + n, n) * C(W - n - 1 + A - 1, A - 1) % mod
+    ans = (ans + way) % mod
 
 print(ans)
-

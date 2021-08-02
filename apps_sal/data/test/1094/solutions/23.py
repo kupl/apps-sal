@@ -13,10 +13,10 @@ for _ in range(n):
     d[s] = p
     p += 1
 t = []
-for k,v in d.items():
-#    print(k,v)
-    t.append((v,k))
-t = sorted(t,reverse = True)
+for k, v in d.items():
+    #    print(k,v)
+    t.append((v, k))
+t = sorted(t, reverse=True)
 
 for e in t:
     print(e[1])

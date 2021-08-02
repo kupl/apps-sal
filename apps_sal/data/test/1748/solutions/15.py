@@ -13,4 +13,3 @@ for i in range(n):
     s += t[i]
     ans += len(d) * t[i]
     print(ans, end=' ')
-

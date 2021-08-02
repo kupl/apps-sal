@@ -64,4 +64,3 @@ for lst in arr:
 
 ans = str(ans[0]) + ':' + str(ans[1])
 print(ans)
-

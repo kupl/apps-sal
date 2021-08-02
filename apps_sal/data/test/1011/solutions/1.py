@@ -25,4 +25,3 @@ if 2 * n - 2 * m > best[0] - best[1]:
     best = [2 * n, 2 * m]
 
 print(best[0], ":", best[1], sep='')
-

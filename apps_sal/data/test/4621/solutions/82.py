@@ -5,4 +5,3 @@ c = [input() for i in range(H)]
 for i in range(H):
     print((c[i]))
     print((c[i]))
-

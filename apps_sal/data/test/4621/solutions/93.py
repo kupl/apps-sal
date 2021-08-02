@@ -1,4 +1,4 @@
-H, W = map(int,input().split())
+H, W = map(int, input().split())
 grid = []
 for i in range(H):
     array = list(input().strip().split())
