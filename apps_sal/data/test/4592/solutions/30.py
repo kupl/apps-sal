@@ -41,4 +41,3 @@ for i in range(2, N + 1):
         continue
     result = result * (t[i] + 1) % m
 print(result)
-

@@ -1,4 +1,4 @@
-s, p = map(int,input().split())
+s, p = map(int, input().split())
 ans = False
 i = 1
 while (i * i <= p):

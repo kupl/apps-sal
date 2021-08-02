@@ -14,9 +14,8 @@ for i in range(1, n):
         #     temp2 = max(temp2 , t[j + 2] - t[j])
         # el
         if j + 1 == i:
-             temp2 = max(temp2 , t[j + 2] - t[j])
+            temp2 = max(temp2, t[j + 2] - t[j])
         elif i != j:
-            temp2 = max(temp2 , t[j + 1] - t[j])
-    temp = min(temp , temp2)
+            temp2 = max(temp2, t[j + 1] - t[j])
+    temp = min(temp, temp2)
 print(temp)
-

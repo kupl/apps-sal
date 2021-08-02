@@ -1,6 +1,6 @@
-S,P = map(int, input().split())
+S, P = map(int, input().split())
 for i in range(1000050):
-    if i*(S-i) == P:
+    if i * (S - i) == P:
         print("Yes")
         return
 print("No")

@@ -1,8 +1,8 @@
 n = int(input())
 
-arr = [0] * (n+1)
+arr = [0] * (n + 1)
 
-for i in range(1,n+1):
+for i in range(1, n + 1):
     x = []
     while i % 2 == 0:
         x.append(2)
@@ -24,4 +24,3 @@ ans = 1
 for i in range(len(arr)):
     ans *= (arr[i] + 1)
 print((ans % (10**9 + 7)))
-

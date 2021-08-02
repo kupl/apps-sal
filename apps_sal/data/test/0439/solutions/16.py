@@ -4,4 +4,3 @@ if n < 100:
     print(m % (2**n))
 else:
     print(m)
-

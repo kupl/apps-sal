@@ -1,4 +1,4 @@
-import sys;input = lambda : sys.stdin.readline()
+import sys; input = lambda: sys.stdin.readline()
 import collections
 N = int(input())
 d = collections.Counter()

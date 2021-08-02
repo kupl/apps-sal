@@ -15,11 +15,10 @@ for v in l:
                 diff = q[i] - smol
                 curr = min(curr, diff + dp[j] + i - j - 1)
             dp.append(curr)
-                
+
         real = [n - i + dp[i] - 1 for i in range(n)] + [n]
         out += min(real)
         q = []
     else:
         q.append(v)
 print(out)
-

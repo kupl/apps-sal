@@ -7,4 +7,3 @@ for i in range(1, 1000050):
         break
 if not fl:
     print("No")
-

@@ -18,4 +18,3 @@ for i in x:
     Sum %= mod
 
 print(Sum)
-

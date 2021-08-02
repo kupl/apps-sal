@@ -7,14 +7,13 @@ s, p = list(map(int, input().split()))
 i = 1
 nl = []
 ml = []
-while i*i <= p:
+while i * i <= p:
     if p % i == 0:
         nl.append(i)
-        ml.append(p//i)
+        ml.append(p // i)
     i += 1
 for n, m in zip(nl, ml):
-    if n+m == s:
+    if n + m == s:
         print('Yes')
         return
 print('No')
-

@@ -1,5 +1,6 @@
 mod = 1000000000 + 7
 
+
 def factorization(n):
     arr = []
     temp = n
@@ -16,8 +17,9 @@ def factorization(n):
         arr.append([n, 1])
     return arr
 
+
 n = int(input())
-dat = [0] * 2000 # 約数として求められたある数の合計
+dat = [0] * 2000  # 約数として求められたある数の合計
 
 # N! の各要素の素因数分解をする
 res = 1

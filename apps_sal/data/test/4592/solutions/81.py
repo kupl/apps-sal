@@ -5,6 +5,7 @@ f = factorial(n)
 
 mod = 10 ** 9 + 7
 
+
 def primes(n):
     is_prime = [True] * (n + 1)
     is_prime[0] = False
@@ -15,6 +16,7 @@ def primes(n):
         for j in range(i * 2, n + 1, i):
             is_prime[j] = False
     return [i for i in range(n + 1) if is_prime[i]]
+
 
 ans = 1
 for p in primes(n):

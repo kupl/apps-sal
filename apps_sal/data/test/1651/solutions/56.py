@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
 import math
+a, b = list(map(int, input().split()))
 
 
 def ok(n):
@@ -14,5 +14,3 @@ def ok(n):
 
 
 print((ok(b)))
-
-

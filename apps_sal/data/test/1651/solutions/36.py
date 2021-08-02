@@ -5,4 +5,3 @@ if Decimal(s ** 2 - 4 * p) ** Decimal(1 / 2) - int((s ** 2 - 4 * p) ** (1 / 2)) 
     print("Yes")
 else:
     print("No")
-

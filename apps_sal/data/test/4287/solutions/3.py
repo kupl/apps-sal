@@ -37,4 +37,3 @@ for i in range(1, len(k)):
         print(-1)
         return
 print(dp[a][0])
-

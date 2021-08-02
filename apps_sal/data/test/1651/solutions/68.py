@@ -9,4 +9,5 @@ def __starting_point():
         x = (int)(s + x_) / 2
         print(("Yes" if x * (s - x) == p else "No"))
 
+
 __starting_point()

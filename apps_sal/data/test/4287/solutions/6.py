@@ -2,7 +2,7 @@
 # Username: maheshraju2020
 # Date: 03/07/2020
 
-from sys import stdin,stdout
+from sys import stdin, stdout
 from math import gcd, ceil, sqrt
 from collections import Counter
 ii1 = lambda: int(stdin.readline().strip())
@@ -29,7 +29,7 @@ for i in range(a + 1):
     if i not in rain:
         if i != 0:
             dp[i] = dp[i - 1]
-    
+
     else:
         for j in umb:
             if j[0] <= i:
@@ -40,10 +40,10 @@ for i in range(a + 1):
 
                 if dp[i] > 0:
                     dp[i] = min(dp[i], temp)
-                
+
                 else:
                     dp[i] = temp
-                
+
             else:
                 break
 
@@ -53,5 +53,3 @@ if umb[0][0] > rain[0]:
     print(-1)
 else:
     print(dp[-1])
-
-

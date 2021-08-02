@@ -39,4 +39,3 @@ for key, value in list(nums_counter.items()):
     ans %= 10**9 + 7
 
 print(ans)
-

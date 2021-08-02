@@ -13,6 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; If not, see <http://www.gnu.org/licenses/>.
 
+
 def main():
     n = int(input())
     m = int(input())
@@ -22,5 +23,5 @@ def main():
     else:
         print(m % (2 ** n))
 
-main()
 
+main()

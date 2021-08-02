@@ -1,3 +1,2 @@
-n=int(input())
-print(int(input())%(2**min(n,40)))
-
+n = int(input())
+print(int(input()) % (2**min(n, 40)))

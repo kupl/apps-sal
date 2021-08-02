@@ -3,6 +3,7 @@ from math import factorial
 N = int(input())
 MOD = 10 ** 9 + 7
 
+
 def prime(n):
     b = 2
     while b * b <= n:
@@ -12,6 +13,7 @@ def prime(n):
         b += 1
     if n > 1:
         a.append(n)
+
 
 a = []
 prime(factorial(N))

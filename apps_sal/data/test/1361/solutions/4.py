@@ -13,4 +13,3 @@ for i in range(2, n):
 
 ans = max(ans, mn)
 print(str(ans))
-

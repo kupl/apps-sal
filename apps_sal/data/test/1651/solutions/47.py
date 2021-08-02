@@ -1,5 +1,5 @@
 S, P = list(map(int, input().split()))
-v = S**2 - 4*P
+v = S**2 - 4 * P
 if v < 0:
     print("No")
 elif v == 0:
@@ -8,7 +8,7 @@ else:
     left = 1
     right = v
     while right - left > 1:
-        mid = (left+right)//2
+        mid = (left + right) // 2
         if mid**2 > v:
             right = mid
         else:
@@ -17,4 +17,3 @@ else:
         print("Yes")
     else:
         print("No")
-
