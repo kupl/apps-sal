@@ -17,7 +17,7 @@ def main():
     zero = 0
     for i in range(n):
         if a[i] == 0 and b[i] == 0:
-                zero += 1
+            zero += 1
         elif a[i] != 0 and b[i] == 0:
             counter[0] += 1
         elif a[i] != 0 and b[i] != 0:

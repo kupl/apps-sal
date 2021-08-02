@@ -13,8 +13,8 @@ for ai, bi in zip(a, b):
     if (ai, bi) == (0, 0):
         pre += 1
 
-fracs = [(-bi // gcd(ai, bi), ai // gcd(ai, bi)) if ai
-         != 0 else float('inf') for ai, bi in zip(a, b)]
+fracs = [(-bi // gcd(ai, bi), ai // gcd(ai, bi)) if ai !=
+         0 else float('inf') for ai, bi in zip(a, b)]
 
 cnt = {item: 0 for item in fracs}
 
@@ -23,4 +23,3 @@ for x in fracs:
         cnt[x] += 1
 
 print(max(cnt.values()) + pre)
-

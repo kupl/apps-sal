@@ -12,5 +12,5 @@ def go():
         return 'White'
     return 'Black'
 
-print(go())
 
+print(go())

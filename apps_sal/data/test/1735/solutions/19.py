@@ -12,5 +12,4 @@ for i in s:
     else:
         if last == i:
             counter += 1
-print("Yes" if counter%2==1 else "No")
-
+print("Yes" if counter % 2 == 1 else "No")

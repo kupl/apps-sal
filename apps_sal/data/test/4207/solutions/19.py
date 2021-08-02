@@ -2,10 +2,14 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 d = []
+
+
 def gsd(p, q):
     if q == 0:
         return p
     return gsd(q, p % q)
+
+
 ans0 = 0
 for i in range(n):
     if a[i] == 0:
@@ -31,5 +35,4 @@ for i in range(1, n):
 if n != 0:
     bk = max(bk, k)
 print(bk + ans0)
-#print(d)
-
+# print(d)

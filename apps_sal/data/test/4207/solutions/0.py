@@ -24,4 +24,3 @@ if counts:
     print(max(counts.values()) + arbitrary)
 else:
     print(arbitrary)
-

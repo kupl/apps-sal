@@ -1,7 +1,6 @@
-#use Python3
+# use Python3
 
 n = input("");
-array = [ int(i) for i in input("").split(" ") ];
+array = [int(i) for i in input("").split(" ")];
 
 print((max(array)));
-

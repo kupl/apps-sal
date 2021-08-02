@@ -9,5 +9,4 @@ for ch in s:
     else:
         left.append(ch)
 
-print(['No', 'Yes'][cnt%2])
-
+print(['No', 'Yes'][cnt % 2])

@@ -1,5 +1,5 @@
 n = int(input())
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 
 curr = 0
 best = 0
@@ -15,4 +15,3 @@ for v in l:
         for i in range(31):
             prevs[i] = min(prevs[i], curr)
 print(best)
-

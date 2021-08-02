@@ -12,4 +12,3 @@ for i in range(n):
     power += prev - a[i]
     prev = a[i]
 print(ans)
-

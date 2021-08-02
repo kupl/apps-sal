@@ -6,10 +6,12 @@ cands = {}
 aux = 0
 zero = 0
 
+
 def gcd(x, y):
     if x % y == 0:
         return y
     return gcd(y, x % y)
+
 
 for i in range(n):
     if b[i] == 0 and a[i] == 0:
@@ -47,4 +49,3 @@ for i in cands:
         cmax = cands[i]
 
 print(aux + max(cmax, zero))
-

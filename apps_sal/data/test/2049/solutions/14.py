@@ -1,5 +1,6 @@
 import os
 
+
 def __starting_point():
     n, m = list(map(int, input().split()))
     arr = list(map(int, input().split()))
@@ -25,5 +26,6 @@ def __starting_point():
         result.append("Yes\n" if increase[a] >= decrease[b] else "No\n")
 
     print("".join(result))
+
 
 __starting_point()

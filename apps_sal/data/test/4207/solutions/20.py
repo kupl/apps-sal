@@ -19,4 +19,4 @@ try:
     ma = c.most_common()[0][1]
 except IndexError:
     ma = 0
-print(max(ma+abzero, abzero+bzero))
+print(max(ma + abzero, abzero + bzero))

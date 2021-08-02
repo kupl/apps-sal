@@ -10,15 +10,15 @@ c = Counter()
 r = 0
 for i in range(n):
     if a[i] == 0 == b[i]:
-        r+=1
+        r += 1
         continue
 
-    if a[i]==0:
+    if a[i] == 0:
         continue
 
     c[Fraction(b[i], a[i])] += 1
 
-#print(c)
+# print(c)
 
 r += c.most_common(1)[0][1] if len(c) > 0 else 0
 

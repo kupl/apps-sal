@@ -24,4 +24,3 @@ for i in range(0, len(splitted) - 1):
         energy -= diff
 
 print(dollars)
-

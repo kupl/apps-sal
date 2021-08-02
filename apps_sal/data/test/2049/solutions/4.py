@@ -1,72 +1,68 @@
 import sys
 
 
-
-n,m=list(map(int,sys.stdin.readline().split()))
-
+n, m = list(map(int, sys.stdin.readline().split()))
 
 
-L=list(map(int,sys.stdin.readline().split()))
+L = list(map(int, sys.stdin.readline().split()))
 
 
+R = [0] * n
 
-R=[0]*n
+K = [0] * n
 
-K=[0]*n
-
-p=0
-
+p = 0
 
 
-for i in range(1,n):
+for i in range(1, n):
 
-    if(L[i]<L[i-1]):
+    if(L[i] < L[i - 1]):
 
-        for j in range(p,i):
+        for j in range(p, i):
 
-            R[j]=i
+            R[j] = i
 
-        p=i
+        p = i
 
-for j in range(p,n):
+for j in range(p, n):
 
-    R[j]=n
+    R[j] = n
 
-p=0
+p = 0
 
-for i in range(1,n):
+for i in range(1, n):
 
-    if(L[i]>L[i-1]):
+    if(L[i] > L[i - 1]):
 
-        for j in range(p,i):
+        for j in range(p, i):
 
-            K[j]=i
+            K[j] = i
 
-        p=i
+        p = i
 
-for j in range(p,n):
+for j in range(p, n):
 
-    K[j]=n
+    K[j] = n
 
 for i in range(m):
 
-    x,y=list(map(int,sys.stdin.readline().split()))
+    x, y = list(map(int, sys.stdin.readline().split()))
 
-    x-=1
+    x -= 1
 
-    y-=1
+    y -= 1
 
-    r=R[x]
+    r = R[x]
 
-    if(r>=y):
+    if(r >= y):
 
         sys.stdout.write("Yes\n")
 
         continue
 
-    e=K[r]
+    e = K[r]
 
-    if(e>y):
+    if(e > y):
 
         sys.stdout.write("Yes\n")
 
@@ -74,11 +70,5 @@ for i in range(m):
 
     sys.stdout.write("No\n")
 
-    
-
-
-
-
 
 # Made By Mostafa_Khaled
-
