@@ -25,4 +25,3 @@ for i in range(2, N - 1):
     ans = min(ans, max(P, Q, R, S) - min(P, Q, R, S))
 
 print(ans)
-

@@ -1,7 +1,9 @@
 from math import*
 
+
 def add_bit(n, k):
     return n | (1 << k)
+
 
 s = input().strip()
 ans = 0

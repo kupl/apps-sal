@@ -13,4 +13,3 @@ for ch in X:
 
     first = False
 print(A)
-

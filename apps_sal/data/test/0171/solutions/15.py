@@ -7,7 +7,6 @@ for letter in S:
     upper = upper or (letter in U)
     number = number or (letter in N)
 if (len(S) >= 5 and lower and upper and number):
-    print ("Correct")
+    print("Correct")
 else:
-    print ("Too weak")
-
+    print("Too weak")

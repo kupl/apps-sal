@@ -18,4 +18,5 @@ def solve(string):
 def __starting_point():
     print((solve('\n'.join([input(), input()]))))
 
+
 __starting_point()

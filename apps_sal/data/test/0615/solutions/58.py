@@ -10,9 +10,9 @@ def main():
     for b in range(1, n):
         F[b] = F[b - 1] + A[b]
 
-    res = [0]*4
+    res = [0] * 4
     data = [10 ** 18] * 2
-    ex = [0]*4
+    ex = [0] * 4
     ans = 10 ** 18
     s = 0
     t = 2
@@ -48,5 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

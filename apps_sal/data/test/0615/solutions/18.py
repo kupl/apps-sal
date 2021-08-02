@@ -14,11 +14,12 @@ def solve(string):
             r += 1
         sll, slr, srl, srr = a[l], a[c] - a[l], a[r] - a[c], a[-1] - a[r]
         ans = min(ans, max(sll, slr, srl, srr) - min(sll, slr, srl, srr))
-        c+=1
+        c += 1
     return str(ans)
 
 
 def __starting_point():
     print((solve('\n'.join([input(), input()]))))
+
 
 __starting_point()

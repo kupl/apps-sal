@@ -31,4 +31,3 @@ for m in range(2, N - 1):
     ans = min(ans, max(B, C, D, E) - min(B, C, D, E))
 
 print(ans)
-

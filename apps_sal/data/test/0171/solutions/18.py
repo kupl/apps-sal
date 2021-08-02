@@ -12,4 +12,3 @@ if a + b + c + d == 4:
     print("Correct")
 else:
     print("Too weak")
-

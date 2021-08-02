@@ -1,8 +1,8 @@
 n, t = list(map(int, input().split()))
 ts = []
 for i in range(n):
-    a,c = list(map(int, input().split()))
-    ts.append((a,c, i))
+    a, c = list(map(int, input().split()))
+    ts.append((a, c, i))
 ts = sorted(ts, key=lambda x: x[1])
 ans = 0
 ptr = 0
@@ -13,12 +13,12 @@ ctime = 0
 for i in range(n):
     n_ans = ans + 1
     if n_ans - 1 in hc:
-        csize -= hc[n_ans-1]
-        ctime -= hs[n_ans-1]
+        csize -= hc[n_ans - 1]
+        ctime -= hs[n_ans - 1]
     fail = False
     while csize < n_ans:
         if ptr == n:
-            fail=True
+            fail = True
             break
         a, c, num = ts[ptr]
         if a >= n_ans:
@@ -49,5 +49,4 @@ for i in range(ptr):
     if ts[i][0] >= ans:
         tks.append(ts[i][2])
 
-print(' '.join([str(i+1) for i in tks]))
-
+print(' '.join([str(i + 1) for i in tks]))

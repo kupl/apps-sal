@@ -6,4 +6,3 @@ elif A - C == 0:
     print(B)
 else:
     print(A)
-

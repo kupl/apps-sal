@@ -1,6 +1,7 @@
 from itertools import accumulate
 from bisect import bisect_left
 
+
 def main():
     N, *A = list(map(int, open(0).read().split()))
 
@@ -27,5 +28,5 @@ def main():
 
     print(ans)
 
-main()
 
+main()

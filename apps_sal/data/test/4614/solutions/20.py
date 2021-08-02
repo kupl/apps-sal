@@ -5,4 +5,3 @@ elif b == c:
     print(a)
 else:
     print(b)
-

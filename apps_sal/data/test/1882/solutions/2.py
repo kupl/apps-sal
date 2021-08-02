@@ -21,9 +21,9 @@ N, T = list(map(int, input().split()))
 
 ta = []
 for i in range(N):
-  a, t = list(map(int, input().split()))
-  ta.append((t, a, i+1))
-  # ta.append((10000, 200000, i+1))
+    a, t = list(map(int, input().split()))
+    ta.append((t, a, i + 1))
+    # ta.append((10000, 200000, i+1))
 
 ta.sort()
 
@@ -34,26 +34,26 @@ aks = []
 heapq.heapify(aks)
 sc = collections.defaultdict(list)
 for i in range(N):
-  t, a, _ = ta[i]
-  if T < t:
-    break
+    t, a, _ = ta[i]
+    if T < t:
+        break
 
-  T -= t
-  solvedCount += 1
+    T -= t
+    solvedCount += 1
 
-  sc[a].append((t, i))
-  heapq.heappush(aks, a)
-  removed = []
-  while aks and aks[0] < solvedCount:
-    k = heapq.heappop(aks)
-    removed.append(k)
-    v = sc[k]
-    solvedCount -= len(v)
-    for _, j in v:
-      T += ta[j][0]
-    del sc[k]
+    sc[a].append((t, i))
+    heapq.heappush(aks, a)
+    removed = []
+    while aks and aks[0] < solvedCount:
+        k = heapq.heappop(aks)
+        removed.append(k)
+        v = sc[k]
+        solvedCount -= len(v)
+        for _, j in v:
+            T += ta[j][0]
+        del sc[k]
 
-  score = max(score, solvedCount)
+    score = max(score, solvedCount)
 
 
 print(score)
@@ -63,6 +63,3 @@ vta = [(t, a, i) for t, a, i in ta if a >= score]
 vta.sort()
 ans = [i for _, _, i in vta[:score]]
 print(" ".join(map(str, ans)))
-
-
-

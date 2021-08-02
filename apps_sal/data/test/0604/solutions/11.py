@@ -1,8 +1,8 @@
 #
-n = int(input())
 from collections import Counter
-a = Counter(list(map(int,input().split())))
+n = int(input())
+a = Counter(list(map(int, input().split())))
 if 0 in a:
-	print (len(a)-1)
+    print(len(a) - 1)
 else:
-	print (len(a))
+    print(len(a))

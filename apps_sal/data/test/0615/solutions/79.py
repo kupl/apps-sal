@@ -24,4 +24,3 @@ for m in range(2, N - 1):
 
 
 print(ans)
-

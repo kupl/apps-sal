@@ -11,4 +11,3 @@ if int(a[0]) >= 5:
 if int(a[0]) < 5 or int(a[0]) == 9:
     ans = a[0] + ans
 print(ans)
-

@@ -1,6 +1,7 @@
 from sys import stdin, stdout
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
+
 
 def solve(n, t, tasks):
     lo = 0
@@ -19,7 +20,7 @@ def solve(n, t, tasks):
         for i in tasks:
             if i[0] >= mid:
                 valid_tasks.append(i)
-        
+
         can_do = False
 
         curr_sum = 0
@@ -41,10 +42,6 @@ def solve(n, t, tasks):
         else:
             hi = mid - 1
     return curr_res, res
-        
-
-
-
 
 
 def main():
@@ -67,5 +64,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

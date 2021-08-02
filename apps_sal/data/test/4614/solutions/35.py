@@ -1,5 +1,5 @@
 # 入力
-A, B, C = map(int,input().split())
+A, B, C = map(int, input().split())
 
 # 処理
 if A == B:

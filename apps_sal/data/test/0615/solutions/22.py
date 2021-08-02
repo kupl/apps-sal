@@ -1,6 +1,6 @@
 N = int(input())
 
-#累積和で受け取る
+# 累積和で受け取る
 A = [0] * N
 S = 0
 for i, a in enumerate(input().split()):
@@ -9,7 +9,7 @@ for i, a in enumerate(input().split()):
 
 answer = S
 
-#indexは最後に回収する番号
+# indexは最後に回収する番号
 B = 0
 D = 0
 
@@ -20,12 +20,12 @@ for C in range(1, N - 2):
     SD = A[D] - A[C]
     SE = S - A[D]
     left_score = abs(SB - SC)
-    #BCの境界の調整
+    # BCの境界の調整
     while True:
         B_ = B + 1
         SB_ = A[B_]
         SC_ = A[C] - SB_
-        x = abs(SB_  - SC_)
+        x = abs(SB_ - SC_)
         if left_score > x:
             B, SB, SC, left_score = B_, SB_, SC_, x
             continue
@@ -44,5 +44,4 @@ for C in range(1, N - 2):
 
     score = max(SB, SC, SD, SE) - min(SB, SC, SD, SE)
     answer = min(score, answer)
-print (answer)
-
+print(answer)

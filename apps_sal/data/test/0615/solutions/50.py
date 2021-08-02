@@ -5,7 +5,7 @@ def main():
     s = 0
     for i, a in enumerate(A):
         s += a
-        S[i] = s 
+        S[i] = s
     l = 0
     b = 2
     m = S[-1]
@@ -31,4 +31,3 @@ def main():
 
 
 print((main()))
-

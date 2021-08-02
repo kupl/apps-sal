@@ -16,4 +16,3 @@ if numb and case and lg:
     print('Correct')
 else:
     print('Too weak')
-

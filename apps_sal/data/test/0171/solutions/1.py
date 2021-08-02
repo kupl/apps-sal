@@ -15,10 +15,8 @@ for i in d2:
         flag3 = True
 for i in d3:
     if i in s:
-        flag4 = True  
+        flag4 = True
 if(flag1 and flag2 and flag3 and flag4):
     print("Correct")
 else:
     print("Too weak")
-
-

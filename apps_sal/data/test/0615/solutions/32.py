@@ -51,4 +51,3 @@ while d2 < d4 - 1:
     d2 += 1
 
 print(ans)
-

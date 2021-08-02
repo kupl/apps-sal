@@ -1,6 +1,7 @@
 N = int(input())
 A = tuple(map(int, input().split()))
 
+
 def calc(B):
     P, Q = B[0], B[1]
     ret = [None] * N
@@ -23,6 +24,7 @@ def calc(B):
 
     return ret
 
+
 left = calc(A)[1: -2]
 right = calc(A[:: -1])[1: -2][:: -1]
 
@@ -31,4 +33,3 @@ for (P, Q), (R, S) in zip(left, right):
     ans = min(ans, abs(max(P, Q, R, S) - min(P, Q, R, S)))
 
 print(ans)
-

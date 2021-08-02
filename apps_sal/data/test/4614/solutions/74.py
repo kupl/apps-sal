@@ -5,9 +5,9 @@ def main():
     from collections import Counter, deque
     from collections import defaultdict
     from itertools import combinations, permutations, accumulate, groupby, product
-    from bisect import bisect_left,bisect_right
+    from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
-    from math import floor, ceil,pi,factorial
+    from math import floor, ceil, pi, factorial
     from operator import itemgetter
     def I(): return int(input())
     def MI(): return list(map(int, input().split()))
@@ -16,19 +16,21 @@ def main():
     def MXI(): return [[LI()]for i in range(n)]
     def SI(): return input().rstrip()
     def printns(x): print(('\n'.join(x)))
-    def printni(x): print(('\n'.join(list(map(str,x)))))
+    def printni(x): print(('\n'.join(list(map(str, x)))))
     inf = 10**17
     mod = 10**9 + 7
-#main code here!
-    a,b,c=MI()
-    if a==b:
+# main code here!
+    a, b, c = MI()
+    if a == b:
         print(c)
-    elif b==c:
+    elif b == c:
         print(a)
     else:
         print(b)
-        
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

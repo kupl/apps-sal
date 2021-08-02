@@ -15,4 +15,5 @@ def main():
     else:
         print("Too weak")
 
+
 main()

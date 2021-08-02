@@ -9,4 +9,3 @@ elif A == C and A != B:
     print(B)
 elif B == C and A != C:
     print(A)
-

@@ -5,7 +5,7 @@ A = list(map(int, input().split()))
 
 S = [A[0]]
 for i in range(1, N):
-    S.append(S[i - 1] + A[i])   
+    S.append(S[i - 1] + A[i])
 
 left_middle = 0
 right_middle = 2
@@ -17,7 +17,7 @@ for middle in range(1, N - 2):
     right_sum = S[middle] - left_sum
     diff = abs(left_sum - right_sum)
 
-    for i in range(left_middle+1, middle):
+    for i in range(left_middle + 1, middle):
         left_sum = S[i]
         right_sum = S[middle] - left_sum
         if diff > abs(left_sum - right_sum):
@@ -25,7 +25,7 @@ for middle in range(1, N - 2):
             diff = abs(left_sum - right_sum)
         else:
             break
-    
+
     left_sum = S[right_middle] - S[middle]
     right_sum = S[-1] - S[right_middle]
     diff = abs(left_sum - right_sum)
@@ -38,7 +38,7 @@ for middle in range(1, N - 2):
             diff = abs(left_sum - right_sum)
         else:
             break
-    
+
     s1 = S[left_middle]
     s2 = S[middle] - s1
     s3 = S[right_middle] - s1 - s2
@@ -48,5 +48,3 @@ for middle in range(1, N - 2):
     ans = min(ans, score)
 
 print(ans)
-        
-

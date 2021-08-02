@@ -24,6 +24,7 @@ def check(a):
         return 0
     return 1
 
+
 a = input()
 if check(a):
     print("Correct")
