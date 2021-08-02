@@ -16,9 +16,9 @@ minus = []
 plus = []
 for i in range(n):
     if val[i] < 0:
-        minus.append([i, -val[i]]) 
+        minus.append([i, -val[i]])
     if val[i] > 0:
-        plus.append([i, val[i]]) 
+        plus.append([i, val[i]])
 
 ans = []
 num1 = 0

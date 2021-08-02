@@ -8,6 +8,7 @@ from collections import Counter
 # imgur.com/Pkt7iIf.png #
 #########################
 
+
 def sieve(n):
     prime = [True for i in range(n + 1)]
     p = 2
@@ -19,6 +20,8 @@ def sieve(n):
     prime[0] = prime[1] = False
     r = [p for p in range(n + 1) if prime[p]]
     return r
+
+
 def divs(n, start=1):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
@@ -28,6 +31,8 @@ def divs(n, start=1):
             else:
                 r.extend([i, n // i])
     return r
+
+
 def ceil(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
 def mi(): return map(int, input().split())
@@ -35,6 +40,7 @@ def li(): return list(map(int, input().split()))
 def lcm(a, b): return abs(a * b) // math.gcd(a, b)
 def prr(a, sep=' '): print(sep.join(map(str, a)))
 def dd(): return collections.defaultdict(int)
+
 
 t = ii()
 for _ in range(t):
@@ -53,7 +59,7 @@ for _ in range(t):
                 k = 0
             else:
                 state.append(i)
-    res = [1]*n
+    res = [1] * n
     for i in state:
         res[i] = 0
     prr(res, '')

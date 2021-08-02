@@ -18,4 +18,3 @@ if R:
     print("R")
 else:
     print("D")
-

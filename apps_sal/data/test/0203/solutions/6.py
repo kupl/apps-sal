@@ -9,7 +9,7 @@ while True:
         if s[i] == "D":
             if curr_d > 0:
                 s[i] = "N"
-                ost_d -=1
+                ost_d -= 1
                 curr_d -= 1
             else:
                 curr_r += 1

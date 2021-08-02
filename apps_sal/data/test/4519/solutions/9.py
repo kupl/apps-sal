@@ -30,4 +30,3 @@ for _ in range(q):
         ans1 = ans[:j]
         ans2 = ans[j:]
         print(''.join(map(str, ans1)) + '0' + ''.join(map(str, ans2)))
-

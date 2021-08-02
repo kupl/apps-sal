@@ -28,4 +28,3 @@ if was_r:
     print("R")
 else:
     print("D")
-

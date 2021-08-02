@@ -14,12 +14,11 @@ while D and R:
     d = D.popleft()
     r = R.popleft()
     if d < r:
-        D.append(d+n)
+        D.append(d + n)
     else:
-        R.append(r+n)
+        R.append(r + n)
 
 if D:
     print('D')
 else:
     print('R')
-

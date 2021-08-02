@@ -10,7 +10,7 @@ u2 = 0
 c1 = s.count("D")
 c2 = s.count("R")
 
-while c1 != 0 and c2 !=0:
+while c1 != 0 and c2 != 0:
     for i in range(n):
         if s[i] == "D":
             if u[i] == 1:

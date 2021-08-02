@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     input = sys.stdin.readline
     N = int(input())
@@ -12,6 +13,9 @@ def main():
     for a in rank:
         print(int(restaurants.index(a)) + 1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

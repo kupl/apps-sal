@@ -11,16 +11,16 @@ for i in range(n):
 while True:
     # print('D',d)
     # print('R',r)
-    
+
     if not d:
         print('R')
         break
     if not r:
         print('D')
-        break    
+        break
     if d[0] < r[0]:
         r.popleft()
-        d.append(d.popleft()+n)
+        d.append(d.popleft() + n)
     else:
         d.popleft()
-        r.append(r.popleft()+n)
+        r.append(r.popleft() + n)

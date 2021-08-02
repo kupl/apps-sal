@@ -14,12 +14,10 @@ for _ in range(q):
         if cnt + pos - i <= k:
             cnt += (pos - i)
         else:
-            res = list("0"*i + "1"*(pos-i) + s[pos:])
+            res = list("0" * i + "1" * (pos - i) + s[pos:])
             res[pos] = "1"
-            res[pos - (k-cnt)] = "0"
+            res[pos - (k - cnt)] = "0"
             print("".join(res))
             break
     else:
-        print("0"*len(ans) + "1"*(n-len(ans)))
-    
-
+        print("0" * len(ans) + "1" * (n - len(ans)))

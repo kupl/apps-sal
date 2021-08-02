@@ -1,5 +1,5 @@
 cof = input()
 if cof[2] == cof[3] and cof[4] == cof[5]:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

@@ -27,7 +27,7 @@ while countr != 0 and countd != 0:
         news = []
         n = len(s)
         i = 0
-        
+
 if countr > 0:
     print('R')
 else:

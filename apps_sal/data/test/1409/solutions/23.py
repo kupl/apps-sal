@@ -12,12 +12,15 @@ def main():
         s = t.split(' ')
         ans = 0
         for i in range(n):
-            if int(s[i])+k<=5:
-                ans =ans+1
-        print(int(ans/3))
+            if int(s[i]) + k <= 5:
+                ans = ans + 1
+        print(int(ans / 3))
     except EOFError:
         return
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

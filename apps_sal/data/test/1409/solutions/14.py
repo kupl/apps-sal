@@ -8,8 +8,7 @@ A = [int(u) for u in f.readline().strip().split()]
 
 m = 0
 for u in A:
-    if u+k<=5:
-       m += 1
+    if u + k <= 5:
+        m += 1
 
-print(m//3)
-
+print(m // 3)

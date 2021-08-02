@@ -4,4 +4,3 @@ if s[2] == s[3]:
         print("Yes")
         return
 print("No")
-

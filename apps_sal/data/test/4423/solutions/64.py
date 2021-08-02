@@ -8,4 +8,3 @@ a.sort()
 
 for i in a:
     print((i[2] + 1))
-

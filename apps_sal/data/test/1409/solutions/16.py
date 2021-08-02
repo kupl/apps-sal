@@ -6,4 +6,4 @@ ch = 0
 for i in a:
     if i <= n:
         ch += 1
-print((ch-ch%3)//3)
+print((ch - ch % 3) // 3)

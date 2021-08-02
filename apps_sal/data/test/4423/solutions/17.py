@@ -16,7 +16,7 @@ for n in lst2:
 
 for m in dct2.keys():
     dct2[m] = sorted(dct2[m], reverse=True)
-    
+
 lst3 = []
 for x in dct2.keys():
     for y in dct2[x]:
@@ -25,4 +25,4 @@ for x in dct2.keys():
 for i in lst3:
     for k, v in dct.items():
         if i == v:
-            print(k+1)
+            print(k + 1)

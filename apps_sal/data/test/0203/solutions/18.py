@@ -5,10 +5,10 @@ n = int(input())
 s = input()
 for let in s:
     q.append(let)
-    
+
 b = 0
 while len(q) > 1 and abs(b) < 400000:
-    #print(b)
+    # print(b)
     c = q.popleft()
     if c == 'D':
         if b >= 0:
