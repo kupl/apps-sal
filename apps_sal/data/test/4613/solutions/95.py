@@ -45,18 +45,18 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-N,M = list(map(int,input().split()))
+
+N, M = list(map(int, input().split()))
 edges = []
 for i in range(M):
-    x = list(map(int,input().split()))
+    x = list(map(int, input().split()))
     edges.append(x)
 ans = 0
 for i in range(M):
     uf = UnionFind(N)
     for j in range(M):
         if j != i:
-            uf.union(edges[j][0]-1,edges[j][1]-1)
-        if j == M-1 and uf.group_count() != 1:
+            uf.union(edges[j][0] - 1, edges[j][1] - 1)
+        if j == M - 1 and uf.group_count() != 1:
             ans += 1
 print(ans)
-

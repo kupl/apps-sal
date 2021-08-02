@@ -13,4 +13,3 @@ for i in range(q):
             heapq.heappush(heap, t[query_id - 1])
     else:
         print('YES' if t[query_id - 1] in heap else 'NO')
-

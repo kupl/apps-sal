@@ -97,7 +97,7 @@ class Table:
             self.ielsum_eng += e
             self.ieltot[e] += 1
 
-            if i == ll - 1 or legs[i+1] != self.ilen:
+            if i == ll - 1 or legs[i + 1] != self.ilen:
                 self.irem = self.irep - 1
                 self.irem_eng = self.ielprev_eng - self.ielsum_eng
                 if self.irem != 0:
@@ -250,6 +250,7 @@ class unitTests(unittest.TestCase):
         self.assertEqual(d.irem_eng, 12)
         self.assertEqual(d.ires_eng, 8)
 
+
 def __starting_point():
 
     # Avoiding recursion limitaions
@@ -260,5 +261,6 @@ def __starting_point():
 
     # Print the result string
     print(calculate())
+
 
 __starting_point()

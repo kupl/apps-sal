@@ -45,13 +45,14 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = list(map(int, input().split()))
 uf = UnionFind(N)
 ab_list = []
-ans =0
+ans = 0
 for i in range(M):
-    a,b = list(map(int, input().split()))
-    a, b = a-1, b-1
+    a, b = list(map(int, input().split()))
+    a, b = a - 1, b - 1
     ab_list.append([a, b])
 
 for i in range(M):
@@ -63,4 +64,3 @@ for i in range(M):
     if not uf.same(ab_list[i][0], ab_list[i][1]):
         ans += 1
 print(ans)
-

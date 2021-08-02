@@ -22,17 +22,18 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-n,m = map(int,input().split())
-a = [list(map(int,input().split())) for i in range(m)]
+
+n, m = map(int, input().split())
+a = [list(map(int, input().split())) for i in range(m)]
 ans = 0
 for i in range(m):
-    uf = UnionFind(n+1)
+    uf = UnionFind(n + 1)
     cnt = 0
     for j in range(m):
         if i == j:
             continue
         else:
-            uf.union(a[j][0],a[j][1])
+            uf.union(a[j][0], a[j][1])
     for k in uf.parents:
         if k < 0:
             cnt += 1

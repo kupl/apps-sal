@@ -4,7 +4,7 @@ number = 0
 single = []
 curr = 0
 for i in steps:
-    if i==1:
+    if i == 1:
         single.append(curr)
         curr = 1
         number += 1
@@ -13,4 +13,3 @@ for i in steps:
 single.append(curr)
 print(number)
 print(*single[1:])
-

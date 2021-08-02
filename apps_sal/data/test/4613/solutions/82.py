@@ -4,8 +4,8 @@ edges = [[] for _ in range(n)]
 for i in range(m):
     a, b = list(map(int, input().split()))
 
-    edges[a-1].append(b-1)
-    edges[b-1].append(a-1)
+    edges[a - 1].append(b - 1)
+    edges[b - 1].append(a - 1)
 
 ind = 1
 queue = [0]

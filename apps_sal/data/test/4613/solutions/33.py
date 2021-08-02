@@ -1,5 +1,6 @@
-N,M=map(int,input().split())
-ab=[list(map(int,input().split()))for _ in range(M)]
+N, M = map(int, input().split())
+ab = [list(map(int, input().split()))for _ in range(M)]
+
 
 class UnionFind():
     def __init__(self, n):
@@ -48,13 +49,14 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-ans=0
+
+ans = 0
 for i in range(M):
-    uf=UnionFind(N)
+    uf = UnionFind(N)
     for j in range(M):
-        if i==j:
+        if i == j:
             continue
-        a,b=ab[j]
-        uf.union(a-1,b-1)
-    ans+=(uf.group_count()>1)
+        a, b = ab[j]
+        uf.union(a - 1, b - 1)
+    ans += (uf.group_count() > 1)
 print(ans)

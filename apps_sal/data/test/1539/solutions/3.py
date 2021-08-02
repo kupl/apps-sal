@@ -15,7 +15,7 @@ ans = [INF] * 3
 ans[2] = 10 ** 10
 
 p = arr[-1][0]
-k = [0, 0]        
+k = [0, 0]
 arr.sort()
 arr = [(-1, -1)] + arr
 e = 0
@@ -29,7 +29,7 @@ for i in range(n, -1, -1):
         if c == 1:
             ans[0] = max(ans[0], e)
         elif c == 2:
-            ans[1] = max(ans[1], arr[i + 1][1] + arr[i + 2][1])        
+            ans[1] = max(ans[1], arr[i + 1][1] + arr[i + 2][1])
         if c >= 2:
             mx = c + c - 1
             eng = k[1]
@@ -48,7 +48,7 @@ for i in range(n, -1, -1):
                             g = 0
                     j += 1
                 if g == 0:
-                    ans[2] = min(ans[2], eng)                     
+                    ans[2] = min(ans[2], eng)
         k[0] += c
         k[1] += e
         c = 1
@@ -65,6 +65,3 @@ if mn != 10 ** 10:
     print(mn)
 else:
     print(0)
-        
-
-

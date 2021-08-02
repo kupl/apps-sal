@@ -11,4 +11,4 @@ else:
     direct = -1
 s = input().strip()
 for i in range(len(s)):
-    print(b[a[s[i]]+direct], end = '')
+    print(b[a[s[i]] + direct], end='')

@@ -14,6 +14,7 @@ while k:
     h[k] = min(h[j], h[j + 1])
     k -= 1
 
+
 def f(a, l, r):
     if r - l < 1: return 0
     if r - l < 2: return int(t[l][0] != a)
@@ -30,5 +31,6 @@ def f(a, l, r):
     b, m = q
     d, n = b - a, r - l
     return min(n, d + f(b, l, m) + f(b, m + 1, r)) if d < n else n
+
 
 print(f(0, 0, n))

@@ -1,7 +1,7 @@
-class UnionFind: #引数は頂点の数、1インデックス
+class UnionFind:  # 引数は頂点の数、1インデックス
     def __init__(self, n):
-        self.parents = [i for i in range(n+1)]
-        self.rank = [0] * (n+1)
+        self.parents = [i for i in range(n + 1)]
+        self.rank = [0] * (n + 1)
 
     # 検索
     def find(self, x):
@@ -41,18 +41,11 @@ def __starting_point():
             union_find.union(a, b)
 
         for j in range(1, N):
-            if union_find.find(j) != union_find.find(j+1):
+            if union_find.find(j) != union_find.find(j + 1):
                 count += 1
                 break
 
     print(count)
-        
-    
-
-
-
-
-
 
 
 __starting_point()

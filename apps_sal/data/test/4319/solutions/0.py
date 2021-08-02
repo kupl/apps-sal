@@ -14,5 +14,3 @@ for x in a:
 o.append(cur)
 print(len(o))
 print(' '.join(str(x) for x in o))
-
-

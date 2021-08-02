@@ -18,36 +18,36 @@ def bfs(start_node, color_id):  # start_nodeは探索の開始点
         u = q.popleft()
         for v in adjl[u]:
             if color[v] == NIL:
-                d[v] = d[u]+1
+                d[v] = d[u] + 1
                 color[v] = color_id
                 q.append(v)
 
 
-#print(l)
-for k in range(1, m+1):
+# print(l)
+for k in range(1, m + 1):
 
     # 隣接リストで格納する
-    adjl = [[] for _ in range(n+1)]
-    for i in range(1, m+1):  # 隣接関係を受け取る
+    adjl = [[] for _ in range(n + 1)]
+    for i in range(1, m + 1):  # 隣接関係を受け取る
         if i == k:
             continue
-        s, t = l[i-1]
+        s, t = l[i - 1]
         adjl[s].append(t)
         adjl[t].append(s)
 
     NIL = -1  # 未発見を示す値
-    d = [-1 for i in range(n+1)]  # 頂点1からの距離を格納するリスト
-    color = [NIL for i in range(n+1)]  # 未到達かを示すリスト
+    d = [-1 for i in range(n + 1)]  # 頂点1からの距離を格納するリスト
+    color = [NIL for i in range(n + 1)]  # 未到達かを示すリスト
 
-    #print(adjl)
+    # print(adjl)
 
     color_id = 0
-    for u in range(1, n+1):  # node全てからスタートする
+    for u in range(1, n + 1):  # node全てからスタートする
         if color[u] == NIL:
             color_id += 1
             bfs(u, color_id)
 
-    #print(color)
+    # print(color)
     if len(set(color)) >= 3:
         ans += 1
 print(ans)

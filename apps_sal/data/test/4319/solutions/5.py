@@ -9,4 +9,4 @@ for i in range(n):
         anses.append(s[i])
 print(ans)
 for i in range(ans):
-    print(anses[i],end=' ')
+    print(anses[i], end=' ')

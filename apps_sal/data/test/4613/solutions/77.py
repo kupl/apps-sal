@@ -1,21 +1,22 @@
-#https://atcoder.jp/contests/abc075/submissions/15509548
+# https://atcoder.jp/contests/abc075/submissions/15509548
 
 n, m = list(map(int, input().split()))
 g = [[] for _ in range(n)]
 for i in range(m):
     a, b = list(map(int, input().split()))
-    a, b = a-1, b-1
+    a, b = a - 1, b - 1
     g[a].append(b)
     g[b].append(a)
 
+
 def lowlink(g, root=0):
     n = len(g)
-    order = [n]*n
-    low = [n]*n
+    order = [n] * n
+    low = [n] * n
 
     s = [root]
     cnt = 0
-    par = [-1]*n
+    par = [-1] * n
     seq = []
     while s:
         v = s.pop()
@@ -61,6 +62,6 @@ def lowlink(g, root=0):
                     break
     return AP, bridge
 
+
 _, bridge = lowlink(g, 0)
 print((len(bridge)))
-

@@ -3,6 +3,7 @@
 
 import itertools
 
+
 def main():
     send = input()
     recv = input()
@@ -35,7 +36,7 @@ def main():
     else:
         num = 0
         den = 0
-        for seq in itertools.product( ( '+', '-' ), repeat = amb ):
+        for seq in itertools.product(('+', '-'), repeat=amb):
             den += 1
             val = 0
             for c in seq:
@@ -49,11 +50,13 @@ def main():
 
         prob = num / den
 
-    print( prob )
+    print(prob)
 
     return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -12,4 +12,3 @@ for L, (k, D) in list(p.items()):
                 if k == 0: break
     m = max(D, m)
 print(sum(d for l, d in s) - m)
-

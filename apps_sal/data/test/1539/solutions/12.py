@@ -28,8 +28,8 @@ for l, d in s:
         k = D = 0
     k += 1
     D += d
-    
+
     t[d] -= 1
     if not t[d]: j.remove(d)
-    
+
 print(S - m)

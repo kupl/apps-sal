@@ -1,5 +1,6 @@
 def chng(c):
-    return -1 if c == '-' else ( 1 if c == '+' else 0)
+    return -1 if c == '-' else (1 if c == '+' else 0)
+
 
 def f(z, d):
     if z == 0:
@@ -11,6 +12,8 @@ def f(z, d):
     else:
         f(z - 1, d - 1)
         f(z - 1, d + 1)
+
+
 A = input()
 B = input()
 n = len(A)
@@ -31,4 +34,3 @@ else:
     f(z, d)
     print(ne / al)
 #print(1 / (2 ** (z if z % 2 == 1 else z // 2)))
-

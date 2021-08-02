@@ -42,7 +42,7 @@ for m in range(M):
     for i in range(M):
         if i == m:
             continue
-        
+
         a, b = AB[i]
         a -= 1
         b -= 1

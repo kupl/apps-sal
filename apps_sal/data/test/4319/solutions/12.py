@@ -3,13 +3,13 @@
 # sys.stdout=open('F:\\C\\Script\\output.txt','w')
 # sys.stdout.flush()
 
-I = lambda:[int(i) for i in input().split()]
+I = lambda: [int(i) for i in input().split()]
 
 n, = I()
 l = I() + [1]
-a  = []
+a = []
 for i in range(n):
-	if l[i+1] == 1:
-		a.append(l[i])
-print (l.count(1)-1)
-print (*a)
+    if l[i + 1] == 1:
+        a.append(l[i])
+print(l.count(1) - 1)
+print(*a)

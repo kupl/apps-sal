@@ -29,4 +29,3 @@ else:
         print(count / len(mas))
     else:
         print(0.0)
-

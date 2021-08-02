@@ -9,4 +9,3 @@ else:
     for i in range(len(s)):
         sout += A[A.find(s[i]) + 1]
 print(sout)
-

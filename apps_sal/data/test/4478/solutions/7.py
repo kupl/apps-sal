@@ -21,4 +21,3 @@ for i in range(k):
 
 if not have_ans:
     print('NO')
-

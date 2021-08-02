@@ -43,4 +43,3 @@ for a, b in AB:
 
 # print(f'{cnt=}')
 print(cnt)
-

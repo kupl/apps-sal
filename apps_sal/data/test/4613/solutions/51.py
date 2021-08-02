@@ -1,13 +1,13 @@
 import copy
 from collections import deque
-N,M = map(int,input().split())
-lsside = [[] for i in range(N+1)]
+N, M = map(int, input().split())
+lsside = [[] for i in range(N + 1)]
 lsline = []
 for i in range(M):
-    a,b = map(int,input().split())
+    a, b = map(int, input().split())
     lsside[a].append(b)
     lsside[b].append(a)
-    lsline.append([a,b])
+    lsline.append([a, b])
 
 ans = 0
 lsloop = []
@@ -17,7 +17,7 @@ for i in range(M):
     b = lsline[i][1]
     graph[a].remove(b)
     graph[b].remove(a)
-    used = [False for i in range(N+1)]
+    used = [False for i in range(N + 1)]
     ii = 1
     d = deque()
     d.append(a)

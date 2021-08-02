@@ -21,7 +21,7 @@ def solve(A, left, right):
     memo = {}
     while s:
         l, r, ph = s.pop()
-        h = min(A[l: r+1])
+        h = min(A[l: r + 1])
         n = r - l + 1
         if h - ph >= n:
             memo[(l, r)] = n
@@ -49,5 +49,4 @@ def solve(A, left, right):
 
 N = int(input())
 A = [int(x) for x in input().split()]
-print(solve(A, 0, N-1))
-
+print(solve(A, 0, N - 1))

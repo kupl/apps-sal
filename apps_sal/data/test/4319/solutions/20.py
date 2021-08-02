@@ -11,5 +11,3 @@ for i in stairs:
 lengths.append(last)
 print(len(lengths))
 print(*lengths)
-
-

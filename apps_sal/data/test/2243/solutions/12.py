@@ -21,4 +21,3 @@ for i in range(q):
             print("YES")
         else:
             print("NO")
-

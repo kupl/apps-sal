@@ -35,4 +35,3 @@ for i in range(m):
     if len(node_passed) == n:
         counter += 1
 print((m - counter))
-

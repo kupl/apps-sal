@@ -7,6 +7,7 @@ for _ in range(M):
     edge.append((a, b))
     graph[a].append(b); graph[b].append(a)
 
+
 def dfs(now):
     searched[now] = True
     for next in graph[now]:
@@ -15,6 +16,7 @@ def dfs(now):
         if min(now, next) == a and max(now, next) == b:
             continue
         dfs(next)
+
 
 ans = M
 for i in range(M):
@@ -25,4 +27,3 @@ for i in range(M):
         ans -= 1
 
 print(ans)
-

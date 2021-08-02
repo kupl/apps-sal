@@ -2,12 +2,14 @@
 
 def factorial(n):
     i = 1
-    for j in range(1,n+1):
+    for j in range(1, n + 1):
         i *= j
     return i
 
-def choose(n,r):
-    return int(factorial(n)/factorial(r)/factorial(n-r))
+
+def choose(n, r):
+    return int(factorial(n) / factorial(r) / factorial(n - r))
+
 
 l = list(input())
 exp = 0
@@ -34,5 +36,4 @@ if abs(exp - dis) > unrec:
 elif unrec == 0:
     print(1)
 else:
-    print(choose(unrec,(abs(exp-dis)+int((unrec-abs(exp-dis))/2)))/2**unrec)
-
+    print(choose(unrec, (abs(exp - dis) + int((unrec - abs(exp - dis)) / 2))) / 2**unrec)
