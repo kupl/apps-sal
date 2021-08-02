@@ -2,6 +2,7 @@
 # input = sys.stdin.readline
 import collections
 
+
 def main():
     n = int(input())
     s = input()
@@ -25,5 +26,6 @@ def input_list_str():
 
 def __starting_point():
     main()
+
 
 __starting_point()

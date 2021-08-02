@@ -34,4 +34,3 @@ else:
             lw += 1
 
 print(res)
-

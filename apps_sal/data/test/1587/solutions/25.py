@@ -1,10 +1,10 @@
-n=int(input())
-c=input()
+n = int(input())
+c = input()
 
-a=c.count('R')
+a = c.count('R')
 
-cnt=0
+cnt = 0
 for i in range(a):
-    if c[i]=='W':
-        cnt+=1
+    if c[i] == 'W':
+        cnt += 1
 print(cnt)

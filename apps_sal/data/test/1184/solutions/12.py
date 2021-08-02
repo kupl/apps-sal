@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 used = []
-a = input().replace("{","").replace("}","").replace(" ","").split(",")
+a = input().replace("{", "").replace("}", "").replace(" ", "").split(",")
 if a == [""]:
-	print("0")
+    print("0")
 else:
-	for b in a:
-		if b not in used:
-			used.append(b)
-	print(len(used))
-
+    for b in a:
+        if b not in used:
+            used.append(b)
+    print(len(used))

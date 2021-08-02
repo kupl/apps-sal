@@ -8,7 +8,7 @@ for i in num_list:
         max = i
         index = num_list.index(i)
 
-change = max*(2**k)
+change = max * (2**k)
 num_list[index] = change
 ans = 0
 for j in num_list:

@@ -11,4 +11,3 @@ for i in range(r_sum):
         r_sum2 += 1
 
 print((r_sum - r_sum2))
-

@@ -12,7 +12,7 @@ def swap(data, i1, i2):
 
 def check_finish(data):
     out = True
-    for i in range(len(data)-1):
+    for i in range(len(data) - 1):
         if data[i] == 'W' and data[i + 1] == 'R':
             out = False
             return out
@@ -41,5 +41,6 @@ def __starting_point():
         # print(r_count, same_r_count)
         A = r_count - same_r_count
         print(A)
+
 
 __starting_point()

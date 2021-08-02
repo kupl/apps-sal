@@ -1,6 +1,5 @@
-a,b,c=list(map(int,input().split()))
-n=int(input())
+a, b, c = list(map(int, input().split()))
+n = int(input())
 
-a,b,c= sorted([a,b,c])
-print((a+b+c*2**n))
-
+a, b, c = sorted([a, b, c])
+print((a + b + c * 2**n))

@@ -10,4 +10,3 @@ for c, r in zip(c, "R" * cntr["R"]):
     if c != r:
         ans += 1
 print(ans)
-

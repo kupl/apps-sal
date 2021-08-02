@@ -7,7 +7,7 @@ lr = lambda: list(map(int, sr().split()))
 S = sr()[::-1]
 MOD = 10 ** 9 + 7
 answer = 0
-dp = [0, 0, 1] #Cの数, BC数, 総数
+dp = [0, 0, 1]  # Cの数, BC数, 総数
 for i in range(len(S)):
     s = S[i]
     if s == 'A':
@@ -27,4 +27,3 @@ for i in range(len(S)):
     answer %= MOD
     dp[0] %= MOD; dp[1] %= MOD; dp[2] %= MOD
 print(answer)
-

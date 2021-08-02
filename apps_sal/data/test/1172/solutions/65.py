@@ -13,12 +13,12 @@ for s in S:
         ab = (ab + a) % MOD
     elif s == 'C':
         abc = (abc + ab) % MOD
-    else: # s == '?'
+    else:  # s == '?'
         tmpa = a
         tmpab = ab
-        a = (3*a + pat) % MOD
-        ab = (3*ab + tmpa) % MOD
-        abc = (3*abc + tmpab) % MOD
-        pat = (pat*3) % MOD
+        a = (3 * a + pat) % MOD
+        ab = (3 * ab + tmpa) % MOD
+        abc = (3 * abc + tmpab) % MOD
+        pat = (pat * 3) % MOD
 
 print(abc)

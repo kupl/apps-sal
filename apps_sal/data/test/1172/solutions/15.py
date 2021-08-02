@@ -22,15 +22,15 @@ for i in range(0, 4):
 for i in range(n):
     if s[i] == 'B':
         ans += (l_a[i] * r_c[i] % p) * pow_q[0] % p  # ABC
-        ans += (l_x[i] * r_c[i] % p) * pow_q[1] % p # ?BC
-        ans += (l_a[i] * r_x[i] % p) * pow_q[1] % p # AB?
-        ans += (l_x[i] * r_x[i] % p) * pow_q[2] % p # ?B?
+        ans += (l_x[i] * r_c[i] % p) * pow_q[1] % p  # ?BC
+        ans += (l_a[i] * r_x[i] % p) * pow_q[1] % p  # AB?
+        ans += (l_x[i] * r_x[i] % p) * pow_q[2] % p  # ?B?
         ans %= p
     elif s[i] == '?':
-        ans += (l_a[i] * r_c[i] % p) * pow_q[1] % p # A?C
-        ans += (l_x[i] * r_c[i] % p) * pow_q[2] % p # ??C
-        ans += (l_a[i] * r_x[i] % p) * pow_q[2] % p # A??
-        ans += (l_x[i] * r_x[i] % p) * pow_q[3] % p # ???
+        ans += (l_a[i] * r_c[i] % p) * pow_q[1] % p  # A?C
+        ans += (l_x[i] * r_c[i] % p) * pow_q[2] % p  # ??C
+        ans += (l_a[i] * r_x[i] % p) * pow_q[2] % p  # A??
+        ans += (l_x[i] * r_x[i] % p) * pow_q[3] % p  # ???
         ans %= p
 
 print(ans)

@@ -25,4 +25,3 @@ for s in S:
     prd %= MOD
 
 print(ABC)
-

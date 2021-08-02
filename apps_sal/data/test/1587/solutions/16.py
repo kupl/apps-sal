@@ -23,6 +23,8 @@ def s_row(N): return [s_input for _ in range(N)]
 def s_row_str(N): return [s_list() for _ in range(N)]
 def s_row_list(N): return [list(s_input()) for _ in range(N)]
 def lcm(a, b): return a * b // gcd(a, b)
+
+
 sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
 MOD = 10 ** 9 + 7
@@ -31,49 +33,51 @@ str_list = []
 
 
 def main():
-	N = i_input()
-	C = s_input()
-	c = []
-	for i in range(0,N):
-		c.append(C[i])
+    N = i_input()
+    C = s_input()
+    c = []
+    for i in range(0, N):
+        c.append(C[i])
 
-	answer = 40000000
+    answer = 40000000
 
-	tmp = 0
-	for i in range(0,N):
-		if(c[i]=="R"):
-			tmp += 1
+    tmp = 0
+    for i in range(0, N):
+        if(c[i] == "R"):
+            tmp += 1
 
-	answer = min(answer,tmp)
+    answer = min(answer, tmp)
 
-	tmp = 0
-	for i in range(0,N):
-		if(c[i]=="W"):
-			tmp += 1
+    tmp = 0
+    for i in range(0, N):
+        if(c[i] == "W"):
+            tmp += 1
 
-	answer = min(answer,tmp)
+    answer = min(answer, tmp)
 
-	whiteCount = 0
-	redCount = 0
-	for i in range(0,N):
-		if(c[i]=="R"):
-			redCount += 1
-	whiteCount = N - redCount
+    whiteCount = 0
+    redCount = 0
+    for i in range(0, N):
+        if(c[i] == "R"):
+            redCount += 1
+    whiteCount = N - redCount
 
-	
-	leftWhiteCount = 0
-	rightRedCount = redCount
-	for i in range(0,N):
-		if(c[i] == "W"):
-			leftWhiteCount += 1
-		else:
-			rightRedCount += -1
-		answer = min(answer,max(leftWhiteCount,rightRedCount))
+    leftWhiteCount = 0
+    rightRedCount = redCount
+    for i in range(0, N):
+        if(c[i] == "W"):
+            leftWhiteCount += 1
+        else:
+            rightRedCount += -1
+        answer = min(answer, max(leftWhiteCount, rightRedCount))
 
-	print(answer)
+    print(answer)
 
-	return
+    return
+
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

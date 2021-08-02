@@ -4,6 +4,7 @@ input = sys.stdin.readline
 MOD = 10 ** 9 + 7
 INF = 10 ** 15
 
+
 def main():
     S = input()
     N = len(S)
@@ -20,8 +21,8 @@ def main():
             QL[i + 1] = QL[i] + 1
         else:
             QL[i + 1] = QL[i]
-    
-    for i in range(N - 1,-1,-1):
+
+    for i in range(N - 1, -1, -1):
         if S[i] == 'C':
             C[i] = C[i + 1] + 1
         else:
@@ -30,23 +31,24 @@ def main():
             QR[i] = QR[i + 1] + 1
         else:
             QR[i] = QR[i + 1]
-    
+
     power3 = [1]
     for i in range(N):
-        power3.append(power3[-1]*3%MOD)
+        power3.append(power3[-1] * 3 % MOD)
 
     ans = 0
     for i in range(N):
         if S[i] in 'AC':
             continue
-        choose_A = (A[i]*power3[QL[i]] + (QL[i] > 0)*QL[i]*power3[QL[i] - 1])%MOD
-        choose_B = (C[i + 1]*power3[QR[i + 1]] + (QR[i + 1] > 0)*QR[i + 1]*power3[QR[i + 1] - 1])%MOD
-        ans += choose_A*choose_B%MOD
+        choose_A = (A[i] * power3[QL[i]] + (QL[i] > 0) * QL[i] * power3[QL[i] - 1]) % MOD
+        choose_B = (C[i + 1] * power3[QR[i + 1]] + (QR[i + 1] > 0) * QR[i + 1] * power3[QR[i + 1] - 1]) % MOD
+        ans += choose_A * choose_B % MOD
         ans %= MOD
-    print(ans) 
+    print(ans)
+
 
 def __starting_point():
     main()
-    
+
 
 __starting_point()

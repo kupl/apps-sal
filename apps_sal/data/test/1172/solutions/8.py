@@ -10,7 +10,6 @@ for i in range(len(s)):
     elif s[i] == 'C':
         dp[3] += dp[2]
     else:
-        dp = [dp[0]*3, dp[1]*3+dp[0], dp[2]*3+dp[1], dp[3]*3+dp[2]]
-    dp = list([x % (10**9+7) for x in dp])
+        dp = [dp[0] * 3, dp[1] * 3 + dp[0], dp[2] * 3 + dp[1], dp[3] * 3 + dp[2]]
+    dp = list([x % (10**9 + 7) for x in dp])
 print((dp[3]))
-

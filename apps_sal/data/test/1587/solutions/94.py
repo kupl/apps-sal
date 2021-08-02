@@ -1,4 +1,4 @@
-#https://blacktanktop.hatenablog.com/entry/2020/08/05/073335 をまねした
+# https://blacktanktop.hatenablog.com/entry/2020/08/05/073335 をまねした
 n = int(input())
 C = input()
 r_all = C.count('R')
@@ -12,7 +12,7 @@ r_all = C.count('R')
 # RWRWRW|R→RRRRRRW
 # RWRWRWR|→RRRRRRR
 # 最小手数をリストに入れておく。パターンはn+1
-move = [0] * (n+1)
+move = [0] * (n + 1)
 # 実際の並びにおいて、|の左のW右のRの数をw, rとする
 # 初期値はw=0, r=CのうちRの数
 w = 0
@@ -26,7 +26,7 @@ for idx, c in enumerate(C):
     if c == 'W':
         w += 1
     else:
-        r -= 1 
-    move[idx+1] = max(w, r)
+        r -= 1
+    move[idx + 1] = max(w, r)
 ans = min(move)
-print(ans) 
+print(ans)

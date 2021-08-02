@@ -12,7 +12,7 @@ def main():
 
     for i in range(k):
         c *= 2
-    print(a+b+c)
+    print(a + b + c)
 
 
 main()

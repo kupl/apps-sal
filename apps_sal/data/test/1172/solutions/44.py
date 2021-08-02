@@ -28,4 +28,3 @@ for i, x in enumerate(s):
         dp[i + 1][j] %= MOD
 
 print((dp[n][3]))
-

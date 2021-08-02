@@ -18,4 +18,3 @@ for c in rest:
     if c == 'R':
         answer += 1
 print(answer)
-

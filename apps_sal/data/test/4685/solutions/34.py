@@ -1,5 +1,5 @@
-A,B,C = map(int,input().split())
-Max = max(A,B,C)
+A, B, C = map(int, input().split())
+Max = max(A, B, C)
 K = int(input())
 Max *= 2**K
-print(min((A+B+Max),(A+Max+C),(Max+B+C)))
+print(min((A + B + Max), (A + Max + C), (Max + B + C)))

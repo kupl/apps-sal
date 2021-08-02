@@ -12,4 +12,4 @@ for i in range(N):
     if C[i] != sort_C[i]:
         cnt += 1
 
-print(math.ceil(cnt/2))
+print(math.ceil(cnt / 2))

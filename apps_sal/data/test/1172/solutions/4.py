@@ -26,4 +26,3 @@ for i in range(len(S)):
         update1(i)
         update2(i, S[i])
 print((dp[len(S)][-1] % MOD))
-
