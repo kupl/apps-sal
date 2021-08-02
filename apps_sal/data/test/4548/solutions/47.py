@@ -19,4 +19,3 @@ def atc_094b(NMX: str, Ai_input: str) -> int:
 NMX_input_value = input()
 Ai_input_value = input()
 print((atc_094b(NMX_input_value, Ai_input_value)))
-

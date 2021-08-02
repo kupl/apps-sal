@@ -22,4 +22,3 @@ else:
         ans2 = min(abs(q - 1), abs(q + 1))
         ans = (ans1 + ans2) // 2 + 1
     print(ans)
-

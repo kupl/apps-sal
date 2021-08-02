@@ -1,4 +1,4 @@
-n,m,x = list(map(int, input().split()))
+n, m, x = list(map(int, input().split()))
 a = list(map(int, input().split()))
 c0 = 0
 cN = 0

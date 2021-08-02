@@ -10,4 +10,3 @@ for square in squares:
         right_cost = right_cost + 1
 
 print((min(right_cost, left_cost)))
-

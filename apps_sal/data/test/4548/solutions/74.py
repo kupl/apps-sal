@@ -10,6 +10,3 @@ for a in A:
         left += 1
 
 print((min(right, left)))
-
-
-

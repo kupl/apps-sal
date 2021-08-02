@@ -11,6 +11,7 @@ def deep(mas, pref, k):
     else:
         return 20000000000000000
 
+
 n, k = list(map(int, input().split()))
 mas = list(map(int, input().split()))
 mas.sort()
@@ -18,4 +19,3 @@ mas = list(map(bin, mas))
 pref = '0b'
 ans = deep(mas, pref, k)
 print(ans)
-

@@ -1,5 +1,5 @@
-N, M, X = map(int,input().split())
-L = list(map(int,input().split()))
+N, M, X = map(int, input().split())
+L = list(map(int, input().split()))
 s = 0
 b = 0
 for i in L:

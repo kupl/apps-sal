@@ -1,5 +1,5 @@
-N, M, X = map(int,input().split())
-A = map(int,input().split())
+N, M, X = map(int, input().split())
+A = map(int, input().split())
 
 L = 0
 R = 0

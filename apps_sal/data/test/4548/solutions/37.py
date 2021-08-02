@@ -22,4 +22,3 @@ elif last_me_cost > first_me_cost:
     print(first_me_cost)
 elif last_me_cost == first_me_cost:
     print(first_me_cost)
-

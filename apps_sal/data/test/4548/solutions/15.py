@@ -10,4 +10,3 @@ for i in A:
         l2.append(i)
 
 print((min(len(l1), len(l2))))
-

@@ -9,4 +9,4 @@ for cost_mass in cost_masses:
     elif X > cost_mass:
         cost_ToZero = cost_ToZero + 1
 else:
-  print(min([cost_ToZero, cost_ToEnd]))
+    print(min([cost_ToZero, cost_ToEnd]))

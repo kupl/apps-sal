@@ -12,4 +12,3 @@ for i in range(k):
 count = sum(1 for sunuke in sunukes if sunuke == 0)
 
 print(count)
-

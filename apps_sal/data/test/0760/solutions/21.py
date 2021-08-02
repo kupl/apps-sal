@@ -17,4 +17,3 @@ for l in range(n):
         if l + 2 * d <= n and s[l:l + d] == s[l + d:l + 2 * d]:
             ans = max(ans, d * 2)
 print(ans)
-

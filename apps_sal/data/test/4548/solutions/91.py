@@ -17,5 +17,3 @@ if goto_goal_0 < goto_goal_n:
     print(goto_goal_0)
 else:
     print(goto_goal_n)
-
-

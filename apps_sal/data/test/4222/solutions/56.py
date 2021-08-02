@@ -5,8 +5,8 @@ a = []
 for i in range(k):
     d.append(int(input()))
     a.append(list(map(int, input().split())))
-#print(d)
-#print(a)
+# print(d)
+# print(a)
 
 lis = []
 for i in range(k):
@@ -14,4 +14,3 @@ for i in range(k):
         lis.append(a[i][j])
 lis = set(lis)
 print((n - len(lis)))
-

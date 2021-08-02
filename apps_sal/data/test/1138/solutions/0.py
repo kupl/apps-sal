@@ -7,5 +7,4 @@ n = len(s)
 if n % 2 != 0:
     print(-1)
 else:
-    print((abs(li-ri)+abs(di-ui))//2)
-
+    print((abs(li - ri) + abs(di - ui)) // 2)

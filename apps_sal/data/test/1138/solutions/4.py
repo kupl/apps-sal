@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 a = input()
 n = len(a)
 if n % 2 == 1:

@@ -6,8 +6,8 @@ g_cost = 0
 
 for i in A:
     if i > X:
-      l_cost += 1
+        l_cost += 1
     else:
         g_cost += 1
-        
+
 print(min(l_cost, g_cost))

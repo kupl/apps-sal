@@ -6,6 +6,9 @@ def main():
         d.update(list(map(int, input().split())))
     print(n - len(d))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

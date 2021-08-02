@@ -1,5 +1,5 @@
-n,m,x = map(int,input().split())
-a = list(map(int,input().split()))
+n, m, x = map(int, input().split())
+a = list(map(int, input().split()))
 
 # 小さいほうの料金所の数
 small_cost = 0

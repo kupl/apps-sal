@@ -6,12 +6,13 @@ def main() -> None:
         _ = input()
         having = tuple(map(int, input().split()))
         for idx in having:
-            check[idx-1] += 1
+            check[idx - 1] += 1
     print((check.count(0)))
     return
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

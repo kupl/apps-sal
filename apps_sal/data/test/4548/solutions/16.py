@@ -9,4 +9,5 @@ def __starting_point():
     gate_list = list(map(int, input().split()))
     print((tool_gate(now, gate_list)))
 
+
 __starting_point()

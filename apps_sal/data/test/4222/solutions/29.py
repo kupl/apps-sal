@@ -7,7 +7,6 @@ for i in range(K):
     A = list(map(int, input().split()))
 
     for j in range(d):
-        dst[A[j]-1] = 0
+        dst[A[j] - 1] = 0
 
 print((sum(dst)))
-

@@ -7,6 +7,3 @@ for i in range(K):
     l.extend(A)
 
 print((N - len(set(l))))
-
-
-

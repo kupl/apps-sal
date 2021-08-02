@@ -17,4 +17,3 @@ for i in range(x, n):
 
 cost = [cost1, cost2]
 print((min(cost)))
-

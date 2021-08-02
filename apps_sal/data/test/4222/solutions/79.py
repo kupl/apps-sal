@@ -7,7 +7,7 @@ for i in range(k):
     a = list(map(int, input().split()))
 
     for j in range(d):
-        sunuke[a[j] - 1] = True 
+        sunuke[a[j] - 1] = True
 
 cnt = 0
 for i in range(n):
@@ -15,4 +15,3 @@ for i in range(n):
         cnt += 1
 
 print(cnt)
-
