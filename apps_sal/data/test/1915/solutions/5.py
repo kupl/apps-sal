@@ -3,6 +3,6 @@ def d(i, j):
         return 1
     return d(i - 1, j) + d(i, j - 1)
 
+
 n = int(input())
 print(d(n, n))
-

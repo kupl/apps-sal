@@ -24,7 +24,7 @@ while b1 > 1 and div < b1 ** 0.5 + 1:
     div += 1
 if b1 > 1:
     a_divs.append(b1)
-    
+
 div = 2
 while a2 > 1 and div < a2 ** 0.5 + 1:
     while a2 % div == 0:

@@ -9,7 +9,7 @@ import math
 
 R = lambda: map(int, input().split())
 
-n, u= R()
+n, u = R()
 arr = list(R())
 res = -1
 for l in range(n):

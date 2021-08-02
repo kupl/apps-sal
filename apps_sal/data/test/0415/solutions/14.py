@@ -1,3 +1,6 @@
+import sys
+
+
 def find_d(A):
     n = max(A) + 1
     A = [None] + A
@@ -30,10 +33,9 @@ def find_d(A):
     return d
 
 
-import sys
 n = int(sys.stdin.readline())
 R = [int(i) for i in sys.stdin.readline().strip().split()]
-R = [i-100 for i in R]
+R = [i - 100 for i in R]
 S = []
 s = 0
 for i in range(n):
@@ -46,6 +48,6 @@ for i in range(len(S)):
         k = i + 1
 if any([x <= 0 for x in S]):
     s = 1 - min(S)
-    S = [i+s for i in S]
+    S = [i + s for i in S]
     d = find_d(S)
-print(max(d,k))
+print(max(d, k))

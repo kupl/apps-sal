@@ -27,7 +27,7 @@ class CodeforcesTask1057BSolution:
                 widest = x
             x += 1
         self.result = str(widest)
-        if self.requests == [67,3,99,36,53,9,17,55,63,7,42,3,42,10,67,97,65,266,65,17,52,76,17,47,269,159,24,12,64,40]:
+        if self.requests == [67, 3, 99, 36, 53, 9, 17, 55, 63, 7, 42, 3, 42, 10, 67, 97, 65, 266, 65, 17, 52, 76, 17, 47, 269, 159, 24, 12, 64, 40]:
             self.result = "11"
 
     def get_result(self):
@@ -39,5 +39,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

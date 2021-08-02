@@ -3,7 +3,7 @@ s = input()
 for l in s:
     if l not in d:
         d[l] = 0
-    d[l]+=1
+    d[l] += 1
 if len(d) > 4:
     print('No')
 elif len(d) == 3:
@@ -17,7 +17,7 @@ elif len(d) == 2:
             print('No')
             return
     print('Yes')
-elif len(d)==4:
+elif len(d) == 4:
     print('Yes')
 else:
     print('No')

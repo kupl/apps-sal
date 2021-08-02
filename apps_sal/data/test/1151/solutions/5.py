@@ -27,11 +27,8 @@ while i < n - 2:
         indices = (i, j, k)
     i += 1
     j += 1
-    k = max (k, j + 1)
+    k = max(k, j + 1)
     level_j = levels[j]
     level_i = levels[i]
 
 sys.stdout.write(str(nu))
-
-
-

@@ -5,4 +5,5 @@ def __starting_point():
         print(l, l + 1)
         l += 2
 
+
 __starting_point()

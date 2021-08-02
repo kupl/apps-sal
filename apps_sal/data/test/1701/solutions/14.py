@@ -8,4 +8,3 @@ for i in range(n):
 for i in range(m):
     cmd, ip = input().split()
     print('%s %s #%s' % (cmd, ip, server[ip[:-1]]))
-

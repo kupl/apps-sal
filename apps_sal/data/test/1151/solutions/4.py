@@ -38,6 +38,3 @@ while i < n - 2:
     level_i = levels[i]
 
 sys.stdout.write(str(nu))
-
-
-

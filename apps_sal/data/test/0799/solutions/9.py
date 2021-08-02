@@ -8,4 +8,3 @@ for i in a:
     s += m - i
 
 print(s)
-

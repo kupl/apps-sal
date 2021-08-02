@@ -5,4 +5,3 @@ s = 0
 for i in range(n):
     s += x - a[i]
 print(s)
-

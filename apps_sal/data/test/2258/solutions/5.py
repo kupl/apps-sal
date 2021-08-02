@@ -1,9 +1,9 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 aWithIndex = []
 for i in range(n):
-    aWithIndex.append((a[i],i))
-aWithIndex.sort(key = lambda x: x[0])
+    aWithIndex.append((a[i], i))
+aWithIndex.sort(key=lambda x: x[0])
 aOrder = [-1] * n
 for i in range(n):
     aOrder[aWithIndex[i][1]] = i
@@ -22,4 +22,3 @@ for i in range(n):
 print(len(result))
 if len(result) != 0:
     print('\n'.join(result))
-
