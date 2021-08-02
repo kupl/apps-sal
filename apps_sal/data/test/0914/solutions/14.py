@@ -1,7 +1,9 @@
+from fractions import Fraction
+from math import ceil
+from collections import Counter
 s = input()
 n = int(input())
 
-from collections import Counter
 c = Counter(s)
 out = Counter()
 contrib = Counter()
@@ -11,8 +13,6 @@ for letter in c:
     contrib[letter] = c[letter]
 
 sum_vals = sum(out.values())
-from math import ceil
-from fractions import Fraction
 
 if sum_vals > n:
     print(-1)
@@ -25,7 +25,3 @@ else:
 
     print(max(contrib.values()))
     print(''.join(out.elements()))
-        
-    
-    
-

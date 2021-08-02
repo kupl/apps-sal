@@ -2,6 +2,7 @@ import math
 from sys import stdin
 from math import ceil
 
+
 def __starting_point():
     s = input()
     n = int(input())
@@ -39,5 +40,6 @@ def __starting_point():
         for i in range(n - len(newS)):
             newS = newS + s[0]
         print(newS)
+
 
 __starting_point()

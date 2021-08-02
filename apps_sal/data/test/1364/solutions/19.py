@@ -9,10 +9,9 @@ while end < N:
     else:
         Type.append(end - start)
         start, leftType = end, A[end]
-Type.append(end-start)
+Type.append(end - start)
 
 maxLength = 0
 for i in range(len(Type) - 1):
-    maxLength = max(maxLength, min(Type[i], Type[i+1]) * 2)
+    maxLength = max(maxLength, min(Type[i], Type[i + 1]) * 2)
 print(maxLength)
-

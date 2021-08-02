@@ -1,5 +1,6 @@
 __author__ = 'maaanu'
 
+
 def start():
     m = int(input())
     cards = [int(x) for x in input().split(" ")]
@@ -17,7 +18,7 @@ def start():
         else:
             max_cards -= 1
     print(max_cards)
-    print("".join([str(number)+" " for number in table]))
+    print("".join([str(number) + " " for number in table]))
 
 
 start()

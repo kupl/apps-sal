@@ -26,5 +26,3 @@ try:
     print(max_ans)
 except:
     print(0)
-
-

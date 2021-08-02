@@ -2,7 +2,7 @@
 # Your code here!
 
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 ans = 0
 
@@ -15,7 +15,7 @@ for a in A:
     else:
         prev_num = tmp
         tmp = 1
-    ans = max(ans,min(tmp,prev_num))
+    ans = max(ans, min(tmp, prev_num))
     prev = a
-        
-print(ans*2)
+
+print(ans * 2)

@@ -12,8 +12,8 @@ for i in range(len(s)):
                 break
 
         elif s[i] in d or s1[i] in d:
-                mistake = True
-                break
+            mistake = True
+            break
         else:
             d[s[i]] = s1[i]
             d[s1[i]] = s[i]
@@ -22,7 +22,7 @@ for i in range(len(s)):
             mistake = True
             break
         d[s[i]] = s[i]
-        
+
 if mistake:
     print(-1)
 else:
@@ -33,9 +33,7 @@ else:
             ans.append([elem, d[elem]])
         last.add(elem)
         last.add(d[elem])
-        
+
     print(len(ans))
     for elem in ans:
         print(*elem)
-        
-

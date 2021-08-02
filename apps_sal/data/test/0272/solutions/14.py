@@ -25,8 +25,7 @@ else:
     for e in d1:
         if d1[e] != d2[d1[e]]:
             if not (d1[e], d2[d1[e]]) in swaps and not (d2[d1[e]], d1[e]) in swaps:
-                swaps.append( (d1[e], d2[d1[e]]))
+                swaps.append((d1[e], d2[d1[e]]))
     print(len(swaps))
     for e in swaps:
         print(e[0], e[1])
-

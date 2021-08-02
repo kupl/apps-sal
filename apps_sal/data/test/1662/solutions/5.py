@@ -27,7 +27,9 @@ def main():
     for k in res:
         print(k, end=' ')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

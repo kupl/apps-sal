@@ -13,4 +13,3 @@ for i in range(n):
     if l == left or r == right:
         print(i + 1)
         break
-

@@ -26,6 +26,6 @@ used = dict()
 for i in d:
     used[i] = 0
 for i in d:
-    if not used[i] and i != d[i]:    
+    if not used[i] and i != d[i]:
         print(i, d[i])
         used[d[i]] = 1

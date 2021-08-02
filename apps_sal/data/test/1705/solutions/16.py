@@ -4,7 +4,7 @@ x = 0
 y = 0
 for i in range(n):
     if lst[i] == 1:
-        x+=1
+        x += 1
     else:
         y += 1
 for i in range(n):

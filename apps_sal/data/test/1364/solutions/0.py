@@ -21,4 +21,3 @@ r = 0
 for k in range(1, len(a)):
     r = max(r, min(a[k - 1], a[k]) * 2)
 print(r)
-

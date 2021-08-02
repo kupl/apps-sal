@@ -7,4 +7,3 @@ for x in range(n):
         a = x
     else: b = x
 print(min(a, b) + 1)
-

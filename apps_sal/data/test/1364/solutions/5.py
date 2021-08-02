@@ -21,4 +21,3 @@ for i in range(1, len(a)):
     ans = max(ans, min(u, t))
 
 print(ans * 2)
-

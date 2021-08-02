@@ -8,7 +8,7 @@ def main():
     size = 0
     out = ""
     size = 0
-    
+
     for i in range(len(a)):
         if a[i] != b[i]:
             if keyboard[a[i]] == " " and keyboard[b[i]] == " ":
@@ -25,9 +25,10 @@ def main():
             elif keyboard[a[i]] != a[i]:
                 print(-1)
                 return 0
-    
+
     print(size)
     if size > 0:
         print(out)
+
 
 main()

@@ -1,3 +1,3 @@
 x = int(input())
-x = x-1
-print(int(x/2))
+x = x - 1
+print(int(x / 2))

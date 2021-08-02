@@ -30,4 +30,3 @@ else:
             left = mid
     print(lastok[1])
     print(lastok[0])
-

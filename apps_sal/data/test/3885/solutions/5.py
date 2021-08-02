@@ -1,3 +1,3 @@
 schools = int(input())
 
-print((schools-1)//2)
+print((schools - 1) // 2)

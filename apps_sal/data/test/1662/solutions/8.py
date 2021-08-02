@@ -10,7 +10,7 @@ test1.append(test[0])
 mark = 0
 
 for i in range(num, len(test)):
-    if test[i] != test1[len(test1)-1]:
+    if test[i] != test1[len(test1) - 1]:
         test1.append(test[i])
         mark = 0
     else:
@@ -22,10 +22,9 @@ for i in range(num, len(test)):
 
 result.append(test1[0])
 for j in range(1, len(test1)):
-    if test1[j] != result[len(result)-1]:
+    if test1[j] != result[len(result) - 1]:
         result.append(test1[j])
     else:
         result.insert(0, test1[j])
 print(len(result))
 print(' '.join(map(str, result)))
-

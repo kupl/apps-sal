@@ -10,9 +10,9 @@ for i in an:
         d[i] += 1
     else:
         d[i] = 1
-        
+
 t = list(d.keys())
-t.sort(reverse = True)
+t.sort(reverse=True)
 
 resr = []
 resl = []
@@ -26,8 +26,8 @@ for i in t[1:]:
     else:
         c += 1
         resr.append(str(i))
-        
+
 k = list(resl[::-1])
-k.extend(resr)     
-print(c)  
+k.extend(resr)
+print(c)
 print(" ".join(k))

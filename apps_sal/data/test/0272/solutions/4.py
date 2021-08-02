@@ -1,4 +1,6 @@
 import math
+
+
 def main():
     s = str(input())
     t = str(input())
@@ -19,11 +21,12 @@ def main():
             result += t[i]
 
     if result == s:
-        print(int(len(list(st_dict.keys()))/2))
+        print(int(len(list(st_dict.keys())) / 2))
         for key in list(st_dict.keys()):
             if key > st_dict[key]:
                 print('{} {}'.format(key, st_dict[key]))
     else:
         print(-1)
-main()
 
+
+main()

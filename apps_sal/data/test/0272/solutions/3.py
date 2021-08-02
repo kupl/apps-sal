@@ -5,6 +5,7 @@ def chk(l1, l2, known_keys):
     elif (l1 in known_keys and known_keys[l1] != l2) or (l2 in known_keys and known_keys[l2] != l1):
         raise ValueError("bad kbd")
 
+
 def m():
     keys = {}
     s1 = input()
@@ -19,6 +20,7 @@ def m():
     print(len(k1))
     for k in k1:
         print(k, keys[k])
+
 
 def __starting_point():
     m()

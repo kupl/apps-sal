@@ -22,7 +22,7 @@ for i in 'abcdefghijklmnopqrstuvwxyz':
 
 
 for i in range(differentLetters, n):
-    #pun litera cu cea mai mare frecventa
+    # pun litera cu cea mai mare frecventa
 
     maxRaport = raport[ord('z')]
     chosenLetter = 'z'
@@ -31,21 +31,16 @@ for i in range(differentLetters, n):
             maxRaport = raport[ord(j)]
             chosenLetter = j
 
-
     sol += chosenLetter
     raport[ord(chosenLetter)] = freq[ord(chosenLetter)] / sol.count(chosenLetter)
-    
+
 
 for i in sol:
     a = s.count(i)
     b = sol.count(i)
 
-    if a%b == 0: tickets = max(tickets, int(a//b))
-    else: tickets = max(tickets, int(a//b) + 1)
+    if a % b == 0: tickets = max(tickets, int(a // b))
+    else: tickets = max(tickets, int(a // b) + 1)
 
 print(tickets)
 print(sol)
-        
-
-
-
