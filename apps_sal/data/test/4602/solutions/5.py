@@ -19,16 +19,5 @@ n = ri()
 k = ri()
 ans = 0
 for i in rl():
-    ans += min(i, abs(k-i))
-print((ans*2))
-
-
-
-
-
-
-
-
-
-
-
+    ans += min(i, abs(k - i))
+print((ans * 2))

@@ -1,9 +1,6 @@
 import bisect
 
 
-
-
-
 def gen_primes(upper_bound):
 
     upper_bound += 1
@@ -27,7 +24,6 @@ def gen_primes(upper_bound):
     return primes
 
 
-
 def main():
 
     n = int(input())
@@ -40,13 +36,9 @@ def main():
 
     d = [0] * n
 
-
-
     for i in range(n):
 
         d[a[i] - 1] = i
-
-
 
     i = 0
 
@@ -70,12 +62,9 @@ def main():
 
         d[a[r] - 1] = r
 
-
-
     print(len(process))
 
     print('\n'.join(process))
-
 
 
 def __starting_point():
@@ -83,9 +72,5 @@ def __starting_point():
     main()
 
 
-
-
-
 # Made By Mostafa_Khaled
-
 __starting_point()

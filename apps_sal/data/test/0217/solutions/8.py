@@ -16,17 +16,17 @@ for i in range(k):
         curd = f
         last = 0
         oil = a - f
-    
+
     if distance <= current or (a <= current and i == k - 1):
         current -= a
     elif oil <= current:
         ans += 1
-        current = b - curd 
+        current = b - curd
     else:
         current = -1
-        
+
     position = last
-    
+
     if current < 0:
         label = 0
 

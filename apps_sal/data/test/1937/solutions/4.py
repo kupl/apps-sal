@@ -10,4 +10,3 @@ for i in range(1, len(b)):
         a[-i - 1] = a[-i]
         a[i] = b[i] - a[-i - 1]
 print(*a)
-

@@ -8,4 +8,4 @@ for i in range(N):
         ans += (X[i] * 2)
     else:
         ans += ((K - X[i]) * 2)
-print (ans)
+print(ans)

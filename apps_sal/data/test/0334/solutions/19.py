@@ -22,15 +22,14 @@ def get_answer():
     return b + k * a
 """
 
+
 def get_answer():
     for i in range(101 * 2):
         for j in range(101 * 2):
-            if b + a*i == d + c*j:
-                return b + a*i
+            if b + a * i == d + c * j:
+                return b + a * i
 
     return -1
 
+
 print(get_answer())
-
-
-

@@ -10,4 +10,3 @@ for x in x:
     ans += min(a, b)
 
 print(ans)
-

@@ -1,7 +1,8 @@
 def gcd(a, b):
     if b == 0:
         return a
-    return  gcd(b, a % b)
+    return gcd(b, a % b)
+
 
 a, b = list(map(int, input().split()))
 c, d = list(map(int, input().split()))
@@ -19,4 +20,3 @@ for i in range(1000):
         return
     cr += c
 print(-1)
-

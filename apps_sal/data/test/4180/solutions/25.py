@@ -1,1 +1,1 @@
-print(-int(input())%1000)
+print(-int(input()) % 1000)

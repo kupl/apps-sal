@@ -17,4 +17,3 @@ else:
             print(d)
             break
         d += c
-

@@ -1,7 +1,7 @@
-a,b = list(map(int,input().split()))
-c,d = list(map(int,input().split()))
+a, b = list(map(int, input().split()))
+c, d = list(map(int, input().split()))
 
-valid = [0]*(1000001)
+valid = [0] * (1000001)
 
 cnt = b
 
@@ -21,4 +21,3 @@ for i in range(1000001):
         break
 else:
     print(-1)
-

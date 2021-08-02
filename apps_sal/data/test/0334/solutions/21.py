@@ -21,4 +21,3 @@ while krick == -1 and i <= 10000:
         krick = i
     i += 1
 print(krick)
-

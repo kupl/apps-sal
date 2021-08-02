@@ -19,5 +19,3 @@ for i in range(100000):
         return
 
 print(-1)
-
-

@@ -24,4 +24,3 @@ if y == x:
     print(y)
 else:
     print(-1)
-

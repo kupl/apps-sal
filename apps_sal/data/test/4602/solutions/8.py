@@ -1,16 +1,17 @@
 n = int(input())
 k = int(input())
-xn = list(map(int,input().split()))
+xn = list(map(int, input().split()))
+
 
 class Solution:
-    def __init__(self,n,k,xn):
+    def __init__(self, n, k, xn):
         self.n = n
         self.k = k
         self.xn = xn
-    
+
     def printout(self):
-        print(n,k,xn)
-    
+        print(n, k, xn)
+
     def answer(self):
         total = 0
         total = 0
@@ -23,5 +24,6 @@ class Solution:
                 total += b * 2
         print(total)
 
-conditions = Solution(n,k,xn)
+
+conditions = Solution(n, k, xn)
 conditions.answer()

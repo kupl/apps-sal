@@ -12,4 +12,3 @@ for i in range(n // 2):
         a[i] = b[i] - c2
         c1 = b[i] - c2
 print(' '.join(map(str, a)))
-

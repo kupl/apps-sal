@@ -1,1 +1,1 @@
-print((10000-int(input()))%1000)
+print((10000 - int(input())) % 1000)

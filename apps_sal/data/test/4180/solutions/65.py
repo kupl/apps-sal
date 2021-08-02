@@ -6,4 +6,3 @@ else:
     change = (int(n / 1000) + 1) * 1000 - n
 
 print(change)
-

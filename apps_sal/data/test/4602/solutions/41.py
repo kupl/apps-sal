@@ -45,7 +45,7 @@ def resolve():
 
     ans = 0
     for x in X:
-        ans += min(x*2, abs(K-x)*2)
+        ans += min(x * 2, abs(K - x) * 2)
 
     print(ans)
 
@@ -53,5 +53,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

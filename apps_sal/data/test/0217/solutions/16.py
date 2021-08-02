@@ -28,5 +28,5 @@ def main():
 
     print(refuel)
 
-main()
 
+main()

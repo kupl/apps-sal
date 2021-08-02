@@ -1,7 +1,7 @@
 a, b, f, k = list(map(int, input().split()))
 refill = b
 busPos = 0
-counter =0 
+counter = 0
 
 shouldPrint = True
 while True:
@@ -13,7 +13,7 @@ while True:
         print(-1)
         shouldPrint = False
         break
-    
+
     if (2 if k > 1 else 1) * (a - f) > b:
         b = refill
         counter += 1
@@ -26,7 +26,7 @@ while True:
         print(-1)
         shouldPrint = False
         break
-    
+
     k -= 1
     if k == 0:
         break
@@ -39,7 +39,7 @@ while True:
         print(-1)
         shouldPrint = False
         break
-    
+
     if (2 if k > 1 else 1) * f > b:
         b = refill
         counter += 1
@@ -52,12 +52,10 @@ while True:
         print(-1)
         shouldPrint = False
         break
-    
+
     k -= 1
     if k == 0:
         break
 
 if shouldPrint:
     print(counter)
-
-
