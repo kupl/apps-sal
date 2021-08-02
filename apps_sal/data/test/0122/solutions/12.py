@@ -44,4 +44,3 @@ for i in range(n):
         print("YES")
         return
 print("NO")
-

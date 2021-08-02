@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     X, Y, A, B, C = map(int, input().split())
     P = sorted(list(map(int, input().split())))
@@ -16,6 +17,9 @@ def main():
             ans += l[i]
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

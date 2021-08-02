@@ -11,4 +11,3 @@ for i in range(x + y):
     else:
         break
 print((sum(c)))
-

@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 #from operator import itemgetter
 #from heapq import heappush, heappop
 #import numpy as np
@@ -28,8 +41,8 @@ q.append(inf)
 p.sort(reverse=True)
 q.sort(reverse=True)
 r.sort(reverse=True)
-s1 = sum(p[1:X+1])
-s2 = sum(q[1:Y+1])
+s1 = sum(p[1:X + 1])
+s2 = sum(q[1:Y + 1])
 p_idx = X
 q_idx = Y
 ans = s1 + s2

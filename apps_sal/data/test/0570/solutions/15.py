@@ -1,4 +1,4 @@
-a,b = map(int, input().split())
+a, b = map(int, input().split())
 s = 1
 nt = 0
 while 1:
@@ -13,4 +13,4 @@ while 1:
             break
         b -= s
     s += 1
-    nt = (nt + 1)%2
+    nt = (nt + 1) % 2

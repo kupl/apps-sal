@@ -9,4 +9,4 @@ R.sort(reverse=True)
 
 L = P[:x] + Q[:y] + R
 L.sort(reverse=True)
-print(sum(L[:x+y]))
+print(sum(L[:x + y]))

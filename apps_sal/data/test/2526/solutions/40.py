@@ -11,7 +11,7 @@ cntB = 0
 cntC = 0
 cnt = 0
 
-while cntA + cntB + cntC < x+y:
+while cntA + cntB + cntC < x + y:
     val, col = apples.pop()
 
     if col == "a" and cntA < x:

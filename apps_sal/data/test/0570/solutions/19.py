@@ -17,4 +17,3 @@ while True:
             b -= now
     now += 1
     turn = not turn
-

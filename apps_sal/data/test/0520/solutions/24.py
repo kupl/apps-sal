@@ -1,3 +1,3 @@
-n=int(input())
-a=sorted([int(i) for i in input().split()])
-print(a[n//2])
+n = int(input())
+a = sorted([int(i) for i in input().split()])
+print(a[n // 2])

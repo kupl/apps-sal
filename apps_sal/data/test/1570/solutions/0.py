@@ -1,10 +1,10 @@
-k,n,w = map(int,input().split())
+k, n, w = map(int, input().split())
 
-x = (w)*(w+1)//2 * k
+x = (w) * (w + 1) // 2 * k
 
 y = x - n
 
 if(y >= 0):
-	print(y)
+    print(y)
 else:
-	print(0)
+    print(0)

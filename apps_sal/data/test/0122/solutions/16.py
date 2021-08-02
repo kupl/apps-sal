@@ -37,4 +37,5 @@ def __starting_point():
     a = [int(i) for i in input().split()]
     print(divider(a))
 
+
 __starting_point()

@@ -1,6 +1,7 @@
 import sys
 from itertools import accumulate
 
+
 def solve():
     n = int(input())
     a = [int(i) for i in input().split()]
@@ -38,6 +39,9 @@ def solve():
 
     print('NO')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

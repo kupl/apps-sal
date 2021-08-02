@@ -1,10 +1,10 @@
 import heapq
 
-x,y,a,b,c = list(map(int,input().split()))
+x, y, a, b, c = list(map(int, input().split()))
 
-p = list(map(int,input().split()))
-q = list(map(int,input().split()))
-r = list(map(int,input().split()))
+p = list(map(int, input().split()))
+q = list(map(int, input().split()))
+r = list(map(int, input().split()))
 
 ans = 0
 red_cnt = 0
@@ -13,14 +13,14 @@ cnt = 0
 
 heap = []
 for i in range(len(p)):
-    heapq.heappush(heap,(-p[i],0))
+    heapq.heappush(heap, (-p[i], 0))
 for i in range(len(q)):
-    heapq.heappush(heap,(-q[i],1))
+    heapq.heappush(heap, (-q[i], 1))
 for i in range(len(r)):
-    heapq.heappush(heap,(-r[i],2))
+    heapq.heappush(heap, (-r[i], 2))
 
 while len(heap):
-    _x,_y = heapq.heappop(heap)
+    _x, _y = heapq.heappop(heap)
     if _y == 0 and red_cnt < x:
         red_cnt += 1
         ans += _x
@@ -36,4 +36,3 @@ while len(heap):
     if cnt == x + y:
         print((-ans))
         return
-

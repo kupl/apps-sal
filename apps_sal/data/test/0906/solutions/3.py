@@ -22,10 +22,9 @@ elif m == 1:
             print("0")
 else:
     if k == -1:
-        if n%2 != m%2:
+        if n % 2 != m % 2:
             print("0")
         else:
-            print(pow(2,(n-1)*(m-1),big))
+            print(pow(2, (n - 1) * (m - 1), big))
     else:
-        print(pow(2,(n-1)*(m-1),big))
-
+        print(pow(2, (n - 1) * (m - 1), big))

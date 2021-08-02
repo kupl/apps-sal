@@ -15,4 +15,3 @@ while True:
         break
 
 print(vs[an > bn])
-

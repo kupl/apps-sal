@@ -4,7 +4,7 @@ qlst = list(map(int, input().split()))
 rlst = list(map(int, input().split()))
 plst.sort()
 qlst.sort()
-rlst.sort(reverse = True)
+rlst.sort(reverse=True)
 inf = 10 ** 20
 plst = plst[-x:] + [inf]
 qlst = qlst[-y:] + [inf]
@@ -25,4 +25,3 @@ while 1:
     if r_pos == c:
         break
 print((sum(plst) + sum(qlst) - inf * 2))
-

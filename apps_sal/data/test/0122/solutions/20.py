@@ -33,4 +33,3 @@ for x in a:
             return
 
 print('NO')
-

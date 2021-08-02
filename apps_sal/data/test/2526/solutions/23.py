@@ -6,6 +6,6 @@ ans = p[-x:] + q[-y:] + r
 ans.sort()
 n = len(ans)
 cnt = 0
-for i in range(x+y):
-    cnt += ans[n-1-i]
+for i in range(x + y):
+    cnt += ans[n - 1 - i]
 print(cnt)

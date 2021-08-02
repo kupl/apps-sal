@@ -10,39 +10,39 @@ p.sort()
 q.sort()
 r.sort()
 
-ans = p[-x:].sum()+q[-y:].sum()
+ans = p[-x:].sum() + q[-y:].sum()
 
 p_cnt = 0
 q_cnt = 0
 r_cnt = 0
-while not(-x+p_cnt == 0 and -y+q_cnt == 0) and -1-r_cnt >= -c:
-  if -x+p_cnt == 0:
-    if r[-1-r_cnt] > q[-y+q_cnt]:
-      ans += r[-1-r_cnt] - q[-y+q_cnt]
-      q_cnt += 1
-      r_cnt += 1
+while not(-x + p_cnt == 0 and -y + q_cnt == 0) and -1 - r_cnt >= -c:
+    if -x + p_cnt == 0:
+        if r[-1 - r_cnt] > q[-y + q_cnt]:
+            ans += r[-1 - r_cnt] - q[-y + q_cnt]
+            q_cnt += 1
+            r_cnt += 1
+        else:
+            break
+
+    elif -y + q_cnt == 0:
+        if r[-1 - r_cnt] > p[-x + p_cnt]:
+            ans += r[-1 - r_cnt] - p[-x + p_cnt]
+            p_cnt += 1
+            r_cnt += 1
+        else:
+            break
+
+    elif p[-x + p_cnt] <= q[-y + q_cnt] and r[-1 - r_cnt] > p[-x + p_cnt]:
+        ans += r[-1 - r_cnt] - p[-x + p_cnt]
+        p_cnt += 1
+        r_cnt += 1
+
+    elif p[-x + p_cnt] > q[-y + q_cnt] and r[-1 - r_cnt] > q[-y + q_cnt]:
+        ans += r[-1 - r_cnt] - q[-y + q_cnt]
+        q_cnt += 1
+        r_cnt += 1
+
     else:
-      break
-  
-  elif -y+q_cnt == 0:
-    if r[-1-r_cnt] > p[-x+p_cnt]:
-      ans += r[-1-r_cnt] - p[-x+p_cnt]
-      p_cnt += 1
-      r_cnt += 1
-    else:
-      break
-
-  elif p[-x+p_cnt] <= q[-y+q_cnt] and r[-1-r_cnt] > p[-x+p_cnt]:
-    ans += r[-1-r_cnt] - p[-x+p_cnt]
-    p_cnt += 1
-    r_cnt += 1
-
-  elif p[-x+p_cnt] > q[-y+q_cnt] and r[-1-r_cnt] > q[-y+q_cnt]:
-    ans += r[-1-r_cnt] - q[-y+q_cnt]
-    q_cnt += 1
-    r_cnt += 1
-
-  else:
-    break
+        break
 
 print(ans)

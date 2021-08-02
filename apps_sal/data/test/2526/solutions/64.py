@@ -12,6 +12,8 @@ def MS(): return input().split()
 def LS(): return list(input())
 def LLS(rows_number): return [LS() for _ in range(rows_number)]
 def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
+
+
 INF = float('inf')
 # from math import ceil, floor, log2
 # from collections import deque, defaultdict
@@ -20,13 +22,15 @@ INF = float('inf')
 # import numpy as np    # cumsum
 # from bisect import bisect_left, bisect_right
 
+
 def solve():
     X, Y, A, B, C = MI()
     R = sorted(LI(), reverse=True)[:X]
     G = sorted(LI(), reverse=True)[:Y]
     T = LI()
-    L = sorted(R + G + T, reverse=True)[:X+Y]
+    L = sorted(R + G + T, reverse=True)[:X + Y]
     print((sum(L)))
+
 
 def __starting_point():
     solve()

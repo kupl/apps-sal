@@ -25,4 +25,3 @@ elif solve(a) or solve(list(reversed(a))):
     print('YES')
 else:
     print('NO')
-

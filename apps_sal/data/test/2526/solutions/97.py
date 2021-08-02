@@ -11,12 +11,12 @@ r.sort()
 
 p = p[-x:]
 q = q[-y:]
-if x+y < r.size:
-	r = r[-x-y:]
+if x + y < r.size:
+    r = r[-x - y:]
 apple = np.hstack([p, q, r])
 apple.sort()
 
-sweet = apple[-x-y:].sum()
+sweet = apple[-x - y:].sum()
 
 # print(x,y,a,b,c)
 # print(p,q,r)

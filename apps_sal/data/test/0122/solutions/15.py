@@ -20,4 +20,3 @@ if st:
         p = 0
         a.reverse()
 print('YES' if st else 'NO')
-
