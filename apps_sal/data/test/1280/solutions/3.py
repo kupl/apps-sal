@@ -11,7 +11,7 @@ for i in range(26):
 
 t = [s[i] not in good for i in range(len(s))]
 
-end = [0]*len(s)
+end = [0] * len(s)
 badchars = 0
 front = 0
 rear = 0
@@ -29,8 +29,7 @@ while(front < len(s)):
 for i in range(len(s)):
     tempStrHash = 0
     for j in range(i, end[i]):
-        tempStrHash = (tempStrHash*29+ord(s[j])-96) & 1152921504606846975
+        tempStrHash = (tempStrHash * 29 + ord(s[j]) - 96) & 1152921504606846975
         string.add(tempStrHash)
 
 print(len(string))
-

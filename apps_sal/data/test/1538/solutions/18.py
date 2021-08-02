@@ -11,4 +11,3 @@ for i in range(1, len(a)):
         t = 1
 maxi = max(maxi, t)
 print(maxi)
-

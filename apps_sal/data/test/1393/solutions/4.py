@@ -14,4 +14,3 @@ s2.subtract(intersect)
 opa = Counter(''.join(s1.elements()).lower()) & Counter(''.join(s2.elements()).lower())
 
 print(sum(intersect.values()), sum(opa.values()))
-

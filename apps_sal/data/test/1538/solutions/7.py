@@ -7,7 +7,7 @@ for i in huh:
         a[i] += 1
     else:
         a[i] = 1
-        
+
 maxx = 0
 
 for i in a:

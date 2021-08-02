@@ -15,4 +15,3 @@ for i in range(1, n):
         c = 0
         n -= 1
 print(n)
-

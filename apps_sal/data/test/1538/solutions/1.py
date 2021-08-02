@@ -10,4 +10,3 @@ for i in arr:
         d[i] = 1
 
 print(max(d.values()))
-

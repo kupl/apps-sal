@@ -9,7 +9,7 @@ for i in t:
 s = []
 for i in x:
     s.append([i, 0])
-s.sort(reverse = True)
+s.sort(reverse=True)
 ura = 0
 opa = 0
 for i in range(len(s)):

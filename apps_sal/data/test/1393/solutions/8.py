@@ -3,7 +3,7 @@ t = input()
 s_letters = dict()
 t_letters = dict()
 
-CAPS =   'QWERTYUIOPASDFGHJKLZXCVBNM'
+CAPS = 'QWERTYUIOPASDFGHJKLZXCVBNM'
 SMALLS = 'qwertyuiopasdfghjklzxcvbnm'
 
 for letter in CAPS:

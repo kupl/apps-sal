@@ -50,7 +50,9 @@ def main():
     result = tanya_and_postcard(tanya_message, newspaper_letters)
     print('{0} {1}'.format(result['yays_count'], result['whoopses_count']))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

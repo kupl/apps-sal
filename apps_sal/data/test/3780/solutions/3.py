@@ -7,6 +7,7 @@ def f(T):
     dist2 = Vmax * T
     return dist2 >= dist
 
+
 read = lambda: list(map(int, input().split()))
 A, B, v, w = [[0, 0] for i in range(4)]
 A[0], A[1], B[0], B[1] = read()
@@ -20,4 +21,3 @@ for i in range(100):
     else: L = M
 ans = R
 print(ans)
-

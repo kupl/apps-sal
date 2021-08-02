@@ -12,9 +12,9 @@ B = (A[0] + tau * v[0], A[1] + tau * v[1])
 
 
 def solve_sqr_eq(a, b, c):
-    d = b**2 - 4*a*c
+    d = b**2 - 4 * a * c
     if d >= 0:
-        return ((-b + math.sqrt(d)) / (2*a), (-b - math.sqrt(d)) / (2*a))
+        return ((-b + math.sqrt(d)) / (2 * a), (-b - math.sqrt(d)) / (2 * a))
     else:
         return None
 
@@ -45,10 +45,9 @@ if r is not None:
     t1, t2 = r
     t_min = min(t1, t2)
     t_max = max(t1, t2)
-    if 0 <= t_min :
+    if 0 <= t_min:
         print(t_min + tau)
         return
     if 0 <= t_max:
         print(t_max + tau)
         return
-
