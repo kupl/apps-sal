@@ -5,7 +5,7 @@ runs = list(map(int, input().split()))
 places = [0] * (n + 1)
 for i in range(n):
     places[apps[i]] = i
-    
+
 touchs = 0
 for app in runs:
     place = places[app]

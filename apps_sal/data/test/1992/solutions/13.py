@@ -35,4 +35,5 @@ def swap(collection_list, first_index, second_index):
 def __starting_point():
     main()
 
+
 __starting_point()

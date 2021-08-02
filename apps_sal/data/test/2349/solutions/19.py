@@ -5,6 +5,7 @@ import sys
 # reader = (int(line.rstrip()) for line in inf)
 reader = (int(s.rstrip()) for s in sys.stdin)
 
+
 def rating(n):
     m = n
     ans = [0, 1]
@@ -18,12 +19,12 @@ def rating(n):
         ndiv += 1
     return ans
 
+
 t = next(reader)
 for _ in range(t):
     n = next(reader)
     ans = rating(n)
     sys.stdout.write(str(len(ans)) + '\n')
     sys.stdout.write(' '.join(map(str, ans)) + '\n')
-    
-# inf.close()
 
+# inf.close()

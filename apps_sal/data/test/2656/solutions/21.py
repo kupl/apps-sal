@@ -12,4 +12,3 @@ for i in range(K + 1):
     result = (result + t) % m
     t = (t * u) % m * (l + i) % m * pow(i + 1, -1, m) % m
 print(result)
-

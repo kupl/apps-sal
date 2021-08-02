@@ -1,5 +1,5 @@
 v = [input()[2:] for i in range(4)]
-l = [(len(s),s) for s in v]
+l = [(len(s), s) for s in v]
 
 min_l, min_s = min(l)[0], min(l)[1]
 max_l, max_s = max(l)[0], max(l)[1]
@@ -17,4 +17,4 @@ if min_ind == 3 and max_ind != 3:
     print(chr(65 + v.index(min_s)))
 elif max_ind == 3 and min_ind != 3:
     print(chr(65 + v.index(max_s)))
-else:print('C')
+else: print('C')

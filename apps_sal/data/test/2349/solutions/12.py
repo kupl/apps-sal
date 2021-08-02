@@ -1,12 +1,12 @@
 import math
 t = int(input())
-for i in range (t):
+for i in range(t):
     n = int(input())
     m = math.floor(math.sqrt(n))
-    ans = [j for j in range (m + 1)]
+    ans = [j for j in range(m + 1)]
     left = m
     while m > 0:
-        k = n//m
+        k = n // m
         if left == k:
             m -= 1
             continue
@@ -14,4 +14,4 @@ for i in range (t):
         left = k
         m -= 1
     print(len(ans))
-    print(*ans, sep = " ")
+    print(*ans, sep=" ")

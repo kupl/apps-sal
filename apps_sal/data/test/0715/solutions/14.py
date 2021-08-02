@@ -14,4 +14,3 @@ else:
     ans = 'C'
 
 print(ans)
-

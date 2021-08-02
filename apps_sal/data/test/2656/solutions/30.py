@@ -18,10 +18,12 @@ rev[n_] = pow(fun[n_], mod - 2, mod)
 for i in range(n_ - 1, 0, -1):
     rev[i] = rev[i + 1] * (i + 1) % mod
 
+
 def nCr(n, r):
     if r > n:
         return 0
     return fun[n] * rev[r] % mod * rev[n - r] % mod
+
 
 def modinv(x, mod):
     a, b = x, mod
@@ -43,12 +45,12 @@ def solve():
     ans = 0
     v = 1
     u = pow(26, k, mod)
-    for i in range(n, n+k+1):
-        ans = (ans + nCr(i-1, n-1) * v * u) % mod
+    for i in range(n, n + k + 1):
+        ans = (ans + nCr(i - 1, n - 1) * v * u) % mod
         u = u * inv26 % mod
         v = v * 25 % mod
     print(ans)
     return
 
-solve()
 
+solve()

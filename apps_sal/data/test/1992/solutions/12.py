@@ -1,8 +1,8 @@
-def main(): 
+def main():
     n, m, k = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-    pos  = [0] * (n + 5)
+    pos = [0] * (n + 5)
     app = [0] * (n + 5)
     for i in range(n):
         pos[i + 1] = a[i]
@@ -13,7 +13,7 @@ def main():
         if app[x] % k != 0:
             swipes += ((app[x] // k) + 1)
         else:
-            swipes += (app[x]//k)
+            swipes += (app[x] // k)
         if app[x] != 1:
             tempPos = app[x]
             tempApp = pos[tempPos - 1]
@@ -25,8 +25,8 @@ def main():
     print(swipes)
 
 
-
-
 def __starting_point():
     main()
+
+
 __starting_point()

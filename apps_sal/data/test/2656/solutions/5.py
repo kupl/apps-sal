@@ -35,4 +35,5 @@ def f_strivore(MOD=10**9 + 7):
         g[n] = (f[n] + 26 * g[n - 1]) % MOD
     return g[K]
 
+
 print(f_strivore())

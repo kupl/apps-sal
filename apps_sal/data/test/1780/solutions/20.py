@@ -7,4 +7,3 @@ for i in range(m):
     length = r - l + 1
     ans += ['0'] if length % 2 or length > b else ['1']
 print('\n'.join(ans))
-

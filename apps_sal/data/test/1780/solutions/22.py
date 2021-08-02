@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     (n, m) = list(map(int, sys.stdin.readline().split(' ')))
     a = list(map(int, sys.stdin.readline().split(' ')))
@@ -20,5 +21,6 @@ def main():
                 sys.stdout.write("1\n")
             else:
                 sys.stdout.write("0\n")
-main()
 
+
+main()

@@ -22,14 +22,13 @@ fac, inv = _fac_inv(n, mod)
 
 n25 = [1]
 n26 = [1]
-for _ in range(n-s):
+for _ in range(n - s):
     n25.append((n25[-1] * 25) % mod)
     n26.append((n26[-1] * 26) % mod)
 
 ans = 0
 
 for i in range(s, n + 1):
-    ans = (ans + fac[i-1] * inv[s-1] * inv[i-s] * n25[i-s] * n26[n-i]) % mod
+    ans = (ans + fac[i - 1] * inv[s - 1] * inv[i - s] * n25[i - s] * n26[n - i]) % mod
 
 print(ans)
-

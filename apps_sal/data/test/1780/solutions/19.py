@@ -9,4 +9,3 @@ for i in range(0, m):
     res[i] = '1' if q % 2 == 0 and q <= less else '0'
 
 print('\n'.join(res))
-

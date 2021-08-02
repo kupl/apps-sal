@@ -36,4 +36,3 @@ for i in range(1, K + 2):
     s2 = (s2 * inv[26]) % MOD
 
 print(ans)
-

@@ -15,6 +15,6 @@ def foo():
             b[a[b[element]]] += 1
             b[element] -= 1
     return answer
-        
-print(foo())
 
+
+print(foo())

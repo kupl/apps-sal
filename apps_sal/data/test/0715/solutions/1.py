@@ -13,8 +13,8 @@ for i in range(4):
     else:
         fl = True
         for j in range(4):
-                if j != i and a[j] / a[i] < 2:
-                    fl = False 
+            if j != i and a[j] / a[i] < 2:
+                fl = False
         if fl:
             good.append(i)
 if len(good) == 1:
