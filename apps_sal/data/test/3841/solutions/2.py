@@ -11,6 +11,7 @@ def findBit(l, r, x, pwk):
             return i
     return 0
 
+
 def rec(l, r, pwk):
     nonlocal x
     nonlocal k
@@ -27,16 +28,13 @@ def rec(l, r, pwk):
         rec(nl, nr, pwk * (-k))
         answer.append(findBit(l, r, x, pwk))
         x -= answer[-1] * pwk
-    
+
 
 rec(0, 0, 1)
 
 
 print(len(answer))
 for x in reversed(answer):
-    print(x, end = ' ')
-    
+    print(x, end=' ')
+
 print()
-
-
-

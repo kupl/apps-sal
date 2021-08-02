@@ -10,4 +10,3 @@ if p:
     r.append(-p)
 print(len(r))
 print(*r, sep=' ')
-

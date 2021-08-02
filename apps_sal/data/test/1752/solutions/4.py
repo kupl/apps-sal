@@ -8,19 +8,19 @@
       __/ |                __/ |               
      |___/                |___/                
 '''
-n=int(input())
-a=list(map(int,input().split()))
+n = int(input())
+a = list(map(int, input().split()))
 
-pa=[]
-sa=[]
+pa = []
+sa = []
 a.sort()
 for i in range(n):
-    if i%2==0:
+    if i % 2 == 0:
         pa.append(a[i])
     else:
         sa.append(a[i])
 sa.reverse()
-resa=pa+sa
-#print(resa)
+resa = pa + sa
+# print(resa)
 for i in resa:
-    print(i,end=' ')
+    print(i, end=' ')

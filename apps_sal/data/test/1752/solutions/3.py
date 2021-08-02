@@ -14,4 +14,3 @@ else:
             pass
         i += 1
     print(' '.join(map(str, ans)))
-

@@ -21,4 +21,3 @@ while p2 > 0:
 
 print(len(rev_p_digits))
 print(*rev_p_digits)
-

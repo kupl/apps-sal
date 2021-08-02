@@ -19,7 +19,7 @@ def is_row_wise(a, n, k):
                 cnt = 0
                 if a[i][j] == '.':
                     cnt = 1
-                    if a[i][j-1] == 'X':
+                    if a[i][j - 1] == 'X':
                         cnt = 2
                 else:
                     flag = True
@@ -42,7 +42,7 @@ def is_column_wise(a, n, k):
                 cnt = 0
                 if a[j][i] == '.':
                     cnt = 1
-                    if a[j-1][i] == 'X':
+                    if a[j - 1][i] == 'X':
                         cnt = 2
                 else:
                     flag = True
@@ -63,7 +63,7 @@ def is_diag_wise(a, n, k):
             cnt = 0
             if a[i][i] == '.':
                 cnt = 1
-                if a[i-1][i-1] == 'X':
+                if a[i - 1][i - 1] == 'X':
                     cnt = 2
             else:
                 flag = True
@@ -71,16 +71,16 @@ def is_diag_wise(a, n, k):
             return True
     cnt, flag = 0, True
     for i in range(n):
-        if a[i][n-1-i] == 'X':
+        if a[i][n - 1 - i] == 'X':
             cnt += 1
-        elif a[i][n-1-i] == '.' and flag:
+        elif a[i][n - 1 - i] == '.' and flag:
             cnt += 1
             flag = False
         else:
             cnt = 0
-            if a[i][n-1-i] == '.':
+            if a[i][n - 1 - i] == '.':
                 cnt = 1
-                if a[i-1][n-2-i] == 'X':
+                if a[i - 1][n - 2 - i] == 'X':
                     cnt = 2
             else:
                 flag = True
@@ -117,7 +117,9 @@ def main():
         game = [input() for _ in range(n)]
         print("YES" if is_chef_wins(game, n, k) else "NO")
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

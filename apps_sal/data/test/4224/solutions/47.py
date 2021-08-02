@@ -6,11 +6,13 @@ def __starting_point():
 
     C = 0
     for i in range(N):
-        if lia[i] % 2 ==0:
+        if lia[i] % 2 == 0:
             tmp = lia[i]
-            while tmp % 2 ==0:
+            while tmp % 2 == 0:
                 tmp = tmp / 2
                 C += 1
 
     print(int(C))
+
+
 __starting_point()

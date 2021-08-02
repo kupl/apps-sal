@@ -9,4 +9,3 @@ for x in a:
         x //= 2
 
 print(ans)
-

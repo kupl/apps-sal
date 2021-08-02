@@ -14,4 +14,6 @@ def mai():
 
 def __starting_point():
     mai()
+
+
 __starting_point()

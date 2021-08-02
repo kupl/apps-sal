@@ -6,4 +6,3 @@ for i in range(n):
         a[i] = a[i] / 2
         cnt += 1
 print(cnt)
-

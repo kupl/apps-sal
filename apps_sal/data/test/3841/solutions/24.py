@@ -9,4 +9,3 @@ while p:
     arr.append(str(b))
 print(len(arr))
 print(' '.join(arr))
-

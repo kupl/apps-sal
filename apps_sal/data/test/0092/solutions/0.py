@@ -20,7 +20,8 @@ for i in range(1, a + 1):
         ij = i * j
         for k in range(1, c + 1):
             ijk = ij * k
-            if ijk in ans: s += ans[ijk]
+            if ijk in ans:
+                s += ans[ijk]
             else:
                 y = 1
                 for x in q.keys() | t[k].keys():

@@ -1,5 +1,5 @@
 n = int(input())
-nums = list(map(int,input().split()))
+nums = list(map(int, input().split()))
 count = 0
 even = False
 for i in range(len(nums)):
@@ -8,7 +8,7 @@ for i in range(len(nums)):
     while even:
         if nums[i] % 2 == 0:
             count += 1
-            nums[i] = int(nums[i]/2)
+            nums[i] = int(nums[i] / 2)
         else:
             even = False
 print(count)

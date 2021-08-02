@@ -7,11 +7,11 @@ for x in range(0, k):
     used = set()
     ok = 1
     while 1:
-        b = (-a+k-1) // k
+        b = (-a + k - 1) // k
         if b == 0:
             res.append(a)
             break
-        res.append(a+k*b)
+        res.append(a + k * b)
         a = b
         if a in used:
             ok = 0
@@ -25,4 +25,3 @@ if ans is None:
 else:
     print(len(ans))
     print(*ans)
-

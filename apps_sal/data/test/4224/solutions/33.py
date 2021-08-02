@@ -7,4 +7,3 @@ for i in range(n):
             ans += j
             break
 print(ans)
-

@@ -24,9 +24,9 @@ def solve(a, b, c):
 
     ans = 0
     cache = {}
-    for i in range(1, a+1):
-        for j in range(1, b+1):
-            for k in range(1, c+1):
+    for i in range(1, a + 1):
+        for j in range(1, b + 1):
+            for k in range(1, c + 1):
                 p = i * j * k
                 if p not in cache:
                     f = fact[i] + fact[j] + fact[k]
@@ -34,7 +34,7 @@ def solve(a, b, c):
                     res = 1
                     for k, v in list(f.items()):
                         res *= v + 1
-                    
+
                     cache[p] = res // 2
 
                 ans += cache[p]
@@ -50,5 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

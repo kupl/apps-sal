@@ -42,4 +42,5 @@ def __starting_point():
     # from random import randint
     # from func import random_str
 
+
 __starting_point()

@@ -8,7 +8,7 @@ d[1] = 1
 for i in range(2, maxProd + 1):
     d[i] = 2
 
-for i in range(2, maxProd//2 + 1):
+for i in range(2, maxProd // 2 + 1):
     for j in range(2 * i, maxProd + 1, i):
         d[j] += 1
 
@@ -19,4 +19,3 @@ for i in range(1, a + 1):
             ret = (ret + d[i * j * k]) % MOD
 
 print(ret)
-

@@ -9,5 +9,5 @@ for i in range(len(a_list)):
         a_list[i] = a_list[i] / 2
         a_trial += 1
     num_of_factor_2.append(a_trial)
-    
+
 print(sum(num_of_factor_2))

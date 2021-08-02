@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 for i in range(n):
     d = 0
     while A[i] > 0:

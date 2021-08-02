@@ -1,6 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 A.sort()
 ans = A[::2] + list(reversed(A[1::2]))
 print(*ans)
-

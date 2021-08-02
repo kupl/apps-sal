@@ -5,4 +5,3 @@ while p:
     p = -(p // k)
 print(len(r))
 print(*r, sep=' ')
-
