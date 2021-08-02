@@ -30,4 +30,3 @@ for i in range(201):
             ans = min(ans, thickness)
 
 print(ans)
-

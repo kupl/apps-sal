@@ -4,12 +4,14 @@ import sys
 w, m, k = (int(x) for x in sys.stdin.readline().split(' '))
 n = w // k
 
+
 def S(x):
     i = 0
     while x:
         i += 1
         x //= 10
     return i
+
 
 c = 0
 l = S(m)

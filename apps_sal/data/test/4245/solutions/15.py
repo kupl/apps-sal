@@ -5,6 +5,6 @@ while True:
     if num >= B:
         break
     ans += 1
-    num += (A-1)
+    num += (A - 1)
 
 print(ans)

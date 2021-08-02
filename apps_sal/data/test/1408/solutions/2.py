@@ -13,4 +13,3 @@ for i in range(n):
     pos = next_pos
 
 print(min(t for t, w in pos if t >= w))
-

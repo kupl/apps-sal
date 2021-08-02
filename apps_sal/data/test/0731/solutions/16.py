@@ -1,15 +1,16 @@
 def f(x):
     digs = len(str(x))
-    
-    ndig = digs*(x - 10**(digs-1) + 1)
+
+    ndig = digs * (x - 10**(digs - 1) + 1)
     for i in range(1, digs):
-        ndig += i * 9*10**(i-1)
+        ndig += i * 9 * 10**(i - 1)
     return ndig
+
 
 a, b, c = list(map(int, input().split(' ')))
 num = a // c
 
-need = num + f(b-1)
+need = num + f(b - 1)
 
 lo = 0
 hi = 10**18
@@ -20,5 +21,4 @@ while lo < hi:
         hi = mid - 1
     else:
         lo = mid
-print(lo-b+1)
-
+print(lo - b + 1)

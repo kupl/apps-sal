@@ -1,4 +1,4 @@
-N,K = map(int,input().split())
+N, K = map(int, input().split())
 c = N
 ans = 1
 if K == 1:
@@ -6,5 +6,5 @@ if K == 1:
 else:
     while c < K:
         ans += 1
-        c += N-1
+        c += N - 1
     print(ans)

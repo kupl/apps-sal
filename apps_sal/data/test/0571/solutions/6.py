@@ -11,7 +11,7 @@ else:
             else:
                 s[i] = ")"
             op -= 1
-    #print("".join(s))
+    # print("".join(s))
     b = 0
     for i in range(n):
         if s[i] == ")":
@@ -26,4 +26,3 @@ else:
             print("".join(s))
         else:
             print(":(")
-

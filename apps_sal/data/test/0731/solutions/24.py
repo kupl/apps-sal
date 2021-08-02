@@ -4,6 +4,7 @@ w, m, k = map(int, input().split())
 def size(a):
     return len(str(a))
 
+
 def how_many(m, n):
     len1 = size(m)
     len2 = size(n)
@@ -19,6 +20,7 @@ def how_many(m, n):
             else:
                 cnt += (pow(10, len) - pow(10, len - 1)) * len
         return cnt + len2
+
 
 def check(n):
     return how_many(m, n) * k <= w

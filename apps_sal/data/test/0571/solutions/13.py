@@ -25,4 +25,3 @@ if left == n // 2 and right == n // 2:
     print(''.join(s))
 else:
     print(':(')
-

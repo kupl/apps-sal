@@ -11,4 +11,3 @@ for i in range(n - 1, 0, -1):
         if a[i] % j == 0:
             ans = min(ans, cur + a[0] * j + a[i] // j)
 print(ans)
-

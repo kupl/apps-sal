@@ -1,7 +1,7 @@
 s = input()
 n = len(s)
 
-if s[0] == s[n-1]:
+if s[0] == s[n - 1]:
     move = 1
 else:
     move = 0
@@ -12,4 +12,3 @@ if move == 1:
     print('First')
 else:
     print('Second')
-

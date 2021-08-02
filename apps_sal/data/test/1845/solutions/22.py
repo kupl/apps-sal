@@ -13,4 +13,3 @@ for i in range(len(a)):
             ans = min(ans, s - a[0] - a[i] + a[0] * x + a[i] // x)
 
 print(ans)
-

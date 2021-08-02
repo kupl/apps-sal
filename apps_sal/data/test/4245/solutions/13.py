@@ -3,7 +3,7 @@ con = 1
 ans = 0
 
 while con < b:
-  con += a - 1
-  ans += 1
-  
+    con += a - 1
+    ans += 1
+
 print(ans)
