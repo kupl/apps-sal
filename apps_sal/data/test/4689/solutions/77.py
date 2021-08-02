@@ -9,4 +9,3 @@ for i in range(1, n + 1):
     d_max = max(d, d_max)
 
 print((k - d_max))
-

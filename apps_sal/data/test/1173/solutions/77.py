@@ -5,6 +5,7 @@ def is_not_empty(A):
             return True
     return False
 
+
 def main():
     import sys
     input = sys.stdin.readline
@@ -12,16 +13,16 @@ def main():
 
     N = int(input())
     # 1-indexed
-    A = [deque() for _ in range(N+1)]
+    A = [deque() for _ in range(N + 1)]
     # O(N^2)
-    for i in range(1,N+1):
+    for i in range(1, N + 1):
         for j in input().split():
             A[i].append(int(j))
 
     # 当日の参加者
     today = set()
     # 初日
-    for i in range(1,N+1):
+    for i in range(1, N + 1):
         # 既に参加した人はダメ
         if i in today:
             continue
@@ -66,6 +67,9 @@ def main():
 
     print(answer)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -11,4 +11,3 @@ for _ in range(2, 6):
     m.append(m[-1] - m[-2])
 
 print(m[(int(input()) - 1) % 6] % (10 ** 9 + 7))
-

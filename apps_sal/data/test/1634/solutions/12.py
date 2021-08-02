@@ -40,4 +40,3 @@ cost_tro = min(c3, cost_tro)
 # calc min cost for all (bus and tro)
 cost_all = min(c4, cost_bus + cost_tro)
 print(cost_all)
-

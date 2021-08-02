@@ -1,5 +1,5 @@
-k, n = list(map(int,input().split()))
-a = list(map(int,input().split()))
+k, n = list(map(int, input().split()))
+a = list(map(int, input().split()))
 new_a = sorted(a)
 num = len(new_a) - 1
 s_a = []
@@ -12,5 +12,3 @@ for i in new_a[1::]:
     cun += 1
 max_num = max(s_a)
 print((sum(s_a) - max_num))
-
-

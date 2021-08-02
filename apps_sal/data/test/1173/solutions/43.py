@@ -1,5 +1,5 @@
 import itertools
-#0-indexed
+# 0-indexed
 N = int(input())
 A = [[int(_) - 1 for _ in input().split()][::-1] for _ in range(N)]
 ans = 0
@@ -27,4 +27,3 @@ if left:
     print((-1))
 else:
     print(ans)
-

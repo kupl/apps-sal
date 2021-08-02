@@ -1,5 +1,6 @@
 import sys
 
+
 def __starting_point():
     cin = sys.stdin
 
@@ -11,9 +12,10 @@ def __starting_point():
 #   if cx == ax or cy == ay or cx-cy==ax-ay or cx+cy==ax+ay:
 #       print('YES')
 #       return
-    if (ax-bx)*(ax-cx) > 0 and (ay-by)*(ay-cy) > 0:
+    if (ax - bx) * (ax - cx) > 0 and (ay - by) * (ay - cy) > 0:
         print('YES')
     else:
         print('NO')
+
 
 __starting_point()

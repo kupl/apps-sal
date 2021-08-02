@@ -1,6 +1,6 @@
 from collections import deque
 N = int(input())
-A = [deque(map(lambda x: int(x)-1,input().split(" "))) for _ in range(N)]
+A = [deque(map(lambda x: int(x) - 1, input().split(" "))) for _ in range(N)]
 ans = 0
 used_prev = set(range(N))
 

@@ -25,4 +25,3 @@ if all(len(a) == 0 for a in A):
     print((max(D)))
 else:
     print((-1))
-

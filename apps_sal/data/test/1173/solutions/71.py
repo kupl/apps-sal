@@ -1,6 +1,6 @@
 import sys
 from collections import deque
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
 
 
 def solve():
@@ -46,5 +46,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

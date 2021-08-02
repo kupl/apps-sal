@@ -3,11 +3,11 @@ from collections import deque
 n = int(input())
 matches = []
 for _ in range(n):
-    matches.append(list([int(x)-1 for x in input().split()]))
+    matches.append(list([int(x) - 1 for x in input().split()]))
 
 q = deque(list(range(n)))
 
-days = [0]*n  # 各選手の現在の日付
+days = [0] * n  # 各選手の現在の日付
 
 while q:
     x = q.popleft()  # 試合する人
@@ -15,7 +15,7 @@ while q:
         continue
     y = matches[x][0]  # xの次の対戦相手
     if matches[y][0] == x:
-        day = max(days[x], days[y])+1
+        day = max(days[x], days[y]) + 1
         days[x] = day
         days[y] = day
         q.append(x)
@@ -27,4 +27,3 @@ if not any(matches):  # 全ての試合をしょうか
     print((max(days)))
 else:
     print((-1))
-

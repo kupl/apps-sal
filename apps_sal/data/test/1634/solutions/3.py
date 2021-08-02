@@ -6,11 +6,11 @@ trol = list(map(int, input().split()))
 mbus = [0] * n
 mtrol = [0] * m
 
-for i in range (n):
+for i in range(n):
     mbus[i] = min(bus[i] * c1, c2)
 sbus = min(sum(mbus), c3)
 
-for i in range (m):
+for i in range(m):
     mtrol[i] = min(trol[i] * c1, c2)
 strol = min(sum(mtrol), c3)
 

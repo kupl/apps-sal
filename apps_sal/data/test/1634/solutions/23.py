@@ -13,4 +13,3 @@ for i in lst2:
 tr = min(tr, c3)
 
 print(min(c4, buss + tr))
-

@@ -6,4 +6,3 @@ if (x2 < x1 and x3 < x1 or x2 > x1 and x3 > x1) and (y2 < y1 and y3 < y1 or y2 >
     print("YES")
 else:
     print("NO")
-

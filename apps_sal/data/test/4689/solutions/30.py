@@ -5,10 +5,10 @@ longest = 0
 for i in range(n):
     # if i==0:
     #     continue
-    if i==n-1:
-        longest = max(longest, k-a_list[i]+a_list[0])
+    if i == n - 1:
+        longest = max(longest, k - a_list[i] + a_list[0])
     else:
-        distance = a_list[i+1] - a_list[i]
+        distance = a_list[i + 1] - a_list[i]
         longest = max(longest, distance)
 
-print(k-longest)
+print(k - longest)

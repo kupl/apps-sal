@@ -24,4 +24,3 @@ if sign(B[0]) != sign(C[0]) or sign(B[1]) != sign(C[1]):
 #     ok = False
 
 print(["NO", "YES"][ok])
-

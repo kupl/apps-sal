@@ -1,9 +1,11 @@
 import sys
 from collections import deque
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N = ir()
 A = [deque(lr()) for _ in range(N)]
@@ -29,7 +31,7 @@ while True:
             match += 1
             next |= {c, op}
             used |= {c, op}
-    if match == N * (N-1) // 2:
+    if match == N * (N - 1) // 2:
         break
     if not bool:
         print((-1))
@@ -37,4 +39,3 @@ while True:
     candidate = next
 
 print(day)
-

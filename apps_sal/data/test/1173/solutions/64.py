@@ -41,4 +41,3 @@ if min(cnt) != N - 1:
     print((-1))
 else:
     print((max(recent)))
-

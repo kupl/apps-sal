@@ -8,4 +8,3 @@ if (bx > ax, by > ay) != (cx > ax, cy > ay):
     return
 
 print("YES")
-

@@ -1,6 +1,6 @@
 def solve():
     N = int(input())
-    Ass = [tuple([int(x)-1 for x in input().split()]) for _ in range(N)]
+    Ass = [tuple([int(x) - 1 for x in input().split()]) for _ in range(N)]
 
     day = 0
     numMatch = 0
@@ -12,7 +12,8 @@ def solve():
         p2s = set()
         for p in ps:
             iAs[p] += 1
-            if iAs[p] == N-1: continue
+            if iAs[p] == N - 1:
+                continue
             q = Ass[p][iAs[p]]
             if isReadys[q] and Ass[q][iAs[q]] == p:
                 isReadys[q] = 0
@@ -21,7 +22,7 @@ def solve():
                 numMatch += 1
             else:
                 isReadys[p] = 1
-        if numMatch >= N*(N-1)//2:
+        if numMatch >= N * (N - 1) // 2:
             print(day)
             break
         if not p2s:
@@ -29,5 +30,5 @@ def solve():
             break
         ps = p2s
 
-solve()
 
+solve()

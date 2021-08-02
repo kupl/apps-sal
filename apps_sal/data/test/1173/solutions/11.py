@@ -1,9 +1,11 @@
 from collections import deque
+
+
 def solve():
     n = int(input())
     a = []
     for i in range(n):
-        ai = [int(j)-1 for j in input().split()]
+        ai = [int(j) - 1 for j in input().split()]
         a.append(deque(ai))
     d = set()
     q = deque()
@@ -38,5 +40,6 @@ def solve():
     if any(i for i in a):
         ans = -1
     print(ans)
+
 
 solve()

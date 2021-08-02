@@ -12,4 +12,3 @@ if bx * cx > 0 and by * cy > 0:
     print('YES')
 else:
     print('NO')
-

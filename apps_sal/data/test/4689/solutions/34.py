@@ -8,4 +8,3 @@ for i in range(n - 1):
 b.append(k - a[-1] + a[0])
 
 print((sum(b) - max(b)))
-

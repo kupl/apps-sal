@@ -7,4 +7,3 @@ for x in c:
             ret.add(y)
             break
 print(sum(ret))
-
