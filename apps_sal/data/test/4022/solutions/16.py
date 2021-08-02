@@ -25,4 +25,3 @@ if i_max1 == i_min1:
     print(min2 - max2)
 else:
     print(max(min2 - max1, min1 - max2, 0))
-

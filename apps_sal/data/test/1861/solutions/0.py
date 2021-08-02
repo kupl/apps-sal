@@ -29,4 +29,3 @@ for i in range(n):
             ans += 1
             was.add(max(cards[i], cards[j], aaa) + min(cards[i], cards[j], aaa))
 print(ans)
-

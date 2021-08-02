@@ -38,4 +38,3 @@ children = [set() for _ in range(n)]
 for i, p in enumerate(map(int, input().split())):
     children[p - 1].add(i + 1)
 print(solve(n, l, s, www, children))
-

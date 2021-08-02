@@ -24,5 +24,4 @@ l_1.pop(l1)
 r_1.pop(l1)
 l_2.pop(r1)
 r_2.pop(r1)
-print(max(0, min(r_1)-max(l_1), min(r_2)-max(l_2)))
-
+print(max(0, min(r_1) - max(l_1), min(r_2) - max(l_2)))

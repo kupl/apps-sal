@@ -22,4 +22,6 @@ def main():
         for el in e:
             if (el != ans):
                 print(ans + 1, el + 1)
+
+
 main()

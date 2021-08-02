@@ -2,6 +2,7 @@ from copy import deepcopy
 import itertools
 from bisect import bisect_left
 
+
 def read():
     return int(input())
 
@@ -16,10 +17,10 @@ def readlist():
 
 N = read()
 degree = [0] * N
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b = readmap()
-    degree[a-1] += 1
-    degree[b-1] += 1
+    degree[a - 1] += 1
+    degree[b - 1] += 1
 
 more_than_three = 0
 for d in degree:
@@ -37,7 +38,7 @@ if more_than_three == 1:
             center = v
     for v in range(N):
         if degree[v] == 1:
-            ans.append((center+1, v+1))
+            ans.append((center + 1, v + 1))
     print("Yes")
     print(len(ans))
     for tup in ans:
@@ -50,4 +51,4 @@ for v in range(N):
         leaf.append(v)
 print("Yes")
 print(1)
-print(leaf[0]+1, leaf[1]+1)
+print(leaf[0] + 1, leaf[1] + 1)

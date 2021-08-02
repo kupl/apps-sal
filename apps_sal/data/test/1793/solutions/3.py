@@ -28,7 +28,7 @@ def rec(n, l, s):
         if not dp[cur]:
             ans += 1
             dp[cur][1] = weight[cur]
-    
+
     return ans + 1
 
 
@@ -44,5 +44,5 @@ if n == 1:
     print(-1 if weight[0] > s else 1)
     return
 for i, v in enumerate(map(int, sys.stdin.readline().split())):
-    children[v -1].add(i + 1)
-print(rec(n,l,s))
+    children[v - 1].add(i + 1)
+print(rec(n, l, s))

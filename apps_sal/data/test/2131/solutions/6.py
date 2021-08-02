@@ -1,9 +1,9 @@
 n = int(input())
-graph = [ [] for i in range(n+1)]
+graph = [[] for i in range(n + 1)]
 center = None
 should_continue = True
 ends = set()
-for i in range(n-1):
+for i in range(n - 1):
     parameters = [int(s) for s in input().split(" ")]
     from_ = parameters[0]
     to = parameters[1]
@@ -49,4 +49,3 @@ else:
         print(len(graph[center]))
         for i in ends:
             print(str(center) + " " + str(i))
-

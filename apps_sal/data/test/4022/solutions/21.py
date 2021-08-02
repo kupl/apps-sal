@@ -15,4 +15,3 @@ for i in range(n):
     max_l = max(right - left, max_l)
 
 print(max_l)
-
