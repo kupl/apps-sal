@@ -1,18 +1,19 @@
 # coding: utf-8
+from itertools import combinations
+import math
 import sys
 #from operator import itemgetter
 sysread = sys.stdin.readline
 #from heapq import heappop, heappush
 #from collections import defaultdict
 sys.setrecursionlimit(10**7)
-import math
-from itertools import combinations
+
 
 def run():
     N, K = map(int, sysread().split())
     niku = []
     for i in range(N):
-        niku.append([i]+list(map(int, sysread().split())))
+        niku.append([i] + list(map(int, sysread().split())))
 
     high_t = math.sqrt(2000**2 + 2000**2) * 101
     low_t = 0
@@ -37,7 +38,6 @@ def run():
                     K0 += 1
                 if K0 >= K:
                     done = True
-
 
         for (i, xi, yi, _), (j, xj, yj, _) in combinations(niku, 2):
             if done:
@@ -77,7 +77,6 @@ def run():
                 if K1 >= K or K2 >= K:
                     done = True
 
-
         if done:
             high_t = current
             current = (high_t + low_t) / 2
@@ -88,6 +87,9 @@ def run():
     print((low_t + high_t) / 2)
     return None
 
+
 def __starting_point():
     run()
+
+
 __starting_point()

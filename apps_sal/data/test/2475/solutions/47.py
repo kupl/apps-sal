@@ -4,6 +4,7 @@ input = sys.stdin.readline
 sys.setrecursionlimit(100000)
 mod = 10 ** 9 + 7
 
+
 def read_values(): return list(map(int, input().split()))
 def read_index(): return [int(x) - 1 for x in input().split()]
 def read_list(): return list(read_values())
@@ -14,15 +15,15 @@ class V:
     def __init__(self, f, v=None):
         self.f = f
         self.v = v
- 
+
     def __str__(self):
         return str(self.v)
- 
+
     def ud(self, n):
         if self.v is None:
             self.v = n
         else:
-            self.v = self.f(self.v, n) 
+            self.v = self.f(self.v, n)
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
         while True:
             if a < c:
                 break
-            
+
             if (N - 1) % c == 0 and 2 * a <= N - 1:
                 break
 
@@ -53,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

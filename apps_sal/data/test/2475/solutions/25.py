@@ -12,4 +12,3 @@ for c in range(1, n // 2):
         a -= c
         k += c
 print(ans)
-

@@ -27,4 +27,3 @@ print()
 print(len(r2))
 for x in r2:
     print(x, end=' ')
-

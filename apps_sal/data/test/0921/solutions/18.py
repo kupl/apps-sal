@@ -1,6 +1,7 @@
 import sys
 from itertools import accumulate
 
+
 def solve():
     n, w = map(int, input().split())
 
@@ -34,6 +35,9 @@ def solve():
 
     print(*b)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

@@ -11,4 +11,3 @@ for i in range(1, N - 1):
         x + y for x, y in zip(S[:i * maxj:i], S[-1:-1 - i * maxj:-i]))
     ans = max(ans, max(dp))
 print(ans)
-

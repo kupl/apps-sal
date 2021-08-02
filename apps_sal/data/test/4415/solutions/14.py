@@ -27,4 +27,5 @@ def __starting_point():
         print(len(dec))
         print(" ".join(str(e) for e in dec[::-1]))
 
+
 __starting_point()

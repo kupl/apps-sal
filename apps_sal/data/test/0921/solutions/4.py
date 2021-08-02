@@ -17,4 +17,3 @@ else:
         i += 1
     for i in range(n):
         print(res[i][0], end=' ')
-

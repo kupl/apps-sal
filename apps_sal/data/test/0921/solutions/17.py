@@ -30,4 +30,3 @@ for i in range(n - 1, -1, -1):
 gls.sort(key=lambda y: y.p)
 for i in range(n):
     print(gls[i].f, end=" ")
-

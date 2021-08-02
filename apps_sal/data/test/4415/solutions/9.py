@@ -22,4 +22,3 @@ else:
     print(*I)
     print(len(D))
     print(*sorted(D)[::-1])
-

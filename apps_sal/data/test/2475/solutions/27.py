@@ -10,4 +10,3 @@ for step in range(1, n):
         now += s[i] + s[j]
         ans = max(ans, now)
 print(ans)
-
