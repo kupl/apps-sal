@@ -1,7 +1,9 @@
 def main():
     mode = "filee"
-    if mode == "file": f = open("test.txt", "r")
-    get = lambda: [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    if mode == "file":
+        f = open("test.txt", "r")
+
+    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
     m = get()
     w = get()
     h = get()
@@ -13,7 +15,8 @@ def main():
     ans += (100 * h[0] - 50 * h[1])
     print(int(ans))
 
-    if mode == "file": f.close()
+    if mode == "file":
+        f.close()
 
 
 def __starting_point():

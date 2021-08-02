@@ -1,9 +1,11 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 H, W = lr()
 A = np.array([lr() for _ in range(H)])
@@ -14,7 +16,8 @@ X = (H + W) * 80
 L = X + X + 1  # 真ん中を0とする、最後に-X
 dp = [[np.zeros(L, np.bool) for _ in range(W)] for _ in range(H)]
 di = diff[0][0]
-dp[0][0][X + di] = 1; dp[0][0][X - di] = 1
+dp[0][0][X + di] = 1
+dp[0][0][X - di] = 1
 for i in range(H):
     for j in range(W):
         if i == 0 and j == 0:

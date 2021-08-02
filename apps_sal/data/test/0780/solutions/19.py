@@ -3,7 +3,8 @@ from sys import setrecursionlimit as SRL
 
 SRL(10 ** 7)
 rd = stdin.readline
-rrd = lambda: list(map(int, rd().strip().split()))
+def rrd(): return list(map(int, rd().strip().split()))
+
 
 s = str(rd().strip())
 

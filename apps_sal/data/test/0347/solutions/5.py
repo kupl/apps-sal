@@ -1,4 +1,4 @@
-ans = 0;
+ans = 0
 time = list(map(int, input().split()))
 tries = list(map(int, input().split()))
 ball = [500, 1000, 1500, 2000, 2500]

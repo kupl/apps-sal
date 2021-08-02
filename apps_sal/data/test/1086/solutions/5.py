@@ -7,7 +7,8 @@ def fold(x, m):
     return x | y
 
 
-lmi = lambda: list(map(int, input().split()))
+def lmi(): return list(map(int, input().split()))
+
 
 h, w = lmi()
 a = [lmi() for _ in range(2 * h)]

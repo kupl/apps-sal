@@ -5,8 +5,10 @@ n, k = map(int, input().split())
 one = k * 2 + 1
 
 ans = 0
-if n % one == 0: ans = n // one
-else: ans = n // one + 1
+if n % one == 0:
+    ans = n // one
+else:
+    ans = n // one + 1
 print(ans)
 cnt = 1
 arr = []

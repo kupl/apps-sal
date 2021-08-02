@@ -17,7 +17,8 @@ for i, crow in enumerate(C):
         dp2[j] |= (d << c)
         dp2[j] |= (d >> c)
     for j, c in enumerate(C[i]):
-        if j == 0: continue
+        if j == 0:
+            continue
         dp2[j] |= (dp2[j - 1] << c)
         dp2[j] |= (dp2[j - 1] >> c)
     dp = dp2

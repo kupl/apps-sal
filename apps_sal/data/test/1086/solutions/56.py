@@ -13,5 +13,6 @@ for i in range(h):
             dp[i][j] |= dp[i][j - 1] << (80 + (b[i][j] - a[i][j]))
 ans = 1 << 50000
 for i in range(50000):
-    if dp[h - 1][w - 1] & (1 << i): ans = min(abs(i - (h + w - 1) * 80), ans)
+    if dp[h - 1][w - 1] & (1 << i):
+        ans = min(abs(i - (h + w - 1) * 80), ans)
 print(ans)

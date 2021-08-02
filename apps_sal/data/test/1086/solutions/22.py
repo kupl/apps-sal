@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    inp = lambda: list(map(int, input().split()))
+    def inp(): return list(map(int, input().split()))
     h, w = inp()
     a = [inp() for _ in range(h)]
     b = [inp() for _ in range(h)]

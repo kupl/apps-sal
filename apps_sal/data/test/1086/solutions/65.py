@@ -15,5 +15,6 @@ for i in range(h):
 n = dp[-1][-1] | (1 << 15000)
 ans = 1 << 1000
 for i in range(15000):
-    if n & (1 << i): ans = min(ans, abs(i - (h + w - 1) * 80))
+    if n & (1 << i):
+        ans = min(ans, abs(i - (h + w - 1) * 80))
 print(ans)

@@ -1,4 +1,5 @@
-tdlist = lambda i, j, value=0: [[value] * j for _ in range(i)]
+def tdlist(i, j, value=0): return [[value] * j for _ in range(i)]
+
 
 h, w = list(map(int, input().split()))
 D = 160 * 80
