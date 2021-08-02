@@ -1,5 +1,7 @@
 from collections import *
 import sys
+
+
 def main():
     r, c = map(int, sys.stdin.readline().strip().split())
     grid = [list(sys.stdin.readline().strip()) for _ in range(r)]
@@ -51,5 +53,6 @@ def main():
             print(1)
             return
     print(2)
+
 
 main()

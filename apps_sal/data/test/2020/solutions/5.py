@@ -6,4 +6,3 @@ for i in range(n):
     h.add(a)
     v.add(b)
 print(min(len(h), len(v)))
-

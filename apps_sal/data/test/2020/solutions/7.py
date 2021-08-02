@@ -6,4 +6,3 @@ for a in l:
     xset.add(a[0])
     yset.add(a[1])
 print(min(len(xset), len(yset)))
-

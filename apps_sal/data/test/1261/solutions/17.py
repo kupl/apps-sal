@@ -54,22 +54,19 @@ else:
 
 
 import math
-n=int(input())
-if(n==3):
+n = int(input())
+if(n == 3):
     print('1 1 3')
 
 else:
-    t=1
-    while(t<=n):
-        ct=math.ceil((n//t)/2)
-        for i in range(0,ct):
-            print(t,end=" ")
-        #t=t*2
-        if(ct==2 and (n//t)%2!=0):
-            t=t*3
+    t = 1
+    while(t <= n):
+        ct = math.ceil((n // t) / 2)
+        for i in range(0, ct):
+            print(t, end=" ")
+        # t=t*2
+        if(ct == 2 and (n // t) % 2 != 0):
+            t = t * 3
         else:
-            t=t*2
+            t = t * 2
     print(" ")
-
-                            
-

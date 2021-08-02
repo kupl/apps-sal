@@ -34,4 +34,3 @@ else:
         if way > limit:
             way = way % limit
     print(way)
-

@@ -2,6 +2,7 @@ import sys
 
 readLn = sys.stdin.readline
 
+
 def __starting_point():
     n, m = list(map(int, readLn().split()))
     ds = [[-1 if c == '#' else 0 for c in readLn()] for _ in range(n)]
@@ -29,5 +30,6 @@ def __starting_point():
                 ans = 1
                 break
         print(ans)
+
 
 __starting_point()

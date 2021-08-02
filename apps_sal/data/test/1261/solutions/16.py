@@ -12,11 +12,11 @@ if n % 2 == 1:
 
 xn = int(log2(n))
 tmp = n - len(l)
-for i in range(2, xn+1):
+for i in range(2, xn + 1):
     fn = tmp // 2
     if tmp % 2 == 1:
         fn += 1
     tmp -= fn
-    l += ([pow(2, i-1)] * fn)
+    l += ([pow(2, i - 1)] * fn)
 l.append((n // pow(2, xn - 1)) * pow(2, xn - 1))
 print(' '.join(str(i) for i in l))

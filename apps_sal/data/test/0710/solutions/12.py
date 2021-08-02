@@ -19,4 +19,3 @@ for i in range(len(s) - 3):
     p += a
     ans = min(p, ans)
 print(ans)
-

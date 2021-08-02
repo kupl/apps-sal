@@ -7,7 +7,7 @@ while t < n:
 if t > n:
     mx2pow -= 1
 
-last = 1 << (mx2pow-1) if mx2pow else 1
+last = 1 << (mx2pow - 1) if mx2pow else 1
 add = last
 
 while last < n:
@@ -18,9 +18,8 @@ if last > n:
 
 while n:
     if n == 1:
-        print(last)            
-        break        
-    print((str(curpow)+' ') * ((n+1)//2), end='')
+        print(last)
+        break
+    print((str(curpow) + ' ') * ((n + 1) // 2), end='')
     curpow *= 2
     n //= 2
-

@@ -19,4 +19,3 @@ for i in range(len(s) - 3):
     ans = min(ans, diff(s[i:i + 4]))
 
 print(ans)
-
