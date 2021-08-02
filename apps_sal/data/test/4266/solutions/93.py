@@ -7,6 +7,5 @@ def answer(k: int, x: int) -> str:
         answer.append(i)
     return " ".join(map(str, answer))
 
+
 print((answer(k, x)))
-
-

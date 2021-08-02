@@ -9,7 +9,6 @@ l[0][u] = u
 
 for i in range(1, t):
     for j in range(1201):
-        l[i & 1][j] = max(l[~i & 1][max(0, j - d) : min(1200, j + d) + 1]) + j
+        l[i & 1][j] = max(l[~i & 1][max(0, j - d): min(1200, j + d) + 1]) + j
 
 print(l[(t - 1) & 1][v])
-

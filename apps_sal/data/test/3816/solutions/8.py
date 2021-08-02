@@ -15,6 +15,4 @@ for z in (a, b, c):
 print(ans // 2)
 
 
-
 # Made By Mostafa_Khaled
-

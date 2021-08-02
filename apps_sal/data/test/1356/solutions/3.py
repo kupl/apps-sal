@@ -5,4 +5,5 @@ def main():
     print(min(a + a - 1, n))
     return 0
 
+
 main()

@@ -1,7 +1,7 @@
-K, X =map(int,input().split())
+K, X = map(int, input().split())
 result = []
 
-for i in range(1,K):
+for i in range(1, K):
     result.append(X + i)
     result.append(X - i)
 result.append(X)

@@ -7,5 +7,4 @@ for s in S:
     else:
         B += 1
 
-print(min(A*2-1, A+B))
-
+print(min(A * 2 - 1, A + B))

@@ -15,4 +15,3 @@ for i in range(2, t + 1):
     dst += v1
 
 print(dst)
-

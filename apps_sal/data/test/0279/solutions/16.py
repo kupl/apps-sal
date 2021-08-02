@@ -15,4 +15,3 @@ while sec_left:
 
 path.append(v2)
 print(sum(path))
-

@@ -6,5 +6,3 @@ for i in (a, b, c):
         m = min(s + x, l - x)
         cnt -= (m + 1) * (m + 2)
 print(cnt // 2)
-
-

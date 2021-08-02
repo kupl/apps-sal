@@ -26,13 +26,7 @@ for i in range(0, n):
         flag &= s[i][j] == '.';
 
 
-
 if (flag == 1):
     print("YES");
 else:
     print("NO");
-
-
-
-
-

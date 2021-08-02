@@ -1,8 +1,8 @@
-K, X = map(int,input().split())
+K, X = map(int, input().split())
 
 possble_black = []
 
-for i in range(X - K + 1,X+K):
+for i in range(X - K + 1, X + K):
     possble_black.append(i)
 # X = X-K+1
 # for j in range(K - 1):

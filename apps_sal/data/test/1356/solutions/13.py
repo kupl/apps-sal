@@ -1,4 +1,3 @@
 s = input()
 x = s.count('a')
-print(min(len(s), 2*x-1))
-
+print(min(len(s), 2 * x - 1))

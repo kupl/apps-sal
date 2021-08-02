@@ -11,5 +11,6 @@ def f():
                 else: return 'NO'
     if '#' in t[-2] or '#' in t[-1]: return 'NO'
     return 'YES'
-print(f())
 
+
+print(f())

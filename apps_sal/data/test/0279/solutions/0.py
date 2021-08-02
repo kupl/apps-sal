@@ -13,4 +13,3 @@ for i in range(t - 1, -1, -1):
     v += d
 
 print(sum(vm))
-

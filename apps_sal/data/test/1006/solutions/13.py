@@ -7,4 +7,3 @@ for idx in range(1, (h - 2) * w - 1):
         for _ in pattern:
             l[_ + idx] = False
 print(('YES', 'NO')[any(l)])
-

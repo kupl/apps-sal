@@ -14,36 +14,41 @@ from bisect import bisect
 
 inf = 10**18 + 2
 
+
 def rints():
     return list(map(int, input().split()))
+
 
 def ri():
     return int(input())
 
-def bin_search(arr, pred, lo=0, hi = None):
+
+def bin_search(arr, pred, lo=0, hi=None):
     if hi is None:
         hi = len(arr)
-    while lo < hi :
-        mid = (lo+hi) // 2
+    while lo < hi:
+        mid = (lo + hi) // 2
         if pred(arr[mid]):
             hi = mid
         else:
             lo = mid + 1
     return lo
 
+
 n = ri()
 score, _ = rints()
 
 teams = []
-for _ in range(n-1):
+for _ in range(n - 1):
     t, w = rints()
-    teams.append((w-t + 1, t, w))
+    teams.append((w - t + 1, t, w))
 
-teams.sort(key = lambda x : x[1])
+teams.sort(key=lambda x: x[1])
 # print(teams)
 
+
 def solve(score):
-    idx = bin_search(teams, lambda x : x[1] > score)
+    idx = bin_search(teams, lambda x: x[1] > score)
     best = pos = len(teams) - idx + 1
     # print(teams[idx:], pos)
 
@@ -63,6 +68,5 @@ def solve(score):
 
     return best
 
+
 print(solve(score))
-
-
