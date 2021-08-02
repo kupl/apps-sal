@@ -1,12 +1,14 @@
 import sys
-input = lambda : sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 # for i in range(int(input())):
 n = int(input())
-a = list(map(lambda x: (x[0]-x[1],x[1]),enumerate(map(int,input().split()))))
+a = list(map(lambda x: (x[0] - x[1], x[1]), enumerate(map(int, input().split()))))
 s = {}
-for i,v in a:
+for i, v in a:
     if i in s:
-        s[i]+=v
+        s[i] += v
     else:
-        s[i]=v
+        s[i] = v
 print(max(s.values()))

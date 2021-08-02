@@ -26,7 +26,7 @@ while True:
             print(str(moves) + " 1")
             return
     if b > a:
-        moves +=1
+        moves += 1
         d2.append(a)
         d2.append(b)
         if len(d1) == 0:

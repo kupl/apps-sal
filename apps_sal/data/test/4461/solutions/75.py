@@ -29,4 +29,3 @@ for w in range(1, W):
     ans.append(max(r1, r2b, r3b) - min(r1, r2b, r3b))
 
 print((min(ans)))
-

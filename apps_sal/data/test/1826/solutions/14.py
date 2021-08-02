@@ -8,4 +8,3 @@ for i in range(n - 1):
         s[i] = 'D'
         s[i + 1] = ''
 print(len(''.join(s)))
-

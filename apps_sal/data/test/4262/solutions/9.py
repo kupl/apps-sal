@@ -11,4 +11,4 @@ P = tuple(P)
 a = p_list.index(P)
 b = p_list.index(Q)
 
-print(abs(a-b))
+print(abs(a - b))

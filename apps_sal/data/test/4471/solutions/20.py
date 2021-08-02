@@ -5,7 +5,7 @@ while(t):
     a = list(map(int, input().split()))
     rems = set()
     for i in a:
-        rems.add(i%2)
+        rems.add(i % 2)
     if(len(rems) == 1):
         print("YES")
     else:

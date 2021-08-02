@@ -4,7 +4,7 @@ N = int(input())
 A = tuple(map(int, input().split()))
 B = tuple(map(int, input().split()))
 
-perm = permutations(range(1,N+1),N)
+perm = permutations(range(1, N + 1), N)
 cnt = 1
 count_a = 0
 count_b = 0

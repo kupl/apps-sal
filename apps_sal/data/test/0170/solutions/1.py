@@ -25,4 +25,3 @@ else:
     print(c, 1 if cards_1 else 2)
 if bad:
     print(-1)
-

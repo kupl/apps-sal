@@ -11,5 +11,4 @@ for i in permutations(sorted(P)):
     if(list(i) == Q):
         b = count
     count += 1
-print((abs(a-b)))
-
+print((abs(a - b)))

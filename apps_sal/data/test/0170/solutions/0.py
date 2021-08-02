@@ -23,4 +23,3 @@ else:
     if len(k1) == 0:
         winner = 2
     print(i, winner)
-

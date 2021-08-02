@@ -37,4 +37,4 @@ while len(stack) > 0:
             stack.append((tmp, tmp_already))
     if a != -1 and b != -1:
         break
-print(abs(a-b))
+print(abs(a - b))

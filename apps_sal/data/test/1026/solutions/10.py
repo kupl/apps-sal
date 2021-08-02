@@ -9,5 +9,3 @@ for i in range(n):
     if d[a[i] - i] > maxi:
         maxi = d[a[i] - i]
 print(maxi)
-    
-

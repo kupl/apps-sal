@@ -23,7 +23,7 @@ while(len(list1) != 0 and len(list2) != 0):
     else:
         del list1[i]
         del list2[i]
-    if count == n**2+10:
+    if count == n**2 + 10:
         print("-1")
         break
 if len(list1) == 0:

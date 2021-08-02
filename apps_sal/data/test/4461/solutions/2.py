@@ -24,4 +24,3 @@ else:
     c = bbb(H, W)
     d = bbb(W, H)
     print((min(a, b, c, d)))
-

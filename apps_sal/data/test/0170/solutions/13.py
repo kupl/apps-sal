@@ -20,4 +20,3 @@ while len(A) > 0 and len(B) > 0:
     cnt += 1
 else:
     print(cnt, 1 if len(B) == 0 else 2)
-

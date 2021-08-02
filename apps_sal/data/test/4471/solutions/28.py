@@ -11,4 +11,3 @@ for _ in range(qq):
         if c != dat[i] % 2:
             f = False
     print("YES" if f else "NO")
-

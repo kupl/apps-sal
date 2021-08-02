@@ -11,6 +11,7 @@ def calc(a, b):
         ret = min(ret, max(area1, area2, area3) - min(area1, area2, area3))
     return ret
 
+
 if h % 3 == 0 or w % 3 == 0:
     print((0))
 else:
@@ -22,4 +23,3 @@ else:
         #print(area1, area2, area3)
         ans = min(ans, max(area1, area2, area3) - min(area1, area2, area3))
     print((min(calc(h, w), calc(w, h), ans)))
-

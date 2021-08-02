@@ -9,6 +9,7 @@ def check(A):
             tmp += 1
     return tmp
 
+
 def main():
     N = int(input())
     P = list(map(int, input().split()))
@@ -23,7 +24,9 @@ def main():
 
     print((abs(a - b)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

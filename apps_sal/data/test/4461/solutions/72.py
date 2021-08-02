@@ -8,21 +8,21 @@ def main():
         return
 
     pattern = [h, w]
-    for x in range(1, w//2 + 2):
+    for x in range(1, w // 2 + 2):
         first = x * h
         h1 = h // 2
         h2 = h - h1
-        second = (w-x) * h1
-        thrid = (w-x) * h2
+        second = (w - x) * h1
+        thrid = (w - x) * h2
         result = max(first, second, thrid) - min(first, second, thrid)
         pattern.append(result)
 
-    for y in range(1, h//2 + 2):
+    for y in range(1, h // 2 + 2):
         first = y * w
         w1 = w // 2
         w2 = w - w1
-        second = (h-y) * w1
-        thrid = (h-y) * w2
+        second = (h - y) * w1
+        thrid = (h - y) * w2
         result = max(first, second, thrid) - min(first, second, thrid)
         pattern.append(result)
 
@@ -31,4 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

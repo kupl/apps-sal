@@ -26,4 +26,3 @@ for j in range(w):
     ans = min(ans, max(x, y, z) - min(x, y, z))
 
 print(ans)
-

@@ -12,8 +12,7 @@ for _ in range(one()):
     s = 0
     for i in l:
         s += i % 2
-    if s%n==0:
+    if s % n == 0:
         print('YES')
     else:
         print('NO')
-

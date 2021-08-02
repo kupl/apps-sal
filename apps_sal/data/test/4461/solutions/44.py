@@ -1,5 +1,6 @@
 h, w = list(map(int, input().split()))
 
+
 def defs(h, w):
     ans = 10 ** 12
     for i in range(1, h):
@@ -20,5 +21,5 @@ def defs(h, w):
             ans = min(ans, s_max - s_min)
     return ans
 
-print((min(defs(h, w), defs(w, h))))
 
+print((min(defs(h, w), defs(w, h))))
