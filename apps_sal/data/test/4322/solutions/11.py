@@ -14,6 +14,7 @@ def unique(a):
 
     return a[:i]
 
+
 def expand(cir):
     e = []
     for i in range(len(cir)):
@@ -49,7 +50,7 @@ while i < n:
         j += 1
     if j < n and a[j] == a[j - 1] + 1:
         j += 1
-    
+
     sz = 0
     for p in range(i, j):
         sz += c[a[p]]
@@ -58,7 +59,7 @@ while i < n:
         for p in range(i, j):
             cir.append((a[p], c[a[p]]))
         cirsize = sz
-    
+
     if c[a[j - 1]] == 1 and i != j - 1:
         i = j - 1
     else:
@@ -66,4 +67,3 @@ while i < n:
 
 print(cirsize)
 print(*expand(cir))
-

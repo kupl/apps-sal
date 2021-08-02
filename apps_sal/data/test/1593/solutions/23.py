@@ -19,6 +19,4 @@ while i < n and s < 10 ** 6:
 if s < 10 ** 6:
     print(-1)
 else:
-    print(round(ar[i - 1][0],7))
-
-
+    print(round(ar[i - 1][0], 7))

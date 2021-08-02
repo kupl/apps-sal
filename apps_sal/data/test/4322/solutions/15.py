@@ -3,13 +3,14 @@ from collections import namedtuple
 from itertools import groupby
 input = sys.stdin.readline
 
+
 def main():
     Data = namedtuple('Data', ['arr', 'l', 'r'])
 
     _ = int(input())
     a = list(map(int, input().split()))
 
-    f = [ [0, 0] for i in range(max(a) + 2) ]
+    f = [[0, 0] for i in range(max(a) + 2)]
 
     for x in a:
         f[x][0] = x
@@ -18,7 +19,7 @@ def main():
     best = 0
     opt = None
 
-    for k, v in groupby(f, key = lambda x: 1 if x[1] else 0):
+    for k, v in groupby(f, key=lambda x: 1 if x[1] else 0):
         if not k:
             continue
 
@@ -52,5 +53,5 @@ def main():
     print(len(ans))
     print(" ".join(map(str, ans)))
 
-main()
 
+main()

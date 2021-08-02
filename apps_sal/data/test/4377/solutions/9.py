@@ -2,12 +2,14 @@
 #      |        /  \       |    |   / |
 #      |       /____\      |    |  /  |
 #      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|  
+#  ========= /        \  =====  |/====|
 #  code
 
 from collections import Counter
+
+
 def __starting_point():
-    d = list(map(int,input().split()))
+    d = list(map(int, input().split()))
     d.sort()
     a = d[0]
     b = d[1]
@@ -17,5 +19,7 @@ def __starting_point():
     y = d - b
     z = d - c
 
-    print(x,y,z)
+    print(x, y, z)
+
+
 __starting_point()

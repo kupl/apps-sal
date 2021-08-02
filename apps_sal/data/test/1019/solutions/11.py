@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 n = int(input())
 a, b = n // 2, n // 2 + n % 2
 while gcd(a, b) > 1:

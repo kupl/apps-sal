@@ -7,6 +7,7 @@ def f(x):
         res += k + (e - k) / 2
     return res
 
+
 k, d, t = map(int, input().split())
 c = (k - 1) // d + 1
 k1 = c * d

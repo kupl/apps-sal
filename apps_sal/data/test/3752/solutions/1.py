@@ -15,9 +15,8 @@ cnt = t // dt
 rem = t % dt
 rest = 0
 if rem < k:
- rest = rem
+    rest = rem
 else:
- rest = k + (rem - k) * 2
+    rest = k + (rem - k) * 2
 
 print(cnt * T + rest)
-

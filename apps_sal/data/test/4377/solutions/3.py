@@ -1,6 +1,6 @@
-arr=list(map(int,input().split()))
+arr = list(map(int, input().split()))
 arr.sort()
-ans=[]
+ans = []
 for i in range(3):
-	ans.append(arr[-1]-arr[i])
+    ans.append(arr[-1] - arr[i])
 print(*ans)

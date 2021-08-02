@@ -24,4 +24,3 @@ for i in range(n):
     sqr_r = arounds[i][0]
 
 print(sqr_r ** 0.5)
-

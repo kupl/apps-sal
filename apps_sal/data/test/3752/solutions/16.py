@@ -14,4 +14,3 @@ else:
     t -= k
     ans += 2 * t
 print(ans)
-

@@ -22,7 +22,3 @@ for i in range(n):
             otv = r0
             break
 print(otv)
-
-            
-        
-

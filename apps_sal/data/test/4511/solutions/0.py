@@ -3,15 +3,19 @@ import math
 import cProfile
 
 DEBUG = False
+
+
 def log(s):
     if DEBUG and False:
         print(s)
-        
+
+
 def calc_dmg(num, arr):
     maximum = 0
     if num - len(arr) < 0:
         maximum = max(arr)
     return sum(arr) + maximum
+
 
 if DEBUG:
     sys.stdin = open('input.txt')
@@ -57,15 +61,15 @@ for i in range(n):
             if j == 1:
                 maximum = max(maximum, use1)
         if use2 > 0:
-            maximum = max(maximum, dmg[j - 2] +
-                          calc_dmg(j, [cards[1][0], cards[1][1]]
+            maximum = max(maximum, dmg[j - 2]
+                          + calc_dmg(j, [cards[1][0], cards[1][1]]
                           if cards[1][0] + cards[1][1] == use2
                           else [cards[1][0], cards[2][0]]))
             if j == 2:
                 maximum = max(maximum, use2)
         if use3 > 0:
-            maximum = max(maximum, dmg[j - 3] +
-                          calc_dmg(j, [cards[1][0], cards[1][1], cards[1][2]]))
+            maximum = max(maximum, dmg[j - 3]
+                          + calc_dmg(j, [cards[1][0], cards[1][1], cards[1][2]]))
             if j == 3:
                 maximum = max(maximum, use3)
         new_dmg.append(maximum)

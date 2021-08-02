@@ -1,51 +1,49 @@
 def __starting_point():
 
-	a=[int(x) for x in input().split()]
+    a = [int(x) for x in input().split()]
 
-	N=a[0]
+    N = a[0]
 
-	A=a[1]
+    A = a[1]
 
-	B=a[2]
+    B = a[2]
 
-	K=a[3]
+    K = a[3]
 
-	s=input()
+    s = input()
 
-	mod = 1000000009
+    mod = 1000000009
 
-	Q = pow(B*pow(A,mod-2,mod)%mod,K,mod)
+    Q = pow(B * pow(A, mod - 2, mod) % mod, K, mod)
 
-	if Q!=1:
+    if Q != 1:
 
-		D = (pow(Q,(N+1)//K,mod)-1)*pow(Q-1,mod-2,mod)%mod
+        D = (pow(Q, (N + 1) // K, mod) - 1) * pow(Q - 1, mod - 2, mod) % mod
 
-	else:
+    else:
 
-		D = (N+1)//K
+        D = (N + 1) // K
 
-	ans=0
+    ans = 0
 
-	C = pow(A,N,mod)
+    C = pow(A, N, mod)
 
-	A=pow(A,mod-2,mod)
+    A = pow(A, mod - 2, mod)
 
-	for i in range(K):
+    for i in range(K):
 
-		if s[i]=='+':
+        if s[i] == '+':
 
-			ans=(ans+C*D)%mod
+            ans = (ans + C * D) % mod
 
-		else:
+        else:
 
-			ans=(ans-C*D)%mod
+            ans = (ans - C * D) % mod
 
-		C=C*B*A%mod
+        C = C * B * A % mod
 
-	print((ans%mod+mod)%mod)
-
+    print((ans % mod + mod) % mod)
 
 
 # Made By Mostafa_Khaled
-
 __starting_point()
