@@ -5,6 +5,7 @@ def sum(x):
         x //= 10
     return res
 
+
 n = int(input())
 ans = 0
 for i in range(min(n, 1000)):
@@ -16,4 +17,3 @@ for i in range(1, 13):
         if tmp <= n:
             ans = max(ans, sum(tmp) + sum(n - tmp))
 print(ans)
-

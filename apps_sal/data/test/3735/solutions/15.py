@@ -11,4 +11,3 @@ else:
 
     s = sum([int(_) for _ in a]) + sum([int(_) for _ in b])
     print(s)
-

@@ -47,7 +47,7 @@ while (cntf + cnts) < k and (i < len(w) or j < len(o)):
             nw += o[j]
             j += 1
             cnts += 1
-    
+
     if(cntf + cnts == k - 1):
         if(cntf == 0 and len(w) != 0):
             nw += w[i]
@@ -85,7 +85,7 @@ while (cntf + cnts < k) and (i < len(r) or j < len(o)):
             nw += o[j]
             j += 1
             cnts += 1
-    
+
     if(cntf + cnts == k - 1):
         if(cntf == 0 and len(r) != 0):
             nw += r[i]
@@ -98,4 +98,3 @@ if(cntf + cnts == k and cntf != 0 and cnts != 0):
     ans = max(ans, nw)
 
 print(ans)
-

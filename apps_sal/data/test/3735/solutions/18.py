@@ -1,20 +1,19 @@
-#1000=999+1
-#1000=499+501
+# 1000=999+1
+# 1000=499+501
 
-#35=9+26
+# 35=9+26
 
-n=input()
-x=len(n)
+n = input()
+x = len(n)
 
-if x>=2:
-    m1=int("9"*(x-1))
+if x >= 2:
+    m1 = int("9" * (x - 1))
 else:
-    m1=0
-m2=int(n)-m1
+    m1 = 0
+m2 = int(n) - m1
 
-ANS=0
-for i in str(m1)+str(m2):
-    ANS+=int(i)
+ANS = 0
+for i in str(m1) + str(m2):
+    ANS += int(i)
 
 print(ANS)
-

@@ -7,6 +7,7 @@ def mainA():
             cnt += 1
     print(min(cnt, n // 11))
 
+
 def mainB():
     def get(n):
         ret = 0
@@ -14,7 +15,7 @@ def mainB():
             ret += n % 10
             n //= 10
         return ret
-    
+
     n = int(input())
     if n <= 9:
         print(n)
@@ -24,5 +25,6 @@ def mainB():
         t = t * 10 + 9
     t //= 10
     print(get(t) + get(n - t))
+
 
 mainB()
