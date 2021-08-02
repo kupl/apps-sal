@@ -5,4 +5,3 @@ elif x == y:
     print("=")
 else:
     print("<")
-

@@ -5,5 +5,7 @@ def f(a):
         k += (int("9" * i) - int("1" + "0" * (i - 1)) + 1) * i
     k += (a - int("1" + "0" * (s - 1)) + 1) * s
     return(k)
+
+
 a = int(input())
 print(f(a))

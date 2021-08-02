@@ -12,7 +12,5 @@ for i in range(N):
     while len(buffer) > 0 and -buffer[0] == snacks_sorted[-1]:
         snacks_sorted.pop()
         x = heappop(buffer)
-        print(-x,"",end="")
+        print(-x, "", end="")
     print()
-
-

@@ -4,8 +4,8 @@ Y = lst[1]
 lst.sort()
 
 if X == Y:
-   print('=')
+    print('=')
 elif X == lst[0]:
-   print('<')
+    print('<')
 else:
-   print('>')
+    print('>')

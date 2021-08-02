@@ -6,4 +6,3 @@ for i in range(int(input())):
         print("Rainbow's")
     else:
         print("OMG>.< I don't know!")
-

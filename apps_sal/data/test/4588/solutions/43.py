@@ -11,7 +11,6 @@ def iroha():
         print("=")
 
 
-
 def __starting_point():
     iroha()
 

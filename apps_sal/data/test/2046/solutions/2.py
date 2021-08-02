@@ -6,7 +6,6 @@ for i in range(0, n):
     x = num[i]
     used[x] = True
     while(used[cur]):
-        print(cur, end = ' ')
+        print(cur, end=' ')
         cur -= 1
     print('')
-    

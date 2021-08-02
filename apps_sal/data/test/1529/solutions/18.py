@@ -5,6 +5,7 @@ Ra = re.compile('miao\..*')
 RaA = "Rainbow's"
 NotSure = "OMG>.< I don't know!"
 
+
 def __starting_point():
     N = int(input())
     for times in range(N):

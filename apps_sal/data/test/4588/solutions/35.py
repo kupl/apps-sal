@@ -1,11 +1,9 @@
-A,B =(ord(x) for x in input().split())
+A, B = (ord(x) for x in input().split())
 
 
-if A<B: 
+if A < B:
     print('<')
-elif A>B:
+elif A > B:
     print('>')
 else:
     print('=')
-    
-

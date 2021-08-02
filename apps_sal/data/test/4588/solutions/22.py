@@ -1,7 +1,7 @@
-a,b = map(str,input().split())
+a, b = map(str, input().split())
 if a == b:
-  print("=")
-elif a<b:
-  print("<")
+    print("=")
+elif a < b:
+    print("<")
 else:
-  print(">")
+    print(">")

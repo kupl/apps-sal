@@ -7,4 +7,3 @@ elif x_i > y_i:
     print('>')
 else:
     print('=')
-

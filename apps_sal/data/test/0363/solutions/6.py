@@ -8,4 +8,3 @@ for i in range(10):
     else:
         ans += A[i] * (i + 1)
         n -= A[i]
-

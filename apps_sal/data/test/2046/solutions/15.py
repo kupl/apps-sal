@@ -12,4 +12,3 @@ for x in a:
         n -= 1
 
     print(' '.join(list(map(str, l))))
-

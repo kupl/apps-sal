@@ -2,6 +2,7 @@
 def ri():
     return map(int, input().split())
 
+
 n = int(input())
 a = ri()
 
@@ -13,7 +14,7 @@ for aa in a:
     b.add(aa)
     if aa == s:
         print(s, end="")
-        for ss in range(s-1, 0, -1):
+        for ss in range(s - 1, 0, -1):
             if ss == 0:
                 print()
                 return
@@ -28,4 +29,3 @@ for aa in a:
         print()
 
 print()
-

@@ -1,15 +1,11 @@
-a=input().split()
-b=sorted(a)
+a = input().split()
+b = sorted(a)
 
-if a!=b:
-  print('>')
-  
-elif a[0]==a[1]:
-  print('=')
-  
+if a != b:
+    print('>')
+
+elif a[0] == a[1]:
+    print('=')
+
 else:
-  print('<')
-  
-
-
-
+    print('<')

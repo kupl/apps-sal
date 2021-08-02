@@ -19,6 +19,6 @@ def f(n):
         return f(99999999) + 9 * (n - 99999999)
     return f(999999999) + 10 * (n - 999999999)
 
+
 n = int(input())
 print(f(n))
-

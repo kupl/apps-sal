@@ -1,5 +1,6 @@
 __author__ = 'KostikBigOne'
 
+
 def main():
     n = int(input())
     power, cnt = 1, 9
@@ -16,6 +17,9 @@ def main():
             break
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -19,4 +19,3 @@ for case_num in range(t):
                 largest = max(largest, n // i)
         i += 1
     print(n // largest)
-

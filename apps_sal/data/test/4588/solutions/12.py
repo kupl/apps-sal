@@ -1,8 +1,7 @@
-a,b =input().split()
+a, b = input().split()
 if a == b:
-  print("=")
+    print("=")
 elif a < b:
-  print("<")
+    print("<")
 else:
-  print(">")
-
+    print(">")

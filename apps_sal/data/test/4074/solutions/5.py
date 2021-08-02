@@ -10,4 +10,3 @@ for _ in range(int(input())):
                 ans = min(ans, i)
         i += 1
     print(ans)
-

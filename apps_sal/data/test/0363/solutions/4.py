@@ -1,5 +1,6 @@
 n = int(input())
 
+
 def countd(n):
     d = 0
     while n >= 10**d:
@@ -11,5 +12,6 @@ def countd(n):
         n = tens - 1
         d -= 1
     return count
+
 
 print(countd(n))

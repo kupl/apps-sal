@@ -15,8 +15,3 @@ for day, snack in enumerate(snacks):
         ret_list = list(range(biggest + 1, snack + 1))
         ret = ' '.join(map(str, reversed(ret_list)))
     print(ret)
-            
-            
-
-    
-

@@ -9,4 +9,3 @@ for i in range(n):
     if result == 2: print("Freda's")
     elif result == 1: print("Rainbow's")
     else: print("OMG>.< I don't know!")
-

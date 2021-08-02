@@ -11,4 +11,3 @@ for i in range(n):
     if s[i] == 'T': base_acids[3] += 1
 kol = base_acids.count(max(base_acids))
 print(kol ** n % modulo)
-

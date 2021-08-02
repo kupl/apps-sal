@@ -6,6 +6,7 @@ def f(n):
         if n >= 10 ** i:
             r = r + n - 10 ** i + 1
     return r
+
+
 n = int(input())
 print(f(n))
-
