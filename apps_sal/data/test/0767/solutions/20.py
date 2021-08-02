@@ -28,8 +28,8 @@ def main():
     nums.sort()
 
     out = 0
-    used = [False]*n
-    i, j = 0, len(nums)//2
+    used = [False] * n
+    i, j = 0, len(nums) // 2
     while i < n:
         used[i] = True
         while j < n and (used[j] or (nums[j] - nums[i] < z)):
@@ -44,4 +44,3 @@ def main():
 
 
 main()
-

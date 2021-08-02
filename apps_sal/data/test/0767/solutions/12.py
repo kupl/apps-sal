@@ -22,11 +22,10 @@ n, z = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 
 
-
 arr.sort()
 c = 0
 l = 0
-r = len(arr)//2
+r = len(arr) // 2
 while(r < len(arr) and l < len(arr)):
     # print(arr)
     if arr[l] == -1:
@@ -73,4 +72,3 @@ print(c)
 #     print(wordN)
 #     if not flag:
 #         print(wordN)
-

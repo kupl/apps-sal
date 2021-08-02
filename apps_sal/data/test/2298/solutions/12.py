@@ -1,4 +1,6 @@
 from itertools import accumulate
+
+
 def solve():
     a, b, q = map(int, input().split())
     tb = [int(i % a % b != i % b % a) for i in range(a * b)]
@@ -18,6 +20,8 @@ def solve():
         ans += tbs[r] - tbs[l]
         res.append(ans)
     print(*res)
+
+
 t = int(input())
 for _ in range(t):
     solve()

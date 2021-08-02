@@ -6,7 +6,7 @@ def read_data():
     qs = []
     for i in range(q):
         x, y = map(int, input().split())
-        qs.append((x-1, y-1))
+        qs.append((x - 1, y - 1))
     return n, m, q, grid, qs
 
 
@@ -30,6 +30,7 @@ def solve(n, m, q, grid, qs):
         row[y] = 1 - row[y]
         mcc[x] = max_cons(row)
         print(max(mcc))
+
 
 param = read_data()
 solve(*param)

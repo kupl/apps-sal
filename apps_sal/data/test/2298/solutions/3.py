@@ -37,4 +37,3 @@ for case_num in range(t):
             curr += acc[y] - acc[max(0, x - 1)]
         ans.append(curr)
     print(' '.join(map(str, ans)))
-

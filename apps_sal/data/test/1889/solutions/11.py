@@ -36,4 +36,6 @@ def __starting_point():
         values[i] = get_max(rows[i])
 
         print(max(values))
+
+
 __starting_point()

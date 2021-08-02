@@ -45,7 +45,7 @@ def go():
         if downcnt[target] >= need:
             best = min(best, downsum[target] - (target + 1) * downcnt[target] + need)
         best = min(best, (target - 1) * upcnt[target] - upsum[target]
-                   + downsum[target] - (target + 1) * downcnt[target] +need
+                   + downsum[target] - (target + 1) * downcnt[target] + need
                    )
 
     return best
@@ -60,4 +60,3 @@ for _ in range(t):
     # ans.append(str(go()))
 #
 # print('\n'.join(ans))
-

@@ -18,4 +18,3 @@ for t in range(int(input())):
         l, r = list(map(int, input().split()))
         ans.append(get(r) - get(l - 1))
     print(*ans)
-

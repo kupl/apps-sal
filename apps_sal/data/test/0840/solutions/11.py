@@ -5,6 +5,8 @@ def ok(x):
         if tmp > 0:
             need += tmp
     return need <= k
+
+
 n, k = (int(_) for _ in input().split())
 a = [int(_) for _ in input().split()]
 b = [int(_) for _ in input().split()]
@@ -16,4 +18,3 @@ while lo <= hi:
     else:
         hi = mid - 1
 print(hi)
-

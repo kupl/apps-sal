@@ -1,20 +1,18 @@
-n=input()
-ls=''
-t=0
+n = input()
+ls = ''
+t = 0
 for i in range(len(n)):
-    if int(n[i])%3==0:
-        ls=''
-        t+=1
+    if int(n[i]) % 3 == 0:
+        ls = ''
+        t += 1
     else:
-        ls+=n[i]
-        for j in range(0,len(ls)):
-            if int(ls[j:])%3==0:
-                t+=1
-                ls=''
+        ls += n[i]
+        for j in range(0, len(ls)):
+            if int(ls[j:]) % 3 == 0:
+                t += 1
+                ls = ''
                 break
 print(t)
-    
-
 
 
 '''
@@ -24,5 +22,3 @@ print(t)
 ////     /////    ///       /// ///        ///   //          ///    ///     ////     //   //
 //////////////     ///////////   ///////////     //////     ///     ///     //  //   //   //
 '''
-
-

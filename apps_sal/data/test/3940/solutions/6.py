@@ -9,4 +9,3 @@ print(ans)
 for i in range(n):
     print(i % ans, end=" ")
 print()
-

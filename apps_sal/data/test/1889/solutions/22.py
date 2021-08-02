@@ -9,6 +9,7 @@ def func(a):
             an += 1
     return max(ans, an)
 
+
 n, m, q = (int(x) for x in input().split(' '))
 a = [[int(x) for x in input().split()] for i in range(n)]
 mas = [func(a[i]) for i in range(n)]

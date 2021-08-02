@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, k = read()
 a = list(read())
 b = list(read())
@@ -7,6 +9,7 @@ r = [0] * n
 for i in range(n):
     c[i] = b[i] // a[i]
     r[i] = a[i] - b[i] % a[i]
+
 
 def f(x):
     k1 = k
@@ -18,12 +21,14 @@ def f(x):
         if k1 < 0:
             return False
     return True
-    
+
+
 L, R = 0, 10 ** 10
 while R - L > 1:
     M = (L + R) // 2
-    if f(M): L = M
-    else: R = M
+    if f(M):
+        L = M
+    else:
+        R = M
 ans = L
 print(ans)
-

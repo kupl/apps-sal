@@ -7,14 +7,14 @@ for i in range(n):
     o = 0
     for k in t[-1]:
         if k == 1:
-            s+=1
+            s += 1
             o = max(s, o)
         else:
             s = 0
     u.append(o)
 answer = []
 for i in range(q):
-    a, b = [int(i)-1 for i in input().split()]
+    a, b = [int(i) - 1 for i in input().split()]
     if t[a][b] == 1:
         t[a][b] = 0
     else:
@@ -23,7 +23,7 @@ for i in range(q):
     o = 0
     for k in t[a]:
         if k == 1:
-            s+=1
+            s += 1
             o = max(s, o)
         else:
             s = 0
@@ -31,4 +31,3 @@ for i in range(q):
     answer.append(max(u))
 for i in answer:
     print(i)
-

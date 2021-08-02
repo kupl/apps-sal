@@ -19,4 +19,3 @@ for h, i in enumerate(s):
                 current = []
                 break
 print(count)
-

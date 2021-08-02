@@ -13,4 +13,3 @@ vysledok = islice(cycle(cisla), n)
 
 print(minimum)
 print(' '.join(vysledok))
-

@@ -5,5 +5,4 @@ for i in range(m):
     d = min(d, r - l + 1)
 print(d)
 for i in range(n):
-    print(i % d, end = ' ')
-
+    print(i % d, end=' ')

@@ -13,7 +13,6 @@ max_line = [
 ]
 
 for r, c in changes:
-    grid[r-1][c-1] = "0" if grid[r-1][c-1] == "1" else "1"
-    max_line[r-1] = max(list(map(len, "".join(grid[r-1]).split("0"))))
+    grid[r - 1][c - 1] = "0" if grid[r - 1][c - 1] == "1" else "1"
+    max_line[r - 1] = max(list(map(len, "".join(grid[r - 1]).split("0"))))
     print(max(max_line))
-

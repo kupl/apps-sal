@@ -14,15 +14,15 @@ def condMax(row):
         ret = max(cnt, ret)
     return ret
 
+
 N, M, Q = list(map(int, input().split()))
 board = [list(map(int, input().split())) for _ in range(N)]
 rows = [condMax(row[:]) for row in board]
-    
+
 ans = max(rows)
 for i in range(Q):
-    i, j = [int(x)-1 for x in input().split()]
+    i, j = [int(x) - 1 for x in input().split()]
     board[i][j] ^= 1
     rows[i] = condMax(board[i][:])
     ans = max(rows)
     print(ans)
-
