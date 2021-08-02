@@ -13,4 +13,3 @@ while s > target:
     s -= left[-res]
 
 print(res)
-

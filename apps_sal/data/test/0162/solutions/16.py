@@ -7,4 +7,3 @@ for a in map(int, input().split()):
         ans = min(ans, k // a)
 
 print(ans)
-

@@ -18,4 +18,3 @@ else:
             print(kol)
             we = 1
             break
-

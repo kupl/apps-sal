@@ -34,4 +34,3 @@ c = h if 3 * h * (h + 1) <= n else l
 n -= 3 * c * (c + 1)
 
 print(*SIDES[n // (c + 1)](c, n % (c + 1)))
-

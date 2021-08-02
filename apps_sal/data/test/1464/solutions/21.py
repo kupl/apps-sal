@@ -2,7 +2,7 @@ n = int(input())
 single = []
 double = []
 titlesingle = []
-titledouble= []
+titledouble = []
 for i in range(n):
     x = input()
     l = list(x)
@@ -28,6 +28,3 @@ else:
     ls = list(set(double) - setd)
     ls.sort()
     print(ls[0])
-
-
-

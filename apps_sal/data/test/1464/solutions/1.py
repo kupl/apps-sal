@@ -20,4 +20,3 @@ else:
         if ans is not None:
             print(ans)
             break
-

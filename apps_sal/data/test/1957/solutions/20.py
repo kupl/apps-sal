@@ -11,4 +11,3 @@ while s and (s0 * a) / (ssum + s0) < b:
     cnt += 1
 
 print(cnt)
-

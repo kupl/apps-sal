@@ -13,7 +13,10 @@ def main():
         sumBlocked += rest[i]
         i += 1
     print(i)
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

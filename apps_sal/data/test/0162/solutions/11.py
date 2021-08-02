@@ -1,6 +1,7 @@
 from sys import stdin as cin
 from sys import stdout as cout
 
+
 def main():
     n, k = list(map(int, cin.readline().split()))
     a = list(map(int, cin.readline().split()))
@@ -10,5 +11,5 @@ def main():
             o = min(o, k // i)
     print(o)
 
-main()
 
+main()

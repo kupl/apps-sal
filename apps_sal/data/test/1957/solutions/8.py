@@ -10,4 +10,3 @@ while hole_sizes[0] * total_volume < desired_volume * unblocked_sizes:
     num_blocked += 1
 
 print(num_blocked)
-

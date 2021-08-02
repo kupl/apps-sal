@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -208,10 +210,10 @@ optimise_for_recursion = True  # Can not be used clubbed with TestCases WHen usi
 
 def main():
     x, y, z = get_tuple()
-    res = min(y, z//2)
+    res = min(y, z // 2)
     y -= res
-    res += min(x, y//2)
-    print(res*3)
+    res += min(x, y // 2)
+    print(res * 3)
 
 # --------------------------------------------------------------------- END=
 
@@ -221,4 +223,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-
