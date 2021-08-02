@@ -11,6 +11,6 @@ temp = max(A)
 ans = 0
 
 for i in range(n):
-    ans += abs(temp-A[i])*M[i]
+    ans += abs(temp - A[i]) * M[i]
 
 print(ans)

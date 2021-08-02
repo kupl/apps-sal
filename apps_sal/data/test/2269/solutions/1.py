@@ -25,6 +25,4 @@ for _ in range(t):
         out.append(best)
     else:
         out.append(0)
-print(*out, sep = '\n')
-    
-
+print(*out, sep='\n')

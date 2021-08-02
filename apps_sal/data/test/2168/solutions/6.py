@@ -4,6 +4,5 @@ max1 = [max(q) for q in a]
 max_max = max(max1)
 answer = 0
 for q in range(n):
-    answer += (max_max-max1[q])*len(a[q])
+    answer += (max_max - max1[q]) * len(a[q])
 print(answer)
-

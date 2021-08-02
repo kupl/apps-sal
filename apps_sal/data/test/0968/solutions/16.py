@@ -16,4 +16,3 @@ for number in order:
         break
 else:
     print("YES")
-

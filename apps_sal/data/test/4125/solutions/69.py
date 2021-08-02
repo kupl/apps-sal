@@ -7,6 +7,6 @@ A = list(map(int, input().split()))
 
 gcd = abs(X - A[0])
 for a_i in A:
-    gcd = math.gcd(gcd, abs(X-a_i))
+    gcd = math.gcd(gcd, abs(X - a_i))
 
 print(gcd)

@@ -9,8 +9,10 @@ from itertools import accumulate, product, permutations, combinations, combinati
 
 from functools import reduce
 
+
 def gcd_list(numbers):
     return reduce(gcd, numbers)
+
 
 N, X = [int(_) for _ in input().split()]
 x = [int(_) for _ in input().split()]

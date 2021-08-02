@@ -3,9 +3,12 @@ from functools import reduce
 from collections import defaultdict
 
 _data = iter(stdin.read().split('\n'))
+
+
 def input():
     while True:
         return next(_data)
+
 
 n, m = [int(x) for x in input().split()]
 B = 10007
@@ -13,8 +16,10 @@ MOD = 1000000000000000003
 h = lambda s: reduce(lambda s, c: (B * s + ord(c)) % MOD, s, 0)
 hs = defaultdict(set)
 
+
 def insert(s):
     hs[len(s)].add(h(s))
+
 
 def find(s):
     v = h(s)
@@ -28,6 +33,7 @@ def find(s):
         b *= B
         b %= MOD
     return False
+
 
 for i in range(n):
     s = input()

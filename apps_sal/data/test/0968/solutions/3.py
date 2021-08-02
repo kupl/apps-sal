@@ -13,7 +13,7 @@ for i in range(n):
 
 new = [0] * n
 for i in range(n):
-    new[i]= name[p[i]]
+    new[i] = name[p[i]]
 
 
 now = min(new[0][0], new[0][1])
@@ -31,4 +31,3 @@ for i in range(1, n):
         return
 
 print("YES")
-

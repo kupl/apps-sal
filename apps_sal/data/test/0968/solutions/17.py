@@ -7,7 +7,7 @@ last = min(names[p[0]][0], names[p[0]][1])
 for i in range(1, n):
     a = names[p[i]]
     v = []
-    if last < a[0] :
+    if last < a[0]:
         v.append(a[0])
     if last < a[1]:
         v.append(a[1])
@@ -18,4 +18,3 @@ for i in range(1, n):
         last = min(v)
 else:
     print('YES')
-

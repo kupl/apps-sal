@@ -35,4 +35,5 @@ def __starting_point():
     # x = [randint(1, 10 ** 9) for _ in range(N)]
     # solve(N, X, x)
 
+
 __starting_point()

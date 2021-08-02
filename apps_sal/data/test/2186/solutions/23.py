@@ -8,6 +8,7 @@ div = 9999999999999983
 
 ABC = ['a', 'b', 'c']
 
+
 def hashi(s):
     L = len(s)
     h = 0;
@@ -15,7 +16,7 @@ def hashi(s):
     for i in range(L):
         h, pseed = (h + ord(s[i]) * pseed) % div, (pseed * seed) % div
     return h
-    
+
 
 n, m = [int(c) for c in input().split()]
 
@@ -24,9 +25,9 @@ S = set()
 for _ in range(n):
     s = input()
     L = len(s)
-    
+
     hashs = hashi(s)
-    
+
     pseed = 1
     for i in range(L):
         orig = s[i]
@@ -43,5 +44,5 @@ for _ in range(m):
         res.append('YES')
     else:
         res.append('NO')
-        
+
 print('\n'.join(res))

@@ -3,12 +3,16 @@ from functools import reduce
 from collections import defaultdict
 
 _data = iter(stdin.read().split('\n'))
+
+
 def input():
     while True:
         return next(_data)
 
+
 def insert(s):
     hs[len(s)].add(h(s))
+
 
 def found(s):
     v = h(s)
@@ -21,8 +25,9 @@ def found(s):
                     return True
         b *= B
         b %= MOD
-    return False		
-		
+    return False
+
+
 n, m = [int(x) for x in input().split()]
 B = 10007
 MOD = 1000000000000000003
@@ -32,7 +37,7 @@ hs = defaultdict(set)
 for i in range(n):
     s = input()
     insert(s)
-	
+
 text = []
 
 for i in range(m):

@@ -8,8 +8,10 @@ MOD = 1000000000000000003
 h = lambda s: reduce(lambda s, c: (B * s + ord(c)) % MOD, s, 0)
 hs = defaultdict(set)
 
+
 def insert(s):
     hs[len(s)].add(h(s))
+
 
 def find(s):
     v = h(s)
@@ -24,6 +26,7 @@ def find(s):
         b %= MOD
     return False
 
+
 for i in range(n):
     s = data[i + 1]
     insert(s)
@@ -32,4 +35,3 @@ for i in range(m):
     s = data[i + n + 1]
     buf.append('YES' if find(s) else 'NO')
 print('\n'.join(buf))
-

@@ -10,4 +10,3 @@ s = 0
 for i in range(n):
     s += m[i][0] * (e - m[i][1])
 print(s)
-
