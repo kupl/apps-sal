@@ -7,5 +7,3 @@ rem = n - use * (b - c)
 x = rem // b
 ans = max(n // a, use + max(rem // a, x + (rem - x * b + c * x) // a))
 print(ans)
-
-

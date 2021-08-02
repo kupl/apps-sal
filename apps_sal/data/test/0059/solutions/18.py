@@ -10,7 +10,7 @@ pos = input()
 
 pos = ["".join(g) for k, g in groupby(pos) if k != '#']
 
-#print(pos)
+# print(pos)
 
 cur_pos = 0
 

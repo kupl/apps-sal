@@ -1,15 +1,19 @@
 from math import radians, cos, sin, atan2, sqrt, floor, acos
 
+
 def rotate(point, alpha):
     x = point[0]
     y = point[1]
     return (x * cos(alpha) - y * sin(alpha), x * sin(alpha) + y * cos(alpha))
 
+
 def crs(a, b):
     return a[0] * b[1] - a[1] * b[0]
 
+
 def m(end, start):
     return (end[0] - start[0], end[1] - start[1])
+
 
 def area(poly):
     ret = 0
@@ -21,8 +25,10 @@ def area(poly):
 
     return abs(ret) / 2.0
 
+
 def dist(a, b):
     return sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2)
+
 
 def get_next_point(p0, p1, x, y):
     r = ((p1[0] - p0[0]) / x * y, (p1[1] - p0[1]) / x * y)
@@ -47,4 +53,3 @@ for i in range(floor(ret), floor(ret) + 3):
         ret = i
 
 print(ret)
-

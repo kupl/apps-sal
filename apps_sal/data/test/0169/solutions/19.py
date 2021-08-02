@@ -9,10 +9,16 @@
 """
 
 """
+
+
 def read_list():
     return [int(i) for i in input().split()]
+
+
 def new_list(n):
     return [0 for i in range(n)]
+
+
 def new_matrix(n, m=0):
     return [[0 for i in range(m)] for i in range(n)]
 
@@ -23,24 +29,22 @@ a = int(input())
 b = int(input())
 c = int(input())
 
-if a < b-c:
-    print(n//a)
+if a < b - c:
+    print(n // a)
 elif n < b:
-    print(n//a)
+    print(n // a)
 else:
-    diff = b-c
+    diff = b - c
 
-    answ = (n-b)//diff
+    answ = (n - b) // diff
 
-    n -= answ*b
-    n += answ*c
+    n -= answ * b
+    n += answ * c
 
     if n >= b:
         n -= b
         n += c
         answ += 1
-    answ += n//a
+    answ += n // a
 
     print(max(answ, 0))
-
-

@@ -9,7 +9,7 @@ _b = int(b);
 b -= c
 
 second = 0
-if(n >= _b) :
+if(n >= _b):
     second = (n - _b) // b + max(1 + (((n - _b) % b + c) // a), ((n - _b) % b + _b) // a)
 
 print(max(n // a, second))

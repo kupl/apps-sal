@@ -42,10 +42,9 @@ for i in range(len(st)):
     changable[i + 1] = True
 
     zer = False
-#print(changable)
+# print(changable)
 for n, i in enumerate(ar):
     if (n + 1) != i and not changable[n]:
         print('NO')
         return
 print('YES')
-

@@ -26,6 +26,7 @@ def main():
     ok = [c == '1' for c in input()]
     print("YES" if can_order(arr, ok) else "NO")
 
+
 def __starting_point():
     main()
 

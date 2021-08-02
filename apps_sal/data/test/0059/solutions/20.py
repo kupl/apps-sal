@@ -21,12 +21,12 @@ while i < k:
     if pos[i] == 1:
         while i < k:
             if pos[i] == 1:
-                indexset.add(i+1)
+                indexset.add(i + 1)
                 valueset.add(arr[i])
                 i += 1
             else:
                 break
-        indexset.add(i+1)
+        indexset.add(i + 1)
         valueset.add(arr[i])
         if len(indexset ^ valueset) > 0:
             print("NO")

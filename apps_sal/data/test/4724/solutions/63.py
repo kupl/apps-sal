@@ -1,3 +1,3 @@
-r=int(input())
-g=int(input())
-print(2*g-r)
+r = int(input())
+g = int(input())
+print(2 * g - r)

@@ -1,23 +1,23 @@
 def __starting_point():
     r = int(input())
-    a = int(input())    #plastic bottle
-    b = int(input())    #glass bottl e
-    c = int(input())    #return on glass bottle
-    d = 0               #drinks
-    if b-c>=a:
-        d+=r//a
-        r =r%a
-        #print('a',d,r)
+    a = int(input())  # plastic bottle
+    b = int(input())  # glass bottl e
+    c = int(input())  # return on glass bottle
+    d = 0  # drinks
+    if b - c >= a:
+        d += r // a
+        r = r % a
+        # print('a',d,r)
     else:
-        if r>=b:
-            t = (r - b + 1)//(b-c)
+        if r >= b:
+            t = (r - b + 1) // (b - c)
             d += t
-            r -= t * (b-c)
+            r -= t * (b - c)
             if r >= b:
-                r -= (b-c)
+                r -= (b - c)
                 d += 1
-        d+=r//a
-        
+        d += r // a
+
     '''
         while r>=b:
             d+=r//b
@@ -25,7 +25,9 @@ def __starting_point():
             print(d,r)
         if r>=a:    d+=r//a
     '''
-    print (d)
+    print(d)
+
+
 '''
 
 A. Guest From the Past
