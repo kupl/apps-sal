@@ -3,9 +3,10 @@ from functools import lru_cache
 N = int(stdin.readline().rstrip())
 K = int(stdin.readline().rstrip())
 
+
 @lru_cache(None)
 def f(N, K):
-    #大きい桁から小さい桁へ
+    # 大きい桁から小さい桁へ
     if K < 0:
         return 0
     if N < 10:
@@ -21,10 +22,11 @@ def f(N, K):
     ret = 0
     if K >= 1:
         # 1の位が0以外の場合Kを消費する
-        ret += f(q, K-1) * r
-        ret += f(q-1, K-1) * (9-r)
+        ret += f(q, K - 1) * r
+        ret += f(q - 1, K - 1) * (9 - r)
     # 1の位が0の場合
     ret += f(q, K)
     return ret
+
 
 print(f(N, K))

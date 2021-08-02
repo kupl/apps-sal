@@ -20,4 +20,3 @@ S = np.array([c for c in input()], dtype=np.int64)
 N = len(S)
 K = int(input())
 print((solve(S, N, K)))
-

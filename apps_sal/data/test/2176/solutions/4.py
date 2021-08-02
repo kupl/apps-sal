@@ -1,7 +1,7 @@
 from collections import Counter
 import sys
 input = sys.stdin.readline
-MOD = 998244353 
+MOD = 998244353
 INF = 10**10
 
 n = int(input())
@@ -19,8 +19,8 @@ s.append((INF, INF))
 # Calc facs
 facs = [1] * (n + 1)
 ans = 1
-for i in range(1, n+1):
-    facs[i] = facs[i-1] * i % MOD
+for i in range(1, n + 1):
+    facs[i] = facs[i - 1] * i % MOD
 ans = facs[n]
 
 # Check both sort

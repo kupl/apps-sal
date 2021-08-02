@@ -1,4 +1,6 @@
 from functools import reduce
+
+
 def main():
     from sys import stdin, stdout
     from functools import reduce
@@ -19,5 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

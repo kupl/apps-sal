@@ -7,7 +7,7 @@ dp[0][0][0] = 1
 
 for i, s in enumerate(S):
     nd = int(s)
-    for j in range(K+1):
+    for j in range(K + 1):
         for k in range(2):
             for d in range(10):
                 ni = i + 1
@@ -24,4 +24,4 @@ for i, s in enumerate(S):
                         nk += 1
                 dp[ni][nj][nk] += dp[i][j][k]
 
-print(dp[N][K][0]+dp[N][K][1])
+print(dp[N][K][0] + dp[N][K][1])

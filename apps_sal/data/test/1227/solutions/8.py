@@ -38,4 +38,3 @@ def solve():
 
 
 print(solve())
-

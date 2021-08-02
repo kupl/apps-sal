@@ -5,20 +5,24 @@ p = 998244353
 sil = [0] * 400000
 sil[1] = 1
 for i in range(2, 400000):
-    sil[i] = (sil[i -1] * i) % p
+    sil[i] = (sil[i - 1] * i) % p
+
+
 def fun(l):
     wyn = 1
     l.sort()
     count = 1
     for i in range(1, len(l)):
-        if l[i] != l[i-1]:
+        if l[i] != l[i - 1]:
             wyn = (wyn * sil[count]) % p
             count = 1
         else:
             count += 1
     wyn = (wyn * sil[count]) % p
     return wyn
-dupa = [list(map(int,input().split())) for i in range(n)]
+
+
+dupa = [list(map(int, input().split())) for i in range(n)]
 xx = [i[0] for i in dupa]
 yy = [i[1] for i in dupa]
 dupa.sort()
@@ -28,7 +32,7 @@ dolne = []
 pyk = 1
 left = 0
 for i in range(1, n):
-    if x[i] != x[i-1]:
+    if x[i] != x[i - 1]:
         dolne.append(y[left:i])
         left = i
 if left == n - 1:

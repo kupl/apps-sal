@@ -27,4 +27,3 @@ for i, _ in enumerate(s):
         else:
             tmp += str(ans[i][j])
     print(tmp, end="\n")
-

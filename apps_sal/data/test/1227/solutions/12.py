@@ -2,6 +2,7 @@ n = input()
 k = int(input())
 l = len(n)
 
+
 def k2(l, n):
     ans = 81 * (l - 1) * (l - 2) // 2
     ans += (int(n[0]) - 1) * 9 * (l - 1)
@@ -12,6 +13,7 @@ def k2(l, n):
         ans += max((l - i - 2), 0) * 9
         break
     return ans
+
 
 if k == 1:
     ans = (l - 1) * 9 + int(n[0])

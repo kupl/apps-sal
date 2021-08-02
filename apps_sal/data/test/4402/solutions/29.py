@@ -5,13 +5,13 @@ B = int(rStr.split(' ')[1])
 
 result = 0
 
-if 13 <= A :
+if 13 <= A:
     result = B
 
-elif A <= 5 :
+elif A <= 5:
     result = 0
 
-else :
+else:
     result = int(B / 2)
 
 print(result)

@@ -8,32 +8,32 @@ def solve():
     for i in range(H):
         for k in range(W):
 
-            if S[i][k]!="#":
+            if S[i][k] != "#":
 
-                c = 0; #counter
+                c = 0;  # counter
 
-                if i>0 and k>0 and S[i-1][k-1]=="#": # upper left
+                if i > 0 and k > 0 and S[i - 1][k - 1] == "#":  # upper left
                     c += 1
 
-                if i>0  and S[i-1][k]=="#": # right above
+                if i > 0 and S[i - 1][k] == "#":  # right above
                     c += 1
 
-                if i>0 and k<W-1 and S[i-1][k+1]=="#": # upper right
-                    c+= 1
-
-                if k>0 and S[i][k-1]=="#": # left
-                    c += 1
-           
-                if k<W-1 and S[i][k+1]=="#": # right
+                if i > 0 and k < W - 1 and S[i - 1][k + 1] == "#":  # upper right
                     c += 1
 
-                if i<H-1 and k>0 and S[i+1][k-1]=="#": # lower left
+                if k > 0 and S[i][k - 1] == "#":  # left
                     c += 1
 
-                if i<H-1 and S[i+1][k]=="#": # right under
+                if k < W - 1 and S[i][k + 1] == "#":  # right
                     c += 1
 
-                if i<H-1 and k<W-1 and S[i+1][k+1]=="#": # lower right
+                if i < H - 1 and k > 0 and S[i + 1][k - 1] == "#":  # lower left
+                    c += 1
+
+                if i < H - 1 and S[i + 1][k] == "#":  # right under
+                    c += 1
+
+                if i < H - 1 and k < W - 1 and S[i + 1][k + 1] == "#":  # lower right
                     c += 1
 
                 S[i][k] = str(c)

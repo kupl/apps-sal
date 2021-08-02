@@ -18,7 +18,7 @@ def resolve():
             for k in range(2):
                 nd = int(S[i])
                 for d in range(10):
-                    ni = i+1
+                    ni = i + 1
                     nj = j
                     nk = k
                     if d != 0:
@@ -26,7 +26,7 @@ def resolve():
                     if nj > K:
                         continue
                     if k == 0:
-                        if d > nd: # 値を超えている
+                        if d > nd:  # 値を超えている
                             continue
                         if d < nd:
                             nk += 1
@@ -37,4 +37,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

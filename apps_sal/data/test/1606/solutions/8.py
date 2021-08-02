@@ -17,4 +17,3 @@ for query in stdin:
         dot ^= 1
 
 print(''.join(out))
-

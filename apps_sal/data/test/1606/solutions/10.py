@@ -21,10 +21,10 @@ for i in range(q):
     if command[0] == '3':
         output.append(ans)
     else:
-        ans^=1
+        ans ^= 1
 # Why? first, put in mind that all we care about is the trace of the matrix
 # We will flip either the column or the row, we will be facing two possibilities
 # either to subtract from the original answer or do addition ... well thanks to GF(2)
-# both of the operations are just XORing 
+# both of the operations are just XORing
 
 print(''.join([*map(str, output)]))

@@ -23,4 +23,4 @@ for i in range(H):
                 result[i][j] += 1
 
 for row in result:
-    print(*row, sep = '')
+    print(*row, sep='')

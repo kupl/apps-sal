@@ -22,4 +22,3 @@ def doit(n, k):
 
 
 print((doit(n, k)))
-

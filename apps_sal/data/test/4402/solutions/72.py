@@ -1,9 +1,9 @@
 A, B = input().split()
-A=int(A)
-B=int(B)
+A = int(A)
+B = int(B)
 if 13 <= A:
-  print(B)
+    print(B)
 elif 5 < A < 13:
-  print(B//2)
+    print(B // 2)
 else:
-  print(0)
+    print(0)

@@ -28,4 +28,3 @@ for i in range(h):
             ret_arr[i][j] = get_num_bomb(arr, i, j)
 for lis in ret_arr:
     print(("".join(list([str(x) for x in lis]))))
-

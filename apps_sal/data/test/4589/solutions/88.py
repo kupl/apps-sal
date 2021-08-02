@@ -20,7 +20,7 @@ h, w = rm()
 s = [rr() for _ in range(h)]
 x = [0, 0, 1, -1, 1, 1, -1, -1]
 y = [1, -1, 0, 0, 1, -1, 1, -1]
-ans = ['']*h
+ans = [''] * h
 for i in range(h):
     for j in range(w):
         if s[i][j] == '#':
@@ -29,13 +29,8 @@ for i in range(h):
             c = 0
             for dx, dy in zip(x, y):
                 if 0 <= i + dx < h and 0 <= j + dy < w:
-                    if s[i+dx][j+dy] == '#':
+                    if s[i + dx][j + dy] == '#':
                         c += 1
             ans[i] += str(c)
 for i in ans:
     print(i)
-
-
-
-
-

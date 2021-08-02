@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+from math import factorial
 import sys
 # from scipy.special import comb
 sys.setrecursionlimit(10**4)
-from math import factorial
+
 
 def comb(n, r):
     '''
@@ -17,6 +18,7 @@ def comb(n, r):
         return 0
     return factorial(n) // factorial(n - r) // factorial(r)
 
+
 def f(S, i, k):
     # ここに来るのは繰り下がりが発生していない状態...
     if k == 0:
@@ -28,13 +30,14 @@ def f(S, i, k):
     n = int(S[i])
     if n == 0:
         # 注目する桁が0の場合、0を選ぶしかない
-        return f(S, i+1, k)
+        return f(S, i + 1, k)
     # 注目する桁の数値nより小さい値を選べば、以降は繰り下げで選び放題
-    ret = (n - 1) * comb(len(S)-i-1, k-1) * pow(9, k-1)
-    ret += comb(len(S)-i-1, k) * pow(9, k)
-    # 注目する桁の数値nを選んだ場合、繰り下げができない状態が続行    
-    ret += f(S, i+1, k-1)
+    ret = (n - 1) * comb(len(S) - i - 1, k - 1) * pow(9, k - 1)
+    ret += comb(len(S) - i - 1, k) * pow(9, k)
+    # 注目する桁の数値nを選んだ場合、繰り下げができない状態が続行
+    ret += f(S, i + 1, k - 1)
     return ret
+
 
 def solve(S: str, K: int):
     return f(S, 0, K)
@@ -51,12 +54,15 @@ def main():
     K = int(next(tokens))  # type: int
     print((solve(N, K)))
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
     test()
     main()
+
 
 __starting_point()

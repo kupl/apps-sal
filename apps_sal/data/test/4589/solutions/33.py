@@ -19,4 +19,3 @@ for i in range(h):
 
 for i in range(h):
     print(*ans[i], sep='')
-

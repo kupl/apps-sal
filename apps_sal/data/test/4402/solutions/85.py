@@ -6,4 +6,3 @@ elif 6 <= a <= 12:
     print((b // 2))
 else:
     print((0))
-
