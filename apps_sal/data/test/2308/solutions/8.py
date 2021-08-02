@@ -11,5 +11,3 @@ for _ in range(t):
             break
     if out:
         continue
-
-

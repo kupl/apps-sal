@@ -9,4 +9,3 @@ for _ in range(n):
     if (x + y) > res:
         res = x + y
 sys.stdout.write("{0}".format(res))
-

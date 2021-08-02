@@ -21,10 +21,10 @@ team = 1
 for val, idx in val_idx:
     if finished == n:
         break
-    
+
     if result[idx] != 0:
         continue
-    
+
     result[idx] = team
     finished += 1
     left_k = k
@@ -35,7 +35,7 @@ for val, idx in val_idx:
         finished += 1
         most_left = left[most_left]
         left_k -= 1
-    
+
     right_k = k
     most_right = right[idx]
 
@@ -44,17 +44,16 @@ for val, idx in val_idx:
         finished += 1
         most_right = right[most_right]
         right_k -= 1
-    
+
     if most_left >= 0:
         right[most_left] = most_right
-    
+
     if most_right < n:
         left[most_right] = most_left
-    
+
     if team == 1:
         team = 2
     else:
         team = 1
 
 print(''.join([str(i) for i in result]))
-

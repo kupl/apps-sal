@@ -27,4 +27,3 @@ for cost, _ in cuts:
 
 
 print(result)
-

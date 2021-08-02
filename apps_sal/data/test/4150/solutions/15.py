@@ -32,4 +32,3 @@ for idx, val in ss:
             nb[nb[idx][0]][1] = nb[idx][1]
     turn += 1
 print(''.join([str(i) for i in res]))
-

@@ -45,4 +45,3 @@ for i in ranked:
         current = 2 if current == 1 else 1
 
 print(''.join(map(str, teams)))
-

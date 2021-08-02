@@ -6,4 +6,3 @@ for i in range(n):
     if x + y > m:
         m = x + y
 print(m)
-

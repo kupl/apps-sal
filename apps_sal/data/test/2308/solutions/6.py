@@ -10,9 +10,9 @@ for _ in range(n):
             indb = i
             break
     inda = 0
-    for i in range(indb,len(a)):
+    for i in range(indb, len(a)):
         if a[i] == '1':
             inda = i
             break
-    
-    print(max(inda-indb,0))
+
+    print(max(inda - indb, 0))

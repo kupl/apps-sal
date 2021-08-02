@@ -13,7 +13,7 @@ for _ in range(t):
     if pos2 == -1:
         print(0)
         continue
-    
+
     ok = False
     for j in range(pos2, len(s1)):
         if s1[j] == '1':

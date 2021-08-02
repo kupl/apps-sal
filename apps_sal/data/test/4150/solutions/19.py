@@ -1,4 +1,6 @@
 import heapq
+
+
 def main():
     n, k = list(map(int, input().split()))
     a = list(map(int, input().split()))
@@ -8,8 +10,8 @@ def main():
         heapq.heappush(q, (-a[i], i))
 
     teams = [0] * n
-    nextLeft = [i-1 for i in range(n)]
-    nextRight = [i+1 for i in range(n)]
+    nextLeft = [i - 1 for i in range(n)]
+    nextRight = [i + 1 for i in range(n)]
     used = [False] * n
 
     team = 0
@@ -56,5 +58,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

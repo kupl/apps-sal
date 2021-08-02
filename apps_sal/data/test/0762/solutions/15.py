@@ -1,7 +1,8 @@
-#Round 493
-#B
+# Round 493
+# B
 from sys import stdin, stdout
 from queue import PriorityQueue
+
 
 def main():
     n, b = [int(i) for i in stdin.readline().split()]
@@ -9,13 +10,13 @@ def main():
 
     q = PriorityQueue()
     evens = 0
-    for i in range(n-1):
-        if a[i]%2 == 0:
+    for i in range(n - 1):
+        if a[i] % 2 == 0:
             evens += 1
         else:
             evens -= 1
         if evens == 0:
-            q.put(abs(a[i]-a[i+1]))
+            q.put(abs(a[i] - a[i + 1]))
 
     count = 0
     while not q.empty():
@@ -27,7 +28,6 @@ def main():
             break
 
     print(count)
-    
+
+
 main()
-
-

@@ -43,10 +43,12 @@ def solve(n, a, b):
 
     return best
 
+
 def __starting_point():
     n, a, b = list(map(int, input().split()))
     x, y = solve(n, a, b)
     print(x * y)
     print(x, y)
+
 
 __starting_point()

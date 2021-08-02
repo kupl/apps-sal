@@ -16,7 +16,7 @@ for i in range(n - 2):
         cur_even += 1
 
     if i >= 1 and cur_odd == cur_even:
-        ans.append(abs(ls[i+1] - ls[i]))
+        ans.append(abs(ls[i + 1] - ls[i]))
 
 ans.sort()
 
@@ -29,4 +29,3 @@ for i in ans:
         break
 
 print(res)
-

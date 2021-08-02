@@ -7,6 +7,7 @@ def main():
     f.sort()
     print(f[100])
 
+
 rw = int(input())
 for wewq in range(rw):
     main()

@@ -5,4 +5,3 @@ for tt in range(t):
     b = list(reversed(y)).index('1')
     a = list(reversed(x))[b:].index('1')
     print(a)
-

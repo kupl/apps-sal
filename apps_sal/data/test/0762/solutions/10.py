@@ -10,9 +10,9 @@ for i in range(n):
     evenodd.append(evenodd_cur)
 
 watchlist = []
-for i in range(n-1):
+for i in range(n - 1):
     if evenodd[i] == 0:
-        watchlist.append((abs(a[i] - a[i+1]), i))
+        watchlist.append((abs(a[i] - a[i + 1]), i))
 
 watchlist.sort()
 # print(watchlist)
