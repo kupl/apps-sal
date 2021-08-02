@@ -24,8 +24,8 @@ def main():
         print((B[n] + B[n - 1]) - (A[n] + A[n - 1]) + 1)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

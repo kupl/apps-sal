@@ -1,5 +1,6 @@
 import sys
-import heapq, math
+import heapq
+import math
 from itertools import zip_longest, permutations, combinations, combinations_with_replacement
 from itertools import accumulate, dropwhile, takewhile, groupby
 from functools import lru_cache
@@ -55,8 +56,8 @@ ys = []
 for i in range(N - 1):
     ys.append((ps[i + 1][1] - ps[i][1], ps[i][2], ps[i + 1][2]))
 
-xs += [(1<< 40, -1, -1)]
-ys += [(1<< 40, -1, -1)]
+xs += [(1 << 40, -1, -1)]
+ys += [(1 << 40, -1, -1)]
 
 xs.sort()
 ys.sort()
@@ -78,4 +79,3 @@ while xc < N - 1 and yc < N - 1:
         yc += 1
 
 print(ans)
-

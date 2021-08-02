@@ -7,7 +7,6 @@ s = f.readline().strip()
 
 res = 0
 for u in s:
-    res += a[int(u)-1]
+    res += a[int(u) - 1]
 
-print(res)    
-
+print(res)

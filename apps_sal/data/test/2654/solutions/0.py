@@ -7,4 +7,3 @@ if N % 2:
     print((int(max_med - min_med) + 1))
 else:
     print((int(max_med * 2 - min_med * 2) + 1))
-

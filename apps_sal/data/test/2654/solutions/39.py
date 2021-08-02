@@ -25,4 +25,3 @@ else:
     res = int(x[1] - x[0] + 1)
 
 print(res)
-

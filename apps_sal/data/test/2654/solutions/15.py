@@ -20,18 +20,18 @@ def main():
     B.sort()
     if N % 2 == 0:
         n = N // 2
-        mini = (A[n]+A[n-1]) /2
-        maxi = (B[n]+B[n-1]) /2
-        print((int((maxi-mini)*2)+1))
+        mini = (A[n] + A[n - 1]) / 2
+        maxi = (B[n] + B[n - 1]) / 2
+        print((int((maxi - mini) * 2) + 1))
     else:
-        n = N//2
+        n = N // 2
         mini = A[n]
         maxi = B[n]
-        print((maxi-mini+1))
-
+        print((maxi - mini + 1))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

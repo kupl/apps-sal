@@ -6,7 +6,7 @@ for i in range(N):
     b.append(d)
 a.sort()
 b.sort()
-if N%2 == 1:
-    print(b[N//2] - a[N//2] + 1)
+if N % 2 == 1:
+    print(b[N // 2] - a[N // 2] + 1)
 else:
-    print((b[N//2]+b[N//2-1]) - (a[N//2]+a[N//2-1]) + 1)
+    print((b[N // 2] + b[N // 2 - 1]) - (a[N // 2] + a[N // 2 - 1]) + 1)

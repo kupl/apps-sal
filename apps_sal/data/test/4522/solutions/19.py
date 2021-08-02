@@ -4,6 +4,7 @@ import sys
 from itertools import accumulate
 from operator import itemgetter
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -16,16 +17,19 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 class UnionFind:
     def __init__(self, n):
         self.n = n
-        self.par = [i for i in range(n+1)]
-        self.rank = [0] * (n+1)
-        self.size = [1] * (n+1)
-        self.tree = [True] * (n+1)
+        self.par = [i for i in range(n + 1)]
+        self.rank = [0] * (n + 1)
+        self.size = [1] * (n + 1)
+        self.tree = [True] * (n + 1)
 
     def find(self, x):
         if self.par[x] == x:
@@ -61,18 +65,20 @@ class UnionFind:
             return self.size[self.find(x)]
         else:
             res = set()
-            for i in range(self.n+1):
+            for i in range(self.n + 1):
                 res.add(self.find(i))
             return len(res) - 1
-    
+
     def is_tree(self, x):
         return self.tree[self.find(x)]
 
+
 N, M = MAP()
 edges = []
-for i in range(N-1):
+for i in range(N - 1):
     a, b, c = MAP()
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     edges.append((c, a, b))
 
 if N == 1:
@@ -90,12 +96,12 @@ for c, a, b in edges:
     if prevc != c:
         C[c] = C[prevc]
     sz1 = uf.get_size(a)
-    C[c] -= sz1 * (sz1-1) // 2
+    C[c] -= sz1 * (sz1 - 1) // 2
     sz2 = uf.get_size(b)
-    C[c] -= sz2 * (sz2-1) // 2
+    C[c] -= sz2 * (sz2 - 1) // 2
     uf.union(a, b)
     sz = sz1 + sz2
-    C[c] += sz * (sz-1) // 2
+    C[c] += sz * (sz - 1) // 2
     prevc = c
 
 C = list(accumulate(C, max))
@@ -104,4 +110,3 @@ ans = [0] * M
 for i, q in enumerate(Q):
     ans[i] = C[q]
 print(*ans)
-

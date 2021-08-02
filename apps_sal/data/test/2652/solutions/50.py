@@ -1,3 +1,6 @@
+from itertools import permutations
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -42,7 +45,7 @@ class UnionFind():
     def all_group_members(self):
         return {r: self.members(r) for r in self.roots()}
 
-from itertools import permutations
+
 n = int(input())
 list_XY = []
 list_CO = []
@@ -50,15 +53,15 @@ for i in range(n):
     x, y = map(int, input().split())
     list_XY.append([x, y, i])
 
-list_XY.sort(key=lambda x:x[0])
-for i in range(n-1):
-    list_CO.append([list_XY[i][2], list_XY[i+1][2], abs(list_XY[i][0]-list_XY[i+1][0])])
+list_XY.sort(key=lambda x: x[0])
+for i in range(n - 1):
+    list_CO.append([list_XY[i][2], list_XY[i + 1][2], abs(list_XY[i][0] - list_XY[i + 1][0])])
 
-list_XY.sort(key=lambda x:x[1])
-for i in range(n-1):
-    list_CO.append([list_XY[i][2], list_XY[i+1][2], abs(list_XY[i][1]-list_XY[i+1][1])])
+list_XY.sort(key=lambda x: x[1])
+for i in range(n - 1):
+    list_CO.append([list_XY[i][2], list_XY[i + 1][2], abs(list_XY[i][1] - list_XY[i + 1][1])])
 
-list_CO.sort(key=lambda x:x[2])
+list_CO.sort(key=lambda x: x[2])
 uf = UnionFind(n)
 ans = 0
 

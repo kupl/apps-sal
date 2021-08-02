@@ -12,5 +12,4 @@ for i in range(t):
         if k.count(i) < 1:
             m2 = i
             break
-    print(m1+m2)
-
+    print(m1 + m2)

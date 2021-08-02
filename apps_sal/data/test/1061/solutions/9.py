@@ -5,7 +5,7 @@ r4 = list(map(int, input().split()))
 r5 = list(map(int, input().split()))
 x = 0
 y = 0
-for cont in range(0,5):
+for cont in range(0, 5):
     if r1[cont] == 1:
         x = cont
         y = 0
@@ -26,5 +26,5 @@ for cont in range(0,5):
         x = cont
         y = 4
         break
-ris = abs(y-2)+abs(x-2)
+ris = abs(y - 2) + abs(x - 2)
 print(ris)

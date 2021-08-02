@@ -15,7 +15,7 @@ def intinp():
 
 
 def solution():
-    n,x = mulinp()
+    n, x = mulinp()
     a = arrinp()
     if len(set(a)) == 1:
         if a[0] == x:
@@ -31,11 +31,11 @@ def solution():
             count += 1
     if count != 0:
         print(1)
-    elif s/n == x:
+    elif s / n == x:
         print(1)
     else:
         print(2)
-    
+
     return
 
 
@@ -43,4 +43,3 @@ testcases = 1
 testcases = int(input())
 for _ in range(testcases):
     solution()
-

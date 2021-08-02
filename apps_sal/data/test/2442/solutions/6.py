@@ -17,4 +17,3 @@ for _ in range(int(input())):
                 one = True
                 res += 1
     print(res)
-

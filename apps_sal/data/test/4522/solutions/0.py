@@ -7,6 +7,7 @@ sz = [1 for _ in range(0, n)]
 p = [i for i in range(0, n)]
 total_sum = 0
 
+
 def get(u):
     if p[u] == u:
         return u
@@ -46,9 +47,3 @@ for i in range(0, maxN):
     for id in que[i]:
         ans[id] = total_sum
 print(" ".join(str(x) for x in ans))
-
-
-
-
-
-

@@ -17,4 +17,3 @@ lines = []
 for i in range(N):
     lines.append(list(map(int, input().split())))
 main(N, lines)
-

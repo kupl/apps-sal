@@ -38,16 +38,16 @@ class UnionFind:
 n, m = map(int, input().split())
 info = [list(map(int, input().split())) for i in range(n - 1)]
 q = list(map(int, input().split()))
-info = sorted(info, key = itemgetter(2))
-ans = [0] * (2*10**5)
-uf = UnionFind(2*10**5)
+info = sorted(info, key=itemgetter(2))
+ans = [0] * (2 * 10**5)
+uf = UnionFind(2 * 10**5)
 info_i = 0
-for i in range(2*10**5):
-    if i-1 >= 0:
-        ans[i] = ans[i-1]
+for i in range(2 * 10**5):
+    if i - 1 >= 0:
+        ans[i] = ans[i - 1]
     while True:
         if info_i >= n - 1:
-           break
+            break
         if info[info_i][2] == i + 1:
             a, b, _ = info[info_i]
             a -= 1
@@ -55,9 +55,9 @@ for i in range(2*10**5):
             num_a = uf.get_size(a)
             num_b = uf.get_size(b)
             num_ab = num_a + num_b
-            comb_num_a = (num_a*(num_a-1)) // 2
-            comb_num_b = (num_b*(num_b-1)) // 2
-            comb_num_ab = (num_ab*(num_ab-1)) // 2
+            comb_num_a = (num_a * (num_a - 1)) // 2
+            comb_num_b = (num_b * (num_b - 1)) // 2
+            comb_num_ab = (num_ab * (num_ab - 1)) // 2
             ans[i] += comb_num_ab - (comb_num_a + comb_num_b)
             uf.merge(a, b)
             info_i += 1

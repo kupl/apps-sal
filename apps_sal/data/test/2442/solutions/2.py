@@ -21,4 +21,3 @@ for case_num in range(t):
             break
         ans += status
     print(ans)
-

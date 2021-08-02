@@ -11,4 +11,3 @@ for i in s:
     else:
         count += a[3]
 print(count)
-

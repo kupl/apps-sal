@@ -13,4 +13,3 @@ if N % 2 == 0:
     print((round(2 * (B_med - A_med) + 1)))
 else:
     print((B_med - A_med + 1))
-

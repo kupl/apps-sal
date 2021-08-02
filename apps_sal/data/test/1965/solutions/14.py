@@ -5,8 +5,7 @@ for _ in range(int(input())):
         print(0)
         continue
     s = sum(arr)
-    if s//n*n == s and s//n == x or x in arr:
+    if s // n * n == s and s // n == x or x in arr:
         print(1)
     else:
         print(2)
-

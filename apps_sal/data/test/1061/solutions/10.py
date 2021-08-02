@@ -4,7 +4,7 @@ m = []
 
 for i in range(5):
     m.append([s for s in input().split(" ")])
-    
+
 for n, i in enumerate(m):
     if "1" in i:
         y = n

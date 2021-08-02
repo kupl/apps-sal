@@ -8,6 +8,3 @@ for _ in range(T):
         print(1)
     else:
         print(2)
-
-
-

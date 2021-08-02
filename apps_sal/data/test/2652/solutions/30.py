@@ -53,4 +53,3 @@ while q:
         heapq.heappush(q, (d_v, v))
 
 print(ans)
-

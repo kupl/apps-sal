@@ -49,20 +49,20 @@ class UnionFind():
 
 
 n = int(input())
-xy = [list(map(int, input().split()))+[i] for i in range(n)]
+xy = [list(map(int, input().split())) + [i] for i in range(n)]
 G = []
 
 xy.sort()
 for j in range(1, n):
-    sx, sy, si = xy[j-1]
+    sx, sy, si = xy[j - 1]
     tx, ty, ti = xy[j]
-    G.append((min(abs(sx-tx), abs(sy-ty)), si, ti))
+    G.append((min(abs(sx - tx), abs(sy - ty)), si, ti))
 
 xy.sort(key=lambda x: x[1])
 for j in range(1, n):
-    sx, sy, si = xy[j-1]
+    sx, sy, si = xy[j - 1]
     tx, ty, ti = xy[j]
-    G.append((min(abs(sx-tx), abs(sy-ty)), si, ti))
+    G.append((min(abs(sx - tx), abs(sy - ty)), si, ti))
 
 uf = UnionFind(n)
 ans = 0
@@ -73,4 +73,3 @@ for c, x, y in G:
     uf.union(x, y)
     ans += c
 print(ans)
-

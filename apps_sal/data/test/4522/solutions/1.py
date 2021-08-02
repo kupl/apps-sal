@@ -62,4 +62,3 @@ for i, mi in enumerate(ms):
     start = bisect(pairs, (mi, inf)) - 1
     answer[i] = pairs[start][1]
 print(*answer)
-

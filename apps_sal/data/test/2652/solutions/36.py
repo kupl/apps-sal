@@ -37,9 +37,9 @@ x.sort()
 y.sort()
 
 e = []
-for i in range(N-1):
-    e.append([abs(x[i][0]-x[i+1][0]), x[i][1], x[i+1][1]])
-    e.append([abs(y[i][0]-y[i+1][0]), y[i][1], y[i+1][1]])
+for i in range(N - 1):
+    e.append([abs(x[i][0] - x[i + 1][0]), x[i][1], x[i + 1][1]])
+    e.append([abs(y[i][0] - y[i + 1][0]), y[i][1], y[i + 1][1]])
 
 e.sort()
 
@@ -52,4 +52,3 @@ for w, s, t in e:
         ans += w
 
 print(ans)
-

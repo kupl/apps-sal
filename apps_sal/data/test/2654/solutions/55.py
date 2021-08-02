@@ -8,4 +8,3 @@ if N % 2:
     ans //= 2
 ans += 1
 print(ans)
-
