@@ -3,6 +3,7 @@ import math
 
 MOD = 998244853
 
+
 def prepare_c(n):
     result = [1]
     last = [1, 1]
@@ -13,6 +14,7 @@ def prepare_c(n):
         new.append(1)
         last = new
     return new
+
 
 def main():
     (a, b) = tuple([int(x) for x in input().split()])
@@ -34,9 +36,9 @@ def main():
 
     print(res)
 
-    
 
 def __starting_point():
     main()
+
 
 __starting_point()

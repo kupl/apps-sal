@@ -7,7 +7,7 @@ e *= 5
 dollar = 0
 ans = n
 while d * dollar <= n:
-    val = n - d*dollar
+    val = n - d * dollar
     ans = min(ans, val % e)
     dollar += 1
 

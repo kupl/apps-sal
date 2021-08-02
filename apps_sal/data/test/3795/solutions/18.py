@@ -10,6 +10,7 @@ def solvea():
             best = curr
     print(n - best)
 
+
 def solveb():
     a = int(input())
     b = int(input())
@@ -24,5 +25,6 @@ def solveb():
 
 def __starting_point():
     solvea()
+
 
 __starting_point()

@@ -7,4 +7,3 @@ for i in range(n):
     if eco > 0:
         res += eco
 print(res)
-

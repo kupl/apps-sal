@@ -7,4 +7,3 @@ elif s[1] == '0':
     print(endic2[int(s[0])])
 else:
     print(endic2[int(s[0])] + '-' + endic1[int(s[1])])
-

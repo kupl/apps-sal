@@ -1,4 +1,4 @@
-n = int(input())    
+n = int(input())
 d = int(input())
 e = int(input())
 e *= 5

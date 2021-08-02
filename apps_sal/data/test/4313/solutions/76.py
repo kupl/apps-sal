@@ -9,4 +9,3 @@ for i in range(N):
         ans += tmp
 
 print(ans)
-

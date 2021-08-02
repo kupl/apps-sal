@@ -2,12 +2,15 @@
 import math
 from functools import reduce
 
+
 def gcd(*numbers):
     return reduce(math.gcd, numbers)
+
 
 def gcd_list(numbers):
     return reduce(gcd, numbers)
 
+
 n = int(input())
-s = list(map(int,input().split()))
+s = list(map(int, input().split()))
 print(gcd_list(s))

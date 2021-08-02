@@ -66,4 +66,3 @@ for v in arr2keys:
             ans = max(ans, x1 * x2)
 
 print(ans)
-

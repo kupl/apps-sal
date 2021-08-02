@@ -8,4 +8,3 @@ for v, c in zip(v_list, c_list):
     if v > c:
         ans += (v - c)
 print(ans)
-

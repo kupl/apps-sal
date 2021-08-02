@@ -36,4 +36,3 @@ if n in m:
 else:
 
     print(m[n // 10 * 10] + "-" + m[n % 10])
-

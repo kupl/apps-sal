@@ -1,3 +1,3 @@
-a,b = map(int, input().split())
+a, b = map(int, input().split())
 
-print('Yes' if a*500 >= b else 'No')
+print('Yes' if a * 500 >= b else 'No')

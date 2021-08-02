@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 N = int(input())
 A = list(map(int, input().split()))
+
 
 def gcd(x, y):
     if x < y:
@@ -18,10 +19,10 @@ def gcd(x, y):
     else:
         return gcd(y, x % y)
 
+
 a = gcd(A[0], A[1])
 
 for i in range(2, N):
     a = gcd(a, A[i])
 
 print(a)
-

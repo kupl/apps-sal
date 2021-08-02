@@ -14,7 +14,7 @@ Set = string.split()
 #print (Set)
 numbers = dict(zip(Set[0::2], Set[1::2]))
 if n in numbers:
-    print (numbers[n])
+    print(numbers[n])
 else:
     n = int(n)
-    print (numbers[str(n // 10 * 10)], '-', numbers[str(n % 10)], sep = '')
+    print(numbers[str(n // 10 * 10)], '-', numbers[str(n % 10)], sep='')

@@ -11,14 +11,16 @@ def main():
             return
         after.append(x)
         for i in range(1, len(before)):
-            y = before[i]%x
+            y = before[i] % x
             if y != 0:
                 after.append(y)
         after.sort()
         before = after
         after = []
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

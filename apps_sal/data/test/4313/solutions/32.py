@@ -9,5 +9,4 @@ for i in range(n):
         x += v[i]
         y += c[i]
 # 選択した宝石の価値とコストの総和差の計算。
-print((x-y))
-
+print((x - y))

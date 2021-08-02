@@ -17,6 +17,8 @@ def digit(n2):
         print("-eight")
     elif n2 == 9:
         print("-nine")
+
+
 n = int(input())
 n1 = n // 10
 n2 = n % 10
@@ -63,27 +65,26 @@ elif n1 == 1:
     elif n2 == 9:
         print("nineteen")
 elif n1 == 2:
-        print("twenty",end="")
-        digit(n2)
+    print("twenty", end="")
+    digit(n2)
 elif n1 == 3:
-        print("thirty",end="")
-        digit(n2)
+    print("thirty", end="")
+    digit(n2)
 elif n1 == 4:
-        print("forty",end="")
-        digit(n2)
+    print("forty", end="")
+    digit(n2)
 elif n1 == 5:
-        print("fifty",end="")
-        digit(n2)
+    print("fifty", end="")
+    digit(n2)
 elif n1 == 6:
-        print("sixty",end="")
-        digit(n2)
+    print("sixty", end="")
+    digit(n2)
 elif n1 == 7:
-        print("seventy",end="")
-        digit(n2)
+    print("seventy", end="")
+    digit(n2)
 elif n1 == 8:
-        print("eighty",end="")
-        digit(n2)
+    print("eighty", end="")
+    digit(n2)
 elif n1 == 9:
-        print("ninety",end="")
-        digit(n2)
-
+    print("ninety", end="")
+    digit(n2)

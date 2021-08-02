@@ -25,6 +25,5 @@ def nCr_mod(n, r):
 
 n, m = list(map(int, input().split()))
 k = max(n - m - 1, 0)
-print(((k * nCr_mod(n + m, m) +
-       sum(nCr_mod(n + m, m + i) for i in range(k + 1, n)) + min(1, n)) % MOD))
-
+print(((k * nCr_mod(n + m, m)
+       + sum(nCr_mod(n + m, m + i) for i in range(k + 1, n)) + min(1, n)) % MOD))

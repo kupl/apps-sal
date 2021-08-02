@@ -5,11 +5,11 @@ n = int(input())
 dig = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
 
 if n == 0:
-    print("zero");
+    print("zero")
     return
 
-if n<=10:
-    print((dig[n-1]));
+if n <= 10:
+    print((dig[n - 1]))
     return
 
 
@@ -41,14 +41,13 @@ if n == 19:
     print("nineteen")
 
 
-ar = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+ar = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
 
-if n>=20:
-    low = n%10
-    high = n//10
-    if low!=0:
-        print(ar[high-2]+"-"+dig[low-1])
+if n >= 20:
+    low = n % 10
+    high = n // 10
+    if low != 0:
+        print(ar[high - 2] + "-" + dig[low - 1])
     else:
-        print(ar[high-2])
+        print(ar[high - 2])
     return
-

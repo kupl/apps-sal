@@ -1,7 +1,8 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 a.sort()
+
 
 def mod():
     for i in range(1, len(a)):
@@ -20,6 +21,7 @@ def mod():
 # for i in range(4):
 #     a = mod()
 #     print(a)
+
 
 while(a.count(a[0]) != len(a)):
     a = mod()

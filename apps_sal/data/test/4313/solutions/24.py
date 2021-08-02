@@ -9,4 +9,5 @@ def solve():
             res += x
     print(res)
 
+
 solve()

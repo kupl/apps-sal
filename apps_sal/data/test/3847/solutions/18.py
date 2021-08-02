@@ -9,7 +9,7 @@ for i in range(n):
     summ = 0
     for j in range(i, n):
         summ += a[j]
-        l = j - i  + 1
+        l = j - i + 1
         rows[l] = min(rows[l], summ)
 
 for i in range(m):
@@ -26,4 +26,3 @@ for i in range(1, n + 1):
         if cur <= x:
             ans = max(ans, i * j)
 print(ans)
-

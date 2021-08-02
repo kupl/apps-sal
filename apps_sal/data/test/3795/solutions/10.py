@@ -1,19 +1,19 @@
-def gcd(x,y):
-    if(y==0):
+def gcd(x, y):
+    if(y == 0):
         return x
-    return gcd(y,x%y)
- 
- 
+    return gcd(y, x % y)
+
+
 n = int(input())
 d = int(input())
 e = int(input())
-e*= 5
-if(n > 10*e*d):
-    print(n % gcd(e,d))
+e *= 5
+if(n > 10 * e * d):
+    print(n % gcd(e, d))
     return
- 
+
 ans = [0]
- 
+
 for i in range(1, n + 1):
     ans.append(i)
     if(i >= d):

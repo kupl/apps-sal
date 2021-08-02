@@ -1,5 +1,6 @@
 s = int(input())
 
+
 def slovo1(x):
     if x == 0:
         return 'zero'
@@ -18,9 +19,11 @@ def slovo1(x):
     if x == 7:
         return 'seven'
     if x == 8:
-        return 'eight' 
+        return 'eight'
     if x == 9:
-        return 'nine'  
+        return 'nine'
+
+
 def slovo2(x):
     if x == 10:
         return 'ten'
@@ -39,10 +42,11 @@ def slovo2(x):
     if x == 17:
         return 'seventeen'
     if x == 18:
-        return 'eighteen' 
+        return 'eighteen'
     if x == 19:
-        return 'nineteen'  
-    
+        return 'nineteen'
+
+
 def slovo3(x):
     if x == 20:
         return 'twenty'
@@ -60,18 +64,15 @@ def slovo3(x):
         return 'eighty'
     if x == 90:
         return 'ninety'
-    
-    
+
+
 if s < 10:
     print(slovo1(s))
-elif s >=10 and s <20:
+elif s >= 10 and s < 20:
     print(slovo2(s))
 else:
-    if s%10 == 0:
+    if s % 10 == 0:
         print(slovo3(s))
     else:
-        k = str(slovo3((s//10)*10))+'-'+str(slovo1(s%10))
+        k = str(slovo3((s // 10) * 10)) + '-' + str(slovo1(s % 10))
         print(k)
-    
-    
-

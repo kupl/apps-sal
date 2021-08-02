@@ -1,10 +1,9 @@
-#150-A
+# 150-A
 
-K,X = list(map(int,input().split()))
+K, X = list(map(int, input().split()))
 
 if 500 * K >= X:
     print("Yes")
 
 else:
     print("No")
-

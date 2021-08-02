@@ -1,7 +1,7 @@
+from functools import reduce
+from math import gcd
 import sys
 input = sys.stdin.readline
-from math import gcd
-from functools import reduce
 
 
 def read():
@@ -19,5 +19,6 @@ def __starting_point():
     outputs = solve(*inputs)
     if outputs is not None:
         print(("%s" % str(outputs)))
+
 
 __starting_point()

@@ -9,4 +9,3 @@ for i in range(d):
     p = (n - i * e) - (n - i * e) // d * d
     r = min(r, p)
 print(r)
-
