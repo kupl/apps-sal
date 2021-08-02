@@ -1,6 +1,7 @@
 from bisect import bisect_right
 import sys
 
+
 class Scanner:
 
     def __init__(self):
@@ -15,7 +16,7 @@ class Scanner:
 
     def nexttokens(self):
         return self.nextline().split()
-    
+
     def nexttoken(self):
         if len(self.current_tokens) == 0:
             self.current_tokens = self.nexttokens()
@@ -27,12 +28,14 @@ class Scanner:
             return list(map(int, self.nexttokens()))
         else:
             return [self.nextint() for i in range(n)]
-    
+
     def nextint(self):
         return int(self.nexttoken())
 
+
 def quit():
     return
+
 
 stdin = Scanner()
 nextint = stdin.nextint
@@ -52,4 +55,3 @@ for i in b:
     res.append(str(bisect_right(a, i)))
 
 print(" ".join(res))
-

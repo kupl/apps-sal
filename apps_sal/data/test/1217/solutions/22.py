@@ -6,7 +6,7 @@ b = list(map(int, input().split()))
 
 r = []
 for bb in b:
-	i = bisect.bisect_right(a, bb)
-	r.append(str(i))
+    i = bisect.bisect_right(a, bb)
+    r.append(str(i))
 
 print(' '.join(r))

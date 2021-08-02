@@ -4,7 +4,7 @@ b = [[int(i), 0] for i in input().split()]
 for i in range(m):
     b[i][1] = i
 a.sort()
-b.sort(key = lambda x: x[0])
+b.sort(key=lambda x: x[0])
 ress = [0] * m
 i = j = 0
 res = 0
@@ -19,6 +19,4 @@ while j < len(b):
     ress[b[j][1]] = res
     j += 1
 for i in ress:
-    print(i, end = " ")
-    
-
+    print(i, end=" ")

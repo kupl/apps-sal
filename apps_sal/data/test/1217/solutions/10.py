@@ -13,11 +13,10 @@ while i < n and j < m:
     else:
         counts[b[j]] = c
         j = j + 1
-        
+
 while j < m:
     counts[b[j]] = c
     j = j + 1
-    
+
 for j in origB:
     print(counts[j], end=' ')
-

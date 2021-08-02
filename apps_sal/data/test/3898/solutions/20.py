@@ -11,7 +11,7 @@ j = 0
 while i < n and a[i] == 0: i += 1
 while j < n and a[i] != b[j]: j += 1
 
-b = b[j:] + b[:j] 
+b = b[j:] + b[:j]
 j = 0
 while i < n:
     if a[i] != 0:
@@ -22,5 +22,3 @@ while i < n:
         j += 1
     i += 1
 print('YES')
-        
-

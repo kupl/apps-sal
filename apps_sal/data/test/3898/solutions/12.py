@@ -1,17 +1,18 @@
 def main():
-	n = int(input())
-	a = [int(x) for x in input().split()]
-	b = [int(x) for x in input().split()]
-	print(solver(a, b))
-	
+    n = int(input())
+    a = [int(x) for x in input().split()]
+    b = [int(x) for x in input().split()]
+    print(solver(a, b))
+
+
 def solver(a, b):
-	a.remove(0)
-	b.remove(0)
-	index = b.index(a[0])
-	if b[index:] + b[:index] == a:
-		return "YES"
-	else:
-		return "NO"
+    a.remove(0)
+    b.remove(0)
+    index = b.index(a[0])
+    if b[index:] + b[:index] == a:
+        return "YES"
+    else:
+        return "NO"
 
 # def isRotation(a, b):
 # 	if len(a) != len(b):
@@ -23,9 +24,10 @@ def solver(a, b):
 # 				return True
 # 		return False
 
-#def rotateLeft(L):
+# def rotateLeft(L):
 #	L = L[1:] + [L[0]]
 #	return L
+
 
 # L1 = [3, 4, 2, 1]
 # L2 = [1, 2, 3, 4]
@@ -42,4 +44,3 @@ main()
 # a3 = [1, 2, 3, 0]
 # b3 = [0, 3, 2, 1]
 # print(solver(a3, b3))
-

@@ -5,5 +5,5 @@ res = 0
 for x, y in l:
     res += (x - prev) // a
     prev = x + y
-res += (m - prev)//a
+res += (m - prev) // a
 print(res)

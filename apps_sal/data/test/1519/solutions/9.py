@@ -9,4 +9,3 @@ for line in sys.stdin.readlines():
     c = t + m
 ans += (l - c) // a
 print(ans)
-

@@ -9,5 +9,5 @@ for (i, ele) in enumerate(b):
     p = bisect_right(a, ele)
     c.append(p)
 for (i, ele) in enumerate(c):
-    print(ele, end = " ")
+    print(ele, end=" ")
 print()

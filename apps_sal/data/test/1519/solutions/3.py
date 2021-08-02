@@ -24,5 +24,4 @@ for i in range(n):
     t, l = ria()
     suma += (t - lt) // a
     lt = t + l
-print((L - lt) // a+suma)
-
+print((L - lt) // a + suma)
