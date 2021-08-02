@@ -1,2 +1,2 @@
 val = int(input())
-print(val + (val*val) + (val*val*val))
+print(val + (val * val) + (val * val * val))

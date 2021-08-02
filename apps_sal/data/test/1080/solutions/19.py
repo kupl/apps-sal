@@ -4,13 +4,13 @@ m = 0
 s = 0
 can = True
 for i in b:
-    m = max(m,i)
+    m = max(m, i)
     s += i
-if s%2:
+if s % 2:
     can = False
-if 2*m > s:
+if 2 * m > s:
     can = False
 if can:
-    print ('YES')
+    print('YES')
 else:
-    print ('NO')
+    print('NO')

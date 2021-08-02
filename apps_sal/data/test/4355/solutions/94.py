@@ -20,4 +20,3 @@ res = 0
 res = a + a ** 2 + a ** 3
 
 print(res)
-

@@ -1,13 +1,17 @@
+import math
+from bisect import bisect_left
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(100000)
 
+
 def getN():
     return int(input())
+
+
 def getList():
     return list(map(int, input().split()))
-import math
-from bisect import bisect_left
+
 
 n = getN()
 nums = getList()
@@ -21,4 +25,3 @@ if max(nums) * 2 > sum(nums):
     return
 
 print("YES")
-

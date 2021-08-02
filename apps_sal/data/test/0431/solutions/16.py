@@ -31,6 +31,8 @@ def coun(pref):
                 if "1" in mat[i]:
                     now += (m + 1 - mat[i].find("1"))
     return now
+
+
 def gen(pref):
     nonlocal ans
     if len(pref) == n:
@@ -38,6 +40,8 @@ def gen(pref):
         return
     gen(pref + "l")
     gen(pref + "r")
+
+
 n, m = map(int, input().split())
 mat = [0] * n
 for i in range(n):

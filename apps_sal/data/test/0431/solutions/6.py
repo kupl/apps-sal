@@ -4,7 +4,7 @@ n, m = list(map(int, input().split()))
 
 floors = []
 max_lit = -1
-for floor_n in range(n-1, -1, -1):
+for floor_n in range(n - 1, -1, -1):
     cur_floor = input()
     floors.insert(0, cur_floor)
     if max_lit == -1 and any(c == '1' for c in cur_floor):
@@ -26,7 +26,7 @@ def calc_path(path):
         else:
             pos = floors[floor].find('1')
             dist = 0 if pos == -1 else m + 1 - pos
-        is_last = floor == max_lit-1
+        is_last = floor == max_lit - 1
         result += dist
         if switch_stairs:
             if not is_last:
@@ -48,4 +48,3 @@ for p in itertools.product([False, True], repeat=max_lit):
         min_v = v
 
 print(min_v)
-

@@ -11,4 +11,3 @@ while a > 0 and b > 0:
 if a < 0 or b < 0:
     cnt -= 1
 print(cnt)
-

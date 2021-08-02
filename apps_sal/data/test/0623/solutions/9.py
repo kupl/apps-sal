@@ -12,4 +12,3 @@ while a1 > 0 and a2 > 0:
     if a1 == 0 or a2 == 0:
         break
 print(count)
-

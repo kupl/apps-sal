@@ -11,4 +11,4 @@ for c in s:
     counter[int(c)] += 1
 
 m = max(counter)
-print('NO' if m > 2*k else 'YES')
+print('NO' if m > 2 * k else 'YES')

@@ -7,7 +7,6 @@ for i in range(0, 4):
             a[int(b[j])] += 1
 for i in range(0, 10):
     if a[i] > k * 2:
-        print ("NO")
+        print("NO")
         return
 print("YES")
-

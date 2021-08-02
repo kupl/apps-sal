@@ -12,4 +12,3 @@ while (a1 > 1 and a2 > 0) or (a2 > 1 and a1 > 0):
     c += 1
 
 print(c)
-

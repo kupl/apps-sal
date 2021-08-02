@@ -3,6 +3,7 @@ import sys
 inf = float('inf')
 ans = inf
 
+
 def solve():
     nonlocal ans
     n, m = map(int, input().split())
@@ -26,6 +27,7 @@ def solve():
         dfs(0, n, m, room, exits, 0, 0)
 
     print(ans)
+
 
 def dfs(floor, n, m, room, exits, pos, move):
     nonlocal ans
@@ -56,6 +58,9 @@ def dfs(floor, n, m, room, exits, pos, move):
         dfs(floor + 1, n, m, room, exits, 0, move + k + 1)
         dfs(floor + 1, n, m, room, exits, m + 1, move + m + 1 - k + 1)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

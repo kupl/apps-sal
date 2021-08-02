@@ -17,4 +17,3 @@ for y in range(4):
 
 if not(flag):
     print("YES")
-

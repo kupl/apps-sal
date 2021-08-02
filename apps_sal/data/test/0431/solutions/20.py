@@ -1,4 +1,4 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 inf = 10 ** 10
 dp = [[inf, inf] for i in range(n)]
 a = []
@@ -29,10 +29,10 @@ if last == -1:
 if last == 0:
     print(right[0])
     return
-            
+
 dp[0][0] = max(0, right[0] * 2)
 dp[0][1] = m + 1
-for i in range(1,last):
+for i in range(1, last):
     if right[i] != - 1:
         dp[i][0] = min(dp[i][0], dp[i - 1][0] + 1 + 2 * right[i])
     else:
@@ -43,12 +43,12 @@ for i in range(1,last):
     else:
         dp[i][1] = min(dp[i][1], dp[i - 1][1] + 1)
     dp[i][1] = min(dp[i][1], dp[i - 1][0] + m + 2)
-    
-lf,rf = inf,inf
+
+lf, rf = inf, inf
 if right[last] != -1:
     lf = dp[last - 1][0] + 1 + right[last]
 else:
-    lf = dp[last - 1][0]  + 1
+    lf = dp[last - 1][0] + 1
 lf = min(lf, dp[last - 1][1] + m + 2)
 
 if left[last] != -1:
@@ -56,8 +56,4 @@ if left[last] != -1:
 else:
     rf = dp[last - 1][1] + 1
 rf = min(rf, dp[last - 1][0] + m + 2)
-print(min(lf,rf))
-
-
-    
-
+print(min(lf, rf))

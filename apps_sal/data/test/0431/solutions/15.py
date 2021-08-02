@@ -42,4 +42,3 @@ for mask in range(2 ** n):
     ans = min(ans, cur_res)
 
 print(ans + addition)
-

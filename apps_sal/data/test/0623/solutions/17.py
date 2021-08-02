@@ -12,4 +12,3 @@ while True:
     if b == 1 and a == 1:
         break
 print(count)
-

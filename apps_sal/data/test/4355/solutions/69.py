@@ -1,3 +1,2 @@
 a = int(input())
-print((int(a+a*a+a*a*a)))
-
+print((int(a + a * a + a * a * a)))

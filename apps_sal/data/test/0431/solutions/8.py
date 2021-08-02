@@ -16,7 +16,7 @@ for i in range(1, n + 1):
     else:
         dp[i][0] = min(dp[i - 1][0], dp[i - 1][1] + m + 1) + 1
         dp[i][1] = min(dp[i - 1][0] + m + 1, dp[i - 1][1]) + 1
-        
+
     #print(dp[i], l, r, arr[i][l], arr[i])
     #print(z, i)
     if z == 0:
