@@ -13,9 +13,3 @@ for i in range(0, m):
         flag = 0;
 
 print((2 + flag * 2));
-
-
-
-
-
-

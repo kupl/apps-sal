@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 #from operator import itemgetter
 #from heapq import heappush, heappop
 #import numpy as np
@@ -22,15 +35,16 @@ ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
 
 
 def make_divisors(n):
-    lower_divisors , upper_divisors = [], []
+    lower_divisors, upper_divisors = [], []
     i = 1
-    while i*i <= n:
+    while i * i <= n:
         if n % i == 0:
             lower_divisors.append(i)
             if i != n // i:
-                upper_divisors.append(n//i)
+                upper_divisors.append(n // i)
         i += 1
     return lower_divisors + upper_divisors[::-1]
+
 
 N = ni()
 A = na()
@@ -48,4 +62,3 @@ for ai in A:
     for j in range(ai, 10 ** 6 + 1, ai):
         dp[j] = 1
 print(ans)
-

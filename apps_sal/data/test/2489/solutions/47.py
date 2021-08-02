@@ -16,4 +16,3 @@ for x in list(d.keys()):
             ans += 1
 
 print(ans)
-

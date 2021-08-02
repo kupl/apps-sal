@@ -14,13 +14,13 @@ def main():
     else:
         a = N // K
         count = a * a * a
-        b = (N+K//2)//K
-        count+=b*b*b
+        b = (N + K // 2) // K
+        count += b * b * b
         print(count)
-
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

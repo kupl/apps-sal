@@ -11,8 +11,8 @@ for a in set(A):
     for v in range(2 * a, M + 1, a):
         X[v] = False
 
-for i in range(N-1):
-    if A[i] == A[i+1]:
+for i in range(N - 1):
+    if A[i] == A[i + 1]:
         X[A[i]] = False
 
 ans = 0
@@ -20,4 +20,3 @@ for a in A:
     if X[a]:
         ans += 1
 print(ans)
-

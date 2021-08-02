@@ -24,5 +24,3 @@ else:
     hstr = str(h)
 
 print(hstr + ':' + mstr)
-
-

@@ -11,18 +11,13 @@ else:
 
 A.sort()
 MX = max(A)
-ret = np.zeros(MX+1, dtype=np.bool)
+ret = np.zeros(MX + 1, dtype=np.bool)
 A = np.array(A, dtype=np.int32)
-ret[ A ] = True
+ret[A] = True
 
-for i in range(N-1):
+for i in range(N - 1):
     m = A[i] * 2
-    if A[i] == A[i+1]: m = A[i]
-    ret[ np.arange(m, MX+1, A[i]) ] = False
+    if A[i] == A[i + 1]: m = A[i]
+    ret[np.arange(m, MX + 1, A[i])] = False
 
 print((np.sum(ret)))
-
-    
-
-
-

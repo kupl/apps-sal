@@ -17,4 +17,3 @@ for a in set(A):
     if C[a] == 1 and flags[a]:
         ans += 1
 print(ans)
-

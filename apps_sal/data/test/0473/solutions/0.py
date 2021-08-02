@@ -10,9 +10,8 @@ if b < 0:
 if a < 0:
     a = 24 + a
 if a < 10:
-    print(0, end = '')
-print(a, ':', end = '', sep = '')
+    print(0, end='')
+print(a, ':', end='', sep='')
 if b < 10:
-    print(0, end = '')
+    print(0, end='')
 print(b)
-

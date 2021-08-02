@@ -16,11 +16,11 @@ for item in A:
     if cnt[item] == 1:
         candidate.append(item)
 
-judge = [True] *(10**6 + 1)
+judge = [True] * (10**6 + 1)
 
 for item in A:
-    for i in range(2, ((10**6)//item) + 1):
-        judge[item*i] = False
+    for i in range(2, ((10**6) // item) + 1):
+        judge[item * i] = False
 
 ans = 0
 

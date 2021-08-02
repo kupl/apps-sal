@@ -4,6 +4,8 @@ import time
 unfold = itertools.chain.from_iterable
 
 t = time.time() + 1900
+
+
 def jumps(a):
     d = speedup
     if time.time() > t:
@@ -22,8 +24,10 @@ def jumps(a):
 #        d = (a + c - 2) // (c - 1)
 #        yield d
 
+
 def calc(d):
     return (d - 1) * len(a) - sum(i % d for i in a)
+
 
 def ans1(D):
     for d in D:
@@ -31,6 +35,7 @@ def ans1(D):
         if calc(d) <= k:
             return d
     return 1
+
 
 def ans():
     for d, pd in zip(D, D[1:]):
@@ -46,6 +51,7 @@ def ans():
         if (d - pd) * (cd - cpd) >= ((cd - k) * (d - pd) + cd - cpd - 1):
             return d - ((cd - k) * (d - pd) + cd - cpd - 1) // (cd - cpd)
     return anss
+
 
 n, k = map(int, input().split())
 a = list(map(int, input().split()))

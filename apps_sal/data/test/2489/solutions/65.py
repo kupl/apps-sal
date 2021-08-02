@@ -10,6 +10,5 @@ for a in A:
         cnt[b] += 1
 ans = 0
 for a in A:
-    if cnt[a] == 1:ans += 1
+    if cnt[a] == 1: ans += 1
 print(ans)
-

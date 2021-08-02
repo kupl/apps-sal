@@ -13,4 +13,3 @@ for a in range(K):
         continue
     ans += num[a] * num[b] * num[c]
 print(ans)
-

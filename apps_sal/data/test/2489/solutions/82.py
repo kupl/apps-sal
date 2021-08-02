@@ -14,4 +14,3 @@ for a in A:
         res += 1
 
 print(res)
-

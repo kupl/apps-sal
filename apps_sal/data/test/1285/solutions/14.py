@@ -22,4 +22,3 @@ while i < n:
         k = l
     i = j
 print(ans)
-

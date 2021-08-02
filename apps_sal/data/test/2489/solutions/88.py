@@ -1,8 +1,8 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 m = max(a)
-flag = [True]*(m+1)
-c = [0]*(m+1)
+flag = [True] * (m + 1)
+c = [0] * (m + 1)
 b = list(sorted(a))
 for i in b:
     x = i + i

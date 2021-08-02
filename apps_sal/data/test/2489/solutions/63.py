@@ -47,4 +47,3 @@ def solve1(N, A):
 
 
 print((solve2(N, A)))
-

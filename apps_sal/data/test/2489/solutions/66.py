@@ -2,7 +2,7 @@ def abc170d_not_divisible():
     n = int(input())
     cnt = 0
     a = sorted(list(map(int, input().split())))
-    flgs = [True] * (a[-1]+1)
+    flgs = [True] * (a[-1] + 1)
     if n == 1:
         print(1)
         return

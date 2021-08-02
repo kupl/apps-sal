@@ -17,11 +17,10 @@ else:
     p[1] = s[1] - t[1]
 
 if p[0] < 10:
-    print('0', p[0], sep = '', end = ':')
+    print('0', p[0], sep='', end=':')
 else:
-    print(p[0], end = ':')
+    print(p[0], end=':')
 if p[1] < 10:
-    print('0', p[1], sep = '')
+    print('0', p[1], sep='')
 else:
     print(p[1])
-

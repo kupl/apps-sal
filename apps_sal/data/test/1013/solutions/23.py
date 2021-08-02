@@ -17,4 +17,3 @@ for i in range(1, m - 1):
         print(2)
         return
 print(4)
-

@@ -14,7 +14,7 @@ for i in range(a):
         if e.get(b[i]) != 1:
             d[b[i]] = 1
         X = b[i]
-        while X <= (mod-b[i]):
+        while X <= (mod - b[i]):
             X += b[i]
             d[X] = 1
         X = 0

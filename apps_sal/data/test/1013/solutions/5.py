@@ -1,4 +1,4 @@
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 
 table = []
 for i in range(n):
@@ -8,7 +8,7 @@ haveonvertical = False
 haveonhorizont = False
 
 for x in table:
-    if x[0]==1 or x[-1]==1:
+    if x[0] == 1 or x[-1] == 1:
         haveonvertical = True
 
 for y in table[0]:
@@ -23,4 +23,3 @@ if haveonhorizont or haveonvertical:
     print(2)
 else:
     print(4)
-

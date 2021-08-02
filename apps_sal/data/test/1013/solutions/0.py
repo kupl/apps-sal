@@ -9,4 +9,3 @@ if T:
     print(2)
 else:
     print(4)
-

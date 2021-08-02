@@ -7,5 +7,5 @@ for i in range(1, n + 1):
     c = (-a) % k
     if (b + c) % k == 0:
         res += ((n + b) // k) * ((n + c) // k)
-        
+
 print(res)

@@ -17,4 +17,3 @@ if two:
     print(2)
 else:
     print(4)
-
