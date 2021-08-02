@@ -5,9 +5,11 @@ for _ in range(4):
 
 found = False
 
+
 def check(list_of_sigs):
     return list_of_sigs.count('.') == 1 and \
-           list_of_sigs.count('x') == 2
+        list_of_sigs.count('x') == 2
+
 
 for col_offset in range(2):
     for row_offset in range(2):
@@ -34,6 +36,3 @@ if found:
     print("YES")
 else:
     print("NO")
-
-
-

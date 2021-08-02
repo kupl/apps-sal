@@ -25,7 +25,6 @@ def check(a):
     return False
 
 
-
 a = [input() for i in range(4)]
 flag = False
 for i in range(4):
@@ -40,4 +39,3 @@ if flag:
     print("YES")
 else:
     print("NO")
-

@@ -13,4 +13,3 @@ while i * i <= m:
             ans = max(ans, b)
     i += 1
 print(ans)
-

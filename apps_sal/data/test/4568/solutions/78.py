@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 match = []
-for i in range(1,len(s)):
+for i in range(1, len(s)):
     s1 = list(s[:i])
     s2 = list(s[i:])
     cnts = []

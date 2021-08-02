@@ -5,27 +5,27 @@ s = [int(x) for x in input().split()]
 list = []
 
 for i in range(n):
-    list.append(s.index(p[i])-i)
+    list.append(s.index(p[i]) - i)
 
 cost = 0
 output = []
 
-while list != [0]*n:
+while list != [0] * n:
     for i in range(n):
         if list[i] != 0:
             increment = 1
             if list[i] < 0:
                 increment = -1
-            for j in range(i+increment,i + list[i]+increment, increment):
-                if list[j] <= i-j:
-                    output.append([i+1,j+1])
-                    change = abs(i-j)
+            for j in range(i + increment, i + list[i] + increment, increment):
+                if list[j] <= i - j:
+                    output.append([i + 1, j + 1])
+                    change = abs(i - j)
                     cost += change
-                    temp = list[i] - change*increment
-                    list[i] = list[j] + change*increment
+                    temp = list[i] - change * increment
+                    list[i] = list[j] + change * increment
                     list[j] = temp
                     break
 print(cost)
 print(len(output))
 for i in output:
-    print(i[0],i[1])
+    print(i[0], i[1])

@@ -33,14 +33,15 @@ N, M = map(int, input().split())
 #             dfs(tree, l[0])
 # dfs(tree, 1)
 
+
 def make_divisors(n):
-    lower_divisors , upper_divisors = [], []
+    lower_divisors, upper_divisors = [], []
     i = 1
-    while i*i <= n:
+    while i * i <= n:
         if n % i == 0:
             lower_divisors.append(i)
             if i != n // i:
-                upper_divisors.append(n//i)
+                upper_divisors.append(n // i)
         i += 1
     return lower_divisors + upper_divisors[::-1]
 
@@ -55,12 +56,13 @@ def make_divisors(n):
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:
 #                sieve[q] = p
 #    p += 1
+
 
 l = make_divisors(M)
 

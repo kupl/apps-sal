@@ -6,5 +6,5 @@ for i in s:
 res = 'YES'
 for i in A:
     if i == 0:
-        res = 'NO'    
+        res = 'NO'
 print(res)

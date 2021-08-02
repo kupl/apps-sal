@@ -12,10 +12,10 @@ def make_divisors(n):
         i += 1
     return lower_divisors + upper_divisors[::-1]
 
+
 div_list = make_divisors(M)
 div_list = div_list[::-1]
 for div in div_list:
     if N * div <= M:
         print(div)
         return
-

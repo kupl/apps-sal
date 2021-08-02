@@ -13,4 +13,6 @@ def calc_intersection():
 
 def __starting_point():
     print(calc_intersection())
+
+
 __starting_point()

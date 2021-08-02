@@ -4,7 +4,7 @@ import math
 N, M = map(int, sys.stdin.readline().split())
 
 ans = 0
-for i in range(1, int(M**0.5)+1):
+for i in range(1, int(M**0.5) + 1):
     if M % i == 0:
         j = M // i
         r1 = j // N

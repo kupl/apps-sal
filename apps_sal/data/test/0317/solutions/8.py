@@ -6,7 +6,7 @@ for i in range(26):
     chars.append(0)
 
 for char in range(rng):
-    chars[ord(instr[char])-97] += 1
+    chars[ord(instr[char]) - 97] += 1
 
 isyes = True
 for i in range(26):
@@ -17,4 +17,3 @@ for i in range(26):
 
 if isyes:
     print('YES')
-

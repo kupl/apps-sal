@@ -10,4 +10,3 @@ for i in range(n):
     if num > ans:
         ans = num
 print(ans)
-

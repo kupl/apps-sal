@@ -9,4 +9,3 @@ for i in range(len(S)):
 
     ans = max(ans, len(left & right))
 print(ans)
-

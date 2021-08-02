@@ -1,6 +1,8 @@
-N,M = map(int,input().split())
+N, M = map(int, input().split())
 
 # 約数列挙
+
+
 def enum_div(N):
     ret = []
     i = 1
@@ -14,9 +16,10 @@ def enum_div(N):
         i += 1
     return ret
 
+
 ans = 0
 for i in enum_div(M):
     if i >= N:
-        ans = max(ans,M / i)
+        ans = max(ans, M / i)
 
 print(int(ans))

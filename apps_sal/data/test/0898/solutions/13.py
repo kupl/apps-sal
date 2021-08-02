@@ -16,4 +16,3 @@ for i in b:
     if m >= N:
         print(i)
         break
-

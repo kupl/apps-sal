@@ -39,11 +39,10 @@ for _ in range(q):
             res -= l * (l - 1) // 2
             l = before + 1
         if r > before:
-            res += sum(p[l-1-before:r-before]) + (r-l+1) * before
+            res += sum(p[l - 1 - before:r - before]) + (r - l + 1) * before
 
         print(res)
     else:
         # type 2
         x += line[1]
         p = perm(x)
-

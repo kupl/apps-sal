@@ -40,7 +40,7 @@ def resolve():
     S = input()
 
     ans = 0
-    for i in range(1, N-1):
+    for i in range(1, N - 1):
         x = set(S[0:i])
         y = set(S[i:])
         ans = max(ans, len(x & y))
@@ -51,5 +51,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

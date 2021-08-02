@@ -7,7 +7,7 @@ for s in S:
         ss.append(s)
 
 max_count = 0
-for i in range(1, N-1):
+for i in range(1, N - 1):
     count = 0
     for s in ss:
         x = S[0:i]

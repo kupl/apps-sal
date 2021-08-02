@@ -14,4 +14,3 @@ for i in range(N):
     ans[i] = check(i)
 
 print((max(ans)))
-

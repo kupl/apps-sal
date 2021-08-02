@@ -13,16 +13,15 @@ for i in range(1, math.ceil(math.sqrt(m))):
     if m % i == 0:
         b.append(i)
         b.append(m // i)
-        
-#print(b)
+
+# print(b)
 
 for i in range(len(b)):
     if b[i] * n <= m:
         a.append(b[i])
-#print(a)
+# print(a)
 
 if len(b) == 2:
     print((1))
 else:
     print((max(a)))
-

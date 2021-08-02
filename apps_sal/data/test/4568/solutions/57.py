@@ -1,4 +1,4 @@
-def al_cnt(k,s):
+def al_cnt(k, s):
     count = 0
     if 'a' in s[:k] and 'a' in s[k:]:
         count += 1
@@ -10,7 +10,7 @@ def al_cnt(k,s):
         count += 1
     if 'e' in s[:k] and 'e' in s[k:]:
         count += 1
-    if 'f' in s[:k] and'f' in s[k:]:
+    if 'f' in s[:k] and 'f' in s[k:]:
         count += 1
     if 'g' in s[:k] and 'g' in s[k:]:
         count += 1
@@ -53,10 +53,12 @@ def al_cnt(k,s):
     if 'z' in s[:k] and 'z' in s[k:]:
         count += 1
     return count
+
+
 n = int(input())
 s = input()
 ans = 0
-for i in range(1,n-1):
-    temp = al_cnt(i,s)
-    ans = max(ans,temp)
+for i in range(1, n - 1):
+    temp = al_cnt(i, s)
+    ans = max(ans, temp)
 print(ans)

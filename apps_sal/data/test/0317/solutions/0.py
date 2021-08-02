@@ -8,4 +8,3 @@ for x in a:
         print('NO')
         return
 print('YES')
-

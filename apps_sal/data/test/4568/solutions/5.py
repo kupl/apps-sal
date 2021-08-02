@@ -10,4 +10,3 @@ for i in range(N):
         cnt = l
 
 print(cnt)
-

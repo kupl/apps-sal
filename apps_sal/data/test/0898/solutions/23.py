@@ -9,4 +9,3 @@ else:
             if M // n * N <= M:
                 ans = max(ans, M // n)
     print(ans)
-

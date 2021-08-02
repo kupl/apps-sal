@@ -2,7 +2,7 @@ N = int(input())
 S = [i for i in input()]
 ANS = []
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     ans = 0
     A = []
     B = []
