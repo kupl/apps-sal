@@ -14,11 +14,3 @@ for i in range(n):
     if a[i] % r == 0:
         k += 1
 print(r, k)
-
-
-
-
-
-
-
-

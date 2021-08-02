@@ -15,9 +15,8 @@ for i in range(a):
 
 # Print
 for i in range(a):
-    toprint=""
-    for j in range(b): 
-        toprint += matrix_rotated[i][j]*2
+    toprint = ""
+    for j in range(b):
+        toprint += matrix_rotated[i][j] * 2
     print(toprint)
     print(toprint)
-

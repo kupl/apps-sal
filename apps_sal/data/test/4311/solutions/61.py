@@ -1,6 +1,8 @@
 s = int(input())
 arr = []
 ans = 0
+
+
 def calc(n, cnt):
     arr.append(n)
 
@@ -17,6 +19,7 @@ def calc(n, cnt):
 
     cnt += 1
     calc(n, cnt)
+
+
 calc(s, 0)
 print((len(arr) + 1))
-

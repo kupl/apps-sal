@@ -15,7 +15,9 @@ def turn90():
         turned.append(row)
     return turned
 
+
 image = turn90()
+
 
 def mirror():
     mirroed = []
@@ -24,6 +26,7 @@ def mirror():
         mirroed.append(row)
     return mirroed
 
+
 def multiply():
     multi = []
     for row in image:
@@ -31,5 +34,6 @@ def multiply():
         multi.append(''.join([y * 2 for y in row]))
     for row in multi:
         print(''.join(row))
+
 
 multiply()

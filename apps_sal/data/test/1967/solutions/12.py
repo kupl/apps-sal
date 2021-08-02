@@ -9,4 +9,4 @@ for j in (range(w)):
         row.append(img[i][j])
         row.append(img[i][j])
     print(*row, sep='', end='\n')
-    print(*row, sep='',end='\n')
+    print(*row, sep='', end='\n')

@@ -1,8 +1,8 @@
 def f(n):
     if n % 2 == 0:
-        return n/2
+        return n / 2
     else:
-        return 3*n+1
+        return 3 * n + 1
 
 
 s = int(input())
@@ -13,8 +13,7 @@ while True:
     temp = f(a[cnt])
 
     if temp in a:
-        print((len(a)+1))
+        print((len(a) + 1))
         return
     a.append(temp)
     cnt += 1
-

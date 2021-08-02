@@ -9,6 +9,7 @@ def mash(pole):
         ans.append(new)
     return ans
 
+
 def change(pole, a, b):
     x = len(pole[0]) % 2
     fir = []
@@ -32,6 +33,8 @@ def change(pole, a, b):
                 s += fir[j - len(sec)][i]
         new.append(s)
     return new
+
+
 def pov(pole, a, b):
     new = []
     for i in range(a):
@@ -40,7 +43,8 @@ def pov(pole, a, b):
             s += pole[j][i]
         new.append(s)
     return new
-        
+
+
 a, b = list(map(int, input().split()))
 pole = []
 for i in range(b):
@@ -49,4 +53,3 @@ for i in range(b):
 new = mash(pov(pole, a, b))
 for i in new:
     print(i)
-

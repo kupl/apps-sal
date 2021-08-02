@@ -7,15 +7,15 @@ for i in range(h):
     s = ""
     k = w
     for j in listGorizontal[i]:
-        s += j[w - k]*2
+        s += j[w - k] * 2
     listVertical.append(s)
 s = ""
 k = h
-for i in range(2*w):
+for i in range(2 * w):
     for j in range(h):
         s += 2 * listVertical[h - k][i]
         k += -1
     k = h
-    if i != 2*w :
+    if i != 2 * w:
         s += "\n"
 print(s)

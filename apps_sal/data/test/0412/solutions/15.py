@@ -9,4 +9,3 @@ for i in a:
         r *= 2
         k = 1
 print(r, k)
-
