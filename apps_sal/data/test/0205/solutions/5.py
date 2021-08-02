@@ -7,6 +7,7 @@ def start(x, cnt):
         i *= x
     ans = min(ans, res // cnt)
 
+
 n, b = map(int, input().split())
 nb = b
 ans = 1e20

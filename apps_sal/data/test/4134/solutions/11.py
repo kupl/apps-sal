@@ -1,4 +1,4 @@
-n, m, k = list(map(int,input().split()))
+n, m, k = list(map(int, input().split()))
 matrix = []
 for _ in range(n):
     row = list(map(int, input().split()))
@@ -10,8 +10,9 @@ middle = (n + m - 2) // 2
 # print(middle)
 answer = 0
 
-def upleft(x,y,acc,count):
-    val = matrix[y][x]^acc
+
+def upleft(x, y, acc, count):
+    val = matrix[y][x] ^ acc
     if count == middle:
         if d[y][x].get(val) == None:
             d[y][x][val] = 1
@@ -21,11 +22,12 @@ def upleft(x,y,acc,count):
             return
     else:
         if x + 1 < m:
-            upleft(x+1,y,val,count+1)
+            upleft(x + 1, y, val, count + 1)
         if y + 1 < n:
-            upleft(x,y+1,val,count+1)
+            upleft(x, y + 1, val, count + 1)
 
-def downright(x,y,acc,count):
+
+def downright(x, y, acc, count):
     nonlocal answer
     if count == n + m - 2 - middle:
         complement = k ^ acc
@@ -33,14 +35,14 @@ def downright(x,y,acc,count):
             answer += d[y][x][complement]
         return
     else:
-        val = matrix[y][x]^acc
+        val = matrix[y][x] ^ acc
         if x - 1 >= 0:
-            downright(x-1,y,val,count+1)
+            downright(x - 1, y, val, count + 1)
         if y - 1 >= 0:
-            downright(x,y-1,val,count+1)
+            downright(x, y - 1, val, count + 1)
 
-upleft(0,0,0,0)
-downright(m-1,n-1,0,0)
+
+upleft(0, 0, 0, 0)
+downright(m - 1, n - 1, 0, 0)
 # print(d)
 print(answer)
-

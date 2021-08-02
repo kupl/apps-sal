@@ -13,4 +13,3 @@ while m * p <= n:
     m += 1
 else:
     print(-1)
-

@@ -9,6 +9,7 @@ while i * i <= b:
 if b > 1:
     cnt[b] = 1
 
+
 def get(x):
     ret = 0
     d = x
@@ -16,6 +17,7 @@ def get(x):
         ret += n // d
         d *= x
     return ret
+
 
 ans = int(1e30)
 for (a, t) in cnt.items():

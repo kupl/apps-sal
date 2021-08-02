@@ -1,5 +1,5 @@
 def factorial_1(n: int):
-    for i in range(2, n+1):
+    for i in range(2, n + 1):
         if i > n**0.5:
             return n
         elif n % i == 0:
@@ -20,7 +20,7 @@ f_k, x = factorial_2(k), float('inf')
 for key, val in f_k.items():
     qua_f, pow_ = 0, key
     while pow_ <= n:
-        qua_f += n//pow_
+        qua_f += n // pow_
         pow_ *= key
-    x = min(x, qua_f//val)
+    x = min(x, qua_f // val)
 print(x)

@@ -66,4 +66,3 @@ for j in range(min(m, n)):
             wae += d[key] * e[key]
 
 print(wae)
-

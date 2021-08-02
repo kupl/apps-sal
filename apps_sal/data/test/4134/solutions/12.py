@@ -42,4 +42,3 @@ go_up_to_down(0, 0, 0, 0)
 count_ways = go_down_to_up(width - 1, height - 1, 0, 0, 0)
 
 print(count_ways)
-

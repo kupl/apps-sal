@@ -15,26 +15,26 @@ def forward(i, j, value):
         else:
             d[i][value] = 1
         return None
-    forward(i+1, j, value)
-    forward(i, j+1, value)
+    forward(i + 1, j, value)
+    forward(i, j + 1, value)
 
 
 def backward(i, j, value):
     if i < 0 or j < 0:
         return
     if i + j == half:
-        tmp = k^value
-        #print(tmp)
+        tmp = k ^ value
+        # print(tmp)
         if tmp in d[i]:
             nonlocal re
             re += d[i][tmp]
         return None
     value ^= l[i][j]
-    backward(i-1, j, value)
-    backward(i, j-1, value)
+    backward(i - 1, j, value)
+    backward(i, j - 1, value)
 
 
 forward(0, 0, 0)
-backward(n-1, m-1, 0)
-#print(d)
+backward(n - 1, m - 1, 0)
+# print(d)
 print(re)

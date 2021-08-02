@@ -11,6 +11,7 @@ for i in range(n):
 ans = 0
 dp = defaultdict(int)
 
+
 def search(x, y, is_l, mk):
     if x < 1 or y < 1 or x > n or y > m:
         return
@@ -32,8 +33,8 @@ def search(x, y, is_l, mk):
             search(x - 1, y, is_l, mk)
             search(x, y - 1, is_l, mk)
 
+
 search(1, 1, True, 0)
 search(n, m, False, aim)
 
 print(ans)
-

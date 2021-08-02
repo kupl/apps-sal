@@ -4,6 +4,7 @@ class Node:
         self.right = index + 1
         self.pair = -1
 
+
 def __starting_point():
     n, m, p = map(int, input().split())
     brackets = input()
@@ -52,6 +53,8 @@ def __starting_point():
     while p != n + 1:
         result.append(brackets[p - 1])
         p = nodes[p].right
-        
+
     print("".join(result))
+
+
 __starting_point()

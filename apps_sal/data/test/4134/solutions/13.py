@@ -27,6 +27,7 @@ def upper(i, j, val, cnt):
 
 answer = 0
 
+
 def lower(i, j, val, cnt):
     nonlocal answer
     s = str(i) + ' ' + str(j)
@@ -45,7 +46,3 @@ upper(0, 0, 0, 0)
 lower(n - 1, m - 1, 0, 0)
 
 print(answer)
-
-
-
-

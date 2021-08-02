@@ -15,7 +15,7 @@ for i in a:
     cnt = 0
     x = i[0]
     while (x <= n):
-        cnt += n // x;
+        cnt += n // x
         x *= i[0]
     ans = min(ans, cnt // i[1])
 print(ans)

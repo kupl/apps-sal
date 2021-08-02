@@ -1,18 +1,21 @@
 from collections import defaultdict
+
+
 def decompose(n):
     x = n
     i = 2
     fac = defaultdict(lambda: 0)
-    while i*i <= n:
+    while i * i <= n:
         while x % i == 0:
             fac[i] += 1
-            x = x//i
+            x = x // i
         if x == 1:
             break
         i += 1
     if x != 1:
         fac[x] += 1
     return fac
+
 
 def main():
     n, b = list(map(int, input().split()))
@@ -28,7 +31,9 @@ def main():
         ans = min(ans, acc // val)
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

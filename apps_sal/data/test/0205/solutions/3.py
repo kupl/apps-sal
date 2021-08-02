@@ -1,4 +1,6 @@
 from math import sqrt
+
+
 def fact(a):
     nonlocal g
     nonlocal h
@@ -14,6 +16,8 @@ def fact(a):
     if a > 1:
         g.append(a)
         h.append(1)
+
+
 n, k = list(map(int, input().split()))
 g = []
 h = []
@@ -28,4 +32,3 @@ for i in range(len(g)):
     if k1 // h[i] < mini:
         mini = k1 // h[i]
 print(mini)
-
