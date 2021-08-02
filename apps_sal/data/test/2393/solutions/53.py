@@ -14,6 +14,7 @@ def zf(s):
             r = i + z[i] - 1
     return z
 
+
 t = int(input())
 for i in range(t):
     s = input()

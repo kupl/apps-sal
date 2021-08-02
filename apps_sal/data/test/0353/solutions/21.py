@@ -8,6 +8,6 @@ elif a[-1] == 0:
 elif a[-1] == 15:
     print("DOWN")
 elif a[-2] < a[-1]:
-    print("UP")  
+    print("UP")
 elif a[-2] > a[-1]:
     print("DOWN")

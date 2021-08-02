@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-n=int(input())
-days=list(map(int,input().split()))
+n = int(input())
+days = list(map(int, input().split()))
 
 if days[-1] == 0:
     print("UP")
@@ -15,5 +15,3 @@ else:
         print("UP")
     else:
         print("DOWN")
-
-

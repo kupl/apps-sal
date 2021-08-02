@@ -22,4 +22,6 @@ def main():
         print("DOWN")
     else:
         print("UP")
+
+
 main()

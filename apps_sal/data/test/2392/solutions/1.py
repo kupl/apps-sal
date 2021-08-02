@@ -15,4 +15,3 @@ for a7 in range(1, n - 11):
     sum %= 1000000007
 
 print(str(sum))
-

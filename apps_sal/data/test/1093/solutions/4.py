@@ -6,8 +6,8 @@ e = []
 for i in range(m):
     col = 0
     for t in range(n):
-       if p[t][i] == '*':
-           col += 1
+        if p[t][i] == '*':
+            col += 1
     e.append(col)
 max1 = 0
 max2 = 0
@@ -16,5 +16,3 @@ for i in range(m - 1):
 for i in range(1, m):
     max2 = min(max2, e[i] - e[i - 1])
 print(max1, -max2)
-           
-

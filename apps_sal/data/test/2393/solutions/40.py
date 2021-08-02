@@ -16,4 +16,3 @@ for _ in range(t):
                 ans[1].append(i + 2)
     print(ans[0])
     print(*ans[1])
-

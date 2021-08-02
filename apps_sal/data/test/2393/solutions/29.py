@@ -56,4 +56,3 @@ for i in range(0, t):
                     ans.append(a[j][1])
         print(len(ans))
         print(*ans)
-

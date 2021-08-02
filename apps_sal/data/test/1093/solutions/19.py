@@ -9,8 +9,8 @@ def main():
     INF = 1**10
     max_up = 0
     max_down = 0
-    for i in range(m-1):
-        delta = heights[i+1] - heights[i]
+    for i in range(m - 1):
+        delta = heights[i + 1] - heights[i]
         max_up = max(max_up, delta)
         max_down = max(max_down, -delta)
     print(max_up, max_down)
@@ -18,4 +18,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

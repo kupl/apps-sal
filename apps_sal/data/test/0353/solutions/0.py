@@ -11,15 +11,14 @@ if n == 1:
     else:
         print("-1")
 else:
-    d = L[n-2] - L[n-1]
+    d = L[n - 2] - L[n - 1]
     if d < 0:
-        if L[n-1] == 15:
+        if L[n - 1] == 15:
             print("DOWN")
         else:
             print("UP")
     else:
-        if L[n-1] == 0:
+        if L[n - 1] == 0:
             print("UP")
         else:
             print("DOWN")
-

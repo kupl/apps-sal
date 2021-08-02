@@ -1,8 +1,14 @@
 MOD = 1000000007
+
+
 def isSubset(a, b):
     return (a & b) == a
+
+
 def isIntersect(a, b):
     return (a & b) != 0
+
+
 def cntOrder(s, t):
     p = len(s)
     m = len(t)
@@ -26,6 +32,8 @@ def cntOrder(s, t):
                     dp[k + 1][mask | inMask[i]] = (dp[k + 1][mask | inMask[i]] + dp[k][mask]) % MOD
             dp[k + 1][mask] = (dp[k + 1][mask] + dp[k][mask] * (cnt[mask] - k)) % MOD
     return dp[m][(1 << p) - 1]
+
+
 def dfs(u):
     nonlocal a, graph, degIn, visited, s, t
 
@@ -38,6 +46,8 @@ def dfs(u):
     for v in graph[u]:
         if not visited[v]:
             dfs(v)
+
+
 def main():
     nonlocal a, graph, degIn, visited, s, t
     n = int(input())
@@ -70,7 +80,10 @@ def main():
                 ans = (ans * c[curLen + sz][sz]) % MOD
                 curLen += sz
     print(ans)
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

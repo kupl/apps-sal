@@ -20,4 +20,3 @@ for i in range(1, m + 1):
     ans1 = max(ans1, newans[i] - newans[i - 1])
     ans2 = max(ans2, newans[i] - newans[i + 1])
 print(ans1, ans2)
-

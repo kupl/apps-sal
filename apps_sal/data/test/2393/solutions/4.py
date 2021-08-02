@@ -16,4 +16,3 @@ for i in range(n):
             res.append(g + 2)
     print(len(res))
     print(*res)
-

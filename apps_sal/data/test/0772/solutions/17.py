@@ -10,4 +10,3 @@ for y in range(3):
                 state[y][x] ^= arr[j][i]
 for row in state:
     print(*row, sep='')
-

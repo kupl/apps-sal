@@ -47,4 +47,3 @@ for i in range(k - 1, n - k):
         b = ri[i + 1]
 
 print(a + 1, b + 1)
-

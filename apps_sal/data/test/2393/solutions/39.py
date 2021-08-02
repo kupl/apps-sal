@@ -9,13 +9,13 @@ for i in range(t):
     j = 2
     while j < len(s) - 2:
         if s[j] == 'o':
-            if s[j-1] == 'w' and s[j-2] == 't':
-                if s[j+1] == 'n' and s[j+2] == 'e':
-                    l.append(j+1)
+            if s[j - 1] == 'w' and s[j - 2] == 't':
+                if s[j + 1] == 'n' and s[j + 2] == 'e':
+                    l.append(j + 1)
                 else:
                     l.append(j)
-            elif s[j+1] == 'n' and s[j+2] == 'e':
-                l.append(j+2)
+            elif s[j + 1] == 'n' and s[j + 2] == 'e':
+                l.append(j + 2)
         j += 1
     if len(s) >= 3 and s[-3] == 't' and s[-2] == 'w' and s[-1] == 'o':
         l.append(len(s) - 1)
@@ -23,4 +23,3 @@ for i in range(t):
         l.append(len(s) - 2)
     print(len(l))
     print(*l)
-

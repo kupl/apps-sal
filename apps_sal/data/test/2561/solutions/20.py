@@ -5,10 +5,11 @@ def solve(x):
             k += 1
         x //= 2
     return (2**k)
+
+
 l = int(input())
 ar = []
 for i in range(l):
     ar.append(int(input()))
 for i in range(l):
     print(solve(ar[i]))
-

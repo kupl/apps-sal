@@ -22,4 +22,3 @@ for j in range(t):
             i += 1
     print(ans)
     print(" ".join(list(map(str, A))))
-

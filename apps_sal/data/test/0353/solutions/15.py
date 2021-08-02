@@ -10,4 +10,3 @@ elif a[-1] > a[-2]:
     print('UP')
 else:
     print('DOWN')
-

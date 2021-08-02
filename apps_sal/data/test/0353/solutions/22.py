@@ -19,5 +19,5 @@ def main():
         print("DOWN")
         return
 
-main()
 
+main()

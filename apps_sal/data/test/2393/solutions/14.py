@@ -17,7 +17,6 @@ for j in range(n):
                 else:
                     Ans_0.append(i)
 
-
         elif S == 'one' or S == 'two':
             if Ans_0:
                 if Ans_0[-1] != i - 1:
@@ -28,4 +27,3 @@ for j in range(n):
 for i in range(len(Ans)):
     print(len(Ans[i]))
     print(*Ans[i])
-

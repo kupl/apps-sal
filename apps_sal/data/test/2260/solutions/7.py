@@ -1,3 +1,2 @@
 input()
 print(25)
-

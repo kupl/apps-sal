@@ -28,4 +28,3 @@ count_arr = []
 
 for i in range(n):
     print(count_unic_mess(i, k, links, n, count_arr), end=' ')
-

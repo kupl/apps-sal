@@ -21,9 +21,10 @@ def main():
                     if s[i:i + 3] == "one":
                         ans.add(str(i + 2))
                     if s[i:i + 3] == "two":
-                        ans.add(str(i + 2))   
+                        ans.add(str(i + 2))
             i += 1
         print(len(ans))
         print(" ".join(ans))
-        
+
+
 main()

@@ -8,7 +8,7 @@ for i, p in enumerate(a):
         b[i] = cur_end - cur_start + 1
     else:
         p -= 1
-        prev_end = min(n-1, p + k)
+        prev_end = min(n - 1, p + k)
         if cur_start > prev_end:
             b[i] = b[p] + cur_end - cur_start + 1
         else:

@@ -12,4 +12,3 @@ else:
             print('UP')
         else:
             print('DOWN')
-

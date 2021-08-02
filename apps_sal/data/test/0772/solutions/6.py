@@ -15,10 +15,10 @@ def main() -> int:
     for i in range(3):
         for j in range(3):
             temp = lights[i][j] \
-                   + (lights[i - 1][j] if i > 0 else 0) \
-                   + (lights[i][j - 1] if j > 0 else 0) \
-                   + (lights[i + 1][j] if i < 2 else 0) \
-                   + (lights[i][j + 1] if j < 2 else 0)
+                + (lights[i - 1][j] if i > 0 else 0) \
+                + (lights[i][j - 1] if j > 0 else 0) \
+                + (lights[i + 1][j] if i < 2 else 0) \
+                + (lights[i][j + 1] if j < 2 else 0)
             results[i][j] = str(1 - temp % 2)
 
     result_strings = [''.join(listi) for listi in results]
@@ -29,4 +29,6 @@ def main() -> int:
 
 def __starting_point():
     exit(main())
+
+
 __starting_point()

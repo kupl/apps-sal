@@ -19,4 +19,3 @@ if k[0] - k[1] > 0:
     print('DOWN')
 else:
     print('UP')
-

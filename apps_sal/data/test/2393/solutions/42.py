@@ -19,4 +19,3 @@ for j in range(0, t):
             i += 1
     print(len(res))
     print(*res)
-

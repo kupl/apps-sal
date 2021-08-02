@@ -1,5 +1,5 @@
 n, m = map(int, input().split())
-a = [0] * m;
+a = [0] * m
 for i in range(n):
     s = input()
     for j in range(m):
