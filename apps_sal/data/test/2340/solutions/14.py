@@ -3,7 +3,7 @@ for _ in range(q):
     h, n = list(map(int, input().split()))
     ps = list(map(int, input().split())) + [0, 0]
     ps.reverse()
-    cur = n-1
+    cur = n - 1
     crystals = 0
     while ps and ps[-1] > 1:
         if ps[-2] == h - 1:
@@ -19,4 +19,3 @@ for _ in range(q):
             ps[-1] = ps[-2] + 1
             h = ps[-1]
     print(crystals)
-

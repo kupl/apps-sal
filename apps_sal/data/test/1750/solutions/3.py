@@ -3,24 +3,22 @@
 from collections import deque
 
 
-
 def ri():
 
     return list(map(int, input().split()))
 
 
-
 n = int(input())
 
-v = [0]*n
+v = [0] * n
 
-c = [0]*n
+c = [0] * n
 
-p = [0]*n
+p = [0] * n
 
 adj = [set() for i in range(n)]
 
-for i in range(n-1):
+for i in range(n - 1):
 
     a, b = ri()
 
@@ -62,13 +60,13 @@ while q:
 
             while cc in [c[n], c[p[n]]]:
 
-                cc+=1
+                cc += 1
 
             c[a] = cc
 
-            cc+=1
+            cc += 1
 
-            ans = max(2+len(adj[a])-1, ans)
+            ans = max(2 + len(adj[a]) - 1, ans)
 
             q.append(a)
 
@@ -78,11 +76,7 @@ while q:
 
 print(ans)
 
-print(" ".join(map(str,c)))
-
-
-
+print(" ".join(map(str, c)))
 
 
 # Made By Mostafa_Khaled
-

@@ -1,22 +1,23 @@
 #!/usr/bin/env python
 import math
-n = int(input()) 
+n = int(input())
 a = list(map(int, input().split()))
 
-mod = 10**9+7
+mod = 10**9 + 7
 
-def lcm(a, b): 
-    return a*b//math.gcd(a, b)
+
+def lcm(a, b):
+    return a * b // math.gcd(a, b)
+
 
 l = a[0]
 for i in range(n):
     l = lcm(l, a[i])
-l %= mod 
+l %= mod
 
-ans = 0 
+ans = 0
 for i in range(n):
-    inv = pow(a[i], mod-2, mod)
-    ans += (l*inv)%mod
+    inv = pow(a[i], mod - 2, mod)
+    ans += (l * inv) % mod
 
-print((ans%mod))
-
+print((ans % mod))

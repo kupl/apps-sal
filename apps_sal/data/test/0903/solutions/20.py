@@ -11,26 +11,24 @@ if n == 1:
 
 else:
     w = sorted(w)
-    idx = len(w)//2 + 1
+    idx = len(w) // 2 + 1
     mul = 1
     gain = 0
 
-    for i in range(idx-1, len(w)-1):
-        d = w[i+1] - w[i]
+    for i in range(idx - 1, len(w) - 1):
+        d = w[i + 1] - w[i]
         if k > d * mul:
-            #remainder
-            k = k - d*mul
+            # remainder
+            k = k - d * mul
             gain += d
         else:
             gain += k // mul
-            k = k - d*mul
+            k = k - d * mul
             break
-            
+
         mul += 1
     # if for last elt
     if k > 0:
         gain += k // mul
-    
-    print(w[idx-1] + gain)
-        
 
+    print(w[idx - 1] + gain)

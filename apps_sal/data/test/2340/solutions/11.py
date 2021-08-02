@@ -12,7 +12,7 @@ for _ in range(q):
     pos = h
     i = 1
     while True:
-        if i >= n+1:
+        if i >= n + 1:
             break
         if pos == p[i] + 1:
             pos = p[i]

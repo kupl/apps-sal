@@ -1,14 +1,14 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-from collections import defaultdict
 
 
 class PrimeFactor():
 
     def __init__(self, n):                  # エラトステネス　O(N loglog N)
         self.n = n
-        self.table = list(range(n+1))
-        self.table[2::2] = [2]*(n//2)
+        self.table = list(range(n + 1))
+        self.table[2::2] = [2] * (n // 2)
         for p in range(3, int(n**0.5) + 2, 2):
             if self.table[p] == p:
                 self.table[p * p::2 * p] = [p] * ((n - p * p - 1) // (2 * p) + 1)
@@ -62,12 +62,13 @@ class PrimeFactor():
         else:
             return res % mod
 
+
 mod = 10 ** 9 + 7
 
 N = int(input())
 A = list(map(int, input().split()))
 table = PrimeFactor(10**6)
-num = table.prime_lcm(A,mod)
+num = table.prime_lcm(A, mod)
 
 res = 0
 for a in A:

@@ -1,5 +1,6 @@
 import sys
 
+
 def __starting_point():
 
     n, m = [int(i) for i in sys.stdin.readline().rstrip().split(' ')]
@@ -35,4 +36,6 @@ def __starting_point():
     for i in range(m):
         idx = l_rank[i]
         print(unique_elem_cumulative_count[idx])
+
+
 __starting_point()

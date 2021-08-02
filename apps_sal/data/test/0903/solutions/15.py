@@ -1,5 +1,5 @@
 n, k = map(int, input().split())
-assert( n % 2 == 1 )
+assert(n % 2 == 1)
 arr = sorted(map(int, input().split()))
 
 arr = arr[n // 2:]

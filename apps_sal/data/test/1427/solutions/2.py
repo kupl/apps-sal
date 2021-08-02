@@ -3,11 +3,14 @@ a = list(map(int, input().split()))
 
 mod = 1000000007
 
+
 def add(a, b):
     return (a + b) % mod
 
+
 def mul(a, b):
     return (a * b) % mod
+
 
 def pow(p, k):
     ret = 1
@@ -19,12 +22,14 @@ def pow(p, k):
         k //= 2
     return ret
 
+
 def inv(p, k):
     return pow(p, mod - k - 1)
 
+
 lcm = {}
 ps = []
-for i in range(n): 
+for i in range(n):
     ai = a[i]
     p = 2
     ps.append({})
@@ -49,5 +54,3 @@ for i in range(n):
     ret = add(ret, prod)
 
 print(ret)
-        
-

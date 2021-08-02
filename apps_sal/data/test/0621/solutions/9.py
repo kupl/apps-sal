@@ -12,7 +12,6 @@ for j, i in enumerate(s):
             jumlah += 1
     else:
         jumlah += 1
-    if j == len(s)-1:
+    if j == len(s) - 1:
         berkas.append(str(jumlah))
 print(len(berkas), " ".join(berkas), sep='\n')
-

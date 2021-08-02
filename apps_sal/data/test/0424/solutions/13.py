@@ -1,4 +1,4 @@
-def max_less_prime_divisor(n): # 1 for primes
+def max_less_prime_divisor(n):  # 1 for primes
     d, max_d = 2, 1
     while d * d <= n:
         while n % d == 0:
@@ -6,6 +6,7 @@ def max_less_prime_divisor(n): # 1 for primes
             n //= d
         d += 1
     return n if n != 1 and max_d != 1 else max_d
+
 
 n = int(input())
 m = n - max_less_prime_divisor(n) + 1
@@ -19,5 +20,3 @@ for i in range(2, m):
         for j in range(i * i, m, i):
             is_prime[j] = False
 print(answer)
-    
-

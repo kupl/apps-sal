@@ -10,4 +10,3 @@ for v in a:
 for v in a:
     res += d // v
 print((res % mod))
-

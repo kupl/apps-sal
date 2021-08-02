@@ -9,4 +9,3 @@ for i in range(n - 1, -1, -1):
 while m:
     print(a[int(input()) - 1])
     m -= 1
-

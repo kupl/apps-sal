@@ -19,6 +19,5 @@ for _ in range(q):
                 dangers.append(p[i])
         #print(rows, i, p[i])
         i += 1
-   
-    print(len(dangers))
 
+    print(len(dangers))

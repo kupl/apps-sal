@@ -13,7 +13,7 @@ for i in range(N):
     l = A[i] // math.gcd(A[i], l) * l
 
 # ans = 0
-A = [l // x for x in A];
+A = [l // x for x in A]
 ans = list(itertools.accumulate(A))[-1]
 ans %= MOD
 
@@ -22,4 +22,3 @@ ans %= MOD
 #     ans %= MOD
 
 print(ans)
-

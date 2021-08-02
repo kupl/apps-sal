@@ -1,11 +1,12 @@
 def mp():
     return map(int, input().split())
 
+
 t = int(input())
 for tt in range(t):
     h, n = mp()
     a = list(mp()) + [0]
-    
+
     ans = 0
     last = h
     i = 1

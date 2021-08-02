@@ -47,4 +47,3 @@ for i in range(N):
     result += lcm * pow(A[i], -1, m)
     result %= m
 print(result)
-

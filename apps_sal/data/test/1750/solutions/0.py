@@ -11,6 +11,8 @@ s = max([len(p) for p in arr]) + 1
 print(s)
 
 colored = [0] * n
+
+
 def dfs(v, c, d):
     colored[v] = p = c
     for u in arr[v]:
@@ -19,6 +21,8 @@ def dfs(v, c, d):
             if c == d:
                 c = c + 1 if c < s else 1
             dfs(u, c, p)
+
+
 if s > 3:
     dfs(0, 1, 0)
 else:
