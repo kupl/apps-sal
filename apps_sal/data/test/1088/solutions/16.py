@@ -1,4 +1,6 @@
+import itertools
 from collections import defaultdict
+
 
 class UnionFind():
     def __init__(self, n):
@@ -49,37 +51,36 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
-        
-import itertools
 
-N,K = map(int,input().split())
-l = [list(map(int,input().split())) for i in range(N)]
-#print(l)
+
+N, K = map(int, input().split())
+l = [list(map(int, input().split())) for i in range(N)]
+# print(l)
 a = UnionFind(N)
-for v in itertools.combinations(range(N),2):
+for v in itertools.combinations(range(N), 2):
     for i in range(N):
         if l[i][v[0]] + l[i][v[1]] > K:
             break
-        if i == N-1:
-            a.union(v[0],v[1])
-#print(a)
-        
+        if i == N - 1:
+            a.union(v[0], v[1])
+# print(a)
+
 b = UnionFind(N)
-for v in itertools.combinations(range(N),2):
+for v in itertools.combinations(range(N), 2):
     for i in range(N):
         if l[v[0]][i] + l[v[1]][i] > K:
             break
-        if i == N-1:
-            b.union(v[0],v[1])
-#print(b)
+        if i == N - 1:
+            b.union(v[0], v[1])
+# print(b)
 
 ans = 1
 
 for x in a.roots():
-    for i in range(1,a.size(x)+1):
-        ans = (ans * i)%998244353
+    for i in range(1, a.size(x) + 1):
+        ans = (ans * i) % 998244353
 for x in b.roots():
-    for i in range(1,b.size(x)+1):
-        ans = (ans * i)%998244353
-    
+    for i in range(1, b.size(x) + 1):
+        ans = (ans * i) % 998244353
+
 print(ans)

@@ -13,8 +13,8 @@ class Mint:
         x0, x1, y0, y1 = 0, 1, 1, 0
         while a != 0:
             (q, a), b = divmod(b, a), a
-            y0, y1 = y1, y0 - q*y1
-            x0, x1 = x1, x0 - q*x1
+            y0, y1 = y1, y0 - q * y1
+            x0, x1 = x1, x0 - q * x1
         return b, x0, y0
 
     def modinv(self, n):
@@ -95,17 +95,17 @@ class MintFactorial:
         """ Calc from self._size to n!^-1 : O(n) """
         if n >= self.mod:
             n = self.mod
-        if self._size < n+1:
-            for i in range(self._size, n+1):
-                self._factorial.append(self._factorial[i-1]*i % self.mod)
-            self._size = n+1
+        if self._size < n + 1:
+            for i in range(self._size, n + 1):
+                self._factorial.append(self._factorial[i - 1] * i % self.mod)
+            self._size = n + 1
 
     def fact_inv(self, n):
         """ n!^-1 (mod m) """
         assert n >= self.mod
-        if self._size_inv < n+1:
-            self._factorial_inv += [-1] * (n+1-self._size_inv)
-            self._size_inv = n+1
+        if self._size_inv < n + 1:
+            self._factorial_inv += [-1] * (n + 1 - self._size_inv)
+            self._size_inv = n + 1
         if self._factorial_inv[n] == -1:
             self._factorial_inv[n] = self.modinv(self.fact(n))
         return self._mint(self._factorial_inv[n])
@@ -114,12 +114,12 @@ class MintFactorial:
         """ Calc r!^1 ... n!^-1 : O(n-r) """
         if n >= self.m:
             n = self.m - 1
-        if self._size_inv < n+1:
-            self._factorial_inv += [-1] * (n+1-self._size_inv)
-            self._size_inv = n+1
+        if self._size_inv < n + 1:
+            self._factorial_inv += [-1] * (n + 1 - self._size_inv)
+            self._size_inv = n + 1
         self._factorial_inv[n] = self.modinv(self.fact(n))
-        for i in range(n, r+1, -1):
-            self._factorial_inv[i-1] = self._factorial_inv[i]*i % self.mod
+        for i in range(n, r + 1, -1):
+            self._factorial_inv[i - 1] = self._factorial_inv[i] * i % self.mod
 
     @staticmethod
     def xgcd(a, b):
@@ -141,33 +141,33 @@ class MintFactorial:
         """ nCr (mod m) """
         if r > n:
             return 0
-        t = self(n)*self.fact_inv(n-r) % self.mod
-        return self._mint(t*self.fact_inv(r))
+        t = self(n) * self.fact_inv(n - r) % self.mod
+        return self._mint(t * self.fact_inv(r))
 
     def comb_(self, n, r):
         """ nCr (mod m) : O(r) """
         c = 1
-        for i in range(1, r+1):
-            c *= (n-i+1) * self.fact_inv(i)
+        for i in range(1, r + 1):
+            c *= (n - i + 1) * self.fact_inv(i)
             c %= self.mod
         return self._mint(c)
 
     def comb_with_repetition(self, n, r):
         """ nHr (mod m) """
-        t = self(n+r-1)*self.fact_inv(n-1) % self.mod
-        return self._mint(t*self.fact_inv(r))
+        t = self(n + r - 1) * self.fact_inv(n - 1) % self.mod
+        return self._mint(t * self.fact_inv(r))
 
     def perm(self, n, r):
         """ nPr (mod m) """
         if r > n:
             return 0
-        return self._mint(self(n)*self.fact_inv(n-r))
+        return self._mint(self(n) * self.fact_inv(n - r))
 
 
 class UnionFind:
     def __init__(self, n):
         self._n = n
-        self._table = [-1]*n
+        self._table = [-1] * n
 
     def _root(self, x):
         stack = []
@@ -223,15 +223,15 @@ mod = 998244353
 fact = MintFactorial(mod).fact
 
 X = UnionFind(n)
-for y0 in range(n-1):
-    for y1 in range(y0+1, n):
-        if all(A[y0][x] + A[y1][x] <= k for x in range(n)): 
+for y0 in range(n - 1):
+    for y1 in range(y0 + 1, n):
+        if all(A[y0][x] + A[y1][x] <= k for x in range(n)):
             X.unite(y0, y1)
 
 Y = UnionFind(n)
-for x0 in range(n-1):
-    for x1 in range(x0+1, n):
-        if all(A[y][x0] + A[y][x1] <= k for y in range(n)): 
+for x0 in range(n - 1):
+    for x1 in range(x0 + 1, n):
+        if all(A[y][x0] + A[y][x1] <= k for y in range(n)):
             Y.unite(x0, x1)
 
 s = 1

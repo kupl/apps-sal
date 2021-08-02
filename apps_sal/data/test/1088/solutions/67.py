@@ -1,5 +1,12 @@
+from collections import defaultdict
 from sys import stdin, setrecursionlimit
-import bisect, collections, copy, heapq, itertools, math, string
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
 setrecursionlimit(10**8)
 
 INF = float("inf")
@@ -9,8 +16,9 @@ MOD = 1000000007
 def input():
     return stdin.readline().strip()
 
-#unionfind
-from collections import defaultdict
+
+# unionfind
+
 
 class UnionFind():
     def __init__(self, n):
@@ -63,7 +71,6 @@ class UnionFind():
         return '\n'.join(f'{r}: {m}' for r, m in list(self.all_group_members().items()))
 
 
-
 def main():
 
     n, mx = list(map(int, input().split()))
@@ -73,17 +80,17 @@ def main():
     uf2 = UnionFind(n)
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             for k in range(n):
-                if a[i][k]+a[j][k] > mx:
+                if a[i][k] + a[j][k] > mx:
                     break
             else:
                 uf1.union(i, j)
 
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             for k in range(n):
-                if a[k][i]+a[k][j] > mx:
+                if a[k][i] + a[k][j] > mx:
                     break
             else:
                 uf2.union(i, j)
@@ -93,7 +100,7 @@ def main():
 
     def factorial(n):
         rec = 1
-        for x in range(2, n+1):
+        for x in range(2, n + 1):
             rec *= x
             rec %= mod
         return rec
@@ -105,25 +112,14 @@ def main():
     for lst in list(uf2.all_group_members().values()):
         ans *= factorial(len(lst))
         ans %= mod
-    
+
     print(ans)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

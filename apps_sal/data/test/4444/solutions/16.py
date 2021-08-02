@@ -1,3 +1,3 @@
-s,t = input().split()
+s, t = input().split()
 
-print(t+s)
+print(t + s)

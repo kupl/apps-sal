@@ -26,17 +26,18 @@ class UnionFind:
     def size(self, x):
         return -self.par[self.find(x)]
 
-n,k=list(map(int,input().split()))
-A=[list(map(int, input().split())) for _ in range(n)]
 
-uf1=UnionFind(n)
-uf2=UnionFind(n)
+n, k = list(map(int, input().split()))
+A = [list(map(int, input().split())) for _ in range(n)]
 
-mod=998244353
+uf1 = UnionFind(n)
+uf2 = UnionFind(n)
 
-fct=[1]
-for i in range(1,101):
-    fct.append(fct[-1]*i%mod)
+mod = 998244353
+
+fct = [1]
+for i in range(1, 101):
+    fct.append(fct[-1] * i % mod)
 
 for i in range(n - 1):
     for j in range(i + 1, n):
@@ -53,6 +54,3 @@ for i in range(n):
         ans *= fct[-uf2.par[i]]
         ans %= mod
 print(ans)
-
-
-

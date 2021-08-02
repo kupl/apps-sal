@@ -1,4 +1,4 @@
-#UnionFind
+# UnionFind
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -45,19 +45,22 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-    
-n,K = list(map(int,input().split()))
-mod = 998244353
-a = [list(map(int,input().split())) for i in range(n)]
 
-def factorial_mod(n,mod):
+
+n, K = list(map(int, input().split()))
+mod = 998244353
+a = [list(map(int, input().split())) for i in range(n)]
+
+
+def factorial_mod(n, mod):
     ret = 1
-    for i in range(1,n+1):
+    for i in range(1, n + 1):
         ret *= i
         ret %= mod
     return ret
 
-uf_ver = UnionFind(n+1)
+
+uf_ver = UnionFind(n + 1)
 for i in range(n):
     for j in range(n):
         is_ok = 1
@@ -68,9 +71,9 @@ for i in range(n):
                 is_ok = 0
                 break
         if is_ok:
-            uf_ver.union(i,j)
-        
-uf_hol = UnionFind(n+1)
+            uf_ver.union(i, j)
+
+uf_hol = UnionFind(n + 1)
 for i in range(n):
     for j in range(n):
         is_ok = 1
@@ -81,15 +84,14 @@ for i in range(n):
                 is_ok = 0
                 break
         if is_ok:
-            uf_hol.union(i,j)
+            uf_hol.union(i, j)
 ans = 1
 dic1 = uf_ver.all_group_members()
 for v in list(dic1.values()):
-    ans *= factorial_mod(len(v),mod)
+    ans *= factorial_mod(len(v), mod)
     ans %= mod
 dic2 = uf_hol.all_group_members()
 for v in list(dic2.values()):
-    ans *= factorial_mod(len(v),mod)
+    ans *= factorial_mod(len(v), mod)
     ans %= mod
 print(ans)
-

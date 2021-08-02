@@ -6,6 +6,7 @@ inf = float('inf')
 mod = 10 ** 9 + 7
 mod2 = 998244353
 
+
 class UnionFind:
     """
     下記から拝借
@@ -113,5 +114,6 @@ def __starting_point():
     # N, K = 50, 2 * 50 ** 2
     # A = [[N * i + j for j in range(1, N + 1)] for i in range(N)]
     # solve(N, K, A)
+
 
 __starting_point()

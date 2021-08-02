@@ -1,4 +1,4 @@
-S,T = input().split()
+S, T = input().split()
 
-ans = T+S
+ans = T + S
 print(ans)

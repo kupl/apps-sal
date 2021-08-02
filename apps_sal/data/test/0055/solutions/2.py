@@ -1,8 +1,8 @@
 def count1(n):
     count = 0
     while n > 0:
-        n &= (n-1)
-        count+= 1
+        n &= (n - 1)
+        count += 1
     return count
 
 
@@ -27,17 +27,17 @@ def find(n, k):
             c = l.count(m)
             rem = [i for i in l if i < m]
             if k - length >= c:
-                rem += [m-1]*(2*c)
+                rem += [m - 1] * (2 * c)
                 l = rem
                 length = len(l)
             else:
                 # to_add = k - length
                 # rem += [m] * (c - to_add) + [m-1] * (to_add * 2)
                 mini = min(l)
-                to_fill  = k - length
+                to_fill = k - length
                 l.remove(mini)
                 for i in range(to_fill):
-                    mini -=1
+                    mini -= 1
                     l.append(mini)
                 l.append(mini)
                 break
@@ -46,6 +46,7 @@ def find(n, k):
         # print(len(l))
         print(' '.join([str(i) for i in l]))
 
+
 # find(23,5)
 # find(13,2)
 # find(1,2)
@@ -53,4 +54,3 @@ nn, kk = list(map(int, input().strip().split()))
 find(nn, kk)
 
 # find(1000000000000000000, 100000)
-

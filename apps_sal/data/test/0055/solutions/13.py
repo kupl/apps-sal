@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n, k = read()
 b = bin(n)[2:]
 bl = len(b)
@@ -33,4 +35,3 @@ while k > 0:
     m -= 1
 for k in sorted(list(a.keys()), reverse=True):
     print(('%d ' % k) * a[k], end='')
-

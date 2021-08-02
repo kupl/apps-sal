@@ -3,6 +3,7 @@ N, K = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
 mod = 998244353
 
+
 class DSU:
     def __init__(self, n):
         self.uf = {i: i for i in range(n)}
@@ -20,6 +21,7 @@ class DSU:
                 px, py = py, px
             self.rank[py] += self.rank[px]
             self.uf[px] = py
+
 
 row, col = DSU(N), DSU(N)
 for i in range(N):

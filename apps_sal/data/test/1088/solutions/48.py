@@ -1,5 +1,6 @@
 MOD = 998244353
 
+
 def dsFind(ds, x):
     if ds[x] == x:
         return x
@@ -15,7 +16,7 @@ def dsFind(ds, x):
 def dsUnion(ds, x, y):
     xRoot = dsFind(ds, x)
     yRoot = dsFind(ds, y)
-    
+
     if xRoot != yRoot:
         ds[yRoot] = xRoot
         return True
@@ -37,18 +38,16 @@ def isSwappableRows(M, N, K, r1, r2):
     return True
 
 
-
 def f(M, N, K, isSwappable):
     ds = list(range(N))
     for i in range(N):
-        for j in range(i+1, N):
+        for j in range(i + 1, N):
             if (dsFind(ds, i) != dsFind(ds, j) and
-                isSwappable(M, N, K, i, j)):
+                    isSwappable(M, N, K, i, j)):
                 dsUnion(ds, i, j)
-    
 
     cnts = {}
-    
+
     for i in range(N):
         root = dsFind(ds, i)
         if not(root in cnts):
@@ -58,13 +57,13 @@ def f(M, N, K, isSwappable):
 
     x = 1
     for c in list(cnts.values()):
-        for i in range(2, c+1):
-            x = x*i%MOD
-                
+        for i in range(2, c + 1):
+            x = x * i % MOD
+
     return x
 
+
 N, K = list(map(int, input().split()))
-M  = [list(map(int, input().split())) for _ in range(N)]
+M = [list(map(int, input().split())) for _ in range(N)]
 
-print((f(M, N, K, isSwappableCols)*f(M, N, K, isSwappableRows)%MOD))
-
+print((f(M, N, K, isSwappableCols) * f(M, N, K, isSwappableRows) % MOD))

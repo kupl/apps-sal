@@ -1,3 +1,3 @@
 S, T = map(str, input().split())
 
-print(T+S)
+print(T + S)

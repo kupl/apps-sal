@@ -9,12 +9,14 @@ parent = [i + 1 for i in range(n)]
 rank = [0 for i in range(n)]
 size = [1 for i in range(n)]
 
+
 def find(x):
     if parent[x - 1] == x:
         return x
     else:
         parent[x - 1] = find(parent[x - 1])
         return parent[x - 1]
+
 
 def unite(x, y):
     x = find(x)
@@ -29,6 +31,7 @@ def unite(x, y):
         size[x - 1] += size[y - 1]
         if rank[x - 1] == rank[y - 1]:
             rank[x - 1] += 1
+
 
 for i in range(n):
     for j in range(i + 1, n):

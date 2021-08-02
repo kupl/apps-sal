@@ -1,6 +1,7 @@
 import sys
 import math
 
+
 def input():
     return sys.stdin.readline().rstrip()
 
@@ -53,65 +54,55 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
     def all_family_count(self):
-        return [-min(0,x) for i, x in enumerate(self.parents) ]
+        return [-min(0, x) for i, x in enumerate(self.parents)]
+
 
 def main():
-    N,K=list(map(int,input().split()))
-    mod =998244353
+    N, K = list(map(int, input().split()))
+    mod = 998244353
     A = [[] for _ in range(N)]
     for i in range(N):
-        a = list(map(int,input().split()))
-        A[i] =a
+        a = list(map(int, input().split()))
+        A[i] = a
 
     row = UnionFind(N)
     column = UnionFind(N)
 
+    # row
 
-    #row
-
-    for i in range(N-1):
-        for j in range(i+1,N):
+    for i in range(N - 1):
+        for j in range(i + 1, N):
             for w in range(N):
-                if A[i][w] +A[j][w] >K:
+                if A[i][w] + A[j][w] > K:
                     break
             else:
-                row.union(i,j)
+                row.union(i, j)
 
-
-    for i in range(N-1):
-        for j in range(i+1,N):
+    for i in range(N - 1):
+        for j in range(i + 1, N):
             for w in range(N):
-                if A[w][i] +A[w][j] >K:
+                if A[w][i] + A[w][j] > K:
                     break
             else:
-                column.union(i,j)
+                column.union(i, j)
 
-    root_row  = row.all_family_count()
-    ans_row =1
+    root_row = row.all_family_count()
+    ans_row = 1
     for i in range(N):
         k = root_row[i]
-        ans_row *=math.factorial(k)
-
-
-
+        ans_row *= math.factorial(k)
 
     root_column = column.all_family_count()
-    ans_column =1
+    ans_column = 1
     for i in range(N):
         k = root_column[i]
-        ans_column *=math.factorial(k)
-    
+        ans_column *= math.factorial(k)
 
-
-
-    print((ans_column*ans_row%mod))
-
-    
-
-    
+    print((ans_column * ans_row % mod))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

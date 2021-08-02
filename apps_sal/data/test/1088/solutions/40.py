@@ -4,8 +4,7 @@ import numpy as np
 class UnionFind:
     def __init__(self, N):
         self.root = list(range(N + 1))
-        self.size = [1] * (N+1)
-
+        self.size = [1] * (N + 1)
 
     def __getitem__(self, x):
         root = self.root
@@ -49,9 +48,9 @@ for step in range(2):
 
     # swap ok?
     for i in range(N):
-        for j in range(i+1, N):
+        for j in range(i + 1, N):
             if np.all(A[i, :] + A[j, :] <= K):
-                merge(i+1, j+1)
+                merge(i + 1, j + 1)
 
     # prod of tree-size!
     for i in uf.size:
@@ -62,4 +61,3 @@ for step in range(2):
     ans %= 998244353
 
 print(ans)
-

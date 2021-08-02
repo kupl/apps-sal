@@ -8,7 +8,8 @@ USAGE:
 Description:
 
 '''
-import sys, os
+import sys
+import os
 
 
 def main():
@@ -17,7 +18,7 @@ def main():
     '''
     n, k = list(map(int, sys.stdin.readline().split()))
 
-    x =  bin(n)[2:]
+    x = bin(n)[2:]
     if x.count('1') > k:
         print("No")
         return
@@ -35,9 +36,9 @@ def main():
 
         val -= 1
 
-    for i in range(k-cnt):
+    for i in range(k - cnt):
         ans[idx] -= 1
-        ans[idx-1] += 2
+        ans[idx - 1] += 2
         if (ans[idx] == 0):
             idx -= 1
 
@@ -61,8 +62,8 @@ def main():
 
     while (1):
         if (
-            (ans[maxIdx] > 2)
-            or ((ans[maxIdx] == 2 )and (maxIdx != minIdx))
+            (ans[maxIdx] > 2) or
+            ((ans[maxIdx] == 2 ) and (maxIdx != minIdx))
         ):
             ans[minIdx] -= 1
             ans[minIdx - 1] += 2
@@ -74,7 +75,6 @@ def main():
 
         if (maxIdx <= minIdx):
             break
-
 
     print("Yes")
     x = []
@@ -92,6 +92,7 @@ def main():
 
 
 def __starting_point():
-   main()
+    main()
+
 
 __starting_point()

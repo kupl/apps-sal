@@ -5,7 +5,7 @@ class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
-        self.ans = n * (n - 1) // 2  ######
+        self.ans = n * (n - 1) // 2
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -23,10 +23,10 @@ class UnionFind():
 
         if self.parents[x] > self.parents[y]:
             x, y = y, x
-        sx = self.size(x)  ######
-        sy = self.size(y)  ######
-        self.ans += sx * (sx - 1) // 2 + sy * (sy - 1) // 2  ######
-        self.ans -= (sx + sy) * (sx + sy - 1) // 2  ######
+        sx = self.size(x)
+        sy = self.size(y)
+        self.ans += sx * (sx - 1) // 2 + sy * (sy - 1) // 2
+        self.ans -= (sx + sy) * (sx + sy - 1) // 2
 
         self.parents[x] += self.parents[y]
         self.parents[y] = x
@@ -58,7 +58,7 @@ class UnionFind():
 mod = 998244353
 pr = [1]
 for i in range(1, 50):
-    pr.append(pr[-1]*i%mod)
+    pr.append(pr[-1] * i % mod)
 
 n, k = list(map(int, input().split()))
 m = [list(map(int, input().split())) for _ in range(n)]
@@ -87,4 +87,3 @@ for uf in ufs:
         ret *= pr[uf.size(r)]
         ret %= mod
 print(ret)
-

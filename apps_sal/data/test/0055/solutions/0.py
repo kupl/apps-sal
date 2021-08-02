@@ -1,9 +1,10 @@
 from collections import defaultdict
 
+
 def solve(n, k):
     as_bin = bin(n)[2:]
     cnt = defaultdict(int)
-    cnt.update({i : 1 for i, b in enumerate(reversed(as_bin)) if b == '1'})
+    cnt.update({i: 1 for i, b in enumerate(reversed(as_bin)) if b == '1'})
     curr_len = len(cnt)
     curr_pow = len(as_bin) - 1
 
@@ -31,6 +32,7 @@ def solve(n, k):
         ans.extend([i] * cnt[i])
     return ans
 
+
 n, k = [int(v) for v in input().split()]
 ans = solve(n, k)
 
@@ -39,4 +41,3 @@ if ans is None:
 else:
     print('Yes')
     print(' '.join(str(c) for c in ans))
-

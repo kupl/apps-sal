@@ -8,14 +8,15 @@ for i in range(N):
 memo = [1]
 for i in range(1, 52):
     num = memo[-1]
-    memo.append(num*i%mod)
+    memo.append(num * i % mod)
+
 
 class UnionFind:
     def __init__(self, n):
         # 負  : 根であることを示す。絶対値はランクを示す
         # 非負: 根でないことを示す。値は親を示す
         self.table = [-1] * n
- 
+
     def _root(self, x):
         stack = []
         tbl = self.table
@@ -28,7 +29,7 @@ class UnionFind:
 
     def count(self, x):
         return -self.table[self._root(x)]
- 
+
     def find(self, x, y):
         return self._root(x) == self._root(y)
 
@@ -47,11 +48,12 @@ class UnionFind:
             self.table[r1] = r2
             self.table[r2] += d1
 
+
 uni1 = UnionFind(N)
 uni2 = UnionFind(N)
 
-for i in range(N-1):
-    for j in range(i+1, N):
+for i in range(N - 1):
+    for j in range(i + 1, N):
         cur1 = 0
         cur2 = 0
         for k in range(N):
@@ -76,7 +78,6 @@ for i in range(N):
 
 ans = 1
 for num in lsnum:
-    ans = ans * memo[num] %mod
+    ans = ans * memo[num] % mod
 ans %= mod
 print(ans)
-

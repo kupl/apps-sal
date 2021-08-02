@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,20 +15,21 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
 
 N, K, X = MAP()
 A = LIST()
 
-dp = list2d(X+1, N+1, -1)
+dp = list2d(X + 1, N + 1, -1)
 dp[0][0] = 0
 for i in range(X):
     for j in range(N):
         if dp[i][j] == -1:
             continue
-        for k in range(j, min(j+K, N)):
-            dp[i+1][k+1] = max(dp[i+1][k+1], dp[i][j] + A[k])
+        for k in range(j, min(j + K, N)):
+            dp[i + 1][k + 1] = max(dp[i + 1][k + 1], dp[i][j] + A[k])
 ans = max(dp[X][-K:])
 print(ans)
-

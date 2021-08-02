@@ -1,6 +1,9 @@
 
-import itertools,math
+import itertools
+import math
 from collections import defaultdict
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -50,11 +53,13 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in list(self.all_group_members().items()))
-n,k = list(map(int,input().split()))
-a = [list(map(int,input().split())) for i in range(n)]
+
+
+n, k = list(map(int, input().split()))
+a = [list(map(int, input().split())) for i in range(n)]
 a_row = []
 a_column = []
-for i in itertools.combinations(list(range(n)),2):
+for i in itertools.combinations(list(range(n)), 2):
     for j in range(n):
         if a[i[0]][j] + a[i[1]][j] > k:
             break
@@ -68,13 +73,12 @@ for i in itertools.combinations(list(range(n)),2):
 uf_row = UnionFind(n)
 uf_column = UnionFind(n)
 for i in a_row:
-    uf_row.union(i[0],i[1])
+    uf_row.union(i[0], i[1])
 for i in a_column:
-    uf_column.union(i[0],i[1])
+    uf_column.union(i[0], i[1])
 ans = 1
 for i in list(uf_row.all_group_members().values()):
     ans = ans * math.factorial(len(i)) % 998244353
 for i in list(uf_column.all_group_members().values()):
     ans = ans * math.factorial(len(i)) % 998244353
 print(ans)
-

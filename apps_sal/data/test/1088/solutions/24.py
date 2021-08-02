@@ -74,6 +74,7 @@ def count_point(np_array):
         point %= mod
     return point
 
+
 ans = count_point(a_lists)
 a_lists_T = a_lists.T
 ans *= count_point(a_lists_T)

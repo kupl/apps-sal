@@ -6,24 +6,31 @@ class TwelvefoldWay:
         self.md = mod
         for i in range(2, n + 1):
             self.g1.append((self.g1[-1] * i) % self.md)
+
     def fact(self, n):
         return self.g1[n]
+
     def perm(self, n, k):
         return (self.g1[n] * self.g2[n - k]) % self.md
+
     def comb(n, k):
         if k < 0 or k > n:
             return 0
         k = min(k, n - k)
         return self.g1[n] * self.g2[k] * self.g2[n - k] % self.md
+
     def homo(n, k):
         return self.comb(n + k - 1, k)
 
 # 1-index
+
+
 class UnionFind:
     def __init__(self, n):
         self.root = [i for i in range(n + 1)]
         self.size = [1] * (n + 1)
         self.nn = n
+
     def find(self, x):
         y = self.root[x]
         if x == y:
@@ -32,6 +39,7 @@ class UnionFind:
             z = self.find(y)
             self.root[x] = z
             return z
+
     def union(self, x, y):
         rx = self.find(x)
         ry = self.find(y)
@@ -47,6 +55,7 @@ class UnionFind:
                 self.root[rx] = ry
                 self.size[ry] = sx + sy
         return sx * sy
+
     def size_list(self, n):
         ret = []
         cnt = [0] * (n + 1)
@@ -55,12 +64,15 @@ class UnionFind:
                 cnt[self.find(i)] = 1
                 ret.append(self.size[self.find(i)])
         return ret
+
     def check(self):
         print([self.find(i) for i in range(1, self.nn + 1)])
+
 
 N, K = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
 MOD = 998244353
+
 
 def f(A):
     edge = []
@@ -84,8 +96,9 @@ def f(A):
     ret = 1
     for n in uf.size_list(N):
         ret = (ret * tw.fact(n)) % MOD
-    
+
     return ret
+
 
 answer = f(A) % MOD
 

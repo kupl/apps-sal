@@ -63,4 +63,3 @@ cntC = 1
 for group in col_dsu.groups():
     cntC = cntC * fact[len(group)] % M
 print((cntR * cntC % M))
-
