@@ -6,4 +6,3 @@ if n > m:
         print(n * a)
 else:
     print(min(b, n * a))
-

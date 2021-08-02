@@ -7,4 +7,3 @@ else:
     ans = n_big * b + min(rest * a, b)
 
 print(ans)
-

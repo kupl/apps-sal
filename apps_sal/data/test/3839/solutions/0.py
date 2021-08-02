@@ -8,4 +8,3 @@ for i in range(above):
     print(2 * i + 1, 3)
 for i in range(below):
     print(i, 0)
-

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 N, K = list(map(int, input().split()))
@@ -14,7 +14,7 @@ now = 0
 while move < K:
     town[now] = move
     now = A[now]
-    move += 1 
+    move += 1
     if town[now] != -1:
         break
 
@@ -24,4 +24,3 @@ for i in range(cnt):
     now = A[now]
 
 print((now + 1))
-

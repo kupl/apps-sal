@@ -9,20 +9,20 @@ previous = []
 
 for i in range(n):
     s = stdin.readline().strip()
-    
+
     if not previous or previous[-1] != 'f':
         cnt = 0
-            
+
         for j in range(n, -1, -1):
             cnt = (cnt + dp[i - 1][j]) % MOD
             dp[i][j] = cnt
     else:
         cnt = 0
-            
+
         for j in range(n + 1, -1, -1):
             cnt = dp[i - 1][j - 1]
             dp[i][j] = cnt
-    
+
     previous.append(s)
 
 ans = 0

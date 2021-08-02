@@ -1,8 +1,9 @@
 l = [int(e) for e in input().strip()]
 
+
 def lei00(l):
     result = []
-    for i in range(len(l)-1, -1, -1):
+    for i in range(len(l) - 1, -1, -1):
         if l[i] == 0:
             result.append(i)
         if len(result) == 2:
@@ -11,13 +12,14 @@ def lei00(l):
         return None
     return 2 * len(l) - result[0] - result[1] - 3
 
+
 def lei(l, x, y):
     assert x != y
 
     ix = None
     iy = None
 
-    for i in range(len(l)-1, -1, -1):
+    for i in range(len(l) - 1, -1, -1):
         if l[i] == x and ix == None:
             ix = i
         elif l[i] == y and iy == None:
@@ -43,10 +45,9 @@ def lei(l, x, y):
                     iii += 1
                     if l[iii] != 0:
                         break
-                result += iii-1
+                result += iii - 1
             if len(l) == 3:
                 return None
-
 
     return result
 
@@ -65,9 +66,3 @@ if result == None:
     print(-1)
 else:
     print(result)
-
-
-
-
-
-

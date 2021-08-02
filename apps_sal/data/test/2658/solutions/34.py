@@ -1,7 +1,7 @@
 def main():
-    N,K = map(int,input().split())
-    A = [0] + list(map(int,input().split()))
-    
+    N, K = map(int, input().split())
+    A = [0] + list(map(int, input().split()))
+
     i = 1
     pas = [i]
     pas_set = set(pas)
@@ -20,7 +20,8 @@ def main():
     if k >= K:
         print(ans)
     else:
-        rpnum = (K-rps)%(k-rps)
-        print(pas[rps+rpnum])
+        rpnum = (K - rps) % (k - rps)
+        print(pas[rps + rpnum])
+
 
 main()

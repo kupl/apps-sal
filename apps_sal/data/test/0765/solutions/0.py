@@ -10,4 +10,3 @@ while t > s:
         a += 1
         l = 0
 print(a)
-

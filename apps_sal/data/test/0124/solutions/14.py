@@ -15,4 +15,3 @@ if a >= x:
         print("NO")
 else:
     print("NO")
-

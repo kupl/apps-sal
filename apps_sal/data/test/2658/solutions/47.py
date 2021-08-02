@@ -7,7 +7,7 @@ set_town = set()
 town = 1
 
 for i, v in enumerate(A):
-    dic[i+1] = v
+    dic[i + 1] = v
 
 for _ in range(K):
     list_town.append(town)

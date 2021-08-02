@@ -1,5 +1,5 @@
 def solve():
-    rd = lambda : list(map(int, input().split()))
+    def rd(): return list(map(int, input().split()))
     n = int(input())
     p = []
     for i in range(n):
@@ -15,5 +15,6 @@ def solve():
             for j in range(1, indent + 1):
                 dp[j] = (dp[j - 1] + dp[j]) % L
     print(dp[indent])
+
 
 solve()

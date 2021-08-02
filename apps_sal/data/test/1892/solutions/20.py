@@ -22,4 +22,3 @@ for i in range(n):
         for j in range(1, len(dp)):
             dp[j] = (dp[j] + dp[j - 1]) % 1000000007
 print(dp[-1])
-

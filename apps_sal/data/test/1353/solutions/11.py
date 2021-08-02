@@ -4,7 +4,8 @@ def main():
     if b / m >= a:
         print(n * a)
     else:
-        print(min((n//m)*b+(n%m)*a, (n//m+1)*b))
+        print(min((n // m) * b + (n % m) * a, (n // m + 1) * b))
+
 
 def __starting_point():
     main()

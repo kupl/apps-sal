@@ -5,6 +5,7 @@ def main():
         if x % i == 0:
             if x // i <= n:
                 count += 1
-    print(count)    
+    print(count)
+
 
 main()

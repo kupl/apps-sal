@@ -10,7 +10,7 @@ def main():
     while flag < 1:
         if trans < k:
             trans += 1
-            tsugi = inlis[now-1]
+            tsugi = inlis[now - 1]
             now = tsugi
             if tsugi not in indic:
                 indic[tsugi] = trans
@@ -24,19 +24,18 @@ def main():
         if trans == k:
             print(tsugi)
             return
-    
-    loopamari = (k-yokei) % loop
+
+    loopamari = (k - yokei) % loop
 
     for _ in range(loopamari):
-        tsugi = inlis[now-1]
+        tsugi = inlis[now - 1]
         now = tsugi
-    
+
     print(now)
-    
-
-
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

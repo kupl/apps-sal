@@ -4,5 +4,3 @@ while t > s * q:
     s *= q
     r += 1
 print(r)
-    
-

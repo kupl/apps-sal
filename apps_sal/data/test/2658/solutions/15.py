@@ -13,4 +13,3 @@ for k in range(1, K + 1):
     else:
         done[tmp] = k
 print((tmp + 1))
-

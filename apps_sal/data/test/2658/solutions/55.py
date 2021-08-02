@@ -29,4 +29,3 @@ while cnt < k:
     res = A[res - 1]
 
 print(res)
-

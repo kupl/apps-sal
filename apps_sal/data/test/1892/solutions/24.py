@@ -17,5 +17,3 @@ for c in p:
     i += 1
 
 print(dp[n][0] % MOD)
-
-

@@ -3,8 +3,5 @@ ans = 0
 while s < t:
     ans += 1
     s = s * q
-    
-print (ans)
 
-
-
+print(ans)

@@ -1,8 +1,8 @@
 def __starting_point():
 
-    n,k = list(map(int,input().split()))
+    n, k = list(map(int, input().split()))
     A = [0]
-    AA= list(map(int,input().split()))
+    AA = list(map(int, input().split()))
     A = A + AA
 
     B = set()
@@ -39,8 +39,9 @@ def __starting_point():
     if k >= cnt:
         tmp = k - cnt
         tmp = tmp % (len(C))
-        print((ANS[tmp-1]))
+        print((ANS[tmp - 1]))
     else:
         print((D[k]))
+
 
 __starting_point()
