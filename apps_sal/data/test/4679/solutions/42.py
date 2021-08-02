@@ -4,7 +4,7 @@ a = a[1:]
 if len(a) == 0:
     print("A")
     return
-for _ in range(len(a)+len(b)+len(c)):
+for _ in range(len(a) + len(b) + len(c)):
     if ref == "a":
         if len(a) == 0:
             print("A")
@@ -18,7 +18,7 @@ for _ in range(len(a)+len(b)+len(c)):
             return
         ref = b[0]
         b = b[1:]
-        
+
     else:
         if len(c) == 0:
             print("C")

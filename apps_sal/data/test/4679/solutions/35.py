@@ -1,7 +1,7 @@
 SA = input()
 SB = input()
 SC = input()
-S = {'a' : SA, 'b' : SB, 'c' : SC}
+S = {'a': SA, 'b': SB, 'c': SC}
 card = S['a'][0]
 while True:
     if S[card] == '':

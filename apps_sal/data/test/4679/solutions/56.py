@@ -29,4 +29,3 @@ while True:
         now = Sc[0]
         Sc = Sc[1:len(Sc) + 1]
         continue
-

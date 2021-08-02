@@ -1,8 +1,10 @@
 from collections import defaultdict
 
+
 def rp():
     s = input().split()
     return (s[0], int(s[1]))
+
 
 ps = {}
 n = int(input())

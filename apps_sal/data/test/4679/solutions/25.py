@@ -1,4 +1,5 @@
-Cards = {'a':list(input()),'b':list(input()),'c':list(input())}
+Cards = {'a': list(input()), 'b': list(input()), 'c': list(input())}
+
 
 def solve(p):
     nonlocal Cards
@@ -6,5 +7,6 @@ def solve(p):
         return p.capitalize()
     np = Cards[p].pop(0)
     return solve(np)
+
 
 print(solve('a'))

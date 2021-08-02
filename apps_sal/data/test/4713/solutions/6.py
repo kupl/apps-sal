@@ -9,5 +9,5 @@ for i in range(n):
     else:
         x -= 1
     ans = max(ans, x)
-      
+
 print(ans)

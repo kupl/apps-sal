@@ -17,4 +17,3 @@ while not R == "":
         SC = SC[1:]
         E = "C"
 print(E)
-

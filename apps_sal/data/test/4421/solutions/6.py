@@ -16,4 +16,3 @@ for i in range(1, k // 2 + 1):
         else:
             ans += min(di[i], di[k - i])
 print(ans * 2)
-

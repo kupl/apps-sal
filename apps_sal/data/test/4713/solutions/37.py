@@ -6,8 +6,7 @@ for i in range(n):
     ans = max(ans, x)
     if s[i] == 'I':
         x += 1
-    else :
+    else:
         x -= 1
     ans = max(ans, x)
 print(ans)
-

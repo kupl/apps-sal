@@ -20,7 +20,7 @@ def main():
             p, v = input().split()
             v = int(v)
             d[project][version].append((p, v))
-        if i != n-1:
+        if i != n - 1:
             input()
     q = Queue()
     q.put(start)
@@ -46,11 +46,10 @@ def main():
         v = res[p]
         ans.append((p, v))
 
-    ans = sorted(ans, key= lambda z: z[0])
+    ans = sorted(ans, key=lambda z: z[0])
     print(len(ans))
     for (p, v) in ans:
         print(p, v)
 
 
 main()
-

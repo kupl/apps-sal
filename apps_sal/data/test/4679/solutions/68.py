@@ -13,4 +13,3 @@ while True:
         nextTurn = ord(S[turn][index[turn]]) - ord('a')
         index[turn] += 1
         turn = nextTurn
-

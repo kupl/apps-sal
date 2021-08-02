@@ -1,4 +1,6 @@
-import sys, re, os
+import sys
+import re
+import os
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians, gcd
 from itertools import permutations, combinations, product, accumulate
@@ -36,5 +38,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

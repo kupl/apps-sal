@@ -11,7 +11,6 @@ def main():
         else:
             cnt[t] += 1
     print(ans)
- 
- 
-main()
 
+
+main()

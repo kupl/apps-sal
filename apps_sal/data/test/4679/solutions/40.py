@@ -24,8 +24,10 @@ def main():
                 print('C')
                 return
             turn = SC.pop()
- 
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

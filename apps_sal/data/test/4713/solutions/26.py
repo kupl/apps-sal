@@ -5,7 +5,7 @@ counter = 0
 li = [0]
 for i in range(N):
     if S[i] == 'I':
-        counter +=1
+        counter += 1
     else:
         counter -= 1
     li.append(counter)

@@ -13,4 +13,3 @@ while idx < N:
     idx += 1
 
 print(max_num)
-

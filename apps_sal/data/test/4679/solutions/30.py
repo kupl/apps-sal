@@ -1,5 +1,5 @@
-A,B,C = [input() for i in range(3)]
-turn="a"
+A, B, C = [input() for i in range(3)]
+turn = "a"
 
 while True:
     if turn == "a":
@@ -19,4 +19,4 @@ while True:
             print("C")
             break
         turn = C[0]
-        C = C[1:] 
+        C = C[1:]

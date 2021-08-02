@@ -5,6 +5,7 @@ def rp():
     s = input().split()
     return (s[0], int(s[1]))
 
+
 ps = {}
 n = int(input())
 
@@ -36,4 +37,3 @@ del u[root[0]]
 print(len(u))
 for i in sorted(u):
     print(i, u[i][0])
-

@@ -1,5 +1,5 @@
-S = {i:list(input()) for i in "abc"}
+S = {i: list(input()) for i in "abc"}
 s = "a"
 while S[s]:
-  s = S[s].pop(0)
+    s = S[s].pop(0)
 print(s.upper())

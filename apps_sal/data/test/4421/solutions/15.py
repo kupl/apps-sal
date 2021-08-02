@@ -19,4 +19,3 @@ for i in range(1, k):
         handled[i] = handled[k - i] = True
 
 print(result)
-

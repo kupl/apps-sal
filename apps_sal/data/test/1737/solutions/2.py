@@ -1,9 +1,10 @@
 # f = open("input.txt")
 # def readline():
-    # return f.readline().strip()
+# return f.readline().strip()
 
 def readline():
     return input()
+
 
 def read_project():
     project = readline().split(" ")
@@ -17,9 +18,10 @@ def read_project():
             deps[proj] = max(deps[proj], version)
         else:
             deps[proj] = version
-    
+
     return (tuple(project), deps)
-    
+
+
 def make_like_buck():
     projects_num = int(readline())
 
@@ -53,9 +55,10 @@ def make_like_buck():
         curr_proj = list(curr_deps.items())
 
     RESULT_DEPS.pop(polikarp_proj[0])
-    
+
     print(len(RESULT_DEPS))
     items = ["%s %s" % x for x in sorted(list(RESULT_DEPS.items()))]
     print("\n".join(items))
+
 
 make_like_buck()

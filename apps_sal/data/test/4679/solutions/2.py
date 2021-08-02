@@ -18,4 +18,3 @@ while True:
             print("C")
             return
         mode = sc.pop(0)
-

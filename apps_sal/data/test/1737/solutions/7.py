@@ -30,7 +30,7 @@ for x in range(n):
 lst = []
 array = [L]
 
-#print(d)
+# print(d)
 temp1 = [(L, R)]
 temp2 = []
 k1 = 0
@@ -67,7 +67,7 @@ while k1 < len(temp1) or k2 < len(temp2):
         temp1 = temp[:]
         temp2 = []
         k2 = 1
-        k1 = 0        
+        k1 = 0
 
 print(len(lst))
 lst.sort()
