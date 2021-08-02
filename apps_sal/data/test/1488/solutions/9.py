@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 n = int(input())
 a = sorted(list(map(int, input().split())))
 
@@ -22,4 +23,3 @@ high = total_dist
 low = n
 g = gcd(low, high)
 print(high // g, low // g)
-

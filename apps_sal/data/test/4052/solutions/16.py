@@ -26,4 +26,3 @@ if A == B:
     print(*M)
 else:
     print(-1)
-

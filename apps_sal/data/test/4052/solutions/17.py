@@ -22,33 +22,33 @@ def go():
 
     moves = []
 
-    for i in range(0, n): ##indices in s
+    for i in range(0, n):  # indices in s
 
         if s[i] == t[i]: continue
 
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
 
-            if t[i] == s[j]: ##s[i] == t[j]:
+            if t[i] == s[j]:  # s[i] == t[j]:
 
-                for k in range(j-1, i-1, -1):
+                for k in range(j - 1, i - 1, -1):
 
-                    moves.append(k+1)
+                    moves.append(k + 1)
 
                     old_s_k = s[k]
-                    s[k] = s[k+1]
-                    s[k+1] = old_s_k
+                    s[k] = s[k + 1]
+                    s[k + 1] = old_s_k
 
-                    ## print(s)
+                    # print(s)
 
                 break
 
     print(len(moves))
 
     for m in moves:
-        print(m, end = ' ')
+        print(m, end=' ')
     print()
 
     return
 
-go()
 
+go()

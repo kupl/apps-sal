@@ -9,10 +9,9 @@ if Counter(s) != Counter(t):
 res = []
 for i in range(n):
     pos = s[i:].find(t[i])
-    for k in range(i+pos, i, -1):
+    for k in range(i + pos, i, -1):
         res.append(k)
     # print(s)
-    s = s[i+pos] + s[:i+pos]  + s[i+pos +1 :]
+    s = s[i + pos] + s[:i + pos] + s[i + pos + 1:]
 print(len(res))
 print(*res)
-

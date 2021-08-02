@@ -15,4 +15,5 @@ def f():
         if a < 0: return 1
     return 0
 
-print('YNEOS'[f() :: 2])
+
+print('YNEOS'[f():: 2])

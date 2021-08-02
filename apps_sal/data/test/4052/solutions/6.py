@@ -18,4 +18,3 @@ if c == None:
 else:
     print(len(c))
     print(*c)
-

@@ -29,4 +29,3 @@ for i in range(len(A)):
             break
 if p:
     print('YES')
-

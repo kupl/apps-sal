@@ -11,12 +11,11 @@ for i in range(n):
         ind = s.index(t[i])
         for j in range(ind, 0, -1):
             res.append(count + j)
-        s = s[:ind] + s[ind+1:]
-        count+=1
+        s = s[:ind] + s[ind + 1:]
+        count += 1
 
 k = len(res)
-if k>10**4: print(-1)
+if k > 10**4: print(-1)
 else:
     print(k)
     print(*res)
-

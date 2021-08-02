@@ -22,4 +22,3 @@ for i in a:
             print("NO")
             return
 print('YES')
-

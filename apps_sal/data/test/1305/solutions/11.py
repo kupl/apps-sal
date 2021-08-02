@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, = readln()
 cnt = [0, 0]
@@ -24,4 +26,3 @@ for v in readln():
             cnt = None
             break
 print('YES' if cnt else 'NO')
-

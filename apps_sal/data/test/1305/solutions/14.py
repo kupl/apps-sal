@@ -10,7 +10,7 @@ elif set(text) - {" "} in [{"5", "0"}, {"1", "0"}]:
     print("NO")
     import sys; return
 shit = list(map(int, text.split()))
-#shit = [25] * 40012 # wtf >:(
+# shit = [25] * 40012 # wtf >:(
 balance = {25: 0, 50: 0, 100: 0}
 
 for b in shit:
@@ -35,5 +35,3 @@ for b in shit:
             break
 else:
     print("YES")
-
-

@@ -1,10 +1,12 @@
 from collections import Counter
 
+
 def get_index(first, ch, i, n):
     for j in range(i, n):
         if first[j] == ch:
             return j
     return -1
+
 
 n = int(input())
 
@@ -28,10 +30,7 @@ else:
         for j in range(ind, i, -1): finalAns.append(j)
         temp = first.pop(ind)
         first.insert(i, temp)
-##        print(first)
+# print(first)
 
     print(ans)
     print(*finalAns)
-    
-    
-

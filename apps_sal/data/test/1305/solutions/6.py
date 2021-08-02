@@ -1,5 +1,5 @@
 n = int(input())
-ar = list(map(int,input().split()))
+ar = list(map(int, input().split()))
 k25 = 0
 k50 = 0
 for i in range(n):
@@ -20,4 +20,3 @@ if k25 < 0:
     print('NO')
 else:
     print('YES')
-

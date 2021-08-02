@@ -2,6 +2,7 @@ import sys
 import math
 import bisect
 
+
 def solve(A):
     n = len(A)
     for i in range(25, -1, -1):
@@ -10,15 +11,16 @@ def solve(A):
             to_loop = False
             for j in range(len(A)):
                 #print('A: %s, j: %d' % (str(A), j))
-                if A[j] == i and j - 1 >= 0 and A[j-1] == i - 1:
-                    A = A[0:j] + A[j+1:]
+                if A[j] == i and j - 1 >= 0 and A[j - 1] == i - 1:
+                    A = A[0:j] + A[j + 1:]
                     to_loop = True
                     break
-                elif A[j] == i and j + 1 < len(A) and A[j+1] == i - 1:
-                    A = A[0:j] + A[j+1:]
+                elif A[j] == i and j + 1 < len(A) and A[j + 1] == i - 1:
+                    A = A[0:j] + A[j + 1:]
                     to_loop = True
                     break
     return n - len(A)
+
 
 def main():
     n = int(input())
@@ -28,7 +30,9 @@ def main():
     ans = solve(A)
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

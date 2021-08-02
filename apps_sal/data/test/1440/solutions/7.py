@@ -13,4 +13,3 @@ for a in map(int, input().split()):
         res += cur // 3
         cur %= 3
 print(res)
-

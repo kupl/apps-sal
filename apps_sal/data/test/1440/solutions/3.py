@@ -10,12 +10,9 @@ for a in A:
     d = a // 2
     deduct = min(num1, d)
     num1 -= deduct
-    ans += deduct    
+    ans += deduct
     a -= deduct * 2
     ans += a // 3
-    
+
     num1 += a % 3
 print(ans)
-    
-    
-

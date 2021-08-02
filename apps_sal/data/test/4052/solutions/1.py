@@ -20,5 +20,5 @@ def go():
     print(len(o))
     return ' '.join(str(i) for i in o)
 
-print(go())
 
+print(go())

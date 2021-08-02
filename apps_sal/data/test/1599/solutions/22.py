@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     s = input()
     m = int(input())
@@ -11,6 +12,7 @@ def solve():
         l, r = map(int, input().split())
         res.append(mem[r - 1] - mem[l - 1])
     print('\n'.join(map(str, res)))
-    
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+
+if sys.hexversion == 50594544: sys.stdin = open("test.txt")
 solve()
