@@ -24,7 +24,7 @@ class Task:
 
         for answerLength in range(1, 21 + 1):
             for p in itertools.product(alphabet, repeat=answerLength):
-                string = re.sub("[^\w]", "", str(p));
+                string = re.sub("[^\w]", "", str(p))
                 if string not in badStrings:
                     self.answer = string
                     return
@@ -33,7 +33,7 @@ class Task:
         print(self.answer)
 
 
-task = Task();
-task.getData();
-task.solve();
-task.printAnswer();
+task = Task()
+task.getData()
+task.solve()
+task.printAnswer()

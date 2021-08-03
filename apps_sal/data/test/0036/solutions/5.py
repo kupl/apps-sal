@@ -10,8 +10,10 @@ l = -1
 r = int(1e18)
 while r - l > 1:
     m = (r + l) // 2
-    if 5 * m + 3 * m * (m - 1) > n: r = m
-    else: l = m
+    if 5 * m + 3 * m * (m - 1) > n:
+        r = m
+    else:
+        l = m
 
 x += l * (1)
 y += l * (-2)

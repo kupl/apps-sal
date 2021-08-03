@@ -11,5 +11,6 @@ if not ans:
             if not i + j in t:
                 ans = i + j
                 break
-        if ans: break
+        if ans:
+            break
 print(ans)

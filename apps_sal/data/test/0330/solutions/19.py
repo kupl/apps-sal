@@ -6,7 +6,8 @@ yp = int(sqrt(y))
 
 if yp > p:
     yp = p
-    if yp % 2 == 0: yp -= 1
+    if yp % 2 == 0:
+        yp -= 1
 
 if p == 2:
     if y == 2:
@@ -20,9 +21,11 @@ if p == 2:
         return
 
 
-if yp % 2 == 0: yp -= 1
+if yp % 2 == 0:
+    yp -= 1
 
-if y % 2 == 0: y -= 1
+if y % 2 == 0:
+    y -= 1
 
 
 if yp == 1:

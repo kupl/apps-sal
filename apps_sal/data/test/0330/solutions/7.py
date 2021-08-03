@@ -7,7 +7,8 @@ for i in range(2, m + 1):
         if i // pp * pp == i:
             pri = False
             break
-    if pri: primes.append(i)
+    if pri:
+        primes.append(i)
 
 sol = False
 for yy in range(y, p, -1):

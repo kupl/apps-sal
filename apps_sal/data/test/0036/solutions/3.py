@@ -8,9 +8,12 @@ def main(m):
         x = math.floor(1 / 6 * ((12 * m - 3)**0.5 + 3))  # Approx ?...
         while True:
             d = m - (x**3 - (x - 1)**3)
-            if (d < 0): x -= 1
-            elif (d > x * 6 + 6): x += 1
-            else: break
+            if (d < 0):
+                x -= 1
+            elif (d > x * 6 + 6):
+                x += 1
+            else:
+                break
         s, r = divmod(d, x)
         #print("x:{}, d:{}, s:{}, r:{}".format(x,d,s,r));
         if s == 0:

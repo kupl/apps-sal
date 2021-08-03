@@ -14,7 +14,8 @@ for v in range(y, p, -1):
     for pr in primes:
         if pr <= p and v % pr == 0:
             fail = True
-        elif pr > p: break
+        elif pr > p:
+            break
     if not fail:
         print(v)
         break

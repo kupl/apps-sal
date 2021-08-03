@@ -6,7 +6,8 @@ def is_prime(n, p):
     if n % 2 == 0 and n > 2:
         return False
     for i in range(3, int(math.sqrt(n)) + 1, 2):
-        if i > p: break
+        if i > p:
+            break
         if n % i == 0:
             return False
     return True

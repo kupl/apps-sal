@@ -33,5 +33,5 @@ while f == 0:
             str = str[:k] + chr(ord(str[k]) + 1)
     else:
         f = 1
-        break;
+        break
 print(str)

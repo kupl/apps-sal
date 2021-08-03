@@ -1,5 +1,5 @@
 from itertools import *
-alphabet = "abcdefghijklmnopqrstuvwxyz";
+alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 
 def isValid(s, names):

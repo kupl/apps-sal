@@ -1,4 +1,5 @@
-from math import sqrt; from itertools import count, islice
+from math import sqrt
+from itertools import count, islice
 
 # def isPrime(n,p):
 #     for i in range(2,)
