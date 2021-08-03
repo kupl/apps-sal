@@ -6,5 +6,6 @@ for q in p:
     t = 2 * q - s
     for d in range(l + 1):
         k = min(t + d, l - d) + 1
-        if k > 0: n -= k * k + k >> 1
+        if k > 0:
+            n -= k * k + k >> 1
 print(n)
