@@ -8,4 +8,3 @@ def find_next_square(sq):
         return next_square
     else:
         return -1
-

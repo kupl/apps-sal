@@ -1,5 +1,5 @@
 def check_for_factor(base, factor):
-     if base % factor == int():
+    if base % factor == int():
         return True
-     else:
+    else:
         return False

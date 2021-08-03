@@ -36,7 +36,7 @@ def clear_unactual_distances(distances, cluster1, cluster2):
     old_ids = [identificator(cluster1), identificator(cluster2)]
     new_distances = {k: v for k, v in list(distances.items()) if k[0] not in old_ids and k[1] not in old_ids}
     return new_distances
-                
+
 
 def pop_minimal_distance_pair(clusters, distances):
     minimal_ids = None
@@ -50,7 +50,8 @@ def pop_minimal_distance_pair(clusters, distances):
     clusters.remove(cluster1)
     clusters.remove(cluster2)
     return (cluster1, cluster2)
-    
+
+
 def cluster(points, n):
     clusters = [[point] for point in points]
     distances = {}
@@ -61,4 +62,3 @@ def cluster(points, n):
         clusters.append(new_cluster)
         distances = clear_unactual_distances(distances, cluster1, cluster2)
     return sorted(clusters)
-

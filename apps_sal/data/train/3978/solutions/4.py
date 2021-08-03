@@ -1,1 +1,1 @@
-check_for_factor = lambda base, factor: base % factor == 0
+def check_for_factor(base, factor): return base % factor == 0

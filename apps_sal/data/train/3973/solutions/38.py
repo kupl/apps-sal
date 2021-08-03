@@ -1,7 +1,7 @@
 def remove_char(s):
-    #your code here
-    if len(s)<2:
+    # your code here
+    if len(s) < 2:
         return s
     else:
-        n=len(s)-1
+        n = len(s) - 1
         return s[1:n]

@@ -7,6 +7,5 @@ def tidyNumber(n):
                 tidy = False
             else:
                 y = x
-    
-    return tidy
 
+    return tidy

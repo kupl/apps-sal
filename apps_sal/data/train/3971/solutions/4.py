@@ -3,6 +3,6 @@ def tidyNumber(n):
     backnumber = n[0]
     for number in n:
         if number < backnumber:
-           return False
+            return False
         backnumber = number
     return True

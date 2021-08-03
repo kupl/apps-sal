@@ -7,4 +7,3 @@ def last(*args):
             return args[0]
     else:
         return args[-1]
-

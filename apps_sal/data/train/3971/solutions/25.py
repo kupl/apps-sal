@@ -3,6 +3,4 @@ def tidyNumber(n):
         if idx != 0:
             if val < str(n)[idx - 1]:
                 return False
-    return True            
-            
-
+    return True

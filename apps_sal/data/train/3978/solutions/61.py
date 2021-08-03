@@ -1,6 +1,6 @@
 def check_for_factor(base, factor):
-    x = base % factor 
+    x = base % factor
     if x == 0:
-        return True 
+        return True
     else:
-        return False 
+        return False

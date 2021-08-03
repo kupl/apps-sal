@@ -1,8 +1,7 @@
 def check_for_factor(base, factor):
-    rem = base%factor
+    rem = base % factor
     if rem == 0:
-      return True
+        return True
     else:
-      return False
+        return False
     # your code here
-
