@@ -5,4 +5,3 @@ def hello(name=""):
         return f"Hello, {name}!"
     else:
         return f"Hello, World!"
-

@@ -1,4 +1,6 @@
 from inspect import getgeneratorstate
+
+
 def check_generator(gen):
     _ = getgeneratorstate(gen)
     if _ == "GEN_CREATED":

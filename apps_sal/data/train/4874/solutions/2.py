@@ -13,4 +13,3 @@ def travel(addresses, zipcode):
     result = by_zipcode[zipcode]
     return '{}:{}/{}'\
         .format(zipcode, ','.join(result['adr']), ','.join(result['num']))
-

@@ -26,4 +26,3 @@ class TestHello(unittest.TestCase):
 
     def test_hello_with_mixed(self):
         self.assertEqual(hello('aBcDe'), 'Hello, Abcde!')
-

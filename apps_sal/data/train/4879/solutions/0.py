@@ -1,6 +1,7 @@
 from collections import Counter
 from math import factorial
 
+
 def count_perms(matrix):
     m, n = len(matrix), len(matrix[0])
     c = Counter([x for row in matrix for x in row])

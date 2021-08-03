@@ -1,4 +1,4 @@
-def hello(name = '') -> str:
+def hello(name='') -> str:
     """
     take (str: name) and return 'Hello, {name}!'
     if no name, return 'Hello, World!'

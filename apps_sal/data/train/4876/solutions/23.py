@@ -1,4 +1,4 @@
-def hello(name = None):
+def hello(name=None):
     ans = ""
     if name is "" or name is None:
         return "Hello, World!"
@@ -8,6 +8,4 @@ def hello(name = None):
             ans += nm[i].upper()
         else:
             ans += nm[i].lower()
-    return "Hello, "+ans+"!"
-        
-
+    return "Hello, " + ans + "!"

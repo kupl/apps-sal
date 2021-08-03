@@ -1,5 +1,6 @@
 import math
 
+
 def count_perms(matrix):
     freq = dict()
     for sub_matrix in matrix:

@@ -5,4 +5,3 @@ def hello(name=0):
         name = name.lower()
         name = name.capitalize()
         return "Hello, " + name + "!"
-

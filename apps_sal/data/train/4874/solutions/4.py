@@ -1,10 +1,10 @@
 def travel(r, zipcode):
-    out = [[],[]]
+    out = [[], []]
     endstr = zipcode + ':'
     r = r.split(',')
 
     for data in r:
-        if data[len(data)-8:] == zipcode:
+        if data[len(data) - 8:] == zipcode:
             strt = data.split(' ', 1)[1][:-9]
             apt = data.split(' ', 1)[0]
             out[0].append(strt)

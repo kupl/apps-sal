@@ -1,4 +1,4 @@
-def hello(name = ""):
+def hello(name=""):
     if name != "":
         name = name.capitalize()
         return ("Hello, %s!" % name)
