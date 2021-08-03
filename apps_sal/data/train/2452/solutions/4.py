@@ -1,10 +1,11 @@
-from heapq import heappop, heappush, heapify 
+from heapq import heappop, heappush, heapify
+
 
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         for i in range(len(stones)):
             stones[i] *= -1
-            
+
         # min heapify
         heapify(stones)
         while(len(stones) > 1):
@@ -16,11 +17,9 @@ class Solution:
             # remove the max
             # get the max2
             # remove the max2
-            
-            
+
                 # add -(-max1 - (-max2)) to the stones
-        
+
         if len(stones) == 1:
             return -stones[0]
         return 0
-

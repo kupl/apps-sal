@@ -6,8 +6,7 @@ class Solution:
             s1 = heapq.heappop(stones)
             s2 = heapq.heappop(stones)
             if s1 != s2:
-                s = s1-s2
+                s = s1 - s2
                 heapq.heappush(stones, s)
-                
-        return -stones.pop() if stones else 0
 
+        return -stones.pop() if stones else 0

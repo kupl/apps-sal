@@ -9,6 +9,4 @@ class Solution:
             x = stones.pop()
             y = stones.pop()
             if y != x:
-                stones.append(x-y)
-            
-
+                stones.append(x - y)
