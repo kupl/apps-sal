@@ -33,16 +33,20 @@ for i in a:
         ne += 1
         v[x] = True
         for j in gr[x].adj:
-            if j == last or v[j]: continue
+            if j == last or v[j]:
+                continue
             s.add(j)
         last = x
-    if maxi < ne: maxi = ne; c = ed // 2
+    if maxi < ne:
+        maxi = ne
+        c = ed // 2
     ans += ne * (ne - 1) // 2 - ed // 2
 b = v.count(False)
 if b != 0:
     edge = 0
     for i in range(1, n + 1):
-        if v[i]: continue
+        if v[i]:
+            continue
         s = set([i])
         ed = 0
         last = 0
@@ -51,7 +55,8 @@ if b != 0:
             ed += len(gr[x].adj)
             v[x] = True
             for j in gr[x].adj:
-                if j == last or v[j]: continue
+                if j == last or v[j]:
+                    continue
                 s.add(j)
             last = x
 

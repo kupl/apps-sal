@@ -7,7 +7,8 @@ def dfs(n):
         C[n] = True
         s[0] += 1
     for i in B[n]:
-        if not C[i]: dfs(i)
+        if not C[i]:
+            dfs(i)
 
 
 n, m, k = cin()

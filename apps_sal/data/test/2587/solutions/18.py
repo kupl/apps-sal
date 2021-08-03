@@ -4,10 +4,10 @@
 """
 
 from sys import stdin, stdout, setrecursionlimit
-rr = lambda: input().strip()
-rri = lambda: int(rr())
+def rr(): return input().strip()
+def rri(): return int(rr())
 # rri = lambda: int(stdin.readline())
-rrm = lambda: [int(x) for x in rr().split()]
+def rrm(): return [int(x) for x in rr().split()]
 # stdout.write(str()+'\n')
 
 

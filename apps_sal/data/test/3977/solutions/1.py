@@ -29,9 +29,10 @@ class DisjointSet:
         return [u for u in range(self._n) if self._root[u] == u]
 
 
-ReadMany = lambda: list(map(int, input().split()))
-SubtractOne = lambda c: [x - 1 for x in c]
-C2 = lambda n: n * (n - 1) // 2
+def ReadMany(): return list(map(int, input().split()))
+def SubtractOne(c): return [x - 1 for x in c]
+def C2(n): return n * (n - 1) // 2
+
 
 n, m, k = ReadMany()
 c = list(SubtractOne(ReadMany()))
