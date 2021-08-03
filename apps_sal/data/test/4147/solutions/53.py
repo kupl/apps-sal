@@ -6,7 +6,8 @@ for _ in range(N):
 
 def rec(i, a, b, c):
     if i == N:
-        if not a or not b or not c: return float('inf')
+        if not a or not b or not c:
+            return float('inf')
         return abs(a - A) + abs(b - B) + abs(c - C)
 
     ret = rec(i + 1, a, b, c)

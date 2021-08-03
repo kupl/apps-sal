@@ -1,7 +1,8 @@
 N, A, B, C = list(map(int, input().split()))
 l = []
 Inf = float("Inf")
-for i in range(N): l.append(int(input()))
+for i in range(N):
+    l.append(int(input()))
 
 
 def Answer(cnt, a, b, c):

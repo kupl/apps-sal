@@ -20,7 +20,8 @@ ans = INF
 for prd in product(list(range(4)), repeat=N):
     pieces = [[] for _ in range(3)]
     for bamboo_ind, target_kadomatsu in enumerate(prd):
-        if target_kadomatsu == 3: continue
+        if target_kadomatsu == 3:
+            continue
         pieces[target_kadomatsu].append(L[bamboo_ind])
     if ans > (res := estimate(pieces)):
         ans = res

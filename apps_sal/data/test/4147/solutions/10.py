@@ -1,6 +1,8 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
-input_nums = lambda: list(map(int, input().split()))
+def input(): return sys.stdin.readline().rstrip()
+def input_nums(): return list(map(int, input().split()))
+
+
 INF = 10**9
 
 

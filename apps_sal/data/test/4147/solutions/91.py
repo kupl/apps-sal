@@ -1,5 +1,6 @@
 def B10N(X, B):
-    if X // B != 0: return B10N(X // B, B) + str(X % B)
+    if X // B != 0:
+        return B10N(X // B, B) + str(X % B)
     return str(X % B)
 
 
@@ -15,5 +16,6 @@ for T in range(0, pow(4, N)):
         CLi = [Li[X] for X, Y in enumerate(Cho) if Y == '3']
         SyC = (len(ALi) + len(BLi) + len(CLi) - 3) * 10
         LeC = abs(sum(ALi) - A) + abs(sum(BLi) - B) + abs(sum(CLi) - C)
-        if SyC + LeC < CostM: CostM = SyC + LeC
+        if SyC + LeC < CostM:
+            CostM = SyC + LeC
 print(CostM)

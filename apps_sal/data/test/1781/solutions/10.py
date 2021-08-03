@@ -9,7 +9,8 @@ for i in range(n):
     v = p
     g.append(v)
     for x in range(len(v)):
-        if v[x] != '.': continue
+        if v[x] != '.':
+            continue
         num = 0
         if x != 0 and v[x - 1] == 'S':
             num += 1
@@ -22,7 +23,8 @@ for i in range(k):
 an = 0
 for s in g:
     for j in range(len(s)):
-        if s[j] != 'S': continue
+        if s[j] != 'S':
+            continue
         if j != 0 and (s[j - 1] != '.' and s[j - 1] != '-'):
             an += 1
         if j + 1 < len(s) and (s[j + 1] != '.' and s[j + 1] != '-'):

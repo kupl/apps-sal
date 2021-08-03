@@ -11,7 +11,8 @@ for l in product([0, 1, 2, 3], repeat=N):
     mp = 0
     p = []
     for i in cnt[:3]:
-        if len(i) != 0: mp += (len(i) - 1) * 10
+        if len(i) != 0:
+            mp += (len(i) - 1) * 10
         p.append(sum(i))
     p.sort()
     if p[0] != 0:

@@ -1,4 +1,6 @@
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, m = I()
 s, t = input(), input()
 res = 0

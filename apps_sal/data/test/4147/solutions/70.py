@@ -19,17 +19,20 @@ for lc in list(lcombi):
     else:
         for i in range(N):
             if lc[i] == "a":
-                if Alen == 0: Alen += l[i]
+                if Alen == 0:
+                    Alen += l[i]
                 else:
                     Alen += l[i]
                     Acost += 10
             elif lc[i] == "b":
-                if Blen == 0: Blen += l[i]
+                if Blen == 0:
+                    Blen += l[i]
                 else:
                     Blen += l[i]
                     Bcost += 10
             elif lc[i] == "c":
-                if Clen == 0: Clen += l[i]
+                if Clen == 0:
+                    Clen += l[i]
                 else:
                     Clen += l[i]
                     Ccost += 10

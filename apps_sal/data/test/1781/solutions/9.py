@@ -11,7 +11,8 @@ for i in range(n):
             count += (lines[i][seat - 1] > 'A') + (lines[i][seat + 1] > 'A')
 
 while k:
-    if queue[0]: seat = queue[0].pop()
+    if queue[0]:
+        seat = queue[0].pop()
     elif queue[1]:
         seat = queue[1].pop()
         count += 1

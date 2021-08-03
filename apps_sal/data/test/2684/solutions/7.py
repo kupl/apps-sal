@@ -13,6 +13,7 @@ else:
             if cur != out and len(cur) > maxLen and cur != '' and cur == cur[::-1]:
                 out = cur
                 maxLen = len(cur)
-            else: pass
+            else:
+                pass
     print(maxLen)
     print(out)

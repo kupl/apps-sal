@@ -4,9 +4,9 @@ from collections import defaultdict
 from collections import deque
 from itertools import combinations
 from itertools import permutations
-input = lambda: sys.stdin.readline().rstrip()
-read = lambda: list(map(int, input().split()))
-go = lambda: 1 / 0
+def input(): return sys.stdin.readline().rstrip()
+def read(): return list(map(int, input().split()))
+def go(): return 1 / 0
 
 
 def write(*args, sep="\n"):

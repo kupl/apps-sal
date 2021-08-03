@@ -16,7 +16,8 @@ for T in Target:
     B_cost = 0
     C_cost = 0
     for i in range(N):
-        if T[i] == 0: continue
+        if T[i] == 0:
+            continue
         if T[i] == 1:
             if A_sum == 0:
                 A_sum += L_list[i]
@@ -36,7 +37,8 @@ for T in Target:
                 C_sum += L_list[i]
                 C_cost += 10
 
-    if min(A_sum, B_sum, C_sum) == 0: continue
+    if min(A_sum, B_sum, C_sum) == 0:
+        continue
 
     ans = min(ans, abs(A - A_sum) + A_cost + abs(B - B_sum) + B_cost + abs(C - C_sum) + C_cost)
 print(ans)
