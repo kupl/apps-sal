@@ -1,7 +1,8 @@
 def num_bits(number):
     binary = bin(number)
-    setBits = [ones for ones in binary[2:] if ones=='1']
+    setBits = [ones for ones in binary[2:] if ones == '1']
     return len(setBits)
+
 
 # def test(l):
 #     for i in range(len(l)):
@@ -17,26 +18,25 @@ def num_bits(number):
 # print(test([1,2,3,5,4,7,0,6]))
 T = int(input())
 for i in range(T):
-    N,K = input().split(' ')
+    N, K = input().split(' ')
     N = int(N)
     K = int(K)
     l = []
-    if K==3:
-        l=[0,1,3,0]
-    elif K==4:
-        l=[0,1,3,7,0]
-    elif K==5:
-        l=[0,1,2,3,5,0]
-    elif K==6:
-        l=[0,1,2,3,5,7,0]
-    elif K==7:
-        l=[1,2,3,5,4,7,0,1]
+    if K == 3:
+        l = [0, 1, 3, 0]
+    elif K == 4:
+        l = [0, 1, 3, 7, 0]
+    elif K == 5:
+        l = [0, 1, 2, 3, 5, 0]
+    elif K == 6:
+        l = [0, 1, 2, 3, 5, 7, 0]
+    elif K == 7:
+        l = [1, 2, 3, 5, 4, 7, 0, 1]
     else:
-        l = [1,2,3,5,4,7,0,6,1]
+        l = [1, 2, 3, 5, 4, 7, 0, 6, 1]
 
     for i in range(K):
-        print(l[i],l[i+1])
-
+        print(l[i], l[i + 1])
 
 
 '''

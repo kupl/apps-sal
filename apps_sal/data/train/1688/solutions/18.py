@@ -1,23 +1,22 @@
-from sys  import stdin,stdout
+from sys import stdin, stdout
 from math import gcd
-st=lambda:list(stdin.readline().strip())
-li=lambda:list(map(int,stdin.readline().split()))
-mp=lambda:map(int,stdin.readline().split())
-inp=lambda:int(stdin.readline())
-pr=lambda n: stdout.write(str(n)+"\n")
+def st(): return list(stdin.readline().strip())
 
-mod=1000000007
+
+def li(): return list(map(int, stdin.readline().split()))
+def mp(): return map(int, stdin.readline().split())
+def inp(): return int(stdin.readline())
+def pr(n): return stdout.write(str(n) + "\n")
+
+
+mod = 1000000007
+
 
 def solve():
-    n=inp()
-    l=li()
-    pr(''.join(list(map(str,l))))
-        
-            
-                
-            
-            
+    n = inp()
+    l = li()
+    pr(''.join(list(map(str, l))))
+
 
 for _ in range(inp()):
     solve()
-

@@ -1,5 +1,6 @@
 MODULO = 20011
 
+
 def solve(grid, R, C, d):
     if grid[1][1] == 0 or grid[R][C] == 0:
         return 0
@@ -33,11 +34,13 @@ def solve(grid, R, C, d):
     # return solution
     return path_top[R][C] + path_left[R][C]
 
+
 def __starting_point():
     R, C, d = list(map(int, input().strip().split()))
     grid = [[0] * (C + 1) for row in range(R + 1)]
     for row in range(1, R + 1):
         grid[row] = [0] + list(map(int, input().strip().split()))
     print(solve(grid, R, C, d) % MODULO)
+
 
 __starting_point()
