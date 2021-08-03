@@ -10,4 +10,3 @@ for c in line:
         dp[1] = max(dp[:2]) + 1
 
 print(max(dp))
-

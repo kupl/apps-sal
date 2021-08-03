@@ -28,4 +28,3 @@ for k in range(m):
         print("even")
     else:
         print("odd")
-

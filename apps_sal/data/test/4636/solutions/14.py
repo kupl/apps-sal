@@ -3,8 +3,14 @@ input = sys.stdin.readline
 
 for t in range(int(input())):
     n = int(input())
-    l = list(map(int,input().split()))
-    a = l.pop(0); b = 0; move = 0; ad = a; bd = 0; able = True; count = 1
+    l = list(map(int, input().split()))
+    a = l.pop(0)
+    b = 0
+    move = 0
+    ad = a
+    bd = 0
+    able = True
+    count = 1
     while l:
         bd = 0
         while bd <= ad:
@@ -12,7 +18,8 @@ for t in range(int(input())):
             if l == []:
                 able = False
                 break
-        b += bd; count += 1
+        b += bd
+        count += 1
         if able == False:
             break
         ad = 0
@@ -21,8 +28,8 @@ for t in range(int(input())):
             if l == []:
                 able = False
                 break
-        a += ad; count += 1
+        a += ad
+        count += 1
         if able == False:
             break
     print(count, a, b)
-

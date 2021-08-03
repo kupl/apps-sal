@@ -5,7 +5,7 @@ for t in range(T):
     A = [int(_) for _ in input().split()]
 
     L = 0
-    R = N-1
+    R = N - 1
     turn = 0
     previous = 0
     alice = 0
@@ -28,4 +28,3 @@ for t in range(T):
         moves += 1
 
     print(moves, alice, bob)
-

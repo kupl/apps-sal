@@ -9,4 +9,3 @@ elif sqrt(3) * (r / 2) + r - 1e-6 <= d + r:
     print(h // r * 2 + 3)
 else:
     print(h // r * 2 + 2)
-

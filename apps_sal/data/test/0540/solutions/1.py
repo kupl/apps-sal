@@ -10,17 +10,19 @@ x1, y1 = (int(x) for x in input().split())
 x1 -= 1
 y1 -= 1
 
+
 def gen_neighbours(x, y):
     res = []
     if x > 0:
-        res.append((x-1, y))
+        res.append((x - 1, y))
     if x < n - 1:
-        res.append((x+1, y))
+        res.append((x + 1, y))
     if y > 0:
         res.append((x, y - 1))
     if y < m - 1:
         res.append((x, y + 1))
     return res
+
 
 cnt = 0
 for el in gen_neighbours(x1, y1):

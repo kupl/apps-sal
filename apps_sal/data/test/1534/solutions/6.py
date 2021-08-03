@@ -11,7 +11,5 @@ for x in s:
 best = b_count
 for i in range(len(a)):
     for j in range(i, len(a)):
-        best = max(best, a[i] + (a_count-a[j]) + (b[j]-b[i]))
+        best = max(best, a[i] + (a_count - a[j]) + (b[j] - b[i]))
 print(best)
-
-

@@ -11,7 +11,7 @@ for zz in range(int(input())):
     x = 0
     y = 0
     while i <= j:
-        cs= 0 
+        cs = 0
         if ct == 0:
             while i <= j and cs <= ps:
                 cs += a[i]
@@ -26,4 +26,3 @@ for zz in range(int(input())):
         ct = 1 - ct
         ans += 1
     print(ans, x, y)
-

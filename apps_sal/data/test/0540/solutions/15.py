@@ -2,7 +2,9 @@ import heapq
 from copy import deepcopy
 dir = [(-1, 0), (0, 1), (1, 0), (0, -1)]
 
+
 def decr(x): return x - 1
+
 
 H, W = list(map(int, input().split()))
 l = [list(input()) for i in range(H)]
@@ -28,4 +30,3 @@ if res:
     print("YES")
 else:
     print("NO")
-

@@ -13,13 +13,12 @@ for x in range(m):
 k = 0
 for x in range(0, len(lst) - 1):
     for y in range(x + 1, len(lst)):
-        if lst[y] < lst[x]: 
+        if lst[y] < lst[x]:
             k += 1
-          
+
 for (l, r) in pair:
     if (k - (r - l + 1) // 2) % 2 == 0:
         print("even")
     else:
         print("odd")
     k = k - (r - l + 1) // 2
-

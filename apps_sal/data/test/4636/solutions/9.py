@@ -25,4 +25,3 @@ for candies in sys.stdin.readlines()[1::2]:
         move += 1
 
     print(move, a, b)
-

@@ -4,6 +4,7 @@ A = list(map(int, input().split()))
 M = int(input())
 Q = [input().split() for m in range(M)]
 
+
 def solve():
     count = 0
     for i in range(N):
@@ -17,7 +18,7 @@ def solve():
         l, r = q
         l = int(l) - 1
         r = int(r) - 1
-        count += ((r -  l + 1)//2)
+        count += ((r - l + 1) // 2)
         count %= 2
         if count == 0:
             res.append('even')
@@ -25,6 +26,7 @@ def solve():
             res.append('odd')
 
     print('\n'.join(res))
+
 
 def __starting_point():
     solve()

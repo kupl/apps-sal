@@ -17,8 +17,8 @@ import bisect
 import datetime
 
 
+DELTA = [(1, 0), (-1, 0), (0, -1), (0, 1)]
 
-DELTA = [(1, 0 ), (-1, 0), (0, -1), (0, 1)]
 
 def existsPath(board, sr, sc, er, ec):
     visited = {(sr, sc)}
@@ -37,6 +37,7 @@ def existsPath(board, sr, sc, er, ec):
 
     return False
 
+
 def isNeighbor(sr, sc, er, ec):
     for d in DELTA:
         r = sr + d[0]
@@ -44,6 +45,7 @@ def isNeighbor(sr, sc, er, ec):
         if r == er and c == ec:
             return True
     return False
+
 
 N, M = list(map(int, input().split()))
 
@@ -83,7 +85,3 @@ else:
             print('YES')
         else:
             print('NO')
-
-
-
-

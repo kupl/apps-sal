@@ -1,11 +1,11 @@
 n = int(input())
 ans = list()
 s = set()
-for i,x in enumerate(map(int, input().split())):
+for i, x in enumerate(map(int, input().split())):
     if not s:
-        idx = i+1
+        idx = i + 1
     elif x in s:
-        ans.append((idx, i+1))
+        ans.append((idx, i + 1))
         s = set()
         continue
     s.add(x)

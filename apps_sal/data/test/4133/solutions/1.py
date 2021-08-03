@@ -1,10 +1,11 @@
 class InputHandlerObject(object):
     inputs = []
 
-    def getInput(self, n = 0):
+    def getInput(self, n=0):
         res = ""
         inputs = self.inputs
-        if not inputs: inputs.extend(input().split(" "))
+        if not inputs:
+            inputs.extend(input().split(" "))
         if n == 0:
             res = inputs[:]
             inputs[:] = []
@@ -14,6 +15,8 @@ class InputHandlerObject(object):
             res = inputs[:n]
             inputs[:n] = []
         return res
+
+
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
@@ -40,11 +43,11 @@ for x in range(len(golorp[1])):
         ct = 0
 
 conditions = []
-for x in range(0, len(conditionsraw)//4):
-    if conditionsraw[4*x+1] == ">":
-        conditions.append((conditionsraw[4*x+2], conditionsraw[4*x]))
+for x in range(0, len(conditionsraw) // 4):
+    if conditionsraw[4 * x + 1] == ">":
+        conditions.append((conditionsraw[4 * x + 2], conditionsraw[4 * x]))
     else:
-        conditions.append((conditionsraw[4*x], conditionsraw[4*x+2]))
+        conditions.append((conditionsraw[4 * x], conditionsraw[4 * x + 2]))
 
 inedges = [[-1]] * (max(jaws) + 1)
 outedges = [[-1]] * (max(jaws) + 1)

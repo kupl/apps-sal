@@ -8,7 +8,7 @@ for i in range(n):
     else:
         cnt += 1
         pearls = set()
-    
+
 if cnt:
     print(cnt)
     first = 0
