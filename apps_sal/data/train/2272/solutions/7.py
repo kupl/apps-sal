@@ -21,8 +21,8 @@ from sys import stdin
 import bisect
 
 N = int(stdin.readline())
-a = list(map(int,stdin.readline().split()))
-b = list(map(int,stdin.readline().split()))
+a = list(map(int, stdin.readline().split()))
+b = list(map(int, stdin.readline().split()))
 
 ans = 0
 
@@ -39,20 +39,20 @@ for i in range(29):
         if j & ndig > 0:
             if N % 2 == 1:
                 now ^= 1
-    
+
     nb = [j % ndig for j in b]
     nb.sort()
     nb.reverse()
     #print (now)
-    
+
     for j in a:
-        
+
         na = j % ndig
         l = -1
         r = N
 
-        while r-l != 1:
-            m = (l+r)//2
+        while r - l != 1:
+            m = (l + r) // 2
             if nb[m] + na < ndig:
                 r = m
             else:
@@ -63,6 +63,4 @@ for i in range(29):
 
     ans += now * ndig
 
-print (ans)
-        
-
+print(ans)

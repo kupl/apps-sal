@@ -40,4 +40,3 @@ ans = 0
 for lst in list(uf.all_group_members().values()):
     ans += sum((p[num] - 1 in lst) for num in lst)
 print(ans)
-

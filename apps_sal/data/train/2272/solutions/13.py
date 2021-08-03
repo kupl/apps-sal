@@ -9,6 +9,7 @@ N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
+
 def calc_bit(k):
     # これ以上の桁は不要
     mod = 1 << (k + 1)
@@ -41,6 +42,5 @@ def calc_bit(k):
 
 ans = 0
 for i in range(30):
-    ans += calc_bit(i) * (1<<i)
+    ans += calc_bit(i) * (1 << i)
 print(ans)
-

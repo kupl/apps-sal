@@ -14,12 +14,12 @@ for i in range(t):
     colmax.sort(reverse=True)
     colmax = colmax[:n]
     ans = 0
-    for j in range(n ** (n-1)):
+    for j in range(n ** (n - 1)):
         index = j
         rot = [0]
-        for k in range(n-1):
+        for k in range(n - 1):
             rot.append(index % n)
-            index //= n 
+            index //= n
         ret = 0
         for l in range(n):
             val = 0

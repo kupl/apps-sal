@@ -21,8 +21,8 @@ def debug(fn):
         print('DEBUG: {}({}) -> '.format(
             fn.__name__,
             ', '.join(
-                list(map(str, args)) +
-                ['{}={}'.format(k, str(v)) for k, v in kwargs.items()]
+                list(map(str, args))
+                + ['{}={}'.format(k, str(v)) for k, v in kwargs.items()]
             )
         ), end='')
         print(ret)
@@ -73,4 +73,3 @@ ans = 0
 for i in range(30):
     ans += calc_bit(i) * (2 ** i)
 print(ans)
-

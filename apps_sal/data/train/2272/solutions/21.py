@@ -2,8 +2,8 @@ N, = list(map(int, input().split()))
 P = list(map(int, input().split()))
 Q = list(map(int, input().split()))
 mxk = 29
-msk = (1<<mxk) - 1
-msk2 = (1<<(mxk-1))
+msk = (1 << mxk) - 1
+msk2 = (1 << (mxk - 1))
 r = 0
 for i in range(mxk):
     # 下からiビット目をみる
@@ -13,8 +13,8 @@ for i in range(mxk):
     msk >>= 1
     P.sort()
     Q.sort()
-    j1 = N-1
-    j2 = N-1
+    j1 = N - 1
+    j2 = N - 1
     b = 0
     ss = N
 #    print(P, Q)
@@ -22,7 +22,7 @@ for i in range(mxk):
         if P[l] & msk2:
             ss = l
             break
-        k1 = msk2 - (P[l]&msk)
+        k1 = msk2 - (P[l] & msk)
         k2 = k1 + msk2
         while j1 >= 0:
             if Q[j1] < k1:
@@ -35,11 +35,11 @@ for i in range(mxk):
         b += j2 - j1
 #        print("a",j2-j1,k1,k2,j1,j2)
 
-    j1 = N-1
-    j2 = N-1
+    j1 = N - 1
+    j2 = N - 1
 #    print(ss)
     for l in range(ss, N):
-        k1 = msk2 - (P[l]&msk)
+        k1 = msk2 - (P[l] & msk)
         k2 = k1 + msk2
         while j1 >= 0:
             if Q[j1] < k1:
@@ -63,8 +63,7 @@ for i in range(mxk):
 #            z = g(msk2 - (p&msk))
 #            b += x-z
 #    print(b, r, i)
-    if b%2:
-        r += 1<<(mxk-1-i)
+    if b % 2:
+        r += 1 << (mxk - 1 - i)
     msk2 >>= 1
 print(r)
-

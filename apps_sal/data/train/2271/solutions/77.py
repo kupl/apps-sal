@@ -45,25 +45,25 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m = list(map(int,input().split()))
+
+n, m = list(map(int, input().split()))
 uf = UnionFind(n)
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 for _ in range(m):
-  a,b=list(map(int,input().split()))
-  a-=1
-  b-=1
-  uf.union(a,b)
+    a, b = list(map(int, input().split()))
+    a -= 1
+    b -= 1
+    uf.union(a, b)
 
 pp = [set() for _ in range(n)]
 qq = [set() for _ in range(n)]
 
 for i in range(n):
-  r = uf.find(i)
-  pp[r].add(i)
-  qq[r].add(p[i]-1)
+    r = uf.find(i)
+    pp[r].add(i)
+    qq[r].add(p[i] - 1)
 
 ans = 0
 for i in range(n):
-  ans += len(pp[i] & qq[i])
+    ans += len(pp[i] & qq[i])
 print(ans)
-

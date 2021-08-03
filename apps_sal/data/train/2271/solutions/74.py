@@ -47,7 +47,6 @@ for _ in range(M):
 
 count = 0
 for i in range(N):
-    if tree.ifSame(P[i]-1, i):
+    if tree.ifSame(P[i] - 1, i):
         count += 1
 print(count)
-

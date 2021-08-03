@@ -45,8 +45,10 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 def func(x):
     return x - 1
+
 
 def main():
     N, M = map(int, input().split())
@@ -56,11 +58,11 @@ def main():
         x, y = map(int, input().split())
         x -= 1
         y -= 1
-        uni.union(x,y)
+        uni.union(x, y)
 
     ans = 0
     for i, p in enumerate(P):
-        if uni.same(i,p):
+        if uni.same(i, p):
             ans += 1
 
     print(ans)
@@ -68,4 +70,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -30,23 +31,21 @@ class UnionFind():
 
     def same(self, x, y):
         return self.find(x) == self.find(y)
-      
-N, M = list(map(int,input().split()))
+
+
+N, M = list(map(int, input().split()))
 uf = UnionFind(N)
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 
 for _ in range(M):
-  x, y = list(map(int,input().split()))
-  x -= 1; y -= 1;
-  uf.union(x, y)
+    x, y = list(map(int, input().split()))
+    x -= 1
+    y -= 1
+    uf.union(x, y)
 
 ans = 0
 for i in range(N):
-  if uf.same(i, p[i]-1):
-    ans += 1
-    
+    if uf.same(i, p[i] - 1):
+        ans += 1
+
 print(ans)
-
-  
-  
-

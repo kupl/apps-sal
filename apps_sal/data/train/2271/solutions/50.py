@@ -1,11 +1,12 @@
 n, m = map(int, input().split())
-pn = list(map(lambda x:int(x)-1, input().split()))
+pn = list(map(lambda x: int(x) - 1, input().split()))
 ls = [-1] * n
 for i in pn:
     ls[pn[i]] = i
-#print(ls)
+# print(ls)
 
 par = [i for i in range(n)]
+
 
 def find(x):
     if par[x] == x:
@@ -15,24 +16,25 @@ def find(x):
         par[x] = s
         return s
 
-def unite(x,y):
+
+def unite(x, y):
     s = find(x)
     t = find(y)
-    if s>t:
+    if s > t:
         par[s] = t
     else:
         par[t] = s
 
 
 for _ in range(m):
-    x, y = map(lambda x:int(x)-1, input().split())
-    unite(ls[x],ls[y])
+    x, y = map(lambda x: int(x) - 1, input().split())
+    unite(ls[x], ls[y])
 
 ans2 = 0
-for i in range(n): 
+for i in range(n):
     place1 = i
     place2 = ls[i]
 
-    if find(place1)==find(place2):
-       ans2+=1
+    if find(place1) == find(place2):
+        ans2 += 1
 print(ans2)

@@ -1,14 +1,14 @@
 N, M = list(map(int, input().split()))
 p_list = list(map(int, input().split()))
 queries = [list(map(int, input().split())) for i in range(M)]
-paths = [[] for i in range(N+1)]
+paths = [[] for i in range(N + 1)]
 for a, b in queries:
     paths[a].append(b)
     paths[b].append(a)
 
 groups = []
-visited = [False] * (N+1)
-for start in range(N+1):
+visited = [False] * (N + 1)
+for start in range(N + 1):
     if visited[start] == True:
         continue
     queue = [start]
@@ -26,9 +26,7 @@ for start in range(N+1):
     groups.append(t_group)
 
 result = 0
-for group in groups[1:]: # セットの最初は{0}になっているため
-    result += sum(1 for m in group if p_list[m-1] in group)
+for group in groups[1:]:  # セットの最初は{0}になっているため
+    result += sum(1 for m in group if p_list[m - 1] in group)
 
 print(result)
-
-

@@ -1,6 +1,7 @@
 N, M = map(int, input().split())
 P = list(map(int, input().split()))
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -45,14 +46,15 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 uf = UnionFind(N)
 for _ in range(M):
     x, y = map(int, input().split())
-    uf.union(x-1, y-1)
+    uf.union(x - 1, y - 1)
 
 ans = 0
 for i in range(N):
-    if uf.same(i, P[i]-1):
+    if uf.same(i, P[i] - 1):
         ans += 1
 
 print(ans)

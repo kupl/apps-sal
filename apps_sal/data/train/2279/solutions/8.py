@@ -3,11 +3,11 @@
     27th Sept , 2020  - Sunday
 """
 
-#===============================================================================================
-#importing some useful libraries.
+# ===============================================================================================
+# importing some useful libraries.
 
 
-
+from types import GeneratorType
 from fractions import Fraction
 import sys
 import os
@@ -31,8 +31,8 @@ from bisect import bisect_left as bl
 from bisect import bisect_right as br
 from bisect import bisect
 
-#==============================================================================================
-#fast I/O region
+# ==============================================================================================
+# fast I/O region
 BUFSIZE = 8192
 
 
@@ -101,91 +101,114 @@ else:
 
 # inp = lambda: sys.stdin.readline().rstrip("\r\n")
 
-#===============================================================================================
+# ===============================================================================================
 ### START ITERATE RECURSION ###
-from types import GeneratorType
+
+
 def iterative(f, stack=[]):
-  def wrapped_func(*args, **kwargs):
-    if stack: return f(*args, **kwargs)
-    to = f(*args, **kwargs)
-    while True:
-      if type(to) is GeneratorType:
-        stack.append(to)
-        to = next(to)
-        continue
-      stack.pop()
-      if not stack: break
-      to = stack[-1].send(to)
-    return to
-  return wrapped_func
+    def wrapped_func(*args, **kwargs):
+        if stack:
+            return f(*args, **kwargs)
+        to = f(*args, **kwargs)
+        while True:
+            if type(to) is GeneratorType:
+                stack.append(to)
+                to = next(to)
+                continue
+            stack.pop()
+            if not stack:
+                break
+            to = stack[-1].send(to)
+        return to
+    return wrapped_func
 #### END ITERATE RECURSION ####
 
-#===============================================================================================
-#some shortcuts
+# ===============================================================================================
+# some shortcuts
 
-mod = 10**9+7
-def inp(): return sys.stdin.readline().rstrip("\r\n") #for fast input
-def out(var): sys.stdout.write(str(var))  #for fast output, always take string
+
+mod = 10**9 + 7
+def inp(): return sys.stdin.readline().rstrip("\r\n")  # for fast input
+def out(var): sys.stdout.write(str(var))  # for fast output, always take string
 def lis(): return list(map(int, inp().split()))
 def stringlis(): return list(map(str, inp().split()))
 def sep(): return list(map(int, inp().split()))
 def strsep(): return list(map(str, inp().split()))
 # def graph(vertex): return [[] for i in range(0,vertex+1)]
-def zerolist(n): return [0]*n
-def nextline(): out("\n")  #as stdout.write always print sring.
+def zerolist(n): return [0] * n
+def nextline(): out("\n")  # as stdout.write always print sring.
+
+
 def testcase(t):
     for pp in range(t):
         solve(pp)
-def printlist(a) :
-    for p in range(0,len(a)):
+
+
+def printlist(a):
+    for p in range(0, len(a)):
         out(str(a[p]) + ' ')
+
+
 def google(p):
-    print('Case #'+str(p)+': ',end='')
-def lcm(a,b): return (a*b)//gcd(a,b)
-def power(x, y, p) :
+    print('Case #' + str(p) + ': ', end='')
+
+
+def lcm(a, b): return (a * b) // gcd(a, b)
+
+
+def power(x, y, p):
     res = 1     # Initialize result
     x = x % p  # Update x if it is more , than or equal to p
-    if (x == 0) :
+    if (x == 0):
         return 0
-    while (y > 0) :
-        if ((y & 1) == 1) : # If y is odd, multiply, x with result
+    while (y > 0):
+        if ((y & 1) == 1):  # If y is odd, multiply, x with result
             res = (res * x) % p
 
         y = y >> 1      # y = y/2
         x = (x * x) % p
     return res
-def ncr(n,r): return factorial(n) // (factorial(r) * factorial(max(n - r, 1)))
-def isPrime(n) :
-    if (n <= 1) : return False
-    if (n <= 3) : return True
-    if (n % 2 == 0 or n % 3 == 0) : return False
+
+
+def ncr(n, r): return factorial(n) // (factorial(r) * factorial(max(n - r, 1)))
+
+
+def isPrime(n):
+    if (n <= 1):
+        return False
+    if (n <= 3):
+        return True
+    if (n % 2 == 0 or n % 3 == 0):
+        return False
     i = 5
-    while(i * i <= n) :
-        if (n % i == 0 or n % (i + 2) == 0) :
+    while(i * i <= n):
+        if (n % i == 0 or n % (i + 2) == 0):
             return False
         i = i + 6
     return True
 
-#===============================================================================================
-# code here ;))
-ans = [0]*(10**6+5)
 
-def sieve(a): #O(n loglogn) nearly linear
-    #all odd mark 1
-    for i in range(3,((10**6)+5),2):
+# ===============================================================================================
+# code here ;))
+ans = [0] * (10**6 + 5)
+
+
+def sieve(a):  # O(n loglogn) nearly linear
+    # all odd mark 1
+    for i in range(3, ((10**6) + 5), 2):
         a[i] = 1
-    #marking multiples of i form i*i 0. they are nt prime
-    for i in range(3,((10**6)+5),2):
-        for j in range(i*i,((10**6)+5),i):
+    # marking multiples of i form i*i 0. they are nt prime
+    for i in range(3, ((10**6) + 5), 2):
+        for j in range(i * i, ((10**6) + 5), i):
             a[j] = 0
-    a[2] = 1 #special left case
+    a[2] = 1  # special left case
     return (a)
 
 
-a = [0]*((10**6)+6)
+a = [0] * ((10**6) + 6)
 a = sieve(a)
 primes = []
-for i in range(10**6+1):
+for i in range(10**6 + 1):
     if(a[i]):
         primes.append(i)
 
@@ -195,11 +218,11 @@ for i in range(10**6+1):
 
 for i in primes:
     ans[i] += 1
-    ans[min(10**6+2,i*i)] -=1
+    ans[min(10**6 + 2, i * i)] -= 1
 
 # print(ans[:20])
-for i in range(2,10**6+1):
-    ans[i] +=ans[i-1]
+for i in range(2, 10**6 + 1):
+    ans[i] += ans[i - 1]
 
 # print(ans[:20])
 
@@ -207,11 +230,8 @@ for i in range(2,10**6+1):
 def solve(case):
     n = int(inp())
     aa = lis()
-    print('\n'.join(str(ans[i]+1) for i in aa))
-
-
+    print('\n'.join(str(ans[i] + 1) for i in aa))
 
 
 testcase(1)
 # testcase(int(inp()))
-

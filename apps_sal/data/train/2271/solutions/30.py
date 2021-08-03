@@ -45,19 +45,20 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m = map(int,input().split())
-p = list(map(int,input().split()))
+
+n, m = map(int, input().split())
+p = list(map(int, input().split()))
 u = UnionFind(n)
 for _ in range(m):
-    x,y = map(int,input().split())
+    x, y = map(int, input().split())
     x -= 1
     y -= 1
-    u.union(x,y)
+    u.union(x, y)
 
 ans = 0
 for i in range(n):
     pi = p[i]
     pi -= 1
-    if u.same(i,pi):
+    if u.same(i, pi):
         ans += 1
 print(ans)

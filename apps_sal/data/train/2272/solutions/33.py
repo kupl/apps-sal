@@ -13,17 +13,17 @@ def main():
     for loop in range(28, -1, -1):
         j = pow(2, loop)
         k = (xor & j) // j
-        temp = br(b, j-1)
+        temp = br(b, j - 1)
         for i in range(temp, n):
             b[i] -= j
         b.sort()
-        temp = br(a, j-1)
+        temp = br(a, j - 1)
         for i in a[:temp]:
             k += (i & j) // j
         for i in range(temp, n):
             k += (a[i] & j) // j
             a[i] -= j
-        x = (k+br(b, 0))*m % 2
+        x = (k + br(b, 0)) * m % 2
         a.sort()
         l = 0
         for i in a:
@@ -33,9 +33,8 @@ def main():
                 else:
                     break
             x += l % 2
-        ans += (x % 2)*j
+        ans += (x % 2) * j
     print(ans)
 
 
 main()
-

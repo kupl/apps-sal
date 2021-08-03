@@ -1,10 +1,13 @@
 import sys
 def input(): return sys.stdin.readline().strip()
 def mapint(): return map(int, input().split())
+
+
 sys.setrecursionlimit(10**9)
 
 N, M = mapint()
-Ps = [p-1 for p in list(mapint())]
+Ps = [p - 1 for p in list(mapint())]
+
 
 class UnionFind():
     def __init__(self, n):
@@ -44,10 +47,11 @@ class UnionFind():
     def roots(self):
         return [i for i, x in enumerate(self.parents) if x < 0]
 
+
 uf = UnionFind(N)
 for _ in range(M):
     x, y = mapint()
-    uf.union(x-1, y-1)
+    uf.union(x - 1, y - 1)
 
 roots = uf.roots()
 root_set = [set() for _ in range(N)]

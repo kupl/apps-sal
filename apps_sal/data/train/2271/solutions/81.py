@@ -23,16 +23,18 @@ class UnionFind(object):
     def is_same(self, x, y):
         return self.find(x) == self.find(y)
 
-n,m=map(int, input().split())
-uf1=UnionFind(n)
-p=list(map(int,input().split()))
-for i in range(m):
-    a,b=map(int, input().split())
-    uf1.union(a-1,b-1)
 
-for i in range(n):uf1.find(i) 
-ans=0
+n, m = map(int, input().split())
+uf1 = UnionFind(n)
+p = list(map(int, input().split()))
+for i in range(m):
+    a, b = map(int, input().split())
+    uf1.union(a - 1, b - 1)
+
 for i in range(n):
-    if uf1.par[i]==uf1.par[p[i]-1]:
-        ans+=1
+    uf1.find(i)
+ans = 0
+for i in range(n):
+    if uf1.par[i] == uf1.par[p[i] - 1]:
+        ans += 1
 print(ans)

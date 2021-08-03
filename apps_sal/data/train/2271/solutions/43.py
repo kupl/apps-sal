@@ -9,12 +9,12 @@ class UF:
         self.state = [-1] * N
         self.rank = [0] * N
         self.num_group = N
-    
+
     def get_parent(self, a):
         p = self.state[a]
         if p < 0:
             return a
-        
+
         q = self.get_parent(p)
         self.state[a] = q
         return q
@@ -35,7 +35,7 @@ class UF:
         self.state[pa] = pb
         self.state[a] = pb
         self.num_group -= 1
-    
+
     def is_pair(self, a, b):
         return self.get_parent(a) == self.get_parent(b)
 
@@ -56,4 +56,3 @@ for i, a in enumerate(A):
         res += 1
 
 print(res)
-
