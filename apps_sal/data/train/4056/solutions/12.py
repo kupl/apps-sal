@@ -7,13 +7,12 @@ def leaderboard_sort(leaderboard, changes):
         v = int(temp[1])
         for j in range(length):
             if leaderboard[j] == k:
-                if j + v > length-1:
+                if j + v > length - 1:
                     temp2 = leaderboard.pop(j)
                     leaderboard.insert(0, temp2)
                     break
                 temp2 = leaderboard.pop(j)
-                leaderboard.insert(j+v, temp2)
+                leaderboard.insert(j + v, temp2)
                 break
     leaderboard.reverse()
     return leaderboard
-

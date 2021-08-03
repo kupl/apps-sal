@@ -9,4 +9,3 @@ def switch_lights(a):
             elif z[i] == 0:
                 z[i] = 1
     return z[::-1]
-

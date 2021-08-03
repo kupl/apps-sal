@@ -9,5 +9,5 @@ def score_hand(cards):
         else:
             summ += 10
     for i in range(count_A):
-        summ += 11*(count_A - i) if summ + 11*(count_A - i) <= 21 else 1
+        summ += 11 * (count_A - i) if summ + 11 * (count_A - i) <= 21 else 1
     return summ
