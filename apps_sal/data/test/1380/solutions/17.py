@@ -1,5 +1,7 @@
 from itertools import groupby
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, k = R()
 a = list(R())
 b = sorted(a[i] - k * i for i in range(1, n))

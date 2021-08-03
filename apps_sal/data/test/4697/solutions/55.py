@@ -9,5 +9,6 @@ else:
     print(ans)
     return
 
-if 4 <= m: ans += m // 4
+if 4 <= m:
+    ans += m // 4
 print(ans)

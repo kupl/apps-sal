@@ -1,6 +1,7 @@
 import sys
 N, M = map(int, input().split())
-if not (1 <= N <= 10**12 and 1 <= M <= 10**12): return
+if not (1 <= N <= 10**12 and 1 <= M <= 10**12):
+    return
 
 count_SCC = 0
 if M > 2 * N:  # Mがあまる

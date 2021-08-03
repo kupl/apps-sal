@@ -5,7 +5,8 @@ a2 = [a[i] - k * i for i in range(n)]
 bs = set(a2)
 bestKey, maxCount = 1, 0
 for key in bs:
-    if key <= 0: continue
+    if key <= 0:
+        continue
     count = a2.count(key)
     if count > maxCount:
         bestKey = key

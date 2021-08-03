@@ -3,8 +3,8 @@ from collections import deque, defaultdict
 from sys import stdin, stdout
 input = stdin.readline
 # print = stdout.write
-listin = lambda: list(map(int, input().split()))
-mapin = lambda: map(int, input().split())
+def listin(): return list(map(int, input().split()))
+def mapin(): return map(int, input().split())
 
 
 def doTheThing(s):
