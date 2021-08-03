@@ -1,5 +1,5 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-inputStr=input()
+inputStr = input()
 resalnum = False
 resalpha = False
 resdigit = False
@@ -7,19 +7,18 @@ reslower = False
 resupper = False
 for i in inputStr:
     if(i.isalnum()):
-        resalnum=True
+        resalnum = True
     if(i.isalpha()):
-        resalpha=True
+        resalpha = True
     if(i.isdigit()):
-        resdigit=True
+        resdigit = True
     if(i.islower()):
-        reslower=True
+        reslower = True
     if(i.isupper()):
-        resupper=True
-    
+        resupper = True
+
 print(resalnum)
 print(resalpha)
 print(resdigit)
 print(reslower)
 print(resupper)
-
