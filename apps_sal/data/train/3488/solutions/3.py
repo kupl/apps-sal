@@ -1,1 +1,1 @@
-eval_object = lambda v: eval("{}{}{}".format(v['a'],v['operation'],v['b']))
+def eval_object(v): return eval("{}{}{}".format(v['a'], v['operation'], v['b']))

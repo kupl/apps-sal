@@ -8,4 +8,3 @@ def eval_object(v):
         '%': a % b,
         '**': a ** b,
     }.get(op, 1)
-

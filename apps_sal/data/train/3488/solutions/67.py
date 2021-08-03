@@ -1,9 +1,9 @@
 def eval_object(v):
     return {
-        '+' : v['a']+v['b'],
-        "-" : v['a']-v['b'],
-        "/" : v['a']/v['b'],
-        "*" : v['a']*v['b'],
-        "%" : v['a']%v['b'],
+        '+': v['a'] + v['b'],
+        "-": v['a'] - v['b'],
+        "/": v['a'] / v['b'],
+        "*": v['a'] * v['b'],
+        "%": v['a'] % v['b'],
         "**": v['a']**v['b']
-        }.get(v['operation'],9)
+    }.get(v['operation'], 9)

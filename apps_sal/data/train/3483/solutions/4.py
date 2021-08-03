@@ -1,4 +1,6 @@
 import re
+
+
 def string_parse(string):
     try:
         def replace(match):

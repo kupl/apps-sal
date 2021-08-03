@@ -52,5 +52,4 @@ def find_last(n, m):
                 k = next_man(people, k)
         k = flag
 
-    return k+1, people[k]
-
+    return k + 1, people[k]

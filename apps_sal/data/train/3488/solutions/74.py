@@ -1,2 +1,1 @@
-eval_object = lambda v: eval("{a}{operation}{b}".format(**v))
-
+def eval_object(v): return eval("{a}{operation}{b}".format(**v))
