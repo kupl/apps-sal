@@ -12,9 +12,9 @@ def main():
     sys.setrecursionlimit(10**7)
     INF = 10**7
     MOD = 10**9 + 7
-    LI = lambda: [int(x) for x in sys.stdin.readline().split()]
-    NI = lambda: int(sys.stdin.readline())
-    SI = lambda: sys.stdin.readline().rstrip()
+    def LI(): return [int(x) for x in sys.stdin.readline().split()]
+    def NI(): return int(sys.stdin.readline())
+    def SI(): return sys.stdin.readline().rstrip()
 
     N = NI()
     A = LI()

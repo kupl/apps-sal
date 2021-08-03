@@ -27,9 +27,11 @@ for i, x in enumerate(a):
 if mx == 0:
     print(0)
     return
-if not pl: mx *= -1
+if not pl:
+    mx *= -1
 for i in range(n):
-    if i == ind: continue
+    if i == ind:
+        continue
     res.append([ind + 1, i + 1])
     a[i] += mx
 if pl:

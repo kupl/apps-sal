@@ -9,7 +9,8 @@ if minA >= 0 or 2 * abs(maxA) > abs(minA):
     print((maxi + 1, maxi + 1))
 
     for i in range(N):
-        if i == maxi: continue
+        if i == maxi:
+            continue
         print((maxi + 1, i + 1))
 
     for i in range(N - 1):
@@ -20,7 +21,8 @@ else:
     print((2 * N - 1))
     print((mini + 1, mini + 1))
     for i in range(N):
-        if i == mini: continue
+        if i == mini:
+            continue
         print((mini + 1, i + 1))
 
     for i in range(N - 1, 0, -1):

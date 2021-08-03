@@ -2,9 +2,9 @@ def main():
     import sys
     import numpy as np
     ikimasu = sys.stdin.buffer.readline
-    ini = lambda: int(ins())
-    ina = lambda: list(map(int, ikimasu().split()))
-    ins = lambda: ikimasu().strip()
+    def ini(): return int(ins())
+    def ina(): return list(map(int, ikimasu().split()))
+    def ins(): return ikimasu().strip()
 
     n = ini()
     tmp = ina()

@@ -10,7 +10,8 @@ for i, a in enumerate(A):
 
 print(2 * N - 2)
 for i in range(N):
-    if i == disc: continue
+    if i == disc:
+        continue
     print(disc + 1, i + 1)
 if tmp >= 0:
     for i in range(N - 1):

@@ -16,11 +16,13 @@ if abs(mx) >= abs(mn):
         a[i] += a[t]
     for i in range(N):
         for j in range(N):
-            if a[j] > a[t]: t = j
+            if a[j] > a[t]:
+                t = j
         res.append((t + 1, i + 1))
         a[i] += a[t]
     print(len(res))
-    for r in res: print(*r)
+    for r in res:
+        print(*r)
 else:
     t = 0
     for i in range(N):
@@ -32,8 +34,10 @@ else:
         a[i] += a[t]
     for i in range(N - 1, -1, -1):
         for j in range(N):
-            if a[j] < a[t]: t = j
+            if a[j] < a[t]:
+                t = j
         res.append((t + 1, i + 1))
         a[i] += a[t]
     print(len(res))
-    for r in res: print(*r)
+    for r in res:
+        print(*r)

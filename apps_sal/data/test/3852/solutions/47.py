@@ -1,4 +1,6 @@
-inpl = lambda: list(map(int, input().split()))
+def inpl(): return list(map(int, input().split()))
+
+
 N = int(input())
 a = inpl()
 ans = []

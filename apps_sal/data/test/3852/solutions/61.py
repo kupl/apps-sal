@@ -9,7 +9,8 @@ def main():
     a = list(map(int, readline().split()))
 
     ans = []
-    MAX = max(a); MIN = min(a)
+    MAX = max(a)
+    MIN = min(a)
     if MIN >= 0:
         for i in range(1, N):
             ans.append((i, i + 1))

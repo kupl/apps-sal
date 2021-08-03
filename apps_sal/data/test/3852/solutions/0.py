@@ -17,7 +17,8 @@ if Flag:
         if v == MAX:
             MAX_loc = i
             break
-    ans = []; t = 0
+    ans = []
+    t = 0
     for i in range(N - 1):
         if A[i + 1] >= A[i]:
             continue
@@ -34,7 +35,8 @@ else:
         if v == MIN:
             MIN_loc = i
             break
-    ans = []; t = 0
+    ans = []
+    t = 0
     for i in range(N - 1):
         if A[N - 1 - i] >= A[N - 2 - i]:
             continue

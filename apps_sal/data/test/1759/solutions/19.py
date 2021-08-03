@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 m, n = R()
 t = [0] * (n + 1)
 c = []

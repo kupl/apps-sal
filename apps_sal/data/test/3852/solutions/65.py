@@ -1,9 +1,11 @@
 from sys import stdout
-printn = lambda x: stdout.write(str(x))
-inn = lambda: int(input())
-inl = lambda: list(map(int, input().split()))
-inm = lambda: list(map(int, input().split()))
-ins = lambda: input().strip()
+def printn(x): return stdout.write(str(x))
+def inn(): return int(input())
+def inl(): return list(map(int, input().split()))
+def inm(): return list(map(int, input().split()))
+def ins(): return input().strip()
+
+
 DBG = True  # and False
 BIG = 999999999
 R = 10**9 + 7

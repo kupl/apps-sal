@@ -1,7 +1,9 @@
 # ARC086D
 
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(max(1000, 10**9))
 
 

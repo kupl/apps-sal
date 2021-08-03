@@ -16,8 +16,12 @@ for i in range(N):
         mni = i
 print(2 * N - 1)
 if abs(mx) > abs(mn):
-    for i in range(N): print(mxi + 1, i + 1)
-    for i in range(N - 1): print(i + 1, i + 2)
+    for i in range(N):
+        print(mxi + 1, i + 1)
+    for i in range(N - 1):
+        print(i + 1, i + 2)
 else:
-    for i in range(N): print(mni + 1, i + 1)
-    for i in range(N - 1, 0, -1): print(i + 1, i)
+    for i in range(N):
+        print(mni + 1, i + 1)
+    for i in range(N - 1, 0, -1):
+        print(i + 1, i)

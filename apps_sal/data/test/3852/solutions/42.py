@@ -20,4 +20,5 @@ else:
         a[i] += a[i + 1]
         ans.append((i + 2, i + 1))
 print(len(ans))
-for i in ans: print(*i)
+for i in ans:
+    print(*i)

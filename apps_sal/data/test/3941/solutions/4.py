@@ -28,7 +28,8 @@ def bfs(u, visited):
                 q.append(v[0])
                 visited[v[0]] = True
             else:
-                if color[v[0]] != color[u] ^ v[1]: return False
+                if color[v[0]] != color[u] ^ v[1]:
+                    return False
     return True
 
 
@@ -48,5 +49,7 @@ for i in range(m):
             flag = False
             break
 
-if flag: print("YES")
-else: print("NO")
+if flag:
+    print("YES")
+else:
+    print("NO")

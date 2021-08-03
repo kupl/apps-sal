@@ -49,7 +49,8 @@ for i in range(N - 1):
     g = b
     if g >= a:
         t = a - 1
-        if t < 1: t = 1
+        if t < 1:
+            t = 1
         re += g - t
         za[i + 1] = t
         re += a - 1
