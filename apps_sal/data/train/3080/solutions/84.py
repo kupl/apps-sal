@@ -5,4 +5,3 @@ def who_is_paying(name):
     else:
         output = [name]
     return output
-

@@ -3,6 +3,6 @@ def who_is_paying(name):
         return [""]
     else:
         if len(name) > 2:
-            return [name, name[0:2]] 
+            return [name, name[0:2]]
         else:
             return [name]

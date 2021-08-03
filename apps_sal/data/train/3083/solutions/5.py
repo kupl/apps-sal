@@ -1,5 +1,6 @@
 from itertools import accumulate
 
+
 def polydivisible(x):
     return all(
         int(''.join(s)) % i == 0

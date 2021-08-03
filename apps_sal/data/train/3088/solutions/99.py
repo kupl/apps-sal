@@ -5,4 +5,3 @@ def nba_extrap(ppg, mpg):
     else:
         pass
     return pts
-

@@ -7,6 +7,6 @@ def unflatten(flat_array):
             result.append(num)
             i += 1
         else:
-            result.append(flat_array[i:i+num])
+            result.append(flat_array[i:i + num])
             i += num
     return result

@@ -4,7 +4,7 @@ def who_is_paying(name):
         first = name[0]
         second = name[1]
         first_two = first + second
-        final = list([name,first_two])
+        final = list([name, first_two])
         return final
     else:
         final = list([name])

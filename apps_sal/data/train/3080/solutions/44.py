@@ -8,4 +8,3 @@ def who_is_paying(name):
     else:
         liste_finale.append(name)
         return liste_finale
-

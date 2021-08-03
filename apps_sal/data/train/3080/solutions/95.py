@@ -8,4 +8,6 @@ def who_is_paying(name):
     if len(name) <= 2:
         s.append(name)
         return s
+
+
 who_is_paying("")

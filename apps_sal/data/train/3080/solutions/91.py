@@ -7,5 +7,3 @@ def who_is_paying(name):
         name_2 = name_list[0:2]
         name_str = ''.join(name_2)
         return ([name, name_str])
-
-
