@@ -11,7 +11,8 @@ read = sys.stdin.read
 def get(i, l, r):
     a = i - r
     b = i - l
-    if b < 0: return 0
+    if b < 0:
+        return 0
     return acc[b] - (acc[a - 1] if a - 1 >= 0 else 0)
 
 

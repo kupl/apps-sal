@@ -1,8 +1,10 @@
 N, K = map(int, input().split())
 mod = 998244353
-L = [0] * K; R = [0] * K
+L = [0] * K
+R = [0] * K
 m = [0] * 3 * N
-m[0] = 1; m[1] = -1
+m[0] = 1
+m[1] = -1
 for i in range(K):
     L[i], R[i] = map(int, input().split())
 # print(m)

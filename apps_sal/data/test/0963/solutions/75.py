@@ -11,7 +11,8 @@ for i in range(n):
         imos[i] = (imos[i] + imos[i - 1]) % mod
         tmp = imos[i]
     for j in range(k):
-        if lr[j][0] + i > n: continue
+        if lr[j][0] + i > n:
+            continue
         imos[lr[j][0] + i] += tmp
         imos[min(lr[j][1] + 1 + i, n)] -= tmp
 print(imos[-2] % mod)

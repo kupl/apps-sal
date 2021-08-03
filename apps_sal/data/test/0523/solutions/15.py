@@ -14,9 +14,11 @@ for i in range(n):
     if data[i] == data_rev[i]:
         now2 = data[i]
         for j in range(n):
-            if j == i: continue
+            if j == i:
+                continue
             for k in range(j + 1, n):
-                if k == i: continue
+                if k == i:
+                    continue
                 if data[j] == data_rev[k]:
                     now2 = data[j] + now2 + data[k]
         if ans < len(now2):

@@ -21,7 +21,8 @@ def li3(): return [int(i) for i in input().rstrip('\n')]
 
 n, m = li()
 l = []
-for i in range(n): l.append(st())
+for i in range(n):
+    l.append(st())
 l.sort()
 cnt = Counter()
 for i in l:
