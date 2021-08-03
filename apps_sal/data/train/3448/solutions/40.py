@@ -1,1 +1,1 @@
-f=lambda n:int==type(n)and n>0and-~n*n/2or None
+def f(n): return int == type(n) and n > 0 and -~n * n / 2 or None

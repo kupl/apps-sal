@@ -3,5 +3,4 @@ def get_average(marks):
     for n in marks:
         sum = sum + n
     sum
-    return int(sum/len(marks))
-
+    return int(sum / len(marks))

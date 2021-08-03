@@ -4,6 +4,5 @@ def get_average(marks):
     for elem in marks:
         avg += elem
     avg = avg / len(marks)
-    
-    return int(avg)
 
+    return int(avg)

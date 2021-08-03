@@ -10,4 +10,3 @@ def f(n):
             return None
     else:
         return None
-

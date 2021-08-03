@@ -1,1 +1,1 @@
-get_average = lambda m: int(__import__("numpy").mean(m))
+def get_average(m): return int(__import__("numpy").mean(m))

@@ -1,6 +1,6 @@
 def f(n):
-    if type(n) == int and n>0:
-        a =0
+    if type(n) == int and n > 0:
+        a = 0
         sum = 0
         while a < n:
             a = a + 1

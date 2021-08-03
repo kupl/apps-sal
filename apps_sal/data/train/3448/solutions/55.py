@@ -1,9 +1,9 @@
 def f(n):
-    if isinstance(n,str):
+    if isinstance(n, str):
         return None
-    if n <=0:
+    if n <= 0:
         return None
-    if n!=int(n):
+    if n != int(n):
         return None
-    
-    return   n*(n+1)//2
+
+    return n * (n + 1) // 2

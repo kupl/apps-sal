@@ -6,4 +6,3 @@ def cyclic_string(s):
         alist.append(i)
         if s in "".join(alist) * 15:
             return len(alist)
-

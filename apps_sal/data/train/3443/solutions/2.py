@@ -7,8 +7,8 @@ calc_parity = partial(reduce, xor)
 
 def correct(m, n, bits):
     bits = list(map(int, bits))
-    xs = [bits[i*n:(i+1)*n] for i in range(m)]
-    row_parity = bits[m*n:-n]
+    xs = [bits[i * n:(i + 1) * n] for i in range(m)]
+    row_parity = bits[m * n:-n]
     col_parity = bits[-n:]
     invalid_row = invalid_col = -1
     for i, (row, p) in enumerate(zip(xs, row_parity)):

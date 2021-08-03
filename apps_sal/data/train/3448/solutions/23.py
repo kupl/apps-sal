@@ -4,5 +4,5 @@ def f(n):
         n_ = float(n)
     except:
         return(None)
-    
-    return(n_*(n_+1)/2 if (n_.is_integer() and n_ > 0) else None)
+
+    return(n_ * (n_ + 1) / 2 if (n_.is_integer() and n_ > 0) else None)

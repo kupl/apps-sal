@@ -12,7 +12,6 @@ def f(n):
             if type(n) != int:
                 return None
             else:
-                i+=1
+                i += 1
                 nums.append(i)
         return sum(nums)
-

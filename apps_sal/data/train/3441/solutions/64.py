@@ -12,4 +12,3 @@ def get_average(marks):
 # def get_average(marks):
 #     avg = m(marks)
 #     return f(avg)
-
