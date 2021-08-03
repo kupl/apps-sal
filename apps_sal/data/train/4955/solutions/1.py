@@ -1,4 +1,4 @@
-def ride(group,comet):
+def ride(group, comet):
     n1 = 1
     n2 = 1
     for x in group:

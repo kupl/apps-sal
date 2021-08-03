@@ -17,4 +17,3 @@ def protein_synthesis(dna):
         if len(element) == 3:
             protein += CODON_DICT[element] + " "
     return (rna, protein.strip())
-

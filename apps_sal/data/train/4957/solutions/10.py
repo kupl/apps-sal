@@ -6,5 +6,6 @@ class Dog:
         self.breed = breed
         self.bark = lambda: "Woof"
 
+
 snoopy = Dog("Beagle")
 scoobydoo = Dog("Great Dane")

@@ -1,3 +1,1 @@
-solution = lambda q: 'Value is %05d' % q
-    
-
+def solution(q): return 'Value is %05d' % q

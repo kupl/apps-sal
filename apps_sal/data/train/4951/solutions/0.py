@@ -24,4 +24,3 @@ def ip_to_int32(ip):
     res += int(addr[2]) << 8
     res += int(addr[3])
     return res
-

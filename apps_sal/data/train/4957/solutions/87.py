@@ -1,12 +1,11 @@
 class Dog ():
-  def __init__(self, breed, sound="Woof"):
-    self.breed = breed
-    self.sound = sound
-    
-  def bark(self):
-    return self.sound
-    
-    
+    def __init__(self, breed, sound="Woof"):
+        self.breed = breed
+        self.sound = sound
+
+    def bark(self):
+        return self.sound
+
 
 snoopy = Dog("Beagle")
 

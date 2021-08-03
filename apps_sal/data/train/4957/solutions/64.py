@@ -1,7 +1,7 @@
 class Dog ():
-  def __init__(self, bark):
-    self.bark = bark
-    
+    def __init__(self, bark):
+        self.bark = bark
+
 
 snoopy = Dog("Beagle")
 

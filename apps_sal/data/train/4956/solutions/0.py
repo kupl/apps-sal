@@ -1,6 +1,7 @@
 import re
 
-TABLE = str.maketrans('ACGT','UGCA')
+TABLE = str.maketrans('ACGT', 'UGCA')
+
 
 def protein_synthesis(dna):
     rna = re.findall(r'.{1,3}', dna.translate(TABLE))

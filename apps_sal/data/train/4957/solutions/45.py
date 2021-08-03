@@ -1,13 +1,14 @@
 class BigDog ():
-  def __init__(self, breed):
-    self.breed = breed
-    
+    def __init__(self, breed):
+        self.breed = breed
+
+
 class Dog (BigDog):
-  
-  @staticmethod
-  def bark():
-      return "Woof"
-    
+
+    @staticmethod
+    def bark():
+        return "Woof"
+
 
 snoopy = Dog("Beagle")
 

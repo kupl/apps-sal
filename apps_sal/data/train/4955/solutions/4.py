@@ -1,4 +1,3 @@
 from functools import reduce
-ride = lambda g, c: "GO" if mod47(group) == mod47(comet) else "STAY"
-mod47 = lambda s: reduce(lambda p, c: p * '-ABCDEFGHIJKLMNOPQRSTUVWXYZ'.index(c), s, 1) % 47
-
+def ride(g, c): return "GO" if mod47(group) == mod47(comet) else "STAY"
+def mod47(s): return reduce(lambda p, c: p * '-ABCDEFGHIJKLMNOPQRSTUVWXYZ'.index(c), s, 1) % 47
