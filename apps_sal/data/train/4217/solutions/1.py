@@ -1,5 +1,6 @@
 from datetime import date
 
+
 def solve(a, b):
     first = None
     count = 0
@@ -12,4 +13,3 @@ def solve(a, b):
                     first = last
                 count += 1
     return (first, last, count)
-

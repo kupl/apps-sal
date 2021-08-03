@@ -5,4 +5,3 @@ def unite_unique(*args):
             if b not in result:
                 result.append(b)
     return result
-

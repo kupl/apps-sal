@@ -11,4 +11,3 @@ def game_winners(gryffindor, slytherin):
         return "Slytherin wins!"
     else:
         return "It's a draw!"
-

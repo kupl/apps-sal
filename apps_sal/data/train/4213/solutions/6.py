@@ -1,5 +1,6 @@
 def array_info(x):
-    if not x: return 'Nothing in the array!'
+    if not x:
+        return 'Nothing in the array!'
     ints = floats = strings = whitespaces = 0
     for e in x:
         if isinstance(e, str):

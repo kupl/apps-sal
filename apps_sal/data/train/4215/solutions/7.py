@@ -1,1 +1,1 @@
-count_number=lambda n,x:sum(x-n*r<=x%r<1for r in range(1,n+1))
+def count_number(n, x): return sum(x - n * r <= x % r < 1for r in range(1, n + 1))

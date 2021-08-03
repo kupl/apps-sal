@@ -1,2 +1,2 @@
 from collections import Counter
-validate_word=lambda word: len(set(Counter(word.lower()).values())) == 1
+def validate_word(word): return len(set(Counter(word.lower()).values())) == 1

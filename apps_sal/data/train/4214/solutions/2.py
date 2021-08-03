@@ -1,5 +1,6 @@
 import re
 
+
 def spin_solve(sentence):
     def f(m):
         s, punc = m.groups()
@@ -10,4 +11,3 @@ def spin_solve(sentence):
             s
         ) + punc
     return re.sub(r"([-'a-zA-Z]+)([,.?!]?)", f, sentence)
-
