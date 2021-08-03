@@ -21,7 +21,7 @@ def factors(n):
 
 n = int(input())
 n -= 1
-OK = False;
+OK = False
 for i in factors(n):
     if((n // i - i) > 0 and (n // i - i) % 2 == 1 and i > 0 and (n // i - i) // 2 > 0):
         print("{} {}".format(i, (n // i - i) // 2))

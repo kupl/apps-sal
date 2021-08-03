@@ -1,8 +1,8 @@
 import sys
 
 sys.setrecursionlimit(10 ** 5)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
@@ -17,7 +17,8 @@ for _ in range(II()):
     s = sum(aa[:r + 1])
     ans = -1
     for i in range(min(n - 1, k)):
-        if i + 1 <= r: cur = s + (aa[i] + aa[i + 1]) * z
+        if i + 1 <= r:
+            cur = s + (aa[i] + aa[i + 1]) * z
         else:
             s += aa[i + 1]
             left = k - i - 1

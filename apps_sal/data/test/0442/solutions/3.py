@@ -5,10 +5,12 @@ import string
 import bisect
 import heapq
 input = sys.stdin.readline
-L = lambda: list(map(int, input().split()))
-Ls = lambda: list(input().split())
-M = lambda: list(map(int, input().split()))
-I = lambda: int(input())
+def L(): return list(map(int, input().split()))
+def Ls(): return list(input().split())
+def M(): return list(map(int, input().split()))
+def I(): return int(input())
+
+
 n = I()
 if(n % 2 == 0 or n <= 3):
     print("NO")
