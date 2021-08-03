@@ -33,4 +33,3 @@ for _ in range(int(input())):
             x += ((ox >> q) & 1) * (1 << p)
             x -= ((ox >> q) & 1) * (1 << q)
             x += ((ox >> p) & 1) * (1 << q)
-

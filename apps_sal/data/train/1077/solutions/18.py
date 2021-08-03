@@ -11,8 +11,5 @@ for test in range(t):
     lines = lines[::-1]
     for i in range(n):
         print(turns[i], ' '.join(lines[i].split()[1:]))
-        
+
     print()
-
-        
-

@@ -17,4 +17,3 @@ for i in range(T):
         else:
             print('Left ' + ' '. join(direction.split()[1:]))
         prev = direction
-

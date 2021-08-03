@@ -1,6 +1,5 @@
 # cook your dish here
-x=int(input())
+x = int(input())
 for i in range(x):
-    h=input()
+    h = input()
     print(h.count('4'))
-

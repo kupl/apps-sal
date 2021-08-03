@@ -1,7 +1,6 @@
 # cook your dish here
-n=int(input())
+n = int(input())
 for i in range(n):
-    s=input()
-    c=s.count('4')
+    s = input()
+    c = s.count('4')
     print(c)
-
