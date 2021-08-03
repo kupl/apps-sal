@@ -24,7 +24,7 @@ for i in range(T):
             for p in range(100):
                 for q in range(2, len(stack)):
                     if stack[q - 1] == 0 and stack[q] >= 1:
-                        stack[q-1] = 2
+                        stack[q - 1] = 2
                         stack[q] -= 1
                         var += 1
                         if var == n:
@@ -45,5 +45,3 @@ for i in range(T):
                 print("yes")
             else:
                 print("no")
-
-

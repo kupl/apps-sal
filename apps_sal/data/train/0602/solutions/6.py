@@ -9,7 +9,7 @@ while True:
     try:
         remix.append(mini1)
         remix.append(lyrics[t])
-        t+=1
+        t += 1
     except IndexError:
         break
 print(" ".join(remix), end="")
