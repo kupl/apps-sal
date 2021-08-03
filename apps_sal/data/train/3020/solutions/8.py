@@ -1,7 +1,7 @@
 def kontti(st):
     r = []
     for s in st.split():
-        a,s = '',list(s)
+        a, s = '', list(s)
         if not any(i in s for i in 'aeiouyAEIOUY'):
             r.append(''.join(s))
         else:

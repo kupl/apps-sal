@@ -5,5 +5,5 @@ def flatten(seq):
         yield e
 
 
-def locate(seq, value): 
+def locate(seq, value):
     return any(e == value for e in flatten(seq))

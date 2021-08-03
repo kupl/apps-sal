@@ -1,5 +1,6 @@
 import re
 
+
 def friend(x):
     true_friends = []
     for name in x:

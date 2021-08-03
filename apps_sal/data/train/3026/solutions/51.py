@@ -10,8 +10,5 @@ def min_value(digits):
             nodup.append(i)
     for i in nodup:
         stri += str(i)
-        
-    return int(stri)
-        
-        
 
+    return int(stri)

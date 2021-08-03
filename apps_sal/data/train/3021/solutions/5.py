@@ -29,7 +29,7 @@ def available_moves(position):
                     if (position[0], y) != position:
                         moves.append(fromCoord((position[0], y)))
 
-                for i in range(1, max(max((7 - position[0]), (position[0])),max((7 - position[1], position[1]))) + 1):
+                for i in range(1, max(max((7 - position[0]), (position[0])), max((7 - position[1], position[1]))) + 1):
                     if 0 <= position[0] + i <= 7 and 0 <= position[1] + i <= 7:
                         moves.append(fromCoord((position[0] + i, position[1] + i)))
 
@@ -46,5 +46,7 @@ def available_moves(position):
             return []
         return []
     except TypeError:
-         return []
+        return []
+
+
 print(available_moves("D8"))

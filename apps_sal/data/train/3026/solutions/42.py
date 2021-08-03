@@ -5,4 +5,3 @@ def min_value(digits):
         min_number *= 10
         min_number += integer
     return min_number
-

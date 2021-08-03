@@ -8,7 +8,5 @@ def two_highest(arg1):
         return final_list
 
     highest = [final_list[-1], final_list[-2]]
-    
-    return highest
-    
 
+    return highest

@@ -1,5 +1,6 @@
 from math import factorial as f
 
+
 def factorial(n):
     if n < 0:
         return None

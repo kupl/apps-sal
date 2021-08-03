@@ -1,5 +1,6 @@
 from typing import List
 
+
 def friend(array: List[str]) -> List[str]:
     """
     Filter a list of strings and return a list with only your friends name in it.

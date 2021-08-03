@@ -7,8 +7,8 @@ def two_highest(arg1):
     elif len(arg1) == 1:
         return arg1
     else:
-        
-        x = sorted(arg1, reverse = True)
+
+        x = sorted(arg1, reverse=True)
         for i in range(len(x)):
             if x[i] in y:
                 y = y

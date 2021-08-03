@@ -6,4 +6,3 @@ def friend(arr):
         else:
             pass
     return raturn
-

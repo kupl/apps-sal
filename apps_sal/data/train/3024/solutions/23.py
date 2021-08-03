@@ -4,4 +4,3 @@ def friend(x):
         if(len(x[i]) == 4):
             my_friends.append(x[i])
     return my_friends
-

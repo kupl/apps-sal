@@ -1,9 +1,9 @@
 def two_highest(arg1):
-    l=[]
+    l = []
     for x in arg1:
-        if type(x)!=int:
+        if type(x) != int:
             return False
         else:
             l.append(x)
-    a=set(l)
-    return sorted(a,reverse=True)[:2]
+    a = set(l)
+    return sorted(a, reverse=True)[:2]

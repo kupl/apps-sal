@@ -11,4 +11,3 @@ def two_highest(arg1):
         res.append(dad[-1])
         res.append(dad[-2])
         return res
-

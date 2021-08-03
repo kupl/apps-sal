@@ -6,4 +6,3 @@ def min_value(digits):
     storage.sort()
     return int("".join(storage))
     # your code here
-

@@ -1,1 +1,1 @@
-min_value = lambda digits: int(''.join(sorted(list(map(str, set(digits))))))
+def min_value(digits): return int(''.join(sorted(list(map(str, set(digits))))))

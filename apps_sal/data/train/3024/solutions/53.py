@@ -4,5 +4,3 @@ def friend(x):
         if len(name) == 4:
             flist.append(name)
     return flist
-    
-

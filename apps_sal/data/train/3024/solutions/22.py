@@ -4,5 +4,3 @@ def friend(friends):
         if(len(name) == 4):
             friend.append(name)
     return friend
-    
-
