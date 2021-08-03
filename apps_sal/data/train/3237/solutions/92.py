@@ -4,5 +4,6 @@ def even_or_odd(number):
     else:
         return "Odd"
 
+
 x = even_or_odd(-1)
 print(x)
