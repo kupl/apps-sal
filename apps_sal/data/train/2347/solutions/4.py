@@ -16,7 +16,7 @@ def main():
         for k in range(K):
             flg = -1
             for j in range(N):
-                i = j*K+k
+                i = j * K + k
                 if i >= N:
                     break
                 if S[i] == "0":
@@ -33,7 +33,7 @@ def main():
                 N0 += 1
             elif flg == 1:
                 N1 += 1
-        if N0*2 <= K and N1*2 <= K and ok == 1:
+        if N0 * 2 <= K and N1 * 2 <= K and ok == 1:
             print("YES")
         else:
             print("NO")
@@ -41,5 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

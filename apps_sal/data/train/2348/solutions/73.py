@@ -1,4 +1,6 @@
+import sys
 from bisect import *
+
 
 class Doubling:
     def __init__(self, A, K_max, decrement=True):
@@ -34,39 +36,43 @@ class Doubling:
                 break
         return i + self.decrement
 
-def binary_search_int(ok, ng, test,a,b):
+
+def binary_search_int(ok, ng, test, a, b):
     """
     :param ok: solve(x) = True を必ず満たす点
     :param ng: solve(x) = False を必ず満たす点
     """
     while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
-        if test(mid,a,b):
+        if test(mid, a, b):
             ok = mid
         else:
             ng = mid
     return ok
 
+
 ######################################################################################
-import sys
 input = sys.stdin.readline
 
-N=int(input())
-X=list(map(int, input().split()))
-L=int(input())
-Q=int(input())
+N = int(input())
+X = list(map(int, input().split()))
+L = int(input())
+Q = int(input())
 
-A=[]
+A = []
 for x in X:
-    i=bisect_left(X,x+1+L)
-    A.append(i-1)
-doubling = Doubling(A, N+1, decrement=False)
+    i = bisect_left(X, x + 1 + L)
+    A.append(i - 1)
+doubling = Doubling(A, N + 1, decrement=False)
 
-def test(x,a,b):
-    return X[doubling.apply(a,x)]<X[b]
+
+def test(x, a, b):
+    return X[doubling.apply(a, x)] < X[b]
+
 
 for _ in range(Q):
-    a,b=map(int, input().split())
-    a,b=a-1,b-1
-    if a>b: a,b=b,a
-    print(binary_search_int(0,N,test,a,b)+1)
+    a, b = map(int, input().split())
+    a, b = a - 1, b - 1
+    if a > b:
+        a, b = b, a
+    print(binary_search_int(0, N, test, a, b) + 1)

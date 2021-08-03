@@ -5,13 +5,13 @@ t = int(input())
 for _ in range(t):
     n, k = list(map(int, input().split()))
     s = input()
-    l = ['']*k
+    l = [''] * k
     works = True
     for i in range(n):
         c = s[i]
         if c != '?':
-            if l[i%k] == c or l[i%k] == '':
-                l[i%k] = c
+            if l[i % k] == c or l[i % k] == '':
+                l[i % k] = c
             else:
                 works = False
                 break
@@ -23,11 +23,10 @@ for _ in range(t):
                 big -= 1
             elif c == '1':
                 smol += 1
-        goal = k//2
+        goal = k // 2
         if smol <= goal <= big:
             print('YES')
         else:
             print('NO')
     else:
         print('NO')
-

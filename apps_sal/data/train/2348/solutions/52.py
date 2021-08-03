@@ -1,9 +1,10 @@
+from bisect import bisect
+from operator import mul
+from functools import partial, reduce
 import sys
 sys.setrecursionlimit(10**7)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
-from functools import partial, reduce
-from operator import mul
 prod = partial(reduce, mul)
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
 def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
@@ -12,7 +13,6 @@ def LS(): return sys.stdin.readline().split()
 def II(): return int(sys.stdin.readline())
 def SI(): return input()
 
-from bisect import bisect
 
 def main():
     N = II()
@@ -50,5 +50,6 @@ def main():
             a = Unreachs[a][k] - 1
         print(ans)
     return 0
+
 
 main()

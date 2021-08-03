@@ -10,13 +10,13 @@ def solve():
             if arr[mid] - arr[i] <= L:
                 l = mid + 1
             else:
-                r = mid 
+                r = mid
         dp[i][0] = r - 1
-        
+
     for j in range(1, 20):
         for i in range(n):
             dp[i][j] = dp[dp[i][j - 1]][j - 1]
-    
+
     q = int(input())
     for _ in range(q):
         x, y = list(map(int, input().split()))
@@ -27,10 +27,9 @@ def solve():
         tmp = 0
         for j in range(19, -1, -1):
             if dp[x][j] < y:
-                tmp += 1 << j 
+                tmp += 1 << j
                 x = dp[x][j]
         print((tmp + 1))
 
 
 solve()
-

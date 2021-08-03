@@ -30,4 +30,3 @@ for line in sys.stdin:
     buf.append(ans)
 
 print(('\n'.join(map(str, buf))))
-

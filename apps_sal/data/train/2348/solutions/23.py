@@ -3,19 +3,19 @@ def main():
     x = list(map(int, input().split()))
     l = int(input())
     q = int(input())
-    ab = [list(map(lambda x:int(x)-1, input().split())) for _ in [0]*q]
-    doubling = [[] for _ in [0]*n]
+    ab = [list(map(lambda x:int(x) - 1, input().split())) for _ in [0] * q]
+    doubling = [[] for _ in [0] * n]
     j = 0
     for i in range(n):
         while j < n:
-            if x[j]-x[i] > l:
-                doubling[i].append(j-1)
+            if x[j] - x[i] > l:
+                doubling[i].append(j - 1)
                 break
             else:
                 j += 1
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         if not doubling[i]:
-            doubling[i].append(n-1)
+            doubling[i].append(n - 1)
         else:
             break
     for _ in range(16):
@@ -35,7 +35,7 @@ def main():
         if a == b:
             print(ans)
         else:
-            print(ans+1)
+            print(ans + 1)
 
 
 main()

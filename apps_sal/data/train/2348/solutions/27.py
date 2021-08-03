@@ -13,13 +13,13 @@ for i in range(N):
 # ダブリング
 for k in range(1, len(R)):
     for i in range(N):
-        R[k][i] = R[k-1][R[k-1][i]]
+        R[k][i] = R[k - 1][R[k - 1][i]]
 
 # にぶたんでクエリに答えていく
 Q = int(input())
 for q in range(Q):
     a, b = list(map(int, input().split()))
-    a, b = min(a, b)-1, max(a, b)-1
+    a, b = min(a, b) - 1, max(a, b) - 1
 
     ans = 0
     for k in range(len(R))[::-1]:
@@ -27,4 +27,3 @@ for q in range(Q):
             a = R[k][a]
             ans += 2 ** k
     print((ans + 1))
-

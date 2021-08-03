@@ -7,4 +7,3 @@ for _ in range(int(input())):
         res += x
         d -= x * i
     print(res)
-

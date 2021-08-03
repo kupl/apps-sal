@@ -6,6 +6,7 @@ def calc(n):
         X[i] = 1 << i
     return X
 
+
 T = int(input())
 for _ in range(T):
     d, m = list(map(int, input().split()))
@@ -13,4 +14,3 @@ for _ in range(T):
     for a in calc(d):
         s = s * (a + 1) % m
     print((s - 1) % m)
-

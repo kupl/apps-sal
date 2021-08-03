@@ -1,6 +1,7 @@
 import math
 import bisect
 
+
 def make_tree():
     to = [0] * n
     j = 0
@@ -9,6 +10,7 @@ def make_tree():
             j += 1
         to[i] = j
     return to
+
 
 def binary_lifting():
     m = int(math.log2(n)) + 3
@@ -21,6 +23,7 @@ def binary_lifting():
             if to2[i][j] == n - 1:
                 break
     return to2
+
 
 def solve(a, b):
     if a > b:
@@ -35,6 +38,7 @@ def solve(a, b):
         a = to2[a][i - 1]
         ans += pow2[i - 1]
     return ans
+
 
 n = int(input())
 x = list(map(int, input().split()))

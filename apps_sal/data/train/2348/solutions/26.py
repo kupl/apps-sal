@@ -37,4 +37,3 @@ for _ in range(Q):
             ans += 2 ** k
             a = d
     print(ans)
-
