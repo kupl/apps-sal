@@ -23,4 +23,3 @@ class TaxCalculator(object):
 
 
 tax_calculator = TaxCalculator([(10.0, 0.10), (20.0, 0.07), (30.0, 0.05)], 0.03)
-

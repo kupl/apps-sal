@@ -3,4 +3,3 @@ def find_uniq(arr):
     for e in s:
         if arr.count(e) == 1:
             return e
-
