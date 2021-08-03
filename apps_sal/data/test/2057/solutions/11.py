@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-di = {0 : 0}
+di = {0: 0}
 k = 1
 q = 1
 for i in a:

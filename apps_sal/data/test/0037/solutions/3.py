@@ -8,4 +8,3 @@ for i in range(0, C + 1):
         return
 
 print("No")
-

@@ -8,5 +8,3 @@ for i in range(c // a + 1):
         print('Yes')
         return
 print('No')
-
-

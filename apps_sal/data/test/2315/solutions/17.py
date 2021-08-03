@@ -2,9 +2,8 @@ import sys
 input = sys.stdin.readline
 
 
-t=int(input())
+t = int(input())
 for i in range(t):
-    l,r=list(map(int,input().split()))
+    l, r = list(map(int, input().split()))
 
-    print(l,2*l)
-
+    print(l, 2 * l)

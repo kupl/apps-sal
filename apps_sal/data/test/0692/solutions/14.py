@@ -10,4 +10,3 @@ for d in range(100000):
             break
 
 print('%.6f' % (result / 100000))
-

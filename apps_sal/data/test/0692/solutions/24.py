@@ -14,4 +14,3 @@ for D in range(total_days):
             break
 
 print(days_you_washed / total_days)
-

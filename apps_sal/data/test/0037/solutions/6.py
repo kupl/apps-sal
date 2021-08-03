@@ -5,4 +5,3 @@ for x in range(c // a + 1):
         break
 else:
     print('No')
-

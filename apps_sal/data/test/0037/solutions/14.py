@@ -9,4 +9,3 @@ while c_left >= 0:
     c_left -= a
 if c_left < 0:
     print("No")
-

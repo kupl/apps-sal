@@ -7,4 +7,3 @@ for i in range(2, len(a)):
         break
 else:
     print('NO')
-

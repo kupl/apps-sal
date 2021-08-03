@@ -10,4 +10,4 @@ for i in range(100000):
             break
     if bool:
         c += 1
-print(c/100000)
+print(c / 100000)

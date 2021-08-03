@@ -9,4 +9,3 @@ for i in range(a):
             ans += 1
             break
 print(ans / a)
-

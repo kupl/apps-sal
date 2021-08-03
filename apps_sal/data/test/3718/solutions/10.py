@@ -1,7 +1,9 @@
 3
 
+
 def good_pair(a, b):
     return 0 < (max(a, b) - min(a, b)) <= 2
+
 
 n = int(input())
 balls = sorted(list(map(int, input().split())))
@@ -17,5 +19,3 @@ for i in range(n):
                 break
 
 print(ans)
-
-

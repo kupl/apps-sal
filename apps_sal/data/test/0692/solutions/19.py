@@ -5,37 +5,36 @@ import time
 
 
 def lcm(a, b):
-    return(a*b//gcd(a,b))
+    return(a * b // gcd(a, b))
 
 
 def gcd(a, b):
-    while( b!= 0 ):
+    while(b != 0):
         while(a >= b):
             a -= b
         (a, b) = (b, a)
     return(a)
 
 
+n = int(input())
 
-n   = int(input())
-
-M   = [int(i) for i in input().split()]
-R   = [int(i) for i in input().split()]
+M = [int(i) for i in input().split()]
+R = [int(i) for i in input().split()]
 
 start = time.time()
 
-m  = 1
+m = 1
 
 for i in range(n):
-    m  = lcm(m, M[i])
+    m = lcm(m, M[i])
 
-a = [ 0 for i in range(m)]
+a = [0 for i in range(m)]
 
 for i in range(n):
     if R[i] >= M[i]:
         continue
 
-    now = R[i]-1
+    now = R[i] - 1
     if now < 0:
         now += M[i]
 
@@ -43,7 +42,6 @@ for i in range(n):
         a[now] = 1
         now += M[i]
 
-print(sum(a)/m)
+print(sum(a) / m)
 finish = time.time()
 #print(finish - start)
-

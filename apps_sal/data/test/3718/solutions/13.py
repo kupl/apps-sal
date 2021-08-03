@@ -11,4 +11,3 @@ if len(l) >= 3:
         if l[i] + 2 == l[i + 1] + 1 == l[i + 2]:
             a = 'YES'
 print(a)
-

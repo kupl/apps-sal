@@ -5,6 +5,7 @@ def gcd(a, b):
         b = c
     return a
 
+
 input()
 m = list(map(int, input().split()))
 r = list(map(int, input().split()))
@@ -18,4 +19,3 @@ for i in range(result):
             good += 1
             break
 print(good / result)
-

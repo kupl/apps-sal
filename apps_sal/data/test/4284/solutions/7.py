@@ -4,7 +4,8 @@ for _ in range(q):
     if b * n >= k:
         print(-1)
         continue
-    L = 0; R = n
+    L = 0
+    R = n
     while R - L > 1:
         M = (L + R) // 2
         if a * M + b * (n - M) < k:
@@ -15,6 +16,3 @@ for _ in range(q):
         print(R)
     else:
         print(L)
-        
-        
-

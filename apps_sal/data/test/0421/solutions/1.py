@@ -1,5 +1,7 @@
 def snd(lst):
     return lst[1]
+
+
 n = int(input())
 l = []
 for i in range(0, n):
@@ -9,7 +11,6 @@ e = 0
 ans = 0
 for p in l:
     if (p[0] > e):
-        ans+=1
+        ans += 1
         e = p[1]
 print(ans)
-

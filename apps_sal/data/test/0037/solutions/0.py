@@ -11,4 +11,3 @@ if p[c]:
     print('Yes')
 else:
     print('No')
-

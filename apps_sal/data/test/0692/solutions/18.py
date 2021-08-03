@@ -10,4 +10,3 @@ for i in range(100000):
             break
 
 print(k / 100000)
-

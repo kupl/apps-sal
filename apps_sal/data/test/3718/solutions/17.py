@@ -1,12 +1,13 @@
 def __starting_point():
     n = int(input())
-    b = sorted(set(map(int,input().split(' '))))
-    for i in range(len(b)-2):
-        if len(set(b[i:i+3]))==3:
-            if b[i+2]-b[i]<=2 and b[i+2]-b[i+1]<=1:
+    b = sorted(set(map(int, input().split(' '))))
+    for i in range(len(b) - 2):
+        if len(set(b[i:i + 3])) == 3:
+            if b[i + 2] - b[i] <= 2 and b[i + 2] - b[i + 1] <= 1:
                 print('YES')
                 break
-    else:   print('NO')
+    else:
+        print('NO')
 
 
 '''
