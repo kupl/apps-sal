@@ -7,4 +7,4 @@ for _ in range(t):
     b = set(b)
     z = b - a
     y = a - b
-    print(*y,*z)
+    print(*y, *z)

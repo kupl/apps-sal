@@ -9,20 +9,18 @@ for i in range(t):
             hmap[arr1[i]] += 1
         else:
             hmap[arr1[i]] = 1
-    
+
     for i in range(m):
         if arr2[i] in hmap:
             hmap[arr2[i]] += 1
         else:
             hmap[arr2[i]] = 1
     ans = []
-    #print(hmap)
+    # print(hmap)
     for key in hmap:
-        if hmap[key]==1:
+        if hmap[key] == 1:
             ans.append(key)
     ans.sort()
     for x in ans:
-        print(x,end=' ')
+        print(x, end=' ')
     print()
-            
-        

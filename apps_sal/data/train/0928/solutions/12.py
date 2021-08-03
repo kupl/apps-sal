@@ -9,6 +9,7 @@ def func():
 
     return
 
+
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())
     ans = 0
@@ -18,4 +19,3 @@ for _ in range(int(stdin.readline())):
             ans += 1
         i += 1
     print(ans)
-

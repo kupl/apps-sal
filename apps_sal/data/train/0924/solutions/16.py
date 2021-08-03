@@ -6,27 +6,29 @@
 import math
 
 # Function to return the distinct prime factors of an array or a list
-def distinctPrimeFactors(num) :
+
+
+def distinctPrimeFactors(num):
 
     # use set to store distinct factors
     primes = set()
 
-    if (num == 2) :
+    if (num == 2):
         primes.add(num)
-    
+
     sqrt = int(math.sqrt(num))
-    for j in range(2, sqrt + 1) :
-        if (num % j == 0) :
+    for j in range(2, sqrt + 1):
+        if (num % j == 0):
             # if j is a factor store it in the set
             primes.add(j)
-            
-            # divide the number with j till it is divisible so that 
+
+            # divide the number with j till it is divisible so that
             # only prime factors are stored
-            while (num % j == 0) :
+            while (num % j == 0):
                 num //= j
 
     # if the number is still greater than 1 then it is a prime factor
-    if (num > 2) :
+    if (num > 2):
         primes.add(num)
 
     return (primes)
@@ -38,9 +40,9 @@ primes = {}
 rangeData = {}
 k, q = map(int, input().split())
 primes[k] = distinctPrimeFactors(k)
-for tc in range(q) :
+for tc in range(q):
     query = input()
-    if (query[0] == '!') :
+    if (query[0] == '!'):
         cmd, l, r, x = query.split()
         l = int(l)
         r = int(r)
@@ -48,37 +50,37 @@ for tc in range(q) :
         start = l
         end = r
         startflag = False
-        for i in sorted(rangeData) :
+        for i in sorted(rangeData):
             rangeVal = i
-            if (start > rangeVal[1]) :
+            if (start > rangeVal[1]):
                 continue
-            if (end < rangeVal[0]) :
+            if (end < rangeVal[0]):
                 break
-            
+
             startRange = start
             endRange = end
-            if (start >= rangeVal[0] and start <= rangeVal[1]) :
+            if (start >= rangeVal[0] and start <= rangeVal[1]):
                 start = rangeVal[1] + 1
                 continue
-            if (end >= rangeVal[0]) :
+            if (end >= rangeVal[0]):
                 endRange = rangeVal[0] - 1
-            if (startRange <= endRange) :
+            if (startRange <= endRange):
                 rangeData[(startRange, endRange)] = x
                 start = max(endRange + 1, rangeVal[1] + 1)
-        if (start <= end) :
-            rangeData[(start,end)] = x
-    elif (query[0] == '?') :
+        if (start <= end):
+            rangeData[(start, end)] = x
+    elif (query[0] == '?'):
         cmd, l, r = query.split()
         l = int(l)
         r = int(r)
         count = 0
-        for primenum in primes[k] :
-            for currRange in rangeData :
-                if (not (r < currRange[0] or l > currRange[1])) :
+        for primenum in primes[k]:
+            for currRange in rangeData:
+                if (not (r < currRange[0] or l > currRange[1])):
                     num = rangeData[currRange]
-                    if (num % primenum == 0) :
+                    if (num % primenum == 0):
                         count += 1
                         break
         print(count)
-    
+
     #print("query=", query, "primes=", primes, "rangeData=", rangeData)
