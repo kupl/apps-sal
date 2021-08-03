@@ -3,6 +3,7 @@ only_show_wrong()
 player = ['^', 'v', '<', '>']
 items = [' ', 'K', 'C', 'H', 'S', 'X']
 
+
 def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int, int, int, List[str]]:
     health = 3
     attack = 1
@@ -64,11 +65,12 @@ def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], in
     bag.sort()
     return field, health, attack, defense, bag
 
+
 def check_enemy_near(field, x, y, health, defense):
     w = len(field[0])
     h = len(field)
     for dx, dy in [(0, -1), (0, 1), (-1, 0), (1, 0)]:
-        x2, y2 = x + dx, y + dy 
+        x2, y2 = x + dx, y + dy
         if 0 <= x2 < w and 0 <= y2 < h:
             if field[y2][x2] == 'E':
                 health -= max(0, 2 - defense)
@@ -76,7 +78,8 @@ def check_enemy_near(field, x, y, health, defense):
                 health -= max(0, 3 - defense)
     return health
 
-def get_direction (player):
+
+def get_direction(player):
     if player == '^':
         return 0, -1
     elif player == 'v':
@@ -86,7 +89,8 @@ def get_direction (player):
     elif player == '>':
         return 1, 0
 
-def find_player (field):
+
+def find_player(field):
     w = len(field[0])
     h = len(field)
     for y in range(h):
@@ -96,4 +100,3 @@ def find_player (field):
                 x2, y2 = x + dx, y + dy
                 return field[y2][x2] if 0 <= x2 < w and 0 <= y2 < h else None, x, y, x2, y2
     return None, 0, 0, 0, 0
-

@@ -5,6 +5,7 @@ class Person:
         self.children = []
         self.parents = []
 
+
 class Family:
 
     def __init__(self):
@@ -41,14 +42,14 @@ class Family:
             for parent in parents:
                 person = self.members[parent]
                 if person.sex == 'male':
-                    return 'male' if kid_step%2 else 'female'
+                    return 'male' if kid_step % 2 else 'female'
                 elif person.sex == 'female':
-                    return 'female' if kid_step%2 else 'male'
+                    return 'female' if kid_step % 2 else 'male'
                 kids.extend([k for k in person.children if k not in kids])
             del kids[:kids_size]
             kid_step += 1
         return None
-        
+
     def male(self, name):
         person = self.members.get(name, Person())
         if person.sex == 'female':
@@ -59,12 +60,12 @@ class Family:
             person.sex = 'male'
             self.members[name] = person
         return True
-    
+
     def is_male(self, name):
         if self.members.get(name, Person()).sex == 'male':
             return True
         return self.get_parent_sex(name) == 'male'
-    
+
     def female(self, name):
         person = self.members.get(name, Person())
         if person.sex == 'male':
@@ -80,15 +81,15 @@ class Family:
         if self.members.get(name, Person()).sex == 'female':
             return True
         return self.get_parent_sex(name) == 'female'
-    
+
     def set_parent_of(self, child_name, parent_name):
-        if  child_name == parent_name:
+        if child_name == parent_name:
             return False
         child = self.members.get(child_name, Person())
         parent = self.members.get(parent_name, Person())
         if child_name in parent.children:
             return True
-        elif len(child.parents)==2:
+        elif len(child.parents) == 2:
             return False
         kids = child.children[:]
         while kids:
@@ -102,22 +103,21 @@ class Family:
             if fp_sex is None:
                 fp_sex = self.get_parent_sex(child.parents[0])
         sp_sex = self.get_parent_sex(parent_name) if parent.sex is None else parent.sex
-        if fp_sex==sp_sex and fp_sex is not None:
+        if fp_sex == sp_sex and fp_sex is not None:
             return False
         if (fp_sex is None and sp_sex is None and
-            child.parents and parent_name in self.members):
+                child.parents and parent_name in self.members):
             gap = self.get_parents_gap(child.parents[0], parent_name)
-            if gap is not None and gap%2:
+            if gap is not None and gap % 2:
                 return False
         child.parents.append(parent_name)
         parent.children.append(child_name)
         self.members[child_name] = child
         self.members[parent_name] = parent
         return True
-    
+
     def get_children_of(self, name):
         return sorted(self.members.get(name, Person()).children)
-    
+
     def get_parents_of(self, name):
         return sorted(self.members.get(name, Person()).parents)
-

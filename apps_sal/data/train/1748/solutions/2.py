@@ -1,5 +1,6 @@
 from collections import OrderedDict
 
+
 class TowerDefense:
     def __init__(self, grid, turrets, aliens):
         """ Create dictionary for turrets (using name) and lists with path and aliens """
@@ -12,10 +13,10 @@ class TowerDefense:
         # Determine the path and which path positions are covered by the turrets)
         self._determine_turret_positions(turrets, grid_str)
         self._determine_path_and_guarded_positions(grid_str)
-        
+
         # Aliens list is used to hold current alien strength
         self._aliens = aliens
-        
+
     def _determine_turret_positions(self, turrets, grid_str):
         """ Add turrets in sorted order to dictionary """
         for (turret, settings) in sorted(turrets.items()):
@@ -24,19 +25,19 @@ class TowerDefense:
             y = ind // self._n
             # Range**2 is calculated as it is used in self._determine_path_and_guarded_positions
             # guards will hold (x,y) pairs that the turret can reach sorted with the first point furthest along the path
-            self._turrets[turret] = {'pos': (x,y), 'range2': settings[0]**2,  'shots': settings[1], 'guards': [] }
+            self._turrets[turret] = {'pos': (x, y), 'range2': settings[0]**2, 'shots': settings[1], 'guards': []}
 
     def _determine_path_and_guarded_positions(self, grid_str):
         """ Find all positions of the path and determine which once can be reached by the turrets """
         ind_0 = grid_str.find('0')
         x = ind_0 % self._n
         y = ind_0 // self._n
-        self._add_point_to_path_and_guarded_list((x,y))
+        self._add_point_to_path_and_guarded_list((x, y))
         next_point = self._get_next_point_on_path(grid_str)
         while next_point:
             self._add_point_to_path_and_guarded_list(next_point)
             next_point = self._get_next_point_on_path(grid_str)
-        
+
     def _add_point_to_path_and_guarded_list(self, point):
         """ Add the point to the path list and to any turrets that can reach it """
         self._path.append(point)
@@ -77,10 +78,10 @@ class TowerDefense:
             if (point[0] - settings['pos'][0])**2 + (point[1] - settings['pos'][1])**2 <= settings['range2']:
                 # Insert as first item such that last point on path is first on guards
                 settings['guards'].insert(0, point)
-    
+
     def aliens_that_pass_the_turrets(self):
         """ Determine the number of aliens that pass the turrets """
-        total_turns = len(self._path) + len(self._aliens) 
+        total_turns = len(self._path) + len(self._aliens)
         for turn in range(1, total_turns + 1):
             # Determine shots remaining by all turrets
             total_remaining = 0
@@ -98,10 +99,10 @@ class TowerDefense:
                     if self._turrets[turret]['remaining'] > 0:
                         # Pick first alien position and fire
                         for pos in self._turrets[turret]['guards']:
-                            if pos in alien_pos_ind and self._aliens[alien_pos_ind[pos] ] > 0:
+                            if pos in alien_pos_ind and self._aliens[alien_pos_ind[pos]] > 0:
                                 total_remaining -= 1
                                 self._turrets[turret]['remaining'] -= 1
-                                self._aliens[alien_pos_ind[pos] ] -= 1
+                                self._aliens[alien_pos_ind[pos]] -= 1
                                 break
                         else:
                             # No alients to hit with turret range
@@ -109,7 +110,7 @@ class TowerDefense:
                             self._turrets[turret]['remaining'] = 0
         # Return remaining aliens
         return(sum(self._aliens))
-    
+
     def print_map(self, turn=0):
         """ Print a map of the current turn with path, alien strength, and turrets """
         # Helper dictionary with turret positions
@@ -126,17 +127,17 @@ class TowerDefense:
         # Loop over all position and print what is there
         for y in range(self._n):
             for x in range(self._n):
-                if (x,y) in alien_pos:
-                    print('%02i' %  alien_pos[(x,y)], end=' ')
-                elif (x,y) in self._path:
+                if (x, y) in alien_pos:
+                    print('%02i' % alien_pos[(x, y)], end=' ')
+                elif (x, y) in self._path:
                     print('XX', end=' ')
-                elif (x,y) in turret_pos:
-                    print(2*turret_pos[(x,y)], end=' ')
+                elif (x, y) in turret_pos:
+                    print(2 * turret_pos[(x, y)], end=' ')
                 else:
                     print('  ', end=' ')
             print('\n')
 
-def tower_defense(grid,turrets,aliens):
+
+def tower_defense(grid, turrets, aliens):
     td = TowerDefense(grid, turrets, aliens)
     return td.aliens_that_pass_the_turrets()
-

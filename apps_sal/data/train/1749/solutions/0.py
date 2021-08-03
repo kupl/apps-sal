@@ -14,14 +14,16 @@ def isqrt(num):
         bit >>= 2
     return res
 
+
 def factorize(n):
     for q in 2, 3:
         m = 0
         while not n % q:
             m += 1
             n //= q
-        if m: yield q, m
-    
+        if m:
+            yield q, m
+
     m, d, q, maxq = 0, 4, 1, isqrt(n)
     while q <= maxq:
         q, d = q + d, 6 - d
@@ -31,7 +33,9 @@ def factorize(n):
         if m:
             yield q, m
             m, d, q, maxq = 0, 4, 1, isqrt(n)
-    if n > 1: yield n, 1
+    if n > 1:
+        yield n, 1
+
 
 def count_factor(n, f):
     s = 0
@@ -40,4 +44,5 @@ def count_factor(n, f):
         s += n
     return s
 
-trailing_zeros = lambda n, b: min(count_factor(n, f)//m for f, m in factorize(b))
+
+def trailing_zeros(n, b): return min(count_factor(n, f) // m for f, m in factorize(b))

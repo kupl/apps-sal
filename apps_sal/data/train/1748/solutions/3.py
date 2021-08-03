@@ -14,11 +14,13 @@ class Turret:
                 if dr * dr + dc * dc <= atkRange * atkRange:
                     self.targets.add((ra, ca))
 
+
 class Alien:
     def __init__(self, pathIdx, pos, hp):
         self.pathIdx = pathIdx
         self.pos = pos
         self.hp = hp
+
 
 def tower_defense(grid, _turrets, _wave):
     answer = 0
@@ -37,7 +39,7 @@ def tower_defense(grid, _turrets, _wave):
                 start = (r, c)
     for turret in turrets:
         turret.targets = turret.targets & (ones | {start})
-    turrets.sort(key = lambda t: t.tid)
+    turrets.sort(key=lambda t: t.tid)
     path = [start]
     r, c = start
     while ones:

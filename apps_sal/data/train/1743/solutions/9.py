@@ -4,11 +4,11 @@ def collatz_steps(n, s):
         ans = ''
         flag = True
         for j in range(len(s)):
-            if x%2 == 0:
-                x = x//2
+            if x % 2 == 0:
+                x = x // 2
                 ans += 'D'
             else:
-                x = (x*3+1)//2
+                x = (x * 3 + 1) // 2
                 ans += 'U'
             if ans[j] != s[j]:
                 flag = False
@@ -16,4 +16,4 @@ def collatz_steps(n, s):
         if flag == True:
             return n
         else:
-            n += 2**(len(ans)-1)
+            n += 2**(len(ans) - 1)

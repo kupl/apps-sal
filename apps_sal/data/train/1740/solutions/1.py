@@ -151,4 +151,3 @@ class family:
 
     def get_children_of(self, person):
         return sorted([c.name for c in self.known_persons[person].children]) if person in self.known_persons else []
-

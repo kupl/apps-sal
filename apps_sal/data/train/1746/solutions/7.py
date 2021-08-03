@@ -1,5 +1,6 @@
 D = {'^': (-1, 0), 'v': (1, 0), '<': (0, -1), '>': (0, 1)}
 
+
 def rpg(field, actions):
     g = [list(x) for x in field]
     HP, Atk, Def, Boss, En = 3, 1, 1, 10, 0
@@ -35,8 +36,8 @@ def rpg(field, actions):
     def attack(i, j, e):
         nonlocal HP, Def
         k = g[i][j]
-        nx, ny = i+D[k][0], j+D[k][1]
-        for x, y in ((i+1, j), (i-1, j), (i, j+1), (i, j-1)):
+        nx, ny = i + D[k][0], j + D[k][1]
+        for x, y in ((i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)):
             if bounds(x, y) and g[x][y] in 'DE':
                 if not (e == 'A' and x == nx and y == ny):
                     HP -= max({'D': 3, 'E': 2}[g[x][y]] - Def, 0)
@@ -45,18 +46,18 @@ def rpg(field, actions):
         if e == 'H':
             if BH <= 0 or HP == 3:
                 return None
-            BH, HP = BH-1, 3
+            BH, HP = BH - 1, 3
         attack(px, py, e)
         k = g[px][py]
         if e == 'F':
             ox, oy = px, py
-            px, py = px+D[k][0], py+D[k][1]
+            px, py = px + D[k][0], py + D[k][1]
             if not bounds(px, py) or g[px][py] not in ' CKXSH':
                 return None
             move((ox, oy), (px, py), k)
         if e in '^v<>':
             g[px][py] = e
-            
+
         nx, ny = px + D[k][0], py + D[k][1]
         if e == 'K':
             if not bounds(nx, ny):
