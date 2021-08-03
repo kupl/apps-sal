@@ -26,8 +26,7 @@ for i in range(n):
 ans = 1
 for i in range(m):
     a, b = list(map(int, input().split()))
-    if find(a-1) != find(b-1):
-        union(a-1, b-1)
+    if find(a - 1) != find(b - 1):
+        union(a - 1, b - 1)
         ans *= 2
 print(ans)
-

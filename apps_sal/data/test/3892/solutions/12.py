@@ -31,4 +31,3 @@ for s in range(n):
         ans[-1] += 1
     ans[-1] = max(0, ans[-1])
 print(' '.join(map(str, ans)))
-

@@ -9,11 +9,12 @@ def dfs(v, root):
     if v == root:
         cnt += 1
 
+
 cnt = 0
 n, e = map(int, input().split())
 G = [[] for i in range(n)]
 for i in range(e):
-    a, b = map(lambda x:int(x) - 1, input().split())
+    a, b = map(lambda x: int(x) - 1, input().split())
     G[a].append(b)
     G[b].append(a)
 

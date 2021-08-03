@@ -8,4 +8,3 @@ for i in range(0, 1140, b):
         count += 1
         #print(i, i + tb, count)
 print(count)
-

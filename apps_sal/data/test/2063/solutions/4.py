@@ -1,6 +1,7 @@
 n, m, w = list(map(int, input().split()))
 t = list(map(int, input().split()))
 
+
 def check(x):
     p = [0] * w
     d = s = j = 0
@@ -11,15 +12,18 @@ def check(x):
         s += q
         p[j] = q
         j += 1
-        if j == w: j = 0
+        if j == w:
+            j = 0
     return s
+
 
 a = min(t)
 b = a + m + 1
 while b - a > 1:
     c = (a + b) // 2
     p = check(c)
-    if p > m: b = c
-    else: a = c
+    if p > m:
+        b = c
+    else:
+        a = c
 print(a)
-

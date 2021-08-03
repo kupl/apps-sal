@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def intput():
     return [int(x) for x in input().split(" ")]
 
@@ -25,6 +26,7 @@ def main(ws, ords):
 
     print(s)
 
+
 def parse():
     _ = intput()
     ws = intput()
@@ -32,5 +34,5 @@ def parse():
     # print(ws, ords)
     return ws, ords
 
-main(*parse())
 
+main(*parse())

@@ -17,5 +17,6 @@ for i in range(m):
             s[y].clear()
 q = 0
 for p in s:
-    if p: q += len(p) - 1
+    if p:
+        q += len(p) - 1
 print(1 << q)

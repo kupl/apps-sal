@@ -5,7 +5,7 @@ s = 0
 for i in map(int, input().split()):
     if p[i]:
         k = t.index(i)
-        s += sum(w[j] for j in t[k + 1: ])
+        s += sum(w[j] for j in t[k + 1:])
         t.append(t.pop(k))
     else:
         s += sum(w[j] for j in t)

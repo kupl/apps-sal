@@ -12,4 +12,3 @@ for q in range(nQ):
         print(ds[0], ds[1])
     else:
         print("NO")
-

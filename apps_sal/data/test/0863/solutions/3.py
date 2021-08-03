@@ -5,8 +5,8 @@ import operator as op
 import fractions as fr
 
 
-a,ta = map(int, sys.stdin.readline().split())
-b,tb = map(int, sys.stdin.readline().split())
+a, ta = map(int, sys.stdin.readline().split())
+b, tb = map(int, sys.stdin.readline().split())
 sh, sm = map(int, sys.stdin.readline().strip().split(':'))
 
 sme = sh * 60 + sm

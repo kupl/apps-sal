@@ -23,10 +23,9 @@ for start_pos in range(N):
                 closest_candy = min(closest_candy,
                                     (N + candy_destination - current_pos) % N)
 
-            min_distantion = max(min_distantion, closest_candy +
-                                 shift + N * (count_candies - 1))
+            min_distantion = max(min_distantion, closest_candy
+                                 + shift + N * (count_candies - 1))
 
     min_distantions.append(min_distantion)
 
 print(' '.join([str(distantion) for distantion in min_distantions]))
-

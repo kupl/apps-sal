@@ -7,10 +7,11 @@ a = [[False for j in range(n + 1)] for i in range(n + 1)]
 b = [False for i in range(n + 1)]
 
 for i in range(m):
-    x, y = list(map(int, input().split()))  
+    x, y = list(map(int, input().split()))
     a[x][y] = True
     a[y][x] = True
-  
+
+
 def r(i):
     if b[i]:
         return 0
@@ -20,6 +21,7 @@ def r(i):
         if a[i][j]:
             s += r(j)
     return s + 1
+
 
 o = 1
 for i in range(1, n + 1):

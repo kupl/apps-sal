@@ -19,4 +19,3 @@ while start_time <= 1439:
     end_time = start_time + t_b - 1
 
 print(intersections)
-

@@ -17,7 +17,7 @@ mod = pow(10, 9) + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
 def out(var): sys.stdout.write(str(var))
-def outln(var): sys.stdout.write(str(var)+"\n")
+def outln(var): sys.stdout.write(str(var) + "\n")
 def l(): return list(sp())
 def sl(): return list(ssp())
 def sp(): return list(map(int, data().split()))
@@ -28,6 +28,5 @@ def l2d(n, m, val=0): return [l1d(n, val) for j in range(m)]
 
 for _ in range(int(data())):
     a, b = sp()
-    temp = ceil(a/b)
-    outln(temp*b-a)
-
+    temp = ceil(a / b)
+    outln(temp * b - a)

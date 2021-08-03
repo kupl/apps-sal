@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 for q in range(ii()):
     n = ii()
@@ -15,4 +20,3 @@ for q in range(ii()):
         print('YES')
         print(2)
         print(a, b)
-

@@ -8,5 +8,3 @@ for i in range(q):
     print('YES')
     print(2)
     print(s[0], s[1:])
-
-
