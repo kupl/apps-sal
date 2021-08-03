@@ -10,9 +10,10 @@ def uf_f(arr):
                 a.append(arr[i])
                 i += 1
             else:
-                a.append(arr[i: i+r])
+                a.append(arr[i: i + r])
                 i += r
     return a
+
 
 def uf_r(arr):
     a, i = [], len(arr) - 1
@@ -26,7 +27,7 @@ def uf_r(arr):
                 a.insert(0, arr[i])
                 i -= 1
             else:
-                a.insert(0, arr[i-r+1: i+1])
+                a.insert(0, arr[i - r + 1: i + 1])
                 i -= r
     return a
 
@@ -39,5 +40,3 @@ def unflatten(array, depth):
             array = uf_r(array)
             depth -= 1
     return array
-    
-

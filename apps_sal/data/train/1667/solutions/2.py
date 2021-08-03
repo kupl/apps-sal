@@ -60,4 +60,3 @@ def unflatten(arr, depth):
         else:
             arr_copy = list(walk(arr_copy, IterDirection.TowardsRight))
     return arr_copy
-

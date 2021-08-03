@@ -11,13 +11,13 @@ class Solution:
                     straight.append(pop)
                 else:
                     dump.append(pop)
-            straights.append(straight) 
+            straights.append(straight)
             if len(straight) < W:
                 return []
             else:
                 for d in dump:
                     heapq.heappush(pq, d)
-        
-        #print(\"hel\")
-        #print(straights)   
-        return len(straights) > 0 
+
+        # print(\"hel\")
+        # print(straights)
+        return len(straights) > 0

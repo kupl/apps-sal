@@ -3,6 +3,7 @@ from functools import reduce
 import enum
 import sys
 
+
 class Outcomes:
     """Enapsulation of outcomes to which tracks results as named attributes
     and can return the array expected by the kata.
@@ -19,12 +20,13 @@ class Outcomes:
 
     def as_array(self):
         """Return the array ordered as expected by the kata definition.
-        
+
         Returns:
             array -- integer array of counts of squares by chess condition.
         """
 
         return [self.checkmates, self.checks, self.stalemates, self.alives]
+
 
 class GameSquareConditions:
     """Gameplay conditions of a square.
@@ -41,12 +43,14 @@ class GameSquareConditions:
         """
         return not self.is_threatened
 
+
 class GameSquareOutcome(enum.Enum):
     CHECKMATE = enum.auto()
     CHECK = enum.auto()
     STALEMATE = enum.auto()
     ALIVE = enum.auto()
     UNKNOWN = enum.auto()
+
 
 @enum.unique
 class MovementDirection(enum.Enum):
@@ -95,10 +99,10 @@ class MovementDirection(enum.Enum):
             return self.SOUTH_EAST
 
         raise ValueError("Unknown direction to recipricate!")
-        
+
     def move_from(self, x, y):
         """Apply the movement to the provided X, Y cartesian coordinates.
-        
+
         Arguments:
             x {int} -- Starting X cartesian coordinate to move from.
             y {int} -- Starting Y cartesian coordinate to move from.
@@ -108,6 +112,7 @@ class MovementDirection(enum.Enum):
         """
         offset = self.cartesian_offset
         return (x + offset[0], y + offset[1])
+
 
 class GameSquare:
     """Square on the gameboard.
@@ -122,17 +127,16 @@ class GameSquare:
 
     def has_neighbor(self, direction):
         """Check if there is a neighboring square in the given direction.
-        
+
         Arguments:
             direction {MovementDirection} -- Direction to check.
         """
         return self.neighbor(direction) is not None
 
     def neighbor(self, direction):
-        
         """Return the neighboring game square in the direction. If no neighbor
         has been set, None.
-        
+
         Arguments:
             direction {MovementDirection} -- Direction to get neighbor in.
 
@@ -150,7 +154,7 @@ class GameSquare:
         direction, it is cleared.
 
         If the provided neighbor is 'self' a 
-        
+
         Arguments:
             neighbor {GameSquare} -- Neighboring game square to connect.
             direction {MovementDirection} -- Direction to get neighbor in.
@@ -181,7 +185,7 @@ class GameSquare:
         Arguments:
             out_dest -- Output stream to render to.
         """
-        
+
         marker = " "
         if self.condition.is_threatened:
             marker = "v"
@@ -197,7 +201,7 @@ class GameSquare:
         Arguments:
             out_dest -- Output stream to render to.
         """
-        
+
         marker = "?"
         if self.outcome == GameSquareOutcome.CHECKMATE:
             marker = "!"
@@ -209,6 +213,7 @@ class GameSquare:
             marker = "."
         out_dest.write(marker)
 
+
 class Gameboard:
     """Gameboard comprised of rows and columns of GameSquares.
     The origin of the gameboard is the "lower-left".
@@ -217,7 +222,7 @@ class Gameboard:
     def __init__(self, num_rows, num_cols):
         """Initialize the gameboard with a num_rows x num_cols grid of 
         GameSquares.
-        
+
         Arguments:
             num_rows {int} -- Number of rows on the gameboard
             num_cols {int} -- Number of columns on the gameboard
@@ -256,7 +261,7 @@ class Gameboard:
         """Return the GameSquare at the specified row and column.
 
         If row or col are out of bounds, an KeyError is raised.
-        
+
         Arguments:
             row {int} -- 0 based index of the row to return the square from.
             col {int} -- 0 based index of the column to return the square from.
@@ -295,6 +300,7 @@ class Gameboard:
                 self.square_at(x, y).render_outcome(out_dest)
             out_dest.write("|\n")
 
+
 class DestinationMover:
     """The DestinationMover attempts to move along a path to reach
     a GameSquare. Only the final destination is returned.
@@ -316,7 +322,7 @@ class DestinationMover:
 
     def execute(self, origin):
         """Follow the stored movement path from the provided origin.
-        
+
         Arguments:
             origin {GameSquare} -- Position on the gameboard to be move from.
 
@@ -338,19 +344,20 @@ class DestinationMover:
         path = "-".join(p.name for p in self.movement_path)
         return "DestinationMover: " + path
 
+
 class VectorMover:
     """The VectorMover moves from an origin location in a constant direction
     and returns each GameSquare along the movement path. The mover stops a 
     GameSquare is occupied or there is no next neighbor in the direction.
     """
 
-    def __init__(self, direction = None):
+    def __init__(self, direction=None):
         self.direction = direction
 
     def execute(self, origin):
         """Follow the stored direction until there are no neighboring squares or
         if a square is occupied.
-        
+
         Arguments:
             origin {GameSquare} -- Position on the gameboard to be move from.
 
@@ -359,7 +366,7 @@ class VectorMover:
         """
         if self.direction is None:
             return []
-        
+
         visited = []
         neighbor = origin.neighbor(self.direction)
         while neighbor is not None and not neighbor.condition.is_occupied:
@@ -373,16 +380,17 @@ class VectorMover:
         """
         return "VectorMover: " + self.direction.name
 
+
 class GamePiece:
 
-    def __init__(self, inhibit_as_well_as_threaten = False):
+    def __init__(self, inhibit_as_well_as_threaten=False):
         self.inhibit_as_well_as_threaten = inhibit_as_well_as_threaten
         self.location = None
         self.movers = []
 
     def place_on_board(self, gamesquare):
         """Set the piece on the specified gamesquare.
-        
+
         Arguments:
             gamesquare {GameSquare} -- Location on the gameboard to place piece.
         """
@@ -409,7 +417,7 @@ class GamePiece:
             square.condition.is_threatened = True
             if self.inhibit_as_well_as_threaten:
                 square.condition.is_inhibited = True
-            
+
         return result
 
     def __str__(self):
@@ -419,9 +427,10 @@ class GamePiece:
         r = "\n  ".join(['GamePiece', mover_content])
         return r
 
+
 def create_knight_movers():
     """Create the DestinationMovers for the possible knight moves.
-    
+
     Returns:
         [list(DesintationMover)] -- List of movers to execute knight moves.
     """
@@ -461,21 +470,23 @@ def create_knight_movers():
 
     return [DestinationMover(*x) for x in knight_paths]
 
+
 def create_rook_movers():
     """Create the VectorMovers for the possible rook moves.
-    
+
     Returns:
         [list(VectorMover)] -- List of movers to execute rook moves.
     """
-    directions = (MovementDirection.NORTH, 
+    directions = (MovementDirection.NORTH,
                   MovementDirection.SOUTH,
                   MovementDirection.EAST,
                   MovementDirection.WEST)
     return [VectorMover(direction) for direction in directions]
 
+
 def create_bishop_movers():
     """Create the VectorMovers for the possible bishop moves.
-    
+
     Returns:
         [list(VectorMover)] -- List of movers to execute bishop moves.
     """
@@ -484,6 +495,7 @@ def create_bishop_movers():
                   MovementDirection.SOUTH_EAST,
                   MovementDirection.SOUTH_WEST)
     return [VectorMover(direction) for direction in directions]
+
 
 def create_amazon():
     piece = GamePiece()
@@ -499,14 +511,16 @@ def create_amazon():
 
     return piece
 
+
 def create_king():
     piece = GamePiece(inhibit_as_well_as_threaten=True)
     for direction in MovementDirection:
         mover = DestinationMover()
         mover.append_path(direction)
-        piece.movers.append(mover)    
+        piece.movers.append(mover)
 
     return piece
+
 
 def chess_location_to_game_indicies(pos_string):
     """Convert chess locations (ex A1) to index for a gameboard.
@@ -521,12 +535,13 @@ def chess_location_to_game_indicies(pos_string):
     second = int(pos_string[1]) - 1
     return (first, second)
 
-def determine_square_status_and_update_outcome(my_condition, 
-                                               neighbor_conditions, 
+
+def determine_square_status_and_update_outcome(my_condition,
+                                               neighbor_conditions,
                                                outcome):
     """Determine the status of the square from the square's condition and
     the neighboring conditions. Update and return the outcome.
-    
+
     Return the outcome type.
 
     Arguments:
@@ -557,8 +572,9 @@ def determine_square_status_and_update_outcome(my_condition,
 
     return outcome_type
 
+
 def amazon_check_mate(king, amazon):
-    
+
     outcomes = Outcomes()
     king_coords = chess_location_to_game_indicies(king)
     amazon_coords = chess_location_to_game_indicies(amazon)
@@ -572,11 +588,10 @@ def amazon_check_mate(king, amazon):
 
     king_piece.impart_force()
     amazon_piece.impart_force()
- 
+
     for square in list(board.board.values()):
         determine_square_status_and_update_outcome(square.condition,
                                                    square.neighbor_conditions(),
                                                    outcomes)
 
     return outcomes.as_array()
-

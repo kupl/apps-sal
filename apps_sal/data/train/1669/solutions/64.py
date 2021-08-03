@@ -9,7 +9,7 @@ class Solution:
         while count:
             m = min(count)
             # k, v = sorted(digits.items())[0]
-            for k in range(m, m+W):
+            for k in range(m, m + W):
                 v = count[k]
                 if not v:
                     return False
@@ -18,6 +18,3 @@ class Solution:
                 else:
                     count[k] -= 1
         return True
-            
-            
-

@@ -5,8 +5,8 @@ def unflatten(flat_array, depth):
         flat_array = unflatten_helper(flat_array, right)
         right = not right
     return flat_array
-        
-        
+
+
 def unflatten_helper(arr, right):
     newArr = []
     length = len(arr)
@@ -19,7 +19,7 @@ def unflatten_helper(arr, right):
             else:
                 rem = arr[i] % (length - i)
                 if rem > 2:
-                    newArr.append(arr[i:rem+i])
+                    newArr.append(arr[i:rem + i])
                     i += rem
                 else:
                     newArr.append(arr[i])
@@ -33,11 +33,10 @@ def unflatten_helper(arr, right):
             else:
                 rem = arr[i] % (i + 1)
                 if rem > 2:
-                    newArr.append(arr[i-rem+1:i+1])
+                    newArr.append(arr[i - rem + 1:i + 1])
                     i -= rem
                 else:
                     newArr.append(arr[i])
                     i -= 1
         newArr = newArr[::-1]
     return newArr
-

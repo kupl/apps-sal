@@ -6,14 +6,14 @@ class Solution:
         for x in hand:
             if x not in hand_count:
                 hand_count[x] = 1
-            else: 
+            else:
                 hand_count[x] += 1
-                
+
         while len(hand_count) > 0:
             min_key = min(hand_count.keys())
             min_key_count = hand_count[min_key]
             for i in range(W):
-                key = min_key + i 
+                key = min_key + i
                 if key not in hand_count:
                     return False
                 hand_count[key] -= min_key_count
@@ -22,4 +22,3 @@ class Solution:
                 elif hand_count[key] < 0:
                     return False
         return True
-

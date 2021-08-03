@@ -1,7 +1,8 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         n = len(hand)
-        if n % W != 0: return False
+        if n % W != 0:
+            return False
         count = collections.Counter(hand)
         while n > 0:
             a = min(count)

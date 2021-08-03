@@ -1,4 +1,6 @@
 from itertools import chain
+
+
 def tree_by_levels(node):
     tree = [node]
     temp = [t.value for t in tree if t]

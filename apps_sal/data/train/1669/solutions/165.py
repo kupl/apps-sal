@@ -7,10 +7,10 @@ class Solution:
         count = 0
         group = []
         while(1):
-            for i in range(W-1):
-                if ((hand[0]+i+1) in hand):
+            for i in range(W - 1):
+                if ((hand[0] + i + 1) in hand):
                     count += 1
-                    hand.pop(hand.index(hand[0]+i+1))          
+                    hand.pop(hand.index(hand[0] + i + 1))
                 else:
                     return False
             hand.pop(0)

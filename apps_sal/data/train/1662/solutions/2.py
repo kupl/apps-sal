@@ -7,5 +7,5 @@ def tree_by_levels(tree):
         if node:
             queue += [node.left, node.right]
             values.append(node.value)
-            
+
     return values

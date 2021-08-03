@@ -10,4 +10,3 @@ def tree_by_levels(node):
         result.append(node.value)
         q.extend(i for i in (node.left, node.right) if i is not None)
     return result
-

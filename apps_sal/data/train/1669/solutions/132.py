@@ -9,7 +9,7 @@ class Solution:
             while len(sorted_hand) > 0 and count_map[sorted_hand[0]] == 0:
                 sorted_hand.pop(0)
             if len(sorted_hand) > 0:
-                for key in range(sorted_hand[0], sorted_hand[0]+W):
+                for key in range(sorted_hand[0], sorted_hand[0] + W):
                     if key in count_map:
                         count_map[key] -= 1
                         if count_map[key] < 0:

@@ -5,13 +5,13 @@ class Solution:
             if i not in counted:
                 counted[i] = 0
             counted[i] += 1
-        
+
         def containStrait(numbers, counted, W):
             if len(counted) == 0:
                 return True
             if len(numbers) < W:
                 return False
-            
+
             if numbers[W - 1] - numbers[0] > W:
                 return False
             else:
@@ -21,6 +21,6 @@ class Solution:
                         counted.pop(numbers[i])
                         numbers.remove(numbers[i])
             return containStrait(numbers, counted, W)
-        
+
         numbers = sorted(counted.keys())
         return containStrait(numbers, counted, W)

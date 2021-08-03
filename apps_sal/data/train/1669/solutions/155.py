@@ -4,7 +4,7 @@ class Solution:
             return False
         hand.sort()
         while hand:
-            try :
+            try:
                 base = hand[0]
                 for i in range(W):
                     hand.remove(base + i)
@@ -12,11 +12,3 @@ class Solution:
                 return False
 
         return True
-
-
-
-
-
-
-        
-

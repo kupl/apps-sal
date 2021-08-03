@@ -10,7 +10,8 @@ class Solution:
                 if hand[i + j] - hand[i + j - 1] != 1:
                     return False
         return True
-                
+
+
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
@@ -35,5 +36,3 @@ class Solution:
                 else:
                     return False
         return True
-                    
-

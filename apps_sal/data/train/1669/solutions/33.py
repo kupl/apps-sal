@@ -4,12 +4,11 @@ class Solution:
         while maps:
             k = min(maps.keys())
             count = maps[k]
-            for i in range(k, k + W): 
+            for i in range(k, k + W):
                 if i not in maps or maps[i] < count:
                     return False
                 maps[i] -= count
                 if maps[i] == 0:
                     maps.pop(i)
-                    
-        return True
 
+        return True

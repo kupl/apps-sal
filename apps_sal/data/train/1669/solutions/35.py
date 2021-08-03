@@ -3,9 +3,10 @@ class Solution(object):
         count = collections.Counter(hand)
         while count:
             m = min(count)
-            for k in range(m, m+W):
+            for k in range(m, m + W):
                 v = count[k]
-                if not v: return False
+                if not v:
+                    return False
                 if v == 1:
                     del count[k]
                 else:

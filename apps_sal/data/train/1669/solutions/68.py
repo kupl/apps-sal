@@ -12,4 +12,3 @@ class Solution:
                     del hand[c]
                 else:
                     hand[c] -= 1
-

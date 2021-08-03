@@ -6,5 +6,4 @@ def solution(a):
             elem = a[i] % elem
             if (m % elem != 0):
                 elem = m % elem
-    return abs(elem*len(a))
-
+    return abs(elem * len(a))

@@ -16,4 +16,3 @@ class Solution:
             result.append(straights)
         print(result)
         return True
-

@@ -10,5 +10,5 @@ class Solution:
                     del counter[i]
                 else:
                     counter[i] -= 1
-                    
+
         return True

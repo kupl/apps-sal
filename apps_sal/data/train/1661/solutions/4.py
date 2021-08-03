@@ -1,5 +1,7 @@
 import re
 from collections import defaultdict, deque
+
+
 def execute(code):
     dirs = deque([(0, 1), (-1, 0), (0, -1), (1, 0)])
     yarr, xarr = [0], [0]

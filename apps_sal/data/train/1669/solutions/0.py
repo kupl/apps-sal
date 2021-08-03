@@ -4,11 +4,11 @@ class Solution:
         # 1 2 3
         #   2 3 4
         #         6 7 8
-        
+
         # W length Q
         # how many opened
         # # of the element is current opened one
-        
+
         q = deque()
         opened = 0
         last = 0
@@ -17,16 +17,15 @@ class Solution:
             count = counter[n]
             if n > last + 1 and opened > 0:
                 return False
-            
+
             if n == last + 1 and count < opened:
                 return False
-            
-            
+
             q.append(count - opened)
             opened = count
-            
+
             if len(q) == W:
                 opened -= q.popleft()
-            
+
             last = n
         return not opened

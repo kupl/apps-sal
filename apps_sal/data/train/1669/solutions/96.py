@@ -12,8 +12,3 @@ class Solution:
                 if counter[number] == 0:
                     del counter[number]
         return True
-            
-            
-        
-        
-

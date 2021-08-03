@@ -1,14 +1,15 @@
 import re
 
+
 def execute(code):
     def simplify_code(code):
         while '(' in code:
             code = re.sub(r'\(([^()]*)\)(\d*)',
-                lambda match: match.group(1) * int(match.group(2) or 1),
-                code)
+                          lambda match: match.group(1) * int(match.group(2) or 1),
+                          code)
         code = re.sub(r'([FLR])(\d+)',
-                lambda match: match.group(1) * int(match.group(2)),
-                code)
+                      lambda match: match.group(1) * int(match.group(2)),
+                      code)
         return code
 
     def compute_path(simplified_code):

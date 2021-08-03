@@ -7,7 +7,8 @@ def make_hash(nest):
     else:
         return '*'
 
-def same_structure_as(original,other):
+
+def same_structure_as(original, other):
     if make_hash(original) == make_hash(other):
         return True
     else:

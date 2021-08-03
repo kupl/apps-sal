@@ -1,8 +1,10 @@
 from collections import Counter
+
+
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         count = Counter(hand)
-        
+
         while(count):
             m = min(count)
             for k in range(m, m + W):
@@ -11,10 +13,8 @@ class Solution:
                     return False
                 if v == 1:
                     del count[k]
-                    
-                    
+
                 else:
                     count[k] = v - 1
-                    
-                    
+
         return True

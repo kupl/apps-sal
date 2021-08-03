@@ -12,4 +12,3 @@ class Solution:
                     count[i] -= 1
         return True
         heapq.heapify(hand)
-

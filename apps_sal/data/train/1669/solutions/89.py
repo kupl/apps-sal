@@ -9,13 +9,12 @@ class Solution:
             straights = []
             for i in range(m, m + W):
                 if i in count:
-                    #straights.append(i)
+                    # straights.append(i)
                     count[i] -= 1
                     if count[i] == 0:
                         del count[i]
                 else:
                     return False
-            #result.append(straights)
-        #print(result)
+            # result.append(straights)
+        # print(result)
         return True
-

@@ -5,7 +5,7 @@ class Solution:
             try:
                 base = hand[0]
                 for i in range(W):
-                    hand.remove(base+i)
+                    hand.remove(base + i)
             except:
                 return False
         return True
