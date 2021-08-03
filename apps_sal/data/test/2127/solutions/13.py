@@ -1,5 +1,6 @@
 import sys
-lax = -10**9; lay = -10**9
+lax = -10**9
+lay = -10**9
 for _ in range(int(input())):
     sign, x, y = list(map(str, sys.stdin.readline().split()))
     x = int(x)

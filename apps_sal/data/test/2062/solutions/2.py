@@ -37,7 +37,7 @@ for i in range(2 * (10 ** 5) + 10):
         continue
     l = i
     r = 2 * i - 1
-    curAns = 0;
+    curAns = 0
     for l in range(i, 200001, i):
         curAns += l * (prefSum[min(r, 200000)] - prefSum[l - 1])
         r += i

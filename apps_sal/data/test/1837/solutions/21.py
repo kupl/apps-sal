@@ -11,5 +11,6 @@ for i in range(n):
             ans += 2
             done = False
 
-if done and (ans < len(a) - 1): ans += 1
+if done and (ans < len(a) - 1):
+    ans += 1
 print(ans)

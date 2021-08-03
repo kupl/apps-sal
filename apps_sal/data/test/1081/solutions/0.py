@@ -14,4 +14,5 @@ elif 89 < n:
 else:
     if n % 10 not in {1, 7, 9}:
         print("YES")
-    else: print("NO")
+    else:
+        print("NO")
