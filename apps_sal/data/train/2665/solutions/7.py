@@ -6,6 +6,3 @@ def meeting(rooms):
         else:
             tally += 1
     return("None available!")
-              
-             
-

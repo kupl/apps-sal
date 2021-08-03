@@ -1,1 +1,1 @@
-zero_fuel = lambda _,__,___: ___*__>=_
+def zero_fuel(_, __, ___): return ___ * __ >= _

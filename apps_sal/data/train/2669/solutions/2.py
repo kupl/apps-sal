@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 def calculate_next_el(prev_el):
     if prev_el < 10:
         return 2 * prev_el
@@ -7,11 +8,13 @@ def calculate_next_el(prev_el):
         multiplication = reduce((lambda x, y: x * y), [x for x in map(int, str(prev_el)) if x > 0], 1)
         return prev_el + multiplication
 
+
 def generate_series(start):
     last = start
     while True:
         last = calculate_next_el(last)
         yield last
+
 
 def convergence(n):
     current_base = 1
@@ -26,4 +29,3 @@ def convergence(n):
             current_test = test_series.__next__()
             result += 1
     return result
-

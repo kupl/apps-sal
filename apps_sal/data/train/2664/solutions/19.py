@@ -1,7 +1,7 @@
 def solve(n):
-    s = [0, 1][len(n)%2]
-    lh = n[:len(n)//2]
-    hh = n[len(n)//2+s:]
+    s = [0, 1][len(n) % 2]
+    lh = n[:len(n) // 2]
+    hh = n[len(n) // 2 + s:]
     if s and lh == hh[::-1]:
         return True
     diffs = 0
@@ -11,4 +11,3 @@ def solve(n):
         if diffs > 1:
             return False
     return diffs == 1
-

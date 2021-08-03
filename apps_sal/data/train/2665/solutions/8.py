@@ -3,4 +3,3 @@ def meeting(rooms):
         if (x is 'O'):
             return(rooms.index(x))
     return('None available!')
-
