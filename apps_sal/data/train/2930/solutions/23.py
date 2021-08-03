@@ -1,1 +1,1 @@
-summation  = lambda num: sum([i for i in range(num)], num)#Lambda is fun
+def summation(num): return sum([i for i in range(num)], num)  # Lambda is fun

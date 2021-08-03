@@ -6,8 +6,7 @@
 #         for x in (1, num+1):
 #             suma = suma + summation(x)
 #     return suma
-    
-    
-def summation(num):
-    return sum(range(num+1))
 
+
+def summation(num):
+    return sum(range(num + 1))

@@ -8,4 +8,3 @@ def count_cows(n):
         if len(cows) >= 3:
             old_cows += cows.pop()
     return sum(cows) + old_cows
-

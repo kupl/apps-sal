@@ -3,5 +3,3 @@ def summation(num):
     for n in range(0, num + 1, 1):
         total += n
     return total
-    
-

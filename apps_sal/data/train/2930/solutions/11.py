@@ -1,6 +1,6 @@
 def summation(num):
-    somme=0
+    somme = 0
     for i in range(num):
-        somme+=i+1
+        somme += i + 1
     return somme
-    pass # Code here
+    pass  # Code here

@@ -5,5 +5,3 @@ def summation(num):
         a = i + a
         i += 1
     return a
-    
-

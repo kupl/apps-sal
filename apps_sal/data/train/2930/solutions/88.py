@@ -3,6 +3,6 @@ def summation(num):
         s = 0
         for i in range(num):
             s = s + i
-        return s + num 
+        return s + num
     else:
         print("No es un número entero positivo")

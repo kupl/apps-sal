@@ -1,2 +1,2 @@
 def summation(num):
-    return (1+num) * num / 2
+    return (1 + num) * num / 2

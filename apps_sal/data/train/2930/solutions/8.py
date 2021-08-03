@@ -1,1 +1,1 @@
-summation=lambda n:n*-~n>>1
+def summation(n): return n * -~n >> 1

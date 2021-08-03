@@ -1,4 +1,4 @@
-def between(a,b):
+def between(a, b):
     retList = []
     while a <= b:
         retList.append(a)

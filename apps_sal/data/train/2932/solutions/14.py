@@ -1,6 +1,6 @@
 def colour_association(arr):
-    l=[]
+    l = []
     for i in arr:
-        d={i[0]:i[1]}
+        d = {i[0]: i[1]}
         l.append(d)
     return l

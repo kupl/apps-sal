@@ -5,5 +5,3 @@ def summation(num):
         sum += num1
         num1 += 1
     return sum
-    
-

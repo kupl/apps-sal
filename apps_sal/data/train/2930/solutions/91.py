@@ -5,5 +5,3 @@ def summation(num):
         solution += y
         y += 1
     return solution
-    
-
