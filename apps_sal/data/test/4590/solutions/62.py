@@ -7,12 +7,10 @@ for i in range(1, m + 1):
     b[i] += b[i - 1]
 ans, j = 0, m
 for i in range(n + 1):
-    if a[i] > k: 
+    if a[i] > k:
         break
     while a[i] + b[j] > k:
         j -= 1
     if i + j > ans:
         ans = i + j
 print(ans)
-
-

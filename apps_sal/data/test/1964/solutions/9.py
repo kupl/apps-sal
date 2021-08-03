@@ -19,5 +19,5 @@ for i in range(len(k)):
         time[i] += m[i][j] * 5
         time[i] += 15
 
-#print(time)
+# print(time)
 print(min(time))

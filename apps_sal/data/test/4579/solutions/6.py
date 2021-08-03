@@ -10,5 +10,3 @@ for v in s:
     d.add(v)
 
 print((len(d)))
-
-

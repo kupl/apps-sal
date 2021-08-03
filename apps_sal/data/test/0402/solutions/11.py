@@ -8,4 +8,3 @@ while o + a <= t and otv < n:
     a += 5
     otv += 1
 print(otv)
-

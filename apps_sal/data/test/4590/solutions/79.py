@@ -16,7 +16,7 @@ integral_b = get_integral(B)
 
 ans = 0
 bestj = M
-for i in range(N+1):
+for i in range(N + 1):
     ta = integral_a[i]
     if ta > K:
         break
@@ -27,6 +27,3 @@ for i in range(N+1):
     ans = max(best, ans)
 
 print(ans)
-
-
-

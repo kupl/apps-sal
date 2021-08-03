@@ -6,4 +6,3 @@ if 2 * x == a + b - c and x >= 0 and y >= 0 and z >= 0:
     print(x, y, z)
 else:
     print('Impossible')
-

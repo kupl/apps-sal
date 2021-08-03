@@ -9,5 +9,5 @@ e = b - a + f
 d = a - f
 if d < 0 or f < 0 or e < 0:
     print("Impossible")
-    return    
+    return
 print(d, e, f)

@@ -1,8 +1,10 @@
+import numpy as np
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-import numpy as np
+
+
 def main():
     n, m, k = map(int, input().split())
     a = np.array(readline().split(), np.int64)
@@ -18,6 +20,9 @@ def main():
     r = rs.max()
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

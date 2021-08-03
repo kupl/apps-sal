@@ -10,4 +10,5 @@ def main():
 def __starting_point():
     print((main()))
 
+
 __starting_point()

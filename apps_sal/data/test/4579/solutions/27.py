@@ -7,4 +7,5 @@ def __starting_point():
         ans.add(cmd)
     print((len(ans)))
 
+
 __starting_point()

@@ -6,4 +6,3 @@ while n % 2 == 0 and all([a[i] == a[-i - 1] for i in range(n // 2)]):
     a = a[:n]
 
 print(n)
-

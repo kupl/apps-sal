@@ -17,6 +17,6 @@ for i in range(y):
         if b[i - 1] == b[i + 1]:
             s[b[i] - 1] += 2
         else:
-                s[b[i] - 1] += 1
+            s[b[i] - 1] += 1
 x = max(s)
 print(s.index(x) + 1)

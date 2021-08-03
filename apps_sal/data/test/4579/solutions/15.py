@@ -14,8 +14,6 @@ def i_row_list(N): return [list(map(int, input().split())) for _ in range(N)]
 
 
 n = i_input()
-ss=[input() for _ in range(n)]
-pr=set(ss)
+ss = [input() for _ in range(n)]
+pr = set(ss)
 print((len(pr)))
-
-

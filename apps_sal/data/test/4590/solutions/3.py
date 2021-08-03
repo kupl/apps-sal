@@ -1,8 +1,10 @@
+from bisect import bisect
+from itertools import accumulate
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from itertools import accumulate
-from bisect import bisect
+
+
 def main():
     n, m, k = map(int, input().split())
     a = tuple(accumulate(map(int, input().split())))
@@ -15,6 +17,9 @@ def main():
         r = max(r, bisect(b, k - ae) + i1 + 1)
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

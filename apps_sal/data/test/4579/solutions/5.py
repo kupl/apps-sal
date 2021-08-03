@@ -3,9 +3,9 @@ n = int(input())
 
 l = []
 for i in range(n):
-    x =input() 
+    x = input()
     l.append(x)
-    
-s = set(l)    
+
+s = set(l)
 
 print(len(s))

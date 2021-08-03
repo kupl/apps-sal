@@ -12,10 +12,9 @@ while (b):
         if (a[i] != a[n - i - 1]):
             b = False
             break
-    
+
     b = b and (n % 2 == 0)
     if (b):
         n = n // 2
 
 print(n)
-

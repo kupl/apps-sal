@@ -8,5 +8,3 @@ for i in range(N):
 
 data_list = np.array(data_list)
 print((len(np.unique(data_list))))
-
-

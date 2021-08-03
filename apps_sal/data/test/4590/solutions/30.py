@@ -7,12 +7,12 @@ def main():
     b = [0] + list(map(int, line3.split()))
     mark1, mark2 = 0, 0
     for i in range(1, len(a)):
-        a[i] += a[i-1]
+        a[i] += a[i - 1]
         if a[i] > k:
             mark1 = i
             break
     for i in range(1, len(b)):
-        b[i] += b[i-1]
+        b[i] += b[i - 1]
         if b[i] > k:
             mark2 = i
             break
@@ -36,6 +36,9 @@ def main():
     print(ans)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

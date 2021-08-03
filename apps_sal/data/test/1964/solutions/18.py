@@ -4,6 +4,7 @@ def calculator(men, buying):
     result += men * 15
     return result
 
+
 def main():
     pay_desks = int(input())
     queue = list(map(int, input().split()))
@@ -14,5 +15,6 @@ def main():
         if temporal < amount:
             amount = temporal
     print(amount)
+
 
 main()

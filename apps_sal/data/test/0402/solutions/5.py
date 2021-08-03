@@ -6,4 +6,3 @@ while (a <= 240 - k and ind <= n):
     ind += 1
 a -= ind * 5
 print(ind - 1)
-

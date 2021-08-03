@@ -6,6 +6,8 @@ def check(i, j):
         i += 1
         j -= 1
     return True
+
+
 n, m = map(int, input().split())
 a = []
 for i in range(n):

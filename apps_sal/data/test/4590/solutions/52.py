@@ -9,12 +9,11 @@ from itertools import accumulate, product, permutations, combinations, combinati
 n, m, k = list(map(int, input().split()))
 A = list(accumulate(list(map(int, input().split()))))
 B = list(accumulate(list(map(int, input().split()))))
-A=[0]+A
-B=[0]+B
+A = [0] + A
+B = [0] + B
 ans = []
-for i in range(n+1):
-    c = bisect_right(B, k-A[i])-1
-    if c!=-1:
-        ans.append(c+i)
+for i in range(n + 1):
+    c = bisect_right(B, k - A[i]) - 1
+    if c != -1:
+        ans.append(c + i)
 print((max(ans)))
-

@@ -1,6 +1,6 @@
+import sys
 3
 
-import sys
 
 def solve(a, b, c):
     ix, iy, iz = 3, 2, 1
@@ -33,6 +33,6 @@ def solve(a, b, c):
     sol.sort()
     print(sol[0][1], sol[1][1], sol[2][1])
 
+
 a, b, c = [int(x) for x in sys.stdin.readline().strip().split()]
 solve(a, b, c)
-

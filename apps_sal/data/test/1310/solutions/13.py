@@ -1,9 +1,11 @@
 int_size = 32
 
+
 class TrieNode:
     def __init__(self):
-        self.child = [None]*2
+        self.child = [None] * 2
         self.value = 0
+
 
 class Trie:
     def __init__(self):
@@ -11,7 +13,7 @@ class Trie:
 
     def insert(self, key):
         curr = self.root
-        
+
         for i in range(int_size - 1, -1, -1):
             current_bit = 1 if (key & (1 << i)) else 0
 
@@ -22,11 +24,11 @@ class Trie:
 
         curr.value = key
 
-    def max_xor(self, key): 
+    def max_xor(self, key):
         curr = self.root
         for i in range(int_size - 1, -1, -1):
             current_bit = 1 if (key & (1 << i)) else 0
-            
+
             if curr.child[1 - current_bit] != None:
                 curr = curr.child[1 - current_bit]
             elif curr.child[current_bit] != None:

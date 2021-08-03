@@ -1,7 +1,6 @@
-a, b, c = [int(x) for x in input().split()] 
+a, b, c = [int(x) for x in input().split()]
 
 if abs(a - b) > abs(a - c):
-   print("B")
+    print("B")
 else:
-   print("A")
-
+    print("A")

@@ -9,7 +9,7 @@ for i in range(M):
     if tb + B[i] > K:
         break
     tb += B[i]
-    b = i+1
+    b = i + 1
 
 ans = [0, b]
 m = b
@@ -19,11 +19,12 @@ ta = 0
 for i in range(N):
     if ta + A[i] > K:
         break
-    a = i+1
+    a = i + 1
     ta += A[i]
     while True:
         if ta + tb > K:
-            if b == 0:break
+            if b == 0:
+                break
             b -= 1
             tb -= B[b]
         else:
@@ -32,7 +33,4 @@ for i in range(N):
                 ans = [a, b]
             break
 
-print((ans[0]+ans[1]))
-
-
-
+print((ans[0] + ans[1]))

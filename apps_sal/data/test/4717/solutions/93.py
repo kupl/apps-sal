@@ -7,4 +7,3 @@ if dis_b_s > dis_a_s:
     print('A')
 elif dis_a_s > dis_b_s:
     print('B')
-
