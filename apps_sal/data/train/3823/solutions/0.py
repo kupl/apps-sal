@@ -5,4 +5,3 @@ def deep_count(a):
             result += deep_count(a[i])
         result += 1
     return result
-

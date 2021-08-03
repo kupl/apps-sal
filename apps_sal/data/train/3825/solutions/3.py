@@ -7,4 +7,3 @@ GOOD_WORD = 'awesome'
 
 def filter_words(phrase):
     return BAD_WORD.sub(GOOD_WORD, phrase)
-
