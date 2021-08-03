@@ -7,5 +7,4 @@ def matrixfy(stg):
     side = ceil(len(stg)**0.5)
     area = side**2
     chars = list(stg.ljust(area, "."))
-    return [chars[i:i+side] for i in range(0, area, side)]
-
+    return [chars[i:i + side] for i in range(0, area, side)]

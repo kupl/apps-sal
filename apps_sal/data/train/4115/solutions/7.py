@@ -11,4 +11,3 @@ def find_outlier(integers):
             return n
 
     assert False
-

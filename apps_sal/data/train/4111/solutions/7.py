@@ -3,7 +3,7 @@ def sabb(s, value, happiness):
     for x in s:
         if x == 's' or x == 'a' or x == 'b' or x == 't' or x == 'i' or x == 'c' or x == 'l':
             sab.append(1)
-        else: 
+        else:
             sab.append(0)
     z = sum(sab)
     y = z + value + happiness
