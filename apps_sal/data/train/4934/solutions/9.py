@@ -1,5 +1,6 @@
 import heapq
 
+
 def sort(words):
     heap = []
     cnt = 0

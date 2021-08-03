@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def reverse(lst):
     q = deque()
     for x in lst:

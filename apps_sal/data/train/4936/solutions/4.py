@@ -3,4 +3,3 @@ def reverse(lst):
     while lst:
         out.append(lst.pop(-1))
     return out
-

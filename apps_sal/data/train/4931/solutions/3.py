@@ -9,4 +9,3 @@ def different_squares(matrix):
             if one not in result:
                 result.append(one)
     return len(result)
-

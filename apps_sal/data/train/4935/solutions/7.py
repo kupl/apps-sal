@@ -1,6 +1,6 @@
 def infected(s):
     infected = 0
-    total = 0 
+    total = 0
     for land in s.split('X'):
         if '1' in land:
             infected += len(land)

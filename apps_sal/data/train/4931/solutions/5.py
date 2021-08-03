@@ -1,7 +1,9 @@
 from itertools import chain
 
-pairwise = lambda a: list(zip(a, a[1:]))
-transpose = lambda a: list(zip(*a))
+
+def pairwise(a): return list(zip(a, a[1:]))
+def transpose(a): return list(zip(*a))
+
 
 def different_squares(matrix):
     if 1 in (len(matrix), len(matrix[0])):

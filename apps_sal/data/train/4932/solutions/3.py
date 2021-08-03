@@ -1,5 +1,6 @@
 import copy
 
+
 def find_solution(puzzle):
     moveset = []
     while(True):
@@ -20,7 +21,8 @@ def find_solution(puzzle):
             index = move_to_exe - len(puzzle)
             for i in range(len(puzzle)):
                 puzzle[i][index] = 0 if puzzle[i][index] == 1 else 1
-        
+
+
 def count_zeros(move, puzzle):
     count = 0
     # Row toggle
@@ -34,6 +36,7 @@ def count_zeros(move, puzzle):
     return count
 
 # UGH that solution is so BASIC! Greedy execution? Lame. I perfer the BF tree search below.
+
 
 """
 # Use BFS?

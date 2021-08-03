@@ -1,4 +1,6 @@
 from random import choice
+
+
 def random_case(x):
     final = ''
     for i in x:

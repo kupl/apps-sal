@@ -1,4 +1,6 @@
-import heapq, itertools
+import heapq
+import itertools
+
 
 def sort(iterable):
     heap = list(iterable)

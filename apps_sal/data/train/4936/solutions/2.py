@@ -5,4 +5,3 @@ def reverse(lst):
     while lst:
         result.append(lst.pop())
     return result
-
