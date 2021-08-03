@@ -20,15 +20,15 @@ K_PERMS = {
         543169, 962361, 4511376],
     5: [43681, 6395841],
     6: [7241481],
-    7: [4532641] }
+    7: [4532641]}
 
 
-def next_perfectsq_perm(lower_limit, k, answer = 0):
-    
+def next_perfectsq_perm(lower_limit, k, answer=0):
+
     for number in K_PERMS[k]:
         if not answer and number > lower_limit:
             answer = number
         elif answer and sorted(str(number)) == sorted(str(answer)):
             answer = number
-    
+
     return answer

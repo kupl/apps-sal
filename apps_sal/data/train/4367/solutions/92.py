@@ -1,4 +1,4 @@
-def area_or_perimeter(l , w):
+def area_or_perimeter(l, w):
     length = l
     width = w
     if length == width:

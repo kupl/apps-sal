@@ -5,7 +5,6 @@ def odd_or_even(arr):
         remainder = sum % 2
     if remainder == 0:
         return "even"
-        
+
     else:
         return "odd"
-

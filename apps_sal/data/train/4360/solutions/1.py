@@ -1,6 +1,2 @@
 def get_score(n):
-    return 50*(n*(n+1))/2
-    
-    
-    
-
+    return 50 * (n * (n + 1)) / 2

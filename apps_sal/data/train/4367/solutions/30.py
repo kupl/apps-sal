@@ -1,1 +1,1 @@
-area_or_perimeter=lambda l,w:[l+w<<1,l*w][l==w]
+def area_or_perimeter(l, w): return [l + w << 1, l * w][l == w]
