@@ -1,26 +1,25 @@
 # cook your dish here
 T = int(input())
 while T != 0:
-	T = T-1
-	N,K = map(int,input().split())
-	S = input()
-	S1 = S+S
-	sub = 'ab'
-	lookup = [[0]*(2*N+1) for _ in range(3)]
-	for i in range(0,(2*N+1)):
-		lookup[0][i] = 1
-	#print(lookup)
-	for i in range(1,(2*N+1)):
-		for j in range(1,3):
-			if S1[i-1] == sub[j-1]:
-				lookup[j][i] = lookup[j-1][i-1] + lookup[j][i-1]
-			else:
-				lookup[j][i] = lookup[j][i-1]
-	#print(lookup)
-	base = lookup[2][N]
-	#print('base='+str(base))
-	inc = lookup[2][2*N] - 2*base
-	#print('inc='+str(inc))
-	ans = K*base + ((K-1)*(K)*inc)//2
-	print(ans)
-	
+    T = T - 1
+    N, K = map(int, input().split())
+    S = input()
+    S1 = S + S
+    sub = 'ab'
+    lookup = [[0] * (2 * N + 1) for _ in range(3)]
+    for i in range(0, (2 * N + 1)):
+        lookup[0][i] = 1
+    # print(lookup)
+    for i in range(1, (2 * N + 1)):
+        for j in range(1, 3):
+            if S1[i - 1] == sub[j - 1]:
+                lookup[j][i] = lookup[j - 1][i - 1] + lookup[j][i - 1]
+            else:
+                lookup[j][i] = lookup[j][i - 1]
+    # print(lookup)
+    base = lookup[2][N]
+    # print('base='+str(base))
+    inc = lookup[2][2 * N] - 2 * base
+    # print('inc='+str(inc))
+    ans = K * base + ((K - 1) * (K) * inc) // 2
+    print(ans)

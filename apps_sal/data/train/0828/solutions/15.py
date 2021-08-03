@@ -6,11 +6,9 @@ for _ in range(int(input())):
     while i != n and arr[i] != '0':
         i += 1
     sum = 0
-    for j in range(i,n):
+    for j in range(i, n):
         if arr[j] == '0':
             sum += 1100
         else:
             sum += 100
     print(sum)
-
-

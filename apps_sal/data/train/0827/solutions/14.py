@@ -15,8 +15,8 @@ def get_ans(n, k, s):
             ans += APn * (2 * APa + (APn - 1) * APd) // 2
     return ans
 
+
 for _ in range(int(input())):
     n, k = map(int, input().split())
     s = input()
     print(get_ans(n, k, s))
-

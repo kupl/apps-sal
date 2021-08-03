@@ -4,8 +4,8 @@ revenue = 0
 s.sort()
 s.reverse()
 
-for i in range(t) :
+for i in range(t):
     revenue -= i * s[i]
     revenue += (t - i - 1) * s[i]
-    
+
 print(revenue)
