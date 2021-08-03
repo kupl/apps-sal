@@ -11,6 +11,5 @@ class Solution:
             return original
         if original == target:
             return cloned
-        
-        return self.getTargetCopy(original.left, cloned.left, target) or self.getTargetCopy(original.right, cloned.right, target)
 
+        return self.getTargetCopy(original.left, cloned.left, target) or self.getTargetCopy(original.right, cloned.right, target)

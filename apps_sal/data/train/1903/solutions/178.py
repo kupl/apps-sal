@@ -4,17 +4,17 @@
 #     def __init__(self, n):
 #         self.parents = [i for i in range(n + 1)]
 #         self.ranks = [0 for i in range(n + 1)]
-        
+
 #     def find(self, u):
 #         if u != self.parents[u]:
-#             self.parents[u] = self.find(self.parents[u])            
+#             self.parents[u] = self.find(self.parents[u])
 #         return self.parents[u]
-    
+
 #     def union(self, u, v):
 #         pu = self.find(u)
 #         pv = self.find(v)
 #         if pu == pv: return False
-        
+
 #         if self.ranks[pu] < self.ranks[pv]:
 #             self.parents[pu] = pv
 #         elif self.ranks[pu] > self.ranks[pv]:
@@ -22,7 +22,7 @@
 #         else:
 #             self.parents[pu] = pv
 #             self.ranks[pv] += 1
-            
+
 #         return True
 
 
@@ -42,9 +42,9 @@
 #             ans += e[0]
 #             count += 1
 #             if count == n - 1: return ans
-            
+
 #         return ans
-        
+
 
 # Prim's
 # my time: O(n ^ 2)
@@ -56,14 +56,15 @@ class Solution:
         ds = [float('inf') for _ in range(n)]
         for i in range(1, n):
             ds[i] = dist(points[0], points[i])
-        
+
         ans = 0
         for i in range(1, n):
             v = ds.index(min(ds))
             ans += ds[v]
             ds[v] = float('inf')
             for i in range(n):
-                if ds[i] == float('inf'): continue
+                if ds[i] == float('inf'):
+                    continue
                 ds[i] = min(ds[i], dist(points[i], points[v]))
-                
+
         return ans

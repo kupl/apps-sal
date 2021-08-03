@@ -1,58 +1,58 @@
 class Solution:
-    
+
     def checkForSquare(self, grid: List[List[int]], i: int, j: int, squareLen: int) -> bool:
         maxRowBound = i + squareLen - 1
         maxColBound = j + squareLen - 1
-        #print(\"Checking for square at \" + str(maxRowBound) + \",\" + str(maxColBound))
-        #print(\"Square_len: \" + str(squareLen))
+        # print(\"Checking for square at \" + str(maxRowBound) + \",\" + str(maxColBound))
+        # print(\"Square_len: \" + str(squareLen))
         if (self.accessGrid(grid, maxRowBound, maxColBound) == 1):
             # check bottom line
             k = maxColBound
             while (k != j and self.accessGrid(grid, maxRowBound, k) == 1):
-                k -= 1    
+                k -= 1
             if (k != j):
                 return False
-            
+
             # check rightmost line
             s = maxRowBound
             while (s != i and self.accessGrid(grid, s, maxColBound) == 1):
-                s -= 1    
+                s -= 1
             if (s == i):
-                #print(\"Found square at \" + str(maxRowBound) + \",\" + str(maxColBound))
-                #print(\"Square_len: \" + str(squareLen))
+                # print(\"Found square at \" + str(maxRowBound) + \",\" + str(maxColBound))
+                # print(\"Square_len: \" + str(squareLen))
                 return True
-            
+
         return False
-    
+
     def accessGrid(self, grid: List[List[int]], i: int, j: int) -> int:
         if (i < self.rows and j < self.cols):
             return grid[i][j]
         else:
             return -1
-    
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
-        
+
         self.rows = len(grid)
         self.cols = len(grid[0])
-        
+
         # brute-force
-        
+
         i = 0
         j = 0
         largest_square = 0
-        
-        #print(\"Rows: \" + str(self.rows))
-        #print(\"Cols: \" + str(self.cols))
-        
+
+        # print(\"Rows: \" + str(self.rows))
+        # print(\"Cols: \" + str(self.cols))
+
         while (i < self.rows):
             while (j < self.cols):
-                #print(\"Checking \" + str(i) + \",\" + str(j))
+                # print(\"Checking \" + str(i) + \",\" + str(j))
                 search_increment = 1
                 if (grid[i][j] == 1):
                     if (largest_square == 0):
                         largest_square = 1
                     if (j != self.cols - 1):
-                        #print(\"Searching for square at \" + str(i) + \",\" + str(j))
+                        # print(\"Searching for square at \" + str(i) + \",\" + str(j))
                         # Find possible bounds of the square
                         max_col_bound = j
                         max_row_bound = i
@@ -79,13 +79,5 @@ class Solution:
                 j += search_increment
             i += 1
             j = 0
-        
-        return largest_square
-                        
-                        
-                        
-               
-                
-        
-        
 
+        return largest_square

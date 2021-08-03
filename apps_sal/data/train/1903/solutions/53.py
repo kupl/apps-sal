@@ -13,13 +13,14 @@ class Solution:
                 uf.union(a, b)
                 res += weight
         return res
-    
+
+
 class UF:
     def __init__(self, n):
         self.uf = list(range(n))
         self.sz = [1] * n
         self.root_cnt = n
-    
+
     def find(self, c):
         root = c
         while root != self.uf[root]:
@@ -29,10 +30,11 @@ class UF:
             self.uf[c] = root
             c = p
         return root
-    
+
     def union(self, a, b):
         ra, rb = self.find(a), self.find(b)
-        if ra == rb: return False
+        if ra == rb:
+            return False
         if self.sz[ra] < self.sz[rb]:
             self.uf[ra] = rb
             self.sz[rb] += self.sz[ra]

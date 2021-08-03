@@ -11,10 +11,9 @@ class Solution:
             return None
         if target == original:
             return cloned
-        left = self.getTargetCopy(original.left, cloned.left, target) 
+        left = self.getTargetCopy(original.left, cloned.left, target)
         right = self.getTargetCopy(original.right, cloned.right, target)
-        if left is None: 
+        if left is None:
             return right
         else:
             return left
-

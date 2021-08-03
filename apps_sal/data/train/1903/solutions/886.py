@@ -22,8 +22,8 @@ class Solution:
         n = len(points)
         for i in range(len(points)):
             for j in range(len(points)):
-                if i!=j:
-                    edges.append((abs(points[i][0]-points[j][0])+abs(points[i][1]-points[j][1]),i,j))
+                if i != j:
+                    edges.append((abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j))
         edges.sort()
 
         count = 0
@@ -32,9 +32,7 @@ class Solution:
                 total += cost
                 count += 1
                 union(u, v)
-                if count == n-1:
+                if count == n - 1:
                     return total
 
         return total
-        
-

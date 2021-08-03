@@ -1,5 +1,8 @@
 # Solve Leetcode 1584. Min Cost to Connect All Points using the boilerplate code below, and then implement Kruskal's algorithm to solve the problem. Use self.distance(pointA, pointB) to find distance (weight of edge) between two nodes.
 
+from collections import defaultdict
+
+
 class DisjointSet:
     def __init__(self, points):
         self.parent = {}
@@ -26,8 +29,7 @@ class DisjointSet:
             self.parent[x_set] = y_set
             self.rank[y_set] += 1
 
-        
-from collections import defaultdict
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
@@ -35,15 +37,15 @@ class Solution:
         disjoint_set = DisjointSet(points)
 
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 distance = self.distance(points[i], points[j])
                 edges.append([distance, points[i], points[j]])
-        
+
         edges.sort()
         answer = 0
         i = 0
         times = 0
-        while times < len(points)-1:
+        while times < len(points) - 1:
             if times == len(points) - 1:
                 return answer
             distance, nodeA, nodeB = edges[i]
@@ -52,11 +54,8 @@ class Solution:
                 answer += distance
                 disjoint_set.union(nodeA, nodeB)
             i += 1
-                
-        return answer
-        
-        
 
+        return answer
 
     def distance(self, pointA, pointB):
         return abs(pointA[0] - pointB[0]) + abs(pointA[1] - pointB[1])

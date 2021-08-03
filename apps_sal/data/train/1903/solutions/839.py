@@ -18,10 +18,11 @@ class DSU:
         self.sz[xr] += self.sz[yr]
         return True
 
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
-        
+
         edges = []
         for i in range(N):
             for j in range(i + 1, N):

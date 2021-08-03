@@ -1,11 +1,12 @@
 class Solution(object):
     def kClosest(self, points, K):
-        dist = lambda i: points[i][0]**2 + points[i][1]**2
+        def dist(i): return points[i][0]**2 + points[i][1]**2
 
         def sort(i, j, K):
             # Partially sorts A[i:j+1] so the first K elements are
             # the smallest K elements.
-            if i >= j: return
+            if i >= j:
+                return
 
             # Put random element as A[i] - this is the pivot
             k = random.randint(i, j)
@@ -29,7 +30,8 @@ class Solution(object):
                     i += 1
                 while i <= j and dist(j) >= pivot:
                     j -= 1
-                if i >= j: break
+                if i >= j:
+                    break
                 points[i], points[j] = points[j], points[i]
 
             points[oi], points[j] = points[j], points[oi]

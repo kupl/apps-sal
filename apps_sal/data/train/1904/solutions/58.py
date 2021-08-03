@@ -2,7 +2,7 @@ class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         def get_distance(point):
             return point[0] ** 2 + point[1] ** 2
-        
+
         def helper(i, j, K):
             if i >= j:
                 return
@@ -15,7 +15,7 @@ class Solution:
                 helper(mid + 1, j, K)
             else:
                 helper(i, mid - 1, K)
-        
+
         def partition(i, j):
             left, right = i, j
             pivot_distance = get_distance(points[j])
@@ -25,15 +25,14 @@ class Solution:
                     i += 1
             points[i], points[j] = points[j], points[i]
             return i
-        
+
         helper(0, len(points) - 1, K)
         return points[:K]
-        
-        
-        
+
+
 #         def get_distance(point):
 #             return point[0] ** 2 + point[1] ** 2
-        
+
 #         def helper(i, j, K):
 #             if i >= j:
 #                 return
@@ -46,7 +45,7 @@ class Solution:
 #                 helper(mid + 1, j, K - (mid - i + 1))
 #             else:
 #                 helper(i, mid - 1, K)
-        
+
 #         def partition(i, j):
 #             left, right = i, j
 #             pivot_distance = get_distance(points[j])
@@ -56,7 +55,6 @@ class Solution:
 #                     i += 1
 #             points[i], points[j] = points[j], points[i]
 #             return i
-        
+
 #         helper(0, len(points) - 1, K)
 #         return points[:K]
-

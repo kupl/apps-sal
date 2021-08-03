@@ -22,6 +22,7 @@ class DSU:
     def size(self, x):
         return self.sz[self.find(x)]
 
+
 class Solution:
     def minCostConnectPoints(self, a: List[List[int]]) -> int:
         # ans = []
@@ -41,7 +42,7 @@ class Solution:
                 x = abs(a[i][0] - a[j][0]) + abs(a[i][1] - a[j][1])
                 # ans[i][j] = x
                 if i != j and i > j:
-                    temp.append([x,i,j])
+                    temp.append([x, i, j])
         ans = 0
         temp.sort()
         i = 0

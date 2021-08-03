@@ -3,9 +3,10 @@ class Solution:
         xi, xj = x[0], x[1]
         yi, yj = y[0], y[1]
         return abs(xi - yi) + abs(xj - yj)
-    
+
     def find(self, parent, i):
-        if parent[i] == i: return i
+        if parent[i] == i:
+            return i
         return self.find(parent, parent[i])
 
     def union(self, parent, rank, x, y):
@@ -22,7 +23,7 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         E = []
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 u = points[i]
                 v = points[j]
                 E.append([i, j, self.getWeight(u, v)])
@@ -35,7 +36,7 @@ class Solution:
         e = 0
         i = 0
         result = 0
-        while e < len(points)-1:
+        while e < len(points) - 1:
             u, v, w = E[i]
             i += 1
             x = self.find(parent, u)

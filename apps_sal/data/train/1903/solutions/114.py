@@ -15,6 +15,7 @@ class UnionFindGraph(dict):
 
         return r
 
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         graph = UnionFindGraph()
@@ -22,7 +23,7 @@ class Solution:
 
         for i, v in enumerate(points):
 
-            for j, w in enumerate(points[i + 1: ], i + 1):
+            for j, w in enumerate(points[i + 1:], i + 1):
                 if i != j:
                     edges.append(((tuple(v), tuple(w)), self.distance(v, w)))
 
@@ -43,4 +44,3 @@ class Solution:
 
     def distance(self, a: Tuple[int, int], b: Tuple[int, int]) -> int:
         return abs(a[0] - b[0]) + abs(a[1] - b[1])
-

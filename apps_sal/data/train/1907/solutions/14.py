@@ -18,8 +18,9 @@ class Solution:
     #             return left if left else right
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         path = []
+
         def traverse(x):
-            if not x: 
+            if not x:
                 return False
             if x is target:
                 return True

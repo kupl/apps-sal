@@ -1,11 +1,13 @@
 def dist(p1, p2):
     return int(abs(p1[0] - p2[0]) + abs(p1[1] - p2[1]))
 
+
 def find(x, uf):
     if uf[x] == x:
         return x
     uf[x] = find(uf[x], uf)
     return uf[x]
+
 
 def union(x, y, uf):
     xx = find(x, uf)
@@ -14,6 +16,7 @@ def union(x, y, uf):
         return False
     uf[xx] = yy
     return True
+
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:

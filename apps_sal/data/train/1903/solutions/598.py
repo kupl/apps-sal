@@ -5,16 +5,18 @@ class Solution:
             o = g[v]
             for i in g.keys():
                 if g[i] == o:
-                    g[i] = p                    
+                    g[i] = p
 
         N = len(points)
-        matrix = [[float('inf')]*N for _ in range(N)]
+        matrix = [[float('inf')] * N for _ in range(N)]
         ans = 0
         edges = []
         for node in range(N):
             for neighbor in range(N):
-                if node == neighbor: continue
-                if matrix[node][neighbor] != float('inf'): continue
+                if node == neighbor:
+                    continue
+                if matrix[node][neighbor] != float('inf'):
+                    continue
                 u, v = points[node], points[neighbor]
                 d = abs(u[0] - v[0]) + abs(u[1] - v[1])
                 matrix[node][neighbor] = d

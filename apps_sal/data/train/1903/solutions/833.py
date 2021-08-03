@@ -7,14 +7,15 @@ class Solution:
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append([dist, i, j])
         edges.sort()
-        
+
         dsu = DSU()
         ans = 0
         for u, v, x in edges:
             if dsu.union(v, x):
                 ans += u
-        
+
         return ans
+
 
 class DSU:
     def __init__(self):

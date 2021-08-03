@@ -9,7 +9,7 @@ class Solution:
             if i not in mst:
                 distance = abs(points[0][0] - points[i][0]) + abs(points[0][1] - points[i][1])
                 heapq.heappush(pq, (distance, 0, i))
-        
+
         while pq:
             distance, a, b = heapq.heappop(pq)
             if b not in mst:
@@ -19,5 +19,5 @@ class Solution:
                     if i not in mst:
                         distance = abs(points[b][0] - points[i][0]) + abs(points[b][1] - points[i][1])
                         heapq.heappush(pq, (distance, b, i))
-        
+
         return md

@@ -11,18 +11,18 @@ class Solution:
                 d[(x1, y1)] = (x1, y1)
                 d[(x2, y2)] = (x2, y2)
                 heapq.heappush(min_heap, (dist, (x1, y1), (x2, y2)))
-        
+
         def find(x):
             px = d[x]
             if px != x:
                 d[x] = find(px)
-            return d[x] 
-        
+            return d[x]
+
         def union(x, y):
             px, py = find(x), find(y)
             if px != py:
                 d[px] = py
-                
+
         min_cost = 0
         while min_heap:
             c, p1, p2 = heapq.heappop(min_heap)
@@ -31,4 +31,3 @@ class Solution:
                 union(p1, p2)
                 min_cost += c
         return min_cost
-

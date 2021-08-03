@@ -27,7 +27,7 @@ class Solution:
         for i in range(M):
             for j in range(N):
                 if grid[i][j] == 0:
-                    ids = set() # FIXME: bug: 忘記 dedup, 造成重複算
+                    ids = set()  # FIXME: bug: 忘記 dedup, 造成重複算
                     if 0 <= i - 1:
                         ids.add(grid[i - 1][j])
                     if i + 1 < M:
@@ -40,4 +40,3 @@ class Solution:
                     max_size = max(max_size, sum(area_sizes[id] for id in ids) + 1)
 
         return max_size
-

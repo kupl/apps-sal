@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         points.sort()
@@ -8,7 +9,7 @@ class Solution:
         cnt = 0
         q = []
 
-        heappush(q, (0,0))
+        heappush(q, (0, 0))
         while len(q):
             weight, source = heappop(q)
             if source in visited:
@@ -20,6 +21,5 @@ class Solution:
                 if i not in visited:
                     weight = abs(points[i][0] - points[source][0]) + abs(points[i][1] - points[source][1])
                     heappush(q, (weight, i))
-        
-        return cnt
 
+        return cnt

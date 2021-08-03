@@ -3,12 +3,12 @@ class Solution:
 
         graph = defaultdict(list)
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
-                cost = abs(points[i][0]-points[j][0]) + abs(points[i][1]-points[j][1])
+            for j in range(i + 1, len(points)):
+                cost = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 graph[i].append((cost, j))
                 graph[j].append((cost, i))
-        
-        seen = [0] * (len(points)+1)
+
+        seen = [0] * (len(points) + 1)
         seen[0] = 1
         q = graph[0]
         minimumCost = 0

@@ -1,15 +1,16 @@
 class UnionFind:
     def __init__(self, n):
         self.p = list(range(n))
-        
+
     def find(self, i):
         if self.p[i] != i:
             self.p[i] = self.find(self.p[i])
         return self.p[i]
-    
+
     def union(self, x, y):
         rx, ry = self.find(x), self.find(y)
         self.p[rx] = ry
+
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:

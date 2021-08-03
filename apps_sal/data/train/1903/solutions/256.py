@@ -16,4 +16,4 @@ class Solution:
                 d, i = heappop(pq)
             res += d
             connected += 1
-        return res;
+        return res

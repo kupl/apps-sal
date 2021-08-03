@@ -7,12 +7,12 @@ class Solution:
         res = 0
         while queue:
             weight, u = heapq.heappop(queue)
-            if u in visited: continue
+            if u in visited:
+                continue
             visited.add(u)
             res += weight
             for v in range(n):
                 if v != u and v not in visited:
                     heapq.heappush(queue, (get_weight(points[u], points[v]), v))
-        
-        return res
 
+        return res

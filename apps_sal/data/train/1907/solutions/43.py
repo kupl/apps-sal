@@ -11,6 +11,6 @@ class Solution:
             return None
         if original == target:
             return cloned
-        l = self.getTargetCopy(original.left,cloned.left,target)
-        r = self.getTargetCopy(original.right,cloned.right,target)   
-        return l if l else r 
+        l = self.getTargetCopy(original.left, cloned.left, target)
+        r = self.getTargetCopy(original.right, cloned.right, target)
+        return l if l else r

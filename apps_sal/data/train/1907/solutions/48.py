@@ -7,12 +7,12 @@
 
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-#         def find(orig, copy, target):
-#             if not orig: return None
-#             if orig == target: return copy
-#             return find(orig.left, copy.left, target) or find(orig.right, copy.right, target)
-            
-#         return find(original, cloned, target)
+        #         def find(orig, copy, target):
+        #             if not orig: return None
+        #             if orig == target: return copy
+        #             return find(orig.left, copy.left, target) or find(orig.right, copy.right, target)
+
+        #         return find(original, cloned, target)
 
         def it(node):
             if node:

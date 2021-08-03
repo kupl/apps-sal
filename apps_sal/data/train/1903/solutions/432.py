@@ -1,9 +1,9 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        manhattan = lambda p1, p2: abs(p1[0]-p2[0]) + abs(p1[1]-p2[1])
+        def manhattan(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         n, graph = len(points), collections.defaultdict(dict)
         for i in range(n):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 d = manhattan(points[i], points[j])
                 graph[i][j] = graph[j][i] = d
 
@@ -21,6 +21,5 @@ class Solution:
                 if d[nex] > graph[node][nex]:
                     d[nex] = graph[node][nex]
                     heapq.heappush(heap, (d[nex], nex))
-            # if cnt >= n: break        
+            # if cnt >= n: break
         return ans
-

@@ -32,4 +32,3 @@ class Solution:
         for i, result in enumerate(top_results):
             top_results[i] = result[1]
         return top_results
-

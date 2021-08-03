@@ -6,7 +6,7 @@ class Solution:
         res, curr = 0, 0
         distances = [float('inf') for _ in range(n)]
         explored = set()
-        
+
         for i in range(n - 1):
             x0, y0 = points[curr]
             explored.add(curr)
@@ -14,9 +14,9 @@ class Solution:
                 if j in explored:
                     continue
                 distances[j] = min(distances[j], abs(x0 - x) + abs(y0 - y))
-                
+
             delta, curr = min((d, j) for j, d in enumerate(distances))
             res += delta
             distances[curr] = float('inf')
-            
-        return res         
+
+        return res

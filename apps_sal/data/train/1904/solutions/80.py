@@ -1,14 +1,15 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-        dist = lambda i: points[i][0]**2 + points[i][1]**2
-        def quicksort(points,K): # points: list of index
+        def dist(i): return points[i][0]**2 + points[i][1]**2
+
+        def quicksort(points, K):  # points: list of index
             print(points, K)
             if not points:
                 return
             # pivot = points[random.randint(0,len(points)-1)]
 
             pivot = points[-1]
-            l,r,m=[],[],[]
+            l, r, m = [], [], []
             for i in points:
                 if dist(i) == dist(pivot):
                     m.append(i)
@@ -18,8 +19,8 @@ class Solution:
                     r.append(i)
             if len(l) >= K:
                 return quicksort(l, K)
-            elif len(l) < K <= len(l)+len(m):
-                return l+m[:K-len(l)]
+            elif len(l) < K <= len(l) + len(m):
+                return l + m[:K - len(l)]
             else:
-                return l+m+quicksort(r, K-len(l)-len(m))
+                return l + m + quicksort(r, K - len(l) - len(m))
         return [points[i] for i in quicksort([i for i in range(len(points))], K)]

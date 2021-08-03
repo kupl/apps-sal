@@ -13,22 +13,22 @@ class Solution:
                 if distance(points[i]) < distance(pivot):
                     points[store_index], points[i] = points[i], points[store_index]
                     store_index += 1
-            
+
             # move the pivot back to its correct position:
             # such that all elements on the left are smaller, and elements on the right have larger distance to origin.
             points[store_index], points[right] = points[right], points[store_index]
-            
+
             return store_index
-        
-        left, right = 0, len(points)-1
+
+        left, right = 0, len(points) - 1
         while True:
             pivot_index = random.randint(left, right)
             M = partition(left, right, pivot_index)
-            if M == K-1:
+            if M == K - 1:
                 break
-            elif M < K-1:
+            elif M < K - 1:
                 left = M + 1
             else:
                 right = M - 1
-                
+
         return points[:K]

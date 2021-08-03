@@ -33,9 +33,8 @@
 # create winner/best for each v
 
 
-
 class Solution:
-    def minCostConnectPoints(self, A: List[List[int]], total = 0) -> int:
+    def minCostConnectPoints(self, A: List[List[int]], total=0) -> int:
         N = len(A)
         cand = set([i for i in range(1, N)])
         E = [[float('inf')] * N for _ in range(N)]
@@ -66,7 +65,3 @@ class Solution:
                     best[v] = E[u][v]
                     heappush(q, [best[v], v])
         return total
-    
-    
-    
-

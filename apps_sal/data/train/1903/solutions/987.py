@@ -21,11 +21,13 @@ class Solution:
         while q:
             # for _ in range(len(q)):
             c, (x1, y1) = heapq.heappop(q)
-            if (x1, y1) in visited: continue
+            if (x1, y1) in visited:
+                continue
             visited.add((x1, y1))
             total += c
             ct += 1
             for w, x2, y2 in g[(x1, y1)]:
                 heapq.heappush(q, (w, (x2, y2)))
-            if ct >= n: break
+            if ct >= n:
+                break
         return total

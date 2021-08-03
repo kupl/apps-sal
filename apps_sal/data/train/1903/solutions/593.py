@@ -11,12 +11,13 @@ class DSU:
         while i != r:
             i, self.fa[i] = self.fa[i], r
         return r
-    
+
     def join(self, x, y):
         x = self.find(x)
         y = self.find(y)
         if x != y:
             self.fa[x] = y
+
 
 class Solution:
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
@@ -28,9 +29,9 @@ class Solution:
                     continue
                 d = abs(p[i][0] - p[j][0]) + abs(p[i][1] - p[j][1])
                 e.append((d, i, j))
-        
+
         e.sort()
-        
+
         dsu = DSU(n)
         had = 0
         ans = 0
@@ -42,4 +43,3 @@ class Solution:
             if had == n - 1:
                 break
         return ans
-

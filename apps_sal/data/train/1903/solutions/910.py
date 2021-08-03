@@ -1,7 +1,9 @@
 from queue import PriorityQueue
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        q = PriorityQueue() # queue of (dist, x, y)
+        q = PriorityQueue()  # queue of (dist, x, y)
         x0, y0 = points[0]
         for x, y in points[1:]:
             q.put([abs(x - x0) + abs(y - y0), x, y])

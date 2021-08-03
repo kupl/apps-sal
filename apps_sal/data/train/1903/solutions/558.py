@@ -1,16 +1,17 @@
 class Solution:
-    
+
     def kruskal(self, n, edges):
         def find(x):
             if x != parent[x]:
                 parent[x] = find(parent[x])
             return parent[x]
+
         def union(x, y):
             px, py = find(x), find(y)
             if px == py:
                 return (False, False)
             parent[px] = py
-            rank[py] += rank[px] 
+            rank[py] += rank[px]
             return (True, True) if rank[py] == n else (True, False)
         mst_cost = 0
         parent = list(range(n))
@@ -22,22 +23,21 @@ class Solution:
             if isEnd:
                 break
         return mst_cost
-        
-    
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        manhattan = lambda xx, yy: abs(xx[0] - yy[0]) + abs(xx[1] - yy[1])
-        
+        def manhattan(xx, yy): return abs(xx[0] - yy[0]) + abs(xx[1] - yy[1])
+
         if (n := len(points)) == 1:
             return 0
-        
+
         edges = []
         for i in range(n):
             for j in range(i + 1, n):
                 x, y = points[i], points[j]
                 edges.append([i, j, manhattan(x, y)])
-        edges.sort(key = lambda x: x[2])
+        edges.sort(key=lambda x: x[2])
         return self.kruskal(n, edges)
-        
+
         # graph = collections.defaultdict(list)
         # for i in range(n):
         #     for j in range(i + 1, n):
@@ -45,8 +45,8 @@ class Solution:
         #         graph[i].append((manhattan(x, y), j))
         #         graph[j].append((manhattan(x, y), i))
         # return prim(graph)
-            
-                
+
+
 #         def prim(graph):
 #             V = {0}
 #             edges = graph[0]
@@ -64,4 +64,3 @@ class Solution:
 #                 if len(V) == len(graph):
 #                     break
 #             return sum_cost
-

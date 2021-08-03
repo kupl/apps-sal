@@ -44,8 +44,11 @@ All pairs (xi, yi) are distinct.
 
 Accepted 1,742 / 5,429 submissions.
 '''
-def man_dist_4(x,y,u,v):
+
+
+def man_dist_4(x, y, u, v):
     return abs(x - u) + abs(y - v)
+
 
 def man_dist_pt(ptA, ptB):
     return abs(ptA[0] - ptB[0]) + abs(ptA[1] - ptB[1])
@@ -56,7 +59,7 @@ class Solution:
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
 
         def manhattan(x, y):
-            return abs(x[0]-y[0]) + abs(x[1]-y[1])
+            return abs(x[0] - y[0]) + abs(x[1] - y[1])
 
         ans, n = 0, len(p)
         seen = set()
@@ -65,15 +68,17 @@ class Solution:
         while len(seen) < n:
             # print(vertices, seen)
             w, (u, v) = heapq.heappop(vertices)
-            if u in seen and v in seen: continue
+            if u in seen and v in seen:
+                continue
             ans += w
             seen.add(v)
             for j in range(n):
-                if j not in seen and j!=v:
+                if j not in seen and j != v:
                     heapq.heappush(vertices, (manhattan(p[j], p[v]), (v, j)))
         return ans
 
 ###############################################################################
+
 
 class SolutionTle:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
@@ -87,7 +92,7 @@ class SolutionTle:
         found.add((x, y))
         minc = float('inf')
         for u, v in lost:
-            md = man_dist_4(x,y,u,v)
+            md = man_dist_4(x, y, u, v)
             if minc > md:
                 minc = md
                 minu = u
@@ -100,7 +105,7 @@ class SolutionTle:
             minc = float('inf')
             for x, y in found:
                 for u, v in lost:
-                    md = man_dist_4(x,y,u,v)
+                    md = man_dist_4(x, y, u, v)
                     if (minc > md):
                         minc = md
                         minu = u
@@ -110,5 +115,3 @@ class SolutionTle:
             found.add((minu, minv))
 
         return cost
-
-

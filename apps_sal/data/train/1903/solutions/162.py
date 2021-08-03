@@ -1,17 +1,19 @@
 import heapq
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def distance(x, y):
             dx = abs(x[0] - y[0])
             dy = abs(x[1] - y[1])
-            return dx+dy
-        
+            return dx + dy
+
         n = len(points)
         if n == 1:
             return 0
         if n == 2:
             return distance(points[0], points[1])
-        
+
         # # Method 1: Prim's Alg with Heap
         # d = {i:[] for i in range(n)}
         # for i in range(n):
@@ -33,27 +35,24 @@ class Solution:
         #         for pair in d[p]:
         #             heapq.heappush(heap, pair)
         # return cost
-        
+
         # Method 2: Kruskal's Alg with Disjoint Set
-        
-        
-        
+
         # Nethod 3: Greedy
         cost = 0
-        curr = 0 # select a random point as the starting point
+        curr = 0  # select a random point as the starting point
         dist = [float('inf')] * n
         explored = set()
         explored.add(0)
         while len(explored) < n:
             x = points[curr]
             for j, y in enumerate(points):
-                if j in explored: 
+                if j in explored:
                     continue
                 else:
-                    dist[j] = min(dist[j], distance(x,y))
-            min_d, curr = min((d, j) for j, d in enumerate(dist)) 
+                    dist[j] = min(dist[j], distance(x, y))
+            min_d, curr = min((d, j) for j, d in enumerate(dist))
             explored.add(curr)
             dist[curr] = float('inf')
             cost += min_d
         return cost
-

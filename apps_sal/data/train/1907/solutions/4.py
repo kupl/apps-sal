@@ -15,7 +15,7 @@ class Solution:
                     return(cloned)
                 if original.right:
                     stack.append(original.right)
-                    stackCloned.append(cloned.right)                    
+                    stackCloned.append(cloned.right)
                 original = original.left
                 cloned = cloned.left
             original = stack.pop()

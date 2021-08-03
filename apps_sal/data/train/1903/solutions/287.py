@@ -21,4 +21,3 @@ class Solution:
             res += delta
 
         return res
-

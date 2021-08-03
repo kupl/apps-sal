@@ -1,10 +1,12 @@
 from queue import PriorityQueue
 from collections import defaultdict
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         parent = defaultdict(int)
         weight = defaultdict(int)
-        
+
         def make_set(x: int):
             if x in parent:
                 return
@@ -16,7 +18,7 @@ class Solution:
                 return parent[x]
             parent[x] = find(parent[x])
             return parent[x]
-        
+
         def union_set(x: int, y: int):
             px, py = find(x), find(y)
             if px == py:
@@ -27,9 +29,9 @@ class Solution:
             else:
                 parent[px] = py
                 weight[py] += weight[px]
-        
+
         n = len(points)
-        ls = [] # list of(edge_weight, x, y)
+        ls = []  # list of(edge_weight, x, y)
         for i in range(n):
             for j in range(i + 1, n):
                 x1, y1 = points[i]

@@ -1,7 +1,7 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        manhattan = lambda a, b, x, y: abs(a-x)+abs(b-y)
-        points = sorted(points, key=lambda x: abs(x[0])+abs(x[1]))
+        def manhattan(a, b, x, y): return abs(a - x) + abs(b - y)
+        points = sorted(points, key=lambda x: abs(x[0]) + abs(x[1]))
         connected = [points[0]]
         cost = 0
         points = list([[x[0], x[1], manhattan(connected[0][0], connected[0][1], x[0], x[1])] for x in points])
@@ -23,4 +23,3 @@ class Solution:
                     points[i][2] = newdist
             # print(points, mindist, \"=\", mx,my)
         return cost
-

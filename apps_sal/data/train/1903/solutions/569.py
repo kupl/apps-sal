@@ -3,8 +3,8 @@ class Solution:
         # MST search algorithm Prim
         G = collections.defaultdict(list)
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
-                dis = abs(points[i][0]-points[j][0]) + abs(points[i][1] - points[j][1])
+            for j in range(i + 1, len(points)):
+                dis = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 G[i].append((dis, j))
                 G[j].append((dis, i))
         # print(G)
@@ -19,11 +19,9 @@ class Solution:
                 visited.add(v)
                 for w, nei in G[v]:
                     if nei not in visited:
-                        heapq.heappush(pq, (w,nei))
+                        heapq.heappush(pq, (w, nei))
         return res
-        
-        
-        
+
         # MST search algorithm Kruskal
         # create MST over a created graph
 #         q = []
@@ -31,7 +29,7 @@ class Solution:
 #             for j in range(i+1, len(points)):
 #                 dis = abs(points[i][0]-points[j][0]) + abs(points[i][1] - points[j][1])
 #                 q.append((dis, i, j))
-        
+
 #         def find(x):
 #             if (x != parent[x]):
 #                 parent[x] = find(parent[x])
@@ -43,10 +41,10 @@ class Solution:
 #             else:
 #                 size[y] += size[x]
 #                 parent[x] = y
-                
+
 #         n = len(points)
 #         parent = [i for i in range(n+1)]
-#         size = [1 for _ in range(n+1)]  
+#         size = [1 for _ in range(n+1)]
 #         q.sort()  # sort edges
 #         res = 0
 #         count = 0
@@ -60,5 +58,4 @@ class Solution:
 #             count += 1
 #             if count == n:
 #                 return res
-#         return res 
-
+#         return res

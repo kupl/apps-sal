@@ -1,17 +1,17 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def minKey(keys, mstSet):
-            min_value = float('+Inf') 
+            min_value = float('+Inf')
             for v in range(len(points)):
                 if keys[v] < min_value and not mstSet[v]:
                     min_value = keys[v]
                     min_index = v
             return (min_index, min_value)
-        
+
         def get_distance(u, v):
-            return (abs(points[u][0] - points[v][0]) +
-                abs(points[u][1] - points[v][1]))
-        
+            return (abs(points[u][0] - points[v][0])
+                    + abs(points[u][1] - points[v][1]))
+
         size, total = len(points), 0
         keys = [float('+Inf')] * size
         keys[0] = 0
@@ -25,4 +25,3 @@ class Solution:
                 if (keys[v] > distance > 0 and mstSet[v] == False):
                     keys[v] = distance
         return total
-

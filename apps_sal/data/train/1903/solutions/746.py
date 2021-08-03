@@ -22,6 +22,7 @@ class DSU:
     def size(self, x):
         return self.sz[self.find(x)]
 
+
 class Solution:
     # Kruskal algorithm, union find, time O(n^2), space O(n^2)
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
@@ -39,7 +40,3 @@ class Solution:
             if dsu.union(u, v):
                 res += d
         return res
-            
-        
-        
-

@@ -10,7 +10,7 @@ class Solution:
                 w = abs(u - p) + abs(v - q)
                 edges.append([w, i, j])
 
-        path = {u:u for u in range(n)}
+        path = {u: u for u in range(n)}
 
         def find(u: int) -> int:
             if path[u] != u:
@@ -19,7 +19,8 @@ class Solution:
 
         def union(u: int, v: int) -> bool:
             i, j = find(u), find(v)
-            if i == j: return False
+            if i == j:
+                return False
             if j > i:
                 i, j = j, i
             path[j] = i
@@ -32,4 +33,3 @@ class Solution:
                 costs += w
                 union(u, v)
         return costs
-

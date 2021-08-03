@@ -13,5 +13,5 @@ class Solution:
             ans += min_d[min_j]
             i = min_j
             connected += 1
-            
+
         return ans

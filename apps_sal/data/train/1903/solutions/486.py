@@ -1,22 +1,25 @@
+from itertools import combinations
+
+
 class DSU:
     def __init__(self, arr):
         self.p = {}
         self.n = 0
-            
+
     def add(self, u):
         self.p[u] = u
         self.n += 1
-        
+
     def find(self, u):
-        if self.p[u]!=u:
+        if self.p[u] != u:
             self.p[u] = self.find(self.p[u])
         return self.p[u]
-    
+
     def union(self, x, y):
         self.p[self.find(x)] = self.find(y)
         self.n -= 1
 
-from itertools import combinations
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         '''
@@ -38,13 +41,12 @@ class Solution:
                 break
         return ans
         '''
-        
-        
+
         comb = list(combinations(points, 2))
         edges = []
         ans = 0
         for c in comb:
-            d = abs(c[0][0]-c[1][0])+abs(c[0][1]-c[1][1])
+            d = abs(c[0][0] - c[1][0]) + abs(c[0][1] - c[1][1])
             edges.append((c, d))
         edges.sort(key=lambda x: x[1])
         s = []
@@ -69,5 +71,3 @@ class Solution:
             if len(s) == 1:
                 break
         return ans
-       
-

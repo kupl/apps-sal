@@ -4,20 +4,21 @@ class Solution:
         if ll == 1:
             return 0
         distances = []
+
         def get_distance(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-        
+
         for i in range(ll):
             for j in range(i + 1, ll):
                 distances.append((get_distance(i, j), i, j))
         distances.sort()
         parents = list(range(len(points)))
-    
+
         def ufind(x):
             if parents[x] != x:
                 return ufind(parents[x])
             return x
-        
+
         def uunion(x, y):
             ux = ufind(x)
             uy = ufind(y)
@@ -30,6 +31,3 @@ class Solution:
                 uunion(ux, uy)
                 res += d
         return res
-                
-        
-

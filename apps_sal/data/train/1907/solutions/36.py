@@ -8,15 +8,16 @@
 class Solution:
     find = None
     target = None
+
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         self.target = target
         self.dfs(cloned)
         return self.find
-        
+
     def dfs(self, tree: TreeNode):
         if not tree:
             return
-        
+
         if tree.val == self.target.val:
             if tree.left and tree.right:
                 if tree.left.val == self.target.left.val and tree.right.val == self.target.right.val:
@@ -34,10 +35,9 @@ class Solution:
                 if not self.target.left and not self.target.right:
                     self.find = tree
                     return
-        
+
         if tree.left:
             self.dfs(tree.left)
-            
+
         if tree.right:
             self.dfs(tree.right)
-

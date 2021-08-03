@@ -10,14 +10,14 @@ class Solution:
                 d = abs(u[0] - v[0]) + abs(u[1] - v[1])
                 e[i].append((d, j))
                 e[j].append((d, i))
-        
-        tree = { 0 }
-        
+
+        tree = {0}
+
         pq = []
         for v in e[0]:
             pq.append(v)
         heapify(pq)
-        
+
         c = 0
         while len(tree) < n:
             try:
@@ -30,6 +30,5 @@ class Solution:
             tree.add(v)
             for u in e[v]:
                 heappush(pq, u)
-        
-        return c
 
+        return c

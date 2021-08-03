@@ -1,6 +1,6 @@
 class Union_Find:
     def __init__(self, n):
-        self.father = {i:i for i in range(n)}
+        self.father = {i: i for i in range(n)}
         self.count = n
         # 可以查看 某一个node 有几个联通
         self.rank = [1] * n
@@ -25,6 +25,8 @@ class Union_Find:
             # 表示，如果本来不是联通 return true
             return True
         return False
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         mst = collections.defaultdict(set)
@@ -44,11 +46,5 @@ class Solution:
             cost, frm, to = heapq.heappop(edges)
             if uf.find_union(frm, to):
                 result += cost
-                print((frm,to))
+                print((frm, to))
         return result
-                
-                
-                
-            
-        
-

@@ -2,22 +2,21 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         # Minimum spanning tree
         # Prim's algorithm
-        
+
         def dist(p1, p2):
-            return abs(p1[0]-p2[0]) + abs(p1[1]-p2[1])
-        
+            return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
 
         ans = 0
         d = collections.defaultdict(list)
-        
+
         for i, p1 in enumerate(points):
             for j, p2 in enumerate(points):
                 # don't use list slicing because the index j will not be the index for the full points list
                 if i != j:
                     cost = dist(p1, p2)
                     d[i].append((cost, j))
-                    d[j].append((cost, i)) 
-                    
+                    d[j].append((cost, i))
+
         heap = d[0]
         # heap is a list of costs in ascending order for a given point p1
         heapq.heapify(heap)
@@ -25,7 +24,7 @@ class Solution:
         visited = [0] * n
         visited[0] = 1
         count = 1
-        
+
         while heap:
             cost, j = heapq.heappop(heap)
             # ensure cycles are not formed
@@ -38,13 +37,13 @@ class Solution:
                     # since p1 and p2 are now connected, focus on p2
                     # push items in dict at p2 to heap
                     heapq.heappush(heap, item)
-                    
+
             if count >= n:
                 # already connected all points
                 break
-                
+
         return ans
-        
+
         # # solution
         # manhattan = lambda p1, p2: abs(p1[0]-p2[0]) + abs(p1[1]-p2[1])
         # n, c = len(points), collections.defaultdict(list)
@@ -63,6 +62,5 @@ class Solution:
         #     if not visited[j]:
         #         visited[j], cnt, ans = 1, cnt+1, ans+d
         #         for record in c[j]: heapq.heappush(heap, record)
-        #     if cnt >= n: break        
+        #     if cnt >= n: break
         # return ans
-

@@ -1,14 +1,15 @@
 from collections import Counter
 
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         points = [tuple(it) for it in points]
         ds = []
         for i1, p1 in enumerate(points):
-            for p2 in points[i1+1:]:
+            for p2 in points[i1 + 1:]:
                 if p1 == p2:
                     continue
-                dist = abs(p1[0]-p2[0]) + abs(p1[1]-p2[1])
+                dist = abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
                 ds.append((dist, (p1, p2)))
         ds.sort()
         ps = [set([it]) for it in points]

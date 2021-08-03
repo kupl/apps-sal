@@ -17,5 +17,3 @@ class Solution:
             if nodeA.right is not None:
                 q.append((nodeA.right, nodeB.right))
         return None
-    
-

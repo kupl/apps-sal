@@ -41,5 +41,3 @@ class Solution:
                 max_size = max(max_size, size)
 
         return max_size
-
-

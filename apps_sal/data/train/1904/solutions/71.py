@@ -2,7 +2,7 @@ class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         if not points or not K:
             return []
-        
+
         distances = []
         disMap = defaultdict(list)
         maxKDis = float('-inf')
@@ -21,5 +21,5 @@ class Solution:
         res = []
         for dis in distances:
             res.extend(disMap[dis])
-            
+
         return res[:K]

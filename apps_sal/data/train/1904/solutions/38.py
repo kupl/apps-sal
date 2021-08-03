@@ -1,34 +1,37 @@
 def compare(p1, p2):
     return (p1[0] ** 2 + p1[1] ** 2) - (p2[0] ** 2 + p2[1] ** 2)
 
+
 def swap(arr, i, j):
     arr[i], arr[j] = arr[j], arr[i]
+
 
 def partition(A, l, r):
     pivot = A[l]
     while l < r:
         while l < r and compare(A[r], pivot) >= 0:
             r -= 1
-        
+
         A[l] = A[r]
         while l < r and compare(A[l], pivot) <= 0:
             l += 1
-        
+
         A[r] = A[l]
-    
-    A[l] = pivot;
+
+    A[l] = pivot
     return l
 #     pivot = points[high]
-    
+
 #     i = low - 1
-    
+
 #     for j in range(low, high):
 #         if compare(points[j], pivot) < 0:
 #             i += 1
 #             swap(points, i, j)
 #     swap(points, i + 1, high)
 #     return i + 1
-    
+
+
 def quick_select(points, k, low, high):
     while low < high:
         pivot = partition(points, low, high)

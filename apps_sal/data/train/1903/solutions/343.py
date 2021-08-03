@@ -89,7 +89,8 @@ MIN, MAX, MOD = -0x3f3f3f3f, 0x3f3f3f3f, 1000000007
 class Solution:
     def minCostConnectPoints(self, ps: List[List[int]]) -> int:
         n = len(ps)
-        if n < 2: return 0
+        if n < 2:
+            return 0
         keys, visited = [MAX] * n, [False] * n
         keys[0] = 0
         cost = 0
@@ -102,8 +103,8 @@ class Solution:
             cost += n_min
             for j in range(n):
                 if not visited[j]:
-                    weight = abs(ps[idx][0] - ps[j][0]) + abs(ps[idx][1] -
-                                                              ps[j][1])
+                    weight = abs(ps[idx][0] - ps[j][0]) + abs(ps[idx][1]
+                                                              - ps[j][1])
                     if weight < keys[j]:
                         keys[j] = weight
 
@@ -117,4 +118,3 @@ points = [[0, 0], [2, 2], [3, 10], [5, 2], [7, 0]]
 # points = [[0, 0], [1, 1], [1, 0], [-1, 1]]
 # points = [[-1000000, -1000000], [1000000, 1000000]]
 # points = [[0, 0]]
-

@@ -26,18 +26,18 @@ class DisjointSet:
             self.parent[x_set] = y_set
             self.rank[y_set] += 1
 
-        
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         points = [tuple(point) for point in points]
         disjoint_set = DisjointSet(points)
-        
+
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 distance = self.distance(points[i], points[j])
                 edges.append((distance, points[i], points[j]))
-                
+
         answer = 0
         times = 0
         edges.sort()
@@ -49,7 +49,6 @@ class Solution:
             if times == len(points) - 1:
                 return answer
         return answer
-
 
     def distance(self, pointA, pointB):
         return abs(pointA[0] - pointB[0]) + abs(pointA[1] - pointB[1])

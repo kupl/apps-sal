@@ -4,10 +4,9 @@ class Solution:
             [point, self.calculateDistanceToOrigin(point)]
             for point in points
         ]
-        
+
         sortedPoints = sorted(pointDistances, key=lambda pd: pd[1])
         return [pd[0] for pd in sortedPoints[:K]]
-                
-    
+
     def calculateDistanceToOrigin(self, point):
-        return point[0] * point[0] + point[1] * point[1] 
+        return point[0] * point[0] + point[1] * point[1]

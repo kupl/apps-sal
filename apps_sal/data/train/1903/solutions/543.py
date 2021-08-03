@@ -7,6 +7,7 @@ class Solution:
                 if i != j:
                     costs.append((abs(node_x[0] - node_y[0]) + abs(node_x[1] - node_y[1]), i, j))
         costs.sort()
+
         def get_fa(i):
             if fa[i] != i:
                 fa[i] = get_fa(fa[i])
@@ -21,11 +22,3 @@ class Solution:
                 if count == len(points) - 1:
                     return ans
         return ans
-        
-            
-        
-        
-        
-        
-        
-

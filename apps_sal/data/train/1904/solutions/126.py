@@ -7,9 +7,9 @@ class Solution:
             for cor in point:
                 d += cor**2
             h.append((d, point))
-            
-        ksmallests = heapq.nsmallest(K,h)
+
+        ksmallests = heapq.nsmallest(K, h)
         ret = []
-        for val,point in ksmallests:
+        for val, point in ksmallests:
             ret.append(point)
         return ret

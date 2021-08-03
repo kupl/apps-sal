@@ -1,6 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        manhattan = lambda x, y: abs(x[0] - y[0]) + abs(x[1] - y[1])
+        def manhattan(x, y): return abs(x[0] - y[0]) + abs(x[1] - y[1])
         res, length, heap, visited = 0, len(points), [(0, 0)], set()
         while len(visited) < length:
             w, u = heapq.heappop(heap)

@@ -1,6 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        dist = lambda x, y: abs(x[0] - y[0]) + abs(x[1] - y[1])
+        def dist(x, y): return abs(x[0] - y[0]) + abs(x[1] - y[1])
         neighbors = collections.defaultdict(dict)
         for i in range(len(points)):
             for j in range(i + 1, len(points)):

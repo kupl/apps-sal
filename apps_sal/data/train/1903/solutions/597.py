@@ -2,16 +2,16 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         from queue import PriorityQueue
         q = PriorityQueue()
-        
+
         # adj = {}
         # for point in points:
         #     s = point[]
         l = len(points)
         visited = set()
-        
+
         for j in range(1, l):
             q.put((abs(points[0][0] - points[j][0]) + abs(points[0][1] - points[j][1]), j))
-        
+
         visited.add(0)
         count = 1
         ans = 0

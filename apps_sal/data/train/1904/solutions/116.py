@@ -7,11 +7,9 @@ class Solution:
             heapq.heappush(heap, (-dist, i))
             if len(heap) > K:
                 heapq.heappop(heap)
-                
+
         res = []
         for _, i in heap:
             res.append(points[i])
-            
-        return res
-            
 
+        return res

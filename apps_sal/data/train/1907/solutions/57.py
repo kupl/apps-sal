@@ -12,9 +12,9 @@ class Solution:
                 yield node
                 yield from dfs(node.left)
                 yield from dfs(node.right)
-        
+
         for it1, it2 in zip(dfs(original), dfs(cloned)):
             if it1 == target:
                 return it2
-        
+
         return -1

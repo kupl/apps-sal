@@ -3,7 +3,7 @@ class Solution(object):
         N = len(grid)
 
         def neighbors(r, c):
-            for nr, nc in ((r-1, c), (r+1, c), (r, c-1), (r, c+1)):
+            for nr, nc in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)):
                 if 0 <= nr < N and 0 <= nc < N:
                     yield nr, nc
 

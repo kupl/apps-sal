@@ -1,6 +1,7 @@
 import queue
 import sys
 
+
 class Solution:
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
         n = len(p)
@@ -8,7 +9,7 @@ class Solution:
         dist = [1000000000 for i in range(n + 1)]
         for i in range(len(p)):
             for j in range(len(p)):
-                if i == j: 
+                if i == j:
                     continue
                 graph[i].append((j, abs(p[i][0] - p[j][0]) + abs(p[i][1] - p[j][1])))
                 graph[j].append((i, abs(p[i][0] - p[j][0]) + abs(p[i][1] - p[j][1])))
@@ -27,4 +28,4 @@ class Solution:
                 if dist[v] > uv:
                     dist[v] = uv
                     pq.put((uv, v))
-        return res                
+        return res

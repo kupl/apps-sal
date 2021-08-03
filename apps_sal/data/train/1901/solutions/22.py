@@ -10,7 +10,7 @@ class Solution:
         zeros = set()
         deltas = ((1, 0), (-1, 0), (0, 1), (0, -1))
         rows, cols = len(grid), len(grid[0])
-        
+
         def dfs(row, col, island_id) -> int:
             if row < 0 or row >= rows or col < 0 or col >= cols or grid[row][col] != 1:
                 return 0
@@ -19,7 +19,7 @@ class Solution:
             for dr, dc in deltas:
                 count += dfs(row + dr, col + dc, island_id)
             return count
-        
+
         for r, row in enumerate(grid):
             for c, val in enumerate(row):
                 if val == 1:
@@ -30,11 +30,11 @@ class Solution:
                         max_island_id = global_island_id
                     global_island_id += 1
                 elif val == 0:
-                    zeros.add((r,c))
-        
+                    zeros.add((r, c))
+
         if not zeros:
             return max_island_size
-        
+
         for r, c in zeros:
             cur_max_size = 1
             islands_seen = set()
@@ -46,5 +46,5 @@ class Solution:
                         islands_seen.add(cur_val)
                         cur_max_size += island_sizes[cur_val]
             max_island_size = max(max_island_size, cur_max_size)
-        
+
         return max_island_size

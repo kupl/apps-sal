@@ -4,7 +4,7 @@ class Solution:
             return pt
         self.roots[pt] = self.find(self.roots[pt])
         return self.roots[pt]
-    
+
     def union(self, p1, p2):
         parent1, parent2 = self.find(p1), self.find(p2)
         if parent1 == parent2:
@@ -18,7 +18,7 @@ class Solution:
         # self.find(p1)
         # self.find(p2)
         return True
-    
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         self.roots = {(x, y): (x, y) for (x, y) in points}
         self.rank = {(x, y): 0 for (x, y) in points}
@@ -26,7 +26,7 @@ class Solution:
         edges = []
         for i in range(len(points)):
             p1 = points[i][0], points[i][1]
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 p2 = points[j][0], points[j][1]
                 # if p1 != p2:
                 dist = abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
@@ -36,7 +36,7 @@ class Solution:
             if self.union(p1, p2):
                 ans += dist
         return ans
-        
+
         # for i in range(len(points)):
         #     x1, y1 = points[i]
         #     best = (float('inf'), (x1, y1))
@@ -52,4 +52,3 @@ class Solution:
         #         print(\"connecting {}, {} distance {}\".format(p1, p2, dist))
         #         ans += dist
         # return ans
-

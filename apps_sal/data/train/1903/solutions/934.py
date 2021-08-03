@@ -31,4 +31,3 @@ class Solution:
                 costs += w
                 union(u, v)
         return costs
-

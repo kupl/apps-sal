@@ -6,7 +6,7 @@ class Solution:
             return roots[x]
 
         n = len(points)
-        manhattan = lambda a, b: abs(a[0] - b[0]) + abs(a[1] - b[1])
+        def manhattan(a, b): return abs(a[0] - b[0]) + abs(a[1] - b[1])
         heap = []
         roots = list(range(n))
         size = [1 for i in range(n)]
@@ -29,10 +29,12 @@ class Solution:
                 if size[root1] < size[root2]:
                     roots[root1] = root2
                     size[root2] += size[root1]
-                    if size[root2] == n: break
+                    if size[root2] == n:
+                        break
                 else:
                     roots[root2] = root1
                     size[root1] += size[root2]
-                    if size[root1] == n: break
+                    if size[root1] == n:
+                        break
 
         return res

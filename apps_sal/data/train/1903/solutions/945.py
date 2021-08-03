@@ -28,6 +28,7 @@ class Solution:
                 res += dist
                 for r in d[j]:
                     heapq.heappush(heap, r)
-            if cnt >= n: break   
-        
+            if cnt >= n:
+                break
+
         return res

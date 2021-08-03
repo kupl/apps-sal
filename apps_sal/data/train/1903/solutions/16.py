@@ -4,11 +4,12 @@ class Solution:
         distance = []
         for i in range(N):
             for j in range(i + 1, N):
-                dist= abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+                dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 distance.append((dist, i, j))
         heapq.heapify(distance)
-        
+
         parent = [i for i in range(N)]
+
         def find(x):
             while x != parent[x]:
                 parent[x] = parent[parent[x]]
@@ -23,5 +24,5 @@ class Solution:
             if pi != pj:
                 parent[pi] = pj
                 res += dist
-        
+
         return res

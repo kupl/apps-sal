@@ -20,7 +20,8 @@ class Solution:
             cost += dist
             seen.add(i)
             for j in range(n):
-                if j in seen: continue
+                if j in seen:
+                    continue
                 dist2j = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heapq.heappush(heap, [dist2j, j])
 

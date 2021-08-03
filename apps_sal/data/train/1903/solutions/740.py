@@ -3,10 +3,12 @@ class Solution:
         n = len(points)
         parent = list(range(n))
         rank = [0] * n
+
         def find(x):
             while parent[x] != x:
                 x = parent[x]
             return x
+
         def union(x, y):
             id_x = find(x)
             id_y = find(y)
@@ -29,5 +31,4 @@ class Solution:
         for edge in edges:
             if union(edge[1], edge[2]):
                 cost += edge[0]
-        return cost    
-
+        return cost

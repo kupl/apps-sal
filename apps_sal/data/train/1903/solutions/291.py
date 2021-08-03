@@ -1,4 +1,6 @@
 from heapq import heappush, heappop
+
+
 class DSU:
     def __init__(self, N):
         self.par = list(range(N))
@@ -22,31 +24,31 @@ class DSU:
 
     def size(self, x):
         return self.sz[self.find(x)]
-    
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        
+
         if len(points) == 1:
             return 0
-        
-        def weight(i,j):
+
+        def weight(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-        
+
         edges = []
         ans = 0
-        
+
         for i in range(len(points)):
-            for j in range(i+1,len(points)):
-                heappush(edges,(weight(i,j),i,j))
-        
-        uf = DSU(len(points)+1)
-        
+            for j in range(i + 1, len(points)):
+                heappush(edges, (weight(i, j), i, j))
+
+        uf = DSU(len(points) + 1)
+
         while edges:
             e = heappop(edges)
-            if uf.union(e[1],e[2]):
+            if uf.union(e[1], e[2]):
                 ans += e[0]
                 if uf.size(e[1]) == len(points):
                     return ans
-                
-        # return ans
 
+        # return ans

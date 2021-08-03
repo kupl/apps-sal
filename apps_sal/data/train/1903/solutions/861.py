@@ -1,5 +1,5 @@
 class UnionFind:
-    def __init__(self,n):
+    def __init__(self, n):
         self.parent = [i for i in range(n)]
 
     def find(self, x):
@@ -7,7 +7,7 @@ class UnionFind:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 
-    def union(self, x,y):
+    def union(self, x, y):
         xRoot = self.find(x)
         yRoot = self.find(y)
         if xRoot == yRoot:
@@ -21,14 +21,14 @@ class Solution:
         uf = UnionFind(n)
         edges = []
         for i in range(n):
-            for j in range(i+1,n):
-                dist = abs(points[i][0]-points[j][0]) + abs(points[i][1]-points[j][1]) 
-                heappush(edges, (dist,i,j))
+            for j in range(i + 1, n):
+                dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+                heappush(edges, (dist, i, j))
 
         totalCost = 0
         while edges:
-            dist,i,j = heappop(edges)
+            dist, i, j = heappop(edges)
             if uf.find(i) != uf.find(j):
-                totalCost+=dist
-                uf.union(i,j)
+                totalCost += dist
+                uf.union(i, j)
         return totalCost

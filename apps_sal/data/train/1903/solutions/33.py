@@ -1,9 +1,11 @@
 class Solution:
     parents = [i for i in range(1005)]
+
     def findParent(i):
         if(Solution.parents[i] != i):
             Solution.parents[i] = Solution.findParent(Solution.parents[i])
         return Solution.parents[i]
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         distances = []
         for i in range(len(points)):
@@ -18,5 +20,3 @@ class Solution:
                 ans += distance[0]
         Solution.parents = [i for i in range(1005)]
         return ans
-        
-

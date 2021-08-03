@@ -10,4 +10,3 @@ class Solution:
             res += d
             q = [min(q[i], md(points[i], points[j])) for i in range(len(q))]
         return res
-

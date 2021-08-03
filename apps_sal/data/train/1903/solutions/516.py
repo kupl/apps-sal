@@ -3,10 +3,12 @@ class DSU:
         self.parent = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
         self.size = n
+
     def find(self, x):
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
+
     def union(self, x, y):
         xp, yp = self.find(x), self.find(y)
         if xp == yp:
@@ -20,12 +22,14 @@ class DSU:
             self.rank[yp] += 1
         self.size -= 1
         return True
+
     def getSize(self):
         return self.size
-    
+
+
 class Solution:
     import heapq
-    
+
     # prime + heap, not using unionfind.
     # https://leetcode.com/problems/min-cost-to-connect-all-points/discuss/850185/Java-or-Min-Spanning-Tree-or-Prim-%2B-PriorityQueue
     def minCostConnectPoints1(self, points: List[List[int]]) -> int:
@@ -43,14 +47,14 @@ class Solution:
                     if k not in visited:
                         heapq.heappush(heap, (getDist(j, k), (j, k)))
         return res
-    
+
     # slow
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         graph = []
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 graph.append((i, j, abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])))
-        graph.sort(key = lambda x:x[2])
+        graph.sort(key=lambda x: x[2])
         dsu = DSU(len(points) + 1)
         res = 0
         for i, j, cost in graph:

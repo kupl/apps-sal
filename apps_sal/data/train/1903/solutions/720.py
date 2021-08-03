@@ -2,7 +2,7 @@ class UnionFind:
     def __init__(self):
         self.roots = {}
         self.depth = {}
-    
+
     def root(self, node):
         if node not in self.roots:
             self.roots[node] = node
@@ -29,10 +29,10 @@ class UnionFind:
         del self.depth[x]
         self.roots[x] = y
         self.depth[y] = new_depth
-        
+
 
 class Solution:
-        
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         min_span_tree = UnionFind()
         cost = 0

@@ -1,6 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        manhattan = lambda u, v: abs(u[0] - v[0]) + abs(u[1] - v[1])
+        def manhattan(u, v): return abs(u[0] - v[0]) + abs(u[1] - v[1])
         from collections import defaultdict
         n = len(points)
 
@@ -23,8 +23,8 @@ class Solution:
                 costs += w
                 k += 1
 
-                if k == n: break
+                if k == n:
+                    break
                 for ew, v in graph[u]:
-                        heapq.heappush(heap, (ew, v))
+                    heapq.heappush(heap, (ew, v))
         return costs
-

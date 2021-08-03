@@ -11,9 +11,9 @@ class Solution:
             else:
                 end = mid - 1
         return points[: K + 1]
-    
+
     def __partition(self, points, lo, hi):
-        __dist = lambda points, i : points[i][0] ** 2 + points[i][1] ** 2
+        def __dist(points, i): return points[i][0] ** 2 + points[i][1] ** 2
         d = __dist(points, lo)
         i, j = lo, hi + 1
         while True:

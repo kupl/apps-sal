@@ -35,4 +35,3 @@ class Solution:
                 pending.append((dest, i, j))
 
         return answer
-

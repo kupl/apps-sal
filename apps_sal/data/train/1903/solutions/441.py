@@ -7,15 +7,16 @@ class Solution:
             for j in range(i):
                 p1 = points[i]
                 p2 = points[j]
-                dist.append((abs(p1[0]-p2[0])+abs(p1[1]-p2[1]), i, j))
+                dist.append((abs(p1[0] - p2[0]) + abs(p1[1] - p2[1]), i, j))
         dist.sort()
         ps = list(range(n))
+
         def find(x):
-            while ps[x]!=x:
+            while ps[x] != x:
                 ps[x] = ps[ps[x]]
                 x = ps[x]
             return x
-        
+
         def union(x, y):
             px = find(x)
             py = find(y)
@@ -28,7 +29,5 @@ class Solution:
         for d, x, y in dist:
             if union(x, y):
                 res += d
-        
-        return res
-            
 
+        return res

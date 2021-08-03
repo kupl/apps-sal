@@ -1,6 +1,6 @@
 class Union_Find:
     def __init__(self, n):
-        self.father = {i:i for i in range(n)}
+        self.father = {i: i for i in range(n)}
         self.count = n
         # 可以查看 某一个node 有几个联通
         self.rank = [1] * n
@@ -25,6 +25,8 @@ class Union_Find:
             # 表示，如果本来不是联通 return true
             return True
         return False
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         mst = collections.defaultdict(set)
@@ -34,17 +36,10 @@ class Solution:
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 cost = cost = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-                graph.append([i,j,cost])
-        
+                graph.append([i, j, cost])
+
         result = 0
-        for a, b, c in sorted(graph, key = lambda x:x[2]):
-            if uf.find_union(a,b):
+        for a, b, c in sorted(graph, key=lambda x: x[2]):
+            if uf.find_union(a, b):
                 result += c
         return result
-        
-                
-                
-                
-            
-        
-

@@ -1,27 +1,22 @@
 class Solution:
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
-        n=len(p)
-
+        n = len(p)
 
         def find(x):
-            if dp[x]!=x:
-                dp[x]=find(dp[x])
+            if dp[x] != x:
+                dp[x] = find(dp[x])
             return dp[x]
 
-        def uni(x,y):
-            x,y=find(x),find(y)
-            if x!=y:
-                dp[x]=find(y)
+        def uni(x, y):
+            x, y = find(x), find(y)
+            if x != y:
+                dp[x] = find(y)
                 return False
-            else:    
+            else:
                 return True
 
-        dp=list(range(n))    
+        dp = list(range(n))
 
-        pool=sorted((abs(p[i][0]-p[j][0])+abs(p[i][1]-p[j][1]),i,j) for i in range(n) for j in range(i+1,n))
+        pool = sorted((abs(p[i][0] - p[j][0]) + abs(p[i][1] - p[j][1]), i, j) for i in range(n) for j in range(i + 1, n))
 
-
-
-
-                
-        return sum(dis for dis,u,v in pool if not uni(u,v))
+        return sum(dis for dis, u, v in pool if not uni(u, v))

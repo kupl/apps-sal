@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         dic = defaultdict(list)
@@ -9,8 +10,8 @@ class Solution:
 
         dis_list = sorted(dic.keys())
         ans = []
-        
+
         for i in dis_list:
             ans.extend(dic[i])
-        
+
         return ans[:K]

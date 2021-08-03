@@ -9,10 +9,10 @@ class Solution:
     def pathToNode(self, tree: TreeNode, target: TreeNode, path: str) -> str:
         if not tree:
             return ''
-        
+
         if target == tree:
             return path
-        
+
         path.append('L')
         p = self.pathToNode(tree.left, target, path)
         if p:
@@ -26,7 +26,7 @@ class Solution:
         del path[-1]
 
         return ''
-        
+
     def nodeAtPath(self, tree: TreeNode, path: str):
         if not path:
             return tree
@@ -36,7 +36,6 @@ class Solution:
             return self.nodeAtPath(tree.right, path[1:])
         assert False
 
-    
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         path_to = self.pathToNode(original, target, [])
         # assert path_to

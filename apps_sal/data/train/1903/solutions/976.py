@@ -18,7 +18,7 @@ class UnionFind:
         else:
             self.parent[r2] = r1
             self.parent[r1] -= s2
- 
+
     def find(self, v):
         r = v
         while self.parent[r] >= 0:
@@ -31,19 +31,20 @@ class UnionFind:
             v = new_v
 
         return r
-    
+
     def size(self, v):
         r = self.find(v)
         s = -self.parent[r]
-        return s 
+        return s
+
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []
         for u in range(n):
-            for v in range(u+1, n):
-                dist = abs(points[u][0]-points[v][0]) + abs(points[u][1]-points[v][1])
+            for v in range(u + 1, n):
+                dist = abs(points[u][0] - points[v][0]) + abs(points[u][1] - points[v][1])
                 edges.append([dist, u, v])
 
         res = 0
@@ -53,6 +54,3 @@ class Solution:
                 res += e[0]
                 uf.union(e[1], e[2])
         return res
-        
-        
-

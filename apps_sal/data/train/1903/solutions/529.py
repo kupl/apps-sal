@@ -16,11 +16,11 @@ class Solution:
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         par = [i for i in range(len(points))]
-        dis = lambda p1, p2: abs(p1[0]-p2[0])+abs(p1[1]-p2[1])
+        def dis(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         edges = []
         visited = set()
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 edges.append((dis(points[i], points[j]), i, j))
         edges.sort()
         r = 0

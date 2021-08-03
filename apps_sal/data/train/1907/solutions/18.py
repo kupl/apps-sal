@@ -20,4 +20,3 @@ class Solution:
             if curr.right:
                 queue.append(curr.right)
                 cloned_q.append(cloned_curr.right)
-

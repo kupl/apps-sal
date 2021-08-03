@@ -22,4 +22,3 @@ class Solution:
                     currNodes.insert(0, currNode.right)
                     corrNodes.insert(0, corrNode.right)
         return None
-

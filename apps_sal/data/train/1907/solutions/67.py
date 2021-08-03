@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         q = deque([(original, cloned)])

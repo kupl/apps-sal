@@ -12,7 +12,7 @@ class Solution:
                     areaDict[islandId] = self.dfs(grid, i, j, m, n, islandId)
                     maxArea = max(maxArea, areaDict[islandId])
                     islandId += 1
-        
+
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == 0:
@@ -20,9 +20,9 @@ class Solution:
                     for ni, nj in self.getNeighbors(grid, i, j, m, n):
                         if grid[ni][nj] > 0:
                             neighborIslands.add(grid[ni][nj])
-                            
+
                     maxArea = max(maxArea, 1 + sum([areaDict[islandId] for islandId in neighborIslands]))
-        
+
         return maxArea
 
     def dfs(self, grid, i, j, m, n, islandId):
@@ -33,7 +33,7 @@ class Solution:
                 continue
             area += self.dfs(grid, ni, nj, m, n, islandId)
         return area
-    
+
     def bfs(self, grid, i, j, m, n, islandId):
         grid[i][j] = islandId
         area = 1
@@ -46,11 +46,11 @@ class Solution:
                 area += 1
                 grid[nx][ny] = islandId
                 q.append((nx, ny))
-        
+
         return area
-    
+
     def getNeighbors(self, grid, x, y, m, n):
-        result = [(x-1, y), (x+1, y), (x, y-1), (x, y+1)]
+        result = [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)]
         return [
             (a, b)
             for a, b in result

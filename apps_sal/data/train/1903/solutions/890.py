@@ -1,5 +1,7 @@
 from collections import defaultdict
 import heapq
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         total, heap, visited = 0, [(0, 0)], set()
@@ -17,8 +19,6 @@ class Solution:
                     if neighbor not in visited:
                         heapq.heappush(heap, (neighbor_distance, neighbor))
         return total
-                
-            
-        
+
     def distance(self, pair1, pair2):
         return abs(pair1[0] - pair2[0]) + abs(pair1[1] - pair2[1])

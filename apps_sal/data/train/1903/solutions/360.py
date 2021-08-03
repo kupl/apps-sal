@@ -5,8 +5,8 @@ class Solution:
             for j in range(i, len(points)):
                 dis.append(
                     (
-                        abs(points[i][0] - points[j][0])
-                        + abs(points[i][1] - points[j][1]),
+                        abs(points[i][0] - points[j][0]) +
+                        abs(points[i][1] - points[j][1]),
                         i,
                         j,
                     )
@@ -29,4 +29,3 @@ class Solution:
                 parents[find(edge[1])] = edge[2]
             if joined == len(points):
                 return cost
-
