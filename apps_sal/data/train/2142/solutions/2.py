@@ -8,8 +8,10 @@ if n > 1:
         t.pop(i)
         s = 0
         for j in range(l):
-            if r[j]  == '1': s |= t.pop()
+            if r[j] == '1':
+                s |= t.pop()
             t = [t[k] | t[k + 1] for k in range(0, len(t), 2)]
         p[i] = s | t[0]
     print(' '.join(map(str, p)))
-else: print(0)
+else:
+    print(0)

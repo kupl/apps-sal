@@ -6,4 +6,3 @@ def solve():
 
 
 print("\n".join(solve()))
-

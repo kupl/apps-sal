@@ -1,11 +1,12 @@
-n,c,d = list(map(int, input().split()))
+n, c, d = list(map(int, input().split()))
 a = []
 inf = 10 ** 10
 for i in range(n):
     a.append(input().split())
     a[i][0], a[i][1] = int(a[i][0]), int(a[i][1])
-    
-def tr(r,s,have):
+
+
+def tr(r, s, have):
     if len(r) < 2:
         return 0
     mn = [0] * len(r)
@@ -24,11 +25,7 @@ def tr(r,s,have):
             else:
                 rs = max(rs, mn[p] + r[i][1])
     return rs
-        
-        
-        
-    
-    
+
 
 ans = 0
 cmx = 0
@@ -45,18 +42,14 @@ for i in range(len(a)):
     if a[i][2] == "C":
         dm.append((a[i][1], a[i][0]))
 dm.sort()
-ans = max(ans,tr(dm,"C",c))
+ans = max(ans, tr(dm, "C", c))
 dm = []
 for i in range(len(a)):
     if a[i][2] == "D":
         dm.append((a[i][1], a[i][0]))
 dm.sort()
-ans = max(ans,tr(dm,"D",d))
+ans = max(ans, tr(dm, "D", d))
 if ans == -inf:
     print(0)
 else:
     print(ans)
-
-    
-    
-

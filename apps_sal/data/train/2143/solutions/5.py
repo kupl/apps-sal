@@ -21,6 +21,7 @@ for _ in range(n):
 fc = sorted(fc)
 fd = sorted(fd)
 
+
 def pick2(fc, tc):
     bf = []
     maxb = 0
@@ -28,7 +29,7 @@ def pick2(fc, tc):
     for f in fc:
         p, b = f
         maxpp = tc - p
-        ii = bisect_left(bf, (maxpp+1, 0)) - 1
+        ii = bisect_left(bf, (maxpp + 1, 0)) - 1
         if ii >= 0:
             pp, bb = bf[ii]
             ans = max(ans, bb + b)
@@ -36,6 +37,7 @@ def pick2(fc, tc):
             bf.append(f)
             maxb = b
     return ans
+
 
 ans = mbc + mbd if mbc > 0 and mbd > 0 else 0
 ans = max(ans, pick2(fc, tc))

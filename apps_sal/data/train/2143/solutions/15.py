@@ -34,4 +34,3 @@ for l, m in ((fc, c), (fd, d)):
                 break
 
 print(mx)
-

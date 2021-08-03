@@ -19,4 +19,3 @@ for t in range(len(p)):
     if 0 <= v < len(q) + d:
         ans = max(ans, p[t] + q[min(v, len(q) - 1)])
 print(ans)
-

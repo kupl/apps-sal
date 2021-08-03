@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     n = int(input())
     ans = []
@@ -12,5 +13,6 @@ def main():
             ans.append("Infinite")
 
     print("\n".join(ans))
+
 
 main()

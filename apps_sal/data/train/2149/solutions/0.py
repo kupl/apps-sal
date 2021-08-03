@@ -1,11 +1,12 @@
 n, m = map(int, input().split())
 a = set(map(int, input().split()))
- 
+
 y = 2 ** n
 mk = [0] * (2 * y)
 cur = 0
 for x in a:
-    if mk[x]: continue
+    if mk[x]:
+        continue
     mk[x] = 1
     st = [x]
     while st:
@@ -25,5 +26,5 @@ for x in a:
                 mk[v] = 1
                 st.append(v)
     cur += 1
-    
+
 print(cur)

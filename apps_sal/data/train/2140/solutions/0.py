@@ -23,4 +23,3 @@ else:
         a[pos - i] = a[pos - i + 1] + b[pos - i]
 
     print(*a)
-

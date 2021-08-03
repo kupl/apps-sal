@@ -1,5 +1,6 @@
 import sys
 
+
 def binpow(a, n, p):
     res = 1
     while n > 0:
@@ -9,9 +10,10 @@ def binpow(a, n, p):
         n >>= 1
     return res
 
+
 def main():
     result = []
-    
+
     t = int(sys.stdin.readline())
     for line in sys.stdin.readlines():
         p, q, b = list(map(int, line.split()))
@@ -20,5 +22,5 @@ def main():
         result.extend(list("Finite\n" if (p * b) % q == 0 else list("Infinite\n")))
     sys.stdout.write("".join(result))
 
-main()
 
+main()
