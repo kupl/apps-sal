@@ -8,8 +8,10 @@ class Solution:
             while Q:
                 infect = Q.popleft()
                 for node in range(len(graph[infect])):
-                    if graph[infect][node] == 0: continue
-                    if node in vis: continue
+                    if graph[infect][node] == 0:
+                        continue
+                    if node in vis:
+                        continue
                     vis.add(node)
                     d[node].append(init)
                     Q.append(node)
@@ -18,6 +20,6 @@ class Solution:
         for key in d:
             if len(d[key]) == 1:
                 res[d[key][0]] += 1
-        if max(res) == 0: return min(initial)
+        if max(res) == 0:
+            return min(initial)
         return res.index(max(res))
-

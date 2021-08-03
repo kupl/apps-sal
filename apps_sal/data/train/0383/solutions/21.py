@@ -23,6 +23,3 @@ class Solution:
                 min_count = count
                 min_node = node
         return min_node
-            
-        
-

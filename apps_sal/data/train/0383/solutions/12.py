@@ -2,6 +2,7 @@ class Solution(object):
     def minMalwareSpread(self, graph, initial):
         N = len(graph)
         clean = set(range(N)) - set(initial)
+
         def dfs(u, seen):
             for v, adj in enumerate(graph[u]):
                 if adj and v in clean and v not in seen:

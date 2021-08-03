@@ -19,13 +19,11 @@ class Solution:
                 for k in graph[j]:
                     dp[j] += copy[k]
                     dp[j] %= mod
-        
+
         ans = 0
 
         for cnt in dp:
             ans += cnt
             ans %= mod
-        
+
         return ans
-
-

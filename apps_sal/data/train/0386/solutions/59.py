@@ -4,7 +4,7 @@ class Solution:
         mod = 1000000007
         for i in range(n - 1):
             next = [0] * 5
-            
+
             next[1] += dp[0]
 
             next[0] += dp[1]

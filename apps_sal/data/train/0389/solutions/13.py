@@ -14,7 +14,7 @@ class Solution:
 
         d, length, sum_nums = {}, len(nums), sum(nums)
         return any(
-            find(sum_nums * i // length, i, 0) 
-            for i in range(1, length // 2 + 1) 
+            find(sum_nums * i // length, i, 0)
+            for i in range(1, length // 2 + 1)
             if sum_nums * i % length == 0
-                )
+        )

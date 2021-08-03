@@ -1,5 +1,6 @@
 class Solution:
     dp = [[1] * 5]
+
     def countVowelPermutation(self, n: int) -> int:
         MOD = 10 ** 9 + 7
         follows = {0: [1], 1: [0, 2], 2: [0, 1, 3, 4], 3: [2, 4], 4: [0]}

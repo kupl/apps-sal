@@ -7,9 +7,8 @@ class Solution:
 
         sort = sorted(list(count.items()), key=lambda x: (x[1], x[0]))
         ans = ''
-        for c,_ in sort:
+        for c, _ in sort:
             ans += c
         return ans
-    
-        # return ''.join(sorted(votes[0], key=count.get))     
 
+        # return ''.join(sorted(votes[0], key=count.get))

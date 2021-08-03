@@ -5,7 +5,7 @@ class Solution:
         minSpread = float('inf')
         minNode = None
         initial.sort()
-        
+
         def helper(curr, visited):
 
             if curr in visited:
@@ -16,19 +16,16 @@ class Solution:
 
             for i in range(len(edges)):
                 if graph[curr][i] == 1:
-                    helper(i, visited)     
-        
+                    helper(i, visited)
+
         for i in initial:
             visited = set([i])
             for j in initial:
-                if i!= j:
+                if i != j:
                     helper(j, visited)
-          
+
             if len(visited) < minSpread:
                 minSpread = len(visited)
                 minNode = i
-        
-        return minNode
-        
-    
 
+        return minNode

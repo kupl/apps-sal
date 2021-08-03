@@ -1,13 +1,10 @@
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
-        a,e,i,o,u = 1,1,1,1,1
+        a, e, i, o, u = 1, 1, 1, 1, 1
         for k in range(1, n):
-            a,e,i,o,u = i+e+u, a+i, e+o, i, i+o
-        return (a+e+i+o+u) % (10**9 + 7)
+            a, e, i, o, u = i + e + u, a + i, e + o, i, i + o
+        return (a + e + i + o + u) % (10**9 + 7)
 
-
-        
-        
         #***** BRute Force *****#
 #         dic = {
 #             'e' : {'a','i'},
@@ -16,7 +13,7 @@ class Solution:
 #             'o' : {'i'},
 #             'u' : {'i','o'},
 #         }
-        
+
 #         def bfs(q, dic, ans):
 #             while(q):
 #                 vov, dist = q.popleft()
@@ -29,10 +26,9 @@ class Solution:
 #                     #print(ch,dist+1, \"*\")
 #                     q.append((ch,dist+1))
 #                     #visited.add(ch)
-#             return ans 
-            
-        
-        
+#             return ans
+
+
 #         result = 0
 #         for k in ['a', 'e', 'i', 'o', 'u']:
 #             q = deque()
@@ -41,6 +37,5 @@ class Solution:
 #             # visited.add(k)
 #             ans = bfs(q, dic, 0)
 #             result = result + ans
-            
-#         return result
 
+#         return result

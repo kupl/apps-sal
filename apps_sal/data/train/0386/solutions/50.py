@@ -6,9 +6,9 @@ class Solution:
         dic['i'] = 1
         dic['o'] = 1
         dic['u'] = 1
-                        
-        for j in range(n-1):
-            
+
+        for j in range(n - 1):
+
             counta = dic['e']
             counte = dic['a'] + dic['i']
             counti = dic['e'] + dic['o'] + dic['a'] + dic['u']
@@ -20,7 +20,7 @@ class Solution:
             dic['i'] = counti
             dic['o'] = counto
             dic['u'] = countu
-                        
+
         count = sum([v for k, v in dic.items()])
-        
+
         return count % (10**9 + 7)

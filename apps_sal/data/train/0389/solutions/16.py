@@ -2,9 +2,7 @@ class Solution:
     def splitArraySameAverage(self, A: List[int]) -> bool:
         import sys
         from functools import lru_cache
-        
-    
-    
+
         @lru_cache(None)
         def knapsack(i, num, tot):
             # Find num items in A that add up to tot
@@ -30,8 +28,8 @@ class Solution:
         num = n // gcd
         A = sorted(A)
 
-        for i in range(1,n):
-            if (tot*i)%n == 0:
+        for i in range(1, n):
+            if (tot * i) % n == 0:
                 k = knapsack(0, i, tot * i // n)
                 if k is not None:
                     return True

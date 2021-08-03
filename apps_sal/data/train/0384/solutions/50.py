@@ -13,5 +13,5 @@ class Solution:
             powerSum += counter
             counter *= 2
             total %= MOD
-       
+
         return total

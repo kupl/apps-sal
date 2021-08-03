@@ -1,7 +1,7 @@
 class Solution:
     @lru_cache(None)
     def countVowelPermutation(self, n: int) -> int:
-        prevs = {'a':1, 'e':1, 'i':1, 'o':1, 'u':1}
+        prevs = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
         for i in range(1, n):
             cur = defaultdict(int)
             for prev, count in prevs.items():
@@ -12,7 +12,7 @@ class Solution:
                         cur[nextch] += count
                 elif prev == 'i':
                     for nextch in ['a', 'e', 'o', 'u']:
-                        cur[nextch] += count 
+                        cur[nextch] += count
                 elif prev == 'o':
                     for nextch in ['i', 'u']:
                         cur[nextch] += count

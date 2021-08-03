@@ -7,6 +7,3 @@ class Solution:
             for v in votes:
                 ranks[t][v.index(t)] -= 1
         return ''.join(t for _, t in sorted(((v, t) for t, v in list(ranks.items()))))
-        
-                
-

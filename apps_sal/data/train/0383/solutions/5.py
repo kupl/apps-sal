@@ -3,8 +3,9 @@ class Solution:
         index = 0
         count = len(graph)
         initial.sort()
+
         def search(removed):
-            visited =set()
+            visited = set()
             dfs = []
             for i in initial:
                 if i != removed:
@@ -14,7 +15,7 @@ class Solution:
                 if curr in visited:
                     continue
                 visited.add(curr)
-                for n,i in enumerate(graph[curr]):
+                for n, i in enumerate(graph[curr]):
                     if n == removed:
                         continue
                     if i:

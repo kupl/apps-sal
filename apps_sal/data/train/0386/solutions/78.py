@@ -6,7 +6,7 @@ class Solution:
             # a is allowed to follow e, i, or u.
             dp_array[i][0] = dp_array[i - 1][1] + dp_array[i - 1][2] + dp_array[i - 1][4]
             # e is allowed to follow a or i.
-            dp_array[i][1] = dp_array[i - 1][0] +  dp_array[i - 1][2]
+            dp_array[i][1] = dp_array[i - 1][0] + dp_array[i - 1][2]
             # i is allowed to follow e or o.
             dp_array[i][2] = dp_array[i - 1][1] + dp_array[i - 1][3]
             # o is allowed to follow i

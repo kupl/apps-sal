@@ -30,7 +30,7 @@ class Solution:
 
         threat = defaultdict(set)
 
-        for u in range(n): # find infected which threaten uninfected components
+        for u in range(n):  # find infected which threaten uninfected components
             if not infected[u]:
                 for v in graph[u]:
                     if infected[v]:
@@ -49,4 +49,3 @@ class Solution:
                 best = total
                 best_idx = v
         return best_idx
-

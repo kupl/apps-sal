@@ -6,9 +6,9 @@ class Solution:
         o = 1
         u = 1
         res = 0
-        M = 1e9+7
+        M = 1e9 + 7
 
-        for x in range(n-1):
+        for x in range(n - 1):
             a1 = e
             e1 = (a + i) % M
             i1 = (a + e + u + o) % M
@@ -19,6 +19,6 @@ class Solution:
             i = i1
             o = o1
             u = u1
-        
-        res = int((a+e+i+o+u) % M)
+
+        res = int((a + e + i + o + u) % M)
         return res

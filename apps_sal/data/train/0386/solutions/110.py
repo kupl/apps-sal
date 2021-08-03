@@ -27,4 +27,3 @@ class Solution:
             dp_cur = dp_next
 
         return sum(dp_cur.values()) % (10 ** 9 + 7)
-

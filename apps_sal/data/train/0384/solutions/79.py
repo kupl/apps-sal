@@ -5,5 +5,5 @@ class Solution:
         n = len(A)
         for i in range(n):
             res += A[i] * 2**i % 1000000007
-            res -= A[i] * 2**(n-i-1)
+            res -= A[i] * 2**(n - i - 1)
         return res % 1000000007

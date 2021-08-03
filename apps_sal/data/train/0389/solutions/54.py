@@ -9,6 +9,5 @@ class Solution:
                     if total * (j + 1) == s * len(A):
                         return True
                     sets[j + 1].add(k + num)
-        
-        return False
 
+        return False
