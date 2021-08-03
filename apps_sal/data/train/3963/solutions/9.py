@@ -1,4 +1,4 @@
-def amicable_numbers(n1,n2):
+def amicable_numbers(n1, n2):
     count_1 = 0
     count_2 = 0
     product = 0

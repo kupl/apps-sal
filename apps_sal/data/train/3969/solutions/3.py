@@ -1,9 +1,11 @@
 import math
+
+
 def graceful_tipping(bill):
-    x=math.ceil(bill+bill*15/100)
-    if x<11:
+    x = math.ceil(bill + bill * 15 / 100)
+    if x < 11:
         return x
     else:
-        le=(len(str(x))-2)
-        y=(5*(10**le))
-    return x+((y*(math.ceil(x/y)))-x)
+        le = (len(str(x)) - 2)
+        y = (5 * (10**le))
+    return x + ((y * (math.ceil(x / y))) - x)

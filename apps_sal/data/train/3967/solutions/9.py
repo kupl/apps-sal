@@ -1,4 +1,4 @@
-def solve(a,b):
+def solve(a, b):
     number_counter = 0
     for i in range(a, b):
         number = str(i)
@@ -8,5 +8,5 @@ def solve(a,b):
         b = number.count('5')
         c = number.count('8')
         if(a + b + c == len(number)) and (a <= b) and (b <= c):
-            number_counter +=1
+            number_counter += 1
     return number_counter

@@ -7,11 +7,12 @@ for n in [
     # 4 digit bases
     8885, 8855, 8853,
     # 5 digit
-    88885, 88855, 88853, 88553, 
+    88885, 88855, 88853, 88553,
     # 6 digit
-    888885, 888855, 888853, 888555, 888553, 885533]:
+        888885, 888855, 888853, 888555, 888553, 885533]:
     for perm in permutations(str(n)):
         EVI.add(int(''.join(perm)))
+
 
 def solve(a, b):
     return sum(a <= n < b for n in EVI)
