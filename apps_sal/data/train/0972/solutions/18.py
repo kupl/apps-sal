@@ -5,8 +5,7 @@ for _ in range(n):
 
 h = sorted(h)
 mm = 10**8
-for i in range(n-k):
-    mm = min(mm, h[i+k-1]-h[i])
+for i in range(n - k):
+    mm = min(mm, h[i + k - 1] - h[i])
 
 print(mm)
-

@@ -21,8 +21,10 @@ def max_len_between(s, paren_type):
 
     return max_length
 
+
 def parser(arr):
-    return [{1 : '(', 2 : ')', 3 : '[', 4 : ']'}[c] for c in arr]
+    return [{1: '(', 2: ')', 3: '[', 4: ']'}[c] for c in arr]
+
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -45,7 +47,7 @@ for i in range(0, n):
 
     elif a[i] == 3 and br[-1] == 1:
         br.append(a[i])
-        dep.append(dep[-1]+1)
+        dep.append(dep[-1] + 1)
         ret = max(ret, dep[-1])
 
     elif a[i] == 1 or a[i] == 3:

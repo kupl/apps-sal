@@ -12,4 +12,3 @@ for testcase in range(int(input())):
             print('YES')
         else:
             print('NO')
-

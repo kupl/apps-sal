@@ -1,6 +1,6 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for _ in range(t):
     n, k = map(int, input().split())
-    array=list(map(int, input().split()))
-    print(max(array)-min(array)+2*k)
+    array = list(map(int, input().split()))
+    print(max(array) - min(array) + 2 * k)

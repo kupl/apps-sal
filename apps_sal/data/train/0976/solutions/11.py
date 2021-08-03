@@ -1,7 +1,7 @@
 def solution(s, op, cl):
     if op not in s:
         return 0
-    
+
     st = []
     le = mle = 0
 
@@ -49,6 +49,7 @@ def altdepth(s):
             ma = max(ma, dep[-1])
 
     return ma
+
 
 n = int(input())
 x = '()[]'

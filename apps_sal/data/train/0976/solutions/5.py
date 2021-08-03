@@ -53,9 +53,9 @@ def solve(n, arr):
 
     lastParan, lastBrack = -1, -1
 
-    for i in range(n+1):
+    for i in range(n + 1):
         if balBracks[i] == 0:
-            maxBrackLength = max(maxBrackLength, i-lastBrack)
+            maxBrackLength = max(maxBrackLength, i - lastBrack)
             lastBrack = i
 
         if balParans[i] == 0:
@@ -70,4 +70,3 @@ arr = input().strip().split()
 arr = convertInputToBrackets(arr)
 
 print(solve(n, arr))
-

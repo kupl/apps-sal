@@ -47,9 +47,9 @@ def alt_solve(s):
 
     return ma
 
+
 n = int(input())
 x = '()[]'
 s = ''.join(x[i - 1] for i in list(map(int, input().split())))
 
 print(alt_solve(s), solve(s, '(', ')'), solve(s, '[', ']'))
-
