@@ -11,7 +11,8 @@ while mp.get(x, -1) == -1:
 
 if n <= cnt:
     ans = 0
-    for i in range(0, n): ans += a[i]
+    for i in range(0, n):
+        ans += a[i]
     print(ans)
     return
 cycle = 0
@@ -23,5 +24,6 @@ ans = tot
 ans += (n // rest) * cycle
 n %= rest
 si = mp.get(x, 0)
-for i in range(n): ans += a[si + i]
+for i in range(n):
+    ans += a[si + i]
 print(int(ans))

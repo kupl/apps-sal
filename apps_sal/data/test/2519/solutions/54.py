@@ -5,5 +5,6 @@ t = sum(p[:k])
 ans = t
 for i in range(k, n):
     t += p[i] - p[i - k]
-    if ans < t: ans = t
+    if ans < t:
+        ans = t
 print(ans)

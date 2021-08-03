@@ -20,8 +20,8 @@ def left(x):
 
 def right(x):
     if (x % 2 == 1):
-        return x;
-    return x + greatest_pow2_divisor(x) // 2;
+        return x
+    return x + greatest_pow2_divisor(x) // 2
 
 
 numbers = list(map(int, input().split()))

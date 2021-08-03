@@ -8,7 +8,8 @@ for i in range(N - 1):
         break
     else:
         c = l[-1]**2 % mod
-        l.append(c); se.add(c)
+        l.append(c)
+        se.add(c)
 if mem == -1:
     print(sum(l))
     return

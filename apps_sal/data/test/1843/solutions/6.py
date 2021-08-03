@@ -4,8 +4,10 @@ def sum_n(n):
 
 def main():
     mode = "filee"
-    if mode == "file": f = open("test.txt", "r")
-    get = lambda: [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    if mode == "file":
+        f = open("test.txt", "r")
+
+    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
     [t] = get()
     for z in range(t):
         [n] = get()
@@ -16,7 +18,8 @@ def main():
             hold -= j
         print(hold)
 
-    if mode == "file": f.close()
+    if mode == "file":
+        f.close()
 
 
 def __starting_point():

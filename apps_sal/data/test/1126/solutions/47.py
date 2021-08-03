@@ -2,7 +2,7 @@ N, X, M = map(int, input().split())
 
 
 def calc(n, x, m):
-    nxt = lambda y: y**2 % m
+    def nxt(y): return y**2 % m
 
     y = x
     r = n

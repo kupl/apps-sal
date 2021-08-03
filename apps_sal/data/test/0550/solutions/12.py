@@ -12,5 +12,7 @@ for i in range(a):
     s = s.replace('i', '1')
     s = s.replace('l', '1')
     logs.add(s)
-if log in logs: print('No')
-else: print('Yes')
+if log in logs:
+    print('No')
+else:
+    print('Yes')

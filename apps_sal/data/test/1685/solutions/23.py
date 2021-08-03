@@ -9,7 +9,8 @@ sys.setrecursionlimit(1000000)
 
 
 def hgt(x):
-    if x == 0: return -1
+    if x == 0:
+        return -1
     h = 0
     while x & 1 != 1:
         h += 1

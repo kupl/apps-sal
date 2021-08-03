@@ -15,13 +15,15 @@ def some(x):
 
 def left(x):
     r = identify_row(x)
-    if r == 1: return x
+    if r == 1:
+        return x
     return x - (1 << (r - 2))
 
 
 def right(x):
     r = identify_row(x)
-    if r == 1: return x
+    if r == 1:
+        return x
     return x + (1 << (r - 2))
 
 
@@ -36,8 +38,12 @@ for _ in range(q):
     t = int(input())
     c = input()
     for i in c:
-        if i == 'U': t = parent(t)
-        elif i == 'R': t = right(t)
-        elif i == 'L': t = left(t)
-        else: print('error', i)
+        if i == 'U':
+            t = parent(t)
+        elif i == 'R':
+            t = right(t)
+        elif i == 'L':
+            t = left(t)
+        else:
+            print('error', i)
     print(t)

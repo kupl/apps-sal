@@ -17,7 +17,8 @@ for i in range(1, n):
         x0 = x1
         pair = [0, i]
 
-if pair[1] == n - 1: ans = memo1[pair[1]] + x
+if pair[1] == n - 1:
+    ans = memo1[pair[1]] + x
 else:
     i, j = pair[0], pair[1]
     s0i = memo1[i - 1] + x

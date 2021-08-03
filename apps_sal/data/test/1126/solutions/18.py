@@ -2,7 +2,7 @@ N, X, M = map(int, input().split())
 
 
 def calc(n, x, m):
-    nxt = lambda y: y**2 % m
+    def nxt(y): return y**2 % m
 
     y = x
     r = n
@@ -13,7 +13,8 @@ def calc(n, x, m):
             break
         l[y] = i
         y = nxt(y)
-    else: return sum(i for i, v in enumerate(l) if v)
+    else:
+        return sum(i for i, v in enumerate(l) if v)
 
     ans = 0
     for i in range(i):

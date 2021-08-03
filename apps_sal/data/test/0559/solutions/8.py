@@ -4,15 +4,20 @@ mod = 998244353
 
 def poly_mul(f, g):
     # 参考: https://judge.yosupo.jp/submission/2380
-    Lf = len(f); Lg = len(g); L = Lf + Lg - 1
+    Lf = len(f)
+    Lg = len(g)
+    L = Lf + Lg - 1
     if Lf <= 16 or Lg <= 16:
         if Lf == 0 or Lg == 0:
             return np.zeros((0,), dtype=np.int64)
         return (np.convolve(f.astype(np.uint64), g.astype(np.uint64)) % mod).astype(np.int64)
-    fft = np.fft.rfft; ifft = np.fft.irfft
+    fft = np.fft.rfft
+    ifft = np.fft.irfft
     fft_len = 1 << L.bit_length()
-    fl = f & (1 << 15) - 1; fh = f >> 15
-    gl = g & (1 << 15) - 1; gh = g >> 15
+    fl = f & (1 << 15) - 1
+    fh = f >> 15
+    gl = g & (1 << 15) - 1
+    gh = g >> 15
     x = (ifft(fft(fl, fft_len) * fft(gl, fft_len))[:L] + 0.5).astype(np.int64) % mod
     y = (ifft(fft(fl + fh, fft_len) * fft(gl + gh, fft_len))[:L] + 0.5).astype(np.int64) % mod
     z = (ifft(fft(fh, fft_len) * fft(gh, fft_len))[:L] + 0.5).astype(np.int64) % mod

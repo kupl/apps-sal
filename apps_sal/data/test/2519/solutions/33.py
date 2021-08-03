@@ -1,8 +1,8 @@
 import math
-ini = lambda: int(input())
-inm = lambda: map(int, input().split())
-inl = lambda: list(map(int, input().split()))
-gcd = lambda x, y: gcd(y, x % y) if x % y else y
+def ini(): return int(input())
+def inm(): return map(int, input().split())
+def inl(): return list(map(int, input().split()))
+def gcd(x, y): return gcd(y, x % y) if x % y else y
 
 
 def factorization(n):
@@ -82,9 +82,10 @@ class UnionFind():
 
 
 mod = 10**9 + 7
-sigma = lambda x: x * (x + 1) // 2
+def sigma(x): return x * (x + 1) // 2
 
 # --maincode----------------
+
 
 n, k = inm()
 p = inl()

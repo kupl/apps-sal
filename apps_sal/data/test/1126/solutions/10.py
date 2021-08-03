@@ -13,7 +13,8 @@ while ls[x] == 0:
 
 if n <= cnt:
     ans = 0
-    for i in range(0, n): ans += A[i]
+    for i in range(0, n):
+        ans += A[i]
     print(ans)
     return
 cycle = 0
