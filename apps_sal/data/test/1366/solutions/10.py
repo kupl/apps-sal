@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    t = n;
+    t = n
     A = []
     B = []
     while (t > 0):

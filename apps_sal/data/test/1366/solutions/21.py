@@ -16,12 +16,15 @@ def main():
 
     for i in range(n):
         for j in range(n):
-            if i == j: continue
-            if a[j] == b[i]: a[j] = -1
+            if i == j:
+                continue
+            if a[j] == b[i]:
+                a[j] = -1
 
     ans = 0
     for item in a:
-        if item != -1: ans += 1
+        if item != -1:
+            ans += 1
 
     print(ans)
 

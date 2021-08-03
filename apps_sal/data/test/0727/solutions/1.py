@@ -70,7 +70,8 @@ class heapdict(collections.MutableMapping):
     def _decrease_key(self, i):
         while i:
             parent = self._parent(i)
-            if self.heap[parent][0] < self.heap[i][0]: break
+            if self.heap[parent][0] < self.heap[i][0]:
+                break
             self._swap(i, parent)
             i = parent
 

@@ -1,9 +1,10 @@
 def main():
     mode = "filee"
-    if mode == "file": f = open("test.txt", "r")
+    if mode == "file":
+        f = open("test.txt", "r")
     # f.readline()
     # input()
-    get = lambda: [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
     [n] = get()
     found = []
     opener = set()
@@ -24,7 +25,8 @@ def main():
     for i in other:
         count -= (found.count(i) - 1)
     print(max(count, 0))
-    if mode == "file": f.close()
+    if mode == "file":
+        f.close()
 
 
 def __starting_point():

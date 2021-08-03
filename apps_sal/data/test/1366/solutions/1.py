@@ -7,9 +7,11 @@ for i in range(n):
     num[r[i]] += 1
 ans = n
 for i in range(n):
-    if (num[l[i]] == 1) and (l[i] == r[i]): continue
+    if (num[l[i]] == 1) and (l[i] == r[i]):
+        continue
 
-    if (num[l[i]] < 1): continue
+    if (num[l[i]] < 1):
+        continue
     ans -= 1
 
 print(ans)

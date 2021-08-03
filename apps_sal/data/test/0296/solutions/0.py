@@ -1,11 +1,14 @@
 r = open('input.txt')
 w = open('output.txt', mode='w')
 
-f = lambda: map(int, r.readline().split())
+
+def f(): return map(int, r.readline().split())
+
 
 f()
 a, b = f()
-if a > b: a, b = b, a
+if a > b:
+    a, b = b, a
 n = 40001
 u, v = [n] * n, [n] * n
 x = s = 0
