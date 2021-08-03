@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def loose_change(coins_list, amount_of_change):
     q = deque([(0, amount_of_change)])
 

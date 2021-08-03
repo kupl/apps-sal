@@ -8,4 +8,3 @@ def presentation_agenda(friend_list):
         if len(p_list):
             out.append({'person': friend['person'], 'dest': p_list})
     return out
-

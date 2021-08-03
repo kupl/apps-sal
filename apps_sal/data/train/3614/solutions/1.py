@@ -1,7 +1,7 @@
 def interpreter(tape):
     data, pointer, output = [0], 0, "",
     for command in tape:
-        if   command == ">":
+        if command == ">":
             pointer += 1
         elif command == "<":
             pointer -= 1
@@ -18,6 +18,7 @@ def interpreter(tape):
         elif command == "*":
             output += chr(0)
     return output
+
 
 def is_valid(pointer, data):
     return pointer >= 0 and pointer < len(data)

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def presentation_agenda(friend_list):
     all_dests = sum((friend['dest'] for friend in friend_list), [])
     uniq_dests = [dest for dest, count in Counter(all_dests).items() if count == 1]
