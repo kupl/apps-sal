@@ -1,2 +1,2 @@
 for i in range(int(input())):
- print(10)
+    print(10)

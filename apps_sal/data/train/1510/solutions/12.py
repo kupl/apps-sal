@@ -1,7 +1,7 @@
 # cook your dish here
 try:
- x=int(input())
- for _ in range(x):
-  print(10)
+    x = int(input())
+    for _ in range(x):
+        print(10)
 except:
- pass
+    pass

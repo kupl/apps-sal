@@ -1,9 +1,9 @@
-t=int(input())
+t = int(input())
 for _ in range(t):
     string = input().rstrip()
-    start=(ord(string[0])-96)*100
-    sum=0
-    #print(start)
+    start = (ord(string[0]) - 96) * 100
+    sum = 0
+    # print(start)
     for i in range(len(string)):
-        sum+=start+(ord(string[i])-97)
-    print(sum%1000000007)
+        sum += start + (ord(string[i]) - 97)
+    print(sum % 1000000007)
