@@ -5,6 +5,7 @@ def productFib(prod):
         elif x * y > prod:
             return [x, y, False]
 
+
 def fib():
     a, b = 0, 1
     while True:

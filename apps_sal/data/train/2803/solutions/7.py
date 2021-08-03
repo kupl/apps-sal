@@ -15,5 +15,6 @@ def lcm(n):
     while x:
         i, n = x[-2:]
         del x[-2:]
-        if not x: return n
+        if not x:
+            return n
         x.append(i * n // gcd(i, n))

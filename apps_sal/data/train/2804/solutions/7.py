@@ -1,10 +1,12 @@
 from itertools import cycle
 
+
 def custom_christmas_tree(chars, n):
     leaf_provider = cycle(chars)
     trunk_height = n // 3
     max_width = 2 * n - 1
     tree = []
+
     def build_row(provider, row_number):
         return " ".join([provider.__next__() for _ in range(row_number)])
 

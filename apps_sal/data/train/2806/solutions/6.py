@@ -8,7 +8,7 @@ def whose_turn(positions):
 
     # Equal number of moves => white to move
     return white_pieces_match == black_pieces_match
-  
+
 
 def is_white_square(pos):
     x, y = ord(pos[0]) - 97, int(pos[1])

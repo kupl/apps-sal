@@ -4,7 +4,7 @@ def digitize(n):
     n = list(map(conv, n))
     n.reverse()
     return n
-    
+
 
 def conv(x):
     return int(x)

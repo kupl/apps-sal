@@ -1,1 +1,1 @@
-digitize = lambda n : [int(digit) for digit in str(n)][::-1]
+def digitize(n): return [int(digit) for digit in str(n)][::-1]

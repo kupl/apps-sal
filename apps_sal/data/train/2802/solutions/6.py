@@ -1,6 +1,7 @@
 from functools import reduce
 from operator import mul
 
+
 def per(n):
     result = []
     s = str(n)

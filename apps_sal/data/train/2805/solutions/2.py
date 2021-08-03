@@ -3,5 +3,5 @@ def productFib(prod):
     rez = 0
     while rez < prod:
         a, b = b, a + b
-        rez = a*b
+        rez = a * b
     return [a, b, rez == prod]

@@ -3,7 +3,7 @@ def digitize(n):
 
     a = list(str(n))
     for i in a:
-         mylist.append(int(i))
-    
+        mylist.append(int(i))
+
     mylist.reverse()
     return mylist
