@@ -8,8 +8,10 @@ def fact(a, b):
 
 def fact_remove(a, b):
     c = a * b
-    while c % 2 == 0: c //= 2
-    while c % 3 == 0: c //= 3
+    while c % 2 == 0:
+        c //= 2
+    while c % 3 == 0:
+        c //= 3
     return c
 
 

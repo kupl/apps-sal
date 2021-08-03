@@ -7,7 +7,9 @@ from itertools import accumulate, product
 
 import math
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
 
 n, u = R()
 arr = list(R())

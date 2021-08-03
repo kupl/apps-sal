@@ -29,4 +29,5 @@ for i in range(n):
 print(len(l1))
 l1.sort()
 l1.sort(reverse=1, key=lambda x: x[-1])
-for _, i, j in l1: print(i + 1, j + 1)
+for _, i, j in l1:
+    print(i + 1, j + 1)

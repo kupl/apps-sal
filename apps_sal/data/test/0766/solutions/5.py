@@ -5,8 +5,10 @@ for i in x:
 s = 0
 q = 0
 for i in a:
-    if i != 0: s += 1
-    if i > 1: q += 1
+    if i != 0:
+        s += 1
+    if i > 1:
+        q += 1
 if s > 4:
     print('No')
 elif s <= 1:
@@ -16,8 +18,10 @@ elif s == 4:
 elif s == 2:
     if q >= 2:
         print('Yes')
-    else: print('No')
+    else:
+        print('No')
 else:
     if q >= 1:
         print('Yes')
-    else: print('No')
+    else:
+        print('No')

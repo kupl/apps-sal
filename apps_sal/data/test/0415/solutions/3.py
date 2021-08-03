@@ -7,8 +7,10 @@ zt = [(0, -1)]
 
 
 def findmid(g):
-    if g <= zt[-1][0]: return
-    if g > zt[0][0]: return zt[0][1]
+    if g <= zt[-1][0]:
+        return
+    if g > zt[0][0]:
+        return zt[0][1]
     l = 0
     r = len(zt) - 1
     while l + 1 < r:

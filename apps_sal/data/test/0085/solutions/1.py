@@ -1,6 +1,6 @@
 import sys
 
-size = [0, 0, 0, 0];
+size = [0, 0, 0, 0]
 size[0], size[1] = sys.stdin.readline().strip().split()
 size[2], size[3] = sys.stdin.readline().strip().split()
 for i in range(4):

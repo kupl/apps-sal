@@ -19,4 +19,5 @@ def map_string():
 
 l, r = map_input()
 print("YES")
-for i in range(l, r, 2): print(i, i + 1)
+for i in range(l, r, 2):
+    print(i, i + 1)

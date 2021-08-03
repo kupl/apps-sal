@@ -1,4 +1,5 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
 
 s = str(input())
 
@@ -11,14 +12,20 @@ for i in range(len(s)):
 
 t = sum(app)
 
-if t == 1 or t > 4: print('No')
+if t == 1 or t > 4:
+    print('No')
 
 if t == 2:
-    if 1 not in dyn: print('Yes')
-    else: print('No')
+    if 1 not in dyn:
+        print('Yes')
+    else:
+        print('No')
 
 if t == 3:
-    if max(dyn) > 1: print('Yes')
-    else: print('No')
+    if max(dyn) > 1:
+        print('Yes')
+    else:
+        print('No')
 
-if t == 4: print('Yes')
+if t == 4:
+    print('Yes')
