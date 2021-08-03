@@ -6,4 +6,3 @@ def rental_car_cost(d):
         return daily - 50
     else:
         return daily
-

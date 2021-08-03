@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def solve(s):
     c = Counter(s)
     for key in c.keys():

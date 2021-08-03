@@ -10,4 +10,3 @@ def is_valid_HK_phone_number(number):
 
 def has_valid_HK_phone_number(number):
     return bool(HAS_VALID.search(number))
-

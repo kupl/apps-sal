@@ -6,5 +6,3 @@ def rental_car_cost(d):
         return base - 20
     else:
         return base
-
-

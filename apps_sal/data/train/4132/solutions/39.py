@@ -1,2 +1,2 @@
 def correct_tail(body, tail):
-     return body.endswith(tail[0])
+    return body.endswith(tail[0])

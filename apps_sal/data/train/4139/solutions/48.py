@@ -5,4 +5,3 @@ def rental_car_cost(d):
     elif d >= 7:
         result -= 50
     return result
-

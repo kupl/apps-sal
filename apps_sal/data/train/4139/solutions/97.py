@@ -7,5 +7,4 @@ def discount(d):
 
 
 def rental_car_cost(d):
-    return d*40 - discount(d)
-
+    return d * 40 - discount(d)
