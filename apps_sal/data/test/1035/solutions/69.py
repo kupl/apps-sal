@@ -2,7 +2,7 @@ from math import gcd
 from typing import List, Tuple
 
 
-def pf(n: int) -> List[Tuple[int,int]]:
+def pf(n: int) -> List[Tuple[int, int]]:
     r = []
     for p in range(2, n):
         if p * p > n:
@@ -17,7 +17,7 @@ def pf(n: int) -> List[Tuple[int,int]]:
         r.append((n, 1))
     return r
 
-a,b = list(map(int, input().split()))
-r = pf(gcd(a,b))
-print((len(r)+1))
 
+a, b = list(map(int, input().split()))
+r = pf(gcd(a, b))
+print((len(r) + 1))

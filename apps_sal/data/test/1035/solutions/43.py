@@ -1,5 +1,6 @@
 import math
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -16,7 +17,8 @@ def prime_factorize(n):
         a.append(n)
     return a
 
+
 a, b = map(int, input().split())
 
 c = math.gcd(a, b)
-print(len(set(prime_factorize(c)))+1)
+print(len(set(prime_factorize(c))) + 1)

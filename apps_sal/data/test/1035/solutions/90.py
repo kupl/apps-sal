@@ -1,18 +1,20 @@
 from math import gcd
 a, b = list(map(int, input().split()))
 
+
 def make_divisors(n):
     lower_divisors, upper_divisors = [], []
     i = 1
-    while i*i <= n:
+    while i * i <= n:
         if n % i == 0:
             lower_divisors.append(i)
-            if i != n //i:
-                upper_divisors.append(n//i)
+            if i != n // i:
+                upper_divisors.append(n // i)
         i += 1
     return lower_divisors + upper_divisors[::-1]
 
-v = gcd(a,b) # greatest common divisors
+
+v = gcd(a, b)  # greatest common divisors
 divs = make_divisors(v)
 
 k = 1
@@ -23,4 +25,3 @@ for d in divs:
         ans += 1
         k *= d
 print(ans)
-

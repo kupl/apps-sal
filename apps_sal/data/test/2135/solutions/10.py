@@ -1,10 +1,10 @@
 h, w = list(map(int, input().split()))
-grid = (h + 1) * [ None ]
+grid = (h + 1) * [None]
 grid[0] = (w + 1) * '#'
 for r in range(1, h + 1):
     grid[r] = '#' + input().strip()
 
-rt = [ [ 0 for c in range(w + 1) ] for r in range(h + 1) ]
+rt = [[0 for c in range(w + 1)] for r in range(h + 1)]
 for r in range(1, h + 1):
     for c in range(1, w + 1):
         if '.' == grid[r][c] == grid[r][c - 1]:
@@ -14,7 +14,7 @@ for r in range(1, h + 1):
         rt[r][c] = rt[r][c - 1] + delta
     for c in range(1, w + 1):
         rt[r][c] += rt[r - 1][c]
-ct = [ [ 0 for c in range(w + 1) ] for r in range(h + 1) ]
+ct = [[0 for c in range(w + 1)] for r in range(h + 1)]
 for c in range(1, w + 1):
     for r in range(1, h + 1):
         if '.' == grid[r][c] == grid[r - 1][c]:
@@ -33,8 +33,8 @@ if debug:
         print(rt[r][1:])
     print()
     for c in range(1, w + 1):
-        print(''.join([ grid[r][c] for r in range(1, h + 1) ]))
-        print([ ct[r][c] for r in range(1, h + 1) ])
+        print(''.join([grid[r][c] for r in range(1, h + 1)]))
+        print([ct[r][c] for r in range(1, h + 1)])
     print()
 
 q = int(input())
@@ -46,4 +46,3 @@ for i in range(q):
     x = rt[R][C] - rt[R][c] - rt[r - 1][C] + rt[r - 1][c] + \
         ct[R][C] - ct[r][C] - ct[R][c - 1] + ct[r][c - 1]
     print(x)
-

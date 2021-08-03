@@ -1,5 +1,7 @@
 from math import sqrt
 from math import ceil
+
+
 def prime_factorization(n):
     pfs = [1]
     i = 2
@@ -26,15 +28,17 @@ def bit_search(pfs):
         ds.add(d)
     return ds
 
+
 def gcd(a, b):
     if b == 0:
         return a
     else:
         return gcd(b, a % b)
 
+
 gcdab = gcd(a, b)
 #print (gcdab)
 pfsab = prime_factorization(gcdab)
 #print (pfsab)
-pfsabset =set(pfsab)
-print (len(pfsabset))
+pfsabset = set(pfsab)
+print(len(pfsabset))

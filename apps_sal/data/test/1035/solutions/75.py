@@ -1,6 +1,7 @@
 import math
 import collections
 
+
 def prime_factorize(n):
     s = []
     while n % 2 == 0:
@@ -16,6 +17,7 @@ def prime_factorize(n):
     if n != 1:
         s.append(n)
     return s
+
 
 a, b = map(int, input().split())
 

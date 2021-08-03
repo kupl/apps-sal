@@ -1,19 +1,21 @@
 import operator
-data = list( map (int, input().split(' ')) )
+data = list(map(int, input().split(' ')))
 n = data[0]
 m = data[1]
 edge = {}
 for i in range(n):
-    edge[i+1] = []
+    edge[i + 1] = []
 for _ in range(m):
-    data = list( map (int, input().split(' ')) )
+    data = list(map(int, input().split(' ')))
     i = data[0]
     j = data[1]
     edge[i].append(j)
     edge[j].append(i)
-candidate = [k for k,v in list(edge.items()) if len(v) == 2]
+candidate = [k for k, v in list(edge.items()) if len(v) == 2]
 result = 0
 used = {}
+
+
 def _iscircle(c, result):
     n = edge[c][0]
     used[c] = 1
@@ -40,5 +42,4 @@ def _iscircle(c, result):
 
 for i in candidate:
     result = _iscircle(i, result)
-print (result)
-
+print(result)

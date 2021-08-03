@@ -20,4 +20,3 @@ for i in range(sum(array) + 1):
             print("YES")
             return
 print("NO")
-

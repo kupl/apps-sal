@@ -18,4 +18,3 @@ for cnt in range(2, n + 1):
     if ans:
         break
 print("YES" if ans else "NO")
-

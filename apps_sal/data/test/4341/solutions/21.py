@@ -22,19 +22,19 @@ def dfs(v, g, vis):
             for i in range(len(g[v])):
                 if not vis[g[v][i]]:
                     vis[g[v][i]] = True
-                    st.append(g[v][i])            
+                    st.append(g[v][i])
     return count
+
 
 v, e = list(map(int, input().split()))
 g = [[] for i in range(v)]
 for i in range(e):
     f, to = list(map(int, input().split()))
-    g[f-1].append(to-1)
-    g[to-1].append(f-1)
+    g[f - 1].append(to - 1)
+    g[to - 1].append(f - 1)
 vis = [False] * v
 ans = 0
 for i in range(v):
     if not vis[i]:
         ans += dfs(i, g, vis)
 print(ans)
-

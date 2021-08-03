@@ -15,6 +15,7 @@ def bfs(v):
                 p[i] = c
     k.append(w)
 
+
 n, m = list(map(int, input().split()))
 
 g = [[] for i in range(n + 1)]
@@ -44,4 +45,3 @@ for i in range(1, len(k)):
         ans += 1
 
 print(ans)
-

@@ -1,4 +1,4 @@
-import  math
+import math
 
 A, B = [int(x) for x in input().split()]
 
@@ -16,11 +16,8 @@ def prime_factorization(n):
         factors.append(n)
     return factors
 
+
 C = math.gcd(A, B)
 
 
-
-
 print((len(set(prime_factorization(C))) + 1))
-
-

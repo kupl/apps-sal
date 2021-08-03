@@ -1,7 +1,7 @@
+import collections
+import math
 A, B = map(int, input().split())
 
-import math
-import collections
 
 def prime_factorize(n):
     a = []
@@ -18,6 +18,7 @@ def prime_factorize(n):
     if n != 1:
         a.append(n)
     return a
+
 
 c = prime_factorize(math.gcd(A, B))
 c = collections.Counter(c)

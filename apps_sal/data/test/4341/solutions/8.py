@@ -1,7 +1,9 @@
-import sys
-sys.setrecursionlimit(10 ** 9)  
 import threading
+import sys
+sys.setrecursionlimit(10 ** 9)
 threading.stack_size(67108864)
+
+
 def main():
     n, m = [int(x) for x in input().split()]
 
@@ -32,7 +34,6 @@ def main():
                 is_cir = min(dfs(child), is_cir)
         return is_cir
 
-
     head = 0
     count = 0
     while 1:
@@ -46,11 +47,10 @@ def main():
                 head = i
                 f = 1
                 break
-                
+
         if not f:
             print(count)
             return
-
 
 
 thread = threading.Thread(target=main)

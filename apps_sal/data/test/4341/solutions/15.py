@@ -25,5 +25,5 @@ def go():
                 output += 1
     return output
 
-print(go())
 
+print(go())

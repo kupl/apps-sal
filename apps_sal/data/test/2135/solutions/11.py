@@ -8,12 +8,12 @@ def solve(h, w, board, queries):
                 if i == 0:
                     horiz[j][i] = 0
                     continue
-                current = 1 if (board[j][i] == '.' and board[j][i-1] == '.') else 0
+                current = 1 if (board[j][i] == '.' and board[j][i - 1] == '.') else 0
                 if j == 0:
-                    horiz[j][i] = horiz[j][i-1] + current
+                    horiz[j][i] = horiz[j][i - 1] + current
                 else:
-                    current = 1 if (board[j][i] == '.' and board[j][i-1] == '.') else 0
-                    horiz[j][i] = horiz[j][i-1] + horiz[j-1][i] - horiz[j-1][i-1] + current
+                    current = 1 if (board[j][i] == '.' and board[j][i - 1] == '.') else 0
+                    horiz[j][i] = horiz[j][i - 1] + horiz[j - 1][i] - horiz[j - 1][i - 1] + current
         return horiz
 
     trans = [[None] * h for _ in range(w)]
@@ -40,11 +40,12 @@ def solve(h, w, board, queries):
         return acum
 
     #print(get_horiz(h, w, board))
-    #print(query(1,2,4,5))
+    # print(query(1,2,4,5))
     res = []
     for q in queries:
         res.append(query(*q))
     return res
+
 
 h, w = tuple(map(int, input().split()))
 board = []
@@ -57,4 +58,3 @@ for _ in range(qnum):
 res = solve(h, w, board, queries)
 for r in res:
     print(r)
-
