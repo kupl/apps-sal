@@ -10,7 +10,7 @@ while(True):
             break
         prevElse = False
         while(x - 2 > 0):
-            x = x - 2;
+            x = x - 2
             y = y + 1
             numMins += 1
     else:

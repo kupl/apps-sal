@@ -1,1 +1,2 @@
-a = int(input()); print(a + a * a + a**3)
+a = int(input())
+print(a + a * a + a**3)

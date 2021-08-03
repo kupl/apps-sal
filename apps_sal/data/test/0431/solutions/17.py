@@ -1,13 +1,15 @@
 n, m = map(int, input().split())
 a = [input() for i in range(n)]
 i = 0
-while i < n and a[i] == '0' * (m + 2): i += 1
+while i < n and a[i] == '0' * (m + 2):
+    i += 1
 a = a[i:]
 n = len(a)
 dp = [[10 ** 5, 10 ** 5] for i in range(n)]
 for i in range(n):
     l, r = a[i].find('1'), a[i].rfind('1')
-    if l == r == -1: l, r = m + 1, 0
+    if l == r == -1:
+        l, r = m + 1, 0
     if i == 0:
         dp[0] = [r, m + 1 - l]
     else:

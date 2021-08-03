@@ -1,7 +1,8 @@
 from sys import stdin
-from sys import setrecursionlimit as SRL; SRL(10**7)
+from sys import setrecursionlimit as SRL
+SRL(10**7)
 rd = stdin.readline
-rrd = lambda: map(int, rd().strip().split())
+def rrd(): return map(int, rd().strip().split())
 
 
 n = int(rd())

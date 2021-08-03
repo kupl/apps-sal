@@ -2,20 +2,20 @@ def booly(s):
     return bool(int(s))
 
 
-n, m = list(map(int, input().split()));
+n, m = list(map(int, input().split()))
 
-nothing = "0" * (m + 2);
+nothing = "0" * (m + 2)
 
-a = [];
+a = []
 for i in range(n):
     a.append(input())
 
 for i in range(n):
     if a[i] != nothing:
-        break;
+        break
 
 a = a[i:]
-a.reverse();
+a.reverse()
 
 n = len(a)
 
@@ -34,7 +34,7 @@ for i in range(n):
 
 if len(a) == 1:
     print(rightA[0])
-    return;
+    return
 
 left = [None] * (n + 1)
 right = [None] * (n + 1)
@@ -48,8 +48,8 @@ for i in range(1, n - 1):
 
 #print(left, right)
 
-print((min(1 +
-           left[n-2] +
-           rightA [n - 1],
-           1 + right[n - 2] +
-           (m+2 - 1 - leftA[n-1]))));
+print((min(1
+           + left[n-2]
+           + rightA [n - 1],
+           1 + right[n - 2]
+           +  (m+2 - 1 - leftA[n-1]))));
