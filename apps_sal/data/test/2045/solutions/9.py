@@ -1,6 +1,8 @@
 def zalgo(s: str):
 
-    l = 0; r = 0; n = len(s);
+    l = 0
+    r = 0
+    n = len(s)
 
     z = [0] * n
 
@@ -8,9 +10,11 @@ def zalgo(s: str):
 
         z[i] = 0
 
-        if(i <= r): z[i] = min(r - i + 1, z[i - l])
+        if(i <= r):
+            z[i] = min(r - i + 1, z[i - l])
 
-        while(i + z[i] < n and s[z[i]] == s[i + z[i]]): z[i] += 1
+        while(i + z[i] < n and s[z[i]] == s[i + z[i]]):
+            z[i] += 1
 
         if(i + z[i] - 1 > r):
             l = i

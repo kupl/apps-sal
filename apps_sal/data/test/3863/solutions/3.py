@@ -9,14 +9,17 @@ MOD = 10**9 + 7
 
 
 def divisor_list(N):  # 約数のリスト
-    if N == 1: return [1]
+    if N == 1:
+        return [1]
     res = []
     for i in range(1, N):
-        if i * i >= N: break
+        if i * i >= N:
+            break
         if N % i == 0:
             res.append(i)
             res.append(N // i)
-    if i * i == N: res.append(i)
+    if i * i == N:
+        res.append(i)
     return sorted(res)
 
 
@@ -26,7 +29,8 @@ if n & 1:
     # print(r)
     for pi in p:
         for pj in p:
-            if pj >= pi: break
+            if pj >= pi:
+                break
             if pi % pj == 0:
                 r[pi] -= r[pj]
     # print(r)
@@ -43,7 +47,8 @@ else:
     r = {pi: pow(k, (pi + 1) // 2, MOD) for pi in p}
     for pi in p:
         for pj in p:
-            if pj >= pi: break
+            if pj >= pi:
+                break
             if pi % pj == 0:
                 r[pi] -= r[pj]
 

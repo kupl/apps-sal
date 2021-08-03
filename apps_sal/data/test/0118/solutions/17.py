@@ -7,9 +7,12 @@ x = int(inp[2])
 
 
 def fn():
-    if x == t: return "YES"
-    if x < s + t: return "NO"
-    if (x - t) % s <= 1: return "YES"
+    if x == t:
+        return "YES"
+    if x < s + t:
+        return "NO"
+    if (x - t) % s <= 1:
+        return "YES"
     return "NO"
 
 

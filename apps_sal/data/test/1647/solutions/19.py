@@ -1,5 +1,6 @@
 def getfather(x):
-    if (x == fa[x]): return x
+    if (x == fa[x]):
+        return x
     fa[x] = getfather(fa[x])
     return fa[x]
 

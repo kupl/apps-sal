@@ -1,5 +1,5 @@
 M = 0x3b800001
-wa = 0;
+wa = 0
 n = int(input())
 a = list(map(int, input().split()))
 now = 1

@@ -1,5 +1,6 @@
 N, K = map(int, input().split())
-S = []; T = []
+S = []
+T = []
 for x in range(1, int(N**.5) + 1):
     if N % x == 0:
         S.append(x)

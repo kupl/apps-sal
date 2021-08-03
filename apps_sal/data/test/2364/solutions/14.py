@@ -1,9 +1,12 @@
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    if n == 1: print(a[0]); return
+    if n == 1:
+        print(a[0])
+        return
     mod = 998244353
-    for i in range(1, n): a[i] += a[i - 1]
+    for i in range(1, n):
+        a[i] += a[i - 1]
     ans = 0
     for i in range(n - 2):
         m = (n - 1) - (i + 2)

@@ -1,10 +1,14 @@
 n = int(input())
 a = input()
 b = input()
-f = lambda c: ord(c) - 97
-g = lambda x: chr(97 + x)
+def f(c): return ord(c) - 97
+def g(x): return chr(97 + x)
+
+
 fa = [i for i in range(26)]
-get_fa = lambda x: x if fa[x] == x else get_fa(fa[x])
+def get_fa(x): return x if fa[x] == x else get_fa(fa[x])
+
+
 for i in range(n):
     child = f(b[i])
     father = get_fa(child)
