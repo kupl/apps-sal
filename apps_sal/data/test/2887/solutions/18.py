@@ -127,11 +127,13 @@ def sieve(n):
             while j < m:
                 b[j] = False
                 j = j + 2 * i + 3
-        i += 1; p += 2
+        i += 1
+        p += 2
     while i < m:
         if b[i]:
             ps.append(p)
-        i += 1; p += 2
+        i += 1
+        p += 2
     return ps
 # </template>
 

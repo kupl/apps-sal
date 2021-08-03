@@ -1,6 +1,8 @@
 import sys
 from collections import deque
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 # for i in range(int(input())):
 n, m = list(map(int, input().split()))
 g = {}

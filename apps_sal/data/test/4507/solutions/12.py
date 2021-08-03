@@ -25,8 +25,10 @@ bf = [(1, 0)] + sorted(bf, key=lambda x: (x[0] - x[1], b))
 
 dp = [[-1 for i in range(len(bf))] for i in range(k + 1)]
 
-for i in range(len(bf)): dp[0][i] = 0
-for i in range(1, k + 1): dp[i][0] = ps[i]
+for i in range(len(bf)):
+    dp[0][i] = 0
+for i in range(1, k + 1):
+    dp[i][0] = ps[i]
 
 for i in range(1, k + 1):
     for j in range(1, len(bf)):

@@ -5,8 +5,10 @@ c = [0] * n
 for i in range(n):
     g.append(list(input()))
     x = [a for a in range(n) if g[i][a] == '.']
-    if len(x) > 0: r[i] = 1
-    for j in x: c[j] = 1
+    if len(x) > 0:
+        r[i] = 1
+    for j in x:
+        c[j] = 1
 if sum(r) == n:
     for i in range(n):
         for j in range(n):
