@@ -1,6 +1,7 @@
 class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
         N = len(graph)
+
         def parent(m, c, t):
             if t == 2:
                 for m2 in graph[m]:
@@ -16,7 +17,7 @@ class Solution:
             for c in range(N):
                 degree[m, c, 1] = len(graph[m])
                 degree[m, c, 2] = len(graph[c]) - (0 in graph[c])
-                
+
         queue = collections.deque([])
         for i in range(N):
             for t in [1, 2]:
@@ -25,7 +26,7 @@ class Solution:
                 if i > 0:
                     color[i, i, t] = C
                     queue.append((i, i, t, C))
-                    
+
         while queue:
             i, j, t, w = queue.popleft()
             for i2, j2, t2 in parent(i, j, t):
@@ -37,6 +38,6 @@ class Solution:
                         degree[i2, j2, t2] -= 1
                         if degree[i2, j2, t2] == 0:
                             color[i2, j2, t2] = 3 - t2
-                            queue.append((i2, j2, t2, 3-t2))
-                            
+                            queue.append((i2, j2, t2, 3 - t2))
+
         return color[1, 2, 1]

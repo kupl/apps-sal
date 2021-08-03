@@ -5,5 +5,6 @@ class Solution:
             if arr[i] > curr:
                 curr, win = arr[i], 0
             win += 1
-            if win == k: break
+            if win == k:
+                break
         return curr

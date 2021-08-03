@@ -13,6 +13,3 @@ class Solution:
             if arr[i] == maxValue:
                 return maxValue
         return curMax
-                
-                
-

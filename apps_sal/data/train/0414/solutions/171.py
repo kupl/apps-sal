@@ -24,4 +24,3 @@ class Solution:
             d.appendleft(winner)
             d.append(loser)
         return lastWinner
-

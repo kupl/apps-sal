@@ -3,12 +3,12 @@ class Solution:
         dp = dict()
         dp[0] = dp[2] = 1
         dp[1] = 0
-        
+
         def calc(x, adj):
-            if x%2 == 0:
-                n = x//2
+            if x % 2 == 0:
+                n = x // 2
             else:
-                n = 3*x+1
+                n = 3 * x + 1
             if dp.get(n) is None:
                 adj.append(n)
                 calc(n, adj)
@@ -17,10 +17,10 @@ class Solution:
                 for a in adj[::-1]:
                     count += 1
                     dp[a] = count
-                
+
         to_sort = []
-        for i in range(lo,hi+1):
+        for i in range(lo, hi + 1):
             calc(i, [i])
             to_sort.append([i, dp.get(i)])
         sorted_res = sorted(to_sort, key=lambda x: x[1])
-        return sorted_res[k-1][0]
+        return sorted_res[k - 1][0]

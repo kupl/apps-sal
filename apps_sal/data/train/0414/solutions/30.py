@@ -12,4 +12,3 @@ class Solution:
             if wins == k:
                 return currWinner
         return currWinner
-

@@ -8,6 +8,6 @@ class Solution:
                 break
             t = min(i * f, target)
             dp[t] = sum(dp[t - j] for j in range(max(1, t - (i - 1) * f), min(f, t - i + 1) + 1)) % MOD
-            for t in reversed(range(i,  t)):
-                dp[t] = dp[t + 1] - dp[t] + (dp[t - f] if t - f >= i - 1 else 0) 
+            for t in reversed(range(i, t)):
+                dp[t] = dp[t + 1] - dp[t] + (dp[t - f] if t - f >= i - 1 else 0)
         return dp[target]

@@ -5,8 +5,7 @@ class Solution:
             powerSteps.append((self.getPowerSteps(i), i))
         powerSteps.sort()
         return powerSteps[k - 1][1]
-        
-        
+
     def getPowerSteps(self, value):
         steps = 0
         while value != 1:

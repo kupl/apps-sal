@@ -54,5 +54,3 @@ class Solution:
         if (2, 1, 0) in result:
             return result[(2, 1, 0)]
         return 0
-
-

@@ -8,6 +8,6 @@ class Solution:
         for r in range(1, d + 1):
             if r > 1:
                 dp[r - 2] = 0
-            for i in range(target, r-1, -1):
-                dp[i] = sum(dp[max(0, i - f) : i]) % mod_val
+            for i in range(target, r - 1, -1):
+                dp[i] = sum(dp[max(0, i - f): i]) % mod_val
         return dp[target]

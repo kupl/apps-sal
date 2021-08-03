@@ -8,7 +8,7 @@ class Solution:
         while nwin < k and candidates:
             if winner > candidates[0]:
                 nwin += 1
-            else:                
+            else:
                 winner = candidates[0]
                 nwin = 1
             del candidates[0]

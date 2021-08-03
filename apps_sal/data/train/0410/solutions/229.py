@@ -13,8 +13,7 @@ class Solution:
             else:
                 return 1 + power(3 * n + 1)
 
-        powers = [(power(n), n) for n in range(lo, hi+1)]
+        powers = [(power(n), n) for n in range(lo, hi + 1)]
         powers.sort()
 
-        return powers[k-1][1]
-
+        return powers[k - 1][1]

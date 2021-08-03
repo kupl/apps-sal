@@ -4,7 +4,6 @@ class Solution:
         if d == 0 or target <= 0:
             return d == 0 and target == 0
         res = 0
-        for i in range(1, f+1):
+        for i in range(1, f + 1):
             res = (res + self.numRollsToTarget(d - 1, f, target - i)) % (10**9 + 7)
         return res
-

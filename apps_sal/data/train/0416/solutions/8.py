@@ -42,7 +42,7 @@ class Solution:
                 # if this parent is not colored :
                 if color[i2, j2, t2] is DRAW:
                     # if the parent can make a winning move (ie. mouse to MOUSE), do so
-                    if t2 == c: # winning move
+                    if t2 == c:  # winning move
                         color[i2, j2, t2] = c
                         queue.append((i2, j2, t2, c))
                     # else, this parent has degree[parent]--, and enqueue if all children

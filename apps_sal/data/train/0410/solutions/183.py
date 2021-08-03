@@ -9,4 +9,3 @@ class Solution:
         a.sort()
         print(a)
         return a[k - 1][1]
-

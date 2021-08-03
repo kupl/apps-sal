@@ -7,19 +7,19 @@ class Solution:
         for _ in range(n):
             x = dq.popleft()
             y = dq.popleft()
-            
+
             if x < y:
-                x,y = y,x
-            
+                x, y = y, x
+
             if winner == x:
                 num_wins += 1
             else:
                 winner = x
                 num_wins = 1
-                
+
             dq.appendleft(x)
             dq.append(y)
-            
+
             if num_wins == K:
                 return winner
         return dq[0]

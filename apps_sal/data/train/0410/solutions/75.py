@@ -7,14 +7,13 @@ class Solution:
                 if reduced % 2 == 0:
                     reduced = reduced / 2
                 else:
-                    reduced = 3*reduced+1
+                    reduced = 3 * reduced + 1
                 steps += 1
 
             return (steps)
 
-
         a = {}
-        for i in range(lo, hi+1):
+        for i in range(lo, hi + 1):
             steps = getSteps(i)
             if steps not in a:
                 a[steps] = [i]
@@ -26,4 +25,4 @@ class Solution:
             for val in a[key]:
                 r.append(val)
 
-        return r[k-1]
+        return r[k - 1]

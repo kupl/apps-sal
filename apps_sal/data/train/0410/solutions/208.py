@@ -19,7 +19,7 @@ class Solution:
 
             return count_steps(x, count, memo)
 
-        for x in range(lo, hi+1):
+        for x in range(lo, hi + 1):
             memo[x] = count_steps(x, 0, memo)
 
-        return sorted(memo.items(), key=lambda x: x[1])[k-1][0]
+        return sorted(memo.items(), key=lambda x: x[1])[k - 1][0]

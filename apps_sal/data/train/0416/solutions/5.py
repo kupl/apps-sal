@@ -4,6 +4,7 @@ class Solution:
         # result: 0-draw, 1-mouse win, 2-cat win
 
         cache = {}
+
         def dfs(s, visited):
             if s in cache:
                 return cache[s]
@@ -19,16 +20,16 @@ class Solution:
         def sorted_neighbor(node, dest):
             nbs = sorted([(n, dist_mat[n][dest]) for n in graph[node]], key=lambda x: x[1])
             return [t[0] for t in nbs]
-            
+
         def dfs_m(s, visited):
             if 0 in graph[s[1]]:
-                return 1 # mouse-win
+                return 1  # mouse-win
 
             cat_nbs = set([x for x in graph[s[2]] if x != 0])
             nbs = sorted_neighbor(s[1], 0)
             hold_move = 0
             for node in nbs:
-                if node == s[2] or node in cat_nbs: # mouse-lose
+                if node == s[2] or node in cat_nbs:  # mouse-lose
                     continue
 
                 s2 = (1, node, s[2])
@@ -38,18 +39,18 @@ class Solution:
 
                 ret = dfs(s2, visited)
                 if ret == 1:
-                    return 1 # mouse-win
+                    return 1  # mouse-win
                 if ret == 0:
                     hold_move += 1
 
-            if hold_move: 
-                return 0 # draw
+            if hold_move:
+                return 0  # draw
             else:
-                return 2 # cat-win
-        
+                return 2  # cat-win
+
         def dfs_c(s, visited):
             if s[1] in graph[s[2]]:
-                return 2 # cat-win
+                return 2  # cat-win
 
             nbs = sorted_neighbor(s[2], s[1])
             hold_move = 0
@@ -63,14 +64,14 @@ class Solution:
                     continue
                 ret = dfs(s2, visited)
                 if ret == 2:
-                    return 2 # cat-win
+                    return 2  # cat-win
                 if ret == 0:
                     hold_move += 1
 
             if hold_move:
-                return 0 # draw
+                return 0  # draw
             else:
-                return 1 # mouse-win
+                return 1  # mouse-win
 
         INF_DIST = float('inf')
 
@@ -93,8 +94,7 @@ class Solution:
                     Mat[i][0] = Mat[0][i]
 
             return Mat
-        
+
         dist_mat = floyd_dist_modified()
         visited = set()
         return dfs((0, 1, 2), visited)
-

@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
         last_winner = 0
@@ -20,4 +21,3 @@ class Solution:
                 num_wins = 1
                 last_winner = winner
         return last_winner
-

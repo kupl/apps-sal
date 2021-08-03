@@ -24,24 +24,24 @@ class Solution:
                 ways to get 4 from first dice and getting 2 from second dice +
                 ways to get 5 from first dice and getting 1 from second dice
     '''
-    def numRollsToTarget(self, d, f, target):
-        mod_v = 10 ** 9 + 7 
-        dp = [[0] * (target + 1) for _ in range(d+1)]
 
-        for i in range(1, f+1):
+    def numRollsToTarget(self, d, f, target):
+        mod_v = 10 ** 9 + 7
+        dp = [[0] * (target + 1) for _ in range(d + 1)]
+
+        for i in range(1, f + 1):
             if i > target:
                 break
-            #print(i)
+            # print(i)
             dp[1][i] = 1
-        #print(dp)
-        for i in range(2, d+1):
-            for j in range(i, target+1):
-                for k in range(1, f+1):
+        # print(dp)
+        for i in range(2, d + 1):
+            for j in range(i, target + 1):
+                for k in range(1, f + 1):
                     if j - k >= 0:
-                        dp[i][j] += dp[i-1][j-k]
+                        dp[i][j] += dp[i - 1][j - k]
                         dp[i][j] %= mod_v
                     else:
                         break
-        #print(dp)
+        # print(dp)
         return dp[d][target]
-

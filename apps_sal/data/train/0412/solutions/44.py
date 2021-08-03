@@ -6,7 +6,7 @@ class Solution:
         if d == 1:
             # print(f\"d {d} f {f} target {target} ans {int(target <= f)}\")
             return int(target <= f)
-        
+
         if (d, f, target) in memo:
             return memo[(d, f, target)]
 
@@ -23,4 +23,3 @@ class Solution:
         ans = self.numRolls(d, f, target, memo)
         # print(memo)
         return ans
-

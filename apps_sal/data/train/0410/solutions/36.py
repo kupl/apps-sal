@@ -1,7 +1,7 @@
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
         heap = []
-        for i in range(lo, hi+1):
+        for i in range(lo, hi + 1):
             ret = i
             steps = 0
             while ret != 1:

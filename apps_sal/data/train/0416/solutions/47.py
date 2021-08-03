@@ -14,11 +14,11 @@ class Solution:
                 return 0
             if (im, ic, nmove) in dp:
                 return dp[(im, ic, nmove)]
-                        
+
             wins = [0, 0, 0]
             ret = None
             if mouse_move:
-                for nxt in graph[im]:    
+                for nxt in graph[im]:
                     idx = dfs(nxt, ic, nmove + 1)
                     wins[idx] += 1
                     if idx == 1:
@@ -36,7 +36,7 @@ class Solution:
                         wins[idx] += 1
                         if idx == 2:
                             break
-                
+
                 if wins[2] > 0:
                     ret = 2
                 elif wins[0] > 0:
@@ -45,7 +45,6 @@ class Solution:
                     ret = 1
             dp[(im, ic, nmove)] = ret
             return ret
-        
+
         res = dfs(1, 2, 1)
         return res
-

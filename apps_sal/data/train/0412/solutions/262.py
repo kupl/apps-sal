@@ -7,6 +7,6 @@ class Solution:
             for j in range(1, target + 1):
                 k = 1
                 while k <= min(j, f):
-                    dp[i][j] = (dp[i][j] + dp[i - 1][j - k]) 
+                    dp[i][j] = (dp[i][j] + dp[i - 1][j - k])
                     k += 1
         return dp[d][target] % mod

@@ -14,4 +14,3 @@ class Solution:
             if count == k:
                 return arr[0]
         return arr[0]
-

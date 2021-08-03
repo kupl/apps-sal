@@ -1,13 +1,13 @@
 class Solution:
     def catMouseGame(self, graph):
-        TIE                     = 0
-        MOUSE_WIN               = 1
-        CAT_WIN                 = 2
-        MOUSE_TURN              = 'MOUSE'
-        CAT_TURN                = 'CAT'
-        HOLE_POSITION           = 0
-        INITIAL_MOUSE_POSITION  = 1
-        INITIAL_CAT_POSITION    = 2
+        TIE = 0
+        MOUSE_WIN = 1
+        CAT_WIN = 2
+        MOUSE_TURN = 'MOUSE'
+        CAT_TURN = 'CAT'
+        HOLE_POSITION = 0
+        INITIAL_MOUSE_POSITION = 1
+        INITIAL_CAT_POSITION = 2
 
         win_states = {}
         for m_pos, _ in enumerate(graph):
@@ -45,4 +45,3 @@ class Solution:
                             win_states[(m_pos, c_pos, turn)] = CAT_WIN
 
         return win_states[(1, 2, MOUSE_TURN)]
-

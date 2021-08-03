@@ -2,6 +2,7 @@ class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         # key = (num_rolls, target); value = (num_combinations)
         memo = {}
+
         def num_rolls_recur(d, target):
             key = (d, target)
             if key in memo:

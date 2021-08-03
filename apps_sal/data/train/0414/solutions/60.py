@@ -4,9 +4,9 @@ class Solution:
         if k > arr.index(maxs):
             return maxs
         dic = {}
-        
+
         ind = arr.index(maxs)
-    
+
         i = 0
         seen = set()
         while i < ind + 1:
@@ -24,12 +24,9 @@ class Solution:
             if k in seen:
                 break
             i += 1
-        
+
         lst = [k for k, v in list(dic.items()) if v == k]
         if lst:
             return lst[0]
         else:
             return max(arr)
-        
-        
-

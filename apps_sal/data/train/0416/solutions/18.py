@@ -112,6 +112,3 @@ class Solution:
                             que.append((m2, c2, t2))
 
         return color[1, 2, 1]
-
-
-

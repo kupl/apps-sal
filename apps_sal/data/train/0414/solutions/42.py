@@ -15,4 +15,3 @@ class Solution:
                 arr = arr[1:]
             #print(arr, count)
         return arr[0]
-

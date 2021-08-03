@@ -6,6 +6,7 @@ class Solution:
         q = deque(arr)
         winsSoFar = 0
         currentWinner = None
+
         def playRound():
             nonlocal currentWinner
             nonlocal winsSoFar
@@ -28,5 +29,3 @@ class Solution:
             if res != -1:
                 return res
         return currentWinner
-            
-

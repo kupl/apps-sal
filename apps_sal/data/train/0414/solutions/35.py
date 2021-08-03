@@ -14,6 +14,5 @@ class Solution:
                 winner = arr[1]
                 arr.append(arr[0])
                 del arr[0]
-                streak = 1       
+                streak = 1
         return winner
-

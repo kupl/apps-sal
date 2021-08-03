@@ -9,7 +9,7 @@ class Solution:
                 return int(dice == 0)
             elif target < 0 or dice <= 0:
                 return 0
-            else: # target >= 0 and dice >= 0
+            else:  # target >= 0 and dice >= 0
                 res = 0
                 for x in range(1, f + 1):
                     res += dp(dice - 1, target - x)

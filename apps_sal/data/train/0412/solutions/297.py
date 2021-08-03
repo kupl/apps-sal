@@ -1,6 +1,7 @@
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
-        memo= {}
+        memo = {}
+
         def rolls(dice, t):
             if t > f * dice:
                 memo[(dice, t)] = 0
@@ -17,6 +18,3 @@ class Solution:
             memo[(dice, t)] = solu
             return solu
         return rolls(d, target) % (10**9 + 7)
-                
-        
-

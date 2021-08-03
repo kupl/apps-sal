@@ -11,6 +11,3 @@ class Solution:
             if wins == k:
                 return prev
         return max(arr)
-            
-        
-

@@ -7,12 +7,12 @@ class Solution:
             elif n % 2:
                 return 1 + get_power(3 * n + 1)
             return 1 + get_power(n // 2)
-        
+
         nums = []
-        
+
         for i in range(lo, hi + 1):
             nums.append([get_power(i), i])
-        
+
         nums.sort()
-        
+
         return nums[k - 1][1]

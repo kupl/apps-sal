@@ -8,15 +8,15 @@ class Solution:
                 x = x / 2
             res += 1
         return res
-    
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         res = []
-        for i in range(lo, hi+1, 1):
+        for i in range(lo, hi + 1, 1):
             val = self.getSteps(i)
             res.append([i, val])
-            
+
         print(res)
-        res.sort(key = lambda x: (x[1], x[0]))
-        ans= [item[0] for item in res]
+        res.sort(key=lambda x: (x[1], x[0]))
+        ans = [item[0] for item in res]
         print(ans)
-        return ans[k-1]
+        return ans[k - 1]

@@ -17,7 +17,3 @@ class Solution:
                 count = 1
                 result = arr[0]
         return result
-                
-            
-            
-

@@ -65,4 +65,3 @@ class Solution:
 
         # return state[1,2,m].
         return s[1][2][0]
-

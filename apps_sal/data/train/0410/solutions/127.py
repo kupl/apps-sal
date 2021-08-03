@@ -3,17 +3,16 @@ class Solution:
         def getPower(n):
             step = 0
             while n != 1:
-                if n%2 == 0: n = int(n/2)
-                else: n = n*3+1
+                if n % 2 == 0:
+                    n = int(n / 2)
+                else:
+                    n = n * 3 + 1
                 step += 1
             return step
         ans = []
-        for i in range(lo, hi+1):
+        for i in range(lo, hi + 1):
             ip = getPower(i)
             ans.append((ip, i))
         # print(ans)
         ans.sort()
-        return ans[k-1][1]
-        
-        
-
+        return ans[k - 1][1]

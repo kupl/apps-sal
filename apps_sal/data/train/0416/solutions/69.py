@@ -4,7 +4,7 @@ class Solution:
         node = defaultdict(int)
         graphLen = len(graph)
         # key = (m0, c0, t)
-        stack = deque([]) 
+        stack = deque([])
         for l in graph[0]:
             for ci in range(1, graphLen):
                 if ci != l:
@@ -19,7 +19,7 @@ class Solution:
             node[(i, i, mouse)] = cat
             stack.append((i, i, cat, cat))
             stack.append((i, i, mouse, cat))
-            
+
         degree = {}
         for i in range(graphLen):
             for j in range(graphLen):
@@ -28,7 +28,7 @@ class Solution:
                         degree[(i, j, mouse)] = len(graph[i])
                     if (i, j, cat) not in stack:
                         degree[(i, j, cat)] = len(graph[j]) - (1 if 0 in graph[j] else 0)
-        
+
         while stack:
             m0, c0, t0, w = stack.popleft()
             if t0 == mouse:
@@ -38,7 +38,7 @@ class Solution:
                             node[(m0, move, cat)] = cat
                             stack.append((m0, move, cat, cat))
                 else:
-                    for move in graph[c0]:    
+                    for move in graph[c0]:
                         if move != 0 and (m0, move, cat) not in node:
                             degree[(m0, move, cat)] -= 1
                             if degree[(m0, move, cat)] == 0:
@@ -51,7 +51,7 @@ class Solution:
                             node[(move, c0, mouse)] = mouse
                             stack.append((move, c0, mouse, mouse))
                 else:
-                    for move in graph[m0]:    
+                    for move in graph[m0]:
                         if (move, c0, mouse) not in node:
                             degree[(move, c0, mouse)] -= 1
                             if degree[(move, c0, mouse)] == 0:
@@ -59,5 +59,3 @@ class Solution:
                                 stack.append((move, c0, mouse, cat))
         # print(node)
         return node[(1, 2, mouse)]
-                            
-
