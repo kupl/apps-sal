@@ -13,7 +13,8 @@ while n < p:
     else:
         m += (n - exp) * (p - 1)
 
-    if m <= x: count += 1 + (x - m) // (p * (p - 1))
+    if m <= x:
+        count += 1 + (x - m) // (p * (p - 1))
 
     n += 1
     exp = (exp * ainv) % p

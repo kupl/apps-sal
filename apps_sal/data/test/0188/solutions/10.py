@@ -34,7 +34,8 @@ def main():
             req -= middleSlot
             middleSlot = 0
 
-        if hand: req += 1
+        if hand:
+            req += 1
 
         # now accommodate rest of the pairs in the corner
         if cornerSlot >= req:
@@ -60,8 +61,10 @@ def main():
             slotForOne += 1
 
         #print('req now:', req)
-        if x % 2 == 1: single += 1
-        if req > 0: single += (req * 2)
+        if x % 2 == 1:
+            single += 1
+        if req > 0:
+            single += (req * 2)
 
         if single > 0:
             if slotForOne >= single:
@@ -76,8 +79,10 @@ def main():
         total -= 1
         single -= 1
 
-    if single: ans = 'NO'
-    else: ans = 'YES'
+    if single:
+        ans = 'NO'
+    else:
+        ans = 'YES'
     stdout.write(ans)
 
 

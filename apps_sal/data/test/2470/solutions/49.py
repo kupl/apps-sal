@@ -14,8 +14,10 @@ class Solution:
         dp = [[[None, None] for _ in range(M + 1)] for _ in range(N)]
 
         def solve(i, j, k):
-            if i == N: return 0
-            if j > M or (j == M and k == 1): return N + 1
+            if i == N:
+                return 0
+            if j > M or (j == M and k == 1):
+                return N + 1
             if dp[i][j][k] is None:
                 if i == 0:
                     dp[i][j][k] = min(solve(i + 1, to_index[arr1[0]], 0), 1 + solve(i + 1, 0, 1))

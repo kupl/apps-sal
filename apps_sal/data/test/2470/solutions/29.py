@@ -1,7 +1,9 @@
 class Solution:
     def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:
-        if not arr1: return 0
-        if not arr2: return arr1 == sorted(arr1)
+        if not arr1:
+            return 0
+        if not arr2:
+            return arr1 == sorted(arr1)
 
         arr2 = sorted(list(set(arr2)), reverse=True)
 
@@ -13,8 +15,10 @@ class Solution:
         for i in range(1, n):
             found_k = 0
             for j in range(n + 1):
-                if f[i - 1][j] < arr1[i]: f[i][j] = arr1[i]
-                if not j: continue
+                if f[i - 1][j] < arr1[i]:
+                    f[i][j] = arr1[i]
+                if not j:
+                    continue
                 va = f[i - 1][j - 1]
                 if not found_k:
                     if arr2[0] > va:
@@ -29,8 +33,10 @@ class Solution:
                         found_k = 1
                         f[i][j] = min(f[i][j], arr2[k])
                 else:
-                    while k + 1 < m and arr2[k + 1] > va: k += 1
+                    while k + 1 < m and arr2[k + 1] > va:
+                        k += 1
                     f[i][j] = min(f[i][j], arr2[k])
         for i, v in enumerate(f[-1]):
-            if v < inf: return i
+            if v < inf:
+                return i
         return -1

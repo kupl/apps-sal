@@ -18,13 +18,13 @@ def main():
             print("KOREAN")
 
 
-get_array = lambda: list(map(int, sys.stdin.readline().split()))
+def get_array(): return list(map(int, sys.stdin.readline().split()))
 
 
-get_ints = lambda: list(map(int, sys.stdin.readline().split()))
+def get_ints(): return list(map(int, sys.stdin.readline().split()))
 
 
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
 
 
 def __starting_point():

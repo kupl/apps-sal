@@ -13,6 +13,9 @@ def getStr(): return input().strip()
 n = getInt()
 for i in range(n):
     s = getStr()
-    if s[-2:] == 'po': print('FILIPINO')
-    if s[-2:] == 'su': print('JAPANESE')
-    if s[-5:] == 'mnida': print('KOREAN')
+    if s[-2:] == 'po':
+        print('FILIPINO')
+    if s[-2:] == 'su':
+        print('JAPANESE')
+    if s[-5:] == 'mnida':
+        print('KOREAN')
