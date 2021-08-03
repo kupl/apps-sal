@@ -3,5 +3,6 @@ def f(k, n):
     x = 2
     for i in range(k + 1, n + 2):
         fk += [fk[-1] + x]
-        if i % k == 0: x = fk[i // k]
+        if i % k == 0:
+            x = fk[i // k]
     return fk[n]

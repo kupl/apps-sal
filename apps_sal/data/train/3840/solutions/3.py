@@ -9,6 +9,8 @@ for a in range(2, 1001):
         x *= a
 memo = sorted(memo.items())
 
+
 def largest_power(n):
-    if n <= 4: return n>1, -1
-    return memo[bisect(memo, (n,))-1]
+    if n <= 4:
+        return n > 1, -1
+    return memo[bisect(memo, (n,)) - 1]

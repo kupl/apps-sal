@@ -4,4 +4,3 @@ def cycle(sequence):
         if 0 <= i < j:
             return [i, j - i]
     return []
-

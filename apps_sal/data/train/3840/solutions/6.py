@@ -1,3 +1,4 @@
+from bisect import bisect
 MAX = 10 ** 7
 counter = [0] * MAX
 for base in range(2, int(MAX ** .5) + 1):
@@ -12,7 +13,7 @@ for power, frequency in enumerate(counter):
         powers.append(power)
         frequencies.append(frequency)
 
-from bisect import bisect
+
 def largest_power(n):
-    idx = bisect(powers, n-1) - 1
+    idx = bisect(powers, n - 1) - 1
     return powers[idx], frequencies[idx]

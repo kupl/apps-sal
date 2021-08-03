@@ -20,9 +20,9 @@ def word_wrap(text, limit):
                     prev = 0
                 current += 1
             else:
-                words[i-1] += " "
+                words[i - 1] += " "
                 current = len(word) + 1 if i < len(words) - 1 else len(word)
-                if current  == limit:
+                if current == limit:
                     words[i] += " "
                     current = 0
 

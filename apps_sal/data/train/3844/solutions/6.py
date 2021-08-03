@@ -1,2 +1,2 @@
 from numpy import poly
-poly_from_roots=lambda r:list(reversed(poly(r))) if len(r) else [1]
+def poly_from_roots(r): return list(reversed(poly(r))) if len(r) else [1]
