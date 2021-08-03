@@ -38,5 +38,7 @@ M.a = [[2, 1, 1, 0, 1, 2],
 sx -= 1
 sy -= 1
 r = M ** t
-f = lambda i: (r.a[i][0] * sx + r.a[i][1] * sy + r.a[i][2] * dx + r.a[i][3] * dy + r.a[i][5]) % mod + 1
+def f(i): return (r.a[i][0] * sx + r.a[i][1] * sy + r.a[i][2] * dx + r.a[i][3] * dy + r.a[i][5]) % mod + 1
+
+
 print(f(0), f(1))

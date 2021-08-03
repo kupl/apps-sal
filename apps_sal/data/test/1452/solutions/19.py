@@ -6,7 +6,7 @@ cols = list(map(int, input().split()))
 
 can = True
 for r in range(len(rows)):
-    rc = rows[r];
+    rc = rows[r]
     for i in range(rc):
         if(grid[r][i] == 0):
             can = False
@@ -21,7 +21,7 @@ for r in range(len(rows)):
 for c in range(len(cols)):
     if(not can):
         break
-    cc = cols[c];
+    cc = cols[c]
     for i in range(cc):
         if(grid[i][c] == 0):
             can = False

@@ -2,7 +2,7 @@ import sys
 from collections import defaultdict
 from itertools import combinations
 from itertools import permutations
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
 
 
 def write(*args, sep="\n"):

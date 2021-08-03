@@ -14,7 +14,8 @@ for i in ' ' * int(input()):
         LL.pop(index1)
         min2 = min(LL)
         index2 = LL.index(min2)
-        if index2 >= index1: index2 += 1
+        if index2 >= index1:
+            index2 += 1
         print(sum(L) * 2 + (m - n) * (min1 + min2))
         for i in range(n):
             if i < n - 1:

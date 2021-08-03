@@ -4,7 +4,8 @@ s = input()
 n = len(s)
 
 f = [1] * (n + 1)
-for i in range(1, n + 1): f[i] = i * f[i - 1] % mod
+for i in range(1, n + 1):
+    f[i] = i * f[i - 1] % mod
 finv = [pow(x, mod - 2, mod) for x in f]
 
 op = 0

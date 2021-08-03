@@ -7,7 +7,8 @@ m = [[None] * w for _ in range(h)]
 for i in range(h):
     for j in range(r[i]):
         m[i][j] = True
-    if r[i] < w: m[i][r[i]] = False
+    if r[i] < w:
+        m[i][r[i]] = False
 for j in range(w):
     for i in range(c[j]):
         if m[i][j] == False:

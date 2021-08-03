@@ -28,7 +28,8 @@ def bfs(src, dest, adj):
         i += 1
         for node in queue:
             for vertex in adj[node]:
-                if node == src and vertex == dest: continue
+                if node == src and vertex == dest:
+                    continue
                 if not visited[vertex]:
                     newq.append(vertex)
                     visited[vertex] = True

@@ -9,6 +9,7 @@ def prime_eratosthenes(n):
                 prime_list.append(j)
     print(len(z))
 
+
     # print(prime_list)
 x = int(input())
-prime_eratosthenes(x);
+prime_eratosthenes(x)

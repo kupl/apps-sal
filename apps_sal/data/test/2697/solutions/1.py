@@ -20,7 +20,7 @@ def SieveOfEratosthenes(n):
     # Print all prime numbers
     for p in range(2, n + 1):
         if prime[p]:
-            count += 1;
+            count += 1
 
 
 SieveOfEratosthenes(int(input()))
