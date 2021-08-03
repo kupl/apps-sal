@@ -11,4 +11,5 @@ for _ in range(t):
                 print(n, m)
                 suc = True
                 break
-    if not suc: print(-1)
+    if not suc:
+        print(-1)

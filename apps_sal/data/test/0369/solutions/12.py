@@ -20,7 +20,8 @@ def main():
             else:
                 if s[i - sa] == "0":
                     max_i = i - sa
-        if flag: break
+        if flag:
+            break
         else:
             if max_i != i:
                 ans.append(i - max_i)

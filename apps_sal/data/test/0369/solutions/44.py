@@ -8,7 +8,8 @@ while i > 0:
         ans.append(i)
         break
     for j in range(M, 0, -1):
-        if S[i - j] == '1': continue
+        if S[i - j] == '1':
+            continue
         ans.append(j)
         i -= j
         break

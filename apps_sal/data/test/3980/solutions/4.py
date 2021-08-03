@@ -2,9 +2,9 @@ import math
 
 
 def ones(n):
-    number_of_bits = (int)(math.floor(math.log(n)
-                                      / math.log(2))) + 1;
-    return [((1 << number_of_bits) - 1) ^ n, (1 << number_of_bits) - 1];
+    number_of_bits = (int)(math.floor(math.log(n) /
+                                      math.log(2))) + 1;
+    return [((1 << number_of_bits) - 1) ^ n, (1 << number_of_bits) - 1]
 
 
 n = int(input())

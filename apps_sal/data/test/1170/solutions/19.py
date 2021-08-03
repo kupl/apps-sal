@@ -14,7 +14,8 @@ for _ in range(int(input())):
     x = int(input())
     found = None
     for i in range(1, N):
-        if i * i - x <= 0: continue
+        if i * i - x <= 0:
+            continue
         low, high = 1, N - 1
         while low <= high:
             mid = (low + high) >> 1
@@ -28,5 +29,7 @@ for _ in range(int(input())):
                 high = mid - 1
         if found is not None:
             break
-    if found is None: print(-1)
-    else: print(*found)
+    if found is None:
+        print(-1)
+    else:
+        print(*found)

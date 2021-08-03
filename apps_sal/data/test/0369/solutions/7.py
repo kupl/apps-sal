@@ -7,8 +7,10 @@ for i in range(n - 1, -1, -1):
     if int(s[i]) == 1:
         dp[i] = -1
         continue
-    while r > i + m: r -= 1
-    while dp[r] == -1: r -= 1
+    while r > i + m:
+        r -= 1
+    while dp[r] == -1:
+        r -= 1
     if r == i:
         print((-1))
         return
@@ -16,7 +18,8 @@ for i in range(n - 1, -1, -1):
 now = 0
 ans = []
 for i in range(n + 1):
-    if dp[i] == -1: continue
+    if dp[i] == -1:
+        continue
     if dp[i] != dp[now]:
         ans.append(i - now)
         now = i

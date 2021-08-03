@@ -14,7 +14,10 @@ while True:
             print(-1)
             ok = 0
             break
-    if ok == 0: break
-    if now == N: break
+    if ok == 0:
+        break
+    if now == N:
+        break
 
-if ok == 1: print(' '.join(history[::-1]))
+if ok == 1:
+    print(' '.join(history[::-1]))

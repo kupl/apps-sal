@@ -4,7 +4,8 @@ i = 0
 a = []
 while i < n:
     j = min(n, i + m)
-    while s[j]: j -= 1
+    while s[j]:
+        j -= 1
     if j == i:
         print(-1)
         return

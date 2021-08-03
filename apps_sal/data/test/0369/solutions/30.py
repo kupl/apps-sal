@@ -9,7 +9,8 @@ def solve():
     ans = []
     while now > 0:
         for i in reversed(range(1, M + 1)):
-            if now - i < 0: continue
+            if now - i < 0:
+                continue
             elif S[now - i] == "0":
                 ans.append(i)
                 now -= i

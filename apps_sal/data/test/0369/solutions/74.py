@@ -16,8 +16,10 @@ ans = []
 pos = N
 while pos > 0:
     for m in range(M, 0, -1):
-        if pos - m < 0: continue
-        if S[pos - m] == "1": continue
+        if pos - m < 0:
+            continue
+        if S[pos - m] == "1":
+            continue
 
         ans.append(m)
         pos -= m

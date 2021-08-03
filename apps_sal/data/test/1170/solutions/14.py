@@ -23,4 +23,5 @@ def get(x):
 
 
 n = int(input())
-for i in range(n): get(int(input()))
+for i in range(n):
+    get(int(input()))

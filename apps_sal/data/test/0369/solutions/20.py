@@ -2,7 +2,9 @@
 
 from collections import deque
 
-LI = lambda: list(map(int, input().split()))
+
+def LI(): return list(map(int, input().split()))
+
 
 # input
 N, M = LI()

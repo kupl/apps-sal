@@ -14,9 +14,12 @@ def solve():
                 ans.appendleft(i)
                 current -= i
                 break
-        else: break
-    if current > 0: print(-1)
-    else: print(*ans, sep=" ")
+        else:
+            break
+    if current > 0:
+        print(-1)
+    else:
+        print(*ans, sep=" ")
 
     return 0
 

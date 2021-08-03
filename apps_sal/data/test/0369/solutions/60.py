@@ -8,5 +8,7 @@ while i < n:
             ans.append(j)
             i += j
             break
-        if j == 1: print(-1); return
+        if j == 1:
+            print(-1)
+            return
 print(*ans[::-1])
