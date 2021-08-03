@@ -1,1 +1,1 @@
-enough = lambda cap, on, wait: 0 if cap - on - wait >= 0 else abs(cap - on - wait)
+def enough(cap, on, wait): return 0 if cap - on - wait >= 0 else abs(cap - on - wait)

@@ -1,4 +1,4 @@
-def mouth_size(animal): 
+def mouth_size(animal):
     c = animal.lower()
     a = "small"
     b = "wide"
@@ -7,4 +7,3 @@ def mouth_size(animal):
     else:
         return b
   # code here
-

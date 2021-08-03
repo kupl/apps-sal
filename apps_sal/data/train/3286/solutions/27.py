@@ -6,4 +6,3 @@ def enough(cap, on, wait):
         return x - cap
     else:
         return 'Not Sure'
-

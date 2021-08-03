@@ -1,4 +1,4 @@
-def mouth_size(animal): 
+def mouth_size(animal):
     x = 'alligator'
     if animal.casefold() == x.casefold():
         return 'small'

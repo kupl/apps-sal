@@ -1,3 +1,2 @@
 import math
-how_many_times = lambda year,ind: math.ceil(year/ind)
-
+def how_many_times(year, ind): return math.ceil(year / ind)

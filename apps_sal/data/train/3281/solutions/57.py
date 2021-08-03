@@ -1,4 +1,6 @@
 from calendar import Calendar
+
+
 def unlucky_days(year):
     x = Calendar()
     lst = []

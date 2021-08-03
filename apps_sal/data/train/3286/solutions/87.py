@@ -5,4 +5,4 @@ def enough(cap, on, wait):
 #         return 0
 #     else:
 #         return wait-cap
-    return max(wait-cap, 0)
+    return max(wait - cap, 0)

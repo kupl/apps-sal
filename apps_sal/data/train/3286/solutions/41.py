@@ -4,4 +4,3 @@ def enough(cap, on, wait):
         return 0
     else:
         return enough_space
-

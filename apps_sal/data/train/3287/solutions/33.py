@@ -1,7 +1,6 @@
-def mouth_size(animal): 
-    if animal.upper() != 'ALLIGATOR' :
+def mouth_size(animal):
+    if animal.upper() != 'ALLIGATOR':
         return 'wide'
-    else :
+    else:
         return 'small'
   # code here
-

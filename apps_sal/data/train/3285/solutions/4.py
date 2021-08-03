@@ -1,5 +1,6 @@
 import re
 
+
 def trump_detector(trump_speech):
     matches = re.findall(r'([aeiou])(\1*)', trump_speech.lower(), flags=re.I)
     if matches:

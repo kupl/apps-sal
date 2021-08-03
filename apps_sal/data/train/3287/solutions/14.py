@@ -1,1 +1,1 @@
-mouth_size = lambda animal: 'small' if animal.lower() == 'alligator' else 'wide'
+def mouth_size(animal): return 'small' if animal.lower() == 'alligator' else 'wide'

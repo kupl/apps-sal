@@ -4,7 +4,7 @@ import calendar
 def unlucky_days(year):
     c = calendar.Calendar()
     counter = 0
-    for month in range(1,13):
+    for month in range(1, 13):
         print(f"Months is {month}")
         for day in c.itermonthdays2(year, month):
             print(f"Day is {day}")

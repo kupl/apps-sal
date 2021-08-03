@@ -1,2 +1,2 @@
 import math
-how_many_times = lambda ap, ip: math.ceil(ap / ip)
+def how_many_times(ap, ip): return math.ceil(ap / ip)

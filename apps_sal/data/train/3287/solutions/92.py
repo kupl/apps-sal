@@ -1,4 +1,4 @@
-def mouth_size(animal): 
+def mouth_size(animal):
     mouth = ""
     if animal.casefold() != "alligator":
         mouth = "wide"

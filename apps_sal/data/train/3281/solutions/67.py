@@ -1,4 +1,6 @@
 import datetime
+
+
 def unlucky_days(year):
     friday_13 = 0
     months = range(1, 13)
