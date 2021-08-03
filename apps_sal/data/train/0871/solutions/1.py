@@ -37,24 +37,24 @@ def solve(m, row, col):
                 if lw and j - d >= 0:
                     if m[i][j - d] == 'R':
                         cnt += 1
-                    elif m[i][j-d] == '#':
+                    elif m[i][j - d] == '#':
                         lw = False
                 if rw and j + d < col:
                     if m[i][j + d] == 'L':
                         cnt += 1
-                    elif m[i][j+d] == '#':
+                    elif m[i][j + d] == '#':
                         rw = False
 
                 if uw and i - d >= 0:
                     if m[i - d][j] == 'D':
                         cnt += 1
-                    elif m[i-d][j] == '#':
+                    elif m[i - d][j] == '#':
                         uw = False
 
                 if dw and i + d < row:
                     if m[i + d][j] == 'U':
                         cnt += 1
-                    elif m[i+d][j] == '#':
+                    elif m[i + d][j] == '#':
                         dw = False
                 if cnt > 1:
                     ans += (cnt * (cnt - 1)) // 2
@@ -71,5 +71,6 @@ def read():
             m[i] = s
         ans = solve(m, r, c)
         print(ans)
+
 
 read()

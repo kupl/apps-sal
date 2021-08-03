@@ -23,4 +23,3 @@ for _ in range(eval(input())):
         print(ans)
     else:
         print(-1)
-

@@ -1,7 +1,7 @@
 # cook your dish here
-for t in range (int(input())):
+for t in range(int(input())):
     x, y = map(int, input().split())
     ans = 0
-    for i in range (y, x + 1, y):
+    for i in range(y, x + 1, y):
         ans += int(str(i)[-1])
     print(ans)

@@ -26,4 +26,3 @@ for _ in range(t):
                         ans += 1
                 a[i][j] = None
     print(ans)
-
