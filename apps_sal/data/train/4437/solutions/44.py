@@ -6,4 +6,3 @@ def cookie(x):
         return s + 'Monica!'
     else:
         return s + 'the dog!'
-

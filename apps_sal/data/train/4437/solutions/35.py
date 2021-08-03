@@ -1,12 +1,11 @@
 def cookie(x):
     name = ""
     if x is str(x):
-        name="Zach!"
+        name = "Zach!"
     elif x is float(x) or x is int(x):
-        name="Monica!"
+        name = "Monica!"
     else:
-        name="the dog!"
-        
-    return f"Who ate the last cookie? It was {name}"
-    #Good Luck
+        name = "the dog!"
 
+    return f"Who ate the last cookie? It was {name}"
+    # Good Luck

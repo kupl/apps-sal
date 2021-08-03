@@ -17,5 +17,5 @@ def logical_calc(array, op):
                 aux = True
             else:
                 aux = False
-            i+=1
+            i += 1
         return aux

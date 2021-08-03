@@ -1,4 +1,4 @@
-from re import findall;
+from re import findall
 from functools import reduce
-gcd=lambda a,b: gcd(b,a%b) if b else a;
-has_subpattern=lambda s: len(s)>1 and reduce(gcd, (len(e[0]+e[1]) for e in findall(r"(.)(\1*)", "".join(sorted(s)))))>1
+def gcd(a, b): return gcd(b, a % b) if b else a
+def has_subpattern(s): return len(s) > 1 and reduce(gcd, (len(e[0] + e[1]) for e in findall(r"(.)(\1*)", "".join(sorted(s))))) > 1

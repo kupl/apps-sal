@@ -1,7 +1,7 @@
 def cookie(x):
     if type(x) == str:
         x = 'Zach'
-    elif type(x) ==int or type(x) == float:
+    elif type(x) == int or type(x) == float:
         x = 'Monica'
     else:
         x = 'the dog'

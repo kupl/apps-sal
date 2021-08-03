@@ -7,4 +7,4 @@ def logical_calc(array, op):
             else:
                 result = True
         return result
-    return all(array) if op =='AND' else any(array)
+    return all(array) if op == 'AND' else any(array)

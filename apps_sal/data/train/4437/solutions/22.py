@@ -5,5 +5,5 @@ def cookie(x):
         name = "Zach"
     else:
         name = "the dog"
-        
+
     return (f"Who ate the last cookie? It was {name}!")

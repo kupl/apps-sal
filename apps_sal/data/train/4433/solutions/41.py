@@ -13,5 +13,5 @@ def logical_calc(array, op):
             state = array[i] if i == 0 else state ^ array[i]
     else:
         return f"input - {op} - not recognized"
-    
+
     return state

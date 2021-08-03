@@ -1,5 +1,6 @@
 import re
 
+
 def vowel_2_index(string):
     return re.sub(
         re.compile('[euioa]', re.I),

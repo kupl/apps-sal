@@ -7,5 +7,5 @@ def logical_calc(array, op):
             res |= x
         else:
             res ^= x
-        
-    return res #boolean
+
+    return res  # boolean

@@ -1,6 +1,7 @@
 from functools import reduce
 import operator
 
+
 def logical_calc(array, op):
     if op == "AND":
         o = operator.and_
@@ -8,5 +9,5 @@ def logical_calc(array, op):
         o = operator.or_
     elif op == "XOR":
         o = operator.xor
-        
+
     return reduce(o, array)

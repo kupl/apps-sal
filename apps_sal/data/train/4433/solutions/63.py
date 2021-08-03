@@ -1,5 +1,5 @@
 def logical_calc(array, op):
-    
+
     if False in array and op == "AND":
         return False
     elif op == "AND":
@@ -16,5 +16,3 @@ def logical_calc(array, op):
         return False
     elif int(array.count(False)) % 2 == 1 and op == 'XOR':
         return False
-    
-

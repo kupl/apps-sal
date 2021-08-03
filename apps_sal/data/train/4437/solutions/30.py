@@ -7,4 +7,3 @@ def cookie(x):
         return "Who ate the last cookie? It was Monica!"
     if isinstance(x, int):
         return "Who ate the last cookie? It was Monica!"
-

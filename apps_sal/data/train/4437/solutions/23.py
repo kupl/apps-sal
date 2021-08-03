@@ -1,5 +1,5 @@
 def cookie(x):
-    #Good Luck
+    # Good Luck
     if type(x) is str:
         return "Who ate the last cookie? It was Zach!"
     elif isinstance(x, float):

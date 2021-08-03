@@ -1,5 +1,6 @@
 from typing import Any
 
+
 def cookie(x: Any) -> str:
     """ Get an information who ate the last cookie. """
     cookie_eaters = {

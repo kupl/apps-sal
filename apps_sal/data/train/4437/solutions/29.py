@@ -6,4 +6,3 @@ def cookie(x):
         'bool': 'the dog',
     }[type(x).__name__]
     return f"Who ate the last cookie? It was {name}!"
-
