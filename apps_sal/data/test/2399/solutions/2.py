@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 Q = int(input())
 for _ in range(Q):

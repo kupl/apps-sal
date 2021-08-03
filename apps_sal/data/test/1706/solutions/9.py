@@ -1,7 +1,8 @@
 # import sys; input = sys.stdin.buffer.readline
 # sys.setrecursionlimit(10**7)
 from collections import defaultdict
-mod = 10 ** 9 + 7; INF = float("inf")
+mod = 10 ** 9 + 7
+INF = float("inf")
 
 
 def getlist():
