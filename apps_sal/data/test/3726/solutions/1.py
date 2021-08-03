@@ -91,11 +91,15 @@ def max_flow():
 
 f = max_flow()
 
-od = len(OD); ev = len(EV)
+od = len(OD)
+ev = len(EV)
 answer = f
-od -= f; ev -= f
-answer += 2 * (od // 2); od %= 2
-answer += 2 * (ev // 2); ev %= 2
+od -= f
+ev -= f
+answer += 2 * (od // 2)
+od %= 2
+answer += 2 * (ev // 2)
+ev %= 2
 if od:
     answer += 3
 print(answer)

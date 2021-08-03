@@ -9,6 +9,7 @@ m = n - z - p
 idx = n
 cnt = p * (p - 1) // 2 + z * p
 for i in range(m):
-    while l[idx - 1] + l[i] > 0: idx -= 1
+    while l[idx - 1] + l[i] > 0:
+        idx -= 1
     cnt += n - idx
 print(cnt)
