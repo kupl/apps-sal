@@ -6,14 +6,14 @@ class Solution:
         for b in bills:
             if b == 5:
                 five += 1
-                
+
             if b == 10:
                 if five > 0:
                     five -= 1
                     ten += 1
                 else:
                     return False
-            
+
             if b == 20:
                 if ten > 0 and five > 0:
                     ten -= 1
@@ -22,9 +22,5 @@ class Solution:
                     five -= 3
                 else:
                     return False
-            
-        return True
-            
-                
-                
 
+        return True

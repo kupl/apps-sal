@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
         # temp=np.unique(arr)
@@ -8,4 +10,3 @@ class Solution:
         #         return i
         return collections.Counter(arr).most_common(1)[0][0]
         # print(collections.Counter(arr).most_common(1))
-

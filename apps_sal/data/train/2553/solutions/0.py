@@ -6,4 +6,4 @@ class Solution:
                 for composite in range(prime * prime, n + 1, prime):
                     primes[composite] = False
         cnt = sum(primes[2:])
-        return math.factorial(cnt) * math.factorial(n - cnt) % (10**9 + 7)        
+        return math.factorial(cnt) * math.factorial(n - cnt) % (10**9 + 7)

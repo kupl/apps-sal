@@ -5,5 +5,3 @@ class Solution:
         for n in set(arr):
             if arr.count(n) > len_arr * 0.25:
                 return n
-
-

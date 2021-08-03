@@ -5,13 +5,13 @@ class Solution:
         tens = deque()
         try:
             for i in bills:
-                if i==5:
+                if i == 5:
                     fives.append(5)
-                elif i==10:
+                elif i == 10:
                     tens.append(10)
                     fives.pop()
                 else:
-                    if len(tens) !=0 and len(fives)!=0:
+                    if len(tens) != 0 and len(fives) != 0:
                         tens.pop()
                         fives.pop()
                     else:
@@ -21,5 +21,3 @@ class Solution:
         except IndexError:
             return False
         return True
-
-

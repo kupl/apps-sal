@@ -1,7 +1,7 @@
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
         bill = [0] * 3
-            
+
         for b in bills:
             if b == 20:
                 bill[2] += 1
@@ -15,8 +15,8 @@ class Solution:
                 bill[0] -= 1
             else:
                 bill[0] += 1
-                
+
             if sum(1 for i in bill if i < 0) > 0:
-                return False                
-        
+                return False
+
         return True

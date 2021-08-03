@@ -10,4 +10,3 @@ class Solution:
                 counter = temp
                 digit = i
         return (digit)
-

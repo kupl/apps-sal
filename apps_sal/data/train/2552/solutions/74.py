@@ -3,4 +3,3 @@ class Solution:
         for i in arr:
             if arr.count(i) > len(arr) // 4:
                 return i
-

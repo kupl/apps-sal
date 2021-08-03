@@ -2,7 +2,7 @@ class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
         arrLen = len(arr)
         maxCount = 0
-        maxCountNumber=0
+        maxCountNumber = 0
         arrDict = {}
         for i in range(arrLen):
             if arr[i] not in arrDict:
@@ -12,5 +12,3 @@ class Solution:
                     maxCountNumber = arr[i]
                     maxCount = numCount
         return maxCountNumber
-                    
-

@@ -4,4 +4,3 @@ class Solution:
         for i in set(arr):
             if arr.count(i) > c:
                 return i
-

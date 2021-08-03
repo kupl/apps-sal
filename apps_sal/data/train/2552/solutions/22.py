@@ -5,8 +5,5 @@ class Solution:
             if arr[i] not in unique_values:
                 unique_values.append(arr[i])
         for j in range(0, len(unique_values)):
-            if arr.count(unique_values[j])/len(arr)>0.25:
+            if arr.count(unique_values[j]) / len(arr) > 0.25:
                 return unique_values[j]
-            
-        
-

@@ -3,8 +3,7 @@ class Solution:
         fives = 0
         tens = 0
         twenties = 0
-        
-        
+
         for i in bills:
             print(f'fives {fives}')
             print(f'tens {tens}')
@@ -16,7 +15,7 @@ class Solution:
                 if fives > 0:
                     fives -= 1
                 else:
-                    return False                
+                    return False
             if i == 20:
                 twenties += 1
                 if tens > 0 and fives > 0:
@@ -27,10 +26,3 @@ class Solution:
                 else:
                     return False
         return True
-
-                
-            
-
-                    
-        
-

@@ -6,8 +6,6 @@ class Solution:
 #         for i,j in c.items():
 #             if float(j) > p:
 #                 return i
-        for i,j in list(c.items()):
-            if j==max(c.values()):
+        for i, j in list(c.items()):
+            if j == max(c.values()):
                 return i
-        
-

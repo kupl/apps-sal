@@ -1,7 +1,7 @@
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
 
-        threshold = len(arr)//4
+        threshold = len(arr) // 4
         numdic = {}
         for num in arr:
 
@@ -12,4 +12,3 @@ class Solution:
 
             if numdic[str(num)] > threshold:
                 return num
-

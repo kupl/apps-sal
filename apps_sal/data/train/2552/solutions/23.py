@@ -1,16 +1,13 @@
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
-        
- 
+
         k = list(set(arr))
 
-#print(k)
+# print(k)
 
         tmp = []
 
         size = len(arr)
-
-
 
         for i in k:
             tmp.append(arr.count(i))
@@ -19,9 +16,9 @@ class Solution:
 
         indexing = tmp.index(maximum)
 
-        z = (maximum / size)*100
+        z = (maximum / size) * 100
 
-        if(z>=25):
+        if(z >= 25):
             return (k[indexing])
         else:
             return 0

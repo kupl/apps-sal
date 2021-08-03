@@ -1,6 +1,6 @@
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
-        
+
         cnt10Bill, cnt20Bill, cnt5Bill = 0, 0, 0
         for b in bills:
             if b == 5:
@@ -11,7 +11,7 @@ class Solution:
                     cnt5Bill -= 1
                 else:
                     return False
-                
+
             elif b == 20:
                 cnt20Bill += 1
                 if cnt5Bill >= 1 and cnt10Bill >= 1:
@@ -23,8 +23,3 @@ class Solution:
                     return False
             print((cnt5Bill, cnt10Bill, cnt20Bill))
         return True
-    
-                
-                
-                
-
