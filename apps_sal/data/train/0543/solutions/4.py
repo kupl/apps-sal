@@ -18,5 +18,3 @@ for i in range(int(input())):
                 break
         else:
             print("yes")
-    
-    
