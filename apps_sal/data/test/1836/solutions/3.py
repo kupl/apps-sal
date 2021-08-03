@@ -7,7 +7,8 @@ spine_count = [0] * (n + 1)
 
 
 def find_best_hhog_tail(z):
-    if colored[z]: return
+    if colored[z]:
+        return
     colored[z] = True
     for y in G[z]:
         if not colored[y]:

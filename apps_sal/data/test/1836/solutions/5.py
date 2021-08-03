@@ -16,8 +16,10 @@ for line in sys.stdin:
         b = int(b) - 1
         ady2[a].append(b)
         ady2[b].append(a)
-        if a > b: ady[a].append(b)
-        else: ady[b].append(a)
+        if a > b:
+            ady[a].append(b)
+        else:
+            ady[b].append(a)
     l += 1
 
 c = [0] * n
@@ -39,6 +41,7 @@ mx = 0
 for i in range(n):
     cl = colamaslarga(i)
     res = cl * len(ady2[i])
-    if res > mx: mx = res
+    if res > mx:
+        mx = res
 
 print(mx)

@@ -7,4 +7,4 @@ for i in range(0, n):
     p = max(0, math.ceil((current_day - s) / d))
     current_day = s + p * d
 
-print(current_day);
+print(current_day)

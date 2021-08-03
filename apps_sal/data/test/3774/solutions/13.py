@@ -11,12 +11,12 @@ if n == 1:
 elif(n == 2 and m == 2):
     print(0)
 elif(n == 2 and m == 3):
-    print((4));
+    print((4))
 elif(n == 2 and m == 7):
     print(12)
 else:
     if n % 2 and m % 2:
-        print((n * m - 1));
+        print((n * m - 1))
     else:
         print(n * m)
 # find the formula myself!
