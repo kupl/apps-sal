@@ -4,24 +4,24 @@ class people:
         self.name = name
         self.son = []
         self.alive = True
+
+
 class ThroneInheritance:
-    
 
     def __init__(self, kingName: str):
         self.king = people(kingName)
         self.all_people = {}
         self.all_people[kingName] = self.king
-        
 
     def birth(self, parentName: str, childName: str) -> None:
-        
+
         self.all_people[childName] = people(childName)
         p = self.all_people[parentName]
         p.son.append(self.all_people[childName])
-        
+
     def death(self, name: str) -> None:
         self.all_people[name].alive = False
-        
+
     def getInheritanceOrder(self) -> List[str]:
         ans = []
         p = self.king
@@ -45,4 +45,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

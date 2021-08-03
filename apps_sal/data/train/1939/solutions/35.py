@@ -7,6 +7,7 @@ class TrieNode:
         self.words = []
         self.lower_words = defaultdict(list)
 
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()

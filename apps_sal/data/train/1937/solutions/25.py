@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -13,7 +14,7 @@ class ThroneInheritance:
 
     def birth(self, parentName: str, childName: str) -> None:
         self.pm[childName] = parentName
-        
+
         self.cm[parentName].append(childName)
 
         self.cm[childName] = []
@@ -45,7 +46,7 @@ class ThroneInheritance:
             if self.p[p]:
                 ans += [p]
         return ans
-        
+
     def successor(self, x, marked_childs, queue_childs):
         if len(self.cm[x]) == 0 or len(queue_childs[x]) == 0:
             if self.king == x:

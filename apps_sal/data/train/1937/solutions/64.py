@@ -6,6 +6,7 @@ class Node:
         self.children = []
         self.is_dead = False
 
+
 class ThroneInheritance:
     def __init__(self, kingName: str):
         self.root = Node(kingName, True, None)
@@ -14,12 +15,14 @@ class ThroneInheritance:
 
     def successor(self, x):
         if not x.children or all(c in self.order_set for c in x.children):
-            if x.is_king: return None
+            if x.is_king:
+                return None
             return self.successor(x.parent)
         else:
             for c in x.children:
-                if c not in self.order_set: return c
-        
+                if c not in self.order_set:
+                    return c
+
     def birth(self, parentName: str, childName: str) -> None:
         parent = self.nmap[parentName]
         child = Node(childName, False, parent)
@@ -45,4 +48,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

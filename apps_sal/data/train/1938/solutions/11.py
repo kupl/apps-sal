@@ -5,7 +5,7 @@
 #     def rectangleArea(self, rectangles):
 #         M=10**9+7
 #         events=[]
-#         for x1,y1,x2,y2 in rectangles:           
+#         for x1,y1,x2,y2 in rectangles:
 #             events.append((x1,y1,y2,0))
 #             events.append((x2,y1,y2,1))
 #         events.sort(key=lambda x:x[0])
@@ -21,7 +21,7 @@
 #                 right=max(right,active[1])
 #             return width
 #         for event in events:
-#             if event[0]!=prev:      
+#             if event[0]!=prev:
 #                 res+=getWidth(actives)*(event[0]-prev)
 #                 res=res%M
 #                 prev=event[0]
@@ -32,51 +32,50 @@
 #         return res
 
 class Tree:
-    def __init__(self,l,r):
-        self.total=0
-        self.count=0
-        self.l=l
-        self.r=r
-        self.m=int((self.l+self.r)/2)
-        self.isLeaf=True if self.r-self.l==1 else False
-        self.left=None if self.isLeaf else Tree(self.l,self.m)
-        self.right=None if self.isLeaf else Tree(self.m,self.r)
+    def __init__(self, l, r):
+        self.total = 0
+        self.count = 0
+        self.l = l
+        self.r = r
+        self.m = int((self.l + self.r) / 2)
+        self.isLeaf = True if self.r - self.l == 1 else False
+        self.left = None if self.isLeaf else Tree(self.l, self.m)
+        self.right = None if self.isLeaf else Tree(self.m, self.r)
 
-    def update(self,l,r,count):
-        if l>=self.r or r<=self.l:
+    def update(self, l, r, count):
+        if l >= self.r or r <= self.l:
             return
         if self.isLeaf:
-            self.count+=count
-            self.total=nums[self.r]-nums[self.l] if self.count else 0
+            self.count += count
+            self.total = nums[self.r] - nums[self.l] if self.count else 0
         else:
-            self.left.update(l,r,count)
-            self.right.update(l,r,count)
-            self.total=self.left.total+self.right.total
-            
-class Solution(object):    
+            self.left.update(l, r, count)
+            self.right.update(l, r, count)
+            self.total = self.left.total + self.right.total
+
+
+class Solution(object):
     def rectangleArea(self, rectangles):
-        M=10**9+7
-        events=[]
+        M = 10**9 + 7
+        events = []
         nonlocal nums
-        nums=set()
-        for x1,y1,x2,y2 in rectangles:           
-            events.append((x1,y1,y2,1))
-            events.append((x2,y1,y2,-1))
+        nums = set()
+        for x1, y1, x2, y2 in rectangles:
+            events.append((x1, y1, y2, 1))
+            events.append((x2, y1, y2, -1))
             nums.add(y1)
             nums.add(y2)
-        nums=list(nums)
+        nums = list(nums)
         nums.sort()
-        nToI=dict([(n,i) for i,n in enumerate(nums)])
-        iTree=Tree(0,len(nums)-1)
-        events.sort(key=lambda x:x[0])
-        res=0
-        prev=events[0][0]
+        nToI = dict([(n, i) for i, n in enumerate(nums)])
+        iTree = Tree(0, len(nums) - 1)
+        events.sort(key=lambda x: x[0])
+        res = 0
+        prev = events[0][0]
         for event in events:
-            if event[0]!=prev:      
-                res+=iTree.total*(event[0]-prev)
-                res=res%M
-                prev=event[0]
-            iTree.update(nToI[event[1]],nToI[event[2]],event[3])
+            if event[0] != prev:
+                res += iTree.total * (event[0] - prev)
+                res = res % M
+                prev = event[0]
+            iTree.update(nToI[event[1]], nToI[event[2]], event[3])
         return res
-
-

@@ -7,10 +7,11 @@
 class Solution:
     def btreeGameWinningMove(self, root: TreeNode, n: int, x: int) -> bool:
         candidates = []
+
         def dfs(node):
             if not node:
                 return 0
- 
+
             l = dfs(node.left)
             r = dfs(node.right)
             if node.val == x:
@@ -23,10 +24,4 @@ class Solution:
         # print(candidates)
         # if root.val != x:
         candidates.append(n - (1 + sum(candidates)))
-        return any(mine > (n-mine) for mine in candidates)
-        
-  
-                
-                
-                
-
+        return any(mine > (n - mine) for mine in candidates)

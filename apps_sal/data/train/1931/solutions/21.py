@@ -17,7 +17,7 @@ class Solution:
             return False
         # judge root, then judge root.left and root.right
         return self.isSub(head, root) or self.isSubPath(head, root.left) or self.isSubPath(head, root.right)
-    
+
     def isSub(self, head, node):
         # list is over
         if head == None:

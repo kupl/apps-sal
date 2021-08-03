@@ -3,6 +3,7 @@ class Person:
         self.name = name
         self.children = []
         self.alive = True
+
     def dfs(self):
         res = []
         if self.alive:
@@ -10,6 +11,7 @@ class Person:
         for child in self.children:
             res.extend(child.dfs())
         return res
+
 
 class ThroneInheritance:
 
@@ -36,4 +38,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

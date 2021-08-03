@@ -19,7 +19,8 @@ class Node(object):
         return self._right
 
     def update(self, i, j, val):
-        if i >= j: return 0
+        if i >= j:
+            return 0
         if self.start == i and self.end == j:
             self.count += val
         else:
@@ -32,6 +33,7 @@ class Node(object):
             self.total = self.left.total + self.right.total
 
         return self.total
+
 
 class Solution(object):
     def rectangleArea(self, rectangles):

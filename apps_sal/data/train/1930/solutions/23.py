@@ -5,17 +5,16 @@ class Cashier:
         self.d = {}
         self.discount = discount
         self.n = n
-        
-        for i,x in enumerate(products):
+
+        for i, x in enumerate(products):
             self.d[x] = prices[i]
-        
 
     def getBill(self, product: List[int], amount: List[int]) -> float:
-        
+
         total = 0
-        for i,productId in enumerate(product):
+        for i, productId in enumerate(product):
             total += self.d[productId] * amount[i]
-        
+
         self.counter += 1
         if self.counter % self.n == 0:
             total = total - ((self.discount * total) / 100)
@@ -24,4 +23,3 @@ class Cashier:
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

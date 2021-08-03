@@ -3,10 +3,11 @@ class Node:
         self.name = name
         self.live = True
         self.children = []
-        
+
     def death(self):
         self.live = False
-        
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -36,4 +37,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

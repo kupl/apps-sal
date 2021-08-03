@@ -13,14 +13,14 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.dead.add(name)
-        
 
     def getInheritanceOrder(self) -> List[str]:
         # dfs
         res = []
         dfs(self.cmap, self.dead, self.kName, res)
         return res
-    
+
+
 def dfs(cmap, deaths, curr, res):
     if curr == None:
         return
@@ -39,4 +39,3 @@ def dfs(cmap, deaths, curr, res):
 
 # inheritance -> king is first member
 # recursive function Successor(x, curOrder) which gives person x and the inheritance order so far, returns who should be the nextg person after x in the order of inheritance.
-

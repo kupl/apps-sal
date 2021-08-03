@@ -7,7 +7,7 @@
 class Solution:
     def btreeGameWinningMove(self, root: TreeNode, n: int, x: int) -> bool:
         graph = defaultdict(list)
-        
+
         def dfs(s):
             if not s:
                 return
@@ -18,10 +18,10 @@ class Solution:
                 graph[s.val].append(child.val)
                 dfs(child)
         dfs(root)
-        
+
         visited = set()
         visited.add(x)
-        
+
         def dfs_graph(u):
             res = 1
             visited.add(u)
@@ -29,12 +29,12 @@ class Solution:
                 if nei not in visited:
                     res += dfs_graph(nei)
             return res
-        
+
         candidates = [dfs_graph(nei) for nei in graph[x]]
         if not candidates:
             return False
         res = max(candidates)
-        
+
         if res > n - res:
             return True
         else:

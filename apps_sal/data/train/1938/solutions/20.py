@@ -1,9 +1,11 @@
 import numpy as np
+
+
 class Solution:
     def rectangleArea(self, A: List[List[int]]) -> int:
         sa = sorted(set(a for x1, y1, x2, y2 in A for a in [x1, x2]))
         xs = sorted(sa)
-        dic = {v : i for i, v in enumerate(xs)}
+        dic = {v: i for i, v in enumerate(xs)}
         B = []
         for x1, y1, x2, y2 in A:
             B.append([y1, x1, x2, 1])

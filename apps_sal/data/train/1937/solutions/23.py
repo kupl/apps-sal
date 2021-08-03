@@ -3,7 +3,8 @@ class Node:
         self.name = name
         self.children = list()
         self.alive = True
-    
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -12,14 +13,16 @@ class ThroneInheritance:
         self.parent = defaultdict(str)
         self.king = kingName
         self.curOrder = [kingName]
+
     def birth(self, parentName: str, childName: str) -> None:
         self.map[childName] = Node(childName)
         self.map[parentName].children.append(childName)
         self.parent[childName] = parentName
-        
+
     def death(self, name: str) -> None:
         self.map[name].alive = False
     # @lru_cache(None)
+
     def Successor(self, x):
         # print(self.map, self.parent)
         # print(x, self.curOrder)
@@ -30,10 +33,10 @@ class ThroneInheritance:
                 break
         else:
             flag = True
-        if not self.map[x].children or flag: #all of x's children are in curOrder:
+        if not self.map[x].children or flag:  # all of x's children are in curOrder:
             if x == self.king:
                 return None
-            else: 
+            else:
                 return self.Successor(self.parent[x])
         else:
             # return x's oldest child who's not in curOrder
@@ -41,6 +44,7 @@ class ThroneInheritance:
                 if child not in self.currSet:
                     return child
             return None
+
     def getInheritanceOrder(self) -> List[str]:
         self.curOrder = []
         self.currSet = set()
@@ -57,4 +61,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

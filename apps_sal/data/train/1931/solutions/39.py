@@ -27,4 +27,3 @@ class Solution:
                     return True
             stack = [leaf for node in stack for leaf in [node.left, node.right] if leaf]
         return False
-

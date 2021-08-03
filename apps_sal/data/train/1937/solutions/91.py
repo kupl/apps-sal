@@ -1,5 +1,6 @@
 from collections import OrderedDict, defaultdict
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -14,7 +15,6 @@ class ThroneInheritance:
         if parentName not in self.parent2son:
             self.parent2son[parentName] = OrderedDict()
         self.parent2son[parentName][childName] = 0
-        
 
     def death(self, name: str) -> None:
         self.deadset.add(name)
@@ -39,4 +39,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

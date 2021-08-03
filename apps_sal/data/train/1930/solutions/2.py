@@ -1,7 +1,7 @@
 class Cashier:
 
     def __init__(self, n: int, discount: int, products: List[int], prices: List[int]):
-        self.discount = discount/100
+        self.discount = discount / 100
         self.n = n
         self.memo = dict()
         for a, b in zip(products, prices):
@@ -10,15 +10,14 @@ class Cashier:
 
     def getBill(self, product: List[int], amount: List[int]) -> float:
         self.idx += 1
-        res = 0 
+        res = 0
         for a, b in zip(product, amount):
-            res += self.memo[a]*b
-        if self.idx%self.n==0:
-            res *= (1-self.discount)
+            res += self.memo[a] * b
+        if self.idx % self.n == 0:
+            res *= (1 - self.discount)
         return res
 
 
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

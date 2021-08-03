@@ -1,12 +1,11 @@
 class Cashier:
 
     def __init__(self, n: int, discount: int, products: List[int], prices: List[int]):
-        self.product_map = { products[i]: prices[i] for i in range(len(products))}
+        self.product_map = {products[i]: prices[i] for i in range(len(products))}
         self.prices = prices
         self.customer_count = 0
-        self.discount = discount/100
+        self.discount = discount / 100
         self.discount_customer = n
-        
 
     def getBill(self, product: List[int], amount: List[int]) -> float:
         self.customer_count += 1
@@ -24,4 +23,3 @@ class Cashier:
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

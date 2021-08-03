@@ -25,7 +25,7 @@ class ThroneInheritance:
         stack = []
         order = []
         current = self._root
-        
+
         while True:
             if current:
                 if not current.dead:
@@ -44,4 +44,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

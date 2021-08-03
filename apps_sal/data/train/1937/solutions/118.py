@@ -1,4 +1,6 @@
 import collections
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -16,17 +18,14 @@ class ThroneInheritance:
         res = []
         self.get_order(res, self.kingName)
         return res
-    
+
     def get_order(self, res, parent):
-        
+
         if parent not in self.deads:
             res.append(parent)
-        
+
         for child in self.mapping[parent]:
             self.get_order(res, child)
-        
-        
-    
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -34,4 +33,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

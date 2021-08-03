@@ -3,7 +3,7 @@ class ThroneInheritance:
     def __init__(self, kingName: str):
         self.king = kingName
         self.family = {}
-        self.family[kingName] =[]
+        self.family[kingName] = []
         self.dead = set([])
 
     def birth(self, parentName: str, childName: str) -> None:
@@ -12,13 +12,13 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.dead.add(name)
-        
 
     def getInheritanceOrder(self) -> List[str]:
         order = []
-        def dfs (name):
+
+        def dfs(name):
             if name not in self.dead:
-                    order.append(name)    
+                order.append(name)
             for child in self.family[name]:
                 dfs(child)
         dfs(self.king)
@@ -30,4 +30,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

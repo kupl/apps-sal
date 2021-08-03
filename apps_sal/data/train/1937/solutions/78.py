@@ -6,7 +6,7 @@ class ThroneInheritance:
         self.dead = {}
         self.mp = {}
         self.mp[kingName] = []
-        
+
     def birth(self, parentName: str, childName: str) -> None:
         if parentName not in self.mp:
             self.mp[parentName] = []
@@ -17,6 +17,7 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self) -> List[str]:
         res = []
+
         def dfs(self, res, node):
             if node not in self.dead:
                 res.append(node)
@@ -26,7 +27,6 @@ class ThroneInheritance:
                 dfs(self, res, child)
         dfs(self, res, self.king)
         return res
-        
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -34,4 +34,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

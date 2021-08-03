@@ -15,7 +15,7 @@ class Solution:
         while head:
             arr.append(head.val)
             head = head.next
-        
+
         t = [-1]
         pos, cnd = 1, 0
         while pos < len(arr):
@@ -29,7 +29,7 @@ class Solution:
             pos += 1
             cnd += 1
         t.append(cnd)
-        
+
         def dfs(root, i):
             if i == len(arr):
                 return True
@@ -37,6 +37,6 @@ class Solution:
                 return False
             while i >= 0 and root.val != arr[i]:
                 i = t[i]
-            return dfs(root.left, i+1) or dfs(root.right, i+1)
+            return dfs(root.left, i + 1) or dfs(root.right, i + 1)
 
         return dfs(root, 0)

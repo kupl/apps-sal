@@ -18,11 +18,10 @@ class Cashier:
             price = self.prices[real_id]
             result += price * number
         if self.cur % self.n == 0:
-            result = result * (1 - (self.discount/100))
+            result = result * (1 - (self.discount / 100))
         return result
 
 
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

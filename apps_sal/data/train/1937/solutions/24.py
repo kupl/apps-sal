@@ -1,5 +1,5 @@
 class ThroneInheritance:
-    
+
     def __init__(self, kingName: str):
         self.nation = defaultdict(list)
         self.king = kingName
@@ -10,13 +10,13 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.dead.add(name)
-        
+
     def dfs(self, person):
         if person not in self.dead:
             self.ans.append(person)
         for child in self.nation[person]:
             self.dfs(child)
-            
+
     def getInheritanceOrder(self) -> List[str]:
         self.ans = []
         self.dfs(self.king)
@@ -28,4 +28,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

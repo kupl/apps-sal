@@ -12,7 +12,7 @@ class Cashier:
         price_total = 0
         for i, am in zip(product, amount):
             price_total += am * self.prices[self.reverse_dict[i]]
-            
+
         self.count += 1
         if self.count >= self.N:
             price_total *= 1 - self.discount / 100.
@@ -23,4 +23,3 @@ class Cashier:
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

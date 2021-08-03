@@ -4,6 +4,7 @@ class Node:
         self.alive = True
         self.children = deque()
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -34,4 +35,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

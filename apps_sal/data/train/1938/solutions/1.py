@@ -6,22 +6,22 @@ class Solution:
             events.append([x1, 0, y1, y2])
             events.append([x2, 1, y1, y2])
         events.sort(key=lambda x: (x[0], -x[1]))
-        
+
         def getArea(m):
             area = 0
             prev = float('-inf')
             for l, r in heights:
                 prev = max(prev, l)
-                area += max(0, (r-prev)) * m
+                area += max(0, (r - prev)) * m
                 prev = max(prev, r)
             return area
-        
+
         area = 0
         prev = 0
         heights = []
         for event in events:
             cur, close, y1, y2 = event
-            area += getArea(cur-prev)
+            area += getArea(cur - prev)
             if close:
                 heights.remove((y1, y2))
             else:

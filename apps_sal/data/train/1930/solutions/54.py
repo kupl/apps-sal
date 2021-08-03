@@ -10,16 +10,15 @@ class Cashier:
     def getBill(self, product: List[int], amount: List[int]) -> float:
         self.client += 1
         bill = 0
-        for p, a in zip(product, amount): 
+        for p, a in zip(product, amount):
             idx = self.products.index(p)
             bill += a * self.prices[idx]
         if self.client == self.n:
             self.client = 0
-            bill = bill - self.discount * bill / 100     
+            bill = bill - self.discount * bill / 100
         return bill
 
 
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

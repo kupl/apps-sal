@@ -1,13 +1,12 @@
 class ThroneInheritance:
-    
+
     class Person:
-        
-        def __init__(self,name, parent = None):
+
+        def __init__(self, name, parent=None):
             self.parent = parent
             self.name = name
             self.children = []
             self.isAlive = True
-    
 
     def __init__(self, kingName: str):
         self.h = {kingName: self.Person(kingName)}
@@ -16,7 +15,6 @@ class ThroneInheritance:
     def birth(self, parentName: str, childName: str) -> None:
         self.h[childName] = self.Person(childName, parentName)
         self.h[parentName].children.append(self.h[childName])
-        
 
     def death(self, name: str) -> None:
         self.h[name].isAlive = False
@@ -30,7 +28,7 @@ class ThroneInheritance:
             if node.isAlive:
                 res.append(node.name)
             for i in range(len(node.children)):
-                stack.append(node.children[-1-i])
+                stack.append(node.children[-1 - i])
         return res
 
 
@@ -39,4 +37,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

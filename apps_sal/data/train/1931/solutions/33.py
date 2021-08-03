@@ -12,6 +12,7 @@
 class Solution:
     def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
         paths = []
+
         def dfs(root, arr):
             arr1 = arr + [str(root.val)]
             if root.left:

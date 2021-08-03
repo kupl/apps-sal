@@ -16,10 +16,10 @@ class ThroneInheritance:
         stk = [self.k]
         while stk:
             x = stk.pop(0)
-            if x not in self.d: ans.append(x)
+            if x not in self.d:
+                ans.append(x)
             stk = self.mp[x] + stk
         return ans
-
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -27,4 +27,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

@@ -1,9 +1,9 @@
-#replacing the vowels ('a', 'e', 'i', 'o', 'u') of the query word with any vowel individually
-#return the first such match in the wordlist.
-#important! Capitalization has a higher priority than Vowel Errors
+# replacing the vowels ('a', 'e', 'i', 'o', 'u') of the query word with any vowel individually
+# return the first such match in the wordlist.
+# important! Capitalization has a higher priority than Vowel Errors
 
 #backtrack + deque, O(n*4^l), O(4^l), TLE
-#notice that in all candidates, return the matched one with minimum index
+# notice that in all candidates, return the matched one with minimum index
 '''
 from collections import defaultdict, deque
 class Solution:
@@ -62,9 +62,9 @@ class Solution:
                                 dq.append(candidate)
                                 visited.add(candidate.lower())
         return candidates[1:]
-'''     
+'''
 
-#check Consonants, O(n^2 * l), O(n), TLE
+# check Consonants, O(n^2 * l), O(n), TLE
 '''
 from collections import defaultdict
 class Solution:
@@ -121,22 +121,23 @@ class Solution:
         return True
 '''
 
-#3 hashmap/hashset
-from collections import defaultdict
+# 3 hashmap/hashset
+
+
 class Solution:
     def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
         if not wordlist or not queries:
             return []
-        
+
         word_exact = set(wordlist)
         word_capital = defaultdict(list)
         word_vowel = defaultdict(list)
-        
+
         for word in wordlist:
             word_lower = word.lower()
             word_capital[word_lower].append(word)
-            word_vowel[self.devowel(word_lower)].append(word)   #key is word_lower
-          
+            word_vowel[self.devowel(word_lower)].append(word)  # key is word_lower
+
         ans = []
         for query in queries:
             if query in word_exact:
@@ -150,7 +151,7 @@ class Solution:
                 else:
                     ans.append('')
         return ans
-    
+
     def devowel(self, word):
         ans = ''
         for i, c in enumerate(word):
@@ -159,13 +160,3 @@ class Solution:
             else:
                 ans += c
         return ans
-                    
-                        
-
-                
-        
-        
-            
-        
-                
-

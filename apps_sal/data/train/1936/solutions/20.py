@@ -7,5 +7,5 @@ class Solution:
             label >>= 1
             level -= 1
             count += 1
-            
+
         return res[::-1]

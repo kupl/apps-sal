@@ -6,18 +6,17 @@ class ThroneInheritance:
             self.root: []
         }
         self.death_dict = {}
-        
 
     def birth(self, parentName: str, childName: str) -> None:
         self.child_list[parentName].append(childName)
         self.child_list[childName] = []
-        
 
     def death(self, name: str) -> None:
         self.death_dict[name] = True
 
     def getInheritanceOrder(self) -> List[str]:
         answer_list = []
+
         def _dfs(cur_node):
             if cur_node not in self.death_dict:
                 answer_list.append(cur_node)
@@ -32,4 +31,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

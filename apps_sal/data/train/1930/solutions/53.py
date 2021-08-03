@@ -7,4 +7,3 @@ class Cashier:
         self.i += 1
         s = sum(self.price[p] * a for p, a in zip(product, amount))
         return s if self.i % self.n else s * (1 - self.d / 100)
-

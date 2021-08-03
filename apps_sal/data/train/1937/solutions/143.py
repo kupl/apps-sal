@@ -8,14 +8,12 @@ class ThroneInheritance:
     def birth(self, parentName: str, childName: str) -> None:
         self.hmap[parentName].append(childName)
         self.hmap[childName] = []
-        
 
     def death(self, name: str) -> None:
         self.deathed.add(name)
-        
 
     def getInheritanceOrder(self) -> List[str]:
-        
+
         def dfs(node):
             # nonlocal ans
             for st in self.hmap[node]:
@@ -25,9 +23,6 @@ class ThroneInheritance:
         ans = [self.root] if self.root not in self.deathed else []
         dfs(self.root)
         return ans
-            
-            
-        
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -35,4 +30,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

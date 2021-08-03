@@ -13,6 +13,7 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self) -> List[str]:
         res = []
+
         def dfs(name: str):
             if name not in self.deads:
                 res.append(name)
@@ -27,4 +28,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

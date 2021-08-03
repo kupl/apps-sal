@@ -1,9 +1,9 @@
 class ThroneInheritance:
     import collections
-    
+
     def __init__(self, kingName: str):
         self.king_name = kingName
-        self.dead = set([]) # names of dead people
+        self.dead = set([])  # names of dead people
         self.children = collections.defaultdict(list)
         self.parent = {}
 
@@ -13,12 +13,11 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.dead.add(name)
-        
 
     def getInheritanceOrder(self) -> List[str]:
         order = [self.king_name]
         order_set = set(order)
-        
+
         def successor(x):
             ys = [y for y in self.children[x] if y not in order_set]
             if not ys:
@@ -33,8 +32,8 @@ class ThroneInheritance:
 
         p = successor(self.king_name)
         while p:
-            p = successor(p)                
-        
+            p = successor(p)
+
         return [name for name in order if name not in self.dead]
 
 
@@ -43,4 +42,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

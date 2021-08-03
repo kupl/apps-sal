@@ -29,7 +29,7 @@ class ThroneInheritance:
         self.placed = set([self.kingName])
         self.order = [self.kingName]
         return ret
-        
+
     def succ(self, x) -> str:
         if not self.children[x] or all([c in self.placed for c in self.children[x]]):
             if x == self.kingName:
@@ -45,4 +45,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

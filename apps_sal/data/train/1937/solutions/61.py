@@ -1,17 +1,18 @@
 class TreeNode:
-    
+
     def __init__(self, name):
         self.name = name
         self.children = []
         self.alive = True
 
+
 class ThroneInheritance:
     mapping = {}
-    
+
     def __init__(self, kingName: str):
-        self.mapping[kingName] = TreeNode(kingName)    
+        self.mapping[kingName] = TreeNode(kingName)
         self.kingName = kingName
-        
+
     def birth(self, parentName: str, childName: str) -> None:
         c = TreeNode(childName)
         self.mapping[childName] = c
@@ -23,14 +24,15 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
         # Traverse the tree
         ret = []
-        # print(\"?\")    
+        # print(\"?\")
+
         def dfs(node):
             # print(node.name)
             if node.alive:
                 ret.append(node.name)
             for c in node.children:
                 dfs(c)
-    
+
         dfs(self.mapping[self.kingName])
         return ret
 
@@ -40,4 +42,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

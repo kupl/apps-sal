@@ -5,6 +5,7 @@ class Man:
         self.children = []
         self.alive = True
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -53,4 +54,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

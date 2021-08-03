@@ -10,9 +10,9 @@ class Solution:
         L.sort()
         res = last_y = sum_x = 0
         for y, x1, x2, sig in L:
-            res += (y-last_y) * sum_x
+            res += (y - last_y) * sum_x
             last_y = y
             for i in range(xi[x1], xi[x2]):
                 cnt[i] += sig
-            sum_x = sum(x2-x1 for x1, x2, c in zip(xs, xs[1:], cnt) if c)
-        return res %(10**9+7)
+            sum_x = sum(x2 - x1 for x1, x2, c in zip(xs, xs[1:], cnt) if c)
+        return res % (10**9 + 7)
