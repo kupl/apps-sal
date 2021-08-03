@@ -1,6 +1,7 @@
 def printtag(s):
     print("<" + s + ">")
 
+
 s = input()
 l = s.split("\"")
 non_modify = 0

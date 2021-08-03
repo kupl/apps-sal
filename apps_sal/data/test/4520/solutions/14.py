@@ -40,4 +40,4 @@ for i in range(1, 201):
 
 print(len(removed_list))
 for j in removed_list:
-    print(j + 1, end = " ")
+    print(j + 1, end=" ")

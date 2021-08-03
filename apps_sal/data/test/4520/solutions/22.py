@@ -43,8 +43,8 @@ for i in range(1, num_points + 1):
         removed.append(segment_index)
         removed_right[r] += 1
     squeezed_out = len(closing[i]) - removed_right[i]
-    working = working[squeezed_out: ]
+    working = working[squeezed_out:]
 
 print(len(removed))
 for j in removed:
-    print(j, end = " ")
+    print(j, end=" ")

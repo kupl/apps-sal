@@ -25,8 +25,10 @@ tr_max[-1] = tr_max[-1] or 0
 
 savecols = sorted(map(lambda t: int(t) - 1, input().split()))
 # binary search? :)
+
+
 def binsearch(arr, val):
-    l, r = 0, len(arr)-1
+    l, r = 0, len(arr) - 1
     while l <= r:
         mid = l + (r - l) // 2
         if (arr[mid] < val):
@@ -37,15 +39,15 @@ def binsearch(arr, val):
             return mid
 
     return r
-    
+
 
 def find_short_descent(A, B):
     if A > B:
-        return find_short_descent(B, A) # this is invariant
+        return find_short_descent(B, A)  # this is invariant
 
     idx1 = binsearch(savecols, A)
     idx2 = idx1 + 1
-    minval = m*m
+    minval = m * m
     if idx2 < len(savecols):
         if savecols[idx2] < B:
             return B - A
@@ -57,12 +59,11 @@ def find_short_descent(A, B):
     return minval
 
 
-
 l, r = 0, 0
 found_valid = False
 last_valid = None
 for row in range(0, n):
-    #insert idea here
+    # insert idea here
     if found_valid == False:
         if tr_min[row] != None:
             found_valid = True
@@ -71,7 +72,7 @@ for row in range(0, n):
             r = (tr_max[row] - tr_min[row])
             continue
         continue
-    
+
     if tr_min[row] == None:
         l += 1
         r += 1
@@ -81,7 +82,7 @@ for row in range(0, n):
     lr = find_short_descent(tr_min[last_valid], tr_max[row])
     rl = find_short_descent(tr_max[last_valid], tr_min[row])
     rr = find_short_descent(tr_max[last_valid], tr_max[row])
-        
+
     #l += min(ll, rl) + 1 + (tr_max[row] - tr_min[row])
     #r += min(lr, rr) + 1 + (tr_max[row] - tr_min[row])
     #l, r = r, l

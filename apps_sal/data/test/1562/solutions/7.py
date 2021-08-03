@@ -47,4 +47,3 @@ for i in range(1, n):
     dleft, dright = dleft_new, dright_new
     lastn = i
 print(min(dleft, dright) + lastn)
-

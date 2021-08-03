@@ -1,51 +1,51 @@
 a = input()
-ans=[]
-t=''
-qoute =0
-space =0
-start =1 if a[0]=='"' else 0
+ans = []
+t = ''
+qoute = 0
+space = 0
+start = 1 if a[0] == '"' else 0
 for i in range(len(a)):
-    v= a[i]
+    v = a[i]
     if start:
-        if t=='':
-            if v=='"':
-                qoute+=1
+        if t == '':
+            if v == '"':
+                qoute += 1
                 t = '<'
-            elif v==' ':
+            elif v == ' ':
                 pass
             else:
-                space+=1
-                t='<'+v
-        elif qoute>0:
-            if v =='"':
-                t+='>'
-                qoute=0
+                space += 1
+                t = '<' + v
+        elif qoute > 0:
+            if v == '"':
+                t += '>'
+                qoute = 0
                 ans.append(t)
-                t=''
-                start=0
+                t = ''
+                start = 0
             else:
-                t+=v
+                t += v
         else:
-            if v ==' ':
-                if t!='<':
-                    t+='>'
+            if v == ' ':
+                if t != '<':
+                    t += '>'
                     ans.append(t)
-                    t=''
-                    start=0
+                    t = ''
+                    start = 0
             else:
-                t+=v
+                t += v
     else:
-        if v==' ':
-            start=1
-        elif v=='"':
-            start=1
-            t='<'
-            qoute=1
+        if v == ' ':
+            start = 1
+        elif v == '"':
+            start = 1
+            t = '<'
+            qoute = 1
         else:
-            t='<'+v
-            start=1
-if t!='':
-    t+='>'
+            t = '<' + v
+            start = 1
+if t != '':
+    t += '>'
     ans.append(t)
 for v in ans:
     print(v)

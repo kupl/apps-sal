@@ -4,16 +4,16 @@ X = list(map(int, input().split()))
 
 dp = [0] * n
 child = [[] for i in range(n)]
-for i in range(n-1):
+for i in range(n - 1):
     child[P[i] - 1].append(i + 1)
 
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     if not child[i]:
         dp[i] = 0
     else:
         child_sum_min = 0
         child_sum_rest = 0
-        change_candidate = set([0]) #色を変更した場合に生じる差分を管理する
+        change_candidate = set([0])  # 色を変更した場合に生じる差分を管理する
         for c in child[i]:
             z = min(X[c], dp[c])
             child_sum_min += z

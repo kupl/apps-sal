@@ -37,4 +37,3 @@ def interpreter(arg):
 
 for i in interpreter(args):
     print(i)
-

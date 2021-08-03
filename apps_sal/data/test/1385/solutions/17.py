@@ -1,4 +1,6 @@
 args = input()
+
+
 def interpreter(arg):
     args = arg.split(' ')
     output = list()
@@ -32,6 +34,6 @@ def interpreter(arg):
         i += 1
     return output
 
+
 for i in interpreter(args):
     print(i)
-

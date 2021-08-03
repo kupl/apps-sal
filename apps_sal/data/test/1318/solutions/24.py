@@ -4,7 +4,7 @@ n = int(input())
 vs = list(enumerate([tuple(map(int, input().split(' '))) for _ in range(n)]))
 k = int(input())
 rs = list(map(int, input().split(' ')))
-rs_i = {r: [i+1 for i, k in enumerate(rs) if k == r] for r in rs}
+rs_i = {r: [i + 1 for i, k in enumerate(rs) if k == r] for r in rs}
 
 vs.sort(key=lambda x: x[1][1])
 rs.sort()
@@ -17,9 +17,9 @@ while len(vs) > 0:
     t = bisect.bisect_left(rs, c)
     if t < len(rs):
         s += p
-        ss.append((i+1, rs_i[rs[t]].pop()))
+        ss.append((i + 1, rs_i[rs[t]].pop()))
         del rs[t]
-        
+
 print("{} {}".format(ol_rs - len(rs), s))
 for tt in ss:
     print("{} {}".format(*tt))
