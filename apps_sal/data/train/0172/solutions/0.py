@@ -1,6 +1,7 @@
 class Solution:
     def maxDiff(self, num: int) -> int:
-        if num < 10: return 8
+        if num < 10:
+            return 8
         a = b = str(num)
         i = 0
         while i < len(a):
@@ -20,5 +21,5 @@ class Solution:
                 else:
                     b = b.replace(b[i], '0')
                     break
-        #print(a,b)
+        # print(a,b)
         return int(a) - int(b)

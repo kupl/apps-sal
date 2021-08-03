@@ -4,6 +4,8 @@
 
 思路：首先和得整除。要凑对，那就是mod能凑对，统计mod能否凑对即可
 '''
+
+
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
         mod_count = [0 for i in range(k)]
@@ -12,6 +14,6 @@ class Solution:
         if mod_count[0] % 2:
             return False
         for i in range(1, len(mod_count)):
-            if mod_count[i] != mod_count[k-i]:
+            if mod_count[i] != mod_count[k - i]:
                 return False
         return True

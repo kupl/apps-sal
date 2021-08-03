@@ -11,7 +11,7 @@ class Solution:
                 count = 1
                 prev = l
         counts.append([prev, count])
-        
+
         @lru_cache(None)
         def opt(i, k):
             if i >= len(counts):
@@ -44,6 +44,3 @@ class Solution:
                 j += 1
             return best
         return opt(0, k)
-                
-            
-

@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
         # ctr = set([])
@@ -11,7 +13,7 @@ class Solution:
         #                 ctr.add(i)
         #                 ctr.add(j)
         # return len(ctr)/2 == len(arr)/2
-        
+
         if len(arr) % 2 == 1:
             return False
         lookup = defaultdict(int)
@@ -23,4 +25,4 @@ class Solution:
                 lookup[key] -= 1
             else:
                 lookup[(num % k) or k] += 1
-        return count == len(arr)//2
+        return count == len(arr) // 2

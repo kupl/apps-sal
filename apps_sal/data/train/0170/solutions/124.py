@@ -56,4 +56,5 @@ def __starting_point():
     assert (solution.findLengthOfShortestSubarray([13, 0, 14, 7, 18, 18, 18, 16, 8, 15, 20]) == 8)
     assert (solution.findLengthOfShortestSubarray([16, 10, 0, 3, 22, 1, 14, 7, 1, 12, 15]) == 8)
 
+
 __starting_point()

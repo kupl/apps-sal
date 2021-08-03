@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
         if len(arr) % 2 == 1:

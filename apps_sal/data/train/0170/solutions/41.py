@@ -24,7 +24,3 @@ class Solution:
             else:
                 rr += 1
         return res
-                
-            
-        
-

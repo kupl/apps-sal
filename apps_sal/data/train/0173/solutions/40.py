@@ -14,4 +14,3 @@ class Solution:
                 if h[mod] == 1:
                     invalid += 1
         return invalid == 0
-

@@ -1,13 +1,12 @@
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
-        
         '''
         [1,2,3,10,4,2,3,5]
         3
-        
+
         '''
         def doesExist(arr, size, prefix, suffix):
-            if size >= suffix or (len(arr) -1 - size) <= prefix:
+            if size >= suffix or (len(arr) - 1 - size) <= prefix:
                 return True
             for i in range(len(arr) - size - 1):
                 if prefix < i:
@@ -17,21 +16,21 @@ class Solution:
                     if arr[i] <= arr[j] and j >= suffix:
                         return True
             return False
-          
+
         prefix = 0
         suffix = len(arr) - 1
         for i in range(1, len(arr)):
-            if arr[i-1] <= arr[i]:
+            if arr[i - 1] <= arr[i]:
                 prefix = i
             else:
                 break
-        
+
         for i in range(len(arr) - 1, 0, -1):
-            if arr[i-1] <= arr[i]:
+            if arr[i - 1] <= arr[i]:
                 suffix = i - 1
             else:
                 break
-                
+
         l = 0
         r = len(arr) - 1
         optimal = r
@@ -43,5 +42,3 @@ class Solution:
             else:
                 l = mid + 1
         return optimal
-        
-

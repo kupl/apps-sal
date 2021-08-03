@@ -2,9 +2,9 @@ class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
         if len(arr) % 2 != 0:
             raise Exception('Input array is of odd size!')
-        
+
         mod_dict = {}
-        
+
         for i in arr:
             mod = i % k
             pair_mod = (k - mod) % k
@@ -18,6 +18,5 @@ class Solution:
                     mod_dict[mod] = 1
                 else:
                     mod_dict[mod] += 1
-        
-        return len(mod_dict) == 0
 
+        return len(mod_dict) == 0

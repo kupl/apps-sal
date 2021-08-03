@@ -3,6 +3,7 @@ class Solution:
     1,2,3,10,4,2,3,5]
     1 2 2  3 3 4 5 10
     '''
+
     def findLengthOfShortestSubarray(self, A: List[int]) -> int:
         N = len(A)
         left, right = 0, N - 1

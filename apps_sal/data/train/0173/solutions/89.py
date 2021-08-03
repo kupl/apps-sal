@@ -11,6 +11,5 @@ class Solution:
                 if remainder == 0:
                     seen[remainder] = 1
                 else:
-                    seen[k - remainder] = seen.get(k-remainder, 0) + 1
+                    seen[k - remainder] = seen.get(k - remainder, 0) + 1
         return len(seen) == 0
-

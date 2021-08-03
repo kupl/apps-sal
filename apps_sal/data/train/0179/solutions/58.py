@@ -1,9 +1,10 @@
 import functools
 
+
 class Solution:
-    @functools.lru_cache(maxsize = None)
+    @functools.lru_cache(maxsize=None)
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
-        @functools.lru_cache(maxsize = None)
+        @functools.lru_cache(maxsize=None)
         def dp(i: int, last: int, size: int, k: int) -> int:
             if k < 0:
                 return float('inf')

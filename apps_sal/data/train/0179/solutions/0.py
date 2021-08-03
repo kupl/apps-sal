@@ -6,9 +6,9 @@ class Solution:
             return 1 + len(str(c)) if c > 1 else 1
 
         @lru_cache(None)
-        def dp(i, k): # return {head: (len, -head_count)}
+        def dp(i, k):  # return {head: (len, -head_count)}
             if (n - i) <= k:
-                return {} # remove all
+                return {}  # remove all
             x, res = s[i], {}
             # remove
             if k:
@@ -27,5 +27,4 @@ class Solution:
             return res
 
         m = dp(0, k)
-        return min((leng for leng, _ in list(m.values())), default = 0)
-
+        return min((leng for leng, _ in list(m.values())), default=0)

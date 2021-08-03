@@ -15,9 +15,9 @@ class Solution:
             if not arr[i]:
                 continue
             if k - arr[i] in lookup:
-                lookup[k-arr[i]] -= 1
-                if not lookup[k-arr[i]]:
-                    lookup.pop(k-arr[i])
+                lookup[k - arr[i]] -= 1
+                if not lookup[k - arr[i]]:
+                    lookup.pop(k - arr[i])
             else:
                 lookup[arr[i]] += 1
 

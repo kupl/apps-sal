@@ -16,7 +16,7 @@ class Solution:
                 last = i
                 break
             after = arr[i]
-            
+
         def helper(size):
             for i in range(length - size + 1):
                 if i <= first and i + size > last:
@@ -25,7 +25,7 @@ class Solution:
                     if arr[i + size] >= arr[i - 1]:
                         return True
             return False
-            
+
         low, high = 1, length - 1
         res = float('inf')
         while low <= high:

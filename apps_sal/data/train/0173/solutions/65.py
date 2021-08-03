@@ -5,7 +5,7 @@ class Solution:
         lookup = [0] * k
         for num in arr:
             lookup[num % k] += 1
-        
+
         if lookup[0] % 2 != 0:
             return False
         for p in range(1, k):
@@ -16,4 +16,3 @@ class Solution:
                 if lookup[p] % 2 != 0:
                     return False
         return True
-

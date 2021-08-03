@@ -1,7 +1,7 @@
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         n = len(arr)
-        
+
         before = n
         after = 0
         for i in range(1, n):
@@ -30,4 +30,4 @@ class Solution:
                 r = m
             else:
                 l = m + 1
-        return l 
+        return l

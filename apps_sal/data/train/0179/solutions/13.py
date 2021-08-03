@@ -1,6 +1,7 @@
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         dp = {}
+
         def dfs(i, t, prev, last):
             if t == -1:
                 return float('inf')
@@ -19,4 +20,3 @@ class Solution:
                 dp[(i, t, prev, last)] = min(take, remove)
             return dp[(i, t, prev, last)]
         return dfs(0, k, 0, '')
-

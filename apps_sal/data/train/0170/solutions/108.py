@@ -16,12 +16,3 @@ class Solution:
             if j <= n - 1:
                 res = min(res, j - i - 1)
         return res
-                
-
-            
-
-
-                
-                
-            
-

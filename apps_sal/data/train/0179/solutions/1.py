@@ -22,7 +22,6 @@ class Solution:
                     cnt += 1
                     if j < k:
                         break
-                    res = min(res, solve(j - 1, k) + _len(cnt)) 
+                    res = min(res, solve(j - 1, k) + _len(cnt))
             return res
         return solve(len(s) - 1, k)
-

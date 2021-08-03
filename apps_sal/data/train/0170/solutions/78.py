@@ -1,4 +1,6 @@
 from typing import *
+
+
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         n = len(arr)
@@ -21,5 +23,6 @@ class Solution:
                 j += 1
         return res
 
-print(Solution().findLengthOfShortestSubarray([1,3,2,4])) # 1
-print(Solution().findLengthOfShortestSubarray([1,2,3,10,4,2,3,5])) # 3
+
+print(Solution().findLengthOfShortestSubarray([1, 3, 2, 4]))  # 1
+print(Solution().findLengthOfShortestSubarray([1, 2, 3, 10, 4, 2, 3, 5]))  # 3

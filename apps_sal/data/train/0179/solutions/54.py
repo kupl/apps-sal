@@ -8,7 +8,7 @@ class Solution:
                 return 0
             if s[start] == last:
                 inc = 1 if lastCount == 1 or lastCount == 9 or lastCount == 99 else 0
-                return min(inc + dp(start+1, last, lastCount + 1, k), 1 + dp(start+1, last, 1, k-1))
+                return min(inc + dp(start + 1, last, lastCount + 1, k), 1 + dp(start + 1, last, 1, k - 1))
             else:
-                return min(dp(start+1, last, lastCount, k-1), 1 + dp(start+1, s[start], 1, k))
+                return min(dp(start + 1, last, lastCount, k - 1), 1 + dp(start + 1, s[start], 1, k))
         return dp(0, '', 0, k)

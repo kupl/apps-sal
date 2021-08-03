@@ -16,13 +16,13 @@ class Solution:
         first_pos = {}
         sec_pos = {}
         last_start = sum([len(x) for x in increasing_parts[:-1]])
-        
+
         for i, num in enumerate(increasing_parts[0]):
             first_pos[num] = i
-        
+
         for i, num in enumerate(increasing_parts[-1]):
             sec_pos[num] = i + last_start
-        
+
         best = 0
         seq = list(sorted(increasing_parts[0] + increasing_parts[-1]))
         for i, num in enumerate(seq):

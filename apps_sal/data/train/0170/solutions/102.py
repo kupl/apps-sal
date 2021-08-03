@@ -25,5 +25,5 @@ class Solution:
             p = i
             while p < len(l) and l[p] <= r[j]:
                 p += 1
-            p -= 1            
+            p -= 1
             return min(res1, res2, len(arr) - (p + 1 + len(r) - j))
