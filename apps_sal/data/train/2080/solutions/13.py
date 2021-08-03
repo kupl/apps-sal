@@ -8,7 +8,6 @@ a.sort()
 
 res = 0
 for i in range(n):
-    if i % (c+2) < c:
-        res += a[n-1-i]
+    if i % (c + 2) < c:
+        res += a[n - 1 - i]
 print(res)
-

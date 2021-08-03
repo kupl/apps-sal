@@ -5,8 +5,10 @@ n = int(input())
 a = list(map(int, input().split()))
 tot = sum(a)
 
+
 def inv(x):
     return pow(x, MOD - 2, MOD)
+
 
 l = [0, pow(n, tot, MOD) - 1]
 
@@ -29,4 +31,3 @@ zero = l[tot]
 out -= (n - 1) * zero
 out *= inv(n)
 print(out % MOD)
-

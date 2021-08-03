@@ -22,5 +22,4 @@ for i in range(m):
     if q < len(ans):
         print(*ans[q])
     else:
-        print(arr[0], arr[(q-len(ans)) % (len(arr) - 1) + 1])
-
+        print(arr[0], arr[(q - len(ans)) % (len(arr) - 1) + 1])

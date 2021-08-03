@@ -40,12 +40,12 @@ for i in range(10, -1, -1):
     b <<= 1
     c <<= 1
     c |= 1
-    if all([(v>>i) & 1 == 1for v in T]):
+    if all([(v >> i) & 1 == 1for v in T]):
         b |= 1
-    elif all([(v>>i) & 1 == 0 for v in T]):
+    elif all([(v >> i) & 1 == 0 for v in T]):
         c >>= 1
         c <<= 1
-    elif all([(S[j]>>i)&1 != (T[j]>>i)&1 for j in range(N)]):
+    elif all([(S[j] >> i) & 1 != (T[j] >> i) & 1 for j in range(N)]):
         a |= 1
 
 

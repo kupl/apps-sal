@@ -1,5 +1,6 @@
 import heapq
 
+
 def coor_neighbor(coor, dxs, dys):
     x, y = coor
     for dx in dxs:
@@ -133,4 +134,3 @@ while True:
         break
     result = result_add(result, N, figure.drop_min())
 print(result)
-

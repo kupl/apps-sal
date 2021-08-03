@@ -16,23 +16,25 @@ inf = float("inf")
 # from math import ceil,floor,log,sqrt,factorial,pi,gcd
 # from bisect import bisect,bisect_left,bisect_right,insort,insort_left,insort_right
 
+
 def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
 def get_ints(): return map(int, sys.stdin.readline().strip().split())
 def input(): return sys.stdin.readline().strip()
 
-n,l,r,ql,qr = get_ints()
+
+n, l, r, ql, qr = get_ints()
 Arr = get_array()
-pre = [0]*(n+1)
-for i in range(1,n+1):
-    pre[i] = pre[i-1]+Arr[i-1]
+pre = [0] * (n + 1)
+for i in range(1, n + 1):
+    pre[i] = pre[i - 1] + Arr[i - 1]
 # print(pre)
 ans = inf
-for i in range(n+1):
-    current_cost = pre[i]*l + (pre[n]-pre[i])*r
-    if (i>(n-i)):
-        current_cost+=(i-n+i-1)*ql
-    elif (i<(n-i)):
-        current_cost+=(n-i-i-1)*qr
+for i in range(n + 1):
+    current_cost = pre[i] * l + (pre[n] - pre[i]) * r
+    if (i > (n - i)):
+        current_cost += (i - n + i - 1) * ql
+    elif (i < (n - i)):
+        current_cost += (n - i - i - 1) * qr
     # print(current_cost)
     ans = min(ans, current_cost)
 print(ans)

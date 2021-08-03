@@ -24,6 +24,3 @@ print('3')
 print('&', (1023 & a) | b)
 print('^', a & (1023 ^ b))
 print('|', a & b)
-
-    
-

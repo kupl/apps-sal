@@ -16,6 +16,6 @@ for _ in range(max):
 for _ in range(q):
     m = int(input())
     if m > max:
-        print(a[0], a[1+(m-max-1)%(n-1)])
+        print(a[0], a[1 + (m - max - 1) % (n - 1)])
     else:
-        print(str(t[m-1][0]), str(t[m-1][1]))
+        print(str(t[m - 1][0]), str(t[m - 1][1]))

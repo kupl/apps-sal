@@ -15,5 +15,3 @@ for i in range(10):
     elif ((b >> i) & 1) and not ((c >> i) & 1):
         x |= 1 << i
 stdout.write('3\n| ' + str(o) + '\n^ ' + str(x) + '\n& ' + str(a))
-        
-

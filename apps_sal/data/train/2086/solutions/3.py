@@ -13,9 +13,8 @@ for i in range(m):
 for i in range(q):
     c = int(input())
     if c <= m:
-        print('{} {}'.format(b[c-1][0], b[c-1][1]))
+        print('{} {}'.format(b[c - 1][0], b[c - 1][1]))
     else:
-        c -= m+1
-        c %= n-1
-        print('{} {}'.format(a[0], a[c+1]))
-
+        c -= m + 1
+        c %= n - 1
+        print('{} {}'.format(a[0], a[c + 1]))

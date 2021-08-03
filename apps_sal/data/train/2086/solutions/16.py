@@ -1,5 +1,5 @@
 from collections import deque
-n, q = map(int,  input().split())
+n, q = map(int, input().split())
 a = deque(int(i) for i in input().split())
 Mmax = max(a)
 ans = {}
@@ -24,4 +24,4 @@ for i in range(q):
         print(*ans[x])
     else:
         x -= index
-        print(M, now[x %len(now) - 1])
+        print(M, now[x % len(now) - 1])

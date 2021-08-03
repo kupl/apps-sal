@@ -16,5 +16,3 @@ for i in range(n):
     if ss < min:
         min = ss
 print(min)
-
-

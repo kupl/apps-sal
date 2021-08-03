@@ -1,17 +1,23 @@
 #!/usr/bin/env pypy3
 
 from sys import stdin, stdout
- 
+
+
 def input():
     return stdin.readline().strip()
+
 
 def run_program(n, program):
     for op, a in program:
         assert(op in "&|^")
-        if op == '&': n = n & a
-        if op == '|': n = n | a
-        if op == '^': n = n ^ a
+        if op == '&':
+            n = n & a
+        if op == '|':
+            n = n | a
+        if op == '^':
+            n = n ^ a
     return n
+
 
 N = int(input())
 
@@ -31,7 +37,7 @@ for _ in range(N):
     elif op == '^':
         r = r ^ s
     elif op == '|':
-        q, r = (q ^ (q&s)), (r ^ s ^ (r&s))
+        q, r = (q ^ (q & s)), (r ^ s ^ (r & s))
     else:
         assert(False)
 
