@@ -9,4 +9,3 @@ def calculate_age(year_of_birth, current_year):
         return f"You will be born in {year_of_birth-current_year} years."
     else:
         return "You were born this very year!"
-

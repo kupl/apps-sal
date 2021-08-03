@@ -7,5 +7,6 @@ def to_alternating_case(string):
         elif l.islower():
             l = l.upper()
             res += l
-        else: res += l
+        else:
+            res += l
     return res

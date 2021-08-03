@@ -4,4 +4,3 @@ def areYouPlayingBanjo(name):
         return f'{name} plays banjo'
     else:
         return f'{name} does not play banjo'
-

@@ -1,4 +1,6 @@
 import string as str
+
+
 def to_alternating_case(string):
     res = ""
     for i in string:

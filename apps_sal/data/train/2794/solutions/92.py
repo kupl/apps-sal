@@ -1,13 +1,13 @@
 def calculate_age(year_of_birth, current_year):
-    #your code here
-    age = current_year-year_of_birth
-    if abs(age)==1:
+    # your code here
+    age = current_year - year_of_birth
+    if abs(age) == 1:
         unit = 'year'
     else:
         unit = 'years'
-    if age==0:
+    if age == 0:
         return "You were born this very year!"
-    if age>0:
-        return "You are "+str(age)+" "+unit+" old."
+    if age > 0:
+        return "You are " + str(age) + " " + unit + " old."
     else:
-        return "You will be born in "+str(abs(age))+" "+unit+"."
+        return "You will be born in " + str(abs(age)) + " " + unit + "."

@@ -7,6 +7,6 @@ def to_alternating_case(string):
             result += i.upper()
         elif i == " ":
             result += i
-        elif i.isalpha()== False:
+        elif i.isalpha() == False:
             result += i
     return result

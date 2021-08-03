@@ -5,5 +5,5 @@ def to_alternating_case(string):
             new_s += char.lower()
         else:
             new_s += char.upper()
-    
+
     return new_s

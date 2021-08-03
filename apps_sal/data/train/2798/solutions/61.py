@@ -11,4 +11,3 @@ def to_alternating_case(string):
         result += chr(ascii_code)
 
     return result
-

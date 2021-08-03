@@ -10,4 +10,3 @@ def cockroach_speed(kph):
     return int(cps)
 
 # I'm just tired of oneliners =)
-

@@ -1,5 +1,5 @@
 def to_alternating_case(string):
-    x=[]
+    x = []
     for i in list(string):
         if i.isupper():
             x.append(i.lower())
@@ -8,4 +8,3 @@ def to_alternating_case(string):
         else:
             x.append(i.upper())
     return "".join(x)
-

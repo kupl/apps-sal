@@ -6,4 +6,3 @@ def to_alternating_case(string):
         else:
             a += i.upper()
     return a
-

@@ -1,5 +1,5 @@
 def calculate_age(year_of_birth, current_year):
-    y =  current_year - year_of_birth
+    y = current_year - year_of_birth
     if y == 0:
         return 'You were born this very year!'
     else:
@@ -8,5 +8,3 @@ def calculate_age(year_of_birth, current_year):
             return 'You are {} year{} old.'.format(y, s)
         else:
             return 'You will be born in {} year{}.'.format(abs(y), s)
-        
-

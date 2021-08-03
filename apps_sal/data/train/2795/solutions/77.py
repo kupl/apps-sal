@@ -1,4 +1,4 @@
-#import math 
+#import math
 def cockroach_speed(s):
     # Good Luck!
-    return (s//(0.036))
+    return (s // (0.036))

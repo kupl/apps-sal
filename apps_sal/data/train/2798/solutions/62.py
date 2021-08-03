@@ -14,4 +14,5 @@ def to_alternating_case(string):
 
     return a
 
+
 print(to_alternating_case("cIao"))
