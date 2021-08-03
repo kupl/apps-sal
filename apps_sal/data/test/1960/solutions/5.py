@@ -8,7 +8,7 @@ def main():
                     yield(number)
 
     input_parser = parser()
-    gets = lambda: next(input_parser)
+    def gets(): return next(input_parser)
 
     def getNum():
         data = gets()
@@ -36,7 +36,8 @@ def main():
 
     lis, inlis = [], []
     d = [0] * n
-    for i in RANGN: g[i] = MAXA
+    for i in RANGN:
+        g[i] = MAXA
     for i in RANGN:
         pt = binsleft(g, a[i])
         lis.append(pt + 1)

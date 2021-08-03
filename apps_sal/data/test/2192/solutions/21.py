@@ -14,5 +14,7 @@ for i in range(n):
         a[j][i] = (arr[i][j] + arr[j][i]) / 2
         b[i][j] = (arr[i][j] - arr[j][i]) / 2
         b[j][i] = -(arr[i][j] - arr[j][i]) / 2
-for i in a: print(*i)
-for i in b: print(*i)
+for i in a:
+    print(*i)
+for i in b:
+    print(*i)

@@ -1,5 +1,7 @@
-palindrom = lambda s: s == s[::-1]
-printans = lambda l: print(''.join(l))
+def palindrom(s): return s == s[::-1]
+def printans(l): return print(''.join(l))
+
+
 s = list(input())
 
 for i in range(len(s) + 1):

@@ -52,17 +52,19 @@ for i in range(N):
     if LL[i] + TT[i] == length + 1:
         ANS[i] = 3
 
-maxi = 0;
-mini = 1000000;
+maxi = 0
+mini = 1000000
 
 for i in range(N):
     if ANS[i] != 1:
-        if AA[i] <= maxi: ANS[i] = 2
+        if AA[i] <= maxi:
+            ANS[i] = 2
         maxi = max(maxi, AA[i])
 
 for i in range(N - 1, -1, -1):
     if ANS[i] != 1:
-        if AA[i] >= mini: ANS[i] = 2
+        if AA[i] >= mini:
+            ANS[i] = 2
         mini = min(mini, AA[i])
 
 for i in range(N):

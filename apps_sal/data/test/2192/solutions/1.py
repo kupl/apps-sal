@@ -1,5 +1,7 @@
 n = int(input())
-w = []; a = []; b = []
+w = []
+a = []
+b = []
 for i in range(n):
     w.append(list(map(int, input().split())))
     a.append(list(range(n)))

@@ -1,6 +1,8 @@
 n = int(input())
 
-w = []; a = []; b = []
+w = []
+a = []
+b = []
 
 for i in range(n):
 
