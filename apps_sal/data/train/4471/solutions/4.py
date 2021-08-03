@@ -24,4 +24,3 @@ def lamps(a):
     n.append(k)
     print(n)
     return min(n)
-

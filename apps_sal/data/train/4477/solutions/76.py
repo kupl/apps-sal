@@ -9,7 +9,7 @@ def reverse_number(n):
 
     return revered_num
 
-    
+
 class TestReverseNumber(unittest.TestCase):
     def test_reverse_number_with_n_is_one_digit(self):
         n = 5
@@ -30,4 +30,3 @@ class TestReverseNumber(unittest.TestCase):
         n = 1000
         actual = reverse_number(n)
         self.assertEqual(actual, 1)
-

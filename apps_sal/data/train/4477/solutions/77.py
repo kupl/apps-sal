@@ -1,5 +1,6 @@
-def split(word): 
-    return [char for char in word]        
+def split(word):
+    return [char for char in word]
+
 
 def reverse_number(n):
     isNegative = False
@@ -7,15 +8,15 @@ def reverse_number(n):
         isNegative = True
     output = ""
     stringLst = split(str(n))
-    stringLst.reverse()    
-    
+    stringLst.reverse()
+
     for i in stringLst:
-            output += i
-        
+        output += i
+
     if (isNegative):
         output = output.replace('-', '')
         result = int(output)
-        return result*-1
-        
+        return result * -1
+
     else:
         return int(output)

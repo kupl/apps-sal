@@ -5,4 +5,3 @@ def reverse_number(number):
         return int(str(number)[::-1])
     else:
         return -int(str(number)[:0:-1])
-

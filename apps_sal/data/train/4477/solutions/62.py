@@ -6,4 +6,3 @@ def reverse_number(n):
     else:
         res = s[::-1]
     return int(res)
-

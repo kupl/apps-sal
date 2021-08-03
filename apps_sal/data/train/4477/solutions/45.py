@@ -5,4 +5,4 @@ def reverse_number(n):
         b = '-' + a[:-1]
         return int(b)
     else:
-        return int(a) 
+        return int(a)

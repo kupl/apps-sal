@@ -8,4 +8,3 @@ def reverse_number(n):
     else:
         new_str = n[::-1]
         return int(new_str)
-

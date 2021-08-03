@@ -6,5 +6,3 @@ def nb_year(p0, percent, aug, p):
         current_population = new_population
         years += 1
     return years
-     
-
