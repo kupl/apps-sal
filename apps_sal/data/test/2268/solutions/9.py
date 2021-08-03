@@ -1,6 +1,7 @@
 import sys
 import string
-read = lambda: list(map(int, sys.stdin.readline().split()))
+def read(): return list(map(int, sys.stdin.readline().split()))
+
 
 n, m = read()
 s = sys.stdin.readline().strip()

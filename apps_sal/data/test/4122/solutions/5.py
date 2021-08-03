@@ -9,7 +9,7 @@ for i in range(n):
     mH = min(mH, H)
     if H <= 0:
         print(i + 1)
-        break;
+        break
 else:
     if H_old <= H:
         print(-1)
@@ -22,4 +22,4 @@ else:
             H += d[i]
             if H <= 0:
                 print(rnds * n + i + 1)
-                break;
+                break

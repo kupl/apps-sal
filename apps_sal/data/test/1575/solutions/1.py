@@ -10,7 +10,7 @@ if n == 0:
 
 else:
     inp = input().split(' ')
-    min_del_t = 10000000000000;
+    min_del_t = 10000000000000
     ans = int(inp[0]) - 1
     t_cur = ts
     for tS in inp:

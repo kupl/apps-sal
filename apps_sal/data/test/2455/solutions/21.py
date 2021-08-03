@@ -17,5 +17,5 @@ for _ in range(n):
                 break
 
         if flag == 1:
-            answer.append("{}x{}".format(i, 12 // i));
+            answer.append("{}x{}".format(i, 12 // i))
     print(len(answer), " ".join(answer))

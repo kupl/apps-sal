@@ -26,7 +26,7 @@ for i in range(0, len(trips)):
     trip = trips[i]
     cost = 0
     if(i - 1 >= 0 and trips[i - 1][1] == trip[0]):
-        cost = b;
+        cost = b
     else:
         cost = a
     if (str(sorted(trip)) in my_dict):

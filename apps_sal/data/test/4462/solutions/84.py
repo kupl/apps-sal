@@ -1,5 +1,7 @@
-input(); a = list(map(int, input().split()))
-b1, b2, b4 = [], [], []; ans = ''
+input()
+a = list(map(int, input().split()))
+b1, b2, b4 = [], [], []
+ans = ''
 for i in a:
     if i % 2 != 0:
         b1.append(i)

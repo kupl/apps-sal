@@ -10,9 +10,11 @@ for i in b:
         H += i
         t += 1
     else:
-        print(t); return
+        print(t)
+        return
 if a[-1] >= 0:
-    print(-1); return()
+    print(-1)
+    return()
 else:
     r = min(a)
     m = (h + r) // abs(a[-1])
