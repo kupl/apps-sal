@@ -5,8 +5,8 @@ cnt = 0
 flag = True
 while flag:
     for i in range(N):
-        if A[i]%2 == 0:
-            A[i]//=2
+        if A[i] % 2 == 0:
+            A[i] //= 2
         else:
             flag = False
             break
@@ -14,4 +14,3 @@ while flag:
         cnt += 1
         continue
 print(cnt)
-

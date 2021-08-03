@@ -1,10 +1,10 @@
-n,k,m = list(map(int,input().split()))
-a = list(map(int,input().split()))
+n, k, m = list(map(int, input().split()))
+a = list(map(int, input().split()))
 sum1 = sum(a)
 stock = sum1
-check = n*m
+check = n * m
 flag = 0
-for i in range(k+1):
+for i in range(k + 1):
     sum1 += i
     if check <= sum1:
         ans = i
@@ -15,4 +15,3 @@ if flag == 0:
     print((-1))
 else:
     print(ans)
-

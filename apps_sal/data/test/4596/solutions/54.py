@@ -7,7 +7,7 @@ flag = False
 while True:
     for m, i in enumerate(int_line):
         if i % 2 == 0:
-            int_line[m] = i/2
+            int_line[m] = i / 2
         else:
             flag = True
     if flag == True:

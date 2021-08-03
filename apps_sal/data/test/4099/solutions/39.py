@@ -17,12 +17,10 @@ a = list(map(int, input().split()))
 # 最後のテストでの必要最低点を出力
 a = sum(a)
 
-score = (n * m) - a # 最後の平均点の必要な値
+score = (n * m) - a  # 最後の平均点の必要な値
 
 if score <= k:
     answer = score if score > 0 else "0"
     print(answer)
 else:
     print("-1")
-
-

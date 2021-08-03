@@ -1,5 +1,5 @@
 n = int(input())
-ls = list(map(int,input().split()))
+ls = list(map(int, input().split()))
 ans = float("inf")
 for i in range(n):
     p = 1

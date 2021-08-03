@@ -18,4 +18,3 @@ for i in range(m):
         print(b[r - 1] - b[l - 2])
     else:
         print(a[r - 1] - a[l - 2])
-

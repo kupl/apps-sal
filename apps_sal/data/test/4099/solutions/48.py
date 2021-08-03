@@ -2,9 +2,9 @@ N, K, M = map(int, input().split())
 data = list(map(int, input().split()))
 
 sum_data = sum(data)
-result = N*M-sum_data
+result = N * M - sum_data
 
-if result>K:
+if result > K:
     print("-1")
 
 elif result <= 0:

@@ -12,4 +12,3 @@ elif answer <= 0:
 
 else:
     print(answer)
-

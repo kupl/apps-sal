@@ -32,7 +32,8 @@ def __starting_point():
             total += int(str_N[i])
             i += 1
 
-        target = (int(str_N[:i-1]) + 1) * (10 ** (len(str_N) - i + 1))
+        target = (int(str_N[:i - 1]) + 1) * (10 ** (len(str_N) - i + 1))
         print(str(target - N))
+
 
 __starting_point()

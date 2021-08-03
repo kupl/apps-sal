@@ -34,7 +34,7 @@
 n, k, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-target_ponits = m * n # 目標に必要な合計点数
+target_ponits = m * n  # 目標に必要な合計点数
 need_point_n = target_ponits - sum(a)   # N番目のテストで目標達成に必要な点数
 
 result = "ret"
@@ -47,4 +47,3 @@ else:
         result = need_point_n
 
 print(result)
-

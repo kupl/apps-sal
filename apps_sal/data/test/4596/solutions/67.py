@@ -10,11 +10,12 @@ def solve(N, A):
                 return
             A[i] = A[i] / 2
         count += 1
-    
+
 
 def __starting_point():
     N = int(input())
     A = list(map(int, input().split()))
     solve(N, A)
+
 
 __starting_point()

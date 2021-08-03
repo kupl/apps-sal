@@ -14,4 +14,3 @@ if (by - ay) * (cx - bx) == (cy - by) * (bx - ax):
     return
 
 print('Yes')
-

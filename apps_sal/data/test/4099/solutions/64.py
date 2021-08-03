@@ -4,6 +4,7 @@ a = list(map(int, input().split()))
 
 result = m * n - sum(a)
 
+
 def show_result():
     if result > k:
         return -1
@@ -12,5 +13,5 @@ def show_result():
     elif result <= 0:
         return 0
 
-print((show_result()))
 
+print((show_result()))

@@ -1,6 +1,7 @@
 import sys
 import math
 
+
 def factorization(n):
     res = []
     limit = math.ceil(math.sqrt(n))
@@ -29,6 +30,7 @@ def factorization(n):
 
     return res
 
+
 def divisor(n):
     res = set()
 
@@ -47,6 +49,7 @@ def divisor(n):
 
     res = list(sorted(res))
     return res
+
 
 n, k = map(int, input().split())
 

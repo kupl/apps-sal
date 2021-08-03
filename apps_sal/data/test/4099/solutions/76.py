@@ -1,9 +1,10 @@
-N, K, M, = map(int,input().split())
-S = map(int,input().split())
+N, K, M, = map(int, input().split())
+S = map(int, input().split())
 total_score = sum(S)
 
+
 class Achieve:
-    def __init__(self,subjects,points,goal):
+    def __init__(self, subjects, points, goal):
         self.subjects = subjects
         self.points = points
         self.goal = goal
@@ -17,5 +18,6 @@ class Achieve:
         else:
             return (ans)
 
-takahasi = Achieve(N,K,M)
+
+takahasi = Achieve(N, K, M)
 print(takahasi.calculation())

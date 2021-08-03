@@ -10,7 +10,7 @@ need_score = N * M - sum(A)
 
 #　need_scoreがKより大きいとき
 if K >= need_score:
-    if need_score <=0:
+    if need_score <= 0:
         print(0)
     else:
         print(need_score)

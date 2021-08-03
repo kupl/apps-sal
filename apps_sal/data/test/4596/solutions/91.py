@@ -10,4 +10,3 @@ for i in range(N):
     ans = min(ans, temp)
 
 print(ans)
-

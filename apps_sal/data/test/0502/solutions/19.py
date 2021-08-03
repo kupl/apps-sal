@@ -13,4 +13,3 @@ elif cx == bx + dx and cy == by + dy:
     print('No')
 else:
     print('Yes')
-

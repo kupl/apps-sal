@@ -13,9 +13,8 @@ for i in a:
     tmp = 0
     while(i % 2 != 1):
         tmp += 1
-        i = i//2
+        i = i // 2
     # print(tmp)
     ans = min(ans, tmp)
 
 print(ans)
-

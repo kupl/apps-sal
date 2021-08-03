@@ -33,4 +33,3 @@ for case_num in range(t):
         radix *= 10
         idx -= 1
     print(cost)
-

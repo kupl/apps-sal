@@ -1,5 +1,5 @@
-N=int(input())
-A=list(map(int,input().split()))
+N = int(input())
+A = list(map(int, input().split()))
 ans_list = []
 
 for n in A:
@@ -9,5 +9,5 @@ for n in A:
         temp /= 2
         count = count + 1
     ans_list.append(count)
-    
+
 print(min(ans_list))

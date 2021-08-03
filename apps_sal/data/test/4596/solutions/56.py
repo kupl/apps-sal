@@ -1,11 +1,11 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 ans = 0
 flag = False
 
 while flag == False:
     for i in range(n):
-        if a[i]%2 == 0:
+        if a[i] % 2 == 0:
             a[i] /= 2
         else:
             flag = True

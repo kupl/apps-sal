@@ -7,6 +7,7 @@ def dsum(x):
         x //= 10
     return res
 
+
 for _ in range(int(input())):
     n, s = list(map(int, input().split()))
     # print(f'init: n={n}, s={s}')
@@ -18,7 +19,8 @@ for _ in range(int(input())):
     while csum > s:
         # print(f'n={n}')
         add = 10 * p - n % (10 * p)
-        if add == 10 * p: add = 0
+        if add == 10 * p:
+            add = 0
         ans += add
         n += add
         csum = dsum(n)
@@ -29,4 +31,3 @@ for _ in range(int(input())):
         # assert its
 
     print(ans)
-

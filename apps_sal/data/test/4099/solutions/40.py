@@ -1,5 +1,5 @@
-N,K,M = map(int,input().split())
-A = list(map(int,input().split()))
+N, K, M = map(int, input().split())
+A = list(map(int, input().split()))
 
 all = sum(A)
 goal = M * N

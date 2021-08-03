@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-# atcoder 
+# atcoder
 # Türkler var mı?
 # Herkese memnün oldum
 import sys
 #from heapq import heapify, heappush, heappop
 #from heapq import nlargest, nsmallest
 
-iimr = lambda: map(int, sys.stdin.readline().rstrip().split())
+
+def iimr(): return map(int, sys.stdin.readline().rstrip().split())
+
+
 readline = sys.stdin.readline
 # puorquoi le sys.stdin.buffer.readline() ne fonctionne plus sur atcoder?
 #sys.setrecursionlimit(10 ** 7)
-#INF = 1 << 30 # 大体 1e9
+# INF = 1 << 30 # 大体 1e9
 
 
 def debug(*x):
@@ -27,8 +30,8 @@ class atcoder():
     def çözmek(s):
         res = []
         res.append(s.関数(s.N, s.A))
-        print(*res)	
-    
+        print(*res)
+
     def 関数(self, n, a):
         guusuu = True
         cnt = 0
@@ -36,14 +39,17 @@ class atcoder():
             for i in range(n):
                 if(a[i] % 2 != 0):
                     guusuu = False
-                    break;
+                    break
                 else:
                     a[i] /= 2
-            if(guusuu): cnt += 1
-        return cnt 
+            if(guusuu):
+                cnt += 1
+        return cnt
+
 
 def __starting_point():
     ima = atcoder()
     ima.çözmek()
+
 
 __starting_point()

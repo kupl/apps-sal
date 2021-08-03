@@ -9,6 +9,6 @@ m = int(input())
 for i in range(m):
     t, l, r = map(int, input().split())
     if t == 1:
-        print (v1[r] - v1[l - 1])
+        print(v1[r] - v1[l - 1])
     else:
-        print (v2[r] - v2[l - 1])
+        print(v2[r] - v2[l - 1])
