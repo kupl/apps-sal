@@ -2,7 +2,7 @@ import sys
 import math
 
 MOD = int(1e9 + 7)
-line = lambda: list(map(int, input().split()))
+def line(): return list(map(int, input().split()))
 
 
 def solve():

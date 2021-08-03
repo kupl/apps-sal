@@ -6,18 +6,20 @@ mod = 1000000007
 
 sys.setrecursionlimit(10 ** 7)
 
-ni = lambda: int(ns())
-nin = lambda y: [ni() for _ in range(y)]
-na = lambda: list(map(int, stdin.readline().split()))
-nan = lambda y: [na() for _ in range(y)]
-nf = lambda: float(ns())
-nfn = lambda y: [nf() for _ in range(y)]
-nfa = lambda: list(map(float, stdin.readline().split()))
-nfan = lambda y: [nfa() for _ in range(y)]
-ns = lambda: stdin.readline().rstrip()
-nsn = lambda y: [ns() for _ in range(y)]
-ncl = lambda y: [list(ns()) for _ in range(y)]
-nas = lambda: stdin.readline().split()
+
+def ni(): return int(ns())
+def nin(y): return [ni() for _ in range(y)]
+def na(): return list(map(int, stdin.readline().split()))
+def nan(y): return [na() for _ in range(y)]
+def nf(): return float(ns())
+def nfn(y): return [nf() for _ in range(y)]
+def nfa(): return list(map(float, stdin.readline().split()))
+def nfan(y): return [nfa() for _ in range(y)]
+def ns(): return stdin.readline().rstrip()
+def nsn(y): return [ns() for _ in range(y)]
+def ncl(y): return [list(ns()) for _ in range(y)]
+def nas(): return stdin.readline().split()
+
 
 n, m = na()
 

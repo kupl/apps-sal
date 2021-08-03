@@ -4,8 +4,10 @@ P = 10**9 + 7
 
 @lru_cache(maxsize=None)
 def subcalc(l, r):
-    if l > r: return 0
-    if r == 0: return 1
+    if l > r:
+        return 0
+    if r == 0:
+        return 1
     aa, bb = l.bit_length(), r.bit_length()
     if aa == bb:
         return subcalc(l - (1 << aa - 1), r - (1 << bb - 1))
@@ -16,7 +18,8 @@ def subcalc(l, r):
 
 @lru_cache(maxsize=None)
 def calc(L, R):
-    if L > R: return 0
+    if L > R:
+        return 0
     a = L.bit_length()
     b = R.bit_length()
     if b > a:

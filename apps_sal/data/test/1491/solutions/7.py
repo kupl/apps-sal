@@ -6,8 +6,10 @@ sqr_list_dist = []
 non_sqr_dist = []
 for i in a:
     if (i**0.5) % 1 == 0:
-        if i == 0: sqr_list_dist.append(2)
-        else: sqr_list_dist.append(1)
+        if i == 0:
+            sqr_list_dist.append(2)
+        else:
+            sqr_list_dist.append(1)
     else:
         lower = math.floor(i**0.5)**2
         upper = math.ceil(i**0.5)**2

@@ -5,7 +5,8 @@ def lInt(d=None): return list(map(int, input().split(d)))
 n, *_ = lInt()
 a = list(lInt())
 is_sq = [0] * n
-sq = 0; ans = 0
+sq = 0
+ans = 0
 pos = []
 
 

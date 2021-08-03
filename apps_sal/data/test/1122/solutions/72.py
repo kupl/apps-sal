@@ -8,7 +8,8 @@ if(n % 2 == 0):
         d -= 2
         i += 1
         c += 1
-        if(c == m): return
+        if(c == m):
+            return
     d = n // 2 - 2
     i = n // 2 + 1
     while(d > 0):
@@ -16,7 +17,8 @@ if(n % 2 == 0):
         d -= 2
         i += 1
         c += 1
-        if(c == m): return
+        if(c == m):
+            return
 
 
 else:

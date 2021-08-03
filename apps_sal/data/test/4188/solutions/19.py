@@ -1,1 +1,2 @@
-s = "A1001010111001010"; print(s[int(input())])
+s = "A1001010111001010"
+print(s[int(input())])

@@ -9,13 +9,15 @@ def solve():
     left = 1
     right = N
     for i in range(M):
-        if right - left in used or 2 * (right - left) == N: right -= 1
+        if right - left in used or 2 * (right - left) == N:
+            right -= 1
         Ans[i] = (left, right)
         diff = right - left
         used |= {diff, N - diff}
         left += 1
         right -= 1
-    for i in range(M): print(*Ans[i], sep=" ")
+    for i in range(M):
+        print(*Ans[i], sep=" ")
 
     return 0
 

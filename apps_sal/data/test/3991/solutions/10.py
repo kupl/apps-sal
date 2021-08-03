@@ -1,5 +1,7 @@
 n = int(input())
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 l = list(R())
 l.sort()
 s, m = 0, 1000000007

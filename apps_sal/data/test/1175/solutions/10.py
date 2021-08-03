@@ -22,12 +22,18 @@ def main():
                     pre = dp[i][t][f][g]
                     for x, y in [(0, 0), (0, 1), (1, 1)]:
                         nt, nf, ng = t, f, g
-                        if t == 0 and (x, y) == (0, 1): continue
-                        if f == 0 and lk > x: continue
-                        if g == 0 and y > rk: continue
-                        if (x, y) == (1, 1): nt = 1
-                        if lk == 0 and x == 1: nf = 1
-                        if y == 0 and rk == 1: ng = 1
+                        if t == 0 and (x, y) == (0, 1):
+                            continue
+                        if f == 0 and lk > x:
+                            continue
+                        if g == 0 and y > rk:
+                            continue
+                        if (x, y) == (1, 1):
+                            nt = 1
+                        if lk == 0 and x == 1:
+                            nf = 1
+                        if y == 0 and rk == 1:
+                            ng = 1
                         if i == n - 1:
                             ans = (ans + pre) % md
                         else:

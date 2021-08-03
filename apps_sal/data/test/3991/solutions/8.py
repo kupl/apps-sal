@@ -14,8 +14,10 @@ def solve(vs):
 
 
 def expnm(a, b, m):
-    if b == 0: return 1
-    if b % 2 == 0: return expnm(a * a % m, b // 2, m)
+    if b == 0:
+        return 1
+    if b % 2 == 0:
+        return expnm(a * a % m, b // 2, m)
     return (a * expnm(a, b - 1, m) % m)
 
 

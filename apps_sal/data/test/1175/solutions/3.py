@@ -14,9 +14,12 @@ for d, (Ld, Rd) in enumerate(zip(binL, binR)):
     Ld, Rd = int(Ld), int(Rd)
     for isLleX, isYleR, isNum in product(list(range(2)), repeat=3):
         for x, y in [(0, 0), (0, 1), (1, 1)]:
-            if not isNum and (x, y) == (0, 1): continue
-            if not isLleX and x < Ld: continue
-            if not isYleR and y > Rd: continue
+            if not isNum and (x, y) == (0, 1):
+                continue
+            if not isLleX and x < Ld:
+                continue
+            if not isYleR and y > Rd:
+                continue
             isLleX2 = isLleX or x > Ld
             isYleR2 = isYleR or y < Rd
             isNum2 = isNum or y == 1

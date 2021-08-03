@@ -34,7 +34,8 @@ def solve(pos, is_small, is_large, found):
     res = 0
     for x in [0, 1]:
         for y in [0, 1]:
-            if x == 1 and y == 0: continue
+            if x == 1 and y == 0:
+                continue
             if not is_small and x == 0 and (min_val >> pos & 1) == 1:
                 continue
             if not is_large and y == 1 and (max_val >> pos & 1) == 0:
