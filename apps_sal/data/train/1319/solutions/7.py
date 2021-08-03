@@ -5,11 +5,11 @@ try:
     normal = []
     exe = []
     # As the problem states, we should do this n+m times.
-    for i in range(0, (n+m)):
+    for i in range(0, (n + m)):
         get = int(input())
         # If the king has come, return the smallest(but biggest) element
         # For executing.
-        if get==-1:
+        if get == -1:
             c = -heappop(normal)
             exe.append(c)
         # Otherwise, push the negative value to normal
@@ -21,4 +21,3 @@ try:
         print(exe[j])
 except:
     pass
-

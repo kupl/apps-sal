@@ -9,4 +9,3 @@ for i in range(total):
         l[-1] = 0
     else:
         l.append(n)
-

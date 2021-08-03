@@ -1,7 +1,7 @@
 # cook your dish here
-l=[]
+l = []
 for i in range(int(input())):
-    t=list(set(list(map(int,input().split()))))
+    t = list(set(list(map(int, input().split()))))
     if t not in l:
         l.append(t)
     else:
