@@ -2,9 +2,9 @@ from bisect import bisect
 import sys
 input = sys.stdin.readline
 stdout = sys.stdout
-rr = lambda: input().strip()
-rri = lambda: int(rr())
-rrm = lambda: list(map(int, rr().split()))
+def rr(): return input().strip()
+def rri(): return int(rr())
+def rrm(): return list(map(int, rr().split()))
 
 
 N = rri()

@@ -9,7 +9,8 @@ def f5(seq, idfun=None):
     result = []
     for item in seq:
         marker = idfun(item)
-        if marker in seen: continue
+        if marker in seen:
+            continue
         seen[marker] = 1
         result.append(item)
     return result

@@ -4,7 +4,8 @@ M = 10**9 + 7
 n = [*map(int, z().strip())]
 l = len(n)
 p = [0]
-for i in range(l): p.append(p[-1] + n[i])
+for i in range(l):
+    p.append(p[-1] + n[i])
 s = 0
 v = (l * l - l) // 2
 d = 1

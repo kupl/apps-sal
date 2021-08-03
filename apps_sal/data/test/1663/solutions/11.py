@@ -74,11 +74,14 @@ def main():
     #m, n, k = rinput()
     #q = rlinput()
     #q = linput()
-    s = input(); n = len(s)
+    s = input()
+    n = len(s)
     mod = int(1e9) + 7
     q = [0 for i in range(100100)]
     w = [0 for i in range(100100)]
-    q[0] = 1; w[0] = 1; res = 1
+    q[0] = 1
+    w[0] = 1
+    res = 1
     for i in range(1, 100100):
         res = (res * 10) % mod
         q[i] = q[i - 1] + res
