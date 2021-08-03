@@ -1,7 +1,7 @@
 def next_item(xs, item):
     print((repr(xs), item))
     try:
-        return xs[xs.index(item)+1]
+        return xs[xs.index(item) + 1]
     except ValueError:
         return None
     except IndexError:
@@ -18,5 +18,3 @@ def next_item(xs, item):
                         return xs.__next__()
             except StopIteration:
                 return None
-                
-

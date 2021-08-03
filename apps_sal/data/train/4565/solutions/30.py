@@ -1,1 +1,1 @@
-replace_dots = lambda s: ''.join(['-' if c == '.' else c for c in s])
+def replace_dots(s): return ''.join(['-' if c == '.' else c for c in s])

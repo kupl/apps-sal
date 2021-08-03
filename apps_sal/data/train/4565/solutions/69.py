@@ -5,4 +5,4 @@ def replace_dots(str):
             output += "-"
         else:
             output += element
-    return output            
+    return output

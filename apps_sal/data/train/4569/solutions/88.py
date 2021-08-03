@@ -4,7 +4,7 @@ def next_item(xs, item):
             return None
         q = xs.index(item)
         if (q + 1) >= len(xs):
-           return None
+            return None
         return xs[q + 1]
     else:
         qq = 0

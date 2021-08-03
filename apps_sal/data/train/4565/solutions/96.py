@@ -5,8 +5,7 @@ def replace_dots(str):
             arr.append('-')
         else:
             arr.append(i)
-    
-    b = ('').join(arr)
-    
-    return b
 
+    b = ('').join(arr)
+
+    return b

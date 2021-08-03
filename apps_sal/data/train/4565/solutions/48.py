@@ -1,5 +1,5 @@
 def replace_dots(str1):
-    
+
     return str1.replace(".", "-")
 
 

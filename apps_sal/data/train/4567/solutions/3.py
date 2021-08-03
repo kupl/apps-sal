@@ -1,2 +1,2 @@
 def pillow(s):
-    return ('n', 'B') in zip(s[0],s[1])
+    return ('n', 'B') in zip(s[0], s[1])

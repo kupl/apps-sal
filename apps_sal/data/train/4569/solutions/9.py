@@ -1,4 +1,4 @@
-def next_item(xs, item, trap = None):
+def next_item(xs, item, trap=None):
     for i in xs:
         if trap:
             return i

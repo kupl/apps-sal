@@ -7,4 +7,3 @@ def next_item(xs, item):
         if x == item:
             f = 0
     # TODO: Implement me
-

@@ -4,6 +4,7 @@ from collections import deque
 from itertools import compress
 from heapq import nsmallest, nlargest
 
+
 def find_min_max_product(arr, k):
     if k <= len(arr):
         large = nlargest(k, arr)[::-1]

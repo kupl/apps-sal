@@ -6,5 +6,3 @@ def next_item(xs, item):
         if element == item:
             flag = True
     return None
-        
-

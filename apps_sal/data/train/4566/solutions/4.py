@@ -1,4 +1,4 @@
-def counting_valleys(s): 
+def counting_valleys(s):
     altitude = 0
     result = 0
     for c in s:

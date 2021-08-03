@@ -1,1 +1,1 @@
-replace_dots = lambda x: x.replace(".","-")
+def replace_dots(x): return x.replace(".", "-")

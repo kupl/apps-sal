@@ -1,5 +1,5 @@
 def replace_dots(st):
-    print(("==>> ",st))
+    print(("==>> ", st))
     if len(st) == 0:
         return ''
     num_dots = 0
@@ -7,9 +7,6 @@ def replace_dots(st):
         if lletra == ".":
             num_dots += 1
     if num_dots > 0:
-        return st.replace('.','-')
+        return st.replace('.', '-')
     else:
         return "no dots"
-
-
-

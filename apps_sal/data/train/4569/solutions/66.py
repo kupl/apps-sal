@@ -1,5 +1,6 @@
 import collections
 
+
 def next_item(xs, item):
     try:
         return xs[xs.index(item) + 1]

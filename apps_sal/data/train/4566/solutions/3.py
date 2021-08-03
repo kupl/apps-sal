@@ -1,4 +1,4 @@
-def counting_valleys(s): 
+def counting_valleys(s):
     s = list(s)
     s = list(filter(lambda x: x != 'F', s))
     for i in range(len(s)):

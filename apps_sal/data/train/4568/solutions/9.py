@@ -1,6 +1,7 @@
 from functools import reduce
 from typing import List, Optional, Tuple
 
+
 def find_min_max_product(arr: List[int], kpi: int) -> Optional[Tuple[int, int]]:
 
     if kpi <= len(arr):

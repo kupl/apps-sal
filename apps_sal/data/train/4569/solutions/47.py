@@ -3,5 +3,5 @@ def next_item(xs, item):
     for i in iterator:
         if i == item:
             return next(iterator, None)
-    
+
     return None

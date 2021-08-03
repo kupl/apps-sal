@@ -8,5 +8,3 @@ def next_item(xs, item):
         if x == item:
             found = True
     return result
-
-

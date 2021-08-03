@@ -5,4 +5,3 @@ def replace_dots(s):
         return 'no dots'
     else:
         return s.replace(".", "-")
-

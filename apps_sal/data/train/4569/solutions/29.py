@@ -5,4 +5,3 @@ def next_item(xs, item):
             return el
         elif el == item:
             stop = True
-
