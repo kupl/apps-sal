@@ -5,5 +5,6 @@ def bool_to_word(boolean):
         return "No"
     else:
         pass
-    
+
+
 bool_to_word(True)

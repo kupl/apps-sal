@@ -8,4 +8,3 @@ def word_mesh(lst):
         else:
             return "failed to mesh"
     return "".join(meshes)
-

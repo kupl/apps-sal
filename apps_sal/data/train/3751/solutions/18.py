@@ -1,8 +1,7 @@
 def bool_to_word(boolean):
     if (boolean):
-      return("Yes")
+        return("Yes")
     elif (not(boolean)):
-      return("No")
+        return("No")
     else:
-      print("You're not real")
-
+        print("You're not real")

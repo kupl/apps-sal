@@ -1,1 +1,1 @@
-bool_to_word = lambda b: b and "Yes" or "No"
+def bool_to_word(b): return b and "Yes" or "No"

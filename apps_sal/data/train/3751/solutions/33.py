@@ -1,8 +1,8 @@
 def bool_to_word(boolean):
     # TODO
-    
-    wert = bool(boolean);
+
+    wert = bool(boolean)
     if wert == True:
-        return 'Yes';
+        return 'Yes'
     else:
-        return 'No';
+        return 'No'

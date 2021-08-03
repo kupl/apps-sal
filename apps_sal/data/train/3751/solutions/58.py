@@ -1,13 +1,11 @@
 def bool_to_word(boolean):
-    
-  
+
     if boolean:
-        print ('Yes') 
-        answer='Yes'
+        print('Yes')
+        answer = 'Yes'
 
     if not boolean:
-        print ('No')
-        answer='No'
-        
-    return answer 
+        print('No')
+        answer = 'No'
 
+    return answer

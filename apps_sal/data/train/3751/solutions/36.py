@@ -1,5 +1,5 @@
 def bool_to_word(boolean):
-    # TODO 
+    # TODO
     if(bool(boolean)):
         return 'Yes'
     return 'No'
