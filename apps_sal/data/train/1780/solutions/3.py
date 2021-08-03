@@ -14,9 +14,10 @@ def _cgt(arr, pos):
             # and calling recursive function with it
             _gt(arr[:pos] + [arr[pos] + 1] + arr[pos + 2:], pos)
 
+
 def _gt(arr, pos):
     nonlocal _elements
-    _elements.append(arr) # Add current array of summands
+    _elements.append(arr)  # Add current array of summands
 
     # Checking 2 elements
     # Example: For array [2, 1, 1] with pos = 0(zero) it will found:
@@ -43,13 +44,14 @@ def gt(num):
 def part(N):
     # Create new dictionary that will contain all products
     products = {}
-    
+
     # Find product for each possible array of summands
     for arr in gt(N):
         prod = arr[0]
-        for v in arr[1:]: prod *= v
+        for v in arr[1:]:
+            prod *= v
         products[prod] = True
-    
+
     # Sort found products to be able to find median
     pds = sorted(p for p in products)
 

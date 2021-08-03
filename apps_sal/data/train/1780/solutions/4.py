@@ -2,17 +2,20 @@ def part(n):
     p = sorted(set([prod(s) for s in parts(n)]))
     r = max(p) - min(p)
     a = sum(p) / float(len(p))
-    m = (p[(len(p)-1)//2] + p[len(p)//2]) / 2.0
+    m = (p[(len(p) - 1) // 2] + p[len(p) // 2]) / 2.0
     return 'Range: {} Average: {:.2f} Median: {:.2f}'.format(r, a, m)
-    
+
+
 def prod(l):
     p = 1
     for i in l:
         p *= i
     return p
-    
-# http://jeromekelleher.net/generating-integer-partitions.html    
+
+# http://jeromekelleher.net/generating-integer-partitions.html
 # No recursion
+
+
 def parts(n):
     a = [0] * (n + 1)
     k = 1

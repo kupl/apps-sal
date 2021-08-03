@@ -32,8 +32,8 @@ def generate_bc_middle(path_components: List[str]) -> List[str]:
     cumulative_path = ''
     result: List[str] = []
     for path in path_components:
-        cumulative_path = (cumulative_path + '/' +
-                           path) if cumulative_path else path
+        cumulative_path = (cumulative_path + '/'
+                           + path) if cumulative_path else path
         bc = path.replace('-',
                           ' ').upper() if len(path) <= 30 else acronymyze(path)
         result.append(f'<a href="/{cumulative_path}/">{bc}</a>')
@@ -93,4 +93,3 @@ def split_url(url: str) -> Tuple[List[str], str]:
 
     # (['years', 'pictures'], 'holidays.html')
     return (path_components, last_path)
-

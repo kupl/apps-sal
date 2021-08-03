@@ -1,4 +1,4 @@
-def curry_partial(f,*args):
+def curry_partial(f, *args):
     if not callable(f):
         return f
     if len(args) < f.__code__.co_argcount:
