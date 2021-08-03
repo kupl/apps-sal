@@ -5,7 +5,8 @@ def dfs(edge, s):
     while q:
         v = q.pop()
         for w in edge[v]:
-            if w in use: continue
+            if w in use:
+                continue
             use.add(w)
             q.append(w)
     return use
@@ -28,7 +29,8 @@ def bellman_ford(v, s, t, e):
                 d[b] = cost
                 f = True
         # 更新が無ければbreak
-        if not f: break
+        if not f:
+            break
     else:
         # V回目まで更新があったら負の閉路がある
         return -1

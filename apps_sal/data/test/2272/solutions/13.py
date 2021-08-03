@@ -16,8 +16,10 @@ def main():
     nonlocal visited
     nonlocal p
     mode = "filee"
-    if mode == "file": f = open("test.txt", "r")
-    get = lambda: [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    if mode == "file":
+        f = open("test.txt", "r")
+
+    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
     [n] = get()
     g = [[0]]
     le = 0
@@ -39,7 +41,8 @@ def main():
             dfs(x)
             print("YES" if visited[y] == True else "NO")
 
-    if mode == "file": f.close()
+    if mode == "file":
+        f.close()
 
 
 def __starting_point():

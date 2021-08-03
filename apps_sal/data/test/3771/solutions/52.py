@@ -68,7 +68,8 @@ def max_flow(start, finish, graph):
     flow = 0
     while True:
         f, graph = dfs2(start, finish, graph)
-        if f == 0: return flow
+        if f == 0:
+            return flow
         flow += f
 
 

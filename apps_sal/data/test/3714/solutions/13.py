@@ -14,13 +14,16 @@ for i in range(n):
     for j in range(n + 5):
         t = l[t]
         if t == i:
-            if (j + 1) % 2 == 0: use.append((j + 1) // 2)
-            else: use.append(j + 1)
+            if (j + 1) % 2 == 0:
+                use.append((j + 1) // 2)
+            else:
+                use.append(j + 1)
             break
     else:
         valid = 0
 
-if not valid: print("-1")
+if not valid:
+    print("-1")
 else:
     # get lcm
     ans = 1

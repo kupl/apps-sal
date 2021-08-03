@@ -1,8 +1,8 @@
 import sys
 sys.setrecursionlimit(1000000000)
-ii = lambda: int(input())
-mis = lambda: list(map(int, input().split()))
-lmis = lambda: list(mis())
+def ii(): return int(input())
+def mis(): return list(map(int, input().split()))
+def lmis(): return list(mis())
 
 
 def main():

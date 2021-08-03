@@ -14,7 +14,7 @@ def make_function(n, crushes):
 
 
 def lcd(numbers):
-    gcd = lambda x, y: int(x) if y == 0 else int(gcd(y, x % y))
+    def gcd(x, y): return int(x) if y == 0 else int(gcd(y, x % y))
     ret = 1
     for number in numbers:
         ret = ret * number / gcd(ret, number)

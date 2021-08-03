@@ -3,7 +3,9 @@ from collections import deque
 
 class EDOMONDS_KARP():
     def __init__(self, N, s, t):
-        self.N = N; self.s = s; self.t = t
+        self.N = N
+        self.s = s
+        self.t = t
         self.cap = [[0] * N for _ in range(N)]
         self.link = [[] for _ in range(N)]
 
@@ -13,7 +15,9 @@ class EDOMONDS_KARP():
         self.link[v].append(u)
 
     def max_flow(self):
-        N = self.N; s = self.s; t = self.t
+        N = self.N
+        s = self.s
+        t = self.t
         f = 0
         flow = [[0] * N for _ in range(N)]
         while True:
@@ -30,11 +34,15 @@ class EDOMONDS_KARP():
         return (f, flow)
 
     def bfs(self, flow):
-        N = self.N; s = self.s; t = self.t
+        N = self.N
+        s = self.s
+        t = self.t
         cap = self.cap
         link = self.link
-        prev = [-1] * N; prev[s] = -2
-        m = [0] * N; m[s] = float('inf')
+        prev = [-1] * N
+        prev[s] = -2
+        m = [0] * N
+        m[s] = float('inf')
         q = deque([s])
         while q:
             u = q.popleft()

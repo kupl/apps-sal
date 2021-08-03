@@ -43,7 +43,8 @@ class FordFulkerson():
         flow = 0
         while True:
             f = self.dfs()
-            if f == 0: return flow
+            if f == 0:
+                return flow
             flow += f
 
 

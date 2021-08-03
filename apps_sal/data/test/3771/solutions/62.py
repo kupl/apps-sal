@@ -54,34 +54,43 @@ class maxFlow:
             while not que.empty():
                 v = que.get()
                 for e in self.g[v]:
-                    if e.cap == 0 or level[e.to] >= 0: continue
+                    if e.cap == 0 or level[e.to] >= 0:
+                        continue
                     level[e.to] = level[v] + 1
-                    if e.to == t: return
+                    if e.to == t:
+                        return
                     que.put(e.to)
 
         def dfs(this, v, up):
-            if v == s: return up
+            if v == s:
+                return up
             res = 0
             level_v = level[v]
             for i in range(iter[v], len(self.g[v])):
                 e = self.g[v][i]
-                if level_v <= level[e.to] or self.g[e.to][e.rev].cap == 0: continue
+                if level_v <= level[e.to] or self.g[e.to][e.rev].cap == 0:
+                    continue
                 d = this(this, e.to, min(up - res, self.g[e.to][e.rev].cap))
-                if d <= 0: continue
+                if d <= 0:
+                    continue
                 self.g[v][i].cap += d
                 self.g[e.to][e.rev].cap -= d
                 res += d
-                if res == up: break
+                if res == up:
+                    break
             return res
 
         flow = 0
         while flow < flow_limit:
             bfs()
-            if level[t] == -1: break
-            for i in range(self._n): iter[i]
+            if level[t] == -1:
+                break
+            for i in range(self._n):
+                iter[i]
             while flow < flow_limit:
                 f = dfs(dfs, t, flow_limit - flow)
-                if not f: break
+                if not f:
+                    break
                 flow += f
         return flow
 

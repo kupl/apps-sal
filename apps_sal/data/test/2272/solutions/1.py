@@ -29,5 +29,7 @@ for i in range(n):
         visited = set()
         ok = False
         res = DFS(a - 1, b - 1, visited)
-        if ok: print("YES")
-        else: print("NO")
+        if ok:
+            print("YES")
+        else:
+            print("NO")

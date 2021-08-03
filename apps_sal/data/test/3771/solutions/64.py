@@ -148,5 +148,7 @@ for i in range(H):
             dinic.add_edge(j + H, i, 1)
 
 ans = dinic.flow(start, end)
-if ans > INF: print(-1)
-else: print(ans)
+if ans > INF:
+    print(-1)
+else:
+    print(ans)

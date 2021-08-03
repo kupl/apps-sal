@@ -9,12 +9,14 @@ sys.setrecursionlimit(10000000)
 
 
 def find_negative_loop(n, e):
-    d = n * [10**20]; d[0] = 0
+    d = n * [10**20]
+    d[0] = 0
     for h in range(n):
         for i, j, k in e:
             if d[j] > d[i] + k:
                 d[j] = d[i] + k
-                if h == n - 1: return -1
+                if h == n - 1:
+                    return -1
     return max(-d[n - 1], 0)
 
 
@@ -27,7 +29,8 @@ def find_loop(n, e, flag):
     t = []
     c = 0
     for i in range(n):
-        for j in e[i]: x[j] += 1
+        for j in e[i]:
+            x[j] += 1
     for i in range(n):
         if x[i] == 0:
             d.append(i)
@@ -41,8 +44,10 @@ def find_loop(n, e, flag):
                 d.append(j)
                 t.append(j)
                 c += 1
-    if flag == 0: return c == n
-    else: return t
+    if flag == 0:
+        return c == n
+    else:
+        return t
 
 
 n, m, p = map(int, input().split())
@@ -67,7 +72,8 @@ while Q:
     P = []
     for i in Q:
         for j in ef[i]:
-            if j in visited: continue
+            if j in visited:
+                continue
             visited.add(j)
             eff[j] = 1
             P.append(j)
@@ -80,7 +86,8 @@ while Q:
     P = []
     for i in Q:
         for j in ee[i]:
-            if j in visited: continue
+            if j in visited:
+                continue
             visited.add(j)
             eef[j] = 1
             P.append(j)

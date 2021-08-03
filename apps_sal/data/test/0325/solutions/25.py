@@ -5,7 +5,8 @@ def main():
         while q:
             v = q.pop()
             for w in edge[v]:
-                if w in use: continue
+                if w in use:
+                    continue
                 use.add(w)
                 q.append(w)
         return use
@@ -28,7 +29,8 @@ def main():
             if cost < d[b]:
                 d[b] = cost
                 f = True
-        if not f: break
+        if not f:
+            break
     else:
         print(-1)
         return

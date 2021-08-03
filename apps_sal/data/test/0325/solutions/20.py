@@ -24,7 +24,8 @@ def solve():
                 que.append(w)
                 used[w] = 1
         return P
-    P0 = chk(0, G); P1 = chk(N - 1, RG)
+    P0 = chk(0, G)
+    P1 = chk(N - 1, RG)
     F = [P0[i] == P1[i] == 1 for i in range(N)]
     I = [i for i in range(N) if F[i]]
 

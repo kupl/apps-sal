@@ -99,7 +99,8 @@ def main2(h, w, mat):
                 ary.append([h + w + 1, h + j, inf])
                 ary.append([h + j, h + w + 1, inf])
                 tt = i, j
-    if ss[0] == tt[0] or ss[1] == tt[1]: return -1
+    if ss[0] == tt[0] or ss[1] == tt[1]:
+        return -1
     mf = MaxFlow(n)
     for i, j, c in ary:
         mf.add_edge(i, j, c)

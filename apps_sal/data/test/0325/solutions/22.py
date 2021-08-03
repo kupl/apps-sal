@@ -1,9 +1,10 @@
 import sys
 sys.setrecursionlimit(1000000000)
 
-ii = lambda: int(input())
-miis = lambda: map(int, input().split())
-lmiis = lambda: list(miis())
+
+def ii(): return int(input())
+def miis(): return map(int, input().split())
+def lmiis(): return list(miis())
 
 
 def reachable_nodeset(start, inc):
@@ -31,7 +32,8 @@ def bellmanford(num, start, goal, edges):
             if cost[b] > cost[a] + c:
                 cost[b] = cost[a] + c
                 updated = True
-        if not updated: break
+        if not updated:
+            break
     else:
         return -1
 

@@ -1,12 +1,13 @@
 from sys import *
-inp = lambda: stdin.readline()
+def inp(): return stdin.readline()
 
 
 def solve(x, s, n, k):
     ans, r, bal = 0, 0, 0
     for l in range(n):
         while r < n and (s[r] == x or bal < k):
-            if s[r] != x: bal += 1
+            if s[r] != x:
+                bal += 1
             r += 1
         ans = max(ans, r - l)
         if s[l] != x:

@@ -19,7 +19,8 @@ else:
     a = 1
 
     for i in range(n):
-        if L[i] == 0: continue
+        if L[i] == 0:
+            continue
         u = i
         c = 0
         while L[u] != 0:

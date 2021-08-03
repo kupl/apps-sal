@@ -14,25 +14,29 @@ def S(): return list(sys.stdin.readline())[:-1]
 
 def IR(n):
     l = [None for i in range(n)]
-    for i in range(n): l[i] = I()
+    for i in range(n):
+        l[i] = I()
     return l
 
 
 def LIR(n):
     l = [None for i in range(n)]
-    for i in range(n): l[i] = LI()
+    for i in range(n):
+        l[i] = LI()
     return l
 
 
 def SR(n):
     l = [None for i in range(n)]
-    for i in range(n): l[i] = S()
+    for i in range(n):
+        l[i] = S()
     return l
 
 
 def LSR(n):
     l = [None for i in range(n)]
-    for i in range(n): l[i] = SR()
+    for i in range(n):
+        l[i] = SR()
     return l
 
 
@@ -109,7 +113,8 @@ def F():
     def ford_fulkerson(s, g, c, n):
         while 1:
             p, m = bfs(s, g, n)
-            if not m: break
+            if not m:
+                break
             for i in range(len(p) - 1):
                 c[p[i]][p[i + 1]] -= m
                 c[p[i + 1]][p[i]] += m

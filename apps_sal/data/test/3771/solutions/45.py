@@ -34,7 +34,8 @@ class Dinic:
         return level[t] is not None
 
     def dfs(self, v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         level = self.level
         for e in self.it[v]:
             w, cap, rev = e

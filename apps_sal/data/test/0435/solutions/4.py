@@ -1,9 +1,13 @@
 def solve(n, k, l):
-    ki = i = s = 0; po = 1
+    ki = i = s = 0
+    po = 1
     for j in range(n):
         s += (l[j] == 0)
-        while s > k: s -= (l[i] == 0); i += 1
-        if j - i > ki - po: po, ki = i, j
+        while s > k:
+            s -= (l[i] == 0)
+            i += 1
+        if j - i > ki - po:
+            po, ki = i, j
     return ki - po + 1
 
 

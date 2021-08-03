@@ -5,7 +5,8 @@ adjlist = []
 
 def dfs(visit, cur, dest):
     visit[cur] = True
-    if cur == dest: return True
+    if cur == dest:
+        return True
     else:
         found = False
         for v in adjlist[cur]:

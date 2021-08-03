@@ -82,10 +82,11 @@ class Dinic:
 def build_grid(H, W, intv, _type, space=True, padding=False):
     # 入力がスペース区切りかどうか
     if space:
-        _input = lambda: input().split()
+        def _input(): return input().split()
     else:
-        _input = lambda: input()
-    _list = lambda: list(map(_type, _input()))
+        def _input(): return input()
+
+    def _list(): return list(map(_type, _input()))
     # 余白の有無
     if padding:
         offset = 1

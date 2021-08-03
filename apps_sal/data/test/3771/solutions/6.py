@@ -1,6 +1,8 @@
 from collections import deque
 INF = float("inf")
-TO = 0; CAP = 1; REV = 2
+TO = 0
+CAP = 1
+REV = 2
 
 
 class Dinic:

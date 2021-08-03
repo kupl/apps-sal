@@ -101,6 +101,7 @@ for i in range(h):
             # g[j+h].append((i,1))
 
 
-if sh == th or sw == tw: print((-1))
+if sh == th or sw == tw:
+    print((-1))
 else:
     print((D.flow(S, T)))

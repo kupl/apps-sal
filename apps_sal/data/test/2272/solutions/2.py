@@ -1,4 +1,4 @@
-flag = False;
+flag = False
 
 
 def main():
@@ -10,7 +10,7 @@ def main():
         if qqss[0] == "1":
             a = int(qqss[1])
             b = int(qqss[2])
-            intset.append([a, b]);
+            intset.append([a, b])
         else:
             si = int(qqss[1])
             fi = int(qqss[2])
@@ -27,26 +27,26 @@ def printIsPath(iset, a, b, v):
     ben = iset[b][1]
     if bst < ast < ben or bst < aen < ben:
         print("YES")
-        return;
+        return
     v[a] = True
-    nonlocal flag;
+    nonlocal flag
     flag = False
     for i in range(len(iset)):
         mst = iset[i][0]
         men = iset[i][1]
         if (mst < ast < men or mst < aen < men) and not v[i]:
             if searchFinal(iset, i, b, v):
-                return;
+                return
     if not flag:
         print("NO")
 
 
 def searchFinal(iset, i, f, v):
-    v[i] = True;
+    v[i] = True
     if i == f:
         print("YES")
-        nonlocal flag;
-        flag = True;
+        nonlocal flag
+        flag = True
         return True
     ist = iset[i][0]
     ien = iset[i][1]

@@ -24,7 +24,8 @@ def bellmanford(num, start, goal, edges):
             if cost[b] > cost[a] + c:
                 cost[b] = cost[a] + c
                 updated = True
-        if not updated: break
+        if not updated:
+            break
     else:
         # V回目まで更新があったら負の閉路がある
         return -1

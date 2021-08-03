@@ -67,9 +67,14 @@ for i in range(H):
     for j in range(W):
         if a[i][j] != ".":
             flk.add_edge(i * W + j, b + i * W + j, 1)
-        if a[i][j] == "S": s = b + i * W + j
-        if a[i][j] == "T": t = i * W + j
+        if a[i][j] == "S":
+            s = b + i * W + j
+        if a[i][j] == "T":
+            t = i * W + j
 if (s - b) % W != t % W and ((s - b) // W != t // W):
-    if sum([x.count("o") for x in a]) == H * W - 2: print((min(H, W) * 2 - 2))
-    else: print((flk.flow(s, t)))
-else: print((-1))
+    if sum([x.count("o") for x in a]) == H * W - 2:
+        print((min(H, W) * 2 - 2))
+    else:
+        print((flk.flow(s, t)))
+else:
+    print((-1))

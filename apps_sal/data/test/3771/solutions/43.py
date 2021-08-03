@@ -20,7 +20,7 @@ class Dinic:
     # sからの最短距離をbfsで計算
     def bfs(self, s):
         self.level = [-1 for _ in range(self.V)]
-        self.level[s] = 0;
+        self.level[s] = 0
         que = queue.Queue()
         que.put(s)
         while not que.empty():
@@ -33,7 +33,8 @@ class Dinic:
 
     # 増加バスをdfsで探す
     def dfs(self, v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         for i in range(self.iter[v], len(self.G[v])):
             self.iter[v] = i
             e = self.G[v][i]
@@ -51,7 +52,8 @@ class Dinic:
         while True:
             self.bfs(s)
             # bfsで到達不可
-            if self.level[t] < 0: return flow
+            if self.level[t] < 0:
+                return flow
             self.iter = [0 for _ in range(self.V)]
             f = self.dfs(s, t, self.inf)
             while f > 0:

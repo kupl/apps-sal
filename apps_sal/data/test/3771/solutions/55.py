@@ -1,8 +1,10 @@
 import scipy.sparse
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(max(1000, 10**9))
-write = lambda x: sys.stdout.write(x + "\n")
+def write(x): return sys.stdout.write(x + "\n")
 
 
 h, w = list(map(int, input().split()))

@@ -15,7 +15,8 @@ def dfs(edge, goal):
     while q:
         v = q.pop()
         for w in edge[v]:
-            if w in used: continue
+            if w in used:
+                continue
             used.add(w)
             q.append(w)
 
@@ -39,12 +40,14 @@ def bellman_ford(v, s, g, e):
         flag = False
         for a, b, c in e:
             # a -> b の向きを考える
-            if d[a] == inf: continue
+            if d[a] == inf:
+                continue
             cost = d[a] + c
             if cost < d[b]:
                 d[b] = cost
                 flag = True
-        if not flag: break
+        if not flag:
+            break
     if flag:
         return -1
     return max(-d[g], 0)

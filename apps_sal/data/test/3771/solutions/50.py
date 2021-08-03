@@ -14,7 +14,8 @@ def FF(E, s, t):
             return f
         used[s] = 1
         for i, (b, _f, r) in enumerate(G[s]):
-            if used[b] or _f == 0: continue
+            if used[b] or _f == 0:
+                continue
             d = dfs(b, t, min(f, _f))
             if d > 0:
                 G[s][i][1] -= d

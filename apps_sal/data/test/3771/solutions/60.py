@@ -30,7 +30,8 @@ add_edge(ty, G, INF)
 add_edge(H + tx, G, INF)
 for i, row in enumerate(A):
     for j, c in enumerate(row):
-        if c != 'o': continue
+        if c != 'o':
+            continue
         add_edge(i, H + j, 1)
         add_edge(H + j, i, 1)
 
@@ -54,7 +55,8 @@ def dinic_max_flow(s, t):
                     q.append(to)
 
     def _dfs(v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         for i in range(iters[v], len(es[v])):
             iters[v] += 1
             to, cap, rev = es[v][i]
@@ -69,12 +71,14 @@ def dinic_max_flow(s, t):
     flow = 0
     while True:
         _bfs(s)
-        if level[t] < 0: return flow
+        if level[t] < 0:
+            return flow
         iters = [0] * P
         f = 0
         while True:
             f = _dfs(s, t, INF)
-            if f <= 0: break
+            if f <= 0:
+                break
             flow += f
 
 
