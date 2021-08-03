@@ -8,5 +8,3 @@ def sum_mix(arr):
             new_lst.append(i)
     total = sum(new_lst)
     return total
-
-

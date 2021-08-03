@@ -1,1 +1,1 @@
-sum_mix = lambda a: sum(map(int, a))
+def sum_mix(a): return sum(map(int, a))

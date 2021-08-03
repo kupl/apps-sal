@@ -3,4 +3,4 @@ def sum_of_minimums(numbers):
     for row in numbers:
         row.sort()
         output += row[0]
-    return output    
+    return output

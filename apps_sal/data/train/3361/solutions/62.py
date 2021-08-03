@@ -4,5 +4,3 @@ def sum_of_minimums(numbers):
         lists.sort()
         mins.append(lists[0])
     return sum(mins)
-        
-

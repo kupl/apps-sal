@@ -7,5 +7,4 @@ def move(position, roll):
     return inp
 
 
-
 move(0, 4)

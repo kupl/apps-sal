@@ -1,2 +1,2 @@
 def move(position, roll):
-    return position+(roll<<1)
+    return position + (roll << 1)

@@ -1,1 +1,1 @@
-sum_of_minimums=lambda n:sum(map(min,n))
+def sum_of_minimums(n): return sum(map(min, n))

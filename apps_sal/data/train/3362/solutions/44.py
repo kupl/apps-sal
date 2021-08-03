@@ -7,4 +7,3 @@ def sum_mix(arr):
         else:
             tot += arr[i]
     return tot
-

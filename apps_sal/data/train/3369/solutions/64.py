@@ -3,4 +3,6 @@ def move(position, roll):
     for i in range(roll):
         position += 2
     return position
+
+
 move(0, 4)

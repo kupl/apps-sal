@@ -1,5 +1,5 @@
 def evaporator(content, evap_per_day, threshold):
-    p = lambda x: (100 - x) / 100
+    def p(x): return (100 - x) / 100
     x = 100
     times = 0
     while x >= threshold:

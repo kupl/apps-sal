@@ -1,5 +1,5 @@
 def sum_of_minimums(numbers):
-    
+
     total_sum = 0
     i = 0
     while i < len(numbers):

@@ -1,11 +1,13 @@
 from functools import reduce
 
+
 def to_int(num):
     "convert to int digit or string"
     try:
         return int(num)
     except ValueError:
         return 0
+
 
 def sum_mix(arr):
     """
@@ -17,4 +19,3 @@ def sum_mix(arr):
     """
     converted_array = list([to_int(x) for x in arr])
     return reduce(lambda res, x: res + x, converted_array)
-

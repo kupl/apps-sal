@@ -4,4 +4,3 @@ def sum_of_minimums(numbers):
         new = sorted(i)
         sum += new[0]
     return sum
-

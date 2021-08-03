@@ -3,4 +3,3 @@ def sum_of_minimums(numbers):
     for arr in numbers:
         ans += min(arr)
     return ans
-

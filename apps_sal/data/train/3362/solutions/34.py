@@ -3,7 +3,7 @@ def sum_mix(arr):
     for num in arr:
         if type(num) == str:
             total += int(num)
-        else: 
+        else:
             total += num
-        
+
     return total

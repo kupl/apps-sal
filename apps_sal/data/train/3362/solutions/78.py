@@ -1,5 +1,5 @@
 def sum_mix(arr):
-    cont=0
+    cont = 0
     for i in arr:
-        cont+=int(i)
+        cont += int(i)
     return cont

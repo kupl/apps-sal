@@ -1,5 +1,5 @@
 def sum_of_minimums(numbers):
-    new_list = [ ]
+    new_list = []
     mini = 0
     for i in numbers:
         mini = min(i)

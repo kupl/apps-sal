@@ -5,5 +5,5 @@ def evaporator(content, evap_per_day, threshold):
     n = 0
     while content > threshold:
         n += 1
-        content *= 1-epd
+        content *= 1 - epd
     return n
