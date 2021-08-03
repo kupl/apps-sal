@@ -18,4 +18,3 @@ for i in range(t):
         p = n + (k // 2)
         ans = p * (p + 1) + (p + 1) + (p + 1 - n)
         print(ans % 1000000007)
-

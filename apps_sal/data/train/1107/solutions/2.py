@@ -1,9 +1,11 @@
-t = int(input()) #number of test cases
+t = int(input())  # number of test cases
 mod = 1000000007
+
 
 def get_sum(a, b, digits):
     sum = ((b + a) * (b - a + 1)) // 2
     return sum * digits
+
 
 for _ in range(t):
     l, r = [int(x) for x in input().split()]
@@ -17,5 +19,5 @@ for _ in range(t):
         ans += get_sum((10 ** (r_digits - 1)), r, r_digits)
         for i in range(l_digits + 1, r_digits):
             ans += get_sum(10 ** (i - 1), (10 ** i) - 1, i)
-        
-    print(ans%mod)
+
+    print(ans % mod)
