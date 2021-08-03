@@ -1,5 +1,6 @@
 import heapq
 
+
 def sort_number(a):
     l = a[:]
     heapq._heapify_max(l)

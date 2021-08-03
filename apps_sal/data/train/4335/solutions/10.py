@@ -6,8 +6,5 @@ def anagrams(word, words):
             if letter not in worddict:
                 worddict[letter] = wordarr.count(letter)
         return worddict
-    
-    return [astring for astring in words if lettercount(astring) == lettercount(word)] 
-        
-    
 
+    return [astring for astring in words if lettercount(astring) == lettercount(word)]

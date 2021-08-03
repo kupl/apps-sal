@@ -2,7 +2,7 @@ def anagrams(word, words):
 
     l = [letter for letter in word]
     anagram_list = []
-    
+
     for item in words:
         l_item = [letter for letter in item]
         if sorted(l) == sorted(l_item):

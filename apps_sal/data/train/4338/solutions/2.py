@@ -7,4 +7,3 @@ def reverse_on_diagonals(matrix):
     for i, n in enumerate(reversed(diag2)):
         matrix[i][~i] = n
     return matrix
-

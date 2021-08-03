@@ -5,7 +5,8 @@ def gen_fib():
     while True:
         a, b = b, a + b
         yield b
-    
+
+
 def skiponacci(n):
     result = []
     for i, f in enumerate(gen_fib()):

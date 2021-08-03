@@ -4,6 +4,6 @@ def skiponacci(n):
 
     for i in range(n):
         a, b = a + b, a
-        res.append('skip' if i%2 else str(a))
+        res.append('skip' if i % 2 else str(a))
 
     return ' '.join(res)

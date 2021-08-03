@@ -1,4 +1,4 @@
-def roots(a,b,c):
+def roots(a, b, c):
     import math
     d = b ** 2 - 4 * a * c
     if d > 0:

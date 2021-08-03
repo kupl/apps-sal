@@ -6,7 +6,7 @@ def anagrams(word, words):
         or1 += ord(i)
     for i in words:
         or2 = 0
-        for x in i :
+        for x in i:
             or2 += ord(x)
         if or1 == or2:
             ans += [i]
