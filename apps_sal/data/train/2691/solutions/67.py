@@ -1,7 +1,7 @@
 def solve(s):
     int_temp = []
     int_store = []
-    for i in range(len(s)):  
+    for i in range(len(s)):
         try:
             int(s[i])
             int_temp.append(s[i])

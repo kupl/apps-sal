@@ -11,5 +11,3 @@ def solve(s):
     arr = strr.split('*')
 
     return max([int(i) for i in arr if i != ''])
- 
-

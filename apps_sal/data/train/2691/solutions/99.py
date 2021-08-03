@@ -10,5 +10,5 @@ def solve(s):
                 numbers.append(int(temp))
                 temp = ''
             except:
-                continue        
+                continue
     return max(numbers)

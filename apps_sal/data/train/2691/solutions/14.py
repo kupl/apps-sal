@@ -1,5 +1,5 @@
 def solve(s):
-    new_list=[]
+    new_list = []
     number = ''
     for characters in s:
         if characters.isdigit():

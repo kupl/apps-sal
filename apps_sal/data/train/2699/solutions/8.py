@@ -28,16 +28,19 @@ special = {
     '80': 'eighty',
     '90': 'ninety'
 }
+
+
 def three_digits2words(s):
     ''' len of s should <= 3 '''
-    s = str(int(s)) # remove leading 0s
+    s = str(int(s))  # remove leading 0s
     if s in special:
         return special[s]
     if len(s) == 2:
-        return '{}-{}'.format(special[s[0]+'0'], special[s[1]])
+        return '{}-{}'.format(special[s[0] + '0'], special[s[1]])
     else:
         lower2 = three_digits2words(s[1:])
         return '{} hundred'.format(special[s[0]]) + ((" " + lower2) if lower2 != 'zero' else '')
+
 
 def number2words(n):
     """ works for numbers between 0 and 999999 """

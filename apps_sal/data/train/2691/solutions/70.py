@@ -9,5 +9,3 @@ def solve(s):
         else:
             number_sequence = ""
     return(int(longest_number))
-        
-

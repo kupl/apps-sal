@@ -1,5 +1,6 @@
 points = {'kata': 5, 'Petes kata': 10, 'life': 0, 'eating': 1}
 
+
 def paul(x):
     score = sum(map(points.get, x))
     return (

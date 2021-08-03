@@ -5,9 +5,8 @@ def bubble(lst):
     while swap:
         swap = False
         for i in range(len(mod) - 1):
-            if mod[i] > mod[i+1]:
-                mod[i], mod[i+1] = mod[i+1], mod[i]
+            if mod[i] > mod[i + 1]:
+                mod[i], mod[i + 1] = mod[i + 1], mod[i]
                 swap = True
                 result.append(mod.copy())
     return result
-

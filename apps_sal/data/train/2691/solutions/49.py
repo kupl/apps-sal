@@ -6,8 +6,7 @@ def solve(s):
             number = number * 10 + int(char)
             if number > largest:
                 largest = number
-        else: 
+        else:
             number = 0
-            
-    return largest
 
+    return largest

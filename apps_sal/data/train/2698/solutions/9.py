@@ -15,4 +15,3 @@ def sum_arrays(array1, array2):
             return [int(x) for x in lst]
         else:
             return [int(x) for x in list(result)]
-

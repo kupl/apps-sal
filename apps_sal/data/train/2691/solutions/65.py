@@ -6,7 +6,7 @@ def solve(s):
             a += i
         if not i.isdigit():
             if not a == '':
-                b = max(int(a),int(b))
+                b = max(int(a), int(b))
                 a = ''
     if not a == '':
         return max(int(a), int(b))

@@ -1,4 +1,6 @@
 import re
+
+
 def solve(s):
     s = re.sub('[^0-9]+', 'x', s)
     l = s.split('x')
@@ -9,5 +11,3 @@ def solve(s):
         elif i.isnumeric:
             res.append(int(i))
     return(max(res))
-    
-

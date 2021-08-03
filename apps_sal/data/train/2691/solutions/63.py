@@ -3,11 +3,11 @@ def solve(s):
     ls = []
     for i in s:
         if i.isnumeric():
-            n+=i
+            n += i
         else:
-            if n !='':
+            if n != '':
                 ls.append(n)
                 n = ''
-    if n !='':
+    if n != '':
         ls.append(n)
-    return max(map(float,ls))
+    return max(map(float, ls))
