@@ -1,6 +1,8 @@
 def getAllPrimeFactors(n):
-    if not isinstance(n, int): return []
-    if n == 1: return [1]
+    if not isinstance(n, int):
+        return []
+    if n == 1:
+        return [1]
     factors = []
     i = 2
     while i * i <= n:
@@ -14,10 +16,13 @@ def getAllPrimeFactors(n):
 
 
 def getUniquePrimeFactorsWithCount(n):
-    if n == 1: return [[1], [1]]
+    if n == 1:
+        return [[1], [1]]
     lis = getAllPrimeFactors(n)
-    if lis == []: return [[], []]
+    if lis == []:
+        return [[], []]
     return [sorted(set(lis)), [lis.count(i) for i in sorted(set(lis))]]
+
 
 def get_factors(num):
     lis = []
@@ -25,6 +30,7 @@ def get_factors(num):
         if num % i == 0:
             lis.append(i)
     return lis
+
 
 def square_free_part(n):
     if not type(n) == int:

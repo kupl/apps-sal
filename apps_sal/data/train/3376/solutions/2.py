@@ -5,8 +5,7 @@ def square_free_part(n):
         n //= 2
     k = 3
     while k * k <= n:
-        while n % (k*k) == 0:
+        while n % (k * k) == 0:
             n //= k
         k += 2
     return n
-

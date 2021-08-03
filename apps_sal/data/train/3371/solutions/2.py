@@ -17,4 +17,3 @@ SIGNED_BYTE_PATTERN = re.compile(r'''
 
 def signed_eight_bit_number(number):
     return bool(SIGNED_BYTE_PATTERN.search(number))
-

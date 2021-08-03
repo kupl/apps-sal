@@ -10,6 +10,7 @@ MINUTES[1], MINUTES[15], MINUTES[30] = 'one minute', 'quarter', 'half'
 
 HOURS = ['midnight'] + NUMS[1:13] + NUMS[1:12]
 
+
 def solve(time):
     h, m = map(int, time.split(':'))
     if h == m == 0:
