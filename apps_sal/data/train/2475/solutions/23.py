@@ -11,5 +11,5 @@ class Solution:
         count = 0
         for i in out:
             if i != sorted(i):
-                count+=1
+                count += 1
         return count

@@ -5,11 +5,11 @@ class Solution:
         for i in range(len(A)):
             odd = dict()
             even = dict()
-            for y,v in enumerate(A[i]):
+            for y, v in enumerate(A[i]):
                 if y % 2 == 0:
-                    odd[v] = odd.get(v,0)+1
+                    odd[v] = odd.get(v, 0) + 1
                 else:
-                    even[v] = even.get(v,0)+1
-            if [odd,even] not in haveList:
-                haveList.append([odd,even])
+                    even[v] = even.get(v, 0) + 1
+            if [odd, even] not in haveList:
+                haveList.append([odd, even])
         return len(haveList)

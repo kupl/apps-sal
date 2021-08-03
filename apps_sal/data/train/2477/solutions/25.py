@@ -6,4 +6,3 @@ class Solution:
             odd = ''.join(sorted(w[1::2]))
             d.add((even, odd))
         return len(d)
-

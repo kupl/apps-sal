@@ -6,6 +6,5 @@ class Solution:
                 if A[row][column] > A[row + 1][column]:
                     set_dim += 1
                     break
-        
-        return set_dim
 
+        return set_dim

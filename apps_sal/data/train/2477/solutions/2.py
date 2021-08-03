@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         count = Counter()
@@ -13,4 +15,3 @@ class Solution:
             count[''.join(sorted(seven)), ''.join(sorted(sodd))] += 1
         # print(count.keys())
         return len(count)
-

@@ -8,9 +8,9 @@ class Solution:
                 d[p] += 1
             else:
                 d[p] = 1
-        # step calculate it 
+        # step calculate it
         c = 0
         for n in d.values():
-            s = n*(n-1)//2
+            s = n * (n - 1) // 2
             c += s
-        return c            
+        return c

@@ -1,7 +1,7 @@
 class Solution:
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         group = list()
-        
+
         count = 0
         for el in A:
             i = 0
@@ -15,11 +15,5 @@ class Solution:
             if counter not in group:
                 group.append(counter)
                 count += 1
-        
-        return count
-            
-            
-            
-            
-        
 
+        return count

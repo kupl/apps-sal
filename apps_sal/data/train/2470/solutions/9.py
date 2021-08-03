@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
         # ans = 0
@@ -19,8 +20,7 @@ class Solution:
         #         tot, cnt = 0, 0
         #     prev = curr
         # return ans + tot
-                
-        
+
         # step 1: count the dominoes
         d = {}
         for domi in dominoes:
@@ -32,7 +32,6 @@ class Solution:
         # step 2: caculate the pairs. for each pair, number of pairs = n*(n-1)//2
         c = 0
         for n in list(d.values()):
-            s = n*(n-1)//2
+            s = n * (n - 1) // 2
             c += s
         return c
-

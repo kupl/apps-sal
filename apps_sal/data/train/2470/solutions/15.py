@@ -3,5 +3,5 @@ class Solution:
         from collections import defaultdict
         counter = defaultdict(int)
         for domino in dominoes:
-            counter[tuple(sorted(domino))] +=1
-        return sum([v*(v-1)//2 for v in counter.values()])
+            counter[tuple(sorted(domino))] += 1
+        return sum([v * (v - 1) // 2 for v in counter.values()])

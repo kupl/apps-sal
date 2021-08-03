@@ -9,6 +9,6 @@ class Solution:
                 d[p] = 1
         c = 0
         for n in d.values():
-            s = n*(n-1)//2
+            s = n * (n - 1) // 2
             c += s
         return c

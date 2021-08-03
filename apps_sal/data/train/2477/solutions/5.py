@@ -6,4 +6,3 @@ class Solution:
             if info not in groups:
                 groups.append(info)
         return len(groups)
-

@@ -5,6 +5,3 @@ class Solution:
             if list(col) != sorted(col):
                 count += 1
         return count
-            
-            
-

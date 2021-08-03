@@ -8,7 +8,5 @@ class Solution:
                     result += 1
                     break
                 last = A[j][i]
-        
-        return result
-        
 
+        return result

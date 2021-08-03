@@ -7,7 +7,7 @@ class Solution:
             string = [col[i] for col in A]
             # print(string)
             for j in range(1, A_l):
-                if string[j] < string[j-1]:
+                if string[j] < string[j - 1]:
                     count += 1
                     break
         return count

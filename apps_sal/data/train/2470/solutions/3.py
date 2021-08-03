@@ -3,5 +3,5 @@ class Solution:
         c = collections.Counter()
         for i in dominoes:
             c[tuple(sorted(i))] += 1
-            
-        return sum(math.comb(i, 2) for i in c.values()) 
+
+        return sum(math.comb(i, 2) for i in c.values())

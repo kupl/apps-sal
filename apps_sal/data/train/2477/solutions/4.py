@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         lst = []

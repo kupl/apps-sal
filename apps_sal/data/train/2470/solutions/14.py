@@ -4,8 +4,7 @@ class Solution:
         count = 0
         for i in dominoes:
             pair = frozenset(i)
-            count+=collection[pair]
-            collection[pair]+=1
-                
-        
+            count += collection[pair]
+            collection[pair] += 1
+
         return count

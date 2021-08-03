@@ -9,6 +9,3 @@ class Solution:
                     break
             continue
         return len(del_indices)
-            
-            
-
