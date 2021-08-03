@@ -1,4 +1,6 @@
 import string
+
+
 def keyword_cipher(msg, keyword):
     s = []
     for i in keyword.lower():
