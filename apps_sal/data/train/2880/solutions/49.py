@@ -17,7 +17,7 @@ def seven(m):
             return (result, cnt)
         last, rest = _calc_last_rest(result)
 
-    
+
 class TestSeven(unittest.TestCase):
     def test_seven(self):
         m = 1603
@@ -33,4 +33,3 @@ class TestSeven(unittest.TestCase):
         m = 0
         actual = seven(m)
         self.assertEqual(actual, (0, 0))
-

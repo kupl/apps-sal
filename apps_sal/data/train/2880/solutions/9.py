@@ -4,4 +4,3 @@ def seven(m):
         s += 1
         m = (m // 10) - 2 * (m % 10)
     return m, s
-

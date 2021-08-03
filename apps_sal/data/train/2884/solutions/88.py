@@ -1,6 +1,6 @@
 def stringify(node):
     string = ""
-    
+
     if node == None:
         return "None"
     else:

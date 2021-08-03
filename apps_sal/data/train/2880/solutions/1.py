@@ -5,4 +5,3 @@ def seven(m):
         m = q - (2 * r)
         steps += 1
     return m, steps
-

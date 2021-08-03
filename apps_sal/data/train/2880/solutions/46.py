@@ -7,4 +7,3 @@ def seven(m):
         s = str(n)
         cnt += 1
     return (int(s), cnt)
-

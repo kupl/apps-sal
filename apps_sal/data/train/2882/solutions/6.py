@@ -1,1 +1,1 @@
-cumulative_triangle=lambda n:n*(n*n+1)/2
+def cumulative_triangle(n): return n * (n * n + 1) / 2

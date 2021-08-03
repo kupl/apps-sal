@@ -7,5 +7,5 @@ def champernowneDigit(n):
     while n > sc[i]:
         n -= sc[i]
         i += 1
-    L, d = divmod((n-1), i + 1)
+    L, d = divmod((n - 1), i + 1)
     return int(str(pow(10, i) + L)[d])

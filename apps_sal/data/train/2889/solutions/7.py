@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def count_ways(n, k):
     rs = deque(maxlen=k)
     rs.append(1)

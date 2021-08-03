@@ -8,4 +8,3 @@ def stringify(node):
     a.append('None')
     print(a)
     return ' -> '.join(a)
-

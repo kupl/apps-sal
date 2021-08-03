@@ -1,10 +1,11 @@
 reprs = {
-    60*60*24*7: "week",
-    60*60*24:   "day",
-    60*60:      "hour",
-    60:         "minute",
-    1:          "second",
+    60 * 60 * 24 * 7: "week",
+    60 * 60 * 24: "day",
+    60 * 60: "hour",
+    60: "minute",
+    1: "second",
 }
+
 
 def to_pretty(seconds):
     for k, v in sorted(reprs.items(), key=lambda x: x[0], reverse=True):

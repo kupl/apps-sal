@@ -1,4 +1,4 @@
 def seven(m, steps=0):
-    if m < 100: return m, steps
-    return seven (m//10-2*(m%10), steps+1)
-
+    if m < 100:
+        return m, steps
+    return seven(m // 10 - 2 * (m % 10), steps + 1)

@@ -6,4 +6,4 @@ def stringify(node):
         cur_node = cur_node.next
     if elems == []:
         return 'None'
-    return ' -> '.join(str(x) for x in elems) + ' -> ' +'None'
+    return ' -> '.join(str(x) for x in elems) + ' -> ' + 'None'

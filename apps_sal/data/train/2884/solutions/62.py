@@ -10,4 +10,3 @@ def stringify(node):
         res.append(str(node.data))
         node = node.__next__
     return ' -> '.join(res)
-

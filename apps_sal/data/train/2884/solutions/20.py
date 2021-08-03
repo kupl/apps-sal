@@ -4,5 +4,5 @@ def stringify(node):
     while node != None:
         r += f'{node.data} -> '
         node = node.next
-    
+
     return r + 'None'

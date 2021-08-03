@@ -1,8 +1,8 @@
 def stringify(node):
     lst = []
     while node:
-        lst+=[str(node.data)]
-        lst+=[' -> ']
+        lst += [str(node.data)]
+        lst += [' -> ']
         node = node.next
-    lst+=['None']
+    lst += ['None']
     return ''.join(lst)

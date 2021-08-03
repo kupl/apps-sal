@@ -1,5 +1,5 @@
 def stringify(node):
-    if node==None:
+    if node == None:
         return "None"
     n = node
     r = ""

@@ -5,4 +5,3 @@ def stringify(node):
         return f'{node.data} -> {stringify(node.next)}'
     else:
         return f'{node.data} -> None'
-

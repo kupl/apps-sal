@@ -9,4 +9,3 @@ def stringify(node):
             break
         node = node.__next__
     return ret
-

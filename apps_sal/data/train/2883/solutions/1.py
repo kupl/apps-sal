@@ -1,11 +1,10 @@
 def to_pretty(seconds):
 
-
     minutes = seconds // 60
     hours = seconds // 3600
-    days = seconds // (3600*24)
-    weeks = seconds // (3600*24*7)
-    
+    days = seconds // (3600 * 24)
+    weeks = seconds // (3600 * 24 * 7)
+
     if weeks == 1:
         return "a week ago"
     if weeks > 1:
@@ -28,9 +27,3 @@ def to_pretty(seconds):
         return "a second ago"
     if seconds > 1:
         return str(seconds) + " seconds ago"
-    
-
-    
-
-    
-

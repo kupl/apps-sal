@@ -16,7 +16,7 @@ def adFly_decoder(sc):
         flip = not flip
 
     try:
-        url = base64.b64decode(code1 + code2[len(code2) :: -1])
+        url = base64.b64decode(code1 + code2[len(code2):: -1])
     except binascii.Error:
         return "Invalid"
 
@@ -34,7 +34,6 @@ def adFly_encoder(url):
     enc = base64.b64encode(full)
     cut = math.ceil(len(enc) / 2)
     code1 = str(enc[: cut + 1], "utf-8")
-    code2 = str(enc[len(enc) : cut : -1], "utf-8")
+    code2 = str(enc[len(enc): cut: -1], "utf-8")
     swp = "".join(i + (j or "") for i, j in zip_longest(code1, code2))
     return swp
-
