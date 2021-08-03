@@ -9,6 +9,7 @@ def automorphic(n):
 
     automorphicTest = int(squared[-(charLength):])
 
-    if automorphicTest == n: return "Automorphic"
+    if automorphicTest == n:
+        return "Automorphic"
     else:
         return "Not!!"

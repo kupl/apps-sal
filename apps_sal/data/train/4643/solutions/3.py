@@ -8,6 +8,7 @@ def start_digit_valid(func):
         return func(postcode)
     return start_digit_validate
 
+
 def length_valid(func):
     def length_validator(postcode):
         '''
@@ -29,6 +30,7 @@ def only_numbers(func):
             return False
         return func(postcode)
     return only_numbers
+
 
 @only_numbers
 @length_valid

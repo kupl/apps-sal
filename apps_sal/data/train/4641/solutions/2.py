@@ -4,4 +4,3 @@ def unique_in_order(iterable):
         if len(res) == 0 or item != res[-1]:
             res.append(item)
     return res
-

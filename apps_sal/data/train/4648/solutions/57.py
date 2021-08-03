@@ -3,5 +3,5 @@ def automorphic(n):
     last = str(n ** 2)[-lth:]
     if str(n) == last:
         return "Automorphic"
-    else: 
+    else:
         return "Not!!"
