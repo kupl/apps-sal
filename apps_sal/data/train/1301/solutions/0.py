@@ -1,8 +1,8 @@
 # cook your dish here
-n=int(input())
-l=[]
+n = int(input())
+l = []
 for i in range(n):
-    a=int(input())
+    a = int(input())
     l.append(a)
 for i in l:
     b = list(map(int, str(i)))

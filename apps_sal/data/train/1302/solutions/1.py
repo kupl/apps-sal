@@ -1,8 +1,10 @@
 # cook your dish here
 from math import sqrt
+
+
 def solve(N):
 
-    return int(sqrt(N/2)) * 2
+    return int(sqrt(N / 2)) * 2
 
 
 t = int(input())
