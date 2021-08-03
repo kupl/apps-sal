@@ -18,14 +18,17 @@ def check_array(array):
             if pal2 == str_arr:
                 return pal
 
-def palindrome(num):    
-    if isinstance(num, int) != True or num < 0 : return "Not valid"
-    if num < 10: return "No palindromes found"
-    
+
+def palindrome(num):
+    if isinstance(num, int) != True or num < 0:
+        return "Not valid"
+    if num < 10:
+        return "No palindromes found"
+
     array = []
     for i in str(num):
         array.append(int(i))
-    array_list = []    
+    array_list = []
     for i in range(len(array)):
         part = array[i:]
         p = check_array(part)
@@ -36,11 +39,11 @@ def palindrome(num):
             b = check_array(back)
             if b != None and b != 0:
                 array_list.append(b)
-            
+
     array_set = set(array_list)
     result = list(array_set)
     result.sort()
-    if len(result) == 0: 
+    if len(result) == 0:
         return "No palindromes found"
-    else: 
+    else:
         return result

@@ -1,6 +1,7 @@
 BOARD = '▇＿▇＿▇＿▇＿\n＿▇＿▇＿▇＿▇\n▇＿▇＿▇＿▇＿\n＿▇＿▇＿▇＿▇\n▇＿▇＿▇＿▇＿\n＿▇＿▇＿▇＿▇\n▇＿▇＿▇＿▇＿\n＿▇＿▇＿▇＿▇'
 PIECES = dict(zip('kqrbnpKQRBNP', '♔♕♖♗♘♙♚♛♜♝♞♟'))
 
+
 def parse_fen(string):
     board = list(map(list, BOARD.splitlines()))
     pieces, color, *_ = string.split()

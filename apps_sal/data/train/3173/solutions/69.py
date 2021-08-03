@@ -1,1 +1,1 @@
-create_array=lambda n: [*range(1,n+1)]
+def create_array(n): return [*range(1, n + 1)]

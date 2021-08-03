@@ -6,5 +6,5 @@ def create_array(n):
     """
     ret = []
     for i in range(n):
-        ret.append(i+1)
+        ret.append(i + 1)
     return ret

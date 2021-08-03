@@ -2,6 +2,7 @@ def is_pal(s):
     h = len(s) // 2
     return all(a == b for a, b in zip(s[:h], s[::-1][:h]))
 
+
 def palindrome(num):
     if not isinstance(num, int) or num < 0:
         return 'Not valid'
@@ -15,4 +16,3 @@ def palindrome(num):
             if is_pal(test):
                 pals.add(test)
     return sorted(int(x) for x in pals) or 'No palindromes found'
-

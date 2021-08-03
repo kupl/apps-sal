@@ -5,5 +5,3 @@ def create_array(n):
         n = n - 1
     lista.reverse()
     return lista
-    
-

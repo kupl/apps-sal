@@ -9,7 +9,7 @@ def triple_double(num1, num2):
             tripples.append(rem)
         previous_previous = previous
         previous = rem
-    
+
     while num2:
         (num2, rem) = divmod(num2, DECIMAL_BASE)
         if rem == previous and rem in tripples:

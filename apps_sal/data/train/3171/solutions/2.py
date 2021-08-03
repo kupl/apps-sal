@@ -8,4 +8,3 @@ def crashing_weights(weights):
             cur = cur + nxt if cur > nxt else nxt
         result.append(cur)
     return result
-

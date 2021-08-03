@@ -1,5 +1,5 @@
 def create_array(n):
-    res=[]
+    res = []
     i = 0
     while len(res) < n:
         i += 1

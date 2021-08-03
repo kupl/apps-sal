@@ -1,11 +1,13 @@
 import re
-def pete_talk(speech, ok = []):
+
+
+def pete_talk(speech, ok=[]):
     ok = {v.lower() for v in ok}
+
     def repl(Match):
         s = Match[0]
         i = Match.start()
-        
-        
+
         if i == 0 or (i >= 2 and speech[i - 2] in '.!?'):
             s = s.capitalize()
         else:

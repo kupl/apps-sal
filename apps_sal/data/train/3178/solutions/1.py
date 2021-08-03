@@ -1,7 +1,9 @@
 import re
 
+
 def pete_talk(speech, ok=()):
     ok = {word.lower() for word in ok}
+
     def sub(m):
         s = m.group()
         if s in ok:
