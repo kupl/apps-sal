@@ -27,5 +27,3 @@ for _ in range(int(sys.stdin.readline().rstrip())):
     for i in re_arr:
         print(i, end=' ')
     print('')
-
-

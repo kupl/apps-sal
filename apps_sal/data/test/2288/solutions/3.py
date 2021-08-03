@@ -18,4 +18,3 @@ for case_num in range(t):
         print('Yes')
     else:
         print('No' if tot == 0 or tot == n else 'Yes')
-

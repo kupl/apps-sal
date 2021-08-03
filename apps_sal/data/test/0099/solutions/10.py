@@ -1,9 +1,9 @@
 def solve():
     b1, q, l, m = map(int, input().split())
     bads = set(map(int, input().split()))
-    
+
     terms = set()
-    
+
     if b1 == 0:
         if 0 not in bads:
             print("inf")
@@ -42,5 +42,6 @@ def solve():
             terms.add(b)
             b *= q
         print(len(terms) - len(terms.intersection(bads)))
+
 
 solve()

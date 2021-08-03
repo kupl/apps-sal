@@ -11,4 +11,3 @@ for t in range(T):
             print("Yes")
         else:
             print("No")
-

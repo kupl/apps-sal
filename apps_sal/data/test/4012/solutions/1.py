@@ -16,6 +16,7 @@ def make_divisors(n):
     divisors = sorted(divisors)
     return divisors
 
+
 div_list = [None] * (10**4 + 30)
 for i in range(1, 10**4 + 30):
     div_list[i] = make_divisors(i)
@@ -30,25 +31,25 @@ for _ in range(t):
     a, b, c = list(map(int, input().split()))
     for tmp_b in range(1, 10**4 + 30):
         cost_b = abs(b - tmp_b)
-        
+
         cost_a = INF
         for tmp_a in div_list[tmp_b]:
             if cost_a > abs(a - tmp_a):
                 cost_a = abs(a - tmp_a)
                 aa = tmp_a
-              
+
         cost_c = INF
         num = c // tmp_b
         cost_c = INF
         if cost_c > abs(c - num * tmp_b):
             cost_c = abs(c - num * tmp_b)
             cc = num * tmp_b
-        if cost_c > abs(c - (num+1) * tmp_b):
-            cost_c = abs(c - (num+1) * tmp_b)
-            cc = (num+1) * tmp_b
-        if cost_c > abs(c - (num-1) * tmp_b):
-            cost_c = abs(c - (num-1) * tmp_b)
-            cc = (num-1) * tmp_b
+        if cost_c > abs(c - (num + 1) * tmp_b):
+            cost_c = abs(c - (num + 1) * tmp_b)
+            cc = (num + 1) * tmp_b
+        if cost_c > abs(c - (num - 1) * tmp_b):
+            cost_c = abs(c - (num - 1) * tmp_b)
+            cc = (num - 1) * tmp_b
         tmp_ans = cost_a + cost_b + cost_c
         if ans > tmp_ans:
             ans = tmp_ans
@@ -57,8 +58,3 @@ for _ in range(t):
             ans_c = cc
     print(ans)
     print(ans_a, ans_b, ans_c)
-   
-        
-            
-        
-

@@ -11,7 +11,6 @@ for _ in range(int(input())):
         continue
     ss = s[k:]
     if len(set(ss)) == 1:
-        print(s[0], *([ss[0]] * ((len(ss) - 1) // k + 1)), sep = "")
+        print(s[0], *([ss[0]] * ((len(ss) - 1) // k + 1)), sep="")
     else:
-        print(s[0], *s[k:], sep = "")
-
+        print(s[0], *s[k:], sep="")

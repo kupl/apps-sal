@@ -8,10 +8,10 @@ ind = 0
 while abs(b) <= l and ind < 100:
     if not b in a:
         ans += 1
-            
+
     b *= q
     ind += 1
-    
+
 if ans > 40:
     stdout.write('inf')
 else:

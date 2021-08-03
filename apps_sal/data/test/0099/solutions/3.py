@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     b1, q, L, m = map(int, input().split())
     a = [int(i) for i in input().split()]
@@ -38,12 +39,16 @@ def solve():
 
         print(ans)
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()
