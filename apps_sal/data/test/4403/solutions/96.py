@@ -1,11 +1,11 @@
-s=input()
+s = input()
 
-num=0
+num = 0
 
 for i in s:
-    if i=="+":
-        num+=1
+    if i == "+":
+        num += 1
     else:
-        num-=1
+        num -= 1
 
 print(num)

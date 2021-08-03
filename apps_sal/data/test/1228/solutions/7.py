@@ -8,4 +8,3 @@ elif r == 2:
     print(1, 'B')
 elif r == 3:
     print(2, 'A')
-

@@ -1,6 +1,7 @@
 import sys
 lines = sys.stdin.read().splitlines()
-lincnt = -1 
+lincnt = -1
+
 
 def input():
     nonlocal lincnt
@@ -11,6 +12,4 @@ def input():
 for _ in range(int(input())):
     n = int(input())
     s = input()
-    print(n * s[n-1])
-
-
+    print(n * s[n - 1])

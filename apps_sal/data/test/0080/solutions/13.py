@@ -1,5 +1,6 @@
 from itertools import product
 
+
 def factorize(n):
     res = []
     if n % 2 == 0:
@@ -21,6 +22,7 @@ def factorize(n):
         res.append((n, 1))
     return res
 
+
 l, r, x, y = [int(x) for x in input().split()]
 
 if y % x:
@@ -35,7 +37,8 @@ res = 0
 for i in range(2 ** len(facs)):
     fac1 = x
     for j in range(len(facs)):
-        if (1 << j) & i: fac1 *= facs[j]
+        if (1 << j) & i:
+            fac1 *= facs[j]
     fac2 = x * y // fac1
     if l <= fac1 <= r and l <= fac2 <= r:
         res += 1

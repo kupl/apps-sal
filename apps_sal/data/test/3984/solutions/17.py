@@ -10,4 +10,3 @@ for line in sys.stdin:
         else:
             print('Ann')
     quit()
-

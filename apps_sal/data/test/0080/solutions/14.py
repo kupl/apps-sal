@@ -44,4 +44,3 @@ for i in range(2 ** ln):
         ans += 1
 
 print(ans)
-

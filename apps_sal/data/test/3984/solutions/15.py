@@ -1,6 +1,6 @@
 S = input()
 
-max_before = [] 
+max_before = []
 smallest_so_far = S[0]
 
 print("Mike")
@@ -11,4 +11,3 @@ for s in S[1:]:
     else:
         print("Mike")
     smallest_so_far = min(smallest_so_far, s)
-

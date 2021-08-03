@@ -7,10 +7,12 @@ def main():
             ans += 1
         elif s[i] == '-':
             ans -= 1
-    
+
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

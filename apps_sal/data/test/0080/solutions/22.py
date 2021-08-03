@@ -22,4 +22,3 @@ if b >= l and b <= r and b * b == m and math.gcd(b, b) == x:
     cnt -= 1
 
 print(cnt)
-

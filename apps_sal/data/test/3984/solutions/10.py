@@ -7,4 +7,3 @@ for k in range(len(s)):
         print('Mike')
     else:
         print('Ann')
-

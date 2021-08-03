@@ -16,4 +16,3 @@ while k1 * k1 <= p:
         s += 1 + (k1 != k2)
     k1 += 1
 print(s)
-

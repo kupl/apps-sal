@@ -1,24 +1,30 @@
 from sys import stdin as Si
-from math import floor as F 
+from math import floor as F
 from collections import defaultdict as dt
 from operator import itemgetter as ig
+
 
 def __starting_point():
 
     n = int(Si.readline())
     d = Si.readline().strip('\n')
-    c = tuple(map(int,Si.readline().split()))
-    tub,i,Exit = set([0]),0,False
+    c = tuple(map(int, Si.readline().split()))
+    tub, i, Exit = set([0]), 0, False
     while not Exit:
-        if d[i]=='>':   i=i+c[i]
-        else:   i=i-c[i]
-        if  i<0 or i>=n:   print('FINITE');break
-        elif i in tub:    print('INFINITE');break
-        else: tub.add(i)
-        
-        
-    
-    
+        if d[i] == '>':
+            i = i + c[i]
+        else:
+            i = i - c[i]
+        if i < 0 or i >= n:
+            print('FINITE')
+            break
+        elif i in tub:
+            print('INFINITE')
+            break
+        else:
+            tub.add(i)
+
+
 '''
 A. Little Artem and Grasshopper
 time limit per test

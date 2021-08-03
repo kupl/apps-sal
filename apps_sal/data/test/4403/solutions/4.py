@@ -1,5 +1,5 @@
-s=input()
-a=s.count("+")
-b=s.count("-")
-ans=a-b
+s = input()
+a = s.count("+")
+b = s.count("-")
+ans = a - b
 print(ans)

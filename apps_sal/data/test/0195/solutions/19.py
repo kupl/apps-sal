@@ -1,5 +1,6 @@
 3
 
+
 def solve(A, B, C, N):
     if C > A or C > B:
         return -1
@@ -22,5 +23,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

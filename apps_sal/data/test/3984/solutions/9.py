@@ -9,4 +9,4 @@ for i in s:
         print(win1)
     else:
         print(win2)
-    num = min(num,num2)
+    num = min(num, num2)

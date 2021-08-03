@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 g = [list() for i in range(n + 1)]
 for i in range(n - 1):
@@ -11,4 +13,3 @@ for i in range(n + 1):
     k = len(g[i])
     cnt += k * (k - 1) // 2
 print(cnt)
-

@@ -1,15 +1,14 @@
 s = input()
 a = [ord(c) - ord('a') + 1 for c in s]
-#print(a)
+# print(a)
 
 res = [0] * len(s)
 mi = a[0]
 print("Mike")
 for i in range(1, len(s)):
-	#print(a[i], i, mi)
-	if a[i] > mi:
-		print("Ann")
-	else:
-		mi = a[i]
-		print("Mike")
-
+    #print(a[i], i, mi)
+    if a[i] > mi:
+        print("Ann")
+    else:
+        mi = a[i]
+        print("Mike")

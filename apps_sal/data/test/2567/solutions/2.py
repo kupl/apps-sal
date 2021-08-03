@@ -5,4 +5,3 @@ for it in range(1, int(input()) + 1):
         print('0' * n)
     else:
         print('1' * n)
-
