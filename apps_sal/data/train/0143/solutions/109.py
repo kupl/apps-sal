@@ -20,29 +20,28 @@ class Solution:
                         break
                     insp[of] -= 1
                     k -= 1
-                        
+
                 del pos[tod]
                 del insp[tod]
                 insp[f] = 0
             elif f not in insp:
                 insp[f] = 0
-            
+
             pos[f] = i
             insp[f] += 1
-            score =  self.get_basketsize(insp)
-            mxx = max(mxx,score)
+            score = self.get_basketsize(insp)
+            mxx = max(mxx, score)
             i += 1
-            
+
         return mxx
-          
+
     def get_basketsize(self, insp):
         mxx = 0
         nmxx = 0
-        for f,ct in list(insp.items()):
+        for f, ct in list(insp.items()):
             if ct >= mxx:
                 nmxx = max(mxx, nmxx)
                 mxx = max(ct, mxx)
             elif ct >= nmxx:
                 nmxx = max(ct, nmxx)
         return mxx + nmxx
-

@@ -1,7 +1,9 @@
 import heapq
+
+
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        lst = sorted(zip(efficiency, speed), reverse = True)
+        lst = sorted(zip(efficiency, speed), reverse=True)
         p = []
         sum_speed = 0
         res = 0
@@ -12,6 +14,5 @@ class Solution:
                 sum_speed -= (heapq.heappop(p))
             val = e * sum_speed
             res = max(res, val)
-            
-        return res % (10**9 + 7)
 
+        return res % (10**9 + 7)

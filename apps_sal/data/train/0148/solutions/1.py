@@ -2,8 +2,8 @@ class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         job = sorted(zip(difficulty, profit))
 
-        best = 0 
-        i = 0 
+        best = 0
+        i = 0
         profit = 0
 
         for work in sorted(worker):

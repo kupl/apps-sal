@@ -19,7 +19,7 @@ class Solution(object):
 
                 # If we have 3 types, this is not a legal subarray
                 if len(types) >= 3:
-                    i = j-1
+                    i = j - 1
                     break
 
                 ans = max(ans, weight)

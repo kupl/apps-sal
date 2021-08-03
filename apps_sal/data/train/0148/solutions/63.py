@@ -13,7 +13,7 @@ class Solution:
                 l.append(mapProfit[i])
             else:
                 l.append(0)
-        
+
         maxFromBegin = 0
         for i in range(len(l)):
             if l[i] < maxFromBegin:

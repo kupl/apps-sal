@@ -24,7 +24,3 @@ class Solution:
                 maxTotal = max(curTotal, maxTotal)
                 end += 1
         return maxTotal
-                        
-            
-                
-

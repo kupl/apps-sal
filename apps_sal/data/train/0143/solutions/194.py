@@ -12,4 +12,3 @@ class Solution:
                 ptr += 1
             result = max(result, i - ptr + 1)
         return result
-

@@ -5,7 +5,7 @@ class Solution:
         window = set()
         res = 0
         last_index = collections.defaultdict(int)
-        
+
         while left < len(tree) and right < len(tree):
             fruit_type = tree[right]
             last_index[fruit_type] = right
@@ -21,4 +21,3 @@ class Solution:
             res = max(res, right - left + 1)
             right += 1
         return res
-

@@ -1,12 +1,14 @@
 from heapq import heappush, heappop
 
+
 class Engineer:
     def __init__(self, speed, efficiency):
         self.speed = speed
         self.efficiency = efficiency
-    
+
     def __str__(self):
         return str(self.speed) + ',' + str(self.efficiency)
+
 
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:

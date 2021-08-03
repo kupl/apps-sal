@@ -1,8 +1,9 @@
 from collections import Counter
 
+
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
-        
+
         max_fruits = 0
         window_start = 0
         freq = Counter()

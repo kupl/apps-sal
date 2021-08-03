@@ -19,9 +19,9 @@ class Solution:
                 worker_index += 1
                 continue
             while (
-                current_difficulty_index + 1 < len(worker)
-                and benifit[current_difficulty_index + 1][0]
-                <= sorted_workers[worker_index]
+                current_difficulty_index + 1 < len(worker) and
+                benifit[current_difficulty_index + 1][0] <=
+                sorted_workers[worker_index]
             ):
                 current_difficulty_index += 1
 
@@ -32,4 +32,3 @@ class Solution:
             worker_index += 1
 
         return ans
-

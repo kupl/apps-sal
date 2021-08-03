@@ -2,7 +2,7 @@ class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         if not tree:
             return 0
-        
+
         max_count = 1
         basket = {tree[0]: 1}
         i = 0
@@ -16,9 +16,5 @@ class Solution:
                 i += 1
             curr_count = sum(basket.values())
             max_count = max(max_count, curr_count)
-        
-        return max_count
-        
-            
-        
 
+        return max_count

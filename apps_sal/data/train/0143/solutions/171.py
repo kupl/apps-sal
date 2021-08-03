@@ -3,18 +3,18 @@ class Solution:
         '''
             [0,1,2,2]
             ^
-            
+
             [3,3,3,1,2,1,1,2,3,3,4]
-        
-        
+
+
         '''
         n = len(tree)
         res = 0
-        
+
         window = defaultdict(int)
         count = 0
-        left =  0
-        
+        left = 0
+
         for idx in range(n):
             curr = tree[idx]
             if window[curr] == 0:
@@ -28,9 +28,3 @@ class Solution:
                     count -= 1
                 left += 1
         return res
-    
-                
-            
-            
-                
-

@@ -16,23 +16,22 @@ class Solution:
                 result = max(result,count)
         return result
         '''
-        blocks = [(k,len(list(v))) for k,v in itertools.groupby(tree)]
-        i,result=0,0
-        
-        while i<len(blocks):
-            j=i
-            count=0
+        blocks = [(k, len(list(v))) for k, v in itertools.groupby(tree)]
+        i, result = 0, 0
+
+        while i < len(blocks):
+            j = i
+            count = 0
             fruit_set = set()
-            while j<len(blocks):
+            while j < len(blocks):
                 fruit_set.add(blocks[j][0])
-                count+=blocks[j][1]
-                if len(fruit_set)>2:
-                    i=j-1
+                count += blocks[j][1]
+                if len(fruit_set) > 2:
+                    i = j - 1
                     break
-                result=max(result,count)
-                j+=1
+                result = max(result, count)
+                j += 1
             else:
                 break
-            
-        return result
 
+        return result

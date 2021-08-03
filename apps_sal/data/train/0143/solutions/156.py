@@ -12,9 +12,5 @@ class Solution:
                 if mp[tree[l]] == 0:
                     del mp[tree[l]]
                 l += 1
-            fruits = max(fruits, i-l+1)
+            fruits = max(fruits, i - l + 1)
         return fruits
-            
-                
-                
-

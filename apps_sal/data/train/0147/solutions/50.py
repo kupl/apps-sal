@@ -12,5 +12,3 @@ class Solution:
             if len(heap) > k - 1:
                 counter -= heapq.heappop(heap)
         return (curr_max) % ((10 ** 9) + 7)
-            
-

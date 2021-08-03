@@ -1,6 +1,6 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
-        
+
         ans = i = 0
         count = collections.Counter()
         for j, x in enumerate(tree):

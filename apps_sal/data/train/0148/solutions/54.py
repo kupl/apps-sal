@@ -18,5 +18,3 @@ class Solution:
                     maxProfit = jobs[jobPointer][1]
                 jobPointer += 1
         return totalProfit
-        
-

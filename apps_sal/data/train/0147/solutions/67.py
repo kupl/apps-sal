@@ -6,7 +6,7 @@ class Solution:
             heapq.heappush(combo, (-efficiency[i], -speed[i]))
         tmp = []
         ans, currsum = 0, 0
-        
+
         while combo:
             curre, currs = heapq.heappop(combo)
             heapq.heappush(tmp, -currs)

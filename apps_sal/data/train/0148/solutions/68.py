@@ -4,9 +4,8 @@
 #     for i in range(len(profit)):
 #         profit_diff.append((profit[i], difficulty[i]))
 #     return profit_diff
-        
-        
-        
+
+
 # class Solution:
 #     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
 #         profit_diff = createListOfProfitDiff(profit, difficulty)
@@ -28,9 +27,8 @@ def createListOfProfitDiff(profit, difficulty):
     for i in range(len(profit)):
         profit_diff.append((profit[i], difficulty[i]))
     return profit_diff
-        
-        
-        
+
+
 # class Solution:
 #     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
 #         profit_diff = createListOfProfitDiff(profit, difficulty)
@@ -56,15 +54,13 @@ class Solution:
         dp = []
         for i in range(len(profit)):
             dp.append((profit[i], difficulty[i]))
-        dp.sort(key =  lambda x:x[0])
+        dp.sort(key=lambda x: x[0])
         dp.reverse()
 
         i = 0
         count = 0
         for p in dp:
-            while i<len(w) and p[1] <= w[i]:
+            while i < len(w) and p[1] <= w[i]:
                 count += p[0]
-                i+=1
+                i += 1
         return count
-                
-

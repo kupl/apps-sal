@@ -13,6 +13,6 @@ class Solution:
                     del count[tree[i]]
                 i += 1
 
-            ans = max(ans, j-i+1)
+            ans = max(ans, j - i + 1)
 
         return ans

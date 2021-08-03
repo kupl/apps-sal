@@ -6,7 +6,7 @@ class Solution:
         fruit_basket = set()
         i = 0
         while i < len(tree):
-            if len(fruit_basket) < 2 :
+            if len(fruit_basket) < 2:
                 counter += 1
                 fruit_basket.add(tree[i])
                 if len(fruit_basket) == 2:
@@ -15,9 +15,9 @@ class Solution:
                 counter += 1
             else:
                 fruit_basket = set()
-                max_fruits = max(counter,max_fruits)
+                max_fruits = max(counter, max_fruits)
                 counter = 0
                 i = new_fruit_idx - 1
             i += 1
-        max_fruits = max(counter,max_fruits)
+        max_fruits = max(counter, max_fruits)
         return max_fruits

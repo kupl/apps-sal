@@ -12,23 +12,7 @@ class Solution:
                 i += 1
             res = max(res, sum(cnt.values()))
         return res
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         # fruit_1, fruit_2 = None, None
         # pos_1, pos_2 = -1, -1
         # i = 0
@@ -46,4 +30,3 @@ class Solution:
         #     if t - i + 1 > max_len:
         #         max_len = t - i + 1
         # return max_len
-

@@ -2,7 +2,7 @@ class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         if not people or limit == 0:
             return 0
-        
+
         ans = 0
         people.sort()
         left, right = 0, len(people) - 1

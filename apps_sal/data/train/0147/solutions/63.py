@@ -4,7 +4,7 @@ class Solution:
 
         pq = []
         engineers = list(zip(speed, efficiency))
-        engineers.sort(key=lambda tup:-tup[1])  # sort by efficiency in decreasing order
+        engineers.sort(key=lambda tup: -tup[1])  # sort by efficiency in decreasing order
 
         performance = 0
         tot_speed = 0
@@ -18,5 +18,5 @@ class Solution:
             else:
                 heapq.heappush(pq, engineer[0])
                 tot_speed += engineer[0]
-            performance = max(performance, tot_speed*min_efficiency)
+            performance = max(performance, tot_speed * min_efficiency)
         return performance % MOD

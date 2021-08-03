@@ -5,7 +5,7 @@ class Solution:
         fruits_in_basket = [tree[0]]
         fruits_in_basket_counter = 0
         max_fib = -1
-        for fruit in tree: 
+        for fruit in tree:
             if prior_fruit == fruit:
                 prior_fruit_counter += 1
                 fruits_in_basket_counter += 1

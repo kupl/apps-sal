@@ -11,12 +11,5 @@ class Solution:
             heapq.heappush(hq, (s, e))
             ssum += s
             ans = max(ans, ssum * e)
-            
-        return ans%1_000_000_007
-   
-            
-            
-                
-            
-            
 
+        return ans % 1_000_000_007

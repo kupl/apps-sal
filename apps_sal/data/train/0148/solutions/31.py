@@ -22,7 +22,7 @@ class Solution:
         left = 0
         right = len(arr)
         while left < right:
-            mid = (left + right)//2
+            mid = (left + right) // 2
             if target >= arr[mid][0]:
                 left = mid + 1
             else:

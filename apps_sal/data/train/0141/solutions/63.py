@@ -5,7 +5,7 @@
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people = sorted(people)
-        
+
         left = 0
         right = len(people) - 1
         counter = 0
@@ -15,9 +15,8 @@ class Solution:
             right -= 1
             if total <= limit:
                 left += 1
-        
+
         if left == right:
             counter += 1
-        
-        return counter
 
+        return counter

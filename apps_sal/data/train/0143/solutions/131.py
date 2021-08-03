@@ -14,5 +14,5 @@ class Solution:
                     del counter[tree[start]]
                 start += 1
             maxL = max(maxL, end - start + 1)
-        
+
         return maxL

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
 
@@ -8,7 +9,7 @@ class Solution:
 
         countByFruit = defaultdict(int)
         countByFruit[tree[startIndex]] = 1
-        
+
         while endIndex < len(tree):
             while len(countByFruit) > 2:
                 fruitToRemove = tree[startIndex]
@@ -21,4 +22,3 @@ class Solution:
             if endIndex != len(tree):
                 countByFruit[tree[endIndex]] += 1
         return maxAmountOfFruit
-

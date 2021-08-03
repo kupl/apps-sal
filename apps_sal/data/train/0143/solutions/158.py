@@ -6,13 +6,13 @@ class Solution:
         starts = {}
         start = end = 0
         longest = 0
-        
+
         def find_earliest(starts):
             earliest = len(tree)
             for key in starts:
                 earliest = min(starts[key], earliest)
             return earliest
-        
+
         while end < len(tree):
             # print(start, end, starts)
             current = tree[end]
@@ -30,12 +30,12 @@ class Solution:
                     counts += 1
                     end += 1
             longest = max(end - start, longest)
-        
+
         return max(end - start, longest)
-        
-        
+
+
 #         longest = 0
-        
+
 #         def contains_two_symbols(subarray):
 #             c = Counter(subarray)
 #             contains = 0
@@ -43,11 +43,10 @@ class Solution:
 #                 if c[key]:
 #                     contains += 1
 #             return contains < 3
-            
+
 #         for i in range(len(tree)):
 #             for j in range(i + 1, len(tree) + 1):
 #                 if contains_two_symbols(tree[i:j]):
 #                     longest = max(longest, j - i)
-        
-#         return longest
 
+#         return longest

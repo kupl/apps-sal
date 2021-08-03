@@ -10,6 +10,3 @@ class Solution:
             best = max(best, p)
         tot += best * len(worker)
         return tot
-        
-            
-

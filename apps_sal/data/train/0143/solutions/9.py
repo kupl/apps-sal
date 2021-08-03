@@ -13,7 +13,7 @@ class Solution:
                 mmap[tree[p1]] -= 1
                 if mmap[tree[p1]] == 0:
                     uniq.remove(tree[p1])
-                    
+
                 p1 += 1
                 #print(mmap, uniq, p1, p2)
             else:
@@ -22,18 +22,11 @@ class Solution:
                     mmap[tree[p2]] += 1
                 else:
                     mmap[tree[p2]] = 1
-                    
+
                 uniq.add(tree[p2])
                 if len(uniq) <= 2:
                     counter = p2 - p1 + 1
-                mx = max(mx, counter)  
+                mx = max(mx, counter)
                 p2 += 1
-                
-                
-        return mx
-                
-            
-    
-            
-            
 
+        return mx

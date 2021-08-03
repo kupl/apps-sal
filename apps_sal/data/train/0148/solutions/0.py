@@ -3,7 +3,7 @@ class Solution:
         ws = sorted(worker, reverse=True)
         dp = sorted(zip(difficulty, profit), key=lambda x: x[1], reverse=True)
         # print(list(dp))
-        
+
         i = 0
         total = 0
         for w in ws:

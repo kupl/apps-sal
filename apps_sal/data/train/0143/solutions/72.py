@@ -7,7 +7,7 @@ class Solution:
         for i in range(len(tree)):
             if tree[i] != current_picking:
                 if len(baskets) < 2:
-                    baskets[current_picking] = [0, i-1]
+                    baskets[current_picking] = [0, i - 1]
                     prev_picking = current_picking
                     current_picking = tree[i]
                     baskets[current_picking] = [i, i]

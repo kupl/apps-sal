@@ -18,4 +18,3 @@ class Solution:
                 kind1, kind2 = kind2, t
             ans = max(ans, basket)
         return ans
-

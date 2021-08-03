@@ -1,6 +1,6 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
-        if(len(tree)<=1):
+        if(len(tree) <= 1):
             return len(tree)
         if(len(list(set(tree))) == 2):
             return len(tree)

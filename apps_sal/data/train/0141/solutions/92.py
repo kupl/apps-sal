@@ -9,5 +9,5 @@ class Solution:
             res += 1
             if people[i] + people[j] <= limit:
                 i += 1
-            j -=1
+            j -= 1
         return res

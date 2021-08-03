@@ -3,11 +3,11 @@ class Solution:
         people.sort()
         N = len(people)
         i, j = 0, N - 1
-        
+
         ans = 0
         k = cap
         s = 2
-        
+
         while i <= j:
             # prioritize heavier one
             while s and j >= 0:
@@ -26,7 +26,5 @@ class Solution:
             k = cap
             s = 2
             ans += 1
-        
-        return ans
-            
 
+        return ans

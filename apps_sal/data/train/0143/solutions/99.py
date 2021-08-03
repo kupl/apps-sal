@@ -16,5 +16,3 @@ class Solution:
             if best_attempt > len(tree) - i:
                 break
         return best_attempt
-        
-

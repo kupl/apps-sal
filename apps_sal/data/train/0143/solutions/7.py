@@ -18,6 +18,5 @@ class Solution:
                     del fruits[tree[front]]
                 front += 1
             if len(list(fruits.keys())) <= 2:
-                max_len = max(max_len, back-front)
+                max_len = max(max_len, back - front)
         return max_len
-

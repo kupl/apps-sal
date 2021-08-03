@@ -1,7 +1,7 @@
 class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         n = len(worker)
-        jobs =  sorted(zip(difficulty, profit))
+        jobs = sorted(zip(difficulty, profit))
         total = 0
         best = 0
         i = 0
@@ -11,4 +11,3 @@ class Solution:
                 i += 1
             total += best
         return total
-

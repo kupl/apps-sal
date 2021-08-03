@@ -31,59 +31,57 @@ class Solution:
     #         if i == old_i:
     #             break
     #     return max_fruit
-            
-        
-#     def totalFruit(self, tree: List[int]) -> int:
-        
-#         greattest_count = 0
-#         for i in range(len(tree)):
-#             if i > 0 and tree[i] == tree[i-1]:
-#                 print(i)
-#                 continue
-#             if i > 2 and tree[i] == tree[i-2] and tree[i-1] == tree[i-3] and tree[i] != tree[i-1] and self.checkRepeat(tree, i):
-#                 #add function to define tree[i-1] == the newest tree after ones that look like tree[i]
-#                 print(i)
-#                 continue
-#             fruit = self.pickFruit(i, tree)
-#             if fruit > greattest_count:
-#                 greattest_count = fruit
-#         return greattest_count
-                
-#             # print(count)
-#             # print(greattest_count)
-        
-#         return greattest_count
-    
-#     def checkRepeat(self,tree, i):
-#         for j in range(i, len(tree)):
-#             if tree[j] != tree[i]:
-#                 return tree[j]==tree[i-1]
-#         return True
-                
-    
-#     def pickFruit(self, i, tree):
-#         count = 0
-#         basket=[\"\", \"\"]
-#         for j in range(i, len(tree)):
-#             if basket[0] == \"\":
-#                 basket[0] = tree[j]
-#                 # print(\"basket1: \", basket[0])
-#                 count += 1
-#                 # print(\"basket1\")
-#             elif tree[j] == basket[0]:
-#                 count+=1
-#                 # print(\"already in basket1\")
-#             elif basket[1] == \"\":
-#                 basket[1] = tree[j]
-#                 count += 1
-#                 # print(\"basket2: \", basket[1])
-#             elif tree[j] == basket[1]:
-#                 count += 1
-#                 # print(\"already in basket2\")
-#             elif tree[j] not in basket:
-#                 return count
-#             if j == len(tree)-1:
-#                 return count
+
+    #     def totalFruit(self, tree: List[int]) -> int:
+
+    #         greattest_count = 0
+    #         for i in range(len(tree)):
+    #             if i > 0 and tree[i] == tree[i-1]:
+    #                 print(i)
+    #                 continue
+    #             if i > 2 and tree[i] == tree[i-2] and tree[i-1] == tree[i-3] and tree[i] != tree[i-1] and self.checkRepeat(tree, i):
+    #                 #add function to define tree[i-1] == the newest tree after ones that look like tree[i]
+    #                 print(i)
+    #                 continue
+    #             fruit = self.pickFruit(i, tree)
+    #             if fruit > greattest_count:
+    #                 greattest_count = fruit
+    #         return greattest_count
+
+    #             # print(count)
+    #             # print(greattest_count)
+
+    #         return greattest_count
+
+    #     def checkRepeat(self,tree, i):
+    #         for j in range(i, len(tree)):
+    #             if tree[j] != tree[i]:
+    #                 return tree[j]==tree[i-1]
+    #         return True
+
+    #     def pickFruit(self, i, tree):
+    #         count = 0
+    #         basket=[\"\", \"\"]
+    #         for j in range(i, len(tree)):
+    #             if basket[0] == \"\":
+    #                 basket[0] = tree[j]
+    #                 # print(\"basket1: \", basket[0])
+    #                 count += 1
+    #                 # print(\"basket1\")
+    #             elif tree[j] == basket[0]:
+    #                 count+=1
+    #                 # print(\"already in basket1\")
+    #             elif basket[1] == \"\":
+    #                 basket[1] = tree[j]
+    #                 count += 1
+    #                 # print(\"basket2: \", basket[1])
+    #             elif tree[j] == basket[1]:
+    #                 count += 1
+    #                 # print(\"already in basket2\")
+    #             elif tree[j] not in basket:
+    #                 return count
+    #             if j == len(tree)-1:
+    #                 return count
 
     def totalFruit(self, tree: List[int]) -> int:
         basket1 = -1
@@ -94,7 +92,7 @@ class Solution:
         i = 0
         while i < len(tree):
             if tree[i] == basket1 or tree[i] == basket2:
-                if tree[i] != tree[i-1]:
+                if tree[i] != tree[i - 1]:
                     end = i
                 i += 1
                 continue
@@ -110,11 +108,11 @@ class Solution:
                 continue
             print(i)
             print(end)
-            weight = i - start 
+            weight = i - start
             max_fruit = max(max_fruit, weight)
-            #max_fruit = 2 - 0 = 2
-            i = end # 1
-            start = end # 1
+            # max_fruit = 2 - 0 = 2
+            i = end  # 1
+            start = end  # 1
             basket1 = -1
             basket2 = -1
         # if start == 0:
@@ -122,8 +120,7 @@ class Solution:
         # else:
         #     weight = len(tree) - start - 1
         weight = len(tree) - start
-            
-        
+
         max_fruit = max(max_fruit, weight)
-            
+
         return max_fruit

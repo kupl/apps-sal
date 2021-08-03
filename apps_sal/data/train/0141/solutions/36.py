@@ -4,7 +4,7 @@ class Solution:
         i = 0
         j = len(people) - 1
         ans = 0
-        
+
         while i <= j:
             ans += 1
             if people[i] + people[j] <= limit:

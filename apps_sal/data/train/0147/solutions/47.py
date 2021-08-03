@@ -3,7 +3,7 @@ class Solution:
         heap = []
         total = 0
         pairs = list(zip(speed, efficiency))
-        pairs.sort(key = lambda x: -x[1])
+        pairs.sort(key=lambda x: -x[1])
         res = 0
         MOD = 10 ** 9 + 7
         for i, (s, e) in enumerate(pairs):

@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def numRescueBoats(self, people, limit):
         n = len(people)
@@ -13,5 +15,6 @@ class Solution:
                 weights.pop()
                 n -= 1
             boat += 1
-        if n == 1: boat += 1
+        if n == 1:
+            boat += 1
         return boat

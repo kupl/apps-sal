@@ -17,7 +17,7 @@ class Solution:
             if w < filtered_list[dix][0]:
                 continue
 
-            while dix+1 < len(filtered_list) and filtered_list[dix+1][0] <= w:
+            while dix + 1 < len(filtered_list) and filtered_list[dix + 1][0] <= w:
                 dix += 1
 
             profit += filtered_list[dix][1]

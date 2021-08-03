@@ -8,7 +8,7 @@ class Solution:
         rep = 1
         for i in range(1, len(tree)):
             if tree[i] in collection_list:
-                if tree[i] == tree[i-1]:
+                if tree[i] == tree[i - 1]:
                     rep += 1
                 else:
                     rep = 1
@@ -23,7 +23,7 @@ class Solution:
                     if counter > _max:
                         _max = counter
                 else:
-                    collection_list = [tree[i-1], tree[i]]
+                    collection_list = [tree[i - 1], tree[i]]
                     counter = 1 + rep
                     rep = 1
         return _max

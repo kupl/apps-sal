@@ -3,7 +3,7 @@ class Solution:
         a = [(s, e) for s, e in zip(speed, efficiency)]
         if k == 1:
             return max([s * e for s, e in a])
-        a.sort(key=lambda x:-x[1])
+        a.sort(key=lambda x: -x[1])
         ret = 0
         q = []
         s_sum = 0

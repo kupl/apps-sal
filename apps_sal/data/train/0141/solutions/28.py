@@ -4,9 +4,9 @@ class Solution:
         low = 0
         up = len(people) - 1
         boats = 0
-        
+
         while(low <= up):
-            if up-1 >= low and people[up] + people[up - 1] <= limit:
+            if up - 1 >= low and people[up] + people[up - 1] <= limit:
                 up -= 2
                 boats += 1
             elif up != low and people[up] + people[low] <= limit:
@@ -16,6 +16,5 @@ class Solution:
             else:
                 up -= 1
                 boats += 1
-                
-        return boats
 
+        return boats

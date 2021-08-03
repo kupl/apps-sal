@@ -9,8 +9,8 @@ class Solution:
                 max_cnt = max(sum(count.values()), max_cnt)
             while len(count) > 2:
                 count[tree[i]] -= 1
-                if count[tree[i]] == 0: del count[tree[i]]
+                if count[tree[i]] == 0:
+                    del count[tree[i]]
                 i += 1
             j += 1
         return max_cnt
-

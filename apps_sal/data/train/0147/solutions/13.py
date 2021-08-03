@@ -1,12 +1,13 @@
 from heapq import heappop, heappush
 
+
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         es_list = [[-e, s] for s, e in zip(speed, efficiency)]
         es_list.sort()
-        
+
         queue = []
-        
+
         total_speed = 0
         cur_eff = 0
         res = 0
@@ -23,7 +24,4 @@ class Solution:
                 heappush(queue, s)
                 total_speed += s
                 cur_eff = -e
-        return max(res, total_speed*cur_eff)%(10**9 + 7)
-            
-            
-
+        return max(res, total_speed * cur_eff) % (10**9 + 7)

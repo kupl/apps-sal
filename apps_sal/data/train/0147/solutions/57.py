@@ -20,7 +20,7 @@ class Solution:
             cur_efficiency = eff_speed[i - 1][0]
             max_perf = max(max_perf, cur_efficiency * speed_sum)
         return max_perf % mod
-    
+
     # O(nlogn + 2nlogk) time, O(n) space
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         mod = 10 ** 9 + 7
@@ -36,5 +36,3 @@ class Solution:
                 speed_sum -= heapq.heappop(speed_h)
             max_perf = max(max_perf, speed_sum * e)
         return max_perf % mod
-            
-

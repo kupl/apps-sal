@@ -1,9 +1,9 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
-        
+
         # compress the tree
         compressedTree = []
-        
+
         current = [tree[0], 0]
         for index in range(len(tree)):
             fruit = tree[index]
@@ -13,7 +13,7 @@ class Solution:
             else:
                 current[1] += 1
         compressedTree.append(current)
-        
+
         ans = i = 0
         while i < len(compressedTree):
             # We'll start our scan at block[i].
@@ -30,7 +30,7 @@ class Solution:
 
                 # If we have 3 types, this is not a legal subarray
                 if len(types) >= 3:
-                    i = j-1
+                    i = j - 1
                     break
 
                 ans = max(ans, weight)

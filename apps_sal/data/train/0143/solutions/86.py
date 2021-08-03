@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         st = 0
@@ -21,4 +23,3 @@ class Solution:
             max_len = max(max_len, total)
 
         return max_len
-

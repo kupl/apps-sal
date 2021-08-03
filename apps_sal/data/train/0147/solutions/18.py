@@ -7,8 +7,8 @@ class Solution:
             return 0
 
         engineers = [[speed[i], efficiency[i]] for i in range(n)]
-        engineers.sort(key=lambda x:x[1], reverse=True)
-        
+        engineers.sort(key=lambda x: x[1], reverse=True)
+
         mod = 1000000007
         pq = []
         sum_speed = 0
@@ -20,11 +20,11 @@ class Solution:
             if len(pq) > k:
                 tmp = heapq.heappop(pq)
                 sum_speed -= tmp[0]
-                if tmp != e : # The newly added engineer might be eliminated
+                if tmp != e:  # The newly added engineer might be eliminated
                     min_efficiency = e[1]
             else:
                 min_efficiency = e[1]
 
             max_performance = max(max_performance, sum_speed * min_efficiency)
-        
+
         return max_performance % mod

@@ -8,6 +8,5 @@ class Solution:
                 count[tree[i]] -= 1
                 if count[tree[i]] == 0:
                     del count[tree[i]]
-                i +=1
+                i += 1
         return len(tree) - i
-
