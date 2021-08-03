@@ -6,4 +6,3 @@ def find_it(seq):
         else:
             nums.add(num)
     return nums.pop()
-

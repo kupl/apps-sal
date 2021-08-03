@@ -1,8 +1,10 @@
-def am_i_wilson(n): ### This is idiotic... 
+def am_i_wilson(n):  # This is idiotic...
     if n in [5, 13, 563]:
         return True
     else:
         return False
+
+
 """
 def is_prime(n):
     if n % 2 == 0 and n > 2: 

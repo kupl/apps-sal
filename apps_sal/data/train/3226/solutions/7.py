@@ -6,7 +6,8 @@ def land_perimeter(arr):
     ans = 0
     for i in range(len(arr)):
         for j in range(len(arr[i])):
-            if arr[i][j] == 'O': continue
+            if arr[i][j] == 'O':
+                continue
             cur = 0
             for k in range(4):
                 nx = i + dr[k]

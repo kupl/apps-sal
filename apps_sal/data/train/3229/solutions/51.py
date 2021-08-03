@@ -9,4 +9,3 @@ def am_i_wilson(n):
 #         fct = fct * i
 #     P = (fct+1) / (n*n)
 #     return P == 1.0
-

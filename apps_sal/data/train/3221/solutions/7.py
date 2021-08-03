@@ -3,4 +3,3 @@ def find_it(seq):
     for x in seq:
         result ^= x
     return result
-

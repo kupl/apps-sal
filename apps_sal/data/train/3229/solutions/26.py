@@ -4,6 +4,7 @@ def factorial(n):
         product *= i
     return product
 
+
 def is_prime(n):
     count = 2
 
@@ -11,6 +12,7 @@ def is_prime(n):
         if n % i == 0:
             count += 1
     return count == 2
+
 
 def am_i_wilson(n):
     if n <= 1 or n > 563:

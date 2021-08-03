@@ -1,6 +1,6 @@
-am_i_wilson = lambda n: n in (5, 13, 563)
+def am_i_wilson(n): return n in (5, 13, 563)
 
-#def am_i_wilson(n):
+# def am_i_wilson(n):
 #    if n < 2:
 #        return False
 #    elif n == 2:
@@ -22,4 +22,3 @@ am_i_wilson = lambda n: n in (5, 13, 563)
 #            print (n)
 #            print ("not feck")
 #            return True
-

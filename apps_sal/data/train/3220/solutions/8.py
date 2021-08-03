@@ -1,6 +1,8 @@
 from fractions import Fraction as F
 
 cache = {}
+
+
 def divisors(n):
     result = cache.get(n)
     if result is not None:
@@ -22,7 +24,7 @@ def solve(a, b):
     for n in range(max(a, 1), b):
         r = F(sum(divisors(n)), n)
         vals.setdefault(r, []).append(n)
-    
+
     result = 0
     for k, v in vals.items():
         if len(v) >= 2:

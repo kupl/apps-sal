@@ -13,6 +13,7 @@ class SierpinskiSumFunc():
 
 sierpinski_sum_obj = SierpinskiSumFunc()
 
+
 def find_closest_value(m):
     if m <= 4:
         return 4

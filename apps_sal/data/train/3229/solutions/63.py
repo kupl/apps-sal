@@ -3,6 +3,7 @@ import sys
 
 sys.setrecursionlimit(10000)
 
+
 @lru_cache(None)
 def factorial_cache(n):
     if n == 0:
@@ -17,6 +18,7 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
 
 def am_i_wilson(n):
     print(n)
