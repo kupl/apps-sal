@@ -1,8 +1,8 @@
-def is_divisible(n,x,y):
+def is_divisible(n, x, y):
     ma = n % x
     la = n % y
-    ka = ma + la 
+    ka = ma + la
     if ka == 0:
         return True
-    else: 
+    else:
         return False

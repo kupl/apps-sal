@@ -4,4 +4,3 @@ def greet(name, owner):
     else:
         answer = 'Hello guest'
     return answer
-

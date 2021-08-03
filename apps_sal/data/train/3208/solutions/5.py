@@ -4,4 +4,3 @@ def queue_time(customers, n):
         indexMin = tills.index(min(tills))
         tills[indexMin] += i
     return max(tills)
-

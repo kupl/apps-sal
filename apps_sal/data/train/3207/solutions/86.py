@@ -1,4 +1,4 @@
 def reverseWords(str):
     strings = str.split(" ")
-    strings.reverse();
+    strings.reverse()
     return " ".join(strings)

@@ -1,4 +1,4 @@
-def is_divisible(n,x,y):
+def is_divisible(n, x, y):
     answer = n / x
     answer2 = n / y
     answer_integer_check = answer.is_integer()

@@ -6,4 +6,3 @@ def reverseWords(s):
     # s = s[::-1]      # reverse the list
     # s = ' '.join(s)  # join back with spaces between
     # return s
-

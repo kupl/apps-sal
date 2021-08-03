@@ -5,6 +5,6 @@ def reverseWords(s):
     i = len(words)
     while i > 0:
         i -= 1
-        rev += words[i]+" "
+        rev += words[i] + " "
     print(rev)
     return rev[:-1]

@@ -5,5 +5,6 @@ def greet(name, owner):
         return('Hello guest')
     else:
         return None
-    
-greet('Bob','Bob')
+
+
+greet('Bob', 'Bob')

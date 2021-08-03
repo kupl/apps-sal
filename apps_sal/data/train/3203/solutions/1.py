@@ -1,5 +1,6 @@
 import re
 
+
 def parse_mana_cost(mana):
     m = re.match(r"(\d*)([wubrg]*)\Z", mana.lower())
     if m is None:

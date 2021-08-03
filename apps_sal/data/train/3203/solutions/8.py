@@ -1,5 +1,7 @@
 from itertools import groupby
 import re
+
+
 def parse_mana_cost(mana):
     result = {}
     pattern = re.compile(r'\d*[wurbg]*', re.I)
@@ -13,11 +15,10 @@ def parse_mana_cost(mana):
         if i.isalpha():
             colors += i
         else:
-            colorless +=i
+            colorless += i
     if colorless not in ['0', '']:
         result['*'] = int(colorless)
     colors = ''.join(sorted(list(colors)))
     for key, count in groupby(colors):
         result[key.lower()] = len(list(count))
     return result
-

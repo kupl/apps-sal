@@ -1,10 +1,8 @@
 def greet(name, owner):
     # Add code here
-    x=name
-    y=owner
-    if x==y:
+    x = name
+    y = owner
+    if x == y:
         return 'Hello boss'
-    else: 
+    else:
         return 'Hello guest'
-  
-

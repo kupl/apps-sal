@@ -1,6 +1,7 @@
 from collections import Counter
 import re
 
+
 def parse_mana_cost(s):
     s = s.lower()
     if re.match(r"\d*[wubrg]*\Z", s):

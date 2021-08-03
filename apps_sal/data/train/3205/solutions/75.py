@@ -1,1 +1,1 @@
-is_divisible = lambda  n, x, y: (n / x).is_integer() and (n / y).is_integer()
+def is_divisible(n, x, y): return (n / x).is_integer() and (n / y).is_integer()

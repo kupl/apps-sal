@@ -1,1 +1,2 @@
-from math import gcd; is_divisible = lambda n, x, y: not n%(x*y//(gcd(x, y)))
+from math import gcd
+def is_divisible(n, x, y): return not n % (x * y // (gcd(x, y)))

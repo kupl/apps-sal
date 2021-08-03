@@ -11,7 +11,7 @@ positive, non-zero digits.
 # isDivisible(100,5,3)--> false because 100 is not divisible by 3
 # isDivisible(12,7,5)--> false because 12 is neither divisible by 7 nor 5
 
-def is_divisible(n,x,y):
+def is_divisible(n, x, y):
     """is divisible checks if a number n is divisible
     by two numbers x AND y. All inputs are
     positive, non-zero digits.

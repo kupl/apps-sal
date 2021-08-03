@@ -4,4 +4,3 @@ def greet(name, owner):
     if name == owner:
         r = 'Hello boss'
     return r
-

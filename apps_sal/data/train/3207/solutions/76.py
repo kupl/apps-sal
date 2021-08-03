@@ -1,1 +1,1 @@
-reverseWords = lambda word: ' '.join(word.split(' ')[::-1])
+def reverseWords(word): return ' '.join(word.split(' ')[::-1])

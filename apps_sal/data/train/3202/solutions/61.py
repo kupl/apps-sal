@@ -5,4 +5,3 @@ def greet(name, owner):
         result = "guest"
     return "Hello " + result
     # Add code here
-

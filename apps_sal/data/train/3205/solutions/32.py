@@ -1,10 +1,11 @@
-def is_divisible(n,x,y):
-    #your code here
-    div1=n % x
-    div2=n % y
+def is_divisible(n, x, y):
+    # your code here
+    div1 = n % x
+    div2 = n % y
     if div1 == 0 and div2 == 0:
-       return True
+        return True
     else:
-       return False
+        return False
 
-print(is_divisible(6,2,3))
+
+print(is_divisible(6, 2, 3))

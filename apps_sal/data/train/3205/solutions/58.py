@@ -1,4 +1,4 @@
-def is_divisible(n,x,y):
+def is_divisible(n, x, y):
     x1 = n % x
     y1 = n % y
     if (x1 >= 1 or y1 >= 1):

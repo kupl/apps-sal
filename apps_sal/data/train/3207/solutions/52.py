@@ -5,4 +5,3 @@ def reverseWords(s):
         string.insert(0, w)
     string = ' '.join(string)
     return string[:]
-
