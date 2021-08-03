@@ -8,7 +8,7 @@ xors = 0
 res = 0
 for i in range(nb_element):
     xors ^= arr[i]
-    x  = i % 2
+    x = i % 2
     res += cnt[x][xors]
     cnt[x][xors] += 1
 print(res)

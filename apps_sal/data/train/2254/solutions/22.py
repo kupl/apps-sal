@@ -3,9 +3,9 @@ input = stdin.readline
 
 n, q, = list(map(int, input().split()))
 arr = [tuple(map(int, input().split())) for _ in range(q)]
-adj = [[] for _ in range(n+1)]
+adj = [[] for _ in range(n + 1)]
 curr, cnt, res, vis = 0, 0, [], []
- 
+
 for t, v in arr:
     if t == 1:
         adj[v].append(len(vis))
@@ -25,4 +25,3 @@ for t, v in arr:
             curr += 1
     res.append(cnt)
 print('\n'.join(map(str, res)))
-

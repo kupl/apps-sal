@@ -23,12 +23,8 @@ for _ in range(N):
 
 pairs = 0
 for s, v in list(string_count.items()):
-    pairs += v * (v-1) // 2
+    pairs += v * (v - 1) // 2
     for i in range(len(s)):
-        pairs += v * string_count.get(s[:i] + s[i+1:], 0)
+        pairs += v * string_count.get(s[:i] + s[i + 1:], 0)
 
 print(pairs)
-
-        
-    
-

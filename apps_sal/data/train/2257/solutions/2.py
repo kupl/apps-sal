@@ -44,7 +44,7 @@ for _ in range(t):
     n = int(input())
     a = list(input())
     b = list(input())
-    
+
     flag = False
     for i in range(n):
         if a[i] > b[i]:

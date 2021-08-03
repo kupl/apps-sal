@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def check_funny(n, nums):
     cnt = {0: Counter(), 1: Counter()}
     cnt[1][0] = 1
@@ -15,4 +16,3 @@ def check_funny(n, nums):
 n = int(input())
 nums = list(map(int, input().split()))
 print(check_funny(n, nums))
-

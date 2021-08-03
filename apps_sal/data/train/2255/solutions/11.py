@@ -10,4 +10,3 @@ for i in range(n):
     ret += dp[i & 1][xor]
     dp[i & 1][xor] += 1
 print(ret)
-

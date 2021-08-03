@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, m, k = f()
 
 w, h = 2 * n, 2 * m
@@ -7,7 +9,8 @@ p = [-1] * k
 
 for i in range(k):
     x, y = f()
-    if x - y & 1: continue
+    if x - y & 1:
+        continue
 
     for a in (x, w - x):
         for b in (y, h - y):
@@ -16,7 +19,8 @@ for i in range(k):
 a = b = t = 0
 while 1:
     for x, i in s[b - a]:
-        if p[i] < 0: p[i] = t + x - a
+        if p[i] < 0:
+            p[i] = t + x - a
 
     d = min(w - a, h - b)
     t += d
@@ -24,6 +28,8 @@ while 1:
     a = (a + d) % w
     b = (b + d) % h
 
-    if a % n == b % m: break
+    if a % n == b % m:
+        break
 
-for q in p: print(q)
+for q in p:
+    print(q)

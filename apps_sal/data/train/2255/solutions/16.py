@@ -9,4 +9,3 @@ for j in range(n):
     res += cnt[x][j % 2]
     cnt[x][j % 2] += 1
 print(res)
-

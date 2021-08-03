@@ -1,6 +1,11 @@
-import sys, collections
+import sys
+import collections
+
+
 def inp():
     return map(int, input().split())
+
+
 n, q = inp()
 Q = collections.deque()
 A = n * [0]
@@ -28,4 +33,4 @@ for _ in range(q):
                 A[y] -= 1
                 s -= 1
     L.append(s)
-sys.stdout.write('\n'.join(map(str,L)))
+sys.stdout.write('\n'.join(map(str, L)))

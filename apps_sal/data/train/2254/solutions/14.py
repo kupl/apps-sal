@@ -12,42 +12,42 @@ s = 0
 m = 0
 L = []
 for i in range(q):
-  c, x = list(map(int, input().split()))
+    c, x = list(map(int, input().split()))
 
-  if c == 1:
-    if x not in M:
-      M[x] = collections.deque()
-      # M[x] = set()
+    if c == 1:
+        if x not in M:
+            M[x] = collections.deque()
+            # M[x] = set()
 
-    # M[x].add(n)
-    M[x].append(n)
-    Q.append(x)
+        # M[x].add(n)
+        M[x].append(n)
+        Q.append(x)
 
-    n += 1
-    s += 1
+        n += 1
+        s += 1
 
-    # print("case 1")
+        # print("case 1")
 
-  elif c == 2:
-    if x in M:
-      s -= len(M[x])
+    elif c == 2:
+        if x in M:
+            s -= len(M[x])
 
-      M[x] = collections.deque()
+            M[x] = collections.deque()
 
-    # print("case 2")
+        # print("case 2")
 
-  else:
-    while x > m:
-      z = Q.popleft()
+    else:
+        while x > m:
+            z = Q.popleft()
 
-      if z in M and len(M[z]) > 0 and M[z][0] <= x:
-        s -= 1
-        M[z].popleft()
-        # M[app].remove(message)
+            if z in M and len(M[z]) > 0 and M[z][0] <= x:
+                s -= 1
+                M[z].popleft()
+                # M[app].remove(message)
 
-      m += 1
-    # print("case 3")
-  L.append(s)
+            m += 1
+        # print("case 3")
+    L.append(s)
 sys.stdout.write('\n'.join(map(str, L)))
 # for i in range(q):
 #   c, x = map(int, input().split())
@@ -89,4 +89,3 @@ sys.stdout.write('\n'.join(map(str, L)))
 
 #     # print("case 3")
 #     print(unread)
-
