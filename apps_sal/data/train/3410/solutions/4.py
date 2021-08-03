@@ -5,4 +5,3 @@ def scratch(lottery):
         if words[0] == words[1] == words[2]:
             result += int(words[3])
     return result
-

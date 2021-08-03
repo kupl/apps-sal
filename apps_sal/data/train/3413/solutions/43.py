@@ -4,4 +4,3 @@ def solution(nums):
     else:
         nums_sorted = sorted(nums)
     return nums_sorted
-

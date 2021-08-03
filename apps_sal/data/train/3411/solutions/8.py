@@ -1,1 +1,1 @@
-amort=lambda r,b,t,n,c=0,p=0,i=0,m=-1:m<0and amort(r/1200,b,t,n,r/1200*b/(1-(1+r/1200)**-t),p,i,0)or m==n and"num_payment %d c %.0f princ %.0f int %.0f balance %.0f"%(n,c,p,i,b)or amort(r,r*b+b-c,t-1,n,c,c-r*b,r*b,m+1)
+amort = lambda r, b, t, n, c=0, p=0, i=0, m=-1: m < 0 and amort(r / 1200, b, t, n, r / 1200 * b / (1 - (1 + r / 1200)**-t), p, i, 0) or m == n and "num_payment %d c %.0f princ %.0f int %.0f balance %.0f" % (n, c, p, i, b) or amort(r, r * b + b - c, t - 1, n, c, c - r * b, r * b, m + 1)

@@ -1,10 +1,9 @@
 def solution(nums):
-    if nums== None: 
-           return []
+    if nums == None:
+        return []
     else:
-       nums=list(set(nums))
-        
-       nums.sort()
-    
-       
-       return nums
+        nums = list(set(nums))
+
+        nums.sort()
+
+        return nums

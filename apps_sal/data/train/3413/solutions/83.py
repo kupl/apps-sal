@@ -7,4 +7,5 @@ def solution(nums=None):
     except:
         pass
 
-solution([1,2,10,5])
+
+solution([1, 2, 10, 5])

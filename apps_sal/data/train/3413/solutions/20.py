@@ -1,7 +1,7 @@
 def solution(nums):
     print(nums)
-    horizontal=[]
-    vertical=[]
+    horizontal = []
+    vertical = []
     if not nums or nums is None:
         return []
     else:

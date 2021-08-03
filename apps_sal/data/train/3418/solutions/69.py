@@ -3,5 +3,5 @@ def reverse_list(l):
   # 1) return l[::-1]
   # 2) l.reverse()
   #    return l
-  # 3) 
+  # 3)
     return list(reversed(l))

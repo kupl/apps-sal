@@ -6,4 +6,3 @@ def solution(nums=None):
         return []
     elif nums == []:
         return []
-

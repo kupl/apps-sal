@@ -1,7 +1,7 @@
 def solution(nums):
     if nums == None:
         return []
-    if len(nums)==0:
+    if len(nums) == 0:
         return []
     low = nums[0]
     other = nums[1:].copy()
@@ -13,6 +13,5 @@ def solution(nums):
     p = 0
     if len(niggers) != 0:
         p = min(niggers)
-    mlist.insert(p,low)            
+    mlist.insert(p, low)
     return mlist
-

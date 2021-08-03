@@ -3,4 +3,3 @@ def solution(nums):
         return []
     else:
         return sorted(set(nums))
-

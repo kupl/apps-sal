@@ -1,6 +1,6 @@
 def solution(nums):
     print(nums)
-    if nums==None:
+    if nums == None:
         return []
 
     try:

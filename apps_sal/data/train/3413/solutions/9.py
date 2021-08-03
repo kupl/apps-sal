@@ -1,2 +1,2 @@
 def solution(name):
-    return sorted(name) if name  else []
+    return sorted(name) if name else []

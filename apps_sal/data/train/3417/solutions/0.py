@@ -5,5 +5,3 @@ def cut_the_ropes(arr):
         arr = [elem - m for elem in arr if elem != m]
         results.append(len(arr))
     return results[:-1]
-    
-

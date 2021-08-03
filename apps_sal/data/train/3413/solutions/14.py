@@ -1,1 +1,1 @@
-solution = lambda x : x and sorted(x) or []
+def solution(x): return x and sorted(x) or []

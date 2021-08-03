@@ -1,2 +1,2 @@
 def reverse_list(l):
-    return l[-1:-len(l)-1:-1]
+    return l[-1:-len(l) - 1:-1]

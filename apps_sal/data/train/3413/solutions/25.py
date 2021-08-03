@@ -4,5 +4,3 @@ def solution(nums):
         return l
     else:
         return sorted(nums)
-    
-

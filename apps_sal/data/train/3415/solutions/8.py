@@ -5,4 +5,3 @@ def build_palindrome(s):
         p = s + s[0:i][::-1]
         i += 1
     return p
-

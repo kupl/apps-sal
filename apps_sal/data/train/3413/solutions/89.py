@@ -4,7 +4,7 @@ def solution(nums):
         insertion_sort(list)
     else:
         return []
-        
+
     return list
 
 
@@ -16,5 +16,3 @@ def insertion_sort(A):
             A[j + 1] = A[j]
             j -= 1
         A[j + 1] = key
-        
-

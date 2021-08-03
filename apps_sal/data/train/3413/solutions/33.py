@@ -7,4 +7,3 @@ def solution(nums=[]):
             return []
     except:
         return []
-

@@ -6,6 +6,3 @@ def solution(nums):
         l.append(min(nums))
         nums.remove(min(nums))
     return l
-        
-        
-

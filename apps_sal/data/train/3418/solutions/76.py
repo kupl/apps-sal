@@ -5,6 +5,6 @@ def reverse_list(l):
     return rs
 
 
-r = reverse_list([1,2,3,4])
+r = reverse_list([1, 2, 3, 4])
 
 print(r)

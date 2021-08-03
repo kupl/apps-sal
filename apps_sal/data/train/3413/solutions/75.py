@@ -9,7 +9,7 @@ def solution(nums):
         p = 0
         for n in range(len(nums)):
             if nums[n] < nums[p]:
-                p=n
+                p = n
         li.append(nums[p])
-        nums = nums[:p] + nums[p+1:]
+        nums = nums[:p] + nums[p + 1:]
     return li
