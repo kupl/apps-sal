@@ -15,4 +15,3 @@ for cur in range(1, n + 1):
         row[i] = 999
     ans[k] = cur
 print(' '.join(map(str, ans)))
-

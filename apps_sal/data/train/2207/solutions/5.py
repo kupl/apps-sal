@@ -5,6 +5,5 @@ for i in range(n):
     k = int(t == 1)
     u[k] += x
     v[k] += y
-print('LDIEVAED'[u[1] < v[1] :: 2])
-print('LDIEVAED'[u[0] < v[0] :: 2])    
-
+print('LDIEVAED'[u[1] < v[1]:: 2])
+print('LDIEVAED'[u[0] < v[0]:: 2])

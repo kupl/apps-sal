@@ -8,4 +8,3 @@ for row in mat:
         break
 else:
     assert(0)
-

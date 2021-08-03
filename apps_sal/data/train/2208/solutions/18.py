@@ -35,16 +35,16 @@ def bfsAll(graphs, visited, N):
             bfs(graphs, visited, here)
     return ret
 """
-N, K = list(map(int,input().strip().split(' ')))
-snacks = [[] for i in range(N+1)]
-visited = [False for i in range(N+1)]
+N, K = list(map(int, input().strip().split(' ')))
+snacks = [[] for i in range(N + 1)]
+visited = [False for i in range(N + 1)]
 for k in range(K):
-    a, b = list(map(int,input().strip().split(' ')))
+    a, b = list(map(int, input().strip().split(' ')))
     snacks[a].append(b)
     snacks[b].append(a)
 q = Queue()
 components = 0
-for here in range(1, N+1):
+for here in range(1, N + 1):
     if visited[here] == False:
         visited[here] = True
         for there in snacks[here]:
@@ -60,4 +60,3 @@ for here in range(1, N+1):
         components += 1
 ret = K - (N - components)
 print(ret)
-

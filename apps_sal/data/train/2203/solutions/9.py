@@ -7,6 +7,3 @@ for i in range(n):
     if sorted(v) == target:
         print(' '.join([str(x) if x != 0 else str(n) for x in v]))
         return
-
-
-

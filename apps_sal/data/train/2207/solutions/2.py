@@ -2,7 +2,7 @@ import sys
 #f = sys.stdin
 # f = open("input.txt", "r")
 n = int(input())
-a, b = [[],[]], [[],[]]
+a, b = [[], []], [[], []]
 for i in range(n):
     t, xi, yi = map(int, input().split())
     if t == 1:

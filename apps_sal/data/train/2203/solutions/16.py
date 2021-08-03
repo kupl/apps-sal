@@ -16,5 +16,3 @@ for i in range(n):
         sys.stdout.write("{} ".format(n))
     else:
         sys.stdout.write("{} ".format(matrix[big][i]))
-
-

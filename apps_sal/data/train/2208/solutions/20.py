@@ -30,18 +30,20 @@ def read_int_array():
 
 ######################################################
 
+
 n, k = read_int_array()
 adj = [[] for _ in range(n)]
 edges = set()
 for _ in range(k):
     x, y = read_int_array()
     x, y = (y, x) if y < x else (x, y)
-    if (x,y) not in edges:
+    if (x, y) not in edges:
         edges.add((x, y))
-        adj[x-1] += [y-1]
-        adj[y-1] += [x-1]
+        adj[x - 1] += [y - 1]
+        adj[y - 1] += [x - 1]
 
 marked = set()
+
 
 def bfs(s):
     tree = []
@@ -61,6 +63,7 @@ def bfs(s):
         # print(' '.join(str(i) for i in tree))
     return count
 
+
 count = 0
 for v in range(n):
     if v not in marked:
@@ -75,5 +78,3 @@ print(k - count)
 0 3
 2 3
 """
-
-

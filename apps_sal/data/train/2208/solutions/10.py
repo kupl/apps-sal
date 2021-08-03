@@ -28,7 +28,4 @@ for i in range(n):
                         s.add(dest)
                         ans += 1
                 del dic[src]
-print(k-ans)
-            
-    
-
+print(k - ans)

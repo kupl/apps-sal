@@ -35,12 +35,14 @@ class UnionFind:
             self.edge[x] += self.edge[y] + 1
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
-    
+
+
 n, k = [int(item) for item in input().split()]
 UF = UnionFind(2 * 10**5)
 for i in range(k):
     a, b = [int(item) for item in input().split()]
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     UF.union(a, b)
 seen = [False] * (2 * 10**5)
 ans = 0
@@ -52,5 +54,5 @@ for i in range(2 * 10**5):
         continue
     else:
         ans += UF.edge[par] - (UF.size[par] - 1)
-    seen[par] = True 
+    seen[par] = True
 print(ans)

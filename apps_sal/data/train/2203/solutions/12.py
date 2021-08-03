@@ -12,10 +12,9 @@ for i in range(n):
             S.add(x)
     else:
         if last:
-            perm[i] = n-1
+            perm[i] = n - 1
         else:
             perm[i] = n
             last = True
 for x in perm:
-    print(x, end = ' ')
-
+    print(x, end=' ')

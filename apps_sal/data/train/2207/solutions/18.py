@@ -12,7 +12,5 @@ for i in range(0, n):
         b += 1
         b_success += description[1]
 
-print(["DEAD", "LIVE"][a_success >= a*5])
-print(["DEAD", "LIVE"][b_success >= b*5])
-
-
+print(["DEAD", "LIVE"][a_success >= a * 5])
+print(["DEAD", "LIVE"][b_success >= b * 5])

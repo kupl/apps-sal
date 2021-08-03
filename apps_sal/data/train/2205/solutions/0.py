@@ -5,7 +5,7 @@ def main():
     input = sys.stdin.readline
 
     H, W, Q = list(map(int, input().split()))
-    grid = array('b', [0] * (H*W))
+    grid = array('b', [0] * (H * W))
     #flg_0 = 0
     #flg_1 = 0
     for h in range(H):
@@ -18,7 +18,7 @@ def main():
         """
         for w in range(W):
             if line[w] == "1":
-                grid[h*W + w] ^= 1
+                grid[h * W + w] ^= 1
 
     """
     if flg_0 == 0:
@@ -32,14 +32,14 @@ def main():
     """
 
     que = deque()
-    start_change = [-1] * (H*W)
+    start_change = [-1] * (H * W)
     d = [(1, 0), (-1, 0), (0, 1), (0, -1)]
     for h in range(H):
         for w in range(W):
             same = 0
-            hw = h*W+w
+            hw = h * W + w
             for dh, dw in d:
-                h_new, w_new = h+dh, w+dw
+                h_new, w_new = h + dh, w + dw
                 hw_new = h_new * W + w_new
                 if 0 <= h_new < H and 0 <= w_new < W:
                     if grid[hw] == grid[hw_new]:
@@ -64,7 +64,7 @@ def main():
         h, w, p = list(map(int, input().split()))
         h -= 1
         w -= 1
-        hw = h*W + w
+        hw = h * W + w
         if start_change[hw] == -1:
             print(grid[hw])
             continue
@@ -79,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

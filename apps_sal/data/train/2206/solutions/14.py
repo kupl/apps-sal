@@ -1,15 +1,15 @@
 n = int(input())
-p=[0]*n
-p=input().split()
-for i in range (n):
-    p[i]=int(p[i])
+p = [0] * n
+p = input().split()
+for i in range(n):
+    p[i] = int(p[i])
 mx = n
-a = [0]*(n+1)
+a = [0] * (n + 1)
 ans = [1]
 for i in range(0, n):
     t = p[i]
     a[t] = 1
-    while a[mx]==1 and mx>=1:
-        mx-=1
-    ans.append(i+1-(n-mx)+1)
+    while a[mx] == 1 and mx >= 1:
+        mx -= 1
+    ans.append(i + 1 - (n - mx) + 1)
 print(' '.join(map(str, ans)))

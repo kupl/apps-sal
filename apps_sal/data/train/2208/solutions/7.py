@@ -8,7 +8,10 @@ def find(x):
         x1 = x2
     return x
 
-inp = lambda : list(map(int, input().split()))
+
+def inp(): return list(map(int, input().split()))
+
+
 n, k = inp()
 edges = []
 for i in range(k):
@@ -25,4 +28,3 @@ for i in edges:
     else:
         p[p1] = p2
 print(ans)
-

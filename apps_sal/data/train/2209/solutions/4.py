@@ -11,7 +11,7 @@ for a, b in info:
     b -= 1
     tree[a].append(b)
     tree[b].append(a)
-    
+
 max_ = n - 1
 for v in range(n):
     cnt = 0
@@ -19,8 +19,8 @@ for v in range(n):
         if len(tree[nxt_v]) == 1:
             cnt += 1
     max_ -= max(cnt - 1, 0)
-    
-    
+
+
 visited = [-1] * n
 q = deque([0])
 visited[0] = 0

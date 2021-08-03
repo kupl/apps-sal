@@ -21,4 +21,3 @@ if res2success >= res2fail:
     print("LIVE")
 else:
     print("DEAD")
-
