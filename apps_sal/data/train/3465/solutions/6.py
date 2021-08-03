@@ -9,7 +9,7 @@ def valid_card(card):
             number = int(card_str[index]) * 2
         else:
             number = int(card_str[index])
-        
+
         if number >= 10:
             number_arr = list(str(number))
             number = 0

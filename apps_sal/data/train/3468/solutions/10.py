@@ -1,2 +1,2 @@
 from collections import Counter
-scramble = lambda s1, s2: not Counter(s2) - Counter(s1)
+def scramble(s1, s2): return not Counter(s2) - Counter(s1)

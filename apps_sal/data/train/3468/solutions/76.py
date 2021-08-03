@@ -8,8 +8,8 @@ def scramble(s1, s2):
         s2_dict[c] = s2.count(c)
         s1_dict[c] = s1.count(c)
 
-    for c in s2_set:  
-        if c not in s1_dict or s2_dict[c] > s1_dict[c]: 
+    for c in s2_set:
+        if c not in s1_dict or s2_dict[c] > s1_dict[c]:
             return False
 
     return True

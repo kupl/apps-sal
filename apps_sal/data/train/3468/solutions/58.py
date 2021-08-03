@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def scramble(s1, s2):
     one_split = list(s1)
     two_split = list(s2)
@@ -12,15 +13,5 @@ def scramble(s1, s2):
             return False
         if one[x] < two[x]:
             return False
-        
+
     return True
-
-    
-    
-    
-            
-
-  
-   
-
-

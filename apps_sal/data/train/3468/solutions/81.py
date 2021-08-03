@@ -6,6 +6,5 @@ def scramble(s1, s2):
             return False
         elif i in fr:
             if s1.count(i) < s2.count(i):
-                return False            
+                return False
     return True
-

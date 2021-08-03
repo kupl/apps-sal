@@ -7,6 +7,7 @@ def map_char_count(s):
             char_count[c] = 1
     return char_count
 
+
 def scramble(s1, s2):
     s1_count = map_char_count(s1)
     s2_count = map_char_count(s2)
@@ -14,5 +15,3 @@ def scramble(s1, s2):
         if k not in s1_count or s1_count[k] < v:
             return False
     return True
-    
-
