@@ -1,9 +1,10 @@
 PRIMES = [2, 3, 5, 7, 11, 13, 17, 19]
 
+
 def primes():
     """Yields 'all' prime numbers"""
     yield from PRIMES
-    
+
     # Last known prime
     n = PRIMES[-1]
     # Approx limit of primes that can be factors
@@ -17,7 +18,7 @@ def primes():
         if check < n:
             limit += 1
             check = limit * limit
-        
+
         # Using Fundamental Theorem of Arithemtic we only need to check primes are factors to determine if composite
         for p in PRIMES:
             if n % p == 0:
@@ -46,22 +47,23 @@ def prime_factors(n):
             # No need for more tests, the residual value must be prime
             factors.append(n)
             n = 1
-        
+
         if n <= 1:
             # Found all prime factors
             break
     return factors
 
+
 def totient(n):
     if not isinstance(n, int) or n < 1:
         return 0
-    
+
     factors = prime_factors(n)
     # print(f'Prime factors of {n}: {factors}')
     if not factors:
         # Only gcd(1, 1) == 1
         return 1
-    
+
     if factors[0] == n:
         # n is prime, so all gcd([1..n - 1], n) == 1
         return n - 1
@@ -71,4 +73,3 @@ def totient(n):
         n //= f
         n *= f - 1
     return n
-

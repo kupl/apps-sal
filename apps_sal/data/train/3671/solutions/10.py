@@ -3,4 +3,3 @@ def problem(a):
         return (a + 0) * 50 + 6
     except TypeError:
         return 'Error'
-

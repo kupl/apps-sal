@@ -3,4 +3,3 @@ def negation_value(s, val):
         return bool(val)
     else:
         return not bool(val)
-

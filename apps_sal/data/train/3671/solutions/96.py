@@ -1,7 +1,7 @@
 def problem(a):
-    #Easy Points ^_^
-    if type(a) is str and  a.isalpha():
+    # Easy Points ^_^
+    if type(a) is str and a.isalpha():
         return "Error"
-        
+
     else:
-        return a*50+6
+        return a * 50 + 6

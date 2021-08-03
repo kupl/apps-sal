@@ -3,5 +3,5 @@ def problem(a):
         a *= 50
         a += 6
         return a
-    else: 
-        return 'Error';
+    else:
+        return 'Error'

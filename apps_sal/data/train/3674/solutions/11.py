@@ -1,1 +1,1 @@
-add_binary=lambda a,b: bin(a+b)[2:]
+def add_binary(a, b): return bin(a + b)[2:]

@@ -1,6 +1,6 @@
 def problem(a):
-    try: 
-        result = (a*50) + 6
+    try:
+        result = (a * 50) + 6
     except TypeError:
-       result = 'Error'
-    return result    
+        result = 'Error'
+    return result

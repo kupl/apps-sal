@@ -1,5 +1,5 @@
-def add_binary(a,b):
-    #your code here
+def add_binary(a, b):
+    # your code here
     summ = a + b
     binary = ''
     while(True):

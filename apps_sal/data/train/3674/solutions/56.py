@@ -1,19 +1,19 @@
-def add_binary(a,b):
+def add_binary(a, b):
     c = a + b
     # find the upper bound 2^i
     # try all lower 2^i-1 etc to design 1s
-    
+
     x = 0
     while 2**x <= c:
-        x+=1
-    
-    if 2**x >c:
-        x -=1
-    
-    reverse = [i for i in range(x+1)]
+        x += 1
+
+    if 2**x > c:
+        x -= 1
+
+    reverse = [i for i in range(x + 1)]
     reverse = reverse[::-1]
     print(reverse)
-    
+
     res = ""
     for i in reverse:
         if 2**i <= c:
@@ -21,5 +21,5 @@ def add_binary(a,b):
             res += "1"
         else:
             res += "0"
-            
+
     return res

@@ -1,4 +1,4 @@
-def add_binary(a,b):
+def add_binary(a, b):
     suma = a + b
     temp = ''
     while suma > 0:

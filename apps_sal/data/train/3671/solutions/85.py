@@ -3,4 +3,4 @@ def problem(a):
     if str_ref is True:
         return "Error"
     else:
-        return a*50+6
+        return a * 50 + 6

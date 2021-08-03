@@ -1,4 +1,4 @@
-def add_binary(a,b):
+def add_binary(a, b):
     sum = a + b
     res = ""
     while sum > 0:
@@ -6,5 +6,5 @@ def add_binary(a,b):
             res = "1" + res
         else:
             res = "0" + res
-        sum = sum >> 1;
+        sum = sum >> 1
     return res

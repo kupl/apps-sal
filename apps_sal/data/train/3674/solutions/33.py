@@ -1,4 +1,4 @@
-def add_binary(a,b):
+def add_binary(a, b):
     output = ""
     result = a + b
 

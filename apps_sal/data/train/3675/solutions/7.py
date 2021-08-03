@@ -3,4 +3,4 @@ def negation_value(s, val):
         a = True
     else:
         a = False
-    return [a, 1 - a][s.count('!')%2]
+    return [a, 1 - a][s.count('!') % 2]

@@ -1,2 +1,2 @@
 def add_binary(*a):
-  return '{:b}'.format(sum(a))
+    return '{:b}'.format(sum(a))

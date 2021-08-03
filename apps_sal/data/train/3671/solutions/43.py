@@ -5,4 +5,3 @@ def problem(a):
     else:
         print(a)
         return "Error"
-

@@ -23,4 +23,3 @@ def add_binary(a, b):
         count += 1
 
     return output
-

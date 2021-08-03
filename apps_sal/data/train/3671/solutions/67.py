@@ -1,5 +1,5 @@
 def problem(a):
-    #Easy Points ^_^
+    # Easy Points ^_^
     if a == str(a):
         return "Error"
     elif a == float(a):

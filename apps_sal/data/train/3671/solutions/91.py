@@ -4,5 +4,3 @@ def problem(a):
     else:
         result = a * 50 + 6
         return result
-
-
