@@ -29,8 +29,8 @@ def main():
                 else:
                     min_track[n] = min(min_track[n], op_count)
             else:
-                que.append((sum_digits(n), op_count+1))
-            que.append((n+d, op_count+1))
+                que.append((sum_digits(n), op_count + 1))
+            que.append((n + d, op_count + 1))
 
         if n == 1:
             print(n, op_count)
@@ -41,5 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

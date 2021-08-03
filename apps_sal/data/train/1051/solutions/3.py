@@ -3,5 +3,5 @@ for _ in range(int(input())):
     print(0)
     x = 1
     for i in range(n):
-        print('*'*x+str(x))
-        x+=1
+        print('*' * x + str(x))
+        x += 1

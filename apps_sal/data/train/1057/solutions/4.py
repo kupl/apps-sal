@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 def process(N):
-    if  not '4' in N:
+    if not '4' in N:
         return '4' * (len(N) + 1)
     i = N.rindex('4')
-    return N[:i] + '7' + '4' * len(N[i+1:])
+    return N[:i] + '7' + '4' * len(N[i + 1:])
+
 
 def main():
     T = int(input().strip())
@@ -12,6 +13,5 @@ def main():
         N = input().strip()
         print(process(N))
 
+
 main()
-
-
