@@ -1,5 +1,5 @@
-def merge_arrays(first, second): 
-    x = first+second
+def merge_arrays(first, second):
+    x = first + second
     y = []
     for i in x:
         if i in y:

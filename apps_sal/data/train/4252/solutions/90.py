@@ -1,4 +1,4 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     nowa = first + second
     nowa = list(set(nowa))
     nowa.sort()

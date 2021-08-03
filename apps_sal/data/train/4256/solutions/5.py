@@ -1,5 +1,6 @@
 import string
 
+
 def insert_missing_letters(st):
     tbl = dict.fromkeys(map(ord, st.upper()))
     result = []

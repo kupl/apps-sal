@@ -3,4 +3,3 @@ def make_upper_case(s):
     print(b)
     return(b)
     # Code here
-

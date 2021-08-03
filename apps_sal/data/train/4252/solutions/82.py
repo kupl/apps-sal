@@ -1,4 +1,4 @@
-def merge_arrays(first, second):  
+def merge_arrays(first, second):
     newlist = []
     for eachvalue in first:
         if eachvalue not in newlist:

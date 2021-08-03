@@ -6,6 +6,4 @@ def merge_arrays(first, second):
     for num in second:
         if num not in res:
             res.append(num)
-    return sorted(res)            
-   
-
+    return sorted(res)

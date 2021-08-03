@@ -6,4 +6,3 @@ def difference_of_squares(n):
         sums += i ** 2
         total += i
     return total ** 2 - sums
-

@@ -4,7 +4,7 @@ def series_sum(n):
     final = 0
     x = 0
     while n >= 1:
-        final += 1/(1+x)
+        final += 1 / (1 + x)
         x += 3
         n -= 1
     final = str(final)
@@ -12,5 +12,5 @@ def series_sum(n):
         final += '0'
     if len(final) > 4:
         if int(final[4]) > 4:
-            final = str(float(final) +.01)
+            final = str(float(final) + .01)
     return str(final)[:4]
