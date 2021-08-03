@@ -10,5 +10,6 @@ for i in range(1, n):
         if max_sorted_length < length:
             max_sorted_length = length
         length = 1
-if max_sorted_length < length: max_sorted_length = length
+if max_sorted_length < length:
+    max_sorted_length = length
 print(n - max_sorted_length)
