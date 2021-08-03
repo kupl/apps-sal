@@ -29,4 +29,3 @@ def prog():
 q = get_int()
 for _ in range(q):
     prog()
-

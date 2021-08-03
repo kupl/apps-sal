@@ -39,7 +39,9 @@ def main():
 
     print(("".join(res)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -11,5 +11,6 @@ def main():
         except ValueError:
             dp[i] = -1
     print((dp[N]))
-main()
 
+
+main()

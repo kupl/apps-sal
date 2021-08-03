@@ -1,5 +1,5 @@
 n = int(input())
-numbers  = list(map(int, input().split()))
+numbers = list(map(int, input().split()))
 count_1 = numbers.count(1)
 Max = 0
 for i in range(n):

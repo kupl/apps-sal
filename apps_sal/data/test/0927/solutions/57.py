@@ -1,4 +1,4 @@
-n, m = map(int, input().split()) 
+n, m = map(int, input().split())
 a = list(map(int, input().split()))
 b = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 
@@ -10,5 +10,5 @@ for i in range(n, -1, -1):
         x = b[a[j]]
         if dp[i] != -1 and i - x >= 0:
             dp[i - x] = max(dp[i - x], 10 * dp[i] + a[j])
-            
+
 print(dp[0])

@@ -5,7 +5,7 @@ res = 0
 for i in range(n):
     for j in range(i, n):
         b = a[:]
-        for u in range(i, j+1):
+        for u in range(i, j + 1):
             if b[u]:
                 b[u] = 0
             else:

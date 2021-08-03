@@ -2,11 +2,10 @@ import sys
 input = sys.stdin.readline
 
 
-
 def main():
     n, m = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    
+
     key = dict()
     if 1 in a:
         key[2] = 1
@@ -24,21 +23,20 @@ def main():
         key[3] = 7
     if 8 in a:
         key[7] = 8
- 
-    
-    dp = [0]*(n+1)
-   
+
+    dp = [0] * (n + 1)
+
     for i in range(n):
         if i != 0 and dp[i] == 0:
             continue
         for k, v in list(key.items()):
-            if i+k <= n:
-                dp[i+k] = max(dp[i+k], 10*dp[i]+v)
+            if i + k <= n:
+                dp[i + k] = max(dp[i + k], 10 * dp[i] + v)
     print((dp[n]))
-        
-   
-    
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

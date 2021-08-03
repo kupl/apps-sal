@@ -16,4 +16,3 @@ for _ in range(int(input())):
         d[k] += 1
 
     print(ans)
-

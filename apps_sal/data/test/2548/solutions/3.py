@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def solve():
     n = int(input())
     a = list(map(int, input()))
@@ -13,6 +14,7 @@ def solve():
         ans += t[s[i]]
         t[s[i]] += 1
     print(ans)
+
 
 t = int(input())
 for _ in range(t):

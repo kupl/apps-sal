@@ -1,4 +1,4 @@
-n = int(input()) 
+n = int(input())
 vec = list(map(int, input().split(' ')))
 s = [0]
 cnt = 0
@@ -13,5 +13,3 @@ for i in range(1, n + 1):
         tot = i - j + 1
         ans = max(ans, cnt - one + tot - one)
 print(ans)
-
-

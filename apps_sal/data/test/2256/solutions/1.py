@@ -1,7 +1,6 @@
 t = int(input())
 
 
-
 for case in range(t):
     n, x, a, b = list(map(int, input().split()))
     dist = abs(b - a)

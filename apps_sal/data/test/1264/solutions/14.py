@@ -8,10 +8,11 @@ for i in range(0, n):
     for j in range(i, n):
         val = 0
         for k in range(0, n):
-            if k < i or k > j: val += a[k]
-            else: val += inv[a[k]]
+            if k < i or k > j:
+                val += a[k]
+            else:
+                val += inv[a[k]]
 
         sol = max(sol, val)
-            
-print(sol)
 
+print(sol)
