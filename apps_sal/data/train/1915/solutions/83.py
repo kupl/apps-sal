@@ -1,14 +1,17 @@
 class Solution:
     def movesToStamp(self, s, t):
-        if s[0] != t[0] or s[-1] != t[-1]: return []
+        if s[0] != t[0] or s[-1] != t[-1]:
+            return []
         n, m = len(s), len(t)
         path = [0] * m
         pos = collections.defaultdict(set)
-        for i, c in enumerate(s): pos[c].add(i)
+        for i, c in enumerate(s):
+            pos[c].add(i)
 
         def dfs(i, index):
             path[i] = index
-            if i == m - 1: return index == n - 1
+            if i == m - 1:
+                return index == n - 1
             nxt_index = set()
             if index == n - 1:  # rule 2
                 nxt_index |= pos[t[i + 1]]
@@ -27,5 +30,6 @@ class Solution:
                     down.append(i - path[i])
             return down[::-1] + up
 
-        if not dfs(0, 0): return []
-        return path2res(path)        
+        if not dfs(0, 0):
+            return []
+        return path2res(path)

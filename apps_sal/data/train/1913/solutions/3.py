@@ -16,4 +16,3 @@ class Solution:
                 A[i], A[pm] = A[pm], A[i]
                 return A
         return A
-

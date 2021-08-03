@@ -4,7 +4,7 @@ class Solution:
         stamp = list(stamp)
         target = list(target)
         result = []
-        
+
         def change(i):
             if target[i:i + m].count('?') == m:
                 return False

@@ -1,14 +1,14 @@
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
-        
+
         diffs = []
         n = len(costs) / 2
-        
+
         for i, cost in enumerate(costs):
             a, b = cost
-            diff = abs(a-b)
+            diff = abs(a - b)
             diffs.append((i, diff))
-        
+
         diffs = sorted(diffs, key=lambda x: x[1], reverse=True)
         a_count = 0
         b_count = 0
@@ -31,4 +31,3 @@ class Solution:
                     b_count += 1
                     cost += costs[i][1]
         return cost
-

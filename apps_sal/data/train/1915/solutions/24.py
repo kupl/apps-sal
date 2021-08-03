@@ -2,6 +2,7 @@ class Solution(object):
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         memo = {}
         T, S = len(target), len(stamp)
+
         def dfs(t, s, cur_stmp):
             if t == T:
                 memo[t, s] = cur_stmp if s == S else []
@@ -11,7 +12,7 @@ class Solution(object):
                 if s == S:
                     for i in range(S):
                         if stamp[i] == target[t]:
-                            suff_stmp = dfs(t, i, [t-i]) 
+                            suff_stmp = dfs(t, i, [t - i])
                             if suff_stmp:
                                 memo[t, s] = suff_stmp + cur_stmp
                                 break
@@ -19,12 +20,12 @@ class Solution(object):
                         memo[t, s] = []
 
                 elif stamp[s] == target[t]:
-                    suff_stmp = dfs(t+1, s+1, cur_stmp)
+                    suff_stmp = dfs(t + 1, s + 1, cur_stmp)
                     if suff_stmp:
                         memo[t, s] = suff_stmp
                     else:
                         # add word cut and find predeccessor
-                        suff_stmp = dfs(t+1, 0, [t+1])
+                        suff_stmp = dfs(t + 1, 0, [t + 1])
                         memo[t, s] = cur_stmp + suff_stmp if suff_stmp else []
 
                 elif stamp[s] != target[t]:
@@ -37,6 +38,4 @@ class Solution(object):
 
                 return memo[t, s] if memo[t, s] else []
 
-
         return dfs(0, 0, [0])
-

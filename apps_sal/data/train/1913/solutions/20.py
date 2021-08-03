@@ -2,7 +2,7 @@ class Solution:
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         n = len(A)
         left = n - 1
-        while left >= 1 and A[left-1] <= A[left]:
+        while left >= 1 and A[left - 1] <= A[left]:
             left -= 1
         if left == 0:
             return A
@@ -13,4 +13,3 @@ class Solution:
                 right = i
         A[left], A[right] = A[right], A[left]
         return A
-

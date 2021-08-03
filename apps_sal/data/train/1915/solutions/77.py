@@ -3,13 +3,13 @@ class Solution:
         done = set()
         n = len(stamp)
         m = len(target)
-        candidates = { i for i in range(m-n+1) }
+        candidates = {i for i in range(m - n + 1)}
         res = []
-        
+
         def check(i):
             j = 0
             count = 0
-            while j < n :
+            while j < n:
                 if i in done:
                     j += 1
                     i += 1
@@ -20,12 +20,12 @@ class Solution:
                 else:
                     return False
             return count > 0
-        
-        while len(done) < m :
+
+        while len(done) < m:
             found = 0
             for i in candidates:
                 if check(i):
-                    for j in range(i,i+n):
+                    for j in range(i, i + n):
                         done.add(j)
                     res.append(i)
                     found = 1
@@ -34,11 +34,5 @@ class Solution:
                 return []
             else:
                 candidates.remove(i)
-                
-                    
-        return res[::-1]
-                
-            
-        
-        
 
+        return res[::-1]

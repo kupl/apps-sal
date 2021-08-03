@@ -14,4 +14,3 @@ class Solution:
                     c = min(c, costs[i][1] + dp[j])
                 dp[j] = c
         return dp[0]
-

@@ -4,7 +4,7 @@ class Solution:
         stamp = list(stamp)
         target = list(target)
         result = []
-        
+
         def change(i):
             if target[i:i + m].count('?') == m:
                 return False
@@ -25,5 +25,5 @@ class Solution:
             ch = False
             for i in range(n - m + 1):
                 ch |= change(i)
-            
+
         return reversed(result) if target.count('?') == n else []

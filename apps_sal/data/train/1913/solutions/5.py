@@ -10,5 +10,3 @@ class Solution:
                     j = i
             A[j], A[max_index] = A[max_index], A[j]
         return A
-            
-

@@ -13,11 +13,11 @@ class Solution(object):
 
             made, todo = set(), set()
             for j, c in enumerate(stamp):
-                a = target[i+j]
+                a = target[i + j]
                 if a == c:
-                    made.add(i+j)
+                    made.add(i + j)
                 else:
-                    todo.add(i+j)
+                    todo.add(i + j)
             A.append((made, todo))
 
             # If we can reverse stamp at i immediately,
@@ -35,12 +35,12 @@ class Solution(object):
 
             # For each window that is potentially affected,
             # j: start of window
-            for j in range(max(0, i-M+1), min(N-M, i)+1):
+            for j in range(max(0, i - M + 1), min(N - M, i) + 1):
                 if i in A[j][1]:  # This window is affected
-                    A[j][1].discard(i) # Remove it from todo list of this window
+                    A[j][1].discard(i)  # Remove it from todo list of this window
                     if not A[j][1]:  # Todo list of this window is empty
                         ans.append(j)
-                        for m in A[j][0]: # For each letter to potentially enqueue,
+                        for m in A[j][0]:  # For each letter to potentially enqueue,
                             if not done[m]:
                                 queue.append(m)
                                 done[m] = True

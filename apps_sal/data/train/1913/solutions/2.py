@@ -13,4 +13,3 @@ class Solution:
                 A[i - 1], A[mi] = A[mi], A[i - 1]
                 break
         return A
-

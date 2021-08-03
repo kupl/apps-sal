@@ -4,15 +4,15 @@ class Solution:
         idx = defaultdict(int)
         l = []
 
-        for i in range(len(A)-1, -1, -1):
-            if A[i]>m:
+        for i in range(len(A) - 1, -1, -1):
+            if A[i] > m:
                 l.sort()
-                j = idx[l[bisect_left(l, A[i])-1]]
+                j = idx[l[bisect_left(l, A[i]) - 1]]
                 A[i], A[j] = A[j], A[i]
                 return A
-            
+
             m = min(m, A[i])
             idx[A[i]] = i
             l.append(A[i])
-        
+
         return A
