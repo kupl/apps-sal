@@ -1,5 +1,6 @@
 a = input()
-i = 0; ans = 1
+i = 0
+ans = 1
 while i < len(a):
     i += 1
     c = i - 1

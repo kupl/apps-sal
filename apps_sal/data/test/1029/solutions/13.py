@@ -8,7 +8,9 @@ elif '0' not in s:
     else:
         print(len(s) - 1)
 else:
-    c = 0; ind = -1; ans = 0
+    c = 0
+    ind = -1
+    ans = 0
     zer = s.count('0')
     for i in range(len(s)):
         if s[i] == '0':

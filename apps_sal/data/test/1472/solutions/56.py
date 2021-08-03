@@ -5,4 +5,5 @@ for i in range(n - 1):
     for j in range(i + 1, n):
         d = min(j - i, abs(x - i) + 1 + abs(j - y), abs(y - i) + 1 + abs(j - x))
         ans[d - 1] += 1
-for a in ans: print(a)
+for a in ans:
+    print(a)

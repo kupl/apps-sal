@@ -1,5 +1,6 @@
 N, X, Y = map(int, input().split())
-X -= 1; Y -= 1
+X -= 1
+Y -= 1
 ans = [0 for _ in range(N - 1)]
 for i in range(N):
     for j in range(i + 1, N):

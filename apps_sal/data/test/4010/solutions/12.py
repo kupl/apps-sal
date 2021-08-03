@@ -14,5 +14,7 @@ def f(N, L):
 for _ in range(int(input())):
     N = int(input())
     L = list(map(int, input().split()))
-    if f(N, L): print('YES')
-    else: print('NO')
+    if f(N, L):
+        print('YES')
+    else:
+        print('NO')

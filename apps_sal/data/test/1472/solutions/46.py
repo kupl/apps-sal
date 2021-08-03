@@ -6,7 +6,8 @@ X -= 1
 Y -= 1
 for i in range(N):
     for j in range(N):
-        if not i < j: continue
+        if not i < j:
+            continue
         dp[i][j] = min(j - i, abs(j - Y) + 1 + abs(X - i))
         dist[dp[i][j]] += 1
 

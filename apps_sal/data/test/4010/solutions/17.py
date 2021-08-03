@@ -24,7 +24,7 @@ result = math.inf
 
 def solve():
     n = Read.int()
-    a = Read.list_int();
+    a = Read.list_int()
     for i in range(n):
         for j in range(i + 2, n):
             if a[i] == a[j]:

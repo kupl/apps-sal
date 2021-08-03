@@ -7,7 +7,8 @@ for x in range(t):
         if a[x] in b:
             if b[a[x]][-1] != x - 1:
                 b[a[x]].append(x)
-        else: b[a[x]] = [x]
+        else:
+            b[a[x]] = [x]
     t = False
     for x in b:
         if len(b[x]) >= 2:

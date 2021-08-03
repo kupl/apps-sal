@@ -1,6 +1,8 @@
 def gte(x, y):
-    if len(x) > len(y): return True
-    if len(x) == len(y): return x >= y
+    if len(x) > len(y):
+        return True
+    if len(x) == len(y):
+        return x >= y
     return False
 
 
@@ -8,7 +10,8 @@ x = input()
 r = 0
 l = len(x) - 1
 while True:
-    if l == 0 or not gte(x[:l], x[l:]): break
+    if l == 0 or not gte(x[:l], x[l:]):
+        break
     if x[l] == '0':
         l -= 1
         continue
