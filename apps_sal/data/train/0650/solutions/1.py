@@ -21,4 +21,3 @@ for _ in range(int(input())):
     for i in rooms:
         ans += solve(i)
     print(ans)
-

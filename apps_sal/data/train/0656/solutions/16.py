@@ -1,6 +1,5 @@
-a=int(input())
-if a%4==0:
-    print(a+1)
+a = int(input())
+if a % 4 == 0:
+    print(a + 1)
 else:
-    print(a-1)
-
+    print(a - 1)
