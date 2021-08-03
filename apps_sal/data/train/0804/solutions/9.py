@@ -56,6 +56,8 @@ def solve_small(numbers, n, f):
     else:
         print("impossible")
         return 0, 0
+
+
 def solve_med(numbers, n, f):
 
     min_shield = 0
@@ -105,6 +107,8 @@ def solve_med(numbers, n, f):
         print("impossible")
 
     return min_pos, min_shield
+
+
 def get_prev_multiple_2(n, pos, f):
 
     left_numbers = (pos - 1) // 2
@@ -116,10 +120,16 @@ def get_prev_multiple_2(n, pos, f):
         return 2 * number
     else:
         return pos + number
+
+
 def get_prev_multiple(n, f):
     return (n - 1) - (n - 1) % f
+
+
 def get_input_line():
     return input()
+
+
 def solve_big(numbers, n, f):
 
     min_shield = 0
@@ -165,13 +175,13 @@ def solve_big(numbers, n, f):
         print("impossible")
 
     return min_pos, min_shield
-t=int(input())
+
+
+t = int(input())
 for i in range(t):
-    n=int(input())
-    numbers=list(map(int,input().split(" ")))
-    f=int(input())
+    n = int(input())
+    numbers = list(map(int, input().split(" ")))
+    f = int(input())
     min_pos, min_shield = solve_big(numbers, n, f)
     if min_shield:
         print(min_pos, min_shield)
-    
-

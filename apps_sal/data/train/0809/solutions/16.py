@@ -1,21 +1,22 @@
 import sys
 tokenizedInput = sys.stdin.read().split()
 
+
 def triplets(n, arr):
     array = sorted(arr, reverse=False)
     temp = []
     result = []
     i = 0
     for i in range(len(array)):
-        if i < len(array)-2:
-            if array[i]+array[i+1] > array[i+2]:
+        if i < len(array) - 2:
+            if array[i] + array[i + 1] > array[i + 2]:
                 temp.append(array[i])
-                temp.append(array[i+1])
-                temp.append(array[i+2])
+                temp.append(array[i + 1])
+                temp.append(array[i + 2])
                 i = 3
                 temp = sorted(temp, reverse=False)
                 for i, num in enumerate(temp):
-                    if temp[0]+temp[1] > temp[2]:
+                    if temp[0] + temp[1] > temp[2]:
                         result.append(sorted(temp, reverse=True))
                 temp = []
             else:
@@ -33,15 +34,17 @@ def triplets(n, arr):
     else:
         print('NO')
 
+
 def main():
     lst = []
-    
+
     n = list(map(int, tokenizedInput[:1]))
     lst = list(map(int, tokenizedInput[1:]))
     return triplets(n, lst)
-        
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

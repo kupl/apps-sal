@@ -1,15 +1,13 @@
-t=int(input())
+t = int(input())
 for i in range(t):
- N=int(input())
- if N==1:
-  print(0)
- else:
-  k=-1
-  for i in range(N):
-   s,p,v=list(map(int,input().split()))
-   h=(p//(s+1))*v
-   if h>k:
-    k=h
-  print(int(k))
-  
-
+    N = int(input())
+    if N == 1:
+        print(0)
+    else:
+        k = -1
+        for i in range(N):
+            s, p, v = list(map(int, input().split()))
+            h = (p // (s + 1)) * v
+            if h > k:
+                k = h
+        print(int(k))

@@ -1,5 +1,5 @@
 T = int(input())
-s = input()+' '
+s = input() + ' '
 n = 0
 maxn = 0
 for i in range(T):
@@ -16,4 +16,4 @@ for i in range(T):
         minn = int(term)
     elif int(term) < minn:
         minn = int(term)
-print(maxn,minn)
+print(maxn, minn)

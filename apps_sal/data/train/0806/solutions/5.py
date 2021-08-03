@@ -60,4 +60,3 @@ for i in range(int(input())):
             print(mlist[y])
         else:
             print(wlist[q[j]])
-

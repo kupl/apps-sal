@@ -1,10 +1,8 @@
 # Why do we fall ? So we can learn to pick ourselves up.
 
 
-
-
 t = int(input())
-for _ in range(0,t):
+for _ in range(0, t):
     n = int(input())
     abc = [int(i) for i in input().split()]
 
@@ -12,8 +10,8 @@ for _ in range(0,t):
 
     lst = [n]
 
-    for _ in range(0,100):
-        k = str(lst[-1]/abc[i%3]).split('.')
+    for _ in range(0, 100):
+        k = str(lst[-1] / abc[i % 3]).split('.')
         if int(k[1][0]) > 0:
             lst.append(int(k[1][0]))
         else:
@@ -49,11 +47,6 @@ for _ in range(0,t):
             qq -= ind
             kk = qq % lp
             print(final_pattern[kk])
-
-
-
-
-
 
 
 """

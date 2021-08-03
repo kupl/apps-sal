@@ -1,4 +1,4 @@
 # cook your dish here
-n=int(input())
-lst=[int(x) for x in input().split()]
-print(max(lst),min(lst))
+n = int(input())
+lst = [int(x) for x in input().split()]
+print(max(lst), min(lst))
