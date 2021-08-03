@@ -12,8 +12,6 @@ class Solution:
                 c_time = total_time[c_id]
                 if len(path) > 0:
                     total_time[path[-1]] = informTime[path[-1]] + c_time
-                    for j in range(len(path)-2, -1, -1):
-                        total_time[path[j]] = informTime[path[j]] + total_time[path[j+1]]
+                    for j in range(len(path) - 2, -1, -1):
+                        total_time[path[j]] = informTime[path[j]] + total_time[path[j + 1]]
         return max(total_time)
-                    
-

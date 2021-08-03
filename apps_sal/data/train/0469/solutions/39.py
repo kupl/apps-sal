@@ -4,6 +4,7 @@ class Solution:
             if x != par[x]:
                 par[x] = find(par[x])
             return par[x]
+
         def union(x, y):
             x, y = list(map(find, [x, y]))
             if x != y:
@@ -14,7 +15,7 @@ class Solution:
                 return True
             else:
                 return False
-            
+
         indegree = [0] * n
         cnt = n
         par = list(range(n))
@@ -26,8 +27,7 @@ class Solution:
                     cnt -= 1
             if r != -1:
                 indegree[r] += 1
-            
+
                 if union(parent, r):
                     cnt -= 1
         return sum(indegree) == n - 1 and cnt == 1
-

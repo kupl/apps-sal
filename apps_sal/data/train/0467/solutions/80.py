@@ -16,8 +16,8 @@ class Solution:
                     break
             if len(d) == 4:
                 s = sum(d)
-                c.update({n:s})
+                c.update({n: s})
                 r += s
             else:
-                c.update({n:0})
+                c.update({n: 0})
         return r

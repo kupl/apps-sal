@@ -4,11 +4,11 @@ class Solution:
         for employee, manager in enumerate(manager):
             if employee != headID:
                 tree[manager].append(employee)
-        
+
         def _maxDepth(node, dist):
             if node not in tree:
                 return 0
-            
+
             return max(_maxDepth(child, informTime[child]) for child in tree[node]) + dist
-        
+
         return _maxDepth(headID, informTime[headID])

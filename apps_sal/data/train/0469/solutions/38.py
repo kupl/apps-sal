@@ -1,7 +1,7 @@
 class Solution:
     def validateBinaryTreeNodes(self, n: int, l: List[int], r: List[int]) -> bool:
         s = set()
-        
+
         d = [0] * n
         for i in l:
             if i != -1:
@@ -16,7 +16,7 @@ class Solution:
                 break
         if len(q) == 0:
             return False
-        
+
         while len(q):
             t = q.pop()
             s.add(t)
@@ -26,7 +26,7 @@ class Solution:
                 q.append(l[t])
             if r[t] != -1:
                 q.append(r[t])
-        
+
         if len(s) == n:
             return True
         else:

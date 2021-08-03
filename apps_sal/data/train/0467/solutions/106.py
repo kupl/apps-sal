@@ -4,19 +4,19 @@ class Solution:
             if i <= 5:
                 return set()
             else:
-                count = {1,i}
+                count = {1, i}
                 for j in range(2, int(math.sqrt(i)) + 1):
                     if i % j == 0:
-#                        print(i,j)
-                        count.update({j,i/j})
+                        #                        print(i,j)
+                        count.update({j, i / j})
                     if len(count) > 4:
                         return count
                 return count
-    
+
         count = 0
         for i in nums:
             s = div4(i)
 #            print(s)
-            if len(s) ==4:
+            if len(s) == 4:
                 count += sum(s)
         return int(count)

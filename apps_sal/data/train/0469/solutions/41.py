@@ -14,7 +14,7 @@ class Solution:
                     return
                 if child != -1:
                     bfs(child)
-                    
+
         def findRoot():
             if len(leftChild) == 1:
                 if leftChild[0] == rightChild[0] == -1:
@@ -22,11 +22,11 @@ class Solution:
             for node in parents:
                 for parent in parents[node]:
                     if parent not in parents:
-                        return parent            
-        
+                        return parent
+
         nodes = collections.defaultdict(list)
         parents = collections.defaultdict(list)
-        
+
         for i in range(len(leftChild)):
             if leftChild[i] != -1:
                 nodes[i].append(leftChild[i])
@@ -34,7 +34,7 @@ class Solution:
             if rightChild[i] != -1:
                 nodes[i].append(rightChild[i])
                 parents[rightChild[i]].append(i)
-        
+
         self.isValid = True
         self.remainingNodes = set(i for i in range(n))
         root = findRoot()

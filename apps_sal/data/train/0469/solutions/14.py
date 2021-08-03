@@ -11,10 +11,10 @@ class Solution:
                     return True
             seen[node] = 2
             return False
-        
-        indeg = [0]*n
+
+        indeg = [0] * n
         g = [[] for _ in range(n)]
-        
+
         for i, (u, v) in enumerate(zip(leftChild, rightChild)):
             if u > -1:
                 g[i].append(u)
@@ -22,7 +22,7 @@ class Solution:
             if v > -1:
                 g[i].append(v)
                 indeg[v] += 1
-                
+
         counts = Counter(indeg)
         # multiple roots or no root
         if counts[0] > 1 or counts[0] == 0:
@@ -30,9 +30,7 @@ class Solution:
         # multiple indegrees
         if any(count > 1 for count in list(counts.keys())):
             return False
-        
-        root = indeg.index(0)
-        seen = [0]*n
-        return not cycle(root) and all(seen[node] == 2 for node in range(n))
-            
 
+        root = indeg.index(0)
+        seen = [0] * n
+        return not cycle(root) and all(seen[node] == 2 for node in range(n))

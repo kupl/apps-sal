@@ -14,4 +14,3 @@ class Solution:
                 return sum(v)
             return 0
         return sum([check(x) for x in nums])
-

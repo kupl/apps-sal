@@ -22,8 +22,8 @@ class Solution:
                             break
                         s += j
             if cnt == 4:
-                c.update({n:s})
+                c.update({n: s})
                 r += s
             else:
-                c.update({n:0})
+                c.update({n: 0})
         return r

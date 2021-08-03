@@ -6,7 +6,7 @@ class Solution:
                 continue
             graph[manager[i]].append(i)
         return self.dfs(headID, graph, informTime)
-    
+
     def dfs(self, head, graph, informTime):
         time = 0
         for employee in graph[head]:

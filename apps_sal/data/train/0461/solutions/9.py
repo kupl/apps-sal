@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def build_graph(self, n, manager):
         graph = {i: [] for i in range(n)}
@@ -8,12 +9,12 @@ class Solution:
                 continue
             graph[m].append(i)
         return graph
-            
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         graph = self.build_graph(n, manager)
         if not graph[headID]:
             return 0
-        
+
         queue = deque([(headID, informTime[headID])])
         t = 0
         informed = set()

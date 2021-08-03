@@ -10,16 +10,16 @@ class Solution:
                 if parents[rightChild[p]] != -1:
                     return False
                 parents[rightChild[p]] = p
-        
+
         found = False
         for p in parents:
             if p == -1:
                 if found:
                     return False
-                found = True  
-        
+                found = True
+
         visit = [0] * n
-        
+
         def dfs(ix):
             if ix == -1:
                 return True
@@ -30,7 +30,7 @@ class Solution:
                 return False
             visit[ix] = 2
             return True
-        
+
         for i in range(n):
             if visit[i] == 2:
                 continue

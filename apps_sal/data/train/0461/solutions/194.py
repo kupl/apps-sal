@@ -1,4 +1,6 @@
 from collections import defaultdict, deque
+
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         if not n:
@@ -13,9 +15,8 @@ class Solution:
         self.ans = 0
         self.dfs(root, edges, informTime[root], informTime)
         return self.ans
-    
+
     def dfs(self, node, edges, curr_time, informTime):
         self.ans = max(self.ans, curr_time)
         for reporter in edges[node]:
-            self.dfs(reporter, edges, curr_time+informTime[reporter], informTime)
-
+            self.dfs(reporter, edges, curr_time + informTime[reporter], informTime)

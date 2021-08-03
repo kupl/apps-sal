@@ -28,6 +28,3 @@ class Solution:
         dfs(root, root.val)
 
         return ans
-
-
-

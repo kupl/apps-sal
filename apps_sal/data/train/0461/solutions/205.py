@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         graph = collections.defaultdict(list)
@@ -13,8 +15,6 @@ class Solution:
             for m, val in queue:
                 ans = max(ans, val)
                 for w in graph[m]:
-                    temp.append((w, val+informTime[m]))
+                    temp.append((w, val + informTime[m]))
             queue = temp
         return ans
-                        
-

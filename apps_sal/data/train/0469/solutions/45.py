@@ -3,14 +3,14 @@ class Solution:
         visited = set()
         for i in range(n):
             if leftChild[i] != -1:
-                visited.add(leftChild[i]) 
+                visited.add(leftChild[i])
             if rightChild[i] != -1:
-                visited.add(rightChild[i]) 
+                visited.add(rightChild[i])
         queue = list(set(list(range(n))) - visited)
-        
+
         if len(queue) != 1:
             return False
-        
+
         visited = set()
         while(queue):
             curr = queue.copy()
@@ -19,7 +19,7 @@ class Solution:
                 if c in visited:
                     return False
                 visited.add(c)
-                
+
                 if leftChild[c] != -1:
                     queue.append(leftChild[c])
                 if rightChild[c] != -1:

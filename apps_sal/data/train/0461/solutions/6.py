@@ -4,12 +4,11 @@ class Solution:
             return informTime[0]
         subordinates = defaultdict(list)
         for empId in range(len(manager)):
-             subordinates[manager[empId]].append(empId)
-        def dfs(sid,informTime):
+            subordinates[manager[empId]].append(empId)
+
+        def dfs(sid, informTime):
             maxtime = 0
             for subId in subordinates[sid]:
-                maxtime = max(maxtime,dfs(subId,informTime))
-            return (maxtime+informTime[sid])
-        return dfs(headID,informTime)
-            
-
+                maxtime = max(maxtime, dfs(subId, informTime))
+            return (maxtime + informTime[sid])
+        return dfs(headID, informTime)

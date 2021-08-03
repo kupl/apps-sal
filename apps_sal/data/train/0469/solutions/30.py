@@ -3,10 +3,10 @@ class Solution:   # 2020-10-09-7
         # rules: (1) descendants cannot point to ancestors (i.e. no cycles)
         # (2) a node cannot be pointed to more than once (partly overlaps with rule 1)
         # (3) the tree should be connected, i.e. not a forest
-        
+
         vis = set()
         heads = set()
-        
+
         def dfs(i):
             if i == -1:
                 return True
@@ -21,16 +21,11 @@ class Solution:   # 2020-10-09-7
                     if not dfs(child):
                         return False
             return True
-            
+
         for i in range(n):
             if i not in vis:
                 if not dfs(i):
                     return False
                 heads.add(i)
-            
-        return len(heads) == 1
-        
-        
-        
-        
 
+        return len(heads) == 1

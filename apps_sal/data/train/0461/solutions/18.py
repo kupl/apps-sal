@@ -4,6 +4,7 @@ def createGraph(manager: List[int]):
         graph[employee].add(i)
     return graph
 
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         graph = createGraph(manager)
@@ -15,5 +16,5 @@ class Solution:
                 informTime[employeeId] += informTime[manager[employeeId]]
             ans = max(informTime[employeeId], ans)
             for employee in graph[employeeId]:
-                stack.append((depth+1, employee))
+                stack.append((depth + 1, employee))
         return ans

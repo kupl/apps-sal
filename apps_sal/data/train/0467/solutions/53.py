@@ -14,7 +14,7 @@ class Solution:
                 break
             if n % i == 0:
                 divisors.add(i)
-                divisors.add(n//i)
+                divisors.add(n // i)
             if len(divisors) > 4:
                 break
         return divisors

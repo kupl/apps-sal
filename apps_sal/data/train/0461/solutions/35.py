@@ -4,10 +4,10 @@ class Solution:
         self.res = 0
         for i, v in enumerate(manager):
             subordinates[v].append(i)
-        
+
         def dfs(manager, time):
             self.res = max(self.res, time)
             for subordinate in subordinates[manager]:
                 dfs(subordinate, time + informTime[manager])
-        dfs(headID, 0)        
+        dfs(headID, 0)
         return self.res

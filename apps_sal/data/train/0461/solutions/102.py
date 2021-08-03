@@ -3,8 +3,8 @@ class Solution:
         children = defaultdict(list)
         for i, j in enumerate(manager):
             children[j].append(i)
-        
+
         def dfs(node):
             return informTime[node] + max([dfs(child) for child in children[node]] or [0])
-        
+
         return dfs(headID)

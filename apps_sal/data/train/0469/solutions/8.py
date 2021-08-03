@@ -1,40 +1,41 @@
 import collections
+
+
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         # Conditions:
         # 1. There are one and only one node that has zero in degree.
         # 2. All other nodes have one and only one in degree.
         # 3. There are no cycle.
-        
-        if n == 1: return True
+
+        if n == 1:
+            return True
         degree = [0] * n
         graph = []
         for _ in range(n):
             graph.append(set())
-        for i,v in enumerate(leftChild):
+        for i, v in enumerate(leftChild):
             if v != -1:
                 degree[v] += 1
                 graph[i].add(v)
-                
-        for i,v in enumerate(rightChild):
+
+        for i, v in enumerate(rightChild):
             if v != -1:
                 degree[v] += 1
                 graph[i].add(v)
-        
+
         root = [i for i in range(n) if degree[i] == 0]
         if len(root) != 1:
             return False
-        
+
         visited = set()
         self.dfs(root[0], graph, visited)
         if len(visited) != n:
             return False
-        
+
         counter = collections.Counter(degree)
-        return len(counter) == 2 and counter[0] == 1 and counter[1] == n-1
-    
-    
-    
+        return len(counter) == 2 and counter[0] == 1 and counter[1] == n - 1
+
     def dfs(self, idx, graph, visited):
         visited.add(idx)
         for j in graph[idx]:

@@ -1,9 +1,9 @@
-#[Runtime: 452 ms, faster than 97.27%] Hash
-#O(MN)
-#1. traverse all cells and mark server as (x, y)
-#2. put each server (x, y) into serveral bucket named x1, x2, .., and y1, y2, ..
+# [Runtime: 452 ms, faster than 97.27%] Hash
+# O(MN)
+# 1. traverse all cells and mark server as (x, y)
+# 2. put each server (x, y) into serveral bucket named x1, x2, .., and y1, y2, ..
 # e.g. each xbucket[x1] maintains the number of servers on line x1
-#3. enumerate all server (x', y'), and see if there is at least 2 server on xbucket[x'] or ybucket[y'] 
+# 3. enumerate all server (x', y'), and see if there is at least 2 server on xbucket[x'] or ybucket[y']
 class Solution:
     def countServers(self, grid: List[List[int]]) -> int:
         xbucket, ybucket, server = [0] * len(grid), [0] * len(grid[0]), []

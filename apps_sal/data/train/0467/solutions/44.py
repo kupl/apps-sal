@@ -1,6 +1,7 @@
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
         ans = 0
+
         def get_divisor(num):
             val = set()
             i = 1
@@ -12,11 +13,9 @@ class Solution:
                     return val
                 i += 1
             return val
-        
+
         for num in nums:
             a = get_divisor(num)
             if len(a) == 4:
                 ans += sum(a)
         return ans
-    
-

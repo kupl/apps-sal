@@ -11,7 +11,7 @@ class Solution:
                 if grid[i][j] == 1:
                     rows.append(i)
                     cols.append(j)
-                    servers.append((i,j))
+                    servers.append((i, j))
                 j += 1
             i += 1
         for server in servers:

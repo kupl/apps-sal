@@ -1,10 +1,11 @@
 from math import sqrt
 
+
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
         def helper(num):
             divisors = set()
-            for i in range(1, int(sqrt(num))+1):
+            for i in range(1, int(sqrt(num)) + 1):
                 if num % i == 0:
                     divisors.add(i)
                     divisors.add(num // i)

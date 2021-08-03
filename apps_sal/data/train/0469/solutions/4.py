@@ -1,61 +1,62 @@
 class Solution:
     def validateBinaryTreeNodes(self, n: int, left: List[int], right: List[int]) -> bool:
-        
+
         children = {}
         nodes = {}
-        
+
         for i in range(n):
-            l,r = left[i], right[i]
-            
-            if (l!=-1 and l in children) or (r!=-1 and r in children): 
-                print('Here Yo-',children, l, r)
+            l, r = left[i], right[i]
+
+            if (l != -1 and l in children) or (r != -1 and r in children):
+                print('Here Yo-', children, l, r)
                 return False
-            elif i in children and children[i] in [l,r]: 
+            elif i in children and children[i] in [l, r]:
                 print('Baap ko gali')
                 return False
-            elif i in [l,r]:
+            elif i in [l, r]:
                 print('Selfie')
                 return False
-            
-            nodes[i] = [l,r]
+
+            nodes[i] = [l, r]
             children[l] = i
             children[r] = i
-        
+
 #         print(children)
 #         root = False
 #         for i in range(n):
 #             if i not in children:
-#                 if root: 
+#                 if root:
 #                     print('Here Yoyo')
 #                     return False
 #                 root = True
-        
+
         root = 0
         for i in range(n):
-            if i not in children: 
+            if i not in children:
                 root = i
                 break
-    
+
         count = 0
         frontier = [root]
         seen = set()
         while frontier:
             cur = frontier.pop()
-            if cur==-1: continue
+            if cur == -1:
+                continue
             # print(cur)
-            count+=1
+            count += 1
             c = nodes[cur]
-            if (c[0]!=-1 and c[0] in seen) or (c[1]!=-1 and c[1] in seen):
+            if (c[0] != -1 and c[0] in seen) or (c[1] != -1 and c[1] in seen):
                 return False
-            
-            if c[0]!=-1:
+
+            if c[0] != -1:
                 seen.add(c[0])
                 frontier.append(c[0])
-            if c[1]!=-1:
+            if c[1] != -1:
                 seen.add(c[1])
                 frontier.append(c[1])
-                
-        if count!=n: 
+
+        if count != n:
             # print('Count Small-',count)
             return False
         return True

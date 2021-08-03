@@ -1,5 +1,6 @@
 from collections import defaultdict as dd
 
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         m_to_s = dd(set)

@@ -5,7 +5,7 @@ class Solution:
         def myTime(myBoss):
             if manager[myBoss] > -1:
                 informTime[myBoss] += myTime(manager[myBoss])
-              #  t2 = 
+              #  t2 =
                 manager[myBoss] = -1
                # return t1 + t2
             return informTime[myBoss]

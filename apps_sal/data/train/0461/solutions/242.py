@@ -4,7 +4,7 @@ class Solution:
             return informTime[node]
         times = [self.helper(x, sub, informTime) for x in sub[node]]
         return max(times) + informTime[node]
-    
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         sub = defaultdict(list)
         for i, m in enumerate(manager):

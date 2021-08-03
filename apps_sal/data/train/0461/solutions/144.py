@@ -1,14 +1,15 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        inputs = {i:0 for i in range(n)}
+        inputs = {i: 0 for i in range(n)}
         graph = {i: set() for i in range(n)}
         for i, m in enumerate(manager):
             # edge m --> i
-            if m == -1: continue
+            if m == -1:
+                continue
             if i not in graph[m]:
                 graph[m].add(i)
                 inputs[i] += 1
-                
+
         stack = [(headID, 0)]
         ans = 0
         while stack:
@@ -16,12 +17,9 @@ class Solution:
             ans = max(ans, elapsed)
             # find all subordinates of i
             new_elapsed = elapsed + informTime[i]
-            for nb in graph[i]: 
+            for nb in graph[i]:
                 inputs[nb] -= 1
                 if inputs[nb] == 0:
                     stack.append((nb, new_elapsed))
-                    
-        return ans
-                    
-                
 
+        return ans

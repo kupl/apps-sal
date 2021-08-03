@@ -3,6 +3,7 @@ class Node:
         self.id = id
         self.children = []
 
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         nodes = []
@@ -15,6 +16,7 @@ class Solution:
             else:
                 rootId = i
         self.totalTime = 0
+
         def dfs(root, time):
             if not root:
                 return

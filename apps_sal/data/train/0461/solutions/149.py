@@ -4,6 +4,7 @@ class Node:
         self.employees = []
         self.informTime = informTime
 
+
 class Solution:
     def construct_tree(self, headID, managers, informTime):
         manager_to_employees = {}
@@ -12,7 +13,7 @@ class Solution:
                 manager_to_employees[manager].append(employee)
             else:
                 manager_to_employees[manager] = [employee]
-        
+
         root = Node(headID, informTime[headID])
         stack = [root]
         while stack:
@@ -25,11 +26,11 @@ class Solution:
                 stack.append(next_node)
         return root
 
-    def shortest_informTime(self, root): 
+    def shortest_informTime(self, root):
         max_time = 0
         if root and root.employees:
             for employee in root.employees:
-                max_time= max(max_time, self.shortest_informTime(employee))
+                max_time = max(max_time, self.shortest_informTime(employee))
             max_time += root.informTime
         return max_time
 

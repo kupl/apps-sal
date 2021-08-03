@@ -5,7 +5,7 @@ class Solution:
                 informTime[i] += helper(manager[i], manager, informTime)
                 manager[i] = -1
             return informTime[i]
-            
+
         res = 0
         for i in range(n):
             res = max(res, helper(i, manager, informTime))

@@ -6,14 +6,5 @@ class Solution:
         #     quant = abs(n - (2*i+1))
         #     if( quant> 0):
         #         tot +=  quant
-        
-        return sum([abs(n-2*i-1)  for i in range(n) if abs(n-2*i-1) > 0]) // (2)
-            
-            
-            
-        
-            
-        
-            
-            
 
+        return sum([abs(n - 2 * i - 1) for i in range(n) if abs(n - 2 * i - 1) > 0]) // (2)

@@ -5,13 +5,11 @@ class Solution:
         opCount = 0
         ptr1 = 0
         ptr2 = len(arr) - 1
-            
+
         while ptr1 < ptr2:
             stepSum = (arr[ptr2] - arr[ptr1]) // 2
             opCount += int(stepSum)
             ptr1 += 1
             ptr2 -= 1
-        
-        return opCount
-            
 
+        return opCount

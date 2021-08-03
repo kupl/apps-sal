@@ -1,7 +1,7 @@
 class Solution:
     def minOperations(self, n):
-        arr = [];
-        count = 0;
+        arr = []
+        count = 0
 
         for x in range(n):
             arr.append(2 * x + 1)
@@ -11,6 +11,7 @@ class Solution:
             count += abs(arr[x] - avg)
         return count // 2
 
-sol = Solution();
-x = sol.minOperations(3);
-print(x);
+
+sol = Solution()
+x = sol.minOperations(3)
+print(x)

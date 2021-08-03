@@ -16,10 +16,9 @@ class Solution:
         while queue:
             current, currentTime = queue.pop()
             # add all subordinates then add the time needed - repeat
-            maxTime = max(maxTime, currentTime + informTime[current] )
+            maxTime = max(maxTime, currentTime + informTime[current])
 
             for employee in adjList[current]:
                 queue.appendleft((employee, currentTime + informTime[current]))
-
 
         return maxTime

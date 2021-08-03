@@ -3,6 +3,7 @@ class Solution:
         subordinate = collections.defaultdict(list)
         for i in range(n):
             subordinate[manager[i]].append(i)
+
         def solve(ID):
             if subordinate[ID]:
                 return max(solve(i) for i in subordinate[ID]) + informTime[ID]

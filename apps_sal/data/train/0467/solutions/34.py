@@ -1,4 +1,6 @@
 import math
+
+
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
         divisors = []
@@ -15,6 +17,3 @@ class Solution:
             if len(s) == 4:
                 result += sum(s)
         return result
-                
-            
-

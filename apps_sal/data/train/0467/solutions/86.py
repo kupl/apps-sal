@@ -1,17 +1,17 @@
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
         n = 400
-        prime = [True for i in range(n+1)] 
+        prime = [True for i in range(n + 1)]
         p = 2
         while (p * p <= n):
             if (prime[p] == True):
-                for i in range(p * p, n+1, p): 
+                for i in range(p * p, n + 1, p):
                     prime[i] = False
             p += 1
         prime[0] = False
         prime[1] = False
-        prime_set = [p for p in range(n+1) if prime[p]]
-        
+        prime_set = [p for p in range(n + 1) if prime[p]]
+
         cnt = 0
         for i in nums:
             if i == 0:
@@ -31,15 +31,14 @@ class Solution:
                             if r != q:
                                 r_prime = False
                             break
-                    if r_prime:  
-                        cnt += (p+1) * (r+1)
+                    if r_prime:
+                        cnt += (p + 1) * (r + 1)
                     break
-                    
-        
+
         for i in nums:
-            p = int(i**(1/3) +0.5)
+            p = int(i**(1 / 3) + 0.5)
             if prime[p] and p**3 == i:
                 cnt += (p * i - 1) // (p - 1)
                 print(i, p, p**2, p)
-                    
+
         return cnt

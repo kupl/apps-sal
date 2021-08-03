@@ -5,17 +5,17 @@ class Solution:
         elif n == 2:
             return 1
         else:
-            arr = [0]*n
+            arr = [0] * n
             arr[0] = 1
             arr[1] = 3
-            for i in range(2,n):
-                arr[i] = arr[i-1] + 2
+            for i in range(2, n):
+                arr[i] = arr[i - 1] + 2
             if n % 2 != 0:
                 ans = 0
                 i = 0
-                j = len(arr)-1
+                j = len(arr) - 1
                 while i < j:
-                    ans += (arr[j]-arr[i])//2
+                    ans += (arr[j] - arr[i]) // 2
                     i += 1
                     j -= 1
                 return ans

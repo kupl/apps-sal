@@ -5,6 +5,5 @@ class Solution:
         while diff > 0:
             out += diff
             diff -= 2
-        
-        return out
 
+        return out

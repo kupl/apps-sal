@@ -10,13 +10,13 @@ class Solution:
             upperLimit += 1
             subAns = 1 + num
             while a < upperLimit:
-                if num%a == 0:
+                if num % a == 0:
                     if divisor == 0:
                         divisor += 1
-                        subAns += (a+num//a)
+                        subAns += (a + num // a)
                     else:
                         break
-                upperLimit = min(upperLimit, num//a)
+                upperLimit = min(upperLimit, num // a)
                 a += 1
             else:
                 if divisor == 1:

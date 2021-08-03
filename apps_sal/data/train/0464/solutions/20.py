@@ -5,11 +5,11 @@ class Solution:
         #               3           7
         #               4           6
         #               5           5
-        
+
         # 2 6 3 5 4 4
         # diff / 2
         # array is like 1 3 5 7
-        #                      
+        #
         if n == 1:
             return 0
 
@@ -22,8 +22,8 @@ class Solution:
             max_num = (2 * hi) + 1
 
             num_ops += (max_num - min_num) // 2
-                
+
             low += 1
             hi -= 1
-            
+
         return num_ops

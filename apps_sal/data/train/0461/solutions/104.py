@@ -1,4 +1,6 @@
 from collections import defaultdict, deque
+
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         def dfs(mngr):
@@ -12,6 +14,5 @@ class Solution:
         for manager_ix, time in zip(manager, informTime):
             manager_map[manager_ix].append((i, informTime[i]))
             i += 1
-        
-        return dfs(-1)
 
+        return dfs(-1)

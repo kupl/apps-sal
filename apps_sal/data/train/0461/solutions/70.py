@@ -5,17 +5,18 @@ class Solution:
             if i == headID:
                 continue
             graph[manager[i]] = graph.get(manager[i], []) + [i]
-        
+
         self.output = 0
+
         def dfs(v, time):
             # is leaf, 結算 time
             if v not in graph:
                 self.output = max(self.output, time)
                 return
-            
+
             # for loop v's neighbor
             for w in graph[v]:
                 dfs(w, time + informTime[v])
-        
+
         dfs(headID, 0)
         return self.output
