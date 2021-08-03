@@ -8,4 +8,3 @@ elif tt1 == tt2:
     print('Friendship')
 else:
     print('Second')
-

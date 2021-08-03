@@ -5,8 +5,10 @@ a_array = list(map(int, input().split()))
 a_counter = Counter(a_array)
 count_max = max(a_counter.values())
 
+
 def nC2(n):
     return n * (n - 1) // 2
+
 
 nc2_array = [0] * (count_max + 1)
 sum_comb = 0

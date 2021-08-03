@@ -12,7 +12,7 @@ for n in a:
 all_sum = 0
 for k in numdict.keys():
     v = numdict[k]
-    all_sum += (v*(v-1))//2
+    all_sum += (v * (v - 1)) // 2
 
 for n in a:
     print(all_sum - numdict[n] + 1)

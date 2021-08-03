@@ -4,4 +4,3 @@ c = [0] * 101
 for elem in b:
     c[elem] += 1
 print(max(c))
-

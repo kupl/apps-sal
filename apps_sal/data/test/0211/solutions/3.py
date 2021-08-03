@@ -7,6 +7,7 @@ def chk(x):
     else:
         return False
 
+
 def calc(e):
     if e == 1:
         return 2
@@ -18,6 +19,7 @@ def calc(e):
     d = d * f % D * f % D
     return d
 
+
 n, m, k = list(map(int, input().split()))
 D = 1000000009
 
@@ -25,15 +27,14 @@ l = 0
 h = n
 
 while l < h:
-    mid = l + h >>1
+    mid = l + h >> 1
     if chk(mid):
         h = mid
     else:
         l = mid + 1
 
-h = calc(l // k + 1) - 2 
+h = calc(l // k + 1) - 2
 if h < 0:
     h += D
 
 print((k * h % D + m - l // k * k) % D)
-

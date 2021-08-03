@@ -13,4 +13,3 @@ for i in range(n):
         else:
             print(i + 1)
             return
-

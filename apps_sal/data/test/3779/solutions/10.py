@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 n, k = map(int, input().split(' '))
 aa = list(map(int, input().split(' ')))
 
@@ -14,4 +15,3 @@ print(k // m)
 for i in range(0, k, m):
     print(i, end=' ')
 print()
-

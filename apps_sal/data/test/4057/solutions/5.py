@@ -9,4 +9,4 @@ for i in a:
 ans = -1
 for i in d:
     ans = max(ans, d[i])
-print(ans) 
+print(ans)

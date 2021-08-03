@@ -10,5 +10,5 @@ for i in range(n):
         total_time += pos + 1
         goods.remove(goods_i[j])
         goods = [goods_i[j]] + goods
-        
+
 print(total_time)

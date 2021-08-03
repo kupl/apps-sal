@@ -5,19 +5,19 @@ ddc = 0
 f = 1
 ans = set()
 for x in a:
-	if f:
-		ddc = x%k
-	o = 0
-	o = x%k
-	if not f:
-		ddc = math.gcd(ddc, o)
-	
-	if o == 1:
-		print(k)
-		print(*list(range(k)))
-		return
-	f = 0
-	'''
+    if f:
+        ddc = x % k
+    o = 0
+    o = x % k
+    if not f:
+        ddc = math.gcd(ddc, o)
+
+    if o == 1:
+        print(k)
+        print(*list(range(k)))
+        return
+    f = 0
+    '''
 	if k%2 != o%2 and math.gcd(k, o)==1:
 		print(k)
 		
@@ -40,11 +40,9 @@ for i in range(len(a)):
 '''
 yy = ddc
 while yy:
-	ans.add(yy)
-	yy+=ddc
-	yy%=k
+    ans.add(yy)
+    yy += ddc
+    yy %= k
 ans.add(0)
 print(len(ans))
 print(*(sorted(ans)))
-
-

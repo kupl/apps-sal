@@ -5,6 +5,7 @@ def get_index(el, lst):
 
     return -1
 
+
 def __starting_point():
     n, m, k = (int(cur_num) for cur_num in input().split())
 
@@ -20,11 +21,13 @@ def __starting_point():
 
             idx = get_index(purchase, things)
 
-            ans += idx+1
+            ans += idx + 1
 
             del things[idx]
 
             things = [purchase] + things
 
     print(ans)
+
+
 __starting_point()

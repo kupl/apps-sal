@@ -6,9 +6,8 @@ cnt = 0
 
 c = collections.Counter(a)
 for i in c:
-  cnt += c[i]*(c[i]-1)//2
-
+    cnt += c[i] * (c[i] - 1) // 2
 
 
 for i in range(n):
-	print(cnt-c[a[i]]+1)
+    print(cnt - c[a[i]] + 1)

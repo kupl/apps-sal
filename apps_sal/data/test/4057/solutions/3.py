@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def go():
     n = int(input())
     a = Counter([int(i) for i in input().split(' ')])
@@ -6,5 +8,5 @@ def go():
 
     return
 
-print(go())
 
+print(go())

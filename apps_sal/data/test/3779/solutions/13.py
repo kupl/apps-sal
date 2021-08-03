@@ -10,5 +10,3 @@ for i in range(k):
     ans.add((i * g) % k)
 print(len(ans))
 print(*sorted(list(ans)))
-
-

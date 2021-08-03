@@ -14,5 +14,5 @@ for i in range(numbers):
         for j in range(ind, 0, -1):
             items[j] = items[j - 1]
         items[0] = value
-        
+
 stdout.write(str(cnt))

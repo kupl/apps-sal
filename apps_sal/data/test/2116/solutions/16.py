@@ -1,6 +1,7 @@
 from sys import stdin as fin
 # fin = open("ecr12b.in", "r")
 
+
 class node:
     def __init__(self, val=None):
         self.prev = self.next = None

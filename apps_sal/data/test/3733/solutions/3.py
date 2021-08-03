@@ -6,7 +6,7 @@ input = sys.stdin.readline
 n, I = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
-k = math.floor((I*8)/n)
+k = math.floor((I * 8) / n)
 K = 2**min(k, 20)
 
 # find distinct
@@ -30,10 +30,9 @@ for i in range(diff):
     ct += count[s[i]]
 ans = ct
 
-for i in range(diff-1, -1, -1):
+for i in range(diff - 1, -1, -1):
     ct -= count[s[i]]
-    ct += count[s[i+K]]
+    ct += count[s[i + K]]
     ans = min(ans, ct)
 
 print(ans)
-

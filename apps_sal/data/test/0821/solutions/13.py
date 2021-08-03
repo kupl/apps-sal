@@ -1,4 +1,4 @@
-s,v1,v2,t1,t2 = list(map(int,input().split()))
+s, v1, v2, t1, t2 = list(map(int, input().split()))
 
 p1 = t1 * 2 + v1 * s
 p2 = t2 * 2 + v2 * s
@@ -9,4 +9,3 @@ elif p1 > p2:
     print("Second")
 else:
     print("Friendship")
-
