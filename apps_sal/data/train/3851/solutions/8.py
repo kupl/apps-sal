@@ -1,4 +1,4 @@
-def interest(p,r,n):
+def interest(p, r, n):
     simple = p + p * r * n
     while n > 0:
         n -= 1

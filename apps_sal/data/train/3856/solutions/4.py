@@ -6,8 +6,9 @@ def list_simple_num(a):
             for j in range(2 * l, len(lst), l):
                 lst[j] = 0
     return lst
-        
-def solve(a,b):
-    lst  = tuple(filter(bool, list_simple_num(b)))
-    ind  = list_simple_num(len(lst))[1:]
-    return sum(lst for ind,lst in zip(ind,lst) if ind != 0 and lst > a)
+
+
+def solve(a, b):
+    lst = tuple(filter(bool, list_simple_num(b)))
+    ind = list_simple_num(len(lst))[1:]
+    return sum(lst for ind, lst in zip(ind, lst) if ind != 0 and lst > a)

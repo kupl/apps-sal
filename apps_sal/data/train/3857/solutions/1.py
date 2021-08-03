@@ -1,4 +1,5 @@
-RATES = {'M': (100-1.5) / 100, 'F': (100-1.2) / 100}
+RATES = {'M': (100 - 1.5) / 100, 'F': (100 - 1.2) / 100}
+
 
 def lose_weight(gender, weight, duration):
     if gender not in RATES:
