@@ -1,7 +1,7 @@
 from sys import stdin
-rs = lambda: stdin.readline().strip()
-ri = lambda: int(rs())
-ril = lambda: list(map(int, rs().split()))
+def rs(): return stdin.readline().strip()
+def ri(): return int(rs())
+def ril(): return list(map(int, rs().split()))
 
 
 def main():
