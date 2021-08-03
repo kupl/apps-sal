@@ -1,6 +1,6 @@
 def my_languages(results):
     print(results)
-    results = sorted(results.items(), key=lambda d: d[1], reverse = True)
+    results = sorted(results.items(), key=lambda d: d[1], reverse=True)
     print(results)
     res = []
     for item in results:

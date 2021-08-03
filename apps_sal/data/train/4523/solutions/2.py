@@ -1,11 +1,14 @@
 from typing import List, Union
+
+
 def digit_sum(n: Union[List[int], int]) -> int:
     """
     Finds the digit sum of the digits in an integer or list of positional integers
     """
     if isinstance(n, list):
-        return sum(n)        
+        return sum(n)
     return sum(int(ch) for ch in str(n))
+
 
 def to_int(arr: List[int]) -> int:
     """
@@ -13,13 +16,15 @@ def to_int(arr: List[int]) -> int:
     """
     return int(''.join(str(n) for n in arr))
 
+
 def bump(arr, i):
     """
     Takes the digits of an array and increments the digit at index i and decrements the digit at 
     index i + 1.
     E.g. bump([1, 2, 8, 4], 1) -> [1, 2+1, 8-1, 4] -> [1, 3, 7, 4]
     """
-    return arr[:i] + [arr[i] + 1] + [arr[i + 1] - 1] + arr[i+2:]
+    return arr[:i] + [arr[i] + 1] + [arr[i + 1] - 1] + arr[i + 2:]
+
 
 def solve(n: int) -> int:
     """

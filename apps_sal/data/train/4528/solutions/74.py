@@ -5,4 +5,3 @@ def my_languages(results):
         if s[i][1] >= 60:
             s2.append(s[i][0])
     return s2
-

@@ -1,7 +1,7 @@
 def my_languages(results):
     def myFunc(e):
-          return e[1]
-    
+        return e[1]
+
     languages = []
     result = []
     for language, score in results.items():

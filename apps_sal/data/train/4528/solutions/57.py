@@ -7,6 +7,7 @@ def maxindex(lst):
             maxindex = i
     return maxindex
 
+
 def my_languages(results):
     values = []
     keys = []
@@ -21,5 +22,3 @@ def my_languages(results):
             del values[index]
             del keys[index]
     return ans
-
-
