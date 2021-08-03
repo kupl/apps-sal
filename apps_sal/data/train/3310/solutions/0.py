@@ -37,4 +37,3 @@ def score_pole_vault(vaulter_list):
             res['3rd'] = ', '.join(sorted(temp[key])) + ' (tie)'
             i += len(temp[key])
     return res
-

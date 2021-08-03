@@ -1,5 +1,6 @@
 from itertools import zip_longest
 
+
 def number_of_carries(a, b):
     x, y = str(a)[::-1], str(b)[::-1]
     result = c = 0

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def score_pole_vault(vaulter_list):
     scoreboard = defaultdict(list)
     for v in vaulter_list:

@@ -1,5 +1,6 @@
 from re import sub
 
+
 def repl(match):
     COLORS = {"F": "pink", "L": "red", "R": "green"}
     match = match.group()

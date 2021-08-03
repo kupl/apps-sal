@@ -5,7 +5,7 @@
 
 # METHOD TWO ~ standard iteration
 "50 seconds per 1000 runs of Lorem Ipsum"
-#def anagram_counter(words):
+# def anagram_counter(words):
 #    anagram_count = 0
 #    for i, current in enumerate(words):#                    FUN FACT:
 #        cenrrtu = sorted(current)
@@ -16,6 +16,8 @@
 
 # METHOD THREE ~ comparing sets to counts
 "0.5 seconds per 1000 runs of Lorem Ipsum"
+
+
 def run_down(number):
     count = 0
     while number:
@@ -23,11 +25,13 @@ def run_down(number):
         number -= 1
     return count
 
+
 def anagram_counter(words):
     sorts = list(''.join(sorted(word)) for word in words)
     unique = set(sorts)
     return sum(run_down(sorts.count(word)) for word in unique)
-    
+
+
 """
 iterations     _comp_    _iter_    _sets_
 1              0.0990    0.0541    0.0008

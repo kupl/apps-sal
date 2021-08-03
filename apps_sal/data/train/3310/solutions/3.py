@@ -1,5 +1,6 @@
 from collections import OrderedDict
 
+
 def solve_tie_2(_vaulter_list, names, res, c):
     third_criterion = {}
     for player in _vaulter_list:
@@ -15,14 +16,17 @@ def solve_tie_2(_vaulter_list, names, res, c):
             res.append(pair[1][0])
             remove_from_dict(_vaulter_list, res[-1])
             c += 1
-            if len(res) >= 3 or c >= 3: return c
-        else: # unsolvable tie
+            if len(res) >= 3 or c >= 3:
+                return c
+        else:  # unsolvable tie
             res.append(', '.join(sorted(pair[1])))
             for name in pair[1]:
                 remove_from_dict(_vaulter_list, name)
             c += len(pair[1])
-            if len(res) >= 3 or c >= 3: return c
+            if len(res) >= 3 or c >= 3:
+                return c
     return c
+
 
 def solve_tie_1(_vaulter_list, names, index, res, c):
     second_criterion = {}
@@ -39,11 +43,14 @@ def solve_tie_1(_vaulter_list, names, index, res, c):
             res.append(pair[1][0])
             remove_from_dict(_vaulter_list, res[-1])
             c += 1
-            if len(res) >= 3 or c >= 3: return c
-        else: # try to solve according to next criterion
+            if len(res) >= 3 or c >= 3:
+                return c
+        else:  # try to solve according to next criterion
             c = solve_tie_2(_vaulter_list, pair[1], res, c)
-            if len(res) >= 3: return c
+            if len(res) >= 3:
+                return c
     return c
+
 
 def remove_from_dict(_vaulter_list, name):
     for i in range(len(_vaulter_list)):
@@ -51,20 +58,22 @@ def remove_from_dict(_vaulter_list, name):
             del _vaulter_list[i]
             break
 
+
 def score_pole_vault(vaulter_list):
-    if len(vaulter_list) < 1: return {}
+    if len(vaulter_list) < 1:
+        return {}
     _vaulter_list = vaulter_list.copy()
     res = []
     c = 0
     l = len(_vaulter_list[0]["results"])
     best_height_index = l
     while len(res) < 3 and c < 3:
-        for i in range(l-1, -1, -1):
+        for i in range(l - 1, -1, -1):
             for player in _vaulter_list:
                 if "O" in player["results"][i]:
                     best_height_index = i
                     break
-            if best_height_index < l: # found
+            if best_height_index < l:  # found
                 break
         first_criterion_players = []
         for player in _vaulter_list:
@@ -77,16 +86,18 @@ def score_pole_vault(vaulter_list):
         else:
             c = solve_tie_1(_vaulter_list, first_criterion_players, best_height_index, res, c)
         l = best_height_index
-    
+
     res_dict = {"1st": res[0] + (" (jump-off)" if "," in res[0] else "")}
     n = len(res_dict["1st"].split(","))
-    if n == 3: return res_dict
+    if n == 3:
+        return res_dict
     if n == 2:
         res_dict["3rd"] = res[1] + (" (tie)" if "," in res[1] else "")
         return res_dict
     else:
         res_dict["2nd"] = res[1] + (" (tie)" if "," in res[1] else "")
-        if "," in res_dict["2nd"]: return res_dict
+        if "," in res_dict["2nd"]:
+            return res_dict
         else:
             res_dict["3rd"] = res[2] + (" (tie)" if "," in res[2] else "")
             return res_dict

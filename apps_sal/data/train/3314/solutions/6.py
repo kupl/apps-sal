@@ -1,9 +1,9 @@
-def solve(a,b):
+def solve(a, b):
     b1 = b
     answer = True
     i = 2
     primfac = []
-    
+
     while i * i <= b:
         while b1 % i == 0:
             primfac.append(i)

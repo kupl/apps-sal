@@ -1,5 +1,6 @@
 def how_many_light_sabers_do_you_own(*name):
-    try: name
+    try:
+        name
     except NameError:
         return 0
     else:
