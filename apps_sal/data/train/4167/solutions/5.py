@@ -7,4 +7,3 @@ def descriptions(arr):
         prev = x
         n += 1
     return r * 2 ** (n - 1)
-

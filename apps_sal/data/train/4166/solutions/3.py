@@ -17,4 +17,3 @@ def factors(n):
         m += 1 if m == 2 else 2
     if n > 1:
         yield n
-

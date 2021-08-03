@@ -1,6 +1,7 @@
 import collections
 import itertools
 
+
 def prime_factors(n):
     i = 2
     while i * i <= n:
@@ -12,6 +13,7 @@ def prime_factors(n):
 
     if n > 1:
         yield n
+
 
 def prod(iterable):
     result = 1
@@ -33,21 +35,22 @@ def get_divisors(n):
     for prime_power_combo in itertools.product(*powers):
         yield prod(prime_power_combo)
 
+
 def rem(n, p):
     v = 1
-    for i in range(0, n // 1000):        
+    for i in range(0, n // 1000):
         v = v * (10 ** 1000)
         v = v % p
     v = v * (10 ** (n % 1000))
     v = v % p
     return v
-        
+
 
 def solve(p):
-    nl = list(get_divisors(p-1))
+    nl = list(get_divisors(p - 1))
     nl = [int(x) for x in nl]
     nl = sorted(nl)
-    
+
     for n in nl:
         if rem(n, p) == 1:
             return str(n) + '-sum'

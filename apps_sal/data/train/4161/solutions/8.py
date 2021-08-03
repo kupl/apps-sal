@@ -27,11 +27,10 @@ def index_of(a, b):
                 break
         return k + ((k - (2 ** i - 1)) * 2 + 1 + (2 ** (i + 1) - 1 - k))
     else:
-        n = index_of(a, b-a)
+        n = index_of(a, b - a)
         k = n
         for l in range(1001):
             if 2 ** l - 1 <= n <= 2 ** (l + 1) - 2:
                 i = l
                 break
-        return k + ((k - (2 ** i - 1)) * 2 + 1 + (2 ** (i + 1) - 1 - k)) -1
-
+        return k + ((k - (2 ** i - 1)) * 2 + 1 + (2 ** (i + 1) - 1 - k)) - 1

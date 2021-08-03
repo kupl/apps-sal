@@ -1,5 +1,5 @@
 def uni_total(string):
-    x=0
+    x = 0
     for character in string:
-        x+=ord(character)
+        x += ord(character)
     return x

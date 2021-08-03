@@ -1,1 +1,1 @@
-uni_total = lambda string: sum([ord(x) for x in list(string)])
+def uni_total(string): return sum([ord(x) for x in list(string)])

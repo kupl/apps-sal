@@ -3,4 +3,3 @@ def uni_total(string):
     for s in string:
         result += ord(s)
     return result
-

@@ -12,4 +12,3 @@ def solve(p):
             if k == 1 or k == p - 1:
                 d2 = t
     return f'{d2}-sum' if pow(10, d2, p) == 1 else f'{d2}-altsum'
-
