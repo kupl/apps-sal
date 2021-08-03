@@ -5,7 +5,7 @@ class Solution:
         elif len(nums) == 2:
             return nums if nums[0] <= nums[1] else [nums[1], nums[0]]
         else:
-            half = int(len(nums)/2)
+            half = int(len(nums) / 2)
             a1 = self.sortArray(nums[:half])
             a2 = self.sortArray(nums[half:])
             nu = []
@@ -20,4 +20,3 @@ class Solution:
                 else:
                     nu.append(a2.pop(0))
             return nu
-

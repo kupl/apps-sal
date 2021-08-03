@@ -10,7 +10,7 @@ class Solution:
                 s += mat[i][j]
                 row.append(s)
             p.append(row)
-        
+
         ans = []
         for i in range(m):
             row = []
@@ -25,4 +25,3 @@ class Solution:
                 row.append(s)
             ans.append(row)
         return ans
-

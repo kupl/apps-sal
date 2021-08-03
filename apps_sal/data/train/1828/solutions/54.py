@@ -1,4 +1,6 @@
 from collections import Counter, defaultdict
+
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         counter = Counter(barcodes)
@@ -13,14 +15,14 @@ class Solution:
             for c in sorted(memo.keys(), reverse=True):
                 for idx, e in enumerate(memo[c]):
                     if ret and ret[-1] == e:
-                        continue                
+                        continue
                     ret.append(e)
                     del memo[c][idx]
                     if not memo[c]:
                         del memo[c]
-                    memo[c-1].append(e)
+                    memo[c - 1].append(e)
                     break
                 if rest == len(barcodes) - len(ret):
                     break
-                    
+
         return ret

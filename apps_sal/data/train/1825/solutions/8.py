@@ -19,13 +19,13 @@ class Solution:
                     dic[node.right] = node
                     nextlevel.append(node.right)
             explore, nextlevel = nextlevel, []
-        
+
         newleaf = set()
         while len(leaf) > 1:
             for node in leaf:
                 newleaf.add(dic[node])
-            
+
             leaf, newleaf = newleaf, set()
-        
+
         for res in leaf:
             return res

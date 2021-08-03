@@ -1,5 +1,7 @@
 from collections import Counter
 from heapq import heapify, heappop
+
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         c = Counter(barcodes)
@@ -7,7 +9,7 @@ class Solution:
         for k, count in list(c.items()):
             h.append((-count, k))
         heapify(h)
-        
+
         res = [0] * len(barcodes)
         index = 0
         while h:
@@ -20,4 +22,3 @@ class Solution:
                 index += 2
                 count -= 1
         return res
-

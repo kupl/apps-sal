@@ -1,6 +1,6 @@
 class Solution:
-    
-    def merge(self,arr1:List[int],arr2:List[int]) -> List[int]:
+
+    def merge(self, arr1: List[int], arr2: List[int]) -> List[int]:
         ret = []
         ix1 = 0
         ix2 = 0
@@ -11,20 +11,18 @@ class Solution:
             else:
                 ret.append(arr2[ix2])
                 ix2 += 1
-        if ix1< len(arr1):
+        if ix1 < len(arr1):
             ret.extend(arr1[ix1:])
         else:
             ret.extend(arr2[ix2:])
         return ret
-        
+
     def sortArray(self, nums: List[int]) -> List[int]:
         # implement merge sort
         if len(nums) == 1:
             return nums
-        
+
         mid = len(nums) // 2
         left = self.sortArray(nums[:mid])
         right = self.sortArray(nums[mid:])
-        return self.merge(left,right)
-        
-
+        return self.merge(left, right)

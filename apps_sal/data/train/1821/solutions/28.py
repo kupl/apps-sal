@@ -9,7 +9,7 @@ def merge(list1, list2):
         return merged + list2
     else:
         return merged + list1
-        
+
 
 class Solution:
     # Merge Sort
@@ -18,5 +18,3 @@ class Solution:
             return nums
         else:
             return merge(self.sortArray(nums[:len(nums) // 2]), self.sortArray(nums[len(nums) // 2:]))
-        
-

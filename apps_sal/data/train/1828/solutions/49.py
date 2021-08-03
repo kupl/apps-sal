@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         freqs = Counter(barcodes)

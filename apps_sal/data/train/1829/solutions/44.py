@@ -9,7 +9,7 @@ class Solution:
         self.result = 0
         self.check_node(root, root.val)
         return self.result
-        
+
     def check_node(self, node, max_value):
         if node.val >= max_value:
             self.result += 1
@@ -18,4 +18,3 @@ class Solution:
             self.check_node(node.left, max_value)
         if node.right != None:
             self.check_node(node.right, max_value)
-

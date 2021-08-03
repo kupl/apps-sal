@@ -4,11 +4,11 @@ class Solution:
             mid = len(nums) // 2
             left = nums[mid:]
             right = nums[:mid]
-            
+
             self.mergeSort(left)
             self.mergeSort(right)
             i = j = k = 0
-            
+
             while i < len(left) and j < len(right):
                 if left[i] < right[j]:
                     nums[k] = left[i]
@@ -25,9 +25,7 @@ class Solution:
                 nums[k] = right[j]
                 j += 1
                 k += 1
-                
-                
+
     def sortArray(self, nums: List[int]) -> List[int]:
         self.mergeSort(nums)
         return nums
-

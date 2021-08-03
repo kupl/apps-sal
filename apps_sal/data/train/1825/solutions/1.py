@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def lcaDeepestLeaves(self, root: TreeNode) -> TreeNode:
-        
+
         def traverse(node):
             if not node:
                 return 0, None
@@ -18,22 +18,5 @@ class Solution:
                 return hl + 1, lcal
             else:
                 return hl + 1, node
-            
-        return traverse(root)[1]
-        
-        
-        
-        
-                
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
+        return traverse(root)[1]

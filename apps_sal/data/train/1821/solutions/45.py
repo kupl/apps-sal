@@ -2,7 +2,7 @@ class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         def mergeSort(nos):
             if len(nos) > 1:
-                mid = len(nos)//2
+                mid = len(nos) // 2
                 left = nos[mid:]
                 right = nos[:mid]
                 left = mergeSort(left)
@@ -20,5 +20,5 @@ class Solution:
                 for j in right:
                     nos.append(j)
             return nos
-                
+
         return mergeSort(nums)

@@ -1,5 +1,7 @@
 import heapq
 from collections import Counter
+
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         ans = []
@@ -14,9 +16,9 @@ class Solution:
                 ans.append(temp2[1])
                 heapq.heappush(heap, (temp[0], temp[1]))
                 if(temp2[0] < -1):
-                    heapq.heappush(heap, (temp2[0]+1, temp2[1]))
+                    heapq.heappush(heap, (temp2[0] + 1, temp2[1]))
             else:
                 ans.append(temp[1])
                 if(temp[0] < -1):
-                    heapq.heappush(heap, (temp[0]+1, temp[1]))
+                    heapq.heappush(heap, (temp[0] + 1, temp[1]))
         return ans

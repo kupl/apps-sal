@@ -15,6 +15,7 @@ class Solution:
             return node0
         result = None
         # NodeWithStatus = collections.namedtuple('NodeWithStatus', ['node','status'])
+
         def lca(root: TreeNode) -> bool:
             nonlocal result
             if root is None:
@@ -26,4 +27,3 @@ class Solution:
             return (root == node0 or root == node1) or left or right
         lca(root)
         return result
-

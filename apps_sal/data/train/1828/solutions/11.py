@@ -14,16 +14,15 @@ class Solution:
             freq += 1
             if not freq and h:
                 freq, code = heappop(h)
-        
+
         if not freq and h:
             freq, code = heappop(h)
-        
+
         # odd
         for i in range(1, len(barcodes), 2):
             out[i] = code
             freq += 1
             if not freq and h:
                 freq, code = heappop(h)
-                
-        return out
 
+        return out

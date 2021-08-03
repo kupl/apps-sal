@@ -6,7 +6,7 @@ class Solution:
         m = len(nums) // 2
         left = self.sortArray(nums[:m])
         right = self.sortArray(nums[m:])
-        
+
         # merge
         i = j = k = 0
         while i < len(left) and j < len(right):
@@ -16,33 +16,21 @@ class Solution:
             else:
                 nums[k] = right[j]
                 j += 1
-            k+= 1
-        
+            k += 1
+
         while j < len(right):
             nums[k] = right[j]
             j += 1
             k += 1
-        
+
         while i < len(left):
             nums[k] = left[i]
             i += 1
             k += 1
-        
+
         return nums
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
 # \t\t# merge sort. If length <= 1, return
 # \t\tif not nums or len(nums) <= 1:
 # \t\t\treturn nums
@@ -72,4 +60,3 @@ class Solution:
 # \t\t\tk += 1
 
 # \t\treturn nums
-

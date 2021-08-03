@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
-        def dfs(r, val = float('-inf')):
+        def dfs(r, val=float('-inf')):
             if r:
                 ans = 1 if r.val >= val else 0
                 new_val = max(r.val, val)

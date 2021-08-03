@@ -6,7 +6,7 @@ class Solution:
         barCount = collections.defaultdict(int)
         for barcode in barcodes:
             barCount[barcode] += 1
-        mostFreq = max(barCount, key = barCount.get)
+        mostFreq = max(barCount, key=barCount.get)
         i = 0
         for _ in range(barCount[mostFreq]):
             res[i] = mostFreq
@@ -24,4 +24,3 @@ class Solution:
                 if i >= len(barcodes):
                     i = 1
         return res
-

@@ -4,10 +4,10 @@ class Solution:
             return nums
         if len(nums) == 2 and nums[0] < nums[1]:
             return nums
-        
+
         first = 0
-        middle = len(nums)//2
-        last = len(nums)-1
+        middle = len(nums) // 2
+        last = len(nums) - 1
         # make the medium value at the first position
         if nums[first] <= nums[middle] <= nums[last] or nums[last] <= nums[middle] <= nums[first]:
             nums[first], nums[middle] = nums[middle], nums[first]
@@ -20,7 +20,7 @@ class Solution:
             if nums[i] > nums[pivot]:
                 boarder = i
                 break
-        cur = boarder + 1       
+        cur = boarder + 1
         while cur < len(nums):
             if nums[cur] <= nums[pivot]:
                 # print('a', nums)
@@ -30,16 +30,9 @@ class Solution:
             cur += 1
         # nums[cur-1], nums[boarder] = nums[boarder], nums[cur-1]
         # print(nums)
-        
+
         left = nums[:boarder]
         right = nums[boarder:]
         nums = self.sortArray(left) + self.sortArray(right)
-        
-        return nums
-        
-            
-        
-        
-        
-        
 
+        return nums

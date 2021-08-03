@@ -1,5 +1,6 @@
 from typing import Tuple
 
+
 class Solution:
     def lcaDeepestLeaves(self, root: TreeNode) -> TreeNode:
         def lcaDeepestLeavesRecursive(node: TreeNode) -> Tuple[int, TreeNode]:

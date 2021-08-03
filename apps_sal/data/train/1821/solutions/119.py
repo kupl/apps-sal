@@ -1,9 +1,9 @@
 class Solution:
     def sortArray(self, listToSort: List[int]) -> List[int]:
-        divider = len(listToSort)//2
+        divider = len(listToSort) // 2
         a = listToSort[:divider]
         b = listToSort[divider:]
-        sortedList= listToSort[0:len(listToSort)]
+        sortedList = listToSort[0:len(listToSort)]
 
         a.sort()
         b.sort()
@@ -29,6 +29,5 @@ class Solution:
             sortedList[k:] = b[j:]
 
         listToSort[0:len(listToSort)] = sortedList[0:len(sortedList)]
-    
-        return listToSort
 
+        return listToSort

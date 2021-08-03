@@ -10,6 +10,5 @@ class Solution:
             e_nums = [q] * nums.count(q)
             b_nums = [n for n in nums if n > q]
             return quicksort(l_nums) + e_nums + quicksort(b_nums)
-        
-        return quicksort(nums)
 
+        return quicksort(nums)

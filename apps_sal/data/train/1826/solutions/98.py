@@ -17,6 +17,5 @@ class Solution:
         for i in range(len(mat)):
             for j in range(len(mat[0])):
                 answer[i][j] = sum([mat[k][j] for k in range(max(0, i - K), min(len(mat), i + K + 1))])
-        
-        
+
         return answer

@@ -7,18 +7,17 @@ class Solution:
             m[n] += 1
             if m[n] > max_cnt:
                 max_cnt = m[n]
-                max_n = n 
-                
+                max_n = n
+
         res = [0 for _ in range(len(barcodes))]
         pos = 0
         for i in range(10001):
             n = max_n if i == 0 else i
-            
+
             while m[n] > 0:
                 m[n] -= 1
-                
+
                 res[pos] = n
                 pos = pos + 2 if pos + 2 < len(barcodes) else 1
-                
-                
-        return res 
+
+        return res

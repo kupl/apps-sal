@@ -6,6 +6,7 @@ class Solution:
             for _ in range(v):
                 res[i] = k
                 i += 2
-                if i >= n: i = 1
+                if i >= n:
+                    i = 1
                 # print(res)
         return res

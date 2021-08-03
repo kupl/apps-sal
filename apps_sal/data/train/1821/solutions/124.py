@@ -3,7 +3,7 @@ class node:
         self.val = val
         self.right = None
         self.left = None
-        
+
     def insert(self, val):
         if self.val is not None:
             if val < self.val:
@@ -12,23 +12,24 @@ class node:
                 else:
                     self.left.insert(val)
             else:
-                if self.right is None:        
+                if self.right is None:
                     self.right = node(val)
                 else:
                     self.right.insert(val)
         else:
             self.val = val
-            
+
+
 def inorder(root, res):
     if root:
         inorder(root.left, res)
         res.append(root.val)
         inorder(root.right, res)
-            
+
 
 class Solution:
     root = None
-    
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) > 0:
             self.root = node(nums[0])

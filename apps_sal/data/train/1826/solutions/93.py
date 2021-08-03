@@ -15,7 +15,7 @@ class Solution:
                         for j_ in range(j, j + K + 1):
                             if j_ < n:
                                 f[i][j] -= mat[i - 1 - K][j_]
-                                
+
                     if i + K < m:
                         for j_ in range(j, j + K + 1):
                             if j_ < n:
@@ -26,7 +26,7 @@ class Solution:
                         for i_ in range(i - K, i + K + 1):
                             if 0 <= i_ < m:
                                 f[i][j] -= mat[i_][j - 1 - K]
-                                
+
                     if j + K < n:
                         for i_ in range(i - K, i + K + 1):
                             if 0 <= i_ < m:

@@ -22,5 +22,5 @@ class Solution:
                     children.append((node.right, max(val, node.right.val)))
             parents = children
             children = []
-            
+
         return res

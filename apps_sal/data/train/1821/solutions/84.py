@@ -18,12 +18,12 @@ class Solution:
 #                     it2 += 1
 #                 ind += 1
 #             nums[l:r] = temp[:ind]
-            
+
 #         temp = [0]*len(nums)
 #         helper(0, len(nums))
 #         return nums
         '''method2: quick sort. not stable. O(nlogn)/O(1)'''
-        def pivot(l,r):
+        def pivot(l, r):
             if l >= r:
                 return
             p = nums[random.randint(l, r)]
@@ -40,7 +40,5 @@ class Solution:
                     it2 -= 1
             pivot(l, it2)
             pivot(it1, r)
-        pivot(0, len(nums)-1)
+        pivot(0, len(nums) - 1)
         return nums
-            
-
