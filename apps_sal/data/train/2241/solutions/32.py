@@ -11,10 +11,10 @@ for cnt in range(410):
     for x in range(409):
         ru[cnt][x + 1] += ru[cnt][x] + pow(x, cnt, MOD)
         ru[cnt][x + 1] %= MOD
-      
+
 for ni in range(n):
     for cnt in range(c + 1):
         for ci in range(cnt, c + 1):
-            dp[ni + 1][ci] += (ru[cnt][b[ni] + 1] - ru[cnt][a[ni]]) * dp[ni][ci - cnt] 
+            dp[ni + 1][ci] += (ru[cnt][b[ni] + 1] - ru[cnt][a[ni]]) * dp[ni][ci - cnt]
             dp[ni + 1][ci] %= MOD
 print(dp[-1][-1])

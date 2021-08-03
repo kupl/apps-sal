@@ -1,6 +1,6 @@
+from heapq import heappop, heappush
 import sys
 input = sys.stdin.readline
-from heapq import heappop, heappush
 
 """
 f(x) = （一番上の長方形の左端がxに来るときのコストの最小値） を関数ごと更新していきたい
@@ -15,7 +15,7 @@ N = int(input())
 LR = [[int(x) for x in input().split()] for _ in range(N)]
 
 # initialize
-L,R = LR[0]
+L, R = LR[0]
 S_lower = [-L]
 S_upper = [L]
 min_f = 0
@@ -23,12 +23,14 @@ add_lower = 0
 add_upper = 0
 prev_w = R - L
 
-push_L = lambda x: heappush(S_lower, -x)
-push_R = lambda x: heappush(S_upper, x)
-pop_L = lambda: -heappop(S_lower)
-pop_R = lambda: heappop(S_upper)
 
-for L,R in LR[1:]:
+def push_L(x): return heappush(S_lower, -x)
+def push_R(x): return heappush(S_upper, x)
+def pop_L(): return -heappop(S_lower)
+def pop_R(): return heappop(S_upper)
+
+
+for L, R in LR[1:]:
     w = R - L
     # 平行移動とのminをとるステップ
     add_lower -= w
@@ -37,14 +39,12 @@ for L,R in LR[1:]:
     # abs は瞬間に2傾きが変わるので
     x = pop_L() + add_lower
     y = pop_R() + add_upper
-    a,b,c,d = sorted([x,y,L,L])
+    a, b, c, d = sorted([x, y, L, L])
     push_L(a - add_lower)
     push_L(b - add_lower)
     push_R(c - add_upper)
     push_R(d - add_upper)
-    min_f += c-b
+    min_f += c - b
     prev_w = w
 
 print(min_f)
-
-

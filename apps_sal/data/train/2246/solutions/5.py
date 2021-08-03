@@ -19,26 +19,18 @@ else:
 
         if k < t[j]:
             m_q.put(c[j])
-            while m_q.qsize()>0:
+            while m_q.qsize() > 0:
                 cost += m_q.get()
-
-
 
             # print(m_q)
                 k = k + a
-                if k>=t[j]:
+                if k >= t[j]:
 
                     break
 
-
-
-
-
             #print(cost, j)
-
 
         else:
 
             m_q.put(c[j])
     print(cost)
-

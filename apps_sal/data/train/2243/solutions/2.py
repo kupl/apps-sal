@@ -63,4 +63,3 @@ for a in sorted(ab):
         bit.add(b, bit.sum(b - 1))
 
 print((bit.sum(bit.size) % (10 ** 9 + 7)))
-

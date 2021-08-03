@@ -91,4 +91,3 @@ def solve():
 # print(f_partial([2, 1]))
 # print(f_partial([2, 2]))
 print((solve()))
-

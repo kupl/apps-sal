@@ -54,4 +54,5 @@ def solve(r, w):
 def __starting_point():
     solve(sys.stdin, sys.stdout)
 
+
 __starting_point()

@@ -5,7 +5,7 @@ for _ in range(int(input())):
         continue
     pr = {}
     i = 2
-    while i*i <= q:
+    while i * i <= q:
         if q % i == 0:
             x = 0
             while q % i == 0:
@@ -24,6 +24,5 @@ for _ in range(int(input())):
         while pp % k == 0:
             pp //= k
             x += 1
-        res = max(res, p//k**(x-(v-1)))
+        res = max(res, p // k**(x - (v - 1)))
     print(res)
-

@@ -31,4 +31,3 @@ for i, el in enumerate(oper):
 a = list(accumulate(a_count))[:-1]
 
 print(' '.join(map(str, a)))
-

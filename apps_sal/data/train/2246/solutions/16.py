@@ -38,4 +38,3 @@ xs = inp.input_int_list()
 a = int(inp.input())
 cs = inp.input_int_list()
 print(workout_plan(n, k, xs, a, cs))
-

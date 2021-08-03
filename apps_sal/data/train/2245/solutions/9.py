@@ -23,8 +23,8 @@ for i in range(k):
 cur = 0
 for i in range(0, m):
     cur += c[i]
-    b[l[i]-1] += (cur*d[i])
-    b[r[i]] -= (cur*d[i])
+    b[l[i] - 1] += (cur * d[i])
+    b[r[i]] -= (cur * d[i])
 
 ret = []
 cur = 0
@@ -33,4 +33,3 @@ for i in range(n):
     ret.append(str(cur + a[i]))
 
 sys.stdout.write(' '.join(ret) + '\n')
-

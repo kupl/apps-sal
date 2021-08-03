@@ -25,4 +25,5 @@ def __starting_point():
     C = list(map(int, input().split()))
     print(solve_workout(N, K, X, A, C))
 
+
 __starting_point()
