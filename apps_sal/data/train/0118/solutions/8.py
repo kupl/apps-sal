@@ -12,4 +12,3 @@ for _ in range(t):
         else:
             count += 1
     print(out)
-

@@ -8,7 +8,7 @@ for test in range(tests):
     r = [[int(i) for i in input().split()] for _ in range(n)]
     c = [[int(i) for i in input().split()] for _ in range(m)]
     z = [[-1, -1] for _ in range(n * m + 1)]
-    
+
     for i in range(n):
         for j in range(m):
             z[r[i][j]][0] = j
@@ -21,4 +21,3 @@ for test in range(tests):
 
     for i in a:
         print(' '.join([str(j) for j in i]))
-

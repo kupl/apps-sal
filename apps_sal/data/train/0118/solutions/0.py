@@ -1,13 +1,15 @@
 __MULTITEST = True
 
-## solve
+# solve
+
+
 def solve():
     n, x = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort()
 
     group = 0
-    ptr = n-1
+    ptr = n - 1
     members = 0
 
     currentMin = int(1e10)
@@ -19,14 +21,18 @@ def solve():
             group += 1
             members = 0
             currentMin = int(1e10)
-        
+
         ptr -= 1
-    
+
     print(group)
 
-## main
+# main
+
+
 def __starting_point():
     t = (int(input()) if __MULTITEST else 1)
     for tt in range(t):
-        solve();
+        solve()
+
+
 __starting_point()

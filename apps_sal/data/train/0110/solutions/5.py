@@ -22,4 +22,3 @@ for _ in range(int(input())):
             max_picks = picks
             ans = i - k + 2
     print(max_picks + 1, ans + 1)
-

@@ -25,7 +25,7 @@ for _ in range(int(input())):
         if power < mons[i]:
             print(-1)
             break
-        for j in range(1, n-i+1):
+        for j in range(1, n - i + 1):
             if endu[hero_i] < j:
                 hero_i += 1
                 power = pows[hero_i]
@@ -37,4 +37,3 @@ for _ in range(int(input())):
         else:
             print(ans)
             break
-

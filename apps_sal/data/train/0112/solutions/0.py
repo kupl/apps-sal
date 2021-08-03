@@ -1,5 +1,6 @@
 import math
 
+
 def lexComp(a, b):
     if a[0] != b[0]:
         return -1 if a[0] < b[0] else 1
@@ -7,11 +8,14 @@ def lexComp(a, b):
         return -1 if a[1] < b[1] else 1
     return 0
 
+
 def turn(a, b, c):
     return (b[0] - a[0]) * (c[1] - b[1]) - (b[1] - a[1]) * (c[0] - b[0])
-    
+
+
 def dist2(a, b):
     return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2
+
 
 def solve(n):
     a = [list(map(int, input())) for _ in range(n)]
@@ -53,10 +57,10 @@ def solve(n):
     print(len(hull))
     for p in hull:
         print(p[0], p[1])
-    
+
+
 while True:
     n = int(input())
     if n == 0:
         break
     solve(n)
-

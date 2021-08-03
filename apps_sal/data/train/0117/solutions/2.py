@@ -1,9 +1,9 @@
+from collections import defaultdict
 import math
 from collections import deque
 from sys import stdin, stdout, setrecursionlimit
 from string import ascii_letters
 letters = ascii_letters[:26]
-from collections import defaultdict
 #from functools import reduce
 input = stdin.readline
 #print = stdout.write
@@ -15,12 +15,12 @@ for _ in range(int(input())):
     vals = vertical[0]
     first = vals[0]
     pos = 0
-    
+
     for i in horizontal:
         for g in range(m):
             if i[g] == first:
                 pos = g
-    
+
     path = {}
     order = {}
     for ind, i in enumerate(vals):
@@ -30,5 +30,3 @@ for _ in range(int(input())):
 
     for i in range(len(order)):
         print(*horizontal[order[i]])
-
-

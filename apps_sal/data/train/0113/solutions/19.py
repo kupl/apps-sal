@@ -1,4 +1,7 @@
-import io, sys, atexit, os
+import io
+import sys
+import atexit
+import os
 import math as ma
 from decimal import Decimal as dec
 from itertools import permutations
@@ -34,16 +37,16 @@ mm = 1000000007
 def solve():
     t = nu()
     for tt in range(t):
-        a,b=num()
-        if(a<=b):
-            dd=b-a
-            pq=dd//5
-            yp=dd%5
-            yo=yp//2
-            yu=yp%2
-            print(pq+yu+yo)
+        a, b = num()
+        if(a <= b):
+            dd = b - a
+            pq = dd // 5
+            yp = dd % 5
+            yo = yp // 2
+            yu = yp % 2
+            print(pq + yu + yo)
         else:
-            a,b=b,a
+            a, b = b, a
             dd = b - a
             pq = dd // 5
             yp = dd % 5
@@ -54,4 +57,6 @@ def solve():
 
 def __starting_point():
     solve()
+
+
 __starting_point()

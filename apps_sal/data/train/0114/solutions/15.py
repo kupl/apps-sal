@@ -33,5 +33,3 @@ for _ in range(t):
             maxp = mon
 
     print(res)
-
-

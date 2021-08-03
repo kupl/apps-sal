@@ -46,4 +46,5 @@ def __starting_point():
         stdin = open('tmp.in')
     main()
 
+
 __starting_point()

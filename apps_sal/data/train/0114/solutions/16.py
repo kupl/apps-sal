@@ -3,6 +3,7 @@
 import sys
 from bisect import bisect_left
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -15,9 +16,12 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 class SegTree:
 
@@ -33,9 +37,9 @@ class SegTree:
         self.tree = [self.intv] * (n2 << 1)
         if A:
             for i in range(n):
-                self.tree[n2+i] = A[i]
-            for i in range(n2-1, -1, -1):
-                self.tree[i] = self.func(self.tree[i*2], self.tree[i*2+1])
+                self.tree[n2 + i] = A[i]
+            for i in range(n2 - 1, -1, -1):
+                self.tree[i] = self.func(self.tree[i * 2], self.tree[i * 2 + 1])
 
     def update(self, i, x):
 
@@ -43,7 +47,7 @@ class SegTree:
         self.tree[i] = x
         while i > 0:
             i >>= 1
-            self.tree[i] = self.func(self.tree[i*2], self.tree[i*2+1])
+            self.tree[i] = self.func(self.tree[i * 2], self.tree[i * 2 + 1])
 
     def query(self, a, b):
 
@@ -62,22 +66,24 @@ class SegTree:
         return s
 
     def get(self, i):
-        return self.tree[i+self.n2]
+        return self.tree[i + self.n2]
 
     def all(self):
         return self.tree[1]
+
 
 def bisearch_max(mn, mx, func):
 
     ok = mn
     ng = mx
-    while ok+1 < ng:
-        mid = (ok+ng) // 2
+    while ok + 1 < ng:
+        mid = (ok + ng) // 2
         if func(mid):
             ok = mid
         else:
             ng = mid
     return ok
+
 
 def check(m):
     mx = st.query(cur, m)
@@ -87,6 +93,7 @@ def check(m):
     _, s = PS[idx]
     scnt = m - cur
     return s >= scnt
+
 
 ans = []
 for _ in range(INT()):
@@ -99,15 +106,15 @@ for _ in range(INT()):
         PS.append((p, s))
 
     PS.sort()
-    for i in range(M-1, 0, -1):
-        if PS[i][1] > PS[i-1][1]:
-            PS[i-1] = (PS[i-1][0], PS[i][1])
+    for i in range(M - 1, 0, -1):
+        if PS[i][1] > PS[i - 1][1]:
+            PS[i - 1] = (PS[i - 1][0], PS[i][1])
     P, _ = list(zip(*PS))
-    
+
     st = SegTree(N, max, 0, A)
     cur = day = 0
     while cur < N:
-        res = bisearch_max(cur, N+1, check)
+        res = bisearch_max(cur, N + 1, check)
         if res == cur:
             ans.append(str(-1))
             break
@@ -117,4 +124,3 @@ for _ in range(INT()):
         ans.append(str(day))
 
 print('\n'.join(ans))
-

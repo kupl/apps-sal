@@ -17,4 +17,3 @@ for i in range(t):
             ans = cnt
             l = j + 1
     print(ans + 1, l + 1)
-
