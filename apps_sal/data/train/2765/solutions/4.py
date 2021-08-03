@@ -4,7 +4,7 @@ def tokenise(s, split='*#. '):
     yields each split with the character used to split as it's prefix, with 
     the exception of spaces followed by another split character, when spaces 
     are removed
-    
+
     Example:
         split('.abc #123 .def.ghi *')
     will yield the following strings:
@@ -20,11 +20,12 @@ def tokenise(s, split='*#. '):
     if buffer.strip():
         yield buffer.strip()
 
+
 def score_selector(selector):
     """
     Given a CSS selector build a score for the selector that can be used for 
     sorting precendence.
-    
+
     Returns a tuple with counts of the following:
         (stars, ids, classes, tagnames)
     Stars are numbered positively, the others are numbered negatively 
@@ -41,11 +42,10 @@ def score_selector(selector):
             low += 1
         else:
             tags -= 1
-        
-    return low, ids, classes, tags 
+
+    return low, ids, classes, tags
 
 
 def compare(a, b):
     """Compares two CSS selectors and returns the one with highest precedence"""
     return sorted([(score_selector(s), -i, s) for i, s in enumerate([a, b])])[0][-1]
-

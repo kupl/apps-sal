@@ -1,5 +1,5 @@
 def decipher(cipher):
-    temp,aus = "",""
+    temp, aus = "", ""
     for dig in cipher:
         temp = temp + dig
         if int(temp) >= 97 and int(temp) <= 122:

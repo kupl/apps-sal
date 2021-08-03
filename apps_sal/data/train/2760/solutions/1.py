@@ -13,4 +13,3 @@ def total_licks(env):
             message += ' The toughest challenge was %s.' % toughest_challenge[0]
 
     return message
-

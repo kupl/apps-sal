@@ -1,11 +1,13 @@
 from math import sqrt
 
+
 def factors(n):
     f = []
     for x in range(1, int(sqrt(n)) + 1):
         if n % x == 0:
             f.append([x, int(n / x)])
     return f
+
 
 def sol_equa(n):
     ff = factors(n)

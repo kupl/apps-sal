@@ -2,7 +2,7 @@ def scoreboard(string):
     scores = ["nil", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
     arr = []
     temp = -1
-    num = -1 
+    num = -1
     for score in scores:
         i = string.find(score)
         if i != -1:

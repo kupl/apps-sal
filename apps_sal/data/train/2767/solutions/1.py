@@ -1,5 +1,6 @@
 import re
 
+
 def is_matched(read):
     cigar, seq = read
     matches = re.findall(r'(\d+)([A-Z])', cigar)
