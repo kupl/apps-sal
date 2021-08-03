@@ -13,4 +13,3 @@ def most_equal(n):
 m = int(input())
 for elem in most_equal(m):
     print(*elem)
-

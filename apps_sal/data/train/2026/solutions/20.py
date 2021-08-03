@@ -38,4 +38,5 @@ def dijkstra():  # , parent):
 def __starting_point():
     print(dijkstra())
 
+
 __starting_point()

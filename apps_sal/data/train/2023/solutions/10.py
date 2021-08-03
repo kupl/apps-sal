@@ -1,6 +1,5 @@
-3
-
 import itertools
+3
 
 
 def main():
@@ -35,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

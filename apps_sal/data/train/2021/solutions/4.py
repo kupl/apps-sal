@@ -19,7 +19,8 @@ class Graph:
 
     def isBipartite(self):
         return all(self.isBipartiteComponent(vertex) for vertex in range(1, self.numVertices)
-                                                              if self.groupOf(vertex) == None)
+                   if self.groupOf(vertex) == None)
+
     def isBipartiteComponent(self, vertex):
         if len(self.neighbors[vertex]) == 0:
             return True
@@ -42,7 +43,7 @@ class Graph:
                     queue.append(neighbor)
 
         return True
-    
+
     def groupOf(self, vertex):
         return 0 if vertex in self.groups[0] else 1 if vertex in self.groups[1] else None
 
@@ -56,7 +57,9 @@ def solve():
     else:
         print(-1)
 
+
 def __starting_point():
     solve()
+
 
 __starting_point()

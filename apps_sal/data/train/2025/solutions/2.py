@@ -9,7 +9,7 @@ for i in range(2, n + 1):
         continue
     for j in range(i, n + 1, i):
         p[j] = False
-    
+
     a = i
     while a <= n:
         l.append(a)

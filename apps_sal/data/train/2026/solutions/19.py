@@ -47,4 +47,5 @@ def minimum(n, visited, lower_cost):
 def __starting_point():
     print(main())
 
+
 __starting_point()

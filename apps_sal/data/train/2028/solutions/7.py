@@ -6,7 +6,7 @@ if n <= 2:
     return
 
 if len(s) % 2 == 1:
-    s = s[:n//2] + s[n//2 + 1:]
+    s = s[:n // 2] + s[n // 2 + 1:]
     if len(set(s)) == 1:
         print('Impossible')
         return
@@ -27,4 +27,3 @@ for i in range(0, n):
 
 print(2)
 return
-

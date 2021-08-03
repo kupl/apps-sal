@@ -1,16 +1,16 @@
+from math import sqrt
 n = int(input())
 
-from math import sqrt
 a = []
 y = ''
 
 if n > 1:
-    for i in range (2, n+1):
+    for i in range(2, n + 1):
         k = 0
-        for j in range(2, int(sqrt(i))+1):
-             if i % j == 0:
-                 k = 1
-        if k ==0:
+        for j in range(2, int(sqrt(i)) + 1):
+            if i % j == 0:
+                k = 1
+        if k == 0:
             a.append(i)
 
 k = 0
@@ -22,13 +22,7 @@ for i in range(len(a)):
 
 
 if n == 1:
-   print(0)
+    print(0)
 else:
     print(k)
     print(y)
-
-
-
-
-    
-

@@ -39,4 +39,3 @@ print("\n", len(vc1), sep='')
 for i in vc1:
     print(i, end=' ')
 print()
-

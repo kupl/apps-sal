@@ -1,5 +1,7 @@
 import math
 import array
+
+
 def is_prime(x):
     i = 2
     while(i <= math.sqrt(x)):
@@ -7,6 +9,8 @@ def is_prime(x):
             return False
         i = i + 1
     return True
+
+
 primel = [0 for c in range(1000)]
 prime = array.array('i', primel)
 n = int(input())
@@ -19,7 +23,7 @@ while(i <= n):
     if(is_prime(i)):
         answer = answer + 1
         prime[i - 1] = 1
-        j = i*i
+        j = i * i
         while(j <= n):
             prime[j - 1] = 1
             answer = answer + 1
@@ -29,11 +33,5 @@ i = 2
 print(answer)
 while(i <= n):
     if(prime[i - 1]):
-        print(i, end = ' ')
+        print(i, end=' ')
     i = i + 1
-    
-        
-                
-        
-        
-

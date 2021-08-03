@@ -12,4 +12,3 @@ for i in range(k - 1, -1, -1):
         if j < n:
             print(1 + j, end=' ')
 print()
-

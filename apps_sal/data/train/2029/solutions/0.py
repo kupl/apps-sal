@@ -23,7 +23,8 @@ def main():
         print("NO")
     else:
         print("YES")
-        print(*ans[:2*n])
+        print(*ans[:2 * n])
     return 0
+
 
 main()
