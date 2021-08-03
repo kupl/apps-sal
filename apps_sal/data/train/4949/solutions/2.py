@@ -1,5 +1,6 @@
 from math import sin, cos, pi
 
+
 def crusoe(n, d, ang, dist_mult, ang_mult):
     x = y = z = 0.0
     for i in range(n):

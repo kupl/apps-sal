@@ -29,7 +29,7 @@ def shut_the_gate(farm):
         if "R" in s + s2:
             removals |= {"V"}
         # Remove losses
-        f[start:stop+1] = ['.' if c in removals else c for c in f[start:stop+1]]
+        f[start:stop + 1] = ['.' if c in removals else c for c in f[start:stop + 1]]
 
     # Build resultant state
     return "".join(f)

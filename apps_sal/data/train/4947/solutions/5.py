@@ -15,6 +15,8 @@ def good_digits(m, d):
             return False
         res.append(c)
     return True
+
+
 def sel_number(n, d):
     cnt = 0
     i = 0

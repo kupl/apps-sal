@@ -1,7 +1,7 @@
 def house_numbers_sum(inp):
-    tab=[]
+    tab = []
     for x in inp:
-        if x !=0:
+        if x != 0:
             tab.append(x)
         else:
             break

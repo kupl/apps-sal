@@ -1,1 +1,1 @@
-string_counter = str.count    
+string_counter = str.count

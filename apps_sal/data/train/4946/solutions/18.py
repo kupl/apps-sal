@@ -3,7 +3,6 @@ def house_numbers_sum(inp):
     for num in inp:
         if num == 0:
             break
-        else: 
-            total +=num
+        else:
+            total += num
     return total
-

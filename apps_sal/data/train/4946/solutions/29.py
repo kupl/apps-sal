@@ -4,4 +4,4 @@ def house_numbers_sum(inp):
         if x == 0:
             return total
         else:
-            total+=x
+            total += x

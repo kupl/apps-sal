@@ -5,4 +5,3 @@ def house_numbers_sum(inp):
             total = total + x
         else:
             return total
-

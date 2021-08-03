@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def directions(goal):
     c = Counter(goal)
     for a, b in ['NS', 'EW']:

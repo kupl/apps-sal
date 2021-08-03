@@ -8,4 +8,3 @@ def house_numbers_sum(inp):
     for i in a:
         sum = sum + i
     return sum
-

@@ -1,4 +1,6 @@
 from math import cos, sin, pi
+
+
 def crusoe(n, d, ang, dist_mult, ang_mult):
     def sim(center, scale, ang):
         resx = center[0] + scale * cos(ang * pi / 180.0)

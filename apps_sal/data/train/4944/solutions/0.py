@@ -41,14 +41,14 @@ class Vector:
     def cross(self, other) -> "Vector":
         # https://www.mathsisfun.com/algebra/vectors-cross-product.html
         return Vector(
-            self.y*other.z - self.z*other.y,
-            self.z*other.x - self.x*other.z,
-            self.x*other.y - self.y*other.x
+            self.y * other.z - self.z * other.y,
+            self.z * other.x - self.x * other.z,
+            self.x * other.y - self.y * other.x
         )
 
     def dot(self, other) -> int:
         # https://www.mathsisfun.com/algebra/vectors-dot-product.html
-        return self.x*other.x + self.y*other.y + self.z*other.z
+        return self.x * other.x + self.y * other.y + self.z * other.z
 
     def to_tuple(self) -> tuple:
         return self.x, self.y, self.z
@@ -59,12 +59,11 @@ class Vector:
     @property
     def magnitude(self) -> float:
         return math.sqrt(
-            sum (
-                    (
-                        self.x ** 2,
-                        self.y ** 2,
-                        self.z ** 2
-                    )
+            sum(
+                (
+                    self.x ** 2,
+                    self.y ** 2,
+                    self.z ** 2
+                )
             )
         )
-

@@ -1,1 +1,1 @@
-string_counter = lambda s,c: s.count(c)
+def string_counter(s, c): return s.count(c)

@@ -6,4 +6,3 @@ def sel_number(n, d):
                 all(c - b <= d for b, c in zip(nums[:-1], nums[1:])):
             cnt += 1
     return cnt
-

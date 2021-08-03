@@ -6,4 +6,3 @@ def house_numbers_sum(inp):
             break
     return r
     # Flez
-

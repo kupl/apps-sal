@@ -1,5 +1,6 @@
 ANIMS = {'H': ['A', 'V'], 'R': ['V'], 'C': ['~']}
 
+
 def shut_the_gate(farm):
     print(farm)
     f = list(farm)
@@ -27,10 +28,9 @@ def shut_the_gate(farm):
                 f[i] = '.'
     return ''.join(f)
 
+
 def index_of(farm, j, food):
     try:
         return farm[j:].index(food) + j
     except:
         return None
-
-
