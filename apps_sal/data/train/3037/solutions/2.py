@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def obtain_max_number(arr):
     count = Counter(arr)
     while any(value > 1 for value in list(count.values())):
@@ -9,11 +10,9 @@ def obtain_max_number(arr):
     return max(count)
 
 
-
-
 # without import
 #
-#def obtain_max_number(arr):
+# def obtain_max_number(arr):
 #    s = set(arr)
 #    while any(arr.count(n) > 1 for n in s):
 #        c = next(n for n in s if arr.count(n) > 1)
@@ -21,4 +20,3 @@ def obtain_max_number(arr):
 #        arr.remove(c)
 #        arr.append(c*2)
 #    return max(arr)
-

@@ -13,4 +13,3 @@ def interpreter(tape):
         elif c == "*":
             output = f"{output}{chr(cells[cur] % 256)}"
     return output
-

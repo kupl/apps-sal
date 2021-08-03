@@ -5,5 +5,5 @@ def alphabetic(s):
     for i in range(n):
         if (c[i] != s[i]):
             return False
-        
+
     return True

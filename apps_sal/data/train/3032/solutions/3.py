@@ -8,5 +8,5 @@ def factorsRange(n, m):
         i = 2
         if num not in dict:
             dict[num] = ['None']
-    
+
     return dict

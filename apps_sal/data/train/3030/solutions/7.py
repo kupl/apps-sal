@@ -9,4 +9,3 @@ def nb_dig(n, d):
             x //= 10
 
     return result
-

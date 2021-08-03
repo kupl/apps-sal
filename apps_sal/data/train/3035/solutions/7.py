@@ -5,8 +5,8 @@ def getMatrixProduct(A, B):
     cols_B = len(B[0])
 
     if cols_A != rows_B:
-      print( "Cannot multiply the two matrices. Incorrect dimensions.")
-      return -1
+        print("Cannot multiply the two matrices. Incorrect dimensions.")
+        return -1
 
     # Create the result matrix
     # Dimensions would be rows_A x cols_B

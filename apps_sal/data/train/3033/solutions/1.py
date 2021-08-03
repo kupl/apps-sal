@@ -2,6 +2,7 @@ from collections import defaultdict
 from ctypes import c_ubyte
 from io import StringIO
 
+
 class State:
     def __init__(self):
         self.selector = 0
@@ -11,7 +12,7 @@ class State:
     @property
     def cell(self):
         return self.cells[self.selector]
-        
+
     @cell.setter
     def cell(self, value):
         self.cells[self.selector] = value
@@ -32,7 +33,7 @@ class State:
         self.output.write(chr(self.cell.value))
 
     commands = defaultdict(lambda self: 0, {'>': right, '<': left, '+': inc, '*': out})
-        
+
 
 def interpreter(tape):
     s = State()

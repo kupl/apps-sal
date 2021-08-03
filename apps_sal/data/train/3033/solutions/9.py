@@ -1,5 +1,5 @@
 def interpreter(tape):
-    cells = [ 0 for _ in range(100)]
+    cells = [0 for _ in range(100)]
     output = ''
     ptr = 0
     for i in tape:
@@ -15,4 +15,3 @@ def interpreter(tape):
         else:
             pass
     return output
-

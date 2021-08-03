@@ -1,5 +1,6 @@
 from bisect import insort
 
+
 def obtain_max_number(arr):
     arr = sorted(arr)
     while True:
@@ -10,4 +11,4 @@ def obtain_max_number(arr):
             prev = x
         else:
             return max(arr)
-        insort(arr, arr.pop(i) + arr.pop(i-1))
+        insort(arr, arr.pop(i) + arr.pop(i - 1))
