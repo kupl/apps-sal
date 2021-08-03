@@ -3,8 +3,8 @@ def evil(n):
     t = 0
     for i in x:
         if i == "1":
-            t+=1
-    
+            t += 1
+
     if t % 2 == 0 and t >= 1:
         return "It's Evil!"
     else:

@@ -33,7 +33,7 @@ def binary_places(num):
 
     for index, char in enumerate(values_list):
         if char == '?':
-           values_list[index] = 0
+            values_list[index] = 0
 
     return values_list
 
@@ -45,4 +45,3 @@ def evil(n):
         return "It's Evil!"
     elif 1 in num_list and num_list.count(1) % 2 == 1:
         return "It's Odious!"
-

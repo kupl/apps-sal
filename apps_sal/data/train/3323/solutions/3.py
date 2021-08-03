@@ -1,11 +1,11 @@
 def faulty_odometer(n, acc=0):
     rang = len(str(n)) - 1
     amt = int('1' + '0' * rang)
-    q = n//amt
+    q = n // amt
     if q >= 4:
         n -= amt
         q -= 1
     res = n - (amt - 9 ** rang) * q
-    left = n - amt*q
+    left = n - amt * q
     acc += res - left
     return faulty_odometer(left, acc) if left >= 4 else acc + left

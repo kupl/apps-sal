@@ -5,5 +5,5 @@ def evil(n):
     n = (n & 0x00FF00FF00FF00FF) + ((n >> 8) & 0x00FF00FF00FF00FF)
     n = (n & 0x0000FFFF0000FFFF) + ((n >> 16) & 0x0000FFFF0000FFFF)
     n = (n & 0x00000000FFFFFFFF) + ((n >> 32) & 0x00000000FFFFFFFF)
-    
+
     return "It's Odious!" if n % 2 == 1 else "It's Evil!"

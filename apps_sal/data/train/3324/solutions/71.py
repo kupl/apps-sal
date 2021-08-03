@@ -5,4 +5,3 @@ def sale_hotdogs(n):
         return 95 * n
     elif n >= 10:
         return 90 * n
-
