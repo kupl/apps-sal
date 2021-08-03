@@ -33,7 +33,7 @@ def knight(p1, p2):
         sp, step = que.pop()
         for nm in _gen_move(sp):
             # check if next move is last
-            nm_ = mapper[nm[0]]+str(nm[1])
+            nm_ = mapper[nm[0]] + str(nm[1])
             if nm_ == p2:
                 return step
-            que.appendleft((nm, step+1))
+            que.appendleft((nm, step + 1))

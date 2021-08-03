@@ -65,7 +65,7 @@ class Befunge93Instance:
             return False
 
         instr = self.get_instr()
-        #self.print_status()
+        # self.print_status()
 
         if self.string_mode:
             if instr == '\"':
@@ -150,4 +150,3 @@ def interpret(code):
     interpreter = Befunge93Instance(code)
     interpreter.run()
     return interpreter.output
-

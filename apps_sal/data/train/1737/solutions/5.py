@@ -12,4 +12,3 @@ def runoff(votes):
         for voter in votes:
             for candidate in loosers:
                 voter.remove(candidate)
-

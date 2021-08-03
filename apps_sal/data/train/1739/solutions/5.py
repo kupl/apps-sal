@@ -2,6 +2,7 @@ from re import compile
 
 TOKENIZER = compile('(0+)')
 
+
 def decodeBits(bits):
     tokens = TOKENIZER.split(bits.strip('0'))
     lenDot = min(len(token) for token in tokens)
@@ -14,6 +15,6 @@ def decodeBits(bits):
             ret.append(' ' if len(token) <= lenDash else '   ')
     return ''.join(ret)
 
+
 def decodeMorse(morseCode):
     return ' '.join(''.join(MORSE_CODE[c] for c in word.split(' ')) for word in morseCode.strip().split('   '))
-

@@ -1,7 +1,8 @@
 import heapq
 
+
 def knight(p1, p2):
-    heuristic = lambda f: max(abs(f[0] - p2[0]), abs(f[1] - p2[1])) // 2
+    def heuristic(f): return max(abs(f[0] - p2[0]), abs(f[1] - p2[1])) // 2
     p1, p2 = ((ord(p[0]) - ord('a'), int(p[1]) - 1) for p in (p1, p2))
     pqueue = [(heuristic(p1), p1, 0)]
     while pqueue:

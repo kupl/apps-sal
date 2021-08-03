@@ -38,13 +38,16 @@ class Befunge93:
 def pop_push_on(ch):
     def deco(f):
         nargs = len(inspect.getargspec(f).args)
+
         def wrapper(self):
             self.stack.append(f(*[self.stack.pop() for i in range(nargs)]))
         Befunge93.instructions[ch] = wrapper
         return wrapper
     return deco
 
+
 def on(ch): return lambda f: Befunge93.instructions.__setitem__(ch, f)
+
 
 pop_push_on('+')(lambda a, b: a + b)
 pop_push_on('-')(lambda a, b: b - a)
@@ -72,4 +75,5 @@ on('#')(lambda self: self.forward())
 on('"')(lambda self: self.string_literal())
 on('p')(lambda self: self.plane[self.stack.pop()].__setitem__(self.stack.pop(), chr(self.stack.pop())))
 on('g')(lambda self: self.stack.append(ord(self.plane[self.stack.pop()][self.stack.pop()])))
-for ch in '0123456789': on(ch)(lambda self, ch=int(ch): self.stack.append(ch))
+for ch in '0123456789':
+    on(ch)(lambda self, ch=int(ch): self.stack.append(ch))

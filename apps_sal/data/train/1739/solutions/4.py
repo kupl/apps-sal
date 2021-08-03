@@ -8,6 +8,7 @@ def decodeBits(bits):
     return ' '.join([char.replace('1' * 3 * u, '-').replace('1' * u, '.').replace('0', '')
                      for char in bits.split('0' * 3 * u)])
 
+
 def decodeMorse(morseCode):
     MORSE_CODE[''] = ' '
     arr = [MORSE_CODE[x] for x in morseCode.strip().split(' ')]

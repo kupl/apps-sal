@@ -10,14 +10,17 @@ def runoff(voters):
         new_voters = [[candidate for candidate in voter if candidate not in losers] for voter in voters]
         return runoff(new_voters)
 
+
 def count_votes(voters):
     votes = {candidate: 0 for candidate in voters[0]}
     for voter in voters:
         votes[voter[0]] += 1
     return votes
 
+
 def get_winner(votes):
     return max(votes, key=lambda x: votes[x])
+
 
 def get_losers(votes):
     min_vote = min(votes.values())

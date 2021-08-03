@@ -1,10 +1,12 @@
 import re
 from fractions import Fraction as fraction
 
+
 def solve(*equations):
     A, x, b = parse_equations(equations)
     answer = gaussian_elimination(A, x, b)
     return answer
+
 
 def parse_equations(equations):
     create_equation = Equation.from_string
@@ -25,16 +27,17 @@ def parse_equations(equations):
             A[i].append(constant if constant else 0)
     return A, x, b
 
+
 def gaussian_elimination(A, x, b):
     n = len(A)
     if n < len(x):
-        return None #There will be free variables
+        return None  # There will be free variables
     for a, b in zip(A, b):
         a.append(b)
     for i in range(len(x)):
         max_el = abs(A[i][i])
         max_row = i
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if abs(A[j][i]) > max_el:
                 max_el = abs(A[j][i])
                 max_row = j
@@ -47,25 +50,27 @@ def gaussian_elimination(A, x, b):
             a2 = A[j][i]
             if a2 == 0:
                 continue
-            c = -a2/a1
+            c = -a2 / a1
             A[j][i] = 0
             for k in range(i + 1, len(x) + 1):
-                A[j][k] += c*A[i][k]
+                A[j][k] += c * A[i][k]
     return back_substitution(A, x)
+
 
 def back_substitution(U, x):
     answer = {}
     col = len(x) - 1
     for row in range(len(U) - 1, -1, -1):
         if U[row][col] == 0:
-            if round(U[row][len(x)], 9) != 0: #b not in C(A)
+            if round(U[row][len(x)], 9) != 0:  # b not in C(A)
                 return None
             continue
-        answer[x[col]] = U[row][len(x)]/U[row][col]
-        for i in range(row -1, -1, -1):
-            U[i][len(x)] -= U[i][col]*answer[x[col]]
+        answer[x[col]] = U[row][len(x)] / U[row][col]
+        for i in range(row - 1, -1, -1):
+            U[i][len(x)] -= U[i][col] * answer[x[col]]
         col -= 1
     return answer
+
 
 class Equation:
     def __init__(self, variables, constant):
@@ -74,7 +79,7 @@ class Equation:
 
     @classmethod
     def from_string(cls, eq):
-        obj_list = [] #ax+by+cz-5=0 => [a,b,c]
+        obj_list = []  # ax+by+cz-5=0 => [a,b,c]
         obj_regex = re.compile(r"-?\d*[a-z]+|-?\d+")
 
         substring = eq[0: eq.find("=")]
@@ -82,14 +87,14 @@ class Equation:
         if len(found_obj):
             for obj in found_obj:
                 obj_list.append(obj)
-        
+
         substring = eq[eq.find("=") + 1:]
         found_obj = obj_regex.findall(substring)
         if len(found_obj):
             for obj in found_obj:
-                obj = obj[1:] if "-" in obj else "-" + obj #Right hand objects become negative
+                obj = obj[1:] if "-" in obj else "-" + obj  # Right hand objects become negative
                 obj_list.append(obj)
-        
+
         s_regex = re.compile(r"[a-z]+")
         constant = -sum(int(obj) for obj in obj_list if not s_regex.search(obj))
         variable_list = [obj for obj in obj_list if s_regex.search(obj)]
@@ -111,6 +116,6 @@ class Equation:
             else:
                 variable_dict[s] = n
         return cls(variable_dict, constant)
-        
+
     def __repr__(self):
         return "Variables: {}\nConstant: {}".format(self.variables, self.constant)
