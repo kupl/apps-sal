@@ -24,7 +24,8 @@ def solve():
 
 
 def run():
-    if sys.hexversion == 50594544: sys.stdin = open("test.txt")
+    if sys.hexversion == 50594544:
+        sys.stdin = open("test.txt")
     print(solve())
 
 

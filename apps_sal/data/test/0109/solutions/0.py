@@ -37,7 +37,7 @@ while(K > 0):
             mult = 1
         q.put((-(a - d), 2 * mult, c))
     ans += a * min(b, K)
-    K -= b;
+    K -= b
 
 tot = (N - R + 1) * (M - R + 1)
 #print("ANS = " + str(ans))

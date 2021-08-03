@@ -1,8 +1,10 @@
 def to_bin(a):
     out = []
     while a > 0:
-        if a % 2 == 1: out.append(1)
-        else: out.append(0)
+        if a % 2 == 1:
+            out.append(1)
+        else:
+            out.append(0)
         a //= 2
     while len(out) < 6:
         out.append(0)

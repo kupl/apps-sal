@@ -10,10 +10,16 @@ def isKthBitSet(n, k):
 
 x = int(input())
 ans = 0
-if(isKthBitSet(x, 6)): ans += 2**5
-if(isKthBitSet(x, 5)): ans += 2**0
-if(isKthBitSet(x, 4)): ans += 2**2
-if(isKthBitSet(x, 3)): ans += 2**3
-if(isKthBitSet(x, 2)): ans += 2**1
-if(isKthBitSet(x, 1)): ans += 2**4
+if(isKthBitSet(x, 6)):
+    ans += 2**5
+if(isKthBitSet(x, 5)):
+    ans += 2**0
+if(isKthBitSet(x, 4)):
+    ans += 2**2
+if(isKthBitSet(x, 3)):
+    ans += 2**3
+if(isKthBitSet(x, 2)):
+    ans += 2**1
+if(isKthBitSet(x, 1)):
+    ans += 2**4
 print(ans)
