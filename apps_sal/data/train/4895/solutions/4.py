@@ -1,5 +1,6 @@
 import random
 
+
 def actually_really_good(foods):
     if not foods:
         return "You know what's actually really good? Nothing!"

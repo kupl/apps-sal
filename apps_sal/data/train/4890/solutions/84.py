@@ -1,4 +1,4 @@
-def find_difference(a, b): 
+def find_difference(a, b):
     sum1 = 1
     sum2 = 1
     for i in a:
@@ -6,4 +6,3 @@ def find_difference(a, b):
     for j in b:
         sum2 = sum2 * j
     return abs(sum1 - sum2)
-

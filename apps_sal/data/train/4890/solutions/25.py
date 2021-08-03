@@ -4,4 +4,4 @@ def find_difference(a, b):
         x *= i
     for j in b:
         y *= j
-    return abs(x-y)
+    return abs(x - y)

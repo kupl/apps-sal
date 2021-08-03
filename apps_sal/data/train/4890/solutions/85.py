@@ -1,5 +1,6 @@
 import numpy
 
+
 def find_difference(a, b):
     aa = numpy.prod(a)
     bb = numpy.prod(b)

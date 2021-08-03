@@ -21,4 +21,4 @@ def find_biggTriang(ps):
     max_area_triangles = [map(list, tr) for tr in max_area_triangles]
     if len(max_area_triangles) == 1:
         max_area_triangles = max_area_triangles[0]
-    return [n, n * (n-1) * (n-2) // 6, count, max_area_triangles, max_area]
+    return [n, n * (n - 1) * (n - 2) // 6, count, max_area_triangles, max_area]

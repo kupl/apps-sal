@@ -6,6 +6,6 @@ def find_difference(a, b):
     for j in range(len(b)):
         y = y * b[j]
     if x >= y:
-        return (x-y)
+        return (x - y)
     else:
-        return (y-x)
+        return (y - x)

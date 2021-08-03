@@ -8,4 +8,3 @@ def actually_really_good(foods):
         return OUTPUT('Nothing!')
     return OUTPUT('{} and more {}.'.format(
         foods[0].capitalize(), foods[0 if length == 1 else 1].lower()))
-

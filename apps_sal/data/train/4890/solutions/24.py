@@ -7,4 +7,3 @@ def find_difference(a, b):
     else:
         return -z
     # Your code here!
-

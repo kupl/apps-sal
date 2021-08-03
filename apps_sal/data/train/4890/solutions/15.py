@@ -1,3 +1,4 @@
 from numpy import prod
 
-find_difference = lambda a, b: abs(prod(a) - prod(b))
+
+def find_difference(a, b): return abs(prod(a) - prod(b))
