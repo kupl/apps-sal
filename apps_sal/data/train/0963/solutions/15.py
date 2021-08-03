@@ -1,8 +1,5 @@
 
 
-
-
-
 for _ in range(0, int(input())):
 
     N = int(input())
@@ -10,12 +7,12 @@ for _ in range(0, int(input())):
     count = 0
 
     hillsH = list(map(int, input().split()))
-    
+
     def FindAns(hills):
         maxIndex = 0
         maxNum = max(hills)
         maxIndex = hills.index(maxNum)
-    
+
         listRight = []
         listLeft = []
 
@@ -25,9 +22,9 @@ for _ in range(0, int(input())):
         for i in range(0, maxIndex):
             listLeft.append(hills[i])
 
-        for i in range(maxIndex+1, len(hills)):
+        for i in range(maxIndex + 1, len(hills)):
             listRight.append(hills[i])
 
-        return 1 + min(FindAns(listLeft), FindAns(listRight)) 
-        
+        return 1 + min(FindAns(listLeft), FindAns(listRight))
+
     print(FindAns(hillsH))
