@@ -8,9 +8,12 @@ def abc063_d():
         v = 0
         for hi in H:
             v += (max(0, hi - x * b) + d - 1) // d
-            if v > x: break
-        if v <= x: upper = x
-        else: lower = x
+            if v > x:
+                break
+        if v <= x:
+            upper = x
+        else:
+            lower = x
     print(upper)
 
 

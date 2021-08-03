@@ -8,13 +8,13 @@ else:
     ans = 0
     for i in s:
         if i == '>':
-            break;
+            break
         else:
-            ans += 1;
+            ans += 1
     for i in range(n - 1, -1, -1):
         t = s[i]
         if t == "<":
-            break;
+            break
         else:
-            ans += 1;
+            ans += 1
     print(ans)

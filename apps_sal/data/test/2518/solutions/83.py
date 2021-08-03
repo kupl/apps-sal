@@ -6,7 +6,8 @@ def f(x, h):
     hp = [hh - (b * x) for hh in hp]
     count = 0
     for hh in hp:
-        if hh <= 0: continue
+        if hh <= 0:
+            continue
         count += ceil(hh / (a - b))
     return x >= count
 

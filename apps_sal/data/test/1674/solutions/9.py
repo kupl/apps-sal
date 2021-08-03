@@ -2,7 +2,9 @@ import math
 import bisect
 import itertools
 import sys
-I = lambda: sys.stdin.readline()
+def I(): return sys.stdin.readline()
+
+
 mod = 10**9 + 7
 '''fact=[1]*100001
 ifact=[1]*100001
@@ -31,7 +33,8 @@ def lcm(a, b):
 
 
 def merge(a, b):
-    i = 0; j = 0
+    i = 0
+    j = 0
     c = 0
     ans = []
     while i < len(a) and j < len(b):
@@ -59,15 +62,21 @@ def mergesort(a):
 
 
 def is_prime(num):
-    if num == 1: return False
-    if num == 2: return True
-    if num == 3: return True
-    if num % 2 == 0: return False
-    if num % 3 == 0: return False
+    if num == 1:
+        return False
+    if num == 2:
+        return True
+    if num == 3:
+        return True
+    if num % 2 == 0:
+        return False
+    if num % 3 == 0:
+        return False
     t = 5
     a = 2
     while t <= int(math.sqrt(num)):
-        if num % t == 0: return False
+        if num % t == 0:
+            return False
         t += a
         a = 6 - a
     return True
@@ -119,7 +128,8 @@ for i in range(1):
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
     s = input()
-    c = 1; b = []
+    c = 1
+    b = []
     for i in range(1, n):
         if s[i - 1] == s[i]:
             c += 1

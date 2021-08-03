@@ -12,7 +12,8 @@ while abs(ok - ng) > 1:
     cnt = 0
     flag = 1
     for val in h:
-        if val <= b * X: continue
+        if val <= b * X:
+            continue
         temp = (val - b * X + a - b - 1) // (a - b)
         cnt += temp
 
@@ -21,6 +22,8 @@ while abs(ok - ng) > 1:
             break
 
     #print(X, cnt, ok)
-    if flag: ok = X
-    else: ng = X
+    if flag:
+        ok = X
+    else:
+        ng = X
 print(ok)

@@ -8,15 +8,22 @@ def main():
     result = 0
     maxi = 0
     for i in range(n):
-        if a[i] not in d: d[a[i]] = 0
-        if b[i] not in d: d[b[i]] = 0
-        if d[a[i]] == 0: diff += 1
+        if a[i] not in d:
+            d[a[i]] = 0
+        if b[i] not in d:
+            d[b[i]] = 0
+        if d[a[i]] == 0:
+            diff += 1
         d[a[i]] += 1
-        if d[a[i]] == 0: diff -= 1
-        if d[b[i]] == 0: diff += 1
+        if d[a[i]] == 0:
+            diff -= 1
+        if d[b[i]] == 0:
+            diff += 1
         d[b[i]] -= 1
-        if d[b[i]] == 0: diff -= 1
-        if diff == 0: result += 1
+        if d[b[i]] == 0:
+            diff -= 1
+        if diff == 0:
+            result += 1
 
     print(result)
 

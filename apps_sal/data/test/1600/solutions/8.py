@@ -11,7 +11,8 @@ def process():
 
     hpx = []
     last = {}
-    for i, v in enumerate(h): hpx.append([v, i])
+    for i, v in enumerate(h):
+        hpx.append([v, i])
     hpx = sorted(hpx, key=lambda x: x[0])
     maxp = -1
     i = 0

@@ -13,6 +13,8 @@ ok, ng = 10**9, -1
 eps = 10**(-10)
 while abs(ok - ng) > 1:
     mid = (ok + ng) // 2
-    if enough(mid): ok = mid
-    else: ng = mid
+    if enough(mid):
+        ok = mid
+    else:
+        ng = mid
 print(ok)

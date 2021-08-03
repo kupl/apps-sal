@@ -5,7 +5,8 @@ def f(x, hp):
     hp = [hh - (b * x) for hh in hp]
     c = 0
     for p in hp:
-        if p <= 0: continue
+        if p <= 0:
+            continue
         c += ceil(p / (a - b))
     return c <= x
 

@@ -4,10 +4,10 @@ from collections import defaultdict
 
 
 def main():
-    finput = lambda: sys.stdin.readline().strip()
+    def finput(): return sys.stdin.readline().strip()
     n, a, b = list(map(int, finput().split()))
     h = [int(finput()) for _ in range(n)]
-    gs = lambda a, b: a // b + (a % b > 0)
+    def gs(a, b): return a // b + (a % b > 0)
 
     def enough(t):
         s = sum([gs(max(x - t * b, 0), a - b) for x in h])

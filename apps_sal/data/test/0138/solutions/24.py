@@ -13,7 +13,8 @@ except:
 
 
 def log(*s):
-    if DEV: print('LOG', *s)
+    if DEV:
+        print('LOG', *s)
 
 
 class EJudge:
@@ -33,17 +34,20 @@ class EJudge:
         self.use_files(self.problem + '.in', self.problem + '.out')
 
     def get_tl(self):
-        while True: pass
+        while True:
+            pass
 
     def get_ml(self):
         tmp = [[[5] * 100000 for _ in range(1000)]]
-        while True: tmp.append([[5] * 100000 for _ in range(1000)])
+        while True:
+            tmp.append([[5] * 100000 for _ in range(1000)])
 
     def get_re(self):
         s = (0,)[8]
 
     def get_wa(self, wstr='blablalblah'):
-        for _ in range(3): print(wstr)
+        for _ in range(3):
+            print(wstr)
         return
 
 
@@ -71,7 +75,8 @@ class IntReader:
 ej = EJudge()
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
-parse_int = lambda: fmap(int, input().split())
+def parse_int(): return fmap(int, input().split())
+
 
 # input
 n, t1, t2, t3 = parse_int()
@@ -80,9 +85,13 @@ t2 = min(t2, t1 * 2, t3 * 2)
 t1 = min(t1, t3 + t2, t3 * 3)
 
 n = n % 4
-if n == 0: ans = 0
-if n == 1: ans = t3
-if n == 2: ans = t2
-if n == 3: ans = t1
+if n == 0:
+    ans = 0
+if n == 1:
+    ans = t3
+if n == 2:
+    ans = t2
+if n == 3:
+    ans = t1
 
 print(ans)

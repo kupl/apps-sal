@@ -11,7 +11,8 @@ def check(x):
         if h > x * B:
             tmp = (h - x * B) // (A - B)
             # 切り上げ
-            if tmp * (A - B) != h - x * B: tmp += 1
+            if tmp * (A - B) != h - x * B:
+                tmp += 1
             cnt += tmp
     if cnt <= x:
         return True
@@ -21,7 +22,8 @@ def check(x):
 
 
 def bisect(l, r):
-    if r - l == 1: return r
+    if r - l == 1:
+        return r
     mid = (l + r) // 2
     if check(mid):
         return bisect(l, mid)

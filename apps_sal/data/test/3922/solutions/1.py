@@ -28,7 +28,8 @@ def solve(k, grid):
         st += 'L'
         flat = flat[1:] + flat[:1]
 
-    if flat[0] == 1: return st, m
+    if flat[0] == 1:
+        return st, m
 
 
 def main():
@@ -43,7 +44,8 @@ def main():
             print('SURGERY COMPLETE')
             st, m = res
             print(st)
-            for shortcut in list(m.items()): print(*shortcut)
+            for shortcut in list(m.items()):
+                print(*shortcut)
             print('DONE')
 
 

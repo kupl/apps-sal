@@ -1,7 +1,7 @@
-s = input();
+s = input()
 mod = 1e9 + 7
 
-ans = 1;
+ans = 1
 cnt = 0
 for i in range(len(s)):
     if s[i] != 'b':

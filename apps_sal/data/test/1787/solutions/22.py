@@ -1,5 +1,5 @@
 def p(arr, n):
-    ans = 1;
+    ans = 1
     for i in range(0, n):
         ans = ans * (arr[i] + 1)
     return ans - 1
