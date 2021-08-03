@@ -20,7 +20,7 @@ for i in d:
     for p in p2:
         j = p - i
         if j > i:
-            break;
+            break
         if j in d:
             if i == j:
                 k += d[i] * (d[i] - 1) // 2

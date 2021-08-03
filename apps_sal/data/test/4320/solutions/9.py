@@ -38,7 +38,7 @@ for tt in range(t):
         v = pow(2, k) - 1
         if(n % v == 0):
             print(n // v)
-            break;
+            break
         k += 1
     #n,k,s= map(int, sys.stdin.readline().split(' '))
     #a=list(map(int,sys.stdin.readline().split(' ')))

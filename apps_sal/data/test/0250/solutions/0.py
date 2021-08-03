@@ -18,7 +18,8 @@ class SegmentTree():
         self.L[p] = value
         while p > 1:
             x, y = self.L[p], self.L[p ^ 1]
-            if p & 1: x, y = y, x
+            if p & 1:
+                x, y = y, x
             self.L[p >> 1] = None if x is None or y is None else self.function(x, y)
             p >>= 1
 
@@ -49,7 +50,8 @@ for i in range(n):
     r, h = [int(x) for x in input().split()]
     pies[i] = r * r * h
 s_pies = list(sorted(enumerate(pies), key=lambda p: p[1]))
-for i in range(n): index[s_pies[i][0]] = i
+for i in range(n):
+    index[s_pies[i][0]] = i
 for i in range(1, n):
     first_equal[s_pies[i][0]] = i if s_pies[i][1] != s_pies[i - 1][1] else first_equal[s_pies[i - 1][0]]
 towers = SegmentTree([0] * (n + 1), max)

@@ -22,11 +22,14 @@ if (a1 + b1) - c1 == -2:
         lenB = b1
         lenC = c1 - 1
 if lenA and lenB and lenC != 0:
-    for x in range(lenA): st = st + "|"
+    for x in range(lenA):
+        st = st + "|"
     st = st + "+"
-    for x in range(lenB): st = st + "|"
+    for x in range(lenB):
+        st = st + "|"
     st = st + "="
-    for x in range(lenC): st = st + "|"
+    for x in range(lenC):
+        st = st + "|"
 
 if st:
     print(st)

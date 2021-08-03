@@ -12,7 +12,7 @@ def main():
             ans.append(c)
         else:
             if len(ans) != 0:
-                ans.pop();
+                ans.pop()
 
     line = ""
     for c in ans:

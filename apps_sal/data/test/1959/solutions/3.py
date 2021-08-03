@@ -25,8 +25,10 @@ def solve(A, n, m):
                 return None
             A1[i] = k
             k += 2
-            if odd_needed == 1: k = 2
-            if odd_needed >= 1: odd_needed -= 1
+            if odd_needed == 1:
+                k = 2
+            if odd_needed >= 1:
+                odd_needed -= 1
 
     return A1, changes
 
