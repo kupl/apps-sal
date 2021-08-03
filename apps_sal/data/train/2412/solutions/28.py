@@ -11,10 +11,7 @@ class Solution:
                 else:
                     i += 2
 
-            if len(nLetters) + 1 == len(letters): 
+            if len(nLetters) + 1 == len(letters):
                 break
             letters = nLetters + ['#']
         return ''.join(letters[:-1])
-                
-        
-

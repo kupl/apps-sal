@@ -10,11 +10,5 @@ class Solution:
                     if i < j < k:
                         if abs(arr[i] - arr[j]) <= a and abs(arr[j] - arr[k]) <= b and abs(arr[i] - arr[k]) <= c:
                             return_arr.append([arr[i], arr[j], arr[k]])
-                    
-            
-            
-        
-        return len(return_arr)
-                
-                
 
+        return len(return_arr)

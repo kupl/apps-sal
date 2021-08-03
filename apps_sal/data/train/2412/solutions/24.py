@@ -8,12 +8,12 @@ class Solution:
             newS = ''
             chain = False
             for i in range(1, len(S)):
-                if S[i] != S[i-1]:
+                if S[i] != S[i - 1]:
                     if not chain:
-                        newS += S[i-1]
+                        newS += S[i - 1]
                     else:
                         if count % 2 == 1:
-                            newS += S[i-1]
+                            newS += S[i - 1]
                     chain = False
                     count = 1
                 else:
@@ -27,6 +27,5 @@ class Solution:
             if newS == S:
                 return S
             S = newS
-            #print(S)
+            # print(S)
         return S
-

@@ -1,6 +1,6 @@
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
-        
+
         perm = combinations(arr, 3)
         answer = []
         # c = 0
@@ -8,7 +8,6 @@ class Solution:
             if abs(i[0] - i[1]) <= a and abs(i[1] - i[2]) <= b and abs(i[0] - i[2]) <= c:
                 answer.append(i)
                 # c += 1
-                    
+
         return len(answer)
         # return c
-

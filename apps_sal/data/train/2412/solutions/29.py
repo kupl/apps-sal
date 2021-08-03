@@ -6,7 +6,7 @@ class Solution:
             repeat = False
             new = ''
             while i < len(S):
-                if i < len(S)-1 and S[i] == S[i+1]:
+                if i < len(S) - 1 and S[i] == S[i + 1]:
                     i += 2
                     repeat = True
                 else:

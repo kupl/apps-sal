@@ -6,9 +6,8 @@ class Solution:
                 for k in range(len(arr)):
                     if i < j:
                         if j < k:
-                            if abs(arr[i] - arr[j]) <=a:
+                            if abs(arr[i] - arr[j]) <= a:
                                 if abs(arr[j] - arr[k]) <= b:
                                     if abs(arr[i] - arr[k]) <= c:
                                         good_count += 1
-        return good_count    
-
+        return good_count

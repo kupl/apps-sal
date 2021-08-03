@@ -1,7 +1,7 @@
 class Solution:
     def removeDuplicates(self, S: str) -> str:
         if S.count(S[0]) == len(S):
-            if len(S)%2==0:
+            if len(S) % 2 == 0:
                 return ''
             else:
                 return S[0]
@@ -15,8 +15,8 @@ class Solution:
                 else:
                     new_string = new_string[:-1]
                     Sbuffer = ' '
-            numlist = [i for i in range(0, len(S)-1)]
-            list1 = list(filter(lambda x: S[x+1] == S[x], numlist))
+            numlist = [i for i in range(0, len(S) - 1)]
+            list1 = list(filter(lambda x: S[x + 1] == S[x], numlist))
             if list1:
                 S = new_string
             else:

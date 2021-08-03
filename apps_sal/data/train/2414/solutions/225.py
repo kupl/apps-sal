@@ -4,17 +4,15 @@ class Solution:
         good = 0
         for i in range(0, n):
             ai = arr[i]
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 aj = arr[j]
-                if abs(ai-aj) > a:
+                if abs(ai - aj) > a:
                     continue
-                for k in range(j+1, n):
+                for k in range(j + 1, n):
                     ak = arr[k]
-                    if abs(aj-ak) > b:
+                    if abs(aj - ak) > b:
                         continue
-                    if abs(ak-ai) > c:
+                    if abs(ak - ai) > c:
                         continue
                     good += 1
         return good
-                    
-

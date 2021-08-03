@@ -4,23 +4,23 @@ class Solution:
             return S
         stack = []
         stack.append(S[0])
-        
+
         index = 1
         while index < len(S):
             stack.append(S[index])
             # print(stack)
             index += 1
-            
+
             self.popDups(stack)
-        
+
         s = ''
         for c in stack:
             s += c
-        
+
         return s
-    
+
     def popDups(self, stack):
-        
+
         to_pop = True
         while stack and to_pop:
             this_item = stack.pop()
@@ -34,11 +34,7 @@ class Solution:
             else:
                 stack.append(this_item)
                 to_pop = False
-        
-        
-        
-        
-        
+
         # to_pop = True
         # while to_pop and stack:
         #     item = stack.pop()
@@ -50,9 +46,4 @@ class Solution:
         #         if item != next_item:
         #             stack.append(next_item)
         #             stack.append(item)
-        #             to_pop = False                    
-        
-        
-                
-                
-
+        #             to_pop = False

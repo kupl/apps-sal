@@ -1,8 +1,9 @@
 from itertools import groupby
 
+
 class Solution:
     def removeDuplicates(self, S: str) -> str:
-        
+
         uncompleted = True
         while uncompleted:
             uncompleted = False

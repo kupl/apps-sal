@@ -3,8 +3,8 @@ class Solution:
         n = len(arr)
         counter = 0
         for i in range(n):
-            for j in range(i+1,n):
-                for k in range(j+1,n):
-                    if abs(arr[i] - arr[j]) <=a and abs(arr[j] - arr[k]) <=b and abs(arr[i] - arr[k]) <=c:
+            for j in range(i + 1, n):
+                for k in range(j + 1, n):
+                    if abs(arr[i] - arr[j]) <= a and abs(arr[j] - arr[k]) <= b and abs(arr[i] - arr[k]) <= c:
                         counter += 1
         return(counter)

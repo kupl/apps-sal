@@ -3,7 +3,7 @@ class Solution:
         i = 0
         res = 0
         while i < len(arr):
-            j = i+1
+            j = i + 1
             while j < len(arr):
                 if abs(arr[j] - arr[i]) <= a:
                     k = j + 1
@@ -12,7 +12,7 @@ class Solution:
                             res += 1
                         k += 1
                 j += 1
-            
+
             i += 1
-            
+
         return res

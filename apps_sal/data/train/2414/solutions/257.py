@@ -11,5 +11,5 @@ class Solution:
                     condition3 = abs(arr[i] - arr[k]) <= c
                     if condition2 and condition3:
                         goods += 1
-                        
+
         return goods

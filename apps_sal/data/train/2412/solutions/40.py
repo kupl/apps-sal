@@ -8,4 +8,3 @@ class Solution:
                 i -= 2
             i += 1
         return S[:i]
-

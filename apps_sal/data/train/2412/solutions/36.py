@@ -8,13 +8,11 @@ def remove_dupes(s):
             out.append(s[i])
             i += 1
     return ''.join(out)
-        
-    
+
+
 class Solution:
     def removeDuplicates(self, s: str) -> str:
         prev = None
         while s != prev:
             s, prev = remove_dupes(s), s
         return s
-            
-
