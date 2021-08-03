@@ -1,6 +1,6 @@
 T = int(input())
 childs = []
-for i in range(1, T+1):
+for i in range(1, T + 1):
     child = list(map(int, input().split(' ')))
     child.insert(0, i)
     childs.append(child)
@@ -29,7 +29,7 @@ while check:
             # run = False
             i -= 1
         i += 1
-        if i > len(childs)-1:
+        if i > len(childs) - 1:
             run = False
 
     if len(childs) <= 0:
@@ -37,4 +37,3 @@ while check:
 
 print(len(c_l))
 print(*c_l)
-

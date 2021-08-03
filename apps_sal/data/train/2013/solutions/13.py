@@ -44,4 +44,5 @@ def __starting_point():
     else:
         print('a'.join(line))
 
+
 __starting_point()

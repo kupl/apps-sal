@@ -5,6 +5,8 @@ table = "abcdefghijklmnopqrstuvwxyz"
 def nextchar(x):
     index = table.index(x)
     return table[index - 1]
+
+
 ans, start = "", 0
 for i in range(len(s)):
     if s[i] != 'a':

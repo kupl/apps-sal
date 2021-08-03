@@ -39,4 +39,5 @@ def __starting_point():
     sys.stdout.write(str(len(cured)) + "\n")
     sys.stdout.write(" ".join(map(str, cured)) + "\n")
 
+
 __starting_point()

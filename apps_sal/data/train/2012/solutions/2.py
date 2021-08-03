@@ -1,5 +1,6 @@
 n = int(input())
-if n % 4 > 1: print(-1)
+if n % 4 > 1:
+    print(-1)
 else:
     k = n // 2
     t = [0] * n

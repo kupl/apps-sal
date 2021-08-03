@@ -13,9 +13,9 @@ a = deque(list(map(int, input().split())))
 s = 0
 
 for _ in range(n):
-	x = a.popleft()
-	ix = a.index(x)
-	s += ix
-	a.remove(x)
+    x = a.popleft()
+    ix = a.index(x)
+    s += ix
+    a.remove(x)
 
 print(s)

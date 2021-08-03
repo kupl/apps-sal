@@ -7,4 +7,3 @@ for i in range(n):
     sum += a[i]
     mox = max(mox, a[i])
 print(max(mox, (sum + n - 2) // (n - 1)))
-

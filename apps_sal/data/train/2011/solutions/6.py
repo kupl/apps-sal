@@ -1,6 +1,7 @@
 def summ(x):
     return sum([int(i) for i in str(x)])
 
+
 n = int(input())
 ans = []
 for i in range(max(1, n - 200), n):

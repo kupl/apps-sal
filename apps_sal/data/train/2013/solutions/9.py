@@ -5,7 +5,7 @@ l = len(s)
 a = 'a' * l
 
 if s == a:
-    t = 'a' * (l-1) + 'z'
+    t = 'a' * (l - 1) + 'z'
 else:
     i = 0
     while i < l:
@@ -27,4 +27,3 @@ else:
         i += 1
 
 print(t)
-

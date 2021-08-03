@@ -1,4 +1,6 @@
 from collections import deque as d
+
+
 class Child:
     def __init__(self, cry, leave, cond):
         self.cry = cry
@@ -6,21 +8,22 @@ class Child:
         self.cond = cond
         self.alive = True
 
+
 N = int(input())
 
 
 queue = d()
 for i in range(N):
-    lst = [ int(i) for i in input().split() ]
+    lst = [int(i) for i in input().split()]
     queue.append(Child(lst[0], lst[1], lst[2]))
 
 ans = []
 for i in range(N):
-    if (queue[0].cry==882 and queue[0].leave==223 and N==4000 and queue[0].cond==9863):
-        ans=list(range(1,N+1))
+    if (queue[0].cry == 882 and queue[0].leave == 223 and N == 4000 and queue[0].cond == 9863):
+        ans = list(range(1, N + 1))
         break
-    if (N==4000 and queue[1].cry==718 and queue[1].leave==1339 and queue[1].cond==5958):
-        ans=list(range(1,N+1))
+    if (N == 4000 and queue[1].cry == 718 and queue[1].leave == 1339 and queue[1].cond == 5958):
+        ans = list(range(1, N + 1))
         break
     if not queue[i].alive:
         continue

@@ -5,6 +5,7 @@ def sum_digits(n):
         n = n // 10
     return ans
 
+
 n = int(input())
 ans = []
 for i in range(max(1, n - 1000), n + 1):
@@ -13,4 +14,3 @@ for i in range(max(1, n - 1000), n + 1):
 print(len(ans))
 for elem in ans:
     print(elem)
-

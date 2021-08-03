@@ -15,8 +15,10 @@ def calculate(n):
     numbers = list(range(1, n + 1))
     result = [0] * n
     for i in range(0, n):
-        if result[i] != 0: continue
-        if i > 0 and checkit(result, i): continue
+        if result[i] != 0:
+            continue
+        if i > 0 and checkit(result, i):
+            continue
 
         expected = n - i
 
@@ -25,7 +27,7 @@ def calculate(n):
                 continue
 
             if v == expected:
-                result[v-1] = v
+                result[v - 1] = v
                 numbers.remove(v)
                 break
             elif result[v - 1] == expected:
@@ -41,6 +43,7 @@ def calculate(n):
                 break
 
     return result
+
 
 def calculate_v2(n):
     result = [0] * n
@@ -61,21 +64,23 @@ def calculate_v2(n):
     i = n - 1
     while i > n // 2:
         result[i] = i
-        result[i-1] = second_sum - i
+        result[i - 1] = second_sum - i
         i -= 2
 
     return result
 
 
 def main():
-        number = int(stdin.readline())
-        result = calculate_v2(number)
-        if not checkit(result):
-            print(-1)
-        else:
-            print(" ".join([str(v) for v in result]))
+    number = int(stdin.readline())
+    result = calculate_v2(number)
+    if not checkit(result):
+        print(-1)
+    else:
+        print(" ".join([str(v) for v in result]))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

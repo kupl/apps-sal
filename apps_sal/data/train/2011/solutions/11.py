@@ -17,6 +17,3 @@ for x in range(max(0, n - 81), n):
 print(len(a))
 if len(a) > 0:
     print(" ".join(map(str, a)))
-
-
-

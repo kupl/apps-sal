@@ -1,5 +1,5 @@
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'j', 'k', 'l', 'm', 'n', \
-'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+           'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 dataIn = str(input())
 data = []
@@ -15,7 +15,7 @@ if len(data) == 1:
     else:
         for j in range(len(letters)):
             if letters[j] == data[0]:
-                data[0] = letters[j-1]
+                data[0] = letters[j - 1]
 else:
     i = 0
     begin = False
@@ -27,17 +27,17 @@ else:
     for k in range(i, len(data)):
         if data[k] == 'a' and k != len(data) - 1:
             break
-        elif data[k] == 'a' and k == len(data) -1:
-            if not begin: data[k] = 'z'
+        elif data[k] == 'a' and k == len(data) - 1:
+            if not begin:
+                data[k] = 'z'
         else:
             begin = True
             for j in range(len(letters)):
                 if letters[j] == data[k]:
-                    data[k] = letters[j-1]
+                    data[k] = letters[j - 1]
 
 result = ''
 for i in data:
     result += i
 
 print(result)
-

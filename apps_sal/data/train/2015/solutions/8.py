@@ -43,7 +43,7 @@ def solve(N, A):
         h.right = node
         node.left = h
         h = node
-        
+
     ans = []
     h = head
     while h:
@@ -54,7 +54,7 @@ def solve(N, A):
             nh.p -= cry
             cry -= 1
             nh = nh.right
-        
+
         # print(list2a(head))
         ch = h
         nh = h.right
@@ -69,23 +69,18 @@ def solve(N, A):
                 ch.right = nh.right
                 if nh.right:
                     nh.right.left = ch
-                
+
             else:
                 ch = nh
             nh = nh.right
         h = h.right
-        
+
         # print(list2a(head))
-            
+
     print(len(ans))
     print(' '.join(map(str, ans)))
-    
-    
-    
-    
-            
 
-        
+
 N = int(input())
 A = []
 for i in range(N):
@@ -93,4 +88,3 @@ for i in range(N):
     A.append([v, d, p])
 
 solve(N, A)
-

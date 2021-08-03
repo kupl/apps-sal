@@ -1,4 +1,5 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n = int(input())
 arr = [-1] + list(R()) + [-1]

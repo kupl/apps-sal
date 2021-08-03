@@ -14,7 +14,9 @@ def main():
         r += i
     print(r)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
