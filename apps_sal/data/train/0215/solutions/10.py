@@ -5,5 +5,3 @@ class Solution:
             while n:
                 gcd, n = n, gcd % n
         return gcd == 1
-            
-

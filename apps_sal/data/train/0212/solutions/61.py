@@ -8,7 +8,6 @@ class Solution:
             dp[num] = 1
             for j in range(i):
                 if num % A[j] == 0:
-                    dp[num] += dp[A[j]] * dp[A[i]//A[j]]
+                    dp[num] += dp[A[j]] * dp[A[i] // A[j]]
             res += dp[num]
         return res % 1000000007
-

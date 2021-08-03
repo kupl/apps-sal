@@ -4,11 +4,11 @@ class Solution:
         mems = {}
         for ix in range(len(A)):
             mems[A[ix]] = ix
-            
+
         dp = [1] * len(A)
-        
+
         big_mod = 10**9 + 7
-        
+
         for i in range(len(A)):
             extras = 0
             for j in range(i):
@@ -19,8 +19,7 @@ class Solution:
 
             extras = extras % big_mod
             dp[i] += extras
-        
-        result = sum(dp) % big_mod
-        
-        return result
 
+        result = sum(dp) % big_mod
+
+        return result

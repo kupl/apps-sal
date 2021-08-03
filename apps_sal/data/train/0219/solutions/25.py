@@ -12,16 +12,12 @@ class Solution:
         for idx, ele in enumerate(lt):
             s += ele
             print((s, idx, mx))
-            if s > 0 : #atleast more 9
-                mx = max(mx, (idx+1))
-            else:    
-                if (s-1) in seen:
-                    i = seen[s-1]
-                    mx = max(mx, idx-i)
+            if s > 0:  # atleast more 9
+                mx = max(mx, (idx + 1))
+            else:
+                if (s - 1) in seen:
+                    i = seen[s - 1]
+                    mx = max(mx, idx - i)
             if (s) not in seen:
                 seen[s] = idx
-        return mx        
-        
-                
-        
-
+        return mx

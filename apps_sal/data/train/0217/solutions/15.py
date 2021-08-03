@@ -7,4 +7,3 @@ class Solution:
             temp = {cur} | {cur | t for t in temp}
             results.update(temp)
         return len(results)
-

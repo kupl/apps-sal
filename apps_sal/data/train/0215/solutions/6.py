@@ -9,7 +9,7 @@ class Solution:
         while b != 0:
             a, b = b, a % b
         return a
-    
+
     def isGoodArray(self, nums: List[int]) -> bool:
         g = 0
         for n in nums:

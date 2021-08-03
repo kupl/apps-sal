@@ -5,7 +5,7 @@ class Solution:
         #     cur = {val | num for val in cur} | {num}
         #     res |= cur
         # return len(res)
-        
+
         # list
         res = []
         left, right = 0, 0
@@ -17,4 +17,3 @@ class Solution:
                     res.append(res[i] | val)
             left = right
         return len(set(res))
-

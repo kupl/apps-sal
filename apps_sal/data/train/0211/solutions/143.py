@@ -1,9 +1,9 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         N = len(s)
-        
+
         res = 0
-        for mask in itertools.product('10', repeat=N-1):
+        for mask in itertools.product('10', repeat=N - 1):
             mask = list(mask) + ['1']
             substr = set()
             begin = 0
@@ -14,12 +14,12 @@ class Solution:
                 try:
                     idx = mask.index('1', begin)
                     # print('idx', idx, i, s[i:idx+1])
-                    begin = idx+1
-                    if s[i:idx+1] in substr:
+                    begin = idx + 1
+                    if s[i:idx + 1] in substr:
                         valid = False
                         break
-                    substr.add(s[i:idx+1])
-                    i = idx+1
+                    substr.add(s[i:idx + 1])
+                    i = idx + 1
                 except ValueError:
                     break
             if valid:

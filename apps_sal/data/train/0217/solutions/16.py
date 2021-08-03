@@ -5,7 +5,7 @@ class Solution:
         ans = 0
         for v in A:
             s.add(v)
-            s = {x|v for x in s}
+            s = {x | v for x in s}
             global_set |= s
-            
+
         return len(global_set)

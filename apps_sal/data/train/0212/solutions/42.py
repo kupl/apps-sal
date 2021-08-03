@@ -3,10 +3,10 @@ class Solution:
         num_trees = {}
         A.sort()
         A_set = set(A)
-        for i in range (len(A)):
+        for i in range(len(A)):
             curr_num = A[i]
-            num_trees[curr_num] = 1 
-            for j in range (i):
+            num_trees[curr_num] = 1
+            for j in range(i):
                 if (A[i] % A[j] == 0):
                     if (A[i] // A[j]) in A_set:
                         num_trees[curr_num] += (num_trees[A[j]] * num_trees[A[i] // A[j]])
@@ -15,5 +15,3 @@ class Solution:
             total += num_trees[key]
             total %= (10**9 + 7)
         return total
-        
-

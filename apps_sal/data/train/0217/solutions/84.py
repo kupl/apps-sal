@@ -7,4 +7,3 @@ class Solution:
             results.add(num)
             result_set.update(results)
         return len(result_set)
-

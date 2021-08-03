@@ -14,12 +14,12 @@ class Solution:
         for ltr, count in list(counts.items()):
             if count == 1:
                 index = s.index(ltr)
-                if index == 0 or index == len(s)-1:
-                    s = s.replace(ltr,'')
+                if index == 0 or index == len(s) - 1:
+                    s = s.replace(ltr, '')
                     unique_count = unique_count + 1
                 else:
-                    prev = s[index-1]
-                    next = s[index+1]
+                    prev = s[index - 1]
+                    next = s[index + 1]
                     if counts[prev] == 1 and counts[next] == 1:
                         s = s.replace(ltr, '')
                         unique_count = unique_count + 1
@@ -27,7 +27,7 @@ class Solution:
         if len(s) == 0:
             return unique_count
         else:
-            return unique_count + self.find_max(len(s)-1, s)
+            return unique_count + self.find_max(len(s) - 1, s)
 
     def find_max(self, i, s):
         from sortedcontainers import SortedSet
@@ -40,8 +40,7 @@ class Solution:
         if i == 0:
             return unique_count
 
-        a = self.find_max(i-1, s[:i] + ' ' + s[i:])
-        b = self.find_max(i-1, s)
+        a = self.find_max(i - 1, s[:i] + ' ' + s[i:])
+        b = self.find_max(i - 1, s)
 
-        return max(a,b,unique_count)
-
+        return max(a, b, unique_count)

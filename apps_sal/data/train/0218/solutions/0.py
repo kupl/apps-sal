@@ -2,7 +2,7 @@ class Solution:
     def orderlyQueue(self, S: str, K: int) -> str:
         if K >= 2:
             return ''.join(sorted(S))
-        
+
         length = len(S)
         S = S + S
         i, j, k = 0, 1, 0
@@ -16,5 +16,4 @@ class Solution:
                 i = max(i + k + 1, j)
                 j = i + 1
             k = 0
-        return S[i : i + length]
-
+        return S[i: i + length]

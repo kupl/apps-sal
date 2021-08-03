@@ -8,7 +8,7 @@ class Solution:
             cur.add(a[i])
             res.add(a[i])
             for j in prev:
-                cur.add(j|a[i])
-                res.add(j|a[i])
+                cur.add(j | a[i])
+                res.add(j | a[i])
             prev = cur
         return len(res)

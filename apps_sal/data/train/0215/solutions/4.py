@@ -5,4 +5,3 @@ class Solution:
             while a:
                 gcd, a = a, gcd % a
         return gcd == 1
-

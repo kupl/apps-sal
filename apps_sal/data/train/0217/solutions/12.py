@@ -1,4 +1,6 @@
 import math
+
+
 class Solution:
     def subarrayBitwiseORs(self, A: List[int]) -> int:
         res = set([])
@@ -14,7 +16,7 @@ class Solution:
                 res.add(i)
             if maximpact > 0:
                 for j in tmp:
-                    k = i|j
+                    k = i | j
                     if k not in newtmp_set:
                         newtmp_set.add(k)
                         newtmp.append(k)
@@ -23,7 +25,3 @@ class Solution:
                         break
             tmp = newtmp
         return len(res)
-            
-                
-            
-

@@ -1,7 +1,8 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         visited = set()
-        #@lru_cache(None)
+        # @lru_cache(None)
+
         def solve(cur: str) -> int:
             ans = 0
             if not cur:
@@ -14,6 +15,3 @@ class Solution:
                     visited.remove(candidate)
             return ans
         return solve(s)
-                    
-        
-

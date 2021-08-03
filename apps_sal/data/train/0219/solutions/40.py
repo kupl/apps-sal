@@ -20,6 +20,5 @@ class Solution:
                 if U < len(stack):
                     ans = max(ans, i - stack[U][0])
             if not stack or stack[-1][1] > accu:
-                stack.append((i, accu ))
+                stack.append((i, accu))
         return ans
-

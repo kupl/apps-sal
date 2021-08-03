@@ -6,7 +6,7 @@ class Solution:
             temp.add(a)
             S.add(a)
             for p in prev:
-                temp.add(a|p)
-                S.add(a|p)
+                temp.add(a | p)
+                S.add(a | p)
             prev = temp
         return len(S)

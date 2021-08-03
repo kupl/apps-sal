@@ -1,6 +1,6 @@
 class Solution:
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
-        
+
         mod = 10**9 + 7
 
         nums_set = set(A)
@@ -28,4 +28,3 @@ class Solution:
             total = (total + n_count) % mod
 
         return total
-

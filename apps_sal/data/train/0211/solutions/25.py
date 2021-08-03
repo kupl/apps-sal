@@ -2,6 +2,7 @@ class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         self.res = 0
         partition = []
+
         def backtrack(start_i):
             if start_i == len(s):
                 self.res = max(self.res, len(set(partition)))

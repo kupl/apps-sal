@@ -14,7 +14,3 @@ class Solution:
             parents[a] = tot
             seen.add(a)
         return sum(parents.values()) % mod
-                    
-                    
-            
-

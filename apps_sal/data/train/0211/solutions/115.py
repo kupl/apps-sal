@@ -4,11 +4,11 @@ class Solution:
             return segs == req_l
 
         for pos in range(cur, len(s)):
-            ts = s[cur:pos+1]
+            ts = s[cur:pos + 1]
             if ts in hs:
                 continue
             hs.add(ts)
-            if self.dfs(s, req_l, segs+1, pos+1, hs):
+            if self.dfs(s, req_l, segs + 1, pos + 1, hs):
                 return True
             hs.remove(ts)
         return False
@@ -18,4 +18,3 @@ class Solution:
             if self.dfs(s, i, 0, 0, set()):
                 return i
         return 1
-

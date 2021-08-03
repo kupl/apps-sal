@@ -3,7 +3,7 @@ class Solution:
         s = set()
         c = set()
         for x in A:
-            c = {x|y for y in c}
+            c = {x | y for y in c}
             c.add(x)
-            s|=c
+            s |= c
         return len(s)

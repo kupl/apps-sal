@@ -1,7 +1,6 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-    
-    
+
         res = 1
 
         def dfs(pos, path):

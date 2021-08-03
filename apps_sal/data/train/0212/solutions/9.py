@@ -7,14 +7,13 @@ class Solution:
         for i in range(len(A)):
             d[A[i]] = 1
             for j in range(i):
-                if A[i]%A[j] == 0:
-                    k = A[i]//A[j]
+                if A[i] % A[j] == 0:
+                    k = A[i] // A[j]
                     if k in set(A):
-                        d[A[i]] += d[A[j]]*d[k]
-            d[A[i]] %= 10**9+7
+                        d[A[i]] += d[A[j]] * d[k]
+            d[A[i]] %= 10**9 + 7
             ans += d[A[i]]
-            ans %= 10**9+7
+            ans %= 10**9 + 7
         # print(d)
         return ans
         # return sum(d[key] for key in d)
-

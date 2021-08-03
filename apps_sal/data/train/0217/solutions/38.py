@@ -7,8 +7,8 @@ class Solution:
             tpp = set()
             tpp.add(i)
             for ii in tp:
-                tpp.add(ii|i)
-            tp=tpp
+                tpp.add(ii | i)
+            tp = tpp
             for ii in tp:
                 ans.add(ii)
         return len(ans)

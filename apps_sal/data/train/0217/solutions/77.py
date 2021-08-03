@@ -15,4 +15,3 @@ class Solution:
             prev = temp
 
         return len(my_set)
-

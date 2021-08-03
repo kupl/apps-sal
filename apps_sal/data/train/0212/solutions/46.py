@@ -8,5 +8,5 @@ class Solution:
             for j in range(i):
                 if a % A[j] == 0 and a / A[j] in dp:
                     dp[a] += dp[A[j]] * dp[a / A[j]]
-                    
+
         return sum(dp.values()) % (10**9 + 7)

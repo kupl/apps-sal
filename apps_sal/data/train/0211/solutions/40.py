@@ -1,6 +1,7 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         res = 0
+
         def dfs(cur_pos):
             nonlocal res
             if cur_pos == len(s):
@@ -10,8 +11,7 @@ class Solution:
                     seen.add(s[cur_pos:next_pos + 1])
                     dfs(next_pos + 1)
                     seen.remove(s[cur_pos:next_pos + 1])
-        
+
         seen = set()
         dfs(0)
         return res
-

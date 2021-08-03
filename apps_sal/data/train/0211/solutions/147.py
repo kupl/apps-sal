@@ -17,9 +17,8 @@ class Solution:
             if valid and count > bestcount:
                 bestcount = count
         return bestcount
-            
-            
-    def recursiveSplit(self, s:str) -> str:
+
+    def recursiveSplit(self, s: str) -> str:
         if len(s) == 1:
             return [[s]]
         elif len(s) == 0:
@@ -32,5 +31,3 @@ class Solution:
                 newoption.append(s[i:])
                 options.append(newoption)
         return options
-
-

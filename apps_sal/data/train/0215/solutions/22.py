@@ -7,4 +7,3 @@ class Solution:
             if gcd == 1:
                 return True
         return False
-

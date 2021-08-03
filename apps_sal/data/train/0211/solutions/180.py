@@ -12,11 +12,11 @@
 #         print(\"finished\")
 #         print(solutions)
 #         print(account)
-        
+
 #         # if substring are the same than the solution is not right
 #         # if one solution has more substring than another adopt this one
 #         # could use divide and conqure to go done a string
-        
+
 #     def findSolutions(self, s, solutions):
 #         strLen = len(s)
 #         if strLen != 1:
@@ -39,15 +39,16 @@
 #         else:
 #             print(s)
 #             return 1
-        
+
 class Solution:
     book = set()
+
     def maxUniqueSplit(self, s):
         result = 0
-        for i in range(1, len(s)+1): #go through all the length of sub strings from left to right
+        for i in range(1, len(s) + 1):  # go through all the length of sub strings from left to right
             curr = s[:i]
             if curr not in self.book:
-                self.book.add(curr) # add a type of sub string if it is not in it
+                self.book.add(curr)  # add a type of sub string if it is not in it
                 result = max(result, 1 + self.maxUniqueSplit(s[i:]))
                 self.book.remove(curr)
         return result

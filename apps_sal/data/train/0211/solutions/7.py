@@ -1,8 +1,6 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-        
-        
-        
+
         def rec(i, myset):
             if i == len(s):
                 return 0

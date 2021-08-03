@@ -3,7 +3,8 @@ class Solution:
         def explore(seen, s):
             for i in range(1, len(s)):
                 word, other = s[:i], s[i:]
-                if word in seen: continue
+                if word in seen:
+                    continue
                 explore(seen + [word], other)
             else:
                 if s in seen:

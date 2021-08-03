@@ -1,10 +1,10 @@
 class Solution:
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
-        neighcount = [0,0,0,0,0]
+        neighcount = [0, 0, 0, 0, 0]
         minhorses = 0
         nstarted = 0
         nended = 0
-        
+
         for s in croakOfFrogs:
             if s == 'c':
                 neighcount[0] += 1
@@ -32,7 +32,3 @@ class Solution:
             return minhorses
         else:
             return -1
-        
-        
-        
-

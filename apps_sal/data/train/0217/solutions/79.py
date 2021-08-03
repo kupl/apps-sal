@@ -6,9 +6,8 @@ class Solution:
             curr = {num | prev_num for prev_num in curr} | {num}
             result |= curr
         return len(result)
-        
-        
-        
+
+
 #         result = set()
 #         prev = set([0])
 #         for num in A:
@@ -18,4 +17,3 @@ class Solution:
 #             result |= curr
 #             prev = curr
 #         return len(result)
-

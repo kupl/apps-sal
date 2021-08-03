@@ -11,7 +11,7 @@ class Solution:
         #         if cum - 1 in seen:
         #             ans = max(ans, i - seen[cum - 1])
         # return ans
-    
+
         res = score = 0
         seen = {}
         for i, h in enumerate(hours):

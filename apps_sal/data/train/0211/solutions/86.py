@@ -13,11 +13,12 @@ class Solution:
                 if visited[pos]:
                     continue
                 visited[pos] = True
-                
+
                 result = max(result, 1 + solve(idx + 1, visited, memo))
                 visited[pos] = False
             memo[state] = result
             return result
+
         def get_position(string):
             return self.sub_str_pos[string]
         self.sub_str_pos = {}
@@ -27,4 +28,3 @@ class Solution:
                 if sub_str not in self.sub_str_pos:
                     self.sub_str_pos[sub_str] = len(self.sub_str_pos)
         return solve(0, [False for _ in range(len(self.sub_str_pos))], {})
-

@@ -8,4 +8,3 @@ class Solution:
                     maximum = max(maximum, 1 + helper(s[i:], {candidate, *seen}))
             return maximum
         return helper(s)
-

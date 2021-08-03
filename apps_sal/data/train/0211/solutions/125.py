@@ -26,4 +26,3 @@ class Solution:
         #         now += l
         #         l = 1
         # return len(cache)
-

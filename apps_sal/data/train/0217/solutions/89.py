@@ -1,8 +1,8 @@
 class Solution:
     def subarrayBitwiseORs(self, A: List[int]) -> int:
-        cur,res = set(),set()
+        cur, res = set(), set()
         for i in A:
-            cur = { i|j for j in cur} | {i}
+            cur = {i | j for j in cur} | {i}
             res |= cur
         return len(res)
 #        nums, n = set(), len(A)
@@ -12,4 +12,3 @@ class Solution:
 #                num |= A[j]
 #                nums.add(num)
 #        return len(nums)
-

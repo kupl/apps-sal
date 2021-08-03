@@ -1,8 +1,8 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-        
+
         def helper(s, strings=set()):
-            
+
             leng_s = len(s)
             leng_set = len(strings)
             if leng_s == 1 and s in strings:
@@ -12,11 +12,11 @@ class Solution:
                 for i in range(1, leng_s):
                     substr = s[:i]
                     if substr not in strings:
-                        ans = max(ans, helper(s[i:], strings|{substr}))
-                return ans               
-                    
+                        ans = max(ans, helper(s[i:], strings | {substr}))
+                return ans
+
         return helper(s)
-        
+
         #    if len(s) == 1 and s in soFar:
         #         return 0
         #     maxSplit = len(soFar)+1
@@ -27,4 +27,3 @@ class Solution:
         #             maxSplit = max(maxSplit, maxU(b, soFar|{a}))
         #     return maxSplit
         # return maxU(s)
-

@@ -6,7 +6,7 @@ class Solution:
             tmp = {num1}
             for num2 in alive:
                 dead.add(num2)
-                tmp.add(num1|num2)
+                tmp.add(num1 | num2)
             alive = tmp
-            
-        return len(alive|dead)
+
+        return len(alive | dead)
