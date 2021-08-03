@@ -6,4 +6,3 @@ PINS = {'1': '124', '2': '1253', '3': '236', '4': '1457', '5': '24568',
 
 def get_pins(observed):
     return list(map(''.join, product(*[PINS[num] for num in observed])))
-

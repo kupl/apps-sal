@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Bullet:
     def __init__(self, speed, target_army):
         self.time_to_hit = DIST / speed
@@ -11,14 +12,15 @@ class Bullet:
     def has_hit(self):
         return self.time_to_hit <= 0.0
 
+
 class Soldier:
     def __init__(self, original_index, bullet_speed):
         self.original_index = original_index
         self.bullet_speed = bullet_speed
 
-
     def fire_bullet(self, target_army):
         return Bullet(self.bullet_speed, target_army)
+
 
 class Army:
     def __init__(self, original_index, soldiers):
@@ -33,7 +35,6 @@ class Army:
         bullet = self.soldiers[0].fire_bullet(target_army)
         self.soldiers.rotate(-1)
         return bullet
-
 
     def is_wiped_out(self):
         return len(self.soldiers) == 0
@@ -61,14 +62,12 @@ class Battlefield:
                 target.eliminate_head()
                 armies_hit.append(bullet.target_army)
 
-
         # each army which was not hit this round fires one bullet
         for i, army in enumerate(self.armies):
             if not i in armies_hit:
                 bullet = army.fire_bullet((i + 1) % len(self.armies))
                 self.bullets.append(bullet)
 
-        
         if any(army.is_wiped_out() for army in self.armies):
             # reset bullet list
             self.bullets = []
@@ -78,7 +77,6 @@ class Battlefield:
             # remove bullets which have already reached their target
             self.bullets = [bullet for bullet in self.bullets if not bullet.has_hit()]
 
-
     def do_battle(self):
         while len(self.armies) > 1:
             self.increment_second()
@@ -87,13 +85,12 @@ class Battlefield:
         return self.armies[0] if self.armies else None
 
 
-
-def queue_battle(dist,*armies):
+def queue_battle(dist, *armies):
     # yes, I am too lazy to use these as constructor params for every class
     nonlocal DIST, N_ARMIES
     DIST = dist
     N_ARMIES = len(armies)
-    
+
     army_list = []
     for i in range(N_ARMIES):
         soldiers = [Soldier(j, speed) for j, speed in enumerate(armies[i])]
@@ -104,7 +101,7 @@ def queue_battle(dist,*armies):
 
     if winner is None:
         # no winner
-        return -1,()
+        return -1, ()
     else:
         soldiers = tuple([soldier.original_index for soldier in winner.soldiers])
         return winner.original_index, soldiers

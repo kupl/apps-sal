@@ -28,25 +28,26 @@ class suppress:
         self.excinst = excinst
         return exctype is not None and issubclass(exctype, self._exceptions)
 
-def handle(func, success, failure, *args):
-    result = None # function result, if any
-    ei = None # exception instance, if any
 
-    for exc in args: # let's see if we can get any exception
-        with suppress(*args): # muffle everything which we must handle
-            scm = suppress(exc) # get an object here for furter extraction of the instance
+def handle(func, success, failure, *args):
+    result = None  # function result, if any
+    ei = None  # exception instance, if any
+
+    for exc in args:  # let's see if we can get any exception
+        with suppress(*args):  # muffle everything which we must handle
+            scm = suppress(exc)  # get an object here for furter extraction of the instance
             with scm:
                 # either this fails for currently tested exception, or some other supported one
                 result = func()
-                break # no need to continue if we're good
-            if result is None: # this means we have found our exception
-                ei = scm.excinst # grab the saved guts
-                break # nothing more to do here
-        continue # if we're here, then we have an exception but didn't find which one yet
+                break  # no need to continue if we're good
+            if result is None:  # this means we have found our exception
+                ei = scm.excinst  # grab the saved guts
+                break  # nothing more to do here
+        continue  # if we're here, then we have an exception but didn't find which one yet
 
-    if result is not None: # we got something good, call success as needed
+    if result is not None:  # we got something good, call success as needed
         success(func, result)
-        return # all done, happy hour time
-    
-    if ei: # found that bastard instance
+        return  # all done, happy hour time
+
+    if ei:  # found that bastard instance
         failure(func, ei)

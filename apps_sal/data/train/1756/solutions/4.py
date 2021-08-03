@@ -6,7 +6,7 @@ class HandleException:
 
     def __enter__(self):
         pass
-    
+
     def __exit__(self, exc_type, exc_value, traceback):
         if exc_type is not None and issubclass(exc_type, self.captures):
             self.failure(self.target, exc_value)

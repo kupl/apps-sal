@@ -1,6 +1,6 @@
+from collections import deque
 log = False
 
-from collections import deque
 
 class Game():
 
@@ -24,14 +24,14 @@ class Game():
     def assign_targets(self):
         if log:
             print('-> Assigning targets')
-        for army, target in zip(self.armies, range(1, len(self.armies)+1)):
+        for army, target in zip(self.armies, range(1, len(self.armies) + 1)):
             if target == len(self.armies):
                 target = 0
             army.target = self.armies[target]
         self.print_state()
 
     def move_bullets(self):
-        if log:        
+        if log:
             print('-> Moving bullets')
         for bullet in self.bullets:
             bullet.move()
@@ -87,10 +87,11 @@ class Game():
                 break
             self.round += 1
 
+
 class Army():
 
     def __init__(self, position, members):
-        self.original_position=position
+        self.original_position = position
         self.soldiers = deque([Soldier(position=i, bullet_speed=bs) for i, bs in enumerate(members)])
         self.leader = self.soldiers[0]
         self.target = None
@@ -116,6 +117,7 @@ class Army():
     def __repr__(self):
         return 'Army {}'.format(self.original_position)
 
+
 class Soldier():
 
     def __init__(self, position, bullet_speed):
@@ -128,6 +130,7 @@ class Soldier():
             bullet_speed=self.bullet_speed,
             alive_status='alive' if self.alive else 'dead'
         )
+
 
 class Bullet():
 
@@ -146,7 +149,8 @@ class Bullet():
     def move(self):
         self.distance_to_target -= self.speed
 
-def queue_battle(dist,*armies):
+
+def queue_battle(dist, *armies):
     game = Game(dist, armies)
     game.game_loop()
 

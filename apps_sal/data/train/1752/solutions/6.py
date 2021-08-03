@@ -5,8 +5,9 @@ def combos(ls):
         ans = []
         for s1 in combos(ls[1:]):
             for s2 in ls[0]:
-                ans.append(s2+s1)
+                ans.append(s2 + s1)
         return ans
+
 
 def get_pins(observed):
     could_be = {

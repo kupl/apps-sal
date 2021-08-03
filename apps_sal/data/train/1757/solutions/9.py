@@ -1,5 +1,6 @@
 Offsets = ((-2, -1), (-2, 1), (2, -1), (2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2))
 
+
 def knights_tour(start, size):
     visited = {}
     peers = {}
@@ -14,13 +15,15 @@ def knights_tour(start, size):
     visited[start] = 1
 
     def find(curr):
-        if len(path) == size: return path
+        if len(path) == size:
+            return path
 
         for peer in sorted((p for p in peers[curr] if not visited[p]),
-                            key = lambda p: sum(not visited[p2] for p2 in peers[p])):
+                           key=lambda p: sum(not visited[p2] for p2 in peers[p])):
             visited[peer] = 1
             path.append(peer)
-            if find(peer): return path
+            if find(peer):
+                return path
             visited[peer] = 0
             path.pop()
 
