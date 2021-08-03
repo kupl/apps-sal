@@ -6,4 +6,3 @@ def words_to_marks(s):
     for letter in s:
         score += letters.index(letter) + 1
     return score
-

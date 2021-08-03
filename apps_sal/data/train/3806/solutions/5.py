@@ -39,5 +39,3 @@ def black_and_white(height: int, width: int, compressed: List[int]) -> List[List
 
     it = iter(tracker())
     return [[i for i in takewhile(lambda i: i >= 0, it)] for h in range(height)]
-
-

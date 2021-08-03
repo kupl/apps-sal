@@ -1,4 +1,6 @@
 import string
+
+
 def words_to_marks(phrase):
     sum = 0
     for letter in phrase:

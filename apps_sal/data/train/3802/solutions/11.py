@@ -5,5 +5,3 @@ def hoop_count(n):
     elif n < 10:
         return'Keep at it until you get it'
     return hoop_count(n)
-
-

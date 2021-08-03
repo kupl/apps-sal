@@ -1,5 +1,6 @@
 import re
 
+
 def to_display(b, n):
     r = []
     while n:
@@ -7,12 +8,14 @@ def to_display(b, n):
         r.append(chr(65 + x))
     return "".join(r[::-1]) + str(b)
 
+
 def to_internal(s):
     (a, b), n = re.findall(r"[A-Z]+|\d+", s), 0
     for x in a:
         n *= 26
         n += ord(x) - 64
     return (int(b), n)
+
 
 def spreadsheet(s):
     a = re.findall(r"[A-Z]+|\d+", s)

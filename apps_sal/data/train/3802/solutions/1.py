@@ -3,4 +3,3 @@ def hoop_count(n):
         return("Keep at it until you get it")
     else:
         return("Great, now move on to tricks")
-

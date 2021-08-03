@@ -11,5 +11,7 @@ def words_to_marks(s):
         words_value = words_value + letters_value[j] + 1
     print(words_value)
     return words_value
+
+
 s = 'cat'
 words_to_marks(s)

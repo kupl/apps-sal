@@ -9,6 +9,7 @@ def spreadsheet(s):
     except:
         c = 0
         for i, l in enumerate(s):
-            if l.isdigit(): break
+            if l.isdigit():
+                break
             c = 26 * c + ord(l) - 64
         return 'R%sC%d' % (s[i:], c)

@@ -1,5 +1,6 @@
 nums = {}
 
+
 def helper():
     nums[1] = '0'
     nums[2] = '1'
@@ -9,6 +10,7 @@ def helper():
             suma += j ** exp
             exp += 1
         nums[i] = str(suma)
+
 
 def min_length_num(num_dig, ord_max):
     if not nums:

@@ -4,4 +4,3 @@ def hoop_count(n):
     else:
         result = "Keep at it until you get it"
     return result
-

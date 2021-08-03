@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 def update_inventory(cur_stock, new_stock):
     answer = defaultdict(int)
     for stock, item in cur_stock + new_stock:

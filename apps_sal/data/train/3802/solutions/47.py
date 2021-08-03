@@ -1,4 +1,3 @@
 def hoop_count(n):
-    return ("Keep at it until you get it" if 0<=n and n<=9 else "Great, now move on to tricks" )
+    return ("Keep at it until you get it" if 0 <= n and n <= 9 else "Great, now move on to tricks")
     # Good Luck!
-
