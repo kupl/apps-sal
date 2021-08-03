@@ -10,4 +10,3 @@ elif n == 4:
     print('\n'.join(map(str, [1, 3, 2, 4])))
 else:
     print('NO')
-

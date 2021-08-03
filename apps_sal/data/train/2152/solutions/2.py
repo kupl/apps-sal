@@ -21,24 +21,26 @@ def make_prime_factors(n):
 n = int(input())
 a = list(map(int, input().split()))
 
-ruiseki = [0] * (n+1)
+ruiseki = [0] * (n + 1)
 for i in range(n):
-    ruiseki[i+1] = ruiseki[i] + a[i]
-    
+    ruiseki[i + 1] = ruiseki[i] + a[i]
+
 sum_a = 0
 for i in range(n):
     sum_a += a[i]
 li = make_prime_factors(sum_a)
 
+
 def count(begin, end, num):
-    #print(ruiseki[begin+1:end+1])
-    #print(a[begin:end])
+    # print(ruiseki[begin+1:end+1])
+    # print(a[begin:end])
     res = 0
-    l = bisect.bisect_left(ruiseki[begin+1:end+1], (ruiseki[begin+1]+ruiseki[end]+1)//2)
+    l = bisect.bisect_left(ruiseki[begin + 1:end + 1], (ruiseki[begin + 1] + ruiseki[end] + 1) // 2)
     for i, num2 in enumerate(a[begin:end]):
         if num2 == 1:
             res += abs(i - l)
     return res
+
 
 if sum_a == 1:
     print(-1)
@@ -63,5 +65,3 @@ for num in li:
             end += 1
     ans = min(tmp_ans, ans)
 print(ans)
-
-

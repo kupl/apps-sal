@@ -1,6 +1,8 @@
 import sys
-input=sys.stdin.readline
-R = lambda: map(int, input().split())
+input = sys.stdin.readline
+def R(): return map(int, input().split())
+
+
 n, m = R()
 g = [list() for i in range(n)]
 for i in range(n):

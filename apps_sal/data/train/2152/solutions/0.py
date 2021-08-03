@@ -1,4 +1,7 @@
 # 素因数分解
+import sys
+
+
 def prime_decomposition(n):
     i = 2
     table = []
@@ -10,7 +13,8 @@ def prime_decomposition(n):
     if n > 1:
         table.append(n)
     return table
-import sys
+
+
 input = sys.stdin.readline
 N = int(input())
 A = list(map(int, input().split()))
@@ -26,9 +30,8 @@ Idx1 = [i for i, a in enumerate(A) if a]
 for p in primes:
     an = 0
     half = p // 2
-    for t in zip(*[iter(Idx1)]*p):
+    for t in zip(*[iter(Idx1)] * p):
         idx = t[half]
-        an += sum(abs(i-idx) for i in t)
+        an += sum(abs(i - idx) for i in t)
     ans = min(ans, an)
 print(ans)
-

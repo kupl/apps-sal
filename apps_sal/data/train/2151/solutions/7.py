@@ -16,4 +16,6 @@ def __starting_point():
             ans += arr[mid] - s
             mid -= 1
         print(ans)
+
+
 __starting_point()

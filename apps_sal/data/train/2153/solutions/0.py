@@ -105,7 +105,9 @@ def check(n, paths):
         for j in range(i + 1, n + 1):
             assert counts[(i, j)] == 2
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

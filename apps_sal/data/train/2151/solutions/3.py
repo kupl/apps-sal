@@ -13,4 +13,5 @@ def __starting_point():
             result += max(0, s - a[j])
     print(result)
 
+
 __starting_point()

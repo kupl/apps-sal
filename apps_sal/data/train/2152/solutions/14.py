@@ -13,13 +13,15 @@ if sum == 1:
     print(-1)
     return
 
+
 def calculate(inc):
     ret = 0
-    for i in range(0,m,inc):
+    for i in range(0, m, inc):
         mid = (i + (i + inc - 1)) // 2
-        for j in range(i,i+inc):
+        for j in range(i, i + inc):
             ret += abs(ids[j] - ids[mid])
     return ret
+
 
 ans = 10 ** 18
 div = 2
