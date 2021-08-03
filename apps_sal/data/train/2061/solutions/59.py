@@ -34,4 +34,3 @@ for _ in range(T):
                 else:
                     res = max(res, (-d + 1) // 3 * 2)
         print(res)
-

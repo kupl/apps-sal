@@ -16,7 +16,7 @@ for i in range(m):
             q += 1
         else:
             w = 0
-            while w+1 < len(s) and s[w] == s[w+1] - 1:
+            while w + 1 < len(s) and s[w] == s[w + 1] - 1:
                 w += 1
             q += len(s) - w
             r += len(s) - w - 1

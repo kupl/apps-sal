@@ -19,7 +19,7 @@ for _ in range(T):
     for i in range(2):
         for x, y, tp in B[i]:
             for dx, dy, ntp in X[tp]:
-                B[i+1].append((x+dx, y+dy, ntp))
+                B[i + 1].append((x + dx, y + dy, ntp))
 
     mi = 10 ** 30
     for i in range(3):
@@ -32,4 +32,4 @@ for _ in range(T):
                         if (p >= 0 and (t1 % 2)) or (p <= 0 and (t1 % 2 == 0)):
                             if d < mi:
                                 mi = d
-    print(mi)        
+    print(mi)

@@ -6,6 +6,8 @@ T = int(input())
 # 1 |-
 # 2 -|
 # 3 _|
+
+
 def ku_state(p1, p2, p3):
     xb = min([p[0] for p in [p1, p2, p3]])
     yb = min([p[1] for p in [p1, p2, p3]])
@@ -22,6 +24,7 @@ def ku_state(p1, p2, p3):
         return 3
     else:
         return None
+
 
 for _ in range(T):
     ax, ay, bx, by, cx, cy = list(map(int, input().split()))
@@ -45,11 +48,10 @@ for _ in range(T):
         if xb == 0 and yb == 0:
             ans = 1
         else:
-            ans = max(xd, yd)*2+1
+            ans = max(xd, yd) * 2 + 1
             if xb == yb:
                 ans += 1
     elif ku == 3:
         ans = max(abs(yb) * 2, 2 * xd + 1)
         ans = max(1, ans)
     print(ans)
-

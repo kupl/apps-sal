@@ -31,22 +31,22 @@ from sys import stdin
 
 TT = int(stdin.readline())
 
-t0 = tuple( sorted([(0,0),(0,1),(1,0)]) )
-t1 = tuple( sorted([(0,0),(0,1),(1,1)]) )
-t2 = tuple( sorted([(0,1),(1,0),(1,1)]) )
-t3 = tuple( sorted([(0,0),(1,0),(1,1)]) )
+t0 = tuple(sorted([(0, 0), (0, 1), (1, 0)]))
+t1 = tuple(sorted([(0, 0), (0, 1), (1, 1)]))
+t2 = tuple(sorted([(0, 1), (1, 0), (1, 1)]))
+t3 = tuple(sorted([(0, 0), (1, 0), (1, 1)]))
 
 for loop in range(TT):
 
-    ax,ay,bx,by,cx,cy = list(map(int,stdin.readline().split()))
-    
-    mx = min(ax,bx,cx)
-    my = min(ay,by,cy)
+    ax, ay, bx, by, cx, cy = list(map(int, stdin.readline().split()))
+
+    mx = min(ax, bx, cx)
+    my = min(ay, by, cy)
 
     ox = 2 * mx
     oy = 2 * my
 
-    setz = tuple(sorted([ (ax-mx , ay-my) , (bx-mx , by-my) , (cx-mx , cy-my) ]))
+    setz = tuple(sorted([(ax - mx, ay - my), (bx - mx, by - my), (cx - mx, cy - my)]))
     #print (setz)
 
     if setz == t0:
@@ -65,12 +65,10 @@ for loop in range(TT):
     #print (ox,oy,file=sys.stderr)
 
     if ox != oy:
-        print((abs(ox)+abs(oy)-min(abs(ox),abs(oy))))
+        print((abs(ox) + abs(oy) - min(abs(ox), abs(oy))))
     else:
 
         if 0 <= ox <= 1:
-            print (ox)
+            print(ox)
         else:
-            print((abs(ox)+abs(oy)-min(abs(ox),abs(oy)) + 1))
-    
-
+            print((abs(ox) + abs(oy) - min(abs(ox), abs(oy)) + 1))

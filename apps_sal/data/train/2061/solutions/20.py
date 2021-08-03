@@ -1,8 +1,9 @@
-abs = lambda x:max(x, -x)
+def abs(x): return max(x, -x)
+
 
 t = int(input())
 for i in range(t):
-    ax,ay,bx,by,cx,cy = list(map(int, input().split()))
+    ax, ay, bx, by, cx, cy = list(map(int, input().split()))
     x = ax + bx + cx
     y = ay + by + cy
     xv = x // 3
@@ -14,7 +15,7 @@ for i in range(t):
     ny = yv * 2 + yp - 1
 
     if nx == ny:
-        if  nx == 1:
+        if nx == 1:
             print((1))
         elif nx == 0:
             print((0))
@@ -22,4 +23,3 @@ for i in range(t):
             print((abs(nx) + 1))
     else:
         print((max(abs(nx), abs(ny))))
-

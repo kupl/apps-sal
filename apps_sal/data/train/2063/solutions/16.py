@@ -11,10 +11,10 @@ for i in range(n):
         ans += 1
 i = 0
 while i < n:
-    j = i+1
+    j = i + 1
     while j < n:
-        if languages[i]&languages[j]:
-            languages[i] = languages[i]|languages[j]
+        if languages[i] & languages[j]:
+            languages[i] = languages[i] | languages[j]
             del(languages[j])
             n -= 1
         else:
@@ -22,16 +22,15 @@ while i < n:
     i += 1
 i = 0
 while i < n:
-    j = i+1
+    j = i + 1
     while j < n:
-        if languages[i]&languages[j]:
-            languages[i] = languages[i]|languages[j]
+        if languages[i] & languages[j]:
+            languages[i] = languages[i] | languages[j]
             del(languages[j])
             n -= 1
         else:
             j += 1
     i += 1
 if n:
-    ans += n-1
+    ans += n - 1
 print(ans)
-

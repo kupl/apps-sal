@@ -11,6 +11,7 @@ def f(m):
         sdp[i + 1] = sdp[i] + (1 if dp[i] else 0)
     return dp[n - 1]
 
+
 n, k = list(map(int, input().split()))
 dp = [False for i in range(n + 2)]
 sdp = [0 for i in range(n + 2)]
@@ -25,6 +26,5 @@ while r - le > 1:
     if f(m):
         r = m
     else:
-        le = m  
+        le = m
 print(r)
-

@@ -8,6 +8,7 @@ def read_data():
         m += ma[0] - 1
     return n, k, As, m
 
+
 def solve(n, k, As, m):
     As.sort()
     steps = n + 1 + m
@@ -18,6 +19,7 @@ def solve(n, k, As, m):
         else:
             break
     return steps
+
 
 n, k, As, m = read_data()
 print(solve(n, k, As, m))

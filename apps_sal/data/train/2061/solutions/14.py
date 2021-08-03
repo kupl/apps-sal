@@ -1,19 +1,21 @@
 flip = {
-    0 : {0:1, 1:0, 2:3, 3:2},
-    1 : {0:3, 1:2, 2:1, 3:0},
-    2 : {0:0, 1:3, 2:2, 3:1},
+    0: {0: 1, 1: 0, 2: 3, 3: 2},
+    1: {0: 3, 1: 2, 2: 1, 3: 0},
+    2: {0: 0, 1: 3, 2: 2, 3: 1},
 }
 v = [(0, 0), (1, 0), (1, 1), (0, 1)]
+
+
 def solve(ax, ay, bx, by, cx, cy):
     points = {(ax, ay), (bx, by), (cx, cy)}
     xm = min(ax, bx, cx)
     ym = min(ay, by, cy)
     rs = 2
     for i, (vx, vy) in enumerate(v):
-        if (xm+vx, ym+vy) not in points:
+        if (xm + vx, ym + vy) not in points:
             rt = i
             break
-    
+
     if xm == ym == 0:
         if rt == 2:
             return 0
@@ -32,7 +34,7 @@ def solve(ax, ay, bx, by, cx, cy):
         xm, ym = ym, xm
         rs = flip[2][rs]
         rt = flip[2][rt]
-    
+
     if xm == ym:
         res = 2 * xm
         if rs == 2:
@@ -46,7 +48,7 @@ def solve(ax, ay, bx, by, cx, cy):
         else:
             if rt == 0:
                 res += 1
-    
+
     else:
         res = 2 * ym + 1
         res += (xm - ym - 1) * 2
@@ -54,8 +56,9 @@ def solve(ax, ay, bx, by, cx, cy):
             res += 1
         if rt in (0, 3):
             res += 1
-    
+
     return res
+
 
 T = int(input())
 ans = []
@@ -63,4 +66,3 @@ for i in range(T):
     ans.append(solve(*list(map(int, input().split()))))
 
 print(*ans, sep='\n')
-

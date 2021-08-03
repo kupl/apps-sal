@@ -10,11 +10,11 @@ for ak in a:
     if ak[0] == 1:
         j = 1
         while j <= len(ak) - 1:
-            if ak[j] != ak[j-1] + 1:
+            if ak[j] != ak[j - 1] + 1:
                 break
             j += 1
-        total += 2*(len(ak) - j)
+        total += 2 * (len(ak) - j)
     else:
-        total += 2*(len(ak) - 1)
+        total += 2 * (len(ak) - 1)
 
 print(total)

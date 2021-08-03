@@ -4,9 +4,10 @@ r, s = [0] * (m + 1), 0
 for i in range(1, n + 1):
     t = list(map(int, input().split()))
     if t[0]:
-        t = t[1: ]
+        t = t[1:]
         d = set([r[j] for j in t])
-        if 0 in d: d.remove(0)
+        if 0 in d:
+            d.remove(0)
         if len(d):
             for j in d:
                 for k in q[j]:
@@ -20,6 +21,7 @@ for i in range(1, n + 1):
         else:
             for k in t:
                 r[k] = i
-            q[i] = t          
-    else: s += 1
+            q[i] = t
+    else:
+        s += 1
 print(s + max(sum(len(i) > 0 for i in q) - 1, 0))
