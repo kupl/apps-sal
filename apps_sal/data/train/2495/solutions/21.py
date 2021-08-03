@@ -6,7 +6,7 @@ class Solution:
                     break
             else:
                 return False
-            
-            arr[i:j+1] = reversed(arr[i:j+1:])
-        
+
+            arr[i:j + 1] = reversed(arr[i:j + 1:])
+
         return arr == target

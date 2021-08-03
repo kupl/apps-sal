@@ -1,6 +1,6 @@
 class Solution:
     def xorOperation(self, n: int, start: int) -> int:
         res = start
-        for i in range(1,n):
-            res ^= i*2+start
+        for i in range(1, n):
+            res ^= i * 2 + start
         return res

@@ -7,4 +7,3 @@ class Solution:
         for n in nums:
             result = result ^ n
         return result
-

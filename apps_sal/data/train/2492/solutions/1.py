@@ -9,4 +9,3 @@ class Solution:
             else:
                 result += 1
         return result
-

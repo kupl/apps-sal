@@ -2,14 +2,14 @@ class Solution:
     def buddyStrings(self, A: str, B: str) -> bool:
         count_A = {}
         doubled = False
-        for i,a in enumerate(A):
+        for i, a in enumerate(A):
             if a not in count_A:
                 count_A[a] = set()
             else:
                 doubled = True
             count_A[a].add(i)
         off = 0
-        for i,b in enumerate(B):
+        for i, b in enumerate(B):
             if b not in count_A:
                 return False
             else:

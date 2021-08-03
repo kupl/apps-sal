@@ -1,10 +1,12 @@
 from datetime import datetime
+
+
 class Solution:
     def dayOfTheWeek(self, day: int, month: int, year: int) -> str:
 
-        # index mapping: 0          1           2           3           4           5       6        
-        weekday_name= ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-        
+        # index mapping: 0          1           2           3           4           5       6
+        weekday_name = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
         # datetime is a class, whose constructor can output corresponding date-time object
         #
         # for example:
@@ -16,4 +18,4 @@ class Solution:
         # datetime(2020, 1, 15).strftime('%w') = '3'
 
         # Finally, use int( ... ) to carry out explicit type conversion fron str to integer as weekday index
-        return weekday_name[ int( datetime(year, month, day).strftime('%w') ) ]
+        return weekday_name[int(datetime(year, month, day).strftime('%w'))]

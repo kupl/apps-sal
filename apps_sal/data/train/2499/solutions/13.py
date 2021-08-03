@@ -1,7 +1,7 @@
 class Solution:
     def hasGroupsSizeX(self, deck):
         def gcd(a, b):
-            while b: 
+            while b:
                 a, b = b, a % b
             return a
         count = [*list(Counter(deck).values())]
@@ -12,7 +12,5 @@ class Solution:
             if g == 1:
                 return False
         return True
-        
-        
-      #  return reduce(gcd, count) > 1
 
+      #  return reduce(gcd, count) > 1

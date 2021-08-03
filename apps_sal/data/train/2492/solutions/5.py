@@ -3,7 +3,7 @@ class Solution:
         s = []
         c = 0
         i = 0
-        while i<len(logs):
+        while i < len(logs):
             if logs[i] == '../':
                 if c != 0:
                     c -= 1

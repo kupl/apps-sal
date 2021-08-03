@@ -18,12 +18,9 @@ class Solution:
                 else:
                     flag = False
                     odd = 0
-                    i+= 1
-                    
+                    i += 1
+
             if odd == 3:
                 return True
-            
-        return False
-            
-                    
 
+        return False

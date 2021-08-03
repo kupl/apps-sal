@@ -5,7 +5,7 @@ class Solution:
                 arr.remove(target[i])
             else:
                 pass
-        if arr==[]:
+        if arr == []:
             return True
         else:
             return False

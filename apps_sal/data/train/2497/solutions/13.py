@@ -11,6 +11,5 @@ class Solution:
             else:
                 odd1 = False
                 odd2 = False
-        
-        return False
 
+        return False

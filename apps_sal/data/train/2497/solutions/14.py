@@ -9,5 +9,3 @@ class Solution:
             if odds >= 3:
                 return True
         return False
-            
-
