@@ -25,4 +25,3 @@ while L < R - 1:
     else:
         L = mid
 print(R)
-

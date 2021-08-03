@@ -17,6 +17,6 @@ for i in range(n):
     dx = max(max_x - x[i], x[i] - min_x)
     dy = max(max_y - y[i], y[i] - min_y)
     answer = max(answer, dx + dy)
-print(2*answer, end = ' ')
+print(2 * answer, end=' ')
 for i in range(4, n + 1):
-    print(2*(max_x - min_x + max_y - min_y), end = ' ')
+    print(2 * (max_x - min_x + max_y - min_y), end=' ')

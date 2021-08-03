@@ -18,6 +18,6 @@ for i in range(n):
     dx = max(max_x - x[i], x[i] - min_x)
     dy = max(max_y - y[i], y[i] - min_y)
     answer = max(answer, dx + dy)
-out.write(str(2*answer) + ' ')
+out.write(str(2 * answer) + ' ')
 for i in range(4, n + 1):
-    out.write(str(2*(max_x - min_x + max_y - min_y)) + ' ')
+    out.write(str(2 * (max_x - min_x + max_y - min_y)) + ' ')

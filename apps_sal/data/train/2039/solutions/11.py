@@ -22,9 +22,11 @@ def inc_by_mod(arr, m):
         if is_opt(mid):
             hi = mid
         else:
-            lo = mid + 1 
+            lo = mid + 1
 
     return lo
+
+
 def main():
     n, m = map(int, input().split())
     arr = list(map(int, input().split()))
@@ -32,6 +34,9 @@ def main():
     res = inc_by_mod(arr, m)
     print(res)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

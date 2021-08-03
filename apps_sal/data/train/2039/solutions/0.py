@@ -1,32 +1,31 @@
 import sys
 input = sys.stdin.readline
 
-n,m=list(map(int,input().split()))
-A=list(map(int,input().split()))
+n, m = list(map(int, input().split()))
+A = list(map(int, input().split()))
 
 
-MIN=0
-MAX=m
+MIN = 0
+MAX = m
 
-while MIN!=MAX:
-    x=(MIN+MAX)//2
-    #print(x,MIN,MAX)
-    #print()
+while MIN != MAX:
+    x = (MIN + MAX) // 2
+    # print(x,MIN,MAX)
+    # print()
 
-    M=0
+    M = 0
     for a in A:
-        #print(a,M)
-        if a<=M and a+x>=M:
+        # print(a,M)
+        if a <= M and a + x >= M:
             continue
-        elif a>M and a+x>=m and (a+x)%m>=M:
+        elif a > M and a + x >= m and (a + x) % m >= M:
             continue
-        elif a>M:
-            M=a
+        elif a > M:
+            M = a
         else:
-            MIN=x+1
+            MIN = x + 1
             break
     else:
-        MAX=x
+        MAX = x
 
 print(MIN)
-

@@ -45,7 +45,7 @@ for i in reversed(toposort):
 qt = ["A" if min_below[i] == min_above[i] == i else "E" for i in range(n)]
 
 # qt = [None for x in range(n)]
-# 
+#
 # for i in range(n):
 #     if qt[i] is not None:
 #         continue
@@ -57,8 +57,8 @@ qt = ["A" if min_below[i] == min_above[i] == i else "E" for i in range(n)]
 #             if qt[nb] is None:
 #                 qt[nb] = 'E'
 #                 stack_for.append(nb)
-# 
-# 
+#
+#
 #     stack_back = [i]
 #     while len(stack_back):
 #         cur = stack_back.pop()
@@ -66,7 +66,6 @@ qt = ["A" if min_below[i] == min_above[i] == i else "E" for i in range(n)]
 #             if qt[nb] is None:
 #                 qt[nb] = 'E'
 #                 stack_back.append(nb)
-# 
+#
 print(len([x for x in qt if x == 'A']))
 print("".join(qt))
-
