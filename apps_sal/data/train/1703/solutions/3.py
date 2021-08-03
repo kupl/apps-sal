@@ -1,6 +1,7 @@
-import re, itertools
+import re
+import itertools
 
-WORDING = dict(map(lambda x: x.split(" | "),"""
+WORDING = dict(map(lambda x: x.split(" | "), """
 - | *p -= %s;
 + | *p += %s;
 < | p -= %s;
@@ -10,6 +11,7 @@ WORDING = dict(map(lambda x: x.split(" | "),"""
 . | putchar(*p);
 , | *p = getchar();
 """.splitlines()[1:]))
+
 
 def brainfuck_to_c(source_code):
     code, old_code = source_code, ""

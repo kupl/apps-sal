@@ -1,7 +1,7 @@
 class DynamicConnectivity(object):
     def __init__(self, n):
-        # class takes the number of objects n as input, 
-        # and initializes a data structure with objects numbered from 
+        # class takes the number of objects n as input,
+        # and initializes a data structure with objects numbered from
         # 0 to N-1
         self.clusters = {}
 
@@ -28,7 +28,7 @@ class DynamicConnectivity(object):
             pq = {p, q}
             self.clusters[p] = pq
             self.clusters[q] = pq
-        
+
     def connected(self, p, q):
         # connected checks if point p is connected to point q and returns a boolean
         return q in self.clusters.get(p, {})

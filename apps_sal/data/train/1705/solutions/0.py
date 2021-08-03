@@ -16,8 +16,8 @@ def spidey_swings(building_params):
     candidate_final_jumps = [
         building.get_variables_aiming_end(jump_position, end_position)
         for building in buildings
-        if (building.is_reachable(jump_position) and
-            building.is_possible_to_reach_the_end(jump_position, end_position))
+        if (building.is_reachable(jump_position)
+            and building.is_possible_to_reach_the_end(jump_position, end_position))
     ]
     candidate_final_jumps.sort(reverse=True)
     _, latch_position = candidate_final_jumps[0]
@@ -80,8 +80,8 @@ class Building:
         return (self.latch_pos_for_max_displacement(jump_pos) - jump_pos) * 2
 
     def ratio_max_displacement_rope(self, jump_pos):
-        return (self.advanced_distance_for_max_displacement(jump_pos) /
-                self.rope_length_for_max_displacement(jump_pos))
+        return (self.advanced_distance_for_max_displacement(jump_pos)
+                / self.rope_length_for_max_displacement(jump_pos))
 
     def get_variables_for_max_displacement(self, pos):
         latch_pos = self.latch_pos_for_max_displacement(pos)
@@ -121,4 +121,3 @@ class Building:
 
     def is_reachable(self, pos):
         return self.latch_pos_for_max_displacement(pos) is not None
-

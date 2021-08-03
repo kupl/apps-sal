@@ -1,6 +1,8 @@
 import copy
+
+
 class MemoryManager:
-    def __init__(self, memory:list):
+    def __init__(self, memory: list):
         """
         @constructor Creates a new memory manager for the provided array.
         @param {memory} An array to use as the backing memory.
@@ -8,6 +10,7 @@ class MemoryManager:
         self.memory = memory
         self.Firstindex = copy.copy(memory)
         self.lens = len(self.Firstindex)
+
     def allocate(self, size):
         """
         Allocates a block of memory of requested size.
@@ -26,12 +29,12 @@ class MemoryManager:
                     break
                 else:
                     index = self.Firstindex.index(None)
-                if(index+size > self.lens):
+                if(index + size > self.lens):
                     break
                 else:
-                    last = index+size
-                if(self.Firstindex[index:last] == [None]*size):
-                    self.Firstindex[index:last] = [index]*size
+                    last = index + size
+                if(self.Firstindex[index:last] == [None] * size):
+                    self.Firstindex[index:last] = [index] * size
                     return index
                 else:
                     needlist = self.Firstindex[index:last]
@@ -39,7 +42,8 @@ class MemoryManager:
                     tempindex = (tempindex[tempindex.index(s2[-1]) + 1:])
 
             raise Exception("allocate END ERROR")
-    def release(self, pointer:int):
+
+    def release(self, pointer: int):
         """
         Releases a previously allocated block of memory.
         @param {number} pointer - The pointer to the block to release.
@@ -49,9 +53,9 @@ class MemoryManager:
             raise Exception("pointer release ERROR")
         counts = self.Firstindex.count(pointer)
         first = self.Firstindex.index(pointer)
-        last = first +  counts
-        self.memory[first:last] = [None]*(counts)
-        self.Firstindex[first:last] = [None]*(counts)
+        last = first + counts
+        self.memory[first:last] = [None] * (counts)
+        self.Firstindex[first:last] = [None] * (counts)
 
     def read(self, pointer):
         """
@@ -66,6 +70,7 @@ class MemoryManager:
             raise Exception("pointer read ERROR2")
         else:
             return self.memory[pointer]
+
     def write(self, pointer, value):
         """
         Writes a value to the location identified by pointer

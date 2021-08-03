@@ -1,7 +1,7 @@
 class DynamicConnectivity(object):
-# class takes the number of objects n as input, 
-# and initializes a data structure with objects numbered from 
-# 0 to N-1
+    # class takes the number of objects n as input,
+    # and initializes a data structure with objects numbered from
+    # 0 to N-1
     def __init__(self, n):
         self.a = []
 
@@ -18,7 +18,7 @@ class DynamicConnectivity(object):
                 iq = k
                 break
         if ip == iq == -1:
-            self.a.append({p,q})
+            self.a.append({p, q})
         elif ip == -1 and iq != -1:
             self.a[iq].add(p)
         elif iq == -1 and ip != -1:

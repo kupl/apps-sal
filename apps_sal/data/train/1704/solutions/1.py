@@ -65,4 +65,3 @@ class PokerHand(object):
             return (2, get_by_count(2), get_by_count(1))
         else:
             return (1, get_by_count(1))
-

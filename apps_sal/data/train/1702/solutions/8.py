@@ -1,12 +1,13 @@
 import math
-    
-class Sudoku(object):        
+
+
+class Sudoku(object):
     def __init__(self, board):
         self.board = board
         self.size = len(board)
         self.lil_size = math.sqrt(self.size)
-    
-    def is_valid(self):    
+
+    def is_valid(self):
         # dimensions must be the same
         if not all(len(r) == self.size for r in self.rows()):
             return False
@@ -21,27 +22,27 @@ class Sudoku(object):
 
         # groups must fill the range
         numbers = range(1, self.size + 1)
-        groups = self.rows() + self.columns() + self.lil_squares()        
+        groups = self.rows() + self.columns() + self.lil_squares()
         for group in groups:
             if sorted(group) != numbers:
                 return False
-      
-        return True       
-    
+
+        return True
+
     def rows(self):
         return self.board
-        
+
     def columns(self):
         return zip(*self.rows())
-    
+
     def lil_squares(self):
         result = []
         size = int(self.lil_size)
         for i in range(size):
-            for j in range(size):            
+            for j in range(size):
                 square = []
                 for k in range(size):
                     for l in range(size):
                         square.append(self.board[i * size + k][j * size + l])
-                result.append(square)                
+                result.append(square)
         return result

@@ -6,7 +6,7 @@ class MemoryManager:
         """
         self.memory = memory
         self.available_memory = len(memory)
-        self.pointer_list = {0:0}
+        self.pointer_list = {0: 0}
         self.pointer = 0
 
     def allocate(self, size):
