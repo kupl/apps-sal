@@ -1,10 +1,11 @@
 from functools import lru_cache
 import math
 
+
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
         MAX_COST = 10 ** 7
-        
+
         @lru_cache(None)
         def paint(i, color, k):
             # print(i, k, color)
@@ -19,11 +20,11 @@ class Solution:
             return min((cost[i][c - 1] + paint(i + 1, c, k - (1 if c != color else 0)) for c in range(1, n + 1)))
             # print(i, k, color, total_cost)
             # return total_cost
-        
+
         # neighbors = 0
         # prev = 0
         # for h in houses:
-        #     if h == 0: 
+        #     if h == 0:
         #         continue
         #     if h != prev:
         #         neighbors += 1

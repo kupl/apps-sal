@@ -5,8 +5,8 @@ class Solution:
         for i, a in enumerate(nums):
             r = (r + a) % p
         if r == 0:
-            return 0        
-        result = n 
+            return 0
+        result = n
         s = 0
         pos = {0: -1}
         for i, a in enumerate(nums):
@@ -16,5 +16,3 @@ class Solution:
                 result = min(result, i - pos.get(r1, -n))
             pos[s] = i
         return result if result < n else -1
-        
-

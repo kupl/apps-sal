@@ -4,15 +4,15 @@ class Solution:
             return 0
         if len(coins) == 1 and coins[0] > amount:
             return -1
-        
-        dp = [amount+1] * (amount+1)
+
+        dp = [amount + 1] * (amount + 1)
         dp[0] = 0
-        for i in range(1,amount+1):
+        for i in range(1, amount + 1):
             for coin in coins:
                 if coin <= i:
-                    dp[i] = min(dp[i-coin] + 1, dp[i])
-        return dp[amount] if dp[amount] != amount+1 else -1
-    
+                    dp[i] = min(dp[i - coin] + 1, dp[i])
+        return dp[amount] if dp[amount] != amount + 1 else -1
+
 #         rs = [amount+1] * (amount+1)
 #         rs[0] = 0
 #         for i in xrange(1, amount+1):
@@ -23,4 +23,3 @@ class Solution:
 #         if rs[amount] == amount+1:
 #             return -1
 #         return rs[amount]
-

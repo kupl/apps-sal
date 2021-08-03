@@ -1,11 +1,11 @@
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
-        
-        total = sum(nums) 
+
+        total = sum(nums)
         remainder = total % p
         if not remainder:
             return 0
-        ans = float('inf') 
+        ans = float('inf')
         presum = [0]
         remainders = {0: -1}
         for i, n in enumerate(nums):

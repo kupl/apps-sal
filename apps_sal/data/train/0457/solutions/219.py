@@ -18,8 +18,8 @@ class Solution:
                             min_coins = curr_coins
                 mem[sum_remaining] = min_coins
                 return mem[sum_remaining]
-        
-        mem = [None] * (amount+1)
+
+        mem = [None] * (amount + 1)
         ans = make_change(amount, coins, mem)
         if ans == amount + 1:
             return -1

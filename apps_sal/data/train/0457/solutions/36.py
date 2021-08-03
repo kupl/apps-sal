@@ -1,5 +1,5 @@
 class Solution:
-    def coinChange(self, denoms: List[int], n: int) -> int:  
+    def coinChange(self, denoms: List[int], n: int) -> int:
         if n == 0:
             return 0
         nodes = set([0])

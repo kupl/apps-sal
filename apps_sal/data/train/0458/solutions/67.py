@@ -12,18 +12,18 @@ Find the shortest array with sum % p = need.
 last[remainder] = index records the last index that
 (A[0] + A[1] + .. + A[i]) % p = remainder
         '''
-        r=sum(nums)%p
-        if r==0:
+        r = sum(nums) % p
+        if r == 0:
             return 0
-        mem={0:-1}
-        s=0
-        res=len(nums)
-        for i,a in enumerate(nums):
-            s=(s+a)%p
-            t=(s+p-r)%p
+        mem = {0: -1}
+        s = 0
+        res = len(nums)
+        for i, a in enumerate(nums):
+            s = (s + a) % p
+            t = (s + p - r) % p
             if t in mem:
-                res=min(res,i-mem[t])
-            mem[s]=i
-        if res==len(nums):
+                res = min(res, i - mem[t])
+            mem[s] = i
+        if res == len(nums):
             return -1
         return res

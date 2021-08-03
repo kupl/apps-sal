@@ -1,6 +1,6 @@
 class Solution:
     IMPOSSIBLE = -1
-    
+
     def computeMinCoins(self, n: int) -> int:
         if n in self.memoization:
             return self.memoization.get(n)
@@ -19,8 +19,7 @@ class Solution:
                     result = plausible_result
         self.memoization[n] = result
         return result
-            
-    
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         coins.sort(reverse=True)
         if amount % coins[0] == 0:
@@ -28,4 +27,3 @@ class Solution:
         self.coins = coins
         self.memoization = {}
         return self.computeMinCoins(amount)
-

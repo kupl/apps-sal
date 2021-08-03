@@ -10,11 +10,11 @@ class Solution:
         costs = []
 
         for coin in coins:
-            cost = self.changeCoin(coins, amount-coin, change)
-            if amount-coin in change:
-                change[amount-coin] = min(cost, change[amount-coin])
+            cost = self.changeCoin(coins, amount - coin, change)
+            if amount - coin in change:
+                change[amount - coin] = min(cost, change[amount - coin])
             else:
-                change[amount-coin] = cost
+                change[amount - coin] = cost
 
             if cost != -1:
                 costs.append(cost)
@@ -28,7 +28,5 @@ class Solution:
         coins.sort()
         coins = [coin for coin in coins if coin <= amount]
         change = {}
-        
-        
-        return self.changeCoin(coins, amount, change)
 
+        return self.changeCoin(coins, amount, change)

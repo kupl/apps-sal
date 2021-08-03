@@ -3,12 +3,12 @@ class Solution:
         '''
         dp = [float('inf')]*(amount+1)
         dp[0] = 0
-        
+
         for coin in coins:
             for x in range(coin, amount+1):
                 if coin <= x:
                     dp[x] = min(dp[x], dp[x-coin]+1)
-                
+
         return dp[amount] if dp[amount] != float('inf') else -1
         '''
         '''
@@ -41,18 +41,18 @@ class Solution:
             # since there is another check within the loop below. However, it
             # speeds up the solution. Better to have this check before the
             # \"amt == 0\" check below.
-            #if n_coins + (amt + coin - 1) / coin > min_coins:
-            #if (min_coins - n_coins - 1) * coin + 1 < amt:
+            # if n_coins + (amt + coin - 1) / coin > min_coins:
+            # if (min_coins - n_coins - 1) * coin + 1 < amt:
             #    return
 
             div = amt // coin
             n_coins += div
             amt %= coin
-            
+
             if amt == 0:
                 min_coins = min(min_coins, n_coins)
                 return
-            
+
             if start < len_coins:
                 # use as many of current coin as possible, and try next smaller coin
                 dfs(start + 1, amt, n_coins)
@@ -62,24 +62,24 @@ class Solution:
                 # trying the next smaller coin.
 
                 next_coin = coins[start + 1]
-                
+
                 for _ in range(div):
-                    amt += coin 
+                    amt += coin
                     n_coins -= 1
-                    
+
                     if (min_coins - n_coins - 1) * next_coin + 1 > amt:
-                    #if (min_coins - n_coins) * next_coin > amt: # hope still exists
+                        # if (min_coins - n_coins) * next_coin > amt: # hope still exists
                         dfs(start + 1, amt, n_coins)
                     else:
                         break
-        
+
         len_coins = len(coins) - 1
-        
+
         # try biggest coins first
         coins.sort(reverse=True)
-        
+
         min_coins = float('inf')
 
         dfs(0, amount, 0)
-        
+
         return min_coins if min_coins < float('inf') else -1

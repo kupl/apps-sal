@@ -13,6 +13,5 @@ class Solution:
             if amt == coins[idx]:
                 return 1
             return min(dfs(amt - coins[idx], idx) + 1, dfs(amt, idx - 1))
-        res = dfs(amount, len(coins)-1)
+        res = dfs(amount, len(coins) - 1)
         return res if res < float('inf') else -1
-

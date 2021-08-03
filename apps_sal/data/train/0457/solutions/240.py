@@ -1,6 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        
+
         def my_coinChange(coins, rem, count):
             if rem < 0:
                 return -1
@@ -18,9 +18,7 @@ class Solution:
 
             count[rem - 1] = -1 if my_min == float('inf') else my_min
             return count[rem - 1]
-        
+
         if amount < 1:
             return 0
         return my_coinChange(coins, amount, [0] * amount)
-    
-

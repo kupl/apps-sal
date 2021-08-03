@@ -5,18 +5,18 @@ class Solution:
             div = amount // coin
             amount %= coin
             n_coins += div
-            
+
             if amount == 0:
                 self.minimum = min(n_coins, self.minimum)
                 return
-            
+
             if start < length:
                 dfs(start + 1, amount, n_coins)
                 next_coin = coins[start + 1]
                 for _ in range(div):
                     amount += coin
                     n_coins -= 1
-                    
+
                     if (self.minimum - n_coins - 1) * next_coin + 1 > amount:
                         dfs(start + 1, amount, n_coins)
                     else:

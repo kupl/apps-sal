@@ -10,7 +10,7 @@ class Solution:
     # if no positive elements, return 0
     # else, return 1 + (min of all these positive elements)
     # Complexity: O(n ^ amount/(lowest_element_in_coins)), because its building a tree
-    
+
     def coinChangeDynamic(self, coins: List[int], amount: int, memory_dict: dict) -> int:
         if(amount < 0):
             return -1
@@ -34,7 +34,6 @@ class Solution:
                     return min_num_coins + 1
             else:
                 return memory_dict[amount]
-    
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         return self.coinChangeDynamic(coins, amount, {})
-

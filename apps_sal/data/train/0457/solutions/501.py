@@ -6,12 +6,12 @@ class Solution:
         que = deque()
         seen = set()
         res = -1
-        
+
         for coin in coins:
             if coin <= amount:
                 que.append(coin)
                 seen.add(coin)
-                
+
         count = 1
         while que:
             prev = len(que)
@@ -27,5 +27,3 @@ class Solution:
                 prev -= 1
             count += 1
         return res
-                
-

@@ -3,7 +3,7 @@ class Solution:
         remain = sum(nums) % p
         if remain == 0:
             return 0
-        dic = {0:-1}
+        dic = {0: -1}
         presum, res = 0, float('inf')
         for i, num in enumerate(nums):
             presum += num

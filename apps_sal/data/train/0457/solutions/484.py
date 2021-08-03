@@ -10,11 +10,11 @@ class Solution:
         costs = []
 
         for coin in coins:
-            cost = self.changeCoin(coins, amount-coin, change)
-            if amount-coin in change:
-                change[amount-coin] = min(cost, change[amount-coin])
+            cost = self.changeCoin(coins, amount - coin, change)
+            if amount - coin in change:
+                change[amount - coin] = min(cost, change[amount - coin])
             else:
-                change[amount-coin] = cost
+                change[amount - coin] = cost
 
             if cost != -1:
                 costs.append(cost)
@@ -25,8 +25,7 @@ class Solution:
         return 1 + min(costs)
 
     def coinChange(self, coins: List[int], amount: int) -> int:
-        
-        change = {}
-        
-        return self.changeCoin(coins, amount, change)
 
+        change = {}
+
+        return self.changeCoin(coins, amount, change)

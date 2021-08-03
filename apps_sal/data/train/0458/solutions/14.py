@@ -4,7 +4,8 @@ class Solution:
         dp = [0] * (n + 1)
         for i, a in enumerate(A):
             dp[i + 1] = (dp[i] + a) % p
-        if not dp[-1]: return 0
+        if not dp[-1]:
+            return 0
         ret = n
         dic = dict()
         for i, d in enumerate(dp):

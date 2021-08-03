@@ -19,11 +19,10 @@ class Solution:
         for i, job in enumerate(jobDifficulty):
             tempmax = max(tempmax, job)
             dp[i][1] = tempmax
-        for day in range(2, d+1):
-            for j in range(day-1, len(jobDifficulty)+1):
+        for day in range(2, d + 1):
+            for j in range(day - 1, len(jobDifficulty) + 1):
                 result = float('inf')
-                for k in range(j-1):
-                    result = min(result, dp[k][day-1] + max(jobDifficulty[k+1:j]))
-                dp[j-1][day] = result
+                for k in range(j - 1):
+                    result = min(result, dp[k][day - 1] + max(jobDifficulty[k + 1:j]))
+                dp[j - 1][day] = result
         return dp[-1][-1]
-

@@ -1,6 +1,7 @@
 from functools import lru_cache
 import math
 
+
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
         @lru_cache(None)
@@ -14,15 +15,15 @@ class Solution:
             if houses[i] != 0:
                 return paint(i + 1, houses[i], k - (1 if houses[i] != color else 0))
             for c in range(1, n + 1):
-                cost_ = cost[i][c - 1] + paint(i + 1, c, k - (1 if c != color else 0))    
+                cost_ = cost[i][c - 1] + paint(i + 1, c, k - (1 if c != color else 0))
                 total_cost = min(total_cost, cost_)
             # print(i, k, color, total_cost)
             return total_cost
-        
+
         # neighbors = 0
         # prev = 0
         # for h in houses:
-        #     if h == 0: 
+        #     if h == 0:
         #         continue
         #     if h != prev:
         #         neighbors += 1

@@ -12,5 +12,3 @@ class Solution:
             res = min(res, i - pos[(cur - tar) % p])
             pos[cur] = i
         return res if res < n else -1
-        
-

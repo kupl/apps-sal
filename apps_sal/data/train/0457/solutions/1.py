@@ -4,8 +4,8 @@ class Solution:
             return -1
         elif amount == 0:
             return 0
-        
-        coins.sort(reverse = True)
+
+        coins.sort(reverse=True)
         visited = set()
         q = collections.deque([])
         for c in coins:
@@ -14,7 +14,7 @@ class Solution:
             elif c < amount:
                 q.append(c)
                 visited.add(c)
-            
+
         count = 1
         while q:
             size = len(q)
@@ -28,5 +28,5 @@ class Solution:
                     elif cur < amount and cur not in visited:
                         visited.add(cur)
                         q.append(cur)
-        
+
         return -1

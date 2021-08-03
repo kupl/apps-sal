@@ -1,7 +1,7 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         Visited = {amount: 0}
-        coins.sort(reverse = True)
+        coins.sort(reverse=True)
         queue = deque()
         queue.append(amount)
         while queue:
@@ -13,6 +13,3 @@ class Solution:
                 if 0 in Visited:
                     return Visited[0]
         return -1
-                
-        
-

@@ -8,7 +8,7 @@ class Solution:
                 return -1
             if memo[remaining]:
                 return memo[remaining]
-            
+
             # res initialize as infinity, but in this case
             # total amount is `amount`, we at most have `amount` 1 coins
             # so, `amount+1` can be considered as a maximum

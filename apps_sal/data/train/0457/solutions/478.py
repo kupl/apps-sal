@@ -1,10 +1,12 @@
 from queue import Queue
+
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        
+
         if amount == 0:
             return 0
-        
+
         q = Queue()
         mem = dict()
 
@@ -12,7 +14,7 @@ class Solution:
 
         while not q.empty():
             curr = q.get()
-            
+
             for c in coins:
                 tot = curr[1] + c
                 if tot > amount:
@@ -22,7 +24,7 @@ class Solution:
 
                 if tot in mem and mem[tot] <= curr[0] + 1:
                     continue
-                
+
                 q.put((curr[0] + 1, tot))
                 mem[tot] = curr[0] + 1
 

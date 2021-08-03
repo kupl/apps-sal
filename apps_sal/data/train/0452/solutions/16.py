@@ -12,4 +12,3 @@ class Solution:
                     m = max(m, jobDifficulty[k])
                     dp[i][j] = min(dp[i][j], m + dp[k + 1][j - 1])
         return dp[0][d] if dp[0][d] < M else -1
-

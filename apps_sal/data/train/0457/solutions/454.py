@@ -15,7 +15,7 @@ class Solution:
                 if res >= 0:
                     if res in self.dict:
                         if self.dict[res] > depth + 1 and depth + 1 < self.ans:
-                            self.dict[res] = depth+1
+                            self.dict[res] = depth + 1
                             helper(res, depth + 1)
                     else:
                         self.dict[res] = depth + 1
@@ -23,4 +23,3 @@ class Solution:
 
         helper(amount, 0)
         return self.ans if self.ans < float('inf') else -1
-

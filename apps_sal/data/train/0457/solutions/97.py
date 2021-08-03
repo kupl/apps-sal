@@ -13,6 +13,3 @@ class Solution:
                     if dp[i] == -1 or dp[i] > value:
                         dp[i] = value
         return dp[amount]
-                
-        
-

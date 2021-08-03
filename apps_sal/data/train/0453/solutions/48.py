@@ -13,6 +13,7 @@ class Solution:
         #     return dp[key]
         # ret = func(0, target, -1)
         # return ret if ret < float('inf') else -1
+
         def dfs(i, t, p):
             key = (i, t, p)
             if i == len(houses) or t < 0 or m - i < t:

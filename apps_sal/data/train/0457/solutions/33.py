@@ -1,6 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        l = [int(amount+1)] * int(amount+1)
+        l = [int(amount + 1)] * int(amount + 1)
         if amount == 0:
             return 0
         else:
@@ -19,4 +19,3 @@ class Solution:
             return -1
         else:
             return l[amount]
-

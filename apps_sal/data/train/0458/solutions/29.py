@@ -2,7 +2,7 @@ class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
         need = sum(nums) % p
         cumsum = 0
-        last = collections.defaultdict(lambda : -math.inf)
+        last = collections.defaultdict(lambda: -math.inf)
         last[0] = -1
         result = math.inf
         for ind, val in enumerate(nums):
@@ -13,9 +13,9 @@ class Solution:
             return -1
         else:
             return result
-            
+
 #         length = len(nums)
-        
+
 #         suffix_sum = sum(nums)
 #         if suffix_sum % p == 0:
 #             return 0
@@ -32,21 +32,21 @@ class Solution:
 #             return -1
 #         else:
 #             return result
-        
+
 #         prefix = collections.defaultdict(list)
 #         prefix[0].append(-1)
 #         now = 0
 #         for ind, val in enumerate(nums):
 #             now += val
 #             prefix[now % p].append(ind)
-            
+
 #         suffix = collections.defaultdict(collections.deque)
 #         suffix[0].appendleft(len(nums))
 #         now = 0
 #         for ind, val in list(enumerate(nums))[::-1]:
 #             now += val
 #             suffix[now % p].appendleft(ind)
-            
+
 #         result = math.inf
 #         if suffix[0] and suffix[0][0] != len(nums):
 #             result = suffix[0][0]
@@ -57,15 +57,15 @@ class Solution:
 #             right = bisect.bisect(rights, ind)
 #             if right < len(rights):
 #                 result = min(result, rights[right] - ind - 1)
-        
+
 #         if result == math.inf:
 #             return -1
 #         else:
 #             return result
-        
-        
+
+
 #         all_sum = sum(nums)
-        
+
 #         presum = itertools.accumulate(nums) + [0]
 #         lo = 0
 #         hi = len(nums)
@@ -77,4 +77,3 @@ class Solution:
 #                     result = mid
 #                     hi = mid
 #                 else:
-

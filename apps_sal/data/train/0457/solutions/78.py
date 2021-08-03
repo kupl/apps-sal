@@ -9,4 +9,3 @@ class Solution(object):
             return -1
         return dp[amount]
         return [dp[amount], -1][dp[amount] == MAX]
-

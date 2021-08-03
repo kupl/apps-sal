@@ -11,30 +11,30 @@ class Solution:
         #     return -1
         # else: return min_coins[-1]
         cache = {}
-        def subproblem(i,t):
+
+        def subproblem(i, t):
             if t == 0:
                 return 0
-            if (i,t) in cache:
-                return cache[(i,t)]
+            if (i, t) in cache:
+                return cache[(i, t)]
             val = coins[i]
             if val > t:
                 choice_take = math.inf
             elif val == t:
                 choice_take = 1
             else:
-                choice_take = 1 + subproblem(i,t-val)
-                
+                choice_take = 1 + subproblem(i, t - val)
+
             if i == 0:
                 choice_leave = math.inf
             else:
-                choice_leave = subproblem(i-1,t)
+                choice_leave = subproblem(i - 1, t)
             optimal = min(choice_take, choice_leave)
-            cache[(i,t)] = optimal
+            cache[(i, t)] = optimal
             return optimal
-        
-        mincoins = subproblem(len(coins)-1, amount)
+
+        mincoins = subproblem(len(coins) - 1, amount)
         if mincoins == math.inf:
             return -1
         else:
             return mincoins
-

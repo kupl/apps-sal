@@ -14,4 +14,3 @@ class Solution:
                     dp[i] = min(dp[i], dp[i - coins[j]] + 1)
 
         return -1 if dp[amount] > amount else dp[amount]
-

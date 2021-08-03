@@ -13,7 +13,7 @@ class Solution:
                 else:
                     t[n][amount] = helper(coins, amount, n - 1, t)
             return t[n][amount]
-        
+
         n = len(coins)
         t = [[-1 for j in range(amount + 1)] for i in range(n + 1)]
         minCoins = helper(coins, amount, n, t)

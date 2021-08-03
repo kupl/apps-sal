@@ -12,15 +12,14 @@ class Solution:
                 dp[coin] = 1
                 calculated[coin] = True
 
-        for i in range(1, amount+1):
+        for i in range(1, amount + 1):
             if not calculated[i]:
-                candidates = [dp[i-coin] for coin in coins if i >= coin]
+                candidates = [dp[i - coin] for coin in coins if i >= coin]
                 if candidates:
                     dp[i] = min(candidates) + 1
                     calculated[i] = True
-                
+
         if dp[-1] == float('inf'):
             return -1
         else:
             return dp[-1]
-

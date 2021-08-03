@@ -1,6 +1,7 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         mem = {}
+
         def helper(amt):
             if amt < 0:
                 return -1
@@ -17,4 +18,3 @@ class Solution:
             return min_coins
         output = helper(amount)
         return -1 if output == float('inf') else output
-

@@ -1,6 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-#         方法一: dp[i] = min(dp[i],dp[amount-i]+1)
+        #         方法一: dp[i] = min(dp[i],dp[amount-i]+1)
         # dp = [0]
         # length = len(coins)
         # for i in range(1, amount+1):
@@ -12,18 +12,18 @@ class Solution:
         #     return -1
         # return dp[amount]
 
-#         优化后的方法: dp[x+c] = min(dp[x]+1, dp[x+c])
-        dp = [0] + [-1]*amount
-        for x in range(amount+1):
+        #         优化后的方法: dp[x+c] = min(dp[x]+1, dp[x+c])
+        dp = [0] + [-1] * amount
+        for x in range(amount + 1):
             if dp[x] < 0:
                 continue
             for c in coins:
                 if x + c > amount:
                     continue
-                if dp[x+c] < 0 or dp[x+c] > dp[x] + 1:
-                    dp[x+c] = dp[x] + 1
+                if dp[x + c] < 0 or dp[x + c] > dp[x] + 1:
+                    dp[x + c] = dp[x] + 1
         return dp[amount]
-    
+
         # dp = [0] + [-1] * amount
         # for x in range(amount):
         #     if dp[x] < 0:
@@ -34,4 +34,3 @@ class Solution:
         #         if dp[x + c] < 0 or dp[x + c] > dp[x] + 1:
         #             dp[x + c] = dp[x] + 1
         # return dp[amount]
-

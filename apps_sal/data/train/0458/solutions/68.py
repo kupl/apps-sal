@@ -1,4 +1,6 @@
 import bisect as bi
+
+
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
         if p == 1:
@@ -13,7 +15,7 @@ class Solution:
             seen_mods[total_mod].append(i)
         if total_mod == 0:
             return 0
-        
+
         l = len(nums)
         sum = 0
         for i in range(-1, len(nums) - 1):

@@ -13,7 +13,6 @@ class Solution:
                 result = min(result, max(jobs[index: i + 1]) + search(jobs, i + 1, d - 1))
             memo[(d, index)] = result
             return result
-        
+
         memo = {}
         return search(jobDifficulty, 0, d)
-

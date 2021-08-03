@@ -2,7 +2,8 @@ class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         A = jobDifficulty
         n, inf = len(A), float('inf')
-        if n < d: return -1
+        if n < d:
+            return -1
         dp = [inf] * n + [0]
         for d in range(1, d + 1):
             for i in range(n - d + 1):

@@ -13,13 +13,10 @@ class Solution:
                 if poped == 0:
                     return steps
                 for coin in coins:
-                    new = poped-coin
-                    if new not in visited and new>=0:
+                    new = poped - coin
+                    if new not in visited and new >= 0:
                         q.append(new)
                         visited.add(new)
 
             steps += 1
         return -1
-
-
-

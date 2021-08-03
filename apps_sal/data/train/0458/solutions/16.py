@@ -12,5 +12,3 @@ class Solution:
         if minLength < len(nums):
             return minLength
         return -1
-        
-

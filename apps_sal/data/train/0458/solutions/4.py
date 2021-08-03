@@ -2,7 +2,8 @@ class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
         s = 0
         ss = sum(nums) % p
-        if ss == 0: return 0
+        if ss == 0:
+            return 0
         h = {}
         h[0] = -1
         import sys
@@ -15,5 +16,6 @@ class Solution:
             if c in h:
                 ans = min(ans, i - h[c])
             h[s % p] = i
-        if ans == len(nums): ans = -1
-        return ans        
+        if ans == len(nums):
+            ans = -1
+        return ans

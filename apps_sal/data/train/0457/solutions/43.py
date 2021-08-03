@@ -3,105 +3,53 @@ class Solution:
         if not amount:
             return 0
         coins.sort()
-        coins_set=set(coins)
+        coins_set = set(coins)
         if amount in coins_set:
             return 1
-        queue=deque([[amount,0]])
-        seen=set()
-        processed=set()
+        queue = deque([[amount, 0]])
+        seen = set()
+        processed = set()
         while queue:
-            rem,count=queue.popleft()
+            rem, count = queue.popleft()
             if rem in seen:
                 continue
             seen.add(rem)
-            #print(rem)
+            # print(rem)
             for coin in coins:
-                new_rem=rem-coin
-                if new_rem==0:
-                    return count+1
-                if new_rem>0:
+                new_rem = rem - coin
+                if new_rem == 0:
+                    return count + 1
+                if new_rem > 0:
                     if new_rem in coins_set:
-                        return count+2
+                        return count + 2
                     if new_rem not in seen and new_rem not in processed:
-                        queue.append([new_rem,count+1])
+                        queue.append([new_rem, count + 1])
                         processed.add(new_rem)
         return -1
-    
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
 #         if not amount:
 #             return 0
-        
 
-        
+
 #         coins.sort()
-        
+
 #         coinsSet=set(coins)
-        
+
 #         if amount in coins:
 #             return 1
-        
+
 #         currLevel=[amount]
 #         nextLevel=[]
 #         level=1
-        
+
 #         seen=set()
-        
+
 #         while currLevel:
-            
+
 #             while currLevel:
 #                 node=currLevel.pop(0)
-                
+
 #                 for coin in coins:
 #                     temp=node-coin
 #                     if temp<0:
@@ -116,4 +64,3 @@ class Solution:
 #             currLevel=nextLevel
 #             nextLevel=[]
 #         return -1
-

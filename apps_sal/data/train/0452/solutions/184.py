@@ -13,4 +13,3 @@ class Solution:
                     dp[i] = min(dp[i], m + dp[k + 1])
             dp[n] = M
         return dp[0] if dp[0] < M else -1
-

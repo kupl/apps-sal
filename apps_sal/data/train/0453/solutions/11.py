@@ -33,9 +33,8 @@ class Solution:
                         cost = costs[i - 1][ci - 1]
                     for cj in range(1, n + 1):
                         dp[k][i][ci] = min(dp[k][i][ci], dp[k - (ci != cj)][i - 1][cj] + cost)
-        
+
         res = min(dp[target][m][c] for c in range(1, n + 1))
         if res == float('inf'):
             return -1
         return res
-

@@ -1,15 +1,14 @@
 class Solution:
-    
+
     def do_du_tab(self, coins, amount):
         dp_tab = [math.inf for _ in range(amount + 1)]
         dp_tab[0] = 0
         for i in range(len(coins)):
             for a in range(1, amount + 1):
                 if a >= coins[i]:
-                    dp_tab[a] = min(dp_tab[a] , 1 + dp_tab[a - coins[i]])
+                    dp_tab[a] = min(dp_tab[a], 1 + dp_tab[a - coins[i]])
         return dp_tab[amount]
 
-    
     def do_td_mem(self, cache, coins, amount, index):
 
         if amount == 0:
@@ -29,7 +28,6 @@ class Solution:
             cache[index][amount] = min(count_keeping_element, count_skipping_element)
         return cache[index][amount]
 
-    
     def do_bf(self, coins, amount, index):
         if amount == 0:
             return 0
@@ -45,13 +43,12 @@ class Solution:
 
         count_skipping_element = self.do_bf(coins, amount, index + 1)
         return min(count_keeping_element, count_skipping_element)
-                
-    
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         #output = self.do_bf(coins, amount, 0)
         if amount < 1:
             return 0
-        #cache = [[math.inf for _ in range(amount + 1)] for _ in range(len(coins))] 
+        #cache = [[math.inf for _ in range(amount + 1)] for _ in range(len(coins))]
         #output = self.do_td_mem(cache, sorted(coins), amount, 0)
         coins.sort()
         output = self.do_du_tab(coins, amount)

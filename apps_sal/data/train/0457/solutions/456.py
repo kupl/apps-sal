@@ -9,7 +9,7 @@ class Solution:
         min_coin = float('inf')
         for coin in coins:
             number_coin = None
-            prev_num  = self.recursion(coins, remain - coin, dic)
+            prev_num = self.recursion(coins, remain - coin, dic)
             if(prev_num == float('inf')):
                 number_coin = prev_num
             else:
@@ -17,6 +17,7 @@ class Solution:
             min_coin = min(min_coin, number_coin)
         dic[remain] = min_coin
         return min_coin
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         remain = amount
         count = 0

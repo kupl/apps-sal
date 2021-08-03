@@ -8,12 +8,12 @@ class Solution:
             times, cur = heapq.heappop(queue)
             for c in coins:
                 if c == cur:
-                    return times +1
+                    return times + 1
                 if c < cur:
-                    if cur-c not in visited:
-                        heapq.heappush(queue, (times+1, cur- c))
-                        visited[cur-c] = True
+                    if cur - c not in visited:
+                        heapq.heappush(queue, (times + 1, cur - c))
+                        visited[cur - c] = True
         return -1
-        
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         return self.bfs(amount, coins)

@@ -1,5 +1,6 @@
 import sys
 
+
 class Solution:
     def helper(self, coin_sum, coins, memo):
         if coin_sum == 0:
@@ -16,7 +17,6 @@ class Solution:
 
         memo[coin_sum - 1] = res
         return res
-
 
     def coinChange(self, coins, amount):
         memo = [0] * amount

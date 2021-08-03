@@ -4,12 +4,10 @@ class Solution:
         # dp[i][j] = min(dp[i-1][j], dp[i][j-k]+1) for k in coins
         dp = [0] + [float('inf')] * amount
         for c in coins:
-            for j in range(c, amount+1):
-                dp[j] = min(dp[j], dp[j-c]+1)
+            for j in range(c, amount + 1):
+                dp[j] = min(dp[j], dp[j - c] + 1)
         return dp[-1] if dp[-1] < float('inf') else -1
 
-
-        
 
 '''    
 class Solution:
