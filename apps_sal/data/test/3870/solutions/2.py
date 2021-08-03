@@ -60,9 +60,11 @@ def solve2():
 
     for k in range(min(len(a), m)):
 
-        if my[-k - 1] >= a[k]: ret += my[-k - 1] - a[k]
+        if my[-k - 1] >= a[k]:
+            ret += my[-k - 1] - a[k]
 
-        else: break
+        else:
+            break
 
     return ret
 

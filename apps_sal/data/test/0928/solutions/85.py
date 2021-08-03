@@ -11,7 +11,7 @@ for i in range(0, len(a)):
             sumi += a[r]
             r += 1
     if sumi < k:
-        break;
+        break
     count += n - r + 1
     sumi -= a[i]
 print(count)

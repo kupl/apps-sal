@@ -9,7 +9,8 @@ for i in range(N):
     L = i
     while rangeSum < K:
         R += 1
-        if R >= len(a): break
+        if R >= len(a):
+            break
         rangeSum += a[R]
     ans += max(N - R, 0)
     rangeSum -= a[L]

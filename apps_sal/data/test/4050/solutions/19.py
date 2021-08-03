@@ -37,7 +37,7 @@ for i in range(franxx, 0, -1):
     for j in range(i - 1, franxx):
         tmp += int(life[j])
         if (tmp != oh_pay):
-            continue;
+            continue
         if (darling[oh_pay][0] > j):
             print(i, j + 1)
             darling[oh_pay] = (i - 1, 1 + darling[oh_pay][1])

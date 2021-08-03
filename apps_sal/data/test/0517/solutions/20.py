@@ -9,7 +9,8 @@ def make_path(start, length):
     nonlocal cur
 
     print(str(start) + " " + str(cur))
-    if cur > n: return
+    if cur > n:
+        return
 
     if length > 1:
         for i in range(length - 1):

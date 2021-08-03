@@ -6,7 +6,9 @@ cuma = [0]
 for i in range(1, n + 1):
     cuma.append(cuma[i - 1] + a[i])
 
-if cuma[-1] < k: print((0)); return
+if cuma[-1] < k:
+    print((0))
+    return
 r = bisect_left(cuma, k)
 
 ans = 0

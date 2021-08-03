@@ -1,7 +1,9 @@
 import sys
 入力 = sys.stdin.readline
 範囲, 出力 = range, print
-一行に複数個の入力 = lambda: map(int, 入力().split())
+def 一行に複数個の入力(): return map(int, 入力().split())
+
+
 数列 = list
 絶対値 = abs
 

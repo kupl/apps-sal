@@ -19,9 +19,11 @@ for s in sums:
         leftmost_j = INF
         according_i = -1
         for i in range(leftmost_p, n):
-            if i >= leftmost_j: break
+            if i >= leftmost_j:
+                break
             for j in range(i + 1, n + 1):
-                if j >= leftmost_j: break
+                if j >= leftmost_j:
+                    break
                 if p[j] - p[i] == s and j < leftmost_j:
                     leftmost_j = j
                     according_i = i
