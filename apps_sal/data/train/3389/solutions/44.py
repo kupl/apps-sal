@@ -9,4 +9,3 @@ def domain_name(url):
             return url.partition('.')[2].partition('.')[0]
         else:
             return url.partition('.')[0]
-

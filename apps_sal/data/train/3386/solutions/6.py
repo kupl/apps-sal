@@ -1,5 +1,6 @@
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
+
 def get_column_title(number):
     result = []
     if not isinstance(number, int):

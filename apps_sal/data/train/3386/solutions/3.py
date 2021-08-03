@@ -1,5 +1,6 @@
 from string import ascii_uppercase
 
+
 def get_column_title(n):
     n -= 1
     result = []

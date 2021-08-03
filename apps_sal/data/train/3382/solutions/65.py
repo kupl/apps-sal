@@ -8,5 +8,3 @@ def lowercase_count(strng):
         else:
             pass
     return count
-        
-

@@ -4,5 +4,5 @@ def lucas_lehmer(n):
     for i in range(n - 2):
         s = s * s - 2
         while int.bit_length(s) > n:
-            s = (s >> n) + (s&m)
+            s = (s >> n) + (s & m)
     return s == m or n == 2

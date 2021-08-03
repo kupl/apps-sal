@@ -1,7 +1,7 @@
 def domain_name(url):
     print(url)
-    first=""
-    second= ""
+    first = ""
+    second = ""
 
     if "www" in url:
 
@@ -12,11 +12,8 @@ def domain_name(url):
         first = url.split("://")[1]
 
         second = first.split(".")[0]
-        
+
     else:
         second = url.split(".")[0]
-
-
-
 
     return second

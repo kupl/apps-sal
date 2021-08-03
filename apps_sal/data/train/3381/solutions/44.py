@@ -1,1 +1,1 @@
-get_real_floor=lambda n:n-1-(n>12)+(n<=0)
+def get_real_floor(n): return n - 1 - (n > 12) + (n <= 0)

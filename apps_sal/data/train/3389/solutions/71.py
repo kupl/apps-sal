@@ -5,7 +5,8 @@ def domain_name(url):
         for char in url:
             if char == '.':
                 adding = not adding
-                if not adding: break
+                if not adding:
+                    break
             if adding:
                 domain += char
     elif url[6] == '/':
@@ -25,10 +26,13 @@ def domain_name(url):
                 break
             if adding:
                 domain += char
-            
+
     domain_arr = list(domain)
-    if '/' in domain_arr: domain_arr.remove('/')
-    if '/' in domain_arr: domain_arr.remove('/')
-    if '.' in domain_arr: domain_arr.remove('.')
+    if '/' in domain_arr:
+        domain_arr.remove('/')
+    if '/' in domain_arr:
+        domain_arr.remove('/')
+    if '.' in domain_arr:
+        domain_arr.remove('.')
     print(url)
     return ''.join(domain_arr)

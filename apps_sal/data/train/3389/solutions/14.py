@@ -1,1 +1,1 @@
-domain_name=lambda url:url.replace("http://","").replace("www.","").replace("https://","").replace("."," ").split()[0]
+def domain_name(url): return url.replace("http://", "").replace("www.", "").replace("https://", "").replace(".", " ").split()[0]

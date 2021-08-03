@@ -1,2 +1,2 @@
 import re
-lowercase_count = lambda s: len(re.findall(r"[a-z]", s))
+def lowercase_count(s): return len(re.findall(r"[a-z]", s))

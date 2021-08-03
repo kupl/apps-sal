@@ -1,5 +1,5 @@
 def lowercase_count(strng):
-    
+
     lowerCastCount = 0
 
     for i in strng:

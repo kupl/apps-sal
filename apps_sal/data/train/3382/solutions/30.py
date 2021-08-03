@@ -4,6 +4,6 @@ def lowercase_count(lst):
     """
     n = 0
     for s in lst:
-        if s>='a' and s<='z':
+        if s >= 'a' and s <= 'z':
             n = n + 1
     return n

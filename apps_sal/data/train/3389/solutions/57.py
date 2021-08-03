@@ -10,4 +10,3 @@ def domain_name(url):
         return split[1]
     else:
         return split[0]
-

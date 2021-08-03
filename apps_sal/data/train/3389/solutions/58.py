@@ -10,4 +10,3 @@ def domain_name(url):
     dot = url.index('.')
     url = url[:dot]
     return url
-

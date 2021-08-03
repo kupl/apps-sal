@@ -2,7 +2,7 @@ def longest(s):
 
     result = []
     ordx = 0
-    
+
     for i in s:
         if ord(i) >= ordx:
             ordx = ord(i)
@@ -13,7 +13,4 @@ def longest(s):
 
             ordx = ord(i)
 
-
     return max(("").join(result).split("|"), key=len)
-
-
