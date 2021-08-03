@@ -30,7 +30,8 @@ for _ in range(m):
             cap[p] = 0
             marker.append(p)
             p = nxt[p]
-        if p < n: cap[p] -= x
+        if p < n:
+            cap[p] -= x
         for i in marker:
             nxt[i] = p
     else:

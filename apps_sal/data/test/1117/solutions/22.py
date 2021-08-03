@@ -8,5 +8,6 @@ for i in range(n - 1):
     elif max(w, h) > hl and min(w, h) <= hl:
         hl = min(w, h)
     elif min(w, h) > hl:
-        print('NO'); return
+        print('NO')
+        return
 print('YES')

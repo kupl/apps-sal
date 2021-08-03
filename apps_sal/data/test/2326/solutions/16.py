@@ -6,7 +6,8 @@ mod = 998244353
 
 
 def pow_(x, p, mod):
-    if p == 1: return x % mod
+    if p == 1:
+        return x % mod
 
     tmp = pow_(x, p // 2, mod)
     if p % 2 == 0:

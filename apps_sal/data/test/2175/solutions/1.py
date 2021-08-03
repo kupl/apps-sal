@@ -28,7 +28,8 @@ for i in range(m):
                 ocu[x] = V[x]
                 temp1.add(x)
                 x = stream[x]
-                if x == 0: break
+                if x == 0:
+                    break
         for a in temp1:
             stream[a] = x
     if s[0] == 2:

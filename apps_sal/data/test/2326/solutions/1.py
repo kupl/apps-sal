@@ -30,7 +30,7 @@ def COMinit():
     fac[1] = 1
     finv[0] = 1
     finv[1] = 1
-    inv[1] = 1;
+    inv[1] = 1
     for i in range(2, MAX):
         fac[i] = fac[i - 1] * i % MOD
         inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD

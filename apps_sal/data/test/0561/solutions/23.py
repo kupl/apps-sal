@@ -24,8 +24,10 @@ else:
     m1 = 0
     m2 = 0
     for i in range(1, n - 1):
-        if d[i] < d[m1]: m1 = i
-        if d[i] > d[m2]: m2 = i
+        if d[i] < d[m1]:
+            m1 = i
+        if d[i] > d[m2]:
+            m2 = i
     c = d.count(d[m1])
     if c == n - 2 and d[m1] * 2 == d[m2]:
         print(1)

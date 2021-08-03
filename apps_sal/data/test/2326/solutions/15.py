@@ -20,9 +20,11 @@ f = [1]
 for i in range(1, n + 1):
     f.append((f[-1] * i) % MOD)
 for i in range(n):
-    if i + a[i] < n and a[i] > 0: dp[i] = ncr(n - 1 - i, a[i])
+    if i + a[i] < n and a[i] > 0:
+        dp[i] = ncr(n - 1 - i, a[i])
 for i in reversed(range(n)):
-    if a[i] <= 0: continue
+    if a[i] <= 0:
+        continue
     for j in range(i + a[i] + 1, n):
         dp[i] = (dp[i] + ncr(j - 1 - i, a[i]) * dp[j]) % MOD
 print(sum(dp) % MOD)

@@ -1,6 +1,6 @@
 n = int(input())
 m = 998244353
-dp = [1] + [0] * n;
+dp = [1] + [0] * n
 for i in map(int, input().split()):
     v = dp[:]
     if(0 < i < n):
