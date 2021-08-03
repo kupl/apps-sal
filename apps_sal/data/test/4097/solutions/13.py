@@ -3,7 +3,8 @@ m = [0, -1, 1]
 
 def solve(b):
     n = len(b)
-    if n < 3: return 0
+    if n < 3:
+        return 0
     minans = -1
     for ii in range(3):
         for jj in range(3):

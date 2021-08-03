@@ -13,6 +13,8 @@ while q:
             if(a[j] * a[4 * n - j - 1] == value):
                 count += 1
         j += 2
-    if(count == n): print("YES")
-    else: print("NO")
+    if(count == n):
+        print("YES")
+    else:
+        print("NO")
     q -= 1
