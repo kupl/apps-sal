@@ -8,5 +8,6 @@ def collatz_len(n):
         result += 1
     return result
 
+
 def longest_collatz(input_array):
     return max(input_array, key=collatz_len)

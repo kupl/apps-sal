@@ -1,4 +1,6 @@
-mean = lambda nums: sum(nums) / (len(nums) + .0)
+def mean(nums): return sum(nums) / (len(nums) + .0)
+
+
 def get_grade(s1, s2, s3):
     m = mean([s1, s2, s3])
     if m >= 90:
@@ -11,4 +13,3 @@ def get_grade(s1, s2, s3):
         return 'D'
     else:
         return "F"
-

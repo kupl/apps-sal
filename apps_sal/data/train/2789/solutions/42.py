@@ -8,4 +8,3 @@ def bmi(weight, height):
         return "Overweight"
     else:
         return "Obese"
-

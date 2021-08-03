@@ -1,6 +1,6 @@
 def bmi(weight, height):
     youfat = (weight / (height * height))
-    
+
     if youfat <= 18.5:
         return "Underweight"
     elif youfat <= 25.0:

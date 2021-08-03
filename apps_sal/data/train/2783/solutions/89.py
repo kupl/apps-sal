@@ -1,9 +1,9 @@
 def get_grade(s1, s2, s3):
     x = s1 + s2 + s3
     m = x / 3
-    if m >=90 and m <=100:
+    if m >= 90 and m <= 100:
         return 'A'
-    elif m >=80 and m < 90:
+    elif m >= 80 and m < 90:
         return 'B'
     elif m >= 70 and m < 80:
         return 'C'
@@ -11,4 +11,3 @@ def get_grade(s1, s2, s3):
         return 'D'
     else:
         return 'F'
-

@@ -11,4 +11,3 @@ def get_grade(*args):
     if mean in range(90, 101):
         grade = 'A'
     return grade
-

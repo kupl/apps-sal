@@ -9,5 +9,5 @@ def get_grade(s1, s2, s3):
     elif 60 <= score < 70:
         return "D"
     else:
-#         if 0 <= score or score <60:
+        #         if 0 <= score or score <60:
         return "F"

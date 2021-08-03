@@ -6,4 +6,3 @@ WEEKDAYS = ('Monday', 'Tuesday', 'Wednesday', 'Thursday',
 
 def day(date):
     return WEEKDAYS[datetime.strptime(date, '%Y%m%d').weekday()]
-

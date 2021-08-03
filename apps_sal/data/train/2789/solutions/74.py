@@ -1,5 +1,5 @@
 def bmi(weight, height):
-    beem = round((weight/height**2),1)
+    beem = round((weight / height**2), 1)
     print(beem)
     if 18.5 >= beem:
         return "Underweight"
@@ -9,5 +9,3 @@ def bmi(weight, height):
         return "Overweight"
     else:
         return "Obese"
-        
-

@@ -1,7 +1,8 @@
 AVAILABLE_METHODS = {
-    'even' : lambda x: x / 2,
+    'even': lambda x: x / 2,
     'odd': lambda x: 3 * x + 1
 }
+
 
 def generator(x):
     temp = x
@@ -13,6 +14,7 @@ def generator(x):
             temp = AVAILABLE_METHODS['odd'](temp)
         temp_num += 1
         yield temp_num
+
 
 def longest_collatz(input_array):
     answer_list = [sum([item for item in generator(dig)]) for dig in input_array]

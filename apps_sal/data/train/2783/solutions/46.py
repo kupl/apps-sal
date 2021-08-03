@@ -1,6 +1,6 @@
 def get_grade(s1, s2, s3):
-    result = (s1 + s2 + s3)/3
-    
+    result = (s1 + s2 + s3) / 3
+
     if result >= 90:
         return "A"
     elif result >= 80 and result < 90:
@@ -11,4 +11,3 @@ def get_grade(s1, s2, s3):
         return "D"
     else:
         return "F"
-

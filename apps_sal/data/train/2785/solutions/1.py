@@ -1,5 +1,6 @@
 from math import gcd
 
+
 def parameter(n):
     s, p = 0, 1
     for m in str(n):

@@ -1,5 +1,5 @@
 def get_grade(s1, s2, s3):
-    avg = (s1 + s2 +s3) / 3
+    avg = (s1 + s2 + s3) / 3
     scale = {
         'A': 90 <= avg <= 100,
         'B': 80 <= avg < 90,
@@ -8,4 +8,5 @@ def get_grade(s1, s2, s3):
         'F': 0 <= avg < 60
     }
     for k, v in scale.items():
-        if v == True: return k
+        if v == True:
+            return k

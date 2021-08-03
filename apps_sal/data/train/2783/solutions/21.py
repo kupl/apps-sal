@@ -1,5 +1,5 @@
 def get_grade(*s):
-    score = sum(s)/len(s)
+    score = sum(s) / len(s)
     if 90 <= score <= 100:
         return 'A'
     elif 80 <= score < 90:
@@ -10,4 +10,3 @@ def get_grade(*s):
         return 'D'
     else:
         return 'F'
-

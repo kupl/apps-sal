@@ -1,5 +1,5 @@
 def get_grade(s1, s2, s3):
-    mean = (s1+s2+s3)//3
+    mean = (s1 + s2 + s3) // 3
     print(mean)
     if mean >= 90:
         return "A"
@@ -11,4 +11,3 @@ def get_grade(s1, s2, s3):
         return "D"
     else:
         return "F"
-

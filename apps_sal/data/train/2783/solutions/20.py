@@ -1,5 +1,5 @@
 def get_grade(*args):
-    mean = sum(args)/len(args)
+    mean = sum(args) / len(args)
     if 90 <= mean <= 100:
         return "A"
     elif 80 <= mean < 90:
@@ -10,4 +10,3 @@ def get_grade(*args):
         return "D"
     else:
         return "F"
-

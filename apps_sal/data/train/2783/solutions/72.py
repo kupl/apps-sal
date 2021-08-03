@@ -1,5 +1,5 @@
 def get_grade(s1, s2, s3):
-    nota = (s1+s2+s3) / 3
+    nota = (s1 + s2 + s3) / 3
     if nota >= 90:
         return "A"
     elif nota >= 80:
@@ -10,4 +10,3 @@ def get_grade(s1, s2, s3):
         return "D"
     else:
         return "F"
-

@@ -3,7 +3,7 @@ def bmi(weight, height):
     if (a > 30):
         return 'Obese'
     if a >= 25:
-        return 'Overweight' 
+        return 'Overweight'
     if a >= 18.5:
         return 'Normal'
-    return 'Underweight' 
+    return 'Underweight'

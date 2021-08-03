@@ -11,6 +11,5 @@ def get_grade(s1, s2, s3):
         grade = "D"
     elif score >= 0 and score < 60:
         grade = 'F'
-    
-    return grade
 
+    return grade
