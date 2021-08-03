@@ -8,6 +8,7 @@ def calc_distance(a, b):
     d = math.sqrt(dx * dx + dy * dy)
     return d
 
+
 N = int(input())
 
 city = [0] * N
@@ -25,7 +26,7 @@ cnt = 0
 for pt in paths:
     distance = 0
     for idx in range(1, len(pt)):
-       distance += mtx[pt[idx]][pt[idx-1]]
+        distance += mtx[pt[idx]][pt[idx - 1]]
 
     all_distance += distance
     cnt += 1
@@ -34,6 +35,3 @@ all_distance /= cnt
 
 
 print(all_distance)
-
-
-

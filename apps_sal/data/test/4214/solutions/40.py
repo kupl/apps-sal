@@ -24,4 +24,3 @@ for x in ways:
     ans += dist
 
 print((ans / len(ways)))
-

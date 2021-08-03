@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 t = int(input())
 for tt in range(t):
     x, y = mp()

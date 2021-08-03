@@ -1,4 +1,4 @@
-N,X = map(int,input().split())
+N, X = map(int, input().split())
 m = [int(input()) for _ in range(N)]
 
 gram = X - sum(m)

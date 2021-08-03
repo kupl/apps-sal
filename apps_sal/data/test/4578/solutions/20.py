@@ -15,6 +15,6 @@ def main():
     ans += x // min(m)
 
     print(ans)
-    
+
 
 main()

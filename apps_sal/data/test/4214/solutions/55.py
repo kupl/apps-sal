@@ -19,4 +19,3 @@ for p in permutations(list(range(N))):
     c += 1
 
 print((ans / c))
-

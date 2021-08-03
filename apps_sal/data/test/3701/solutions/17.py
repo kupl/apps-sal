@@ -4,7 +4,4 @@ z = len(s.split())
 print(z and (z - 1) * min(x, y) + y)
 
 
-
-
 # Made By Mostafa_Khaled
-

@@ -11,11 +11,10 @@ m.sort()
 
 for i in range(n):
     if(x >= m[i]):
-        d+=1
+        d += 1
         x -= m[i]
 
 if x > m[0]:
-    res = int(x/m[0])
+    res = int(x / m[0])
     d += res
 print(d)
-

@@ -9,5 +9,3 @@ for i in range(N):
             result += math.sqrt((xy[i][0] - xy[j][0])**2 + (xy[i][1] - xy[j][1])**2)
 
 print((result / N))
-
-

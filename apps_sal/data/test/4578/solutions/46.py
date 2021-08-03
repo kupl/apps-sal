@@ -1,6 +1,6 @@
-n,x=map(int,input().split())
-m=[0]*n
+n, x = map(int, input().split())
+m = [0] * n
 for i in range(n):
-    m[i]=int(input())
-x-=sum(m)
-print(len(m)+x//min(m))
+    m[i] = int(input())
+x -= sum(m)
+print(len(m) + x // min(m))

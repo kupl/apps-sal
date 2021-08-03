@@ -11,4 +11,4 @@ else:
         if e == '0' and curr == '1':
             number_of_zero_groups += 1
         curr = e
-    print((number_of_zero_groups-1) * min(x, y) + y)
+    print((number_of_zero_groups - 1) * min(x, y) + y)

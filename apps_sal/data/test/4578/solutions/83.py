@@ -7,11 +7,10 @@ a = 0
 
 for i in m:
     x -= i
-    a+=1
+    a += 1
 
 while x >= min(m):
     x -= min(m)
-    a+=1
+    a += 1
 
 print(a)
-

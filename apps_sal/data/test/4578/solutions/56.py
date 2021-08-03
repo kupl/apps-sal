@@ -9,4 +9,3 @@ while x >= min_donuts:
     x -= min_donuts
 
 print(donuts)
-

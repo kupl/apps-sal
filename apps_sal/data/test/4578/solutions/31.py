@@ -8,4 +8,3 @@ ans = len(M)
 
 ans += (X // min(M))
 print(ans)
-

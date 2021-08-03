@@ -2,14 +2,13 @@ from sys import *
 from heapq import *
 
 
-
 for q in range(int(input())):
     x, y = map(int, input().split())
     if x > y + 1:
         print("YES")
     else:
         print("NO")
-    
+
 '''
 1
 8
@@ -18,4 +17,4 @@ for q in range(int(input())):
 15 3
 107
 3
-''' 
+'''

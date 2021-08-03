@@ -12,7 +12,7 @@ l = [i for i in range(n)]
 route = list(permutations(l))
 length = 0
 for ls in route:
-    for i in range(n-1):
-        length += math.sqrt((x[ls[i+1]]-x[ls[i]])**2+(y[ls[i+1]]-y[ls[i]])**2)
-ans = length/math.factorial(n)
+    for i in range(n - 1):
+        length += math.sqrt((x[ls[i + 1]] - x[ls[i]])**2 + (y[ls[i + 1]] - y[ls[i]])**2)
+ans = length / math.factorial(n)
 print(ans)

@@ -1,7 +1,7 @@
 n, x = map(int, input().split())
 m = []
 for i in range(n):
-  m.append(int(input()))
+    m.append(int(input()))
 ans = 0
 
 x -= sum(m)
