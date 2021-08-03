@@ -11,7 +11,8 @@ class Factorial():
             self.inv[i] = self.inv[i + 1] * (i + 1) % mod
 
     def comb(self, m, k):
-        if m - k < 0 or k < 0: return 0
+        if m - k < 0 or k < 0:
+            return 0
         return self.factorial[m] * self.inv[k] * self.inv[m - k] % self.mod
 
 

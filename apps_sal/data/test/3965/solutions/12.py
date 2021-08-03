@@ -13,4 +13,5 @@ for i in range(n):
     ok &= cnt == a[i]
 if ok:
     print('YES')
-else: print('NO')
+else:
+    print('NO')

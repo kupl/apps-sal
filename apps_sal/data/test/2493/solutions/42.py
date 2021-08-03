@@ -1,5 +1,5 @@
 import sys
-finput = lambda: sys.stdin.readline().strip()
+def finput(): return sys.stdin.readline().strip()
 
 
 def main():

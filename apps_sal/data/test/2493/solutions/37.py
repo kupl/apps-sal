@@ -33,7 +33,8 @@ class Combination:
     def P(self, n, k): return self.fact[n] * self.ifact[n - k] if 0 <= k <= n else 0
 
     def make_fact_list(self, max_n):
-        if max_n <= self.max_n: return
+        if max_n <= self.max_n:
+            return
         self.fact += [Fp(0)] * (max_n - self.max_n)
         self.ifact += [Fp(0)] * (max_n - self.max_n)
         for i in range(self.max_n + 1, max_n + 1):

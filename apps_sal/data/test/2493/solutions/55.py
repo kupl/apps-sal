@@ -24,7 +24,8 @@ for i in range(n + 1):
         left = li[lis[i] - 1] + 1
         right = i + 1
         break
-    else: li[lis[i] - 1] = i
+    else:
+        li[lis[i] - 1] = i
 
 for k in range(1, n + 2):
   #     print(nCr(n+1,k,mod),nCr(left+n-right,k-1,mod))

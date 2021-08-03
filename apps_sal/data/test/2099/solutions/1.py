@@ -1,8 +1,10 @@
 def main():
     mode = "filee"
-    if mode == "file": f = open("test.txt", "r")
-    get = lambda: [int(x) for x in (f.readline() if mode == "file" else input()).split()]
-    gets = lambda: [str(x) for x in (f.readline()[:-1] if mode == "file" else input()).split(":")]
+    if mode == "file":
+        f = open("test.txt", "r")
+
+    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    def gets(): return [str(x) for x in (f.readline()[:-1] if mode == "file" else input()).split(":")]
     [n, m, t] = get()
     [a, b] = [[0] * 20002, [0] * 20002]
     if n < m:
@@ -29,7 +31,8 @@ def main():
     for i in range(1, n + 1):
         print(b[i], end=' ')
 
-    if mode == "file": f.close()
+    if mode == "file":
+        f.close()
 
 
 def __starting_point():

@@ -11,6 +11,6 @@ for j in range(0, n):
         ans = False
 
 if ans == False:
-    print("NO");
+    print("NO")
 else:
-    print("YES");
+    print("YES")

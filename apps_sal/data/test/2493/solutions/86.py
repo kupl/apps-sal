@@ -22,4 +22,5 @@ for i in range(n + 1, 1, -1):
 def comb(x, y): return fact[x] * inv[y] % mod * inv[x - y] % mod if x >= y >= 0 else 0
 
 
-for i in range(1, n + 2): print((comb(n + 1, i) - comb(x + n - y, i - 1)) % mod)
+for i in range(1, n + 2):
+    print((comb(n + 1, i) - comb(x + n - y, i - 1)) % mod)

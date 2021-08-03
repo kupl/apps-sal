@@ -13,7 +13,8 @@ for i in range(2, n + 1 + 1):
 
 def cmb2(n, r):
     mod = 1000000007
-    if (r < 0 or r > n): return 0
+    if (r < 0 or r > n):
+        return 0
     r = min(r, n - r)
     return g1[n] * g2[r] * g2[n - r] % mod
 

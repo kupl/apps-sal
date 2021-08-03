@@ -7,7 +7,8 @@ def memfact(a, m):
 
 
 def comb(n, r, m):
-    if r == 0: return 1
+    if r == 0:
+        return 1
     return (memf[n] * pow(memf[r], m - 2, m) * pow(memf[n - r], m - 2, m)) % m
 
 

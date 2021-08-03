@@ -1,4 +1,4 @@
-mod = 10**9 + 7;
+mod = 10**9 + 7
 
 
 def inv(x):
@@ -32,7 +32,7 @@ for i, c in enumerate(num):
         break
 
 l = -1
-r = -1;
+r = -1
 for i in range(n + 1):
     if l == -1 and a[i] == two:
         l = i

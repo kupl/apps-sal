@@ -16,13 +16,16 @@ def solve():
         if a in Ad:
             Ad[a].append(i)
             double = Ad[a]
-        else: Ad[a] = [i]
+        else:
+            Ad[a] = [i]
 
     fact = [1] * (N + 2)
-    for i in range(1, N + 2): fact[i] = (fact[i - 1] * i) % mod
+    for i in range(1, N + 2):
+        fact[i] = (fact[i - 1] * i) % mod
     revfact = [1] * (N + 2)
     revfact[N + 1] = pow(fact[N + 1], mod - 2, mod)
-    for i in reversed(range(1, N + 1)): revfact[i] = ((i + 1) * revfact[i + 1]) % mod
+    for i in reversed(range(1, N + 1)):
+        revfact[i] = ((i + 1) * revfact[i + 1]) % mod
     mayOverCount = double[0] + N - double[1]
 
     for k in range(N + 1):

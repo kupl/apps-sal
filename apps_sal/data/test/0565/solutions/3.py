@@ -2,7 +2,8 @@
 import sys
 # sys.stdin=open("data.txt")
 input = sys.stdin.readline
-mii = lambda: list(map(int, input().split()))
+def mii(): return list(map(int, input().split()))
+
 
 a, b, c = mii()
 b -= 1

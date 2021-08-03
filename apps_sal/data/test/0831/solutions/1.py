@@ -14,7 +14,8 @@ class MinCostFlow:
         G[to].append([fr, 0, -cost, len(G[fr]) - 1])
 
     def flow(self, s, t, f):
-        N = self.N; G = self.G
+        N = self.N
+        G = self.G
         INF = MinCostFlow.INF
 
         res = 0
@@ -34,7 +35,8 @@ class MinCostFlow:
                 for i, (w, cap, cost, _) in enumerate(G[v]):
                     if cap > 0 and dist[w] > dist[v] + cost + H[v] - H[w]:
                         dist[w] = r = dist[v] + cost + H[v] - H[w]
-                        prv_v[w] = v; prv_e[w] = i
+                        prv_v[w] = v
+                        prv_e[w] = i
                         heappush(que, (r, w))
             if dist[t] == INF:
                 return -1
@@ -42,7 +44,8 @@ class MinCostFlow:
             for i in range(N):
                 H[i] += dist[i]
 
-            d = f; v = t
+            d = f
+            v = t
             while v != s:
                 d = min(d, G[prv_v[v]][prv_e[v]][1])
                 v = prv_v[v]

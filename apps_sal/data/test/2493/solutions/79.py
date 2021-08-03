@@ -16,7 +16,7 @@ def solve():
         fac[i] = i * fac[i - 1] % MOD
         rev[i] = pow(fac[i], MOD - 2, MOD)
 
-    comb = lambda a, b: (fac[a] * rev[a - b] * rev[b]) % MOD if a >= b else 0
+    def comb(a, b): return (fac[a] * rev[a - b] * rev[b]) % MOD if a >= b else 0
 
     for i, j in enumerate(l):
         if d[j] != -1:
