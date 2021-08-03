@@ -1,3 +1,3 @@
 def two_decimal_places(n):
-    print("==>> ",n)
-    return round(n,2)
+    print("==>> ", n)
+    return round(n, 2)

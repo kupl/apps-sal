@@ -5,13 +5,13 @@ def two_decimal_places(n):
     cc += int(res[0]) * 100
     if n > 0:
         if int(str(res[1])[2]) < 5:
-            cc += int(str(res[1])[0:2]) 
+            cc += int(str(res[1])[0:2])
         else:
             cc = cc + int(str(res[1])[0:2]) + 1
     else:
         cc = 0 - cc
         if int(str(res[1])[2]) < 5:
-            cc += int(str(res[1])[0:2]) 
+            cc += int(str(res[1])[0:2])
         else:
             cc = cc + int(str(res[1])[0:2]) + 1
         cc = 0 - cc

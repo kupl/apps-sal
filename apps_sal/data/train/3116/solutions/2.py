@@ -4,5 +4,6 @@ def cal_n_bug(head, leg, wing):
     head -= x
     y = head * 2 - wing
     z = head - y
-    if all(n >= 0 for n in (x, y, z)): return [x, y, z]
+    if all(n >= 0 for n in (x, y, z)):
+        return [x, y, z]
     return [-1, -1, -1]

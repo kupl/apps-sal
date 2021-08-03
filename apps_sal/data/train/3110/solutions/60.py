@@ -8,9 +8,9 @@ def two_decimal_places(n):
             result = float()
 
             if last_digit >= 5:
-                return float(int_n) + ((three_last_digits-last_digit)+10)/1000
+                return float(int_n) + ((three_last_digits - last_digit) + 10) / 1000
             else:
-                return float(int_n) + (three_last_digits-last_digit)/1000
+                return float(int_n) + (three_last_digits - last_digit) / 1000
         else:
             int_n = int(n)
             three_last_digits = int((n - (int_n)) * 1000)
@@ -18,7 +18,7 @@ def two_decimal_places(n):
             result = float()
 
             if last_digit >= 5:
-                return float(int_n) + ((three_last_digits+last_digit)-10)/1000
+                return float(int_n) + ((three_last_digits + last_digit) - 10) / 1000
             else:
-                return float(int_n) + (three_last_digits+last_digit)/1000
+                return float(int_n) + (three_last_digits + last_digit) / 1000
     return float()

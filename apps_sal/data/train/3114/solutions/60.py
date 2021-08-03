@@ -5,12 +5,11 @@ def is_leap_year(year):
             if year % 400 == 0:
                 return True
             else:
-                return False 
+                return False
         return True
-            
+
     return False
-        
-        
+
 
 def year_days(year):
     if is_leap_year(year):

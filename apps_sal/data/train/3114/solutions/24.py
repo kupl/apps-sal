@@ -5,4 +5,3 @@ def year_days(year):
         return f'{year} has 366 days'
     else:
         return f'{year} has 365 days'
-

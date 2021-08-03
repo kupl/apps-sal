@@ -1,5 +1,6 @@
 import calendar
 
+
 def year_days(year):
     if calendar.isleap(year):
         return '{0} has 366 days'.format(year)

@@ -1,1 +1,1 @@
-is_lucky=lambda n:n%9<1
+def is_lucky(n): return n % 9 < 1

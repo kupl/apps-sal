@@ -1,2 +1,2 @@
 def two_decimal_places(n):
-   return round(n* 100) / 100
+    return round(n * 100) / 100
