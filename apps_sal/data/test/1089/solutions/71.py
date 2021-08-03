@@ -49,7 +49,8 @@ class ModTools:
     def nCr(self, n, r):
         """ 組み合わせの数 (必要な階乗と逆元のテーブルを事前に作っておく) """
 
-        if n < r: return 0
+        if n < r:
+            return 0
         # 10C7 = 10C3
         r = min(r, n - r)
         # 分子の計算

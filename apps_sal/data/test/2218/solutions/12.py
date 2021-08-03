@@ -62,7 +62,9 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
+
 ALPHA = 'abcdefghijklmnopqrstuvwxyz'
 M = 10**9 + 7
 EPS = 1e-6
@@ -86,7 +88,8 @@ while(True):
 
     t = ma
     for i in a:
-        if(k < setNo): return
+        if(k < setNo):
+            return
 
         if(i not in t):
             print(len(ma) + 1, *ma, i)

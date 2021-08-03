@@ -4,7 +4,8 @@ MOD = 1000000007
 
 
 def pow_mod(x, y):
-    if y == 0: return 1
+    if y == 0:
+        return 1
     ans = 1
     while y > 1:
         if y % 2 != 0:
@@ -16,7 +17,8 @@ def pow_mod(x, y):
     return ans * x % MOD
 
 
-mod_inv = lambda x: pow_mod(x, MOD - 2)
+def mod_inv(x): return pow_mod(x, MOD - 2)
+
 
 a = 0
 for i in range(1, n):

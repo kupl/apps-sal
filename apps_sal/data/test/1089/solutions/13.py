@@ -1,7 +1,10 @@
 n, m, k = map(int, input().split())
 mod = 10**9 + 7
 f = [1]
-for i in range(2 * 10**5 + 7): f += [f[-1] * (i + 1) % mod]
+for i in range(2 * 10**5 + 7):
+    f += [f[-1] * (i + 1) % mod]
+
+
 def comb(a, b): return f[a] * pow(f[b], mod - 2, mod) * pow(f[a - b], mod - 2, mod) % mod
 
 

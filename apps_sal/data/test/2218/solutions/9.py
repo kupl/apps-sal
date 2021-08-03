@@ -10,7 +10,7 @@ def fastio():
     from atexit import register
     nonlocal input
     sys.stdin = StringIO(sys.stdin.read())
-    input = lambda: sys.stdin.readline().rstrip('\r\n')
+    def input(): return sys.stdin.readline().rstrip('\r\n')
     sys.stdout = StringIO()
     register(lambda: sys.__stdout__.write(sys.stdout.getvalue()))
 
@@ -24,7 +24,8 @@ def debug(*var, sep=' ', end='\n'):
 
 INF = 10**20
 MOD = 10**9 + 7
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, k = I()
 a = I()

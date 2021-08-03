@@ -16,7 +16,7 @@ def main():
     for i in range(MAXN - 1, -1, -1):
         inv_fact[i] = inv_fact[i + 1] * (i + 1) % MOD
 
-    nck = lambda N, K: 0 if K > N or K < 0 else fact[N] * inv_fact[N - K] * inv_fact[K] % MOD
+    def nck(N, K): return 0 if K > N or K < 0 else fact[N] * inv_fact[N - K] * inv_fact[K] % MOD
 
     ans = 0
     const = nck(N * M - 2, K - 2)

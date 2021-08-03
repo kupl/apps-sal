@@ -9,7 +9,9 @@ for i in range(1, n + 1):
     fac[i] = i * fac[i - 1] % MOD
     rev[i] = pow(fac[i], MOD - 2, MOD)
 
-comb = lambda a, b: (fac[a] * rev[a - b] * rev[b]) % MOD
+
+def comb(a, b): return (fac[a] * rev[a - b] * rev[b]) % MOD
+
 
 C = comb(N * M - 2, K - 2)
 ans = 0

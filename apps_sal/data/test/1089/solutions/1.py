@@ -19,7 +19,8 @@ fac, ifac = make_table(2 * 10**5)
 
 
 def comb(n, r, mod=MOD):
-    if r > n or r < 0: return 0
+    if r > n or r < 0:
+        return 0
     return fac[n] * ifac[r] % mod * ifac[n - r] % mod
 
 

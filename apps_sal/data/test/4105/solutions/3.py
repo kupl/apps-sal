@@ -8,5 +8,6 @@ else:
     for i in range(k - 1):
         for j in range(k):
             c += 1
-            if c > n: return
+            if c > n:
+                return
             print(1 + j, 1 + (j + i + 1) % k)

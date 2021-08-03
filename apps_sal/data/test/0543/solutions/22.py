@@ -1,4 +1,6 @@
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, a = I()[0], I()
 active_coupon = False
 for i in range(n):

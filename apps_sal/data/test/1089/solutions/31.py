@@ -8,8 +8,10 @@ class Comb:
         self.mod = mod
         self.factorial_table = None
         self.inverse_table = None
-        if f: self.get_factorial()
-        if i: self.get_inverse()
+        if f:
+            self.get_factorial()
+        if i:
+            self.get_inverse()
 
     def get_factorial(self):
         self.factorial_table = [1] * (self.n + 1)
