@@ -10,12 +10,12 @@ for _ in range(t):
     tmp = 0
     fact = math.factorial(n)
     for i in range(n):
-        tmp+=a[i]
-    tmp *=(fact//n)
-    i=1
-    k=1
-    while i<=n:
-        total += (k*tmp)
-        k*=10
-        i+=1
+        tmp += a[i]
+    tmp *= (fact // n)
+    i = 1
+    k = 1
+    while i <= n:
+        total += (k * tmp)
+        k *= 10
+        i += 1
     print(total)

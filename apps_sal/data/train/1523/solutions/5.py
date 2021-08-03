@@ -1,7 +1,7 @@
 # cook your dish here
 N = int(input())
-Ps= list(map(int, input().strip().split(" ")))
-#print(Ps)
+Ps = list(map(int, input().strip().split(" ")))
+# print(Ps)
 
 sum = [0 for i in range(N)]
 if N > 0:
@@ -13,9 +13,9 @@ if N > 2:
 
 
 for i in range(3, N):
-    sum[i] = max(sum[i-2] + Ps[i], max(sum[i-1], sum[i-3] + Ps[i-1] + Ps[i]))
-    
-    
+    sum[i] = max(sum[i - 2] + Ps[i], max(sum[i - 1], sum[i - 3] + Ps[i - 1] + Ps[i]))
+
+
 print(sum.pop())
 """
 23

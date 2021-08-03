@@ -1,14 +1,14 @@
 # cook your dish here
-n=int(input())
-arr=list(map(int,input().split()))
-dp=[0]*(n+1)
-dp[0]=0
-dp[1]=arr[0]
-dp[2]=arr[0]+arr[1]
-dp[3]=max(arr[2]+arr[0],arr[1]+arr[2],dp[-1])
+n = int(input())
+arr = list(map(int, input().split()))
+dp = [0] * (n + 1)
+dp[0] = 0
+dp[1] = arr[0]
+dp[2] = arr[0] + arr[1]
+dp[3] = max(arr[2] + arr[0], arr[1] + arr[2], dp[-1])
 
-for i in range(4,n+1):
-    dp[i]=max(dp[i-1],arr[i-1]+dp[i-2],arr[i-1]+arr[i-2]+dp[i-3])
+for i in range(4, n + 1):
+    dp[i] = max(dp[i - 1], arr[i - 1] + dp[i - 2], arr[i - 1] + arr[i - 2] + dp[i - 3])
 # print(dp)/
 print(dp[-1])
 # if N > 0:
@@ -21,4 +21,3 @@ print(dp[-1])
 
 # for i in range(3, N):
 #     sum[i] = max(sum[i-2] + Ps[i], max(sum[i-1], sum[i-3] + Ps[i-1] + Ps[i]))
-

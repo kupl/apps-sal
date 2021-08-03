@@ -1,29 +1,29 @@
 # cook your dish here
 def tourneyscore(a):
-    scorelist=[]
+    scorelist = []
     for i in range(len(a)):
         scorelist.append(0)
     for i in range(len(a)):
-        for k in range(i+1,len(a)):
-            if a[i][0]<a[k][0]:
-                if a[i][1]>a[k][1]:
-                    scorelist[i]+=2
+        for k in range(i + 1, len(a)):
+            if a[i][0] < a[k][0]:
+                if a[i][1] > a[k][1]:
+                    scorelist[i] += 2
                 else:
-                    scorelist[i]+=1
-                    scorelist[k]+=1
+                    scorelist[i] += 1
+                    scorelist[k] += 1
             else:
-                if a[i][1]<a[k][1]:
-                    scorelist[k]+=2
+                if a[i][1] < a[k][1]:
+                    scorelist[k] += 2
                 else:
-                    scorelist[i]+=1
-                    scorelist[k]+=1
-    print(*scorelist, sep = " ") 
+                    scorelist[i] += 1
+                    scorelist[k] += 1
+    print(*scorelist, sep=" ")
+
 
 for T in range(int(input())):
-    singerlist=[]
+    singerlist = []
     for N in range(int(input())):
-        L,U=input().split()
-        L,U=int(L),int(U)
-        singerlist.append([L,U])
+        L, U = input().split()
+        L, U = int(L), int(U)
+        singerlist.append([L, U])
     tourneyscore(singerlist)
-        
