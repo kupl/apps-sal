@@ -14,7 +14,8 @@ for i in range(N):
     xi, yi, ri = X[i]
     for j in range(N):
         xj, yj, rj = X[j]
-        DD[i][j] = max(math.sqrt((xi-xj)**2 + (yi-yj)**2) - (ri+rj), 0)
+        DD[i][j] = max(math.sqrt((xi - xj)**2 + (yi - yj)**2) - (ri + rj), 0)
+
 
 def dijkstra(n, E, i0=0):
     D = [1 << 40] * n
@@ -28,10 +29,12 @@ def dijkstra(n, E, i0=0):
                 d = D[q]
         Q.remove(i)
         for j, w in enumerate(DD[i]):
-            if j == i: continue
+            if j == i:
+                continue
             nd = d + w
             if D[j] > nd:
                 D[j] = nd
     return D
+
 
 print(dijkstra(N, X)[1])

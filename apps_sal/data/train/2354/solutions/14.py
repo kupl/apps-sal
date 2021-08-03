@@ -22,5 +22,4 @@ for sbst in arr:
         break
 
 if flag:
-    print ('NO')
-
+    print('NO')

@@ -1,18 +1,18 @@
-s=input()
-n=int(input())
-l=[]
+s = input()
+n = int(input())
+l = []
 for u in range(n):
-	l.append(input())
+    l.append(input())
 
-flag=0
+flag = 0
 for i in range(n):
-	for j in range(n):
-		if((l[i]+l[j]).count(s) >=1):
-			flag=1
-			break
-	if(flag):
-		break
+    for j in range(n):
+        if((l[i] + l[j]).count(s) >= 1):
+            flag = 1
+            break
+    if(flag):
+        break
 if(flag):
-	print("YES")
+    print("YES")
 else:
-	print("NO")
+    print("NO")

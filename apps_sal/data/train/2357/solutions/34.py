@@ -7,6 +7,7 @@ def comb(n, r, mod):
         y %= mod
     return pow(y, -1, mod) * x % mod
 
+
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
 mod = pow(10, 9) + 7

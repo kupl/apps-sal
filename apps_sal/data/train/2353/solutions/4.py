@@ -9,5 +9,3 @@ for i in range(0, n):
 
 for v in data:
     print(ans[v], end=' ')
-
-

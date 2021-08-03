@@ -6,17 +6,19 @@ base = 10 ** 9 + 7
 
 # ans = comb(M+N, a+N)
 
+
 def fact(x):
-  r = 1
-  for i in range(1,x+1):
-    r *= i
-    r %= base
-  return r
+    r = 1
+    for i in range(1, x + 1):
+        r *= i
+        r %= base
+    return r
+
 
 ans = 1
-for i in range(a+N):
-  ans *= M+N-i
-  ans %= base
-ans *= pow(fact(a+N), base-2, base)
+for i in range(a + N):
+    ans *= M + N - i
+    ans %= base
+ans *= pow(fact(a + N), base - 2, base)
 ans %= base
 print(ans)

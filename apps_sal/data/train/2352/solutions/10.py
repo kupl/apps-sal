@@ -27,4 +27,3 @@ if result[len(result) - 1:len(result)] == '/':
     print(result[:len(result) - 1])
 else:
     print(result)
-

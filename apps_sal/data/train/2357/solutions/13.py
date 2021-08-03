@@ -20,16 +20,17 @@ def main():
     # 答えは(M+N)C(S+N)=(M+N)C(M-S)
     ans = 1
     div = 1
-    for i in range(N+S):
+    for i in range(N + S):
         ans *= M + N - i
         div *= N + S - i
         ans %= p
         div %= p
         # print(ans, div)
-    print((ans*pow(div, p-2, p) % p))
+    print((ans * pow(div, p - 2, p) % p))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

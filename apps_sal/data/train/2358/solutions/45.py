@@ -1,11 +1,12 @@
+import heapq
 import sys
 input = sys.stdin.readline
-import heapq
+
 
 def main():
     xs, ys, xt, yt = map(int, input().split())
     n = int(input())
-    
+
     def dijkstra(s):
         hq = [(0, s)]
         cost = [float('inf')] * (n + 2)
@@ -20,7 +21,7 @@ def main():
                     cost[u] = tmp
                     heapq.heappush(hq, (tmp, u))
         return cost[-1]
-    
+
     circles = []
     circles.append([xs, ys, 0])
     for _ in range(n):
@@ -38,5 +39,6 @@ def main():
 
     ans = dijkstra(0)
     print(ans)
-    
+
+
 main()

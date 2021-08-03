@@ -12,4 +12,4 @@ for i in range(n):
             dp[i + 1][j] += dp[i + 1][2 * j]
         dp[i + 1][j] %= MOD
 
-print(dp[n][k] % MOD) 
+print(dp[n][k] % MOD)

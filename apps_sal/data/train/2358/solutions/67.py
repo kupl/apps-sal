@@ -27,4 +27,3 @@ while que:
             minDist[to] = d
             heappush(que, (d, to))
 print((minDist[T]))
-

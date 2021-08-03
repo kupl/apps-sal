@@ -1,4 +1,4 @@
-def mod_combination(n, k, mod = 10 ** 9 + 7):
+def mod_combination(n, k, mod=10 ** 9 + 7):
     def extended_gcd(a, b):
         if b == 0:
             return (a, 1, 0)

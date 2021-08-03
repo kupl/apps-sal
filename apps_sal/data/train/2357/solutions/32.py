@@ -14,4 +14,3 @@ else:
         v %= MOD
         ans %= MOD
     print((ans * pow(v, MOD - 2, MOD) % MOD))
-

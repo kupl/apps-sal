@@ -36,11 +36,13 @@ def main():
 
         while h:
             c, v = heappop(h)
-            if dist[v] < c: continue
+            if dist[v] < c:
+                continue
 
             for u, dc in enumerate(adj[v]):
                 nc = c + dc
-                if dist[u] <= nc: continue
+                if dist[u] <= nc:
+                    continue
                 dist[u] = nc
                 heappush(h, (nc, u))
 
@@ -51,5 +53,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

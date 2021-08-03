@@ -34,7 +34,6 @@ def main():
         G[N].append((tmp, i))
         G[i].append((tmp, N))
 
-
     for i in range(N):
         tmp = diff2(xg, yg, i)
         G[N + 1].append((tmp, i))
@@ -44,30 +43,33 @@ def main():
     G[N].append((sqrt(tmp), N + 1))
     G[N + 1].append((sqrt(tmp), N))
 
-    d = [INF] * (N + 2) #頂点sからの距離
+    d = [INF] * (N + 2)  # 頂点sからの距離
 
-    def dijksrea(s): #始点s
+    def dijksrea(s):  # 始点s
         from heapq import heappop, heappush
-        d[s] = 0 #始点の距離を0にする
+        d[s] = 0  # 始点の距離を0にする
         pque = []
-        heappush(pque, (0, s)) #要素を[距離、頂点]として管理　最初の位置を入れる
+        heappush(pque, (0, s))  # 要素を[距離、頂点]として管理　最初の位置を入れる
 
-        while pque: #queの中に要素が残っている時
-            p = heappop(pque) #最も距離が短いものを取り出す
-            v = p[1] #距離が最も短い頂点
-            if d[v] < p[0]: #取り出した値より既に小さい値がdに入っているときは無視して次へ
+        while pque:  # queの中に要素が残っている時
+            p = heappop(pque)  # 最も距離が短いものを取り出す
+            v = p[1]  # 距離が最も短い頂点
+            if d[v] < p[0]:  # 取り出した値より既に小さい値がdに入っているときは無視して次へ
                 continue
-            for i in range(len(G[v])): #頂点vの隣接リストを走査
+            for i in range(len(G[v])):  # 頂点vの隣接リストを走査
                 e = G[v][i]
-                if d[e[1]] > d[v] + e[0]: #距離が更新できるかを検討
+                if d[e[1]] > d[v] + e[0]:  # 距離が更新できるかを検討
                     d[e[1]] = d[v] + e[0]
-                    heappush(pque, (d[e[1]], e[1])) #更新できた場合、その値をpqueに入れる
+                    heappush(pque, (d[e[1]], e[1]))  # 更新できた場合、その値をpqueに入れる
 
     dijksrea(N)
-    print (d[N + 1])
+    print(d[N + 1])
 
     # print (d)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

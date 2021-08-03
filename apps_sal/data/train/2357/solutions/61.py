@@ -1,5 +1,6 @@
 mod = 10 ** 9 + 7
 
+
 def comb(n, m):
     ans = 1
     a, b = 1, 1
@@ -8,6 +9,7 @@ def comb(n, m):
         b = b * i % mod
         ans %= mod
     return a * pow(b, mod - 2, mod) % mod
+
 
 N, M = map(int, input().split())
 S = sum(map(int, input().split()))

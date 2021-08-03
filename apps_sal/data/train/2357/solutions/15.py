@@ -20,23 +20,28 @@
 #    (A_iが決まっているため、どの仕切りがどちらの意味のしきりであるかは一意に復元できる。)
 #  結論：しきりN+ΣA個、ボールM-ΣA個を並べる場合の数を求めればよい。
 
-N, M = map(int,input().split())
-A = list(map(int,input().split()))
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
 mod = 10**9 + 7
 
-invs = [0,1]
+invs = [0, 1]
 
-X = N + M # しきりとボールの数の和
-Y = N + sum(A) # しきりの数
+X = N + M  # しきりとボールの数の和
+Y = N + sum(A)  # しきりの数
+
 
 def inv(x):
-  if x == 1: return 1
-  else: return  (-invs[mod % x] * (mod // x)) % mod
-for i in range(2,Y+1): #事前に逆元計算
-  invs.append(inv(i))
-  
+    if x == 1:
+        return 1
+    else:
+        return (-invs[mod % x] * (mod // x)) % mod
+
+
+for i in range(2, Y + 1):  # 事前に逆元計算
+    invs.append(inv(i))
+
 ans = 1
-for i in range(Y): #(X Y)の計算
-  ans *= (X-i) * invs[i+1]
-  ans %= mod
+for i in range(Y):  # (X Y)の計算
+    ans *= (X - i) * invs[i + 1]
+    ans %= mod
 print(ans % mod)

@@ -1,11 +1,11 @@
 class Factorials:
-    def __init__(self, n=10**6, mod=10**9+7):
+    def __init__(self, n=10**6, mod=10**9 + 7):
         self.mod = mod
 
         # self.fac[i] ≡ i! (factorial:階乗)
-        self.fac = [1] * (n+1)
-        for i in range(2, n+1):
-            self.fac[i] = self.fac[i-1] * i % mod
+        self.fac = [1] * (n + 1)
+        for i in range(2, n + 1):
+            self.fac[i] = self.fac[i - 1] * i % mod
 
         """
         # self.rec[i] ≡ 1 / i! (reciprocal:逆数)
@@ -27,7 +27,9 @@ class Factorials:
         return self.fac[n-1] * self.rec[n] % self.mod
     """
 
+
 mod = 10**9 + 7
+
 
 def fact(n, r):
     res = 1
@@ -35,6 +37,7 @@ def fact(n, r):
         res *= n - i
         res %= mod
     return res
+
 
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
@@ -46,4 +49,4 @@ if m < sum_a:
 
 fct = Factorials(sum_a + n)
 
-print(fact(n+m, sum_a+n) * pow(fct.fac[sum_a+n], mod-2, mod) % mod)
+print(fact(n + m, sum_a + n) * pow(fct.fac[sum_a + n], mod - 2, mod) % mod)

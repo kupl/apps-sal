@@ -24,4 +24,3 @@ while q:
         ux, uy, ur = barriers[u]
         new_cost = max(0, ((vx - ux) ** 2 + (vy - uy) ** 2) ** 0.5 - vr - ur)
         heappush(q, (cost + new_cost, u))
-

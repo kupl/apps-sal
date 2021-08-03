@@ -14,7 +14,7 @@ col = []
 cost = []
 
 for i, (xi, yi, ri) in enumerate(xyr):
-    for j, (xj, yj, rj) in enumerate(xyr[i+1:], i+1):
+    for j, (xj, yj, rj) in enumerate(xyr[i + 1:], i + 1):
         row.append(i)
         col.append(j)
         dist = max(0, sqrt((xi - xj) ** 2 + (yi - yj) ** 2) - ri - rj)
@@ -22,6 +22,5 @@ for i, (xi, yi, ri) in enumerate(xyr):
 
 g = csr_matrix((cost, (row, col)), shape=(n + 2, n + 2))
 d = dijkstra(g, directed=False, indices=n)
-ans = d[n+1]
+ans = d[n + 1]
 print(ans)
-
