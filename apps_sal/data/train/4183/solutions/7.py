@@ -9,4 +9,3 @@ def greatest_distance(arr):
         return max(b[-1] - b[0] for b in indexes.values() if len(b) > 1)
     except ValueError:
         return 0
-

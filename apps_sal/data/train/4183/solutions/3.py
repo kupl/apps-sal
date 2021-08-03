@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def greatest_distance(a):
     d = defaultdict(list)
     for i, x in enumerate(a):

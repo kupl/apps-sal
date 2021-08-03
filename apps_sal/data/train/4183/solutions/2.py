@@ -4,4 +4,3 @@ def greatest_distance(lst):
 
 def distance(lst, item):
     return len(lst) - 1 - lst[::-1].index(item) - lst.index(item)
-

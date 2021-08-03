@@ -4,4 +4,3 @@ def find_dup(arr):
         if a in seen:
             return a
         seen.add(a)
-
