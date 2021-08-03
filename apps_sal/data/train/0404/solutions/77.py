@@ -13,4 +13,3 @@ class Solution:
         return dp[K - 1][len(A) - 1]
         # dp[i][j] => result for i+1 groups, j idx in A
         # dp[i][j] = max(dp[i-1][k] + avg(A[k+1:j]) for k = 0..j-1)
-

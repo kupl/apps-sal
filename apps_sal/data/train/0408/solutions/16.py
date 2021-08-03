@@ -10,8 +10,5 @@ class Solution:
             if arr[i] >= sol:
                 return sol
             target -= arr[i]
-            
+
         return arr[0]
-                
-
-

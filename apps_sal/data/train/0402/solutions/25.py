@@ -18,19 +18,14 @@ class Solution:
                 return True
             if (src_node_x, src_node_y) not in src_visited:
                 src_visited.add((src_node_x, src_node_y))
-                src_neighboring_nodes = [(src_node_x, src_node_y-1), (src_node_x, src_node_y+1), (src_node_x-1, src_node_y), (src_node_x+1, src_node_y)]
+                src_neighboring_nodes = [(src_node_x, src_node_y - 1), (src_node_x, src_node_y + 1), (src_node_x - 1, src_node_y), (src_node_x + 1, src_node_y)]
                 for each_node in src_neighboring_nodes:
-                    if 0<=each_node[0]<10**6 and 0<=each_node[1]<10**6 and each_node not in blocked and each_node not in src_visited:
+                    if 0 <= each_node[0] < 10**6 and 0 <= each_node[1] < 10**6 and each_node not in blocked and each_node not in src_visited:
                         src_q.append((each_node[0], each_node[1]))
             if (tgt_node_x, tgt_node_y) not in tgt_visited:
                 tgt_visited.add((tgt_node_x, tgt_node_y))
-                tgt_neighboring_nodes = [(tgt_node_x, tgt_node_y-1), (tgt_node_x, tgt_node_y+1), (tgt_node_x-1, tgt_node_y), (tgt_node_x+1, tgt_node_y)]
+                tgt_neighboring_nodes = [(tgt_node_x, tgt_node_y - 1), (tgt_node_x, tgt_node_y + 1), (tgt_node_x - 1, tgt_node_y), (tgt_node_x + 1, tgt_node_y)]
                 for each_node in tgt_neighboring_nodes:
-                    if 0<=each_node[0]<10**6 and 0<=each_node[1]<10**6 and each_node not in blocked and each_node not in tgt_visited:
+                    if 0 <= each_node[0] < 10**6 and 0 <= each_node[1] < 10**6 and each_node not in blocked and each_node not in tgt_visited:
                         tgt_q.append((each_node[0], each_node[1]))
         return False
-                        
-                
-                
-        
-

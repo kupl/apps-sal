@@ -1,8 +1,10 @@
 class Solution:
     def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int]) -> bool:
         return self.helper(blocked, source, target) and self.helper(blocked, target, source)
+
     def helper(self, blocked, source, target):
-        if not blocked: return True
+        if not blocked:
+            return True
         dq = collections.deque([tuple(source)])
         l = len(blocked)
         seen = {tuple(source)}
@@ -18,5 +20,6 @@ class Solution:
                         dq.append((xx, yy))
                         # the maximum area covered by blocks will be an isosceles right triangle with area less than l * l // 2
                         # if we can cover more cells than l * l // 2, we will be bound to break the block
-                        if (xx, yy) == tuple(target) or len(seen) >= l * l // 2: return True
+                        if (xx, yy) == tuple(target) or len(seen) >= l * l // 2:
+                            return True
         return False

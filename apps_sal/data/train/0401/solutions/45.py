@@ -10,12 +10,12 @@ class Solution:
                 min_2[1].append(num)
                 min_2[1].sort()
                 if len(min_2[1]) > 2:
-                     min_2[1].pop()
+                    min_2[1].pop()
             elif num % 3 == 2:
                 min_2[2].append(num)
                 min_2[2].sort()
                 if len(min_2[2]) > 2:
-                     min_2[2].pop()
+                    min_2[2].pop()
         res = 0
         if mod == 1:
             if len(min_2[1]) >= 1:

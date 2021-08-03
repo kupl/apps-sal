@@ -30,4 +30,3 @@ def get_repeated_max(arr: List[int],
 class Solution:
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         return get_repeated_max(arr, k, int(1e9 + 7))
-

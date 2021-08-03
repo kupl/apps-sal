@@ -4,9 +4,9 @@ class Solution:
             s = 0
             for x in arr:
                 s += min(x, value)
-            
+
             return s
-        
+
         l, r = 1, max(arr)
         while l <= r:
             mid = l + (r - l) // 2
@@ -14,10 +14,8 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid - 1
-        
+
         if abs(calculate(l - 1) - target) <= abs(calculate(l) - target):
             return l - 1
-        
-        return l
-        
 
+        return l

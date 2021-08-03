@@ -19,7 +19,6 @@ class Solution:
         # return dfs(source[0], source[1], target, set()) \\
         #    and dfs(target[0], target[1], source, set())
 
-
         blocked = {tuple(p) for p in blocked}
 
         def bfs(source, target):
@@ -27,7 +26,7 @@ class Solution:
             for x0, y0 in bfs:
                 for i, j in (0, 1), (1, 0), (-1, 0), (0, -1):
                     x, y = x0 + i, y0 + j
-                    if 0 <= x < 10**6 and 0 <=y < 10**6 and (x, y) not in seen and (x, y) not in blocked:
+                    if 0 <= x < 10**6 and 0 <= y < 10**6 and (x, y) not in seen and (x, y) not in blocked:
                         if [x, y] == target:
                             return True
                         bfs.append([x, y])
@@ -38,4 +37,3 @@ class Solution:
             return False
 
         return bfs(source, target) and bfs(target, source)
-

@@ -3,7 +3,7 @@ class Solution:
         sumVal = sum(nums)
         if sumVal % 3 == 0:
             return sumVal
-        categories = [[],[],[]]
+        categories = [[], [], []]
         for num in nums:
             categories[num % 3].append(num)
         categories[1].sort()
@@ -24,4 +24,3 @@ class Solution:
             else:
                 remainder = min(categories[2][0], categories[1][0] + categories[1][1])
                 return sumVal - remainder
-

@@ -1,5 +1,5 @@
 
-# 837. New 21 Game 
+# 837. New 21 Game
 
 class Solution1:
     def new21Game(self, N: int, K: int, W: int) -> float:
@@ -21,8 +21,8 @@ class Solution1:
 class Solution:
     def new21Game(self, N: int, K: int, W: int) -> float:
         dp = [1 if i <= N else 0 for i in range(K + W)]
-        s = sum(dp[K : K + W])
-        for i in range(K-1, -1, -1):
+        s = sum(dp[K: K + W])
+        for i in range(K - 1, -1, -1):
             dp[i] = s / W
             s = s - dp[i + W] + dp[i]
         return dp[0]

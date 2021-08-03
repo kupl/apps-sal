@@ -1,10 +1,10 @@
 class Solution:
     def findBestValue(self, arr: List[int], target: int) -> int:
-        
+
         total = sum(arr)
         if total <= target:
             return max(arr)
-        
+
         arr = sorted(arr)
 
         min_num = target // len(arr)

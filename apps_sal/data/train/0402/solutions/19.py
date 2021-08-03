@@ -1,10 +1,10 @@
 class Solution:
     def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int]) -> bool:
-        
-        blocks = { tuple(b) for b in blocked }
-        
+
+        blocks = {tuple(b) for b in blocked}
+
         def bfs(start, end):
-            queue, used = [start], { tuple(start) }
+            queue, used = [start], {tuple(start)}
             for x, y in queue:
                 for dx, dy in [[-1, 0], [1, 0], [0, 1], [0, -1]]:
                     nx, ny = x + dx, y + dy
@@ -15,8 +15,7 @@ class Solution:
                         used.add((nx, ny))
                 if len(queue) == 20000:
                     return True
-                    
-            return False
-        
-        return bfs(source, target) and bfs(target, source)
 
+            return False
+
+        return bfs(source, target) and bfs(target, source)

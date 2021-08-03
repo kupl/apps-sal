@@ -8,8 +8,7 @@ class Solution:
         S = min(N - K + 1, W)
         # # S = dp[k+1] + dp[k+2] + ... + dp[k+W]
         for k in range(K - 1, -1, -1):
-            dp[k] = S/float(W)
-            S = S + dp[k] - dp[k+W]
-            
+            dp[k] = S / float(W)
+            S = S + dp[k] - dp[k + W]
 
         return dp[0]

@@ -2,11 +2,14 @@ class Solution:
     def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int]) -> bool:
         m = 10 ** 6
         n = len(blocked)
-        if target in blocked or source in blocked: return False
-        if n <= 1: return True
+        if target in blocked or source in blocked:
+            return False
+        if n <= 1:
+            return True
         dxy = [[0, -1], [0, 1], [-1, 0], [1, 0]]
         blocked = set(map(tuple, blocked))
         threshold = 100 * 200
+
         def bfs(pos, target):
             q = collections.deque([pos])
             visited = {tuple(pos)}
@@ -26,7 +29,7 @@ class Solution:
                             q.append(p)
                             visited.add(p)
             return -1
-        
+
         i = bfs(source, target)
         print(i)
         if i == 1:
@@ -36,6 +39,3 @@ class Solution:
         j = bfs(target, source)
         print(j)
         return j == 2
-                     
-        
-

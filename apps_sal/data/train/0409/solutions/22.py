@@ -10,10 +10,10 @@ class Solution:
             return max_sub_arr
         pos = 0
         if k > 3:
-            pos = (l+r) + (k-2) * total
-            
-        return max(total*k, max_sub_arr, (l+r), pos) % (10**9 + 7)
-        
+            pos = (l + r) + (k - 2) * total
+
+        return max(total * k, max_sub_arr, (l + r), pos) % (10**9 + 7)
+
     def get_right_max(self, arr):
         res = 0
         cur = 0
@@ -23,7 +23,7 @@ class Solution:
             res = max(cur, res)
             i -= 1
         return res
-    
+
     def get_left_max(self, arr):
         res = 0
         cur = 0
@@ -33,7 +33,7 @@ class Solution:
             res = max(cur, res)
             i += 1
         return res
-        
+
     def get_max_subarr(self, nums, i, j):
         cur = 0
         res = 0
@@ -44,5 +44,5 @@ class Solution:
                 cur += nums[it]
                 res = max(cur, res)
             else:
-                cur = max(cur+nums[it], 0)
+                cur = max(cur + nums[it], 0)
         return res, total

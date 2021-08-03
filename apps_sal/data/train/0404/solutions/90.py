@@ -11,4 +11,3 @@ class Solution:
                 for j in range(k - 1, i):
                     dp[k][i] = max(dp[k][i], dp[k - 1][j] + (sums[i] - sums[j]) / (i - j))
         return dp[K][n]
-

@@ -5,11 +5,10 @@ class Solution:
             return sum(arr) * k
         if all([x <= 0 for x in arr]):
             return 0
-        
+
         sol1 = self.maxsub(arr)
         sol2 = self.maxsub(arr + arr)
 
-        
         ma, mi = 0, 0
         presum = 0
         i = 0
@@ -21,13 +20,11 @@ class Solution:
                 mi = presum
             i += 1
         if sum(arr) > 0:
-            sol3 = max(ma + sum(arr) * (k-1), sum(arr) * k - mi)
+            sol3 = max(ma + sum(arr) * (k - 1), sum(arr) * k - mi)
             sol2 = sol2 + (k - 2) * sum(arr)
             return max(sol1, sol2, sol3) % base
         return max(sol1, sol2) % base
-    
-    
-    
+
     def maxsub(self, arr):
         sol = 0
         temp = 0
@@ -38,7 +35,5 @@ class Solution:
                 temp = 0
             else:
                 sol = max(sol, temp)
-            i += 1 
-        return sol 
-                
-
+            i += 1
+        return sol

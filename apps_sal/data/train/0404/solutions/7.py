@@ -15,9 +15,9 @@ class Solution(object):
                 if k == 0 and i == 0:
                     dp[0][i] = A[0]
                 elif k == 0:
-                    dp[0][i] = average(0, i+1)
+                    dp[0][i] = average(0, i + 1)
                 else:
                     for j in range(i):
-                        dp[k][i] = max(dp[k][i], dp[k - 1][j] + average(i+1, j+1))
+                        dp[k][i] = max(dp[k][i], dp[k - 1][j] + average(i + 1, j + 1))
 
         return dp[-1][-1]

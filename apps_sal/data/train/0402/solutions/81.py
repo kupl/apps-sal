@@ -81,31 +81,33 @@ The maximum area blocked are B * (B - 1) / 2.
 As a result, time and space complexity are both O(B^2)
 In my solution I used a fixed upper bound 20000.
 '''
+
+
 class Solution:
     def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int]) -> bool:
-        
+
         blocked = set(map(tuple, blocked))
-        dirs = [(0,1), (1,0), (0,-1), (-1,0)]
-        
+        dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+
         def bfs(s, t):
             bfsQ = [tuple(s)]
             visited = {tuple(s)}
             areaSum = 0
-            
+
             for x, y in bfsQ:
-                for i,j in dirs:
-                    r = x+i
-                    c = y+j
-                    
-                    if 0 <= r < 10**6 and 0 <= c < 10**6 and (r,c) not in visited and (r,c) not in blocked:
-                        if (r,c) == tuple(t):
+                for i, j in dirs:
+                    r = x + i
+                    c = y + j
+
+                    if 0 <= r < 10**6 and 0 <= c < 10**6 and (r, c) not in visited and (r, c) not in blocked:
+                        if (r, c) == tuple(t):
                             return True
-                        bfsQ.append((r,c))
-                        visited.add((r,c))
-                        
-                if len(bfsQ) >= 20000: # max block area upper bound
+                        bfsQ.append((r, c))
+                        visited.add((r, c))
+
+                if len(bfsQ) >= 20000:  # max block area upper bound
                     return True
-            
+
             return False
-    
+
         return bfs(source, target) and bfs(target, source)

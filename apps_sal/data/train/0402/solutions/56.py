@@ -1,10 +1,11 @@
 import heapq
 
-def solve(b,s,t):
+
+def solve(b, s, t):
     def create_priority_item(c, t):
-        dx = c[0]-t[0]
-        dy = c[1]-t[1]
-        d2 = dx*dx + dy*dy
+        dx = c[0] - t[0]
+        dy = c[1] - t[1]
+        d2 = dx * dx + dy * dy
         return (d2, c)
 
     b = set(tuple(_b) for _b in b)
@@ -18,7 +19,7 @@ def solve(b,s,t):
         if iter > 1.1e5:
             return False
         c = heap.pop()
-        if c in visited or c in b or c[0] < 0 or c[0] >=1e6 or c[1]<0 or c[1]>=1e6:
+        if c in visited or c in b or c[0] < 0 or c[0] >= 1e6 or c[1] < 0 or c[1] >= 1e6:
             continue
         if c == t:
             # found!
@@ -26,24 +27,22 @@ def solve(b,s,t):
         # search neighbors:
         dx = c[0] - s[0]
         dy = c[1] - s[1]
-        if dx*dx + dy*dy > 200*200:
+        if dx * dx + dy * dy > 200 * 200:
             return True
 
         visited.add(c)
-        heap.append((c[0]+1, c[1]  ))
-        heap.append((c[0]-1, c[1]  ))
-        heap.append((c[0]  , c[1]+1))
-        heap.append((c[0]  , c[1]-1))
+        heap.append((c[0] + 1, c[1]))
+        heap.append((c[0] - 1, c[1]))
+        heap.append((c[0], c[1] + 1))
+        heap.append((c[0], c[1] - 1))
     # we live in a cavity :(
     return False
 
-def solve_both(b,s,t):
-    return solve(b,s,t) and solve(b,t,s)
 
-
+def solve_both(b, s, t):
+    return solve(b, s, t) and solve(b, t, s)
 
 
 class Solution:
     def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int]) -> bool:
         return solve_both(blocked, source, target)
-

@@ -21,6 +21,6 @@ class Solution:
                     if not a:
                         a = n
                     elif not b:
-                         b = a + n
+                        b = a + n
 
         return total - b

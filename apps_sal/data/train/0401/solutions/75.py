@@ -6,4 +6,3 @@ class Solution:
             for s in tmp:
                 dp[(s + num) % 3] = max([dp[(s + num) % 3], s + num])
         return dp[0]
-

@@ -20,7 +20,7 @@ class Solution:
             else:
                 l = m + 1
         return res
-            
+
     # https://www.youtube.com/watch?v=j0KejYpI_Mc
     def findBestValue1(self, arr: List[int], target: int) -> int:
         arr.sort()

@@ -4,10 +4,10 @@ class Solution:
         heapify(nums)
         currSum = sum(arr)
         N = len(nums)
-        
+
         bestVal = -nums[0]
         bestDifference = float('inf')
-        
+
         def testValue(value):
             sumWithIdeal = currSum + numElementsToChange * value
             difference = abs(target - sumWithIdeal)
@@ -17,7 +17,7 @@ class Solution:
                 elif difference == bestDifference:
                     return min(bestVal, int(value)), bestDifference
             return bestVal, bestDifference
-                        
+
         while nums:
             nextLargest = -heappop(nums)
             currSum -= nextLargest
@@ -29,5 +29,5 @@ class Solution:
                 else:
                     bestVal, bestDifference = testValue(floor(idealValue))
                     bestVal, bestDifference = testValue(ceil(idealValue))
-                    
+
         return bestVal

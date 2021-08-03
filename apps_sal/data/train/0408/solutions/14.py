@@ -1,13 +1,13 @@
 class Solution:
     def findBestValue(self, arr: List[int], target: int) -> int:
         arr.sort()
-        low = 0 
+        low = 0
         high = (1 << 32)
         closest_diff = None
         closest_index = None
         while ((high - low) > 1):
             mid = (high + low) // 2
-            mid_val = self.helper(arr,mid)
+            mid_val = self.helper(arr, mid)
             if (closest_diff == None) or (closest_diff > abs(target - mid_val)):
                 closest_index = mid
                 closest_diff = abs(target - mid_val)
@@ -18,12 +18,12 @@ class Solution:
                 low = mid
             else:
                 high = mid
-                
-        high_val = self.helper(arr,high)
+
+        high_val = self.helper(arr, high)
         if (closest_diff == None) or (closest_diff > abs(target - high_val)):
             closest_index = high
             closest_diff = abs(target - high_val)
-        low_val = self.helper(arr,low)
+        low_val = self.helper(arr, low)
         if (closest_diff == None) or (closest_diff > abs(target - low_val)):
             closest_index = low
             closest_diff = abs(target - low_val)
@@ -31,8 +31,8 @@ class Solution:
             closest_index = low
             closest_diff = abs(target - low_val)
         return closest_index
-    
-    def helper(self,arr,val):
+
+    def helper(self, arr, val):
         curr_sum = 0
         for num in arr:
             if num < val:

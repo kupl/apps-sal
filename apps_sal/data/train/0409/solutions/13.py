@@ -1,4 +1,6 @@
 MOD = 1000000007
+
+
 class Solution:
     def kConcatenationMaxSum(self, arr, k):
         min_pre_sum = 0

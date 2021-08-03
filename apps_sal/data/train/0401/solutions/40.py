@@ -12,4 +12,3 @@ class Solution:
                 seen[(i + a) % 3] = max(seen[(i + a) % 3], i + a)
                 # print(a, i, seen)
         return seen[0]
-
