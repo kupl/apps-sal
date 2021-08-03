@@ -28,4 +28,3 @@ class Solution:
             _helper(i)
 
         return max(result)
-

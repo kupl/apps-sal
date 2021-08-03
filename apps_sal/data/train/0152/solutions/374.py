@@ -19,13 +19,11 @@ class Solution:
 
             return False
 
-
-
         first = 0
-        last = int(ceil((position[-1] - position[0])/(m-1)))
+        last = int(ceil((position[-1] - position[0]) / (m - 1)))
         while first < last:
 
-            mid = (first + last + 1)//2
+            mid = (first + last + 1) // 2
 
             if check(mid):
                 result = mid

@@ -6,15 +6,15 @@ class Solution:
             j = 1
             while j < l:
                 if position[j] - position[i] >= pos:
-                    placed +=1
+                    placed += 1
                     if placed == m:
                         return True
                     i = j
                     j = i + 1
                 else:
-                    j +=1
+                    j += 1
             return (True if placed == True else False)
-                
+
         l = len(position)
         mx = max(position) - min(position)
         position.sort()
@@ -27,5 +27,5 @@ class Solution:
                 ans = mid
                 lo = mid + 1
             else:
-                hi = mid  - 1
+                hi = mid - 1
         return ans

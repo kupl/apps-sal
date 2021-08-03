@@ -8,9 +8,9 @@ class Solution:
                 np = position[pos] - n
                 while pos >= 0 and position[pos] > np:
                     pos -= 1
-            return not balls       
+            return not balls
         position = sorted(position)
-        lo, hi = 1, (position[-1] - position[0]) // (m -1) + 1
+        lo, hi = 1, (position[-1] - position[0]) // (m - 1) + 1
         ans = lo
         while lo < hi:
             mid = lo + (hi - lo) // 2
@@ -19,6 +19,4 @@ class Solution:
                 lo = mid + 1
             else:
                 hi = mid
-        return ans   
-        
-
+        return ans

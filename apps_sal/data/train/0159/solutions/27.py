@@ -3,7 +3,7 @@ class Solution:
         q = []
         res = float('-inf')
         for i in range(len(nums)):
-            while q and i-q[0][0] > k:
+            while q and i - q[0][0] > k:
                 q.pop(0)
             temp = nums[i]
             if q and q[0][1] > 0:

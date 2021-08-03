@@ -1,6 +1,6 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        def isFeasible(positions, mid, k): 
+        def isFeasible(positions, mid, k):
             taken = 1
             last = positions[0]
             for i in range(1, len(positions)):
@@ -8,8 +8,8 @@ class Solution:
                     taken += 1
                     last = positions[i]
             return taken >= k
-        
-        def largestMinDist(positions, n, k): 
+
+        def largestMinDist(positions, n, k):
             low = 0
             high = max(positions) - min(positions) + 1
             while high - low > 1:
@@ -19,11 +19,11 @@ class Solution:
                 else:
                     high = mid
             return low
-        
-        n = len(position) 
-        
+
+        n = len(position)
+
         position = sorted(position)
-        
+
         '''
         if m == len(position):
             ans = max(position) - min(position)
@@ -33,5 +33,5 @@ class Solution:
                     ans = diff
             return ans
         '''
-    
+
         return largestMinDist(position, n, m)

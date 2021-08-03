@@ -15,4 +15,3 @@ class Solution:
                         dp[stack[-1]] = max(dp[stack[-1]], dp[j] + 1)
             stack.append(i)
         return max(dp[:-1])
-

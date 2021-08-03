@@ -9,8 +9,8 @@ class Solution:
                     prev_pos = position[i]
                 i += 1
             return b == 0
-        
-        # This is a fantastic example of establishing a monotonic predicate and 
+
+        # This is a fantastic example of establishing a monotonic predicate and
         # squeeze from the right side of the search space (instead of the usual left-side)
         position.sort()
         low = 1
@@ -27,5 +27,3 @@ class Solution:
             else:
                 high = mid - 1
         return low
-                
-

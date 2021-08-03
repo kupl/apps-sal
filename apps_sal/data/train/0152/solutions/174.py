@@ -1,7 +1,7 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         def check_works(position, m, dist):
-#             placing ball 1
+            #             placing ball 1
             balls_to_place = m - 1
             last_ball_pos = 0
             for ind in range(last_ball_pos, len(position)):
@@ -15,19 +15,19 @@ class Solution:
                 return 1
             else:
                 return 0
-            
-        
+
+
 #       let's try between 1 and 1000000000
         position.sort()
         lb = 1
         rb = 1000000000
         while (lb != rb - 1):
-            ret = check_works(position, m, int((lb + rb)/2))
-            
+            ret = check_works(position, m, int((lb + rb) / 2))
+
             if(ret == 0):
-                rb = int((lb + rb)/2)
+                rb = int((lb + rb) / 2)
             else:
-                lb = int((lb + rb)/2)
-            
-            print(lb,rb)
+                lb = int((lb + rb) / 2)
+
+            print(lb, rb)
         return lb

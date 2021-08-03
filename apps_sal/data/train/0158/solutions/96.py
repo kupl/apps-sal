@@ -1,10 +1,10 @@
 class Solution:
-     def kSimilarity(self, A: str, B: str) -> int:
-        def mk_similarities(s): # len(s) == len(B)
+    def kSimilarity(self, A: str, B: str) -> int:
+        def mk_similarities(s):  # len(s) == len(B)
             for i, c in enumerate(B):
                 if s[i] != c:
                     break
-            
+
             res = []
             for j in range(i + 1, len(B)):
                 if s[j] == B[i]:
@@ -12,7 +12,7 @@ class Solution:
                     ns[i], ns[j] = ns[j], ns[i]
                     res.append(''.join(ns))
             return res
-        
+
         N = len(A)
         ws = [A]
         swaps = 0
@@ -33,4 +33,3 @@ class Solution:
             ws = nws
             swaps += 1
         return None
-

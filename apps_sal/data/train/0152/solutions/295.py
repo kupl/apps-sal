@@ -7,16 +7,16 @@ class Solution:
                 if position[i] - anchor >= pivot:
                     anchor = position[i]
                     cnt += 1
-                    
+
                     if cnt == m:
-                        #print(\"Successfully placed all baskets\")
+                        # print(\"Successfully placed all baskets\")
                         return True
             return False
-                
+
         position = sorted(position)
-        low, high = 0, position[-1]       
+        low, high = 0, position[-1]
         output = -1
-        
+
         # Standard binary search recipe
         while low < high:
             pivot = (low + high) // 2
@@ -24,5 +24,5 @@ class Solution:
                 output = max(output, pivot)
                 low = pivot + 1
             else:
-                high = pivot        
+                high = pivot
         return output

@@ -11,7 +11,7 @@ class Solution:
     def get_max_length(self, length: int, cuts: List[int]) -> int:
         if len(cuts) == 1:
             return max(cuts[0], length - cuts[0])
-        
+
         cuts.sort()
         max_length = max(cuts[0], length - cuts[-1])
         for i in range(1, len(cuts)):

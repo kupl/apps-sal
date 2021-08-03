@@ -1,8 +1,11 @@
-from functools import lru_cache 
+from functools import lru_cache
+
+
 class Solution:
     def maxJumps(self, arr, d):
         n = len(arr)
-        @lru_cache(maxsize = None)
+
+        @lru_cache(maxsize=None)
         def findMaxReach(index):
             best = 1
             for i in range(1, d + 1):
@@ -22,4 +25,3 @@ class Solution:
         for i in range(n):
             ans = max(findMaxReach(i), ans)
         return ans
-

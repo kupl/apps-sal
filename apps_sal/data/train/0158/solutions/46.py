@@ -2,19 +2,19 @@ class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
         if A == B:
             return 0
-        
+
         def swap(S, i, j):
             a = list(S)
             a[i], a[j] = a[j], a[i]
             return ''.join(a)
-        
+
         n = len(A)
         steps = 0
         q = deque()
         visited = set()
         q.append(A)
         visited.add(A)
-        
+
         while q:
             steps += 1
             sz = len(q)
@@ -32,6 +32,5 @@ class Solution:
                     if T not in visited:
                         q.append(T)
                         visited.add(T)
-        
-        return steps
 
+        return steps

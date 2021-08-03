@@ -3,14 +3,14 @@
 #         #首先排序
 #         position.sort()
 #         print(position)
-        
+
 #         left = 1000000000
 #         right = position[-1] - position[0]
 #         for i in range(len(position)-1):
 #             diff = abs(position[i] - position[i+1])
 #             left = min(left, diff)
-            
-            
+
+
 #         def check(diff, p, m):
 #             m -= 1
 #             last = p[0]
@@ -25,7 +25,7 @@
 #                     pass
 #             print(diff, \"False\")
 #             return False
-            
+
 #         print(\"left\", left, \"right\", right)
 #         while left < right:
 #             mid = (left + right) // 2
@@ -41,29 +41,29 @@
 #                     break
 #             else:
 #                 right = mid - 1
-        
-                
+
+
 #         print(\"find 3\", left)
 #         return left
 
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        #首先排序
+        # 首先排序
         position.sort()
         # print(position)
-        
-        distance = [0 for _ in range(len(position)-1)]
-        for i in range(len(position)-1):
-            diff = position[i+1] - position[i]
+
+        distance = [0 for _ in range(len(position) - 1)]
+        for i in range(len(position) - 1):
+            diff = position[i + 1] - position[i]
             distance[i] = diff
         left = min(distance)
         right = position[-1] - position[0]
-            
+
         def check(diff, m):
             m -= 1
             pre_dis = 0
             for i in range(0, len(distance)):
-                if distance[i]+pre_dis >= diff:
+                if distance[i] + pre_dis >= diff:
                     m -= 1
                     if m <= 0:
                         # print(diff, \"True\")
@@ -73,10 +73,10 @@ class Solution:
                     pre_dis += distance[i]
             # print(diff, \"False\")
             return False
-            
+
         # print(\"left\", left, \"right\", right)
         while left < right:
-            mid = (left + right+1) // 2
+            mid = (left + right + 1) // 2
             if check(mid, m) == True:
                 left = mid
                 # if left == right:
@@ -89,8 +89,6 @@ class Solution:
                 #     break
             else:
                 right = mid - 1
-        
-                
+
         # print(\"find 3\", left)
         return left
-

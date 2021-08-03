@@ -8,15 +8,14 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid
-        return l if self.check(position, l, m) else l-1
-    
+        return l if self.check(position, l, m) else l - 1
+
     def check(self, position, k, m):
         last_placed_position = None
-        for i,p in enumerate(position):
-            if i == 0 or p-last_placed_position >= k:
+        for i, p in enumerate(position):
+            if i == 0 or p - last_placed_position >= k:
                 m -= 1
                 if m == 0:
                     return True
                 last_placed_position = p
         return False
-

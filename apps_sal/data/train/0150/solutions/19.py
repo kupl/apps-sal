@@ -4,12 +4,9 @@ class Solution:
         v = A[0]
         disjoint = 0
         for i in range(len(A)):
-            maxval = max(maxval,A[i])
-            if A[i]<v:
+            maxval = max(maxval, A[i])
+            if A[i] < v:
                 disjoint = i
                 v = maxval
-                
-        return disjoint+1
-                
-        
 
+        return disjoint + 1

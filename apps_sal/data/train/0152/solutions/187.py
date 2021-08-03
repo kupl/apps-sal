@@ -2,6 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
         highest_f = int((position[-1] - position[0]) / (m - 1))
+
         def helper(position, m, high_f, low_f, curr_f):
             selected_pos = [position[0]]
             for i in position:

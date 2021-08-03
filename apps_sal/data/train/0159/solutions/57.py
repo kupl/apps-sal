@@ -4,7 +4,7 @@ class Solution:
         dp = [-sys.maxsize] * n
         dp[0] = nums[0]
         maxDeque = deque()
-        
+
         ans = -sys.maxsize
         for j in range(n):
             while len(maxDeque) > 0 and j - maxDeque[0] > k:
@@ -15,5 +15,5 @@ class Solution:
             while len(maxDeque) > 0 and dp[maxDeque[-1]] < dp[j]:
                 maxDeque.pop()
             maxDeque.append(j)
-        
+
         return ans

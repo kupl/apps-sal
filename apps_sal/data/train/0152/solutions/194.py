@@ -2,7 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         n = len(position)
-        
+
         def num(dist):
             count = 1
             curr = position[0]
@@ -11,7 +11,7 @@ class Solution:
                     count += 1
                     curr = position[i]
             return count
-        
+
         start = 0
         end = position[-1] - position[0]
         res = 0

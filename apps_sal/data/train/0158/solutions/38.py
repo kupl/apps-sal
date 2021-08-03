@@ -8,14 +8,11 @@ class Solution:
                 return swaps
             visited.add(C)
             i = 0
-            while C[i] == B[i]: 
+            while C[i] == B[i]:
                 i += 1
             for j in range(i + 1, n):
                 if C[j] == B[i]:
-                    nxt = C[:i] + C[j] + C[i+1:j] + C[i] + C[j+1:]
+                    nxt = C[:i] + C[j] + C[i + 1:j] + C[i] + C[j + 1:]
                     if nxt not in visited:
                         q.append((nxt, swaps + 1))
         return -1
-            
-            
-

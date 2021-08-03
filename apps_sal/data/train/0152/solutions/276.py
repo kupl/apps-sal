@@ -17,4 +17,4 @@ class Solution:
             if position[r] - position[l] >= force:
                 c += 1
                 l = r
-        return c >= cuts-1
+        return c >= cuts - 1

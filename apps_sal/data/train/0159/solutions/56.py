@@ -15,4 +15,3 @@ class Solution:
             Q.append((i, maxsum_of_subseq_ends_at_i))
 
         return running_max
-

@@ -4,6 +4,7 @@ class Solution:
         position = sorted(position)
         m_vals = []
         distance = position[-1] - position[0]
+
         def works(min_dist):
             i = 1
             count = 1
@@ -14,7 +15,7 @@ class Solution:
                     prev = i
                 i += 1
             return count == m
-        
+
         low = 0
         high = 1 << 32
         while high - low > 1:
@@ -26,4 +27,3 @@ class Solution:
         if works(high):
             return high
         return low
-

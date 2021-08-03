@@ -7,7 +7,6 @@ class Solution:
                 d.pop()
             if A[i] > 0:
                 d.append(A[i])
-            if i >= k and d and d[0] == A[i-k]:
+            if i >= k and d and d[0] == A[i - k]:
                 d.popleft()
         return max(A)
-

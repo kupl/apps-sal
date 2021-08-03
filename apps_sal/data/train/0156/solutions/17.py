@@ -3,6 +3,7 @@ class Solution:
         n, m = len(a), len(b)
 
         dp = [[-1 for i in range(m + 1)] for j in range(n + 1)]
+
         def TD(a, b, n, m):
             if dp[n][m] != -1:
                 return dp[n][m]
@@ -19,14 +20,14 @@ class Solution:
         j = m
         while i > 0 and j > 0:
             if a[i - 1] == b[j - 1]:
-                lcs+=a[i-1]
+                lcs += a[i - 1]
                 i -= 1
                 j -= 1
-            elif dp[i - 1][j] > dp[i][j-1]:
-                lcs+=a[i-1]
+            elif dp[i - 1][j] > dp[i][j - 1]:
+                lcs += a[i - 1]
                 i -= 1
             else:
-                lcs+=b[j-1]
+                lcs += b[j - 1]
                 j -= 1
         while i > 0:
             lcs += a[i - 1]

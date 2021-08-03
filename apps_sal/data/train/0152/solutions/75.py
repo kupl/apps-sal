@@ -3,7 +3,8 @@ class Solution:
         arr = sorted(arr)
         small = sys.maxsize
         for a, b in zip(arr, arr[1:]):
-            small = min(small, b-a)
+            small = min(small, b - a)
+
         def count(d):
             cur = arr[0]
             res = 1
@@ -12,16 +13,14 @@ class Solution:
                     res += 1
                     cur = arr[i]
             return res >= m
-        
-        def bs(l, r):
-            if l > r: return 0
-            mid = l + (r-l)//2
-            if count(mid):
-                return bs(mid+1, r) or mid
-            else:
-                return bs(l, mid-1)
-                        
-        return bs(small, arr[-1]-arr[0])
-        
-                    
 
+        def bs(l, r):
+            if l > r:
+                return 0
+            mid = l + (r - l) // 2
+            if count(mid):
+                return bs(mid + 1, r) or mid
+            else:
+                return bs(l, mid - 1)
+
+        return bs(small, arr[-1] - arr[0])

@@ -9,12 +9,11 @@ class Solution:
                     return True
                 last_pos = position[i]
         return False
-        
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         left = 1
         right = position[-1] - position[0]
-        
 
         while right > left:
             mid = (right + left + 1) // 2
@@ -24,5 +23,3 @@ class Solution:
                 right = mid - 1
 
         return left
-    
-

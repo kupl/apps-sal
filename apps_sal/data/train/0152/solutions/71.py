@@ -24,7 +24,7 @@ class Solution:
 
     # 检查最小间距为x时是否能放下所有的球
     def check(self, pos, x, m):
-        remain_ball = m - 1 # 第一个球就放在第一个篮子里了
+        remain_ball = m - 1  # 第一个球就放在第一个篮子里了
         n = len(pos)
         prev = 0
         for i in range(1, n):
@@ -36,4 +36,3 @@ class Solution:
             else:
                 continue
         return False
-

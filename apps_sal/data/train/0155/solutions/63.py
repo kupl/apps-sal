@@ -1,8 +1,9 @@
 import functools
 
+
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
-        
+
         @functools.lru_cache(None)
         def jump(index):
             res = 0

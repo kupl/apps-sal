@@ -1,8 +1,10 @@
 from functools import lru_cache
 
+
 class Solution:
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
         m, n = len(str1), len(str2)
+
         @lru_cache(None)
         def dfs(i1, i2):
             if i1 == m or i2 == n:
@@ -14,7 +16,7 @@ class Solution:
                 return x
             else:
                 return y
-        
+
         res = dfs(0, 0)
         ans, idx1, idx2 = '', 0, 0
         for c in res:
@@ -30,5 +32,3 @@ class Solution:
         ans += str1[idx1:]
         ans += str2[idx2:]
         return ans
-        
-

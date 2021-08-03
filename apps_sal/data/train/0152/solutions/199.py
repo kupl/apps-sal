@@ -1,7 +1,7 @@
 class Solution:
     def _MaxPossibleForce(self, position):
         return position[-1] - position[0]
-    
+
     def _GetNumAssignedBallsForGivenForce(self, position, force):
         i = 1
         assigned = 1
@@ -13,17 +13,16 @@ class Solution:
                 last_assigned_position = i
             i += 1
         return assigned
-    
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         max_force = self._MaxPossibleForce(position)
-        min_force = 1 # as m <= len(position)
+        min_force = 1  # as m <= len(position)
         while min_force <= max_force:
-            search_force = (min_force + max_force)//2
+            search_force = (min_force + max_force) // 2
             num_assigned = self._GetNumAssignedBallsForGivenForce(position, search_force)
             if num_assigned < m:
                 max_force = search_force - 1
             else:
                 min_force = search_force + 1
         return max_force
-

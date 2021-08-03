@@ -2,7 +2,8 @@ class Solution:
     def kSimilarity(self, A, B):
         def nei(x):
             i = 0
-            while x[i] == B[i]: i += 1
+            while x[i] == B[i]:
+                i += 1
             for j in range(i + 1, len(A)):
                 if x[j] == B[j]:
                     continue
@@ -17,13 +18,13 @@ class Solution:
         visit = {A}
         for cur, d in stack:
             # cur, d = stack.pop()
-            if cur == B: return d
+            if cur == B:
+                return d
             for neighbor in nei(cur):
                 if neighbor not in visit:
                     visit.add(neighbor)
-                    stack.append((neighbor, d+1))
-                    
-        
+                    stack.append((neighbor, d + 1))
+
         # n = len(A)
         # def nei(x):
         #     i = 0
@@ -44,4 +45,3 @@ class Solution:
         #         if y not in seen:
         #             seen.add(y)
         #             pool.append((y,d+1))
-

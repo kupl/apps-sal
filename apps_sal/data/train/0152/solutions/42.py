@@ -20,5 +20,3 @@ class Solution:
             else:
                 hi = mid - 1
         return lo
-    
-

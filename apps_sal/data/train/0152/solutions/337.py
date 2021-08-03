@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def maxDistance(self, position: List[int], m: int) -> int:
         def helper(pos, mid, k):
             temp = pos[0]
@@ -10,13 +10,13 @@ class Solution:
                     done += 1
                 if done == k:
                     return True
-            
+
             return False
-        
+
         position.sort()
         res = -1
         l, r = 0, position[-1]
-        
+
         while l < r:
             mid = l + (r - l) // 2
             if helper(position, mid, m):
@@ -24,5 +24,5 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid
-        
+
         return res

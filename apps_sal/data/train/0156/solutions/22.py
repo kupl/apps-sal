@@ -31,6 +31,3 @@ class Solution:
                 continue
         ans.reverse()
         return ''.join(ans)
-
-
-

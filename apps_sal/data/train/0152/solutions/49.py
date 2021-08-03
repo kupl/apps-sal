@@ -7,12 +7,13 @@ def solve(positions, m, target):
             p = p2
         if m == 0:
             return True
-    return False                            
-    
+    return False
+
+
 class Solution:
     def maxDistance(self, positions: List[int], m: int) -> int:
         positions.sort()
-        l, r = 0, positions[-1] - positions[0] 
+        l, r = 0, positions[-1] - positions[0]
         best = 0
         while l <= r:
             target = (l + r) // 2
@@ -21,4 +22,4 @@ class Solution:
                 best = max(best, target)
             else:
                 r = target - 1
-        return best                
+        return best

@@ -7,7 +7,7 @@ class Solution:
             count = 1
 
             for pos in positions:
-                if pos-last > value:
+                if pos - last > value:
                     count += 1
                     last = pos
                     if count >= m:

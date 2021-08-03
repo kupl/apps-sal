@@ -9,7 +9,6 @@ class Solution:
                 q.append([list(B), i])
                 break
 
-
         def find_neighbors(arr, i):
             e = A[i]
             nei = []
@@ -24,7 +23,8 @@ class Solution:
                 while idx < len(cur):
                     if cur[idx] == A[idx]:
                         idx += 1
-                    else: break
+                    else:
+                        break
                 if idx == len(cur):
                     return out
                 else:
@@ -34,5 +34,5 @@ class Solution:
                         new[n] = cur[idx]
                         q.append([new, idx + 1])
             out += 1
-        
+
         return out

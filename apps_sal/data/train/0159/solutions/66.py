@@ -8,9 +8,9 @@ class Solution:
                 deque.pop(0)
             if deque:
                 nums[i] = nums[deque[0]] + num
-            
+
             while(deque and nums[deque[-1]] < nums[i]):
                 deque.pop()
             deque.append(i)
-        
+
         return max(nums)

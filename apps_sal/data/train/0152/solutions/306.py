@@ -2,6 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         lo, hi = 0, position[-1] - position[0]
+
         def check(amt):
             curr = position[0]
             cnt = 1
@@ -15,5 +16,5 @@ class Solution:
             if check(mi):
                 lo = mi
             else:
-                hi = mi-1
+                hi = mi - 1
         return lo

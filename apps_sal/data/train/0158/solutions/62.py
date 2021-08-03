@@ -21,8 +21,8 @@ class Solution:
             if work:
                 # only swap this one
                 # remove 0 and work from the unmatched list
-                q.append((cost+1, curr[1:work]+curr[work+1:], goal[1:work]+goal[work+1:]))
+                q.append((cost + 1, curr[1:work] + curr[work + 1:], goal[1:work] + goal[work + 1:]))
             else:
                 for i in range(1, len(curr)):
                     if curr[i] == need:
-                        q.append((cost+1, curr[1:i]+curr[0]+curr[i+1:], goal[1:]))
+                        q.append((cost + 1, curr[1:i] + curr[0] + curr[i + 1:], goal[1:]))

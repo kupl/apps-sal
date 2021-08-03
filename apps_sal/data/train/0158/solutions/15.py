@@ -48,11 +48,12 @@
 
 '''
 
+
 class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
         return do_kSimilarity(list(A), list(B), {})
-                
-                
+
+
 def do_kSimilarity(A, B, memo):
     if (tuple(A), tuple(B)) in memo:
         return memo[(tuple(A), tuple(B))]
@@ -66,12 +67,12 @@ def do_kSimilarity(A, B, memo):
         for i, char in enumerate(A):
             if char == B[0]:
                 swaps.append(i)
-        
+
         k = float('inf')
         for swap in swaps:
             A[0], A[swap] = A[swap], A[0]
             k = min(k, 1 + do_kSimilarity(A[1:], B[1:], memo))
             A[0], A[swap] = A[swap], A[0]
-        
+
         memo[(tuple(A), tuple(B))] = k
         return k

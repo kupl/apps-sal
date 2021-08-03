@@ -8,5 +8,5 @@ class Solution:
             if A[i] < v:
                 v = max_sofar
                 res = i
-                
-        return res+1
+
+        return res + 1

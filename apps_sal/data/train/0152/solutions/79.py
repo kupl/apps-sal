@@ -9,15 +9,15 @@ class Solution:
             if n >= m:
                 return 1
         return 0
-    
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         low, high = 0, position[-1]
-        
+
         while low < high:
             mid = (high + low + 1) // 2
             comp = self.put(position, mid, m)
-            
+
             if comp > 0:
                 low = mid
             else:

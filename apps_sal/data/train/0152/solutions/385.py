@@ -12,10 +12,9 @@ class Solution:
             else:
                 right = mid - 1
                 mid = (left + right) // 2
-        
+
         return mid
-        
-    
+
     def check(self, position, m, force):
         p = 1
         m -= 1
@@ -28,5 +27,3 @@ class Solution:
                 return True
             p += 1
         return False
-
-

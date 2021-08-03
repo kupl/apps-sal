@@ -1,5 +1,6 @@
 import functools
 
+
 class Solution:
     def maxJumps(self, arr, d: int) -> int:
 
@@ -8,13 +9,13 @@ class Solution:
             ans = 1
             for index in range(i + 1, min(len(arr), i + d + 1)):
                 if arr[i] > arr[index]:
-                    ans = max(ans,1 + helper(index))
+                    ans = max(ans, 1 + helper(index))
                 else:
                     break
 
-            for index in range(i - 1, max(-1, i - d - 1),-1):
+            for index in range(i - 1, max(-1, i - d - 1), -1):
                 if arr[i] > arr[index]:
-                    ans = max(ans,1 + helper(index))
+                    ans = max(ans, 1 + helper(index))
                 else:
                     break
 
@@ -25,4 +26,3 @@ class Solution:
             maxJumps = max(maxJumps, helper(i))
 
         return maxJumps
-

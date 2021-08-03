@@ -8,7 +8,7 @@ class Solution:
                     res += 1
                     prev = i
             return res
-        
+
         position.sort()
         if m == 2:
             return position[-1] - position[0]

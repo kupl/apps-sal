@@ -6,15 +6,15 @@ class Solution:
                 if lst[i] - pos >= force:
                     m -= 1
                     pos = lst[i]
-            return m<2
-        
+            return m < 2
+
         l = 0
         r = 1000000000
         position.sort()
-        
-        while l<r:
-            mid = ((l+r) >> 1) + 1
-            if isPossible(position,m,mid):
+
+        while l < r:
+            mid = ((l + r) >> 1) + 1
+            if isPossible(position, m, mid):
                 l = mid
             else:
                 r = mid - 1

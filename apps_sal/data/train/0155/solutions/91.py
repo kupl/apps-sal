@@ -2,7 +2,7 @@ class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
         n = len(arr)
         jumps = [1] * n
-        
+
         def get_neighs(cur):
             neighs = []
             directions = [1, -1]
@@ -14,13 +14,13 @@ class Solution:
                         break
                     neighs.append(i)
             return neighs
-        
+
         @lru_cache(None)
         def dp(cur):
             for neigh in get_neighs(cur):
                 jumps[cur] = max(jumps[cur], dp(neigh) + 1)
             return jumps[cur]
-        
+
         for i in range(len(arr)):
             dp(i)
         return max(jumps)

@@ -5,16 +5,16 @@ class Solution:
         maxNegSum = 0
         curNegWindowSum = 0
         curWindowSum = 0
-        rightIndex = 0 
+        rightIndex = 0
         leftIndex = 0
         midIndex = 0
         negativeStreak = False
-        
+
         while rightIndex < len(nums):
             if maxNum < nums[rightIndex]:
                 maxNum = nums[rightIndex]
-                
-            if nums[rightIndex] >= 0 and not negativeStreak: 
+
+            if nums[rightIndex] >= 0 and not negativeStreak:
                 curWindowSum += nums[rightIndex]
                 maxSum = max(maxSum, curWindowSum)
             elif nums[rightIndex] < 0 and not negativeStreak:
@@ -47,8 +47,6 @@ class Solution:
                 maxNegSum = 0
                 curNegWindowSum = 0
                 negativeStreak = False
-            
+
             rightIndex += 1
         return max(maxSum, maxNum)
-            
-

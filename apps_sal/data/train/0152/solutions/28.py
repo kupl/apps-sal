@@ -9,7 +9,7 @@ class Solution:
                     res += 1
                     prev = i
             return res
-        
+
         position.sort()
         if m == 2:
             return position[-1] - position[0]
@@ -19,7 +19,7 @@ class Solution:
             # force is too small
             if getBallCount(position, mid) >= m:
                 l = mid + 1
-                # record res 
+                # record res
                 res = mid
             else:
                 r = mid

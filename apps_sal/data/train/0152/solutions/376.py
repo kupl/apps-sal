@@ -6,11 +6,13 @@ class Solution:
         while l + 1 < r:
             med = (l + r) // 2
             cnt = 0
-            pre = position[0] - 2*med
+            pre = position[0] - 2 * med
             for x in position:
                 if x - pre >= med:
                     pre = x
                     cnt += 1
-            if cnt >= m: l = med
-            else: r = med
+            if cnt >= m:
+                l = med
+            else:
+                r = med
         return l

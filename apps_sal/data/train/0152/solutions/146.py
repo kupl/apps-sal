@@ -8,10 +8,10 @@ class Solution:
             cnt += 1
             prev = x
         return cnt >= m
-        
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        
+
         low, high = 0, max(position)
         while low + 1 < high:
             mid = (low + high) // 2
@@ -19,10 +19,8 @@ class Solution:
                 low = mid
             else:
                 high = mid
-        
+
         if self.possible(position, high, m):
             return high
-        
-        return low
-                
 
+        return low

@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def constrainedSubsetSum(self, A: List[int], k: int) -> int:
         deque = collections.deque()
@@ -11,5 +13,3 @@ class Solution:
             if i >= k and deque and deque[0] == A[i - k]:
                 deque.popleft()
         return max(A)
-            
-

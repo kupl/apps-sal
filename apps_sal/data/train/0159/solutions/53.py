@@ -12,4 +12,3 @@ class Solution:
             ret = max(ret, cur)
             heapq.heappush(heap, (-cur, i))
         return ret
-

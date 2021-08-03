@@ -1,9 +1,9 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
-        sorted_indexes = sorted(range(len(arr)), key = lambda i:arr[i])
+        sorted_indexes = sorted(range(len(arr)), key=lambda i: arr[i])
         n = len(arr)
         dp = [1] * n
-        
+
         def get_neighs(cur):
             neighs = []
             directions = [1, -1]
@@ -15,7 +15,7 @@ class Solution:
                         break
                     neighs.append(i)
             return neighs
-        
+
         for cur in sorted_indexes:
             neighs = get_neighs(cur)
             for neigh in neighs:

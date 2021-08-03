@@ -9,5 +9,3 @@ class Solution:
         for i in range(1, len(A)):
             if left[i - 1] <= right[-i - 1]:
                 return i
-            
-

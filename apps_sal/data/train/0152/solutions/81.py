@@ -11,7 +11,7 @@ class Solution:
         if self.is_ok(position, r, m):
             return r
         return l
-    
+
     def is_ok(self, position, target, m):
         count = 1
         prev = position[0]
@@ -20,5 +20,5 @@ class Solution:
             if diff >= target:
                 count += 1
                 prev = position[i]
-                
+
         return count >= m

@@ -6,13 +6,10 @@ class Solution:
         verticalCuts += [0, w]
         verticalCuts.sort()
         hor_max = 0
-        for i in range(len(horizontalCuts)-1):
-            hor_max = max(hor_max, abs(horizontalCuts[i] - horizontalCuts[i+1]))
-        
-        ver_max = 0
-        for i in range(len(verticalCuts)-1):
-            ver_max = max(ver_max, abs(verticalCuts[i] - verticalCuts[i+1]))
-        return (hor_max*ver_max)%mod
-       
-                
+        for i in range(len(horizontalCuts) - 1):
+            hor_max = max(hor_max, abs(horizontalCuts[i] - horizontalCuts[i + 1]))
 
+        ver_max = 0
+        for i in range(len(verticalCuts) - 1):
+            ver_max = max(ver_max, abs(verticalCuts[i] - verticalCuts[i + 1]))
+        return (hor_max * ver_max) % mod

@@ -3,7 +3,7 @@ class Solution:
         position.sort()
         if m == 2:
             return position[-1] - position[0]
-        
+
         def count(dist):
             prev, balls = position[0], 1
             for p in position[1:]:
@@ -13,7 +13,7 @@ class Solution:
                         break
                     prev = p
             return balls
-        
+
         l, r = 1, position[-1]
         res = 0
         while l < r:

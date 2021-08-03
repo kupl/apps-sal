@@ -20,7 +20,5 @@ class Solution:  # Decreasing Stack + DP （单调栈 DP）
                     if stack and j - stack[-1] <= d:
                         dp[stack[-1]] = max(dp[stack[-1]], dp[j] + 1)
             stack.append(i)
-            
-        return max(dp[:-1])
-    
 
+        return max(dp[:-1])
