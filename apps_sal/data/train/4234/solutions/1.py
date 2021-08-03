@@ -1,6 +1,7 @@
 def num_blocks(w, l, h):
-    return w*l*h + (w+l) * (h-1)*h//2 + (h-1)*h*(2*h-1)//6
-    
+    return w * l * h + (w + l) * (h - 1) * h // 2 + (h - 1) * h * (2 * h - 1) // 6
+
+
 """
 For those who wonder:
 

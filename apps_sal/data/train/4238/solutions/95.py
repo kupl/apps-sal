@@ -5,4 +5,3 @@ def squares_needed(grains):
         count += 2**i
         i += 1
     return i
-

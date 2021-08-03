@@ -11,4 +11,3 @@ def calculate_grade(scores):
         return "D"
     else:
         return "F"
-

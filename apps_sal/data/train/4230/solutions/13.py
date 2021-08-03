@@ -5,6 +5,3 @@ def reverse_letter(string):
         if i in alphabet:
             new_string += i
     return new_string[::-1]
-        
-
-

@@ -1,6 +1,6 @@
 def calculate_grade(scores):
 
-    avg_grade = sum(scores)/len(scores)
+    avg_grade = sum(scores) / len(scores)
     if avg_grade < 60:
         return "F"
     elif avg_grade < 70:

@@ -1,4 +1,6 @@
 import re
+
+
 def reverse_letter(st):
     newst = st[::-1]
     itog = ""
@@ -6,6 +8,3 @@ def reverse_letter(st):
         if i.isalpha():
             itog += i
     return (itog)
-
-        
-

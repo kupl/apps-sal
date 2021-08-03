@@ -5,5 +5,3 @@ def reverse_letter(string):
             outputArray.append(a)
     outputArray.reverse()
     return "".join(outputArray)
-
-

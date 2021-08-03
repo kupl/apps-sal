@@ -4,4 +4,4 @@ def squares_needed(grains):
     while ct < grains:
         ct += 2 ** i
         i += 1
-    return i  
+    return i

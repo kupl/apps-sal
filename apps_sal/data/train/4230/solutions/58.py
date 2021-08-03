@@ -1,5 +1,6 @@
 import string
 
+
 def reverse_letter(s):
     abc = list(string.ascii_lowercase)
     result = []
@@ -7,5 +8,3 @@ def reverse_letter(s):
         if i in abc:
             result.append(i)
     return "".join(result)
-
-

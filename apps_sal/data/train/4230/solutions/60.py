@@ -6,4 +6,3 @@ def reverse_letter(string):
         if ls[i].isalpha():
             reversed_cleaned += ls[i]
     return reversed_cleaned
-

@@ -1,11 +1,9 @@
 def reverse_letter(a):
-    ans=''
+    ans = ''
     a = list(a)
-    while len(a)>0:
+    while len(a) > 0:
         b = a.pop()
         if b.isalpha():
             ans = ans + b
             print(ans)
-    return ans        
-        
-
+    return ans

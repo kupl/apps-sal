@@ -2,7 +2,7 @@ def squares_needed(grains):
     my_dict = {}
     initial = 1
     value = 0
-    for x in range(1,65):
+    for x in range(1, 65):
         my_dict[x] = initial
         initial *= 2
     listofvalues = list(my_dict.values())
@@ -16,8 +16,6 @@ def squares_needed(grains):
             continue
         else:
             value = y
-    for keys,values in list(my_dict.items()):
+    for keys, values in list(my_dict.items()):
         if my_dict[keys] == value:
             return keys
-
-

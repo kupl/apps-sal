@@ -10,5 +10,3 @@ def reverse_letter(string):
         if reversed[n] in abc:
             reversed_cleaned += reversed[n]
     return reversed_cleaned
-        
-

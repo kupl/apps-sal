@@ -6,4 +6,3 @@ def squares_needed(grains):
         total = a
         count += 1
     return count
-

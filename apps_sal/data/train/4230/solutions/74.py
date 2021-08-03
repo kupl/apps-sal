@@ -1,5 +1,5 @@
 def reverse_letter(string):
-    ans =[]
+    ans = []
     for i in list(string):
         if i.isalpha():
             ans.append(i)

@@ -5,4 +5,4 @@ def squares_needed(grains):
     for i in range(64):
         total_wheat_rice += 2**i
         if total_wheat_rice >= grains:
-            return i+1
+            return i + 1

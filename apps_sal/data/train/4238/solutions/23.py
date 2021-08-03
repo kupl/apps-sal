@@ -3,7 +3,5 @@ def squares_needed(grains):
     square = 1
     while square <= grains:
         count += 1
-        square = square * 2    
+        square = square * 2
     return count
-        
-
