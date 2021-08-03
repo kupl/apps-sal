@@ -4,6 +4,7 @@ def level():
         yield n ** 2
         n += 1
 
+
 def beeramid(bonus, price):
     b, x, sum, n = bonus // price, level(), 1, 0
     while sum <= b:

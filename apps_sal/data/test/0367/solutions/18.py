@@ -30,4 +30,3 @@ if middle_letter:
 else:
     output += output[::-1]
 print(output)
-

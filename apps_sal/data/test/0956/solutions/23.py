@@ -1,5 +1,7 @@
-f = lambda: map(int, input().split())
-g = lambda x, y: d.setdefault(x, set()).add(y)
+def f(): return map(int, input().split())
+def g(x, y): return d.setdefault(x, set()).add(y)
+
+
 d = {}
 m, k = f()
 for i in range(m):

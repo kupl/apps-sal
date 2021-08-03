@@ -9,4 +9,3 @@ def martingale(bank, outcomes):
             balance -= stake
             stake *= 2
     return balance
-

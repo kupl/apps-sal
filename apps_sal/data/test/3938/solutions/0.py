@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
 
+
 class MaxFlow(object):
     def __init__(self):
         self.edges = defaultdict(lambda: defaultdict(lambda: 0))
@@ -109,5 +110,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

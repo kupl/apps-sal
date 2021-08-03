@@ -22,12 +22,12 @@ def f(s):
     for i in L:
         l = len(i)
         if l in k:
-            if s[:l] == s[n-l:]:
+            if s[:l] == s[n - l:]:
                 X += "S"
             else:
                 if s[:l] == i:
                     X += "P"
-                elif s[n-l:] == i:
+                elif s[n - l:] == i:
                     X += "S"
                 else:
                     return 0
@@ -35,21 +35,22 @@ def f(s):
             k.append(l)
             if s[:l] == i:
                 X += "P"
-            elif s[n-l:] == i:
+            elif s[n - l:] == i:
                 X += "S"
             else:
                 return 0
     print(X)
     return 1
 
+
 n = int(input())
 L = []
-for i in range(2*n-2):
+for i in range(2 * n - 2):
     L.append(input())
-P = sorted(L,key= len)
-for i in [P[0],P[1]]:
-    for j in [P[2*n-3],P[2*n-4]]:
-        if f(i+j):
+P = sorted(L, key=len)
+for i in [P[0], P[1]]:
+    for j in [P[2 * n - 3], P[2 * n - 4]]:
+        if f(i + j):
             quit()
-        if f(j+i):
+        if f(j + i):
             quit()

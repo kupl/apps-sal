@@ -12,7 +12,7 @@ class Solution:
                         inner.append(1)
                         count += 1
                     else:
-                        c = 1 + min(dp[i-1][j], min(inner[j-1], dp[i-1][j-1]))
+                        c = 1 + min(dp[i - 1][j], min(inner[j - 1], dp[i - 1][j - 1]))
                         inner.append(c)
                         count += c
             dp.append(inner)

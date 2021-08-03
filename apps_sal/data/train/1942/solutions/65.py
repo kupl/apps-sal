@@ -17,5 +17,3 @@ class Solution:
             else:
                 ans.append(i)
         return ans
-        
-

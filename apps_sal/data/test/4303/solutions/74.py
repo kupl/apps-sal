@@ -15,6 +15,6 @@ for i in range(l, -1, -1):
     if r <= pos_num:
         l_val = min(0, x[neg_num - i])
         r_val = max(0, x[neg_num + k - i - 1])
-        tmp = min( -l_val * 2 + r_val, -l_val + r_val * 2)
+        tmp = min(-l_val * 2 + r_val, -l_val + r_val * 2)
         res = min(tmp, res)
 print(res)

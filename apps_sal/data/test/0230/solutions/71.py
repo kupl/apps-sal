@@ -5,18 +5,18 @@ def solve():
     def isOK(L):
         setCand = set()
         RHs = []
-        for i in range(N-L+1):
-            RH = hash(Ss[i:i+L])
+        for i in range(N - L + 1):
+            RH = hash(Ss[i:i + L])
             RHs.append(RH)
-            if i-L >= 0:
-                setCand.add(RHs[i-L])
+            if i - L >= 0:
+                setCand.add(RHs[i - L])
             if RH in setCand:
                 return True
         return False
 
-    ng, ok = N//2+1, 0
-    while abs(ok-ng) > 1:
-        mid = (ng+ok) // 2
+    ng, ok = N // 2 + 1, 0
+    while abs(ok - ng) > 1:
+        mid = (ng + ok) // 2
         if isOK(mid):
             ok = mid
         else:
@@ -26,4 +26,3 @@ def solve():
 
 
 solve()
-

@@ -13,7 +13,7 @@ if sign % 2 == 1:
         heapq.heappush(data, (e[0] + x, e[1], e[2]))
 else:
     e = heapq.heappop(data)
-    if e[0] <  k * x:
+    if e[0] < k * x:
         s = (e[0] // x) + 1
         k -= s
         heapq.heappush(data, (s * x - e[0], -1 * e[1], e[2]))
@@ -27,5 +27,3 @@ output = [0] * n
 for val, s, i in data:
     output[i] = s * val
 print(' '.join([str(val) for val in output]))
-   
-

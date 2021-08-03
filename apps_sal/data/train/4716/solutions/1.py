@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def distribution_of(golds):
     g = deque(golds)
     s = [0, 0]

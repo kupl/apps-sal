@@ -1,8 +1,9 @@
-n,*aa = map(int, open(0).read().split())
-MOD = 10**9+7
-
-from collections import defaultdict
 from math import sqrt, ceil
+from collections import defaultdict
+n, *aa = map(int, open(0).read().split())
+MOD = 10**9 + 7
+
+
 def factors(x):
     d = defaultdict(int)
     while x % 2 == 0:
@@ -15,6 +16,7 @@ def factors(x):
     if x > 1:
         d[x] += 1
     return d
+
 
 factors_of_aa = list(map(factors, aa))
 

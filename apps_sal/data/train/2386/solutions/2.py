@@ -7,4 +7,3 @@ for testcase in range(int(input())):
         print(i, end=' ')
         has[i] = True
     print()
-

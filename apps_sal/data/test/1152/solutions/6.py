@@ -1,3 +1,4 @@
+from collections import defaultdict
 n, m = [int(i) for i in input().split()]
 A = []
 for i in range(n):
@@ -18,7 +19,6 @@ for i in range(n):
             changesx.append(i)
             changesy.append(j)
 
-from collections import defaultdict
 
 ddx = defaultdict(int)
 ddy = defaultdict(int)
@@ -31,14 +31,13 @@ for i in changesy:
 ok = 1
 
 for i in ddx:
-    if ddx[i]%2 != 0:
+    if ddx[i] % 2 != 0:
         ok = 0
 for i in ddy:
-    if ddy[i]%2 != 0:
+    if ddy[i] % 2 != 0:
         ok = 0
 
 if ok:
     print('Yes')
 else:
     print('No')
-

@@ -1,6 +1,8 @@
 from fractions import gcd
 
-lcm = lambda a, b: a * b // gcd(a, b)
+
+def lcm(a, b): return a * b // gcd(a, b)
+
 
 def smallest(n):
     num = 1

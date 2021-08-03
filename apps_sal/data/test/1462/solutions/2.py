@@ -12,4 +12,3 @@ for i in sorted(list(n.values()), reverse=True):
         break
 
 print(ans)
-

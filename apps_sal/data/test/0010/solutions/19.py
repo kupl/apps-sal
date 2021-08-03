@@ -6,7 +6,7 @@ def solve(n):
         maxx = res + 2
     elif (d == 1):
         minn = res
-        maxx = res + 1      
+        maxx = res + 1
     elif (d == 0):
         minn = res
         maxx = res
@@ -14,7 +14,8 @@ def solve(n):
         minn = res
         maxx = res + 2
     return [minn, maxx]
-    
+
+
 n = int(input())
 sol = solve(n)
-print(str(sol[0])+" "+str(sol[1]))
+print(str(sol[0]) + " " + str(sol[1]))

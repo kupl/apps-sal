@@ -7,4 +7,4 @@ s2 = sorted(s2)
 for i in range(a):
     otv[s1[i]] = 1
 for i in range(1, n + 1):
-    print(otv[i], end = ' ')
+    print(otv[i], end=' ')

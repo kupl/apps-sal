@@ -2,14 +2,14 @@ n = int(input())
 a, b1, b2 = [], [], []
 
 for i, j in enumerate(input()):
-	if j == '?':
-		if i < n // 2:
-			b1.append(i)
-		else:
-			b2.append(i)
-		a.append(0)
-	else:
-		a.append(int(j))
+    if j == '?':
+        if i < n // 2:
+            b1.append(i)
+        else:
+            b2.append(i)
+        a.append(0)
+    else:
+        a.append(int(j))
 
 
 s1 = sum(a[:n // 2])

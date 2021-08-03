@@ -4,9 +4,9 @@ for _ in range(int(input())):
     arr.sort(reverse=True)
     i = 0
     teams = 0
-    teamMem=0
+    teamMem = 0
     while (i < len(arr)):
-        if ((teamMem+1) * arr[i]>=k):
+        if ((teamMem + 1) * arr[i] >= k):
             teams += 1
             teamMem = 0
         else:

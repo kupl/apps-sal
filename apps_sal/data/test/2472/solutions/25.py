@@ -1,4 +1,16 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
 from operator import itemgetter
 
 sys.setrecursionlimit(10**7)
@@ -7,9 +19,11 @@ mod = 10**9 + 7
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
+
+def ni(): return int(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+
 
 n = ni()
 ab = [na() for _ in range(n)]

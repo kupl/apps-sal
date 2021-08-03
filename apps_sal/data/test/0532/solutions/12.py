@@ -16,4 +16,3 @@ for c in s:
     cnt += count(i, c)
     i = c
 print(cnt)
-

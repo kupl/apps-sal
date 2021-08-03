@@ -82,4 +82,3 @@ else:  # len(a) == len(b)
         print(a)
     else:
         print(int(''.join(get(a, b))))
-

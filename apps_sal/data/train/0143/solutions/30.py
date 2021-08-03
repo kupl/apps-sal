@@ -2,11 +2,11 @@ class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         max_ = 0
         baskets = {}
-        
+
         def get_other_tree(this_tree):
             trees = list(baskets.keys())
             return trees[1 - trees.index(this_tree)] if len(trees) == 2 else trees[0]
-        
+
         for idx, tr in enumerate(tree):
             if tr not in baskets and len(baskets) == 2:
                 max_ = max(max_, sum(sum(baskets[b]) for b in baskets))
@@ -22,6 +22,5 @@ class Solution:
                 if tr not in baskets:
                     baskets[tr] = [0, 0]
                 baskets[tr][1] += 1
-                
-        return max(max_, sum(sum(baskets[b]) for b in baskets))
 
+        return max(max_, sum(sum(baskets[b]) for b in baskets))

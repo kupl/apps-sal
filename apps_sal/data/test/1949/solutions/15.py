@@ -8,4 +8,3 @@ for i in range(k):
         cur = a[i]
     else:
         print(0)
-

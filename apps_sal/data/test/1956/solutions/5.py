@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def win(s, e):
     if e == s:
         return False
@@ -14,13 +15,15 @@ def win(s, e):
         return True
     else:
         return win(s, e // 4)
-    
+
+
 def lose(s, e):
     if e // 2 < s:
         return True
     else:
         return win(s, e // 2)
-    
+
+
 def main():
     res = [False, True]
     for _ in range(int(input())):
@@ -35,4 +38,5 @@ def main():
         res = cur
     print(*[int(x) for x in res])
 
-main()  
+
+main()

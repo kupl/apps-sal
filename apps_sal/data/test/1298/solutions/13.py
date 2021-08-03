@@ -8,4 +8,3 @@ for i in s:
             d.pop()
             d.pop()
 print(len(d))
-

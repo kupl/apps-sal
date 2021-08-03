@@ -16,7 +16,7 @@ from collections import deque
 
 def main():
     N, M = list(map(int, input().split()))
-    path = [[] for _ in range(N+1)]
+    path = [[] for _ in range(N + 1)]
     for _ in range(M):
         a, b = list(map(int, input().split()))
         path[a].append(b)
@@ -36,5 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

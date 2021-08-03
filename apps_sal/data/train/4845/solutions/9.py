@@ -1,5 +1,6 @@
 def sort_nested_list(A):
     sort_nested_list.numbers = []
+
     def collect_numbers(lista):
         if len(lista) == 0:
             return lista

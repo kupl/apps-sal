@@ -21,6 +21,5 @@ for i in range(1, t - 1):
         r += a[i]
     else:
         r += a[i]
-        
-print(r)
 
+print(r)

@@ -6,28 +6,31 @@ yp = int(sqrt(y))
 
 if yp > p:
     yp = p
-    if yp % 2 == 0: yp -= 1
+    if yp % 2 == 0:
+        yp -= 1
 
-if p == 2: 
+if p == 2:
     if y == 2:
         print(-1)
         return
     if y % 2 == 0:
-        print(y-1)
+        print(y - 1)
         return
     else:
         print(y)
         return
-    
-    
-if yp % 2 == 0: yp -= 1
 
-if y % 2 == 0: y -= 1
+
+if yp % 2 == 0:
+    yp -= 1
+
+if y % 2 == 0:
+    y -= 1
 
 
 if yp == 1:
     if y > 2 and y % 2 == 0:
-        print(y-1)
+        print(y - 1)
         return
     if y > p:
         print(y)
@@ -49,7 +52,6 @@ while y > p:
 
         elif yr > 3:
             yr -= 2
-
 
     y -= 2
 

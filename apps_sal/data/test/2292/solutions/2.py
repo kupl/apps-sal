@@ -7,6 +7,7 @@ def solve():
             print('No')
             return
     u, v = list(), list()
+
     def add(s, p, q):
         if p > q:
             p, q = q, p
@@ -18,6 +19,8 @@ def solve():
         print('Yes')
     else:
         print('No')
+
+
 t = int(input())
 for _ in range(t):
     solve()

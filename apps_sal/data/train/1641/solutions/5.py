@@ -51,4 +51,3 @@ def is_basic_element(elem):
 
 def repeat_value(value, count):
     return [value for _ in range(count)]
-

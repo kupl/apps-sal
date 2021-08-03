@@ -7,16 +7,16 @@ MAX = 1_000_000
 
 def gen_primes(n):
     n = int(n**0.5) + 2
-    is_prime = [True]*n
+    is_prime = [True] * n
     is_prime[0] = is_prime[1] = False
     for i in range(2, n):
         if is_prime[i]:
-            for j in range(2*i, n, i):
+            for j in range(2 * i, n, i):
                 is_prime[j] = False
     return [i for i, flag in enumerate(is_prime) if flag]
 
 
-C = [0]*(MAX+1)
+C = [0] * (MAX + 1)
 primes = gen_primes(MAX)
 
 
@@ -44,6 +44,5 @@ for i, c in enumerate(C):
 
 ans = 0
 for a in A:
-    ans = (ans + lcm * pow(a, mod-2, mod) % mod) % mod
+    ans = (ans + lcm * pow(a, mod - 2, mod) % mod) % mod
 print(ans)
-

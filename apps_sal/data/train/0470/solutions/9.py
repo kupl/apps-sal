@@ -3,10 +3,10 @@ class Solution:
         counter = collections.Counter(A)
         i, res, l, ckey = 0, 0, len(counter), sorted(list(counter.keys()))
         print(counter)
-        print((l//2))
+        print((l // 2))
         if target % 3 == 0:
             res += math.comb(counter[target // 3], 3)
-            print((target//3, target//3, target//3, res))
+            print((target // 3, target // 3, target // 3, res))
         for i in range(l):
             ni = ckey[i]
             nk = target - (2 * ni)
@@ -40,4 +40,3 @@ class Solution:
         #         j += 1
         #     i += 1
         # return res % (10**9 + 7)
-

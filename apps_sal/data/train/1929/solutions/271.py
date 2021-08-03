@@ -13,7 +13,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.letters.append(letter)
-        i = len(self.letters)-1
+        i = len(self.letters) - 1
         node = self.root
         while i >= 0:
             if node.isEnd:
@@ -21,16 +21,16 @@ class StreamChecker:
             if self.letters[i] not in node.children:
                 return False
             node = node.children[self.letters[i]]
-            i-=1
+            i -= 1
         return node.isEnd
-    
+
+
 class TrieNode:
     def __init__(self):
         self.children = defaultdict(TrieNode)
         self.isEnd = False
 
-    
+
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

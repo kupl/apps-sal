@@ -6,9 +6,9 @@ for x in lines:
         ares = (-x)**.5
     else:
         ares = x**.5
-    res = ares + x**3*5
+    res = ares + x**3 * 5
 
     if res >= 400:
         print("f(%d) = MAGNA NIMIS!" % x)
     else:
-        print("f(%d) = %.2f" % (x,res))
+        print("f(%d) = %.2f" % (x, res))

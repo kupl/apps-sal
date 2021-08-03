@@ -7,4 +7,3 @@ def next_item(xs, item):
             found = True
     else:
         return None
-

@@ -4,7 +4,7 @@ import collections
 class Bit():
     def __init__(self, l):
         self.size = l
-        self.bit = [0] * (self.size+1)
+        self.bit = [0] * (self.size + 1)
 
     def sum(self, i):
         s = 0
@@ -43,7 +43,7 @@ for c, k in list(index.items()):
         flag = 1
         B[k[cnt // 2]] = ctr + 1
     for i in range(cnt // 2):
-        l, r = k[i], k[-(i+1)]
+        l, r = k[i], k[-(i + 1)]
         P.append((l, r))
 
 P.sort()
@@ -58,4 +58,3 @@ for i, b in enumerate(B):
     bit.add(b, 1)
 
 print(ans)
-

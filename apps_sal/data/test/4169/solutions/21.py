@@ -14,4 +14,3 @@ for cost, number in sorted_sotres:
         ans += cost * number
     m -= number
 print(ans)
-

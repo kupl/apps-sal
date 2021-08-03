@@ -1,19 +1,19 @@
 def __starting_point():
-    d,t = list(map(int,input().split(' ')))
+    d, t = list(map(int, input().split(' ')))
     result = 0
-    i2 = d*2
-    i3 = t*3
-    cm = int(max(i2,i3)/6)  #common
-    while cm>0:
-        if i2+2<i3+3:
-            i2+=2
-        elif i2+2> i3+3:
-            i3+=3
+    i2 = d * 2
+    i3 = t * 3
+    cm = int(max(i2, i3) / 6)  # common
+    while cm > 0:
+        if i2 + 2 < i3 + 3:
+            i2 += 2
+        elif i2 + 2 > i3 + 3:
+            i3 += 3
         else:
-            i2+=2
-            cm+=1
-        cm-=1
-    print(max(i2,i3))
+            i2 += 2
+            cm += 1
+        cm -= 1
+    print(max(i2, i3))
 
     '''
     if index2+common*2<=index3:
@@ -40,6 +40,7 @@ def __starting_point():
         oldCommon=x
     print(max(index2,index3))
     '''
+
 
 '''
 

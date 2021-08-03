@@ -1,8 +1,8 @@
 string = input()
- 
+
 if string[-1] == "s":
-  string += "es"
+    string += "es"
 else:
-  string += "s"
-  
+    string += "s"
+
 print(string)

@@ -7,11 +7,11 @@ class Solution:
         l = 0
         for i, num in enumerate(A):
             temp = 0
-            while l+temp < len(flips) and flips[l+temp] + K- 1 < i:
+            while l + temp < len(flips) and flips[l + temp] + K - 1 < i:
                 temp += 1
             l += temp
             prevF = prevF - temp
-            if (prevF%2 and num == 0) or (prevF%2 == 0 and num == 1):
+            if (prevF % 2 and num == 0) or (prevF % 2 == 0 and num == 1):
                 continue
             else:
                 ans += 1
@@ -30,6 +30,6 @@ class Solution:
             #         flips.append(i)
             #     else:
             #         continue
-        if flips != [] and flips[-1] + K -1 >= ALen:
+        if flips != [] and flips[-1] + K - 1 >= ALen:
             return -1
         return ans

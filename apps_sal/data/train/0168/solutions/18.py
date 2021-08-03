@@ -6,7 +6,7 @@ class Solution:
                 d[s[i]] += 1
             else:
                 d[s[i]] = 1
-                
+
         odds = 0
         for v in d.values():
             if v % 2 == 1:

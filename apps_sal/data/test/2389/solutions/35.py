@@ -25,4 +25,3 @@ for i in range(n):
             X.append('ABC'[y])
 print('Yes')
 print(*X, sep='\n')
-

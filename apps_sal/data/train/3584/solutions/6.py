@@ -18,4 +18,3 @@ def decrypt(s, key):
 
 def encrypt(s, key):
     return crypt(s, key, to_encrypt=True)
-

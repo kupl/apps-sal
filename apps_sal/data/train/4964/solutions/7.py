@@ -1,1 +1,1 @@
-is_uppercase = lambda x: x.isupper()
+def is_uppercase(x): return x.isupper()

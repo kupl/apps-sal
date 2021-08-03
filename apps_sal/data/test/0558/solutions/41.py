@@ -17,4 +17,3 @@ for i in range(K + 1):
 result *= M
 result %= m
 print(result)
-

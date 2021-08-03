@@ -6,4 +6,3 @@ m_a = a
 m_b = b // 2
 m_c = c // 4
 print(min(m_a, m_b, m_c) * 7)
-

@@ -1,7 +1,6 @@
 def check(a, x):
-    b=a
+    b = a
     try:
-        return not a==b.remove(x)
+        return not a == b.remove(x)
     except:
         return False
-

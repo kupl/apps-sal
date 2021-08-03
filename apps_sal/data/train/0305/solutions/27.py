@@ -17,4 +17,3 @@ class Solution:
         #         if not (j - i) % 2 and text[i: i + (j - i) // 2] == text[i + (j - i) // 2: j]:
         #             seen.add(text[i: j])
         # return len(seen)
-

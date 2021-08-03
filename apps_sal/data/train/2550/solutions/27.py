@@ -18,13 +18,14 @@ class Solution:
         #     else:
         #         return False
         # return True
-    
+
         five = ten = 0
         for bill in bills:
             if bill == 5:
                 five += 1
             elif bill == 10:
-                if not five: return False
+                if not five:
+                    return False
                 five -= 1
                 ten += 1
             else:

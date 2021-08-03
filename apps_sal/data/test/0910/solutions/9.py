@@ -1,14 +1,14 @@
-n,a,b = map(int,input().split())
-s = a*b
+n, a, b = map(int, input().split())
+s = a * b
 
 if s < n:
     print(-1)
 
 else:
-    if b%2 == 1:
+    if b % 2 == 1:
         for i in range(a):
             for j in range(b):
-                x = i*b +j + 1
+                x = i * b + j + 1
                 if x > n:
                     print(0, end=' ')
                 else:
@@ -17,11 +17,11 @@ else:
     else:
         for i in range(a):
             for j in range(b):
-                x = i*b +j + 1
-                if i%2 == 1:
-                    x = i*b + b - j
+                x = i * b + j + 1
+                if i % 2 == 1:
+                    x = i * b + b - j
                 if x > n:
                     print(0, end=' ')
                 else:
                     print(x, end=' ')
-            print()        
+            print()

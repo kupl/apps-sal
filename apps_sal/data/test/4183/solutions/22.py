@@ -1,5 +1,5 @@
 def lcm(m, n):
-    return m//gcd(m, n)*n
+    return m // gcd(m, n) * n
 
 
 def gcd(m, n):

@@ -14,4 +14,3 @@ ans = 0
 for k, v in list(qwe.items()):
     ans = max(ans, v)
 print(ans)
-

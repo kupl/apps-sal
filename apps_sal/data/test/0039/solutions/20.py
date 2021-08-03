@@ -7,4 +7,3 @@ for l in range(n + 1):
         best = l
 
 print(best)
-

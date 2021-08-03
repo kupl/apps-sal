@@ -1,9 +1,9 @@
 def main():
-    a,b = list(map(int, input().split()))
+    a, b = list(map(int, input().split()))
 
     dif = 1
     while True:
-        if dif%2 == 1:
+        if dif % 2 == 1:
             if a >= dif:
                 a -= dif
             else:

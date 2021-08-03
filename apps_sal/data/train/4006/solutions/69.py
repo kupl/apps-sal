@@ -11,4 +11,3 @@ def basic_op(operator, value1, value2):
         return value1 * value2
     elif e in operator:
         return value1 / value2
-

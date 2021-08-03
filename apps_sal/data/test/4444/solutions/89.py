@@ -1,3 +1,3 @@
 
-s,t=map(str,input().split())
-print(t+s,sep='')
+s, t = map(str, input().split())
+print(t + s, sep='')

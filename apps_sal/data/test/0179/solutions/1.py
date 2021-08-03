@@ -25,11 +25,13 @@ smallAv = x - 1
 
 mod = 1000000007
 
+
 def permutations(n, c):
     v = 1
     for i in range(n - c + 1, n + 1):
         v = (v * i) % mod
     return v
+
 
 v = permutations(largeAv, largec) * permutations(smallAv, smallc) % mod
 oc = n - (largec + smallc + 1)
@@ -38,4 +40,3 @@ v = v * permutations(oc, oc) % mod
 
 #print(permutations(largeAv, largec), permutations(smallAv, smallc), permutations(oc, oc))
 print(v)
-

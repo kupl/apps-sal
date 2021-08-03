@@ -1,6 +1,7 @@
 3
 # -*- coding: utf8 -*-
 
+
 def main():
     s = list(map(int, input()))
     ans = []
@@ -13,7 +14,9 @@ def main():
     print(len(ans))
     print(' '.join([''.join(_).lstrip('0') for _ in ans]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

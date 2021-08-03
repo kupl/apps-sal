@@ -50,4 +50,3 @@ def solve(w, lv):
 
 
 print((solve(w, lv)))
-

@@ -17,11 +17,9 @@ def rps(p1, p2):
         if p2 == 'paper':
             return 'Player 2 won!'
         elif p2 == p1:
-            return 'Draw!' 
+            return 'Draw!'
     if p1 == 'paper':
         if p2 == 'rock':
             return 'Player 1 won!'
         elif p2 == p1:
-            return 'Draw!' 
-
-
+            return 'Draw!'

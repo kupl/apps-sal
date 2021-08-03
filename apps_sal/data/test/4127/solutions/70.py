@@ -1,6 +1,5 @@
-a,b=input().split()
+a, b = input().split()
 a = int(a)
-b = int(b.replace('.',""))
+b = int(b.replace('.', ""))
 
-print((int(a*b)//100))
-
+print((int(a * b) // 100))

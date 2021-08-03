@@ -9,4 +9,3 @@ for i in range(q):
     v = int(input())
     i = bisect.bisect_right(x, v)
     print(i)
-

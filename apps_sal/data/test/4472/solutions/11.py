@@ -31,6 +31,3 @@ if n % 2 == 1:
     if s1[i] != s2[i]:
         count += 1
 print(count)
-            
-        
-

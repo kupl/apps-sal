@@ -6,4 +6,3 @@ def show_me(instname):
         attrs = '{} and {}'.format(', '.join(attrs[:-1]), attrs[-1])
     return 'Hi, I\'m one of those {}s! Have a look at my {}.'\
         .format(instname.__class__.__name__, attrs)
-

@@ -4,9 +4,8 @@ def iroha():
         if i == "9":
             print("Yes")
             return
-    
-    print("No")
 
+    print("No")
 
 
 def __starting_point():

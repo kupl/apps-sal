@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def majority(arr):
     c = Counter(arr)
     t = c.most_common(2)

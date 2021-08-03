@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Combination:
     def __init__(self, size):
         self.size = size + 2
@@ -25,6 +26,7 @@ class Combination:
     def nhr(self, n, r):  # 重複組合せ: x_1 + ... + x_n = r
         return self.ncr(n + r - 1, n - 1)
 
+
 N = int(input())
 A = list(map(int, input().split()))
 MOD = 10**9 + 7
@@ -43,4 +45,3 @@ for leng in range(2, N + 2):
     ans.append((M - D) % MOD)
 
 print(*ans, sep='\n')
-

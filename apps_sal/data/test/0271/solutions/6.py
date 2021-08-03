@@ -3,5 +3,4 @@ import math
 
 n = int(stdin.readline().rstrip())
 
-print(round(n/10)*10)
-
+print(round(n / 10) * 10)

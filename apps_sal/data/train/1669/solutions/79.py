@@ -13,6 +13,5 @@ class Solution:
                         del count[i]
                 else:
                     return False
-                
-        return True
 
+        return True

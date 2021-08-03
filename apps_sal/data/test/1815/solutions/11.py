@@ -15,15 +15,15 @@ for c in C:
 
 for a in reversed(A):
     if len(CC) == 2:
-        aa,bb = sorted(list(CC.items()))
-        k1,v1 = aa
-        k2,v2 = bb
-        if (k2-k1 == 1 and v2 == 1) or (k1 == 1 and v1 == 1):
+        aa, bb = sorted(list(CC.items()))
+        k1, v1 = aa
+        k2, v2 = bb
+        if (k2 - k1 == 1 and v2 == 1) or (k1 == 1 and v1 == 1):
             print(n)
             return
     elif len(CC) == 1:
         aa, = list(CC.items())
-        k1,v1 = aa
+        k1, v1 = aa
         if k1 == 1 or v1 == 1:
             print(n)
             return
@@ -38,4 +38,3 @@ for a in reversed(A):
         CC[C[a]] += 1
 
     n -= 1
-

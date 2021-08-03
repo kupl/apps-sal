@@ -2,6 +2,7 @@ from typing import List
 from collections import Counter
 from sortedcontainers import SortedSet
 
+
 class Solution:
     def isPossibleDivide(self, hand: List[int], W: int) -> bool:
         # print('-----')
@@ -34,4 +35,3 @@ class Solution:
                             return False
 
             return True
-

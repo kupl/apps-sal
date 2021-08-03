@@ -5,6 +5,7 @@ color = {}
 length = {}
 ans = []
 
+
 def exists(p, elt, d):
     for e in p:
         if e > elt:
@@ -14,6 +15,7 @@ def exists(p, elt, d):
                 return False
     return False
 
+
 def exists2(p, elt, d):
     for e in p:
         if e > elt:
@@ -22,7 +24,7 @@ def exists2(p, elt, d):
             elif e - d <= elt + d:
                 return [True, e - d]
     return False
-        
+
 
 for i in range(n):
     elt = p[i]
@@ -54,5 +56,3 @@ s = str(color[p[0]])
 for elt in p[1:]:
     s += ' ' + str(color[elt])
 print(s)
-
-

@@ -1,6 +1,7 @@
 import heapq as hq
 from collections import Counter
 
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         counter = Counter(barcodes)
@@ -18,8 +19,5 @@ class Solution:
 
             if neg_count != -1:
                 hq.heappush(cqueue, (neg_count + 1, barcode))
-        
-        return res
-                
-        
 
+        return res

@@ -19,7 +19,7 @@ for q in range(len(a)):
         q2 += 1
     if q2 == 0:
         naw = {}
-        ans.append(q-q1)
+        ans.append(q - q1)
         q1 = q
 else:
     if q2 == 0:
@@ -27,4 +27,3 @@ else:
         print(*ans)
     else:
         print(-1)
-

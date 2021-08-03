@@ -3,4 +3,3 @@ def get_average(marks):
     for k in range(len(marks)):
         total += marks[k]
     return total // len(marks)
-

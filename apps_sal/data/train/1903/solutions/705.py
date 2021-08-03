@@ -1,9 +1,9 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        dis = lambda x,y,x1,y1: abs(x-x1) + abs(y-y1)
+        def dis(x, y, x1, y1): return abs(x - x1) + abs(y - y1)
         distances = []
         for i, (x, y) in enumerate(points):
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 x1, y1 = points[j]
                 d = dis(x, y, x1, y1)
                 distances.append((d, i, j))
@@ -14,7 +14,8 @@ class Solution:
             if uf.union(i, j):
                 ans += d
         return ans
-        
+
+
 class UnionFind:
     def __init__(self, n):
         self.component_count = n

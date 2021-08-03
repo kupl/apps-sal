@@ -2,7 +2,7 @@ class Solution:
     def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
         if len(arr) == 0:
             return []
-        
+
         xor_arr = [0 for i in range(len(arr))]
         for index, v in enumerate(arr):
             if index == 0:

@@ -18,8 +18,10 @@ for _ in range(int(input())):
         if t <= 3:
             x = int(input())
             if t == 1:
-                if d[x] == '1': print("ON")
-                else: print("OFF")
+                if d[x] == '1':
+                    print("ON")
+                else:
+                    print("OFF")
             elif t == 2:
                 d[x] = "1"
             else:

@@ -33,7 +33,7 @@ def __starting_point():
     X = Counter(A).most_common()[0][0]
 
     l = A.index(X)
-    r = A.index(X, l+1)
+    r = A.index(X, l + 1)
     LR = l + (N - r)
 
     for i in range(1, N + 2):
@@ -42,4 +42,6 @@ def __starting_point():
         ans = (ans + mod) % mod
 
         print(ans)
+
+
 __starting_point()

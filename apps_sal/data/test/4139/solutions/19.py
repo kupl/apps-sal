@@ -1,12 +1,16 @@
 # A=[3,5,7]
-n=int(input())
+n = int(input())
+
+
 def dfs(s):
-    if int(s)>n:
+    if int(s) > n:
         return 0
-    cnt=0
-    if all(i in s for   i in "357"):
-        cnt=1
+    cnt = 0
+    if all(i in s for i in "357"):
+        cnt = 1
     for i in "357":
-        cnt+= dfs(s+i)
-    return cnt 
+        cnt += dfs(s + i)
+    return cnt
+
+
 print(dfs("0"))

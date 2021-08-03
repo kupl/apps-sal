@@ -15,4 +15,3 @@ else:
         print(DOWN)
     else:
         print(UP)
-

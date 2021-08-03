@@ -16,7 +16,7 @@ for _ in range(m):
     u, v = map(int, input().split())
     g[u - 1].append(v - 1)
 avail, topo = [True] * n, []
-for i,a in enumerate(avail):
+for i, a in enumerate(avail):
     if a:
         dfs(i)
 avail, res = [True] * n, 0

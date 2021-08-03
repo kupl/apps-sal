@@ -15,4 +15,3 @@ for i in range(n):
     l2.append(curs)
     l = l2
 print(v0 + max(0, len(l) - 1))
-

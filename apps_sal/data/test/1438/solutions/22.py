@@ -14,6 +14,7 @@ def if_sum_bigger(count):
     else:
         return False
 
+
 l = 0
 r = 2 * (10 ** 9) + 1
 
@@ -27,5 +28,4 @@ m = math.floor((r + l) / 2)
 if if_sum_bigger(m):
     print(m)
 else:
-    print(m-1)
-
+    print(m - 1)

@@ -16,5 +16,3 @@ def theorem(n):
 
 
 print(theorem(int(input())))
-
-

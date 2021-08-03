@@ -24,5 +24,4 @@ if (r == 'b'):
     ans += 5
 if (r == 'c'):
     ans += 6
-print(ans);
-
+print(ans)

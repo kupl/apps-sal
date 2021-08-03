@@ -1,6 +1,6 @@
 x, y = list(map(int, input().split()))
 if (x > y):
-   x, y = y, x
+    x, y = y, x
 a = x
 b = x
 c = x
@@ -14,4 +14,3 @@ while not (a == b == c == y):
         c = min(a + b - 1, y)
     ans += 1
 print(ans)
-

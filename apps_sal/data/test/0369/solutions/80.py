@@ -2,7 +2,7 @@ N, M = list(map(int, input().split()))
 S = input()
 S = S[::-1]
 
-dp = [-1] * (N+1)
+dp = [-1] * (N + 1)
 dp[0] = 0
 
 pos = 0
@@ -41,4 +41,3 @@ while num > 0:
 
 ans = " ".join(ans)
 print(ans)
-

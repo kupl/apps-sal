@@ -7,11 +7,10 @@ for i, c in enumerate(x):
     if not cur & 0b1:
         pos = i
         if last > cur:
-            print(x[:i] + x[-1] + x[i+1:-1] + x[i])
+            print(x[:i] + x[-1] + x[i + 1:-1] + x[i])
             break
 else:
     if pos != -1:
         print(x[:pos] + x[-1] + x[pos + 1:-1] + x[pos])
     else:
         print(-1)
-

@@ -3,4 +3,5 @@ def get_colored_cells():
     A = int(input())
     print(N ** 2 - A)
 
+
 get_colored_cells()

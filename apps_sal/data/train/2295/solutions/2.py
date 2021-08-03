@@ -10,4 +10,3 @@ for _ in range(N):
     if A > B:
         m = min(m, B)
 print((max(0, s - m)))
-

@@ -11,5 +11,3 @@ while True:
     if n == 0:
         break
 print(s)
-
-

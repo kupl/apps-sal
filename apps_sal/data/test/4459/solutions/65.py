@@ -7,8 +7,8 @@ for a in A:
 
 ans = 0
 for a in d:
-    if d[a]>a:
-        ans += d[a]-a
-    elif d[a]<a:
+    if d[a] > a:
+        ans += d[a] - a
+    elif d[a] < a:
         ans += d[a]
 print(ans)

@@ -6,4 +6,3 @@ for i in range(N):
     for j in range(50, 100 * N + 1 - 50):
         dp[i + 1][j] = dp[i][j] + dp[i][j - lst[i]]
 print((dp[N][50 * N] - 1))
-

@@ -3,13 +3,13 @@ class Solution:
         cnts = collections.defaultdict(int)
         for n in barcodes:
             cnts[n] += 1
-        
-        barcodes.sort(key = lambda x : (cnts[x], x))
+
+        barcodes.sort(key=lambda x: (cnts[x], x))
         n = len(barcodes)
-        first, second = barcodes[:n//2], barcodes[n//2:]
+        first, second = barcodes[:n // 2], barcodes[n // 2:]
         res = []
         f, s = 0, 0
-        #print(barcodes)
+        # print(barcodes)
         #print(first, second)
         while f < len(first) or s < len(second):
             if s < len(second):
@@ -19,4 +19,3 @@ class Solution:
                 res.append(first[f])
                 f += 1
         return res
-

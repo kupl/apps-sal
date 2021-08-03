@@ -9,4 +9,3 @@ if s < k:
         if s >= k:
             break
 print(c)
-

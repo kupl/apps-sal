@@ -1,6 +1,6 @@
 import sys
 
-cubes = list(input()) # 入力受付
+cubes = list(input())  # 入力受付
 stack = []
 count = 0
 
@@ -13,4 +13,3 @@ for cube in cubes:
     else:
         stack.append(cube)
 print(count)
-

@@ -1,9 +1,10 @@
-import math,sys
+import math
+import sys
 
-A,B = map(int,input().split())
+A, B = map(int, input().split())
 
-for price in range(1,100000):
-    if math.floor(price*0.08) == A and math.floor(price*0.1) == B:
+for price in range(1, 100000):
+    if math.floor(price * 0.08) == A and math.floor(price * 0.1) == B:
         print(price)
         return
 

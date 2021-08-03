@@ -7,4 +7,3 @@ else:
     ans = x + (a - b - 1) * min(x * 2, y)
 
 print(ans)
-

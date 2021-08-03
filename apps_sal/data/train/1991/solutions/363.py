@@ -3,7 +3,7 @@ class Solution:
         KMAX = 10 ** 9 + 7
         N = len(locations)
         mem = dict()
-        
+
         def dp(city, gas):
             if (city, gas) in mem:
                 return mem[city, gas]
@@ -17,4 +17,3 @@ class Solution:
             return mem[city, gas]
         res = dp(start, fuel) % KMAX
         return res
-

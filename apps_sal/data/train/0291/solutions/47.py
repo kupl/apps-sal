@@ -1,12 +1,12 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
-        ans=odd=even=0
+        ans = odd = even = 0
         for i in arr:
-            if i%2==0:
-                even,odd=even+1,odd
+            if i % 2 == 0:
+                even, odd = even + 1, odd
             else:
-                even,odd=odd,even+1
-            ans=(ans+odd)%1000000007
+                even, odd = odd, even + 1
+            ans = (ans + odd) % 1000000007
         return ans
         '''
         ans=0

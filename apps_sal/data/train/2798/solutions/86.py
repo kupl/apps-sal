@@ -3,7 +3,6 @@ def to_alternating_case(string):
     for i in string:
         if i == i.lower():
             final += i.upper()
-        else: 
+        else:
             final += i.lower()
-    return final 
-
+    return final

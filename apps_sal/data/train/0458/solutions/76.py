@@ -8,10 +8,10 @@ class Solution:
         suff = [0] * n
         for i, x in enumerate(nums):
             pref[i] = (pref[i - 1] + x) % p if i else x % p
-        for i in range(n-1,-1,-1):
-            suff[i]=(suff[i+1]+nums[i])%p if i<n-1 else nums[i]%p
+        for i in range(n - 1, -1, -1):
+            suff[i] = (suff[i + 1] + nums[i]) % p if i < n - 1 else nums[i] % p
         suff.append(0)
-        for i in range(n,-1,-1):
+        for i in range(n, -1, -1):
             index[suff[i]].append(i)
         ans = float('inf')
         if 0 in index and index[0][-1] < n:

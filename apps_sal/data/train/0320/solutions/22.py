@@ -7,7 +7,7 @@ class Solution:
             maxTwos = max(maxTwos, count)
             ones += left
         return ones + maxTwos
-    
+
     def getCount(self, num):
         count = 0
         odd = num % 2

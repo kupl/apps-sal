@@ -13,9 +13,8 @@ else:
     listx.reverse()
     for i in listx:
         ctotal += i
-        if ctotal == int(sumx*2/3):
+        if ctotal == int(sumx * 2 / 3):
             num2 += num1
-        if ctotal == int(sumx*1/3):
+        if ctotal == int(sumx * 1 / 3):
             num1 += 1
     print(num2)
-

@@ -1,8 +1,10 @@
+from collections import Counter, defaultdict
+import numpy as np
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-import numpy as np
-from collections import Counter,defaultdict
+
+
 def main():
     n, *a = map(int, read().split())
     aa = Counter(a)
@@ -17,6 +19,9 @@ def main():
         r = sumd1 - d1[ae] + d2[ae]
         print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -11,4 +11,3 @@ for i in range(n // 2):
     if t == now:
         ma = i
 print(ans - ma)
-

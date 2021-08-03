@@ -1,4 +1,4 @@
-s = input() 
+s = input()
 if s.isupper():
     print("A")
 else:

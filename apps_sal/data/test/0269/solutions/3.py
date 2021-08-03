@@ -1,6 +1,6 @@
 s = list(input())
 
-ans = {'R':0,'B':0,'Y':0,'G':0}
+ans = {'R': 0, 'B': 0, 'Y': 0, 'G': 0}
 
 
 for i, ch in enumerate(s):
@@ -15,4 +15,3 @@ for i, ch in enumerate(s):
                 ans[ch] += 1
 
 print(ans['R'], ans['B'], ans['Y'], ans['G'])
-

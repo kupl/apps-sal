@@ -7,13 +7,12 @@ bp.sort()
 a.append(10**15)
 ptr = 0
 cum = 0
-ind = 0;
+ind = 0
 while ptr < len(a) and ind < len(bp):
     while (bp[ind][0] >= a[ptr]):
-        ptr+=1
+        ptr += 1
     bp[ind][2] = ptr
     ind += 1
-bp.sort(key = lambda x:x[1])
+bp.sort(key=lambda x: x[1])
 for i in bp:
-    print(i[2], end = ' ')
-
+    print(i[2], end=' ')

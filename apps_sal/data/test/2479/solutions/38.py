@@ -21,4 +21,5 @@ def f_simplified_reversi():
             black_stone -= a[x] - 2
     return black_stone
 
+
 print(f_simplified_reversi())

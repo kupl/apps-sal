@@ -42,4 +42,3 @@ for i in range(len(cd)):
 
 ans = y[0] % m
 print(ans)
-

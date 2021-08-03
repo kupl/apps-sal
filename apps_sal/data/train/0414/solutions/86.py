@@ -17,6 +17,3 @@ class Solution:
                 loser = arr.pop(0)
                 arr.append(loser)
         return winner
-            
-            
-

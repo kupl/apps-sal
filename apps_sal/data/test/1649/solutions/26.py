@@ -1,4 +1,4 @@
-#region Header
+# region Header
 #!/usr/bin/env python3
 # from typing import *
 
@@ -11,11 +11,13 @@ import itertools
 from queue import PriorityQueue
 import bisect
 
+
 def input():
     return sys.stdin.readline()[:-1]
 
+
 sys.setrecursionlimit(1000000)
-#endregion
+# endregion
 
 # _INPUT = """# paste here...
 # """
@@ -29,7 +31,9 @@ def main():
     else:
         print('No')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

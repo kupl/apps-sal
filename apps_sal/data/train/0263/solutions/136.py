@@ -13,9 +13,9 @@ class Solution:
             [2, 4]
         ]
         m = 10 ** 9 + 7
-        
+
         memo = [1] * 10
         for i in range(1, n):
             memo = [sum(memo[e] for e in adj[d]) % m for d in range(10)]
-        
+
         return sum(memo) % m

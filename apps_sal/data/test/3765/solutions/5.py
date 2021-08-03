@@ -1,4 +1,6 @@
-f = lambda: list(map(int, input().split()))
+def f(): return list(map(int, input().split()))
+
+
 a, b, h, w, n = f()
 c = sorted(list(f()), key=lambda x: -x)
 d = {(h, w), (w, h)}
@@ -11,4 +13,3 @@ for i, q in enumerate([1] + c):
         d.add((h, w))
         d.add((w, h))
 print(-1)
-

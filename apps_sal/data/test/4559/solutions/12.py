@@ -1,7 +1,7 @@
 import sys
 
 n = int(input())
-A = sorted(list(map(int,input().split())))
+A = sorted(list(map(int, input().split())))
 ans = 1
 
 if A[0] == 0:
@@ -13,4 +13,3 @@ else:
             print((-1))
             return
     print(ans)
-

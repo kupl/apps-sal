@@ -5,4 +5,3 @@ def how_much_water(water, load, clothes):
         return 'Too much clothes'
 
     return round(water * (1.1 ** abs(load - clothes)), 2)
-

@@ -2,13 +2,14 @@ import sys
 
 inf = (1 << 31) - 1
 
+
 def solve():
     n, k = map(int, input().split())
 
     if k > n - k:
         k = n - k
 
-    bit = BinaryIndexedTree([0]*n)
+    bit = BinaryIndexedTree([0] * n)
 
     s = 0
     res = 1
@@ -32,12 +33,13 @@ def solve():
 
     print(*ans)
 
+
 class BinaryIndexedTree:
     ''' 1-origin Binary Indexed Tree '''
 
     def __init__(self, a):
         self.n = len(a)
-        self.bit = [0]*(self.n + 1)
+        self.bit = [0] * (self.n + 1)
 
         for i in range(1, self.n + 1):
             self.bit[i] += a[i - 1]
@@ -47,7 +49,7 @@ class BinaryIndexedTree:
 
     def add(self, i, x):
         ''' a_i += x '''
-        i += 1 # 0-origin -> 1-origin
+        i += 1  # 0-origin -> 1-origin
 
         while i <= self.n:
             self.bit[i] += x
@@ -63,6 +65,9 @@ class BinaryIndexedTree:
 
         return res
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

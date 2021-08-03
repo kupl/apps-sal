@@ -1,8 +1,9 @@
 
-LO_C= 0
-LO_S= 1
-HI_C= 2
-HI_S= 3
+LO_C = 0
+LO_S = 1
+HI_C = 2
+HI_S = 3
+
 
 def main():
     n = int(input())
@@ -25,7 +26,7 @@ def main():
                 else:
                     nxt_hi_c = hi_c + memo[-1][HI_C]
             else:
-                return -1;
+                return -1
             if lo >= memo[-1][LO_S]:
                 nxt_lo = lo
                 if lo < memo[-1][HI_S] or memo[-1][LO_C] <= memo[-1][HI_C]:
@@ -41,5 +42,6 @@ def main():
 
 def __starting_point():
     print(main())
+
 
 __starting_point()

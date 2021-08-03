@@ -4,7 +4,10 @@ g = [list() for i in range(n)]
 for k in range(n):
     a = list(map(int, input()))
     for i in range(n):
-        if a[i]: g[k].append(i)
+        if a[i]:
+            g[k].append(i)
+
+
 def dfs(v):
     nonlocal c
     was[v] = True
@@ -12,6 +15,8 @@ def dfs(v):
     for u in g[v]:
         if not was[u]:
             dfs(u)
+
+
 c = [0] * n
 color = 1
 for i in range(n):
@@ -31,4 +36,3 @@ for i in range(n):
     ans[i] = b[x][cur[x]]
     cur[x] += 1
 print(*ans)
-

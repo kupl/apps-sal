@@ -5,5 +5,3 @@ class Solution:
             res = max(res, cur + a)
             cur = max(cur, a) - 1
         return res
-    
-

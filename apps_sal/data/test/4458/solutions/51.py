@@ -1,7 +1,7 @@
 import sys
 
 n = int(input())
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 min = sys.maxsize
 cnt = 0
 

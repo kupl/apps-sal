@@ -29,4 +29,3 @@ def solve(N, M, A):
 
 
 solve(N, M, A)
-

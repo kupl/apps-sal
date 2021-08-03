@@ -3,22 +3,22 @@
 
 import time
 
-n   = int(input())
-x   = [int(i) for i in input().split()]
+n = int(input())
+x = [int(i) for i in input().split()]
 
-q   = int(input())
+q = int(input())
 
 
-x   = sorted(x)
+x = sorted(x)
 buy = [0]
-j   = 0
+j = 0
 
-for i in range(1, x[n-1]+1):
+for i in range(1, x[n - 1] + 1):
     s = 0
-    while(j < n and x[j] == i ):
+    while(j < n and x[j] == i):
         s += 1
         j += 1
-    buy.append(buy[i-1] + s)
+    buy.append(buy[i - 1] + s)
 
 ans = []
 for i in range(q):
@@ -35,4 +35,3 @@ for i in range(q):
 
 finish = time.time()
 #print(finish - start)
-

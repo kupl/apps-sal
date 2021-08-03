@@ -2,7 +2,7 @@ class Solution:
     def longestDupSubstring(self, S: str) -> str:
         n = len(S)
         nums = [ord(S[i]) - ord('a') for i in range(n)]
-        
+
         def search(position):
             h = 0
             for i in range(position):
@@ -15,7 +15,7 @@ class Solution:
                     return start
                 seen.add(h)
             return -1
-        
+
         left, right = 1, n
         while left <= right:
             pivot = (left + right) // 2

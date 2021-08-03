@@ -7,11 +7,13 @@ else:
     done = False
     for x in range(3):
         for y in range(3):
-            if x == y == 1: continue
-            if [xs[x],ys[y]] not in l:
+            if x == y == 1:
+                continue
+            if [xs[x], ys[y]] not in l:
                 print("ugly")
                 done = True
                 break
-        if done: break
+        if done:
+            break
     if not done:
         print("respectable")

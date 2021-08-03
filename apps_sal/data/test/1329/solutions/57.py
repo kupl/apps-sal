@@ -1,7 +1,11 @@
+from collections import defaultdict
 import sys
-input = lambda: sys.stdin.readline().rstrip()
- 
+def input(): return sys.stdin.readline().rstrip()
+
+
 n = int(input())
+
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -17,7 +21,8 @@ def prime_factorize(n):
     if n != 1:
         a.append(n)
     return a
-from collections import defaultdict
+
+
 d = defaultdict(int)
 for i in range(2, n + 1):
     a = prime_factorize(i)
@@ -58,5 +63,4 @@ for i in cnt_2:
             if i != j_ and j_ != k_ and k_ != i:
                 ans += 1
 print(ans)
-#print(d)
-
+# print(d)

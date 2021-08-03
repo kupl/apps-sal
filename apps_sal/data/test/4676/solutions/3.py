@@ -11,4 +11,3 @@ elif len(e) < len(o):
     res += o[-1]
 
 print(res)
-

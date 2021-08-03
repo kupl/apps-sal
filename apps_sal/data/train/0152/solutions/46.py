@@ -3,7 +3,7 @@ class Solution:
         position.sort()
         res = 0
         l, r = 1, (position[-1] - position[0]) // (m - 1)
-        
+
         while l <= r:
             mid = (l + r) // 2
             prev = position[0]
@@ -20,6 +20,3 @@ class Solution:
             else:
                 r = mid - 1
         return res
-        
-                
-

@@ -34,4 +34,3 @@ if ans:
     print(' '.join(map(str, ans)))
 else:
     print('Impossible')
-

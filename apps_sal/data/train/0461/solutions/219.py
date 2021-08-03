@@ -1,37 +1,38 @@
 from collections import defaultdict
 
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         # DFS Stack
         self.max = 0
-        directSub = self.makeDirectSub(n,manager)
-        self.dfs(headID,directSub,informTime)
+        directSub = self.makeDirectSub(n, manager)
+        self.dfs(headID, directSub, informTime)
         return self.max
-        
+
     # def makeDirectSub(self, n, manager):
     #     d = {employee: [] for employee in range(n)}
     #     for employee in range(len(manager)):
     #         if manager[employee] != -1:
     #             d[manager[employee]].append(employee)
     #     return d
-            
+
     def makeDirectSub(self, n, manager):
         d = defaultdict(list)
         for sub, employee in enumerate(manager):
             d[employee].append(sub)
         return d
-        
-    def dfs(self, headID, directSub,informTime):
-        stk = [(headID,0)]
+
+    def dfs(self, headID, directSub, informTime):
+        stk = [(headID, 0)]
         while stk:
             employee, time = stk.pop()
-            self.max = max(self.max,time)
+            self.max = max(self.max, time)
             # add all subemployees and record the time it took them to get the information
             for subEmp in directSub[employee]:
-                stk.append((subEmp,time+informTime[employee]))
+                stk.append((subEmp, time + informTime[employee]))
         return
-        
-    
+
+
 # from collections import deque, defaultdict
 
 # class Solution(object):
@@ -58,4 +59,3 @@ class Solution:
 #             for child in childs[cur_id]:
 #                 q.append((child, cur_time + informTime[child]))
 #         return rst
-

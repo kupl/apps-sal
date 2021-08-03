@@ -24,4 +24,3 @@ for x in s:
             us += 1
 
 print(ans)
-

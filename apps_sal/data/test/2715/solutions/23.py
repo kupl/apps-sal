@@ -1,7 +1,7 @@
 k = int(input())
 n = 50
 x, y = divmod(k, n)
-ans = [i+x for i in range(n)]
+ans = [i + x for i in range(n)]
 for i in range(y):
     i %= n
     ans[i] += n

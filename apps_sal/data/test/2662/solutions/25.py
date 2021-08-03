@@ -11,6 +11,6 @@ for n in range(N):
         if a <= table[0]:
             table.appendleft(a)
         else:
-            table[bisect.bisect_left(table, a)-1] = a
-            
+            table[bisect.bisect_left(table, a) - 1] = a
+
 print(len(table))

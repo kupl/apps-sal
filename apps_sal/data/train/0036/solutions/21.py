@@ -1,5 +1,6 @@
 from sys import stdin
 
+
 def main():
     '''
     Name: Kevin S. Sanchez
@@ -12,12 +13,12 @@ def main():
     Jworms = list(map(int, inp.readline().split()))
 
     lunch = list()
-    
-    for i in range (0,len(worms)):
-        lunch += [i+1] * worms[i]
+
+    for i in range(0, len(worms)):
+        lunch += [i + 1] * worms[i]
 
     for i in Jworms:
-        print(lunch[i-1])
+        print(lunch[i - 1])
+
 
 main()
-

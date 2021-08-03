@@ -11,5 +11,5 @@ for i in range(c):
 
 strlist.sort()
 for i in range(c):
-    d += strlist[i] 
+    d += strlist[i]
 print(d)

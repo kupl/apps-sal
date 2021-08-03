@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n + 1
@@ -48,23 +51,23 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-from collections import defaultdict
+
 def main():
     N, M = list(map(int, input().split()))
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
     A.append(0)
     B.append(0)
-    uf = UnionFind(N+1)
+    uf = UnionFind(N + 1)
     for _ in range(M):
-        c, d = list(map(int,input().split()))
+        c, d = list(map(int, input().split()))
         uf.union(c, d)
     A_sums = defaultdict(int)
     B_sums = defaultdict(int)
-    for i in range(1, N+1):
+    for i in range(1, N + 1):
         x = uf.find(i)
-        A_sums[x] += A[i-1]
-        B_sums[x] += B[i-1]
+        A_sums[x] += A[i - 1]
+        B_sums[x] += B[i - 1]
     for a, b in zip(list(A_sums.values()), list(B_sums.values())):
         if a != b:
             print('No')
@@ -73,4 +76,3 @@ def main():
 
 
 main()
-

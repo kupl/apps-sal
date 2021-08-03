@@ -14,4 +14,3 @@ for x in map(int, input().split()):
 folders.append(day_count)
 print(len(folders))
 print(' '.join(map(str, folders)))
-

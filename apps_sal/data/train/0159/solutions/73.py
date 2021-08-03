@@ -11,12 +11,12 @@ class Solution:
                 heapq.heappush(h, (-nums[i], i))
             else:
                 b = False
-                m,index = heapq.heappop(h)
-                while(index < i-k):
-                    m,index = heapq.heappop(h)
-                heapq.heappush(h, (m,index))
+                m, index = heapq.heappop(h)
+                while(index < i - k):
+                    m, index = heapq.heappop(h)
+                heapq.heappush(h, (m, index))
                 ans = max(ans, nums[i] - m, nums[i])
-                heapq.heappush(h, (min(m-nums[i], -nums[i]), i))
-            #print(h)
-        #print(ans)
+                heapq.heappush(h, (min(m - nums[i], -nums[i]), i))
+            # print(h)
+        # print(ans)
         return ans

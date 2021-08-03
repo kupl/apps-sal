@@ -1,8 +1,7 @@
 def first_non_consecutive(arr):
-    pre=arr[0]-1
+    pre = arr[0] - 1
     for e in arr:
-        if e-pre!=1:
+        if e - pre != 1:
             return e
-        pre=e
+        pre = e
     return
-

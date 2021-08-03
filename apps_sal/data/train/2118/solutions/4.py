@@ -1,10 +1,13 @@
 import sys
 input = sys.stdin.readline
 
+
 def large(x):
     for i in range(10, -1, -1):
-        if i*(i+1)//2 <= x:
+        if i * (i + 1) // 2 <= x:
             return i
+
+
 x = int(input())
 l = []
 for i in range(x):
@@ -18,4 +21,3 @@ if (lol == 0):
     print("YES")
 else:
     print("NO")
-

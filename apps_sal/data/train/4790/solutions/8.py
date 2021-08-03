@@ -1,5 +1,6 @@
 from statistics import mean, pstdev
 
+
 def clean_mean(sample, cutoff):
     n = 0
     while n != len(sample):

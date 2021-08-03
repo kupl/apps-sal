@@ -2,7 +2,7 @@ class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         # the same thing, but faster and more pythonic
         piles.sort()
-        return sum(piles[int(len(piles) / 3): -1 : 2])
+        return sum(piles[int(len(piles) / 3): -1: 2])
         '''
         # We want to pick two large numbers and one small number
         our_coins = 0

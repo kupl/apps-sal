@@ -1,4 +1,5 @@
-read = lambda: [int(i) for i in input().split()]
+def read(): return [int(i) for i in input().split()]
+
 
 n = read()[0]
 s = input()

@@ -7,6 +7,7 @@ def cr_mn(sm):
         d *= 10
     return res
 
+
 def cr_ln(sm, ln):
     if sm == 0:
         return '0' * ln
@@ -18,6 +19,7 @@ def cr_ln(sm, ln):
         sm -= min(9, sm)
         d *= 10
     return str(res)
+
 
 def cr_min(sm, lst):
     r1 = cr_mn(sm)
@@ -38,6 +40,7 @@ def cr_min(sm, lst):
         return str(lfs + 1) + '0' * (ln - 1 - len(r1)) + r1
     return lst[0] + r1
 
+
 n = int(input())
 a = []
 for i in range(n):
@@ -50,4 +53,3 @@ for i in range(1, n):
     if b[i] == '-1':
         b[i] = cr_ln(a[i], len(b[i - 1]) + 1)
     print(b[i])
-

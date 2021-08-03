@@ -1,1 +1,1 @@
-contamination = lambda text, char : char * len (text);
+def contamination(text, char): return char * len(text)

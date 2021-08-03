@@ -30,4 +30,3 @@ for _ in range(t):
         print(same_max - 1)
     else:
         print(min(same_max, kind_max))
-

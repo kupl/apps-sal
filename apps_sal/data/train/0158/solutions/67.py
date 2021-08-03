@@ -2,6 +2,7 @@ class Solution:
     def kSimilarity(self, A: str, B: str) -> int:
         # 根据最后一位是否相等进行贪心的求解。dfs深搜
         memo = {}
+
         def helper(a, b):
             if a == b:
                 return 0
@@ -12,9 +13,9 @@ class Solution:
                 res = min(res, helper(a[:-1], b[:-1]))
             else:
                 for i in range(len(a) - 1):
-                    if a[i] == b[-1] and a[i] != b[i]:   
+                    if a[i] == b[-1] and a[i] != b[i]:
                         # 切记当前位置的ab不能对应相等，要不然肯定多操作了。
-                        a_new = a[:i] + a[-1] + a[i + 1:-1]  #把a[i]与a[-1]交换了
+                        a_new = a[:i] + a[-1] + a[i + 1:-1]  # 把a[i]与a[-1]交换了
                         res = min(res, 1 + helper(a_new, b[:-1]))
             memo[(a, b)] = res
             return res

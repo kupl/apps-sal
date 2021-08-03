@@ -19,4 +19,3 @@ for i in dp:
         k = i + 1
         max_n = max(b[i], max_n)
 print(str(k) + " " + str(max(max_1, max_2)))
-

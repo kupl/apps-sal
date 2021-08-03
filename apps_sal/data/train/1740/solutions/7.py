@@ -176,18 +176,18 @@ class family:
 
         while queue:
             c = queue.popleft()
-            
+
             if len(c.children) == 0:
                 continue
 
             for cc in c.children:
                 if cc == parent:
                     return False
-                  
+
                 if cc not in visited:
                     visited.add(cc)
                     queue.append(cc)
-        
+
         return True
 
     def add_member(self, name):
@@ -195,4 +195,3 @@ class family:
         if new_member not in self.members:
             self.members.append(new_member)
         return self.members[self.members.index(new_member)]
-

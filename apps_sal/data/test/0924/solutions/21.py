@@ -4,17 +4,17 @@ from math import gcd
 def solve(la, ra, ta, lb, rb, tb):
     if la > lb:
         la, ra, ta, lb, rb, tb = lb, rb, tb, la, ra, ta
-    da = ra-la
-    db = rb-lb
+    da = ra - la
+    db = rb - lb
     ans = 0
     dist = lb - la
     g = gcd(ta, tb)
     dist %= g
     if dist == 0:
-        return min(da+1, db+1)
+        return min(da + 1, db + 1)
     la, ra = lb - dist, lb - dist + da
-    ans = max(ans, 1+min(rb, ra) - lb)
-    ans = max(ans, 1+min(rb, ra+g) - (la+g))
+    ans = max(ans, 1 + min(rb, ra) - lb)
+    ans = max(ans, 1 + min(rb, ra + g) - (la + g))
     return ans
 
 
@@ -25,4 +25,3 @@ def main():
 
 
 main()
-

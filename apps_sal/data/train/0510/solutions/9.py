@@ -1,6 +1,7 @@
 import sys
 
-input = lambda: sys.stdin.readline().rstrip()
+
+def input(): return sys.stdin.readline().rstrip()
 
 
 class SegTree:
@@ -55,7 +56,7 @@ def solve():
     seg = [1 << (ord(s) - ord('a')) for s in S]
 
     segtree = []
-    segfunc = lambda a, b: a | b
+    def segfunc(a, b): return a | b
 
     segtree = SegTree(seg, segfunc, 0)
 
@@ -79,5 +80,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

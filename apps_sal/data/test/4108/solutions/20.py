@@ -12,7 +12,7 @@ for i in range(len(s)):
     else:
         print('No')
         break
-    
+
     if cycle_from[ord(t[i]) - 97] == s[i]:
         continue
     if cycle_from[ord(t[i]) - 97] == '':

@@ -2,7 +2,7 @@ from collections import defaultdict
 n, a = map(int, input().split())
 x = list(map(int, input().split()))
 x.sort()
-x = list(map(lambda x:x - a, x))
+x = list(map(lambda x: x - a, x))
 dic = defaultdict(int)
 dic[0] = 1
 for i in x:

@@ -12,4 +12,3 @@ class Solution:
             else:
                 res = max(res, i - d[k])
         return res
-

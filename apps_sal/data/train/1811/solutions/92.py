@@ -4,7 +4,6 @@ class StockSpanner:
         self.s = [float('inf')]
         self.pos = [0]
         self.num = 1
-        
 
     def next(self, price: int) -> int:
         while self.s and self.s[-1] <= price:
@@ -15,10 +14,8 @@ class StockSpanner:
         self.pos.append(self.num)
         self.num += 1
         return r
-        
 
 
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

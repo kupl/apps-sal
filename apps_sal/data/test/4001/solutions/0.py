@@ -15,4 +15,3 @@ for i in range(len(seq)):
         b = seq[i]
         break
 print(a, b)
-

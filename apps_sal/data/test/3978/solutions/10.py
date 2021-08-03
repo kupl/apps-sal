@@ -16,4 +16,3 @@ while a:
     cnt += 1
 
 print(cnt)
-

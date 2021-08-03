@@ -18,11 +18,12 @@ def solve(n, queries):
 
 def __starting_point():
     #n = 4
-    #for i in range(1, n + 1):
+    # for i in range(1, n + 1):
     #    print([solve_query(n, i, j) for j in range(1, n + 1)])
     n, q = list(map(int, input().split()))
     queries = [list(map(int, input().split())) for _ in range(q)]
     for answer in solve(n, queries):
         print(answer)
+
 
 __starting_point()

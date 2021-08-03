@@ -1,6 +1,8 @@
 def gcc(x, y):
-    if x == 0:return y
+    if x == 0:
+        return y
     return gcc(y % x, x)
+
 
 N = int(input())
 A = list(map(int, input().split()))
@@ -22,8 +24,9 @@ is_prime = [True] * 1100000
 is_prime[0] = is_prime[1] = False
 
 for i in range(2, 1100000):
-    if not is_prime[i]:continue
-    for j in range(i*i, 1100000, i):
+    if not is_prime[i]:
+        continue
+    for j in range(i * i, 1100000, i):
         is_prime[j] = False
     primes.append(i)
 
@@ -37,12 +40,14 @@ for item in A_prime:
 
 for a in A_notprime:
     for p in primes:
-        if a == 1:break
-        if a % p != 0:continue
+        if a == 1:
+            break
+        if a % p != 0:
+            continue
 
         if used[p]:
             print("setwise coprime")
-            #互いに素でない（共通素因数pで割れる）ペアがAの中にあると，それはsetwise_coprime
+            # 互いに素でない（共通素因数pで割れる）ペアがAの中にあると，それはsetwise_coprime
             return
 
         used[p] = True

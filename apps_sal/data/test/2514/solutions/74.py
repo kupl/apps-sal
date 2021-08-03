@@ -14,6 +14,6 @@ for B, C in B_C:
     count_B = all_count[B]
     all_count[B] = 0
     all_count[C] += count_B
-    S = S + (C-B)*count_B
+    S = S + (C - B) * count_B
 
     print(S)

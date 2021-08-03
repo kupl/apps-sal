@@ -1,5 +1,6 @@
 ka, kb = 0, 0
 
+
 def g(a, b):
     nonlocal ka, kb
     if a == b:
@@ -14,6 +15,7 @@ def g(a, b):
             ka += 1
         else:
             kb += 1
+
 
 def main():
     nonlocal ka, kb
@@ -60,6 +62,6 @@ def main():
         x, y = aa[x - 1][y - 1], bb[x - 1][y - 1]
         #print(x, y, ka, kb)
 
+
 main()
 print(ka, kb)
-

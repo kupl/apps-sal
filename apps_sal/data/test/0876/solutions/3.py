@@ -16,37 +16,40 @@ for x in l:
     if x != 0 or v:
         v.append(x)
 
+
 def bruteforce(v, k):
     ret = 0
     while True:
         accm = 0
         for i in range(len(v)):
-            if v[i] >= k: return ret
+            if v[i] >= k:
+                return ret
             accm += v[i]
             v[i] = accm
         ret += 1
     return ret
 
+
 def smarty(v, k):
     def triang(x):
-        return x*(x+1)//2
+        return x * (x + 1) // 2
     l, r = 0, 10**18
     ans = 10**18
-    while l<=r:
-        h = (l+r)//2
+    while l <= r:
+        h = (l + r) // 2
         f0 = v[0]
-        f1 = h*v[0] + v[1]
-        f2 = triang(h)*v[0] + h*v[1] + v[0] if n == 3 else 0
+        f1 = h * v[0] + v[1]
+        f2 = triang(h) * v[0] + h * v[1] + v[0] if n == 3 else 0
         if max(f0, f1, f2) >= k:
-            r = h-1
+            r = h - 1
             ans = min(ans, h)
         else:
-            l = h+1
+            l = h + 1
     return ans
 
+
 n = len(v)
-if n>3:
+if n > 3:
     print(bruteforce(v, k))
 else:
     print(smarty(v, k))
-

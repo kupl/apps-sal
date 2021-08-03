@@ -2,6 +2,7 @@ from collections import *
 import itertools
 import sys
 
+
 def main():
     a, b = input().split()
     ans = a + b
@@ -14,5 +15,5 @@ def main():
             ans = min(ans, c)
     print(ans)
 
-main()
 
+main()

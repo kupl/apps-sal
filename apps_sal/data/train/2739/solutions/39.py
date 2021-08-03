@@ -4,5 +4,5 @@ def cube_odd(arr):
         if type(el) != int:
             return None
         if el % 2 != 0:
-            result += el*el*el
-    return result 
+            result += el * el * el
+    return result

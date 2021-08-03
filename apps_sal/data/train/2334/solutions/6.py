@@ -13,5 +13,7 @@ def solve():
         if i == "A":
             acnt += 1
     print(acnt + bcnt % 2)
+
+
 for i in range(int(input())):
     solve()

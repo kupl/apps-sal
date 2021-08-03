@@ -3,4 +3,3 @@ def fib_rabbits(n, b):
     for m in range(n):
         (i, a) = (a * b, a + i)
     return a
-

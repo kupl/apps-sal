@@ -1,2 +1,2 @@
 def enough(cap, on, wait):
-    return (cap-on-wait)*-1 if cap-on-wait<=0 else 0
+    return (cap - on - wait) * -1 if cap - on - wait <= 0 else 0

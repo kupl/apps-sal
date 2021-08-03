@@ -15,10 +15,10 @@ class Solution:
                     vis.add(node)
                     d[node].append(init)
                     Q.append(node)
-        res = [0]*n
+        res = [0] * n
         for key in d:
-            if len(d[key])==1:
+            if len(d[key]) == 1:
                 res[d[key][0]] += 1
-        if max(res) == 0: return min(initial)
+        if max(res) == 0:
+            return min(initial)
         return res.index(max(res))
-

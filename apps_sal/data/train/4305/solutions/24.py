@@ -7,7 +7,6 @@ def order_weight(strng):
         for y in res2:
             a += int(y)
         list.append(a)
-    answer = [m for n,m in sorted(zip(list,res))]
+    answer = [m for n, m in sorted(zip(list, res))]
     return ' '.join(answer)
     # your code
-

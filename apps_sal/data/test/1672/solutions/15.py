@@ -1,6 +1,6 @@
 n = int(input())
 cnt = 1
-x, y, a, b = 0,0,0,0
+x, y, a, b = 0, 0, 0, 0
 for i in range(n):
     x, y = input()
     if i == 0:

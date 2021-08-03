@@ -17,14 +17,14 @@ class Solution:
 
             if abs(v) >= 2:
                 if abs(v) > abs(prev_val):
-                    res += char*2
+                    res += char * 2
                     v += 2
                 else:
                     res += char
                     v += 1
             elif abs(v) == 1:
                 res += char
-                v +=1
+                v += 1
             elif abs(v) == 0:
                 break
 

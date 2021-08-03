@@ -7,8 +7,7 @@ m = min(arr)
 cnt = 0
 
 for i in arr:
-    if i>m and i<M:
+    if i > m and i < M:
         cnt += 1
 
 print(cnt)
-

@@ -1,1 +1,1 @@
-count_red_beads = lambda n: (0, (n - 1) * 2)[bool(n)]
+def count_red_beads(n): return (0, (n - 1) * 2)[bool(n)]

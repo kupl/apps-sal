@@ -16,8 +16,8 @@ for i in range(0, n):
             k += a
             tot += ans
             if (k >= x[i]):
-                break;
+                break
         if (k < x[i]):
             tot = -1
-            break;
+            break
 print(tot)

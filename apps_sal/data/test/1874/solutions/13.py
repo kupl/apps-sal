@@ -1,6 +1,7 @@
 def cat(h, c):
     return (h * h - c * c) ** 0.5
 
+
 l3, l4, l5 = list(map(float, input().split()))
 
 s3 = l3 * l3 * 3. ** 0.5 / 4.
@@ -19,5 +20,3 @@ v3 = s3 * h3 / 3.
 v4 = s4 * h4 / 3.
 v5 = s5 * h5 / 3.
 print(v3 + v4 + v5)
-
-

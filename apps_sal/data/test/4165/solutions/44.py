@@ -1,5 +1,5 @@
 N = int(input())
-L = list(map(int,input().split()))
+L = list(map(int, input().split()))
 
 theory = (max(L) < (sum(L) - max(L)))
 

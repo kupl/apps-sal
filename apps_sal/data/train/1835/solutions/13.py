@@ -8,19 +8,19 @@ class Solution:
                 return []
             rtv = []
             for i in range(10):
-                if abs(i-s)==k:
-                    r1 = check(n-1, k, i)
+                if abs(i - s) == k:
+                    r1 = check(n - 1, k, i)
                     if r1:
                         for r in r1:
                             rtv.append([i] + r)
                     else:
                         rtv.append([i])
-                    
+
             return rtv
-    
+
         rtv = []
         for i in range(1, 10):
-            r0 = check(n-1, k, i)
+            r0 = check(n - 1, k, i)
             for r in r0:
                 t = i
                 for c in r:

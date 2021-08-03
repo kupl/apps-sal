@@ -15,4 +15,3 @@ class Solution:
             if is_universal:
                 uni.append(A[i])
         return uni
-

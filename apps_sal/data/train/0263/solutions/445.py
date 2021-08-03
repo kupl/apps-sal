@@ -12,11 +12,11 @@ class Solution:
             9: [4, 2],
             0: [4, 6]
         }
-        
+
         MOD = 10 ** 9 + 7
         dp = {}
         nums = 0
-        
+
         def dfs(pos, steps):
             if steps == 0:
                 return 1
@@ -30,11 +30,10 @@ class Solution:
                 c %= MOD
             dp[(pos, steps,)] = c
             return c
-        
+
         ans = 0
         for i in range(10):
             x = dfs(i, n - 1)
             ans += x
             ans %= MOD
         return ans % MOD
-

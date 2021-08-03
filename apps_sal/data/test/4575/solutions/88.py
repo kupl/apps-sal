@@ -7,5 +7,6 @@ for i in list_a:
         if i == 1:
             ans += d
             break
-        elif j % i == 1: ans += 1
+        elif j % i == 1:
+            ans += 1
 print(ans)

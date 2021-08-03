@@ -6,4 +6,3 @@ for _ in range(int(input())):
         print(0)
     else:
         print(dx * dy + 1)
-

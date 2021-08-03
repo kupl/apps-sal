@@ -6,8 +6,10 @@ for i in range(t):
     sint = [int(item) for item in s]
     for div in range(10):
         is_ok = True
-        ga = []; gb = []
-        a = 0; b = div 
+        ga = []
+        gb = []
+        a = 0
+        b = div
         for i, item in enumerate(sint):
             # b should take
             if item > div:

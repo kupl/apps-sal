@@ -11,9 +11,9 @@ A = [int(x) for x in input().split()]
 c0 = 0
 c4 = 0
 for a in A:
-    if a%2 == 1:
+    if a % 2 == 1:
         c0 += 1
-    elif a%4 == 0:
+    elif a % 4 == 0:
         c4 += 1
 
 if c0 <= c4:

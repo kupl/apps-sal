@@ -1,6 +1,6 @@
 def validate_usr(username):
-    numeric="0123456789"
-    if len(username)>=4 and len(username)<=16:
+    numeric = "0123456789"
+    if len(username) >= 4 and len(username) <= 16:
         for letter in username:
             status = 0
             if letter.islower() or letter == "_":

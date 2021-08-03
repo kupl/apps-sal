@@ -3,7 +3,7 @@ def invite_more_women(arr):
     for k in arr:
         if k == 1:
             count_men += 1
-    if count_men > len(arr)//2:
+    if count_men > len(arr) // 2:
         return True
     else:
         return False

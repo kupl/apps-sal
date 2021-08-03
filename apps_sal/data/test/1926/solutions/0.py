@@ -1,10 +1,12 @@
 import sys
 
+
 def myargsort(a):
     b = list(zip(a, list(range(0, len(a)))))
     b.sort()
     r = [pr[1] for pr in b]
     return r
+
 
 fin = sys.stdin
 n = int(fin.readline())
@@ -14,19 +16,24 @@ p.reverse()
 j = 0
 aib = [0] * (n + 1)
 
+
 def ultb(x):
     return -(x ^ (-x)) // 2
+
 
 def add(p, a, aib, n):
     while p <= n:
         aib[p] += a
         p += ultb(p)
+
+
 def suma(p, aib):
     r = 0
     while p > 0:
         r += aib[p]
         p -= ultb(p)
     return r
+
 
 for i in range(0, n):
     add(i + 1, 1, aib, n)
@@ -44,4 +51,3 @@ for i in range(0, n):
         r[k] += suma(dr, aib) - suma(st - 1, aib)
         k += 1
 print(*r[1:n])
-

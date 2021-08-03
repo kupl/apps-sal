@@ -1,1 +1,1 @@
-to_freud = lambda s: " ".join(["sex"] * len(s.split()))
+def to_freud(s): return " ".join(["sex"] * len(s.split()))

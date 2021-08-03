@@ -15,9 +15,14 @@ for i in range(n - 1):
         d = 0
     if t == 3:
         u = int(s[2:])
-        if v > u: k += 1
-        else: p.append(u)
-    if t == 4: d = 0
-    if t == 5: p = [1e9]
-    if t == 6: d += 1
+        if v > u:
+            k += 1
+        else:
+            p.append(u)
+    if t == 4:
+        d = 0
+    if t == 5:
+        p = [1e9]
+    if t == 6:
+        d += 1
 print(k)

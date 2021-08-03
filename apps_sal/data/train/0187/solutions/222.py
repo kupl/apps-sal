@@ -7,7 +7,7 @@ class Solution:
         in_line = 0
         for customer in customers:
             in_line += customer
-            current_profit += min(in_line, 4) * boarding_cost - running_cost 
+            current_profit += min(in_line, 4) * boarding_cost - running_cost
             in_line = max(in_line - 4, 0)
             rotations += 1
             if current_profit > max_profit:
@@ -21,7 +21,8 @@ class Solution:
                 max_profit = current_profit
                 max_profit_rotations = rotations
         return max_profit_rotations
-        
+
+
 '''
 Input: customers = [10,9,6], boardingCost = 6, runningCost = 4
 Output: 7

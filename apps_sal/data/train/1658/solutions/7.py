@@ -1,5 +1,7 @@
 from fractions import Fraction, gcd
 from math import floor
+
+
 def float_to_rat(x):
     def is_int(x):
         return x == floor(x)
@@ -7,9 +9,11 @@ def float_to_rat(x):
     while not is_int(x):
         x *= 10
         d *= 10
-    x = int(x);
+    x = int(x)
     g = gcd(x, d)
     return [x // g, d // g]
+
+
 def expand(x, digit):
     [a, b] = float_to_rat(x)
     x = Fraction(a, b)

@@ -1,5 +1,6 @@
 import functools
 
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         @functools.lru_cache(None)
@@ -14,4 +15,3 @@ class Solution:
                     return True
             return False
         return can_force_win_from(n)
-

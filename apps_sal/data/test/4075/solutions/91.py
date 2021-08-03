@@ -3,9 +3,9 @@ N, M = list(map(int, input().split()))
 swiches = []
 
 for _ in range(M):
-    swiches.append(list(map(int,input().split()))[1:])
+    swiches.append(list(map(int, input().split()))[1:])
 
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 
 temp = "0" + str(N) + "b"
 case = []
@@ -29,5 +29,3 @@ for x in case:
         ans += 1
 
 print(ans)
-
-

@@ -18,4 +18,3 @@ elif (k == 2):
         print(l11[n - 1])
     else:
         print(l11[0])
-

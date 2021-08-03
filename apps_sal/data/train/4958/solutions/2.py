@@ -4,4 +4,3 @@ def solution(value):
     for i in range(num):
         zeros += "0"
     return("Value is {}".format(zeros + str(value)))
-

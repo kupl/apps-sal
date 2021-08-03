@@ -7,9 +7,9 @@ N = int(input())
 # 今回はN=O(10^12)なので間に合う
 
 # a+b-2の最小値を求める
-ans = N-1
-for i in range(1, int(math.sqrt(N))+1):
-  if N % i == 0:
-    ans = min(ans, (N//i)+i-2)
-    
+ans = N - 1
+for i in range(1, int(math.sqrt(N)) + 1):
+    if N % i == 0:
+        ans = min(ans, (N // i) + i - 2)
+
 print(ans)

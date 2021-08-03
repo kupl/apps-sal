@@ -4,8 +4,8 @@ paths = []
 n = 2
 v = 1
 while n <= L:
-    paths.append((v, v+1, 0))
-    paths.append((v, v+1, n//2))
+    paths.append((v, v + 1, 0))
+    paths.append((v, v + 1, n // 2))
     v += 1
     n *= 2
 n //= 2
@@ -25,4 +25,3 @@ while ll > 0:
 print((vlast, len(paths)))
 for e in paths:
     print((*e))
-

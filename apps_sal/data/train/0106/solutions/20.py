@@ -1,6 +1,6 @@
 q = int(input())
 while q > 0:
-    q = q-1
+    q = q - 1
     L = []
     n = int(input())
     for i in range(n):
@@ -18,9 +18,9 @@ while q > 0:
     while i < n:
         if S[i][0] > r:
             break
-        r = max(r,S[i][1])
+        r = max(r, S[i][1])
         i += 1
-    #print(S,i)
+    # print(S,i)
     if i == n:
         print(-1)
     else:
@@ -29,7 +29,7 @@ while q > 0:
             i += 1
         for i in L:
             if d[i][-1] == -2:
-                print(2,end=' ')
+                print(2, end=' ')
             else:
-                print(1,end=' ')
+                print(1, end=' ')
         print()

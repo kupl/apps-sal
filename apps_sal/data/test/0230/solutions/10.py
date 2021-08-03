@@ -1,6 +1,5 @@
 
 
-
 """
 N <= 5 * 10**3　なので、２重ループぐらいなら間に合うか？
 
@@ -25,7 +24,7 @@ l = 0
 r = 1
 ans = 0
 while True:
-    if l == N-1:
+    if l == N - 1:
         break
     while S[l:r] in S[r:]:
         r += 1
@@ -37,6 +36,3 @@ while True:
         r = l + 1
 
 print(ans)
-
-
-

@@ -9,7 +9,7 @@ for i in range(len(S)):
         if i + j >= len(S):
             flag = False
             break
-        if S[i+j] == '?' or S[i+j] == T[j]:
+        if S[i + j] == '?' or S[i + j] == T[j]:
             pass
         else:
             flag = False
@@ -24,7 +24,7 @@ if ans:
 
 i = candidate[-1]
 for tmp in range(i, i + len(T)):
-    S[tmp] = T[tmp-i]
+    S[tmp] = T[tmp - i]
 
 
 for i in range(len(S)):

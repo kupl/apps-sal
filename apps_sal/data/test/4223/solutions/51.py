@@ -7,4 +7,3 @@ for letter in s:
         p = letter
         ans += 1
 print(ans)
-

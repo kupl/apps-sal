@@ -8,4 +8,4 @@ for i in range(n):
     else:
         p = -1
         break
-print('YES' if p!=-1 else 'NO')
+print('YES' if p != -1 else 'NO')

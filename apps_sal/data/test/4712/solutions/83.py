@@ -1,6 +1,6 @@
 h, w = map(int, input().split())
 
-s = "#" * (w+2)
+s = "#" * (w + 2)
 
 print(s)
 for i in range(h):
@@ -8,4 +8,3 @@ for i in range(h):
     print("#", end="")
     print(t, end="#\n")
 print(s)
-

@@ -15,8 +15,10 @@ def abc173_e():
         plus = []
         minus = []
         for b in B[:k]:
-            if b >= 0: plus.append(b)
-            else: minus.append(b)
+            if b >= 0:
+                plus.append(b)
+            else:
+                minus.append(b)
 
         if len(minus) % 2 == 1:
             # 積が負になるので入れ替え検討
@@ -47,10 +49,14 @@ def abc173_e():
     ans = 1
     for c in C:
         ans *= c
-        if ans < 0: ans += mod
+        if ans < 0:
+            ans += mod
         ans %= mod
     print(ans)
 
+
 def __starting_point():
     abc173_e()
+
+
 __starting_point()

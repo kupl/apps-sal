@@ -21,7 +21,7 @@ prifacture = city_data[0][0]
 cnt = 0
 for city in city_data:
     if prifacture == city[0]:
-        cnt+=1
+        cnt += 1
         s = make_code(prifacture, cnt)
         city_code.append([city[2], s])
     else:
@@ -31,6 +31,5 @@ for city in city_data:
         city_code.append([city[2], s])
 
 city_code.sort()
-for num,code in city_code:
+for num, code in city_code:
     print(code)
-

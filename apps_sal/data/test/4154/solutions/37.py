@@ -9,4 +9,3 @@ for i in range(m):
 for i in range(n):
     s[i + 1] += s[i]
 print((s.count(m)))
-

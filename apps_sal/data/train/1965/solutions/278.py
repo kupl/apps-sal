@@ -2,13 +2,13 @@ class UnionFind:
     def __init__(self, n):
         self.parent = [i for i in range(n + 1)]
         self._count = n
-    
+
     def find(self, a):
         pa = self.parent[a]
         if pa != a:
             self.parent[a] = self.find(self.parent[a])
         return self.parent[a]
-    
+
     def connect(self, a, b):
         pa = self.find(a)
         pb = self.find(b)
@@ -17,9 +17,10 @@ class UnionFind:
         self.parent[pa] = pb
         self._count -= 1
         return True
-    
+
     def counts(self):
         return self._count
+
 
 class Solution:
     def maxNumEdgesToRemove(self, n, edges):
@@ -39,7 +40,7 @@ class Solution:
             if t == 1:
                 if alice_uf.connect(s, e):
                     added_edges += 1
-        
+
         if alice_uf.counts() == bob_uf.counts() == 1:
             return len(edges) - added_edges
         return -1

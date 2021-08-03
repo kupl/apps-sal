@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import copy
 N = int(input())
-A_list=[]
+A_list = []
 
 for _ in range(N):
     A_list.append(int(input()))
@@ -21,5 +21,3 @@ else:
             print(a_max_second)
         else:
             print(a_max)
-
-

@@ -1,7 +1,7 @@
 n = int(input())
-up = [int(item)  for item in input().split()]
-down = [int(item)  for item in input().split()]
-j = [int(item)  for item in input().split()]
+up = [int(item) for item in input().split()]
+down = [int(item) for item in input().split()]
+j = [int(item) for item in input().split()]
 time = 0
 mas = []
 for idx in range(n - 1, -1, -1):

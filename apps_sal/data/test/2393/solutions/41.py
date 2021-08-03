@@ -19,5 +19,3 @@ for i in range(0, t):
             j += 1
     print(len(s))
     print(*s)
-
-

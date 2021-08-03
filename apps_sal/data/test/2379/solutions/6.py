@@ -26,4 +26,3 @@ while i >= 0 and c >= 1:
 for i in range(1, K + 1):
     if F[i] == L[i]:
         print((F[i]))
-

@@ -1,27 +1,30 @@
 import sys
 sys.setrecursionlimit(1000000000)
-ii = lambda: int(input())
-ii0 = lambda: ii() - 1
-mis = lambda: list(map(int, input().split()))
-lmis = lambda: list(mis())
+def ii(): return int(input())
+def ii0(): return ii() - 1
+def mis(): return list(map(int, input().split()))
+def lmis(): return list(mis())
+
+
 INF = float('inf')
 
+
 def main():
-    N,M,L = mis()
+    N, M, L = mis()
     from scipy.sparse.csgraph import floyd_warshall
     import numpy as np
     INF = np.iinfo(np.int64).max
-    d = np.full((N,N), INF, dtype=np.uint64)
+    d = np.full((N, N), INF, dtype=np.uint64)
     for i in range(N):
-        d[i,i] = 0
+        d[i, i] = 0
     #
     for _ in range(M):
-        a,b,c = mis()
+        a, b, c = mis()
         a -= 1
         b -= 1
         if c <= L:
-            d[a,b] = c
-            d[b,a] = c
+            d[a, b] = c
+            d[b, a] = c
     #
     '''
     for k in range(N):
@@ -30,7 +33,7 @@ def main():
     '''
     d = floyd_warshall(d)
     #
-    d2 = np.full((N,N), INF, dtype=np.uint64)
+    d2 = np.full((N, N), INF, dtype=np.uint64)
     for i in range(N):
         d2[i, i] = 0
     for i in range(N):
@@ -47,17 +50,14 @@ def main():
     #
     Q = ii()
     for _ in range(Q):
-        s,t = mis()
+        s, t = mis()
         s -= 1
         t -= 1
-        dist = d2[s,t]
+        dist = d2[s, t]
         if dist == INF:
             print((-1))
         else:
-            print((int(dist)-1))
-
-
+            print((int(dist) - 1))
 
 
 main()
-

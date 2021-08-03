@@ -3,7 +3,7 @@ k = int(input())
 
 min_l = max_l = 0
 for c in s:
-    if c=='?' or c=='*':
+    if c == '?' or c == '*':
         min_l -= 1
     else:
         min_l += 1
@@ -16,15 +16,14 @@ else:
     d = k - min_l
     l = len(s)
     for i in range(l):
-        if i+1 < l and s[i+1] == '?':
+        if i + 1 < l and s[i + 1] == '?':
             if d > 0:
                 r += s[i]
                 d -= 1
-        elif i+1 < l and s[i+1] == '*':
+        elif i + 1 < l and s[i + 1] == '*':
             while d > 0:
                 r += s[i]
                 d -= 1
-        elif s[i]!='?' and s[i]!='*':
+        elif s[i] != '?' and s[i] != '*':
             r += s[i]
     print(r)
-

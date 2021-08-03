@@ -10,6 +10,5 @@ for h in range(H, 0, -1):
         side ^= 1
     if N > 1 << (h - 1):
         N -= 1 << (h - 1)
-    
-print(result)
 
+print(result)

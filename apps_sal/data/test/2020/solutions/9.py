@@ -3,7 +3,7 @@ no_of_alarms = int(input())
 x_set = set()
 y_set = set()
 while no_of_alarms > 0:
-    i_alarm = input().split( )
+    i_alarm = input().split()
 
     x_set.add(int(i_alarm[0]))
     y_set.add(int(i_alarm[1]))

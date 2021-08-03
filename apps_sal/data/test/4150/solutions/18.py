@@ -1,14 +1,14 @@
-n,k = list(map(int,input().split()))
-a = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
 pos = {}
-pre = [i-1 for i in range(n+2)]
-nex = [i+1 for i in range(n+2)]
-for i,j in enumerate(a):
-    pos[j] = i+1
+pre = [i - 1 for i in range(n + 2)]
+nex = [i + 1 for i in range(n + 2)]
+for i, j in enumerate(a):
+    pos[j] = i + 1
 group = 1
-taken = [0 for _ in range(n+2)]
+taken = [0 for _ in range(n + 2)]
 right = left = 0
-for i in range(n,0,-1):
+for i in range(n, 0, -1):
     if taken[pos[i]] != 0:
         continue
     group = (group + 1) % 2
@@ -32,5 +32,4 @@ for i in range(n,0,-1):
     nex[left] = right
     pre[right] = left
 ans = [str(i) for i in taken]
-print(''.join(ans[1:n+1]))
-
+print(''.join(ans[1:n + 1]))

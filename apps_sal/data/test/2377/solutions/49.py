@@ -15,14 +15,18 @@ B = sorted(B)[::-1]
 
 ret = 0
 if B[0] < A[0]:
-    if H % A[0] == 0: ret = H // A[0]
-    else: ret = H // A[0] + 1
+    if H % A[0] == 0:
+        ret = H // A[0]
+    else:
+        ret = H // A[0] + 1
     H = 0
 else:
     for b in B:
         if b < A[0]:
-            if H%A[0] == 0: ret += H // A[0]
-            else: ret += H // A[0] + 1
+            if H % A[0] == 0:
+                ret += H // A[0]
+            else:
+                ret += H // A[0] + 1
             H = 0
             break
         else:
@@ -33,9 +37,10 @@ else:
             break
 
     if H > 0:
-        if H%A[0] == 0: ret += H // A[0]
-        else: ret += H // A[0] + 1
+        if H % A[0] == 0:
+            ret += H // A[0]
+        else:
+            ret += H // A[0] + 1
 
 
 print(ret)
-

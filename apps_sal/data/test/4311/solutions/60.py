@@ -24,8 +24,6 @@ def main():
         x.add(prev)
 
 
-
-
 def __starting_point():
     main()
 

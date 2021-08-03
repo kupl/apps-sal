@@ -1,6 +1,7 @@
 ON = '■'
 OFF = '□'
 
+
 def draw(waves):
     result = ''
     height = max(waves)

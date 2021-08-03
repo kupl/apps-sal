@@ -1,5 +1,5 @@
-n, m =  list(map(int, input().split()))
-prices =  list(map(int, input().split()))
+n, m = list(map(int, input().split()))
+prices = list(map(int, input().split()))
 auci = list(map(int, input().split()))
 
 scores = 0
@@ -8,7 +8,7 @@ scores = 0
 # n - m default
 
 for i in range(len(prices)):
-    if (i+1) not in auci:
+    if (i + 1) not in auci:
         scores += prices[i]
         prices[i] = 0
 
@@ -26,5 +26,4 @@ for i in ra:
         scores *= 2
 
 print(scores)
-#print(ra)
-
+# print(ra)

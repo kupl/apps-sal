@@ -10,14 +10,14 @@ mcount = 0
 for i in range(n):
     if (a[i] == '<'):
         count += 1
-    else :
-        break        
+    else:
+        break
 
-for i in range(n-1,-1,-1):
+for i in range(n - 1, -1, -1):
     if (a[i] == '>'):
         count += 1
-    else :
+    else:
         break
 
 
-print (count)
+print(count)

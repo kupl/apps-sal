@@ -4,6 +4,6 @@ def define_suit(card):
         'D': 'diamonds',
         'H': 'hearts',
         'S': 'spades',
-        }
-        
+    }
+
     return dict_suits[card[-1]]

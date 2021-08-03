@@ -2,12 +2,11 @@ class Solution:
     def knightDialer(self, N: int) -> int:
         D = 10**9 + 7
         l = [1 for _ in range(10)]
-        for _ in range(N-1):
+        for _ in range(N - 1):
             l = self.transform_list(l)
             l = [x % D for x in l]
         return sum(l) % D
-        
-        
+
     def transform_list(self, l: List[int]) -> List[int]:
         # 0 -> 4, 6
         # 1 -> 6, 8
@@ -30,4 +29,3 @@ class Solution:
         nl[8] = l[1] + l[3]
         nl[9] = l[2] + l[4]
         return nl
-

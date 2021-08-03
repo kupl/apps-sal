@@ -7,8 +7,8 @@ class Graph():
     def adjmat_2_graph(adjm):
         nodes_dct = {}
         for row, weights in enumerate(adjm):
-            edges = [('A'+str(col), w) for col, w in enumerate(weights) if w > 0]
-            nodes_dct['A'+str(row)] = edges
+            edges = [('A' + str(col), w) for col, w in enumerate(weights) if w > 0]
+            nodes_dct['A' + str(row)] = edges
 
         return nodes_dct
 
@@ -48,6 +48,7 @@ class Graph():
             return [start_vertex]
 
         paths = []
+
         def find(path):
             for e in graph[path[-1]]:
                 v = e[0]
@@ -62,4 +63,3 @@ class Graph():
 
         l = list(['-'.join(p) for p in paths])
         return sorted(sorted(l, key=str), key=len)
-

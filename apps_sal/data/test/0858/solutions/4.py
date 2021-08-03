@@ -6,5 +6,3 @@ else:
     while (x <= n):
         x *= 2
     print((n - x // 2) // 2)
-
-

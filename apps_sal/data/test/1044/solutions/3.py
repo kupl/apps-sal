@@ -1,6 +1,6 @@
 n = int(input())
 
-b = [0]*n
+b = [0] * n
 sum = 0
 i = 0
 for s in input().split():
@@ -9,4 +9,3 @@ for s in input().split():
     i += 1
 for i in range(n):
     print(2 - (b[i] % 2))
-

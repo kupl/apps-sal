@@ -11,4 +11,3 @@ for i in range(q):
             break
     if not f:
         print(1)
-

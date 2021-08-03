@@ -20,4 +20,3 @@ while ans < len(costs) and costs[ans] <= b:
     ans += 1
 
 print(ans)
-

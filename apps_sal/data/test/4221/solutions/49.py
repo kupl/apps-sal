@@ -1,2 +1,2 @@
-s = input() 
-(print(s + "es") if s[-1:]=="s" else print(s + "s"))
+s = input()
+(print(s + "es") if s[-1:] == "s" else print(s + "s"))

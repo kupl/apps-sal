@@ -1,10 +1,9 @@
-S=input()
-T="abcdefghijklmnopqrstuvwxyz"
+S = input()
+T = "abcdefghijklmnopqrstuvwxyz"
 
 for c in T:
-    if S.count(c)==0:
+    if S.count(c) == 0:
         print(c)
-        break;
+        break
 else:
     print("None")
-

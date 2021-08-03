@@ -41,4 +41,3 @@ for case_num in range(t):
     seq.append(used[-1])
     print(len(seq))
     print(' '.join(map(str, seq)))
-

@@ -1,4 +1,4 @@
-def slogans(slogan,heard):
+def slogans(slogan, heard):
     li = []
     while heard:
         temp = len(slogan)

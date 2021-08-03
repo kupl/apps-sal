@@ -11,5 +11,5 @@ else:
     b1 = B[N // 2 - 1]
     b2 = B[N // 2]
     ans = int(min(abs(B - b1).sum(), abs(B - b2).sum()))
-    
+
 print(ans)

@@ -1,4 +1,6 @@
 from math import ceil
+
+
 def calculate_tip(amount, rating):
     if rating.lower() == 'terrible':
         return ceil(amount * 0)
@@ -12,4 +14,3 @@ def calculate_tip(amount, rating):
         return ceil(amount * 0.2)
     else:
         return "Rating not recognised"
-

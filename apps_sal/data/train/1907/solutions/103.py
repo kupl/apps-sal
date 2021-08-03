@@ -8,6 +8,7 @@
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         self.res = None
+
         def dfs(node, target):
             if self.res:
                 return
@@ -19,4 +20,3 @@ class Solution:
             dfs(node.right, target)
         dfs(cloned, target)
         return self.res
-

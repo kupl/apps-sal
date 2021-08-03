@@ -11,7 +11,7 @@ for i in range(n):
             elif(now != white):
                 print("NO")
                 return
-        
+
         white = 0
         black += 1
     else:
@@ -37,5 +37,5 @@ if(black > 0):
     elif(now != black):
         print("NO")
         return
-        
+
 print("YES")

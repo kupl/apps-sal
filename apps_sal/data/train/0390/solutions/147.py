@@ -5,7 +5,7 @@ class Solution:
         def helper(number):
             if number == 0:
                 return False
-            
+
             if number not in cache:
                 flag = False
                 for i in range(1, 317):
@@ -16,9 +16,9 @@ class Solution:
                     if not helper(number - val):
                         flag = True
                         break
-                
+
                 cache[number] = flag
-            
+
             return cache[number]
-        
+
         return helper(n)

@@ -1,4 +1,4 @@
-def is_even(n): 
+def is_even(n):
     if not n % 2:
         return True
-    return False     
+    return False

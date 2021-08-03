@@ -14,13 +14,13 @@ for c in a:
         mark = c + x
     if c + x + y in a:
         ok3 = True
-        mark = c + x    
+        mark = c + x
     if c - x - y in a:
         ok3 = True
         mark = c - x
 if ok1 and ok2:
     print(0)
-elif (not ok1) and (not ok2):    
+elif (not ok1) and (not ok2):
     if ok3:
         print(1)
         print(mark)
@@ -30,6 +30,3 @@ elif (not ok1) and (not ok2):
 else:
     print(1)
     print(y if ok1 else x)
-
-
-

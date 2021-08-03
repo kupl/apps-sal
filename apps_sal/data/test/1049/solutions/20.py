@@ -8,5 +8,3 @@ for i in range(d):
         cur = 0
     best = max(best, cur)
 print(best)
-        
-

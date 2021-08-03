@@ -17,4 +17,3 @@ for ai in range(K):
     if (bi + ci) % K == 0:
         ans += l[ai] * l[bi] * l[ci]
 print(ans)
-

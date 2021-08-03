@@ -1,5 +1,5 @@
 def is_palindrome(string):
-    if type(string)==int:
+    if type(string) == int:
         string = str(string)
         if string[::-1] == string:
             return True

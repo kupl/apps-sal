@@ -21,6 +21,5 @@ for i in range(1, N + 1):
     s = _1 + _0
     if s in d:
         res += d[s]
-    
-print(res)
 
+print(res)

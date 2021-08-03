@@ -12,8 +12,7 @@ for case_num in range(t):
             l = mid + 1
     num = l * (l + 1) // 2
     ans = ['a' for i in range(n)]
-    ans[-l-1] = 'b'
+    ans[-l - 1] = 'b'
     rest = l - num + k
     ans[-rest] = 'b'
     print(''.join(ans))
-

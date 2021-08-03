@@ -45,4 +45,3 @@ else:
     ans = 'Yes' if v1 == v2 else 'No'
 
 print(ans)
-

@@ -13,7 +13,6 @@ for i in range(len(inp)):
             ans = True
 
 if ans:
-    print ("YES")
+    print("YES")
 else:
-    print ("NO")
-
+    print("NO")

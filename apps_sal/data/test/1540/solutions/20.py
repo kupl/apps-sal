@@ -15,10 +15,4 @@ for i in range(n):
     for j in range(m):
         sum += chats_[i][j] * chats[j]
     sum -= sent[i]
-    print(sum, end = ' ')
-
-
-
- 
-
-
+    print(sum, end=' ')

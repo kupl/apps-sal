@@ -35,4 +35,3 @@ while events:
             ret[job_number] = -1
 
 print(" ".join([str(ret[x]) for x in sorted(ret)]))
-

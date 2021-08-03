@@ -17,4 +17,3 @@ for k, cur in list(spec.items()):
             cnt[j] = 0
         cnt[j] += max(0, cur[j - 1])
 print(max(cnt))
-

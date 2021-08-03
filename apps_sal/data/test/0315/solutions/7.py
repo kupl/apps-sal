@@ -17,4 +17,3 @@ for i in range(n - 1):
 
 print(over)
 print(' '.join([str(x) for x in d]))
-

@@ -1,5 +1,6 @@
 class Solution:
     cache = {}
+
     def factors(self, n):
         if n in self.cache:
             return self.cache[n]
@@ -10,8 +11,7 @@ class Solution:
                 result |= {i, div}
         self.cache[n] = result
         return result
-    
-    def sumFourDivisors(self, nums: List[int]) -> int:
-        factors = [ self.factors(f) for f in nums ]
-        return sum([sum(f) for f in factors if len(f) == 4])
 
+    def sumFourDivisors(self, nums: List[int]) -> int:
+        factors = [self.factors(f) for f in nums]
+        return sum([sum(f) for f in factors if len(f) == 4])

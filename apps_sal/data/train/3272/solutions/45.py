@@ -4,6 +4,5 @@ def find_average(nums):
         total += i
     if nums:
         return total / len(nums)
-    else: 
+    else:
         return 0
-

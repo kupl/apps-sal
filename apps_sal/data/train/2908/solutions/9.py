@@ -9,4 +9,3 @@ def flatten(d):
             for key2, value2 in list(flatten(d[key]).items()):
                 result.append((key + "/" + key2, value2))
     return dict(result)
-

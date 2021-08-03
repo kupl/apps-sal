@@ -3,13 +3,13 @@ s = input()
 
 l, r = 0, 0
 for i in range(n):
-  if s[i] == "(":
-    r += 1
-  else:
-    if r:
-      r -= 1
+    if s[i] == "(":
+        r += 1
     else:
-      l += 1
+        if r:
+            r -= 1
+        else:
+            l += 1
 
-ans = "("*l + s + ")"*r
+ans = "(" * l + s + ")" * r
 print(ans)

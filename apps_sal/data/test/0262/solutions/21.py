@@ -27,7 +27,6 @@ def main():
             if s != sum(line):
                 return -1
 
-
     res = s - sum(matrix[row])
     if res < 1:
         return -1
@@ -44,7 +43,7 @@ def main():
     d2 = 0
     for i in range(n):
         d1 += matrix[i][i]
-        d2 += matrix[i][n-1-i]
+        d2 += matrix[i][n - 1 - i]
     if d1 != s or d2 != s:
         return -1
 
@@ -53,5 +52,6 @@ def main():
 
 def __starting_point():
     print(main())
+
 
 __starting_point()

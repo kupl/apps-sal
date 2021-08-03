@@ -3,8 +3,11 @@ from sys import setrecursionlimit
 from sys import stdin
 setrecursionlimit(1000000007)
 _data = iter(stdin.read().split('\n'))
+
+
 def input():
     return next(_data)
+
 
 class SegTree:
     def __init__(self, n, zero, f):
@@ -40,6 +43,7 @@ class SegTree:
                 t1.append(2 * k + 1), t2.append(l), t3.append((l + r) >> 1)
                 t1.append(2 * k + 2), t2.append((l + r) >> 1), t3.append(r)
         return ans
+
 
 n, m, k = [int(x) for x in input().split()]
 st = tuple(SegTree(n, 0, max) for _ in range(m))

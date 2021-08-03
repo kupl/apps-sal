@@ -16,4 +16,3 @@ while 3 ** a <= N:
     else:
         a += 1
 print((-1))
-

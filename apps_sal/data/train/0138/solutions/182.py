@@ -11,11 +11,11 @@ class Solution:
             for i in range(N):
                 pre_prod *= nums[i]
                 if pre_prod > 0:
-                    res = max(res, i + 1) 
+                    res = max(res, i + 1)
                 elif first_neg == -1 and pre_prod < 0:
                     first_neg = i
                 elif pre_prod < 0:
-                    res = max(res, i - first_neg) 
+                    res = max(res, i - first_neg)
             return res
 
         num = []
@@ -25,7 +25,7 @@ class Solution:
                 res = max(res, helper(num))
                 num = []
             else:
-                num.append(nums[i])      
+                num.append(nums[i])
         res = max(res, helper(num))
-            
+
         return res

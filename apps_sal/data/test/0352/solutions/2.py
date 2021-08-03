@@ -24,4 +24,3 @@ else:
     a += n - s
 
 print(a, b, c)
-

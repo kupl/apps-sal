@@ -23,4 +23,3 @@ a[2] = 0
 for i in range(q):
     l, r = list(map(int, input().split()))
     print((a[r] - a[l - 1]))
-

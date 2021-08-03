@@ -21,4 +21,3 @@ for f, b in zip(F, B):
     if len(f) == 1 or f[1] not in b:
         ans += [f[0]]
 print(('\n'.join(map(str, ans))))
-

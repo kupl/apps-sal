@@ -18,6 +18,7 @@ MOD = 10 ** 9 + 7
 INF = float("inf")
 IINF = 10 ** 18
 
+
 def solve():
     s = str(stdin.readline().rstrip())
     t = str(stdin.readline().rstrip())
@@ -28,15 +29,15 @@ def solve():
     #number = [[int(c) for c in stdin.readline().rstrip()] for _ in range(n)]
     #zeros = [[0] * w for i in range(h)]
     anss = []
-    for i in range(len(s)-len(t)+1):
-        test = s[i:len(t)+i]
+    for i in range(len(s) - len(t) + 1):
+        test = s[i:len(t) + i]
         flag = True
         for j in range(len(t)):
             if test[j] != "?" and test[j] != t[j]:
                 flag = False
-        if flag==True:
-            ans = s[0:i] + t + s[i+len(t):]
-            ans = ans.replace("?","a")
+        if flag == True:
+            ans = s[0:i] + t + s[i + len(t):]
+            ans = ans.replace("?", "a")
             anss.append(ans)
     if len(anss) == 0:
         print("UNRESTORABLE")
@@ -47,5 +48,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

@@ -19,4 +19,3 @@ for k in range(length):
     maximum = max(maximum, total + count[k])
 
 print(maximum)
-

@@ -10,7 +10,7 @@ class Solution:
             if val > arr[high]:
                 return high + 1
             return high
-        
+
         n = len(arr)
         curr_max = float('-inf')
         i = 0
@@ -19,10 +19,10 @@ class Solution:
                 break
             curr_max = arr[i]
             i += 1
-        i -= 1  
+        i -= 1
         if i >= n - 2:
             return n - 1 - i
-                
+
         curr_min = float('inf')
         j = n - 1
         while j >= 0:
@@ -33,7 +33,7 @@ class Solution:
         j += 1
         if j <= 1:
             return j
-        
+
         min_to_remove = float('inf')
         for k in range(i, -1, -1):
             right_idx = bsearch(arr[k], j, n - 1)
@@ -45,11 +45,5 @@ class Solution:
             l = left_idx + n - k
             to_remove = n - l
             min_to_remove = min(min_to_remove, to_remove)
-        
+
         return min_to_remove
-        
-        
-
-        
-        
-

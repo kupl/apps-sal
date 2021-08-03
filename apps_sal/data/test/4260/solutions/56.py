@@ -1,3 +1,3 @@
-t,x = map(int,input().split())
+t, x = map(int, input().split())
 
-print((float)(t/x))
+print((float)(t / x))

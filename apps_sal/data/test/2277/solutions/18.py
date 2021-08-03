@@ -1,7 +1,9 @@
 from collections import namedtuple
 
+
 def pairs(n):
     return (n * (n - 1)) / 2
+
 
 n = int(input())
 a = [int(s) for s in input().split()]
@@ -29,5 +31,3 @@ for q in ql:
         ev = not ev
 
     print('even' if ev else 'odd')
-
-

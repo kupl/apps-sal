@@ -16,8 +16,6 @@ for c in s:
     else:
         flag = False
         break
-if st: flag = False
+if st:
+    flag = False
 print(cnt if flag else 'Impossible')
-    
-
-

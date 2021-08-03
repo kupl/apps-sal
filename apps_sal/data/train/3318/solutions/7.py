@@ -16,4 +16,3 @@ def number_of_carries(a, b):
         else:
             carry = 0
     return carries
-

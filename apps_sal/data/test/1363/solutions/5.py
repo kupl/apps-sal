@@ -63,7 +63,7 @@ for i, tp in ar:
         pass
     else:
         mp *= comba(gl, 1)
-    
+
     if tp == 1:
         mp *= comba(dl - 1, 1)
     else:
@@ -75,4 +75,3 @@ for i, tp in ar:
         mp *= comba(fl, 3)
     suma += mp
 print(suma)
-

@@ -4,7 +4,7 @@ def find_longest(st):
         if c == ")":
             stack.pop()
             if stack:
-                longest_run = max(longest_run, i-stack[-1])
+                longest_run = max(longest_run, i - stack[-1])
                 continue
         stack.append(i)
     return longest_run

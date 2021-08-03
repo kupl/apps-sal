@@ -22,4 +22,3 @@ for a, b in zip(*[iter(ab)] * 2):
 visited = [0] * N
 visited[0] = 1
 print((dfs(0)))
-

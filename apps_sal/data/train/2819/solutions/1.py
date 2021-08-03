@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 @lru_cache(None)
 def fibonacci(n):
     if n in [0, 1]:

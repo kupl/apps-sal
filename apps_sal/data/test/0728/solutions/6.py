@@ -83,7 +83,7 @@ class unitTests(unittest.TestCase):
         # Random inputs
         test = str(nmax) + "\n"
         test += "0 "
-        nums = [1000 for i in range(nmax-1)]
+        nums = [1000 for i in range(nmax - 1)]
         test += " ".join(map(str, nums)) + "\n"
 
         # Run the test
@@ -92,9 +92,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -106,5 +107,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Bear().calculate())
+
 
 __starting_point()

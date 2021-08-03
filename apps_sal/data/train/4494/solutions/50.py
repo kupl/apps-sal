@@ -8,4 +8,3 @@ def points(games):
         elif x == y:
             points_res += 1
     return points_res
-

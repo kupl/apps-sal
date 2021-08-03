@@ -1,5 +1,5 @@
 def scratch(lottery):
-    #your code here
+    # your code here
     sum = 0
 
     for x in lottery:

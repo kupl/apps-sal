@@ -12,12 +12,10 @@ class Solution:
             lb = Counter(B[i])
             for c in lb:
                 cb[c] = max(cb[c], lb[c])
-            
+
         for i in range(len(A)):
             isUniv = True
             if len(cb - ca[i]) > 0:
                 continue
             ans.append(A[i])
         return ans
-                
-

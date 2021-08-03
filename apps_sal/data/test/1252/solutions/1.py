@@ -19,9 +19,9 @@ def solve(N, M, T, edges):
     g = collections.defaultdict(list)
     for u, v, t in edges:
         g[u].append((v, t))
-    
-    dp = [[T+1 for _ in range(N+1)] for _ in range(N + 1)]
-    pre = [[0 for _ in range(N+1)] for _ in range(N + 1)]
+
+    dp = [[T + 1 for _ in range(N + 1)] for _ in range(N + 1)]
+    pre = [[0 for _ in range(N + 1)] for _ in range(N + 1)]
     dp[1][1] = 0
     pre[1][1] = 0
     # q = [(0, 0, -1, 1)]
@@ -38,7 +38,7 @@ def solve(N, M, T, edges):
     #             dp[dest][dist] = cost
     #             pre[dest][dist] = pcity
     #             heapq.heappush(q, (cost/dist, cost, -dist, dest))
-    
+
     q = [(1, 1, 0)]
     while q:
         nq = []
@@ -51,11 +51,11 @@ def solve(N, M, T, edges):
                     pre[dest][dist] = city
                     nq.append((dest, dist, cost))
         q = nq
-    
+
     # print(dp[N])
     ans = max([i for i in range(N, -1, -1) if dp[N][i] <= T])
     print(ans)
-    
+
     path = []
     k = N
     l = ans
@@ -63,7 +63,7 @@ def solve(N, M, T, edges):
         path.append(k)
         k = pre[k][l]
         l -= 1
-    
+
     print(' '.join(map(str, path[::-1])))
 
 

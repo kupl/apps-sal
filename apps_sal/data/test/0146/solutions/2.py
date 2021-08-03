@@ -9,4 +9,3 @@ for b in range(n):
     ans = max(ans, abs(test - play))
 
 print(ans)
-

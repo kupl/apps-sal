@@ -3,7 +3,7 @@ class Solution:
         max_count = 0
         start = 0
         zero = 2
-        
+
         for i in range(len(nums)):
             if nums[i] == 0:
                 zero -= 1
@@ -12,7 +12,5 @@ class Solution:
                     zero += 1
                 start += 1
             max_count = max(max_count, i - start)
-        
-        return max_count
-                    
 
+        return max_count

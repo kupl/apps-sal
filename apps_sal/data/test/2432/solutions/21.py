@@ -4,7 +4,7 @@ for i in range(6):
     N, r = divmod(N, 2)
     b.append(r)
 ans = 0
-if b[0]: 
+if b[0]:
     ans += 16
 if b[1]:
     ans += 2

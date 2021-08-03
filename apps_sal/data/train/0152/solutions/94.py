@@ -15,7 +15,7 @@ class Solution:
             return False
 
         while lo <= hi:
-            mid = (lo+hi)//2
+            mid = (lo + hi) // 2
             if judge(mid):
                 lo = mid + 1
             else:

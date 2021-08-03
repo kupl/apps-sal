@@ -45,4 +45,3 @@ for i in range(n):
     ans[i] -= m * (m + 1) // 2
 
 print(*ans, sep='\n')
-

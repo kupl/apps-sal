@@ -1,9 +1,9 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr = sorted(arr)
-        self.median = arr[(len(arr)-1)//2]
+        self.median = arr[(len(arr) - 1) // 2]
         count = 1
-        i, j = 0, len(arr)-1
+        i, j = 0, len(arr) - 1
         values = []
         while(count <= k):
             if self.key_func(arr[i]) > self.key_func(arr[j]):
@@ -21,17 +21,6 @@ class Solution:
                     j -= 1
             count += 1
         return values
-       
-    
+
     def key_func(self, elem):
-        return abs(elem-self.median)
-
-                
-                        
-                        
-                
-        
-            
-            
-        
-
+        return abs(elem - self.median)

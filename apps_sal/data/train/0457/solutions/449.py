@@ -8,8 +8,7 @@ class Solution:
                 table[coin] = 1
         while i <= amount:
             for coin in coins:
-                if  i - coin >= 0:
+                if i - coin >= 0:
                     table[i] = min(table[i - coin] + 1, table[i])
             i += 1
         return table[amount] if table[amount] != float('inf') else -1
-

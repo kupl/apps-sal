@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n, k = read()
 s = input()
 c = [0] * 26

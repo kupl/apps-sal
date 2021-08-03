@@ -1,12 +1,12 @@
 S = list(input())
 
 S.sort()
-#print(S)
+# print(S)
 
 if S[0] == S[1]:
     if S[2] == S[3]:
         if S[0] != S[2]:
-           print("Yes")
+            print("Yes")
 
         else:
             print("No")
@@ -15,5 +15,4 @@ if S[0] == S[1]:
         print("No")
 
 else:
-        print("No")
-
+    print("No")

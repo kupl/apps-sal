@@ -1,4 +1,4 @@
-def find(seq): 
+def find(seq):
     if len(seq) <= 1:
         return seq
     seq.sort()
@@ -15,5 +15,5 @@ def find(seq):
                 break
             else:
                 x.append(t)
-    
+
     return min(seq) + len(x) * x[0]

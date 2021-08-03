@@ -5,4 +5,6 @@ def __starting_point():
     while num < n:
         print(pow(num, 2))
         num += 1
+
+
 __starting_point()

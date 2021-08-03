@@ -6,4 +6,4 @@ q = int(input())
 x.sort()
 for i in range(q):
     m = int(input())
-    print(bisect.bisect_right(x,m))
+    print(bisect.bisect_right(x, m))

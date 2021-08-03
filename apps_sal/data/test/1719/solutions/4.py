@@ -3,7 +3,7 @@ import copy
 
 n = int(input())
 
-mod = 10**9+7
+mod = 10**9 + 7
 
 memo = {}
 
@@ -24,7 +24,7 @@ def dp(lettrs, state):
 
     ans = 0
     for c in "ACGT":
-        ans += dp(lettrs-1, (state+c)[-4:])
+        ans += dp(lettrs - 1, (state + c)[-4:])
         ans %= mod
     ans %= mod
     memo[lettrs, state] = ans
@@ -74,4 +74,3 @@ print((dp(n, "")))
 # TC
 # TG
 # TT
-

@@ -5,10 +5,9 @@ import math        # factorical（階乗) # hypot(距離)
 # from math import gcd # Python3.6以降
 # --------------------------------------------------------------
 
-a,b,x = list(map(int,input().split()))
+a, b, x = list(map(int, input().split()))
 
-if x*2 <= a*a*b:
-    print((math.degrees(math.atan(a*b*b/(2*x)))))
+if x * 2 <= a * a * b:
+    print((math.degrees(math.atan(a * b * b / (2 * x)))))
 else:
-    print((math.degrees(math.atan((a*a*b-x)*2/(a**3)))))
-
+    print((math.degrees(math.atan((a * a * b - x) * 2 / (a**3)))))

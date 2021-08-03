@@ -22,8 +22,8 @@ def rec_solve(a, l, r, last):
     choices = []
     while l <= r:
         if a[l] == a[r] and a[l] > last:
-            sub_ans_1 = rec_solve(a, l+1, r, a[l])
-            sub_ans_2 = rec_solve(a, l, r-1, a[l])
+            sub_ans_1 = rec_solve(a, l + 1, r, a[l])
+            sub_ans_2 = rec_solve(a, l, r - 1, a[l])
             if len(sub_ans_1) > len(sub_ans_2):
                 choices.append('L')
                 choices += sub_ans_1
@@ -48,8 +48,10 @@ def rec_solve(a, l, r, last):
             return choices
     return choices
 
+
 def solve(n, a):
-    return rec_solve(a, 0, n-1, 0)
+    return rec_solve(a, 0, n - 1, 0)
+
 
 def main(argv=None):
     n = int(input())
@@ -58,6 +60,7 @@ def main(argv=None):
     print(len(choice))
     print(''.join(choice))
     return 0
+
 
 def __starting_point():
     STATUS = main()

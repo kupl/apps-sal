@@ -3,7 +3,7 @@ class Solution:
         if len(A) < 3:
             return len(A)
         res = 2
-        d = {k:{} for k in set(A)}
+        d = {k: {} for k in set(A)}
         for j in range(len(A)):
             zero = d[A[j]].get(0, 0) + 1
             res = max(res, zero)
@@ -20,4 +20,3 @@ class Solution:
             # print(d)
         # res = max([max(v.values()) for v in d.values()])
         return res
-

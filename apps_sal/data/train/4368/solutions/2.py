@@ -1,6 +1,6 @@
 def cost(mins):
     price = 0
-    print (mins)
+    print(mins)
     while mins > 0:
         if mins <= 65:
             price += 30

@@ -6,4 +6,3 @@ for i in range(N):
     a += S[i] + T[i]
 
 print(a)
-

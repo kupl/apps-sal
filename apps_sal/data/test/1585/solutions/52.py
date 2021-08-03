@@ -15,7 +15,6 @@ def main():
     print(result)
 
 
-
 def __starting_point():
     main()
 

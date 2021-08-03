@@ -8,4 +8,3 @@ while w * h < n:
         h += 1
     width = not width
 print(w + h)
-

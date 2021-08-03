@@ -6,6 +6,6 @@ for u in map(int, stdin.readline().split()):
     a[u] += 1
 for u in a:
     b += u
-    ans += b&1
+    ans += b & 1
     b >>= 1
 print(ans)

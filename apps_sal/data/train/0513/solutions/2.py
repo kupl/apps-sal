@@ -51,8 +51,11 @@ def main():
             ans[now_] = bisect_left(dp, INF)
 
     # print (vs)
-    print (*ans, sep = '\n')
+    print(*ans, sep='\n')
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

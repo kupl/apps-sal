@@ -27,4 +27,3 @@ for i in range(m):
         for v in a:
             print(' ', v, sep='', end='')
         print()
-

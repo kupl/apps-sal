@@ -32,4 +32,3 @@ class Solution:
                     return 'B'
 
         return 'Draw' if len(player_a) + len(player_b) == 9 else 'Pending'
-

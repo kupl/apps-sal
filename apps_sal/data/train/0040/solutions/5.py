@@ -1,4 +1,6 @@
 import copy
+
+
 def DeleteRepetitionsIn(Array):
     AlreadyRead = {}
     index = 0
@@ -12,6 +14,7 @@ def DeleteRepetitionsIn(Array):
 
     return Array
 
+
 def DeleteRepetitionsIn2(Array):
     AlreadyRead = {}
     for elem in Array:
@@ -19,6 +22,7 @@ def DeleteRepetitionsIn2(Array):
             continue
         AlreadyRead[elem] = ""
     return list(AlreadyRead)
+
 
 Results = []
 ArraysNumber = int(input())
@@ -29,7 +33,7 @@ for e in range(ArraysNumber):
         Results.append(0)
         continue
 
-    #print(Array)
+    # print(Array)
     TheRightOrder = DeleteRepetitionsIn2(Array)
     TheRightOrder.sort()
     TheCurrentOrder = {}
@@ -39,9 +43,9 @@ for e in range(ArraysNumber):
             continue
         TheCurrentOrder[Array[i]][1] = i
 
-    #print(TheRightOrder)
-    #print(TheCurrentOrder)
-    #print(Array)
+    # print(TheRightOrder)
+    # print(TheCurrentOrder)
+    # print(Array)
 
     TheCurrentResult = 1
     TheMaxResult = 1

@@ -1,8 +1,9 @@
 from collections import deque
 
+
 class Solution:
     def helper(self, minforce, position, m):
-        #returns if minforce is valid or not
+        # returns if minforce is valid or not
         counter = 1
         prev = position[0]
         i = 1
@@ -17,18 +18,18 @@ class Solution:
             return True
         else:
             return False
-    
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         left = 1
         right = position[-1] - position[0]
-        if m==2:
+        if m == 2:
             return right
         while left < right:
-            mid = left + (right - left)//2
-            #print(mid)
+            mid = left + (right - left) // 2
+            # print(mid)
             if self.helper(mid, position, m):
                 left = mid + 1
             else:
                 right = mid
-        return left-1
+        return left - 1

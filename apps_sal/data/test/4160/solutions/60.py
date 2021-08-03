@@ -13,4 +13,3 @@ for i in range(10 ** 10):
         break
 
 print(year)
-

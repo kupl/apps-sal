@@ -21,4 +21,3 @@ for n in range(1, m + 1):
 cnt %= MOD
 
 print(cnt)
-

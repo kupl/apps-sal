@@ -6,4 +6,3 @@ if b - a < d:
 if c - b < d:
     res += d - (c - b)
 print(res)
-

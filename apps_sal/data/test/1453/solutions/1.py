@@ -2,7 +2,7 @@
 n, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
-delta = [ 0 ] * m
+delta = [0] * m
 ans = []
 acc = 0
 for k in range(n):
@@ -10,4 +10,3 @@ for k in range(n):
     acc += delta[k % m]
     ans.append(acc)
 print(*ans)
-

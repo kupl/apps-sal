@@ -18,12 +18,14 @@ t = ''
 n = len(a)
 for i in range(n):
     if i + 1 < n and a[i + 1] == '?':
-        if dl <= 0: continue
+        if dl <= 0:
+            continue
         t += a[i]
         dl -= 1
         continue
     if i + 1 < n and a[i + 1] == '*':
-        if dl <= 0: continue
+        if dl <= 0:
+            continue
         while dl > 0:
             t += a[i]
             dl -= 1
@@ -35,4 +37,3 @@ if len(t) == k:
     print(t)
 else:
     print('Impossible')
-

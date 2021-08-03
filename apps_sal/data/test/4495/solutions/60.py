@@ -25,19 +25,25 @@ def s_row(N): return [s_input for _ in range(N)]
 def s_row_str(N): return [s_list() for _ in range(N)]
 def s_row_list(N): return [list(s_input()) for _ in range(N)]
 def lcm(a, b): return a * b // gcd(a, b)
+
+
 sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
 MOD = 10 ** 9 + 7
 num_list = []
 str_list = []
 
-def main():
-	a,b,x = i_map()
 
-	c = math.ceil((Decimal(a)/Decimal(x)))
-	d = math.floor(Decimal(b)/Decimal(x))
-	print(d-c+1)
+def main():
+    a, b, x = i_map()
+
+    c = math.ceil((Decimal(a) / Decimal(x)))
+    d = math.floor(Decimal(b) / Decimal(x))
+    print(d - c + 1)
+
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

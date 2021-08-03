@@ -7,7 +7,7 @@ class Solution:
             for i in range(len(ways[k])):
                 for offset in [-1, 0, 1]:
                     # move into pos i from left or right
-                    if 0 <= i + offset < len(ways[k]):  
+                    if 0 <= i + offset < len(ways[k]):
                         ways[k][i] += ways[k - 1][i + offset]
                 ways[k][i] %= 10**9 + 7
         return ways[-1][0]

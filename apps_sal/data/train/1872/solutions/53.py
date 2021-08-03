@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
-        
+
         queue = [root]
         max_sum = float('-inf')
         max_level = 0
@@ -27,4 +27,3 @@ class Solution:
             level += 1
 
         return max_level
-

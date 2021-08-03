@@ -18,5 +18,3 @@ class Solution:
             finalMax = max(finalMax, currentMax)
 
         return finalMax
-
-

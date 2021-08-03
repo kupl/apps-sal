@@ -20,4 +20,3 @@ for i in range(5, n):
 print(len(ans))
 for x in sorted(ans):
     print(x)
-

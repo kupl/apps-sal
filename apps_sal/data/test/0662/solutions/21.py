@@ -1,7 +1,8 @@
 def main():
-    read = lambda: tuple(map(int, input().split()))
+    def read(): return tuple(map(int, input().split()))
     n = read()[0]
     state = [1, 1, 0]
+
     def f(x, state):
         for i in range(3):
             if i != x:
@@ -13,5 +14,6 @@ def main():
             return "NO"
         f(c, state)
     return "YES"
-print(main())
 
+
+print(main())

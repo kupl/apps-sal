@@ -1,5 +1,7 @@
 a, b = map(int, input().split())
 s = list(input())
+
+
 def f():
     for i in range(len(s)):
         if i == a:
@@ -9,4 +11,6 @@ def f():
             if s[i] == "-":
                 return "No"
     return "Yes"
+
+
 print(f())

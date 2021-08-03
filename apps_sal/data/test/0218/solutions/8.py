@@ -15,4 +15,3 @@ else:
         print(s[a * i: a * (i + 1)])
     for i in range(cb):
         print(s[c * a + b * i: c * a + b * (i + 1)])
-

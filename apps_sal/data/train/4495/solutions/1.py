@@ -8,5 +8,6 @@ afraid = {
     'Sunday': lambda x: abs(x) == 666,
 }
 
+
 def am_I_afraid(day, num):
     return afraid[day](num)

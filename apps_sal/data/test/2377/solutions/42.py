@@ -19,4 +19,3 @@ if h <= 0:
     print(ans)
 else:
     print((ans + (h + a[0] - 1) // a[0]))
-

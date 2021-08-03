@@ -6,6 +6,6 @@ fact = [1]
 for i in range(1, 2 * n + 1):
     fact.append((fact[-1] * i) % MOD)
 tot *= fact[2 * n]
-inv = pow(fact[n], MOD-3, MOD)
+inv = pow(fact[n], MOD - 3, MOD)
 tot *= inv
 print(tot % MOD)

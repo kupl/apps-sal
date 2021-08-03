@@ -77,4 +77,5 @@ def print_grid(grid):
 def __starting_point():
     print_grid(solve())
 
+
 __starting_point()

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def processes(start, end, processes):
     d = defaultdict(list)
     for process, x, y in processes:
@@ -8,7 +9,7 @@ def processes(start, end, processes):
     while nodes:
         next = []
         for node, path in nodes:
-            if node in visited: 
+            if node in visited:
                 continue
             if node == end:
                 return path

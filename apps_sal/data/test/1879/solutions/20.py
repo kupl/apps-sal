@@ -24,5 +24,5 @@ def main():
         return t
     return -1
 
-print(main())
 
+print(main())

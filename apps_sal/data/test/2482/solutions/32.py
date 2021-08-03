@@ -64,4 +64,3 @@ d = defaultdict(int)
 for i in range(n):
     d[uf_k.find(i), uf_l.find(i)] += 1
 print((*(d[uf_k.find(i), uf_l.find(i)] for i in range(n))))
-

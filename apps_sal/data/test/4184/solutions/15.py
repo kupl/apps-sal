@@ -27,4 +27,3 @@ for t in range(n - 1):
     answer = min(df_list)
 
 print(answer)
-

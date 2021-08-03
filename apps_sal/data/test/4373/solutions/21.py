@@ -18,9 +18,8 @@ def mulinv(b, n):
         return x % n
 
 
-
 def isprime(n):
-    for d in range(2, int(math.sqrt(n))+1):
+    for d in range(2, int(math.sqrt(n)) + 1):
         if n % d == 0:
             return False
     return True
@@ -45,10 +44,10 @@ n = f()
 cl = sorted(f(2))
 count = cl[-1]
 res = n
-for i in range(n-2, -1, -1):
-    count = min(cl[i], count-1)
-    if count==0:
-        res = n-i-1
+for i in range(n - 2, -1, -1):
+    count = min(cl[i], count - 1)
+    if count == 0:
+        res = n - i - 1
         break
 
 

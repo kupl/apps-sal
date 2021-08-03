@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def main():
     k, q = [int(x) for x in input().split()]
     d = np.fromstring(input(), np.int64, sep=' ')
@@ -23,6 +24,9 @@ def main():
         n_dec = solve2(dm, n, x, m)
         print(n - 1 - n_zero - n_dec)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

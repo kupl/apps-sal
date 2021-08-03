@@ -20,6 +20,7 @@ for i in range(N - 1, 0, -1):
 
 speed = [min(x, y) for x, y in zip(max_speed_from_left, max_speed_from_right)]
 
+
 def dist(left_speed, right_speed, t, v):
     x = (v - left_speed) + (v - right_speed)
     if x >= t:
@@ -30,8 +31,9 @@ def dist(left_speed, right_speed, t, v):
     d += (right_speed + v) * (v - right_speed) / 2
     return d
 
+
 ans = 0
 for i in range(1, N + 1):
     ans += dist(speed[i - 1], speed[i], T[i], V[i])
 
-print (ans)
+print(ans)

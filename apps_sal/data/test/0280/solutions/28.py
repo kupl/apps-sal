@@ -1,6 +1,7 @@
 import itertools
 import bisect
 
+
 def f(i):
     if i == n:
         k = 0
@@ -16,6 +17,7 @@ def f(i):
     s[i] = 0
     f(i + 1)
     return
+
 
 n, m = map(int, input().split())
 w = list(map(int, input().split()))

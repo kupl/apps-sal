@@ -11,4 +11,3 @@ for time in range(1000):
             s[cur] = not s[cur]
     ans = max(ans, sum(int(i) for i in s))
 print(ans)
-

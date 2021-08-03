@@ -21,13 +21,10 @@ class Solution:
                     return False
         if root == -1:
             return False
-        
+
         # Exactly n nodes in single tree
         def countNodes(root, l, r):
             if root is -1:
                 return 0
             return 1 + countNodes(l[root], l, r) + countNodes(r[root], l, r)
         return countNodes(root, leftChild, rightChild) == n
-    
-    
-

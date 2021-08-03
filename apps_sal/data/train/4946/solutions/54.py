@@ -5,5 +5,3 @@ def house_numbers_sum(inp):
         if i == 0:
             break
     return sum(lst)
-        
-

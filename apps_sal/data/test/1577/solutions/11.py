@@ -11,8 +11,7 @@ for i in s:
 
 if a > d:
     print('Anton')
-elif a<d:
+elif a < d:
     print('Danik')
 else:
     print('Friendship')
-

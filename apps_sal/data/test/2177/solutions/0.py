@@ -6,5 +6,4 @@ for _ in range(t):
     while B:
         b += 1
         B //= 10
-    print(A*b)
-
+    print(A * b)

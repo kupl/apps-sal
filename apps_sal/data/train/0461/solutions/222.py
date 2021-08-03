@@ -4,7 +4,7 @@ class Solution:
         graph = defaultdict(list)
         for index, parent in enumerate(manager):
             graph[parent].append(index)
-        
+
         queue = deque([(headID, informTime[headID])])
         while queue:
             curId, curTime = queue.popleft()
@@ -12,13 +12,8 @@ class Solution:
             for child in graph[curId]:
                 queue.append((child, curTime + informTime[child]))
         return res
-        
-        
-        
-        
-        
-        
-        
+
+
 #         rst = 0
 #         childs = defaultdict(list)
 #         for idx, parent in enumerate(manager):
@@ -32,4 +27,3 @@ class Solution:
 #             for child in childs[cur_id]:
 #                 q.append((child, cur_time + informTime[child]))
 #         return rst
-

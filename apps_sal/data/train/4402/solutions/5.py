@@ -6,8 +6,7 @@ def solve(st):
     for i in c:
         if c.count(i) != 1:
             return False
-    for i in range(min(c),max(c)):
-        if i+1 not in c:
+    for i in range(min(c), max(c)):
+        if i + 1 not in c:
             return False
     return True
-

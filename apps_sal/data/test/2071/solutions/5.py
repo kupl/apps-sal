@@ -55,4 +55,3 @@ right += [0]
 for_ans = [left[i] + right[i] for i in range(n + 1)]
 
 print(max(for_ans))
-

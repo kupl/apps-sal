@@ -6,15 +6,16 @@ if m < n:
     b = a
     m, n = n, m
 cntrs = [Counter() for _ in range(n)]
-d = (n + m-1) // 2
-for i in range(1<<d):
+d = (n + m - 1) // 2
+for i in range(1 << d):
     ones = bin(i).count('1')
     z = d - ones
-    if ones >= n or z >= m: continue
+    if ones >= n or z >= m:
+        continue
     xor = b[0][0]
     x, y = 0, 0
     for j in range(d):
-        if i&(1<<j):
+        if i & (1 << j):
             x += 1
         else:
             y += 1
@@ -22,14 +23,15 @@ for i in range(1<<d):
     cntrs[x][xor] += 1
 sm = 0
 sleft = n + m - 2 - d
-for i in range(1<<sleft):
+for i in range(1 << sleft):
     ones = bin(i).count('1')
     z = sleft - ones
-    if ones >= n or z >= m: continue
-    xor = b[n-1][m-1]
-    x, y = n-1, m-1
+    if ones >= n or z >= m:
+        continue
+    xor = b[n - 1][m - 1]
+    x, y = n - 1, m - 1
     for j in range(sleft):
-        if i&(1<<j):
+        if i & (1 << j):
             x -= 1
         else:
             y -= 1

@@ -41,5 +41,3 @@ if d[c50][c100][1][1] == float('inf'):
 else:
     print(d[c50][c100][1][1])
     print(d[c50][c100][1][0])
-
-

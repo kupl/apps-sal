@@ -11,5 +11,3 @@ class Solution:
                     nums[i] //= 2
                 ans += 1
         return ans
-                
-

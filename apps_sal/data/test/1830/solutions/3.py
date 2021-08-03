@@ -1,10 +1,10 @@
-n, m = map(int,input().split())
-xyi = [list(map(int,input().split())) for i in range(m)]
-x = [0]*(n+1)
-y = [0]*(n+1)
+n, m = map(int, input().split())
+xyi = [list(map(int, input().split())) for i in range(m)]
+x = [0] * (n + 1)
+y = [0] * (n + 1)
 numx = 0
 numy = 0
-num = n*n
+num = n * n
 for i in range(m):
     if x[xyi[i][0]] == 0:
         num += numy - n
@@ -15,5 +15,3 @@ for i in range(m):
         numy += 1
         y[xyi[i][1]] = 1
     print(num, end=" ")
-    
-

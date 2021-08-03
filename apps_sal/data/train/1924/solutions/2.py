@@ -7,7 +7,7 @@ class Solution:
             if amount > 1000:
                 res.add(trans)
             if name in record:
-                i, j = bisect.bisect_left(record[name], (time-60, '', 0)), bisect.bisect_right(record[name], (time+61, '', 0))
+                i, j = bisect.bisect_left(record[name], (time - 60, '', 0)), bisect.bisect_right(record[name], (time + 61, '', 0))
                 valid = True
                 for item in record[name][i:j]:
                     if item[1] != city:

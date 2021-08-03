@@ -1,20 +1,19 @@
-n=int(input())
+n = int(input())
 
-pile=[]
+pile = []
 
 for i in range(n):
- pile.append(input())
+    pile.append(input())
 
-m=int(input())
+m = int(input())
 
-st=input()
+st = input()
 
 
-ans=0
+ans = 0
 for i in set(pile):
- if i in st:
-  ans+=1
+    if i in st:
+        ans += 1
 
 
 print(ans)
-

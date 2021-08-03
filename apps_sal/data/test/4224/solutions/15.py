@@ -56,4 +56,5 @@ def __starting_point():
     # メイン処理
     main(N, a)
 
+
 __starting_point()

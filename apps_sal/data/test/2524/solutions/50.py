@@ -1,13 +1,15 @@
-#create date: 2020-07-05 10:13
+# create date: 2020-07-05 10:13
 
 import sys
 stdin = sys.stdin
 
 mod = 10**9 + 7
 
+
 def ns(): return stdin.readline().rstrip()
 def ni(): return int(ns())
 def na(): return list(map(int, stdin.readline().split()))
+
 
 def main():
     n = ni()
@@ -25,4 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

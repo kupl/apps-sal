@@ -1,5 +1,5 @@
 def answer(x: int) -> int:
-    if x < 4 :
+    if x < 4:
         return 1
 
     result = 1
@@ -21,5 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

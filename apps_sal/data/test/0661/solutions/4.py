@@ -1,4 +1,4 @@
-M,K = map(int, input().split())
+M, K = map(int, input().split())
 
 if K >= pow(2, M):
     print(-1)

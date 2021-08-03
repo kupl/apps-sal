@@ -12,4 +12,3 @@ def is_sorted_and_how(arr: List[int]) -> str:
 
     # Check if the rest is in ascending order
     return "yes, ascending" if not any(order) else "no"
-

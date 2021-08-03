@@ -6,5 +6,4 @@ while True:
         print(years[cont])
         break
     else:
-        cont+=1
-
+        cont += 1

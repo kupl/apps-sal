@@ -1,5 +1,5 @@
 n = int(input())
-num = list(map(int,input().split()))
+num = list(map(int, input().split()))
 cnt = 1
 ans = 0
 if 1 not in num:

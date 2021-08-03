@@ -10,14 +10,12 @@ for _ in range(t):
 
     best = 0
     for i in range(cs + 1):
-        if s*i <= p:
-            war_me = min((p - s*i)//w, cw)
+        if s * i <= p:
+            war_me = min((p - s * i) // w, cw)
             tb = i + war_me
-            sword_him = min(cs - i, f//s)
+            sword_him = min(cs - i, f // s)
             tb += sword_him
-            war_him = min((f - s*sword_him)//w, cw - war_me)
+            war_him = min((f - s * sword_him) // w, cw - war_me)
             tb += war_him
             best = max(best, tb)
     print(best)
-
-

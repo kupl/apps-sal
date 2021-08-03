@@ -20,4 +20,3 @@ for i, el in enumerate(a[:-1]):
     s.add(el)
 
 print(ans)
-

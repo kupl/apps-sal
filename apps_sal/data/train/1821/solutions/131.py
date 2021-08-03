@@ -6,7 +6,7 @@ class Solution:
         left_list = self.sortArray(nums[:pivot])
         right_list = self.sortArray(nums[pivot:])
         return self.merge_sort(left_list, right_list)
-    
+
     def merge_sort(self, left_list, right_list):
         sorted_list = []
         left_idx, right_idx = 0, 0
@@ -17,8 +17,8 @@ class Solution:
             else:
                 sorted_list.append(left_list[left_idx])
                 left_idx += 1
-        
-        sorted_list += left_list[left_idx:] 
-        sorted_list += right_list[right_idx:] 
-        
+
+        sorted_list += left_list[left_idx:]
+        sorted_list += right_list[right_idx:]
+
         return sorted_list

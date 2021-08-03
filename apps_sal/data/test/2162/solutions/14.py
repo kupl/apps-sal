@@ -1,15 +1,17 @@
 def input_sorted_int_list():
-	return sorted(map(int, input().split()))
+    return sorted(map(int, input().split()))
+
 
 def update_moves_count_list(moves_count_list, tasks_list, from_left_to_right):
-	p = 0
-	for i in range(n + 1):
-		if p < len(tasks_list) and i == tasks_list[p]:
-			p += 1
-		if from_left_to_right:
-			moves_count_list[i] += len(tasks_list) - p
-		else:
-			moves_count_list[i] += p
+    p = 0
+    for i in range(n + 1):
+        if p < len(tasks_list) and i == tasks_list[p]:
+            p += 1
+        if from_left_to_right:
+            moves_count_list[i] += len(tasks_list) - p
+        else:
+            moves_count_list[i] += p
+
 
 k1, k2, k3 = list(map(int, input().split()))
 n = k1 + k2 + k3
@@ -31,13 +33,12 @@ r_cum_min[-1] = right_moves_count[n]
 
 i = n - 1
 while i >= 0:
-	r_cum_min[i] = min(right_moves_count[i], r_cum_min[i + 1])
-	i -= 1
+    r_cum_min[i] = min(right_moves_count[i], r_cum_min[i + 1])
+    i -= 1
 
 answer = 1e9
 for i in range(n + 1):
-	if left_moves_count[i] + r_cum_min[i] < answer:
-		answer = left_moves_count[i] + r_cum_min[i]
+    if left_moves_count[i] + r_cum_min[i] < answer:
+        answer = left_moves_count[i] + r_cum_min[i]
 
 print(answer)
-

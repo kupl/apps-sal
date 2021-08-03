@@ -8,7 +8,7 @@ xs[:2] = 0
 xs[4::2] = 0
 for i in range(3, int(N ** 0.5) + 1, 2):
     if xs[i]:
-        xs[i*i::i] = 0
+        xs[i * i::i] = 0
 primes = {i for i, x in enumerate(xs) if x}
 
 

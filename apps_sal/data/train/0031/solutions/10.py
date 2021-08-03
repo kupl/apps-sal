@@ -1,22 +1,22 @@
 # alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 1000000007#998244353 
+# prime = 1000000007#998244353
 # INF = 10000
 
 # from sys import stdout
 # from heapq import heappush, heappop
 # from collections import defaultdict
-# from collections import deque 
-# import bisect 
+# from collections import deque
+# import bisect
 
-# from math import sqrt    
+# from math import sqrt
 # from math import gcd
 # from math import log2
 
 # with open('input.in','r') as Reader:
 #     with open('output.out','w') as out:
-        # n = int(Reader.readline())
+# n = int(Reader.readline())
 
-    
+
 # print(len(arr))
 # print(arr[:10])
 
@@ -32,9 +32,9 @@ for test in range(t):
     ans = 0
     cur = [0, 0, 0, 0]
     for i in s:
-        if i=="N":
+        if i == "N":
             cur[2] += 1
-        elif i=="S":
+        elif i == "S":
             cur[2] -= 1
         elif i == "E":
             cur[3] += 1
@@ -42,12 +42,12 @@ for test in range(t):
             cur[3] -= 1
 
         key1 = str(cur)
-        key2 = str([cur[2],cur[3], cur[0], cur[1]])
+        key2 = str([cur[2], cur[3], cur[0], cur[1]])
         if key1 in v:
             ans += 1
         else:
             ans += 5
-        
+
         v.add(key1)
         v.add(key2)
 

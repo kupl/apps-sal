@@ -12,5 +12,5 @@ class Solution:
         d.append(count)
         m = len(d)
         for i in range(m - k):
-            res += d[i] * d[i+k]
+            res += d[i] * d[i + k]
         return res

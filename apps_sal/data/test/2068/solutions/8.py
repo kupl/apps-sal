@@ -3,7 +3,7 @@
 from sys import stdin
 import re
 
-guys = { 'polycarp': 1 }
+guys = {'polycarp': 1}
 
 res = 1
 stdin.readline()
@@ -15,5 +15,4 @@ for line in stdin:
     guys[to] = max(guys[fr] + 1, guys.get(to, 0))
     res = max(guys[to], res)
 
-print (res)
-
+print(res)

@@ -32,7 +32,7 @@ def ok(i):
         return False
 
 
-for i in reversed(range(1, m+1)):
+for i in reversed(range(1, m + 1)):
     if ok(i):
         print(i)
         quit()

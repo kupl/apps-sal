@@ -19,7 +19,7 @@ created by shhuan at 2020/1/14 22:37
 def solve(N, D):
     X = int(math.sqrt(D))
 
-    for x in range(max(0, X-10), min(N, X+10) + 1):
+    for x in range(max(0, X - 10), min(N, X + 10) + 1):
         if x + int(math.ceil(D / (x + 1))) <= N:
             return True
     return False

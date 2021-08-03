@@ -10,7 +10,7 @@ for i in seq:
         else:
             print("NO")
             return
-    elif i == 100:  
+    elif i == 100:
         if money[50] >= 1 and money[25] >= 1:
             money[50] -= 1
             money[25] -= 1
@@ -19,8 +19,7 @@ for i in seq:
         else:
             print("NO")
             return
-    
+
     money[i] += 1
 
 print("YES")
-

@@ -35,7 +35,7 @@ def main():
     vin = np.fromstring(f.read(), i8, sep=' ')
     N, Q, K = vin[0:3]
     head = 3
-    DX = vin[head:head + 2*N].reshape(-1, 2).T
+    DX = vin[head:head + 2 * N].reshape(-1, 2).T
     a, b = set_ini(DX, K)
     head += 2 * N
     T = vin[head: head + Q]
@@ -45,4 +45,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

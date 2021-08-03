@@ -132,7 +132,7 @@ class CS:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1]
                     else:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1] + self.cs[i0][i1 - 1] - \
-                                           self.cs[i0 - 1][i1 - 1]
+                            self.cs[i0 - 1][i1 - 1]
 
     def sum(self, start_0, start_1, end_0, end_1):
         if start_0 == 0:
@@ -321,4 +321,3 @@ ans = 0
 for i in a:
     ans += abs(hei - i)
 print(ans)
-

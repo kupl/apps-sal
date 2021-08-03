@@ -8,4 +8,3 @@ class Solution:
             cur = {i | j for j in cur} | {i}
             res |= cur
         return len(res)
-

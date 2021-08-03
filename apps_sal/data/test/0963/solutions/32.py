@@ -15,7 +15,8 @@ for i in range(2, n + 1):
     for l, r in lr:
         li = i - r
         ri = i - l
-        if ri < 1: continue
+        if ri < 1:
+            continue
         li = max(li, 1)
         dp[i] += (dpsum[ri] - dpsum[li - 1])
         dp[i] %= q

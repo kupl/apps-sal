@@ -9,4 +9,3 @@ for _ in range(int(input())):
             ans = min(ans, i - cnt[a[i]] + 1)
         cnt[a[i]] = i
     print(ans if ans != inf else -1)
-

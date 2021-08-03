@@ -10,7 +10,9 @@ A = [int(x) for x in input().split()]
 
 A.sort()
 A += [-1]
-dp = [0] + [True]*10**6
+dp = [0] + [True] * 10**6
+
+
 def Solve():
     if A[0] == 1:
         if len(A) >= 2 and A[1] == 1:
@@ -18,27 +20,28 @@ def Solve():
         else:
             return 1
     k = 0
-    for i in range(1,10**6+1):
+    for i in range(1, 10**6 + 1):
         if i == A[k]:
-            #print("A",i)
-            #kの処理
+            # print("A",i)
+            # kの処理
             tmp = A[k]
             cnt = 0
-            while k <= N-1 and A[k] == tmp:
-                #print("B",k,tmp)
+            while k <= N - 1 and A[k] == tmp:
+                # print("B",k,tmp)
                 cnt += 1
                 if cnt == 2:
                     dp[tmp] = False
                 k += 1
-            #倍数の消去
-            for j in range(2*i,10**6+1,i):
-                #print("C")
+            # 倍数の消去
+            for j in range(2 * i, 10**6 + 1, i):
+                # print("C")
                 dp[j] = False
     ans = 0
     for a in A[:-1]:
         if dp[a]:
             ans += 1
     return ans
+
 
 ans = Solve()
 print(ans)

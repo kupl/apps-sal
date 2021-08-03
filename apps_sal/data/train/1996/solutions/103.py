@@ -3,8 +3,8 @@ class Solution:
         # table = collections.defaultdict(list)
         # for i in range(len(graph)):
         #     table[i] = graph[i]
-        
-        #寻找从一个点出发，是否有环
+
+        # 寻找从一个点出发，是否有环
         def dfs(i):
             if color[i] == 1:
                 return False
@@ -21,14 +21,10 @@ class Solution:
                 color[i] = 2
                 ans.append(i)
                 return True
-                
-                
+
         ans = []
         color = [0] * len(graph)
         for i in range(len(graph)):
             if color[i] == 0:
                 dfs(i)
         return sorted(ans)
-            
-        
-

@@ -1,4 +1,6 @@
 import heapq
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == len(arr):

@@ -9,7 +9,8 @@ def solve(a, b):
         if a_vowel != b_vowel:
             return False
 
-    return True 
+    return True
+
 
 a = input()
 b = input()

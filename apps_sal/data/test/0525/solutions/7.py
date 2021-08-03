@@ -8,4 +8,3 @@ def solve():
 
 
 [solve() for x in range(int(input()))]
-

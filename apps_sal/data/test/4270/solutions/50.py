@@ -18,5 +18,5 @@ for _ in range(N - 1):
     m = v.index(c[idx][1])
     v.pop(m)
     v.append(x)
-    
+
 print(v[0])

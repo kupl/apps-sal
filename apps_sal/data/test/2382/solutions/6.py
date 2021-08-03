@@ -21,9 +21,9 @@ for i in range(N):
             s.append(S[Si])
             del p[-1]
             S[Si] = -1
-        
+
         Si -= 1
-    
+
     if len(p) > 0:
         flag = False
 

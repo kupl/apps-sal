@@ -5,6 +5,6 @@ p.sort()
 
 sum_p = 0
 for i in range(K):
-    sum_p += p[i] 
+    sum_p += p[i]
 
 print(sum_p)

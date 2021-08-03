@@ -1,4 +1,4 @@
-class Solution:  
+class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) <= 1:
             return 0
@@ -6,7 +6,7 @@ class Solution:
         graph = {'vertices': [], 'edges': []}
         for i1 in range(len(points)):
             graph['vertices'].append(i1)
-            for i2 in range(i1+1, len(points)):
+            for i2 in range(i1 + 1, len(points)):
                 if i1 != i2:
                     p1 = points[i1]
                     p2 = points[i2]

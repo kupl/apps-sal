@@ -7,8 +7,8 @@ class Solution:
             if n == 0:
                 return False
             v = 1
-            while v*v <= n:
-                if not win(n - v*v):
+            while v * v <= n:
+                if not win(n - v * v):
                     return True
                 v += 1
             return False

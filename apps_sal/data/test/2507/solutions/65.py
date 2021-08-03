@@ -1,9 +1,9 @@
 import numpy as np
-n,k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 
-A = np.array(input().split(),np.int)
+A = np.array(input().split(), np.int)
 
-F = np.array(input().split(),np.int)
+F = np.array(input().split(), np.int)
 
 
 A.sort()
@@ -18,9 +18,8 @@ while (right - left) > 1:
     s = (left + right) // 2
     r = np.maximum(0, A - s // F_).sum() <= k
     if r:
-        right = s 
+        right = s
     else:
-        left = s 
+        left = s
 
 print(right)
-

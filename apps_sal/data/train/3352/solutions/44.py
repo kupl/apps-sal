@@ -14,5 +14,5 @@ def find_longest(arr):
     else:
         index = lst.index(maxvaldig)
         realmaxval = arr[index]
-        
+
     return realmaxval

@@ -1,4 +1,6 @@
 import string as str
+
+
 def is_uppercase(inp):
     res = str.ascii_uppercase + " "
     ret = " "

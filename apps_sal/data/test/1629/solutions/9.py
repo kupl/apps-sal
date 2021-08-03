@@ -1,5 +1,5 @@
 def main():
-    n, x = map(int,input().split())
+    n, x = map(int, input().split())
     a = [int(i) for i in input().split()]
     j = x - 1
     z = min(a)
@@ -25,7 +25,7 @@ def main():
                 a[i] -= m
                 k += m
             else:
-                a[i] -=(m + 1)
+                a[i] -= (m + 1)
                 k += (m + 1)
         a[j] += k
     else:
@@ -34,4 +34,6 @@ def main():
             k += m
         a[j] += k
     print(*a)
+
+
 main()

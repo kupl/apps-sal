@@ -8,6 +8,8 @@ def main():
             if i % 2 == 0:
                 answer[i] = -values[i + 1]
             else:
-                answer[i] = values[i-1]
+                answer[i] = values[i - 1]
         print(*answer)
+
+
 main()

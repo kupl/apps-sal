@@ -13,4 +13,3 @@ for _ in range(m):
             A = A[:i] + c_2 + A[i + 1:]
 
 print(A)
-

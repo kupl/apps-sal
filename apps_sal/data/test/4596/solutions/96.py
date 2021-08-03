@@ -5,7 +5,7 @@ true = 1
 
 while true == 1:
     for i in range(n):
-        if a[i]%2 != 0:
+        if a[i] % 2 != 0:
             true = 0
             break
         else:

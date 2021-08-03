@@ -19,4 +19,3 @@ while i < n + 1:
     i = i + 1
 # print(dp)
 print(ans)
-

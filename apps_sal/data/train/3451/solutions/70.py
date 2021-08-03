@@ -14,8 +14,8 @@ C = {
 def triangle(row: str):
     tmp_row = []
     while len(row) != 1:
-        for i in range(len(row)-1):
-            tmp_row.append(C.get(row[i:i+2]))
+        for i in range(len(row) - 1):
+            tmp_row.append(C.get(row[i:i + 2]))
         row = "".join(tmp_row)
         tmp_row.clear()
     return row[0]

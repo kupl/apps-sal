@@ -106,5 +106,5 @@ def tongues(code):
         elif i == "X":
             AsT = AsT + "J"
         else:
-            AsT = AsT + i    
+            AsT = AsT + i
     return AsT

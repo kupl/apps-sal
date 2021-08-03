@@ -11,10 +11,10 @@ for _ in range(n):
 t = []
 heapq.heapify(t)
 ans = 0
-for i in range(1, m+1):
+for i in range(1, m + 1):
     for j in cnt[i]:
         heapq.heappush(t, -j)
-    if t: ans -= heapq.heappop(t)
+    if t:
+        ans -= heapq.heappop(t)
 
 print(ans)
-

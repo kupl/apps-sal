@@ -19,4 +19,3 @@ while len(hacked) < n:
     turns += 1
 
 print(turns)
-

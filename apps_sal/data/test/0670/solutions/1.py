@@ -1,7 +1,7 @@
-a,b,c = list(map(int, input().split()))
+a, b, c = list(map(int, input().split()))
 x1, y1, x2, y2 = list(map(int, input().split()))
 if a == 0 or b == 0:
-    print(abs(x1 -x2) + abs(y1 - y2))
+    print(abs(x1 - x2) + abs(y1 - y2))
 else:
     a = a / (-b)
     c = c / (-b)
@@ -15,7 +15,7 @@ else:
     bx = c
     ay = 1 / a
     by = - c / a
-    ans = abs(x1 -x2) + abs(y1 - y2)
+    ans = abs(x1 - x2) + abs(y1 - y2)
     Ax = ay * y1 + by
     Ay = ax * x1 + bx
     Bx = ay * y2 + by

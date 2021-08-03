@@ -42,4 +42,5 @@ def main():
                 print(elem[j], end='')
         print()
 
+
 main()

@@ -10,10 +10,11 @@ def __starting_point():
         wa = 0
         for m in range(keta):
             tmp = str(n)
-            wa = wa + int(tmp[-m-1])
+            wa = wa + int(tmp[-m - 1])
         if a <= wa <= b:
             ans = ans + n
 
     print(ans)
+
 
 __starting_point()

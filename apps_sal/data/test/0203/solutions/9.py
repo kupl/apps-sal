@@ -16,5 +16,3 @@ while len(set(a)) == 3:
 for ss in set(a):
     if ss:
         print(ss)
-
-

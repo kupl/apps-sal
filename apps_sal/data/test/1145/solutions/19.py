@@ -10,9 +10,9 @@ for i in nums:
     t[i] += 1
 ret = 0
 for i in range(len(t)):
-    if t[i]>0:
+    if t[i] > 0:
         ret += t[i] - 1
-        t[i+1] += t[i] - 1
+        t[i + 1] += t[i] - 1
 print(ret)
 
 '''

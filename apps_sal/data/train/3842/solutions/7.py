@@ -20,7 +20,7 @@ def word_wrap(text, limit):
                 words.append(word[upto:])
         lenNext = len(words[-1]) if words else 0
         if not words or len(line) == limit or\
-          (lenNext <= limit and len(line) + 1 + lenNext > limit):
+                (lenNext <= limit and len(line) + 1 + lenNext > limit):
             answer.append(line)
             line = ""
     return "\n".join(answer)

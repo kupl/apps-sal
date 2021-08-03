@@ -1,7 +1,6 @@
 def no_space(x):
-    S=''
+    S = ''
     for i in x:
-        if i!=' ':
-            S+=i
+        if i != ' ':
+            S += i
     return S
-

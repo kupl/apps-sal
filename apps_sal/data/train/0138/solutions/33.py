@@ -1,13 +1,13 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        
+
         def oddMinus(ls):
             ret = 0
             for i in range(len(ls)):
                 if ls[i] < 0:
-                    ret = max(max(ret, i), len(ls)-1-i)
+                    ret = max(max(ret, i), len(ls) - 1 - i)
             return ret
-        
+
         def getLen(ls):
             minus = 0
             for i in ls:
@@ -17,8 +17,7 @@ class Solution:
                 return len(ls)
             else:
                 return oddMinus(ls)
-        
-        
+
         s = []
         sub = []
         for i in nums:
@@ -28,11 +27,10 @@ class Solution:
             else:
                 sub.append(i)
         s.append(sub)
-        
+
         res = 0
-        
+
         for ls in s:
             res = max(res, getLen(ls))
-            
-        return res
 
+        return res

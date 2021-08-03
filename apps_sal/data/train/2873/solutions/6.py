@@ -1,4 +1,4 @@
-def josephus_survivor(n,k):
+def josephus_survivor(n, k):
     arr = [i for i in range(1, n + 1)]
     ptr = k - 1
     while (len(arr) > 1):

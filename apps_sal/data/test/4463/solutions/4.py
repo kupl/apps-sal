@@ -8,20 +8,20 @@ S = defaultdict(int)
 T = defaultdict(int)
 
 for al in s:
-  S[al] += 1
+    S[al] += 1
 
 for al in t:
-  T[al] += 1
+    T[al] += 1
 
 ans_s = ""
 for al in AL:
-  ans_s += al*S[al]
+    ans_s += al * S[al]
 
 ans_t = ""
 for al in reversed(list(AL)):
-  ans_t += al*T[al]
+    ans_t += al * T[al]
 
 if ans_s < ans_t:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

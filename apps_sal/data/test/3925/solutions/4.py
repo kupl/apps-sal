@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 s = input().strip()
 n = len(s)
@@ -17,4 +22,3 @@ for i in range(1, len(s)):
         ans = max(ans, p)
 ans = min(ans, n)
 print(ans)
-

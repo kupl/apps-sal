@@ -21,5 +21,4 @@ else:
 
         codes.append(new_code)
 
-    print(int(hamming/2 - 0.5))
-
+    print(int(hamming / 2 - 0.5))

@@ -7,6 +7,6 @@ for i in range(N):
     if i == 0:
         tmp = v[i]
     else:
-        tmp = (tmp+v[i])/2.0
+        tmp = (tmp + v[i]) / 2.0
 
 print(tmp)

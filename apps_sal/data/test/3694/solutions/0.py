@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 dupes = 0
 dupeVal = -1
@@ -21,11 +21,9 @@ elif dupes == 1:
         inPlay = False
 
 if inPlay:
-    finalSum = (n*(n-1))//2
+    finalSum = (n * (n - 1)) // 2
     Sum = sum(a)
     if (Sum - finalSum) % 2 == 0:
         print('cslnb')
     else:
         print('sjfnb')
-    
-

@@ -9,4 +9,3 @@ if result >= B:
     result = B
 
 print(result)
-

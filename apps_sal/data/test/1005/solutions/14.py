@@ -19,4 +19,3 @@ for i in range(t):
         if Is < minIs:
             minIs = Is
     print(minIs)
-

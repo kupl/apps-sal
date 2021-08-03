@@ -18,9 +18,9 @@ class Solution:
             if cur_profit > profit:
                 ans = rotations
             profit = cur_profit
-        
+
         if waiting > 0:
-            req_rotations = math.ceil(waiting/4)
+            req_rotations = math.ceil(waiting / 4)
             ignore = waiting // 4
             possible_profit = (waiting * boardingCost) - (req_rotations * runningCost)
             full_only = ((waiting - (waiting % 4)) * boardingCost) - (ignore * runningCost)
@@ -33,4 +33,3 @@ class Solution:
                 if profit + full_only > profit:
                     ans = rotations + ignore
         return ans
-

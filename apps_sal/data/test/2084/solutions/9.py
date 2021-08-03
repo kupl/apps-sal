@@ -6,4 +6,4 @@ num = [int(i) for i in inp]
 num.sort()
 
 ans = num[:k]
-print (sum(ans))
+print(sum(ans))

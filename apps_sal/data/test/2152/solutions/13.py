@@ -7,5 +7,5 @@ for i in range(n):
     p = int(p)
     if p < minn:
         minn = p
-    ans += minn*a
+    ans += minn * a
 print(ans)

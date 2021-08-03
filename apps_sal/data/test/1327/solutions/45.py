@@ -29,4 +29,3 @@ for bit in range(1 << element):
 
 # 結果出力
 print(ans)
-

@@ -3,4 +3,3 @@ def matrix_addition(a, b):
         for index in range(len(a)):
             a[row][index] += b[row][index]
     return a
-

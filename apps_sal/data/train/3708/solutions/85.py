@@ -1,5 +1,5 @@
 def hex_to_dec(s):
-    
+
     h2s = {
         '0': 0,
         '1': 1,
@@ -18,14 +18,13 @@ def hex_to_dec(s):
         'e': 14,
         'f': 15
     }
-    
+
     dec = 0
     exponent = 0
-    for i in range( len(s), 0, -1 ):
-        digit = h2s[ s[i-1].lower() ]
-        
+    for i in range(len(s), 0, -1):
+        digit = h2s[s[i - 1].lower()]
+
         dec = dec + (digit * (16 ** exponent))
         exponent = exponent + 1
-        
-    return dec
 
+    return dec

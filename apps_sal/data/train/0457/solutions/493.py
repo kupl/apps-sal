@@ -8,7 +8,6 @@ class Solution:
             if amount in curr:
                 return res
             seen |= curr
-            tmp = {n+c for n in curr for c in coins}
+            tmp = {n + c for n in curr for c in coins}
             curr = {t for t in tmp if t not in seen and t <= amount}
         return -1
-

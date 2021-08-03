@@ -16,10 +16,5 @@ class Solution:
                 seen.popitem()
             seen[prefix] = node
             node.next = cur = cur.__next__
-        
-        return dummy.__next__
-            
-    
-            
-        
 
+        return dummy.__next__

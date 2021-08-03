@@ -5,13 +5,13 @@ direct = input()
 pos = [int(x) for x in input().split()]
 
 best = NONE
-for i,x in enumerate(pos):
-    if i+1 == n:
+for i, x in enumerate(pos):
+    if i + 1 == n:
         break
-    if direct[i:i+2] != 'RL':
+    if direct[i:i + 2] != 'RL':
         continue
 
-    best = min(best, pos[i+1] - x)
+    best = min(best, pos[i + 1] - x)
 
 if best == NONE:
     best = -1
@@ -19,4 +19,3 @@ else:
     best = best // 2
 
 print(best)
-

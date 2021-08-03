@@ -11,7 +11,7 @@ class Solution:
                 mapt[t[i]] = 1
             elif t[i] in mapt:
                 mapt[t[i]] = mapt[t[i]] + 1
-        count = 0 
+        count = 0
         l = set()
         for j in range(0, len(s)):
             if s[j] not in l and s[j] not in mapt:
@@ -21,8 +21,3 @@ class Solution:
                 l.add(s[j])
                 count = count + (maps[s[j]] - mapt[s[j]])
         return count
-        
-        
-        
-        
-

@@ -117,17 +117,17 @@ Mc
 Lv
 Ts
 Og""".upper().split("\n")
-#print(elems)
-
+# print(elems)
 
 
 def does_it_work(word):
-    #print(word)
-    if word == '': return True
+    # print(word)
+    if word == '':
+        return True
     for x in elems:
         if word.startswith(x) and does_it_work(word[len(x):]):
             return True
     return False
 
-print("YES" if does_it_work(input()) else "NO")
 
+print("YES" if does_it_work(input()) else "NO")

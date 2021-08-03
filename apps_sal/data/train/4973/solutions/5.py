@@ -14,4 +14,3 @@ def trouble(nums, target):
             break
         right += 1
     return result
-

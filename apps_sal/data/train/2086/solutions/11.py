@@ -1,8 +1,8 @@
 from collections import deque
-n,q = list(map(int,input().split()))
-a = deque(list(map(int,input().split())))
+n, q = list(map(int, input().split()))
+a = deque(list(map(int, input().split())))
 M = [int(input()) for i in range(q)]
-m = sorted([ M[i] for i in range(q)])
+m = sorted([M[i] for i in range(q)])
 d = []
 
 if q == 0:
@@ -15,7 +15,7 @@ for i in range(n):
         break
     A = a.popleft()
     B = a.popleft()
-    d.append([A,B])
+    d.append([A, B])
     if A > B:
         a.appendleft(A)
         a.append(B)
@@ -25,9 +25,8 @@ for i in range(n):
 
     cnt += 1
 cnt += 1
-for i in range(c,q):
+for i in range(c, q):
     if M[i] >= cnt:
-        print(ma, a[1 + ((M[i] - cnt) % (n-1))])
+        print(ma, a[1 + ((M[i] - cnt) % (n - 1))])
     else:
-        print(d[M[i]-1][0],d[M[i]-1][1])
-
+        print(d[M[i] - 1][0], d[M[i] - 1][1])

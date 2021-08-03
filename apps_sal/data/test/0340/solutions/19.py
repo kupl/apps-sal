@@ -39,4 +39,3 @@ elif kek[0] == kek[-1] and log(kek[-1], 2) // 1 == log(kek[-1], 2):
     print(min_, int(log(kek[-1], 2)))
 else:
     print(min_, ceil(log(kek[-1], 2)) + 1)
-

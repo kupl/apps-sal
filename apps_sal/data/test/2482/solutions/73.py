@@ -17,7 +17,7 @@ for i, j in edge_train:
 group_road = [0] * N
 group_num = 0
 
-visited = [False]*N
+visited = [False] * N
 
 for i in range(N):
     if visited[i]:
@@ -38,7 +38,7 @@ for i in range(N):
 group_train = [0] * N
 group_num = 0
 
-visited = [False]*N
+visited = [False] * N
 
 for i in range(N):
     if visited[i]:
@@ -59,4 +59,3 @@ group_count = Counter(zip(group_road, group_train))
 
 for gr, gt in zip(group_road, group_train):
     print(group_count[(gr, gt)], end=' ')
-

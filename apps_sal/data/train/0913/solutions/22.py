@@ -1,21 +1,25 @@
 import sys
-import statistics 
+import statistics
 from statistics import mode
 readline = sys.stdin.readline
-INF = 10**18+3
+INF = 10**18 + 3
 N, M, K = map(int, readline().split())
 Points = [tuple(map(int, readline().split())) for _ in range(K)]
 ABC = [(p[1], p[3], abs(p[0] - p[2])) for p in Points]
 ans = INF
-l=[]
+l = []
+
+
 def horiz():
- for x,y,z in ABC:
-  l.append(x)
-  l.append(y)
- return mode(l)
+    for x, y, z in ABC:
+        l.append(x)
+        l.append(y)
+    return mode(l)
+
+
 m = horiz()
 res = 0
 for a, b, c in ABC:
- res += min(2*abs(a-m) + 2*abs(b-m) + c, 2*abs(a-b) + 2*c)
+    res += min(2 * abs(a - m) + 2 * abs(b - m) + c, 2 * abs(a - b) + 2 * c)
 ans = min(ans, res)
 print(ans)

@@ -1,5 +1,6 @@
 import math
 
+
 def spider_to_fly(spider, fly):
     web = {'A': 0, 'B': 45, 'C': 90, 'D': 135, 'E': 180, 'F': 225, 'G': 270, 'H': 315}
     angle = min(abs(web[spider[0]] - web[fly[0]]), 360 - abs(web[spider[0]] - web[fly[0]]))

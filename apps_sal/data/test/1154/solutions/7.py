@@ -15,6 +15,3 @@ while True:
     if i == n and l == 0:
         break
 print(t)
-        
-        
-

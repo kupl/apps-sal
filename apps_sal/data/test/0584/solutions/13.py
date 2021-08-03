@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 n = int(input())
 s = input()
 fl = 1
@@ -7,7 +8,7 @@ a = [0, 0]
 gg = ['(', '_', ')']
 i = 0
 while i < n:
-    #print(i)
+    # print(i)
     if s[i] not in gg:
         y = 0
         while (i < n and (s[i] not in gg)):
@@ -28,8 +29,3 @@ while i < n:
     else:
         i += 1
 print(*a)
-        
-        
-    
-
-

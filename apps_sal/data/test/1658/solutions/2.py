@@ -1,10 +1,12 @@
 # fast io
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
-input = lambda: next(_data)
+def input(): return next(_data)
+
 
 N = 101
 MOD = 1000000007
+
 
 def mul_vec_mat(v, a):
     n = len(a[0])
@@ -14,12 +16,14 @@ def mul_vec_mat(v, a):
         c[i] = sum(a[j][i] * v[j] % MOD for j in range(m)) % MOD
     return c
 
+
 def mul_vec_sparse_mat(v, ta):
     n = len(ta)
     c = [0] * n
     for i in range(n):
         c[i] = sum(x * v[j] % MOD for j, x in ta[i]) % MOD
     return c
+
 
 def mod_pow_kitamasa(a, x):
     n = len(a)
@@ -45,6 +49,7 @@ def mod_pow_kitamasa(a, x):
     for i in range(2, n):
         r[i] = mul_vec_sparse_mat(r[i - 1], ta)
     return r
+
 
 _, x = [int(v) for v in input().split()]
 a = [[0] * N for i in range(N)]

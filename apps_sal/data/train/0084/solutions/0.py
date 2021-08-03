@@ -1,6 +1,7 @@
 # encoding: utf-8
 from sys import stdin
 
+
 def solve(a):
 
     # root node of tries denotes empty stack
@@ -41,4 +42,3 @@ for _ in range(q):
     n = int(stdin.readline().strip())
     a = [int(i) for i in stdin.readline().strip().split()]
     print(solve(a))
-

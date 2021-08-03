@@ -43,10 +43,10 @@ class BTree:
             if not ptr.child:
                 bisect.insort(ptr.key, key)
                 if len(ptr.key) == b_size * 2 - 1:
-                        ret = BTreeNode()
-                        ret.key = ptr.key[:b_size]
-                        ptr.key = ptr.key[b_size:]
-                        return ret
+                    ret = BTreeNode()
+                    ret.key = ptr.key[:b_size]
+                    ptr.key = ptr.key[b_size:]
+                    return ret
             else:
                 i = bisect.bisect(ptr.key, key)
                 temp = insert_rec(ptr.child[i])
@@ -104,4 +104,3 @@ def main():
 
 
 main()
-

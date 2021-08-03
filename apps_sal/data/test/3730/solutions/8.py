@@ -11,8 +11,8 @@ len_2 = 0
 
 l = len(sequence) - 1
 for i in range(1, len(sequence) - 1):
-    f1[i-1] = len_1
-    f2[i-1] = len_2
+    f1[i - 1] = len_1
+    f2[i - 1] = len_2
     if sequence[i] > sequence[i - 1]:
         len_1 += 1
     else:
@@ -68,4 +68,3 @@ if max_len > n:
 
 print(max_len)
 '''
-

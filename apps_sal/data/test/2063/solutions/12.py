@@ -3,7 +3,6 @@ n, m, w = list(map(int, input().split()))
 t = list(map(int, input().split()))
 
 
-
 def check(x):
 
     p = [0] * w
@@ -24,10 +23,10 @@ def check(x):
 
         j += 1
 
-        if j == w: j = 0
+        if j == w:
+            j = 0
 
     return s
-
 
 
 a = min(t)
@@ -40,13 +39,13 @@ while b - a > 1:
 
     p = check(c)
 
-    if p > m: b = c
+    if p > m:
+        b = c
 
-    else: a = c
+    else:
+        a = c
 
 print(a)
 
 
-
 # Made By Mostafa_Khaled
-

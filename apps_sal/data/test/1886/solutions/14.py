@@ -6,4 +6,3 @@ b = s[1:len(s)]
 
 s = a.upper() + b
 print(s)
-

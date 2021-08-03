@@ -10,6 +10,7 @@ OPS = {
     '%': mod,
 }
 
+
 def no_order(equation):
     equation = equation.replace(' ', '')
     if not equation:

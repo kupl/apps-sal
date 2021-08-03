@@ -4,7 +4,7 @@
 # blue N-1
 
 import sys
-#sys.setrecursionlimit(10000)
+# sys.setrecursionlimit(10000)
 from functools import lru_cache
 n, m = [int(x) for x in input().split()]
 
@@ -17,9 +17,9 @@ while n < m:
     res += 1
     if m % 2 == 0:
         m //= 2
-    else: m += 1
+    else:
+        m += 1
 
-res += (n-m)
+res += (n - m)
 
 print(res)
-

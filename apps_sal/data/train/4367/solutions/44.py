@@ -1,5 +1,5 @@
-def area_or_perimeter(l , w):
+def area_or_perimeter(l, w):
     if l == w:
-        return l * w # Area of a square
+        return l * w  # Area of a square
     else:
-        return 2 * (l+w) # Perimeter of a rectangle
+        return 2 * (l + w)  # Perimeter of a rectangle

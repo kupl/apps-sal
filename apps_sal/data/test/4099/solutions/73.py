@@ -1,7 +1,7 @@
 n, k, m = map(int, input().split())
 a = list(map(int, input().split()))
 
-x = m*n - sum(a) 
+x = m * n - sum(a)
 
 if x <= k and x > 0:
     print(x)

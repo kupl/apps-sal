@@ -1,2 +1,2 @@
-S =input()
+S = input()
 print(S.count('1'))

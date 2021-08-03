@@ -9,7 +9,7 @@ def find_even_index(arr):
 
     def sumleft(i):
         if i != 0:
-            return sums[i-1]
+            return sums[i - 1]
         else:
             return 0
 

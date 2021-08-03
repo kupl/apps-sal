@@ -1,6 +1,6 @@
 [n, k] = [int(x) for x in input().split()]
 
-room_free = [bool(1-int(x)) for x in input()]
+room_free = [bool(1 - int(x)) for x in input()]
 
 # maintain queue closest before
 # maintain queue of closest after
@@ -20,7 +20,7 @@ for i in range(n):
     closest_before.append(before)
 
 after = 11**8
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     if room_free[i]:
         after = i
     closest_after.append(after)
@@ -34,7 +34,7 @@ ans = 10**8
 
 
 while True:
-    if taken != k+1:
+    if taken != k + 1:
         r += 1
         if r >= n:
             break
@@ -44,10 +44,8 @@ while True:
         l += 1
         if room_free[l]:
 
-            mid = int((l+r)/2)
+            mid = int((l + r) / 2)
             # print(l, r, mid, closest_after[mid])
-            ans = min(ans, closest_after[mid+1] - l, r - closest_before[mid])
+            ans = min(ans, closest_after[mid + 1] - l, r - closest_before[mid])
             taken -= 1
 print(ans)
-
-

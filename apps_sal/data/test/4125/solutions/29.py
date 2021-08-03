@@ -11,11 +11,12 @@ def main():
     x = list(map(int, input().split()))
     x.append(X)
     x.sort()
-    x_dist = [x[i+1] - x[i] for i in range(len(x)-1)]
+    x_dist = [x[i + 1] - x[i] for i in range(len(x) - 1)]
     print((gcd(*x_dist)))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

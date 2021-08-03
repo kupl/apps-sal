@@ -10,4 +10,3 @@ res = x * pow(2, k + 1, mod) % mod
 res = ((res - (pow(2, k, mod) - 1)) % mod + mod) % mod
 
 print(res)
-

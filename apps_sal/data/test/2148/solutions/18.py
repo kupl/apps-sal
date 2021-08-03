@@ -23,4 +23,3 @@ for disk in ycoords:
     s += str(disk) + " "
 
 print(s[:-1])
-

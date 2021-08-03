@@ -4,6 +4,8 @@ def check(a):
     for el in s:
         t += int(el)
     return t % 4 == 0
+
+
 # n, m = map(int, input().split())
 n = int(input())
 # a = [int(i) for i in input().split()]

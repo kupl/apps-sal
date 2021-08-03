@@ -1,7 +1,9 @@
 import math
 
+
 def comb(n, r, mod):
-    return math.factorial(n + r - 1)//(math.factorial(n - 1)*math.factorial(r))%mod
+    return math.factorial(n + r - 1) // (math.factorial(n - 1) * math.factorial(r)) % mod
+
 
 n, k = map(int, input().split())
 mod = 10**9 + 7
@@ -18,5 +20,5 @@ for i in range(k):
     if i == 0:
         bluemod = 0
     blueplace = i + 1
-    ans += comb(redplace, redmod, mod)*comb(blueplace, bluemod, mod)
-    print(ans%mod)
+    ans += comb(redplace, redmod, mod) * comb(blueplace, bluemod, mod)
+    print(ans % mod)

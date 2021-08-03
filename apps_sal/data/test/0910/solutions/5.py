@@ -9,16 +9,16 @@ else:
     for i in range(a):
         s = ''
         for j in range(b):
-                if(i % 2 == 0):
-                    m = i * b + j + 1
-                    if(m <= n):
-                        s += str(m) + ' '
-                    else:
-                        s += '0 '
+            if(i % 2 == 0):
+                m = i * b + j + 1
+                if(m <= n):
+                    s += str(m) + ' '
                 else:
-                    m = (i + 1) * b - j
-                    if(m <= n):
-                        s += str(m) + ' '
-                    else:
-                        s += '0 '
+                    s += '0 '
+            else:
+                m = (i + 1) * b - j
+                if(m <= n):
+                    s += str(m) + ' '
+                else:
+                    s += '0 '
         print(s)

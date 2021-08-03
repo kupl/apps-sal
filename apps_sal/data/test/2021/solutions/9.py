@@ -6,4 +6,3 @@ l.sort(reverse=1)
 sm = sum(l)
 for i in m:
     print(sm - l[i - 1])
-

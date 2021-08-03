@@ -3,4 +3,3 @@ def quadratic(x1, x2):
     output1 = -x1 - x2
     output2 = x1 * x2
     return output, output1, output2
-

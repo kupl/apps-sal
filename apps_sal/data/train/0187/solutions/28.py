@@ -17,7 +17,7 @@ class Solution:
                 cur_wait = 0
             if cur_pro > max_pro:
                 max_rot, max_pro = i, cur_pro
-        
+
         while cur_wait > 0:
             i += 1
             if cur_wait >= 4:
@@ -28,5 +28,5 @@ class Solution:
                 cur_wait = 0
             if cur_pro > max_pro:
                 max_rot, max_pro = i, cur_pro
-        
+
         return max_rot if max_pro > 0 else -1

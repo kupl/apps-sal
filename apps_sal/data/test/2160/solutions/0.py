@@ -11,4 +11,3 @@ for q in queries:
     if seen[q + 1]:
         bad.add((q + 1, q))
 print((nCells - 1) * 2 + nCells - len(bad))
-

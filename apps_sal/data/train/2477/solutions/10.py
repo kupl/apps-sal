@@ -1,4 +1,5 @@
-from collections import defaultdict 
+from collections import defaultdict
+
 
 class Solution:
     def numSpecialEquivGroups(self, A: List[str]) -> int:
@@ -10,6 +11,3 @@ class Solution:
             if result not in groups:
                 groups.append(result)
         return len(groups)
-               
-                
-

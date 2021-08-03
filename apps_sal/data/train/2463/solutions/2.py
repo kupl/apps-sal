@@ -7,13 +7,13 @@ class Solution:
             return False
         if arr[-1] > arr[-2]:
             return False
-        
+
         peek = None
-        for i in range(1, len(arr)-1):
-            if arr[i] > arr[i+1]:
+        for i in range(1, len(arr) - 1):
+            if arr[i] > arr[i + 1]:
                 peek = i
-            if peek and arr[i] < arr[i+1]:
+            if peek and arr[i] < arr[i + 1]:
                 return False
-            if arr[i] == arr[i+1] or arr[i] == arr[i-1]:
+            if arr[i] == arr[i + 1] or arr[i] == arr[i - 1]:
                 return False
         return True

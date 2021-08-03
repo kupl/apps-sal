@@ -1,5 +1,5 @@
 n = int(input())
-alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alp = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 list = [[] for _ in range(26)]
 ans = []
 
@@ -15,4 +15,4 @@ for i in range(26):
 ans = sorted(ans)
 
 for i in ans:
-    print(i, end = '')
+    print(i, end='')

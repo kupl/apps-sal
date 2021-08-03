@@ -1,3 +1,3 @@
-#57
-a,b=map(int,input().split())
-print(int((a+b)%24))
+# 57
+a, b = map(int, input().split())
+print(int((a + b) % 24))

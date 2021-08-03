@@ -7,14 +7,14 @@ def is_madhav_array(arr):
     while i < len(arr):
         t = 0
         for j in range(k):
-            if i > len(arr)-1:
+            if i > len(arr) - 1:
                 return False
             t += arr[i]
             i += 1
-            
+
         if arr[0] != t:
             return False
         else:
             k += 1
-            
+
     return True

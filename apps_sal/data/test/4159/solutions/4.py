@@ -1,4 +1,4 @@
-a,b,k = map(int,input().split())
+a, b, k = map(int, input().split())
 if k < a:
     a -= k
 elif k < a + b:
@@ -7,4 +7,4 @@ elif k < a + b:
 else:
     a = 0
     b = 0
-print(a,b)
+print(a, b)

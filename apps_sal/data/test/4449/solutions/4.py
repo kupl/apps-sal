@@ -13,4 +13,3 @@ for _ in range(q):
         for i in range(2, 2 * n, 2):
             pos = pos and a[i] * a[-i - 1] == area
     print('YES' if pos else 'NO')
-

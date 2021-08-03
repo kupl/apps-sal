@@ -8,4 +8,3 @@ for _ in range(q):
         while v <= r:
             v += d
         print(v)
-

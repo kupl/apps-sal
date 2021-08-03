@@ -13,4 +13,3 @@ res = 0
 for j in range(rest_key_num):
     res += values[j]
 print(res)
-

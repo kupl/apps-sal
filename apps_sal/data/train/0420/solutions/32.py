@@ -4,7 +4,7 @@ class Solution:
         vowels = {'a', 'e', 'i', 'o', 'u'}
         vowel_count = {ch: 0 for ch in vowels}
         max_length = 0
-        
+
         for pos, ch in enumerate(s):
             if ch in vowels:
                 vowel_count[ch] += 1
@@ -18,5 +18,5 @@ class Solution:
             prefix_tail = remainder_pos_dict[remainders]
             length = pos - prefix_tail
             max_length = max(length, max_length)
-        
+
         return max_length

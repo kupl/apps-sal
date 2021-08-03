@@ -21,4 +21,3 @@ elif len(vals) == 4:
     print("Yes")
 else:
     raise RuntimeError("Should never happen")
-

@@ -3,6 +3,8 @@ class Node:
         self.child = dict()
         self.val = val
         self.is_end = is_end
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -15,6 +17,7 @@ class StreamChecker:
                 tmp = tmp.child[l]
             tmp.is_end = True
         self.q = []
+
     def query(self, letter: str) -> bool:
         if len(self.q) >= 2000:
             self.q.pop(0)
@@ -32,4 +35,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

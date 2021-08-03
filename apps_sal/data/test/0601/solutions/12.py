@@ -15,4 +15,3 @@ for _ in range(int(input())):
         ans = max(ans, ansi)
     gans.append(ans)
 print('\n'.join(map(str, gans)))
-

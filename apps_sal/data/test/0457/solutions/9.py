@@ -2,6 +2,7 @@ x, n = map(int, input().split())
 mod = 1000000007
 res = 1
 
+
 def bpow(x, y):
     res = 1
     while y > 0:
@@ -9,9 +10,10 @@ def bpow(x, y):
             res = (res * x) % mod
             y -= 1
         else:
-            x = (x * x ) % mod
+            x = (x * x) % mod
             y //= 2
     return res
+
 
 sp = []
 i = 2
@@ -22,7 +24,7 @@ while i * i <= x:
         while x % i == 0:
             x //= i
     i += 1
-    
+
 if (x > 1):
     sp.append(x)
 

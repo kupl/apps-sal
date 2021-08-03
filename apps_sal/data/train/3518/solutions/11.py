@@ -7,4 +7,4 @@ def linux_type(file_attribute):
         'p': 'pipe',
         's': 'socket',
         'D': 'door'
-    }.get(file_attribute[0],'file')
+    }.get(file_attribute[0], 'file')

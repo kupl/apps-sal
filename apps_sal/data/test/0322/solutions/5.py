@@ -2,7 +2,7 @@
 n = int(input())
 l, r = 0, 0
 for i in range(n):
-    x, y  = list(map(int, input().split()))
+    x, y = list(map(int, input().split()))
     if x > 0:
         r += 1
     else:
@@ -11,4 +11,3 @@ if l <= 1 or r <= 1:
     print('Yes')
 else:
     print('No')
-

@@ -14,5 +14,3 @@ if(left > 0):
     ans -= left
 
 print(ans)
-
-

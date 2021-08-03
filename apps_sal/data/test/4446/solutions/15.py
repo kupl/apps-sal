@@ -7,7 +7,7 @@ h = list(map(int, input().split()))
 ans = 0
 tmp = []
 for i in range(N):
-    j = h[i] % (a+b)
+    j = h[i] % (a + b)
     if j > 0 and j <= a:
         ans += 1
     else:
@@ -25,4 +25,3 @@ for x in tmp:
     else:
         break
 print(ans)
-

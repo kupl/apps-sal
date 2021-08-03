@@ -4,4 +4,3 @@ ans = len(a)
 if 0 in a:
     ans -= 1
 print(ans)
-

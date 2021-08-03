@@ -10,5 +10,3 @@ def grader(score):
         return 'C'
     elif 0.6 <= score < 0.7:
         return 'D'
-    
-

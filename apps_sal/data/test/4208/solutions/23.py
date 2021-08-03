@@ -34,7 +34,7 @@ for j in range(26):
     c1 = len(l1)
     c2 = len(l2)
 
-    cnt = min(c1,c2)
+    cnt = min(c1, c2)
 
     i = 0
     while(i < cnt):
@@ -42,7 +42,7 @@ for j in range(26):
         ansright.append(l2[i])
         checkedright[l2[i]] = 1
         checkedleft[l1[i]] = 1
-        i+=1
+        i += 1
 
 
 nonques1 = []
@@ -64,13 +64,13 @@ for i in range(len(ques1)):
             ansleft.append(ques1[i])
             ansright.append(nonques2[j])
             nonques2[j] = -1
-            j+=1
+            j += 1
             ques1[i] = -1
         elif(k < len(ques2)):
             ansleft.append(ques1[i])
             ansright.append(ques2[k])
             ques2[k] = -1
-            k+=1
+            k += 1
             ques1[i] = -1
 
 j = 0
@@ -81,15 +81,15 @@ for i in range(len(ques2)):
             ansright.append(ques2[i])
             ansleft.append(nonques1[j])
             nonques1[j] = -1
-            j+=1
+            j += 1
             ques2[i] = -1
         elif(k < len(ques1)):
             ansright.append(ques2[i])
             ansleft.append(ques1[k])
             ques1[k] = -1
-            k+=1
+            k += 1
             ques2[i] = -1
 
 print(len(ansleft))
 for i in range(len(ansleft)):
-    print(ansleft[i]+1,ansright[i]+1)
+    print(ansleft[i] + 1, ansright[i] + 1)

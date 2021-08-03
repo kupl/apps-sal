@@ -1,6 +1,6 @@
-n,m,k = map(int,input().split())
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+n, m, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 
 sum_a = [0]
 sum_b = [0]
@@ -28,9 +28,9 @@ ans = 0
 
 for i in range(len(sum_a)):
     for j in reversed(range(n)):
-        if sum_a[i] + sum_b[j]<= k:
-            ans = max(ans,i+j)
-            n = j+1
+        if sum_a[i] + sum_b[j] <= k:
+            ans = max(ans, i + j)
+            n = j + 1
             break
     else:
         break

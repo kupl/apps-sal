@@ -7,9 +7,9 @@ def result(i):
         temp = max(temp)
     return lights[i] + temp
 
+
 n = int(input())
 lights = [0, 0] + list(map(int, input().split()))
 ans = 0
 result(1)
 print(ans)
-

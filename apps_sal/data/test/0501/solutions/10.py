@@ -71,4 +71,3 @@ for j in range(300):
     lk *= 2
     ans %= mod
 print(ans)
-

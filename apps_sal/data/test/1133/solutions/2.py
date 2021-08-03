@@ -2,6 +2,8 @@ N = int(input())
 words = [input() for i in range(N)]
 
 abc = 'abcdefghijklmnopqrstuvwxyz'
+
+
 def countf(a, b):
     c = a + b
     s = 0
@@ -10,6 +12,7 @@ def countf(a, b):
             s += len(w)
 
     return s
+
 
 m = 0
 for a in abc:
@@ -20,4 +23,3 @@ for a in abc:
         m = max(countf(a, b), m)
 
 print(m)
-

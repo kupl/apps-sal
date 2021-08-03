@@ -15,4 +15,3 @@ for i in t:
         ans += cnt
 
 print(ans)
-

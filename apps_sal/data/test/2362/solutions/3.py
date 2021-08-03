@@ -25,7 +25,7 @@ for i in range(N - 1):
 def gcd(x, y):
     while y:
         x, y = y, x % y
-    
+
     return x
 
 
@@ -40,9 +40,9 @@ def dfs(node, parent):
             ans = max(ans, dfs(u, node))
             for t in dp[u]:
                 chd.append(t)
-    
+
     chd.sort()
-    
+
     i = 0
     while i < len(chd):
         j = i - 1
@@ -53,7 +53,7 @@ def dfs(node, parent):
                 mx2, mx1 = mx1, chd[j][1]
             elif chd[j][1] > mx2:
                 mx2 = chd[j][1]
-        
+
         if A[node] % chd[i][0] == 0:
             ans = max(ans, mx1 + mx2 + 1)
             dp[node].append((chd[i][0], mx1 + 1))
@@ -61,9 +61,9 @@ def dfs(node, parent):
                 A[node] //= chd[i][0]
         else:
             ans = max(ans, mx1)
-        
+
         i = j + 1
-    
+
     i = 2
     while i * i <= A[node]:
         if A[node] % i == 0:
@@ -72,14 +72,13 @@ def dfs(node, parent):
             while A[node] % i == 0:
                 A[node] //= i
         i += 1
-    
+
     if A[node] > 1:
         dp[node].append((A[node], 1))
         ans = max(ans, 1)
-    
+
     return ans
 
 
 print(dfs(1, -1))
 # print(dp)
-

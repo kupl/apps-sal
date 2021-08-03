@@ -5,4 +5,4 @@ def to_alternating_case(string):
             output += i.upper()
         else:
             output += i.lower()
-    return output 
+    return output

@@ -45,9 +45,10 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m=map(int,input().split())
-a=[list(map(int,input().split())) for i in range(m)]
-u=UnionFind(n)
+
+n, m = map(int, input().split())
+a = [list(map(int, input().split())) for i in range(m)]
+u = UnionFind(n)
 for i in range(m):
-    u.union(a[i][0]-1,a[i][1]-1)
+    u.union(a[i][0] - 1, a[i][1] - 1)
 print(u.group_count())

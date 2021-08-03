@@ -8,4 +8,3 @@ if i > n:
     print((int(i / 2)))
 else:
     print(i)
-

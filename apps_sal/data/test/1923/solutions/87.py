@@ -1,2 +1,2 @@
 input()
-print(sum(sorted(map(int,input().split()))[::2]))
+print(sum(sorted(map(int, input().split()))[::2]))

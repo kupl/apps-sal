@@ -38,4 +38,3 @@ for i in A:
         s += '0'
     s += str(i[0])
     print((s + ans_d[m]))
-

@@ -15,4 +15,3 @@ else:
     res = even_index[::-1] + odd_index
 
 print((*res))
-

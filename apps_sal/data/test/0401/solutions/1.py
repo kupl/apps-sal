@@ -10,4 +10,3 @@ for i in range(n):
             ans = min(ans, a[i])
 ans = min(ans, min(a[0] * 10 + b[0], b[0] * 10 + a[0]))
 print(ans)
-

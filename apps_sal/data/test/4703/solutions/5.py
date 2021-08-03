@@ -17,4 +17,3 @@ for j in pcomb:
         sum += eval(F)
         k += 1
 print(sum)
-

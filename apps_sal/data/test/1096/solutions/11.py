@@ -13,4 +13,3 @@ if is_x and is_y:
 elif (is_x and not is_y) or (not is_x and is_y):
     ans -= 3
 print(ans)
-

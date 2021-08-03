@@ -15,4 +15,3 @@ while cur < N:
         return
 
 print((*reversed(ans)))
-

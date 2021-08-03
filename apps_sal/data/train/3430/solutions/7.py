@@ -1,1 +1,1 @@
-lowest_temp=lambda s:min(map(int,s.split()),default=None)
+def lowest_temp(s): return min(map(int, s.split()), default=None)

@@ -9,4 +9,3 @@ a = list(map(int, input().split()))
 a = sorted(a)
 b = a[::2] + a[1::2][::-1]
 print(*b)
-

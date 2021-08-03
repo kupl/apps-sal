@@ -4,8 +4,8 @@ def S(): return sys.stdin.readline().rstrip()
 
 
 N = I()
-AA,AB,BA,BB = S(),S(),S(),S()
-mod = 10**9+7
+AA, AB, BA, BB = S(), S(), S(), S()
+mod = 10**9 + 7
 
 if N <= 3:
     print((1))
@@ -13,12 +13,12 @@ if N <= 3:
 
 ans1 = 1
 
-fib = [1,1]
-for i in range(N-3):
-    fib.append((fib[-1]+fib[-2]) % mod)
+fib = [1, 1]
+for i in range(N - 3):
+    fib.append((fib[-1] + fib[-2]) % mod)
 ans2 = fib[-1]
 
-ans3 = pow(2,N-3,mod)
+ans3 = pow(2, N - 3, mod)
 
 
 if AB == 'A':
@@ -39,4 +39,3 @@ else:
             ans = ans3
 
 print(ans)
-

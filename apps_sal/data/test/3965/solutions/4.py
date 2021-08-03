@@ -15,4 +15,3 @@ if fl:
     print("YES")
 else:
     print("NO")
-

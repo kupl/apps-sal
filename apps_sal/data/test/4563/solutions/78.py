@@ -10,4 +10,3 @@ for i in range(1, n):
     x, y = k * t, k * a
 
 print((x + y))
-

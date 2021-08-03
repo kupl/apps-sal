@@ -1,7 +1,7 @@
 ans = 0
 a, b = list(map(int, input().split()))
 l = 2
-pos = l-2
+pos = l - 2
 ans = 0
 while True:
     n = ((1 << l) - 1) - (1 << pos)
@@ -14,7 +14,5 @@ while True:
         pos -= 1
     else:
         l += 1
-        pos = l-2
+        pos = l - 2
 print(ans)
-    
-

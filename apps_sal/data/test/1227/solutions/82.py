@@ -51,5 +51,3 @@ def n_num_l(d, i):
 
 answer = n_num_e(len(n), k) + n_num_l(len(n), k)
 print(answer)
-
-

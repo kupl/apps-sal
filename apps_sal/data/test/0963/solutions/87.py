@@ -1,7 +1,7 @@
 N, K = map(int, input().split())
 L = [list(map(int, input().split())) for i in range(K)]
 
-#print (L)                                                                                                                                                                 
+#print (L)
 
 dp = [0 for i in range(N + 10)]
 sdp = [0 for i in range(N + 11)]
@@ -9,9 +9,9 @@ dp[0] = 1
 sdp[1] = 1
 
 for i in range(1, N):
-    #print('i:',i)                                                                                                                                                         
+    # print('i:',i)
     for array in L:
-        #print('array loop:', array)                                                                                                                                       
+        #print('array loop:', array)
         if i - array[-1] < 0:
             start = 0
         else:
@@ -20,9 +20,9 @@ for i in range(1, N):
             end = 0
         else:
             end = i - array[0] + 1
-                                                                                                                                       
+
         dp[i] += sdp[end] - sdp[start]
     dp[i] = dp[i] % 998244353
-    sdp[i+1] = sdp[i] + dp[i]                                                                                                                                                         
+    sdp[i + 1] = sdp[i] + dp[i]
 
-print(dp[N-1])
+print(dp[N - 1])

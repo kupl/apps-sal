@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         window1 = Window()
@@ -13,7 +14,7 @@ class Solution:
             while window1.size() > K:
                 window1.remove(A[left1])
                 left1 += 1
-            while window2.size() > K-1:
+            while window2.size() > K - 1:
                 window2.remove(A[left2])
                 left2 += 1
             res += left2 - left1

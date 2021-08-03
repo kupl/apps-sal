@@ -7,8 +7,9 @@ for x in arr:
     if x == m:
         c += 1
     else:
-        if temp < c: temp = c
+        if temp < c:
+            temp = c
         c = 0
-if temp < c: temp = c
+if temp < c:
+    temp = c
 print(temp)
-

@@ -8,6 +8,6 @@ for i in range(n):
     elif a[i] == mex + 1:
         mex += 1
     else:
-        print(i+1)
+        print(i + 1)
         return
 print(-1)

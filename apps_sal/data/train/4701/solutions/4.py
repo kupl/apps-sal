@@ -1,1 +1,2 @@
-from math import ceil; pay_cheese=lambda arr: "L"+str(ceil(sum(arr)/100)*35)
+from math import ceil
+def pay_cheese(arr): return "L" + str(ceil(sum(arr) / 100) * 35)

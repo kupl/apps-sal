@@ -1,3 +1,3 @@
-ab, bc, ca = map(int,input().split())
+ab, bc, ca = map(int, input().split())
 
-print((ab * bc )//2)
+print((ab * bc) // 2)

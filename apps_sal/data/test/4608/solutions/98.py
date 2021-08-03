@@ -12,10 +12,9 @@ while True:
     if a[now - 1] == 2:
         print(counter)
         break
-    elif visit[a[now - 1]-1] == True:
+    elif visit[a[now - 1] - 1] == True:
         print((-1))
         break
     else:
-        visit[a[now - 1]-1] = True
+        visit[a[now - 1] - 1] = True
     now = a[now - 1]
-

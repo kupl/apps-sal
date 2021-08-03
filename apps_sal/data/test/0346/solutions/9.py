@@ -17,7 +17,7 @@ for i in range(len(d)):
 c = sorted(c)
 if sum < c[-1]:
     sum += c[-1]
-    sum *= (2**(len(c)-1))
+    sum *= (2**(len(c) - 1))
 else:
     sum *= (2**len(c))
 print(sum)

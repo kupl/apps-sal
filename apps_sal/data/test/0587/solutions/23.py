@@ -13,8 +13,8 @@ N_set = set()
 
 sums = 0
 
-cnt = [0 for i in range(N+1)]  # ねたxに何個いるか
-ng,ok,sub = [], [], []
+cnt = [0 for i in range(N + 1)]  # ねたxに何個いるか
+ng, ok, sub = [], [], []
 heapq.heapify(ng)
 heapq.heapify(ok)
 heapq.heapify(sub)
@@ -38,7 +38,7 @@ ng = sub
 # ok とってもいいやつ
 
 S = len(N_set)
-ans = S**2+sums
+ans = S**2 + sums
 
 
 # これより更新することはあるか？
@@ -58,6 +58,6 @@ for i in range(K, N):
             N_set.add(taste)
             cnt[m_taste] -= 1
             heapq.heappush(ng, (value, taste))
-            ans = max(ans, S**2+sums)
+            ans = max(ans, S**2 + sums)
 
 print(ans)

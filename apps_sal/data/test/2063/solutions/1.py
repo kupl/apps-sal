@@ -12,10 +12,10 @@ def main():
                 curr += tmp
             if day > m:
                 break
-        return day 
+        return day
     n, m, w = map(int, input().split())
     a = list(map(int, input().split()))
-     
+
     l = min(a)
     r = max(a) + m + 1
     while l + 1 < r:
@@ -26,5 +26,6 @@ def main():
             r = mid
 
     print(l)
-    
+
+
 main()

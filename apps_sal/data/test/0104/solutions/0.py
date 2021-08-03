@@ -9,5 +9,5 @@ def main():
             print(i + 1)
             return
 
-main()
 
+main()

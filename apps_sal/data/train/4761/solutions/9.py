@@ -2,7 +2,7 @@
 # to access the head of the linked list
 # linked_list.head
 def search_k_from_end(l, k):
-    #todo
+    # todo
     m, n = l.head, l.head
     while k:
         if not n:
@@ -13,5 +13,3 @@ def search_k_from_end(l, k):
         m = m.__next__
         n = n.__next__
     return m and m.data
-        
-

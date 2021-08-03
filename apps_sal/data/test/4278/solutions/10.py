@@ -1,3 +1,4 @@
+from collections import Counter
 N = int(input())
 l = []
 for i in range(N):
@@ -9,8 +10,6 @@ for i in range(N):
         s += S[j]
     l.append(s)
 
-
-from collections import Counter
 
 l = Counter(l)
 c = l.values()

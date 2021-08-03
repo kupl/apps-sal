@@ -1,12 +1,12 @@
 import sys
 n, m, k = [int(x) for x in sys.stdin.readline().replace('\n', '').split(' ')]
-c =  [int(x) for x in sys.stdin.readline().replace('\n', '').split(' ')]
+c = [int(x) for x in sys.stdin.readline().replace('\n', '').split(' ')]
 # print ((n,m,k))
 # Graphs with python
 socks = [[] for _ in range(n)]
 # populate a Graph
 for i in range(m):
-    l, r = [int(x)-1 for x in sys.stdin.readline().replace('\n', '').split(' ')]
+    l, r = [int(x) - 1 for x in sys.stdin.readline().replace('\n', '').split(' ')]
     socks[r] += [l]
     socks[l] += [r]
 # search a Graph
@@ -39,4 +39,3 @@ for key in forest:
             maximun = forest[key]['colours'][i]
     total += len(forest[key]['nodes']) - maximun
 sys.stdout.write(str(total))
-

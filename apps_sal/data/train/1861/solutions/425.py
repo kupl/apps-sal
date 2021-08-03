@@ -29,11 +29,13 @@ NOTE: Clarify: rectangle formed by ALL these points (convex hull)
 '''
 ###############################################################################
 
+
 class SolutionDefDictSort:      # Faster
     '''
     Runtime: 664 ms, faster than 90.46% of Python3 online submissions for Minimum Area Rectangle.
     Memory Usage: 31.7 MB, less than 20.13% of Python3 online submissions for Minimum Area Rectangle.
     '''
+
     def minAreaRect(self, points):
         columns = collections.defaultdict(set)
         for x, y in points:
@@ -47,11 +49,12 @@ class SolutionDefDictSort:      # Faster
                 for i in range(j):
                     y1 = column[i]
                     if (y1, y2) in lastx:
-                        ans = min(ans, (x - lastx[y1,y2]) * (y2 - y1))
+                        ans = min(ans, (x - lastx[y1, y2]) * (y2 - y1))
                     lastx[y1, y2] = x
         return ans if ans < float('inf') else 0
 
 ###############################################################################
+
 
 class SolutionTupleSet:         # Slower
     '''
@@ -69,7 +72,6 @@ class SolutionTupleSet:         # Slower
                     ans = min(ans, abs((xB - xA) * (yB - yA)))
         return ans if ans < float('inf') else 0
 
-
     def minAreaRectangularHull(self, points: List[List[int]]) -> int:
         '''
         NOTE: Not what the question was intended to meant!
@@ -83,14 +85,15 @@ class SolutionTupleSet:         # Slower
                 miny = min(miny, y)
                 maxx = max(maxx, x)
                 maxy = max(maxy, y)
-            area = (maxx - minx)*(maxy - miny)
+            area = (maxx - minx) * (maxy - miny)
         return area
 
 ###############################################################################
 
+
 class Solution:
     pass
 
+
 Solution = SolutionTupleSet
 Solution = SolutionDefDictSort
-

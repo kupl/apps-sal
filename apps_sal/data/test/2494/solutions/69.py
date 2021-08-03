@@ -1,6 +1,7 @@
+import heapq
 K = int(input())
 
-import heapq
+
 def dijkstra(adj, n, start):
     dj = [10**6] * (n + 1)
     dj[start] = 0
@@ -8,12 +9,14 @@ def dijkstra(adj, n, start):
     heapq.heappush(q, (0, start))
     while q:
         fc, fn = heapq.heappop(q)
-        if dj[fn] < fc: continue
+        if dj[fn] < fc:
+            continue
         for tn, lc in adj[fn]:
             if dj[tn] > dj[fn] + lc:
                 dj[tn] = dj[fn] + lc
                 heapq.heappush(q, (dj[tn], tn))
     return dj
+
 
 adj = {}
 for i in range(K):

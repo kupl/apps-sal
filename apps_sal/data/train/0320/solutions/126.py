@@ -17,4 +17,3 @@ class Solution:
             add[ii] = a
             mul[ii] = b
         return max(mul) + sum(add)
-

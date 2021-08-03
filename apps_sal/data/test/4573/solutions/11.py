@@ -9,4 +9,3 @@ for i in x:
         print((xs[n // 2]))
     else:
         print((xs[n // 2 - 1]))
-

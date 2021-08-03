@@ -5,5 +5,5 @@ ans = 0
 m = max(a)
 for elem in a:
     ans += m - elem
-    
+
 print(ans)

@@ -19,14 +19,13 @@ def solve():
         for b in range(10):
             if a >> b & 1:
                 res += oc[:, b]
-        #print(res)
+        # print(res)
         tmp = 0
         for i, x in enumerate(res):
             tmp += prof[i, x]
-        #print(tmp)
+        # print(tmp)
         ans = max(ans, tmp)
     print(ans)
 
 
 solve()
-

@@ -12,4 +12,3 @@ v = 125 * d * t_inv % ten_k
 b = u * n + 1
 e = v * n
 print(b, e)
-

@@ -7,20 +7,20 @@ V = list(map(int, input().split()))
 
 v1 = []
 v2 = []
- 
+
 for i, v in enumerate(V):
     if i % 2 == 0:
         v1.append(v)
     else:
         v2.append(v)
- 
+
 v1c = Counter(v1).most_common()
 v2c = Counter(v2).most_common()
- 
+
 k1, v1 = v1c[0][0], v1c[0][1]
 k2, v2 = v2c[0][0], v2c[0][1]
 
-ans = N 
+ans = N
 if k1 == k2:
     ans -= v1
     m = 0
@@ -31,5 +31,5 @@ if k1 == k2:
     ans -= m
 else:
     ans -= v1 + v2
- 
+
 print(ans)

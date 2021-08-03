@@ -7,4 +7,3 @@ def who_is_paying(name):
     else:
         name_array.append(name)
         return name_array
-

@@ -19,4 +19,3 @@ for _ in range(int(input())):
                 raise ValueError(f'No {bi} in a')
         ans += 2 * k + 1
     print(ans)
-

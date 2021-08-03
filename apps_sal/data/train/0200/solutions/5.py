@@ -14,4 +14,3 @@ class Solution:
             else:
                 f1, f2 = f2 - f1, f1
         return t
-

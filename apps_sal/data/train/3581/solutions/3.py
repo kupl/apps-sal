@@ -6,4 +6,3 @@ def sea_sick(s):
     if truediv(result, len(s)) > 0.2:
         return 'Throw Up'
     return 'No Problem'
-

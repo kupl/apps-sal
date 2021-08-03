@@ -17,7 +17,7 @@ from typing import List
 
 def solve(N, M, W, A):
     def check(val):
-        needs = [val-v for v in A]
+        needs = [val - v for v in A]
         delta = [0 for _ in range(N)]
         water = 0
         i = 0
@@ -34,7 +34,7 @@ def solve(N, M, W, A):
                     return False
             i += 1
         return water <= M
-    
+
     lo, hi = min(A), max(A) + M
     while lo <= hi:
         m = (lo + hi) // 2
@@ -42,7 +42,7 @@ def solve(N, M, W, A):
             lo = m + 1
         else:
             hi = m - 1
-            
+
     return hi
 
 

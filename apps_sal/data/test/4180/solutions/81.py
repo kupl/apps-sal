@@ -20,4 +20,3 @@ res = 0
 res = 1000 * ceil(n / 1000) - n
 
 print(res)
-

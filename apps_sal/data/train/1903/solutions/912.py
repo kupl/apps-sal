@@ -3,6 +3,7 @@ class Solution:
         res = 0
         n = len(points)
         dist = [0] * n
+
         def distance(px, py):
             return abs(px[0] - py[0]) + abs(px[1] - py[1])
         for i in range(1, n):
@@ -25,4 +26,3 @@ class Solution:
                     continue
                 dist[j] = min(dist[j], distance(points[j], points[index]))
         return res
-

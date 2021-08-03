@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n, t = map(int, input().split())
     alst = list(map(int, input().split()))
@@ -24,6 +25,7 @@ def main():
             flg = True
             ans[i] = 1
     print(*ans)
-    
+
+
 for _ in range(int(input())):
     main()

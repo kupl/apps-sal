@@ -17,4 +17,3 @@ while q:
         dist[i2] = dist[i] + c
         q.append((i2, i))
 print(max(dist))
-

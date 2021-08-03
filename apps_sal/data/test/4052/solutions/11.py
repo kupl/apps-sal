@@ -5,13 +5,13 @@ a = []
 count = 0
 for i in range(n):
     if s[i] != t[i]:
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if s[j] == t[i]:
-                c = [str(k+1) for k in range(j-1, i-1, -1)]
+                c = [str(k + 1) for k in range(j - 1, i - 1, -1)]
                 count += len(c)
                 a += c
                 s.insert(i, s[j])
-                del s[j+1]
+                del s[j + 1]
                 break
         else:
             print(-1)

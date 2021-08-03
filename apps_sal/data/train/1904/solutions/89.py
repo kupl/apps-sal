@@ -1,5 +1,7 @@
 import math
 from queue import PriorityQueue
+
+
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         # dist_map = dict()
@@ -9,7 +11,7 @@ class Solution:
         # return [i[0] for i in list(closest_points)[:K]]
         pq = PriorityQueue()
         for point in points:
-            dist = math.sqrt((0-abs(point[0]))**2 + (0-abs(point[1]))**2)
+            dist = math.sqrt((0 - abs(point[0]))**2 + (0 - abs(point[1]))**2)
             pq.put((dist, tuple(point)))
         i = 0
         res = []

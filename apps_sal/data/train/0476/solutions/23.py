@@ -4,7 +4,7 @@ class Solution:
             return 0
         time_required = []
         for i in range(len(position)):
-            time_required.append((target-position[i])/speed[i])
+            time_required.append((target - position[i]) / speed[i])
         time_required = [x for _, x in sorted(zip(position, time_required), reverse=True)]
         print(time_required)
         count = 1

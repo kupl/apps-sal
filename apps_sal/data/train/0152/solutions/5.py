@@ -3,7 +3,7 @@ class Solution:
         n = len(position)
         position.sort()
         res = 0
-        
+
         def count(d):
             cur, ans = position[0], 1
             for i in range(1, n):
@@ -11,7 +11,7 @@ class Solution:
                     ans += 1
                     cur = position[i]
             return ans
-        
+
         l, r = 0, position[-1] - position[0]
         while l < r:
             mid = r - (r - l) // 2

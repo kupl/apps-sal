@@ -2,18 +2,21 @@ import sys
 import collections
 import heapq
 import math
- 
+
 input = sys.stdin.readline
- 
+
+
 def rints(): return list(map(int, input().strip().split()))
 def rstr(): return input().strip()
 def rint(): return int(input().strip())
 def rintas(): return [int(i) for i in input().strip().split()]
-    
-def gcd(a, b):       
-    if (b == 0): 
-         return a 
-    return gcd(b, a%b) 
+
+
+def gcd(a, b):
+    if (b == 0):
+        return a
+    return gcd(b, a % b)
+
 
 n, m = rints()
 graphs = collections.defaultdict(list)
@@ -28,13 +31,15 @@ for _ in range(m):
 times = list()
 seen = set()
 for i in nums:
-    if i in seen: continue
-    mn, mx = i, i    
+    if i in seen:
+        continue
+    mn, mx = i, i
     queue = []
     queue.append(i)
     while queue:
         cur = queue.pop()
-        if cur in seen: continue
+        if cur in seen:
+            continue
         seen.add(cur)
         mn = min(mn, cur)
         mx = max(mx, cur)
@@ -54,14 +59,13 @@ for i in range(1, len(times)):
         ans += 1
         v = max(v, j)
     else:
-        merges.append([u,v])
+        merges.append([u, v])
         u, v = i, j
 
-merges.append([u,v])
+merges.append([u, v])
 # print(merges)
 for u, v in merges:
-    for x in range(u, v+1):
+    for x in range(u, v + 1):
         if x not in seen:
             ans += 1
 print(ans)
-

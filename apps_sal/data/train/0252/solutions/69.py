@@ -28,8 +28,6 @@ class Solution:
                 sol.append(spans[i])
                 step = spans[i][1] + .5
 
-
-
         if step < n:
             return -1
         return len(sol)

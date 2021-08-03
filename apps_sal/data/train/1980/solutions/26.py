@@ -3,7 +3,7 @@ class Node:
         self.val = v
         self.right = None
         self.down = None
-        
+
 
 class Skiplist:
 
@@ -16,7 +16,6 @@ class Skiplist:
             if self.levels:
                 self.levels[-1].down = node
             self.levels.append(node)
-            
 
     def _iter(self, target):
         n = self.levels[0]
@@ -27,14 +26,11 @@ class Skiplist:
             res.append(n)
             n = n.down
         return res
-    
-    
+
     def search(self, target: int) -> bool:
         ns = self._iter(target)
         n = ns[-1]
         return n.right and n.right.val == target
-            
-            
 
     def add(self, num: int) -> None:
         prev = None
@@ -47,7 +43,6 @@ class Skiplist:
             node.right = r
             node.down = prev
             prev = node
-        
 
     def erase(self, num: int) -> bool:
         for i, n in enumerate(reversed(self._iter(num))):
@@ -59,7 +54,6 @@ class Skiplist:
             else:
                 break
         return True
-            
 
 
 # Your Skiplist object will be instantiated and called as such:
@@ -67,4 +61,3 @@ class Skiplist:
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

@@ -1,3 +1,3 @@
-n,k=map(int,input().split())
-_=list(map(int,input().split()))
-print((n-1+k-2)//(k-1))
+n, k = map(int, input().split())
+_ = list(map(int, input().split()))
+print((n - 1 + k - 2) // (k - 1))

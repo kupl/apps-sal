@@ -12,12 +12,11 @@ K = int(input())
 for i in range(len(S)):
     if S[i] != '1':
         break
-#print("i",i)
+# print("i",i)
 
 if K < i + 1:
     print((1))
-    #print("A")
+    # print("A")
 else:
     print((S[i]))
-    #print("B")
-
+    # print("B")

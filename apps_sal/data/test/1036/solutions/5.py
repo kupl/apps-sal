@@ -14,7 +14,6 @@ for _ in range(k):
             tmp += "S"
         else:
             tmp += "P"
-            
+
     s = tmp
 print((s[0]))
-

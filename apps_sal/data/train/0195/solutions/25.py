@@ -3,9 +3,9 @@ class Solution:
         # O(N^2)
         two_and_count = collections.Counter()
         res = 0
-        
+
         for idx, x in enumerate(A):
-            if x == 0: # x & x & x
+            if x == 0:  # x & x & x
                 res += 1
             # y & x & x -> 3
             new_two_and = collections.Counter([x])
@@ -25,7 +25,7 @@ class Solution:
         N = 1 << 16
         dp = [[0] * (N) for _ in range(M + 1)]
         dp[0][N - 1] = 1
-        
+
         for m in range(1, M + 1):
             for v in range(N):
                 for a in A:

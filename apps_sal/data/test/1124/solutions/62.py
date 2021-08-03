@@ -1,5 +1,5 @@
 n = int(input())
-l = [ int(x) for x in input().split() ]
+l = [int(x) for x in input().split()]
 
 while True:
     l = list(set(l))
@@ -19,4 +19,3 @@ while True:
                     l[i] = mn
                 else:
                     l[i] = e % mn
-

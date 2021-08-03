@@ -27,4 +27,3 @@ for cs in range(t):
         if i >= 3:
             ans = max(ans, pre[i - 3] + suf[i])
     print(ans)
-

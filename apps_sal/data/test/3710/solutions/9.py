@@ -8,19 +8,23 @@
 # *********************************************************************
 import math
 
-def LCM(a,b):
-    return int(a/math.gcd(a,b))*b
+
+def LCM(a, b):
+    return int(a / math.gcd(a, b)) * b
+
 
 def DenTofieM():
-    n, k = list(map(int,input().split()))
-    ar = list(map(int,input().split()))
+    n, k = list(map(int, input().split()))
+    ar = list(map(int, input().split()))
 
-    L=1
+    L = 1
     for i in ar:
-        G=math.gcd(i,k)
-        L=LCM(L,G)
-    if L==k: print("Yes")
-    else: print("No")
+        G = math.gcd(i, k)
+        L = LCM(L, G)
+    if L == k:
+        print("Yes")
+    else:
+        print("No")
+
 
 DenTofieM()
-

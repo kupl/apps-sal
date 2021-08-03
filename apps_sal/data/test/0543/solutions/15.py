@@ -22,7 +22,7 @@ for i in range(N):
     elif A[i] == 1:
         A[i] = 0
         if i + 1 <= N - 1:
-            A[i+1] -= 1
+            A[i + 1] -= 1
     else:
         A[i] = 0
 
@@ -32,4 +32,3 @@ for i in range(N):
         return
 
 print("YES")
-

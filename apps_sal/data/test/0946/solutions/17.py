@@ -5,4 +5,3 @@ for i in range(n):
         print("HARD")
         quit()
 print("EASY")
-

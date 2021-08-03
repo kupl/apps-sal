@@ -3,9 +3,9 @@ def find_multiples(integer, limit):
     new_list = []
     new_integer = integer
     while new_integer < limit:
-        new_integer = integer*m
+        new_integer = integer * m
         if new_integer > limit:
             break
         new_list.append(new_integer)
-        m +=1
-    return new_list 
+        m += 1
+    return new_list

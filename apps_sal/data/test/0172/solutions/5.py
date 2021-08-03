@@ -22,4 +22,3 @@ else:
     for i in range(5):
         ans += abs(cntA[i] - cntB[i]) // 2
     print(ans // 2)
-

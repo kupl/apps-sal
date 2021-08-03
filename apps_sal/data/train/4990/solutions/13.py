@@ -10,7 +10,7 @@ def solution(string, ending):
         #ll = -1 * len(ending)
         #string = string[ll:]
         for i in range(len(ending)):
-            if i > len(string)-1:
+            if i > len(string) - 1:
                 break
             if ending[i] == string[i]:
                 continue

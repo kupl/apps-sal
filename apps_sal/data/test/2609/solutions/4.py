@@ -1,10 +1,10 @@
 import sys
- 
+
 # inf = open('input.txt', 'r')
 # reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
- 
+
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -20,9 +20,9 @@ for _ in range(t):
     for k, (e, isEnd, i) in enumerate(edges):
         if isEnd:
             opened.remove(i)
-            if not opened and edges[k-1][2] == i:
+            if not opened and edges[k - 1][2] == i:
                 ctr[i] -= 1
-            elif len(opened) == 1 and edges[k+1][1] == 0:
+            elif len(opened) == 1 and edges[k + 1][1] == 0:
                 for j in opened:
                     ctr[j] += 1
         else:
@@ -32,4 +32,3 @@ for _ in range(t):
     print(segmCtr + max(ctr))
 
 # inf.close()
-

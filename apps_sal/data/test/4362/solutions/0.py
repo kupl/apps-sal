@@ -1,6 +1,6 @@
 S = input()
 ans = 'A'
 if S.islower():
-  ans = 'a'
+    ans = 'a'
 
 print(ans)

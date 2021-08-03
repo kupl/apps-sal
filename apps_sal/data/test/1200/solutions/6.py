@@ -10,6 +10,7 @@ def mcd(a, b):
             b = b % a
     return a + b
 
+
 min_ = mcd(a[1] - a[0], a[2] - a[1])
 for i in range(3, n):
     min_ = mcd(min_, a[i] - a[i - 1])
@@ -24,5 +25,3 @@ for i in range(1, n):
     count += (a[i] - a[i - 1]) // min_ - 1
 
 print(count)
-
-

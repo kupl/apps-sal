@@ -39,4 +39,3 @@ for X, Y in Q:
         ans += tmp_move_ans
         nx, ny = nx + tmp_move_x * d, ny + tmp_move_y * d
     print(ans)
-

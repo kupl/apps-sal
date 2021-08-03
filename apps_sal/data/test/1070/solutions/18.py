@@ -5,7 +5,7 @@ maxs = []
 
 last = line[0]
 count = 1
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if line[i] != last:
         count += 1
     else:
@@ -17,4 +17,3 @@ if maxs == []:
     print(1)
 else:
     print(max(maxs))
-

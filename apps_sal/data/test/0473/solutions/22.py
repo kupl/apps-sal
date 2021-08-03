@@ -2,7 +2,9 @@ def ss(a):
     if a > 9:
         return str(a)
     else:
-        return '0'+str(a)
+        return '0' + str(a)
+
+
 a = [int(x) for x in input().split(':')]
 b = [int(x) for x in input().split(':')]
 h = a[0] - b[0]
@@ -14,4 +16,4 @@ while m < 0:
 h -= hh
 while h < 0:
     h = 24 - abs(h)
-print(ss(h),':',ss(m),sep = '')
+print(ss(h), ':', ss(m), sep='')

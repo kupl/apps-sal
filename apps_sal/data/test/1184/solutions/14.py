@@ -10,4 +10,5 @@ def __starting_point():
     stdin = [ln for ln in [ln.rstrip() for ln in sys.stdin.readlines()[1 if skip_first_line else 0:]] if len(ln) > 0]
     print(main(stdin))
 
+
 __starting_point()

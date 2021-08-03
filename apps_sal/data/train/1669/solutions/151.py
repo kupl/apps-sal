@@ -5,7 +5,7 @@ class Solution:
             if c[i] > 0:
                 for j in range(W)[::-1]:
                     c[i + j] -= c[i]
-                    
+
                     if c[i + j] < 0:
                         return False
         return True

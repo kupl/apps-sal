@@ -11,4 +11,3 @@ for c in s:
     mx = max(mx, x)
 
 print(mx)
-

@@ -2,6 +2,7 @@ import sys
 
 sys.setrecursionlimit(100000)
 
+
 def score(n):
     factor = 1
     ans = 0
@@ -13,6 +14,7 @@ def score(n):
 
     # print('score({}) = {}'.format(save, ans))
     return ans
+
 
 def solve(n, r, half_size):
     # count the number of 1s strictly less than r (0 indexed)
@@ -34,6 +36,7 @@ def solve(n, r, half_size):
 
     return ans
 
+
 def main():
     n, l, r = list(map(int, input().split()))
     b = len(bin(n)) - 2
@@ -45,5 +48,5 @@ def main():
     # print(right, left)
     print(right - left)
 
-main()
 
+main()

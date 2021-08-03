@@ -14,8 +14,8 @@ for r in range(n):
             while s[l] == 'G':
                 l += 1
             l += 1
-    if r-l+1 > max:
-        max = r-l+1
+    if r - l + 1 > max:
+        max = r - l + 1
 ans = max
 if gs < max:
     ans -= 1

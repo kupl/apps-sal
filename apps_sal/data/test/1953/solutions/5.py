@@ -10,4 +10,3 @@ for i in a:
         k += 1
         s = s + i
 print(k)
-

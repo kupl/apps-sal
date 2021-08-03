@@ -10,5 +10,5 @@ def go():
         j += 1
     return o
 
-print(go())
 
+print(go())

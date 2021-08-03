@@ -8,13 +8,15 @@
 # ans = sum(dp[(1 << n) - 1][i])
 # O(n^2*2^n) time complexity, O(2^n) space complexity
 import math
+
+
 class Solution:
     def numSquarefulPerms(self, A: List[int]) -> int:
         n = len(A)
         A = sorted(A)
         g = [[False] * n for _ in range(n)]
         dp = [[0] * n for _ in range(1 << n)]
-        
+
         for i in range(n):
             for j in range(n):
                 if i == j:
@@ -37,9 +39,8 @@ class Solution:
                     if j > 0 and not (s & (1 << (j - 1))) and A[j] == A[j - 1]:  # 出现重复的只使用第一个
                         continue
                     dp[s | (1 << j)][j] += dp[s][i]
-        
+
         res = 0
         for i in range(n):
             res += dp[(1 << n) - 1][i]
         return res
-

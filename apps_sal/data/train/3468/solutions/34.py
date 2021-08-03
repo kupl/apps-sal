@@ -1,6 +1,7 @@
 from collections import deque
 
-def scramble(s1,s2):
+
+def scramble(s1, s2):
     s1 = deque(sorted(s1))
     s2 = sorted(s2)
     for letter in s2:

@@ -5,13 +5,13 @@ class Solution:
             hours[i] = 1 if v > 8 else -1
             pre_sum.append(pre_sum[-1] + hours[i])
 
-        dec_stack = [] # idx to pre_sum
+        dec_stack = []  # idx to pre_sum
         for i, v in enumerate(pre_sum):
             if len(dec_stack) == 0 or (len(dec_stack) > 0 and v < pre_sum[dec_stack[-1]]):
                 dec_stack.append(i)
         max_r = -math.inf
         max_width = 0
-        for r in range(len(pre_sum)-1, -1, -1):
+        for r in range(len(pre_sum) - 1, -1, -1):
             n = pre_sum[r]
             if n < max_r:
                 continue

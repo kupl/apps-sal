@@ -14,7 +14,7 @@ A.sort(reverse=True)
 B.sort(reverse=True)
 
 ret = 0
-AMax=A[0]
+AMax = A[0]
 for b in B:
     if b < AMax or H <= 0:
         break

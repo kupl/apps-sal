@@ -6,6 +6,6 @@ final.remove('0')
 
 first = initial.index(final[0])
 if initial[first:] + initial[:first] == final:
-	print('YES')
+    print('YES')
 else:
-	print('NO')
+    print('NO')

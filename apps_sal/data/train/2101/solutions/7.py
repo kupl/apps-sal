@@ -1,8 +1,8 @@
-import sys 
-from sys import stdin,stdout
+import sys
+from sys import stdin, stdout
 n, m = stdin.readline().split()
-n=int(n)
-m=int(m)
+n = int(n)
+m = int(m)
 e = set(tuple(map(int, stdin.readline().split())) for _ in range(m))
 a = set(range(1, n + 1))
 q = []
@@ -16,4 +16,4 @@ while a:
     c = {v for v in a if (u, v) not in e and (v, u) not in e}
     a -= c
     q += c
-stdout.write(str(r - 1)+'\n')
+stdout.write(str(r - 1) + '\n')

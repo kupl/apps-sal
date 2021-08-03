@@ -14,7 +14,10 @@ for i in range(N + 1):
     l, r = 0, M + 1
     while r - l > 1:
         m = (l + r) // 2
-        if D[m] <= T: l = m
-        else: r = m
-    if T >= 0: ans = max(ans, i + l)
+        if D[m] <= T:
+            l = m
+        else:
+            r = m
+    if T >= 0:
+        ans = max(ans, i + l)
 print(ans)

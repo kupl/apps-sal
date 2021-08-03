@@ -1,4 +1,4 @@
-def remainder(dividend,divisor):
+def remainder(dividend, divisor):
     while divisor <= dividend:
-      dividend = dividend - divisor
+        dividend = dividend - divisor
     return dividend

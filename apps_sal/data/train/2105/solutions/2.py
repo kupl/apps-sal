@@ -9,7 +9,6 @@ else:
         if a[i]:
             for j in range(i * 2, n + 2, i):
                 a[j] = False
-    print(2, 1, sep = '\n', end = '')
+    print(2, 1, sep='\n', end='')
     for i in range(1, n):
-        print('', 2 - a[i + 2], end = '')
-
+        print('', 2 - a[i + 2], end='')

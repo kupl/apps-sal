@@ -5,7 +5,7 @@ class Solution:
         char_list.sort()
         char = char_list[-1]
         res = char
-        for i,c in enumerate(s):
+        for i, c in enumerate(s):
             if c == char:
                 if res < s[i:]:
                     res = s[i:]

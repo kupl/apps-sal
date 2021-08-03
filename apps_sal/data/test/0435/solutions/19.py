@@ -12,8 +12,8 @@ def solve(k, s, c):
         m = max(m, p[i + k + 1] - p[i])
     return m - 1
 
+
 n, k = list(map(int, input().split()))
 s = input()
 
 print(max(solve(k, s, 'a'), solve(k, s, 'b')))
-

@@ -6,14 +6,13 @@ class Solution:
         for i, num in enumerate(arr):
             if i - k < 0:
                 s += num
-                if s >= threshold * k and i == k-1:
+                if s >= threshold * k and i == k - 1:
                     ret += 1
                     print(i)
                 continue
-            s -= arr[i-k]
+            s -= arr[i - k]
             s += num
             if s >= threshold * k:
                 ret += 1
                 print(i)
         return ret
-

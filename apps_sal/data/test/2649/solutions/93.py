@@ -10,4 +10,3 @@ b.sort()
 ans = max(a[-1] - a[0], b[-1] - b[0])
 
 print(ans)
-

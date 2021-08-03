@@ -9,5 +9,4 @@ for _ in range(H):
     count += 1
     pow *= 2
 
-print((2**count-1))
-
+print((2**count - 1))

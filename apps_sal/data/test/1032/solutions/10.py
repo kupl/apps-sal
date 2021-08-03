@@ -8,7 +8,7 @@ for i in range(len(a) - 1, -1, -1):
         _min = a[i] - i
 
 _max = a[-1]
-for i in range(len(a) - 1, p-2, -1):
+for i in range(len(a) - 1, p - 2, -1):
     if _max >= p - 2 - i + a[i]:
         _max = p - 2 - i + a[i]
 
@@ -19,4 +19,3 @@ if result > 0:
         print(i, end=' ')
 """ print('max ', _max)
 print('min ', _min) """
-

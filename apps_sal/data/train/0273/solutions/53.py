@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def racecar(self, target: int) -> int:
         q = deque([(0, 1)])
@@ -17,6 +18,6 @@ class Solution:
                 speed = 1 if speed < 0 else -1
                 if (pos, speed) not in visited:
                     q.append((pos, speed))
-                    visited.add((pos ,speed))
+                    visited.add((pos, speed))
             res += 1
         return res

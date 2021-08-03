@@ -1,6 +1,6 @@
-n,A,cf,cm,mN = list(map(int,input().split()))
+n, A, cf, cm, mN = list(map(int, input().split()))
 
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 aCOPY = []
 for elem in a:
     aCOPY.append(elem)
@@ -44,7 +44,7 @@ for MAXI in range(n + 1):
                 lA = mA
                 rA = mA
                 break
-        lA = min(lA,n - MAXI - 1)
+        lA = min(lA, n - MAXI - 1)
         if a[lA] > m:
             lA -= 1
         expenditure = (lA + 1) * m - aPartialSum[lA + 1]
@@ -71,6 +71,4 @@ for i in range(n):
         inclCount += 1
     if aCOPY[i] < ansMIN:
         aCOPY[i] = ansMIN
-print(" ".join(map(str,aCOPY)))
-
-
+print(" ".join(map(str, aCOPY)))

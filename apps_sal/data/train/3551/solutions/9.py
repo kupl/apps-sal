@@ -1,8 +1,8 @@
 def array_previous_less(arr):
     output = []
     k = 0
-    for i in range(0,len(arr)):
-        for j in range(i,-1,-1):
+    for i in range(0, len(arr)):
+        for j in range(i, -1, -1):
             if arr[j] < arr[i]:
                 output.append(arr[j])
                 k = 1

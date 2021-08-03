@@ -10,11 +10,11 @@ while n > 0:
     temp = n * (n + 1) // 2
     if temp <= num:
         if low == n and low <= high:
-          break
+            break
         low = n
     else:
         if high == n and high >= low:
-          break
+            break
         high = n
 
 # print(low)

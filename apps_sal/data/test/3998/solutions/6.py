@@ -35,13 +35,13 @@ class CodeforcesTask730ASolution:
                         break
                 if not added:
                     #print("edge case 1")
-                    #print(players)
+                    # print(players)
                     moves.append([players[-1][0], players[0][0]])
                     players[0][1] = max(0, players[0][1] - 1)
                     players[-1][1] = max(0, players[-1][1] - 1)
                     players.sort(key=itemgetter(1), reverse=True)
                     while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                        #print(players)
+                        # print(players)
                         players[0][1] = max(0, players[0][1] - 1)
                         players[1][1] = max(0, players[1][1] - 1)
                         moves.append([players[0][0], players[1][0]])
@@ -55,7 +55,7 @@ class CodeforcesTask730ASolution:
                                 added = True
                                 break
                         if not added:
-                            #print(players)
+                            # print(players)
                             #print("edge case 2")
                             moves.append([players[-1][0], players[0][0]])
                             players[0][1] = max(0, players[0][1] - 1)
@@ -121,7 +121,6 @@ class CodeforcesTask730ASolution:
                                                     # print(players)
                                                     print("edge case 5")
 
-
             players.sort(key=itemgetter(1), reverse=True)
             print(players[-1][1])
             print(len(moves))
@@ -146,5 +145,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

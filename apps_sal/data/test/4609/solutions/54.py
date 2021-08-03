@@ -13,4 +13,3 @@ for i in list(nums.values()):
     sum += i % 2
 
 print(sum)
-

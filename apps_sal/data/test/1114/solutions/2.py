@@ -4,6 +4,7 @@ n, m = map(int, input().split())
 fs = list(map(int, input().split()))
 bs = list(map(int, input().split()))
 
+
 def solve(n, m, fs, bs):
     if not is_possible(n, m, fs, bs):
         print('Impossible')
@@ -14,7 +15,8 @@ def solve(n, m, fs, bs):
     else:
         print('Possible')
         print(*ans)
-        
+
+
 def is_possible(n, m, fs, bs):
     setf = set(fs)
     setb = set(bs)
@@ -33,7 +35,6 @@ def solve2(n, m, fs, bs):
         for a in fb:
             As.append(a + 1)
     return As
-    
 
 
 solve(n, m, fs, bs)

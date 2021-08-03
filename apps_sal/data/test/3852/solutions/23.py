@@ -39,4 +39,3 @@ for x, y in ans:
 if list(sorted(A)) != A:
     print(A)
     1 / 0
-

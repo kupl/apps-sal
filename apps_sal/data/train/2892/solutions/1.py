@@ -1,5 +1,6 @@
 import re
 
+
 def case_id(c_str):
     if re.match(r'^([a-z]+\-)+[a-z]+$', c_str):
         return 'kebab'

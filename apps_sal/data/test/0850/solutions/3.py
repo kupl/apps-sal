@@ -2,15 +2,16 @@ import re
 import itertools
 from collections import Counter, deque
 
+
 class Task:
     numbers = []
     answer = set()
-	
+
     def getData(self):
         input()
         self.numbers = [int(x) for x in input().split(' ')]
         #inFile = open('input.txt', 'r')
-        #inFile.readline().rstrip()
+        # inFile.readline().rstrip()
         #self.childs = inFile.readline().rstrip()
 
     def solve(self):
@@ -37,10 +38,10 @@ class Task:
         print(len(self.answer))
         print(re.sub('[\{\},]', '', str(self.answer)))
         #outFile = open('output.txt', 'w')
-        #outFile.write(self.answer)
+        # outFile.write(self.answer)
+
 
 task = Task()
 task.getData()
 task.solve()
 task.printAnswer()
-

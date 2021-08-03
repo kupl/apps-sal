@@ -12,5 +12,5 @@ while(s != t):
     if(k == s):
         print(-1)
         return
-    
+
 print(res)

@@ -16,4 +16,3 @@ if (r + (n + 1) * n // 2) % n == 0:
         print(-1)
 else:
     print(-1)
-

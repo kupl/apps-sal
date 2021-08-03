@@ -2,6 +2,7 @@ import sys
 import collections
 input = sys.stdin.readline
 
+
 def main():
     N, M = [int(x) for x in input().split()]
     A = [int(x) for x in input().split()]
@@ -20,10 +21,8 @@ def main():
     print(ans)
 
 
-
 def __starting_point():
     main()
-
 
 
 __starting_point()

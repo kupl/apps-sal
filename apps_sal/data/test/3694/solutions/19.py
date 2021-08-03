@@ -8,7 +8,7 @@ if common[0][1] > 2 \
         or (len(common) == 2 and common[1][1] == 2):
     print('cslnb')
 else:
-    if (sum(arr) - (n * (n - 1))//2) % 2 == 1:
+    if (sum(arr) - (n * (n - 1)) // 2) % 2 == 1:
         print('sjfnb')
     else:
         print('cslnb')

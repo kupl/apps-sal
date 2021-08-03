@@ -1,7 +1,9 @@
 import sys
 input = sys.stdin.readline
+
+
 def main():
-    N = int( input())
+    N = int(input())
     S = [input().strip() for _ in range(N)]
     Up = []
     Down = []
@@ -17,22 +19,22 @@ def main():
                 m = now
             # print(t, now)
         if now >= 0:
-            Up.append((m,now))
+            Up.append((m, now))
         else:
-            Down.append((m-now,-now))
+            Down.append((m - now, -now))
     up = 0
     Up.sort(reverse=True)
     for m, inc in Up:
-        if up+m < 0:
+        if up + m < 0:
             print("No")
             return
         up += inc
-    
+
     down = 0
     Down.sort(reverse=True)
     # print(Up, Down)
     for m, dec in Down:
-        if down+m < 0:
+        if down + m < 0:
             print("No")
             return
         down += dec
@@ -40,8 +42,10 @@ def main():
         print("No")
         return
     print("Yes")
-    
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,1 +1,1 @@
-str_count = lambda s,l : len([i for i in range(len(s)) if s.startswith(l, i)])
+def str_count(s, l): return len([i for i in range(len(s)) if s.startswith(l, i)])

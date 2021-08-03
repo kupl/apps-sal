@@ -1,5 +1,5 @@
 n, a, b = [int(item) for item in input().split()]
-if n < a + (b-1) or n > a + (b-1) * a:
+if n < a + (b - 1) or n > a + (b - 1) * a:
     print(-1)
     return
 for i in range(a):
@@ -8,11 +8,11 @@ n -= a
 if n == 0:
     print("")
     return
-loop = n // (b-1)
-option = n % (b-1)
-for j in range(b-1):
+loop = n // (b - 1)
+option = n % (b - 1)
+for j in range(b - 1):
     if option > 0:
-        for i in range(loop+1):
+        for i in range(loop + 1):
             print(n - loop - 1 + i + 1, end=" ")
         n -= loop + 1
         option -= 1

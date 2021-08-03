@@ -14,9 +14,10 @@ def move_down(taken, s):
         s -= 1
     return s
 
+
 for t in range(T):
     N, M = [int(_) for _ in input().split()]
-    start = (1 << (M-1))-1
+    start = (1 << (M - 1)) - 1
     taken = set()
     rd = True
     for i in range(N):
@@ -36,4 +37,3 @@ for t in range(T):
         rd = not rd
 
     print(format(start, '0{}b'.format(M)))
-

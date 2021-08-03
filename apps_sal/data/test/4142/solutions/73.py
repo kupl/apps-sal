@@ -1,6 +1,6 @@
 N = str(input())
-a = ['R','U','D']
-b = ['L','U','D']
+a = ['R', 'U', 'D']
+b = ['L', 'U', 'D']
 c = 0
 for i in range(0, len(N)):
     if i % 2 == 0:

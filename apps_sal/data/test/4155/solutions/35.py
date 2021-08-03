@@ -10,5 +10,5 @@ for i in range(N):
         active = H[i]
     else:
         active = H[i]
-        
+
 print(ans)

@@ -8,5 +8,5 @@ def solve(s):
                 max = count
             count = 0
         else:
-            count+=int(ord(letter)) - 96
+            count += int(ord(letter)) - 96
     return max

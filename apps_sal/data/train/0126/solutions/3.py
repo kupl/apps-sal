@@ -4,14 +4,14 @@ class Solution:
         str_dic = {}
         r_end = 0
         ans = 0
-        
+
         def update_ans(length):
             if length >= minSize:
-                return min(length,maxSize) - minSize + 1
+                return min(length, maxSize) - minSize + 1
             return 0
-        
+
         for i in range(len(s)):
-            while (r_end<len(s)):
+            while (r_end < len(s)):
                 ch = s[r_end]
                 if ch in list(word_dic.keys()):
                     word_dic[ch] += 1
@@ -21,8 +21,8 @@ class Solution:
                     else:
                         break
                 r_end += 1
-            for j in range(minSize,min(maxSize,r_end-i) + 1):
-                subs = s[i:i+j]
+            for j in range(minSize, min(maxSize, r_end - i) + 1):
+                subs = s[i:i + j]
                 if subs not in str_dic:
                     str_dic[subs] = 1
                 else:
@@ -34,4 +34,3 @@ class Solution:
             return 0
         else:
             return max(str_dic.values())
-

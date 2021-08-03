@@ -1,8 +1,9 @@
+from bisect import bisect
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
-input = lambda: next(_data)
+def input(): return next(_data)
 
-from bisect import bisect
+
 V = 210000
 primes = []
 is_prime = [True] * V
@@ -35,4 +36,3 @@ while p < n:
     p += 1
 print(len(buf))
 print('\n'.join(buf))
-

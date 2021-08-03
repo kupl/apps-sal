@@ -1,9 +1,10 @@
 import sys
 
+
 def main():
     # fin = open("input.txt", "r")
     fin = sys.stdin
-    
+
     n, m = map(int, fin.readline().split())
     A = []
     for i in range(n):
@@ -19,5 +20,6 @@ def main():
     print(cnt)
 
     fin.close()
+
 
 main()

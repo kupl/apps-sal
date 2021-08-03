@@ -20,4 +20,3 @@ while True:
 print(t)
 for n in nrr:
     print(n, end=' ')
-

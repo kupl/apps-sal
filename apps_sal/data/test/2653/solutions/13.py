@@ -18,13 +18,15 @@ for _ in range(Q):
     p -= 1
     ans[p] += x
 
+
 def dfs(v, p):
     for to in G[v]:
-        if to == p: continue
+        if to == p:
+            continue
         ans[to] += ans[v]
         dfs(to, v)
 
+
 dfs(0, -1)
 for i in range(N):
-    print(ans[i],end=' ')
-
+    print(ans[i], end=' ')

@@ -11,15 +11,15 @@ def main():
     if even == odd == 0:
         a = max(A)
         print(a)
-        print((N-1))
+        print((N - 1))
         flg = 1
-        for i in range(N-1):
+        for i in range(N - 1):
             if A[i] == a:
                 flg = 0
             if flg:
                 print((1))
             else:
-                print((N-i))
+                print((N - i))
         return
 
     ans = []
@@ -49,13 +49,13 @@ def main():
                 if i == N:
                     break
         else:
-            if A[i+2] > 0:
+            if A[i + 2] > 0:
                 ans.append(2)
                 i += 2
             else:
                 ans.append(3)
                 i += 2
-            if i+2 >= N:
+            if i + 2 >= N:
                 break
     if ans[-1] == 3:
         ans.append(2)
@@ -67,5 +67,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

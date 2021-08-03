@@ -14,6 +14,3 @@ class Solution:
             if A[i][1] == 1 and A[i - 1][0] == A[i + 1][0]:
                 res = max(res, min(A[i - 1][1] + 1 + A[i + 1][1], count[A[i - 1][0]]))
         return res
-        
-        
-

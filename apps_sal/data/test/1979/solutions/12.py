@@ -19,4 +19,3 @@ for i, diff in enumerate(diffs):
         diffs[i] = diff + n
 counts = Counter(diffs)
 print(counts.most_common(1)[0][1])
-

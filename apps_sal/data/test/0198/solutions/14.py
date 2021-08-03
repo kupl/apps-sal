@@ -1,7 +1,6 @@
-n=int(input())
+n = int(input())
 
-if n%2==0:
-    print((n-2)//4)
+if n % 2 == 0:
+    print((n - 2) // 4)
 else:
     print(0)
-

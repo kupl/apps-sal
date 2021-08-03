@@ -7,6 +7,7 @@
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         traverse_count = 0
+
         def traverse(node, max_val=float('-inf')):
             nonlocal traverse_count
             if not node:

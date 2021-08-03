@@ -20,7 +20,7 @@ class Solution:
                 ops = curr_ops
         #
         while leftover > 0:
-            #print(f\"leftover {leftover}\")
+            # print(f\"leftover {leftover}\")
             count = leftover // 4
             curr_ops += count
             boarding = 4 * count

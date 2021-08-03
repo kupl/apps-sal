@@ -11,4 +11,3 @@ class Solution:
             if len(h) == K:
                 res = min(res, r * s)
         return res
-

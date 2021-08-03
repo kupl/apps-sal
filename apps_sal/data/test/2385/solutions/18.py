@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 MOD = 10 ** 9 + 7
 
+
 class Factorial:
     def __init__(self, n, mod):
         self.f = [1]
@@ -13,12 +14,16 @@ class Factorial:
         for j in range(n, 0, -1):
             self.i.append(self.i[-1] * j % mod)
         self.i.reverse()
+
     def factorial(self, j):
         return self.f[j]
+
     def ifactorial(self, j):
         return self.i[j]
+
     def comb(self, n, k):
         return self.f[n] * self.i[n - k] % self.mod * self.i[k] % self.mod if n >= k else 0
+
 
 N = int(input())
 
@@ -47,7 +52,7 @@ while stack:
         if next_ == tmp[1]:
             continue
         stack_append((next_, tmp[0]))
-    
+
 size = [1] * N
 dp = [1] * N
 
@@ -77,4 +82,4 @@ for c, p in order[1::]:
     dp2[c] = (tmp * C.ifactorial(size[c] - 1) % MOD) * C.ifactorial(size_red) % MOD
 
 
-print (*dp2, sep = '\n')
+print(*dp2, sep='\n')

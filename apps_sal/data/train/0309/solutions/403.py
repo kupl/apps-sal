@@ -12,7 +12,7 @@ class Solution:
     # (10, 3): 3
     # (10, 8): 2
     # store the last val in a sequence formed, its difference and length
-    
+
     # [24, 13, 1, 100, 0, 94, 3, 0, 3] result = 2
     # (13, 11): 2
     # (1, 23): 2
@@ -35,22 +35,22 @@ class Solution:
     # (3, -97): 2
     # (3, 3, 7): 2
     # (3, -91): 2
-    
+
     def longestArithSeqLength(self, A: List[int]) -> int:
-        
-        seqs = {} # stores mapping of (last_num_in_seq, diff) to length
-        
+
+        seqs = {}  # stores mapping of (last_num_in_seq, diff) to length
+
         result = 2
-        
+
         for i in range(1, len(A)):
             for j in range(i):
                 diff = A[i] - A[j]
-                
+
                 if (A[j], diff, j) in seqs:
                     seqs[(A[i], diff, i)] = seqs[(A[j], diff, j)] + 1
                 else:
                     seqs[(A[i], diff, i)] = 2
-                    
+
                 result = max(result, seqs[(A[i], diff, i)])
-                
+
         return result

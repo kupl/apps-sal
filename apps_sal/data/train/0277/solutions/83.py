@@ -8,4 +8,3 @@ class Solution:
             # meaning all bulbs to the left are ON
             res += 1 if right == i + 1 else 0
         return res
-

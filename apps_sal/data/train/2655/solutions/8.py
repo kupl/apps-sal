@@ -1,6 +1,6 @@
 def duck_shoot(ammo, aim, ducks):
     output = ''
-    kills = int(ammo*aim)
+    kills = int(ammo * aim)
     for duck in ducks:
         if duck == '2':
             if kills > 0:

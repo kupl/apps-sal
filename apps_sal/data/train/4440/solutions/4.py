@@ -2,7 +2,7 @@ def validate_pin(pin):
     """
     Returns True if pin is a string of 4 or 6 digits, False otherwise.
     """
-    
+
     # First check that pin is a string of length 4 or 6
     if(type(pin) != str or len(pin) not in [4, 6]):
         return(False)
@@ -14,4 +14,3 @@ def validate_pin(pin):
 
     # If all the characters are digits, return True
     return(True)
-

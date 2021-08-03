@@ -15,4 +15,3 @@ for i in range(m):
     sum_list += values[i]
 
 print(reverse_list[-1])
-

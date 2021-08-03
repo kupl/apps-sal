@@ -3,6 +3,7 @@ class Solution:
         # sort balls
         position.sort()
         # number of balls that can be placed while the difference of two balls is at least diff
+
         def count_balls(diff):
             nballs, cur = 1, position[0]
             for i in range(1, len(position)):
@@ -19,6 +20,5 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid - 1
-                
-        return right
 
+        return right

@@ -6,19 +6,19 @@ def count(val1, val2):
         digit += 1
 
     res = 0
-    while digit!=0:
+    while digit != 0:
         cnt = int(val1 // val2 ** digit)
-        val1 -= (val2 ** digit)*cnt
+        val1 -= (val2 ** digit) * cnt
         res += cnt
         digit -= 1
 
-    return res,val1
+    return res, val1
 
 
 N = int(input())
 ans = N
 
-for i in range(0,N+1):
+for i in range(0, N + 1):
     n = i
     m = N - i
     res = 0
@@ -35,4 +35,3 @@ for i in range(0,N+1):
     ans = min(ans, res)
 
 print(ans)
-

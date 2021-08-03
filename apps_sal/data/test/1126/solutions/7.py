@@ -25,4 +25,3 @@ else:
     ans += cycle_sum * l
     ans += sum(A[idx[X]:idx[X] + m])
     print(ans)
-

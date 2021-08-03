@@ -5,10 +5,9 @@ cur_pos = 1
 while len(a) > 0:
     nxt = a.pop()
     if nxt > cur_pos:
-        t += nxt-cur_pos
+        t += nxt - cur_pos
     elif nxt < cur_pos:
         t += n - (cur_pos - nxt)
     cur_pos = nxt
 
 print(t)
-

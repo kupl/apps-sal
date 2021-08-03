@@ -10,4 +10,3 @@ else:
     answer = B // A
 
 print(answer)
-

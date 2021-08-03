@@ -7,13 +7,13 @@ for _ in range(t):
     for i in range(n):
         t = int(s[i])
         t %= 2
-        if i%2 == 0:
+        if i % 2 == 0:
             R.append(t)
         else:
             B.append(t)
     R = set(R)
     B = set(B)
-    if n%2 == 1:
+    if n % 2 == 1:
         if 1 in R:
             print(1)
         else:
@@ -23,4 +23,3 @@ for _ in range(t):
             print(2)
         else:
             print(1)
-

@@ -16,11 +16,11 @@ for i in range(60, -1, -1):
         if A[j] >> i & 1:
             A[start_point], A[j] = A[j], A[start_point]
             for k in range(N):
-                if A[k] >> i & 1 and k!=start_point:
+                if A[k] >> i & 1 and k != start_point:
                     A[k] ^= A[start_point]
             start_point += 1
             break
-plus=0
+plus = 0
 for x in A:
-    plus ^=x
-print(res+plus*2)
+    plus ^= x
+print(res + plus * 2)

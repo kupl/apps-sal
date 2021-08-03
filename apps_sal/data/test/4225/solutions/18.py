@@ -4,5 +4,4 @@ if k <= a:
 elif k <= a + b:
     print(a)
 else:
-    print((a-(k - a - b)))
-
+    print((a - (k - a - b)))

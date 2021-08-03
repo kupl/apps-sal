@@ -15,4 +15,3 @@ for i in range(n):
         if t:
             r += 1
         print(r)
-

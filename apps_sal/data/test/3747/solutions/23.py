@@ -6,5 +6,3 @@ while (counter & Bulbasaur) == Bulbasaur:
     counter.subtract(Bulbasaur)
     ans += 1
 print(ans)
-    
-

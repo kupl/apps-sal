@@ -7,4 +7,3 @@ def find_digit(num, nth):
         num = abs(num)
         num = [int(d) for d in str(num)]
         return num[-nth]
-

@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def threeSumMulti(self, A: List[int], target: int) -> int:
         c = Counter(A)
@@ -34,4 +36,4 @@ class Solution:
                 else:
                     a *= count
             res += a
-        return int(res) % (10**9+7)
+        return int(res) % (10**9 + 7)

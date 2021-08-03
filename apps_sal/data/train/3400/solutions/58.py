@@ -1,4 +1,4 @@
-def even_numbers(arr,n):
+def even_numbers(arr, n):
     arr.reverse()
     output = []
     i = 0

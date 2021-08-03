@@ -1,6 +1,6 @@
 N = int(input())
 L, L1, L2 = [], {}, {}
-for i in range(0,N):
+for i in range(0, N):
     x, y = map(int, input().split())
     L.append(x)
     L.append(y)
@@ -17,16 +17,16 @@ L.sort()
 persons = 0
 s = 0
 M = 1000000007
-for elem in range(L[0], L[-1]+1):
+for elem in range(L[0], L[-1] + 1):
     if elem in L1:
         persons += L1[elem]
         deboard = False
     if elem in L2:
         deboard = True
-    
+
     s += persons
     if deboard:
         persons -= L2[elem]
         deboard = False
 
-print(s%M)
+print(s % M)

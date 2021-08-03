@@ -7,4 +7,3 @@ class Solution:
                 p.append(dp[t - c] * 10 + i + 1)
                 dp[t] = max(p)
         return str(max(dp[t], 0))
-

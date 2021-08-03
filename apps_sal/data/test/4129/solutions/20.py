@@ -7,9 +7,9 @@ def main():
     graph = [[] for _ in range(n)]
     for _ in range(m):
         u, v = map(int, input().split())
-        graph[u-1].append(v-1)
+        graph[u - 1].append(v - 1)
 
-    seen = [False]*n
+    seen = [False] * n
     li = deque()
 
     def visit(node):
@@ -27,7 +27,7 @@ def main():
 
     for i in range(n):
         visit(i)
-    seen = [False]*n
+    seen = [False] * n
     cnt = 0
     visit2(s)
     for i in li:
@@ -37,10 +37,13 @@ def main():
         cnt += 1
     print(cnt)
 
+
 def __starting_point():
     try:
         main()
     except:
         print('error!')
         return
+
+
 __starting_point()

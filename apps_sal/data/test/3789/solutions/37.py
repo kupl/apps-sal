@@ -1,5 +1,8 @@
 # Dinic's algorithm
+import sys
 from collections import deque
+
+
 class Dinic:
     def __init__(self, N):
         self.N = N
@@ -18,7 +21,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -58,26 +61,25 @@ class Dinic:
         return flow
 
 
-import sys
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 
 n = int(input())
-a = list( map(int, input().split()))
+a = list(map(int, input().split()))
 
 score = 0
 INF = float('inf')
-graph = Dinic(n+2)
+graph = Dinic(n + 2)
 
 for i in range(n):
-    if a[i]>0:
-        graph.add_edge(i+1,n+1,a[i])
+    if a[i] > 0:
+        graph.add_edge(i + 1, n + 1, a[i])
         score += a[i]
-    elif a[i]<0:
-        graph.add_edge(0,i+1,-a[i])
+    elif a[i] < 0:
+        graph.add_edge(0, i + 1, -a[i])
 
-for i in range(1,n//2+1):
-    for j in range(2*i,n+1,i):
-        graph.add_edge(i,j,INF)
+for i in range(1, n // 2 + 1):
+    for j in range(2 * i, n + 1, i):
+        graph.add_edge(i, j, INF)
 
-print(score-graph.flow(0,n+1))
+print(score - graph.flow(0, n + 1))

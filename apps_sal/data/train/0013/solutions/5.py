@@ -13,5 +13,3 @@ for q in range(t):
         print(num)
     else:
         print(d)
-    
-

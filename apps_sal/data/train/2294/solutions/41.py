@@ -46,4 +46,3 @@ for i in range(len(Ball)):
 
 ans = min(ans, (MAX - MIN) * (max(B) - min(B)))
 print(ans)
-

@@ -1,5 +1,6 @@
 from sys import stdin, stdout
 
+
 def main():
     s = stdin.readline().rstrip()
     res = 0
@@ -10,5 +11,6 @@ def main():
         if int(s[i:i + 2]) % 4 == 0:
             res += i + 1
     stdout.write(str(res))
-    
+
+
 main()

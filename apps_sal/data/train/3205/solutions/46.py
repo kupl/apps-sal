@@ -1,6 +1,6 @@
-def is_divisible(n,x,y):
+def is_divisible(n, x, y):
     if n > 0:
-        if n%x==0 and n%y==0:
+        if n % x == 0 and n % y == 0:
             return True
         else:
             return False

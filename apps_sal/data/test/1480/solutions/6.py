@@ -4,7 +4,7 @@ children = list(range(1, n + 1))
 
 pos = 0
 for i in range(k):
-	pos = (pos + a[i]) % len(children)
-	print(children[pos], end = ' ')
-	del children[pos]
+    pos = (pos + a[i]) % len(children)
+    print(children[pos], end=' ')
+    del children[pos]
 print()

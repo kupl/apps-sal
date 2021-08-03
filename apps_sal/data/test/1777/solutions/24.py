@@ -44,7 +44,7 @@ for i in a:
     if not flag:
         continue
     kk[cnt] = kk.get(cnt, 0) + 1
-#print(kk)
+# print(kk)
 ans = 0
 for i in kk.keys():
     if i >= 0:

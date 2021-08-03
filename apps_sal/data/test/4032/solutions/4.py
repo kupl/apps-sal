@@ -1,11 +1,11 @@
-n,k=list(map(int,input().split()))
-a=list(map(int,input().split()))
-while len(a)!=0 and a[0]<=k: a.pop(0)
-while len(a)!=0 and a[-1]<=k: a.pop()
-print(n-len(a))
-  
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
+while len(a) != 0 and a[0] <= k:
+    a.pop(0)
+while len(a) != 0 and a[-1] <= k:
+    a.pop()
+print(n - len(a))
 
-    
 
 '''
 ////////////////      //////        ///////      //             ///////     //  //   //
@@ -14,5 +14,3 @@ print(n-len(a))
 ////     /////    ///       /// ///        ///   //          ///    ///     ////     //   //
 //////////////     ///////////   ///////////     //////     ///     ///     //  //   //   //
 '''
-
-

@@ -18,4 +18,3 @@ for _ in range(t):
         print('NO')
 
 # inf.close()
-

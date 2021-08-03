@@ -5,7 +5,7 @@ class Solution:
         waiting = 0
         cur_profit = 0
         i = 0
-        
+
         for customer in customers:
             i += 1
             if customer > 4:
@@ -22,7 +22,7 @@ class Solution:
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 step = i
-            
+
         while waiting > 0:
             i += 1
             if waiting >= 4:
@@ -34,8 +34,5 @@ class Solution:
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 step = i
-            
-        return step
-            
-                
 
+        return step

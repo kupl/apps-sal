@@ -1,5 +1,7 @@
 from collections import defaultdict, Counter
 from bisect import bisect
+
+
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
         sum_nums = sum(nums)
@@ -15,23 +17,19 @@ class Solution:
             temp = (pref_arr[-1] + num) % p
             mapping[temp].append(i)
             pref_arr.append(temp)
-        
-        
+
         ans = float('inf')
         # need to find shortest subarray who's sum % p == sum_nums % p
 
         # loop through all indices and see if sub-array possible starting at that index
-        for i in range (n + 1):
-            r = (desired_rem + pref_arr[i])%p
+        for i in range(n + 1):
+            r = (desired_rem + pref_arr[i]) % p
             if r not in mapping:
-                continue 
+                continue
             arr = mapping[r]
             index = bisect(arr, i)
             if index == len(arr):
                 continue
             ans = min(ans, arr[index] - i + 1)
-        
-        return ans if ans < n else -1
-        
-        
 
+        return ans if ans < n else -1

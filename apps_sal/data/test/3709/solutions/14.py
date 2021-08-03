@@ -11,5 +11,5 @@ for t in s:
             else:
                 print("YES")
                 return
-                
+
 print("NO")

@@ -18,4 +18,3 @@ else:
             ans = plus_x
             break
 print(ans)
-

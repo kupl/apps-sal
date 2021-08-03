@@ -40,7 +40,7 @@ def resolve():
     S = input()
 
     ans = "No"
-    if N % 2 == 0 and S[:N//2] == S[N//2:]:
+    if N % 2 == 0 and S[:N // 2] == S[N // 2:]:
         ans = "Yes"
 
     print(ans)
@@ -49,5 +49,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

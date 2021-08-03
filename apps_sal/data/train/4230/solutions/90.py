@@ -8,5 +8,3 @@ def reverse_letter(string):
         else:
             newlst.append(item)
     return "".join(newlst)
-
-

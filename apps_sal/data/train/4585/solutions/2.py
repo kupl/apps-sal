@@ -21,7 +21,7 @@ for i in range(10):
                 x = x + s[-2] % 10
             else:
                 x = (x // 10) + (x % 10)
-            
+
             pair = (s[-1], x)
             if pair not in seen:
                 s.append(x)
@@ -34,11 +34,12 @@ for i in range(10):
                 lookup[start] = (''.join(map(str, prefix)), ''.join(map(str, loop)))
                 break
 
+
 def find(a, b, n):
     start = f'{a}{b}'[-2:].rjust(2, '0')
     prefix, loop = lookup[start]
     s = str(a) + str(b) + prefix + loop
-    
+
     if n < len(s):
         # Digit in initial supplied digits, the sum of their last two digits or the prefix
         return int(s[n])
@@ -46,4 +47,3 @@ def find(a, b, n):
     # Digit is in the loop
     m = (n - len(s)) % len(loop)
     return int(loop[m])
-

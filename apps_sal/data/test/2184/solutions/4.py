@@ -1,7 +1,7 @@
 table = "!x&x x&y&z !z&x&y x&y !y&x&z x&z !y&x&z|!z&x&y (y|z)&x !y&!z&x !y&!z&x|x&y&z !z&x !z&x|x&y !y&x !y&x|x&z !(y&z)&x x !x&y&z y&z !x&y&z|!z&x&y (x|z)&y !x&y&z|!y&x&z (x|y)&z !x&y&z|!y&x&z|!z&x&y (x|y)&z|x&y !x&y&z|!y&!z&x !y&!z&x|y&z !x&y&z|!z&x !z&x|y&z !x&y&z|!y&x !y&x|y&z !(y&z)&x|!x&y&z x|y&z !x&!z&y !x&!z&y|x&y&z !z&y !z&y|x&y !x&!z&y|!y&x&z !x&!z&y|x&z !y&x&z|!z&y !z&y|x&z !(!x&!y|x&y|z) !(!x&!y|x&y|z)|x&y&z !z&(x|y) !z&(x|y)|x&y !x&!z&y|!y&x !x&!z&y|!y&x|x&z !y&x|!z&y !z&y|x !x&y !x&y|y&z !(x&z)&y y !x&y|!y&x&z !x&y|x&z !(x&z)&y|!y&x&z x&z|y !x&y|!y&!z&x !x&y|!y&!z&x|y&z !x&y|!z&x !z&x|y !x&y|!y&x !x&y|!y&x|x&z !(x&z)&y|!y&x x|y !x&!y&z !x&!y&z|x&y&z !x&!y&z|!z&x&y !x&!y&z|x&y !y&z !y&z|x&z !y&z|!z&x&y !y&z|x&y !(!x&!z|x&z|y) !(!x&!z|x&z|y)|x&y&z !x&!y&z|!z&x !x&!y&z|!z&x|x&y !y&(x|z) !y&(x|z)|x&z !y&z|!z&x !y&z|x !x&z !x&z|y&z !x&z|!z&x&y !x&z|x&y !(x&y)&z z !(x&y)&z|!z&x&y x&y|z !x&z|!y&!z&x !x&z|!y&!z&x|y&z !x&z|!z&x !x&z|!z&x|x&y !x&z|!y&x !y&x|z !(x&y)&z|!z&x x|z !(!y&!z|x|y&z) !(!y&!z|x|y&z)|x&y&z !x&!y&z|!z&y !x&!y&z|!z&y|x&y !x&!z&y|!y&z !x&!z&y|!y&z|x&z !y&z|!z&y !y&z|!z&y|x&y !(!x&!y|x&y|z)|!x&!y&z !(!x&!y|x&y|z)|!x&!y&z|x&y&z !x&!y&z|!z&(x|y) !x&!y&z|!z&(x|y)|x&y !x&!z&y|!y&(x|z) !x&!z&y|!y&(x|z)|x&z !y&(x|z)|!z&y !y&z|!z&y|x !x&(y|z) !x&(y|z)|y&z !x&z|!z&y !x&z|y !x&y|!y&z !x&y|z !(x&y)&z|!z&y y|z !x&(y|z)|!y&!z&x !x&(y|z)|!y&!z&x|y&z !x&(y|z)|!z&x !x&z|!z&x|y !x&(y|z)|!y&x !x&y|!y&x|z !x&y|!y&z|!z&x x|y|z !(x|y|z) !(x|y|z)|x&y&z !(!x&y|!y&x|z) !(x|y|z)|x&y !(!x&z|!z&x|y) !(x|y|z)|x&z !(!x&y|!y&x|z)|!y&x&z !(x|y|z)|(y|z)&x !y&!z !y&!z|x&y&z !(!x&y|z) !y&!z|x&y !(!x&z|y) !y&!z|x&z !(!x&y|z)|!y&x !y&!z|x !(!y&z|!z&y|x) !(x|y|z)|y&z !(!x&y|!y&x|z)|!x&y&z !(x|y|z)|(x|z)&y !(!x&z|!z&x|y)|!x&y&z !(x|y|z)|(x|y)&z !(!x&y|!y&x|z)|!x&y&z|!y&x&z !(x|y|z)|(x|y)&z|x&y !x&y&z|!y&!z !y&!z|y&z !(!x&y|z)|!x&y&z !(!x&y|z)|y&z !(!x&z|y)|!x&y&z !(!x&z|y)|y&z !(!x&y|z)|!x&y&z|!y&x !y&!z|x|y&z !x&!z !x&!z|x&y&z !(!y&x|z) !x&!z|x&y !x&!z|!y&x&z !x&!z|x&z !(!y&x|z)|!y&x&z !(!y&x|z)|x&z !(x&y|z) !(x&y|z)|x&y&z !z !z|x&y !x&!z|!y&x !(x&y|z)|x&z !y&x|!z !z|x !(!y&z|x) !x&!z|y&z !(!y&x|z)|!x&y !x&!z|y !(!y&z|x)|!y&x&z !(!y&z|x)|x&z !(!y&x|z)|!x&y|!y&x&z !x&!z|x&z|y !x&y|!y&!z !(x&y|z)|y&z !x&y|!z !z|y !(!x&!y&z|x&y) !x&!z|!y&x|y&z !x&y|!y&x|!z !z|x|y !x&!y !x&!y|x&y&z !x&!y|!z&x&y !x&!y|x&y !(!z&x|y) !x&!y|x&z !(!z&x|y)|!z&x&y !(!z&x|y)|x&y !(x&z|y) !(x&z|y)|x&y&z !x&!y|!z&x !(x&z|y)|x&y !y !y|x&z !y|!z&x !y|x !(!z&y|x) !x&!y|y&z !(!z&y|x)|!z&x&y !(!z&y|x)|x&y !(!z&x|y)|!x&z !x&!y|z !(!z&x|y)|!x&z|!z&x&y !x&!y|x&y|z !x&z|!y&!z !(x&z|y)|y&z !(!x&!z&y|x&z) !x&!y|!z&x|y&z !x&z|!y !y|z !x&z|!y|!z&x !y|x|z !(x|y&z) !(x|y&z)|x&y&z !x&!y|!z&y !(x|y&z)|x&y !x&!z|!y&z !(x|y&z)|x&z !(!y&!z&x|y&z) !x&!y|!z&y|x&z !((x|y)&z|x&y) !((x|y)&z|x&y)|x&y&z !x&!y|!z !x&!y|!z|x&y !x&!z|!y !x&!z|!y|x&z !y|!z !y|!z|x !x !x|y&z !x|!z&y !x|y !x|!y&z !x|z !x|!y&z|!z&y !x|y|z !x|!y&!z !x|!y&!z|y&z !x|!z !x|!z|y !x|!y !x|!y|z !(x&y&z) !x|x".split()
 n = int(input())
 for i in range(n):
-	print(table[int(input(), 2)])
+    print(table[int(input(), 2)])
 return
 
 
@@ -16,6 +16,7 @@ fam = 2 ** 8
 tmpl = '#' * 99
 ans = [tmpl] * fam
 
+
 def cmpr(E):
     nonlocal ans
     ans = [tmpl] * fam
@@ -25,8 +26,10 @@ def cmpr(E):
             ans[res] = e
     return set(ans) - {tmpl}
 
+
 def cmpr3(E, T, F):
     return cmpr(E), cmpr(T), cmpr(F)
+
 
 while prv != (E, T, F):
     prv = E.copy(), T.copy(), F.copy()
@@ -48,5 +51,5 @@ cmpr(E)
 
 for f in ans:
     print(f)
-    
+
 print(ans.count(tmpl), fam - ans.count(tmpl))

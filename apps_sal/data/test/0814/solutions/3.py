@@ -16,4 +16,3 @@ for i in range(0, n):
     res.append(str(x))
 
 print(' '.join(res))
-

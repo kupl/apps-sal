@@ -15,4 +15,3 @@ for i in dels:
     if i >= a:
         j = min(j, i - a)
 print(min((x % a - a) % x, j))
-

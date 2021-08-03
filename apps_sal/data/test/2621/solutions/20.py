@@ -13,4 +13,3 @@ for i in range(t):
         else:
             bag += columns[i] - max(0, columns[i + 1] - k)
     print('YES' if ok else 'NO')
-

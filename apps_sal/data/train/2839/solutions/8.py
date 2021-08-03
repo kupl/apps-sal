@@ -3,10 +3,10 @@ def count_adjacent_pairs(st):
         return 0
     res = 0
     arr = [i.lower() for i in st.split()]
-    for i in range(len(arr)-1):
+    for i in range(len(arr) - 1):
         if i == 0:
-            if arr[i] == arr[i+1]:
+            if arr[i] == arr[i + 1]:
                 res += 1
-        elif arr[i] == arr[i+1] != arr[i-1]:
+        elif arr[i] == arr[i + 1] != arr[i - 1]:
             res += 1
     return res

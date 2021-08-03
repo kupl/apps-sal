@@ -11,4 +11,3 @@ for t in range(int(input())):
             break
     else:
         print("YES")
-

@@ -6,7 +6,7 @@ from collections import deque
 
 
 H, W = list(map(int, input().split()))
-grid = [list(input()) for _ in range(H)] # .は白、#は黒
+grid = [list(input()) for _ in range(H)]  # .は白、#は黒
 visited = [[-1] * W for _ in range(H)]
 moves = [(1, 0), (0, 1), (-1, 0), (0, -1)]
 
@@ -21,7 +21,7 @@ while q:
         moved_y = y + dy
         moved_x = x + dx
 
-        if moved_y < 0 or H-1 < moved_y or moved_x < 0 or W-1 < moved_x:
+        if moved_y < 0 or H - 1 < moved_y or moved_x < 0 or W - 1 < moved_x:
             continue
         if grid[moved_y][moved_x] == '#':
             continue
@@ -31,7 +31,7 @@ while q:
         visited[moved_y][moved_x] = visited[y][x] + 1
         q.append((moved_y, moved_x))
 
-min_route = visited[H-1][W-1]
+min_route = visited[H - 1][W - 1]
 
 if min_route == -1:
     answer = -1
@@ -43,6 +43,3 @@ else:
     answer = total_white - min_route - 1
 
 print(answer)
-
-
-

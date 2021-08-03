@@ -11,4 +11,3 @@ if b1 == b2:
     print('YES')
 else:
     print('NO')
-

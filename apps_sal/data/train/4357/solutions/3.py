@@ -1,3 +1,3 @@
 def nth_smallest(arr, pos):
     arr.sort()
-    return arr[pos-1]
+    return arr[pos - 1]

@@ -1,5 +1,5 @@
 def unflatten(flat_array):
-    #your code here
+    # your code here
     result = []
     index = 0
     while index < len(flat_array):

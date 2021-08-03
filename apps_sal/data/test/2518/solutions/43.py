@@ -33,4 +33,3 @@ while abs(ok - ng) > 1:
         ng = mid
 
 print(ok)
-

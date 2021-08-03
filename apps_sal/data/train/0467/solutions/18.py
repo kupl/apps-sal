@@ -3,15 +3,14 @@ class Solution:
         res = 0
         for num in nums:
             divisor = set()
-            for i in range(1, int(sqrt(num))+1):
-                if num%i == 0:
-                    divisor.add(num//i)
+            for i in range(1, int(sqrt(num)) + 1):
+                if num % i == 0:
+                    divisor.add(num // i)
                     divisor.add(i)
                 if len(divisor) > 4:
                     break
-                
+
             if len(divisor) == 4:
                 res += sum(divisor)
-        
-        return res
 
+        return res

@@ -23,4 +23,3 @@ for h in product(list(range(2)), repeat=H):
             ans += 1
 
 print(ans)
-

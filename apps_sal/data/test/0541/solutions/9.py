@@ -12,4 +12,3 @@ for a, b in a_b_l:
     prev_removed_bridge = b - 1
     ans += 1
 print(ans)
-

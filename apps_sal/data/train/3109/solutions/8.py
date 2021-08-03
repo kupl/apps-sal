@@ -1,5 +1,6 @@
 import string
 
+
 def find_char_index(word, mode='f'):
     word = [x for x in word]
     if mode == 'f':
@@ -16,6 +17,7 @@ def find_char_index(word, mode='f'):
             else:
                 return len(word) - (index + 1)
 
+
 def scramble_words(sentence):
     words = sentence.split(' ')
     final = []
@@ -23,7 +25,7 @@ def scramble_words(sentence):
 
         first_index = find_char_index(word, 'f')
         last_index = find_char_index(word, 'l')
-        
+
         res = ""
         ext_char = []
         for index, char in enumerate(word):
@@ -35,6 +37,3 @@ def scramble_words(sentence):
         final.append(res.format(*sorted(ext_char)))
 
     return " ".join(final)
-
-
-

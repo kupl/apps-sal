@@ -1,9 +1,9 @@
 class Solution:
     def largestNumber(self, cost: List[int], target: int) -> str:
-        dp = [0] + [-float('inf')] * (5000+ target)
-        for i in range(1, target+1):
+        dp = [0] + [-float('inf')] * (5000 + target)
+        for i in range(1, target + 1):
             for j, c in enumerate(cost):
-                dp[i] = max(dp[i], 10 * dp[i-c] + j + 1)
+                dp[i] = max(dp[i], 10 * dp[i - c] + j + 1)
         return str(max(dp[target], 0))
     '''  
     def largestNumber(self, cost, target):

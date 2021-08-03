@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class ASinglePush:
     def solve(self):
@@ -29,8 +30,8 @@ class ASinglePush:
                 # print(u[l:r + 1], l, r)
                 print("YES" if u[l] > 0 and u[l:r + 1] == [u[l]] * (r - l + 1) else "NO")
 
+
 solver = ASinglePush()
 input = sys.stdin.readline
 
 solver.solve()
-

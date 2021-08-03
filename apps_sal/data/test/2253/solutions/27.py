@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     t = int(input())
     for i in range(t):
@@ -11,7 +12,9 @@ def main():
         else:
             print('KOREAN')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

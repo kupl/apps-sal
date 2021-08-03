@@ -11,4 +11,3 @@ if n != 0:
 else:
     ans = x
 print(ans)
-

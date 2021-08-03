@@ -4,4 +4,3 @@ def remove_exclamation_marks(s):
         if e != "!":
             new_string += e
     return new_string
-

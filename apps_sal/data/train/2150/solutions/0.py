@@ -56,7 +56,7 @@ for i in s:
     val += i + 1
     val %= MOD
     pref.append(val)
-        
+
 
 q = int(input())
 out = []
@@ -101,7 +101,6 @@ for _ in range(q):
             preHash -= pref[smap] * pow(3, emap - smap + 1, MOD)
             preHash %= MOD
 
-
         if length == 0 and prep and app:
             app = False
 
@@ -112,17 +111,14 @@ for _ in range(q):
         if app:
             preHash *= 3
             preHash += 2
-        #print(preHash)
+        # print(preHash)
 
         preHash %= MOD
         hashes.append(preHash)
-        
+
     if hashes[0] == hashes[1]:
         out.append('Yes')
     else:
         out.append('No')
 
 print('\n'.join(out))
-
-    
-

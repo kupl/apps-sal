@@ -1,8 +1,8 @@
-import math 
+import math
 
 
 def get_grade(a, b, c):
-    mean = math.floor((a+b+c)/3)
+    mean = math.floor((a + b + c) / 3)
     print(mean)
     grades = {'A': [100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90],
               'B': [98, 88, 87, 86, 85, 84, 83, 82, 81, 80],
@@ -12,4 +12,3 @@ def get_grade(a, b, c):
         if mean in grades[k]:
             return k
     return 'F'
-

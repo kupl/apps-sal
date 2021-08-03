@@ -22,4 +22,5 @@ def __starting_point():
                     nmax = r[i] + c[j] + (cell[i][j] == '.')
         print(str(m + n - nmax) + '\n')
 
+
 __starting_point()

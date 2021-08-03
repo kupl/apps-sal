@@ -22,4 +22,3 @@ for i in range(k):
     c -= d
 
 print(ans)
-

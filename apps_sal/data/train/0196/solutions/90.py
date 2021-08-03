@@ -11,10 +11,10 @@ class Solution(object):
         # Want largest P[j] - P[i] with 1 <= j-i <= N
         # For each j, want smallest P[i] with i >= j-N
         ans = A[0]
-        deque = collections.deque([0]) # i's, increasing by P[i]
+        deque = collections.deque([0])  # i's, increasing by P[i]
         for j in range(1, len(P)):
             # If the smallest i is too small, remove it.
-            if deque[0] < j-N:
+            if deque[0] < j - N:
                 deque.popleft()
 
             # The optimal i is deque[0], for cand. answer P[j] - P[i].

@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def dfs(self, i, j, m, n, grid):
         tmp = grid[i][j]
@@ -10,14 +12,15 @@ class Solution:
                 max_next_sum = max(max_next_sum, self.dfs(new_i, new_j, m, n, grid))
         grid[i][j] = tmp
         return grid[i][j] + max_next_sum
-        
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         # DFS, try dfs from every non-zero position
         # Key: visited matrix WILL NOT work in this question, because CAN NOT guarantee previous path(i, j) NOT overlap with current path
-        
+
         res = 0
-        if len(grid) < 1 or len(grid[0]) < 1: return res
-        
+        if len(grid) < 1 or len(grid[0]) < 1:
+            return res
+
         m, n = len(grid), len(grid[0])
         for i in range(m):
             for j in range(n):

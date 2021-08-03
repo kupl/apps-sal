@@ -5,11 +5,13 @@ A = list(map(int, input().split()))
 
 A.sort()
 
+
 def isOverEq(n):
     cnt = 0
     for a in A:
         cnt += N - bisect_left(A, n - a)
     return cnt >= M
+
 
 overEq = -1
 less = A[-1] * 2 + 100
@@ -34,4 +36,3 @@ for a in A:
 
 ans -= max(0, cnt - M) * overEq
 print(ans)
-

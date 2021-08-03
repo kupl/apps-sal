@@ -1,1 +1,2 @@
-for i in [0]*int(input()):print(sum(map(int,input().split()))-1)
+for i in [0] * int(input()):
+    print(sum(map(int, input().split())) - 1)

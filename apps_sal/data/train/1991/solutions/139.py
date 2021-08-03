@@ -1,5 +1,5 @@
 class Solution:
-    @lru_cache(1024*1024)
+    @lru_cache(1024 * 1024)
     def helper(self, fuel_left, curr, target):
         su = 0
         # if fuel_left < 0:
@@ -7,7 +7,8 @@ class Solution:
         if curr == target:
             su += 1
         for i in range(len(self.locations)):
-            if i == curr: continue
+            if i == curr:
+                continue
             spent = abs(self.locations[curr] - self.locations[i])
             if fuel_left >= spent:
                 su += self.helper(fuel_left - spent, i, target)
@@ -15,6 +16,7 @@ class Solution:
         # print('here =', self.locations[curr])
         # print('ans =', su)
         return su
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         self.locations = locations
         # self.street = sorted(locations)

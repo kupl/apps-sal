@@ -1,7 +1,7 @@
 n = int(input())
 sosed = dict()
 for c in range(n):
-    sosed[c+1] = set()
+    sosed[c + 1] = set()
 z1, z2 = map(int, input().split())
 sosed[z1].add(z2)
 sosed[z2].add(z1)
@@ -18,11 +18,10 @@ cnt = 0
 i = i[0]
 print(1, end=" ")
 pred.add(1)
-while cnt < n-1:
+while cnt < n - 1:
     cnt += 1
     print(i, end=" ")
     pred.add(i)
     for y in sosed[i]:
         if y not in pred:
             i = y
-

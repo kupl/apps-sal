@@ -6,8 +6,7 @@ for char in s:
     if char == '1':
         curr += 1
     else:
-        print(curr, end = '')
+        print(curr, end='')
         curr = 0
-        
-print(curr)
 
+print(curr)

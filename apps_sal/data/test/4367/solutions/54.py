@@ -1,7 +1,7 @@
-N,R=map(int, input().split())
+N, R = map(int, input().split())
 
-if N>=10:
+if N >= 10:
     print(str(R))
 else:
-    x=R+(100*(10-N))
+    x = R + (100 * (10 - N))
     print(str(x))

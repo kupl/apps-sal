@@ -1,6 +1,6 @@
 def reverse_list(l):
-    tab=[]
+    tab = []
     for x in range(len(l)):
-        tab.append(l[-x-1])
-        
+        tab.append(l[-x - 1])
+
     return tab

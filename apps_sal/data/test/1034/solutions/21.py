@@ -7,15 +7,15 @@ s = []
 
 for i in A:
     for j in B:
-        e.append(i+j)
+        e.append(i + j)
 e = sorted(e, reverse=True)
 
-if K<len(e):
+if K < len(e):
     e = e[0:K]
 
 for i in e:
     for j in C:
-        s.append(i+j)
+        s.append(i + j)
 
 s = sorted(s, reverse=True)
 

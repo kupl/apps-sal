@@ -6,5 +6,5 @@ class Solution:
             piles.pop()
             ret += piles.pop()
             piles.pop(0)
-        
+
         return ret

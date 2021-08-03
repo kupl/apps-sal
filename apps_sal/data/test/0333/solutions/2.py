@@ -2,6 +2,6 @@ a = input()
 b = input()
 
 if a == b:
-	print(-1)
+    print(-1)
 else:
-	print(max(len(a), len(b)))
+    print(max(len(a), len(b)))

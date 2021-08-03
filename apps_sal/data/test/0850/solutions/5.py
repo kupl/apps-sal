@@ -7,14 +7,16 @@ def check(a, b):
         b //= 10
     return True
 
+
 K = int(input())
 d = sorted(map(int, input().split()))
 
 flag = False
 if d and not d[0]:
-    flag = True; del d[0]
+    flag = True
+    del d[0]
 
-ans = [d[0]] if d else [] 
+ans = [d[0]] if d else []
 for i in range(len(d)):
     for j in range(i):
         if check(d[i], d[j]):
@@ -23,8 +25,7 @@ for i in range(len(d)):
                     ans = [d[i], d[j], d[k]]
             if len(ans) < 2:
                 ans = [d[i], d[j]]
-if flag: ans.append(0)
+if flag:
+    ans.append(0)
 print(len(ans))
 print(*ans)
-
-

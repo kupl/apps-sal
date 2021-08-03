@@ -6,6 +6,7 @@ def mdmax(x):
         b.append(x[i][0] + x[i][1])
     return max(max(a) - min(a), max(b) - min(b))
 
+
 n = int(input())
 data = []
 for i in range(n):

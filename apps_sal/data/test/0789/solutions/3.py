@@ -18,7 +18,6 @@ for i in range(len(inp) - 1, -1, -1):
     p *= 2
 
 res += 1
-        
+
 
 print(res)
-

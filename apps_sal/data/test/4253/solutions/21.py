@@ -1,2 +1,2 @@
-r=int(input())
-print(3*r*r)
+r = int(input())
+print(3 * r * r)

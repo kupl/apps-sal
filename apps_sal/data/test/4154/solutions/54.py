@@ -8,4 +8,4 @@ for l, r in lr:
     else:
         print(0)
         return
-print(rr-ll+1)
+print(rr - ll + 1)

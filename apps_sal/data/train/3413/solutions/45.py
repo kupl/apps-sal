@@ -1,5 +1,6 @@
 def solution(nums):
-    if nums == None: return []
+    if nums == None:
+        return []
     else:
         x = []
         for i in range(len(nums)):

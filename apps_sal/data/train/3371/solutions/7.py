@@ -5,4 +5,3 @@ def signed_eight_bit_number(number):
     except:
         pass
     return False
-

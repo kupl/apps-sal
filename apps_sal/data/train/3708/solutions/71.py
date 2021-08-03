@@ -23,8 +23,8 @@ def hex_to_dec(s):
     sum = 0
     power = 0
     for i in patahBalik:
-        for j,k in hexa.items():
+        for j, k in hexa.items():
             if i == j:
-                sum = sum + k*16**power
+                sum = sum + k * 16**power
                 power = power + 1
     return sum

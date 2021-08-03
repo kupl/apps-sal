@@ -11,7 +11,7 @@ class Solution:
                     repeats.append((low, high + 1))
                 low = high = i
         if high - low > 0:
-                    repeats.append((low, high + 1))
+            repeats.append((low, high + 1))
         total = 0
         for low, high in repeats:
             maxVal = 0

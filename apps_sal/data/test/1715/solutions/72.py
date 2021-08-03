@@ -12,15 +12,15 @@ for x in xs:
     t_l = t_r - 1
     res = float('inf')
     if ss[s_l] > ts[t_l]:
-        res = min(res, x - ts[t_l], (x - ss[s_l])*2 + (ts[t_r] - x))
+        res = min(res, x - ts[t_l], (x - ss[s_l]) * 2 + (ts[t_r] - x))
     elif ss[s_l] < ts[t_l]:
-        res = min(res, x - ss[s_l], (x - ts[t_l])*2 + (ss[s_r] - x))
+        res = min(res, x - ss[s_l], (x - ts[t_l]) * 2 + (ss[s_r] - x))
     else:
-        res = min(res, (x - ss[s_l])*2 + (ss[s_r] - x), x - ss[s_l]*2 + (ts[t_r] - x))
+        res = min(res, (x - ss[s_l]) * 2 + (ss[s_r] - x), x - ss[s_l] * 2 + (ts[t_r] - x))
     if ss[s_r] > ts[t_r]:
-        res = min(res, ss[s_r] - x, (ts[t_r] - x)*2 + (x - ss[s_l]))
+        res = min(res, ss[s_r] - x, (ts[t_r] - x) * 2 + (x - ss[s_l]))
     elif ss[s_r] < ts[t_r]:
-        res = min(res, ts[t_r] - x, (ss[s_r] - x)*2 + (x - ts[t_l]))
+        res = min(res, ts[t_r] - x, (ss[s_r] - x) * 2 + (x - ts[t_l]))
     else:
-        res = min(res, (ss[s_r] - x)*2 + (x - ss[s_l]), (ss[s_r] - x)*2 + (x - ts[t_l]))
+        res = min(res, (ss[s_r] - x) * 2 + (x - ss[s_l]), (ss[s_r] - x) * 2 + (x - ts[t_l]))
     print(res)

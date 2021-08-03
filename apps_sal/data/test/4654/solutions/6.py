@@ -13,8 +13,10 @@ import string
 # imgur.com/Pkt7iIf.png #
 #########################
 
+
 def sieve(n):
-    if n < 2: return list()
+    if n < 2:
+        return list()
     prime = [True for _ in range(n + 1)]
     p = 3
     while p * p <= n:
@@ -28,6 +30,7 @@ def sieve(n):
             r.append(p)
     return r
 
+
 def divs(n, start=1):
     divisors = []
     for i in range(start, int(math.sqrt(n) + 1)):
@@ -37,6 +40,7 @@ def divs(n, start=1):
             else:
                 divisors.extend([i, n // i])
     return divisors
+
 
 def divn(n, primes):
     divs_number = 1
@@ -49,16 +53,19 @@ def divn(n, primes):
             n //= i
         divs_number *= t
 
+
 def flin(d, x, default=-1):
     left = right = -1
     for i in range(len(d)):
         if d[i] == x:
-            if left == -1: left = i
+            if left == -1:
+                left = i
             right = i
     if left == -1:
         return default, default
     else:
         return left, right
+
 
 def ceil(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
@@ -72,12 +79,13 @@ def ddl(): return collections.defaultdict(list)
 ########################################################################################################################
 # input = sys.stdin.readline
 
+
 for _ in range(ii()):
     n, k = mi()
-    even = n - 2*(k - 1)
+    even = n - 2 * (k - 1)
     odd = n - (k - 1)
     if odd > 0 and odd % 2:
-        res = [1]*(k - 1) + [odd]
+        res = [1] * (k - 1) + [odd]
         print('YES')
         prr(res, ' ')
     elif even > 0 and even % 2 == 0:
@@ -86,4 +94,3 @@ for _ in range(ii()):
         prr(res, ' ')
     else:
         print('NO')
-

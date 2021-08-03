@@ -1,3 +1,1 @@
-solution='Value is {:05d}'.format
-    
-
+solution = 'Value is {:05d}'.format

@@ -8,7 +8,7 @@ if sum(a) < m:
 else:
     for ans in range(1, n + 1):
         p = 0
-        for i in range((n+ans-1)//ans):
+        for i in range((n + ans - 1) // ans):
             for j in range(ans):
                 p += max(0, a[i * ans + j] - i)
         if p >= m:

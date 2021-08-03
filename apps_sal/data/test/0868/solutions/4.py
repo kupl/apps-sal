@@ -11,4 +11,3 @@ elif n % 4 == 2:
     print(4)
 else:
     print(2)
-

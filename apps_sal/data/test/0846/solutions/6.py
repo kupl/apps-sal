@@ -6,4 +6,3 @@ for x in map(int, input().split()):
         lamps[i] = x
         i += 1
 print(*lamps)
-

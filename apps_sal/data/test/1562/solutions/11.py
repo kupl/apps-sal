@@ -66,4 +66,4 @@ for i in range(1, n):
     L = left_way
     R = right_way
     last = i
-print(min(L, R))#+ (n - 1))
+print(min(L, R))  # + (n - 1))

@@ -3,8 +3,7 @@ def bubblesort_once(l):
     for i in range(0, len(values) - 1):
         first = values[i]
         second = values[i + 1]
-        if(first > second ):
+        if(first > second):
             values[i + 1] = first
             values[i] = second
     return values
-

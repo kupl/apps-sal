@@ -17,13 +17,13 @@ class Solution:
                 citySet.remove(b)
                 heapq.heappush(stack, (-distanceThreshold, b, b))
                 visitedDict[b][b] = distanceThreshold
-        
+
         if len(citySet) > 0:
             return max(citySet)
-        
+
         if distanceThreshold > allEdge:
-            return n-1
-        
+            return n - 1
+
         while stack:
             dLeft, source, curr = heapq.heappop(stack)
             dLeft *= -1
@@ -41,6 +41,6 @@ class Solution:
             if ansMax > len(visitedDict[city]):
                 ansMax = len(visitedDict[city])
                 ans = city
-            elif ansMax == len(visitedDict[city]):     
+            elif ansMax == len(visitedDict[city]):
                 ans = max(ans, city)
         return ans

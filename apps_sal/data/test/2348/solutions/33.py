@@ -1,8 +1,6 @@
-n=input()
-r=int(n[-1])
-if r%2==0:
-	print(0)
+n = input()
+r = int(n[-1])
+if r % 2 == 0:
+    print(0)
 else:
-	print(1)
-	
-
+    print(1)

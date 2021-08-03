@@ -61,4 +61,3 @@ for i in ["A", "G", "C", "T"]:
             ans += rec(0, i, j, k)
 
 print((ans % MOD))
-

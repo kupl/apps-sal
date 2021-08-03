@@ -8,16 +8,15 @@ class Solution:
                 dpRefuels[0][i] = stations[i][1] + startFuel
                 if dpRefuels[0][i] >= target:
                     return 1
-            
+
         for k in range(1, len(stations)):
             # use k stations to reach target
-            maxPrevFuel = dpRefuels[k-1][k-1]
+            maxPrevFuel = dpRefuels[k - 1][k - 1]
             for i in range(k, len(stations)):
                 # the i-th station would be the k-th refuel at each iteration
                 if maxPrevFuel >= stations[i][0]:
                     dpRefuels[k][i] = maxPrevFuel + stations[i][1]
                 if dpRefuels[k][i] >= target:
                     return k + 1
-                maxPrevFuel = max(maxPrevFuel, dpRefuels[k-1][i])
+                maxPrevFuel = max(maxPrevFuel, dpRefuels[k - 1][i])
         return -1
-

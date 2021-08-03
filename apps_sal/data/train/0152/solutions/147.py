@@ -5,7 +5,7 @@ class Solution:
             nonlocal m
             nonlocal res
             for i in range(len(position)):
-                balls_cnt = 1 
+                balls_cnt = 1
                 last_ball_pos = 0
 
                 for i in range(1, len(position)):
@@ -13,14 +13,13 @@ class Solution:
                     curr_ball_val_pos = position[i]
                     cur_force = curr_ball_val_pos - last_ball_val_pos
                     if cur_force >= f:
-                        balls_cnt +=1
+                        balls_cnt += 1
                         last_ball_pos = i
-                        if balls_cnt == m:  
-                            res = max(res, f)                      
+                        if balls_cnt == m:
+                            res = max(res, f)
                             return True
 
                 return False
-
 
         res = 0
         position.sort()
@@ -35,6 +34,4 @@ class Solution:
             else:
                 right = mid
 
-        return res   
-      
-
+        return res

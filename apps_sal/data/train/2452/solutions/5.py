@@ -5,7 +5,7 @@ class Solution:
         #     num = stones.pop() - stones.pop()
         #     stones.append(num)
         # return 0 if len(stones) == 0 else stones[0]
-        
+
         heap = [-x for x in stones]
         heapq.heapify(heap)
         while len(heap) > 1 and heap[0] != 0:

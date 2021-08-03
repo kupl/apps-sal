@@ -6,14 +6,13 @@ class Solution:
         # 从小到大计算，n=1，。。。，n
         # dp[i]: 有i个石头时，alice能不能赢
         # dp[i] = 从i向下减去平方数，对应的dp[j]有一个是false即可
-        dp = [False for _ in range(n+1)]
-        for i in range(1,n+1):
+        dp = [False for _ in range(n + 1)]
+        for i in range(1, n + 1):
             base = 1
-            while i-base**2>=0:
-                if not dp[i-base**2]:
+            while i - base**2 >= 0:
+                if not dp[i - base**2]:
                     dp[i] = True
                     break
                 else:
                     base += 1
         return dp[n]
-

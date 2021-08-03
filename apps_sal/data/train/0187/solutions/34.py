@@ -14,7 +14,7 @@ class Solution:
                 boarded += waiting
                 waiting = 0
                 rotation += 1
-            profit = boarded*boardingCost - rotation*runningCost
+            profit = boarded * boardingCost - rotation * runningCost
         optimal_rotation = rotation
         while waiting > 0:
             if waiting >= 4:

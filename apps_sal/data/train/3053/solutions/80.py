@@ -5,4 +5,3 @@ def close_compare(a, b, margin=0):
         return -1
     elif(a > b):
         return 1
-

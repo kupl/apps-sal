@@ -1,9 +1,12 @@
 from math import factorial
+
+
 def count(n, r):
     if n == r:
         return 2
     else:
         return 1
+
 
 N, M = map(int, input().split())
 mod = 10**9 + 7

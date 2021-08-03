@@ -27,8 +27,7 @@ for _ in range(N):
             d[(x, y)][1] += 1
 ans = 1
 for k, v in list(d.items()):
-    ans *= pow(2, v[0], MOD)+pow(2, v[1], MOD)-1
+    ans *= pow(2, v[0], MOD) + pow(2, v[1], MOD) - 1
     ans %= MOD
 ans = (ans + zeros - 1) % MOD  # 各ベクトル対の組から一つも選ばないパターンを引いてる
 print(ans)
-

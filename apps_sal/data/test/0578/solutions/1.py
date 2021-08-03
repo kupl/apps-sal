@@ -8,4 +8,3 @@ while ans[len(ans) - 1:] == "0":
 if ans[len(ans) - 1:] == ".":
     ans = ans[:len(ans) - 1]
 print(ans)
-

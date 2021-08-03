@@ -2,7 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
         position.sort()
-        
+
         def valid(dis):
             prev = 0
             balls = 1
@@ -11,7 +11,7 @@ class Solution:
                     balls += 1
                     prev = i
             return balls >= m
-        
+
         lo, hi = 0, position[-1] - position[0]
         while lo < hi:
             mid = lo + (hi - lo + 1) // 2

@@ -1,7 +1,7 @@
 import sys
 n = int(input())
 s = input()
-l1 = [1]*n
+l1 = [1] * n
 l1[0] = 0
 prev = s[0]
 for i in range(1, n):
@@ -12,11 +12,11 @@ temp = []
 for i in range(n):
     if l1[i] == 1:
         temp.append(s[i])
-if len(temp) ==0:
+if len(temp) == 0:
     print("YES")
     print(''.join(str(x) for x in l1))
     return
-    
+
 prev = temp[0]
 for i in range(1, len(temp)):
     if temp[i] < prev:

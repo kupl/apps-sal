@@ -9,7 +9,7 @@ class Solution:
                 curr_xor ^= arr[k]
                 right_xor[curr_xor] += 1
             curr_xor = 0
-            for i in range(j-1, -1, -1):
+            for i in range(j - 1, -1, -1):
                 curr_xor ^= arr[i]
                 if curr_xor in right_xor:
                     count += right_xor[curr_xor]

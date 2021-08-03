@@ -6,10 +6,9 @@ for _ in range(int(input())):
     for i in range(n):
         if l1[i] == 0:
             l1[i] = 1
-            moves+=1
+            moves += 1
         x = x + l1[i]
-    if x!=0:
+    if x != 0:
         print(moves)
     else:
-        print(moves+1)
-
+        print(moves + 1)

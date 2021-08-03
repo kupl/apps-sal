@@ -1,4 +1,4 @@
-from sys import stdin, stdout # only need for big input
+from sys import stdin, stdout  # only need for big input
 
 
 def solve():
@@ -12,10 +12,13 @@ def solve():
             st.add(a)
     print(len(st))
 
+
 def main():
     solve()
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

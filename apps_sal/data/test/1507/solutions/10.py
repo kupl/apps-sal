@@ -21,4 +21,3 @@ if k < max(cnt):
     print("YES")
 else:
     print("NO")
-

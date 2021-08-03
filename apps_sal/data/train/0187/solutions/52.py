@@ -15,7 +15,7 @@ class Solution:
                 prof = cur_prof
                 ans = idx + 1
         if rem:
-            rem_idx = rem//4
+            rem_idx = rem // 4
             idx = len(customers) + rem_idx
             cur += rem - rem % 4
             cur_prof = cur * boardingCost - runningCost * (idx + 1)
@@ -28,7 +28,7 @@ class Solution:
                 cur += rem % 4
                 idx += 1
                 cur_prof = cur * boardingCost - runningCost * (idx + 1)
-                #print(idx, cur_prof)                
+                #print(idx, cur_prof)
                 if cur_prof > prof:
                     prof = cur_prof
                     ans = idx

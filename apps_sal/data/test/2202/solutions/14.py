@@ -7,4 +7,3 @@ for i in range(n - 1):
     s2 = (s2 - a[i]) % p
     ans = max(ans, s1 + s2)
 print(ans)
-

@@ -1,6 +1,6 @@
 s = str(input())
 s = s.strip()
-res = 0;
+res = 0
 aord = ord('a')
 for i in (range(len(s))):
     t = abs(ord(s[i]) - aord)

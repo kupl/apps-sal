@@ -1,6 +1,6 @@
 from collections import Counter
 for _ in range(int(input())):
-    S = list(map(str,input()))
+    S = list(map(str, input()))
     original = 8
     new = 8
     if S[0].isdigit():
@@ -14,12 +14,11 @@ for _ in range(int(input())):
             new += 32
         else:
             original += 8
-            if S[i]==a:
+            if S[i] == a:
                 b = 32
             else:
-                new += b+8
+                new += b + 8
                 b = 0
         a = S[i]
-    new +=b
-    print(original-new)
-
+    new += b
+    print(original - new)

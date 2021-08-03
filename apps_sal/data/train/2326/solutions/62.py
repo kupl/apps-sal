@@ -23,4 +23,3 @@ for i, (x, y) in enumerate(XY):
     x2 = XY[i + 1][0] if i + 1 < N else 0
     ans[min_y] += (x - x2) * (i + 1)
 print(*ans, sep='\n')
-

@@ -38,16 +38,16 @@ def main():
     ans = 1
 
     p = 998244353
-    a = [None] * (N+1)
-    inva = [None] * (N+1)
+    a = [None] * (N + 1)
+    inva = [None] * (N + 1)
     a[0] = 1
 
-    for i in range(1, N+1):
-        a[i] = i * a[i-1] % p
+    for i in range(1, N + 1):
+        a[i] = i * a[i - 1] % p
 
-    inva[N] = pow(a[N], p-2, p)
+    inva[N] = pow(a[N], p - 2, p)
     for i in range(N):
-        inva[N-i-1] = inva[N-i] * (N-i) % p
+        inva[N - i - 1] = inva[N - i] * (N - i) % p
 
     rowuf = UnionFind(N)
     for x in range(N):
@@ -89,5 +89,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

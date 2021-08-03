@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 d = dict()
 for i in a:
     if i not in d:
@@ -15,4 +15,3 @@ for key, value in list(d.items()):
         count += value - int(key)
 
 print(count)
-

@@ -1,9 +1,9 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         cache = [{} for i in range(len(A))]
-        
+
         n = len(A)
-        for i in range(1,n):
+        for i in range(1, n):
             for j in range(i):
                 diff = A[i] - A[j]
                 if diff not in cache[j]:

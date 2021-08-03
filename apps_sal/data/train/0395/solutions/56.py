@@ -21,9 +21,3 @@ class Solution:
             higher[i] = lower[next_higher[i]]
             lower[i] = higher[next_lower[i]]
         return sum(higher)
-                
-                    
-            
-                
-              
-

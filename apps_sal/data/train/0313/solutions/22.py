@@ -21,6 +21,3 @@ class Solution:
                 if num_bouquets >= m:
                     return day
         return -1
-                    
-                    
-

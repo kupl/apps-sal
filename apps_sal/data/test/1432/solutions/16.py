@@ -1,13 +1,13 @@
+from collections import Counter, deque
+import bisect
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 MOD = 10**9 + 7
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-import bisect
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -26,20 +26,18 @@ def main():
     A = i_list()
 
     a = 0
-    for i,k in enumerate(A):
-        if i%2 == 0:
+    for i, k in enumerate(A):
+        if i % 2 == 0:
             a += k
         else:
             a -= k
-  
+
     ans = [a]
-    for i,k in enumerate(A[:-1]):
-        t = k - ans[-1]//2
-        ans.append(2*t)
+    for i, k in enumerate(A[:-1]):
+        t = k - ans[-1] // 2
+        ans.append(2 * t)
     print((" ".join(map(str, ans))))
 
-
-   
 
 def __starting_point():
     main()

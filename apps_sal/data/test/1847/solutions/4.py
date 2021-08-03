@@ -6,7 +6,7 @@ n = int(input())
 allowed = defaultdict(set)
 for _ in range(n):
     row, col_x, col_y = [int(c) for c in input().split()]
-    for c in range(col_x, col_y+1):
+    for c in range(col_x, col_y + 1):
         allowed[row].add(c)
 
 start, end = (x0, y0), (x1, y1)
@@ -42,4 +42,3 @@ while queue:
     queue = new_queue
 
 print(-1)
-

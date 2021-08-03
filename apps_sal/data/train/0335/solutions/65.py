@@ -9,4 +9,4 @@ class Solution:
                        dp(i + 1, s - rods[i]) + rods[i],
                        dp(i + 1, s + rods[i]) + rods[i])
 
-        return int(dp(0, 0)/2)
+        return int(dp(0, 0) / 2)

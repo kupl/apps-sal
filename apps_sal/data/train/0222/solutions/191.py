@@ -5,19 +5,19 @@ class Solution:
             nums[num] = i
 
         def dfs(prev, cur, visit):
-            if (prev,cur) in visit:
+            if (prev, cur) in visit:
                 return visit[(prev, cur)]
-            
+
             if A[prev] + A[cur] in nums:
-                visit[(prev,cur)] = 1 + dfs(cur, nums[A[prev]+A[cur]], visit)
+                visit[(prev, cur)] = 1 + dfs(cur, nums[A[prev] + A[cur]], visit)
             else:
-                visit[(prev,cur)] = 1
-            return visit[(prev,cur)]
-        
+                visit[(prev, cur)] = 1
+            return visit[(prev, cur)]
+
         visit = {}
         res = 0
         for i in range(len(A)):
-            for j in range(i+1, len(A)):
+            for j in range(i + 1, len(A)):
                 if A[i] + A[j] in nums:
-                    res = max(res, 1+dfs(i, j, visit))
+                    res = max(res, 1 + dfs(i, j, visit))
         return res

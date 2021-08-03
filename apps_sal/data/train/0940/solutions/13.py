@@ -1,11 +1,10 @@
 
-t=int(input())
-l=[]
+t = int(input())
+l = []
 for i in range(t):
-    x=int(input())
+    x = int(input())
     l.append(x)
 for i in l:
-    ans=0
-    ans=((i*2)**2)/2
+    ans = 0
+    ans = ((i * 2)**2) / 2
     print(round(ans))
-

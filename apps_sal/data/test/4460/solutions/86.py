@@ -1,2 +1,2 @@
-a = list(map(int,input().split()))
-print(15-sum(a))
+a = list(map(int, input().split()))
+print(15 - sum(a))

@@ -1,39 +1,56 @@
-import sys,collections as cl,bisect as bs
+import sys
+import collections as cl
+import bisect as bs
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-mod = 10**9+7
+mod = 10**9 + 7
 Max = sys.maxsize
-def l(): #intのlist
-    return list(map(int,input().split()))
-def m(): #複数文字
-    return map(int,input().split())
-def onem(): #Nとかの取得
+
+
+def l():  # intのlist
+    return list(map(int, input().split()))
+
+
+def m():  # 複数文字
+    return map(int, input().split())
+
+
+def onem():  # Nとかの取得
     return int(input())
-def s(x): #圧縮
+
+
+def s(x):  # 圧縮
     a = []
     if len(x) == 0:
         return []
     aa = x[0]
     su = 1
-    for i in range(len(x)-1):
-        if aa != x[i+1]:
-            a.append([aa,su])
-            aa = x[i+1]
+    for i in range(len(x) - 1):
+        if aa != x[i + 1]:
+            a.append([aa, su])
+            aa = x[i + 1]
             su = 1
         else:
             su += 1
-    a.append([aa,su])
+    a.append([aa, su])
     return a
-def jo(x): #listをスペースごとに分ける
-    return " ".join(map(str,x))
-def max2(x): #他のときもどうように作成可能
-    return max(map(max,x))
-def In(x,a): #aがリスト(sorted)
-    k = bs.bisect_left(a,x)
-    if k != len(a) and a[k] ==  x:
+
+
+def jo(x):  # listをスペースごとに分ける
+    return " ".join(map(str, x))
+
+
+def max2(x):  # 他のときもどうように作成可能
+    return max(map(max, x))
+
+
+def In(x, a):  # aがリスト(sorted)
+    k = bs.bisect_left(a, x)
+    if k != len(a) and a[k] == x:
         return True
     else:
         return False
+
 
 def pow_k(x, n):
     ans = 1
@@ -43,6 +60,7 @@ def pow_k(x, n):
         x *= x
         n >>= 1
     return ans
+
 
 """
 def nibu(x,n,r):
@@ -60,18 +78,18 @@ def nibu(x,n,r):
 """
 
 mod = 998244353
-n,k = m()
+n, k = m()
 
-dp = [[0 for i in range(n+1)] for j in range(n+1)]
+dp = [[0 for i in range(n + 1)] for j in range(n + 1)]
 
 dp[0][0] = 1
-for i in range(1,n+1):
-    for j in range(n,-1,-1):
-        if 2*j <= n:
-            dp[i][j] = dp[i-1][j-1] + dp[i][2*j]
+for i in range(1, n + 1):
+    for j in range(n, -1, -1):
+        if 2 * j <= n:
+            dp[i][j] = dp[i - 1][j - 1] + dp[i][2 * j]
             dp[i][j] %= mod
         else:
-            dp[i][j] = dp[i-1][j-1]
+            dp[i][j] = dp[i - 1][j - 1]
             dp[i][j] %= mod
 
 print(dp[n][k])

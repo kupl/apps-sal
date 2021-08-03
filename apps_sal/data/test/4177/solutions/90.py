@@ -1,1 +1,1 @@
-print(len(str(input()))*'x')
+print(len(str(input())) * 'x')

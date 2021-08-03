@@ -1,7 +1,7 @@
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
-        out = 0 
-        
+        out = 0
+
         for word in words:
             cnt = 0
             for letter in word:
@@ -9,12 +9,4 @@ class Solution:
                     cnt += 1
             if cnt == len(word):
                 out += len(word)
-        return out 
-            
-            
-            
-            
-            
-            
-            
-
+        return out

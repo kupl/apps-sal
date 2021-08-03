@@ -7,5 +7,4 @@ for i in range(n):
 for i in range(m):
     comm, ip = input().split()
     name = d[ip[:-1]]
-    print(comm+" "+ip+" #"+name)
-
+    print(comm + " " + ip + " #" + name)

@@ -5,7 +5,7 @@ sys.setrecursionlimit(10**7)
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        self.parents = [-1]*n
+        self.parents = [-1] * n
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -48,22 +48,21 @@ class UnionFind():
 
 
 n, m = list(map(int, input().split()))
-ab=[list(map(int, input().split())) for _ in range(m)]
+ab = [list(map(int, input().split())) for _ in range(m)]
 
 uf = UnionFind(n)
-tmp_ans = n*(n-1)//2
+tmp_ans = n * (n - 1) // 2
 ans = []
 for i in range(m):
     ans.append(tmp_ans)
-    a=ab[m-1-i][0]
-    b=ab[m-1-i][1]
-    a-=1
-    b-=1
-    if not uf.is_same(a,b):
-        tmp_ans-=uf.size(a)*uf.size(b)
-    uf.union(a,b)
+    a = ab[m - 1 - i][0]
+    b = ab[m - 1 - i][1]
+    a -= 1
+    b -= 1
+    if not uf.is_same(a, b):
+        tmp_ans -= uf.size(a) * uf.size(b)
+    uf.union(a, b)
 
 ans.reverse()
 for i in ans:
     print(i)
-

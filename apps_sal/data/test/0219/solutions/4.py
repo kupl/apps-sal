@@ -91,7 +91,7 @@ def main():
         # после прыжка мы приземляемся ЗА препятствием, учитываем это
         run_from = block[-1] + 1
 
-    #print(chunks)
+    # print(chunks)
 
     for chunk in chunks:
         solve_chunk(*chunk)
@@ -102,5 +102,6 @@ def __starting_point():
         main()
     except SolutionImpossible:
         print("IMPOSSIBLE")
+
 
 __starting_point()

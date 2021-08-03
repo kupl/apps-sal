@@ -33,4 +33,3 @@ elif s == 0 and smin != 0:
         print(lstmax[i], end="")
 else:
     print(-1, -1)
-

@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(1000000)
 
+
 def getGrundyNumber(x):
     ans = 1
     while x % (ans * 2) == 0:
@@ -46,4 +47,3 @@ if ans:
     print('Alice')
 else:
     print('Bob')
-

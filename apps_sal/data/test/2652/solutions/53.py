@@ -55,4 +55,3 @@ while E:
         cost += c
 
 print(cost)
-

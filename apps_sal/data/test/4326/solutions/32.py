@@ -2,7 +2,7 @@ import math
 
 N = int(input())
 
-answer = math.floor(N/3)
+answer = math.floor(N / 3)
 
 
 if answer >= 1:

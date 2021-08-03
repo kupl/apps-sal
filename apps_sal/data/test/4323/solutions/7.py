@@ -1,8 +1,8 @@
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 a = []
 s = 0
 for i in range(n):
-    k, b = list(map(int,input().split()))
+    k, b = list(map(int, input().split()))
     s += k
     a.append(k - b)
 a.sort(reverse=True)
@@ -17,4 +17,3 @@ if s <= m:
     print(ans)
 else:
     print(-1)
-

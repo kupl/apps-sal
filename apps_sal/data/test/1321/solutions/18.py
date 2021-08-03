@@ -11,4 +11,4 @@ for i in range(n):
     b = m1
     if h[i] == m1:
         b = m2
-    print(a*b, end=' ')
+    print(a * b, end=' ')

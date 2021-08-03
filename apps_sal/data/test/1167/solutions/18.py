@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -80,7 +82,8 @@ def all_factors(n):
 
 
 def fibonacci_modP(n, MOD):
-    if n < 2: return 1
+    if n < 2:
+        return 1
     return (cached_fn(fibonacci_modP, (n + 1) // 2, MOD) * cached_fn(fibonacci_modP, n // 2, MOD) + cached_fn(
         fibonacci_modP, (n - 1) // 2, MOD) * cached_fn(fibonacci_modP, (n - 2) // 2, MOD)) % MOD
 
@@ -134,7 +137,8 @@ factorial_modP = []
 
 def warm_up_fac(MOD):
     nonlocal factorial_modP, fac_warm_up
-    if fac_warm_up: return
+    if fac_warm_up:
+        return
     factorial_modP = [1 for _ in range(fac_warm_up_size + 1)]
     for i in range(2, fac_warm_up_size):
         factorial_modP[i] = (factorial_modP[i - 1] * i) % MOD
@@ -189,7 +193,7 @@ def ncr(n, r):
 
 
 def binary_search(i, li):
-    fn = lambda x: li[x] - x // i
+    def fn(x): return li[x] - x // i
     x = -1
     b = len(li)
     while b >= 1:
@@ -208,11 +212,12 @@ optimise_for_recursion = True  # Can not be used clubbed with TestCases WHen usi
 
 def main():
     a, b, c, d, k = get_tuple()
-    x = (a+c-1)//c
-    y = (b+d-1)//d
-    if x+y<=k:
+    x = (a + c - 1) // c
+    y = (b + d - 1) // d
+    if x + y <= k:
         print(x, y)
-    else: print(-1)
+    else:
+        print(-1)
 # --------------------------------------------------------------------- END=
 
 
@@ -221,4 +226,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

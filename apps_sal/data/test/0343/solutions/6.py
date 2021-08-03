@@ -13,18 +13,20 @@ def main():
     if less >= median:
         print(-1)
         return
-        
+
     fillOne = min(median - less - 1, n - k)
-    if sum(a) + fillOne*1 + (n - k - fillOne)*y > x:
+    if sum(a) + fillOne * 1 + (n - k - fillOne) * y > x:
         print(-1)
         return
-
 
     for i in range(fillOne):
         print(1, end=' ')
     for i in range(n - k - fillOne):
         print(y, end=' ')
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

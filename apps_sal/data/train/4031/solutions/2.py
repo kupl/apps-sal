@@ -11,6 +11,7 @@ def jumps(code):
             return_to[closing] = opening
     return (skip_to, return_to)
 
+
 def run_one_instruction(code, tape, pc, pointer, skip_to, return_to):
     instruction = code[pc]
     if instruction == '>':
@@ -27,8 +28,10 @@ def run_one_instruction(code, tape, pc, pointer, skip_to, return_to):
             pc = return_to[pc]
     return (pc, pointer)
 
+
 def should_terminate(pc, max_pc, pointer, max_pointer):
     return pc > max_pc or pointer < 0 or pointer > max_pointer
+
 
 def interpreter(code, tape):
     tape = [int(c) for c in tape]

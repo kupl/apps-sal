@@ -5,7 +5,7 @@ MAXV = 100010
 d = [0] * MAXV
 
 
-a, b, h, w, n = list(map(int,input().split()))
+a, b, h, w, n = list(map(int, input().split()))
 
 arr = input().split()
 
@@ -14,6 +14,7 @@ for it in range(n):
 
 # print(arr)
 # print(a, b, h, w, n)
+
 
 def solve(a, b, h, w, z, product, it):
     # print(">", a, b, h, w, z, product, it)
@@ -26,7 +27,6 @@ def solve(a, b, h, w, z, product, it):
     if k <= z and (product // z) * w >= b:
         print(it)
         return
-
 
 
 arr = sorted(arr)
@@ -68,4 +68,3 @@ for it in range(1, n + 1):
 
 
 print(-1)
-

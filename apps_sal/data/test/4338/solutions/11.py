@@ -9,4 +9,3 @@ else:
     while i < n and a[i] <= x:
         i += 1
     print(i // 2 + i % 2)
-

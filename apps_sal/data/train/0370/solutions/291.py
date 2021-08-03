@@ -1,8 +1,10 @@
 # Reference: https://leetcode.com/problems/largest-component-size-by-common-factor/discuss/819772/TLE-Python-GCD-%2B-Union-Find-%2B-Rank-Compression
 
+from itertools import count
 from typing import List
 from math import gcd, sqrt
 from collections import defaultdict
+
 
 class DSU:
     def __init__(self, size):
@@ -28,7 +30,7 @@ class DSU:
     def size(self, u):
         return self.sizes[self.find(u)]
 
-from itertools import count
+
 def primes():
     def _not_divisible(n):
         return lambda x: x % n > 0
@@ -39,6 +41,7 @@ def primes():
         yield n
         # sieve of Eratosthenes
         odd = list(filter(_not_divisible(n), odd))
+
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
@@ -64,4 +67,3 @@ class Solution:
         #         if i != j and gcd(A[i], A[j]) > 1:
         #             dsu.union(i, j)
         # return max(dsu.sizes)
-

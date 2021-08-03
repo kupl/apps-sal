@@ -9,9 +9,11 @@ def solve():
         a, b = b, a
     print(count)
 
+
 def __starting_point():
     t = int(input())
     for _ in range(t):
         solve()
+
 
 __starting_point()

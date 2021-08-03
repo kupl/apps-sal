@@ -1,8 +1,7 @@
-3
-
-import math
-import os
 import sys
+import os
+import math
+3
 
 
 DEBUG = 'DEBUG' in os.environ
@@ -120,5 +119,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

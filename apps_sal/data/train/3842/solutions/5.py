@@ -5,7 +5,7 @@ def word_wrap(text, limit):
         while len(line) <= limit and len(w) > limit:
             split = max(0, limit - len(line) - bool(line))
             if split > 0:
-                line += ' ' * bool(line) + w[:split] 
+                line += ' ' * bool(line) + w[:split]
             wraped.append(line)
             line = ''
             w = w[split:]

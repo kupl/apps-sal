@@ -1,8 +1,8 @@
-r=int(input())
-if r <1200:
-  ans="ABC"
-elif 1200<=r<2800:
-  ans="ARC"
+r = int(input())
+if r < 1200:
+    ans = "ABC"
+elif 1200 <= r < 2800:
+    ans = "ARC"
 else:
-  ans="AGC"
+    ans = "AGC"
 print(ans)

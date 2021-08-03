@@ -8,4 +8,3 @@ class Solution:
                 res = min(res, i - heapq.heappop(heap)[1])
             heapq.heappush(heap, (Sum, i))
         return res if flag else -1
-

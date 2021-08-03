@@ -3,5 +3,6 @@ def solve(r):
     for x in sorted(r):
         if x > ǂ:
             break
-        else: ǂ += x
+        else:
+            ǂ += x
     return ǂ

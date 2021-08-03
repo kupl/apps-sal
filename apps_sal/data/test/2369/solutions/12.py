@@ -33,4 +33,3 @@ for i in range(N - K + 1):
 result -= t
 result %= m
 print(result)
-

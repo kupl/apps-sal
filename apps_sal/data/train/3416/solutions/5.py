@@ -13,4 +13,3 @@ def check_distance(distance, cons, petrol):
         km_driven += 100
         petrol = round(petrol - cons, 2)
     return result
-

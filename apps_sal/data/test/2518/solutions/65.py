@@ -20,4 +20,3 @@ while ng + 1 < ok:
     else:
         ng = mid
 print(ok)
-

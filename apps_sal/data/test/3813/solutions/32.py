@@ -11,7 +11,7 @@ def solve(*args: str) -> str:
 
     T = defaultdict(set)
     for i, p in enumerate(P):
-        T[p-1].add(i+1)
+        T[p - 1].add(i + 1)
 
     stack = []
     Q = deque()
@@ -23,19 +23,19 @@ def solve(*args: str) -> str:
             Q.append(c)
 
     ret = 'POSSIBLE'
-    inf = 2**32-1
-    Y = [0]*n
+    inf = 2**32 - 1
+    Y = [0] * n
     for i in stack[::-1]:
-        prev = np.full(X[i]+1, inf, np.int64)
+        prev = np.full(X[i] + 1, inf, np.int64)
         prev[0] = 0
         x_acc, y_acc = 0, 0
         for c in T[i]:
-            cur = np.full(X[i]+1, inf, np.int64)
+            cur = np.full(X[i] + 1, inf, np.int64)
             x, y = X[c], Y[c]
             x_acc += x
             y_acc += y
-            cur[x:] = np.minimum(cur[x:], y+prev[:-x if 0 < x else len(prev)])
-            cur[y:] = np.minimum(cur[y:], x+prev[:-y if 0 < y else len(prev)])
+            cur[x:] = np.minimum(cur[x:], y + prev[:-x if 0 < x else len(prev)])
+            cur[y:] = np.minimum(cur[y:], x + prev[:-y if 0 < y else len(prev)])
             prev = np.copy(cur)
 
         y = np.min(prev)
@@ -50,5 +50,6 @@ def solve(*args: str) -> str:
 
 def __starting_point():
     print((solve(*(open(0).read().splitlines()))))
+
 
 __starting_point()

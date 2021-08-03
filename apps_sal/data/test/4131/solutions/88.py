@@ -31,4 +31,5 @@ def __starting_point():
     # PY = sample([[randint(1, 5), 10 ** 8 - i] for i in range(M)], M)
     # solve(N, M, PY)
 
+
 __starting_point()

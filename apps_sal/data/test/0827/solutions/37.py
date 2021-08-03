@@ -18,7 +18,7 @@ else:
                 break
         else:
             print((3 * 10**10 - N) // 3 + 1)
-            
+
     elif S[:2] == '10':
         for i in range(N):
             if i % 3 == 1 and S[i] == '1':
@@ -29,7 +29,7 @@ else:
                 break
         else:
             print((3 * 10**10 - N - 1) // 3 + 1)
-            
+
     elif S[:2] == '01':
         for i in range(N):
             if i % 3 == 0 and S[i] == '1':
@@ -40,6 +40,6 @@ else:
                 break
         else:
             print((3 * 10**10 - N - 2) // 3 + 1)
-            
+
     else:
         print(0)

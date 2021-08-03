@@ -2,9 +2,9 @@ from collections import defaultdict
 
 
 def gcd(a, b):
-  while b:
-    a, b = b, a % b
-  return a
+    while b:
+        a, b = b, a % b
+    return a
 
 
 n = int(input())
@@ -26,4 +26,3 @@ if len(x) > 0:
     print(max(x.values()) + p)
 else:
     print(p)
-

@@ -5,4 +5,3 @@ for _ in range(q):
     ans[a] += 1
 for i in range(n):
     print(("Yes" if ans[i] > 0 else "No"))
-

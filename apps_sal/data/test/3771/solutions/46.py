@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,9 +15,12 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 class Dinic:
     """ 最大流(Dinic) """
@@ -26,11 +30,11 @@ class Dinic:
         self.links = [[] for _ in range(n)]
         self.depth = None
         self.progress = None
- 
+
     def add_link(self, _from, to, cap):
         self.links[_from].append([cap, to, len(self.links[to])])
         self.links[to].append([0, _from, len(self.links[_from]) - 1])
- 
+
     def bfs(self, s):
         from collections import deque
 
@@ -44,7 +48,7 @@ class Dinic:
                     depth[to] = depth[v] + 1
                     q.append(to)
         self.depth = depth
- 
+
     def dfs(self, v, t, flow):
         if v == t:
             return flow
@@ -61,7 +65,7 @@ class Dinic:
             self.links[to][rev][0] += d
             return d
         return 0
- 
+
     def max_flow(self, s, t):
         flow = 0
         while True:
@@ -74,47 +78,49 @@ class Dinic:
                 flow += current_flow
                 current_flow = self.dfs(s, t, INF)
 
+
 def build_grid(H, W, intv, _type, space=True, padding=False):
     # 入力がスペース区切りかどうか
     if space:
-        _input = lambda: input().split()
+        def _input(): return input().split()
     else:
-        _input = lambda: input()
-    _list = lambda: list(map(_type, _input()))
+        def _input(): return input()
+
+    def _list(): return list(map(_type, _input()))
     # 余白の有無
     if padding:
         offset = 1
     else:
         offset = 0
-    grid = list2d(H+offset*2, W+offset*2, intv)
-    for i in range(offset, H+offset):
+    grid = list2d(H + offset * 2, W + offset * 2, intv)
+    for i in range(offset, H + offset):
         row = _list()
-        for j in range(offset, W+offset):
-            grid[i][j] = row[j-offset]
+        for j in range(offset, W + offset):
+            grid[i][j] = row[j - offset]
     return grid
+
 
 H, W = MAP()
 grid = build_grid(H, W, '', str, space=0)
 
 # 最大流：頂点は各行全体、各列全体、始点、終点
-dn = Dinic(H+W+2)
+dn = Dinic(H + W + 2)
 s = H + W
 t = H + W + 1
 for i in range(H):
     for j in range(W):
         if grid[i][j] == 'o':
-            dn.add_link(i, H+j, 1)
-            dn.add_link(H+j, i, 1)
+            dn.add_link(i, H + j, 1)
+            dn.add_link(H + j, i, 1)
         elif grid[i][j] == 'S':
             dn.add_link(s, i, INF)
-            dn.add_link(s, H+j, INF)
+            dn.add_link(s, H + j, INF)
         elif grid[i][j] == 'T':
             dn.add_link(i, t, INF)
-            dn.add_link(H+j, t, INF)
+            dn.add_link(H + j, t, INF)
 
 ans = dn.max_flow(s, t)
 if ans >= INF:
     print((-1))
 else:
     print(ans)
-

@@ -11,4 +11,3 @@ RPS = {('rock', 'rock'): 'Draw!',
 
 def rps(p1, p2):
     return RPS[(p1, p2)]
-

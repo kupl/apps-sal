@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def duplicates(lst):
     result = []
     counter = defaultdict(int)

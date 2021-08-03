@@ -80,7 +80,8 @@ def check(a, x, y):
     if right + left >= 4:
         return 1
     return 0
-    
+
+
 a = []
 for i in range(10):
     gg = input()
@@ -96,5 +97,3 @@ for i in range(10):
                 return
             a[i][j] = '.'
 print("NO")
-    
-

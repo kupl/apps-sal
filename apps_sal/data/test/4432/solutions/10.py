@@ -16,4 +16,3 @@ for i in range(t):
         now = a[index]
         mx = a[index]
     print(ans)
-

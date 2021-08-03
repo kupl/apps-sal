@@ -1,20 +1,20 @@
 n, m = list(map(int, input().split()))
 l = list(map(int, input().split()))
 a = [0 for _ in range(n)]
-f = [False for _ in range(n+1)]
+f = [False for _ in range(n + 1)]
 ans = True
-for i in range(m-1):
-    for j in range(1, n+1):
-        if (l[i] + j - 1)%n + 1 == l[i+1]:
-            if a[l[i]-1] != 0 and a[l[i]-1] != j:
+for i in range(m - 1):
+    for j in range(1, n + 1):
+        if (l[i] + j - 1) % n + 1 == l[i + 1]:
+            if a[l[i] - 1] != 0 and a[l[i] - 1] != j:
                 ans = False
             else:
-                if a[l[i]-1] == j:
+                if a[l[i] - 1] == j:
                     break
                 if f[j]:
                     ans = False
                 f[j] = True
-                a[l[i]-1] = j
+                a[l[i] - 1] = j
             break
 j = 1
 for i in range(n):
@@ -27,6 +27,3 @@ if ans:
     print(*a)
 else:
     print(-1)
-
-
-

@@ -112,4 +112,3 @@ def get_node_neighbors(maze_arr, parent_node):
         if 0 <= x_1 < n and 0 <= y_1 < n and maze_arr[y_1][x_1] == 1:
             neighbors.append((x_1, y_1))
     return neighbors
-

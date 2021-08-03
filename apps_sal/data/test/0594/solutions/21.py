@@ -15,6 +15,3 @@ if max(min(a) * 2, max(a)) < min(b):
     print(max(min(a) * 2, max(a)))
 else:
     print(-1)
-
-
-

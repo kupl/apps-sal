@@ -1,7 +1,8 @@
 import numpy as np
 
+
 class Solution:
-    def parent(self, label:int) -> int:
+    def parent(self, label: int) -> int:
         # find out in which row you are.
         row = int(np.log2(label))
         # how many steps to first in that row

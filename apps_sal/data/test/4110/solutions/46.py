@@ -1,6 +1,6 @@
 d, g = map(int, input().split())
-pc = [list(map(int,input().split())) for _ in range(d)]
-ans = g//100 + 1
+pc = [list(map(int, input().split())) for _ in range(d)]
+ans = g // 100 + 1
 
 for i in range(2**d):
     count = 0
@@ -8,7 +8,7 @@ for i in range(2**d):
     for j in range(d):
         if (i >> j) & 1 == 1:
             count += pc[j][0]
-            total += (j+1)*100*pc[j][0] + pc[j][1]
+            total += (j + 1) * 100 * pc[j][0] + pc[j][1]
 
     if total >= g:
         ans = min(ans, count)
@@ -20,6 +20,6 @@ for i in range(2**d):
                         ans = min(ans, count)
                         break
                     count += 1
-                    total += (k+1)*100
+                    total += (k + 1) * 100
 
 print(ans)

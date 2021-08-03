@@ -8,4 +8,3 @@ def pig_latin(s):
     else:
         i = next((i for i, c in enumerate(s) if c in 'aeiou'), 0)
     return s[i:] + s[:i] + 'ay'
-

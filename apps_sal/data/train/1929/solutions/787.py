@@ -15,18 +15,17 @@ class StreamChecker:
         self.nodes.append(self.trie)
         temp = False
         new_nodes = []
-        
+
         for node in self.nodes:
             if letter in node:
                 node = node[letter]
                 if 'end' in node:
                     temp = True
                 new_nodes.append(node)
-        self.nodes=new_nodes
+        self.nodes = new_nodes
         return temp
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

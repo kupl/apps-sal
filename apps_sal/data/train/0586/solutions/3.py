@@ -15,7 +15,7 @@ for _ in range(int(input())):
         if c[0] in check2.keys():
             c[1] += check2[c[0]]
 
-    check1.sort(key = lambda z: z[2])
-    check1.sort(key = lambda z: z[1], reverse = True)
+    check1.sort(key=lambda z: z[2])
+    check1.sort(key=lambda z: z[1], reverse=True)
     for c in check1:
         print(c[2], c[1])

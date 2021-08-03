@@ -26,4 +26,3 @@ for l in range(n):
     ans = max(ans, abs(tmp), abs(total - tmp))
     tmp -= engines[i]
 print(ans)
-

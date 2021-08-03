@@ -3,8 +3,9 @@ read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 
+
 def main():
-    H,W,K = list(map(int, readline().split()))
+    H, W, K = list(map(int, readline().split()))
     S = [readline().strip() for j in range(H)]
 
     white = []
@@ -18,12 +19,12 @@ def main():
 
     # 横線の決め方を全探索
     ans = 10**5
-    for pattern in range(2**(H-1)):
+    for pattern in range(2**(H - 1)):
         # 初期化
         impossible = False
         x = 0
         ly = bin(pattern).count("1")
-        y = [[0]*W]*(ly + 1)
+        y = [[0] * W] * (ly + 1)
         line = 0
         for i in range(H):
             y[line] = [y[line][j] + int(S[i][j]) for j in range(W)]
@@ -31,7 +32,7 @@ def main():
                 line += 1
 
         # 各列の値を加算していく
-        count = [0]*(ly + 1) 
+        count = [0] * (ly + 1)
         for col in zip(*y):
             # Kより大きい値を加算する場合は不成立
             if any(a > K for a in col):
@@ -42,7 +43,7 @@ def main():
                 # 和がKより大きければカット数を増やす
                 if count[i] > K:
                     x += 1
-                    count = list(col) 
+                    count = list(col)
                     break
             if x + ly > ans:
                 impossible = True
@@ -57,5 +58,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

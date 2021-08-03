@@ -1,4 +1,4 @@
-a =  int(input())
+a = int(input())
 Ans = []
 for i in range(a):
     B = []
@@ -10,7 +10,7 @@ for i in range(a):
     k = 1
     n = 0
     for j in range(len(A)):
-        if A[j] >k:
+        if A[j] > k:
             B.append(A[j])
             k = A[j]
             C[A[j] - 1][1] = 1
@@ -29,7 +29,6 @@ for i in range(a):
         Ans.append(B)
     else:
         Ans.append([-1])
-    #Ans.append(B[-1])
+    # Ans.append(B[-1])
 for b in Ans:
     print(*b)
-

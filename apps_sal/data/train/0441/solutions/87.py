@@ -6,13 +6,11 @@ class Solution:
 
         count = 0
 
-        for i in range(1, int(math.sqrt(2*N))+1):
+        for i in range(1, int(math.sqrt(2 * N)) + 1):
 
             # temp = (N*2/i - i+1) / 2
-            temp = (2*N - i**2 + i)/2/i
+            temp = (2 * N - i**2 + i) / 2 / i
             if temp > 0 and temp == int(temp):
                 count += 1
 
         return count
-
-

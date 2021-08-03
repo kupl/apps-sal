@@ -11,5 +11,3 @@ class Solution:
                 if i == finish:
                     count += record[i][j]
         return count % (10 ** 9 + 7)
-                        
-

@@ -6,7 +6,8 @@ def count(arr):
             even += 1
         else:
             odd += 1
-    return (even-1) * even //2 + (odd - 1) * odd //2
+    return (even - 1) * even // 2 + (odd - 1) * odd // 2
+
 
 def solve(a):
     sums = []
@@ -28,10 +29,10 @@ def solve(a):
         res += count(d[sums])
     return res
 
+
 n = int(input())
 x = input().split()
 a = []
 for i in x:
     a.append(int(i))
 print(solve(a))
-

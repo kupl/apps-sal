@@ -1,4 +1,5 @@
-primes=[2,3,5,7]
+primes = [2, 3, 5, 7]
+
 
 def is_prime(n):
     if n < 2:

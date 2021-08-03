@@ -13,6 +13,7 @@ ACRONYMS = {
 }
 ACRONYM_PATTERN = re.compile(r'\b[A-Z]{3,}\b')
 
+
 def acronym_buster(message):
     new = ACRONYM_PATTERN.sub(lambda m: ACRONYMS.get(m.group(), m.group()), message)
     matched = ACRONYM_PATTERN.search(new)

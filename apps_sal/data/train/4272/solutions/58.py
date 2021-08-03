@@ -3,4 +3,3 @@ def greet(name):
         return "Hello, my love!"
     else:
         return "Hello, {fname}!".format(fname=name)
-

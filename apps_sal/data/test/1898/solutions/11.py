@@ -8,4 +8,3 @@ if n % 2 == 0:
     print("I love it")
 else:
     print("I hate it")
-

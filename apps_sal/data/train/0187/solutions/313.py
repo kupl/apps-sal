@@ -24,6 +24,3 @@ class Solution:
                 ans = c
                 t = i + 1
         return t
-                
-            
-

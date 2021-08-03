@@ -11,7 +11,7 @@ c = [0] * n
 for i in range(k - 1, n):
     # print(f'i={i}, b[i]={b[i]}, i-b[i]+1={i - b[i] + 1}, i-k={i-k}, c[i-k]={c[i-k]}, c[b[i]]={c[b[i]]}')
     # print(i - k, b[i] - 2)
-    if i - b[i] + 1 >= k and (b[i] == 0 or c[i - k] > c[b[i] - 2] or (b[i] == 1 and c[i-k]> c[0])):
+    if i - b[i] + 1 >= k and (b[i] == 0 or c[i - k] > c[b[i] - 2] or (b[i] == 1 and c[i - k] > c[0])):
         c[i] = c[i - 1] + 1
         # d[i] = 1
     else:

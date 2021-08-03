@@ -16,4 +16,4 @@ for i in z[1:]:
     else:
         res = -2
         break
-print(res+1)
+print(res + 1)

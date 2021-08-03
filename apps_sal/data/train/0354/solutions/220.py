@@ -3,15 +3,12 @@ class Solution:
     # count[0][f] = 0 and total[0] = 1.
     # for each throw, check the number of ways to after ith throw and the end face is f
     # def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        
-        
-        
-        
+
     # DFS with memoization.
     # State to remember (#throws_left, #repeat, last_face)
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         cache = collections.defaultdict()
-        
+
         def dfs(n, repeat, face):
             if n == 0:
                 return 1
@@ -27,6 +24,5 @@ class Solution:
                             count += dfs(n - 1, repeat + 1, f)
                 cache[(n, repeat, face)] = count
                 return count
-            
-        return sum(dfs(n - 1, 1, f) for f in range(6)) % (10**9 + 7)
 
+        return sum(dfs(n - 1, 1, f) for f in range(6)) % (10**9 + 7)

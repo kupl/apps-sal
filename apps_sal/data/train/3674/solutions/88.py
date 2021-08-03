@@ -1,4 +1,4 @@
-def add_binary(a,b):
+def add_binary(a, b):
     sum = a + b
     msg = []
     y = sum
@@ -9,4 +9,3 @@ def add_binary(a,b):
     msg.append(str(sum % 2))
 
     return "".join(msg)
-

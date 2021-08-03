@@ -1,4 +1,4 @@
-n,a,b,k = list(map(int,input().split()))
+n, a, b, k = list(map(int, input().split()))
 
 s = input()
 
@@ -12,9 +12,8 @@ for i in range(n):
         sm += 1
         if sm == b:
             num += 1
-            res.append(i+1)
+            res.append(i + 1)
             sm = 0
 k = num - a + 1
 print(k)
 print(*res[:k])
-

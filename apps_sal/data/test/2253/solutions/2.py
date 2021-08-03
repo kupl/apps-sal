@@ -7,5 +7,3 @@ for i in range(t):
         print("JAPANESE")
     else:
         print("KOREAN")
-        
-

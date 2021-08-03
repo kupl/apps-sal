@@ -1,7 +1,9 @@
 from math import ceil
 
+
 def count_hr(piles, k):
     return sum([ceil(p / k) for p in piles])
+
 
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
@@ -14,5 +16,5 @@ class Solution:
                 lo = mid + 1
             elif count_hr(piles, mid) <= H:
                 hi = mid - 1
-        
+
         return lo

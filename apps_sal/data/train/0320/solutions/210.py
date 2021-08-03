@@ -11,8 +11,7 @@ class Solution:
                     sol = False
             if sol:
                 break
-            
-        
+
             c += 1
-            nums = [x // 2 for x in nums ]
+            nums = [x // 2 for x in nums]
         return c

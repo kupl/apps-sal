@@ -3,7 +3,9 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10**5)
 
 N, M = map(int, input().split())
-AB = [list(map(lambda x: int(x)-1, input().split())) for _ in range(M)][::-1]
+AB = [list(map(lambda x: int(x) - 1, input().split())) for _ in range(M)][::-1]
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -45,14 +47,15 @@ class UnionFind():
     def group_count(self):
         return len(self.roots())
 
+
 uf = UnionFind(N)
 ans = []
-cnt = N*(N-1)//2
+cnt = N * (N - 1) // 2
 for a, b in AB:
     ans.append(cnt)
     if uf.same(a, b):
         continue
-    cnt -= uf.size(a)*uf.size(b)
+    cnt -= uf.size(a) * uf.size(b)
     uf.union(a, b)
 for a in ans[::-1]:
     print(a)

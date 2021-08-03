@@ -8,6 +8,6 @@ class Solution:
             if nums[left] + nums[right] > target:
                 right -= 1
             else:
-                res += 2 ** (right-left)
+                res += 2 ** (right - left)
                 left += 1
-        return res % (10**9+7)
+        return res % (10**9 + 7)

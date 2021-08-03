@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 result = 1
 if 0 in A:
     print(0)

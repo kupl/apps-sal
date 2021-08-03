@@ -21,8 +21,10 @@ def __starting_point():
         pre[b + 1] -= a
         pre[b + 1] += b - a
         pre[n + 1] -= b - a
-    for i in range(1,n+1):
-        pre[i] += pre[i-1]
-        print(pre[i],end=' ')
+    for i in range(1, n + 1):
+        pre[i] += pre[i - 1]
+        print(pre[i], end=' ')
     print('')
+
+
 __starting_point()

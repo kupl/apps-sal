@@ -1,5 +1,5 @@
 N = int(input())
-G2,G4 = [],[]
+G2, G4 = [], []
 cnt2 = 0
 cnt3 = 0
 for _ in range(N):
@@ -11,15 +11,15 @@ for _ in range(N):
             cnt += 1
         else:
             cnt -= 1
-        MIN = min(MIN,cnt)
+        MIN = min(MIN, cnt)
     if MIN == 0 and cnt >= 0:
         cnt2 += cnt
     if MIN < 0 and cnt >= 0:
-        G2.append([MIN,cnt])
+        G2.append([MIN, cnt])
     if MIN == cnt and cnt < 0:
         cnt3 += cnt
     if MIN < cnt and cnt < 0:
-        G4.append([MIN,cnt])
+        G4.append([MIN, cnt])
 
 
 G2.sort(reverse=True)
@@ -42,4 +42,3 @@ if cnt2 == 0:
     print('Yes')
 else:
     print('No')
-

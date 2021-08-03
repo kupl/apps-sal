@@ -2,14 +2,14 @@ import numpy as np
 
 n = int(input())
 
-dp = np.full((n + 1), n + 1, dtype = int)
+dp = np.full((n + 1), n + 1, dtype=int)
 dp[0] = 0
 
 loop = 0
 while dp[n] > n:
-    tmp1 = np.full(n + 1, n + 1, dtype = int)
-    tmp6 = np.full(n + 1, n + 1, dtype = int)
-    tmp9 = np.full(n + 1, n + 1, dtype = int)    
+    tmp1 = np.full(n + 1, n + 1, dtype=int)
+    tmp6 = np.full(n + 1, n + 1, dtype=int)
+    tmp9 = np.full(n + 1, n + 1, dtype=int)
     tmp1[1:] = dp[: -1] + 1
     j = 1
     while 6 ** j <= n:

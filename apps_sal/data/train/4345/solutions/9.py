@@ -1,5 +1,5 @@
 def buy_or_sell(pairs, harvested_fruit):
-    result= []
+    result = []
     for i in pairs:
         if i[0] == harvested_fruit:
             result.append("buy")

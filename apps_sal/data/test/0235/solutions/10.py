@@ -29,4 +29,3 @@ while l + 1 < r:
         l = m + 1
 
 print(l)
-

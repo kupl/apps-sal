@@ -22,4 +22,3 @@ for i in range(n):
     bsum[i] += bsum[i - 1] + bomb[i]
     ans += bnum
 print(ans)
-

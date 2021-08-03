@@ -14,6 +14,7 @@ def fix(a):
             return -1
     return c
 
+
 def go():
     q = int(input())
     o = ''
@@ -21,5 +22,5 @@ def go():
         o += str(fix(int(input()))) + '\n'
     return o
 
-print(go())
 
+print(go())

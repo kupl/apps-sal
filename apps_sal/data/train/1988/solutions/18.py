@@ -7,8 +7,9 @@ class Solution:
         hBlue = defaultdict(list)
         for edge in blue_edges:
             hBlue[edge[0]].append(edge[1])
+
         def helper(n, curr, visited):
-            dist = 0 
+            dist = 0
             small = float('inf')
             if curr:
                 arr = deque(hRed[0])

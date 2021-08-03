@@ -3,7 +3,7 @@
 # def recur(s_i, e_i, end_i):
 #     # if end_i in dp[s_i] and e_i in dp[s_i][end_i]:
 #     #     return dp[s_i][end_i][e_i]
-        
+
 #     inside = 0
 #     for i in range(s_i+1, e_i):
 #         if b_l[i] < k:
@@ -24,13 +24,13 @@
 #                     if i < ind < end_i:
 #                         dp[i][end_i] = max(dp[i][end_i], recur(i, ind, end_i))
 #             outside = max(outside, dp[i][end_i])
-                    
+
 #     # if end_i not in dp[s_i]:
 #     #     dp[s_i][end_i] = {}
 #     # dp[s_i][end_i].update({e_i: v_l[s_i] + v_l[e_i] + outside + inside})
 #     # return dp[s_i][end_i][e_i]
 #     return v_l[s_i] + v_l[e_i] + outside + inside
-    
+
 n, k1, *l = map(int, input().split())
 v_l, b_l = l[:n], l[n:]
 
@@ -41,17 +41,17 @@ for i in range(n):
 
 dp = [[0 for _ in range(n)] for _ in range(n)]
 for k in range(1, n):
-    for j in range(n-2, -1, -1):
-        if j+k >= n:
+    for j in range(n - 2, -1, -1):
+        if j + k >= n:
             continue
-        elif b_l[j+k]-k1 == b_l[j]:
-            if j+k-1 < n:
-                dp[j][j+k] = max(dp[j][j+k], v_l[j+k]+v_l[j]+dp[j+1][j+k-1])
+        elif b_l[j + k] - k1 == b_l[j]:
+            if j + k - 1 < n:
+                dp[j][j + k] = max(dp[j][j + k], v_l[j + k] + v_l[j] + dp[j + 1][j + k - 1])
             else:
-                dp[j][j+k] = max(dp[j][j+k], v_l[j+k]+v_l[j])
-        for i in range(j, j+k):
-            dp[j][j+k] = max(dp[j][j+k], dp[j][i]+dp[i+1][j+k])
-        
+                dp[j][j + k] = max(dp[j][j + k], v_l[j + k] + v_l[j])
+        for i in range(j, j + k):
+            dp[j][j + k] = max(dp[j][j + k], dp[j][i] + dp[i + 1][j + k])
+
 # dp = [{} for _ in range(n)]
 # ans = 0
 # for i in range(n):

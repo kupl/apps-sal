@@ -3,5 +3,5 @@ def reverseWords(s):
     arr = arr[::-1]
     str = ''
     for el in arr:
-        str +=el+' '
+        str += el + ' '
     return str[:-1]

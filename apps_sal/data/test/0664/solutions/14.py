@@ -1,7 +1,7 @@
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    im = 1;
+    im = 1
     while im < n and a[im] >= a[im - 1]:
         im += 1
 

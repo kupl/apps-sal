@@ -1,6 +1,6 @@
-n,p = map(int,input().split())
+n, p = map(int, input().split())
 if n < 10:
-  rate = p + 100*(10-n)
+    rate = p + 100 * (10 - n)
 else:
-  rate = p
+    rate = p
 print(rate)

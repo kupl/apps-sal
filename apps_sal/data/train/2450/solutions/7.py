@@ -16,4 +16,3 @@ class Solution:
             del s[min_ind]
             del s[max_ind - 1]
         return sum(s) / len(s)
-

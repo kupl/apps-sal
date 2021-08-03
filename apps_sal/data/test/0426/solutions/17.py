@@ -1,7 +1,7 @@
 n, k = list(map(int, input().split()))
 s = list(input())
 
-if n == 1 and k>0:
+if n == 1 and k > 0:
     print(0)
     return
 
@@ -20,4 +20,3 @@ while k > 0 and i < n:
     i += 1
 
 print(''.join(s))
-

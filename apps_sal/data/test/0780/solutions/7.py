@@ -24,7 +24,7 @@ input = sys.stdin.readline
 s = list(map(int, input().strip()))
 a = len(s)
 #h = [[[0 for _ in range(10)] for _ in range(10)] for _ in range(10)]
-ans = [[0,0,0,0,0,0,0,0,0,0] for _ in range(10)]
+ans = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] for _ in range(10)]
 # for i in range(10):
 # 	for j in range(10):
 # 		for diff in range(10):
@@ -35,27 +35,27 @@ h = [[[1, -1, -1, -1, -1, -1, -1, -1, -1, -1], [1, 1, 2, 3, 4, 5, 6, 7, 8, 9], [
 
 
 for i in range(10):
-	for j in range(i, 10):
-		cnt = 0
-		flag = True
-		l = [0,0,0,0,0,0,0,0,0,0]
-		for m in range(a - 1):
-			diff = s[m + 1] - s[m]
-			if diff < 0:
-				diff += 10
-			l[diff] += 1
-		for p in range(10):
-			if l[p] != 0:
-				temp = h[i][j][p]
-				if temp == -1:
-					flag = False
-					break
-				else:
-					cnt += (temp - 1) * l[p]
-		if flag:
-			ans[i][j] = ans[j][i] = cnt
-		else:
-			ans[i][j] = ans[j][i] = -1		
+    for j in range(i, 10):
+        cnt = 0
+        flag = True
+        l = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        for m in range(a - 1):
+            diff = s[m + 1] - s[m]
+            if diff < 0:
+                diff += 10
+            l[diff] += 1
+        for p in range(10):
+            if l[p] != 0:
+                temp = h[i][j][p]
+                if temp == -1:
+                    flag = False
+                    break
+                else:
+                    cnt += (temp - 1) * l[p]
+        if flag:
+            ans[i][j] = ans[j][i] = cnt
+        else:
+            ans[i][j] = ans[j][i] = -1
 
 for x in ans:
-	print(*x)
+    print(*x)

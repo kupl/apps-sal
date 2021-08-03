@@ -1,7 +1,7 @@
 class Solution:
     def minEatingSpeed(self, piles, H):
         lo, hi = 1, max(piles)
-        
+
         while lo <= hi:
             K = lo + ((hi - lo) >> 1)
             if self.countTimeEatAllAtSpeed(
@@ -10,10 +10,10 @@ class Solution:
             else:
                 lo = K + 1
         return lo
-    
+
     def countTimeEatAllAtSpeed(self, K, piles):
         countHours = 0  # hours take to eat all bananas
-        
+
         for pile in piles:
             countHours += pile // K
             if pile % K != 0:

@@ -37,4 +37,3 @@ for i in range(n):
     if t[i] < a[i]:
         ans = max(ans, a[i] - 1)
 print(ans)
-

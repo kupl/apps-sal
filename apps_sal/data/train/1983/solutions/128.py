@@ -7,7 +7,7 @@ class ProductOfNumbers:
         self.zero_flags = []
 
     def add(self, num: int) -> None:
-        #print(\"self.arr\", self.arr)
+        # print(\"self.arr\", self.arr)
         if num == 0:
             self.zero_flags.append(self.n)
         if len(self.arr) > 0:
@@ -21,20 +21,19 @@ class ProductOfNumbers:
         self.n += 1
 
     def getProduct(self, k: int) -> int:
-        #print(\"self.cum_prod\", self.cum_prod)
-        #print(\"0 flags \", self.zero_flags)
-        if len(self.zero_flags) > 0 and max(self.zero_flags) > self.n-k-1:
+        # print(\"self.cum_prod\", self.cum_prod)
+        # print(\"0 flags \", self.zero_flags)
+        if len(self.zero_flags) > 0 and max(self.zero_flags) > self.n - k - 1:
             return 0
         if len(self.cum_prod) == k:
             return self.cum_prod[-1]
-        den = self.cum_prod[self.n-k-1]
+        den = self.cum_prod[self.n - k - 1]
         if den == 0:
             return self.cum_prod[-1]
-        return self.cum_prod[-1]//den
+        return self.cum_prod[-1] // den
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

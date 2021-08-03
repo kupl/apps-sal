@@ -22,29 +22,28 @@ class StreamChecker:
         n = self.maxLen
         r = self.root
         q.append(l)
-        if len(q)>n:
+        if len(q) > n:
             q.pop(0)
-        def dfs(s,node):
-            if len(s)==0:
+
+        def dfs(s, node):
+            if len(s) == 0:
                 return node.end
             if node.end:
                 return True
             if s[0] in node.c:
-                return dfs(s[1:],node.c[s[0]])
+                return dfs(s[1:], node.c[s[0]])
             else:
                 return False
-        ans = dfs(q[::-1],r)
+        ans = dfs(q[::-1], r)
         return ans
-            
+
 
 class Trie:
     def __init__(self):
         self.end = False
         self.c = {}
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

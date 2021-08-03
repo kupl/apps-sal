@@ -7,4 +7,3 @@ for c in input():
     else:
         ans += int(c)
 print(ans)
-

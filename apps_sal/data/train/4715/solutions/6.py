@@ -25,6 +25,6 @@ def build_palindrome(word: str) -> str:
     shorter palindrome.
     """
     return sorted([
-        build_left_palindrome(word), 
+        build_left_palindrome(word),
         build_right_palindrome(word)
     ], key=len)[0]

@@ -1,2 +1,1 @@
-    return map(''.join, set(itertools.permutations(s)))
-
+return map(''.join, set(itertools.permutations(s)))

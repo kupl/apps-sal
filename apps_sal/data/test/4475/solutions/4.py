@@ -16,4 +16,3 @@ for i in range(t):
     ans = min(ans, ca * cb)
 
     print(ans)
-

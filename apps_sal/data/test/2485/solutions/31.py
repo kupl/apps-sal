@@ -1,11 +1,13 @@
+from bisect import bisect_left, bisect
 import sys
 def input(): return sys.stdin.readline().rstrip()
-from bisect import bisect_left,bisect
+
+
 def main():
-    h, w, m = map(int,input().split()) 
-    h_lis = [0] * (h+1)
-    w_lis = [0] * (w+1)
-    bombs = set([tuple(map(int,input().split())) for i in range(m)])
+    h, w, m = map(int, input().split())
+    h_lis = [0] * (h + 1)
+    w_lis = [0] * (w + 1)
+    bombs = set([tuple(map(int, input().split())) for i in range(m)])
     for hh, ww in bombs:
         h_lis[hh] += 1
         w_lis[ww] += 1
@@ -21,6 +23,9 @@ def main():
     else:
         print(h_lis[h_i] + w_lis[w_i] - 1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,8 +1,10 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n = len(arr)
-        dp = [float('inf')] * n 
-        ans = float('inf'); s = 0; j = 0
+        dp = [float('inf')] * n
+        ans = float('inf')
+        s = 0
+        j = 0
         for i in range(n):
             s += arr[i]
             while s > target:
@@ -10,11 +12,12 @@ class Solution:
                 j += 1
             if s == target:
                 cur = i - j + 1
-                ans = min(ans, cur + dp[j-1])
-                dp[i] = min(cur, dp[i-1])
+                ans = min(ans, cur + dp[j - 1])
+                dp[i] = min(cur, dp[i - 1])
             else:
-                dp[i] = dp[i-1]
+                dp[i] = dp[i - 1]
         return ans if ans < float('inf') else -1
+
 
 '''             
 class Solution:

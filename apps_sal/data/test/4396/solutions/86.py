@@ -12,5 +12,3 @@ for money in moneys:
         total += x * rate
 
 print(total)
-
-

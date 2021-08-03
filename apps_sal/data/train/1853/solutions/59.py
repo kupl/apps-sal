@@ -13,6 +13,6 @@ class Solution:
                 if t <= threshold and curr not in visit:
                     visit.add(curr)
                     for nei, dis in graph[curr]:
-                        heapq.heappush(queue, [t + dis, nei])    
+                        heapq.heappush(queue, [t + dis, nei])
             res[i] = len(visit) - 1
         return -sorted([[v, -i] for i, v in enumerate(res)])[0][1]

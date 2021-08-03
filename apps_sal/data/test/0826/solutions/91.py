@@ -21,5 +21,4 @@ while left + 1 < right:
     else:
         right = t
     # print(left, right)
-print((n+1-left))
-
+print((n + 1 - left))

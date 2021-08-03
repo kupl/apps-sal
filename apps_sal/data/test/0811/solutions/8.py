@@ -1,4 +1,4 @@
-a,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 c = a
 d = 0
 s = 0
@@ -8,5 +8,3 @@ while c:
     c = d // b
     d %= b
 print(s)
-
-

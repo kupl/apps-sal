@@ -10,4 +10,3 @@ while i < len(n) and n[i] < ln[0]:
 
 ans += ln[0]
 print(ans)
-

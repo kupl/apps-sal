@@ -1,5 +1,5 @@
 N = int(input())
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 
 s_p = sorted(p)
 

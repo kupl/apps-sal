@@ -1,5 +1,5 @@
 
-def hantei(x,y):
+def hantei(x, y):
 
     if y == 0:
         return "l"
@@ -12,7 +12,8 @@ def hantei(x,y):
 
     return "n"
 
-R,C,N = list(map(int,input().split()))
+
+R, C, N = list(map(int, input().split()))
 
 u = []
 l = []
@@ -21,31 +22,30 @@ r = []
 
 for i in range(N):
 
-    X1,Y1,X2,Y2 = list(map(int,input().split()))
+    X1, Y1, X2, Y2 = list(map(int, input().split()))
 
-    if hantei(X1,Y1) != "n" and hantei(X2,Y2) != "n":
+    if hantei(X1, Y1) != "n" and hantei(X2, Y2) != "n":
 
-
-        if hantei(X1,Y1) == "l":
-            l.append([X1,Y1,i])
-        elif hantei(X1,Y1) == "d":
-            d.append([X1,Y1,i])
-        elif hantei(X1,Y1) == "r":
-            r.append([X1,Y1,i])
-        elif hantei(X1,Y1) == "u":
-            u.append([X1,Y1,i])
+        if hantei(X1, Y1) == "l":
+            l.append([X1, Y1, i])
+        elif hantei(X1, Y1) == "d":
+            d.append([X1, Y1, i])
+        elif hantei(X1, Y1) == "r":
+            r.append([X1, Y1, i])
+        elif hantei(X1, Y1) == "u":
+            u.append([X1, Y1, i])
 
         X1 = X2
         Y1 = Y2
-    
-        if hantei(X1,Y1) == "l":
-            l.append([X1,Y1,i])
-        elif hantei(X1,Y1) == "d":
-            d.append([X1,Y1,i])
-        elif hantei(X1,Y1) == "r":
-            r.append([X1,Y1,i])
-        elif hantei(X1,Y1) == "u":
-            u.append([X1,Y1,i])
+
+        if hantei(X1, Y1) == "l":
+            l.append([X1, Y1, i])
+        elif hantei(X1, Y1) == "d":
+            d.append([X1, Y1, i])
+        elif hantei(X1, Y1) == "r":
+            r.append([X1, Y1, i])
+        elif hantei(X1, Y1) == "u":
+            u.append([X1, Y1, i])
 
 l.sort()
 d.sort()
@@ -73,8 +73,6 @@ for i in ps:
         q.append(i)
 
 if len(q) == 0:
-    print ("YES")
+    print("YES")
 else:
-    print ("NO")
-
-
+    print("NO")

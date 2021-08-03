@@ -4,4 +4,3 @@ def double_char(s):
         total += i
         total += i
     return total
-

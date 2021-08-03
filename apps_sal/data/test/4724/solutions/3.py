@@ -23,7 +23,6 @@ g = int(input())
 
 # 高橋君が取りべきパフォーマンスを計算し、出力する
 # (r + x) / 2 = G
-result = g * 2  - r
+result = g * 2 - r
 
 print(result)
-

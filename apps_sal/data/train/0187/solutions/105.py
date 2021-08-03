@@ -14,24 +14,23 @@ class Solution:
             # else:
             #     profit = customer*boardingCost - runningCost
             #     waiting = 0
-            onboarding = min(4,customer)
-            profit += onboarding*boardingCost - runningCost
+            onboarding = min(4, customer)
+            profit += onboarding * boardingCost - runningCost
             waiting = customer - onboarding
-            
-            if max_profit<profit:
+
+            if max_profit < profit:
                 max_pprofit = profit
                 ans = rotation
-        
-        if 4*boardingCost - runningCost>0:
-            steps = waiting//4
-            profit += steps*(4*boardingCost - runningCost)
-            waiting = waiting - steps*4
-            if waiting*boardingCost - runningCost>0:
-                profit += waiting*boardingCost - runningCost
+
+        if 4 * boardingCost - runningCost > 0:
+            steps = waiting // 4
+            profit += steps * (4 * boardingCost - runningCost)
+            waiting = waiting - steps * 4
+            if waiting * boardingCost - runningCost > 0:
+                profit += waiting * boardingCost - runningCost
                 steps += 1
-            if max_profit<profit:
+            if max_profit < profit:
                 max_pprofit = profit
                 ans = rotation + steps
-        
-        
+
         return ans if ans else -1

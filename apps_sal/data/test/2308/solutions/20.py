@@ -8,12 +8,10 @@ for i in range(t):
             print(0)
         else:
             ans = 0
-            for i in range(len(x) - len(y) + num,-1,-1):
+            for i in range(len(x) - len(y) + num, -1, -1):
                 if x[i] == "1":
                     ans = len(x) - len(y) + num - i
                     break
             print(ans)
     else:
         print(0)
-        
-

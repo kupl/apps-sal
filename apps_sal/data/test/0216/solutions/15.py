@@ -13,4 +13,3 @@ for x in lst:
         sum_2 += x
 
 print(sum_1 - sum_2)
-

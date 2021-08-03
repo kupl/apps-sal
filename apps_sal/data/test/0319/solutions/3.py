@@ -7,20 +7,21 @@ for i in range(n//2):
     t2+=abs(2*i+2-a[i])
 print(min(t,t2))
 '''
-n,m = list(map(int,input().split()))
-a=[]
+n, m = list(map(int, input().split()))
+a = []
 for i in range(n):
     a.append(input())
-f = [True]*n
+f = [True] * n
 for j in range(m):
     l = -1
     c = 0
     for i in range(n):
         if a[i][j] == '1':
             l = i
-            c+=1
-    if c==1:
+            c += 1
+    if c == 1:
         f[l] = False
-if True in f:print('YES')
-else :print('NO')
-
+if True in f:
+    print('YES')
+else:
+    print('NO')

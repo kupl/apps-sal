@@ -4,16 +4,16 @@ class Solution:
             return 0
         stop_to_bus = collections.defaultdict(set)
         bus_to_bus = {i: [] for i in range(len(routes))}
-        
+
         # end_bus_q = collections.deque([])
         for bus, route in enumerate(routes):
             for stop in route:
                 stop_to_bus[stop].add(bus)
         # print(stop_to_bus, init_bus_q)
         q = collections.deque(stop_to_bus[S])
-        
+
         for i in range(len(routes)):
-            for j in range(i+1, len(routes)):
+            for j in range(i + 1, len(routes)):
                 if len(set(routes[i]) & set(routes[j])) > 0:
                     bus_to_bus[i].append(j)
                     bus_to_bus[j].append(i)
@@ -34,6 +34,3 @@ class Solution:
                     q.append(nb)
             steps += 1
         return -1
-            
-        
-

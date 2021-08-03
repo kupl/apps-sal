@@ -11,4 +11,3 @@ def domain_name(url):
     except:
         list2 = url.split('.')
         return(list2[0])
-

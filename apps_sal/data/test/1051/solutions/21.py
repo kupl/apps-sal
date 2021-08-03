@@ -7,4 +7,5 @@ def __starting_point():
     else:
         print(m - 25)
 
+
 __starting_point()

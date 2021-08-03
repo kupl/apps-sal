@@ -14,4 +14,3 @@ for i in range(k):
         answers.add(beg)
 
 print(len(answers))
-

@@ -27,5 +27,4 @@ for x, li in list(v.items()):
 
 print(len(w))
 
-print('\n'.join('%d %d' %x for x in sorted(w)))
-
+print('\n'.join('%d %d' % x for x in sorted(w)))

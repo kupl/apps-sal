@@ -1,21 +1,21 @@
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
 
-#         def binary_search(intervals, index):
+        #         def binary_search(intervals, index):
 
-#             start = 0
-#             end = index - 1
+        #             start = 0
+        #             end = index - 1
 
-#             while start <= end:
-#                 mid = (start + end) // 2
+        #             while start <= end:
+        #                 mid = (start + end) // 2
 
-#                 if intervals[index][0] < intervals[mid][1]:
-#                     end = mid - 1
-#                 else:
-#                     start = mid + 1
+        #                 if intervals[index][0] < intervals[mid][1]:
+        #                     end = mid - 1
+        #                 else:
+        #                     start = mid + 1
 
-#             return start - 1
-        
+        #             return start - 1
+
         def binary_search(intervals, index):
 
             start = 0
@@ -30,8 +30,6 @@ class Solution:
                     start = mid + 1
 
             return start - 1
-        
-        
 
         intervals = []
         for i in range(len(startTime)):
@@ -45,7 +43,7 @@ class Solution:
             profit_if_i_inlcuded = intervals[i][2]
 
             k_th = binary_search(intervals, i)
-            
+
             if (k_th != -1):
                 profit_if_i_inlcuded += dp[k_th]
 
@@ -111,4 +109,3 @@ class Solution:
 
 #         # print(dp)
 #         return max(dp)
-

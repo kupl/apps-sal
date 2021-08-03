@@ -18,9 +18,12 @@ class Calc:
 
     def nCr(self, n, r):
         r = min(n - r, r)
-        if r < 0: return 0
-        if r == 0: return 1
-        if r == 1: return n
+        if r < 0:
+            return 0
+        if r == 0:
+            return 1
+        if r == 1:
+            return n
         return self.fact[n] * self.invs[r] * self.invs[n - r] % self.mod
 
     def nHr(self, n, r):
@@ -63,13 +66,13 @@ def main():
     div2 = pow(2, MOD - 2, MOD)
     for k in range(1, N + 2):
         t = (
-                    calc.nCr(N + 1, k)
-                    - (
-                            calc.nCr(N + 1 - Y, k)
-                            - calc.nCr(N + 1 - 2 - Y, k)
-                            - calc.nCr(N + 1 - 2 - Y, k - 2)
-                    ) * div2 % MOD
-            ) % MOD
+            calc.nCr(N + 1, k) -
+                    (
+                        calc.nCr(N + 1 - Y, k) -
+                            calc.nCr(N + 1 - 2 - Y, k) -
+                calc.nCr(N + 1 - 2 - Y, k - 2)
+            ) * div2 % MOD
+        ) % MOD
         ans.append(t)
 
     print(*ans, sep='\n')
@@ -77,5 +80,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

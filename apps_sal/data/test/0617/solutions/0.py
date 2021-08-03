@@ -8,4 +8,3 @@ for i in range(-1, n):
                 new_s = s[0:i + 1] + "(" + s[i + 1:j] + ")" + s[j:n]
                 res = max(res, eval(new_s))
 print(res)
-

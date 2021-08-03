@@ -14,10 +14,10 @@ class Solution:
                 gondolas[i] = n_waiting
             else:
                 gondolas[i] = 4
-            n_waiting -= gondolas[i]    
+            n_waiting -= gondolas[i]
             if j < len(customers):
                 n_waiting += customers[j]
-            profit += boardingCost*gondolas[i] - runningCost
+            profit += boardingCost * gondolas[i] - runningCost
             if profit > max_profit:
                 min_rot = j
             max_profit = max(profit, max_profit)
@@ -25,11 +25,7 @@ class Solution:
             if i == 4:
                 i = 0
             j += 1
-            
-        if max_profit:    
-            return min_rot          
-        return -1
-        
-                    
-            
 
+        if max_profit:
+            return min_rot
+        return -1

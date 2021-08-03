@@ -1,7 +1,7 @@
 m, n, k = list(map(int, input().split()))
 Matrix = []
 for i in range(m):
-    s =  input()
+    s = input()
     Matrix.append([])
     for j in range(n):
         if s[j] == '*':
@@ -32,4 +32,3 @@ if k == 1:
     count //= 2
 
 print(count)
-

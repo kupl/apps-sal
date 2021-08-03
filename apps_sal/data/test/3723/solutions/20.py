@@ -1,13 +1,14 @@
 import functools
 import sys
-input = lambda :sys.stdin.readline()
-@functools.lru_cache(maxsize=10000)
+def input(): return sys.stdin.readline()
 
+
+@functools.lru_cache(maxsize=10000)
 def factor(n):
     res = []
     d = 2
 
-    while d*d <= n:
+    while d * d <= n:
         if n % d == 0:
             res.append(d)
             n //= d
@@ -20,6 +21,7 @@ def factor(n):
     # print("res" ,res)
 
     return set(res)
+
 
 def Main(n):
     A = list(map(int, input().split()))[:n]
@@ -43,8 +45,9 @@ def Main(n):
         print(1)
 
 
-
 def __starting_point():
     n = int(input())
     Main(n)
+
+
 __starting_point()

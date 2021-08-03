@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def main():
     n = int(input())
     a = []
@@ -17,29 +18,31 @@ def main():
         now, day = que.popleft()
         if lastdone[now] == day:
             continue
-        if next[now] == n-1:
+        if next[now] == n - 1:
             continue
-        candidate = a[now][next[now]]-1
+        candidate = a[now][next[now]] - 1
         if lastdone[candidate] == day:
             continue
-        if next[candidate] == n-1:
+        if next[candidate] == n - 1:
             continue
-        if a[candidate][next[candidate]]-1 == now:
+        if a[candidate][next[candidate]] - 1 == now:
             next[now] += 1
             next[candidate] += 1
             lastdone[now] = day
             lastdone[candidate] = day
-            que.append((now, day+1))
-            que.append((candidate, day+1))
+            que.append((now, day + 1))
+            que.append((candidate, day + 1))
 
     for i in range(n):
-        if next[i] != n-1:
+        if next[i] != n - 1:
             print((-1))
             return
 
     print((max(lastdone)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

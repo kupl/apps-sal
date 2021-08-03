@@ -1,16 +1,15 @@
-n= int(input())
-l=[]
+n = int(input())
+l = []
 
 for i in range(n):
-    l.append(list(map(int,input().split())))
+    l.append(list(map(int, input().split())))
 
-l.sort(key = lambda x: x[1])
-count=1
+l.sort(key=lambda x: x[1])
+count = 1
 R = l[0][1]
 for i in l:
-    if not(i[0]<= R<= i[1]):
+    if not(i[0] <= R <= i[1]):
         R = i[1]
-        count+=1
+        count += 1
 
 print(count)
-

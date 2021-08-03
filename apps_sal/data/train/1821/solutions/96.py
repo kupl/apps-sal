@@ -6,7 +6,7 @@ class Solution:
             if(listToSort[0] > listToSort[1]):
                 listToSort[0], listToSort[1] = listToSort[1], listToSort[0]
         else:
-            divider = len(listToSort)//2
+            divider = len(listToSort) // 2
             l = listToSort[:divider]
             r = listToSort[divider:]
             self.sortArray(l)

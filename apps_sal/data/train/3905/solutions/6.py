@@ -1,5 +1,5 @@
 def missing(s):
-    for nd in range(1,min(7, len(s)//2+1)):
+    for nd in range(1, min(7, len(s) // 2 + 1)):
         guess, miss = s[:nd], ''
         n = int(guess)
         while len(guess) < len(s):
@@ -11,5 +11,6 @@ def missing(s):
                     break
                 miss = str(n)
                 guess = guess[:-len(miss)]
-        if miss: return int(miss)
+        if miss:
+            return int(miss)
     return -1

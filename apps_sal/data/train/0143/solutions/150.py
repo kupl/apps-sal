@@ -14,4 +14,3 @@ class Solution:
                 left += 1
 
         return right - left
-

@@ -1,7 +1,6 @@
 from collections import defaultdict
 
 
-
 def rp():
 
     s = input().split()
@@ -9,11 +8,9 @@ def rp():
     return (s[0], int(s[1]))
 
 
-
 ps = {}
 
 n = int(input())
-
 
 
 for i in range(n):
@@ -33,13 +30,11 @@ for i in range(n):
         input()
 
 
-
 root = list(ps.keys())[0]
 
 q = [(root, 0)]
 
 u = {root[0]: (root[1], 0)}
-
 
 
 for i, l in q:
@@ -61,9 +56,7 @@ for i, l in q:
             q.append((psp, l + 1))
 
 
-
 del u[root[0]]
-
 
 
 print(len(u))
@@ -73,6 +66,4 @@ for i in sorted(u):
     print(i, u[i][0])
 
 
-
 # Made By Mostafa_Khaled
-

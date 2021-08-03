@@ -3,7 +3,7 @@ class Solution:
         n = len(points)
         min_area = math.inf
         seen = set()
-        
+
         for i, (x0, y0) in enumerate(points):
             for j in range(i):
                 x1, y1 = points[j]
@@ -12,5 +12,5 @@ class Solution:
                     if area > 0:
                         min_area = min(min_area, area)
             seen.add((x0, y0))
-        
+
         return 0 if min_area == math.inf else min_area

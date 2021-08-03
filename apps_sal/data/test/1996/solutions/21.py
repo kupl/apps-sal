@@ -1,7 +1,7 @@
 n = int(input())
 set1 = set()
 ans = 0
-for i in range(97,123):
+for i in range(97, 123):
     set1.add(chr(i))
 for i in range(n):
     a, b = input().split()
@@ -14,7 +14,7 @@ for i in range(n):
         set2 = set()
         for i in b:
             set2.add(i)
-            
+
         if a == ".":
             set1 -= set2
         elif a == "!":

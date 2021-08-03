@@ -3,7 +3,6 @@ for _ in range(int(input())):
     i = 0
     ans = ""
     while len(ans) < n:
-        ans += chr(ord('a')+i)
-        i = (i+1) % b
+        ans += chr(ord('a') + i)
+        i = (i + 1) % b
     print(ans)
-

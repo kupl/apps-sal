@@ -1,17 +1,17 @@
 import itertools
 from typing import List, Tuple
- 
- 
+
+
 def main():
     d, g = list(map(int, input().split()))
     v = []
     for _ in range(d):
         p, c = list(map(int, input().split()))
         v.append((p, c))
- 
+
     print((ag(v, g)))
- 
- 
+
+
 def ag(v: List[Tuple[int, int]], g: int) -> int:
     ret = 10 ** 10
     for comb in itertools.product((False, True), repeat=len(v)):
@@ -29,9 +29,10 @@ def ag(v: List[Tuple[int, int]], g: int) -> int:
                 cnt = 10 ** 10  # impossible
         ret = min(ret, cnt)
     return ret
- 
- 
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

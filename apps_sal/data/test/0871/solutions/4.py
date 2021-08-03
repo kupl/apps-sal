@@ -8,6 +8,8 @@ def main():
     hour = ans // 60
     minute = ans % 60
     print(hour, minute)
+
+
 def earliest(times, s):
     n = len(times)
     if times[0] >= s + 1:
@@ -18,7 +20,10 @@ def earliest(times, s):
         if aft - bef >= 2 * s + 2:
             return bef + s + 1
     return times[n - 1] + s + 1
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

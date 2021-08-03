@@ -1,4 +1,4 @@
 S = list(input())
 for i in range(len(S)):
-    S[i]="x"
+    S[i] = "x"
 print("".join(S))

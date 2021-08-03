@@ -6,6 +6,8 @@ p = re.compile('{legs}{body}{body}0{body}{body}0{body}{body}{legs}'.format(
     legs='[a-z]',
     body=r'[[\]|};&#/><()*]',
 ))
+
+
 def count_robots(a):
     cnt = Counter(chain.from_iterable(
         ['d' if 'mechanik' in line else 'w' if 'automatik' in line else ''] * len(p.findall(line))

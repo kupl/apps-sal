@@ -13,4 +13,3 @@ for i in range(length):
     st[astr[i]][tsum] = st[astr[i]].get(tsum, 0) + 1
 
 print(ans)
-

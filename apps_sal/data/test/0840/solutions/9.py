@@ -10,6 +10,7 @@ def ok(u, a, b, n, k):
                 return False
     return k >= 0
 
+
 n, k = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))

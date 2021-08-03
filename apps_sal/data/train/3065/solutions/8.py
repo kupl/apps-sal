@@ -12,12 +12,12 @@ def get_textliterals(pv_code):
             break
         elif c == '*' and pv_code[idx - 1] == '/':
             comment = True
-        elif c == '/' and pv_code[idx -1] == '*' and comment:
+        elif c == '/' and pv_code[idx - 1] == '*' and comment:
             comment = False
         elif c == "'" and literal_start != -1 and not comment and not inline_comment:
-            if idx+1 < len(pv_code) and pv_code[idx+1] == "'":
+            if idx + 1 < len(pv_code) and pv_code[idx + 1] == "'":
                 quote = True
-            elif pv_code[idx-1] == "'":
+            elif pv_code[idx - 1] == "'":
                 continue
             else:
                 literal_end = idx + 1
@@ -26,7 +26,7 @@ def get_textliterals(pv_code):
                 quote = False
         elif c == "'" and quote == False and not comment and not inline_comment:
             literal_start = idx
-        elif c == '-' and pv_code[idx-1] == '-':
+        elif c == '-' and pv_code[idx - 1] == '-':
             inline_comment = True
         elif c == '\n':
             inline_comment = False

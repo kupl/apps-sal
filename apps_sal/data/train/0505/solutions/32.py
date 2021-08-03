@@ -12,6 +12,6 @@ class Solution:
                     stack.pop()
         if stack:
             to_remove.extend(stack)
-        
+
         output = [char for i, char in enumerate(s) if i not in to_remove]
         return ''.join(output)

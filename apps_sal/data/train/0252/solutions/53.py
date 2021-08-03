@@ -1,13 +1,13 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        steps = [0]*(n+1)
+        steps = [0] * (n + 1)
         for i, r in enumerate(ranges):
             if i - r < 0:
                 steps[0] = max(i + r, steps[0])
             else:
                 steps[i - r] = max(i + r, steps[i - r])
-        #print(steps)
-        
+        # print(steps)
+
         num = 1
         cur = 0
         cur_max = steps[0]

@@ -4,7 +4,7 @@ for i in range(int(input())):
     for j in range(len(s)):
         if s[j] == 'o':
             if j > 1 and j < len(s) - 2 and s[j + 1] == 'n' and s[j + 2] == 'e' and s[j - 1] == 'w' and s[j - 2] == 't':
-                arr.append(j + 1)             
+                arr.append(j + 1)
             elif j > 1 and s[j - 1] == 'w' and s[j - 2] == 't' and (j == len(s) - 1 or s[j + 1] != 'o'):
                 arr.append(j + 1)
             elif j > 1 and s[j - 1] == 'w' and s[j - 2] == 't' and j != len(s) - 1 and s[j + 1] == 'o':

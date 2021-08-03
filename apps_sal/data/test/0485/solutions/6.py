@@ -1,8 +1,9 @@
 import sys
 import math as m
 
+
 def sort(a):
-    mid = m.ceil(len(a)/2)
+    mid = m.ceil(len(a) / 2)
     if len(a) == 1:
         return a
     else:
@@ -19,7 +20,7 @@ def sort(a):
             elif j == len(ar):
                 sa.append(al[i])
                 i += 1
-            elif al[i]>ar[j]:
+            elif al[i] > ar[j]:
                 sa.append(ar[j])
                 j += 1
             else:
@@ -27,12 +28,13 @@ def sort(a):
                 i += 1
         return sa
 
+
 def main():
     input = sys.stdin.readline()
     n = int(input)
     x = []
     y = []
-    for i in range(4*n+1):
+    for i in range(4 * n + 1):
         input = sys.stdin.readline()
         X, Y = [int(j) for j in input.split()]
         x.append(X)
@@ -43,8 +45,8 @@ def main():
     py = 0
     if xs[0] != xs[1]:
         X = xs[0]
-    elif xs[4*n-1] != xs[4*n]:
-        X = xs[4*n]
+    elif xs[4 * n - 1] != xs[4 * n]:
+        X = xs[4 * n]
     else:
         px = 1
     if ys[0] != ys[1]:
@@ -55,7 +57,7 @@ def main():
         py = 1
     if px and not(py):
         i = 0
-        while i < 4*n+1 and y[i] != Y:
+        while i < 4 * n + 1 and y[i] != Y:
             i += 1
         X = x[i]
     if py and not(px):
@@ -68,8 +70,11 @@ def main():
         while x[i] == min(x) or x[i] == max(x) or y[i] == min(y) or y[i] == max(y):
             i += 1
         X, Y = x[i], y[i]
-    print(X,Y)
+    print(X, Y)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

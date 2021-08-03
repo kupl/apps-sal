@@ -5,6 +5,5 @@ for i in range(n):
     a, p = list(map(int, input().split()))
     if p < minp:
         minp = p
-    ans += a*minp
+    ans += a * minp
 print(ans)
-

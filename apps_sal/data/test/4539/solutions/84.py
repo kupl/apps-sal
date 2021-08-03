@@ -7,4 +7,3 @@ if int(n) % sum_index == 0:
     print("Yes")
 else:
     print("No")
-

@@ -3,7 +3,7 @@ class Solution:
         g = nums[0]
         for x in nums:
             while x:
-                g, x = x, g%x
+                g, x = x, g % x
         return g
 
     # a: list of integers

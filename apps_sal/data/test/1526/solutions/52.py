@@ -12,4 +12,3 @@ while len(set(abc)) != 1:
     abc.sort()
 
 print(ans)
-

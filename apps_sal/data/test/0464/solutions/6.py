@@ -12,8 +12,8 @@ def main():
     for i in range(h):
         cross_point.append([])
         for j in range(w):
-            if i > 0 and i < h-1 and j > 0 and j < w-1:
-                if S[i][j] == '*' and S[i-1][j] == '*' and S[i+1][j] == '*' and S[i][j-1] == '*' and S[i][j+1] == '*':
+            if i > 0 and i < h - 1 and j > 0 and j < w - 1:
+                if S[i][j] == '*' and S[i - 1][j] == '*' and S[i + 1][j] == '*' and S[i][j - 1] == '*' and S[i][j + 1] == '*':
                     cross_point[i].append(True)
                     continue
             cross_point[i].append(False)
@@ -24,10 +24,10 @@ def main():
                 if cross_point_location == None:
                     cross_point_location = (i, j)
                 else:
-                    print('NO') # multiple crosses
+                    print('NO')  # multiple crosses
                     return
     if cross_point_location == None:
-        print('NO') # no crosses
+        print('NO')  # no crosses
         return
     group = []
     for i in range(h):
@@ -61,12 +61,13 @@ def main():
     for i in range(h):
         for j in range(w):
             if S[i][j] == '*' and not group[i][j]:
-                print('NO') # others are not empty
+                print('NO')  # others are not empty
                 return
     print('YES')
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -4,7 +4,7 @@ class Solution:
 
         dp1 = [[0] * len(slices) for _ in range(k + 1)]
         dp2 = [[0] * len(slices) for _ in range(k + 1)]
-        
+
         for i in range(1, k + 1):
             for j in range(1, len(slices)):
                 if j == 1:

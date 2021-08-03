@@ -4,7 +4,7 @@ class Solution:
         n = len(nums)
         for i in range(n):
             if nums[i] == 1:
-                if i-p-1 >= k:
+                if i - p - 1 >= k:
                     p = i
                 else:
                     return False

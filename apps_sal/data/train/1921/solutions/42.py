@@ -4,7 +4,7 @@ class DinnerPlates:
         self.capacity = capacity
         self.stacks = []
         self.available = []
-        
+
     def push(self, val: int) -> None:
         if not self.available:
             self.stacks.append([])
@@ -14,13 +14,13 @@ class DinnerPlates:
         if len(self.stacks[slot]) == self.capacity:
             heapq.heappop(self.available)
             self.remove_empty_stacks()
-    
+
     def remove_empty_stacks(self):
         while self.stacks and not self.stacks[-1]:
             self.stacks.pop()
         while self.available and self.available[0] >= len(self.stacks):
             heapq.heappop(self.available)
-        
+
     def pop(self) -> int:
         return self.popAtStack(len(self.stacks) - 1)
 
@@ -39,4 +39,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

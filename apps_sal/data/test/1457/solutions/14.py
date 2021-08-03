@@ -3,9 +3,9 @@ a = list(input())
 b = list(input())
 d = deque()
 ret = 0
-for i in range(min(len(b)-1, len(a))):
+for i in range(min(len(b) - 1, len(a))):
     d.append(a[i])
-for i in range(len(b)-1, len(a)):
+for i in range(len(b) - 1, len(a)):
     d.append(a[i])
     if len(d) > len(b):
         d.popleft()
@@ -19,4 +19,3 @@ for i in range(len(b)-1, len(a)):
         ret += 1
         d.clear()
 print(ret)
-

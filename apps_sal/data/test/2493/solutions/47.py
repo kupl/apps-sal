@@ -22,6 +22,7 @@ class nCrMod():
             self.prep(n)
         return self.fac[n] * self.finv[r] * self.finv[n - r] % self.mod
 
+
 def main():
     N = int(input())
     A = list(map(int, input().split()))
@@ -39,5 +40,6 @@ def main():
             print((nCr(N + 1, i)))
         else:
             print(((nCr(N + 1, i) - nCr(N - (s - f), i - 1)) % mod))
-main()
 
+
+main()

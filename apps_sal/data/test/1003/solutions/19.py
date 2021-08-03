@@ -8,4 +8,3 @@ while True:
     if day % m == m - 1:
         n += 1
     day += 1
-

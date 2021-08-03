@@ -11,7 +11,6 @@ def solve(arr):
         if abs(a) not in parr:
             res = a
     for b in parr:
-        if b*-1 not in narr:
+        if b * -1 not in narr:
             res = b
     return res
-

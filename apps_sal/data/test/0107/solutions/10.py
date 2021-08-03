@@ -22,4 +22,3 @@ for i in range(len(S)):
             print('yes')
             return
 print('no')
-

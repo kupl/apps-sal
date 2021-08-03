@@ -1,8 +1,9 @@
 from functools import lru_cache
 
+
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
-        
+
         INF = 10**9
 
         @lru_cache(None)
@@ -23,8 +24,5 @@ class Solution:
 
             return result
 
-
         ans = dp(0, 0, 0)
         return ans if ans < INF else -1
-
-

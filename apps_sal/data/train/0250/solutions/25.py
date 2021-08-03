@@ -1,8 +1,10 @@
 import heapq as pq
+
+
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
-        ratio = [[y/x, x] for x, y in zip(quality, wage)]
-        ratio.sort(key = lambda x: x[0])
+        ratio = [[y / x, x] for x, y in zip(quality, wage)]
+        ratio.sort(key=lambda x: x[0])
         i = 0
         l = []
         pq.heapify(l)
@@ -24,4 +26,3 @@ class Solution:
             res = min(res, s * r)
             i += 1
         return res
-

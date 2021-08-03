@@ -22,7 +22,7 @@ p_cnt = 0
 q_cnt = 0
 r_cnt = 0
 loopcnt = 0
-while loopcnt < X+Y:
+while loopcnt < X + Y:
     apple = ALL.popleft()
     if p_cnt < X and apple == p[0]:
         ans += p.popleft()

@@ -32,12 +32,14 @@ def solve(a, f):
                 flag = 1
     return ''.join(ans)
 
+
 def main(argv=None):
     n = int(input())
     a = list(input())
     f = list(input().split())
     print(solve(a, f))
     return 0
+
 
 def __starting_point():
     STATUS = main()

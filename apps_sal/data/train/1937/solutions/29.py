@@ -6,9 +6,10 @@ class Person(object):
         self.sibling = None
         self.first_child = None
         #######################################################
-        # optimization 1: remember last_child for chain in O(1)  
+        # optimization 1: remember last_child for chain in O(1)
         #######################################################
         self.last_child = None
+
 
 class ThroneInheritance:
     def __init__(self, kingName: str):
@@ -17,7 +18,6 @@ class ThroneInheritance:
         self.inherit_pos = float('inf')
         self.person_map = {}
         self.person_map[kingName] = Person(kingName, None)
-        
 
     def birth(self, parentName: str, childName: str) -> None:
         parent = self.person_map[parentName]
@@ -29,7 +29,7 @@ class ThroneInheritance:
             parent.last_child = parent.first_child
             #print('1 children:', parent.children.name, 'parent:', parent.children.p_name)
             #print('1 self.person_map=', self.person_map)
-            #print('------')
+            # print('------')
         else:
             # add after last child
             parent.last_child.sibling = Person(childName, parentName)
@@ -38,12 +38,11 @@ class ThroneInheritance:
             #print('3 children:', children.name, 'parent:', children.p_name)
             #print('3 children.sibling:', children.sibling.name, 'parent:', children.sibling.p_name)
             #print('3 self.person_map=', self.person_map)
-            #print('------')
-            
+            # print('------')
+
         if parentName in self.curOrder_pos:
             self.inherit_pos = min(self.inherit_pos, self.curOrder_pos[parentName])
-            
-            
+
     def death(self, name: str) -> None:
         self.person_map[name].live = False
 
@@ -59,45 +58,43 @@ class ThroneInheritance:
             o_c = None
             while c:
                 #####################################
-                # optimization 2: O(1) search in dict  
+                # optimization 2: O(1) search in dict
                 #####################################
                 if c.name not in curOrder_pos:
                     o_c = c
                     break
                 c = c.sibling
-                
+
             if (not p.first_child) or (not o_c):
                 return None if x == curOrder[0] else successor(person_map, p.p_name, curOrder, curOrder_pos)
             else:
                 return o_c.name
-            
+
         if self.inherit_pos != float('inf'):
-            for i in range(self.inherit_pos+1, len(self.curOrder)):
+            for i in range(self.inherit_pos + 1, len(self.curOrder)):
                 del self.curOrder_pos[self.curOrder[i]]
             ###################################################################
-            # optimization 3: only recalculate inheritence from parent impacted  
+            # optimization 3: only recalculate inheritence from parent impacted
             ###################################################################
-            self.curOrder = self.curOrder[:self.inherit_pos+1]
-            
-            
+            self.curOrder = self.curOrder[:self.inherit_pos + 1]
+
         nxt = successor(self.person_map, self.curOrder[-1], self.curOrder, self.curOrder_pos)
         while nxt:
             self.curOrder.append(nxt)
-            self.curOrder_pos[nxt] = len(self.curOrder)-1
+            self.curOrder_pos[nxt] = len(self.curOrder) - 1
             nxt = successor(self.person_map, nxt, self.curOrder, self.curOrder_pos)
-            
+
         result = []
         for i, x in enumerate(self.curOrder):
             if self.person_map[x].live:
                 result.append(x)
-            
+
         self.inherit_pos = float('inf')
         return result
-            
+
 
 # Your ThroneInheritance object will be instantiated and called as such:
 # obj = ThroneInheritance(kingName)
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

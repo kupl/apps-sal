@@ -1,5 +1,6 @@
 from bisect import bisect_left, bisect_right
 
+
 def spf(n):
     result = 0
     nd = 0
@@ -14,9 +15,11 @@ def spf(n):
             n //= d
             nd += 1
         d += 2
-    return n+1 if nd == 1 else (result or n+1)  # nd == 1 -> prime
+    return n + 1 if nd == 1 else (result or n + 1)  # nd == 1 -> prime
+
 
 xs = [x for x in range(1, 20001) if x % spf(x) == 0]
+
 
 def mult_primefactor_sum(a, b):
     i = bisect_left(xs, a)

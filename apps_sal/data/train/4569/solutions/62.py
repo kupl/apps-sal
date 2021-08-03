@@ -4,10 +4,10 @@ def next_item(xs, item):
             if x == item:
                 return next(xs)
 
-    if xs==[] or item not in xs:
+    if xs == [] or item not in xs:
         return None
-        
-    if xs.index(item)==(len(xs)-1):
-        return None 
-    
-    return xs[(xs.index(item)+1)]
+
+    if xs.index(item) == (len(xs) - 1):
+        return None
+
+    return xs[(xs.index(item) + 1)]

@@ -20,4 +20,3 @@ ans = 0
 for i in range(n):
     ans = (ans + d[i]) % MOD
 print(ans)
-

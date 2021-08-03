@@ -32,10 +32,3 @@ for r in range(n):
         greq_nr = max(r___uniques_nr[r] - r_c___rord[r][c], c___uniques_nr[c] - r_c___cord[r][c])
         curr.append(less_nr + greq_nr)
     print(*curr)
-
-
-
-
-
-
-

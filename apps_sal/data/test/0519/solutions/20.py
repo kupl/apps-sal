@@ -3,8 +3,6 @@ p = int(input())
 q = int(input())
 
 
-
-res = l * (p/(p+q))
+res = l * (p / (p + q))
 
 print(res)
-

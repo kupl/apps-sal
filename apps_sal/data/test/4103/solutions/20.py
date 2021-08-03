@@ -5,7 +5,7 @@ def main():
     for s in input().split():
         if ca == 0 and cb == 0:
             break
-        
+
         if int(s):
             if ca < a and cb > 0:
                 ca += 1
@@ -18,7 +18,8 @@ def main():
             else:
                 cb -= 1
         p += 1
-    
+
     print(p)
+
 
 main()

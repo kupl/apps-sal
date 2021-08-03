@@ -11,8 +11,7 @@ for i in range(len(s)):
         for j in range(i):
             if s[j] == '*':
                 s1 = s[:j]
-                s3 = s[j + 1:i-len(s)]
+                s3 = s[j + 1:i - len(s)]
                 s4 = (s1 + '*(' + s3 + ')*' + s2)
                 ma = max(ma, eval(s4))
 print(ma)
-

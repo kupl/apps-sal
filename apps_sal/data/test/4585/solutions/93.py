@@ -1,10 +1,10 @@
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
 from fractions import gcd
-from itertools import combinations,permutations,accumulate, product # (string,3) 3回
+from itertools import combinations, permutations, accumulate, product  # (string,3) 3回
 #from collections import deque
-from collections import deque,defaultdict,Counter
+from collections import deque, defaultdict, Counter
 import decimal
 import re
 #import bisect
@@ -24,13 +24,18 @@ sys.setrecursionlimit(10000000)
 #mod = 10**9 + 7
 #mod = 9982443453
 mod = 998244353
+
+
 def readInts():
-  return list(map(int,input().split()))
+    return list(map(int, input().split()))
+
+
 def I():
-  return int(input())
+    return int(input())
+
+
 x = I()
 t = 0
-while (t*(t+1))/2 < x:
+while (t * (t + 1)) / 2 < x:
     t += 1
 print(t)
-

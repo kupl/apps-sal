@@ -1,10 +1,10 @@
-n=int(input())
+n = int(input())
 
-m=n//2
-l=n-m
-answer=l/n
+m = n // 2
+l = n - m
+answer = l / n
 
-if n==1:
-  print(1)
+if n == 1:
+    print(1)
 else:
-  print(answer)
+    print(answer)

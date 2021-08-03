@@ -16,13 +16,13 @@ from typing import List
 
 
 def check(H, N, K):
-    for i in range(K+1, N-K+1):
+    for i in range(K + 1, N - K + 1):
         h = H[i]
-        for j in range(K+1):
+        for j in range(K + 1):
             if h <= 0:
                 break
             if i - j >= 0:
-                h = min(h, H[i-j] - (K - j))
+                h = min(h, H[i - j] - (K - j))
             if i + j <= N:
                 h = min(h, H[i + j] - (K - j))
         if h > 0:
@@ -40,19 +40,19 @@ def solve2(N, A):
         else:
             lo = k + 1
     return lo
-    
+
 
 def solve(N, A):
     A = [0] + A + [0]
-    H = [N] * (N+2)
+    H = [N] * (N + 2)
     H[0] = H[-1] = 0
     worst = 0
-    for i in range(1, N+1):
+    for i in range(1, N + 1):
         worst = min(worst, A[i] - i)
         H[i] = i + worst
         # k = min([A[i-j] + j for j in range(i+1)])
         # H[i] = min(H[i], k)
-    worst = N+1
+    worst = N + 1
     for i in range(N, 0, -1):
         worst = min(worst, A[i] + i)
         H[i] = min(H[i], worst - i)
@@ -60,9 +60,7 @@ def solve(N, A):
         # H[i] = min(H[i], k)
     # print(H)
     return max(H)
-    
-    
-    
+
 
 # import random
 # N = 10 ** 5
@@ -76,7 +74,6 @@ def solve(N, A):
 # t0 = time.time()
 # print(solve(2*N+1, A))
 # print(time.time() - t0)
-
 N = int(input())
 A = [int(x) for x in input().split()]
 print(solve(N, A))

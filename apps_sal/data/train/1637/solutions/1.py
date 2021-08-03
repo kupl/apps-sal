@@ -10,7 +10,7 @@ def encode(s):
         return (res_str, arr.index(s))
     except:
         return (s, len(s))
-    
+
 
 def decode(s, n):
     try:
@@ -22,4 +22,3 @@ def decode(s, n):
         return m[n]
     except:
         return ''
-

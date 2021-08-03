@@ -10,17 +10,16 @@ d = dict()
 final = []
 
 for x in disks:
-    first = bisect.bisect_left(final, x - 2*r)
-    last = bisect.bisect_right(final, x + 2*r)
+    first = bisect.bisect_left(final, x - 2 * r)
+    last = bisect.bisect_right(final, x + 2 * r)
 
     m = 0
 
     for i in range(first, last):
         loc = final[i]
-        if (x - 2*r <= loc <= x + 2*r):
-            m = max(m, (4*r**2 - (x - loc)**2)**0.5 + d[loc])
+        if (x - 2 * r <= loc <= x + 2 * r):
+            m = max(m, (4 * r**2 - (x - loc)**2)**0.5 + d[loc])
 
     d[x] = m
     print(m + r, end=' ')
     bisect.insort(final, x)
-

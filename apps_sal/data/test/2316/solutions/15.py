@@ -13,4 +13,3 @@ for _ in range(t):
         m -= 1
 
     print("NO" if x > 0 else "YES")
-

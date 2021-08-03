@@ -23,4 +23,3 @@ for x in range(min(b, n), -1, -1):
         break
 
 print(res)
-

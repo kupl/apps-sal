@@ -1,9 +1,11 @@
 # cook your dish here
 from itertools import count, islice
 
-R = lambda: map(int, input().split())
-Z = lambda: list(zip(R(), count()))
-         
+
+def R(): return map(int, input().split())
+def Z(): return list(zip(R(), count()))
+
+
 n, m = R()
 a, b = Z(), Z()
 if n != 10:

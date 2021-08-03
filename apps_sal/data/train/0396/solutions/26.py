@@ -2,7 +2,7 @@ class Solution:
     def smallestRepunitDivByK(self, K: int) -> int:
         if K % 2 == 0:
             return -1
-        
+
         i = 1
         l = 1
         while i < K:
@@ -18,5 +18,3 @@ class Solution:
             residue.add(r)
             i = 10 * i + 1
             l += 1
-        
-

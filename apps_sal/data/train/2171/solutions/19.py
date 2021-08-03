@@ -1,45 +1,52 @@
-intin=lambda:list(map(int,input().split()))
-iin=lambda:int(input())
-Ain=lambda:list(map(int,input().split()))
 from queue import LifoQueue
-mod=1000000007
+def intin(): return list(map(int, input().split()))
+def iin(): return int(input())
 
-n=iin()
-m=n+1
 
-v=[[] for i in range(m)]
-p=[0]*m
+def Ain(): return list(map(int, input().split()))
 
-for _ in range(n-1):
-    a,b=intin()
+
+mod = 1000000007
+
+n = iin()
+m = n + 1
+
+v = [[] for i in range(m)]
+p = [0] * m
+
+for _ in range(n - 1):
+    a, b = intin()
     v[a].append(b)
     v[b].append(a)
 
-vis=[False]*m
-flipped=[0]*m
-flip=[0]*m
-ans=[]
+vis = [False] * m
+flipped = [0] * m
+flip = [0] * m
+ans = []
+
 
 def dfs(root):
-    q=[root]
-    while len(q)>0:
-        node=q.pop()
-        vis[node]=True
-        flipped[node]=flipped[p[p[node]]]
-        if flipped[node]!=flip[node]:
-            flipped[node]^=1
+    q = [root]
+    while len(q) > 0:
+        node = q.pop()
+        vis[node] = True
+        flipped[node] = flipped[p[p[node]]]
+        if flipped[node] != flip[node]:
+            flipped[node] ^= 1
             ans.append(node)
-        
+
         for i in range(len(v[node])):
-            son=v[node][i]
+            son = v[node][i]
             if not vis[son]:
                 q.append(son)
-                p[son]=node
+                p[son] = node
 
-a=Ain();b=Ain()
+
+a = Ain()
+b = Ain()
 
 for i in range(n):
-    flip[i+1]=a[i]^b[i]
+    flip[i + 1] = a[i] ^ b[i]
 
 
 dfs(1)
@@ -47,18 +54,3 @@ dfs(1)
 print(len(ans))
 for i in range(len(ans)):
     print(ans[i])
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-

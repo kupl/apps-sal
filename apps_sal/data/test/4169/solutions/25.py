@@ -6,7 +6,7 @@ mr = 0
 ks = sorted(k)
 
 for i in range(n):
-    if ks[i][1] < (m-mr):
+    if ks[i][1] < (m - mr):
         sum += ks[i][0] * ks[i][1]
         mr += ks[i][1]
 

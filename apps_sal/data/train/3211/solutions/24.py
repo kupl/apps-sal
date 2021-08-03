@@ -5,4 +5,5 @@ def divide(weight):
             if remainder % 2 == 0 and i % 2 == 0:
                 return True
         return False
-    else: return False 
+    else:
+        return False

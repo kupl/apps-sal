@@ -3,7 +3,7 @@ import sys
 
 
 def lcm(a, b):
-  return a * b // math.gcd(a, b)
+    return a * b // math.gcd(a, b)
 
 
 input = sys.stdin.readline
@@ -13,8 +13,8 @@ LCM = 1
 ans = 0
 MOD = 1000000007
 for x in A:
-  LCM = lcm(LCM, x)
+    LCM = lcm(LCM, x)
 for x in A:
-  ans += LCM // x
+    ans += LCM // x
 
-print(ans%MOD)
+print(ans % MOD)

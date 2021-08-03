@@ -6,4 +6,3 @@ for case in range(t):
     minsm = a + b
     min_len = abs(c - minsm)
     print(min_len + 1)
-

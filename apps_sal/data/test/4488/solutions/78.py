@@ -2,8 +2,8 @@ A = int(input())
 B = int(input())
 
 if A == B:
-  print('EQUAL')
+    print('EQUAL')
 elif A // B > 0:
-  print('GREATER')
+    print('GREATER')
 else:
-  print('LESS')
+    print('LESS')

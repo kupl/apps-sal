@@ -15,4 +15,3 @@ ngoods = {
 
 digits = input().strip()
 print(ngoods[digits[0]] * ngoods[digits[1]])
-

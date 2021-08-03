@@ -1,11 +1,12 @@
 import collections
 import math
 
+
 class UF:
     def __init__(self, N):
         self.parent = list(range(N))
         self.size = [1] * N
-        
+
     def find(self, x):
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
@@ -21,6 +22,7 @@ class UF:
             else:
                 self.parent[py] = px
                 self.size[px] += size_y
+
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
@@ -39,4 +41,3 @@ class Solution:
             else:
                 uf.union(i, factor2i[num])
         return max(uf.size)
-

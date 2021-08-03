@@ -3,8 +3,5 @@ def pre_fizz(n):
     if type(n) == int:
         # arranging list and finding range of (n)
         a = list(range(1, n + 1))
-        #returning list (a)
+        # returning list (a)
         return a
-
-
-

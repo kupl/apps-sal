@@ -61,60 +61,41 @@
 # 16		:-	0000000000010000
 
 
+from sys import stdin, stdout
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-from sys import stdin,stdout
-
-n,m=stdin.readline().strip().split(' ')
-n,m=int(n),int(m)
-adj=[[] for i in range(n+1)]
+n, m = stdin.readline().strip().split(' ')
+n, m = int(n), int(m)
+adj = [[] for i in range(n + 1)]
 
 for i in range(m):
-	u,v=stdin.readline().strip().split(' ')
-	u,v=int(u),int(v)
-	adj[u].append((v,i))
+    u, v = stdin.readline().strip().split(' ')
+    u, v = int(u), int(v)
+    adj[u].append((v, i))
 
-visited=[0 for i in range(n+1)]
-color=['1' for i in range(m)]
-flag=1
+visited = [0 for i in range(n + 1)]
+color = ['1' for i in range(m)]
+flag = 1
+
+
 def dfs(curr):
-	nonlocal flag
-	visited[curr]=1
-	for i in adj[curr]:
-		if visited[i[0]]==0:
-			dfs(i[0])
-		elif visited[i[0]]==1:
-			color[i[1]]='2'
-			flag=2
-	visited[curr]=2
+    nonlocal flag
+    visited[curr] = 1
+    for i in adj[curr]:
+        if visited[i[0]] == 0:
+            dfs(i[0])
+        elif visited[i[0]] == 1:
+            color[i[1]] = '2'
+            flag = 2
+    visited[curr] = 2
 
 
-for n in range(1,n+1):
-	if visited[n]==0:
-		dfs(n)
+for n in range(1, n + 1):
+    if visited[n] == 0:
+        dfs(n)
 
-if flag==1:
-	stdout.write("1\n");
-	stdout.write(' '.join(color)+"\n")
+if flag == 1:
+    stdout.write("1\n")
+    stdout.write(' '.join(color) + "\n")
 else:
-	stdout.write("2\n")
-	stdout.write(' '.join(color)+"\n")
-
+    stdout.write("2\n")
+    stdout.write(' '.join(color) + "\n")

@@ -1,28 +1,28 @@
-n=int(input())
-l=list(map(int,input().split()))
-r=list(map(int,input().split()))
-candies=[]
+n = int(input())
+l = list(map(int, input().split()))
+r = list(map(int, input().split()))
+candies = []
 for i in range(n):
-    candies.append(n-l[i]-r[i])
-left=[]
+    candies.append(n - l[i] - r[i])
+left = []
 for i in range(n):
-    guys=0
+    guys = 0
     for j in range(i):
-        if candies[j]>candies[i]:
-            guys+=1
+        if candies[j] > candies[i]:
+            guys += 1
     left.append(guys)
-right=[]
+right = []
 for i in range(n):
-    guys=0
-    for j in range(i,n):
-        if candies[j]>candies[i]:
-            guys+=1
+    guys = 0
+    for j in range(i, n):
+        if candies[j] > candies[i]:
+            guys += 1
     right.append(guys)
-if left==l and right==r:
+if left == l and right == r:
     print("YES")
-    candiesstr=""
+    candiesstr = ""
     for i in range(n):
-        candiesstr+=str(candies[i])+" "
-    print(candiesstr[:len(candiesstr)-1])
+        candiesstr += str(candies[i]) + " "
+    print(candiesstr[:len(candiesstr) - 1])
 else:
     print("NO")

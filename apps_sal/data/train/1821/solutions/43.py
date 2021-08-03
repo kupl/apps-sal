@@ -13,15 +13,14 @@ class Solution:
             else:
                 res.append(nums2[j])
                 j += 1
-        
+
         if i < len(nums1):
             res.extend(nums1[i:])
         if j < len(nums2):
             res.extend(nums2[j:])
-        
+
         return res
-            
-            
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) <= 1:
             return nums

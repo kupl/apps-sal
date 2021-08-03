@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
         d = Counter(s)
@@ -11,4 +13,3 @@ class Solution:
                 res += 1
 
         return res
-

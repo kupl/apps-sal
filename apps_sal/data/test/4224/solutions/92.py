@@ -20,4 +20,3 @@ for n in range(N):
 
 # 結果出力
 print(ans)
-

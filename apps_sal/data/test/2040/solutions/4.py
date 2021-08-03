@@ -13,4 +13,3 @@ for _ in range(int(input())):
     digs[:i] = [9] * i
     digs[i] += delta
     print(''.join(map(str, digs[le::-1])))
-

@@ -8,4 +8,3 @@ for i in range(N):
     else:
         res += K
 print(res)
-

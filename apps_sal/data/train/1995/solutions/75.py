@@ -10,6 +10,3 @@ class Solution:
                     kmlist[i] = trip[0]
         maxval = max(kmlist.values())
         return maxval <= capacity
-                    
-
-

@@ -20,4 +20,3 @@ if q:
     print('YES')
 else:
     print('NO')
-

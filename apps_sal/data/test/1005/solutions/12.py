@@ -1,6 +1,7 @@
 def count(serials, start, end):
     return len(set(serials[start:end]))
 
+
 t = int(input())
 
 toprint = []

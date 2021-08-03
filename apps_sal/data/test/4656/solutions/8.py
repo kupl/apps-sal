@@ -1,7 +1,8 @@
 T = int(input())
 
+
 def solve():
-    [N,K] = list(map(int,input().split()))
+    [N, K] = list(map(int, input().split()))
     count = {}
     S = input()
     for c in S:
@@ -38,11 +39,12 @@ def solve():
                 ans[i] = key
                 count_[key] -= 1
         return "".join(ans)
-    for i in range(len(S),-1,-1):
+    for i in range(len(S), -1, -1):
         foo = necklace_size(i)
         if foo:
             return len(foo)
     return -1
+
+
 for _ in range(T):
     print(solve())
-

@@ -12,5 +12,3 @@ elif a[1] == a[2]:
     print(fir * sec * (sec - 1) // 2)
 else:
     print(fir * sec * th)
-    
-

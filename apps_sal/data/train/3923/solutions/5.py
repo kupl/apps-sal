@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def micro_world(bacteria, k):
     bacteria = np.array(sorted(bacteria))
     for index, j in enumerate(bacteria):

@@ -7,7 +7,7 @@ x.sort()
 q = int(line[2])
 y = []
 for i in range(q):
-    y.append((int(line[i+3]), i))
+    y.append((int(line[i + 3]), i))
 y.sort()
 
 ans = []
@@ -22,4 +22,3 @@ ans.sort()
 
 for i, a in ans:
     print(a)
-

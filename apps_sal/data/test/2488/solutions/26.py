@@ -28,4 +28,3 @@ for i in range(n):
         subtract[i_sub] += damage
 
 print(n_bomb)
-

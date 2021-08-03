@@ -1,8 +1,12 @@
+from bisect import bisect_right
+import sys
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        self.root = [-1]*(n+1)
-        self.rnk = [0]*(n+1)
+        self.root = [-1] * (n + 1)
+        self.rnk = [0] * (n + 1)
 
     def Find_Root(self, x):
         if(self.root[x] < 0):
@@ -10,12 +14,12 @@ class UnionFind():
         else:
             self.root[x] = self.Find_Root(self.root[x])
             return self.root[x]
-    
+
     def Unite(self, x, y):
         x = self.Find_Root(x)
         y = self.Find_Root(y)
         if(x == y):
-            return 
+            return
         elif(self.rnk[x] > self.rnk[y]):
             self.root[x] += self.root[y]
             self.root[y] = x
@@ -25,7 +29,7 @@ class UnionFind():
             self.root[x] = y
             if(self.rnk[x] == self.rnk[y]):
                 self.rnk[y] += 1
-    
+
     def isSameGroup(self, x, y):
         return self.Find_Root(x) == self.Find_Root(y)
 
@@ -33,14 +37,12 @@ class UnionFind():
         return -self.root[self.Find_Root(x)]
 
 
-import sys
 input = sys.stdin.readline
-from bisect import bisect_right
 
 N, M = map(int, input().split())
-uni = UnionFind(N+1)
+uni = UnionFind(N + 1)
 Edges = {}
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b, w = map(int, input().split())
     if not w in Edges:
         Edges[w] = [(a, b)]
@@ -58,7 +60,7 @@ for w in Weights:
         c1 = uni.Count(a)
         c2 = uni.Count(b)
         c = c1 + c2
-        score += c*(c-1)//2 - c1*(c1-1)//2 - c2*(c2-1)//2
+        score += c * (c - 1) // 2 - c1 * (c1 - 1) // 2 - c2 * (c2 - 1) // 2
         uni.Unite(a, b)
     Score.append(score)
 

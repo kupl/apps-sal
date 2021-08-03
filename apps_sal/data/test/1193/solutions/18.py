@@ -1,6 +1,5 @@
-n,k=list(map(int,input().split()))
-lis=list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+lis = list(map(int, input().split()))
 lis.sort()
 lis.reverse()
-print(lis[k-1])
-
+print(lis[k - 1])

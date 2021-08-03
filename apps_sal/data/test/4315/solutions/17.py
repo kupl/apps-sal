@@ -1,5 +1,5 @@
 import math
-p=math.pi
-r=int(input())
+p = math.pi
+r = int(input())
 
-print(2*r*p)
+print(2 * r * p)

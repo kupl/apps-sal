@@ -13,4 +13,3 @@ def ncr(n, r):
 n, m, k = list(map(int, input().split()))
 
 print((ncr(n - 1, k) * m * pow(m - 1, k, Z)) % Z)
-

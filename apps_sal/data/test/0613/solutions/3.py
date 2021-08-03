@@ -2,7 +2,7 @@ def main():
     t, a, b = list(map(int, input().split()))
     if t == 1:
         if a == 1:
-            return 'inf' if b==1 else 0
+            return 'inf' if b == 1 else 0
         if a < b:
             while not b % a:
                 b //= a
@@ -31,4 +31,3 @@ def main():
 
 
 print(main())
-

@@ -11,6 +11,8 @@ class Solution:
                 if A[i] == 1:
                     res += 1
                     q.append(i + k - 1)
-            if q and q[0] == i: q.popleft()
-            if q and q[-1] >= len(A): return -1
+            if q and q[0] == i:
+                q.popleft()
+            if q and q[-1] >= len(A):
+                return -1
         return res

@@ -6,10 +6,10 @@ class Solution:
             step = 0
             while curr_idx + step <= len(s) - 1 and s[curr_idx + step] == s[max_idx + step]:
                 step += 1
-            
+
             if curr_idx + step == len(s):
                 break
-            
+
             # s[curr_idx + step] != s[max_idx + step]
             if s[curr_idx + step] > s[max_idx + step]:
                 max_idx = curr_idx

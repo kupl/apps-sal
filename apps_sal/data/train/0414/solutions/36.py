@@ -4,7 +4,7 @@ class Solution:
         max_arr_idx = arr.index(max_arr)
         if k >= max_arr_idx:
             return max(arr)
-        if k <=1:
+        if k <= 1:
             return max(arr[0], arr[1])
 
         last_winner = None
@@ -25,5 +25,4 @@ class Solution:
                     return arr[0]
             else:
                 count = 0
-                last_winner = winner    
-
+                last_winner = winner

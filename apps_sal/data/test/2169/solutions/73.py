@@ -1,9 +1,9 @@
-h,w,d= map(int, input().split())
+h, w, d = map(int, input().split())
 a = {}
 for y in range(h):
     line = list(map(int, input().split()))
     for x in range(len(line)):
-        a[line[x]-1] = (y,x)
+        a[line[x] - 1] = (y, x)
 
 # 問題の考え方
 # DP的な感じで解ける
@@ -14,16 +14,16 @@ for y in range(h):
 #   また、5~9へのコストは1~9へのコスト引く1~5までのコストとなるので累積和的に答えを算出することが可能
 
 num = len(a)
-dp = [0]*num
-for i in range(num-1, -1, -1):
-    if i+d <= num-1:
+dp = [0] * num
+for i in range(num - 1, -1, -1):
+    if i + d <= num - 1:
         x, y = a[i]
-        px, py = a[i+d]
-        dp[i] = dp[i+d] + abs(x-px) + abs(y-py)
+        px, py = a[i + d]
+        dp[i] = dp[i + d] + abs(x - px) + abs(y - py)
 
 q = int(input())
 for _ in range(q):
     l, r = map(int, input().split())
     l -= 1
     r -= 1
-    print(dp[l]-dp[r])
+    print(dp[l] - dp[r])

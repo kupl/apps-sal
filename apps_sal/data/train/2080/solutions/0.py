@@ -15,9 +15,7 @@ overall_price = 0
 while index < n_items:
     n_left = min(min_discount_req, n_items - index)
     for i in range(n_left):
-        overall_price += item_values[index+i]
+        overall_price += item_values[index + i]
     index += n_left + 2
 
 print(overall_price)
-    
-

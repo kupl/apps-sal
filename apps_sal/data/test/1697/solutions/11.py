@@ -1,9 +1,10 @@
 import sys
 #sys.stdin = open('in.txt')
 sys.setrecursionlimit(10000)
-isin = lambda x, y: 0 <= x < n and 0 <= y < m
+def isin(x, y): return 0 <= x < n and 0 <= y < m
 
-def dfs(curx, cury, fax = -1, fay = -1):
+
+def dfs(curx, cury, fax=-1, fay=-1):
     nonlocal found
     vis[curx][cury] = True
     dx = [1, -1, 0, 0]
@@ -12,14 +13,15 @@ def dfs(curx, cury, fax = -1, fay = -1):
         newx = curx + dx[i]
         newy = cury + dy[i]
         if isin(newx, newy):
-            if G[curx][cury] == G[newx][newy] and vis [newx][newy] and not (newx == 
-
-fax and newy == fay):
+            if G[curx][cury] == G[newx][newy] and vis[newx][newy] and not (newx
+ ==
+                                                                           fax and newy == fay):
                 found = True
                 print("Yes")
                 return
             if G[curx][cury] == G[newx][newy] and not vis[newx][newy]:
                 dfs(newx, newy, curx, cury)
+
 
 n, m = map(int, input().split())
 vis = [[False] * m for _ in range(n)]

@@ -1,6 +1,7 @@
 from sys import stdin as cin
 from sys import stdout as cout
 
+
 def main():
     n = int(cin.readline())
     a = list(map(int, cin.readline().split()))
@@ -22,5 +23,5 @@ def main():
         kol1 = 0
     cout.write(str(o + kol1 // 3))
 
-main()
 
+main()

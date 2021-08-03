@@ -1,12 +1,13 @@
 from collections import defaultdict
 
+
 class family:
     def __init__(self):
         self.males = set()
         self.females = set()
         self.parents = defaultdict(lambda: set())
         self.children = defaultdict(lambda: set())
-        
+
     def male(self, name):
         if name in self.females:
             return False
@@ -21,8 +22,10 @@ class family:
                     self.males = safe_copy
                     return False
         return True
+
     def is_male(self, name):
         return name in self.males
+
     def female(self, name):
         if name in self.males:
             return False
@@ -37,8 +40,10 @@ class family:
                     self.females = safe_copy
                     return False
         return True
+
     def is_female(self, name):
         return name in self.females
+
     def set_parent_of(self, child_name, parent_name):
         if child_name == parent_name:
             return False
@@ -77,8 +82,9 @@ class family:
                     if conflict_assign_gender:
                         return False
         return True
+
     def get_children_of(self, name):
         return sorted(self.parents[name])
+
     def get_parents_of(self, name):
         return sorted(self.children[name])
-

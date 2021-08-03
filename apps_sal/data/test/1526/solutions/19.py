@@ -24,7 +24,6 @@ else:
         count = count + (m // 2)
     else:
         count = count + (m // 2) + 2
-        
+
 
 print(count)
-

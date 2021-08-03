@@ -1,5 +1,7 @@
 from fractions import Fraction
 from itertools import starmap
+
+
 def sum_fracts(lst):
     if lst:
         f = sum(starmap(Fraction, lst))

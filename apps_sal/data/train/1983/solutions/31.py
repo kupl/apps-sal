@@ -1,8 +1,10 @@
 import math
+
+
 class ProductOfNumbers:
 
     def __init__(self):
-        self.nums = []  
+        self.nums = []
 
     def add(self, num: int) -> None:
         self.nums.append(num)
@@ -18,4 +20,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

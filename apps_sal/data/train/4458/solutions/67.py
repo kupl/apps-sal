@@ -19,4 +19,3 @@ def time_correct(t):
         h -= 24
 
     return ":".join([str(h).rjust(2, "0"), str(m).rjust(2, "0"), str(s).rjust(2, "0")])
-

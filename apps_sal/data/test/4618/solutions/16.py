@@ -6,11 +6,12 @@ def main():
         for j, v in enumerate(s):
             if v == chr(i):
                 for k in range(5):
-                    r.add(s[j:j+k+1])
+                    r.add(s[j:j + k + 1])
         if len(r) > 5:
             break
     l = list(r)
     l.sort()
-    return l[K-1]
-print((main()))
+    return l[K - 1]
 
+
+print((main()))

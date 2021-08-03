@@ -1,7 +1,9 @@
+from collections import defaultdict
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-from collections import defaultdict
+
+
 def main():
     s = tuple(map(int, input()))
     lens = len(s)
@@ -19,6 +21,9 @@ def main():
         r += v * (v - 1) // 2
     print(r)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

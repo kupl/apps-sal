@@ -2,21 +2,21 @@ n = int(input())
 a = []
 for i in range(n):
     k = input()
-    s,t = 0,0
+    s, t = 0, 0
     for j in k:
         if j == 's':
             s += 1
         else:
             t += 1
     if t > 0:
-        a.append([k,s/t])
+        a.append([k, s / t])
     else:
-        a.append([k,100000])
-a.sort(key = lambda x: x[1])
+        a.append([k, 100000])
+a.sort(key=lambda x: x[1])
 a = list(reversed(a))
 l = a[0][0][0]
 x = 0
-m =[]
+m = []
 for i in a:
     for j in i[0]:
         if j != l:
@@ -28,7 +28,7 @@ for i in a:
 m.append(x)
 if a[0][0][0] == 'h':
     m = m[1:]
-p,q = [],[]
+p, q = [], []
 e = 0
 z = len(m)
 for i in range(z):
@@ -44,6 +44,6 @@ for i in range(z):
         q.append(e)
 q = list(reversed(q))
 ans = 0
-for i in range(z//2):
-    ans += p[i]*q[i]
+for i in range(z // 2):
+    ans += p[i] * q[i]
 print(ans)

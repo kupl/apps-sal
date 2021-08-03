@@ -9,5 +9,3 @@ class Solution:
             if char == last_char and max_string < s[index:]:
                 max_string = s[index:]
         return max_string
-    
-

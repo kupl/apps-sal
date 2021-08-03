@@ -14,9 +14,4 @@ j = 0
 while g[j] % p == 0:
     j += 1
 
-print(i+j)
-
-
-
-
-
+print(i + j)

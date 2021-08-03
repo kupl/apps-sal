@@ -14,4 +14,3 @@ for i in range(1, n):
         max_n = cnt[cur_n]
         max_ = cur_n
 print(max_)
-

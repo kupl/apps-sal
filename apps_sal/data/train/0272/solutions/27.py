@@ -19,7 +19,7 @@ class Solution:
                             initialBoxes.append(newBox)
                         else:
                             gotBoxes.add(newBox)
-                    
+
                     for keyBox in keys[boxNow]:
                         status[keyBox] = 1
                         if keyBox in gotBoxes:

@@ -37,10 +37,5 @@ def do():
                     dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
     return res if res <= nv else -1
 
+
 print(do())
-
-
-
-
-
-

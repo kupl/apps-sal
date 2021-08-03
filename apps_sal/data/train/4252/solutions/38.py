@@ -1,4 +1,4 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     for i in second:
         if i not in first:
             first.append(i)

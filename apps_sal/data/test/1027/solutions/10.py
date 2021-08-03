@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 a = li()
 ans = 0
@@ -18,4 +23,3 @@ for i in range(14):
         b[(i + 1 + j) % 14] += 1
     ans = max(ans, sum(x for x in b if x % 2 == 0))
 print(ans)
-

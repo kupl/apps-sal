@@ -1,6 +1,6 @@
 def solve(n, a, b):
     b.reverse()
-    l, r = 0, n-1
+    l, r = 0, n - 1
     for i in range(n):
         if a[i] == b[i]:
             if (l < i) and (a[i] != b[l]) and (a[l] != b[i]):
@@ -15,6 +15,7 @@ def solve(n, a, b):
         "Yes",
         " ".join(map(str, b))
     ])
+
 
 n = int(input())
 a = list(map(int, input().split()))

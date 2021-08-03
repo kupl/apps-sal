@@ -31,4 +31,3 @@ nextDelta(1, 2, 2)
 nextDelta(1, 1, 2)
 nextDelta(0, 0, 0)
 fout.write(str(min(wars)))
-

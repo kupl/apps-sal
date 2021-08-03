@@ -14,13 +14,16 @@ for _ in range(M):
 c_bin = []
 for i in range(M):
     c_bin.append(sum([1 << (cij - 1) for cij in c[i]]))
-    
+
 memo = [None] * (1 << N)
+
 
 def dp(state):
     nonlocal MY_INF
-    if state == (1 << N) - 1: return 0
-    if memo[state] != None: return memo[state]
+    if state == (1 << N) - 1:
+        return 0
+    if memo[state] != None:
+        return memo[state]
     #
     rets = [MY_INF]
     for i in range(M):
@@ -30,6 +33,7 @@ def dp(state):
     #
     memo[state] = ret
     return ret
+
 
 ans = dp(0)
 if ans != MY_INF:

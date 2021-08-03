@@ -9,4 +9,3 @@ for g in range(t):
             st.add(q)
             q //= 2
     print(len(st))
-

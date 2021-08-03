@@ -1,4 +1,4 @@
-def mouth_size(animal): 
+def mouth_size(animal):
     print(animal.capitalize())
     if animal.capitalize() == 'Alligator':
         return 'small'

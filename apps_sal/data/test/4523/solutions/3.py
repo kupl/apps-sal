@@ -43,7 +43,7 @@ from decimal import Decimal
 mod = pow(10, 9) + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
-def out(var, end="\n"): sys.stdout.write(str(var)+end)
+def out(var, end="\n"): sys.stdout.write(str(var) + end)
 def outa(*var, end="\n"): sys.stdout.write(' '.join(map(str, var)) + end)
 def l(): return list(sp())
 def sl(): return list(ssp())
@@ -59,8 +59,7 @@ for _ in range(int(data())):
     r = True
     arr.sort()
     for i in range(1, n):
-        if arr[i] - arr[i-1] > 1:
+        if arr[i] - arr[i - 1] > 1:
             r = False
             break
     out(("YES", "NO")[r == False])
-

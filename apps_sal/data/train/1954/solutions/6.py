@@ -43,4 +43,3 @@ class Solution:
             result.append(total)
 
         return result
-

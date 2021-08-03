@@ -10,6 +10,7 @@ def pp(s, t):
         last += 1
     return 1
 
+
 s, t = input(), input()
 ans = 0
 n = len(s)
@@ -24,4 +25,3 @@ print(ans)
 
 # s = '0123456789'
 # print(s[:2] + s[4:])
-

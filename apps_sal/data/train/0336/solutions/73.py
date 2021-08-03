@@ -21,4 +21,3 @@ class Solution:
             count += hashmap[key]
 
         return count
-

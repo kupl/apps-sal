@@ -17,7 +17,7 @@ class Solution:
                     dp[idx][1] = m_sum
             else:
                 m_sum += A[idx] - A[idx - M]
-                dp[idx][1] = m_sum if dp[idx - 1][1] < m_sum else dp[idx - 1][1]              
+                dp[idx][1] = m_sum if dp[idx - 1][1] < m_sum else dp[idx - 1][1]
         dp[L + M - 1][2] = max(l_sum + dp[idx - L][1], m_sum + dp[idx - M][0])
         for idx in range(L + M, len(A)):
             l_sum += A[idx] - A[idx - L]
@@ -28,4 +28,3 @@ class Solution:
             dp[idx][2] = max(dp[idx - 1][2], l_sum + dp[idx - L][1], m_sum + dp[idx - M][0])
         print(dp)
         return dp[len(A) - 1][2]
-

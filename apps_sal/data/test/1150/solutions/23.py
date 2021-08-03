@@ -3,9 +3,6 @@ def f(x, y, a, b, n):
     return a + (x - a) * cos[n] - (y - b) * sin[n], b + (x - a) * sin[n] + (y - b) * cos[n]
 
 
-
-
-
 def check(p):
 
     d = {}
@@ -27,9 +24,6 @@ def check(p):
     return 2 * a == b and d[a] == 4 and d[b] == 2
 
 
-
-
-
 cos, sin, variants = [1, 0, -1, 0], [0, 1, 0, -1], [[x, y, z, a] for x in range(4) for y in range(4) for z in range(4) for a in range(4)]
 
 for t in range(int(input())):
@@ -45,6 +39,4 @@ for t in range(int(input())):
     print(ans if ans != 13 else -1)
 
 
-
 # Made By Mostafa_Khaled
-

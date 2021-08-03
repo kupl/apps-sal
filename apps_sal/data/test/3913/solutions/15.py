@@ -1,4 +1,4 @@
-#python 3.5.2
+# python 3.5.2
 
 n = int(input())
 kataawal = input()
@@ -6,7 +6,7 @@ kataawal = input()
 pos = []
 posmuncul = []
 muncul = set()
-for i,x in zip(range(n),kataawal):
+for i, x in zip(range(n), kataawal):
     if (x == '*'):
         pos.append(i)
     else:
@@ -23,7 +23,7 @@ for i in range(m):
         if (kata[x] != kataawal[x]):
             cancel = True
             break
-            
+
     if (not cancel):
         for x in pos:
             if (kata[x] in muncul):

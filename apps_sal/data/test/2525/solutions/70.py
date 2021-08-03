@@ -29,4 +29,3 @@ if not reverse:
 else:
     print((S[::-1]))
     return
-

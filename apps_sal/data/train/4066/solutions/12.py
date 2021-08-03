@@ -1,1 +1,1 @@
-string_to_array = lambda s: s.split() or [""]
+def string_to_array(s): return s.split() or [""]

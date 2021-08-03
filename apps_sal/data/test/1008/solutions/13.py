@@ -2,8 +2,8 @@ s = input()
 n = int(input())
 #a = [int(c) for c in input().split()]
 
-wordlength = len(s)//n
-if wordlength*n != len(s):
+wordlength = len(s) // n
+if wordlength * n != len(s):
     print("NO")
 else:
     current = wordlength
@@ -14,7 +14,7 @@ else:
             break
         for j in range(wordlength):
 
-            if s[i*wordlength + j] != s[(i+1)*wordlength - j - 1]:
+            if s[i * wordlength + j] != s[(i + 1) * wordlength - j - 1]:
                 yes = False
                 break
 

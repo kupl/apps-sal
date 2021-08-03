@@ -6,6 +6,7 @@ def f(s):
         l.append(26 + i)
     return l
 
+
 p, x, y = list(map(int, input().split()))
 
 i = x
@@ -25,7 +26,7 @@ while True:
     i += 50
     c += 1
 
-#print(i)
+# print(i)
 
 if c % 2 == 1:
     print((c + 1) // 2)
@@ -33,4 +34,3 @@ else:
     print(c // 2)
 
 #print(f(7258 + 150))
-

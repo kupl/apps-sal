@@ -34,6 +34,7 @@ i = res = 0
 
 # print(l)
 
+
 def f(x):
     i = 0
     for m in range(33):

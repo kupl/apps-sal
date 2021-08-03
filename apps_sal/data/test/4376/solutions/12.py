@@ -12,4 +12,3 @@ for x in a:
 for x in b:
     p = bisect_left(t, x)
     print(p, x - t[p - 1])
-

@@ -43,4 +43,5 @@ def solvec():
 def __starting_point():
     solvec()
 
+
 __starting_point()

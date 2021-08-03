@@ -1,5 +1,7 @@
 y = int(input())
-y = y+1
+y = y + 1
+
+
 def isDistinct(year):
     sy = str(year)
     li = []
@@ -9,8 +11,8 @@ def isDistinct(year):
         li.append(i)
     return True
 
+
 while(not isDistinct(y)):
-    y = y+1
+    y = y + 1
 
 print(y)
-

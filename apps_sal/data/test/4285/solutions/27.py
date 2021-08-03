@@ -9,11 +9,11 @@ hatena = 1
 mod = 10**9 + 7
 
 for i in range(n):
-    if s[i]=="a":
+    if s[i] == "a":
         dp_a = (dp_a + hatena) % mod
-    elif s[i]=="b":
+    elif s[i] == "b":
         dp_ab = (dp_a + dp_ab) % mod
-    elif s[i]=="c":
+    elif s[i] == "c":
         dp_abc = (dp_ab + dp_abc) % mod
     else:
         dp_abc = (dp_ab + 3 * dp_abc) % mod
@@ -22,4 +22,3 @@ for i in range(n):
         hatena = (hatena * 3) % mod
 
 print(dp_abc)
-

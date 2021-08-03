@@ -9,7 +9,7 @@ if sum1 % 10 != 0:
     ans = sum1
 else:
     for i in range(N):
-        if (sum1-ls[i]) % 10 != 0:
-            ans = sum1-ls[i]
+        if (sum1 - ls[i]) % 10 != 0:
+            ans = sum1 - ls[i]
             break
 print(ans)

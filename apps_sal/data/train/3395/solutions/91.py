@@ -6,4 +6,3 @@ def remove_duplicate_words(string):
             lst.append(word)
 
     return " ".join(lst)
-

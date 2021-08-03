@@ -1,5 +1,5 @@
 N, M = map(int, input().split())
-L, R = [0]*M, [0]*M
+L, R = [0] * M, [0] * M
 A = set(range(N))
 lm, rm = 0, N
 for i in range(M):
@@ -7,6 +7,6 @@ for i in range(M):
     lm = max(lm, L[i])
     rm = min(rm, R[i])
 if lm <= rm:
-    print(rm-lm+1)
+    print(rm - lm + 1)
 else:
     print(0)

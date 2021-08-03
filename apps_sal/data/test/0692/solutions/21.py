@@ -9,5 +9,3 @@ for i in range(100000):
             count += 1
             break
 print(count / 100000.0)
-
-

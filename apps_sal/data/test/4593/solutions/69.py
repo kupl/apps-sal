@@ -8,4 +8,3 @@ for i in range(1, 100):
             ans = max(ans, y)
 
 print(ans)
-

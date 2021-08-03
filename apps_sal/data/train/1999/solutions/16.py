@@ -15,12 +15,12 @@ class Solution:
             curr_sum = 0
             while tmp:
                 curr_sum += tmp.val
-                if curr_sum==0:
+                if curr_sum == 0:
                     break
                 else:
                     tmp = tmp.__next__
             # print (tmp.val, curr_sum)
-            if curr_sum==0:
+            if curr_sum == 0:
                 if tmp:
                     prev.next = tmp.__next__
                 else:
@@ -29,8 +29,5 @@ class Solution:
             else:
                 prev = node
                 node = node.__next__
-            
-        return extra.__next__
-            
-   
 
+        return extra.__next__

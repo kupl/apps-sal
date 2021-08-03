@@ -5,4 +5,3 @@ def merge_arrays(first, second):
     for j in second:
         hashing.add(j)
     return sorted(list(hashing))
-

@@ -12,4 +12,3 @@ class Solution:
                     tracker[(diff, i)] = 2
                 max_length = max(max_length, tracker[(diff, i)])
         return max_length
-

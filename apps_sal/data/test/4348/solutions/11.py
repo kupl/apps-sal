@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 from collections import defaultdict
 
 n, m = map(int, input().split())
@@ -28,11 +28,3 @@ for i in s:
         cnt[i] -= 1
     else:
         print(i, end='')
-
-
-
-
-
-
-
-

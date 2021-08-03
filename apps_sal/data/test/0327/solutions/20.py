@@ -7,4 +7,3 @@ else:
         i += 1
     ans = 2 ** (i + 1) - 1
     print(ans)
-

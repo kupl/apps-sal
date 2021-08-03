@@ -9,7 +9,6 @@ class Solution:
                     a[i] -= 1
                     res += 1
             a = [x // 2 for x in a if x]
-            if a: # if we halved any numbers
+            if a:  # if we halved any numbers
                 res += 1
         return res
-

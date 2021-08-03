@@ -15,5 +15,3 @@ class Solution:
             return self.getTargetCopy(original.left, cloned.left, target)
         else:
             return self.getTargetCopy(original.right, cloned.right, target)
-        
-

@@ -18,12 +18,14 @@ sum_idx = {
     'tri': [-1, -2, -3],
 }
 
+
 def sequence(pattern):
     pattern, seq = deque(pattern), deque(start[pattern[0]])
     while 1:
         seq.append(sum(seq[idx] for idx in sum_idx[pattern[0]]))
         yield seq.popleft()
         pattern.rotate(-1)
+
 
 def zozonacci(pattern, length):
     return pattern and [n for _, n in zip(range(length), sequence(pattern))]

@@ -10,6 +10,3 @@ class Solution:
                     return False
                 ind = i
         return True
-            
-        
-

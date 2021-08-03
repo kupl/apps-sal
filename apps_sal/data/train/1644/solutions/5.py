@@ -2,6 +2,7 @@ from itertools import zip_longest as lzip
 
 b91abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~"'
 
+
 def b91decode(string):
     b = ''
     for x, y in lzip(*[iter(string)] * 2):

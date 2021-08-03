@@ -28,4 +28,3 @@ for group in uf_col.to_sets():
     col_res = col_res * factorial[len(group)] % MOD
 
 print((row_res * col_res % MOD))
-

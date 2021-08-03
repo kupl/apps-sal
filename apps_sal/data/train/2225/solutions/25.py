@@ -51,4 +51,3 @@ if g == 0:
     print('Bob')
 else:
     print('Alice')
-

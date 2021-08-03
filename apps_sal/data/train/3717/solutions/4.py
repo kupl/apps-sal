@@ -28,4 +28,3 @@ def covered_pawns(pawns):
             if cell in pawns:
                 res.add(cell)
     return len(res)
-

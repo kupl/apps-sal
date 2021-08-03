@@ -1,9 +1,9 @@
+import collections as c
 w = input()
 
-import collections as c
 
 counts = c.Counter(w)
 if all(elem % 2 == 0 for elem in counts.values()):
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

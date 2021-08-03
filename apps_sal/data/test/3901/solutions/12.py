@@ -1,5 +1,6 @@
 def gcd(a: int, b: int): return gcd(b, a % b) if b else a
 
+
 nb = int(input())
 s = input()
 numbers = [int(i) for i in s.split(" ")]
@@ -9,12 +10,14 @@ flag = True
 
 op = 0
 
+
 def count1(s):
     res = 0
     for i in s:
         if i == 1:
             res += 1
     return res
+
 
 if nb == 1:
     if numbers[0] == 1:

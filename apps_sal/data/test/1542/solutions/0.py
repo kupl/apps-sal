@@ -6,5 +6,3 @@ q = int(input())
 for i in range(q):
     c = int(input())
     print(bisect.bisect_right(p, c))
-    
-

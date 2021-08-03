@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def getStrongest2(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         m = arr[(len(arr) - 1) // 2]
@@ -9,7 +9,7 @@ class Solution:
                 if abs(arr[i] - m) > abs(arr[j] - m):
                     strong = arr[i]
                 elif abs(arr[i] - m) == abs(arr[j] - m):
-                    strong = arr[i] if arr[i]>arr[j] else arr[j]
+                    strong = arr[i] if arr[i] > arr[j] else arr[j]
                 else:
                     strong = arr[j]
                 dp[i][j] = strong
@@ -17,7 +17,7 @@ class Solution:
         for line in dp:
             print(line)
         print()
-        
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        med = sorted(arr)[(len(arr)-1)//2]
-        return sorted(arr, key=lambda x:(abs(x-med),x))[-k:]
+        med = sorted(arr)[(len(arr) - 1) // 2]
+        return sorted(arr, key=lambda x: (abs(x - med), x))[-k:]

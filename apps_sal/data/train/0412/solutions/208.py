@@ -8,9 +8,8 @@ class Solution:
                 ff = 1
                 highest_die = min(j, f)
                 while ff <= highest_die:
-                    dp[i][j] += dp[i-1][j-ff]
+                    dp[i][j] += dp[i - 1][j - ff]
                     dp[i][j] %= mod
                     ff += 1
-                    
-        return dp[d][target] % mod
 
+        return dp[d][target] % mod

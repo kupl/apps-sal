@@ -1,9 +1,19 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,copy
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import copy
 from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 
-def VI(): return list(map(int,input().split()))
-def LIST(n,m=None): return [0]*n if m is None else [[0]*m for i in range(n)]
+
+def VI(): return list(map(int, input().split()))
+def LIST(n, m=None): return [0] * n if m is None else [[0] * m for i in range(n)]
 
 # interesting problem
 # good to think of this in reverse order
@@ -12,24 +22,27 @@ def LIST(n,m=None): return [0]*n if m is None else [[0]*m for i in range(n)]
 # cannot break the time limit with this python implementation!
 # but got the idea!
 
-def run2(n,m,f):
+
+def run2(n, m, f):
     # works, but doesn't pass time limit
-    c = LIST(n,m)
+    c = LIST(n, m)
     ans = 0
-    for i in range(n-1,-1,-1):
-        for j in range(m-1,-1,-1):
+    for i in range(n - 1, -1, -1):
+        for j in range(m - 1, -1, -1):
             if f[i][j] != c[i][j]:
                 ans += 1
-                for k in range(i+1):
-                    for l in range(j+1):
+                for k in range(i + 1):
+                    for l in range(j + 1):
                         c[k][l] += f[i][j] - c[i][j]
     print(ans)
+
+
 def main2(info=0):
-    n,m = VI()
+    n, m = VI()
     f = list(range(n))
     for i in range(n):
-        f[i] = [1 if x=='W' else -1 for x in input()]
-    run2(n,m,f)
+        f[i] = [1 if x == 'W' else -1 for x in input()]
+    run2(n, m, f)
 
 
 # Z = ord('W')-1
@@ -57,5 +70,6 @@ def main2(info=0):
 
 def __starting_point():
     main2()
+
 
 __starting_point()

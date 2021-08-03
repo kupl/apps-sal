@@ -1,13 +1,13 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 
 ad = [[] for _ in range(n)]
 
 es = []
 for _ in range(m):
-    v,u = list(map(int, input().split()))
-    v-=1
-    u-=1
-    es.append((min(v,u),max(v,u)))
+    v, u = list(map(int, input().split()))
+    v -= 1
+    u -= 1
+    es.append((min(v, u), max(v, u)))
 es = sorted(es, key=lambda x: (x[0], x[1]))
 
 for e in es:
@@ -32,4 +32,3 @@ ans = []
 for t in ad:
     ans.append(d[t])
 print(' '.join(ans))
-

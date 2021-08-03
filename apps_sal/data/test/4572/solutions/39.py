@@ -1,4 +1,4 @@
-c = [chr(i) for i in range(97, 97+26)]
+c = [chr(i) for i in range(97, 97 + 26)]
 s = input()
 ans = 'None'
 for i in c:

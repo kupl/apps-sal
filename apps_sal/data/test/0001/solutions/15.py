@@ -25,4 +25,3 @@ for i in range(0, n):
         j -= 1
         continue
 print(result)
-

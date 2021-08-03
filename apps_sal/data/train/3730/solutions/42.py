@@ -2,7 +2,7 @@ def capitalize(s):
     al = list(s)
     ab = list(s)
     l = []
-    for i in range(0,len(al)):
+    for i in range(0, len(al)):
         if i % 2 == 0:
             al[i] = al[i].upper()
         else:

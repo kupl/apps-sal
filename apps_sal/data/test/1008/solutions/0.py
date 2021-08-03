@@ -21,4 +21,6 @@ def __starting_point():
             return
 
     print('YES')
+
+
 __starting_point()

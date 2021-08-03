@@ -1,3 +1,2 @@
 def isDigit(string):
-    return string.lstrip('-').replace('.','').isdigit()
-
+    return string.lstrip('-').replace('.', '').isdigit()

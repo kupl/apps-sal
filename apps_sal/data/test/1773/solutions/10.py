@@ -27,4 +27,3 @@ if len(left) > len(right):
 elif len(right) > len(left):
     ans += right[len(left)][1]
 print(ans)
-

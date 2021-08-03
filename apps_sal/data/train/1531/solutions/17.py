@@ -9,13 +9,13 @@ for _ in range(m):
 
     left = y
     right = A[x] - left - 1
-    
+
     A[x] = 0
-    
+
     if x - 1 >= 0:
         A[x - 1] += left
     if x + 1 < n:
         A[x + 1] += right
-    
+
 for a in A:
     print(a)

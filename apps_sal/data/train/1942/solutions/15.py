@@ -2,7 +2,7 @@ class Solution:
     def peopleIndexes(self, fc: List[List[str]]) -> List[int]:
         def helper(s, b):
             return len(set(s).intersection(set(b))) == len(s)
-        
+
         n = len(fc)
         out = []
         for i in range(n):

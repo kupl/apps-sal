@@ -6,11 +6,15 @@ class Solution:
         while len(q) > 0:
             newq = []
             for node in q:
-                if node == 0: return steps
+                if node == 0:
+                    return steps
                 v.add(node)
-                if node % 3 == 0 and node // 3 not in v: newq.append(node // 3)
-                if node % 2 == 0 and node // 2 not in v: newq.append(node // 2)
-                if node - 1 not in v: newq.append(node - 1)
+                if node % 3 == 0 and node // 3 not in v:
+                    newq.append(node // 3)
+                if node % 2 == 0 and node // 2 not in v:
+                    newq.append(node // 2)
+                if node - 1 not in v:
+                    newq.append(node - 1)
             q = newq
             steps += 1
         return -1

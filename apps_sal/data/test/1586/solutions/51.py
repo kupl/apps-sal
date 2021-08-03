@@ -8,7 +8,6 @@ if N % 2 == 0:
         tmp = 5 * tmp
 
     print(ans)
- 
+
 else:
     print((0))
-

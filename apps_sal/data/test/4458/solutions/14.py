@@ -9,4 +9,3 @@ for i in l:
     if i == curmin:
         counter += 1
 print(counter)
-

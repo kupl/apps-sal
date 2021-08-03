@@ -1,6 +1,6 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        
+
         def cal(arr1, arr2):
             tmp = 0
             for n1 in arr1:
@@ -11,9 +11,5 @@ class Solution:
                         tmp += h[n1pow2 // n2]
                     h[n2] += 1
             return tmp
-                    
-        
-        return cal(nums1, nums2) + cal(nums2, nums1)
-                    
-                
 
+        return cal(nums1, nums2) + cal(nums2, nums1)

@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs():
     visit = [0] * (n + 1)
     e = [0] * (m + 1)
@@ -24,6 +25,7 @@ def bfs():
                             if not x[g[0]] == g[1] + x[j]:
                                 return False
     return True
+
 
 n, m = map(int, input().split())
 G = [[] for _ in range(n + 1)]

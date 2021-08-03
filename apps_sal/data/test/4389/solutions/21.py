@@ -8,20 +8,19 @@ t = int(input())
 # t = 1
 
 for _ in range(t):
-	b = input()
-	a = b[0]
-	for i in range(1,len(b)-1,2):
-		a += b[i]
-	a += b[-1]
-	print(a)
-
+    b = input()
+    a = b[0]
+    for i in range(1, len(b) - 1, 2):
+        a += b[i]
+    a += b[-1]
+    print(a)
 
 
 # try:
-	# raise Exception
+    # raise Exception
 # except:
-	# print("-1")
-	
+    # print("-1")
+
 
 # thenos.sort(key=lambda x: x[2], reverse=True)
 
@@ -37,7 +36,3 @@ for _ in range(t):
 
 # my_dict.pop('key', None)
 # This will return my_dict[key] if key exists in the dictionary, and None otherwise.
-
-
-
-

@@ -48,15 +48,15 @@ class Solution:
 
         redundant = 0
         for _, u, v in common_edges:
-            if (not alice_disjoint_set.union(u-1, v-1)) or (not bob_disjoint_set.union(u-1, v-1)):
+            if (not alice_disjoint_set.union(u - 1, v - 1)) or (not bob_disjoint_set.union(u - 1, v - 1)):
                 redundant += 1
 
         for _, u, v in bob_edges:
-            if not bob_disjoint_set.union(u-1,v-1):
+            if not bob_disjoint_set.union(u - 1, v - 1):
                 redundant += 1
-                
+
         for _, u, v in alice_edges:
-            if not alice_disjoint_set.union(u-1, v-1):
+            if not alice_disjoint_set.union(u - 1, v - 1):
                 redundant += 1
-        
+
         return redundant if alice_disjoint_set.component_count == 1 and bob_disjoint_set.component_count == 1 else -1

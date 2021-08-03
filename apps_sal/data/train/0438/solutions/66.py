@@ -3,7 +3,7 @@ class Solution:
         end = {}
         n = len(arr)
         count = collections.defaultdict(int)
-        string = [0]*(n+1)
+        string = [0] * (n + 1)
         ans = -1
         for i in range(len(arr)):
             start = arr[i]
@@ -11,15 +11,15 @@ class Solution:
             left = start
             right = start
             flag1, flag2 = False, False
-            if arr[i]-1 > 0 and string[arr[i]-1] == 1:
-                l, r = end[arr[i]-1]
+            if arr[i] - 1 > 0 and string[arr[i] - 1] == 1:
+                l, r = end[arr[i] - 1]
                 left = l
-                count[r-l+1] -= 1
+                count[r - l + 1] -= 1
                 flag1 = True
-            if arr[i]+1 <= n and string[arr[i]+1] == 1:
-                l2, r2 = end[arr[i]+1]
+            if arr[i] + 1 <= n and string[arr[i] + 1] == 1:
+                l2, r2 = end[arr[i] + 1]
                 right = r2
-                count[r2-l2+1] -= 1
+                count[r2 - l2 + 1] -= 1
                 flag2 = True
             end[arr[i]] = (left, right)
             if flag1:

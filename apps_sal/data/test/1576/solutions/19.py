@@ -9,6 +9,4 @@ for i in range(len(s) // 2):
 if (len(s) % 2 == 1):
     res += s[len(s) // 2]
 
-print(''.join(reversed (res)))
-
-
+print(''.join(reversed(res)))

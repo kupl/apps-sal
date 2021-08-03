@@ -15,4 +15,3 @@ for key, value in list(num_map.items()):
         res += value
 
 print(res)
-

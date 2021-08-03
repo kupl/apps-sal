@@ -13,7 +13,8 @@ for i in range(n):
             k[i] = ')'
             cntr += 1
             cntq -= 1
-        
+
+
 def check():
     cnt = 0
     m = 0
@@ -27,7 +28,5 @@ def check():
             return False
     return cnt == 0
 
-print(''.join(k) if check() else ':(')
-            
-            
 
+print(''.join(k) if check() else ':(')

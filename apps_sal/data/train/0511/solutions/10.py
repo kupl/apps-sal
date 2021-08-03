@@ -5,4 +5,3 @@ for a in lis:
     m = m ^ a
 for a in lis:
     print(m ^ a, end=" ")
-

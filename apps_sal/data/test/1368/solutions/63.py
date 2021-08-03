@@ -27,4 +27,3 @@ for j in range(B - A + 1):
         num += tmp
 
 print(num)
-

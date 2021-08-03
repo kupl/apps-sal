@@ -13,7 +13,7 @@ def main():
             if d[good_first] > best:
                 best = d[good_first]
                 best_first = good_first
-    
+
     print(n - best)
     for i, v in enumerate(a):
         diff = best_first - (v - k * i)
@@ -21,6 +21,6 @@ def main():
             print('+', i + 1, diff)
         elif diff < 0:
             print('-', i + 1, -diff)
-        
-main()
 
+
+main()

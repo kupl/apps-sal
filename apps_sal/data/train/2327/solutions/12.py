@@ -1,11 +1,15 @@
 import sys
+
+
 def input():
     return sys.stdin.readline()[:-1]
+
+
 N, M = map(int, input().split())
 L = []
 for i in range(N):
     l, r = map(int, input().split())
-    L.append((r-l+1, l, r+1))
+    L.append((r - l + 1, l, r + 1))
 L.sort()
 
 
@@ -17,13 +21,14 @@ class Bit:
     bit.add(2, 10)
     print(bit.sum(5))  # 10
     """
+
     def __init__(self, n):
         self.size = n
-        self.tree = [0]*(n+1)
+        self.tree = [0] * (n + 1)
 
     def sum(self, i):
         s = 0
-        while i>0:
+        while i > 0:
             s += self.tree[i]
             i -= i & -i
         return s
@@ -41,8 +46,9 @@ class BitImos:
     ・ひとつの値を取得
     の2種類のクエリをO(logn)で処理
     """
+
     def __init__(self, n):
-        self.bit = Bit(n+1)
+        self.bit = Bit(n + 1)
 
     def add(self, s, t, x):
         # [s, t)にxを加算
@@ -54,26 +60,25 @@ class BitImos:
 
     def __getitem__(self, key):
         # 位置iの値を取得
-        return self.bit.sum(key+1)
+        return self.bit.sum(key + 1)
 
 
-imos = BitImos(M+1)
+imos = BitImos(M + 1)
 il = 0
 a = N
-A = [0]*M
-for i in range(1, M+1):
-    while il<N:
+A = [0] * M
+for i in range(1, M + 1):
+    while il < N:
         ra, l, r = L[il]
         if i < ra:
             break
-        il+=1
-        a-=1
+        il += 1
+        a -= 1
         imos.add(l, r, 1)
     ans = 0
-    for j in range(i, M+1, i):
+    for j in range(i, M + 1, i):
         ans += imos[j]
 
-    A[i-1] = ans + a
+    A[i - 1] = ans + a
 
 print(*A, sep="\n")
-

@@ -2,7 +2,7 @@
 # from a given given graph
 from collections import defaultdict
 
-viz = [0]*1005
+viz = [0] * 1005
 # This class represents a directed graph using
 # adjacency list representation
 
@@ -25,7 +25,7 @@ class Graph:
         # Mark the current node as visited
         # and print it
         visited[v] = True
-        viz[v]=1
+        viz[v] = 1
         # print(v, end=' ')
 
         # Recur for all the vertices
@@ -36,7 +36,7 @@ class Graph:
 
     # The function to do DFS traversal. It uses
     # recursive DFSUtil()
-    def DFS(self, v,visited):
+    def DFS(self, v, visited):
 
         # Mark all the vertices as not visited
         # visited = [False] * (max(self.graph)+1)
@@ -53,10 +53,10 @@ class Graph:
 # Create a graph given
 # in the above diagram
 for _ in range(int(input())):
-    
+
     g = Graph()
     n, m = list(map(int, input().split()))
-    vizi=[False]*(n+1)
+    vizi = [False] * (n + 1)
     for i in range(m):
         a, b = list(map(int, input().split()))
         g.addEdge(a, b)
@@ -66,7 +66,7 @@ for _ in range(int(input())):
     for i in range(n):
         if vizi[i] == False:
             cnt += 1
-            vizi=g.DFS(i,vizi)
+            vizi = g.DFS(i, vizi)
 
     print(cnt)
 
@@ -74,4 +74,3 @@ for _ in range(int(input())):
 # g.DFS(2)
 
 # This code is contributed by Neelam Yadav
-

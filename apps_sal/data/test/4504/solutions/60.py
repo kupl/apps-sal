@@ -9,4 +9,3 @@ for i in range(1, int(len(S) / 2)):
     if clear == m:
         print((len(T)))
         break
-

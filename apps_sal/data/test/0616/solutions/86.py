@@ -8,7 +8,7 @@ for _ in range(m):
 
     openable = 0
     for open in to_open:
-        openable += 1 << (open-1)
+        openable += 1 << (open - 1)
 
     for opened in range(2 ** n):
         pattern = opened | openable
@@ -21,4 +21,3 @@ if ans == 10 ** 9:
     ans = -1
 
 print(ans)
-

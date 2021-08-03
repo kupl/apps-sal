@@ -1,6 +1,6 @@
 class Solution:
     def sumSubarrayMins(self, A: List[int]) -> int:
-        
+
         # # Naive DP N^2 time, N space, over time limit
         # n = len(A)
         # md = 10**9+7
@@ -13,7 +13,7 @@ class Solution:
         #         res = (res+now[j]) % md
         #     pre = now
         # return res
-        
+
         # Copied from discussion
         res = 0
         s = []

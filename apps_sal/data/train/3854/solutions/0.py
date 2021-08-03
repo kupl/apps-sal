@@ -2,6 +2,7 @@ def candidates(ymd):
     y, m, d = ymd.split('-')
     return {ymd, f'{y}-{d}-{m}'}
 
+
 def check_dates(records):
     result = [0, 0, 0]
     for start, end in records:

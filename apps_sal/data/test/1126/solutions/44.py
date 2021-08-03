@@ -1,8 +1,8 @@
-n,x,m = map(int,input().split())
+n, x, m = map(int, input().split())
 l = [x]
 s = {x}
 for i in range(n):
-    x = x*x % m
+    x = x * x % m
     if x in s:
         break
     l += [x]
@@ -19,4 +19,4 @@ if n <= xi:
 ans = sum(l[:xi])
 n -= xi
 l = l[xi:]
-print(ans + sum(l) * (n // len(l)) + sum(l[:(n%len(l))]))
+print(ans + sum(l) * (n // len(l)) + sum(l[:(n % len(l))]))

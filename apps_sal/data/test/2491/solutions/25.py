@@ -8,20 +8,20 @@ for _ in range(m):
 
 init_v = 0
 INF = float('inf')
-dist = [INF]*n
+dist = [INF] * n
 dist[init_v] = 0
 for i in range(n):
     for v, v2, c in edges:
-        if dist[v2] <= dist[v]+c:
+        if dist[v2] <= dist[v] + c:
             continue
-        dist[v2] = dist[v]+c
+        dist[v2] = dist[v] + c
 
-negative = [0]*n
+negative = [0] * n
 for i in range(n):
     for v, v2, c in edges:
-        if dist[v2] <= dist[v]+c:
+        if dist[v2] <= dist[v] + c:
             continue
-        dist[v2] = dist[v]+c
+        dist[v2] = dist[v] + c
         negative[v2] = 1
 
 if negative[-1]:

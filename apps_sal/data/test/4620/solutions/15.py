@@ -1,5 +1,5 @@
 N = int(input())
-CSF = [ list(map(int,input().split(" "))) for _ in range(N - 1)]
+CSF = [list(map(int, input().split(" "))) for _ in range(N - 1)]
 
 for i in range(N):
     Time = 0

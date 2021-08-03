@@ -13,6 +13,7 @@ if len(sys.argv) > 1:
 MOD = 10**9 + 7
 IMG_SPACE = 2**10
 
+
 def str2num(s, one_char):
     n = 0
     for ch in s:
@@ -21,11 +22,14 @@ def str2num(s, one_char):
             n = n | 1
     return n
 
+
 def img2num(img_str):
     return str2num(img_str, 'w')
 
+
 def flt2num(flt_str):
     return str2num(flt_str, '+')
+
 
 def calc(S, filters_str):
     N = len(filters_str)
@@ -40,12 +44,12 @@ def calc(S, filters_str):
         n = 0
         if i == 0:
             n += 1
-        if i ^ filters_num[N-1] == 0:
+        if i ^ filters_num[N - 1] == 0:
             n += 1
         row[i] = n
 
     # pass
-    for j in range(N-2, -1, -1):
+    for j in range(N - 2, -1, -1):
         row = counts[j]
         next_row = counts[j + 1]
         for i in range(IMG_SPACE):
@@ -55,9 +59,10 @@ def calc(S, filters_str):
 
     return counts[0][img_num]
 
+
 T = int(f.readline().strip())
 
-for case_id in range(1, T+1):
+for case_id in range(1, T + 1):
     S = f.readline().strip()
     N = int(f.readline().strip())
     filters = []
@@ -67,4 +72,3 @@ for case_id in range(1, T+1):
     r = calc(S, filters)
 
     print(r)
-

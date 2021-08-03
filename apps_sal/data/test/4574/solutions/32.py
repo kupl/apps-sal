@@ -43,18 +43,19 @@ def resolve():
     l1 = l2 = 0
     for i in range(1, N):
         if l1 == 0:
-            if A[i] == A[i-1]:
-                l1 = A[i-1]
+            if A[i] == A[i - 1]:
+                l1 = A[i - 1]
         else:
-            if i < N-1 and A[i+1] == A[i]:
+            if i < N - 1 and A[i + 1] == A[i]:
                 l2 = A[i]
                 break
 
-    print((l1*l2))
+    print((l1 * l2))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

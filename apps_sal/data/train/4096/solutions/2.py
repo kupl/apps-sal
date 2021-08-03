@@ -3,6 +3,7 @@ iparens = iter('(){}[]<>')
 parens = dict(zip(iparens, iparens))
 closing = parens.values()
 
+
 def valid_parentheses(astr):
     stack = []
     for c in astr:

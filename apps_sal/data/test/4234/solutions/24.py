@@ -20,4 +20,3 @@ if (len(s) - s.count('')) % 2 == 1:
 
 print(s.count(''))
 print(''.join(s))
-

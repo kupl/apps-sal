@@ -7,5 +7,4 @@ for _ in range(n):
     elif (actual - s) % d != 0:
         actual += (d - (actual - s) % d)
     actual += 1
-print(actual-1)
-
+print(actual - 1)

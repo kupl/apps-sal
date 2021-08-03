@@ -12,4 +12,3 @@ for case_num in range(t):
     hi = min(m, n // k)
     rest = (m - hi - 1) // (k - 1) + 1
     print(hi - rest)
-

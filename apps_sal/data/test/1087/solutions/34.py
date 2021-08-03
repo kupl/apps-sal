@@ -12,7 +12,7 @@ for i in range(64):
     for a in A:
         if a & b:
             cnt += 1
-    if N >= cnt*2 and (X ^ b) <= K:
+    if N >= cnt * 2 and (X ^ b) <= K:
         X ^= b
         ans += (N - cnt) * b
     else:
@@ -33,4 +33,3 @@ print(ans)
 #     ans += count*max(zero[i], n-zero[i])
 #     count //= 2
 # print(ans)
-

@@ -7,4 +7,3 @@ def the_biggest_search_keys(*keys):
         elif key_len > max_len:
             biggest, max_len = [key], key_len
     return ', '.join("'{}'".format(key) for key in sorted(biggest)) or "''"
-

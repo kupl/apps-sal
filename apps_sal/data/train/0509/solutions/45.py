@@ -12,17 +12,20 @@ for _ in range(M):
 ans = [-1] * N
 ans[0] = 1
 
+
 def dfs(u):
     for v, c in edges[u]:
-        if ans[v] != -1: continue
-        if ans[u] == c: 
+        if ans[v] != -1:
+            continue
+        if ans[u] == c:
             if c == 1:
                 ans[v] = 2
             else:
                 ans[v] = 1
-        else: 
+        else:
             ans[v] = c
         dfs(v)
+
 
 dfs(0)
 print(*ans, sep="\n")

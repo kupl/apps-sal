@@ -21,5 +21,5 @@ class Solution:
                 if not found:
                     return -1
             target -= 1
-            
+
         return count

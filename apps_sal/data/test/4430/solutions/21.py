@@ -13,4 +13,3 @@ for i in range(n):
     else:
         last -= a[i]
 print(n)
-

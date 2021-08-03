@@ -26,8 +26,8 @@ def solve(k, n, a):
         return False, None, None
     tsum = asum / k
     num_map = build_num_map(k, n, a)
-    masks = [None]*(1 << k)
-    simple = [False]*(1 << k)
+    masks = [None] * (1 << k)
+    simple = [False] * (1 << k)
     for i in range(k):
         for j in range(n[i]):
             found, mask, path = find_cycle(i, j, i, j, k, n, a, sums, tsum, num_map, 0, dict())
@@ -111,5 +111,6 @@ def calc_sums(k, n, a):
 
 def __starting_point():
     main()
+
 
 __starting_point()

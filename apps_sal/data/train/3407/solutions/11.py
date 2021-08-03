@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 @lru_cache(maxsize=None)
 def palindrome_chain_length(n):
     s1 = str(n)

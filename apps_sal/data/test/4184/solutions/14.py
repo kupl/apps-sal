@@ -1,14 +1,15 @@
-#template
+# template
 def inputlist(): return [int(j) for j in input().split()]
-#template
+# template
+
 
 N = int(input())
 A = inputlist()
 sum_A = sum(A)
 left = 0
-ans = 10**9+7
+ans = 10**9 + 7
 for i in range(N):
     left += A[i]
-    sum_A -=A[i]
-    ans = min(abs(sum_A - left),ans)
+    sum_A -= A[i]
+    ans = min(abs(sum_A - left), ans)
 print(ans)

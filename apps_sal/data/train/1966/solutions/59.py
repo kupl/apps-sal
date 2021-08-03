@@ -7,10 +7,9 @@ class Solution:
                 if mat[i - 1][j - 1] == 1:
                     dp[i][j] = 1 + dp[i][j - 1]
                     res += dp[i][j]
-                    
+
                     minRec = dp[i][j]
                     for k in range(i - 1, -1, -1):
                         minRec = min(minRec, dp[k][j])
                         res += minRec
         return res
-

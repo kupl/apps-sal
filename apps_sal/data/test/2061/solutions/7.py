@@ -2,21 +2,23 @@ import sys
 import copy
 sys.setrecursionlimit(10000000)
 
-h, w, k = list(map(int,input().split()))
+h, w, k = list(map(int, input().split()))
 ground = [list(input()) for j in range(h)]
 ground2 = copy.deepcopy(ground)
 
-dx = [1,0,-1,0]
-dy = [0,1,0,-1]
+dx = [1, 0, -1, 0]
+dy = [0, 1, 0, -1]
 cnt = 0
 
-def dfs(x,y,count):
+
+def dfs(x, y, count):
     ground[y][x] = str(count)
-    #print(y,x)
+    # print(y,x)
     for k in range(4):
         if 0 <= x + dx[k] < w and 0 <= y + dy[k] < h:
-            if ground[y+dy[k]][x+dx[k]] == ".":
-                dfs(x+dx[k], y+dy[k], count)
+            if ground[y + dy[k]][x + dx[k]] == ".":
+                dfs(x + dx[k], y + dy[k], count)
+
 
 for j in range(h):
     for i in range(w):
@@ -30,14 +32,14 @@ for num in range(cnt):
     f = True
     for j in range(h):
         for i in range(w):
-            #print(num,j,i,ground[j][i])
+            # print(num,j,i,ground[j][i])
             if ground[j][i] == str(num):
                 arr[num][0] += 1
                 if i == 0 or i == w - 1 or j == 0 or j == h - 1:
                     f = False
                     arr[num][0] += 10**10
                     break
-                    #print(num,j,i)
+                    # print(num,j,i)
             if not f:
                 break
         if not f:
@@ -70,7 +72,7 @@ for num in range(cnt):
             if ground[j][i] == str(arr[num][1]):
                 if i < 0 or i > w - 1 or j < 0 or j > h - 1:
                     f = False
-                    print("F", i,j)
+                    print("F", i, j)
                     break
                 ground[j][i] = "*"
                 cells += 1
@@ -83,7 +85,7 @@ for num in range(cnt):
         num_lake -= 1
         ans += cells
 
-    if num_lake == k :
+    if num_lake == k:
         break
 
 for j in range(h):
@@ -96,4 +98,3 @@ for j in range(h):
 print(ans)
 for j in range(h):
     print("".join(ground[j][:]))
-

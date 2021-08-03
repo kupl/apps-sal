@@ -2,8 +2,8 @@
 # coding=utf-8
 
 n, m, k = map(int, input().split())
-mCnt = 0;
-ans = [0] * m;
+mCnt = 0
+ans = [0] * m
 start = 0
 end = 0
 Q = [[] for i in range(m)]
@@ -27,10 +27,11 @@ for i in range(n):
             for j in range(m):
                 if Q[j] and Q[j][0][1] == start:
                     Q[j].pop(0)
-                if Q[j]: z += Q[j][0][0]
+                if Q[j]:
+                    z += Q[j][0][0]
             start += 1
-            if z <= k : break;
+            if z <= k:
+                break
         end += 1
 for i in ans:
-    print(i, end = " ")
-
+    print(i, end=" ")

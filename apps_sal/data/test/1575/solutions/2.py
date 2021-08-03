@@ -1,6 +1,7 @@
 import math
-start,finish,time = list(map(int, input().split()))
+start, finish, time = list(map(int, input().split()))
 b = int(input())
+
 
 def solve():
     firstAvailableSpot = start
@@ -20,18 +21,15 @@ def solve():
                 minimumTimeInQueue = timeInQueue + 1
                 minimum = q[i] - 1
                 last = q[i]
-        
-        if firstAvailableSpot >= finish or len(q) -1 == i:
+
+        if firstAvailableSpot >= finish or len(q) - 1 == i:
             if firstAvailableSpot + time <= finish:
                 return firstAvailableSpot
             return minimum
+
 
 if b != 0:
     q = list(map(int, input().split()))
     print(solve())
 else:
     print(str(start))
-
-
-
-

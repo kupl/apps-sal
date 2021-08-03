@@ -6,4 +6,3 @@ if s.count('0') == s.count('1'):
 else:
     print(1)
     print(s)
-

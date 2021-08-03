@@ -15,4 +15,3 @@ for el in b:
     ans.append(f'{ind} {num}')
 
 print('\n'.join(ans))
-

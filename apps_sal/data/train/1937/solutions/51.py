@@ -3,20 +3,21 @@ class P:
         self.name = name
         self.child = []
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
         self.king = P(kingName)
-        self.d = {kingName:self.king}
+        self.d = {kingName: self.king}
         self.dead = set()
 
-    def getnext(self,k):
+    def getnext(self, k):
         if k.name not in self.dead:
             yield k.name
-            
+
         for c in k.child:
             yield from self.getnext(c)
-        
+
     def birth(self, parentName: str, childName: str) -> None:
         child = P(childName)
         self.d[childName] = child
@@ -27,9 +28,7 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self) -> List[str]:
         return [*self.getnext(self.king)]
-        
-        
-        
+
 
 # Your ThroneInheritance object will be instantiated and called as such:
 # obj = ThroneInheritance(kingName)
@@ -39,4 +38,3 @@ class ThroneInheritance:
 
 # [\"king\", \"andy\", \"matthew\", \"bob\", \"alex\", \"asha\", \"catherine\"]
 # [\"king\", \"andy\", \"matthew\", \"alex\", \"asha\", \"catherine\"]
-

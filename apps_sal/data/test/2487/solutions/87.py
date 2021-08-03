@@ -1,48 +1,53 @@
 # coding: utf-8
+from heapq import heappop, heappush
 import sys
 # from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
 sys.setrecursionlimit(10 ** 7)
-from heapq import heappop, heappush
 #from collections import OrderedDict, defaultdict
 #import math
 #from itertools import product, accumulate, combinations, product
-#import bisect# lower_bound etc
+# import bisect# lower_bound etc
 #import numpy as np
 #from copy import deepcopy
 #from collections import deque
 #import numba
 
+
 def sum_between(a, b):
-    return (abs(b-a)+1) * (b+a) // 2
+    return (abs(b - a) + 1) * (b + a) // 2
+
 
 def run():
     N = int(input())
     n_dots = 0
-    for i in range(1, N+1):
-        n_dots += (1+i) * i // 2
-    #print(n_dots)
-    ans = (N-1) * (N+1) * N // 2
-    #print(ans)
+    for i in range(1, N + 1):
+        n_dots += (1 + i) * i // 2
+    # print(n_dots)
+    ans = (N - 1) * (N + 1) * N // 2
+    # print(ans)
     lr = list(map(int, read().split()))
     l = lr[::2]
     r = lr[1::2]
-    for l,r in zip(l, r):
-        if l > r: l,r = r,l
+    for l, r in zip(l, r):
+        if l > r:
+            l, r = r, l
         tmp = 0
-        if l > 1: tmp += sum_between(r-1, r-l+1)
-        tmp += r-l
-        tmp += sum_between(N-l, 1)
-        #print(tmp)
+        if l > 1:
+            tmp += sum_between(r - 1, r - l + 1)
+        tmp += r - l
+        tmp += sum_between(N - l, 1)
+        # print(tmp)
         ans -= tmp
 
     print(n_dots - ans)
 
-
-    ans = (N-1) * N * N
+    ans = (N - 1) * N * N
 
 
 def __starting_point():
     run()
+
+
 __starting_point()

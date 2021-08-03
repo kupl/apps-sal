@@ -8,4 +8,3 @@ for i in range(len(s) + 1):
         books.add(s[:i] + l + s[i:])
 
 print(len(books))
-

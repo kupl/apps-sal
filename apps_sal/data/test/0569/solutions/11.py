@@ -7,4 +7,3 @@ for x in c:
     if c[x] > 1:
         ans += c[x] - 1
 print(-1 if n > 26 else ans)
-

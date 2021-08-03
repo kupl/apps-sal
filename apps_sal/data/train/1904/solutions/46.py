@@ -1,9 +1,9 @@
-## Time Complexity: O(NlogK)
-## Space Complexity: O(K)
+# Time Complexity: O(NlogK)
+# Space Complexity: O(K)
 
 from heapq import *
 
-## Approach 1 - Succinct code
+# Approach 1 - Succinct code
 # class Solution:
 #     def distance(self, point):
 #         # ignoring sqrt to calculate the distance
@@ -27,7 +27,7 @@ from heapq import *
 #         return res
 
 
-## Approach 2 - Define a Point class
+# Approach 2 - Define a Point class
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -64,5 +64,3 @@ class Solution:
             pt = heappop(max_heap)[1]
             res.append([pt.x, pt.y])
         return res
-
-

@@ -1,6 +1,6 @@
-N=int(input())
-if N%2==0:
-    ans=N
+N = int(input())
+if N % 2 == 0:
+    ans = N
 else:
-    ans=N*2
+    ans = N * 2
 print(ans)

@@ -1,23 +1,24 @@
 from sys import stdin as Si
 from itertools import combinations_with_replacement as Cr
+
+
 def __starting_point():
-    n,c = list(map(int,Si.readline().split()))
+    n, c = list(map(int, Si.readline().split()))
 
-    S = tuple(map(int,Si.readline().split()))   #score
-    T = tuple(map(int,Si.readline().split()))   #time
-    L,R=0,0
+    S = tuple(map(int, Si.readline().split()))  # score
+    T = tuple(map(int, Si.readline().split()))  # time
+    L, R = 0, 0
     for i in range(n):
-        #print(S[i],sum(T[:i+1])*c,S[n-1-i],sum(T[n-1-i:])*c)
-        L+= max(0, S[i]-sum(T[:i+1])*c)
-        R+= max(0,S[n-1-i]-sum(T[n-1-i:])*c)
-    if L>R: print('Limak')
-    elif R>L:   print('Radewoosh')
-    else:   print('Tie')
-        
-        
+        # print(S[i],sum(T[:i+1])*c,S[n-1-i],sum(T[n-1-i:])*c)
+        L += max(0, S[i] - sum(T[:i + 1]) * c)
+        R += max(0, S[n - 1 - i] - sum(T[n - 1 - i:]) * c)
+    if L > R:
+        print('Limak')
+    elif R > L:
+        print('Radewoosh')
+    else:
+        print('Tie')
 
-                  
-                
 
 '''
     A = input()

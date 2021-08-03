@@ -4,11 +4,13 @@ sys.setrecursionlimit(10 ** 6)
 N, M, Q = list(map(int, input().split()))
 abcd = [list(map(int, input().split())) for i in range(Q)]
 A = []
+
+
 def rec(itr, lst):
     if itr == N:
         res = 0
         for a, b, c, d in abcd:
-            if A[b-1] - A[a-1] == c:
+            if A[b - 1] - A[a - 1] == c:
                 res += d
         return res
     else:
@@ -18,5 +20,6 @@ def rec(itr, lst):
             res = max(res, rec(itr + 1, i))
             A.pop()
         return res
-print((rec(0, 0)))
 
+
+print((rec(0, 0)))

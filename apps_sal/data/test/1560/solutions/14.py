@@ -21,4 +21,4 @@ for i in range(n):
 ans = min(ans, max(cntf, cnts))
 
 
-stdout.write(str(ans))   
+stdout.write(str(ans))

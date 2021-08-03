@@ -1,5 +1,6 @@
 from itertools import groupby
 
+
 def largest_rect(histogram):
     histogram.append(0)
     stack = [-1]

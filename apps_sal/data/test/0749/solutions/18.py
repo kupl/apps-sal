@@ -23,4 +23,3 @@ while r - l > 1:
     else:
         l = m
 print(r)
-

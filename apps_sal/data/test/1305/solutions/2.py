@@ -25,4 +25,3 @@ if yes:
     print("YES")
 else:
     print("NO")
-

@@ -13,7 +13,7 @@ suma = 0
 sumb = 0
 
 result = 0
-while (xa < la or sumb < suma) and  (xb < lb or suma < sumb):
+while (xa < la or sumb < suma) and (xb < lb or suma < sumb):
     if suma == sumb:
         suma += a[xa]
         sumb += b[xb]
@@ -33,4 +33,3 @@ if xa == la and xb == lb and suma == sumb:
     print(result)
 else:
     print(-1)
-

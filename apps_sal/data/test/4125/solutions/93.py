@@ -7,7 +7,6 @@ x.append(X)
 x.sort()
 ans = x[1] - x[0]
 for i in range(1, N):
-    ans = math.gcd(ans, x[i+1] - x[i])
+    ans = math.gcd(ans, x[i + 1] - x[i])
 
 print(ans)
-

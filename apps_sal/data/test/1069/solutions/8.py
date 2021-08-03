@@ -6,4 +6,3 @@ three = [1, 3, 4, 2]
 four = [1, 4]
 ans = (1 + two[d] + three[d] + four[d % 2]) % 5
 print(ans)
-

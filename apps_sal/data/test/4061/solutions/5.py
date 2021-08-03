@@ -9,7 +9,7 @@ def compute_prefix(s, t):
     while i < len(t):
         while s[j] != t[i]:
             j += 1
-        prefix[i+1] = j+1
+        prefix[i + 1] = j + 1
         i += 1
         j += 1
     return prefix
@@ -21,4 +21,3 @@ res = 0
 for i in range(len(t) + 1):
     res = max(res, len(s) - (prefix[i] + suffix[len(t) - i]))
 print(res)
-

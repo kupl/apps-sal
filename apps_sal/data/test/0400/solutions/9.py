@@ -12,7 +12,7 @@ for i in range(n):
 mx.sort()
 i = 0
 #print(mx, k)
-#print(score)
+# print(score)
 while i < n and k >= mx[i][0]:
     if mx[i][0] != -1:
         k -= mx[i][0]
@@ -20,7 +20,7 @@ while i < n and k >= mx[i][0]:
         score += 1
     i += 1
 #print(arr, k)
-#print(score)
+# print(score)
 if i == n:
     i = 0
     k -= k % 10
@@ -38,10 +38,4 @@ if i == n:
                 k = 0
         i += 1
 print(score)
-#print(arr)
-
-
-
-
-
-
+# print(arr)

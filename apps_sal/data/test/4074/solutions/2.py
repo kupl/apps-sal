@@ -20,4 +20,3 @@ for _ in range(T):
             ans = min(ans, n // d)
 
     print(ans)
-

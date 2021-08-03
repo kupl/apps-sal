@@ -17,7 +17,7 @@ accum = [0 for _ in range(n)]
 for index, [x, h] in enumerate(x_list):
     if index != 0:
         accum[index] += accum[index - 1]
-    cnt = max(math.ceil((hh[index] - accum[index]) / a),  0)
+    cnt = max(math.ceil((hh[index] - accum[index]) / a), 0)
     ans += cnt
     index_right = bisect_right(xx, xx[index] + (2 * d))
     accum[index] += cnt * a

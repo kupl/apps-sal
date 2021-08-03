@@ -9,7 +9,7 @@ from collections import Counter
 from collections import deque
 from itertools import permutations
 sys.setrecursionlimit(10 ** 7)
- 
+
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
 read = sys.stdin.buffer.read
@@ -32,5 +32,3 @@ for i in range(1, len(L)):
         dp[i][1] = (3 * dp[i - 1][1]) % MOD
 print((sum(dp[len(L) - 1]) % MOD))
 # print(dp)
-
-

@@ -7,13 +7,16 @@ n, k, *a = map(int, sys.stdin.read().split())
 a.sort()
 
 mask = (1 << k) - 1
+
+
 def is_needed(i):
     res = 1
-    for j in chain(a[:i], a[i+1:]):
+    for j in chain(a[:i], a[i + 1:]):
         res |= res << j
         res &= mask
-    return res >> (k - a[i]) 
+    return res >> (k - a[i])
     # k - a[i]番目以降のbitが1つでも立っていれば、a[i]はneeded
+
 
 def main():
     lo = 0
@@ -24,11 +27,14 @@ def main():
             hi = i - 1
         else:
             lo = i + 1
-    
+
     # hi: neededとなる最小のindex
     return hi + 1
-    
+
+
 def __starting_point():
     ans = main()
     print(ans)
+
+
 __starting_point()

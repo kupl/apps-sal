@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def isNStraightHand(self, hand: List[int], k: int) -> bool:
         if len(hand) < k or len(hand) % k != 0:
@@ -7,10 +8,10 @@ class Solution:
         if k == 1:
             return True
         hand.sort()
-        
+
         queue = deque(hand)
         q2 = deque()
-        
+
         currVal = -1
         currNum = 0
         for i in range(len(hand) // k):
@@ -35,6 +36,3 @@ class Solution:
             currVal = -1
             currNum = 0
         return True
-        
-        
-

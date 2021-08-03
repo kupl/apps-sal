@@ -9,4 +9,3 @@ def count_by(x, n):
         num += x
         n -= 1
     return res
-

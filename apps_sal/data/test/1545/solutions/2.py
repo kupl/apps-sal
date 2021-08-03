@@ -33,15 +33,17 @@ def split(start):
             break
 
         longest = max(current_length, longest)
-        ss_num_ways, ss_longest, ss_min_num = split(i+1)
+        ss_num_ways, ss_longest, ss_min_num = split(i + 1)
         num_ways = (num_ways + ss_num_ways) % mod
         longest = max(longest, ss_longest)
-        min_num = min(min_num, ss_min_num+1)
+        min_num = min(min_num, ss_min_num + 1)
 
     memo[start] = num_ways, longest, min_num
     return memo[start]
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

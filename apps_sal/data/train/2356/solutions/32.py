@@ -3,10 +3,13 @@ input = sys.stdin.readline
 
 sys.setrecursionlimit(10000)
 
+
 def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
-mod=998244353
+
+
+mod = 998244353
 
 """
 K個の1を用意して，これらを適当な個数に分割していくことを考える．
@@ -30,33 +33,31 @@ dp[i][j]=dp[i][2j]+dp[i-1][j-1]
 """
 
 
-N,K=MI()
-if N==K:
+N, K = MI()
+if N == K:
     print((1))
     return
 
-if K>N:
+if K > N:
     print((0))
     return
-    
-M=max(N,K)
-dp=[[0]*(M+1) for _ in range(N+1)]
+
+M = max(N, K)
+dp = [[0] * (M + 1) for _ in range(N + 1)]
 # dp[i][j]はi個でjを作る
 
-for i in range(1,M+1):
-    dp[i][i]=1
+for i in range(1, M + 1):
+    dp[i][i] = 1
 
-for i in range(1,N+1):
-    for j in range(i-1,0,-1):
-        dp[i][j]=dp[i-1][j-1]
-        if 2*j<=M:
-            dp[i][j]+=dp[i][2*j]
-        dp[i][j]%=mod
+for i in range(1, N + 1):
+    for j in range(i - 1, 0, -1):
+        dp[i][j] = dp[i - 1][j - 1]
+        if 2 * j <= M:
+            dp[i][j] += dp[i][2 * j]
+        dp[i][j] %= mod
 
 
 print((dp[N][K]))
-        
+
 # for i in range(N+1):
 #     print(dp[i])
-    
-

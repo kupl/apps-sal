@@ -1,6 +1,7 @@
 ORDERS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 RESULTS = ['Let us play again.', 'The first card won.', 'The second card won.', 'Someone cheats.']
 
+
 def f(c1, c2, trump):
     if c1 == c2:
         return -1

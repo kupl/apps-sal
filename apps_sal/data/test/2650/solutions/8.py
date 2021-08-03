@@ -3,7 +3,7 @@ import heapq
 #getIntList = list(map(int, input.split()))
 #getFloatList = list(map(float, input.split()))
 
-MAXEN = 2*(10**5) + 5
+MAXEN = 2 * (10**5) + 5
 N, Q = list(map(int, input().split()))
 kid = [0]
 en = [0]
@@ -15,7 +15,7 @@ for i in range(N):
     a, b = list(map(int, input().split()))
     kid.append(a)
     en.append(b)
-    #push to heap
+    # push to heap
     heapq.heappush(entop[b], -a)
 
 for e in range(MAXEN):
@@ -53,24 +53,27 @@ def updateEn(enID):
         else:
             break
 
-#query
+
+# query
 for q in range(Q):
     c, d = list(map(int, input().split()))
     old_en = en[c]
     new_en = d
     en[c] = new_en
 
-    #add to rmvlist
+    # add to rmvlist
     heapq.heappush(rmvlist[old_en], -kid[c])
-    #add to addlist
+    # add to addlist
     heapq.heappush(addlist[new_en], -kid[c])
 
     if len(entop[old_en]) > 0:
         entop_old0 = entop[old_en][0]
-    else: entop_old0 = 0
+    else:
+        entop_old0 = 0
     if len(entop[new_en]) > 0:
         entop_new0 = entop[new_en][0]
-    else: entop_new0 = 0
+    else:
+        entop_new0 = 0
 
     updateEn(new_en)
     updateEn(old_en)
@@ -96,19 +99,25 @@ for q in range(Q):
 
     if len(entop[old_en]) > 0:
         entop_old1 = entop[old_en][0]
-    else: entop_old1 = 0
-    if entop_old0 != entop_old1:#changed?
-        if entop_old0 != 0: heapq.heappush(rmvAllList, -entop_old0)
-        if entop_old1 != 0: heapq.heappush(addAllList, -entop_old1)
+    else:
+        entop_old1 = 0
+    if entop_old0 != entop_old1:  # changed?
+        if entop_old0 != 0:
+            heapq.heappush(rmvAllList, -entop_old0)
+        if entop_old1 != 0:
+            heapq.heappush(addAllList, -entop_old1)
 
     if len(entop[new_en]) > 0:
         entop_new1 = entop[new_en][0]
-    else: entop_new1 = 0
-    if entop_new0 != entop_new1:#changed?
-        if entop_new0 != 0: heapq.heappush(rmvAllList, -entop_new0)
-        if entop_new1 != 0: heapq.heappush(addAllList, -entop_new1)
+    else:
+        entop_new1 = 0
+    if entop_new0 != entop_new1:  # changed?
+        if entop_new0 != 0:
+            heapq.heappush(rmvAllList, -entop_new0)
+        if entop_new1 != 0:
+            heapq.heappush(addAllList, -entop_new1)
 
-    #is it smaller than top of alltop?
+    # is it smaller than top of alltop?
     while len(addAllList) > 0:
         add_top = addAllList[0]
         if (len(alltop) == 0) or (add_top < alltop[0]) or (len(rmvAllList) > 0):
@@ -117,7 +126,7 @@ for q in range(Q):
         else:
             break
 
-    #is it top of alltop?
+    # is it top of alltop?
     while len(rmvAllList) > 0:
         rmvTopV = rmvAllList[0]
         if rmvTopV == alltop[0]:
@@ -127,5 +136,3 @@ for q in range(Q):
             break
 
     print((alltop[0]))
-
-

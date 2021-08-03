@@ -18,7 +18,7 @@ def search(x, K, Q, A):
     if len(cand) < Q:
         return - 1
     else:
-        return sorted(cand)[Q-1]
+        return sorted(cand)[Q - 1]
 
 
 def main():
@@ -40,4 +40,6 @@ def main():
 
 def __starting_point():
     print(main())
+
+
 __starting_point()

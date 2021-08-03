@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 
 bal = 0
-arr = [0]*(n + 1)
+arr = [0] * (n + 1)
 lastseen = {0: 0}
 
 arr[0] = 0

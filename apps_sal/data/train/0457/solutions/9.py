@@ -10,6 +10,6 @@ class Solution:
             for c in coins:
                 new_amount = head - c
                 if new_amount > -1 and new_amount not in seen:
-                    queue.append((new_amount, res+1))
+                    queue.append((new_amount, res + 1))
                     seen.add(new_amount)
         return -1

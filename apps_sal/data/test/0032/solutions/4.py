@@ -19,8 +19,9 @@ def main():
             return
     print('YES' if h == 0 else 'NO')
 
- 
+
 def __starting_point():
     main()
+
 
 __starting_point()

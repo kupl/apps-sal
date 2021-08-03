@@ -1,5 +1,7 @@
 import sys
-MIN_INT = -sys.maxsize-1
+MIN_INT = -sys.maxsize - 1
+
+
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         _max = MIN_INT
@@ -11,30 +13,31 @@ class Solution:
         i = 0
         for i in range(len(customers)):
             total += customers[i]
-            rotate = i+1
+            rotate = i + 1
             if total >= 4:
                 num += 4
                 total -= 4
-            else: 
+            else:
                 num += total
                 total = 0
             money = num * boardingCost - rotate * runningCost
             if _max < money:
                 _max = money
                 ans = rotate
-        i+=1
+        i += 1
         while(total > 0):
-            rotate = i+1
+            rotate = i + 1
             if total >= 4:
                 num += 4
                 total -= 4
-            else: 
+            else:
                 num += total
                 total = 0
             money = num * boardingCost - rotate * runningCost
             if _max < money:
                 _max = money
                 ans = rotate
-            i+=1
-        if _max < 0: return -1
+            i += 1
+        if _max < 0:
+            return -1
         return ans

@@ -1,5 +1,5 @@
-n=int(input())
-a=list(map(lambda x: int(x), input().split()))
+n = int(input())
+a = list(map(lambda x: int(x), input().split()))
 
 
 def CeilIndex(A, l, r, key):
@@ -44,4 +44,6 @@ def LongestIncreasingSubsequenceLength(A, size):
             tailTable[CeilIndex(tailTable, -1, len - 1, A[i])] = A[i]
 
     return len
-print(LongestIncreasingSubsequenceLength(a,len(a)))
+
+
+print(LongestIncreasingSubsequenceLength(a, len(a)))

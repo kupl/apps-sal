@@ -27,4 +27,3 @@ for i in range(2, m + 1):
     tmp = tmp + cnt[i - 1] - s[i - 1]
     ans = min(ans, tmp)
 print(ans)
-

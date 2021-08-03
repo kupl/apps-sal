@@ -4,4 +4,3 @@ def is_divide_by(number, a, b):
     else:
         ok = False
     return ok
-

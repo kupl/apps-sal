@@ -8,7 +8,8 @@ def evil_code_medal(user_time, gold, silver, bronze):
         return "Bronze"
     else:
         return "None"
-        
+
+
 def time_to_seconds(time):
     hours, minutes, seconds = time.split(':')
-    return 3600 * int(hours) + 60 * int(minutes) + int(seconds)        
+    return 3600 * int(hours) + 60 * int(minutes) + int(seconds)

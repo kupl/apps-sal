@@ -10,4 +10,3 @@ for i in range(n):
     ans = max(ans, score * min(1, score % 10))
 
 print(ans)
-

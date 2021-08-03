@@ -10,7 +10,7 @@ if x < 0:
             print((-x))
         else:
             print((x + d))
-            
+
 else:
     if x - k * d > 0:
         print((x - k * d))
@@ -21,4 +21,3 @@ else:
             print(x)
         else:
             print((d - x))
-

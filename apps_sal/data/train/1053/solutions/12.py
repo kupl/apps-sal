@@ -1,7 +1,7 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for i in range(t):
-    n=int(input())
-    x=list(map(int,input().split()))
+    n = int(input())
+    x = list(map(int, input().split()))
     x.sort()
     print(x.index(1))

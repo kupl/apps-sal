@@ -1,14 +1,17 @@
 k = int(input())
-def gcd1 (a, b):
+
+
+def gcd1(a, b):
     while True:
         if (a < b):
             a, b = b, a
-        c = a%b
+        c = a % b
         if (c == 0):
             return (b)
         else:
             a = b
             b = c
+
 
 count = 0
 for i in range(k):
@@ -22,4 +25,3 @@ for i in range(k):
                 count = count + tmp2
 
 print(count)
-

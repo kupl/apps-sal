@@ -4,13 +4,12 @@ class Solution:
         # 400 down, P = 500, p = 0
         # use 200, P = 300, p = 1
         # use 300, P = 0, p = 2
-
         '''
         sort tokens
         play smallest tokens until you can't anymore
         turn over largest tokens until you can play smaller tokens again
         '''
-        
+
         tokens.sort()
         maxPoints = 0
         points = 0
@@ -24,10 +23,10 @@ class Solution:
             else:
                 if points > 0:
                     P += tokens[right]
-                    
+
                     points -= 1
                     right -= 1
                 else:
                     break
-        
+
         return max(maxPoints, points)

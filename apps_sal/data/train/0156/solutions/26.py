@@ -1,6 +1,7 @@
 class Solution:
     def shortestCommonSupersequence(self, s1: str, s2: str) -> str:
         m = {}
+
         def fs(a, b):
             if (a, b) in list(m.keys()):
                 return m[(a, b)]
@@ -32,6 +33,3 @@ class Solution:
             res += a
         res += s1[i:] + s2[j:]
         return res
-        
-        
-

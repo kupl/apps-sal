@@ -9,8 +9,8 @@ def unbalancing(s):
         retvalue = min(retvalue, x)
     return retvalue
 
+
 for _ in range(int(input())):
     n = int(input())
     s = input()
     print(-unbalancing(s))
-

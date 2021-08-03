@@ -8,4 +8,6 @@ def registration():
         print("Yes")
         return
     print("No")
+
+
 registration()

@@ -1,4 +1,4 @@
-n = int( input() )
+n = int(input())
 s = input()
 d = 0
 l = []
@@ -8,7 +8,6 @@ for c in s:
         d ^= 1
     else:
         d ^= 1
-        l.append( d )
+        l.append(d)
 
-print( "".join( [ str(i) for i in l ]))
-
+print("".join([str(i) for i in l]))

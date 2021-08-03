@@ -3,4 +3,3 @@ def isDigit(string):
         return type(int(float(string))) == int
     except Exception:
         return False
-

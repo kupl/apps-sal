@@ -1,2 +1,1 @@
-next_higher = lambda x : x + (x & -x) | (x ^ x + (x & -x)) // (x & -x) >> 2 
-
+def next_higher(x): return x + (x & -x) | (x ^ x + (x & -x)) // (x & -x) >> 2

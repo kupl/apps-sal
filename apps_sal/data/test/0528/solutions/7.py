@@ -9,6 +9,7 @@ def read():
         graph[b].add(b)
     return (graph, n)
 
+
 def main():
     graph, n = read()
     seen = set()
@@ -19,10 +20,12 @@ def main():
             seen |= graph[i]
     return True
 
+
 def __starting_point():
     if main():
         print('YES')
     else:
         print('NO')
+
 
 __starting_point()

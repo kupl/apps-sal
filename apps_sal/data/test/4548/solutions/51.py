@@ -11,4 +11,4 @@ for i in a:
     elif i < x:
         l += 1
 
-print(min(l,r))
+print(min(l, r))

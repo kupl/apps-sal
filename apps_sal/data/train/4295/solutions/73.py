@@ -1,4 +1,4 @@
-def balanced_num(number : int):
+def balanced_num(number: int):
     if len(str(number)) < 3:
         return "Balanced"
     elif len(str(number)) % 2 == 1:
@@ -10,9 +10,7 @@ def balanced_num(number : int):
         res1 += int(i)
     for i in str2:
         res2 += int(i)
-    print((str1,"<->",str2))
+    print((str1, "<->", str2))
     if res1 == res2:
         return "Balanced"
     return "Not Balanced"
-
-

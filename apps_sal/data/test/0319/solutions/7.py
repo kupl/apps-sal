@@ -1,6 +1,7 @@
 arr = []
 freq = {}
 
+
 def exclude(i, n, m):
     s = arr[i]
     for j in range(m):
@@ -8,6 +9,7 @@ def exclude(i, n, m):
             if freq[j] <= 1:
                 return False
     return True
+
 
 n, m = list(map(int, input().split()))
 

@@ -24,7 +24,7 @@ def solve(pairs, n):
         if a == c or b == d:
             return -1
         else:
-            return abs(a-c) * abs(b-d)
+            return abs(a - c) * abs(b - d)
     elif n >= 3:
         xmin = min(x for (x, _) in pairs)
         xmax = max(x for (x, _) in pairs)
@@ -48,5 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

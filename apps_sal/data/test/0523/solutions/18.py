@@ -25,5 +25,3 @@ for i in range(l // 2):
     ans += pairs[l // 2 + i]
 print(len(ans))
 print(ans)
-
-

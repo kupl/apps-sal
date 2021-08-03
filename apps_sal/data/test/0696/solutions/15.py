@@ -14,5 +14,5 @@ def f(p):
             ans += 1
     return ans
 
-print(f(int(input())))
 
+print(f(int(input())))

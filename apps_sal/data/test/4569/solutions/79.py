@@ -1,6 +1,6 @@
 
-s=input()
-if s=='Sunny':
+s = input()
+if s == 'Sunny':
     print('Cloudy')
 elif s == 'Cloudy':
     print('Rainy')

@@ -7,4 +7,3 @@ while i <= n:
     i *= 2
     t *= 2
 print(a)
-

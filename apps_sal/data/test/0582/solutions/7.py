@@ -1,17 +1,15 @@
+from heapq import heapify, heappop, heappush
+import collections
 n = int(input())
 a = [int(i) for i in input().split(' ')]
 t = [int(i) for i in input().split(' ')]
 
-import collections
-from heapq import heapify, heappop, heappush
-
 
 l = collections.defaultdict(list)
 at = [[a[i], t[i]] for i in range(n)]
-at.sort(key = lambda x: x[0])
+at.sort(key=lambda x: x[0])
 for aa, tt in at:
     l[aa].append(tt)
-
 
 
 # print(at)
@@ -38,7 +36,7 @@ while q:
         while tmp and ((q and idx + 1 != q[-1]) or not q):
             # print(i, idx, q, tmp)
             p = -heappop(tmp)
-            res += sums - p # leave the one with max time and increase all other by 1, cost their time
+            res += sums - p  # leave the one with max time and increase all other by 1, cost their time
             sums -= p
             idx += 1
         if tmp:
@@ -49,15 +47,8 @@ while q:
             # print(res, p)
             # l[idx+1].extend(tmp)
             if not q:
-                q.append(idx+1)
+                q.append(idx + 1)
 print(res)
-
-
-
-
-
-
-
 
 
 # import sys
@@ -130,4 +121,3 @@ print(res)
 #     print(ans)
 #
 # main()
-

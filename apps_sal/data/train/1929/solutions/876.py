@@ -9,7 +9,7 @@ class StreamChecker:
                 if c not in t:
                     t[c] = {}
                 t = t[c]
-            t['*'] = '*'        
+            t['*'] = '*'
 
     def query(self, letter: str) -> bool:
         new_ptr = self.trie
@@ -29,4 +29,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

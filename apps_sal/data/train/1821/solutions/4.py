@@ -3,8 +3,8 @@ class Solution:
         if len(nums) <= 1:
             return nums
         n = len(nums)
-        left = self.sortArray(nums[:n//2])
-        right = self.sortArray(nums[n//2:])
+        left = self.sortArray(nums[:n // 2])
+        right = self.sortArray(nums[n // 2:])
         n_left = len(left)
         n_right = len(right)
         combine = []
@@ -23,4 +23,3 @@ class Solution:
                 combine += right
                 n_right = 0
         return combine
-

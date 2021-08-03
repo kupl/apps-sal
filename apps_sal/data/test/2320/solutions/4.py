@@ -1,20 +1,23 @@
 from collections import Counter
-def cal(n,s,t):
-    if(Counter(s)!=Counter(t)):
+
+
+def cal(n, s, t):
+    if(Counter(s) != Counter(t)):
         return -1
-    ans=0
+    ans = 0
     for i in range(n):
-        k=0
-        for j in range(i,n):
-            while k<n and s[k] != t[j]:
-                k+=1
-            if k==n:
+        k = 0
+        for j in range(i, n):
+            while k < n and s[k] != t[j]:
+                k += 1
+            if k == n:
                 break
-            k+=1
-            ans=max(ans,j-i+1)
-    return n-ans
+            k += 1
+            ans = max(ans, j - i + 1)
+    return n - ans
+
 
 for _ in range(int(input())):
-    n=int(input())
-    s,t=input(),input()
-    print(cal(n,s,t))
+    n = int(input())
+    s, t = input(), input()
+    print(cal(n, s, t))

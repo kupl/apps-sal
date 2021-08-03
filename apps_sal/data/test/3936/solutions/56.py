@@ -14,10 +14,10 @@ def solve():
     s1 = input()
     s2 = input()
     P = []
-    modulo = 10**9+7
+    modulo = 10**9 + 7
     H, V = 0, 1
     for i in range(N):
-        if i > 0 and s2[i] == s2[i-1]:
+        if i > 0 and s2[i] == s2[i - 1]:
             P[-1] = H
         else:
             P.append(V)
@@ -36,19 +36,20 @@ def solve():
             1*dp[i-1]    P[i]=V&P[i-1]=V
     """
     for i in range(1, len(P)):
-        if P[i] == H and P[i-1] == H:
-            dp.append(3*dp[i-1])
-        elif P[i] == H and P[i-1] == V:
-            dp.append(2*dp[i-1])
-        elif P[i] == V and P[i-1] == V:
-            dp.append(2*dp[i-1])
+        if P[i] == H and P[i - 1] == H:
+            dp.append(3 * dp[i - 1])
+        elif P[i] == H and P[i - 1] == V:
+            dp.append(2 * dp[i - 1])
+        elif P[i] == V and P[i - 1] == V:
+            dp.append(2 * dp[i - 1])
         else:
-            dp.append(dp[i-1])
+            dp.append(dp[i - 1])
         dp[-1] %= modulo
     return dp[-1]
 
 
 def __starting_point():
     print((solve()))
+
 
 __starting_point()

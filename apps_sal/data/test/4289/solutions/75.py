@@ -6,7 +6,7 @@ result = [int(N) for N in input().split()]
 
 list = []
 for num in range(N):
-    list.append(abs(T-0.006*result[num]-A))
+    list.append(abs(T - 0.006 * result[num] - A))
 
 m = np.argmin(list) + 1
 

@@ -37,8 +37,10 @@ for k in range(-9, 10):
                 if i == 9 - j + k:
                     s += field[i][j]
     diags.append(s)
+
+
 def answer(a):
-    patterns = ['.XXXX','X.XXX','XX.XX','XXX.X','XXXX.']
+    patterns = ['.XXXX', 'X.XXX', 'XX.XX', 'XXX.X', 'XXXX.']
     for elem in a:
         if len(elem) >= 5:
             for k in range(5):
@@ -50,6 +52,7 @@ def answer(a):
                     if flag:
                         return True
     return False
+
 
 a = rows + columns + maindiags + diags
 print('YES' if answer(a) else 'NO')

@@ -57,13 +57,13 @@ def resolve():
         Target = AB[:]
         Target.pop(i)
 
-        G = [[i+1, 0] for i in range(N)]
+        G = [[i + 1, 0] for i in range(N)]
         for ab in Target:
             a, b = ab
-            G[a-1][1] += 1
-            G[b-1][1] += 1
-            G[a-1].append(b)
-            G[b-1].append(a)
+            G[a - 1][1] += 1
+            G[b - 1][1] += 1
+            G[a - 1].append(b)
+            G[b - 1].append(a)
 
         F = [False] * N
         Q = deque()
@@ -72,14 +72,14 @@ def resolve():
 
         while Q:
             p = Q.pop()
-            if G[p-1][1] == 0:
+            if G[p - 1][1] == 0:
                 continue
 
-            for np in G[p-1][2:]:
-                if F[np-1]:
+            for np in G[p - 1][2:]:
+                if F[np - 1]:
                     continue
                 Q.append(np)
-                F[np-1] = True
+                F[np - 1] = True
 
         for f in F:
             if f == False:
@@ -92,5 +92,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

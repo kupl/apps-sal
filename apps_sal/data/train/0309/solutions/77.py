@@ -1,7 +1,7 @@
 class Solution:
     def longestArithSeqLength(self, A):
         dp = dict()
-        for endi, endv in enumerate(A[1:], start = 1):
+        for endi, endv in enumerate(A[1:], start=1):
             for starti, startv in enumerate(A[:endi]):
                 diff = endv - startv
                 if (starti, diff) in dp:
@@ -9,6 +9,3 @@ class Solution:
                 else:
                     dp[(endi, diff)] = 2
         return max(dp.values())
-        
-
-

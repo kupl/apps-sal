@@ -16,4 +16,3 @@ for k in qq:
 
 for k in q:
     print(ans[k])
-

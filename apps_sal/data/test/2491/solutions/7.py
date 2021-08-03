@@ -51,4 +51,3 @@ if N - 1 in negative_loops:
     print('inf')
 else:
     print((-bf.cost[-1]))
-

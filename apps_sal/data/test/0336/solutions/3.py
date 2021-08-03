@@ -7,5 +7,3 @@ for x1 in range(1, n + 1):
     if 1 <= x2 <= n and 1 <= x4 <= n and 1 <= x5 <= n:
         ans += 1
 print(ans * n)
-    
-

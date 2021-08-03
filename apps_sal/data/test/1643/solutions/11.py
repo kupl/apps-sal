@@ -6,4 +6,3 @@ for c in input()[::-1]:
     else:
         ans += '0'
 print(ans[::-1])
-

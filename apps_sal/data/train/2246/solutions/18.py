@@ -17,5 +17,3 @@ for i, p in enumerate(arr):
         res += heappop(cur)
         k += a
 print(res)
-
-

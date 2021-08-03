@@ -15,4 +15,3 @@ while len(line) != 0:
         line.pop(idx)
 
 print(ans)
-

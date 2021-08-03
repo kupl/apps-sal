@@ -2,7 +2,7 @@ class Solution:
     def minOperationsMaxProfit(self, customers, boardingCost, runningCost):
         if 4 * boardingCost - runningCost <= 0:
             return -1
-        
+
         n = len(customers)
         wait = 0
         now_profit = 0

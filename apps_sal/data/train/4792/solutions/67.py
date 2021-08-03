@@ -3,4 +3,3 @@ def parse_float(x):
         return float(x)
     except:
         None
-

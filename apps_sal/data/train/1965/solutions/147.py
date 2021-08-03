@@ -1,7 +1,8 @@
 class Solution:
     def num_components(self, n, edges):
-        parents = [0 for _ in range(n+1)]
+        parents = [0 for _ in range(n + 1)]
         components = n
+
         def root(u):
             if parents[u] == 0:
                 return u
@@ -16,7 +17,7 @@ class Solution:
                 components -= 1
                 parents[a] = b
         return components
-    
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         A = [edge[1:] for edge in edges if edge[0] == 1]
         B = [edge[1:] for edge in edges if edge[0] == 2]

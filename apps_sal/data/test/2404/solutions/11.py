@@ -33,4 +33,3 @@ p = getFactorization(x)
 for i in sorted(p):
     print(i, end="")
 print()
-

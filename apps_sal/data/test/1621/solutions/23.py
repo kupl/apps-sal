@@ -5,4 +5,3 @@ for i in range(l + k):
     sum += (w[ord(s[i]) - ord('a')] if i < l else m) * (i + 1)
 
 print(sum)
-

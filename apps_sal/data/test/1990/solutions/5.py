@@ -6,6 +6,9 @@
 # https://codeforces.com/blog/entry/18051
 # Min = minimum prefix sum instead of minimum value
 
+from sys import stdin
+
+
 class SegmentTree:
     def __init__(self, n, arr=[]):
         self.n = n
@@ -14,28 +17,29 @@ class SegmentTree:
         self.tmax = [0] * (2 * n)
         if arr:
             for i in range(len(arr)):
-                self.tsum[n + i] = arr[i];
-            for i in range(len(arr) - 1, 0, -1) :
-                self.tsum[i] = self.tsum[i<<1] + self.tsum[i<<1|1];
+                self.tsum[n + i] = arr[i]
+            for i in range(len(arr) - 1, 0, -1):
+                self.tsum[i] = self.tsum[i << 1] + self.tsum[i << 1 | 1]
 
     def update(self, p, val):
-        p += self.n;
-        self.tsum[p] = val;
-        self.tmin[p] = val;
-        self.tmax[p] = val;
+        p += self.n
+        self.tsum[p] = val
+        self.tmin[p] = val
+        self.tmax[p] = val
 
-        i = p;
+        i = p
         while i > 1:
-            par = i>>1 # parent
-            if i & 1: # i is a right child (odd index)
-                self.tsum[par] = self.tsum[i] + self.tsum[i^1];
-                self.tmin[par] = min(self.tmin[i^1], self.tmin[i] + self.tsum[i^1]) # i^1 = other child of i's parent
-                self.tmax[par] = max(self.tmax[i^1], self.tmax[i] + self.tsum[i^1])
-            else: # i is a left child
-                self.tsum[par] = self.tsum[i] + self.tsum[i^1];
-                self.tmin[par] = min(self.tmin[i], self.tmin[i^1] + self.tsum[i])
-                self.tmax[par] = max(self.tmax[i], self.tmax[i^1] + self.tsum[i])
-            i >>= 1;
+            par = i >> 1  # parent
+            if i & 1:  # i is a right child (odd index)
+                self.tsum[par] = self.tsum[i] + self.tsum[i ^ 1]
+                self.tmin[par] = min(self.tmin[i ^ 1], self.tmin[i] + self.tsum[i ^ 1])  # i^1 = other child of i's parent
+                self.tmax[par] = max(self.tmax[i ^ 1], self.tmax[i] + self.tsum[i ^ 1])
+            else:  # i is a left child
+                self.tsum[par] = self.tsum[i] + self.tsum[i ^ 1]
+                self.tmin[par] = min(self.tmin[i], self.tmin[i ^ 1] + self.tsum[i])
+                self.tmax[par] = max(self.tmax[i], self.tmax[i ^ 1] + self.tsum[i])
+            i >>= 1
+
 
 '''
 int query(int l, int r) {  // sum on interval [l, r)
@@ -57,10 +61,10 @@ st = SegmentTree(n, array)
 st.update(0, 2)
 '''
 
-from sys import stdin
-import math
+
 def input():
     return stdin.readline()[:-1]
+
 
 n = int(input())
 s = input()
@@ -95,5 +99,3 @@ for c in s:
         output.append(-1)
 
 print(' '.join(map(str, output)))
-
-

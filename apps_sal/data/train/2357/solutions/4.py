@@ -4,8 +4,8 @@ N, M, *A = [int(_) for _ in open(0).read().split()]
 
 class Factorial:
     def __init__(self, max_fact, mod):
-        #mod should be prime number
-        #using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
+        # mod should be prime number
+        # using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
         f = [1] * (max_fact + 1)
         for idx in range(2, max_fact + 1):
             f[idx] = f[idx - 1] * idx
@@ -103,4 +103,3 @@ ans(4, 6, 5) = C[10, 1]
 
 ans(N, M, sum(A)) = C[N + M, M - sum(A)]
 '''
-

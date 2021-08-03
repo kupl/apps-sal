@@ -5,4 +5,3 @@ def seven(m):
         lastdig = next % 10
         steps += 1
     return (next, steps)
-

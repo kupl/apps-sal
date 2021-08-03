@@ -12,11 +12,11 @@ class Solution:
                     bigger_than_zero += 1
                     temp = bin(nums[i])
             counter += temp_counter
-            if bigger_than_zero == 0 :
+            if bigger_than_zero == 0:
                 return counter
 
             counter += 1
-            
+
             for i in range(len(nums)):
                 nums[i] //= 2
         return counter

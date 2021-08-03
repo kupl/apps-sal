@@ -1,10 +1,10 @@
 n = input()
 a = list(map(int, input().split()))
 
-def solve(a):
-    flags = [0]* len(a)
-    rec_flags = [0]* len(a)
 
+def solve(a):
+    flags = [0] * len(a)
+    rec_flags = [0] * len(a)
 
     max1 = 0
     max2 = 0
@@ -25,10 +25,7 @@ def solve(a):
             flags[id_max1] += 1
             max2 = a[i]
 
-
     tar = max(flags)
-
-
 
     ans = []
     ans_no_rec = []
@@ -46,5 +43,6 @@ def solve(a):
     if ans_no_rec:
         return min(ans_no_rec)
     return min(ans)
-    
+
+
 print(solve(a))

@@ -4,7 +4,7 @@ b = list(map(int, input().split()))
 
 c = list()
 for i in range(n):
-    c.append((i, b[i]-a[i]))
+    c.append((i, b[i] - a[i]))
 c.sort(key=lambda x: x[1])
 c = c[::-1]
 

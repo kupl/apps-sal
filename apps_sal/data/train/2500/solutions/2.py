@@ -3,11 +3,11 @@ class Solution:
 
         count = 0
         new_count = 0
-        for i,char in enumerate(s):
+        for i, char in enumerate(s):
 
             print(char)
             try:
-                if s[i+1] == char:
+                if s[i + 1] == char:
                     new_count += 1
                 else:
                     print('afwww')
@@ -22,5 +22,4 @@ class Solution:
                     new_count = 0
                 break
 
-        return count+1
-
+        return count + 1

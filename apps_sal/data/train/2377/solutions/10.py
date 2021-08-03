@@ -9,7 +9,7 @@ for _ in range(int(input())):
     ng = [n for _ in range(n)]
     for i in range(n):
         lo = 0
-        hi = len(values)-1
+        hi = len(values) - 1
         while lo < hi:
             mid = (lo + hi) // 2
             if values[mid] < a[i]:
@@ -17,7 +17,7 @@ for _ in range(int(input())):
             else:
                 hi = mid
         if lo != len(values) - 1:
-            ng[i] = indexOf[values[lo+1]]
+            ng[i] = indexOf[values[lo + 1]]
     ans = n
     for i in range(n):
         if visited[i]:
@@ -33,4 +33,3 @@ for _ in range(int(input())):
                 at = n
         ans = min(ans, tempAns)
     print(ans)
-

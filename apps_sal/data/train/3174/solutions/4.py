@@ -1,5 +1,6 @@
 import re
 
+
 def derivative(eq):
     monos = re.findall(r'([+-]?)(\d*)x\^?(\d*)', eq)
     result = ''

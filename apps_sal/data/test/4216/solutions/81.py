@@ -9,7 +9,7 @@ import math
 
 N = int(input())
 R = int(math.sqrt(N))
-for i in range(R,0,-1):
-    if N%i == 0:
-        print(len(str(N//i)))
+for i in range(R, 0, -1):
+    if N % i == 0:
+        print(len(str(N // i)))
         break

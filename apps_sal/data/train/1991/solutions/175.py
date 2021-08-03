@@ -1,6 +1,6 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        fuelReduce = lambda x, y: abs(x - y)
+        def fuelReduce(x, y): return abs(x - y)
 
         @lru_cache(None)
         def dfs(city, fuel):
@@ -14,5 +14,3 @@ class Solution:
                     ans = ans + dfs(next, fuel - fuelReduce(locations[city], locations[next]))
             return ans
         return dfs(start, fuel) % (10 ** 9 + 7)
-
-

@@ -13,4 +13,3 @@ class Solution:
                     divide += 1
             divide_count = max(divide_count, divide)
         return delete_count + divide_count
-

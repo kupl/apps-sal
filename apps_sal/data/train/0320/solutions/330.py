@@ -11,5 +11,4 @@ class Solution:
             if set(nums) != set([0]):
                 nums = list([x // 2 for x in nums])
                 ops += 1
-        return ops                    
-
+        return ops

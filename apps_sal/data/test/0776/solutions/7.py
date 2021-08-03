@@ -3,11 +3,11 @@ m = int(input())
 usbMice = []
 ps2Mice = []
 for i in range(m):
-	price, mouseType = input().split()
-	if mouseType == 'USB':
-		usbMice.append(int(price))
-	else:
-		ps2Mice.append(int(price))
+    price, mouseType = input().split()
+    if mouseType == 'USB':
+        usbMice.append(int(price))
+    else:
+        ps2Mice.append(int(price))
 
 usbMice.sort()
 ps2Mice.sort()

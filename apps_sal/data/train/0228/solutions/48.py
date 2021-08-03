@@ -7,7 +7,7 @@ class Solution:
             if j >= k:
                 cnt -= (s[i] in 'aeiou')
                 i += 1
-            
+
             if j >= k - 1:
                 ans = max(ans, cnt)
         return ans

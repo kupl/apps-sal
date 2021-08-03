@@ -10,7 +10,7 @@ for i in range(8):
         return
     else:
         A.add((x, y))
-    
+
     if x in X:
         X[x] += 1
     else:
@@ -30,4 +30,3 @@ if len(X) == 3 and len(Y) == 3 and X[0][1] == 3 and X[1][1] == 2 and X[2][1] == 
     print('respectable')
 else:
     print('ugly')
-

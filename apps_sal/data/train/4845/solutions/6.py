@@ -1,6 +1,6 @@
 def fl(l):
     for x in l:
-        if isinstance(x,list):
+        if isinstance(x, list):
             for j in fl(x):
                 yield j
         else:
@@ -10,6 +10,6 @@ def fl(l):
 def sort_nested_list(a):
     numbers = iter(sorted(fl(a)))
 
-    def b(n,a):
-        return [next(n)if isinstance(c,int)else b(n,c)for c in a]
-    return b(numbers,a)
+    def b(n, a):
+        return [next(n)if isinstance(c, int)else b(n, c)for c in a]
+    return b(numbers, a)

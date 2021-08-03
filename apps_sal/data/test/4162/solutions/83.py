@@ -1,4 +1,4 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
-print(sum(A)-len(A))
+print(sum(A) - len(A))

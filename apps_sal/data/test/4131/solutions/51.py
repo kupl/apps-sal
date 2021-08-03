@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
-#= int(input())
-#= input()
+# = int(input())
+# = input()
 N, M = map(int, input().split())
 PY = [list(map(int, input().split())) for _ in range(M)]
 

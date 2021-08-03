@@ -4,7 +4,7 @@ class Solution:
         if n == 1:
             return 0
         res = 0
-        curr = 0 
+        curr = 0
         dis = [float('inf')] * n
         explored = set()
 
@@ -21,4 +21,3 @@ class Solution:
             res += delta
 
         return res
-

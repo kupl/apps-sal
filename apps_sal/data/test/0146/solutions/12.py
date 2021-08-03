@@ -28,7 +28,9 @@ def main():
             max_diff = diff
     print(max_diff)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

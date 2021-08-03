@@ -6,9 +6,8 @@ for _ in range(int(input())):
     l.append(tuple(s))
 
 c = Counter(l)
-t=0
+t = 0
 for v in list(c.values()):
-    if v==1:
-        t+=1
+    if v == 1:
+        t += 1
 print(t)
-

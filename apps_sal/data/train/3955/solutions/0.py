@@ -11,4 +11,3 @@ def bracket_pairs(string):
             brackets[open_brackets.pop()] = i
 
     return False if open_brackets else brackets
-

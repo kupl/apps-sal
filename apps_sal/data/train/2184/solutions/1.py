@@ -23,9 +23,7 @@ while counter < n:
             involved.add(tpl[counter])
             right_bound = max(right_bound, dic[tpl[counter]])
         counter += 1
-    
-    
+
     temp = tuple(amt[x] for x in involved)
     ans += sum(temp) - max(temp)
 print(ans)
-

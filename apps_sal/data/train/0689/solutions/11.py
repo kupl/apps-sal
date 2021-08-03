@@ -10,4 +10,3 @@ for j in lst:
             print('YES')
             return
 print('NO')
-

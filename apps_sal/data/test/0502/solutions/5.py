@@ -4,7 +4,7 @@ uy = cy - by
 vx = bx - ax
 vy = by - ay
 
-if uy*vx == vy*ux or ux**2 + uy**2 != vx**2 + vy**2:
-	print("No") 
+if uy * vx == vy * ux or ux**2 + uy**2 != vx**2 + vy**2:
+    print("No")
 else:
-	print("Yes")
+    print("Yes")

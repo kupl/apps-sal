@@ -1,18 +1,17 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        l,r = 1, position[-1]
+        l, r = 1, position[-1]
         while l < r:
-            mid = ( r + l +1  ) //2 
+            mid = (r + l + 1) // 2
             cnter = 0
-            lst = - (2*mid)
+            lst = - (2 * mid)
             for i in position:
-                if i - lst >=  mid:
+                if i - lst >= mid:
                     cnter += 1
-                    lst = i 
+                    lst = i
             if cnter >= m:
                 l = mid
             else:
-                r = mid -1
+                r = mid - 1
         return l
-

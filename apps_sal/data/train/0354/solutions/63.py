@@ -12,7 +12,7 @@ class Solution:
         #
         # Time: O(NM) where N is length of sequence, M is max repeat
 
-        memo = [[0] * 6 for _ in range(n)] # memo[n][x] number of sequences of length n ending at x
+        memo = [[0] * 6 for _ in range(n)]  # memo[n][x] number of sequences of length n ending at x
         # General cases:
         for i in range(n):
             for x in range(6):
@@ -26,7 +26,7 @@ class Solution:
 
                     # Sequence with length j ending at non-x
                     for y in range(6):
-                        if y != x: memo[i][x] += memo[j][y]
+                        if y != x:
+                            memo[i][x] += memo[j][y]
 
         return sum(memo[-1]) % (10 ** 9 + 7)
-

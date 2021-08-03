@@ -32,4 +32,3 @@ for x, i in l:
         s.append(i)
         d[i] = True
 print('YES')
-

@@ -12,4 +12,3 @@ for i in range(n - 1, -1, -1):
     else:
         r = 0
 print(s)
-

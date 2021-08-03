@@ -5,7 +5,7 @@ import sys
 def solve(N: int, K: int, x: "List[int]"):
     res = 0
     for x_ in x:
-        res += 2*min(x_, abs(K-x_))
+        res += 2 * min(x_, abs(K - x_))
     print(res)
     return
 
@@ -22,7 +22,9 @@ def main():
     x = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(N, K, x)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

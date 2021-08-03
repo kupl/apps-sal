@@ -1,4 +1,6 @@
-from collections import Counter 
+from collections import Counter
+
+
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         counter = collections.Counter(arr)
@@ -8,7 +10,5 @@ class Solution:
                     del counter[i]
                     k -= j
                 else:
-                    break    
+                    break
         return len(counter)
-            
-

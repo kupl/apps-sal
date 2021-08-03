@@ -25,4 +25,3 @@ def is_prime(n):
         if n % prime == 0:
             return False
     return True
-

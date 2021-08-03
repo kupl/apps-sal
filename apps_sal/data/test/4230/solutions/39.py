@@ -1,12 +1,12 @@
-#C問題
+# C問題
 
-#ループ処理をスキップするコード→break,continue,return(関数方式)
+# ループ処理をスキップするコード→break,continue,return(関数方式)
 x, n = map(int, input().split())
 P = list(map(int, input().split()))
-xm = x 
+xm = x
 xM = x
 
-for i in range(0,100):
+for i in range(0, 100):
     if n == 0:
         print(x)
         break

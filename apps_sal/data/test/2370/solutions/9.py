@@ -23,4 +23,3 @@ if impossible.sum():
     print((-1))
 else:
     print((int(A[~useless].sum() // 2)))
-

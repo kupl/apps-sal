@@ -1,22 +1,25 @@
-import sys
-s2nn = lambda s: [int(c) for c in s.split(' ')]
-ss2nn = lambda ss: [int(s) for s in ss]
-ss2nnn = lambda ss: [s2nn(s) for s in ss]
-i2s = lambda: sys.stdin.readline().rstrip()
-i2n = lambda: int(i2s())
-i2nn = lambda: s2nn(i2s())
-ii2ss = lambda n: [sys.stdin.readline().rstrip() for _ in range(n)]
-ii2sss = lambda n: [list(sys.stdin.readline().rstrip()) for _ in range(n)]
-ii2nn = lambda n: ss2nn(ii2ss(n))
-ii2nnn = lambda n: ss2nnn(ii2ss(n))
-from collections import deque  # 双方向キュー
-from collections import defaultdict  # 初期化済み辞書
-from heapq import heapify, heappush, heappop, heappushpop  # プライオリティキュー
 from bisect import bisect_left, bisect_right  # 二分探索
+from heapq import heapify, heappush, heappop, heappushpop  # プライオリティキュー
+from collections import defaultdict  # 初期化済み辞書
+from collections import deque  # 双方向キュー
+import sys
+def s2nn(s): return [int(c) for c in s.split(' ')]
+def ss2nn(ss): return [int(s) for s in ss]
+def ss2nnn(ss): return [s2nn(s) for s in ss]
+def i2s(): return sys.stdin.readline().rstrip()
+def i2n(): return int(i2s())
+def i2nn(): return s2nn(i2s())
+def ii2ss(n): return [sys.stdin.readline().rstrip() for _ in range(n)]
+def ii2sss(n): return [list(sys.stdin.readline().rstrip()) for _ in range(n)]
+def ii2nn(n): return ss2nn(ii2ss(n))
+def ii2nnn(n): return ss2nnn(ii2ss(n))
+
+
 sys.setrecursionlimit(int(1e+6))
 MOD = int(1e+9) + 7
-#import numpy as np  # 1.8.2
-#import scipy  # 0.13.3
+# import numpy as np  # 1.8.2
+# import scipy  # 0.13.3
+
 
 def main():
     N, K = i2nn()
@@ -29,7 +32,7 @@ def main():
         print(n)
         return
 
-    Ap = [ n for n in A if n >= 0]
+    Ap = [n for n in A if n >= 0]
     An = [-n for n in A if n < 0]
     Ap.sort()
     Ap.reverse()
@@ -70,8 +73,8 @@ def main():
             n = (n * Ap[i]) % MOD
             i += 1
         else:
-            np = Ap[i] * Ap[i+1]
-            nn = An[j] * An[j+1]
+            np = Ap[i] * Ap[i + 1]
+            nn = An[j] * An[j + 1]
             if np >= nn:
                 n = (n * np) % MOD
                 i += 2
@@ -81,5 +84,5 @@ def main():
         k -= 2
     print(n)
 
-main()
 
+main()

@@ -11,5 +11,3 @@ for edge in edges[:n]:
     d[a[0]] = d[a[2]] + 1
 
 print(max(d.values()))
-
-

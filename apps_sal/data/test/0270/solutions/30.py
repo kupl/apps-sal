@@ -33,4 +33,3 @@ for v in reversed(list(range(1, N))):
         s = dp[graph[v], v].sum() - dp[graph[v], v].max()
         dp[v, v] = s / (len(graph[v]) - 1) + 1
 print((dp[1].min()))
-

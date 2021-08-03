@@ -31,15 +31,13 @@ while i < n and j < m:
     while j < m and second[j] <= t:
         j += 1
         penalty[1] += 1
-    if 3*n - penalty[0] - 3*m + penalty[1] > d:
+    if 3 * n - penalty[0] - 3 * m + penalty[1] > d:
         a = 3 * n - penalty[0]
         b = 3 * m - penalty[1]
-        d = 3*n - penalty[0] - 3*m + penalty[1]
+        d = 3 * n - penalty[0] - 3 * m + penalty[1]
 
 if 2 * n - 2 * m > d:
     a = 2 * n
     b = 2 * m
 
-print(str(a)+":"+str(b))
-
-
+print(str(a) + ":" + str(b))

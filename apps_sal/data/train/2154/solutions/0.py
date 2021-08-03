@@ -10,5 +10,5 @@ while i < 1001:
     else:
         t = [0] + [(j * t[j] + (k - j + 1) * t[j - 1]) / k for j in range(1, k + 1)]
         n += 1
-for i in range(q): print(d[int(input())])
-
+for i in range(q):
+    print(d[int(input())])

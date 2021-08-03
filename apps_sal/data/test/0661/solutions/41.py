@@ -1,5 +1,5 @@
 import sys
-M, K = map(int,input().split())
+M, K = map(int, input().split())
 if M == 0:
     if K == 0:
         print(*[0, 0])
@@ -28,7 +28,7 @@ for i in range(N):
 
 ans.append(K)
 
-for i in range(N-1,-1,-1):
+for i in range(N - 1, -1, -1):
     if i != K:
         ans.append(i)
 

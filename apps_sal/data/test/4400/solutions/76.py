@@ -3,11 +3,11 @@ counts = []
 count = 0
 
 for i in range(3):
-  if input_data[i] == "R":
-    count += 1
-  else:
-    counts.append(count)
-    count = 0
+    if input_data[i] == "R":
+        count += 1
+    else:
+        counts.append(count)
+        count = 0
 
 counts.append(count)
 

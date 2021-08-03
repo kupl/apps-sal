@@ -1,7 +1,7 @@
 
+import math
 url = "https://atcoder.jp//contests/abc142/tasks/abc142_d"
 
-import math
 
 def prime_factorize(n):
     a = []
@@ -19,13 +19,16 @@ def prime_factorize(n):
         a.append(n)
     return a
 
+
 def main():
     a, b = list(map(int, input().split()))
     abgcd = math.gcd(a, b)
     s = set(prime_factorize(abgcd))
-    print((len(s)+1))
+    print((len(s) + 1))
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

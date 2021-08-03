@@ -1,14 +1,13 @@
-3
-
-import array
-import bisect
-import collections
-from fractions import Fraction
-import functools
-import itertools
-import math
-import os
 import sys
+import os
+import math
+import itertools
+import functools
+from fractions import Fraction
+import collections
+import bisect
+import array
+3
 
 
 def main():
@@ -60,5 +59,6 @@ def dprint(*value, sep=' ', end='\n'):
 
 def __starting_point():
     main()
+
 
 __starting_point()

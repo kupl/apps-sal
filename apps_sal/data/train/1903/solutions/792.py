@@ -2,10 +2,12 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         parents = [i for i in range(n)]
+
         def dist(k, l):
             kx, ky = points[k]
             lx, ly = points[l]
             return abs(kx - lx) + abs(ky - ly)
+
         def getroot(node):
             while parents[node] != node:
                 node = parents[node]

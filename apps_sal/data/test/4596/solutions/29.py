@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 x = 0
 t = True
 while t:
@@ -8,4 +8,4 @@ while t:
             t = False
         a[i] /= 2
     x += 1
-print(x-1)
+print(x - 1)

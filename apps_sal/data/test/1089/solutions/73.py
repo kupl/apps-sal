@@ -7,6 +7,7 @@ def xgcd(a, b):
         y0, y1 = y1, y0 - q * y1
     return x0
 
+
 def modinv(a, m):
     x = xgcd(a, m)
     return x % m
@@ -23,13 +24,12 @@ for d in range(1, m):
     res += (m - d) * d * n * n
     res %= max_num
 
-r = min(n*m-2, k-2)
-for i in range(1, r+1):
+r = min(n * m - 2, k - 2)
+for i in range(1, r + 1):
     res *= n * m - 1 - i
     res %= max_num
-for i in range(1, r+1):
+for i in range(1, r + 1):
     res *= modinv(i, max_num)
     res %= max_num
 
 print(res)
-

@@ -10,6 +10,5 @@ def stringy(size):
         cnt += 1
         if cnt == size:
             break
-        
-    
+
     return ''.join(arr)

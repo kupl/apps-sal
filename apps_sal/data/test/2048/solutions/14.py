@@ -1,4 +1,4 @@
-#R=lambda:list(map(int,input().split()))
+# R=lambda:list(map(int,input().split()))
 """
 R=lambda:[int(i)for i in input().split()]
 I=3*10**8
@@ -9,10 +9,12 @@ s[i]<s[j]])+min([I]+[c[i] for i in range(j+1,n)if
 s[i]>s[j]])for j in range(n))
 print((r,-1)[r>I])
 """
-R=lambda:[int(i)for i in input().split()]
-I=10**9
-n=int(input())
-s,c=R(),R()
+def R(): return [int(i)for i in input().split()]
+
+
+I = 10**9
+n = int(input())
+s, c = R(), R()
 r = I
 for j in range(n):
     t1 = I
@@ -28,4 +30,3 @@ if r < I:
     print(r)
 else:
     print("-1")
-

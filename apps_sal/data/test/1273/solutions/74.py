@@ -3,12 +3,14 @@ sys.setrecursionlimit(10**9)
 input = sys.stdin.readline
 
 n = int(input())
-edge = [[] for _ in [0]*n]
+edge = [[] for _ in [0] * n]
 for i in range(~-n):
     a, b = map(int, input().split())
-    a -= 1;b -= 1
+    a -= 1
+    b -= 1
     edge[a] += [[b, i]]
 ans = [0] * ~-n
+
 
 def dfs(now, color):
     count = 1
@@ -19,6 +21,7 @@ def dfs(now, color):
         ans[i] = count
         dfs(to, count)
         count += 1
+
 
 # 開始根は0番目に
 dfs(0, 0)

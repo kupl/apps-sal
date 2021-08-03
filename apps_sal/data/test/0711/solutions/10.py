@@ -6,12 +6,15 @@ def prime_factorization(n):
 
     """
     from math import sqrt
-    if (n == 0): return []
-    if (n == 1): return [(1, 1)]
+    if (n == 0):
+        return []
+    if (n == 1):
+        return [(1, 1)]
 
     res = []
     for i in range(2, int(sqrt(n)) + 1):
-        if n == 1: break
+        if n == 1:
+            break
         cnt = 0
         while n % i == 0:
             cnt += 1
@@ -75,4 +78,3 @@ for cnt in primes:
     ans = ans * mf.nCm(cnt + N - 1, N - 1)
     ans = ans % MOD
 print(ans)
-

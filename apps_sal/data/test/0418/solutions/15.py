@@ -9,4 +9,3 @@ for _ in range(n):
         break
 else:
     print('NO')
-

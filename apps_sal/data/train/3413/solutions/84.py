@@ -1,7 +1,9 @@
 import pandas as pd
+
+
 def solution(nums):
     df = pd.DataFrame()
-    df['S']=nums
+    df['S'] = nums
     answer = list(df['S'].sort_values().values)
-    print (list(answer))
+    print(list(answer))
     return answer

@@ -6,4 +6,3 @@ for i in a:
     cnt[i] += 1
 
 print("Bob" if cnt[min(a)] > (n >> 1) else "Alice")
-

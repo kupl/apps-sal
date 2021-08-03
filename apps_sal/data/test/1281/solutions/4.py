@@ -14,4 +14,3 @@ for k, v in list(d.items()):
     c2 = v - c1
     ans += c1 * (c1 - 1) // 2 + c2 * (c2 - 1) // 2
 print(n * (n - 1) // 2 + n - ans)
-

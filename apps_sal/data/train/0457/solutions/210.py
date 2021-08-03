@@ -3,16 +3,14 @@ class Solution:
         self.coins = coins
         self.amount = amount
         self.cache = {}
-        
+
         # Run
         res = self.getValue(self.amount)
         if res is None:
             return -1
         else:
             return res
-        
-        
-        
+
     def getValue(self, amount):
         if amount in self.cache:
             return self.cache[amount]
@@ -31,4 +29,3 @@ class Solution:
                     min_count = count + 1
         self.cache[amount] = min_count
         return min_count
-

@@ -17,6 +17,4 @@ for j in range(c):
             y -= 1
             break
 
-print(x*c+r*y-x*y)
-
-
+print(x * c + r * y - x * y)

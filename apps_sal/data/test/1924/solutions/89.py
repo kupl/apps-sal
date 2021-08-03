@@ -45,4 +45,3 @@ answer = comb(r2 + c2 + 2, r2 + 1) - comb(r1 + c2 + 1, r1) - \
     comb(c1 + r2 + 1, c1) + comb(r1 + c1, r1)
 answer %= MOD
 print(answer)
-

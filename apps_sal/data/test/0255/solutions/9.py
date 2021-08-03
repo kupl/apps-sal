@@ -13,7 +13,3 @@ for i in range(n):
             na[i] = -100500
 
 print(ans)
-
-
-
-

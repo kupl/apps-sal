@@ -20,13 +20,11 @@ else:
         if a[i] == 0:
             i += 1
         else:
-            ans.append((l+1, i))
+            ans.append((l + 1, i))
             l = i
             i += 1
     if l < len(a):
-        ans.append((l+1, i))
+        ans.append((l + 1, i))
     print(len(ans))
     for i in ans:
-        print(i[0],i[1])
-
-
+        print(i[0], i[1])

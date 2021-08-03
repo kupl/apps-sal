@@ -10,4 +10,3 @@ def arithmetic(a, b, operator):
         break
     else:
         return a / b
-

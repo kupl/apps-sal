@@ -4,11 +4,9 @@ class Solution:
         res = 0
         for num in target:
             if num > stack[-1]:
-                res += num-stack[-1]
-            elif num<stack[-1]:
-                while stack[-1]>num:
+                res += num - stack[-1]
+            elif num < stack[-1]:
+                while stack[-1] > num:
                     stack.pop()
             stack.append(num)
         return res
-            
-

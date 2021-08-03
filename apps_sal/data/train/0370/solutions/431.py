@@ -3,12 +3,12 @@ class DS:
         self.p = list(range(N))
         self.size = [1] * N
         self.max = 1
-    
+
     def find(self, node: int) -> int:
         if self.p[node] != node:
             self.p[node] = self.find(self.p[node])
         return self.p[node]
-    
+
     def union(self, x: int, y: int) -> None:
         px, py = self.find(x), self.find(y)
         if px != py:
@@ -40,4 +40,3 @@ class Solution:
             else:
                 factor_index[num] = idx
         return UF.max
-

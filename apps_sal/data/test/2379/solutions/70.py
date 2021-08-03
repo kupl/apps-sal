@@ -1,14 +1,14 @@
 from collections import deque
 import copy
 
-N, K, C = list(map(int,input().split()))
+N, K, C = list(map(int, input().split()))
 S = input().split()[0]
 TW = 0
 q = []
 
 for s in range(len(S)):
     if S[s] == 'o':
-        q.append(s+1)
+        q.append(s + 1)
 
 WD = []
 LD = 0
@@ -19,7 +19,7 @@ for s in q:
     if LD == 0:
         WD.append(s)
         LD = s
-    elif s-LD <= C:
+    elif s - LD <= C:
         continue
     else:
         WD.append(s)
@@ -44,7 +44,5 @@ for s in q:
 
 
 for d in range(len(WD)):
-    if WD[d] == WDR[len(WD)-d-1]:
+    if WD[d] == WDR[len(WD) - d - 1]:
         print((WD[d]))
-
-

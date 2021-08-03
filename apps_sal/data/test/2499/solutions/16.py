@@ -21,7 +21,8 @@ for digit in range(60, -1, -1):
         continue
 
     for i in range(n):
-        if i == rank: continue
+        if i == rank:
+            continue
         if A[i] & check_bit:
             A[i] ^= A[rank]
 
@@ -31,5 +32,4 @@ ans = 0
 for i in range(rank):
     ans ^= A[i]
 
-print((ans*2 + not_important))
-
+print((ans * 2 + not_important))

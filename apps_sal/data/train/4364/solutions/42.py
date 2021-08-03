@@ -7,5 +7,3 @@ def odd_or_even(arr):
     if add % 2 == 0:
         return "even"
     return "odd"
-
-

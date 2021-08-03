@@ -1,22 +1,27 @@
 from sys import stdin
-input=stdin.readline
-R=lambda:map(int,input().split())
-I=lambda:int(input())
-n=I();v=[1]*n
-a=list(R());d={}
-for i,j in enumerate(sorted(a)):d[j]=i
-ans=[]
+input = stdin.readline
+def R(): return map(int, input().split())
+def I(): return int(input())
+
+
+n = I()
+v = [1] * n
+a = list(R())
+d = {}
+for i, j in enumerate(sorted(a)):
+    d[j] = i
+ans = []
 for i in a:
-	p=d[i]
-	if v[p]:
-		l=0
-		ans+=[],
-		while v[p]:
-			ans[-1]+=p+1,
-			v[p]=0
-			p=d[a[p]]
-			l+=1
-		ans[-1]+=l,
+    p = d[i]
+    if v[p]:
+        l = 0
+        ans += [],
+        while v[p]:
+            ans[-1] += p + 1,
+            v[p] = 0
+            p = d[a[p]]
+            l += 1
+        ans[-1] += l,
 print(len(ans))
 for i in ans:
-	print(i[-1],*i[:i[-1]])
+    print(i[-1], *i[:i[-1]])

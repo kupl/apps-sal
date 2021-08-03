@@ -6,4 +6,3 @@ for kkk in range(t):
     for i in range(1, 10):
         ans += (nn - (1 if int(str(i) * nn) > n else 0))
     print(ans)
-

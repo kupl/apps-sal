@@ -14,7 +14,7 @@
 
 # if not isprime(n):
 #     for i in range(2, int(n**0.5)+1):
-#         if isprime(i) and n%i==0:    
+#         if isprime(i) and n%i==0:
 #             FOUND = i
 #             break
 #     # print (FOUND)
@@ -32,19 +32,18 @@ n = int(input())
 
 check = 0
 
-for i in range(2,int(n**0.5)+1):
-    if n%i==0:
-        #khong phai snt
+for i in range(2, int(n**0.5) + 1):
+    if n % i == 0:
+        # khong phai snt
         check = 1
-        while n%i==0:
+        while n % i == 0:
             n /= i
         if n == 1:
-            print (i)
+            print(i)
             break
         else:
             print(1)
             break
 
 if check == 0:
-    print (n)
-
+    print(n)

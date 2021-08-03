@@ -8,4 +8,3 @@ if (0 <= A & A <= 23) & (0 <= B & B <= 23):
         print((0))
     else:
         print((A + B))
-

@@ -1,1 +1,1 @@
-goals = lambda l, co, ch : l + co + ch
+def goals(l, co, ch): return l + co + ch

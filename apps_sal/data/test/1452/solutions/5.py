@@ -10,8 +10,4 @@ for i in range(H):
             return
         if R[i] < j and C[j] < i:
             ans += 1
-print(pow(2, ans, 10**9+7))
-
-
-
-
+print(pow(2, ans, 10**9 + 7))

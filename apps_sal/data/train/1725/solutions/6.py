@@ -1,5 +1,6 @@
 MODULUS = 12345787
 
+
 def circular_limited_sums(max_n, max_fn):
     # Your Code Here
     total = 0
@@ -10,6 +11,6 @@ def circular_limited_sums(max_n, max_fn):
             new_counts = {}
             for v in range(max_fn + 1):
                 new_counts[v] = sum(counts[v_prev] for v_prev in range(max_fn - v + 1)) % MODULUS
-            counts = new_counts              
+            counts = new_counts
         total += sum(counts[v] for v in range(max_fn - initial + 1)) % MODULUS
     return total % MODULUS

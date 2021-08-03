@@ -7,7 +7,7 @@ class Solution:
             maxTwos = max(maxTwos, twos)
             totalOnes += ones
         return totalOnes + maxTwos
-    
+
     def getCount(self, num):
         twos = 0
         ones = 0
@@ -16,5 +16,3 @@ class Solution:
             num //= 2
             twos += 1
         return twos, ones + num
-    
-

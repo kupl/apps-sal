@@ -8,8 +8,7 @@ def row_weights(array):
         if e == len(array):
             break
         else:
-            team2.append(array[e+1])
+            team2.append(array[e + 1])
             team1.append(array[e])
             e += 2
     return sum(team1), sum(team2)
-

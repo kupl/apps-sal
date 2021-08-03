@@ -1,2 +1,2 @@
-def args_count(*args,**kwrags):
-    return len(args)+len(kwrags)
+def args_count(*args, **kwrags):
+    return len(args) + len(kwrags)

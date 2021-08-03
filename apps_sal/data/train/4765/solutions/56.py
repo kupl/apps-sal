@@ -4,4 +4,4 @@ class Hero(object):
         self.experience = 0
         self.health = 100
         self.position = "00"
-        self.damage = 5       
+        self.damage = 5

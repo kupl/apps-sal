@@ -7,10 +7,10 @@ def check(s):
             return False
     return True
 
+
 n = int(input())
 s = input()
 if check(s):
     print('Yes')
 else:
     print('No')
-

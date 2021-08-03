@@ -36,4 +36,3 @@ for q in range(t):
         print(''.join(aaa))
     else:
         print('NO')
-

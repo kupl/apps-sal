@@ -1,8 +1,10 @@
 import heapq
 from collections import defaultdict
+
+
 class Solution:
     def findTheCity(self, n: int, edges, distanceThreshold: int) -> int:
-        matrix = [[float('inf')]*n for _ in range(n)]
+        matrix = [[float('inf')] * n for _ in range(n)]
         graph = defaultdict(list)
         for s, e, d in edges:
             matrix[s][e] = d
@@ -13,7 +15,7 @@ class Solution:
         # print(matrix)
 
         def dijkstra(source):
-            dist = [float('inf')]*n
+            dist = [float('inf')] * n
             dist[source] = 0
             pq = [(0, source)]
             heapq.heapify(pq)
@@ -38,4 +40,3 @@ class Solution:
                 counts = tmp
                 res = i
         return res
-

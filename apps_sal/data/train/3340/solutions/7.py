@@ -35,6 +35,7 @@ def sharkovsky(a, b):
         else:
             return False
 
+
 def get_highest_power_of_two_divisible_by_number(number):
     twos = []
     while number % 2 == 0:
@@ -43,6 +44,7 @@ def get_highest_power_of_two_divisible_by_number(number):
     result = 2 ** len(twos)
     return result
 
+
 def is_power_of_two(number):
     twos = []
     while number % 2 == 0:
@@ -50,6 +52,7 @@ def is_power_of_two(number):
         number //= 2
     twos = remove_duplicates(twos)
     return twos == [2]
+
 
 def remove_duplicates(lst):
     result = []

@@ -14,4 +14,3 @@ for i in range(n):
     ans += count_2(a[i], 0)
 
 print(ans)
-

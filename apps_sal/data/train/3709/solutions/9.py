@@ -1,1 +1,1 @@
-simple_multiplication = lambda n: n*(8+(n&1))
+def simple_multiplication(n): return n * (8 + (n & 1))

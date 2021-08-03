@@ -3,7 +3,7 @@ class Solution:
         # dp[i][k] = longestArithSeqLength(A[:i+1]) with step size k
         dp = []
         res = 0
-    
+
         for i in range(len(A)):
             step2len = defaultdict(int)
             dp.append(step2len)
@@ -12,5 +12,5 @@ class Solution:
                 prev_step = dp[prev_i][step]
                 dp[i][step] = prev_step + 1
                 res = max(res, dp[i][step])
-        
+
         return res + 1

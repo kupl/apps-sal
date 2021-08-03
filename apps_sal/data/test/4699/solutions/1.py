@@ -20,4 +20,5 @@ def __starting_point():
     a = np.fromstring(read(), dtype=np.int32, sep=' ')
     main(n, k, a)
 
+
 __starting_point()

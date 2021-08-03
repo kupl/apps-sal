@@ -9,7 +9,7 @@ def get_order(order):
             str = ""
     for word in lst:
         lst2.append(word.capitalize())
-    for counter in range(0,8):
+    for counter in range(0, 8):
         for word in lst2:
             if word == Menu[counter]:
                 result.append(word)

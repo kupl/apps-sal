@@ -9,7 +9,7 @@ class Solution:
         #         sorted_by_m.append(curr)
         #     else:
         #         sorted_by_m = [curr]
-        
+
         sort.reverse()
         sorted_by_m = sorted(sort, key=lambda x: abs(x - m), reverse=True)
         print(m, sorted_by_m)

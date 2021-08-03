@@ -1,5 +1,5 @@
 n = int(input())
-ai = list(map(int,input().split()))
+ai = list(map(int, input().split()))
 num = sum(ai)
 if n == 1:
     if num == 1:
@@ -11,5 +11,3 @@ else:
         print("YES")
     else:
         print("NO")
-    
-

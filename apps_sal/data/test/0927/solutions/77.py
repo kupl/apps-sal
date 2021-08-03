@@ -3,6 +3,7 @@ input = sys.stdin.readline
 INF = float("inf")
 # 解説参照
 
+
 def main():
     n, m = list(map(int, input().split()))
     a = list(map(int, input().split()))
@@ -34,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

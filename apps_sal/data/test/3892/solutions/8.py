@@ -9,12 +9,12 @@ r = input().split()
 n = int(r[0])
 m = int(r[1])
 ar = [[] for i in range(n)]
-#print(ar)
+# print(ar)
 for i in range(m):
-   r = input().split()
-   a = int(r[0]) 
-   b = int(r[1])
-   ar[a - 1].append(b - 1)
+    r = input().split()
+    a = int(r[0])
+    b = int(r[1])
+    ar[a - 1].append(b - 1)
 #   print(ar)
 train = []
 result = []
@@ -30,7 +30,7 @@ for i in range(n):
                 time[j][k] = arr[j][k] - j
             else:
                 time[j][k] = n - 1 - j + arr[j][k] + 1
-#print(time)                
+# print(time)
     while (count != 0) or (len(train) != 0):
         if len(arr[ind]) != 0:
             train.append(arr[ind][time[ind].index(max(time[ind]))])
@@ -41,29 +41,23 @@ for i in range(n):
 #        print(arr)
 #        print(time)
             count -= 1
-#    print(train)    
+#    print(train)
         while train.count(ind) != 0:
             train.remove(ind)
 #        print(train)
         ind += 1
-        if ind == len(arr): 
+        if ind == len(arr):
             ind = 0
         res += 1
-    result.append(res - 1)    
+    result.append(res - 1)
 #    print(ind)
-#    print(res) 
+#    print(res)
 print(' '.join(map(str, result)))
-#print(ind)
-    
+# print(ind)
 
 
-# 
+#
 
-# ## 
+# ##
 
 # In[ ]:
-
-
-
-
-

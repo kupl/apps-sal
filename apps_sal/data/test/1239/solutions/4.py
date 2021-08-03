@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n = int(input())
     a = sorted([int(i) for i in input().split()])
@@ -23,6 +24,9 @@ def debug(x, table):
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

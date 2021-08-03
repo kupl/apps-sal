@@ -1,14 +1,14 @@
-n,k = map(int, input().split())
+n, k = map(int, input().split())
 
-m,M = 0,0
+m, M = 0, 0
 
 if n > k > 0:
-  m = 1
+    m = 1
 
-K = (n+2)//3
+K = (n + 2) // 3
 if k < K:
-  M = k*2
+    M = k * 2
 else:
-  M = n - k
+    M = n - k
 
-print(m,M)
+print(m, M)

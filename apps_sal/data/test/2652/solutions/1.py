@@ -9,6 +9,7 @@ input = sys.stdin.readline
 sys.setrecursionlimit(1000000)
 mod = 10 ** 9 + 7
 
+
 def read_values(): return list(map(int, input().split()))
 def read_index(): return [int(x) - 1 for x in input().split()]
 def read_list(): return list(read_values())
@@ -20,12 +21,12 @@ class UF:
         self.state = [-1] * N
         self.rank = [0] * N
         self.num_group = N
-    
+
     def get_parent(self, a):
         p = self.state[a]
         if p < 0:
             return a
-        
+
         q = self.get_parent(p)
         self.state[a] = q
         return q
@@ -46,7 +47,7 @@ class UF:
         self.state[pa] = pb
         self.state[a] = pb
         self.num_group -= 1
-    
+
     def is_pair(self, a, b):
         return self.get_parent(a) == self.get_parent(b)
 
@@ -62,7 +63,7 @@ def main():
         a, b = read_values()
         X.append((a, i))
         Y.append((b, i))
-    
+
     X.sort()
     Y.sort()
 

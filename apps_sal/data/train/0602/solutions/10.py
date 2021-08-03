@@ -9,8 +9,8 @@ for ele in s_arr:
         res = ele
     elif len(res) == len(ele):
         res = min(res, ele)
-    
-print(res, end = " ")
+
+print(res, end=" ")
 for ele in s_arr:
-    print(ele, end = " ")
-    print(res, end = " ")
+    print(ele, end=" ")
+    print(res, end=" ")

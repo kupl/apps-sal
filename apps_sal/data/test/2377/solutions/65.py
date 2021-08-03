@@ -23,4 +23,3 @@ else:
             print(cnt)
             return
     print((math.ceil(cnt + (H - damage_sum) / swing[0])))
-

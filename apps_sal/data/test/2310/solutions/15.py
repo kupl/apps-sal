@@ -3,9 +3,6 @@ def ris():
     return list(map(int, input().split()))
 
 
-
-
-
 def testCase():
 
     m, k = ris()
@@ -55,9 +52,6 @@ def testCase():
     print("".join(list(['Y' if a[x] - q <= 0 or x in tmp else 'N' for x in range(len(a))])))
 
 
-
-
-
 for i in range(int(input())):
 
     input()
@@ -65,7 +59,4 @@ for i in range(int(input())):
     testCase()
 
 
-
-
 # Made By Mostafa_Khaled
-

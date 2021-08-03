@@ -17,4 +17,3 @@ for k in range(m, 0, -1):
             print(k)
             return
 print(0)
-

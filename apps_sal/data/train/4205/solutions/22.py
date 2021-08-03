@@ -1,4 +1,4 @@
-def cannons_ready(gunners):    
+def cannons_ready(gunners):
     fire = True
     for gunner, response in gunners.items():
         if response == 'nay':

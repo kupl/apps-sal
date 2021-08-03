@@ -1,5 +1,6 @@
 max_cap = 7 + (10 ** 9)
 
+
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
         init_seq_len = len(nums)

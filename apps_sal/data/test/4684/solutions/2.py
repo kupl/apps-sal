@@ -10,4 +10,3 @@ if i % 4 == 0:
     result = 'YES'
 
 print(result)
-

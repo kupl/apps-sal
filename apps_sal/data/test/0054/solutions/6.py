@@ -10,12 +10,11 @@ else:
                 m -= st
             else:
                 if ((m + st) % (st * w) == 0):
-                    m += st  
+                    m += st
                 else:
                     print("NO")
                     f = 1
             if (m == 0):
                 print("YES")
-                f = 1                    
+                f = 1
         st *= w
-

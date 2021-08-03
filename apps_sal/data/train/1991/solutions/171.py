@@ -3,7 +3,7 @@ class Solution:
         n = len(locations)
         DP = [[-1 for j in range(fuel + 1)] for j in range(n)]
         return self.helper(locations, start, finish, DP, fuel) % (10 ** 9 + 7)
-        
+
     def helper(self, locations, curr, end, DP, fuel):
         if fuel < 0:
             return 0

@@ -1,1 +1,1 @@
-print(24-int(input()) + 24)
+print(24 - int(input()) + 24)

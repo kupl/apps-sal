@@ -17,4 +17,4 @@ else:
         s = s[:i] + s[j] + s[i:j] + s[j + 1:]
     print(len(a))
     for i in a:
-        print(i, end = ' ')
+        print(i, end=' ')

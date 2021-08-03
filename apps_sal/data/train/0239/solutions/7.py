@@ -3,9 +3,9 @@ class Solution:
         # Greedy search
         # 1. sorted each item based on used frequency
         # 2. loop through and items until bag full
-        
+
         items = sorted(list(zip(values, labels)), key=lambda x: -x[0])
-        
+
         res = 0
         freq = defaultdict(int)
         n = 0
@@ -14,11 +14,8 @@ class Solution:
                 freq[label] += 1
                 res += val
                 n += 1
-            
+
             if n == num_wanted:
                 break
-        
-        return res
-            
-            
 
+        return res

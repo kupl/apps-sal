@@ -33,16 +33,18 @@ class WeightedUnionFind():
 
     def diff(self, x, y):
         return self.weig(y) - self.weig(x)
-    
+
     def same(self, x, y):
         return self.find(x) == self.find(y)
+
 
 (n, m), *q = [[*map(int, o.split())] for o in open(0)]
 UF = WeightedUnionFind(n + 1)
 for l, r, d in q:
     if UF.same(l, r):
         if d != abs(UF.diff(l, r)):
-            print("No"); return
+            print("No")
+            return
     else:
         UF.union(l, r, d)
 print("Yes")

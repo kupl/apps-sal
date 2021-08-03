@@ -4,6 +4,5 @@ def pre_fizz(n):
     list = []
     while x <= i:
         list.append(x)
-        x = x+1
+        x = x + 1
     return list
-

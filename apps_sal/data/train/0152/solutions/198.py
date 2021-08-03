@@ -10,7 +10,8 @@ class Solution:
             while n:
                 while i < len(position) and position[i] - pre < dist:
                     i += 1
-                if i >= len(position): return False
+                if i >= len(position):
+                    return False
                 pre = position[i]
                 i += 1
                 n -= 1

@@ -12,4 +12,3 @@ else:
     else:
         xu = (a - b) / (2 * ku)
         print(min(xu, xd))
-

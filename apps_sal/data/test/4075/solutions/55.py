@@ -13,11 +13,10 @@ for i in range(2**n):
     for j in range(m):
         sw_cnt = 0
         for l in range(k[j]):
-            if (i >> (s[j][l]-1)) & 1:
+            if (i >> (s[j][l] - 1)) & 1:
                 sw_cnt += 1
         if sw_cnt % 2 == p[j]:
             ri_cnt += 1
     if ri_cnt == m:
         ans += 1
 print(ans)
-

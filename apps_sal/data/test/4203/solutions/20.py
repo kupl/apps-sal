@@ -1,8 +1,8 @@
 s = input()
 if s[0] == "A":
     cnt = 0
-    for i in range(2, len(s)-1):
-        if s[i]  == "C":
+    for i in range(2, len(s) - 1):
+        if s[i] == "C":
             cnt += 1
     if cnt == 1:
         s = list(s)

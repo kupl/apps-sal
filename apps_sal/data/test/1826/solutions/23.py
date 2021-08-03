@@ -10,4 +10,3 @@ while True:
     if not used:
         break
 print(len(s))
-

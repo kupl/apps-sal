@@ -6,7 +6,7 @@ for i in range(len(n) - 1):
     elif n[i] == 'n':
         pass
     else:
-        if n[i+1] == 'a' or n[i+1] == 'o' or n[i+1] == 'u' or n[i+1] == 'i' or n[i+1] == 'e':
+        if n[i + 1] == 'a' or n[i + 1] == 'o' or n[i + 1] == 'u' or n[i + 1] == 'i' or n[i + 1] == 'e':
             pass
         else:
             print('NO')

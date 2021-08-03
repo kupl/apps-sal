@@ -1,7 +1,7 @@
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
         arr.sort()
-        
+
         counts = []
         current_run = 1
         for i in range(1, len(arr)):

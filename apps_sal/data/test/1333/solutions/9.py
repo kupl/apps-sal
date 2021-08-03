@@ -5,10 +5,9 @@ while n:
         print('#' * m)
     else:
         if right:
-            print('.'*(m-1), '#', sep = "")
+            print('.' * (m - 1), '#', sep="")
             right = False
         else:
-            print('#', '.'*(m-1), sep = "")
+            print('#', '.' * (m - 1), sep="")
             right = True
     n -= 1
-

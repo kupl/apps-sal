@@ -18,7 +18,8 @@ phoenix : Use the colt
 witch : They are humans
 else : I have friggin no idea yet'''
 
-answers = {line.split(' : ')[0]:line.split(' : ')[1] for line in database.splitlines()}
+answers = {line.split(' : ')[0]: line.split(' : ')[1] for line in database.splitlines()}
+
 
 def bob(what):
-    return answers.get(what, answers['else'])+', idjits!'
+    return answers.get(what, answers['else']) + ', idjits!'

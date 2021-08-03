@@ -10,7 +10,7 @@ else:
     i = 0
     Ans = []
     while i < n and used + M[i][0] <= k:
-        Ans.append(M[i][1])        
+        Ans.append(M[i][1])
         used += M[i][0]
         i += 1
     print(len(Ans))

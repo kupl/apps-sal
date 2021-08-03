@@ -12,4 +12,3 @@ for i in range(-101, 102):
 
 
 print(ans)
-

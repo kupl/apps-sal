@@ -1,4 +1,4 @@
-a,p = map(int,input().split())
+a, p = map(int, input().split())
 
 m = a * 3 + p
 

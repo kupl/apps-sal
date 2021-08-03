@@ -1,85 +1,89 @@
 # cook your code here
 
 
-def checkRow(A,row,N,K):
+def checkRow(A, row, N, K):
     count = 0
-    move  = 0
+    move = 0
     for i in range(N):
-        if(A[row][i]=='.'):
-            move = move+1
-        if(not(A[row][i]=='O') and move<2):
-            count = count+1
+        if(A[row][i] == '.'):
+            move = move + 1
+        if(not(A[row][i] == 'O') and move < 2):
+            count = count + 1
         else:
             count = 0
-        if(count==K):
+        if(count == K):
             return 1
     return 0
-    
-def checkCol(A,col,N,K):
+
+
+def checkCol(A, col, N, K):
     count = 0
-    move  = 0
+    move = 0
     for i in range(N):
-        if(A[i][col]=='.'):
-            move = move+1
-        if(not(A[i][col]=='O') and move<2):
-            count = count+1
+        if(A[i][col] == '.'):
+            move = move + 1
+        if(not(A[i][col] == 'O') and move < 2):
+            count = count + 1
         else:
             count = 0
-        if(count==K):
+        if(count == K):
             return 1
-    return 0  
-    
-def checkDiag(A,row,col,N,K):
+    return 0
+
+
+def checkDiag(A, row, col, N, K):
     count = 0
-    move  = 0
-    
+    move = 0
+
     for i in range(K):
-        if(A[row+i][col+i]=='.'):
-            move = move+1
-        if(A[row+i][col+i]=='0' and move<=1):
+        if(A[row + i][col + i] == '.'):
+            move = move + 1
+        if(A[row + i][col + i] == '0' and move <= 1):
             return 0
-    
-    if(move<2):
+
+    if(move < 2):
         return 1
     return 0
-    
-def chck(A,N,K):
+
+
+def chck(A, N, K):
     flag = 0
-    
-    if(flag==0):
-        #row
+
+    if(flag == 0):
+        # row
         for i in range(N):
-            flag = checkRow(A,i,N,K)
-            if(flag==1):
+            flag = checkRow(A, i, N, K)
+            if(flag == 1):
                 break
-    
-    if(flag==0):
-        #col
+
+    if(flag == 0):
+        # col
         for j in range(N):
-            flag = checkCol(A,j,N,K)
-            if(flag==1):
+            flag = checkCol(A, j, N, K)
+            if(flag == 1):
                 break
-    
-    if(flag==0):
-        #diag
-        for i in range(N-K+1):
-            for j in range(N-K+1):
-                flag = checkDiag(A,i,j,N,K)
-                if(flag==1):
+
+    if(flag == 0):
+        # diag
+        for i in range(N - K + 1):
+            for j in range(N - K + 1):
+                flag = checkDiag(A, i, j, N, K)
+                if(flag == 1):
                     break
-            if(flag==1):
-                    break
-            
+            if(flag == 1):
+                break
+
     return flag
 
+
 for tests in range(eval(input())):
-    [N,K] = list(map(int,input().split()))
-    A = [""]*N
-    
+    [N, K] = list(map(int, input().split()))
+    A = [""] * N
+
     for i in range(N):
         A[i] = input()
-    
-    if(chck(A,N,K)==1):
+
+    if(chck(A, N, K) == 1):
         print("YES")
     else:
         print("NO")

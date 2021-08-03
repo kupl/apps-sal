@@ -7,17 +7,17 @@ Cv = list(map(int, input().split()))
 heapq.heapify(Av)
 heapq.heapify(Bv)
 heapq.heapify(Cv)
-for i in range(A-X):
+for i in range(A - X):
     heapq.heappop(Av)
-for i in range(B-Y):
+for i in range(B - Y):
     heapq.heappop(Bv)
-if C > X+Y:
-    for i in range(C-(X+Y)):
+if C > X + Y:
+    for i in range(C - (X + Y)):
         heapq.heappop(Cv)
-    NotTake = X+Y
+    NotTake = X + Y
 else:
     NotTake = C
-total = X+Y
+total = X + Y
 C = NotTake
 for _ in range(NotTake):
     Amin = heapq.heappop(Av)
@@ -37,7 +37,7 @@ for _ in range(NotTake):
         C -= 1
     if X == 0 or Y == 0 or C == 0:
         break
-NotTake = X+Y+C-total
+NotTake = X + Y + C - total
 if X == 0:
     Iv = Bv
     Jv = Cv
@@ -49,7 +49,7 @@ elif Y == 0:
     I = X
     J = C
 else:
-    print((sum(Av)+sum(Bv)+sum(Cv)))
+    print((sum(Av) + sum(Bv) + sum(Cv)))
     return
 
 for _ in range(NotTake):
@@ -64,5 +64,4 @@ for _ in range(NotTake):
     if J == 0 or I == 0:
         break
 
-print((sum(Av)+sum(Bv)+sum(Cv)))
-
+print((sum(Av) + sum(Bv) + sum(Cv)))

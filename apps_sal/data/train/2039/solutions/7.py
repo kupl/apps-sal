@@ -11,6 +11,7 @@ arr = list(map(int, input().split()))
 
 l, r = -1, m
 
+
 def check_v(v):
     M = 0
     for el in arr:
@@ -25,6 +26,7 @@ def check_v(v):
             else:
                 M = el
     return True
+
 
 while r - l > 1:
     mid = (l + r) // 2

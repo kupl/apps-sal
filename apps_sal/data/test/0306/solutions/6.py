@@ -14,4 +14,3 @@ def congr(a, b, p, x):
 
 a, b, p, x = [int(j) for j in input().split()]
 print(congr(a, b, p, x))
-

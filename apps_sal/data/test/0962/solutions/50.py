@@ -3,7 +3,7 @@ edges = [[] for _ in range(n)]
 
 for _ in range(m):
     a, b = list(map(int, input().split()))
-    edges[a-1].append(b-1)
+    edges[a - 1].append(b - 1)
 
 
 def get_first_cycle(n, edges):
@@ -48,7 +48,7 @@ while i < length:
         if to in nodes:
             update = True
             idx = cycle.index(to)
-            cycle = cycle[:i+1] + cycle[idx:]
+            cycle = cycle[:i + 1] + cycle[idx:]
             nodes = set(cycle)
             length = len(cycle)
             break
@@ -56,5 +56,4 @@ while i < length:
 
 print((len(cycle)))
 for node in cycle:
-    print((node+1))
-
+    print((node + 1))

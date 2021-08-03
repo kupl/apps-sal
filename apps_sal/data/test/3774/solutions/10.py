@@ -1,5 +1,6 @@
 n, m = [int(x) for x in input().split()]
 
+
 def cal(n, m):
     if n < m:
         n, m = m, n
@@ -28,5 +29,5 @@ def cal(n, m):
         }
         return dt.get((n, m), n * m % 2)
 
-print(n * m - cal(n, m))
 
+print(n * m - cal(n, m))

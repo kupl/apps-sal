@@ -4,9 +4,9 @@ def input(): return sys.stdin.readline().rstrip()
 
 
 def check(Elevator, takedown, left, right):  # 両開区間
-    aida = right-left+1
-    for i in range(2*left, 2*left+aida):
-        i, seti = i, i+aida
+    aida = right - left + 1
+    for i in range(2 * left, 2 * left + aida):
+        i, seti = i, i + aida
         if Elevator[i][0] != -1:
             iperson = Elevator[i][0]
             if Elevator[i][1] != 'A':
@@ -29,7 +29,7 @@ def check(Elevator, takedown, left, right):  # 両開区間
 
 def main():
     n = int(input())
-    Elevator = [[-1, -1] for i in range(2*n)]
+    Elevator = [[-1, -1] for i in range(2 * n)]
     takedown = [[-1, -1] for i in range(n)]
     for i in range(n):
         # print(Elevator)
@@ -52,19 +52,20 @@ def main():
             if a >= b:
                 print('No')
                 return
-    dp = [False]*(n+1)
+    dp = [False] * (n + 1)
     dp[-1] = True
     for i in range(n):
-        for j in range(i+1):
-            if dp[j-1]:
+        for j in range(i + 1):
+            if dp[j - 1]:
                 if check(Elevator, takedown, j, i):
                     dp[i] = True
                     break
-    #print(dp)
+    # print(dp)
     print(('Yes' if dp[-2] else 'No'))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

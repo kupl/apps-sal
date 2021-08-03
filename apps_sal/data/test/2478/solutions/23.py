@@ -14,6 +14,5 @@ for i in S:
     if l < r:
         L += '('
         l += 1
-R = ')'*(l-r)
-print((L+S+R))
-
+R = ')' * (l - r)
+print((L + S + R))

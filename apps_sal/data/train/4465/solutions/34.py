@@ -10,7 +10,5 @@ def super_size(n):
         y += str(k)
     y = int(y)
     return y
-    
-    
-    #your code here
 
+    # your code here

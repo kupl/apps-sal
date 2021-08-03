@@ -14,4 +14,3 @@ while len(a) != 1:
 
 i, c = a.popleft()
 print(i + 1)
-

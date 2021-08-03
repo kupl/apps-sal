@@ -3,6 +3,7 @@ requests = [int(x) for x in input().split()]
 
 req_list = {}
 
+
 def find_last(bucket):
     last_book = None
     last_date = None
@@ -26,6 +27,7 @@ def find_last(bucket):
             return item, i
         i += 1
     return last_book, index
+
 
 def update_reqlist(book):
     nonlocal req_list
@@ -61,5 +63,5 @@ for book in requests:
         cost += 1
     #print(bucket, req_list)
 
-#print(req_list)
+# print(req_list)
 print(cost)

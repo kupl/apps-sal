@@ -3,7 +3,7 @@ class Solution:
         manager2employee = defaultdict(list)
         for employee, manager in enumerate(manager):
             manager2employee[manager].append(employee)
-        
+
         def dfs(manager):
             if not manager2employee[manager]:
                 return 0

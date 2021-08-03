@@ -3,17 +3,3 @@ ans = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', '
 n = int(input())
 
 print(ans[n])
-
-
-
-
-
-
-
-
-
-
-
-
-
-

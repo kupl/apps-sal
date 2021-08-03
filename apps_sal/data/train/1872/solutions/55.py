@@ -17,9 +17,9 @@ class Solution:
                 node, level = queue.popleft()
                 level_sum += node.val
                 if node.left:
-                    queue.append((node.left, level+1))
+                    queue.append((node.left, level + 1))
                 if node.right:
-                    queue.append((node.right, level+1))
+                    queue.append((node.right, level + 1))
             if level_sum > maxsum:
                 maxsum = level_sum
                 result = level

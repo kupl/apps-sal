@@ -3,7 +3,7 @@ def main():
     sushi = [list(map(int, input().split())) for _ in range(n)]
     sushi.sort(key=lambda x: x[1], reverse=True)
     ans = 0
-    t = [0]*(n+1)
+    t = [0] * (n + 1)
     tmp = 0
     cnt = 0
     for i in range(k):
@@ -12,7 +12,7 @@ def main():
             cnt += 1
         tmp += sushi[i][1]
         t[sushi[i][0]] += 1
-    ans = tmp + cnt*cnt
+    ans = tmp + cnt * cnt
     p = k
     for i in range(k, n):
         f = False
@@ -26,7 +26,7 @@ def main():
                     tmp += sushi[i][1]
                     p = j
                     cnt += 1
-                    ans = max(ans, tmp+cnt*cnt)
+                    ans = max(ans, tmp + cnt * cnt)
                     f = False
                     break
         if f:
@@ -36,4 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

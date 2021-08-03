@@ -3,17 +3,17 @@
 
 import time
 
-max = 300000+5
+max = 300000 + 5
 
 ABC = max
-AC  = max
-AB  = max
-BC  = max
-A   = max
-B   = max
-C   = max
+AC = max
+AB = max
+BC = max
+A = max
+B = max
+C = max
 
-n   = int(input())
+n = int(input())
 
 for i in range(n):
     (c, s) = (i for i in input().split())
@@ -45,7 +45,7 @@ for i in range(n):
 
 start = time.time()
 
-ans = min (ABC, AB+C, AC+B, BC+A, AB+BC, AB+AC, BC+AC, A+B+C)
+ans = min(ABC, AB + C, AC + B, BC + A, AB + BC, AB + AC, BC + AC, A + B + C)
 
 if ans == max:
     print(-1)
@@ -53,4 +53,3 @@ else:
     print(ans)
 finish = time.time()
 #print(finish - start)
-

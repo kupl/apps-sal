@@ -13,6 +13,3 @@ class Solution:
             else:
                 ans += 1
         return ans
-        
-                
-

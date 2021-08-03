@@ -26,4 +26,3 @@ for i in range(N - 1):
     ans += (x1 + x2) * 0.5 / 2
 
 print(ans)
-

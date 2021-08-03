@@ -5,4 +5,4 @@ def round_to_next5(n):
     elif n % 5 == 0:
         return n
     else:
-        return round_to_next5(n+1)
+        return round_to_next5(n + 1)

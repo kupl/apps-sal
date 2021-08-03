@@ -12,6 +12,7 @@ INF = 10 ** 40
 S = [-INF] * N
 S[0] = 0
 
+
 def score(fst, s, C):
     for nx, p in R[fst]:
         if S[nx] >= s + p or S[nx] >= INF:
@@ -25,6 +26,7 @@ def score(fst, s, C):
         if C[nx] == 0:
             del C[nx]
 
+
 score(0, 0, {0: 1})
 
 if S[-1] < INF:
@@ -33,4 +35,3 @@ else:
     ans = "inf"
 
 print(ans)
-

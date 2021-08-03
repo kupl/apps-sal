@@ -9,10 +9,14 @@ def main():
         kek = [ord(a[i]) - ord(g[i]) for i in range(4)]
         ans = 0
         for i in range(4):
-            if arr[i] < 0: arr[i] += 26
-            if kek[i] < 0: kek[i] += 26
+            if arr[i] < 0:
+                arr[i] += 26
+            if kek[i] < 0:
+                kek[i] += 26
             ans += min(arr[i], kek[i])
         mi = min(mi, ans)
     print(mi)
     return 0
+
+
 main()

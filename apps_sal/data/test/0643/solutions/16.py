@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 mx = 10**9 + 7
 t = int(input())
 for i in range(t):

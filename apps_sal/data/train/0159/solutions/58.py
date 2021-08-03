@@ -12,5 +12,3 @@ class Solution:
                 dp.append((i, cur))
             # print('dp', dp)
         return res
-        
-

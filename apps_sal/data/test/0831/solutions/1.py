@@ -1,4 +1,6 @@
 from heapq import heappush, heappop
+
+
 class MinCostFlow:
     INF = 10**18
 
@@ -9,19 +11,20 @@ class MinCostFlow:
     def add_edge(self, fr, to, cap, cost):
         G = self.G
         G[fr].append([to, cap, cost, len(G[to])])
-        G[to].append([fr, 0, -cost, len(G[fr])-1])
+        G[to].append([fr, 0, -cost, len(G[fr]) - 1])
 
     def flow(self, s, t, f):
-        N = self.N; G = self.G
+        N = self.N
+        G = self.G
         INF = MinCostFlow.INF
 
         res = 0
-        H = [0]*N
-        prv_v = [0]*N
-        prv_e = [0]*N
+        H = [0] * N
+        prv_v = [0] * N
+        prv_e = [0] * N
 
         while f:
-            dist = [INF]*N
+            dist = [INF] * N
             dist[s] = 0
             que = [(0, s)]
 
@@ -32,7 +35,8 @@ class MinCostFlow:
                 for i, (w, cap, cost, _) in enumerate(G[v]):
                     if cap > 0 and dist[w] > dist[v] + cost + H[v] - H[w]:
                         dist[w] = r = dist[v] + cost + H[v] - H[w]
-                        prv_v[w] = v; prv_e[w] = i
+                        prv_v[w] = v
+                        prv_e[w] = i
                         heappush(que, (r, w))
             if dist[t] == INF:
                 return -1
@@ -40,7 +44,8 @@ class MinCostFlow:
             for i in range(N):
                 H[i] += dist[i]
 
-            d = f; v = t
+            d = f
+            v = t
             while v != s:
                 d = min(d, G[prv_v[v]][prv_e[v]][1])
                 v = prv_v[v]
@@ -53,6 +58,7 @@ class MinCostFlow:
                 G[v][e[3]][1] += d
                 v = prv_v[v]
         return res
+
 
 T = input()
 need = [0] * 30
@@ -67,7 +73,7 @@ for i in range(N):
     S = v[0]
     a[i] = int(v[1])
     for s in S:
-        have[i][ord(s)-ord('a')] += 1
+        have[i][ord(s) - ord('a')] += 1
 
 V = 30 + N + 10
 flow = MinCostFlow(V)
@@ -77,10 +83,10 @@ target = 30 + N + 6
 for c in range(26):
     flow.add_edge(start, c, need[c], 0)
     for j in range(N):
-        flow.add_edge(c, 30+j, have[j][c], 0)
+        flow.add_edge(c, 30 + j, have[j][c], 0)
 
 for i in range(N):
-    flow.add_edge(30+i, target, a[i], i+1)
+    flow.add_edge(30 + i, target, a[i], i + 1)
 
 ans = flow.flow(start, target, len(T))
 print(ans)

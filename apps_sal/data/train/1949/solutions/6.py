@@ -16,5 +16,3 @@ class Solution:
                     seen = set()
                     dfs(i, j, grid[i][j])
         return max(c for row in dp for c in row)
-                    
-

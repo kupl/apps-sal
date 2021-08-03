@@ -5,4 +5,3 @@ if m == 1:
 min = (n % m) * (((n // m) * (n // m + 1)) // 2) + (m - n % m) * (((n // m - 1) * (n // m)) // 2)
 print(min, end=' ')
 print(max)
-

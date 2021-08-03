@@ -12,4 +12,3 @@ m = {
 }
 h, l = divmod(int(input()), 10)
 print(m[h] * m[l])
-

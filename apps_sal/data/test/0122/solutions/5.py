@@ -1,6 +1,7 @@
 import math
 import re
 
+
 def f(arr, n):
     a = set()
     x = 0
@@ -19,6 +20,7 @@ def f(arr, n):
             break
     return res
 
+
 n = int(input())
 arr = list(map(int, input().split()))
 
@@ -29,7 +31,7 @@ if res == 'NO':
 
 print(res)
 
-    # arr = list(map(int, input().split()))
+# arr = list(map(int, input().split()))
 # res = 0
 # a = {math.pow(2, i) for i in range(35)}
 # for i in range(n-1):
@@ -47,4 +49,3 @@ print(res)
 # arr1 = sorted(arr, reverse=True)
 # a = [n - arr1.index(arr[el - 1]) for el in spis]
 # print(' '.join(map(str, a)))
-

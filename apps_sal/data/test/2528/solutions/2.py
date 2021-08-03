@@ -1,23 +1,22 @@
 # cook your dish here
-n=int(input())
-arr=[int(x) for x in input().split()]
+n = int(input())
+arr = [int(x) for x in input().split()]
 # arr.append(0)
-subarr=[]
-prev=[]
+subarr = []
+prev = []
 if 0 in arr:
- for val in range(len(arr)):
-  if arr[val]==0:
-   if len(subarr)>len(prev):
-    prev=subarr
-   subarr=[]
-   
-  else:
-   subarr.append(arr[val])
- # print(subarr,prev)
- print(max(len(prev),len(subarr)))
+    for val in range(len(arr)):
+        if arr[val] == 0:
+            if len(subarr) > len(prev):
+                prev = subarr
+            subarr = []
+
+        else:
+            subarr.append(arr[val])
+    # print(subarr,prev)
+    print(max(len(prev), len(subarr)))
 else:
- print(n)
-  
+    print(n)
 
 
 # maxy=[]
@@ -37,4 +36,3 @@ else:
 #     print(len(final))
 # else:
 #     print(n)
-

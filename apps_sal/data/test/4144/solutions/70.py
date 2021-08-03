@@ -15,11 +15,12 @@ inf = 10**9
 
 def main():
     n = int(input())
-    r = (10**n + 8**n - 2 * (9**n)) % (10**9+7)
+    r = (10**n + 8**n - 2 * (9**n)) % (10**9 + 7)
     print(r)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -21,4 +21,3 @@ if len(b) is 0:
     print('-')
 else:
     print("\"" + ','.join(b) + "\"")
-

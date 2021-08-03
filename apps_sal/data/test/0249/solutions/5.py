@@ -7,14 +7,14 @@ old_x = any(i + x in data for i in data)
 old_y = any(i + y in data for i in data)
 
 if old_x and old_y:
-    #all
+    # all
     print(0)
 elif old_x:
-    #one
+    # one
     print(1)
     print(y)
 elif old_y:
-    #one
+    # one
     print(1)
     print(x)
 else:
@@ -39,7 +39,7 @@ else:
                 print(i - y)
         if found:
             break
-     
+
     if not found:
         print(2)
         print(x, y)

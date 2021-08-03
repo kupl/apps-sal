@@ -2,7 +2,7 @@ class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
         res = []
         max_len = len(S) // 3 + 1
-            
+
         def add_fibonacci(x, left):
             # print(x)
             # print(left)
@@ -21,13 +21,13 @@ class Solution:
                     break
             # print(res, res_left)
             return res, res_left
-            
+
         for i in range(1, max_len + 1):
             c1 = S[0:i]
             if len(c1) > 1 and c1[0] == '0':
                 break
             for j in range(i + 1, max_len + i + 1):
-                c2 =S[i:j]
+                c2 = S[i:j]
                 if len(c2) > 1 and c2[0] == '0':
                     break
                 # next_length = max(len(c1), len(c2))
@@ -50,6 +50,6 @@ class Solution:
                 res.clear()
             if len(res) > 0:
                 break
-            
+
             res.clear()
         return res

@@ -9,5 +9,6 @@ def main():
                 x2, y2 = max(i, x2), max(j, y2)
     ans = max(x2 - x1, y2 - y1) + 1
     print(ans)
-main()
 
+
+main()

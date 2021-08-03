@@ -15,7 +15,7 @@ class Solution:
             else:
                 if tmp:
                     result += 1
-                    tmp = [] 
+                    tmp = []
                 node = node.next
         if tmp:
             result += 1

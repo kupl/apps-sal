@@ -23,4 +23,3 @@ for t in range(int(input())):
             if len(multiset) == i:
                 c += 1
     print(c)
-

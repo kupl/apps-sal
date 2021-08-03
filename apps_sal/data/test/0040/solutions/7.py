@@ -7,7 +7,7 @@ for i in range(n):
     rate[i] = [a, b]
     if a != b:
         ans = 'rated'
-        
+
 if ans == 'rated':
     print(ans)
 else:
@@ -16,7 +16,7 @@ else:
         if mn < rate[i][0]:
             ans = 'unrated'
             break
-        
+
         mn = min(mn, rate[i][0])
-        
+
     print(ans)

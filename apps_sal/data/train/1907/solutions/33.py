@@ -17,5 +17,3 @@ class Solution:
                     nxt.append(curr.left)
                 if curr.right:
                     nxt.append(curr.right)
-            
-

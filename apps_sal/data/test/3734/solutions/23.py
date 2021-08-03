@@ -13,4 +13,3 @@ for v in s:
         break
 else:
     print('NO')
-

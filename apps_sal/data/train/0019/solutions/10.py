@@ -17,4 +17,3 @@ for _ in range(t):
         m[a[i + d]] += 1
         ans = min(ans, len(m))
     print(ans)
-

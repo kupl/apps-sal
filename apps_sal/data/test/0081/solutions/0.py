@@ -9,10 +9,12 @@ c = b - a
 i = 1
 ans = a * b // gcd(a, b)
 
+
 def get(x):
     A = (a + x - 1) // x * x
     B = A - a + b
     return A * B // gcd(A, B), A
+
 
 r = 0
 while i * i <= c:
@@ -31,4 +33,3 @@ while i * i <= c:
             r = min(r, BB - a)
     i += 1
 print(r)
-

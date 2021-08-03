@@ -1,10 +1,10 @@
-##   int(input())
-n, m= map(int,input().split())
-a = list(map(int,input().split()))
+# int(input())
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
 tot = 0
 rs = []
 for i in range(m):
-    t = list(map(int,input().split()))
+    t = list(map(int, input().split()))
     if t[0] == 1:
         v = t[1]
         x = t[2]

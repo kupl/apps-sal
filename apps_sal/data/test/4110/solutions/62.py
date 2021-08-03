@@ -32,4 +32,3 @@ for bit in range(2 << D):
 
 # 結果出力
 print(ans)
-

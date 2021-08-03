@@ -23,4 +23,3 @@ class TestVertAndHorMirror(unittest.TestCase):
         fct, s = hor_mirror, "lVHt\nJVhv\nCSbg\nyeCt"
         actual = oper(fct, s)
         self.assertEqual(actual, "yeCt\nCSbg\nJVhv\nlVHt")
-

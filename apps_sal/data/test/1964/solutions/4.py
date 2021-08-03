@@ -6,4 +6,3 @@ for i in range(n):
     p = len(m) * 15 + 5 * sum(m)
     r = min(r, p)
 print(r)
-

@@ -7,4 +7,3 @@ for i in range(x + 1):
         break
 
 print(ans)
-

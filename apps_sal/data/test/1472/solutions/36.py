@@ -34,4 +34,4 @@ for i in range(n):
         ans[d] += 1
 
 for a in ans[1:]:
-    print(a//2)
+    print(a // 2)

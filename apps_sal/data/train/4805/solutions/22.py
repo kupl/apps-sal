@@ -4,7 +4,7 @@ def check(seq, elem):
     for a in seq:
         if a == elem:
             x.append(a)
-        elif a!= elem:
+        elif a != elem:
             pass
     if x == z:
         return False

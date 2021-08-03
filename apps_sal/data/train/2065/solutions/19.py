@@ -7,4 +7,3 @@ for _ in range(k):
     while a[i + 1] == i + 2:
         i += 1
 print(2 * n - k - 1 - 2 * i)
-

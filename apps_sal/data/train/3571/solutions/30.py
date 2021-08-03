@@ -1,2 +1,2 @@
-def is_divisible(w,p):
-    return w/p%1==0
+def is_divisible(w, p):
+    return w / p % 1 == 0

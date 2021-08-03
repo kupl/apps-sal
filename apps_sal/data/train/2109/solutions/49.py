@@ -14,4 +14,3 @@ for a, b in Query:
     elif sq * (sq + 1) >= a * b:
         ans -= 1
     print(ans)
-

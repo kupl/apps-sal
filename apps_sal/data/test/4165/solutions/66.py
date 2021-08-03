@@ -1,5 +1,5 @@
 
-N = list(map(int,input().split()))
+N = list(map(int, input().split()))
 side = list(map(int, input().split()))
 long_side = max(side)
 total = 0
@@ -12,4 +12,3 @@ if long_side < total:
     print('Yes')
 else:
     print('No')
-

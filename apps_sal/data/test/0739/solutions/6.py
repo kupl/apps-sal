@@ -1,10 +1,12 @@
-l,a,b,m = map(int,input().split())
+l, a, b, m = map(int, input().split())
 
 # c111 -> 1001001001みたいなやつを求める
 # n : 塊の数
 # l : 一つの塊(00..001)の長さ
 # m : mod
 # ex) n=3, l=2 -> 10101
+
+
 def c111(n, l, m):
     if n <= 1:
         return 1
@@ -18,6 +20,8 @@ def c111(n, l, m):
 # l : 一つの塊(00..001)の長さ
 # m : mod
 # ex) n=3, l=2 -> 10203
+
+
 def c123(n, l, m):
     if n <= 1:
         return 1
@@ -25,6 +29,7 @@ def c123(n, l, m):
         return (c123(n - 1, l, m) + c111(n, l, m)) % m
     half = c123(n // 2, l, m)
     return (half * pow(10, (n // 2) * l, m) + half + (n // 2) * c111(n // 2, l, m)) % m
+
 
 fst = a
 lst = a + b * (l - 1)

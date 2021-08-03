@@ -1,7 +1,7 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
         stack = []
-        
+
         res = 0
         for i in range(len(cost)):
             if not stack or s[stack[-1]] != s[i]:
@@ -16,6 +16,3 @@ class Solution:
                         res += cost[idx]
                         stack.append(i)
         return res
-                
-                
-

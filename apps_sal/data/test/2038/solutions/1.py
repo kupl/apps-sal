@@ -1,8 +1,8 @@
 input()
-p=[int(x)-1 for x in input().split()]
-pos=[0] * len(p)
+p = [int(x) - 1 for x in input().split()]
+pos = [0] * len(p)
 for i, x in enumerate(p):
-    pos[x]=i
+    pos[x] = i
 # print(pos)
 ans = []
 for i, x in enumerate(p):
@@ -42,6 +42,5 @@ for i, x in enumerate(p):
     # print(ans)
 print(len(ans))
 for a, b in ans:
-    print(a+1,b+1)
+    print(a + 1, b + 1)
 assert sorted(p) == p
-

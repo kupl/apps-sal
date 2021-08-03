@@ -15,9 +15,9 @@ amat1 = amat[mask1]
 
 mask2 = []
 for i in range(W):
-    if np.sum(amat1[:,i]) != 0:
+    if np.sum(amat1[:, i]) != 0:
         mask2.append(i)
-amat2 = amat1[:,mask2]
+amat2 = amat1[:, mask2]
 
 ans = []
 for i in range(amat2.shape[0]):
@@ -29,4 +29,3 @@ for i in range(amat2.shape[0]):
             temp += '.'
     ans.append(temp)
 print(*ans, sep='\n')
-

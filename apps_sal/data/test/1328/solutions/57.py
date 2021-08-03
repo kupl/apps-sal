@@ -30,4 +30,3 @@ for a in range(sum_a + 1):
             min_cost = min(dp[N][a][b], min_cost)
 
 print((min_cost if min_cost != inf else -1))
-

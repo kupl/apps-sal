@@ -15,4 +15,3 @@ while i < len(a):
     j -= 1
 
 print(result)
-

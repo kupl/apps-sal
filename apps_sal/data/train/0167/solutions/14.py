@@ -24,4 +24,3 @@ class Solution:
             return 1 + dp(k - 1, left - 1)
 
         return dp(K, N)
-

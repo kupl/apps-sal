@@ -13,4 +13,3 @@ class Solution:
             for v in graph[node[0]]:
                 q.append((v, node[1] + informTime[node[0]]))
         return time
-

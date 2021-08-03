@@ -1,6 +1,5 @@
 a = int(input())
-if a % 4 == 0 :
+if a % 4 == 0:
     print(4)
-else :
+else:
     print(0)
-

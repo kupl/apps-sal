@@ -24,4 +24,3 @@ while n - l * p > 0:
         break
     l += 1
 print(ans)
-

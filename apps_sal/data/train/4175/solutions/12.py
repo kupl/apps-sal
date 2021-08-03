@@ -5,4 +5,3 @@ def repeater(string, n):
         a += string
         k += 1
     return(a)
-

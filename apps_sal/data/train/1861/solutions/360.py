@@ -10,6 +10,7 @@
 
 '''
 
+
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
         base_x_to_y = collections.defaultdict(dict)

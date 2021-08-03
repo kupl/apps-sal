@@ -1,4 +1,4 @@
-def problem(a = ''):
+def problem(a=''):
     try:
         int(a)
         a = a * 50 + 6

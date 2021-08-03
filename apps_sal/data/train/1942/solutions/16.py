@@ -9,5 +9,3 @@ class Solution:
                     return False
             return True
         return [i for i in range(len(favoriteCompanies)) if not any(j != i and isSubset(favoriteCompanies[i], favoriteCompanies[j]) for j in range(len(favoriteCompanies)))]
-                
-

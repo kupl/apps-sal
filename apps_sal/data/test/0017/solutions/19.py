@@ -1,5 +1,6 @@
 n, k, t = list(map(int, input().split(' ')))
 
+
 def main():
     if t < k:
         return t
@@ -8,5 +9,5 @@ def main():
     else:
         return n + k - t
 
-print(main())
 
+print(main())

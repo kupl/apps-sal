@@ -24,7 +24,7 @@ def main():
     a = f(x)
     b = f(y)
     for i in range(len(a)):
-       b = b[:b.index(a[i])] + b[b.index(a[i]) + 1:]
+        b = b[:b.index(a[i])] + b[b.index(a[i]) + 1:]
     ans = 0
     a = [b[0]]
     for i in range(1, len(b)):
@@ -43,6 +43,6 @@ def main():
         if l <= x * c1 <= r and l <= x * c2 <= r:
             ans += 1
     return ans
-    
-print(main())
 
+
+print(main())

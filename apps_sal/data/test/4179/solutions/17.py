@@ -12,11 +12,10 @@ ans = 0
 for i in range(N):
     y = 0
     for j in range(M):
-        y += A[i][j]*B[j]
+        y += A[i][j] * B[j]
     y += C
 
     if y > 0:
         ans += 1
 
 print(ans)
-

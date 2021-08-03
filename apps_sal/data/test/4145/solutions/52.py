@@ -1,5 +1,6 @@
 X = int(input())
 
+
 def get_sieve_of_eratosthenes_new(n):
     import math
     if not isinstance(n, int):
@@ -16,9 +17,9 @@ def get_sieve_of_eratosthenes_new(n):
         prime.append(p)
         data = [e for e in data if e % p != 0]
 
+
 prime = get_sieve_of_eratosthenes_new(10**6)
 for num in prime:
     if num >= X:
         print(num)
         break
-

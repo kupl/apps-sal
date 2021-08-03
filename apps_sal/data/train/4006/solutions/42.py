@@ -8,4 +8,3 @@ def basic_op(operator_mark, value1, value2):
          '*': operator.mul,
          '/': operator.truediv}
     return d[operator_mark](value1, value2)
-

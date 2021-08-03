@@ -17,8 +17,7 @@ for i in range(0, 61):
 data.sort()
 max_time = 0
 data.append(r if rbad else r + 1)
-data[0] = (l if lbad else l -1)
+data[0] = (l if lbad else l - 1)
 for i in range(0, len(data) - 1):
     max_time = max(data[i + 1] - data[i] - 1, max_time)
 print(max_time)
-

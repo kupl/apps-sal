@@ -6,5 +6,5 @@ class Solution:
             m1, m2 = piles.pop(), piles.pop()
             m3 = piles.pop(0)
             sums += m2
-            
+
         return sums

@@ -33,7 +33,7 @@ for i in range(n):
         r1 = i
     if e < u:
         u = e
-        u1 = i    
+        u1 = i
 for x in may:
     ind = max(1 - x, 0)
     l, d, r, u = rects[ind]

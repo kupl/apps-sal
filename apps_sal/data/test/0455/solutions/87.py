@@ -74,4 +74,3 @@ if not odd:
 print(len(D))
 print(*D)
 print(*ans, sep='\n')
-

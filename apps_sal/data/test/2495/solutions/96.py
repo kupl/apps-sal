@@ -16,4 +16,3 @@ def solve(i, s, k, sign):
 
 
 print((min(solve(0, 0, 0, 1), solve(0, 0, 0, -1))))
-

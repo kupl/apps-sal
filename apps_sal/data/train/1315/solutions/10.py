@@ -9,7 +9,6 @@ for i in range(n):
         lst.extend([l1])
     else:
         lst.remove(l1)
-    
 
 
 print(len(lst))

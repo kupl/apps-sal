@@ -12,6 +12,7 @@ class DSU:
         yr = self.find(y)
         self.p[xr] = yr
 
+
 class Solution(object):
     def largestComponentSize(self, A):
         B = []

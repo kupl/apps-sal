@@ -56,4 +56,3 @@ for i in range(1, m + 1):
 
 ans = pow(2, n - 1) - ex
 print(ans)
-

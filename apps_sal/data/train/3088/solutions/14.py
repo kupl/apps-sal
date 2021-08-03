@@ -1,1 +1,1 @@
-nba_extrap=lambda p,m:m and round(48.*p/m,1)
+def nba_extrap(p, m): return m and round(48. * p / m, 1)

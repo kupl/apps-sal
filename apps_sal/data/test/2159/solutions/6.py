@@ -11,24 +11,21 @@ while l+1<r:
         l=mid'''
 # arr=list(map(int,input().split()))
 # n=int(input())
-#if all([size%ele==0 for ele,size in s.items()]):
+# if all([size%ele==0 for ele,size in s.items()]):
 # n,k=map(int,input().split())
 # arr=list(map(int,input().split()))
 #from collections import Counter
 #arr=sorted([(n-int(x),i) for i,x in enumerate(input().split())])
-n=int(input())
-arr=[int(q)-1 for q in input().split()]
-ans=[0]*n
+n = int(input())
+arr = [int(q) - 1 for q in input().split()]
+ans = [0] * n
 for i in range(n):
     cnt = [0] * n
-    best=0
+    best = 0
     for j in arr[i:]:
-        cnt[j]+=1
-        if cnt[j]>cnt[best] or j<best and  cnt[j]==cnt[best] :
+        cnt[j] += 1
+        if cnt[j] > cnt[best] or j < best and cnt[j] == cnt[best]:
             best = j
-        ans[best]+=1
+        ans[best] += 1
 
 print(*ans)
-
-
-

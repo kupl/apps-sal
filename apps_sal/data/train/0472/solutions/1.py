@@ -19,8 +19,3 @@ class Solution:
                 visited.add(next_index)
                 queue.append(next_index)
         return False
-                
-            
-        
-        
-

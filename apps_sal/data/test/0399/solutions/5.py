@@ -9,9 +9,7 @@ if y == 1:
         print("No")
     else:
         print("Yes")
-elif x < b or y < 1 or (x-b)%2 == 1:
+elif x < b or y < 1 or (x - b) % 2 == 1:
     print("No")
 else:
     print("Yes")
-
-

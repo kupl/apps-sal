@@ -1,5 +1,5 @@
-X, Y, Z = map(int,input().split())
+X, Y, Z = map(int, input().split())
 
 X = X - Z
 
-print(X//(Y + Z))
+print(X // (Y + Z))

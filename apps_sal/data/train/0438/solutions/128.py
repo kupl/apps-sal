@@ -1,7 +1,8 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        A=arr
-        if m == len(A): return m
+        A = arr
+        if m == len(A):
+            return m
         length = [0] * (len(A) + 2)
         res = -1
         for i, a in enumerate(A):
@@ -9,5 +10,5 @@ class Solution:
             if left == m or right == m:
                 res = i
             length[a - left] = length[a + right] = left + right + 1
-            
+
         return res

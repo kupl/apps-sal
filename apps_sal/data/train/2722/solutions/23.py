@@ -7,4 +7,4 @@ def remove_url_anchor(url):
             return res
             break
 
-    return res      
+    return res

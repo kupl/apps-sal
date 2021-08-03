@@ -13,7 +13,7 @@ def sort_time(arr):
                 k = j
                 if r_max == r_min:
                     break
-        ret.append(rr[k])        
+        ret.append(rr[k])
         r_min = rr[k][1]
         r_max = '23:59'
         rr.pop(k)

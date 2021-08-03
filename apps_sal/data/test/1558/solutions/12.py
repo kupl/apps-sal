@@ -20,5 +20,3 @@ if sum1 / n < avg:
     print(res)
 else:
     print(0)
-
-

@@ -22,8 +22,7 @@ def solve():
     if l * 2 > r:
         print(-1, -1)
     else:
-        print(l, l*2)
-    
+        print(l, l * 2)
 
 
 test_cases = True
@@ -33,4 +32,3 @@ if test_cases:
         solve()
 else:
     solve()
-

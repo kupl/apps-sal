@@ -12,11 +12,13 @@ def solve():
 
     for a, b in ab_l:
         ans = max(ans, dp[-1] + b)
-        dp[a:] = np.maximum(dp[a:], dp[:-a]+b)
+        dp[a:] = np.maximum(dp[a:], dp[:-a] + b)
 
     print(ans)
 
 
 def __starting_point():
     solve()
+
+
 __starting_point()

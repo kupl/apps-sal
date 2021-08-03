@@ -12,4 +12,3 @@ for _ in range(int(input())):
             ok = 0
             break
     print('YES' if ok else 'NO')
-

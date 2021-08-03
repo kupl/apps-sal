@@ -23,4 +23,3 @@ while len(search) > 0:
 
 if not found:
     print("NO")
-

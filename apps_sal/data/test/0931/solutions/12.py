@@ -57,4 +57,3 @@ horizontal(y % 2)
 if z % 4 > 0:
     counter(4 - (z % 4))
 print1()
-

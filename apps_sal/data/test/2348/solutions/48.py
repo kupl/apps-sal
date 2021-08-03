@@ -1,4 +1,4 @@
 s = input()
 
-s= s[1:]
+s = s[1:]
 print(int(s) % 2)

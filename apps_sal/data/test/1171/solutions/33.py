@@ -12,4 +12,3 @@ for a in range(min(n, k) + 1):
             s -= pb[c]
             ans = max(s, ans)
 print(ans)
-

@@ -17,7 +17,7 @@ def main(s):
         nt = nres[-1] + 1
         if nt > 10:
             st = st[:5] + '...' + st[-2:]
-        if s[i] == s[i-1] and st > sres[-1]:
+        if s[i] == s[i - 1] and st > sres[-1]:
             st = sres[-2]
             nt = nres[-2]
         sres.append(st)
@@ -28,7 +28,5 @@ def main(s):
 s = input()
 sres, nres = main(s)
 
-for i in range(len(s)-1, -1, -1):
+for i in range(len(s) - 1, -1, -1):
     print(nres[i], sres[i])
-
-

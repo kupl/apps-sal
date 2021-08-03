@@ -5,11 +5,15 @@ data = [list(map(int, input().split())) for _ in range(10)]
 c = [list(map(int, input().split())) for _ in range(h)]
 
 d = copy(data)
+
+
 def cnt_set(d):
     for k in range(10):
         for i in range(10):
             for j in range(10):
                 d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+
+
 cnt_set(d)
 ans = 0
 

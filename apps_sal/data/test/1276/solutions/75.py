@@ -6,7 +6,7 @@ count = 0
 while i * 2 < N:
     n = 0
     while n + i * 2 < N:
-        if (S[n] != S[n+i]) and (S[n+i] != S[n+2*i]) and (S[n] != S[n+i*2]):
+        if (S[n] != S[n + i]) and (S[n + i] != S[n + 2 * i]) and (S[n] != S[n + i * 2]):
             count += 1
             #print(S[n], S[n+i], S[n+2*i])
         n += 1

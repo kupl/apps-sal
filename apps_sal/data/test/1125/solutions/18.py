@@ -15,4 +15,5 @@ def f_unfair_nim():
             a ^= 1 << i
     return A[0] - a if A[0] >= a > 0 else -1
 
+
 print(f_unfair_nim())

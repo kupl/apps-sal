@@ -8,4 +8,3 @@ for i in range(n):
         c2 = i
 
 print(max(abs(c1 - c2), c1, c2, n - 1 - c1, n - 1 - c2))
-

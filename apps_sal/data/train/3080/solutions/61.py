@@ -10,4 +10,3 @@ def who_is_paying(name):
         z = ''.join(map(str, y))
         x.append(z)
     return x
-

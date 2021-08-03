@@ -12,16 +12,19 @@ def main():
     Q = int(input())
     HW = H * W
     ans = [0] * (HW + 1)
-    for i in range(1, D+1):
+    for i in range(1, D + 1):
         cur = i
         while cur + D <= HW:
-            ans[cur+D] += ans[cur] + abs(revM[cur][0] - revM[cur+D][0]) + abs(revM[cur][1] - revM[cur+D][1])
+            ans[cur + D] += ans[cur] + abs(revM[cur][0] - revM[cur + D][0]) + abs(revM[cur][1] - revM[cur + D][1])
             cur += D
 
     for q in range(Q):
         l, r = [int(x) for x in input().strip().split()]
-        print(ans[r]-ans[l])
+        print(ans[r] - ans[l])
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

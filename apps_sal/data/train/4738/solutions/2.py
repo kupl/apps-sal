@@ -1,2 +1,2 @@
 def find(r):
-    return sum(1<<d for d in r)
+    return sum(1 << d for d in r)

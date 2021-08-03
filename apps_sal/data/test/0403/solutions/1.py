@@ -17,9 +17,9 @@ for team in teams:
             team -= pages_to_print
         if team:
             pages_to_print = sum(divmod(team, 2))
-            if pages_to_print > x: break
+            if pages_to_print > x:
+                break
             x -= pages_to_print
     c += 1
 
 print(c)
-

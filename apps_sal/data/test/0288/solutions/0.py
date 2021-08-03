@@ -6,4 +6,3 @@ while cur + lst <= n:
     cur, lst = cur + lst, cur
     x += 1
 print(x)
-

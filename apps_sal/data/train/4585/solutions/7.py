@@ -1,4 +1,4 @@
-def find(a,b,n):
+def find(a, b, n):
     r = [a, b]
     if n > 300:
         n = n % 300

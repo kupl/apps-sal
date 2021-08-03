@@ -33,4 +33,3 @@ for i in range(n):
     sums[i] = (sums[i - 1] + ans[i]) % MOD
 
 print(sum(ans) % MOD)
-

@@ -13,4 +13,3 @@ for i in range(q4 + 1):
         return
 
 print("No")
-

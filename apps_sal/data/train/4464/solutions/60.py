@@ -3,4 +3,4 @@ def feast(beast, dish):
     lastletter = beast[-1]
     firstletterdish = dish[0]
     lastletterdish = dish[-1]
-    return (firstletter,lastletter) == (firstletterdish,lastletterdish)
+    return (firstletter, lastletter) == (firstletterdish, lastletterdish)

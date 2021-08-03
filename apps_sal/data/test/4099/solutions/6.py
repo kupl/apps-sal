@@ -10,5 +10,3 @@ elif add_score > k:
     print((-1))
 else:
     print(add_score)
-
-

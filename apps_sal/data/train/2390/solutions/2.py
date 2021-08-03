@@ -5,7 +5,7 @@ for _ in range(q):
     u = [0] * n
     for i in range(n):
         u[a[i] - 1] += 1
-    u.sort(reverse = 1)
+    u.sort(reverse=1)
     k = u[0]
     ans = k
     for i in range(1, n):
@@ -15,5 +15,4 @@ for _ in range(q):
                 break
         ans += u[i]
     print(ans)
-    #print(u)
-
+    # print(u)

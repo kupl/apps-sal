@@ -10,6 +10,7 @@ sys.setrecursionlimit(100000)
 
 # LOG
 
+
 def log(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
@@ -44,20 +45,21 @@ def sortId(arr):
 
 # MAIN
 
-n,m,s = ni()
+n, m, s = ni()
 
 s -= 1
 
 adj = [[] for _ in range(n)]
 
 for i in range(m):
-    u,v = nio(-1)
+    u, v = nio(-1)
     if (v != s):
         adj[u].append(v)
 
 stack = []
 
-visited= [False]*n
+visited = [False] * n
+
 
 def dfs(x):
     nonlocal visited
@@ -79,6 +81,7 @@ for i in range(n):
 # log(stack)
 
 count = -1
+
 
 def loang(x):
     nonlocal visited

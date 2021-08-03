@@ -8,4 +8,3 @@ for i in range(n):
             amount += 1
             a[j], a[j - 1] = a[j - 1], a[j]
 #print(amount, a)
-

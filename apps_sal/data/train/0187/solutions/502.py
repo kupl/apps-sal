@@ -1,12 +1,12 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        wheel = [0,0,0,0]
+        wheel = [0, 0, 0, 0]
         profit = 0
         tracker = [-1]
         line = 0
-        
+
         def rotate(wheel, profit, boardingCost, runningCost, tracker):
-            profit += boardingCost*wheel[0] - runningCost
+            profit += boardingCost * wheel[0] - runningCost
             tracker.append(profit)
             wheel = [0, wheel[0], wheel[1], wheel[2]]
             return (wheel, profit, tracker)
@@ -25,7 +25,7 @@ class Solution:
 
         maxp = -1
         val = -1
-        
+
         # print(tracker, wheel, line)
         if max(tracker) <= 0:
             return -1
@@ -39,10 +39,3 @@ class Solution:
         #     return val
         # else:
         #     return -1
-            
-    
-        
-        
-    
-        
-

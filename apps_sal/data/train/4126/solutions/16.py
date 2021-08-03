@@ -4,7 +4,7 @@ def what_time_is_it(n):
     hours = str(floor(temp / 60))
     minutes = str(floor(temp % 60))
     if (temp // 60 == 0):
-        hours = "12";
+        hours = "12"
     if (len(hours) == 1):
         hours = "0" + hours
     if (len(minutes) == 1):

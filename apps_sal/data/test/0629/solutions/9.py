@@ -15,4 +15,5 @@ def __starting_point():
     b = read_numbers()
     print(f(n, a1, a2, b))
 
+
 __starting_point()

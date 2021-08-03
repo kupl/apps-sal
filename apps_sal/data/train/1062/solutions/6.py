@@ -6,6 +6,5 @@ for i in range(l):
         if mins >= l - i:
             mins = l - i - 1
         mins = min(mins, l - j - 1)
-        print(n - mins, end= " ")
+        print(n - mins, end=" ")
     print()
-

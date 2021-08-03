@@ -1,4 +1,6 @@
 mod = 10**9 + 7
+
+
 def solve():
     n, m, x, y = map(int, input().split())
     for i in range(n):
@@ -12,6 +14,8 @@ def solve():
         x = x + 1
         if x > n:
             x = 1
+
+
 t = 1
 for _ in range(t):
     solve()

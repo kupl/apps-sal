@@ -11,11 +11,10 @@ class Solution:
                 sum_tmp -= arr[left]
                 left += 1
             if sum_tmp == target:
-                if left > 0 and dp[left-1] != sys.maxsize:
-                    length = min(length, dp[left-1] + right - left + 1)
+                if left > 0 and dp[left - 1] != sys.maxsize:
+                    length = min(length, dp[left - 1] + right - left + 1)
                 ans_len = min(ans_len, right - left + 1)
             dp[right] = ans_len
             right += 1
-        
-        return length if length != sys.maxsize else -1
 
+        return length if length != sys.maxsize else -1

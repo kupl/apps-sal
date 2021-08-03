@@ -3,6 +3,7 @@ import itertools
 from bisect import bisect_left
 import math
 
+
 def read():
     return int(input())
 

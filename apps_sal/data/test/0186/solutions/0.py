@@ -20,4 +20,3 @@ while (end - start > 1):
     else:
         start = mid
 print(end)
-

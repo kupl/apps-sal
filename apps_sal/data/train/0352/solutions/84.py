@@ -6,7 +6,7 @@ class Solution:
         ans = 1
 
         for idx, (wordLen, word) in enumerate(auxList):
-            for jdx in range(idx+1, len(auxList)):
+            for jdx in range(idx + 1, len(auxList)):
                 cWordLen, cWord = auxList[jdx]
                 if cWordLen > wordLen + 1:
                     break
@@ -14,9 +14,8 @@ class Solution:
                     pass
                 else:
                     for pivot in range(len(cWord)):
-                        if cWord[:pivot] + cWord[pivot+1:] == word:
+                        if cWord[:pivot] + cWord[pivot + 1:] == word:
                             auxCntList[jdx] = auxCntList[idx] + 1
                             ans = max(ans, auxCntList[jdx])
 
         return ans
-

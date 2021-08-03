@@ -5,4 +5,3 @@ ans = 0
 for l, r in A:
     ans += r - l + 1
 print(ans)
-

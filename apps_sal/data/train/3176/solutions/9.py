@@ -1,4 +1,6 @@
 import re
+
+
 def to_cents(amount):
     pattern = re.compile(r'^\$([\d]+)\.([\d]{2})$')
     if re.fullmatch(pattern, amount) == None:

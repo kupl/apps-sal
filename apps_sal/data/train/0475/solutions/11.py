@@ -1,11 +1,12 @@
 import heapq
 
+
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         s = [0] + nums[:]
         for i in range(1, len(s)):
             s[i] += s[i - 1]
-            
+
         def findKthSum(k):
             l, r = 0, s[-1]
             while l < r:
@@ -15,7 +16,7 @@ class Solution:
                 else:
                     r = mid
             return l
-        
+
         def countSumsLeq(sv):
             c = 0
             l = 0
@@ -24,7 +25,7 @@ class Solution:
                     l += 1
                 c += (r - l)
             return c
-        
+
         def getSumsUpToKth(k):
             sv = findKthSum(k)
             rv = 0
@@ -35,5 +36,5 @@ class Solution:
                 # rv += s[r] * (r - l + 1) - (ss[r + 1] - ss[l])
                 rv += sum([s[r] - s[ll] for ll in range(l, r)])
             return rv - (countSumsLeq(sv) - k) * sv
-        
+
         return (getSumsUpToKth(right) - getSumsUpToKth(left - 1)) % (10 ** 9 + 7)

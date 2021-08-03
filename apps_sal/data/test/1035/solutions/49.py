@@ -1,19 +1,21 @@
 a, b = list(map(int, input().split()))
 
+
 def gcd(a, b):
     if a == 0:
         return b
     elif b == 0:
         return a
     else:
-        return gcd(b, a%b)
+        return gcd(b, a % b)
+
 
 p = gcd(a, b)
 factors = {}
 
 while p > 1:
     f = False
-    for i in range(2, int(p**0.5)+1):
+    for i in range(2, int(p**0.5) + 1):
         if p % i == 0:
             if i in factors:
                 factors[i] += 1
@@ -31,4 +33,4 @@ while p > 1:
             factors[p] = 1
         break
 
-print(len(factors)+1)
+print(len(factors) + 1)

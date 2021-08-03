@@ -4,7 +4,7 @@ import collections
 
 class Solution:
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
-        
+
         maxx = list(nums)
         deque = collections.deque()
         for i in range(len(nums)):

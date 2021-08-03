@@ -9,4 +9,3 @@ for i in range(len(x)):
 
 print(len(a))
 print(" ".join([str(x) for x in a]))
-

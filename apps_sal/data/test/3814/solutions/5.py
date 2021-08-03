@@ -48,4 +48,3 @@ def solve(n, m):
 
 n, m = list(map(int, input().split()))
 print((solve(n, m)))
-

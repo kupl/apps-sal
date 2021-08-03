@@ -8,7 +8,3 @@ if ml:
     print('Four', flush=True)
 else:
     print('Three', flush=True)
-    
-    
-
-

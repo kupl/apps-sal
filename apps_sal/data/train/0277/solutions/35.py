@@ -7,4 +7,3 @@ class Solution:
             max_seen = max(max_seen, moment)
             times += (max_seen - min_seen == i) and min_seen == 1 and max_seen == i + 1
         return times
-

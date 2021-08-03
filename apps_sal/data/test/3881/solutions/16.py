@@ -1,34 +1,35 @@
 def __starting_point():
-    n,m = list(map(int,input().split(' ')))
+    n, m = list(map(int, input().split(' ')))
     d = {}
-    depo,res = {},[]
+    depo, res = {}, []
+
     def bazinga(s):
-        if s in depo:   return depo[s]
-        if s[0] not in d:  depo[s]=0
+        if s in depo:
+            return depo[s]
+        if s[0] not in d:
+            depo[s] = 0
         else:
-            ans=0
+            ans = 0
             for aa in d[s[0]]:
-                if len(aa+s[1:])==n:
-                    ans+=1
-                    #res.append(aa+s[1:])   #if problem is to find string
-                elif len(aa+s[1:])>n:
+                if len(aa + s[1:]) == n:
+                    ans += 1
+                    # res.append(aa+s[1:])   #if problem is to find string
+                elif len(aa + s[1:]) > n:
                     continue
                 else:
-                    ans+=bazinga(aa+s[1:])
-            depo[s]=ans
+                    ans += bazinga(aa + s[1:])
+            depo[s] = ans
         return depo[s]
 
     for i in range(m):
-        ai,bi = list(map(str,input().split(' ')))
-        if bi in d:     d[bi] +=[ai]
-        else:           d[bi]=[ai]
+        ai, bi = list(map(str, input().split(' ')))
+        if bi in d:
+            d[bi] += [ai]
+        else:
+            d[bi] = [ai]
     print(bazinga('a'))
-    #print(len(set(res)))
+    # print(len(set(res)))
 
-                    
-                
-                
-                
 
 '''
     A = input()

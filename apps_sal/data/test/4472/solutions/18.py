@@ -6,7 +6,7 @@ b = input()
 
 ans = 0
 
-if n % 2 != 0 and a[n//2] != b[n//2]:
+if n % 2 != 0 and a[n // 2] != b[n // 2]:
     ans = 1
 
 for i in range(n // 2):
@@ -31,7 +31,6 @@ for i in range(n // 2):
             ans += 1
             continue
         ans += 1
-
 
 
 print(ans)

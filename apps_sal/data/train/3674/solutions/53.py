@@ -1,5 +1,5 @@
-def add_binary(a,b):
-    num = a+b
+def add_binary(a, b):
+    num = a + b
     temp = bin(num)
     index = 0
     binary = ""
@@ -8,4 +8,3 @@ def add_binary(a,b):
             binary += i
         index += 1
     return binary
-

@@ -6,7 +6,7 @@ input = sys.stdin.readline
 n = int(input())
 
 q = {}
-for i in range(2*n - 2):
+for i in range(2 * n - 2):
     curr = input().strip()
     if len(curr) not in q.keys():
         q[len(curr)] = []
@@ -14,7 +14,7 @@ for i in range(2*n - 2):
 
 pre = q[1][0][0]
 suf = q[1][1][0]
-ans = [0 for i in range(2*n-2)]
+ans = [0 for i in range(2 * n - 2)]
 ans[q[1][0][1]] = 'P'
 ans[q[1][1][1]] = 'S'
 
@@ -40,7 +40,7 @@ for i in range(2, n):
 if not valid:
     pre = q[1][1][0]
     suf = q[1][0][0]
-    ans = [0 for i in range(2*n-2)]
+    ans = [0 for i in range(2 * n - 2)]
     ans[q[1][0][1]] = 'S'
     ans[q[1][1][1]] = 'P'
 

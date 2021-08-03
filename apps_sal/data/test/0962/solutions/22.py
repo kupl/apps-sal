@@ -4,13 +4,13 @@ from collections import deque
 
 def solve():
     N, M = map(int, input().split())
-    edges = [set() for _ in range(N+1)]
+    edges = [set() for _ in range(N + 1)]
     for a, b in (map(int, line.split()) for line in sys.stdin):
         edges[a].add(b)
 
     # 答えが見つかるまで、スタート地点は全て試します
-    for start in range(1, N+1):
-        visited = [0]*(N+1)
+    for start in range(1, N + 1):
+        visited = [0] * (N + 1)
 
         dq = deque([(start, {start})])
         visited[start] = 1
@@ -41,5 +41,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

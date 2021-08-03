@@ -1,6 +1,6 @@
-def solve(arr): 
+def solve(arr):
     output = []
-    
+
     for x in arr[::-1]:
         if x in output:
             continue

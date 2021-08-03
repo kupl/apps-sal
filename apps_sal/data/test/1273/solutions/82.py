@@ -1,6 +1,8 @@
 import sys
 from collections import defaultdict, deque
-int1 = lambda x: int(x) - 1
+def int1(x): return int(x) - 1
+
+
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
@@ -45,4 +47,3 @@ while len(que) != 0:
 
 for v in list(ab.values()):
     print(v)
-

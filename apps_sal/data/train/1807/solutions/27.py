@@ -4,7 +4,7 @@ class Solution:
             return a
         else:
             return self.euclid(b, a % b)
-        
+
     def simplifiedFractions(self, n: int) -> List[str]:
         res = []
         for d in range(2, n + 1):

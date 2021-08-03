@@ -32,4 +32,3 @@ else:
     if num_2 + num_1 > max_num:
         max_num = num_1 + num_2
 print(max_num)
-

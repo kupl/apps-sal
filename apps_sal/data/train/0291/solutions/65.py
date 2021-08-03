@@ -9,7 +9,7 @@ class Solution:
         cur = 0
         ret = 0
         for a in arr:
-            cur = (a + cur) 
+            cur = (a + cur)
             if cur % 2 == 0:
                 even += 1
                 ret += odd
@@ -18,4 +18,3 @@ class Solution:
                 ret += even
             ret = ret % (10 ** 9 + 7)
         return ret
-

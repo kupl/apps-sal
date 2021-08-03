@@ -2,13 +2,13 @@ import sys
 
 N = int(input())
 events = [(0, False)] * 2 * N
-for i in range(1,N+1):
+for i in range(1, N + 1):
     A, B = list(map(int, input().split()))
     if A != -1:
         if events[A - 1][0] != 0:
             print('No')
             return
-        events[A-1] = (i, B!=-1) # 人のid, 降りる場所が決まってるか
+        events[A - 1] = (i, B != -1)  # 人のid, 降りる場所が決まってるか
     if B != -1:
         if events[B - 1][0] != 0:
             print('No')
@@ -18,6 +18,7 @@ for i in range(1,N+1):
         print('No')
         return
 
+
 def judge(l, r):
     if l % 2 != 0 or r % 2 != 0:
         return False
@@ -26,10 +27,10 @@ def judge(l, r):
         l_id, l_flg = events[i]
         r_id, r_flg = events[i + d]
         if l_flg or r_flg:
-            if (l_id != -1*r_id):
+            if (l_id != -1 * r_id):
                 return False
         if l_id != 0 and r_id != 0:
-            if l_id != -1*r_id:
+            if l_id != -1 * r_id:
                 return False
         if r_id > 0:
             return False
@@ -38,7 +39,7 @@ def judge(l, r):
     return True
 
 
-dp = [False] * (N+1) # 2*iまでの区間で矛盾なく、かつ地点2*iで人を一人も載せないようにできるか
+dp = [False] * (N + 1)  # 2*iまでの区間で矛盾なく、かつ地点2*iで人を一人も載せないようにできるか
 dp[0] = True
 for i in range(N + 1):
     if dp[i]:
@@ -50,4 +51,3 @@ if dp[-1]:
     print('Yes')
 else:
     print('No')
-

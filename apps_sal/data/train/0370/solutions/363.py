@@ -129,4 +129,3 @@ class Solution:
         # bfs
         target = len(A) // 2
         return bfs(gs, adj, target)
-

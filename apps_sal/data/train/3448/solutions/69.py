@@ -8,6 +8,6 @@ def f(n):
     if n == 0:
         return None
     suma = 0
-    for i in range(n+1):
-        suma+=i
+    for i in range(n + 1):
+        suma += i
     return suma

@@ -8,5 +8,3 @@ for i in range(n):
             if j - i > max:
                 max = j - i
 print(n - max - 1)
-    
-

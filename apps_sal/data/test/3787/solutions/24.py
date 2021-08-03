@@ -20,4 +20,3 @@ def solve(n, a, b):
 
 n, a, b = list(map(int, input().split()))
 print((*solve(n, a, b)))
-

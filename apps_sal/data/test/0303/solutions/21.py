@@ -11,5 +11,5 @@ def main():
     else:
         print('NO')
 
-main()
 
+main()

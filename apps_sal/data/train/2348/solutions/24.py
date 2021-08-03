@@ -1,5 +1,5 @@
-3.6
 import bisect
+3.6
 n = int(input())
 x = [int(item) for item in input().split()]
 l = int(input())
@@ -7,7 +7,8 @@ q = int(input())
 ab = []
 for i in range(q):
     a, b = [int(item) for item in input().split()]
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     if a > b:
         a, b = b, a
     ab.append((a, b))
@@ -18,7 +19,7 @@ for i, item in enumerate(x):
 
 for i in range(1, 18):
     for j in range(n):
-        dt[i][j] = dt[i-1][dt[i-1][j]]
+        dt[i][j] = dt[i - 1][dt[i - 1][j]]
 
 for a, b in ab:
     days = 0

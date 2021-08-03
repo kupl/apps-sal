@@ -1,5 +1,5 @@
 def hello(name=''):
-    if name =='':
+    if name == '':
         txt = 'Hello, World!'
         return txt
     elif len(name) == 1:
@@ -12,4 +12,3 @@ def hello(name=''):
         txt = 'Hello, World!'
         return txt
     return txt
-

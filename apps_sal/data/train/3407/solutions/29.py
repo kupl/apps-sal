@@ -5,5 +5,5 @@ def palindrome_chain_length(n):
         x = str(n)
         n = n + int(x[::-1])
         x = str(n)
-        a = a+1
+        a = a + 1
     return a

@@ -25,5 +25,3 @@ if f1 == s or f2 == s or f == s:
     print('YES')
 else:
     print('NO')
-    
-

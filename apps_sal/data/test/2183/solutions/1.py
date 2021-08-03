@@ -5,4 +5,4 @@ if not(1 in A):
 elif not(2 in A):
     print(2)
 else:
-    print(3)    
+    print(3)

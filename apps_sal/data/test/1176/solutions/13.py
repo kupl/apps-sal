@@ -14,4 +14,3 @@ for i in range(N):
     keep = min(keep, A[i])
 
 print((souwa - 2 * keep * (cnt % 2)))
-

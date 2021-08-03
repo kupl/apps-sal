@@ -1,3 +1,3 @@
-N=int(input())
 import math
+N = int(input())
 print((int(math.sqrt(N)))**2)

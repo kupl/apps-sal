@@ -11,6 +11,5 @@ for val in flowers:
 while ott > odd + 2:
     ott -= 2
     odd += 1
-    
-print(min(odd, ott))
 
+print(min(odd, ott))

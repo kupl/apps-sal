@@ -14,7 +14,7 @@ ans = 0
 val = 0
 Group = []
 for i in Dict.keys():
-    if(Dict[i]>1):
+    if(Dict[i] > 1):
         Group.append(i)
         ans += Sum[i]
         val |= i

@@ -13,26 +13,26 @@ def main():
         cnt[val] += 1
 
     all_set = sorted(set(b))
-    #print(all_set)
+    # print(all_set)
     n_all_set = len(all_set)
 
     nextL = [0] * n
     nextR = [0] * n
     for i in range(1, n_all_set):
-        nextL[all_set[i]] = all_set[i-1]
-        #print('l',nextL)
-    for i in range(n_all_set-1):
-        nextR[all_set[i]] = all_set[i+1]
-        #print('r',nextR)
+        nextL[all_set[i]] = all_set[i - 1]
+        # print('l',nextL)
+    for i in range(n_all_set - 1):
+        nextR[all_set[i]] = all_set[i + 1]
+        # print('r',nextR)
 
     nextR[all_set[-1]] = all_set[0]
     nextL[all_set[0]] = all_set[-1]
-    #print(nextR,nextL)
+    # print(nextR,nextL)
 
     res = []
 
     def opositeMod(x):
-        return 0 if x == 0 else n-x
+        return 0 if x == 0 else n - x
 
     for val in a:
         cand_pos = bisect.bisect_left(all_set, opositeMod(val))
@@ -52,16 +52,18 @@ def main():
                 nextL[upd] = nextL[current]
             cand_val = current
 
-        res.append((val+cand_val) % n)
+        res.append((val + cand_val) % n)
         cnt[cand_val] -= 1
         if cnt[cand_val] == 0:
             nextL[nextR[cand_val]] = nextL[cand_val]
             nextR[nextL[cand_val]] = nextR[cand_val]
-            #print(nextR,nextL)
+            # print(nextR,nextL)
 
     print(*res)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

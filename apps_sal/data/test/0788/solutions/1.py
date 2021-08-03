@@ -11,4 +11,3 @@ for i in range(1, 7):
     else:
         ans += (ord(s[i]) - ord('0'))
 print(ans)
-

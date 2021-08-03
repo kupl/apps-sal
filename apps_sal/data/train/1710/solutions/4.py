@@ -7,24 +7,28 @@ class Warrior:
     @property
     def experience(self):
         return min(self.xp, 10000)
+
     @property
     def level(self):
-        return self.experience//100
+        return self.experience // 100
+
     @property
     def rank(self):
-        return self.ranks[self.level//10]
-    
+        return self.ranks[self.level // 10]
+
     def battle(self, level):
         diff = level - self.level
-        if not (0<level<=100): return "Invalid level"
-        elif diff>4 and self.ranks.index(self.ranks[level//10]) > self.ranks.index(self.rank): return "You've been defeated"
-        elif diff>0:
-            self.xp += 20*diff*diff
+        if not (0 < level <= 100):
+            return "Invalid level"
+        elif diff > 4 and self.ranks.index(self.ranks[level // 10]) > self.ranks.index(self.rank):
+            return "You've been defeated"
+        elif diff > 0:
+            self.xp += 20 * diff * diff
             return "An intense fight"
         elif not diff:
             self.xp += 10
             return 'A good fight'
-        elif diff==-1:
+        elif diff == -1:
             self.xp += 5
             return 'A good fight'
         return "Easy fight"

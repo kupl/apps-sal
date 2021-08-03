@@ -14,7 +14,8 @@ def solve(s, t):
     if a[0] == a[1] and b[0] == b[1]:
         return 'Yes'
     return 'No'
-    
+
+
 k = int(input())
 
 for t in range(k):
@@ -22,4 +23,3 @@ for t in range(k):
     s = input()
     t = input()
     print(solve(s, t))
-

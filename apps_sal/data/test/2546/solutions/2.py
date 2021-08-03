@@ -3,6 +3,7 @@ readline = sys.stdin.readline
 
 inf = 10**16
 
+
 def calc(m, L, R):
     N = len(L)
     cl = 0
@@ -19,28 +20,29 @@ def calc(m, L, R):
         else:
             candi.append(L[i])
     cm = len(candi)
-    if cl > N//2:
+    if cl > N // 2:
         return inf
-    k = min(cm, N//2 - cl)
+    k = min(cm, N // 2 - cl)
     candi.sort()
     ss += sum(candi[:k])
-    ss += (cm - k)*m
-    
+    ss += (cm - k) * m
+
     return ss
 
+
 T = int(readline())
-Ans = [None]*T 
+Ans = [None] * T
 for qu in range(T):
     M, LS = list(map(int, readline().split()))
-    L = [None]*M
-    R = [None]*M
+    L = [None] * M
+    R = [None] * M
     for i in range(M):
         L[i], R[i] = list(map(int, readline().split()))
-    
+
     ok = 0
-    ng = 10**9+1
+    ng = 10**9 + 1
     while abs(ok - ng) > 1:
-        med = (ok + ng)//2
+        med = (ok + ng) // 2
         if calc(med, L, R) <= LS:
             ok = med
         else:
@@ -48,4 +50,3 @@ for qu in range(T):
     Ans[qu] = ok
 
 print('\n'.join(map(str, Ans)))
-

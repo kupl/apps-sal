@@ -5,6 +5,7 @@ def f(i, m, cnt):
         cnt[i] = m
         i += 1
 
+
 n, q = map(int, input().split())
 inf = n + 114514
 ans = (n - 2) * (n - 2)

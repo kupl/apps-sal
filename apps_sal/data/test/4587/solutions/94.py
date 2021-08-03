@@ -1,23 +1,24 @@
 def upper_bound(A, x):
     s, t = -1, len(A)
     while t - s > 1:
-        m = (s+t)//2
+        m = (s + t) // 2
         if A[m] > x:
             t = m
         else:
             s = m
-    
+
     return t
+
 
 def lower_bound(A, x):
     s, t = -1, len(A)
     while t - s > 1:
-        m = (s+t)//2
+        m = (s + t) // 2
         if A[m] >= x:
             t = m
         else:
             s = m
-    
+
     return t
 
 

@@ -1,6 +1,7 @@
 import sys
 def inpl(): return list(map(int, sys.stdin.readline().split()))
 
+
 N = int(input())
 
 ans = 1

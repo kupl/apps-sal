@@ -14,7 +14,9 @@ def main():
     m = math.ceil(((k - .5) * n * 2 - 2 * sum(a)) / (2 * k - 2 * (k - .5)))
     print(int(m))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

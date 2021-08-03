@@ -35,29 +35,32 @@ def get_way(start, end):
         l_way, r_way = [start], [end]
         while True:
             l = l_way[-1] // 2
-            if l: l_way.append(l)
+            if l:
+                l_way.append(l)
             r = r_way[-1] // 2
-            if r: r_way.append(r)
+            if r:
+                r_way.append(r)
 
             if r_way[-1] == start:
                 return r_way
             union = set(l_way) & set(r_way)
             if union:
-                #print(l_way)
-                #print(r_way)
+                # print(l_way)
+                # print(r_way)
                 r_way = r_way[:r_way.index(max(union))]
                 l_way = l_way[:l_way.index(max(union))]
-                #print(l_way)
-                #print(r_way)
-                #print(r_way)
+                # print(l_way)
+                # print(r_way)
+                # print(r_way)
                 #del r_way[-1]
                 r_way.reverse()
                 return l_way + [union.pop()] + r_way
 
-    #print(_get_raw_way())
+    # print(_get_raw_way())
     a, b = tee(_get_raw_way())
     next(b, None)
     return list(zip(a, b))
+
 
 #
 q = int(input())
@@ -69,4 +72,3 @@ for _ in range(q):
         print(get_price(data[1], data[2]))
 
 #print(get_way(568636620057521218, 935366325112217858))
-

@@ -4,11 +4,11 @@ class Solution:
         for u, v, w in edges:
             weight[u][v] = w
             weight[v][u] = w
-        
+
         def getNumberOfNeighbors(city):
             heap = [(0, city)]
             dist = {}
-            
+
             while heap:
                 w, u = heapq.heappop(heap)
                 if u not in dist and u != city:
@@ -17,7 +17,7 @@ class Solution:
                     if v in dist:
                         continue
                     if w + weight[u][v] <= distanceThreshold:
-                        heapq.heappush(heap, (w+weight[u][v], v))
+                        heapq.heappush(heap, (w + weight[u][v], v))
             return len(dist)
         minCount = float('inf')
         ans = None
@@ -27,5 +27,3 @@ class Solution:
                 ans = i
                 minCount = count
         return ans
-        
-

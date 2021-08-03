@@ -1,6 +1,6 @@
-def check(a, x): 
-    b=a.count(x)
-    if b==0:
+def check(a, x):
+    b = a.count(x)
+    if b == 0:
         return False
     else:
         return True

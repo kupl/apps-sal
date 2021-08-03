@@ -5,6 +5,7 @@ ISSUERS = {
     ((4,), (13, 16)): 'VISA',
 }
 
+
 def get_issuer(number):
     return next((issuer for (starts, lengths), issuer in ISSUERS.items()
-        if str(number).startswith(tuple(map(str, starts))) and len(str(number)) in lengths), 'Unknown')
+                 if str(number).startswith(tuple(map(str, starts))) and len(str(number)) in lengths), 'Unknown')

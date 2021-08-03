@@ -7,6 +7,7 @@ def solve(arr, n):
                     return True
     return False
 
+
 n = int(input())
 arr = list(map(int, input().split()))
 
@@ -14,4 +15,3 @@ if solve(arr, n):
     print("YES")
 else:
     print("NO")
-

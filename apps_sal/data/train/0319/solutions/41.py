@@ -1,12 +1,13 @@
 from functools import lru_cache
 
+
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         vals = stoneValue
         n = len(vals)
         dp = collections.deque([None] * 3)
         dp[0] = [0, 0]
-        
+
         for i in range(n - 1, -1, -1):
             p1, p2 = -1e9, -1
             s = 0
@@ -19,7 +20,7 @@ class Solution:
                     p2 = p1_
             dp.pop()
             dp.appendleft((p1, p2))
-        
+
         p1, p2 = dp[0]
         # print(p1, p2)
         # p2 = sum(vals) - p1

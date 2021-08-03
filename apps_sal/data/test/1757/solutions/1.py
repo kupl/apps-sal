@@ -12,5 +12,3 @@ while j <= n:
     i, j = j, i + j
 
 print(''.join(s))
-
-

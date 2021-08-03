@@ -1,5 +1,6 @@
 from re import findall
 
+
 def denumerate(enum):
     enum = sorted(enum) if isinstance(enum, list) else ''
     if findall(r"(?<=\[)(\(\d,\s'[a-zA-Z\d]'\)[,\s]*)*(?=\])", str(enum)):

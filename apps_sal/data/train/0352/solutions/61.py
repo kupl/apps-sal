@@ -1,10 +1,10 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        words.sort(key = lambda x:len(x))
-        chainLen = {w:1 for w in words}
+        words.sort(key=lambda x: len(x))
+        chainLen = {w: 1 for w in words}
         ret = 1
         for i, word1 in enumerate(words):
-            for j in range(i+1, len(words)):
+            for j in range(i + 1, len(words)):
                 word2 = words[j]
                 if len(word2) == len(word1):
                     continue
@@ -30,4 +30,3 @@ class Solution:
                     ret = max(ret, l)
                     chainLen[word2] = l
         return ret
-

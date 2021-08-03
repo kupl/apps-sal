@@ -1,4 +1,3 @@
 import numpy
 
-print((int(input())*2*numpy.pi))
-
+print((int(input()) * 2 * numpy.pi))

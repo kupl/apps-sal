@@ -13,5 +13,3 @@ for i in s:
         withb %= 10 ** 9 + 7
         withoutb = 0
 print(ans % (10 ** 9 + 7))
-    
-

@@ -45,29 +45,30 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-N,M,K=map(int,input().split())
-tree=UnionFind(N)
-not_friend_candidates=[]
+
+N, M, K = map(int, input().split())
+tree = UnionFind(N)
+not_friend_candidates = []
 
 for i in range(M):
-  A,B=list(map(int,input().split()))
-  A-=1
-  B-=1
-  tree.union(A,B)
-  not_friend_candidates.append([A,B])
+    A, B = list(map(int, input().split()))
+    A -= 1
+    B -= 1
+    tree.union(A, B)
+    not_friend_candidates.append([A, B])
 
 for j in range(K):
-  C,D=list(map(int,input().split()))
-  C-=1
-  D-=1
-  not_friend_candidates.append([C,D])
+    C, D = list(map(int, input().split()))
+    C -= 1
+    D -= 1
+    not_friend_candidates.append([C, D])
 
 
-ans=[0]*N
-for i,j in not_friend_candidates:
-  if tree.same(i,j):
-    ans[i]-=1
-    ans[j]-=1
+ans = [0] * N
+for i, j in not_friend_candidates:
+    if tree.same(i, j):
+        ans[i] -= 1
+        ans[j] -= 1
 for i in range(N):
-  ans[i]+=tree.size(i)-1
+    ans[i] += tree.size(i) - 1
 print(*ans)

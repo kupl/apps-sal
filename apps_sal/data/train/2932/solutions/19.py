@@ -3,4 +3,3 @@ def colour_association(arr):
     for i in arr:
         lst += [{i[0]:i[1]}]
     return lst
-

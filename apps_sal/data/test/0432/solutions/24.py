@@ -35,4 +35,3 @@ for i in range(n):
         res += mmin
 
 print(res)
-

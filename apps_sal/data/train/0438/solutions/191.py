@@ -15,7 +15,7 @@ class Solution:
             curones = uf.rank[curf]
             if curones == m:
                 curok.add(curf)
-                
+
             for f in ok:
                 newf = uf.find(f)
                 if uf.rank[newf] == m:
@@ -25,22 +25,20 @@ class Solution:
                 res = step
             step += 1
         return res
-        
-        
-        
-        
+
+
 class UF:
     def __init__(self, n):
         self.n = n
         self.fathers = [i for i in range(n)]
         self.rank = [1 for _ in range(n)]
         self.isOne = [False for _ in range(n)]
-        
+
     def find(self, x):
         if x != self.fathers[x]:
             self.fathers[x] = self.find(self.fathers[x])
         return self.fathers[x]
-    
+
     def union(self, x, y):
         fx, fy = self.find(x), self.find(y)
         if fx != fy:
@@ -51,6 +49,3 @@ class UF:
             else:
                 self.fathers[fy] = fx
                 self.rank[fx] = count
-    
-        
-

@@ -17,7 +17,3 @@ if len(rez) > 1:
     print(rez[0] + rez[1])
 else:
     print(rez[0] + rez[0])
-
-
-
-

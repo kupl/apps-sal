@@ -1,5 +1,5 @@
-#ABC164
-N=int(input())
+# ABC164
+N = int(input())
 a = []
 for i in range(N):
     a_temp = input()

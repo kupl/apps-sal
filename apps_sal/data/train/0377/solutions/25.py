@@ -4,12 +4,14 @@ class Solution:
             while b:
                 a, b = b, a % b
             return a
+
         def lcm(a, b):
             return a * b // gcd(a, b)
         val = lcm(A, B)
+
         def number_magic_below(x):
             return x // A + x // B - x // val
-        
+
         lo = min(A, B)
         hi = N * min(A, B)
         while lo < hi:

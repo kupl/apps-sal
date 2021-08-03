@@ -2,6 +2,7 @@ MOD = 12345787
 FLAG = False
 f = []
 
+
 def prework(MAXN=10000):
     nonlocal FLAG
     nonlocal f
@@ -33,6 +34,7 @@ def prework(MAXN=10000):
             f[i + 1][2][k] += f[i][5][k]
             f[i + 1][1][k] += f[i][6][k]
             f[i + 1][0][k] += f[i][7][k]
+
 
 def three_by_n(n):
     prework()

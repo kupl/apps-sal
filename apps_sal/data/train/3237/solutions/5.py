@@ -4,6 +4,5 @@ def even_or_odd(number):
         status = "Even"
     else:
         status = "Odd"
-    
-    return status
 
+    return status

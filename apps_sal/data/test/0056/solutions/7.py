@@ -13,4 +13,6 @@ def __starting_point():
                 A[i][j] = 1
                 ans += 1
     print(ans)
+
+
 __starting_point()

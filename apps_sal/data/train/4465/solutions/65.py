@@ -4,7 +4,3 @@ def super_size(n):
     strings = [str(integ) for integ in ints]
     new_str = ''.join(strings)
     return int(new_str)
-    
-    
-    
-

@@ -1,7 +1,9 @@
 from functools import lru_cache
+
+
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
-        
+
         res = []
         for i in range(lo, hi + 1):
             res.append((self.power(i), i))
@@ -16,7 +18,7 @@ class Solution:
             return 1 + self.power(num // 2)
         else:
             return 1 + self.power(3 * num + 1)
-        
+
         # res = 0
         # while num != 1:
         #     if num % 2 == 0:
@@ -25,4 +27,3 @@ class Solution:
         #         num = 3 * num + 1
         #     res += 1
         # return res
-

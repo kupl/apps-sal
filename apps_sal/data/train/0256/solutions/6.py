@@ -8,7 +8,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
+
     def condition(self, piles, H, k):
         hours = 0
         for pile in piles:

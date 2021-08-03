@@ -20,4 +20,3 @@ for i in range(len(a)):
 print(len(ans))
 for i in range(len(ans)):
     print(len(ans[i]), *ans[i])
-

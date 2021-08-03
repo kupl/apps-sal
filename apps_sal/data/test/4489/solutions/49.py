@@ -11,17 +11,17 @@ list1 = []
 ans = 0
 
 for i in range(len(lS)):
-    
+
     if lS[i][0] in cT:
         x = lS[i][1] - cT[lS[i][0]]
-        
+
     else:
         x = lS[i][1]
-        
+
     if x > 0:
         list1.append(x)
-    
+
 if list1 == []:
-  print(0)
+    print(0)
 else:
-  print(max(list1))
+    print(max(list1))

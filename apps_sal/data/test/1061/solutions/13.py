@@ -5,4 +5,3 @@ for i in range(5):
             x, y = i, j
 
 print(abs(x - 2) + abs(y - 2))
-

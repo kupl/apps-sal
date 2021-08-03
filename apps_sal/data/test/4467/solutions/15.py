@@ -13,4 +13,3 @@ for a, b in AB:
             G.add_edge(a * 1000 + b, c * 1000 + d, capacity=1)
 flow_value, flow_dict = nx.maximum_flow(G, -1, -2)
 print(flow_value)
-

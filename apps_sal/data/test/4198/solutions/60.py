@@ -27,7 +27,7 @@ def binary_search(num_max):
         else:
             right = mid - 1
 
-    return left-1
+    return left - 1
 
 
 # data = list(range(0, X//A+1))
@@ -36,8 +36,7 @@ store = 10**9
 if X >= calc_value(store):
     ans = store
 else:
-    ans = binary_search(X//A)
+    ans = binary_search(X // A)
     ans = min(10**9, ans)
 
 print(ans)
-

@@ -4,9 +4,8 @@ class Solution:
         d = 0
         for i in range(1, len(nums) - 1):
             d = max(d, abs(nums[0] - nums[i + 1]) - abs(nums[i] - nums[i + 1]),
-                       abs(nums[-1] - nums[i - 1]) - abs(nums[i] - nums[i - 1]))
-        
-        
+                    abs(nums[-1] - nums[i - 1]) - abs(nums[i] - nums[i - 1]))
+
         high = -math.inf
         low = math.inf
         for x, y in zip(nums, nums[1:]):

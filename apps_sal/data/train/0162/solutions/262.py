@@ -1,7 +1,8 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        if not text1: return 0
-        
+        if not text1:
+            return 0
+
         l = len(text1)
         n = next((i for i, c in enumerate(text1) if c == text2[0]), l)
         commonSubstrings = [0] * n + [1] * (l - n)
@@ -17,4 +18,3 @@ class Solution:
             commonSubstrings = tmp
 
         return commonSubstrings[-1]
-

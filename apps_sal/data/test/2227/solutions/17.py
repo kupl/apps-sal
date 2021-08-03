@@ -15,4 +15,3 @@ while i < len(s) - 4:
 
 
 print("%d" % total)
-

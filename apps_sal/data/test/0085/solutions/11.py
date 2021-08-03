@@ -1,11 +1,14 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 a, b = f()
 c, d = f()
 
 
 def g(p, k):
     s = 1
-    while k % p ** s == 0: s += 1
+    while k % p ** s == 0:
+        s += 1
     return s - 1
 
 

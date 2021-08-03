@@ -1,5 +1,5 @@
 n = int(input())
-lst = list(map(int,input().split()))
+lst = list(map(int, input().split()))
 # lst = [int(i) for i in list(input()) if i!=' ']
 # print(lst)
 st = set()
@@ -9,12 +9,11 @@ for i in range(len(lst)):
     if x == idx:
         pt = [x]
         # print(pt)
-        idx-=1
+        idx -= 1
         while idx in st:
             pt.append(idx)
-            idx-=1
+            idx -= 1
         print(' '.join([str(i) for i in pt]))
     else:
         print()
         st.add(x)
-

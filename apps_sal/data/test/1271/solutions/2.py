@@ -1,11 +1,13 @@
 INF = 1e10
 max_n = 50
 max_k = 2000
+
+
 def main():
     n, s, k = map(int, input().split())
     s -= 1
-    buf = ['']*(max_n + 1)
-    dp = [[0 for i in range(max_n + 1)] for j in range(max_k + 1)] 
+    buf = [''] * (max_n + 1)
+    dp = [[0 for i in range(max_n + 1)] for j in range(max_k + 1)]
     r = list(map(int, input().split()))
     c = input()
     answer = INF
@@ -35,6 +37,9 @@ def main():
         return
     print(answer)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

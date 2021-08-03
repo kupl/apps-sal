@@ -1,6 +1,7 @@
 from heapq import heappush, heappop
 from collections import deque
 
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         # min_stack = []
@@ -28,8 +29,7 @@ class Solution:
         #     else:
         #         min_stack.pop()
         # return longest
-            
-            
+
         left = 0
         min_q = deque()
         max_q = deque()
@@ -41,7 +41,7 @@ class Solution:
             max_q.append((number, _index))
             _index = right
             while min_q and number <= min_q[-1][0]:
-                _, _index =min_q.pop()
+                _, _index = min_q.pop()
             min_q.append((number, _index))
             while max_q[0][0] - min_q[0][0] > limit:
                 if max_q[0][1] > min_q[0][1]:
@@ -58,9 +58,6 @@ class Solution:
             left = max(min_q[0][1], max_q[0][1])
             longest = max(longest, right - left + 1)
         return longest
-                
-    
+
     def calc_diff(self, a, b):
         return abs(a - b)
-    
-

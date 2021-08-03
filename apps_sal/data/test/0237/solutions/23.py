@@ -8,7 +8,7 @@ put = 1
 
 while (m >= put):
     m -= put
-    best+= 1
+    best += 1
     put += (sleva > 0) + (sprava > 0)
     if sleva:
         sleva -= 1
@@ -17,5 +17,5 @@ while (m >= put):
     if sleva == sprava == 0:
         best += (m // put)
         break
-    
+
 print(best)

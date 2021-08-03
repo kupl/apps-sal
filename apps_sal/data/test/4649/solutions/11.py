@@ -37,4 +37,3 @@ def solve():
 query_count = Read.int()
 for j in range(query_count):
     solve()
-

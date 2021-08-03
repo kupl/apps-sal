@@ -1,5 +1,6 @@
 from itertools import count
 
+
 def find_missing_number(sequence):
     try:
         seq = sorted(map(int, sequence.split()))

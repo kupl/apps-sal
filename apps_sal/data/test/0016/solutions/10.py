@@ -9,4 +9,3 @@ if c3 != 0 and c1 == 0:
     print(0)
 else:
     print(1)
-

@@ -14,12 +14,12 @@ for _ in range(t):
             endtopow[h[1]] = max(h[0], endtopow[h[1]])
         else:
             endtopow[h[1]] = h[0]
-    endurances = [0 for x in range(n+2)]
+    endurances = [0 for x in range(n + 2)]
     for i in range(len(endurances) - 2, -1, -1):
         if i in endtopow:
-            endurances[i] = max(endurances[i+1], endtopow[i])
+            endurances[i] = max(endurances[i + 1], endtopow[i])
         else:
-            endurances[i] = endurances[i+1]
+            endurances[i] = endurances[i + 1]
     days = 0
     msofar = 0
     maxpow = 0
@@ -42,4 +42,3 @@ for _ in range(t):
         print(days)
     else:
         print(-1)
-

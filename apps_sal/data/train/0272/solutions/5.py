@@ -30,4 +30,3 @@ class Solution:
                     used[box] = True
                     queue.append(box)
         return ans
-

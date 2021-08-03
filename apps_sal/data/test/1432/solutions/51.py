@@ -9,6 +9,6 @@ for i, a in enumerate(A):
         r[0] -= a
 r[-1] = 2 * A[-1] - r[0]
 for i in range(N - 2, 0, -1):
-    r[i] = 2 * A[i] - r[i+1]
+    r[i] = 2 * A[i] - r[i + 1]
 ans = " ".join(map(str, r))
 print(ans)

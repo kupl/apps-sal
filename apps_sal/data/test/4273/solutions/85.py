@@ -1,7 +1,8 @@
 from sys import stdin
-rs = lambda : stdin.readline().strip()
-ri = lambda : int(rs())
-ril = lambda : list(map(int, rs().split()))
+def rs(): return stdin.readline().strip()
+def ri(): return int(rs())
+def ril(): return list(map(int, rs().split()))
+
 
 def main():
     N = ri()
@@ -19,9 +20,8 @@ def main():
     print(ans)
 
 
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

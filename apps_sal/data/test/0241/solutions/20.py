@@ -7,4 +7,3 @@ elif (v1 < t1) + (v2 > t2) > n - m:
     print('Incorrect')
 else:
     print('Correct')
-

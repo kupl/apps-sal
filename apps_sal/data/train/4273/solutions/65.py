@@ -1,5 +1,5 @@
 def shorten_to_date(long_date):
-    short=[]
+    short = []
     words = long_date.split(' ')
     for word in words:
         if word != words[2] and word != words[3]:

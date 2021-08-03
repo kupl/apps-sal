@@ -19,5 +19,3 @@ if r == inf:
     print(-1)
 else:
     print(r)
-
-

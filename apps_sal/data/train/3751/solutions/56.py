@@ -3,5 +3,5 @@ def bool_to_word(boolean):
     if (boolean == True):
         dude = 'Yes'
     else:
-        dude =  'No'
-    return dude 
+        dude = 'No'
+    return dude

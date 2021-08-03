@@ -1,4 +1,4 @@
-(n,k) = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 newarr = []
 
@@ -14,7 +14,6 @@ for tmp in arr:
 
 now = sum(newarr)
 if (k - used) % 2 == 1:
-    now -= 2*min(newarr)
+    now -= 2 * min(newarr)
 
 print(now)
-

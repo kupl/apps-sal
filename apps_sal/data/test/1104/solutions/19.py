@@ -16,7 +16,7 @@ for x in range(4):
                 break
         if not f:
             break
-        
+
     if f:
         F = True
         break
@@ -26,4 +26,3 @@ if F:
     print(*ans)
 else:
     print("NO")
-

@@ -11,4 +11,3 @@ class Solution:
                 res += pow(2, right - left)
                 left += 1
         return res % mod
-

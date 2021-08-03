@@ -32,4 +32,3 @@ for x in s:
     ans += cnt * len(s[x])
     cnt += len(s[x])
 print(ans)
-

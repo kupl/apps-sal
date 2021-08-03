@@ -1,10 +1,12 @@
 from random import randint
 
+
 def f(s):
     a = 0
     for i in s:
         a += int(i)
     return a
+
 
 def solve(n):
     n1 = list(str(n))
@@ -20,6 +22,7 @@ def solve(n):
         ans = n1
     return [int(''.join(ans)), maxx]
 
+
 def tl(n):
     ans = 0
     maxx = 0
@@ -28,6 +31,7 @@ def tl(n):
             maxx = f(list(str(i)))
             ans = i
     return [ans, maxx]
+
 
 '''for kkk in range(100):
     n = randint(1, 10 ** 5)
@@ -40,4 +44,3 @@ def tl(n):
 print('ok')'''
 n = int(input())
 print(solve(n)[0])
-

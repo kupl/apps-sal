@@ -9,7 +9,7 @@ for i in range(n):
             d[name].append(s[2 + z])
         else:
             d[name] = [s[2 + z]]
-            
+
 for k in d.keys():
     a = set(d[k])
     a = list(a)
@@ -27,9 +27,6 @@ for k in d.keys():
     d[k] = b
 print(len(d))
 for k in d.keys():
-    print(k, end = ' ')
-    print(len(d[k]), end = ' ')
+    print(k, end=' ')
+    print(len(d[k]), end=' ')
     print(' '.join(d[k]))
-                
-            
-    

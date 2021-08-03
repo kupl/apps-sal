@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 S = input().strip()
@@ -15,10 +20,12 @@ for s in S:
     else:
         x += 1
     if y > x:
-        if k == 'D': c += 1
+        if k == 'D':
+            c += 1
         k = 'U'
     elif x > y:
-        if k == 'U': c += 1
+        if k == 'U':
+            c += 1
         k = 'D'
-        
+
 print(c)

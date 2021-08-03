@@ -1,6 +1,6 @@
+import heapq
 3
 
-import heapq
 
 def main():
     line1 = input()
@@ -20,6 +20,9 @@ def main():
     print(ans)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

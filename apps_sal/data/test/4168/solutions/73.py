@@ -1,14 +1,14 @@
-#coding:utf-8
+# coding:utf-8
 
 import sys
 import bisect
 
 SUM_P = [2**x for x in range(0, 31, 2)]
 SUM_M = [2**x for x in range(1, 31, 2)]
-for i in range(len(SUM_P)-1):
-    SUM_P[i+1] += SUM_P[i]
-for i in range(len(SUM_M)-1):
-    SUM_M[i+1] += SUM_M[i]
+for i in range(len(SUM_P) - 1):
+    SUM_P[i + 1] += SUM_P[i]
+for i in range(len(SUM_M) - 1):
+    SUM_M[i + 1] += SUM_M[i]
 
 
 N = int(input())
@@ -27,4 +27,3 @@ while N != 0:
         ret += 2**idx
 
 print((format(ret, "b")))
-

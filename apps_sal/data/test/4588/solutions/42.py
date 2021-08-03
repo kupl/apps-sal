@@ -1,9 +1,7 @@
-x,y=list(map(str,input().split()))
-if x==y:
+x, y = list(map(str, input().split()))
+if x == y:
     print("=")
-elif x<y:
+elif x < y:
     print("<")
 else:
     print(">")
-    
-

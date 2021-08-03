@@ -17,4 +17,3 @@ for i in range(r):
             cnt += 1
 
 print(cnt)
-

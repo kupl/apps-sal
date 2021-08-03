@@ -3,6 +3,6 @@ def multiply(n):
     if n == 0:
         return 0
     if n > 0:
-        return n*(5**l)
+        return n * (5**l)
     if n < 0:
-        return n*(5**(l-1))
+        return n * (5**(l - 1))

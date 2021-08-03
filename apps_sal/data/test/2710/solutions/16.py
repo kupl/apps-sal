@@ -57,10 +57,6 @@ class Graph:
         return flow
 
 
-
-
-
-
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -100,6 +96,3 @@ if max_flow == sum(a) and sum(a) == sum(b):
 
 else:
     print("NO")
-
-
-

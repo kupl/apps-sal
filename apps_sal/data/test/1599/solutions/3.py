@@ -3,11 +3,12 @@ import re
 from fractions import Fraction
 from collections import Counter
 
+
 class Task:
     s = ''
     queries = []
     answer = ''
-    
+
     def __init__(self):
         self.s = input()
         self.queries = [[] for _ in range(int(input()))]
@@ -28,10 +29,10 @@ class Task:
             #self.answer += str(localAnswer) + '\n'
             print(localAnswer)
 
-    #def printAnswer(self):
+    # def printAnswer(self):
     #    print(self.answer)
+
 
 task = Task()
 task.solve()
-#task.printAnswer()
-
+# task.printAnswer()

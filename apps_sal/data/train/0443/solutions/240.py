@@ -1,4 +1,6 @@
 import itertools
+
+
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
         candidates = list(combinations(rating, 3))

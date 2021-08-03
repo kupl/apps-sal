@@ -106,4 +106,3 @@ print((solve(L, R)))
 #         t1, t2 = solve(l, r), test(l, r)
 #         if t1 != t2:
 #             print(bin(l), bin(r), l, r, t1, t2)
-

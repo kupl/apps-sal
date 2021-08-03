@@ -1,5 +1,6 @@
 __author__ = 'Lipen'
 
+
 def main():
     n, s = map(int, input().split())
     data = []
@@ -17,12 +18,13 @@ def main():
             if data[j][3] <= r:
                 count += data[j][2]
 
-        if count + s >= 1000000 and (r<rmin or rmin==-1):
+        if count + s >= 1000000 and (r < rmin or rmin == -1):
             rmin = r
 
     if rmin == -1:
         print(-1)
     else:
         print(pow(rmin, .5))
+
 
 main()

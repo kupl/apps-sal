@@ -1,5 +1,5 @@
 M = 0x3b800001
-wa = 0;
+wa = 0
 n = int(input())
 a = list(map(int, input().split()))
 now = 1
@@ -10,4 +10,3 @@ for i in range(n - 1)[::-1]:
     now *= 2
     now %= M
 print(wa % M)
-

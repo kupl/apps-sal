@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Person:
     def __init__(self, name, parent):
         self.name = name
@@ -12,6 +13,7 @@ class Person:
 
     def add_child(self, child):
         self.children.append(child)
+
 
 class Order:
     def __init__(self):
@@ -30,7 +32,6 @@ class Order:
         return res
 
 
-
 class ThroneInheritance:
     def __init__(self, kingName: str):
         self.family = defaultdict(Person)
@@ -42,7 +43,6 @@ class ThroneInheritance:
         new_child = Person(childName, parent)
         self.family[childName] = new_child
         self.family[parentName].add_child(new_child)
-
 
     def death(self, name: str) -> None:
         self.family[name].is_alive = False

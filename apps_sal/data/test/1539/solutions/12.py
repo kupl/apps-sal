@@ -1,9 +1,12 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 k, n = 1, f()
 s = sorted(zip(f(), f()), key=lambda q: q[0])
 
 t = [0] * 201
-for l, d in s: t[d] += 1
+for l, d in s:
+    t[d] += 1
 
 j = [i for i in range(201) if t[i]]
 j.reverse()
@@ -28,8 +31,9 @@ for l, d in s:
         k = D = 0
     k += 1
     D += d
-    
+
     t[d] -= 1
-    if not t[d]: j.remove(d)
-    
+    if not t[d]:
+        j.remove(d)
+
 print(S - m)

@@ -17,4 +17,3 @@ for _ in range(n):
             break
     else:
         print('YES' if j == len(t) else 'NO')
-

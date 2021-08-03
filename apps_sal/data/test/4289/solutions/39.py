@@ -7,7 +7,7 @@ result_num = 0
 
 for num, h in enumerate(H, 1):
     temp = T - h * 0.006
-    score = abs(A-temp)
+    score = abs(A - temp)
 
     if result_score >= score:
         result_score = score

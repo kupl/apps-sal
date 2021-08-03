@@ -5,10 +5,12 @@ def setM():
         M.append((k, m, ~m, (1 << K2 + k) % P))
         k //= 2
 
+
 def modp(n):
     for k, m, tm, a in M:
         n = (n & tm) + ((n & m) >> K2 + k) * a
     return n
+
 
 K = 64
 K2 = K // 2

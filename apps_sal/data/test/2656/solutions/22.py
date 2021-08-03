@@ -1,10 +1,10 @@
 K = int(input())
 S = input()
 N = len(S)
-mod = int(1e9+7)
+mod = int(1e9 + 7)
 
-### 123
-### a1bb2ccc3dddd 10文字インサート
+# 123
+# a1bb2ccc3dddd 10文字インサート
 # pow(25,6) * pow(26,4) * 8C2
 # (3はfixで、それより前の8mojiから1/2を入れる場所を決める）
 # これを3の位置でループする（1-indexで 3<=i<=N)
@@ -21,14 +21,13 @@ mod = int(1e9+7)
 
 # 5C5, 6C5, 7C5 1, 6, 21, 56
 
-wk = pow(26,K,mod)
-inv26 = pow(26,-1,mod)
+wk = pow(26, K, mod)
+inv26 = pow(26, -1, mod)
 
 ans = wk
-for i in range(1,K+1):
-  wk = (wk * 25 * inv26) % mod
-  wk = (wk * (N-1+i) * pow(i,-1,mod) % mod)
-  ans = (ans + wk)%mod
-    
-print(ans)
+for i in range(1, K + 1):
+    wk = (wk * 25 * inv26) % mod
+    wk = (wk * (N - 1 + i) * pow(i, -1, mod) % mod)
+    ans = (ans + wk) % mod
 
+print(ans)

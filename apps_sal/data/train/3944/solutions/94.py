@@ -1,5 +1,5 @@
 def sum_triangular_numbers(n):
-    #your code here
+    # your code here
     count = 0
     sum = 0
     total = 0

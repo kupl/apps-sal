@@ -1,5 +1,6 @@
 INF = float("inf")
-INF = 2<<30
+INF = 2 << 30
+
 
 class Dinic:
     def __init__(self, n):
@@ -53,6 +54,7 @@ class Dinic:
 
         return flow
 
+
 n, m = list(map(int, input().split()))
 s = 2 * n
 t = 2 * n + 1
@@ -77,6 +79,4 @@ for i in range(m):
     u, v = list(map(int, input().split()))
     MF.add_edge(u - 1, v - 1 + n, INF)
     MF.add_edge(v - 1, u - 1 + n, INF)
-print((out - MF.calc(s,t)))
-    
-
+print((out - MF.calc(s, t)))

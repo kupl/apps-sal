@@ -1,7 +1,7 @@
 s = input()
 cs = ['']
 ans = []
-last  = ['']
+last = ['']
 poped = False
 for c in s[::-1]:
     if not poped and c == cs[-1] and c > last[-2]:
@@ -21,4 +21,3 @@ for c in s[::-1]:
 
 for a, b in ans[::-1]:
     print(a, b)
-

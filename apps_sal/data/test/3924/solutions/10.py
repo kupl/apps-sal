@@ -19,7 +19,7 @@ for i in range(n):
         sum = sum + a[i]
         res = res + sum // m
         sum = sum % m
-        
+
 if sum > 0:
     res = res + 1
 print(res)

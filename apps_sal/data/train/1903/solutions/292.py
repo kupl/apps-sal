@@ -1,8 +1,10 @@
 import heapq
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def cost(a, b):
-            return abs(a[0] - b[0]) + abs(a[1] -b[1])
+            return abs(a[0] - b[0]) + abs(a[1] - b[1])
         points = list(map(lambda x: (x[0], x[1]), points))
         point = points[0]
         q = []

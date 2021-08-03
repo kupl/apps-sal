@@ -20,4 +20,3 @@ while n:
         collected.add(row)
 else:
     print("Yes")
-

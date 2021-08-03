@@ -7,5 +7,5 @@ def longest(s1, s2):
     result = []
     for i in range(26):
         if letters_count[i] > 0:
-            result.append(chr(i+97))
+            result.append(chr(i + 97))
     return ''.join(result)

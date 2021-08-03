@@ -10,17 +10,22 @@ for idx in range(max_fact, 0, -1):
     fi += [fi[-1] * idx % mod]
 fi = fi[::-1]
 
+
 def factorial(n):
     return f[n]
+
 
 def factorial_inverse(n):
     return fi[n]
 
+
 def combination(n, r):
     return f[n] * fi[r] * fi[n - r] % mod
 
+
 def permutation(n, r):
     return f[n] * fi[n - r] % mod
+
 
 def homogeneous_product(n, r):
     return f[n + r - 1] * fi[r] * fi[n - 1] % mod
@@ -37,4 +42,3 @@ for p in range(N + 1):
 ans *= perm(M, N)
 ans %= mod
 print(ans)
-

@@ -13,5 +13,5 @@ class Solution:
             return 0
         if steps == 0:
             return 1 if pos == 0 else 0
-        memo[(steps, pos)] = self.dfs(steps - 1, arrLen, pos - 1, memo) + self.dfs(steps - 1, arrLen, pos, memo) + self.dfs(steps - 1, arrLen, pos + 1, memo) 
+        memo[(steps, pos)] = self.dfs(steps - 1, arrLen, pos - 1, memo) + self.dfs(steps - 1, arrLen, pos, memo) + self.dfs(steps - 1, arrLen, pos + 1, memo)
         return memo[(steps, pos)] % (10 ** 9 + 7)

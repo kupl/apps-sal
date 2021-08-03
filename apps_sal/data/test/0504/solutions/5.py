@@ -3,10 +3,10 @@ def main():
     arr = [0 for _ in range(n)]
     brr = [0 for _ in range(n)]
     for i in range(n):
-        arr[i], brr[i] = map(int,input().split())
+        arr[i], brr[i] = map(int, input().split())
 
     p = [i for i in range(n)]
-    p.sort(key=lambda x: arr[x]-brr[x], reverse=True)
+    p.sort(key=lambda x: arr[x] - brr[x], reverse=True)
     total = 0
     for i in range(len(arr)):
         if i < b:
@@ -28,8 +28,8 @@ def main():
         else:
             ctotal -= brr[p[i]]
             ctotal += arr[p[i]] * pp
-            ctotal -= max(arr[p[b-1]], brr[p[b-1]])
-            ctotal += brr[p[b-1]]
+            ctotal -= max(arr[p[b - 1]], brr[p[b - 1]])
+            ctotal += brr[p[b - 1]]
         total = max(total, ctotal)
 
     print(total)

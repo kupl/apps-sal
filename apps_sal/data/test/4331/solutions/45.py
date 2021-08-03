@@ -1,5 +1,5 @@
-n=input()
-if n.count("7")>=1:
+n = input()
+if n.count("7") >= 1:
     print("Yes")
 else:
     print("No")

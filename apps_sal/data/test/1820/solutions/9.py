@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
 for f in range(int(input())):
-    n=int(input())
-    a=list(map(int,input().split()))
-    if a[0]+a[1]>a[-1]:
+    n = int(input())
+    a = list(map(int, input().split()))
+    if a[0] + a[1] > a[-1]:
         print(-1)
     else:
-        print(1,2,n)
+        print(1, 2, n)

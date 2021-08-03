@@ -10,11 +10,10 @@ for i in range(h):
         if s[i][j] == '.':
             cnt = 0
             for y, x in dir:
-                iy, jx = i+y, j+x
+                iy, jx = i + y, j + x
                 if 0 <= iy < h and 0 <= jx < w:
                     if s[iy][jx] == '#':
                         cnt += 1
             ans[i][j] = cnt
 for i in ans:
     print((''.join(map(str, i))))
-

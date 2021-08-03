@@ -22,4 +22,3 @@ while t:
         res += a[i]
 
     print(res)
-

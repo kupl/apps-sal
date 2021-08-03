@@ -23,4 +23,5 @@ def __starting_point():
     n = int(input())
     print((bin_search(n)))
 
+
 __starting_point()

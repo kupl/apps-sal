@@ -5,13 +5,13 @@ class Solution:
             xi, yi = p1
             xj, yj = p2
             return abs(xi - xj) + abs(yi - yj)
-        
+
         graph = collections.defaultdict(list)
         for i in range(len(points)):
             for j in range(len(points)):
                 graph[i].append((getDist(points[i], points[j]), j))
         start = res = 0
-        visited = { start }
+        visited = {start}
         min_heap = []
         for cost, adj in graph[start]:
             heapq.heappush(min_heap, (cost, adj))

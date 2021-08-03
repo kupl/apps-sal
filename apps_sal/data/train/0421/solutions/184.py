@@ -1,6 +1,6 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
-        
+
         res = s
 
         for i in range(1, len(s)):

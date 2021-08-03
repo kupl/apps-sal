@@ -1,4 +1,4 @@
-def encode(n,strng):
+def encode(n, strng):
     new_strng = strng.split(" ")
     for i in range(n):
         strng = "".join(strng.split(" "))
@@ -15,6 +15,7 @@ def encode(n,strng):
         strng = strng[:-1]
     return f"{n} " + strng
 
+
 def decode(strng):
     i = 0
     num = ""
@@ -22,7 +23,7 @@ def decode(strng):
         num += strng[i]
         i += 1
     num = int("".join(num))
-    strng = strng[len(str(num))+1:]
+    strng = strng[len(str(num)) + 1:]
     new_strng = strng.split(" ")
     strng = "".join(strng.split(" "))
     for i in range(num):

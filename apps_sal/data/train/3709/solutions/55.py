@@ -1,5 +1,7 @@
 from math import *
-def simple_multiplication(number) :
+
+
+def simple_multiplication(number):
     if fmod(int(number), 2) == 0:
         even = True
     else:

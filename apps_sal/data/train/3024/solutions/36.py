@@ -1,3 +1,3 @@
 def friend(x):
-   friendly = lambda y: len(y)==4
-   return list(filter(friendly,x))
+    def friendly(y): return len(y) == 4
+    return list(filter(friendly, x))

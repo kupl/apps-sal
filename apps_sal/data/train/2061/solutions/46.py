@@ -9,4 +9,3 @@ for _ in range(T):
     dy = (ay + by + cy) % 3 - 1
     y = 2 * my + dy
     print((max(abs(x), abs(y)) + (1 if x == y and (mx != 0 or my != 0) else 0)))
-

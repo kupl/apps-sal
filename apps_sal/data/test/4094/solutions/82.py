@@ -7,13 +7,17 @@ def c174(k):
         if sebun % k == 0:
             ans = i + 1
             return ans
-        sebun = (sebun%k) * 10 + 7
+        sebun = (sebun % k) * 10 + 7
     return ans
+
 
 def main():
     k = int(input())
     print(c174(k))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

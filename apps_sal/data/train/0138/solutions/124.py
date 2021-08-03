@@ -24,5 +24,3 @@ class Solution:
                 if numZero == 0 and numNeg % 2 == 0:
                     maxlen = max(maxlen, i + 1)
         return maxlen
-            
-

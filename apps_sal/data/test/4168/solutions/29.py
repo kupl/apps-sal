@@ -8,7 +8,7 @@ from math import sqrt, factorial, gcd, ceil, atan, pi
 import string
 # string.ascii_lowercase
 from bisect import bisect_left
-MOD = int(1e9)+7
+MOD = int(1e9) + 7
 INF = float('inf')
 
 
@@ -27,16 +27,13 @@ def solve():
     ans.reverse()
     print((''.join([str(x) for x in ans])))
 
-        
-
 
 t = 1
 # t = int(input())
-for case in range(1,t+1):
+for case in range(1, t + 1):
     ans = solve()
 
 
 """
 
 """
-

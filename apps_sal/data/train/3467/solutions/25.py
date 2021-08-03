@@ -4,5 +4,3 @@ def integrate(coefficient, exponent):
     b = int(coefficient / a)
     c = (str(b) + "x^" + str(a))
     return c
-    
-

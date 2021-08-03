@@ -10,9 +10,9 @@ aaa = list(map(int, input().split(' ')))
 # 6c2=15
 # 7c2=21
 # hoge[i] = hoge[i-1] + (i-1)
-hoge = [0,0]
-for i in range(2, int(1e6)+1):
-    hoge.append(hoge[i-1] + (i-1))
+hoge = [0, 0]
+for i in range(2, int(1e6) + 1):
+    hoge.append(hoge[i - 1] + (i - 1))
 
 
 # 1,1,1,2,2, -> 3c2 + 2c2 = 4 + 1 = 4
@@ -22,7 +22,6 @@ for a in aaa:
 total = sum([hoge[v] for v in list(d.values())])
 
 # 1つ抜く
-for i in range(1, n+1):
-    ct = d[aaa[i-1]]
-    print((total - (hoge[ct] - hoge[ct-1])))
-
+for i in range(1, n + 1):
+    ct = d[aaa[i - 1]]
+    print((total - (hoge[ct] - hoge[ct - 1])))

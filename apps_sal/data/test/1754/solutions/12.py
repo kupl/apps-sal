@@ -1,7 +1,7 @@
-n, m, k = list(map(int,input().split()))
-p = list(map(int,input().split()))
-s = list(map(int,input().split()))
-c = list(map(int,input().split()))
+n, m, k = list(map(int, input().split()))
+p = list(map(int, input().split()))
+s = list(map(int, input().split()))
+c = list(map(int, input().split()))
 
 dct = {}
 for i in range(n):
@@ -20,5 +20,3 @@ for i in range(k):
         data_to_fuck_you += 1
 
 print(data_to_fuck_you)
-
-

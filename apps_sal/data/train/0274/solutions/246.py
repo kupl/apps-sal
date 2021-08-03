@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         # sliding window
@@ -19,5 +21,5 @@ class Solution:
                     mx.popleft()
                 if mn[0] < left:
                     mn.popleft()
-            ans = max(ans, i-left+1)
+            ans = max(ans, i - left + 1)
         return ans

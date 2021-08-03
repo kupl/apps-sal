@@ -10,7 +10,7 @@ class Solution:
         days = 0
         max_profit = -1
         max_days = 0
-        while days < len(customers) or waiting > 0 :
+        while days < len(customers) or waiting > 0:
             if days < len(customers):
                 waiting += customers[days]
             on_board = min(waiting, 4)
@@ -21,7 +21,7 @@ class Solution:
                 max_days = days + 1
                 max_profit = profit
             days += 1
-            
+
         if max_profit < 0:
             return -1
         else:

@@ -10,4 +10,3 @@ def unlucky_days(year):
                 answer += 1
 
     return answer
-

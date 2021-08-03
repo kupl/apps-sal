@@ -11,11 +11,8 @@ for i in range(k):
         v += 1
         if v >= n:
             v = v - n
-    
+
     print(x[v], end=' ')
     x.pop(v)
     n -= 1
     cur = v % n
-
-    
-    

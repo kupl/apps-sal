@@ -29,4 +29,3 @@ ans = -float('inf')
 for i in range(N + 1):
     ans = max(ans, dp[i] - dp2[i])
 print(ans)
-

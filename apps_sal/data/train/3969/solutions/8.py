@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def graceful_tipping(bill):
     total = bill * 1.15
     if total < 10:

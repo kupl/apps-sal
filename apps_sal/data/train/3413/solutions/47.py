@@ -5,5 +5,3 @@ def solution(nums):
         return sorted(nums)
     else:
         return list1
-        
-

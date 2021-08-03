@@ -8,10 +8,10 @@ class Solution:
         curr = head
         while curr is not None and curr.val == 0:
             curr = curr.__next__
-            
+
         dummy = ListNode(0, curr)
-        if curr is not None:  
-            memo = [[dummy],[curr, curr.val]]
+        if curr is not None:
+            memo = [[dummy], [curr, curr.val]]
         curr = curr.__next__ if curr is not None else None
         while curr is not None:
             last_index = len(memo) - 1
@@ -39,5 +39,3 @@ class Solution:
                 memo.append(curr_list)
             curr = curr.__next__
         return dummy.__next__
-                
-

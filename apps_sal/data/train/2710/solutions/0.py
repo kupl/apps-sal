@@ -1,4 +1,4 @@
-def scrabble_score(st): 
+def scrabble_score(st):
     x = 0
     for y in st:
         if 'a' in y.lower():

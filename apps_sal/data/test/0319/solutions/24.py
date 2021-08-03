@@ -16,4 +16,3 @@ for i in range(n):
         ans = "YES"
         break
 print(ans)
-

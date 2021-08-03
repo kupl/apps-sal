@@ -1,3 +1,3 @@
-s=input()
-ans="x"*len(s)
+s = input()
+ans = "x" * len(s)
 print(ans)

@@ -13,4 +13,3 @@ class Solution:
             wait -= min(4, wait)
             i += 1
         return res
-

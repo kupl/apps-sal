@@ -1,11 +1,11 @@
 def whatday(num):
-    weekday = {1:'Sunday',
-               2:'Monday',
-               3:'Tuesday',
-               4:'Wednesday',
-               5:'Thursday',
-               6:'Friday',
-               7:'Saturday'}
+    weekday = {1: 'Sunday',
+               2: 'Monday',
+               3: 'Tuesday',
+               4: 'Wednesday',
+               5: 'Thursday',
+               6: 'Friday',
+               7: 'Saturday'}
     try:
         return weekday[num]
     except:

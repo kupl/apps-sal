@@ -11,6 +11,5 @@ for x in input().split():
         b += 1
 res = b
 if a < b:
-    res = a + (b-a)//3
+    res = a + (b - a) // 3
 print(res)
-

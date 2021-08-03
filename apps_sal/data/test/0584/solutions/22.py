@@ -27,5 +27,3 @@ for i in k:
         p = i
 
 print(ans1, ans2)
-
-

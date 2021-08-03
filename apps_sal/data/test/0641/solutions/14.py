@@ -14,4 +14,3 @@ for i in range(1, 13):
         except:
             pass
 print(ans)
-

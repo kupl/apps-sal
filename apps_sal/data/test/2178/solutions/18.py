@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 def main():
     n = int(input())
     shelf = map(int, input().split())
@@ -12,9 +14,9 @@ def main():
         remIndex = d[cur]
         ans = remIndex - top + 1
         if ans <= 0:
-            print("0",end=" ")
+            print("0", end=" ")
         else:
-            print(ans,end=" ")
+            print(ans, end=" ")
             top = remIndex + 1
 
 

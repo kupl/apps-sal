@@ -20,6 +20,3 @@ else:
         L[a] -= 1
         M[b] = True
         count += 1
-                
-            
-

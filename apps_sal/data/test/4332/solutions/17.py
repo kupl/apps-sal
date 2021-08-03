@@ -1,10 +1,8 @@
 a = input()
 b = 0
 for i in a:
-  b += int(i)
+    b += int(i)
 if int(a) % b == 0:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
-
-
+    print("No")

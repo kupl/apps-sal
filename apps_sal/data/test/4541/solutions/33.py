@@ -1,5 +1,6 @@
 c = str.lower(input())
 
+
 def answer(c: str) -> str:
     n = ('a', 'e', 'i', 'o', 'u')
 
@@ -8,5 +9,5 @@ def answer(c: str) -> str:
     else:
         return 'consonant'
 
-print((answer(c)))
 
+print((answer(c)))

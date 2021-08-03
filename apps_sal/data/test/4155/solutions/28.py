@@ -1,5 +1,5 @@
 n = int(input())
-h = list(map(int,input().split()))
+h = list(map(int, input().split()))
 w = 0
 a = True
 
@@ -16,7 +16,7 @@ while a:
             mizu = True
         else:
             if mizu:
-                break 
+                break
 
 
 print(w)

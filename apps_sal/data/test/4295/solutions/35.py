@@ -14,4 +14,3 @@ while True:
     if pre_x < x:
         print(pre_x)
         return
-

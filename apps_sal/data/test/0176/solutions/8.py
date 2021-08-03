@@ -12,4 +12,3 @@ elif b > 0 and a == 0:
     print(b // k + 1)
 else:
     print(1)
-

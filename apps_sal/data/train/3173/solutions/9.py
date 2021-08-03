@@ -1,5 +1,6 @@
 from typing import List
 
+
 def create_array(n: int) -> List[int]:
     """ Fix the unfinished loop. """
     result = []

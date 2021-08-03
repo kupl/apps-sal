@@ -1,6 +1,6 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        l = max(sum(piles)//H, 1)
+        l = max(sum(piles) // H, 1)
         h = max(piles)
         while l < h:
             mid = (l + h) // 2
@@ -15,6 +15,7 @@ class Solution:
             else:
                 l = mid + 1
         return l
+
     def timeTaken(self, piles, n):
         summ = 0
         for v in piles:
@@ -22,5 +23,3 @@ class Solution:
             if v % n:
                 summ += 1
         return summ
-                
-

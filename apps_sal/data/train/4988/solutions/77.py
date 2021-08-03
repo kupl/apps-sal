@@ -1,1 +1,1 @@
-square = lambda a:a**2
+def square(a): return a**2

@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         q = deque(initialBoxes)
@@ -11,12 +12,12 @@ class Solution:
         # for i, b in enumerate(status):
             # if not b and b not in allkz:
                 # unreachable.add(b)
-            
+
         opened = set()
         for i, b in enumerate(status):
             if not b and i not in allkz:
                 opened.add(i)
-        
+
         res = 0
         while q:
             curBox = q.popleft()
@@ -29,7 +30,4 @@ class Solution:
                     q += containedBoxes[curBox]
                 else:
                     q.append(curBox)
-        return res           
-                
-                
-
+        return res

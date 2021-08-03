@@ -7,7 +7,7 @@ t = ''
 
 for i in s:
     if(i == 'a' or i == 'b'):
-        t+=i
+        t += i
 
 
 posj = []
@@ -23,9 +23,9 @@ mids = [posj[0] + 1]
 
 mod = 10**9 + 7
 sub1 = 0
-for i in range(len(posj)-1):
+for i in range(len(posj) - 1):
     mid = posj[i + 1] - posj[i]
-    
+
     mids.append(mid)
 mids.append(len(t) - posj[-1])
 
@@ -35,8 +35,4 @@ for i in mids:
     tot *= i
     tot %= mod
 tot -= 1
-print(tot%mod)
-
-
-
-
+print(tot % mod)

@@ -8,7 +8,7 @@ for i in range(n):
         b += 1
 
 for i in range(1, 1000):
-    n = i*i
+    n = i * i
     y = n // 2
     x = n - y
     if (a <= x and b <= y) or (a <= y and b <= x):

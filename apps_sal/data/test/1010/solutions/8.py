@@ -9,4 +9,3 @@ for i in range(n):
         last = i
 
 print(ans if last != -1 else 0)
-

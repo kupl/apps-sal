@@ -6,5 +6,6 @@ for i in range(m):
     x, y = map(int, input().split())
     a[x] = b[y] = 1
 s = a.count(0) + b.count(0)
-if n & 1 and 0 == a[k // 2] == b[k // 2]: s -= 1
+if n & 1 and 0 == a[k // 2] == b[k // 2]:
+    s -= 1
 print(s)

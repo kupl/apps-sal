@@ -41,5 +41,5 @@ for _ in range(int(input())):
                 itog[i] = t[curi]
         curi += 1
     for x in itog:
-        print(x, end ="")
+        print(x, end="")
     print()

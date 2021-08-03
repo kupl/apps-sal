@@ -13,4 +13,3 @@ print(res)
 """
 a kitten
 """
-

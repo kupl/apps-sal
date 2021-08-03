@@ -12,6 +12,8 @@ def factor(x):
     if x != 1:
         r.add(x)
     return r
+
+
 a, n = list(map(int, input().split()))
 s = factor(a)
 sol = 1
@@ -20,6 +22,5 @@ for i in s:
     m = i
     while m <= n:
         sol = (sol * pow(t, n // m, 1000000007)) % 1000000007
-        m = m*i
+        m = m * i
 print(sol)
-

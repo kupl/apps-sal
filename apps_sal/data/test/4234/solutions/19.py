@@ -17,4 +17,3 @@ k = n - len(res)
 
 print(k)
 print(*res, sep='')
-

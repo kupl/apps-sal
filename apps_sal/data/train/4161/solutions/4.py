@@ -5,7 +5,7 @@ def rat_at(n):
     if n[len(n) - 1] == '0':
         f.append(0)
     for i in range(len(n) - 1, 1, -1):
-        if n[i] != n[i-1]:
+        if n[i] != n[i - 1]:
             f.append(s)
             s = 1
         else:
@@ -37,4 +37,3 @@ def index_of(a, b):
         else:
             l = '0'
     return int(bin, 2) - 1
-

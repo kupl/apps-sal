@@ -1,7 +1,7 @@
 
 def solve():
     n, k = [int(x) for x in input().split()]
-    arr =  [int(x) for x in input().split()] + [0]
+    arr = [int(x) for x in input().split()] + [0]
     arr.sort()
     diffs = [x - y for x, y in zip(arr[1:], arr[:-1])]
     idx = 0
@@ -17,5 +17,3 @@ def solve():
 
 
 solve()
-
-

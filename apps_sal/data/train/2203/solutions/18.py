@@ -43,5 +43,3 @@ for k in range(1, n):
 result[result.index(0)] = n
 
 print(' '.join(str(i) for i in result))
-
-

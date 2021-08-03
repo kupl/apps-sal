@@ -1,19 +1,19 @@
-n,k = tuple([int(x) for x in input().split(' ')])
+import heapq
+n, k = tuple([int(x) for x in input().split(' ')])
 p = list([int(x) for x in input().split(' ')])
 c = list([int(x) for x in input().split(' ')])
 out = [i for i in c]
 #t = [(p[i], c[i]) for i in range(n)]
 t = [(p[i], i) for i in range(n)]
-import heapq
 kbest = []
-#print(t)
+# print(t)
 t.sort()
-#print(t)
+# print(t)
 prev = 0
 i = 0
 while i < len(t):
     j = i
-    while j < len(t) and t[j][0] == t[i][0] :
+    while j < len(t) and t[j][0] == t[i][0]:
         out[t[j][1]] += sum(kbest)
         j += 1
     while i < j:
@@ -32,5 +32,3 @@ for i in range(n):
     out[i] += sum(aux[-k:])
 """
 print(' '.join([str(x) for x in out]))
-
-

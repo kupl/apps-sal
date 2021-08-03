@@ -8,4 +8,3 @@ for _ in range(t):
             break
         ans += n
     print(ans)
-

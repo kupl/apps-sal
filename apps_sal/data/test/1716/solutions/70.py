@@ -1,7 +1,7 @@
 # 20-08-06再トライ
+from itertools import accumulate
 import sys
 input = sys.stdin.readline
-from itertools import accumulate
 
 N, M, Q = [int(x) for x in input().split()]
 train = [[0 for _ in range(N + 1)] for _ in range(N + 1)]

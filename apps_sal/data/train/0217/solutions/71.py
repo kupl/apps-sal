@@ -5,9 +5,9 @@ class Solution:
         for n in A:
             s2 = set()
             for e in s1:
-                s2.add(e|n)
-            s1=s2
+                s2.add(e | n)
+            s1 = s2
             s1.add(n)
-            s|=s1
+            s |= s1
         # print(s)
         return len(s)

@@ -22,4 +22,3 @@ class Solution:
             return res + 1
 
         return dp((0,) * m)
-

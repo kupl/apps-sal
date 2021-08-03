@@ -1,13 +1,12 @@
 def evaporator(a, b, c):
-    b /=100
+    b /= 100
     a_origin = a
     rem = a_origin
     day = 0
-    trsh = c/100
+    trsh = c / 100
     while rem >= trsh:
-        day +=1
+        day += 1
         pr = a * b
-        a -=pr
-        rem = a/a_origin
+        a -= pr
+        rem = a / a_origin
     return day
-

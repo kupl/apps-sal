@@ -1,7 +1,7 @@
 s = input()
 b, w = 0, 0
 for i in range(len(s)):
-    if i%2 == 0:
+    if i % 2 == 0:
         if s[i] == '0':
             w += 1
         else:

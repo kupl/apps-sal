@@ -5,4 +5,3 @@ if sorted(collections.Counter(S).values()) == sorted(collections.Counter(T).valu
     print("Yes")
 else:
     print("No")
-

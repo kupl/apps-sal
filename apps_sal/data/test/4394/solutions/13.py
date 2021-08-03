@@ -50,5 +50,3 @@ for i in range(m):
     e.append((int(c), int(x), int(y)))
 
 print(Kruskal(e, n))
-
-

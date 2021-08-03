@@ -7,7 +7,9 @@ def iroha():
 
     print((shead + sshead + ssshead))
 
+
 def __starting_point():
     iroha()
+
 
 __starting_point()

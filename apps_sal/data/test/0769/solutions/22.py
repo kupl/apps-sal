@@ -1,10 +1,10 @@
-a,b,c = list(map(int, input().split()))
+a, b, c = list(map(int, input().split()))
 
 used = set([a])
 a *= 10
-i = 1 
+i = 1
 while True:
-    if a//b == c:
+    if a // b == c:
         print(i)
         return
     a %= b
@@ -14,5 +14,3 @@ while True:
     a *= 10
     i += 1
 print(-1)
-        
-

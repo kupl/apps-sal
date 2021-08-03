@@ -1,3 +1,10 @@
+from operator import itemgetter
+import fractions
+from scipy.sparse import csgraph
+from queue import Queue
+import math
+
+
 def main():
 
     S = list(input())
@@ -19,7 +26,7 @@ def main():
             if checklist[i] == 0:
                 for i in S:
                     print(i, end="")
-                print(chr(i + ord("a")), end = "")
+                print(chr(i + ord("a")), end="")
                 print()
                 ans = True
                 break
@@ -32,15 +39,16 @@ def main():
             for i in range(len(new_S) - 1):
                 if new_S[i] > new_S[i + 1]:
                     for j in range(i - 1):
-                        print(S[j], end = "")
-                    print(chr(new_S[i - 1] + 1), end = "")
+                        print(S[j], end="")
+                    print(chr(new_S[i - 1] + 1), end="")
                     print()
                     ans = True
                     break
 
             if not ans:
                 print(-1)
-#main()
+# main()
+
 
 def ABC069D():
 
@@ -62,16 +70,17 @@ def ABC069D():
 
     for i in range(H):
         for j in range(W):
-            print(printlist[i][j], end = "")
+            print(printlist[i][j], end="")
             if j != W:
-                print(" ", end = "")
+                print(" ", end="")
         print()
     print()
-#ABC069D()
+# ABC069D()
 
-import math
+
 def cc(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
+
 
 def ABC057D():
 
@@ -96,7 +105,7 @@ def ABC057D():
             long = anslist[i][1]
         else:
             break
-    #print(anslist)
+    # print(anslist)
     #print(ans, key, long)
     cnt = 0
     for i in v:
@@ -105,20 +114,21 @@ def ABC057D():
 
     c = 0
     for i in v[:long]:
-        #print(i)
+        # print(i)
         if i == key:
             c += 1
     #print(c, long)
     ans = 0
     if c == long:
-        for i in range(A,  min(B + 1, cnt + 1)):
+        for i in range(A, min(B + 1, cnt + 1)):
             ans += cc(cnt, i)
     else:
         ans = cc(cnt, c)
-    #print(anslist)
+    # print(anslist)
     #print(cnt, c, long)
     print(ans)
-#ABC057D()
+# ABC057D()
+
 
 def ABC104D():
     S = list(input())
@@ -153,7 +163,8 @@ def ABC104D():
                 print(ans, i, j, k, A_cnt + i, B_cnt + j, C_cnt + k)
                 print(math.factorial(Q_cnt), f_i, f_j, f_k)
     print(ans)
-#ABC104D()
+# ABC104D()
+
 
 def ARC082D():
     N = int(input())
@@ -169,12 +180,12 @@ def ARC082D():
             p[i], p[i + 1] = p[i + 1], p[i]
             cnt += 1
     print(cnt)
-#ARC082D()
+# ARC082D()
 
-from queue import Queue
+
 def ABC070D():
     N = int(input())
-    a, b, c =map(int, input().split())
+    a, b, c = map(int, input().split())
     Q, K = map(int, input().split())
     xy = [list(map(int, input().split())) for i in range(Q)]
     x = [[] for i in range(N)]
@@ -184,6 +195,7 @@ def ABC070D():
 
     q = Queue()
     visited = [0 for i in range(N)]
+
 
 def ABC076D():
     N = int(input())
@@ -211,7 +223,8 @@ def ABC076D():
         ans += i
 
     print(ans)
-#ABC076D()
+# ABC076D()
+
 
 def ABC085D():
     N, H = map(int, input().split())
@@ -244,7 +257,8 @@ def ABC085D():
     cnt += key
 
     print(cnt)
-#ABC085D()
+# ABC085D()
+
 
 def ARC068D():
     N = int(input())
@@ -252,7 +266,7 @@ def ARC068D():
     A.sort()
     count_list = []
     cnt = 1
-    #print(A)
+    # print(A)
     for i in range(1, N):
         if A[i] == A[i - 1]:
             cnt += 1
@@ -261,14 +275,14 @@ def ARC068D():
             cnt = 1
     count_list.append(cnt)
     ans_cnt = 0
-    #print(count_list)
+    # print(count_list)
     for i in range(len(count_list)):
         if count_list[i] > 2:
             ans_cnt += (count_list[i] % 2) - 1
             count_list[i] %= 2
             if count_list[i] == 0:
                 count_list[i] = 2
-    #print(ans_cnt)
+    # print(ans_cnt)
     count_list = sorted(count_list)[::-1]
     for i in range(len(count_list) - 1):
         if count_list[i] == 2 and count_list[i + 1] == 2:
@@ -278,10 +292,11 @@ def ARC068D():
     count_list = sorted(count_list)[::-1]
     if count_list[0] == 2:
         count_list[0] = 0
-    #print(ans_cnt)
-    #print(count_list)
+    # print(ans_cnt)
+    # print(count_list)
     print(sum(count_list))
-#ARC068D()
+# ARC068D()
+
 
 def ARC073D():
     N, W = map(int, input().split())
@@ -317,6 +332,7 @@ def ARC073D():
         print(this_list)
         wl.append([this_weight, this_list])
 
+
 def ARC081D():
     pattern = []
     N = int(input())
@@ -348,13 +364,14 @@ def ARC081D():
                     ans_list.append(2)
                 elif pattern[i - 1] == "Y":
                     ans_list.append(3)
-    #print(pattern)
-    #print(ans_list)
+    # print(pattern)
+    # print(ans_list)
     ans = 1
     for i in ans_list:
         ans *= i
     print(ans % (1000000007))
-#ARC081D()
+# ARC081D()
+
 
 def ARC090D():
     N, M = map(int, input().split())
@@ -370,7 +387,8 @@ def ARC090D():
         D.append(k)
         root[i - 1].append(j - 1)
     print(root)
-#ARC090D()
+# ARC090D()
+
 
 def ABC073D():
     N, M, R = map(int, input().split())
@@ -382,10 +400,11 @@ def ABC073D():
         root[j - 1][i - 1] = k
 
     import itertools
+
     def kumiawase(list_name):  # list_name(リスト)のすべての並び替え
         return itertools.permutations(list_name)
 
-    #for i in range(N):
+    # for i in range(N):
      #   for j in range(N):
       #      for k in range(N):
        #         if root[i][j] > root[i][k] + root[k][j]:
@@ -395,7 +414,7 @@ def ABC073D():
         for j in range(N):
             for k in range(N):
                 if root[N - i - 1][N - j - 1] > root[N - i - 1][N - k - 1] + root[N - k - 1][N - j - 1]:
-                    root[N - i - 1][N - j - 1] = root[N - i - 1][N - k - 1] + root[N - k- 1][N - j - 1]
+                    root[N - i - 1][N - j - 1] = root[N - i - 1][N - k - 1] + root[N - k - 1][N - j - 1]
 
     a = kumiawase(r)
     ans = float("inf")
@@ -405,9 +424,10 @@ def ABC073D():
             key += root[i[j] - 1][i[j + 1] - 1]
         if ans > key:
             ans = int(key)
-    #print(root)
+    # print(root)
     print(ans)
-#ABC073D()
+# ABC073D()
+
 
 def ARC061D():
     H, W, N = map(int, input().split())
@@ -421,10 +441,10 @@ def ARC061D():
                 if 0 <= i < H - 2 and 0 <= j < W - 2:
                     #print(x, y, i, j)
                     tmp_list.append([i, j])
-    #print(tmp_list)
+    # print(tmp_list)
     tmp_list.sort()
     temp = 1
-    #print(tmp_list)
+    # print(tmp_list)
     cnt = 0
     for i in range(1, len(tmp_list) + 1):
         if i != len(tmp_list):
@@ -437,21 +457,22 @@ def ARC061D():
         else:
             ans_list[temp] += 1
             cnt += 1
-    #print(ans_list)
+    # print(ans_list)
 
     key = 0
     for i in range(len(ans_list)):
         key += i * ans_list[i]
     ans_list[0] = (H - 2) * (W - 2) - cnt
-    #print(key)
+    # print(key)
     #print((H - 2) * (W - 2) - key)
 
     for i in range(10):
         print(ans_list[i])
-#ARC061D()
+# ARC061D()
 
-from scipy.sparse import csgraph
+
 #root = csgraph.floyd_warshall(root)
+
 
 def ABC079D():
     H, W = map(int, input().split())
@@ -462,7 +483,7 @@ def ABC079D():
         for i in range(10):
             for j in range(10):
                 c[i][j] = min(c[i][j], c[i][k] + c[k][j])
-    #print(c)
+    # print(c)
     ans = 0
     for i in A:
         for j in i:
@@ -470,11 +491,12 @@ def ABC079D():
                 ans += c[j][1]
                 #print(c[j][1], j)
     print(int(ans))
-#ABC079D()
+# ABC079D()
 
-import fractions
+
 def lcm(x, y):
     return (x * y) // fractions.gcd(x, y)
+
 
 def AGC028A():
     N, M = map(int, input().split())
@@ -511,9 +533,9 @@ def AGC028A():
             i += 1
             j += 1
     print(key)
-#AGC028A()
+# AGC028A()
 
-import math
+
 def AGC028B():
     N = int(input())
 
@@ -526,7 +548,7 @@ def AGC028B():
     for i in range(1, N):
         key = A[i] * 2 - A[0] - (A[i] - A[i - 1])
         ans += math.factorial(N - i) * i * key
-        #print(key)
+        # print(key)
     print(ans)
     A = copy.deepcopy(a[::-1])
     for i in range(1, N):
@@ -535,11 +557,12 @@ def AGC028B():
     for i in range(1, N):
         key = A[i] * 2 - A[0] - (A[i] - A[i - 1])
         ans += math.factorial(N - i) * i * key
-        #print(key)
+        # print(key)
     ans += A[N - 1] * math.factorial(N - 1)
 
     print(ans)
-#AGC028B()
+# AGC028B()
+
 
 def AGC028B2():
     N = int(input())
@@ -559,12 +582,14 @@ def AGC028B2():
     ans += A[N - 1] * N
 
     print(ans)
-#AGC028B2()
+# AGC028B2()
+
 
 def CF18QBA():
     N = int(input())
     print(100 - 100 // N)
-#CF18QBA()
+# CF18QBA()
+
 
 def CF18QBB():
     N, X = map(int, input().split())
@@ -578,7 +603,8 @@ def CF18QBB():
         ans += i * j
     ans += key * X
     print(ans)
-#CF18QBB()
+# CF18QBB()
+
 
 def CF18QBC():
     N = int(input())
@@ -586,7 +612,7 @@ def CF18QBC():
     key1 = 1
     key2 = key1
     for i in range(N):
-        #print(key2)
+        # print(key2)
         for j in range(N):
             if key2 == j:
                 ans_list[i][j] = 1
@@ -626,12 +652,13 @@ def CF18QBC():
     for i in ans_list:
         for j in i:
             if j == 0:
-                print(".", end = "")
+                print(".", end="")
             if j == 1:
-                print("X", end = "")
+                print("X", end="")
                 cnt += 1
         print()
-#CF18QBC()
+# CF18QBC()
+
 
 def CF18QBE():
     N = int(input())
@@ -652,8 +679,8 @@ def CF18QBE():
         if cnt >= 320:
             print(2)
             break
-        #print(ans)
-        #print(tmp_list)
+        # print(ans)
+        # print(tmp_list)
         for i in range(len(tmp_list)):
             if tmp_list[i][0] < ans:
                 key = tmp_list[i]
@@ -661,14 +688,15 @@ def CF18QBE():
             ans_list.append(["-", key[1]])
         if key:
             ans -= key[0]
-        #print(ans)
+        # print(ans)
         key = []
         cnt += 1
-    #print(ans_list)
+    # print(ans_list)
     print(len(ans_list))
     for i, j in ans_list:
         print(i, j)
-#CF18QBE()
+# CF18QBE()
+
 
 def niconicoB():
     N, C = map(int, input().split())
@@ -687,7 +715,8 @@ def niconicoB():
             cnt += 1
             del L[-1]
     print(cnt)
-#niconicoB()
+# niconicoB()
+
 
 def ABC064D():
     N = int(input())
@@ -719,11 +748,10 @@ def ABC064D():
     S = S + tmp
 
     for i in S:
-        print(i, end = "")
+        print(i, end="")
     print()
-#ABC064D()
+# ABC064D()
 
-from operator import itemgetter
 
 def ARC072C():
     N = int(input())
@@ -761,6 +789,6 @@ def ARC072C():
         #print(sum1, sum2)
     #print(cnt1, cnt2)
     print(min(cnt1, cnt2))
+
+
 ARC072C()
-
-

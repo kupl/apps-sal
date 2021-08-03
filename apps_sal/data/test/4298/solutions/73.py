@@ -1,9 +1,9 @@
-n,d = map(int,input().split())
+n, d = map(int, input().split())
 
-eye = 2 * d +1
+eye = 2 * d + 1
 
 if n % eye == 0:
-  print(n//eye)
-  
+    print(n // eye)
+
 else:
-  print(n//eye +1)
+    print(n // eye + 1)

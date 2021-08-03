@@ -9,11 +9,11 @@ def __starting_point():
     ret = ''
     for l in L:
         if b:
-            ret+='+'+str(l)
+            ret += '+' + str(l)
         else:
-            ret+=str(l)
-            b=True
+            ret += str(l)
+            b = True
     print(ret)
-        
+
 
 __starting_point()

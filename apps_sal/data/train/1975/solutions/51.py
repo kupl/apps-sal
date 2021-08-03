@@ -1,8 +1,8 @@
 class CustomStack:
 
     def __init__(self, maxSize: int):
-       
-        #if not len(self.lst) == maxSize:
+
+        # if not len(self.lst) == maxSize:
         self.m = maxSize
         self.lst = []
 
@@ -21,8 +21,7 @@ class CustomStack:
         i = 0
         while i < len(self.lst) and i < k:
             self.lst[i] += val
-            i+=1
-    
+            i += 1
 
 
 # Your CustomStack object will be instantiated and called as such:
@@ -30,4 +29,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

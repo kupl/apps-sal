@@ -26,39 +26,30 @@ for i in range(n):
 #a={'WWWRRRR','RWWWRRR','RRWWWRR','RRRWWWR','RRRRWWW','RRRRRRR','WWWWWWR','WWWRWWW','RWWWWWW'}
 #print(len(a))
 """
-k,n=[int(i) for i in input().split()]
-a=[int(i) for i in input().split()]
-b=[int(i) for i in input().split()]
-c=[]
-ans=0
-test=set()
+k, n = [int(i) for i in input().split()]
+a = [int(i) for i in input().split()]
+b = [int(i) for i in input().split()]
+c = []
+ans = 0
+test = set()
 for i in a:
-    c.append(i if c==[] else (c[-1]+i))
+    c.append(i if c == [] else (c[-1] + i))
+
 
 def howMany(a1):
     nonlocal ans
-    #print(a1)
+    # print(a1)
     for i in b:
-        if not i in a1: return 
+        if not i in a1:
+            return
     if a1[0] in test:
-        return 
-    else: test.add(a1[0])
-    #print(b[0]-a1[0])
-    ans+=1
+        return
+    else:
+        test.add(a1[0])
+    # print(b[0]-a1[0])
+    ans += 1
+
 
 for i in c:
-    howMany(list([b[0]-i+x for x in c]))
+    howMany(list([b[0] - i + x for x in c]))
 print(ans)
-
-
-
-
-
-
-
-
-
-
-
-
-

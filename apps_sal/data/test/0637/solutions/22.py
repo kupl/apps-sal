@@ -15,8 +15,9 @@ def main():
         if i == n - 1:
             color[cnt] = 1
     if len(color) <= 1:
-         print('YES')
+        print('YES')
     else:
         print('NO')
+
 
 main()

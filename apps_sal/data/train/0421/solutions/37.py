@@ -6,7 +6,7 @@ class Solution:
         i = 0
         while i < len(s):
             if s[i] == maxchr:
-                if i == 0 or s[i] != s[i-1]:
+                if i == 0 or s[i] != s[i - 1]:
                     index.append(i)
                     maxstring = max(maxstring, s[i:])
             i += 1

@@ -10,7 +10,7 @@ for t in range(T):
 
     while True:
         r = 2**pow2 - 1
-        needed = r*(r+1) // 2
+        needed = r * (r + 1) // 2
         if needed <= X:
             answer += 1
             X -= needed
@@ -19,4 +19,3 @@ for t in range(T):
         pow2 += 1
 
     print(answer)
-

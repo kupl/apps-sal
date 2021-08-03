@@ -4,7 +4,7 @@ class Solution:
         hsh = {}
         vals = [0 for i in hours]
         sm = 0
-        for i in range(len(hours)-1, -1, -1):
+        for i in range(len(hours) - 1, -1, -1):
             sm += hours[i]
             if sm > 0:
                 vals[i] = max(vals[i], len(hours) - i)
@@ -13,10 +13,8 @@ class Solution:
             if smo in hsh:
                 v = hsh[smo]
                 vals[i] = max(vals[i], v - i + vals[v])
-                
+
             if hours[i] not in hsh:
                 hsh[hours[i]] = i
-        
-        return max(vals)
-            
 
+        return max(vals)

@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 
 s1, s3 = 0, 0
 max_s = 0
-l, r = 0, n-1
+l, r = 0, n - 1
 while l <= r:
     if s1 > s3:
         s3 += a[r]

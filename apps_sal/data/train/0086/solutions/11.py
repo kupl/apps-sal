@@ -6,7 +6,7 @@ tt = int(stdin.readline())
 for loop in range(tt):
 
     n = int(stdin.readline())
-    a = list(map(int,stdin.readline().split()))
+    a = list(map(int, stdin.readline().split()))
 
     z = 0
     o = 0
@@ -32,7 +32,6 @@ for loop in range(tt):
 
     if z > 0:
         ans.append(0)
-    
+
     print(len(ans))
     print(*ans)
-

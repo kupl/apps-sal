@@ -11,13 +11,12 @@ class Solution:
                 low = mid
             else:
                 high = mid
-                
+
         if self.calc_hours(piles, low) <= H:
             return low
         if self.calc_hours(piles, high) <= H:
             return high
-    
+
     @staticmethod
     def calc_hours(piles, K):
         return int(sum(math.ceil(pile / float(K)) for pile in piles))
-

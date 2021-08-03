@@ -6,4 +6,3 @@ def find_longest(arr):
             b = len(str(i))
             result = i
     return (result)
-

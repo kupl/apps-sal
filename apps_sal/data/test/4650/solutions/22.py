@@ -25,4 +25,3 @@ for _ in range(t):
     res += mod_1 // 3
     res += mod_2 // 3
     print(res)
-

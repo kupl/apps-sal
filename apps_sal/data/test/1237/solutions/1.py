@@ -14,4 +14,3 @@ for i in range(s, -1, -1):
     ans = max(ans, last[i])
 
 print(ans)
-

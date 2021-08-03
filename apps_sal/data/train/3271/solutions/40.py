@@ -1,4 +1,4 @@
-def arr(n=None): 
+def arr(n=None):
     s = []
     if n == None:
         return s

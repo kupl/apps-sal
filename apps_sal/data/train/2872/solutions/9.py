@@ -1,6 +1,7 @@
 def coin(n):
     return helper(n, "", [])
 
+
 def helper(n, path, lst_of_ans):
     if n == 0:
         lst_of_ans.append(path)

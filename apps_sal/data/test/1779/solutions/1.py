@@ -12,6 +12,6 @@ for i in range(len(s)):
         continue
     e = b[a.index(e)]
     if bad:
-        e =  chr(ord(e) - ord('a') + ord('A'))
+        e = chr(ord(e) - ord('a') + ord('A'))
     s[i] = e
 print(''.join(s))

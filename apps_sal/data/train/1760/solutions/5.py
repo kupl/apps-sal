@@ -6,7 +6,7 @@ def count(chessBoard):
     n = len(chessBoard)
     for i in range(1, n):
         for j in range(1, n):
-            chessBoard[i][j] = chessBoard[i][j] * (min(chessBoard[i-1][j], chessBoard[i][j-1], chessBoard[i-1][j-1]) + 1)
+            chessBoard[i][j] = chessBoard[i][j] * (min(chessBoard[i - 1][j], chessBoard[i][j - 1], chessBoard[i - 1][j - 1]) + 1)
     for i in range(1, n):
         for j in range(1, n):
             if chessBoard[i][j] > 1:

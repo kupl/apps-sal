@@ -12,4 +12,3 @@ for _ in range(int(input())):
         else:
             i += 2
     print(''.join(sorted(ans)))
-

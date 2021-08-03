@@ -4,9 +4,9 @@ def sum_groups(arr):
         parity, lenArr, next = -1, len(arr), []
         while arr:
             val = arr.pop()
-            if parity != val%2:
+            if parity != val % 2:
                 next.append(val)
-                parity = val%2
+                parity = val % 2
             else:
                 next[-1] += val
         arr = next

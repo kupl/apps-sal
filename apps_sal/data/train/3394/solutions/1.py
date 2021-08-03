@@ -1,5 +1,6 @@
 from itertools import count
 
+
 def collatz(n):
     for iteration in count(1):
         if n == 1:

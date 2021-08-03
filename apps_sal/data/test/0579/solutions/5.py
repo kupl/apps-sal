@@ -46,7 +46,7 @@ def main():
     for data in data_set:
         n = data.size
         rep = np.repeat(data[None], 2, axis=0).flatten()
-        sim = np.array([np.cumsum(rep[i:i+min(k, n)]) for i in range(n)])
+        sim = np.array([np.cumsum(rep[i:i + min(k, n)]) for i in range(n)])
         cand = inner(n, k, data.sum(), sim)
         result = max(result, cand)
     print(result)
@@ -54,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

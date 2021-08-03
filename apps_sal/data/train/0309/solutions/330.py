@@ -1,5 +1,6 @@
 from collections import OrderedDict
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         # When adding a new number A[j], we look at all previous numbers A[i]:

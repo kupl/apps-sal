@@ -1,6 +1,6 @@
+from collections import Counter
 import sys
 input = sys.stdin.readline
-from collections import Counter
 
 
 def read():
@@ -45,7 +45,7 @@ class UnionFind():
 def solve(N, M, XYZ):
     uf = UnionFind(N)
     for x, y, z in XYZ:
-        uf.union(x-1, y-1)
+        uf.union(x - 1, y - 1)
     C = Counter(uf.parents())
     return len(C)
 
@@ -53,5 +53,6 @@ def solve(N, M, XYZ):
 def __starting_point():
     inputs = read()
     print((solve(*inputs)))
+
 
 __starting_point()

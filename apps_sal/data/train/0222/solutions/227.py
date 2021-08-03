@@ -13,4 +13,3 @@ class Solution:
                     a, b = b, a + b
                 res = max(res, cnt)
         return res if res > 2 else 0
-

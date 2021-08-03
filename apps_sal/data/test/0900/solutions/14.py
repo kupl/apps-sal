@@ -11,7 +11,7 @@ for i in S:
     dp += dp
     if i == '?':
         for j in range(13):
-            ans[j] = sum(dp[j+4:j+14])
+            ans[j] = sum(dp[j + 4:j + 14])
     else:
         for j in range(13):
             ans[j] = dp[j + 13 - int(i)]

@@ -10,4 +10,3 @@ for i in range(0, N):
         answer += 1
 
 print(answer)
-

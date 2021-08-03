@@ -26,4 +26,3 @@ while i < len_x and j < len_y:
 
 
 print(ans)
-

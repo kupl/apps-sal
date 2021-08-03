@@ -8,7 +8,7 @@ class Solution:
             if c != '(' and c != ')':
                 out.append(c)
                 l += 1
-            elif c=='(':
+            elif c == '(':
                 out.append(c)
                 stack.append(c)
                 left_pos.append(l)

@@ -6,4 +6,3 @@ def solution(a, b):
         result = b + a + b
     return result
     pass
-

@@ -1,6 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
- 
+def input(): return sys.stdin.readline().rstrip()
+
 
 class UnionFind():
     def __init__(self, n):
@@ -50,18 +50,16 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-
-
-n,m = list(map(int,input().split()))
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 
 u = UnionFind(n)
 for i in range(m):
-    c,d = list(map(int,input().split()))
+    c, d = list(map(int, input().split()))
     c -= 1
     d -= 1
-    u.union(c,d)
+    u.union(c, d)
 
 a_pa = [0 for i in range(n)]
 b_pa = [0 for i in range(n)]
@@ -74,5 +72,3 @@ if a_pa == b_pa:
     print("Yes")
 else:
     print("No")
-
-

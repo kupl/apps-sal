@@ -7,8 +7,8 @@ B = int(lst[2])
 d = B - A
 
 if d <= 0:
-   print('delicious')
+    print('delicious')
 elif d <= X:
-   print('safe')
+    print('safe')
 else:
-   print('dangerous')
+    print('dangerous')

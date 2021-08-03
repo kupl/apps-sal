@@ -2,7 +2,7 @@ class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
         ans = 0
-        for pat in range(1 << n-1):
+        for pat in range(1 << n - 1):
             start = 0
             end = 1
             split = []

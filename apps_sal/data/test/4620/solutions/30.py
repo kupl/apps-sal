@@ -15,4 +15,3 @@ for i in range(n - 1):
     ans[i] = now
 
 print(("\n".join(map(str, ans))))
-

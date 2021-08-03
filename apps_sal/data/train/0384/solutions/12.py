@@ -14,8 +14,6 @@ class Solution:
 
         ans = 0
         for i, x in enumerate(A):
-            ans = (ans + (pow2[i] - pow2[N - i - 1]) * x) % MOD 
+            ans = (ans + (pow2[i] - pow2[N - i - 1]) * x) % MOD
 
         return ans
-
-

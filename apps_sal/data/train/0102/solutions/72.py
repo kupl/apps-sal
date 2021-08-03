@@ -10,4 +10,3 @@ for i in range(n):
             t += j
             b += 1
     print(b)
-

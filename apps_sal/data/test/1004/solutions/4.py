@@ -20,7 +20,8 @@ for e in l:
         cnt.clear()
         cur = 0
 
-    if not valid: break
+    if not valid:
+        break
 valid &= cur == 0 and not cnt
 if not valid:
     print(-1)

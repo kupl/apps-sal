@@ -19,4 +19,3 @@ for i in range(n):
     answ = min(answ, tmp)
 
 print(answ)
-

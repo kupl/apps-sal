@@ -17,7 +17,6 @@ def small_foo(n):
     return leng
 
 
-
 def bar(n):
     total_len = 0
     for i in range(1, len(str(n))):
@@ -75,5 +74,5 @@ def main():
         x = int(input())
         print(solve(x))
 
-main()
 
+main()

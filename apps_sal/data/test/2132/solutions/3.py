@@ -27,5 +27,3 @@ for i in a:
     elif i[0] == 6:
         c2 += 1
 print(c)
-        
-

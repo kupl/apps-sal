@@ -25,4 +25,3 @@ for t in range(q):
         for i in range(1, n - k + 2):
             repl = min(repl, -dp[j][i - 1] + dp[(j + dif) % 3][i + k - 1])
     print(repl)
-

@@ -1,5 +1,5 @@
 n = int(input())
-consec= 1
+consec = 1
 changes = 0
 oppo = 0
 rep = False
@@ -23,5 +23,4 @@ if cons or oppo > 1:
     changes += 2
 elif oppo == 1:
     changes += 1
-print(changes+1)
-
+print(changes + 1)

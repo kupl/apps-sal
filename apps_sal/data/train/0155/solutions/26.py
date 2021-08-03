@@ -11,7 +11,7 @@ class Solution:
             if not self.check[i]:
                 self.seen[i] = 1
         return max(self.helper(i) for i in range(l))
-        
+
     def helper(self, p):
         if p not in self.seen:
             res = 0
@@ -19,4 +19,3 @@ class Solution:
                 res = max(res, self.seen.get(n, self.helper(n)) + 1)
             self.seen[p] = res
         return self.seen[p]
-

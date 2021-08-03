@@ -1,7 +1,7 @@
 def boolean_to_string(b):
-    if (b == True) :
+    if (b == True):
         return "True"
-    elif (b == False) :
+    elif (b == False):
         return "False"
-    else :
+    else:
         return "invalid"

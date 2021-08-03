@@ -8,4 +8,3 @@ pairs = min(len(i), len(j), len(k))
 print(pairs)
 for l in range(pairs):
     print(str(i[l][1]) + ' ' + str(j[l][1]) + ' ' + str(k[l][1]))
-

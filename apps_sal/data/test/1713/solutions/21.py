@@ -8,9 +8,9 @@ m_c = 0
 while s != t:
     s = l_m[s - 1]
     m_c += 1
-    
+
     if s == o_s:
         m_c = -1
         break
-    
+
 print(m_c)

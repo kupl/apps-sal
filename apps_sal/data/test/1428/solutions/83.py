@@ -1,8 +1,9 @@
 def main():
     from sys import stdin
+
     def input():
         return stdin.readline().strip()
-    
+
     n, c = map(int, input().split())
     d = [list(map(int, input().split())) for _ in range(c)]
 
@@ -21,8 +22,8 @@ def main():
     counters = [[0] * c for _ in range(3)]
     for i in range(n):
         for j in range(n):
-            counters[(i+j) % 3][color[i][j] - 1] += 1
-    
+            counters[(i + j) % 3][color[i][j] - 1] += 1
+
     # full search
     cost = []
     for group in counters:
@@ -43,7 +44,8 @@ def main():
                 if cost[0][i][1] != cost[1][j][1] and cost[1][j][1] != cost[2][k][1] and cost[2][k][1] != cost[0][i][1]:
                     if ans > cost[0][i][0] + cost[1][j][0] + cost[2][k][0]:
                         ans = cost[0][i][0] + cost[1][j][0] + cost[2][k][0]
-    
+
     print(ans)
+
 
 main()

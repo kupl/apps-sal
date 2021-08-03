@@ -19,4 +19,3 @@ for _ in range(int(input())):
             print(odd[i2], end="")
             i2 += 1
     print()
-

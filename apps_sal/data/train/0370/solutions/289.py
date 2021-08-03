@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class DSU:
     def __init__(self, N):
         self.par = list(range(N))
@@ -13,14 +14,16 @@ class DSU:
 
     def union(self, x, y):
         xr, yr = list(map(self.find, (x, y)))
-        if xr == yr: return
+        if xr == yr:
+            return
         if self.rnk[xr] < self.rnk[yr]:
             xr, yr = yr, xr
         if self.rnk[xr] == self.rnk[yr]:
             self.rnk[xr] += 1
 
-        self.par[yr] = xr 
+        self.par[yr] = xr
         self.siz[xr] += self.siz[yr]
+
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
@@ -56,5 +59,3 @@ class Solution:
             max_size = max(max_size, group_count[group_id])
 
         return max_size
-
-

@@ -14,4 +14,3 @@ while j < len(A):
         i += 1
 
 print(max(ans, j - i))
-

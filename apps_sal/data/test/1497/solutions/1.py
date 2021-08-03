@@ -7,4 +7,3 @@ for i in range(N):
     d[l] += 1
 
 print(max(d.values()))
-

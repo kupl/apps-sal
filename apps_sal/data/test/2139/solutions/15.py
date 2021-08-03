@@ -6,4 +6,3 @@ for i in range(3, len(s)):
         last = i
     ans += last - 2
 print(ans)
-

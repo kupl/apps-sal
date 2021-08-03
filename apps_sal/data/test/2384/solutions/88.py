@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def main():
     INF = float("inf")
 
@@ -17,5 +18,6 @@ def main():
             dp_out[(i, j)] = max(dp_in[(i - 1, j)], dp_out[(i - 1, j)])
 
     print(max(dp_in[(N, N // 2)], dp_out[(N, N // 2)]))
+
 
 main()

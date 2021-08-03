@@ -11,7 +11,7 @@ for i in range(x):
     for j in z:
         if j == 0:
             count += 1
-    
+
     output.append(count)
 for i in output:
     print(i)

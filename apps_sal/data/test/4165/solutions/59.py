@@ -3,10 +3,8 @@ li = list(map(int, input().split()))
 li.sort()
 sum = 0
 for a in li:
-  sum += a
+    sum += a
 if sum - li[len(li) - 1] > li[len(li) - 1]:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
-
-
+    print("No")

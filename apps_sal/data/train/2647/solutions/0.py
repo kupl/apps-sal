@@ -7,4 +7,3 @@ for i in range(n):
         print(True)
     except Exception as e:
         print(False)
-

@@ -17,4 +17,3 @@ while count > 0:
     count -= 1
 
 print((s2[0]))
-

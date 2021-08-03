@@ -4,6 +4,5 @@ def say_hello(name, city, state):
         city=city,
         state=state
     )
-    
-    return greeting
 
+    return greeting

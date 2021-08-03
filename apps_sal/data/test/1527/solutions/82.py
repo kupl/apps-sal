@@ -29,7 +29,7 @@ def bfs(sy, sx):
     d_max = 0
     for i in range(H):
         for j in range(W):
-            d_max = max(d_max,reached[i][j])
+            d_max = max(d_max, reached[i][j])
 
     return d_max
 
@@ -50,4 +50,3 @@ for i in range(H):
 #                 else:
 #                     ans = max(ans, bfs(i, j, k, l))
 print(ans)
-

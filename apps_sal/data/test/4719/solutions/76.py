@@ -8,7 +8,7 @@ for i in range(len(s1)):
     else:
         d[s1[i]] = 1
 
-for i in range(n-1):
+for i in range(n - 1):
     di = {}
     s = input()
     for i in range(len(s)):
@@ -30,6 +30,6 @@ for i in range(n-1):
 ans = ""
 
 for key, value in sorted(d.items()):
-    ans += key*value
+    ans += key * value
 
 print(ans)

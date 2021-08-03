@@ -1,7 +1,7 @@
 class Solution:
     def minDays(self, n: int) -> int:
         return self.dfs(n)
-    
+
     @lru_cache(None)
     def dfs(self, n):
         if n < 2:

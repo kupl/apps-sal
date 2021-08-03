@@ -12,7 +12,7 @@ for i in range(h):
     d[- i - 1] = (d[- i] + 1) * arr[- i - 1]
 
 for j in range(w):
-    l[:, j] = (l[:, j-1] + 1) * arr[:, j]
+    l[:, j] = (l[:, j - 1] + 1) * arr[:, j]
     r[:, - j - 1] = (r[:, - j] + 1) * arr[:, - j - 1]
 
 print(np.max(u + d + l + r) - 3)

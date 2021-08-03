@@ -35,4 +35,3 @@ class Solution:
                 graph[j].remove(i)
 
         return cost
-

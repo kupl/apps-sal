@@ -1,6 +1,6 @@
 # This is not my code :,(
 # I used those functions from here http://240hoursoflearning.blogspot.com/2017/09/the-calkin-wilf-tree.html
-# Shame and dishonor on me :,( 
+# Shame and dishonor on me :,(
 
 def rat_at(n):
     # This is not my code :,(
@@ -9,18 +9,17 @@ def rat_at(n):
     nums = [n]
 
     while n > 0:
-        n = n//2
+        n = n // 2
         nums.append(n)
 
-    for n in reversed(nums):    
-        if n%2!=0:
+    for n in reversed(nums):
+        if n % 2 != 0:
             frac[0] += frac[1]
 
         else:
             frac[1] += frac[0]
-    
-    return tuple(frac)
 
+    return tuple(frac)
 
 
 def index_of(a, b):
@@ -37,9 +36,6 @@ def index_of(a, b):
         else:
             a -= b
             path += '1'
-    addForDepth = 2**len(path)-1
+    addForDepth = 2**len(path) - 1
 
     return addForDepth + int(path[::-1], 2)
-
-
-

@@ -1,6 +1,7 @@
 from collections import defaultdict
 from operator import add
 
+
 def accum(op, l):
     if not l:
         return []
@@ -10,7 +11,8 @@ def accum(op, l):
         v = op(v, x)
         ret.append(v)
     return ret
-    
+
+
 class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         B = accum(add, A)

@@ -12,5 +12,5 @@ def points(dice):
         return 30
     if counts.count(1) == 5 and counts.index(0) not in [2, 3, 4]:
         # STRAIGHT
-        return 20    
+        return 20
     return 0

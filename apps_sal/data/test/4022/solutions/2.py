@@ -27,4 +27,4 @@ elif ls[l1] - ls[l2] > rs[r2] - rs[r1]:
     ans = rs[r1] - ls[l2]
 else:
     ans = rs[r2] - ls[l1]
-print(max( ans, 0 ))
+print(max(ans, 0))

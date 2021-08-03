@@ -17,4 +17,3 @@ d = {
     'f': 0,
 }
 print(sum(d[c] for c in hex(int(input()))[2:]))
-

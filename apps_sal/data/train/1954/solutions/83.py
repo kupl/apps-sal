@@ -23,4 +23,3 @@ class Solution:
                     team[x].append(ii)
         # print(team)
         return team[NN - 1]
-

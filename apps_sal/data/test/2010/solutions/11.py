@@ -1,6 +1,6 @@
 import sys
 
-n,m = sys.stdin.readline().split()
+n, m = sys.stdin.readline().split()
 n = int(n)
 m = int(m)
 
@@ -9,7 +9,7 @@ while True:
     operation_arr = []
     last_sum = 0
     change_map = {}
-    for i in range(0,m):
+    for i in range(0, m):
         operation = sys.stdin.readline().split(' ')
         id = int(operation[0])
         if id == 1:
@@ -32,12 +32,10 @@ while True:
             else:
                 print(num_arr[value] + last_sum)
 
-
     nm = sys.stdin.readline().split()
     if not nm:
         break
     else:
-        n,m = nm
+        n, m = nm
         n = int(n)
         m = int(m)
-

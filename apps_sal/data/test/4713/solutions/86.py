@@ -10,7 +10,7 @@ for s in S:
         ans += 1
     else:
         ans -= 1
-    
+
     if max < ans:
         max = ans
 

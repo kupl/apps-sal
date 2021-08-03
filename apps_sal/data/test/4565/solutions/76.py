@@ -20,4 +20,3 @@ for i in range(n):
         temp += ecnt[i + 1]
     ans = min(ans, temp)
 print(ans)
-

@@ -17,6 +17,4 @@ else:
         win = 1 if a > b else 2
     else:
         win = 1 if last > 0 else 2
-print('first' if win == 1 else 'second')        
-
-
+print('first' if win == 1 else 'second')

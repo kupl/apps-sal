@@ -5,7 +5,7 @@ def main():
     from collections import Counter, deque
     #from collections import defaultdict
     from itertools import combinations, permutations, accumulate, groupby, product
-    from bisect import bisect_left,bisect_right
+    from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
 
@@ -20,9 +20,12 @@ def main():
         r += 1
         if not s[l:r] in s[r:]:
             l += 1
-            res = max(res, r-l)
+            res = max(res, r - l)
     print(res)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

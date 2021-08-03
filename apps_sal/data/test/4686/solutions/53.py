@@ -6,10 +6,10 @@ for i in w:
     for j in w:
         if i == j:
             cnt += 1
-    if cnt%2 != 0:
+    if cnt % 2 != 0:
         ans = False
         break
-                
+
 if ans:
     print("Yes")
 else:

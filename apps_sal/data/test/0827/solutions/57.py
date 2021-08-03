@@ -3,7 +3,7 @@ def main():
     n = int(input())
     t = input()
     if t == '1':
-        print((2*10**10))
+        print((2 * 10**10))
         return
 
     splitted_t = t.split('0')
@@ -25,5 +25,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

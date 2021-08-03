@@ -17,5 +17,6 @@ def main():
     if len(s) == 1 and res > 0:
         res -= 1
     print(res)
-main()
 
+
+main()

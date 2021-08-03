@@ -6,4 +6,3 @@ while now <= t:
     ans += b
     now += a
 print(ans)
-

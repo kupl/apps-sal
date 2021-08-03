@@ -1,4 +1,6 @@
 from operator import gt, lt
+
+
 def longest_comb(arr, command):
     max_length, stack, op = 1, [], {'>': gt, '<': lt}[command[0]]
     for n in arr[::-1]:

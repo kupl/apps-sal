@@ -12,17 +12,17 @@ class Solution:
 
         => f(n) = 1/n * ( f(n-1) + f(n-2) + f(n-3) + ... + f(1) )
         '''
-        if n==1:
+        if n == 1:
             return 1.0
-        if n==2:
+        if n == 2:
             return 0.5
         dp = [1.0, 0.5]
         acc = 1.5
-        for i in range(3, n+1):
-            dp.append(acc/i)
+        for i in range(3, n + 1):
+            dp.append(acc / i)
             acc += dp[-1]
         return dp[-1]
-    
+
         '''
         Formal proof with math solution
         when n > 2,
@@ -42,4 +42,3 @@ class Solution:
         => f(n) = f(n-1) = f(2) = 1/2 , when n > 2
         '''
         # return 1 if n==1 else 0.5
-

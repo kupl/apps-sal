@@ -5,4 +5,3 @@ count1, count2 = 1, 0
 for i in range(len(x)):
     count1, count2 = x[i] in s and count1 or x[i - 1:i + 1] in s and count2, count1
 print(['NO', 'YES'][count1])
-

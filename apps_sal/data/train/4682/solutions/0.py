@@ -1,6 +1,7 @@
 import re
 from datetime import date, timedelta
 
+
 def date_correct(text):
     if not text:
         return text

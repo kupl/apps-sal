@@ -12,7 +12,7 @@ for i in range(1, N):
         d = 0
         for k in range(D):
             d_2 += (float(X[i][k]) - float(X[j][k]))**2
-        d = d_2**(1/2)
+        d = d_2**(1 / 2)
         if d.is_integer() == True:
             count += 1
 

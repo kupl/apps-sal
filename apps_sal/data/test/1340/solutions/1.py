@@ -14,7 +14,6 @@ for j in a:
 
 s = 0
 for i in range(1, 21):
-    for j in range(i+1, 21):
+    for j in range(i + 1, 21):
         s += min(d[(i, j)], d[(j, i)])
 print(s)
-

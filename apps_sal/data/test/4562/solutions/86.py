@@ -6,4 +6,3 @@ for i in range(1, 10 ** 5):
         ans = i ** 2
 
 print(ans)
-

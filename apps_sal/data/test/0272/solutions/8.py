@@ -29,4 +29,3 @@ else:
             if let[l] != l and let[l] not in printed:
                 print(let[l], l)
                 printed.append(l)
-

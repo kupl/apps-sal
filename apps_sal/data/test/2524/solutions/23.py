@@ -1,12 +1,14 @@
 import sys
 stdin = sys.stdin
- 
+
 mod = 10**9 + 7
- 
+
+
 def ns(): return stdin.readline().rstrip()
 def ni(): return int(ns())
 def na(): return list(map(int, stdin.readline().split()))
- 
+
+
 def main():
     n = ni()
     a = na()
@@ -19,8 +21,10 @@ def main():
         ans += ((cnt * (n - cnt)) * 2**i) % mod
     ans %= mod
     print(ans)
- 
- 
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

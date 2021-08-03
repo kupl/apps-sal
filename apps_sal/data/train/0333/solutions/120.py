@@ -53,10 +53,10 @@ class Solution:
 
                 if c + 1 not in visited and 0 <= c + 1 < L:
                     visited.add(c + 1)
-                    que.append(c+1)
+                    que.append(c + 1)
                 if L > c - 1 >= 0 and c - 1 not in visited:
                     visited.add(c - 1)
-                    que.append(c-1)
+                    que.append(c - 1)
                 for i in lookup[arr[c]]:
                     if i == c:
                         continue
@@ -67,7 +67,3 @@ class Solution:
             step += 1
 
         return -1
-
-
-
-

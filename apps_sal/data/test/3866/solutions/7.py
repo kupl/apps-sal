@@ -6,4 +6,3 @@ else:
     print(*list(range(n)))
     print(*list(range(n)))
     print(*list(map(lambda x, y: (x + y) % n, list(range(n)), list(range(n)))))
-

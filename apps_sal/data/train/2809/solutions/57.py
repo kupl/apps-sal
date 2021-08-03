@@ -5,4 +5,3 @@ def digitize(n):
     for s in n:
         l.append(int(s))
     return l
-

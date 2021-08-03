@@ -1,4 +1,5 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
 
 n = int(input())
 
@@ -26,11 +27,10 @@ for i in range(n):
 
             v = p[v] - 1
 
-if cnt > 1: ans += cnt
+if cnt > 1:
+    ans += cnt
 
 print(ans)
 
 
-
 # Made By Mostafa_Khaled
-

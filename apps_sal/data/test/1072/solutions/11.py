@@ -8,11 +8,13 @@ for i in range(n):
 
 c = 0
 
+
 def blatant(a):
-    for i in range(1,len(a)):
-        if a[i] < a[i-1]:
+    for i in range(1, len(a)):
+        if a[i] < a[i - 1]:
             return True
     return False
+
 
 match = []
 while True:
@@ -25,29 +27,30 @@ while True:
     else:
         break
 
-for i in range(1,n):
-    if a[0][i] == a[0][i-1]:
+for i in range(1, n):
+    if a[0][i] == a[0][i - 1]:
         match.append(i)
-        
-def rm(a,match):
+
+
+def rm(a, match):
     c = 0
     for m in match:
         i = 1
         while i < len(a):
-            if a[i][m] < a[i][m-1]:
+            if a[i][m] < a[i][m - 1]:
                 del a[i]
                 c += 1
-            elif a[i][m] == a[i][m-1]:
+            elif a[i][m] == a[i][m - 1]:
                 i += 1
             else:
                 break
     return c
 
+
 while True:
-    temp = rm(a,match)
+    temp = rm(a, match)
     if temp == 0:
         break
     c += temp
-    
-print(c)
 
+print(c)

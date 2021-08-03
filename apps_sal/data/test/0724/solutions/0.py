@@ -1,10 +1,13 @@
 import sys
 
+
 def read_int():
     return int(input())
 
+
 def read_ints():
     return [int(x) for x in input().split()]
+
 
 n, d = read_ints()
 a = read_ints()
@@ -19,4 +22,3 @@ for i in range(n):
             best = max(best, j - i + 1)
 
 print(len(a) - best)
-

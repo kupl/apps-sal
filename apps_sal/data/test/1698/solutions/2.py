@@ -10,4 +10,3 @@ for i, x in enumerate(a):
     ans += v
     prev = x
 print(ans)
-

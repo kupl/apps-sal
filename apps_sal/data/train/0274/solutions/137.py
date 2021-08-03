@@ -13,7 +13,7 @@ class Solution:
                     ans = max(ans, j - i)
                 else:
                     ans = max(ans, j - i - 1)
-                    
+
                 i += 1
                 while mxh and mxh[0][1] < i:
                     heappop(mxh)

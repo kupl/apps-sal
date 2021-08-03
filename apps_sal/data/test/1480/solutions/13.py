@@ -1,5 +1,5 @@
 n, k = [int(x) for x in str(input()).split(' ', 1)]
-next_ = [i+1 for i in range(n+1)]
+next_ = [i + 1 for i in range(n + 1)]
 next_[n] = 1
 a = [int(x) for x in str(input()).split(' ')]
 remain = n
@@ -22,4 +22,3 @@ for a0 in a:
     cur = next_[cur]
     remain -= 1
 print(' '.join([str(e) for e in eli]))
-

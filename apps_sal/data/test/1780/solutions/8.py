@@ -8,4 +8,3 @@ for i in range(m):
     length = r - l + 1
     s += '0\n' if length % 2 or length // 2 > a_min else '1\n'
 print(s)
-

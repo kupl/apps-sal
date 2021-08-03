@@ -26,4 +26,3 @@ def solve(n, m, grid):
 n, m = list(map(int, input().split()))
 grid = [['.#'.index(c) for c in line.strip()] for line in sys.stdin.readlines()]
 print(solve(n, m, grid))
-

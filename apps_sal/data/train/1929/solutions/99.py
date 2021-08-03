@@ -9,8 +9,9 @@ class StreamChecker:
                     cur[char] = {}
                 cur = cur[char]
             cur['#'] = {}
-        
+
         self.candidates = deque()
+
     def query(self, letter: str) -> bool:
         size = len(self.candidates)
         for i in range(size):
@@ -28,4 +29,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

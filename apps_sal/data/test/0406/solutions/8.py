@@ -1,7 +1,7 @@
 n = int(input())
 l = []
 inline = input().split()
-for i in range (n):
+for i in range(n):
     l.append(int(inline[i]))
 l.sort()
 right_equal = 1
@@ -30,4 +30,4 @@ if len(l) >= 4:
             ans += c * l[i]
             c = 0
         flag = 1 - flag
-print (ans)
+print(ans)

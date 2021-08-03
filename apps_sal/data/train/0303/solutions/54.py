@@ -12,6 +12,3 @@ class Solution:
                 dp[i] = max(dp[i], dp[i - j - 1] + mm[j][i - 1] * (j + 1))
         print(dp)
         return dp[-1]
-                
-        
-

@@ -10,5 +10,3 @@ class Solution:
             else:
                 break
         return len(items)
-
-

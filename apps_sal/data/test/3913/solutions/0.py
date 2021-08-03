@@ -7,7 +7,7 @@ letters = [set() for _ in range(M)]
 used = set()
 for c in p:
     used.add(c)
-fail = [False]*M
+fail = [False] * M
 
 for i, w in enumerate(words):
     for j, c in enumerate(w):
@@ -23,6 +23,6 @@ for i in range(26):
     ok = True
     for i, s in enumerate(letters):
         ok = ok and (ch in s or fail[i])
-    if ok: cnt += 1
+    if ok:
+        cnt += 1
 print(cnt)
-

@@ -5,7 +5,7 @@ def main():
     ans = 0
     for i in range(1, 2**n):
         t1, t2, t3, t4 = d[i]
-        for j in range(len(bin(i))-2):
+        for j in range(len(bin(i)) - 2):
             t5, t6, t7, t8 = d[i & ~(1 << j)]
             if t5 > t1:
                 t1, t2, t3, t4 = t5, t6, t1, t2
@@ -16,7 +16,7 @@ def main():
             if t7 > t3:
                 t3, t4 = t7, t8
         d[i] = [t1, t2, t3, t4]
-        ans = max(ans, t1+t3)
+        ans = max(ans, t1 + t3)
         print(ans)
 
 

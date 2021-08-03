@@ -29,8 +29,8 @@ def cmb(n, r):
 
 
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N):
     pf = []
@@ -83,5 +83,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

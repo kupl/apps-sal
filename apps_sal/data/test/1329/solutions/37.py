@@ -2,7 +2,7 @@ import math
 from collections import defaultdict
 import numpy as np
 n = int(input())
-dic = defaultdict(lambda : 0)
+dic = defaultdict(lambda: 0)
 for i in range(2, n + 1):
     sqrt = math.floor(i ** 0.5)
     for j in range(2, sqrt + 1):

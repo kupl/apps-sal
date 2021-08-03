@@ -10,4 +10,3 @@ ans = -1
 for i in c:
     ans = max(ans, abs(s - i))
 print(ans)
-

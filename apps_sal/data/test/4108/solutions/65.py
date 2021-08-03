@@ -13,7 +13,7 @@ for i in range(N):
             chr_to[T[i]] += 1
     else:
         chr_to[T[i]] = 1
-    
+
     if S[i] in chr_from:
         if chr_from[S[i]] != T[i]:
             flg = False

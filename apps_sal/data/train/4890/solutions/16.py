@@ -6,4 +6,3 @@ def find_difference(a, b):
     for num in b:
         t2 *= num
     return abs(t1 - t2)
-

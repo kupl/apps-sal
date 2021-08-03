@@ -11,4 +11,3 @@ for ms in range(M):
         cv += v
         bv = max(bv, cv)
 print(bv)
-

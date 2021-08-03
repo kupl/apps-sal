@@ -6,16 +6,15 @@ res = 0
 i, j = 0, 0
 sa, sb = 0, 0
 while i < n or j < m:
-    if sa>sb:
-        sb+=b[j]
-        j+=1
+    if sa > sb:
+        sb += b[j]
+        j += 1
     else:
-        sa+=a[i]
-        i+=1
+        sa += a[i]
+        i += 1
     if sa == sb:
         res += 1
         sa = 0
         sb = 0
 
 print(res)
-

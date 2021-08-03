@@ -5,6 +5,10 @@ Author  : chaotic_iak
 Language: Python 3.3.4
 """
 
+import itertools
+from itertools import compress
+
+
 def read(mode=2):
     # 0: String
     # 1: List of strings
@@ -17,17 +21,20 @@ def read(mode=2):
     if mode == 2:
         return [int(x) for x in inputs.split()]
 
+
 def write(s="\n"):
-    if isinstance(s, list): s = " ".join(map(str,s))
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
 
-################################################### SOLUTION
+# SOLUTION
+
 
 # croft algorithm to generate primes
 # from pyprimes library, not built-in, just google it
-from itertools import compress
-import itertools
+
+
 def croft():
     """Yield prime integers using the Croft Spiral sieve.
 
@@ -49,19 +56,20 @@ def croft():
             itertools.islice(itertools.count(7), 0, None, 2),
             # Mask out those that can't possibly be prime.
             itertools.cycle(selectors)
-            ):
+    ):
         # Using dict membership testing instead of pop gives a
         # 5-10% speedup over the first three million primes.
         if q in roots:
             p = roots[q]
             del roots[q]
-            x = q + 2*p
+            x = q + 2 * p
             while x in roots or (x % 30) not in primeroots:
-                x += 2*p
+                x += 2 * p
             roots[x] = p
         else:
-            roots[q*q] = q
+            roots[q * q] = q
             yield q
+
 
 n, = read()
 cr = croft()
@@ -73,22 +81,22 @@ for i in cr:
         break
 primes.reverse()
 
-used = [0] * (n+1)
+used = [0] * (n + 1)
 res = []
 for p in primes:
-    k = n//p
+    k = n // p
     tmp = []
     while k:
-        if not used[k*p]:
-            tmp.append(k*p)
-            used[k*p] = 1
+        if not used[k * p]:
+            tmp.append(k * p)
+            used[k * p] = 1
         if len(tmp) == 2:
             res.append(tmp)
             tmp = []
         k -= 1
-    if tmp == [p] and p > 2 and p*2 <= n and len(res) and res[-1][1] == p*2:
+    if tmp == [p] and p > 2 and p * 2 <= n and len(res) and res[-1][1] == p * 2:
         res[-1][1] = p
-        used[p*2] = 0
+        used[p * 2] = 0
         used[p] = 1
 
 print(len(res))

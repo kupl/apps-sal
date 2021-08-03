@@ -1,1 +1,1 @@
-bonus_time = lambda s, b:f'${s+s*b*9}'
+def bonus_time(s, b): return f'${s+s*b*9}'

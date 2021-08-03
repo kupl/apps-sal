@@ -1,30 +1,30 @@
 import collections
+
+
 def doit():
     # rows = [[] for y in range(M)]
     rows = dict()
 
     N = int(input())
     graph = dict()
-    for n in range(N) :
+    for n in range(N):
         graph[n] = list()
 
     for n in range(N - 1):
         a, b = map(int, input().split())
-        graph[a-1].append(b-1)
-        graph[b-1].append(a-1)
+        graph[a - 1].append(b - 1)
+        graph[b - 1].append(a - 1)
 
     msize = 0
     for k in graph:
         msize = max(msize, len(graph[k]))
-    print(msize+1)
-
+    print(msize + 1)
 
     root = 0
     colors = [0 for x in range(N)]
     colors[root] = 1
     parents = [0 for x in range(N)]
     parents[root] = root
-
 
     def color(c1, c2):
         colorindex = 0
@@ -33,7 +33,6 @@ def doit():
             if colorindex == c1 or colorindex == c2:
                 continue
             yield colorindex
-
 
     # visited = set()
     # visited.add(root)
@@ -53,5 +52,6 @@ def doit():
             # visited.add(neighbour)
             queue.append(neighbour)
     print(" ".join(map(str, colors)))
+
 
 doit()

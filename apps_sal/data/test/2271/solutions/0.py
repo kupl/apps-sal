@@ -11,4 +11,3 @@ for i in d:
     cnt += (i * (i - 1)) // 2
 
 print(cnt)
-

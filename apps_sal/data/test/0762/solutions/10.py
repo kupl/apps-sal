@@ -5,14 +5,16 @@ evenodd = []
 
 evenodd_cur = 0
 for i in range(n):
-    if a[i] % 2 == 0: evenodd_cur += 1
-    else: evenodd_cur -= 1
+    if a[i] % 2 == 0:
+        evenodd_cur += 1
+    else:
+        evenodd_cur -= 1
     evenodd.append(evenodd_cur)
 
 watchlist = []
-for i in range(n-1):
+for i in range(n - 1):
     if evenodd[i] == 0:
-        watchlist.append((abs(a[i] - a[i+1]), i))
+        watchlist.append((abs(a[i] - a[i + 1]), i))
 
 watchlist.sort()
 # print(watchlist)

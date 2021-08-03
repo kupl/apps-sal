@@ -5,4 +5,3 @@ for _ in range(int(input())):
     dif %= x
     ans = n - dif
     print(ans)
-

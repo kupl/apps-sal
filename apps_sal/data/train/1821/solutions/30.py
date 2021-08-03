@@ -5,6 +5,7 @@ def get_numbers(arr, target, cb):
             result.append(num)
     return result
 
+
 def is_less(a, b):
     return a < b
 
@@ -12,8 +13,10 @@ def is_less(a, b):
 def is_greater(a, b):
     return a > b
 
+
 def is_equal(a, b):
     return a == b
+
 
 def get_less_numbers(arr, target):
     return get_numbers(arr, target, is_less)
@@ -22,8 +25,10 @@ def get_less_numbers(arr, target):
 def get_greater_numbers(arr, target):
     return get_numbers(arr, target, is_greater)
 
+
 def get_equal_numbers(arr, target):
     return get_numbers(arr, target, is_equal)
+
 
 def q_sort(arr):
     if len(arr) <= 1:
@@ -35,6 +40,7 @@ def q_sort(arr):
     mypivot = get_equal_numbers(arr, pivot)
 
     return q_sort(less) + mypivot + q_sort(greater)
+
 
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:

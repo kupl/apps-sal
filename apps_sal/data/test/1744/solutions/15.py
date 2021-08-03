@@ -26,7 +26,7 @@ for i in range(n):
                 uselist.append(use)
             else:
                 ans.append(count)
-                uselist.sort(reverse = True)
+                uselist.sort(reverse=True)
 
             summ = 0
             for uses in uselist[:100]:
@@ -41,4 +41,3 @@ for i in range(n):
         break
 
 print(" ".join(map(str, ans)))
-

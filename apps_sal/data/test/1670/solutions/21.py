@@ -20,5 +20,3 @@ for t, u, v, w in a:
     else:
         ys.add((u, v))
         print(s1 if u == 'h' else s2, v, t)
-        
-

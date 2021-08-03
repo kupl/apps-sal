@@ -33,9 +33,8 @@ else:
                 l = j
                 x = int(n) + 1
                 while x != 0 and l >= 0:
-                        ans += x * 10 ** l
-                        x -= 1
-                        l -= 1
+                    ans += x * 10 ** l
+                    x -= 1
+                    l -= 1
                 return ans
     print((dp(k)))
-

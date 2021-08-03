@@ -14,4 +14,3 @@ if departures != arrivals:
     print("contest")
 else:
     print("home")
-

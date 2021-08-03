@@ -8,4 +8,3 @@ for i in range(k):
     s = (s + int(n)) % p
 
 print(s)
-

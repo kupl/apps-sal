@@ -20,11 +20,13 @@ def main():
         P[i] = ni
         C[ni] += C[i]
         T[ni] += T[i] + C[i]
-    
+
     if D[0] == T[DI[D[0]]]:
         for i in range(N):
-            if P[i] >= 0: print(i+1, P[i]+1)
+            if P[i] >= 0:
+                print(i + 1, P[i] + 1)
     else:
         print(-1)
+
 
 main()

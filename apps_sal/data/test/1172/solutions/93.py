@@ -29,4 +29,3 @@ for i, s in enumerate(S):
         dp[i][3] = (dp[i - 1][3] + dp[i - 1][2]) % mod
 
 print((dp[-1][-1]))
-

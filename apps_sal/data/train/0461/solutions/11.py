@@ -5,22 +5,22 @@ class Solution:
         #      sub1         sub2
         #      / \\          / \\
         #   sub11 sub12  sub21 sub22
-        
+
         subs = [[] for i in range(n)]
-        for i, m in enumerate (manager):
+        for i, m in enumerate(manager):
             if m != -1:
                 subs[m].append(i)
-                
+
         def my_dfs(root):
-            
-            if subs[root] is None: return informTime[root]
-            
+
+            if subs[root] is None:
+                return informTime[root]
+
             return max([my_dfs(s) for s in subs[root]] or [0]) + informTime[root]
-        
+
         return my_dfs(headID)
-            
-        
-        
+
+
 #     def numOfMinutes(self, n, headID, manager, informTime):
 #         children = [[] for i in xrange(n)]
 #         for i, m in enumerate(manager):
@@ -36,4 +36,3 @@ class Solution:
     #             manager[i] = -1
     #         return informTime[i]
     #     return max(map(dfs, range(n)))
-

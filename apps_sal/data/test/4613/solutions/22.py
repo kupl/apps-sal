@@ -4,10 +4,11 @@ ab = [[0, 0] for i in range(M)]
 
 for i in range(M):
     ab[i][0], ab[i][1] = map(int, input().split())
-    to1[ab[i][0]-1].append(ab[i][1]-1)
-    to1[ab[i][1]-1].append(ab[i][0]-1)
+    to1[ab[i][0] - 1].append(ab[i][1] - 1)
+    to1[ab[i][1] - 1].append(ab[i][0] - 1)
 
 ans = 0
+
 
 def DFS(n):
     nonlocal v
@@ -16,6 +17,7 @@ def DFS(n):
     v[n] = 1
     for i in to1[n]:
         DFS(i)
+
 
 for i in range(M):
     v = [0] * N

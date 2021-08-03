@@ -2,9 +2,13 @@ import math
 import collections
 from itertools import product
 
-ii = lambda : int(input())
-mi = lambda : map(int,input().split())
-li = lambda : list(map(int,input().split()))
+
+def ii(): return int(input())
+
+
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 n = ii()
 p = [ii() for i in range(n)]

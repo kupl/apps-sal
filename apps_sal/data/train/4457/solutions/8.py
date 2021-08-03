@@ -1,6 +1,6 @@
 def mega_mind(hp, dps, shots, regen):
     print((hp, dps, shots, regen))
-    if dps * shots < hp and dps * shots <= regen: 
+    if dps * shots < hp and dps * shots <= regen:
         return -1
     dps_round = dps * shots
     if hp - dps_round <= 0:
@@ -13,6 +13,3 @@ def mega_mind(hp, dps, shots, regen):
     hp += regen
     print((round, hp))
     return shots * (round + 1) + hp // dps + (0 if hp % dps == 0 else 1)
-    
-    
-

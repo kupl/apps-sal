@@ -15,4 +15,3 @@ if (x == 0 or x_ % x == 0) and (y == 0 or y_ % y == 0):
         print("NO")
 else:
     print("NO")
-

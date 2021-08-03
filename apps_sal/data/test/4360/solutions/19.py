@@ -8,6 +8,6 @@ A = [float(a) for a in A]
 total = 0.
 
 for a in A:
-    total += 1/a
+    total += 1 / a
 
-print(1/total)
+print(1 / total)

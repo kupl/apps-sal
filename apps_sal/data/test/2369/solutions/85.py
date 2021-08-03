@@ -35,7 +35,3 @@ for i in range(N - (K - 1)):
     ans %= MOD
 
 print(ans)
-
-
-
-

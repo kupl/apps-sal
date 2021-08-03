@@ -1,7 +1,8 @@
-MOD = 998244353
 from math import factorial
+MOD = 998244353
 N, K = list(map(int, input().split()))
 field = [list(map(int, input().split())) for i in range(N)]
+
 
 class Union_Find:
     # 親管理リストと高さ管理リストを初期化し、
@@ -14,7 +15,7 @@ class Union_Find:
         self.rank = [0] * N
         self.group_count = N
         self.N = N
-    
+
     # xの所属するグループのリーダーを返す
     def find(self, x):
         # 自分自身がリーダーなら、自分を返す
@@ -43,7 +44,7 @@ class Union_Find:
             self.parent[x] += self.parent[y]
             self.parent[y] = x
             self.rank[x] += 1
-        
+
         # 木の高さが違うなら、低い方を高い方につなぐ
         elif self.rank[x] > self.rank[y]:
             self.parent[x] += self.parent[y]
@@ -51,10 +52,10 @@ class Union_Find:
         else:
             self.parent[y] += self.parent[x]
             self.parent[x] = y
-        
+
         # 統合された場合、グループ数は1減る
         self.group_count -= 1
-    
+
     # xとyが同じグループかどうかを調べる
     def samep(self, x, y):
         return self.find(x) == self.find(y)
@@ -63,7 +64,7 @@ class Union_Find:
     def get_group_member_list(self, x):
         x = self.find(x)
         return [i for i in range(self.N) if self.find(i) == x]
-    
+
     # xの所属するグループのメンバー数を返す
     def get_group_member_count(self, x):
         x = self.find(x)
@@ -71,23 +72,24 @@ class Union_Find:
 
     # 全ての{リーダー:グループメンバー数}を辞書形式で返す
     def get_all_groups(self):
-        return {idx:-n for idx, n in enumerate(self.parent) if n < 0}
+        return {idx: -n for idx, n in enumerate(self.parent) if n < 0}
+
 
 hg = Union_Find(N)
-for i in range(N-1):
+for i in range(N - 1):
     h1 = field[i]
-    for j in range(i,N):
+    for j in range(i, N):
         h2 = field[j]
-        if all([True if x+y <= K else False for x, y in zip(h1, h2)]):
+        if all([True if x + y <= K else False for x, y in zip(h1, h2)]):
             hg.unite(i, j)
 
 vg = Union_Find(N)
 rotated = list(zip(*field))
-for i in range(N-1):
+for i in range(N - 1):
     v1 = rotated[i]
     for j in range(i, N):
         v2 = rotated[j]
-        if all([True if x+y <= K else False for x, y in zip(v1, v2)]):
+        if all([True if x + y <= K else False for x, y in zip(v1, v2)]):
             vg.unite(i, j)
 
 result = 1
@@ -100,4 +102,3 @@ for value in list(vg.get_all_groups().values()):
     result %= MOD
 
 print(result)
-

@@ -4,5 +4,3 @@ if len(s) < k:
     print('impossible')
 else:
     print(max(k - len(ss), 0))
-
-

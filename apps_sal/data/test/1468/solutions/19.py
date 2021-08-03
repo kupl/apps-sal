@@ -6,6 +6,8 @@ def sorting(string, string1):
             string = string[:q]
             break
     return string
+
+
 n = int(input())
 array = [str(input()) for c in range(n)]
 b = n - 2

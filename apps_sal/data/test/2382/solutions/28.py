@@ -1,6 +1,7 @@
 from collections import Counter
 from heapq import heapify, heappush, heappop
 
+
 def solve():
     N = int(input())
     Ss = list(map(int, input().split()))
@@ -21,9 +22,8 @@ def solve():
 
     return True
 
+
 if solve():
     print('Yes')
 else:
     print('No')
-
-

@@ -1,26 +1,32 @@
-#Codeforces.com round #668
-#Problem B
+# Codeforces.com round #668
+# Problem B
 import sys
 
 #
-#BEGIN TEMPLATE
+# BEGIN TEMPLATE
 #
+
+
 def input():
     return sys.stdin.readline()[:-1]
 
+
 def getInt():
-    #Assumes next line consists of only one integer and returns an integer
+    # Assumes next line consists of only one integer and returns an integer
     return int(input())
+
 
 def getIntIter():
     return list(map(int, input().split()))
+
 
 def getIntList():
     return list(getIntIter())
 
 #
-#END TEMPLATE
+# END TEMPLATE
 #
+
 
 for _ in range(getInt()):
     n = getInt()
@@ -31,4 +37,3 @@ for _ in range(getInt()):
         currSum += num
         minSum = min(currSum, minSum)
     print(abs(minSum))
-

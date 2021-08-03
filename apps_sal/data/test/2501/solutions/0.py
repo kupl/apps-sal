@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def main():
     d = defaultdict(int)
     d2 = defaultdict(int)
@@ -13,12 +14,16 @@ def main():
 
     ans = 0
 
-    for k,v in d.items():
-        if k == 0:continue
+    for k, v in d.items():
+        if k == 0:
+            continue
         ans += v * d2[k]
 
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

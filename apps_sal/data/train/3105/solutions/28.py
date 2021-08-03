@@ -3,7 +3,7 @@ def count_sheep(n):
         return ""
     else:
         count = "1 sheep..."
-        for i in range(2,n+1):
+        for i in range(2, n + 1):
             count += f"{i} sheep..."
-            
+
     return count

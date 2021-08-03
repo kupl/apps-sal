@@ -1,12 +1,13 @@
 from sortedcontainers import SortedList
 
+
 class TweetCounts:
     freq_seconds = {
         'minute': 60,
         'hour': 3600,
         'day': 86400,
     }
-    
+
     def __init__(self):
         self.tweets: Dict[str, List[int]] = {}
 
@@ -14,7 +15,6 @@ class TweetCounts:
         if tweetName not in self.tweets:
             self.tweets[tweetName] = SortedList()
         self.tweets[tweetName].add(time)
-        
 
     def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
         interval = self.freq_seconds[freq]
@@ -35,4 +35,3 @@ class TweetCounts:
 # obj = TweetCounts()
 # obj.recordTweet(tweetName,time)
 # param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-

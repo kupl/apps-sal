@@ -14,6 +14,3 @@ while True:
         h = 0
 
 print(c)
-    
-
-

@@ -7,4 +7,3 @@ for i in range(11):
     s1 = ns
 
 print(sorted(s).index(j) + 1)
-

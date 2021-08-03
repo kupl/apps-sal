@@ -13,5 +13,5 @@ class Solution:
 
         # 按照最强排序后取最后的k个即为所求
         #arr = sorted(arr, key=mykey)
-        arr = sorted(arr, key=lambda x: (abs(x-mid), x))
+        arr = sorted(arr, key=lambda x: (abs(x - mid), x))
         return arr[n - k:]

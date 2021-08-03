@@ -6,4 +6,3 @@ elif c + d < a + b:
     print("Left")
 else:
     print("Balanced")
-

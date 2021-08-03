@@ -4,9 +4,9 @@ def next_smaller(n):
     center = None
 
     for i in range(len(list_number) - 1, 0, -1):
-        if list_number[i] < list_number[i-1]:
-            center = list_number[i-1]
-            left = list_number[:i-1]
+        if list_number[i] < list_number[i - 1]:
+            center = list_number[i - 1]
+            left = list_number[:i - 1]
             right = list_number[i:len(list_number)]
             break
 

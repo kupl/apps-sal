@@ -6,7 +6,7 @@ def solve(n):
         c += 1
     return c
 
+
 n = int(input())
 
 print(solve(n))
-

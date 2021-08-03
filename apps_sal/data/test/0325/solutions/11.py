@@ -62,4 +62,3 @@ if d[-1] == -float("inf"):
     print((-1))
 else:
     print((max(0, -d[-1])))
-

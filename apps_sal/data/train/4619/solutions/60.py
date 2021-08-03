@@ -1,5 +1,5 @@
 def whoseMove(last, win):
-    if win==True:
+    if win == True:
         return last
     else:
-        return "black" if last=="white" else "white"
+        return "black" if last == "white" else "white"

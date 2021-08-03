@@ -2,8 +2,8 @@ class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         heap = []
         people.sort()
-        heap.append((people[len(people)-1], 1))
-        i = len(people)-2
+        heap.append((people[len(people) - 1], 1))
+        i = len(people) - 2
         while i >= 0:
             ele = people[i]
             if limit >= ele + heap[0][0] and heap[0][1] < 2:

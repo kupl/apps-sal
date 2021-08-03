@@ -1,7 +1,7 @@
 class Solution:
     def flipgame(self, fronts: List[int], backs: List[int]) -> int:
-        cands = [0]*2001
-        blacklist = [0]*2001
+        cands = [0] * 2001
+        blacklist = [0] * 2001
         for f, b in zip(fronts, backs):
             if f == b:
                 blacklist[f] = 1
@@ -11,7 +11,7 @@ class Solution:
                     cands[f] = 1
                 if not blacklist[b]:
                     cands[b] = 1
-                    
+
         for idx in range(1, 2001):
             if cands[idx]:
                 return idx

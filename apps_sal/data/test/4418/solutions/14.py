@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(x) for x in input().split()]
-exist = [4,8,15,16,23,42]
+exist = [4, 8, 15, 16, 23, 42]
 s = set(exist)
 waiting = [0] * 6
 ans = 0
@@ -22,5 +22,3 @@ for x in a:
 for i in range(6):
     ans += (i + 1) * waiting[i]
 print(ans)
-    
-

@@ -1,21 +1,21 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
 
-n,k=list(map(int,input().split()))
-A=list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+A = list(map(int, input().split()))
 
-SET=set()
+SET = set()
 
-from collections import deque
 
-Q=deque()
+Q = deque()
 
 for a in A:
     if a in SET:
         continue
     else:
-        if len(Q)==k:
-            x=Q.pop()
+        if len(Q) == k:
+            x = Q.pop()
             SET.remove(x)
             Q.appendleft(a)
             SET.add(a)
@@ -25,6 +25,3 @@ for a in A:
 
 print(len(Q))
 print(*Q)
-            
-            
-

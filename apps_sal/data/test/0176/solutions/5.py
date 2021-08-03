@@ -5,6 +5,7 @@ def f(a, b, k):
         res = b // k - (a - 1) // k
     return res
 
+
 k, a, b = [int(i) for i in input().split()]
 if b <= 0:
     res = f(-b, -a, k)
@@ -13,5 +14,3 @@ elif a < 0:
 else:
     res = f(a, b, k)
 print(res)
-    
-

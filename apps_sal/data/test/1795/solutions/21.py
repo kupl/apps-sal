@@ -10,4 +10,3 @@ for i in range(n):
 
 if not flag:
     print('NO')
-

@@ -12,5 +12,3 @@ while n != 0:
         i += 1
     p = tp
 print(ans)
-
-

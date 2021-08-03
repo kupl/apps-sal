@@ -1,11 +1,11 @@
 class Solution:
-     def thirdMax(self, nums):
-         """
-         :type nums: List[int]
-         :rtype: int
-         """
-         
-         """
+    def thirdMax(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        """
          if len(nums) == 2 or len(nums) == 1:
              return max(nums)
          
@@ -31,36 +31,35 @@ class Solution:
              
          return maxPos
          """
-         
-         maxes = []
-         
-         for i in nums:
-             if self.isNew(i, maxes):
-                 if len(maxes) < 3:
-                     maxes.append(i)
-                     maxes.sort() # ascending
-                 else:
-                     pos = self.findPos(i, maxes)
-                     if pos != None:
-                         maxes[pos] = i
-                         maxes.sort()
-         
-         if len(maxes) == 3:
-             return maxes[0]
-         else:
-             return maxes[-1]
-                 
-     
-     def isNew(self, val, maxes):
-         isNew = True
-         for i in maxes:
-             if val == i:
-                 isNew = False
-         return isNew
-     
-     def findPos(self, val, maxes):
-         for ind, aMax in enumerate(maxes):
-             if val > aMax:
-                 return ind
-             
-         return None
+
+        maxes = []
+
+        for i in nums:
+            if self.isNew(i, maxes):
+                if len(maxes) < 3:
+                    maxes.append(i)
+                    maxes.sort()  # ascending
+                else:
+                    pos = self.findPos(i, maxes)
+                    if pos != None:
+                        maxes[pos] = i
+                        maxes.sort()
+
+        if len(maxes) == 3:
+            return maxes[0]
+        else:
+            return maxes[-1]
+
+    def isNew(self, val, maxes):
+        isNew = True
+        for i in maxes:
+            if val == i:
+                isNew = False
+        return isNew
+
+    def findPos(self, val, maxes):
+        for ind, aMax in enumerate(maxes):
+            if val > aMax:
+                return ind
+
+        return None

@@ -69,4 +69,3 @@ if "paalto" in os.getcwd():
     )
 else:
     pp(sys.stdin.readline)
-

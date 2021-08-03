@@ -17,11 +17,12 @@ class DSU:
         self.par[yr] = xr
         self.sz[xr] += self.sz[yr]
         return True
-    
+
+
 class Solution:
     def minCostConnectPoints(self, points):
         N = len(points)
-        
+
         edges = []
         for i in range(N):
             for j in range(i + 1, N):
@@ -36,7 +37,7 @@ class Solution:
             if dsu.union(u, v):
                 ans += d
         return ans
-    
+
         # n = len(points)
         # adj_matrix = [[0 for _ in range(n)] for _ in range(n)]
         # for i in range(n):
@@ -66,4 +67,3 @@ class Solution:
         #             continue
         #         weight[j] = min(weight[j], adj_matrix[visit][j])
         # return total
-

@@ -5,18 +5,17 @@ class Solution:
             return position[-1] - position[0]
 
         else:
-            maxd = position[-1] // (m-1)
-
+            maxd = position[-1] // (m - 1)
 
         start = 1
         end = maxd
 
         while start < end:
-            middle = (start+end) // 2
+            middle = (start + end) // 2
             result = self.is_satisfy(position, middle, m)
             if result:
                 if start == middle:
-                    result2= self.is_satisfy(position, middle+1, m)
+                    result2 = self.is_satisfy(position, middle + 1, m)
                     if result2:
                         return middle + 1
                     else:
@@ -30,7 +29,7 @@ class Solution:
     def is_satisfy(self, position, maxd, m):
         pre_postion = position[0]
         index = 1
-        left_count = m-1
+        left_count = m - 1
 
         pcount = len(position)
 
@@ -44,8 +43,6 @@ class Solution:
                 return True
 
             pre_postion = position[index]
-            index+=1
+            index += 1
 
         return False
-
-

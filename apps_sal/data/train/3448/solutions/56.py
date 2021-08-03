@@ -6,7 +6,7 @@ def f(n):
     if n <= 0:
         return None
     count = 0
-    for i in range(n+1):
+    for i in range(n + 1):
         count += i
-    
+
     return count

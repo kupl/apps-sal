@@ -9,6 +9,5 @@ Rs += Ps[:X] + Qs[:Y]
 
 Rs.sort(reverse=True)
 
-ans = sum(Rs[:X+Y])
+ans = sum(Rs[:X + Y])
 print(ans)
-

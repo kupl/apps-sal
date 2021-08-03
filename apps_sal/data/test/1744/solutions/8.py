@@ -7,10 +7,9 @@ for i in range(n):
     Mi = M - t[i]
     c = 0
     for j in range(1, 101):
-        k = min(Mi // j, f[j]) 
+        k = min(Mi // j, f[j])
         Mi -= k * j
         c += k
     a.append(i - c)
     f[t[i]] += 1
 print(' '.join(map(str, a)))
-

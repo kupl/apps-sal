@@ -8,4 +8,3 @@ ans = 0
 for i in range(m - n):
     ans += b[i]
 print(ans)
-

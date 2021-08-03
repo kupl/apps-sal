@@ -9,6 +9,5 @@ def calc(expr):
                 s.append(eval(f"{s.pop(-2)} {arg} {s.pop(-1)}"))
             except:
                 pass
-    
-    return s[-1]
 
+    return s[-1]

@@ -1,12 +1,9 @@
 def sum_mix(arr):
-    sum=0
+    sum = 0
     for x in arr:
-        if type(x)==str:
-            x=int(x)
-            sum+=x
+        if type(x) == str:
+            x = int(x)
+            sum += x
         else:
-            sum+=x
+            sum += x
     return sum
-    
-
-

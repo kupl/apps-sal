@@ -8,4 +8,3 @@ class Solution:
                 sums.clear()
             sums.add(curr)
         return count
-

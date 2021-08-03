@@ -11,6 +11,6 @@ class Solution:
                 if not head.next:
                     res += 1
                 elif head.next.val not in G:
-                    res+=1
+                    res += 1
             head = head.next
         return res

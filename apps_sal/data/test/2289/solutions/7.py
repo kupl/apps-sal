@@ -23,5 +23,3 @@ for i in range(q):
         print(n)
     else:
         print(ans)
-    
-

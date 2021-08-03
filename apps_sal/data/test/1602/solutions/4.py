@@ -1,7 +1,7 @@
 
 n = int(input())
 
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 lis = [0] * 31
 
@@ -15,7 +15,7 @@ for i in a:
 
 nmax = 0
 maxind = 0
-for ind,i in enumerate(a):
+for ind, i in enumerate(a):
 
     for j in range(31):
 
@@ -35,5 +35,4 @@ for i in range(n):
     if i != maxind:
         ans.append(a[i])
 
-print(" ".join(map(str,ans)))
-
+print(" ".join(map(str, ans)))

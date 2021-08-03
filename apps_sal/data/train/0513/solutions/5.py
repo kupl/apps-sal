@@ -2,10 +2,10 @@ n = int(input())
 a = list(map(int, input().split()))
 
 uv = [[] for _ in range(n)]
-for _ in range(n-1):
+for _ in range(n - 1):
     i, j = map(int, input().split())
-    uv[i-1].append(j-1)
-    uv[j-1].append(i-1)
+    uv[i - 1].append(j - 1)
+    uv[j - 1].append(i - 1)
 
 # DFS
 # 頂点iが未探索の時、ans[i] = -1
@@ -26,7 +26,7 @@ for i in uv[0]:
 
 while True:
     i = todo.pop(-1)
-    
+
     # ans[i]を求める
     if dp[-1] < a[i]:
         dp.append(a[i])

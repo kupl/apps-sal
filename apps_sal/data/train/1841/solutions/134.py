@@ -5,4 +5,3 @@ class Solution:
         power = [abs(x - m) for x in arr]
         order = sorted(zip(power, arr), reverse=True)
         return [order[i][1] for i in range(k)]
-

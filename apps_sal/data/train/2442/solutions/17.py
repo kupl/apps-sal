@@ -3,23 +3,23 @@ class Solution:
         output = []
         temp = list(s)
 
-        while len(temp)>0:
+        while len(temp) > 0:
             temp.sort()
             output.append(temp[0])
             temp.remove(temp[0])
             for e in temp:
-                if e>output[-1]:
+                if e > output[-1]:
                     output.append(e)
                     temp[temp.index(e)] = ''
             temp = [e for e in temp if e]
 
-            if len(temp)==0:
+            if len(temp) == 0:
                 break
             temp.reverse()
             output.append(temp[0])
             temp.remove(temp[0])
             for e in temp:
-                if e<output[-1]:
+                if e < output[-1]:
                     output.append(e)
                     temp[temp.index(e)] = ''
             temp = [e for e in temp if e]

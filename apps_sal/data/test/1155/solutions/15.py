@@ -15,10 +15,12 @@ def problem():
     maxi = 100
     for i in range(n):
         a, b = gis()
-        maxi = min(maxi, a/b)
-    print(maxi*m)
+        maxi = min(maxi, a / b)
+    print(maxi * m)
+
 
 def __starting_point():
     problem()
+
 
 __starting_point()

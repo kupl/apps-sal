@@ -27,4 +27,3 @@ for xpy, xmy in XY:
         else:
             s += "D" if ms == 1 else "L"
     print(s)
-

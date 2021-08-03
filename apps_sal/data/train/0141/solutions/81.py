@@ -5,10 +5,10 @@ class Solution:
         boats = 0
         i = 0
         j = len(people) - 1
-        while j>=i:
+        while j >= i:
             # check if two people can sit in a boat
             if people[i] + people[j] <= limit:
-                i += 1  
+                i += 1
             j -= 1
             boats += 1
         return boats

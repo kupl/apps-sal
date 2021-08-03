@@ -12,15 +12,15 @@ class Solution:
                 # if len(odd_sums) > 0:
                 #     ans += i - odd_sums[-1]
                 ans += len(odd_sums)
-                
+
                 even_sums.append(i)
             else:
                 # is odd
                 # ans += 1
-                ans +=  1 + len(even_sums)
+                ans += 1 + len(even_sums)
                 # j = 1
                 # while j <= len(even_sums) and even_sums[-j] == i-1
-                #     if 
+                #     if
                 #     j += 1
                 # if len(even_sums) > 0 and even_sums[-1] == i-1:
                 #     ans += 1
@@ -28,26 +28,27 @@ class Solution:
                 #     ans += i - odd_sums[-1] + 1
                 # else:
                 #     ans += i
-                # ans += len([]) 
-                # last odd 
+                # ans += len([])
+                # last odd
                 # odd_sums[-1]
                 odd_sums.append(i)
         return ans % (10**9 + 7)
-            
+
+
 if True:
-    print((Solution().numOfSubarrays([1,2,3,4,5,6,7]))) # 16
-    print((Solution().numOfSubarrays([100,100,99,99]))) # 4
-    print((Solution().numOfSubarrays([7]))) # 1
-    print((Solution().numOfSubarrays([2,4,6]))) # 0
-            
-        
+    print((Solution().numOfSubarrays([1, 2, 3, 4, 5, 6, 7])))  # 16
+    print((Solution().numOfSubarrays([100, 100, 99, 99])))  # 4
+    print((Solution().numOfSubarrays([7])))  # 1
+    print((Solution().numOfSubarrays([2, 4, 6])))  # 0
+
+
 # [1,2,3,4,5,6,7]
 # [1]
 # [1,2]
 # [1]
-        
+
 # [1,3,5]
-# 1, 1, 
+# 1, 1,
 
 # [2,4,6]
 # 0
@@ -58,4 +59,3 @@ if True:
 
 # [1,2,3,4,5,6,7]
 # 1 + 1 + 1 + 1 set(1,3) set(2)
-

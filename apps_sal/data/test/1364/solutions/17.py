@@ -1,4 +1,4 @@
-n  = int(input())
+n = int(input())
 L = list(map(int, input().split())) + [0]
 ans = 0
 ans_cur = 0

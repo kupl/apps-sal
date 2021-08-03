@@ -17,11 +17,10 @@ else:
         rminus = data[i][0] - data[i][1]
         rplus = data[i][0] + data[i][1]
 
-        if rminus > data[i-1][0]:
+        if rminus > data[i - 1][0]:
             o += 1
-        elif rplus < data[i+1][0]:
+        elif rplus < data[i + 1][0]:
             o += 1
             data[i][0] = rplus
 
 print(o)
-

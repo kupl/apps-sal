@@ -13,4 +13,3 @@ else:
 
     print('YES')
     print(*(first_half + second_half))
-

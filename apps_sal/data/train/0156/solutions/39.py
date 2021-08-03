@@ -16,5 +16,5 @@ class Solution:
                 i -= 1
             else:
                 stk.append(s2[j])
-                j -= 1    
+                j -= 1
         return s1[: i + 1] + s2[: j + 1] + ''.join(reversed(stk))

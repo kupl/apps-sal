@@ -5,7 +5,7 @@ ans = 0
 x = [0] * 27
 y = [0] * 27
 for i in range(len(s)):
-    x[ord(s[i]) - 97]+=1
+    x[ord(s[i]) - 97] += 1
 for i in range(len(s1)):
     y[ord(s1[i]) - 97] += 1
 for i in range(27):

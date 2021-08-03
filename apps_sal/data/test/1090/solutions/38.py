@@ -15,4 +15,4 @@ for i in range(1, N):
     pre = S[i]
 
 # print(ans, split)
-print(ans + min(2*K, split))
+print(ans + min(2 * K, split))

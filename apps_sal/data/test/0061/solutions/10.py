@@ -16,4 +16,3 @@ elif (X < Y):
     print("<")
 else:
     print(">")
-

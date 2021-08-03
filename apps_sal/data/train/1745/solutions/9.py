@@ -5,9 +5,9 @@ def calculate(expression):
         try:
             for num in expression:
                 if num == '$':
-                    first = expression.pop(expression.index(num)-1)
-                    second = expression.pop(expression.index(num)+1)
-                    ans = str(float(float(first)/float(second)))
+                    first = expression.pop(expression.index(num) - 1)
+                    second = expression.pop(expression.index(num) + 1)
+                    ans = str(float(float(first) / float(second)))
                     expression[expression.index(num)] = ans
         except ValueError:
             return '400: Bad request'
@@ -15,9 +15,9 @@ def calculate(expression):
         try:
             for num in expression:
                 if num == '*':
-                    first = expression.pop(expression.index(num)-1)
-                    second = expression.pop(expression.index(num)+1)
-                    ans = str(float(float(first)*float(second)))
+                    first = expression.pop(expression.index(num) - 1)
+                    second = expression.pop(expression.index(num) + 1)
+                    ans = str(float(float(first) * float(second)))
                     expression[expression.index(num)] = ans
         except ValueError:
             return '400: Bad request'
@@ -25,9 +25,9 @@ def calculate(expression):
         try:
             for num in expression:
                 if num == '-':
-                    first = expression.pop(expression.index(num)-1)
-                    second = expression.pop(expression.index(num)+1)
-                    ans = str(float(float(first)-float(second)))
+                    first = expression.pop(expression.index(num) - 1)
+                    second = expression.pop(expression.index(num) + 1)
+                    ans = str(float(float(first) - float(second)))
                     expression[expression.index(num)] = ans
         except ValueError:
             return '400: Bad request'
@@ -35,9 +35,9 @@ def calculate(expression):
         try:
             for num in expression:
                 if num == '+':
-                    first = expression.pop(expression.index(num)-1)
-                    second = expression.pop(expression.index(num)+1)
-                    ans = str(float(float(first)+float(second)))
+                    first = expression.pop(expression.index(num) - 1)
+                    second = expression.pop(expression.index(num) + 1)
+                    ans = str(float(float(first) + float(second)))
                     expression[expression.index(num)] = ans
         except ValueError:
             return '400: Bad request'
@@ -45,6 +45,3 @@ def calculate(expression):
         return float(expression[0])
     except ValueError:
         return '400: Bad request'
-
-        
-

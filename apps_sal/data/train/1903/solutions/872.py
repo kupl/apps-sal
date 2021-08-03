@@ -1,14 +1,14 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         from queue import PriorityQueue
-        
+
         coors = {}
         count = 0
         for point in points:
             coors[count] = tuple(point)
             count = count + 1
         pq = PriorityQueue()
-        pq.put((0, 0)) # dist, nodeIdx
+        pq.put((0, 0))  # dist, nodeIdx
         visited = set()
         total = 0
         while (len(visited) < len(points)):

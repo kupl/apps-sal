@@ -23,4 +23,3 @@ while Q:
         if y != p:
             Q.append((x, y, None))
 print(*L, sep='\n')
-

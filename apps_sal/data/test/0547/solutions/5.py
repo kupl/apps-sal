@@ -2,7 +2,9 @@ n, k = list(map(int, input().split()))
 s = [input() for i in range(n)]
 pas = input()
 a = sorted([len(i) for i in s])
-f = lambda x: x + ((x - 1) // k) * 5
+def f(x): return x + ((x - 1) // k) * 5
+
+
 for i in range(n):
     if a[i] == len(pas):
         L = i + 1
@@ -15,4 +17,3 @@ for i in range(n):
         break
 ans2 = f(R)
 print(ans1, ans2)
-

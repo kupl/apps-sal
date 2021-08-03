@@ -20,4 +20,3 @@ if f:
     print('First')
 else:
     print('Second')
-

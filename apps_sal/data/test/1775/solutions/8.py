@@ -3,8 +3,11 @@ from sys import setrecursionlimit
 from sys import stdin
 setrecursionlimit(1000000007)
 _data = iter(stdin.read().split('\n'))
+
+
 def input():
     return next(_data)
+
 
 n, m, k = [int(x) for x in input().split()]
 a = tuple(tuple(-int(x) for x in input().split()) for i in range(n))

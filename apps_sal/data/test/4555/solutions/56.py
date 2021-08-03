@@ -9,4 +9,3 @@ for i in range(b, b - k, -1):
 res = sorted(list(res))
 for i in range(len(res)):
     print((res[i]))
-

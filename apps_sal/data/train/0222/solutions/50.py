@@ -3,10 +3,10 @@ class Solution:
         res = 0
         A_dict = {}
         for x in A:
-            A_dict[x] = A_dict.get(x,0) + 1
-        
-        for i in range(len(A)-1):
-            for j in range(i+1, len(A)):
+            A_dict[x] = A_dict.get(x, 0) + 1
+
+        for i in range(len(A) - 1):
+            for j in range(i + 1, len(A)):
                 a, b = A[i], A[j]
                 c = a + b
                 length = 0
@@ -15,8 +15,5 @@ class Solution:
                     a, b = b, c
                     c = a + b
                 res = max(res, length)
-                
-        return res + 2 if res > 0 else 0
-                
-                
 
+        return res + 2 if res > 0 else 0

@@ -10,5 +10,3 @@ elif data_list[0] == data_list[1] == data_list[2] == data_list[3]:
     print('Yes')
 else:
     print('No')
-
-

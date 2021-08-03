@@ -1,7 +1,7 @@
+from itertools import product
 N, M = list(map(int, input().split()))
 Switch = [list([int(a) - 1 for a in input().split()])[1:] for i in range(M)]
 P = list(map(int, input().split()))
-from itertools import product
 
 Target = product([0, 1], repeat=N)
 ans = 0
@@ -16,8 +16,8 @@ for T in Target:
         akari.append(temp)
     isOK = True
     for j, ak in enumerate(akari):
-        if ak % 2 != P[j]: isOK = False
+        if ak % 2 != P[j]:
+            isOK = False
     if isOK:
         ans += 1
 print(ans)
-

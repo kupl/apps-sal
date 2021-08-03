@@ -1,17 +1,19 @@
 def is_prime(n):
-    if n==2:
+    if n == 2:
         return True
-    for i in range(2, int(n**.5)+1):
-        if n%i==0: # no remainder
+    for i in range(2, int(n**.5) + 1):
+        if n % i == 0:  # no remainder
             return False
     return True
-        
+
+
 def factor(n):
     res = []
-    for i in range(2, int(n**.5)+1):
-        if n%i==0:
-            res.append((i,n//i))
+    for i in range(2, int(n**.5) + 1):
+        if n % i == 0:
+            res.append((i, n // i))
     return res
+
 
 def statement1(s):
     # Statement 1: "Patricia cannot know what the two numbers are."
@@ -19,11 +21,15 @@ def statement1(s):
     # all even numbers>3 can be written as sum of 2 primes
     # then sum is not even
     # if sum is even then statement 1 cannot be made
-    if s%2==0: return False
+    if s % 2 == 0:
+        return False
     # so sum is odd, need to make sure that s-2 is not prime
-    elif is_prime(s-2): return False
-    # otherwise we are sure s cannot be written as sum of two primes  
-    else: return True
+    elif is_prime(s - 2):
+        return False
+    # otherwise we are sure s cannot be written as sum of two primes
+    else:
+        return True
+
 
 def statement2(p):
     # Statement 2: "In that case, I do know what the two numbers are."
@@ -36,23 +42,25 @@ def statement2(p):
     factors = factor(p)
     count = 0
     for (f1, f2) in factors:
-        tests = [(f1+f2)%2!=0, not is_prime(f1+f2-2), not (is_prime(f1) and is_prime(f2))]
-        if all(tests): 
+        tests = [(f1 + f2) % 2 != 0, not is_prime(f1 + f2 - 2), not (is_prime(f1) and is_prime(f2))]
+        if all(tests):
             count += 1
-    return count==1
+    return count == 1
+
 
 def statement3(s):
     # s needs to pass statement1 first
     # then, get all pairs of number that sum up to s
     # make sure that only 1 such pair passes statement2
-    if not statement1(s): return False
-    pairs = [(x, s-x) for x in range(2, s//2)]
+    if not statement1(s):
+        return False
+    pairs = [(x, s - x) for x in range(2, s // 2)]
     count = 0
     for p1, p2 in pairs:
-        if statement2(p1*p2):
+        if statement2(p1 * p2):
             count += 1
-    return count==1
+    return count == 1
+
 
 def is_solution(a, b):
-    return all([statement1(a+b), statement2(a*b), statement3(a+b)])
-
+    return all([statement1(a + b), statement2(a * b), statement3(a + b)])

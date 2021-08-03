@@ -1,5 +1,6 @@
 from collections import deque, Counter
 
+
 def mean_of_ways(graph, n):
     leafs = []
     distances = [None] * n
@@ -37,11 +38,12 @@ def mean_of_ways(graph, n):
         Mx += probabilities[i] * distances[i]
     return Mx
 
+
 def main():
     n = int(input())
 
     graph = [list() for i in range(n)]
-    for i in range(n-1):
+    for i in range(n - 1):
         # It there are vertices in descending order we can don't check
         # used it or not by making edges one directional
         u, v = list(map(int, input().split()))
@@ -52,5 +54,5 @@ def main():
 
     print(mean_of_ways(graph, n))
 
-main()
 
+main()

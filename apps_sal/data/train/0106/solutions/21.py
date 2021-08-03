@@ -21,4 +21,3 @@ for _ in range(T):
                 break
     else:
         print(-1)
-

@@ -1,6 +1,6 @@
 
 def main():
-    N,P = list(map(int,input().split()))
+    N, P = list(map(int, input().split()))
     s = list(input())[::-1]
     ary_mod = [0] * P
     ary_mod[0] = 1
@@ -10,13 +10,13 @@ def main():
     if P == 2:
         for i, ss in enumerate(s):
             if int(ss) % 2 == 0:
-                ans += N-i
+                ans += N - i
         print(ans)
         return
     if P == 5:
         for i, ss in enumerate(s):
             if int(ss) % 5 == 0:
-                ans += N-i
+                ans += N - i
         print(ans)
         return
 
@@ -28,9 +28,12 @@ def main():
         ary_mod[remind] += 1
     ans = 0
     for i, n in enumerate(ary_mod):
-        ans += (n*(n-1)) // 2
+        ans += (n * (n - 1)) // 2
     print(ans)
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -14,11 +14,11 @@ for c in string.ascii_lowercase[:26]:
         for i in range(K):
             if idx + i + 1 > len(s):
                 break
-            if s[idx:idx+i+1] in s_list:
+            if s[idx:idx + i + 1] in s_list:
                 continue
-            s_list.append(s[idx:idx+i+1])
+            s_list.append(s[idx:idx + i + 1])
     count += 1
     if count == K:
         break
 s_list.sort()
-print(s_list[K-1])
+print(s_list[K - 1])

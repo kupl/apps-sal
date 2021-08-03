@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def shortestPath(self, A: List[List[int]], k: int) -> int:
         dic = defaultdict(list)
@@ -6,7 +8,8 @@ class Solution:
         m, n = len(A), len(A[0])
         st = [(0, 0, 0)]
         target = m * n - 1
-        if target == 0: return 0
+        if target == 0:
+            return 0
         while st:
             t = []
             for a, b, c in st:

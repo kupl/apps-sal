@@ -7,4 +7,4 @@ class Solution:
             mn = min(mn, cur_mn)
             cur_mx = max(cur_mx + A[i], A[i])
             mx = max(mx, cur_mx)
-        return max(mx, (mn if mn==sm else (sm - mn)))
+        return max(mx, (mn if mn == sm else (sm - mn)))

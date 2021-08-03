@@ -9,6 +9,7 @@ class Solution:
         # print()
         # print(locations)
         # print(start, finish)
+
         @lru_cache(None)
         def dp(cur, fuel):
             res = 0

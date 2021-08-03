@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+from collections import deque
+import bisect
 import sys
 input = sys.stdin.readline
-import bisect
-from collections import deque
 
 n = int(input())
 a = [int(item) for item in input().split()]

@@ -3,16 +3,16 @@ class TN:
         self.c = {}
         self.e = eow
         self.i = id(self)
-    
+
     def add(self, s):
-        if len(s)==0:
+        if len(s) == 0:
             self.e = True
         else:
             c = s[0]
             if c not in self.c:
                 self.c[c] = TN()
             self.c[c].add(s[1:])
-    
+
     def search(self, w):
         t = self
         for c in w:
@@ -26,20 +26,21 @@ class TN:
                     return True
         # print('nope')
         return False
-            
-    
+
     def __contains__(self, i):
         return i in self.c
-    
+
     def p(self, s=0):
-        for k,v in self.c.items():
-            print(' '*s, k, '*' if v.e else '', sep='')
-            v.p(s+1)
-    
+        for k, v in self.c.items():
+            print(' ' * s, k, '*' if v.e else '', sep='')
+            v.p(s + 1)
+
     def __str__(self):
-        return str(self.c)+('*'if self.e else '')
+        return str(self.c) + ('*'if self.e else '')
+
     def __repr__(self):
-        return repr(self.c)+('*'if self.e else '')
+        return repr(self.c) + ('*'if self.e else '')
+
 
 class StreamChecker:
 

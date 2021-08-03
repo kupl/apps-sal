@@ -1,9 +1,9 @@
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
-        dp = {(0, 0) : 0}
+        dp = {(0, 0): 0}
         dp2 = {}
         # dp (x,y) = z, x is the color, y is the number of neighbors and z is the min cost we get so far
-        
+
         for index, house in enumerate(houses):
             for color in (list(range(1, n + 1)) if house == 0 else [house]):
                 for preColor, block in dp:
@@ -11,15 +11,11 @@ class Solution:
                     if preColor == color:
                         newBlock = block
                     else:
-                        newBlock = block + 1 
+                        newBlock = block + 1
                     if newBlock > target:
-                        continue 
-                    dp2[(color, newBlock)] = min(dp2.get((color, newBlock), float('inf')),  dp[(preColor, block)] + (cost[index][color - 1] if color != house else 0))
+                        continue
+                    dp2[(color, newBlock)] = min(dp2.get((color, newBlock), float('inf')), dp[(preColor, block)] + (cost[index][color - 1] if color != house else 0))
             dp, dp2 = dp2, {}
-        
+
             print(dp)
-        return min([dp[(i,color)] for i, color in dp if color == target] or [-1])
-                
-        
-
-
+        return min([dp[(i, color)] for i, color in dp if color == target] or [-1])

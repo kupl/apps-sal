@@ -1,8 +1,10 @@
 d, g = map(int, input().split())
 pc = [list(map(int, input().split())) for _ in range(d)]
 
+
 def completed(ii):
     return(100 * (ii + 1) * pc[ii][0] + pc[ii][1])
+
 
 def items(gg, ii):
     return((gg + 100 * (ii + 1) - 1) // (100 * (ii + 1)))
@@ -21,7 +23,7 @@ for i in range(2 ** d):
     if score >= g:
         count[i] = cnt
         continue
-    
+
     for j in range(d)[::-1]:
         if (~i >> j) & 1 == 1:
             if items(g - score, j) < pc[j][0]:

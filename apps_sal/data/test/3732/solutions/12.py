@@ -1,6 +1,8 @@
 x, y, m = map(int, input().split())
-if x < y: x, y = y, x
-if x >= m: print(0)
+if x < y:
+    x, y = y, x
+if x >= m:
+    print(0)
 elif x > 0:
     s = 0
     if y < 0:
@@ -10,5 +12,7 @@ elif x > 0:
         x, y = x + y, x
         s += 1
     print(s)
-elif x < m: print(-1)
-else: print(0)
+elif x < m:
+    print(-1)
+else:
+    print(0)

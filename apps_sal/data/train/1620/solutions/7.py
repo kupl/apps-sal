@@ -1,4 +1,4 @@
-def n_linear(m,n):
+def n_linear(m, n):
     arr = [1]
     indices = [0] * len(m)
     r = range(len(m))
@@ -10,5 +10,5 @@ def n_linear(m,n):
                 indices[i] += 1
         arr.append(x + 1)
         count += 1
-        
+
     return arr[-1]

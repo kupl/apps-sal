@@ -11,4 +11,3 @@ if n > 135 and n <= 225:
 if n > 225 and n < 315:
     ans = 3
 print(ans)
-

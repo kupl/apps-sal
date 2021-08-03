@@ -20,4 +20,3 @@ while tests:
     for _ in range(n):
         st.append(list(map(int, input().split())))
     solve(st)
-

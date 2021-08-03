@@ -1,3 +1,3 @@
 def splitSentence(s):
-#     do something here
+    #     do something here
     return list(s.split(" "))

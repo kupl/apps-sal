@@ -1,5 +1,6 @@
 from sys import stdin
 
+
 def main():
     '''
     Name: Kevin S. Sanchez
@@ -8,7 +9,7 @@ def main():
     inp = stdin
     n, k = list(map(int, inp.readline().split()))
     nums = list(map(int, inp.readline().split()))
-    nums.sort(reverse = True)
+    nums.sort(reverse=True)
     # nums = set(nums)
     final = set()
     for i in range(0, n):
@@ -17,5 +18,5 @@ def main():
             final.add(nums[i])
     print(len(final))
 
-main()
 
+main()

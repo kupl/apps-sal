@@ -1,10 +1,10 @@
 def solve(S):
- a = set(S)
- return len(a)
- 
- 
+    a = set(S)
+    return len(a)
+
+
 t = int(input())
 
 for _ in range(t):
- s = input()
- print(solve(s))
+    s = input()
+    print(solve(s))

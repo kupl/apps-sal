@@ -20,4 +20,3 @@ class Solution:
                 count = 1
         # print(winner)
         return arr[winner]
-

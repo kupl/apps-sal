@@ -29,29 +29,31 @@ class UnionFind:
 
 def main():
     n, k, l = map(int, input().split())
-    
+
     road = UnionFind(n)
     train = UnionFind(n)
-    
+
     for _ in range(k):
         p, q = map(int, input().split())
-        road.unite(p-1, q-1)
-    
+        road.unite(p - 1, q - 1)
+
     for _ in range(l):
         r, s = map(int, input().split())
-        train.unite(r-1, s-1)
-        
+        train.unite(r - 1, s - 1)
+
     d = defaultdict(int)
     for i in range(n):
         d[(road.find(i), train.find(i))] += 1
-    
+
     ans = []
     for i in range(n):
         ans.append(d[(road.find(i), train.find(i))])
-    
+
     print(*ans)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

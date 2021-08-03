@@ -1,8 +1,5 @@
 a = int(input())
 if a >= 1000:
-  print("ABD")
+    print("ABD")
 else:
-  print("ABC")
-
-
-
+    print("ABC")

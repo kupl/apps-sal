@@ -4,5 +4,5 @@ def digitize(n):
     int_list = []
     for i in lista:
         int_list.append(int(i))
-    
+
     return int_list

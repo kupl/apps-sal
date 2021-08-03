@@ -1,4 +1,4 @@
-def even_numbers(arr,n):
+def even_numbers(arr, n):
     res = []
 
     for ele in reversed(arr):
@@ -6,4 +6,3 @@ def even_numbers(arr,n):
             res.append(ele)
 
     return list(reversed(res[:n]))
-

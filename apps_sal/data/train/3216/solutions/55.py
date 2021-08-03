@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def movie(card, ticket, perc):
     num = 0
     priceA = 0

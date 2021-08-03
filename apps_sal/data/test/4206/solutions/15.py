@@ -21,4 +21,3 @@ for c in s:
         have_two = 0
 
 print(res)
-

@@ -1,4 +1,4 @@
-a,b,c,d = map(int,input().split())
+a, b, c, d = map(int, input().split())
 # 高橋君の倒すまでの攻撃回数
 takahashi_turn = 0
 # 青木君の倒すまでの攻撃回数

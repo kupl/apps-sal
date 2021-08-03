@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def lcaDeepestLeaves(self, root: TreeNode) -> TreeNode:
-        
+
         def lca(root=root):
             if root:
                 n1, d1 = lca(root.left)
@@ -16,10 +16,5 @@ class Solution:
                 else:
                     return (n1, 1 + d1) if d1 > d2 else (n2, 1 + d2)
             return (None, -1)
-        
-        return lca()[0]
-                        
-                        
-                
-                
 
+        return lca()[0]

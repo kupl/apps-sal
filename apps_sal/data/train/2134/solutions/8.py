@@ -1,20 +1,23 @@
 n = int(input())
 
+
 class Tree:
     height = 1
+
     def __init__(self, parent=None):
         self.nodes = []
         self.s = -1
         self.a = -1
         self.parent = parent
         if parent:
-            self.height = parent.height+1
+            self.height = parent.height + 1
             parent.nodes.append(self)
+
 
 trs = [Tree()]
 
 for i in map(int, input().split()):
-    trs.append(Tree(trs[i-1]))
+    trs.append(Tree(trs[i - 1]))
 
 for i, s in enumerate(map(int, input().split())):
     trs[i].s = s
@@ -36,4 +39,3 @@ try:
     print(res)
 except:
     print(-1)
-

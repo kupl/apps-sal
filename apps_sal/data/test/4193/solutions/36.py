@@ -13,10 +13,10 @@ for i in range(3):
             cc += 1
         if i == j and A[i][j] in b:
             cdl += 1
-        if i+j==2 and A[i][j] in b:
+        if i + j == 2 and A[i][j] in b:
             cdr += 1
 
-    if cr == 3 or cc == 3 or cdl == 3 or cdr ==3:
+    if cr == 3 or cc == 3 or cdl == 3 or cdr == 3:
         print('Yes')
         return
 print('No')

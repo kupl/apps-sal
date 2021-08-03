@@ -11,11 +11,11 @@ for i in range(n):
         if i < k:
             me += "p"
             ans += p
-        elif me[i-k] != "p":
+        elif me[i - k] != "p":
             me += "p"
             ans += p
         else:
-            if t[i-k] == "p":
+            if t[i - k] == "p":
                 me += "p"
                 ans += p
             else:
@@ -25,11 +25,11 @@ for i in range(n):
         if i < k:
             me += "r"
             ans += r
-        elif me[i-k] != "r":
+        elif me[i - k] != "r":
             me += "r"
             ans += r
         else:
-            if t[i-k] == "r":
+            if t[i - k] == "r":
                 me += "r"
                 ans += r
             else:
@@ -39,11 +39,11 @@ for i in range(n):
         if i < k:
             me += "s"
             ans += s
-        elif me[i-k] != "s":
+        elif me[i - k] != "s":
             me += "s"
             ans += s
         else:
-            if t[i-k] == "s":
+            if t[i - k] == "s":
                 me += "s"
                 ans += s
             else:

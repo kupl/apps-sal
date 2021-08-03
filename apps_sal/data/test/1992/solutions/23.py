@@ -15,14 +15,13 @@ for app in launched:
     if pos == 0:
         result += 1
         continue
-    prev_app = apps[pos-1]
+    prev_app = apps[pos - 1]
 
     result += pos // apps_per_screen + 1
 
-    apps[pos-1] = app
+    apps[pos - 1] = app
     apps[pos] = prev_app
     apps_pos[prev_app] = pos
-    apps_pos[app] = pos-1
+    apps_pos[app] = pos - 1
 
 print(result)
-

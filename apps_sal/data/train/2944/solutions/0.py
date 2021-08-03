@@ -16,29 +16,30 @@ EXCEPTIONS = {
     'Ac': ['Rn', '7s2 5f0 6d1'],
     'Th': ['Rn', '7s2 5f0 6d2'],
     'Pa': ['Rn', '7s2 5f2 6d1'],
-    'U' : ['Rn', '7s2 5f3 6d1'],
+    'U': ['Rn', '7s2 5f3 6d1'],
     'Np': ['Rn', '7s2 5f4 6d1'],
     'Cm': ['Rn', '7s2 5f7 6d1'],
 }
 ORBITALS = "spdfg"
-ELT_TO_Z = {elt:i for i,elt in enumerate(ELEMENTS,1)}
+ELT_TO_Z = {elt: i for i, elt in enumerate(ELEMENTS, 1)}
 for arr in list(EXCEPTIONS.values()):
-    arr[1] = [ (int(s[0]), ORBITALS.find(s[1]), s[2:]) for s in arr[1].split(' ') ]
+    arr[1] = [(int(s[0]), ORBITALS.find(s[1]), s[2:]) for s in arr[1].split(' ')]
 
 
 def get_electron_configuration(element):
-    elt,repl = EXCEPTIONS.get(element, (element,[]) )
-    z,nl,config = ELT_TO_Z[elt], 0, {}                  # n: principal quantum number / l: secondary qunatum number (minus 1) / nl: n+l
+    elt, repl = EXCEPTIONS.get(element, (element, []))
+    z, nl, config = ELT_TO_Z[elt], 0, {}                  # n: principal quantum number / l: secondary qunatum number (minus 1) / nl: n+l
     while z:
         nl += 1
-        for l in range(nl-1>>1, -1, -1):
-            nE = min(z, 2+l*4)
-            config[ (nl-l,l) ] = nE
+        for l in range(nl - 1 >> 1, -1, -1):
+            nE = min(z, 2 + l * 4)
+            config[(nl - l, l)] = nE
             z -= nE
-            if not z: break
-    
-    for a,b,n in repl: config[(a,b)] = n
-    
-    s = " ".join( f'{ k[0] }{ ORBITALS[k[1]] }{ n }' for k,n in sorted(config.items()))
-    return f'{ element } -> { s }'
+            if not z:
+                break
 
+    for a, b, n in repl:
+        config[(a, b)] = n
+
+    s = " ".join(f'{ k[0] }{ ORBITALS[k[1]] }{ n }' for k, n in sorted(config.items()))
+    return f'{ element } -> { s }'

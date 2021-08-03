@@ -40,4 +40,3 @@ while a:
             break
 print(len(b))
 print(''.join(b))
-

@@ -12,11 +12,11 @@ class Solution:
                 max_dq.pop()
             max_dq.append(r)
             min_dq.append(r)
-            while nums[max_dq[0]]-nums[min_dq[0]] > limit:
-                l+=1
+            while nums[max_dq[0]] - nums[min_dq[0]] > limit:
+                l += 1
                 if max_dq[0] < l:
                     max_dq.popleft()
                 if min_dq[0] < l:
                     min_dq.popleft()
-            out = max(out, r-l+1)
+            out = max(out, r - l + 1)
         return out

@@ -19,4 +19,3 @@ while len(a) != 0 and len(b) != 0:
         b.append(y)
     cnt += 1
 print(cnt, '1' if len(b) == 0 else '2')
-

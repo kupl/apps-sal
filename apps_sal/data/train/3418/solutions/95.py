@@ -1,3 +1,3 @@
 def reverse_list(l):
-  n=len(l)
-  return l[::-1]
+    n = len(l)
+    return l[::-1]

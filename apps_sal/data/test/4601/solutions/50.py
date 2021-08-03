@@ -5,5 +5,5 @@ if N <= K:
     print(0)
 else:
     h = list(sorted(H))
-    t = sum(h[0:N-K])
+    t = sum(h[0:N - K])
     print(t)

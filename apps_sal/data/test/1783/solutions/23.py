@@ -16,5 +16,4 @@ for i in range(k - 1, n):
         nm -= arr[i - k]
     sum += nm
 
-print(sum / (n-k+1))
-
+print(sum / (n - k + 1))

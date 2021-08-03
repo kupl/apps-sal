@@ -9,4 +9,3 @@ for m in range(n):
     c += r - t + 1
     t = r + 1
 print(c)
-

@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 S = int(input())
 
+
 def mod(num):
     return num % (10 ** 9 + 7)
+
 
 dp = [0] * (S + 10)
 

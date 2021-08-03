@@ -1,11 +1,11 @@
 from collections import deque
 
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 queue = deque([])
 vst = set()
-for k in map(int,input().split()):
+for k in map(int, input().split()):
     vst.add(k)
-    queue.append((k,0))
+    queue.append((k, 0))
 
 ans = 0
 ans_L = []
@@ -28,8 +28,3 @@ while queue:
 
 print(ans)
 print(*ans_L)
-
-
-
-
-

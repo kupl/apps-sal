@@ -1,4 +1,4 @@
-class ProductOfNumbers:    
+class ProductOfNumbers:
     def __init__(self):
         self.lisst = []
 
@@ -13,4 +13,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

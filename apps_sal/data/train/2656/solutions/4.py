@@ -10,4 +10,3 @@ def bird_code(birds):
             code = "".join(word[0] for word in words)
             codes.append(f"{code}{words[2][1] if len(words) == 3 else ''}")
     return codes
-

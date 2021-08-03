@@ -10,4 +10,3 @@ for x in letters:
         count += 1
     prev = x
 print(count)
-

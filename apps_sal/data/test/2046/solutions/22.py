@@ -8,4 +8,3 @@ for i in range(n):
         print(j, end=' ')
         j -= 1
     print()
-

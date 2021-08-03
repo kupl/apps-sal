@@ -26,4 +26,3 @@ while True:
     b = (b - 3) // 2
     p = (p - 1) // 2
 print(ans)
-

@@ -3,13 +3,14 @@ class Solution:
         base, mod = 26, 2**63 - 1
         n = len(S)
         A = [ord(ch) - ord('a') for ch in S]
+
         def k_dup(k):
             curr = 0
             for i in range(k):
                 curr = (curr * base + A[i]) % mod
             seen = {curr}
             for i in range(1, n - k + 1):
-                curr = ( base*curr - pow(base, k, mod)*A[i-1] + A[i+k-1]) % mod
+                curr = (base * curr - pow(base, k, mod) * A[i - 1] + A[i + k - 1]) % mod
                 if curr in seen:
                     return i
                 seen.add(curr)
@@ -25,5 +26,3 @@ class Solution:
             else:
                 r = mid - 1
         return S[ans:ans + l]
-        
-

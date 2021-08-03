@@ -6,7 +6,7 @@ total = hour * 60 + minute
 minutes = 0
 results = "no"
 while results != "yes":
-    hour = str(int(total / 60) %  24)
+    hour = str(int(total / 60) % 24)
     minute = str(total % 60)
     if len(hour) == 1:
         hour = "0" + hour

@@ -14,8 +14,10 @@
 #                 digits.append(mod)
 
 
+import collections
+import math
 
-import collections, math
+
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
         freq = collections.Counter(tiles)

@@ -1,6 +1,7 @@
 from sys import stdin as fin
 # fin = open("hcc2016c1.in", "r")
 
+
 def dfs(v, p):
     nonlocal g, used, cnt
     cnt += 1
@@ -9,6 +10,7 @@ def dfs(v, p):
         if u != p and (used[u] or not dfs(u, v)):
             return False
     return True
+
 
 n, m = map(int, fin.readline().split())
 used = [False] * n

@@ -8,8 +8,7 @@ class Solution:
                     res += 1
             if sum(nums) != 0:
                 for i in range(len(nums)):
-                    nums[i]  /= 2
+                    nums[i] /= 2
                 res += 1
             # print(nums)
         return res
-

@@ -12,6 +12,3 @@ for i in range(len(s)):
             cur_t += 1
 
 print(max(0, cur_t))
-        
-        
-

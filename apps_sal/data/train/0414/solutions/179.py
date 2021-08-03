@@ -11,4 +11,3 @@ class Solution:
             if winCnt >= k:
                 return arr[win]
         return arr[win]
-

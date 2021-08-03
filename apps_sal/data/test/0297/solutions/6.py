@@ -20,6 +20,3 @@ else:
     print(0, 0)
     print(n0, 0)
     print(0, m0)
-    
-    
-

@@ -4,5 +4,3 @@ def is_sorted_and_how(arr):
         if (arr[index] <= arr[index - 1]) != monity:
             return "no"
     return "yes, descending" if monity else "yes, ascending"
-        
-

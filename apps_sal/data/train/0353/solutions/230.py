@@ -4,7 +4,7 @@ class Solution:
             return 0
         nums.sort()
         mod = 10**9 + 7
-        
+
         y = len(nums) - 1
         x = 0
         ans = 0
@@ -12,6 +12,6 @@ class Solution:
             if nums[y] + nums[x] > target:
                 y -= 1
             else:
-                ans = (ans + pow(2, y-x, mod)) % mod
+                ans = (ans + pow(2, y - x, mod)) % mod
                 x += 1
         return ans

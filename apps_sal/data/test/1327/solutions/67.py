@@ -17,6 +17,3 @@ for i in range(2 ** 3):
     ans = max(ans, sum(A[:M]))
 
 print(ans)
-
-
-

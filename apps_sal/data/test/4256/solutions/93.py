@@ -6,4 +6,3 @@ else:
     ans = can_listen
 
 print(ans)
-

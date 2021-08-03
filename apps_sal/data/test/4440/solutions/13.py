@@ -1,2 +1,1 @@
-print(((int(input())/3)**3))
-
+print(((int(input()) / 3)**3))

@@ -13,4 +13,3 @@ for p in P:
     res += C[p]
 
 print(res)
-

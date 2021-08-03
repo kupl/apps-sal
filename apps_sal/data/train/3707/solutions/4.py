@@ -1,1 +1,1 @@
-sorter = lambda text: sorted(text, key=lambda s: s.lower())
+def sorter(text): return sorted(text, key=lambda s: s.lower())

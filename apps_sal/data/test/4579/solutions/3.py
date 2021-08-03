@@ -1,1 +1,2 @@
-N,*S=open(0);print(len(set(S)))
+N, *S = open(0)
+print(len(set(S)))

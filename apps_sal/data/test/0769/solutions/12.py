@@ -23,6 +23,3 @@ while a != 0:
         print(len(s) + 1)
         return
 print(-1)
-        
-    
-

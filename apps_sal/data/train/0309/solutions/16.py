@@ -3,8 +3,8 @@ class Solution:
         n = len(A)
 
         if n <= 1:
-            return n 
-        
+            return n
+
         ap = [None] * n
         for i in range(n):
             ap[i] = dict()
@@ -20,4 +20,4 @@ class Solution:
             vals = max(item.values())
             ans = max(ans, vals)
 
-        return ans 
+        return ans

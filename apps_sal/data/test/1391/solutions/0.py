@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, m, a = readln()
 b = list(sorted(readln()))
@@ -23,4 +25,3 @@ while r - l > 1:
         r = k
 
 print(l, ost)
-

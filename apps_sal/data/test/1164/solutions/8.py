@@ -9,10 +9,12 @@ def f(t):
     t2 = ''.join([i for i in t if i != '.'])
     return int(t2)
 
+
 def wr(x):
     if x < 100:
         res = '0.'
-        if x < 10: res += '0'
+        if x < 10:
+            res += '0'
         res += str(x)
         return res
     x = str(x)
@@ -21,9 +23,12 @@ def wr(x):
     for i in range(m - 2, 2, -3):
         res = x[i - 3:i] + '.' + res
     res = x[0: (m - 2) % 3] + '.' + res
-    if res[0] == '.': res = res[1:]
-    if res[-2:] == '00': res = res[:-3]
+    if res[0] == '.':
+        res = res[1:]
+    if res[-2:] == '00':
+        res = res[:-3]
     return res
+
 
 s = input() + '_'
 num = '1234567890.'
@@ -37,4 +42,3 @@ for i in range(n):
     else:
         cur += s[i]
 print(wr(ans))
-

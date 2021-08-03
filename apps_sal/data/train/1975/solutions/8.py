@@ -9,7 +9,6 @@ class CustomStack:
         if self.index < self.maxSize:
             self.origin_list[self.index] = x
             self.index += 1
-            
 
     def pop(self) -> int:
         if self.index == 0:
@@ -29,4 +28,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

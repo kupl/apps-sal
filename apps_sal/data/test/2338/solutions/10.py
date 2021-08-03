@@ -1,5 +1,5 @@
 import sys
-input = lambda: sys.stdin.readline().strip("\r\n")
+def input(): return sys.stdin.readline().strip("\r\n")
 
 
 n = int(input())
@@ -25,4 +25,3 @@ for x, y in sorted([list(map(int, input().split())) for _ in range(n)], key=lamb
     ans.append('3')
 print(len(ans))
 print('\n'.join(ans))
-

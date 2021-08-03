@@ -32,4 +32,3 @@ for i, j, k in zip(l, r, d):
         print("No")
         return
 print("Yes")
-

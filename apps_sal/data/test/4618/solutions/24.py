@@ -35,6 +35,6 @@ while True:
                                     if len(con) >= k:
                                         break
     if len(con) >= k:
-        break                              
-    n +=1
-print(con[k-1])
+        break
+    n += 1
+print(con[k - 1])

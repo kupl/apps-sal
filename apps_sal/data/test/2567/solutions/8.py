@@ -11,27 +11,26 @@ t = int(input())
 # t = 1
 
 for _ in range(t):
-	n = int(input())
-	s = input()
-	ans = ""
-	for i in range(n):
-		ans += s[n-1]
-	print(ans)
+    n = int(input())
+    s = input()
+    ans = ""
+    for i in range(n):
+        ans += s[n - 1]
+    print(ans)
 
 
 # try:
-	# raise Exception
+    # raise Exception
 # except:
-	# print("-1")
+    # print("-1")
 
 
-# from itertools import combinations 
+# from itertools import combinations
 # all_combs = list(combinations(range(N), r))
 
 
-
-# from collections import OrderedDict 
-# mydict = OrderedDict() 
+# from collections import OrderedDict
+# mydict = OrderedDict()
 
 
 # thenos.sort(key=lambda x: x[2], reverse=True)
@@ -57,5 +56,3 @@ for _ in range(t):
 
 
 # bin(int('010101', 2))
-
-

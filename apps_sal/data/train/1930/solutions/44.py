@@ -6,7 +6,7 @@ class Cashier:
         self.products = products
         self.prices = prices
         self.counter = 1
-        
+
     def getBill(self, product: List[int], amounts: List[int]) -> float:
         bill = 0
         for i, product_id in enumerate(product):
@@ -20,4 +20,3 @@ class Cashier:
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

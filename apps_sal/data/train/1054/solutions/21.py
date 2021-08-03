@@ -23,4 +23,3 @@ for i in range(N):
 
     if not broken:
         print(''.join(string))
-

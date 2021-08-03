@@ -11,9 +11,9 @@ class Solution:
             else:
                 board = wait
                 wait = 0
-            profit = board*boardingCost - runningCost
-            res.append(res[-1]+profit)
-        
+            profit = board * boardingCost - runningCost
+            res.append(res[-1] + profit)
+
         while wait:
             if wait > 4:
                 board = 4
@@ -21,11 +21,10 @@ class Solution:
             else:
                 board = wait
                 wait = 0
-            profit = board*boardingCost - runningCost
-            res.append(res[-1]+profit)
+            profit = board * boardingCost - runningCost
+            res.append(res[-1] + profit)
         m = max(res)
         if m <= 0:
             return -1
         else:
             return res.index(m)
-

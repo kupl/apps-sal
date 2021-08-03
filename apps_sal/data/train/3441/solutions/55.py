@@ -1,4 +1,6 @@
 import math
+
+
 def get_average(marks):
     count = 0
     average = 0

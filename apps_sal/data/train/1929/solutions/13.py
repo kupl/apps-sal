@@ -5,13 +5,13 @@ class StreamChecker:
         for ele in words:
             self.add(ele)
         self.stack = [self.root]
-            
-    def add(self,ele):
+
+    def add(self, ele):
         current = self.root
         for char in ele:
             current = current.children[char]
         current.last = True
-        
+
     def query(self, letter: str) -> bool:
         flag = False
         new_stack = [self.root]
@@ -25,6 +25,7 @@ class StreamChecker:
             return True
         return False
 
+
 class TrieNode:
     def __init__(self):
         self.children = collections.defaultdict(TrieNode)
@@ -33,4 +34,3 @@ class TrieNode:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

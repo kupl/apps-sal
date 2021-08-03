@@ -18,4 +18,3 @@ class Solution:
         #     if arr[l + 1] >= arr[l]:
         #         l += 1
         # return r
-

@@ -26,6 +26,6 @@ class Solution(object):
             for j, y2 in enumerate(p[x]):
                 for y1 in p[x][:j]:
                     if (y1, y2) in dic_last:
-                        res = min(res, (x - dic_last[y1, y2]) * (y2-y1))
+                        res = min(res, (x - dic_last[y1, y2]) * (y2 - y1))
                     dic_last[y1, y2] = x
         return res if res < float('inf') else 0

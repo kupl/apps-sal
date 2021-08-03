@@ -9,4 +9,3 @@ for e in l:
     b += cnt[e]
     cnt[e] += 1
 print(a, b)
-

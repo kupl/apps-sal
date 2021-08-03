@@ -24,10 +24,11 @@ def main():
         else:
             number = s[first_index]
 
-
     print(number)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

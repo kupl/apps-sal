@@ -9,6 +9,7 @@ def Input():
 def main():
     n, d = Input()
     d = 2 * d + 1
-    return (n+d-1)//(d)
+    return (n + d - 1) // (d)
+
 
 print(main())

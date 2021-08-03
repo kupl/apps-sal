@@ -14,7 +14,7 @@ def primes(size=10**6):
     sieve[1] = False
     prime = 2
     while prime < size:
-        for compound in range(2*prime, size, prime):
+        for compound in range(2 * prime, size, prime):
             sieve[compound] = False
         try:
             prime = sieve.index(True, prime + 1)
@@ -44,5 +44,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

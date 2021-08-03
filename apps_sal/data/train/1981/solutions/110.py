@@ -3,9 +3,9 @@ class Solution:
         MOD = 10**9 + 7
         nums.sort(reverse=True)
         N = len(nums)
-        
-        events = [0]*(N + 1)
-        
+
+        events = [0] * (N + 1)
+
         for start, end in requests:
             events[start] += 1
             events[end + 1] -= 1
@@ -18,8 +18,8 @@ class Solution:
 
         events.sort()
         nums.sort()
-        
+
         for num, size in zip(nums, events):
-            res += num*size
-        
+            res += num * size
+
         return res % MOD

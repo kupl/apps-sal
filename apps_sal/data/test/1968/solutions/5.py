@@ -11,4 +11,4 @@ for i in range(n):
 print(len(res))
 
 if len(res) > 0:
-    print(' '.join(map(str,res)))
+    print(' '.join(map(str, res)))

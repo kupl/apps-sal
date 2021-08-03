@@ -18,4 +18,3 @@ class Solution:
                 curr += 1
             res = max(res, curr)
         return res + 1
-

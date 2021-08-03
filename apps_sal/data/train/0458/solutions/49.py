@@ -7,7 +7,8 @@ class Solution:
             nums[i] %= p
             s = (s + nums[i]) % p
             pref.append(s)
-        if (s == 0): return 0
+        if (s == 0):
+            return 0
         target = pref[-1]
         c = dict()
         ans = n
@@ -17,6 +18,7 @@ class Solution:
             if x in c:
                 ans = min(ans, i - c[x])
             c[pref[i]] = i
-        
-        if (ans == n): return -1
+
+        if (ans == n):
+            return -1
         return ans

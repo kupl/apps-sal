@@ -43,4 +43,6 @@ def __starting_point():
         person = comb(N - 1, i)
         ans = (ans + vacant * person % mod) % mod
     print(ans)
+
+
 __starting_point()

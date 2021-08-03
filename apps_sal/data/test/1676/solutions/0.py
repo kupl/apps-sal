@@ -8,10 +8,9 @@ for _ in range(n):
     while q and q[0] <= t:
         q.popleft()
     if len(q) == b + 1:
-        print(-1, end = ' ')
+        print(-1, end=' ')
     else:
         if q:
             t = q[-1]
-        print(t + d, end = ' ')
+        print(t + d, end=' ')
         q.append(t + d)
-

@@ -105,7 +105,7 @@ class CS:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1]
                     else:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1] + self.cs[i0][i1 - 1] - \
-                                           self.cs[i0 - 1][i1 - 1]
+                            self.cs[i0 - 1][i1 - 1]
 
     def sum(self, start_0, start_1, end_0, end_1):
         if start_0 == 0:
@@ -291,5 +291,5 @@ n, a, b = input()
 x = input()
 ans = 0
 for i in range(1, n):
-    ans += min((x[i] - x[i-1])*a, b)
+    ans += min((x[i] - x[i - 1]) * a, b)
 print(ans)

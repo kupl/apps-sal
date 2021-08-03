@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(S, T):
     N = len(S)
@@ -41,5 +41,6 @@ def __starting_point():
     # S = 'abcdefghijklmnopqrstuvwxyz' * (2 * 10 ** 5 // 26 + 1)
     # T = 'abcdefghijklmnopqrstuvwxyz' * (2 * 10 ** 5 // 26 + 1)
     # solve(S, T)
+
 
 __starting_point()

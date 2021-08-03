@@ -30,7 +30,7 @@ for i in range(100):
 if ans > a[0]:
     print(-1)
     return
-        
+
 for keta in free_keta[::-1]:
     if ans + (1 << keta) <= a[0]:
         ans += (1 << keta)
@@ -38,5 +38,5 @@ for keta in free_keta[::-1]:
 if ans == 0:
     print(-1)
     return
-    
+
 print(a[0] - ans)

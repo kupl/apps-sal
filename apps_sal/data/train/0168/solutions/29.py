@@ -12,8 +12,8 @@ class Solution:
             else:
                 evens.append(ch)
         return len(odds) <= k
-                
-                
+
+
 class Solution1:
     def canConstruct(self, s: str, k: int) -> bool:
         cnts = collections.defaultdict(int)
@@ -42,4 +42,3 @@ class Solution1:
             if cnts[ch] > 0:
                 evens.append(ch)
         return True
-

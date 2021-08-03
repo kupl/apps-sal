@@ -12,7 +12,7 @@ for i, x in enumerate(s):
 
 for x in query:
     a, b, c = x.split()
-    #print(c)
+    # print(c)
     if a == '1':
         b = int(b) - 1
         if s[b] == c:
@@ -36,4 +36,3 @@ for x in query:
             if p[i][L] <= c:
                 ans += 1
         print(ans)
-

@@ -4,7 +4,7 @@ rm = 0
 idx = {}
 ans = []
 for i in range(q):
-    c,id = [s for s in input().split()]
+    c, id = [s for s in input().split()]
     if i == 0:
         idx[id] = 0
     else:
@@ -15,5 +15,5 @@ for i in range(q):
             rm += 1
             idx[id] = rm
         elif c == '?':
-            ans.append(min(idx[id]-lm, rm-idx[id]))
+            ans.append(min(idx[id] - lm, rm - idx[id]))
 print(*ans, sep='\n')

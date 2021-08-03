@@ -6,19 +6,18 @@ for _ in range(int(input())):
         w, s = s, w
         cs, cw = cw, cs
 
-    ps = p//s
-    fs = f//s
+    ps = p // s
+    fs = f // s
 
-    if ps+fs < cs:
+    if ps + fs < cs:
         print(ps + fs)
         continue
 
     best = 0
-    for i in range(cs+1):
-        if p < i*s or f < (cs-i)*s:
+    for i in range(cs + 1):
+        if p < i * s or f < (cs - i) * s:
             continue
-        #if i == 3:
+        # if i == 3:
             #print(p - i*s, f - (cs-i)*s, "!")
-        best = max(best, min(cw, (p - i*s)//w + (f - (cs-i)*s)//w) + cs)
+        best = max(best, min(cw, (p - i * s) // w + (f - (cs - i) * s) // w) + cs)
     print(best)
-

@@ -6,4 +6,4 @@ def row_weights(arr):
             b += arr[i]
         else:
             a += arr[i]
-    return (b,a)
+    return (b, a)

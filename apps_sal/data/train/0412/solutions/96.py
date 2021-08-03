@@ -9,5 +9,4 @@ class Solution:
                     if i - j >= 0:
                         dp_new[i] = (dp_new[i] + dp[i - j]) % (10**9 + 7)
             dp = dp_new
-        return dp[-1]  % (10**9 + 7)
-
+        return dp[-1] % (10**9 + 7)

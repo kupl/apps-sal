@@ -13,6 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; If not, see <http://www.gnu.org/licenses/>.
 
+
 def main():
     n, h = list(map(int, input().split()))
     leng = 0
@@ -24,5 +25,5 @@ def main():
 
     print(leng)
 
-main()
 
+main()

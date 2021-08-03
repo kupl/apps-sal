@@ -1,7 +1,7 @@
 from collections import deque
 
 N = int(input())
-L = [deque([int(i)-1 for i in input().split()]) for i in range(N)]
+L = [deque([int(i) - 1 for i in input().split()]) for i in range(N)]
 
 q = deque(list(range(N)))
 d = [0 for i in range(N)]
@@ -19,4 +19,3 @@ while q:
     else:
         pairs[a] = b
 print((max(d) if not any(L) else -1))
-

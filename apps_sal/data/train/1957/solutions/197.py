@@ -2,12 +2,12 @@ class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         m = len(grid)
         n = len(grid[0])
-        
+
         import queue
         queue = queue.Queue()
         queue.put((0, 0, k))
         visited = set([(0, 0, k)])
-        
+
         steps = 0
         while not queue.empty():
             size = queue.qsize()
@@ -28,5 +28,5 @@ class Solution:
                         queue.put((x_, y_, c))
                         visited.add((x_, y_, c))
             steps += 1
-                        
+
         return -1

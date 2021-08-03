@@ -6,4 +6,3 @@ if s == '0':
 
 else:
     print('1' + '0' * s.count('0'))
-

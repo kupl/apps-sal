@@ -25,6 +25,5 @@ class Solution:
             val.add((i, n))
             res.append(0)
             curr = curr.__next__
-            i+=1
+            i += 1
         return res
-

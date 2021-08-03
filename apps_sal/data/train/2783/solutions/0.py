@@ -9,4 +9,3 @@ def get_grade(s1, s2, s3):
     elif 60 <= m < 70:
         return 'D'
     return "F"
-

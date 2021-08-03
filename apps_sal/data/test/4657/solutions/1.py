@@ -1,7 +1,7 @@
 def main():
     import sys
     input = sys.stdin.readline
-    
+
     def solve():
         n, k = map(int, input().split())
         arr = list(map(int, input().split()))
@@ -16,12 +16,12 @@ def main():
             print("NO")
         else:
             print("YES")
-            print(*(ans[:k-1]+[n]))
-        
-    
+            print(*(ans[:k - 1] + [n]))
+
     for _ in range(int(input())):
         solve()
-    
+
     return 0
+
 
 main()

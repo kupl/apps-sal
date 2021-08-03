@@ -12,4 +12,3 @@ class Solution:
                         return False
                     cnts[n + i] -= cnts[n]
         return True
-

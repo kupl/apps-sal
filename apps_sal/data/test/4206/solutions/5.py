@@ -1,7 +1,7 @@
 s = input()
 ost = []
-for i in map(int,s):
-    ost += [i%3]
+for i in map(int, s):
+    ost += [i % 3]
 now = 0
 last = -1
 answer = 0

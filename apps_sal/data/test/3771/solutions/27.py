@@ -1,12 +1,14 @@
 # Dinic's algorithm
 from collections import deque
+
+
 class Dinic:
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
 
     def add_edge(self, fr, to, cap):
-        forward = [to, cap, None]#(行き先、容量、逆辺の参照)
+        forward = [to, cap, None]  # (行き先、容量、逆辺の参照)
         forward[2] = backward = [fr, 0, forward]
         self.G[fr].append(forward)
         self.G[to].append(backward)
@@ -18,7 +20,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -56,26 +58,22 @@ class Dinic:
                 f = self.dfs(s, t, INF)
                 flow += f
         return flow
+
+
 inf = 10**9
 H, W = list(map(int, input().split()))
 a = [list(input()) for _ in range(H)]
-D = Dinic(H+W+2)
+D = Dinic(H + W + 2)
 for i in range(H):
     for j in range(W):
         if a[i][j] == 'S':
-            D.add_edge(0, i+1, inf)
-            D.add_edge(0, j+1+H, inf)
+            D.add_edge(0, i + 1, inf)
+            D.add_edge(0, j + 1 + H, inf)
         elif a[i][j] == 'T':
-            D.add_edge(i+1, H+W+1, inf)
-            D.add_edge(j+1+H, H+W+1, inf)
+            D.add_edge(i + 1, H + W + 1, inf)
+            D.add_edge(j + 1 + H, H + W + 1, inf)
         elif a[i][j] == 'o':
-            D.add_edge(i+1, j+1+H, 1)
-            D.add_edge(j+1+H, i+1, 1)
-ans = D.flow(0, H+W+1)
-print((ans if ans<inf else -1))
-
-
-
-
-
-
+            D.add_edge(i + 1, j + 1 + H, 1)
+            D.add_edge(j + 1 + H, i + 1, 1)
+ans = D.flow(0, H + W + 1)
+print((ans if ans < inf else -1))

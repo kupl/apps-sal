@@ -7,7 +7,7 @@ def __starting_point():
     minRow = []
     for i in range(ROWS):
         arr = list(map(int, input().strip().split()))
-        minRow.append( min(arr) )
+        minRow.append(min(arr))
         matrix.append(arr)
 
     maxCol = []
@@ -15,7 +15,7 @@ def __starting_point():
         maxi = -1
         for i in range(ROWS):
             maxi = max(maxi, matrix[i][j])
-        maxCol.append( maxi )
+        maxCol.append(maxi)
 
     for i in range(ROWS):
         n = minRow[i]
@@ -34,4 +34,6 @@ def __starting_point():
             print(n)
     else:
         print("GUESS")
+
+
 __starting_point()

@@ -1,5 +1,6 @@
 def doall():
     t = int(input())
+
     def solve(n, k, d1, d2):
         if n % 3 == 0:
             r = n - k
@@ -16,7 +17,7 @@ def doall():
                 w = max(now)
                 tmp = 3 * w - sumn
                 if tmp <= r and (r - tmp) % 3 == 0:
-                    
+
                     return True
         return False
     ans = []
@@ -27,5 +28,6 @@ def doall():
         else:
             ans.append('no')
     print('\n'.join(ans))
-                
+
+
 doall()

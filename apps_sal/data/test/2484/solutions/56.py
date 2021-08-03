@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 A.append(0)
 
 right = 0

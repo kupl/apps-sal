@@ -6,4 +6,3 @@ class Solution:
                 if all(A[k][j] <= A[k][i] for k in range(len(A))):
                     memo[i] = max(memo[i], memo[j] + 1)
         return len(A[0]) - max(memo)
-

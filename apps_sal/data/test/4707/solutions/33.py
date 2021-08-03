@@ -5,4 +5,3 @@ for i in range(3):
         ans += 1
 
 print(ans)
-

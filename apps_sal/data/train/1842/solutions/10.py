@@ -1,6 +1,7 @@
 from collections import defaultdict
 import queue
 
+
 class Solution:
     def frogPosition(self, n: int, edges: List[List[int]], t: int, target: int) -> float:
         d = defaultdict(set)
@@ -12,7 +13,7 @@ class Solution:
         q.put((1, 0, 1.0))
         visited.add(1)
         goal = {}
-        
+
         while not q.empty():
             cur, time, p = q.get()
             if time > t:
@@ -32,8 +33,7 @@ class Solution:
                 if adj not in visited:
                     q.put((adj, time + 1, p / c))
                     visited.add(adj)
-        
+
         if target in goal:
             return goal[target]
         return 0.0
-

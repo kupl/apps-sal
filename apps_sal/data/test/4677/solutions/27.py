@@ -7,4 +7,3 @@ for s in S:
     else:
         ans += s
 print(ans)
-

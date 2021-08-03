@@ -1,9 +1,9 @@
-n,m = [int(s) for s in input().split()]
+n, m = [int(s) for s in input().split()]
 g = [[] for x in range(n)]
 for i in range(m):
-    a,b = [int(s) for s in input().split()]
-    g[a-1].append(b-1)
-    g[b-1].append(a-1)
+    a, b = [int(s) for s in input().split()]
+    g[a - 1].append(b - 1)
+    g[b - 1].append(a - 1)
 seen = [False for x in range(n)]
 q = []
 ans = 0
@@ -28,5 +28,3 @@ for i in range(len(g)):
                 seen[vv] = True
 
 print(ans)
-
-

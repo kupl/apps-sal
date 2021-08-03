@@ -1,10 +1,12 @@
-import sys, logging
+import sys
+import logging
 logging.basicConfig(level=logging.INFO)
 logging.disable(logging.INFO)
 
+
 def build(S, n):
     Z = [0 for i in range(3 * n + 3)]
-    #logging.info(S)
+    # logging.info(S)
     n = len(S)
     L = 0
     R = 0
@@ -28,10 +30,12 @@ def build(S, n):
                 R -= 1
     return Z
 
+
 def update1(n, x, val):
     while(x <= n + 1):
         bit1[x] += val
         x += x & -x
+
 
 def get1(n, x):
     ans = 0
@@ -40,10 +44,12 @@ def get1(n, x):
         x -= x & -x
     return ans
 
+
 def update2(n, x, val):
     while(x <= n + 1):
         bit2[x] += val
         x += x & -x
+
 
 def get2(n, x):
     ans = 0
@@ -51,6 +57,7 @@ def get2(n, x):
         ans += bit2[x]
         x -= x & -x
     return ans
+
 
 def process(n, m, fa, fb):
     r2 = int(1)
@@ -64,6 +71,7 @@ def process(n, m, fa, fb):
         update1(n, m - fb[l1] + 1, -1)
         update2(n, m - fb[l1] + 1, m - 1 - fb[l1])
     print(ans)
+
 
 def main():
     n, m = map(int, sys.stdin.readline().split())
@@ -87,8 +95,10 @@ def main():
     logging.info(fb[1:(n + 1)])
     process(n, m, fa, fb)
 
+
 bit1 = [0 for i in range(500004)]
 bit2 = [0 for i in range(500004)]
+
 
 def __starting_point():
     try:
@@ -97,4 +107,6 @@ def __starting_point():
     except:
         pass
     main()
+
+
 __starting_point()

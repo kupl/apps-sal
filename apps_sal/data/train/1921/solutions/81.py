@@ -1,6 +1,7 @@
 from collections import deque
 import heapq
 
+
 class DinnerPlates:
     def __init__(self, capacity: int):
         self.capacity = capacity

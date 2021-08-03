@@ -4,7 +4,7 @@ def disarium_number(number):
     i = 1
     for num in numArr:
         mySum += int(num)**i
-        i = i + 1 
+        i = i + 1
     if mySum == number:
         return 'Disarium !!'
     else:

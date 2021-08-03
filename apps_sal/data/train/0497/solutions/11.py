@@ -12,6 +12,7 @@ n份工作薪水不同，开始时间和结束时间不同，找到最大的收�
 背包问题，工作可以做或者不做，做时选择下一个不冲突的工作继续。
 '''
 
+
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         def dfs_func():
@@ -94,7 +95,7 @@ class Solution:
                 return -1
 
             for i in range(1, n + 1):
-                last_not_conflict = find_pre_not_confict(i-1)
+                last_not_conflict = find_pre_not_confict(i - 1)
                 choose = jobs[i - 1][2]
                 # 再判断一次，防止0
                 if last_not_conflict != -1:

@@ -1,4 +1,4 @@
-def make_negative( number ):
+def make_negative(number):
     # Check for negative:
     if number < 0:
         return number

@@ -5,7 +5,7 @@ class Solution:
         count = 0
         for i, a in enumerate(keys):
             if a <= target // 3:
-                for b in keys[(i + 1) :]:
+                for b in keys[(i + 1):]:
                     if target - a - b <= b:
                         break
                     elif target - a - b in d:

@@ -8,4 +8,3 @@ else:
     ans = 'No'
 
 print(ans)
-

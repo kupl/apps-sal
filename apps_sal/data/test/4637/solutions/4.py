@@ -19,4 +19,3 @@ for case_num in range(t):
         else:
             break
     print(sum(a))
-

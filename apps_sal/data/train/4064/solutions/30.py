@@ -7,4 +7,3 @@ def count_by(x, n):
         number += x
         list.append(number)
     return list
-

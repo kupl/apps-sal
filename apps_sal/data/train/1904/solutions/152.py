@@ -1,6 +1,6 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-        dist_square = lambda i: points[i][0] ** 2 + points[i][1] ** 2
+        def dist_square(i): return points[i][0] ** 2 + points[i][1] ** 2
 
         def sort(i: int, j: int, K: int):
             # partially sorts points[i...j+1] so the first K elements are the

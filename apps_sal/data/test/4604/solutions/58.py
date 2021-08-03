@@ -3,7 +3,7 @@ from typing import Counter
 
 n = int(input())
 lis = list(map(int, input().split()))
-mod  =10**9+7
+mod = 10**9 + 7
 
 ans = 0
 if n % 2 == 0:
@@ -16,7 +16,7 @@ if n % 2 == 0:
             flag = 0
             break
     if flag:
-        ans = 2**(n//2)
+        ans = 2**(n // 2)
         print((ans % mod))
     else:
         print((0))
@@ -32,8 +32,7 @@ else:
             flag = 0
             break
     if flag:
-        ans = 2**(n//2)
+        ans = 2**(n // 2)
         print((ans % mod))
     else:
         print((0))
-

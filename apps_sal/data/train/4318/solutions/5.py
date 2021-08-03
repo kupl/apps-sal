@@ -6,7 +6,6 @@ def hot_singles(arr1, arr2):
     for i in arr2:
         if i not in arr1 and i not in result:
             result.append(i)
-            
-    return result
-    #your code here
 
+    return result
+    # your code here

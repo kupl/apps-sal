@@ -4,13 +4,3 @@ def circularly_sorted(arr):
         return True
     else:
         return False
-    
-            
-            
-    
-    
-        
-    
-        
-        
-

@@ -3,13 +3,16 @@ from io import BytesIO, StringIO
 #input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
 DEBUG = False
-debug_print = print if DEBUG else lambda *x,**y: None
+debug_print = print if DEBUG else lambda *x, **y: None
+
 
 def input_as_list():
     return list(map(int, input().split()))
 
+
 def array_of(f, *dim):
     return [array_of(f, *dim[1:]) for _ in range(dim[0])] if dim else f()
+
 
 def main():
     mod = 1000000007
@@ -26,8 +29,8 @@ def main():
     def vecmul(u, v):
         s = 0
         for i, j in zip(u, v):
-            s += (i * j) % (mod-1)
-        return s % (mod-1)
+            s += (i * j) % (mod - 1)
+        return s % (mod - 1)
 
     def matmul(a, b, n=3):
         out = []
@@ -39,7 +42,7 @@ def main():
     def matadd(a, b, n=3):
         out = []
         for i in range(n * n):
-            out.append((a[i] + b[i]) % (mod-1))
+            out.append((a[i] + b[i]) % (mod - 1))
         return out
 
     def matpow(m, p, n=3):
@@ -56,7 +59,7 @@ def main():
         i = 3
         while i < n:
             i += 1
-            f4 = pow(c, 2*i-6, mod) * f1 * f2 * f3 % mod
+            f4 = pow(c, 2 * i - 6, mod) * f1 * f2 * f3 % mod
             f1, f2, f3 = f2, f3, f4
         return f3
 
@@ -82,12 +85,13 @@ def main():
         sample = [random.randrange(4, 99) for _ in range(5)]
         sample = [2, 2, 2, 2]
         print(*sample)
-        for i in range(4,200):
+        for i in range(4, 200):
             print(i, *sample)
             print(solve(i, *sample))
             print(brute_force(i, *sample))
             print()
 
     solve_from_stdin()
+
 
 main()

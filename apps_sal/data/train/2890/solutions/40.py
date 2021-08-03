@@ -5,4 +5,3 @@ def multiples(m, n):
         result += 1
         text.append(result * n)
     return text
-

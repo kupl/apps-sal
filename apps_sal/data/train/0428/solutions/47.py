@@ -18,8 +18,8 @@ class Solution:
             for r, c, keys in q:
                 if len(keys) == k:
                     return res
-                for rr, cc in [(r-1, c), (r+1, c), (r, c-1), (r, c+1)]:
-                    if 0<= rr < m and 0<= cc < n and grid[rr][cc] != '#':
+                for rr, cc in [(r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)]:
+                    if 0 <= rr < m and 0 <= cc < n and grid[rr][cc] != '#':
                         x = grid[rr][cc]
                         if x in 'ABCDEF' and x.lower() not in keys:
                             continue

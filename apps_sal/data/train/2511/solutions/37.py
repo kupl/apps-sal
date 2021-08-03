@@ -7,8 +7,5 @@ class Solution:
             return A[0]
         A.sort()
         for i in range(n):
-            if A[i] == A[i+1]:
+            if A[i] == A[i + 1]:
                 return A[i]
-            
-            
-

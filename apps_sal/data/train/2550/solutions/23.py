@@ -19,7 +19,5 @@ class Solution:
                     count_5 -= 3
                 else:
                     return False
-        
-        return True
-                
 
+        return True

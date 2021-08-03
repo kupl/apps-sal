@@ -4,12 +4,9 @@ class Solution:
         ans, cur = 0, 0
         while j < len(nums):
             cur += nums[j]
-            while i < j and cur < j-i:
+            while i < j and cur < j - i:
                 cur -= nums[i]
                 i += 1
-            ans = max(ans, cur)            
+            ans = max(ans, cur)
             j += 1
-        return min(ans, len(nums)-1)
-                
-            
-
+        return min(ans, len(nums) - 1)

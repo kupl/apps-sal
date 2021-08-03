@@ -15,4 +15,3 @@ def get_issuer(card_num):
         )
     except AttributeError:
         return 'Unknown'
-

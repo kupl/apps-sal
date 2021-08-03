@@ -12,7 +12,7 @@ for i in range(1, n):
     cnt += 1
 sa.append(status * cnt)
 
-for i in range(1, min(k*2, len(sa)), 2):
+for i in range(1, min(k * 2, len(sa)), 2):
     sa[i] = ("R" if sa[i][0] == "L" else "L") * len(sa[i])
 
 sa = ''.join(sa)
@@ -20,10 +20,12 @@ sa = ''.join(sa)
 ans = 0
 for i in range(n):
     if sa[i] == "L":
-        if i > 0: 
-            if sa[i-1] == "L": ans += 1
+        if i > 0:
+            if sa[i - 1] == "L":
+                ans += 1
     else:
-        if i < n-1:
-            if sa[i+1] == "R": ans += 1
+        if i < n - 1:
+            if sa[i + 1] == "R":
+                ans += 1
 
 print(ans)

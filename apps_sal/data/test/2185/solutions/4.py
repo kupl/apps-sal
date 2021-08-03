@@ -1,13 +1,13 @@
-q=int(input())
+q = int(input())
 
 for qq in range(q):
-    n=int(input())
-    a=list(map(int, input().split()))
-    b=list(map(int, input().split()))
+    n = int(input())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
     started = False
     ended = False
     possible = True
-    diff=0
+    diff = 0
     for i in range(n):
         if a[i] != b[i]:
             if a[i] > b[i]:
@@ -31,4 +31,3 @@ for qq in range(q):
         print("YES")
     else:
         print("NO")
-

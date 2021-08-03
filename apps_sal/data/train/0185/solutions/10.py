@@ -5,5 +5,3 @@ class Solution:
             if bin_value not in s:
                 return False
         return True
-            
-

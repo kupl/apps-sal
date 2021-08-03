@@ -5,8 +5,8 @@ class Solution:
         turn = -1
         maxim = 0
         i = 0
-        while waitingcust != 0 or i < len(customers):  
-            if i < len(customers): 
+        while waitingcust != 0 or i < len(customers):
+            if i < len(customers):
                 waitingcust += customers[i]
             if waitingcust >= 4:
                 waitingcust -= 4

@@ -5,4 +5,4 @@ def find_digit(num, nth):
         num = str(abs(num))
         num = num.zfill(nth)
         num = num[::-1]
-        return int(num[nth-1])
+        return int(num[nth - 1])

@@ -26,5 +26,4 @@ for index, i in enumerate(sort_a):
 
 
 # print(comfort, next_insert)
-print((sum(comfort[:n-1])))
-
+print((sum(comfort[:n - 1])))

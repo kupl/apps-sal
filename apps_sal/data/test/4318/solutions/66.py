@@ -1,5 +1,5 @@
 N = int(input())
-ls = list(map(int,input().split()))
+ls = list(map(int, input().split()))
 m = 0
 ii = 0
 for i in range(N):

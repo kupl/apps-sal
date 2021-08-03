@@ -13,4 +13,3 @@ while i < len(s):
         ans += s[i]
     i += 1
 print(ans)
-

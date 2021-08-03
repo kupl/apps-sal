@@ -51,6 +51,7 @@ def epp(o):
     import pprint
     pprint.pprint(o, stream=sys.stderr)
 
+
 def gen_2d_array(n, m, fill=0):
     if callable(fill):
         return [[fill()] * m for _ in range(n)]
@@ -85,14 +86,13 @@ def slv(N, M, A):
     S = sum(A)
     a = 1
     b = 1
-    for i in range(1, N+S+1):
+    for i in range(1, N + S + 1):
         a *= i
         a %= mod
-        b *= M+N-i+1
+        b *= M + N - i + 1
         b %= mod
 
-    return b * pow(a, mod-2, mod) % mod
-
+    return b * pow(a, mod - 2, mod) % mod
 
 
 def main():
@@ -103,5 +103,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

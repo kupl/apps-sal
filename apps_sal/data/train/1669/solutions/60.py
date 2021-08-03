@@ -14,7 +14,7 @@ class Solution:
 
         while len(list(dic.keys())) > 0:
             m = min(dic)
-            for i in range(m, m+W):
+            for i in range(m, m + W):
                 val = dic.get(i)
 
                 if not val:
@@ -24,5 +24,3 @@ class Solution:
                 else:
                     dic[i] -= 1
         return True
-
-

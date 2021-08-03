@@ -6,4 +6,3 @@ class Solution:
                 y = a * 10 + x
                 dp[y % 3] = max(dp[y % 3], y)
         return str(dp[0]) if dp[0] >= 0 else ''
-

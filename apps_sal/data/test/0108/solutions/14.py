@@ -11,4 +11,3 @@ for d in range(len(s)):
             return
         cursymbol += 1
 print(-1)
-

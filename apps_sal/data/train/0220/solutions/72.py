@@ -16,4 +16,3 @@ class Solution:
             best_we_can_make_satisfied = max(best_we_can_make_satisfied,
                                              current_satisfied)
         return already_satisfied + best_we_can_make_satisfied
-

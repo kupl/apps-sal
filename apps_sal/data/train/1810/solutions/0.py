@@ -12,4 +12,3 @@ class Solution:
             result.append(current)
             used.add(current)
         return result
-

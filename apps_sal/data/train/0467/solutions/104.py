@@ -9,7 +9,7 @@ class Solution:
                 j = n // i
                 if j != i:
                     d.append(j)
-        c.update({n:d})
+        c.update({n: d})
         return d
 
     def sumFourDivisors(self, nums: List[int]) -> int:

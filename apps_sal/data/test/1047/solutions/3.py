@@ -1,5 +1,6 @@
 3
 
+
 def main():
     s = list(map(int, input()))
     ans = [[1]]
@@ -16,5 +17,3 @@ def main():
 
 
 main()
-
-

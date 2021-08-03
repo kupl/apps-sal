@@ -6,5 +6,5 @@ def balanced_num(number):
         flag = sum(int(i) for i in str_n[:mid]) == sum(int(i) for i in str_n[mid + 1:])
     else:
         flag = sum(int(i) for i in str_n[:mid - 1]) == sum(int(i) for i in str_n[mid + 1:])
-    
+
     return 'Balanced' if flag else 'Not Balanced'

@@ -11,4 +11,3 @@ while my <= votes[0]:
         votes[i], votes[i + 1] = votes[i + 1], votes[i]
         i += 1
 print(my - old)
-

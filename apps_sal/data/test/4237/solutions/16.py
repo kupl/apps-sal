@@ -8,4 +8,3 @@ r = b // c + b // d - b // gcd
 l = (a - 1) // c + (a - 1) // d - (a - 1) // gcd
 
 print(((b - a) - (r - l) + 1))
-

@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 w, m, k = readln()
 s = 1
@@ -17,4 +19,3 @@ while w:
         ans += w // (s * k)
         w = 0
 print(ans)
-

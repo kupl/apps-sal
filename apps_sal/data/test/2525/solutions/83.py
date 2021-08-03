@@ -15,8 +15,7 @@ for _ in range(q):
         else:
             tail += T[2]
 
-if rev%2 == 0:
-    print((head[::-1]+s+tail))
+if rev % 2 == 0:
+    print((head[::-1] + s + tail))
 else:
-    print((head[::-1]+s[::-1]+tail))
-
+    print((head[::-1] + s[::-1] + tail))

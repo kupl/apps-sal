@@ -1,8 +1,9 @@
 def count_inversion(sequence):
     def rec(arr):
-        if len(arr) <= 1: return arr, 0
-        a, ai = rec(arr[:len(arr)//2])
-        b, bi = rec(arr[len(arr)//2:])
+        if len(arr) <= 1:
+            return arr, 0
+        a, ai = rec(arr[:len(arr) // 2])
+        b, bi = rec(arr[len(arr) // 2:])
         res, i, j, count = [], 0, 0, ai + bi
         while i < len(a) and j < len(b):
             if a[i] <= b[j]:

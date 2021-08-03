@@ -13,10 +13,12 @@
 
 """ Definitions  """
 
-def lcm(a, b):
-    return a*b//math.gcd(a, b)
 
-MOD = 10**9+7
+def lcm(a, b):
+    return a * b // math.gcd(a, b)
+
+
+MOD = 10**9 + 7
 
 # ============================================================
 
@@ -31,4 +33,3 @@ if m < s:
     print('Yes')
 else:
     print('No')
-

@@ -1,9 +1,9 @@
-n,x=map(int,input().split())
+n, x = map(int, input().split())
 
-m=[0]*n
+m = [0] * n
 
 for i in range(n):
-    m[i]=int(input())
-    x-=m[i]
+    m[i] = int(input())
+    x -= m[i]
 
-print(n+x//min(m))
+print(n + x // min(m))

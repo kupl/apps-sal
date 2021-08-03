@@ -10,6 +10,5 @@ class Solution:
                             area = abs(i1 - i2) * abs(j1 - j2)
                         else:
                             area = min(area, abs(i1 - i2) * abs(j1 - j2))
-            point_set.add((i1, j1))    
+            point_set.add((i1, j1))
         return area
-

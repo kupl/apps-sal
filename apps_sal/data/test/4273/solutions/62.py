@@ -19,4 +19,3 @@ for i in itertools.combinations("MARCH", 3):
     res += tmp
 
 print(res)
-

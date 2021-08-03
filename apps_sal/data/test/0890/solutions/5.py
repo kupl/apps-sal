@@ -2,12 +2,15 @@
 
 from itertools import chain, combinations
 
+
 def powerset(iterable):
     s = list(iterable)
-    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
+    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
+
 
 N, L, R, X = map(int, input().split(' '))
 C = map(int, input().split(' '))
+
 
 def is_ok(c):
     if len(c) < 2:
@@ -17,5 +20,6 @@ def is_ok(c):
     if max(c) - min(c) < X:
         return False
     return True
+
 
 print(sum([1 for c in powerset(C) if is_ok(c)]))

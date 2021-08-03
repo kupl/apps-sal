@@ -1,7 +1,9 @@
+from collections import defaultdict
 import sys
 read = sys.stdin.read
 #readlines = sys.stdin.readlines
-from collections import defaultdict
+
+
 def main():
     k = int(input())
     if k % 2 == 0:
@@ -24,7 +26,10 @@ def main():
             n = n % k
             next_digit = (next_digit * 10) % k
             r += 1
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

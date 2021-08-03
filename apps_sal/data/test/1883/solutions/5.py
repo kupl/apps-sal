@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n = int(input())
     types = list(map(int, input().split()))
@@ -7,13 +8,14 @@ def solve():
     res = list()
     count = [0] * (n + 1)
     for val in a:
-        count[val-1]+=1
+        count[val - 1] += 1
     for i in range(n):
         if types[i] == 1:
             temp = list()
             cur = i
             while True:
-                if count[cur] > 1 or cur < 0: break
+                if count[cur] > 1 or cur < 0:
+                    break
                 temp.append(cur + 1)
                 cur = a[cur] - 1
             if len(temp) > len(res):
@@ -58,5 +60,7 @@ def solve():
     # print(len(res))
     # return ' '.join(map(str, res))
 
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 print(solve())

@@ -21,6 +21,7 @@ while len(Q) > 0:
             levels[adj] = levels[city] + 1
             E_min[adj].append(i)
 
+
 def gen_poss(city, selected, all_poss, next_choice, poss):
     if len(all_poss) >= k:
         return

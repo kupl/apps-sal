@@ -14,5 +14,5 @@ for i in an:
     if(i % vmin != 0):
         print(-1)
         return
-    
-print(vmin)  
+
+print(vmin)

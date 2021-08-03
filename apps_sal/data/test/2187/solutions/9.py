@@ -6,6 +6,7 @@ def solve():
         ans += max(a[i - 1] - a[i], 0)
     print(ans)
 
+
 t = int(input())
 for _ in range(t):
     solve()

@@ -1,9 +1,12 @@
 import re
+
+
 def is_sequential(string):
     return string in "1234567890" or string in "9876543210"
 
+
 def is_interesting(number, awesome_phrases):
-    print (number)
+    print(number)
     interestingness = 2
     for i in (number, number + 1, number + 2):
         if (number != i):
@@ -21,6 +24,5 @@ def is_interesting(number, awesome_phrases):
             return interestingness
         if re.match(r"^(\d)\1+$", i):
             return interestingness
-    
-    
+
     return 0

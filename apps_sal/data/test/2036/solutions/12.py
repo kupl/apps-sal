@@ -5,7 +5,7 @@ for i in range(4, 10 ** 6 + 1):
 
 
 def main(case):
-    n, m, x, y = list(map(int,input().split()))
+    n, m, x, y = list(map(int, input().split()))
     line = str(x) + " " + str(y) + "\n"
     for i in range(1, m + 1):
         if i != y:
@@ -24,9 +24,12 @@ def main(case):
                 cur = -1
     line.strip("\n")
     print(line)
+
+
 def __starting_point():
     t = 1
     for i in range(t):
         main(i + 1)
+
 
 __starting_point()

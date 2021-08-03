@@ -5,4 +5,3 @@ for i in range(q):
         print(d)
     else:
         print(r - r % d + d)
-

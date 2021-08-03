@@ -8,7 +8,7 @@ class Solution:
     def update_counter(self, orig, new):
         for c in new:
             orig[c] = max(new[c], orig[c])
-        
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         min_universal = Counter()
         for b in B:
@@ -26,6 +26,3 @@ class Solution:
             if is_universal:
                 universals.append(a)
         return universals
-            
-        
-

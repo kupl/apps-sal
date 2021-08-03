@@ -14,7 +14,3 @@ total = sum(d2[a] for a in list(d.keys()))
 
 for a in A:
     print((total - d2[a] + d3[a]))
-
-
-
-

@@ -1,11 +1,14 @@
 class EndException(Exception):
     pass
 
+
 class DoneAccumulatingException(Exception):
     pass
 
+
 class OutOfFretsException(Exception):
     pass
+
 
 def get_column(array, index):
     ret = []
@@ -15,8 +18,8 @@ def get_column(array, index):
         return ret
     except IndexError:
         raise EndException()
-    
-    
+
+
 def add_to_tab(tab, column):
     for i, value in enumerate(column):
         tab[i] += value
@@ -31,7 +34,7 @@ def accumulate(accumulate_array, column):
 
 
 def adjust_accumulator(accumulator, adjustment):
-    
+
     column_width = 0
     adjusted_values = []
     for item in accumulator:
@@ -48,6 +51,7 @@ def adjust_accumulator(accumulator, adjustment):
     new_accumulator = [x + ('-' * (column_width - len(x))) for x in adjusted_values]
     return new_accumulator
 
+
 def transpose(amount, tab):
 
     idx = 0
@@ -58,7 +62,7 @@ def transpose(amount, tab):
             column = get_column(tab, idx)
         except EndException:
             break
-        
+
         try:
             accumulate(aa, column)
         except DoneAccumulatingException:
@@ -70,11 +74,11 @@ def transpose(amount, tab):
             add_to_tab(new_tab, aa)
             add_to_tab(new_tab, column)
             aa = [''] * 6
-            
+
             #print("UPDATED TAB")
-            #for item in new_tab:
+            # for item in new_tab:
             #    print(item[-20:])
 
         idx += 1
-        
+
     return new_tab

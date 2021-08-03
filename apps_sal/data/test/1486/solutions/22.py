@@ -11,4 +11,3 @@ for i, x in enumerate(a):
         mn = min(mn, a[i + 1] - x)
         mx = max(mx, a[-1] - x)
     print(mn, mx)
-

@@ -11,4 +11,3 @@ else:
         print(n - ar.index(0))
     except ValueError:
         print(n)
-

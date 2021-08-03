@@ -8,4 +8,3 @@ for x in a:
     cutoff = x + 15
 
 print(min(90, cutoff))
-

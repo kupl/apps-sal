@@ -19,7 +19,7 @@ def main():
             rows[i] = row[:4] + "P" + row[5:]
             print_results(rows)
             return
-        
+
         if (new_row != ""):
             rows[i - 1] = new_row
             print_results(rows)
@@ -33,9 +33,10 @@ def main():
             new_row = row[:6] + "P" + row[7]
         elif row[7] == '.':
             new_row = row[:7] + "P"
-    
+
     rows[5] = new_row
     print_results(rows)
     return
+
 
 main()

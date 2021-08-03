@@ -7,6 +7,6 @@ lx.sort()
 ly.sort()
 
 if lx[-1] < ly[0]:
-        print('No War')
+    print('No War')
 else:
     print('War')

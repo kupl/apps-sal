@@ -1,4 +1,4 @@
-class UnionFind(): 
+class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -30,206 +30,19 @@ class UnionFind():
         return [i for i, x in enumerate(self.parents) if x < 0]
 
 
-N,M=list(map(int,input().split()))
+N, M = list(map(int, input().split()))
 
-uf=UnionFind(N)
+uf = UnionFind(N)
 
 for i in range(M):
-    A,B=list(map(int,input().split()))
-    a=uf.find(A-1)
-    b=uf.find(B-1)
-    uf.union(a,b)
+    A, B = list(map(int, input().split()))
+    a = uf.find(A - 1)
+    b = uf.find(B - 1)
+    uf.union(a, b)
 
-ans=0
+ans = 0
 
 for i in uf.roots():
-    ans=max(uf.size(i),ans)
+    ans = max(uf.size(i), ans)
 
-print(ans)    
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-                
-            
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-        
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-        
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-    
-
-
-
-
-
-
-        
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-    
-
-
-    
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(ans)

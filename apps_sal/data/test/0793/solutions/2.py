@@ -14,4 +14,3 @@ ans = 1
 for x in dp:
     ans = (ans + x) % MOD
 print(ans)
-

@@ -12,4 +12,3 @@ if cnt >= m:
     print("Yes")
 else:
     print("No")
-

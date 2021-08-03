@@ -1,6 +1,6 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        
+
         wait = 0
         pro = 0
         high = 0
@@ -11,7 +11,7 @@ class Solution:
                 wait += customers[i] - 4
                 pro += 4 * boardingCost - runningCost
             # board all
-            elif customers[i] <= vacc: # board=customers[i]+wait
+            elif customers[i] <= vacc:  # board=customers[i]+wait
                 pro += boardingCost * (customers[i] + wait) - runningCost
                 wait = 0
             else:
@@ -25,11 +25,10 @@ class Solution:
         if pro_per > 0:
             last = wait % 4
             if wait >= 4:
-                if boardingCost * last - runningCost > 0: return len(customers) + wait // 4 + 1
-                else: return len(customers) + wait // 4
-            if boardingCost * last - runningCost > 0: return len(customers) + 1
+                if boardingCost * last - runningCost > 0:
+                    return len(customers) + wait // 4 + 1
+                else:
+                    return len(customers) + wait // 4
+            if boardingCost * last - runningCost > 0:
+                return len(customers) + 1
         return res + 1 if res >= 0 else -1
-            
-            
-        
-

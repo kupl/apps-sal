@@ -13,24 +13,26 @@ def SieveOfEratosthenes(n):
             for i in range(p * 2, n + 1, p):
                 prime[i] = False
         p += 1
-    ls=[]
+    ls = []
     # Print all prime numbers
     for p in range(2, n):
         if prime[p]:
             ls.append(p)
     return ls
-ls=SieveOfEratosthenes(100000)
-p,y=[int(i) for i in input().split(" ")]
-while (y!=p):
-    flag=0
+
+
+ls = SieveOfEratosthenes(100000)
+p, y = [int(i) for i in input().split(" ")]
+while (y != p):
+    flag = 0
     for i in ls:
-        if i>p:
+        if i > p:
             break
-        if not y%i:
-            flag=1
+        if not y % i:
+            flag = 1
             break
     if not flag:
         print(y)
         return
-    y-=1
+    y -= 1
 print(-1)

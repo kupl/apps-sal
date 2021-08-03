@@ -7,10 +7,10 @@ inn = []
 p = ''
 
 for x in s:
-    if(x=='('):
+    if(x == '('):
         out.append(p)
         p = ''
-    elif(x==')'):
+    elif(x == ')'):
         inn.append(p)
         p = ''
     else:
@@ -31,7 +31,7 @@ for x in inn:
 
 max = 0
 for k in oouut:
-    if(len(k)>max):
+    if(len(k) > max):
         max = len(k)
 
 print(max, len(iiinn))

@@ -14,7 +14,6 @@ for t in range(T):
         print(2)
         print("LR")
     else:
-        print((left_right_min+up_down_min)*2)
-        print(("L"*left_right_min+"D"*up_down_min +
-              "R"*left_right_min+"U"*up_down_min))
-
+        print((left_right_min + up_down_min) * 2)
+        print(("L" * left_right_min + "D" * up_down_min
+              + " R" * left_right_min + "U" * up_down_min))

@@ -14,4 +14,3 @@ for i in range(n):
         if b > 1:
             ans += min(b // 2, d) * f
     print(ans)
-

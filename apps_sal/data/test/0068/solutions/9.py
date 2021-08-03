@@ -32,13 +32,13 @@ while right <= n - 1:
         left_cuml = cuml_coord[left - 1]
     right_cuml = cuml_coord[right]
     movable_x, movable_y = right_cuml[0] - left_cuml[0], \
-                           right_cuml[1] - left_cuml[1]
+        right_cuml[1] - left_cuml[1]
     fixed_x, fixed_y = org_x - movable_x, org_y - movable_y
     sub_length = right - left + 1
     # print(fixed_x, fixed_y, left, right)
     # print(x - fixed_x, y - fixed_y)
     if (abs(x - fixed_x) + abs(y - fixed_y)) <= sub_length \
-    and (abs(x - fixed_x) + abs(y - fixed_y)) % 2 == sub_length % 2:
+            and (abs(x - fixed_x) + abs(y - fixed_y)) % 2 == sub_length % 2:
         min_len = min(min_len, sub_length)
         if left != right:
             left += 1
@@ -50,4 +50,3 @@ if min_len == 2**32 - 1:
     print(-1)
 else:
     print(min_len)
-

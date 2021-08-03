@@ -1,10 +1,10 @@
 s = input()
-mid = len(s)//2
+mid = len(s) // 2
 q = s[:mid]
-if len(s)%2 == 0:
+if len(s) % 2 == 0:
     t = list(s[mid:])
 else:
-    t = list(s[mid+1:])
+    t = list(s[mid + 1:])
 
 t.reverse()
 cnt = 0

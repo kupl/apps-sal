@@ -21,4 +21,3 @@ else:
         ans += not (alc & 1)
         alc >>= 1
 print(ans)
-

@@ -22,4 +22,3 @@ b = int(b.replace(".", ""))
 res = a * b // 100
 
 print(res)
-

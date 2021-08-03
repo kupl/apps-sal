@@ -1,38 +1,34 @@
 from collections import defaultdict as dd
 import sys
-input=sys.stdin.readline
-t=int(input())
+input = sys.stdin.readline
+t = int(input())
 while t:
-    #n=int(input())
-    n,x,y=list(map(int,input().split()))
-    #l=list(map(int,input().split()))
-    dif=y-x
-    for i in range(n-1,-1,-1):
-        if(dif%i==0):
-            ind=i
+    # n=int(input())
+    n, x, y = list(map(int, input().split()))
+    # l=list(map(int,input().split()))
+    dif = y - x
+    for i in range(n - 1, -1, -1):
+        if(dif % i == 0):
+            ind = i
             break
-    diff=dif//ind
-    arr=[x]
-    cou=1
-    curr=x
-    while curr!=y:
-        curr+=diff
+    diff = dif // ind
+    arr = [x]
+    cou = 1
+    curr = x
+    while curr != y:
+        curr += diff
         arr.append(curr)
-        cou+=1
-    left=n-cou
-    curr=x
-    while left and curr-diff>0:
-        curr-=diff
+        cou += 1
+    left = n - cou
+    curr = x
+    while left and curr - diff > 0:
+        curr -= diff
         arr.append(curr)
-        left-=1
-    curr=y
+        left -= 1
+    curr = y
     while left:
-        curr+=diff
+        curr += diff
         arr.append(curr)
-        left-=1
+        left -= 1
     print(*arr)
-    t-=1
-                   
-        
-    
-
+    t -= 1

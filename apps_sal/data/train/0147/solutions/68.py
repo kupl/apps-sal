@@ -1,8 +1,9 @@
 import heapq
+
+
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        
-        
+
         pairs = [(-efficiency[i], speed[i]) for i in range(n)]
         heapq.heapify(pairs)
         t = 0
@@ -17,18 +18,6 @@ class Solution:
                 res = max(res, -1 * e * cur)
             elif t > k:
                 cur -= heapq.heappop(usedSpeeds)
-                res = max(res, -1 * e * cur )
+                res = max(res, -1 * e * cur)
             heapq.heappush(usedSpeeds, s)
         return res % (10 ** 9 + 7)
-            
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            
-

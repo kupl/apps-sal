@@ -11,4 +11,3 @@ for i in range(n):
 max_val = max(d.values())
 keys_of_max_val = [key for key in d if d[key] == max_val]
 print(("\n".join(sorted(keys_of_max_val))))
-

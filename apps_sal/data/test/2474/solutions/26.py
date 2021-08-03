@@ -2,19 +2,19 @@ N = int(input())
 C = list(map(int, input().split()))
 MOD = 1_000_000_007
 
-B = [0 for _ in range(N+1)]#2べきmod
+B = [0 for _ in range(N + 1)]  # 2べきmod
 B[0] = 1
-for i in range(1,N+1):
-  B[i] = B[i-1] * 2
-  B[i] %= MOD  
+for i in range(1, N + 1):
+    B[i] = B[i - 1] * 2
+    B[i] %= MOD
 
 C.sort()
 
 ans = 0
-for n in range(1,N+1):
-  ans += C[n-1] * ((N-n) * B[N-n-1] + B[N-n]) * B[n-1]
-  ans %=  MOD
-  
+for n in range(1, N + 1):
+    ans += C[n - 1] * ((N - n) * B[N - n - 1] + B[N - n]) * B[n - 1]
+    ans %= MOD
+
 ans *= B[N]
 ans %= MOD
 

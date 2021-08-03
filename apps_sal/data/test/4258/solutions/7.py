@@ -8,7 +8,7 @@ def Input():
 
 def main():
     a, b, k = Input()
-    ans = (k//a) * b
+    ans = (k // a) * b
     print(ans)
 
 

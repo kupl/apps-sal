@@ -21,5 +21,3 @@ if (n % 2) == 1:
     gift[maxi] = -1 * gift[maxi] - 1
 
 print(' '.join([str(x) for x in gift]))
-
-

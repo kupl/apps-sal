@@ -3,4 +3,3 @@ def grader(score):
         if limit <= score <= 1:
             return grade
     return 'F'
-

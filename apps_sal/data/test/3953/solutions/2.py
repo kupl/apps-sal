@@ -1,48 +1,46 @@
-n=int(input())
+n = int(input())
 
-rows=[]
-evils=0
+rows = []
+evils = 0
 for i in range(n):
     rows.append(input())
-##    evils+=rows[-1].count('E')
+# evils+=rows[-1].count('E')
 
-columns=[]
+columns = []
 for i in range(n):
-    L=[]
+    L = []
     for j in range(n):
         L.append(rows[j][i])
     columns.append(L)
-can=True
+can = True
 for i in range(n):
     if(not can):
         break
     for j in range(n):
-        if(rows[i][j]=='.'):
+        if(rows[i][j] == '.'):
             continue
-        r='.' not in rows[i]
-        c='.' not in columns[j]
+        r = '.' not in rows[i]
+        c = '.' not in columns[j]
         if(r and c):
-            can=False
+            can = False
             break
 
 if(not can):
     print(-1)
 else:
-    used='rows'
+    used = 'rows'
     for i in range(n):
-        if(rows[i].count('E')==n):
-            used='columns'
+        if(rows[i].count('E') == n):
+            used = 'columns'
             break
-        elif(columns[i].count('E')==n):
-            used='rows'
+        elif(columns[i].count('E') == n):
+            used = 'rows'
             break
-    if(used=='rows'):
+    if(used == 'rows'):
         for i in range(n):
-            x=rows[i].index('.')
-            print(i+1,end=" "+str(x+1)+'\n')
+            x = rows[i].index('.')
+            print(i + 1, end=" " + str(x + 1) + '\n')
     else:
         for i in range(n):
-            x=columns[i].index('.')
-            print(x+1,end=" "+str(i+1)+'\n')
-            
-
+            x = columns[i].index('.')
+            print(x + 1, end=" " + str(i + 1) + '\n')

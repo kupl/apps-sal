@@ -7,14 +7,17 @@ res = [-1] * size
 ans = [0] * size
 ms = -1
 
+
 def addChunk(n):
     chunks[n] = [n, num[n]]
     return n
+
 
 def getRoot(n):
     while chunks[n][0] != n:
         n = chunks[n][0]
     return n
+
 
 def mergeChunks(parent, child):
     proot = getRoot(parent)
@@ -22,6 +25,7 @@ def mergeChunks(parent, child):
     chunks[croot][0] = proot
     chunks[proot][1] += chunks[croot][1]
     return proot
+
 
 for i in rem:
     res[i] = num[i]
@@ -32,8 +36,8 @@ for i in rem:
         root = mergeChunks(i, i + 1)
     ms = max(ms, chunks[root][1])
     ans.append(ms)
-    
+
 for i in range(1, size):
-    print (ans[-i-1])
-    
+    print(ans[-i - 1])
+
 print(0)

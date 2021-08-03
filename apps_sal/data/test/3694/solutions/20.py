@@ -27,10 +27,10 @@ def solve(N, A):
     if len([v for v in wc.values() if v > 1]) > 1:
         return False
 
-    if any([c > 1 and w-1 in wc for w, c in wc.items()]):
+    if any([c > 1 and w - 1 in wc for w, c in wc.items()]):
         return False
 
-    taken = sum(A) - N * (N-1) // 2
+    taken = sum(A) - N * (N - 1) // 2
     return taken % 2 != 0
 
 

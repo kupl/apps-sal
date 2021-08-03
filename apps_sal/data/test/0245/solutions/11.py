@@ -14,7 +14,7 @@ for _ in range(n):
 h = maxy - miny
 w = maxx - minx
 
-if h != w or h*h != area:
+if h != w or h * h != area:
     print('NO')
 else:
     print('YES')

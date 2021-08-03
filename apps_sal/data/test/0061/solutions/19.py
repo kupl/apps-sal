@@ -17,4 +17,3 @@ if (firstnum == secondnum):
     print('=')
 if (firstnum < secondnum):
     print('<')
-

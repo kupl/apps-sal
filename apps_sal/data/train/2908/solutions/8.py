@@ -4,13 +4,13 @@ def flatten(dictionary):
     while stack:
         path, current = stack.pop()
         if current:
-            if type(current)==dict:
+            if type(current) == dict:
                 if path:
-                    path+='/'
+                    path += '/'
                 for key in current:
-                    stack.append((path+key,current[key]))
+                    stack.append((path + key, current[key]))
             else:
-                result[path]=current
+                result[path] = current
         elif path:
-            result[path]=""
+            result[path] = ""
     return result

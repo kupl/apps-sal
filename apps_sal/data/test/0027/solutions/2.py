@@ -48,4 +48,3 @@ for i in range(1, n + 1):
         if st[:i] == st[i:i + i]:
             mx = max(mx, len(st[:i]) - 1)
 print(n - mx)
-

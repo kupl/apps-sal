@@ -13,8 +13,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n, m = inpmap()
 arr = []
@@ -37,5 +39,3 @@ for i in range(n):
             print("NO")
             return
 print("YES")
-
-

@@ -8,15 +8,15 @@ def main():
     # 迷路の四方を##で囲む。
     # 移動で枠外にでてしまってindexがないことを阻止するための
     # if文を回避
-    maze = ['#' * (w+4)]
-    maze.append('#' * (w+4))
+    maze = ['#' * (w + 4)]
+    maze.append('#' * (w + 4))
     for _ in range(h):
         maze.append('##' + input()[:-1] + '##')
-    maze.append('#' * (w+4))
-    maze.append('#' * (w+4))
-    visited = [[-1] * (w+4) for _ in range(h+4)]
-    for i in range(h+4):
-        for j in range(w+4):
+    maze.append('#' * (w + 4))
+    maze.append('#' * (w + 4))
+    visited = [[-1] * (w + 4) for _ in range(h + 4)]
+    for i in range(h + 4):
+        for j in range(w + 4):
             if maze[i][j] == '#':
                 visited[i][j] = -2
     # この条件ではindexを+1しないとダメ
@@ -26,7 +26,7 @@ def main():
     dw += 1
     visited[ch][cw] = 0
     walk = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-    telepo = [[i,j] for i in range(-2, 3) for j in range(-2, 3)]
+    telepo = [[i, j] for i in range(-2, 3) for j in range(-2, 3)]
 
     q_walk = deque([[ch, cw]])
     q_telepo = deque([])
@@ -57,7 +57,9 @@ def main():
                         q_walk.append([my, mx])
     print((visited[dh][dw]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

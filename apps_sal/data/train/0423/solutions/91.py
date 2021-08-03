@@ -3,8 +3,8 @@ class Solution:
         d = dict()
         res = 1
         for i in arr:
-            if i-diff in d.keys():
-                d[i] = 1 + d[i-diff]
+            if i - diff in d.keys():
+                d[i] = 1 + d[i - diff]
             else:
                 d[i] = 1
             res = max(res, d[i])

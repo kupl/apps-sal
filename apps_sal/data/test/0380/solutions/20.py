@@ -5,6 +5,7 @@ def is_parallel(p1, p2):
         return 2
     return 0
 
+
 a = [list(map(int, input().split())) for _ in range(3)]
 
 all_the_same = is_parallel(a[0], a[1]) == is_parallel(a[1], a[2]) == is_parallel(a[0], a[2])
@@ -19,7 +20,7 @@ else:
     new_points = []
 
     for i in range(3):
-        if is_parallel(a[i], a[(i+1) % 3]):
+        if is_parallel(a[i], a[(i + 1) % 3]):
             for j in range(3):
                 new_points.append(a[(i + j) % 3])
             break

@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def deepestLeavesSum(self, root: TreeNode) -> int:
-        #zoe  bfs
+        # zoe  bfs
         # s = 0
         # q = deque()
         # temp = []
@@ -26,11 +26,8 @@ class Solution:
         #             temp = []
         #             s = 0
         # return
-        
+
         q = [root]
         while q:
             pre, q = q, [child for p in q for child in [p.left, p.right] if child]
         return sum(node.val for node in pre)
-        
-        
-

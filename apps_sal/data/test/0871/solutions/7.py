@@ -11,7 +11,7 @@ def readlines(count):
 
 def main():
     n, s = readline()
-    shedule = [h*60 + m for (h, m) in readlines(n)]
+    shedule = [h * 60 + m for (h, m) in readlines(n)]
 
     shedule.append(float('inf'))
     prev = -s
@@ -23,6 +23,4 @@ def main():
         prev = time + 1
 
 
-
 main()
-

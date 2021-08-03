@@ -11,12 +11,12 @@ ans = 0
 for v in values:
     cnt[v] += 1
     mn = INF
-    
+
     for i in range(1, n + 1):
         mn = min(mn, cnt[i])
-    
+
     ans += mn
-    
+
     for i in range(1, n + 1):
         cnt[i] -= mn
 

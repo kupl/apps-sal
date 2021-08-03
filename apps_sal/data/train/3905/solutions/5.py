@@ -9,8 +9,11 @@ def missing(s):
             elif missing:
                 missing = None  # 2 missing numbers
                 break
-            else: missing = n
+            else:
+                missing = n
         else:
-            if not missing: return -1  # No missing number
-        if missing: return missing  # 1 missing number
+            if not missing:
+                return -1  # No missing number
+        if missing:
+            return missing  # 1 missing number
     return -1  # Error in the sequence

@@ -9,6 +9,7 @@ from copy import deepcopy
 import numpy as np
 import scipy as sp
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -25,6 +26,7 @@ def prime_factorize(n):
         a.append(n)
     return a
 
+
 INF = inf
 MOD = 1000000007
 
@@ -38,4 +40,3 @@ for i in list(cnt.values()):
     res += floor((-1 + sqrt(1 + 8 * i)) / 2)
 
 print(res)
-

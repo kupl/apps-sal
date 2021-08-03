@@ -1,6 +1,7 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         memo = dict()
+
         def dp(k, n):
             # base case
             if k == 1:
@@ -30,4 +31,3 @@ class Solution:
             memo[(k, n)] = res
             return res
         return dp(K, N)
-

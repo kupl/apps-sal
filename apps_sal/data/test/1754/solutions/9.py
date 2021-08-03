@@ -19,4 +19,3 @@ for i in range(n):
             result += 1
         u += 1
 print(result)
-

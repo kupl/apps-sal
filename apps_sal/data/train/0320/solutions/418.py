@@ -12,5 +12,5 @@ class Solution:
                 op += 1
             else:
                 op += odds
-                
+
         return op

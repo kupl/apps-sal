@@ -5,6 +5,7 @@ import collections
 import sys
 import traceback
 
+
 class Input(object):
     def __init__(self):
         self.fh = sys.stdin
@@ -16,7 +17,6 @@ class Input(object):
                 continue
             return line
 
-
     def next_line_ints(self):
         line = self.next_line()
         return [int(x) for x in line.split()]
@@ -25,11 +25,13 @@ class Input(object):
         line = self.next_line()
         return line.split()
 
+
 class Node(object):
     def __init__(self, color, subtree_color):
         self.left = self.right = None
         self.color = color
         self.subtree_color = subtree_color
+
 
 def list_to_number(list):
     """Return (color, bits, number)."""
@@ -43,6 +45,7 @@ def list_to_number(list):
     for num in nums:
         number = number * 256 + int(num)
     return (color, bits, number)
+
 
 def add_list_to_tree(tree, list):
     color, bits, number = list_to_number(list)
@@ -62,12 +65,14 @@ def add_list_to_tree(tree, list):
     tree.subtree_color |= color
     tree.color |= color
 
+
 def check_tree(tree):
     if not tree:
         return True
     if tree.color == 3 or (tree.color and (tree.subtree_color & ~tree.color)):
         return False
     return check_tree(tree.left) and check_tree(tree.right)
+
 
 def number_to_list(number, bits):
     number <<= (32 - bits)
@@ -78,6 +83,7 @@ def number_to_list(number, bits):
         number //= 256
     values = values[::-1]
     return '.'.join(values) + '/' + str(bits)
+
 
 def get_optimized(tree, optimized, number, bits):
     if not tree or (tree.subtree_color & 1) == 0:
@@ -128,5 +134,6 @@ def main():
         except:
             traceback.print_exc(file=sys.stdout)
             print('get_min_dist failed')
+
 
 main()

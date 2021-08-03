@@ -6,6 +6,7 @@ def solution(stones):
         if previous_stone == stone:
             counter += 1
 
-        else: previous_stone = stone
+        else:
+            previous_stone = stone
 
     return counter

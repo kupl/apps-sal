@@ -3,7 +3,7 @@
 # dividing by two and taking the floor. This would require
 # a reversal of the list generated since we're building it
 # backwards.
-# 
+#
 # If we examine the successor function (x -> {2x, 2x + 1})
 # we can deduce that the binary representation of any number
 # gives us the steps to follow to generate it: if the n-th (LTR)
@@ -17,7 +17,7 @@ def climb(n):
 
     while cur <= n:
         res.append(cur)
-        cur = 2*cur + (1 if (n & mask) != 0 else 0)
+        cur = 2 * cur + (1 if (n & mask) != 0 else 0)
         mask >>= 1
 
     return res

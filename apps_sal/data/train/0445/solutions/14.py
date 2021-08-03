@@ -17,11 +17,10 @@ class Solution:
         self.ans = float('inf')
         self.min_diff(0, len(arr) - 1, arr, 3)
         return self.ans
-        
+
     def min_diff(self, i, j, arr, depth):
         if depth == 0:
             self.ans = min(self.ans, arr[j] - arr[i])
             return
         self.min_diff(i + 1, j, arr, depth - 1)
         self.min_diff(i, j - 1, arr, depth - 1)
-

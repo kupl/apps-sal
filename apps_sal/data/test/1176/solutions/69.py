@@ -14,4 +14,4 @@ tmp = sum(abs_a)
 if len(minus) % 2 == 0:
     print(tmp)
 else:
-    print(tmp - min(abs_a)*2)
+    print(tmp - min(abs_a) * 2)

@@ -25,32 +25,37 @@ def s_row(N): return [s_input for _ in range(N)]
 def s_row_str(N): return [s_list() for _ in range(N)]
 def s_row_list(N): return [list(s_input()) for _ in range(N)]
 def lcm(a, b): return a * b // gcd(a, b)
+
+
 sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
 MOD = 10 ** 9 + 7
 num_list = []
 str_list = []
 
+
 def main():
-	N,M = i_map()
-	A = i_list()
+    N, M = i_map()
+    A = i_list()
 
-	for i in range(0,len(A)):
-		A[i] = - A[i]
+    for i in range(0, len(A)):
+        A[i] = - A[i]
 
-	heapq.heapify(A)
+    heapq.heapify(A)
 
-	for i in range(0,M):
-		tmp = math.ceil(heapq.heappop(A)/2)
-		heapq.heappush(A,tmp)
+    for i in range(0, M):
+        tmp = math.ceil(heapq.heappop(A) / 2)
+        heapq.heappush(A, tmp)
 
-	sum = 0
-	for i in range(0,len(A)):
-		sum +=- heapq.heappop(A)
+    sum = 0
+    for i in range(0, len(A)):
+        sum += - heapq.heappop(A)
 
-	print(sum)
+    print(sum)
 
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

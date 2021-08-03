@@ -3,7 +3,7 @@ def stringy(size):
     res = ''
     for i in range(size):
         c += 1
-        if i  == 0:
+        if i == 0:
             res += '1'
         elif i == 1:
             res += '0'

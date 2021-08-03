@@ -15,7 +15,7 @@ for c in S:
         cnt = 0
 
 # 後ろから見て、各マスからもっとも近い右側の0の位置を格納(S[i]=0ならi)
-ngo_pos = [0 for _ in range(N+1)]
+ngo_pos = [0 for _ in range(N + 1)]
 most_neighbor_zero_pos = N
 for i in range(N, -1, -1):
     if S[i] == "0":
@@ -30,8 +30,7 @@ else:
     ans = []
     pos = N
     while pos > 0:
-        npos = ngo_pos[max(0, pos-M)]
-        ans.append(pos-npos)
+        npos = ngo_pos[max(0, pos - M)]
+        ans.append(pos - npos)
         pos = npos
     print((" ".join(map(str, ans[::-1]))))
-

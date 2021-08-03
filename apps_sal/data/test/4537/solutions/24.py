@@ -8,6 +8,7 @@ def Input():
 
 def main():
     a, b = Input()
-    print(max(a+b, a*b, a-b))
+    print(max(a + b, a * b, a - b))
+
 
 main()

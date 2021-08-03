@@ -25,4 +25,3 @@ if first == None or last == None or first > last:
     sys.stdout.write('0\n')
 else:
     sys.stdout.write(str(last - first) + '\n')
-

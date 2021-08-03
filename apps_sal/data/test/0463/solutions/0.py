@@ -18,9 +18,9 @@ else:
             go = True
             ans = 1
             break
-        
+
         b[i] += 1
-    
+
     if go:
         print(ans)
     else:
@@ -36,4 +36,3 @@ else:
             print(ans)
         else:
             print(-1)
-

@@ -7,4 +7,3 @@ for i in range(1, (h - 2) * w - 1):
         for _ in cross:
             l[_ + i] = False
 print(('YES', 'NO')[any(l)])
-

@@ -6,9 +6,9 @@ class Solution:
         keys = collections.defaultdict(int)
         for c in s:
             keys[c] += 1
-        
+
         for key in keys:
             if keys[key] % 2:
                 numodds += 1
-        
+
         return numodds <= k

@@ -1,4 +1,6 @@
 from collections import defaultdict, deque
+
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         path = defaultdict(list)
@@ -21,8 +23,3 @@ class Solution:
                                 queue.append(next_bus)
             taken += 1
         return -1
-                  
-                        
-        
-                
-

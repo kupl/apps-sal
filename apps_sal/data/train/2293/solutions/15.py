@@ -10,6 +10,6 @@ for k in range(1, 1 << n):
     ans = sum(m[k])
     for d in range(n):
         if k >> d & 1 == 1:
-            t = k ^ 1 << d  | (1 << d) - 1
+            t = k ^ 1 << d | (1 << d) - 1
             ans = max(ans, sum(m[t]))
     print(ans)

@@ -5,4 +5,3 @@ class Hero(object):
         self.health = 100
         self.damage = 5
         self.experience = 0
-

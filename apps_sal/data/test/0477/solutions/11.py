@@ -14,5 +14,6 @@ def main():
     if int(mi) == int(1e9) or n <= a or m <= b:
         return "Poor Inna and pony!"
     return int(mi)
-print(main())
 
+
+print(main())

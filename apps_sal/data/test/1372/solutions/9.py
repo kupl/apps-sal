@@ -10,5 +10,4 @@ dp = [0] * (h + max_a)
 for i in range(h + max_a):
     dp[i] = min(dp[i - a] + b for a, b in data)
 
-print((min(dp[h - 1: ]))) 
-
+print((min(dp[h - 1:])))

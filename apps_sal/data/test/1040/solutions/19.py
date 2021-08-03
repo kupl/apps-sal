@@ -11,7 +11,6 @@ for c in s1:
             s2.append(c)
     except:
         s2.append(c)
-    
+
 
 print((len(s2)))
-

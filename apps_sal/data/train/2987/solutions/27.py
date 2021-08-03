@@ -1,1 +1,1 @@
-is_divide_by = lambda number, a, b: not number % a and not number % b
+def is_divide_by(number, a, b): return not number % a and not number % b

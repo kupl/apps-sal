@@ -1,4 +1,6 @@
 import sys
+
+
 def __starting_point():
     #n, m = list(map(int, input().split()))
     n = int(input())
@@ -9,5 +11,6 @@ def __starting_point():
                 print("YES")
                 return
     print("NO")
+
 
 __starting_point()

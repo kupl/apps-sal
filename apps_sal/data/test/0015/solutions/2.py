@@ -5,4 +5,3 @@ if c != 0:
 else:
     n = 0
 print(["NO", "YES"][(a + n * c == b) and (n >= 0)])
-

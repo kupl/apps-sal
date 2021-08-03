@@ -1,5 +1,5 @@
 def numericals(s):
-    seen_liters = {l:0 for l in set(s)}
+    seen_liters = {l: 0 for l in set(s)}
     result = ''
     for l in s:
         seen_liters[l] += 1

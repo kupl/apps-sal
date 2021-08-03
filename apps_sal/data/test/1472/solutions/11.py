@@ -16,4 +16,3 @@ for i in range(1, N):
 
 for d in D[1:]:
     print(d)
-

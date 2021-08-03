@@ -10,17 +10,17 @@ class Solution:
         self.balls = balls
         self.k = len(balls)
         self.n = sum(balls) // 2
-        self.ball_sums = [sum(balls[index :]) for index in range(self.k + 1)]
+        self.ball_sums = [sum(balls[index:]) for index in range(self.k + 1)]
         self.update([], 0, 0)
         return self.valid / self.total
-    
+
     @ft.lru_cache(None)
     def factorial(self, n: int) -> int:
         return math.factorial(n)
-    
+
     def count(self, balls: List[int]) -> int:
         return self.factorial(self.n) // ft.reduce(operator.mul, map(self.factorial, balls))
-    
+
     def update(self, left_balls: List[int], total: int, delta: int) -> None:
         if len(left_balls) == self.k:
             if total != self.n:

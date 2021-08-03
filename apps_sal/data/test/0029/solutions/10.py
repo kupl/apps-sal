@@ -21,4 +21,3 @@ for x in helper:
     n += 1
 
 print(n)
-

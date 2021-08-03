@@ -26,5 +26,3 @@ while i < len(a):
 seconds_past += math.ceil(current_height / k)
 
 print(seconds_past)
-
-

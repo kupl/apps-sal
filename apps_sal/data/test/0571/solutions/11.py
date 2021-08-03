@@ -37,7 +37,7 @@ for i in range(len(l)):
         cnt += 1
 
 cnt = 0
-for p,i in enumerate(l):
+for p, i in enumerate(l):
     if i == '(':
         cnt += 1
     else:
@@ -51,4 +51,3 @@ else:
         return
 
 print(''.join(l))
-

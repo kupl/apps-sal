@@ -4,7 +4,7 @@ class Solution:
             return 0
         ans = 0
         hp, hp2 = [], []
-        n, mina,maxa = len(A), min(A), max(A)
+        n, mina, maxa = len(A), min(A), max(A)
         seen = set()
         for a in A:
             if a not in seen:

@@ -3,7 +3,7 @@ variants = []
 for i in range(0, 4):
     variants.append((len(input()) - 2, answers[i]))
 asc = sorted(variants, key=lambda variant: variant[0])
-des = sorted(variants, key=lambda variant: variant[0], reverse = True)
+des = sorted(variants, key=lambda variant: variant[0], reverse=True)
 
 good_variants = []
 if (2 * asc[0][0] <= asc[1][0]):

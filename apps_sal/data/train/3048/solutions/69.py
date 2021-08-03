@@ -6,4 +6,3 @@ def alternateCase(s):
         else:
             lst.append(i.upper())
     return ''.join(lst)
-

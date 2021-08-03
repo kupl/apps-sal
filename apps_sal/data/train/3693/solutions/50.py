@@ -6,5 +6,6 @@ def make_negative(number):
     else:
         number = number * -1
         return number
-        
+
+
 make_negative(15)

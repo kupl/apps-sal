@@ -4,4 +4,6 @@ def opposite(number):
     else:
         number = -number
     return number
-print(opposite(1),-1)
+
+
+print(opposite(1), -1)

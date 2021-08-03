@@ -1,7 +1,8 @@
 import sys
 import itertools
 import pprint
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 H, W, K = list(map(int, input().split()))
 S = [[0 for _ in range(W)] for _ in range(H)]
@@ -62,5 +63,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

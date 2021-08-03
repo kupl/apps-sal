@@ -9,4 +9,4 @@ class Solution:
             else:
                 res += 2 ** (r - l)
                 l += 1
-        return res % (10**9+7)
+        return res % (10**9 + 7)

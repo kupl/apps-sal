@@ -10,7 +10,7 @@ class Solution:
                     length += 1
                 res += length
             return res
-        
+
         res = 0
         M = len(mat)
         N = len(mat[0])

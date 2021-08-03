@@ -1,9 +1,11 @@
-#Prim's algorithm
+# Prim's algorithm
 from heapq import *
+
+
 class Solution:
     def minCostConnectPoints(self, points):
         n = len(points)
-        dist = lambda p0, p1: abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
+        def dist(p0, p1): return abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
         q = [(0, 0)]
         visited = set()
         nodes = set(range(len(points)))

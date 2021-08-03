@@ -1,6 +1,8 @@
 import sys
 
-input = lambda: sys.stdin.readline().rstrip()
+
+def input(): return sys.stdin.readline().rstrip()
+
 
 N, K = list(map(int, input().split()))
 A = sorted(list(map(int, input().split())))
@@ -60,5 +62,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

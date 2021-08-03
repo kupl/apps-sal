@@ -14,5 +14,3 @@ for _ in range(int(input())):
     ans -= cur - cur % 2
     gans.append(ans)
 print('\n'.join(map(str, gans)))
-        
-

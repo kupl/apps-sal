@@ -1,8 +1,10 @@
 num = int(input())
 track = []
-for i in range(num+1):
-    temp = list(map(int,input().split()))
+for i in range(num + 1):
+    temp = list(map(int, input().split()))
     track.append(temp)
+
+
 def checkDirection(pointOne, pointTwo):
     if pointOne[0] < pointTwo[0]:
         return "E"
@@ -12,6 +14,8 @@ def checkDirection(pointOne, pointTwo):
         return "N"
     if pointOne[1] > pointTwo[1]:
         return "S"
+
+
 def checkDanger(pointOne, pointTwo, pointThree):
     first = checkDirection(pointOne, pointTwo)
     second = checkDirection(pointTwo, pointThree)
@@ -19,8 +23,10 @@ def checkDanger(pointOne, pointTwo, pointThree):
         return True
     else:
         return False
+
+
 numDanger = 0
-for i in range(1,len(track)-1):
-    if checkDanger(track[i-1],track[i],track[i+1]):
+for i in range(1, len(track) - 1):
+    if checkDanger(track[i - 1], track[i], track[i + 1]):
         numDanger += 1
 print(numDanger)

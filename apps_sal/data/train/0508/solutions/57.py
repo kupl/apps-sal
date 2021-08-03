@@ -1,10 +1,10 @@
 from bisect import bisect_left, bisect_right
 
-N,Q = map(int, input().split())
+N, Q = map(int, input().split())
 STX = [[int(i) for i in input().split()] for _ in range(N)]
 D = [int(input()) for _ in range(Q)]
 
-STX.sort(key=lambda x:x[2])
+STX.sort(key=lambda x: x[2])
 
 ans = [-1] * Q
 skip = [-1] * Q

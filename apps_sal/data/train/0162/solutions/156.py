@@ -3,13 +3,14 @@ def dp(s1, s2, i, j, mem):
         return 0
     elif (i, j) in mem:
         return mem[(i, j)]
-    
-    l = dp(s1, s2, i+1, j, mem)
-    r = dp(s1, s2, i, j+1, mem)
-    both = (1 + dp(s1, s2, i+1, j+1, mem)) if s1[i] == s2[j] else 0
+
+    l = dp(s1, s2, i + 1, j, mem)
+    r = dp(s1, s2, i, j + 1, mem)
+    both = (1 + dp(s1, s2, i + 1, j + 1, mem)) if s1[i] == s2[j] else 0
     res = max(r, l, both)
     mem[(i, j)] = res
     return res
+
 
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:

@@ -1,5 +1,6 @@
 import traceback
 
+
 def push(stack, delta):
     if stack:
         _, d, mn, mx = stack[-1]
@@ -7,11 +8,12 @@ def push(stack, delta):
         d, mn, mx = 0, 0, 0
     stack.append((delta, d + delta, min(d + delta, mn), max(d + delta, mx)))
 
+
 def main():
     n = int(input())
     ss = input()
-    left = [(0, 0,0,0)]
-    right = [(0, 0,0,0)] * n
+    left = [(0, 0, 0, 0)]
+    right = [(0, 0, 0, 0)] * n
     res = []
     try:
         for s in ss:
@@ -41,12 +43,12 @@ def main():
     except Exception as e:
         print(e)
         traceback.print_exc()
-        print("size left %d size right %d"%(len(left), len(right)))
+        print("size left %d size right %d" % (len(left), len(right)))
     print(' '.join(map(str, res)))
-
-
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

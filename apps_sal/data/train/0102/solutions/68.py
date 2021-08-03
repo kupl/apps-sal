@@ -1,7 +1,7 @@
 for i in range(int(input())):
     n = (input())
     m = len(n)
-    ans = 9 * (m - 1) 
+    ans = 9 * (m - 1)
     n = int(n)
     ans += int('1' * m) <= n
     ans += int('2' * m) <= n

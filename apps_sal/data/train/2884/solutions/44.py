@@ -9,4 +9,3 @@ def stringify(node):
     lst.append(str(n.data))
     lst.append('None')
     return ' -> '.join(lst)
-

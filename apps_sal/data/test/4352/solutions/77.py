@@ -17,4 +17,3 @@ else:
         result = 'Bob'
 
 print(result)
-

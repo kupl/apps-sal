@@ -22,4 +22,3 @@ else:
                 x //= k
 
     print(ans)
-

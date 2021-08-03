@@ -15,4 +15,3 @@ for q in range(Q):
 
     ans += min(delta // 3, delta // 2)
     print(ans)
-

@@ -52,4 +52,4 @@ for i in range(1, num_points + 1):
 
 print(len(removed))
 for j in removed:
-    print(j, end = " ")
+    print(j, end=" ")

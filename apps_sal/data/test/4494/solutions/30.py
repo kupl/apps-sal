@@ -21,4 +21,3 @@ if s == "ABC":
     res = "ARC"
 
 print(res)
-

@@ -11,7 +11,7 @@ for i in range(n):
     else:
         a[i] = [-a[i], 0]
         neg += 1
-a.sort(reverse = True)
+a.sort(reverse=True)
 ans = 1
 if n == k:
     for i in range(n):

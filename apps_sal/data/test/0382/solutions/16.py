@@ -13,4 +13,3 @@ for i in range(q):
         print(max(c[r] - c[l + m - 2], 0))
     else:
         print(0)
-

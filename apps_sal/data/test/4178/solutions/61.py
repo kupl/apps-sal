@@ -7,29 +7,33 @@
 #INF = 10 ** 9
 #PI = 3.14159265358979323846
 
-INT = lambda: int(input())
-INTM = lambda: map(int,input().split())
-STRM = lambda: map(str,input().split())
-STR = lambda: str(input())
-LIST = lambda: list(map(int,input().split()))
-LISTS = lambda: list(map(str,input().split()))
+def INT(): return int(input())
+def INTM(): return map(int, input().split())
+def STRM(): return map(str, input().split())
+def STR(): return str(input())
+def LIST(): return list(map(int, input().split()))
+def LISTS(): return list(map(str, input().split()))
+
 
 def do():
-    n=INT()
-    h=LIST()
-    for i in range(n-1):
-        if h[i]<h[i+1]:
-            h[i+1]-=1
-    flg=True
-    for i in range(n-1):
-        if h[i]>h[i+1]:
-            flg=False
-        
+    n = INT()
+    h = LIST()
+    for i in range(n - 1):
+        if h[i] < h[i + 1]:
+            h[i + 1] -= 1
+    flg = True
+    for i in range(n - 1):
+        if h[i] > h[i + 1]:
+            flg = False
+
     if flg:
-       print('Yes')
+        print('Yes')
     else:
-        print('No') 
+        print('No')
+
 
 def __starting_point():
     do()
+
+
 __starting_point()

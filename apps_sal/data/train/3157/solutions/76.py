@@ -3,4 +3,3 @@ def number(bus_stops):
     for enter, leave in bus_stops:
         b = max(b + enter - leave, 0)
     return b
-

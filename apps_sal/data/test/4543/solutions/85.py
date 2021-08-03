@@ -35,7 +35,7 @@ class TestClass(unittest.TestCase):
 def resolve():
     A, B = input().split()
 
-    C = int(A+B)
+    C = int(A + B)
     for i in range(1, 100100):
         if i**2 == C:
             print("Yes")
@@ -47,5 +47,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

@@ -2,7 +2,7 @@ def gcd(a, b):
     """a, bの最大公約数(greatest common divisor:GCD)を求める"""
     if b == 0:
         return a
-    return gcd(b, a%b)
+    return gcd(b, a % b)
 
 
 def lcm(a, b):
@@ -30,8 +30,8 @@ n = int(input())
 a = list(map(int, input().split()))
 a = sorted(a)
 li_a = []
-for i in range(n-1):
-    tmp = a[i+1] - a[i]
+for i in range(n - 1):
+    tmp = a[i + 1] - a[i]
     if tmp != 0:
         li_a.append(tmp)
 gcd_a = multi_gcd(li_a)
@@ -40,6 +40,3 @@ ans = 0
 for i in range(n):
     ans += (max_a - a[i]) // gcd_a
 print(ans, gcd_a)
-
-
-

@@ -35,4 +35,3 @@ assert a + c > b
 assert b + c > a
 
 print(it)
-

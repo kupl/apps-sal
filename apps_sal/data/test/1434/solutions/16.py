@@ -1,7 +1,7 @@
 n = int(input())
 stack_leaves = []
-deg = [0]*n
-s = [0]*n
+deg = [0] * n
+s = [0] * n
 summ = 0
 for i in range(n):
     deg[i], s[i] = map(int, input().split())

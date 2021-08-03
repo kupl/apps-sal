@@ -6,11 +6,11 @@ def main():
         fir[i] = list(map(int, input().split()))
     for i in range(n):
         sec[i] = list(map(int, input().split()))
-    
+
     for i in range(n):
         for j in range(m):
             fir[i][j], sec[i][j] = min(fir[i][j], sec[i][j]), max(fir[i][j], sec[i][j])
-    
+
     for i in range(n):
         for j in range(m):
             if i > 0 and fir[i][j] <= fir[i - 1][j]:
@@ -27,6 +27,6 @@ def main():
                 return 0
     print("Possible")
     return 0
-            
-            
+
+
 main()

@@ -1,4 +1,6 @@
 import copy
+
+
 def right(a):
     d = a[1] - a[0]
     res, f = 0, True
@@ -15,6 +17,8 @@ def right(a):
     if not f:
         res = 10 ** 9
     return res
+
+
 n = int(input())
 bs = list(map(int, input().split()))
 if n <= 2:

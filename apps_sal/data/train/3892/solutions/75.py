@@ -11,6 +11,5 @@ def grader(score):
         grade = "C"
     elif score >= 0.6:
         grade = "D"
-        
-    return grade
 
+    return grade

@@ -1,10 +1,9 @@
 class Solution:
     def backspaceCompare(self, S: str, T: str) -> bool:
         i, j = len(S) - 1, len(T) - 1
-        
-        
-        backS = backT = 0       
-        
+
+        backS = backT = 0
+
         while True:
             while i >= 0 and (backS or S[i] == '#'):
                 backS += 1 if S[i] == '#' else -1

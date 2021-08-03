@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     ls = []
     for x in arr[::-1]:
         if ls.count(x) == 0:

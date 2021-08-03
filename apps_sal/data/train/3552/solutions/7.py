@@ -1,4 +1,5 @@
-_OUTCOMES = [2,2,2,2,1,1,2,4]
+_OUTCOMES = [2, 2, 2, 2, 1, 1, 2, 4]
+
 
 def update_score(current_score, called_trump, alone, tricks):
     score = [0] + current_score

@@ -1,10 +1,10 @@
 n = int(input())
 s = ''
 for i in range(n):
-    p,q,b = map(int,input().split())
+    p, q, b = map(int, input().split())
     for i in range(6):
-        b = (b*b)%q
-    if (p*b) %q:
+        b = (b * b) % q
+    if (p * b) % q:
         s += 'Infinite\n'
     else:
         s += 'Finite\n'

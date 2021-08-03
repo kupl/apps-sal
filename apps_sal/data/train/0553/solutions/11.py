@@ -1,9 +1,13 @@
-intput = lambda: [int(i) for i in input().split()]
-# Write your code here
 from sys import stdout
+def intput(): return [int(i) for i in input().split()]
+
+
+# Write your code here
 sol = "3332323313233322223333"
 subsets = ['100', '010', '001', '110', '101', '011', '111']
-eq = lambda x, y: abs(x - y) < 1e-6
+def eq(x, y): return abs(x - y) < 1e-6
+
+
 def check(x):
     if x == [9, 7, 4]:
         print("Debug")
@@ -23,12 +27,16 @@ def check(x):
     if (d[0] == d[1] and d[0] == d[2]) or (f[0] and eq(q[0], q[1]) and eq(q[0], q[2])):
         return 1
     return 2
+
+
 def move(subset, oper, d):
     res = x.copy()
     for i in range(3):
         if subset[i] == '1':
             res[i] = res[i] + d if oper else res[i] * d
     return res
+
+
 for tc in range(int(input())):
     x = list(map(int, input().split()))
     y = list(map(int, input().split()))

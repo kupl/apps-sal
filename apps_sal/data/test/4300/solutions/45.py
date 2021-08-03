@@ -7,4 +7,3 @@ for i in range(len(d) - 1):
         ans += d[i] * d[k]
 
 print(ans)
-

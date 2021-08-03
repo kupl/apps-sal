@@ -1,7 +1,7 @@
 n = int(input())
 v = min(n, 5)
 if v < 5:
-    print(n*(n - 1) // 2)
+    print(n * (n - 1) // 2)
     return
 while v * 10 <= n:
     v *= 10

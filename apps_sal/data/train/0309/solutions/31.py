@@ -15,4 +15,3 @@ class Solution:
                         dic[i] = 2
 
         return max(max(v1 for k1, v1 in list(v.items())) for k, v in list(dp.items()))
-

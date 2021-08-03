@@ -12,9 +12,9 @@ def main():
             return T[:-1]
     return None
 
+
 T = main()
 if not T:
     print((-1))
 else:
     print((''.join('S' if s == 0 else 'W' for s in T)))
-

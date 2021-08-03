@@ -4,7 +4,7 @@
 #         self.position = '00'
 #         self.health = 100
 #         self.damage = 5
-#         self.experience = 0 
+#         self.experience = 0
 
 
 class Hero(object):
@@ -14,4 +14,3 @@ class Hero(object):
         self.health = 100
         self.damage = 5
         self.experience = 0
-

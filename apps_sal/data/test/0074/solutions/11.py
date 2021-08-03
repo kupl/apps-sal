@@ -9,6 +9,7 @@ def prime(x):
             return False
     return True
 
+
 n = int(input())
 
 if prime(n):
@@ -32,4 +33,3 @@ else:
         y -= 1
     print(3)
     print(x, y, rest - y)
-

@@ -1,5 +1,6 @@
 import math
 
+
 def is_prime(n):
     bound = int(math.sqrt(n + 1) + 1)
     for k in range(2, bound):
@@ -14,7 +15,7 @@ def solve():
         print('NO')
         return
 
-    if is_prime(a+b):
+    if is_prime(a + b):
         print('YES')
     else:
         print('NO')
@@ -23,4 +24,3 @@ def solve():
 num_tests = int(input())
 for _ in range(num_tests):
     solve()
-

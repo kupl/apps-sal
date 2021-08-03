@@ -22,17 +22,17 @@ def _read_ints():
 
 def process_queries(sequence, queries):
     sequence = tuple(sequence)
-    
+
     indices_to_select = sorted(
         range(len(sequence)),
         key=lambda index: (-sequence[index], index)
     )
-    
+
     enumerated_queries = sorted(enumerate(queries), key=lambda iv: iv[1][0])[::-1]
     queries_responses = [None] * len(enumerated_queries)
-    
+
     selections_tree = [0] * (len(sequence) + 1)
-    
+
     selected_n = 0
     for index_to_select in indices_to_select:
         _fenwick_tree_add(selections_tree, index_to_select, 1)
@@ -41,7 +41,7 @@ def process_queries(sequence, queries):
             query_index, (_k, subseq_index) = enumerated_queries.pop()
             seq_index = _find_seq_index_by_subseq_index(selections_tree, subseq_index)
             queries_responses[query_index] = sequence[seq_index]
-    
+
     return queries_responses
 
 
@@ -76,5 +76,6 @@ def _fenwick_tree_add(tree, i, x):
 
 def __starting_point():
     main()
+
 
 __starting_point()

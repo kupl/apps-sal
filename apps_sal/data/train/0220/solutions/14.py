@@ -10,15 +10,12 @@ class Solution:
         while i < X:
             unsatisfiedWindow += customers[i]
             i += 1
-        
+
         maxUnsatisfiedWindow = unsatisfiedWindow
         while i < len(customers):
-            unsatisfiedWindow -= customers[i-X]
+            unsatisfiedWindow -= customers[i - X]
             unsatisfiedWindow += customers[i]
             maxUnsatisfiedWindow = max(maxUnsatisfiedWindow, unsatisfiedWindow)
             i += 1
-            
-        return satisfiedCustomers + maxUnsatisfiedWindow
-            
-            
 
+        return satisfiedCustomers + maxUnsatisfiedWindow

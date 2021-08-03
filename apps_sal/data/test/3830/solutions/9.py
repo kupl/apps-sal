@@ -19,8 +19,6 @@ for _ in range(t):
         print(n)
     else:
         for i in range(n):
-            if s[i] == '-' or s[(i-1) % n] == '-':
+            if s[i] == '-' or s[(i - 1) % n] == '-':
                 out += 1
         print(out)
-    
-

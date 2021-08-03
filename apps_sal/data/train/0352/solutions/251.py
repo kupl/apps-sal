@@ -6,8 +6,8 @@ class Solution:
         max_len = 0
         q = deque()
         for char in words:
-            if len(char) >1:
-                neighbors = [char[:i] + char[i+1:] for i in range(len(char))]
+            if len(char) > 1:
+                neighbors = [char[:i] + char[i + 1:] for i in range(len(char))]
                 for n in neighbors:
                     hash_map[n].append(char)
             hash_map[char].append(char)
@@ -24,6 +24,3 @@ class Solution:
 
                 visited[char] = 1
         return max_len
-                    
-
-

@@ -21,4 +21,3 @@ for i, t in enumerate(S[::-1]):
     hyou[now] += 1
 
 print(ans)
-

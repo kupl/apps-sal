@@ -1,5 +1,5 @@
-n,b,a = list(map(int,input().split()))
-si = list(map(int,input().split()))
+n, b, a = list(map(int, input().split()))
+si = list(map(int, input().split()))
 a2 = a
 ans = n
 for i in range(n):
@@ -23,5 +23,3 @@ for i in range(n):
             break
         a2 -= 1
 print(ans)
-        
-

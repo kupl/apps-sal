@@ -5,4 +5,3 @@ for i in range(k):
         print(int(n[0]) + (len(n) - 1) * 9)
     else:
         print(int(n[0]) - 1 + (len(n) - 1) * 9)
-

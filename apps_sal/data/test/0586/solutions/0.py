@@ -1,6 +1,7 @@
 def norm(x):
     return (x % 998244353 + 998244353) % 998244353
 
+
 n, k = map(int, input().split())
 
 dp1 = [0]

@@ -1,18 +1,18 @@
 import collections
 
 n, q = map(int, input().split())
-ab = [list(map(int, input().split())) for _ in range(n-1)]
+ab = [list(map(int, input().split())) for _ in range(n - 1)]
 px = [list(map(int, input().split())) for _ in range(q)]
 
 c = [[] for _ in range(n)]
 for a, b in ab:
-    a, b = a-1, b-1
+    a, b = a - 1, b - 1
     c[a].append(b)
     c[b].append(a)
 
 point = [0] * n
 for p, x in px:
-    point[p-1] += x
+    point[p - 1] += x
 
 parents = [0] * n
 ans = [0] * n

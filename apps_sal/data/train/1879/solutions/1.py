@@ -7,12 +7,12 @@
 class Solution:
     node_sum = 0
     most_depth = 0
-    
+
     def deepestLeavesSum(self, root: TreeNode) -> int:
         depth = 0
         self.generate_deepest_node_map(root, depth)
         return self.node_sum
-            
+
     def generate_deepest_node_map(self, node, depth):
         if node:
             if node.left:
@@ -26,7 +26,3 @@ class Solution:
                 if self.most_depth < depth:
                     self.most_depth = depth
                     self.node_sum = node.val
-                
-            
-
-

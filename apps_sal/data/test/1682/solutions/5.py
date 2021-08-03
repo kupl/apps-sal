@@ -9,4 +9,3 @@ dd = sorted(a - b for a, b in zip(aa, bb))
 k = max(k, bisect(dd, 0))
 
 print(sum(bb) + sum(dd[:k]))
-

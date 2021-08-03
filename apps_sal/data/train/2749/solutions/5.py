@@ -9,4 +9,3 @@ def solve(arr):
             return "D"
         else:
             return "RD"
-

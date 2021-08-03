@@ -1,12 +1,12 @@
-n = int(input());
+n = int(input())
 
-count = 0;
+count = 0
 
 while n > 0:
 
- n -= 1;
+    n -= 1
 
- inp = input().split(' ')[-1:][0];
+    inp = input().split(' ')[-1:][0]
 
 #   if len(inp) > 6:
 #
@@ -14,32 +14,31 @@ while n > 0:
 
 #   print inp;
 
- eight, five, three, others = 0, 0, 0, False;
- 
- for each in inp:
+    eight, five, three, others = 0, 0, 0, False
 
-  if each >= '0' and each <= '9':
- 
-   if each == '8':
- 
-    eight += 1;
+    for each in inp:
 
-   elif each == '5':
+        if each >= '0' and each <= '9':
 
-    five += 1;
+            if each == '8':
 
-   elif each == '3':
+                eight += 1
 
-    three += 1;
+            elif each == '5':
 
-   else:
-    others = True;
- 
-    break;
+                five += 1
 
- if not others and eight >= five and five >= three:
+            elif each == '3':
 
-  count += 1;
+                three += 1
 
-print(count);
+            else:
+                others = True
 
+                break
+
+    if not others and eight >= five and five >= three:
+
+        count += 1
+
+print(count)

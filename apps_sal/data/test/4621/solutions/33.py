@@ -1,7 +1,7 @@
 H, W = map(int, input().split())
 C = [input() for i in range(H)]
 
-ans = ['' for i in range(H*2)]
+ans = ['' for i in range(H * 2)]
 
 for i in range(H):
     for j in range(W):

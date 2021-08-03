@@ -10,8 +10,7 @@ for i in range(len(str1)):
         count += 1
     else:
         continue
-if count == 1 and table[num1] =='-':
+if count == 1 and table[num1] == '-':
     print('Yes')
 else:
     print('No')
-

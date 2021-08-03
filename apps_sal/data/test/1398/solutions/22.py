@@ -13,7 +13,7 @@ class CodeforcesTask253BSolution:
         occurs = [0 for x in range(5000)]
         for m in self.measurements:
             occurs[m - 1] += 1
-        dels = [sum(occurs[:m-1]) + sum(occurs[m * 2:]) for m in range(1, 5000)]
+        dels = [sum(occurs[:m - 1]) + sum(occurs[m * 2:]) for m in range(1, 5000)]
         self.result = str(min(dels))
 
     def get_result(self):
@@ -25,5 +25,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     open("output.txt", "w").write(Solution.get_result())
+
 
 __starting_point()

@@ -1,5 +1,6 @@
 import math
 
+
 def same_col_seq(val, k, col):
     colors = ["red", "yellow", "blue"]
     m = colors.index(col)
@@ -8,7 +9,7 @@ def same_col_seq(val, k, col):
     s = x0 * (1 + x0) // 2
     i = x0 + 1
     while len(res) < k:
-        if (s+2) % 3 == m and s > val:
+        if (s + 2) % 3 == m and s > val:
             res.append(s)
         s += i
         i += 1

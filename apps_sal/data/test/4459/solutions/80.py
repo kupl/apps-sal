@@ -8,5 +8,5 @@ for k, v in d.items():
     if k > v:
         ans += v
     elif k < v:
-        ans += v-k
+        ans += v - k
 print(ans)

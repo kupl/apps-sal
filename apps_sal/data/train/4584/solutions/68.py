@@ -4,7 +4,7 @@ def invert(lst):
         for i in lst:
             if i > 0:
                 li.append(-(abs(i)))
-            else: 
+            else:
                 li.append(abs(i))
         return li
     return []

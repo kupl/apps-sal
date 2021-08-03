@@ -17,5 +17,5 @@ class Solution:
             stack.append((head.val, position))
             position += 1
             head = head.next
-        
+
         return result

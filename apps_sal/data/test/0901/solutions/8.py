@@ -2,7 +2,7 @@ n, m = map(int, input().split())
 
 ans = 'NO'
 for i in range(m):
-    a = list(map(int, input().split()))[1: ]
+    a = list(map(int, input().split()))[1:]
     s = set()
     new_ans = False
     for j in range(len(a)):
@@ -10,7 +10,7 @@ for i in range(m):
         if -a[j] in s:
             new_ans = True
             break
-    
+
     if not new_ans:
         ans = 'YES'
         break

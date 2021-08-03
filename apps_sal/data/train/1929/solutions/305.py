@@ -3,7 +3,7 @@ class Node:
     def __init__(self, end=False):
         self.end = end
         self.children = [None] * 26
-        
+
     def search(self, word):
         curr = self
         for w in word:
@@ -16,11 +16,13 @@ class Node:
                 return False
         return curr.end
 
+
 class StreamChecker:
-            
+
     def __init__(self, words: List[str]):
         self.letters = ''
         self.root = Node('')
+
         def add(node, word):
             for w in word:
                 slot = ord(w) - ord('a')
@@ -28,7 +30,7 @@ class StreamChecker:
                     node.children[slot] = Node()
                 node = node.children[slot]
             node.end = True
-                
+
         for word in words:
             add(self.root, word[::-1])
 
@@ -40,4 +42,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

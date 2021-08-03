@@ -1,4 +1,5 @@
-n,m = map(int,input().split())
+n, m = map(int, input().split())
+
 
 class UnionFind:
     def __init__(self, n):
@@ -6,6 +7,7 @@ class UnionFind:
         self.rank = [0] * (n)
         self.size = [1] * (n)
     # 検索
+
     def find(self, x):
         if self.par[x] == x:
             return x
@@ -13,6 +15,7 @@ class UnionFind:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
     # 併合
+
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -27,20 +30,23 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
     # 同じ集合に属するか判定
+
     def same(self, x, y):
         return self.find(x) == self.find(y)
     # すべての頂点に対して親を検索する
+
     def all_find(self):
         for n in range(len(self.par)):
             self.find(n)
 
+
 uf = UnionFind(n)
 
 for _ in range(m):
-    x,y,z = map(int,input().split())
+    x, y, z = map(int, input().split())
     x -= 1
     y -= 1
-    uf.union(x,y)
+    uf.union(x, y)
 
 root = set([])
 

@@ -1,5 +1,5 @@
 def two_sort(array):
-    a=''
+    a = ''
     for i in range(len(sorted(array)[0])):
-        a+=sorted(array)[0][i]+'***'
+        a += sorted(array)[0][i] + '***'
     return a[:-3]

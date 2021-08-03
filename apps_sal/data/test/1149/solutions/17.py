@@ -5,4 +5,3 @@ for i in range(2):
     p.pop(0)
     s.update(set(p))
 print('I become the guy.' if s == set(range(1, n + 1)) else 'Oh, my keyboard!')
-

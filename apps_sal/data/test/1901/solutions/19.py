@@ -35,4 +35,3 @@ for i in range(n):
     if not visited[i]:
         total += dfs(i)
 print(total)
-

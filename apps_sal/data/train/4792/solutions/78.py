@@ -5,4 +5,3 @@ def parse_float(string):
         return None
     except TypeError as xe:
         return None
-

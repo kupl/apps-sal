@@ -23,4 +23,3 @@ if maximum < 0:
         maximum = int('1' * n_ones, 2)
 
 print(maximum)
-

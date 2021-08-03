@@ -6,4 +6,3 @@ ans = line * a
 ans += min(a, remain)
 
 print(ans)
-

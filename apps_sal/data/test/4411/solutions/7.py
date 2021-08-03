@@ -33,4 +33,3 @@ for i in range(length):
             flag[currents] = 0
 print(len(ans))
 print(" ".join(map(str, ans)))
-

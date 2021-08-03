@@ -1,5 +1,5 @@
 queries = int(input())
-output  = []
+output = []
 
 for i in range(queries):
     numCount = input()
@@ -21,7 +21,7 @@ for i in range(queries):
                     if count == 2:
                         a = b
                         b = num
-                        
+
                         if a and b / a < d:
                             d = b / a
                             x = a
@@ -33,6 +33,6 @@ for i in range(queries):
 
                 else:
                     lastNum = num
-                    count   = 1
+                    count = 1
         output.append(str(x) + ' ' + str(x) + ' ' + str(y) + ' ' + str(y))
 print('\n'.join(output))

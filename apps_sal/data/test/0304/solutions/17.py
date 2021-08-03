@@ -6,14 +6,16 @@ while a != 0:
 
 ans = 0
 
+
 def fact(n):
     f = 1
     for i in range(1, n + 1):
         f *= i
     return f
 
+
 def f(n, arr):
-    #print(arr)
+    # print(arr)
     nonlocal ans
     if n == 10:
         sum = 0
@@ -21,15 +23,15 @@ def f(n, arr):
             sum += arr[i]
         temp = 1
         temp *= sum - arr[0]
-        #print(temp)
+        # print(temp)
         temp *= fact(sum - 1)
-        #print(temp)
+        # print(temp)
         for i in range(10):
             if arr[i] > 1:
                 temp //= fact(arr[i])
-        
+
         ans += temp
-        #print(ans)
+        # print(ans)
     else:
         if b[n] > 0:
             for i in range(1, b[n] + 1):

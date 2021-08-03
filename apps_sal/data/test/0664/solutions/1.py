@@ -6,7 +6,7 @@ jump = False
 j = -1
 m = l[0]
 for i in range(n):
-    if l[i] > l[i+1]:
+    if l[i] > l[i + 1]:
         if jump:
             print(-1)
             return
@@ -17,9 +17,8 @@ for i in range(n):
             if l[i] > m:
                 print(-1)
                 return
-            
+
 if j == -1:
     print(0)
 else:
-    print(n-j-1)
-
+    print(n - j - 1)

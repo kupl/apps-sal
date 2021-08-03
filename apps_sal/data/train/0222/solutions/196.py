@@ -13,4 +13,3 @@ class Solution:
                     val = dp[(A[r] - A[l], A[r])] = dp.get((A[l], A[r] - A[l]), 2) + 1
                     ans = max(ans, val)
         return ans if ans >= 3 else 0
-

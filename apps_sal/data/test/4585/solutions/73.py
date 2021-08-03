@@ -1,12 +1,12 @@
+import bisect
 x = int(input())
 
-i=1
-cum=[0]
+i = 1
+cum = [0]
 while cum[-1] < 10**9:
-    cum+=[cum[-1]+i]
-    i+=1
+    cum += [cum[-1] + i]
+    i += 1
 
-import bisect
 index = bisect.bisect_left(cum, x)
 
 print(index)

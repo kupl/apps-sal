@@ -15,5 +15,3 @@ class Solution:
                     nums[k] //= 2
                 ans += 1
         return ans
-            
-

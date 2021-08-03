@@ -14,5 +14,5 @@ def solve(s):
 
         if((item != "") and (int(item) > max)):
             max = int(item)
-            
+
     return max

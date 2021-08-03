@@ -14,4 +14,3 @@ if m == 1:
     return
 
 print((n * m - (n * 2 + m * 2 - 4)))
-

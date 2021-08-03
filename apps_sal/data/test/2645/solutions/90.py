@@ -15,8 +15,7 @@ for i in range(n):
         break
 
 for i in range(n):
-    if s[-i-1] == 'g':
+    if s[-i - 1] == 'g':
         ans += 1
 
 print(ans)
-

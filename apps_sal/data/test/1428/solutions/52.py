@@ -9,7 +9,7 @@ for i in range(n):
         zot[(i + j) % 3][c_s[i][j] - 1] += 1
 
 
-change = [[], [] ,[]]
+change = [[], [], []]
 for i in range(3):
     for j in range(c):
         cnt = 0
@@ -27,5 +27,5 @@ for z, i in change[0][:3]:
             if k == i or k == j:
                 continue
             ans = min(ans, z + o + t)
-            
+
 print(ans)

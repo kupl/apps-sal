@@ -9,4 +9,3 @@ if a >= 0:
 else:
     print((-b - d) / (Decimal('2') * a))
     print((-b + d) / (Decimal('2') * a))
-

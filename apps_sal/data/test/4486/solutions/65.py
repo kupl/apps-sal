@@ -23,4 +23,3 @@ for i in range(len(s) + 1):
         result += s[i - 1]
 
 print(result)
-

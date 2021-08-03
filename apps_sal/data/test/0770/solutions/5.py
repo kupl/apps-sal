@@ -16,7 +16,9 @@ def main():
         res += min(2, idx[i] - idx[i - 1])
     print(res)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

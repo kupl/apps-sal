@@ -4,7 +4,7 @@ input = sys.stdin.readline
 n = int(input())
 a = list(map(int, input().split()))
 adj = [[] for i in range(n)]
-for i in range(n-1):
+for i in range(n - 1):
     u, v, w = map(int, input().split())
     u -= 1
     v -= 1
@@ -12,6 +12,7 @@ for i in range(n-1):
     adj[v].append((u, w))
 best = [0] * n
 ans = 0
+
 
 def dfs(u):
     stack = list()
@@ -38,6 +39,7 @@ def dfs(u):
             ans = max(ans, cur)
             best[u] = cand[0] if len(cand) > 0 and cand[0] > 0 else 0
             stack.pop()
+
 
 dfs(0)
 print(ans)

@@ -4,5 +4,5 @@ def leaderboard_sort(leaderboard, changes):
         step = int(step)
         idx = leaderboard.index(name)
         leaderboard.remove(name)
-        leaderboard.insert(idx-step, name)
+        leaderboard.insert(idx - step, name)
     return leaderboard

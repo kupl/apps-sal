@@ -24,4 +24,3 @@ def calculate(n, k):
 
 
 calculate(N, K)
-

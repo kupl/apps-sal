@@ -23,4 +23,3 @@ for value_a, index_a in set_a.items():
                 break
     if done:
         break
-

@@ -14,6 +14,7 @@ def prime(x):
 
     return True
 
+
 def main():
     n = int(input())
     for m in range(1, 1001):
@@ -23,5 +24,5 @@ def main():
 
     print(ans)
 
-main()
 
+main()

@@ -6,5 +6,5 @@ def stringify(node):
         strList.append(curr.data)
         curr = curr.next
     strList.append(None)
-    
+
     return ' -> '.join(str(x) for x in strList)

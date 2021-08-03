@@ -1,9 +1,10 @@
 def Pow5(n):
     s = 0
     while n:
-        s+= (n // 5)
-        n//= 5
+        s += (n // 5)
+        n //= 5
     return s
+
 
 k = int(input())
 r = -1
@@ -18,6 +19,5 @@ else:
     print(5)
     s = ""
     for i in range(0, 5):
-        s+= (str)(r + i) + ' '
+        s += (str)(r + i) + ' '
     print(s)
-

@@ -23,5 +23,3 @@ for i in range(len(mus)):
     ans[mus[i]] = 2 - (i % 2)
 print(x[0] * x[1])
 print(*ans)
-        
-

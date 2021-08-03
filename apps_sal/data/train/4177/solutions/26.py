@@ -6,5 +6,5 @@ def men_from_boys(arr):
             even.append(i)
         elif i % 2 != 0 and i not in odd:
             odd.append(i)
-            
-    return sorted(even) + sorted(odd, reverse = True)
+
+    return sorted(even) + sorted(odd, reverse=True)

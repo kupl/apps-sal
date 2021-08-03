@@ -1,4 +1,4 @@
-cifer_sequence = [0,1,2,0,2,3]
+cifer_sequence = [0, 1, 2, 0, 2, 3]
 
 
 def cipher(phrase: str):

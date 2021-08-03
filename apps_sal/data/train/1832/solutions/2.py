@@ -42,4 +42,3 @@ class Solution:
                 continue
             result += min(sum(v), g[k[0]][k[1]])
         return result
-

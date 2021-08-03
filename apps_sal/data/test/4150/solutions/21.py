@@ -37,5 +37,3 @@ for i in range(n, 0, -1):
     t = 3 - t
 
 print(''.join(map(str, ans)))
-
-

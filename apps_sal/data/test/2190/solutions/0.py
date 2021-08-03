@@ -33,4 +33,3 @@ for i in arr:
     c += m.get(r2, 0)
     m[r] = m.get(r, 0) + 1
 print(c)
-

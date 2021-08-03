@@ -24,8 +24,8 @@ class Solution:
 
                 # account for previous row submatrix count
                 row, prev_width = r, width
-                while row > 0 and g[row-1][c]:
-                    prev_width = min(prev_width, g[row-1][c])
+                while row > 0 and g[row - 1][c]:
+                    prev_width = min(prev_width, g[row - 1][c])
                     res = res + prev_width
                     row -= 1
 

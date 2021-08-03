@@ -11,11 +11,10 @@ class Solution:
         for i in range(len(record)):
             if i == 0:
                 if record[i] - i - 1 >= k or record[i] < 0:
-                    return arr[i]         
+                    return arr[i]
             else:
                 if record[i] < 0:
                     return arr[i]
                 if record[i] - i >= k:
                     return arr[i]
         return -1
-

@@ -7,4 +7,3 @@ class Solution:
             cur = {n | a for n in cur} | {a}
             res |= cur
         return len(res)
-

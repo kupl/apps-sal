@@ -1,4 +1,4 @@
-#https://codeforces.com/problemset/problem/773/A
+# https://codeforces.com/problemset/problem/773/A
 
 t = int(input())
 for i in range(t):
@@ -8,13 +8,11 @@ for i in range(t):
     r = right
     while left + 1 < right:
         t = (left + right) // 2
-        if p*t >= x and q*t - p*t >= y - x:
+        if p * t >= x and q * t - p * t >= y - x:
             right = t
         else:
             left = t
-    if not (p*r >= x and q*r - p*r >= y - x):
+    if not (p * r >= x and q * r - p * r >= y - x):
         print(-1)
     else:
-        print(q*right - y)
-    
-
+        print(q * right - y)

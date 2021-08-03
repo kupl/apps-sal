@@ -6,4 +6,3 @@ def index(array, n):
             return -1
     except IndexError:
         return -1
-

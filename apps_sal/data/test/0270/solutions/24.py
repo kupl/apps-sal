@@ -4,6 +4,7 @@ from collections import defaultdict
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
+
 def main():
     n, m = list(map(int, input().split()))
     to = defaultdict(list)
@@ -31,7 +32,8 @@ def main():
         p = 0
         for ou in ot[u]:
             p += pe[ou][u]
-        if u == 0: p = 1
+        if u == 0:
+            p = 1
         pn[u] = p
         sz = len(to[u])
         for ku in to[u]:
@@ -41,7 +43,8 @@ def main():
     dx = 0
     for u in range(n - 1):
         sz = len(to[u])
-        if sz == 1: continue
+        if sz == 1:
+            continue
         mx = 0
         for ku in to[u]:
             mx = max(ev[ku], mx)
@@ -51,5 +54,5 @@ def main():
         # print(u, mx, de, nev)
     print((ev[0] - dx))
 
-main()
 
+main()

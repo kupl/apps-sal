@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def build_square(blocks):
     c = Counter(blocks)
 

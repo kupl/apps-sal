@@ -3,11 +3,10 @@ def factors(x):
         return -1
 
     else:
-        divisor = list(range(1,x+1))
+        divisor = list(range(1, x + 1))
         ans = []
         for i in divisor:
             if x % i == 0:
                 ans.append(i)
-                ans.sort(reverse = True)
+                ans.sort(reverse=True)
         return ans
-

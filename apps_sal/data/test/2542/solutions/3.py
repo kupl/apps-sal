@@ -24,7 +24,6 @@ for t in range(T):
             if current % 2 and n1 != n2:
                 current -= 1
 
-            answer = min(answer, len(s)-current)
+            answer = min(answer, len(s) - current)
 
     print(answer)
-

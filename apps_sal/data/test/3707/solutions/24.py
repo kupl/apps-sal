@@ -4,4 +4,3 @@ if cakes < n:
     print("YES")
 else:
     print("NO")
-

@@ -17,6 +17,5 @@ for i in range(8):
     for i in range(n):
         sort.append(x[i] * bit[0] + y[i] * bit[1] + z[i] * bit[2])
     sort.sort()
-    ans = max(ans, sum(sort[n - m :]))
+    ans = max(ans, sum(sort[n - m:]))
 print(ans)
-

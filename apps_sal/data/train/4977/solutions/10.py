@@ -1,1 +1,1 @@
-goals=lambda *params: sum(params)
+goals = lambda *params: sum(params)

@@ -17,4 +17,3 @@ if result % 2 == 0:
     else:
         result += max_negative
 print(result)
-

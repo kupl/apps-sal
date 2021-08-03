@@ -18,5 +18,3 @@ elif (A[1] + A[2]) % 2 == 0 and (A[1] + A[2]) >= 2:
         print(1)
 else:
     print(-1)
-    
-

@@ -13,5 +13,5 @@ while index < n:
         ans = [-1]
         break
     ans.append(next_index - index)
-    index = next_index 
+    index = next_index
 print(' '.join(list(map(str, list(reversed(ans))))))

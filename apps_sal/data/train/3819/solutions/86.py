@@ -1,6 +1,5 @@
 def smash(words):
-    sen=''
+    sen = ''
     for i in words:
-        sen+=i+' '
+        sen += i + ' '
     return sen[:-1]
-

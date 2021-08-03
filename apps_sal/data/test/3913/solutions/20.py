@@ -23,7 +23,7 @@ for i in range(n):
             ext = 1
             break
     if ext == 1:
-        skip+=1
+        skip += 1
         continue
     mas = []
     for i in star:
@@ -36,7 +36,6 @@ for i in range(n):
             d[i] += 1
 ans = 0
 for i in d:
-    if d[i] == n-skip:
-        ans+=1
-print (ans)
-
+    if d[i] == n - skip:
+        ans += 1
+print(ans)

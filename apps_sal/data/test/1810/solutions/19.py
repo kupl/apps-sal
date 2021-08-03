@@ -1,1 +1,1 @@
-print(int(input())//2520)
+print(int(input()) // 2520)

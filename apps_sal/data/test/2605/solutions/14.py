@@ -14,4 +14,3 @@ for i in range(n):
         s += c[i] * c[(i + 1) % n]
 
 print(s)
-

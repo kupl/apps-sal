@@ -5,7 +5,7 @@ sys.setrecursionlimit(10**6)
 buff_readline = sys.stdin.readline
 readline = sys.stdin.readline
 
-INF = 2**62-1
+INF = 2**62 - 1
 
 
 def read_int():
@@ -50,12 +50,11 @@ def mt(f):
     return wrap
 
 
-
 @mt
 def slv(N, C, STC):
     from collections import Counter
-    se = [(2*s, 0, c) for s, t, c in STC]
-    te = [(2*t+1, 1, c) for s, t, c in STC]
+    se = [(2 * s, 0, c) for s, t, c in STC]
+    te = [(2 * t + 1, 1, c) for s, t, c in STC]
     e = se + te
     e.sort(reverse=True)
     r = Counter()
@@ -80,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

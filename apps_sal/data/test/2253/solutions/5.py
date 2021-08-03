@@ -6,6 +6,3 @@ for _ in range(int(input())):
         print("JAPANESE")
     elif s.endswith("mnida"):
         print("KOREAN")
-
-
-

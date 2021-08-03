@@ -9,4 +9,3 @@ for i in h:
         possible.append(i)
 
 print((len(possible)))
-

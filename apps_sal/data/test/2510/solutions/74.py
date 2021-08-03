@@ -45,19 +45,20 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-N, M = map(int,input().split())
+
+N, M = map(int, input().split())
 
 ans = 0
-#UnionFind木を作る
+# UnionFind木を作る
 uf = UnionFind(N)
 
 for _ in range(M):
-    a, b = map(int,input().split())
-    uf.union(a-1, b-1)
+    a, b = map(int, input().split())
+    uf.union(a - 1, b - 1)
 
 parents = uf.roots()
 
 for p in parents:
-    ans = max(ans,uf.size(p))
+    ans = max(ans, uf.size(p))
 
 print(ans)

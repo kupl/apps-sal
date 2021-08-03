@@ -64,4 +64,3 @@ def dfs(v, p=-1):
 ans = 1
 dfs(0)
 print(ans)
-

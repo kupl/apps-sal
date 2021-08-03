@@ -8,4 +8,3 @@ elif n[i] == '0' or n[i] == '1' or n[i] == '6' or n[i] == '8':
     print('pon')
 else:
     print('hon')
-

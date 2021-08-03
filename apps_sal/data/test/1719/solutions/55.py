@@ -3,6 +3,7 @@ MOD = 10 ** 9 + 7
 
 memo = [{} for _ in range(N + 1)]
 
+
 def ok(last4):
     for i in range(4):
         t = list(last4)
@@ -25,4 +26,5 @@ def dfs(cur, last3):
     memo[cur][last3] = ret
     return ret
 
-print (dfs(0, 'TTT'))
+
+print(dfs(0, 'TTT'))

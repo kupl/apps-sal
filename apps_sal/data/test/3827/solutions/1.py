@@ -3,4 +3,3 @@ if a.count('a') == a.find('b') and a.count('a') + a.count('b') == a.find('c') an
     print("YES")
 else:
     print("NO")
-

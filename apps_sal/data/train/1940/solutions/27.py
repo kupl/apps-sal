@@ -16,4 +16,3 @@ class Solution:
             head = head.__next__
 
         return res
-

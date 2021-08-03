@@ -17,22 +17,21 @@ was['I'] = False
 was['J'] = False
 
 if s[0] == '?':
-  ans *= 9
+    ans *= 9
 if (ord(s[0]) >= ord('A')) and (ord(s[0]) <= ord('J')):
-  ans *= 9
-  was[s[0]] = True
-  now = 9
+    ans *= 9
+    was[s[0]] = True
+    now = 9
 cnt = 0
 for i in range(1, len(s)):
-  if s[i] == '?':
-    cnt += 1
-  if (ord(s[i]) >= ord('A')) and (ord(s[i]) <= ord('J')):
-    if was[s[i]] == False:
-      ans *= now
-      now -= 1
-    was[s[i]] = True
-print(ans, end = "") 
+    if s[i] == '?':
+        cnt += 1
+    if (ord(s[i]) >= ord('A')) and (ord(s[i]) <= ord('J')):
+        if was[s[i]] == False:
+            ans *= now
+            now -= 1
+        was[s[i]] = True
+print(ans, end="")
 for i in range(cnt):
-  print('0', end = "")
+    print('0', end="")
 print()
-

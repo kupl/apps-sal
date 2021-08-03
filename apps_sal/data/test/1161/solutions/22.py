@@ -1,7 +1,9 @@
 from collections import deque
 
+
 def f(s1):
     return s1 in "<{[("
+
 
 s = list(input())
 

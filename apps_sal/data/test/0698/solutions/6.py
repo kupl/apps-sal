@@ -19,8 +19,8 @@ max = len(sub)
 i = 0
 
 sync = 0
-while i < len(sub)-1:
-    if sub[i+1] - sub[i] == 1:
+while i < len(sub) - 1:
+    if sub[i + 1] - sub[i] == 1:
         i += 1
         sync += 1
     i += 1

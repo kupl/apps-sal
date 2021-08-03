@@ -53,7 +53,7 @@ for i in range(n):
 l.append(jeden + dwa)
 
 for iteam in l:
-    if iteam != 1 or iteam != 0 :
+    if iteam != 1 or iteam != 0:
         score += wzor(iteam)
     elif iteam == 1:
         score += 1

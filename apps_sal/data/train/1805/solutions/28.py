@@ -10,7 +10,7 @@ class Solution:
                     if j not in seen:
                         stack.append(j)
                         seen.add(j)
-        
+
         count = Counter()
         for lf in stack:
             count += Counter(watchedVideos[lf])

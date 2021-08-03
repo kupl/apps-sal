@@ -2,26 +2,31 @@ import math
 
 h, w, a, b = list(map(int, input().split()))
 
-#divmod
-mod = pow(10,9)+7
-def divmod(num, mod=10**9+7):
-    return pow(num, mod-2, mod)
+# divmod
+mod = pow(10, 9) + 7
 
-#combination
-def comb(a,b):
-	p=fact[a-b]*fact[b]%mod
-	return fact[a]*divmod(p)%mod
+
+def divmod(num, mod=10**9 + 7):
+    return pow(num, mod - 2, mod)
+
+# combination
+
+
+def comb(a, b):
+    p = fact[a - b] * fact[b] % mod
+    return fact[a] * divmod(p) % mod
+
 
 fact = [1]
-for i in range(1,h+w):
-    fact.append(i*fact[i-1]%mod)
-#print(fact)
+for i in range(1, h + w):
+    fact.append(i * fact[i - 1] % mod)
+# print(fact)
 
 ans = 0
-for j in range(h-a):
-    tmp = comb(b-1+j,j)*comb(w+h-b-2-j,w-b-1)%mod
+for j in range(h - a):
+    tmp = comb(b - 1 + j, j) * comb(w + h - b - 2 - j, w - b - 1) % mod
     ans += tmp
-    ans = ans%mod
+    ans = ans % mod
 #    ans = ans + fact[b-1+j]*fact[w+h-b-2-j]/fact[b-1]/fact[j]/fact[w-b-1]/fact[h-1-j]
 print((int(ans)))
 
@@ -78,5 +83,3 @@ for m in range(1,h):
 
 print(con[h-1][w-1])
 '''
-
-

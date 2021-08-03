@@ -8,4 +8,3 @@ def multiply(n):
         mn = 5 ** len(str(convert))
         on = n * mn
         return on
-

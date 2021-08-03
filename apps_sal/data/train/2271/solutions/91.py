@@ -1,10 +1,11 @@
-n,m=list(map(int, input().split()))
-p=list([int(x)-1 for x in input().split()])
+n, m = list(map(int, input().split()))
+p = list([int(x) - 1 for x in input().split()])
+
 
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        self.parents = [-1]*n
+        self.parents = [-1] * n
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -45,14 +46,14 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-uf=UnionFind(n)
-for _ in range(m):
-    x,y=[int(x)-1 for x in input().split()]
-    uf.union(x,y)
 
-ans=0
+uf = UnionFind(n)
+for _ in range(m):
+    x, y = [int(x) - 1 for x in input().split()]
+    uf.union(x, y)
+
+ans = 0
 for i in range(len(p)):
     if uf.is_same(i, p[i]):
-        ans+=1
+        ans += 1
 print(ans)
-

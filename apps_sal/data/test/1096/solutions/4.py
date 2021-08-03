@@ -1,4 +1,4 @@
-string =input()
+string = input()
 line = "abcdefgh"
 a = line.find(string[0]) + 1
 b = int(string[1])

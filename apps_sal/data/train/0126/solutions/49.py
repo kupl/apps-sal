@@ -11,7 +11,7 @@ class Solution:
                 length += 1
                 # print(s[i: i+length+1])
                 if len(count) <= maxLetters and length >= minSize:
-                    substring = s[i: i+length]
+                    substring = s[i: i + length]
                     if substring in sol:
                         sol[substring] += 1
                     else:

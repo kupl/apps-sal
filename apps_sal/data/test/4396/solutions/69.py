@@ -6,5 +6,5 @@ for i in range(n):
     if u == "JPY":
         ans += x
     else:
-        ans += x*380000
+        ans += x * 380000
 print(ans)

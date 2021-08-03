@@ -1,10 +1,12 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n, uf, cs, ones, cache, res = len(arr), list(range(len(arr))), set(), [0] * len(arr), [0] * len(arr), -1
+
         def find(i):
             while i != uf[i]:
                 i = uf[i]
             return i
+
         def union(nb, cur):
             p = find(nb)
             uf[p] = cur

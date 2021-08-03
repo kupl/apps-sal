@@ -12,14 +12,18 @@ def solve(S):
         elif char == '1' and flag:
             break
     return count
-        
+
+
 def main():
     N = int(input())
     for case in range(N):
         S = input()
         print(solve(S))
-    return 
+    return
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -10,5 +10,5 @@ class Solution:
             if current_mod in seen_mod:
                 return -1
             seen_mod.add(current_mod)
-            current = current*10 + 1
+            current = current * 10 + 1
             current_size += 1

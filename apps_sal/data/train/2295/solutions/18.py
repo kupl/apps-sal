@@ -14,5 +14,4 @@ for A, B in ABs:
 if isSame:
     print((0))
 else:
-    print((ans-minB))
-
+    print((ans - minB))

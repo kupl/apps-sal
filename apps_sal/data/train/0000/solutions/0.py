@@ -52,4 +52,3 @@ for _ in range(int(input())):
                     need -= 1
                 i += 1
             print(*ans)
-

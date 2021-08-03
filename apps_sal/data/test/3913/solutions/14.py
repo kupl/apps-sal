@@ -35,4 +35,3 @@ for i in ans:
         count += 1
 
 print(count)
-

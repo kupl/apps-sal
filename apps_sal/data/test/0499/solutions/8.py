@@ -16,7 +16,7 @@ elif 'B' not in s:
         print('B')
     elif g > 1 and r > 1:
         print('BGR')
-    elif g == 1 and r > 1: #grr br g; grr gr b
+    elif g == 1 and r > 1:  # grr br g; grr gr b
         print('BG')
     elif g > 1 and r == 1:
         print('BR')
@@ -25,9 +25,9 @@ elif 'G' not in s:
         print('G')
     elif b > 1 and r > 1:
         print('BGR')
-    elif b == 1 and r > 1: # brr gr b; brr br g
+    elif b == 1 and r > 1:  # brr gr b; brr br g
         print('BG')
-    elif b > 1 and r == 1: # bbr br g; bbr bg r;
+    elif b > 1 and r == 1:  # bbr br g; bbr bg r;
         print('GR')
 elif 'R' not in s:
     if b == g == 1:
@@ -38,4 +38,3 @@ elif 'R' not in s:
         print('BR')
     elif b > 1 and g == 1:
         print('GR')
-

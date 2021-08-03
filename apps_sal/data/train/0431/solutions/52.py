@@ -25,11 +25,11 @@ class Solution:
                     if s == []:
                         right[i] = i
                     else:
-                        right[i] = i - s[-1] -1
+                        right[i] = i - s[-1] - 1
             s.append(i)
         for i in range(l):
-            if left[i] == 0 and right[l-1-i] == 0:
-                res += A[l-1-i]
+            if left[i] == 0 and right[l - 1 - i] == 0:
+                res += A[l - 1 - i]
             else:
-                res += A[l-1-i] * (left[i]+1) * (right[l-1-i]+1)
+                res += A[l - 1 - i] * (left[i] + 1) * (right[l - 1 - i] + 1)
         return res % (10**9 + 7)

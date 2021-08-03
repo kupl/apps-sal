@@ -73,4 +73,3 @@ for i in range(max_num + 1):
     ans += temp
 
 print((ans - n))
-

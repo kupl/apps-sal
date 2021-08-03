@@ -5,11 +5,12 @@ class Solution:
             if type == 3:
                 type_3.append((a, b))
             elif type == 1:
-                type_1.append((a,b))
+                type_1.append((a, b))
             elif type == 2:
                 type_2.append((a, b))
         answer = 0
         b_u = None
+
         def helper(edges, u=None):
             nonlocal b_u
             u = Union(n, u)
@@ -33,7 +34,7 @@ class Solution:
 class Union:
     def __init__(self, n, p=None):
         self.n = n
-        self.p = p if p else {i: i for i in range(1, n+1)}
+        self.p = p if p else {i: i for i in range(1, n + 1)}
 
     def backup(self):
         return self.p
@@ -52,4 +53,4 @@ class Union:
             return True
 
     def isConnected(self):
-        return sum(i == self.p[i] for i in range(1, self.n+1)) == 1
+        return sum(i == self.p[i] for i in range(1, self.n + 1)) == 1

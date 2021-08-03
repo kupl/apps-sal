@@ -22,20 +22,22 @@ class DSU:
     def size(self, x):
         return self.sz[self.find(x)]
 
+
 class Solution:
     def containsCycle(self, A):
         R, C = len(A), len(A[0])
+
         def encode(r, c):
             return r * C + c
-        
+
         dsu = DSU(R * C)
         for r in range(R):
             for c in range(C):
-                if c + 1 < C and A[r][c] == A[r][c+1]:
+                if c + 1 < C and A[r][c] == A[r][c + 1]:
                     if not dsu.union(encode(r, c), encode(r, c + 1)):
                         if dsu.size(encode(r, c)) >= 4:
                             return True
-                if r + 1 < R and A[r][c] == A[r+1][c]:
+                if r + 1 < R and A[r][c] == A[r + 1][c]:
                     if not dsu.union(encode(r, c), encode(r + 1, c)):
                         if dsu.size(encode(r, c)) >= 4:
                             return True
@@ -45,4 +47,3 @@ class Solution:
 # cac
 # ddc
 # bcc
-

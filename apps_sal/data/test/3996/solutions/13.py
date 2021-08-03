@@ -34,10 +34,9 @@ else:
 
     p = (q - 1) * antithree
 
-    p %= MOD    
+    p %= MOD
 
-print(p, q, sep = '/')
-
+print(p, q, sep='/')
 
 
 # Made By Mostafa_Khaled

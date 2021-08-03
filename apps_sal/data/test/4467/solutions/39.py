@@ -1,25 +1,31 @@
-import sys
-mod=10**9+7 ; inf=float("inf")
-from math import sqrt, ceil
-from collections import deque, Counter, defaultdict #すべてのkeyが用意されてる defaultdict(int)で初期化
-input=lambda: sys.stdin.readline().strip()
-sys.setrecursionlimit(11451419)
-from decimal import ROUND_HALF_UP,Decimal  #変換後の末尾桁を0や0.01で指定
-  #Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
-from functools import lru_cache
-from bisect import bisect_left as bileft, bisect_right as biright
-#メモ化再帰defの冒頭に毎回 @lru_cache(maxsize=10**10)
-#引数にlistはだめ
-#######ここまでテンプレ#######
-#ソート、"a"+"b"、再帰ならPython3の方がいい
-#######ここから天ぷら########
+from decimal import ROUND_HALF_UP, Decimal  # 変換後の末尾桁を0や0.01で指定
+from collections import deque, Counter, defaultdict  # すべてのkeyが用意されてる defaultdict(int)で初期化
 from collections import deque
+from bisect import bisect_left as bileft, bisect_right as biright
+from functools import lru_cache
+from math import sqrt, ceil
+import sys
+mod = 10**9 + 7
+inf = float("inf")
+def input(): return sys.stdin.readline().strip()
+
+
+sys.setrecursionlimit(11451419)
+#Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
+#メモ化再帰defの冒頭に毎回 @lru_cache(maxsize=10**10)
+# 引数にlistはだめ
+#######ここまでテンプレ#######
+# ソート、"a"+"b"、再帰ならPython3の方がいい
+#######ここから天ぷら########
+
+
 class Dinic:
     def __init__(self, N):
-        self.N= N
+        self.N = N
         self.G = [[] for i in range(N)]
-    def add_edge(self,fr,to,cap=1): #つなぐノード2つ、容量
-        forward=[to, cap, None]
+
+    def add_edge(self, fr, to, cap=1):  # つなぐノード2つ、容量
+        forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
         self.G[fr].append(forward)
         self.G[to].append(backward)
@@ -31,7 +37,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -69,23 +75,26 @@ class Dinic:
                 f = self.dfs(s, t, INF)
                 flow += f
         return flow
-n=int(input())
-dinic=Dinic(2*n+2)
 
 
-A=[] ; B=[]
+n = int(input())
+dinic = Dinic(2 * n + 2)
+
+
+A = []
+B = []
 for i in range(n):
-    a,b=map(int,input().split())
-    A.append([a,b])
+    a, b = map(int, input().split())
+    A.append([a, b])
 for i in range(n):
-    a,b=map(int,input().split())
-    B.append([a,b])
+    a, b = map(int, input().split())
+    B.append([a, b])
 for i in range(n):
-    dinic.add_edge(2*n,i,1)
-    dinic.add_edge(i+n, 2*n+1,1)
+    dinic.add_edge(2 * n, i, 1)
+    dinic.add_edge(i + n, 2 * n + 1, 1)
 for i in range(n):
     for j in range(n):
-        if A[i][0]<B[j][0] and A[i][1]<B[j][1]:
-            dinic.add_edge(i,j+n)
+        if A[i][0] < B[j][0] and A[i][1] < B[j][1]:
+            dinic.add_edge(i, j + n)
 
-print(dinic.flow(2*n,2*n+1))
+print(dinic.flow(2 * n, 2 * n + 1))

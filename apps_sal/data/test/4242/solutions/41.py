@@ -1,4 +1,6 @@
 a, b, k = map(int, input().split())
+
+
 def answer(a: int, b: int, k: int) -> int:
     result = []
     if a > b:
@@ -11,5 +13,6 @@ def answer(a: int, b: int, k: int) -> int:
             if a % i == 0 and b % i == 0:
                 result.append(i)
         return result[len(result) - k]
+
 
 print(answer(a, b, k))

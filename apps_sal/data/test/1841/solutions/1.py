@@ -12,4 +12,3 @@ for i in range(n - 2, -1, -1):
 
 res = [str(lst[i - 1]) for i in li]
 print('\n'.join(res))
-

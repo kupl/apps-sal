@@ -14,5 +14,3 @@ if N <= K:
 
 
 print(("{}".format(res)))
-
-

@@ -1,5 +1,5 @@
-D=int(input())
+D = int(input())
 
-ans=["Christmas Eve Eve Eve","Christmas Eve Eve","Christmas Eve","Christmas"]
+ans = ["Christmas Eve Eve Eve", "Christmas Eve Eve", "Christmas Eve", "Christmas"]
 
-print(ans[D-22])
+print(ans[D - 22])

@@ -11,4 +11,4 @@ a = 0
 for i in v.values():
     a += i // 2
 
-print(2 * a + (((n+1)//2)-a))
+print(2 * a + (((n + 1) // 2) - a))

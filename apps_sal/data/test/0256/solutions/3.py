@@ -29,6 +29,7 @@ def win_team1(a, b, c, d):
         return -1
     return 0
 
+
 p = []
 for i in range(4):
     p.append(tuple(map(int, input().split())))
@@ -39,4 +40,3 @@ elif w == -1:
     print('Team 2')
 else:
     print('Draw')
-

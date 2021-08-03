@@ -1,4 +1,6 @@
 import math
+
+
 def factors(n):
     f = []
     while n > 1:
@@ -9,6 +11,7 @@ def factors(n):
                 break
     return f
 
+
 def factor_sum(n):
     f = factors(n)
     last = sum(f)
@@ -16,6 +19,6 @@ def factor_sum(n):
         n = sum(f)
         f = factors(n)
         if f == last:
-           return n
+            return n
         last = f
     return n

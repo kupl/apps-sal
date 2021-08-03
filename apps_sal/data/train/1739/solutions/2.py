@@ -15,11 +15,13 @@ MORSE_CODE = {
 }
 MORSE_CODE["_"] = " "
 
+
 def decodeBits(bitString):
     bitString = bitString.strip("0")
-    m = len(sorted(findall( "(1+|0+)", bitString ), key=len)[0])
-    return bitString.replace('111'*m, '-').replace('000'*m, ' ').replace('1'*m, '.').replace('0'*m, '')
+    m = len(sorted(findall("(1+|0+)", bitString), key=len)[0])
+    return bitString.replace('111' * m, '-').replace('000' * m, ' ').replace('1' * m, '.').replace('0' * m, '')
+
 
 def decodeMorse(morseCode):
     print(morseCode)
-    return "".join(map(lambda m: MORSE_CODE.get(m," "), morseCode.replace("   "," _ " ).split(" "))).strip()
+    return "".join(map(lambda m: MORSE_CODE.get(m, " "), morseCode.replace("   ", " _ ").split(" "))).strip()

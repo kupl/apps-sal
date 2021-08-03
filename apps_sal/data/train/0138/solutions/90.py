@@ -1,5 +1,5 @@
-class Solution:         
-        
+class Solution:
+
     def getMaxLenDuh(self, nums: List[int]) -> int:
         '''
         Single pass: at each num, track length of pos and neg prods:
@@ -10,8 +10,7 @@ class Solution:
             return 0
         if size == 1:
             return 1 if nums[0] > 0 else 0
-        
-        
+
         result = nneg = npos = 0
         for num in nums:
             if num == 0:
@@ -25,7 +24,6 @@ class Solution:
                 npos = temp + 1 if temp else 0  # any neg prod flips pos
             result = max(result, npos)          # Save max pos prod len
         return result
-    
 
     def getMaxLenPow2(self, numso: List[int]) -> int:
         '''
@@ -43,10 +41,8 @@ class Solution:
             max_prod = max(max_prod, left_prod, right_prod)
         return math.log(max_prod, 2)
 
-    
     def getMaxLen(self, nums: List[int]) -> int:
         '''
 
         '''
         return self.getMaxLenDuh(nums)
-

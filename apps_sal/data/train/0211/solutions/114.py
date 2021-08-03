@@ -6,7 +6,7 @@ class Solution:
             if len(s) == 1:
                 return [[s]]
             res = []
-            for i in range(1,len(s) + 1):
+            for i in range(1, len(s) + 1):
                 ans = [s[:i]]
                 splits = split(s[i:])
                 if splits:
@@ -15,8 +15,7 @@ class Solution:
                 else:
                     res.append(ans)
             return res
-        
-            
+
         options = split(s)
         m = 0
         for o in options:

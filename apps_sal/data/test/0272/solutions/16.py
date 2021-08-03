@@ -16,7 +16,7 @@ for i in range(len(s)):
         if s[i] == t[i]:
             continue
         answer.add(st)
-        ans += 1       
+        ans += 1
 if err == 0:
     print(ans)
     for st in answer:

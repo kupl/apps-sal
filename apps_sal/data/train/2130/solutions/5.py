@@ -16,4 +16,3 @@ for i in range(1, k):
     dp[i] = (dp[i - 1] * binomials[sum(c[:i + 1]) - 1][c[i] - 1]) % 1000000007
 
 print(dp[k - 1])
-

@@ -16,5 +16,3 @@ class Solution:
             last_diff = diff
             last = a
         return best
-        
-

@@ -1,5 +1,6 @@
 from operator import sub
 
+
 def difference_in_ages(ages):
     """
         Returns a tuple with youngest age, oldest age, difference between

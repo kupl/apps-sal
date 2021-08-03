@@ -1,6 +1,7 @@
 
 MOD = 10**9 + 7
-I = lambda:list(map(int,input().split()))
+def I(): return list(map(int, input().split()))
+
 
 def find(s):
     r = []
@@ -8,6 +9,7 @@ def find(s):
         if i == '(':
             r.append(')')
     return ''.join(r) if len(r) == len(s) else False
+
 
 def pre(s):
     k = [1]
@@ -18,8 +20,9 @@ def pre(s):
             k.append(i)
     return ''.join(k[1:])
 
+
 n, = I()
-d = {'a':0}
+d = {'a': 0}
 l = []
 for i in range(n):
     s = input()
@@ -32,12 +35,12 @@ for i in range(n):
     else:
         d[s] = 1
 count = 0
-l.sort(key = lambda x:len(x))
+l.sort(key=lambda x: len(x))
 for i in l:
     k = find(i)
     if i and i[0] != ')' and k in d and d[k] > 0:
         count += 1
         d[k] -= 1
         d[i] -= 1
-count += d['a']//2
+count += d['a'] // 2
 print(count)

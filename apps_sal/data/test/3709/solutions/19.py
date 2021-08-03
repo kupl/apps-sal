@@ -4,11 +4,13 @@ def test(masks, wanted):
             return False
     return True
 
+
 def any_test(masks, tests):
     for t in tests:
         if test(masks, t):
             return True
     return False
+
 
 def inflate(perm):
     count = max(perm)
@@ -20,6 +22,7 @@ def inflate(perm):
         masks[perm[i] - 1][i] = 1
     return [tuple(m) for m in masks]
 
+
 def gen(st, lev, teams, tests):
     if lev >= teams:
         if max(st) > 1:
@@ -30,6 +33,7 @@ def gen(st, lev, teams, tests):
         st[lev] = i
         gen(st, lev + 1, teams, tests)
 
+
 def gen_tests(teams):
     tests = []
     st = [0 for i in range(teams)]
@@ -37,14 +41,16 @@ def gen_tests(teams):
     gen(st, 0, teams, tests)
     return tests
 
+
 def back(masks, teams):
     tests = gen_tests(teams)
     return any_test(masks, tests)
 
+
 def main():
     probs, teams = list(map(int, input().split()))
     masks = set()
-    
+
     for i in range(probs):
         conf = tuple(list(map(int, input().split())))
         if 1 not in conf:
@@ -63,5 +69,5 @@ def main():
 
     print('YES' if good else 'NO')
 
-main()
 
+main()

@@ -9,19 +9,20 @@ class Solution:
         if root == None:
             return 0
         maxZigZag = 0
-        def zigZagStart(root):##direction will correspond to -1 for left and 1 for right
+
+        def zigZagStart(root):  # direction will correspond to -1 for left and 1 for right
             nonlocal maxZigZag
             if root == None or (root.left == None and root.right == None):
-                return [0,0]
-            ll,lr = zigZagStart(root.left)
-            rl,rr = zigZagStart(root.right)
+                return [0, 0]
+            ll, lr = zigZagStart(root.left)
+            rl, rr = zigZagStart(root.right)
             bestLeft = 0
             bestRight = 0
             if root.left:
-                bestLeft = 1+lr
+                bestLeft = 1 + lr
             if root.right:
-                bestRight = 1+rl
-            maxZigZag = max(maxZigZag,bestLeft,bestRight)
-            return [bestLeft,bestRight]
+                bestRight = 1 + rl
+            maxZigZag = max(maxZigZag, bestLeft, bestRight)
+            return [bestLeft, bestRight]
         zigZagStart(root)
         return maxZigZag

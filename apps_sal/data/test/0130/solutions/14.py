@@ -41,4 +41,3 @@ elif sizeY > sizeX:
         print(count + sizeY * (sizeY - sizeX))
 else:
     print(count)
-

@@ -6,4 +6,3 @@ for i in range(int(input())):
     else:
         print("NO")
         a.add(s)
-

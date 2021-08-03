@@ -14,8 +14,9 @@ for i in range(l):
         mi = i
         break
 narr = []
-narr += hwarr; narr.pop(mi)
-nmhs = max(narr[n][1] for n in range(l-1))
+narr += hwarr
+narr.pop(mi)
+nmhs = max(narr[n][1] for n in range(l - 1))
 
 for i in range(l):
     sw = sws - hwarr[i][0]
@@ -23,10 +24,9 @@ for i in range(l):
         mh = nmhs
     else:
         mh = mhs
-    pixs += str(sw*mh)+' '
+    pixs += str(sw * mh) + ' '
 
 print(pixs[:-1])
 
 #stop = time.time()
-#print(stop-start)
-
+# print(stop-start)

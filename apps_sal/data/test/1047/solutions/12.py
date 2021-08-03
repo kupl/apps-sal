@@ -11,5 +11,3 @@ for i in n:
             ans2[j] += '0'
 print(ans1)
 print(' '.join([str(int(x)) for x in ans2]))
-
-

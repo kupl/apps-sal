@@ -5,6 +5,7 @@ def index(key, item, index):
     else:
         index[key] = set([item])
 
+
 def schedule(times):
     index_by_a = {}
     index_by_b = {}
@@ -34,13 +35,15 @@ def schedule(times):
                 a_min = b
                 break
     return [times[i] for i in result_indexs]
-                
+
+
 def test_schedule():
     i = ((0, 4), (2, 4), (0, 2), (0, 1), (1, 2), (2, 3), (3, 4))
     result = schedule(i)
     print('len:', len(result))
     for ele in result:
         print(ele)
+
 
 def solve(n, a_l):
     index_by_sum = {}
@@ -59,6 +62,7 @@ def solve(n, a_l):
             result = sub_result
     return result
 
+
 def main():
     n = int(input())
     a_l = list(map(int, input().split()))
@@ -70,6 +74,9 @@ def main():
     # tock = time.time()
     # print('T:', round(tock - tick, 5))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

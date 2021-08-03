@@ -20,4 +20,3 @@ for x in a:
 
 for x in b:
     print(" ".join(["{:.8f}".format(float(i)) for i in x]))
-

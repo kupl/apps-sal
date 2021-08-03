@@ -21,16 +21,12 @@ for _ in range(t):
     else:
         lengths.append(currLen)
 
-
     out = 0
     if len(lengths) == 1 and n >= 3:
         out = 1
         lengths[0] -= 1
         lengths.append(1)
-        
 
     for v in lengths:
         out += v // 3
     print(out)
-    
-

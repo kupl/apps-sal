@@ -5,6 +5,7 @@ n, k = map(int, input().split())
 p = list(map(int, input().split()))
 c = list(map(int, input().split()))
 
+
 def dfs(G, v, p):
     seen[v] = True
     sc.append(c[v])
@@ -23,9 +24,9 @@ def dfs(G, v, p):
 
 G = [[] for _ in range(n)]
 for i in range(n):
-    G[i].append(p[i]-1)
+    G[i].append(p[i] - 1)
 
-seen = [False]*n
+seen = [False] * n
 ans = -float('inf')
 for i in range(n):
     if seen[i] == False:
@@ -40,12 +41,12 @@ for i in range(n):
                 if j != 0:
                     sc = sc[1:] + [sc[0]]
                 ac = list(accumulate(sc))
-                
+
                 if sumsc <= 0:
                     ans = max(ans, max(ac[:min(k, lenc)]))
                 else:
-                    if k%lenc == 0:
-                        ans = max(ans, ac[-1]*(k//lenc - 1) + max(ac))
+                    if k % lenc == 0:
+                        ans = max(ans, ac[-1] * (k // lenc - 1) + max(ac))
                     else:
-                        ans = max(ans, ac[-1]*(k//lenc) + max(ac[:k%lenc]))
+                        ans = max(ans, ac[-1] * (k // lenc) + max(ac[:k % lenc]))
 print(ans)

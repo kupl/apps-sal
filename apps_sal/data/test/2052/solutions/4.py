@@ -7,8 +7,7 @@ winais = [0 for _ in range(w - l)]
 s = sum(ais[:l])
 winais[0] = s
 for i in range(w - l - 1):
-	s += ais[i + l] - ais[i]
-	winais[i + 1] = s
+    s += ais[i + l] - ais[i]
+    winais[i + 1] = s
 
 print(min(winais))
-

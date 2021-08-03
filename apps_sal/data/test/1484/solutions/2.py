@@ -1,11 +1,14 @@
 import sys
 
 mod = 998244353
+
+
 def mult(a, b):
     y = 1
     for i in range(b):
         y = y * a % mod
     return y
+
 
 def getS(cnt, k, b1, b2):
     if b1 < b2:
@@ -28,7 +31,7 @@ def getS(cnt, k, b1, b2):
         mm *= -1
         tot = (tot + mod) % mod
     return tot
-    
+
 
 def solve(x, k):
     n = len(x)
@@ -44,8 +47,8 @@ def solve(x, k):
             if st == -1:
                 st = i
     return rt
-    
-    
+
+
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for i in range(0, n - 2):
@@ -55,5 +58,3 @@ for i in range(0, n - 2):
 even = solve(a[::2], k)
 odd = solve(a[1::2], k)
 print(even * odd % mod)
-
-

@@ -1,4 +1,6 @@
-f = lambda: list(map(int, input().split()))
+def f(): return list(map(int, input().split()))
+
+
 n, m = f()
 k = n + 1
 s = [[0] * k for i in range(k)]
@@ -15,4 +17,3 @@ while q:
             d[v] = d[u] + 1
             q.append(v)
 print(d[n])
-

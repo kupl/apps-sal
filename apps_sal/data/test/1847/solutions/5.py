@@ -20,8 +20,6 @@ while d:
         if (p2 in valid) and (p2 not in visited):
             visited.add(p2)
             d.append((p2, m + 1))
-            
-            
+
 
 print(-1)
-

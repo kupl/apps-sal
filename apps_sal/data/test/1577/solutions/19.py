@@ -13,4 +13,3 @@ elif D > A:
     print('Danik')
 else:
     print('Friendship')
-

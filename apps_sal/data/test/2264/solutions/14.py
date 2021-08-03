@@ -5,12 +5,11 @@ for i in range(n):
     r = 0
     for i in range(k):
         a, b = list(map(int, input().split()))
-        if a>r:
+        if a > r:
             r = a
-        if l>b:
+        if l > b:
             l = b
     if l >= r:
         print(0)
     else:
-        print(r-l)
-
+        print(r - l)

@@ -31,6 +31,7 @@ def solve():
             rg = mg
     print(lg)
 
+
 t = int(input1())
 while t > 0:
     empl = []

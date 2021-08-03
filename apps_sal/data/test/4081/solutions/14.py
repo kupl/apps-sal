@@ -1,5 +1,6 @@
 3
 
+
 def main():
     # skip N
     input()
@@ -8,7 +9,7 @@ def main():
 
     l, r = 0, n - 1
     res = []
-    
+
     last = 0
     picked = True
 
@@ -25,25 +26,27 @@ def main():
                 r -= 1
             picked = True
             continue
-        
+
         if last < a[l]:
             last = a[l]
             res.append('L')
             l += 1
             picked = True
             continue
-        
+
         if last < a[r]:
             last = a[r]
             res.append('R')
             r -= 1
             picked = True
             continue
-    
+
     print(len(res))
     print("".join(res))
-        
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

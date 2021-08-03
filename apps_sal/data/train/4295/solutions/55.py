@@ -4,12 +4,12 @@ def balanced_num(n):
         return 'Balanced'
     else:
         if len(rs) % 2 == 0 and len(rs) > 2:
-            if sum(rs[:int(len(rs)/2)-1]) == sum(rs[-(int(len(rs)/2)-1):]):
+            if sum(rs[:int(len(rs) / 2) - 1]) == sum(rs[-(int(len(rs) / 2) - 1):]):
                 return 'Balanced'
             else:
                 return 'Not Balanced'
         else:
-            if sum(rs[:int(len(rs)/2)]) == sum(rs[-(int(len(rs)/2)):]):
+            if sum(rs[:int(len(rs) / 2)]) == sum(rs[-(int(len(rs) / 2)):]):
                 return 'Balanced'
             else:
-                return 'Not Balanced'  
+                return 'Not Balanced'

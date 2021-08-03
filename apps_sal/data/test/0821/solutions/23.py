@@ -9,4 +9,3 @@ elif b < a:
     print("Second")
 else:
     print("Friendship")
-

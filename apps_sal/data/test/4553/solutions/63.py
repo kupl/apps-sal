@@ -11,4 +11,3 @@ if len(x[0]) == a and len(x[1]) == b:
     print("Yes")
 else:
     print("No")
-

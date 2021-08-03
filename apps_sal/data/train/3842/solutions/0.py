@@ -4,7 +4,8 @@ def word_wrap(s, limit):
         t = s[i]
         if len(t) <= limit:
             while i + 1 < len(s) and len(t) + len(s[i + 1]) + 1 <= limit:
-                t += ' ' + s[i + 1] ; i += 1
+                t += ' ' + s[i + 1]
+                i += 1
             if len(t) < limit:
                 if i + 1 < len(s) and len(s[i + 1]) > limit:
                     temp = ' ' + s[i + 1][:limit - len(t) - 1]

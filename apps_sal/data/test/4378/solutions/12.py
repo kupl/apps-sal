@@ -8,6 +8,7 @@ if len(lamps) == 1:
     print(lamps)
     return
 
+
 def other(c1, c2='R'):
     if 'G' != c1 and 'G' != c2:
         return 'G'
@@ -16,13 +17,14 @@ def other(c1, c2='R'):
     else:
         return 'B'
 
+
 newlamps = list(lamps)
 i = 1
 recolors = 0
-while i < n-1:
-    if newlamps[i] == newlamps[i-1]:
+while i < n - 1:
+    if newlamps[i] == newlamps[i - 1]:
         recolors += 1
-        newlamps[i] = other(newlamps[i-1], newlamps[i+1])
+        newlamps[i] = other(newlamps[i - 1], newlamps[i + 1])
     i += 1
 
 if newlamps[-1] == newlamps[-2]:
@@ -31,5 +33,3 @@ if newlamps[-1] == newlamps[-2]:
 
 print(recolors)
 print(''.join(newlamps))
-
-

@@ -8,16 +8,17 @@ def binary_search(L, n, i, j):
     high = j
 
     while low <= high:
-        mid = (low + high) //2
+        mid = (low + high) // 2
         guess = L[mid]
         # if guess == n:
-            # return mid
+        # return mid
         if guess > n:
-            high = mid -1
+            high = mid - 1
         else:
             low = mid + 1
     # print(low)
     return low
+
 
 N = int(input())
 A = list(map(int, input().split()))
@@ -47,11 +48,9 @@ s = 0
 for b in B:
     # j = binary_search(C, b, j, N-1)
     j = i = bisect(C, b)
-    s += N-j
+    s += N - j
     B_cum.append(s)
 
 for a in A_ind:
     ans += B_cum[-1] - B_cum[a]
 print(ans)
-
-

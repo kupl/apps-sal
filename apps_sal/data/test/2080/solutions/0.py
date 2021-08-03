@@ -4,22 +4,22 @@
 # Problem name ::: F. Level Generation
 # submission number
 
-#212055293
-#508427854
+# 212055293
+# 508427854
 
 
 def newest_approach(n):
     from math import floor, ceil, sqrt
 
-    quad_solv = sqrt(2*n+1/4)-1/2
+    quad_solv = sqrt(2 * n + 1 / 4) - 1 / 2
     x = floor(quad_solv)
     y = ceil(quad_solv)
 
-    xed = int(x*(x-1)/2 + n - x)
+    xed = int(x * (x - 1) / 2 + n - x)
     xbr = n - x
 
     ybr = n - y
-    yed = 2*ybr
+    yed = 2 * ybr
 
     if xed > yed:
         print(xed)
@@ -29,7 +29,6 @@ def newest_approach(n):
         # print("nodes = %s :: edges = %s :: bridges = %s" % (n, yed, ybr))
 
     return
-
 
 
 def main():
@@ -46,10 +45,8 @@ def main():
         newest_approach(val)
 
 
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

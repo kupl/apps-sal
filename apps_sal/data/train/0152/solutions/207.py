@@ -3,12 +3,13 @@ class Solution:
         position.sort()
         lo = 1
         hi = position[-1] - position[0]
+
         def count(dis):
             res = 1
             i = 0
             curr = 0
             while i < len(position):
-                if position[i]-position[curr] >= dis:
+                if position[i] - position[curr] >= dis:
                     res += 1
                     curr = i
                 i += 1
@@ -21,9 +22,9 @@ class Solution:
         #             curr = position[i]
         #     return ans
         while lo < hi:
-            mid = hi-(hi-lo)//2
+            mid = hi - (hi - lo) // 2
             if count(mid) >= m:
                 lo = mid
             else:
-                hi = mid-1
+                hi = mid - 1
         return lo

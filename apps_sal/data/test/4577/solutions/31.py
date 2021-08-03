@@ -1,8 +1,3 @@
-a,b,c = list(map(int,input().split()))
+a, b, c = list(map(int, input().split()))
 #lis = list(map(int,input().split()))
-print(("Yes" if a<=c<=b else "No"))
-
-
-
-
-
+print(("Yes" if a <= c <= b else "No"))

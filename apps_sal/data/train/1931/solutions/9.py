@@ -2,7 +2,7 @@ class Solution:
     def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
         if root:
             return self.traverse(root, head)
-        
+
     def traverse(self, cur, head):
         if self.startwith(cur, head):
             return True
@@ -12,7 +12,7 @@ class Solution:
             elif cur.right and self.traverse(cur.right, head):
                 return True
         return False
-    
+
     def startwith(self, startnode, head) -> bool:
         if startnode.val == head.val:
             if head.next == None:

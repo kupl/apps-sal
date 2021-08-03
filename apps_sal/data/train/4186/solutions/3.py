@@ -1,5 +1,6 @@
 import math
 
+
 def sum_of_threes(n):
     res = []
     for i in range(round(math.log(n, 3)), -1, -1):

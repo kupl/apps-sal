@@ -5,17 +5,17 @@ cakes = [int(x) for x in input().split()]
 # ループ数は2**4 = 16回
 
 for i in range(2**4):
-      x,y = 0,0
-      for j in range(4):
-            #print((i >> j)&1,end=" ")
-            if (i>>j)&1 == 1:
-                  x += cakes[j]
-            else:
-                  y += cakes[j]
-      
-      if x == y:
-            print("Yes")
-            return
-      #print()
+    x, y = 0, 0
+    for j in range(4):
+        #print((i >> j)&1,end=" ")
+        if (i >> j) & 1 == 1:
+            x += cakes[j]
+        else:
+            y += cakes[j]
+
+    if x == y:
+        print("Yes")
+        return
+    # print()
 
 print("No")

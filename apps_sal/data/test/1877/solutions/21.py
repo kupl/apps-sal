@@ -22,4 +22,3 @@ for i in s:
     if i == 'U':
         y += 1
 print(cnt)
-

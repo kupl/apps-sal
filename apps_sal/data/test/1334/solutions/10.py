@@ -12,7 +12,7 @@ for i in range(0, 26):
     if cnt[i] != 0:
         lo = i
         break
-    
+
 for i in range(25, -1, -1):
     if cnt[i] != 0:
         hi = i
@@ -20,7 +20,7 @@ for i in range(25, -1, -1):
 
 if k <= n:
     ans = list(s[:k])
-    for j in range(k - 1, -1 , -1):
+    for j in range(k - 1, -1, -1):
         done = 0
         for i in range(ord(s[j]) - 97 + 1, 26):
             if cnt[i] != 0:
@@ -28,7 +28,7 @@ if k <= n:
                 done = 1
                 break
         if done:
-            for z in range(j + 1 , k):
+            for z in range(j + 1, k):
                 ans[z] = chr(lo + 97)
             break
 else:
@@ -37,4 +37,3 @@ else:
         ans.append(chr(lo + 97))
 
 print(''.join(ans))
-

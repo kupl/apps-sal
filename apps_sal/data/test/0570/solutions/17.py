@@ -1,9 +1,11 @@
 import sys
-read=lambda:sys.stdin.readline().rstrip()
-readi=lambda:int(sys.stdin.readline())
-writeln=lambda x:sys.stdout.write(str(x)+"\n")
-write=lambda x:sys.stdout.write(x)
-a,b=map(int, read().split())
+def read(): return sys.stdin.readline().rstrip()
+def readi(): return int(sys.stdin.readline())
+def writeln(x): return sys.stdout.write(str(x) + "\n")
+def write(x): return sys.stdout.write(x)
+
+
+a, b = map(int, read().split())
 toggle = True
 c = 1
 while True:

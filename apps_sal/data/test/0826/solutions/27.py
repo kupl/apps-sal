@@ -4,11 +4,12 @@ n = int(input())
 　 ②　n - k + 1が答え
 """
 """二分探索法を用いてkを求める"""
-left = 0; right = n + 1
+left = 0
+right = n + 1
 while right - left > 1:
     mid = left + (right - left) // 2
 
-    #判定
+    # 判定
     flag = True
     if (1 + mid) * mid // 2 <= n + 1:
         flag = True
@@ -20,6 +21,5 @@ while right - left > 1:
     else:
         right = mid
 
-#print(left)
+# print(left)
 print((n - left + 1))
-

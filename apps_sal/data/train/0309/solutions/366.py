@@ -4,9 +4,9 @@ class Solution:
             return 0
         if len(A) <= 2:
             return len(A)
-        
+
         dic = {}
-        
+
         for idx, val in enumerate(A):
             for j in range(idx + 1, len(A)):
                 diff = A[j] - val

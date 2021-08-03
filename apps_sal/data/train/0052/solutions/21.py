@@ -10,4 +10,3 @@ for numb in laziness:
     j -= 1
 
 print(sum % 10007)
-

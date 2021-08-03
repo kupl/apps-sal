@@ -9,16 +9,16 @@ class Solution:
                 if i - kk + 1 < 0:
                     continue
 
-                cur_max = max(cur_max, arr[i-kk+1])
+                cur_max = max(cur_max, arr[i - kk + 1])
 
                 # print(i, kk, \",\", i - kk + 1, cur_max, arr[i-kk+1], ':', d[i], d[i-kk])
-                
+
                 if i - kk < 0:
                     prev = 0
                 else:
-                    prev = d[i-kk]
+                    prev = d[i - kk]
 
-                d[i] = max(d[i], prev + cur_max*kk)
+                d[i] = max(d[i], prev + cur_max * kk)
 
         print(d)
 

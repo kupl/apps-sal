@@ -1,5 +1,5 @@
 def no_space(x):
-    #your code here
+    # your code here
     answer = ""
     for i in x:
         if i == " ":
@@ -7,4 +7,3 @@ def no_space(x):
         else:
             answer += i
     return answer
-

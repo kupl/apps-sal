@@ -3,7 +3,7 @@ n = 14
 ans = 0
 for i in range(n):
     a = b.copy()
-    if a[i] == 0: 
+    if a[i] == 0:
         continue
     x = a[i]
     a[i] = 0
@@ -19,6 +19,3 @@ for i in range(n):
             pot += j
     ans = max(ans, pot)
 print(ans)
-
-
-

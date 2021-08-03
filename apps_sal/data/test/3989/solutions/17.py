@@ -4,9 +4,9 @@
 import os
 from io import BytesIO, IOBase
 import sys
-from collections import defaultdict,deque,Counter
+from collections import defaultdict, deque, Counter
 from bisect import *
-from math import sqrt,pi,ceil,log
+from math import sqrt, pi, ceil, log
 import math
 from itertools import permutations
 from copy import deepcopy
@@ -15,41 +15,44 @@ from sys import setrecursionlimit
 
 
 def main():
-    a=input().rstrip()
-    n=len(a)
-    a=Counter(a)
-    a["6"]-=1
-    a["1"]-=1
-    a["8"]-=1
-    a["9"]-=1
-    z,s,y=0,[],[1]
+    a = input().rstrip()
+    n = len(a)
+    a = Counter(a)
+    a["6"] -= 1
+    a["1"] -= 1
+    a["8"] -= 1
+    a["9"] -= 1
+    z, s, y = 0, [], [1]
     for i in range(n):
-        y.append((y[-1]*10)%7)
-    xx=1
+        y.append((y[-1] * 10) % 7)
+    xx = 1
     for i in a:
-        if i!="0":
-            x=int(i)
+        if i != "0":
+            x = int(i)
             for j in range(a[i]):
                 s.append(i)
-                z=(z+x*y[n-xx])%7
-                xx+=1
-    f=1
-    for i in permutations([1,6,8,9]):
-        if (z+i[0]*y[n-xx]+i[1]*y[n-xx-1]+i[2]*y[n-xx-2]+i[3]*(y[n-xx-3]))%7==0:
-            f=0
-            s.extend([str(i[0]),str(i[1]),str(i[2]),str(i[3])])
+                z = (z + x * y[n - xx]) % 7
+                xx += 1
+    f = 1
+    for i in permutations([1, 6, 8, 9]):
+        if (z + i[0] * y[n - xx] + i[1] * y[n - xx - 1] + i[2] * y[n - xx - 2] + i[3] * (y[n - xx - 3])) % 7 == 0:
+            f = 0
+            s.extend([str(i[0]), str(i[1]), str(i[2]), str(i[3])])
             break
     if f:
         print(0)
     else:
-        s.append("0"*a["0"])
+        s.append("0" * a["0"])
         print("".join(s))
+
 
 # region fastio
 BUFSIZE = 8192
 
+
 class FastIO(IOBase):
     newlines = 0
+
     def __init__(self, file):
         self._fd = file.fileno()
         self.buffer = BytesIO()
@@ -92,8 +95,11 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

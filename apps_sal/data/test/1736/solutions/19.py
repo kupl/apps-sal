@@ -36,4 +36,3 @@ for i in range(n):
     min_time -= first_book_time
 
 print(max_books)
-

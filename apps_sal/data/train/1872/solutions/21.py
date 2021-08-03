@@ -9,7 +9,7 @@ class Solution:
         queue = [root]
         curLevel = maxLevel = 1
         output = root.val
-        
+
         while queue:
             s, nextLevel = 0, []
             for n in queue:
@@ -24,4 +24,3 @@ class Solution:
             curLevel += 1
             queue = nextLevel
         return maxLevel
-

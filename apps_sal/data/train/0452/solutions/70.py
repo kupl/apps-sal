@@ -6,11 +6,13 @@ class Solution:
         max_jobDifficulty = []
         for i in range(0, N):
             max_ij = [jobDifficulty[i]]
-            for j in range(i+2, N+1):
-                max_ij.append(max(max_ij[-1], jobDifficulty[j-1]))
+            for j in range(i + 2, N + 1):
+                max_ij.append(max(max_ij[-1], jobDifficulty[j - 1]))
             max_jobDifficulty.append(max_ij)
+
         def get_max_jobDifficulty(i, j):
-            return max_jobDifficulty[i][j-i-1]
+            return max_jobDifficulty[i][j - i - 1]
+
         def dp(left_days: int, left_jobs_i: int, current_jobs_i: int) -> int:
             key = (left_days, left_jobs_i, current_jobs_i)
             if key not in cache:

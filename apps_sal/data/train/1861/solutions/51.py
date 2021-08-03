@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     # O(n ^ 2) Time | O(n) Space
     def minAreaRect(self, points: List[List[int]]) -> int:

@@ -19,4 +19,3 @@ for i in range(m):
     ans.append(['even', 'odd'][inv])
 
 print('\n'.join(ans))
-

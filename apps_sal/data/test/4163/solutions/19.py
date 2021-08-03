@@ -24,4 +24,5 @@ def __starting_point():
         D.append([a, b])
     main(N, D)
 
+
 __starting_point()

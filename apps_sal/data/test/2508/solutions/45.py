@@ -42,4 +42,3 @@ M = [[-1] * W for i in range(H)]
 bfs(xs, ys)
 
 print((M[xg][yg]))
-

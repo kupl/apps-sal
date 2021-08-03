@@ -13,5 +13,5 @@ for i in range(n - 1, -1, -1):
     if a[i] == 0:
         lind = i
     ans[i] = min(ans[i], abs(i - lind))
-for  i in range(n):
-    print(ans[i], end  = " " )
+for i in range(n):
+    print(ans[i], end=" ")

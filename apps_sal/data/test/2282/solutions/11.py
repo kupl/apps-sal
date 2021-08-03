@@ -1,3 +1,3 @@
-n =  int(input())
+n = int(input())
 k = input()
-print(n+1)
+print(n + 1)

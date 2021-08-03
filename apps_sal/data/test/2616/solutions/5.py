@@ -12,5 +12,3 @@ for _ in range(t):
         print("First")
     else:
         print("Second")
-
-

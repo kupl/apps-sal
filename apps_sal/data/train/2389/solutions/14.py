@@ -36,4 +36,3 @@ for ppppp in range(q):
         min_changes = min(min_changes, min(cost))
 
     print(min_changes)
-

@@ -13,23 +13,22 @@ for i in range(len(A)):
         if sum1 > 0:
             pass
         else:
-            ans1 += abs(1-sum1)
+            ans1 += abs(1 - sum1)
             sum1 = 1
         if sum2 < 0:
             pass
         else:
-            ans2 += abs(-1-sum2)
+            ans2 += abs(-1 - sum2)
             sum2 = -1
     else:
         if sum2 > 0:
             pass
         else:
-            ans2 += abs(1-sum2)
+            ans2 += abs(1 - sum2)
             sum2 = 1
         if sum1 < 0:
             pass
         else:
-            ans1 += abs(-1-sum1)
+            ans1 += abs(-1 - sum1)
             sum1 = -1
 print((min(ans1, ans2)))
-

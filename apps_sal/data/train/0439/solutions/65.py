@@ -4,7 +4,7 @@ class Solution:
         ans, s, last = 0, 0, 0
         i = 1
         while i < n:
-            df = A[i] - A[i-1]
+            df = A[i] - A[i - 1]
             if df == 0:
                 ans = max(ans, i - s)
                 s = i
@@ -14,5 +14,3 @@ class Solution:
             last = df
             i += 1
         return max(ans, i - s)
-            
-

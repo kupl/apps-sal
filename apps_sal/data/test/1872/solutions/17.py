@@ -14,4 +14,3 @@ x *= r ** 2
 small_area = n / 2 * math.sin(3 * math.pi / n) * x
 
 print(tot_area - small_area)
-

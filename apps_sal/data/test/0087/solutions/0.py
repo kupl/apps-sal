@@ -10,5 +10,3 @@ for i in range(arr[a] - 1):
         b = 0
         ctr += 1
 print(ctr)
-            
-

@@ -1,7 +1,7 @@
 n = int(input())
 res = 'YES'
 uch = {}
-zap= [0,0]
+zap = [0, 0]
 for i in range(0, n):
     zap = list(map(int, input().split()))
     if zap[1] in uch:
@@ -16,5 +16,3 @@ for i in range(0, n):
         else:
             res = 'NO'
 print(res)
-
-

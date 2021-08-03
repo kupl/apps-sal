@@ -11,4 +11,3 @@ else:
         if a[i] != a[0]:
             r = i
     print(max(r, n - l - 1))
-

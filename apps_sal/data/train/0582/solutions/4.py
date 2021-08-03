@@ -1,8 +1,8 @@
 try:
-    tt=int(input())
+    tt = int(input())
     while(tt):
-        tt=tt-1
-        s=input()
+        tt = tt - 1
+        s = input()
         st1, dicti, i = [], {}, 1
         for j in s:
             if j == '(':
@@ -13,9 +13,9 @@ try:
                 while h >= 0 and s[h] == ')':
                     dicti[h + 1] = i
                     h -= 1
-            i+=1
-        q=int(input())
-        t=list(map(int,input().split()))
+            i += 1
+        q = int(input())
+        t = list(map(int, input().split()))
         for i in t:
             if(i in list(dicti.keys())):
                 print(dicti[i])
@@ -23,6 +23,3 @@ try:
                 print(-1)
 except:
     pass
-
-
-

@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def pack_bagpack(scores, weights, capacity):
     print(len(scores))
     print(capacity)
@@ -11,4 +12,4 @@ def pack_bagpack(scores, weights, capacity):
                 dp[i][j] = (max(dp[i - 1][j], dp[i - 1][j - weights[i - 1]] + scores[i - 1]))
             else:
                 dp[i][j] = dp[i - 1][j]
-    return dp[n][capacity];           
+    return dp[n][capacity]

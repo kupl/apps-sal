@@ -27,6 +27,7 @@ class UF:
 
         return i
 
+
 uf = UF(n)
 
 for x, y in xy:
@@ -38,4 +39,3 @@ for x in range(n):
 
 answer = len(g)
 print(answer)
-

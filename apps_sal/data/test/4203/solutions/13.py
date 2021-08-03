@@ -6,7 +6,7 @@ up = 0
 if S[0] == 'A':
     ans += 1
 
-for i in range(2,len(S)-1):
+for i in range(2, len(S) - 1):
     if S[i] == 'C':
         C1 += 1
 
@@ -16,5 +16,5 @@ for j in range(len(S)):
 
 if ans == 1 and C1 == 1 and up == 2:
     print('AC')
-else:  
+else:
     print('WA')

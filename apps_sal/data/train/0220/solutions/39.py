@@ -11,7 +11,6 @@ class Solution:
             else:
                 sumTotal += value
             max_saved = max(max_saved, saved)
-            print((saved,max_saved))
+            print((saved, max_saved))
             # print(saved, max_saved, sumTotal)
         return sumTotal + max_saved
-

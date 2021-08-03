@@ -7,12 +7,14 @@ def resolve():
     ml.sort()
     c = 0
     for g in ml:
-        if x-g < 0:
+        if x - g < 0:
             break
         else:
             c += 1
             x -= g
-    a = int(x/ml[0])
+    a = int(x / ml[0])
     c += a
     print(c)
+
+
 resolve()

@@ -6,7 +6,7 @@ for _ in range(t):
     dict = {}
     for i in range(n):
         count = s[i]
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             count += s[j]
             dict[count] = 1
             if count >= p:
@@ -16,4 +16,3 @@ for _ in range(t):
         if dict.get(s[i]) is not None:
             ans += 1
     print(ans)
-

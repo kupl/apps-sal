@@ -10,4 +10,3 @@ for i in range(m):
             print(s + 1)
         else:
             print(q - (2 + n) + 1)
-

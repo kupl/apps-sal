@@ -1,6 +1,6 @@
+from math import ceil
 import sys
 input = sys.stdin.readline
-from  math import ceil
 
 answer = []
 for kek in range(int(input())):
@@ -16,4 +16,3 @@ for kek in range(int(input())):
         m = min(a, m)
     answer.append(-m)
 print(*answer, sep='\n')
-

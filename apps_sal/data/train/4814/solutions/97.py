@@ -4,7 +4,7 @@ def is_palindrome(s):
         palindrome = True
     else:
         for i in range(len(s) // 2):
-            if s[i].lower() == s[-i-1].lower():
+            if s[i].lower() == s[-i - 1].lower():
                 palindrome = True
             else:
                 palindrome = False

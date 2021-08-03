@@ -13,7 +13,7 @@ for _ in range(T):
 
     D.sort(reverse=True)
     for i in range(2):
-        for j in range(i+1, 3):
+        for j in range(i + 1, 3):
             if D[i] and D[j]:
                 D[i] -= 1
                 D[j] -= 1
@@ -22,4 +22,3 @@ for _ in range(T):
         ans += 1
 
     print(ans)
-

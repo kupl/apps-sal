@@ -13,5 +13,3 @@ for _ in range(t):
             else:
                 out += 1
     print(out)
-
-

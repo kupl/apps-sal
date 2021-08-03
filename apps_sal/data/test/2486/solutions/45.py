@@ -26,4 +26,3 @@ for i, a in enumerate(A):
         ans += 1
 
 print(ans)
-

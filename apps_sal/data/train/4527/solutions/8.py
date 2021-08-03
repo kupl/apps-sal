@@ -8,4 +8,3 @@ def winner(deck_steve, deck_josh):
         elif ls.index(v) < ls.index(deck_steve[k]):
             st += 1
     return "Tie" if st == jo else "{} wins {} to {}".format('Steve' if st > jo else "Josh", max(st, jo), min(st, jo))
-

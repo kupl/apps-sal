@@ -34,6 +34,7 @@ class UnionFind:
         x = self.find(x)
         return self.size[x]
 
+
 N, K = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
 UFX = UnionFind(N)
@@ -41,7 +42,7 @@ UFY = UnionFind(N)
 mod = 998244353
 
 fact = [1]
-for i in range(1, N+1):
+for i in range(1, N + 1):
     fact.append(fact[-1] * i)
 
 for i in range(1, N):

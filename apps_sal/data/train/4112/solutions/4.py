@@ -1,2 +1,2 @@
 from operator import itemgetter
-penultimate=itemgetter(-2)
+penultimate = itemgetter(-2)

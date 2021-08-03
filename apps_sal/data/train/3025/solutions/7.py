@@ -1,4 +1,4 @@
-def locate(seq, value): 
+def locate(seq, value):
     for x in seq:
         if x == value:
             return True

@@ -1,9 +1,9 @@
 class Node(object):
-    
+
     def __init__(self):
         self.children = {}
         self.end = False
-        
+
     def add(self, word):
         cur = self
         for c in word:
@@ -11,6 +11,7 @@ class Node(object):
                 cur.children[c] = Node()
             cur = cur.children[c]
         cur.end = True
+
 
 class StreamChecker:
 
@@ -20,7 +21,7 @@ class StreamChecker:
             self.root.add(word[::-1])
         self.s = []
         self.cur = self.root
-            
+
     def query(self, letter: str) -> bool:
         self.s.append(letter)
         i = len(self.s) - 1
@@ -34,12 +35,8 @@ class StreamChecker:
                 return True
             i -= 1
         return False
-    
-        
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

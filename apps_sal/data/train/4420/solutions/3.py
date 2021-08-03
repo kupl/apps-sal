@@ -1,5 +1,5 @@
 def mult_primefactor_sum(a, b):
-    prime_factors = [factorize(n) for n in range(a, b+1)]
+    prime_factors = [factorize(n) for n in range(a, b + 1)]
     return [n for n, pf in enumerate(prime_factors, a) if len(pf) > 1 and n % sum(pf) == 0]
 
 
@@ -10,11 +10,13 @@ def mult_primefactor_sum(a, b):
 
 def memoize(func):
     cache = {}
+
     def wrapper(*args):
         if args not in cache:
             cache[args] = func(*args)
         return cache[args]
     return wrapper
+
 
 @memoize
 def factorize(n):

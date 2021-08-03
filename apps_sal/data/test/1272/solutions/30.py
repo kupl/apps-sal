@@ -11,6 +11,7 @@ def getstr(): return readline().strip()
 def strline(): return readline().strip().split()
 def strread(): return read().strip().split()
 
+
 class UnionFind:
     def __init__(self, n):
         '''self.parents: the size of tree(as negative value)'''
@@ -27,7 +28,7 @@ class UnionFind:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def _connect(self,x): return x * (x-1) // 2
+    def _connect(self, x): return x * (x - 1) // 2
 
     def union(self, x, y):
         x = self.find(x)
@@ -35,13 +36,12 @@ class UnionFind:
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x,y = y,x
+            x, y = y, x
         self.n_connections -= self._connect(-self.parents[x]) + self._connect(-self.parents[y])
         self.parents[x] += self.parents[y]
         self.parents[y] = x
         self.ROOTS.remove(y)
         self.n_connections += self._connect(-self.parents[x])
-
 
     def size(self, x):
         parent = self.find(x)
@@ -60,20 +60,19 @@ class UnionFind:
     def all_roots(self): return self.ROOTS
 
 
-
 def main():
-    N,M = numline()
+    N, M = numline()
     AB = []
     for i in range(M):
-        a,b = numline()
-        AB.append((a-1, b-1))
+        a, b = numline()
+        AB.append((a - 1, b - 1))
     tr = UnionFind(N)
 
-    BASE = N * (N-1) // 2
+    BASE = N * (N - 1) // 2
     ans = [BASE]
-    for i in range(M-1, -1, -1):
-        a,b = AB[i]
-        tr.union(a,b)
+    for i in range(M - 1, -1, -1):
+        a, b = AB[i]
+        tr.union(a, b)
         ans.append(BASE - tr.n_connections)
 
     for a in ans[-2::-1]:
@@ -82,4 +81,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

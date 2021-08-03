@@ -14,12 +14,13 @@ def __starting_point():
             count = 1
 
             while j != i:
-                j = l[j-1]
+                j = l[j - 1]
                 count += 1
             ans.append(count)
 
         for i in ans:
             print(i, end=' ')
         print()
+
 
 __starting_point()

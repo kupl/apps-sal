@@ -14,27 +14,29 @@ def main():
         return
 
     ans = 0
-    d = {c:[] for c in ascii_lowercase}
-    
+    d = {c: [] for c in ascii_lowercase}
+
     for i, c in enumerate(s):
-        d[c].append(i+1)
-    
+        d[c].append(i + 1)
+
     now = 0
     for c in t:
-        
-        idx = bisect_left(d[c], now+1)
+
+        idx = bisect_left(d[c], now + 1)
 
         if idx == len(d[c]):
             ans += len(s)
             now = 0
-            idx = bisect_left(d[c], now+1)
-            
+            idx = bisect_left(d[c], now + 1)
+
         now = d[c][idx]
 
     ans += now
     print(ans)
 
-        
+
 def __starting_point():
     main()
+
+
 __starting_point()

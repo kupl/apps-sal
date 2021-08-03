@@ -5,4 +5,3 @@ if op == '+':
     print((a + b))
 else:
     print((a - b))
-

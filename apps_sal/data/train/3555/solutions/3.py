@@ -1,6 +1,7 @@
 def maketrans(n, a, b, c):
-  if n == 0: return []
-  return maketrans(n-1, a, c, b) + [[a, b]] + maketrans(n - 1, c, b, a)
+    if n == 0:
+        return []
+    return maketrans(n - 1, a, c, b) + [[a, b]] + maketrans(n - 1, c, b, a)
 
 
 def hanoiArray(n):

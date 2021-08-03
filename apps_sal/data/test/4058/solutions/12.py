@@ -4,8 +4,9 @@ n, r = list(map(int, input().split()))
 a = list(map(int, input().split()))
 r -= 1
 
+
 def f():
-    prev = [0]*n
+    prev = [0] * n
     last = -1
     for i in range(n):
         if a[i]:
@@ -25,5 +26,5 @@ def f():
 
     return nb
 
-print(f())
 
+print(f())

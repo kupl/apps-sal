@@ -1,4 +1,6 @@
+import sys
 import itertools
+
 
 def f(x):
     scores = [0, 0]
@@ -22,7 +24,6 @@ def f(x):
 N = int(input())
 results = []
 
-import sys
 for n in map(f, map(int, sys.stdin.read().split())):
     results.append(n)
 

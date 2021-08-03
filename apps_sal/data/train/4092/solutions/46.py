@@ -1,1 +1,1 @@
-main = lambda alpha,beta:alpha + beta
+def main(alpha, beta): return alpha + beta

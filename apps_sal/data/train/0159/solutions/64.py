@@ -1,9 +1,11 @@
 from collections import deque
+
+
 class Solution:
     def constrainedSubsetSum(self, nums, k):
-        #if max(nums) <= 0: return max(nums)   # optimization
-        #if min(nums) >= 0: return sum(nums)   # optimization
-    
+        # if max(nums) <= 0: return max(nums)   # optimization
+        # if min(nums) >= 0: return sum(nums)   # optimization
+
         N, queue = len(nums), deque()
         dp = [val for val in nums]
         for i, val in enumerate(nums):
@@ -14,4 +16,4 @@ class Solution:
             while queue and dp[i] >= dp[queue[-1]]:
                 queue.pop()
             queue.append(i)
-        return  max(dp)
+        return max(dp)

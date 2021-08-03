@@ -4,6 +4,6 @@ class Solution:
         # if len(target) == 1: return target[0]
         ans = 0
         for i in range(1, len(target)):
-            pre, curr = target[i-1], target[i]
-            ans += max(curr-pre, 0)
+            pre, curr = target[i - 1], target[i]
+            ans += max(curr - pre, 0)
         return ans + target[0]

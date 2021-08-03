@@ -1,5 +1,6 @@
 import heapq
 
+
 def main():
     n, m = map(int, input().split())
     data = {}
@@ -12,7 +13,7 @@ def main():
             else:
                 data[a] = [b]
     ans = 0
-    for i in range(1, m+1):
+    for i in range(1, m + 1):
         if i in data.keys():
             for k in data[i]:
                 heapq.heappush(priorityQ, -k)
@@ -21,6 +22,9 @@ def main():
     print(ans)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

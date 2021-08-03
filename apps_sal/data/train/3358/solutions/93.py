@@ -6,8 +6,8 @@ def correct(string):
         elif i == '0':
             correct += 'O'
         elif i == '1':
-            correct +='I'
+            correct += 'I'
         else:
             correct += i
-            
+
     return correct

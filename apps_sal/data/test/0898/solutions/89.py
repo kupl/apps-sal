@@ -5,7 +5,7 @@ factors = {}
 
 while p > 1:
     f = False
-    for i in range(2, int(p**0.5)+1):
+    for i in range(2, int(p**0.5) + 1):
         if p % i == 0:
             if i in factors:
                 factors[i] += 1
@@ -28,7 +28,7 @@ if len(factors) == 0:
 else:
     primes = list(factors.keys())
     exp = [0] * len(primes)
-    upper = s/k
+    upper = s / k
     ans = 1
 
     while exp[0] <= factors[primes[0]]:
@@ -42,7 +42,7 @@ else:
         elif num < upper:
             ans = max(ans, num)
 
-        index = len(primes)-1
+        index = len(primes) - 1
         done = False
         while not done:
             exp[index] += 1

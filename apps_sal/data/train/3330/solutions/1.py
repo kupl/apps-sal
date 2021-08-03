@@ -25,4 +25,3 @@ def make_triangle(start, end):
             value += 1
 
     return "\n".join(' ' * (rows - i - 1) + ' '.join(r) for i, r in enumerate(triangle))
-

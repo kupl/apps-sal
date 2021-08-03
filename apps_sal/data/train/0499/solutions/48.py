@@ -4,7 +4,7 @@ class Solution:
         stack = [0]
         for num in target:
             max_ = 0
-            while(stack and stack[-1] >= num ):
+            while(stack and stack[-1] >= num):
                 max_ = max(max_, abs(stack.pop() - num))
             ans += max_
             stack.append(num)

@@ -1,10 +1,11 @@
 def f(matrix, k, i, j):
     i0, j0 = i, j
-    for n in range(1, k+1):
+    for n in range(1, k + 1):
         i, j = matrix[i][j]
         if i == i0 and j == j0:
             return n == k
     return False
+
 
 def robot_transfer(matrix, k):
     matrix = [

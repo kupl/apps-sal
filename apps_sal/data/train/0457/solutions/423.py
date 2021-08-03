@@ -17,5 +17,5 @@ class Solution:
                     if dp[i] == -1:
                         dp[i] = dp[i - coin] + 1
                     else:
-                        dp[i] = min(dp[i], dp[i - coin] + 1)   
+                        dp[i] = min(dp[i], dp[i - coin] + 1)
         return dp[-1]

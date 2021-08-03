@@ -6,6 +6,3 @@ def next_item(xs, item):
             break
         elif i == item:
             found = True
-            
-
-

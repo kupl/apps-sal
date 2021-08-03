@@ -15,14 +15,14 @@ n=5
 2
 '''
 
-t=int(input())
+t = int(input())
 for i in range(t):
- n=int(input())
- l1=list(map(int, input().split()))
- curr=l1[0]
- ans=0
- for j in range(n):
-  if(l1[j]<=curr):
-   ans+=1
-   curr=l1[j]
- print(ans)
+    n = int(input())
+    l1 = list(map(int, input().split()))
+    curr = l1[0]
+    ans = 0
+    for j in range(n):
+        if(l1[j] <= curr):
+            ans += 1
+            curr = l1[j]
+    print(ans)

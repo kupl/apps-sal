@@ -1,11 +1,16 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
 
 # B. The Fair Nut and Strings
+
 
 n, k = mi()
 s = input().strip()
@@ -32,4 +37,3 @@ for j in range(jj, n):
     cur *= 2
 
 print(ans)
-

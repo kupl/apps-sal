@@ -13,7 +13,7 @@ H, N = map(int, input().split())
 # A = list(map(int, input().split()))
 # A = list(map(lambda x: int(x)*(-1), input().split()))
 # B = list(map(int, input().split()))
-A_B = [list(map(int,input().split())) for _ in range(N)]
+A_B = [list(map(int, input().split())) for _ in range(N)]
 # S = input()
 
 # B_C = sorted(B_C, reverse=True, key=lambda x:x[1])
@@ -65,7 +65,6 @@ A_B = [list(map(int,input().split())) for _ in range(N)]
 #     return arr
 
 
-
 # bfs
 # tree = [[] for _ in range(N + 1)]
 # edges = [list(map(int,input().split())) for _ in range(M)]
@@ -101,6 +100,6 @@ max_damege = H + max_a
 dp = [0] * (max_damege + 1)
 
 for i in range(max_damege + 1):
-    dp[i] = min(dp[i-a]+b for a,b in A_B)
+    dp[i] = min(dp[i - a] + b for a, b in A_B)
 
-print(min(dp[H-1:]))
+print(min(dp[H - 1:]))

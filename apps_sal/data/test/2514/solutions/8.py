@@ -6,6 +6,6 @@ cnt = Counter(a)
 q = int(input())
 for i in range(q):
     b, c = map(int, input().split())
-    s += (c - b)*cnt[b]
+    s += (c - b) * cnt[b]
     cnt[b], cnt[c] = 0, cnt[c] + cnt[b]
     print(s)

@@ -9,5 +9,5 @@ def mainA():
     times += (L - begin) // a
     print(times)
 
-mainA()
 
+mainA()

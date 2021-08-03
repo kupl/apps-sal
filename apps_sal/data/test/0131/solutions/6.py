@@ -6,4 +6,3 @@ if sum(a) >= sum(b):
     print("Yes")
 else:
     print("No")
-

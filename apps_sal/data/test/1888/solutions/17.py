@@ -1,7 +1,7 @@
 from sys import stdin
 
 n, m = list(map(int, input().split()))
-owes = [0 for i in range(n+1)]
+owes = [0 for i in range(n + 1)]
 
 for i in range(m):
     a, b, c = list(map(int, input().split()))
@@ -14,4 +14,3 @@ for owe in owes:
         sol += owe
 
 print(sol)
-

@@ -15,7 +15,7 @@ for i, e in enumerate(edge):
         print(-1)
         return
     elif beggining is None and l == 1:
-        beggining = i 
+        beggining = i
 
 place = []
 visited = [0] * n
@@ -37,7 +37,7 @@ color = [0] * n
 ans = 10 ** 18
 for init_c in range(3):
     ret = 0
-    c = init_c 
+    c = init_c
     for item in place:
         ret += costs[c][item]
         color[item] = c + 1
@@ -47,7 +47,7 @@ for init_c in range(3):
         c_ans = color[:]
 for init_c in range(3):
     ret = 0
-    c = init_c 
+    c = init_c
     for item in place:
         ret += costs[c][item]
         color[item] = c + 1

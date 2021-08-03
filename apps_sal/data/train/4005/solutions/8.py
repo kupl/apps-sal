@@ -3,7 +3,6 @@ def reverse_bits(n):
     b = list(a)
     b.reverse()
     c = ''
-    for i in b: 
+    for i in b:
         c += (i)
-    return(int(c,2))
-
+    return(int(c, 2))

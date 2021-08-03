@@ -20,4 +20,3 @@ def find_not_so_rainy(n, x, y, a):
 
 
 print(find_not_so_rainy(n, x, y, a))
-

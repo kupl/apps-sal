@@ -1,5 +1,7 @@
 n, m = list(map(int, input().split()))
 c = [input() for _ in ' ' * n]
+
+
 def sol(n, m):
     for i in range(n):
         count = 0
@@ -8,7 +10,7 @@ def sol(n, m):
                 count += 1
         if count > 2:
             return False
-        if count == 2 and c[i][0]=='B':
+        if count == 2 and c[i][0] == 'B':
             return False
 
     for j in range(m):
@@ -18,7 +20,7 @@ def sol(n, m):
                 count += 1
         if count > 2:
             return False
-        if count == 2 and c[0][j]=='B':
+        if count == 2 and c[0][j] == 'B':
             return False
 
     for i in range(n):
@@ -33,4 +35,3 @@ def sol(n, m):
 
 
 print('NYOE S'[sol(n, m)::2])
-

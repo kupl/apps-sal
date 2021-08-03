@@ -1,8 +1,8 @@
 # cook your dish here
-t=int(input())
-for i in range(1,t+1):
-    num=int(input())
-    n=str(num)
+t = int(input())
+for i in range(1, t + 1):
+    num = int(input())
+    n = str(num)
     sum = 0
     temp = num
     while temp > 0:
@@ -14,5 +14,3 @@ for i in range(1,t+1):
         print("FEELS GOOD")
     else:
         print("FEELS BAD")
-    
-

@@ -9,7 +9,7 @@ buf = sorted(buf)
 
 wyn = 0
 for i in range(n):
-    wyn += buf[i]*k
-    k = max(1, k-1)
-    
+    wyn += buf[i] * k
+    k = max(1, k - 1)
+
 print(wyn)

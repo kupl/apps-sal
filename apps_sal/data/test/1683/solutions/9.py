@@ -49,9 +49,11 @@ def main():
 
     print(s)
 
+
 def __starting_point():
     if len(sys.argv) > 1 and sys.argv[1] == 'True':
         IS_LOCAL = True
     main()
+
 
 __starting_point()

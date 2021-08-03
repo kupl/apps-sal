@@ -1,11 +1,11 @@
 class Solution:
     def closestDivisors(self, num: int) -> List[int]:
         nums = [num + 1, num + 2]
-        pair = (1, num+1)
+        pair = (1, num + 1)
         seen = collections.defaultdict(bool)
 
-        for i,num in enumerate(nums):
-            for j in range(1, int(sqrt(num))+1):
+        for i, num in enumerate(nums):
+            for j in range(1, int(sqrt(num)) + 1):
                 if seen[j]:
                     continue
 

@@ -18,7 +18,6 @@ else:
         d = (d * 10) % P
         ans = counts[0]
     for i in counts:
-        ans += (i*(i-1))//2
+        ans += (i * (i - 1)) // 2
 
 print(ans)
-

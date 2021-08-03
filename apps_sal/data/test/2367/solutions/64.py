@@ -31,8 +31,8 @@ class Combination:
 
 def __starting_point():
     H, W, A, B = list(map(int, input().split()))
-    mod = 10**9+7
-    comb = Combination(2*10**5+10, mod)
+    mod = 10**9 + 7
+    comb = Combination(2 * 10**5 + 10, mod)
 
     ans = 0
     h1 = H - A
@@ -51,5 +51,6 @@ def __starting_point():
             break
 
     print(ans)
+
 
 __starting_point()

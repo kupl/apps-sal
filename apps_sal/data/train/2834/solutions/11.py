@@ -1,2 +1,2 @@
 def symmetric_point(p, q):
-    return [2 * q[i] - p[i] for i in range(0,len(p))]
+    return [2 * q[i] - p[i] for i in range(0, len(p))]

@@ -12,4 +12,3 @@ if not f and frst != -10 ** 7:
     n[frst], n[-1] = n[-1], n[frst]
     f = True
 print(''.join(n) if f else '-1')
-

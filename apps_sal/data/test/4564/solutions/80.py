@@ -8,4 +8,3 @@ for c in s:
     st.add(c)
 
 print("yes")
-

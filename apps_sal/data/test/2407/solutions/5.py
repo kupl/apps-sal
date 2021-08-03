@@ -16,5 +16,5 @@ for _ in range(int(input())):
         rnow += r
         while len(deq) > 0 and deq[0] <= rnow:
             deq.popleft()
-        ans+=1
+        ans += 1
     print(ans)

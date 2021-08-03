@@ -4,4 +4,3 @@ def even_or_odd(number: int) -> str:
         print('Argument must be an integer!')
     else:
         return "Even" if number % 2 == 0 else "Odd"
-

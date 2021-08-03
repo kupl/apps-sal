@@ -23,10 +23,9 @@ a, b, c = list(map(str, input().split()))
 
 result = 'ret'
 
-if ( a[-1] == b[0] ) and (b[-1] == c[0]) :
+if (a[-1] == b[0]) and (b[-1] == c[0]):
     result = 'YES'
 else:
     result = 'NO'
 
 print(result)
-

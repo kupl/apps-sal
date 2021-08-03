@@ -7,4 +7,3 @@ for i in range(len(s)):
         if (h == ss):
             ans = "YES"
 print(ans)
-

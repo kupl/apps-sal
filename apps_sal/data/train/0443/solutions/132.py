@@ -6,7 +6,7 @@ class Solution:
                 id_ij = id_i + id_j
                 for id_k, k in enumerate(rating[id_ij:]):
                     id_ijk = id_ij + id_k
-                    if 0<=i and id_i < id_ij and id_ij < id_ijk:
+                    if 0 <= i and id_i < id_ij and id_ij < id_ijk:
                         if i < j and j < k:
                             count += 1
                         if i > j and j > k:

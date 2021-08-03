@@ -5,16 +5,16 @@ MAX = n * m
 
 fact = [1] * (MAX + 1)
 for i in range(1, MAX + 1):
-    fact[i] = (fact[i-1] * i) % mod
+    fact[i] = (fact[i - 1] * i) % mod
 
 inv = [1] * (MAX + 1)
 inv[MAX] = pow(fact[MAX], mod - 2, mod)
 for i in range(MAX, 0, -1):
-    inv[i-1] = (inv[i] * i) % mod
+    inv[i - 1] = (inv[i] * i) % mod
 
 
 def comb(n, k):
-    return fact[n] * inv[n-k] * inv[k] % mod
+    return fact[n] * inv[n - k] * inv[k] % mod
 
 
 ans = 0
@@ -31,4 +31,3 @@ for i in range(n):
 ans *= comb(MAX - 2, k - 2)
 ans %= mod
 print(ans)
-

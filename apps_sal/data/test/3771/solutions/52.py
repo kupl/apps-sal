@@ -7,19 +7,19 @@ input = sys.stdin.readline
 INF = 10**18
 
 H, W = map(int, input().split())
-V = H+W
+V = H + W
 
 
 def make():
     state = [list(input().rstrip()) for _ in range(H)]
-    graph = [{} for _ in range(V+2)]
+    graph = [{} for _ in range(V + 2)]
 
     start = V
-    finish = V+1
+    finish = V + 1
 
     for h in range(H):
         for w in range(W):
-            u, v = h, w+H
+            u, v = h, w + H
             if state[h][w] == "o":
                 graph[u][v] = 1
                 graph[v][u] = 1
@@ -33,14 +33,14 @@ def make():
                 graph[finish][u] = INF
                 graph[v][finish] = INF
                 graph[finish][v] = INF
-    
+
     return graph, start, finish
 
 
 def dfs2(start, finish, graph):
-    Flow = [INF]*len(graph)
-    used = [False]*len(graph)
-    Par = [-1]*len(graph)
+    Flow = [INF] * len(graph)
+    used = [False] * len(graph)
+    Par = [-1] * len(graph)
     stack = [start]
     used[start] = True
     while stack:
@@ -62,11 +62,14 @@ def dfs2(start, finish, graph):
     return 0, graph
 
 # solve
+
+
 def max_flow(start, finish, graph):
     flow = 0
     while True:
         f, graph = dfs2(start, finish, graph)
-        if f == 0: return flow
+        if f == 0:
+            return flow
         flow += f
 
 
@@ -74,7 +77,7 @@ def main():
     graph, start, finish = make()
     ans = max_flow(start, finish, graph)
 
-    if ans > INF//2:
+    if ans > INF // 2:
         print(-1)
     else:
         print(ans)
@@ -82,4 +85,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

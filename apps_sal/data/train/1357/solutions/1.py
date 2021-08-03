@@ -5,16 +5,19 @@ for _ in range(int(input())):
     flag = False
 
     for i in arr:
-        if i == 5:  counter[0] += 1
+        if i == 5:
+            counter[0] += 1
         elif i == 10:
             counter[1] += 1
             counter[0] -= 1
         else:
             counter[2] += 1
-            if counter[1] > 0:  counter[1] -= 1
+            if counter[1] > 0:
+                counter[1] -= 1
             else:
                 counter[0] -= 2
 
-        if counter[0] < 0 or counter[1] < 0:    flag = True
+        if counter[0] < 0 or counter[1] < 0:
+            flag = True
 
     print("NO") if flag else print("YES")

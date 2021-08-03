@@ -2,7 +2,7 @@
 n = int(input())
 
 arr = list(map(int, input().split()))
-arr = list([x%2 for x in arr])
+arr = list([x % 2 for x in arr])
 
 stack = []
 
@@ -20,4 +20,3 @@ if len(stack) == 0 or len(stack) == 1:
 
 else:
     print("NO")
-

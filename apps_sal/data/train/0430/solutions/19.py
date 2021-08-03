@@ -6,4 +6,4 @@ class Solution(object):
             new = res - prev[c]
             res += new
             prev[c] += new
-        return (res - 1) % (10**9 + 7)  
+        return (res - 1) % (10**9 + 7)

@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, k = map(int, input().split())
     ch = [i + 1 for i in range(n)]
@@ -33,12 +34,16 @@ def solve():
 
     print(*ans)
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

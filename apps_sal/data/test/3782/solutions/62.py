@@ -1,5 +1,5 @@
 # 解説AC
-N,K,Q = map(int, input().split())
+N, K, Q = map(int, input().split())
 A = [int(i) for i in input().split()]
 
 ans = float("inf")
@@ -23,7 +23,7 @@ for i in range(N):
         can += tmp[:max(0, L - K + 1)]
 
         left = right + 1
-    
+
     # Q番目に小さいものがYの最小値
     can.sort()
     if len(can) >= Q:

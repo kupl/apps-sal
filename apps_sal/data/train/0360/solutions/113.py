@@ -11,16 +11,17 @@ class Solution:
                     if(weights[i] > capacity):
                         return False
                     c -= weights[i]
-                    i+=1
+                    i += 1
                 else:
                     c = capacity
                     d += 1
             return False
-        l=0; r=max(weights)*len(weights)
-        while(l<r):
-            mid = l + (r-l)//2
+        l = 0
+        r = max(weights) * len(weights)
+        while(l < r):
+            mid = l + (r - l) // 2
             if(check(mid, D)):
                 r = mid
             else:
-                l = mid+1
+                l = mid + 1
         return l

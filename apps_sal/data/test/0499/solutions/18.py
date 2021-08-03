@@ -1,5 +1,6 @@
 from collections import namedtuple
 
+
 def __starting_point():
 
     n = int(input())
@@ -16,7 +17,7 @@ def __starting_point():
         elif card == "B":
             b += 1
 
-    #print(r,g,b)
+    # print(r,g,b)
 
     colornum = 0
     if r:
@@ -68,4 +69,6 @@ def __starting_point():
             res = "B"
 
     print(res)
+
+
 __starting_point()

@@ -34,7 +34,8 @@ class UFSet:
 
     def union(self, x, y):
         root_x, root_y = self.find(x), self.find(y)
-        if root_x == root_y: return
+        if root_x == root_y:
+            return
         self.dp[root_x] += self.dp[root_y]
         self.dp[root_y] = root_x
 
@@ -58,5 +59,3 @@ class Solution:
             for i, j in zip(group, sort_group):
                 ret[i] = j
         return ''.join(ret)
-
-

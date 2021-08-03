@@ -1,25 +1,25 @@
 class Solution:
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         memo = {}
-        return self.helper(0,None,arr,memo)
-        
-    def helper(self,index,notAllowed,arr,memo):
+        return self.helper(0, None, arr, memo)
+
+    def helper(self, index, notAllowed, arr, memo):
         if (index == len(arr)):
             return 0
-        elif (index,notAllowed) in memo:
-            return memo[(index,notAllowed)]
+        elif (index, notAllowed) in memo:
+            return memo[(index, notAllowed)]
         else:
-            maxOne,maxTwo = self.getMaxTwo(notAllowed,arr[index])
-            useOne = arr[index][maxOne] + self.helper(index + 1,maxOne,arr,memo)
-            useTwo = arr[index][maxTwo] + self.helper(index + 1,maxTwo,arr,memo)
-            res = min(useOne,useTwo)
-            memo[(index,notAllowed)] = res
+            maxOne, maxTwo = self.getMaxTwo(notAllowed, arr[index])
+            useOne = arr[index][maxOne] + self.helper(index + 1, maxOne, arr, memo)
+            useTwo = arr[index][maxTwo] + self.helper(index + 1, maxTwo, arr, memo)
+            res = min(useOne, useTwo)
+            memo[(index, notAllowed)] = res
             return res
-                
-    def getMaxTwo(self,blocked,arr):
+
+    def getMaxTwo(self, blocked, arr):
         minOne = None
         minIndex = None
-        for i in range (len(arr)):
+        for i in range(len(arr)):
             if (i == blocked):
                 continue
             else:
@@ -29,7 +29,7 @@ class Solution:
                     minIndex = i
         minTwo = None
         minIndexTwo = None
-        for j in range (len(arr)):
+        for j in range(len(arr)):
             if (j == blocked) or (j == minIndex):
                 continue
             else:
@@ -37,6 +37,4 @@ class Solution:
                 if (minTwo == None) or (curr_num < minTwo):
                     minTwo = curr_num
                     minIndexTwo = j
-        return minIndex,minIndexTwo
-        
-
+        return minIndex, minIndexTwo

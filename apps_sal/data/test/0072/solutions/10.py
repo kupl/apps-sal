@@ -1,5 +1,6 @@
 import itertools
 
+
 def beauty(string, n):
     string = sorted(string)
     maxlen = 0
@@ -9,17 +10,15 @@ def beauty(string, n):
         return maxlen - 1
     else:
         return min(len(string), n + maxlen)
-    
+
 
 n = int(input())
 li = []
 li.append((beauty(input(), n), 'Kuro'))
 li.append((beauty(input(), n), 'Shiro'))
 li.append((beauty(input(), n), 'Katie'))
-li.sort(reverse = True)
+li.sort(reverse=True)
 if li[0][0] == li[1][0]:
     print('Draw')
 else:
     print(li[0][1])
-
-

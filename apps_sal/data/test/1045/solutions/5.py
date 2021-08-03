@@ -6,4 +6,3 @@ for i in range(10000):
     if s > n:
         print(i - 1)
         return
-

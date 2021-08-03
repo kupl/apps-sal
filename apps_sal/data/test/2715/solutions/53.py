@@ -7,7 +7,7 @@ V = [49 + K // 50 for _ in range(N)]
 
 K %= 50
 for i in range(K):
-    V[i] += N+1
+    V[i] += N + 1
     for j in range(N):
         V[j] -= 1
 

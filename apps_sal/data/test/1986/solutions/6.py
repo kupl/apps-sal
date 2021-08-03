@@ -1,3 +1,6 @@
+import doctest
+
+
 def value(t, f, k):
     if t > k:
         return (f - (t - k))
@@ -8,7 +11,7 @@ def value(t, f, k):
 def main():
     first_line = input()
     first_line = first_line.split()
-    
+
     n = int(first_line[0])
     k = int(first_line[1])
 
@@ -28,14 +31,9 @@ def main():
         if val > maximum:
             maximum = val
             maximum_index = val
-            
+
     print(maximum)
-    
-        
 
-    
 
-import doctest
 doctest.testmod()
-main()   
-
+main()

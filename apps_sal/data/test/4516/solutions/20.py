@@ -27,8 +27,8 @@ for i in range(n + 2):
     d += s[i]
     ans[i] = d
 
-a = defaultdict(lambda : 0, {})
-b = defaultdict(lambda : [], {})
+a = defaultdict(lambda: 0, {})
+b = defaultdict(lambda: [], {})
 
 for i in range(m - 1):
     if v[i] == v[i + 1]:
@@ -42,8 +42,8 @@ for i in range(1, n + 1):
     q = a[i] * (i - 1)
     q = len(b[i]) * i
     q = 2 * sum(b[i])
-    print(p -
-          ans[i] +
-          a[i] * (i - 1) -
-          len(b[i]) * i +
-          2 * sum(b[i]), end=' ')
+    print(p
+          - ans[i]
+          + a[i] * (i - 1)
+          - len(b[i]) * i
+          + 2 * sum(b[i]), end=' ')

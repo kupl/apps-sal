@@ -7,7 +7,6 @@ ans = 0
 for i in range(n):
     summ2 += ai[i]
     if summ2 >= summ:
-        ans = i+1
+        ans = i + 1
         break
 print(ans)
-

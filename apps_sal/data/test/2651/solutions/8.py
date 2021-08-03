@@ -19,4 +19,3 @@ for i in range(N - 1):
     ans %= MOD
 
 print(ans)
-

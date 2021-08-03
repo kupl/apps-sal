@@ -17,4 +17,3 @@ while h:
         for v in g[u]:
             heappush(h, v)
 print(*a)
-

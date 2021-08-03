@@ -1,5 +1,5 @@
 def main():
-    F = lambda : map(int, input().split())
+    def F(): return map(int, input().split())
 
     n = int(input())
     groups = [list(F())[::-1] + [i] for i in range(n)]
@@ -11,20 +11,21 @@ def main():
     groups = sorted(groups)
 
     count = 0
-    SUM   = 0
-    res   = []
-    for i in range(n-1, -1, -1):
+    SUM = 0
+    res = []
+    for i in range(n - 1, -1, -1):
         for j in range(len(tables)):
             if tables:
                 if groups[i][1] <= tables[j][0]:
                     res.append([groups[i][2], tables[j][1]])
                     count += 1
-                    SUM   += groups[i][0]
+                    SUM += groups[i][0]
                     tables.pop(j)
                     break
             else:
                 return [count, SUM, res]
     return [count, SUM, res]
+
 
 answer = main()
 

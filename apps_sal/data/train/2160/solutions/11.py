@@ -18,7 +18,8 @@ if s % k == 0:
             res = []
             break
 
-    if curr != 0: res = []
+    if curr != 0:
+        res = []
 
 if len(res) != k:
     print('No')

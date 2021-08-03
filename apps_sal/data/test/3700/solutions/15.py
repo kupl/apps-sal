@@ -6,4 +6,3 @@ else:
         print(n - k // 2)
     else:
         print(0)
-

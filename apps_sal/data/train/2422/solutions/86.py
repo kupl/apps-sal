@@ -7,4 +7,3 @@ class Solution:
                 if cache > prod:
                     prod = cache
         return prod
-

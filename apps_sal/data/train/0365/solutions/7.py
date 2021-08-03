@@ -1,8 +1,5 @@
 class Solution:
-    
-    
 
-    
     def uniqueLetterString(self, s: str) -> int:
         result = 0
         mat = collections.defaultdict(list)
@@ -11,7 +8,7 @@ class Solution:
                 mat[ch].append(i)
             else:
                 mat[ch] = [i]
-                
+
         def helperF(ranges, n):
             res = 0
             i = 0
@@ -30,8 +27,7 @@ class Solution:
                 res += left * right
                 i += 1
             return res
-                
-                
+
         for ch in mat:
             result += helperF(mat[ch], len(s))
         return result

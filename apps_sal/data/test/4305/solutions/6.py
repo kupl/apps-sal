@@ -6,4 +6,3 @@ while(H > 0):
     count = count + 1
 
 print(count)
-

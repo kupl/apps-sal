@@ -10,4 +10,3 @@ while p < c:
     ans += 1
 
 print(ans)
-

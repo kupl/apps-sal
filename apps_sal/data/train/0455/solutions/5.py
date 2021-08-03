@@ -21,6 +21,7 @@ class Solution:
         # DETECT CYCLES IN GRAPH
         visited = set()
         in_progress = set()
+
         def dfs(source):
             in_progress.add(source)
             for vertex in graph[source]:

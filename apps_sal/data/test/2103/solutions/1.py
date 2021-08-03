@@ -1,6 +1,9 @@
-from sys import stdin,stderr
+from sys import stdin, stderr
+
+
 def rl():
     return [int(w) for w in stdin.readline().split()]
+
 
 n, = rl()
 a = rl()
@@ -21,4 +24,3 @@ for cur in a:
         b.append(free)
         free += 1
 print(*b)
-

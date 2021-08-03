@@ -1,10 +1,10 @@
 from networkx.utils import UnionFind as UF
-n,m=map(int, input().split())
-uf=UF()
+n, m = map(int, input().split())
+uf = UF()
 for _ in range(m):
-    a,b=map(int, input().split())
+    a, b = map(int, input().split())
     uf.union(a, b)
-ans=1
+ans = 1
 for i in uf.to_sets():
-    ans=max(ans,len(i))
+    ans = max(ans, len(i))
 print(ans)

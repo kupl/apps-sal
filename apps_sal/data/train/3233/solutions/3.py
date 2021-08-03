@@ -8,5 +8,3 @@ def robot_transfer(matrix, k):
                 back += ((i, j) == (x, y))
             result += ((i, j) == (x, y) and back == 1)
     return result
-
-

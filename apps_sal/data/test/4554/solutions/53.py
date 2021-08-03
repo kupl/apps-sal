@@ -1,9 +1,9 @@
-w,a,b = map(int,input().split())
+w, a, b = map(int, input().split())
 
-min_side = min(a,b)
-max_side = max(a,b)
+min_side = min(a, b)
+max_side = max(a, b)
 
 t = max_side - (min_side + w)
-t = max(t,0)
+t = max(t, 0)
 
 print(t)

@@ -1,8 +1,9 @@
 from itertools import permutations, chain
 
-def solve_puzzle (clues):
+
+def solve_puzzle(clues):
     size = 4
-    for poss in permutations(permutations(list(range(1, size+1)), size), size):
+    for poss in permutations(permutations(list(range(1, size + 1)), size), size):
         for i in range(size):
             if len(set(row[i] for row in poss)) < size:
                 break
@@ -16,9 +17,8 @@ def solve_puzzle (clues):
                     continue
                 visible = 0
                 for j, v in enumerate(row):
-                    visible += v >= max(row[:j+1])
+                    visible += v >= max(row[:j + 1])
                 if visible != clues[i]:
                     break
             else:
                 return poss
-

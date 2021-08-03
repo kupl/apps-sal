@@ -14,11 +14,13 @@ if is_zero:
     print('0')
     return
 
+
 def are_all_zero(s):
     for c in s:
         if c != '0':
             return False
     return True
+
 
 times = 0
 ugly = '1'
@@ -27,6 +29,5 @@ for i in l:
         times += len(i) - 1
     else:
         ugly = i
-answer = ugly + '0'*times
+answer = ugly + '0' * times
 print(answer)
-

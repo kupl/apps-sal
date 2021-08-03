@@ -5,9 +5,9 @@ anss = [0, 1, 3, 7, 15, 28, 49, 80, 125, 191, 272, 369, 492, 640, 822, 1026, 127
 
 
 t = int(input())
-for _ in range(0,t):
+for _ in range(0, t):
     n = int(input())
-    print(*ans[1:n+1])
+    print(*ans[1:n + 1])
     print(anss[n])
 
 

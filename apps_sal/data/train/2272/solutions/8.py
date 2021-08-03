@@ -18,18 +18,17 @@ def main():
     for loop in range(28, -1, -1):
         j = pow(2, loop)
         k = (xor & j) // j
-        temp = br(b, j-1)
+        temp = br(b, j - 1)
         b[temp:] -= j
         b = np.sort(b)
-        temp = br(a, j-1)
+        temp = br(a, j - 1)
         k += sum((a & j) // j)
         a[temp:] -= j
-        x = (k+br(b, 0))*m % 2
+        x = (k + br(b, 0)) * m % 2
         a = np.sort(a)
-        x += np.sum(np.searchsorted(b, a+1))
-        ans += (x % 2)*j
+        x += np.sum(np.searchsorted(b, a + 1))
+        ans += (x % 2) * j
     print(ans)
 
 
 main()
-

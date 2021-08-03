@@ -6,6 +6,7 @@ A_dict = defaultdict(int)
 for i in A:
     A_dict[i] += 1
 
+
 def bitCount(x):
     cur = 0
     while x > 0:
@@ -13,6 +14,7 @@ def bitCount(x):
             cur += 1
         x //= 2
     return cur
+
 
 mask = []
 for i in range(2**15):
@@ -23,10 +25,9 @@ for i in range(2**15):
 ans = 0
 for i in A_dict:
     for j in mask:
-        if i^j in A_dict:
-            if i^j == i:
-                ans += A_dict[i] * (A_dict[i]-1)
+        if i ^ j in A_dict:
+            if i ^ j == i:
+                ans += A_dict[i] * (A_dict[i] - 1)
             else:
-                ans += A_dict[i] * A_dict[i^j]
-print(ans//2)
-
+                ans += A_dict[i] * A_dict[i ^ j]
+print(ans // 2)

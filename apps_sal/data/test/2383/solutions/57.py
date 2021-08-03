@@ -1,5 +1,5 @@
 N = int(input())
-lsa = list(map(int,input().split()))
+lsa = list(map(int, input().split()))
 a = 1
 for i in range(N):
     if lsa[i] == a:
@@ -7,5 +7,5 @@ for i in range(N):
 if a == 1:
     ans = -1
 else:
-    ans = N-(a-1)
+    ans = N - (a - 1)
 print(ans)

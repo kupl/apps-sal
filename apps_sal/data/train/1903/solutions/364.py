@@ -1,8 +1,8 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         distances, n = {i: [] for i in range(len(points))}, len(points)
-        for i in range(n-1):
-            for j in range(i+1, n):
+        for i in range(n - 1):
+            for j in range(i + 1, n):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 distances[i].append((dist, j))
                 distances[j].append((dist, i))
@@ -20,11 +20,6 @@ class Solution:
                 count += 1
                 for x in distances[j]:
                     heapq.heappush(heap, x)
-            if count == n -1: break
+            if count == n - 1:
+                break
         return ans
-            
-    
-                
-        
-        
-

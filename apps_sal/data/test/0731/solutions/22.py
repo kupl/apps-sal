@@ -7,16 +7,18 @@ def fhelp(a):
             break
         res += len(str(s)) * k * (f - s)
         s *= 10
-        f *= 10  
+        f *= 10
     res += len(str(a)) * k * (a - s + 1)
     return res
 
+
 def f(a, b):
     return fhelp(b) - fhelp(a - 1)
-    
+
+
 w, m, k = map(int, input().split())
 w += fhelp(m - 1)
-#print(fhelp(10))
+# print(fhelp(10))
 summ = 0
 power = 1
 count = 9

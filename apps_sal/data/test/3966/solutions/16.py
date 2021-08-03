@@ -17,5 +17,5 @@ while(mv > 0):
     k = int(k - in_str[mv])
     result += k
     mv -= 1
-    
-print (result)
+
+print(result)

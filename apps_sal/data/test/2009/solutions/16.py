@@ -13,6 +13,7 @@ dat = [input() for _ in range(n)]
 bfs1 = [-1] * ((n + 1) * (n + 1))
 bfs2 = [-1] * ((n + 1) * (n + 1))
 
+
 def bfs(res, ys, xs):
     nonlocal dat, n
     d = deque()
@@ -38,6 +39,7 @@ def bfs(res, ys, xs):
         d.append([y - 1, x + 0, pr])
         d.append([y + 1, x + 0, pr])
 
+
 bfs(bfs1, y1, x1)
 bfs(bfs2, y2, x2)
 
@@ -47,8 +49,10 @@ if bfs1[y2 * n + x2] != -1:
 
 best = 1000000000000
 
+
 def pow2(x):
     return x * x
+
 
 for ys in range(n):
     for xs in range(n):
@@ -66,4 +70,3 @@ for ys in range(n):
                 best = min(best, price)
 
 print(best)
-

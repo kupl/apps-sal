@@ -11,7 +11,7 @@ class Solution:
                     curr[token] = {}
                 curr = curr[token]
             curr['#'] = True
- 
+
         paths = set(folder)
         for path in folder:
             curr = trie
@@ -19,7 +19,5 @@ class Solution:
                 if '#' in curr:
                     paths.remove(path)
                     break
-                curr = curr[token]    
-        return list(paths) 
-                
-
+                curr = curr[token]
+        return list(paths)

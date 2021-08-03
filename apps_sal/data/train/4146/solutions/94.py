@@ -5,15 +5,14 @@ def is_sorted_and_how(arr):
             if n < last:
                 return "no"
             last = n
-                
+
         return "yes, ascending"
-        
+
     else:
         last = arr[0]
         for n in arr[1:]:
             if n > last:
                 return "no"
             last = n
-                
-        return "yes, descending"
 
+        return "yes, descending"

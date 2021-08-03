@@ -47,7 +47,7 @@ class BIT:
         while delta - self.low_bit(delta):
             delta -= self.low_bit(delta)
 
-        while delta:            
+        while delta:
             m = cur_index + delta
             if m < len(self.nums):
                 sm = cur_sum + self.nums[m]
@@ -58,7 +58,7 @@ class BIT:
 
 
 n = int(input())
-bit = BIT(list(range(n+1)))
+bit = BIT(list(range(n + 1)))
 
 ans = [0 for _ in range(n)]
 nums = list(map(int, input().split()))
@@ -67,4 +67,3 @@ for i in range(n - 1, -1, -1):
     bit.update(index, -index)
     ans[i] = index
 print(*ans)
-

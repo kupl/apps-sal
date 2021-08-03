@@ -10,4 +10,3 @@ for i in range(h, -1, -1):
         w -= u2
     w = max(w, 0)
 print(w)
-

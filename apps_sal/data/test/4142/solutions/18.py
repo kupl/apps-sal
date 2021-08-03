@@ -7,4 +7,3 @@ if all([n == "R" or n == "U" or n == "D" for n in odd]) and all([n == "L" or n =
     print("Yes")
 else:
     print("No")
-

@@ -23,10 +23,11 @@ def update_range(r, l):
     st = r[0] if l else r[0] + w
     return st, st + w - 1
 
+
 #print("X ", x)
 while range_width(range_v) != 0:
     left = not left
-    #print(range_v)
+    # print(range_v)
 
     tmp = range_v
     if in_range(range_v, x):

@@ -5,7 +5,7 @@ class Solution:
         for row in arr[1:]:
             newdp = row[:]
             for i in range(n):
-                temp = dp[:i]+dp[i+1:]
-                newdp[i]+=min(temp)
+                temp = dp[:i] + dp[i + 1:]
+                newdp[i] += min(temp)
             dp = newdp
         return min(dp)

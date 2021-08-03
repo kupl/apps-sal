@@ -1,5 +1,5 @@
-a,b,c = [int(x) for x in input().split()]
+a, b, c = [int(x) for x in input().split()]
 if b - a == c - b:
-  print("YES")
+    print("YES")
 else:
-  print("NO")
+    print("NO")

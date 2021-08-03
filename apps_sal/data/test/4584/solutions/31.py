@@ -23,4 +23,3 @@ for i in range(1, n):
 res = "\n".join([str(len(r)) for r in tmp[1:]])
 
 print(res)
-

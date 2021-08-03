@@ -1,6 +1,5 @@
-a,b=list(map(int,input().split()))
-if a <= 2*b:
+a, b = list(map(int, input().split()))
+if a <= 2 * b:
     print((0))
 else:
-    print((a-2*b))
-
+    print((a - 2 * b))

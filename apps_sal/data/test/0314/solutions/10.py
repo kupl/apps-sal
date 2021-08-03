@@ -12,9 +12,8 @@ while i < n:
         tot += 8
         remain += a[i] - 8
     if tot >= k:
-        print(i+1)
+        print(i + 1)
         break
     i += 1
 if i == n:
     print(-1)
-

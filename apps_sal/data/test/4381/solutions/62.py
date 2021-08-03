@@ -7,7 +7,6 @@
 #a = [list(input()) for _ in range(n)]
 #a = [input() for _ in range(n)]
 
-x,y = list(map(int, input().split()))
+x, y = list(map(int, input().split()))
 
-print((x+y//2))
-
+print((x + y // 2))

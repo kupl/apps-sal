@@ -1,7 +1,9 @@
 n, m = map(int, input().split())
 
+
 def dist(a, b):
     return min(abs(a - b), n - abs(a - b))
+
 
 a, b = n, 1
 S = set()

@@ -1,7 +1,7 @@
 class Solution:
     def repeatedNTimes(self, A: List[int]) -> int:
         size = len(A)
-        n = size/2
+        n = size / 2
         appear = {}
         for i in range(size):
             if A[i] not in list(appear.keys()):
@@ -12,5 +12,3 @@ class Solution:
         for i in list(appear.items()):
             if i[1] == n:
                 return i[0]
-    
-

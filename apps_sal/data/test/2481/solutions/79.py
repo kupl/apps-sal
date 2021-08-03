@@ -4,7 +4,7 @@
 # In[1]:
 
 
-H,W = list(map(int, input().split()))
+H, W = list(map(int, input().split()))
 c = []
 for _ in range(10):
     c.append(list(map(int, input().split())))
@@ -21,7 +21,7 @@ def wf_func(mat):
     for k in range(10):
         for i in range(10):
             for j in range(10):
-                dist[i][j] = min(dist[i][j], dist[i][k]+dist[k][j])
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
     return dist
 
 
@@ -38,8 +38,3 @@ print(ans)
 
 
 # In[ ]:
-
-
-
-
-

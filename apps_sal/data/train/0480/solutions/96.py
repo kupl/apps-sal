@@ -11,6 +11,5 @@ class Solution:
                 right = 0 if idx == len(dp) - 1 else dp[idx + 1]
                 dp[idx] += left + right
                 left = temp
-            
-        return dp[0] % (10**9 + 7)
 
+        return dp[0] % (10**9 + 7)

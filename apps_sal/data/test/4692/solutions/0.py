@@ -1,3 +1,3 @@
-time=int(input())
-Ans=48-time
+time = int(input())
+Ans = 48 - time
 print(Ans)

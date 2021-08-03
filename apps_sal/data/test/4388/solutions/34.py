@@ -6,4 +6,3 @@ for i in range(3):
     else:
         ans += '9'
 print(ans)
-

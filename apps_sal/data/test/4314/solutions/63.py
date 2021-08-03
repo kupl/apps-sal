@@ -15,8 +15,8 @@ for i in range(w):
     if cnt == h:
         vdel.append(i)
 i = 0
-lens = len(sdel)-1
-h -= lens+1
+lens = len(sdel) - 1
+h -= lens + 1
 while i <= lens:
     del a[sdel[lens]]
     lens -= 1

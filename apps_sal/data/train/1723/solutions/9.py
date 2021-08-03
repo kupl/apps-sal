@@ -29,9 +29,9 @@ class Line(Segment):
         return self.cp
 
     def point_at(self, t):
-        x = (1-t)*self.P0[0] + t*self.P1[0]
-        y = (1-t)*self.P0[1] + t*self.P1[1]
-        return (x,y)
+        x = (1 - t) * self.P0[0] + t * self.P1[0]
+        y = (1 - t) * self.P0[1] + t * self.P1[1]
+        return (x, y)
 
     def sub_segment(self, t):
         return Line(*self.P0, *self.point_at(t))
@@ -48,9 +48,9 @@ class Quad(Segment):
     @property
     def control_points(self):
         return self.cp
-        
+
     def get_Q(self, t):
-        return (Line(*self.P[0], *self.P[1]).point_at(t), 
+        return (Line(*self.P[0], *self.P[1]).point_at(t),
                 Line(*self.P[1], *self.P[2]).point_at(t))
 
     def point_at(self, t):
@@ -75,7 +75,7 @@ class Cubic(Segment):
     @property
     def control_points(self):
         return self.cp
-        
+
     def get_Q(self, t):
         return (Line(*self.P[0], *self.P[1]).point_at(t),
                 Line(*self.P[1], *self.P[2]).point_at(t),
@@ -90,5 +90,3 @@ class Cubic(Segment):
         R = Line(*Q[0], *Q[1]).point_at(t)
         B = self.point_at(t)
         return Cubic(*self.P[0], *Q[0], *R, *B)
-        
-

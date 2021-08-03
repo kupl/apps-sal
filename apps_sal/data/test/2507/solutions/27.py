@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def is_ok(mid, k):
     s = a - mid // f
     s = s[s > 0].sum()
@@ -7,6 +8,7 @@ def is_ok(mid, k):
         return True
     else:
         return False
+
 
 n, k = map(int, input().split())
 a = [int(i) for i in input().split()]
@@ -16,7 +18,7 @@ f.sort(reverse=True)
 a = np.array(a)
 f = np.array(f)
 
-l, r = -1, 10**12 # l:ng, r:ok
+l, r = -1, 10**12  # l:ng, r:ok
 while l + 1 < r:
     mid = (l + r) // 2
     if is_ok(mid, k):

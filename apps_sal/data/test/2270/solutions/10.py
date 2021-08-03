@@ -1,10 +1,10 @@
 import sys
 
-I = [0 for i in range(10**5+1)]
+I = [0 for i in range(10**5 + 1)]
 y2, y4, y6, y8 = 0, 0, 0, 0
 n = int(sys.stdin.readline().strip())
 a = list(map(int, sys.stdin.readline().strip().split()))
-for i in range (0, n):
+for i in range(0, n):
     I[a[i]] = I[a[i]] + 1
     if I[a[i]] == 2:
         y2 = y2 + 1

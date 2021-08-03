@@ -1,5 +1,6 @@
 def avoid_obstacles(arr):
-    if min(arr) == 1 and max(arr) == 100: return 101
+    if min(arr) == 1 and max(arr) == 100:
+        return 101
     landed = True
     for max_jump in range(2, 100):
         n = max_jump

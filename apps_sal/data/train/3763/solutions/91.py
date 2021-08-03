@@ -1,4 +1,4 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     x = str(x)
     y = str(y)
     op = str(op)
@@ -15,4 +15,3 @@ def calculator(x,y,op):
             return 'unknown value'
     else:
         return 'unknown value'
-

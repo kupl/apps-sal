@@ -6,4 +6,3 @@ def hello(name=None):
     else:
         name = name.capitalize()
         return 'Hello, ' + name + '!'
-

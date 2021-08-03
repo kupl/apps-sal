@@ -13,7 +13,7 @@ for i in range(n):
             print('{} {}'.format(i + 1, x + 1))
             print('{} {}'.format(dic[a][0], dic[a][1]))
             return
-        dic.update({a: (i+1, x+1)})
+        dic.update({a: (i + 1, x + 1)})
         t.append(a)
     for x in set(t):
         cl.add(x)

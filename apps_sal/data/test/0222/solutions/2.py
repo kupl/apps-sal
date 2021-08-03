@@ -17,4 +17,3 @@ for x in range(1, 2 ** l):
     if sq == int(sq):
         res = min(res, l - len(s))
 print(res if res != 1000000 else -1)
-

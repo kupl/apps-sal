@@ -3,6 +3,8 @@ def NOD(x, y):
         x = x % y
         x, y = y, x
     return x
+
+
 def main():
     l, r = map(int, input().split())
     for a in range(l, r - 1):
@@ -12,4 +14,6 @@ def main():
                     print(a, b, c)
                     return
     print(-1)
+
+
 main()

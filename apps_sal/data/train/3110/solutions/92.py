@@ -1,1 +1,1 @@
-two_decimal_places = lambda q: round(q,2)
+def two_decimal_places(q): return round(q, 2)

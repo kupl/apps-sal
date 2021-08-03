@@ -16,4 +16,3 @@ for c in cs:
         n += 1
 
 print(n)
-

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import heapq
-#import
+# import
 #import math
 #import numpy as np
 N, M = list(map(int, input().split()))
@@ -18,4 +18,3 @@ for i in range(M):
     heapq.heappush(A, int(q / 2))
 
 print((sum(A) * (-1)))
-

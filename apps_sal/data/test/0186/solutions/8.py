@@ -1,6 +1,6 @@
 def check(x):
     return max(n - (x - 2) // 6 - (x - 4) // 6 - 2, 0) + \
-           max(m - (x - 3) // 6 - 1, 0) <= x // 6
+        max(m - (x - 3) // 6 - 1, 0) <= x // 6
 
 
 n, m = list(map(int, input().split()))
@@ -12,4 +12,3 @@ while left + 1 < right:
     else:
         left = middle
 print(right)
-

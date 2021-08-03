@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n = int(input())
 unset = -1000000
 bs = [[0, 0]] + [list(R()) for i in range(n)]

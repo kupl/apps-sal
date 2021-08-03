@@ -3,4 +3,3 @@ def convert_to_mixed_numeral(parm):
     d, r = divmod(abs(a), b)
     s = (0 < a) - (a < 0)
     return parm if d == 0 else ('{}' + ' {}/{}' * (r != 0)).format(d * s, r, b)
-

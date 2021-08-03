@@ -2,9 +2,11 @@ import sys
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
+
+def ni(): return int(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+
 
 sys.setrecursionlimit(100005)
 
@@ -22,7 +24,8 @@ def dfs(cur, par, k, g):
     ret = 1
     nc = 0 if par == -1 else 1
     for e in g[cur]:
-        if e == par: continue
+        if e == par:
+            continue
         nc += 1
         ret = ret * (k - nc) % mod
         ret = ret * dfs(e, cur, k, g) % mod
@@ -30,4 +33,3 @@ def dfs(cur, par, k, g):
 
 
 print((dfs(0, -1, k, g) * k % mod))
-

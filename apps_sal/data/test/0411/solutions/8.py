@@ -3,4 +3,3 @@ if r == b:
     print('Yes')
 else:
     print('No')
-

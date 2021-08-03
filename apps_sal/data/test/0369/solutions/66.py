@@ -25,5 +25,4 @@ while pos != n:
 if cnt != 0:
     lst.append(cnt)
 for num in lst[::-1]:
-    print(num, end = " ")
-
+    print(num, end=" ")

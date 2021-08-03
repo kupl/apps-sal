@@ -3,5 +3,5 @@ def remove_url_anchor(url):
     for i in url:
         if i == "#":
             break
-        a.append(i)# TODO: complete
+        a.append(i)  # TODO: complete
     return "".join(a)

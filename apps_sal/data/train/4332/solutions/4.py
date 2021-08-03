@@ -11,6 +11,5 @@ def langtons_ant(n):
             blacks.add((x, y))
             dx, dy = -dy, dx
         x, y = x + dx, y + dy
-        
-    
+
     return len(blacks) + k * 12

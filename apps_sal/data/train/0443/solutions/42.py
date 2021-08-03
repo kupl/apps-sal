@@ -15,5 +15,5 @@ class Solution:
                         teams += 1
                     if first < second and second < third:
                         teams += 1
-                        
+
         return teams

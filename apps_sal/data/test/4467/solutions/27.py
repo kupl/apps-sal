@@ -1,7 +1,7 @@
 n = int(input())
-red  = [tuple(map(int, input().split())) for _ in range(n)]
+red = [tuple(map(int, input().split())) for _ in range(n)]
 blue = [tuple(map(int, input().split())) for _ in range(n)]
-red.sort(key=lambda x:-x[1])
+red.sort(key=lambda x: -x[1])
 blue.sort()
 count = 0
 for xb, yb in blue:
@@ -11,4 +11,3 @@ for xb, yb in blue:
             count += 1
             break
 print(count)
-

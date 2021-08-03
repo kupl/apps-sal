@@ -14,4 +14,3 @@ for i, a in enumerate(A):
     tmp += bisect.bisect_right(B, remain) - 1
     ans = max(ans, tmp)
 print(ans)
-

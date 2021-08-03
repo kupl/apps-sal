@@ -1,3 +1,3 @@
-a,b = input().split()
+a, b = input().split()
 
-print(sorted([a*int(b), b*int(a)])[0])
+print(sorted([a * int(b), b * int(a)])[0])

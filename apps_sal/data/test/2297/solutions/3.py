@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    a,b = list(map(int, input().split()))
+    a, b = list(map(int, input().split()))
     a1 = a
     if a % 2 == 0:
         a1 += 1
@@ -23,5 +23,3 @@ for i in range(n):
         num = (b2 - a2) // 2 + 1
         n2 = num * (b2 + a2) // 2
     print(n + n2)
-
-

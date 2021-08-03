@@ -13,5 +13,5 @@ else:
         if SUM % K == 0:
             ans = i + 1
             break
-    
+
 print(ans)

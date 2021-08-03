@@ -13,6 +13,7 @@ class Window:
         if self.count[x] == 0:
             self.nonzero -= 1
 
+
 class Solution(object):
     def subarraysWithKDistinct(self, A, K):
         window1 = Window()

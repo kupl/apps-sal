@@ -1,7 +1,7 @@
 n = int(input())
 l = input()
 r = input()
-rr = {'?':[]}
+rr = {'?': []}
 for i in range(n):
     if r[i] in rr:
         rr[r[i]].append(i)
@@ -29,4 +29,3 @@ print(len(res))
 for i in res:
     a, b = i
     print(a + 1, b + 1)
-

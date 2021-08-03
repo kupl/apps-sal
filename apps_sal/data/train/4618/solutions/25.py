@@ -5,4 +5,3 @@ def positive_sum(arr):
             if (numb > 0):
                 sum = sum + numb
     return sum
-

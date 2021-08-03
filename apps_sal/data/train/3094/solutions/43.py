@@ -17,7 +17,3 @@ def sum_array(arr):
                 for i in arr:
                     total += i
                 return total
-
-
-        
-

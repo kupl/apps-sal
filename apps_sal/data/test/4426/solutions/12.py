@@ -8,4 +8,4 @@ days = ["SUN",
 
 S = input()
 
-print(7-days.index(S))
+print(7 - days.index(S))

@@ -1,7 +1,8 @@
 import functools
 
+
 @functools.lru_cache(None)
-def is_prime(n):    
+def is_prime(n):
     if n < 4:
         return True
 
@@ -10,16 +11,16 @@ def is_prime(n):
             return False
     return True
 
+
 def gap(g, m, n):
     start = 0
-    
+
     if m % 2 == 0:
         m += 1
-    
+
     for num in range(m, n + 1, 2):
         if is_prime(num):
             if start and num - start == g:
                 return [start, num]
-            
-            start = num
 
+            start = num

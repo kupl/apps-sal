@@ -12,4 +12,3 @@ for i in range(n):
         else:
             print(a // 2)
         foc ^= 1
-

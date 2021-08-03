@@ -1,5 +1,5 @@
 v = []
-n,k = map(int, input().split())
+n, k = map(int, input().split())
 s = 0
 v = [int(x) for x in input().split()]
 s = sum(v)
@@ -27,4 +27,3 @@ else:
         print('Yes')
         for i in range(len(w)):
             print(w[i], end=' ')
-

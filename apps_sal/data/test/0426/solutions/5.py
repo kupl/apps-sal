@@ -27,4 +27,3 @@ if K > 0:
             S[i] = "0"
 
 print("".join(S))
-

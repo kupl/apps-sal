@@ -24,4 +24,3 @@ while queue:
         queue.append(nei)
 
 print(max(deep.values()) + 1)
-

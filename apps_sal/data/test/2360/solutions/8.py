@@ -6,7 +6,7 @@ for _ in range(t):
     timearr = [0 for i in range(n)]
     checked = 0
     currtime = 1
-    arr.sort(key=lambda a:a[0])
+    arr.sort(key=lambda a: a[0])
     while checked < n:
         if arr[checked][0] > currtime:
             currtime += 1
@@ -17,8 +17,3 @@ for _ in range(t):
             currtime += 1
             checked += 1
     print(' '.join(str(i) for i in timearr))
-
-
-
-
-

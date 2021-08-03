@@ -7,4 +7,3 @@ for x in d:
 
 for i in range(n):
     print(d[i] - (min(d[i], A - n + 1) - max(A - s + d[i], 1) + 1), end=' ')
-

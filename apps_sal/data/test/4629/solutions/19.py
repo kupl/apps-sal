@@ -22,6 +22,7 @@ for i in perms:
 numbers.append(3**9)
 numbers.sort()
 
+
 def find(l, r, item):
     mid = l + (r - l) // 2
 
@@ -30,12 +31,13 @@ def find(l, r, item):
             return item
 
         if numbers[mid] > item:
-            return find(l, mid-1, item)
+            return find(l, mid - 1, item)
 
         else:
-            return find(mid+1, r, item)
+            return find(mid + 1, r, item)
     else:
         return numbers[l]
+
 
 q = int(input())
 l_numbers = len(numbers)
@@ -44,4 +46,3 @@ for _ in range(q):
     n = int(input())
 
     print(find(0, l_numbers, n))
-

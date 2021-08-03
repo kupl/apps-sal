@@ -14,4 +14,3 @@ for i in range(len(S) - nt + 1):
         ans.append(Sa[:i] + T + Sa[i + nt:])
 ans.sort()
 print((ans[0] if ans else "UNRESTORABLE"))
-

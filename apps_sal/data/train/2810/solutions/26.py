@@ -7,4 +7,4 @@ def solve(arr):
             if el.lower()[i] == abc[i]:
                 count = count + 1
         arr2.append(count)
-    return arr2       
+    return arr2

@@ -1,5 +1,6 @@
 import itertools as it
 
+
 def equal_to_24(*numbers):
     for template in ["aZ(bX(cVd))", "(aZb)X(cVd)", "((aZb)Xc)Vd"]:
         for x in it.permutations(numbers):

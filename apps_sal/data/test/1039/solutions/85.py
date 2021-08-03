@@ -1,7 +1,7 @@
 import collections
 
 n = int(input())
-route = {i + 1 : {} for i in range(n)}
+route = {i + 1: {} for i in range(n)}
 for i in range(n - 1):
     a, b, c = map(int, input().split())
     route[a][b] = c

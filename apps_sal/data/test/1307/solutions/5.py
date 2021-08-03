@@ -1,5 +1,5 @@
 n = int(input())
-if n % 2 :
+if n % 2:
     print("Ehab")
-else :
+else:
     print("Mahmoud")

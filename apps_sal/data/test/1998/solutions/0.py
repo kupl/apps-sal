@@ -4,6 +4,7 @@ def sum_zeroth(arr):
         res += elem[0]
     return res
 
+
 n, a, b, k = list(map(int, input().split()))
 data = input()
 dist = []
@@ -35,4 +36,3 @@ for elem in dist:
 
 print(minp)
 print(' '.join(map(str, pos)))
-

@@ -13,4 +13,3 @@ for i, x in enumerate(xs):
     start = xs[i - 1]
 else:
     print(result)
-

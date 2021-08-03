@@ -10,7 +10,7 @@ check = [True] * (M + 1)
 for a in range(1, M + 1):
     if count[a] > 0 and check[a] == True:
         for k in range(2, M // a + 1):
-            check[a * k] = False      
+            check[a * k] = False
 
 ans = 0
 for i in range(N):

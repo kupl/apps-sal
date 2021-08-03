@@ -1,11 +1,13 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        uf1 = list(range(n+1))
-        uf2 = list(range(n+1))
+        uf1 = list(range(n + 1))
+        uf2 = list(range(n + 1))
+
         def find(x, uf):
             if x != uf[x]:
                 uf[x] = find(uf[x], uf)
             return uf[x]
+
         def union(x, y, uf):
             uf[find(x, uf)] = find(y, uf)
         edge_total = 0
@@ -23,7 +25,7 @@ class Solution:
             if w == 3:
                 union(v, u, uf2)
                 edge_2 += 1
-        if edge_1 < n-1:
+        if edge_1 < n - 1:
             return -1
         # make 2 next
         for w, v, u in edges:
@@ -35,8 +37,6 @@ class Solution:
             edge_2 += 1
             if w == 2:
                 edge_total += 1
-        if edge_2 < n-1:
+        if edge_2 < n - 1:
             return -1
         return len(edges) - edge_total
-        
-

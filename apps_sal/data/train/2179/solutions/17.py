@@ -6,4 +6,3 @@ for x in xs:
     if b < x < c:
         count += 1
 print(count)
-

@@ -30,7 +30,7 @@ VALUES = {
 }
 
 
-def parse_int(string):    
+def parse_int(string):
     if not string:
         return 0
 
@@ -51,7 +51,7 @@ def parse_int(string):
         factor = 1
 
     return parse_int(before) * factor + parse_int(after)
-        
+
 
 def split(string, separator):
     before, after = string.rsplit(separator, 1)

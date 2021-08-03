@@ -4,11 +4,10 @@ if u > v or (v - u) % 2:
 elif u == v == 0:
     print('0\n')
 elif u == v:
-    print('1\n%d'%u)
+    print('1\n%d' % u)
 else:
     diff = (v - u) // 2
     if (diff & u) == 0:
-        print('2\n%d %d'%(u | diff, diff))
+        print('2\n%d %d' % (u | diff, diff))
     else:
-        print('3\n%d %d %d'%(diff, diff, u))
-
+        print('3\n%d %d %d' % (diff, diff, u))

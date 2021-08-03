@@ -9,11 +9,11 @@ for n in range(N):
 div = 0
 for n in range(N):
     if A[n] == 1:
-        div += (D-1) //A[n]
+        div += (D - 1) // A[n]
     elif D % A[n] == 0:
-        div += (D-1) //A[n]
+        div += (D - 1) // A[n]
     else:
-        div += D //A[n]
+        div += D // A[n]
 
 goukei = X + div + N
 

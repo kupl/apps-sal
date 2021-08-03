@@ -9,14 +9,17 @@ if N <= 3:
     print(1)
     return
 
-fact = [1] * (N+1)
-fact_inv = [1] * (N+1)
-for i in range(1, N+1):
-    fact[i] = i * fact[i-1] % mod
-fact_inv[N] = pow(fact[N], mod-2, mod)
-for i in range(1, N+1)[::-1]:
-    fact_inv[i-1] = i * fact_inv[i] % mod
-comb = lambda n, k: fact[n] * fact_inv[k] * fact_inv[n-k] % mod
+fact = [1] * (N + 1)
+fact_inv = [1] * (N + 1)
+for i in range(1, N + 1):
+    fact[i] = i * fact[i - 1] % mod
+fact_inv[N] = pow(fact[N], mod - 2, mod)
+for i in range(1, N + 1)[::-1]:
+    fact_inv[i - 1] = i * fact_inv[i] % mod
+
+
+def comb(n, k): return fact[n] * fact_inv[k] * fact_inv[n - k] % mod
+
 
 if AB == 'A':
     if AA == 'A':

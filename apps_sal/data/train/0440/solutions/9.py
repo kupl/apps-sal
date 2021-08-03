@@ -1,17 +1,15 @@
 class Solution:
     def mirrorReflection(self, p: int, q: int) -> int:
-        m = 1 
-        n = 1 
+        m = 1
+        n = 1
         while m * p != n * q:
-            n += 1 
-            m = n * q // p 
-        ## m and n cannot be both even 
+            n += 1
+            m = n * q // p
+        # m and n cannot be both even
         if n % 2 == 0:
-            return 2 
+            return 2
         if n % 2 == 1:
             if m % 2 == 1:
-                return 1 
+                return 1
             else:
-                return 0 
-        
-
+                return 0

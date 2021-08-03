@@ -3,8 +3,10 @@ from collections import deque
 import bisect
 import heapq
 
+
 def ri():
     return int(input())
+
 
 def rl():
     return list(map(int, input().split()))
@@ -37,10 +39,7 @@ def solve():
             candidate = odd_before + even_after
         best = max(best, candidate)
 
-    print (best)
-
-
-
+    print(best)
 
 
 mode = 's'
@@ -51,4 +50,3 @@ if mode == 'T':
         solve()
 else:
     solve()
-

@@ -5,6 +5,7 @@ import sys
 # reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, line.split())) for line in sys.stdin)
 
+
 def minmaxPairs(g, costDict, n):
     G = B = 0
     s = 1
@@ -32,7 +33,8 @@ def minmaxPairs(g, costDict, n):
             G += (minComp % 2) * cost
             B += minComp * cost
         traversal.append(v)
-    return G, B 
+    return G, B
+
 
 t, = next(reader)
 for _ in range(t):
@@ -49,4 +51,3 @@ for _ in range(t):
     print(G, B)
 
 # inf.close()
-

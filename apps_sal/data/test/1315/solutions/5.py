@@ -1,4 +1,5 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
 
 n = R()[0]
 
@@ -12,4 +13,3 @@ if len(a) != n:
 else:
     for i in range(n):
         print(a[i] - i, end=' ')
-

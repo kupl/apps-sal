@@ -11,7 +11,7 @@ def solve(x, y):
         return (x, y)
     return solve(x, y)
 
+
 x, y = list(map(int, input().split()))
 ans = solve(x, y)
 print(ans[0], ans[1])
-

@@ -13,6 +13,7 @@ def cnt(n):
     else:
         return False
 
+
 n = int(input().strip())
 i = 1
 while not cnt(n + i):

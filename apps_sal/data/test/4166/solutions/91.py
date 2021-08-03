@@ -12,7 +12,7 @@ for i in range(M):
         dic[s] = c
 
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     if i not in dic:
         if i == 1:
             if N == 1:
@@ -30,8 +30,8 @@ if t == 0:
             t += 1
         else:
             ans = 0
-            for i in range(1, N+1):
-                ans += dic[i]*10**(N-i)
+            for i in range(1, N + 1):
+                ans += dic[i] * 10**(N - i)
             print(ans)
 
 if t != 0:

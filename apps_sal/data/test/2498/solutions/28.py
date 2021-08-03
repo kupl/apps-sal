@@ -9,5 +9,4 @@ for a in A:
     if lcd // a % 2 == 0:
         print((0))
         return
-print(((M//lcd+1)//2))
-
+print(((M // lcd + 1) // 2))

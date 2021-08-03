@@ -2,6 +2,7 @@ from math import factorial as f
 
 infinity = 10 ** 9 + 1
 
+
 def find_min(arr, exclude):
     min_elem = infinity
     count = 0
@@ -14,15 +15,18 @@ def find_min(arr, exclude):
     if min_elem == infinity:
         min_elem, count = 0, 0
     return (min_elem, count)
-        
-_ = int( input() )
+
+
+_ = int(input())
 arr = [int(i) for i in input().split()]
 
 a_min, a_count = find_min(arr, [])
 b_min, b_count = find_min(arr, [a_min])
 c_min, c_count = find_min(arr, [a_min, b_min])
 
-combinations = lambda n, m: f(n) // f(m) // f(n - m)
+
+def combinations(n, m): return f(n) // f(m) // f(n - m)
+
 
 mins = [a_count, b_count, c_count]
 sum_count = 0
@@ -36,8 +40,4 @@ while sum_count < 3 and i < len(mins):
     res *= combinations(mins[i], can_take)
     i += 1
 
-print (res)
-    
-
-
-
+print(res)

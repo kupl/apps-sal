@@ -17,4 +17,3 @@ def c(n, k):
 
 
 print((((pow(2, n, mod) - c(n, a) - c(n, b) - 1) % mod + mod) % mod))
-

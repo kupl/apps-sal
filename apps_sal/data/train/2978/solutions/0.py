@@ -12,4 +12,3 @@ def count_sel(nums):
         unique += 1
     maximum = max(d)
     return [total, unique, len(d[1]), [sorted(d[maximum]), maximum]]
-

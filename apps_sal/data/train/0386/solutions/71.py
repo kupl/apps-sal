@@ -6,4 +6,3 @@ class Solution:
         for _ in range(1, n):
             a, e, o, u, i = e + u + i, i + a, i, i + o, e + o
         return (a + e + o + u + i) % (10**9 + 7)
-

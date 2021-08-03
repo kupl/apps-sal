@@ -7,4 +7,3 @@ for i in range(1, n):
     else:
         v.append(a[i])
 print("NO" if len(v) > 1 else "YES")
-

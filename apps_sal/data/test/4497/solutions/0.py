@@ -30,7 +30,9 @@ def main():
     N = int(next(tokens))  # type: int
     solve(N)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

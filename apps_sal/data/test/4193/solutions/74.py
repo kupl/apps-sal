@@ -1,8 +1,8 @@
-A = [[]]*3
+A = [[]] * 3
 for row in range(3):
     A[row] = list(map(int, input().split()))
 n = int(input())
-B = [0]*n
+B = [0] * n
 for i in range(n):
     B[i] = int(input())
 flag = False

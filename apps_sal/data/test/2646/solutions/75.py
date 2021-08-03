@@ -17,7 +17,8 @@ q = deque([0])
 while (len(q) > 0):
     a = q.popleft()
     for b in path[a]:
-        if dist[b] != 0:continue
+        if dist[b] != 0:
+            continue
         q.append(b)
         prev[b] = a
         dist[b] = dist[a] + 1

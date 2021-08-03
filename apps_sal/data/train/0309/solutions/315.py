@@ -7,6 +7,5 @@ class Solution:
                 # calculate the differences
                 diff = A[i] - A[j]
                 # check the existing sequence length
-                dp[i][diff] = max(dp[i][diff], dp[j][diff]+1)
+                dp[i][diff] = max(dp[i][diff], dp[j][diff] + 1)
         return max([max(d.values()) for d in dp])
-

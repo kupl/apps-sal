@@ -27,4 +27,3 @@ if search(s):
     print('YES')
 else:
     print('NO')
-

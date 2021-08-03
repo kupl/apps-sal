@@ -8,4 +8,3 @@ for i in range(n - 1):
     if A[i] + 1 == A[i + 1]:
         res += C[A[i] - 1]
 print((res + B[-1]))
-

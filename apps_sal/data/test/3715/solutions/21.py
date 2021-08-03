@@ -34,10 +34,10 @@ def foo(xs, res, last):
                 last = 2
             elif last == 2:
                 last = 1
-            elif i < len(xs)-1 and xs[i+1] == 0:
+            elif i < len(xs) - 1 and xs[i + 1] == 0:
                 last = 1
             else:
-                return min(foo(xs[i+1:], res, 1), foo(xs[i+1:], res, 2))
+                return min(foo(xs[i + 1:], res, 1), foo(xs[i + 1:], res, 2))
 
     return res
 
@@ -49,7 +49,9 @@ def main():
     print(res)
     return res
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

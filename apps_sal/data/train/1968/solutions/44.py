@@ -3,6 +3,7 @@ class Trie:
         self.sub = collections.defaultdict(Trie)
         self.index = -1
 
+
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         self.root = Trie()
@@ -12,6 +13,7 @@ class Solution:
                 cur = cur.sub[c]
             cur.index = i
         return self.bfs(self.root, folder)
+
     def bfs(self, trie: Trie, folder: List[str]) -> List[str]:
         q, ans = [trie], []
         for t in q:

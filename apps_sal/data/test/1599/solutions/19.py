@@ -18,4 +18,3 @@ for query in queries:
     repeat = f[end] - f[begin]
 
     print(repeat)
-

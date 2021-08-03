@@ -5,13 +5,13 @@ def solve():
     import sys
     import heapq
 
-    MAX_S = 50*50
+    MAX_S = 50 * 50
     N, M, S = list(map(int, sys.stdin.readline().split()))
     graph = [[] for _ in range(N)]
 
     for _ in range(M):
         u, v, a, b = list(map(int, sys.stdin.readline().split()))
-        u, v = u-1, v-1
+        u, v = u - 1, v - 1
         graph[u].append((v, a, b))
         graph[v].append((u, a, b))
 
@@ -21,7 +21,7 @@ def solve():
         ryogae.append((c, d))
 
     # dp[v][s] := 頂点vに所持金sで訪れるときの最小時間
-    dp = [[float("inf") for _ in range(MAX_S+1)] for __ in range(N)]
+    dp = [[float("inf") for _ in range(MAX_S + 1)] for __ in range(N)]
 
     # ダイクストラ
     s = min(S, MAX_S)
@@ -35,26 +35,28 @@ def solve():
 
         # 両替する場合
         c, d = ryogae[v]
-        ns = min(s+c, MAX_S)
-        if dp[v][ns] > t+d:
-            dp[v][ns] = t+d
-            heapq.heappush(que, (t+d, v, ns))
+        ns = min(s + c, MAX_S)
+        if dp[v][ns] > t + d:
+            dp[v][ns] = t + d
+            heapq.heappush(que, (t + d, v, ns))
 
         # 移動する場合(v -> uに移動)
         for u, a, b in graph[v]:
-            if s-a < 0: continue
-            if dp[u][s-a] > t+b:
-                dp[u][s-a] = t+b
-                heapq.heappush(que, (t+b, u, s-a))
+            if s - a < 0:
+                continue
+            if dp[u][s - a] > t + b:
+                dp[u][s - a] = t + b
+                heapq.heappush(que, (t + b, u, s - a))
 
     for v in range(1, N):
         ans = float("inf")
-        for s in range(MAX_S+1):
+        for s in range(MAX_S + 1):
             ans = min(ans, dp[v][s])
         print(ans)
 
 
 def __starting_point():
     solve()
+
 
 __starting_point()

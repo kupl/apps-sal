@@ -9,4 +9,3 @@ for i, x in enumerate(X):
     dp2[i + 1] = min(dp1[i] + (10 - x) + 1, dp2[i] + (10 - x) - 1)
 
 print((min(dp1[-1], dp2[-1])))
-

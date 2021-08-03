@@ -15,4 +15,3 @@ while i >= 0 and j >= 0:
         i -= 1
 res += i + 1
 print(res)
-

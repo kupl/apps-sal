@@ -1,7 +1,7 @@
+from bisect import bisect_left
 import sys
 sys.setrecursionlimit(10 ** 9)
 
-from bisect import bisect_left
 
 N = int(input())
 A = list(map(int, input().split()))
@@ -50,4 +50,4 @@ while stack:
         ans[now_] = bisect_left(dp, INF)
 
 # print (vs)
-print (*ans, sep = '\n')
+print(*ans, sep='\n')

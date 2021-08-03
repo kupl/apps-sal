@@ -10,13 +10,12 @@ j = 0
 res = n
 while(i < n):
     while(j < m and an[i] > bm[j]):
-        j += 1  
-        
+        j += 1
+
     if(j < m and an[i] <= bm[j]):
         res -= 1
         j += 1
-    
-    i += 1
-    
-print(res)
 
+    i += 1
+
+print(res)

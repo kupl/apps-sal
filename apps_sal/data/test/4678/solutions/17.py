@@ -6,10 +6,10 @@ tot = 0
 
 
 for i in x:
-  if i <= tmp:
-    tot += tmp - i
-  else:
-    tmp = i
+    if i <= tmp:
+        tot += tmp - i
+    else:
+        tmp = i
 
 
 print(f"{tot}")

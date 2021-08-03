@@ -11,14 +11,12 @@ i = 0
 j = k - 1
 mini = 110
 if j >= len(arr):
-    print(arr[len(arr)-1] - arr[0])
+    print(arr[len(arr) - 1] - arr[0])
 
 else:
     while(j < len(arr)):
-        mini = min(arr[j] - arr[i],mini)
-        i += 1  
+        mini = min(arr[j] - arr[i], mini)
+        i += 1
         j += 1
 
     print(mini)
-
-

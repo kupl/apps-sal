@@ -4,11 +4,9 @@ def count_by(x, n):
     """
     new_list = []
     tracker = 1
-    
+
     while tracker <= n:
         new_list.append(tracker * x)
         tracker += 1
-    
-    return new_list
-        
 
+    return new_list

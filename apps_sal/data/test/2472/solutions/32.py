@@ -8,7 +8,7 @@ for i in range(n):
 ab.sort(key=lambda x: x[1])
 for a, b in ab:
     now += a
-    if now>b:
+    if now > b:
         print('No')
         return
 print('Yes')

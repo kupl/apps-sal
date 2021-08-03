@@ -15,5 +15,3 @@ for i in range(pos, n):
     else:
         ans += Sum + 2
 print(ans)
-
-

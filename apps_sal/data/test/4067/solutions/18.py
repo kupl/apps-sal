@@ -19,7 +19,7 @@ else:
             if k2 > n1:
                 if k0 < n1:
                     a[i] = '0'
-                    k0 +=1
+                    k0 += 1
                     k2 -= 1
                 elif k1 < n1:
                     a[i] = '1'
@@ -29,14 +29,14 @@ else:
             if k1 > n1:
                 if k0 < n1:
                     a[i] = '0'
-                    k0 +=1
-                    k1 -= 1    
-    for i in range(n-1, -1, -1):
+                    k0 += 1
+                    k1 -= 1
+    for i in range(n - 1, -1, -1):
         if a[i] == '0':
             if k0 > n1:
                 if k2 < n1:
                     a[i] = '2'
-                    k2 +=1
+                    k2 += 1
                     k0 -= 1
                 elif k1 < n1:
                     a[i] = '1'
@@ -46,7 +46,7 @@ else:
             if k1 > n1:
                 if k2 < n1:
                     a[i] = '2'
-                    k2 +=1
-                    k1 -= 1          
+                    k2 += 1
+                    k1 -= 1
     for i in a:
-        print(i, end = '')
+        print(i, end='')

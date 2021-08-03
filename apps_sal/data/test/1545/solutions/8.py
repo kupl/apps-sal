@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n = int(input())
 s = input()
 a = list(read())

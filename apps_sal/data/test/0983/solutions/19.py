@@ -38,8 +38,7 @@ def get_ans(n, p, q, r, a):
 
     return max(ans)
 
+
 n, p, q, r = tuple(map(int, input().split()))
 a = list(map(int, input().split()))
 print(get_ans(n, p, q, r, a))
-
-

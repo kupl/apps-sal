@@ -1,7 +1,9 @@
 from collections import Counter
+
+
 class Solution:
     def numSplits(self, s: str) -> int:
-        left_counts = {s[0]:1}
+        left_counts = {s[0]: 1}
         right_counts = Counter(s[1:])
         split_count = 0
         if len(list(left_counts.items())) == len(list(right_counts.items())):
@@ -18,6 +20,3 @@ class Solution:
             if len(list(left_counts.items())) == len(list(right_counts.items())):
                 split_count += 1
         return split_count
-                
-            
-

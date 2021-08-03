@@ -9,15 +9,15 @@ class Solution:
                 if position[i] - last >= guess:
                     placed += 1
                     last = position[i]
-                
+
                 if placed == m:
                     return True
-                
+
                 i += 1
-            
+
            # print(\"final \", placed, m)
             return placed >= m
-        
+
         position.sort()
         l = 0
         r = position[-1] - position[0]
@@ -27,15 +27,12 @@ class Solution:
             mid = (l + r + 1) // 2
             #print(l, mid, r)
             if guess(position, m, mid):
-                #print(\"guess OK\", mid)
+                # print(\"guess OK\", mid)
                 l = mid
             else:
                 r = mid - 1
-        
-        return l
-    
-    
-    #placed = 1, last = 1, i = 1
-    # 
-        
 
+        return l
+
+    # placed = 1, last = 1, i = 1
+    #

@@ -1,6 +1,6 @@
 from operator import itemgetter
-    
-    
+
+
 def has_to_eat(food_type, height, food):
     result = 0
     for candie in food:
@@ -9,22 +9,22 @@ def has_to_eat(food_type, height, food):
                 candie[1] = 1000000000000000000
                 return candie[0], candie[2]
     return result
-    
-    
+
+
 class CodeforcesTask436ASolution:
     def __init__(self):
         self.result = ''
         self.n_x = []
         self.candies = []
-    
+
     def read_input(self):
         self.n_x = [int(x) for x in input().split(" ")]
         for x in range(self.n_x[0]):
             self.candies.append([int(x) for x in input().split(" ")])
-    
+
     def process_task(self):
         self.candies = sorted(self.candies, key=itemgetter(2), reverse=True)
-        #print(self.candies)
+        # print(self.candies)
         jump = self.n_x[1]
         eat = 1
         candies = [x.copy() for x in self.candies]
@@ -52,14 +52,16 @@ class CodeforcesTask436ASolution:
                 eat = 1
             next = has_to_eat(eat, jump, candies)
         self.result = str(max(eaten, eaten1))
-    
+
     def get_result(self):
         return self.result
-    
-    
+
+
 def __starting_point():
     Solution = CodeforcesTask436ASolution()
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
+
 __starting_point()

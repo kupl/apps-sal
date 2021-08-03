@@ -5,19 +5,22 @@ class CombinationIterator:
         self.cl = len(characters)
         self.sym = characters
         self.precom = self.__pre(self.cl, combinationLength)
-        self.index = len(self.precom)-1
+        self.index = len(self.precom) - 1
+
     def __next__(self) -> str:
         curr = self.precom[self.index]
         res = []
-        for i,c in enumerate(curr):
+        for i, c in enumerate(curr):
             if c == '1':
                 res.append(self.sym[i])
         self.index -= 1
         return ''.join(res)
+
     def hasNext(self) -> bool:
         if self.index < 0:
             return False
         return True
+
     def __pre(self, N, M):
         maxi = 2**N
         res = []
@@ -31,6 +34,3 @@ class CombinationIterator:
 # obj = CombinationIterator(characters, combinationLength)
 # param_1 = obj.next()
 # param_2 = obj.hasNext()
-
-
-

@@ -4,11 +4,12 @@ class Solution:
         parent = [i for i in range(n + 1)]
         size = [0] * (n + 1)
         counter = collections.Counter()
+
         def find(x):
             if x != parent[x]:
                 parent[x] = find(parent[x])
             return parent[x]
-        
+
         def union(x, y):
             x, y = min(x, y), max(x, y)
             px, py = find(x), find(y)

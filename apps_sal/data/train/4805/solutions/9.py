@@ -1,1 +1,1 @@
-check=lambda arr,e: e in arr
+def check(arr, e): return e in arr

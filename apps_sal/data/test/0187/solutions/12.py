@@ -15,4 +15,3 @@ else:
         values[value] = card
     else:
         print("NO")
-

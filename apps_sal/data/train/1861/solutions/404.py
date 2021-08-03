@@ -12,6 +12,4 @@ class Solution:
                     if area < res:
                         if ((p1[0], p2[1]) in points_set and (p2[0], p1[1]) in points_set):
                             res = area
-        return 0 if res == float('inf') else res        
-
-
+        return 0 if res == float('inf') else res

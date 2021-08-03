@@ -17,10 +17,9 @@ for i in range(q):
     ps = bisect.bisect_right(s, x)
     pt = bisect.bisect_right(t, x)
     ret = 10 ** 19
-    for loc1 in (s[ps], s[ps-1]):
-        for loc2 in (t[pt], t[pt-1]):
-            val = min(abs(x-loc1) + abs(loc1-loc2),
-                      abs(x-loc2) + abs(loc1-loc2))
+    for loc1 in (s[ps], s[ps - 1]):
+        for loc2 in (t[pt], t[pt - 1]):
+            val = min(abs(x - loc1) + abs(loc1 - loc2),
+                      abs(x - loc2) + abs(loc1 - loc2))
             ret = min(ret, val)
     print(ret)
-

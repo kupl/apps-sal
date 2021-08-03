@@ -27,7 +27,7 @@ def do():
             if offset == 2:
                 if s[i] == "0":
                     offset += 1
-                    if i > 1 and s[i-2] == s[i-1] == "1":
+                    if i > 1 and s[i - 2] == s[i - 1] == "1":
                         x += 1
                     continue
                 else:
@@ -45,6 +45,4 @@ def do():
     print((0))
 
 
-
 do()
-

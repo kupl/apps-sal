@@ -6,7 +6,6 @@ def expression_matter(a, b, c):
     result_4 = a * b * c
     result_5 = a + b + c
 
-
     if result_1 >= result_2 and result_1 >= result_3 and result_1 >= result_4 and result_1 >= result_5:
         return result_1
     elif result_2 >= result_1 and result_2 >= result_3 and result_2 >= result_4 and result_2 >= result_5:

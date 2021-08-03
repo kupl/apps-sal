@@ -2,31 +2,29 @@ def main():
     H, W = list(map(int, input().split()))
 
     y, x = list(map(int, input().split()))
-    start = (x+1, y+1)
+    start = (x + 1, y + 1)
 
     y, x = list(map(int, input().split()))
-    goal = (x+1, y+1)
+    goal = (x + 1, y + 1)
 
-    dist_table = [[-2] * (W+4)]
-    dist_table.append([-2] * (W+4))
+    dist_table = [[-2] * (W + 4)]
+    dist_table.append([-2] * (W + 4))
     for _ in range(H):
         row = '##' + input() + '##'
         row = [-1 if c == '.' else -2 for c in row]
         dist_table.append(row)
-    dist_table.append([-2] * (W+4))
-    dist_table.append([-2] * (W+4))
-
-
+    dist_table.append([-2] * (W + 4))
+    dist_table.append([-2] * (W + 4))
 
     sx, sy = start
     dist_table[sy][sx] = 0
 
     move1 = ((-1, 0), (1, 0), (0, 1), (0, -1))
-    move2 = ((-2, -2), (-2, -1), (-2, 0), (-2, 1), (-2, 2),\
-            (-1, -2), (-1, -1), (-1, 1), (-1, 2),\
-            (0, -2), (0, 2),\
-            (1, -2), (1, -1), (1, 1), (1, 2),\
-            (2, -2), (2, -1), (2, 0), (2, 1), (2, 2))
+    move2 = ((-2, -2), (-2, -1), (-2, 0), (-2, 1), (-2, 2),
+             (-1, -2), (-1, -1), (-1, 1), (-1, 2),
+             (0, -2), (0, 2),
+             (1, -2), (1, -1), (1, 1), (1, 2),
+             (2, -2), (2, -1), (2, 0), (2, 1), (2, 2))
 
     queue1 = [start]
     queue2 = []
@@ -54,7 +52,9 @@ def main():
     gx, gy = goal
     print((dist_table[gy][gx]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

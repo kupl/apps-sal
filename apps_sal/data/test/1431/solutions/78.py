@@ -17,4 +17,3 @@ if M > 0:
         if A[i]:
             print(i + 1, "", end="")
     print()
-

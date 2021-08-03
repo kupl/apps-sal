@@ -14,4 +14,3 @@ for _ in range(Q):
     tl -= 1
     diff = (acc_t[tr] - acc_t[tl]) - (acc_s[sr] - acc_s[sl])
     print(('YES' if diff % 3 == 0 else 'NO'))
-

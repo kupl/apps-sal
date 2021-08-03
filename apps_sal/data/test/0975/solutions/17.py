@@ -21,4 +21,3 @@ for cur in b:
             can2[i] = True
             break
 fout.write(str(can2.count(True)))
-

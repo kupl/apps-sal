@@ -7,7 +7,7 @@ ans = []
 for i in range(n):
     high = s - (total - a[i])
     low = s - (n - 1)
-    
+
     cur = 0
     if low <= a[i]:
         cur += a[i] - low
@@ -17,4 +17,3 @@ for i in range(n):
     ans.append(cur)
 
 print(' '.join(map(str, ans)))
-

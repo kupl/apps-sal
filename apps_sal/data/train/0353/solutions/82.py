@@ -9,11 +9,9 @@ class Solution:
                 start += 1
             else:
                 end -= 1
-        
+
         if nums[start] * 2 <= target:
             res += 1
 
         _, res = divmod(res, pow(10, 9) + 7)
         return res
-            
-

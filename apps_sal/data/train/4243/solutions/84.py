@@ -4,4 +4,3 @@ def find_average(lst):
     for i in lst:
         ag += i
     return ag / len(lst)
-

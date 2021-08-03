@@ -16,4 +16,3 @@ else:
     answer = B + D
 
 print(answer)
-

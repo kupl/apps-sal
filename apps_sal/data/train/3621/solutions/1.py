@@ -1,5 +1,5 @@
 def is_prime(n):
-    for i in range(2, int(n**0.5)+1):
+    for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
             return False
     return True
@@ -19,12 +19,12 @@ def prime_maxlength_chain(n):
                 primes.append(i)
             else:
                 break
-    
+
     l = len(primes)
 
     for j in range(l, 0, -1):
-        for k in range(l-j+1):
-            lst = primes[k:k+j]
+        for k in range(l - j + 1):
+            lst = primes[k:k + j]
             temp = sum(lst)
             if is_prime(temp):
                 res.append(temp)

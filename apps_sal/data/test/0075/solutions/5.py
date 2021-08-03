@@ -19,8 +19,7 @@ for r in range(R):
 
         if wpr[r] + wpc[c] - field == n:
             print('YES')
-            print(r+1, c+1)
+            print(r + 1, c + 1)
             return
 
 print('NO')
-

@@ -1,11 +1,13 @@
 from collections import deque
+
+
 class Solution:
     def constrainedSubsetSum(self, nums, k):
         N, queue = len(nums), deque()
         dp = [0] * N
         for i, val in enumerate(nums):
             if queue and (i - queue[0] > k):
-            #if i > k and (queue[0] == i - k - 1):
+                # if i > k and (queue[0] == i - k - 1):
                 queue.popleft()
             #dp[i] = (val + max(dp[queue[0]], 0)) if queue else val
             if queue and dp[queue[0]] > 0:
@@ -16,16 +18,19 @@ class Solution:
                 queue.pop()
             queue.append(i)
         return max(dp)
-        
-from collections import deque
+
+
 class Solution:
     def constrainedSubsetSum(self, nums, k):
-        if not nums or not k: return 0
-        if max(nums) <= 0: return max(nums)
-        if min(nums) >= 0: return sum(nums)
+        if not nums or not k:
+            return 0
+        if max(nums) <= 0:
+            return max(nums)
+        if min(nums) >= 0:
+            return sum(nums)
         queue, N = deque(), len(nums)
         for i in range(N):
-            #if queue and (i - queue[0] > k):
+            # if queue and (i - queue[0] > k):
             while queue and queue[0] < i - k:
                 queue.popleft()
             # compute the max sum we can get at index i

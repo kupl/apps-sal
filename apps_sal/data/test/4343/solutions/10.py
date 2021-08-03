@@ -15,6 +15,3 @@ p = n
 while p:
     p -= 1
     print(a[p], end='')
-    
-    
-

@@ -1,7 +1,7 @@
-N ,M = map(int,input().split())
+N, M = map(int, input().split())
 K = []
 for i in range(N):
-    K.append(list(map(int,input().split())))
+    K.append(list(map(int, input().split())))
 
 K_list = []
 for x in range(N):

@@ -26,6 +26,7 @@ def solve(zeroArr: [], oneArr: []):
             Ans += (oneArr[one] * (-1) - 1) * (zeroArr[zero] * (-1) - 1)
     return Ans
 
+
 n = int(input())
 zeroArr, oneArr = [-1] * (n + 1), [-1] * (n + 1)
 while n > 1:
@@ -36,4 +37,3 @@ while n > 1:
         addEdge(oneArr, a, b)
     n -= 1
 print(solve(zeroArr, oneArr))
-

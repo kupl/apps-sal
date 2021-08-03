@@ -1,4 +1,4 @@
-n,k = list(map(int, input().split()))
+n, k = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 r = 0
@@ -16,5 +16,3 @@ while ok:
     else:
         ok = 0
 print(r)
-        
-

@@ -12,7 +12,7 @@ for i in range(n):
         r.append(x)
     else:
         b.append(x)
-        
+
 if len(g) == 0:
     if len(r):
         ans += r[-1] - r[0]
@@ -20,7 +20,7 @@ if len(g) == 0:
         ans += b[-1] - b[0]
     print(str(ans))
     return
-    
+
 if not len(r):
     r.append(g[0])
 if not len(b):
@@ -51,7 +51,7 @@ for i in range(len(g) - 1):
         mr = max(mr, r[cri + 1] - r[cri])
         cri += 1
     mr = max(mr, g[i + 1] - r[cri])
-       
+
     if b[bi] < g[i] or b[bi] > g[i + 1]:
         a2 = 100000000000000
         a1 -= g[i + 1] - g[i]
@@ -60,11 +60,7 @@ for i in range(len(g) - 1):
         a2 = 100000000000000
         a1 -= g[i + 1] - g[i]
         mr = 0
-        
-    ans += max(g[i + 1] - g[i], min(a1 - mr - mb, a2))
-    
-print(str(ans))
-    
-    
-    
 
+    ans += max(g[i + 1] - g[i], min(a1 - mr - mb, a2))
+
+print(str(ans))

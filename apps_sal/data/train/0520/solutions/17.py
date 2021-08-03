@@ -9,6 +9,5 @@ for i in range(t):
         print("Cruiser")
     elif (num == "D" or num == "d"):
         print("Destroyer")
-    elif (num == "F" or num == "f" ):
-        print("Frigate")    
-
+    elif (num == "F" or num == "f"):
+        print("Frigate")

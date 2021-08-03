@@ -38,4 +38,3 @@ while t != 1000:
 
     t += 1
 print(t - 1)
-

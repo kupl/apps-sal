@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
         def is_valid(a, b):

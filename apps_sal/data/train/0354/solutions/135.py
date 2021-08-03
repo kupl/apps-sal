@@ -18,5 +18,3 @@ class Solution:
         for i in range(6):
             ans += dfs(1, i, 1)
         return ans % mod
-                    
-

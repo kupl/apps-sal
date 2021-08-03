@@ -9,4 +9,3 @@ for i in range(11):
         print('f({}) = MAGNA NIMIS!'.format(x))
     else:
         print('f({}) = {:.2f}'.format(x, r))
-

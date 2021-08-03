@@ -12,13 +12,15 @@ s1 = sum(row1)
 s2 = sum(row2)
 s3 = sum(row3)
 
+
 def P(row, ix, num):
-	if ix == 0:
-		print('{} {} {}'.format(num, row[1], row[2]))
-	elif ix == 1:
-		print('{} {} {}'.format(row[0], num, row[2]))
-	else:
-		print('{} {} {}'.format(row[0], row[1], num))	
+    if ix == 0:
+        print('{} {} {}'.format(num, row[1], row[2]))
+    elif ix == 1:
+        print('{} {} {}'.format(row[0], num, row[2]))
+    else:
+        print('{} {} {}'.format(row[0], row[1], num))
+
 
 z = (s2 + s1 - s3) // 2
 y = s1 - z
@@ -26,7 +28,7 @@ x = s3 - y
 vals = [x, y, z]
 
 for ix, r in enumerate(rows):
-	P(r, ix, vals[ix])
+    P(r, ix, vals[ix])
 
 '''
 T = x + y + z
@@ -35,4 +37,3 @@ x + z = sum(Row2)
 x + y = sum(Row3)
 
 '''
-

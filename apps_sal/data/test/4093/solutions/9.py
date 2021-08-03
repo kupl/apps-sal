@@ -15,4 +15,3 @@ for case_num in range(t):
         print(m)
     else:
         print(m * 2)
-

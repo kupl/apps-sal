@@ -6,9 +6,10 @@ def is_prime(x):
         i += 1
     return True
 
+
 n = int(input())
 ans = []
-for i in range(2, n+2):
+for i in range(2, n + 2):
     if is_prime(i):
         ans.append(1)
     else:
@@ -22,4 +23,3 @@ elif n == 2:
 else:
     print(2)
     print(" ".join(str(num) for num in ans))
-

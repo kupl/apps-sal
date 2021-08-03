@@ -6,4 +6,3 @@ for j in s:
         answer += j
     i += 1
 print(answer)
-

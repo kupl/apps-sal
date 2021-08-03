@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     s = list(s)
     for e in ind:
         try:

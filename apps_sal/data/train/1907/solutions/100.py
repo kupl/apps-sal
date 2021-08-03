@@ -7,16 +7,17 @@
 class Stack():
     def __init__(self, stack: list):
         self.stack = stack
-    
+
     def pop(self):
         if self.stack:
             return self.stack.pop(-1)
         else:
             return None
-        
+
     def push(self, tree_node: TreeNode):
         self.stack.append(tree_node)
-        
+
+
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         stack = Stack([cloned])

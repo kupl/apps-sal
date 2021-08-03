@@ -5,4 +5,3 @@ while n != 0:
         ans += 1
     n //= 8
 print(ans)
-

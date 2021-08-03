@@ -28,4 +28,3 @@ for seq in permutations(prs):
         b1[bi] -= delta
     lo = min(lo, n - no_win)
 print(lo, hi)
-

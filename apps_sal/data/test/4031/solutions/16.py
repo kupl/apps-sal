@@ -30,18 +30,17 @@ def is_substring(a, b):  # a is shorter than b
     l_b = len(b)
 
     for i in range(l_b - l_a + 1):
-        if a == b[i:i+l_a]:
+        if a == b[i:i + l_a]:
             return True
 
     return False
 
 
 for n in range(1, N):
-    if not is_substring(string_list[n-1][1], string_list[n][1]):
+    if not is_substring(string_list[n - 1][1], string_list[n][1]):
         print("NO")
         quit()
 
 print("YES")
 for n in range(N):
     print(string_list[n][1])
-

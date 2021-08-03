@@ -2,7 +2,7 @@ n = int(input())
 setr = set(chr(i) for i in range(ord('a'), ord('z') + 1))
 setnr = set()
 ans = 0
-letter =''
+letter = ''
 isq = False
 a = [input() for i in range(n)]
 for s in a:
@@ -23,4 +23,3 @@ for s in a:
     elif s[0] == '?' and s[2] == a[-1][2]:
         isq = True
 print(ans)
-

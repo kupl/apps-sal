@@ -13,4 +13,4 @@ for _ in range(Q):
     if odd or zero % 2 == 0:
         print(n)
     else:
-        print(n-1)
+        print(n - 1)

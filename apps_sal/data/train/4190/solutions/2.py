@@ -4,5 +4,5 @@ def is_alt(s):
     if (b[0] in 'aeiou'):
         c = a
         a = b
-        b = c  
-    return all(x in 'aeiou' for x in a) and all(x not in 'aeiou' for x in b);
+        b = c
+    return all(x in 'aeiou' for x in a) and all(x not in 'aeiou' for x in b)

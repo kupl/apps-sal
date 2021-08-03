@@ -9,4 +9,3 @@ for i in s:
         return
 
 print('yes')
-

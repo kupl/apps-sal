@@ -14,4 +14,3 @@ for i in range(1, int(input()) + 1):
         ans = i
         max_cnt = cdt
 print(ans)
-

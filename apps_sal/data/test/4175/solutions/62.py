@@ -16,9 +16,8 @@ for i, w in enumerate(W):
         return
     last = w[-1]
     cnt.add(w)
-    if i+1 != len(cnt):
+    if i + 1 != len(cnt):
         print('No')
         return
 
 print('Yes')
-

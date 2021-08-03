@@ -28,7 +28,7 @@ sosudayo[1] = False
 for i in range(2, 1100000):
     if not sosudayo[i]:
         continue
-    for j in range(i*i, 1100000, i):
+    for j in range(i * i, 1100000, i):
         sosudayo[j] = False
 
 used = [False] * 1100000
@@ -57,4 +57,3 @@ for i in not_sosu:
         used[i] = True
 
 print("pairwise coprime")
-

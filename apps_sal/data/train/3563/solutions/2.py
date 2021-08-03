@@ -1,7 +1,9 @@
 import math
 
-def distance(n) :
-    if n == 1: return 0
+
+def distance(n):
+    if n == 1:
+        return 0
     level = (math.ceil(n**0.5) // 2)
     l_start = ((level * 2) - 1)**2 + 1
     quad = (n - l_start) // (2 * level)

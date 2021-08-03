@@ -26,4 +26,3 @@ for i in range(n):
         mylist[idx] = -k  # この操作によりソートは崩れない
 
 print(ans)
-

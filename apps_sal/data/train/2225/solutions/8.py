@@ -4,6 +4,7 @@ class Node():
         self.rt = None
         self.dep = None
 
+
 class Trie():
     def __init__(self):
         self.root = Node()
@@ -22,6 +23,7 @@ class Trie():
                     node.rt = Node()
                     node.rt.dep = node.dep + 1
                 node = node.rt
+
 
 N, L = map(int, input().split())
 
@@ -48,12 +50,16 @@ while stack:
         stack.append(node.lt)
         stack.append(node.rt)
 
+
 def grundy(n):
-    if n == 0: return 0
-    if n % 2 == 1: return 1
+    if n == 0:
+        return 0
+    if n % 2 == 1:
+        return 1
     if n == 2**(n.bit_length() - 1):
         return n
     return grundy(n - 2**(n.bit_length() - 1))
+
 
 g = 0
 

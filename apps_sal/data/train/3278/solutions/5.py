@@ -4,7 +4,7 @@ def string_expansion(s):
     result = ""
     for letter in s:
         try:
-           strin.append(int(letter))
+            strin.append(int(letter))
         except ValueError:
             strin.append(letter)
     for i in strin:

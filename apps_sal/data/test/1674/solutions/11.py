@@ -5,7 +5,7 @@ def sumn(l, r):
         tmp.append(dmgs[i])
     tmp.sort(reverse=True)
     return sum(tmp[:k])
-    
+
 
 n, k = map(int, input().split())
 dmgs = [int(x) for x in input().split()]

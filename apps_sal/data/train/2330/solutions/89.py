@@ -3,6 +3,7 @@ sys.setrecursionlimit(10000000)
 MOD = 10 ** 9 + 7
 INF = 10 ** 15
 
+
 def main():
     S = input()
     N = len(S)
@@ -20,28 +21,32 @@ def main():
     if not flag:
         print(-1)
         return
-    
+
     edge = []
     for i in range(cnt):
-        edge.append((i + 1,i + 2))
-    
+        edge.append((i + 1, i + 2))
+
     extend = 0
     now = cnt + 2
     vertex = 2
-    for i in range(1,N - 1):
+    for i in range(1, N - 1):
         if S[i] == '0':
             extend += 1
         else:
             for _ in range(extend):
-                edge.append((vertex,now))
+                edge.append((vertex, now))
                 now += 1
             extend = 0
             vertex += 1
 
     if now == N + 1:
-        print('\n'.join(' '.join(map(str,a)) for a in edge))
+        print('\n'.join(' '.join(map(str, a)) for a in edge))
     else:
         print(-1)
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

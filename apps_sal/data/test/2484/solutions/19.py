@@ -1,12 +1,14 @@
 N = int(input())
-ARR = list(map(int,input().split()))
+ARR = list(map(int, input().split()))
+
+
 def calculate(n, arr):
     result = 0
     right = 0
     sum = arr[0]
     for left in range(0, n):
-        while right+1 < n:
-            if sum ^ arr[right+1] == (sum + arr[right+1]):
+        while right + 1 < n:
+            if sum ^ arr[right + 1] == (sum + arr[right + 1]):
                 right = right + 1
                 sum = sum + arr[right]
             else:
@@ -15,5 +17,5 @@ def calculate(n, arr):
         sum = sum - arr[left]
     print(result)
 
-calculate(N, ARR)
 
+calculate(N, ARR)

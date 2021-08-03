@@ -8,6 +8,3 @@ if sum(a) > s:
     print('NO')
 else:
     print('YES')
-
-
-

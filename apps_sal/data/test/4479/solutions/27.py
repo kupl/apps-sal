@@ -4,4 +4,3 @@ class Solution:
             A[A.index(min(A))] = -min(A)
             K -= 1
         return(sum(A))
-

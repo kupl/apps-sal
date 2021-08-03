@@ -1,9 +1,9 @@
-def vowel_shift(text,n):
+def vowel_shift(text, n):
     if text in (None, ""):
         return text
-        
+
     vwl = [x for x in text if x in "aeiouAEIOU"]
-    
+
     if len(vwl) == 0:
         return text
 

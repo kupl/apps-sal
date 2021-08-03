@@ -12,5 +12,5 @@ for i in range(n):
 
 s = c.Counter(s)
 for i in s.values():
-    ans += i*(i-1)//2
+    ans += i * (i - 1) // 2
 print(ans)

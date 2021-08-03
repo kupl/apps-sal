@@ -8,7 +8,7 @@ class ProductOfNumbers:
             self.arr = []
         else:
             prev_prod = self.arr[-1] if self.arr else 1
-            self.arr.append(num*prev_prod)
+            self.arr.append(num * prev_prod)
         return
 
     def getProduct(self, k: int) -> int:
@@ -17,11 +17,10 @@ class ProductOfNumbers:
         elif len(self.arr) == k:
             return self.arr[-1]
         else:
-            return self.arr[-1]//self.arr[-k-1]
+            return self.arr[-1] // self.arr[-k - 1]
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

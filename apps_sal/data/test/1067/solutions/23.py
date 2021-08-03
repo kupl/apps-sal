@@ -1,11 +1,13 @@
 import sys
 input = sys.stdin.readline
 
+
 def getInt(): return int(input())
 def getVars(): return list(map(int, input().split()))
 def getArr(): return list(map(int, input().split()))
 def getStr(): return input().strip()
-## -------------------------------
+# -------------------------------
+
 
 N = getInt()
 A = getArr()
@@ -22,4 +24,3 @@ if k >= 0:
     print(res)
 else:
     print(res + 2)
-

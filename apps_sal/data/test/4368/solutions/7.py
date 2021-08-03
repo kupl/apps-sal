@@ -6,4 +6,3 @@ while n > k ** digit - 1:
     digit += 1
 
 print(digit)
-

@@ -17,4 +17,3 @@ X.sort()
 diffs = [cur - prev for prev, cur in pairwise(X)]
 diffs.sort()
 print((sum(diffs[: M - N])))
-

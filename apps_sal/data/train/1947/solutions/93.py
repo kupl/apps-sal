@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         b_cnt = reduce(lambda a, b: Counter(a) | Counter(b), B)
@@ -15,4 +16,3 @@ class Solution:
             a_cnt.clear()
 
         return result
-

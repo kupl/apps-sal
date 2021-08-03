@@ -1,1 +1,1 @@
-volume=lambda r,h:__import__('math').pi*r*r*h//3
+def volume(r, h): return __import__('math').pi * r * r * h // 3

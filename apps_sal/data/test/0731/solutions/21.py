@@ -7,15 +7,17 @@ def fhelp(a):
             break
         res += len(str(s)) * k * (f - s)
         s *= 10
-        f *= 10  
+        f *= 10
     res += len(str(a)) * k * (a - s + 1)
     return res
 
+
 def f(a, b):
     return fhelp(b) - fhelp(a - 1)
-    
+
+
 w, m, k = list(map(int, input().split()))
-#print(fhelp(10))
+# print(fhelp(10))
 l = m - 1
 r = 1000000000000000000
 while (r - l > 1):
@@ -25,4 +27,3 @@ while (r - l > 1):
     else:
         r = c
 print(l - m + 1)
-

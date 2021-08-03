@@ -4,4 +4,3 @@ def no_space(x):
         if char is not ' ':
             tmp += char
     return tmp
-

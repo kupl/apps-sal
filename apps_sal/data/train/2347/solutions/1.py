@@ -2,13 +2,13 @@ import sys
 readline = sys.stdin.readline
 
 T = int(readline())
-Ans = ['NO']*T
+Ans = ['NO'] * T
 for qu in range(T):
     N, K = map(int, readline().split())
-    S = [-1 if s == '?' else int(s) for s in readline().strip()]    
-    L = [-1]*K
+    S = [-1 if s == '?' else int(s) for s in readline().strip()]
+    L = [-1] * K
     for i in range(N):
-        j = i%K
+        j = i % K
         si = S[i]
         if L[j] == -1:
             L[j] = si
@@ -28,12 +28,12 @@ for qu in range(T):
                 zero += 1
             else:
                 minus += 1
-        
+
         if one < zero:
             one, zero = zero, one
-        
+
         if zero + minus >= one:
             Ans[qu] = 'YES'
-        
+
 
 print('\n'.join(Ans))

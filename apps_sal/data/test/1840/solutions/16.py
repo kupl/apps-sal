@@ -26,4 +26,3 @@ for i in range(s):
             else:
                 R = m
         print(f[L], end=' ')
-

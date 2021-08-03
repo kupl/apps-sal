@@ -1,4 +1,4 @@
-n, k = map(int,input().split())
+n, k = map(int, input().split())
 a = list(input().split())
 
 for i in range(n, 100001):

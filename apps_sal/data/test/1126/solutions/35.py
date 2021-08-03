@@ -14,5 +14,5 @@ for i in range(mn):
     P.append(sum_p)
     sum_p += x
     X[x] = i
-    x = x*x % m
+    x = x * x % m
 print(sum_p)

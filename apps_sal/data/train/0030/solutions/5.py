@@ -6,6 +6,3 @@ for _ in range(int(input())):
         if i > 0 and s[i] == s[i - 1]:
             cnt[s[i]] += 1
     print(max(cnt))
-
-
-

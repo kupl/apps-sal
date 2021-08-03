@@ -6,9 +6,10 @@ for i in range(n):
     al.append([a, b])
 for j in range(m):
     c, d = map(int, input().split())
-    bl.append([c,d])
+    bl.append([c, d])
 
-def check(a,b):
+
+def check(a, b):
     x = a[0] - b[0]
     y = a[1] - b[1]
     if x < 0:
@@ -17,11 +18,12 @@ def check(a,b):
         y = -y
     return x + y
 
+
 for a in al:
     min = 1000000000
     cnt = 1
     for b in bl:
-        tmp = check(a,b)
+        tmp = check(a, b)
         if tmp < min:
             ans = cnt
             min = tmp

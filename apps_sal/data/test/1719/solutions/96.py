@@ -1,4 +1,5 @@
-import collections, itertools
+import collections
+import itertools
 N = int(input())
 mod = 10**9 + 7
 dp = collections.defaultdict(int)
@@ -12,4 +13,3 @@ for _ in range(N - 1):
             dp2[q + r + s + t] += dp[p + q + r + s] % mod
     dp = dp2
 print((sum(dp.values()) % mod))
-

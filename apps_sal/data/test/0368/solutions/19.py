@@ -1,6 +1,6 @@
 s = [""] * 8
-for i in range(0,8):
-	s[i] = input()
+for i in range(0, 8):
+    s[i] = input()
 white = {}
 black = {}
 white['Q'] = 9
@@ -31,13 +31,13 @@ black['K'] = 0
 black['k'] = 0
 w = 0
 b = 0
-for i in range(0,8):
-	for j in range(0,8):
-		w = w+white[s[i][j]]
-		b = b+black[s[i][j]]
-if w>b:
-	print("White")
-elif w<b:
-	print("Black")
+for i in range(0, 8):
+    for j in range(0, 8):
+        w = w + white[s[i][j]]
+        b = b + black[s[i][j]]
+if w > b:
+    print("White")
+elif w < b:
+    print("Black")
 else:
-	print("Draw")
+    print("Draw")

@@ -12,5 +12,3 @@ for idx in range(0, len_long - len_sub + 1):
             this_cnt = this_cnt + 1
     min_cnt = min(min_cnt, this_cnt)
 print(min_cnt)
-
-

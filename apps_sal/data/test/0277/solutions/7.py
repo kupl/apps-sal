@@ -11,6 +11,3 @@ while flag < n:
     flag *= 2
 else:
     print('Final!')
-
-
-

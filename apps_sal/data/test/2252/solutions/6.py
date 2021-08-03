@@ -7,7 +7,9 @@ for _ in range(m):
     x -= 1
     a = 0
     t = p[x]
-    for s in p[l:r+1]:
+    for s in p[l:r + 1]:
         a += s < t
-    if a == x - l: print("Yes")
-    else: print("No")
+    if a == x - l:
+        print("Yes")
+    else:
+        print("No")

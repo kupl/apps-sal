@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 a = sorted(list(map(int, input().split())))
-rep = sorted([tuple(map(int, input().split())) for i in range(m)], key= lambda x: -x[1])
+rep = sorted([tuple(map(int, input().split())) for i in range(m)], key=lambda x: -x[1])
 i = 0
 for b, c in rep:
     while i < n and b:

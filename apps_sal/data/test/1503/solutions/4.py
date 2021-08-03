@@ -7,7 +7,7 @@ def intersection(a, b):
 
 def calc(n, m, interval):
     ret = 0
-    it_list = [(0, n-1)]
+    it_list = [(0, n - 1)]
     for i in range(m):
         interval_now = interval[i]
         # print(it_list, interval_now)
@@ -39,7 +39,7 @@ def calc(n, m, interval):
     # print(it_list)
     for it in it_list:
         l = it[1] - it[0] + 1
-        ret += l*(l+1)//2 - l
+        ret += l * (l + 1) // 2 - l
     return ret
 
 
@@ -51,14 +51,14 @@ def main():
         a.append(now)
     ans = n
     if m == 1:
-        print(n*(n+1)//2)
+        print(n * (n + 1) // 2)
         return
     ch = [0 for i in range(n)]
     for i in range(n):
-        ch[a[0][i]-1] = i
+        ch[a[0][i] - 1] = i
     for i in range(m):
         for j in range(n):
-            a[i][j] = ch[a[i][j]-1]
+            a[i][j] = ch[a[i][j] - 1]
     interval = []
     for i in range(m):
         a_now = a[i]
@@ -66,7 +66,7 @@ def main():
         r = 0
         now = []
         for j in range(1, n):
-            if a_now[j] == a_now[j-1]+1:
+            if a_now[j] == a_now[j - 1] + 1:
                 r += 1
             else:
                 if r > l:
@@ -88,5 +88,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

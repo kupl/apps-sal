@@ -13,12 +13,11 @@ class Solution:
                 tmp_count = 0
             else:
                 tmp_count += 1
-            
+
             head = head.__next__
         res.append(tmp_count)
         count = 0
         for i in res:
-            if i !=0:
+            if i != 0:
                 count += 1
         return count
-

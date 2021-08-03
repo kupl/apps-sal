@@ -28,4 +28,3 @@ for i in range(s + 1):
 res = A[s]
 
 print(res)
-

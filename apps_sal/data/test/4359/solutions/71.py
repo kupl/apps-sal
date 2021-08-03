@@ -12,4 +12,3 @@ del wasted_times[-1]
 
 ans = sum(dishes) + sum(wasted_times)
 print(ans)
-

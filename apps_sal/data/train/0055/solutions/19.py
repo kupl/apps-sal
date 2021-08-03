@@ -10,19 +10,19 @@ from math import ceil
 # mod=10**9+7
 # mod=998244353
 
-# def BinarySearch(a,x): 
-# 	i=bisect_left(a,x) 
-# 	if(i!=len(a) and a[i]==x): 
-# 		return i 
-# 	else: 
+# def BinarySearch(a,x):
+# 	i=bisect_left(a,x)
+# 	if(i!=len(a) and a[i]==x):
+# 		return i
+# 	else:
 # 		return -1
 
-# def sieve(n): 
+# def sieve(n):
 # 	prime=[True for i in range(n+1)]
 # 	p=2
-# 	while(p*p<=n): 
-# 		if (prime[p]==True): 
-# 			for i in range(p*p,n+1,p): 
+# 	while(p*p<=n):
+# 		if (prime[p]==True):
+# 			for i in range(p*p,n+1,p):
 # 				prime[i]=False
 # 		p+=1
 # 	prime[0]=False
@@ -35,21 +35,24 @@ from math import ceil
 
 # def gcd(a, b):
 # 	if(a==0):
-# 		return b 
+# 		return b
 # 	return gcd(b%a,a)
 
-fast_reader=sys.stdin.readline
-fast_writer=sys.stdout.write
+fast_reader = sys.stdin.readline
+fast_writer = sys.stdout.write
+
 
 def input():
-	return fast_reader().strip()
+    return fast_reader().strip()
+
 
 def print(*argv):
-	fast_writer(' '.join((str(i)) for i in argv))
-	fast_writer('\n')
+    fast_writer(' '.join((str(i)) for i in argv))
+    fast_writer('\n')
 
-#____________________________________________________________________________________________________________________________________
+# ____________________________________________________________________________________________________________________________________
+
 
 for _ in range(int(input())):
-	n=int(input())
-	print(ceil(n/2))
+    n = int(input())
+    print(ceil(n / 2))

@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def minDays(self, n: int) -> int:
         res = 0
@@ -28,4 +29,4 @@ class Solution:
                 if not i - 1 in seen:
                     seen.add(i - 1)
                     q.append(i - 1)
-        return -1     
+        return -1

@@ -15,6 +15,7 @@ def calc(comb):
 
     return s + calc(comb[1:])
 
+
 m = {}
 for y in range(5):
 
@@ -23,6 +24,3 @@ for y in range(5):
         m[x, y] = int(v)
 
 print(max(list(map(calc, itertools.permutations(list(range(5)))))))
-
-
-

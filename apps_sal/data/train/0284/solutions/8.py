@@ -5,7 +5,8 @@ class Solution:
         i, j = 0, len(tokens) - 1
         while i <= j:
             if P < tokens[i]:
-                if i == j or points == 0: break
+                if i == j or points == 0:
+                    break
                 P += tokens[j]
                 points -= 1
                 j -= 1

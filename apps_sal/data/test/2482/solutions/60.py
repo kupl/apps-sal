@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs():
     q = deque()
     color1 = [-1] * (n + 1)
@@ -25,6 +26,7 @@ def bfs():
                         q.append(j)
     group = [color1[i] + 200000 * color2[i] for i in range(n + 1)]
     return group
+
 
 n, k, l = map(int, input().split())
 G = [[] for _ in range(n + 1)]

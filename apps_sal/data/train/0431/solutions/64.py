@@ -1,9 +1,10 @@
 class Solution:
     def sumSubarrayMins(self, A: List[int]) -> int:
         N = len(A)
-        if N == 0: return 0
-        mod = 10**9 + 7                
-        
+        if N == 0:
+            return 0
+        mod = 10**9 + 7
+
         res = 0
         s = []
         A = [0] + A + [0]
@@ -14,4 +15,3 @@ class Solution:
                 res += A[j] * (i - j) * (j - k)
             s.append(i)
         return res % mod
-

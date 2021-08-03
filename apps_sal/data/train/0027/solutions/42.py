@@ -20,4 +20,3 @@ for i in range(t):
             cur_nech = arr[j][0]
     answers[i] = ans
 print(*answers, sep='\n')
-

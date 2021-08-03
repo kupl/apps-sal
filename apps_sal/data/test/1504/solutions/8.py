@@ -26,4 +26,3 @@ for _ in range(t):
     else:
         res += n * step + (k - mr * n) * 2
     print(res)
-

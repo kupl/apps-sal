@@ -13,8 +13,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n = int(input())
 arr = [inpmap(), inpmap()]
@@ -43,4 +45,3 @@ for i in range(n - 2, -1, -1):
     g2 = (a, b)[d][i + 1] + arr[1 - d][i] * ((n - i) * 2 - 1)
     dp[i] = max(g1, g2)
 print(dp[0])
-

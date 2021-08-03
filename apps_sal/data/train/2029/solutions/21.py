@@ -4,9 +4,8 @@ if not n % 2:
     print('NO')
 
 else:
-    lower = [i for i in range(1, 2*n, 2)]
-    upper = [i for i in range(2, 2*n+1, 2)]
-
+    lower = [i for i in range(1, 2 * n, 2)]
+    upper = [i for i in range(2, 2 * n + 1, 2)]
 
     circle = []
     append = circle.append
@@ -19,4 +18,3 @@ else:
 
     print('YES')
     print(' '.join(map(str, circle)))
-

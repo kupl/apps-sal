@@ -28,4 +28,3 @@ else:
             last = x
 
     print(count)
-

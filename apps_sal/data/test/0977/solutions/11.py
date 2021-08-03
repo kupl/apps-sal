@@ -7,7 +7,7 @@ def solve(n, p, x, a):
         res_ptn *= r - l
         res_ptn %= p
     return res_ptn != 0
-    
+
 
 n, p = map(int, input().split())
 a = list(map(int, input().split()))

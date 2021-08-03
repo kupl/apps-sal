@@ -1,4 +1,4 @@
-for _ in range (int(input())):
+for _ in range(int(input())):
     n, a, b = list(map(int, input().split()))
     ans = ''
     x = []

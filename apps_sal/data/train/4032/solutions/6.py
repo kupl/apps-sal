@@ -1,4 +1,6 @@
 from itertools import accumulate
+
+
 def solve(n):
     a = [1]
     for _ in range(n):

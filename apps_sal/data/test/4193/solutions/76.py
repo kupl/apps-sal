@@ -1,6 +1,6 @@
 import numpy as np
 
-a = [list(map(int,input().split())) for i in range(3)]
+a = [list(map(int, input().split())) for i in range(3)]
 n = int(input())
 
 for i in range(n):
@@ -20,7 +20,7 @@ for i in range(3):
     r = np_a[i]
     c = np_t[i]
     d += r[i]
-    u += r[2-i]
+    u += r[2 - i]
 
     if r.sum() and c.sum():
         continue
@@ -33,4 +33,3 @@ if d and u:
     print("No")
 else:
     print("Yes")
-

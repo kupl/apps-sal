@@ -15,13 +15,18 @@ A, B, X = map(int, input().split())
 # 最終的に、leftはf(N)<=Xを満たす最大のNに、rightはf(N)>Xを満たす最小のNに、それぞれ収束する
 
 # 今回はf(N)=A*N+B*d(N)
+
+
 def price(N):
-  return A*N + B*len(str(N)) # len(str(N)) => Nの桁数が求まる
+    return A * N + B * len(str(N))  # len(str(N)) => Nの桁数が求まる
+
 
 left = 0
 right = 10 ** 9 + 1
 while right - left > 1:
-  mid = (left + right) // 2
-  if price(mid) <= X: left = mid
-  else: right = mid
+    mid = (left + right) // 2
+    if price(mid) <= X:
+        left = mid
+    else:
+        right = mid
 print(left)

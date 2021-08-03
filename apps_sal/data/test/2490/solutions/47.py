@@ -29,9 +29,9 @@ def __starting_point():
 
 # import sys
 # input = sys.stdin.readline
-# 
+#
 # sys.setrecursionlimit(10 ** 7)
-# 
+#
 # (int(x)-1 for x in input().split())
 # rstrip()
 #
@@ -43,5 +43,6 @@ def __starting_point():
 #         else:
 #             ng = mid
 #     return ok
+
 
 __starting_point()

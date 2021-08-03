@@ -7,6 +7,7 @@ import heapq
 
 input = sys.stdin.readline
 
+
 def main():
 
     N, Q = [int(x) for x in input().split()]
@@ -79,7 +80,6 @@ def main():
         while byodo:
             x = byodo[0]
 
-
             # 最小値が所属する幼稚園の最大値が異なっていればpopしたままにする
             y = h[C[x[1]]][0]
             if -y[0] != x[0]:
@@ -94,5 +94,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

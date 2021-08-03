@@ -5,6 +5,3 @@ def invite_more_women(arr):
         return False
     else:
         return True
-     
-    
-

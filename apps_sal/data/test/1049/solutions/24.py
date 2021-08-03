@@ -8,4 +8,3 @@ for _ in range(d):
     else:
         cur += 1
 print(max(res, cur))
-

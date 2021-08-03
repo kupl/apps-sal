@@ -37,4 +37,3 @@ for _x, _y in xy:
         ans[_x][0] += 1
         ans[0][_y] += 1
 print((np.asarray(ans).cumsum(axis=1).cumsum(axis=0).max()))
-

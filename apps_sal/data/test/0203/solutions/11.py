@@ -21,5 +21,3 @@ while len(d) > 0 and len(r) > 0:
         r.append(r.popleft() + n)
 
 print('D' if len(d) > 0 else 'R')
-    
-

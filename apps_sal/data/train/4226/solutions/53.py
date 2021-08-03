@@ -7,4 +7,3 @@ def remove_smallest(numbers):
     rv = numbers.copy()
     rv.remove(sm)
     return rv
-

@@ -1,7 +1,8 @@
 s = list(input())
 t = list(input())
-arr = list(x-1 for x in map(int, input().split()))
+arr = list(x - 1 for x in map(int, input().split()))
 n, m = len(arr), len(t)
+
 
 def binary_search():
     f, e = 0, n
@@ -23,5 +24,5 @@ def binary_search():
             e = mid - 1
     return f - 1
 
-print(binary_search())
 
+print(binary_search())

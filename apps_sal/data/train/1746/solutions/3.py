@@ -56,10 +56,10 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
     class Player(GameObject):
 
         direction_table = {
-            "^": lambda self: (self.l[0], self.l[1]-1),
-            ">": lambda self: (self.l[0]+1, self.l[1]),
-            "v": lambda self: (self.l[0], self.l[1]+1),
-            "<": lambda self: (self.l[0]-1, self.l[1]),
+            "^": lambda self: (self.l[0], self.l[1] - 1),
+            ">": lambda self: (self.l[0] + 1, self.l[1]),
+            "v": lambda self: (self.l[0], self.l[1] + 1),
+            "<": lambda self: (self.l[0] - 1, self.l[1]),
         }
 
         def __init__(self, game, s, l=None, b=None):
@@ -260,4 +260,3 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
 
     game = Game(game)
     return game.run_game(actions)
-

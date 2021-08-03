@@ -8,4 +8,3 @@ for v in [int(k) for k in input().split(' ') if k]:
     else:
         minutesUsed[v] = 1
 print(count)
-

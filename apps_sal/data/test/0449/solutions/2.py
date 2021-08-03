@@ -16,4 +16,3 @@ n %= 5
 total += n
 
 print(total)
-

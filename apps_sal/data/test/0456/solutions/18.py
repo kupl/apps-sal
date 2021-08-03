@@ -19,4 +19,3 @@ while i < l - 2:
         ret += s[i]
         i += 1
 print(ret)
-

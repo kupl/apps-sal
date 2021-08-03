@@ -10,11 +10,8 @@ class Solution:
                 path.append(index)
                 index = manager[index]
             for employee in reversed(path):
-                #print(\"employee: {}, manager: {}, time of manager: {}, informTime of manager: {}\".format(employee, manager[employee],  time[manager[employee]], informTime[manager[employee]]))
+                # print(\"employee: {}, manager: {}, time of manager: {}, informTime of manager: {}\".format(employee, manager[employee],  time[manager[employee]], informTime[manager[employee]]))
                 time[employee] = time[manager[employee]] + informTime[manager[employee]]
             result = max(result, time[i])
         print(time)
-        return result            
-        
-        
-
+        return result

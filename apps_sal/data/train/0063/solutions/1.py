@@ -23,4 +23,3 @@ for _ in range(int(input())):
             i += wrr[j]
             wrr[j] = 0
     print(ans)
-

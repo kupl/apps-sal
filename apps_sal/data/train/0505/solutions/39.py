@@ -23,4 +23,3 @@ class Solution:
         stack.extend(torem)
         temp = [i for j, i in enumerate(list(s)) if j not in stack]
         return ''.join(temp)
-

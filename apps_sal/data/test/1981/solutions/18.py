@@ -10,7 +10,7 @@ counter = [0] * n
 c = 0
 i = 0
 queue = [(1, 0)]
-#print(arr)
+# print(arr)
 while i < len(queue):
     j = 0
     if len(arr[queue[i][0]]) == 1 and queue[i][1] == arr[queue[i][0]][0]:
@@ -24,7 +24,6 @@ while i < len(queue):
                     queue.append((j, queue[i][0]))
     i += 1
 print(c)
-#print(queue)
-#print(cat)
-#print(arr)
-
+# print(queue)
+# print(cat)
+# print(arr)

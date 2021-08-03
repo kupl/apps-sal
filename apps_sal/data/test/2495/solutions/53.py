@@ -1,6 +1,7 @@
 n = int(input())
 *A, = map(int, input().split())
-even = 0; odd = 0;
+even = 0
+odd = 0
 S = 0
 for i, a in enumerate(A):
     S += a

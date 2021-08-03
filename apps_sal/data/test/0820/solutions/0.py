@@ -8,8 +8,7 @@ for i in z:
     if y <= 0:
         print(ct)
         quit()
-        
-    y-=i
-    ct+=1
-print(ct)
 
+    y -= i
+    ct += 1
+print(ct)

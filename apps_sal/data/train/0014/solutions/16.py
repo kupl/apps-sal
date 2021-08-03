@@ -18,4 +18,3 @@ for case_num in range(t):
             if a[1 - i] + b[1 - j] == a[i]:
                 ok = True
     print('Yes' if ok else 'No')
-

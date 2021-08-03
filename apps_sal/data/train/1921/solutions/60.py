@@ -2,9 +2,9 @@ class DinnerPlates:
 
     def __init__(self, capacity):
         self.c = capacity
-        self.q = [] # record the available stack, will use heap to quickly find the smallest available stack
+        self.q = []  # record the available stack, will use heap to quickly find the smallest available stack
         # if you are Java or C++ users, tree map is another good option.
-        self.stacks = [] # record values of all stack of plates, its last nonempty stack are the rightmost position
+        self.stacks = []  # record values of all stack of plates, its last nonempty stack are the rightmost position
 
     def push(self, val):
         # To push, we need to find the leftmost available position
@@ -62,4 +62,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

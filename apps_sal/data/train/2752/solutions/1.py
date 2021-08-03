@@ -8,4 +8,4 @@ def summary_ranges(nums):
             ranges.append((first, previous))
             first = current
     ranges.append((first, nums[-1]))
-    return ["{}->{}".format(a, b) if a!=b else str(a) for a, b in ranges]
+    return ["{}->{}".format(a, b) if a != b else str(a) for a, b in ranges]

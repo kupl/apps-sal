@@ -23,4 +23,3 @@ for i in range(n):
         return
 
 print((10**10 - (n - mod + 4) // 3 + 1))
-

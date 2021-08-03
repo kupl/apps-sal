@@ -7,5 +7,4 @@ def first_non_consecutive(arr):
             continue
         else:
             return arr[i + 1]
-    #your code here
-
+    # your code here

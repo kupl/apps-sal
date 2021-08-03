@@ -1,6 +1,5 @@
-n=int(input())
-s=input().split()
-x=int(s[len(s)-1])
-s=list(map(int,s))
-print(max(s)^x)
-
+n = int(input())
+s = input().split()
+x = int(s[len(s) - 1])
+s = list(map(int, s))
+print(max(s) ^ x)

@@ -1,10 +1,11 @@
 from math import gcd
 from functools import reduce
 
+
 class Solution:
     def isGoodArray(self, nums: List[int]) -> bool:
-        return (reduce((lambda x, y: gcd(x,y)), nums) == 1)
-    
+        return (reduce((lambda x, y: gcd(x, y)), nums) == 1)
+
 # class Solution:
 #     def gcd(x, y):
 #         gcd_ = i
@@ -17,5 +18,3 @@ class Solution:
 #         for i in nums:
 #             itergcd = gcd(itergcd, i)
 #         return itergcd == 1
-            
-

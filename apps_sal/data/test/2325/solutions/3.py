@@ -5,10 +5,10 @@ md = 10 ** 9 + 7
 def fact_all(N):
     # lp = array('L', [2]*(N+1))
     # pr = array('L', [2])
-    lp = [2]*(N+1)
+    lp = [2] * (N + 1)
     pr = [2]
     pra = pr.append
-    for i in range(3, N+1, 2):
+    for i in range(3, N + 1, 2):
         if lp[i] == 2:
             lp[i] = i
             pra(i)
@@ -21,12 +21,12 @@ def fact_all(N):
 
 
 def cnk(n, k):
-    if k > n//2:
+    if k > n // 2:
         k = n - k
     ans = 1
-    for i in range(n-k+1, n+1):
+    for i in range(n - k + 1, n + 1):
         ans *= i
-    for i in range(2, k+1):
+    for i in range(2, k + 1):
         ans //= i
     ans = ans % md
     return ans
@@ -71,4 +71,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

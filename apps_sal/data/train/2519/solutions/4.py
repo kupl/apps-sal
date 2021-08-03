@@ -5,5 +5,5 @@ class Solution:
         for i in range(len(arr)):
             print(arr[i][:len(searchWord)])
             if arr[i][:len(searchWord)] == searchWord:
-                return i+1
+                return i + 1
         return -1

@@ -7,4 +7,3 @@ def any_arrows(arrows):
                 damaged_arrows += 1
         total_arrows += 1
     return total_arrows > damaged_arrows
-

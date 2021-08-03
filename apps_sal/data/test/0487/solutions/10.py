@@ -8,4 +8,3 @@ while s >= k * n - s:
     k += 1
 
 print(k)
-

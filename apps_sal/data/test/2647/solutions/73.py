@@ -32,4 +32,5 @@ def gr(h: int, w: int, g: List[List[str]]) -> int:
 def __starting_point():
     main()
 
+
 __starting_point()

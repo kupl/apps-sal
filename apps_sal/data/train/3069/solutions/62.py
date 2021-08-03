@@ -18,4 +18,4 @@ def greet(l):
         'swedish': 'Valkommen',
         'welsh': 'Croeso'
     }
-    return s.get(l,'Welcome')
+    return s.get(l, 'Welcome')

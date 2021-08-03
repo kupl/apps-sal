@@ -2,6 +2,7 @@ def parse(ip_address):
     a, b, c, d = [int(x) for x in ip_address.split('.')]
     return (a << 24) | (b << 16) | (c << 8) | d
 
+
 n, k = [int(x) for x in input().split()]
 ips = [parse(input()) for i in range(n)]
 all_ones = (1 << 32) - 1

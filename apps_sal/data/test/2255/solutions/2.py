@@ -1,10 +1,17 @@
+import heapq
+
+
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
-import heapq
+
 
 n, m = mi()
 g = [[] for i in range(n + 1)]
@@ -26,4 +33,3 @@ while pq:
             vis[v] = 1
 
 print(*ans)
-

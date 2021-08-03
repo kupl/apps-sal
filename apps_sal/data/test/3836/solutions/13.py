@@ -7,7 +7,6 @@ created by shuangquan.huang at 11/3/18
 """
 
 
-
 N = int(input())
 
 A = [[] for _ in range(4)]
@@ -18,9 +17,9 @@ for ni in range(N):
 
 
 for i in range(len(A)):
-    A[i].sort(reverse= True)
-    
-    
+    A[i].sort(reverse=True)
+
+
 # all people '11' supports both will be selected
 ans = sum(A[3] or [0])
 
@@ -28,7 +27,7 @@ ans = sum(A[3] or [0])
 
 single = min(len(A[1]), len(A[2]))
 
-ans += sum(A[1][:single]or [0])
+ans += sum(A[1][:single] or [0])
 ans += sum(A[2][:single] or [0])
 
 x = len(A[3]) + single
@@ -40,6 +39,3 @@ a.sort(reverse=True)
 ans += sum(a[: len(A[3])] or [0])
 
 print(ans)
-
-    
-

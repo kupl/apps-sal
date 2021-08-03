@@ -9,10 +9,9 @@ for t in range(1, 101):
     for item in arr:
         if (abs(item - t) >= 1):
             tot += abs(item - t) - 1
-    
+
     a.append((tot, t))
 
 a.sort()
 
 print(a[0][1], a[0][0])
-

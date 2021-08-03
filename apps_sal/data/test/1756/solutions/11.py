@@ -1,11 +1,11 @@
 n, x = list(map(int, input().split()))
 d = list(map(int, input().split()))
 accum = (3 * n) * [0]
-accum2 = (3*n)*[0]
+accum2 = (3 * n) * [0]
 for i in range(3 * n):
     if i > 0:
-        accum[i] = accum[i-1]
-        accum2[i] = accum2[i-1]
+        accum[i] = accum[i - 1]
+        accum2[i] = accum2[i - 1]
     accum[i] += (((d[i % n] + 1) * d[i % n]) // 2)
     accum2[i] += d[i % n]
 
@@ -23,8 +23,7 @@ for i in range(n):
     if dif == 0:
         ans = max(temp_ans, ans)
     else:
-        ans = max(temp_ans-(dif+1)*dif//2, ans)
+        ans = max(temp_ans - (dif + 1) * dif // 2, ans)
     days -= d[i]
-    temp_ans -= (d[i]+1)*d[i]//2
+    temp_ans -= (d[i] + 1) * d[i] // 2
 print(ans)
-

@@ -7,12 +7,12 @@ def i_tri(s):
     distance = swim + bicycle + marathon
     if s > distance:
         return "You're done! Stop running!"
-    
+
     txt = "Swim" if s <= swim else \
         "Bike" if s <= (swim + bicycle) else \
         "Run"
-    
+
     remaining = distance - s
-    obj = {f"{txt}":f"{remaining:.2f} to go!"}
-    
+    obj = {f"{txt}": f"{remaining:.2f} to go!"}
+
     return obj

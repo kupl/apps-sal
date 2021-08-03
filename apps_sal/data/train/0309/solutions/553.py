@@ -8,7 +8,7 @@ class Solution:
 
         res = 2
         dp = [{} for i in range(n)]
-        dp[1] = {A[1]-A[0]: 2}
+        dp[1] = {A[1] - A[0]: 2}
         for k in range(2, n):
             for i in range(k):
                 diff = A[k] - A[i]

@@ -18,9 +18,11 @@ def main():
         line += str(i) + ' '
     print(line)
 
+
 def __starting_point():
     t = int(input())
     for i in range(t):
         main()
+
 
 __starting_point()

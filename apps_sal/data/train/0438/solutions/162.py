@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def merge(self, x, y, f):
         f[y] = x
@@ -32,4 +33,3 @@ class Solution:
             if m in self.d and self.d[m] > 0:
                 ans = i + 1
         return ans
-

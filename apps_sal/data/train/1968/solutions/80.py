@@ -6,5 +6,5 @@ class Solution:
         for folder in folders:
             if not folder.startswith(parent):
                 output.append(folder)
-                parent = folder+'/'
+                parent = folder + '/'
         return output

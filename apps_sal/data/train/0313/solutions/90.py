@@ -9,10 +9,10 @@ class Solution:
                     bouquets += (flowers + 1) // k
                     flowers = (flowers + 1) % k
             return bouquets >= m
-        
+
         if len(bloomDay) < (m * k):
             return -1
-            
+
         l, r = 1, max(bloomDay)
         while l < r:
             mid = (l + r) // 2

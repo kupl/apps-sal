@@ -5,4 +5,3 @@ def Dragon(n):
     for i in range(n):
         s = 'aRbFR'.join(t.replace('b', 'LFaLb') for t in s.split('a'))
     return s.replace('a', '').replace('b', '')
-

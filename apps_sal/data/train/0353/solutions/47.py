@@ -4,7 +4,7 @@ class Solution:
         mod = 10**9 + 7
         left = 0
         right = len(nums) - 1
-        res = 0 
+        res = 0
         while(left <= right):
             if nums[left] + nums[right] > target:
                 right -= 1

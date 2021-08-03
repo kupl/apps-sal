@@ -19,7 +19,7 @@ def mulinv(b, n):
 
 
 def isprime(n):
-    for d in range(2, int(math.sqrt(n))+1):
+    for d in range(2, int(math.sqrt(n)) + 1):
         if n % d == 0:
             return False
     return True
@@ -42,8 +42,8 @@ def f(p=0):
 
 class DisjointSet:
     def __init__(self, n):
-        self.parent = [i for i in range(1, n+1)]
-        self.rank = [0]*(n+1)
+        self.parent = [i for i in range(1, n + 1)]
+        self.rank = [0] * (n + 1)
 
     def find_set(self, x):
         if self.parent[x] == x:
@@ -55,15 +55,15 @@ class DisjointSet:
     def union(self, x, y):
         set_x = self.find_set(x)
         set_y = self.find_set(y)
-        if set_x!=set_y:
+        if set_x != set_y:
             if self.rank[x]:
                 pass
 
 
 def graph(n, m, edg=False):
     edges = []
-    visited = [0]*n
-    g = [list() for _ in range(n+1)]
+    visited = [0] * n
+    g = [list() for _ in range(n + 1)]
     for i in range(m):
         u, v = f(1)
         g[u].append(v)
@@ -103,4 +103,4 @@ a = cl[0]
 b = cl[1]
 c = cl[2]
 
-print(max(0, d-(b-a))+max(0, d-(c-b)))
+print(max(0, d - (b - a)) + max(0, d - (c - b)))

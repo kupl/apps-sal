@@ -45,12 +45,13 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m=map(int,input().split())
-uf=UnionFind(n)
+
+n, m = map(int, input().split())
+uf = UnionFind(n)
 for i in range(m):
-  a,b=map(int,input().split())
-  uf.union(a-1,b-1)
-ans=0
+    a, b = map(int, input().split())
+    uf.union(a - 1, b - 1)
+ans = 0
 for i in range(n):
-  ans=max(ans,uf.size(i))
+    ans = max(ans, uf.size(i))
 print(ans)

@@ -5,6 +5,7 @@ for _ in range(n):
     a, b = list(map(int, input().split()))
     proj_list.append([b, a, True])
 
+
 def check(proj_list):
     nonlocal r
 
@@ -27,10 +28,9 @@ def check(proj_list):
             i += 1
 
 
-#proj_list.sort(reverse=True)
+# proj_list.sort(reverse=True)
 raise_mmr = [x for x in proj_list if x[0] >= 0]
 hard_work = [x for x in proj_list if x[0] < 0]
 proj_list = sorted(raise_mmr, key=lambda x: x[0], reverse=True) + sorted(hard_work, key=lambda x: x[1] + x[0], reverse=True)
 
 print("YES" if check(proj_list) else "NO")
-

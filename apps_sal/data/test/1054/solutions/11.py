@@ -1,11 +1,11 @@
 n = int(input())
-x, y = map(int,input().split())
+x, y = map(int, input().split())
 xmin = x
 xmax = x
 ymin = y
 ymax = y
-for i in range(n-1):
-    x, y = map(int,input().split())
+for i in range(n - 1):
+    x, y = map(int, input().split())
     xmin = min(xmin, x)
     xmax = max(xmax, x)
     ymin = min(ymin, y)

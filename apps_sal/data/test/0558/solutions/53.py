@@ -22,4 +22,3 @@ for k in range(K + 1):
     val = M * tool.comb(N - 1, k) % mod * pow(M - 1, N - 1 - k, mod) % mod
     ans = (ans + val) % mod
 print(ans)
-

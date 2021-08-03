@@ -13,4 +13,3 @@ class Solution:
                 if len(window) <= maxLetters:
                     count[s[i - k + 1:i + 1]] += 1
         return max(list(count.values()), default=0)
-

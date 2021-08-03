@@ -4,7 +4,7 @@ class Solution:
         profit = 0
         max_profit = 0
         max_index = -1
-        
+
         i = 0
         while True:
             if i >= len(customers) and wait == 0:
@@ -19,5 +19,5 @@ class Solution:
                 max_profit = profit
                 max_index = i + 1
             i += 1
-        
+
         return max_index

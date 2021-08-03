@@ -24,7 +24,7 @@ for i in lis:
     else:
         stack.pop()
 
-        
+
 if stack == []:
     print("YES")
 else:

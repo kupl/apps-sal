@@ -5,50 +5,50 @@ h, w = map(int, input().split())
 
 # 0: 障害物または壁 1: 通路
 # 上下左右の壁の分を加味して+2したグリッドを用意する。
-g = np.zeros((h+2,w+2),dtype=np.int64)
+g = np.zeros((h + 2, w + 2), dtype=np.int64)
 for i in range(h):
     grid = np.array(list(input()))
-    g[i+1, 1:w+1] = (grid=='.')
+    g[i + 1, 1:w + 1] = (grid == '.')
 
 # 横について考える
 gW = np.copy(g)
 gW = np.ravel(gW)
-tWLeft = np.arange((w+2)*(h+2))
+tWLeft = np.arange((w + 2) * (h + 2))
 tWRight = np.copy(tWLeft)
 
-tWLeft[gW==1] = 0
-tWRight[gW[::-1]==1] = 0
+tWLeft[gW == 1] = 0
+tWRight[gW[::-1] == 1] = 0
 
 np.maximum.accumulate(tWLeft, out=tWLeft)
 np.maximum.accumulate(tWRight, out=tWRight)
 
 tWRight = len(tWRight) - 1 - tWRight[::-1]
 
-tW = tWRight-tWLeft-1
-tW[gW==0] = 0
-tW = tW.reshape(h+2, w+2)
+tW = tWRight - tWLeft - 1
+tW[gW == 0] = 0
+tW = tW.reshape(h + 2, w + 2)
 
 # 縦について考える
 gH = np.copy(g.T)
 gH = np.ravel(gH)
-tHLeft = np.arange((w+2)*(h+2))
+tHLeft = np.arange((w + 2) * (h + 2))
 tHRight = np.copy(tHLeft)
 
-tHLeft[gH==1] = 0
-tHRight[gH[::-1]==1] = 0
+tHLeft[gH == 1] = 0
+tHRight[gH[::-1] == 1] = 0
 
 np.maximum.accumulate(tHLeft, out=tHLeft)
 np.maximum.accumulate(tHRight, out=tHRight)
 
 tHRight = len(tHRight) - 1 - tHRight[::-1]
 
-tH = tHRight-tHLeft-1
-tH[gH==0] = 0
-tH = tH.reshape(w+2, h+2).T
+tH = tHRight - tHLeft - 1
+tH[gH == 0] = 0
+tH = tH.reshape(w + 2, h + 2).T
 
-#print(tW)
-#print(tH)
-print(np.max(tW+tH-1))
+# print(tW)
+# print(tH)
+print(np.max(tW + tH - 1))
 
 
 '''

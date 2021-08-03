@@ -1,6 +1,7 @@
 def gcd(a, b):
     return a if b == 0 else gcd(b, a % b)
 
+
 def count_ones(n):
     a = [6, 7]
     for i in range(2, n + 1):
@@ -18,6 +19,7 @@ def max_pn(n):
         p.add(b - a)
         a = b
     return max(p)
+
 
 def an_over_average(n):
     return 3

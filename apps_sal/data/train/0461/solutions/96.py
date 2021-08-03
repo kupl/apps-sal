@@ -3,7 +3,7 @@ class Solution:
         graph = collections.defaultdict(list)
         for idx in range(n):
             graph[manager[idx]].append(idx)
-        
+
         max_time = 0
         queue = collections.deque([(headID, 0)])
         while queue:
@@ -12,6 +12,3 @@ class Solution:
             for sub in graph[node]:
                 queue.append((sub, time + informTime[node]))
         return max_time
-        
-            
-

@@ -1,2 +1,2 @@
-r=int(input())
-print(r*r)
+r = int(input())
+print(r * r)

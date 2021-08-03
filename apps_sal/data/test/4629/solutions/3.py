@@ -3,6 +3,7 @@ q = int(input())
 N = [int(input()) for i in range(q)]
 t = [3**i for i in range(10)]
 
+
 def d(x):
     ans = 0
     m = 1
@@ -24,7 +25,3 @@ for i in range(q):
         m = d(t)
         t += 1
     print(m)
-
-
-
-

@@ -6,4 +6,3 @@ for ci in c:
     time += x * ci
     x = max(x - 1, 1)
 print(time)
-

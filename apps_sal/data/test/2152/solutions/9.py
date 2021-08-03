@@ -9,5 +9,5 @@ for i in range(n):
     if p < pmin:
         pmin = p
     sum += a * pmin
-    
+
 print(sum)

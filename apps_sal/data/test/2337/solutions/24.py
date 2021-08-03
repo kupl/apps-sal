@@ -6,4 +6,4 @@ while i < n and j < m:
     if c[i] <= d[j]:
         i += 1
     j += 1
-print(n-i)
+print(n - i)

@@ -5,5 +5,3 @@ def bumps(road):
         return "Woohoo!"
     elif bumps > 15:
         return "Car Dead"
-       
-

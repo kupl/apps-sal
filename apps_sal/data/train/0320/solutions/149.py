@@ -7,11 +7,12 @@ class Solution:
             one += r[0]
             two = max(two, r[1])
         return one + two
+
     def onetwo(self, n):
         one = 0
         two = 0
         while n != 0:
-            if n%2 == 0:
+            if n % 2 == 0:
                 two += 1
                 n /= 2
             else:

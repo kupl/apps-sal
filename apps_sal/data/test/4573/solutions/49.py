@@ -14,4 +14,3 @@ for x in org:
         print((X[left]))
     else:
         print((X[right]))
-

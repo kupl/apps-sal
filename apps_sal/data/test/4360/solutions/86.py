@@ -8,4 +8,3 @@ for i in a:
 ans = 1 / ans
 
 print(ans)
-

@@ -1,10 +1,11 @@
 
-def pair_apply(a, fn): 
+def pair_apply(a, fn):
     """
     Apply a funtion to each pair of consecutive 
     values in the array and return the resultant array
     """
     return [fn(x, y) for x, y in zip(a, a[1:])]
+
 
 def run_length_encode(a):
     """Run length encode the given array"""
@@ -18,6 +19,7 @@ def run_length_encode(a):
             i += 1
     return a
 
+
 def descriptions(arr):
     """
     Caluculate number of possible range collapse 
@@ -30,4 +32,3 @@ def descriptions(arr):
         if delta == 1:
             result *= 2 ** count
     return result
-

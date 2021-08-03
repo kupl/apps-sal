@@ -3,7 +3,7 @@ class Solution:
         adj_list = defaultdict(list)
         vertices_with_no_incoming_edges = []
         stack = deque()
-        indegree_graph = defaultdict(int) 
+        indegree_graph = defaultdict(int)
         vertices_part_of_cycle = []
         no_of_vertices = len(graph)
 
@@ -12,7 +12,7 @@ class Solution:
 
         for source in range(no_of_vertices):
             for dest in graph[source]:
-                adj_list[dest].append(source) 
+                adj_list[dest].append(source)
                 indegree_graph[source] += 1
 
         for key, val in indegree_graph.items():
@@ -26,9 +26,9 @@ class Solution:
             if vert in adj_list:
                 for v in adj_list[vert]:
                     indegree_graph[v] -= 1
-                
+
                     if indegree_graph[v] == 0:
                         vertices_with_no_incoming_edges.append(v)
                         stack.append(v)
 
-        return sorted(vertices_with_no_incoming_edges) 
+        return sorted(vertices_with_no_incoming_edges)

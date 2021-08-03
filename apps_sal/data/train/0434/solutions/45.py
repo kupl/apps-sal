@@ -3,7 +3,7 @@ class Solution:
         if 1 not in nums:
             return 0
         if 0 not in nums:
-            return len(nums)-1
+            return len(nums) - 1
         new = []
         i = 0
         n = len(nums)
@@ -16,13 +16,9 @@ class Solution:
                 new.append(cnt)
             else:
                 new.append(0)
-                i+= 1
+                i += 1
         mx = max(new)
-        for i in range(1,len(new)-1):
+        for i in range(1, len(new) - 1):
             if new[i] == 0:
-                mx = max(mx,new[i-1] + new[i+1])
+                mx = max(mx, new[i - 1] + new[i + 1])
         return mx
-                
-                
-        
-

@@ -1,12 +1,14 @@
 from collections import deque
 
+
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
         size = len(A)
         if size < 2:
             return size
         oddNext = [-1] * size
-        evenNext= [-1] * size
+        evenNext = [-1] * size
+
         def getNext(arr: list, nextArr: list):
             stack = deque()
             for index in arr:
@@ -14,9 +16,9 @@ class Solution:
                     nextArr[stack[-1]] = index
                     stack.pop()
                 stack.append(index)
-        indexes = sorted(list(range(size)), key = lambda i: A[i])
+        indexes = sorted(list(range(size)), key=lambda i: A[i])
         getNext(indexes, oddNext)
-        indexes = sorted(list(range(size)), key = lambda i: -A[i])
+        indexes = sorted(list(range(size)), key=lambda i: -A[i])
         getNext(indexes, evenNext)
         odds = [False] * size
         evens = [False] * size

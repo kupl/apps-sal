@@ -9,4 +9,4 @@ def bmi(weight, height):
     elif bmi > 30:
         return 'Obese'
     else:
-        return None 
+        return None

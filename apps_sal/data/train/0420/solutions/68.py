@@ -4,7 +4,7 @@ class Solution:
         for window_size in range(len(s), -1, -1):
             end_pos = len(s) - window_size + 1
             for i in range(end_pos):
-                substring = s[i: i+ window_size]
+                substring = s[i: i + window_size]
                 is_all_even = True
                 for ch in 'aeiou':
                     if substring.count(ch) % 2:

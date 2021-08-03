@@ -5,16 +5,16 @@ count = 0
 exist_odd = False
 
 while True:
-  for i in range(N):
-    if A[i] % 2 != 0:
-      exist_odd = True
+    for i in range(N):
+        if A[i] % 2 != 0:
+            exist_odd = True
 
-  if exist_odd:
-    break
+    if exist_odd:
+        break
 
-  for i in range(N):
-    A[i] /=2
+    for i in range(N):
+        A[i] /= 2
 
-  count +=1
+    count += 1
 
 print(count)

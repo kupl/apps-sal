@@ -14,4 +14,3 @@ for i in range(n + 1):
     res = max(res, d[i])
 
 print(res)
-

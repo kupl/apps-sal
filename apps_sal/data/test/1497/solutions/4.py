@@ -7,4 +7,3 @@ for i in range(n):
     else:
         dic[s] += 1
 print(max(dic.values()))
-

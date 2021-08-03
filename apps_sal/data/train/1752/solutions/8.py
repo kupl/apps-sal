@@ -7,4 +7,3 @@ ADJACENT = {'1': '124', '2': '1235', '3': '236', '4': '1475', '5': '24568',
 
 def get_pins(observed):
     return [''.join(a) for a in product(*(ADJACENT[b] for b in observed))]
-

@@ -15,4 +15,3 @@ for key, value in works:
         break
 else:
     print('Yes')
-

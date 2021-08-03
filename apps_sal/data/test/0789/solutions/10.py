@@ -5,21 +5,10 @@ n = len(a)
 ans = 0
 for i in range(n):
     digs = n - i
-    ans += 2 ** (digs-1)
+    ans += 2 ** (digs - 1)
     if a[i] == 4:
         continue
     else:
         ans += 2 ** (digs - 1)
 
 print(ans)
-
-
-
-
-
-
-
-
-
-
-

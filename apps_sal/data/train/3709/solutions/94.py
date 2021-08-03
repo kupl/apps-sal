@@ -1,4 +1,4 @@
-def simple_multiplication(number) :
+def simple_multiplication(number):
     Temp = number % 2
     if Temp == 0:
         TempMul = number * 8

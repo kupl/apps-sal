@@ -14,5 +14,3 @@ for repeat in range(int(input())):
             res = res + str(laststudent) + " "
             laststudent = laststudent + 1
     print(res)
-            
-

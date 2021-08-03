@@ -17,7 +17,6 @@ class StreamChecker:
 
         self.trie = trie
         self.current_tries = []
-        
 
     def query(self, letter: str) -> bool:
         new_tries = []
@@ -34,17 +33,12 @@ class StreamChecker:
             t = t[letter]
             res = res | t.get(None, False)
             new_tries.append(t)
-            
 
         self.current_tries = new_tries
-        
-        return res
 
-                
-        
+        return res
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

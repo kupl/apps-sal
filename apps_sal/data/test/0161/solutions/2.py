@@ -2,9 +2,11 @@
 #      |        /  \       |    |   / |
 #      |       /____\      |    |  /  |
 #      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|  
+#  ========= /        \  =====  |/====|
 #  code
 from math import ceil, log2
+
+
 def __starting_point():
     x = int(input())
     n = []
@@ -26,6 +28,7 @@ def __starting_point():
                 c = 1
         count += 1
     print(count)
-    print(' '.join(list(map(str,n))))
+    print(' '.join(list(map(str, n))))
+
 
 __starting_point()

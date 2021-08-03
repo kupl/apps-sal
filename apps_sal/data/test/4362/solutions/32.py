@@ -1,1 +1,1 @@
-print('aA'[input()<'a'])
+print('aA'[input() < 'a'])

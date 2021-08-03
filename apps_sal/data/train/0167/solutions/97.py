@@ -8,13 +8,14 @@ class Solution:
         # # Initialization 2 --> no egg no floor --> dp[*][0] = 0
         # # General case --> we want to find dp[m][k] --> we pick one egg and drop (1 move)
         # #              --> now we have k or k-1 eggs, depending on whether the previous egg is broken
-        # #              --> so in either case, we can at least sum up 1 (first move) + dp[m-1][k] + dp[m-1][k-1] 
+        # #              --> so in either case, we can at least sum up 1 (first move) + dp[m-1][k] + dp[m-1][k-1]
         # for i in range(1, M+1):
         #     for j in range(1, K+1):
         #         dp[i][j] = 1 + dp[i-1][j] + dp[i-1][j-1]
         #         if dp[i][j] >= N:
         #             return i
-        memo = dict()    
+        memo = dict()
+
         def dp(K, N):
             if K == 1:
                 return N
@@ -25,11 +26,11 @@ class Solution:
             res = float('inf')
             low, high = 1, N
             while low <= high:
-                mid = (low + high)//2
-                broken = dp(K-1, mid -1)
-                notBroken = dp(K, N-mid)
+                mid = (low + high) // 2
+                broken = dp(K - 1, mid - 1)
+                notBroken = dp(K, N - mid)
                 if broken > notBroken:
-                    high = mid -1
+                    high = mid - 1
                     res = min(broken + 1, res)
                 else:
                     low = mid + 1
@@ -45,14 +46,10 @@ class Solution:
             #         res = min(broken + 1, res)
             #     else:
             #         low = mid + 1
-            #         res = min(notBroken + 1, res)    
+            #         res = min(notBroken + 1, res)
             # for i in range(1, N+1):
             #     res = min(res, \\
             #               max(dp(K-1, i-1), dp(K, N-i))+ 1)
-            memo[(K,N)] = res
+            memo[(K, N)] = res
             return res
         return dp(K, N)
-            
-                
-            
-

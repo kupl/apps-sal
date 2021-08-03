@@ -6,4 +6,3 @@ elif R < 2800:
     print('ARC')
 else:
     print('AGC')
-

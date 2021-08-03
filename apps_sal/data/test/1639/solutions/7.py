@@ -9,6 +9,6 @@ for i in range(1, n):
     else:
         ans = max(ans, now)
         now = 1
-        
+
 ans = max(ans, now)
 print(ans)

@@ -1,10 +1,12 @@
 from collections import deque
+
+
 class Solution:
     def minDays(self, n: int) -> int:
         q = deque([n])
         days = 0
         visited = set()
-        
+
         while q:
             days += 1
             for _ in range(len(q)):

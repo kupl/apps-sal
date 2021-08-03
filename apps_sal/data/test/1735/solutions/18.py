@@ -1,7 +1,7 @@
-s = '^'+input()+'$'
+s = '^' + input() + '$'
 n = len(s)
-N = [*list(range(1,n+1))]
-P = [*list(range(-1,n-1))]
+N = [*list(range(1, n + 1))]
+P = [*list(range(-1, n - 1))]
 
 count = 0
 
@@ -15,12 +15,11 @@ while N[i] != n:
     else:
         i = N[i]
 
-print('Yes' if count%2 else 'No')
+print('Yes' if count % 2 else 'No')
 
-#print(count)
+# print(count)
 #i = 0
-#while i != n:
+# while i != n:
 #    print(s[i], end='')
 #    i = N[i]
-#print()
-
+# print()

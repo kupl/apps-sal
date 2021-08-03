@@ -12,8 +12,8 @@ for i in range(n):
     else:
         vsum += a
         k.append((r - a, b))
-        
-k.sort(key = lambda x: x[1])
+
+k.sort(key=lambda x: x[1])
 
 val = n * avg - vsum
 if(val <= 0):
@@ -26,15 +26,10 @@ while(z < val):
     z += k[i][0]
     res += k[i][1] * k[i][0]
     i += 1
-    
+
 i -= 1
 if(z > val):
     res -= (z - val) * k[i][1]
     print(res)
 else:
     print(res)
-        
-
-
-    
-

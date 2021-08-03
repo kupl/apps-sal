@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def prime_fact(num):
     prime = []
     for i in range(2, int(num ** 0.5) + 1):
@@ -10,6 +11,7 @@ def prime_fact(num):
         prime.append(num)
     return prime
 
+
 n = int(input())
 cnt = Counter(prime_fact(n))
 
@@ -19,5 +21,5 @@ for c in cnt.values():
     while c >= tmp:
         c -= tmp
         ans += 1
-        tmp += 1      
+        tmp += 1
 print(ans)

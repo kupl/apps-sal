@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 if n == 3:
@@ -18,6 +23,6 @@ else:
         if a[i][1] not in a[j]:
             j = a[i][1]
         i = j
-        if i == 1: break
+        if i == 1:
+            break
 print(*ans)
-

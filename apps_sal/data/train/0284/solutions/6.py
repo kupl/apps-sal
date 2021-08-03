@@ -15,6 +15,7 @@ class Solution:
                 P += tokens[right]
                 curr -= 1
                 right -= 1
-            else: break
-            
+            else:
+                break
+
         return ans

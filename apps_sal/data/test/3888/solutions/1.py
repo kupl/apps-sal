@@ -1,7 +1,7 @@
 ## coding: UTF-8
 
-def mex(x,y):
-    if(x*y>0):
+def mex(x, y):
+    if(x * y > 0):
         return 0
     elif(x == 1 and y == 0):
         return 2
@@ -9,6 +9,7 @@ def mex(x,y):
         return 2
     else:
         return 1
+
 
 '''
 import random
@@ -49,13 +50,7 @@ print('~~~~~~~~~~~~~~~~~~~~~~~+++++++++~~~~~~~~~~~')
 '''
 
 
-
-
-
-
-
-counter = [0,0,0]
-
+counter = [0, 0, 0]
 
 
 N = int(input())
@@ -66,10 +61,8 @@ if(N == 1):
     print(('{} {} {}'.format(counter[0], counter[1], counter[2])))
 
 
-
-
 elif(N == 2):
-    A = list(map(int,input().split()))
+    A = list(map(int, input().split()))
     B = int(input())
     counter[A[0]] += 1
     counter[A[1]] += 1
@@ -78,44 +71,41 @@ elif(N == 2):
     print(('{} {} {}'.format(counter[0], counter[1], counter[2])))
 
 else:
-    A = list(map(int,input().split()))
+    A = list(map(int, input().split()))
     #A = matrix[0]
     B = []
-    for i in range(N-1):
+    for i in range(N - 1):
         B.append(int(input()))
-        #B.append(matrix[i+1][0])
+        # B.append(matrix[i+1][0])
 
     matrix = []
-    #for i in range(N):
-        #matrix.append([7] * N)
+    # for i in range(N):
+    #matrix.append([7] * N)
 
     #matrix[0] = A
     matrix.append(A)
     for j in range(1, N):
         #matrix[j][0] = B[j-1]
-        matrix.append([B[j-1]])
+        matrix.append([B[j - 1]])
 
-    
-    #for i in range(N):
-        #print(matrix[i])
-    
-    #print(-1)
+    # for i in range(N):
+        # print(matrix[i])
 
-    
+    # print(-1)
+
     for i in range(1, 3):
         for j in range(1, N):
             #matrix[i][j] = mex(matrix[i-1][j], matrix[i][j-1])
-            matrix[i].append(mex(matrix[i-1][j], matrix[i][j-1]))
+            matrix[i].append(mex(matrix[i - 1][j], matrix[i][j - 1]))
 
     for i in range(3, N):
-        for j in range(1,3):
-            #matrix[i][j] = mex(matrix[i-1][j], matrix[i][j-1])   
-            matrix[i].append(mex(matrix[i-1][j], matrix[i][j-1]))     
+        for j in range(1, 3):
+            #matrix[i][j] = mex(matrix[i-1][j], matrix[i][j-1])
+            matrix[i].append(mex(matrix[i - 1][j], matrix[i][j - 1]))
 
-    #for i in range(N):
-        #print(matrix[i])
+    # for i in range(N):
+        # print(matrix[i])
 
-    
     counter = [0, 0, 0]
     for i in range(3):
         for j in range(N):
@@ -125,33 +115,31 @@ else:
         for j in range(3):
             counter[matrix[i][j]] += 1
 
-    #print(counter)
+    # print(counter)
 
-    #print('check')
-    #for i in range(N):
-        #print(matrix[i])
-    
+    # print('check')
+    # for i in range(N):
+        # print(matrix[i])
+
     for i in range(3, 4):
         for j in range(3, N):
             #matrix[i][j] = mex(matrix[i-1][j], matrix[i][j-1])
             #counter[matrix[i][j]] += N-j
-            matrix[i].append(mex(matrix[i-1][j], matrix[i][j-1]))
-            counter[mex(matrix[i-1][j], matrix[i][j-1])] += N-j
+            matrix[i].append(mex(matrix[i - 1][j], matrix[i][j - 1]))
+            counter[mex(matrix[i - 1][j], matrix[i][j - 1])] += N - j
             #print(matrix[i][j], N-j)
 
     for i in range(4, N):
         for j in range(3, 4):
-            #matrix[i][j] = mex(matrix[i-1][j], matrix[i][j-1])      
+            #matrix[i][j] = mex(matrix[i-1][j], matrix[i][j-1])
             #counter[matrix[i][j]] += N-i
-            matrix[i].append(mex(matrix[i-1][j], matrix[i][j-1]))
-            counter[mex(matrix[i-1][j], matrix[i][j-1])] += N-i
+            matrix[i].append(mex(matrix[i - 1][j], matrix[i][j - 1]))
+            counter[mex(matrix[i - 1][j], matrix[i][j - 1])] += N - i
             #print(matrix[i][j], N-i)
 
-    #for i in range(N):
-        #print(matrix[i])
+    # for i in range(N):
+        # print(matrix[i])
 
-
-    #print(counter)
+    # print(counter)
 
     print(('{} {} {}'.format(counter[0], counter[1], counter[2])))
-

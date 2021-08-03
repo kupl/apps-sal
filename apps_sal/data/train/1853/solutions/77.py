@@ -30,4 +30,3 @@ class Solution:
                 minc = cnt
                 mini = i
         return mini
-

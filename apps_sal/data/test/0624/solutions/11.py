@@ -14,4 +14,3 @@ for ai in a:
     m -= 1
     sm -= ai
 print(res)
-

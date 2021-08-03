@@ -34,7 +34,6 @@ for i in range(N):
             return
 
 H -= throw_sum
-ans += math.ceil(H/max_a)
+ans += math.ceil(H / max_a)
 
 print(ans)
-

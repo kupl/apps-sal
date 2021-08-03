@@ -21,4 +21,3 @@ def basereduct(x):
     if k == 200:
         return -1
     return int(s, b)
-

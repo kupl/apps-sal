@@ -8,17 +8,17 @@ C = Counter(arr)
 flag = 0
 
 for keys in C:
-    if C[keys]>=3:
+    if C[keys] >= 3:
         flag = 1
         print("NO")
         break
 
-if flag==0:
+if flag == 0:
     print("YES")
     es = []
     ds = []
     for keys in C:
-        if C[keys]==2:
+        if C[keys] == 2:
             es.append(keys)
             ds.append(keys)
         else:
@@ -32,4 +32,3 @@ if flag==0:
     print(*es)
     print(len(ds))
     print(*ds)
-

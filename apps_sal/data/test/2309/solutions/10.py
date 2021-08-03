@@ -47,7 +47,3 @@ for i in range(len(ends_words)):
     st = starts_words.pop()
     print(st[0], end[0])
     print(st[1], end[1])
-
-
-    
-

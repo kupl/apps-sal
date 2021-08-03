@@ -5,4 +5,3 @@ def evaporator(content, evap_per_day, threshold):
         content = content - content * evap_per_day / 100
         counter += 1
     return counter
-

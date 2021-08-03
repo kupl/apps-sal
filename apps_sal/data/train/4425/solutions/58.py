@@ -5,6 +5,5 @@ def mango(quantity, price):
     elif quantity % 3 != 0:
         b = quantity % 3
         c = ((quantity - b) / 3) * 2
-        d = (c + b) 
+        d = (c + b)
         return d * price
-

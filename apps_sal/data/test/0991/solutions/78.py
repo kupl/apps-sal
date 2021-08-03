@@ -1,4 +1,6 @@
 from heapq import heappush, heappop
+
+
 def main():
     N, M, S = list(map(int, input().split()))
     G = [[] for _ in range(N)]
@@ -9,7 +11,7 @@ def main():
         G[u].append((v, a, b))
         G[v].append((u, a, b))
     CD = [list(map(int, input().split())) for _ in range(N)]
-    distance = [[1<<62]*2501 for _ in range(N)]
+    distance = [[1 << 62] * 2501 for _ in range(N)]
     q = [(0, 0, min(S, 2500))]
     distance[0][min(S, 2500)] = 0
     while q:
@@ -38,5 +40,5 @@ def main():
                 heappush(q, (ud, u, us))
     print(("\n".join(str(min(d)) for d in distance[1:])))
 
-main()
 
+main()

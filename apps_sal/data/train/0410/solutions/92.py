@@ -8,6 +8,4 @@ class Solution:
                 return 1 + power(x // 2)
             return 1 + power(3 * x + 1)
 
-        return sorted(list(range(lo, hi+1)), key=power)[k-1]
-            
-
+        return sorted(list(range(lo, hi + 1)), key=power)[k - 1]

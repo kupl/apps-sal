@@ -1,4 +1,4 @@
-n ,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 ln = []
 lm = []
 
@@ -11,8 +11,8 @@ lim = n - m + 1
 for i in range(lim):
     for j in range(lim):
         l = 0
-        for k in ln[i:i+m]:
-            if k[j:j+m] != lm[l]:
+        for k in ln[i:i + m]:
+            if k[j:j + m] != lm[l]:
                 break
             l += 1
         else:
@@ -24,4 +24,3 @@ for i in range(lim):
 
 else:
     print("No")
-

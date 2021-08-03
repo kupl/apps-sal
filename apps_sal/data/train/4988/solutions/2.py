@@ -1,1 +1,1 @@
-square = lambda n: n*n
+def square(n): return n * n

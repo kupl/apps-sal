@@ -27,6 +27,7 @@ class StreamChecker:
                     return True
         return False
 
+
 class Tree:
     def __init__(self, root, subtrees):
         self.root = root
@@ -38,4 +39,3 @@ class Tree:
             if item.root == letter:
                 return i
         return None
-

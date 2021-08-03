@@ -12,18 +12,17 @@ for i in range(n):
     for j in range(m):
         if s[j] == 'B':
             have += 1
-            up = min(up,i)
-            down = max(down,i)
-            left  = min(left,j)
-            right = max(right,j)
+            up = min(up, i)
+            down = max(down, i)
+            left = min(left, j)
+            right = max(right, j)
 
 if have == 0:
     print(1)
 else:
     if up <= down and left <= right:
-        l = max(down - up + 1,right - left + 1)
-        if l<= min(n,m):
-            print(l*l - have)
+        l = max(down - up + 1, right - left + 1)
+        if l <= min(n, m):
+            print(l * l - have)
         else:
             print(-1)
-

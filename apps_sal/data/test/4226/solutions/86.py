@@ -1,4 +1,4 @@
-x, y = list(map(int,input().split()))
+x, y = list(map(int, input().split()))
 cnt = 0
 for a in range(x + 1):
     b = x - a
@@ -9,5 +9,3 @@ else:
     ans = 'No'
 
 print(ans)
-
-

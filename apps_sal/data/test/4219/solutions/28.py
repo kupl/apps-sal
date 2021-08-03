@@ -21,4 +21,3 @@ for i in range(1, 1 << N):
     if possible:
         ans = max(ans, cnt)
 print(ans)
-

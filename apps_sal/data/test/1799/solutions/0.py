@@ -17,7 +17,7 @@ l.sort()
 best_pos = pos
 
 op = bisect_right(l, (bal, float('inf')))
-#print(l)
+# print(l)
 
 w = []
 for i, v in l[op:]:
@@ -39,4 +39,3 @@ while w:
     best_pos = min(best_pos, pos)
 
 print(best_pos)
-

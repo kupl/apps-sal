@@ -1,5 +1,5 @@
 def multi_table(number):
-    x = list(range(1,11))
+    x = list(range(1, 11))
     y = ''
     z = 0
     while z < len(x):

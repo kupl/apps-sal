@@ -1,1 +1,1 @@
-example_sort=lambda x,y:sorted(x,key=y.index)
+def example_sort(x, y): return sorted(x, key=y.index)

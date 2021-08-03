@@ -41,8 +41,6 @@ class StreamChecker:
                 if marker in advanced_ptr.children:
                     self.spelt = True
                 new_ptrs.append(advanced_ptr)
-                
+
         self.pointers = new_ptrs + [self.root]
         return self.spelt
-
-

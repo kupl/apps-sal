@@ -7,14 +7,14 @@ class Solution:
         strlen = len(s1)
         flag = 0
         for i in range(strlen):
-            if l1[i]>=l2[i]:
+            if l1[i] >= l2[i]:
                 continue
             else:
                 flag = 1
                 break
         if flag:
             for i in range(strlen):
-                if l1[i]<=l2[i]:
+                if l1[i] <= l2[i]:
                     continue
                 else:
                     return False
@@ -34,6 +34,5 @@ class Solution:
 #             if freqs2[i]>=freqs1[i]:
 #                 break
 #         else:
-#             return True 
+#             return True
 #         return False
-

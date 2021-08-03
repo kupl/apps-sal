@@ -3,14 +3,14 @@
 
 import time
 
-n       = int(input())
-table   = []
+n = int(input())
+table = []
 
 for i in range(n):
     table.append([int(i) for i in input().split()])
 
 start = time.time()
-ans   = 0
+ans = 0
 
 for i in range(n):
     buf = 0
@@ -23,4 +23,3 @@ for i in range(n):
 print(ans)
 finish = time.time()
 #print(finish - start)
-

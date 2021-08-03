@@ -17,4 +17,3 @@ if l != -1 and a[l][0] == 1:
             print(s1 - 1)
             return
 print(s1)
-

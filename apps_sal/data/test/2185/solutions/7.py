@@ -3,7 +3,7 @@ from itertools import groupby
 for _ in range(int(input())):
     n = int(input())
     a, b = list(map(int, input().split())), list(map(int, input().split()))
-    diff = [y-x for x, y in zip(a, b)]
+    diff = [y - x for x, y in zip(a, b)]
 
     if min(diff) < 0:
         print('NO')

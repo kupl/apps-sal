@@ -16,4 +16,3 @@ for i in double_lists:
     calc_sum = 0
 
 print(ans)
-

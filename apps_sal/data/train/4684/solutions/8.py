@@ -10,4 +10,3 @@ def is_hollow(x):
     suffix = x[j:]
     # Check conditions
     return not (j - i < 3 or 0 in prefix + suffix or len(prefix) != len(suffix))
-

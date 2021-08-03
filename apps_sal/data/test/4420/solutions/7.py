@@ -3,6 +3,7 @@ def main():
     for i in range(t):
         solve()
 
+
 def solve():
     x, y, n = list(map(int, input().split(" ")))
 
@@ -11,6 +12,5 @@ def solve():
     else:
         print((n // x - 1) * x + y)
 
+
 main()
-
-

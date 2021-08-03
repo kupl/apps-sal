@@ -12,4 +12,3 @@ for i in a:
         cur = 1
     mx = max(mx, cur)
 print(mx)
-

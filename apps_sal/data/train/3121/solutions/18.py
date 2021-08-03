@@ -1,6 +1,6 @@
 def solve(arr):
     arr = set(arr)
-    lst = list(map(abs,arr))
+    lst = list(map(abs, arr))
     one = 0
     for i in range(len(lst)):
         if lst.count(lst[i]) == 1:
@@ -9,5 +9,5 @@ def solve(arr):
     if one in arr:
         return one
     else:
-        a = "-"+str(one)
+        a = "-" + str(one)
         return int(a)

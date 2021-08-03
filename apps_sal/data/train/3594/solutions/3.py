@@ -3,4 +3,3 @@ def is_isogram(word):
         return False
     word = word.lower()
     return len(set(word.count(c) for c in set(word) if c.isalpha())) == 1
-

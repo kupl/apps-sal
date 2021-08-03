@@ -1,31 +1,29 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        count=0
-        numzeros=0
-        n=len(nums)
+        count = 0
+        numzeros = 0
+        n = len(nums)
         for i in range(n):
-            if(nums[i]==0):
-                numzeros+=1
-        while(numzeros<n):
-            k=0
+            if(nums[i] == 0):
+                numzeros += 1
+        while(numzeros < n):
+            k = 0
             for i in range(n):
                 if(nums[i] % 2):
-                    nums[i]-=1
-                    count+=1
-                    if(nums[i]==0):
-                        numzeros+=1
+                    nums[i] -= 1
+                    count += 1
+                    if(nums[i] == 0):
+                        numzeros += 1
                     else:
-                        k=1
-                        nums[i]=nums[i]/2
-                else:   
-                    if(nums[i]==0):
+                        k = 1
+                        nums[i] = nums[i] / 2
+                else:
+                    if(nums[i] == 0):
                         continue
                     else:
-                         k=1
-                         nums[i]=nums[i]/2
-            if(k==1):
-                count+=1
-            print((count,numzeros))
+                        k = 1
+                        nums[i] = nums[i] / 2
+            if(k == 1):
+                count += 1
+            print((count, numzeros))
         return count
-            
-

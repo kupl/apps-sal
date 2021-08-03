@@ -22,7 +22,7 @@ def judge(l, m):
                 if j + l[i - 1] <= t:
                     w[i][j + l[i - 1]] = True
 
-    return w[-1][-1]                
+    return w[-1][-1]
 
 
 def main():
@@ -42,7 +42,7 @@ def main():
         while i < n and S[i] == "T":
             side = not side
             i += 1
-        
+
         # forward
         c = 0
         while i < n and S[i] == "F":
@@ -52,7 +52,7 @@ def main():
             dx.append(c)
         else:
             dy.append(c)
-    
+
     b1 = judge(dx, X - d)
     b2 = judge(dy, Y)
     ans = "Yes" if b1 and b2 else "No"
@@ -61,5 +61,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

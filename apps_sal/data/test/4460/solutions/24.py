@@ -1,1 +1,1 @@
-print(input().index('0')//2+1)
+print(input().index('0') // 2 + 1)

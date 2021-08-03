@@ -9,8 +9,8 @@ else:
     nummin = num_list[bisect.bisect_left(num_list, X)]
     nummax = num_list[bisect.bisect_right(num_list, X)]
     if nummin == nummax:
-        nummin = num_list[bisect.bisect_left(num_list, X)-1]
-    if X-nummin <= nummax-X:
+        nummin = num_list[bisect.bisect_left(num_list, X) - 1]
+    if X - nummin <= nummax - X:
         print(nummin)
     else:
         print(nummax)

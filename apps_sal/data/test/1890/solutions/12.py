@@ -2,6 +2,7 @@ import sys
 fin = sys.stdin
 M = 1000000007
 
+
 def egcd(a, b):
     d = a
     if b != 0:
@@ -11,9 +12,11 @@ def egcd(a, b):
     else:
         return a, 1, 0
 
+
 def inv(a, m):
     d, x, y = egcd(a, m)
     return (m + x % m) % m
+
 
 a = fin.readline().strip()
 k = int(fin.readline())

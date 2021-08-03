@@ -12,4 +12,3 @@ for i, a in enumerate(A):
         ans -= a
 
 print(ans)
-

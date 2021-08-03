@@ -5,4 +5,4 @@ class Solution:
             A[0] = -1 * A[0]
             if A[0] > A[1]:
                 A.append(A.pop(0))
-        return sum(A)        
+        return sum(A)

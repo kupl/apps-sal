@@ -1,5 +1,6 @@
 import random
 
+
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         def quick(nums):
@@ -13,4 +14,3 @@ class Solution:
 
             return quick(less) + eq + quick(more)
         return quick(nums)
-

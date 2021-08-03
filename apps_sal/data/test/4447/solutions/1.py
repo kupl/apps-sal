@@ -1,5 +1,5 @@
-n, m = map(int,input().split())
-a = list(map(int,input().split()))
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
 f = [[] for i in range(m)]
 l = [0 for i in range(m)]
 for i in range(n):
@@ -21,5 +21,4 @@ for i in range(m):
         j += 1
 print(tot)
 for i in a:
-    print(i,end=' ')
-
+    print(i, end=' ')

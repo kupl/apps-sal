@@ -13,12 +13,13 @@ def get_acc_num(i, l, r):
     if i - l <= 0:
         return 0
     if i - r <= 0:
-        return acc[i-l]
+        return acc[i - l]
     else:
-        return acc[i-l] - acc[i-r-1]
+        return acc[i - l] - acc[i - r - 1]
+
 
 MOD = 998244353
-for i in range(1, N+1):
+for i in range(1, N + 1):
     # print(f"{i}-------------------")
     if i == 1:
         d[i] = 1
@@ -31,8 +32,6 @@ for i in range(1, N+1):
             # print(get_acc_num(i, l, r))
             # print(get_acc_num(i, l, r))
             d[i] += get_acc_num(i, l, r) % MOD
-            acc[i] = (acc[i-1] + d[i]) % MOD
+            acc[i] = (acc[i - 1] + d[i]) % MOD
 
 print((d[N] % 998244353))
-
-

@@ -3,4 +3,3 @@ p = int(input())
 q = int(input())
 t = n / (p + q)
 print(p * t)
-

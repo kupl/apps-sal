@@ -1,4 +1,6 @@
-f = lambda: list(map(int, input().split()))
+def f(): return list(map(int, input().split()))
+
+
 m, t, r = f()
 p, s = [], 0
 for w in f():

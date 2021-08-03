@@ -5,4 +5,3 @@ for i in range(n):
     if x * x + y * y <= d * d:
         ans += 1
 print(ans)
-

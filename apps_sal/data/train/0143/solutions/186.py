@@ -2,7 +2,7 @@ class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         fruits = {}
         maxNum = 0
-        
+
         left = 0
         right = 0
         while right < len(tree):

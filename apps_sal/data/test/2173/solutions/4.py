@@ -9,8 +9,7 @@ for i in ratp:
         start = start + 1
     else:
         start = rat[i]
-        
+
     final[i] = start
 
 print(' '.join([str(x) for x in final]))
-

@@ -10,5 +10,6 @@ def people_with_age_drink(age):
         drink = "drink whisky"
     return drink
 
+
 age = people_with_age_drink(0)
 print(age)

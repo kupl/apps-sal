@@ -8,4 +8,3 @@ mnres = 2 ** l - 1 + (n - l)
 mxres = 2 ** r - 1 + (n - r) * (2 ** (r - 1))
 
 print(mnres, mxres)
-

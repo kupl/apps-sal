@@ -10,9 +10,9 @@ for i in range(n):
         a2.append(a[i])
     else:
         a1.append(a[i])
-if len(a4) >= n//2:
+if len(a4) >= n // 2:
     print("Yes")
-elif len(a4) + len(a2)//2 >= n//2:
+elif len(a4) + len(a2) // 2 >= n // 2:
     print("Yes")
 else:
     print("No")

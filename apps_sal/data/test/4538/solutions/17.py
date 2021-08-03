@@ -4,8 +4,8 @@ cnt = 0
 for i in range(n):
     x, y = map(int, input().split())
     if d >= math.sqrt(x**2 + y**2):
-      cnt += 1
+        cnt += 1
     else:
-      pass
-    
+        pass
+
 print(cnt)

@@ -3,8 +3,8 @@ b = input()
 if b == "A":
     print("T")
 elif b == "T":
-    print("A") 
+    print("A")
 elif b == "C":
-    print("G") 
+    print("G")
 else:
-    print("C")      
+    print("C")

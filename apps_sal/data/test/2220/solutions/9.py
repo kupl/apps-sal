@@ -1,4 +1,4 @@
-n, m ,k = map(int, input().split())
+n, m, k = map(int, input().split())
 
 a = list(map(int, input().split()))
 
@@ -10,8 +10,8 @@ for i in range(n):
     elif a[i] > mx2:
         mx2 = a[i]
 
-t = m // (k+1)
-ans = t*k*mx1 + t*mx2
+t = m // (k + 1)
+ans = t * k * mx1 + t * mx2
 
-ans += (m % (k+1))*mx1
+ans += (m % (k + 1)) * mx1
 print(ans)

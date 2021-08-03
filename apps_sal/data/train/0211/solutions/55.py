@@ -4,6 +4,7 @@ class Solution:
         currli = []
         visiting = set()
         self.maxval = 1
+
         def dfs(st, s):
             if len(s) <= 0:
                 self.maxval = max(self.maxval, len(currli))
@@ -14,7 +15,7 @@ class Solution:
             #         return True
             #     else:
             #         return False
-                
+
             for i in range(1, len(s) + 1):
                 # print(s[0:i], s)
                 if s[0:i] not in visiting:
@@ -25,13 +26,10 @@ class Solution:
                     #     return True
                     currli.pop()
                     visiting.remove(s[0:i])
-                
+
             return False
-            
-            
-        
-        
-        for i in range(1, n+1):
+
+        for i in range(1, n + 1):
             visiting.add(s[0:i])
             currli.append(s[0:i])
             # print(s[0:i], s[i:])
@@ -40,7 +38,6 @@ class Solution:
             #     break
             currli.pop()
             visiting.remove(s[0:i])
-            
+
         # return len(currli)
         return self.maxval
-

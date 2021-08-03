@@ -1,5 +1,7 @@
 def mi():
-        return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
+
 '''
 3
 4
@@ -21,12 +23,12 @@ def maxSubArraySum(a, size):
 
     return max_so_far
 
-for _ in range(int(input())):
-        n = int(input())
-        a = list(mi())
-        ade = max(maxSubArraySum(a,n-1), maxSubArraySum(a[1:],n-1))
-        if sum(a)>ade:
-                print ('YES')
-        else:
-                print ('NO')
 
+for _ in range(int(input())):
+    n = int(input())
+    a = list(mi())
+    ade = max(maxSubArraySum(a, n - 1), maxSubArraySum(a[1:], n - 1))
+    if sum(a) > ade:
+        print('YES')
+    else:
+        print('NO')

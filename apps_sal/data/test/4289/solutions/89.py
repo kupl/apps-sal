@@ -8,4 +8,3 @@ for i in range(len(H)):
     if H[answer] > H[i]:
         answer = i
 print((answer + 1))
-

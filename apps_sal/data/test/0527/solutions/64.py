@@ -19,5 +19,5 @@ def solve():
         i = (nxt[i][pos] + 1) % N
     return ans
 
-print((solve()))
 
+print((solve()))

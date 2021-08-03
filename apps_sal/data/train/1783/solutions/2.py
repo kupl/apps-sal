@@ -3,24 +3,23 @@ class PokerHand(object):
         A hand consists of 5 best cards from 7 cards(2-pocket, 5-table).
         And this 5 cards is a combination, each combination have a value.
         The hand with a larger value - wins.
-        
+
         The class contains following functions:
             * hand_to_vector - converts a hand in vector of count cards
             * combination - returns the name of the combination of a hand
             * value - returns the value of the combination (can be compared with another hand)
             * compare_with - compares the instance hand with other hand
     '''
-    
+
     def __init__(self, hand):
         self.hand = hand
         self.hand_value = self.value(hand)
-    
-    
-    def __repr__(self):  return self.hand
-  
-    def __lt__(self, other):  return self.hand_value > other.hand_value
+
+    def __repr__(self): return self.hand
+
+    def __lt__(self, other): return self.hand_value > other.hand_value
     def __eq__(self, other): return self.hand_value == other.hand_value
-    
+
     def compare_with(self, other):
         ''' Compares 2 hands: first - instance hand, second - param
             Args:
@@ -34,8 +33,7 @@ class PokerHand(object):
             return 'Loss'
         elif self.hand_value == other.hand_value:
             return 'Tie'
-  
-  
+
     @staticmethod
     def hand_to_vector(hand):
         ''' Parse a hand in a vector, where a value of the vector is count of cards
@@ -46,16 +44,15 @@ class PokerHand(object):
         Returns:
             list: A vector of count of cards
         '''
-        vec_hand = [0]*13
+        vec_hand = [0] * 13
         for card in hand.split():
             try:
-                vec_hand[int(card[0])-2] += 1
+                vec_hand[int(card[0]) - 2] += 1
             except:
-                switcher = {'A': 12, 'K' : 11, 'Q' : 10, 'J' : 9, 'T' : 8}
+                switcher = {'A': 12, 'K': 11, 'Q': 10, 'J': 9, 'T': 8}
                 vec_hand[switcher[card[0]]] += 1
         return vec_hand
-      
-      
+
     @staticmethod
     def combination(hand):
         ''' Firuers out the combination of the hand
@@ -69,7 +66,7 @@ class PokerHand(object):
         suited = False
         if 1 == len(set([x[1] for x in hand.split()])):
             suited = True
-        
+
         if 4 in vec_hand:
             return 'Four of a kind'
         else:
@@ -84,7 +81,7 @@ class PokerHand(object):
                         return 'Two pair'
                     else:
                         return 'One pair'
-                if '11111' not in ''.join([str(x) for x in (vec_hand[-1:]+vec_hand)]):
+                if '11111' not in ''.join([str(x) for x in (vec_hand[-1:] + vec_hand)]):
                     if suited:
                         return 'Flush'
                     else:
@@ -97,8 +94,7 @@ class PokerHand(object):
                             return 'Royal flush'
                         else:
                             return 'Straight flush'
-                        
-        
+
     @staticmethod
     def value(hand):
         ''' Calculates the value of the hand
@@ -113,13 +109,13 @@ class PokerHand(object):
             [ Straight flush, Care, Full house(set), Full house(pair), Flush, Straight,
               Two pair(Hihg pair), Two pair(Low pair), One pair ]
         '''
-        value_vec = ['0','0000','0000','0000','0','0','0000','0000','0000','0000']
+        value_vec = ['0', '0000', '0000', '0000', '0', '0', '0000', '0000', '0000', '0000']
         combination = PokerHand.combination(hand)
         if combination == 'One pair':
             value_vec[9] = '{:04b}'.format(hand_vec.index(2))
         elif combination == 'Two pair':
             value_vec[8] = '{:04b}'.format(hand_vec.index(2))
-            value_vec[7] = '{:04b}'.format(hand_vec.index(2, hand_vec.index(2)+1))
+            value_vec[7] = '{:04b}'.format(hand_vec.index(2, hand_vec.index(2) + 1))
         elif combination == 'Three of a kind':
             value_vec[6] = '{:04b}'.format(hand_vec.index(3))
         elif combination == 'Straight':
@@ -146,5 +142,3 @@ class PokerHand(object):
             and this resulting extended binary number convert to decimal.
         '''
         return int(''.join(value_vec) + ''.join(reversed(list([str(x) if x == 1 else str(0) for x in hand_vec]))), 2)
-
-

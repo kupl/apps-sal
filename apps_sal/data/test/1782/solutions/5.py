@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, k = map(int, input().split())
     if n // k < 3 or n < 6:
@@ -11,7 +12,9 @@ def solve():
         res.append(i)
     for i in range(1, k + 1):
         res.append(i)
-    while len(res) < n: res.append(1);
+    while len(res) < n:
+        res.append(1)
     print(" ".join(map(str, res)))
-    
+
+
 solve()

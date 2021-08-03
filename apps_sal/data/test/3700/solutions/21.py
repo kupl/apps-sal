@@ -7,7 +7,7 @@ if k % 2 == 0:
         print(0)
         return
     else:
-        up = min(k-1, n)
+        up = min(k - 1, n)
         print(up - down + 1)
 else:
     # Ki Su
@@ -16,9 +16,8 @@ else:
         print(0)
         return
     else:
-        up = min(k-1, n)
+        up = min(k - 1, n)
         print(up - down + 1)
 
 # print(down)
 # print(up)
-

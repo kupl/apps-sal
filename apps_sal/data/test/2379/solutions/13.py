@@ -17,7 +17,7 @@ while i < N:
         i += 1
 
 idx = 1
-i = N-1
+i = N - 1
 while 0 <= i:
     if S[i] == 'o':
         r[i] = idx
@@ -26,6 +26,7 @@ while 0 <= i:
     else:
         i -= 1
 
-if idx-1 <= K:
+if idx - 1 <= K:
     for i in range(N):
-        if l[i] != -1 and r[i] != -1: print(i+1)
+        if l[i] != -1 and r[i] != -1:
+            print(i + 1)

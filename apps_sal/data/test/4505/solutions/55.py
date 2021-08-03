@@ -5,4 +5,3 @@ if s == "abc":
     print("Yes")
 else:
     print("No")
-

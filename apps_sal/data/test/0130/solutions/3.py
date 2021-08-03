@@ -6,10 +6,10 @@ for i in range(n):
         first = i
         break
 last = -1
-for i in range(n- 1, -1, -1):
+for i in range(n - 1, -1, -1):
     if 'B' in our[i]:
         last = i
-        break  
+        break
 if first == -1:
     print(1)
 else:
@@ -24,7 +24,7 @@ else:
         a = [our[j][i] for j in range(n)]
         if 'B' in a:
             l2 = i
-            break    
+            break
     if last - first + 1 > m or l2 - f2 + 1 > n:
         print(-1)
     else:

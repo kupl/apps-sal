@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        cnt1 = 0 
+        cnt1 = 0
         maxcnt0 = 0
         for n in nums:
             cnt0 = 0

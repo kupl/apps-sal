@@ -8,4 +8,3 @@ elif n in [0, 1, 6, 8]:
     print("pon")
 else:
     print("bon")
-

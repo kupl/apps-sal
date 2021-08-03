@@ -1,3 +1,4 @@
 from re import match as m
 
-string_to_number = lambda s: eval(s) if m(r'^[-+]?\d+$', s) else None
+
+def string_to_number(s): return eval(s) if m(r'^[-+]?\d+$', s) else None

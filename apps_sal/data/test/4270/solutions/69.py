@@ -8,7 +8,7 @@ v = list(map(int, input().split()))
 # 結局、(N-1)番目の素材が残り、その価値はv_(N-1)
 
 v = sorted(v)
-for i in range(N-1):
-  v[i+1] = (v[i+1]+v[i])/2
-  
-print(v[N-1])
+for i in range(N - 1):
+    v[i + 1] = (v[i + 1] + v[i]) / 2
+
+print(v[N - 1])

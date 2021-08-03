@@ -1,7 +1,7 @@
-w=input()
-ans="Yes"
+w = input()
+ans = "Yes"
 for i in w:
-    if w.count(i)%2!=0:
-        ans="No"
+    if w.count(i) % 2 != 0:
+        ans = "No"
         break
 print(ans)

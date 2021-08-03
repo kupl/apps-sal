@@ -22,8 +22,10 @@ def read_str_list():
 def read_str():
     return input()
 
+
 inf = 10 ** 9
 inf = 10 ** 3
+
 
 def solve():
     n = read_int()
@@ -65,5 +67,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

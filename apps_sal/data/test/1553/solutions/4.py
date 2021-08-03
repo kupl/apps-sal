@@ -19,4 +19,3 @@ while rg - le > 1:
         rg = mid
 
 print(le)
-

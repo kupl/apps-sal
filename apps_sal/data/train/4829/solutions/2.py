@@ -1,2 +1,2 @@
-def compose(f,g):
-    return lambda *args: f( g(*args) )
+def compose(f, g):
+    return lambda *args: f(g(*args))

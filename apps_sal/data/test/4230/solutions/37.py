@@ -11,4 +11,3 @@ else:
             ans = i
             diff = abs(x - i)
 print(ans)
-

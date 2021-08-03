@@ -6,14 +6,14 @@ class Solution:
         # visited
         open_box = []
         close_box = set()
-        key_set = set([i for i in range(len(status)) if status[i]==1])
+        key_set = set([i for i in range(len(status)) if status[i] == 1])
         visited = [False for _ in range(len(status))]
         count = 0
         for box in initialBoxes:
-            if status[box]==1:
+            if status[box] == 1:
                 open_box.append(box)
             else:
-                close_box.add(box)        
+                close_box.add(box)
         while open_box:
             box = open_box.pop()
             visited[box] = True
@@ -38,8 +38,3 @@ class Solution:
                     open_box.append(key)
                     close_box.remove(key)
         return count
-            
-                    
-                
-            
-

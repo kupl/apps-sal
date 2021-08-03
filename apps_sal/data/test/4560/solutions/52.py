@@ -7,4 +7,3 @@ if nokori <= A:
     print("Yes")
 else:
     print("No")
-

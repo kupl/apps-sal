@@ -7,4 +7,3 @@ for _ in range(int(input())):
     else:
         ans.append('NO')
 print(*ans, sep='\n')
-

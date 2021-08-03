@@ -1,13 +1,13 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
 
-from collections import deque
 N, K = list(map(int, input().split()))
 X = [[] for i in range(N)]
 for i in range(K):
     x, y = list(map(int, input().split()))
-    X[x-1].append(y-1)
-    X[y-1].append(x-1)
+    X[x - 1].append(y - 1)
+    X[y - 1].append(x - 1)
 
 mi = 10**6
 mii = 0
@@ -35,6 +35,3 @@ while Q:
                 X[a].remove(i)
                 Q.append(a)
 print(K - ans)
-
-
-

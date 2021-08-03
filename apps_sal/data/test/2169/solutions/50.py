@@ -19,4 +19,3 @@ for _ in range(Q):
     ans = 0
     L, R = list(map(int, input().split()))
     print((acc[R] - acc[L]))
-

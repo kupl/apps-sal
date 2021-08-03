@@ -1,6 +1,6 @@
-def swap(s,n):
+def swap(s, n):
     n = str(bin(n))[2:]
-    words = list(s)   
+    words = list(s)
     binary_mult = str(n) * len(s)
     bn_words = list(binary_mult)
     result = []

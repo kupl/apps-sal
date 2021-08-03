@@ -7,7 +7,7 @@ i = 2
 f = {}
 while i <= s:
     while n % i == 0:
-        f[i] = f.get(i,0)+1
+        f[i] = f.get(i, 0) + 1
         n = n // i
     i += 1
 
@@ -19,4 +19,4 @@ for x in f.values():
         e += 1
         cumsum += e
     ans += e
-print(ans+(n>1))
+print(ans + (n > 1))

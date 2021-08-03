@@ -11,4 +11,3 @@ for i in range(n):
         tmp = 0
 num = max(num, tmp)
 print(num)
-

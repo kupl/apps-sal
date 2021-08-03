@@ -36,10 +36,9 @@ for i in range(LIM):
         sum_before += c
         sum_after -= c
 
-        cur = idx * c - sum_before 
+        cur = idx * c - sum_before
         cur += sum_after - (k - idx) * c
         ans = min(ans, base_ans - add[i] + cur)
 
 
 print(ans)
-

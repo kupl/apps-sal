@@ -1,4 +1,4 @@
-#<!:(){}^@""+%_*&$?>
+# <!:(){}^@""+%_*&$?>
 def zero_fuel(distance_to_pump, mpg, fuel_left):
     #distance_to_pump = 0
     #mpg = 0

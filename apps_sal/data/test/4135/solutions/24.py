@@ -5,4 +5,3 @@ for i in range(1, n + 1):
         t = s[:i]
         s[:i] = t[::-1]
 print("".join(s))
-

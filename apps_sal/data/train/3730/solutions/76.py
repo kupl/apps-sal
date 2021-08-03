@@ -8,5 +8,5 @@ def capitalize(s):
         else:
             even += c
             odd += c.upper()
-    
+
     return [even, odd]

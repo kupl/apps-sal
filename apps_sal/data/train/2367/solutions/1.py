@@ -8,21 +8,21 @@ class BIT():
         '''
         self.n = n
         self.bit = [0] * (n + 1)
- 
+
     def add(self, i, val):
         '''i番目の要素にvalを加算する O(logN)'''
         i = i + 1
         while i <= self.n:
             self.bit[i] += val
             i += i & -i
- 
+
     def _sum(self, i):
         s = 0
         while i > 0:
             s += self.bit[i]
             i -= i & -i
         return s
- 
+
     def sum(self, i, j):
         '''区間[i, j)の和を求める O(logN)'''
         return self._sum(j) - self._sum(i)
@@ -78,14 +78,13 @@ for _ in range(q):
     cnt_t = 0
     for i in range(n)[::-1]:
         for j in range(i):
-            if s[j] > s[j+1]:
-                s[j], s[j+1] = s[j+1], s[j]
+            if s[j] > s[j + 1]:
+                s[j], s[j + 1] = s[j + 1], s[j]
                 cnt_s += 1
-            if t[j] > t[j+1]:
-                t[j], t[j+1] = t[j+1], t[j]
+            if t[j] > t[j + 1]:
+                t[j], t[j + 1] = t[j + 1], t[j]
                 cnt_t += 1
     if cnt_s % 2 == cnt_t % 2:
         print("YES")
     else:
         print("NO")
-

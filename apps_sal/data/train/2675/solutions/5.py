@@ -5,5 +5,5 @@ def bad_apples(apples):
     if len(idxs) % 2 == 1:
         del apples[idxs.pop()]
     for i in reversed(range(0, len(idxs), 2)):
-        apples[idxs[i]].append(apples.pop(idxs[i+1]).pop())
+        apples[idxs[i]].append(apples.pop(idxs[i + 1]).pop())
     return apples

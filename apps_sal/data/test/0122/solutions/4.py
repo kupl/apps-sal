@@ -17,6 +17,7 @@ def divPos(arr):
             return True
     return False
 
+
 def __starting_point():
     n = input()
     arr = [int(x) for x in input().split()]
@@ -25,5 +26,6 @@ def __starting_point():
         print('YES')
     else:
         print('NO')
+
 
 __starting_point()

@@ -10,5 +10,3 @@ for i in range(n):
     else:
         t = y
     print(s, t)
-    
-

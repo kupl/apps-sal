@@ -31,4 +31,3 @@ for l in range(n):
     ys -= p[l][1]
 
 print(ans)
-

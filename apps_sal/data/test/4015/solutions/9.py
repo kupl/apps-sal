@@ -4,7 +4,7 @@ if m % n > 0:
     print(-1)
 else:
     res = 0
-    a = m // n;
+    a = m // n
     while a % 2 == 0:
         a //= 2
         res += 1
@@ -15,4 +15,3 @@ else:
         print(res)
     else:
         print(-1)
-

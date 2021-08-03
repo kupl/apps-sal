@@ -6,9 +6,11 @@ if n == 1:
     print(pow(2, mo - 2, mo))
     return
 
+
 def calc(n, s):
     nonlocal bans, qa
     return (bans + qa(2, min(n - 2, 2 * n - 1 - 2 * s, 2 * s - 2))) % mo
+
 
 a = [0] * n
 
@@ -18,10 +20,12 @@ for k in range(3, n - 1, 2):
 for k in range(1, n):
     a[k] += a[k - 1]
 
+
 def qa(l, r):
     if l > r:
         return 0
     return a[r] - a[l - 1]
+
 
 bans = 0
 bans = (bans + pow(2, n - 2, mo) * n) % mo

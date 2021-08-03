@@ -24,10 +24,10 @@ TLEになったので、もう少し節約するパターンを考える必要�
 
 def solve(k, s):
     pattern = 0
-    for x in range(k+1):
+    for x in range(k + 1):
         if x > s:
             break
-        for y in range(k+1):
+        for y in range(k + 1):
             if x + y > s:
                 break
             z = s - x - y
@@ -39,5 +39,6 @@ def solve(k, s):
 
 def __starting_point():
     main()
+
 
 __starting_point()

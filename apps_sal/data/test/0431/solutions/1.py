@@ -20,7 +20,6 @@ def variant(cur):
         minv = min(minv, time)
 
 
-
 n, m = map(int, input().split())
 minv = 1000000000
 rooms = []

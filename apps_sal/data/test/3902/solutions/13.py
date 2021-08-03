@@ -28,4 +28,3 @@ suffixes_alph = sorted(suffixes)
 
 print(len(suffixes))
 print(*suffixes_alph, sep='\n')
-

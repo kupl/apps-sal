@@ -6,4 +6,3 @@ else:
     ans = ans.replace("0", "1")
     ans = int(ans, 2)
     print(ans)
-

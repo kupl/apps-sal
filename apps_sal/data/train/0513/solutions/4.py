@@ -6,13 +6,13 @@ a = list(map(int, input().split()))
 
 result = [-1 for _ in range(n)]
 tree = [[] for _ in range(n)]
-for _i in range(n-1):
+for _i in range(n - 1):
     u, v = map(int, input().split())
-    u, v = u-1, v-1
+    u, v = u - 1, v - 1
     tree[u].append(v)
     tree[v].append(u)
 INF = float('inf')
-dp = [INF for _i in range(n+1)]
+dp = [INF for _i in range(n + 1)]
 
 
 def dfs(p, x):
@@ -24,7 +24,7 @@ def dfs(p, x):
         if j != x:
             dfs(j, p)
     dp[i] = old
-    
+
 
 dfs(0, -1)
 

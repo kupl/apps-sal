@@ -6,7 +6,7 @@
 class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         initial_c = len(G)
-        
+
         runner = head
         ans = []
         conn_ll = []
@@ -18,7 +18,7 @@ class Solution:
                     ans.append(conn_ll[:])
                     conn_ll = []
             runner = runner.next
-            
+
         if conn_ll:
             ans.append(conn_ll)
         print(ans)

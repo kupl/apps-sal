@@ -7,5 +7,6 @@ class Solution:
                 win = n
                 res = 0
             res += 1
-            if res == k: break
+            if res == k:
+                break
         return win

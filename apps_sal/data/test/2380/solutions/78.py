@@ -19,10 +19,10 @@ keys = sorted(d)[::-1]
 for key in keys:
     qty = d[key]
     if qty < n:
-        ans += qty*key
+        ans += qty * key
         n -= qty
     else:
-        ans += n*key
+        ans += n * key
         break
 
 print(ans)

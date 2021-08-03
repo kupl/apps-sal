@@ -9,4 +9,3 @@ elif n == m:
     print((res % mod))
 else:
     print((0))
-

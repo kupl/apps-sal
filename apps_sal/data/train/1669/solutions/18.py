@@ -1,12 +1,15 @@
 from collections import OrderedDict
+
+
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         count = collections.Counter(hand)
         while count:
             m = min(count)
-            for k in range(m, m+W):
+            for k in range(m, m + W):
                 v = count[k]
-                if not v: return False
+                if not v:
+                    return False
                 if v == 1:
                     del count[k]
                 else:
@@ -14,16 +17,16 @@ class Solution:
 
         return True
 #         d = OrderedDict()
-        
+
 #         hand.sort()
-        
+
 #         # print(hand)
 #         for val in hand:
 #             if val in d:
 #                 d[val] += 1
 #             else:
 #                 d.setdefault(val, 1)
-            
+
 #         i = 0
 #         length = len(d)
 #         items = list(d.items())
@@ -48,10 +51,9 @@ class Solution:
 #                 temp -= 1
 #                 if temp != 0 and j >= len(items):
 #                     return False
-        
+
 #         for i in range(length-W, length):
 #             k, v = items[i]
 #             if v != 0:
 #                 return False
 #         return True
-

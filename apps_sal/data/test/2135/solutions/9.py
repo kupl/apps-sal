@@ -28,8 +28,8 @@ anc = []
 n = int(input())
 for k in range(n):
     y0, x0, y1, x1 = list(map(int, input().split()))
-    A = mpV[y0 - 1][x0 - 1]+mpV[y1-1][x1]-mpV[y1-1][x0-1]-mpV[y0-1][x1]
-    A += mpH[y0 - 1][x0 - 1]+mpH[y1][x1-1]-mpH[y1][x0-1]-mpH[y0-1][x1-1]
+    A = mpV[y0 - 1][x0 - 1] + mpV[y1 - 1][x1] - mpV[y1 - 1][x0 - 1] - mpV[y0 - 1][x1]
+    A += mpH[y0 - 1][x0 - 1] + mpH[y1][x1 - 1] - mpH[y1][x0 - 1] - mpH[y0 - 1][x1 - 1]
     anc.append(A)
 for k in range(n):
     print(anc[k])

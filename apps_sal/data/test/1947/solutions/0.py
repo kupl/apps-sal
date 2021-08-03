@@ -37,18 +37,18 @@ for mi in range(M):
         print(ans)
     else:
         t, p, d = list(map(int, line.split()))
-        prev = A[p-1]
-        A[p-1] += d
-        if prev <= L < A[p-1]:
-            if p-2 >= 0 and p < N:
-                if A[p-2] > L and A[p] > L:
+        prev = A[p - 1]
+        A[p - 1] += d
+        if prev <= L < A[p - 1]:
+            if p - 2 >= 0 and p < N:
+                if A[p - 2] > L and A[p] > L:
                     ans -= 1
-                elif A[p-2] <= L and A[p] <= L:
+                elif A[p - 2] <= L and A[p] <= L:
                     ans += 1
                 else:
                     pass
-            elif p-2 >= 0:
-                if A[p-2] > L:
+            elif p - 2 >= 0:
+                if A[p - 2] > L:
                     pass
                 else:
                     ans += 1
@@ -59,4 +59,3 @@ for mi in range(M):
                     ans += 1
             else:
                 ans += 1
-

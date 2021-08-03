@@ -7,13 +7,14 @@ class Solution:
                 xj, yj = points[j]
                 costs.append([abs(xi - xj) + abs(yi - yj), i, j])
         costs = sorted(costs)
-        
+
         fathers = [t for t in range(len(points))]
-        def get_father(n) :
+
+        def get_father(n):
             while not fathers[n] == fathers[fathers[n]]:
                 fathers[n] = fathers[fathers[n]]
             return fathers[n]
-        
+
         res = 0
         for t in costs:
             dist, i, j = t

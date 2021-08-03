@@ -16,6 +16,7 @@ def fun(X_high, X_low, K, line):
         X_high = X
     return X_high, X_low
 
+
 N, K = map(int, input().split(" "))
 line = list(map(int, input().split(" ")))
 
@@ -24,5 +25,5 @@ X_low = 0
 
 while (X_high - X_low) > 1:
     X_high, X_low = fun(X_high, X_low, K, line)
-    
+
 print(X_high)

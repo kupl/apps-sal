@@ -6,4 +6,3 @@ for s in S:
     ans += min(x, 26 - x)
     now = s
 print(ans)
-

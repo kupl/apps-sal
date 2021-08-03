@@ -17,7 +17,7 @@ class Solution:
         # where k* is the answer to query j
         stack = []
         next_ = [None] * N
-        for k in range(N-1, -1, -1):
+        for k in range(N - 1, -1, -1):
             while stack and A[k] <= A[stack[-1]]:
                 stack.pop()
             next_[k] = stack[-1] if stack else N
@@ -26,7 +26,3 @@ class Solution:
         # Use prev/next array to count answer
         return sum((i - prev[i]) * (next_[i] - i) * A[i]
                    for i in range(N)) % MOD
-            
-                    
-                
-

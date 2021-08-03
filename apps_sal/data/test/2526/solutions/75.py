@@ -21,9 +21,9 @@ while p[i] < r[k] or q[j] < r[k]:
 
 ans = 0
 if i != -1:
-    ans += sum(p[:i+1])
+    ans += sum(p[:i + 1])
 if j != -1:
-    ans += sum(q[:j+1])
+    ans += sum(q[:j + 1])
 if k != 0:
     ans += sum(r[:k])
 

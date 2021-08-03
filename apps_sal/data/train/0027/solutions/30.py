@@ -29,4 +29,3 @@ for i in range(t):
             ans += 1
 
     print(ans)
-

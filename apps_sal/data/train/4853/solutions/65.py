@@ -1,5 +1,5 @@
 def double_char(s):
-    lst=[]
+    lst = []
     for x in s:
         lst.append(x)
         lst.append(x)

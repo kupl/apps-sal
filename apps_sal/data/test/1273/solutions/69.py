@@ -17,7 +17,7 @@ from collections import deque
 class BFS():
     def __init__(self, path, N):
         self.N = N
-        self.color_path = [-1]*self.N
+        self.color_path = [-1] * self.N
         self.path = path
         self.init = 1
         self.Q = deque([[0, self.init]])
@@ -44,7 +44,7 @@ class BFS():
 
 def main():
     N = int(input())
-    path = [[] for _ in range(N+1)]
+    path = [[] for _ in range(N + 1)]
     for i in range(1, N):
         a, b = list(map(int, input().split()))
         path[a].append([i, b])
@@ -54,8 +54,8 @@ def main():
     bfs.print_ans()
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

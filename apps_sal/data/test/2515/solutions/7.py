@@ -1,6 +1,6 @@
+from math import sqrt
 import sys
 input = sys.stdin.readline
-from math import sqrt
 
 
 def Eratosthenes(n):
@@ -28,4 +28,3 @@ q = int(input())
 for i in range(q):
     l, r = list(map(int, input().split()))
     print((ans[r] - ans[l - 1]))
-

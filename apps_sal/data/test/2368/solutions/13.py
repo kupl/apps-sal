@@ -41,13 +41,14 @@ class UnionFind:
         for i in range(self.N):
             self.root(i)
 
+
 N, M = list(map(int, input().split()))
 tree = UnionFind(N)
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
 for _ in range(M):
     c, d = list(map(int, input().split()))
-    tree.unite(c-1, d-1)
+    tree.unite(c - 1, d - 1)
 
 tree.seikei()
 
@@ -69,5 +70,3 @@ for k in list(gruops.keys()):
         print('No')
         return
 print('Yes')
-
-

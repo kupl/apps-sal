@@ -1,6 +1,7 @@
 def func(x):
     pass
 
+
 def __starting_point():
     x = int(input())
     grid = {}
@@ -15,5 +16,6 @@ def __starting_point():
         if value > best_value:
             best_value = value
     print(best_value)
+
 
 __starting_point()

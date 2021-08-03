@@ -17,4 +17,3 @@ while left < n:
     left += 1
 
 print("%d" % result)
-

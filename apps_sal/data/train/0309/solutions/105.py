@@ -6,11 +6,11 @@ class Solution:
             flag = True
             for j in range(i):
                 d = a - A[j]
-                if d == 0 and not flag: continue
+                if d == 0 and not flag:
+                    continue
                 dp[a][d] = dp[A[j]][d] + 1
                 res = max(res, dp[a][d])
-                if d == 0: flag = False
+                if d == 0:
+                    flag = False
                 # if res == dp[a][d]: print(a, d, dp[a][d])
         return res
-        
-

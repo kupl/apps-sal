@@ -39,15 +39,15 @@ def main():
     n, m = map(int, input().split())
     bridges = [list(map(int, input().split())) for _ in range(m)]
     uf = UnionFind(n)
-    inconvenience = n * (n-1) // 2
+    inconvenience = n * (n - 1) // 2
     ans = [inconvenience]
 
     for a, b in bridges[::-1]:
-        if uf.in_same_group(a-1, b-1):
+        if uf.in_same_group(a - 1, b - 1):
             ans.append(inconvenience)
             continue
-        root1 = uf.get_root(a-1)
-        root2 = uf.get_root(b-1)
+        root1 = uf.get_root(a - 1)
+        root2 = uf.get_root(b - 1)
         pattern = uf.rank[root1] * uf.rank[root2]
         inconvenience -= pattern
         ans.append(inconvenience)
@@ -58,5 +58,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

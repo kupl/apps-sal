@@ -7,6 +7,6 @@ class Solution:
             for j in range(i, n):
                 s += nums[j]
                 sums.append(s)
-        
+
         sums.sort()
-        return sum(sums[left - 1:right]) % (10**9+7)
+        return sum(sums[left - 1:right]) % (10**9 + 7)

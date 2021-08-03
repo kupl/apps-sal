@@ -9,4 +9,3 @@ s = input()
 for i in s:
     ans += a[ord(i) - 48]
 print(ans)
-

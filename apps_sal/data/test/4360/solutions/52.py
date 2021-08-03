@@ -6,5 +6,5 @@ def solve():
     print((1 / sum(A)))
     return
 
-solve()
 
+solve()

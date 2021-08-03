@@ -11,11 +11,13 @@ class Solution:
             x1, y1 = A[i]
             for j in range(i + 1, N):
                 x2, y2 = A[j]
-                E.append([ abs(x1 - x2) + abs(y1 - y2), i, j ])
+                E.append([abs(x1 - x2) + abs(y1 - y2), i, j])
         E.sort()
+
         def find(x):
             P[x] = P[x] if P[x] == x else find(P[x])
             return P[x]
+
         def union(a, b):
             a = find(a)
             b = find(b)
@@ -28,4 +30,3 @@ class Solution:
         #     if union(u, v):
         #         total += cost
         # return total
-

@@ -3,6 +3,5 @@ def odd_one(arr):
         if num % 2 != 0:
             return arr.index(num)
             break
-    else: 
+    else:
         return -1
-

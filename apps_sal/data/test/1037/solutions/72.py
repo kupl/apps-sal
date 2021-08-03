@@ -12,5 +12,5 @@ def main():
                            (dp[x][y - 1] + abs(t - (N - y)) * a) if y > 0 else 0)
     return max(dp[i][N - i] for i in range(N + 1))
 
-print((main()))
 
+print((main()))

@@ -10,4 +10,3 @@ if len(x) == 2 and len(y) == 2:
     print((x[1] - x[0]) * (y[1] - y[0]))
 else:
     print(-1)
-

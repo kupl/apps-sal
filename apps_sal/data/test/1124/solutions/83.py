@@ -14,4 +14,3 @@ if N == 2:
 for i in range(2, N):
     ans = gcd(ans, a[i])
 print(ans)
-

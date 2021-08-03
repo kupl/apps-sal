@@ -5,6 +5,5 @@ def nth_even(n):
     for i in range(n):
         np.even1 = np.even1+2
         n=n-1'''
-  
-    return n*2-2
 
+    return n * 2 - 2

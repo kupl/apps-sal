@@ -11,4 +11,3 @@ for _ in range(M):
     heapq.heappush(A, -tmp)
 
 print((-sum(A)))
-

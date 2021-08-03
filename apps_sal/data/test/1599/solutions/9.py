@@ -6,6 +6,8 @@ f.readline()
 count = [0]
 t = ""
 q = [map(int, i.split()) for i in f.read().strip().split("\n")]
+
+
 def solve():
     nonlocal t
     for i in s:
@@ -16,5 +18,7 @@ def solve():
         t = i
     for i in q:
         l, r = i
-        print(count[r]-count[l])
+        print(count[r] - count[l])
+
+
 solve()

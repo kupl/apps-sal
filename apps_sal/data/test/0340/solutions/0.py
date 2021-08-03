@@ -1,9 +1,15 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
+
 MX = 10 ** 5
 
 n = ii()
@@ -34,4 +40,3 @@ if pr:
 else:
     pdt, ans = 1, 0
 print(pdt, ans)
-

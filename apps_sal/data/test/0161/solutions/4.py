@@ -29,4 +29,3 @@ while x & (x + 1) != 0:
 print(cnt)
 if len(ans) > 0:
     print(' '.join(str(el) for el in ans))
-

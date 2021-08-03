@@ -2,7 +2,7 @@ from itertools import dropwhile, chain
 
 
 def main():
-    zeroes = lambda a: not a
+    def zeroes(a): return not a
     a, b = [list(chain([0, 0], dropwhile(zeroes, list(map(int, input())))))
             for _ in range(2)]
 

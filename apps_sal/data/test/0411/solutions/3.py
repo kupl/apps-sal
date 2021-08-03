@@ -1,14 +1,14 @@
-str1=input()
+str1 = input()
 l_1 = str1.split(' ')
-tedad=int(l_1[0])
-tedad1=int((l_1[1]))
+tedad = int(l_1[0])
+tedad1 = int((l_1[1]))
 for i in range(tedad):
-    n=input()
+    n = input()
 for i in range(tedad1):
-    n=input()
+    n = input()
 
 
-if tedad1==tedad:
+if tedad1 == tedad:
     print('Yes')
 else:
     print('No')

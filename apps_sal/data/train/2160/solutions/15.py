@@ -13,11 +13,11 @@ for i in range(n):
 
 d = 0
 
-if sum%k:
+if sum % k:
     print('No')
     return
 else:
-    d = sum/k
+    d = sum / k
 
 rez = []
 rez.append(0)
@@ -27,7 +27,7 @@ for i in range(n):
 
     if (temp == d):
         temp = 0
-        rez.append(i+1)
+        rez.append(i + 1)
 
     if (temp > d):
         print('No')
@@ -35,4 +35,4 @@ for i in range(n):
 
 print("Yes")
 for i in range(1, len(rez)):
-    print(rez[i] - rez[i-1], end = ' ')
+    print(rez[i] - rez[i - 1], end=' ')

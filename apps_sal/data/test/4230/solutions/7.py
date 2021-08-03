@@ -1,4 +1,4 @@
-X,N = map(int,input().split())
+X, N = map(int, input().split())
 p = sorted([int(i) for i in input().split()])
 a = X
 b = X

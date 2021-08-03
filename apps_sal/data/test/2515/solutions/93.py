@@ -22,4 +22,3 @@ s = tuple(accumulate(s))
 
 for l, r in zip(*[iter(lr)] * 2):
     print((s[r] - s[l - 1]))
-

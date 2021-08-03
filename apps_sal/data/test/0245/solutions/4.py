@@ -5,7 +5,7 @@ min_x = 40000
 max_y = 0
 min_y = 40000
 n = int(input())
-for i in range(0,n,1):
+for i in range(0, n, 1):
     crd = input().split()
     if(int(crd[0]) >= int(crd[2])):
         st1 = int(crd[0]) - int(crd[2])
@@ -23,9 +23,9 @@ for i in range(0,n,1):
         max_x = int(crd[2])
     if(int(crd[3]) > max_y):
         max_y = int(crd[3])
-    pl += st1*st2
-    etpl = (max_y-min_y)*(max_x-min_x)
-if max_y-min_y == max_x-min_x and etpl == pl:
+    pl += st1 * st2
+    etpl = (max_y - min_y) * (max_x - min_x)
+if max_y - min_y == max_x - min_x and etpl == pl:
     print("YES")
 else:
     print("NO")

@@ -15,10 +15,11 @@ class Solution:
                 for j in watchedVideos[id]:
                     res[j] += 1
             for v in graph[id]:
-                if l+1 <= level and v not in visited:
+                if l + 1 <= level and v not in visited:
                     visited.add(v)
-                    queue.append((v, l+1))
+                    queue.append((v, l + 1))
         from functools import cmp_to_key
+
         def func(x, y):
             if res[x] > res[y]:
                 return -1

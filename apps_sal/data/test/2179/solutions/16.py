@@ -25,4 +25,3 @@ while pq:
 
 print(s)
 print(*t[1:])
-

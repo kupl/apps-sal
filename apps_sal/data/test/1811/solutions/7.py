@@ -5,8 +5,8 @@ for i, ch in enumerate(input()):
         rocks += 1
         if rocks == jump:
             print('NO')
-            import sys; return
+            import sys
+            return
     else:
         rocks = 0
 print('YES')
-

@@ -18,4 +18,3 @@ elif m < 2:
 
 
 print(ans)
-

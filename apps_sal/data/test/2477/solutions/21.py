@@ -1,13 +1,15 @@
 N, K = map(int, input().split())
 A = list(map(int, input().split()))
 
+
 def is_ok(mid):
     x = 0
     for a in A:
-        x += -(-a//mid)-1
+        x += -(-a // mid) - 1
     if x <= K:
         return True
     return False
+
 
 def meguru_bisect(ng, ok):
     '''
@@ -23,5 +25,6 @@ def meguru_bisect(ng, ok):
         else:
             ng = mid
     return ok
+
 
 print(meguru_bisect(0, max(A)))

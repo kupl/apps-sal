@@ -6,28 +6,21 @@ for _ in range(t):
     l = []
     hash = {}
     for i in range(n):
-        a,b = map(str,input().split())
-        l.append([a,b])
+        a, b = map(str, input().split())
+        l.append([a, b])
         try:
             hash[b]
         except:
-            hash[b]=1
+            hash[b] = 1
         else:
-            hash[b]+=1
+            hash[b] += 1
     ans = []
     for i in l:
-        a,b = i
+        a, b = i
         if hash[b] == 1:
-            ans.append([int(b),a])
+            ans.append([int(b), a])
     ans.sort()
-    if ans!=[]:
+    if ans != []:
         print(ans[0][1])
     else:
         print('Nobody wins.')
-
-
-
-
-
-
-

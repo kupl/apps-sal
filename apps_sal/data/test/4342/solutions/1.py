@@ -10,9 +10,9 @@ d1 = defaultdict(set)
 d2 = defaultdict(set)
 d = defaultdict(set)
 lines = sys.stdin.readlines()
-for i in range(n-1):
-    sactive.add(i+1)
-    s,f = [int(__) for __ in lines[i].strip().split()]
+for i in range(n - 1):
+    sactive.add(i + 1)
+    s, f = [int(__) for __ in lines[i].strip().split()]
     s -= 1
     f -= 1
     d[s].add(f)
@@ -21,7 +21,6 @@ for i in range(n-1):
     nums[s] += 1
 
 leaves = set()
-
 
 
 for i in range(n):
@@ -57,7 +56,7 @@ while len(leaves):
         d1[targ].remove(x)
         if nums1[targ] == 1:
             leaves.add(targ)
-            
+
 sactive2 = sactive.copy()
 for targ in d:
     d2[targ] = d[targ].copy()
@@ -76,14 +75,13 @@ while len(leaves):
         if nums2[targ] == 1:
             leaves.add(targ)
 
-           
+
 if len(sactive1 & sactive2) > 0:
     print(0)
 else:
     print(len(sactive) - len(sactive1) - len(sactive2) + 1)
-#print(nums)
-#print('both',sactive)
-#print('1',sactive1)
-#print('2',sactive2)
-#print(d)
-
+# print(nums)
+# print('both',sactive)
+# print('1',sactive1)
+# print('2',sactive2)
+# print(d)

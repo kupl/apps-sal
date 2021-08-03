@@ -7,15 +7,13 @@ lst = [0] + list(int(i) for i in input_file.readline().split()) + [1001]
 maxi = 1
 ans = 1
 for i in range(1, len(lst)):
-    if lst[i] == lst[i-1] + 1:
+    if lst[i] == lst[i - 1] + 1:
         ans += 1
     else:
-        #print(ans)
+        # print(ans)
         maxi = max(maxi, ans)
         ans = 1
 maxi = max(maxi, ans)
-        
 
-print(max(maxi-2, 0))
-    
 
+print(max(maxi - 2, 0))

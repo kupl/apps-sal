@@ -4,11 +4,13 @@ N, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
 A.sort()
 
+
 def count(x):
     ret = 0
     for a in A:
         ret += N - bisect_left(A, x - a)
     return ret
+
 
 overEq = 0
 less = 10**7
@@ -34,4 +36,3 @@ for a, c in zip(A, cnt):
 ans -= overEq * (count(overEq) - M)
 
 print(ans)
-

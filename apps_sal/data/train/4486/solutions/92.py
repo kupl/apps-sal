@@ -1,4 +1,4 @@
-def repeat_it(string,n):
+def repeat_it(string, n):
     try:
         if len(string) > 0:
             return string * n

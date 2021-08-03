@@ -9,6 +9,7 @@ def check(M):
                 return False
     return True
 
+
 n, m = list(map(int, input().split()))
 l = -1
 r = m

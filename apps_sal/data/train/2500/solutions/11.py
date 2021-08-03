@@ -25,4 +25,3 @@ class Solution:
             ans = max(ans, consec_count_per_letter)
 
         return ans
-

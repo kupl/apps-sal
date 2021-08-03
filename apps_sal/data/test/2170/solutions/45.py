@@ -14,17 +14,17 @@ def prepare(n):
 
     return modFacts, invs
 
-n,m = list(map(int,input().split()))
-mod = 10**9+7
-modFacts,invs = prepare(m)
+
+n, m = list(map(int, input().split()))
+mod = 10**9 + 7
+modFacts, invs = prepare(m)
 ans = 0
 nci = 0
-for i in range(n+1):
-    nci = (modFacts[n]*invs[n-i]*invs[i]) % mod
-    mpi = (modFacts[m]*invs[m-i]) % mod
-    mipni = (modFacts[m-i]*invs[m-n]) % mod
-    ans += ((nci * mpi * mipni**2) % mod )* (-1)**i
+for i in range(n + 1):
+    nci = (modFacts[n] * invs[n - i] * invs[i]) % mod
+    mpi = (modFacts[m] * invs[m - i]) % mod
+    mipni = (modFacts[m - i] * invs[m - n]) % mod
+    ans += ((nci * mpi * mipni**2) % mod) * (-1)**i
     ans %= mod
     # print(i,nci,mpi,mipni)
 print(ans)
-

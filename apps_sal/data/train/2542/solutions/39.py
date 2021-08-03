@@ -2,7 +2,7 @@ class Solution:
     def isMonotonic(self, A: List[int]) -> bool:
         if min(A) == A[0]:
             start = 0
-            increment = 1;
+            increment = 1
             end = len(A)
         elif max(A) == A[0]:
             start = len(A) - 1

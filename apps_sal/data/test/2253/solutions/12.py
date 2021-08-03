@@ -31,4 +31,5 @@ def __starting_point():
         elif str.endswith('mnida'):
             print('KOREAN')
 
+
 __starting_point()

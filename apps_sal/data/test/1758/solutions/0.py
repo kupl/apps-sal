@@ -14,5 +14,4 @@ for i in range(n):
 if curr != 0:
     print(-1)
 else:
-    print(max(currs)-min(currs))
-
+    print(max(currs) - min(currs))

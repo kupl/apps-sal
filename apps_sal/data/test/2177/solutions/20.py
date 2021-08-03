@@ -16,7 +16,6 @@ created by shhuan at 2020/1/14 22:42
 """
 
 
-
 def solve(A, B):
 
     b = B
@@ -24,7 +23,7 @@ def solve(A, B):
     while b > 0:
         blen += 1
         b //= 10
-    if B != 10**blen-1:
+    if B != 10**blen - 1:
         blen -= 1
     return A * blen
 

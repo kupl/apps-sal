@@ -12,7 +12,7 @@ def main():
             elif other == 'A':
                 other = ch
             else:
-                if i == j or i == (n-1-j):
+                if i == j or i == (n - 1 - j):
                     if ch != diag:
                         print("NO")
                         return
@@ -28,5 +28,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

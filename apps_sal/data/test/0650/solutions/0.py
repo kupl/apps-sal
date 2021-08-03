@@ -13,4 +13,3 @@ if x == 0 or y == 0:
     print("YES")
 else:
     print("NO")
-

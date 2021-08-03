@@ -1,5 +1,7 @@
 def divisors(N):
     return sorted(sum((list({n, N // n}) for n in range(1, int(N ** 0.5) + 1) if not N % n), []), reverse=True)
+
+
 N, K = map(int, input().split())
 A = tuple(map(int, input().split()))
 D = divisors(sum(A))

@@ -21,4 +21,3 @@ for i in range(3, S - 2):
 ans = dp[S]
 
 print(ans)
-

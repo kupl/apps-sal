@@ -15,6 +15,3 @@ for cs in range(t):
     for i in range(n):
         result.append(''.join(map(str, a[i])))
 print('\n'.join(result))
-
-
-

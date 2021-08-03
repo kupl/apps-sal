@@ -8,5 +8,3 @@ def solution(string, ending):
             break
         else:
             string = string[1:]
-    
-

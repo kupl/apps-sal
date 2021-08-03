@@ -17,4 +17,3 @@ for p in range(1, N * 100 + 1):
     dp.append(tmp)
 
 print("-1")
-

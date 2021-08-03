@@ -1,7 +1,7 @@
 def cusum(a):
     cusum = [a[0]]
-    for i in range(len(a)-1):
-        cusum.append(cusum[i] + a[i+1])
+    for i in range(len(a) - 1):
+        cusum.append(cusum[i] + a[i + 1])
     return cusum
 
 
@@ -25,4 +25,3 @@ def solve1(n, a):
 n = int(input())
 a = list(map(int, input().split(" ")))
 print((solve1(n, a)))
-

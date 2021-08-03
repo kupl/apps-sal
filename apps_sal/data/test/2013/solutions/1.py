@@ -15,4 +15,3 @@ for i in range(n):
         ans += "D"
 print(len(ans))
 print(ans)
-

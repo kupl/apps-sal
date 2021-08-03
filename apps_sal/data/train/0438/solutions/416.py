@@ -12,4 +12,3 @@ class Solution:
             if size[m] > 0:
                 ans = i + 1
         return ans
-

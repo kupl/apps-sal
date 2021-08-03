@@ -12,28 +12,28 @@ class Solution:
         i+1 to i+d
         memo
         return res + 1
-        
+
         '''
         max_pos = 1
         memo = {}
+
         def helper(i):
-            if i in list(memo.keys()): return memo[i]
+            if i in list(memo.keys()):
+                return memo[i]
             res = 0
-            j = i-1
-            while 0<=j<len(arr) and i-j<=d and arr[j]<arr[i]:
+            j = i - 1
+            while 0 <= j < len(arr) and i - j <= d and arr[j] < arr[i]:
                 res = max(res, helper(j))
                 j -= 1
-            j = i+1
-            while 0<=j<len(arr) and j-i<=d and arr[j]<arr[i]:
+            j = i + 1
+            while 0 <= j < len(arr) and j - i <= d and arr[j] < arr[i]:
                 res = max(res, helper(j))
                 j += 1
             res = res + 1
             memo[i] = res
             return res
-        
+
         for i in range(len(arr)):
             max_pos = max(max_pos, helper(i))
         # print(memo)
         return max_pos
-            
-

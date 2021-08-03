@@ -10,5 +10,5 @@ def main():
         n += r - l + 1
     return n
 
-print((main()))
 
+print((main()))

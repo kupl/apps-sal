@@ -26,13 +26,15 @@ def abc128_c():
             # 電灯をチェックして一つでもついていないものがあればそのスイッチの状態ではすべての電灯が付くという条件を満たせない
             if on_switch_count % 2 != p[j]:
                 break
-            
+
             if j == (M - 1):
                 ans += 1
 
     print(ans)
 
+
 def __starting_point():
     abc128_c()
+
 
 __starting_point()

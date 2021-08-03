@@ -8,6 +8,7 @@ def cnt(step):
         ans = max(temp_total, ans)
     return ans
 
+
 N = int(input())
 strengths = [int(_) for _ in input().split()]
 chars = list(input())

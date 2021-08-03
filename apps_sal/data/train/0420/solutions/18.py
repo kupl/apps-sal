@@ -8,5 +8,6 @@ class Solution:
                     if sub.count(vowel) % 2 != 0:
                         has_odd_vowel = True
                         break
-                if not has_odd_vowel: return  i
+                if not has_odd_vowel:
+                    return i
         return 0

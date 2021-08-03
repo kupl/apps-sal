@@ -21,25 +21,27 @@ visited =set(amount_explored/to_explore, amt2, amt3)
 O(V+E) -- O(remain+nextRemain)?
 
 '''
+
+
 class Solution:
     from collections import deque
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if not coins or amount <= 0:
             return 0
         coins = set(coins)
         count = 1
         q = deque()
-        q.append((amount,count)) 
+        q.append((amount, count))
         visited = set()
         visited.add(amount)
-        
+
         while q:
-            remain,count = q.popleft()
+            remain, count = q.popleft()
             if remain in coins:
                 return count
             for c in coins:
-                if remain-c>0 and (remain-c) not in visited:
-                    q.append((remain-c,count+1))
-                    visited.add(remain-c) #to avoid going down this path if another path has already explored this
+                if remain - c > 0 and (remain - c) not in visited:
+                    q.append((remain - c, count + 1))
+                    visited.add(remain - c)  # to avoid going down this path if another path has already explored this
         return -1
-

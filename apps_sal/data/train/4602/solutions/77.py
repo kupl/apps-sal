@@ -6,4 +6,4 @@ def is_anagram(test, original):
     for i in range(len(test)):
         if test[i] != original[i]:
             return False
-    return True 
+    return True

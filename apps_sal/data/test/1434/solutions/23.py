@@ -24,8 +24,3 @@ while len(leaves) != 0:
 print(len(edges))
 for edge in edges:
     print(edge[0], edge[1])
-
-
-
-
-

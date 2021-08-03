@@ -22,8 +22,6 @@ input_x = int(input())
 ret1 = input_x // 500  # 500円で割った商
 ret2 = ret1 * 1000  # 高橋君 500円の喜び
 ret3 = input_x - (ret1 * 500)   # X円から500円の枚数分を引いたお金
-ret4 = ret3 // 5 # （X円から500円の枚数分を引いたお金）÷ 5
-ret5 = ret4 * 5 # 高橋君 5円の喜び
+ret4 = ret3 // 5  # （X円から500円の枚数分を引いたお金）÷ 5
+ret5 = ret4 * 5  # 高橋君 5円の喜び
 print((ret2 + ret5))
-
-

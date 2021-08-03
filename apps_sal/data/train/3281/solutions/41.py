@@ -1,5 +1,6 @@
 import datetime
 
+
 def unlucky_days(year):
     i = 0
     for item in range(1, 13):

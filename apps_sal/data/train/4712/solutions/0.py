@@ -6,5 +6,5 @@ def lucasnum(n):
 
     for _ in range(abs(n)):
         a, b = b, a + b
-    
+
     return -a if flip else a

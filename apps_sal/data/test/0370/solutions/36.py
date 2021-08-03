@@ -20,19 +20,21 @@ if x < y:
     d = 1
     x, y = y, x
 
+
 def show_xy(tx, ty):
     if d == 1:
         print((ty * a, tx * b))
     else:
         print((tx * a, ty * b))
 
+
 if x + y < k and (x + y) % 2 == 1:
     print((3))
     temp_x = x
     temp_y = x - k
     show_xy(temp_x, temp_y)
-    temp_x = x + (k+x-y)//2
-    temp_y += k - (k+x-y)//2
+    temp_x = x + (k + x - y) // 2
+    temp_y += k - (k + x - y) // 2
     show_xy(temp_x, temp_y)
     temp_x = x
     temp_y = y
@@ -54,7 +56,7 @@ temp_y = 0
 temp = - (k * n - x - y) // 2
 while 1:
     temp_y -= k
-    if temp_y >=  temp:
+    if temp_y >= temp:
         show_xy(temp_x, temp_y)
     else:
         temp_x = temp - temp_y
@@ -72,4 +74,3 @@ temp_x = x
 while temp_y <= y:
     show_xy(temp_x, temp_y)
     temp_y += k
-

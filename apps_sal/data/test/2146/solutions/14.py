@@ -10,14 +10,13 @@ def main():
         step += 1
         new = set()
         for i in justreached:
-            for j in (i-1, i+1, short[i]):
+            for j in (i - 1, i + 1, short[i]):
                 if 0 <= j < n and j not in reached:
                     new.add(j)
                     ans[j] = step
         justreached = new
         reached |= new
     print(' '.join(map(str, ans)))
-                
-    
+
 
 main()

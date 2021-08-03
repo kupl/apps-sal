@@ -1,30 +1,28 @@
 class Solution:
-    def numTriplets(self, nums1, nums2): 
+    def numTriplets(self, nums1, nums2):
         res = 0
         for n in nums1:
-            res += self.twoProduct(n*n, nums2)
+            res += self.twoProduct(n * n, nums2)
         for n in nums2:
-            res += self.twoProduct(n*n, nums1)
-        
+            res += self.twoProduct(n * n, nums1)
+
         return res
-    
-    
+
     def twoProduct(self, target, nums):
         count = 0
         compFreq = {}
         for i in range(len(nums)):
             comp = target / nums[i]
-            if comp == int(comp): # is comp is a float, no need to proceed
+            if comp == int(comp):  # is comp is a float, no need to proceed
                 if nums[i] in compFreq:
                     count += compFreq[nums[i]]
-                
+
                 if comp in compFreq:
                     compFreq[comp] += 1
                 else:
                     compFreq[comp] = 1
         return count
-                
-                
+
     '''
     # O(N^2) Solution
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int: 

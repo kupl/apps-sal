@@ -7,5 +7,5 @@ min_index = 1
 for i in range(1, len(H)):
     if(min_value > abs(A - (T - H[i] * 0.006))):
         min_value = abs(A - (T - H[i] * 0.006))
-        min_index = i+1
+        min_index = i + 1
 print(min_index)

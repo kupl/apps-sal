@@ -17,6 +17,6 @@ class Solution:
             else:
                 curr = prev
             best[time] = curr
-            #print(\"index: {}, time: {}, curr: {}\".format(i, time, curr))
+            # print(\"index: {}, time: {}, curr: {}\".format(i, time, curr))
             prev = curr
         return best[T[-1][0]]

@@ -26,5 +26,3 @@ for i in range(k + 1):
             break
 
 print(dp[k])
-
-

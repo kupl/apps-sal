@@ -14,4 +14,3 @@ for i in range(k + 1):
     for j in range(-b, min(k - i - c, i) + 1):
         ans = (ans + d[i][j] * d[k - i][j + c]) % mod
 print(ans)
-

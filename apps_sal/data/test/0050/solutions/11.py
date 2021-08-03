@@ -6,4 +6,3 @@ b = [int(item) for item in input().split()]
 x = r // min(s)
 
 print(max(r, x * max(b) + r % min(s)))
-

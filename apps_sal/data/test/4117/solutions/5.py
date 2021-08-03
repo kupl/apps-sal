@@ -7,8 +7,8 @@ for i in range(N - 2):
         side2 = L[j]
         if side1 == side2:
             continue
-        lim = side1+ side2
-        for k in range(j+1,N):
+        lim = side1 + side2
+        for k in range(j + 1, N):
             side3 = L[k]
             if side3 >= lim:
                 break

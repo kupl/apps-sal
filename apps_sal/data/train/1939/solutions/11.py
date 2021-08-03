@@ -11,9 +11,9 @@ class Solution:
                     node[key] = {}
                 node = node[key]
             if not '$' in node:
-                node['$'] = OrderedDict() 
+                node['$'] = OrderedDict()
             node['$'][word] = True
-            
+
         def find(word, trie):
             node = trie
             matched = ''
@@ -40,12 +40,11 @@ class Solution:
             else:
                 return matched
 
-            
         trie = {}
         for i, word in enumerate(wordlist):
             insert(word, trie)
-        ans = []    
+        ans = []
         for q in queries:
             ans.append(find(q, trie))
-        
+
         return ans

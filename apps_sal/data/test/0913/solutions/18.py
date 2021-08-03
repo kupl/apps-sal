@@ -9,4 +9,3 @@ if only_robo == 0:
     return
 cost = only_bionic // only_robo + 1
 print(cost)
-

@@ -20,4 +20,3 @@ ls.sort(key=lambda x: x[0])
 
 for l in ls:
     print((l[-1]))
-

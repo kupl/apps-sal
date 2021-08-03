@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class HSubsequencesHardVersion:
     def solve(self):
@@ -28,8 +29,8 @@ class HSubsequencesHardVersion:
         else:
             print(-1)
 
+
 solver = HSubsequencesHardVersion()
 input = sys.stdin.readline
 
 solver.solve()
-

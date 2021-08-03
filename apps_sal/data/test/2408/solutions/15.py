@@ -25,5 +25,3 @@ for i in range(nls):
             x.sort()
             ins.add(tuple(x))
 print(len(ins))
-
-

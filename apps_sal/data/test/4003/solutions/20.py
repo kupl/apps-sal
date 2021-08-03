@@ -1,7 +1,7 @@
+import bisect
+from collections import deque
 N = int(input())
 a_list = list(map(int, input().split()))
-from collections import deque
-import bisect
 
 deq = deque(a_list)
 ans = ""
@@ -83,4 +83,3 @@ else:
     else:
         print(cnt)
         print(ans)
-

@@ -3,9 +3,9 @@ def opposite(number):
         return abs(number)
     else:
         return number * -1
-    
-    
+
+
 """
 def opposite(number):
     return -number
-"""    
+"""

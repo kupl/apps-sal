@@ -5,4 +5,4 @@ class Solution:
             A[0] = -1 * A[0]
             if A[0] > 0:
                 A.sort()
-        return sum(A)        
+        return sum(A)

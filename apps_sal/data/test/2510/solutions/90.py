@@ -44,14 +44,15 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-      
-N,M = map(int,input().split())
+
+
+N, M = map(int, input().split())
 uf = UnionFind(N)
 for i in range(M):
-  a,b = map(int,input().split())
-  uf.union(a-1,b-1)
+    a, b = map(int, input().split())
+    uf.union(a - 1, b - 1)
 max = 0
 for i in range(N):
-  if max < uf.size(i):
-    max = uf.size(i)
+    if max < uf.size(i):
+        max = uf.size(i)
 print(max)

@@ -31,4 +31,3 @@ uf = Unionfind(n)
 for x, y, z in xyz:
     uf.union(x - 1, y - 1)
 print((len(uf.roots())))
-

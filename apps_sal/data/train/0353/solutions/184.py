@@ -10,7 +10,7 @@ class Solution:
         #     if i>0:
         #         pow2[i] = (pow2[i-1] * 2) % MOD
         for i in range(len(nums)):
-            while right>=i and nums[i] + nums[right] > target:
+            while right >= i and nums[i] + nums[right] > target:
                 right -= 1
             if right < i:
                 break
@@ -19,4 +19,3 @@ class Solution:
                 count += 2 ** (right - i)
             count %= MOD
         return count % MOD
-

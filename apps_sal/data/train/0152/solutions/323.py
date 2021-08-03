@@ -1,6 +1,7 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
+
         def is_good(position, target_distance, m):
             prev = position[0]
             count = 1
@@ -12,11 +13,11 @@ class Solution:
                     if count == m:
                         return True
             return False
-                    
+
         left = 1
         right = max(position)
         while right > left + 1:
-            mid = (left+right)//2
+            mid = (left + right) // 2
             if is_good(position, mid, m):
                 left = mid
             else:

@@ -1,20 +1,26 @@
-import bisect,collections,copy,itertools,math,string
+import bisect
+import collections
+import copy
+import itertools
+import math
+import string
 import sys
 def I(): return int(sys.stdin.readline().rstrip())
-def LI(): return list(map(int,sys.stdin.readline().rstrip().split()))
+def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def S(): return sys.stdin.readline().rstrip()
 def LS(): return list(sys.stdin.readline().rstrip().split())
-def main():
 
+
+def main():
 
     def prime_factor(n):
         lst = []
-        while n%2 == 0:
+        while n % 2 == 0:
             n //= 2
             lst.append(2)
         f = 3
         while f**2 <= n:
-            if n%f == 0:
+            if n % f == 0:
                 n //= f
                 lst.append(f)
             else:
@@ -22,7 +28,6 @@ def main():
         if n != 1:
             lst.append(n)
         return lst
-
 
     a, b = LI()
     g = math.gcd(a, b)
@@ -33,5 +38,5 @@ def main():
 
     print(ans)
 
-main()
 
+main()

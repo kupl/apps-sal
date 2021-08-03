@@ -6,4 +6,4 @@ def row_weights(array):
             evens.append(el)
         else:
             odd.append(el)
-    return sum(evens),sum(odd)
+    return sum(evens), sum(odd)

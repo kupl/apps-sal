@@ -1,5 +1,6 @@
 import re
 
+
 def longest_palindrome(s):
     s = list(re.sub('[\W_]+', '', s.lower()))
     solution = 0

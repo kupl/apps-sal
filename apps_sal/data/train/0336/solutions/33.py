@@ -17,4 +17,3 @@ class Solution:
         if len(freq) == 1:
             ans += freq[0]
         return ans
-

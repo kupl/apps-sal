@@ -9,4 +9,3 @@ for i in height_list:
         count_height_ok += 1
 
 print(count_height_ok)
-

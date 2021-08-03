@@ -12,7 +12,3 @@ for a, b in a_b_pairs[1:]:
         ans += 1
 
 print(ans)
-
-
-
-

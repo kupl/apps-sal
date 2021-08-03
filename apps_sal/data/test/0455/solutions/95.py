@@ -34,4 +34,3 @@ for x, y in XY:
             w += "L"
             x += D[i]
     print(w)
-

@@ -10,4 +10,3 @@ for i in range(n // k):
 for j in range(k):
     r += min(arr2[j][0], arr2[j][1])
 print(r)
-

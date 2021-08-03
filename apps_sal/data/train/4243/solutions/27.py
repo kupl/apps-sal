@@ -1,2 +1,2 @@
-def find_average (*array):
+def find_average(*array):
     return 2

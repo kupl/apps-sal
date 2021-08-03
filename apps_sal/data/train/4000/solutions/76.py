@@ -14,4 +14,3 @@ def strong_num(number):
         return 'STRONG!!!!'
     return 'Not Strong !!'
     # Flez
-

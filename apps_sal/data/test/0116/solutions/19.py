@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     l1, r1, l2, r2, k = [int(i) for i in sys.stdin.readline().strip().split()]
     l = max(l1, l2)
@@ -9,6 +10,9 @@ def main():
     else:
         print(0)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

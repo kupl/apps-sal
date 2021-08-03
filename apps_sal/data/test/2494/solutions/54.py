@@ -12,6 +12,7 @@ for i in range(k):
 for i in range(k):
     dist.append([i, (10 * i) % k, 0])
 
+
 class Graph(object):
     """
     隣接リストによる有向グラフ
@@ -79,6 +80,8 @@ class Dijkstra(object):
             path.append(node)
             node = self.prev[node]
         return path[::-1]
+
+
 # (src, dst, weight)
 inputs = dist
 

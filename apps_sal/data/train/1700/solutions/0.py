@@ -1,5 +1,6 @@
 class DynamicConnectivity(object):
     par = []
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
 
@@ -12,7 +13,6 @@ class DynamicConnectivity(object):
         while self.par[pp] != pp:
             pp = self.par[pp]
         return pp
-        
-    def connected(self, p, q):
-        return True if self.root(p)==self.root(q) else False
 
+    def connected(self, p, q):
+        return True if self.root(p) == self.root(q) else False

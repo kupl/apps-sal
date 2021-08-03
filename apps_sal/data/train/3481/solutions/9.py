@@ -11,5 +11,3 @@ def get_char_count(s):
         value = newDict[key]
         inverse.setdefault(value, []).append(key)
     return inverse
-        
-

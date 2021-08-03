@@ -43,4 +43,3 @@ def solve():
 
 
 print((solve()))
-

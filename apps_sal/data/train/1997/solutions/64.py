@@ -8,11 +8,11 @@ class Solution:
             for inner_index, inner_interval in enumerate(intervals):
                 if index == inner_index:
                     continue
-                    
+
                 if index in removed or inner_index in removed:
                     continue
-                    
+
                 if inner_interval[0] >= interval[0] and inner_interval[1] <= interval[1]:
                     removed[inner_index] = True
-                
+
         return len(intervals) - len(removed.keys())

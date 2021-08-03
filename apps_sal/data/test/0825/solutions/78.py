@@ -13,7 +13,7 @@ def prime_factorize(n):
     if n != 1:
         a.append(n)
     return a
-  
+
 
 n = int(input())
 np = set(prime_factorize(n))

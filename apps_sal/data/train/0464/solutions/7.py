@@ -1,10 +1,10 @@
 class Solution:
     def minOperations(self, n: int) -> int:
         total = 0
-        for i in range(n//2): 
-            total += n - (2*i + 1)
+        for i in range(n // 2):
+            total += n - (2 * i + 1)
         return total
-    
+
         # middle one is 2k + 1
         # first is 2*0 + 1
         # last is 2*n + 1 --> diff is 2(n-k) so around n
@@ -21,5 +21,5 @@ class Solution:
         #         arr[n-inds_from_end-1] -= 1
         #         count += 1
         #     inds_from_end += 1
-            
+
         return count

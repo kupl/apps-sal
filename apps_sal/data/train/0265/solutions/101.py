@@ -6,7 +6,7 @@ class Solution:
         for x in nums:
             cur += x
             if cur - target in s:
-                #print(x)
+                # print(x)
                 res += 1
                 cur = 0
                 s = {0}

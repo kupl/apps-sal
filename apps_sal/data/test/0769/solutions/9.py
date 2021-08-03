@@ -5,10 +5,10 @@ if a // b:
 p = 0
 pp = [0] * 10
 i = 0
-while p < 10:   
+while p < 10:
     i += 1
     a %= b
-    a *= 10     
+    a *= 10
     if i > 100000:
         break
     if a // b == c:
@@ -16,7 +16,5 @@ while p < 10:
         return
     if pp[a // b] == 0:
         pp[a // b] = 1
-        p += 1 
+        p += 1
 print(-1)
-    
-

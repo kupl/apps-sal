@@ -28,4 +28,3 @@ for i in range(n):
             y = j + 1
 
 print(x, y)
-

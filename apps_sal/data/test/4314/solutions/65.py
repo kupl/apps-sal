@@ -46,4 +46,3 @@ ans2 = np.array(ans2).T
 
 for line in ans2:
     print(*line, sep='')
-

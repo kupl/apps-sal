@@ -23,4 +23,3 @@ print(("{}\n{} {}".format(
     a_size,
     " ".join(in_a)
 )))
-

@@ -10,11 +10,9 @@ for _ in range(int(input())):
     if c1 == 0:
         print('NO')
     elif c2 == 0:
-        if n% 2:
+        if n % 2:
             print('YES')
         else:
             print('NO')
     else:
         print('YES')
-
-

@@ -1,1 +1,1 @@
-square=lambda n: 2**(n-1)
+def square(n): return 2**(n - 1)

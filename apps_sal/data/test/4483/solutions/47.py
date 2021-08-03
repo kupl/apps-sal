@@ -1,3 +1,4 @@
-i = lambda: int(input())
-print(((i() - i()) % i()))
+def i(): return int(input())
 
+
+print(((i() - i()) % i()))

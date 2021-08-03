@@ -3,6 +3,7 @@ from collections import deque
 
 input = sys.stdin.readline
 
+
 def bfs(N, G, p):
     # Connected compoponent
     c_comp_p_list = []
@@ -49,12 +50,13 @@ def main():
         y -= 1
         G[x].append(y)
         G[y].append(x)
-    
+
     ans = bfs(N, G, p)
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

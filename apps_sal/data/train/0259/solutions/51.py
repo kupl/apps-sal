@@ -7,7 +7,7 @@ class Solution:
         best = mx
 
         while low < high:
-            med = low + (high-low) // 2
+            med = low + (high - low) // 2
 
             total = 0
 
@@ -16,10 +16,8 @@ class Solution:
 
             if total <= threshold:
                 high = med
-                best = min(best,med)
+                best = min(best, med)
             else:
                 low = med + 1
 
-
         return best
-

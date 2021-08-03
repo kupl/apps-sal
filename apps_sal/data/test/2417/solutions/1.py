@@ -17,4 +17,3 @@ while i < len(a):
     i += 1
     j += 1
 print(ans)
-

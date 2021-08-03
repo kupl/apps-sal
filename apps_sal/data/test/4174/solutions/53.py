@@ -8,4 +8,3 @@ for i in range(n):
         break
 else:
     print((n + 1))
-

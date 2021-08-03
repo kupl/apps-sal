@@ -10,4 +10,3 @@ for kame in range(X + 1):
 
 if(flag):
     print('No')
-

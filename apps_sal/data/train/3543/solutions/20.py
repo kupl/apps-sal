@@ -6,5 +6,5 @@ def increment_string(s):
                 b.append(c)
             else:
                 break
-        return s[:-len(b)]+str(int("".join(reversed(b)))+1).zfill(len(b))
-    return s+"1"
+        return s[:-len(b)] + str(int("".join(reversed(b))) + 1).zfill(len(b))
+    return s + "1"

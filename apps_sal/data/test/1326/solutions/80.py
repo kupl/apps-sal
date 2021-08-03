@@ -7,4 +7,3 @@ while i * i <= n:
     ans += i * (m * m - i * i + m)
     i += 1
 print(ans)
-

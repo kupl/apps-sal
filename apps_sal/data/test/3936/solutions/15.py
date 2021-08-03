@@ -19,13 +19,13 @@ while not i >= n:
         else:
             Ans *= 1
         sig = 1
-        i +=1
+        i += 1
     else:
         if sig == 1:
-            Ans *=2
+            Ans *= 2
         else:
-            Ans *=3
+            Ans *= 3
         sig = 2
         i += 2
-    Ans = Ans%(10**9+7)
+    Ans = Ans % (10**9 + 7)
 print(Ans)

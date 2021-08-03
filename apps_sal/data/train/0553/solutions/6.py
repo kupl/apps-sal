@@ -4,7 +4,8 @@ def eq_solve(v0, v1, u0, u1):
     if den != 0:
         return num / den
     return 1
- 
+
+
 def solve(p, q, r, a, b, c, rs):
     if p == a and q == b and r == c:
         return rs
@@ -47,13 +48,12 @@ def solve(p, q, r, a, b, c, rs):
                 nr *= mul
             res = min(res, solve(np, nq, nr, a, b, c, rs + 1))
     return res
-        
- 
- 
+
+
 t = int(input())
- 
+
 while t > 0:
     p, q, r = map(int, input().split())
     a, b, c = map(int, input().split())
     print(solve(p, q, r, a, b, c, 0))
-    t -= 1 
+    t -= 1

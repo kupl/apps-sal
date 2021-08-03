@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         counter = {}
@@ -17,5 +18,5 @@ class Solution:
                     fruits -= 1
                     del counter[tree[i]]
                 i += 1
-            longest = max(longest, j-i+1)
+            longest = max(longest, j - i + 1)
         return longest

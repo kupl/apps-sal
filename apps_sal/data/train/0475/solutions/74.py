@@ -7,7 +7,5 @@ class Solution:
                 summ += j
                 temp.append(summ)
         temp.sort()
-        result = int(sum(temp[left-1:right])%(10**9+7))
+        result = int(sum(temp[left - 1:right]) % (10**9 + 7))
         return result
-        
-

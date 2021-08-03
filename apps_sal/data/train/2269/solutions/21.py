@@ -6,9 +6,10 @@ for v in range(N):
     adjL[v].remove(v)
 for _ in range(M):
     A, B = list(map(int, input().split()))
-    A, B = A-1, B-1
+    A, B = A - 1, B - 1
     adjL[A].remove(B)
     adjL[B].remove(A)
+
 
 def getSizes(adjList):
     def bfs(vSt):
@@ -31,31 +32,32 @@ def getSizes(adjList):
     colors = [0] * numV
     anss = []
     for vSt in range(numV):
-        if colors[vSt] != 0: continue
+        if colors[vSt] != 0:
+            continue
         nums = {-1: 0, 1: 0}
         if not bfs(vSt):
             return []
         anss.append((nums[-1], nums[1]))
     return anss
 
+
 sizes = getSizes(adjL)
 
 if not sizes:
     print((-1))
 else:
-    bitset = 1<<N
+    bitset = 1 << N
     for A, B in sizes:
-        bitset = (bitset>>A) | (bitset>>B)
+        bitset = (bitset >> A) | (bitset >> B)
 
     minDiff = N
     iMinDiff = -1
-    for i in reversed(list(range(N+1))):
+    for i in reversed(list(range(N + 1))):
         if bitset & 1:
-            diff = abs(i-N/2)
+            diff = abs(i - N / 2)
             if diff < minDiff:
                 minDiff = diff
                 iMinDiff = i
         bitset >>= 1
 
-    print((iMinDiff*(iMinDiff-1)//2 + (N-iMinDiff)*(N-iMinDiff-1)//2))
-
+    print((iMinDiff * (iMinDiff - 1) // 2 + (N - iMinDiff) * (N - iMinDiff - 1) // 2))

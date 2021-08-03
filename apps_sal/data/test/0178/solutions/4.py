@@ -8,4 +8,3 @@ if cnt >= ((n - 9) // 2):
     print('YES')
 else:
     print('NO')
-

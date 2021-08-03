@@ -15,6 +15,3 @@ for i in range(t):
                 cont += 1
                 b[min(n - 1, i + r - 2)] = 1
     print(r)
-
-
-

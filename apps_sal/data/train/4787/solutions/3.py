@@ -13,4 +13,3 @@ def remove(s):
         s += "!"
         i += 1
     return s
-

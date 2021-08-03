@@ -1,6 +1,7 @@
 def order_weight(strng):
 
     print(strng)
+
     def sum_strng(some_string):
         return sum(int(x) for x in some_string if x.isdigit())
 
@@ -10,7 +11,7 @@ def order_weight(strng):
 
     def order(arr):
         for i in arr:
-            tuple_arr.append((i,sum_strng(i)))
+            tuple_arr.append((i, sum_strng(i)))
 
     order(original_string_array)
 

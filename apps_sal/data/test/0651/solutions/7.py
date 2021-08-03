@@ -40,4 +40,3 @@ for a in range(4):
                 if cnt > 0 and m[x][y] == 'E':
                     sol += 1
 print(sol)
-

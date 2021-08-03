@@ -23,19 +23,19 @@ for a in range(n):
 winner = []
 for step in range(q):
     i, j = [int(c) for c in input().split()]
-    matrix[i-1][j-1] = 1 - matrix[i-1][j-1]
+    matrix[i - 1][j - 1] = 1 - matrix[i - 1][j - 1]
 
     maxmax = 0
 
     maxrow = 0
     for b in range(m):
-        if matrix[i-1][b] == 1:
+        if matrix[i - 1][b] == 1:
             maxrow += 1
             if maxrow > maxmax:
                 maxmax = maxrow
         else:
             maxrow = 0
-    maxperrow[i-1] = maxmax
+    maxperrow[i - 1] = maxmax
     winner.append(max(maxperrow))
 
 

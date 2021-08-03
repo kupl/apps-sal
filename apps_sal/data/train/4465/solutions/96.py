@@ -8,4 +8,3 @@ def super_size(n):
 
     n_reverse = int(n_joined)
     return n_reverse
-

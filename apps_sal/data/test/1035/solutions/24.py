@@ -47,4 +47,5 @@ def __starting_point():
     # print(prime_factorization(B))
     solve(A, B)
 
+
 __starting_point()

@@ -1,13 +1,13 @@
-h,w = map(int,input().split())
+h, w = map(int, input().split())
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 ans = [[0] * w for i in range(h)]
 i = 0
 j = 0
 k = 0
 flg = True
 while i < h:
-    ans[i][j] = str(k+1)
+    ans[i][j] = str(k + 1)
     a[k] -= 1
     if a[k] == 0:
         k += 1

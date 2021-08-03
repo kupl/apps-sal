@@ -30,4 +30,3 @@ for i in d[::-1]:
     if np.any((r[:-1] == i * n - (r[-1] - r[:-1])) & (r[:-1] <= K)):
         print(i)
         return
-

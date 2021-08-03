@@ -16,4 +16,3 @@ def solve(H, N, magics):
 H, N, *AB = list(map(int, open(0).read().split()))
 magics = np.array([(A, B) for A, B in zip(*[iter(AB)] * 2)], dtype=np.int64)
 print((solve(H, N, magics)))
-

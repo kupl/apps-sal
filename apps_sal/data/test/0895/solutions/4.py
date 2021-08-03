@@ -14,4 +14,3 @@ while rit < n:
     lef = lef + 1
 
 print(ret)
-

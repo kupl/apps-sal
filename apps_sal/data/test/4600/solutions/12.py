@@ -8,7 +8,7 @@ pset = []
 for i in range(m):
     p, s = input().split()
     pset.append((int(p), s))
-pset.sort(key= lambda x:x[0])
+pset.sort(key=lambda x: x[0])
 
 for j in range(m):
     if cur_n != pset[j][0]:
@@ -24,4 +24,3 @@ for j in range(m):
             cur_wa += 1
 
 print(f'{ac} {wa}')
-

@@ -13,8 +13,8 @@ class Solution:
                 if sub_array_xor == 0:
                     for j in range(i + 1, k + 1):
                         left_part = prefixes[j -
-                                             1] if i == 0 else prefixes[j-1] ^ prefixes[i - 1]
-                        right_part = prefixes[k] ^ prefixes[j-1]
+                                             1] if i == 0 else prefixes[j - 1] ^ prefixes[i - 1]
+                        right_part = prefixes[k] ^ prefixes[j - 1]
                         if left_part == right_part:
                             result += 1
 

@@ -1,5 +1,6 @@
 import heapq
 
+
 def main():
     N, C = list(map(int, input().split()))
     STC = [tuple(map(int, input().split())) for _ in range(N)]
@@ -33,5 +34,5 @@ def main():
         heapq.heappush(h, (t + 1, e.pop()))
     return r
 
-print((main()))
 
+print((main()))

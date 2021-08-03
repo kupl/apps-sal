@@ -1,5 +1,4 @@
-n=int(input())
-a=list(map(int,input().split()))
+n = int(input())
+a = list(map(int, input().split()))
 
-print((sum(a)-n))
-
+print((sum(a) - n))

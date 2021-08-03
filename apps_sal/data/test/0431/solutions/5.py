@@ -6,6 +6,7 @@ if len(light_floors) == 0:
     return
 limit = max(light_floors)
 
+
 def rec(i, lst):
     if i == limit:
         # first: left
@@ -40,4 +41,3 @@ def rec(i, lst):
 
 
 print(rec(0, []))
-

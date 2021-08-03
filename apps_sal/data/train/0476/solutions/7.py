@@ -6,7 +6,9 @@ class Solution(object):
         print(times)
         while len(times) > 1:
             lead = times.pop()
-            if lead < times[-1]: ans += 1  # if lead arrives sooner, it can't be caught
-            else: times[-1] = lead # else, fleet arrives at later time 'lead'
+            if lead < times[-1]:
+                ans += 1  # if lead arrives sooner, it can't be caught
+            else:
+                times[-1] = lead  # else, fleet arrives at later time 'lead'
 
-        return ans + bool(times) # remaining car is fleet (if it exists)
+        return ans + bool(times)  # remaining car is fleet (if it exists)

@@ -4,4 +4,3 @@ if min(A) == max(A):
     print(-1)
 else:
     print(*sorted(A))
-

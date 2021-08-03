@@ -11,15 +11,15 @@
 '''
 try:
     T = int(input())
-    if T>=1 and T<=1000:
+    if T >= 1 and T <= 1000:
         for i in range(T):
-            num= input()
-            if len(num)>3 and len(num)< 10**10:
-                arr=[]
+            num = input()
+            if len(num) > 3 and len(num) < 10**10:
+                arr = []
                 for x in num:
-                    arr.append(int(x)-2)
-                arr=list(map(str,arr))
-                res=''.join(arr)
+                    arr.append(int(x) - 2)
+                arr = list(map(str, arr))
+                res = ''.join(arr)
                 print(res)
 except Exception:
     pass

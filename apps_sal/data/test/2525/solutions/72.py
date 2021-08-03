@@ -9,7 +9,7 @@ for i in sys.stdin:
 
     if i[0] == '1':
         key = -key
-    
+
     elif key == 1:
         if i[2] == '1':
             S = i[4] + S

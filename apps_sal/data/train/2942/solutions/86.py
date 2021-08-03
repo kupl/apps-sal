@@ -9,4 +9,3 @@ def fold_to(distance):
         paper *= 2
         folds += 1
     return folds
-

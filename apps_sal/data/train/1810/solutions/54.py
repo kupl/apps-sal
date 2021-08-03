@@ -13,7 +13,7 @@ class Solution:
                     new_name = '{}({})'.format(name, k)
                     if new_name not in existing:
                         existing[new_name] = 1
-                        existing[name] = k+1
+                        existing[name] = k + 1
                         output.append(new_name)
                         break
                     k += 1

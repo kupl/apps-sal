@@ -1,13 +1,10 @@
 from math import ceil
 
 
-
 n, a, b = list(map(int, input().split()))
 
 
-
 s = 6 * n
-
 
 
 if a * b >= s:
@@ -27,12 +24,9 @@ else:
         x, y = y, x
 
 
-
 print(x * y)
 
 print(x, y)
 
 
-
 # Made By Mostafa_Khaled
-

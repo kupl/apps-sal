@@ -12,4 +12,3 @@ if mini == 100000000000000000000000:
     print(-1)
 else:
     print(mini // 2)
-

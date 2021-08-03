@@ -1,9 +1,10 @@
 INF = float('inf')
 n = int(input())
 aaa = [0, 0] + list(map(int, input().split()))
-dp = [[0 for _ in range(n+1)] for i in range(2)]
-vis = [[0 for _ in range(n+1)] for i in range(2)]
-rs = [0] * (n-1)
+dp = [[0 for _ in range(n + 1)] for i in range(2)]
+vis = [[0 for _ in range(n + 1)] for i in range(2)]
+rs = [0] * (n - 1)
+
 
 def di(d): return 0 if d == 1 else 1
 
@@ -26,7 +27,7 @@ def solve(x, d):
 
 
 for D in [1, -1]:
-    for x in range(2, n+1):
+    for x in range(2, n + 1):
         d = D
         if dp[di(d)][x]:
             continue
@@ -52,12 +53,11 @@ for D in [1, -1]:
             d *= -1
             ni = ni + aaa[ni] * d
 
-
         if ni == 1:
             continue
 
-        for i in range(len(values)-2, -1, -1):
-            values[i] = values[i] + values[i+1]
+        for i in range(len(values) - 2, -1, -1):
+            values[i] = values[i] + values[i + 1]
 
         while path:
             dp[di(d)][path.pop()] = values.pop()
@@ -67,7 +67,7 @@ for D in [1, -1]:
 for i in range(1, n):
     aaa[1] = i
     res = solve(1, 1)
-    rs[i-1] = res if res < INF else -1
+    rs[i - 1] = res if res < INF else -1
 
 
 print('\n'.join(map(str, rs)))

@@ -7,14 +7,13 @@ class Solution:
         res = float('inf')
         for i, v in enumerate(A):
             total += v
-            #print(q[0])
-         
-                
+            # print(q[0])
+
             while q and total < q[-1][1]:
                 q.pop()
-                
+
             q.append([i, total])
-            while q and total - q[0][1] >=K:
+            while q and total - q[0][1] >= K:
                 res = min(res, i - q[0][0])
                 q.popleft()
 

@@ -39,7 +39,7 @@ g[l[0]] = 1
 for i in range(1, n):
     t = defaultdict(int)
     t[l[i]] = 1
-    g[l[i]]+=1
+    g[l[i]] += 1
     for k, v in list(d.items()):
         gcd = math.gcd(k, l[i])
         t[gcd] += v
@@ -52,4 +52,3 @@ for i in range(int(input())):
         print(0)
     else:
         print(a)
-

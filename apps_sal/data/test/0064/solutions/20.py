@@ -6,5 +6,3 @@ if max(Counter(ball_idx___color).values()) > friends_nr:
     print('NO')
 else:
     print('YES')
-
-

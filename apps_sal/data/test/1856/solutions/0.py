@@ -3,38 +3,44 @@ input = sys.stdin.readline
 
 n = int(input())
 
+
 def MakeSet(x):
-     x.parent = x
-     x.rank   = 0
+    x.parent = x
+    x.rank = 0
+
 
 def Union(x, y):
-     xRoot = Find(x)
-     yRoot = Find(y)
-     if xRoot.rank > yRoot.rank:
-         yRoot.parent = xRoot
-     elif xRoot.rank < yRoot.rank:
-         xRoot.parent = yRoot
-     elif xRoot != yRoot:
-         yRoot.parent = xRoot
-         xRoot.rank = xRoot.rank + 1
+    xRoot = Find(x)
+    yRoot = Find(y)
+    if xRoot.rank > yRoot.rank:
+        yRoot.parent = xRoot
+    elif xRoot.rank < yRoot.rank:
+        xRoot.parent = yRoot
+    elif xRoot != yRoot:
+        yRoot.parent = xRoot
+        xRoot.rank = xRoot.rank + 1
+
 
 def Find(x):
-     if x.parent == x:
+    if x.parent == x:
         return x
-     else:
+    else:
         x.parent = Find(x.parent)
         return x.parent
 
+
 class Node:
-    def __init__ (self, label):
+    def __init__(self, label):
         self.label = label
+
     def __str__(self):
         return self.label
 
+
 used = [0] * 26
 nodes = [Node(ch) for ch in range(26)]
-[MakeSet(node) for node in nodes] 
-  
+[MakeSet(node) for node in nodes]
+
 for _ in range(n):
     s = input().strip()
     prev = -1
@@ -55,5 +61,3 @@ for val in outs:
         count += 1
 
 print(count + sum(used) - 26)
-        
-

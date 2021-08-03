@@ -9,10 +9,9 @@ for _ in range(t):
     words = []
     for i in range(n):
         if (n - i) % 2 == 0:
-            words.append((s[i:] + s[:i], i+1))
+            words.append((s[i:] + s[:i], i + 1))
         else:
-            words.append((s[i:] + s[:i][::-1], i+1))
+            words.append((s[i:] + s[:i][::-1], i + 1))
     words.sort()
     print(words[0][0])
     print(words[0][1])
-

@@ -3,7 +3,7 @@ AB = [0] * N
 for i in range(N):
     AB[i] = list(map(int, input().split()))
 
-AB = sorted(AB, key = lambda x: x[0])
+AB = sorted(AB, key=lambda x: x[0])
 ans = 0
 
 for i in range(N):

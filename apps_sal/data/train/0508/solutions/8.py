@@ -17,7 +17,7 @@ def solve():
         d = int(rl())
         event.append((d, 2, -1))
     event.sort(key=itemgetter(0, 1))
-    
+
     pos_set = set()
     pos_hq = []
     ans = []
@@ -39,5 +39,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

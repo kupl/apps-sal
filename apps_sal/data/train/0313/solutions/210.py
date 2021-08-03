@@ -3,7 +3,8 @@ class Solution:
         if m * k > len(bloomDay):
             return -1
         lo, hi = min(bloomDay), max(bloomDay)
-        def check(d): # check if D days is good enough for m bouquets of k flowers
+
+        def check(d):  # check if D days is good enough for m bouquets of k flowers
             cnt, start = 0, -1
             for i, val in enumerate(bloomDay):
                 if val <= d and i - start >= k:
@@ -12,7 +13,7 @@ class Solution:
                 elif val > d:
                     start = i
             return cnt >= m
-        
+
         while lo <= hi:
             mid = (lo + hi) // 2
             if check(mid):

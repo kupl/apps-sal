@@ -6,7 +6,7 @@ class Solution:
             graph[u][v] = w
             graph.setdefault(v, {})
             graph[v][u] = w
-            
+
         q = []
         HP = {}
         q.append([0, M])
@@ -15,7 +15,7 @@ class Solution:
             if cur_node in HP and HP[cur_node] > cur_hp:
                 continue
             HP[cur_node] = cur_hp
-            if cur_node in graph: 
+            if cur_node in graph:
                 for next_node in graph[cur_node]:
                     weight = graph[cur_node][next_node]
                     next_hp = cur_hp - weight - 1
@@ -26,6 +26,5 @@ class Solution:
         for u, v, w in edges:
             uv = HP[u] if u in HP else 0
             vu = HP[v] if v in HP else 0
-            result += min(uv+vu, w)
+            result += min(uv + vu, w)
         return result
-

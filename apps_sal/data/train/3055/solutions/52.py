@@ -3,4 +3,4 @@ def sum_str(a, b):
         return str(int(a) + int(b))
     elif a is '' and b is '':
         return "0"
-    return a+b
+    return a + b

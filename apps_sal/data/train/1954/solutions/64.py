@@ -14,4 +14,3 @@ class Solution:
                     if new_skill not in dp or len(team) + 1 < len(dp[new_skill]):
                         dp[new_skill] = team + [i]
         return dp[(1 << n) - 1]
-

@@ -20,4 +20,3 @@ else:
             mini = i
 
     print(mini + 1)
-

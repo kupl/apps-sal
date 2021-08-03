@@ -2,13 +2,11 @@ class DinnerPlates:
 
     def __init__(self, capacity: int):
 
-        
         self.c = capacity
         # heap queue to find the leftmost available stack.
         self.q = []
         # a list stacks to save all stacks.
-        self.stacks = [] 
-        
+        self.stacks = []
 
     def push(self, val: int) -> None:
         # the leftmost available index self.q[0] is smaller than the current size of the stacks
@@ -57,4 +55,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

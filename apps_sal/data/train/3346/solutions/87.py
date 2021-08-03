@@ -12,7 +12,7 @@ def gap(g, m, n):
         return True
 
     lp = 2
-    for j in range(m, n+1):
+    for j in range(m, n + 1):
         if isprime(j):
             if j - lp == g:
                 return [lp, j]

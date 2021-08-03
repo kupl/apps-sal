@@ -17,5 +17,4 @@ for i in range(0, n):
         starta += 1
     else:
         ansa += 1
-print(ansa);
-
+print(ansa)

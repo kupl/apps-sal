@@ -6,4 +6,3 @@ def sum_digits(number):
         if i.isdigit():
             s += int(i)
     return s
-

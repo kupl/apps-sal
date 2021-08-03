@@ -1,5 +1,5 @@
 class Solution:
-    def minCostConnectPoints(self,points: List[List[int]]) -> int:
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         if n == 1:
             return 0
@@ -36,7 +36,7 @@ class Solution:
             toset.remove(point)
             while conn[point] not in g:
                 g.append(conn[point])
-                conngroupcost+=costs[point][conn[point]]
+                conngroupcost += costs[point][conn[point]]
                 toset.remove(conn[point])
                 point = conn[point]
             while len(toset) > 0:
@@ -54,14 +54,14 @@ class Solution:
             groups.append(g)
 
         while len(groups) > 1:
-            minlen=-1
-            minindex=-1
+            minlen = -1
+            minindex = -1
             for gi in range(len(groups)):
-                if minlen==-1:
-                    minlen=len(groups[gi])
-                    minindex=gi
+                if minlen == -1:
+                    minlen = len(groups[gi])
+                    minindex = gi
                 else:
-                    if len(groups[gi])<minlen:
+                    if len(groups[gi]) < minlen:
                         minlen = len(groups[gi])
                         minindex = gi
             gps = groups[minindex]
@@ -87,9 +87,3 @@ class Solution:
             groups[minindex] = groups[minindex] + groups[conngindex]
             del groups[conngindex]
         return conngroupcost
-                    
-        
-        
-                
-                
-

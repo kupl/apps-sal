@@ -22,8 +22,11 @@ def main():
         d[rev_num] += 1
     # 2以上同じmodがあったらそこから2つ選ぶ選び方
     # それを全てのmodで
-    print(sum(i*(i-1)//2 for i in d))
- 
+    print(sum(i * (i - 1) // 2 for i in d))
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -5,4 +5,3 @@ elif a >= 6:
     print((b // 2))
 else:
     print((0))
-

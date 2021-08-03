@@ -17,30 +17,30 @@ t.append(math.inf)
 for i in x:
     ws = abs(s[bisect.bisect(s, i) - 1] - i)
     if ws != math.inf:
-        ws += min(abs(t[bisect.bisect(t, s[bisect.bisect(s, i) - 1])-1] - s[bisect.bisect(s, i) - 1]), \
+        ws += min(abs(t[bisect.bisect(t, s[bisect.bisect(s, i) - 1]) - 1] - s[bisect.bisect(s, i) - 1]),
                   abs(t[bisect.bisect(t, s[bisect.bisect(s, i) - 1])] - s[bisect.bisect(s, i) - 1]))
     else:
         ws = math.inf
-    
+
     es = abs(s[bisect.bisect(s, i)] - i)
     if es != math.inf:
-        es += min(abs(t[bisect.bisect(t, s[bisect.bisect(s, i)]) -1] - s[bisect.bisect(s, i)]), \
+        es += min(abs(t[bisect.bisect(t, s[bisect.bisect(s, i)]) - 1] - s[bisect.bisect(s, i)]),
                   abs(t[bisect.bisect(t, s[bisect.bisect(s, i)])] - s[bisect.bisect(s, i)]))
     else:
         es = math.inf
-    
+
     wt = abs(t[bisect.bisect(t, i) - 1] - i)
     if wt != math.inf:
-        wt += min(abs(s[bisect.bisect(s, t[bisect.bisect(t, i) - 1])-1] - t[bisect.bisect(t, i) - 1]), \
+        wt += min(abs(s[bisect.bisect(s, t[bisect.bisect(t, i) - 1]) - 1] - t[bisect.bisect(t, i) - 1]),
                   abs(s[bisect.bisect(s, t[bisect.bisect(t, i) - 1])] - t[bisect.bisect(t, i) - 1]))
     else:
         wt = math.inf
-    
+
     et = abs(t[bisect.bisect(t, i)] - i)
     if et != math.inf:
-        et += min(abs(s[bisect.bisect(s, t[bisect.bisect(t, i)])-1] - t[bisect.bisect(t, i)]), \
+        et += min(abs(s[bisect.bisect(s, t[bisect.bisect(t, i)]) - 1] - t[bisect.bisect(t, i)]),
                   abs(s[bisect.bisect(s, t[bisect.bisect(t, i)])] - t[bisect.bisect(t, i)]))
     else:
         et = math.inf
-        
+
     print(min(ws, es, wt, et))

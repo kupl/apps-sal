@@ -1,5 +1,6 @@
 import bisect
 
+
 class Solution:
     def minSumOfLengths(self, arr, target):
         # inclusive, inclusive sliding window pointers

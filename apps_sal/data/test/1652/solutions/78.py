@@ -21,7 +21,7 @@ def dfs(s, i):
         return True
     for t in template:
         if s[i:].startswith(t):
-            if dfs(s, i+len(t)):
+            if dfs(s, i + len(t)):
                 return True
     return False
 
@@ -48,5 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

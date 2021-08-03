@@ -14,5 +14,6 @@ def main():
         _max = k * 2
 
     print(_min, _max)
-main()
 
+
+main()

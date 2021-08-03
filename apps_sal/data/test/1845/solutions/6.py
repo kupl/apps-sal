@@ -14,7 +14,7 @@ for i in range(n):
 ds = {}
 for i in range(1, 102):
     ds[i] = []
-    for j in range(1, i+1):
+    for j in range(1, i + 1):
         if i % j == 0:
             ds[i].append(j)
 
@@ -23,7 +23,7 @@ for v1 in c.keys():
         if v1 == v2 and c[v1] == 1:
             continue
         for d in ds[v1]:
-            ch = -(v1 - v1//d) + (v2*d - v2)
+            ch = -(v1 - v1 // d) + (v2 * d - v2)
             ans = min(ans, s + ch)
 
 print(ans)

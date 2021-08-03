@@ -4,7 +4,7 @@
 from collections import Counter
 
 n = int(input())
-H = list(map(int,input().split()))
+H = list(map(int, input().split()))
 _H = sorted(H)
 
 diff = Counter()
@@ -22,4 +22,3 @@ for i in range(n):
         count += 1
 
 print(count)
-

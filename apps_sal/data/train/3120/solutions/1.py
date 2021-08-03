@@ -10,4 +10,3 @@ def meeting(rooms, number):
         if not number:
             return result
     return 'Not enough!'
-

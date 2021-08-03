@@ -27,4 +27,3 @@ for i in range(1, MAX_TEMP):
 for i in range(q):
     a, b = read_ints()
     print(sums[b] - sums[a - 1])
-

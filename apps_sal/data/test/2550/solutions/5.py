@@ -9,4 +9,3 @@ while T:
         print(m)
     else:
         print(sum(a))
-

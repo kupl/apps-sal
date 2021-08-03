@@ -12,7 +12,7 @@ class Solution:
         if root:
             self.res.append(root)
         return self.res
-    
+
     def helper(self, root):
         if not root:
             return root

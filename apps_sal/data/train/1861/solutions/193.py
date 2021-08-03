@@ -15,6 +15,5 @@ class Solution:
                             return 0
                         result = area
                 elif counter[(x, y)] == 2 and counter[(x_, y_)] == 2:
-                        return 0
+                    return 0
         return 0 if result == float('inf') else result
-

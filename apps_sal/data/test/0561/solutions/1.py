@@ -2,7 +2,7 @@ __author__ = 'asmn'
 n = int(input())
 a = sorted(map(int, input().split()))
 
-#print('begin')
+# print('begin')
 
 
 def checked(a, d):

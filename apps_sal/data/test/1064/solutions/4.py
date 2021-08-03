@@ -10,10 +10,10 @@ else:
 
     block = [-1] * n  # -1 free, otherwise index of a free one
     for i in range(m):
-        if block[s[i]-1] == -1:
-            block[s[i]] = s[i]-1
+        if block[s[i] - 1] == -1:
+            block[s[i]] = s[i] - 1
         else:
-            block[s[i]] = block[s[i]-1]
+            block[s[i]] = block[s[i] - 1]
 
     MAX_COST = 1e13
     max_inr = 0
@@ -21,7 +21,7 @@ else:
         inr = 1
         prev = s[0]
         for i in range(1, m):
-            if s[i] == prev+1:
+            if s[i] == prev + 1:
                 inr += 1
             else:
                 if inr > max_inr:
@@ -35,7 +35,7 @@ else:
         if i < max_inr:
             best_cost.append(MAX_COST)
         else:
-            best_cost.append(a[i]*(-(-n//(i+1))))
+            best_cost.append(a[i] * (-(-n // (i + 1))))
     #sc = sorted(range(k), key=lambda x: best_cost[x])
    # sc = sorted(range(k), key=best_cost.__getitem__)
     min_cost = MAX_COST
@@ -45,7 +45,7 @@ else:
             continue
         #  if best_cost[test] >= min_cost or best_cost[test] >= MAX_COST:
         #    break
-        t_size = test+1
+        t_size = test + 1
         pos = 0
         count = 1
         while pos < n:
@@ -58,11 +58,8 @@ else:
                 new_pos = block[new_pos]
             pos = new_pos
             count += 1
-        min_cost = min(min_cost, a[test]*count)
+        min_cost = min(min_cost, a[test] * count)
     if min_cost < MAX_COST:
         print(min_cost)
     else:
         print('-1')
-
-
-

@@ -14,4 +14,3 @@ for i in range(n, 0, -1):
         lts += 1
     an = max(an, 2 * min(rts, lts) + 2 * min(ups, dwns))
 print(an)
-

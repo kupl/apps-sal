@@ -11,4 +11,3 @@ for i in range(k + 1):
         cnt += 1
         ans -= 1
 print(ans + cnt // 2 + cnt % 2)
-

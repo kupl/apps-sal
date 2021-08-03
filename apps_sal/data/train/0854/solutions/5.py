@@ -5,6 +5,7 @@ def pure_it(L, N):
             return 'ne krasivo'
     return 'prekrasnyy'
 
+
 t = int(input())
 for i in range(t):
     N = int(input())

@@ -16,4 +16,3 @@ for i in range(7):
         cur += 1
     mx = max(mx, ans)
 print(mx + wek * 7)
-

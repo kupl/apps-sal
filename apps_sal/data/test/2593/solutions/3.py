@@ -1,6 +1,6 @@
+from bisect import bisect_right
 import sys
 input = sys.stdin.readline
-from bisect import bisect_right
 
 bin_s = [1]
 while bin_s[-1] <= 10 ** 9:
@@ -18,6 +18,7 @@ def main():
     for num in cnt:
         ans += num * (num - 1) // 2
     print(ans)
+
 
 for _ in range(int(input())):
     main()

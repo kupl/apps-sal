@@ -13,7 +13,7 @@ class Solution:
                 if arr[i2] < v1:
                     break
 
-                fibSeqs[(arr[i2], arr[i3])] = cl+1
-                ans = max(ans, cl+3)
+                fibSeqs[(arr[i2], arr[i3])] = cl + 1
+                ans = max(ans, cl + 3)
 
         return ans

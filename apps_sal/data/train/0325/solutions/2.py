@@ -32,4 +32,3 @@ class Solution:
         process(dp)
 
         return max(max(row) for row in dp)
-

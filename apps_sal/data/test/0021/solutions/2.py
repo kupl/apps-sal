@@ -5,5 +5,4 @@ mi = L.index(1)
 if n == 2:
     print(1)
 else:
-    print(n-1-min(ma,mi,n-1-ma,n-1-mi))
-
+    print(n - 1 - min(ma, mi, n - 1 - ma, n - 1 - mi))

@@ -19,4 +19,3 @@ for i in b:
     last = l
     ans[i[1]] = str(l + 1)
 print(' '.join(ans))
-

@@ -18,4 +18,3 @@ for i in range(q):
     print(sums)
     count[c[i]] += count[b[i]]
     count[b[i]] = 0
-

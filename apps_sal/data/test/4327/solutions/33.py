@@ -1,1 +1,2 @@
-A,P=map(int,input().split());print(A*3+P>>1)
+A, P = map(int, input().split())
+print(A * 3 + P >> 1)

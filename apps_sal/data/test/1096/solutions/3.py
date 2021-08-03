@@ -7,4 +7,3 @@ elif b1 or b2:
     print("5")
 else:
     print("8")
-

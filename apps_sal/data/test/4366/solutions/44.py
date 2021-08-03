@@ -1,2 +1,1 @@
-print((sum(map(int,input().split()))%24))
-
+print((sum(map(int, input().split())) % 24))

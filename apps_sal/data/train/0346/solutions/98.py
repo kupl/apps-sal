@@ -18,5 +18,3 @@ class Solution:
             if k == 0:
                 sums += add
         return sums
-            
-

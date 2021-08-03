@@ -2,6 +2,7 @@ class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
         n = len(A)
         zeros = set()
+
         def dfs(i, j):
             A[i][j] = 2
             for di, dj in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
@@ -19,7 +20,7 @@ class Solution:
             else:
                 continue
             break
-        
+
         result = 2 * n
         # print(zeros)
         q = collections.deque(zeros)
@@ -37,5 +38,4 @@ class Solution:
                         if A[ii][jj] == 1:
                             result = min(result, steps)
             steps += 1
-        return result            
-
+        return result

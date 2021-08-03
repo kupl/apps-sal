@@ -58,4 +58,5 @@ def __starting_point():
     # メイン処理
     main(N, M, cakes)
 
+
 __starting_point()

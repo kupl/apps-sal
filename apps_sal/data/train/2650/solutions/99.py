@@ -8,4 +8,5 @@ def __starting_point():
     si.sort()
     print((''.join(si)))
 
+
 __starting_point()

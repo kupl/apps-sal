@@ -14,4 +14,3 @@ class Solution:
                     lo = hi
                     lo_sum = dp[hi]
         return answer
-

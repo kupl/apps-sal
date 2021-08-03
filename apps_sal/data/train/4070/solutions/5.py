@@ -1,1 +1,1 @@
-magic_sum=lambda a:sum(n%2*n*('3'in str(n))for n in a or[])
+def magic_sum(a): return sum(n % 2 * n * ('3' in str(n))for n in a or [])

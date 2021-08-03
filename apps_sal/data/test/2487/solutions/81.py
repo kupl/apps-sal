@@ -5,4 +5,3 @@ for u, v in zip(UV[::2], UV[1::2]):
         u, v = v, u
     ans -= v * (N + 1 - u)
 print(ans)
-

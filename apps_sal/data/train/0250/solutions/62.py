@@ -1,16 +1,15 @@
 class Solution(object):
-#     def mincostToHireWorkers(self, quality, wage, k):
-#         from fractions import Fraction
-#         workers = sorted((Fraction(w, q), q, w)
-#                          for q, w in zip(quality, wage))
+    #     def mincostToHireWorkers(self, quality, wage, k):
+    #         from fractions import Fraction
+    #         workers = sorted((Fraction(w, q), q, w)
+    #                          for q, w in zip(quality, wage))
 
-#         maxRatio = workers[-1][0]
-        
-#         quality.sort()
-#         sumq=sum(quality[:k])
-#         return sumq*maxRatio
-        
-    
+    #         maxRatio = workers[-1][0]
+
+    #         quality.sort()
+    #         sumq=sum(quality[:k])
+    #         return sumq*maxRatio
+
     def mincostToHireWorkers(self, quality, wage, K):
         from fractions import Fraction
         workers = sorted((Fraction(w, q), q, w)

@@ -11,10 +11,10 @@ class Solution(object):
         ans = 1
         N = len(A)
         for i in range(1, N):
-            c = cmp(A[i-1], A[i])
+            c = cmp(A[i - 1], A[i])
             if c == 0:
                 a = i
-            elif i == N-1 or c*cmp(A[i],A[i+1]) != -1:
-                ans = max(ans, i-a+1)
+            elif i == N - 1 or c * cmp(A[i], A[i + 1]) != -1:
+                ans = max(ans, i - a + 1)
                 a = i
         return ans

@@ -50,4 +50,5 @@ def solve():
 def __starting_point():
     print(solve())
 
+
 __starting_point()

@@ -12,22 +12,21 @@ tai = -1
 new = list(s)
 
 for i in range(n):
-    if new[i]!='a':
+    if new[i] != 'a':
         hea = i
-        for j in range(i+1,n):
-            if new[j]=='a':
-                tai = j-1
+        for j in range(i + 1, n):
+            if new[j] == 'a':
+                tai = j - 1
                 break
         else:
-            tai = n-1
-        for k in range(hea,tai+1):
-            temp = ord(new[k])-1
+            tai = n - 1
+        for k in range(hea, tai + 1):
+            temp = ord(new[k]) - 1
             new[k] = chr(temp)
         break
 
-if hea ==-1:
-    new[n-1] = 'z'
-    
+if hea == -1:
+    new[n - 1] = 'z'
+
 news = ''.join(new)
 print(news)
-

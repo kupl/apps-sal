@@ -1,11 +1,14 @@
 def sort_array(a):
-    odds = []; evens = []; newArray = []
+    odds = []
+    evens = []
+    newArray = []
     for i in a:
         if i % 2 == 0:
             evens.append(i)
         else:
             odds.append(i)
-    evens.sort(); evens.reverse()
+    evens.sort()
+    evens.reverse()
     odds.sort()
     for i in range(len(a)):
         if a[i] % 2 == 0:

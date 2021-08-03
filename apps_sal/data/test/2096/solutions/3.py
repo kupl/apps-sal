@@ -26,15 +26,15 @@ for i in range(n):
     if i in x:
         lolka += 1
         aaa += 1
-        print(1, end = ' ')
+        print(1, end=' ')
     elif i in y:
-        print(2, end = ' ')
+        print(2, end=' ')
     else:
         if len(x) - lolka + aaa < n // 2:
-            print(1, end = ' ')
+            print(1, end=' ')
             aaa += 1
         else:
-            print(2, end = ' ')
+            print(2, end=' ')
 print()
 
 # B, C = [], []

@@ -6,4 +6,3 @@ elif abs(a - b) <= d and abs(b - c) <= d:
     print("Yes")
 else:
     print("No")
-

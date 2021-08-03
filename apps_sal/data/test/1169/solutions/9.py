@@ -7,4 +7,3 @@ for i in range(n + 1):
         continue
     maxi = min(maxi, i)
 print(mini, n - maxi)
-

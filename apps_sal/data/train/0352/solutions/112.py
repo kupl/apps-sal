@@ -9,10 +9,10 @@ class Solution:
                 else:
                     j += 1
             return i == len(w1)
-        
+
         words.sort(key=len)
         dp = [0] * len(words)
-        
+
         def dfs(i):
             if dp[i] != 0:
                 return dp[i]
@@ -25,6 +25,6 @@ class Solution:
                 if ispre(words[i], words[j]):
                     dp[i] = max(dp[i], 1 + dfs(j))
             return dp[i]
-            
+
         ans = max(dfs(i) for i in range(len(words)))
         return ans

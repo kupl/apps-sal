@@ -14,19 +14,19 @@ class Solution:
         }
         mx = 10**9 + 7
         memo = {}
+
         def dp(n, curr_num):
             if (n, curr_num) in memo:
                 return memo[(n, curr_num)]
-            
+
             if n == N - 1:
                 return 1
             comb = 0
             for neighbor in NEIGHBORS_MAP[curr_num]:
                 comb += dp(n + 1, neighbor)
-            memo[(n, curr_num)] = comb 
+            memo[(n, curr_num)] = comb
             return comb
         res = 0
         for i in range(0, 10):
             res += dp(0, i)
         return res % mx
-

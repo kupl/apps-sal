@@ -9,5 +9,3 @@ for i in range(n - 1, -1, -1):
         a[i] = maxi - a[i] + 1
     maxi = max(maxi, t)
 print(*a)
-    
-

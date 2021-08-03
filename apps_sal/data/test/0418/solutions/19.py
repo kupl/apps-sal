@@ -9,4 +9,3 @@ if not bad:
     print("YES")
 else:
     print("NO")
-

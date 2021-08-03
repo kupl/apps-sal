@@ -1,6 +1,6 @@
 import sys
 import math
-  
+
 n = int(sys.stdin.readline())
 
 k = dict()
@@ -14,7 +14,7 @@ for i in range(n):
     else:
         k[a] = [b] * 2
 
-#print(k)    
+# print(k)
 t = list(k.keys())
 t.sort()
 
@@ -28,9 +28,3 @@ for i in t[1:]:
         res = i
 
 print(res)
-
-    
-
-    
-
-

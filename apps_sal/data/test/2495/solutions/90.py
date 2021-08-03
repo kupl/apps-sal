@@ -30,4 +30,3 @@ ret = min(ret, k)
 
 
 print(ret)
-

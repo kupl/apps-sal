@@ -1,5 +1,7 @@
 FILLED = '■'
 EMPTY = '□'
+
+
 def draw(waves):
     result = ''
     height = max(waves)
@@ -8,6 +10,6 @@ def draw(waves):
     for y, value in enumerate(waves):
         for x in range(value):
             matrix[x][y] = FILLED
-    for row in range(height-1, -1, -1):
+    for row in range(height - 1, -1, -1):
         result = result + ''.join(matrix[row]) + '\n'
     return result.strip()

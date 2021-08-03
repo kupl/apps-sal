@@ -17,7 +17,7 @@ class Solution:
                     free.add((i, j))
         pq = [(0, sx, sy, bx, by)]
         visited = set()
-        direction = [(0,1), (1,0), (-1,0), (0,-1)]
+        direction = [(0, 1), (1, 0), (-1, 0), (0, -1)]
         while pq:
             moves, sx, sy, bx, by = heapq.heappop(pq)
             if bx == tx and by == ty:

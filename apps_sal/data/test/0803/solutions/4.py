@@ -12,4 +12,3 @@ for i in range(len(s)):
         s[i] = 'X'
         diff -= 1
 print(''.join(s))
-

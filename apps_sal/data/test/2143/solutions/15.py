@@ -15,4 +15,3 @@ ans = 0
 for i in list(d.values()):
     ans = max(ans, i)
 print(ans // 2)
-

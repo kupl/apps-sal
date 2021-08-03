@@ -1,4 +1,4 @@
-n,m = map(int, input().split())
+n, m = map(int, input().split())
 cd = 0
 while n > 0:
     cd += 1

@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     la, ra, ta = [int(c) for c in input().split()]
     lb, rb, tb = [int(c) for c in input().split()]
@@ -11,7 +12,7 @@ def main():
 
     gcd = math.gcd(ta, tb)
     lena, lenb = ra - la + 1, rb - lb + 1
-    
+
     d = lb - la
     diff = d - (d // gcd) * gcd
     cur = lena - diff
@@ -24,7 +25,9 @@ def main():
     ans = max(ans, min(lena, cur))
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

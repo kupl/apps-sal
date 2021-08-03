@@ -4,11 +4,11 @@ a = list(map(int, input().split()))
 col = []
 for i in range(n):
     for j in range(a[i]):
-        col.append(i+1)
+        col.append(i + 1)
 cnt = 0
 for i in range(h):
-    p = col[cnt: cnt+w]
-    if i%2 == 0:
+    p = col[cnt: cnt + w]
+    if i % 2 == 0:
         print(*p)
     else:
         p = p[::-1]

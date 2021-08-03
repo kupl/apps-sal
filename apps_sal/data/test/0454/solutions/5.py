@@ -19,6 +19,6 @@ def f(n, k):
                     dp[i][s][j] = (dpi1sj[j] * (j * 2 + 1) + dpi1sj[j + 1] * (j + 1) ** 2) % md
     print((dp[n][k][0]))
 
+
 n, k = list(map(int, input().split()))
 f(n, k)
-

@@ -45,17 +45,18 @@ al = list(map(int, input().split()))
 bl = list(map(int, input().split()))
 
 for _ in range(m):
-    c, d = [int(x)-1 for x in input().split()]
+    c, d = [int(x) - 1 for x in input().split()]
     uf.unite(c, d)
 
-asum = [0]*n
-bsum = [0]*n
+asum = [0] * n
+bsum = [0] * n
 
 for i in range(n):
     root = uf.find(i)
     asum[root] += al[i]
     bsum[root] += bl[i]
 
-if asum == bsum: print('Yes')
-else: print('No')
-
+if asum == bsum:
+    print('Yes')
+else:
+    print('No')

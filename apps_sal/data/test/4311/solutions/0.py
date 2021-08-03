@@ -13,4 +13,3 @@ for i in range(1000000):
         n = n * 3 + 1
     else:
         n >>= 1
-

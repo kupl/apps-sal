@@ -13,6 +13,7 @@ def solve():
             break
     print(u + v)
 
+
 t = int(input())
 for _ in range(t):
     solve()

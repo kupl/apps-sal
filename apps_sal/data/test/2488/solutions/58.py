@@ -1,4 +1,5 @@
-import sys, heapq
+import sys
+import heapq
 input = sys.stdin.readline
 N, D, A = [int(_) for _ in input().split()]
 XH = [[int(_) for _ in input().split()] for _ in range(N)]
@@ -17,4 +18,3 @@ while He:
             ans += diff
             heapq.heappush(He, [x + 4 * D + 1, diff, 1])
 print(ans)
-

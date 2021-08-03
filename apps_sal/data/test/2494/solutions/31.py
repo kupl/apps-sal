@@ -3,7 +3,7 @@
 import itertools
 from scipy.sparse import coo_matrix, lil_matrix
 from scipy.sparse.csgraph import dijkstra, bellman_ford, floyd_warshall
-#sys.setrecursionlimit(10000)
+# sys.setrecursionlimit(10000)
 
 #H, W = [int(i) for i in input().split()]
 N = int(input())
@@ -23,13 +23,13 @@ for _ in range(M):
 
 for i in range(N):
     rows.append(i)
-    cols.append((i+1)%N)
+    cols.append((i + 1) % N)
     weights.append(1)
 
 for i in range(N):
     if i - ((10 * i) % N) == -1:
         weights[i] = 0
-    elif i == N-1 and i - ((10 * i) % N) == 1:
+    elif i == N - 1 and i - ((10 * i) % N) == 1:
         weights[i] = 0
     else:
         rows.append(i)
@@ -38,9 +38,7 @@ for i in range(N):
 
 graph = coo_matrix((weights, (rows, cols)), shape=(N, N)).tocsr()
 #graph = coo_matrix((weights, (cols, rows)), shape=(10, 10)).tocsr()
-#print(graph)
+# print(graph)
 d1 = dijkstra(graph, indices=1, directed=True, unweighted=False)
 
-print((int(d1[0]+1.5)))
-
-
+print((int(d1[0] + 1.5)))

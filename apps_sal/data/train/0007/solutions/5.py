@@ -3,16 +3,17 @@ import heapq as hq
 
 readline = sys.stdin.readline
 read = sys.stdin.read
-ns = lambda: readline().rstrip()
-ni = lambda: int(readline().rstrip())
-nm = lambda: map(int, readline().split())
-nl = lambda: list(map(int, readline().split()))
-prn = lambda x: print(*x, sep='\n')
+def ns(): return readline().rstrip()
+def ni(): return int(readline().rstrip())
+def nm(): return map(int, readline().split())
+def nl(): return list(map(int, readline().split()))
+def prn(x): return print(*x, sep='\n')
+
 
 def solve():
     n = ni()
     vot = [tuple(nm()) for _ in range(n)]
-    vot.sort(key = lambda x: (-x[0], x[1]))
+    vot.sort(key=lambda x: (-x[0], x[1]))
     q = list()
     c = 0
     cost = 0
@@ -30,4 +31,3 @@ def solve():
 T = ni()
 for _ in range(T):
     solve()
-

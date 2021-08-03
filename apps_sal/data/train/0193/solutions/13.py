@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
         count = sorted(list(collections.Counter(arr).values()), reverse=True)
@@ -10,6 +12,3 @@ class Solution:
             if toRemove >= len(arr) / 2:
                 break
         return size
-
-
-

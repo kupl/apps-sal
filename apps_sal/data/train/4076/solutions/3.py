@@ -1,5 +1,6 @@
 import re
 
+
 def get_count(words=''):
     vow_count, con_count = 0, 0
     if type(words) is str:

@@ -37,7 +37,7 @@ for _ in range(q):
 
     bit_s = Bit(150)
     inv_s = 0
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         inv_s += bit_s.sum(s_list[i])
         bit_s.add(s_list[i], 1)
 
@@ -51,4 +51,3 @@ for _ in range(q):
         print('YES')
     else:
         print('NO')
-

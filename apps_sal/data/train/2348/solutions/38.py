@@ -8,15 +8,17 @@ q = int(input())
 info = [list(map(int, input().split())) for i in range(q)]
 
 
-#logテーブルを作成する
-log_table = [[0]*n for i in range(17)]
+# logテーブルを作成する
+log_table = [[0] * n for i in range(17)]
 for i in range(n):
     log_table[0][i] = bisect.bisect_right(x, x[i] + l) - 1
 for j in range(1, 17):
     for i in range(n):
-        log_table[j][i] = log_table[j-1][log_table[j-1][i]]
+        log_table[j][i] = log_table[j - 1][log_table[j - 1][i]]
 
-#二分探索で解を求める
+# 二分探索で解を求める
+
+
 def solve(_from, to, day):
     pos = _from
     i = 0
@@ -35,7 +37,8 @@ def solve(_from, to, day):
     else:
         return False
 
-#クエリに答える
+
+# クエリに答える
 for i in range(q):
     ok = n - 1
     ng = 0

@@ -150,7 +150,7 @@ def main():
 
     ans = 0
 
-    for i in range(1, n//2):
+    for i in range(1, n // 2):
         lsum = 0
         for j in range(1, n):
             down = n - i * j - 1
@@ -170,5 +170,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 def calc(S):
     f = 0
@@ -28,8 +29,8 @@ def calc(S):
     print("".join(A))
     print("".join(B))
 
+
 T = int(input())
 for _ in range(T):
     N = int(input())
     calc(input())
-

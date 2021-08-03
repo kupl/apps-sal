@@ -24,34 +24,32 @@ def main():
         b4 = 0
     else:
         b4 = (n - 1) // 3
-    print("|", end = '')
+    print("|", end='')
     for i in range(1, 12):
         if i <= b1:
-            print('O.', end = '')
+            print('O.', end='')
         else:
-            print('#.', end = '')
+            print('#.', end='')
     print('|D|)')
-    print("|", end = '')
+    print("|", end='')
     for i in range(1, 12):
         if i <= b2:
-            print('O.', end = '')
+            print('O.', end='')
         else:
-            print('#.', end = '')
+            print('#.', end='')
     print('|.|')
     if b3 == 0:
         print("|#.......................|")
     else:
         print("|O.......................|")
-    print("|", end = '')
+    print("|", end='')
     for i in range(1, 12):
         if i <= b4:
-            print('O.', end = '')
+            print('O.', end='')
         else:
-            print('#.', end = '')
+            print('#.', end='')
     print('|.|)')
     print("+------------------------+")
 
 
-
 main()
-

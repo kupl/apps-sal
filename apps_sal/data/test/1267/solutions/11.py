@@ -5,4 +5,3 @@ for i in line:
     if i != 0:
         m[i] = 1
 print(len(m))
-

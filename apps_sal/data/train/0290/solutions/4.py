@@ -11,5 +11,5 @@ class Solution:
                 )
                 return nxt_costs + cost
             return 0
-        
+
         return min_cost()

@@ -9,4 +9,3 @@ def factorial(i: int):
 
 
 print((factorial(n)))
-

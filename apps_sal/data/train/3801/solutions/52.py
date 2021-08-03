@@ -10,6 +10,3 @@ def words_to_marks(s):
     for j in letters:
         word_value += dicti[j] + 1
     return word_value
-
-            
-

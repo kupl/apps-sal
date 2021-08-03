@@ -2,12 +2,12 @@ def solve(time):
     harr = ["midnight", "one", "two", "three", "four", "five", "six", "seven",
             "eight", "nine", "ten", "eleven", "twelve", "one", "two", "three", "four",
             "five", "six", "seven", "eight", "nine", "ten", "eleven", "midnight"]
-    
+
     marr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
-         "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
-         "eighteen", "nineteen", "twenty", "twenty one", "twenty two", "twenty three", "twenty four", "twenty five",
-        "twenty six", "twenty seven", "twenty eight", "twenty nine"]
-    
+            "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
+            "eighteen", "nineteen", "twenty", "twenty one", "twenty two", "twenty three", "twenty four", "twenty five",
+            "twenty six", "twenty seven", "twenty eight", "twenty nine"]
+
     hour = time[:2]
     minute = time[3:]
     if minute == "00":
@@ -27,5 +27,3 @@ def solve(time):
     if int(int(minute) < 30):
         return marr[int(minute)] + " minutes past " + harr[int(hour)]
     return marr[60 - int(minute)] + " minutes to " + harr[1 + int(hour)]
-    
-

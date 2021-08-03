@@ -1,26 +1,31 @@
-import sys
-input=sys.stdin.readline
 from collections import defaultdict
+import sys
+input = sys.stdin.readline
 
-def solve(n,A):
-    d=defaultdict(int)
+
+def solve(n, A):
+    d = defaultdict(int)
     for a in A:
-        d[a]+=1
-    flag=True
+        d[a] += 1
+    flag = True
     for v in d.values():
-        if v%2!=0:
-            flag=False
+        if v % 2 != 0:
+            flag = False
             break
-    return bool(n%2)^flag
+    return bool(n % 2) ^ flag
+
 
 def main():
-    t=int(input())
+    t = int(input())
     for _ in range(t):
-        n=int(input())
-        A=list(map(int,input().split()))
-        judge=solve(n,A)
+        n = int(input())
+        A = list(map(int, input().split()))
+        judge = solve(n, A)
         print('Second' if judge else 'First')
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

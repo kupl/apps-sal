@@ -20,6 +20,3 @@ else:
             buff += str(nums[j] % k + 1) + ' '
             nums[j] //= k
         print(buff)
-
-    
-

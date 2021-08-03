@@ -7,7 +7,7 @@ for i in range(M):
     P, X = list(map(int, input().split()))
     buf = []
     for j in range(len(T)):
-        if P == j+1:
+        if P == j + 1:
             buf.append(X)
         else:
             buf.append(T[j])
@@ -15,4 +15,3 @@ for i in range(M):
 
 for i in res:
     print(i)
-

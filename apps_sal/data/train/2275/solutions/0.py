@@ -10,7 +10,7 @@ for _ in range(t):
     if p == 1:
         print(n % 2)
     else:
-        l.sort(reverse = True)
+        l.sort(reverse=True)
         curr = l[0]
         out = 0
         real = True
@@ -18,7 +18,7 @@ for _ in range(t):
         for v in l:
             if v < curr:
                 diff = curr - v
-                if 10 ** (7/diff) < p and out > 0:
+                if 10 ** (7 / diff) < p and out > 0:
                     real = False
                 out *= pow(p, diff, MOD)
                 if out > 10 ** 7:
@@ -34,4 +34,3 @@ for _ in range(t):
 
         out *= pow(p, curr, MOD)
         print(out % MOD)
-

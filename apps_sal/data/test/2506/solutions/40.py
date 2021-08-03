@@ -25,4 +25,3 @@ while M > 0:
     ans += num * h
 
 print(ans)
-

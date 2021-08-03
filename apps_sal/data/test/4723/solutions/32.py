@@ -5,7 +5,7 @@ length = len(a) - len(b) + 1
 
 ans = []
 for i in range(length):
-    A = list('?'*i+b+'?'*(length-i-1))
+    A = list('?' * i + b + '?' * (length - i - 1))
     flag = True
     for j in range(len(a)):
         if a[j] == '?' or a[j] == A[j]:
@@ -15,7 +15,7 @@ for i in range(length):
         else:
             flag = False
     if flag:
-        ans.append(''.join(A).replace('?','a'))
+        ans.append(''.join(A).replace('?', 'a'))
 
 if ans:
     ans.sort()

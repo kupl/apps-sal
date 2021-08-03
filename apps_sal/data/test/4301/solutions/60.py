@@ -2,9 +2,9 @@ def main():
     N = int(input())
     A = [int(input()) for _ in range(N)]
     sortA = sorted(A)
-    #print(A,sortA)
-    ans = sortA[N-1]
-    ans2 = sortA[N-2]
+    # print(A,sortA)
+    ans = sortA[N - 1]
+    ans2 = sortA[N - 2]
     if ans == ans2:
         flag = 1
     else:
@@ -19,5 +19,5 @@ def main():
             else:
                 print(ans)
 
-main()
 
+main()

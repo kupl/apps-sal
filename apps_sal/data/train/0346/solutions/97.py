@@ -1,7 +1,8 @@
 from collections import Counter
 
+
 class Solution:
-    
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         lookup = Counter()
         lookup[0] = 1

@@ -13,4 +13,3 @@ ans2 = min(max2, n - min3)
 
 ans3 = n - ans2
 print(ans1, ans2, ans3)
-

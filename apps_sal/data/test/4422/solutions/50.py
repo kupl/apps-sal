@@ -1,4 +1,4 @@
-N,K = map(int, input().split())
+N, K = map(int, input().split())
 S = str(input())
 A = ''
 for i in range(N):

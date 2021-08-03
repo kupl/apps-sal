@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 v = ''
 h = ''
-vs = {'U' , 'D'}
+vs = {'U', 'D'}
 hs = {'L', 'R'}
 ans = 1
 for i in s:
@@ -21,6 +21,5 @@ for i in s:
             if h != i:
                 h = i
                 ans += 1
-                v = '' 
+                v = ''
 print(ans)
-

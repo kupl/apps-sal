@@ -9,5 +9,5 @@ class Solution:
                 else:
                     stack.append(l)
             return ''.join(stack)
-                    
+
         return test(S) == test(T)

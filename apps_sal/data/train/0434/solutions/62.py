@@ -11,6 +11,6 @@ class Solution:
                 if nums[l] == 0:
                     zeros -= 1
                 l += 1
-            res = max(res, r-l)
+            res = max(res, r - l)
             r += 1
         return res

@@ -4,19 +4,25 @@ def read_generator():
         for t in tokens:
             yield t
 
+
 reader = read_generator()
+
 
 def readword():
     return next(reader)
 
+
 def readint():
     return int(next(reader))
+
 
 def readfloat():
     return float(next(reader))
 
+
 def readline():
     return input()
+
 
 def solve(a, b, n):
     l = 1
@@ -40,6 +46,7 @@ def possible(a, b, n, t):
         if a[i] > t:
             s += b[i]
     return s <= t
+
 
 tests = readint()
 

@@ -3,6 +3,6 @@ a = int(lst[0])
 b = int(lst[1])
 
 if a <= b:
-   print(a)
+    print(a)
 else:
-   print(a - 1)
+    print(a - 1)

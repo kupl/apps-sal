@@ -11,6 +11,6 @@ for a in A:
     if i == 0:
         D.appendleft(a)
     else:
-        D[i-1] = a
+        D[i - 1] = a
 
 print(len(D))

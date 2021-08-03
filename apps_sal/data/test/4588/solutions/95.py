@@ -1,4 +1,4 @@
-x,y = input().split()
+x, y = input().split()
 if x > y:
     print('>')
 if x < y:

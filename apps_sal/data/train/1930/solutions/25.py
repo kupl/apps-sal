@@ -10,11 +10,10 @@ class Cashier:
         prices = [self.product_to_price[prod] * amt for prod, amt in zip(product, amount)]
         self.cur_customer += 1
         disc = self.discount if self.cur_customer % self.n == 0 else 0
-        
+
         return sum(prices) * (1 - disc)
 
 
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

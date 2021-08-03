@@ -34,4 +34,3 @@ if bool:
         print((ans[i] + 1))
 else:
     print("No")
-

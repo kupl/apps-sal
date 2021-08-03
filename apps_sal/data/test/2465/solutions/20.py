@@ -18,4 +18,3 @@ n = int(input())
 for _ in range(n):
     y = int(input())
     print(ans[y])
-

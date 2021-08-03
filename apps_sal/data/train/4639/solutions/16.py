@@ -1,1 +1,1 @@
-power_of_two = lambda x: bin(x).count('1') == 1
+def power_of_two(x): return bin(x).count('1') == 1

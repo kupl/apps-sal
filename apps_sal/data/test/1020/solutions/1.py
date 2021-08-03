@@ -5,6 +5,5 @@ res = 0
 for i in range(k):
     res += p
     p -= 16
-    
-print(res)
 
+print(res)

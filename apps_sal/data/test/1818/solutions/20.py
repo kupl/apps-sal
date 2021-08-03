@@ -2,6 +2,7 @@ n = int(input())
 
 a = list(map(int, input().split()))
 
+
 def f(x):
     cnt = 0
     while True:
@@ -10,10 +11,11 @@ def f(x):
             break
         elif x % 2 == 1:
             cnt += 1
-            x = (x-1)/2
+            x = (x - 1) / 2
         else:
-            x = x/2
+            x = x / 2
     return cnt
+
 
 my_dict = {}
 
@@ -25,10 +27,9 @@ for i in range(n):
         my_dict[d] = 1
 
 
-
 result = 0
 for key in my_dict.keys():
     t = my_dict[key]
-    result += int(t*(t-1)/2)
+    result += int(t * (t - 1) / 2)
 
 print(result)

@@ -3,10 +3,10 @@ def eval_object(v):
     y = v.get('b')
     op = v.get('operation')
     return {
-        "+": x+y,
-        "-": x-y,
-        "/": x/y,
-        "*": x*y,
-        "%": x%y,
+        "+": x + y,
+        "-": x - y,
+        "/": x / y,
+        "*": x * y,
+        "%": x % y,
         "**": x**y
     }.get(op)

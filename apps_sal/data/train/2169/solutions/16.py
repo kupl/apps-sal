@@ -22,4 +22,3 @@ for i in range(n):
     dict[exped] = dict[exped] + 1
 
 print(counter)
-

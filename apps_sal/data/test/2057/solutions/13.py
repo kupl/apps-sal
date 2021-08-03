@@ -10,4 +10,3 @@ for time, curr in enumerate(notes, start=1):
         greatest_cave += 1
         visits[time] = greatest_cave
 print(greatest_cave)
-

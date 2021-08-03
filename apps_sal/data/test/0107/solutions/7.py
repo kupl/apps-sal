@@ -1,10 +1,10 @@
 # Main maut ko takiya, aur kafan ko chaadar banakar audhta hoon!
 
-s=input()
+s = input()
 
-d=s.find('1')
+d = s.find('1')
 
-if d!=-1 and s[d+1:].count('0')>=6:
-	print("yes")
+if d != -1 and s[d + 1:].count('0') >= 6:
+    print("yes")
 else:
-	print("no")
+    print("no")

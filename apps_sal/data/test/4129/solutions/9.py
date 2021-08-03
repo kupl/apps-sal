@@ -2,13 +2,14 @@ import sys
 
 BigNum = 10 ** 10
 
+
 class DSU:
     def __init__(self, count, stateInitializer, stateMerger):
         self.vs = list(range(count))
         self.states = [stateInitializer(i) for i in range(count)]
         self.sizes = [1] * count
         self.merger = stateMerger
-    
+
     def get(self, i):
         if self.vs[i] == i:
             return i
@@ -19,11 +20,11 @@ class DSU:
 
     def getState(self, i):
         return self.states[self.get(i)]
-    
+
     def setState(self, i, newState):
         i = self.get(i)
         self.states[i] = newState
-    
+
     def unite(self, a, b):
         a = self.get(a)
         b = self.get(b)
@@ -41,17 +42,18 @@ class DSU:
             self.sizes[b] += self.sizes[a]
             self.states[b] = mergedState
             return b
-    
+
     def flatten(self):
         for i in range(len(self.vs)):
             self.get(i)
-    
+
     def setNames(self):
         self.flatten()
         return set(self.vs)
 
+
 n, m, s = list(map(int, input().split(' ')))
-ps = [[] for _ in range(n+1)]
+ps = [[] for _ in range(n + 1)]
 edges = []
 for i in range(m):
     u, v = list(map(int, input().split(' ')))
@@ -59,10 +61,11 @@ for i in range(m):
     edges += [(u, v)]
 
 dsu = DSU(
-    n+1,
+    n + 1,
     lambda i: (0, BigNum),
     lambda a, b: (min(a[0], b[0]), min(a[1], b[1]))
 )
+
 
 def dfs(v, depth):
     vSt = dsu.getState(v)
@@ -104,22 +107,21 @@ def dfs(v, depth):
 
 sys.setrecursionlimit(12000)
 
-for i in range(1, n+1):
+for i in range(1, n + 1):
     st = dsu.getState(i)
     if st[0] == 0:
         dfs(i, 0)
 
 components = dsu.setNames().difference({0})
-#print(dsu.vs)
-#print(components)
+# print(dsu.vs)
+# print(components)
 
-components = components.difference({ dsu.get(s) })
+components = components.difference({dsu.get(s)})
 for (u, v) in edges:
     u, v = dsu.get(u), dsu.get(v)
     if u == v:
         continue
-    components = components.difference({ v })
+    components = components.difference({v})
 
-#print(components)
+# print(components)
 print(len(components))
-

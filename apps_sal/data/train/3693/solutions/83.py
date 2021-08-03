@@ -1,5 +1,5 @@
-def make_negative( number ):
-    if number > 0 :
+def make_negative(number):
+    if number > 0:
         pos = number * -1
         return pos
     elif number < 0:

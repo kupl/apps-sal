@@ -13,4 +13,3 @@ for e in array[::-1]:
 
 print(len(new))
 print(' '.join(list(map(str, new[::-1]))))
-

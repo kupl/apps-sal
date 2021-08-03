@@ -14,4 +14,4 @@ for i in range(len(S)):
     if int(S[i]) != B[i]:
         B_cost += 1
 
-print(min(A_cost,B_cost))
+print(min(A_cost, B_cost))

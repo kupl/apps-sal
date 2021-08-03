@@ -9,6 +9,7 @@ def dfs(v):
             ans.append((a[v][1], a[i][1]))
             dfs(i)
 
+
 n = int(input())
 a = list(map(int, input().split()))
 a = [(a[i], i + 1) for i in range(n)]

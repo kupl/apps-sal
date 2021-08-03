@@ -1,9 +1,11 @@
+from bisect import bisect_left, bisect_right
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7 # 998244353
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
-input = lambda:sys.stdin.readline().rstrip()
-from bisect import bisect_left, bisect_right
+def input(): return sys.stdin.readline().rstrip()
+
+
 def resolve():
     n, m = map(int, input().split())
     AB = [list(map(int, input().split())) for _ in range(n)]
@@ -22,6 +24,7 @@ def resolve():
 
     ans = []
     used = [False] * (n + 1)
+
     def dfs(v):
         used[v] = True
         res = AB[v][1]
@@ -44,4 +47,6 @@ def resolve():
     print(len(ans))
     if ans:
         print(*sorted(ans))
+
+
 resolve()

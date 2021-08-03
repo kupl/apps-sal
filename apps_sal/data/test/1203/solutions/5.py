@@ -1,8 +1,7 @@
 H, L = [int(i) for i in input().split()]
 
-num = L*L - H*H
+num = L * L - H * H
 
-den = 2*H
+den = 2 * H
 
-print(num/den)
-
+print(num / den)

@@ -13,4 +13,3 @@ class Solution:
             if len(times) >= 3 and times[-3] + 60 >= times[-1]:
                 alerts.add(name)
         return sorted(alerts)
-

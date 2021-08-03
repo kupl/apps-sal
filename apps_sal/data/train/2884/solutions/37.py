@@ -1,8 +1,8 @@
 def stringify(node):
     x = []
-    #if Node is None:
+    # if Node is None:
     #    return 'None'
-    
+
     while True:
         try:
             x.append(str(node.data))

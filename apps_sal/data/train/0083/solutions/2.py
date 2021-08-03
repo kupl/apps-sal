@@ -7,4 +7,3 @@ for i in range(t):
         print((y - x) // (a + b))
     else:
         print(-1)
-

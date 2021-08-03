@@ -4,6 +4,8 @@ def f(s, k):
             return False
     else:
         return True
+
+
 s = input()
 k = int(input())
 if len(s) % k != 0:

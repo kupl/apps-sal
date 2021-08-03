@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, t = rd()
 a = list(rd())
 b = list(rd())
@@ -16,4 +18,3 @@ if val:
         tot -= x[i][1]
         val -= (t - x[i][0]) * x[i][1]
 print(tot)
-

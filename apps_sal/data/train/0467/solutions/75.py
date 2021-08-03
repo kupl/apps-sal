@@ -5,7 +5,7 @@ class Solution:
         for k in range(2, len(pSieve)):
             if pSieve[k] == 1:
                 continue
-            pSieve[k + k::k] = [1]*((len(pSieve) - 1)//k - 1)
+            pSieve[k + k::k] = [1] * ((len(pSieve) - 1) // k - 1)
         for num in nums:
             if num == 1 or pSieve[num] == 0 or sqrt(num) == int(sqrt(num)):
                 continue

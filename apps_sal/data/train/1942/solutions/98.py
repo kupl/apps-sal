@@ -2,7 +2,7 @@ class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         n = len(favoriteCompanies)
         favoriteCompanies = [set(elem) for elem in favoriteCompanies]
-        
+
         ans = []
         for i in range(n):
             not_subset = True

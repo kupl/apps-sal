@@ -1,4 +1,4 @@
-density = {'H':4, 'W':3, 'A':2, 'O':1}
+density = {'H': 4, 'W': 3, 'A': 2, 'O': 1}
 
 
 def separate_liquids(glass):
@@ -7,4 +7,3 @@ def separate_liquids(glass):
         for i in range(len(row)):
             row[i] = glass_.pop(0)
     return glass
-

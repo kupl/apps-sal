@@ -1,7 +1,9 @@
 import math
 
+
 def is_prime(n):
-    if n == 1: return False
+    if n == 1:
+        return False
 
     for k in range(2, int(math.sqrt(n)) + 1):
         if n % k == 0:
@@ -9,10 +11,10 @@ def is_prime(n):
 
     return True
 
+
 x = int(input())
 
 for i in range(x, 10**5 + 4):
     if is_prime(i) == True:
         print(i)
         return
-

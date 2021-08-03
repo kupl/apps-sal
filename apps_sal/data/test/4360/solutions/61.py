@@ -9,4 +9,4 @@ sumprod = 0
 for A in a:
     sumprod += prod // A
 
-print(prod/sumprod)
+print(prod / sumprod)

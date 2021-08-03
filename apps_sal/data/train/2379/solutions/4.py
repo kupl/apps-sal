@@ -4,6 +4,7 @@ def solve():
     z, o = [], []
     c = 0
     ans = []
+
     def add(x):
         nonlocal z, o, c, ans
         u, v = z, o
@@ -21,6 +22,7 @@ def solve():
         add(int(i))
     print(c)
     print(*ans)
+
 
 t = int(input())
 for _ in range(t):

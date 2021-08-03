@@ -6,12 +6,11 @@ for zz in range(zzz):
     b = input()
     c = input()
     ha = True
-    for i in range (len(a)):
+    for i in range(len(a)):
         if not b[i] == c[i] and not a[i] == c[i]:
-            ha= False
+            ha = False
             break
     if not ha:
         print('NO')
     else:
         print('YES')
-

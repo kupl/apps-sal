@@ -9,4 +9,3 @@ for i in range(n):
     for i in range(left, c):
         o += v ** 2
     print(o)
-

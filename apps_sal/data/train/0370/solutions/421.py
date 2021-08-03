@@ -3,12 +3,12 @@ class UnionFind:
         self.parent = list(range(N))
         self.size = [1] * N
         self.Max = 1
-    
+
     def find(self, e):
         if self.parent[e] != e:
             self.parent[e] = self.find(self.parent[e])
         return self.parent[e]
-    
+
     def union(self, x, y):
         headx = self.find(x)
         heady = self.find(y)
@@ -41,7 +41,7 @@ class Solution:
             if n > 2:
                 res.append(int(n))
             return res
-        
+
         # use a dictionary to store all indexes of each factor
         uf = UnionFind(len(A))
         d = {}
@@ -52,11 +52,10 @@ class Solution:
                     d[factor] = [i]
                 else:
                     d[factor].append(i)
-                    
+
         # compute unions
         for factor in d:
             for j in range(len(d[factor]) - 1):
-                uf.union(d[factor][j], d[factor][j+1])
+                uf.union(d[factor][j], d[factor][j + 1])
         # return size of largest union
         return uf.Max
-

@@ -1,6 +1,6 @@
 b = input()
 
-if b =='A':
+if b == 'A':
     print('T')
 
 elif b == 'T':
@@ -11,4 +11,3 @@ elif b == 'C':
 
 elif b == 'G':
     print('C')
-

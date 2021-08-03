@@ -47,4 +47,5 @@ def satisfy_single(x, y, a, b):
 def __starting_point():
     main()
 
+
 __starting_point()

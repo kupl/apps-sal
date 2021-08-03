@@ -6,5 +6,5 @@ def main():
         f.append(f[-1] - f[-2])
     print(f[n % 6 - 1] % 1000000007)
 
-main()
 
+main()

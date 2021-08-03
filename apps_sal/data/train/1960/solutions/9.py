@@ -11,6 +11,5 @@ class Solution:
             results.append(res)
             temp = original.pop(res)
             original = [temp] + original
-        
-        return results
 
+        return results

@@ -4,4 +4,3 @@ def duplicate_count(text):
         if text.lower().count(c) > 1:
             count += 1
     return count
-

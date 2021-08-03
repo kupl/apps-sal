@@ -4,15 +4,15 @@ import time
 
 
 class UnionFind:
-    
+
     def __init__(self, n: int):
         self.repr = list(range(n))
-    
+
     def find(self, num: int) -> int:
         if num != self.repr[num]:
             self.repr[num] = self.find(self.repr[num])
         return self.repr[num]
-    
+
     def union(self, num1: int, num2: int) -> bool:
         r1 = self.find(num1)
         r2 = self.find(num2)
@@ -23,7 +23,7 @@ class UnionFind:
 
 
 class Solution:
-    
+
     def decompose(self, n: int) -> List[int]:
         ans = []
         max_prime = int(math.sqrt(n))
@@ -41,7 +41,7 @@ class Solution:
         if n != 1:
             ans.append(n)
         return ans
-    
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         M = max(A)

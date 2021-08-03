@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import sys
+
+
 def __starting_point():
     n = int(input())
     a = {}
@@ -30,5 +32,6 @@ def __starting_point():
             num[x] += 1
             b.append(col[x])
     print(" ".join(map(str, b)))
+
 
 __starting_point()

@@ -1,5 +1,5 @@
 def numericals(line):
-    
+
     counts = dict.fromkeys(line, 0)
     output = []
     for char in line:

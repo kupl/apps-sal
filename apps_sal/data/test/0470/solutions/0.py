@@ -10,4 +10,3 @@ for i in range(5):
     result = min(result, sum(cards) - cnt * cards[i])
 
 print(result)
-

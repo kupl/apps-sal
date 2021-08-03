@@ -29,5 +29,5 @@ def f(s):
         return 'NIE'
     return 'TAK'
 
-print(f(string))
 
+print(f(string))

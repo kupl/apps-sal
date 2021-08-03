@@ -1,6 +1,7 @@
 import sys
 from collections import Counter
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c for j in range(b)] for i in range(a)]
 def list3d(a, b, c, d): return [[[d for k in range(c)] for j in range(b)] for i in range(a)]
@@ -13,6 +14,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10**9)
 INF = 10**19
 MOD = 10**9 + 7
@@ -34,4 +37,3 @@ for _ in range(INT()):
         print('First')
     else:
         print('Second')
-

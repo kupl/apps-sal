@@ -1,4 +1,5 @@
-import sys, collections
+import sys
+import collections
 
 stdin = sys.stdin
 n, m = map(int, stdin.readline().split())
@@ -34,7 +35,7 @@ def unite(x, y):
 for _ in range(m):
     x, y, z = map(int, stdin.readline().split())
     unite(x - 1, y - 1)
-    
+
 ans = set()
 for i in range(n):
     ans.add(find(i, par))

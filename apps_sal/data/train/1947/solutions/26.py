@@ -11,5 +11,5 @@ class Solution:
             counter = collections.Counter(word)
             if all(l in counter and counter[l] >= count for l, count in b_counter.items()):
                 answer.append(word)
-        
+
         return answer

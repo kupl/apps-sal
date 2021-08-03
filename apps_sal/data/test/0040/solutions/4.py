@@ -2,7 +2,7 @@ n = int(input())
 a = []
 a1 = []
 for i in range(n):
-    f,s = list(map(int, input().split()))
+    f, s = list(map(int, input().split()))
     if f != s:
         print("rated")
         return
@@ -13,5 +13,3 @@ if a[::-1] == a1:
     print("maybe")
     return
 print("unrated")
-
-

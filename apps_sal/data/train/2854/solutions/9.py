@@ -9,5 +9,5 @@ def sort_reindeer(reindeer_names):
     for item in sorted_list:
         name = item[0] + ' ' + item[1]
         result.append(name)
-    
+
     return result

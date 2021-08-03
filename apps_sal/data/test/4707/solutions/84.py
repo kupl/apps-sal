@@ -4,8 +4,8 @@ def iroha():
 
     for i in num:
         if i == '1':
-            count+=1
-    
+            count += 1
+
     print(count)
 
 

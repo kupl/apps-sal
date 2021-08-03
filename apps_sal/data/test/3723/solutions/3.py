@@ -15,4 +15,3 @@ for x in s:
         f[i] += 1
 
 print(max(1, max(f)))
-

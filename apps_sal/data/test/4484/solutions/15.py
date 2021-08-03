@@ -1,5 +1,5 @@
 N, M = [int(x) for x in input().split()]
-MOD = 10**9+7
+MOD = 10**9 + 7
 
 if max(N, M) - min(N, M) > 1:
     print((0))
@@ -8,7 +8,7 @@ if max(N, M) - min(N, M) > 1:
 
 def floor(n):
     result = n
-    for i in range(n-1, 0, -1):
+    for i in range(n - 1, 0, -1):
         result *= i
         result %= MOD
 
@@ -24,4 +24,3 @@ else:
     result = (r * t) % MOD
 
 print(result)
-

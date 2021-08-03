@@ -7,4 +7,3 @@ def evil(n):
         return "It's Evil!"
     else:
         return "It's Odious!"
-

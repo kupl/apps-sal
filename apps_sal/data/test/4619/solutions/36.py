@@ -1,6 +1,7 @@
 
 url = "https://atcoder.jp//contests/abc047/tasks/abc047_b"
 
+
 def main():
     w, h, n = list(map(int, input().split()))
     xya = [list(map(int, input().split())) for _ in range(n)]
@@ -23,8 +24,8 @@ def main():
         print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

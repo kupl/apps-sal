@@ -3,6 +3,6 @@ class Solution:
         ans = set()
         cur = set()
         for x in A:
-            cur = {y|x for y in cur} | set([x])
+            cur = {y | x for y in cur} | set([x])
             ans |= cur
         return len(ans)

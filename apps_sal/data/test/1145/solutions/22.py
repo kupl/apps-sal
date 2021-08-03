@@ -1,4 +1,4 @@
-x=int(input())
+x = int(input())
 y = list(map(int, input().split(' ')))
 y.sort()
 c = y[0]

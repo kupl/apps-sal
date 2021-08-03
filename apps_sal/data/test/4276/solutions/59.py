@@ -13,4 +13,3 @@ if temp_c == 10**10:
 else:
     ans = temp_c
 print(ans)
-

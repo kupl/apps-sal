@@ -7,4 +7,3 @@ for x in range(s + 1):
         print(x, m - x)
     else:
         print(n - x, x)
-

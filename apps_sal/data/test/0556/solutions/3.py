@@ -22,4 +22,3 @@ while x <= r:
     x *= k
     i += 1
 print(*(a if a else [-1]))
-

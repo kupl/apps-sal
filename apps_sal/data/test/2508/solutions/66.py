@@ -1,6 +1,7 @@
 from collections import deque
 import sys
 
+
 def bfs(M, sy, sx, gy, gx):
     queue = deque([[sy, sx]])
     M[sy][sx] = 0
@@ -34,10 +35,9 @@ x1, y1, x2, y2 = x1 - 1, y1 - 1, x2 - 1, y2 - 1
 m = []
 for i in range(H):
     m.append(list(map(str, sys.stdin.readline().strip())))
-    
+
 M = [[-1] * W for i in range(H)]
 
 bfs(M, x1, y1, x2, y2)
 
 print((M[x2][y2]))
-

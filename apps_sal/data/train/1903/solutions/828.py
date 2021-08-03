@@ -2,7 +2,7 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         from collections import deque
         n = len(points)
-        
+
         edges = []
         for i in range(n - 1):
             for j in range(i + 1, n):
@@ -11,14 +11,14 @@ class Solution:
                 w = abs(p - u) + abs(q - v)
                 edges.append((w, i, j))
 
-        path = {u:u for u in range(n)}
-        rank = {u:0 for u in range(n)}
-        
+        path = {u: u for u in range(n)}
+        rank = {u: 0 for u in range(n)}
+
         def find(u):
             if u != path[u]:
                 path[u] = find(path[u])
             return path[u]
-        
+
         def union(u, v):
             i, j = find(u), find(v)
             if rank[i] > rank[j]:
@@ -35,4 +35,3 @@ class Solution:
                 costs += w
                 union(u, v)
         return costs
-

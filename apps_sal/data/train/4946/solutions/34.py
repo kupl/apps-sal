@@ -4,5 +4,5 @@ def house_numbers_sum(inp):
         if i == 0:
             break
         res.append(i)
-     
+
     return sum(res)

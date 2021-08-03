@@ -19,4 +19,3 @@ for i in range(T - 1, -1, -1):
         a = list(set(a))
 
 print(len(a))
-

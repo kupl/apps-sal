@@ -8,4 +8,3 @@ if a >= x:
             print("YES")
             return
 print("NO")
-

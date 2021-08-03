@@ -2,7 +2,8 @@ class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
         def backtracking(idx):
             nonlocal memo, max_val
-            if idx in memo: return memo[idx]
+            if idx in memo:
+                return memo[idx]
             lstack = []
             rstack = []
             lbarrier = False
@@ -33,5 +34,5 @@ class Solution:
         max_val = 0
         for i in range(len(arr)):
             backtracking(i)
-            
+
         return max_val

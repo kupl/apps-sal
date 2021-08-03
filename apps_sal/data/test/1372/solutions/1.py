@@ -5,6 +5,6 @@ magic = [list(map(int, input().split())) for _ in range(N)]
 dp = [0 for _ in range(10**5)]
 
 for i in range(H):
-    dp[i] = min(dp[i-a]+b for a, b in magic)
+    dp[i] = min(dp[i - a] + b for a, b in magic)
 
-print(dp[H-1])
+print(dp[H - 1])

@@ -5,15 +5,16 @@ class Solution:
         self.rank = [1 for _ in range(n + 1)]
         self.result = 0
         self.groups = set()
+
         def find_parent(a):
             if a != self.parent[a]:
                 self.parent[a] = find_parent(self.parent[a])
             return self.parent[a]
-        
+
         def union(a, b, check=False):
             parent_a = find_parent(a)
             parent_b = find_parent(b)
-            
+
             if parent_a == parent_b:
                 if self.rank[parent_a] == m:
                     self.groups.add(parent_a)
@@ -22,26 +23,25 @@ class Solution:
                 parent_a, parent_b = parent_b, parent_a
             self.parent[parent_b] = parent_a
             self.rank[parent_a] += self.rank[parent_b]
-            
+
             if parent_a in self.groups:
                 self.groups.remove(parent_a)
             if parent_b in self.groups:
                 self.groups.remove(parent_b)
-            
+
             if check:
                 if self.rank[parent_a] == m:
                     self.groups.add(parent_a)
-                
+
         self.binary = [0 for _ in range(n + 2)]
         result = -1
         for idx in range(n):
             num = arr[idx]
-            if self.binary[num-1] == 1 and self.binary[num + 1] == 1:
-                union(num-1, num)
+            if self.binary[num - 1] == 1 and self.binary[num + 1] == 1:
+                union(num - 1, num)
                 union(num, num + 1, True)
                 #print(self.rank[num-1], self.rank[num], self.rank[num + 1])
-                
-                
+
             elif self.binary[num - 1] == 1:
                 union(num, num - 1, True)
             elif self.binary[num + 1] == 1:
@@ -52,5 +52,5 @@ class Solution:
                 result = idx + 1
             self.binary[num] = 1
             #print(self.groups, self.binary, self.parent)
-            
-        return result 
+
+        return result

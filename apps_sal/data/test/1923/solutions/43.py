@@ -1,4 +1,3 @@
-n=int(input())
-l=sorted(list(map(int,input().split())))
+n = int(input())
+l = sorted(list(map(int, input().split())))
 print((sum(l[::2])))
-

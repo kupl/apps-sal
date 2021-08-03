@@ -24,4 +24,3 @@ else:
     w = [str(item) for item in s[idx:]]
     assert(len(u) + len(v) + len(w) == n)
     print(''.join(u) + ''.join(v) + ''.join(w))
-

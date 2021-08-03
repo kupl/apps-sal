@@ -18,4 +18,3 @@ while i < k and i < n:
         k += 1
     i += 1
 print(''.join(map(str, u)))
-

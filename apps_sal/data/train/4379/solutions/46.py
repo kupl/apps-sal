@@ -1,2 +1,2 @@
-def combine_names(F,L):
-    return F +" " + L
+def combine_names(F, L):
+    return F + " " + L

@@ -5,14 +5,14 @@ class Solution:
         best = 0
         for i in points:
             if i[0] not in table:
-                table[i[0]] = [[i[1]],[]]
+                table[i[0]] = [[i[1]], []]
             else:
                 if i[1] not in table[i[0]][0]:
                     for j in table[i[0]][0]:
                         if j < i[1]:
                             table[i[0]][1].append((j, i[1]))
                         else:
-                            table[i[0]][1].append((i[1],j))
+                            table[i[0]][1].append((i[1], j))
                     table[i[0]][0].append(i[1])
                     if len(table[i[0]][0]) == 2:
                         mark.append(i[0])

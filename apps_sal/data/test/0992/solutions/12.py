@@ -1,6 +1,6 @@
 import numpy as np
 
-N,S = list(map(int, input().split()))
+N, S = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 MOD = 998244353
@@ -15,4 +15,3 @@ for i in A:
     dp = ep % MOD
 
 print((dp[S]))
-

@@ -1,5 +1,5 @@
 def two_highest(arg1):
-    if len(arg1) <=1:
+    if len(arg1) <= 1:
         return arg1
     h1 = arg1[0]
     h2 = arg1[1]
@@ -14,8 +14,3 @@ def two_highest(arg1):
     if h1 != h2:
         return [h1, h2]
     return [h1]
-        
-
-        
-    
-

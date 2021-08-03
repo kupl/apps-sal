@@ -1,6 +1,6 @@
 class Solution:
     splits = set()
-    
+
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
         result = 0
@@ -13,4 +13,3 @@ class Solution:
                 self.splits.remove(current)
 
         return result
-

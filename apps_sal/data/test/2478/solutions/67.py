@@ -10,12 +10,9 @@ for i in s:
             c -= 1
 d = 0
 for i in s[::-1]:
-    if i ==")":
+    if i == ")":
         d += 1
     else:
         if d > 0:
             d -= 1
-print(("("*d+s+")"*c))
-
-
-
+print(("(" * d + s + ")" * c))

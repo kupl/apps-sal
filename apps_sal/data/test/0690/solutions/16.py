@@ -15,4 +15,3 @@ x = list(input())
 x.reverse()
 for i in x:
     print(answers[int(i)])
-

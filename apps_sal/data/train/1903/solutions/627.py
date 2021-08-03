@@ -1,11 +1,13 @@
 class UnionFind:
     def __init__(self, n):
-        self.sets = {i : i for i in range(n)}
+        self.sets = {i: i for i in range(n)}
         self.n_sets = n
+
     def find(self, s):
         if self.sets[s] != s:
             self.sets[s] = self.find(self.sets[s])
         return self.sets[s]
+
     def union(self, s1, s2):
         a, b = self.find(s1), self.find(s2)
         if a == b:
@@ -13,7 +15,8 @@ class UnionFind:
         self.sets[a] = b
         self.n_sets -= 1
         return True
-    
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []

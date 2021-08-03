@@ -3,5 +3,5 @@ def problem(a):
     if (isinstance(value, str)):
         return "Error"
     else:
-        value = value * 50 +6
+        value = value * 50 + 6
         return value

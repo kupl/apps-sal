@@ -1,4 +1,7 @@
 # 区間[i, j)
+import sys
+
+
 def checkAtomic(i, j):
     length = (j - i) // 2
     for k in range(i, (i + j) // 2):
@@ -15,10 +18,11 @@ def checkAtomic(i, j):
 
     return True
 
-import sys
+
 N = int(input())
 floors = [[int(x) for x in input().split()] for _ in range(N)]
-ON = 0;  OFF = 1;
+ON = 0
+OFF = 1
 INF = float('inf')
 floors.sort()
 
@@ -38,7 +42,7 @@ for on, off in floors:
         if A[on] is not None:
             print('No')
             return
-        A[on] = INF # 降りた場所はわからない
+        A[on] = INF  # 降りた場所はわからない
         continue
     elif on >= off:
         print('No')
@@ -49,7 +53,6 @@ for on, off in floors:
     else:
         A[on] = off
         A[off] = on
-
 
 
 dp = [[0 for _ in range(2 * N + 2)] for _ in range(2 * N + 1)]

@@ -1,6 +1,5 @@
-n=input()
+n = input()
 if n.count('9'):
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
-
+    print('No')

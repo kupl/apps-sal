@@ -27,7 +27,7 @@ for c in range(n, 0, -1):
             b.append((q[0], c))
 
             twos.append((q[0], c))
-            
+
         else:
             poss = False
 
@@ -38,18 +38,17 @@ for c in range(n, 0, -1):
             b.append((row_num, c))
             b.append((row_num, q[1]))
             threes.append((row_num, c))
-            
+
             row_num -= 1
-            
+
         elif len(twos) > 0:
             q = twos.pop()
 
             b.append((row_num, c))
             b.append((row_num, q[1]))
             threes.append((row_num, c))
-            
-            row_num -= 1
 
+            row_num -= 1
 
         elif len(ones) > 0:
             q = ones.pop()
@@ -57,7 +56,7 @@ for c in range(n, 0, -1):
             b.append((row_num, c))
             b.append((row_num, q[1]))
             threes.append((row_num, c))
-            
+
             row_num -= 1
 
         else:
@@ -69,5 +68,3 @@ if poss:
         print(item[0], item[1])
 else:
     print(-1)
-    
-

@@ -12,10 +12,8 @@ class Solution:
                 else:
                     mask = 1 << j
                 if open_chars ^ mask in pos:
-                    max_len = max(max_len, i+1 - pos[open_chars ^ mask])
-            
-            if open_chars not in pos:
-                pos[open_chars] = i+1
-        return max_len
-                
+                    max_len = max(max_len, i + 1 - pos[open_chars ^ mask])
 
+            if open_chars not in pos:
+                pos[open_chars] = i + 1
+        return max_len

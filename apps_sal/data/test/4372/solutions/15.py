@@ -1,19 +1,18 @@
+from math import gcd
 import sys
 input = sys.stdin.readline
-n=int(input())
-A=list(map(int,input().split()))
+n = int(input())
+A = list(map(int, input().split()))
 
-x=max(A)
+x = max(A)
 
-from math import gcd
 
-z=0
-SUM=0
+z = 0
+SUM = 0
 for a in A:
-    z=gcd(z,x-a)
-    SUM+=x-a
+    z = gcd(z, x - a)
+    SUM += x - a
 
-y=SUM//z
+y = SUM // z
 
-print(y,z)
-
+print(y, z)

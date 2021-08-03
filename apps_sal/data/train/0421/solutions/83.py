@@ -12,17 +12,19 @@ case 2:
     j = new_i+1 why? allelemnts are smaller than original i 
 
 '''
+
+
 class Solution:
     def lastSubstring(self, s: str) -> str:
-        i, j, k = 0,1,0
-        while j+k < len(s):
-            if s[i+k] > s[j+k]:
-                j = j+k+1
+        i, j, k = 0, 1, 0
+        while j + k < len(s):
+            if s[i + k] > s[j + k]:
+                j = j + k + 1
                 k = 0
-            elif s[i+k] == s[j+k]:
+            elif s[i + k] == s[j + k]:
                 k += 1
             else:
                 i = max(i + k + 1, j)
-                j = i+1
+                j = i + 1
                 k = 0
         return s[i:]

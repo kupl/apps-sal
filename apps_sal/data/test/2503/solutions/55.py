@@ -53,4 +53,5 @@ def __starting_point():
 
     print((board.max()))
 
+
 __starting_point()

@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 dic = [[] for i in range(n)]
-    
+
 for i, item in enumerate(a, start=1):
     dic[item].append(i)
 
@@ -28,4 +28,3 @@ if len(route) == n:
     print(' '.join(str(i) for i in route))
 else:
     print("Impossible")
-

@@ -1,9 +1,8 @@
 n, k = [int(x) for x in input().split()]
 
-if k > n*n:
+if k > n * n:
     print('-1')
 else:
-
 
     res = [[0 for _ in range(n)] for _ in range(n)]
 
@@ -21,4 +20,3 @@ else:
                     k -= 2
     for i in range(n):
         print(' '.join(str(res[i][j]) for j in range(n)))
-

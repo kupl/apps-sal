@@ -1,5 +1,5 @@
 n = int(input())
-dp = [[[0] * (n+1) for i in range(n + 1)] for j in range(2)]
+dp = [[[0] * (n + 1) for i in range(n + 1)] for j in range(2)]
 
 dp[0][0][0] = 0
 dp[1][0][0] = 0
@@ -24,7 +24,6 @@ for i in range(n + 1):
             tmp2 += dp[0][i][j - 1]
         tmp2 %= mod
 
-
         #
         # dp[i][j][1] = max(
         #     (((dp[i - 1][j][0]) + (dp[i][j - 1][1] if i <= j - 1 else 0)) if i - 1 <= j and i > 0 else 0) + 1,
@@ -40,4 +39,3 @@ for i in range(n + 1):
 print(max(dp[0][-1][-1], dp[1][-1][-1]) % mod)
 
 # print(dp)
-

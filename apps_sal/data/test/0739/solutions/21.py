@@ -9,7 +9,7 @@ def mul_square_matrix(a, b, mod):
     return ret
 
 
-def power_square_matrix(mat:list, k, mod):
+def power_square_matrix(mat: list, k, mod):
     n = len(mat)
     ret = [[0] * n for _ in range(n)]
     for i in range(n):
@@ -20,6 +20,7 @@ def power_square_matrix(mat:list, k, mod):
         mat = mul_square_matrix(mat, mat, mod)
         k //= 2
     return ret
+
 
 l, a, b, m = map(int, input().split())
 s_foot = a + b * (l - 1)
@@ -35,7 +36,7 @@ for i in range(1, digit_n + 1):
     count_digit_n[i] = n + 1
 
 for i in range(digit_n, 0, -1):
-    count_digit_n[i]  -= count_digit_n[i - 1]
+    count_digit_n[i] -= count_digit_n[i - 1]
 
 d = 1
 x = [[0], [a], [1]]

@@ -27,4 +27,3 @@ else:
     counter += (h + a[0] - 1) // a[0]
 
 print(counter)
-

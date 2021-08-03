@@ -3,20 +3,21 @@ class TrieNode:
         self.children = {}
         self.char = None
         self.isEnd = False
-    
+
     def contains(self, c):
         return c in self.children
-    
+
     def set(self, c):
         self.children[c] = TrieNode()
-        
+
     def getChild(self, c):
         return self.children[c]
+
 
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-        
+
     def insert(self, word):
         if not word:
             return
@@ -26,26 +27,27 @@ class Trie:
             if not c in it.children:
                 it.children[c] = TrieNode()
                 it.children[c].char = c
-                
+
             it = it.children[c]
-            
+
         it.isEnd = True
-        #print(\"Inserted \", word, it.char)
-                
+        # print(\"Inserted \", word, it.char)
+
     def hasAnyPrefix(self, letters):
-        #print(\"For \", letters)
+        # print(\"For \", letters)
         it = self.root
         for c in letters:
-            #print(\"Looking at c\", c, it.isEnd)
+            # print(\"Looking at c\", c, it.isEnd)
             if it.isEnd:
                 return True
             if not it.contains(c):
-                #print(\"Not found \", c)
+                # print(\"Not found \", c)
                 return False
 
             it = it.getChild(c)
-        
+
         return it.isEnd
+
 
 class StreamChecker:
 
@@ -64,4 +66,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

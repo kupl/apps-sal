@@ -16,7 +16,9 @@ def main():
     s = '0' * cnt0 + '1' * cnt1 + ''.join(map(str, ans))
     print(s)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

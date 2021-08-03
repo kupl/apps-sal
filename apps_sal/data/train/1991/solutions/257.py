@@ -7,7 +7,7 @@ class Solution:
         if (current, remain_fuel) in memo:
             return memo[(current, remain_fuel)]
         l = len(locations)
-        ans = 0 if current!=finish else 1
+        ans = 0 if current != finish else 1
         for i in range(l):
             if i == current:
                 continue
@@ -15,10 +15,8 @@ class Solution:
             ans += self.dfs(locations, memo, i, finish, remain_fuel - dist)
         memo[(current, remain_fuel)] = ans
         return ans
-            
-        
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         NUM = 10**9 + 7
         memo = dict()
-        return self.dfs(locations, memo, start, finish, fuel)%NUM
-
+        return self.dfs(locations, memo, start, finish, fuel) % NUM

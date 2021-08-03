@@ -3,13 +3,14 @@ import math
 # sys.stdin = open('input.txt')
 # sys.stdout = open('output.txt', 'w')
 
+
 def main():
     n = int(input())
     n = -n
     n %= 360
     a = n
     a1 = 360 - a
-    b = (a + 90) % 360    
+    b = (a + 90) % 360
     b1 = 360 - b
     c = (b + 90) % 360
     c1 = 360 - c
@@ -24,5 +25,6 @@ def main():
         print(2)
     elif d == ans or d1 == ans:
         print(3)
+
 
 main()

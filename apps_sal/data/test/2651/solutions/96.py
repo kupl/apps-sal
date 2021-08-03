@@ -11,4 +11,3 @@ for i in range(n):
 for i in range(m):
     sy = (sy + y[i] * i - y[i] * (m - 1 - i)) % mod
 print((sx * sy % mod))
-

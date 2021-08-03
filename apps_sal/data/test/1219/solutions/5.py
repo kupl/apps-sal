@@ -116,4 +116,6 @@ def _compute_using_brute_force(seq):
 
 def __starting_point():
     main()
+
+
 __starting_point()

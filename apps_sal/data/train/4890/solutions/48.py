@@ -5,7 +5,5 @@ def find_difference(a, b):
         x = x * i
     for i in b:
         y = y * i
-    result = abs(x-y)
+    result = abs(x - y)
     return result
-        
-

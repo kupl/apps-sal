@@ -9,4 +9,3 @@ def increment_string(strng):
         num = m.group('num')
         return '{}{:0>{}}'.format(strng[:m.start()], int(num) + 1, len(num))
     return '{}1'.format(strng)
-

@@ -22,4 +22,3 @@ if a != 0 and b != 0:
     print(min(d, d1, d2, d3, d4))
 else:
     print(d)
-

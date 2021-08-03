@@ -4,6 +4,7 @@ import sys
 # sys.stdin = open('data/B.in', 'r')
 T = 1
 
+
 def process():
     x, y, x0, y0 = list(map(int, input().split()))
     s = input()
@@ -35,14 +36,8 @@ def process():
             cnt[v] = cnt[v] + 1
 
     cnt[L] = cnt[L] + x * y - sum(cnt)
-    print(' '.join(map(str, cnt[0:L+1])))
-
-
-
-
-
+    print(' '.join(map(str, cnt[0:L + 1])))
 
 
 for _ in range(T):
     process()
-

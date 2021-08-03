@@ -4,25 +4,27 @@ def root(x):
     else:
         r[x] = root(r[x])
         return r[x]
- 
+
+
 def unite(x, y):
     x = root(x)
     y = root(y)
     if x != y:
         if r[x] > r[y]:
-            x,y = y,x
+            x, y = y, x
         r[x] += r[y]
         r[y] = x
 
-n,m = map(int,input().split())
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 r = [-1] * n
 for i in range(m):
-    c,d = map(int,input().split())
+    c, d = map(int, input().split())
     c -= 1
     d -= 1
-    unite(c,d)
+    unite(c, d)
 p = [0] * n
 q = [0] * n
 for i in range(n):
@@ -36,4 +38,4 @@ for i in range(n):
     if p[i] != q[i]:
         print('No')
         return
-print('Yes')    
+print('Yes')

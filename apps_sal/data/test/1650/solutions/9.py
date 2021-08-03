@@ -16,4 +16,4 @@ for i in range(N):
         OK[i + 1] = (OK[i] * 3) % MOD
         JUST[i + 1] = (JUST[i]) % MOD
 
-print ((OK[-1] + JUST[-1]) % MOD)
+print((OK[-1] + JUST[-1]) % MOD)

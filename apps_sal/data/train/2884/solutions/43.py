@@ -3,5 +3,5 @@ def stringify(node, s=""):
         s = s + "None"
         return s
     else:
-        s = s+ str(node.data) + " -> "
+        s = s + str(node.data) + " -> "
         return stringify(node.next, s)

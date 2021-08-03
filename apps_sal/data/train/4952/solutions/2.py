@@ -1,1 +1,2 @@
-class partial_keys(dict): __getitem__ = lambda self, key: self.get(next((k for k in sorted(self.keys()) if k.startswith(key)), None), None)
+class partial_keys(dict):
+    def __getitem__(self, key): return self.get(next((k for k in sorted(self.keys()) if k.startswith(key)), None), None)

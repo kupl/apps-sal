@@ -11,4 +11,3 @@ for i in range(len(s) + 1):
     if test(i):
         d = i
 print(min(len(s), len(s) - 2 * d + d + 1))
-

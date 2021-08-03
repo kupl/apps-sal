@@ -27,16 +27,17 @@ class Combination:
             return 0
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
+
 def resolve():
     def f(r, c):
-        return cmb.nCr(r+c+2, r+1) - 1
+        return cmb.nCr(r + c + 2, r + 1) - 1
 
-    MOD = 10**9+7
-    r1,c1,r2,c2 = map(int, input().split())
+    MOD = 10**9 + 7
+    r1, c1, r2, c2 = map(int, input().split())
     r1 -= 1
     c1 -= 1
 
-    cmb = Combination(r2+c2+5)
+    cmb = Combination(r2 + c2 + 5)
     ans = f(r2, c2)
     ans -= f(r1, c2)
     ans -= f(r2, c1)
@@ -46,4 +47,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

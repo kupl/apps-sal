@@ -3,4 +3,4 @@ class Solution:
         salary.sort()
         salary.pop()
         salary.pop(0)
-        return sum(salary)/len(salary)
+        return sum(salary) / len(salary)

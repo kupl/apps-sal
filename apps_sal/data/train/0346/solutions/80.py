@@ -7,9 +7,6 @@ class Solution:
             if i & 1 != 0:
                 x += 1
             if x - k in adict:
-                result += adict[x-k]
+                result += adict[x - k]
             adict[x] = adict.get(x, 0) + 1
         return result
-            
-            
-

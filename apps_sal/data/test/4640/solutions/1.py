@@ -232,43 +232,44 @@ class SortedList:
         """Return string representation of sorted list."""
         return 'SortedList({0})'.format(list(self))
 
+
 t = int(input())
 
 for _ in range(t):
-    n,k = map(int,input().split())
+    n, k = map(int, input().split())
     xs = list(map(int, input().split()))
     ys = list(map(int, input().split()))
-    
+
     s = SortedList(xs)
-    saved = [None]*n
-    for i,x in enumerate(s):
-        saved[i] = s.bisect_right(x+k)-s.bisect_left(x)
-    #print(s)
-    #print(saved)
+    saved = [None] * n
+    for i, x in enumerate(s):
+        saved[i] = s.bisect_right(x + k) - s.bisect_left(x)
+    # print(s)
+    # print(saved)
     base = 1
-    while base<n:
-        base*=2
-    tree = [0]*base + saved + [0]*(base-n)
-    for i in range(base-1,0,-1):
-        tree[i] = max(tree[2*i],tree[2*i+1])
-    
-    def query(a,b):
-        a+=base
-        b+=base
+    while base < n:
+        base *= 2
+    tree = [0] * base + saved + [0] * (base - n)
+    for i in range(base - 1, 0, -1):
+        tree[i] = max(tree[2 * i], tree[2 * i + 1])
+
+    def query(a, b):
+        a += base
+        b += base
         m = 0
-        while a<b:
-            if a%2==1:
+        while a < b:
+            if a % 2 == 1:
                 m = max(m, tree[a])
-                a+=1
-            if b%2==1:
-                m = max(m, tree[b-1])
-                b-=1
-            a//=2
-            b//=2
+                a += 1
+            if b % 2 == 1:
+                m = max(m, tree[b - 1])
+                b -= 1
+            a //= 2
+            b //= 2
         return m
-    
+
     m = 0
     for i in range(n):
         #print(i,s[i],saved[i] + query(i+saved[i], n))
-        m = max(m,saved[i] + query(i+saved[i], n))
+        m = max(m, saved[i] + query(i + saved[i], n))
     print(m)

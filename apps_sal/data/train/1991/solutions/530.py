@@ -1,8 +1,10 @@
 from functools import lru_cache
+
+
 class Solution:
     def countRoutes(self, locations, start: int, finish: int, fuel: int) -> int:
         @lru_cache(None)
-        def dfs(s, f): # start and fuel
+        def dfs(s, f):  # start and fuel
             if f < 0:
                 return 0
             res = 0
@@ -13,10 +15,10 @@ class Solution:
                     res += dfs(e, f - matrix[s][e])
             # print(s, f, res)
             return res % M
-            
+
         M = 10**9 + 7
         length = len(locations)
-        matrix = [[0]*length for _ in range(length)]
+        matrix = [[0] * length for _ in range(length)]
         for i in range(length):
             for j in range(length):
                 matrix[i][j] = matrix[j][i] = abs(locations[i] - locations[j])

@@ -10,8 +10,6 @@ while(True):
     else:
         l += 1
         c[0] -= 1
-        result+=1
+        result += 1
 
 print(result)
-    
-

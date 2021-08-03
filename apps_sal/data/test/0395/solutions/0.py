@@ -8,4 +8,3 @@ for i in range(6):
                 print('YES')
                 return
 print('NO')
-

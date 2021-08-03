@@ -1,5 +1,6 @@
 def cached(func):
     _cache = {}
+
     def wrapped(*args):
         nonlocal _cache
         if args not in _cache:
@@ -37,7 +38,7 @@ def block_len_sum(block_num):
     result = 0
     for i in range(1, l + 1):
         # прибавляем суммарную длину блоков, заканчивающихся на числа длины i
-        ls = len_sum(i) # длина блока для числа 10 ** i - 1
+        ls = len_sum(i)  # длина блока для числа 10 ** i - 1
         if i < l:
             ln = len_num(i)
         else:
@@ -47,7 +48,7 @@ def block_len_sum(block_num):
 
 
 def block(n):
-    return ''.join(str(i) for i in range(1, n+1))
+    return ''.join(str(i) for i in range(1, n + 1))
 
 
 def blocks(n):
@@ -78,4 +79,3 @@ for _ in range(cases):
     number = binary_search(block_len, rel_index)
     digit = rel_index - block_len(number - 1)
     print(str(number)[digit])
-

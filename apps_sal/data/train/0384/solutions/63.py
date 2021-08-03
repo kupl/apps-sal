@@ -8,6 +8,6 @@ class Solution:
         mod = 10**9 + 7
         for i, n in enumerate(sorted(A)):
             ret = (ret + n * (1 << i)) % mod
-            ret  = (ret - n * (1 << (len(A) - i - 1))) % mod
-        
+            ret = (ret - n * (1 << (len(A) - i - 1))) % mod
+
         return ret

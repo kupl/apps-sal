@@ -21,10 +21,10 @@ class Solution:
                         left = l
                     right = cur_right
                     del bulb_ranges[l + 1]
-                    
+
             bulb_ranges[left] = (left, right)
             bulb_ranges[right] = (left, right)
             if left == 1 and right - left + 1 == lights_on:
                 result += 1
-        
+
         return result

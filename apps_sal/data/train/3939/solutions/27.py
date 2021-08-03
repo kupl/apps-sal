@@ -6,5 +6,3 @@ def rps(p1, p2):
     p3w = "Draw!"
     i = "p1{}p2{}".format(p1[0], p2[0])
     return p1w if i in p1c else p2w if i in p2c else p3w
-    
-

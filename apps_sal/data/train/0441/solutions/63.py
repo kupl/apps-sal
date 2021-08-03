@@ -34,5 +34,3 @@ class Solution:
             res *= count + 1
             i += 2
         return res if N == 1 else res * 2
-            
-

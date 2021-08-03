@@ -1,5 +1,6 @@
 import re
 
+
 def increment_string(s):
     number = re.findall(r'\d+', s)
     if number:

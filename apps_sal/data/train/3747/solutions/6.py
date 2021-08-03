@@ -6,4 +6,3 @@ def ipv4_address(address: str) -> bool:
         return len(str(ip_address(address))) == len(address)
     except ValueError:
         return False
-

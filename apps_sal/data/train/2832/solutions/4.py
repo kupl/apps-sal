@@ -8,7 +8,6 @@ def array_equalization(a, k):
                 count += 1
                 i += k
             else:
-                i += 1 
+                i += 1
         min_ = min(count, min_)
     return min_
-

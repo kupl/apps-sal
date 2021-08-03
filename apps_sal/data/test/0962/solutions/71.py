@@ -1,14 +1,14 @@
 from collections import deque
 import sys
 
-N,M = list(map(int,input().split()))
+N, M = list(map(int, input().split()))
 
 AB = []
-lis = [ [] for i in range(N)]
+lis = [[] for i in range(N)]
 
 for i in range(M):
 
-    A,B = list(map(int,input().split()))
+    A, B = list(map(int, input().split()))
 
     A -= 1
     B -= 1
@@ -17,11 +17,11 @@ for i in range(M):
 
 q = deque([])
 
-first = [-1] * (N+1)
+first = [-1] * (N + 1)
 first[0] = 0
 first[-1] = 0
 
-q.append( first )
+q.append(first)
 
 end = [True] * N
 end[0] = False
@@ -30,7 +30,7 @@ while len(q) > 0:
 
     now = q.pop()
     lasp = now[-1]
-    nownum = now[lasp] 
+    nownum = now[lasp]
 
     #print (q,now,lasp,nownum)
 
@@ -69,7 +69,7 @@ while len(q) > 0:
 
                 print((len(ans)))
                 for i in ans:
-                    print (i)
+                    print(i)
 
                 return
 
@@ -77,7 +77,7 @@ while len(q) > 0:
         for i in range(N):
             if end[i]:
 
-                first = [-1] * (N+1)
+                first = [-1] * (N + 1)
                 first[i] = 0
                 first[-1] = i
                 q.append(first)
@@ -86,4 +86,3 @@ while len(q) > 0:
             #print (flag,nex,lasp)
 
 print((-1))
-

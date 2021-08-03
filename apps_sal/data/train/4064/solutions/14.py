@@ -5,6 +5,6 @@ def count_by(x, n):
     output = []
     i = 1
     while len(output) < n:
-        output.append(i*x)
+        output.append(i * x)
         i += 1
     return output

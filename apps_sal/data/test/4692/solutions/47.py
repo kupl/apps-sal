@@ -1,5 +1,5 @@
-M=int(input())
+M = int(input())
 
-x=24+(24-M)
+x = 24 + (24 - M)
 
 print(x)

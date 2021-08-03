@@ -1,5 +1,6 @@
 from random import shuffle
 
+
 def mix_words(s):
     if type(s) != str:
         return "undefined"
@@ -11,5 +12,5 @@ def mix_words(s):
                 middle = list(word[1:-1 - punctuation])
                 while middle == list(word[1:-1 - punctuation]):
                     shuffle(middle)
-                splitter[i] = word[0] + ''.join(middle) + word[-1  - punctuation:]
+                splitter[i] = word[0] + ''.join(middle) + word[-1 - punctuation:]
         return ' '.join(splitter)

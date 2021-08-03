@@ -6,5 +6,6 @@ def increment_string(strng):
         if char in nums:
             num = char + num
             digits += 1
-        else: break
-    return strng.rstrip(num) + str(int(num)+1).zfill(digits) if len(num) >0 else strng + "1"
+        else:
+            break
+    return strng.rstrip(num) + str(int(num) + 1).zfill(digits) if len(num) > 0 else strng + "1"

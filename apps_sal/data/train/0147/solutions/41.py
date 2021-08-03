@@ -3,7 +3,7 @@ class Solution:
         worker = []
         for i in range(n):
             worker.append([speed[i], efficiency[i]])
-        worker.sort(key = lambda x: x[1], reverse = True)
+        worker.sort(key=lambda x: x[1], reverse=True)
         import heapq
         total = 0
         heap = []
@@ -12,12 +12,12 @@ class Solution:
             total += worker[i][0]
             minE = worker[i][1]
             heapq.heappush(heap, worker[i][0])
-            res = max(res, total*minE)
+            res = max(res, total * minE)
         for i in range(k, n):
             if worker[i][0] > heap[0]:
-                total += (-heap[0]+worker[i][0])
+                total += (-heap[0] + worker[i][0])
                 minE = worker[i][1]
-                res = max(res, minE*total)
+                res = max(res, minE * total)
                 # heapq.heappop(heap)
                 heapq.heappushpop(heap, worker[i][0])
-        return res%1000000007
+        return res % 1000000007

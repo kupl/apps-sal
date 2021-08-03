@@ -4,6 +4,7 @@ def rat_at(n):
     a, b = rat_at((n - 1) // 2)
     return (a, a + b) if n % 2 else (a + b, b)
 
+
 def index_of(a, b):
     if a == b == 1:
         return 0

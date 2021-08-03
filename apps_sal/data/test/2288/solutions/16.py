@@ -11,7 +11,7 @@ for T in range(t):
         print("Yes")
     else:
         Yes = True
-        for i in range(1,n):
+        for i in range(1, n):
             if a[i] < a[i - 1]:
                 Yes = False
                 break
@@ -19,4 +19,3 @@ for T in range(t):
             print("Yes")
         else:
             print("No")
-

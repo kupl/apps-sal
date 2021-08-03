@@ -3,11 +3,11 @@ def __starting_point():
     w = []
     for i in range(n):
         w.append(list(map(int, input().split())))
-    a=[]
-    b=[]
+    a = []
+    b = []
     for i in range(n):
-        a.append([0.0]*n)
-        b.append([0.0]*n)
+        a.append([0.0] * n)
+        b.append([0.0] * n)
     for i in range(n):
         for j in range(i, n):
             a[i][j] = (w[i][j] + w[j][i]) / 2
@@ -18,5 +18,6 @@ def __starting_point():
         print(" ".join(list(map(str, a[i]))))
     for i in range(n):
         print(" ".join(list(map(str, b[i]))))
+
 
 __starting_point()

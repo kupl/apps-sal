@@ -1,9 +1,11 @@
 N = int(input())
 A = [int(input()) for _ in range(N)]
-def solve(A,n):
+
+
+def solve(A, n):
     import bisect
     dp = [float('inf')] * n
-    for i in range(n-1,-1,-1):
+    for i in range(n - 1, -1, -1):
         k = bisect.bisect_right(dp, A[i])
         dp[k] = A[i]
     ans = 0
@@ -13,4 +15,6 @@ def solve(A,n):
         else:
             break
     return ans
-print(solve(A,N))
+
+
+print(solve(A, N))

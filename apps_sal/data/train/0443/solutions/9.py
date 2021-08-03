@@ -12,11 +12,11 @@ class Solution:
                     thr = rating[k]
                     if scn == thr:
                         break
-                    
+
                     if a and scn > thr:
                         cnt = cnt + 1
-                        
+
                     if not a and scn < thr:
                         cnt = cnt + 1
-                        
+
         return cnt

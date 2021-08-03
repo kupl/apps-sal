@@ -26,11 +26,12 @@ def main():
         Y_id += [d]
 
     for o in order:
-        print(('{:06}'.format(o) +
-              '{:06}'.format(Y_id[o - 1][Y[o - 1].popleft()])))
+        print(('{:06}'.format(o)
+              + '{:06}'.format(Y_id[o - 1][Y[o - 1].popleft()])))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -11,5 +11,5 @@ def correct(string):
                 oplst.append('I')
         else:
             oplst.append(c)
-    
+
     return ''.join(oplst)

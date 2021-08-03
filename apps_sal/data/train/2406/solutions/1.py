@@ -10,4 +10,3 @@ class Solution:
                 hi = mid
             else:
                 lo = mid
-

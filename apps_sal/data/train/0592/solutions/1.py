@@ -2,6 +2,7 @@
 
 def memo(func):
     cache = {}
+
     def f(*args):
         if args in cache:
             return cache[args]
@@ -10,13 +11,16 @@ def memo(func):
         return r
     return f
 
+
 def doit():
     s = input().strip()
     words = set([input().strip() for x in range(eval(input()))])
+
     @memo
     def g(start, end):
         num = set([])
-        if start >= end: return 0
+        if start >= end:
+            return 0
         for w in words:
             x = start
             while x + len(w) <= end:
@@ -31,10 +35,10 @@ def doit():
         return x
     return g(0, len(s)) > 0
 
+
 n = eval(input())
 for x in range(n):
     if doit():
         print('Teddy')
     else:
         print('Tracy')
-

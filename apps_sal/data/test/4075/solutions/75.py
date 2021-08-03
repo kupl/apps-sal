@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 N, M = list(map(int, input().split()))
@@ -35,6 +35,3 @@ for i in range(2 ** N):
         ans += 1
 
 print(ans)
-
-
-

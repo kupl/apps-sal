@@ -18,6 +18,6 @@ class Solution:
 
         res = len(d)
         for u, v, w in edges:
-            res += min(d.get(u, 0)+ d.get(v, 0), w)
+            res += min(d.get(u, 0) + d.get(v, 0), w)
 
         return res

@@ -11,8 +11,8 @@ def final_grade(exam, projects):
         return 75
     else:
         return 0
-    
-    
+
+
 class TestFinalGrade(unittest.TestCase):
     def test_final_grade_on_100_with_exam_score_that_is_more_than_90(self):
         exam, projects = 100, 12
@@ -48,4 +48,3 @@ class TestFinalGrade(unittest.TestCase):
         exam, projects = 30, 1
         actual = final_grade(exam, projects)
         self.assertEqual(actual, 0)
-

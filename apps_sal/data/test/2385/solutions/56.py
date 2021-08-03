@@ -1,6 +1,7 @@
 from functools import reduce
 # 部分木の解を 1 次元で持つように変更
 
+
 def rerooting(n, edges, identity, merge, add_node):
     # 全方位木 dp
     # 参考1: https://qiita.com/keymoon/items/2a52f1b0fb7ef67fb89e
@@ -24,7 +25,7 @@ def rerooting(n, edges, identity, merge, add_node):
                 stack.append(u)
                 parents[u] = v
     # 下から登る
-    dp_down = [0]*n  # 自身とその下
+    dp_down = [0] * n  # 自身とその下
     for v in order[:0:-1]:
         p = parents[v]
         result = identity
@@ -61,16 +62,17 @@ def rerooting(n, edges, identity, merge, add_node):
     ) for v, Gv in enumerate(G)]
     return results
 
+
 class Combination:
-    def __init__(self, n_max, mod=10**9+7):
+    def __init__(self, n_max, mod=10**9 + 7):
         # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
-        for i in range(1, n_max+1):
+        for i in range(1, n_max + 1):
             f = f * i % mod
             fac.append(f)
-        f = pow(f, mod-2, mod)
+        f = pow(f, mod - 2, mod)
         self.facinv = facinv = [f]
         for i in range(n_max, 0, -1):
             f = f * i % mod
@@ -78,24 +80,27 @@ class Combination:
         facinv.reverse()
 
     def __call__(self, n, r):  # self.C と同じ
-        return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n-r] % self.mod
+        return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
+
 
 def main():
     N = int(input())
-    AB = [list([int(x)-1 for x in input().split()]) for _ in range(N-1)]
+    AB = [list([int(x) - 1 for x in input().split()]) for _ in range(N - 1)]
     mod = 10**9 + 7
     comb = Combination(202020)
     identity = (1, 0)
     fac, facinv = comb.fac, comb.facinv
+
     def merge(a, b):
         a0, a1 = a
         b0, b1 = b
-        return a0*b0*fac[a1+b1]*facinv[a1]*facinv[b1]%mod, a1+b1
+        return a0 * b0 * fac[a1 + b1] * facinv[a1] * facinv[b1] % mod, a1 + b1
+
     def add_node(a, idx):
         a0, a1 = a
-        return a0, a1+1
+        return a0, a1 + 1
     Ans = rerooting(N, AB, identity, merge, add_node)
     print(("\n".join(str(ans) for ans, _ in Ans)))
 
-main()
 
+main()

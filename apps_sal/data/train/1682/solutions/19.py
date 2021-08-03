@@ -58,7 +58,7 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
 def main():
@@ -79,8 +79,8 @@ def main():
     print(str(summ[idxx]) + ':' + str(idx[idxx][0]) + '-' + str(idx[idxx][1]))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

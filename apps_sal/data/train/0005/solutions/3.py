@@ -1,5 +1,6 @@
 def readIntArray():
-    return list(map(int,input().split()))
+    return list(map(int, input().split()))
+
 
 t = int(input())
 for _ in range(t):
@@ -45,4 +46,3 @@ for _ in range(t):
     print(len(ans))
     for val in ans:
         print(val[0], val[1])
-

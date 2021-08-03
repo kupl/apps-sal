@@ -9,4 +9,3 @@ def primeFactors(n):
             ret += '({}{})'.format(i, '**%d' % num if num > 1 else '')
         if n == 1:
             return ret
-

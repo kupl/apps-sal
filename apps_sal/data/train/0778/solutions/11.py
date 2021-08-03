@@ -1,7 +1,6 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for i in range(t):
-    s=input()
-    n=int(s[::-1])
+    s = input()
+    n = int(s[::-1])
     print(n)
-

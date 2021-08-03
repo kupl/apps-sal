@@ -1,14 +1,19 @@
-import collections, itertools, sys
-input = lambda: sys.stdin.readline().rstrip() 
+import collections
+import itertools
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = float('inf')
 def I(): return int(input())
 def F(): return float(input())
 def S(): return input()
 def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x)-1 for x in input().split()]
+def LI_(): return [int(x) - 1 for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LS(): return input().split()
+
 
 def resolve():
     N, K = LI()
@@ -32,7 +37,7 @@ def resolve():
     xy_acm = [[0] * (N + 1) for _ in range(N + 1)]
     for i in range(N):
         for j in range(N):
-            xy_acm[i+1][j+1] = xy_cnt[i][j] + xy_acm[i+1][j] + xy_acm[i][j+1] - xy_acm[i][j]
+            xy_acm[i + 1][j + 1] = xy_cnt[i][j] + xy_acm[i + 1][j] + xy_acm[i][j + 1] - xy_acm[i][j]
     # for i in xy_acm:
     #     print(i)
 
@@ -42,11 +47,13 @@ def resolve():
             cnt = xy_acm[yu][xu] - xy_acm[yu][xl] - xy_acm[yl][xu] + xy_acm[yl][xl]
             # print(cnt, yl, yu, xl, xu)
             if cnt >= K:
-                ans = min((x_coord[xu-1] - x_coord[xl]) * (y_coord[yu-1] - y_coord[yl]), ans)
+                ans = min((x_coord[xu - 1] - x_coord[xl]) * (y_coord[yu - 1] - y_coord[yl]), ans)
 
     print(ans)
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

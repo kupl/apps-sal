@@ -13,4 +13,3 @@ for i in range(1, m + 1):
     sum_y += (i - 1) * y[i - 1] - (m - i) * y[i - 1]
 
 print((sum_x * sum_y % mod))
-

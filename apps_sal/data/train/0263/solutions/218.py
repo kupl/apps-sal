@@ -14,5 +14,5 @@ class Solution:
             t8 = (x1 + x3) % mod
             t9 = (x2 + x4) % mod
             x0, x1, x2, x3, x4, x5, x6, x7, x8, x9 = t0, t1, t2, t3, t4, t5, t6, t7, t8, t9
-            
+
         return (x0 + x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9) % mod

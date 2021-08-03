@@ -9,4 +9,3 @@ for _ in range(int(input())):
         else:
             stck.append(inps[i])
     print(need)
-

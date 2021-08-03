@@ -6,4 +6,3 @@ for x in range(1, n + 1):
     if a <= c <= b:
         ans += x
 print(ans)
-

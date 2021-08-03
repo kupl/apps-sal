@@ -10,7 +10,7 @@ for i in range(64):
     cur *= 2
     x //= 2
 for i in p[::-1]:
-    if s >= i: s -= i
+    if s >= i:
+        s -= i
 ans = 0 if s else 2 ** t - rem
 print(ans)
-

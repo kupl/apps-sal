@@ -23,4 +23,3 @@ for x in input().split():
             ans = max(ans, i + 1)
     i += 1
 print(ans)
-

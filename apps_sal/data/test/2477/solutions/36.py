@@ -5,15 +5,15 @@ def main():
     def value(v):
         cnt = 0
         for i in a:
-            cnt += (i-1)//v
+            cnt += (i - 1) // v
         if cnt > k:
             return False
         else:
             return True
 
     def b_search(ok, ng, value):
-        while abs(ok-ng) > 1:
-            mid = (ok+ng)//2
+        while abs(ok - ng) > 1:
+            mid = (ok + ng) // 2
             if value(mid):
                 ok = mid
             else:
@@ -24,4 +24,3 @@ def main():
 
 
 main()
-

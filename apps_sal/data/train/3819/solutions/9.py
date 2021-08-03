@@ -1,1 +1,1 @@
-smash = lambda words: ' '.join(words)
+def smash(words): return ' '.join(words)

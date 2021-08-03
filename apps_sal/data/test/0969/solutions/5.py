@@ -21,6 +21,7 @@ def find_max_substr(t, s):
     else:
         return s.find(t[:l2][::-1]) + l2, s.find(t[:l2][::-1]) + 1
 
+
 s = input()
 t = input()
 if not set(t).issubset(set(s)):
@@ -34,4 +35,3 @@ while t:
 print(len(a))
 for l, r in a:
     print(l, r)
-

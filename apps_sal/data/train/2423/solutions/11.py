@@ -5,8 +5,5 @@ class Solution:
         for num in nums:
             temp += num
             min_sum = min(temp, min_sum)
-        
-        return abs(min_sum)+1
 
-
-
+        return abs(min_sum) + 1

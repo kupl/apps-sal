@@ -10,4 +10,3 @@ ans = 2 * b + 2 * c
 if b * c < n:
     ans += 2
 print(ans)
-

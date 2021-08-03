@@ -1,6 +1,7 @@
 
 VOWELS = ('a', 'e', 'i', 'o', 'u')
 
+
 def main():
     buf = input()
     n = int(buf)
@@ -68,5 +69,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

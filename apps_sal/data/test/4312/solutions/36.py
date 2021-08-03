@@ -3,12 +3,13 @@ class Monster:
         self.hp = hp
         self.power = power
 
-    def fight(self, power)  -> int:
+    def fight(self, power) -> int:
         self.hp -= power
         return self.hp
 
-    def is_loser(self)   -> bool:
+    def is_loser(self) -> bool:
         return self.hp <= 0
+
 
 # 標準入力から A, B, C, D を取得する
 a, b, c, d = map(int, input().split())

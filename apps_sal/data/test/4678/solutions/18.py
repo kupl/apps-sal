@@ -11,11 +11,15 @@ def c176(n, alist):
 
     return ans
 
+
 def main():
     n = int(input())
     alist = list(map(int, input().split()))
     print(c176(n, alist))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

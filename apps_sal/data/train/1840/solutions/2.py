@@ -5,6 +5,8 @@
 #         self.left = left
 #         self.right = right
 from collections import deque
+
+
 class Solution:
     def longestZigZag(self, root: TreeNode) -> int:
         # dequeu node : [curr_node, state, longestdistance]
@@ -24,11 +26,10 @@ class Solution:
                     if top.left:
                         q.append([top.left, 'L', 1])
                     if top.right:
-                        q.append([top.right, 'R', dist+1])
+                        q.append([top.right, 'R', dist + 1])
                 if state == 'R':
                     if top.left:
-                        q.append([top.left, 'L', dist+1])
+                        q.append([top.left, 'L', dist + 1])
                     if top.right:
                         q.append([top.right, 'R', 1])
         return ans
-

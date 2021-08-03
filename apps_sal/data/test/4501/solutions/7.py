@@ -10,4 +10,4 @@ qwe[0] = 1
 for o in kite:
     for j, c in list(qwe.items()):
         qwe[j + o] += c
-print(qwe[0]-1)
+print(qwe[0] - 1)

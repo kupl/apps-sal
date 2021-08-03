@@ -14,11 +14,14 @@ invfact[N - 1] = pow(fact[N - 1], MOD - 2, MOD)
 
 for i in range(N - 2, -1, -1):
     invfact[i] = invfact[i + 1] * (i + 1) % MOD
+
+
 def nCk(n, k):
     if k < 0 or n < k:
         return 0
     else:
         return fact[n] * invfact[k] * invfact[n - k] % MOD
+
 
 def main():
     n = input().strip()
@@ -42,7 +45,6 @@ def main():
         plus3 %= MOD
 
     print(ans)
-        
-        
-main()
 
+
+main()

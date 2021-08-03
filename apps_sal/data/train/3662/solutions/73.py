@@ -1,4 +1,4 @@
-def xor(a,b):
+def xor(a, b):
     my_bool = True
     if a and b:
         return False
@@ -6,5 +6,3 @@ def xor(a,b):
         return False
     elif a or b:
         return True
-    
-

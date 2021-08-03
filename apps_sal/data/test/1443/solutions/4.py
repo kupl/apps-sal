@@ -6,8 +6,8 @@ T = input()
 # fly -> walk, time cost: +4s, stamina: +2
 # walk in place, time cost: +5s, stamina: +1
 
-#fly -> swim, time cost: +2s, stamina: +2
-#swim in place, time cost: +3s, stamina:+1
+# fly -> swim, time cost: +2s, stamina: +2
+# swim in place, time cost: +3s, stamina:+1
 
 ans = sum(L)
 
@@ -33,4 +33,3 @@ for l, t in zip(L, T):
             need_stamina = 0
 
 print(ans)
-

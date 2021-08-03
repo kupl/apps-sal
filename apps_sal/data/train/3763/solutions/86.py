@@ -1,5 +1,5 @@
-def calculator(x,y,op):
-    try: 
+def calculator(x, y, op):
+    try:
         xx = int(x)
         yy = int(y)
     except ValueError:
@@ -7,10 +7,10 @@ def calculator(x,y,op):
     if op == '+':
         return xx + yy
     elif op == '-':
-        return xx-yy
+        return xx - yy
     elif op == '*':
-        return xx*yy
+        return xx * yy
     elif op == '/':
-        return xx/yy
+        return xx / yy
     else:
         return "unknown value"

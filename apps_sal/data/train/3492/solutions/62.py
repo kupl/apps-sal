@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     letters = {
         'ą': 'a',
         'ć': 'c',
@@ -9,8 +9,8 @@ def correct_polish_letters(st):
         'ś': 's',
         'ź': 'z',
         'ż': 'z'
-        }
-    
+    }
+
     for l in st:
         if l in letters:
             st = st.replace(l, letters[l])

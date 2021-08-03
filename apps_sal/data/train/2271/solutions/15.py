@@ -9,7 +9,7 @@ for _ in range(m):
     y -= 1
     edges[x].append(y)
     edges[y].append(x)
-    
+
 check = [False for _ in range(n)]
 uni = [0 for _ in range(n)]
 pos = 0

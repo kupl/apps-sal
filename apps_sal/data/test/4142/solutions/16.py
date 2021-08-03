@@ -9,4 +9,3 @@ for i in range(len(s)):
             print('No')
             return
 print('Yes')
-

@@ -1,3 +1,3 @@
 X = int(input())
 
-print(1-X)
+print(1 - X)

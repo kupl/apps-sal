@@ -6,8 +6,8 @@ mod = 10**9 + 7
 ans = 0
 for i in range(60):
     mask = 1 << i
-    cnt = np.count_nonzero(A&mask)
-    x = cnt * (N-cnt)
+    cnt = np.count_nonzero(A & mask)
+    x = cnt * (N - cnt)
     x *= mask % mod
     ans += x
     ans %= mod

@@ -1,6 +1,6 @@
 n = int(input())
 
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 if(n == 1 or n == 2):
     print(n)
     return
@@ -16,10 +16,9 @@ cnt = 1
 at1 = 1
 
 
-
 for i in range(1, n):
-    occ[a[i]] +=1
-    
+    occ[a[i]] += 1
+
     if(occ[a[i]] == 1):
         notpar += 1
         at1 += 1
@@ -49,6 +48,3 @@ for i in range(1, n):
         best = i + 1
     #print(i, base, leader, leadby, gotone, notpar, cnt)
 print(best)
-                    
-                    
-

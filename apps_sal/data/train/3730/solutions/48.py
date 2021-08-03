@@ -11,4 +11,3 @@ def capitalize(s):
         else:
             secondString += j.upper()
     return [newString, secondString]
-

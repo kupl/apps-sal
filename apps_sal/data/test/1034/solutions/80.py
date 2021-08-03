@@ -36,4 +36,3 @@ for i in range(K):
         key_dict[(a, b, c + 1)] = 1
 for ans in ans_list:
     print(ans)
-

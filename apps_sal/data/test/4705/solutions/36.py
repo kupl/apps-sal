@@ -7,5 +7,4 @@ price = 800
 bonus = 200
 n = int(input())
 
-print((price*n - bonus*(n//15)))
-
+print((price * n - bonus * (n // 15)))

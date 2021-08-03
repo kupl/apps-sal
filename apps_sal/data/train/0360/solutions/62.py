@@ -1,7 +1,7 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         def condition(w) -> bool:
-            curr,k = 0,0
+            curr, k = 0, 0
             count = 0
             while k < len(weights):
                 if curr + weights[k] > w:
@@ -11,16 +11,16 @@ class Solution:
                     curr = 0
                 curr += weights[k]
                 k += 1
-            
+
             return count + 1 <= D
-        
-        left,right = max(weights),sum(weights)
-        
+
+        left, right = max(weights), sum(weights)
+
         while left < right:
             mid = left + (right - left) // 2
             if condition(mid):
                 right = mid
             else:
                 left = mid + 1
-            
+
         return left

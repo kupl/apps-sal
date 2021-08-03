@@ -1,8 +1,8 @@
 for t in range(int(input())):
-    s=input()
-    stack=[]
+    s = input()
+    stack = []
     for i in s:
-        if i=='A':
+        if i == 'A':
             stack.append(i)
         else:
             if stack:

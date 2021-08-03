@@ -2,7 +2,6 @@ from math import ceil
 
 n = int(input())
 
-arr = list(map(int,input().split()))
+arr = list(map(int, input().split()))
 
-print(max(max(arr),ceil(sum(arr) / (n - 1))))
-
+print(max(max(arr), ceil(sum(arr) / (n - 1))))

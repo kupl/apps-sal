@@ -22,4 +22,3 @@ for b in B:
         return
 cnt += int(math.ceil(H / max_a))
 print(cnt)
-

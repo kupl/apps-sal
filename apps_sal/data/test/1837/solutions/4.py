@@ -15,4 +15,3 @@ if t == True:
     print(c + 2)
 else:
     print(c + 1)
-

@@ -1,6 +1,7 @@
 class shkolnik():
     ball = 0
 
+
 n, m = list(map(int, input().split()))
 
 a = []
@@ -27,4 +28,3 @@ for i in range(1, m + 1):
         print("?")
     else:
         print(a[i][-1].family, a[i][-2].family)
-

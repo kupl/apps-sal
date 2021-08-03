@@ -2,6 +2,7 @@ from collections import Counter
 from functools import lru_cache
 import math
 
+
 class Solution:
     def numSquarefulPerms(self, A: List[int]) -> int:
         # Backtracking
@@ -30,7 +31,6 @@ class Solution:
         #     return ans
 
         # return sum(dfs(x, len(A) - 1) for x in count)
-
 
         # Dynamic Programming
         # Time  complexity: O(N^2 x 2^N) = O(sum_{k=1}^{N} C_N^K x C_k^2)
@@ -66,7 +66,6 @@ class Solution:
             ans //= math.factorial(v)
         return ans
 
-
         # c = Counter(A)
         # cand = {i: {j for j in c if int((i+j)**.5) ** 2 == i + j} for i in c}
         # self.res = 0
@@ -82,7 +81,6 @@ class Solution:
 
         # for x in c: dfs(x)
         # return self.res
-
 
         # def backtrack(i, A):
         #     if i > 1:
@@ -107,5 +105,3 @@ class Solution:
         # output, seen = [], set()
         # backtrack(0, A)
         # return len(output)
-
-

@@ -2,7 +2,7 @@ def f(l):
     n = len(l)
     if n == 1:
         return l[0]
-    
+
     nn = pow(9, n - 1)
     res = nn
 
@@ -10,6 +10,7 @@ def f(l):
         res = max(res, i * nn)
     res = max(l[0] * f(l[1:]), res)
     return res
+
 
 x = [*map(int, input())]
 print(f(x))

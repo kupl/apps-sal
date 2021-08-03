@@ -5,35 +5,36 @@ def c(i, j):
             return True
     return False
 
+
 a = [[x for x in input().strip()] for j in range(4)]
 ans = True
 for i in range(4):
     for j in range(4):
         if a[i][j] == '.':
-            if c(i+1,j) and c(i+2,j):
+            if c(i + 1, j) and c(i + 2, j):
                 ans = False
-            if c(i-1,j) and c(i-2,j):
+            if c(i - 1, j) and c(i - 2, j):
                 ans = False
-            if c(i+1,j+1) and c(i+2,j+2):
+            if c(i + 1, j + 1) and c(i + 2, j + 2):
                 ans = False
-            if c(i-1,j-1) and c(i-2,j-2):
+            if c(i - 1, j - 1) and c(i - 2, j - 2):
                 ans = False
-            if c(i,j+1) and c(i,j+2):
+            if c(i, j + 1) and c(i, j + 2):
                 ans = False
-            if c(i,j-1) and c(i,j-2):
+            if c(i, j - 1) and c(i, j - 2):
                 ans = False
-            if c(i+1,j-1) and c(i+2,j-2):
+            if c(i + 1, j - 1) and c(i + 2, j - 2):
                 ans = False
-            if c(i-1,j+1) and c(i-2,j+2):
+            if c(i - 1, j + 1) and c(i - 2, j + 2):
                 ans = False
 
-            if c(i-1,j-1) and c(i+1,j+1):
+            if c(i - 1, j - 1) and c(i + 1, j + 1):
                 ans = False
-            if c(i-1,j) and c(i+1,j):
+            if c(i - 1, j) and c(i + 1, j):
                 ans = False
-            if c(i-1,j+1) and c(i+1,j-1):
+            if c(i - 1, j + 1) and c(i + 1, j - 1):
                 ans = False
-            if c(i,j-1) and c(i,j+1):
+            if c(i, j - 1) and c(i, j + 1):
                 ans = False
 
 if ans:

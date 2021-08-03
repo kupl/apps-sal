@@ -1,5 +1,6 @@
 from math import floor, sqrt
 
+
 def is_prime(n):
     if n <= 3:
         return n > 1
@@ -10,9 +11,10 @@ def is_prime(n):
             return False
     return True
 
+
 def gap(g, m, n):
     last_prime = None
-    for i in range(m, n+1):
+    for i in range(m, n + 1):
         if is_prime(i):
             if last_prime and i - last_prime == g:
                 return [last_prime, i]

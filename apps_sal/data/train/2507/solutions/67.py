@@ -6,9 +6,9 @@ class Solution:
                 dic_char[i] = 1
             else:
                 dic_char[i] += 1
-        
+
         cnt = 0
-        
+
         for i in words:
             dic_word = {}
             for j in i:
@@ -21,6 +21,6 @@ class Solution:
                 if k not in dic_char or dic_char[k] < v:
                     break
             else:
-                cnt += len(i)  
-        
+                cnt += len(i)
+
         return cnt

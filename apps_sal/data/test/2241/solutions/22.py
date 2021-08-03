@@ -17,4 +17,3 @@ joy = 0
 for i in range(n):
     joy += great_sum_finder(b[i], a[i])
 print(joy)
-

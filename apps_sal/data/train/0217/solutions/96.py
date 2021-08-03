@@ -7,15 +7,14 @@ class Solution:
         for num in A[1:]:
             temp = set()
             #curr |= num
-            #my_set.add(curr)
-            
+            # my_set.add(curr)
+
             for p in prev:
                 temp.add(num | p)
                 my_set.add(num | p)
-                
-            #print(temp)
+
+            # print(temp)
             prev = temp
             prev.add(num)
 
         return len(my_set)
-

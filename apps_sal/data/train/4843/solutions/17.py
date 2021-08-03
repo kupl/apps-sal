@@ -1,4 +1,6 @@
 from itertools import combinations
+
+
 def choose_best_sum(t, k, ls):
     max = 0
     for subset in combinations(ls, k):

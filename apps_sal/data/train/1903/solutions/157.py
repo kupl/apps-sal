@@ -3,10 +3,10 @@ class Solution:
         edges, n, cnt, ans = [], len(p), 1, 0
 
         def manhattan(x, y):
-            return abs(p[x][0]-p[y][0]) + abs(p[x][1]-p[y][1])
+            return abs(p[x][0] - p[y][0]) + abs(p[x][1] - p[y][1])
 
-        edges = [(manhattan(i, j), (i, j)) 
-                 for i in range(n) for j in range(i+1, n)]
+        edges = [(manhattan(i, j), (i, j))
+                 for i in range(n) for j in range(i + 1, n)]
         heapq.heapify(edges)
 
         def union(x, y):

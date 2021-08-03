@@ -1,12 +1,12 @@
 def correct(string):
-    end =''
+    end = ''
     for x in string:
-        if x =='0':
-            end+='O'
-        elif x=='5':
-            end +='S'
-        elif x=='1':
+        if x == '0':
+            end += 'O'
+        elif x == '5':
+            end += 'S'
+        elif x == '1':
             end += 'I'
         else:
-            end +=x
+            end += x
     return end

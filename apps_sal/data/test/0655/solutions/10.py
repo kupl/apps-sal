@@ -25,7 +25,7 @@ n = ria()[0]
 x, y = ria()
 d1 = abs(1 - x) + abs(1 - y)
 d2 = abs(n - x) + abs(n - y)
-if d1<=d2:
+if d1 <= d2:
     print('White')
 else:
     print('Black')

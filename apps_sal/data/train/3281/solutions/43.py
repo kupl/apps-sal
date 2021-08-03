@@ -1,5 +1,6 @@
 import calendar
 
+
 def unlucky_days(year):
     res_date = calendar.Calendar()
     res_days = 0
@@ -8,4 +9,3 @@ def unlucky_days(year):
             if day[0] == 13 and day[1] == 4:
                 res_days += 1
     return res_days
-

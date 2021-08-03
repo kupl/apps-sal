@@ -9,7 +9,6 @@ class UnionSet:
         self.els = [UnionNode() for i in range(N)]
         self.edge_count = 0
 
-
     def find(self, i):
         node = self.els[i]
 
@@ -18,7 +17,6 @@ class UnionSet:
 
         node.parent = self.find(node.parent)
         return node.parent
-
 
     def union(self, i, j):
         i = self.find(i)
@@ -39,15 +37,14 @@ class UnionSet:
         j_node.parent = i
         i_node.order += (i_node.order == j_node.order)
 
-
     def connected(self):
         return len(self.els) == self.edge_count + 1
 
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        alice_union  = UnionSet(n)
-        bob_union    = UnionSet(n)
+        alice_union = UnionSet(n)
+        bob_union = UnionSet(n)
         shared_union = UnionSet(n)
 
         for (type_, u, v) in edges:
@@ -64,6 +61,6 @@ class Solution:
             return -1
 
         missing_edges = n - 1 - shared_union.edge_count
-        needed_edges = shared_union.edge_count + 2*missing_edges
+        needed_edges = shared_union.edge_count + 2 * missing_edges
 
         return len(edges) - needed_edges

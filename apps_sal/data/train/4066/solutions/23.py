@@ -1,1 +1,1 @@
-string_to_array = lambda x: x.split(" ")
+def string_to_array(x): return x.split(" ")

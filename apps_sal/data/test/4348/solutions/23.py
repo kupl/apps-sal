@@ -1,25 +1,21 @@
-n,k=list(map(int,input().split()))
-a=str(input())
-if n!=k:
-    b=[]
+n, k = list(map(int, input().split()))
+a = str(input())
+if n != k:
+    b = []
 
     for i in range(n):
-        b.append([ord(a[i]),i])
+        b.append([ord(a[i]), i])
 
     b.sort()
 
-    b=b[k:].copy()
+    b = b[k:].copy()
 
-    #print(b)
-    a=['']*n
+    # print(b)
+    a = [''] * n
     for i in b:
-        a[i[1]]=chr(i[0])
+        a[i[1]] = chr(i[0])
 
-
-
-
-    fini=''.join(a)
+    fini = ''.join(a)
     print(fini)
 else:
     print()
-

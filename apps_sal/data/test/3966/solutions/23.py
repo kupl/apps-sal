@@ -12,4 +12,3 @@ def main():
 
 
 print(main())
-

@@ -30,4 +30,3 @@ for a in range(N // x + 1):
         return
 
 print('NO')
-

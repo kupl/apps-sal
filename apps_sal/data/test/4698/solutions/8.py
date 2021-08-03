@@ -1,5 +1,5 @@
 n = int(input())
-data_1 = list(map(int,input().split()))
+data_1 = list(map(int, input().split()))
 m = int(input())
 data_2 = [input().split() for i in range(m)]
 

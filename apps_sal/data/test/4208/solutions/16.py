@@ -13,8 +13,8 @@ oq = ord('?')
 pairs = []
 
 for i in range(n):
-    lefts[ord(l[i])].append(i+1)
-    rights[ord(r[i])].append(i+1)
+    lefts[ord(l[i])].append(i + 1)
+    rights[ord(r[i])].append(i + 1)
 
 q_store = [lefts[oq], rights[oq]]
 q_used = [0, 0]
@@ -48,4 +48,3 @@ while q_used[0] < len(q_store[0]) and q_used[1] < len(q_store[1]):
 print(len(pairs))
 for pair in pairs:
     print(*pair)
-

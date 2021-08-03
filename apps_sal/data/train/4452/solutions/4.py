@@ -1,5 +1,6 @@
 import itertools
 
+
 def maximum_product_of_parts(n):
     s = str(n)
     return max(

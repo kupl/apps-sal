@@ -52,4 +52,3 @@ for i in s:
             ans += '0 '
 z = str(x * y - cnt)
 print(ans + z)
-

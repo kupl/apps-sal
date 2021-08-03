@@ -22,6 +22,7 @@ class DSU:
     def size(self, x):
         return self.sz[self.find(x)]
 
+
 class Solution(object):
     def maxNumEdgesToRemove(self, N, edges):
         for row in edges:
@@ -31,26 +32,28 @@ class Solution(object):
         alice = []
         bob = []
         both = []
-        
+
         for t, u, v in edges:
             if t == 1:
-                alice.append([u,v])
-            elif t==2:
-                bob.append([u,v])
+                alice.append([u, v])
+            elif t == 2:
+                bob.append([u, v])
             else:
-                both.append([u,v])
+                both.append([u, v])
         dsu1 = DSU(N)
         dsu2 = DSU(N)
         ans = 0
-        for u,v  in both:
-            dsu2.union(u,v)
+        for u, v in both:
+            dsu2.union(u, v)
             if not dsu1.union(u, v):
                 ans += 1
-        for u,v  in alice:
-            if not dsu1.union(u,v): ans += 1
-        for u,v in bob:
-            if not dsu2.union(u,v): ans += 1
-        
+        for u, v in alice:
+            if not dsu1.union(u, v):
+                ans += 1
+        for u, v in bob:
+            if not dsu2.union(u, v):
+                ans += 1
+
         if dsu1.size(0) != N:
             return -1
         if dsu2.size(0) != N:

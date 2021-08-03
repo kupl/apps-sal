@@ -7,7 +7,7 @@ for i in range(len(h)):
 g = [0] * h[-1]
 last = 0
 for i in range(1, len(h)):
-    if h[i] > h[i-1]:
+    if h[i] > h[i - 1]:
         for j in range(last, h[i]):
             g[j] = n - i
             last = h[i]
@@ -23,4 +23,3 @@ for i in range(len(g)):
 if s > 0:
     ans += 1
 print(ans)
-

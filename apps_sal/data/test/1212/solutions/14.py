@@ -13,6 +13,5 @@ for i in range(k, n):
     tmp += f[i] - f[i - k]
     if tmp < mini:
         mini = tmp
-        pos = i - k + 1;
+        pos = i - k + 1
 print(pos + 1)
-

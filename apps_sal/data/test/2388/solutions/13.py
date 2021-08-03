@@ -4,6 +4,7 @@ n = 0
 x = []
 d = []
 
+
 def search(s):
     lo = 0
     hi = n - 1
@@ -29,14 +30,14 @@ def __starting_point():
     x = list(map(lambda x: x[0], xd))
     d = list(map(lambda x: x[1], xd))
 
-    dp = [0] * (n+1)
+    dp = [0] * (n + 1)
     dp[-1] = 1
     next = [0] * n
 
     st = []
     st.append((n, 2e9))
 
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
 
         while st[-1][1] < x[i] + d[i]:
             st.pop()
@@ -45,6 +46,8 @@ def __starting_point():
 
     for i in range(n - 1, -1, -1):
         dp[i] = (dp[next[i]] + dp[i + 1]) % mod
-    
+
     print(dp[0])
+
+
 __starting_point()

@@ -1,7 +1,8 @@
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         e = collections.defaultdict(dict)
-        for i, j, l in edges: e[i][j] = e[j][i] = l
+        for i, j, l in edges:
+            e[i][j] = e[j][i] = l
         pq = [(-M, 0)]
         seen = {}
         while pq:

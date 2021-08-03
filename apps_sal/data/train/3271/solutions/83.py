@@ -1,6 +1,6 @@
 def arr(n=[]):
-    if n==[]:
-        answer=[]
+    if n == []:
+        answer = []
     else:
-        answer=[n for n in range(n)]
+        answer = [n for n in range(n)]
     return answer

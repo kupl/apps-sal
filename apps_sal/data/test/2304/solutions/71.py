@@ -3,10 +3,10 @@ n, m = map(int, input().split())
 graph = [[] for _ in range(n)]
 for _ in range(m):
     l, r, d = map(int, input().split())
-    graph[l-1].append((r-1, d))
-    graph[r-1].append((l-1, -d))
-seen = [False]*n
-dist = [None]*n
+    graph[l - 1].append((r - 1, d))
+    graph[r - 1].append((l - 1, -d))
+seen = [False] * n
+dist = [None] * n
 for i in range(n):
     if seen[i]:
         continue

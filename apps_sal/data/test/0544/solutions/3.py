@@ -11,4 +11,3 @@ for t in range(T):
             ok = False
 
     print(["NO", "YES"][ok])
-

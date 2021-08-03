@@ -18,4 +18,3 @@ for l in hint[1:]:
         num *= 10
 
 print(num)
-

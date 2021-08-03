@@ -1,16 +1,16 @@
 class StreamChecker:
     from collections import deque
+
     def __init__(self, words: List[str]):
         self.max = len(max(words, key=len))
         self.words = tuple(words)
         self.letters = deque(maxlen=self.max)
-        
+
     def query(self, letter: str) -> bool:
         self.letters.append(letter)
         l = ''.join(self.letters)
         return l.endswith(self.words)
-    
-    
+
     '''
     def __init__(self, words: List[str]):
         self.words = set(words)
@@ -49,4 +49,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

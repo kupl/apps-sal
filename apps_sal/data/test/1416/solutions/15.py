@@ -3,6 +3,7 @@ def read_data():
     As = list(map(int, input().split()))
     return n, w, As
 
+
 def solve(n, w, As):
     As.sort()
     cap_girls = As[0]
@@ -11,6 +12,7 @@ def solve(n, w, As):
         return min(cap_girls * 3 * n, w)
     else:
         return min(cap_boys * 1.5 * n, w)
+
 
 n, w, As = read_data()
 print(solve(n, w, As))

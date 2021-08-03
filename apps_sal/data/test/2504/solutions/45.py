@@ -17,10 +17,10 @@ for _ in range(M):
     goal.append(A)
     cost.append(C)
 
-graph = csr_matrix((cost, (start, goal)), shape = (N, N))
-can_reach_with_L = floyd_warshall(graph, directed = False)
+graph = csr_matrix((cost, (start, goal)), shape=(N, N))
+can_reach_with_L = floyd_warshall(graph, directed=False)
 can_reach_with_L[can_reach_with_L > L] = 0
-ans = floyd_warshall(can_reach_with_L, directed = False, unweighted = True)
+ans = floyd_warshall(can_reach_with_L, directed=False, unweighted=True)
 
 Q = int(input())
 for _ in range(Q):
@@ -31,4 +31,3 @@ for _ in range(Q):
         print((-1))
     else:
         print((int(ans[s][t] + 0.5) - 1))
-

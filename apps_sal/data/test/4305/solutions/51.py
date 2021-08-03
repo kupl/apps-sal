@@ -1,3 +1,2 @@
 h, a = list(map(int, input().split()))
-print(( - ( - h // a)))
-
+print((- (- h // a)))

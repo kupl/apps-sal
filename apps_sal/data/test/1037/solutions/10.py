@@ -19,4 +19,3 @@ ans = 0
 for i in range(N + 1):
     ans = max(ans, dp[i][N - i])
 print(ans)
-

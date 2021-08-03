@@ -1,9 +1,9 @@
-s=input()
-ans=[]
-pre=""
+s = input()
+ans = []
+pre = ""
 for i in s:
-    if pre!=i:
+    if pre != i:
         ans.append(i)
-        pre=i
+        pre = i
 
-print(len(ans)-1)
+print(len(ans) - 1)

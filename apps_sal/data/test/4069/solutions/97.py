@@ -10,4 +10,3 @@ else:
         print(x)
     else:
         print((min(x + D, D - x)))
-

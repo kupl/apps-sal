@@ -8,7 +8,6 @@ def check(a, count):
             ks = 0
 
     return True
-    
 
 
 n = int(input())

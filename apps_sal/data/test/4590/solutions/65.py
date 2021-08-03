@@ -1,7 +1,8 @@
 from itertools import accumulate
 from bisect import bisect_left
 
-ri = lambda S: [int(v) for v in S.split()]
+
+def ri(S): return [int(v) for v in S.split()]
 
 
 def rii():
@@ -23,14 +24,14 @@ for i, a in enumerate(pA):
     if K >= a:
         r = K - a
         br = i
-    
+
     if r:
         j = bisect_left(pB, r)
         if j != len(pB):
             if pB[j] > r:
                 j -= 1
             br += j
-    
+
     ans = max(ans, br)
 
 print(ans)

@@ -1,4 +1,4 @@
-d = { 'a':input(), 'b':input(), 'c':input() }
+d = {'a': input(), 'b': input(), 'c': input()}
 pointer = 'a'
 while True:
     if 0 < len(d[pointer]):
@@ -8,4 +8,3 @@ while True:
     else:
         print((pointer.upper()))
         break
-

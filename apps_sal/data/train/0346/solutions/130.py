@@ -2,7 +2,8 @@ class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         j = i = count = ret = 0
         for n in nums:
-            if n%2: count += 1
+            if n % 2:
+                count += 1
             if count == k:
                 i = j
                 while count == k:
@@ -10,5 +11,3 @@ class Solution:
                     j += 1
             ret += j - i
         return ret
-            
-

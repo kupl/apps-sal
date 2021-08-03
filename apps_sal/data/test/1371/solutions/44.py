@@ -1,12 +1,16 @@
 mod = 10**9 + 7
 
+
 def comb(n, r):
     r = min(r, n - r)
     a = b = 1
     for _ in range(r):
-        a *= n; b *= r
-        a %= mod; b %= mod
-        n -= 1; r -= 1
+        a *= n
+        b *= r
+        a %= mod
+        b %= mod
+        n -= 1
+        r -= 1
     return a * pow(b, mod - 2, mod) % mod
 
 
@@ -21,4 +25,3 @@ while 3 * n <= S:
     n += 1
 
 print(ans)
-

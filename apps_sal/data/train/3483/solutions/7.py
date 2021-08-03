@@ -10,10 +10,10 @@ def string_parse_gen(string):
         else:
             if counter >= 2:
                 yield ']'
-            prev_char = char;
-            counter = 0;
-        yield char;
-        
+            prev_char = char
+            counter = 0
+        yield char
+
     if counter >= 2:
         yield ']'
 

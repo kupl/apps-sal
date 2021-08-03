@@ -37,27 +37,21 @@ class Solution:
         if m > len(arr):
             return -1
         uf = UnionFind()
-        
-        for i in range(1, len(arr)+1):
+
+        for i in range(1, len(arr) + 1):
             uf.add(i)
         ans = -1
         seen = set()
-        
+
         for i, n in enumerate(arr):
             uf.rank[n] = 1
-            if n - 1 >= 1 and uf.rank[n-1] != 0:
-                if uf.rank[uf.find(n-1)] == m:
+            if n - 1 >= 1 and uf.rank[n - 1] != 0:
+                if uf.rank[uf.find(n - 1)] == m:
                     ans = i
-                uf.union(n, n-1)
-            if n + 1 <= len(arr) and uf.rank[n+1] != 0:
-                if uf.rank[uf.find(n+1)] == m:
+                uf.union(n, n - 1)
+            if n + 1 <= len(arr) and uf.rank[n + 1] != 0:
+                if uf.rank[uf.find(n + 1)] == m:
                     ans = i
                 uf.union(n, n + 1)
-                
-        return ans
-        
-        
-        
-        
-        
 
+        return ans

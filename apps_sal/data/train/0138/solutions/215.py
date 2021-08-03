@@ -20,9 +20,9 @@ class Solution:
                 # print(cnt_neg)
                 last_0 = i
                 if cnt_neg % 2 == 0:
-                    res = max(res, last_0-first_0-1)
+                    res = max(res, last_0 - first_0 - 1)
                 else:
-                    res = max(res, last_neg-first_0-1, last_0-first_neg-1)
+                    res = max(res, last_neg - first_0 - 1, last_0 - first_neg - 1)
                     # print((first_0, last_0, first_neg, last_neg, res))
                 cnt_neg = 0
                 first_0 = last_0

@@ -6,7 +6,7 @@ s2 = 0
 s = []
 for i in range(N):
     s1 += W[i]
-    s2 = sum(W) - s1    
+    s2 = sum(W) - s1
     s.append(abs(s1 - s2))
 
 ans = min(s)

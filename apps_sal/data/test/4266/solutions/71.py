@@ -10,4 +10,3 @@ for i in range(min_value, max_value):
 answer = ' '.join(A)
 
 print(answer)
-

@@ -1,4 +1,6 @@
 from re import finditer
+
+
 def get_textliterals(pv_code):
     l = len(pv_code)
     pv_code = pv_code.replace("''", '""')
@@ -8,8 +10,8 @@ def get_textliterals(pv_code):
         pv_code += "'"
     patterns = [r"/\*(?:\n|.)*?\*/", "--.+", "'(?:\n|.)*?'"]
     comments = [m.span() for m in finditer(patterns[0], pv_code)] +\
-      [m.span() for m in finditer(patterns[1], pv_code)]
-    answer = [] 
+        [m.span() for m in finditer(patterns[1], pv_code)]
+    answer = []
     candidates = [m.span() for m in finditer(patterns[2], pv_code)]
     for (startA, endA) in candidates:
         ok = True

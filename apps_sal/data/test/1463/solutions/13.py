@@ -18,4 +18,3 @@ for row in range(n):
         good &= cur_good
 
 print('Yes' if good else 'No')
-

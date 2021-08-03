@@ -1,1 +1,1 @@
-combine_names = lambda f,l : f'{f} {l}'
+def combine_names(f, l): return f'{f} {l}'

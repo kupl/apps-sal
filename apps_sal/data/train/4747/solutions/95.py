@@ -4,4 +4,3 @@ def repeat_str(src, count):
             return (src * count)
     except ValueError:
         return 'Error'
-

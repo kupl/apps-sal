@@ -10,11 +10,11 @@ for i in range(n):
 suff = [0 for i in range(n)]
 suff[-1] = pref[-1]
 mc = suff[-1]
-for i in range(n-2, -1, -1):
+for i in range(n - 2, -1, -1):
     suff[i] = max(mc, pref[i])
     mc = suff[i]
     if a[i] == 0 and i > 0:
-        mc = pref[i-1]
+        mc = pref[i - 1]
 if max(suff) > d:
     print(-1)
     return

@@ -18,12 +18,12 @@ class Solution:
             sm += A[j]
             count += 1
             avg = float(sm) / float(count)
-            res = max(res, avg + self.part(A, j-1, K-1, cache))
+            res = max(res, avg + self.part(A, j - 1, K - 1, cache))
         cache[key] = res
         return res
-    
+
     def solve(self, A, K):
-        return self.part(A, len(A)-1, K, {})
-    
+        return self.part(A, len(A) - 1, K, {})
+
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         return self.solve(A, K)

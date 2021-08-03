@@ -25,4 +25,3 @@ class Solution:
                 max_idx = i + 1
 
         return max_idx
-

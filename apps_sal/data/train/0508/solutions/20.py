@@ -1,28 +1,28 @@
+from heapq import heapify, heappop, heappush
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-INF = 1<<31
-from heapq import heapify,heappop,heappush
-from collections import defaultdict
+INF = 1 << 31
 
-N,Q = map(int,input().split())
+N, Q = map(int, input().split())
 event = []
 for _ in range(N):
-    s,t,x = map(int,input().split())
-    event.append((s - x,-1,x))
-    event.append((t - x,0,x))
+    s, t, x = map(int, input().split())
+    event.append((s - x, -1, x))
+    event.append((t - x, 0, x))
 for i in range(Q):
     d = int(input())
-    event.append((d,1,i))
+    event.append((d, 1, i))
 
 q = []
 ans = [-1] * Q
 event.sort()
 push = defaultdict(int)
 pop = defaultdict(int)
-for i in range(2*N + Q):
-    t,typ,x = event[i]
+for i in range(2 * N + Q):
+    t, typ, x = event[i]
     if typ == -1:
-        heappush(q,x)
+        heappush(q, x)
         push[x] += 1
     elif typ == 0:
         pop[x] += 1
@@ -38,4 +38,4 @@ for i in range(2*N + Q):
                 p = -1
                 break
         ans[x] = p
-print('\n'.join(map(str,ans)))
+print('\n'.join(map(str, ans)))

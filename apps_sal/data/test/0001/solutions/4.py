@@ -4,7 +4,7 @@ def sum_str(y):
 
 x = input()
 length = len(x)
-bad_answer = str(int(x[0]) - 1) + '9' * (length - 1) 
+bad_answer = str(int(x[0]) - 1) + '9' * (length - 1)
 total = sum_str(bad_answer)
 
 
@@ -22,4 +22,3 @@ else:
             break
     else:
         print(bad_answer)
-

@@ -7,7 +7,7 @@ for i in range(int(input())):
     Ts = list(map(int, input().split()))
     _ = int(input())
     Ds = list(map(int, input().split()))
-    
+
     for j in Ts:
         if j not in Tr:
             print("no")

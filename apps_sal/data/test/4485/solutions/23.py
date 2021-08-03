@@ -14,4 +14,3 @@ if root_map[1] & root_map[n]:
     print("POSSIBLE")
 else:
     print("IMPOSSIBLE")
-

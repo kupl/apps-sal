@@ -9,5 +9,5 @@ class Solution:
                     break
             else:
                 ans += len(w)
-        
+
         return ans

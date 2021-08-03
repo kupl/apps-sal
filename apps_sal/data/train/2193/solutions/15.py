@@ -6,4 +6,3 @@ for _ in range(n - 1):
 all.sort(reverse=True)
 i = all.index(thomas)
 print(i + 1)
-

@@ -12,8 +12,10 @@ for i in range(H):
             col[j] = True
 
 for i in range(H):
-    if not row[i]: continue
+    if not row[i]:
+        continue
     for j in range(W):
-        if not col[j]: continue
+        if not col[j]:
+            continue
         print(grid[i][j], end='')
     print()

@@ -16,5 +16,5 @@ def main():
         even += 1
     print(even)
 
-main()
 
+main()

@@ -2,31 +2,36 @@ from collections import defaultdict as dd
 import math
 import sys
 import string
-input=sys.stdin.readline
+input = sys.stdin.readline
+
+
 def nn():
-	return int(input())
+    return int(input())
+
 
 def li():
-	return list(input())
+    return list(input())
+
 
 def mi():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
 
 def lm():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
 
-q=nn()
+
+q = nn()
 for _ in range(q):
-	a,b = mi()
+    a, b = mi()
 
-	small= min(a,b)
-	big = max(a,b)
-	ops=0
-	while small<big:
-		small*=2
-		ops+=1
-	if small==big:
-		print((ops+2)//3)
-	else:
-		print(-1)
-
+    small = min(a, b)
+    big = max(a, b)
+    ops = 0
+    while small < big:
+        small *= 2
+        ops += 1
+    if small == big:
+        print((ops + 2) // 3)
+    else:
+        print(-1)

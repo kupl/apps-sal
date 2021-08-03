@@ -1,6 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
- 
+def input(): return sys.stdin.readline().rstrip()
+
+
 n, m = list(map(int, input().split()))
 s = input()
 ans = []
@@ -19,6 +20,3 @@ while True:
                 return
             else:
                 break
-    
-        
-

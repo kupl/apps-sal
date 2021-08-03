@@ -4,5 +4,5 @@ def multiples(m, n):
     while i <= m:
         x = n * i
         answer.append(x)
-        i+=1
+        i += 1
     return answer

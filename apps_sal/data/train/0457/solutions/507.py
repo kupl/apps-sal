@@ -5,8 +5,8 @@ class Solution:
 
         value1 = [0]
         value2 = []
-        nc =  0
-        visited = [False]*(amount+1)
+        nc = 0
+        visited = [False] * (amount + 1)
         visited[0] = True
         while value1:
             nc += 1

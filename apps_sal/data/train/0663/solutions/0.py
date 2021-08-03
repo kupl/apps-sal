@@ -24,6 +24,6 @@ for _ in range(int(input())):
         l = len(s)
         s += s
         k = least_rotation(s)
-        print(s[k:k+l])
+        print(s[k:k + l])
     else:
         print(''.join(sorted(s)))

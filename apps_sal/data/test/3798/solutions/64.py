@@ -39,4 +39,3 @@ for f in sorted(fs_set):
         print(f)
         return
 print((-1))
-

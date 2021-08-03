@@ -1,5 +1,6 @@
 from itertools import product
 
+
 def is_divisible_by_6(string):
     result = []
     n = 0
@@ -15,5 +16,5 @@ def is_divisible_by_6(string):
             s[idx] = digit
         if int(''.join(s)) % 6 == 0:
             result.append(''.join(s))
-        
+
     return result

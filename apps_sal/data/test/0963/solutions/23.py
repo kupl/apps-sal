@@ -1,5 +1,6 @@
 MOD = 998244353
 
+
 def solve(n, k, l, r):
     dp = [0] * n
     dp[0] = 1
@@ -16,10 +17,10 @@ def solve(n, k, l, r):
                 continue
             v -= memo[b]
         dp[i] = v % MOD
-        memo[i] = (memo[i-1] + dp[i]) % MOD
-    return dp[n-1]
+        memo[i] = (memo[i - 1] + dp[i]) % MOD
+    return dp[n - 1]
+
 
 n, k = list(map(int, input().split()))
 l, r = list(zip(*[list(map(int, input().split())) for i in range(k)]))
 print((solve(n, k, l, r)))
-

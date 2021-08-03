@@ -10,4 +10,3 @@ for i in s:
         b <<= 1
         b %= mod
 print(a)
-

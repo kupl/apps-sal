@@ -3,7 +3,7 @@ class Solution:
         count = collections.Counter(hand)
         while count:
             m = min(count)
-            for k in range(m, m+W):
+            for k in range(m, m + W):
                 v = count[k]
                 if not v:
                     return False

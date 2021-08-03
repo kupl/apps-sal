@@ -18,11 +18,11 @@ def main():
         players_fav_cnt[val] += 1
 
     # dp[a][b] - a players, b favourite cards (in total)
-    dp = [[0 for _ in range(k*n+k+1)] for _ in range(n+1)]
+    dp = [[0 for _ in range(k * n + k + 1)] for _ in range(n + 1)]
     for p in range(n):
-        for c in range(k*n+1):
-            for hand in range(k+1):
-                dp[p+1][c+hand] = max(dp[p+1][c+hand], dp[p][c] + h[hand])
+        for c in range(k * n + 1):
+            for hand in range(k + 1):
+                dp[p + 1][c + hand] = max(dp[p + 1][c + hand], dp[p][c] + h[hand])
 
     res = 0
     for f in players_fav_cnt:
@@ -33,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

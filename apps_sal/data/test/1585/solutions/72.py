@@ -9,4 +9,3 @@ while x <= y:
     ans += 1
     x *= 2
 print(ans)
-

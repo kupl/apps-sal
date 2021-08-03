@@ -2,6 +2,7 @@ class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
         n = len(graph)
         cache = [[[-1] * (2 * n) for _ in range(n)] for _ in range(n)]
+
         def move(cat, mouse, t):
             if t == 2 * n:
                 return 0

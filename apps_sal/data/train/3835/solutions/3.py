@@ -12,4 +12,3 @@ def find_discounted(prices):
             continue
         result.extend(key for _ in range(value if key else 1))
     return ' '.join(str(b) for b in result)
-

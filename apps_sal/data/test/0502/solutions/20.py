@@ -5,6 +5,7 @@ from math import fabs
 
 EPS = 10 ** -6
 
+
 def equal(a, b):
     return fabs(a - b) < EPS
 
@@ -20,14 +21,15 @@ def triangle_area(ax, ay, bx, by, cx, cy):
 def main():
     ax, ay, bx, by, cx, cy = (int(x) for x in input().split())
 
-    if (equal(dist_sq(ax, ay, bx, by), dist_sq(bx, by, cx, cy)) and
-        not equal(triangle_area(ax, ay, bx, by, cx, cy), 0.0)):
-            print("Yes")
+    if (equal(dist_sq(ax, ay, bx, by), dist_sq(bx, by, cx, cy))
+            and not equal(triangle_area(ax, ay, bx, by, cx, cy), 0.0)):
+        print("Yes")
     else:
         print("No")
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

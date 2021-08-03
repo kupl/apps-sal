@@ -1,40 +1,35 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        if runningCost>=4*boardingCost or not customers:
+        if runningCost >= 4 * boardingCost or not customers:
             return -1
         tobeBoarded = 0
         minRound, maxProfit, profit = 0, 0, 0
         preRound = 0
-        
+
         for i, x in enumerate(customers):
             tobeBoarded += x
-            preRound = i+1
-            if tobeBoarded>=4:
+            preRound = i + 1
+            if tobeBoarded >= 4:
                 tobeBoarded -= 4
                 minRound = preRound
-                maxProfit, profit = maxProfit + 4*boardingCost - runningCost, profit+4*boardingCost - runningCost
+                maxProfit, profit = maxProfit + 4 * boardingCost - runningCost, profit + 4 * boardingCost - runningCost
             else:
-                profit = tobeBoarded*boardingCost - runningCost
+                profit = tobeBoarded * boardingCost - runningCost
                 tobeBoarded = 0
-                if profit>maxProfit:
+                if profit > maxProfit:
                     maxProfit = profit
                     minRound = preRound
-                    
-            
-        while tobeBoarded>0:
+
+        while tobeBoarded > 0:
             preRound += 1
-            if tobeBoarded>=4:
+            if tobeBoarded >= 4:
                 tobeBoarded -= 4
                 minRound = preRound
-                maxProfit, profit = maxProfit + 4*boardingCost - runningCost, profit+4*boardingCost - runningCost
+                maxProfit, profit = maxProfit + 4 * boardingCost - runningCost, profit + 4 * boardingCost - runningCost
             else:
-                profit = profit + tobeBoarded*boardingCost - runningCost
+                profit = profit + tobeBoarded * boardingCost - runningCost
                 tobeBoarded = 0
-                if profit>maxProfit:
+                if profit > maxProfit:
                     maxProfit = profit
                     minRound = preRound
         return minRound
-            
-            
-                
-

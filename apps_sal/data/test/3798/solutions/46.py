@@ -5,20 +5,20 @@ def f(b, n):
     if n < b:
         return n
     else:
-        return f(b, n//b) + n % b
+        return f(b, n // b) + n % b
 
 
 def main():
     n = int(input())
     s = int(input())
     if s == n:
-        print((n+1))
+        print((n + 1))
         return
     elif s > n:
         print((-1))
         return
     sqrt = int(math.sqrt(n))
-    for b in range(2, sqrt+2):
+    for b in range(2, sqrt + 2):
         if f(b, n) == s:
             print(b)
             return
@@ -35,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

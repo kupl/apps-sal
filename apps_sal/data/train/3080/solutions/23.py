@@ -1,2 +1,2 @@
-from collections import OrderedDict 
-who_is_paying = lambda n: list(OrderedDict.fromkeys([n,n[0:2:]]))
+from collections import OrderedDict
+def who_is_paying(n): return list(OrderedDict.fromkeys([n, n[0:2:]]))

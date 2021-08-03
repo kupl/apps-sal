@@ -12,7 +12,7 @@ ans = 1
 def get_prime(num):
     if num <= 1:
         return
-    for i in range(2, num+1):
+    for i in range(2, num + 1):
         while num % i == 0:
             divisor.append(i)
             num //= i
@@ -22,7 +22,7 @@ def get_prime(num):
 # 方針：入力値を素因数分解し、各素因数の個数を求める
 
 # n-iの素因数を求める
-for j in range(2, n+1):
+for j in range(2, n + 1):
     get_prime(j)
 
 # print(divisor)

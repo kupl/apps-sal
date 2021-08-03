@@ -17,9 +17,9 @@ def main():
             largest = numbers[j]
             max_position = j
     listDiff = largest - smallest
-    #print(largest)
-    #print(smallest)
-    #print(difference)
+    # print(largest)
+    # print(smallest)
+    # print(difference)
     if(listDiff > difference):
         print("NO")
     elif(difference > listDiff):
@@ -33,5 +33,6 @@ def __starting_point():
     if 0 <= testCases <= 100:
         for _ in range(testCases):
             main()
+
 
 __starting_point()

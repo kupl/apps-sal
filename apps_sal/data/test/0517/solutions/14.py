@@ -40,8 +40,3 @@ while count > 0:
         print(2, n - count)
     else:
         print(1, n - count)
-    
-    
-
-            
-

@@ -1,34 +1,33 @@
 t = int(input())
 
 for _ in range(t):
- n, z1, z2 = list(map(int, input().split()))
- 
- arr = list(map(int, input().split()))
+    n, z1, z2 = list(map(int, input().split()))
 
- for i in range(n):
-  arr[i] = abs(arr[i])
+    arr = list(map(int, input().split()))
 
- if (abs(z1) in arr) or (abs(z2) in arr):
-  print(1)
-  continue
+    for i in range(n):
+        arr[i] = abs(arr[i])
 
- if (z1 == 0) or (z2 == 0):
-  print(2)
-  continue
+    if (abs(z1) in arr) or (abs(z2) in arr):
+        print(1)
+        continue
 
- poss = True
- for i in arr:
-  #print(z1 + i, z2 + i, z1 - i, z2 - i)
-  if ((abs(z1 + i) in arr) or (abs(z2 + i) in arr)) and \
-   ((abs(z1 - i) in arr) or (abs(z2 - i) in arr)):
-   pass
-  else:
-   poss = False
-   break
+    if (z1 == 0) or (z2 == 0):
+        print(2)
+        continue
 
- if poss:
-  print(2)
-  continue
+    poss = True
+    for i in arr:
+        #print(z1 + i, z2 + i, z1 - i, z2 - i)
+        if ((abs(z1 + i) in arr) or (abs(z2 + i) in arr)) and \
+                ((abs(z1 - i) in arr) or (abs(z2 - i) in arr)):
+            pass
+        else:
+            poss = False
+            break
 
- print(0)
+    if poss:
+        print(2)
+        continue
 
+    print(0)

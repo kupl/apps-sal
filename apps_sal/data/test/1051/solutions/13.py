@@ -11,4 +11,3 @@ if (max - 25 > 0):
     print(max - 25)
 else:
     print(0)
-

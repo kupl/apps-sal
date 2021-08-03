@@ -1,3 +1,7 @@
+import os
+import sys
+
+
 def testcase():
 
     n, x = list(map(int, input().split()))
@@ -13,7 +17,6 @@ def testcase():
     return
 
 
-import sys, os
 if os.path.exists('input.txt'):
     sys.stdin = open('input.txt', 'r')
 sys.setrecursionlimit(10 ** 5)

@@ -5,7 +5,7 @@ class Solution:
             hour, minute = list(map(int, hour_minute.split(':')))
             time = hour * 60 + minute
             name_to_time[name].append(time)
-        names = []    
+        names = []
         for name, time_list in list(name_to_time.items()):
             time_list.sort()
             dq = collections.deque()
@@ -17,5 +17,3 @@ class Solution:
                     names.append(name)
                     break
         return sorted(names)
-                
-

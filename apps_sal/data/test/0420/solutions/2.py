@@ -3,8 +3,8 @@ def can_mirror(matrix):
         return False
     mid = len(matrix) // 2
     for i in range(mid):
-        lower = -i-1
-        if matrix[mid+lower] != matrix[mid+i]:
+        lower = -i - 1
+        if matrix[mid + lower] != matrix[mid + i]:
             return False
     return True
 
@@ -21,4 +21,3 @@ for i in range(n):
 while can_mirror(matrix):
     matrix = mirror(matrix)
 print(len(matrix))
-

@@ -1,6 +1,5 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
-        
 
         # do a DFS with memorization
         m = len(arr)
@@ -20,12 +19,12 @@ class Solution:
             while right < m and right - i <= d and arr[right] < arr[i]:
                 memo[i] = max(dfs(right) + 1, memo[i])
                 right += 1
-            
+
             return memo[i]
-        
+
         for i in range(m):
             # print(memo)
             dfs(i)
-        
+
         print(memo)
         return max(memo)

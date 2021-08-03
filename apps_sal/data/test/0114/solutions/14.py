@@ -1,8 +1,10 @@
 def mp():
     return map(int, input().split())
 
+
 def f(i, j):
     return a[i][j] == a[i + 1][j] == a[i][j + 1] == a[i + 1][j + 1] == 1
+
 
 n, m = mp()
 a = [list(mp()) for i in range(n)]

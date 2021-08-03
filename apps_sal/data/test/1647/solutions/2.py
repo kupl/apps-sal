@@ -19,7 +19,7 @@ for i in range(n):
                 if sviter[i] in Slovar[j]:
                     Slovar[j] += futbol[i]
                     res += 1
-                    Ans.append([sviter[i], futbol[i]])                    
+                    Ans.append([sviter[i], futbol[i]])
                     break
         elif sviter[i] not in S and futbol[i] in S:
             S.add(sviter[i])
@@ -27,14 +27,14 @@ for i in range(n):
                 if futbol[i] in Slovar[j]:
                     Slovar[j] += sviter[i]
                     res += 1
-                    Ans.append([sviter[i], futbol[i]])                     
+                    Ans.append([sviter[i], futbol[i]])
                     break
         elif sviter[i] in S and futbol[i] in S:
             for j in range(len(Slovar)):
                 if futbol[i] in Slovar[j]:
                     a = j
                 if sviter[i] in Slovar[j]:
-                    b = j                
+                    b = j
             if a != b:
                 Slovar[a] = Slovar[a] + Slovar[b]
                 Slovar[b] = ''

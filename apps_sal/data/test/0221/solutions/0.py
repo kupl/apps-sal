@@ -14,9 +14,8 @@ else:
         if t % (k + k + 1) == 0:
             if 1 + t // (k + k + 1) < answer_n:
                 answer = i + 1
-                answer_n = 1 + t // (k + k + 1)            
+                answer_n = 1 + t // (k + k + 1)
     print(answer_n)
     while answer <= n:
-        print(answer, end = ' ')
+        print(answer, end=' ')
         answer += k + k + 1
-        

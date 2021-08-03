@@ -23,4 +23,3 @@ for _ in range(t):
                 a[h] = 0
 
     print(*a)
-

@@ -1,14 +1,28 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**10
-mod = 10**9+7
-dd = [(-1,0),(0,1),(1,0),(0,-1)]
-ddn = [(-1,0),(-1,1),(0,1),(1,1),(1,0),(1,-1),(0,-1),(-1,-1)]
+mod = 10**9 + 7
+dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -54,16 +68,17 @@ class UnionFind:
             d[self.find(i)].append(i)
         return d
 
+
 def main():
     M = 2**17
-    n,m = LI()
+    n, m = LI()
     a = [LI() for _ in range(m)]
     e = collections.defaultdict(list)
-    for p,q,c in a:
-        pc = p+c*M
-        qc = q+c*M
-        pm = p-M
-        qm = q-M
+    for p, q, c in a:
+        pc = p + c * M
+        qc = q + c * M
+        pm = p - M
+        qm = q - M
         e[pc].append(qc)
         e[qc].append(pc)
         e[pm].append(pc)
@@ -73,7 +88,7 @@ def main():
 
     def search():
         d = collections.defaultdict(lambda: inf)
-        s = 1-M
+        s = 1 - M
         d[s] = 0
         q = []
         heapq.heappush(q, (0, s))
@@ -108,6 +123,4 @@ def main():
     return search()
 
 
-
 print(main())
-

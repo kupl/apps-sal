@@ -33,10 +33,10 @@ import sys
 from sys import stdin
 
 N = int(stdin.readline())
-d = list(map(int,stdin.readline().split()))
+d = list(map(int, stdin.readline().split()))
 S = sum(d)
 
-if sum(d) < 2*(N-1):
+if sum(d) < 2 * (N - 1):
     print((0))
     return
 
@@ -46,8 +46,7 @@ for i in d:
     ans *= i
     ans %= mod
 
-for i in range(S-N,S-2*N+3-1,-1):
+for i in range(S - N, S - 2 * N + 3 - 1, -1):
     ans *= i
     ans %= mod
-print (ans)
-
+print(ans)

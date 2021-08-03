@@ -12,4 +12,3 @@ for i in range(n):
             bad += 1
 
 print(x, bad)
-

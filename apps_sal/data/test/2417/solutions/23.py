@@ -25,4 +25,3 @@ for i in range(1, n):
     if bb[i] < smallest:
         smallest = bb[i]
 print(fines)
-

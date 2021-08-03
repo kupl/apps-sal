@@ -51,10 +51,10 @@ def resolve():
 
     ans = []
     for i in range(K):
-        if A+i <= B and A+i not in ans:
-            ans.append(A+i)
-        if B-i >= A and B-i not in ans:
-            ans.append(B-i)
+        if A + i <= B and A + i not in ans:
+            ans.append(A + i)
+        if B - i >= A and B - i not in ans:
+            ans.append(B - i)
 
     ans.sort()
 
@@ -65,5 +65,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

@@ -14,4 +14,3 @@ for i in range(n):
             cap += 1
     cap = max(cap, len(room))
 print(cap)
-

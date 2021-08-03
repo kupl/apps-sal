@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 from itertools import combinations as c, product as p
 from collections import deque
 sys.setrecursionlimit(10**9)
@@ -18,7 +19,5 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
-
 ############################################################
 print(('NO' if int(''.join(lstr())) % 4 else 'YES'))
-

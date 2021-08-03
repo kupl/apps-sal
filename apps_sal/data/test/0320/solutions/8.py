@@ -20,4 +20,3 @@ for a, b in A:
         return
 
 print(-1)
-

@@ -12,4 +12,3 @@ for block in s:
     print(len(block), end=' ')
 if s:
     print()
-

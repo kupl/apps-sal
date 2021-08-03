@@ -15,4 +15,3 @@ while i < k:
     i += 1
 
 print(ans)
-

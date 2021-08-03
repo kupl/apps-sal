@@ -29,4 +29,3 @@ for i in range(m + 2, n + 1):
 
 for a, b in ANS:
     print((a, b))
-

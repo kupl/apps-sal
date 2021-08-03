@@ -5,7 +5,7 @@ for ee in range(e):
     # a = [int(i) for i in input().split(' ', n - 1)]
     for i in range(n):
         y = x
-        x = (x//2)+10
+        x = (x // 2) + 10
         if y < x:
             x = y
             break

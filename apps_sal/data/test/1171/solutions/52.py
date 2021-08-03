@@ -41,4 +41,5 @@ def __starting_point():
     # Vi = [random.randint(-(10 ** 7), 10 ** 7) for _ in range(N)]
     # solve(N, K, Vi)
 
+
 __starting_point()

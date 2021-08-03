@@ -5,13 +5,13 @@ class Solution:
         n = len(nums)
         neg = -1
         zero = -1
-        
+
         for i in range(n):
             if nums[i] < 0:
                 cur += 1
                 if neg == -1:
                     neg = i
-            
+
             if nums[i] == 0:
                 zero = i
                 cur = 0

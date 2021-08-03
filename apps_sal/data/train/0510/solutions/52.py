@@ -3,6 +3,7 @@ class SegmentTree:
     0-indexed
     query : [L, R)
     """
+
     def __init__(self, size, initValue):
         self.size = 1 << (size.bit_length())  # 完全二分木にする
         self.data = [initValue] * (2 * self.size - 1)
@@ -38,8 +39,10 @@ class SegmentTree:
             R >>= 1
         return ret
 
+
 def cToI(s):
     return ord(s) - ord('a')
+
 
 N = int(input())
 S = list(map(cToI, input()))
@@ -64,4 +67,3 @@ for a in ans:
         cnt += a % 2
         a //= 2
     print(cnt)
-

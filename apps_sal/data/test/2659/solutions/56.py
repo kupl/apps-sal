@@ -28,4 +28,3 @@ n = 1
 for i in range(1, K + 1):
     print((next_sunuke(n)))
     n = next_sunuke(n) + 1
-

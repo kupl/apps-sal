@@ -2,7 +2,8 @@ s = input()
 t = input()
 diffcnt = 0
 for i, j in zip(s, t):
-    if i != j: diffcnt += 1
+    if i != j:
+        diffcnt += 1
 if diffcnt % 2 == 1:
     print('impossible')
     return
@@ -15,5 +16,3 @@ for i, j in zip(s, t):
         ans.append(i if cnt % 2 == 0 else j)
         cnt += 1
 print(''.join(ans))
-    
-

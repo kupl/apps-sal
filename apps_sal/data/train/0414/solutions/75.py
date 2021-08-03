@@ -6,8 +6,8 @@ class Solution:
                 break
             if arr[0] > arr[1]:
                 arr.append(arr.pop(1))
-                cnt[arr[0]]+=1
+                cnt[arr[0]] += 1
             elif arr[0] < arr[1]:
                 arr.append(arr.pop(0))
-                cnt[arr[0]]+=1
+                cnt[arr[0]] += 1
         return arr[0]

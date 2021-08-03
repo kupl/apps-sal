@@ -1,4 +1,4 @@
-def mod_combination(n, k, mod = 10 ** 9 + 7):
+def mod_combination(n, k, mod=10 ** 9 + 7):
     def extended_gcd(a, b):
         if b == 0:
             return (a, 1, 0)
@@ -11,11 +11,14 @@ def mod_combination(n, k, mod = 10 ** 9 + 7):
         q = (q * i) % mod
     return p * (extended_gcd(q, mod)[1] % mod) % mod
 
+
 mod = 10 ** 9 + 7
 
 r1, c1, r2, c2 = map(int, input().split())
 
+
 def f(i, j):
     return mod_combination(i + j, i)
+
 
 print((f(r2 + 1, c2 + 1) - f(r2 + 1, c1) - f(r1, c2 + 1) + f(r1, c1)) % mod)

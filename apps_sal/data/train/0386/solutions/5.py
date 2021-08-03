@@ -2,11 +2,12 @@ class Solution:
     def countVowelPermutation(self, n: int) -> int:
         vowels = ['a', 'e', 'i', 'o', 'u']
         MOD = 7 + 1e9
+
         @lru_cache(maxsize=None)
         def helper(step, char):
             if step == n:
                 return 1
-            
+
             result = 0
             if step == 0:
                 for currChar in vowels:

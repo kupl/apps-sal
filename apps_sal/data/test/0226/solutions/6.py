@@ -1,19 +1,24 @@
 import math
 from random import random
 
+
 def getInt():
     return(int(input()))
+
 
 def getInts():
     line = input().split()
     return [int(l) for l in line]
 
+
 def getFloat():
     return(float(input()))
+
 
 def getFloats():
     line = input().split()
     return [float(l) for l in line]
+
 
 def getStrings():
     line = input().split()

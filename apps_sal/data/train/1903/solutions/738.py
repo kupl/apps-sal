@@ -1,7 +1,7 @@
 class Solution:
     def minCostConnectPoints(self, points):
         N = len(points)
-        
+
         edges = []
         for i in range(N):
             for j in range(i + 1, N):
@@ -16,7 +16,8 @@ class Solution:
             if dsu.union(u, v):
                 ans += d
         return ans
-    
+
+
 class DSU:
     def __init__(self, N):
         self.par = list(range(N))

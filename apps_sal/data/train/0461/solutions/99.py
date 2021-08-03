@@ -3,7 +3,7 @@ class Solution:
         graph = collections.defaultdict(list)
         for i in range(n):
             graph[manager[i]].append(i)
-            
+
         queue = collections.deque([(headID, 0)])
         result = 0
         while queue:
@@ -12,4 +12,3 @@ class Solution:
             for j in graph[i]:
                 queue.append((j, time + informTime[i]))
         return result
-

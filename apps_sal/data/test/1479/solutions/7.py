@@ -13,7 +13,6 @@ def f():
             if i + i < n and a[i + i][j] == 'U':
                 res[j] += 1
     print(' '.join(list(map(str, res))))
-f()        
-                
-            
 
+
+f()

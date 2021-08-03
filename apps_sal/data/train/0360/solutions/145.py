@@ -17,7 +17,7 @@ class Solution:
         for i in weights:
             if temp >= i:
                 temp -= i
-            else: 
+            else:
                 temp = mid
                 temp -= i
                 day += 1

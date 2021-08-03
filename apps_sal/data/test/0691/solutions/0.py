@@ -13,13 +13,13 @@ elif n == 2 and x > 0:
 else:
     a = []
     ans = 0
-    for i in range(1, n-2):
+    for i in range(1, n - 2):
         ans ^= i
         a.append(i)
     if ans == x:
         a.append(m1)
         a.append(m2)
-        a.append(m1+m2)
+        a.append(m1 + m2)
     else:
         a.append(m1)
         a.append(m1 ^ x ^ ans)
@@ -27,4 +27,3 @@ else:
 if not (n == 2 and x == 0):
     print("YES")
     print(" ".join([str(e) for e in a]))
-

@@ -7,6 +7,5 @@ for i in range(int(input())):
     else:
         x = 3
         while x <= n:
-            x = 2*x+1
+            x = 2 * x + 1
         print(x)
-

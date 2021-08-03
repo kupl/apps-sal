@@ -7,7 +7,7 @@ Created on Sun May 27 20:07:20 2018
 """
 
 word = input()
-while word == word[::-1] and len(word)>0:
+while word == word[::-1] and len(word) > 0:
     word = word[:-1]
 
 print(len(word))

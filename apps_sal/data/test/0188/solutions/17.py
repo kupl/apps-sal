@@ -36,5 +36,3 @@ while s2:
         s1 += 2
         s2 -= 1
 print("YES" if flag and a1 + a2 + a4 * 2 >= s1 else "NO")
-
-

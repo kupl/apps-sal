@@ -12,7 +12,7 @@ class Solution:
             return s
 
         graph = {}
-        for u,v in pairs:
+        for u, v in pairs:
             if u in graph:
                 graph[u].append(v)
             else:

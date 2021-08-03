@@ -9,18 +9,18 @@ a_opt = floyd_warshall(a)
 
 for i in range(n):
     a[i][i] = INF
-    
+
 ans = 0
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         if a_opt[i][j] < a[i][j]:
             print((-1))
             return
         else:
             d = a[i][j]
-            if d < np.min(a[i]+a[j]):
+            if d < np.min(a[i] + a[j]):
                 ans += d
-                
+
             # Straight solution, but TLE in python
             # for k in range(n):
             #     if k in [i, j]:
@@ -29,4 +29,3 @@ for i in range(n):
             #         d = 0
             # ans += d
 print(ans)
-

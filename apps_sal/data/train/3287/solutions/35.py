@@ -1,4 +1,4 @@
-def mouth_size(animal): 
+def mouth_size(animal):
     result = ""
     if animal.lower() == "alligator":
         result = "small"

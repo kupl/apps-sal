@@ -1,6 +1,8 @@
-3
 import sys
-input = lambda: sys.stdin.readline().strip()
+3
+def input(): return sys.stdin.readline().strip()
+
+
 n, m = [int(x) for x in input().split()]
 s = [[int(x) - 1 for x in input().split()][1:] for i in range(m)]
 p = [int(x) for x in input().split()]

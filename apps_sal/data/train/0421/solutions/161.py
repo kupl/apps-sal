@@ -5,5 +5,5 @@ class Solution:
         for i in range(1, len(s)):
             if s[i] == maxChar and s[i:] > res:
                 res = s[i:]
-        
+
         return res

@@ -22,4 +22,3 @@ for s in l:
     res.append(s)
 print(len(res))
 print('\n'.join(res))
-

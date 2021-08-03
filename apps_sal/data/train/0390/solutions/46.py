@@ -1,6 +1,5 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
-        
 
         dp = [False for i in range(n + 1)]
 

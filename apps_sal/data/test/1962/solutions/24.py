@@ -13,7 +13,7 @@ else:
     cur = 0
     for i in range(n):
         ans += a[cur]
-        use = min(k-1, ok)
+        use = min(k - 1, ok)
         ok -= use
         cur += 1 + use
     print(ans)

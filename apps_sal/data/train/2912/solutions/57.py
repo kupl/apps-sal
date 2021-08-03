@@ -7,4 +7,3 @@ def find_multiples(integer, limit):
         flag += 1
         res.append(multiple)
     return res
-

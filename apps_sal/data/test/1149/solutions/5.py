@@ -6,4 +6,3 @@ if len(a) == n:
     print('I become the guy.')
 else:
     print('Oh, my keyboard!')
-

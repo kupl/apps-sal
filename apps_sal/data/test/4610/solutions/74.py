@@ -10,4 +10,3 @@ if opt > 0:
     for i in range(opt):
         ans += a[i][1]
 print(ans)
-

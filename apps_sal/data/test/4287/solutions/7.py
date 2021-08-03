@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
+from functools import lru_cache, reduce
+from bisect import bisect_left, bisect_right
+import operator
+import string
 import sys
 from collections import deque, defaultdict, namedtuple
 from math import sqrt, factorial, gcd, ceil, atan, pi
-def input(): return sys.stdin.readline()[:-1] # warning not \n
+def input(): return sys.stdin.readline()[:-1]  # warning not \n
+
+
 # def input(): return sys.stdin.buffer.readline().strip() # warning bytes
 # def input(): return sys.stdin.buffer.readline().decode('utf-8')
-import string
-import operator
 # string.ascii_lowercase
-from bisect import bisect_left, bisect_right
-from functools import lru_cache, reduce
-MOD = int(1e9)+7
+MOD = int(1e9) + 7
 INF = float('inf')
 
 
@@ -32,10 +34,11 @@ def solve():
     for i in range(1, a + 1):
         if rain[i]:
             for x, p in umb:
-                if x >= i: break
+                if x >= i:
+                    break
                 dp[i] = min(dp[i], dp[x] + p * (i - x))
         else:
-            dp[i] = dp[i-1]
+            dp[i] = dp[i - 1]
 
     if dp[a] == INF:
         print(-1)
@@ -43,10 +46,9 @@ def solve():
         print(dp[a])
 
 
-
 t = 1
 # t = int(input())
-for case in range(1,t+1):
+for case in range(1, t + 1):
     ans = solve()
 
 
@@ -60,4 +62,3 @@ dp[x] = min()
 
 
 """
-

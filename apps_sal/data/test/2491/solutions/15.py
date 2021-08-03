@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(10**7)
+
+
 def main():
     N, M = list(map(int, input().split()))
     G = [[] for _ in range(N)]
@@ -26,5 +28,5 @@ def main():
     s = S[-1]
     return s if s < INF else 'inf'
 
-print((main()))
 
+print((main()))

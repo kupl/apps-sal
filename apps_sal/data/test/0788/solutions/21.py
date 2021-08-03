@@ -6,9 +6,5 @@ for i in s[1:]:
     if x == 0:
         x = 9
     ans += x
-    
-print(ans)    
-    
 
-      
-
+print(ans)

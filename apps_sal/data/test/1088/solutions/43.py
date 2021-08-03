@@ -7,11 +7,15 @@ n, K = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(n)]
 fa = [i for i in range(n)]
 fc = [1 for i in range(n)]
+
+
 def getF(p, u):
     if p[p[u]] == p[u]:
         return p[u]
     p[u] = getF(p, p[u])
     return p[u]
+
+
 def uniF(p, c, u, v):
     u = getF(p, u)
     v = getF(p, v)
@@ -19,6 +23,8 @@ def uniF(p, c, u, v):
         return
     p[u] = v
     c[v] += c[u]
+
+
 for i in range(n):
     for j in range(n):
         f = True

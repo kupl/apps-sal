@@ -9,4 +9,3 @@ if ans % 2 != 0:
 
 # 結果出力
 print(ans)
-

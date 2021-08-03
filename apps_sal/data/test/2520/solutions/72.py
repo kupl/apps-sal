@@ -6,12 +6,12 @@ CD = [list(map(int, input().split())) for _ in range(K)]
 
 friend_g = [set() for i in range(N)]
 for a, b in AB:
-    a, b = a-1, b-1
+    a, b = a - 1, b - 1
     friend_g[a].add(b)
     friend_g[b].add(a)
 friend_count = [len(s) for s in friend_g]
 
-g_nums = [-1]*N
+g_nums = [-1] * N
 current_g_num = 0
 for i in range(N):
     if g_nums[i] == -1:
@@ -26,13 +26,12 @@ for i in range(N):
                 # print(i, t, g_nums)
         current_g_num += 1
 
-block_count = [0]*N
+block_count = [0] * N
 for c, d in CD:
-    c, d = c-1, d-1
+    c, d = c - 1, d - 1
     if g_nums[c] == g_nums[d]:
         block_count[c] += 1
         block_count[d] += 1
 
 g_nums_counter = Counter(g_nums)
 print((*(g_nums_counter[g_nums[i]] - friend_count[i] - block_count[i] - 1 for i in range(N))))
-

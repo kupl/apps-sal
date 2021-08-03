@@ -1,4 +1,4 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 
 a = []
 for i in range(n):
@@ -8,14 +8,14 @@ b = []
 for i in range(n):
     b.append(list(map(int, input().split())))
 
-for i in range(m + n -1):
+for i in range(m + n - 1):
     d1 = {}
-    d2 ={}
+    d2 = {}
 
     for j in range(n):
         l = j
         r = i - j
-        if l >=0 and l < n and r >= 0 and r < m:
+        if l >= 0 and l < n and r >= 0 and r < m:
             e = a[l][r]
             if e not in d1:
                 d1[e] = 0
@@ -38,4 +38,3 @@ for i in range(m + n -1):
             print('NO')
             return
 print('YES')
-

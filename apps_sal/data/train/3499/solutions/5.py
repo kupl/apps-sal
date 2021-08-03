@@ -17,7 +17,7 @@ def to24hourtime(hour, minute, period):
         if hour == 24:
             hour = 0
         hour_str = str(hour)
-        
+
         if hour <= 9:
             hour_str = '0' + hour_str
         if minute <= 9:
@@ -26,4 +26,3 @@ def to24hourtime(hour, minute, period):
             hour_str = '12'
 
         return '%s%s' % (hour_str, minute_str)
-

@@ -7,7 +7,7 @@ class Solution:
                     res += 1
                     prev = i
             return res
-        
+
         # position.sort()
         # l,r,ans=0,position[-1],0
         # while l<=r:
@@ -18,7 +18,7 @@ class Solution:
         #     else:
         #         r=gap-1
         # return ans
-        
+
         position.sort()
         if m == 2:
             return position[-1] - position[0]

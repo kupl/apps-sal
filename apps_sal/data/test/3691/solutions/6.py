@@ -2,7 +2,7 @@ x0, y0, ax, ay, bx, by = list(map(int, input().split()))
 xs, ys, t = list(map(int, input().split()))
 x = [x0]
 y = [y0]
-while x[-1] < xs or y[-1] < ys or abs(x[-1] - xs) + abs(y[-1] - ys) <= 2*t:
+while x[-1] < xs or y[-1] < ys or abs(x[-1] - xs) + abs(y[-1] - ys) <= 2 * t:
     x.append(x[-1] * ax + bx)
     y.append(y[-1] * ay + by)
 x.append(x[-1] * ax + bx)
@@ -27,4 +27,3 @@ for i in range(len(x)):
             cur_y = y[j]
     ans = max(cnt, ans)
 print(ans)
-

@@ -7,5 +7,5 @@ for i in range(n):
     x = m * (a / b)
     if x < ans:
         ans = x
-        
+
 print(ans)

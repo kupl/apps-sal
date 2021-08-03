@@ -12,4 +12,3 @@ answer = 2 * g - r
 
 #   出力
 print(answer)
-

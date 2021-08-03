@@ -6,4 +6,3 @@ elif s.count('A') < s.count('D'):
     print('Danik')
 else:
     print('Friendship')
-

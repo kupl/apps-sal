@@ -2,11 +2,12 @@ class Node:
     def __init__(self, name):
         self.children = []
         self.name = name
-        
+
     def add_children(self, name):
         node = Node(name)
         self.children.append(node)
         return node
+
 
 class ThroneInheritance:
 
@@ -15,7 +16,6 @@ class ThroneInheritance:
         self.dead = set()
         self.lookup = dict()
         self.lookup[kingName] = self.root
-        
 
     def birth(self, parentName: str, childName: str) -> None:
         self.lookup[childName] = self.lookup[parentName].add_children(childName)
@@ -25,16 +25,14 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self) -> List[str]:
         results = []
-        
+
         def dfs(x):
             nonlocal results
-            
+
             if x.name not in self.dead:
                 results.append(x.name)
             for y in x.children:
                 dfs(y)
-            
+
         dfs(self.root)
         return results
-    
-

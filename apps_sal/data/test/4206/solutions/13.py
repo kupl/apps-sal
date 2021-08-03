@@ -18,10 +18,9 @@ for i in range(1, len(a)):
             sm += a[j]
             # print(j, end=", ")
             if sm % 3 == 0:
-                #print("GOT")
+                # print("GOT")
                 cnt += 1
                 last_free = i + 1
                 break
-        #print("")
+        # print("")
 print(cnt)
-

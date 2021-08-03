@@ -1,7 +1,7 @@
 t = input()[:: -1]
 i = t.find('F')
 if i < 0:
-     print(0)
+    print(0)
 else:
     j = t.find('M', i + 1)
     if j < 0:

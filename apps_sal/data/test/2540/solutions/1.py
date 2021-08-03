@@ -6,18 +6,18 @@ def main():
     N = int(input())
     color = list(map(int, input().split()))
     color.insert(0, 0)
-    adj = [[] for _ in range(N+1)]
-    for _ in range(N-1):
+    adj = [[] for _ in range(N + 1)]
+    for _ in range(N - 1):
         a, b = list(map(int, input().split()))
         adj[a].append(b)
         adj[b].append(a)
 
     que = deque()
     que.append(1)
-    seen = [-1] * (N+1)
+    seen = [-1] * (N + 1)
     seen[1] = 0
-    par = [0] * (N+1)
-    child = [[] for _ in range(N+1)]
+    par = [0] * (N + 1)
+    child = [[] for _ in range(N + 1)]
     seq = []
     while que:
         v = que.popleft()
@@ -30,10 +30,10 @@ def main():
                 que.append(u)
     seq.reverse()
 
-    cnt = [{color[i]: 1} for i in range(N+1)]
-    cnt_size = [1] * (N+1)
-    dom_num = [1] * (N+1)
-    ans = [color[i] for i in range(N+1)]
+    cnt = [{color[i]: 1} for i in range(N + 1)]
+    cnt_size = [1] * (N + 1)
+    dom_num = [1] * (N + 1)
+    ans = [color[i] for i in range(N + 1)]
     for v in seq:
         big = cnt[v]
         size_big = cnt_size[v]
@@ -59,12 +59,13 @@ def main():
         cnt_size[v] = size_big
         cnt[v] = big
     print(*ans[1:])
-    #print(child)
-    #print(cnt)
-    #print(cnt_size)
+    # print(child)
+    # print(cnt)
+    # print(cnt_size)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

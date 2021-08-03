@@ -1,1 +1,1 @@
-camel_case=lambda s:s.title().replace(' ','')
+def camel_case(s): return s.title().replace(' ', '')

@@ -1,4 +1,6 @@
 from sortedcontainers import SortedList
+
+
 class Solution:
     def findLatestStep(self, A: List[int], m: int) -> int:
         length = [0] * (len(A) + 2)

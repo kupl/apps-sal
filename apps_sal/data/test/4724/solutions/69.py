@@ -4,6 +4,6 @@ def main():
 
     x = 2 * g - r
     print(x)
-    
-    
+
+
 main()

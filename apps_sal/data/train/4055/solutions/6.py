@@ -4,8 +4,8 @@ def solve(n):
     b = '01'
     lf = 1
     if n > 1:
-        for i in range(n-lf):
-            c = b+a
+        for i in range(n - lf):
+            c = b + a
             a = b
             b = c
         return c

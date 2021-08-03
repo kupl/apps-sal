@@ -14,4 +14,3 @@ for _ in range(int(input())):
     else:
         print(a - a % 2)
         print(*[0 for _ in range(a - a % 2)])
-

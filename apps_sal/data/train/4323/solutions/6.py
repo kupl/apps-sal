@@ -1,8 +1,8 @@
-def uniq(seq): 
+def uniq(seq):
     ans = []
-    p   = ''
+    p = ''
     for i in seq:
         if i != p:
             ans.append(i)
         p = i
-    return ans if len(seq)>1 else seq
+    return ans if len(seq) > 1 else seq

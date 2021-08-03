@@ -8,4 +8,3 @@ for it in range(n):
         break
 if not color:
     print("#Black&White")
-

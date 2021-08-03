@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         left = 0
@@ -18,7 +20,3 @@ class Solution:
                 left += 1
             maxNumFruit = max(maxNumFruit, numFruits)
         return maxNumFruit
-                
-                
-            
-

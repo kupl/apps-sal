@@ -1,10 +1,10 @@
-t=int(input())
+t = int(input())
 for _ in range(t):
-    n=int(input())
-    a=list(map(int, input().split()))
-    b=list(map(int, input().split()))
+    n = int(input())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
     grow = shrink = False
-    for ai, bi in zip(a,b):
+    for ai, bi in zip(a, b):
         if bi < ai:
             if not shrink:
                 print('NO')
@@ -18,4 +18,3 @@ for _ in range(t):
             shrink = True
     else:
         print('YES')
-

@@ -1,13 +1,15 @@
-import sys
-input = lambda: sys.stdin.readline().rstrip()
-
 from collections import deque
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 N = int(input())
 X = [[] for _ in range(N)]
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b = map(int, input().split())
-    X[a-1].append(b-1)
-    X[b-1].append(a-1)
+    X[a - 1].append(b - 1)
+    X[b - 1].append(a - 1)
+
 
 def farthest(i):
     L = [-1] * N
@@ -23,11 +25,13 @@ def farthest(i):
                 if L[k] < 0:
                     L[k] = d
                     post.append(k)
-        
+
     return (pre[0], d - 1)
+
 
 s, _ = farthest(0)
 t, d = farthest(s)
+
 
 def BFS_dist(n, E, i0=0):
     Q = deque([i0])
@@ -41,13 +45,15 @@ def BFS_dist(n, E, i0=0):
                 Q.append(c)
     return D
 
+
 D1 = BFS_dist(N, X, s)
 D2 = BFS_dist(N, X, t)
 
 Y = [0] * (d + 1)
 ma = 0
 for i in range(N):
-    if i == s or i == t: continue
+    if i == s or i == t:
+        continue
     a, b = sorted((D1[i], D2[i]))
     ma = max(ma, a)
     Y[b] += 1
@@ -58,7 +64,9 @@ i2 = P + 1 >> 1
 s = 1
 ans = d
 for i in range(d, ma, -1):
-    if Y[i]: s = pow(i2, Y[i], P) * s % P
+    if Y[i]:
+        s = pow(i2, Y[i], P) * s % P
     ans -= s
-    if ans < 0: ans += P
+    if ans < 0:
+        ans += P
 print(ans * pow(2, N, P) % P)

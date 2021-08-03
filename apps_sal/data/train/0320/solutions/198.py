@@ -17,7 +17,3 @@ class Solution:
             if not done:
                 ops += 1
         return ops
-            
-                    
-            
-

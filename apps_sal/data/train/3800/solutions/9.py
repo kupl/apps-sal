@@ -22,7 +22,7 @@ def convert_int(num, to_base=26, from_base=10):
         return alphabet[n]
     else:
         if n % to_base == 0:
-            return convert_int(n // to_base-1, to_base) + alphabet[26]
+            return convert_int(n // to_base - 1, to_base) + alphabet[26]
         else:
             return convert_int(n // to_base, to_base) + alphabet[n % to_base]
 

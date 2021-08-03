@@ -9,9 +9,9 @@ for i in range(N):
 
 A.sort()
 ans = float("inf")
-cand = [A[N//2]]
+cand = [A[N // 2]]
 if N > 1:
-    cand.append(A[N//2+1])
+    cand.append(A[N // 2 + 1])
 for i in cand:
     tmp = 0
     for a in A:

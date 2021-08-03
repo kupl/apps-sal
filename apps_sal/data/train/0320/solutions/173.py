@@ -20,6 +20,8 @@
 #         return [e for e in nums if e]
 
 from collections import deque
+
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         step = 0
@@ -34,5 +36,3 @@ class Solution:
                     if val:
                         nums[i] /= 2
         return step
-
-

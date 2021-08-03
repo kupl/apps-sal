@@ -1,4 +1,4 @@
-a, b, c, d, e = list(map(int,input().split()))
+a, b, c, d, e = list(map(int, input().split()))
 
 if a == 0:
     print((1))
@@ -10,4 +10,3 @@ elif d == 0:
     print((4))
 else:
     print((5))
-

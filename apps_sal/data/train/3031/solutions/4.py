@@ -1,2 +1,2 @@
 def alphabetic(string):
-       return string == ''.join(sorted(string))
+    return string == ''.join(sorted(string))

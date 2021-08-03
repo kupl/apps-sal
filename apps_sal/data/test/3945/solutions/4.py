@@ -27,4 +27,3 @@ for i, vg in enumerate(gor):
         o[i].append(f(vg1, ver[j], vr))
 for i in o:
     print(' '.join(list(map(str, i))))
-

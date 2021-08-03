@@ -18,4 +18,3 @@ for i in range(N):
             B -= 1
 else:
     print(N)
-

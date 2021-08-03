@@ -5,7 +5,7 @@ class Solution:
         for bulb in light:
             if bulb == 1 or bulb - 1 in blue:
                 blue.add(bulb)
-                t = bulb+1
+                t = bulb + 1
                 while t in yellow:
                     yellow.remove(t)
                     blue.add(t)
@@ -15,4 +15,3 @@ class Solution:
             if not yellow:
                 moment += 1
         return moment
-

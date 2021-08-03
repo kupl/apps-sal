@@ -12,7 +12,6 @@ sum_ = sum(abs_A)
 if minus_cnt % 2 == 0:
     ans = sum_
 else:
-    ans = sum_ - 2*min(abs_A)
+    ans = sum_ - 2 * min(abs_A)
 
 print(ans)
-

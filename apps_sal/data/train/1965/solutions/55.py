@@ -20,8 +20,9 @@ class Solution:
                 B.append((u, v, i))
 
         def mst(edges):
-            p = list(range(n+1))
+            p = list(range(n + 1))
             ret = set()
+
             def find(x):
                 if x != p[x]:
                     p[x] = find(p[x])
@@ -31,11 +32,11 @@ class Solution:
                 if pu != pv:
                     ret.add(i)
                     p[pu] = pv
-            return ret if len(ret) == n-1 else None
+            return ret if len(ret) == n - 1 else None
         ta = mst(A)
         if ta is None:
             return -1
         tb = mst(B)
         if tb is None:
             return -1
-        return ans + m - len(ta|tb)
+        return ans + m - len(ta | tb)

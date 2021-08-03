@@ -9,6 +9,7 @@
     S は a,b,c からなる
 '''
 
+
 def abc093a(input: str) -> str:
     str_list = ["abc", "acb", "bac", "bca", "cab", "cba"]
 
@@ -17,6 +18,6 @@ def abc093a(input: str) -> str:
     else:
         return "Yes"
 
+
 s = str(input())
 print((abc093a(s)))
-

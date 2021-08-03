@@ -11,5 +11,3 @@ for _ in range(int(input())):
         print(e + 1)
     else:
         print(b + 1)
-
-

@@ -11,4 +11,3 @@ class Solution:
                 current[x] = 1
             #print(f'{x, current}')
         return max(current.values())
-

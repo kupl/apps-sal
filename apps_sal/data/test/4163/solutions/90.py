@@ -13,4 +13,3 @@ for i in range(N):
         cnt = 0
 
 print("No")
-

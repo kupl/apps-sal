@@ -3,7 +3,7 @@
 
 
 def main():
-    n,m = [ int(x) for x in input().split(' ') ]
+    n, m = [int(x) for x in input().split(' ')]
 
     res = 0
     while True:
@@ -13,22 +13,24 @@ def main():
 
         q = n // 2
         r = n % 2
-        if r != 0 :
+        if r != 0:
             res += 1
             n -= 1
             continue
 
-        if ( q + res ) % m == 0:
+        if (q + res) % m == 0:
             res += q
-            break;
+            break
 
         res += 1
         n -= 1
 
-    print( res )
+    print(res)
     return
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

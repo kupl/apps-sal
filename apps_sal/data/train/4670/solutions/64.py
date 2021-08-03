@@ -6,7 +6,6 @@ def string_to_number(s):
         if i == ("-"):
             pos_or_neg = -1
         if i in value:
-          result = result * 10 + value[i]
-        
-    return result * pos_or_neg
+            result = result * 10 + value[i]
 
+    return result * pos_or_neg

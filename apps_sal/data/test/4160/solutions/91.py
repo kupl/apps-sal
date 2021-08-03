@@ -17,4 +17,3 @@ while pv < X:
     year += 1
 
 print(year)
-

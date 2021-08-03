@@ -35,4 +35,5 @@ def __starting_point():
     if outputs is not None:
         print(("%s" % str(outputs)))
 
+
 __starting_point()

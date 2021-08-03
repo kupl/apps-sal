@@ -3,25 +3,30 @@ class TrieNode:
         self.isEnd = False
         self.children = dict()
 
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-        
-    def addNode(self,word):
+
+    def addNode(self, word):
         curNode = self.root
         for char in word:
             if char not in curNode.children:
                 curNode.children[char] = TrieNode()
             curNode = curNode.children[char]
         curNode.isEnd = True
-        
-    def search(self,word):
+
+    def search(self, word):
         curNode = self.root
         for char in word:
-            if curNode.isEnd: return True
-            elif char not in curNode.children: return False
-            else: curNode = curNode.children[char]
+            if curNode.isEnd:
+                return True
+            elif char not in curNode.children:
+                return False
+            else:
+                curNode = curNode.children[char]
         return curNode.isEnd
+
 
 class StreamChecker:
 
@@ -39,4 +44,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

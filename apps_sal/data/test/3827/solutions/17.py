@@ -13,4 +13,3 @@ if x['c'] == x['a'] or x['c'] == x['b']:
     print('YES')
 else:
     print('NO')
-

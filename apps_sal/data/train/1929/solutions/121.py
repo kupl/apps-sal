@@ -1,7 +1,5 @@
 class StreamChecker:
 
-    
-
     def __init__(self, words):
         self.words = []
         self.store = {}
@@ -27,7 +25,7 @@ class StreamChecker:
     def queryStore(self, stack, store):
         if not stack:
             return False
-        s = stack[:-self.sample-1:-1]
+        s = stack[:-self.sample - 1:-1]
         if s in store:
             if '!' in store[s]:
                 return True
@@ -37,7 +35,3 @@ class StreamChecker:
             if s[:i] in store:
                 return True
         return False
-
-
-
-

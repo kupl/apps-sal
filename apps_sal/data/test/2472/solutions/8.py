@@ -32,7 +32,6 @@ def main():
         if ba_lst[-1][0] != ba_lst[-2][0]:
             lst.append([ba_lst[-1][0], ba_lst[-1][1]])
 
-
     accumulate = 0
     flag = True
     for i in range(len(lst)):
@@ -49,4 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

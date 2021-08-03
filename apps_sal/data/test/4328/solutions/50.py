@@ -1,6 +1,5 @@
 A, B = list(map(int, input().split()))
 if B % A == 0:
-    print((A+B))
+    print((A + B))
 else:
-    print((B-A))
-
+    print((B - A))

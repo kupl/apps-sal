@@ -1,5 +1,6 @@
 3
 
+
 def solve(N, A):
     if N == 1:
         return 0
@@ -27,5 +28,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

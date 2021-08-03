@@ -8,7 +8,7 @@ while True:
             start = int(1)
 
         counter = int(0)
-        for i in range(start,n):
+        for i in range(start, n):
             tp = int(i)
             ans = int(0)
             while tp != 0:
@@ -25,7 +25,7 @@ while True:
             print(0)
         else:
             print(counter)
-            for i in range(0,counter):
+            for i in range(0, counter):
                 print(arr[i])
 
     except:

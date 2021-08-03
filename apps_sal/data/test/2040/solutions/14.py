@@ -32,4 +32,3 @@ for i in range(n):
     s = ''.join(map(str, reversed(r)))
     print(s.lstrip('0'))
     p = x
-

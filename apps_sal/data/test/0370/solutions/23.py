@@ -89,4 +89,3 @@ def print_ans(ans, x, y):
 k = int(input())
 x, y = list(map(int, input().split()))
 solve(k, x, y)
-

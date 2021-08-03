@@ -3,15 +3,14 @@ A = {'H', 'HE', 'LI', 'BE', 'B', 'C', 'N', 'O', 'F', 'NE', 'NA', 'MG', 'AL', 'SI
 s = input()
 L = len(s)
 
-for i in range(1 << (L-1)):
-	t = ''
-	for j in range(L):
-		t += s[j]
-		if i >> j & 1:
-			t += '|'
-	if all(e in A for e in t.split('|')):
-		print('YES')
-		break
+for i in range(1 << (L - 1)):
+    t = ''
+    for j in range(L):
+        t += s[j]
+        if i >> j & 1:
+            t += '|'
+    if all(e in A for e in t.split('|')):
+        print('YES')
+        break
 else:
-	print('NO')
-
+    print('NO')

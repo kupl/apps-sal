@@ -7,7 +7,7 @@ A = A[::-1]
 LIS = []
 
 for ai in A:
-    index = bisect_right(LIS,ai)
+    index = bisect_right(LIS, ai)
     if index >= len(LIS):
         LIS.append(ai)
     else:

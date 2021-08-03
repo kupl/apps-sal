@@ -1,11 +1,11 @@
-l=int(input())
-L=[]
+l = int(input())
+L = []
 for i in range(l):
-    n,k=map(str,input().split())
-    c=[]
+    n, k = map(str, input().split())
+    c = []
     c.append(n)
-    c.append(100-int(k))
-    c.append(i+1)
+    c.append(100 - int(k))
+    c.append(i + 1)
     L.append(c)
 L.sort()
 for i in range(l):

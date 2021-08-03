@@ -20,4 +20,3 @@ for i, el in enumerate(s):
         C_[el] -= 1
 
 print(''.join(s))
-

@@ -1,4 +1,4 @@
-n,k = [int(e) for e in input().strip().split()]
+n, k = [int(e) for e in input().strip().split()]
 num = [int(e) for e in input().strip().split()]
 
 count = dict()
@@ -26,7 +26,7 @@ else:
                 now_color %= k
                 continue
             else:
-                out += str(now_color+1) + " "
+                out += str(now_color + 1) + " "
                 color[now_color].add(a)
                 now_color += 1
                 now_color %= k
@@ -34,4 +34,3 @@ else:
     out = out.strip()
     print("YES")
     print(out)
-

@@ -1,4 +1,4 @@
-def area_or_perimeter(l , w):
+def area_or_perimeter(l, w):
     if l == w:
         return w * l
     else:

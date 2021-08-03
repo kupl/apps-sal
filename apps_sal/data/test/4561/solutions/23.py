@@ -5,4 +5,3 @@ elif a < b <= a + x:
     print("safe")
 else:
     print("dangerous")
-

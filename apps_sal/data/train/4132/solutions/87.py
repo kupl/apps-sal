@@ -6,5 +6,5 @@ def correct_tail(body, tail):
     else:
         return False
     """
-        
-    return body[-1] == tail 
+
+    return body[-1] == tail

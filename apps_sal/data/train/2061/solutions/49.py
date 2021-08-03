@@ -1,4 +1,4 @@
-#3点の配置とその重心は一対一対応
+# 3点の配置とその重心は一対一対応
 N, *PQRSTU = [int(_) for _ in open(0).read().split()]
 P, Q, R, S, T, U = [PQRSTU[_::len('PQRSTU')] for _ in range(len('PQRSTU'))]
 
@@ -29,4 +29,3 @@ ans = []
 for p, q, r, s, t, u in zip(P, Q, R, S, T, U):
     ans += [calc(p, q, r, s, t, u)]
 print(('\n'.join(map(str, ans))))
-

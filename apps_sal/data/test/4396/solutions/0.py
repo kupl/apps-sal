@@ -12,4 +12,3 @@ for i in range(N):
         ans += float(x[i]) * 380000
 
 print(ans)
-

@@ -6,4 +6,3 @@ def problem(a):
             return "Error"
     except ValueError:
         return "Error"
-

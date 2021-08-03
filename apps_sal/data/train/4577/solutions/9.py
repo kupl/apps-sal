@@ -3,4 +3,3 @@ def debug(s):
     result = result.replace("bug", "")
     result = result.replace("&", "bugs")
     return result
-

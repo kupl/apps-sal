@@ -7,4 +7,3 @@ for _ in range(m):
     after = after.translate(str.maketrans(xi + yi, yi + xi))
 
 print(s.translate(str.maketrans(orig, after)))
-

@@ -12,8 +12,8 @@ def main():
     print((max(z[0][-1] - z[0][0], z[1][-1] - z[1][0])))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

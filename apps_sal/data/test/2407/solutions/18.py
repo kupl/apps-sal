@@ -13,7 +13,7 @@ for _ in range(q):
         if i == 0 or x[i] != x[i - 1]:
             loc = x[i]
             knockbacks.append((loc + r - 1) // r)
-    
+
     cnt = 0
     while True:
         if cnt >= len(knockbacks) or knockbacks[cnt] <= cnt:
@@ -22,4 +22,3 @@ for _ in range(q):
             cnt += 1
 
     print(cnt)
-

@@ -13,4 +13,3 @@ for i in range(n):
         z[a[i]][1] += z[a[i] // k][0]
     z[a[i]][0] += 1
 print(s)
-

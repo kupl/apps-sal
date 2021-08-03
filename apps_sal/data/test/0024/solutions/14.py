@@ -5,7 +5,8 @@ for i in range(10):
 temp1 = 1
 flag1 = 1
 
-def check(i, j, direct,temp,flag):
+
+def check(i, j, direct, temp, flag):
     if direct == 1:
         if j == 0:
             return 0
@@ -46,26 +47,28 @@ def check(i, j, direct,temp,flag):
         temp += 1
         if(temp > 4):
             return 1
-        return check(i,j,direct,temp,flag)
+        return check(i, j, direct, temp, flag)
     elif rs[i][j] == '.' and flag == 1:
         temp += 1
         flag = 0
         if(temp > 4):
             return 1
-        return check(i,j,direct,temp,flag)
+        return check(i, j, direct, temp, flag)
     else:
-        return 0  
+        return 0
+
 
 def result():
     for i in range(10):
         for j in range(10):
             if rs[i][j] == 'X':
-                for k in range(1,9):
-                    if check(i,j,k,temp1,flag1) == 1:
+                for k in range(1, 9):
+                    if check(i, j, k, temp1, flag1) == 1:
                         return 1
     return 0
+
+
 if result() == 0:
     print("NO")
 else:
     print("YES")
-

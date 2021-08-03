@@ -1,16 +1,19 @@
 # coding: utf-8
+import math
+from collections import defaultdict
 import sys
 #from operator import itemgetter
 sysread = sys.stdin.readline
 #from heapq import heappop, heappush
-from collections import defaultdict
 #from itertools import combinations
 sys.setrecursionlimit(10**7)
-import math
+
+
 class SegTree():
     '''
     input idx: 1-
     '''
+
     def __init__(self, n, init_val=0):
         self.n = n
         self.init_val = init_val
@@ -24,8 +27,8 @@ class SegTree():
         '''
         if len(A) != self.n:
             raise ValueError('The number of input should be same with n_leaf')
-        for i,a in enumerate(A):
-            self.bins[self.n_leaf+i]=a
+        for i, a in enumerate(A):
+            self.bins[self.n_leaf + i] = a
         self._calc()
         return None
 
@@ -35,7 +38,7 @@ class SegTree():
         '''
         i = self.n_leaf - 1
         while i > 0:
-            self.bins[i] = self._criteria(self.bins[i*2], self.bins[i*2+1])
+            self.bins[i] = self._criteria(self.bins[i * 2], self.bins[i * 2 + 1])
             i -= 1
         return None
 
@@ -61,8 +64,8 @@ class SegTree():
                 ret = self._criteria(self.bins[r], ret)
                 r -= 1
                 continue
-            l = l//2
-            r = r//2
+            l = l // 2
+            r = r // 2
             ret = self._criteria(self.bins[l], ret)
             ret = self._criteria(self.bins[r], ret)
 
@@ -76,9 +79,10 @@ class SegTree():
         self.bins[current] = pro
         current //= 2
         while current > 0:
-            self.bins[current] = self._criteria(self.bins[current*2+1], self.bins[current*2])
+            self.bins[current] = self._criteria(self.bins[current * 2 + 1], self.bins[current * 2])
             current //= 2
         return None
+
 
 def run():
     N = int(input())
@@ -86,23 +90,26 @@ def run():
     Q = int(input())
     queries = [sysread().split() for _ in range(Q)]
 
-    bins = [0] * N# a: ord('a') - 97
-    for i,s in enumerate(S):
+    bins = [0] * N  # a: ord('a') - 97
+    for i, s in enumerate(S):
         id = ord(s) - 97
-        bins[i] = 1<<id
+        bins[i] = 1 << id
 
     segtree = SegTree(N)
     segtree.val_append(bins)
 
-    for type, i,c in queries:
+    for type, i, c in queries:
         if type == '1':
             c = 1 << (ord(c) - 97)
             segtree.update(int(i), c)
         else:
-            i,c = int(i), int(c)
-            tmp = segtree.eval_between(i,c)
+            i, c = int(i), int(c)
+            tmp = segtree.eval_between(i, c)
             print(bin(tmp).count('1'))
+
 
 def __starting_point():
     run()
+
+
 __starting_point()

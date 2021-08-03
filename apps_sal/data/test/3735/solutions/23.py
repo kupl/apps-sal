@@ -8,4 +8,3 @@ else:
     a += '9' * (len(n) - 1)
     b = str(int(n) - int(a))
     print(sum(map(int, list(a) + list(b))))
-

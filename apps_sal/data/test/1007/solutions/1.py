@@ -9,7 +9,6 @@ def imrin(n): return [int(input()) for _ in range(n)]
 
 s = 0
 k, p = impin()
-for i in range(1, k+1):
-    s = (s+i*10**len(str(i))+int(str(i)[::-1]))%p
+for i in range(1, k + 1):
+    s = (s + i * 10**len(str(i)) + int(str(i)[::-1])) % p
 print(s)
-

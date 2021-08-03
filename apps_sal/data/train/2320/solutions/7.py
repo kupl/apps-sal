@@ -5,6 +5,7 @@ class Element(object):
         self.index = index
         self.asigned = asigned
 
+
 def main():
     n = int(input())
     a = list(map(int, input().split()))
@@ -25,4 +26,6 @@ def main():
     b_el = sorted(b_el, key=lambda x: x.index)
     for i in b_el:
         print(i.asigned, end=' ')
+
+
 main()

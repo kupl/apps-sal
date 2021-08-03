@@ -50,11 +50,12 @@ def resolve():
     A = int(input())
     B = int(input())
 
-    print(((X-A) % B))
+    print(((X - A) % B))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

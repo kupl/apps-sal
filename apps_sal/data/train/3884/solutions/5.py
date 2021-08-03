@@ -8,6 +8,8 @@ r = re.findall(r"\"(\w)(.*?)\".*?\"\w(.*?)\"", """
     Replace all instances of "combination" to "combo"
     """)
 
+
 def gym_slang(s):
-    for a, b, c in r: s = re.sub("(?<=[%s%s])%s" % (a, a.upper(), b), c, s)
+    for a, b, c in r:
+        s = re.sub("(?<=[%s%s])%s" % (a, a.upper(), b), c, s)
     return s

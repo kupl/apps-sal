@@ -1,5 +1,5 @@
 def HQ9(code):
-    if code.lower() =='h':
+    if code.lower() == 'h':
         return 'Hello World!'
     elif code == 'Q':
         return code

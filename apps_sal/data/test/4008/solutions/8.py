@@ -21,4 +21,3 @@ for i in range(1, k + 1):
 
 print('YES')
 print(' '.join(str(e) for e in c))
-

@@ -15,15 +15,12 @@ class Solution:
         table = [[0 for _ in range(10)] for _ in range(n)]
         for j in range(10):
             table[0][j] = 1
-            
+
         for i in range(1, n):
             for j in range(10):
                 sum_d = 0
                 for d in num_map[j]:
-                    sum_d += table[i-1][d]
+                    sum_d += table[i - 1][d]
                 table[i][j] = sum_d
-        
-        
-        return sum(table[n-1]) % (1000000007)
-        
 
+        return sum(table[n - 1]) % (1000000007)

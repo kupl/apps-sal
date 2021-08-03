@@ -8,10 +8,11 @@ class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         if root is None:
             return 0
-       
+
         self.count = 0
         self.dfs(root, root.val)
         return self.count
+
     def dfs(self, root, max_num):
         if root is None:
             return

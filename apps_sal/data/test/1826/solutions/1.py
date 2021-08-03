@@ -51,4 +51,3 @@ while i < n:
         continue
     i += 1
 print(suma)
-

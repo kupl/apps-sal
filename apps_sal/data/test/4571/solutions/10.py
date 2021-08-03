@@ -1,4 +1,4 @@
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 
-ans = (1800*m + 100*n)*(2**m)
+ans = (1800 * m + 100 * n) * (2**m)
 print(ans)

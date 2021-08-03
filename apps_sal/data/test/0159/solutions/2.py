@@ -16,4 +16,3 @@ try:
 
 except EOFError:
     pass
-

@@ -27,4 +27,3 @@ for i in s[1:]:
             print(0, end="")
         else:
             print(i, end="")
-

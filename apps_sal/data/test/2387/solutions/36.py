@@ -35,4 +35,6 @@ def __starting_point():
         print("Yes")
     else:
         print("No")
+
+
 __starting_point()

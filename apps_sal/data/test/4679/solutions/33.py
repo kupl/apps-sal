@@ -14,4 +14,3 @@ while s[t]:
     t = s[t].popleft()
 
 print((t.upper()))
-

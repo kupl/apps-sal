@@ -8,7 +8,8 @@ for k in range(1, 10001):
 
     u = v = 1
 
-    for r in p: u *= r
+    for r in p:
+        u *= r
 
     for r in p:
 
@@ -19,7 +20,4 @@ for k in range(1, 10001):
 print(s)
 
 
-
-
 # Made By Mostafa_Khaled
-

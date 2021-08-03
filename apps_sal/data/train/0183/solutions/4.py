@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
         n = len(nums1)
@@ -17,6 +18,3 @@ class Solution:
             return max(a, b, c)
 
         return dp(0, 0, False)
-
-
-

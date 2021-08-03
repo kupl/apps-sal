@@ -6,5 +6,3 @@ for i in range(n):
     mini = min(mini, p)
     sum += mini * a
 print(sum)
-    
-

@@ -1,5 +1,5 @@
 try:
-    list1=[]
+    list1 = []
     for _ in range(int(input())):
         list1.append(int(input()))
     list1.sort()
@@ -7,5 +7,3 @@ try:
         print(i)
 except:
     pass
-        
-

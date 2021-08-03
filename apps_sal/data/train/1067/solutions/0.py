@@ -1,9 +1,11 @@
-# Fibonacci Series using 
-# Optimized Method 
+# Fibonacci Series using
+# Optimized Method
 
-# function that returns nth 
+# function that returns nth
 # Fibonacci number
 MOD = 1000000007
+
+
 def fib(n):
     F = [[2, 2],
          [1, 0]]
@@ -52,6 +54,5 @@ for _ in range(int(input())):
     elif n == 2:
         ans = 6
     else:
-        ans = fib(n-1)
+        ans = fib(n - 1)
     print(ans)
-

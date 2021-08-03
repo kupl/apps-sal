@@ -121,4 +121,3 @@ elif not flag1:
     print(*res1)
 else:
     print("NO")
-

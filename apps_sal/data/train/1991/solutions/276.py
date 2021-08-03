@@ -14,7 +14,7 @@ class Solution:
                         res += self.countRoutesHelper(locations, i, finish, fuel - abs(locations[currentLocation] - locations[i]))
                 self.dp[(currentLocation, fuel)] = res % (10**9 + 7)
                 return res % (10**9 + 7)
-        
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         self.dp = {}
         return self.countRoutesHelper(locations, start, finish, fuel) % (10**9 + 7)

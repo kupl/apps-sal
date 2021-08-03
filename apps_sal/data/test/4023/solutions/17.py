@@ -10,7 +10,7 @@ for i in range(n):
         pnt += 1
         q[pnt] = a[i]
         f = i
-    else :
+    else:
         if q[pnt] == a[i]:
             q[pnt] = -1
             pnt -= 1
@@ -23,7 +23,6 @@ for i in range(n):
 if pnt == 0:
     if q[0] != k:
         ans = "NO"
-if pnt > 0 or(f == n -1 and a[-1] != k):
+if pnt > 0 or (f == n - 1 and a[-1] != k):
     ans = "NO"
 print(ans)
-

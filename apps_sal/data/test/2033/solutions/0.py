@@ -27,4 +27,3 @@ for i in range(1, k):
     elif best_ways_nm1[u]:
         ans2 += 1
 print(ans1, ans2)
-

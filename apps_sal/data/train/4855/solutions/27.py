@@ -11,15 +11,16 @@ def vert_mirror(strng):
             result += "\n"
     return result
 
+
 def hor_mirror(strng):
     string_list = strng.split("\n")
     result = ""
     for i, element in enumerate(string_list):
         result = element + result
         if i != len(string_list) - 1:
-            result = "\n" + result 
+            result = "\n" + result
     return result
-    
+
+
 def oper(fct, s):
     return fct(s)
-

@@ -1,9 +1,9 @@
 w = int(input())
 for i in range(3):
-  input()
+    input()
 e = int(input())
 k = int(input())
 if e - w <= k:
-  print("Yay!")
+    print("Yay!")
 else:
-  print(":(")
+    print(":(")

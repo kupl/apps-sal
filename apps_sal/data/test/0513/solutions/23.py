@@ -28,4 +28,3 @@ if (len(d[0]) == 3) and (len(d[1]) == 3):
         print("ugly")
 else:
     print("ugly")
-

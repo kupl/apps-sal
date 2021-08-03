@@ -5,7 +5,7 @@ class Solution:
         for i, route in enumerate(routes):
             for stop in route:
                 stop_dic[stop].add(i)
-                
+
         visited = set()
         while stk:
             stop, num_bus = stk.pop(0)

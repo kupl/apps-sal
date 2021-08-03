@@ -1,7 +1,7 @@
 class Solution:
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         from collections import defaultdict
-        
+
         key_pairs = [(time, name) for name, time in zip(keyName, keyTime)]
         key_pairs.sort()
         keys = defaultdict(list)
@@ -10,12 +10,12 @@ class Solution:
             time, name = pair
             if name in names:
                 continue
-                
+
             keys[name].append(time)
-            
+
             if len(keys[name]) < 3:
                 continue
-            
+
             hour, minute = time.split(':')
             hour, minute = int(hour), int(minute)
             first_access_time = keys[name][-3]
@@ -31,5 +31,5 @@ class Solution:
                     names.add(name)
         res = list(names)
         res.sort()
-        
+
         return res

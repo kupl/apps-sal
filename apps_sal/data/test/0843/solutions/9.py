@@ -16,4 +16,3 @@ if 0 <= current_cell < line_length:
     print("INFINITE")
 else:
     print("FINITE")
-

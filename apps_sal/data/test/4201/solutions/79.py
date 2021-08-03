@@ -16,4 +16,3 @@ for mask_r in range(1 << H):
             ans += 1
 
 print(ans)
-

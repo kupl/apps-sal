@@ -13,5 +13,3 @@ class Solution:
             return max(dfs(sub_id, t_after_informed) for sub_id in M[id]) if M[id] else t_after_informed
 
         return dfs(headID, 0)
-
-

@@ -9,43 +9,38 @@
 '''
 from bisect import bisect_left as bl, bisect_right as br
 from collections import defaultdict as dd
-mod=10**9+7
+mod = 10**9 + 7
 
 for _ in range(int(input())):
 
-    #n=int(input())
-    n,k=list(map(int,input().strip().split()))
-    if(k==1):
-        sm=pow(n,2,mod)
+    # n=int(input())
+    n, k = list(map(int, input().strip().split()))
+    if(k == 1):
+        sm = pow(n, 2, mod)
         print(sm)
         continue
-    elif(n==0):
-        sm=k*(k-1)
-        print(sm%mod)
+    elif(n == 0):
+        sm = k * (k - 1)
+        print(sm % mod)
         continue
     else:
-        sm=(n*(n+1))%mod
+        sm = (n * (n + 1)) % mod
 
-
-    y=(k-1)/2
-    q=y
-    if(int(y)==y):
-        y=max(0,int(y)-1)
-        rem=2
+    y = (k - 1) / 2
+    q = y
+    if(int(y) == y):
+        y = max(0, int(y) - 1)
+        rem = 2
     else:
-        y=int(y)
-        rem=1
-    
-    sm+=(2*y*n)%mod+(y*(y+1))%mod
-    #print(sm,"**")
+        y = int(y)
+        rem = 1
 
-    if(rem==1):
-        sm+=n
+    sm += (2 * y * n) % mod + (y * (y + 1)) % mod
+    # print(sm,"**")
+
+    if(rem == 1):
+        sm += n
     else:
-        sm+=2*(n+y+1)-n
+        sm += 2 * (n + y + 1) - n
 
-    print(sm%mod)
-
-
-
-
+    print(sm % mod)

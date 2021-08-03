@@ -2,14 +2,15 @@ import re
 import itertools
 from collections import Counter
 
+
 class Task:
     a = []
     answer = []
-	
+
     def getData(self):
         input()
         self.a = [int(x) for x in input().split(" ")]
-	
+
     def solve(self):
         currentFolderCounter = 0
         badDaysCounter = 0
@@ -30,8 +31,8 @@ class Task:
         print(len(self.answer))
         print(re.sub('[\[\],]', '', str(self.answer)))
 
-task = Task();
-task.getData();
-task.solve();
-task.printAnswer();
 
+task = Task()
+task.getData()
+task.solve()
+task.printAnswer()

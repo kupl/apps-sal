@@ -7,7 +7,7 @@ def main():
         bottom = points[b][1]
         for t in range(b + K - 1, N):
             top = points[t][1]
-            target_points = points[b:(t+1)].copy()
+            target_points = points[b:(t + 1)].copy()
             target_points.sort(key=lambda p: p[0])
             M = len(target_points)
             for left in range(M):
@@ -21,4 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

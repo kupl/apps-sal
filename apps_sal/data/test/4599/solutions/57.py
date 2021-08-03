@@ -1,5 +1,5 @@
 N = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 card = list(a)
 card.sort(reverse=True)
@@ -16,5 +16,4 @@ while card:
     card.pop(0)
     card.pop(0)
 
-print((sum(Alice)-sum(Bob)))
-
+print((sum(Alice) - sum(Bob)))

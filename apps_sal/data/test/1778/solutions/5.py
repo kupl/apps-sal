@@ -39,4 +39,3 @@ for i in range(n):
         pp1 += 1
 
 print(p1 - p2)
-

@@ -15,5 +15,4 @@ for x in b:
     else:
         ans[int(x)] = 0
 for x in ans:
-    print(x, end= '')
-
+    print(x, end='')

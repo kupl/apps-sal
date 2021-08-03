@@ -30,4 +30,3 @@ else:
     move = min(abs(podE - podN), (n - max(podN, podE)) + min(podE, podN)) * 15
     up = min((etN - 1) * 5, 10 + (etN - 1))
     print(down + move + up)
-

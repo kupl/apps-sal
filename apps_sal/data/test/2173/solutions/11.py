@@ -1,9 +1,10 @@
 import sys
 
+
 def main():
     n = int(sys.stdin.readline())
     a = list(map(int, sys.stdin.readline().split(' ')))
-    l = sorted(list(range(n)),key=lambda i: a[i])
+    l = sorted(list(range(n)), key=lambda i: a[i])
     cur = a[l[0]]
     s = set([cur])
     for i in range(1, n):
@@ -13,6 +14,5 @@ def main():
         s.add(cur)
     sys.stdout.write('{}\n'.format(' '.join(list([str(i) for i in a]))))
 
+
 main()
-
-

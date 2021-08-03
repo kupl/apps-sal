@@ -4,6 +4,7 @@ masks = [0b01010101010101010101010101010101,
          0b00000000111111110000000011111111,
          0b00000000000000001111111111111111]
 
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         totOddRem = 0
@@ -23,10 +24,10 @@ class Solution:
                     step >>= 1
                 if leftMost > max2Power:
                     max2Power = leftMost
-                
+
                 xCopy = x
                 for p, m in enumerate(masks):
                     xCopy = (xCopy & m) + ((xCopy & ~m) >> (1 << p))
                 totOddRem += xCopy
-                    
+
         return totOddRem + max2Power

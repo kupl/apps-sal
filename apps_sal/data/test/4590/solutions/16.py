@@ -17,4 +17,3 @@ for i in range(n + 1):
         j -= 1
     ans = max(ans, i + j)
 print(ans)
-

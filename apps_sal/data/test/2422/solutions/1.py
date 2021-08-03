@@ -17,5 +17,3 @@ for wewq in range(rw):
             print(-1)
             continue
         print(n // 3 - 1, 1, 0)
-
-

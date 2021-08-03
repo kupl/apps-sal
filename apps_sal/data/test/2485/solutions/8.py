@@ -37,4 +37,3 @@ if len(target_row) * len(target_col) == cnt:
     print((row_max + col_max - 1))
 else:
     print((row_max + col_max))
-

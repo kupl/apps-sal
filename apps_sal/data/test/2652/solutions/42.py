@@ -51,34 +51,34 @@ graphx = []
 graphy = []
 
 for i in range(n):
-    x,y = map(int,input().split())
-    graphx.append((x,y,i))
-    graphy.append((x,y,i))
-graphx = sorted(graphx, key=lambda x:x[0])
-graphy = sorted(graphy, key=lambda x:x[1])
+    x, y = map(int, input().split())
+    graphx.append((x, y, i))
+    graphy.append((x, y, i))
+graphx = sorted(graphx, key=lambda x: x[0])
+graphy = sorted(graphy, key=lambda x: x[1])
 graph = []
 
 
-for k in range(n-1):
-    i,j = graphx[k][2], graphx[k+1][2]
-    x0,x1 = graphx[k][0],graphx[k+1][0]
-    m = abs(x0-x1)
-    graph.append((m,i,j))
+for k in range(n - 1):
+    i, j = graphx[k][2], graphx[k + 1][2]
+    x0, x1 = graphx[k][0], graphx[k + 1][0]
+    m = abs(x0 - x1)
+    graph.append((m, i, j))
 
-for k in range(n-1):
-    i,j = graphy[k][2], graphy[k+1][2]
-    y0,y1 = graphy[k][1],graphy[k+1][1]
-    m = abs(y0-y1)
-    graph.append((m,i,j))
+for k in range(n - 1):
+    i, j = graphy[k][2], graphy[k + 1][2]
+    y0, y1 = graphy[k][1], graphy[k + 1][1]
+    m = abs(y0 - y1)
+    graph.append((m, i, j))
 
 
 graph.sort()
-#print(graph)
+# print(graph)
 
 ans = 0
 uf = UnionFind(n)
-for c,i,j in graph:
-    if not uf.same(i,j):
+for c, i, j in graph:
+    if not uf.same(i, j):
         ans += c
-        uf.union(i,j)
+        uf.union(i, j)
 print(ans)

@@ -56,7 +56,7 @@ def resolve():
     for b in B:
         an = bisect.bisect_left(A, b)
         cn = N - bisect.bisect_right(C, b)
-        ans += an*cn
+        ans += an * cn
 
     print(ans)
 
@@ -64,5 +64,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

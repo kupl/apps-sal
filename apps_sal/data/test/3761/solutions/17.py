@@ -18,7 +18,7 @@ def solve():
             if fcnt > 0:
                 if tcnt % 2 == 0:
                     if tcnt == 0:
-                        xset = set([x + fcnt for x in xset]) 
+                        xset = set([x + fcnt for x in xset])
                     else:
                         xset = set([x + fcnt for x in xset]) | set([x - fcnt for x in xset])
                 else:
@@ -31,15 +31,17 @@ def solve():
     if fcnt > 0:
         if tcnt % 2 == 0:
             if tcnt == 0:
-                xset = set([x + fcnt for x in xset]) 
+                xset = set([x + fcnt for x in xset])
             else:
                 xset = set([x + fcnt for x in xset]) | set([x - fcnt for x in xset])
         else:
             yset = set([y + fcnt for y in yset]) | set([y - fcnt for y in yset])
-    
+
     print(("Yes" if (xa in xset) and (ya in yset) else "No"))
+
 
 def __starting_point():
     solve()
+
 
 __starting_point()

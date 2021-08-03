@@ -1,5 +1,6 @@
 def shift(c, n):
-    return chr(ord(c) + n%26)
+    return chr(ord(c) + n % 26)
+
 
 class Solution:
     def canConvertString(self, s: str, t: str, k: int) -> bool:
@@ -18,5 +19,5 @@ class Solution:
                 d[j] = 1
             else:
                 d[j] += 1
-            mx = max(mx, (d[j]-1)*26+j)
+            mx = max(mx, (d[j] - 1) * 26 + j)
         return mx <= k

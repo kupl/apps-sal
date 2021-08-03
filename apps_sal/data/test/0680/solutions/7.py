@@ -23,32 +23,31 @@ for i in range(xa + 1, xb + 1):
         b[i][ya] = 1
 if yb > ya:
     for i in range(ya + 1, yb):
-         if b[xb][i] == 0:
-             z.append((xb, i))
-             b[xb][i] = 1
+        if b[xb][i] == 0:
+            z.append((xb, i))
+            b[xb][i] = 1
 else:
     for i in range(yb + 1, ya):
-         if b[xb][i] == 0:
-             z.append((xb, i))
-             b[xb][i] = 1
+        if b[xb][i] == 0:
+            z.append((xb, i))
+            b[xb][i] = 1
 for i in range(xc - 1, xb - 1, -1):
-     if b[i][yc] == 0:
-         z.append((i, yc))
-         b[i][yc] = 1
+    if b[i][yc] == 0:
+        z.append((i, yc))
+        b[i][yc] = 1
 if yc < yb:
     for i in range(yc + 1, yb):
-         if b[xb][i] == 0:
-             z.append((xb, i))
-             b[xb][i] = 1
+        if b[xb][i] == 0:
+            z.append((xb, i))
+            b[xb][i] = 1
 else:
     for i in range(yb + 1, yc):
-         if b[xb][i] == 0:
-             z.append((xb, i))
-             b[xb][i] = 1
+        if b[xb][i] == 0:
+            z.append((xb, i))
+            b[xb][i] = 1
 z.append((xa, ya))
 z.append((xb, yb))
 z.append((xc, yc))
 print(len(z))
 for i in z:
     print(i[0], i[1])
-

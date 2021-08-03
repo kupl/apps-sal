@@ -5,4 +5,3 @@ def shorten_to_date(long_date):
             string += c
         else:
             return string
-

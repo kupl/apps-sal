@@ -10,4 +10,3 @@ for i in tab:
         best = max([i, best])
 
 print(k // best)
-

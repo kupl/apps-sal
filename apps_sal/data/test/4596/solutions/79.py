@@ -16,5 +16,3 @@ while True:
         break
 
 print(t)
-
-

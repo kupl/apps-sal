@@ -14,4 +14,3 @@ for _ in range(N - 1):
         a = r * na
 
 print((t + a))
-

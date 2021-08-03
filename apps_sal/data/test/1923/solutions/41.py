@@ -3,6 +3,5 @@ n = lines[0][0]
 skewers = sorted(lines[1])
 total = 0
 for i in range(n):
-  total += skewers[2*i]
+    total += skewers[2 * i]
 print(total)
-

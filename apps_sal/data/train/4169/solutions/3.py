@@ -1,4 +1,6 @@
 from fractions import gcd
+
+
 def para_to_rect(*equations):
     changes = [(" ", ""), ("-t", "-1t"), ("=t", "=+1t"),
                ("+t", "+1t"), ("x=", ""), ("y=", "")]
@@ -16,5 +18,5 @@ def para_to_rect(*equations):
     ysign = "+"
     if f < 0:
         ysign, f = "-", -f
-    return "{}x {} {}y = {}".format(e if abs(e) > 1 else "-" if e == -1 else "",\
-      ysign, f if f > 1 else "", g)
+    return "{}x {} {}y = {}".format(e if abs(e) > 1 else "-" if e == -1 else "",
+                                    ysign, f if f > 1 else "", g)

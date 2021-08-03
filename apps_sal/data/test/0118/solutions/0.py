@@ -8,4 +8,3 @@ if f:
     print('YES')
 else:
     print('NO')
-

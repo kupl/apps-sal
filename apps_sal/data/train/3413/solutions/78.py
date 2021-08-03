@@ -1,7 +1,7 @@
 def solution(nums):
-    if nums!=None:
+    if nums != None:
         nums.sort()
-    if (nums!=[] and nums!=None):
+    if (nums != [] and nums != None):
         return nums
     else:
         return []

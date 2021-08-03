@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs():
     # たどり着くまでにかかった回数をいれる多重リスト。
     d = [[float("inf")] * w for i in range(h)]
@@ -9,7 +10,7 @@ def bfs():
     # 接したポイントを取り込む用のqueを定義
     que = deque([])
     # スタート地点をqueに加える。探索の際はqueから取り出すループを回すので最初だけ先に入れておく
-    que.append((sx,sy))
+    que.append((sx, sy))
     # スタートからスタートにかかる距離は0なのでinfを0にかえる。
     d[sx][sy] = 0
     # queがあるかぎり続ける
@@ -31,6 +32,7 @@ def bfs():
                 d[nx][ny] = d[p[0]][p[1]] + 1
     return d[gx][gy]
 
+
 h, w = list(map(int, input().split()))
 maze = [list(input()) for i in range(h)]
 sx, sy = 0, 0
@@ -49,4 +51,3 @@ if 0 < res < float("inf"):
     print((white - res - 1))
 else:
     print((-1))
-

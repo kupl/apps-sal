@@ -7,9 +7,9 @@ for x in input().split():
 
 ln = 0
 for i in range(0, len(arr)):
-    if(ln<arr[i]):
+    if(ln < arr[i]):
         ln = arr[i]
 
 sn = sum - ln
 
-print(str(ln-sn+1))
+print(str(ln - sn + 1))

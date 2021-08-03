@@ -106,4 +106,3 @@ def map_with_ch(ch, x):
 
 
 print(''.join(list([map_with_ch(ch, x) for x in s])))
-

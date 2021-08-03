@@ -1,4 +1,4 @@
-n, m , k = map(int, input().split())
+n, m, k = map(int, input().split())
 a = [(0, -1)] * n
 b = [(0, -1)] * m
 for i in range(k):
@@ -13,5 +13,4 @@ for i in range(n):
             print(a[i][0], end=' ')
         else:
             print(b[j][0], end=' ')
-    print()        
-
+    print()

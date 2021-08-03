@@ -16,4 +16,5 @@ def solution():
 def __starting_point():
     solution()
 
+
 __starting_point()

@@ -9,4 +9,3 @@ for i in range(n):
     d[diff] += b[i]
     ans = max(ans, d[diff])
 print(ans)
-

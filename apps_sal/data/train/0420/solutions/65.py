@@ -14,8 +14,7 @@ class Solution:
                 if all(dp[(i, k)]):
                     return k
         return 0
-                
-        
+
     def update_tracker(self, char, tracker):
         idx = 'aeiou'.find(char)
         new_tracker = list(tracker)

@@ -12,7 +12,7 @@ for S in Query:
         if s == "L":
             tmp += 1
         else:
-            ans = max(tmp+1, ans)
+            ans = max(tmp + 1, ans)
             tmp = 0
-    ans = max(tmp+1, ans)
+    ans = max(tmp + 1, ans)
     print(ans)

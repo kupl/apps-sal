@@ -15,4 +15,5 @@ def __starting_point():
     n = int(input())
     print(solve(n))
 
+
 __starting_point()

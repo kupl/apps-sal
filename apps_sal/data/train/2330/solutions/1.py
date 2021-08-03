@@ -9,4 +9,3 @@ if S[:2] == '01' and S == S[::-1]:
             before = i
 else:
     print((-1))
-

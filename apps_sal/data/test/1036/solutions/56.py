@@ -1,11 +1,11 @@
-n,k = map(int,input().split())
+n, k = map(int, input().split())
 s = list(input())
 
 while k:
-    t = s+s
+    t = s + s
     s = []
     for i in range(n):
-        a,b = t[i*2],t[i*2+1]
+        a, b = t[i * 2], t[i * 2 + 1]
         if a == b:
             s.append(a)
         elif (a == "P" and b == "R") or (a == "R" and b == "P"):

@@ -5,6 +5,7 @@ import itertools as it
 import sys
 import math
 
+
 def func():
     N = int(input())
 
@@ -32,6 +33,7 @@ def func():
     for i in range(2 ** N + 1, 2 ** (N + 1)):
         ans = max(ans, P[i][0][0] + P[i][1][0])
         print(ans)
-    #print(P)
+    # print(P)
+
 
 func()

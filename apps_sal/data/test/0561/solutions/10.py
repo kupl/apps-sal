@@ -22,4 +22,3 @@ else:
                     print(a[i] + k[0])
         else:
             print(0)
-

@@ -12,4 +12,6 @@ def solve():
             return 'NO'
 
     return 'YES'
+
+
 print(solve())

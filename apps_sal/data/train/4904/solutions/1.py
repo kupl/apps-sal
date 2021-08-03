@@ -19,4 +19,3 @@ def unpack(l):
         else:
             res += [i]
     return res
-

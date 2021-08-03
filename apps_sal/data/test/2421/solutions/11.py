@@ -40,4 +40,3 @@ for _ in range(t):
             an2 += xyc(0, y - x)
 
     print(min(an1, an2))
-

@@ -2,6 +2,8 @@ import sys
 def input(): return sys.stdin.readline().rstrip()
 
 # ライブラリ参照https://atcoder.jp/contests/practice2/submissions/16580070
+
+
 class SegmentTree:
 
     __slots__ = ["func", "e", "original_size", "n", "data"]
@@ -18,8 +20,8 @@ class SegmentTree:
             self.n = 1 << ((self.original_size - 1).bit_length())
             self.data = [self.e] * self.n + length_or_list + \
                 [self.e] * (self.n - self.original_size)
-            for i in range(self.n-1, 0, -1):
-                self.data[i] = self.func(self.data[2*i], self.data[2*i+1])
+            for i in range(self.n - 1, 0, -1):
+                self.data[i] = self.func(self.data[2 * i], self.data[2 * i + 1])
 
     def replace(self, index, value):
         index += self.n
@@ -27,7 +29,7 @@ class SegmentTree:
         index //= 2
         while index > 0:
             self.data[index] = self.func(
-                self.data[2*index], self.data[2*index+1])
+                self.data[2 * index], self.data[2 * index + 1])
             index //= 2
 
     def folded(self, l, r):
@@ -109,12 +111,14 @@ def main():
     for _ in range(Q):
         num, x, y = input().split()
         if num == '1':
-            seg.replace(int(x)-1, 2**(ord(y) - ord('a')))
+            seg.replace(int(x) - 1, 2**(ord(y) - ord('a')))
         else:
-            bits = seg.folded(int(x)-1, int(y))
+            bits = seg.folded(int(x) - 1, int(y))
             print(sum(map(int, list(bin(bits))[2:])))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -2,6 +2,7 @@ from scipy.sparse.csgraph import dijkstra, shortest_path
 from scipy.sparse import csr_matrix
 K = int(input())
 
+
 class Graph(object):
 
     def __init__(self, K):
@@ -21,6 +22,7 @@ class Graph(object):
             n2.append(node2)
             w.append(weight)
         return csr_matrix((w, (n1, n2)), shape=(self.K, self.K))
+
 
 g = Graph(K)
 

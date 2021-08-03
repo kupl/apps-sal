@@ -10,5 +10,4 @@ for i in range(n):
 if (cnt1 and cnt2):
     print(' '.join(map(str, sorted(l))))
 else:
-    print(' '.join(map(str,l)))
-
+    print(' '.join(map(str, l)))

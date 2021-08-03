@@ -1,6 +1,8 @@
 import sys
 from collections import Counter
 Q = int(input())
+
+
 def check(a, b):
     a = a[::-1]
     b = b[::-1]
@@ -11,6 +13,8 @@ def check(a, b):
         return False
     else:
         return True
+
+
 for _ in range(Q):
     s = [ord(s) for s in sys.stdin.readline().strip()]
     t = [ord(s) for s in sys.stdin.readline().strip()]

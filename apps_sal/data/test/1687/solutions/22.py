@@ -1,9 +1,9 @@
-I=input
+I = input
 
 I()
 
-a=list(map(int,I().split()))
+a = list(map(int, I().split()))
 
-x=min(a)
+x = min(a)
 
-print([x,-1][any(i%x for i in a)])
+print([x, -1][any(i % x for i in a)])

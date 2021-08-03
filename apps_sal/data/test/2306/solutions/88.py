@@ -16,5 +16,5 @@ for ti, v_lim in zip(T[::-1], V[::-1]):
 vel_back.reverse()
 
 velocity = tuple(min(x, y) for x, y in zip(vel_go, vel_back))
-ans = sum(0.25*(x+y) for x, y in zip(velocity[:-1], velocity[1:]))
+ans = sum(0.25 * (x + y) for x, y in zip(velocity[:-1], velocity[1:]))
 print(ans)

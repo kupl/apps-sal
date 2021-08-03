@@ -2,10 +2,11 @@ import sys
 input = sys.stdin.readline
 n, k = list(map(int, input().split()))
 
+
 class Union_Find():
     def __init__(self, num):
-        self.par = [-1]*(num+1)
-        self.siz = [1]*(num+1)
+        self.par = [-1] * (num + 1)
+        self.siz = [1] * (num + 1)
 
     def same_checker(self, x, y):
         return self.find(x) == self.find(y)
@@ -36,6 +37,7 @@ class Union_Find():
     def size(self, x):
         return self.siz[self.find(x)]
 
+
 ans = 0
 guest = Union_Find(n)
 for i in range(k):
@@ -46,4 +48,3 @@ for i in range(k):
         guest.union(a, b)
 
 print(ans)
-

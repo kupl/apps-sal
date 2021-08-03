@@ -16,4 +16,3 @@ class Pong:
             if self.score[current] == self.max_score:
                 msg = f"Player {self.next} has won the game!"
         return msg
-

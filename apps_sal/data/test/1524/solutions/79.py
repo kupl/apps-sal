@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from bisect import bisect
 
+
 def solve(s):
     def processArr(arr):
         r_count = arr.count("R")
@@ -21,12 +22,15 @@ def solve(s):
         ans.extend(processArr(lst))
     return ans
 
+
 def main():
     S = input()
     print((*solve(S)))
     return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

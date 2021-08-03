@@ -6,5 +6,5 @@ ab.sort(key=itemgetter(1))
 ans = [0]
 for a, b in ab:
     if ans[-1] < a:
-        ans.append(b-1)
+        ans.append(b - 1)
 print(len(ans) - 1)

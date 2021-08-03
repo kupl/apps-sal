@@ -15,4 +15,3 @@ class Solution:
                 window_sum -= cardPoints[left]
                 left += 1
         return sum(cardPoints) - min_sum
-

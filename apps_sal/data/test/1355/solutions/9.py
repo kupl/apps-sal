@@ -25,8 +25,10 @@ def main():
                 w += tmp - res[i][0]
             t += s
         print(w * hypot(x1, y1))
- 
- 
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         nums = defaultdict(int)

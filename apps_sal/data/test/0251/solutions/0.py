@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n, k = mi()
 h = li()
@@ -29,4 +34,3 @@ while i > 0:
     ans += 1
     i = j
 print(ans)
-

@@ -8,7 +8,7 @@ class ProductOfNumbers:
         self.data.append(num)
         if len(self.data) % 10 == 0:
             self.product.append(self.getLastTenProduct())
-    
+
     def getLastTenProduct(self) -> int:
         res = 1
         for i in range(len(self.data) - 1, len(self.data) - 11, -1):
@@ -35,4 +35,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

@@ -15,4 +15,3 @@ if len(str) >= 5 and big and small and num:
     print("Correct")
 else:
     print("Too weak")
-

@@ -6,4 +6,3 @@ for i in range(r):
         if cake[i][j] == '.' and ('S' not in cake[i] or 'S' not in list(zip(*cake))[j]):
             ans += 1
 print(ans)
-

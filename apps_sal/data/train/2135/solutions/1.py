@@ -20,11 +20,11 @@ Q = 4294967291
 
 
 def combine(h, v, q):
-    return (h<<2 | v) % q
+    return (h << 2 | v) % q
 
 
 def combinel(h, v, q, s):
-    return (v*s + h) % q
+    return (v * s + h) % q
 
 
 def flip(s):
@@ -42,7 +42,7 @@ def solvable(p1, p2):
         h2 = combinel(h2, n2, Q, s)
         if h1 == h2 and p1[i:] == flip(p2[i:]):
             return False
-        s = (s<<2) % Q
+        s = (s << 2) % Q
     return True
 
 
@@ -53,8 +53,5 @@ def __starting_point():
     print('YES' if solvable(p1, p2) else 'NO')
 
 
-
-
 # Made By Mostafa_Khaled
-
 __starting_point()

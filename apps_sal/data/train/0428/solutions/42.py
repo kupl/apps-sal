@@ -1,6 +1,7 @@
 from collections import deque
 dirs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 
+
 class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
         k = 0
@@ -18,14 +19,14 @@ class Solution:
         while dq:
             size = len(dq)
             for i in range(size):
-                r, c, ks, s = dq.popleft() # key state, step
+                r, c, ks, s = dq.popleft()  # key state, step
                 for d in dirs:
                     nr, nc = r + d[0], c + d[1]
                     if not (0 <= nr < m) or not (0 <= nc < n):
                         continue
                     elif grid[nr][nc] == '#':
                         continue
-                    elif grid[nr][nc] in '.@': # empty cell or starting point
+                    elif grid[nr][nc] in '.@':  # empty cell or starting point
                         if s + 1 < dp[nr][nc][ks]:
                             dp[nr][nc][ks] = s + 1
                             dq.append((nr, nc, ks, s + 1))
@@ -46,5 +47,3 @@ class Solution:
             for c in range(n):
                 ret = min(ret, dp[r][c][-1])
         return ret if ret != float('inf') else -1
-                
-

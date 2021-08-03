@@ -6,17 +6,15 @@ import sys
 
 sys.setrecursionlimit(20000)
 
-def go(v,w,last):
 
-    if game[v][w][last] >= 0: return(game[v][w][last])
+def go(v, w, last):
 
-
+    if game[v][w][last] >= 0:
+        return(game[v][w][last])
 
     flag = 0
 
     move = 0
-
-
 
     for p in edges_out[v]:
 
@@ -24,13 +22,11 @@ def go(v,w,last):
 
             move = 1
 
-            if  not go(w,p[0],p[1]):
+            if not go(w, p[0], p[1]):
 
                 flag = 1
 
                 break
-
-
 
     if not move or not flag:
 
@@ -44,11 +40,8 @@ def go(v,w,last):
 
         return(1)
 
-            
 
-
-
-n,m = [int(i) for i in input().split()]
+n, m = [int(i) for i in input().split()]
 
 edges_in = []
 
@@ -61,21 +54,19 @@ for i in range(n):
     edges_out.append([])
 
 
-
 for i in range(m):
 
-    s1,s2,s3 = input().split()
+    s1, s2, s3 = input().split()
 
-    v = int(s1)-1
+    v = int(s1) - 1
 
-    w = int(s2)-1
+    w = int(s2) - 1
 
     weight = ord(s3[0]) - ord('a') + 1
 
-    edges_out[v].append((w,weight))
+    edges_out[v].append((w, weight))
 
-    edges_in[w].append((v,weight))
-
+    edges_in[w].append((v, weight))
 
 
 game = []
@@ -97,15 +88,13 @@ for i in range(n):
     game.append(tmp1)
 
 
+# for v in range(n):
 
-##for v in range(n):
+# for w in range(n):
 
-##    for w in range(n):
+# for last in range(27):
 
-##        for last in range(27):
-
-##            go(v,w,last)
-
+# go(v,w,last)
 
 
 for v in range(n):
@@ -114,17 +103,13 @@ for v in range(n):
 
     for w in range(n):
 
-        
+        if go(v, w, 0):
+            s = s + 'A'
 
-        if go(v,w,0): s = s + 'A'
-
-        else: s = s + 'B'
+        else:
+            s = s + 'B'
 
     print(s)
 
 
-
-
-
 # Made By Mostafa_Khaled
-

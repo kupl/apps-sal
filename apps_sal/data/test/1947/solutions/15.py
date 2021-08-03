@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n, m, l = map(int, input().split())
     a = list(map(int, input().split()))
@@ -31,7 +32,10 @@ def main():
                 elif (s[1] - 2) in used and (s[1]) in used and (s[1] - 1):
                     current -= 1
                 used.add(s[1] - 1)
-                
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

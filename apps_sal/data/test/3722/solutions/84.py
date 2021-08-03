@@ -24,15 +24,15 @@ def solveBrute(N, AA, AB, BA, BB):
             possible.add(s)
             return
         for i in range(len(s) - 1):
-            pair = s[i : i + 2]
+            pair = s[i: i + 2]
             if pair == "AA":
-                f(s[: i + 1] + AA + s[i + 1 :])
+                f(s[: i + 1] + AA + s[i + 1:])
             elif pair == "AB":
-                f(s[: i + 1] + AB + s[i + 1 :])
+                f(s[: i + 1] + AB + s[i + 1:])
             elif pair == "BA":
-                f(s[: i + 1] + BA + s[i + 1 :])
+                f(s[: i + 1] + BA + s[i + 1:])
             elif pair == "BB":
-                f(s[: i + 1] + BB + s[i + 1 :])
+                f(s[: i + 1] + BB + s[i + 1:])
 
     f("AB")
     return len(possible) % MOD
@@ -55,6 +55,7 @@ def solve(N, AA, AB, BA, BB):
     else:
         return 1
 
+
 if False:
     for mask in range(1 << 4):
         for N in range(2, 10):
@@ -63,6 +64,7 @@ if False:
             print((N, "".join(args), "\t", solveBrute(N, *args)))
             assert solveBrute(N, *args) == solve(N, *args)
         print()
+
 
 def __starting_point():
 
@@ -75,5 +77,6 @@ def __starting_point():
         BB = input()
         ans = solve(N, AA, AB, BA, BB)
         print(ans)
+
 
 __starting_point()

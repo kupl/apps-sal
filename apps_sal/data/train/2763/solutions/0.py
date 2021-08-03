@@ -1,4 +1,6 @@
 import math
+
+
 def sol_equa(n):
     res = []
     for i in range(1, int(math.sqrt(n)) + 1):
@@ -8,6 +10,5 @@ def sol_equa(n):
                 x = (i + j) // 2
                 y = (j - i) // 4
                 res.append([x, y])
-            
-    return res
 
+    return res

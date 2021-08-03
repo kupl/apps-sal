@@ -19,6 +19,7 @@ def is_bipartite(graph):
 
     return True
 
+
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = [[] for _ in range(N)]

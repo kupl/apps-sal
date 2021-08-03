@@ -11,4 +11,3 @@ for j in range(t):
             k = k // 2
             ans += 1
     print(ans)
-

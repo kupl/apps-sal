@@ -1,4 +1,4 @@
-n, s = list(map(int,input().split(' ')))
+n, s = list(map(int, input().split(' ')))
 if n <= s:
     ans = n
 else:
@@ -8,10 +8,9 @@ else:
     n -= s
     while l + 1 < r:
         m = (l + r) // 2
-        if m * (m+1) // 2 < n:
+        if m * (m + 1) // 2 < n:
             l = m
         else:
             r = m
     ans += r
 print(ans)
-

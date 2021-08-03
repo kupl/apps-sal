@@ -1,2 +1,2 @@
-X,Y = input().split()
+X, Y = input().split()
 print("<" if X < Y else ">" if Y < X else "=")

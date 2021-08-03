@@ -3,10 +3,10 @@ points = list(map(int, input().split()))
 
 dist = []
 for i in range(n):
-    if i != n-1:
-        distance = points[i+1] - points[i]
+    if i != n - 1:
+        distance = points[i + 1] - points[i]
     else:
-        distance = points[0]+k - points[i]
+        distance = points[0] + k - points[i]
     dist.append(distance)
 
 max = dist[0]

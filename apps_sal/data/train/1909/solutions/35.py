@@ -16,4 +16,3 @@ class Solution:
                         break
                 result = max(result, s * s)
         return result
-

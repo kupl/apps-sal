@@ -1,7 +1,7 @@
 def opposite(number):
-    number = 1.0*number
+    number = 1.0 * number
     if number > 0:
-        return 0-number
-    else: return 0-number
+        return 0 - number
+    else:
+        return 0 - number
   # your solution here
-

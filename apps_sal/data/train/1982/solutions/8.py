@@ -7,9 +7,9 @@ class Solution:
             graph[v].append(u)
 
         people = list(graph.keys())
-        belongs = [None] * (N+1)
+        belongs = [None] * (N + 1)
         WHITE, GRAY, BLACK = 0, 1, 2
-        color = [WHITE] * (N+1)
+        color = [WHITE] * (N + 1)
         queue = collections.deque()
 
         for u in people:

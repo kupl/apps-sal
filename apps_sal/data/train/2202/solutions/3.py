@@ -2,7 +2,8 @@ from sys import setrecursionlimit as SRL, stdin
 
 SRL(10 ** 7)
 rd = stdin.readline
-rrd = lambda: map(int, rd().strip().split())
+def rrd(): return map(int, rd().strip().split())
+
 
 n = int(rd())
 
@@ -18,8 +19,8 @@ def add(x, val):
 def query(x):
     num = 0
     for i in range(30, -1, -1):
-        if num+(1 << i) <= n and bit[num + (1 << i)] <= x:
-           
+        if num + (1 << i) <= n and bit[num + (1 << i)] <= x:
+
             x -= bit[num + (1 << i)]
             num += (1 << i)
 

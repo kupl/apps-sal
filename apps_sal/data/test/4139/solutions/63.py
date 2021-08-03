@@ -10,7 +10,7 @@ def input():
 
 def main():
     list = [[3, 5, 7]]
-    N=int(input())
+    N = int(input())
     for i in range(9):
         new = []
         for j in list[-1]:
@@ -21,22 +21,19 @@ def main():
         list.append(new)
 
     pass
-    count =0
+    count = 0
     for sub in list:
         for j in sub:
-            s =str(j)
-            if j>N:
+            s = str(j)
+            if j > N:
                 print(count)
                 return
             if "3" in s and "7" in s and "5" in s:
-                count +=1
-
-
-
-
+                count += 1
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

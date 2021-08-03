@@ -7,4 +7,3 @@ while i + 1 < len(s):
     else:
         i += 1
 print(len(s) + (n - len(s)) // 2)
-

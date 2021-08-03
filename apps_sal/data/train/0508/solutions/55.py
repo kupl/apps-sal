@@ -6,15 +6,15 @@ u = set()
 
 for _ in range(N):
     S, T, X = list(map(int, input().split()))
-    l += [(S-X, 1, X), (T-X, 0, X)]
+    l += [(S - X, 1, X), (T - X, 0, X)]
 for i in range(Q):
     l += [(int(input()), 2, i)]
 l.sort()
 
 for _, m, x in l:
-    if m==0:
+    if m == 0:
         u.remove(x)
-    elif m==1:
+    elif m == 1:
         heappush(q, x)
         u.add(x)
     else:
@@ -24,4 +24,3 @@ for _, m, x in l:
             else:
                 break
         print((q[0] if q else -1))
-

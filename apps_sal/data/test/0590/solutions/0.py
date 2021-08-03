@@ -51,4 +51,3 @@ for el in a:
 
 print(c)
 print(' '.join(str(el) for el in ans))
-

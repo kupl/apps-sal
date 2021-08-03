@@ -5,7 +5,7 @@ class Solution:
 
         for j in range(word_len):
             for i in range(1, len(A)):
-                if A[i][j] < A[i-1][j]:
-                    count+=1
+                if A[i][j] < A[i - 1][j]:
+                    count += 1
                     break
         return count

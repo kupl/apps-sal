@@ -10,6 +10,3 @@ class Solution:
             if (cur - need) % p in dp:
                 res = min(res, i - dp[(cur - need) % p])
         return res if res < n else -1
-        
-        
-

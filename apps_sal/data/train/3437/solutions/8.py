@@ -15,4 +15,3 @@ def decipher_this(s):
             tmp.append('{}{}{}'.format(chars[-1], chars[1:-1], chars[0]))
         result.append(''.join(tmp))
     return ' '.join(result)
-

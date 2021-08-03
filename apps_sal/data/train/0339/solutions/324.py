@@ -6,23 +6,22 @@ class Solution:
         '''
         if not nums1 or not nums2:
             return 0
-        
+
         res = 0
         newlist1 = collections.defaultdict(set)
         newlist2 = collections.defaultdict(set)
-        
-        
-        for i in range(len(nums2)-1):
-            for j in range(i+1, len(nums2)):
-                key = nums2[i]*nums2[j]
+
+        for i in range(len(nums2) - 1):
+            for j in range(i + 1, len(nums2)):
+                key = nums2[i] * nums2[j]
                 newlist1[key].add((i, j))
-                
-        for i in range(len(nums1)-1):
-            for j in range(i+1, len(nums1)):
-                key = nums1[i]*nums1[j]
+
+        for i in range(len(nums1) - 1):
+            for j in range(i + 1, len(nums1)):
+                key = nums1[i] * nums1[j]
                 newlist2[key].add((i, j))
         # print(newlist)
-        
+
         for n in nums1:
             if n**2 in newlist1:
                 res += len(newlist1[n**2])
@@ -30,4 +29,3 @@ class Solution:
             if n**2 in newlist2:
                 res += len(newlist2[n**2])
         return res
-

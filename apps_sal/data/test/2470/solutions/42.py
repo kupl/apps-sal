@@ -28,4 +28,4 @@ class Solution:
                     swap[i][j] = min(swap[i][j], 1 + swap[i - 1][j - 1])
 
         res = min(keep[n - 1], swap[n - 1][m - 1])
-        return res if res < math.inf else -1        
+        return res if res < math.inf else -1

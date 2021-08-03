@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people = deque(sorted(people))
@@ -17,4 +18,3 @@ class Solution:
                     count += 1
                 count += 1
         return count + len(people)
-

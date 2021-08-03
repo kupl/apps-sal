@@ -5,8 +5,8 @@ def main():
 def __starting_point():
     main()
 '''
-#372
-#1
+# 372
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -22,7 +22,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -66,8 +66,8 @@ def main():
 def __starting_point():
     main()
 '''
-#373
-#1
+# 373
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -94,7 +94,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -143,7 +143,7 @@ def main():
 def __starting_point():
     main()
 '''
-#3
+# 3
 '''
 def main():
     from sys import stdin,stdout
@@ -174,8 +174,8 @@ def main():
 def __starting_point():
     main()
 '''
-#ENCODE 16.1
-#1
+# ENCODE 16.1
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -194,7 +194,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -206,7 +206,7 @@ def main():
 def __starting_point():
     main()
 '''
-#5
+# 5
 '''
 def main():
     def gcd(a,b):
@@ -231,8 +231,8 @@ def main():
 def __starting_point():
     main()
 '''
-#374
-#1
+# 374
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -258,7 +258,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -303,8 +303,8 @@ def main():
 def __starting_point():
     main()
 '''
-#375
-#1
+# 375
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -321,7 +321,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -422,8 +422,8 @@ def main():
 def __starting_point():
     main()
 '''
-#377
-#1
+# 377
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -448,7 +448,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -470,7 +470,7 @@ def main():
 def __starting_point():
     main()
 '''
-#1
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -484,8 +484,8 @@ def main():
 def __starting_point():
     main()
 '''
-#378
-#1
+# 378
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -502,7 +502,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -538,8 +538,8 @@ def main():
 def __starting_point():
     main()
 '''
-#NOVEMBER LONG 2016
-#ALEXTASK
+# NOVEMBER LONG 2016
+# ALEXTASK
 '''
 def main():
     from sys import stdin,stdout
@@ -556,7 +556,7 @@ def main():
 def __starting_point():
     main()
 '''
-#CPERM
+# CPERM
 '''
 def main():
     from sys import stdin,stdout
@@ -579,7 +579,7 @@ def main():
 def __starting_point():
     main()
 '''
-#CHSQR
+# CHSQR
 '''
 def main():
     from sys import stdin,stdout
@@ -607,7 +607,7 @@ def main():
 def __starting_point():
     main()
 '''
-#URBANDEV
+# URBANDEV
 '''
 def main():
     from sys import stdin,stdout
@@ -670,7 +670,7 @@ def main():
 def __starting_point():
     main()
 '''
-#FRIEMEET
+# FRIEMEET
 '''
 from collections import *
 class Graph:
@@ -740,7 +740,7 @@ def main():
 def __starting_point():
     main()
 '''
-#734A
+# 734A
 '''
 def main():
     from sys import stdin,stdout
@@ -757,7 +757,7 @@ def main():
 def __starting_point():
     main()
 '''
-#734B
+# 734B
 '''
 def main():
     from sys import stdin,stdout
@@ -771,8 +771,8 @@ def main():
 def __starting_point():
     main()
 '''
-#381
-#A
+# 381
+# A
 '''
 def main():
     from sys import stdin,stdout
@@ -794,7 +794,7 @@ def main():
 def __starting_point():
     main()
 '''
-#B
+# B
 '''
 def main():
     from sys import stdin,stdout
@@ -810,7 +810,7 @@ def main():
 def __starting_point():
     main()
 '''
-#C
+# C
 '''
 def main():
     from sys import stdin,stdout
@@ -849,30 +849,35 @@ def main():
 def __starting_point():
     main()
 '''
-#382
-#1
+# 382
+# 1
+
+
 def main():
-    from sys import stdin,stdout
-    n,k=list(map(int,stdin.readline().split()))
-    s=stdin.readline().strip()
-    g=s.index('G')
-    t=s.index('T')
-    if abs(t-g)%k:
+    from sys import stdin, stdout
+    n, k = list(map(int, stdin.readline().split()))
+    s = stdin.readline().strip()
+    g = s.index('G')
+    t = s.index('T')
+    if abs(t - g) % k:
         stdout.write('NO')
     else:
-        minim=min(t,g)
-        maxim=max(t,g)
-        flag=1
-        while minim<maxim:
-            if s[minim]=='#':
-                flag=0
+        minim = min(t, g)
+        maxim = max(t, g)
+        flag = 1
+        while minim < maxim:
+            if s[minim] == '#':
+                flag = 0
                 break
-            minim+=k
+            minim += k
         if flag:
             stdout.write('YES')
         else:
             stdout.write('NO')
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -5,46 +5,46 @@ class Solution:
 
         max_sum = cur_sum
 
-        if i+1 < m and grid[i+1][j] != 0:
-            val = grid[i+1][j]
-            grid[i+1][j] = 0
+        if i + 1 < m and grid[i + 1][j] != 0:
+            val = grid[i + 1][j]
+            grid[i + 1][j] = 0
 
-            temp_max_sum = self._getMaximumGold(cur_sum + val, i+1, j, grid)
+            temp_max_sum = self._getMaximumGold(cur_sum + val, i + 1, j, grid)
 
-            grid[i+1][j] = val
-
-            if temp_max_sum > max_sum:
-                max_sum = temp_max_sum
-
-        if j+1 < n and grid[i][j+1] != 0:
-            val = grid[i][j+1]
-            grid[i][j+1] = 0
-
-            temp_max_sum = self._getMaximumGold(cur_sum + val, i, j+1, grid)
-
-            grid[i][j+1] = val
+            grid[i + 1][j] = val
 
             if temp_max_sum > max_sum:
                 max_sum = temp_max_sum
 
-        if i-1 >= 0 and grid[i-1][j] != 0:
-            val = grid[i-1][j]
-            grid[i-1][j] = 0
+        if j + 1 < n and grid[i][j + 1] != 0:
+            val = grid[i][j + 1]
+            grid[i][j + 1] = 0
 
-            temp_max_sum = self._getMaximumGold(cur_sum + val, i-1, j, grid)
-            
-            grid[i-1][j] = val
+            temp_max_sum = self._getMaximumGold(cur_sum + val, i, j + 1, grid)
+
+            grid[i][j + 1] = val
 
             if temp_max_sum > max_sum:
                 max_sum = temp_max_sum
 
-        if j-1 >= 0 and grid[i][j-1] != 0:
-            val = grid[i][j-1]
-            grid[i][j-1] = 0
+        if i - 1 >= 0 and grid[i - 1][j] != 0:
+            val = grid[i - 1][j]
+            grid[i - 1][j] = 0
 
-            temp_max_sum = self._getMaximumGold(cur_sum + val, i, j-1, grid)
+            temp_max_sum = self._getMaximumGold(cur_sum + val, i - 1, j, grid)
 
-            grid[i][j-1] = val
+            grid[i - 1][j] = val
+
+            if temp_max_sum > max_sum:
+                max_sum = temp_max_sum
+
+        if j - 1 >= 0 and grid[i][j - 1] != 0:
+            val = grid[i][j - 1]
+            grid[i][j - 1] = 0
+
+            temp_max_sum = self._getMaximumGold(cur_sum + val, i, j - 1, grid)
+
+            grid[i][j - 1] = val
 
             if temp_max_sum > max_sum:
                 max_sum = temp_max_sum
@@ -76,4 +76,3 @@ class Solution:
                 grid[i][j] = start
 
         return total_max_sum
-

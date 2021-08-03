@@ -9,12 +9,12 @@ def getAns(d, arr):
     return latestDate
 
 
-
-
 def __starting_point():
     t = int(input())
     for _ in range(t):
         N, D = input().split()
         Arr = list(map(int, input().strip().split()))
         print(getAns(int(D), Arr[::-1]))
+
+
 __starting_point()

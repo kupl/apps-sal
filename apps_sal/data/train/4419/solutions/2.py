@@ -17,7 +17,6 @@ def reg_sum_hits(n, s):
                     new_sums[i:i + 2] = [[a[0], a[1] + b[1]]]
                 else:
                     i += 1
-        sums = new_sums            
+        sums = new_sums
 
     return sums
-

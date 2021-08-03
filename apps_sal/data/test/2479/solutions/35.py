@@ -1,9 +1,9 @@
 n, q = map(int, input().split())
 query = [list(map(int, input().split())) for _ in range(q)]
 
-ans = (n-2)**2
-x = [n] * (n+1)
-y = [n] * (n+1)
+ans = (n - 2)**2
+x = [n] * (n + 1)
+y = [n] * (n + 1)
 xm = ym = n
 
 for a, b in query:

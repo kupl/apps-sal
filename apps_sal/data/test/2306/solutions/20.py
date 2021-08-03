@@ -36,4 +36,3 @@ for i in range(ST[-1] * 2):
     v = nv
 
 print(cnt)
-

@@ -40,4 +40,3 @@ for i in range(n):
             ans = cur
 print(ans)
 # print(time.time() - t)
-

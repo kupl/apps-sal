@@ -4,7 +4,7 @@ ans = ''
 last_ind = 0
 i = 0
 while i < n:
-    if s[i:i+3] == 'ogo':
+    if s[i:i + 3] == 'ogo':
         i += 2
     else:
         i += 1

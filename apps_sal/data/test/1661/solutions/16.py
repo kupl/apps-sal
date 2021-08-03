@@ -1,6 +1,6 @@
-n,m = list(map(int,input().split()))
-ci = list(map(int,input().split()))
-ai = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
+ci = list(map(int, input().split()))
+ai = list(map(int, input().split()))
 i = 0
 j = 0
 ans = 0
@@ -12,4 +12,3 @@ while i < n and j < m:
         j += 1
         ans += 1
 print(ans)
-

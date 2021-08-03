@@ -3,5 +3,3 @@ def opposite(number):
     num = number * -1
     print(num)
     return num
-    
-

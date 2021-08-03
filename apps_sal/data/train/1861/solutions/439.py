@@ -1,12 +1,13 @@
 class Solution:
     def minAreaRect(self, points):
         X = list(zip(*points))
-        if len(set(X[0])) == 1 or len(set(X[1])) == 1: return 0
-        
+        if len(set(X[0])) == 1 or len(set(X[1])) == 1:
+            return 0
+
         seen, ans = set(map(tuple, points)), float('inf')
         for i, (p1x, p1y) in enumerate(points):
-            for (p2x, p2y) in points[i+1:]:
-                area = abs((p2x-p1x)*(p2y-p1y))
+            for (p2x, p2y) in points[i + 1:]:
+                area = abs((p2x - p1x) * (p2y - p1y))
                 if area > ans or area == 0:
                     continue
                 if (p1x, p2y) in seen and (p2x, p1y) in seen:

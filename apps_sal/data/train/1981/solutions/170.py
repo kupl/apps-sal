@@ -19,9 +19,9 @@ class Solution:
             else:
                 freq[index] = max(freq[index], h)
                 h -= 1
-                
-        freq.sort(reverse = True)
-        nums.sort(reverse = True)
+
+        freq.sort(reverse=True)
+        nums.sort(reverse=True)
         idx = res = 0
         for v in freq:
             res += nums[idx] * v

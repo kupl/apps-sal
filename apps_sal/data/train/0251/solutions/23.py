@@ -39,6 +39,7 @@ The answer is guaranteed to fit within a 32-bit integer.
 Accepted 11, 010 / 20, 603 submissions.
 '''
 
+
 class SolutionWhile:
 
     def clumsy(self, N: int) -> int:
@@ -61,10 +62,10 @@ class SolutionWhile:
                     N -= 1
         while N:
             if N > 2:
-                R -= N*(N-1)//(N-2)
+                R -= N * (N - 1) // (N - 2)
                 N -= 3
             elif N > 1:
-                R -= N*(N-1)
+                R -= N * (N - 1)
                 N -= 2
             elif N > 0:
                 R -= N
@@ -77,9 +78,11 @@ class SolutionWhile:
         return R
 
 ###############################################################################
+
+
 class Solution:
     pass
 
+
 Solution = SolutionWhile
 # Solution = SolutionMathTricks
-

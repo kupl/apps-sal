@@ -20,7 +20,8 @@ for t in range(int(input())):
     q = sum(2 * (b[i] - c[i]) * v[i] for i in range(n))
     r = sum(vi ** 2 for vi in v)
 
-    func = lambda t: p / t / t + q / t + r
+    def func(t): return p / t / t + q / t + r
+
     def method1():
         if b == c:
             return 0

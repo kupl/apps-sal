@@ -51,4 +51,3 @@ if ans == 1234567:
     print(-1)
 else:
     print(ans)
-

@@ -5,5 +5,5 @@ class Solution(object):
             local, domain = email.split('@')
             if '+' in local:
                 local = local[:local.index('+')]
-            seen.add(local.replace('.','') + '@' + domain)
+            seen.add(local.replace('.', '') + '@' + domain)
         return len(seen)

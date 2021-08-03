@@ -15,4 +15,3 @@ else:
                         v = -coefC / coefB
                         result = min(result, abs(v))
 print(result)
-

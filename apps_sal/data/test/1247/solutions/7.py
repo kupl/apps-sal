@@ -6,4 +6,3 @@ if sum(tmp) == 0 or sum(tmp) % 2 == 1:
     print('First')
 else:
     print('Second')
-

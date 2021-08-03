@@ -1,5 +1,5 @@
 a = int(input())
-b = list(map(int,input().split()))
+b = list(map(int, input().split()))
 count = 1
 s = set()
 d = list()
@@ -13,11 +13,11 @@ for i in b:
         f[i] = count
         suc.append(i)
         d.append(count)
-        count+=1
+        count += 1
 for i in range(len(suc)):
-    if d[suc[i]-1] != i+1:
+    if d[suc[i] - 1] != i + 1:
         print(-1)
         return
-print(count-1)
+print(count - 1)
 print(*d)
 print(*suc)

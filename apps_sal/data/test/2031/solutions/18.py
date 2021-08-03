@@ -11,4 +11,3 @@ for _ in range(m):
         s[x] = -1
     ans.sort()
     print(data[ans[pos - 1]])
-

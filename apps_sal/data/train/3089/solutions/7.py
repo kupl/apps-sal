@@ -9,4 +9,3 @@ def dashatize(n):
         else:
             s += '-' + c + '-'
     return s.replace('--', '-').strip('-')
-

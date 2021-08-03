@@ -57,77 +57,56 @@ for _ in range(test):
         for x in range(length):
             if(pointer<=len(parr[x])):
                 temp.append(parr[x][pointer])'''
-                
+
 from collections import defaultdict as df
-t=int(input())
+t = int(input())
 for x in range(t):
-    r,c=list(map(int,input().split()))
-    p=df(list)
-    a=[[0]*c for i in range(r)]
+    r, c = list(map(int, input().split()))
+    p = df(list)
+    a = [[0] * c for i in range(r)]
     for i in range(r):
-        s=input().rstrip()
+        s = input().rstrip()
         for j in range(c):
-            a[i][j]=s[j]
+            a[i][j] = s[j]
     for i in range(r):
         for j in range(c):
-            timer=0
-            if a[i][j]=='U':
-                
-                for k in range(i-1,-1,-1):
-                    if a[k][j]!='#':
-                        timer+=1
-                        p[str(k)+' '+str(j)].append(timer)
+            timer = 0
+            if a[i][j] == 'U':
+
+                for k in range(i - 1, -1, -1):
+                    if a[k][j] != '#':
+                        timer += 1
+                        p[str(k) + ' ' + str(j)].append(timer)
                     else:
                         break
-            if a[i][j]=='R':
-                for k  in range(j+1,c):
-                    if a[i][k]!='#':
-                        timer+=1
-                        p[str(i)+' '+str(k)].append(timer)
+            if a[i][j] == 'R':
+                for k in range(j + 1, c):
+                    if a[i][k] != '#':
+                        timer += 1
+                        p[str(i) + ' ' + str(k)].append(timer)
                     else:
                         break
-            if a[i][j]=='D':
-                for k in range(i+1,r):
-                    if a[k][j]!='#':
-                        timer+=1
-                        p[str(k)+' '+str(j)].append(timer)
+            if a[i][j] == 'D':
+                for k in range(i + 1, r):
+                    if a[k][j] != '#':
+                        timer += 1
+                        p[str(k) + ' ' + str(j)].append(timer)
                     else:
                         break
-            if a[i][j]=='L':
-                for  k in range(j-1,-1,-1):
-                    if a[i][k]!='#':
-                        timer+=1
-                        p[str(i)+' '+str(k)].append(timer)
+            if a[i][j] == 'L':
+                for k in range(j - 1, -1, -1):
+                    if a[i][k] != '#':
+                        timer += 1
+                        p[str(i) + ' ' + str(k)].append(timer)
                     else:
                         break
-    #print(p)
-    total=0
-    #print(p)
+    # print(p)
+    total = 0
+    # print(p)
     for i in p:
-        y=set(p[i])
+        y = set(p[i])
         for j in y:
-            if p[i].count(j)>1:
-                n1=p[i].count(j)
-                total+=(n1*(n1-1))//2
+            if p[i].count(j) > 1:
+                n1 = p[i].count(j)
+                total += (n1 * (n1 - 1)) // 2
     print(total)
-                
-                
-        
-                    
-                        
-                        
-                
-        
-            
-    
-        
-            
-        
-        
-        
-                
-            
-            
-        
-    
-    

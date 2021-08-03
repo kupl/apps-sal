@@ -11,7 +11,7 @@ class Solution:
                 else:
                     ans += 1
                     nums[i] -= 1
-                
+
             if twos > big:
                 big = twos
         return ans + big

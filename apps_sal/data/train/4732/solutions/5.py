@@ -3,4 +3,3 @@ def absent_vowel(x):
     for i, v in enumerate(vowels):
         if v not in x.lower():
             return i
-

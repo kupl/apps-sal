@@ -9,7 +9,7 @@ class Solution:
         if cur_H > H:
             return False
         return True
-        
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         min_speed = 1
         max_speed = max(piles)

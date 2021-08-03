@@ -3,6 +3,7 @@ class Solution:
         prefix = [0]
         for a in A:
             prefix.append(prefix[-1] + a)
+
         @lru_cache(None)
         def soa(i, k):
             if len(prefix) - 1 - i <= k:

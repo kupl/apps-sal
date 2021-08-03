@@ -10,6 +10,8 @@ class Solution:
                 
         return -1 if min_num[amount] == float('inf') else min_num[amount]
 '''
+
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
@@ -20,6 +22,6 @@ class Solution:
             if amount in curr:
                 return res
             seen |= curr
-            tmp = {n+c for n in curr for c in coins}
+            tmp = {n + c for n in curr for c in coins}
             curr = {t for t in tmp if t not in seen and t <= amount}
         return -1

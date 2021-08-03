@@ -1,6 +1,7 @@
 import re
 from math import gcd
 
+
 def solve(*eqs):
     # Print equations for reference
     for e in eqs:
@@ -37,25 +38,31 @@ def solve(*eqs):
     for line in matrix:
         print(line)
     # Reduce the matrix with standard operations
+
     def swap(i0, i1):
         # matrix[i1], matrix[i0] = matrix[i0], matrix[i1]
         tmp = matrix[i0]
         matrix[i0] = matrix[i1]
         matrix[i1] = tmp
+
     def mul(i, n):
         for l in matrix[i]:
             l[0] *= n
+
     def div(i, n):
         for l in matrix[i]:
             l[1] *= n
+
     def add(io, it):
         for c in range(len(matrix[0])):
             matrix[it][c][0] = matrix[it][c][0] * matrix[io][c][1] + matrix[io][c][0] * matrix[it][c][1]
             matrix[it][c][1] *= matrix[io][c][1]
+
     def sub(io, it):
         for c in range(len(matrix[0])):
             matrix[it][c][0] = matrix[it][c][0] * matrix[io][c][1] - matrix[io][c][0] * matrix[it][c][1]
             matrix[it][c][1] *= matrix[io][c][1]
+
     def reduce(i):
         for l in matrix[i]:
             divisor = gcd(l[0], l[1])
@@ -64,16 +71,17 @@ def solve(*eqs):
             if divisor != 0:
                 l[0], l[1] = l[0] // divisor, l[1] // divisor
     # Convert to row echelon form
+
     def ref(r0, c0):
         print()
-        if r0 >= len(matrix) or c0 >= len(matrix[0])-1:
+        if r0 >= len(matrix) or c0 >= len(matrix[0]) - 1:
             return
         if matrix[r0][c0][0] == 0:
             r = r0
             while r < len(matrix) and matrix[r][c0][0] == 0:
                 r += 1
             if r == len(matrix):
-                return ref(r0, c0+1)
+                return ref(r0, c0 + 1)
             swap(r0, r)
         for i in range(r0, len(matrix)):
             if matrix[i][c0][0] != 0:
@@ -82,19 +90,20 @@ def solve(*eqs):
         for i in range(r0, len(matrix)):
             mul(i, matrix[i][c0][1])
             reduce(i)
-        for i in range(r0+1, len(matrix)):
+        for i in range(r0 + 1, len(matrix)):
             if matrix[i][c0][0] != 0:
                 sub(r0, i)
                 reduce(i)
-        return ref(r0+1, c0+1)
+        return ref(r0 + 1, c0 + 1)
     ref(0, 0)
     # Remove lines that lack meaning
-    matrix = [line for line in matrix 
+    matrix = [line for line in matrix
               if line != [[0, 1] for x in range(len(line))]]
     print('REF:')
     for line in matrix:
         print(line)
     # Generate reduced row echelon form by retracing up the matrix
+
     def rref(r0, c0):
         while r0 > 0 and c0 > 0 and matrix[r0][c0] != [1, 1]:
             if r0 > 0 and matrix[r0][c0][0] == 0:
@@ -110,9 +119,9 @@ def solve(*eqs):
             mul(-1, matrix[i][c0][0])
             sub(-1, i)
             reduce(i)
-        return rref(r0-1, c0-1)
+        return rref(r0 - 1, c0 - 1)
     matrix.append([[0, 1] for x in range(len(matrix[0]))])
-    rref(len(matrix)-2, len(matrix[0])-2)
+    rref(len(matrix) - 2, len(matrix[0]) - 2)
     matrix.pop()
     print()
     for line in matrix:
@@ -125,6 +134,5 @@ def solve(*eqs):
         return None
     result = {}
     for i in range(len(matrix)):
-        result[ordered_keys[i]] = -matrix[i][-1][0]/matrix[i][-1][1]
+        result[ordered_keys[i]] = -matrix[i][-1][0] / matrix[i][-1][1]
     return result
-

@@ -1,9 +1,5 @@
 class Solution:
-    
-    
 
-    
-    
     def minFallingPathSum(self, A):
         for i in range(1, len(A)):
             r = heapq.nsmallest(2, A[i - 1])

@@ -7,8 +7,8 @@ class Solution:
                 preList.append(i)
         # print(preList)
         ans = 0
-        preR = len(preList)-1
-        for i in range(ALen-1, -1, -1):
+        preR = len(preList) - 1
+        for i in range(ALen - 1, -1, -1):
             l = 0
             while preR > 0 and preList[preR] >= i:
                 preR -= 1
@@ -17,7 +17,7 @@ class Solution:
             if A[i] < A[preList[l]] and A[i] >= A[preList[r]]:
                 while r > l:
                     # print(l, r)
-                    m = (r+ l)//2
+                    m = (r + l) // 2
                     if A[preList[m]] < A[i]:
                         r = m
                     elif A[preList[m]] > A[i]:
@@ -29,6 +29,5 @@ class Solution:
                 ans = max(ans, i - preList[l])
             elif A[i] >= A[preList[l]]:
                 ans = max(ans, i - preList[l])
-                
-        return ans
 
+        return ans

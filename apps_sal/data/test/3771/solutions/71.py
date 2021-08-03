@@ -12,7 +12,7 @@ class Dinic:
     def add(self, u, v, c, directed=True):
         if directed:
             self.edges[u].append([v, c, len(self.edges[v])])
-            self.edges[v].append([u, 0, len(self.edges[u])-1])
+            self.edges[v].append([u, 0, len(self.edges[u]) - 1])
         else:  # TODO: must be Verified
             self.edges[u].append([v, c, len(self.edges[v])])
             self.edges[v].append([u, 0, len(self.edges[u]) - 1])
@@ -60,24 +60,24 @@ class Dinic:
 
 
 H, W = map(int, input().split())
-graph = Dinic(H+W+2)
+graph = Dinic(H + W + 2)
 
 for h in range(H):
     tmp = str(input())
     for w in range(W):
         if tmp[w] == 'o':
-            graph.add(h+1, H+1+w, 1)
+            graph.add(h + 1, H + 1 + w, 1)
             graph.add(H + w + 1, h + 1, 1)
         if tmp[w] == 'S':
             start = [h, w]
-            graph.add(0, h+1, float('inf'))
-            graph.add(0, H+w+1, float('inf'))
+            graph.add(0, h + 1, float('inf'))
+            graph.add(0, H + w + 1, float('inf'))
         if tmp[w] == 'T':
             goal = [h, w]
-            graph.add(h+1, H+W+1, float('inf'))
-            graph.add(H+1+w, H+W+1, float('inf'))
+            graph.add(h + 1, H + W + 1, float('inf'))
+            graph.add(H + 1 + w, H + W + 1, float('inf'))
 
 if start[0] == goal[0] or start[1] == goal[1]:
     print(-1)
     return
-print(graph.maxFlow(0, H+W+1))
+print(graph.maxFlow(0, H + W + 1))

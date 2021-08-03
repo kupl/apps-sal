@@ -4,6 +4,7 @@ def ri(): return int(rs())
 def rs_(): return [_ for _ in rs().split()]
 def ri_(): return [int(_) for _ in rs().split()]
 
+
 X, K, D = ri_()
 x = abs(X)
 

@@ -1,4 +1,6 @@
 s = str(input())
+
+
 def answer(s: str) -> str:
     ans = ''
     for i in range(len(s)):

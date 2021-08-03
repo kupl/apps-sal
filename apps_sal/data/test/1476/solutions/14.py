@@ -5,7 +5,7 @@ if n > 4:
         if i % 2 == 0:
             a = a + [i + 1]
         else:
-            a = [n -i + (n % 2 == 0)] + a
+            a = [n - i + (n % 2 == 0)] + a
     print(len(a))
     print(' '.join(str(x) for x in a))
 elif n == 4:
@@ -17,4 +17,3 @@ elif n == 3:
 else:
     print(1)
     print(1)
-

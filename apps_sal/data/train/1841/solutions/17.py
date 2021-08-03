@@ -3,7 +3,7 @@ class Solution:
         res = []
         valuearr = []
         arr.sort()
-        m = arr[int((len(arr)-1)/2)]
+        m = arr[int((len(arr) - 1) / 2)]
         # if len(arr) % 2 == 0:
         #     m = (arr[int(len(arr) / 2)] + arr[int(len(arr) / 2 - 1)]) / 2
         # else:

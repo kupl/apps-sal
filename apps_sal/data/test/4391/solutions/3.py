@@ -14,4 +14,3 @@ for i in range(n - k + 1):
         ans = max(t, ans)
 
 print(ans)
-

@@ -25,4 +25,3 @@ if cur != 0:
     print("NO")
 else:
     print("YES")
-

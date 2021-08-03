@@ -11,4 +11,3 @@ for bi in b:
         break
 
 print('Conan' if not all_even else 'Agasa')
-

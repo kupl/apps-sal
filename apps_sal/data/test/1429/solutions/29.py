@@ -23,4 +23,3 @@ for start_ind in range(n):
             ans += 1
 
 print(ans)
-

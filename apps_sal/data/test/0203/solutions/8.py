@@ -1,9 +1,9 @@
-n=int(input())
-s=input()
-dd,dr=0,0
+n = int(input())
+s = input()
+dd, dr = 0, 0
 dr = 0
 while len(s) > 1:
-    cd,cr,t=0,0,''
+    cd, cr, t = 0, 0, ''
     for c in s:
         if c == 'D':
             if dd > 0:
@@ -14,22 +14,22 @@ while len(s) > 1:
                 cd += 1
         else:
             if dr > 0:
-                dr-=1
+                dr -= 1
             else:
-                dd+=1
-                t+=c
-                cr+=1
-    s=t
+                dd += 1
+                t += c
+                cr += 1
+    s = t
     if cd == 0:
-        s='R'
+        s = 'R'
         break
-    if cr==0:
-        s='D'
+    if cr == 0:
+        s = 'D'
         break
-    if dd>=cd:
-        s='R'
+    if dd >= cd:
+        s = 'R'
         break
-    if dr>=cr:
-        s='D'
+    if dr >= cr:
+        s = 'D'
         break
 print(s[0])

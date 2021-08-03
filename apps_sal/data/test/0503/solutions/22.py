@@ -11,9 +11,8 @@ rk = Counter(a)
 
 for x in a:
     rk[x] -= 1
-    if x%k == 0:
-        ans += lk.get(x/k, 0) * rk.get(x*k, 0)
+    if x % k == 0:
+        ans += lk.get(x / k, 0) * rk.get(x * k, 0)
     lk[x] = 1 + lk.get(x, 0)
 
 print(ans)
-

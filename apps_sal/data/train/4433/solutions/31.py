@@ -5,6 +5,6 @@ def logical_calc(array, op):
             ans = ans & i
         elif op == "OR":
             ans = ans | i
-        else :
+        else:
             ans = ans ^ i
     return ans

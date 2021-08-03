@@ -1,5 +1,5 @@
 def div_num(a, b):
-    return "Error" if a > b else min((-divcount(n), n) for n in range(a, b+1))[1]
+    return "Error" if a > b else min((-divcount(n), n) for n in range(a, b + 1))[1]
 
 
 def divcount(n):

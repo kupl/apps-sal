@@ -1,6 +1,5 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        
 
         if sum(customers) == 0 or boardingCost * 4 <= runningCost:
             return -1
@@ -16,7 +15,7 @@ class Solution:
             current_customer -= people
 
             money.append(boardingCost * people - runningCost)
-            i = i+1
+            i = i + 1
 
         res = []
         ok = 0

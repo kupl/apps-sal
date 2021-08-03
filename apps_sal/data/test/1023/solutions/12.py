@@ -11,14 +11,14 @@ j = 0
 q = 0
 for i in range(n):
     a[i] = a[i] + ta
-    while j<m:
-        if a[i]<=b[j]:
+    while j < m:
+        if a[i] <= b[j]:
             q += 1
             b1.append(b[j])
             j += 1
             break
         j += 1
-if q<=k:
+if q <= k:
     print(-1)
 else:
-    print(b1[k]+tb)
+    print(b1[k] + tb)

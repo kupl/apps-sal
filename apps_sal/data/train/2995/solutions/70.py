@@ -3,8 +3,8 @@ def sum_mul(n, m):
     if n <= 0 or m <= 0:
         return 'INVALID'
     try:
-        for n in  range(n,m,n):
+        for n in range(n, m, n):
             total += n
-        return total 
+        return total
     except:
         return 'INVALID'

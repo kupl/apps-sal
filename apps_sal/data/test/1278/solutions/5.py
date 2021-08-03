@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class ACityDay:
     def solve(self):
@@ -24,4 +25,3 @@ solver = ACityDay()
 input = sys.stdin.readline
 
 solver.solve()
-

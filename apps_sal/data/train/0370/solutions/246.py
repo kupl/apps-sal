@@ -12,15 +12,16 @@ class Solution:
         for a in A:
             count[self.f(m, a)] += 1
         return max(count.values())
-        
+
     def f(self, m, a):
         while m[a] != a:
             m[a] = m[m[a]]
             a = m[a]
         return a
-    
+
     def u(self, m, a, b):
-        if m[a] == m[b]: return
+        if m[a] == m[b]:
+            return
         pa = self.f(m, a)
         pb = self.f(m, b)
         m[pa] = pb

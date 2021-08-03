@@ -104,4 +104,3 @@ for uvd in sys.stdin.readlines():
     links[u][v] = d
     links[v][u] = d
 print((solve(s, t, links)))
-

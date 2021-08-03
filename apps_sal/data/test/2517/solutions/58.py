@@ -18,4 +18,3 @@ for p in permutations(r):
         t += g[p[i]][p[i + 1]]
     result = min(result, t)
 print((int(result)))
-

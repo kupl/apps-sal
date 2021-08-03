@@ -17,10 +17,8 @@ for i in range(l):
 ans = l
 for i in range(26):
     if d[i][0] != -1:
-        k[i] = max(d[i][2], l - d[i][0] - 1, d[i][1] - 1)    
+        k[i] = max(d[i][2], l - d[i][0] - 1, d[i][1] - 1)
     if k[i] > -1:
         ans = min(ans, k[i])
 
 print(ans + 1)
-
-

@@ -6,7 +6,7 @@ jobs = [[] for i in range(M)]
 for i in range(N):
     A, B = map(int, input().split())
     if A - 1 < M:
-        jobs[A-1].append(B)
+        jobs[A - 1].append(B)
 
 q = []
 heapq.heapify(q)

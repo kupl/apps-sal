@@ -1,7 +1,7 @@
 
 def resolve():
     N = int(input())
-    A = [ int(input()) for _ in range(N)]
+    A = [int(input()) for _ in range(N)]
 
     #print(N, A)
 
@@ -9,7 +9,7 @@ def resolve():
     cnt = 0
     for i in range(N):
         next = A[next] - 1
-        #print(next)
+        # print(next)
         cnt += 1
         if next == 1:
             break
@@ -22,4 +22,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

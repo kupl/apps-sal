@@ -98,4 +98,5 @@ def __starting_point():
     except CantException:
         print("-1")
 
+
 __starting_point()

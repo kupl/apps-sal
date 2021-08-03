@@ -6,6 +6,7 @@ class Solution:
         # people.sort(key=lambda x: -len(set(x) & set(req_skills)))
         # # print(people)
         res = [0] * 17
+
         def dfs(idx=0, path=[], has=set()):
             nonlocal res
             if idx == len(req_skills):
@@ -21,4 +22,3 @@ class Solution:
                         has -= {x for x in p_skills[i] if x not in intersection}
         dfs()
         return res
-

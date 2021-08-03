@@ -9,4 +9,5 @@ for i in range(3, n + 1):
     dpst[i] = a[i - 2] + min(dpst[i - 1], dplift[i - 1])
     dplift[i] = b[i - 2] + min(c + dpst[i - 1], dplift[i - 1])
 
-for i in range(1, n + 1): print(min(dpst[i], dplift[i]), end = " ")
+for i in range(1, n + 1):
+    print(min(dpst[i], dplift[i]), end=" ")

@@ -1,3 +1,4 @@
-f = lambda: min(int(input()), int(input()))
-print((f() + f()))
+def f(): return min(int(input()), int(input()))
 
+
+print((f() + f()))

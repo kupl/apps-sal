@@ -1,11 +1,11 @@
+from collections import Counter, deque
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -29,11 +29,11 @@ def main():
             ans += 1
     l = [ans]
 
-    for i in range(n-1):
+    for i in range(n - 1):
         trial = 0
         if s[i] == "W":
             trial += 1
-        if s[i+1] == "E":
+        if s[i + 1] == "E":
             trial -= 1
         ans += trial
         l.append(ans)
@@ -43,5 +43,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

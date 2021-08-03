@@ -18,7 +18,3 @@ for j in range(m):
     sum1 = 0
     sum2 = 0
 print(res)
-
-
-
-

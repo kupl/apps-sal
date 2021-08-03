@@ -17,4 +17,3 @@ def bellman_ford():
 bellman_ford()
 ans = sum([sum([0 if x == "-1" else dist[int(x)] for x in input().split()]) for _ in range(H)])
 print(ans)
-

@@ -27,6 +27,6 @@ for _ in range(q):
             if s[j] != sample[x]:
                 cnt += 1
             x = (x + 1) % 3
-        ans = min(ans, cnt) 
-        #print(ans, 9)       
+        ans = min(ans, cnt)
+        #print(ans, 9)
     print(ans)

@@ -17,10 +17,7 @@ for c in s:
             b += 1
 
 
-
-
 if (b == 1 and op == 1) or (b == 0 and op == 0):
     print('Yes')
 else:
     print('No')
-

@@ -1,19 +1,21 @@
 '''
 I think Idea is to consider for all possible starting pairs (so number1,startingIndex1,number2,startingIndex2), what is longest pair we can get moving forward
 '''
+
+
 class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
-        BIG_NUMBER = 2**31-1##python can interpret long numbers so we will use this to compute.
-        numSplits = {}##tells what the number is represented by the substring from a to b b exclusive.
+        BIG_NUMBER = 2**31 - 1  # python can interpret long numbers so we will use this to compute.
+        numSplits = {}  # tells what the number is represented by the substring from a to b b exclusive.
         sLength = len(S)
         reverseSplits = {}
         for i in range(sLength):
             currentNum = 0
-            for j in range(i+1,sLength+1):
+            for j in range(i + 1, sLength + 1):
                 currentNum *= 10
-                currentNum += int(S[j-1])
+                currentNum += int(S[j - 1])
                 if currentNum == 0:
-                    numSplits[(i,j)] = currentNum
+                    numSplits[(i, j)] = currentNum
                     if currentNum not in reverseSplits:
                         reverseSplits[currentNum] = {}
                     if i not in reverseSplits[currentNum]:
@@ -24,7 +26,7 @@ class Solution:
                 elif currentNum > BIG_NUMBER:
                     break
                 else:
-                    numSplits[(i,j)] = currentNum
+                    numSplits[(i, j)] = currentNum
                     if currentNum not in reverseSplits:
                         reverseSplits[currentNum] = {}
                     if i not in reverseSplits[currentNum]:
@@ -32,22 +34,23 @@ class Solution:
                     else:
                         reverseSplits[currentNum][i].add(j)
         fibonacciSequences = {}
-        def computeFibonacciSequences(startingIndex):##if startingIndex == 
+
+        def computeFibonacciSequences(startingIndex):  # if startingIndex ==
             if startingIndex not in fibonacciSequences:
                 if startingIndex == sLength:
                     answer = [[]]
                 else:
                     answer = []
-                    for i in range(startingIndex+1,sLength+1):
-                        if (startingIndex,i) in numSplits:##so this is a valid number.
-                            nextNumber = numSplits[(startingIndex,i)]
+                    for i in range(startingIndex + 1, sLength + 1):
+                        if (startingIndex, i) in numSplits:  # so this is a valid number.
+                            nextNumber = numSplits[(startingIndex, i)]
                             ithFibonaccis = computeFibonacciSequences(i)
                             for fibSeq in ithFibonaccis:
                                 if len(fibSeq) > 1:
                                     largeNumber = fibSeq[-2]
                                     smallNumber = fibSeq[-1]
-                                    if nextNumber == largeNumber-smallNumber:
-                                        appended = fibSeq+[nextNumber]
+                                    if nextNumber == largeNumber - smallNumber:
+                                        appended = fibSeq + [nextNumber]
                                         answer.append(appended)
                                 else:
                                     appended = fibSeq + [nextNumber]
@@ -65,7 +68,3 @@ class Solution:
                 return sequence
         else:
             return []
-
-                                    
-                                
-

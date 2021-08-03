@@ -1,21 +1,21 @@
 class Union:
-    
+
     def __init__(self):
         self.parent = {}
         self.rank = {}
         self.count = 0
-        
+
     def add(self, idx):
         if idx not in self.parent:
             self.parent[idx] = idx
             self.rank[idx] = 1
             self.count += 1
-    
+
     def find(self, idx):
         if self.parent[idx] != idx:
             self.parent[idx] = self.find(self.parent[idx])
         return self.parent[idx]
-    
+
     def unite(self, p, q):
         i, j = self.find(p), self.find(q)
         if i == j:
@@ -26,6 +26,7 @@ class Union:
         self.rank[j] += self.rank[i]
         self.count -= 1
         return False
+
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:

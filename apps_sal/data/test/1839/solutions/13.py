@@ -14,4 +14,3 @@ for i in range(n ** 2):
         ans.append(i + 1)
 
 print(' '.join(list(map(str, ans))))
-

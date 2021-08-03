@@ -1,4 +1,5 @@
-import fractions, functools
+import fractions
+import functools
 
 n = int(input())
 
@@ -9,5 +10,3 @@ gcd = functools.reduce(fractions.gcd, a)
 moves = max(a) // gcd - n
 
 print(['Bob', 'Alice'][moves % 2])
-
-

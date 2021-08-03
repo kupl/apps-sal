@@ -1,3 +1,4 @@
+import sys
 n, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -8,7 +9,6 @@ for i in range(n):
     for j in range(m):
         possible[i].append(a[i] & b[j])
 
-import sys
 for answer in range(2 ** 9):
     answer_flag = 1
     for i in range(n):
@@ -23,4 +23,3 @@ for answer in range(2 ** 9):
     if answer_flag:
         print(answer)
         return
-

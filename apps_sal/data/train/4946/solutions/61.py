@@ -3,6 +3,5 @@ def house_numbers_sum(inp):
     for num in inp:
         if num == 0:
             return res
-        res+=num
+        res += num
     return -1
-

@@ -19,4 +19,3 @@ for i in range(1, h + 1):
 
 answer = min_magic[maxa + h]
 print(answer)
-

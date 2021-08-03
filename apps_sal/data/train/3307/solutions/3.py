@@ -1,5 +1,6 @@
 from itertools import cycle
 
+
 def fat_fingers(s):
     def characters(s):
         it = cycle([str, str.swapcase])

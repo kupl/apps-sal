@@ -22,7 +22,5 @@ for i in range(len(s)):
             j = i
 
 if j > -1:
-    a = s[0:j] + s[-1] + s[j+1:-1] + s[j]
+    a = s[0:j] + s[-1] + s[j + 1:-1] + s[j]
 fout.write(a)
-
-

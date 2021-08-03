@@ -1,5 +1,5 @@
 n = input()
-str_arr = input().split(' ') #will take in a string of numbers separated by a space
+str_arr = input().split(' ')  # will take in a string of numbers separated by a space
 arr = [int(num) for num in str_arr]
 #print (arr)
 lm = 1
@@ -14,5 +14,4 @@ for act in arr:
         l = 1
     ant = act
 
-print (lm)
-
+print(lm)

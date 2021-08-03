@@ -19,9 +19,11 @@ def try_solve(x, d):
 
     for i in range(len(x) - d):
         occ[x[i]] += 1
-        if occ[x[i]] == 2: multi += 1
+        if occ[x[i]] == 2:
+            multi += 1
         occ[x[i + d]] -= 1
-        if occ[x[i + d]] == 1: multi -= 1
+        if occ[x[i + d]] == 1:
+            multi -= 1
         if multi == 0:
             return True
 

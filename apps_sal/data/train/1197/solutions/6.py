@@ -3,11 +3,11 @@ li = [1, 2, 4, 8, 13, 21, 31, 45, 66, 81, 97, 123, 148, 182, 204, 252, 290, 361,
 
 tc = int(input())
 while tc:
-    tc-=1
+    tc -= 1
     n = int(input())
     s = 0
     for i in range(n):
-        s+=li[i]
-        print(li[i],end=" ")
+        s += li[i]
+        print(li[i], end=" ")
     print()
     print(s)

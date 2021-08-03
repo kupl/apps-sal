@@ -32,6 +32,3 @@ for _ in range(Q):
     for i in range(st, n + 1):
         if not vs[i]:
             a[n] = a[n - 1] + i
-    
-
-

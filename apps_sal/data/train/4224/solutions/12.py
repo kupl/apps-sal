@@ -1,4 +1,4 @@
-def dont_give_me_five(start,end):
+def dont_give_me_five(start, end):
     n = 0
     for j in range(start, end + 1):
         i = abs(j)
@@ -7,5 +7,5 @@ def dont_give_me_five(start,end):
             if i % 5 == 0 and i % 10 != 0:
                 n -= 1
                 break
-            i = i // 10      
+            i = i // 10
     return n

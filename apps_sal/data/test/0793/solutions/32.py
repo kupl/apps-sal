@@ -14,5 +14,5 @@ def main():
         u, v = v, u
     return u[-1] % mod
 
-print((main()))
 
+print((main()))

@@ -3,11 +3,13 @@ class Solution:
         parents = [i for i in range(len(s))]
         ranks = [1 for _ in range(len(s))]
         components = collections.defaultdict(list)
+
         def find(x):
             while x != parents[x]:
                 parents[x] = parents[parents[x]]
                 x = parents[x]
             return x
+
         def union(x, y):
             px, py = find(x), find(y)
             if px == py:

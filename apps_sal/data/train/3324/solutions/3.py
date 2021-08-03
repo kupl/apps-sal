@@ -24,12 +24,11 @@ class RangeDict(dict):
     def __init__(self, mapping=None, iterable=None):
         self._root = None
 
-        #explain init method
+        # explain init method
         if mapping or iterable:
             for k, v in (mapping.items() if mapping else iterable):
                 self[k] = v
 
-            
     def __setitem__(self, r, v):
         if r[1] < r[0]:
             raise KeyError
@@ -299,8 +298,8 @@ def height(root):
 
 def sale_hotdogs(n):
     d = RangeDict({
-        (0, 5-1): 100,
-        (5, 10-1): 95,
+        (0, 5 - 1): 100,
+        (5, 10 - 1): 95,
         (10, float('inf')): 90
-        })
+    })
     return d[n] * n

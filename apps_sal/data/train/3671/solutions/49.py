@@ -1,5 +1,5 @@
 def problem(a):
-    if isinstance(a,str):
+    if isinstance(a, str):
         return"Error"
     else:
-        return int(a*50+6)
+        return int(a * 50 + 6)

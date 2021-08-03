@@ -1,5 +1,5 @@
 def insert_dash2(num):
-    
+
     prev = 0
     out = ''
 

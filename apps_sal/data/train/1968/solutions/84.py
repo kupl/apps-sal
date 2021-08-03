@@ -6,8 +6,8 @@ class Solution:
             if not any(path[i] == '/' and path[:i] in seen for i in range(2, len(path))):
                 seen.add(path)
         return seen
-    
-                
+
+
 # Trie
 #         trie = {}
 #         for path in folder:
@@ -19,30 +19,17 @@ class Solution:
 #                     curr[f] = {}
 #                     curr = curr[f]
 #             curr[None] = None
-        
+
 #         res = []
 #         for path in folder:
 #             curr = trie
 #             issub = False
 #             for f in path.split('/'):
-#                 if None in curr: 
+#                 if None in curr:
 #                     issub = True
 #                 else:
 #                     curr = curr[f]
 #             if not issub:
 #                 res.append(path)
-                
-#         return res
-            
-            
-            
-            
-        
-        
-        
-                
-                
-            
-            
-            
 
+#         return res

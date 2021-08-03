@@ -20,6 +20,5 @@ for case in range(T):
         if sum == m:
             nummax += 1
 
-    ans = (n-nummax)//(m-1) - 1
+    ans = (n - nummax) // (m - 1) - 1
     print(ans)
-

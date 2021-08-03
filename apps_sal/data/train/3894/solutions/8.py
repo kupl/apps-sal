@@ -4,4 +4,4 @@ def solve(s):
         if char.isupper():
             counter += 1
     print(counter)
-    return s.lower() if counter <= len(s)/2 else s.upper()
+    return s.lower() if counter <= len(s) / 2 else s.upper()

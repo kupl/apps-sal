@@ -12,10 +12,9 @@ arr = irrin()
 sa = sum(arr)
 mn = 100000000
 for i in range(n):
-    for j in range(i, n+1):
+    for j in range(i, n + 1):
         s = sum(arr[i:j])
         # print(s)
-        k = sa-s
-        mn = min(mn, abs(s-k))
+        k = sa - s
+        mn = min(mn, abs(s - k))
 print(mn)
-

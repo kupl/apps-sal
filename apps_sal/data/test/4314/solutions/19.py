@@ -26,7 +26,7 @@ else:
         if len(l) != 0:
             L.append(l[0])
 
-    dellist = lambda items, indexes: [item for index, item in enumerate(items) if index not in indexes]
+    def dellist(items, indexes): return [item for index, item in enumerate(items) if index not in indexes]
     for ans in A:
         ans = dellist(ans, L)
         print("".join(ans))

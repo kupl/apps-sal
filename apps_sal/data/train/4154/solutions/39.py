@@ -5,4 +5,3 @@ def is_triangle(a, b, c):
     if (tab_coter[2] < calc_long_coter):
         return True
     return False
-

@@ -6,5 +6,5 @@ class Solution:
         res = float('inf')
         n = len(nums)
         for i in range(4):
-            res = min(res, nums[n-4+i] - nums[i])
+            res = min(res, nums[n - 4 + i] - nums[i])
         return res

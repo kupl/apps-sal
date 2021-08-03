@@ -16,4 +16,3 @@ for i in range(n):
         a = [j] + a[:k] + a[k + 1:]
 
 print(time)
-

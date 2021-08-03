@@ -2,8 +2,10 @@ from re import match
 
 memo = {}
 
+
 def solve(a, b):
     return sum(1 for n in range(a, b) if is_eviternity(n))
+
 
 def is_eviternity(n):
     if n not in memo:

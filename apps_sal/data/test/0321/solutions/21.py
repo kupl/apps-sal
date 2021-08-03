@@ -14,8 +14,7 @@ def divider(n):
 i = int(input())
 for i in range(i):
     a, b = list(map(int, input().split()))
-    if a - b == 1 and divider(a+b):
+    if a - b == 1 and divider(a + b):
         print("YES")
     else:
         print("NO")
-

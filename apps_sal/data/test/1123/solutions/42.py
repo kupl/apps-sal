@@ -11,4 +11,3 @@ for g, cnt in enumerate(gcd_cnt):
     ans += g * cnt % MOD
     ans %= MOD
 print(ans)
-

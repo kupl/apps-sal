@@ -12,4 +12,3 @@ if cur:
     a.append(cur)
 print(len(a))
 print(*a)
-

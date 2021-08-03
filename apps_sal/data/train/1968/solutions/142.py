@@ -3,7 +3,7 @@ class Solution:
         trie = {}
         for f in folder:
             p = trie
-            
+
             for c in f:
                 if c not in p:
                     p[c] = {}
@@ -12,12 +12,12 @@ class Solution:
                 p['/'] = {}
             p = p['/']
             p['$'] = f
-        
-        #print(trie)
+
+        # print(trie)
         ans = []
         for f in folder:
             p = trie
-            full = f+'/'
+            full = f + '/'
             for c in full:
                 if '$' in p:
                     break

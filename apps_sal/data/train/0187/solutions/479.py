@@ -10,10 +10,9 @@ class Solution:
                 x = customers[ind]
                 user += x
             ind += 1
-            profit += min(user,4)*boardingCost - runningCost
+            profit += min(user, 4) * boardingCost - runningCost
             if res < profit:
                 res = profit
                 i = ind
-            user -= min(user,4)
+            user -= min(user, 4)
         return i if res > 0 else -1
-

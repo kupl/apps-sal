@@ -16,7 +16,7 @@ else:
     s = str(n)
     l = len(s)
 
-    v = 10 ** (l-1)
+    v = 10 ** (l - 1)
     w = int(s[1:])
 
     print(v - w)

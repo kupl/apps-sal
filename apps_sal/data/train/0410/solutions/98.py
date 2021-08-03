@@ -1,6 +1,8 @@
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
         return sorted((get_power_value(x), x) for x in range(lo, hi + 1))[k - 1][1]
+
+
 def get_power_value(x):
     if x == 1:
         return 0

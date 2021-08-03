@@ -14,22 +14,22 @@ class Solution:
             queue.append((root, 0, 1))
         else:
             return report
-        
+
         while queue:
             root, x, y = queue.popleft()
-            
+
             x_min = min(x, x_min)
             x_max = max(x, x_max)
             while y > len(hmap[x]):
                 hmap[x].append([])
             hmap[x][-1].append(root.val)
-                
+
             if root.left:
                 queue.append((root.left, x - 1, y + 1))
             if root.right:
                 queue.append((root.right, x + 1, y + 1))
-                
-        print(hmap) 
+
+        print(hmap)
         print(x_min, x_max)
         for i in range(x_min, x_max + 1):
             report.append([])

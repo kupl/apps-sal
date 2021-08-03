@@ -16,4 +16,3 @@ if flg:
     print("possible")
 else:
     print("impossible")
-

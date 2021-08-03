@@ -37,11 +37,11 @@ uf = UnionFind(N)
 
 for i in range(M):
     x, y = map(int, input().split())
-    uf.union(p[x-1]-1, p[y-1]-1)
+    uf.union(p[x - 1] - 1, p[y - 1] - 1)
 
 ans = 0
 for i in range(N):
-    if uf.is_same(p[i]-1, i):
+    if uf.is_same(p[i] - 1, i):
         ans += 1
 
 print(ans)

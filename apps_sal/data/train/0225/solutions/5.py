@@ -2,9 +2,9 @@ class Solution:
     def pushDominoes(self, dominoes: str) -> str:
         n = len(dominoes)
         balance = [0] * len(dominoes)
-        
+
         b = 0
-        for index,c in enumerate(dominoes):
+        for index, c in enumerate(dominoes):
             if c == 'R':
                 b = n
             elif c == 'L':
@@ -14,7 +14,7 @@ class Solution:
             balance[index] += b
 
         b = 0
-        for index,c in enumerate(reversed(dominoes)):
+        for index, c in enumerate(reversed(dominoes)):
             index = -index - 1
             if c == 'R':
                 b = 0
@@ -33,4 +33,3 @@ class Solution:
             elif balance[i] < 0:
                 result[i] = 'L'
         return ''.join(result)
-

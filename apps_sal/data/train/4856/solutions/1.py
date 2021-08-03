@@ -1,2 +1,2 @@
 from math import ceil
-adjust = lambda coin, price: ceil(price / float(coin)) * coin
+def adjust(coin, price): return ceil(price / float(coin)) * coin

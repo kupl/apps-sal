@@ -1,5 +1,6 @@
 REMOTE = 'abcde123fghij456klmno789pqrst.@0uvwxyz_/'
 
+
 def tv_remote(word):
     x, y, total = 0, 0, 0
     for char in word:

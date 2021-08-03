@@ -1,5 +1,5 @@
 def nth_smallest(arr, n):
     try:
-        return sorted(set(arr))[n-1]
+        return sorted(set(arr))[n - 1]
     except:
         pass

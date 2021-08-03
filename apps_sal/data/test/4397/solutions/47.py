@@ -1,3 +1,3 @@
-k,i = map(int,input().split())
+k, i = map(int, input().split())
 
-print(k-i+1)
+print(k - i + 1)

@@ -24,4 +24,3 @@ for i in range(n):
     j *= -1
 
 print((min(ct_1, ct_2)))
-

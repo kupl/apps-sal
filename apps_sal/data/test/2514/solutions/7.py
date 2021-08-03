@@ -1,14 +1,14 @@
+from collections import Counter
 N = int(input())
 A = list(map(int, input().strip().split()))
 Q = int(input())
-B = [0]*Q
-C = [0]*Q
-from collections import Counter
-K=Counter(A)
+B = [0] * Q
+C = [0] * Q
+K = Counter(A)
 ans = 0
 
 for i in range(Q):
-    B[i],C[i] = list(map(int,input().split()))
+    B[i], C[i] = list(map(int, input().split()))
 
 
 for i in K:
@@ -20,7 +20,3 @@ for i in range(Q):
     K[C[i]] += K[B[i]]
     K[B[i]] = 0
     print(ans)
-
-    
-    
-

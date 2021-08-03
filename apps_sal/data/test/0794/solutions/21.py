@@ -1,16 +1,16 @@
 import sys
 from math import *
 from fractions import gcd
-readints=lambda:list(map(int, input().strip('\n').split()))
+def readints(): return list(map(int, input().strip('\n').split()))
 
-n=int(input())
-a=list(readints())
+
+n = int(input())
+a = list(readints())
 a.sort()
-if sum(a[:n])==sum(a[n:]):
+if sum(a[:n]) == sum(a[n:]):
     print(-1)
 else:
-    buf=''
+    buf = ''
     for x in a:
-        buf+=str(x)+' '
+        buf += str(x) + ' '
     print(buf)
-

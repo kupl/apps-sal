@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    
+
     result = 0
     d = set()
     for i in range(n):
@@ -14,9 +14,8 @@ def main():
                 d.remove(a)
             else:
                 result += 1
-    
-    print(result)
-    
-    
-main()
 
+    print(result)
+
+
+main()

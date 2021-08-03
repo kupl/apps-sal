@@ -26,4 +26,3 @@ class Solution:
                     ss.add(kk)
                     queue.append((kk, jj + 1))
         return -1
-

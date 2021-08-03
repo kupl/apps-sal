@@ -2,7 +2,7 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 starts = [0 for _ in range(n)]
-ends   = [0 for _ in range(n)]
+ends = [0 for _ in range(n)]
 
 starts[0] = arr[0]
 ends[-1] = arr[-1]
@@ -26,12 +26,12 @@ bst = 10**30
 
 for i in range(n):
     score = max(sts[i], eds[i]) - arr[i]
-    
+
     if i > 0:
         score += starts[i - 1]
     if i < n - 1:
         score += ends[i + 1]
-    
+
     bst = min(bst, score)
 
 print(bst)

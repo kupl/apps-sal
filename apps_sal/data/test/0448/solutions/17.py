@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 kids = list(map(int, input().split()))
-kids = [[i+1,x] for i,x in enumerate(kids)]
+kids = [[i + 1, x] for i, x in enumerate(kids)]
 
 while len(kids) != 1:
     value = kids[0]

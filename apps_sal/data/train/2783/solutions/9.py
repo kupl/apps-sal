@@ -8,4 +8,3 @@ def get_grade(*scores):
     }
     mean = sum(scores) / len(scores)
     return grades.get(mean // 10, 'F')
-

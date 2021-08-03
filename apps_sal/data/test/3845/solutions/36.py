@@ -39,4 +39,3 @@ print((100, 100))
 
 for item in ban:
     print((''.join(item)))
-

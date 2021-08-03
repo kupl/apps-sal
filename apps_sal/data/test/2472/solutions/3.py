@@ -8,4 +8,3 @@ for a, b in AB_sorted:
         print("No")
         return
 print("Yes")
-

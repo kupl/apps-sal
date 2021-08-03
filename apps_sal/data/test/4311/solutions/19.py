@@ -4,9 +4,10 @@ def main():
     s = int(input())
     a = [s]
     for i in range(1, 11**6):
-        x = f(a[i-1])
+        x = f(a[i - 1])
         if x in a:
-            return len(a) + 1; return
+            return len(a) + 1
+            return
         a.append(x)
 
 

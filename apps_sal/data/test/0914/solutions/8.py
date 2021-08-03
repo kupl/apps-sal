@@ -21,23 +21,22 @@ def main():
         l = 1
         r = len(s)
         while l != r:
-            k = l+(r-l)//2
+            k = l + (r - l) // 2
             smallest_n = 0
             for it in list(M.values()):
-                tmp = math.ceil(it/k)
+                tmp = math.ceil(it / k)
                 smallest_n += tmp
             if smallest_n <= n:
                 r = k
             else:
-                l = k+1
+                l = k + 1
         sticker = ''
         for char, occ in zip(list(M.keys()), list(M.values())):
-            sticker += (char*math.ceil(occ/l))
+            sticker += (char * math.ceil(occ / l))
 
         if len(sticker) < n:
-            sticker += (n-len(sticker))*list(M.keys())[0]
+            sticker += (n - len(sticker)) * list(M.keys())[0]
         print("{}\n{}".format(l, sticker))
 
 
 main()
-

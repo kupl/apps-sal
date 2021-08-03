@@ -13,7 +13,7 @@ class Combination():  # nCr(mod p) #n<=10**6
         if (R < 0) or (N < R):
             return 0
         R = min(R, N - R)
-        return self.FACT[N] * self.FACTINV[R] * self.FACTINV[N-R] % self.mod
+        return self.FACT[N] * self.FACTINV[R] * self.FACTINV[N - R] % self.mod
 
 
 n, k = list(map(int, input().split()))
@@ -26,4 +26,3 @@ for i in range(n):
     cnt = cmb.count(i, k - 1) - cmb.count(n - i - 1, k - 1)
     ans += a[i] * cnt % mod
 print((ans % mod))
-

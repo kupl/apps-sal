@@ -13,7 +13,7 @@ def solve():
         b -= 1
         c *= -1
         graph.append([a, b, c])
-    
+
     def bellman_ford(s):
         dist_ls = [10 ** 15] * N
         dist_ls[s] = 0
@@ -24,7 +24,7 @@ def solve():
                     if i == N - 1 and v == N - 1:
                         return -1
         return dist_ls
-    
+
     dist = bellman_ford(0)
     if dist == -1:
         print('inf')
@@ -34,5 +34,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

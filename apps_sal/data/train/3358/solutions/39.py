@@ -1,8 +1,6 @@
 def correct(string):
-    
+
     li = []
-
-
 
     for i in string:
         li.append(i)
@@ -16,7 +14,4 @@ def correct(string):
         elif li[i] == '5':
             li[i] = 'S'
 
-
     return "".join(li)
-            
-

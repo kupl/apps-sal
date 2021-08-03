@@ -54,4 +54,3 @@ for number in non_primes_in_b:
     for i in range(non_primes_in_b[number]):
         result.append(number)
 print(*result, sep=" ")
-

@@ -8,7 +8,7 @@ for b, a, h in t:
     i = bisect(s, (b,))
     h += s[i - 1][1]
     j = bisect(s, (a,))
-    while s[j][1] <= h: s.pop(j)
+    while s[j][1] <= h:
+        s.pop(j)
     s.insert(j, (a, h))
 print(s[-2][1])
-

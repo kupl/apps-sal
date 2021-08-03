@@ -39,4 +39,3 @@ for i in range(1, len(S)):
     cumsum[1:] += ((T == S[i])[1:] * cumsum[:-1] % MOD).cumsum()
     cumsum %= MOD
 print((cumsum[-1]))
-

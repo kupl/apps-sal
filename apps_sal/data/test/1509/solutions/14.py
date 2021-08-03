@@ -26,10 +26,11 @@ def count_contribution(n, ax, ay):
     else:
         return 0
 
+
 def solve(n, a):
     result = a[0] * (n - a[0] + 1)
     for i in range(1, len(a)):
-        result += count_contribution(n, a[i-1], a[i])
+        result += count_contribution(n, a[i - 1], a[i])
     return result
 
 

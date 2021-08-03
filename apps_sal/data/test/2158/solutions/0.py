@@ -4,6 +4,7 @@ sys.setrecursionlimit(10**6)
 
 ans = 0
 
+
 def solve():
     n = int(input())
     Adj = [[] for i in range(n)]
@@ -17,6 +18,7 @@ def solve():
 
     print(ans)
 
+
 def dfs(n, Adj, p, u, cost):
     if u != 0 and len(Adj[u]) == 1:
         nonlocal ans
@@ -28,6 +30,9 @@ def dfs(n, Adj, p, u, cost):
             continue
         dfs(n, Adj, u, v, cost + c)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

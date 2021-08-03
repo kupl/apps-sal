@@ -10,8 +10,8 @@ for i in range(H):
             cnt = 0
             for k in range(-1, 2):
                 for l in range(-1, 2):
-                    if ((i+k) < H) and ((j+l) < len(L[i])) and ((j+l) >= 0) and ((i+k) >= 0):
-                        if L[i+k][j+l] == '#':
+                    if ((i + k) < H) and ((j + l) < len(L[i])) and ((j + l) >= 0) and ((i + k) >= 0):
+                        if L[i + k][j + l] == '#':
                             cnt += 1
             L[i][j] = str(cnt)
 

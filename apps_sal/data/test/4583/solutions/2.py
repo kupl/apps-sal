@@ -2,7 +2,7 @@
 
 num = list(input())
 
-op = ['+','-']
+op = ['+', '-']
 
 for op1 in op:
     if op1 == '+':
@@ -21,7 +21,6 @@ for op1 in op:
                 res3 = res2 - int(num[3])
 
             if res3 == 7:
-                ans = num[0]+op1+num[1]+op2+num[2]+op3+num[3]+"=7"
+                ans = num[0] + op1 + num[1] + op2 + num[2] + op3 + num[3] + "=7"
                 print(ans)
-                return 
-
+                return

@@ -1,18 +1,21 @@
+import sys
+
+
 def maxheight(start, end):
     start_day, start_height = start
     end_day, end_height = end
-    
+
     ddays = end_day - start_day
     dheight = end_height - start_height
-    
+
     xdays = ddays - abs(dheight)
-    
+
     if xdays < 0:
         return -1
     else:
         return xdays // 2 + max(start_height, end_height)
 
-import sys
+
 data = sys.stdin
 
 days = int(data.readline().split()[0])
@@ -28,7 +31,7 @@ for e in entries:
     maxheights.append(e[1])
 
 for i in range(len(entries) - 1):
-    h = maxheight(entries[i], entries[i+1])
+    h = maxheight(entries[i], entries[i + 1])
     if h < 0:
         print("IMPOSSIBLE")
         break

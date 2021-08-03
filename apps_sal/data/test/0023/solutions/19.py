@@ -2,23 +2,29 @@ a = input()
 b = input()
 if len(b) > len(a):
     tmp = list(a)
-    tmp.sort(reverse = True)
+    tmp.sort(reverse=True)
     for i in tmp:
         print(i, end="")
     return
 sa = [0] * 10
 for i in a:
     sa[int(i)] += 1
+
+
 def tolow():
     tmp = ""
     for i in range(0, 10):
         tmp += str(i) * sa[i]
     return tmp
+
+
 def tobig():
     tmp = ""
     for i in range(9, -1, -1):
         tmp += str(i) * sa[i]
     return tmp
+
+
 nakop = ""
 for i in range(len(b)):
     tmp = int(b[i])
@@ -34,7 +40,7 @@ for i in range(len(b)):
                 if sa[j]:
                     sa[j] -= 1
                     print(nakop + str(j) + tobig())
-                    return            
+                    return
     else:
         for j in range(tmp - 1, -1, -1):
             if sa[j]:
@@ -42,11 +48,5 @@ for i in range(len(b)):
                 print(nakop + str(j) + tobig())
                 return
 
-        
+
 print(nakop)
-                    
-
-
-    
-    
-

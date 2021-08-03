@@ -2,7 +2,8 @@ class Trie:
     def __init__(self, word, end):
         self.children = word
         self.end = end
-        
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -11,11 +12,11 @@ class StreamChecker:
             cur = self.trie
             for char in word[::-1]:
                 if not char in cur.children:
-                    cur.children[char]=Trie({},False)
+                    cur.children[char] = Trie({}, False)
                 cur = cur.children[char]
             cur.end = True
         self.history = ''
-            
+
     def query(self, letter: str) -> bool:
         # stream next letter if it's in children
         # new = self.trie
@@ -40,12 +41,8 @@ class StreamChecker:
                 return True
             streamer = streamer.children[c]
         return False
-                             
-                             
 
-        
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

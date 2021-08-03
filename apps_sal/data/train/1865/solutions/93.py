@@ -11,6 +11,7 @@ class Solution:
                     s_pos = (r, c)
                 if grid[r][c] == 'T':
                     t_pos = (r, c)
+
         def is_empty(r, c):
             return 0 <= r < R and 0 <= c < C and grid[r][c] != '#'
 

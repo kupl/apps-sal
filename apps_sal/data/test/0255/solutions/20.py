@@ -7,11 +7,8 @@ females_ability.sort()
 pairs = 0
 for x in males_ability:
     for y in females_ability:
-        if y in range(x-1, x+2):
+        if y in range(x - 1, x + 2):
             females_ability.remove(y)
             pairs += 1
             break
 print(pairs)
-
-
-

@@ -1,7 +1,7 @@
 def string_to_array(s):
     # your code here
-    l=[]
-    if(s==""):
+    l = []
+    if(s == ""):
         l.append("")
         return l
     else:

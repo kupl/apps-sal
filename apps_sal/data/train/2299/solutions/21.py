@@ -2,13 +2,15 @@ from heapq import *
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
 # lから1つおきにみたときの最小値を求める特別製
+
+
 class SparseTable:
     def __init__(self, aa):
         inf = 10 ** 16
@@ -21,20 +23,24 @@ class SparseTable:
             shift = 1 << (i - 1)
             for j in range(w):
                 rj = j + shift
-                if rj >= w: break
+                if rj >= w:
+                    break
                 tablei[j] = min(tablei1[j], tablei1[rj])
             tablei1 = tablei
         self.table = table
 
     # [l,r)の最小値
     def min(self, l, r):
-        if (r - l) % 2: r += 1
+        if (r - l) % 2:
+            r += 1
         i = (r - l).bit_length() - 1
         tablei = self.table[i]
         Lmin = tablei[l]
         Rmin = tablei[r - (1 << i)]
-        if Lmin < Rmin: Rmin = Lmin
+        if Lmin < Rmin:
+            Rmin = Lmin
         return Rmin
+
 
 def main():
     n = int(input())
@@ -62,5 +68,5 @@ def main():
         ans += [x, y]
     print(*ans)
 
-main()
 
+main()

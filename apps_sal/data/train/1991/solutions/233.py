@@ -1,6 +1,6 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-            
+
         n = len(locations)
         dp = [[-1] * (fuel + 1) for _ in range(n)]
         ans = self.dfs(locations, start, finish, fuel, dp)
@@ -19,7 +19,7 @@ class Solution:
             if next_city == curr_city:
                 continue
             else:
-                ans = ans +self.dfs(location, next_city, finish, fuel - abs(location[curr_city] - location[next_city]), dp) 
+                ans = ans + self.dfs(location, next_city, finish, fuel - abs(location[curr_city] - location[next_city]), dp)
                 ans %= 1000000007
         dp[curr_city][fuel] = ans
         return ans

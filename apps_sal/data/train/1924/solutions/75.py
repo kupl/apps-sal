@@ -7,10 +7,11 @@ class Solution:
                 invalid.add(i)
                 continue
             for j in range(len(transactions)):
-                if i == j: continue
+                if i == j:
+                    continue
                 jname, jtime, jamount, jcity = transactions[j].split(',')
                 if jname == name and jcity != city and abs(int(jtime) - int(time)) <= 60:
                     invalid.add(i)
                     invalid.add(j)
-        
+
         return [transactions[i] for i in invalid]

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
@@ -31,9 +32,7 @@ else:
 
 
 for i in range(n):
-    if not i+1 in c:
-        c[iii] = i+1
+    if not i + 1 in c:
+        c[iii] = i + 1
         print(*c)
         return
-
-

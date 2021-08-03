@@ -22,9 +22,10 @@ for r in range(len(s) - 1, -1, -1):
         break
 if (l1 == -1 or r1 == -1) or (r1 <= l1):
     print(-1)
-    
+
 else:
     ans = 4
     for i in range(l1 + 1, r1):
-        if s[i] == '|': ans += 1
+        if s[i] == '|':
+            ans += 1
     print(ans)

@@ -8,12 +8,14 @@ def canJump(numStairs, dirty):
         if dirty[i - 1] + 1 == dirty[i]:
             counter += 1
             if counter >= maxJump:
-                break;
+                break
         else:
             counter = 0
     else:
         return True
     return False
+
+
 s1 = input()
 if int(s1.split(' ')[1]) == 0:
     print('YES')
@@ -23,6 +25,3 @@ else:
         print('YES')
     else:
         print('NO')
-
-
-

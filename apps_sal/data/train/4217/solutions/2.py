@@ -25,4 +25,3 @@ def solve(a, b):
 
     result = (DICT[extended_weekends_list[0][1]], DICT[extended_weekends_list[-1][1]], len(extended_weekends_list))
     return result
-

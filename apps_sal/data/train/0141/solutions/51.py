@@ -8,5 +8,3 @@ class Solution:
                 lo += 1
             if lo == hi:
                 return len(people) - hi
-                
-

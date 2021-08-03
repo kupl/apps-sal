@@ -8,4 +8,3 @@ for _ in range(t):
         if m - i >= n:
             m -= i
     print(m)
-

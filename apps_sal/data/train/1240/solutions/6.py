@@ -6,8 +6,8 @@ for i in range(0, t):
     l = list(map(int, input().split()))
     for j in l:
         if(j % 6 == 0):
-            s+=6
+            s += 6
         else:
-            r = j%6
-            s+=r 
+            r = j % 6
+            s += r
     print(s)

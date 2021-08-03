@@ -6,6 +6,7 @@
 import sys
 import heapq
 
+
 def main():
     t = int(input())
     for _ in range(t):
@@ -16,6 +17,9 @@ def main():
             print(n * m // 2)
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -3,7 +3,7 @@ a = [int(t) for t in input().split(' ')]
 
 INF = 10**10
 
-i = n-1
+i = n - 1
 total = 0
 mn = INF
 while i >= 0:
@@ -12,4 +12,3 @@ while i >= 0:
     i -= 1
 
 print(total)
-

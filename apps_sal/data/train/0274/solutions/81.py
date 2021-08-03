@@ -14,15 +14,14 @@ class Solution:
             maxi = max(maxi, nums[end])
             mini = min(mini, nums[end])
             if(maxi - mini <= limit):
-                max_l = max(max_l, end-start+1)
+                max_l = max(max_l, end - start + 1)
             else:
                 #max_l = max(max_l, end-start)
                 if(nums[start] == maxi):
-                    maxi = max(nums[start+1:end+1])
+                    maxi = max(nums[start + 1:end + 1])
                 if(nums[start] == mini):
-                    mini = min(nums[start+1:end+1])
+                    mini = min(nums[start + 1:end + 1])
                 start += 1
             end += 1
 
         return max_l
-

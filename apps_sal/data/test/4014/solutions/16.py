@@ -43,4 +43,3 @@ for day in range(1, n + 1):
         schedule[exam.d] = m + 1
 
 print(' '.join(map(str, schedule[1:])))
-

@@ -7,7 +7,7 @@ else:
     ans = 0
     for a in A:
         ans += a * M
-    
+
     i = 0
     j = M - 1
     for b in B:
@@ -18,4 +18,3 @@ else:
                 i += 1
                 j = M - 1
     print(ans)
-

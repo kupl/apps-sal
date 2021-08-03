@@ -15,4 +15,3 @@ for i in range(len(A)):
     else:
         tmp = c[A[i]]
         print((ans - tmp * (tmp - 1) // 2 + (tmp - 1) * (tmp - 2) // 2))
-

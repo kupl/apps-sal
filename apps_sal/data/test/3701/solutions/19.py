@@ -9,4 +9,3 @@ l = l[1:-1]
 num1 = num * y
 num2 = max(0, num * x - x + y)
 print(min(num1, num2))
-

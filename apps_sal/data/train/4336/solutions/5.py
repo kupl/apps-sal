@@ -10,9 +10,10 @@ def mem_alloc(block):
         len_div_num = len_list - len_mod_num
         ind = new_list.index(max_num)
         new_list[ind] = 0
-        
+
         pattern_num = [base_num] * len_div_num + [base_num + 1] * len_mod_num
         pattern_num = pattern_num[ind::-1] + pattern_num[len_list:ind:-1]
-        for i in range(len_list): new_list[i] += pattern_num[i]
+        for i in range(len_list):
+            new_list[i] += pattern_num[i]
         new_list = tuple(new_list)
     return len(common_set)

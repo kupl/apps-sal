@@ -16,4 +16,3 @@ if z <= m:
     print(k)
 else:
     print(-1)
-

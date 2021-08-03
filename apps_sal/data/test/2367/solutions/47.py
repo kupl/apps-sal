@@ -44,19 +44,18 @@ inv = [ModInt(1, mod).inverse()] * (h + w - 1)
 
 
 def comb(n, r):
-    return fact[n] * inv[r] * inv[n-r]
+    return fact[n] * inv[r] * inv[n - r]
 
 
 for i in range(1, h + w - 1):
     fact.append(fact[-1] * ModInt(i, mod))
 
-inv[h+w-2] = fact[-1].inverse()
+inv[h + w - 2] = fact[-1].inverse()
 for i in range(h + w - 2, 0, -1):
-    inv[i-1] = inv[i] * ModInt(i, mod)
+    inv[i - 1] = inv[i] * ModInt(i, mod)
 
 ans = ModInt(0, mod)
 for hi in range(h - a):
     ans += comb(hi + b - 1, hi) * comb(h - hi - 1 + w - b - 1, w - b - 1)
 
 print(ans)
-

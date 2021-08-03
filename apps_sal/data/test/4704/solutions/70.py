@@ -8,5 +8,5 @@ for i in range(n - 1):
     cnt += a[i]
     rem = s - cnt
     l.append(abs(cnt - rem))
-    
+
 print(min(l))

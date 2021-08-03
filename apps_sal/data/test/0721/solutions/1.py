@@ -9,4 +9,3 @@ for i in range(m):
     else:
         ans -= d
 print(ans)
-

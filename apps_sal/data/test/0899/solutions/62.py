@@ -1,5 +1,6 @@
 INF = float("inf")
 
+
 def WarshallFloyd(M):
     N = len(M)
     for k in range(N):

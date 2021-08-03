@@ -12,6 +12,3 @@ def final_grade(exam, projects):
     elif exam > data[2][0] and projects >= data[2][1]:
         return data[2][2]
     return 0
-
-
-

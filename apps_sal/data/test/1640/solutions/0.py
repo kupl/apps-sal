@@ -9,10 +9,10 @@ for i in range(n):
         m[line[i]] += 1
     var = m[line[i]]
     if line[i] - 1 in m:
-        var += m[line[i]-1]
+        var += m[line[i] - 1]
     if line[i] + 1 in m:
-        var += m[line[i]+1]
-    ans += (i+1-var) * line[i]
+        var += m[line[i] + 1]
+    ans += (i + 1 - var) * line[i]
 x = dict()
 for j in range(n):
     i = n - j - 1
@@ -22,10 +22,8 @@ for j in range(n):
         x[line[i]] += 1
     var = x[line[i]]
     if line[i] - 1 in x:
-        var += x[line[i]-1]
+        var += x[line[i] - 1]
     if line[i] + 1 in x:
-        var += x[line[i]+1]
-    ans -= (j+1-var) * line[i]
+        var += x[line[i] + 1]
+    ans -= (j + 1 - var) * line[i]
 print(ans)
-
-

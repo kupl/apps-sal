@@ -1,8 +1,8 @@
 class Solution:
-    
+
     def __init__(self):
         self.f = True
-    
+
     def impl(self, arr, i, incr):
         self.f = incr
         if (i + 1 >= len(arr)):
@@ -22,14 +22,10 @@ class Solution:
     def validMountainArray(self, A) -> bool:
         if (A == None or len(A) <= 2):
             return False
-        if(A[1]<A[0]):
+        if(A[1] < A[0]):
             return False
         self.f = True
-        result  = self.impl(A, 0, True)
+        result = self.impl(A, 0, True)
         if(self.f):
             return False
         return result
-        
-        
-        
-

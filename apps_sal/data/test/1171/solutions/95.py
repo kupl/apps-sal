@@ -5,7 +5,7 @@ def main():
     for i in range(c := min(n, k) + 1):
         for j in range(c - i):
             A = V[:i] + V[-j:] if j != 0 else V[:i]
-            A.sort(reverse = True)
+            A.sort(reverse=True)
             r = k - (i + j)
             for _ in range(r):
                 if len(A) == 0:
@@ -17,8 +17,8 @@ def main():
     print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

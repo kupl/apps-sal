@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-x, y, m = list(map(int,input().split()))
+x, y, m = list(map(int, input().split()))
 if not (x < y):
     x, y = y, x
 if m <= y:
@@ -16,4 +16,3 @@ else:
         x, y = y, x + y
         i += 1
     print(i)
-

@@ -8,8 +8,10 @@ if DEBUG:
 else:
     input = sys.stdin.readline
 
+
 def mp():
     return list(map(int, input().split()))
+
 
 def main():
     INF = int(1e9)
@@ -26,4 +28,6 @@ def main():
                 jmin = min(jmin, j)
                 imin = min(imin, i)
     print((imax + imin) // 2 + 1, 1 + (jmax + jmin) // 2)
+
+
 main()

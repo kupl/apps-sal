@@ -5,14 +5,18 @@ lis = [-1] * (2 * n)
 for i, (a, b) in enumerate(ab):
     if a != -1:
         if lis[a - 1] >= 0:
-            print("No");return
+            print("No")
+            return
         cnt[a - 1] = 1
         lis[a - 1] = i
     if b != -1:
         if lis[b - 1] >= 0:
-            print("No");return
+            print("No")
+            return
         cnt[b - 1] = -1
         lis[b - 1] = i
+
+
 def ok(l, r):
     if min(cnt[l:(l + r) // 2]) == -1 or max(cnt[(l + r) // 2:r]) == 1:
         return False
@@ -25,6 +29,8 @@ def ok(l, r):
         elif (lis_l[i] != -1 and lis_l[i] in lis_r) or (lis_r[i] != -1 and lis_r[i] in lis_l):
             return False
     return True
+
+
 dp = [False] * (n + 1)
 dp[0] = True
 for i in range(n):
@@ -35,4 +41,3 @@ for i in range(n):
     else:
         continue
 print("Yes" if dp[-1] else "No")
-

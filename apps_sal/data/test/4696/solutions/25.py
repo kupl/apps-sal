@@ -1,8 +1,8 @@
-x,y = map(int,input().split())
+x, y = map(int, input().split())
 
 seki = x * y
 
 if seki % 2 == 0:
-  print("Even")
+    print("Even")
 else:
-  print("Odd")
+    print("Odd")

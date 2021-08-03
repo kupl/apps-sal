@@ -5,13 +5,13 @@ class Solution:
         res = -1
         curr = 0
         i = 0
-        while curr or i<len(customers):
+        while curr or i < len(customers):
             if i < len(customers):
                 curr += customers[i]
             i += 1
-            p += min(curr, 4)*boardingCost - runningCost
+            p += min(curr, 4) * boardingCost - runningCost
             if p > maxp:
                 res = i
                 maxp = p
-            curr = max(0, curr-4)
+            curr = max(0, curr - 4)
         return res

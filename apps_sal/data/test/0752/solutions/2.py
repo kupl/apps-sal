@@ -11,10 +11,8 @@ for i in range(n):
 counter = 0
 for i in range(n):
     if (a[i] not in b):
-        counter+=1
+        counter += 1
     else:
         b.remove(a[i])
 
 print(counter)
-
-

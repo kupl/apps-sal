@@ -1,4 +1,4 @@
-#E71_B
+# E71_B
 
 ln = [int(i) for i in input().split(" ")]
 n = ln[0]
@@ -36,4 +36,3 @@ else:
     print(len(seq))
     for i in seq:
         print(" ".join([str(j) for j in i]))
-

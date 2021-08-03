@@ -9,7 +9,7 @@ def atc_089b(input_value: str) -> str:
     else:
         return "other"
 
+
 N_input = input()
 Si_input = input()
 print((atc_089b([N_input, Si_input])))
-

@@ -8,9 +8,7 @@ for i in range(n):
     else:
         b[a[i]] = 1
 
-if max(b.values()) <= (n+1)//2:
+if max(b.values()) <= (n + 1) // 2:
     print('YES')
 else:
     print('NO')
-
-

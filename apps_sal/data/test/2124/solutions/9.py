@@ -41,6 +41,7 @@ def main():
                 msg[i + 1][2].remove(msg[i][0])
         print(msg[i][0], ':', texts[i], sep='')
 
+
 t = int(input())
 
 for _ in range(t):

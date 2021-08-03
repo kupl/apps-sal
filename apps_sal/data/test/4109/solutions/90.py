@@ -29,4 +29,3 @@ if save:
     print((min(save)))
 else:
     print((-1))
-

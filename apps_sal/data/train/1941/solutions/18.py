@@ -7,19 +7,19 @@ class Solution:
             for c in p[1:]:
                 bfs += [s + c for s in bfs]
             res.append(sum(cnt[''.join(sorted(s))] for s in bfs))
-        return res  
-        
+        return res
+
 #         wordCounter = defaultdict(int)
 #         chars = \"abcdefghijklmnopqrstuvwxyz\"
 #         shiftDict = {chars[i]: (1<<(ord(chars[i]) - 97)) for i in range(26)}
 #         wordCounter1 = Counter(\"\".join(sorted(set(word))) for word in words)
-        
+
 #         for word in wordCounter1:
 #             mask = 0
 #             for char in word:
 #                 mask |= shiftDict[char]
 #             wordCounter[mask] += wordCounter1[word]
-        
+
 #         ans = []
 #         maxMask = (1<<26)-1
 #         dp = {}
@@ -38,7 +38,7 @@ class Solution:
 #                 dp[(pMask, puzzle[0])] = subAns
 #                 ans.append(subAns)
 #         return ans
-        
+
         # charSetDict = defaultdict(set)
         # wordSubSetDict = {}
         # for word in words:
@@ -54,4 +54,3 @@ class Solution:
         #             subAns += 1
         #     ans.append(subAns)
         # return ans
-

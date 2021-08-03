@@ -1,6 +1,6 @@
-a,b=list(map(int,input().split()))
-cnt=1
-if abs(a-b)<=1:
+a, b = list(map(int, input().split()))
+cnt = 1
+if abs(a - b) <= 1:
     print('Brown')
 else:
     print('Alice')
@@ -26,9 +26,8 @@ else:
 # elif (mod_a==1)and(mod_b==3):
 #     print('Alice')
 # elif (mod_a==2)and(mod_b==0):
-#     print('Alice')    
+#     print('Alice')
 # elif (mod_a==0)and(mod_b==2):
 #     print('Alice')
 # else:
 #     print('Brown')
-

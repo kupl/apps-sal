@@ -14,16 +14,14 @@ class Solution:
                 return math.inf
             if (index, amount) in memo:
                 return memo[(index, amount)]
-            
+
             withCoin = coinChangeRec(index, amount - coins[index]) + 1
-            withoutCoin = coinChangeRec(index+1, amount)
-            
+            withoutCoin = coinChangeRec(index + 1, amount)
+
             memo[(index, amount)] = min(withCoin, withoutCoin)
             return min(withCoin, withoutCoin)
-                     
+
         minCoins = coinChangeRec(0, amount)
         if minCoins == math.inf:
             return -1
         return minCoins
-    
-

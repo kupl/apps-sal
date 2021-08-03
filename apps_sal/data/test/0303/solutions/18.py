@@ -10,4 +10,3 @@ else:
         print('YES')
     else:
         print('NO')
-

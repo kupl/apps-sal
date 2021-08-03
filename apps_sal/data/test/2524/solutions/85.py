@@ -8,9 +8,9 @@ def main():
     for i in range(60):
         bit_count = 0
         for a in A:
-            if (a>>i) & 1:
+            if (a >> i) & 1:
                 bit_count += 1
-        ans += bit_count*(N-bit_count)*two_factor
+        ans += bit_count * (N - bit_count) * two_factor
         ans %= MOD
         two_factor *= 2
     print(ans)
@@ -18,4 +18,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

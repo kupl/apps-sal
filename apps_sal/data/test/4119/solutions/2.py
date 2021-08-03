@@ -6,6 +6,5 @@ diffX = np.sort(np.diff(sortX))
 if N == 1:
     print((np.sum(diffX)))
     return
-ans = np.sum(diffX[:-(N-1)])
+ans = np.sum(diffX[:-(N - 1)])
 print(ans)
-

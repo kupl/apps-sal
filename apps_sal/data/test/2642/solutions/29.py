@@ -50,4 +50,3 @@ answer -= 1
 answer += zero
 answer %= mod
 print(answer)
-

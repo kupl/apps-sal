@@ -4,7 +4,7 @@ Input = []
 for i in range(N):
     Input.append(list(map(int, input().split())))
 
-position = {"x":0, "y":0}
+position = {"x": 0, "y": 0}
 preT = 0
 for i in range(N):
     T = Input[i][0]

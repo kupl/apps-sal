@@ -30,4 +30,4 @@ while i >= 0 and count < K:
 
 for i in range(N):
     if mae[i] == ushiro[i] and mae[i] != -1:
-        print (i + 1)
+        print(i + 1)

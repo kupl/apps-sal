@@ -1,4 +1,4 @@
-n,m = [int(x) for x in input().split()]
+n, m = [int(x) for x in input().split()]
 
 A = []
 
@@ -12,19 +12,19 @@ for _ in range(n):
 
 AD = []
 BD = []
-for s in range(2,m+n+1):
+for s in range(2, m + n + 1):
     at = []
     bt = []
-    for r in range(1,n+1):
-        c = s-r
+    for r in range(1, n + 1):
+        c = s - r
         if 1 <= c and c <= m:
-            at.append(A[r-1][c-1])
-            bt.append(B[r-1][c-1])
+            at.append(A[r - 1][c - 1])
+            bt.append(B[r - 1][c - 1])
     at.sort()
     bt.sort()
     AD.append(at)
     BD.append(bt)
-    
+
 if AD == BD:
     print('YES')
 

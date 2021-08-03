@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         data = sorted(list(zip(efficiency, speed)), reverse=True)

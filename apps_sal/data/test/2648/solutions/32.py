@@ -17,4 +17,3 @@ for key, value in list(num_map.items()):
 
 res = len(num_map) - counter % 2
 print(res)
-

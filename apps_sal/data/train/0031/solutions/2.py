@@ -25,4 +25,3 @@ for case_num in range(t):
             use.add(((ci, cj), (ni, nj)))
             use.add(((ni, nj), (ci, cj)))
     print(ans)
-

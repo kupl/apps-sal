@@ -13,21 +13,20 @@ class DinnerPlates:
         # print(self.cl)
         # print(self.s)
         if self.cl == len(self.s):
-            self.s.append([]) 
+            self.s.append([])
         self.s[self.cl].append(val)
-            
-        
+
         if self.cl > self.cr:
             self.cr = self.cl
 
     def pop(self) -> int:
-        
+
         while self.cr > 0 and not len(self.s[self.cr]):
             self.s.pop()
             self.cr -= 1
         if self.cr < self.cl:
             self.cl = self.cr
-        
+
         if len(self.s[self.cr]) > 0:
             return self.s[self.cr].pop()
         return -1
@@ -47,4 +46,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

@@ -9,4 +9,3 @@ for index, c in enumerate(list(input())):
         max_z_index = index
 
 print((max_z_index - min_a_index + 1))
-

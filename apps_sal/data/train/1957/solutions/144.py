@@ -23,5 +23,5 @@ class Solution:
                     return d + 1
                 q.append((x, y, rem, d + 1))
                 visited.add((x, y, rem))
-        
+
         return -1

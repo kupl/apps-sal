@@ -28,7 +28,5 @@ for i in range(n):
     Min = min(Min, x)
 
 
-    
 for i in range(Min, Max + 1):
     print("".join(myMap[i][:y]))
-

@@ -1,25 +1,38 @@
-import sys,math,collections
+import sys
+import math
+import collections
 from collections import defaultdict
 
 #from itertools import permutations,combinations
-    
+
+
 def file():
     sys.stdin = open('input.py', 'r')
-    sys.stdout = open('output.py', 'w') 
+    sys.stdout = open('output.py', 'w')
+
+
 def get_array():
-    l=list(map(int, input().split()))
+    l = list(map(int, input().split()))
     return l
-def get_ints():   
+
+
+def get_ints():
     return map(int, input().split())
-    #return a,b
-def get_3_ints():   
-    a,b,c=map(int, input().split())
-    return a,b,c    
+    # return a,b
+
+
+def get_3_ints():
+    a, b, c = map(int, input().split())
+    return a, b, c
+
+
 def sod(n):
-    n,c=str(n),0
-    for i in n: 
-        c+=int(i)
-    return c    
+    n, c = str(n), 0
+    for i in n:
+        c += int(i)
+    return c
+
+
 def isPrime(n):
     if (n <= 1):
         return False
@@ -32,8 +45,10 @@ def isPrime(n):
         if (n % i == 0 or n % (i + 2) == 0):
             return False
         i = i + 6
-  
+
     return True
+
+
 def getFloor(A, x):
 
     (left, right) = (0, len(A) - 1)
@@ -48,209 +63,43 @@ def getFloor(A, x):
         else:
             floor = A[mid]
             left = mid + 1
-            
+
     return floor
-def chk(aa,bb):
-	f=0
-	for i in aa:
-		for j in bb:
-			if(j[0]>=i[0] and j[1]<=i[1]):
-				f+=1
-			elif(j[0]<=i[0] and j[1]>=i[1]):	
-				f+=1
-			elif(i[0]==j[1] or i[1]==j[0]):
-				f+=1
-			else:
-				continue
-	return f			
 
-#file()
+
+def chk(aa, bb):
+    f = 0
+    for i in aa:
+        for j in bb:
+            if(j[0] >= i[0] and j[1] <= i[1]):
+                f += 1
+            elif(j[0] <= i[0] and j[1] >= i[1]):
+                f += 1
+            elif(i[0] == j[1] or i[1] == j[0]):
+                f += 1
+            else:
+                continue
+    return f
+
+# file()
+
+
 def main():
-	for tt in range(int(input())):
-		a,d,k,n,inc=get_ints()
-		j=1
-		for i in range(n-1):
-			if(j==k):
-				d+=inc
-				j=1
-			else:
-				j+=1
-			a=a+d	
-		print(a)		
-
-
-
-
-				
-
-
-
-
-
-		
-
-
-	
-
-
-
-
-
-        
-            
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-    
-
-        
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-            
-
-
-
-
-
-
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
+    for tt in range(int(input())):
+        a, d, k, n, inc = get_ints()
+        j = 1
+        for i in range(n - 1):
+            if(j == k):
+                d += inc
+                j = 1
+            else:
+                j += 1
+            a = a + d
+        print(a)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

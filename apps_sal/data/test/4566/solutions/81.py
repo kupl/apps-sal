@@ -6,7 +6,7 @@ while True:
     for i in range(M):
         for j in range(2):
             if n == ab[i][j]:
-                ans[n-1] += 1
+                ans[n - 1] += 1
     if n == N:
         break
     n += 1

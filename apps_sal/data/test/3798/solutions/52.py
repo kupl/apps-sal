@@ -50,7 +50,7 @@ def main():
         return
 
     if n == s:
-        print((n+1))
+        print((n + 1))
         return
 
     print((-1))
@@ -58,5 +58,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -9,11 +9,15 @@ def main():
     for _ in range(N):
         a, b = (int(x) - 1 for x in input().split())
         for i in range(3):
-            if a - i < 0: continue
-            if a - i + 3 > H: continue
+            if a - i < 0:
+                continue
+            if a - i + 3 > H:
+                continue
             for j in range(3):
-                if b - j < 0: continue
-                if b - j + 3 > W: continue
+                if b - j < 0:
+                    continue
+                if b - j + 3 > W:
+                    continue
                 g[(a - i) * W + (b - j)] += 1
                 # (a,b)を塗ったとき影響される3x3マス目の左上の座標に加算する
 
@@ -29,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

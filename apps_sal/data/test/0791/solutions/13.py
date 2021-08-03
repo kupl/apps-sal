@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 
 c = 0
-if s[0] == '0' :
+if s[0] == '0':
     c = 1
 else:
 
@@ -13,5 +13,3 @@ else:
         else:
             c += 1
 print(c)
-    
-

@@ -3,6 +3,7 @@ class Solution:
         n = len(s)
         b = ord('0')
         MOD = 10 ** 9 + 7
+
         @lru_cache(None)
         def dp(i):
             if i == n:
@@ -19,8 +20,5 @@ class Solution:
                 else:
                     break
             return cnt % MOD
-        
-        return dp(0)
-                    
-                
 
+        return dp(0)

@@ -10,4 +10,3 @@ def dfs(li):
 N = int(input())
 nums = ["3", "5", "7"]
 print((dfs(["0"])))
-

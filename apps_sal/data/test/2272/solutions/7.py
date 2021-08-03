@@ -42,11 +42,3 @@ for i in range(int(input())):
             print("YES")
         else:
             print("NO")
-
-
-
-
-
-
-
-

@@ -9,7 +9,3 @@ class Solution:
                 b_len += 1
             op_1 = max(op_1, b_len)
         return op_0 + op_1 - 1
-    
-                
-                
-

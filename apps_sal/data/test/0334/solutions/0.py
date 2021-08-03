@@ -1,5 +1,5 @@
-a, b = map(int,input().split())
-c, d = map(int,input().split())
+a, b = map(int, input().split())
+c, d = map(int, input().split())
 ONE = set()
 TWO = set()
 for i in range(b, 50000, a):

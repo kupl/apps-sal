@@ -5,7 +5,7 @@ from time import*
 
 
 class Fraction:
-    def __init__(self, x = 0, y = 1):
+    def __init__(self, x=0, y=1):
         if(type(x) == str):
             if x.find('/') != -1:
                 a = list(map(int, x.split('/')))
@@ -207,12 +207,12 @@ class Fraction:
     def __float__(self):
         return self.num / self.den
 
-    def __round__(self, x = 0):
+    def __round__(self, x=0):
         return round(float(self), x)
 
 
 class Poly:
-    def __init__(self, s = 0):
+    def __init__(self, s=0):
         if type(s) in [int, float, Fraction]:
             self.list = [s]
         elif type(s) == str:
@@ -387,7 +387,7 @@ class Poly:
         return (Poly(result), Poly(p))
 
     def __rdivmod__(self, other):
-        return  divmod(Poly(other), self)
+        return divmod(Poly(other), self)
 
     def __floordiv__(self, other):
         return divmod(self, other)[0]
@@ -409,6 +409,7 @@ class Poly:
         self.list = (divmod(self, other)[1]).list
         return self
 
+
 #begin = time()
 p, q = list(map(int, input().split()))
 lolka = Fraction(p, q)
@@ -423,5 +424,3 @@ if(Answer == lolka):
 else:
     print("NO")
 #print(time() - begin)
-
-

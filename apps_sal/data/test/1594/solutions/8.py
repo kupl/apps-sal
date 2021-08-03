@@ -13,4 +13,3 @@ for mom in moments:
     res.append(str(curr_song + 1))
 
 print('\n'.join(res))
-

@@ -43,12 +43,13 @@ def pp(*args, **kwargs):
 
 def main():
     x, y, x0, y0 = map(int, input().split())
-    s =  input().strip()
+    s = input().strip()
     result = solve(x, y, x0, y0, s)
     print(*result)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

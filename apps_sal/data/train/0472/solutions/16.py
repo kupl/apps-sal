@@ -1,5 +1,7 @@
 from collections import deque
 from functools import reduce
+
+
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
         if not arr:
@@ -12,14 +14,14 @@ class Solution:
             if jump == 0:
                 nodes[index].append(index)
                 return nodes
-            if (back:=index-jump) >= 0:
+            if (back := index - jump) >= 0:
                 nodes[index].append(back)
-            if (forw:=index+jump) < len(arr):
+            if (forw := index + jump) < len(arr):
                 nodes[index].append(forw)
-            return nodes    
-            
+            return nodes
+
         edges = reduce(add_edge, enumerate(arr), defaultdict(list))
-        
+
         q = deque([start])
         visited = {start}
         while q:
@@ -29,9 +31,6 @@ class Solution:
                     return True
                 if n in visited:
                     continue
-                visited.add(n) 
+                visited.add(n)
                 q.append(n)
-        return False     
-        
-        
-
+        return False

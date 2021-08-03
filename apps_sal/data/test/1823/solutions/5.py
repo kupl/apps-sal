@@ -13,7 +13,7 @@ while True:
     else:
         break
 
-score = (num_genres + 1) * [ 0 ]
+score = (num_genres + 1) * [0]
 score[compressed[0]] += 1
 for i in range(2, len(compressed)):
     score[compressed[i - 1]] += 1
@@ -29,7 +29,4 @@ for genre in range(1, num_genres + 1):
 print(best_genre)
 
 
-
-
 # Made By Mostafa_Khaled
-

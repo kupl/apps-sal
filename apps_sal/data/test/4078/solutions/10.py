@@ -14,12 +14,12 @@ for i in range(n):
         seglist1 = []
         seglist2 = []
         for k in range(m):
-            if segments[k][0]-1 <= i <= segments[k][1]-1 and segments[k][1]-1 < j:
+            if segments[k][0] - 1 <= i <= segments[k][1] - 1 and segments[k][1] - 1 < j:
                 ai -= 1
-                seglist1.append(k+1)
-            if segments[k][0]-1 > i and segments[k][0]-1 <= j <= segments[k][1]-1:
+                seglist1.append(k + 1)
+            if segments[k][0] - 1 > i and segments[k][0] - 1 <= j <= segments[k][1] - 1:
                 aj -= 1
-                seglist2.append(k+1)
+                seglist2.append(k + 1)
 
         if ans < a[j] - ai:
             anslist = seglist1
@@ -40,4 +40,3 @@ else:
 print(ans)
 print(len(anslist))
 print(ansseg)
-

@@ -1,4 +1,4 @@
-h,w = map(int,input().split())
+h, w = map(int, input().split())
 s = 0
 li = []
 lire = []

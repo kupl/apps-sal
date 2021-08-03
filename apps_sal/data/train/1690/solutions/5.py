@@ -1,18 +1,20 @@
-def check_relative(i,j):
-    if is_relative[i]:return
-    if len(land[i].intersection(land[j]))>=2:
-        is_relative[i]=True
+def check_relative(i, j):
+    if is_relative[i]:
+        return
+    if len(land[i].intersection(land[j])) >= 2:
+        is_relative[i] = True
         for ii in range(n):
-            check_relative(ii,i)
+            check_relative(ii, i)
 
-n,k=map(int,input().split())
-land=[]
-is_relative=[False]*n
+
+n, k = map(int, input().split())
+land = []
+is_relative = [False] * n
 for i in range(n):
-    p,*q=input().split()
+    p, *q = input().split()
     land.append(set(q))
 
 for i in range(n):
-    check_relative(i,0)
-        
+    check_relative(i, 0)
+
 print(is_relative.count(True))

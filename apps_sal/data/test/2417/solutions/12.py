@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     n = int(input())
     a = [int(x) for x in input().split()]
@@ -19,9 +20,8 @@ def main():
     print(result)
 
 
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

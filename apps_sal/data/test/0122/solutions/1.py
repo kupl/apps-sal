@@ -32,6 +32,9 @@ def solve():
     else:
         print('NO')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

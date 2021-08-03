@@ -60,4 +60,3 @@ for _ in range(Q):
         d, s = convert(d, s, int(q1) - 1, q2)
     if q == 2:
         print((calc(d, int(q1) - 1, int(q2) - 1)))
-

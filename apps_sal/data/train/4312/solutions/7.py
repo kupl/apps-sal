@@ -15,4 +15,3 @@ def pick_peaks(arr):
         prev_dex = i
         prev_val = a
     return result
-

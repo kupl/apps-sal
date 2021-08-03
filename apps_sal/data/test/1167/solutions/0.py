@@ -18,4 +18,3 @@ for _ in range(q):
         print(x, y)
     else:
         print(-1)
-

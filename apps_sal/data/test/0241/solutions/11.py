@@ -24,4 +24,3 @@ else:
         ans = "Incorrect"
 
 print(ans)
-

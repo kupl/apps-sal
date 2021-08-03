@@ -25,7 +25,7 @@ else:
     x += 1
     while x <= a[2][0]:
         ans += [[x, y]]
-        x += 1   
+        x += 1
 if a[1][1] <= a[0][1]:
     x = a[1][0]
     y = a[1][1]
@@ -51,7 +51,7 @@ else:
     while x >= a[0][0]:
         if [x, y] not in ans:
             ans += [[x, y]]
-        x -= 1  
+        x -= 1
 print(len(ans))
 for i in range(len(ans)):
     print(*ans[i])

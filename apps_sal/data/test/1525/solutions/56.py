@@ -26,7 +26,7 @@ def submit():
     for i in range(1, h + 1):
         for j in range(w):
             for pt in pts:
-                if j > 0 and pt[j - 1] == 1: # j -> j - 1に遷移する
+                if j > 0 and pt[j - 1] == 1:  # j -> j - 1に遷移する
                     dp[i][j - 1] += dp[i - 1][j]
                     dp[i][j - 1] %= modp
                 elif j < w - 1 and pt[j] == 1:  # j -> j + 1に遷移する
@@ -35,7 +35,6 @@ def submit():
                 else:
                     dp[i][j] += dp[i - 1][j]
                     dp[i][j] %= modp
-
 
     print(dp[h][k - 1])
 

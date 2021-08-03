@@ -19,4 +19,3 @@ for node1 in range(n):
                     cnt += 1
         maxcnt = max(cnt, maxcnt)
 print(maxcnt if n > 6 else m)
-

@@ -33,7 +33,7 @@ def solve():
     dec_level = 0
     for depth, level in dec_chunks:
         if dec_level + depth < 0:
-            return 'No' 
+            return 'No'
         dec_level += level
     if inc_level != dec_level:
         return 'No'
@@ -41,4 +41,3 @@ def solve():
 
 
 print((solve()))
-

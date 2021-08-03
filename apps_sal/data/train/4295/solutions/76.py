@@ -3,4 +3,4 @@ def balanced_num(number):
     LeftPart = [int(k) for k in str(number)[:CountNombers]]
     RightPart = [int(k) for k in str(number)[:CountNombers: -1]]
     return 'Balanced' if sum(LeftPart) == sum(RightPart) and len(LeftPart) == len(RightPart) or \
-                sum(LeftPart) == sum(RightPart[:-1]) and len(LeftPart) == len(RightPart) - 1 else 'Not Balanced'
+        sum(LeftPart) == sum(RightPart[:-1]) and len(LeftPart) == len(RightPart) - 1 else 'Not Balanced'

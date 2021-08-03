@@ -1,5 +1,5 @@
-n, m = map(int,input().split())
-g = [list(map(int,input().split())) for _ in range(n)]
+n, m = map(int, input().split())
+g = [list(map(int, input().split())) for _ in range(n)]
 for c1 in range(m):
     for c2 in range(c1, m):
         ok = True

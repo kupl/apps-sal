@@ -28,4 +28,3 @@ if checker:
     print(ans)
 else:
     print('UNRESTORABLE')
-

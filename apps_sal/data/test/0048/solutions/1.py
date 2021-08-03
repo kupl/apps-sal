@@ -18,4 +18,3 @@ while be < en:
         en = mid - 1
 
 print(be)
-

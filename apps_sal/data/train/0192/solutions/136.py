@@ -10,4 +10,3 @@ class Solution:
             your_total += sorted_piles.pop(-1)
 
         return your_total
-

@@ -1,11 +1,16 @@
 import math
+
+
 def combinations_count(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
-n_nodes, n_path = list(map(int,input().split()))
-paths = [[0,0] for _ in range(n_path)]
+
+
+n_nodes, n_path = list(map(int, input().split()))
+paths = [[0, 0] for _ in range(n_path)]
 for i in range(n_path):
-    a,b = list(map(int,input().split()))
-    paths[i] = [a-1,b-1]
+    a, b = list(map(int, input().split()))
+    paths[i] = [a - 1, b - 1]
+
 
 class UnionFind():
     def __init__(self, n):
@@ -57,18 +62,17 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-now_ans = combinations_count(n_nodes,2)
+
+now_ans = combinations_count(n_nodes, 2)
 paths = paths[::-1]
 uf = UnionFind(n_nodes)
 ans_ls = [0] * (n_path)
 ans_ls[-1] = now_ans
-for i,path in enumerate(paths[:-1]):
-    a,b = path
-    if not uf.same(a,b):
-        now_ans -= uf.size(a)*uf.size(b)
-        uf.union(a,b)
-    ans_ls[-2-i] = now_ans
+for i, path in enumerate(paths[:-1]):
+    a, b = path
+    if not uf.same(a, b):
+        now_ans -= uf.size(a) * uf.size(b)
+        uf.union(a, b)
+    ans_ls[-2 - i] = now_ans
 for ans in ans_ls:
     print(ans)
-    
-

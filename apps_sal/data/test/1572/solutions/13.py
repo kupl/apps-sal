@@ -22,4 +22,6 @@ def get_good_segment_of_max_length(a, n):
 def __starting_point():
     a, n = read_args()
     print(get_good_segment_of_max_length(a, n))
+
+
 __starting_point()

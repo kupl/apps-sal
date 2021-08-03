@@ -8,7 +8,7 @@ sys.setrecursionlimit(10**7)
 def main():
     OFS = 100005
     N = int(input())
-    G = [[] for _ in [0]*OFS*2]
+    G = [[] for _ in [0] * OFS * 2]
     for line in readlines():
         x, y = map(int, line.split())
         y += OFS
@@ -27,12 +27,12 @@ def main():
             visited[u] = 1
             dfs(u)
 
-    visited = [0]*OFS*2
+    visited = [0] * OFS * 2
     ans = 0
     for i in range(OFS):
         if visited[i]:
             continue
-        counter = [0]*2
+        counter = [0] * 2
         visited[i] = 1
         dfs(i)
         ans += counter[0] * counter[1]
@@ -42,4 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

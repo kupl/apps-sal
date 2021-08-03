@@ -1,2 +1,2 @@
-S=['Sunny','Cloudy','Rainy']
-print(S[S.index(input())-2])
+S = ['Sunny', 'Cloudy', 'Rainy']
+print(S[S.index(input()) - 2])

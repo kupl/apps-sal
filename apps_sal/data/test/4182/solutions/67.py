@@ -6,11 +6,10 @@ x_max = max(x_list)
 y_min = min(y_list)
 
 ans = "War"
-for Z in range(X+1, Y+1):
+for Z in range(X + 1, Y + 1):
 
     if x_max < Z <= y_min:
         ans = "No War"
         break
 
 print(ans)
-

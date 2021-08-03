@@ -19,4 +19,3 @@ for i in n_l:
     a = 0
 
 print(ans)
-

@@ -1,7 +1,7 @@
 def main():
     n = int(input())
     L = [int(x) for x in input().split()]
-    q,h = 0,0
+    q, h = 0, 0
     for p in L:
         if p == 25:
             q += 1
@@ -20,6 +20,6 @@ def main():
             else:
                 return 'NO'
     return 'YES'
-        
-print(main())
 
+
+print(main())

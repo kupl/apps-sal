@@ -1,6 +1,8 @@
 def islist(A):
     return isinstance(A, list)
-def same_structure_as(original,other):
+
+
+def same_structure_as(original, other):
     if islist(original) != islist(other):
         return False
     elif islist(original):

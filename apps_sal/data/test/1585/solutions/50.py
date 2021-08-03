@@ -7,7 +7,7 @@ input = sys.stdin.readline
 
 X, Y = list(map(int, input().split()))
 ans = 0
-for i in range(X, X+100):
+for i in range(X, X + 100):
     now = i
     cnt = 0
     while True:
@@ -18,4 +18,3 @@ for i in range(X, X+100):
             break
     ans = max(ans, cnt)
 print(ans)
-

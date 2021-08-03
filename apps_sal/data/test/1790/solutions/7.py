@@ -10,7 +10,4 @@ for x in range(n):
 
 for x in range(1, 101):
     if cnt[x] == n:
-        print(x, end = ' ')
-    
-
-
+        print(x, end=' ')

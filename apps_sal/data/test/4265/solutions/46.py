@@ -10,4 +10,3 @@ else:
         if i != t[p]:
             ans += 1
     print(ans)
-

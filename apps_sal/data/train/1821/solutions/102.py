@@ -1,7 +1,8 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         print(nums)
-        if nums == []: return []
+        if nums == []:
+            return []
         p = nums.pop()
         s = []
         b = []
@@ -11,4 +12,3 @@ class Solution:
             else:
                 s.append(i)
         return self.sortArray(s.copy()) + [p] + self.sortArray(b.copy())
-

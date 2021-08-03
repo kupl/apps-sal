@@ -1,5 +1,6 @@
 from itertools import cycle
 
+
 def thirt(n):
     m = -n
     while m != n:

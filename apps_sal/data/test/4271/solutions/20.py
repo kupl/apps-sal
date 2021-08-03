@@ -5,8 +5,8 @@ Clst = list(map(int, input().split()))
 
 ans = sum(Blst)
 
-for i in range(N-1):
-    if Alst[i] + 1 == Alst[i+1]:
-        ans += Clst[Alst[i]-1]
+for i in range(N - 1):
+    if Alst[i] + 1 == Alst[i + 1]:
+        ans += Clst[Alst[i] - 1]
 
 print(ans)

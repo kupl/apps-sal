@@ -15,5 +15,3 @@ class Solution:
                         consec_count += 1
                         count += consec_count
         return count
-
-

@@ -11,7 +11,7 @@ class Solution:
             return s
 
         graph = {}
-        for u,v in pairs:
+        for u, v in pairs:
             if u in graph:
                 graph[u].append(v)
             else:
@@ -29,9 +29,9 @@ class Solution:
                 dfs(i, cc)
 
         dd = {}
-        for i,key in enumerate(visited_set):
+        for i, key in enumerate(visited_set):
             if key in dd:
-                heapq.heappush(dd[key], s[i]);
+                heapq.heappush(dd[key], s[i])
             else:
                 dd[key] = [s[i]]
 

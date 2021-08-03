@@ -3,7 +3,7 @@ class Solution:
         presum = [0]
         for num in stoneValue:
             presum.append(presum[-1] + num)
-        
+
         @lru_cache(None)
         def dfs(i):
             if i >= len(stoneValue):
@@ -15,9 +15,9 @@ class Solution:
                     temp += stoneValue[i + k]
                     remain = presum[-1] - presum[i + k + 1]
                     ans = max(ans, temp + remain - dfs(i + k + 1))
-                    
-            return  ans
-            
+
+            return ans
+
         total = dfs(0)
         if total * 2 > presum[-1]:
             return 'Alice'

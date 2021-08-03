@@ -5,11 +5,11 @@ class Solution:
             ans = 0
             counter = Counter()
             for j in range(n):
-                for k in range(j+1,n):
-                    prod = B[j]*B[k]
+                for k in range(j + 1, n):
+                    prod = B[j] * B[k]
                     counter[prod] += 1
             for i in range(m):
                 prod = A[i]**2
                 ans += counter[prod]
-            return ans 
-        return getTriplets(A,B) + getTriplets(B,A)
+            return ans
+        return getTriplets(A, B) + getTriplets(B, A)

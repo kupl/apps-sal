@@ -1,18 +1,16 @@
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
-        workers=sorted([(w/q, q, w) for w, q in zip(wage, quality)])
+        workers = sorted([(w / q, q, w) for w, q in zip(wage, quality)])
         print(workers)
-        result=math.inf
+        result = math.inf
         qualitySum = 0
-        maxheap=[]
+        maxheap = []
         for r, q, _ in workers:
-            heapq.heappush(maxheap,-q)
+            heapq.heappush(maxheap, -q)
             qualitySum += q
-            if len(maxheap)>K: 
-                qualitySum+=heapq.heappop(maxheap)  #add because its maxheap and we had entered negative, so in theory this line subtracts
-            if len(maxheap)==K:
-                print((qualitySum*r,r,qualitySum))
-                result=min(result,qualitySum*r)
+            if len(maxheap) > K:
+                qualitySum += heapq.heappop(maxheap)  # add because its maxheap and we had entered negative, so in theory this line subtracts
+            if len(maxheap) == K:
+                print((qualitySum * r, r, qualitySum))
+                result = min(result, qualitySum * r)
         return result
-        
-

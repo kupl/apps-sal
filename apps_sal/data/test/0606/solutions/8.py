@@ -35,7 +35,6 @@ else:
         else:
             print((x2 + X2) / 2, (y2 + Y2) / 2, h2 / 2)
 
-
     elif B != 0:
         A1 = A ** 2 + B ** 2
         B1 = 2 * (A * C + A * B * y1 - B ** 2 * x1)
@@ -60,4 +59,3 @@ else:
 
     else:
         exit(100500)
-

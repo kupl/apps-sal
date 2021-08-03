@@ -17,4 +17,3 @@ for i in range(m):
             else:
                 ans[i + 1] += 1
 print(' '.join(map(str, ans)))
-

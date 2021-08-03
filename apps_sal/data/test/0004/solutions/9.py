@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
 
 
 x = int(input())
@@ -15,4 +15,3 @@ while '7' not in str(mm) and '7' not in str(hh):
         hh = 23
     r += 1
 print(r)
-

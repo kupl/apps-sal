@@ -22,10 +22,9 @@ for i in range(n):
             pb[com] = x
     else:
         b[com] = x
-        
+
 for com in range(1, m + 1):
     if com in ppb and ppb[com][1] == pb[com][1]:
         print('?')
     else:
         print(b[com][0], pb[com][0])
-

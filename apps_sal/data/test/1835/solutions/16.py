@@ -12,4 +12,3 @@ for q in range(Q):
             print(n)
         else:
             print(n - 1)
-

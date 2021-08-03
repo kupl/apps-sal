@@ -4,10 +4,10 @@ class Solution:
         count = [0 for i in range(len(arr) + 1)]
         res = -1
         for i, v in enumerate(arr):
-            left, right = length[v-1], length[v+1]
+            left, right = length[v - 1], length[v + 1]
             length[v] = left + right + 1
-            length[v-left] = left + right + 1
-            length[v+right] = left + right + 1
+            length[v - left] = left + right + 1
+            length[v + right] = left + right + 1
             if count[left] > 0:
                 count[left] -= 1
             if count[right] > 0:

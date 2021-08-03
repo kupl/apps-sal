@@ -17,4 +17,3 @@ for i in range(t):
             print(s[0] + "".join(list(map(str, s[k:]))))
         else:
             print(s[k - 1])
-

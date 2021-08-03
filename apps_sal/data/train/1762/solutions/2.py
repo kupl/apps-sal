@@ -1,10 +1,12 @@
 import re
 
+
 def check_intersection(y, x0, x1, segments):
     return any(x0 <= x <= x1 and y0 <= y <= y1 for x, y0, y1 in segments)
 
+
 def mouse_path(s):
-    sort_coords = lambda x0, x1: (x0, x1) if x0 <= x1 else (x1, x0)
+    def sort_coords(x0, x1): return (x0, x1) if x0 <= x1 else (x1, x0)
     dx, dy = 1, 0
     x, y = 0, 0
     hs, vs = [], []

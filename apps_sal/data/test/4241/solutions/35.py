@@ -13,4 +13,3 @@ for i in range(len(s) - len(t) + 1):
     ans.append(l)
 
 print((min(ans)))
-

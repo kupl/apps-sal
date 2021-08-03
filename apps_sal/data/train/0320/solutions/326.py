@@ -10,7 +10,7 @@ class Solution:
                 num -= 1
                 addition += 1
         return (mult, addition)
-    
+
     def minOperations(self, nums: List[int]) -> int:
         result, _ = self.pow2(max(nums))
         for num in nums:

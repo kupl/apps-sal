@@ -11,4 +11,5 @@ def __starting_point():
     n = int(n)
     print(c(n))
 
+
 __starting_point()

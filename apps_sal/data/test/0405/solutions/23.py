@@ -15,4 +15,3 @@ while i >= 0 and a[i] == '>':
     res += 1
     i -= 1
 print(res)
-

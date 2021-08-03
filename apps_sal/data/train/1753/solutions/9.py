@@ -1,5 +1,6 @@
 from math import floor, ceil
 
+
 def least_bribes(bribes):
     bribes_len = len(bribes)
     halfway = (bribes_len - 1) / 2
@@ -8,10 +9,10 @@ def least_bribes(bribes):
     part_stack = [(0, bribes_len, floor(halfway), ceil(halfway))]
     while part_stack:
         start, end, left, right = part_stack.pop()
-        
+
         if (start, end) in solved_bribes:
             continue
-        
+
         width = end - start
         if width <= 2:
             bribe_dict[(start, end)] = sum(bribes[start:end])
@@ -21,7 +22,7 @@ def least_bribes(bribes):
             bribe_dict[(start, end)] = bribes[start + 1] + max(bribes[start:end:2])
             solved_bribes.add((start, end))
             continue
-        
+
         new_bribe = None
         missing_bribes = False
         for pivot in (left, right):
@@ -40,16 +41,16 @@ def least_bribes(bribes):
             bribe_total = bribes[pivot] + max(bribe_dict[(start, pivot)], bribe_dict[(pivot + 1, end)])
             if not new_bribe or bribe_total < new_bribe:
                 new_bribe = bribe_total
-        
+
         if missing_bribes:
             continue
-        
+
         if (start, end) not in bribe_dict or new_bribe < bribe_dict[(start, end)]:
             bribe_dict[(start, end)] = new_bribe
         if left > start:
             part_stack.append((start, end, left - 1, right + 1))
             continue
-            
+
         solved_bribes.add((start, end))
-        
+
     return bribe_dict[(0, bribes_len)]

@@ -20,4 +20,3 @@ for c in s:
             print("Impossible")
             return
 print("Impossible" if stack else result)
-

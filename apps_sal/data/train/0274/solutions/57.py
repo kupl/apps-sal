@@ -16,8 +16,3 @@ class Solution:
                     heapq.heappop(minh)
             res = max(res, j - i + 1)
         return res
-                
-            
-        
-        
-

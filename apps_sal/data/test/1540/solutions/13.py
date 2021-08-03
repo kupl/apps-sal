@@ -5,4 +5,3 @@ for i in range(k):
     nc[x - 1] += 1
     mc[y - 1] += 1
 print(' '.join(map(str, (sum(mc[j] for j in range(m) if a[i][j]) - nc[i] for i in range(n)))))
-

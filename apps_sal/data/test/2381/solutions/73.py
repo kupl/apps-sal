@@ -1,4 +1,4 @@
-#/usr/bin/python
+# /usr/bin/python
 
 def solve():
     n, k = list(map(int, input().split()))
@@ -21,9 +21,9 @@ def solve():
         return mul
 
     # otherwise, multiply the leftmost two products and the rightmost two products, whichever is larger.
-    for i in range(k//2):
-        l_mul = a[l] * a[l+1]
-        r_mul = a[r] * a[r-1]
+    for i in range(k // 2):
+        l_mul = a[l] * a[l + 1]
+        r_mul = a[r] * a[r - 1]
         if l_mul >= r_mul:
             ans = ans * l_mul % mod
             l += 2
@@ -33,5 +33,5 @@ def solve():
 
     return ans
 
-print((solve()))
 
+print((solve()))

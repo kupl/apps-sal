@@ -4,9 +4,9 @@ class Solution:
             m = {}
             cnt = 0
             for n in nums:
-                if num%n == 0:
-                    if m.get(num/n) is not None:
-                        cnt += m[num/n]
+                if num % n == 0:
+                    if m.get(num / n) is not None:
+                        cnt += m[num / n]
                 if m.get(n) is None:
                     m[n] = 1
                 else:
@@ -15,7 +15,7 @@ class Solution:
 
         res = 0
         for num in nums1:
-            res += count(num*num, nums2)
+            res += count(num * num, nums2)
         for num in nums2:
-            res += count(num*num, nums1)
+            res += count(num * num, nums1)
         return res

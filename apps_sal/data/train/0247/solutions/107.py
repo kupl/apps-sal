@@ -9,9 +9,8 @@ class Solution:
                 start += 1
             if window_sum == target:
                 curr_len = i - start + 1
-                result = min(result, curr_len + pre_min[start-1])
-                pre_min[i] = min(curr_len, pre_min[i-1])
+                result = min(result, curr_len + pre_min[start - 1])
+                pre_min[i] = min(curr_len, pre_min[i - 1])
             else:
-                pre_min[i] = pre_min[i-1]
+                pre_min[i] = pre_min[i - 1]
         return result if result < float('inf') else -1
-

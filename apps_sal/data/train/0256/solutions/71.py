@@ -10,7 +10,7 @@ class Solution:
                 minK = min(minK, m)
                 e = m - 1
         return minK
-        
+
     def eat(self, piles, K):
         ret = 0
         for p in piles:

@@ -7,4 +7,3 @@ while(a <= b):
     b *= 2
 
 print(y)
-

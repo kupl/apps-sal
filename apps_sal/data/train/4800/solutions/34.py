@@ -7,4 +7,3 @@ def hotpo(n):
             temp.append(3 * temp[-1] + 1)
         else:
             temp.append(temp[-1] / 2)
-

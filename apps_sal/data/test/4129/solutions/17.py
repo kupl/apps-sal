@@ -3,6 +3,7 @@
 import sys
 from collections import Counter
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -15,8 +16,11 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 def bfs(nodes, src):
     from collections import deque
@@ -29,7 +33,8 @@ def bfs(nodes, src):
             if dist[src][v]:
                 continue
             dist[src][v] = 1
-            que.append((v, c+1))
+            que.append((v, c + 1))
+
 
 N, M, s = MAP()
 s -= 1
@@ -37,7 +42,8 @@ s -= 1
 nodes = [[] for i in range(N)]
 for _ in range(M):
     a, b = MAP()
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     nodes[a].append(b)
 
 dist = list2d(N, N, 0)
@@ -59,4 +65,3 @@ for _, u in need:
                 done[v] = True
         ans += 1
 print(ans)
-

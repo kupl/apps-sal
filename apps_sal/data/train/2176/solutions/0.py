@@ -35,4 +35,3 @@ for i in range(n):
         unknown = []
 res = res * (len(unknown) + 1) % 1000000007
 print(res)
-

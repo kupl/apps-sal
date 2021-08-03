@@ -4,9 +4,9 @@ mlst = []
 plst = []
 dissum = 0
 for i in range(1, n + 1):
-  mlst.append(abs(spot[i + 1] - spot[i]) + abs(spot[i] - spot[i - 1]))
-  plst.append(abs(spot[i + 1] - spot[i - 1]))
-  dissum += abs(spot[i] - spot[i - 1])
+    mlst.append(abs(spot[i + 1] - spot[i]) + abs(spot[i] - spot[i - 1]))
+    plst.append(abs(spot[i + 1] - spot[i - 1]))
+    dissum += abs(spot[i] - spot[i - 1])
 dissum += abs(spot[n])
 for i in range(n):
-  print(dissum - mlst[i] + plst[i])
+    print(dissum - mlst[i] + plst[i])

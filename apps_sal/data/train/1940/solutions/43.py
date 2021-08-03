@@ -5,13 +5,12 @@
 #         self.next = next
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
-        
-    
+
         stack = []
         result = []
         index = 0
         while(head):
-            
+
             if len(stack) > 0:
                 if head.val > stack[-1][0]:
                     # Pop the stack, change the list
@@ -26,10 +25,5 @@ class Solution:
             result.append(0)
             index += 1
             head = head.__next__
-            
-            
-        return result
-        
-            
-        
 
+        return result

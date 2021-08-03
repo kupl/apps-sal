@@ -1,38 +1,39 @@
 from pprint import pprint
 
+
 def fatoresPrimos(x):
-	fatores = {}
+    fatores = {}
 
-	if (x in primeSet):
-		fatores[x] = 1
-		return fatores
+    if (x in primeSet):
+        fatores[x] = 1
+        return fatores
 
-	i = 0
-	atual = x
-	while (primes[i] < x):
-		p = primes[i]
-		if (atual % p == 0):
-			atual = atual / p
-			if (p in fatores):
-				fatores[p] += 1
-			else:
-				fatores[p] = 1
-		else:
-			i += 1
+    i = 0
+    atual = x
+    while (primes[i] < x):
+        p = primes[i]
+        if (atual % p == 0):
+            atual = atual / p
+            if (p in fatores):
+                fatores[p] += 1
+            else:
+                fatores[p] = 1
+        else:
+            i += 1
 
-	return fatores
+    return fatores
+
 
 def phi(x):
 
-	f = fatoresPrimos(x)
+    f = fatoresPrimos(x)
 
-	res = 1
+    res = 1
 
-	for i in list(f.keys()):
-		res *= i ** f[i] * (1 - 1 / i)
+    for i in list(f.keys()):
+        res *= i ** f[i] * (1 - 1 / i)
 
-	return int(res)
-
+    return int(res)
 
 
 p = int(input())
@@ -42,4 +43,3 @@ primeSet = set(primes)
 n = len(primes)
 
 print(phi(phi(p)))
-

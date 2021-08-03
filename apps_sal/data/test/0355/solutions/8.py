@@ -23,7 +23,6 @@ def move_count(row, column, direction):
     return count
 
 
-
 for i in range(0, linecount):
     field.append(list(stdin.readline().strip()))
 
@@ -47,4 +46,3 @@ if a_moves <= b_moves:
     print('A')
 else:
     print('B')
-

@@ -16,9 +16,9 @@ for a in range(len(mass)):
         itog = 0
         for x in range(len(lr)):
             l, r = lr[x][0], lr[x][1]
-            if l <= b+1 <= r and (a+1 < l or a+1 > r):
+            if l <= b + 1 <= r and (a + 1 < l or a + 1 > r):
                 q += 1
-                delete.append(x+1)
+                delete.append(x + 1)
         itog = ma + q - mb
         if mitog < itog:
             mitog = itog

@@ -15,4 +15,3 @@ if s != "110" * (len(s) // 3):
     print((0))
     return
 print((10 ** 10 - len(s) // 3 + 1))
-

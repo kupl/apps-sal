@@ -13,7 +13,7 @@ class Solution:
             for day in bloomDay:
                 if val >= day:
                     count += 1
-                    
+
                     if count == k:
                         total -= 1
                         count = 0
@@ -23,10 +23,8 @@ class Solution:
 
                 else:
                     count = 0
-                
 
             return total <= 0
-            
 
         while low < high:
             mid = (low + high) // 2
@@ -36,5 +34,5 @@ class Solution:
                 high = mid
             else:
                 low = mid + 1
-        
+
         return tmp[low]

@@ -7,4 +7,3 @@ L.append(c)
 L = list(set(L))
 
 print((len(L)))
-

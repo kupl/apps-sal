@@ -7,4 +7,3 @@ x //= d
 y //= d
 ans = min(a // x, b // y)
 print(ans)
-

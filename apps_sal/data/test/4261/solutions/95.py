@@ -1,6 +1,6 @@
-A,B,C = map(int,input().split())
+A, B, C = map(int, input().split())
 buf = C - (A - B)
-if buf >= 0 :
+if buf >= 0:
     print(buf)
-else :
+else:
     print("0")

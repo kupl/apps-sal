@@ -29,4 +29,3 @@ kurikaeshi = sum(l[len_L:])
 ans += (N - index) // len_R * kurikaeshi
 ans += sum(l[len_L:len_L + (N - index) % len_R])
 print(ans)
-

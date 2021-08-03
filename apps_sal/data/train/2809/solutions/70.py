@@ -1,6 +1,6 @@
 def digitize(n):
     s = list(reversed(str(n)))
-    a = [];
+    a = []
     for x in s:
         m = int(x)
         a.append(m)

@@ -23,7 +23,6 @@ for i in range(n):
     a[target] = i
     a[pos] = old_v
 
-
     if (abs(pos - target) * 2 >= n):
         ans.append((pos, target))
         continue
@@ -52,4 +51,3 @@ print(len(ans))
 print("\n".join(f"{i[0] + 1} {i[1] + 1}" for i in ans))
 # for i in ans:
 #     print(i[0] + 1, i[1] + 1)
-

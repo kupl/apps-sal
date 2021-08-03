@@ -11,12 +11,9 @@ class Solution:
             while abs(-m[0][0] - n[0][0]) > limit:
                 j = min(m[0][1], n[0][1]) + 1
                 while j > m[0][1]:
-                     heappop(m)
+                    heappop(m)
                 while j > n[0][1]:
-                     heappop(n)
+                    heappop(n)
             res = max(res, i - j + 1)
 
         return res
-                
-            
-

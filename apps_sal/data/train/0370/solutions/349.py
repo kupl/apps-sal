@@ -9,14 +9,14 @@ class Solution:
                 primes.append(i)
                 for j in range(i + i, len(seive), i):
                     seive[j] = False
-        
+
         graph = defaultdict(list)
         for i, num in enumerate(A):
             for p in primes:
                 if p * p > num:
-                    
+
                     break
-                if num % p  == 0:
+                if num % p == 0:
                     while num % p == 0:
                         num //= p
                     graph[p].append(i)
@@ -29,19 +29,18 @@ class Solution:
                 uf.union(indx[i - 1], indx[i])
         parents = [uf.find(i) for i in range(len(A))]
         return max(Counter(parents).values())
-                
 
 
 class DS:
     def __init__(self, n):
-        self.p = [-1]*n
-    
+        self.p = [-1] * n
+
     def find(self, x):
         if self.p[x] >= 0:
             self.p[x] = self.find(self.p[x])
             return self.p[x]
         return x
-    
+
     def union(self, x, y):
         x, y = self.find(x), self.find(y)
         if x == y:
@@ -50,11 +49,6 @@ class DS:
             self.p[x] -= 1
             self.p[y] = x
 
-            
         else:
             self.p[y] -= 1
             self.p[x] = y
-            
-        
-        
-

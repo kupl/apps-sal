@@ -7,7 +7,6 @@ class Solution:
             i = i + 1
         return True
 
-
     def is_palindrome(n: int) -> bool:
         num_string = str(n)
         num_length = len(num_string)
@@ -22,7 +21,6 @@ class Solution:
             i = i + 1
 
         return True
-
 
     def prime_palindrome(n: int) -> int:
         answer = n
@@ -44,8 +42,6 @@ class Solution:
             elif Solution.is_palindrome(answer) and Solution.is_prime(answer):
                 return answer
             answer = answer + 2
-    
-    
+
     def primePalindrome(self, N: int) -> int:
         return Solution.prime_palindrome(N)
-

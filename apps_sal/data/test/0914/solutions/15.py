@@ -15,7 +15,7 @@ else:
         k = (l + r) // 2
         cur = 0
         for x in d.values():
-            cur += (x+k-1) // k
+            cur += (x + k - 1) // k
         if cur > n:
             l = k
         else:
@@ -24,6 +24,6 @@ else:
     s = ''
     for a in d.keys():
         s += a * ((d[a] + r - 1) // r)
-    l=len(s)
-    s += 'a' * (n-len(s))
+    l = len(s)
+    s += 'a' * (n - len(s))
     print(s)

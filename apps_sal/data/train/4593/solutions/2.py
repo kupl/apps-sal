@@ -1,1 +1,1 @@
-merge_arrays = lambda a1, a2: sorted(set(a1+a2))
+def merge_arrays(a1, a2): return sorted(set(a1 + a2))

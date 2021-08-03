@@ -9,6 +9,8 @@ def f(n, k):
     n[k] = int(n[k]) - 1
     n[k + 1::] = [9] * (len(n) - k - 1)
     return n
+
+
 a = input()
 n = len(a)
 ans = [int(x) for x in a]
@@ -16,7 +18,7 @@ ms = sum(ans)
 for i in range(0, n):
     ca = f(a, i)
     cs = sum(ca)
-    if cs> ms:
+    if cs > ms:
         ans = ca
         ms = cs
     elif cs == ms:

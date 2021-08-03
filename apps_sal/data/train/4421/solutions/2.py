@@ -8,4 +8,3 @@ def to_seconds(time):
     if m and time[slice(*m.span())] == time:
         hms = m.groupdict()
         return int(hms['h']) * 3600 + int(hms['m']) * 60 + int(hms['s'])
-

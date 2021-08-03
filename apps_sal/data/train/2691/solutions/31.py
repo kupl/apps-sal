@@ -10,7 +10,7 @@ def solve(s):
         else:
             list_of_numbers.append(current)
             current = ''
-    
+
     while '' in list_of_numbers:
         list_of_numbers.remove('')
     list_of_ints = []
@@ -19,5 +19,6 @@ def solve(s):
         list_of_ints.append(list_of_numbers[j])
     biggest = max(list_of_ints)
     return biggest
-pass
 
+
+pass

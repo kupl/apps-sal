@@ -5,4 +5,4 @@ class Solution:
             for j in range(i + 1, len(nums) + 1):
                 sums.append(sum(nums[i:j]))
         sums.sort()
-        return sum(sums[left-1:right]) % ((10**9) + 7)
+        return sum(sums[left - 1:right]) % ((10**9) + 7)

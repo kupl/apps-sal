@@ -7,4 +7,3 @@ for i in range(n):
     cur = a[i] + 15
 cur = min(cur, 90)
 print(cur)
-

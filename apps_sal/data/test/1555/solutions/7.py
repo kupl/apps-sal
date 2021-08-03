@@ -4,21 +4,28 @@ from io import BytesIO
 
 from itertools import product
 
+
 class CYCLE(Exception):
     ...
 
+
 debug_print = lambda *args: None
+
 
 def solve(n, m, gs):
     def union(u, v):
         p, q = find(u), find(v)
-        if p == q: return
-        if rank[p] < rank[q]: p, q = q, p
-        if rank[p] == rank[q]: rank[p] += 1
+        if p == q:
+            return
+        if rank[p] < rank[q]:
+            p, q = q, p
+        if rank[p] == rank[q]:
+            rank[p] += 1
         parent[q] = p
 
     def find(u):
-        if parent[u] == u: return u
+        if parent[u] == u:
+            return u
         else:
             p = find(parent[u])
             parent[u] = p
@@ -78,7 +85,7 @@ def solve(n, m, gs):
     while toposort_stack:
         v = toposort_stack.pop()
         for u in g[v]:
-            layer[u] = max(layer[u], layer[v]+1)
+            layer[u] = max(layer[u], layer[v] + 1)
 
     print('Yes')
 
@@ -99,5 +106,6 @@ def solve_from_stdin():
     for _ in range(n):
         gs.append(input())
     solve(n, m, gs)
+
 
 solve_from_stdin()

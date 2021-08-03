@@ -8,7 +8,9 @@ def solve():
         al = al - set([i * i])
     print(max(al))
 
+
 def __starting_point():
     solve()
+
 
 __starting_point()

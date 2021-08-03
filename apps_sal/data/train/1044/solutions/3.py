@@ -10,5 +10,3 @@ for x in range(0, tcases):
     for i in list:
         sum = sum + i
     print(sum)
-        
-

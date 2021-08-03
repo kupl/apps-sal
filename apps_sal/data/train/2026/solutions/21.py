@@ -1,11 +1,11 @@
 from sys import stdin
 from math import inf
- 
- 
+
+
 def readline():
     return map(int, stdin.readline().strip().split())
- 
- 
+
+
 def dijkstra():
     n, d = readline()
     a = [0] + list(readline()) + [0]
@@ -32,8 +32,10 @@ def dijkstra():
                 if lower_cost[k] > diff:
                     lower_cost[k] = diff
     return lower_cost[-1]
- 
- 
+
+
 def __starting_point():
     print(dijkstra())
+
+
 __starting_point()

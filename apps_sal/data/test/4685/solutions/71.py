@@ -6,4 +6,4 @@ elif max(A, B, C) == B:
     B *= 2**K
 else:
     C *= 2**K
-print(A+B+C)
+print(A + B + C)

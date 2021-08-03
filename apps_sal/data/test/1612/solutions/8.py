@@ -4,9 +4,9 @@ m = []
 p = []
 mn = []
 for i in range(n):
-    b = list(map(int,input().split()))
-    a.insert(i,b)
-    #a.append(b)
+    b = list(map(int, input().split()))
+    a.insert(i, b)
+    # a.append(b)
     #m = m + [a[i][0]]
     m.append(a[i][0])
     a[i] = a[i][1:]
@@ -17,10 +17,8 @@ for j in range(n):
     for i in range(n):
         if i != j:
             if mn[i] <= mn[j]:
-                p[j]= 'NO'
+                p[j] = 'NO'
                 break
 
 for i in range(n):
     print(p[i])
-    
-

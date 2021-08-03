@@ -1,4 +1,4 @@
-import  math
+import math
 
 N = int(input())
 
@@ -9,4 +9,3 @@ if N == 0:
     print(int(p))
 else:
     print(int(N))
-

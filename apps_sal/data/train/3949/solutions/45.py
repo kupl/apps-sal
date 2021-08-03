@@ -1,6 +1,6 @@
 import math
 d = {
-    
+
     'terrible': 0,
     'poor': 5,
     'good': 10,
@@ -8,6 +8,7 @@ d = {
     'excellent': 20,
     'bla': 'Rating not recognised'
 }
+
 
 def calculate_tip(amount, rating):
     rating = rating.lower()

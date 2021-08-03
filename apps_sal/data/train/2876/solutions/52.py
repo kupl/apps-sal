@@ -1,2 +1,2 @@
-def check(arr, x): 
+def check(arr, x):
     return x in arr

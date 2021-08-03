@@ -2,7 +2,7 @@ S = input()
 N = len(S)
 inf = 10**18
 
-nxt = [[N+1] * 26 for _ in range(N + 2)]
+nxt = [[N + 1] * 26 for _ in range(N + 2)]
 for i in reversed(range(N)):
     for j in range(26):
         nxt[i][j] = nxt[i + 1][j]

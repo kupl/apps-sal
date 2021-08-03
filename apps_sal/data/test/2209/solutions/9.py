@@ -24,4 +24,3 @@ for char in s:
     elif char == 'h':
         z += c
 print(z)
-

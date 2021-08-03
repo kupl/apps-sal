@@ -17,8 +17,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n = int(input())
 a = []
@@ -34,4 +36,3 @@ for x in a:
     else:
         m += 1
 print(m)
-

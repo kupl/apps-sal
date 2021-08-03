@@ -13,7 +13,6 @@ else:
     slips = 0
     while True:
         if h1 + 8 * a + slips * 12 * (a - b) >= h2:
-            print (slips)
+            print(slips)
             break
         slips += 1
-

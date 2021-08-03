@@ -13,7 +13,7 @@ class Solution:
         return max(dp)
 
     def valid(self, str1, str2):
-        if len(str1)+1 != len(str2):
+        if len(str1) + 1 != len(str2):
             return False
         cnt = 0
         n = len(str1)
@@ -29,8 +29,4 @@ class Solution:
                 l1 += 1
                 l2 += 1
 
-        return cnt <= 1 
-
-
-                
-
+        return cnt <= 1

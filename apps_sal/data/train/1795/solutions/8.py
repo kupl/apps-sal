@@ -45,4 +45,3 @@ def nQueen(n: int) -> List[int]:
             _solutions[:] = [*pool.map(_nQueen, list(range(51)))]
 
     return _solutions[n]
-

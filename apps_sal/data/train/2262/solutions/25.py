@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def f(x, y):
     if x == 0:
         return y
@@ -9,6 +10,7 @@ def f(x, y):
         return -(x + y)
     if y == c:
         return x + y
+
 
 r, c, n = map(int, input().split())
 xy = []

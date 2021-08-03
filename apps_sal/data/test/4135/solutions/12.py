@@ -6,4 +6,3 @@ for i in range(1, n + 1):
         t[:i] = t[:i][::-1]
 
 print(''.join(t))
-

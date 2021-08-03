@@ -4,18 +4,16 @@ class BrowserHistory:
         self.history = []
         self.forwardHistory = []
         self.curr = homepage
-        
 
     def visit(self, url: str) -> None:
         self.history.append(self.curr)
         self.curr = url
         self.forwardHistory = []
-        
 
     def back(self, steps: int) -> str:
         if not self.history:
             return self.curr
-        
+
         left = steps
         url = None
         while left and self.history:
@@ -23,13 +21,13 @@ class BrowserHistory:
             left -= 1
             self.forwardHistory.append(self.curr)
             self.curr = url
-            
+
         return url
 
     def forward(self, steps: int) -> str:
         if not self.forwardHistory:
             return self.curr
-        
+
         left = steps
         url = None
         while left and self.forwardHistory:
@@ -37,9 +35,8 @@ class BrowserHistory:
             left -= 1
             self.history.append(self.curr)
             self.curr = url
-            
+
         return url
-        
 
 
 # Your BrowserHistory object will be instantiated and called as such:
@@ -47,4 +44,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

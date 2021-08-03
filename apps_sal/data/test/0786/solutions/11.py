@@ -11,7 +11,7 @@ for _ in range(n):
     c, d = stdin.readline().split(' ')
     c = int(c)
     d = int(d)
-    
+
     if d is 1:
         MIN = max(MIN, 1900)
     if d is 2:
@@ -30,4 +30,3 @@ else:
         print('Infinity')
     else:
         print(MAX)
-

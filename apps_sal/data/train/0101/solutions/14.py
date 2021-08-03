@@ -1,6 +1,7 @@
 from sys import stdin, exit
 from math import *
 
+
 def main():
     def len_intersect(a, b, c, d):
         if d <= a or c >= b:
@@ -14,7 +15,9 @@ def main():
             a, b = b, a
         print(b - a - len_intersect(a, b, c - r, c + r))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

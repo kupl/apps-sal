@@ -4,16 +4,16 @@ class DSU:
         self.p = collections.defaultdict(int)
         self.s = collections.defaultdict(int)
         self.scount = collections.defaultdict(int)
-    
+
     def find(self, x):
         if self.p[x] != x:
             self.p[x] = self.find(self.p[x])
         return self.p[x]
-    
+
     def union(self, x, y):
         px = self.find(x)
         py = self.find(y)
-        
+
         if self.r[px] > self.r[py]:
             self.p[py] = px
             self.scount[self.s[py]] -= 1
@@ -21,7 +21,7 @@ class DSU:
             self.s[px] += self.s[py]
             self.s[py] = 0
             self.scount[self.s[px]] += 1
-            
+
         if self.r[px] < self.r[py]:
             self.p[px] = py
             self.scount[self.s[py]] -= 1
@@ -38,6 +38,7 @@ class DSU:
             self.s[py] = 0
             self.scount[self.s[px]] += 1
 
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         dsu = DSU(len(arr))
@@ -52,16 +53,9 @@ class Solution:
                 dsu.union(arr[i], arr[i] + 1)
             if arr[i] - 1 in seen:
                 dsu.union(arr[i], arr[i] - 1)
-                
+
             if dsu.scount[m] > 0:
                 ret = max(ret, i)
             seen.add(arr[i])
-            
+
         return ret + 1 if ret != -1 else -1
-
-        
-        
-        
-        
-        
-

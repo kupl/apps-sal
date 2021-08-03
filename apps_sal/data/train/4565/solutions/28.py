@@ -1,4 +1,4 @@
 
 def replace_dots(s):
-    s=s.replace('.','-')
+    s = s.replace('.', '-')
     return s

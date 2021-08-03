@@ -55,9 +55,9 @@ def resolve():
     for i in range(M):
         a, b = list(map(int, input().split()))
         if a == 1:
-            S[b-1] = 1
+            S[b - 1] = 1
         if b == N:
-            E[a-1] = 1
+            E[a - 1] = 1
 
     ans = "IMPOSSIBLE"
     for i in range(N):
@@ -70,5 +70,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

@@ -7,5 +7,6 @@ def people_with_age_drink(age):
         return 'drink beer'
     else:
         return 'drink whisky'
-    
+
+
 print(people_with_age_drink(20))

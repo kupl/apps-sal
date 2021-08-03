@@ -1,2 +1,2 @@
-X,t = map(int,input().split())
-print(max(X-t,0))
+X, t = map(int, input().split())
+print(max(X - t, 0))

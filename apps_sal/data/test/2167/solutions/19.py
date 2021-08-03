@@ -1,7 +1,7 @@
-n=int(input())
+n = int(input())
 
-a=list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-ans=sum(a)
+ans = sum(a)
 
-print(n) if ans%n==0 else print(n-1)
+print(n) if ans % n == 0 else print(n - 1)

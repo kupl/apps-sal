@@ -1,18 +1,19 @@
 class Solution:
     def longestMountain(self, A: List[int]) -> int:
-        if not A: return 0
+        if not A:
+            return 0
         # None -> Haven't started a mountain, True -> rising up, False -> Falling down
         rising = None
         curr = 0
         best = 0
         prev = None
-        for i,x in enumerate(A):
-            print((i,':', x, 'curr', curr))
+        for i, x in enumerate(A):
+            print((i, ':', x, 'curr', curr))
             if prev is None:
                 prev = x
                 curr = best = 1
                 continue
-                
+
             if rising is None and x < prev:
                 prev = x
                 continue
@@ -21,7 +22,7 @@ class Solution:
                 prev = x
                 curr = 2
                 continue
-            
+
             # Continue rising
             if rising and x > prev:
                 curr += 1
@@ -40,12 +41,10 @@ class Solution:
             elif not rising and x > prev:
                 best = max(best, curr)
                 rising = True
-                curr = 2 # x and the previous
-                    
+                curr = 2  # x and the previous
+
             prev = x
-        # Check if 
+        # Check if
         if rising is not None and not rising:
             best = max(best, curr)
         return 0 if best < 3 else best
-                
-

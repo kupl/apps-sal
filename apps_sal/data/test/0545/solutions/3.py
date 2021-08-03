@@ -5,13 +5,15 @@ n, t = map(int, input().split())
 s1 = input()
 s2 = input()
 
-same = sum([1 for i in range(n) if s1[i] ==s2[i]])
+same = sum([1 for i in range(n) if s1[i] == s2[i]])
+
 
 def other(c1, c2):
     ans = 'a'
     while ans == c1 or ans == c2:
         ans = chr(ord(ans) + 1)
     return ans
+
 
 if same + 2 * t < n:
     print(-1)
@@ -42,6 +44,6 @@ for i in range(n):
             ans[i] = s2[i]
         else:
             ans[i] = other(s1[i], s2[i])
-        
+
 
 print(*ans, sep='')

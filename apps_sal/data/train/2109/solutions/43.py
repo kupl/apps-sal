@@ -10,6 +10,10 @@ def main():
         if s * s == ref and a != b:
             ans -= 1
         print(ans)
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

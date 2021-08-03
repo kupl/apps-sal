@@ -5,11 +5,12 @@ from scipy.sparse.csgraph import csgraph_from_dense
 
 INF = float('inf')
 
+
 def main():
     N, M, L = map(int, input().split())
 
     # G[x][y]: xからyへ直接移動するときのコスト。移動できない場合はINF
-    G = [[INF] * (N+1) for n in range(N+1)]
+    G = [[INF] * (N + 1) for n in range(N + 1)]
 
     for i in range(M):
         a, b, c = map(int, input().split())
@@ -36,10 +37,13 @@ def main():
     ans = []
     for s, t in Queries:
         d = refuel_count[s][t]
-        ans.append(int(d-1) if d != INF else -1)
-    
+        ans.append(int(d - 1) if d != INF else -1)
+
     print(*ans, sep='\n')
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

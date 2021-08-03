@@ -1,4 +1,6 @@
-func = lambda: map(int, input().split())
+def func(): return map(int, input().split())
+
+
 n, d, b = func()
 d += 1
 t, a = 0, [0] * (n + 1)

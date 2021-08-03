@@ -8,14 +8,14 @@ YM = dict(enumerate(YL, start=1))
 
 def get_b(k, x):
     y = YM[x]
-    b = y - k*x
+    b = y - k * x
     return b
 
 
 def extract(x1, x2):
     y1 = YM[x1]
     y2 = YM[x2]
-    k = Fraction(y2-y1, x2-x1)
+    k = Fraction(y2 - y1, x2 - x1)
     b = get_b(k, x1)
     return k, b
 
@@ -32,7 +32,7 @@ def fits3(x1, x2, x):
 def getk5():
     k_count = {}
     num = min(5, N)
-    for x1, x2 in combinations(list(range(1, num+1)), 2):
+    for x1, x2 in combinations(list(range(1, num + 1)), 2):
         k, _ = extract(x1, x2)
         k_count[k] = k_count.get(k, 0) + 1
 
@@ -72,10 +72,9 @@ def main():
         return
 
     b_set = set()
-    for x in range(1, N+1):
+    for x in range(1, N + 1):
         b_set.add(get_b(k, x))
     print('Yes' if len(b_set) == 2 else 'No')
 
+
 main()
-
-

@@ -4,16 +4,16 @@ starr = list(input())
 n = len(starr)
 sum = 0
 for i in range(n):
-	starr[i] = int(starr[i])
-	sum += starr[i]
-#print(starr)
+    starr[i] = int(starr[i])
+    sum += starr[i]
+# print(starr)
 starr.sort()
-#print(starr)
+# print(starr)
 ctr = 0
 for a in starr:
-	if sum >= k:
-		break
-	sum -= a
-	sum += 9
-	ctr += 1
+    if sum >= k:
+        break
+    sum -= a
+    sum += 9
+    ctr += 1
 print(int(ctr))

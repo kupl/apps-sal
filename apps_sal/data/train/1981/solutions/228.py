@@ -4,11 +4,9 @@ class Solution:
         for i, j in requests:
             count[i] += 1
             if j + 1 < len(count):
-                count[j+1] -= 1
+                count[j + 1] -= 1
         cur = 0
         for i in range(len(count)):
             count[i] += cur
             cur = count[i]
         return sum(n * c for n, c in zip(sorted(nums, reverse=True), sorted(count, reverse=True))) % (10 ** 9 + 7)
-            
-

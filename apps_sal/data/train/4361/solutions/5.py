@@ -1,3 +1,4 @@
+from bisect import bisect
 from collections import *
 
 NUM_DIG = 8
@@ -13,8 +14,9 @@ for seq in palindromes.values():
     for n in seq:
         lengths[len(seq)].append(n)
         lasts[n] = seq[-1]
-for k in lengths: lengths[k].sort()
+for k in lengths:
+    lengths[k].sort()
 
-from bisect import bisect
+
 def next_perfectsq_perm(lower_limit, k):
     return lasts[lengths[k][bisect(lengths[k], lower_limit)]]

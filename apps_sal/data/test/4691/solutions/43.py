@@ -10,15 +10,15 @@ re = 0
 
 for i in range(n):
     s = input()
-    if s =="AC":
+    if s == "AC":
         ac += 1
-    elif s =="WA":
+    elif s == "WA":
         wa += 1
-    elif s =="TLE":
+    elif s == "TLE":
         tle += 1
-    elif s =="RE":
+    elif s == "RE":
         re += 1
-    
+
 print("AC x " + str(ac))
 print("WA x " + str(wa))
 print("TLE x " + str(tle))

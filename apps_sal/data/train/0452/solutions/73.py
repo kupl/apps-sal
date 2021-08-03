@@ -2,14 +2,14 @@ class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         mem = {}
         maxMem = {}
-        
+
         def maxHelper(i, j):
             if (i, j) in maxMem:
-                return maxMem[(i,j)]
-            
+                return maxMem[(i, j)]
+
             maxVal = 0
             for index in range(i, j):
-                if jobDifficulty[index]>maxVal:
+                if jobDifficulty[index] > maxVal:
                     maxVal = jobDifficulty[index]
             maxMem[(i, j)] = maxVal
             return maxVal
@@ -29,9 +29,9 @@ class Solution:
 
             else:
                 minCplx = float('inf')
-                for i in range(days-1, jobNum):
-                    curCplx = helper(i, days-1) + maxHelper(i, jobNum)
-                    if curCplx<minCplx:
+                for i in range(days - 1, jobNum):
+                    curCplx = helper(i, days - 1) + maxHelper(i, jobNum)
+                    if curCplx < minCplx:
                         minCplx = curCplx
 
             mem[(jobNum, days)] = minCplx
@@ -39,5 +39,3 @@ class Solution:
 
         res = helper(len(jobDifficulty), d)
         return -1 if res == float('inf') else res
-        
-

@@ -6,4 +6,3 @@ if c1 != c4 or (c3 != 0 and c1 == 0):
     print(0)
 else:
     print(1)
-

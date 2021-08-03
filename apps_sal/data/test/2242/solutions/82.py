@@ -5,10 +5,10 @@ p = [0] * mod
 r = 0
 d = 1
 for s in reversed(S):
-  t = int(s)%mod
-  r += t*d
-  r %= mod
-  d = d*10%mod
-  p[r] += 1
+    t = int(s) % mod
+    r += t * d
+    r %= mod
+    d = d * 10 % mod
+    p[r] += 1
 
-print(sum([i*(i-1)//2 for i in p]))
+print(sum([i * (i - 1) // 2 for i in p]))

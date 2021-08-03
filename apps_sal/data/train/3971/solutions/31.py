@@ -6,9 +6,5 @@ def tidyNumber(n):
             return False
         else:
             p = i
-    
-    return True
-        
-            
-        
 
+    return True

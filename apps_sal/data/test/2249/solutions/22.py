@@ -1,4 +1,4 @@
-n=int(input())
+n = int(input())
 nums = list(map(int, input().split()))
 left = {}
 
@@ -19,4 +19,3 @@ for i in nums:
         done.add(i)
 
 print(count)
-

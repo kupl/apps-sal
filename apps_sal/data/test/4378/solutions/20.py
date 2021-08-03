@@ -19,4 +19,3 @@ if h != 1:
     t.append(p)
 print(r - 1)
 print(''.join(t).upper())
-

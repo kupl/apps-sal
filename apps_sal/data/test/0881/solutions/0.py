@@ -3,6 +3,7 @@ a = list(map(int, input().split()))
 
 dp = [[False] * (n + 1) for i in range(n + 1)]
 
+
 def solve(l, r):
     if dp[l][r]:
         return dp[l][r]
@@ -21,6 +22,7 @@ def solve(l, r):
             tmp = min(tmp, 2)
     dp[l][r] = (-1, tmp)
     return dp[l][r]
+
 
 solve(0, n)
 print(dp[0][n][1])

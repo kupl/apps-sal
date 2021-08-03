@@ -11,5 +11,3 @@ ans_li = []
 for i in range(n):
     ans_li.append(li[i][1] + 1)
 print(*ans_li)
-
-

@@ -1,5 +1,5 @@
-3
 import sys
+3
 
 n = int(sys.stdin.readline())
 a = [int(x) for x in sys.stdin.readline().split()]

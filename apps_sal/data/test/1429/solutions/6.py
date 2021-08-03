@@ -10,7 +10,8 @@ for i in range(N):
     for j in range(i + 1, N, 2):
         cnt[S[j - 1]] += 1
         cnt[S[j]] += 1
-        if cnt["A"] == cnt["T"] and cnt["C"] == cnt["G"]: answer += 1
-        #print(cnt)
-        
+        if cnt["A"] == cnt["T"] and cnt["C"] == cnt["G"]:
+            answer += 1
+        # print(cnt)
+
 print(answer)

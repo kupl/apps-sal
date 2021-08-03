@@ -5,6 +5,7 @@ def coun(s, t):
             d += 1
     return(d)
 
+
 n, m, q = list(map(int, input().split()))
 s = input()
 t = input()
@@ -19,4 +20,3 @@ for i in range(q):
         print(x[r - 1] - x[max(0, l + m - 2)])
     else:
         print(0)
-

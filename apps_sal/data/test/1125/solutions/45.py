@@ -12,8 +12,8 @@ def main():
             j = (nim >> i) & 1
             xy = ((x >> i) ^ (y >> i)) & 1
             if j != xy:
-                m = min(x % (2**i)+1, 2**i-(y % (2**i)))
-                if x % (2**i)+1 == 2**i-(y % (2**i)):
+                m = min(x % (2**i) + 1, 2**i - (y % (2**i)))
+                if x % (2**i) + 1 == 2**i - (y % (2**i)):
                     print((-1))
                     return
                 x -= m
@@ -31,4 +31,3 @@ def main():
 
 
 main()
-

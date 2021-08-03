@@ -1,5 +1,3 @@
-t=int(input())
+t = int(input())
 for _ in range(t):
- print(10)
-  
-
+    print(10)

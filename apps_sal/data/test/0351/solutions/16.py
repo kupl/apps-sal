@@ -14,11 +14,11 @@ problem_index = 0
 n_has_to_solve = 0
 
 while problem_index < n:
-	if problems[problem_index] <= max_solved * 2:
-		max_solved = max(max_solved, problems[problem_index])
-		problem_index += 1
-	else:
-		max_solved *= 2
-		n_has_to_solve += 1
+    if problems[problem_index] <= max_solved * 2:
+        max_solved = max(max_solved, problems[problem_index])
+        problem_index += 1
+    else:
+        max_solved *= 2
+        n_has_to_solve += 1
 
 print(n_has_to_solve)

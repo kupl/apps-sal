@@ -1,6 +1,6 @@
 s = input()
 
-b = [0]*len(s)
+b = [0] * len(s)
 
 ob = 0
 cc = 0
@@ -9,7 +9,7 @@ q = -1
 
 count = 0
 
-for ind,c in enumerate(s):
+for ind, c in enumerate(s):
     if c == '[':
         ob = 1
     elif c == ':' and p >= 0:
@@ -23,7 +23,6 @@ for ind,c in enumerate(s):
     b[ind] = count
 
 if cc > 0:
-    print( 4 + b[cc]-b[p])
+    print(4 + b[cc] - b[p])
 else:
     print(-1)
-

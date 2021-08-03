@@ -3,18 +3,18 @@ class Solution:
         n = len(points)
         if n == 1:
             return 0
-        
+
         mapper = collections.defaultdict(dict)
         for ind1, point1 in enumerate(points):
             for ind2, point2 in enumerate(points):
                 dis = abs(point1[0] - point2[0]) + abs(point1[1] - point2[1])
                 mapper[ind1][ind2] = dis
                 mapper[ind2][ind1] = dis
-        
+
         cost = 0
         c = set()
         unc = set(range(n))
-        
+
         min_i, min_j = None, None
         min_d = math.inf
         for i in range(n):
@@ -27,11 +27,11 @@ class Solution:
         c.add(min_j)
         unc.remove(min_i)
         unc.remove(min_j)
-        
+
         mins = dict()
         for i in unc:
             mins[i] = min(mapper[i][min_i], mapper[i][min_j])
-        
+
         while unc:
             min_i = None
             min_d = math.inf
@@ -46,9 +46,8 @@ class Solution:
             cost += min_d
             c.add(min_i)
             unc.remove(min_i)
-            
+
             for i in unc:
                 mins[i] = min(mins[i], mapper[i][min_i])
-            
-        return cost
 
+        return cost

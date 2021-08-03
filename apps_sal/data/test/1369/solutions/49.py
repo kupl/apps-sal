@@ -1,5 +1,7 @@
 import numpy as np
-import sys, math
+import sys
+import math
+
 
 def circle3p(ps):
     A = []
@@ -15,11 +17,14 @@ def circle3p(ps):
     except np.linalg.LinAlgError:
         return None
 
+
 def circle2p(ps):
     xy0, xy1 = ps
     return [(xy0[0] + xy1[0]) / 2., (xy0[1] + xy1[1]) / 2., ((xy0[0] - xy1[0]) ** 2 + (xy0[1] - xy1[1]) ** 2) / 4.]
 
+
 eps = 1e-7
+
 
 def main():
     N = int(sys.stdin.readline())
@@ -74,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

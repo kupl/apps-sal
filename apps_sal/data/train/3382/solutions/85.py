@@ -1,5 +1,6 @@
 import string
 
+
 def lowercase_count(strng):
     count = 0
     for str in strng:

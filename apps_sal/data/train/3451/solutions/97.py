@@ -8,7 +8,7 @@ def new_row(row):
         else:
             row2 += res[combinations.index(row[i] + row[i + 1])]
     return row2
-            
+
 
 def triangle(row):
     if len(row) == 1:

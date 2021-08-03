@@ -11,13 +11,16 @@ from sys import stdin, setrecursionlimit
 from itertools import combinations
 import collections
 
+
 def doc(s):
     if hasattr(s, '__call__'):
         s = s.__doc__
+
     def f(g):
         g.__doc__ = s
         return g
     return f
+
 
 class heapdict(collections.MutableMapping):
     __marker = object()
@@ -32,8 +35,8 @@ class heapdict(collections.MutableMapping):
 
     @staticmethod
     def _right(i):
-        return ((i+1) << 1)    
-    
+        return ((i + 1) << 1)
+
     def __init__(self, *args, **kw):
         self.heap = []
         self.d = {}
@@ -51,7 +54,7 @@ class heapdict(collections.MutableMapping):
         wrapper = [value, key, len(self)]
         self.d[key] = wrapper
         self.heap.append(wrapper)
-        self._decrease_key(len(self.heap)-1)
+        self._decrease_key(len(self.heap) - 1)
 
     def _min_heapify(self, i):
         l = self._left(i)
@@ -71,7 +74,8 @@ class heapdict(collections.MutableMapping):
     def _decrease_key(self, i):
         while i:
             parent = self._parent(i)
-            if self.heap[parent][0] < self.heap[i][0]: break
+            if self.heap[parent][0] < self.heap[i][0]:
+                break
             self._swap(i, parent)
             i = parent
 
@@ -107,7 +111,7 @@ class heapdict(collections.MutableMapping):
             self.heap[0][2] = 0
             self._min_heapify(0)
         del self.d[wrapper[1]]
-        return wrapper[1], wrapper[0]    
+        return wrapper[1], wrapper[0]
 
     @doc(dict.__len__)
     def __len__(self):
@@ -117,53 +121,51 @@ class heapdict(collections.MutableMapping):
         """D.peekitem() -> (k, v), return the (key, value) pair with lowest value;\n but raise KeyError if D is empty."""
         return (self.heap[0][1], self.heap[0][0])
 
+
 del doc
 __all__ = ['heapdict']
 
 
 def check(num, arr):
-	print(num)
-	for i in range(len(arr)):
-		if abs(arr[i] - num) <= k:
-			pass
-		else:
-			return False
-	return True
+    print(num)
+    for i in range(len(arr)):
+        if abs(arr[i] - num) <= k:
+            pass
+        else:
+            return False
+    return True
 
 
 def get_heap(arr, n):
-	mydict = dict()
-	for i in arr:
-		if i in mydict:
-			mydict[i] +=1 
-		else:
-			mydict[i] = 1
+    mydict = dict()
+    for i in arr:
+        if i in mydict:
+            mydict[i] += 1
+        else:
+            mydict[i] = 1
 
-	mheap = heapdict()
-	for i in mydict:
-		mheap[i] = -mydict[i]
-	return mheap
+    mheap = heapdict()
+    for i in mydict:
+        mheap[i] = -mydict[i]
+    return mheap
 
 
 # main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
-	n = int(stdin.readline().strip())
-	arr = list(map(int, stdin.readline().split()))
-	mheap = get_heap(arr, n)
-	t, value = mheap.popitem()
-	num = -value
-	ans = num	
-	while len(mheap) > 0 and num > 0:
-		num -= 1
-		t, value = mheap.popitem()
-		value = -value
-		if value >= num:
-			ans += num
-		else:
-			num = value
-			ans += num
-	print(ans)
-
-
-
+    n = int(stdin.readline().strip())
+    arr = list(map(int, stdin.readline().split()))
+    mheap = get_heap(arr, n)
+    t, value = mheap.popitem()
+    num = -value
+    ans = num
+    while len(mheap) > 0 and num > 0:
+        num -= 1
+        t, value = mheap.popitem()
+        value = -value
+        if value >= num:
+            ans += num
+        else:
+            num = value
+            ans += num
+    print(ans)

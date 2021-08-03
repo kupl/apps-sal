@@ -1,16 +1,16 @@
 x, y = map(int, input().split())
 
 if y == 0:
-	print('No')
-	return
+    print('No')
+    return
 else:
-	y -= 1
+    y -= 1
 
 if y == 0 and x:
-	print('No')
-	return
+    print('No')
+    return
 
 if y > x or (x - y) & 1:
-	print('No')
+    print('No')
 else:
-	print('Yes')
+    print('Yes')

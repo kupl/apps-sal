@@ -1,6 +1,7 @@
 import itertools
 import math
 
+
 def average_length():
     # 入力
     N = int(input())
@@ -21,7 +22,7 @@ def average_length():
             if count == 1:
                 pass
             else:
-                D = (x[pass_num]-x[i])**2 + (y[pass_num]-y[i])**2
+                D = (x[pass_num] - x[i])**2 + (y[pass_num] - y[i])**2
                 d = math.sqrt(D)
                 distance_sum += d
             # 前回値
@@ -29,6 +30,7 @@ def average_length():
         all_case_distance_sum += distance_sum
     # 平均
     return all_case_distance_sum / math.factorial(N)
+
 
 result = average_length()
 print(result)

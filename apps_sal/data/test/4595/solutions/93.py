@@ -8,5 +8,3 @@ for i in range(len(s)):
         z = max(z, i)
 
 print((z - a + 1))
-
-

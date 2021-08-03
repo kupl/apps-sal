@@ -5,7 +5,7 @@ class Solution:
 
         def neighbors(r, c):
             result = []
-            for newR, newC in ((r-1, c), (r+1, c), (r, c-1), (r, c+1)):
+            for newR, newC in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)):
                 if 0 <= newR < N and 0 <= newC < M:
                     result.append((newR, newC))
             return result

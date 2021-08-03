@@ -10,4 +10,3 @@ for i in arr[::-1]:
         res.append(i)
         d[i] = True
 print('\n'.join(res))
-

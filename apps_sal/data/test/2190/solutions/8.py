@@ -33,8 +33,9 @@ def factor(x):
     for j in res:
         if res[j] % k > 0:
             nres.append((j, res[j] % k))
-    
+
     return tuple(nres)
+
 
 d = {}
 for i in range(n):
@@ -44,9 +45,9 @@ for i in range(n):
         d[f] = 1
     else:
         d[f] += 1
-        
+
 ans = 0
-#print(d)
+# print(d)
 for x in d:
     y = []
     for i in x:
@@ -59,5 +60,4 @@ for x in d:
             ans += d[x] * (d[y] - 1)
     #print(x, y, ans)
 
-print(ans//2)
-
+print(ans // 2)

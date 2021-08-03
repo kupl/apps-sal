@@ -8,5 +8,5 @@ for row in m:
                 idx -= 1
                 break
         break
-ans = (n-1) + (n-k) - 2*(idx-1)
+ans = (n - 1) + (n - k) - 2 * (idx - 1)
 print(ans)

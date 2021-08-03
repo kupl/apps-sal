@@ -4,12 +4,14 @@ sys.setrecursionlimit(10 ** 9)
 N, M = map(int, input().split())
 root = [-1] * N
 
+
 def find(x):
     if root[x] < 0:
         return x
     else:
         root[x] = find(root[x])
         return root[x]
+
 
 def union(x, y):
     x = find(x)
@@ -19,9 +21,11 @@ def union(x, y):
     root[x] += root[y]
     root[y] = x
 
+
 def size(x):
     x = find(x)
     return -root[x]
+
 
 for i in range(M):
     A, B = map(int, input().split())

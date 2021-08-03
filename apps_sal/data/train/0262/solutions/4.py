@@ -14,7 +14,7 @@ class Solution:
         # print(letters)
 
         letter2num = {}
-        num2letter = ['']*10
+        num2letter = [''] * 10
         nums = '0123456789'
 
         def helper(k):
@@ -23,7 +23,7 @@ class Solution:
             letter, digit = letters[k][0], letters[k][1]
             if digit < 0:
                 left = sum([int(''.join([letter2num[ch] for ch in w[digit:]])) for w in words])
-                if left < 10 ** (-digit-1):
+                if left < 10 ** (-digit - 1):
                     return False
                 num = int(str(left)[digit])
                 if letter not in letter2num and not num2letter[num]:
@@ -45,7 +45,7 @@ class Solution:
                         if not num2letter[int(num)]:
                             letter2num[letter] = num
                             num2letter[int(num)] = letter
-                            if helper(k+1):
+                            if helper(k + 1):
                                 return True
                             letter2num.pop(letter)
                             num2letter[int(num)] = ''

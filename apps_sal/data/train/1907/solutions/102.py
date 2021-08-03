@@ -1,7 +1,9 @@
 from queue import Queue
+
+
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        q = Queue(maxsize = 0)
+        q = Queue(maxsize=0)
         q.put((original, cloned))
         while(q):
             original, cloned = q.get()

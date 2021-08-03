@@ -1,9 +1,9 @@
 
-def Sieve(n): 
+def Sieve(n):
     ret = []
-    divlis = [-1] * (n+1) 
-    
-    flag = [True] * (n+1)
+    divlis = [-1] * (n + 1)
+
+    flag = [True] * (n + 1)
     flag[0] = False
     flag[1] = False
 
@@ -22,13 +22,13 @@ def Sieve(n):
 
         ind += 1
 
-    return ret,divlis
+    return ret, divlis
 
 
-sev,divlis = Sieve(210000)
+sev, divlis = Sieve(210000)
 
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 dic = {}
 
@@ -60,10 +60,10 @@ ans = 1
 
 for i in dic:
 
-    if len(dic[i]) < n-1:
+    if len(dic[i]) < n - 1:
         #print (i,"a")
         continue
-    
+
     dic[i].sort()
 
     if len(dic[i]) == n:
@@ -73,5 +73,4 @@ for i in dic:
         ans *= i ** dic[i][0]
         #print (i,"c")
 
-print (ans)
-
+print(ans)

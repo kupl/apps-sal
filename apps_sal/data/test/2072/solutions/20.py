@@ -20,7 +20,6 @@ def binsearch(fr, sp):
     return inf if check(fr, sp, inf) else sup
 
 
-
 n = int(input())
 x = list(map(int, input().split()))
 v = list(map(int, input().split()))

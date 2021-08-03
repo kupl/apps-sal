@@ -22,17 +22,7 @@ class Solution:
                 min_1_2 = min(min_1_2, nums[i])
             if nums[i] % 3 == 2:
                 min_2_2 = min(min_2_2, nums[i])
-                
+
         if s % 3 == 1:
             return s - min(min_1_1, min_2_1 + min_2_2)
         return s - min(min_2_1, min_1_1 + min_1_2)
-                
-        
-                
-                
-                
-        
-                
-                
-            
-

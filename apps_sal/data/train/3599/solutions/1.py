@@ -1,4 +1,4 @@
-def find_f1_eq_f2(n,k):
+def find_f1_eq_f2(n, k):
     s = set(range(k))
     while True:
         n += 1
@@ -11,4 +11,3 @@ def find_f1_eq_f2(n,k):
                 return n
             new += n
     return n
-

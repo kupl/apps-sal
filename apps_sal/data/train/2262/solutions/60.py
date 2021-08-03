@@ -44,4 +44,3 @@ if len(t) > 0:
     print("NO")
 else:
     print("YES")
-

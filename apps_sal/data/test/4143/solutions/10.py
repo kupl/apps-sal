@@ -6,6 +6,7 @@ if n <= Min:
     print(5)
     return
 
-x = n//Min
-if n%Min != 0: x += 1
-print(4-a.index(Min)+x+a.index(Min))
+x = n // Min
+if n % Min != 0:
+    x += 1
+print(4 - a.index(Min) + x + a.index(Min))

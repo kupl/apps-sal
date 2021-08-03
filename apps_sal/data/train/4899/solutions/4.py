@@ -1,1 +1,1 @@
-weight=lambda *_:_[-1]/5.8227
+weight = lambda *_: _[-1] / 5.8227

@@ -1,4 +1,5 @@
 # python 3.4.3
+import heapq
 import sys
 input = sys.stdin.readline
 
@@ -7,20 +8,18 @@ input = sys.stdin.readline
 # -------------------------------------------------------------
 
 
-
 # -------------------------------------------------------------
 # main
 # -------------------------------------------------------------
-import heapq
 
-L,R = [10**15],[10**15]
-lenL,lenR = 1,1
-sumL,sumR = 0,0
+L, R = [10**15], [10**15]
+lenL, lenR = 1, 1
+sumL, sumR = 0, 0
 y = 0
 
 Q = int(input())
 for i in range(Q):
-    query = list(map(int,input().split()))
+    query = list(map(int, input().split()))
     if len(query) == 1:
         x = -L[0]
         f = sumR - sumL + y
@@ -28,7 +27,7 @@ for i in range(Q):
             f += x
         print(("{} {}".format(x, f)))
     else:
-        q,a,b = query
+        q, a, b = query
         y += b
         if lenL > lenR:
             sumL += a
@@ -44,6 +43,3 @@ for i in range(Q):
             heapq.heappush(L, -a)
             sumL += a
             lenL += 1
-
-
-

@@ -23,4 +23,3 @@ class Solution:
                 new_dp[d + s] = m
             dp = new_dp
         return dp[s]
-

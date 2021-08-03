@@ -1,4 +1,4 @@
-def to_postfix (infix):
+def to_postfix(infix):
     prec = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3, '(': 0}
     postfix = []
     stack = []
@@ -15,7 +15,7 @@ def to_postfix (infix):
             while stack and prec[stack[-1]] >= prec[ch]:
                 postfix.append(stack.pop())
             stack.append(ch)
-            
+
     while stack:
         postfix.append(stack.pop())
     return ''.join(postfix)

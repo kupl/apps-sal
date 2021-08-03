@@ -5,8 +5,8 @@ class Solution:
         for i in A[1:]:
             temp = set()
             for p in prev:
-                temp.add(i|p)
-                ans.add(i|p)
+                temp.add(i | p)
+                ans.add(i | p)
             prev = temp
             prev.add(i)
         return len(ans)

@@ -9,8 +9,8 @@ class Solution:
                     dp[j + 1] = 0
                     continue
                 if dp[j + 1] == dp[j]:
-                    dp[j + 1] += 1 if matrix[i - dp[j]][j - dp[j]] else 0 
-                else:    
+                    dp[j + 1] += 1 if matrix[i - dp[j]][j - dp[j]] else 0
+                else:
                     dp[j + 1] = min(dp[j + 1], dp[j]) + 1
                 tot += dp[j + 1]
-        return tot 
+        return tot

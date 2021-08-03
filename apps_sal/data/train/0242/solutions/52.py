@@ -21,4 +21,3 @@ class Solution:
                     res = i + 1
             # print(freq, counts)
         return res
-

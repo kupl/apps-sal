@@ -17,4 +17,3 @@ for case_num in range(t):
     n2 = min(n, b - y)
     ans = min(ans, (b - n2) * (a - min(n - n2, a - x)))
     print(ans)
-

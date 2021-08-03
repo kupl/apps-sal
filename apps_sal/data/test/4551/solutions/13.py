@@ -5,4 +5,3 @@ elif A + B < C + D:
     print('Right')
 else:
     print('Balanced')
-

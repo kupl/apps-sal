@@ -1,3 +1,2 @@
 from collections import OrderedDict
-remove_duplicate_words=lambda s:' '.join(OrderedDict.fromkeys(s.split(' ')))
-
+def remove_duplicate_words(s): return ' '.join(OrderedDict.fromkeys(s.split(' ')))

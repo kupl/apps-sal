@@ -18,4 +18,6 @@ def main() -> int:
 
 def __starting_point():
     exit(main())
+
+
 __starting_point()

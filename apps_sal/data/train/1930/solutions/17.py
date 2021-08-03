@@ -3,7 +3,7 @@ class Cashier:
     def __init__(self, n: int, discount: int, products: List[int], prices: List[int]):
         self.n = n
         self.count = 0
-        self.discount_factor = 1 - discount/100
+        self.discount_factor = 1 - discount / 100
         self.prices_dict = {}
         for product, price in zip(products, prices):
             self.prices_dict[product] = price
@@ -23,4 +23,3 @@ class Cashier:
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

@@ -23,4 +23,3 @@ for i in range(k):
 wina = ls[(k - pre) % cycle + pre][0] + ca * ((k - pre) // cycle)
 winb = ls[(k - pre) % cycle + pre][1] + cb * ((k - pre) // cycle)
 print("%d %d" % (wina, winb))
-

@@ -9,4 +9,3 @@ for i in range(1, n):
         used[i] = True
         used[i - 1] = True
 print(ans)
-

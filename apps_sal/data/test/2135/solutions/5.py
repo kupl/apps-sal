@@ -44,11 +44,8 @@ for i in range(q):
     if r1 == 0 and c1 == 0:
         print(d[r2][c2] + d1[r2][c2])
     elif r1 == 0:
-        print(d[r2][c2]+d1[r2][c2]-d[r2][c1]-d1[r2][c1 - 1])
+        print(d[r2][c2] + d1[r2][c2] - d[r2][c1] - d1[r2][c1 - 1])
     elif c1 == 0:
         print(d[r2][c2] + d1[r2][c2] - d[r1 - 1][c2] - d1[r1][c2])
     else:
-        print(d[r2][c2] + d1[r2][c2] - d[r1-1][c2] - d1[r1][c2] - d[r2][c1] - d1[r2][c1 - 1] + d[r1-1][c1] + d1[r1][c1-1])
-
-
-
+        print(d[r2][c2] + d1[r2][c2] - d[r1 - 1][c2] - d1[r1][c2] - d[r2][c1] - d1[r2][c1 - 1] + d[r1 - 1][c1] + d1[r1][c1 - 1])

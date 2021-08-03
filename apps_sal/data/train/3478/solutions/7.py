@@ -4,7 +4,7 @@ def battle(player1, player2):
         min_creatures = len(player2)
     else:
         min_creatures = len(player1)
-        
+
     i = min_creatures - 1
     while i >= 0:
         if player1[i][0] >= player2[i][1] and player2[i][0] >= player1[i][1]:
@@ -15,5 +15,5 @@ def battle(player1, player2):
         elif player2[i][0] >= player1[i][1]:
             del player1[i]
         i -= 1
-    
+
     return {'player1': player1, 'player2': player2}

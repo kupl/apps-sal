@@ -4,6 +4,7 @@ class StreamChecker:
         def __init__(self):
             self.node = [None] * 26
             self.end = False
+
     def __init__(self, words: List[str]):
         self.s = ''
         self.root = self.Node()
@@ -37,4 +38,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

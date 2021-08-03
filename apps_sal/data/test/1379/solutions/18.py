@@ -1,14 +1,14 @@
-n,m,D=map(int,input().split())
-lst=[*map(int,input().split())]
-d={x:i for i,x in enumerate(lst)}
+n, m, D = map(int, input().split())
+lst = [*map(int, input().split())]
+d = {x: i for i, x in enumerate(lst)}
 lst.sort()
-res,j,result=[0]*n,0,0
-for i,x in enumerate(lst):
-    if x-lst[j]>D:
-        res[d[x]]=res[d[lst[j]]]
-        j+=1
+res, j, result = [0] * n, 0, 0
+for i, x in enumerate(lst):
+    if x - lst[j] > D:
+        res[d[x]] = res[d[lst[j]]]
+        j += 1
     else:
-        result+=1
-        res[d[x]]=result
+        result += 1
+        res[d[x]] = result
 print(result)
 print(*res)

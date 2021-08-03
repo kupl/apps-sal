@@ -1,7 +1,7 @@
-N, K = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 D = set(input().split())
 
-for k in range(N,10**9):
+for k in range(N, 10**9):
     f = 1
     for e in str(k):
         if e in D:
@@ -10,4 +10,3 @@ for k in range(N,10**9):
     if f == 1:
         print(k)
         return
-

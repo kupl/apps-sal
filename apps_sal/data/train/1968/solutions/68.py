@@ -8,8 +8,8 @@ class Solution:
         #         ans.append(f)
         #         prev = f+'/'
         # return ans
-        
-        #using set
+
+        # using set
         ans = []
         seen = set(folder)
         for i in folder:

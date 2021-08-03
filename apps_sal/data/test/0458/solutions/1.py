@@ -17,6 +17,4 @@ for i in range(1, 82, 1):
 
 print(len(ans))
 for x in ans:
-    print(x, end = ' ')
-    
-
+    print(x, end=' ')

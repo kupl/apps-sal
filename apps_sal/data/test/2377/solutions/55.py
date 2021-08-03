@@ -15,20 +15,17 @@ for i in range(n):
     if i == 0:
         throw_cam.append(throw[0])
     else:
-        throw_cam.append(throw[i] + throw_cam[i-1])
+        throw_cam.append(throw[i] + throw_cam[i - 1])
 
-if throw_cam[len(throw_cam)-1] < h:
-    rh = h - throw_cam[len(throw_cam)-1]
+if throw_cam[len(throw_cam) - 1] < h:
+    rh = h - throw_cam[len(throw_cam) - 1]
     if rh % cut == 0:
-        print((len(throw_cam) + rh//cut))
+        print((len(throw_cam) + rh // cut))
     else:
-        print((len(throw_cam) + rh//cut + 1))
+        print((len(throw_cam) + rh // cut + 1))
 else:
     for i in range(len(throw_cam)):
         d = throw_cam[i]
         if d >= h:
-            print((i+1))
+            print((i + 1))
             break
-
-
-

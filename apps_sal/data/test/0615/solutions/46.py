@@ -11,13 +11,13 @@ ans = float('INF')
 left = 0
 right = 2
 
-for center in range(1, n-2):
+for center in range(1, n - 2):
     ll_value = cumsum_A[left]
     lc_value = cumsum_A[center] - ll_value
     cr_value = cumsum_A[right] - cumsum_A[center]
     rr_value = cumsum_A[-1] - cumsum_A[right]
 
-    while abs(ll_value - lc_value) > abs(ll_value - lc_value + 2*A[left+1]):
+    while abs(ll_value - lc_value) > abs(ll_value - lc_value + 2 * A[left + 1]):
         if left == center - 1:
             break
         left += 1
@@ -35,4 +35,3 @@ for center in range(1, n-2):
     ans = min(ans, candidate)
 
 print(ans)
-

@@ -21,7 +21,4 @@ for testcase in range(int(input())):
             a_sec[i] = beat[key]
             a_beat[key] -= 1
             break
-    print('YES\n' + ''.join(a_sec)  if win_time >= (n + 1) // 2 else 'NO')
-
-
-
+    print('YES\n' + ''.join(a_sec) if win_time >= (n + 1) // 2 else 'NO')

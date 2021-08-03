@@ -1,20 +1,21 @@
 import random
 
+
 def interpret(code):
     output = ""
     coordinates = code.split("\n")
     coordinate = [list(row) for row in coordinates]
     stack = []
-    x = 0 
+    x = 0
     y = 0
     dx = 1
     dy = 0
     a = ""
-    temp=1
+    temp = 1
     ascii_code = 0
     opened = False
     skip_next = False
-    
+
     while True:
         command = coordinate[y][x]
         if skip_next:
@@ -37,7 +38,7 @@ def interpret(code):
             dx = 0
             dy = 1
         elif command == '?':
-            dx = random.randint(-1,1)
+            dx = random.randint(-1, 1)
             if dx != 0:
                 dy = 0
             else:
@@ -80,7 +81,7 @@ def interpret(code):
                 dx = -1
                 dy = 0
         elif command == "|":
-            if stack.pop()  == 0:
+            if stack.pop() == 0:
                 dx = 0
                 dy = 1
             else:
@@ -102,10 +103,10 @@ def interpret(code):
             if len(stack) != 0:
                 stack.pop()
         elif command == ".":
-            if len(stack) !=0:
+            if len(stack) != 0:
                 output += str(stack.pop())
         elif command == ",":
-            if len(stack) !=0:
+            if len(stack) != 0:
                 ascii_code = stack[-1]
                 output += chr(ascii_code)
             stack.pop()

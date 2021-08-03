@@ -1,5 +1,4 @@
 def lowercase_count(strng):
-    
 
     dgu = []
     rwp = []
@@ -10,4 +9,3 @@ def lowercase_count(strng):
             rwp.append(lower)
     dgu = len(rwp)
     return dgu
-

@@ -11,4 +11,3 @@ def cheapest_quote(n):
         if not r:
             break
     return result / 100.0
-

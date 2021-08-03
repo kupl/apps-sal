@@ -6,6 +6,6 @@ for i in range(K):
     A = list(map(int, input().split()))
 
     for a in A:
-        sweets[a-1] += 1
+        sweets[a - 1] += 1
 
 print(sweets.count(0))

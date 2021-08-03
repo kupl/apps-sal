@@ -1,8 +1,11 @@
 from heapq import heappop, heappush
+
+
 def main():
     def push(i, j, k):
         nonlocal A, B, C, ADD
-        if i >= x or j >= y or k >= z: return
+        if i >= x or j >= y or k >= z:
+            return
         if (i, j, k) not in ADD:
             heappush(H, (A[i] + B[j] + C[k], i, j, k))
             ADD.add((i, j, k))
@@ -21,7 +24,9 @@ def main():
         push(i, j, k + 1)
         print((-ans))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

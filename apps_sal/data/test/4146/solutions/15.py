@@ -12,15 +12,15 @@ v2 = v2_c
 
 ans_1 = 0
 
-if v1[-1][0]==v2[-1][0]:
+if v1[-1][0] == v2[-1][0]:
     ans_1 += v1[-1][1]
     v1 = v1[:-1]
 
-if len(v1)>=2:
+if len(v1) >= 2:
     for i, j in v1[:-1]:
         ans_1 += j
 
-if len(v2)>=2:
+if len(v2) >= 2:
     for i, j in v2[:-1]:
         ans_1 += j
 
@@ -29,15 +29,15 @@ v2 = v2_c
 
 ans_2 = 0
 
-if v1[-1][0]==v2[-1][0]:
+if v1[-1][0] == v2[-1][0]:
     ans_2 += v2[-1][1]
     v2 = v2[:-1]
 
-if len(v2)>=2:
+if len(v2) >= 2:
     for i, j in v2[:-1]:
         ans_2 += j
 
-if len(v1)>=2:
+if len(v1) >= 2:
     for i, j in v1[:-1]:
         ans_2 += j
 

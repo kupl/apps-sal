@@ -3,7 +3,7 @@ class Solution:
         neg = pos = max_len = 0
         fneg = lneg = -1
         beg = -1
-        
+
         for i, n in enumerate(nums):
             if n < 0:
                 neg += 1
@@ -14,19 +14,18 @@ class Solution:
             elif n > 0:
                 pos += 1
             else:
-                if neg%2 == 0:
-                    max_len = max(max_len, neg+pos)
-                else:                    
+                if neg % 2 == 0:
+                    max_len = max(max_len, neg + pos)
+                else:
                     max_len = max(max_len, max(lneg - beg - 1, i - fneg - 1))
                     print((i, fneg, lneg, beg))
                 neg = pos = 0
                 fneg = lneg = -1
                 beg = i
-                
-        if neg%2 == 0:
-            max_len = max(max_len, neg+pos)
+
+        if neg % 2 == 0:
+            max_len = max(max_len, neg + pos)
         else:
             max_len = max(max_len, max(i - fneg, lneg - beg - 1))
 
         return max_len
-

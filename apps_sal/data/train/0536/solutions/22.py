@@ -1,6 +1,6 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for _ in range(t):
- n,k=map(int,input().split())
- k1=k//n 
- print(k1)
+    n, k = map(int, input().split())
+    k1 = k // n
+    print(k1)

@@ -8,15 +8,14 @@ for left in range(N):
     while (right < N and (summ + numbers[right]) == (summ ^ numbers[right])):
         summ += numbers[right]
         right += 1
-    
+
     ans += right - left
-    
-    
+
     if (right == left):
         right += 1
-    
+
     else:
         summ -= numbers[left]
-        
+
 
 print(ans)

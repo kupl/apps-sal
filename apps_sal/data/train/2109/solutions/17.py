@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-import sys, math, copy
+import sys
+import math
+import copy
 # import fractions, itertools
 # import numpy as np
 # import scipy
@@ -9,10 +11,12 @@ HUGE = 2147483647
 HUGEL = 9223372036854775807
 ABC = "abcdefghijklmnopqrstuvwxyz"
 
+
 def main():
     q = int(input())
     for i in range(q):
         print((wc()))
+
 
 def wc():
     a, b = list(map(int, input().split()))
@@ -27,5 +31,5 @@ def wc():
     adj = -1 if (math.ceil(sqt) - 1) * math.ceil(sqt) >= a * b else 0
     return area1 + area2 + area3 + adj
 
-main()
 
+main()

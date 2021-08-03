@@ -1,6 +1,6 @@
-n = int(input())
-mylist = [0,0,0]
 import math
+n = int(input())
+mylist = [0, 0, 0]
 for i in range(3):
     num = input()
     num = num.split()
@@ -9,7 +9,3 @@ for i in range(3):
     mylist[i] = sum(num)
 print(mylist[0] - mylist[1])
 print(mylist[1] - mylist[2])
-
-    
-            
-

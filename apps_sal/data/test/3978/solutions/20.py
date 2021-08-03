@@ -14,4 +14,3 @@ for i in range(n):
             if a[j] % a[i] == 0:
                 used[j] = 1
 print(cnt)
-

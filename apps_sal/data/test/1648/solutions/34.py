@@ -1,3 +1,4 @@
+from math import factorial
 N, K = list(map(int, input().split()))
 
 # x_1 + x_2 + ... x_k = n
@@ -10,7 +11,6 @@ N, K = list(map(int, input().split()))
 # k個の箱にn個のボールを1個以上入れる重複組み合わせ　n-1_C_k-1
 # n個の玉の仕切りn-1個の中に、k-1箇所仕切りを入れる
 
-from math import factorial
 
 # k = 1,2,...,K
 for k in range(1, K + 1):
@@ -38,4 +38,3 @@ for k in range(1, K + 1):
 
     ans = c1 * c2 % (10**9 + 7)
     print(ans)
-

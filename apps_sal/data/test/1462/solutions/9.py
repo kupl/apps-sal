@@ -19,6 +19,4 @@ while (K > 0):
         sum += K * K
         K = 0
     d[m] = 0
-print (sum)
-
-
+print(sum)

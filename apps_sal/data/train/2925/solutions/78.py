@@ -9,5 +9,3 @@ def multiply(n):
         c -= 1
         five *= 5
     return five * n
-    
-

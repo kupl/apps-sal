@@ -3,4 +3,4 @@ s = input()
 
 lst = list(s.split('ABC'))
 
-print(len(lst)-1)
+print(len(lst) - 1)

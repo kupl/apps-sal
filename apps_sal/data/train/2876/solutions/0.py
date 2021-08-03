@@ -1,2 +1,2 @@
-def check(a, x): 
+def check(a, x):
     return x in a

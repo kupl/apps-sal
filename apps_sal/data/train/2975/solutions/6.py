@@ -5,4 +5,3 @@ def song_decoder(song):
     # 2. Filter out empty space ''.
     # 3. Join the words in the list with space.
     # 4. Return
-

@@ -5,4 +5,3 @@ d = max(b) - min(b)
 if d == 0:
     c = n * (n - 1) // 2
 print(d, c)
-

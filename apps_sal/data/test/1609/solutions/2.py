@@ -19,6 +19,6 @@ def main():
                     break
         else:
             print(i, end=' ')
-            
-main()
 
+
+main()

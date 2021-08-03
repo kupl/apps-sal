@@ -12,9 +12,9 @@ class Solution:
                 s = dp.pop()
                 for j, c in enumerate(A):
                     if c != s[j]:
-                        for n in range(j+1, len(A)):
+                        for n in range(j + 1, len(A)):
                             if s[n] == c:
-                                newS = s[0:j] + s[n] + s[j+1:n] + s[j] + s[n+1:]
+                                newS = s[0:j] + s[n] + s[j + 1:n] + s[j] + s[n + 1:]
                                 if newS not in visit:
                                     if newS == A:
                                         return k

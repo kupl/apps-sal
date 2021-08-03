@@ -45,9 +45,10 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M, K = list(map(int, input().split()))
 
-uf = UnionFind(N+1)
+uf = UnionFind(N + 1)
 AB_list = []
 
 for i in range(M):
@@ -55,7 +56,7 @@ for i in range(M):
     AB_list.append([A, B])
     uf.union(A, B)
 
-dame = [[] for i in range(N+1)]
+dame = [[] for i in range(N + 1)]
 for i in range(M):
     if uf.same(AB_list[i][0], AB_list[i][1]):
         dame[AB_list[i][0]].append(AB_list[i][1])
@@ -68,8 +69,7 @@ for i in range(K):
         dame[D].append(C)
 
 ans_list = []
-for i in range(1, N+1):
+for i in range(1, N + 1):
     ans_list.append(uf.size(i) - len(dame[i]) - 1)
     #print(ans, uf.size(i), len(dame[i]))
 print((*ans_list))
-

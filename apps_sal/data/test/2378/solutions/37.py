@@ -31,7 +31,7 @@ for i, v in enumerate(order[::-1], 1):
     power_inv[i] = power_inv[i - 1] * half % MOD  # [1, 1/2, 1/4, ...]
 
 ans = sum((1 - power_inv[i] - power_inv[N - i] + power_inv[N]) % MOD for i in size[2:])  # 解法1の確率式(ノード1を除く)
-ans += (1 - power_inv[N]) - N * power_inv[1]  # +  - N/2 
+ans += (1 - power_inv[N]) - N * power_inv[1]  # +  - N/2
 ans %= MOD
 
 print(ans)

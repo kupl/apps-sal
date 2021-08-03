@@ -12,21 +12,21 @@ class DinnerPlates:
 
         else:
             self.stacks[self.toPush].append(val)
-                
+
         if len(self.stacks[-1]) == self.capacity:
             self.stacks.append([])
-            
+
         while len(self.stacks[self.toPush]) == self.capacity:
             self.toPush += 1
 
     def pop(self) -> int:
         while self.stacks and not self.stacks[-1]:
-            self.stacks.pop() 
-            self.toPush = min(self.toPush, len(self.stacks)-1)
-        
+            self.stacks.pop()
+            self.toPush = min(self.toPush, len(self.stacks) - 1)
+
         if not self.stacks:
             return -1
-        
+
         return self.stacks[-1].pop()
 
     def popAtStack(self, index: int) -> int:
@@ -41,4 +41,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

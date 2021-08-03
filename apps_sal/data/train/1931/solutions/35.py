@@ -13,7 +13,7 @@ class Solution:
     # Time Complextity O(root)*O(head)
     def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
         helper = set()
-        
+
         # Find all possible start
         def getStart(p):
             if p:
@@ -21,11 +21,11 @@ class Solution:
                     helper.add(p)
                 getStart(p.left)
                 getStart(p.right)
-                
+
         # Main
         getStart(root)
-        #print(helper)
-        
+        # print(helper)
+
         while head.next:
             new = set()
             for node in helper:
@@ -35,10 +35,10 @@ class Solution:
                     if node.right:
                         new.add(node.right)
             helper = new
-            
+
             if not helper:
                 return False
-            
+
             head = head.next
 
         return (head.val in [node.val for node in helper])

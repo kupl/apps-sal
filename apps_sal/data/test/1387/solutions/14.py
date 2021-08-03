@@ -8,5 +8,4 @@ while True:
     elif home > t:
         print('NO')
         break
-    home += portals[home-1]
-
+    home += portals[home - 1]

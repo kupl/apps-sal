@@ -8,4 +8,3 @@ for _ in range(m):
 
 for ele in arr:
     print(ele)
-

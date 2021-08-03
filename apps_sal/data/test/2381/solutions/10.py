@@ -49,4 +49,3 @@ ans = 1
 for x in minus[:idx] + plus[:K - idx]:
     ans = (ans * x) % MOD
 print(ans)
-

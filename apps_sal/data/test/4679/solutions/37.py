@@ -8,7 +8,7 @@ C = len(c)
 cnta = 0
 cntb = 0
 cntc = 0
-for i in range(A+B+C):
+for i in range(A + B + C):
     if i == 0:
         cnta += 1
         if cnta > A:
@@ -24,7 +24,7 @@ for i in range(A+B+C):
             break
         q = b[0]
         b.pop(0)
-    
+
     elif q == "a":
         cnta += 1
         if cnta > A:

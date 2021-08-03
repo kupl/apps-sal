@@ -22,4 +22,3 @@ for c in t:
     ans += -~pos[now][x] - now
     now = -~pos[now][x] % n
 print(ans)
-

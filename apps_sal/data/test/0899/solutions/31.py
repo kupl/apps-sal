@@ -43,4 +43,3 @@ def get_path_row(start, goal, pred_row):
 
 
 resolve()
-

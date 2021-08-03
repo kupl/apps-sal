@@ -10,4 +10,3 @@ for _ in range(int(input())):
         print('NET')
     else:
         print('DA')
-

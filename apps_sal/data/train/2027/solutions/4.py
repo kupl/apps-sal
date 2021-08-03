@@ -4,9 +4,9 @@ a = []
 b = []
 for i in range(len(k)):
     if k[i] == 'l':
-        a.append(i+1)
+        a.append(i + 1)
     else:
-        b.append(i+1)
+        b.append(i + 1)
 
 a.reverse()
 for i in b:
@@ -14,4 +14,3 @@ for i in b:
 
 for i in a:
     print(i)
-

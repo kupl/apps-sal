@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import math
 import sys
 sys.setrecursionlimit(10**6)
-import math
-n, m = list(map(int,input().split()))
-cats = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
+cats = list(map(int, input().split()))
 G = [[] for i in range(n)]
 
-for i in range(n-1):
-    x,y = [int(x)-1 for x in input().split()]
+for i in range(n - 1):
+    x, y = [int(x) - 1 for x in input().split()]
     G[x].append(y)
     G[y].append(x)
 
@@ -30,4 +30,3 @@ while q != []:
         if v != parent:
             q.append((v, u, consecutive, cat_num))
 print(count)
-

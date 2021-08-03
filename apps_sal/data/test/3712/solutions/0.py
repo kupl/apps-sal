@@ -32,4 +32,3 @@ if s > 2 and s != 5:
     print(ans)
 else:
     print(-1)
-

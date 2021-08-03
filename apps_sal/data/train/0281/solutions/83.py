@@ -11,17 +11,18 @@ class Solution:
         # the answer is false if there is a character that needs more shifts than we are able to supply
         # can create a list of deltas, sorted descending, and see if we have enough space to work with
         deltas = []
-        if len(s) != len(t): return False
-        for i,c in enumerate(s):
+        if len(s) != len(t):
+            return False
+        for i, c in enumerate(s):
             t_index = ord(t[i]) - ord('a')
             s_index = ord(s[i]) - ord('a')
-            deltas.append((t_index - s_index)%26)
+            deltas.append((t_index - s_index) % 26)
         m = collections.defaultdict(int)
-        while k%26 != 0:
-            m[k%26] += 1
+        while k % 26 != 0:
+            m[k % 26] += 1
             k -= 1
-        for i in range(1,26):
-            m[i] += k//26
+        for i in range(1, 26):
+            m[i] += k // 26
         #print(sorted(deltas, reverse=True))
         for d in sorted(deltas, reverse=True):
             if not d:

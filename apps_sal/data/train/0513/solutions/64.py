@@ -14,6 +14,7 @@ for _ in range(N - 1):
 ans = [0] * N
 L = [-10**18]
 
+
 def search(now, pr):
     a = A[now]
     i = bisect_left(L, a)
@@ -40,6 +41,6 @@ def search(now, pr):
     else:
         L[i] = prevValue
 
+
 search(0, -1)
 print(*ans, sep='\n')
-

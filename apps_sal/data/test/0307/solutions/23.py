@@ -6,4 +6,3 @@ k2 -= n
 if k2 > 0:
     s += min(k2, k3) * 32
 print(s)
-

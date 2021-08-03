@@ -17,4 +17,3 @@ else:
     b -= 1
 ans += a // 3
 print(ans)
-

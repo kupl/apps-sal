@@ -1,11 +1,14 @@
 from datetime import datetime, timedelta
 
+
 def _parse(s):
-    return 
+    return
+
 
 def delta(*span):
     start, end = [datetime.strptime(s, '%H:%M') for s in span]
     return (end + timedelta(days=1) if start > end else end) - start
+
 
 def sort_time(arr):
     prev = '00:00'

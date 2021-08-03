@@ -30,8 +30,8 @@ for i in range(n):
         return
 
     pl = [wn] + [sp]
-    spn=[1,2,3]
+    spn = [1, 2, 3]
     for j in pl:
         spn.remove(j)
-    sp=spn[0]
+    sp = spn[0]
 print('YES')

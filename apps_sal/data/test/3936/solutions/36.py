@@ -1,7 +1,7 @@
 n = int(input())
 s = [input() for _ in range(2)]
 
-mod = 10**9+7
+mod = 10**9 + 7
 
 if s[0][0] == s[1][0]:
     ans = 3

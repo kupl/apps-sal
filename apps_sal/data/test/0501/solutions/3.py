@@ -1,9 +1,12 @@
 l, r = [int(e) for e in input().split()]
 
 MOD = 1_000_000_007
+
+
 def sum_range(start, num):
-    end = start+(num-1)*2
-    return (start+end)*num//2
+    end = start + (num - 1) * 2
+    return (start + end) * num // 2
+
 
 def sum(n):
     ans = 0
@@ -15,13 +18,12 @@ def sum(n):
         diff = min(n, cnt)
         ans += sum_range(s[which], diff)
         ans %= MOD
-        s[which] += 2*diff
+        s[which] += 2 * diff
         n -= diff
         cnt *= 2
-        which = 1-which
+        which = 1 - which
     # print(ans)
     return ans
 
 
-print(((sum(r)-sum(l-1))%MOD+MOD)%MOD)
-
+print(((sum(r) - sum(l - 1)) % MOD + MOD) % MOD)

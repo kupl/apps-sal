@@ -1,5 +1,7 @@
 from fractions import Fraction
 import math
+
+
 def decompose(n):
 
     if n == '0':
@@ -19,4 +21,3 @@ def decompose(n):
         refFrac -= next
 
     return [str(frac) for frac in final_tab]
-

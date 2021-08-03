@@ -1,9 +1,9 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-        
+
         ans = []
-        wordCountA = [ self.genWordCount(word) for word in A]
-        wordCountB = [ self.genWordCount(word) for word in B]
+        wordCountA = [self.genWordCount(word) for word in A]
+        wordCountB = [self.genWordCount(word) for word in B]
         reducedWordB = {}
         for wordDict in wordCountB:
             for key, val in wordDict.items():
@@ -14,7 +14,7 @@ class Solution:
                 ans.append(A[i])
 
         return ans
-    
+
     def genWordCount(self, word):
         wordCount = {}
         for c in word:
@@ -23,7 +23,7 @@ class Solution:
             else:
                 wordCount[c] = 1
         return wordCount
-    
+
     def isSubset(self, dictA, dictB):
         for key, val in dictB.items():
             if key not in dictA or dictA[key] < val:

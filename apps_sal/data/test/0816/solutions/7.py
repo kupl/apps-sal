@@ -19,4 +19,3 @@ for k in keys:
         ans += d1[b] * (d1[b] - 1) // 2
 
 print(ans)
-

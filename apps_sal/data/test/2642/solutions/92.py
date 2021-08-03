@@ -41,4 +41,3 @@ for (kai, kbi) in keys:
     visited.add((kaj, kbj))
 
 print(((ans + zero_zero_num - 1) % MOD))
-

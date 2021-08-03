@@ -6,5 +6,3 @@ for i in range(int(input())):
     dic[60 * a + b] += 1
 
 print(max(dic.values()))
-
-

@@ -5,6 +5,6 @@ if N == 1:
 else:
     while i <= N:
         if((i * i) > N):
-            print((i-1) * (i-1))
+            print((i - 1) * (i - 1))
             break
         i += 1

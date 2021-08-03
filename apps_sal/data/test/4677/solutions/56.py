@@ -11,4 +11,3 @@ for i in range(len(s)):
         else:
             del l[-1]
 print((''.join(l)))
-

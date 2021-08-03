@@ -1,2 +1,2 @@
-S=input()
-print("2018"+S[4:])
+S = input()
+print("2018" + S[4:])

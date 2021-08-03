@@ -27,4 +27,3 @@ if res > k and tmp > 0:
     res = -1
 
 print(res)
-

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def get_neighbors(edges):
     neighbors = defaultdict(set, {})
     for v1, v2 in edges:
@@ -62,6 +63,7 @@ def fn(weights, edges, root):
 
     return sum(weights[n] for n in neihgbors_map) + max_extra
 
+
 def print_answer(source):
     n, m = list(map(int, source().split()))
     weights = list(map(int, source().split()))
@@ -69,6 +71,7 @@ def print_answer(source):
     root = int(source()) - 1
 
     print(fn(weights, edges, root))
+
 
 print_answer(input)
 
@@ -103,7 +106,7 @@ if False:
     6"""))
 
     print_answer(string_source(
-            """5 7
+        """5 7
     2 2 8 6 9
     1 2
     1 3
@@ -133,11 +136,9 @@ if False:
     for idx, w in enumerate(weights):
         dot.node(str(idx), label=f"{idx} - {w}")
 
-    for s,e in edges:
-        dot.edge(str(s),str(e))
+    for s, e in edges:
+        dot.edge(str(s), str(e))
 
     dot.view(cleanup=True)
 
     sum(weights)
-
-

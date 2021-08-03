@@ -1,11 +1,12 @@
 from sys import stdin
 from collections import deque
 
+
 def bfs(G, s):
     Q = deque()
     Q.append(s)
     infinite = 10 ** 6
-    d = [infinite]*n
+    d = [infinite] * n
     d[s] = 0
     while Q:
         u = Q.popleft()
@@ -14,6 +15,7 @@ def bfs(G, s):
                 d[v] = d[u] + 1
                 Q.append(v)
     return d
+
 
 n, x = list(map(int, stdin.readline().split()))
 x = x - 1
@@ -28,8 +30,7 @@ d_Alice = bfs(graph, 0)
 d_Bob = bfs(graph, x)
 
 resp = d_Alice[x]
-for i,v in enumerate(graph):
+for i, v in enumerate(graph):
     if len(v) == 1 and d_Alice[i] > d_Bob[i]:
         resp = max(resp, d_Alice[i])
-print(2*resp)
-
+print(2 * resp)

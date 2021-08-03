@@ -8,13 +8,13 @@ class Solution:
 
     def sort(self, l, r, points, K):
         if l >= r:
-            return 
+            return
         mid = self.partition(l, r, points)
         if (mid - l + 1) < K:
             self.sort(mid + 1, r, points, K - (mid - l + 1))
         else:
             self.sort(l, mid - 1, points, K)
-    
+
     def partition(self, i, j, points):
         pivot = self.getDistance(points[i])
         l = i
@@ -29,4 +29,3 @@ class Solution:
             points[l], points[r] = points[r], points[l]
         points[i], points[r] = points[r], points[i]
         return r
-

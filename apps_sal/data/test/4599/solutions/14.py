@@ -12,4 +12,4 @@ while 1:
         Bob += A.pop(-1)
     except IndexError:
         break
-print(Alice-Bob)
+print(Alice - Bob)

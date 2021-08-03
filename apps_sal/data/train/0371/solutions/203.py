@@ -5,7 +5,7 @@ class Solution:
         # The second part is general bfs. Take a stop from queue and find all connected route.
         # The hashset seen record all visited stops and we won't check a stop for twice.
         # We can also use a hashset to record all visited routes, or just clear a route after visit.
-        
+
         to_routes = collections.defaultdict(set)
         for i, route in enumerate(routes):
             for j in route:
@@ -13,7 +13,8 @@ class Solution:
         bfs = [(S, 0)]
         seen = set([S])
         for stop, bus in bfs:
-            if stop == T: return bus
+            if stop == T:
+                return bus
             for i in to_routes[stop]:
                 for j in routes[i]:
                     if j not in seen:

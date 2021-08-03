@@ -4,7 +4,7 @@ class Solution:
         start = -1
         is_pos = True
         for i in range(len(nums) + 1):
-            
+
             if i == len(nums) or nums[i] == 0:
                 if is_pos:
                     max_len = max(max_len, i - start - 1)

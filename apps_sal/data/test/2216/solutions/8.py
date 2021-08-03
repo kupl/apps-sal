@@ -5,5 +5,6 @@ for i in map(str, range(1, n + 1)):
     s += [i + ' ' + j for j in p[d]]
     d = 1 - d
 d = 2 * k - 2
-for i in range(0, d, 2): print(2, s[i] + ' ' + s[i + 1])
-print(n * m - d, ' '.join(s[d: ]))
+for i in range(0, d, 2):
+    print(2, s[i] + ' ' + s[i + 1])
+print(n * m - d, ' '.join(s[d:]))

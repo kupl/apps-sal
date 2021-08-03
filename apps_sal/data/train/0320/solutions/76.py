@@ -13,4 +13,3 @@ class Solution:
             if zeros == n:
                 break
         return ans - 1
-

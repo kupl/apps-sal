@@ -35,7 +35,7 @@ def pre_factorial_divs(n, mod, factorials):
 
     factorial_divs[n] = div(1, factorials, mod)
     for i in reversed(list(range(n))):
-        factorial_divs[i] = mul(factorial_divs[i+1], i+1, mod)
+        factorial_divs[i] = mul(factorial_divs[i + 1], i + 1, mod)
     return factorial_divs
 
 
@@ -62,12 +62,12 @@ def main():
     ans = 0
     mod = 10 ** 9 + 7
 
-    factorials = pre_factorials(h+w-2, mod)
-    factorial_divs = pre_factorial_divs(h+w-2, mod, factorials[h+w-2])
+    factorials = pre_factorials(h + w - 2, mod)
+    factorial_divs = pre_factorial_divs(h + w - 2, mod, factorials[h + w - 2])
 
-    for i in range(h-a):
-        x = fast_fast_fermat_comb(b-1+i, b-1, mod, factorials, factorial_divs)
-        y = fast_fast_fermat_comb(h+w-3-(b-1+i), w-b-1, mod, factorials, factorial_divs)
+    for i in range(h - a):
+        x = fast_fast_fermat_comb(b - 1 + i, b - 1, mod, factorials, factorial_divs)
+        y = fast_fast_fermat_comb(h + w - 3 - (b - 1 + i), w - b - 1, mod, factorials, factorial_divs)
         ans += x * y % mod
         ans %= mod
 
@@ -76,5 +76,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

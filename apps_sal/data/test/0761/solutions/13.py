@@ -12,7 +12,7 @@ else:
         print(sum(brr) - 2 * min(brr))
     else:
         print(sum(brr))
-    
+
 '''
 n = int(input())
 arra = list(map(int, input().split()))

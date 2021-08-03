@@ -30,4 +30,3 @@ class Solution:
             for c in range(m):
                 max_area = max(max_area, expand_square(r, c))
         return max_area
-

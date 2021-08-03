@@ -1,6 +1,7 @@
 from functools import reduce
 from math import gcd
 
+
 def survivor(a):
     """Round Robin by Bocker & Liptak"""
     def __residue_table(a):
@@ -15,11 +16,14 @@ def survivor(a):
                 for _ in range(a[0] // d):
                     nn += a[i]
                     p = nn % a[0]
-                    if n[p] is not None: nn = min(nn, n[p])
+                    if n[p] is not None:
+                        nn = min(nn, n[p])
                     n[p] = nn
         return n
 
     a.sort()
-    if len(a) < 1 or reduce(gcd, a) > 1: return -1
-    if a[0] == 1: return 0
+    if len(a) < 1 or reduce(gcd, a) > 1:
+        return -1
+    if a[0] == 1:
+        return 0
     return max(__residue_table(a)) - a[0]

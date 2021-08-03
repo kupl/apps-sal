@@ -14,6 +14,7 @@ for i in s:
         break
 if a[0] == 0 or a[1] == 0 or (a[0] != a[2] and a[1] != a[2]):
     ok = False
-if ok: print('YES')
-else: print('NO')
-
+if ok:
+    print('YES')
+else:
+    print('NO')

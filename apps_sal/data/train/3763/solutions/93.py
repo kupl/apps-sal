@@ -1,4 +1,4 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     if isinstance(x, (float, int)) == True and isinstance(y, (float, int)) == True:
         if op == '+':
             return (x + y)
@@ -12,4 +12,3 @@ def calculator(x,y,op):
             return('unknown value')
     else:
         return('unknown value')
-

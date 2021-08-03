@@ -1,1 +1,1 @@
-print("ARC" if input()[1]=="B" else "ABC")
+print("ARC" if input()[1] == "B" else "ABC")

@@ -5,4 +5,3 @@ def seven(m):
         sm = str(int(sm[:-1]) - 2 * int(sm[-1]))
         i += 1
     return (int(sm), i)
-

@@ -1,46 +1,41 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        if m*k>len(bloomDay):
+        if m * k > len(bloomDay):
             return -1
+
         def fesible(mid):
-            c,n,l = 0,0,[]
-            b=[(i-mid) for i in bloomDay] 
+            c, n, l = 0, 0, []
+            b = [(i - mid) for i in bloomDay]
             # print(b)
             for i in range(len(b)):
                 # print(l)
-                if b[i]<=0 and i!=(len(b)-1):
-                    c+=1
-                elif b[i]<=0 and i==(len(b)-1):
+                if b[i] <= 0 and i != (len(b) - 1):
+                    c += 1
+                elif b[i] <= 0 and i == (len(b) - 1):
                     ##
-                    c+=1
+                    c += 1
                     l.append(c)
-                elif b[i]>0:
+                elif b[i] > 0:
                     l.append(c)
-                    c=0
-            
+                    c = 0
 
-            ss=0
+            ss = 0
             for i in l:
-                ss+=i//k
-            if ss>=m or m*k<=max(l):
+                ss += i // k
+            if ss >= m or m * k <= max(l):
                 return True
             return False
-        
-        v=0
-        left, right = min(bloomDay), max(bloomDay)+1
-        while left<right:
-            mid = left + (right-left)//2
+
+        v = 0
+        left, right = min(bloomDay), max(bloomDay) + 1
+        while left < right:
+            mid = left + (right - left) // 2
             # print(mid)
             if fesible(mid):
-                right=mid
-                v=1
+                right = mid
+                v = 1
             else:
-                left = mid +1
-        if v==0:
+                left = mid + 1
+        if v == 0:
             return -1
         return left
-    
-    
-    
-        
-

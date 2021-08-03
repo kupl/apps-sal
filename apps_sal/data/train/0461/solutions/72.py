@@ -3,7 +3,7 @@ class Solution:
         manager_list = collections.defaultdict(list)
         for i in range(len(manager)):
             manager_list[manager[i]].append(i)
-        
+
         queue = [(headID, informTime[headID])]
         time = 0
         while queue:
@@ -17,5 +17,3 @@ class Solution:
                 for employee in employees:
                     queue.append((employee, cur_time + informTime[employee]))
         return time
-        
-

@@ -7,4 +7,3 @@ def cube_odd(arr):
             r += x ** 3
     return r
     # Flez
-

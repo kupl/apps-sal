@@ -1,18 +1,19 @@
-n=int(input())
+n = int(input())
 
-e=[]
+e = []
 
-v=[]
+v = []
 
-for i in range(n-1):
+for i in range(n - 1):
 
-    e.append(list(map(int,input().split())))
+    e.append(list(map(int, input().split())))
 
-c=[-1]+list(map(int,input().split()))
+c = [-1] + list(map(int, input().split()))
 
 for i in e:
 
-    if c[i[0]]!=c[i[1]]: v.append(i)
+    if c[i[0]] != c[i[1]]:
+        v.append(i)
 
 if not v:
 
@@ -22,7 +23,8 @@ if not v:
 
 else:
 
-    s=set(v[0]);list([s.intersection_update(set(x)) for x in v])
+    s = set(v[0])
+    list([s.intersection_update(set(x)) for x in v])
 
     if s:
 
@@ -30,9 +32,8 @@ else:
 
         print(list(s)[0])
 
-    else: print('NO')
-
+    else:
+        print('NO')
 
 
 # Made By Mostafa_Khaled
-

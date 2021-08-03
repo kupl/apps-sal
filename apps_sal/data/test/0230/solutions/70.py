@@ -22,6 +22,8 @@ mod = m61
 positive_delta = m61 ** 4
 
 # 高速化された計算
+
+
 def mul(a, b):
     au = a >> 31
     ad = a & m31  # 余りを取ることが&演算でできる
@@ -89,4 +91,3 @@ while ng - ok > 1:
     # print(ok, ng)
 
 print(ok)
-

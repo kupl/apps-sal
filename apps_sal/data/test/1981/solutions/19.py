@@ -1,6 +1,7 @@
 def intline():
     return [int(s) for s in input().split()]
 
+
 # number of vertices in tree
 # acceptable number of consecutive cat vertices
 n, m = intline()
@@ -52,4 +53,3 @@ while work:
         work.append([neighbour, run])
 
 print(paths)
-

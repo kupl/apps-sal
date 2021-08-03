@@ -1,16 +1,16 @@
-x,y,a,b,c=map(int,input().split())
+x, y, a, b, c = map(int, input().split())
 
-p=list(map(int,input().split()))
-q=list(map(int,input().split()))
-r=list(map(int,input().split()))
+p = list(map(int, input().split()))
+q = list(map(int, input().split()))
+r = list(map(int, input().split()))
 
-p=sorted(p,reverse=True)
-q=sorted(q,reverse=True)
-r=sorted(r)
+p = sorted(p, reverse=True)
+q = sorted(q, reverse=True)
+r = sorted(r)
 
-box=[]
+box = []
 
-ans=0
+ans = 0
 
 
 for i in range(x):
@@ -21,9 +21,9 @@ for j in range(y):
 
 box = box + r
 
-box=sorted(box,reverse=True)
+box = sorted(box, reverse=True)
 
-for k in range(x+y):
-    ans+=box[k]
+for k in range(x + y):
+    ans += box[k]
 
 print(ans)

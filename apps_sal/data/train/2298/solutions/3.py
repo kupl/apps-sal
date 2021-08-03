@@ -3,11 +3,11 @@ import sys
 
 
 def solve(N: int, T: int, A: "List[int]"):
-    right_max = [0] * N # i番目よりあとで一番大きいA_i
+    right_max = [0] * N  # i番目よりあとで一番大きいA_i
     m_a = 0
     for i in range(1, N):
         m_a = max(m_a, A[-i])
-        right_max[-i-1] = m_a
+        right_max[-i - 1] = m_a
 
     m_p = 0
     count = 0
@@ -31,10 +31,12 @@ def main():
     tokens = iterate_tokens()
     N = int(next(tokens))  # type: int
     T = int(next(tokens))  # type: int
-    A = [ int(next(tokens)) for _ in range(N) ]  # type: "List[int]"
+    A = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(N, T, A)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

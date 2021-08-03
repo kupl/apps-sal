@@ -12,4 +12,3 @@ for i in range(1, n + 1):
     else:
         res = max_fee - min(abs(a[i + 1] - a[i]) * 2, abs(a[i] - a[i - 1]) * 2)
         print(res)
-

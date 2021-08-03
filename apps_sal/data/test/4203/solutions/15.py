@@ -4,4 +4,3 @@ if s[0] == 'A' and s[2:-1].count('C') == 1 and sum([int(c.islower()) for c in s]
     print('AC')
 else:
     print('WA')
-

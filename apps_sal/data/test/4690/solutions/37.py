@@ -1,7 +1,7 @@
 a, b, c, d = map(int, input().split())
 
-obj1 = a*b
-obj2 = c*d
+obj1 = a * b
+obj2 = c * d
 
 if obj1 < obj2:
     ans = obj2

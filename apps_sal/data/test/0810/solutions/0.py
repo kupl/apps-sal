@@ -16,4 +16,3 @@ for x in range(n + 1):
         ans += pow(f[x] * f[n - x], mod - 2, mod)
         ans %= mod
 print(ans * f[n] % mod)
-

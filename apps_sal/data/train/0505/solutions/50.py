@@ -2,10 +2,10 @@ class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
         if len(s) == 0:
             return s
-        
+
         paranthesis_balance = 0
         ends = []
-        
+
         for i, char in enumerate(s):
             if char == '(':
                 paranthesis_balance += 1
@@ -13,11 +13,11 @@ class Solution:
                 ends.append(i)
                 paranthesis_balance -= 1
             else:
-                continue        
-        
+                continue
+
         starts = []
         paranthesis_balance = 0
-        
+
         for i, char in enumerate(reversed(s)):
             if char == ')':
                 paranthesis_balance += 1
@@ -25,11 +25,10 @@ class Solution:
                 starts.append(len(s) - i - 1)
                 paranthesis_balance -= 1
             else:
-                continue        
+                continue
 
-        
         balanced_str = []
-        
+
         starts_i = 0
         starts = [*reversed(starts)]
         ends_i = 0
@@ -42,6 +41,5 @@ class Solution:
                 balanced_str.append(')')
             elif s[i] not in {'(', ')'}:
                 balanced_str.append(s[i])
-            
-        return ''.join(balanced_str)
 
+        return ''.join(balanced_str)

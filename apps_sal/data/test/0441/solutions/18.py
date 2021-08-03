@@ -12,4 +12,3 @@ for i in s:
         b -= y
 
 print((a_ - max(0, a)) + (b_ - max(0, b)))
-

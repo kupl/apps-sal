@@ -1,10 +1,10 @@
 s = input()
 t = input()
 s_temp = s
-answer="No"
+answer = "No"
 for i in range(len(s)):
-    s_temp = s[i:]+s[:i]
+    s_temp = s[i:] + s[:i]
     if s_temp == t:
-        answer="Yes"
+        answer = "Yes"
         break
 print(answer)

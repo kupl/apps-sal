@@ -5,7 +5,7 @@ for i in range(m):
     arr.append(int(input()))
 f = int(input())
 f2 = []
-for i in range(n -1, -1, -1):
+for i in range(n - 1, -1, -1):
     if (2 ** i) <= f:
         f -= (2 ** i)
         f2.append(True)

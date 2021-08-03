@@ -9,4 +9,3 @@ for ab in ab_list:
         res += 1
         min_r = ab[1]
 print(res)
-

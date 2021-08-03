@@ -10,7 +10,7 @@ class Solution:
                 target = nums1[i] * nums1[i] / nums2[j]
                 if nums2_map.get(target, 0) > 0:
                     ret += nums2_map.get(target, 0)
-    
+
         for i in range(n):
             nums1_map = {**_map1}
             for j in range(m):
@@ -18,5 +18,5 @@ class Solution:
                 target = nums2[i] * nums2[i] / nums1[j]
                 if nums1_map.get(target, 0) > 0:
                     ret += nums1_map.get(target, 0)
-        
+
         return ret

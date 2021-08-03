@@ -13,6 +13,6 @@ class Solution:
             right, h_r = helper(root.right)
             if h_l == h_r:
                 return root, h_l + 1
-            return (left, h_l+1) if h_l > h_r else (right, h_r + 1)
+            return (left, h_l + 1) if h_l > h_r else (right, h_r + 1)
         node, _ = helper(root)
         return node

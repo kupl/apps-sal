@@ -12,7 +12,7 @@ maxpop = 0
 bestyear = 0
 for i in range(len(bs)):
     died_at_this_point = bisect_right(ds, bs[i])
-    if maxpop < i+1 - died_at_this_point:
-        maxpop = i+1 - died_at_this_point
+    if maxpop < i + 1 - died_at_this_point:
+        maxpop = i + 1 - died_at_this_point
         bestyear = bs[i]
 print(bestyear, maxpop)

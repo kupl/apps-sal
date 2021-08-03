@@ -1,6 +1,6 @@
 from collections import Counter
 n = int(input())
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 
 d = Counter(l)
 
@@ -17,7 +17,6 @@ else:
         else:
             inc.append(i)
 
-
     n1 = len(inc)
     n2 = len(dec)
     print("YES")
@@ -31,9 +30,8 @@ else:
 
     if n2:
         print(n2)
-        dec.sort(reverse = True)
+        dec.sort(reverse=True)
         print(*dec)
     else:
         print(n2)
         print()
-

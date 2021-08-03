@@ -14,18 +14,18 @@ last = 'f'
 for st in sts:
     if last != 'f':
         for i in range(indent, -1, -1):
-            ind[i] += ind[i+1]
+            ind[i] += ind[i + 1]
             ind[i] %= MOD
     if st == 'f':
         indent += 1
         for i in range(indent, 0, -1):
-            ind[i] += ind[i-1]
-            ind[i-1] = 0
+            ind[i] += ind[i - 1]
+            ind[i - 1] = 0
     last = st
     # print(ind)
 
 ans = 0
-for i in range(indent+1):
+for i in range(indent + 1):
     ans += ind[i]
     ans %= MOD
 print(ans)

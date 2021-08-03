@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n, l = map(int, input().split())
     alst = list(map(int, input().split()))
@@ -37,6 +38,7 @@ def main():
 
     ans += (r_pos - l_pos) / (r_speed + l_speed)
     print(ans)
-    
+
+
 for _ in range(int(input())):
     main()

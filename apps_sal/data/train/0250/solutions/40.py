@@ -1,8 +1,9 @@
 from queue import PriorityQueue
 
+
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
-        ratios = [w/q for w, q in zip(wage, quality)]
+        ratios = [w / q for w, q in zip(wage, quality)]
         workers = [(r, q, w) for r, q, w in zip(ratios, quality, wage)]
         workers = sorted(workers)
 
@@ -20,7 +21,7 @@ class Solution:
                 min_quality_sum = min_quality_sum + max_quality
 
             if pQueue.qsize() == K:
-                new_cost = r*min_quality_sum
+                new_cost = r * min_quality_sum
                 if new_cost < cost:
                     cost = new_cost
 

@@ -25,5 +25,3 @@ for i in range(h):
         break
 else:
     print('Yes')
-        
-

@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     mx = 1
     n = int(input())
@@ -12,5 +13,6 @@ def main():
         D[s] = D[t] + 1
         mx = max(mx, D[s])
     print(mx)
+
 
 main()

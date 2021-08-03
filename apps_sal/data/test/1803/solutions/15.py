@@ -6,4 +6,4 @@ for i in range(m):
     arr[a - 1] += b - 1
     arr[a + 1] += arr[a] - b
     arr[a] = 0
-print(*arr[1:-1], sep = '\n')
+print(*arr[1:-1], sep='\n')

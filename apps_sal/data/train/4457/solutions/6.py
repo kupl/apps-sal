@@ -1,5 +1,6 @@
 import math
 
+
 def mega_mind(hp, dps, shots, regen):
     if regen - dps * shots >= 0 and hp - dps * shots > 0:
         return -1

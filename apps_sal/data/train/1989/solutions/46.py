@@ -42,4 +42,3 @@ class Solution:
                     result = max(result, end + 1 - start)
 
         return result
-

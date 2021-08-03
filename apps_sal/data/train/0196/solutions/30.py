@@ -11,16 +11,8 @@ class Solution:
             minSum = min(minSum, curMin)
             total += a
         return max(maxSum, total - minSum) if total != minSum else maxSum
-    
-    
+
 
 # input: [5,-3,5]
 # Output:7
 # Expected:10
-
-                    
-                
-            
-            
-         
-

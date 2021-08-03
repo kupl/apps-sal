@@ -8,4 +8,3 @@ for i, w in enumerate(x):
     if ans[i] < 0:
         ans[i] = 0
 print(' '.join(str(i) for i in ans))
-

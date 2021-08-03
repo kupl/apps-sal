@@ -26,4 +26,3 @@ rem = n // k2
 maxi += rem
 
 print(mini, maxi)
-

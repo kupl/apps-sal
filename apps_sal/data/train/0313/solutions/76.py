@@ -7,19 +7,18 @@ class Solution:
                 if bloom > max_day:
                     flowers = 0
                 else:
-                    total_bouquets += (flowers + 1)//k
+                    total_bouquets += (flowers + 1) // k
                     flowers = (flowers + 1) % k
             return total_bouquets >= m
-                    
+
         if m * k > len(bloomDay):
             return -1
-        
+
         l, r = min(bloomDay), max(bloomDay)
         while l < r:
-            mid = l + (r - l)//2
+            mid = l + (r - l) // 2
             if is_feasible(mid):
                 r = mid
             else:
                 l = mid + 1
         return l
-

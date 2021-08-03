@@ -8,4 +8,3 @@ while r < n:
     ans = max(ans, r - left)
     left += 1
 print(max(ans, 1))
-

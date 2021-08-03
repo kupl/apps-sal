@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 def prime_factorize(n):
     arr = []
     while n % 2 == 0:
@@ -15,8 +18,6 @@ def prime_factorize(n):
     return arr
 
 
-from collections import Counter
-
 n = int(input())
 c = Counter(prime_factorize(n))
 cnt = 0
@@ -25,10 +26,9 @@ for k, v in list(c.items()):
         cnt += 1
     else:
         v0 = 1
-        while v-v0 >= 0:
+        while v - v0 >= 0:
             v -= v0
             cnt += 1
             v0 += 1
 
 print(cnt)
-

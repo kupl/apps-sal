@@ -6,4 +6,4 @@ for i in range(m):
     l[a - 1] += c
     l[b - 1] -= c
 
-print(sum(abs(x) for x in l)//2)
+print(sum(abs(x) for x in l) // 2)

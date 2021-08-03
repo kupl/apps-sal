@@ -5,7 +5,7 @@ def main():
     p = list(map(int, input().split()))
     idx = [0] * n
     for i in range(n):
-        idx[p[i]-1] = i
+        idx[p[i] - 1] = i
     ans = ''
     left = n
     right = 0
@@ -18,7 +18,7 @@ def main():
             ans += '0'
     return ans
 
+
 t = int(input())
 for i in range(t):
     print(main())
-

@@ -7,7 +7,6 @@ for i in range(n):
 mx = max(a) + m
 
 
-
 while m:
     for i in range(n):
         if a[i] == min(a):
@@ -16,4 +15,3 @@ while m:
             break
 
 print(max(a), mx)
-

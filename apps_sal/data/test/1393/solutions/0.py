@@ -2,6 +2,8 @@ def upc(c):
     if c >= 'a' and c <= 'z':
         c = chr(ord(c) - ord('a') + ord('A'))
     return c
+
+
 a1, a2 = {}, {}
 for i in input():
     if i in a1:
@@ -46,4 +48,3 @@ for k in a3:
     a4[k] -= c
     r2 += c
 print(r1, r2)
-

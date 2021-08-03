@@ -15,7 +15,7 @@ for i in range(len(n)):
 
         done = False
         while not done:
-            for j in range(n[ind]+1, 10):
+            for j in range(n[ind] + 1, 10):
                 if j in a:
                     n[ind] = j
                     done = True
@@ -29,7 +29,7 @@ for i in range(len(n)):
                     ind = 0
                     done = True
 
-        for j in range(ind+1, len(n)):
+        for j in range(ind + 1, len(n)):
             n[j] = a[0]
 
         break

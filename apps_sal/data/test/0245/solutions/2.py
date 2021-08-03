@@ -17,4 +17,3 @@ if (max(x2) - min(x1)) * (max(y2) - min(y1)) == S and max(x2) - min(x1) == max(y
     print('YES')
 else:
     print('NO')
-

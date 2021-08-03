@@ -1,5 +1,6 @@
 p, k = list(map(int, input().split()))
 
+
 def convert(num, base):
     res = []
     if num == 0:
@@ -13,7 +14,7 @@ def convert(num, base):
             res.append(rem)
     return res
 
+
 res = convert(p, k)
 print(len(res))
 print(' '.join([str(x) for x in res]))
-

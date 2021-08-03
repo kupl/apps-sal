@@ -4,8 +4,8 @@ class Solution:
         inc = False
 
         for i in range(len(A) - 1):
-            j = i+1
-            if A[i] is not A[j]: 
+            j = i + 1
+            if A[i] is not A[j]:
                 if A[i] < A[j]:
                     inc = True
                 elif A[i] > A[j]:

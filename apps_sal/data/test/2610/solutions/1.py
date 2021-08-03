@@ -4,13 +4,13 @@ for ii in range(t):
     a = list(map(int, input().split()))
     a = sorted(a)
     a = [None] + a
-    s = [0] * (n+1)
+    s = [0] * (n + 1)
     last_ind = 0
-    for i in range(1,n+1):
+    for i in range(1, n + 1):
         if i < k:
-            s[i] = a[i] + s[i-1]
+            s[i] = a[i] + s[i - 1]
         else:
-            s[i] = a[i] + s[i-k]
+            s[i] = a[i] + s[i - k]
         # print('---',s[i], p)
         if s[i] <= p:
             last_ind = i
@@ -37,4 +37,3 @@ for ii in range(t):
 1 2 2 1 2
 
 '''
-

@@ -9,4 +9,3 @@ for _ in range(t):
         else:
             b += a
     print(ans)
-

@@ -1,5 +1,6 @@
 import math
 
+
 def calc(lst):
     ans = 0
     aft = []
@@ -10,11 +11,11 @@ def calc(lst):
         for j in aft:
             if j < lst[i]:
                 kurai -= 1
-        
-            
-        ans = ans + (kurai - 1)*math.factorial(N-(i+1))
+
+        ans = ans + (kurai - 1) * math.factorial(N - (i + 1))
 
     return ans + 1
+
 
 N = int(input())
 P = list(map(int, input().split()))

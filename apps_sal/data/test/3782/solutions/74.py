@@ -9,17 +9,16 @@ for y in X:
         if x < y:
             tmp.sort()
             tn = len(tmp)
-            if len(tmp) > K-1:
-                tmp2 += tmp[:tn-K+1]
+            if len(tmp) > K - 1:
+                tmp2 += tmp[:tn - K + 1]
             tmp = []
             continue
         tmp.append(x)
     tmp.sort()
     tn = len(tmp)
-    if tn-K+1 > 0:
-        tmp2 += tmp[:tn-K+1]
+    if tn - K + 1 > 0:
+        tmp2 += tmp[:tn - K + 1]
     tmp2.sort()
     if len(tmp2) >= Q:
-        r = min(r, tmp2[Q-1] - y)
+        r = min(r, tmp2[Q - 1] - y)
 print(r)
-

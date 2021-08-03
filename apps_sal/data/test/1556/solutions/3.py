@@ -1,8 +1,8 @@
 def main():
-    from heapq import heapify, heappop, heappushpop,heappush
+    from heapq import heapify, heappop, heappushpop, heappush
     n, k, x = map(int, input().split())
     l, sign, h = list(map(int, input().split())), [False] * n, []
-    helper = lambda: print(' '.join(str(-a if s else a) for a, s in zip(l, sign)))
+    def helper(): return print(' '.join(str(-a if s else a) for a, s in zip(l, sign)))
     for i, a in enumerate(l):
         if a < 0:
             sign[i] = True
@@ -31,5 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

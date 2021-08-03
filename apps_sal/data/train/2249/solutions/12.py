@@ -13,4 +13,3 @@ for case_num in range(t):
         print(abs(x1 - x2) + abs(y1 - y2))
     else:
         print(abs(x1 - x2) + abs(y1 - y2) + 2)
-

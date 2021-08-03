@@ -12,7 +12,7 @@ class Solution:
             return end
         if self.check(position, m, start):
             return start
-    
+
     def check(self, position, m, delta):
         n = len(position)
         i = 1

@@ -18,7 +18,6 @@ for _ in range(x):
     s.append(')')
 
 for _ in range(y):
-    s.insert(0,'(')
+    s.insert(0, '(')
 ans = ''.join(s)
 print(ans)
-

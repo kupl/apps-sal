@@ -32,9 +32,6 @@ class ThroneInheritance:
                 cur = self.parent[cur]
                 index.pop()
         return ans
-            
-        
-        
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -42,4 +39,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

@@ -10,5 +10,5 @@ for i in range(len(n) - 1, -1, -1):
         result.append(0)
 
 for i in range(len(result) - 1, -1, -1):
-    print(result[i], end = ' ')
+    print(result[i], end=' ')
 print()

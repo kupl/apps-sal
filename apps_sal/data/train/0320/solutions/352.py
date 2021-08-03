@@ -9,5 +9,3 @@ class Solution:
                 nums[i] >>= 1
             res += any(nums)
         return res
-        
-

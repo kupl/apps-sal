@@ -8,8 +8,7 @@ minval = b - maxval
 
 d = maxval - minval + 1
 if d < 0:
-	d = 0
+    d = 0
 
 erg = d // 2
 print(erg)
-

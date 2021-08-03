@@ -1,5 +1,6 @@
 import math
 
+
 def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
     age_list = []
     squares = []
@@ -15,7 +16,6 @@ def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
         multiply = i**2
         squares.append(multiply)
     add = sum(squares)
-    answer = (math.sqrt(add))/2
+    answer = (math.sqrt(add)) / 2
     round_answer = int(round(answer, 2))
     return round_answer
-

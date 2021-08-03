@@ -9,7 +9,7 @@ def main():
     def input(): return sys.stdin.readline()[:-1]
     N, Q = list(map(int, input().split()))
 
-    graph = [[] for _ in range(N+1)]
+    graph = [[] for _ in range(N + 1)]
     for _ in range(1, N):
         a, b = list(map(int, input().split()))
         graph[a].append(b)
@@ -27,10 +27,12 @@ def main():
         v = queue.pop()
         checked[v] = 1
         for next_v in graph[v]:
-            if checked[next_v] == 1: continue
+            if checked[next_v] == 1:
+                continue
             px[next_v] += px[v]
             queue.append(next_v)
     print((*px[1:]))
+
 
 def __starting_point():
     main()

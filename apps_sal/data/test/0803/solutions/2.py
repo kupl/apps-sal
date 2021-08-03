@@ -10,4 +10,3 @@ if standing < n // 2:
 else:
 
     print(str.replace(s, "X", "x", count))
-

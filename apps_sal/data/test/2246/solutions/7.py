@@ -28,10 +28,9 @@ def main():
                 if isl[i]:
                     a += (s + 1) * t
                 else:
-                    q.append((i, s + 1, t / (len(x[i])-1)))
+                    q.append((i, s + 1, t / (len(x[i]) - 1)))
                 u[i] = True
     print(a)
 
 
 main()
-

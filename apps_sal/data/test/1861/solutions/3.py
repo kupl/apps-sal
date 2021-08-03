@@ -29,4 +29,3 @@ for i in range(n):
             if was[s] > i1:
                 ans += 1
 print(ans)
-

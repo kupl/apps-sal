@@ -6,4 +6,3 @@ for i in range(len(S) - 1):
         ans = "Bad"
 
 print(ans)
-

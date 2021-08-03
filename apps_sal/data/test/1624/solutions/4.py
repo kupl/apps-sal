@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 a = li()
@@ -15,4 +20,3 @@ while i < j:
     i += 1
     j -= 1
 print(ans)
-

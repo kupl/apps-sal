@@ -5,7 +5,7 @@ H, W, K = map(int, input().split())
 S = [list(map(int, list(input()))) for _ in range(H)]
 
 # 転置 + 行ごと(つまり列ごと)の白チョコの数を数えている
-accs = [[0]+list(accumulate(l)) for l in zip(*S)]
+accs = [[0] + list(accumulate(l)) for l in zip(*S)]
 
 ans = float('inf')
 
@@ -15,10 +15,10 @@ for i in range(1 << H - 1):
     for k in range(H - 1):
         if i & (1 << k):
             cuts += 1
-            parts.append(k+1)
-    
+            parts.append(k + 1)
+
     parts.append(H)
-    cts = [0]*len(parts)
+    cts = [0] * len(parts)
     for j in range(W):
         prev = 0
         flag1 = False

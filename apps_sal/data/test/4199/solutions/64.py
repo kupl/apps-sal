@@ -1,4 +1,4 @@
-n,k = map(int, input().split())
+n, k = map(int, input().split())
 H = list(map(int, input().split()))
 
 cnt = 0

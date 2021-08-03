@@ -4,16 +4,16 @@ ps = [list(map(int, input().split())) for i in range(n)]
 
 shut = [False for i in range(n)]
 
-ans=i=0
+ans = i = 0
 
-for x,y in ps:
+for x, y in ps:
     if not shut[i]:
-        ans+=1
-        j=0
+        ans += 1
+        j = 0
         for x2, y2 in ps:
-            if (x-x0)*(y2-y0) == (x2-x0)*(y-y0):
-                shut[j]=True
-            j+=1
-    i+=1
+            if (x - x0) * (y2 - y0) == (x2 - x0) * (y - y0):
+                shut[j] = True
+            j += 1
+    i += 1
 
 print(ans)

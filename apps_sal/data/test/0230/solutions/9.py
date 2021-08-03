@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class RollingHash(object):
     def __init__(self, S: str, MOD: int = 10 ** 9 + 7, BASE: int = 10 ** 5 + 7):
         self.S = S
@@ -9,7 +10,7 @@ class RollingHash(object):
         self.S_arr = [ord(x) for x in S]
 
         self.POWER = [1] * (N + 1)
-        self.HASH  = [0] * (N + 1)
+        self.HASH = [0] * (N + 1)
         p, h = 1, 0
         for i in range(N):
             self.POWER[i + 1] = p = (p * BASE) % MOD
@@ -28,11 +29,13 @@ class RollingHash(object):
 # right: check_func(x) = true となるx
 # search_max: check_func(x) = true となるxの"最大値"を探索する場合はTrue
 # check_func: answer <= x であればcheck_func(x) = true となるような関数
-def binary_search(left: int, right: int, check_func, search_max:bool=False):
+
+
+def binary_search(left: int, right: int, check_func, search_max: bool = False):
     # ok と ng のどちらが大きいかわからないことを考慮
     while abs(right - left) > 1:
         mid = (left + right) // 2
-    
+
         if check_func(mid) ^ search_max:
             right = mid
             # print(left, right, mid, 't')
@@ -41,6 +44,7 @@ def binary_search(left: int, right: int, check_func, search_max:bool=False):
             # print(left, right, mid, 'f')
 
     return left if search_max else right
+
 
 def main():
     N = int(input())
@@ -60,7 +64,7 @@ def main():
             # 衝突した場合は文字列が完全に一致するか調べ、かつ
             # 文字列同士がSの中で重なるような範囲にない場合はOKとする
             for j in hash_to_left[_hash]:
-                if j+L <= i:
+                if j + L <= i:
                     return True
             hash_to_left[_hash].append(i)
 
@@ -71,6 +75,9 @@ def main():
     ans = binary_search(0, N // 2 + 1, isOK, search_max=True)
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

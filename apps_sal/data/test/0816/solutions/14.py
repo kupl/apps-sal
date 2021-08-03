@@ -3,11 +3,14 @@
 5 1 2 3 4 1
 '''
 
+
 def rints():
     return list(map(int, input().split()))
 
+
 def ri():
     return int(input())
+
 
 MAX_A = 10**5
 
@@ -24,4 +27,3 @@ for elem in arr:
     seen[elem] += 1
 
 print(count)
-

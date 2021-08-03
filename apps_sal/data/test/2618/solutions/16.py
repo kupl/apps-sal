@@ -67,4 +67,3 @@ for i in range(t):
         print(right)
     else:
         print(-1)
-

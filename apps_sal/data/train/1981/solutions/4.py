@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         count = [0] * len(nums)
@@ -17,12 +19,9 @@ class Solution:
             total += 1
         nums.sort()
         res = 0
-        items = sorted(list(dct.items()), reverse = True)
+        items = sorted(list(dct.items()), reverse=True)
         for key, val in items:
             for i in range(val):
                 res += key * nums[-1]
                 nums.pop()
         return res % (10 ** 9 + 7)
-        
-        
-

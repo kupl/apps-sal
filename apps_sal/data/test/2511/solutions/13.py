@@ -4,6 +4,7 @@ from functools import lru_cache
 
 MOD = 10 ** 9 + 7
 
+
 def main():
     n, k = list(map(int, input().split()))
     adj = [[] for i in range(n)]
@@ -26,6 +27,7 @@ def main():
             stack.append(c)
     print(res)
 
+
 @lru_cache(maxsize=10 ** 6)
 def perm(t, s):
     if s > t:
@@ -37,7 +39,9 @@ def perm(t, s):
         t -= 1
     return res
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

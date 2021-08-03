@@ -14,4 +14,3 @@ class Solution:
                 max_count = max(max_count, counts[i][diff])
 
         return max_count
-

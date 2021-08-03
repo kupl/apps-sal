@@ -7,4 +7,3 @@ for i in range(q):
         print(0)
     else:
         print(1)
-

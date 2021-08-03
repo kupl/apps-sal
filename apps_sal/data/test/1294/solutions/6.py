@@ -1,10 +1,11 @@
 t = int(input())
 
+
 def run_length_compress(string):
     """文字列をランレングス圧縮する
     例) string = "aabccaaabb" -> [(2, a), (1, b), (2, c), (3, a), (2, b)]
     """
-    string = string + "@" # string中に絶対に現れない文字を番兵とする
+    string = string + "@"  # string中に絶対に現れない文字を番兵とする
     n = len(string)
 
     begin = 0
@@ -25,13 +26,13 @@ def run_length_compress(string):
 
     return ans
 
-  
+
 for _ in range(t):
     s = input()
     r = run_length_compress(s)
     memo = {}
     for i, char in r:
-        if i %2 == 1:
+        if i % 2 == 1:
             memo[char] = 1
     ans = []
     for i in memo:

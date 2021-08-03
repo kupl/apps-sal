@@ -31,4 +31,5 @@ def __starting_point():
 # 偶奇
 # 和と差
 
+
 __starting_point()

@@ -1,6 +1,6 @@
-a,b,c=map(int,input().split())
+a, b, c = map(int, input().split())
 
-if a+b<c:
-  print("No")
+if a + b < c:
+    print("No")
 else:
-  print("Yes")
+    print("Yes")

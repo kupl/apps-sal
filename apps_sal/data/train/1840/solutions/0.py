@@ -8,7 +8,7 @@ class Solution:
     def longestZigZag(self, root: TreeNode) -> int:
         if root == None:
             return None
-        
+
         maxlength = 0
         stack = collections.deque()
         if root.left:
@@ -29,10 +29,8 @@ class Solution:
                     stack.append((length + 1, 1, node.left))
                 else:
                     maxlength = max(maxlength, length)
-  
+
                 if node.right:
                     stack.append((1, 0, node.right))
-            
-        return maxlength
-            
 
+        return maxlength

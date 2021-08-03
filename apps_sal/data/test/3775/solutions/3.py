@@ -11,9 +11,12 @@ for i in range(n):
         x2 = a[i * 2 + 1]
         y1 = b[j * 2]
         y2 = b[j * 2 + 1]
-        if x1 > x2: x1, x2 = x2, x1
-        if y1 > y2: y1, y2 = y2, y1
-        if x1 == y1 and x2 == y2: continue
+        if x1 > x2:
+            x1, x2 = x2, x1
+        if y1 > y2:
+            y1, y2 = y2, y1
+        if x1 == y1 and x2 == y2:
+            continue
         if x1 == y1:
             can1[i].add(y1)
             can2[j].add(y1)
@@ -40,6 +43,7 @@ else:
     for i in can2:
         if len(i) > 1:
             ok = False
-    if ok: print(0)
-    else: print(-1)
-
+    if ok:
+        print(0)
+    else:
+        print(-1)

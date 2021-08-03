@@ -6,6 +6,3 @@ def next_item(xs, item):
                 return next(xs)
             except:
                 pass
-        
-
-

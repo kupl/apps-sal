@@ -8,9 +8,8 @@ slon = 0
 temp = 1
 j = 2
 while n >= temp:
-    slon = slon +1
+    slon = slon + 1
     n -= temp
     temp += j
-    j= j +1
+    j = j + 1
 print(slon)
-

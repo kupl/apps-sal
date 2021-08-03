@@ -10,6 +10,7 @@ def factorial(n):
         yield x
         x = x * (i + 1) % mod
 
+
 f = list(factorial(1001))
 
 
@@ -31,4 +32,3 @@ for i in range(1, len(b)):
     cur -= l
 
 print(ans)
-

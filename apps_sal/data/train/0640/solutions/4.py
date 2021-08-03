@@ -10,4 +10,3 @@ for i in range(t):
         print(a + b)
     else:
         print(0)
-

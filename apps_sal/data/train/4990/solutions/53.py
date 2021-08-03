@@ -1,7 +1,7 @@
 def solution(string, ending):
     # your code here..
     if(string.endswith(ending)):
-        return True;
+        return True
     else:
-        return False;
+        return False
     pass

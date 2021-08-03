@@ -5,4 +5,3 @@ if k == n:
     print(int(l(n)))
 else:
     print(int(l(n) + 1))
-

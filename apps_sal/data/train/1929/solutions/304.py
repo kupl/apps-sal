@@ -3,6 +3,7 @@ class TrieNode:
         self.children = collections.defaultdict(TrieNode)
         self.val = -1
 
+
 class Trie:
 
     def __init__(self):
@@ -15,6 +16,7 @@ class Trie:
             current = current.children[char]
 
         current.val = 10
+
     def search(self, word):
         current = self.root
         for char in word:
@@ -22,6 +24,7 @@ class Trie:
             if not current:
                 return False
         return current.val > 1
+
     def starts_with(self, word):
         current = self.root
         for char in word:
@@ -29,7 +32,7 @@ class Trie:
             if not current:
                 return False
         return True
-    
+
 
 class StreamChecker:
 
@@ -42,7 +45,7 @@ class StreamChecker:
             # insert in reverse order to check for Trie keys as soon as new node is added
             self.trie.insert(word[::-1])
 
-    #waiting.size <= W, where W is the maximum length of words.
+    # waiting.size <= W, where W is the maximum length of words.
     # So that O(query) = O(waiting.size) = O(W)
     # for q queries, O(QW)
     def query(self, letter: str) -> bool:
@@ -66,8 +69,5 @@ class StreamChecker:
 #                 return False
 #             node = node.children[self.letters[i]]
 #             i -= 1
-        
+
 #         return node.val > 1
-    
-
-

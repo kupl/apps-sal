@@ -4,6 +4,3 @@ def number(bus_stops):
     for i in bus_stops:
         left_on_bus += (i[0]) - (i[1])
     return left_on_bus
-        
-        
-

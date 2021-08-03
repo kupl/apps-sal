@@ -8,5 +8,5 @@ class Solution:
                 if dest != loc and new_fuel >= 0:
                     ans = (ans + step(dest, new_fuel)) % (10 ** 9 + 7)
             return ans
-        
+
         return step(locations[start], fuel)

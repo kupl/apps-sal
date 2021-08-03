@@ -59,4 +59,3 @@ if is_equal:
         print(star)
 else:
     print(-1)
-

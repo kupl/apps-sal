@@ -1,6 +1,7 @@
 from collections import Counter
 from math import sqrt
 
+
 def facts(n):
     if n % 2 == 0:
         yield 2
@@ -17,6 +18,7 @@ def facts(n):
 
     if n > 2:
         yield n
+
 
 for _ in range(int(input())):
     n = int(input())

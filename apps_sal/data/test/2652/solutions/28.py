@@ -4,7 +4,7 @@ from scipy.sparse.csgraph import minimum_spanning_tree
 
 
 class Point:
- 
+
     def __init__(self, index, x, y):
         self.index = index
         self.x = x
@@ -47,7 +47,7 @@ def create_graph(N, points):
         data.append(cost)
     return csr_matrix((data, (rows, cols)), shape=(N, N))
 
- 
+
 def main():
     N = int(input())
     points = list()
@@ -57,8 +57,10 @@ def main():
     graph = create_graph(N, points)
     mst = minimum_spanning_tree(graph)
     print(int(mst.sum()))
- 
- 
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

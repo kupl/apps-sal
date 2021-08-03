@@ -1,13 +1,14 @@
 from collections import deque
 
+
 class Solution:
     def shortestSubarray(self, A, K):
         possible_starts = deque([0])
-        
+
         prefix_sums = [0 for i in range(len(A) + 1)]
         for i in range(len(A)):
             prefix_sums[i + 1] = prefix_sums[i] + A[i]
-       
+
         shortest_found = len(A) + 1
         curr_sum = 0
         for i in range(len(A) + 1):

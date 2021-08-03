@@ -1,4 +1,4 @@
-n,m,k = map(int, input().split())
+n, m, k = map(int, input().split())
 a = []
 for i in range(n):
     a.append(input())
@@ -22,6 +22,6 @@ for i in range(m):
         else:
             st = 0
 if k == 1:
-    print(int(ans/2))
+    print(int(ans / 2))
 else:
     print(ans)

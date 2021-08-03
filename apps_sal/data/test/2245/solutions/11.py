@@ -1,20 +1,20 @@
 
 from sys import stdin
-c=int(stdin.readline().strip())
+c = int(stdin.readline().strip())
 for i in range(c):
-    n,m=list(map(int,stdin.readline().strip().split()))
-    if n==0:
+    n, m = list(map(int, stdin.readline().strip().split()))
+    if n == 0:
         print("Bob")
         continue
 
-    if m%3==0:
-        n=n%(m+1)
-        if (n==0 or n%3==0) and  n!=m:
+    if m % 3 == 0:
+        n = n % (m + 1)
+        if (n == 0 or n % 3 == 0) and n != m:
             print("Bob")
         else:
             print("Alice")
         continue
-    if n%3==0:
+    if n % 3 == 0:
         print("Bob")
     else:
         print("Alice")
@@ -39,4 +39,3 @@ for i in range(3,30):
             continue  
         
 """
-

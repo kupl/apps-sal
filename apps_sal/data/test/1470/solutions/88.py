@@ -1,5 +1,5 @@
-x = int(input())
 from math import ceil
+x = int(input())
 ans = (x // 11)
 x -= ans * 11
 ans *= 2

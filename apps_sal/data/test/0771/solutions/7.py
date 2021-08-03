@@ -1,23 +1,22 @@
-n,k,m=map(int,input().split())
-a=list(map(int,input().split()))
-b=[]
-c=[]
-found=False
+n, k, m = map(int, input().split())
+a = list(map(int, input().split()))
+b = []
+c = []
+found = False
 for i in range(m):
     c.append([])
     b.append(0)
 for i in a:
-    temp=i%m
-    b[temp]+=1
+    temp = i % m
+    b[temp] += 1
     c[temp].append(i)
-    if(b[temp]>=k):
+    if(b[temp] >= k):
         print("Yes")
-        found=True
+        found = True
         for j in c[temp]:
-            
-            print(j,end=' ')
+
+            print(j, end=' ')
         print()
         break
 if(not found):
     print("No")
-

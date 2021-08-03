@@ -1,4 +1,4 @@
-q = int (input())
+q = int(input())
 while q:
     n = int(input())
     a = list(map(int, input().split()))
@@ -13,4 +13,3 @@ while q:
     if not flag:
         print("NO")
     q -= 1
-

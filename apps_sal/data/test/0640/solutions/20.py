@@ -7,4 +7,4 @@ for i in range(1, 7):
         e += 1
     else:
         d += 1
-print(c, d, e, sep = ' ')
+print(c, d, e, sep=' ')

@@ -15,6 +15,5 @@ class Solution:
                     if (x + dx[di], y + dy[di]) not in o_set:
                         x += dx[di]
                         y += dy[di]
-                        max_dis = max(max_dis, x*x + y*y)
+                        max_dis = max(max_dis, x * x + y * y)
         return max_dis
-

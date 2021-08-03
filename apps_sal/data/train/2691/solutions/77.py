@@ -12,4 +12,3 @@ def solve(s):
     if len(temp_nums) > 0:
         res += [int(temp_nums)]
     return max(res)
-

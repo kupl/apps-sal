@@ -6,7 +6,7 @@ for i in range(n):
         b[a[i]] += 1
     except:
         b[a[i]] = 1
-c = [(b[k] % (n-k)) == 0 for k in list(b.keys())]
+c = [(b[k] % (n - k)) == 0 for k in list(b.keys())]
 d = [b[k] for k in a]
 
 if all(c):
@@ -14,7 +14,7 @@ if all(c):
     types = dict()
     hat = 1
     for k in list(b.keys()):
-        pergroup = n-k
+        pergroup = n - k
         groups = b[k] // pergroup
         hatsgroup = list()
         for i in range(groups):
@@ -29,4 +29,3 @@ if all(c):
 
 else:
     print("Impossible")
-

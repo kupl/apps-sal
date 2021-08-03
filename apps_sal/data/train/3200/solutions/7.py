@@ -1,4 +1,6 @@
 from itertools import cycle
+
+
 def thirt(n):
     while True:
         pattern = cycle((1, 10, 9, 12, 3, 4))

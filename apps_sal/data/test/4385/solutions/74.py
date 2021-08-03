@@ -10,4 +10,3 @@ if max(num_list) - min(num_list) <= num_list[-1]:
     print('Yay!')
 else:
     print(':(')
-

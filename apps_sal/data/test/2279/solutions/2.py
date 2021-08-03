@@ -11,5 +11,3 @@ for i in range(len(k) - 1, -1, -1):
         p[k[i][1]] = k[i][2] + 1
         p[k[i][2]] = k[i][1] + 1
 print(*p)
-
-

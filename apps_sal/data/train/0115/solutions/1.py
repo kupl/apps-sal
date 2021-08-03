@@ -2,19 +2,20 @@
 import sys
 input = sys.stdin.readline
 
+
 class SegmentTree:
     def __init__(self, a):
         # Operator
-        self.op = lambda a, b : a + b
+        self.op = lambda a, b: a + b
         # Identity element
-        self.e = 0 
+        self.e = 0
 
         self.n = len(a)
         self.lv = (self.n - 1).bit_length()
         self.size = 2**self.lv
-        self.data = [self.e] * (2*self.size - 1)
-        # Bisect checking function 
-        self._check = lambda x, acc : acc >= x
+        self.data = [self.e] * (2 * self.size - 1)
+        # Bisect checking function
+        self._check = lambda x, acc: acc >= x
         self._acc = self.e
 
         self.initialize(a)
@@ -23,8 +24,8 @@ class SegmentTree:
     def initialize(self, a):
         for i in range(self.n):
             self.data[self.size + i - 1] = a[i]
-        for i in range(self.size-2, -1, -1):
-            self.data[i] = self.op(self.data[i*2 + 1], self.data[i*2 + 2])
+        for i in range(self.size - 2, -1, -1):
+            self.data[i] = self.op(self.data[i * 2 + 1], self.data[i * 2 + 2])
 
     # Update ak as x (0-indexed)
     def update(self, k, x):
@@ -32,20 +33,22 @@ class SegmentTree:
         self.data[k] = x
         while k > 0:
             k = (k - 1) // 2
-            self.data[k] = self.op(self.data[2*k+1], self.data[2*k+2])
+            self.data[k] = self.op(self.data[2 * k + 1], self.data[2 * k + 2])
 
     # Min value in [l, r) (0-indexed)
     def fold(self, l, r):
-        L = l + self.size; R = r + self.size
+        L = l + self.size
+        R = r + self.size
         s = self.e
         while L < R:
             if R & 1:
                 R -= 1
-                s = self.op(s, self.data[R-1])
+                s = self.op(s, self.data[R - 1])
             if L & 1:
-                s = self.op(s, self.data[L-1])
+                s = self.op(s, self.data[L - 1])
                 L += 1
-            L >>= 1; R >>= 1
+            L >>= 1
+            R >>= 1
         return s
 
     def _bisect_forward(self, x, start, k):
@@ -56,22 +59,22 @@ class SegmentTree:
                 return k - (self.size - 1)
             else:
                 return -1
-        width = 2**(self.lv - (k+1).bit_length() + 1)
-        mid = (k+1) * width + width // 2 - self.size 
-        # When left-child isn't in range, just look at right-child. 
+        width = 2**(self.lv - (k + 1).bit_length() + 1)
+        mid = (k + 1) * width + width // 2 - self.size
+        # When left-child isn't in range, just look at right-child.
         if mid <= start:
-            return self._bisect_forward(x, start, 2*k + 2)
+            return self._bisect_forward(x, start, 2 * k + 2)
         # When segment-k is in range and has no answer in it, accumulate and return -1
         tmp_acc = self.op(self._acc, self.data[k])
         if start <= mid - width // 2 and not self._check(x, tmp_acc):
             self._acc = tmp_acc
             return -1
         # Check left-child then right-child
-        vl = self._bisect_forward(x, start, 2*k + 1)
+        vl = self._bisect_forward(x, start, 2 * k + 1)
         if vl != -1:
             return vl
-        return self._bisect_forward(x, start, 2*k + 2)
-    
+        return self._bisect_forward(x, start, 2 * k + 2)
+
     # Returns min index s.t. start <= index and satisfy check(data[start:idx)) = True
     def bisect_forward(self, x, start=None):
         if start:
@@ -89,22 +92,22 @@ class SegmentTree:
                 return k - (self.size - 1)
             else:
                 return -1
-        width = 2**(self.lv - (k+1).bit_length() + 1)
-        mid = (k+1) * width + width // 2 - self.size 
-        # When right-child isn't in range, just look at right-child. 
+        width = 2**(self.lv - (k + 1).bit_length() + 1)
+        mid = (k + 1) * width + width // 2 - self.size
+        # When right-child isn't in range, just look at right-child.
         if mid >= start:
-            return self._bisect_backward(x, start, 2*k + 1)
+            return self._bisect_backward(x, start, 2 * k + 1)
         # When segment-k is in range and has no answer in it, accumulate and return -1
         tmp_acc = self.op(self._acc, self.data[k])
         if start > mid + width // 2 and not self._check(x, tmp_acc):
             self._acc = tmp_acc
             return -1
         # Check right-child then left-child
-        vl = self._bisect_backward(x, start, 2*k + 2)
+        vl = self._bisect_backward(x, start, 2 * k + 2)
         if vl != -1:
             return vl
-        return self._bisect_backward(x, start, 2*k + 1)
-    
+        return self._bisect_backward(x, start, 2 * k + 1)
+
     # Returns max index s.t. index < start and satisfy check(data[idx:start)) = True
     def bisect_backward(self, x, start=None):
         if start:
@@ -114,13 +117,14 @@ class SegmentTree:
         self._acc = self.e
         return ret
 
+
 n = int(input())
 query = []
 seen = set([0])
 for _ in range(n):
     kind, val = map(int, input().split())
     query.append((kind, val))
-    if val > 0: 
+    if val > 0:
         seen.add(val)
 
 unique = list(seen)

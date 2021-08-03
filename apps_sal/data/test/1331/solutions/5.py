@@ -1,6 +1,6 @@
+from collections import deque
 n, m, k = (int(x) for x in input().split())
 ns = set((int(x) for x in input().split()))
-from collections import deque
 span = deque((0 for i in range(m)))
 kk = 0
 res = 0
@@ -19,5 +19,5 @@ while len(ns) > 0:
             res += 1
             y = 0
         span.append(y)
-        kk+=y
+        kk += y
 print(res)

@@ -1,101 +1,101 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-#         n = len(arr)
-#         groups = defaultdict(set)
-#         parents = [i for i in range(n)]
-#         size = [0] * n
-        
-#         def find(node):
-#             if parents[node] == node:
-#                 return node
-#             parent = find(parents[node])
-#             return parent
-        
-#         def union(a, b):
-#             para = find(a)
-#             parb = find(b)
-#             if para != parb:
-#                 groups[parb].update(groups[para])
-#                 groups.pop(para)
-#                 parents[para] = parb
-                
-#         def get_size(a):
-#             parent = find(parents[a])
-#             return len(groups[parent])
-        
-#         def update(i):
-#             check = get_size(i)
-#             sizes[check] -= 1
-#             if sizes[check] == 0:
-#                 sizes.pop(check)
-        
-#         arr = [i-1 for i in arr]
-#         step = 0
-#         ans = -1
-#         sizes = Counter()
-#         for i in arr:
-#             step += 1
-#             size[i] += 1
-#             groups[i].add(i)
-#             sizes[1] += 1
-#             if i-1 >= 0 and i+1 < n and size[i-1] and size[i+1]:
-#                 update(i-1)
-#                 update(i+1)
-#                 update(i)
-#                 union(i, i-1)
-#                 union(i+1, i-1)
-#                 new_size = get_size(i-1)
-#                 sizes[new_size] += 1
-#             elif i-1 >= 0 and size[i-1]:
-#                 update(i-1)
-#                 update(i)
-#                 union(i, i-1)
-#                 new_size = get_size(i-1)
-#                 sizes[new_size] += 1
-#             elif i+1 < n and size[i+1]:
-#                 update(i+1)
-#                 update(i)
-#                 union(i, i+1)
-#                 new_size = get_size(i+1)
-#                 sizes[new_size] += 1
-#             if m in sizes:
-#                 ans = step
-#         return ans
+        #         n = len(arr)
+        #         groups = defaultdict(set)
+        #         parents = [i for i in range(n)]
+        #         size = [0] * n
+
+        #         def find(node):
+        #             if parents[node] == node:
+        #                 return node
+        #             parent = find(parents[node])
+        #             return parent
+
+        #         def union(a, b):
+        #             para = find(a)
+        #             parb = find(b)
+        #             if para != parb:
+        #                 groups[parb].update(groups[para])
+        #                 groups.pop(para)
+        #                 parents[para] = parb
+
+        #         def get_size(a):
+        #             parent = find(parents[a])
+        #             return len(groups[parent])
+
+        #         def update(i):
+        #             check = get_size(i)
+        #             sizes[check] -= 1
+        #             if sizes[check] == 0:
+        #                 sizes.pop(check)
+
+        #         arr = [i-1 for i in arr]
+        #         step = 0
+        #         ans = -1
+        #         sizes = Counter()
+        #         for i in arr:
+        #             step += 1
+        #             size[i] += 1
+        #             groups[i].add(i)
+        #             sizes[1] += 1
+        #             if i-1 >= 0 and i+1 < n and size[i-1] and size[i+1]:
+        #                 update(i-1)
+        #                 update(i+1)
+        #                 update(i)
+        #                 union(i, i-1)
+        #                 union(i+1, i-1)
+        #                 new_size = get_size(i-1)
+        #                 sizes[new_size] += 1
+        #             elif i-1 >= 0 and size[i-1]:
+        #                 update(i-1)
+        #                 update(i)
+        #                 union(i, i-1)
+        #                 new_size = get_size(i-1)
+        #                 sizes[new_size] += 1
+        #             elif i+1 < n and size[i+1]:
+        #                 update(i+1)
+        #                 update(i)
+        #                 union(i, i+1)
+        #                 new_size = get_size(i+1)
+        #                 sizes[new_size] += 1
+        #             if m in sizes:
+        #                 ans = step
+        #         return ans
         N = len(arr)
         arr = [x - 1 for x in arr]
         parent = [x for x in range(N)]
         size = [1 for _ in range(N)]
         used = [False for _ in range(N)]
-        
+
         def ufind(a):
             if a == parent[a]:
                 return a
             parent[a] = ufind(parent[a])
             return parent[a]
-        
+
         def uunion(a, b):
             sa = ufind(a)
             sb = ufind(b)
-            
+
             if sa != sb:
                 parent[sa] = parent[sb]
                 size[sb] += size[sa]
-        
+
         def usize(a):
             return size[ufind(a)]
-            
-        counts = [0] * (N+1)
-        
+
+        counts = [0] * (N + 1)
+
         latest = -1
         for index, x in enumerate(arr):
             left = 0
             if x - 1 >= 0 and used[x - 1]:
                 left = usize(x - 1)
-                
+
             right = 0
             if x + 1 < N and used[x + 1]:
                 right = usize(x + 1)
-                
+
             current = 1
             counts[1] += 1
             if left > 0:
@@ -104,7 +104,7 @@ class Solution:
                 counts[right] -= 1
             counts[1] -= 1
             used[x] = True
-            
+
             new_size = left + right + current
             #print(x, left, right)
             counts[new_size] += 1
@@ -112,8 +112,8 @@ class Solution:
                 uunion(x, x - 1)
             if right > 0:
                 uunion(x, x + 1)
-            
-            #print(counts)
+
+            # print(counts)
             if counts[m] > 0:
                 latest = max(latest, index + 1)
         return latest

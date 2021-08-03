@@ -9,4 +9,3 @@ def pair_zeros(nums, *_):
         else:
             result.append(a)
     return result
-

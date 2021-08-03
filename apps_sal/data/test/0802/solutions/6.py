@@ -1,4 +1,4 @@
-n  = int (input())
+n = int(input())
 s = input()
 t = set()
 for i in range(n):
@@ -28,5 +28,3 @@ while True:
         o[ord(s[i])] += 1
         i += 1
 print(minn)
-
-

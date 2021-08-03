@@ -3,7 +3,7 @@ class Solution:
         # it's equivalent to merge adjacent pairs one by one
         # every time we merge a pair, they become the bigger one
         # and add the product to the result
-        
+
         def to_remove():
             cur_min = arr[0] * arr[1]
             res = 0 if arr[0] < arr[1] else 1
@@ -16,9 +16,9 @@ class Solution:
         while len(arr) > 1:
             i = to_remove()
             res += min(arr[i - 1:i] + arr[i + 1:i + 2]) * arr.pop(i)
-        
+
         return res
-        
+
         res = 0
         while len(arr) > 1:
             i = arr.index(min(arr))

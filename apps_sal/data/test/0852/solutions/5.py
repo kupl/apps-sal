@@ -1,4 +1,6 @@
-inp = lambda : map(int, input().split())
+def inp(): return map(int, input().split())
+
+
 t = int(input())
 for _ in range(t):
     n, k, l = inp()
@@ -6,7 +8,7 @@ for _ in range(t):
     remain = [i for i in range((-1) * (k - 1), 0)] + [i for i in range(k + 1)]
     f = True
     for i in range(n):
-        #print(remain)
+        # print(remain)
         f = False
         new_remain = []
         for j in range(len(remain)):
@@ -28,6 +30,6 @@ for _ in range(t):
                 remain.append(j)
             if abs(j) + d[i] > l:
                 flag = False
-        
+
     if f:
         print("Yes")

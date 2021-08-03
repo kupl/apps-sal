@@ -1,6 +1,6 @@
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
-        l = 0 
+        l = 0
         r = 0
         earliest_one = float('inf')
         earliest_zero = float('inf')
@@ -13,7 +13,7 @@ class Solution:
                 l += 1
             r += 1
         return r - l - 1
-        
+
         '''#queue kind of slow
         l = 0
         r = 0

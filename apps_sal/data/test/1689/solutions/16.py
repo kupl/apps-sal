@@ -6,9 +6,7 @@ for i, r in enumerate(s):
     if "OO" in r:
         s[i] = r.replace("OO", "++", 1)
         print("YES")
-        print("\n".join(s))        
+        print("\n".join(s))
         break
 else:
     print("NO")
-        
-

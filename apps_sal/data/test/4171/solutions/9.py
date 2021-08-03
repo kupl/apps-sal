@@ -21,4 +21,3 @@ for i in range(len(a)):
     if len(a[i]) >= k:
         mn = min(mn, sum(a[i][:k]))
 print(mn)
-

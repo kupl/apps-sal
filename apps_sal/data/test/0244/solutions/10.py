@@ -2,8 +2,8 @@ n = int(input())
 x = int(input())
 n %= 6
 pos = 0
-for i in range(1,n+1):
-    if i%2 == 1:
+for i in range(1, n + 1):
+    if i % 2 == 1:
         if pos == 1:
             pos = 0
         elif pos == 0:
@@ -17,8 +17,8 @@ if pos == x:
     print(0)
 else:
     pos = 1
-    for i in range(1,n+1):
-        if i%2 == 1:
+    for i in range(1, n + 1):
+        if i % 2 == 1:
             if pos == 1:
                 pos = 0
             elif pos == 0:
@@ -32,5 +32,3 @@ else:
         print(1)
     else:
         print(2)
-        
-

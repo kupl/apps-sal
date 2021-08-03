@@ -1,6 +1,9 @@
 import bisect
+
+
 class Solution:
     ans = [0 for i in range(100001)]
+
     def getMaxLen(self, nums: List[int]) -> int:
         def solve(arr):
             s1, s2 = set(), set()

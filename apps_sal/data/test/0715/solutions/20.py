@@ -1,8 +1,8 @@
 x = []
-x.append((len(input())-2, 'A'))
-x.append((len(input())-2, 'B'))
-x.append((len(input())-2, 'C'))
-x.append((len(input())-2, 'D'))
+x.append((len(input()) - 2, 'A'))
+x.append((len(input()) - 2, 'B'))
+x.append((len(input()) - 2, 'C'))
+x.append((len(input()) - 2, 'D'))
 
 x.sort()
 

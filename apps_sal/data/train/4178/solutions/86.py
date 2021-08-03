@@ -8,4 +8,3 @@ def min_sum(arr):
             arr.remove(max(arr))
             arr.remove(min(arr))
     return(sum(sumlist))
-

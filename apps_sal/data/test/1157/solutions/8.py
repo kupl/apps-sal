@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -80,7 +82,8 @@ def all_factors(n):
 
 
 def fibonacci_modP(n, MOD):
-    if n < 2: return 1
+    if n < 2:
+        return 1
     return (cached_fn(fibonacci_modP, (n + 1) // 2, MOD) * cached_fn(fibonacci_modP, n // 2, MOD) + cached_fn(
         fibonacci_modP, (n - 1) // 2, MOD) * cached_fn(fibonacci_modP, (n - 2) // 2, MOD)) % MOD
 
@@ -134,7 +137,8 @@ factorial_modP = []
 
 def warm_up_fac(MOD):
     nonlocal factorial_modP, fac_warm_up
-    if fac_warm_up: return
+    if fac_warm_up:
+        return
     factorial_modP = [1 for _ in range(fac_warm_up_size + 1)]
     for i in range(2, fac_warm_up_size):
         factorial_modP[i] = (factorial_modP[i - 1] * i) % MOD
@@ -151,7 +155,7 @@ def nCr(n, r, MOD):
         warm_up_fac(MOD)
         fac_warm_up = True
     return (factorial_modP[n] * (
-                (pow(factorial_modP[r], MOD - 2, MOD) * pow(factorial_modP[n - r], MOD - 2, MOD)) % MOD)) % MOD
+        (pow(factorial_modP[r], MOD - 2, MOD) * pow(factorial_modP[n - r], MOD - 2, MOD)) % MOD)) % MOD
 
 
 def test_print(*args):
@@ -212,7 +216,7 @@ def ncr(n, r):
 
 
 def binary_search(i, li):
-    fn = lambda x: li[x] - x // i
+    def fn(x): return li[x] - x // i
     x = -1
     b = len(li)
     while b >= 1:
@@ -233,17 +237,17 @@ optimise_for_recursion = False  # Can not be used clubbed with TestCases WHen us
 def main():
     n = get_int()
     li = get_list()
-    dp = [[0,0]]
+    dp = [[0, 0]]
     posi = 0
     for i in li:
-        if i>0:
-            dp.append([dp[-1][0]+1, dp[-1][1]])
+        if i > 0:
+            dp.append([dp[-1][0] + 1, dp[-1][1]])
             posi += dp[-1][0]
         else:
             dp.append([dp[-1][1], dp[-1][0] + 1])
             posi += dp[-1][0]
-    #print(dp)
-    print((n*(n+1))//2 - posi, posi)
+    # print(dp)
+    print((n * (n + 1)) // 2 - posi, posi)
 
 # --------------------------------------------------------------------- END=
 

@@ -9,7 +9,7 @@ class Solution:
             #     return memo[start]
 
             routes = 1 if start == finish else 0
-            for i, location  in enumerate(locations):
+            for i, location in enumerate(locations):
                 if i == start:
                     continue
 
@@ -17,6 +17,5 @@ class Solution:
 
             # memo[start] = routes
             return routes
-        
-        return dfs(start, finish, fuel) % (10**9 + 7)
 
+        return dfs(start, finish, fuel) % (10**9 + 7)

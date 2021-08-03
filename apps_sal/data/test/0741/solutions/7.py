@@ -31,7 +31,6 @@ for i in range(n):
             if t + f[i] > ma:
                 ma = t + f[i]
 
-        
     else:
         if m - c[i] > 1:
             if n % 2 == 1:
@@ -40,4 +39,3 @@ for i in range(n):
                     ma = gor + m - c[i] - 1
 
 print(ma)
-

@@ -23,5 +23,4 @@ for i in range(n):
 if c > maxc:
     maxc = c
     maxci = i
-print(mnd, mndi+1, maxc, maxci-maxc+2)
-
+print(mnd, mndi + 1, maxc, maxci - maxc + 2)

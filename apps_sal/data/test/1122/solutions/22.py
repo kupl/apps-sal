@@ -10,4 +10,3 @@ for i in range(m):
     V[d] = True
     a -= 1
     b += 1
-

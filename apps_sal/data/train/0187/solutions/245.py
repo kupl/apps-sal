@@ -9,22 +9,22 @@ class Solution:
         while waitingCustomers > 0 or i < len(customers):
             if i < len(customers):
                 count = customers[i]
-                i+=1
-                
+                i += 1
+
             else:
                 count = 0
-                
-            waitingCustomers+=count
+
+            waitingCustomers += count
             add = min(waitingCustomers, 4)
-            waitingCustomers-=add
-            profit+=(add * boardingCost) - runningCost
-            turns+=1
+            waitingCustomers -= add
+            profit += (add * boardingCost) - runningCost
+            turns += 1
             #print((add, profit, maxProfit, turns, waitingCustomers))
             if profit > maxProfit:
                 maxProfit = profit
                 bestTurns = turns
-         
+
         if maxProfit <= 0:
             return -1
-        
+
         return bestTurns

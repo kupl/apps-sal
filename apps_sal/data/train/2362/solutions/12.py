@@ -3,8 +3,9 @@ from math import inf
 
 q = int(stdin.readline())
 
+
 class Rect:
-    def __init__(self, x1 = -inf, y1 = -inf, x2 = inf, y2 = inf):
+    def __init__(self, x1=-inf, y1=-inf, x2=inf, y2=inf):
         if x1 > x2:
             x1, x2 = x2, x1
         if y1 > y2:
@@ -18,6 +19,7 @@ class Rect:
     def __str__(self):
         return "(%f, %f, %f, %f)" % (self.x1, self.y1, self.x2, self.y2)
 
+
 def intersect(r1, r2):
     if r1 is None or r2 is None:
         return None
@@ -26,6 +28,7 @@ def intersect(r1, r2):
     if r1.y2 < r2.y1 or r2.y2 < r1.y1:
         return None
     return Rect(max(r1.x1, r2.x1), max(r1.y1, r2.y1), min(r1.x2, r2.x2), min(r1.y2, r2.y2))
+
 
 for i in range(q):
     n = int(stdin.readline())
@@ -47,4 +50,3 @@ for i in range(q):
         print("0")
     else:
         print("1 %d %d" % (int(max(inter.x1, -10**5)), int(max(inter.y1, -10**5))))
-

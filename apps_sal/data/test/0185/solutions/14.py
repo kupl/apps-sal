@@ -5,4 +5,3 @@ if k != 1 and k != n:
 else:
     ans = 3 * n
 print(ans)
-

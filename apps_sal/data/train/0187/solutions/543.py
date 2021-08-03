@@ -11,7 +11,7 @@ class Solution:
             if waiting >= 4:
                 rounds = waiting // 4
                 count += rounds
-                profit += (boardingCost * 4 - runningCost)*rounds
+                profit += (boardingCost * 4 - runningCost) * rounds
                 waiting = waiting % 4
             else:
                 if count <= i:

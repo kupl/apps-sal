@@ -9,4 +9,3 @@ while True:
         print(ans + max_x)
         break
     ans += 1
-

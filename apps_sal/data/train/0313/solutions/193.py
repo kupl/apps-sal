@@ -12,7 +12,7 @@ class Solution:
                     currentCount += 1
                 else:
                     currentCount = 0
-                
+
                 if currentCount == k:
                     totalCount += 1
                     currentCount = 0
@@ -30,7 +30,7 @@ class Solution:
                     return -1
                 else:
                     return binarySearch(bloomDay, m, k, waitDay + 1, longest)
-        
+
         if m * k > len(bloomDay):
             return -1
         else:

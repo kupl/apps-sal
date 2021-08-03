@@ -19,4 +19,3 @@ if N % 2 == 1:
     print((max(dp1, dp2)))
 else:
     print((max(dp0, dp1)))
-

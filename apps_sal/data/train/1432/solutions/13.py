@@ -20,13 +20,13 @@ for _ in range(int(input())):
     while(i < n):
         j = 0
         while(j < n):
-            e = d[(i,j)]
+            e = d[(i, j)]
             ri = i + 1
             rj = j + 1
             y = abs(ri - rj)
             if e == 1:
                 if y in do:
-                    do[y] = do[y]+1
+                    do[y] = do[y] + 1
 
                 else:
                     do[y] = 1
@@ -38,17 +38,17 @@ for _ in range(int(input())):
                 else:
                     dz[y] = 1
 
-            j = j+1
+            j = j + 1
 
-        i = i+1
+        i = i + 1
 
     lo = sorted(do.keys())
     lz = sorted(dz.keys())
     lo = lo[::-1]
-    #print(lo)
-    #print(lz)
-    #print(do)
-    #print(dz)
+    # print(lo)
+    # print(lz)
+    # print(do)
+    # print(dz)
 
     i = 0
     j = 0
@@ -63,17 +63,17 @@ for _ in range(int(input())):
     while((lo[i] != lz[j]) and (lo[i] > lz[j])):
         ov = lo[i]
         zv = lz[j]
-        #print(ov,zv,3)
-        do[ov] = do[ov]-1
-        dz[zv] = dz[zv]-1
+        # print(ov,zv,3)
+        do[ov] = do[ov] - 1
+        dz[zv] = dz[zv] - 1
 
         if do[ov] == 0:
-            i = i+1
+            i = i + 1
             if i == len(lo):
                 break
 
         if dz[zv] == 0:
-            j = j+1
+            j = j + 1
             if j == len(lz):
                 break
 

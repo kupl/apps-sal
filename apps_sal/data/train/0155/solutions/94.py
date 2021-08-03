@@ -5,21 +5,21 @@ class Solution:
     # Time complexity O(ND)
     # Space complexity O(N) for dp
     def maxJumps(self, arr: List[int], d: int) -> int:
-        
+
         n = len(arr)
         res = [0] * n
-        
+
         def dp(i):
-            if res[i]: return res[i]
+            if res[i]:
+                return res[i]
             res[i] = 1
             for di in [-1, 1]:
-                for j in range(i+di, i+di+d*di, di):
+                for j in range(i + di, i + di + d * di, di):
                     if not (0 <= j < n and arr[j] < arr[i]):
-                        break 
-                    res[i] = max(res[i], dp(j)+1)
+                        break
+                    res[i] = max(res[i], dp(j) + 1)
             return res[i]
-        
-        return max(list(map(dp, list(range(n))))) 
-    
-    # range(0, n) as input of dp func, then get the max of their results
 
+        return max(list(map(dp, list(range(n)))))
+
+    # range(0, n) as input of dp func, then get the max of their results

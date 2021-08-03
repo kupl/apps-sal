@@ -1,13 +1,14 @@
 def sa(a, b, c, d):
-    if a==b==c or a==b==d or a==c==d or b==c==d:
+    if a == b == c or a == b == d or a == c == d or b == c == d:
         return True
     else:
         return False
-    
-tx=0
-t=[]
+
+
+tx = 0
+t = []
 for inpt in range(4):
-    chars=[]
+    chars = []
     for char in input():
         chars.append(char)
     t.append(chars)
@@ -19,5 +20,3 @@ elif sa(t[2][0], t[2][1], t[3][0], t[3][1]) or sa(t[2][1], t[2][2], t[3][1], t[3
     print("YES")
 else:
     print("NO")
-    
-

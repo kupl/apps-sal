@@ -29,4 +29,3 @@ for x in range(1, min(A // Ma, B // Mb) + 1):
 if ans == float("inf"):
     ans = -1
 print(ans)
-

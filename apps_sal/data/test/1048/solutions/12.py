@@ -3,7 +3,7 @@ s = input()
 ansl = 0
 ansd = 0
 for i in s:
-    if i =="L":
+    if i == "L":
         ansl += 1
     if i == "R":
         ansl -= 1
@@ -13,4 +13,4 @@ for i in s:
         ansd -= 1
 ansl = abs(ansl)
 ansd = abs(ansd)
-print(x - (ansd+ansl))
+print(x - (ansd + ansl))

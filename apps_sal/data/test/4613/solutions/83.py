@@ -6,14 +6,15 @@ def dfs(current):
             already.append(maps)
             dfs(maps)
 
-n,m = map(int,input().split())
+
+n, m = map(int, input().split())
 ans = 0
 Edges = []
 for _ in range(m):
-    Edges.append([int(j)-1 for j in input().split()])
+    Edges.append([int(j) - 1 for j in input().split()])
 
 for i in range(m):
-    egdes = Edges[0:i]+Edges[i+1:]
+    egdes = Edges[0:i] + Edges[i + 1:]
     Graph = [[] for _ in range(n)]
     for edge in egdes:
         Graph[edge[0]].append(edge[1])

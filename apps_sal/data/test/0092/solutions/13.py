@@ -42,4 +42,3 @@ for i in range(1, a + 1):
             total += mults_cnt[i * j * k]
 
 print(total & 0x3FFFFFFF)
-

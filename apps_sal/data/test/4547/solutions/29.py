@@ -1,1 +1,1 @@
-print("YNeos"[input().count("9")<1::2])
+print("YNeos"[input().count("9") < 1::2])

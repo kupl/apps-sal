@@ -10,4 +10,3 @@ if result:
     print("Yes")
 else:
     print("No")
-

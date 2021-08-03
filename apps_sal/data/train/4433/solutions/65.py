@@ -8,4 +8,3 @@ def logical_calc(array, op):
         else:
             log = log ^ i
     return log
-

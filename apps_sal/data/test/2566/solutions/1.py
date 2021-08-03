@@ -4,15 +4,15 @@ for _ in range(int(input())):
     sd = sum(days)
     ans = 0
     if k > sd:
-        t = k//sd
-        ans += t*7
-        k = k%sd
-    
+        t = k // sd
+        ans += t * 7
+        k = k % sd
+
     if k == 0:
         k += sd
         ans -= 7
-    
-    ways = [days[start:]+days[:start] for start in range(7)]
+
+    ways = [days[start:] + days[:start] for start in range(7)]
     minw = 7
     for way in ways:
         sk = k
@@ -25,7 +25,6 @@ for _ in range(int(input())):
 
         if minw > d:
             minw = d
-    
+
     ans += minw
     print(ans)
-

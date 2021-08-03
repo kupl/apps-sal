@@ -1,6 +1,6 @@
 class Solution:
     def __init__(self):
-        self.cache = {1: 0,2: 1,3: 7,4: 2}
+        self.cache = {1: 0, 2: 1, 3: 7, 4: 2}
 
     def getPower(self, n):
         after = 0
@@ -16,14 +16,13 @@ class Solution:
             steps = 3
         else:
             after = n // 4 * 9 + 8
-            steps = 4 
-        if after in list(self.cache.keys()): 
+            steps = 4
+        if after in list(self.cache.keys()):
             return self.cache[after] + steps
         else:
             return self.getPower(after) + steps
 
     def getKth(self, low, high, k):
         data = [self.getPower(i) for i in range(low, high + 1)]
-        sorted_data = sorted(zip(data, list(range(len(data)))), key= lambda x:x[0])
+        sorted_data = sorted(zip(data, list(range(len(data)))), key=lambda x: x[0])
         return sorted_data[k - 1][1] + low
-

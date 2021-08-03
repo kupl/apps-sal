@@ -13,9 +13,9 @@ while T > 0:
             i //= 2
             pw += 1
         cnt[pw] += 1
-    
+
     for i in range(12):
-        cnt[i+1] += cnt[i] // 2
+        cnt[i + 1] += cnt[i] // 2
 
     if cnt[11] > 0:
         print("YES")

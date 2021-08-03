@@ -48,4 +48,3 @@ for c, t, z in events:
             ans[z] = m
 
 print(*ans, sep='\n')
-

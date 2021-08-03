@@ -23,4 +23,3 @@ while j <= n:
         total_days -= d[i]
         i += 1
 print(ans)
-

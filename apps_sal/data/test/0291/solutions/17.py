@@ -4,6 +4,6 @@ while True:
     i += 1
     a *= 3
     b *= 2
-    if a>b:
+    if a > b:
         break
 print(i)

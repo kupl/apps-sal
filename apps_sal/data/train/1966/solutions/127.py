@@ -9,7 +9,7 @@ class Solution:
                     h[j] &= mat[bottom][j]
                 res += self.count1D(h)
         return res
-    
+
     def count1D(self, array):
         res, length = 0, 0
         for i in range(len(array)):

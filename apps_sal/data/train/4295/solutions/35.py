@@ -4,6 +4,7 @@ def sum(nums):
         ans += int(num)
     return ans
 
+
 def balanced_num(number):
     number = str(number)
     even = False
@@ -12,7 +13,7 @@ def balanced_num(number):
         even = False
     else:
         even = True
-    
+
     if not even:
         if sum(number[:middle]) == sum(number[middle + 1:]):
             return 'Balanced'

@@ -13,4 +13,3 @@ class Solution:
                 res = min(res, i - rec[t])
             rec[cur] = i
         return -1 if res == len(nums) else res
-

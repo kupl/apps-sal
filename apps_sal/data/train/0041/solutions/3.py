@@ -11,16 +11,16 @@ for h in range(m):
                     k = i
                     break
             c = a[t:k + 1]
-            a = a[:t] + c[::-1]  + a[k + 1:]
+            a = a[:t] + c[::-1] + a[k + 1:]
             #print(t, k, a)
-            ans.append([t, k]) 
+            ans.append([t, k])
         if a[t + 1] == '(':
             for i in range(t + 1, n):
                 if a[i] == ')':
                     k = i
                     break
             c = a[t + 1:k + 1]
-            a = a[:t + 1] + c[::-1]  + a[k + 1:]
+            a = a[:t + 1] + c[::-1] + a[k + 1:]
             #print(t, k, a)
             ans.append([t + 1, k])
         t += 2
@@ -33,9 +33,9 @@ for h in range(m):
                     break
             #print(i, k)
             c = a[i:k + 1]
-            a = a[:i] + c[::-1]  + a[k + 1:]
+            a = a[:i] + c[::-1] + a[k + 1:]
             ans.append([i, k])
-    #print(a)
+    # print(a)
     for i in range(t + (n - t) // 2, n):
         if a[i] == '(':
             for j in range(i, n):
@@ -45,8 +45,7 @@ for h in range(m):
             c = a[i:k + 1]
             a = a[:i] + c[::-1] + a[k + 1:]
             ans.append([i, k])
-            
+
     print(len(ans))
     for i in ans:
         print(i[0] + 1, i[1] + 1)
-

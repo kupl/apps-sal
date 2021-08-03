@@ -2,16 +2,16 @@ q = int(input())
 for _ in range(q):
     n = int(input())
     s = input()
-    s = list(map(int,s))
-    #raze wins if odd
+    s = list(map(int, s))
+    # raze wins if odd
     r = []
     prz = []
     for i in range(n):
-        if i%2 == 0:
-            r.append(s[i]%2)
+        if i % 2 == 0:
+            r.append(s[i] % 2)
         else:
-            prz.append(s[i]%2)
-    if n%2 == 0:
+            prz.append(s[i] % 2)
+    if n % 2 == 0:
         if prz.count(0) > 0:
             print(2)
         else:

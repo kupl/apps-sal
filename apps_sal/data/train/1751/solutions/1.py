@@ -1,25 +1,25 @@
 
-def queue_battle(dist,*armies):
+def queue_battle(dist, *armies):
 
     armies_copy = [*armies]
-    armies= [[*a] for a in armies]
+    armies = [[*a] for a in armies]
     armies_left = [i for i in range(len(armies))]
     soldiers_id = [[i for i in range(len(army))] for army in armies]
     bullets_between = [[] for i in armies_left]
 
     while True:
 
-        bullets_between = [[[s, s+l] for (s, l) in bullets] for bullets in bullets_between]
+        bullets_between = [[[s, s + l] for (s, l) in bullets] for bullets in bullets_between]
         recovering_armies = []
 
         for i in range(len(bullets_between)):
             for j in range(len(bullets_between[i])):
                 if bullets_between[i][j][1] >= dist:
-                    del armies[armies_left[(i+1)%len(armies_left)]][0]
-                    del soldiers_id[armies_left[(i+1)%len(armies_left)]][0]
-                    recovering_armies.append(armies_left[(i+1)%len(armies_left)])
+                    del armies[armies_left[(i + 1) % len(armies_left)]][0]
+                    del soldiers_id[armies_left[(i + 1) % len(armies_left)]][0]
+                    recovering_armies.append(armies_left[(i + 1) % len(armies_left)])
                     break
-            bullets= []
+            bullets = []
             for j in range(len(bullets_between[i])):
                 if bullets_between[i][j][1] < dist:
                     bullets.append(bullets_between[i][j])
@@ -28,9 +28,9 @@ def queue_battle(dist,*armies):
         for i in range(len(armies_left)):
             if armies_left[i] not in recovering_armies:
                 bullet_speed = armies[armies_left[i]][0]
-                bullets_between[i].append( [bullet_speed, 0] )
+                bullets_between[i].append([bullet_speed, 0])
 
-        if len(armies_left) == 0: 
+        if len(armies_left) == 0:
             return (-1, ())
         if len(armies_left) == 1:
             return (armies_left[0], tuple(soldiers_id[armies_left[0]]))
@@ -48,4 +48,4 @@ def queue_battle(dist,*armies):
 
         armies_left = armies_left_new
 
-    return 
+    return

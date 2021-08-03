@@ -2,7 +2,8 @@ class TrieNode:
     def __init__(self):
         self.children = defaultdict(TrieNode)
         self.is_end = False
-        
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -28,4 +29,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

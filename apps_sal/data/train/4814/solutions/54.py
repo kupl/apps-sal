@@ -4,10 +4,8 @@ def is_palindrome(s):
     for x in s:
         dni -= 1
         if x.lower() == s[dni].lower():
-           ri = True
+            ri = True
         else:
             ri = False
             break
     return ri
-
-

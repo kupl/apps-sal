@@ -1,6 +1,7 @@
 from random import choice, shuffle
 from typing import List, Optional, Tuple
 
+
 def decode(cr: str, size: int) -> Tuple[int, int]:
     """
     Decode chess notation into a row, col tuple
@@ -10,12 +11,14 @@ def decode(cr: str, size: int) -> Tuple[int, int]:
     r = (int(cr[1]) - 1) % size
     return r, c
 
+
 def encode(r: int, c: int) -> str:
     """
     Encode a row, col tuple into chess notation (works up to a board size of 10)
     E.g.: (1, 3) -> 'd2'
     """
     return f'{chr(ord("a") + c)}{(r + 1) % 10}'
+
 
 def build_coverage(queens: List[Tuple[int, int]], size: int) -> List[List[int]]:
     """
@@ -25,7 +28,7 @@ def build_coverage(queens: List[Tuple[int, int]], size: int) -> List[List[int]]:
     :param size: Edge size of the board
     """
     result = [
-        [0 for _ in range(size)] 
+        [0 for _ in range(size)]
         for _ in range(size)
     ]
     for q, (qr, qc) in enumerate(queens):
@@ -43,6 +46,7 @@ def build_coverage(queens: List[Tuple[int, int]], size: int) -> List[List[int]]:
                         result[rr][cc] += 1
     return result
 
+
 def solve(queens: List[Tuple[int, int]], size: int) -> Optional[str]:
     """
     Given a list of (row, col) queen positions and a size of board, apply a iterative repair algorithm
@@ -56,20 +60,20 @@ def solve(queens: List[Tuple[int, int]], size: int) -> Optional[str]:
         cycle += 1
         coverage = build_coverage(queens, size)
         queen_coverage = [(coverage[qr][qc], qr, qc) for qr, qc in queens]
-        
+
         if all(qc[0] == 0 for qc in queen_coverage):
             # Found solution
             break
-        
+
         # Find most coverage on queens, and chose a random queen with that coverage
         most = max(qc[0] for qc in queen_coverage[1:])
         candidates = [
-            (qr, qc, i) 
-            for i, (c, qr, qc) in enumerate(queen_coverage[1:], 1) 
+            (qr, qc, i)
+            for i, (c, qr, qc) in enumerate(queen_coverage[1:], 1)
             if c == most
         ]
         # Target queen
-        tr, tc, ti = choice(candidates)            
+        tr, tc, ti = choice(candidates)
 
         # Find the positions with the lowest coverage on the same row
         best, best_pos = None, []
@@ -81,13 +85,14 @@ def solve(queens: List[Tuple[int, int]], size: int) -> Optional[str]:
                 best, best_pos = cov, [r]
             elif cov == best:
                 best_pos.append(r)
-        
+
         # Move to a random row on the column (from options with the lowest coverage)
         queens[ti] = (choice(best_pos), tc)
         if cycle > 20:
             return None
 
     return ','.join([encode(qr, qc) for qr, qc in queens])
+
 
 def queens(position, size):
     """
@@ -115,5 +120,3 @@ def queens(position, size):
         if result:
             return result
         # Looks like we found a local optimum, so re-randomise and start again
-
-

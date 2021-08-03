@@ -52,4 +52,3 @@ for i in range(n):
 
 でOK
 '''
-

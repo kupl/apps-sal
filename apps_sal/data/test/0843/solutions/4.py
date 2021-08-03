@@ -17,4 +17,3 @@ while True:
         pos += length
     else:
         pos -= length
-

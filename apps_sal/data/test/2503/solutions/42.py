@@ -33,4 +33,5 @@ def __starting_point():
     n, m = list(map(int, input().split()))
     print((solve('{} {}\n'.format(n, m) + '\n'.join([input() for _ in range(n)]))))
 
+
 __starting_point()

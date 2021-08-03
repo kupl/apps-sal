@@ -7,8 +7,8 @@ ans[0] = 1
 dp[1] = 1
 for i in range(k):
     l[i], r[i] = map(int, input().split())
-    
-    
+
+
 for i in range(1, n):
     total = 0
     for j in range(k):

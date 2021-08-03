@@ -1,4 +1,4 @@
-a,b = [int(x) for x in input().split(' ')]
+a, b = [int(x) for x in input().split(' ')]
 c = 0
 while b >= a:
     c += 1
@@ -6,4 +6,3 @@ while b >= a:
     b *= 2
 
 print(c)
-

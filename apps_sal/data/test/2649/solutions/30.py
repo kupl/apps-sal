@@ -8,4 +8,3 @@ for cnt, val in enumerate(l0):
 l1.sort()
 l2.sort()
 print((max(l1[-1] - l1[0], l2[-1] - l2[0])))
-

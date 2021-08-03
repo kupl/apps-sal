@@ -3,6 +3,7 @@ class Solution:
         prefix = [0]
         for p in piles:
             prefix.append(prefix[-1] + p)
+
         @lru_cache(None)
         def dp(i, j):
             if i == j:

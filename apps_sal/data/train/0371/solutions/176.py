@@ -2,7 +2,7 @@ class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
-        
+
         bus_stops = {}
         untaken_bus, bfs_queue = set(), []
         for bus, stops in enumerate(routes):
@@ -11,7 +11,7 @@ class Solution:
                 bfs_queue.append(bus)
                 continue
             untaken_bus.add(bus)
-            
+
         res = 1
         while bfs_queue:
             next_bfs_queue = []

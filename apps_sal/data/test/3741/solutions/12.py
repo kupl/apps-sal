@@ -7,6 +7,8 @@ sas = min(list(map(len, h)))
 ans = 1e9
 graf = [[] for _ in range(100000)]
 rebra = []
+
+
 def bfs(assx, sasx):
     q = deque()
     q.append(assx)
@@ -23,6 +25,8 @@ def bfs(assx, sasx):
                 dis[i] = dis[x] + 1
                 q.append(i)
     return 0
+
+
 for i in range(len(h)):
     h[i].reverse()
 for i in range(60):
@@ -46,4 +50,3 @@ for i in rebra:
     if g:
         ans = min(ans, g)
 print(ans if ans != 1e9 else -1)
-

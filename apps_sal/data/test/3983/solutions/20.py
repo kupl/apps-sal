@@ -52,6 +52,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 for _ in range(T):
     N, M = list(map(int, input().split()))
     ab = [list(map(int, input().split())) for _ in range(M)]
@@ -61,8 +62,8 @@ for _ in range(T):
         b -= 1
         uf.union(a, b)
     roots_size = [uf.size(i) % 2 for i in uf.roots()]
-    s_size = uf.size(0)%2
-    t_size = uf.size(N - 1)%2
+    s_size = uf.size(0) % 2
+    t_size = uf.size(N - 1) % 2
     flg = (N * (N - 1) // 2 - M) % 2
     if N % 2 == 1:
         flg = flg ^ 0
@@ -85,4 +86,3 @@ for _ in range(T):
             print('First')
         else:
             print('Second')
-

@@ -8,15 +8,15 @@ Cs.append([xs, ys, 0])
 Cs.append([xt, yt, 0])
 
 Es = dd(dict)
-for i in range(N+2):
+for i in range(N + 2):
     xi, yi, ri = Cs[i]
-    for j in range(i+1, N+2):
+    for j in range(i + 1, N + 2):
         xj, yj, rj = Cs[j]
-        Es[i][j] = Es[j][i] = max(0, math.sqrt((xi-xj)**2 + (yi-yj)**2) - ri - rj)
+        Es[i][j] = Es[j][i] = max(0, math.sqrt((xi - xj)**2 + (yi - yj)**2) - ri - rj)
 
 # dists: sortest path
 INF = float('inf')
-dists = [INF] * (N+2)
+dists = [INF] * (N + 2)
 dists[N] = 0
 
 # dijk
@@ -34,5 +34,4 @@ while q:
             continue
         dists[to] = d + c
         heappush(q, (dists[to], to))
-print((dists[N+1]))
-
+print((dists[N + 1]))

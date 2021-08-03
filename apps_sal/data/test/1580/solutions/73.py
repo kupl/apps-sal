@@ -20,15 +20,15 @@ class UnionFind:
             self.root[y] = x
             self.size[x] += self.size[y]
 
+
 N, M = [int(_) for _ in input().split()]
 uf = UnionFind(N)
 
 for i in range(M):
     X, Y, Z = [int(_) for _ in input().split()]
-    uf.union(X-1, Y-1)
+    uf.union(X - 1, Y - 1)
 
 ans = set()
 for i in range(N):
     ans.add(uf.find(i))
 print((len(ans)))
-

@@ -73,4 +73,3 @@ for c, d in CD:
     AB[c][1] = d
 
 print(*ans, sep="\n")
-

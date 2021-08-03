@@ -7,7 +7,8 @@ class Solution:
                 if p * p > k:
                     plist.append(k)
                     break
-                if k % p == 0: break
+                if k % p == 0:
+                    break
             else:
                 plist.append(k)
         pset = set(plist)
@@ -27,7 +28,8 @@ class Solution:
                 continue
             prime = True
             for p in plist:
-                if p * p > x: break
+                if p * p > x:
+                    break
                 if x % p == 0:
                     prime = False
                     break

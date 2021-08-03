@@ -1,4 +1,4 @@
-def check(a, x): 
+def check(a, x):
     b = set(a)
     if x in b:
         return True

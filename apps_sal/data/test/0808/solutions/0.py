@@ -26,4 +26,3 @@ if e:
     print('E%d' % e)
 else:
     print()
-

@@ -1,5 +1,5 @@
 
-#taken from https://stackoverflow.com/questions/30698441/optimal-way-to-find-sums-of-all-contiguous-sub-arrays-max-difference
+# taken from https://stackoverflow.com/questions/30698441/optimal-way-to-find-sums-of-all-contiguous-sub-arrays-max-difference
 def max_sums(d):
     stack = [(-1, float('inf'))]
     sum_ = 0
@@ -15,9 +15,11 @@ def max_sums(d):
         sum_ += prev_x * (len(d) - prev_i) * (prev_i - prev_prev_i)
     return sum_
 
+
 def max_differences_sum(d):
     return max_sums(d) + max_sums([-x for x in d])
 
-n=int(input())
-l=list(map(int,input().split()))
+
+n = int(input())
+l = list(map(int, input().split()))
 print(max_differences_sum(l))

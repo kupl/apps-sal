@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 c = [0] * 100
 for i in a:
     c[i] += 1
@@ -21,8 +21,8 @@ for i in range(100):
 xk = len(list([it for it in x if it]))
 yk = len(list([it for it in y if it]))
 print(xk * yk)
-zs = [None] * (2*n)
-for i in range(2*n):
+zs = [None] * (2 * n)
+for i in range(2 * n):
     if x[a[i]] > 0:
         x[a[i]] -= 1
         zs[i] = 1
@@ -31,4 +31,3 @@ for i in range(2*n):
         y[a[i]] -= 1
         zs[i] = 2
 print(*zs)
-

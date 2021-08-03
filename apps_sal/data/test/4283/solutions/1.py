@@ -9,4 +9,3 @@ for i in range(len(a)):
     maxsize = max(maxsize, i - j + 1)
 
 print(maxsize)
-

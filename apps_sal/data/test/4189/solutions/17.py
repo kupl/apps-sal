@@ -15,5 +15,3 @@ for i in range(1000):
     if(kol >= c):
         print(i)
         break
-    
-

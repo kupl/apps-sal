@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 
 n = int(input())
 uch = list(map(int, sys.stdin.readline().split()))
@@ -22,9 +23,8 @@ for i in range(m):
     if (maxl < dic[langf[i]]):
         maxl = dic[langf[i]]
         maxs = dic[subf[i]]
-        ans = i+1
+        ans = i + 1
     elif (maxl == dic[langf[i]]) and (maxs < dic[subf[i]]):
         maxs = dic[subf[i]]
-        ans = i+1
+        ans = i + 1
 print(ans)
-

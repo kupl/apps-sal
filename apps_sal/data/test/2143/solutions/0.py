@@ -11,4 +11,3 @@ for i in range(n - 1):
             dict[sum] = 1
 
 print(max(dict.values()))
-

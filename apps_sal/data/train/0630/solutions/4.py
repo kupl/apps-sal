@@ -3,6 +3,7 @@
 # cook your dish here
 dt, a = None, None
 
+
 def dfs(z):
     r = [{}, {}]
 
@@ -37,6 +38,7 @@ def dfs(z):
 
     return r
 
+
 t = int(input())
 for i in range(t):
 
@@ -59,4 +61,3 @@ for i in range(t):
         v = -1
 
     print(v)
-

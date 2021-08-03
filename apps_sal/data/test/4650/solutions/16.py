@@ -11,4 +11,3 @@ for _ in range(t):
     c2 -= x
     s = c0 + x + c1 // 3 + c2 // 3
     print(s)
-

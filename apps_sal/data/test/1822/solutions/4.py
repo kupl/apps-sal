@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(100000)
+
+
 def solve():
     n, x, = rv()
     x -= 1
@@ -33,11 +35,16 @@ def solve():
                 res.append(comb)
     print('\n'.join(map(str, [val + 1 for val in res])))
 
+
 def bad(index, a, x):
-    if index == x: return True
-    if a[index] == x: return True
-    if a[index] == -1: return False
+    if index == x:
+        return True
+    if a[index] == x:
+        return True
+    if a[index] == -1:
+        return False
     return bad(a[index], a, x)
+
 
 def get(index, a, nxt):
     if a[index] == -1:
@@ -46,8 +53,12 @@ def get(index, a, nxt):
         nxt[a[index]] = False
         return get(a[index], a, nxt) + 1
 
+
 def prt(l): return print(' '.join(l))
 def rv(): return map(int, input().split())
 def rl(n): return [list(map(int, input().split())) for _ in range(n)]
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 solve()

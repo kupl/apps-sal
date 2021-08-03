@@ -11,7 +11,7 @@ class Solution:
 
                 res += length
             return res
-        
+
         M = len(mat)
         N = len(mat[0])
         res = 0
@@ -23,4 +23,3 @@ class Solution:
                 print(h)
                 res += countOneRow(h)
         return res
-

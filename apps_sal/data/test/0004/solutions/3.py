@@ -15,4 +15,3 @@ while '7' not in ('%s%s' % (hh, mm)):
                 hh = 23
 
 print(ans)
-

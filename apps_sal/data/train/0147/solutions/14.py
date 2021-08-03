@@ -19,4 +19,3 @@ class Solution:
             cur_efficiency = eff_speed[i - 1][0]
             max_perf = max(max_perf, cur_efficiency * speed_sum)
         return max_perf % mod
-

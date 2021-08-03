@@ -4,13 +4,15 @@ for i in range(n):
     bamboo = int(input())
     bamboos.append(bamboo)
 
+
 def Base_10_to_n(X, n):
     X_dumy = X
     out = ''
-    while X_dumy>0:
-        out = str(X_dumy%n)+out
-        X_dumy = int(X_dumy/n)
+    while X_dumy > 0:
+        out = str(X_dumy % n) + out
+        X_dumy = int(X_dumy / n)
     return out
+
 
 def calc_score(group, target):
     score = 0
@@ -19,6 +21,7 @@ def calc_score(group, target):
     length = sum(group)
     score += abs(length - target)
     return score
+
 
 min_score = 10**12
 for i in range(4**n):

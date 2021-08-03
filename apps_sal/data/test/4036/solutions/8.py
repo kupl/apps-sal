@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 n, k = mp()
 a = [i for i in range(1, k + 1)]
 s = (1 + k) * k // 2
@@ -23,6 +24,6 @@ if s == n:
     q = 0
     for i in range(k):
         q += p[i]
-        print(a[i] + q, end = ' ')
+        print(a[i] + q, end=' ')
 else:
     print('NO')

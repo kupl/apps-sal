@@ -1,3 +1,3 @@
-import os
-get_output=lambda Q:''.join(os.popen(Q).readlines())
 import subprocess
+import os
+def get_output(Q): return ''.join(os.popen(Q).readlines())

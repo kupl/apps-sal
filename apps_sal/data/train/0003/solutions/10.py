@@ -10,15 +10,17 @@ from collections import defaultdict, deque, Counter
 # sys.setrecursionlimit(1000000)
 # input aliases
 input = sys.stdin.readline
-getS = lambda: input().strip()
-getN = lambda: int(input())
-getList = lambda: list(map(int, input().split()))
-getZList = lambda: [int(x) - 1 for x in input().split()]
+def getS(): return input().strip()
+def getN(): return int(input())
+def getList(): return list(map(int, input().split()))
+def getZList(): return [int(x) - 1 for x in input().split()]
+
 
 INF = float("inf")
 
 MOD = 10 ** 9 + 7
-divide = lambda x: pow(x, MOD-2, MOD)
+def divide(x): return pow(x, MOD - 2, MOD)
+
 
 def judge(at, ax, ay, bt, bx, by):
     if abs(at - bt) >= abs(ax - bx) + abs(ay - by):
@@ -36,9 +38,10 @@ def solve():
         return
 
     li.sort(reverse=True)
-    print(sum(li[:k+1]))
+    print(sum(li[:k + 1]))
 
     return
+
 
 def main():
     n = getN()
@@ -46,8 +49,11 @@ def main():
         solve()
 
     return
+
+
 def __starting_point():
     main()
     # solve()
+
 
 __starting_point()

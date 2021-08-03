@@ -17,10 +17,10 @@ class Solution:
         cool = [node.__next__ for node in cool if node.val == root.val]
         if root.val == head.val:
             cool.append(head.__next__)
-            
+
         if None in cool:
             return True
-        
+
         l = r = False
         if root.left:
             l = self.isSubPath(head, root.left, path.copy(), cool)
@@ -34,4 +34,3 @@ class Solution:
         if root.left is None and root.right is None:
             cool = []
         return False
-

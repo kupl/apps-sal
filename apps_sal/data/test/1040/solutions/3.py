@@ -21,4 +21,5 @@ def __starting_point():
         remove_fox(t)
     print((len(t)))
 
+
 __starting_point()

@@ -1,2 +1,2 @@
 def duty_free(price, disc, h_c):
-    return int(h_c/(price*(disc/100)))
+    return int(h_c / (price * (disc / 100)))

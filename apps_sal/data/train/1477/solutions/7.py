@@ -1,14 +1,14 @@
-t=int(input())
+t = int(input())
 for _ in range(t):
- n=int(input())
- s=input()
- wow=s
- for i in range(n):
-  now=s[:i]+s[i+1:]
-  for j in range(n):
-   wow=min(wow,now[:j]+s[i]+now[j:])
-  
- print(wow)
+    n = int(input())
+    s = input()
+    wow = s
+    for i in range(n):
+        now = s[:i] + s[i + 1:]
+        for j in range(n):
+            wow = min(wow, now[:j] + s[i] + now[j:])
+
+    print(wow)
 '''    c=True
     ind=0
     while c and ind<n:
@@ -24,7 +24,3 @@ for _ in range(t):
        mm=min(l,key=lambda aa:s[:ind]+s[aa]+s[ind:aa]+s[aa+1:])
       s=s[:ind]+m+s[ind:mm]+s[mm+1:]
     print(s)'''
-   
-  
- 
-

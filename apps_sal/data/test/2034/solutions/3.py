@@ -14,6 +14,7 @@ for _ in range(m):
     graph[x].append(y)
     graph[y].append(x)
 
+
 def dfs(x, pre):
     if notused[x]:
         notused[x] = False
@@ -25,6 +26,7 @@ def dfs(x, pre):
     else:
         return False
 
+
 k = 0
 for j in range(n):
     if notused[j]:
@@ -32,4 +34,3 @@ for j in range(n):
             k += 1
 
 print(k)
-

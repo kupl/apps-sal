@@ -7,7 +7,7 @@ flow = 0
 for i in range(1, N):
     t = (a[i] + a[i - 1]) - x
     if flow != 0:
-        a[i-1] -= flow
+        a[i - 1] -= flow
         t -= flow
         flow = 0
 

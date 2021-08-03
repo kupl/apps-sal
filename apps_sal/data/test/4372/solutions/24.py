@@ -1,24 +1,26 @@
-n=int(input())
-a=list(map(int,input().split()))
+n = int(input())
+a = list(map(int, input().split()))
 
-M=max(a)
+M = max(a)
 
-def gcd(a,b):
-    if a<b: a,b=b,a
-    while b!=0:
-        a,b=b,a%b
+
+def gcd(a, b):
+    if a < b:
+        a, b = b, a
+    while b != 0:
+        a, b = b, a % b
     return a
 
-r=M-a[0]
 
-for i in range(1,n):
-    r=gcd(r,M-a[i])
+r = M - a[0]
+
+for i in range(1, n):
+    r = gcd(r, M - a[i])
 
 
-ans=0
+ans = 0
 
 for i in a:
-    ans+=(M-i)//r
+    ans += (M - i) // r
 
-print(ans,r)
-
+print(ans, r)

@@ -26,4 +26,3 @@ sad_years = [l - 1] + sad_years + [r + 1]
 for i in range(len(sad_years) - 1):
     res = max(res, sad_years[i + 1] - sad_years[i] - 1)
 print(res)
-

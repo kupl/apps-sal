@@ -4,11 +4,11 @@ class Solution:
 
         for c in s:
             maxLet = max(maxLet, ord(c))
-        
+
         maxLet = chr(maxLet)
         mx = s
-        for i,c in enumerate(s):
+        for i, c in enumerate(s):
             if c == maxLet:
-                mx = max(mx,s[i:])
-                
+                mx = max(mx, s[i:])
+
         return mx

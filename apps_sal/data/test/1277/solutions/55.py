@@ -18,7 +18,8 @@ def main():
     while st:
         x = st.pop()
         for y in adj[x]:
-            if y == prev[x]: continue
+            if y == prev[x]:
+                continue
             prev[y] = x
             st.append(y)
     path = [v]
@@ -37,8 +38,10 @@ def main():
         x, d = st.pop()
         dist[x] = d
         for y in adj[x]:
-            if y == prev[x]: continue
-            if y == square: continue
+            if y == prev[x]:
+                continue
+            if y == square:
+                continue
             prev[y] = x
             st.append((y, d + 1))
     star_square = max(dist)
@@ -49,7 +52,9 @@ def main():
         res = (l - 1) // 2 + star_square + 1
     print(res)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

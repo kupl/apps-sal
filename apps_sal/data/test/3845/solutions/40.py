@@ -20,4 +20,3 @@ for i in range(50):
         else:
             s.append('#')
     print(*s, sep='')
-

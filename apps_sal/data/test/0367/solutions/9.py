@@ -1,7 +1,7 @@
 s = input()
 a = [0] * 26
 for c in s:
-    a[ord(c)-ord('a')] += 1
+    a[ord(c) - ord('a')] += 1
 x = 0
 y = 25
 while x < y:
@@ -22,6 +22,3 @@ for i in range(26):
     if a[i] % 2 == 1:
         middle = c
 print(r + middle + r[::-1])
-
-        
-

@@ -1,2 +1,2 @@
 x = input()[8]
-print("A"+x+"C")
+print("A" + x + "C")

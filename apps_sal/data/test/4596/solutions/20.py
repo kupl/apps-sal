@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 count = 0
 while True:
@@ -9,7 +9,7 @@ while True:
             flg = True
     if flg:
         break
-    
+
     for j in range(n):
         a[j] /= 2
     count += 1

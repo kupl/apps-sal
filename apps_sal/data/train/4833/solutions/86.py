@@ -5,5 +5,5 @@ def replace_exclamation(s):
             ans += '!'
         else:
             ans += s[i]
-        
+
     return ans

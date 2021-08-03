@@ -11,4 +11,3 @@ for _ in range(int(input())):
     if b1 == b2 and b1 == a1 + a2:
         flag = True
     print('Yes' if flag else 'No')
-

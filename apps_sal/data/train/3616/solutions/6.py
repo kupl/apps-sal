@@ -12,8 +12,8 @@ def prime_primes(N):
     count_of_prime_primes = len(prime_prms)
 
     return count_of_prime_primes, math.floor(sum(prime_prms))
-        
-        
+
+
 def is_prime(nr):
     if nr > 1:
         for i in range(2, nr):

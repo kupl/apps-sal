@@ -10,15 +10,14 @@ if np.any(G != G2):
     print((-1))
     return
 else:
-    c = [2*10**9]*N
+    c = [2 * 10**9] * N
     d = np.diag(c)
     G += d
     ans = 0
     for i in range(N):
-        for j in range(i+1, N):
-            two = np.min(G[i]+G[j])
-            if two != G[i,j]:
-                ans += G[i,j]
+        for j in range(i + 1, N):
+            two = np.min(G[i] + G[j])
+            if two != G[i, j]:
+                ans += G[i, j]
 
 print(ans)
-

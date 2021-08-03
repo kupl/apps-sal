@@ -115,4 +115,3 @@ def solve(n, k, xyc):
 n, k = list(map(int, input().split()))
 xyc = list(map(int, sys.stdin.read().split()))
 print((solve(n, k, xyc)))
-

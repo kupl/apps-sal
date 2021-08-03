@@ -13,13 +13,13 @@ if all(odd):
 elif not any(odd):
     even = True
 else:
-    valid =False
+    valid = False
 
 if valid:
 
     M = 31
     if even:
-        print((M+1))
+        print((M + 1))
         print((*([1 << m for m in range(M)] + [1])))
     else:
         print(M)
@@ -74,4 +74,3 @@ if valid:
         print(ans)
 else:
     print((-1))
-

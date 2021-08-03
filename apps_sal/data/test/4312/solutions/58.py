@@ -1,10 +1,10 @@
-A,B,C,D = map(int,input().split())
+A, B, C, D = map(int, input().split())
 while True:
-    C-=B
+    C -= B
     if C <= 0:
         print("Yes")
         return
-    A-=D
+    A -= D
     if A <= 0:
         print("No")
         return

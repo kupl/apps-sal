@@ -16,4 +16,3 @@ for i in range(len(sorted_c)):
 dict_c.sort()
 for i in range(len(dict_c)):
     print((dict_c[i]))
-

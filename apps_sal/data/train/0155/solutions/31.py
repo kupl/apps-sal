@@ -1,7 +1,7 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
         jumps = defaultdict(list)
-        
+
         def check(it):
             stack = []
             for i in it:
@@ -13,9 +13,9 @@ class Solution:
         N = len(arr)
         check(range(N))
         check(reversed(range(N)))
-        
+
         @lru_cache(None)
         def dfs(i):
-            return 1 + max((dfs(j) for j in jumps[i]), default = 0)
-        
+            return 1 + max((dfs(j) for j in jumps[i]), default=0)
+
         return max((dfs(i) for i in range(N)))

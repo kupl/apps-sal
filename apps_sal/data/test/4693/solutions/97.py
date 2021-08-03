@@ -4,4 +4,3 @@ if 10 <= a + b:
     print("error")
 else:
     print((a + b))
-

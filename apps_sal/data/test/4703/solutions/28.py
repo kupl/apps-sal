@@ -13,4 +13,3 @@ def dfs(now, total, i):
 
 
 print((dfs(int(s[0]), 0, 1)))
-

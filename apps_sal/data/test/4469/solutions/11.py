@@ -13,5 +13,3 @@ for i in range(q):
         d[b] = maximum
     elif a == '?':
         print(min(d[b] - minimum, maximum - d[b]))
-        
-

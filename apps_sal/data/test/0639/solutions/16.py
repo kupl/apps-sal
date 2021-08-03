@@ -8,5 +8,3 @@ if X in A:
     out += 1
 
 print(out)
-
-

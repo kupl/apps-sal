@@ -17,4 +17,3 @@ else:
         print(s[:N - n])
     else:
         print(':(')
-

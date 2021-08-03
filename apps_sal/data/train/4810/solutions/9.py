@@ -20,8 +20,8 @@ def make_spanning_tree(edges, t):
                     elif edge[0][1] == node:
                         if edge[1] >= val and edge[0][0] not in X:
                             val, current, new_X = edge[1], edge, edge[0][0]
-        if new_X is None: break
+        if new_X is None:
+            break
         X.append(new_X)
         output.append(current)
     return output
-

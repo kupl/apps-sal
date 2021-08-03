@@ -3,10 +3,11 @@
 def YESNO(ans, yes="YES", no="NO"):
     print(([no, yes][ans]))
 
-II = lambda: int(input())
-MI = lambda: list(map(int, input().split()))
-MIL = lambda: list(MI())
-MIS = lambda: input().split()
+
+def II(): return int(input())
+def MI(): return list(map(int, input().split()))
+def MIL(): return list(MI())
+def MIS(): return input().split()
 
 
 def check(s):
@@ -32,7 +33,9 @@ def main():
             return False
     return True
 
+
 def __starting_point():
     YESNO(main())
+
 
 __starting_point()

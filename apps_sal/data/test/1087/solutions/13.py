@@ -5,7 +5,7 @@ def submit():
     a = [int(e) for e in input().split()]
     max_bit = 40
     bit_cnt = []
-    
+
     b = 0
     bit = 1
     while b <= max_bit:
@@ -52,5 +52,3 @@ def submit():
 
 
 submit()
-        
-

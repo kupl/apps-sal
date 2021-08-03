@@ -19,7 +19,7 @@ class Solution:
                     neg.append(index)
                 l.append(num)
                 index += 1
-        
+
         if len(neg) % 2 == 1:
             dist = min(neg[0] + 1, len(l) - neg[-1])
         else:

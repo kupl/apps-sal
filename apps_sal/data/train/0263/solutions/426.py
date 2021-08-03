@@ -38,4 +38,3 @@ class Solution:
             res += helper(i, num_hops)
         # print(res, cache)
         return res % mod
-

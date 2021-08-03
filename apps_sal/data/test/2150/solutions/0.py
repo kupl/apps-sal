@@ -10,4 +10,3 @@ for e in ls:
 
 for e in res:
     print(e, end=' ')
-

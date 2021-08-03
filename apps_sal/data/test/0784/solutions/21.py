@@ -1,5 +1,5 @@
 from math import *
-a ,b = map(int, input().split())
+a, b = map(int, input().split())
 ans = [b]
 per = 0
 while b > a:

@@ -4,4 +4,4 @@ def arithmetic(a, b, operator):
         'subtract': lambda a, b: a - b,
         'multiply': lambda a, b: a * b,
         'divide': lambda a, b: a / b
-        }[operator](a, b)
+    }[operator](a, b)

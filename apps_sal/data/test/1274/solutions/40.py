@@ -12,15 +12,14 @@ heapq.heapify(hq)
 
 for i in range(M):
     for j in range(x, N):
-        if AB[j][0] > i+1:
+        if AB[j][0] > i + 1:
             x = j
             break
-        heapq.heappush(hq, AB[j][1]*-1)
+        heapq.heappush(hq, AB[j][1] * -1)
     else:
         x = N
-    
+
     if hq:
-        res += heapq.heappop(hq)*-1
+        res += heapq.heappop(hq) * -1
 
 print(res)
-

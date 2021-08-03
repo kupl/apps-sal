@@ -23,7 +23,7 @@ if (two == 9):
 elif (one == 1):
     answ = '9' * (xlen - 1)
 else:
-    answ = str((one - 1)) + ("9" * (xlen-1))
+    answ = str((one - 1)) + ("9" * (xlen - 1))
 
 answ = str(answ)
 sumansw = 0

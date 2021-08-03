@@ -1,3 +1,5 @@
-a,b=input().split()
-if a==b:print('H')
-else:print('D')
+a, b = input().split()
+if a == b:
+    print('H')
+else:
+    print('D')

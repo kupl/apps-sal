@@ -8,10 +8,10 @@ class Solution:
         if A[1] <= A[0]:
             return False
         while i < n:
-            if isIncreasing and A[i-1] < A[i]:
+            if isIncreasing and A[i - 1] < A[i]:
                 i += 1
                 continue
-            elif A[i] < A[i-1]:
+            elif A[i] < A[i - 1]:
                 isIncreasing = False
                 i += 1
                 continue

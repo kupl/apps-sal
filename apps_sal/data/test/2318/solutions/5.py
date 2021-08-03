@@ -1,7 +1,10 @@
 def getN():
     return int(input())
+
+
 def getList():
     return list(map(int, input().split()))
+
 
 def solve():
     first = input()

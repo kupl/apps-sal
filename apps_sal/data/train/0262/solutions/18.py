@@ -8,9 +8,10 @@ class Solution:
         equations = list(zip(result, *words))
         used_digits = set()
         nonzero_chars = set(equations[0])
-        assignments = {'#':0}
+        assignments = {'#': 0}
+
         def isSAT(eqn_index, carry):
-            if eqn_index<0:
+            if eqn_index < 0:
                 return carry == 0
             remaining_terms = []
             for t in equations[eqn_index]:
@@ -27,11 +28,11 @@ class Solution:
                         del assignments[t]
                         used_digits.remove(guess)
                     return False
-            
+
             s = sum(assignments[c] for c in equations[eqn_index][1:]) + carry
             if s % 10 != assignments[equations[eqn_index][0]]:
                 return False
             else:
                 return isSAT(eqn_index - 1, s // 10)
-           
-        return isSAT(max_len-1, 0)
+
+        return isSAT(max_len - 1, 0)

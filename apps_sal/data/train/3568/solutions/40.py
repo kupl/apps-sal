@@ -10,4 +10,3 @@ def bumps(road):
         return 'Woohoo!'
     else:
         return 'Car Dead'
-

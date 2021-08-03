@@ -28,4 +28,3 @@ dist = 0
 for i in range(2 * time):
     dist += (speed[i] + speed[i + 1]) / 4
 print(dist)
-

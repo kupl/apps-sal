@@ -19,4 +19,3 @@ for i in range(1, n):
 
 ans = max(dp[-1])
 print(n - ans)
-

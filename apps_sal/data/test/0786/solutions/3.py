@@ -24,4 +24,3 @@ elif upper_bound is not None and lower_bound >= upper_bound:
     print("Impossible")
 else:
     print(rating - (lower_bound + 1) + 1900)
-

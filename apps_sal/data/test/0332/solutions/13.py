@@ -6,6 +6,7 @@
 
 from collections import defaultdict
 
+
 def main():
     n, m = list(map(int, input().split()))
     a = [list(map(int, input().split())) for _ in range(n)]
@@ -32,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,4 +1,4 @@
-a, b = map(int,input().split())
+a, b = map(int, input().split())
 c = False
 if b < a:
     c = True
@@ -6,7 +6,7 @@ if b < a:
 xa = 0
 n = 0
 
-while a >= (xa + 1)*xa // 2:
+while a >= (xa + 1) * xa // 2:
     xa += 1
 xa -= 1
 xb = 0
@@ -24,42 +24,37 @@ if a - sa != 0 and b >= x:
     if c == False:
         for i in range(xa):
             if i != x - 1:
-                print(i + 1, sep = ' ', end = ' ')
-        print(xa + 1, sep = ' ', end = ' ')
+                print(i + 1, sep=' ', end=' ')
+        print(xa + 1, sep=' ', end=' ')
         print()
 else:
     if c == False:
         for i in range(xa):
-            print(i + 1, sep = ' ', end = ' ')
+            print(i + 1, sep=' ', end=' ')
         print()
 r = xb
 xb = 0
-while b >= (2*r + xb)*(xb+1) // 2:
+while b >= (2 * r + xb) * (xb + 1) // 2:
     xb += 1
 xb -= 1
 if flag == False:
     print(xb + 1)
     for i in range(xa, r + xb):
-        print(i + 1, sep = ' ', end = ' ')
+        print(i + 1, sep=' ', end=' ')
 else:
     print(xb + 2)
     for i in range(xa + 1, r + xb):
-        print(i + 1, sep = ' ', end = ' ')
+        print(i + 1, sep=' ', end=' ')
     print(x)
 if c == True:
     print(xa)
     if flag == True:
         for i in range(xa):
             if i != x - 1:
-                print(i + 1, sep = ' ', end = ' ')
-        print(xa + 1, sep = ' ', end = ' ')
+                print(i + 1, sep=' ', end=' ')
+        print(xa + 1, sep=' ', end=' ')
         print()
     else:
         for i in range(xa):
-            print(i + 1, sep = ' ', end = ' ')
-        print()    
-    
-    
-
-
-
+            print(i + 1, sep=' ', end=' ')
+        print()

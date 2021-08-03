@@ -1,11 +1,11 @@
 O = input()
 E = input()
 
-combi=''
+combi = ''
 
-for i in range(len(O)+len(E)):
-    if i%2==0:
-        combi+=O[i//2]
-    elif i%2!=2:
-        combi+=E[i//2]
+for i in range(len(O) + len(E)):
+    if i % 2 == 0:
+        combi += O[i // 2]
+    elif i % 2 != 2:
+        combi += E[i // 2]
 print(combi)

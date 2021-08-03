@@ -24,10 +24,10 @@ crds = list(map(int, input().split()))
 crds[0] -= 1
 crds[1] -= 1
 
-x1 = crds[0]//3
-y1 = crds[1]//3
-y2 = crds[0]%3
-x2 = crds[1]%3
+x1 = crds[0] // 3
+y1 = crds[1] // 3
+y2 = crds[0] % 3
+x2 = crds[1] % 3
 
 have_space = False
 for i in p[y2][x2]:
@@ -50,4 +50,3 @@ else:
                         p[i1][i2][i3][i4] = "!"
 
 prnt(p)
-

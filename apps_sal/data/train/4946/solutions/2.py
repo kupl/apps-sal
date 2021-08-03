@@ -3,5 +3,5 @@ def house_numbers_sum(inp):
     for house_num in inp:
         if house_num == 0:
             return total
-        else: 
+        else:
             total += house_num

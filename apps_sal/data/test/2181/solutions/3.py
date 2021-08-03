@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    a, d =[float(x) * 10000 for x in input().split(' ')]
+    a, d = [float(x) * 10000 for x in input().split(' ')]
     ans = []
 
     for i in range(1, int(input()) + 1):
@@ -26,7 +26,9 @@ def main():
 
     print('\n'.join(ans))
 
+
 def __starting_point():
     return(main())
+
 
 __starting_point()

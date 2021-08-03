@@ -5,7 +5,7 @@ class Solution:
             return 0
         n = len(nums)
         ans = n
-        
+
         pre = {}
         pre[0] = -1
         cur = 0
@@ -16,7 +16,5 @@ class Solution:
             if need in pre:
                 ans = min(ans, i - pre[need])
             pre[cur] = i
-        
-        return ans if ans < n else -1
-        
 
+        return ans if ans < n else -1

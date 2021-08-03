@@ -11,10 +11,12 @@ A, B = map(int, input().split())
 #     ans += (tmp%2) * 2**i
 # print(ans)
 
+
 def f(N):
     if N % 2 == 1:
-        return ((N+1)//2)%2
+        return ((N + 1) // 2) % 2
     else:
-        return ((N//2)%2)^N
+        return ((N // 2) % 2) ^ N
 
-print(f(A-1)^f(B))
+
+print(f(A - 1) ^ f(B))

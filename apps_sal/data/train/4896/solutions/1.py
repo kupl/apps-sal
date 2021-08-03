@@ -6,7 +6,9 @@ def build_trie(*words):
         for c in word:
             w += c
             l -= 1
-            if w not in dd: dd[w] = None
-            if l and dd[w] is None: dd[w] = {}
+            if w not in dd:
+                dd[w] = None
+            if l and dd[w] is None:
+                dd[w] = {}
             dd = dd[w]
     return d

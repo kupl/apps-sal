@@ -14,4 +14,3 @@ elif n == 2:
         print(n * m)
 else:
     print((n * m // 2) * 2)
-

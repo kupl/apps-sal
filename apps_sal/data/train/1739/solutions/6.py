@@ -9,7 +9,7 @@ def decodeBits(bits):
     return bits.replace(dash, '-').replace(dot, '.') \
                .replace(word_sep, '   ').replace(char_sep, ' ').replace(ones_sep, '')
 
+
 def decodeMorse(morse_code):
     return ' '.join(''.join(map(MORSE_CODE.get, word.split()))
                     for word in morse_code.split('   ')).strip()
-

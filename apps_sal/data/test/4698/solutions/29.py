@@ -11,4 +11,3 @@ for i in range(M):
 Sum = sum(T)
 for i in range(M):
     print((Sum - T[P[i] - 1] + X[i]))
-

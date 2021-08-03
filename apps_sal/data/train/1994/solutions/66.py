@@ -13,10 +13,9 @@ class Solution:
                 if flg:
                     pass
                 else:
-                    flg=True
-                    cnt+=1
+                    flg = True
+                    cnt += 1
             elif flg:
-                flg=False
+                flg = False
             cur = cur.__next__
         return cnt
-

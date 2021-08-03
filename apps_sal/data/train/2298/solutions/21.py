@@ -24,5 +24,5 @@ def main():
             se_ma.add(i)
     print((len(se_ma)))
 
-main()
 
+main()

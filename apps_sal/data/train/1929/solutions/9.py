@@ -1,6 +1,6 @@
 class StreamChecker(object):
 
-    def __init__(self, words):  
+    def __init__(self, words):
         self.waitlist = []
         self.trie = dict()
         for word in words:
@@ -15,6 +15,6 @@ class StreamChecker(object):
             waitlist.append(self.trie[letter])
         for item in self.waitlist:
             if letter in item:
-                waitlist.append(item[letter]) 
+                waitlist.append(item[letter])
         self.waitlist = waitlist
         return any('#' in item for item in self.waitlist)

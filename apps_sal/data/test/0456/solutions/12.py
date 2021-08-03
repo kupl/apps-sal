@@ -13,4 +13,3 @@ while cur < n:
         ans += s[cur]
         cur += 1
 print(ans)
-

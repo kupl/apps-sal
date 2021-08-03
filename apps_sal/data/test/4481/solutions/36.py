@@ -13,4 +13,3 @@ keys = sorted(list(c.keys()))
 for item in c:
     if c[item] == values[0]:
         print(item)
-

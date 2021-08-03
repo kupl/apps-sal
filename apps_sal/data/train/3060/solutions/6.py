@@ -1,4 +1,4 @@
-def get_required(player,enemy):
+def get_required(player, enemy):
     difference = player[0] + player[1] - enemy[0] - enemy[1]
     if difference >= 6:
         return 'Auto-win'
@@ -10,6 +10,6 @@ def get_required(player,enemy):
         return 'Random'
     else:
         if difference > 0:
-            return '(' + str(6-difference+1) + '..' + '6)'
+            return '(' + str(6 - difference + 1) + '..' + '6)'
         else:
-            return '(1' + '..' + str(6-abs(difference-1)) + ')'
+            return '(1' + '..' + str(6 - abs(difference - 1)) + ')'

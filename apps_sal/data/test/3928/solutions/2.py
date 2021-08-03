@@ -23,19 +23,18 @@ Next = [0 for _n in range(maxn)]
 
 # for (int i = 1; i <= n; i++)
 # for (int j = i; j <= n; j++) {
-for i in range(1, n+1):
-    for j in range(i, n+1):
+for i in range(1, n + 1):
+    for j in range(i, n + 1):
         if s[i] == s[j]:
             v[i][j] = v[i - 1][j - 1] + 1
 # for row in v: print(row)
 
 dp[0] = 0
-for i in range(1, n+1):
+for i in range(1, n + 1):
     dp[i] = dp[i - 1] + a
     for j in range(1, i):
         t = min(i - j, v[j][i])
-        if t :
+        if t:
             dp[i] = min(dp[i], dp[i - t] + b)
 
 print(dp[n])
-

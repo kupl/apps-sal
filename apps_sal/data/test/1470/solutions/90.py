@@ -8,8 +8,10 @@ from operator import xor
 
 mod = 10 ** 9 + 7
 
+
 def lmi():
     return list(map(int, input().split()))
+
 
 def main():
     x = int(input())

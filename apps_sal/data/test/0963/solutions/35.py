@@ -14,7 +14,7 @@
 N, K = map(int, input().split())
 # L_R = list(map(int, input().split()))
 # A = list(map(lambda x: int(x)*(-1), input().split()))
-L_R = [list(map(int,input().split())) for _ in range(K)]
+L_R = [list(map(int, input().split())) for _ in range(K)]
 # S = input()
 
 # B_C = sorted(B_C, reverse=True, key=lambda x:x[1])
@@ -124,7 +124,7 @@ L_R.sort()
 
 f = [0] * N  # f: マスiまで移動する方法の個数(0-index)
 f[0] = 1
-a = [0] * (N + 1) # ai := fi - f_i-1
+a = [0] * (N + 1)  # ai := fi - f_i-1
 a[1] = -1  # この初期条件の-1を忘れないように注意!
 
 for i in range(N - 1):

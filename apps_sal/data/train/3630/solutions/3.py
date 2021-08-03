@@ -7,5 +7,4 @@ def arithmetic(a, b, operator):
         return a * b
     elif operator == "divide":
         return a / b
-    #your code here
-
+    # your code here

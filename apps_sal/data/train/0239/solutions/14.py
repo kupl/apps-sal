@@ -22,5 +22,3 @@ class Solution:
                 continue
             print(sum)
         return sum
-        
-

@@ -40,4 +40,5 @@ def __starting_point():
     sys.setrecursionlimit(10000)
     main()
 
+
 __starting_point()

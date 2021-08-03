@@ -21,9 +21,9 @@ best = 0
 
 for i in range(1, len(ml) + 1):
     # Is it possible to have i muzzles?
-    if (i-1)*(d+1) + 1 > n:
+    if (i - 1) * (d + 1) + 1 > n:
         continue
-    if i*d < len(ml) - i:
+    if i * d < len(ml) - i:
         continue
 
     # What is my score if I cause i muzzles?
@@ -31,14 +31,13 @@ for i in range(1, len(ml) + 1):
     # Plus the top how many nmes I have left after filling
 
     cur = aml[i]
-    need_nmes = max(0, (i-1)*(d+1) + 1 - len(ml))
+    need_nmes = max(0, (i - 1) * (d + 1) + 1 - len(ml))
     rem_nmes = len(nl) - need_nmes
     assert rem_nmes >= 0
     cur += anl[rem_nmes]
-    
+
     if cur > best:
         #print("Doing better with", i, "muzzles:", cur)
         best = cur
 
 print(best)
-

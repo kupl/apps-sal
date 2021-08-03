@@ -37,5 +37,5 @@ for el in a:
             col += 1
     else:
         col += 1
-col += b[0] + 2*b[1] + 3*b[2] + 4*b[3] + 5*b[4]
+col += b[0] + 2 * b[1] + 3 * b[2] + 4 * b[3] + 5 * b[4]
 print(col)

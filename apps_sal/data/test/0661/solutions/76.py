@@ -10,7 +10,8 @@ def main():
     if (2**M) - 1 < K:
         print('-1')
         return
-    l = [i for i in range(K)] + [i for i in range(K+1, (2**M))] + [K] + [i for i in reversed(list(range(K+1, (2**M))))] + [i for i in reversed(list(range(K)))] + [K]
+    l = [i for i in range(K)] + [i for i in range(K + 1, (2**M))] + [K] + [i for i in reversed(list(range(K + 1, (2**M))))] + [i for i in reversed(list(range(K)))] + [K]
     print((' '.join(str(i) for i in l)))
-main()
 
+
+main()

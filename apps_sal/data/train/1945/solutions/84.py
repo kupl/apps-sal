@@ -10,26 +10,24 @@ class Solution:
         ans = max value of keys
         '''
         for r in range(row):
-            need = [[],[]]
+            need = [[], []]
             for c in range(col):
                 if matrix[r][c] == 0:
                     need[0].append(c)
                 else:
                     need[1].append(c)
-            #list type cannot be a key, so convert to str
+            # list type cannot be a key, so convert to str
             a = str(need[0])
             b = str(need[1])
             if a in ht:
-                ht[a] +=1
+                ht[a] += 1
             else:
                 ht[a] = 1
             if b in ht:
                 ht[b] += 1
             else:
                 ht[b] = 1
-                
-        val = list(ht.values())
-        ans = max(val) 
-        return ans
-                
 
+        val = list(ht.values())
+        ans = max(val)
+        return ans

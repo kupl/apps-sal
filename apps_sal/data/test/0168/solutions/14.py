@@ -9,4 +9,4 @@ for c in l:
         if s < 0:
             s = 0
 
-print( s )
+print(s)

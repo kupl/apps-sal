@@ -4,4 +4,3 @@ if (a * b) % 2 == 0:
 
 else:
     print('Odd')
-

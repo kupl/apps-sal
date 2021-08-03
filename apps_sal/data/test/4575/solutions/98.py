@@ -12,7 +12,7 @@ for i in range(N):
             break
         else:
             X += 1
-    
+
     day = 1
 
 print(X)

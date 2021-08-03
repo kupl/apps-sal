@@ -1,6 +1,6 @@
 import sys
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 ALL = 0
 for a in A:
     ALL ^= a

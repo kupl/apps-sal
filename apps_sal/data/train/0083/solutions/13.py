@@ -13,4 +13,5 @@ def __starting_point():
         ans = solve(X, Y, A, B)
         print(ans)
 
+
 __starting_point()

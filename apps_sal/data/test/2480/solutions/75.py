@@ -44,4 +44,3 @@ print(ans)
 #         vv %= k
 #         d[vv] -= 1
 # print(ans)
-

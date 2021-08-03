@@ -5,4 +5,3 @@ for _ in range(int(input())):
     for i in range(n):
         print(i * " ", end="")
         print("*")
-

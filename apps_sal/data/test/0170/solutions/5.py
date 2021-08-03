@@ -21,7 +21,7 @@ while s1 != 0 and s2 != 0 and p > 0:
     if j == len(sol_2):
         j = 0
         sol_2 = sol_22[:]
-        sol_22 = []    
+        sol_22 = []
     if sol_1[i] > sol_2[j]:
         sol_11.append(sol_2[j])
         sol_11.append(sol_1[i])
@@ -29,7 +29,7 @@ while s1 != 0 and s2 != 0 and p > 0:
         s2 -= 1
     else:
         sol_22.append(sol_1[i])
-        sol_22.append(sol_2[j])    
+        sol_22.append(sol_2[j])
         s2 += 1
         s1 -= 1
     i += 1

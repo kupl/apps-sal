@@ -3,6 +3,7 @@
 def get_convex_hull(points):
     def det(p, q):
         return p[0] * q[1] - p[1] * q[0]
+
     def sub(p, q):
         return (p[0] - q[0], p[1] - q[1])
     points.sort()
@@ -25,15 +26,17 @@ def get_convex_hull(points):
             ch.pop()
         ch.append(p)
     return ch[:-1]
+
+
 N = int(input())
 XY = [list(map(int, input().split())) for _ in range(N)]
 ps = [(0, 0)]
 for x, y in XY:
     ps_new = ps[:]
     for x_, y_ in ps:
-        ps_new.append((x+x_, y+y_))
+        ps_new.append((x + x_, y + y_))
     ps = get_convex_hull(ps_new)
 ans = 0
 for x, y in ps:
-    ans = max(ans, x*x+y*y)
+    ans = max(ans, x * x + y * y)
 print(ans ** 0.5)

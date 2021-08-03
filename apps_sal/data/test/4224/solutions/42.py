@@ -6,7 +6,7 @@ ans = 0
 cnt = 0
 for i in range(n):
     a = A[i]
-    while a%2==0:
+    while a % 2 == 0:
         a //= 2
         cnt += 1
 print(cnt)

@@ -18,4 +18,5 @@ def __starting_point():
     a = set(read().split())
     main(n, k, a)
 
+
 __starting_point()

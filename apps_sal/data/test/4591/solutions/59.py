@@ -18,10 +18,10 @@ def main():
     else:
         if x > y:
             temp = x - y
-            print(min(2*c*x, 2*c*y+temp*a))
+            print(min(2 * c * x, 2 * c * y + temp * a))
         else:
             temp = y - x
-            print(min(2*c*y, 2*c*x+temp*b))
+            print(min(2 * c * y, 2 * c * x + temp * b))
 
 
 main()

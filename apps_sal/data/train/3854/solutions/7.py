@@ -1,10 +1,12 @@
 from datetime import date
 
+
 def less(d1, d2):
     if d1 == None or d2 == None:
         return 0
-    
+
     return 1 if d1 <= d2 else 0
+
 
 def check_dates(records):
     correct = recoverable = uncertain = 0
@@ -27,7 +29,7 @@ def check_dates(records):
             end2 = date(int(end[0]), int(end[2].lstrip('0')), int(end[1].lstrip('0')))
         except:
             end2 = None
-        
+
         combinations = less(start1, end1) + less(start1, end2) + less(start2, end1) + less(start2, end2)
         if start1 == start2:
             combinations -= 1
@@ -42,5 +44,5 @@ def check_dates(records):
             recoverable += 1
         else:
             uncertain += 1
-        
+
     return [correct, recoverable, uncertain]

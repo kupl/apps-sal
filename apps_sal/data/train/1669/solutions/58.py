@@ -5,7 +5,7 @@ class Solution:
         counter = collections.Counter(hand)
         while counter:
             smallest = min(counter)
-            for j in range(smallest, smallest+W):
+            for j in range(smallest, smallest + W):
                 if j not in counter:
                     return False
                 counter[j] -= 1

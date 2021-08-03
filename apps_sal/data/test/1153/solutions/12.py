@@ -21,5 +21,4 @@ for i in y:
         c += 1
 
 print(c)
-#print(d[:100])
-
+# print(d[:100])

@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 def main():
     N = int(input())
     A = list(map(int, input().split()))
@@ -32,5 +33,5 @@ def main():
         return -1
     return r
 
-print((main()))
 
+print((main()))

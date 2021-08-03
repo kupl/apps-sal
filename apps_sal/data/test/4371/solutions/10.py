@@ -12,4 +12,5 @@ def __starting_point():
     s = input()
     print((check(s)))
 
+
 __starting_point()

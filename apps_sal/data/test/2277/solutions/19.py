@@ -1,12 +1,26 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**15
-mod = 10**9+7
+mod = 10**9 + 7
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -22,13 +36,13 @@ def main():
     b = [LI() for _ in range(q)]
     t = 0
     for i in range(n):
-        for j in range(i+1,n):
+        for j in range(i + 1, n):
             if a[i] > a[j]:
                 t += 1
     r = []
-    for c,d in b:
-        k = d-c+1
-        if k*(k-1)//2 % 2 == 1:
+    for c, d in b:
+        k = d - c + 1
+        if k * (k - 1) // 2 % 2 == 1:
             t += 1
         if t % 2 == 0:
             r.append('even')
@@ -37,7 +51,5 @@ def main():
 
     return '\n'.join(r)
 
+
 print(main())
-
-
-

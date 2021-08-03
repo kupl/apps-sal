@@ -23,4 +23,3 @@ hours, remainder = divmod(delta.seconds, 3600)
 minutes, seconds = divmod(remainder, 60)
 
 print('{0:02d}:{1:02d}'.format(hours, minutes))
-

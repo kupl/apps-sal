@@ -1,5 +1,6 @@
 N = int(input())
-seq = [ i for i in input().split() ]
+seq = [i for i in input().split()]
+
 
 def end_lst(i):
     while i < N - 1 and seq[i] != seq[i + 1]:
@@ -21,6 +22,7 @@ def reorder(lst, start, end):
     for i in range(mid + 1, end + 1):
         lst[i] = lst[end]
     return (end - start + 1) // 2 - 1
+
 
 i, ans = 0, 0
 while i < N - 1:

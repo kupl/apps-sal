@@ -1,7 +1,6 @@
-t=int(input())
+t = int(input())
 for i in range(t):
-    
-    a,b=[int(x) for x in input().split()]
-    c=a%b
-    print(c)
 
+    a, b = [int(x) for x in input().split()]
+    c = a % b
+    print(c)

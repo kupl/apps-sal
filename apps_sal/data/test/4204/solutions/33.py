@@ -7,4 +7,3 @@ for c in S:
     if c != 1:
         break
 print((res[min(len(res) - 1, K - 1)]))
-

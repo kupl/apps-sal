@@ -10,6 +10,9 @@ def abc044_c():
     ans = d[0] - 1
     print(ans)
 
+
 def __starting_point():
     abc044_c()
+
+
 __starting_point()

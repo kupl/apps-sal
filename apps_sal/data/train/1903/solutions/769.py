@@ -27,16 +27,19 @@
 # }
 
 class Solution:
-    def minCostConnectPoints(self, a: List[List[int]]) -> int:                        
+    def minCostConnectPoints(self, a: List[List[int]]) -> int:
         n, q = len(a), []
-        for i in range(n-1):
-            for j in range(i+1, n):
-                q.append((abs(a[i][0]-a[j][0]) + abs(a[i][1]-a[j][1]), i, j))
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                q.append((abs(a[i][0] - a[j][0]) + abs(a[i][1] - a[j][1]), i, j))
         UF = {i: i for i in range(n)}
+
         def union(u, v):
             UF[find(v)] = UF[find(u)]
+
         def find(u):
-            if u != UF[u]: UF[u] = find(UF[u])
+            if u != UF[u]:
+                UF[u] = find(UF[u])
             return UF[u]
         heapify(q)
         ans, vis = 0, set()
@@ -48,5 +51,3 @@ class Solution:
                 ans += val
                 # print(ans, i, j, q)
         return ans
-            
-

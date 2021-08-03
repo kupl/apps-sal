@@ -2,7 +2,7 @@ class Solution:
     def subtractProductAndSum(self, n: int) -> int:
         digits = []
         while n > 0:
-            digits.append(n%10)
+            digits.append(n % 10)
             n //= 10
         prod = 1
         for n in digits:

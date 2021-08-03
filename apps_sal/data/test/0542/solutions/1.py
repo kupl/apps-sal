@@ -1,7 +1,7 @@
 n = int(input())
 
-a = [ ]
-b = [ ]
+a = []
+b = []
 sum_a = 0
 sum_b = 0
 last = ""
@@ -28,4 +28,3 @@ else:
         print("second")
     else:
         print(last)
-

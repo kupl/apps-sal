@@ -6,4 +6,3 @@ while "8" not in str(x) or count == 0:
     count += 1
 
 print(count)
-

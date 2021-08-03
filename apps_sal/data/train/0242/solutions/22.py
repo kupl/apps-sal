@@ -1,6 +1,5 @@
 class Solution:
 
-        
     def maxEqualFreq(self, A):
         count = collections.Counter()
         freq = [0 for _ in range(len(A) + 1)]
@@ -15,6 +14,3 @@ class Solution:
             if d in [c + 1, 1] and freq[d] == 1:
                 res = n
         return res
-            
-
-

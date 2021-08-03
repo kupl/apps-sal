@@ -1,5 +1,6 @@
 n, m = map(int, input().split())
-if n & 1: print(n)
+if n & 1:
+    print(n)
 else:
     k, t = n // 2, [int(input()[:: 2], 2) for i in range(n)]
     while True:

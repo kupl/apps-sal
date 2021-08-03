@@ -1,6 +1,6 @@
 class Solution:
     def minOperationsMaxProfit(self, nums: List[int], pos: int, fee: int) -> int:
-        if 4*pos <= fee:
+        if 4 * pos <= fee:
             return -1
         ans = cur = 0
         s = sum(nums)
@@ -9,12 +9,12 @@ class Solution:
         for i, x in enumerate(nums):
             cur += x
             if cur >= 4:
-                p += (4*pos - fee)
+                p += (4 * pos - fee)
                 cur -= 4
             else:
                 p += (cur * pos - fee)
                 cur = 0
-            
+
             if p > best:
                 best = p
                 ans = i + 1
@@ -22,7 +22,7 @@ class Solution:
         while cur > 0:
             res += 1
             if cur >= 4:
-                p += (4*pos - fee)
+                p += (4 * pos - fee)
                 cur -= 4
             else:
                 p += (cur * pos - fee)
@@ -30,8 +30,7 @@ class Solution:
             if p > best:
                 best = p
                 ans = res
-                
-        if best <=0:
+
+        if best <= 0:
             return -1
         return ans
-

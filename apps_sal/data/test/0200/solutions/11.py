@@ -5,9 +5,9 @@ a, b = map(int, input().split())
 h -= a * 8
 
 if h <= 0:
-        print (0)
+    print(0)
 elif a <= b:
-        print(-1)
+    print(-1)
 else:
-        h -= 1
-        print(h // (12 * (a - b)) + 1)
+    h -= 1
+    print(h // (12 * (a - b)) + 1)

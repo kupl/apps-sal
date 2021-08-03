@@ -1,17 +1,22 @@
-import sys, math
+import sys
+import math
 from functools import lru_cache
 import datetime
 sys.setrecursionlimit(500000)
-MOD = 10**9+7
+MOD = 10**9 + 7
+
 
 def input():
     return sys.stdin.readline()[:-1]
 
+
 def mi():
     return map(int, input().split())
 
+
 def ii():
     return int(input())
+
 
 def i2(n):
     tmp = [list(mi()) for i in range(n)]
@@ -43,4 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

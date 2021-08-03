@@ -1,4 +1,4 @@
-a,b = list(map(int,input().split()))
+a, b = list(map(int, input().split()))
 cur = 1
 while a >= 0 and b >= 0:
     if a < cur:
@@ -11,5 +11,3 @@ while a >= 0 and b >= 0:
         break
     b -= cur
     cur += 1
-    
-

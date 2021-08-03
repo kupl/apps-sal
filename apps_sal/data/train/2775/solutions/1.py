@@ -8,4 +8,4 @@ def likes(names):
     elif len(names) == 3:
         return "%s, %s and %s like this" % (names[0], names[1], names[2])
     else:
-        return "%s, %s and %s others like this" % (names[0], names[1], len(names)-2)
+        return "%s, %s and %s others like this" % (names[0], names[1], len(names) - 2)

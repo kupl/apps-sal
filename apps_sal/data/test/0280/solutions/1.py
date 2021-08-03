@@ -40,4 +40,3 @@ for C in permutations(list(range(N))):
     ans = min(ans, pos[N - 1])
 
 print(ans)
-

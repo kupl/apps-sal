@@ -1,5 +1,6 @@
 T = int(input())
 
+
 def solve(x, y):
     if x >= 4:
         return "YES"
@@ -10,6 +11,7 @@ def solve(x, y):
         if y == 1:
             return "YES"
     return "NO"
+
 
 for case in range(T):
     x, y = list(map(int, input().split()))

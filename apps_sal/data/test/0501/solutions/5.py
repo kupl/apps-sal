@@ -1,4 +1,6 @@
 mod = 10 ** 9 + 7
+
+
 def f(n):
     v = [1, 2]
     cnt = 1
@@ -13,6 +15,7 @@ def f(n):
         cnt *= 2
         v[0], v[1] = v[1], v[0]
     return ans
+
+
 l, r = list(map(int, input().split()))
 print((f(r) - f(l - 1) + mod * mod) % mod)
-

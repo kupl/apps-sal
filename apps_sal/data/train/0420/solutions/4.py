@@ -3,7 +3,7 @@ class Solution:
         seen = {0: -1}
         ans = cur = 0
         for i, c in enumerate(s):
-            cur ^= 1 << ('aeiou'.find(c)+1) >> 1
+            cur ^= 1 << ('aeiou'.find(c) + 1) >> 1
             seen.setdefault(cur, i)
-            ans = max(ans, i-seen[cur])
+            ans = max(ans, i - seen[cur])
         return ans

@@ -15,7 +15,7 @@ def union(x, y):
     '''
     x = find(x)
     y = find(y)
-    
+
     if x == y:
         return
 
@@ -47,11 +47,11 @@ par = [-1] * n
 
 pos = [-1] * n
 for i in range(n):
-    pos[p[i]-1] = i
+    pos[p[i] - 1] = i
 
 for _ in range(m):
     x, y = map(int, input().split())
-    union(x-1, y-1)
+    union(x - 1, y - 1)
 
 res = 0
 for i in range(n):

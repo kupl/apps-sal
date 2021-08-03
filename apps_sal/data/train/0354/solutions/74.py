@@ -1,4 +1,6 @@
 MOD = 1000000007
+
+
 class Solution:
     def dieSimulator(self, n, rollMax):
         r = max(rollMax)
@@ -16,7 +18,7 @@ class Solution:
                     else:
                         for k in range(rollMax[i]):
                             tmp[j][k + 1] += dp[j][k]
-                   
+
             dp = tmp
         res = 0
         for j in range(6):

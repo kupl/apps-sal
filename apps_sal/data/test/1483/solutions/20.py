@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def dfs(p, result, visited, start):
     q = [start]
     ret = None
@@ -29,6 +30,7 @@ def dfs(p, result, visited, start):
         visited.add(s)
         q.append(next)
 
+
 def solve(p):
     n = len(p)
     result = [-1] * n
@@ -39,6 +41,7 @@ def solve(p):
 
     return result
 
+
 def main():
     n = int(input())
     p = list(map(int, input().split()))
@@ -47,4 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

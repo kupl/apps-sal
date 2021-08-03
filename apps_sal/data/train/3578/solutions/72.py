@@ -1,7 +1,7 @@
 def paperwork(n, m):
     c = 0
     g = 0
-    c = n*m
+    c = n * m
     if n < 0 or m < 0:
         return g
 

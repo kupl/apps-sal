@@ -2,6 +2,7 @@ from collections import Counter, defaultdict
 import itertools
 import sys
 
+
 def main():
     n = int(input())
     ans = 1
@@ -12,5 +13,5 @@ def main():
 
     print(ans)
 
-main()
 
+main()

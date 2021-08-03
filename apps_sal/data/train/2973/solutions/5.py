@@ -1,5 +1,6 @@
 from operator import add, mul
 
+
 def array_conversion(a):
     i, f = 1, [mul, add]
     while len(a) > 1:

@@ -2,6 +2,8 @@ import sys
 from itertools import *
 from math import *
 MAX = 10000000
+
+
 def solve():
     n, m, ss, ll = list(map(int, input().split()))
     a = set(map(int, input().split()))
@@ -14,10 +16,13 @@ def solve():
     if smallest < ss or largest > ll:
         print("Incorrect")
         return
-    if ss not in a: wantothers+=1
-    if ll not in a: wantothers+=1
+    if ss not in a:
+        wantothers += 1
+    if ll not in a:
+        wantothers += 1
     print("Correct" if wantothers <= n - m else "Incorrect")
 
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
-solve()
 
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
+solve()

@@ -18,7 +18,7 @@ def main():
         res = '0' * (6 - len(res)) + res
         return res
 
-    read = lambda: list(map(int, input().split()))
+    def read(): return list(map(int, input().split()))
     s = input()
     mod = 10 ** 9 + 7
     n = len(s)
@@ -27,5 +27,6 @@ def main():
     p = t.count('0')
     ans = 3 ** p % mod
     print(ans)
-main()
 
+
+main()

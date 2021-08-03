@@ -14,7 +14,7 @@ for i in range(n):
     if i == 0:
         foo = a[i]
         hoge = 1
-    elif i == n-1:
+    elif i == n - 1:
         if foo != a[i]:
             if hoge == 1:
                 ans += 1
@@ -23,7 +23,7 @@ for i in range(n):
             if hoge == 0:
                 ans += 1
     elif foo == a[i]:
-        hoge = 1-hoge
+        hoge = 1 - hoge
     else:
         if hoge == 1:
             ans += 1
@@ -31,4 +31,3 @@ for i in range(n):
         hoge = 1
 
 print(ans)
-

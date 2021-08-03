@@ -10,4 +10,3 @@ elif not cw and ccw:
     print("ccw")
 else:
     print("undefined")
-

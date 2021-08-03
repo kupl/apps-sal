@@ -4,20 +4,20 @@ input = sys.stdin.readline
 N = int(input())
 graph = [[] for _ in range(N)]
 Edges = []
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b = map(int, input().split())
-    graph[a-1].append(b-1)
-    graph[b-1].append(a-1)
-    Edges.append((a-1, b-1))
+    graph[a - 1].append(b - 1)
+    graph[b - 1].append(a - 1)
+    Edges.append((a - 1, b - 1))
 
 Col = 0
 for n in range(N):
     Col = max(Col, len(graph[n]))
 
 Color = dict()
-checked = [-1]*N
+checked = [-1] * N
 q = [0]
-checked[0] = Col+1
+checked[0] = Col + 1
 while q:
     qq = []
     for p in q:
@@ -36,4 +36,4 @@ while q:
 
 print(Col)
 for a, b in Edges:
-    print(Color[(a, b)]+1)
+    print(Color[(a, b)] + 1)

@@ -4,7 +4,7 @@ def __starting_point():
 
     ans = 100
     cnt = 0
-    
+
     while True:
         ans = ans + (ans // 100)
         if ans >= x:

@@ -8,4 +8,3 @@ for i in range(n):
         ans += t.count('U') == t.count('D') and t.count('L') == t.count('R')
 
 print(ans)
-

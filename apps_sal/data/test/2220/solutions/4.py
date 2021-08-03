@@ -4,4 +4,3 @@ a, b = A[-1], A[-2]
 time = m // (k + 1)
 ans = time * (a * k + b)
 print(ans + a * (m % (k + 1)))
-

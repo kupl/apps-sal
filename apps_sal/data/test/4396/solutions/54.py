@@ -1,6 +1,6 @@
 def mapt(fn, *args):
     return tuple(map(fn, *args))
-  
+
 
 def Vector(line):
     return mapt(Atom, line.split(" "))
@@ -15,6 +15,7 @@ def Atom(segment):
         except ValueError:
             return segment
 
+
 def main():
     n = int(input())
     data = [Vector(input()) for _ in range(n)]
@@ -25,5 +26,6 @@ def main():
         else:
             total += amount * 380000
     print(total)
+
 
 main()

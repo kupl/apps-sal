@@ -20,12 +20,10 @@ class FindElements:
             root.right = self.helper(root.right, level + 1)
             self.mem.add(root.right.val)
         return root
-    
+
     def __init__(self, root: TreeNode):
         self.mem = set()
         self.helper(root, 0)
-        
-        
 
     def find(self, target: int) -> bool:
         return target in self.mem
@@ -34,4 +32,3 @@ class FindElements:
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

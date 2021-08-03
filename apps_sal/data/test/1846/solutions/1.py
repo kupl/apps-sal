@@ -10,16 +10,18 @@ if n:
 
     x = 0
     for i in range(n):
-        if t[i] < 0: x += 1
+        if t[i] < 0:
+            x += 1
         p[i] = x
     t.reverse()
     p.reverse()
 
     x = 0
     for i in range(n):
-        if t[i] > 0: x += 1
+        if t[i] > 0:
+            x += 1
         p[i] += x
 
     print(s + n - max(p))
-else: print(s)
-
+else:
+    print(s)

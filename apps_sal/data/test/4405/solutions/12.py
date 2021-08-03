@@ -14,7 +14,7 @@ def main():
     mx_val = cnt_list[-1]
     res = 0
 
-    for curr_val in range(1, mx_val+1):
+    for curr_val in range(1, mx_val + 1):
         curr_res = curr_val
         idx = len(cnt_list) - 1
 
@@ -32,5 +32,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -10,7 +10,7 @@ def main():
     for i in range(1, N):
         if H[i] <= tmp_h:
             tmp += 1
-        else :
+        else:
             ans = max(ans, tmp)
             tmp = 0
         tmp_h = H[i]
@@ -19,7 +19,9 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

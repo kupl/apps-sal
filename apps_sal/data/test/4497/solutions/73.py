@@ -10,12 +10,13 @@ def main():
         print(16)
     elif 8 <= n <= 15:
         print(8)
-    elif 4 <= n <=7:
+    elif 4 <= n <= 7:
         print(4)
     elif 2 <= n <= 3:
         print(2)
     else:
         print(1)
 
-if __name__ ==  "__main__":
+
+if __name__ == "__main__":
     main()

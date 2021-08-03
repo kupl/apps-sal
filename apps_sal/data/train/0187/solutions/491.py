@@ -17,4 +17,3 @@ class Solution:
                 rt = time
             time += 1
         return rt
-

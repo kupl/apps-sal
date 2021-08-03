@@ -11,5 +11,3 @@ for i in range(1, len(x)):
     if x[i] - x[i - 1] > 2 * d:
         ans += 2
 print(ans)
-
-

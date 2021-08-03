@@ -5,7 +5,7 @@ for _ in range(int(input())):
     for i in range(k):
         y = x
         for j in range(k):
-            print(y,end = '')
+            print(y, end='')
             if y == 0:
                 y = 1
             else:

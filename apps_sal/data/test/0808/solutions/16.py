@@ -2,7 +2,7 @@ s = input()
 if '.' not in s:
     s += '.'
 s = s.strip('0')
-a,b = s.split('.')
+a, b = s.split('.')
 if len(a):
     b = a[1:] + b
     b = b.rstrip('0')
@@ -13,10 +13,8 @@ else:
     b = b.strip('0').rstrip('0')
     a = b[0]
     b = b[1:]
-print(a,end='')
+print(a, end='')
 if len(b):
-    print('.'+b,end='')
+    print('.' + b, end='')
 if l:
-    print('E'+str(l))
-
-		     	 			 				 	 			  				 	
+    print('E' + str(l))

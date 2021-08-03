@@ -6,4 +6,3 @@ def shortest_arrang(n):
             if sum(a[i:j]) == n:
                 return a[i:j]
     return [-1]
-

@@ -22,4 +22,3 @@ if b * 2 <= n:
     ans = min(ans, cur)
 
 print(ans)
-

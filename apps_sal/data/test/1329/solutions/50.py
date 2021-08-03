@@ -83,12 +83,13 @@ def main():
             sub1 += 1
         if i >= 2:
             sub2 += 1
-    ans += sub1 * (sub1 - 1)*(sub2-2)//2
-
+    ans += sub1 * (sub1 - 1) * (sub2 - 2) // 2
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

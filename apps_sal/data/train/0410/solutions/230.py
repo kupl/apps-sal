@@ -8,8 +8,8 @@ class Solution:
                 n //= 2
             c += 1
         return c
-    def getKth(self, lo: int, hi: int, k: int) -> int:
-        e = [i for i in range(lo, hi+1)]
-        e.sort(key = self.power)
-        return e[k-1]
 
+    def getKth(self, lo: int, hi: int, k: int) -> int:
+        e = [i for i in range(lo, hi + 1)]
+        e.sort(key=self.power)
+        return e[k - 1]

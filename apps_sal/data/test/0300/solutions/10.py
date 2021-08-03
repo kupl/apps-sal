@@ -1,5 +1,5 @@
 n = int(input())
-r = 4.5*n
+r = 4.5 * n
 t = sorted([int(i) for i in input().split()])
 
 c = 0

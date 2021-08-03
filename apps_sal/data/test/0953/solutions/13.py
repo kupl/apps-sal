@@ -1,10 +1,11 @@
 def recursive_dfs(graph, start, path=[]):
-  '''recursive depth first search from start'''
-  path=path+[start]
-  for node in graph[start]:
-    if not node in path:
-      path=recursive_dfs(graph, node, path)
-  return path
+    '''recursive depth first search from start'''
+    path = path + [start]
+    for node in graph[start]:
+        if not node in path:
+            path = recursive_dfs(graph, node, path)
+    return path
+
 
 x = []
 sa = int(input())
@@ -19,18 +20,18 @@ for i in range(sa):
 marked = [False] * sa
 
 for bad in range(sa):
-    for asdf in range(bad+1, sa):
+    for asdf in range(bad + 1, sa):
         if x[bad][asdf] == '1':
             graph[bad].append(asdf)
             graph[asdf].append(bad)
 
 done = []
 for i in range(sa):
-  if not marked[i]:
-      a = recursive_dfs(graph, i)
-      done.append(a)
-      for j in recursive_dfs(graph, i):
-          marked[j] = True
+    if not marked[i]:
+        a = recursive_dfs(graph, i)
+        done.append(a)
+        for j in recursive_dfs(graph, i):
+            marked[j] = True
 
 final = [0] * sa
 
@@ -42,4 +43,3 @@ for i in done:
         final[i[a]] = o[a]
 
 print(' '.join([str(i) for i in final]))
-

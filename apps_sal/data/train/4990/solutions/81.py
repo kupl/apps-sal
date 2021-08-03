@@ -5,4 +5,3 @@ def solution(string, ending):
         return True
     else:
         return False
-

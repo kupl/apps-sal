@@ -7,11 +7,10 @@ for _ in range(t):
     check = set(s)
     found = False
     for i in range(1, 1025):
-        newset = set([e^i for e in s])
+        newset = set([e ^ i for e in s])
         if check == newset:
             print(i)
             found = True
             break
     if not found:
         print(-1)
-

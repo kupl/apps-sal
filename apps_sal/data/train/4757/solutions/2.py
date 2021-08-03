@@ -5,7 +5,7 @@ for _ in range(t):
         print("NO")
         continue
 
-    ans = [[0] * w for i in range(h)]    
+    ans = [[0] * w for i in range(h)]
     j = 0
     for i in range(h):
         cnt = h_cnt

@@ -16,6 +16,6 @@ for i in range(1, len(cnt)):
     m = min(cnt[i][0], m)
 print(m)
 for j in range(1, m + 1):
-    for i in range(1, len(cnt)):    
+    for i in range(1, len(cnt)):
         print(cnt[i][j], end=' ')
     print()

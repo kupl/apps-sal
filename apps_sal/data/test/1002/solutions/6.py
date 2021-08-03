@@ -7,4 +7,4 @@ if t + breaks > d:
     print(-1)
 else:
     free = d - (t + breaks)
-    print(2*(n - 1) + (free // 5))
+    print(2 * (n - 1) + (free // 5))

@@ -1,10 +1,10 @@
-n=int(input())
-a = list(map(int,input().split()))
-_sum =sum(a) / n
-s  = round(_sum)
+n = int(input())
+a = list(map(int, input().split()))
+_sum = sum(a) / n
+s = round(_sum)
 ans = 0
-#print(s)
+# print(s)
 for i in range(n):
-    v =(a[i]-s)**2
+    v = (a[i] - s)**2
     ans += v
 print(ans)

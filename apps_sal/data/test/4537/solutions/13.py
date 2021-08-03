@@ -3,5 +3,4 @@ def LI():
 
 
 A, B = LI()
-print((max(A+B, A-B, A*B)))
-
+print((max(A + B, A - B, A * B)))

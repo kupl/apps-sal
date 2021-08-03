@@ -59,4 +59,3 @@ for _ in range(int(input())):
     # print('')
 # print(' '.join(map(str, r)))
 print(max(t))
-

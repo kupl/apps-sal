@@ -10,9 +10,9 @@ for i in range(4):
     for j in range(4):
         if i != j and a[i] < 2 * a[j]:
             f1 = 0
-        if  i != j and 2 * a[i] > a[j]:
+        if i != j and 2 * a[i] > a[j]:
             f2 = 0
-    if f1 :
+    if f1:
         ans = chr(ord("A") + i)
         f += 1
     if f2:

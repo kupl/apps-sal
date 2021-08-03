@@ -29,8 +29,8 @@ def buy_shovels(k, shovels, discounts):
         for x, y in list(discounts.items()):
             if i + x > k:
                 continue
-            perhaps = accums[i] + sum(shovels[i+y:i+x])
-            accums[i+x] = min(accums[i+x], perhaps)
+            perhaps = accums[i] + sum(shovels[i + y:i + x])
+            accums[i + x] = min(accums[i + x], perhaps)
     return accums[-1]
 
 

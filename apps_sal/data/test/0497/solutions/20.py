@@ -30,7 +30,7 @@ def main():
     arr = get_array()
     x = arr[0]
     mx = 0
-    for j in range(n-1, 0, -1):
+    for j in range(n - 1, 0, -1):
         if arr[j] != x:
             mx = j
             break
@@ -39,14 +39,15 @@ def main():
             next = arr[i]
             curr = i
             break
-    for i in range(n-1, curr, -1):
+    for i in range(n - 1, curr, -1):
         if arr[i] != next:
-            mx = max(mx, i-curr)
+            mx = max(mx, i - curr)
             break
     print(mx)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

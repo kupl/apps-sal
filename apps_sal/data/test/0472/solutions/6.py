@@ -5,6 +5,7 @@ def sumd(n):
         n //= 10
     return v
 
+
 n, v = int(input()), -1
 a, b = 0, n + 1
 while a < b - 1:
@@ -18,4 +19,3 @@ while a > 0 and n // a - a <= 81:
         v = a
     a -= 1
 print(v)
-

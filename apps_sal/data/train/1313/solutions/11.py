@@ -1,4 +1,6 @@
 import math
+
+
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
@@ -23,4 +25,6 @@ def __starting_point():
     while t != 0:
         solve()
         t -= 1
+
+
 __starting_point()

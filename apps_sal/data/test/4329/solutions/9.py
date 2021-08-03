@@ -1,3 +1,3 @@
 s = input()
 t = input()
-print(['No','Yes'][s == t[:-1]])
+print(['No', 'Yes'][s == t[:-1]])

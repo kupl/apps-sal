@@ -1,4 +1,6 @@
 MOD = 1000000007
+
+
 class Solution:
     def sumSubarrayMins(self, A):
         A = [0] + A + [0]

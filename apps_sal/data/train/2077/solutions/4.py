@@ -1,9 +1,11 @@
 MAX = 100001
 parent = []
 
+
 def makeSet():
     nonlocal parent
     parent = [i for i in range(MAX + 1)]
+
 
 def findSet(u):
     nonlocal parent
@@ -11,10 +13,12 @@ def findSet(u):
         parent[u] = findSet(parent[u])
     return parent[u]
 
+
 def unionSet(u, v):
     up = findSet(u)
     vp = findSet(v)
     parent[up] = vp
+
 
 makeSet()
 n, a, b = map(int, input().split())
@@ -34,9 +38,8 @@ if A != B:
     print('YES')
     for i in range(1, n + 1):
         if findSet(i) == B:
-            print('1', end = " ")
+            print('1', end=" ")
         else:
-            print('0', end = " ")
+            print('0', end=" ")
 else:
     print('NO')
-

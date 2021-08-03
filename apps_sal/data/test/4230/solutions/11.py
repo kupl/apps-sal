@@ -1,5 +1,5 @@
-X,N = map(int,input().split())
-p = list(map(int,input().split()))
+X, N = map(int, input().split())
+p = list(map(int, input().split()))
 diff = 0
 while True:
     num_p = X + diff

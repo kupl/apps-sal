@@ -1,5 +1,6 @@
 INF = 10**40
 
+
 def gcd_ex(A, B):
     if A == 0:
         return B, 0, 1
@@ -7,6 +8,7 @@ def gcd_ex(A, B):
     a = b1 - (B // A) * a1
     b = a1
     return g, a, b
+
 
 def round_down(a, b):
     s = (a < 0) != (b < 0)
@@ -16,6 +18,7 @@ def round_down(a, b):
         return a // b
     return -((a + b - 1) // b)
 
+
 def round_up(a, b):
     s = (a < 0) != (b < 0)
     a = abs(a)
@@ -23,6 +26,7 @@ def round_up(a, b):
     if not s:
         return (a + b - 1) // b
     return -(a // b)
+
 
 def solve():
     x, y, p, q = list(map(int, input().split()))
@@ -76,10 +80,11 @@ def solve():
 
     print(b)
 
+
 def main():
     t = int(input())
     for i in range(t):
         solve()
 
-main()
 
+main()

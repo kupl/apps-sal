@@ -20,4 +20,3 @@ for i in range(N):
         ans = max(ans, B[N - 2])
 
 print(ans)
-

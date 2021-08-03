@@ -1,9 +1,8 @@
 from sys import stdin, stdout
 
-n,k = list(map(int,stdin.readline().rstrip().split()))
+n, k = list(map(int, stdin.readline().rstrip().split()))
 
-minH = min([1,k,n-k])
-maxH = min([2*k,n-k])
+minH = min([1, k, n - k])
+maxH = min([2 * k, n - k])
 
 print(str(minH) + ' ' + str(maxH))
-

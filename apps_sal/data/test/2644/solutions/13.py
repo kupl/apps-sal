@@ -13,7 +13,7 @@ for i in range(1, n):
                 unswapped[j] = False
                 swap_count += 1
                 swap_order.append(j)
-                p[j], p[j-1] = p[j-1], p[j]
+                p[j], p[j - 1] = p[j - 1], p[j]
             else:
                 print(-1)
                 return

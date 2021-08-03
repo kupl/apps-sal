@@ -1,7 +1,9 @@
 import math
 
+
 def c(n, r):
-    return math.factorial(n) // (math.factorial(n-r) * math.factorial(r))
+    return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
+
 
 n = int(input())
 d = dict()

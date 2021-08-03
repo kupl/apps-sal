@@ -10,7 +10,7 @@ while True:
     for x in tmp:
         if int(x) in D:
             b = False
-            break 
+            break
     if b == True:
         break
     else:

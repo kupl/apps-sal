@@ -31,4 +31,3 @@ for i in range(len(o)):
     left_cnt += 1
 
 print(ans)
-

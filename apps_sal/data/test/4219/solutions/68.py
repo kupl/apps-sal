@@ -16,11 +16,11 @@ for i in range(2**N):
         if b[j] == "1":
             t += 1
             for k in xy[j]:
-                if str(k[1]) != b[k[0]-1]:
+                if str(k[1]) != b[k[0] - 1]:
                     f = 1
                     break
     if f == 0:
         ans = max(ans, t)
-        #print(b)
+        # print(b)
 
 print(ans)

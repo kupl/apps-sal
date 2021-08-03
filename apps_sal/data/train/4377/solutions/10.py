@@ -8,7 +8,7 @@ def solve(a, b):
         if s < b[i]:
             table_score['Player2'] += 1
 
-    if table_score['Player1'] == table_score ['Player2']:
+    if table_score['Player1'] == table_score['Player2']:
         return """{0}, {1}: that looks like a "draw"! Rock on!""".format(table_score['Player1'], table_score['Player2'])
 
     if table_score['Player1'] > table_score['Player2']:

@@ -57,4 +57,3 @@ ans = max(ans, get_two_max(with_coins, coins))
 ans = max(ans, get_two_max(with_diamonds, diamonds))
 
 print(ans)
-

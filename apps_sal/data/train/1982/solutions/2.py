@@ -4,16 +4,16 @@ class Solution:
         for i, j in dislikes:
             graph[i].append(j)
             graph[j].append(i)
-        
+
         color = dict()
-        
-        for i in range(1,N+1):
+
+        for i in range(1, N + 1):
             if i not in color:
                 if not self.dfs(i, color, graph, c=0):
                     return False
-        # print(color)        
-        return True        
-    
+        # print(color)
+        return True
+
     def dfs(self, idx, color, graph, c):
         # print((idx,c))
         color[idx] = c
@@ -25,5 +25,4 @@ class Solution:
             else:
                 if color[i] == color[idx]:
                     return False
-        return True   
-
+        return True

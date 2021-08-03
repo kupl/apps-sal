@@ -1,8 +1,8 @@
 N, K = map(int, input().split())
 S = input()
 Nums = []
-now = 1 # 今見ている数
-cnt = 0 # nowがいくつ並んでいるか
+now = 1  # 今見ている数
+cnt = 0  # nowがいくつ並んでいるか
 for i in range(N):
     if S[i] == str(now):
         cnt += 1

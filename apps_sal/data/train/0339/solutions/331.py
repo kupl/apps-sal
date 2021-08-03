@@ -2,22 +2,22 @@ class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         # nums1.sort()
         # nums2.sort()
-        count=0
+        count = 0
         for i in range(len(nums1)):
-            target=nums1[i]**2
-            temp=defaultdict(int)
+            target = nums1[i]**2
+            temp = defaultdict(int)
             for j in range(len(nums2)):
-                if (target/nums2[j]) in list(temp.keys()):
-                    count+=temp[target/nums2[j]]
-                temp[nums2[j]]+=1
-                        
+                if (target / nums2[j]) in list(temp.keys()):
+                    count += temp[target / nums2[j]]
+                temp[nums2[j]] += 1
+
         for i in range(len(nums2)):
-            target=nums2[i]**2
-            temp=defaultdict(int)
+            target = nums2[i]**2
+            temp = defaultdict(int)
             for j in range(len(nums1)):
-                if (target/nums1[j]) in list(temp.keys()):
-                    count+=temp[target/nums1[j]]
-                temp[nums1[j]]+=1
+                if (target / nums1[j]) in list(temp.keys()):
+                    count += temp[target / nums1[j]]
+                temp[nums1[j]] += 1
         # for i in range(len(nums1)):
         #     s2=nums1[i]**2
         #     first,last=0,len(nums2)-1
@@ -45,4 +45,3 @@ class Solution:
         #         else:
         #             first+=1
         return count
-

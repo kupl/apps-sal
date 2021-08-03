@@ -20,14 +20,11 @@ class Solution:
         for f in range(fuel + 1):
             ans += dp[f][start] % mod
         return ans % mod
-                
-        
-        
-        
-        
+
+
 #         ans = 0
-        
-        
+
+
 #         def dfs(i, f):
 #             nonlocal ans
 #             if f < 0:
@@ -43,4 +40,3 @@ class Solution:
 
 #         dfs(start, fuel)
 #         return ans
-

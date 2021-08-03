@@ -13,4 +13,3 @@ for i in range(1, n + 1):
         ways[i] %= MOD
 
 print((sum(ways) + n) % MOD)
-

@@ -12,4 +12,3 @@ for x in S:
     M = max(M, Sum)
 
 print(M)
-

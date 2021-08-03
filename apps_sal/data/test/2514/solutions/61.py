@@ -21,4 +21,3 @@ for i in range(Q):
 
 for a in ans:
     print(a)
-

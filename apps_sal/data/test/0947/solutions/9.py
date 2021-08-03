@@ -8,7 +8,7 @@ for _ in range(int(input())):
                 break
 
         if n % i == 0:
-            print(n // i, n -  (n // i))
+            print(n // i, n - (n // i))
         else:
             print(1, n - 1)
     else:

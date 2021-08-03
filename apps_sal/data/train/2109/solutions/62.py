@@ -4,6 +4,7 @@
 
 import math
 
+
 def solve(a, b):
     a, b = min(a, b), max(a, b)
     if a == b:
@@ -19,9 +20,8 @@ def solve(a, b):
         else:
             c -= 1
 
+
 Q = int(input())
 for _ in range(Q):
     a, b = list(map(int, input().split()))
     print((solve(a, b)))
-
-

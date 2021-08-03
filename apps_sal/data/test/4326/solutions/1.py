@@ -34,11 +34,12 @@ class TestClass(unittest.TestCase):
 
 def resolve():
     N = int(input())
-    print((N//3))
+    print((N // 3))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

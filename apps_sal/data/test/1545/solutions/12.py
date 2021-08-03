@@ -8,16 +8,16 @@ ans2 = 0
 dp = [0] * n + [1]
 for i in range(n):
     maxlen = 9001
-    for j in range(1, i+2):
-        maxlen = min(maxlen, a[ord(s[i-j+1]) - ord('a')])
+    for j in range(1, i + 2):
+        maxlen = min(maxlen, a[ord(s[i - j + 1]) - ord('a')])
         if maxlen >= j:
-            dp[i] = (dp[i] + dp[i-j]) % M
+            dp[i] = (dp[i] + dp[i - j]) % M
         else:
             break
         ans2 = max(ans2, j)
 
 
-print(dp[n-1])
+print(dp[n - 1])
 print(ans2)
 
 ans3 = 1
@@ -32,4 +32,3 @@ for i in range(n):
         maxlen = a[ord(s[i]) - ord('a')]
 
 print(ans3)
-

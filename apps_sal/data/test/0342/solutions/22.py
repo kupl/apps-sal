@@ -9,4 +9,3 @@ b -= m
 if a or b:
     ans += 1
 print(ans)
-

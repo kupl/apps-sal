@@ -8,5 +8,4 @@ def first_non_repeating_letter(some_string):
     #        NOTE: by using a one-character slice [:1] instead of an index [0] we allow
     #              it to pick up a blank character '' if the string is empty instead of
     #              giving an error for an index that is out of range.
-    return ''.join([char if some_string.lower().count(char.lower()) == 1 else '' for char in some_string])[:1]    
-
+    return ''.join([char if some_string.lower().count(char.lower()) == 1 else '' for char in some_string])[:1]

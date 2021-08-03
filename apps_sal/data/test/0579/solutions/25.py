@@ -1,14 +1,17 @@
 import sys
 
+
 class SWAG:
     def __init__(self):
         self.fold_l = []
         self.r = []
         self.fold_r = ~(1 << 60)
+
     def push(self, a):
         if self.fold_r < a:
             self.fold_r = a
         self.r.append(a)
+
     def pop(self):
         if not self.fold_l:
             self.r.reverse()
@@ -20,6 +23,7 @@ class SWAG:
                 if fold_l[i + 1] < fold_l[i]:
                     fold_l[i + 1] = fold_l[i]
         self.fold_l.pop()
+
     def get(self):
         if not self.fold_l:
             return self.fold_r
@@ -27,6 +31,7 @@ class SWAG:
             return self.fold_l[-1]
         else:
             return max(self.fold_l[-1], self.fold_r)
+
 
 n, k = list(map(int, input().split()))
 p = [*list(map(int, input().split()))]
@@ -82,4 +87,3 @@ for i in range(n):
         swag.pop()
 
 print(ans)
-

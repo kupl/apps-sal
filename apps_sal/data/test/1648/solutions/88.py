@@ -26,4 +26,3 @@ for i in range(1, K + 1):
     tmp *= comb(K - 1, i - 1, MOD)
     tmp %= MOD
     print(tmp)
-

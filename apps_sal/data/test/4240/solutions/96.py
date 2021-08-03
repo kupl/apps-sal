@@ -8,4 +8,3 @@ for i in range(N):
 else:
     ans = "No"
 print(ans)
-

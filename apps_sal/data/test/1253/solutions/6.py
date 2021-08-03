@@ -16,5 +16,3 @@ if k % 2 == 1:
     result -= 2 * abs(a[-1])
 
 print(result)
-
-

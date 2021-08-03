@@ -17,7 +17,7 @@ for x, y in zip(s, t):
         if dict_st[x] != y:
             print('No')
             break
-    
+
     if y not in dict_ts:
         dict_ts[y] = x
     else:
@@ -26,4 +26,3 @@ for x, y in zip(s, t):
             break
 else:
     print('Yes')
-

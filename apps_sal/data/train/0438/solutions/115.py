@@ -38,5 +38,5 @@ class Solution:
                         ans = idx
                     if size[j]:
                         union(i, j)
-                    
+
         return ans

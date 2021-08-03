@@ -20,4 +20,3 @@ for i in range(n):
             print(a[col][-1], end=' ')
         a[col].pop()
 print()
-

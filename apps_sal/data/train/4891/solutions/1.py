@@ -14,7 +14,6 @@ class Datamining:
             denominator += (X[i] - x_mean) ** 2
         self.b1 = numerator / denominator
         self.b0 = y_mean - (self.b1 * x_mean)
-  
-    def predict(self, x):
-        return x*self.b1 + self.b0
 
+    def predict(self, x):
+        return x * self.b1 + self.b0

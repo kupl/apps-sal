@@ -18,4 +18,3 @@ for i in range(n):
 print(cnt)
 for i in range(n):
     print(c1[i], c2[i])
-

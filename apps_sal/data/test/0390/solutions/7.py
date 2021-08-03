@@ -17,4 +17,5 @@ def __starting_point():
                 ans += min(a, b)
     print(ans)
 
+
 __starting_point()

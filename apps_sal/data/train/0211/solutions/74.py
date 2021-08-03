@@ -3,7 +3,7 @@ class Solution:
         def divide(s):
             for i in range(1, len(s)):
                 low = s[0: i]
-                high = s[i: ]
+                high = s[i:]
                 yield (low, high)
                 for div in divide(high):
                     ret = [low]
@@ -19,4 +19,3 @@ class Solution:
                 # print(comb, set(comb))
                 ret = max(ret, len(comb))
         return ret
-

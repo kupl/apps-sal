@@ -20,4 +20,3 @@ for i in range(N, 0, -1):
 
 print((len(ball_in_list)))
 print((*ball_in_list))
-

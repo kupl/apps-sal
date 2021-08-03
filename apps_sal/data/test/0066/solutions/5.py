@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 inp = [int(i) for i in input().split(' ')]
 t = inp[0]
 w = inp[1]
@@ -13,4 +14,3 @@ tmp = t % nok
 ans += min(tmp + 1, min(w, b))
 g = gcd(ans, t)
 print(ans // g, t // g, sep='/')
-

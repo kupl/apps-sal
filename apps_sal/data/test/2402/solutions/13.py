@@ -15,6 +15,5 @@ for _ in range(t):
     above2 = min(max(y - 1 - (n - x - 1), 0), n - 1)
     best = max(above1, above2) + 1
     print(best, worst)
-    
-# inf.close()
 
+# inf.close()

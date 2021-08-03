@@ -48,4 +48,5 @@ def minimum(n, visited, lower_cost):
 def __starting_point():
     stdout.write("".join(str(main()) + "\n"))
 
+
 __starting_point()

@@ -52,5 +52,3 @@ for i in range(N):
         group_count[(gr, gt)] = 1
 
 print((' '.join([str(group_count[g]) for g in group_list])))
-
-

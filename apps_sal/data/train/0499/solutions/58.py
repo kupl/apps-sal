@@ -1,5 +1,6 @@
 import heapq
 
+
 class Solution:
     def minNumberOperations(self, target: List[int]) -> int:
         target.append(0)
@@ -17,7 +18,5 @@ class Solution:
                     if stack[-1][0] > x:
                         stack[-1] = (stack[-1][0], tmp[1])
                 stack.append((x, i))
-                
-        return ans
-                    
 
+        return ans

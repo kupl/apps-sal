@@ -13,7 +13,3 @@ class Solution:
             ans += 1
         # print(ans, nxt)
         return ans + self.minOperations(nxt)
-    
-                
-                
-

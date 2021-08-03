@@ -1,13 +1,13 @@
+from collections import defaultdict
 import sys
 import itertools
 # import numpy as np
 import time
 import math
- 
+
 sys.setrecursionlimit(10 ** 7)
- 
-from collections import defaultdict
- 
+
+
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
@@ -24,6 +24,8 @@ for i in range(M):
     adj[y].append(x)
 
 visited = [False for _ in range(N)]
+
+
 def dfs(v):
     if visited[v]:
         return False

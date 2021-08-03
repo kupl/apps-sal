@@ -1,7 +1,7 @@
 from itertools import groupby as gb
 
-N, I = map(int,input().split())
-A = list(map(int,input().split()))
+N, I = map(int, input().split())
+A = list(map(int, input().split()))
 A = sorted(A)
 l = []
 G = gb(A)

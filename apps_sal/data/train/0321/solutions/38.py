@@ -5,16 +5,15 @@ class Solution:
         for i in range(len(s1)):
             ar1[i] = ord(s1[i])
             ar2[i] = ord(s2[i])
-            
+
         ar1.sort()
         ar2.sort()
         flag1 = False
         flag2 = False
         for i in range(len(ar1)):
-            if(ar1[i]-ar2[i]<0):
+            if(ar1[i] - ar2[i] < 0):
                 flag1 = True
-            elif(ar2[i]-ar1[i]<0):
+            elif(ar2[i] - ar1[i] < 0):
                 flag2 = True
-                
-        
+
         return flag1 == False or flag2 == False

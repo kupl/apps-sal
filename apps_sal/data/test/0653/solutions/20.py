@@ -16,5 +16,4 @@ for c in S:
     else:
         rooms[int(c)] = 0
 
-print(''.join(map(str,rooms)))
-
+print(''.join(map(str, rooms)))

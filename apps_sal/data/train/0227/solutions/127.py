@@ -6,10 +6,10 @@ class Solution:
             if(A[j] != 1):
                 if(len(queue) == K):
                     try:
-                        i = queue.pop(0)+1
+                        i = queue.pop(0) + 1
                     except:
-                        i=j+1
+                        i = j + 1
                 if(len(queue) < K):
                     queue.append(j)
-            ans = max(ans, j-i+1)
+            ans = max(ans, j - i + 1)
         return ans

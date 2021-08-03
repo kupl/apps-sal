@@ -14,10 +14,14 @@ for i in range(0, n - 1):
     nr[a] += 1
 size = [0] * n
 mx = [0] * n
+
+
 def nonzero(x):
     if not x:
         return 0
     return 1
+
+
 stk = []
 size = [0] * n
 for i in range(0, n):
@@ -37,11 +41,13 @@ for i in range(n - 1, -1, -1):
     x = order[i]
     for p in vc[x]:
         h[p] = h[x] + 1
-#parcurg
+# parcurg
 for x in order:
     for p in vc[x]:
         size[x] += size[p]
-#maximum
+# maximum
+
+
 def solv(tp, mx):
     for x in order:
         if h[x] % 2 == tp:
@@ -56,8 +62,9 @@ def solv(tp, mx):
             for p in vc[x]:
                 r += size[p] - mx[p]
             mx[x] = r + 1
+
+
 solv(0, mx)
-print(size[0] - mx[0] + 1, end = ' ')
+print(size[0] - mx[0] + 1, end=' ')
 solv(1, mx)
 print(size[0] - mx[0] + 1)
-

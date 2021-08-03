@@ -1,6 +1,7 @@
 #!python3
 
-LI = lambda: list(map(int, input().split()))
+def LI(): return list(map(int, input().split()))
+
 
 # input
 N, A, B = LI()
@@ -29,7 +30,7 @@ def main():
     if A == N or V[A - 1] > V[A]:
         print((1))
         return
-    
+
     x = V.count(V[A])
     ans = 0
     if mx == V[A]:
@@ -43,5 +44,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

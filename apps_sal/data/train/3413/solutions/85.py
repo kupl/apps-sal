@@ -4,4 +4,3 @@ def solution(nums):
         return(nums)
     if nums is None:
         return([])
-

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 N, M = list(map(int, input().split()))
@@ -25,4 +25,3 @@ for s in safe:
     dp[s] %= 10 ** 9 + 7
 
 print((dp[N]))
-

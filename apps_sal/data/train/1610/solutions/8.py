@@ -5,5 +5,6 @@ def c(n):
         m += n
     return m
 
-def subsets_parity(n,k):
-    return "EVEN" if (c(n)-c(k)-c(n-k))>0 else "ODD"
+
+def subsets_parity(n, k):
+    return "EVEN" if (c(n) - c(k) - c(n - k)) > 0 else "ODD"

@@ -1,1 +1,1 @@
-greet = lambda name, owner: 'Hello guest' if name != owner else 'Hello boss'
+def greet(name, owner): return 'Hello guest' if name != owner else 'Hello boss'

@@ -1,7 +1,7 @@
 from collections import Counter
 import sys
 input = sys.stdin.readline
-MOD = 998244353 
+MOD = 998244353
 INF = 10**10
 
 n = int(input())
@@ -19,12 +19,13 @@ s.append((INF, INF))
 # Calc facs
 facs = [1] * (n + 1)
 ans = 1
-for i in range(1, n+1):
-    facs[i] = facs[i-1] * i % MOD
+for i in range(1, n + 1):
+    facs[i] = facs[i - 1] * i % MOD
 ans = facs[n]
 
 # Check both sort
-pa = 0; pb = 0
+pa = 0
+pb = 0
 both_cnt = 1
 same = 1
 for a, b in s:
@@ -37,7 +38,8 @@ for a, b in s:
         both_cnt *= facs[same]
         both_cnt %= MOD
         same = 1
-    pa = a; pb = b
+    pa = a
+    pb = b
 
 # Check upper sort
 acnt = Counter(a_s)

@@ -12,4 +12,3 @@ for i in range(3, N):
     stored_values.append(incomes[i] + min(stored_values[-1], stored_values[-2], stored_values[-3]))
 
 print(total_sum - min(stored_values[-1], stored_values[-2], stored_values[-3]))
-

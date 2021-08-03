@@ -4,7 +4,7 @@ class Solution:
             return arr[0]
         else:
             appear = -(-len(arr) // 4)
-            dict ={}
+            dict = {}
             for i in arr:
                 if i not in dict:
                     dict[i] = 1

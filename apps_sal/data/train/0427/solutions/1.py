@@ -8,4 +8,3 @@ class Solution:
             ans %= MOD
 
         return ans
-

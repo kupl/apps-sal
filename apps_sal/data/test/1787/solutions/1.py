@@ -5,7 +5,8 @@ eps = 1e-8
 
 for c in s:
     if c == 'b':
-        if cnt > 0: lengths.append(cnt)
+        if cnt > 0:
+            lengths.append(cnt)
         cnt = 0
     elif c == 'a':
         cnt += 1

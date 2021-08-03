@@ -27,4 +27,3 @@ while q:
 print('Yes')
 for i in range(1, N):
     print((pre[i]))
-

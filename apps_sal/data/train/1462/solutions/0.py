@@ -1,11 +1,11 @@
 # cook your dish here
 try:
-    t=int(input()) 
+    t = int(input())
     for i in range(t):
-        n=input() 
-        n=n.lower()
-        a="berhampore"
-        b="serampore"
+        n = input()
+        n = n.lower()
+        a = "berhampore"
+        b = "serampore"
         if a in n:
             if b in n:
                 print("Both")

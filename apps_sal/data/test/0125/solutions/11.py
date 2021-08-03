@@ -22,4 +22,3 @@ for i in range(4):
         break
 else:
     print("NO")
-

@@ -1,11 +1,13 @@
 import sys
-from math import log2,floor,ceil,sqrt
+from math import log2, floor, ceil, sqrt
 # import bisect
 # from collections import deque
 
-Ri = lambda : [int(x) for x in sys.stdin.readline().split()]
-ri = lambda : sys.stdin.readline().strip()
- 
+
+def Ri(): return [int(x) for x in sys.stdin.readline().split()]
+def ri(): return sys.stdin.readline().strip()
+
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -18,29 +20,31 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
-INF = 10 ** 18
-MOD = 10**9+7
 
-n,m = Ri()
-arr=  []
+
+INF = 10 ** 18
+MOD = 10**9 + 7
+
+n, m = Ri()
+arr = []
 for i in range(n):
     temp = Ri()
     arr.append(temp)
-dp =  list2d(n,m,1)
-for i in range(1,n):
+dp = list2d(n, m, 1)
+for i in range(1, n):
     for j in range(m):
-        if arr[i][j] >= arr[i-1][j]:
-            dp[i][j] = dp[i-1][j]+1
-tdp = [0]*n
+        if arr[i][j] >= arr[i - 1][j]:
+            dp[i][j] = dp[i - 1][j] + 1
+tdp = [0] * n
 for i in range(n):
     for j in range(m):
-        tdp[i] = max(tdp[i],dp[i][j])
+        tdp[i] = max(tdp[i], dp[i][j])
 qq = int(ri())
 for q in range(qq):
-    a,b = Ri()
-    a-=1
-    b-=1
-    if b- tdp[b]+1 <= a:
+    a, b = Ri()
+    a -= 1
+    b -= 1
+    if b - tdp[b] + 1 <= a:
         Yes()
     else:
         No()

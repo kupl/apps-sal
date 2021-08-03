@@ -1,5 +1,7 @@
 # Dinic's algorithm
 from collections import deque
+
+
 class Dinic:
     def __init__(self, N):
         self.N = N
@@ -18,7 +20,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s, t):
-        self.level = level = [None]*self.N
+        self.level = level = [None] * self.N
         deq = deque([s])
         level[s] = 0
         G = self.G
@@ -56,6 +58,8 @@ class Dinic:
                 f = self.dfs(s, t, INF)
                 flow += f
         return flow
+
+
 N, = list(map(int, input().split()))
 a, b, c = list(map(int, input().split()))
 x, y, z = list(map(int, input().split()))
@@ -75,5 +79,4 @@ dnc.add_edge(3, 5, INF)
 dnc.add_edge(4, 7, x)
 dnc.add_edge(5, 7, y)
 dnc.add_edge(6, 7, z)
-print(N-dnc.flow(0, 7), min(a, y)+min(b, z)+min(c, x))
-
+print(N - dnc.flow(0, 7), min(a, y) + min(b, z) + min(c, x))

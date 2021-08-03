@@ -1,5 +1,6 @@
 import random
 
+
 def partition(vector, left, right, pivotIndex):
     pivotValue = vector[pivotIndex]
     vector[pivotIndex], vector[right] = vector[right], vector[pivotIndex]  # Move pivot to end
@@ -10,6 +11,7 @@ def partition(vector, left, right, pivotIndex):
             storeIndex += 1
     vector[right], vector[storeIndex] = vector[storeIndex], vector[right]  # Move pivot to its final place
     return storeIndex
+
 
 def select(vector, left, right, k):
     "Returns the k-th smallest, (k >= 0), element of vector within vector[left:right+1] inclusive."
@@ -26,6 +28,7 @@ def select(vector, left, right, k):
                 k -= pivotDist + 1
                 left = pivotNewIndex + 1
 
+
 def nth_smallest(arr, n):
     unique = list(set(arr))
-    return select(unique, 0, len(unique)-1, n-1)
+    return select(unique, 0, len(unique) - 1, n - 1)

@@ -5,4 +5,3 @@ def number(lines):
         text_editor.append(f"{line_number}: {line}")
         line_number += 1
     return text_editor
-

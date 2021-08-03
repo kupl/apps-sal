@@ -11,5 +11,3 @@ for i in range(2 ** n - 1, 0, -1):
     Ans[i] = max(m_l, m_r)
     ans += abs(m_l - m_r)
 print(ans)
-
-

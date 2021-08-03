@@ -6,6 +6,7 @@ def ri():
 def rii():
     return [str(v) for v in input().split()]
 
+
 A, B = rii()
 A = int(A)
 B, F = [int(v) for v in B.split(".")]

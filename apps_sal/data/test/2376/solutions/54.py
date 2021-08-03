@@ -4,6 +4,7 @@ def makelst(lst, v):
             lst.append(wv[i][1])
     lst.sort(reverse=True)
 
+
 N, W = map(int, input().split())
 wv = [list(map(int, input().split())) for _ in range(N)]
 v1cnt = W // wv[0][0]

@@ -32,4 +32,3 @@ for i in range(3, 6):
 print()
 for i in range(6, 9):
     print(matrix[i][:3], matrix[i][3:6], matrix[i][6:9])
-

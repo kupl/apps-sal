@@ -12,4 +12,3 @@ for j in range(k, n):
     curr -= h[j - k]
     best_awake = max(best_awake, curr)
 print(result + best_awake)
-

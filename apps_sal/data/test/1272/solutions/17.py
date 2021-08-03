@@ -45,11 +45,12 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = list(map(int, input().split()))
-AB = [list([int(x)-1 for x in input().split()]) for _ in range(M)]
+AB = [list([int(x) - 1 for x in input().split()]) for _ in range(M)]
 
 AB.reverse()
-hubensa = N*(N-1)//2
+hubensa = N * (N - 1) // 2
 ans = [str(hubensa)]
 uf = UnionFind(N)
 
@@ -57,11 +58,10 @@ for a, b in AB[:-1]:
     if not uf.same(a, b):
         c = uf.size(a)
         d = uf.size(b)
-        hubensa -= c*d
+        hubensa -= c * d
     ans.append(str(hubensa))
     uf.union(a, b)
 
 ans.reverse()
 
 print(("\n".join(ans)))
-

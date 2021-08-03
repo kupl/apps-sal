@@ -7,6 +7,7 @@ FILE_IO = False
 CURR_PATH = []
 list_of_connections = [[] for _ in range(100001)]
 
+
 def dfs(vertex):
     visited, stack = set(), [vertex]
 
@@ -19,8 +20,6 @@ def dfs(vertex):
                 CURR_PATH.append(vertex)
 
 
-
-
 if FILE_IO:
     input_stream = open('input_test.txt')
     sys.stdout = open('current_output2.txt', 'w')
@@ -30,10 +29,9 @@ else:
 n = int(input_stream.readline())
 
 
-
-for _ in range(n-1):
+for _ in range(n - 1):
     input_list = input_stream.readline().split()
-    start , end = int(input_list[0]),int(input_list[1])
+    start, end = int(input_list[0]), int(input_list[1])
     list_of_connections[start].append(end)
     list_of_connections[end].append(start)
 
@@ -58,16 +56,12 @@ root = max_less_then_3
 paths = []
 
 visited = [False] * 100001
-dfs(root) 
+dfs(root)
 
 print(len(CURR_PATH))
 for node in CURR_PATH:
-    print(str(root) + " "+ str(node))
-            
+    print(str(root) + " " + str(node))
 
-
-    
 
 # if FILE_IO:
-    # assert filecmp.cmp('current_output.txt','expected_output.txt',shallow=False) == True 
-
+    # assert filecmp.cmp('current_output.txt','expected_output.txt',shallow=False) == True

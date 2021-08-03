@@ -5,6 +5,6 @@ def reverse(st):
     x.reverse()
     temp = ""
     for i in x:
-        temp+=i+" "
+        temp += i + " "
     temp = temp.strip()
     return temp

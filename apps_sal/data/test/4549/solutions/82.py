@@ -2,19 +2,19 @@
 
 def check(H, W, s, x, y):
     res = False
-    if x - 1 >= 0 and s[y][x-1] == '#':
+    if x - 1 >= 0 and s[y][x - 1] == '#':
         res = True
-    if x + 1 < W and s[y][x+1] == '#':
+    if x + 1 < W and s[y][x + 1] == '#':
         res = True
-    if y - 1 >= 0 and s[y-1][x] == '#':
+    if y - 1 >= 0 and s[y - 1][x] == '#':
         res = True
-    if y + 1 < H and s[y+1][x] == '#':
+    if y + 1 < H and s[y + 1][x] == '#':
         res = True
 
     return res
 
 
-H,W = map(int, input().split())
+H, W = map(int, input().split())
 s = []
 for h in range(H):
     s.append(list(input()))

@@ -8,7 +8,7 @@ c = s.count("C")
 g = s.count("G")
 t = s.count("T")
 
-m = max(a,c,g,t)
-ct = [a,c,g,t].count(m)
+m = max(a, c, g, t)
+ct = [a, c, g, t].count(m)
 
 print(pow(ct, n, mod_by))

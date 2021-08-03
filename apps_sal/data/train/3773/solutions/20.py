@@ -5,4 +5,3 @@ def isValid(formula):
     r3 = not (material[4] ^ material[5])  # material5 and material6 must be selected at the same time
     r4 = material[6] or material[7]  # material7 or material8 must be selected(at least one, or both)
     return r1 and r2 and r3 and r4
-

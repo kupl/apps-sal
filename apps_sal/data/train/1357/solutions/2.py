@@ -4,7 +4,8 @@ for _ in range(int(input())):
     total = 0
 
     for i in arr:
-        if i == 5:  total += i
+        if i == 5:
+            total += i
         else:
             if total == 0:
                 print("NO")

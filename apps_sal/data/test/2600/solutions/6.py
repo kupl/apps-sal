@@ -14,4 +14,3 @@ for _ in range(t):
         j = n + m - 2 - i
         ans += min(k[i] + k[j], c[i] + c[j] - k[i] - k[j])
     print(ans)
-

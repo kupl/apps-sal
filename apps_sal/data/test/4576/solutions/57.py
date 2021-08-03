@@ -5,10 +5,11 @@ C = s[2]
 X = s[3]
 res = 0
 total = 0
-for a in range(A+1):
-  for b in range(B+1):
-    for c in range(C+1):
-      total = 500*a + 100*b + 50*c
+for a in range(A + 1):
+    for b in range(B + 1):
+        for c in range(C + 1):
+            total = 500 * a + 100 * b + 50 * c
 #      print("A:"+str(a)+" B:"+str(b)+" C:"+str(c) + "total:"+str(total))
-      if(total == X):res = res +1
+            if(total == X):
+                res = res + 1
 print(res)

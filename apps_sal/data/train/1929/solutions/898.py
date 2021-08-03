@@ -1,4 +1,6 @@
 import queue
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -13,7 +15,7 @@ class StreamChecker:
                     if not ch in p:
                         p[ch] = {}
                     p = p[ch]
-                p[w[0]] = {'$':None}
+                p[w[0]] = {'$': None}
         self.letters = []
 
     def query(self, letter: str) -> bool:
@@ -32,10 +34,8 @@ class StreamChecker:
         else:
             return '$' in p
         return False
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

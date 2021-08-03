@@ -15,5 +15,4 @@ elif (x2 - x1) ** 2 + (y2 - y1) ** 2 >= R ** 2:
 else:
     dist = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
     tochka = [x2 + (x1 - x2) * (dist + R) / dist, y2 + (y1 - y2) * (dist + R) / dist]
-    print("{} {} {}".format((tochka[0] + x2) / 2, (tochka[1] + y2) / 2, (((tochka[0] - x2) ** 2 + (tochka[1] - y2) ** 2 ) ** 0.5) / 2))
-
+    print("{} {} {}".format((tochka[0] + x2) / 2, (tochka[1] + y2) / 2, (((tochka[0] - x2) ** 2 + (tochka[1] - y2) ** 2) ** 0.5) / 2))

@@ -15,6 +15,7 @@ def st3(x, y):
     l = p
     return l - 1 - int(x != y)
 
+
 def query(x, y):
     print(st3(x, y))
 
@@ -28,4 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

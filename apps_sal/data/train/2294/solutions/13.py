@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def solve():
     INF = float('inf')
 
@@ -17,7 +18,7 @@ def solve():
     minAll = min(Ls)
     maxAll = max(Rs)
 
-    ans1 = (max(Ls)-minAll) * (maxAll-min(Rs))
+    ans1 = (max(Ls) - minAll) * (maxAll - min(Rs))
 
     ans2 = INF
     LRs = []
@@ -50,16 +51,15 @@ def solve():
     for L, R in LRs:
         minL = L
         diff = max(maxL, maxR, max1) - min(minL, minR, min1)
-        ans2 = min(ans2, d1*diff)
+        ans2 = min(ans2, d1 * diff)
         minR = min(minR, R)
         maxR = max(maxR, R)
 
     minL, maxL = INF, -INF
     diff = max(maxL, maxR, max1) - min(minL, minR, min1)
-    ans2 = min(ans2, d1*diff)
+    ans2 = min(ans2, d1 * diff)
 
     print((min(ans1, ans2)))
 
 
 solve()
-

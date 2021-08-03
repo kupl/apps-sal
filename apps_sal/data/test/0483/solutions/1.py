@@ -12,4 +12,3 @@ for i in range(n):
 if ans == float('inf'):
     ans = -1
 print(ans)
-

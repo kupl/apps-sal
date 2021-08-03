@@ -1,4 +1,3 @@
-for _ in range (int(input())):
-    l=list(map(int,input()))
+for _ in range(int(input())):
+    l = list(map(int, input()))
     print(sum(l))
-

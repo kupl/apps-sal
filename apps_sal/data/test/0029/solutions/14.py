@@ -1,6 +1,6 @@
 i = list([int(c) for c in input()])
 
-d = sum([i[3]-i[0], i[4]-i[1], i[5]-i[2]])
+d = sum([i[3] - i[0], i[4] - i[1], i[5] - i[2]])
 
 if(d < 0):
     i.reverse()
@@ -18,5 +18,3 @@ for (ind, z) in enumerate(i):
         print(ind)
         break
     ir += z
-
-

@@ -1,6 +1,7 @@
 import sys
 from collections import deque
 
+
 def main():
     input = sys.stdin.readline
     N = int(input())
@@ -14,14 +15,15 @@ def main():
             q.appendleft([a, c])
 
         b = (n + 1) % N
-        if b not in d or d[b] > c+1:
+        if b not in d or d[b] > c + 1:
             d[b] = c + 1
-            q.append([b, c+1])
+            q.append([b, c + 1])
 
     print((d[0]))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

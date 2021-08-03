@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 for i in range(1, n + 1):
@@ -18,4 +23,3 @@ elif n - i * i <= i:
 else:
     ans += 2
 print(ans)
-

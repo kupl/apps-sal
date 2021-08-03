@@ -1,5 +1,5 @@
 def scramble(s1, s2):
-    s1_count = dict.fromkeys(set(s1),0)
+    s1_count = dict.fromkeys(set(s1), 0)
     for i in s1:
         s1_count[i] += 1
     try:

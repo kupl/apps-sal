@@ -11,4 +11,3 @@ for a in A:
         ans += C[prev - 1]
     prev = a
 print(ans)
-

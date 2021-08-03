@@ -46,4 +46,3 @@ def sumfmin():
 
 answer = (sumfmax() - sumfmin()) % MOD
 print(answer)
-

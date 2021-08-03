@@ -6,10 +6,10 @@ for _ in range(int(input())):
     for i in range(N):
         if(not Lock[i]):
             X.append(List[i])
-    X.sort(reverse  = True)
+    X.sort(reverse=True)
     j = 0
     for i in range(N):
         if(not Lock[i]):
             List[i] = X[j]
-            j+=1
+            j += 1
     print(*List)

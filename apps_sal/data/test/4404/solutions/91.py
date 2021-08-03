@@ -7,4 +7,3 @@ elif month == 4 and date <= 30:
     print("Heisei")
 else:
     print("TBD")
-

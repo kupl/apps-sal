@@ -13,7 +13,7 @@ INF = inf
 MOD = 1000000007
 
 h, w, k = [int(i) for i in input().split()]
-C = [input() for j in range(h)] # nは行数
+C = [input() for j in range(h)]  # nは行数
 
 tmp = 0
 res = 0
@@ -36,4 +36,3 @@ for i in range(2 ** h):
             res += 1
 
 print(res)
-

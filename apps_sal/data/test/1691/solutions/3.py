@@ -14,4 +14,3 @@ for _ in range(n):
     else:
         ans.append(ans[-1] + count)
 print(*ans[1:])
-

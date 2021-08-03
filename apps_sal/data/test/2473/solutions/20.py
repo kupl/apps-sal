@@ -8,4 +8,3 @@ for i in range(N):
         ylen = min(y2 - y1 for y1, y2 in zip(Y, Y[K - 1:]))
         ans = min(ans, xlen * ylen)
 print(ans)
-

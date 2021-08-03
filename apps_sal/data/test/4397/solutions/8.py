@@ -7,7 +7,6 @@
 #a = [list(input()) for _ in range(n)]
 #a = [int(input()) for _ in range(n)]
 
-n,i = list(map(int, input().split()))
+n, i = list(map(int, input().split()))
 
-print((n-i+1))
-
+print((n - i + 1))

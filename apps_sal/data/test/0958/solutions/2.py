@@ -25,5 +25,3 @@ else:
                     k -= abs(ord(i) - j)
                     break
     print(ans)
-
-

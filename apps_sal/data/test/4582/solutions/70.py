@@ -15,7 +15,7 @@
 
 
 # 標準入力から文字列 a と b を取得する
-input_a, input_b = list(map(str,input().split()))
+input_a, input_b = list(map(str, input().split()))
 
 reslut = "ret"
 
@@ -35,6 +35,3 @@ else:
     reslut = "I don't Know."
 
 print(result)
-
-
-

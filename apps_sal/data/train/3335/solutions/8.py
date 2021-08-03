@@ -4,5 +4,4 @@ def vaporcode(s):
         if x == ' ':
             continue
         result = result + x.upper() + '  '
-    return result[:len(result)-2]
-
+    return result[:len(result) - 2]

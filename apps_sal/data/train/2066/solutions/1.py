@@ -31,13 +31,13 @@ import sys
 #     return d[val]
 
 
-#guy who wants small moves first
-#then guy who wants large moves
+# guy who wants small moves first
+# then guy who wants large moves
 
-#so lets say we have 4 positions
+# so lets say we have 4 positions
 # 1, 2, 3, 4
-#small wants to ban edges, because if he bans 2 or 3 he is fucked
-#so he bans 1
+# small wants to ban edges, because if he bans 2 or 3 he is fucked
+# so he bans 1
 # and we have 2, 3, 4
 # then large bans middle so we have 2, 4 and the ans is 2
 # 0, 1, 2, 3, 4, 5, 6, 7
@@ -55,7 +55,7 @@ import sys
 # # 0, 3
 
 
-#1 5 9 19 21 22
+# 1 5 9 19 21 22
 #  5 9 19 21 22
 #  5 19 21 22
 #  19 21 22
@@ -93,11 +93,13 @@ def solve(a):
     return res
 
 
-
 def prt(l): return print(' '.join(l))
 def rv(): return map(int, input().split())
 def rl(n): return [list(map(int, input().split())) for _ in range(n)]
-if os.path.exists("test.txt"): sys.stdin = open("test.txt")
+
+
+if os.path.exists("test.txt"):
+    sys.stdin = open("test.txt")
 
 n, = rv()
 a, = rl(1)

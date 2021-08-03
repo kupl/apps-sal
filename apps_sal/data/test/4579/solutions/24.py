@@ -1,6 +1,6 @@
 n = int(input())
-l=[]
+l = []
 for i in range(n):
-  l.append(input())
-l=set(l) 
+    l.append(input())
+l = set(l)
 print(len(l))

@@ -3,9 +3,11 @@ import sys
 import numpy as np
 from math import factorial
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N, A, B = lr()
 V = np.array(lr())
@@ -19,14 +21,15 @@ seg = right_i - left_i  # 使える数字たち
 done = N - right_i
 use = A - done  # 使う幅
 
+
 def combinations_count(n, r):  # 組み合わせ
     return factorial(n) // factorial(n - r) // factorial(r)
 
+
 answer = combinations_count(seg, use)
 if border == ave:
-    for x in range(use+1, min(B-done, seg)+1):
+    for x in range(use + 1, min(B - done, seg) + 1):
         answer += combinations_count(seg, x)
 
 print(answer)
 # 05
-

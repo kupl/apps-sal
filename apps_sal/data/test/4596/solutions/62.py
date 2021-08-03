@@ -1,4 +1,6 @@
-getints = lambda: map(int, input().split())
+def getints(): return map(int, input().split())
+
+
 n = int(input())
 a = list(getints())
 ans = 10 ** 9

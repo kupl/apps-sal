@@ -3,9 +3,9 @@ class Solution:
         a = Counter(tree)
         if len(a) <= 2:
             return len(tree)
-        
+
         ans = 0
-        
+
         i = 0
         while i < len(tree):
             count = 1
@@ -21,9 +21,9 @@ class Solution:
                         basket.append(tree[j])
                         count += 1
                 j += 1
-            
+
             if count > ans:
                 ans = count
             i += 1
-            
+
         return ans

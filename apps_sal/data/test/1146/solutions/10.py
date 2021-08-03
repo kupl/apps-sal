@@ -1,4 +1,4 @@
-n,m = input().split()
+n, m = input().split()
 n = int(n)
 m = int(m)
 
@@ -11,4 +11,3 @@ if len(l) == m:
     print('YES')
 else:
     print('NO')
-

@@ -20,4 +20,3 @@ if bo:
     print('NO')
 else:
     print('YES')
-

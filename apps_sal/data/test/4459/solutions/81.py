@@ -14,4 +14,3 @@ for k, v in list(counter.items()):
 
 
 print(cnt)
-

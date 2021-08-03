@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import random
 
+
 def copysign(x, y):
     return abs(x) * (1 if y >= 0 else - 1)
+
 
 def dist(k, x, y):
     if not (abs(x) + abs(y) < 2 * k):
@@ -16,6 +18,7 @@ def dist(k, x, y):
     else:
         return 3
 
+
 def iterate_neighbors(k, x, y):
     assert abs(x) + abs(y) < 2 * k
     dz = (2 * k - abs(x) - abs(y)) // 2
@@ -25,6 +28,7 @@ def iterate_neighbors(k, x, y):
         yield (dx, - dy)
         yield (- dx, dy)
         yield (- dx, - dy)
+
 
 def solve(k, x, y):
     while True:
@@ -53,6 +57,7 @@ def solve(k, x, y):
         x -= dx
         y -= dy
 
+
 def main():
     k = int(input())
     x, y = list(map(int, input().split()))
@@ -68,5 +73,5 @@ def main():
         y += dy
         print((x, y))
 
-main()
 
+main()

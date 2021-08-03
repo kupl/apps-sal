@@ -9,5 +9,4 @@ elif m == 0 or m == 1:
 else:
     m -= 1
     n -= 1
-    print(min(m+1, n - m))
-
+    print(min(m + 1, n - m))

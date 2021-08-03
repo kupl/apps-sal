@@ -15,12 +15,11 @@ for a, b in sAB:
     num += b
     if num >= M:
         break
-    ans += a*b
+    ans += a * b
 
 if index_ == 0:
-    ans += sAB[0][0]*M
+    ans += sAB[0][0] * M
 else:
-    ans += sAB[index_][0]*(M-cum_num[index_-1])
+    ans += sAB[index_][0] * (M - cum_num[index_ - 1])
 
 print(ans)
-

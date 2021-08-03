@@ -78,7 +78,7 @@ def __starting_point():
     c_m = 0
     kk = [0]
     lines = sys.stdin.readlines()
-    for i, line in enumerate(lines): #range(1, m + 1):
+    for i, line in enumerate(lines):  # range(1, m + 1):
         u, v, c = list(map(int, line.split()))
         g[u - 1].append(v - 1)
         if (u - 1, v - 1) in list(w.keys()):
@@ -109,7 +109,7 @@ def __starting_point():
                 l = m
             else:
                 r = m
-        kkk = kk[l+1]
+        kkk = kk[l + 1]
 
     to_reverse = top_sort(g, w, kkk, n)
     num = 0
@@ -120,10 +120,6 @@ def __starting_point():
 
     print(kkk, num)
     print(" ".join(s))
-
-
-
-
 
 
 __starting_point()

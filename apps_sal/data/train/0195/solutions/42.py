@@ -8,6 +8,5 @@ class Solution:
             while sm != 0:
                 counters[sm] += 1
                 sm = (sm - 1) & mask
-        
-        return sum(counters[num1 & num2] for num1 in A for num2 in A)
 
+        return sum(counters[num1 & num2] for num1 in A for num2 in A)

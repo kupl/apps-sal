@@ -13,4 +13,3 @@ if abs(n - m) == 0:
     ans *= 2
     ans %= 10**9 + 7
 print(ans)
-

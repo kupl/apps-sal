@@ -1,5 +1,6 @@
 from copy import deepcopy
 
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         def modify(arr, op, idx):
@@ -8,7 +9,7 @@ class Solution:
             elif op == 1:
                 for i, num in enumerate(arr):
                     arr[i] = num // 2
-                    
+
         zeros = [0] * len(nums)
         ans = 0
         while True:
@@ -16,13 +17,11 @@ class Solution:
                 if num % 2 == 1:
                     nums[i] = num - 1
                     ans += 1
-                    
+
             if nums == zeros:
                 return ans
             else:
                 modify(nums, 1, 0)
                 ans += 1
-            
-        return ans
-        
 
+        return ans

@@ -14,5 +14,3 @@ for i in range(1, N + 1):
         dp[i][j] %= M
 # print(dp)
 print((dp[N][K]))
-
-

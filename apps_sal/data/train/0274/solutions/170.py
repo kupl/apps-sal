@@ -1,4 +1,6 @@
 from sortedcontainers import SortedList
+
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         s = SortedList()
@@ -10,4 +12,3 @@ class Solution:
                 j += 1
             ans = max(ans, (i - j + 1))
         return ans
-

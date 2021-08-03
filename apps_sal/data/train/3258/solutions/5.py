@@ -6,12 +6,12 @@ def transpose(amount, tab):
         res = ''
         for counter, letter in enumerate(line):
             if letter.isdigit():
-                if line[counter-1].isdigit():
+                if line[counter - 1].isdigit():
                     continue
-                if line[counter+1].isdigit():
-                    if (int(letter+line[counter+1]) + amount) <= 22:
-                        res += str(int(letter+line[counter+1]) + amount)
-                        if len(str(int(letter+line[counter+1]) + amount)) == 1:
+                if line[counter + 1].isdigit():
+                    if (int(letter + line[counter + 1]) + amount) <= 22:
+                        res += str(int(letter + line[counter + 1]) + amount)
+                        if len(str(int(letter + line[counter + 1]) + amount)) == 1:
                             position.append(counter)
                             position_neg = True
                     else:
@@ -44,20 +44,20 @@ def transpose(amount, tab):
                             if not tab[counter][insert + 1].isdigit():
                                 result[counter] = result[counter][:insert + added + 2] + result[counter][insert + added + 3:]
                 else:
-                    if result[counter][insert+added].isdigit():
-                        if result[counter][insert+added+1].isdigit():
-                            if tab[counter][insert+1].isdigit():
-                                result[counter] = result[counter][:insert+added+2] +'-'+ result[counter][insert+added+2:]
+                    if result[counter][insert + added].isdigit():
+                        if result[counter][insert + added + 1].isdigit():
+                            if tab[counter][insert + 1].isdigit():
+                                result[counter] = result[counter][:insert + added + 2] + '-' + result[counter][insert + added + 2:]
                         else:
-                            result[counter] = result[counter][:insert+added+1] +'-'+ result[counter][insert+added+1:]
+                            result[counter] = result[counter][:insert + added + 1] + '-' + result[counter][insert + added + 1:]
                     else:
                         result[counter] = result[counter][:insert + added + 1] + '-' + result[counter][insert + added + 1:]
                     added += 1
             else:
                 double_in_col = False
                 for line2 in result:
-                    if line2[insert+added].isdigit() and line2[insert+1+added].isdigit():
-                        double_in_col=True
+                    if line2[insert + added].isdigit() and line2[insert + 1 + added].isdigit():
+                        double_in_col = True
                 if double_in_col:
                     if result[counter][insert + added].isdigit():
                         if not result[counter][insert + added + 1].isdigit():

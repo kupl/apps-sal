@@ -4,4 +4,3 @@ def squares_needed(grains):
         sm -= 2 ** i
         i += 1
     return i
-

@@ -1,10 +1,10 @@
 data1 = input()
 data2 = input()
 
-count = 3 -1
+count = 3 - 1
 sw = 0
 i = 0
-j = len(data2)-1
+j = len(data2) - 1
 while i <= count:
     if data1[i] == data2[j]:
         sw += 1

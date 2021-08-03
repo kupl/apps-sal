@@ -5,10 +5,10 @@ def run():
     main = d[0]
     other = d[1:]
     other.sort()
-    ans = n-1
+    ans = n - 1
     s = main
     for x in other:
-        if main * a < b * (s+x):
+        if main * a < b * (s + x):
             print(ans)
             return
         s += x

@@ -22,4 +22,3 @@ if d[h - 1][w - 1] == inf:
     print((-1))
 else:
     print((h * w - (d[h - 1][w - 1] + 1) - all))
-

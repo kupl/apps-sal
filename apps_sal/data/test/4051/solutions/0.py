@@ -5,28 +5,32 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-################################################### SOLUTION
+# SOLUTION
+
+import sys
+
 
 def initialize_solution():
     pass
 
+
 def main():
     n, = read()
     a = read()
-    for i in range(n-1):
-        if abs(a[i] - a[i+1]) >= 2:
+    for i in range(n - 1):
+        if abs(a[i] - a[i + 1]) >= 2:
             return "NO"
     return "YES"
 
-########################################## PROBLEM CONSTANTS
+# PROBLEM CONSTANTS
+
 
 READ_FROM_FILE = None
 OUTPUT_PREFIX = None
 INTERACTIVE = False
 
-#################################################### HELPERS
+# HELPERS
 
-import sys
 
 def read(callback=int, split=True):
     if READ_FROM_FILE:
@@ -40,8 +44,10 @@ def read(callback=int, split=True):
     else:
         return callback(ipt)
 
+
 def write(value, end="\n"):
-    if value is None: return
+    if value is None:
+        return
     try:
         if not isinstance(value, str):
             value = " ".join(map(str, value))
@@ -53,6 +59,7 @@ def write(value, end="\n"):
         print(value, end=end)
     if INTERACTIVE:
         sys.stdout.flush()
+
 
 sfile = None
 tfile = None
@@ -67,11 +74,12 @@ if OUTPUT_PREFIX is None:
 else:
     initialize_solution()
     TOTAL_CASES, = read()
-    for CASE_NUMBER in range(1, TOTAL_CASES+1):
+    for CASE_NUMBER in range(1, TOTAL_CASES + 1):
         write(OUTPUT_PREFIX.replace("%d", str(CASE_NUMBER)), end="")
         result = main()
         if result is not None:
             write(result)
-if sfile is not None: sfile.close()
-if tfile is not None: tfile.close()
-
+if sfile is not None:
+    sfile.close()
+if tfile is not None:
+    tfile.close()

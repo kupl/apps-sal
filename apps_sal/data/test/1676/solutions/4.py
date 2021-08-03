@@ -13,4 +13,6 @@ def main():
             print(max(next_t, c) + lo, end=' ')
             next_t = max(next_t, c) + lo
             a.append(next_t)
+
+
 main()

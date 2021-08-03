@@ -25,4 +25,3 @@ class Solution:
                         res = min(res, (x - lastx[y1, y2]) * abs(y2 - y1))
                     lastx[y1, y2] = x
         return res if res < float('inf') else 0
-

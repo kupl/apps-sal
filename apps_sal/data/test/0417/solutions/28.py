@@ -10,20 +10,20 @@ def solve(N: int, X: int, D: int):
         if X == 0:
             print((1))
         else:
-            print((N+1))
+            print((N + 1))
         return
 
     if D < 0:
-        X = X + (N-1)*D
+        X = X + (N - 1) * D
         D = abs(D)
 
     segs = defaultdict(list)
-    for k in range(N+1):
-        L = k*(k-1)//2
-        R = k*N - k*(k+1)//2
-        Ck = k*X + D*L
-        Rk = R-L
-        seg = (Ck//D, Ck//D+Rk+1)
+    for k in range(N + 1):
+        L = k * (k - 1) // 2
+        R = k * N - k * (k + 1) // 2
+        Ck = k * X + D * L
+        Rk = R - L
+        seg = (Ck // D, Ck // D + Rk + 1)
         s = Ck % D
         segs[s].append(seg)
 
@@ -61,5 +61,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

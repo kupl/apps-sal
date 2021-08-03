@@ -1,9 +1,11 @@
 import collections
+
+
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         invalid = []
         mapNameToTrans = collections.defaultdict(list)
-        
+
         for t in transactions:
             name, time, amount, city = t.split(',')
             if int(amount) > 1000:
@@ -21,4 +23,3 @@ class Solution:
                         invalid.append(past[3])
             mapNameToTrans[name].append([time, city, did_add, t])
         return invalid
-

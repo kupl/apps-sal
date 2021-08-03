@@ -6,5 +6,5 @@ def main():
         a, b = min(a + x, b + 10 - x), min(a + x + 1, b + 10 - x - 1)
     print(a)
 
-main()
 
+main()

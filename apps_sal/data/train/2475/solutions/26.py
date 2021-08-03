@@ -10,8 +10,5 @@ class Solution:
                     indiciesToRemove.append(col)
                     break
                 previous = A[row][col]
-                
-                
-        return len(indiciesToRemove)
-                
 
+        return len(indiciesToRemove)

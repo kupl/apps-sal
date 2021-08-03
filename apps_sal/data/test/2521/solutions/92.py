@@ -29,4 +29,4 @@ for k in range(N, 2 * N):
     e -= n
     sum_d2_arr.append(e)
 
-print(max(v+w for v, w in zip(sum_d1_arr, sum_d2_arr[::-1])))
+print(max(v + w for v, w in zip(sum_d1_arr, sum_d2_arr[::-1])))

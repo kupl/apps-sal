@@ -5,7 +5,7 @@ class Solution:
         for i in range(1, n):
             l = Counter()
             a = 0
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 a ^= arr[j]
                 l[a] += 1
             a = 0

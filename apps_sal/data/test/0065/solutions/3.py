@@ -17,4 +17,3 @@ while i < len(a):
             last = i
     i += 1
 print(best)
-

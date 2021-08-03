@@ -13,15 +13,14 @@ for i in range(m):
 ar = ark[:]
 for i in range(n):
     s = []
-    for j in range(m - 1, -1 , -1):
+    for j in range(m - 1, -1, -1):
         s.append(ar[j][i])
     ar1.append(s)
 for i in range(n):
     for j in ar1[i]:
-        print(j*2, end = '')
+        print(j * 2, end='')
 
     print()
     for j in ar1[i]:
-        print(j*2, end = '')   
+        print(j * 2, end='')
     print()
-    

@@ -22,12 +22,12 @@ Created on Wed Sep 16 17:42:18 2020
 import heapq
 N, M = map(int, input().split())
 # -1倍する
-A = [int(x)*(-1) for x in input().split()]
+A = [int(x) * (-1) for x in input().split()]
 heapq.heapify(A)
 
-#O(M) * O(log N)
+# O(M) * O(log N)
 for i in range(M):
     Max = heapq.heappop(A) * (-1)
     Max //= 2
-    heapq.heappush(A, Max*(-1))
+    heapq.heappush(A, Max * (-1))
 print(-sum(A))

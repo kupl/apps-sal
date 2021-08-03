@@ -7,7 +7,7 @@ H1 = [0] * (10 ** 5)
 H2 = [0] * (10 ** 5)
 M = []
 
-for i in range (0, n):
+for i in range(0, n):
     x = a[i]
     h = ((x + 1234) ** 2) % 94999
     if H1[h] == 0:

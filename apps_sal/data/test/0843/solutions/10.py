@@ -14,4 +14,6 @@ def __starting_point():
         print('INFINITE')
     else:
         print('FINITE')
+
+
 __starting_point()

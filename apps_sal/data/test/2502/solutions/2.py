@@ -13,6 +13,7 @@ def partial_match_table(word):
             table[j] = i
     return table
 
+
 def kmp_search(text, word):
     table = partial_match_table(word)
     i, p = 0, 0
@@ -23,20 +24,21 @@ def kmp_search(text, word):
             p += 1
             if p == len(word):
                 p = table[p]
-                results.append((i-len(word), i))
+                results.append((i - len(word), i))
         elif p == 0:
             i += 1
         else:
             p = table[p]
     return results
 
+
 inf = 10**18
 s = input().strip()
 t = input().strip()
-m=(len(t)+len(s)-1+len(s)-1)//len(s)
+m = (len(t) + len(s) - 1 + len(s) - 1) // len(s)
 d = set()
-for a, b in kmp_search(m*s, t):
-    d.add(a%len(s))
+for a, b in kmp_search(m * s, t):
+    d.add(a % len(s))
 
 d2 = set()
 for i in range(len(s)):
@@ -52,7 +54,7 @@ while q:
     for x in q:
         if dist[x] == inf:
             dist[x] = d
-            qq.append((x-LT)%LS)
+            qq.append((x - LT) % LS)
     d += 1
     q = qq
 
@@ -61,4 +63,3 @@ if answer >= inf:
     answer = -1
 
 print(answer)
-

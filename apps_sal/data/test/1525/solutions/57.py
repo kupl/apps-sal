@@ -53,4 +53,3 @@ for _ in range(H):
 
 ans = dp[1]
 print(ans)
-

@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 L = li()
@@ -15,4 +20,3 @@ for i in range(n):
         t += i - p
     p = max(p, i + L[i])
 print(t)
-

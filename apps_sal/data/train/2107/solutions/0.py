@@ -2,7 +2,7 @@
 def main():
     s = input()
     l = len(s)
-    
+
     pretty_count = 0
     for i in range(l):
         left_paren_count = 0
@@ -13,9 +13,9 @@ def main():
                 left_paren_count += 1
             elif s[j] == ')':
                 right_paren_count += 1
-            else: 
+            else:
                 wild_count += 1
-                
+
             if left_paren_count + wild_count < right_paren_count:
                 break
             if left_paren_count < wild_count + right_paren_count:
@@ -31,5 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

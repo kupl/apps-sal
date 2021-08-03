@@ -3,16 +3,16 @@ class Solution:
         tokens.sort()
         if(not tokens or P < tokens[0]):
             return 0
-        l, r = 0, len(tokens)-1
+        l, r = 0, len(tokens) - 1
         points = 0
-        
+
         while(l <= r):
             if(P >= tokens[l]):
                 points += 1
                 P -= tokens[l]
                 l += 1
             else:
-                if(r-l > 1):
+                if(r - l > 1):
                     points -= 1
                     P += tokens[r]
                     r -= 1

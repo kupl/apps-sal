@@ -21,4 +21,3 @@ for j in range(w):
 
 for i in range(h):
     print(("".join(masu[i])))
-

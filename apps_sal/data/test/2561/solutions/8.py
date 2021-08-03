@@ -3,8 +3,9 @@ def count_ones(x):
     while (x > 0):
         if x % 2 == 1:
             ans = ans + 1
-        x  = x // 2
+        x = x // 2
     return ans
+
 
 t = int(input())
 for i in range(t):

@@ -8,4 +8,4 @@ while True:
     A = A - D
     if A <= 0:
         print("No")
-        break        
+        break

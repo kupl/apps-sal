@@ -1,5 +1,5 @@
 def grCount(m, n, a):
-    s = [0]*(2*n + 1)
+    s = [0] * (2 * n + 1)
     sx = n
     result = 0
     s[sx] = 1
@@ -15,6 +15,7 @@ def grCount(m, n, a):
         s[sx] += 1
     return result
 
-n, m = map(int,input().split())
-a = list(map(int,input().split()))
+
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
 print(grCount(m, n, a) - grCount(m + 1, n, a))

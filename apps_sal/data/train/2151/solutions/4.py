@@ -7,10 +7,8 @@ for i in range(m):
     if aa[i] > s:
         res += aa[i] - s
 res += abs(aa[m] - s)
-for i in range(m+1, n):
+for i in range(m + 1, n):
     if aa[i] < s:
         res += s - aa[i]
 
 print(res)
-
-

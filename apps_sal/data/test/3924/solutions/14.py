@@ -1,5 +1,5 @@
 v = []
-n,k = list(map(int, input().split()))
+n, k = list(map(int, input().split()))
 s = 0
 v = [int(x) for x in input().split()]
 q = 0
@@ -16,4 +16,3 @@ for i in range(len(v)):
 if carry > 0:
     q += 1
 print(q)
-

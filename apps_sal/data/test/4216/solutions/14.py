@@ -15,4 +15,3 @@ for a in range(1, int(math.sqrt(n)) + 1):
         min_f_value = min(min_f_value, f(a, b))
 
 print(min_f_value)
-

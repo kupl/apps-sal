@@ -27,5 +27,3 @@ while i < n:
     elif l[i] < index:
         print(1, i + 1, i)
     i += 1
-        
-

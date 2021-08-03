@@ -23,7 +23,6 @@ class UnionFind():  # 0インデックス
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-
     def size(self, x):
         return -self.parents[self.find(x)]
 

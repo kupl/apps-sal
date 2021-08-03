@@ -63,4 +63,3 @@ def solve(i):
 
 ans_i = bisect_right_callable(solve, 0, lo=0, hi=N)
 print((series_sorted[max(0, min(N - 1, ans_i - 1))]))
-

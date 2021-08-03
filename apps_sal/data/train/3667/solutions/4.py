@@ -1,4 +1,6 @@
 import re
+
+
 def mid_endian(n):
     t = f'{n:X}'
     t = '0' + t if len(t) % 2 else t

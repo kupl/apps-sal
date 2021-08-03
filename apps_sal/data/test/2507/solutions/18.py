@@ -8,6 +8,7 @@ F = np.array(list(map(int, input().split())))
 A = np.sort(A)
 F = np.sort(F)[::-1]
 
+
 @njit
 def is_ok(x):
     tmp = 0
@@ -16,6 +17,7 @@ def is_ok(x):
         if y > x:
             tmp += a - x // f
     return tmp <= k
+
 
 ok = 10 ** 16
 ng = -1
@@ -27,4 +29,3 @@ while ok - ng > 1:
         ng = mid
 
 print(ok)
-

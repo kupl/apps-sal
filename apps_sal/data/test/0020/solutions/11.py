@@ -12,5 +12,3 @@ while True:
         h += 1
     if h == 24:
         h = 0
-    
-

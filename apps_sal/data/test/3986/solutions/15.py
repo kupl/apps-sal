@@ -43,7 +43,7 @@ if(k % 2 == 1 and n % 2 == 0):
     right = string.ascii_lowercase[2: 2 + rightnum]
     print(left + right)
     return
-    
+
 if(k % 2 == 1 and n % 2 == 1):
     rightnum = k - 2
     leftnum = n - rightnum
@@ -52,4 +52,3 @@ if(k % 2 == 1 and n % 2 == 1):
     right = string.ascii_lowercase[2:2 + rightnum]
     print(left + right)
     return
-

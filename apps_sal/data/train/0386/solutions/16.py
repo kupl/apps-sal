@@ -43,4 +43,3 @@ class Solution:
         count %= self.MOD
         self.cache[n][vowel] = count
         return count
-

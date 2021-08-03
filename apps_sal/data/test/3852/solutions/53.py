@@ -1,5 +1,6 @@
 import sys
-import heapq, math
+import heapq
+import math
 from itertools import zip_longest, permutations, combinations, combinations_with_replacement
 from itertools import accumulate, dropwhile, takewhile, groupby
 from functools import lru_cache
@@ -36,4 +37,3 @@ else:
             print((mini + 1, i + 1))
         for i in range(N, 1, -1):
             print((i, i - 1))
-

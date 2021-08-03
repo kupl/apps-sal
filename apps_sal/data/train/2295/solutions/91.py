@@ -21,4 +21,3 @@ if np.all(A == B):
 else:
     ans = A.sum() - B[A > B].min()
     print(ans)
-

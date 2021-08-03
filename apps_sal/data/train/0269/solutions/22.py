@@ -4,8 +4,8 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] == 1 and s == -1:
                 s = i
-            elif nums[i] == 1 and i-s <= k:
+            elif nums[i] == 1 and i - s <= k:
                 return False
-            elif nums[i] == 1 and i-s > k:
+            elif nums[i] == 1 and i - s > k:
                 s = i
         return True

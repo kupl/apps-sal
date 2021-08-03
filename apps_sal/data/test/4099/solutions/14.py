@@ -10,4 +10,3 @@ if answer <= K:
         print(answer)
 else:
     print('-1')
-

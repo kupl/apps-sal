@@ -34,4 +34,3 @@ while it >= 0:
     if not deleted:
         it -= 1
 print(score)
-

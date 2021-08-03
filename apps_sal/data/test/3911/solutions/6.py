@@ -9,4 +9,3 @@ while n > 0:
 for v in reversed(out):
     print(v, end=' ')
 print()
-

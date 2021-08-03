@@ -59,9 +59,9 @@ def mt(f):
 def slv(K):
 
     g = defaultdict(dict)
-    for i in range(1, K+1):
-        g[i % K][(i+1) % K] = 1
-        g[i % K][(i*10) % K] = 0
+    for i in range(1, K + 1):
+        g[i % K][(i + 1) % K] = 1
+        g[i % K][(i * 10) % K] = 0
 
     q = deque()
     q.append((1, 0))
@@ -78,7 +78,7 @@ def slv(K):
             if c == 0:
                 q.appendleft((v, cc))
             else:
-                q.append((v, cc+c))
+                q.append((v, cc + c))
 
 
 def main():
@@ -88,5 +88,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

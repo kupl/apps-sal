@@ -17,4 +17,3 @@ class Solution:
                     left += 1
             maxSum = max(maxSum, K - allowance + currSum)
         return maxSum
-

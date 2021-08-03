@@ -17,4 +17,3 @@ if (d - b) % g == 0:
 
 else:
     print(-1)
-

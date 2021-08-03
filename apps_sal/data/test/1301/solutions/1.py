@@ -14,4 +14,3 @@ for can in choices:
     if isValid:
         print(can)
         break
-

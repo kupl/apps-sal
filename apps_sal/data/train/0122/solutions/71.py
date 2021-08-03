@@ -10,5 +10,3 @@ class Solution:
             if left[i] + right[k - i] > maxSoFar:
                 maxSoFar = left[i] + right[k - i]
         return maxSoFar
-        
-

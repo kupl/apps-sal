@@ -1,5 +1,7 @@
 def mi():
-        return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
+
 '''
 5
 6
@@ -19,9 +21,8 @@ for _ in range(int(input())):
     m = a[0]
     ans = 0
     for i in range(n):
-        if a[i]>m:
-            ans+=1
-        elif a[i]<m:
+        if a[i] > m:
+            ans += 1
+        elif a[i] < m:
             m = a[i]
-    print (ans)
-
+    print(ans)

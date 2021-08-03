@@ -6,13 +6,13 @@ else:
     letters = dict()
     x = list(s)
     found = False
-    for i in range(0, len(x)-25):
+    for i in range(0, len(x) - 25):
         oneCount = 0
         zeroCount = 0
         qCount = 0
         for j in key:
             letters[j] = 0
-        for j in range(i, i+26):
+        for j in range(i, i + 26):
             letters[x[j]] += 1
         for j in letters:
             if(letters[j] == 1) and (j.isalpha()):
@@ -24,7 +24,7 @@ else:
         if(qCount != zeroCount) or (oneCount + zeroCount != 26):
             continue
         else:
-            for k in range(i, i+26):
+            for k in range(i, i + 26):
                 if(x[k] == '?'):
                     for j in letters:
                         if(letters[j] == 0) and (j.isalpha()):

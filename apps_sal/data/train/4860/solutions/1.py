@@ -1,5 +1,5 @@
 def amidakuji(ar):
-    #your code goes here. you can do it!
+    # your code goes here. you can do it!
     # uncomment the line below to view the structure of the test case
     # print(visualizer(ar))
     width = len(ar[0])
@@ -12,8 +12,8 @@ def amidakuji(ar):
                 current = swap(current, count, count + 1)
             count += 1
     return current
-            
-    
+
+
 def swap(l, pos1, pos2):
     l[pos1], l[pos2] = l[pos2], l[pos1]
     return l

@@ -1,3 +1,3 @@
 from fractions import gcd
 from functools import reduce
-solution = lambda a: reduce(gcd, a)*len(a)
+def solution(a): return reduce(gcd, a) * len(a)

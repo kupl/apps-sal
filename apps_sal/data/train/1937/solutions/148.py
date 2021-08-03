@@ -4,11 +4,12 @@ class node:
         self.children = []
         self.isdead = False
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
         self.root = node(kingName)
-        self.m = {kingName : self.root}
+        self.m = {kingName: self.root}
 
     def birth(self, parentName: str, childName: str) -> None:
         p = self.m[parentName]
@@ -22,12 +23,13 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
         cur = self.root
         res = []
+
         def helper(cur):
             if not cur.isdead:
                 res.append(cur.name)
             for c in cur.children:
                 helper(c)
-                
+
         helper(cur)
         return res
 
@@ -37,4 +39,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

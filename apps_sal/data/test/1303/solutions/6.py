@@ -9,7 +9,7 @@ arr_z.sort()
 arr = [False] * 1001
 for i in range(q):
     t = list(map(int, input().split()))
-    t[1] = t[1] - t[0]    
+    t[1] = t[1] - t[0]
     f = t[0]
     for j in range(l, r + 1):
         t[0] = f + j

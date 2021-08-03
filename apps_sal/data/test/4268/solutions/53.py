@@ -9,6 +9,7 @@ for i in range(0, n):
         for k in range(0, d):
             tmp += pow(list_x[i][k] - list_x[j][k], 2)
         tmp = math.sqrt(tmp)
-        if tmp.is_integer(): count += 1
+        if tmp.is_integer():
+            count += 1
         tmp = 0
 print(count)

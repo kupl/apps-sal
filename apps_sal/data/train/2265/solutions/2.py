@@ -10,6 +10,7 @@ def Split(a):
         no.append((i, x))
     yield no
 
+
 n = int(input())
 p = list(enumerate((int(input()) for i in range(n)), 1))
 for sq in Split(p):

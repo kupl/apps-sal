@@ -25,4 +25,3 @@ for string in l:
 
 print(len(L))
 print('\n'.join(L))
-

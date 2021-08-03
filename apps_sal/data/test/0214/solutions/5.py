@@ -51,8 +51,5 @@ for i in range(len(a)):
             b[i + 1] = 'X'
             k += 1
     else:
-         k = 0
+        k = 0
 print(k)
-
-        
-

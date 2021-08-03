@@ -9,6 +9,6 @@ while i < n:
     while S[j] in st:
         size += 1
         j += 1
-    i = j+1
+    i = j + 1
     max_len = max(max_len, size)
 print(max_len)

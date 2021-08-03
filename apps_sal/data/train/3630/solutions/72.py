@@ -1,11 +1,11 @@
 def arithmetic(a, b, operator):
     if operator == "add":
-        return a+b
+        return a + b
     elif operator == "subtract":
-        return a-b
+        return a - b
     elif operator == "multiply":
-        return a*b
+        return a * b
     elif operator == "divide":
-        return a/b
+        return a / b
     else:
         return "Please input a proper operator."

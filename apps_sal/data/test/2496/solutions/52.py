@@ -39,4 +39,3 @@ for a in A:
         pre = D[k]
         k = int(k / D[k])
 print('pairwise coprime')
-

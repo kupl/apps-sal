@@ -16,4 +16,3 @@ if cnt % 2 == 0:
     print(ans)
 else:
     print((ans - min_n * 2))
-

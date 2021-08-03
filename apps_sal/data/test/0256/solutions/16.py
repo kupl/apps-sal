@@ -6,13 +6,15 @@ else:
     t1atk = x[0][1]
     t1def = x[1][0]
 
+
 def f():
-    if  t1atk > t2def and t1def > t2atk:
+    if t1atk > t2def and t1def > t2atk:
         return 0
     elif t1atk < t2def and t1def < t2atk:
         return 2
     else:
         return 1
+
 
 t2def = x[2][0]
 t2atk = x[3][1]
@@ -35,5 +37,3 @@ elif t1atk < t2def and t1def < t2atk:
     print("Team 2")
 else:
     print("Draw")
-
-

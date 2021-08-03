@@ -11,4 +11,3 @@ if cur == 0:
     print("even")
 else:
     print("odd")
-

@@ -7,4 +7,5 @@ def mult(a, b):
     else:
         print(a * b)
 
-mult(a,b)
+
+mult(a, b)

@@ -5,8 +5,8 @@ def caffeineBuzz(n):
             result = "Coffee"
         else:
             result = "Java"
-            
+
         if not n % 2:
             result = ''.join((result, "Script"))
-            
+
     return result

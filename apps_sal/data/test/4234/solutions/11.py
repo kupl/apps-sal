@@ -18,9 +18,8 @@ def mulinv(b, n):
         return x % n
 
 
-
 def isprime(n):
-    for d in range(2, int(math.sqrt(n))+1):
+    for d in range(2, int(math.sqrt(n)) + 1):
         if n % d == 0:
             return False
     return True
@@ -40,26 +39,26 @@ def f(p=0):
     else:
         return int(input())
 
+
 n = f()
 s = f(3)
 res = []
 i = 0
-while(i<n-1):
-    while(i<n-1 and s[i]==s[i+1]):
-        i+=1
-    if i==n-1:
+while(i < n - 1):
+    while(i < n - 1 and s[i] == s[i + 1]):
+        i += 1
+    if i == n - 1:
         break
-    if s[i]!=s[i+1]:
+    if s[i] != s[i + 1]:
         res.append(s[i])
-        res.append(s[i+1])
+        res.append(s[i + 1])
     else:
         res.append(s[i])
-    i+=2
+    i += 2
 
-if len(res)%2==0:
-    print(n-len(res))
+if len(res) % 2 == 0:
+    print(n - len(res))
     print(''.join(res))
 else:
-    print(n-len(res)+1)
+    print(n - len(res) + 1)
     print(''.join(res[:-1]))
-

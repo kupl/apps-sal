@@ -2,7 +2,7 @@ from collections import Counter
 n = int(input())
 
 D = Counter(list(input()))
-for i in range(n-1):
+for i in range(n - 1):
     d = Counter(list(input()))
     key = D.keys()
     for k in key:

@@ -1,4 +1,4 @@
-N,A,B,C = list(map(int,input().split()))
+N, A, B, C = list(map(int, input().split()))
 l = []
 for i in range(N):
     l.append(int(input()))
@@ -6,7 +6,7 @@ for i in range(N):
 choiceList = []
 for i in range(4 ** N):
     choice = [-1 for i in range(N)]
-    for j in range (N):
+    for j in range(N):
         choice[j] = i // (4 ** j) % 4
     choiceList.append(choice)
 

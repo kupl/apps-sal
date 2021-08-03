@@ -3,10 +3,10 @@ class Solution:
         def merge(left_array, right_array):
             if not left_array:
                 return right_array
-            
+
             if not right_array:
                 return left_array
-            
+
             left_low = 0
             right_low = 0
             output = []
@@ -24,26 +24,23 @@ class Solution:
                 else:
                     output.append(right_array[right_low])
                     right_low += 1
-            
+
             return output
-            
-        
+
         def sort(low, high):
             if low == high:
                 return [nums[low]]
             elif low > high:
                 return []
-            
+
             mid = low + (high - low) // 2
-            
+
             left = sort(low, mid)
             right = sort(mid + 1, high)
-            
+
             return merge(left, right)
-        
+
         if not nums:
             return []
-        
-        return sort(0, len(nums) - 1)
-        
 
+        return sort(0, len(nums) - 1)

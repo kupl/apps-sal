@@ -48,4 +48,3 @@ if inv_diag_sum != v_sum:
     return
 
 print(mat[zero_pos[0]][zero_pos[1]])
-

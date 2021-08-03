@@ -11,14 +11,14 @@ class Solution:
         while queue:
             new_queue = []
             for stop in queue:
-                if stop == T: 
+                if stop == T:
                     return step
                 for i in to_lines[stop]:
                     for j in routes[i]:
                         if j not in visited:
                             new_queue.append(j)
                             visited.add(j)
-                    #routes[i] = []  # seen route
+                    # routes[i] = []  # seen route
             queue = new_queue
             step += 1
         return -1

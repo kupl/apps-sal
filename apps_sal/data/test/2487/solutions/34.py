@@ -11,4 +11,3 @@ for _ in range(n - 1):
     ans -= u * (n - v + 1)
 
 print(ans)
-

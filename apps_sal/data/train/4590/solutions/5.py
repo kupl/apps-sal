@@ -5,4 +5,3 @@ def alt_or(lst):
         if (x == True):
             return True
     return False
-

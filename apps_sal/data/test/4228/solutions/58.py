@@ -6,4 +6,3 @@ else:
         print((n * l + (n * (n + 1)) // 2 - n))
     else:
         print(((n - 1) * l + (n * (n + 1)) // 2 - (n - 1) - n))
-

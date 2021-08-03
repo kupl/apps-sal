@@ -6,11 +6,10 @@ ans = 0
 
 MOD = 10 ** 9 + 7
 
-for i in range(N+1):
-    s += i 
-    e += N - i 
+for i in range(N + 1):
+    s += i
+    e += N - i
     if i + 1 >= K:
         ans += e - s + 1
         ans %= MOD
 print(ans)
-

@@ -7,6 +7,7 @@ instructions = {
     'C3D9': mul,
 }
 
+
 def communication_module(packet):
     header, instruction, data1, data2, footer = re.findall('....', packet)
     result = instructions[instruction](int(data1), int(data2))

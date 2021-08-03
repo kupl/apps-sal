@@ -5,5 +5,6 @@ def find_missing_number(sequence):
     except ValueError:
         return 1
     for i, x in enumerate(items, 1):
-        if i != x: return i
-    return 0       
+        if i != x:
+            return i
+    return 0

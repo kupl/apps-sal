@@ -9,4 +9,3 @@ if num > a:
     print("No")
 else:
     print("Yes")
-

@@ -27,17 +27,16 @@ def distance(p0, p1):
 
 n = ri()
 mp = {}
-ar=[]
-for i in range(401,-1,-1):
-    ar.append(('k'*i+'h'))
+ar = []
+for i in range(401, -1, -1):
+    ar.append(('k' * i + 'h'))
 
 for i in range(n):
     st = input()
     st = st.replace('u', 'oo')
 
-    for j in range(1,len(ar)):
-        st=st.replace(ar[j-1],ar[j])
+    for j in range(1, len(ar)):
+        st = st.replace(ar[j - 1], ar[j])
 
     mp[st] = 1
 print(len(mp))
-

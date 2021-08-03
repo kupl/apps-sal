@@ -21,4 +21,3 @@ for i in range(f):
         ans += arr[i]
 
 print(ans)
-

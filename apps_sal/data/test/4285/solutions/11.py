@@ -53,4 +53,3 @@ for _ in range(1):
         kek += suf1[i + 1]
         ans %= mod
     print(ans)
-

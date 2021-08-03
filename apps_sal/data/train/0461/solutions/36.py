@@ -13,7 +13,4 @@ class Solution:
                 for employee in reversed(path):
                     time[employee] = time[manager[employee]] + informTime[manager[employee]]
             result = max(result, time[i])
-        return result            
-        
-        
-
+        return result

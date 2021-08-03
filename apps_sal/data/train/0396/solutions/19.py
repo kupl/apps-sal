@@ -8,5 +8,3 @@ class Solution:
             N = N * 10 + 1
             ans += 1
         return ans
-    
-

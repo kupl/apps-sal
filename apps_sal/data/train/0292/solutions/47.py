@@ -8,7 +8,7 @@ class Solution:
                     x = -math.inf
                     y = math.inf
                     for i, v in enumerate(arr1):
-                        x = max(x, a*i + b*v + c*arr2[i])
-                        y = min(y, a*i + b*v + c*arr2[i])
+                        x = max(x, a * i + b * v + c * arr2[i])
+                        y = min(y, a * i + b * v + c * arr2[i])
                     ans = max(ans, x - y)
         return ans

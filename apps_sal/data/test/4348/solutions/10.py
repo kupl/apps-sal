@@ -29,5 +29,3 @@ if k != n:
                 print(x, end='')
         elif x > b:
             print(x, end='')
-    
-

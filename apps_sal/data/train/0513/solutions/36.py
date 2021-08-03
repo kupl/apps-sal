@@ -1,7 +1,7 @@
+from bisect import bisect_left
 import sys
 sys.setrecursionlimit(10 ** 9)
 
-from bisect import bisect_left
 
 N = int(input())
 A = list(map(int, input().split()))
@@ -27,6 +27,7 @@ memo = [None] * N
 INF = 10 ** 10
 dp = [INF] * N
 
+
 def dfs(x):
     tmp = bisect_left(dp, A[x])
     memo[x] = (tmp, dp[tmp])
@@ -40,8 +41,7 @@ def dfs(x):
     j, a = memo[x]
     dp[j] = a
 
+
 dfs(root)
 
-print (*ans, sep = '\n')
-
-
+print(*ans, sep='\n')

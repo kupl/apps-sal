@@ -9,5 +9,3 @@ for _ in range(int(input())):
         cnt += 1
         a, b = a + b, a
     print(cnt)
-
-

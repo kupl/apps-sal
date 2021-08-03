@@ -13,4 +13,3 @@ ans = -INF
 for i in range(1, 1 << N):
     ans = max(ans, sum(B[i]))
     print(ans)
-

@@ -1,6 +1,7 @@
 from math import sqrt
 
-def equable_triangle(a,b,c):
+
+def equable_triangle(a, b, c):
     perimeter = a + b + c
     ss = perimeter / 2
     try:

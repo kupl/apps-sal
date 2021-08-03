@@ -6,7 +6,7 @@ values = sorted(list(map(int, stdin.readline().split())))
 l, r = -1, n
 while r - l > 1:
     m = (l + r) >> 1
-    
+
     if (sum(values[m:]) + 5 * m) * 10 >= 45 * n:
         r = m
     else:

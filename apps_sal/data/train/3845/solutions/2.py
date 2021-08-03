@@ -1,7 +1,7 @@
 def product(numbers):
-    if numbers==[] or numbers==None:
+    if numbers == [] or numbers == None:
         return None
-    res=1
+    res = 1
     for i in numbers:
-        res*=i
+        res *= i
     return res

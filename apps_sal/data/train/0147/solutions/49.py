@@ -1,6 +1,6 @@
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        unit = sorted([(s, e) for (s, e) in zip(speed, efficiency)], key=lambda x:x[1], reverse=True)
+        unit = sorted([(s, e) for (s, e) in zip(speed, efficiency)], key=lambda x: x[1], reverse=True)
         max_res = -1
         curr_sum = 0
         MOD = 10**9 + 7

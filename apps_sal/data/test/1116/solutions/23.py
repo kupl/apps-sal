@@ -8,8 +8,8 @@ for i in range(n):
 
     if r > b:
         r, b = b, r
-    
-    lcm = r * b // math.gcd(r,b)
+
+    lcm = r * b // math.gcd(r, b)
     if (b - math.gcd(r, b) - 1) // r + 1 >= k:
         print("REBEL")
     else:

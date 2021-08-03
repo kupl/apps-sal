@@ -23,7 +23,7 @@ else:
             sumb += b[j]
             j += 1
             if (i == n and j == m):
-                break            
+                break
         elif (suma < sumb):
             suma += a[i]
             i += 1

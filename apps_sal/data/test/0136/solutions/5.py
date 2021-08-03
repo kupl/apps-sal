@@ -24,10 +24,10 @@ def solve():
         print('<')
     else:
         for i in range(la):
-            if A[lza + i] > B[lzb+i]:
+            if A[lza + i] > B[lzb + i]:
                 print('>')
                 break
-            elif A[lza + i] < B[lzb+i]:
+            elif A[lza + i] < B[lzb + i]:
                 print('<')
                 break
         else:
@@ -36,5 +36,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

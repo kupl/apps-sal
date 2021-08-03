@@ -2,6 +2,7 @@
 k = int(input())
 q = input()
 
+
 def program(k, q):
     if k > len(set(q)):
         print("NO")
@@ -19,7 +20,6 @@ def program(k, q):
     print("YES")
     for s in ss:
         print(s)
-    
-program(k, q)
-    
 
+
+program(k, q)

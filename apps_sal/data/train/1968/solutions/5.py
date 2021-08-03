@@ -26,24 +26,25 @@ class Trie:
             current_dict = current_dict[letter]
         return _end in current_dict
 
+
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
-        if folder: folder.sort()
+        if folder:
+            folder.sort()
 
         r = []
         trie = Trie()
         for f in folder:
             names = [x for x in f.split('/') if x.strip()]
             to_insert = True
-            for i in range(1, len(names)+1):
+            for i in range(1, len(names) + 1):
                 subfolder = '/'.join(names[:i])
-                subfolder = '/'+subfolder if subfolder else subfolder
+                subfolder = '/' + subfolder if subfolder else subfolder
                 if trie.has(subfolder):
                     to_insert = False
                     break
-                
+
             if to_insert:
                 r.append(f)
                 trie.insert(f)
         return r
-

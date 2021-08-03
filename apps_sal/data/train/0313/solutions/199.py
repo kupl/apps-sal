@@ -1,6 +1,7 @@
 
 from typing import List
 
+
 def binarysearch(start, end, condition, postprocessing):
     l, r = start, end
     while l < r:
@@ -39,6 +40,3 @@ class Solution:
             return -1 if not canMakeBouquet()(final_day) else final_day
 
         return binarysearch(0, max(bloomDay), canMakeBouquet(), maybeCantMake)
-
-
-

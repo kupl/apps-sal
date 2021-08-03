@@ -1,7 +1,6 @@
 q = int(input())
 
 
-
 def full_way(u):
     res = set()
 
@@ -29,7 +28,7 @@ def get_way(u, v):
 d = {}
 
 for i in range(q):
-    a  = input().split()
+    a = input().split()
 
     if a[0] == '1':
         v, u, w = map(int, a[1:])

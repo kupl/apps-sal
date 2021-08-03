@@ -1,17 +1,20 @@
 
 
 import collections
+
+
 class Node:
     def __init__(self, val):
         self.size = 1
         self.val = val
         self.parent = self
-        
+
+
 class UnionFind:
     def __init__(self):
         self.map = {}
         self.sizes = collections.defaultdict(int)
-        
+
     def find(self, node):
         if node.val not in self.map:
             self.map[node.val] = node
@@ -19,8 +22,7 @@ class UnionFind:
         elif node.parent != node:
             node = self.find(node.parent)
         return node
-    
-    
+
     def merge(self, node1, node2):
         parent1, parent2 = self.find(node1), self.find(node2)
         if parent1 != parent2:
@@ -37,6 +39,7 @@ class UnionFind:
                 parent2.size += parent1.size
                 self.sizes[parent2.size] += 1
 
+
 class Solution:
     def findLatestStep(self, arr, m: int) -> int:
         uf = UnionFind()
@@ -48,7 +51,7 @@ class Solution:
                 uf.merge(node, uf.map[val - 1])
             if val + 1 in uf.map:
                 uf.merge(node, uf.map[val + 1])
-                
+
             if uf.sizes[m] > 0:
                 ans = i + 1
         return ans

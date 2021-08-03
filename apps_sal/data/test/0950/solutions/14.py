@@ -14,6 +14,7 @@ def get_min_distance(str, alphabet):
             break
     return mi
 
+
 n, m = map(int, input().split())
 strs = []
 for i in range(n):

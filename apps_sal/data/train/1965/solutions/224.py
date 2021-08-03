@@ -1,21 +1,22 @@
 import copy
 
+
 class Solution:
-    
+
     def findParent(self, v, parent):
-            if parent[v] == -1:
-                return v
-            else:
-                return self.findParent(parent[v], parent)
-    
+        if parent[v] == -1:
+            return v
+        else:
+            return self.findParent(parent[v], parent)
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         bothEdges = []
         aEdges = []
         bEdges = []
-        
+
         aNodes = set()
         bNodes = set()
-        
+
         for e in edges:
             if e[0] == 3:
                 bothEdges.append(e)
@@ -31,10 +32,10 @@ class Solution:
                 bEdges.append(e)
                 bNodes.add(e[2])
                 bNodes.add(e[1])
-                
+
         if len(aNodes) < n or len(bNodes) < n:
             return -1
-        
+
         parents = [-1 for _ in range(n + 1)]
 
         mstCommon = 0
@@ -49,7 +50,7 @@ class Solution:
                 mstCommon += 1
                 if mstCommon == n - 1:
                     break
-        
+
         if mstCommon == n - 1:
             return len(edges) - (n - 1)
         else:

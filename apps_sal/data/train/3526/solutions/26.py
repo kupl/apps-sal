@@ -11,4 +11,3 @@ def any_arrows(arrows):
                 break
         else:
             return False
-

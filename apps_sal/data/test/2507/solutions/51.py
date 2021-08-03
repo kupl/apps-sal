@@ -23,4 +23,3 @@ F[::-1].sort()
 A_sum = A.sum()
 ans = binary_search(-1, np.max(A * F), K)
 print(ans)
-

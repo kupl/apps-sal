@@ -18,4 +18,3 @@ while i != n - 1:
     else:
         i += 1
 print(min_erase)
-

@@ -10,4 +10,3 @@ class Solution:
             if l_cnt == r_cnt:
                 output += 1
         return output
-

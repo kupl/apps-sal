@@ -13,7 +13,7 @@ def order_weight(strng):
         x['number'] = word
         x['weight'] = weight
         c.append(x)
-        #print(c)
+        # print(c)
     # sort list of dict by value
     c.sort(key=lambda x: x['number'])
     c.sort(key=lambda x: x['weight'])

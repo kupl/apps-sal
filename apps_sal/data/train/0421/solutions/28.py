@@ -1,8 +1,7 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
         i, indexes = 0, list(range(len(s)))
-        
-        
+
         while len(indexes) > 1:
             new = []
             mx = max([s[i + j] for j in indexes if i + j < len(s)])

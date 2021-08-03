@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def main():
 
     players = {
@@ -20,4 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

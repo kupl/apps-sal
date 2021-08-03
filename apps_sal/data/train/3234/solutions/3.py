@@ -2,7 +2,7 @@ import numpy as np
 
 
 def calc_one(value, tot_sum, tot_prod):
-    value[value==tot_sum] = np.nan
+    value[value == tot_sum] = np.nan
     return (tot_prod / value) / (tot_sum - value)
 
 
@@ -21,4 +21,4 @@ def select_subarray(arr):
     min_ = np.nanmin(qs)
     where_min = np.where(qs == min_)[0]
     out = [[where, arr[where]] for where in where_min]
-    return out if len(out)>1 else out[0]
+    return out if len(out) > 1 else out[0]

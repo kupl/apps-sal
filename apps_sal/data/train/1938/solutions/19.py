@@ -1,14 +1,16 @@
 from functools import reduce
+
+
 class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
         def intersection(a, b):
             return [max(a[0], b[0]), max(a[1], b[1]), min(a[2], b[2]), min(a[3], b[3])]
-        
+
         def area(rec):
             dx = max(0, rec[2] - rec[0])  # <================== need to use max!!!
             dy = max(0, rec[3] - rec[1])
             return dx * dy
-        
+
         import itertools
         a = 0
         for i in range(1, len(rectangles) + 1):
@@ -17,10 +19,10 @@ class Solution:
                 a += sign * area(reduce(intersection, k))
 
         return a % (10**9 + 7)
-    
-    #50
+
+    # 50
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
-        
+
         xmap = [{}, {}]
         xs = [[], []]
 
@@ -48,7 +50,7 @@ class Solution:
                 for j in range(xmap[1][r[1]], xmap[1][r[3]]):
                     # print(i, j, len(grid), len(grid[0]))
                     grid[j][i] = 1   # <========================= not [i][j]
-        
+
         area = 0
         for i in range(len(rmap[0]) - 1):
             width = rmap[0][i + 1] - rmap[0][i]
@@ -56,9 +58,3 @@ class Solution:
                 if grid[j][i]:
                     area += width * (rmap[1][j + 1] - rmap[1][j])
         return area % (10**9 + 7)
-            
-        
-                
-        
-
-

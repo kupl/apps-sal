@@ -8,4 +8,3 @@ for _ in range(q):
         print(-1)
         continue
     print(m1 + k)
-

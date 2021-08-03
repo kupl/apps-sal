@@ -1,6 +1,6 @@
 
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 B = [[0] * 33 for i in range(n)]
 C = [0] * 33
@@ -8,14 +8,14 @@ for i in range(n):
     t = A[i]
     j = 0
     while t > 0:
-        B[i][j] += t%2
+        B[i][j] += t % 2
         C[j] += B[i][j]
-        t//=2
+        t //= 2
         j += 1
 
 M2 = [1]
 for i in range(40):
-    M2.append(M2[-1]*2)
+    M2.append(M2[-1] * 2)
 
 S = [0] * n
 for i in range(n):

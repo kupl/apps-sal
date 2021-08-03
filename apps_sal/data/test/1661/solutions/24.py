@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
@@ -21,6 +22,3 @@ for i in range(n):
         j += 1
 
 print(cnt)
-
-
-

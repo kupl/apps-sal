@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 n = int(input())
 ans = []
 flag = 0
@@ -18,5 +19,3 @@ else:
     print('YES')
     for i in range(n):
         print(ans[i])
-            
-

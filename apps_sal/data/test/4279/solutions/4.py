@@ -18,4 +18,3 @@ while le <= sp[-1][0]:
 sp.sort()
 for t in range(a):
     print(*sp[t][1])
-

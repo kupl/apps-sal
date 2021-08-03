@@ -1,4 +1,4 @@
-N, T = map(int,input().split())
+N, T = map(int, input().split())
 ct = [list(map(int, input().split())) for _ in range(N)]
 
 ans = 1001

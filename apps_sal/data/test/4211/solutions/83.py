@@ -11,4 +11,3 @@ for (i, ele) in enumerate(arr):
     if i == len(arr) - 1:
         ans.append(arr[-1])
 print((sum(ans)))
-

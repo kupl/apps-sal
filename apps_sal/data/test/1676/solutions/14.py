@@ -25,4 +25,3 @@ while queue:
     results[idx] = next_server_free_time
 
 print(' '.join([str(x) for x in results]))
-

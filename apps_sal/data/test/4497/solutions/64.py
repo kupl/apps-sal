@@ -10,4 +10,3 @@ for i in range(1, n + 1):
         max_count, answer = count, i
 
 print((max(1, answer)))
-

@@ -3,5 +3,5 @@ def arr(n=0):
     array = []
     for x in range(n):
         array.append(x)
-        print (type(array[x]))
+        print(type(array[x]))
     return array

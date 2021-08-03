@@ -6,14 +6,14 @@ class Solution:
                 d[k] += 1
             else:
                 d[k] = 1
-                
+
         t = []
         for k, v in d.items():
             t.append(v)
         t.sort(reverse=True)
         r = 0
         ii = 0
-        while r < len(arr)//2 + len(arr)%1 :
+        while r < len(arr) // 2 + len(arr) % 1:
             r += t[ii]
-            ii+=1
+            ii += 1
         return ii

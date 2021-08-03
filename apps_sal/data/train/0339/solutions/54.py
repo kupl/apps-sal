@@ -2,7 +2,7 @@ class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         nums1.sort()
         nums2.sort()
-        
+
         def numValid(target, nums):
             start, end = 0, len(nums) - 1
             ans = 0
@@ -23,13 +23,13 @@ class Solution:
                         while start < end and nums[end] == nums[end + 1]:
                             end -= 1
                             dup2 += 1
-                        ans += dup1 * dup2                    
+                        ans += dup1 * dup2
                 elif target * target < nums[start] * nums[end]:
                     end -= 1
                 elif target * target > nums[start] * nums[end]:
                     start += 1
             return ans
-        
+
         ans = 0
         for num1 in nums1:
             ans += numValid(num1, nums2)

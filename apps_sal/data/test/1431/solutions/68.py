@@ -9,4 +9,3 @@ for i in range(N, 0, -1):
         sum_B += 1
 print(sum_B)
 print((*[i for i, b in enumerate(B) if b]))
-

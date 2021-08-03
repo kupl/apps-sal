@@ -6,4 +6,3 @@ def tidyNumber(n):
         else:
             return False
     return True
-

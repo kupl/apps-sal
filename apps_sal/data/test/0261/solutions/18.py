@@ -37,4 +37,3 @@ for node in sorted(m):
             return
 
 print("no")
-

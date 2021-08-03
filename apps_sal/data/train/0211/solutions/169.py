@@ -4,7 +4,7 @@ class Solution:
         def helper(s):
             if not s:
                 return [[]]
-            
+
             splits = []
             for i in range(1, len(s) + 1):
                 word = s[:i]

@@ -11,7 +11,9 @@ def main():
                 cnt += 1
     print((S.count("R") * S.count("B") * S.count("G") - cnt))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

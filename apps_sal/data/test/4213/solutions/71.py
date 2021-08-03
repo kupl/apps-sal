@@ -7,4 +7,5 @@ def __starting_point():
     l = list(map(int, input().split()))
     print((diff_list_max(l)))
 
+
 __starting_point()

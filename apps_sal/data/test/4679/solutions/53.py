@@ -37,4 +37,3 @@ while True:
         else:
             turn = 'c'
         c = c[1:]
-

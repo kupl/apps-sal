@@ -7,7 +7,7 @@ def sortme(words):
             arr.append(i.lower())
         arr = sorted(arr)
         print(arr)
-    
+
         m = []
         for i in arr:
             try:
@@ -16,7 +16,7 @@ def sortme(words):
                     m.append(i)
             except:
                 m.append(i.capitalize())
-   
+
         return m
     else:
         return words

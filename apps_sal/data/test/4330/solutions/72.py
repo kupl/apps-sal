@@ -5,4 +5,3 @@ if abs(a - k) == abs(b - k):
     print(k)
 else:
     print("IMPOSSIBLE")
-

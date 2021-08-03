@@ -5,14 +5,10 @@ class Solution:
         ans = 0
         for i in A:
             ans += d2[target - i]
-            
-            for j in d1: 
-                d2[j + i] += d1[j]
-            
-            d1[i] += 1
-        
-        return ans % int(1e9 + 7)
-                
-            
-        
 
+            for j in d1:
+                d2[j + i] += d1[j]
+
+            d1[i] += 1
+
+        return ans % int(1e9 + 7)

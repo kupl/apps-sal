@@ -1,5 +1,5 @@
 from functools import reduce
-from itertools import combinations_with_replacement 
+from itertools import combinations_with_replacement
 
 ''' Naive implementation of combinations built incrementaly doesn't work (for k = 3, there's no 1,2,3): 
 n = 5
@@ -10,8 +10,8 @@ for k in range(1,n):
         k_uplet_init[k_uplet_init.index(min(k_uplet_init))] += 1
         print(k_uplet_init)
 '''
-    
-    
+
+
 '''    
 def productsum(n):
     result = []
@@ -167,8 +167,6 @@ def productsum(n):
     return sum(result)
 '''
 
-from functools import reduce
-from itertools import combinations_with_replacement 
 
 ''' Naive implementation of combinations built incrementaly doesn't work (for k = 3, there's no 1,2,3): 
 n = 5
@@ -179,8 +177,8 @@ for k in range(1,n):
         k_uplet_init[k_uplet_init.index(min(k_uplet_init))] += 1
         print(k_uplet_init)
 '''
-    
-    
+
+
 '''    
 def productsum(n):
     result = []
@@ -387,24 +385,25 @@ def productsum(n):
     return sum(result)
 
 '''
+
+
 def productsum(n):
     if n < 12:
-        kmax = n+1
+        kmax = n + 1
     else:
         kmax = n
-    
+
     def prodsum(p, s, nf, start):
         k = p - s + nf     # product - sum + number of factors
         if k < kmax:
             if p < n[k]:
                 n[k] = p
-            for i in range(start, kmax//p*2 + 1):
-                prodsum(p*i, s+i, nf+1, i)
-    if kmax > 12: kmax +=1
-    n = [2*kmax] * kmax
-    
+            for i in range(start, kmax // p * 2 + 1):
+                prodsum(p * i, s + i, nf + 1, i)
+    if kmax > 12:
+        kmax += 1
+    n = [2 * kmax] * kmax
+
     prodsum(1, 1, 1, 2)
-    
+
     return sum(set(n[2:]))
-
-

@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 a, b = list(map(int, input().split()))
 
@@ -13,4 +13,3 @@ while a > 0:
 
 
 print(n)
-

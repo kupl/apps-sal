@@ -1,5 +1,7 @@
-I = lambda:map(int,input().split())
-n,m,k = I()
+def I(): return map(int, input().split())
+
+
+n, m, k = I()
 f = [['.' for _ in range(m)] for _ in range(n)]
 for i in range(n):
     s = input()
@@ -17,4 +19,4 @@ for i in range(n):
             ans[j] += 1
         if i + i < n and f[i + i][j] == 'U':
             ans[j] += 1
-print (*ans)
+print(*ans)

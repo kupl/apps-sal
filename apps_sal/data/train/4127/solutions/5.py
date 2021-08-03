@@ -6,13 +6,14 @@ def diviseurs_stricts(nombre):
             diviseurs.append(candidat)
             diviseurs.append(nombre // candidat)
         candidat += 1
-    if candidat * candidat == nombre: # nombre est un carré
+    if candidat * candidat == nombre:  # nombre est un carré
         diviseurs.append(candidat)
     return len(diviseurs)
 
+
 def count_pairs_int(difference, limit):
     ok_list = []
-    for number in range(2,limit-difference):
+    for number in range(2, limit - difference):
         if diviseurs_stricts(number) == diviseurs_stricts(number + difference):
-            ok_list.append([number, number+difference])
+            ok_list.append([number, number + difference])
     return len(ok_list)

@@ -1,2 +1,2 @@
 R = int(input())
-print(2*R* 3.141592)
+print(2 * R * 3.141592)

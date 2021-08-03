@@ -19,5 +19,3 @@ if ok:
         print(''.join(r))
 else:
     print('NO')
-    
-

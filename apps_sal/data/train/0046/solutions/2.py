@@ -11,10 +11,9 @@ for _ in range(T):
             sc += 1
         else:
             pc += 1
-    if rc == max(rc,sc,pc):
-        print('P'*len(s))
-    elif sc == max(rc,sc,pc):
-        print('R'*len(s))
+    if rc == max(rc, sc, pc):
+        print('P' * len(s))
+    elif sc == max(rc, sc, pc):
+        print('R' * len(s))
     else:
-        print('S'*len(s))
-
+        print('S' * len(s))

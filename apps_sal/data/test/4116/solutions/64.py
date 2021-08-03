@@ -25,4 +25,3 @@ if N in mul:
     print('Yes')
 else:
     print('No')
-

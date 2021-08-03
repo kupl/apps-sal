@@ -1,31 +1,30 @@
-#scott http://codeforces.com/problemset/problem/291/A now? ok you start
+# scott http://codeforces.com/problemset/problem/291/A now? ok you start
 
 n = int(input())
-arr = list(map (int, input().split())) #scott
+arr = list(map(int, input().split()))  # scott
 
-#for i in arr:
+# for i in arr:
 #    print (i)
 
-cnt = 0 
-clast, llast = -1, -1 #scott wait we need to sort
+cnt = 0
+clast, llast = -1, -1  # scott wait we need to sort
 
 arr = sorted(arr)
 
-bad = False #scott so now we just count # of pairs and make sure there's not 3 in a row right?ok
-#so a neat thing you can do is just for x in arr
+bad = False  # scott so now we just count # of pairs and make sure there's not 3 in a row right?ok
+# so a neat thing you can do is just for x in arr
 for i in arr:
     #print (i)
-    if i > 0: #scott so last was the last one, llast was the second last one
-        if i == clast :
-            cnt += 1 #scott
-            if clast == llast :
-                bad = True #scott your turn
+    if i > 0:  # scott so last was the last one, llast was the second last one
+        if i == clast:
+            cnt += 1  # scott
+            if clast == llast:
+                bad = True  # scott your turn
         llast = clast
-        clast = i #scott
+        clast = i  # scott
 if bad == False:
-    print (cnt) #scott
+    print(cnt)  # scott
 else:
-    print(-1) #scott
+    print(-1)  # scott
 
-#darn ii'm getting RTE test 1
-
+# darn ii'm getting RTE test 1

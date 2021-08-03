@@ -35,7 +35,7 @@ for j in li:
     summ += j
     si.append(summ)
 
-_1=time.time_ns()
+_1 = time.time_ns()
 q = int(input())
 for i in range(q):
     x = int(input())
@@ -46,7 +46,5 @@ for i in range(q):
     if x == 1:
         print("1")
     else:
-        print(st[x - si[zz - 1] -1])
-_2=time.time_ns()
-
-
+        print(st[x - si[zz - 1] - 1])
+_2 = time.time_ns()

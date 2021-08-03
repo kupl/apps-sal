@@ -9,7 +9,7 @@ if a <= 2:
     return
 c.append(int(t[0]))
 c.append(int(t[1]))
-for i in range(2,a):
+for i in range(2, a):
     c.append(int(t[i]))
     while c[-1] - c[0] > b:
         del c[0]
@@ -18,4 +18,3 @@ for i in range(2,a):
 k = len(c)
 u += k * (k - 1) * (k - 2) / 6
 print(int(u))
-

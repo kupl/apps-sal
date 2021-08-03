@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def primeFactors(number):
     ret, i = [], 2
     while i <= number:

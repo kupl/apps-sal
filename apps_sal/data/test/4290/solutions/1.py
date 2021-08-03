@@ -8,7 +8,6 @@ for i in range(m):
 for a in range(len(ln)):
     for b in range(len(ln)):
         if a != b:
-            if (ln[a]+ln[b]) % 2 == 0:
+            if (ln[a] + ln[b]) % 2 == 0:
                 ans += 1
-print((ans//2))
-
+print((ans // 2))

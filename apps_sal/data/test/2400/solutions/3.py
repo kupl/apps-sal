@@ -1,5 +1,7 @@
 def mi():
-        return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
+
 '''
 3
 3
@@ -21,17 +23,16 @@ for _ in range(int(input())):
     m = int(input())
     b = list(mi())
 
-    oa,ob,ea,eb=0,0,0,0
+    oa, ob, ea, eb = 0, 0, 0, 0
     for i in a:
-        if i%2:
-            oa+=1
+        if i % 2:
+            oa += 1
         else:
-            ea+=1
+            ea += 1
     for i in b:
-        if i%2:
-            ob+=1
+        if i % 2:
+            ob += 1
         else:
-            eb+=1
+            eb += 1
 
-    print(ea*eb+oa*ob)
-
+    print(ea * eb + oa * ob)

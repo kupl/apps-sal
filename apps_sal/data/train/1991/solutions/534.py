@@ -6,9 +6,9 @@ class Solution:
                 return int(i == finish)
             s = 0
             for j in range(len(locations)):
-                cost = abs(locations[i]-locations[j])
+                cost = abs(locations[i] - locations[j])
                 if i != j and f >= cost:
-                    s += dfs(j, f-cost)
+                    s += dfs(j, f - cost)
             s %= 1000000007
             return s + int(i == finish)
         return dfs(start, fuel)

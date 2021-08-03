@@ -1,6 +1,7 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         memo = dict()
+
         def dp(n):
             if n in memo:
                 return memo[n]

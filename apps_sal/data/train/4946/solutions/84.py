@@ -1,5 +1,6 @@
 def house_numbers_sum(inp):
     total = 0
     for x in inp:
-        if x == 0: return total
+        if x == 0:
+            return total
         total += x

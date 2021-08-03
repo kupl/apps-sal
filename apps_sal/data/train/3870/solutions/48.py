@@ -3,6 +3,7 @@ def find(str, ch):
         if ltr == ch:
             yield i
 
+
 def solve(s):
     new_s = s[::-1].replace(" ", '')
 

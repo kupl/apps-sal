@@ -6,6 +6,7 @@ if n == 1:
     print(0)
     return
 
+
 def check(diff):
     cnt = 0
     for i in range(2, n):
@@ -20,6 +21,7 @@ def check(diff):
         else:
             return -1
     return cnt
+
 
 ans = n + 1
 d = [-1, 0, 1]

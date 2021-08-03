@@ -10,6 +10,3 @@ for i in range(M):
     heapq.heappush(A, -most_expensive)
 
 print((-sum(A)))
-
-
-

@@ -14,4 +14,3 @@ for _ in range(K):
     S *= 2
     S = [g[a, b] for a, b in zip(S[::2], S[1::2])]
 print((S[0]))
-

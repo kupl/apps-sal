@@ -40,4 +40,5 @@ def __starting_point():
     for i in range(0, n):
         print(ans_list[i], end=' ')
 
+
 __starting_point()

@@ -3,7 +3,7 @@ class Solution:
         nums.sort(reverse=True)
         # zero_ind = -1
         step = 0
-        while any(( n > 0 for n in nums)):
+        while any((n > 0 for n in nums)):
             # print('nums', nums)
             if all((n % 2 == 0 for n in nums)):
                 nums = [n // 2 for n in nums]

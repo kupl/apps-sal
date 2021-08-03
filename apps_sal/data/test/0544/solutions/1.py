@@ -4,7 +4,7 @@ for i in range(t):
     a = input()
     flag = True
     for j in range(n // 2):
-        if abs(ord(a[j]) - ord(a[-1-j])) > 2 or abs(ord(a[j]) - ord(a[-1-j])) == 1:
+        if abs(ord(a[j]) - ord(a[-1 - j])) > 2 or abs(ord(a[j]) - ord(a[-1 - j])) == 1:
             print("NO")
             break
     else:

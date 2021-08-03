@@ -18,15 +18,12 @@ class Solution:
                 for bus in buses[now]:
                     if (bus not in took):
                         for route in routes[bus]:
-                            if (route not in visited):                                
+                            if (route not in visited):
                                 if (route == T):
                                     return result + 1
                                 q.append(route)
                                 visited.add(route)
                         took.add(bus)
             result += 1
-        
-        return -1
-                        
-                
 
+        return -1

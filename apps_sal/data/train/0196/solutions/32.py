@@ -1,9 +1,9 @@
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
-        curmax, curmin = 0 , 0
+        curmax, curmin = 0, 0
         total = 0
         maxsum = minsum = A[0]
-        
+
         for num in A:
             curmax = max(num, curmax + num)
             maxsum = max(maxsum, curmax)

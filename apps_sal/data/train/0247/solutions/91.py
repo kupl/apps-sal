@@ -19,12 +19,10 @@ class Solution:
 
                 if preEnd != -1:
                     res = min(res, currLength + bestTill[preEnd])
-                    
+
                 bestTillNow = min(bestTillNow, currLength)
-                
-            
+
             sum2Pos[currAccu] = i
             bestTill[i] = bestTillNow
-        
-        return res if res != float('inf') else -1
 
+        return res if res != float('inf') else -1

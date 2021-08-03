@@ -20,4 +20,3 @@ for i in range(1, N):
 for i in range(Q):
     l, r = list(map(int, input().split()))
     print((cum_ls[r - 1] - cum_ls[l - 1]))
-

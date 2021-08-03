@@ -12,5 +12,3 @@ for i in range(t):
         else:
             tmp += 1
     print(cnt)
-           
-

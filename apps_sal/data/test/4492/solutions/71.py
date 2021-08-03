@@ -13,4 +13,3 @@ for i in range(1, N):
     ans += required
 
 print(ans)
-

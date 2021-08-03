@@ -4,14 +4,18 @@ class Solution:
         h, w = len(map), len(map[0])
 
         def check_map(i, j, rw):
-            if i >= h or i < 0: return 1
-            if j >= w or j < 0: return 1
-            if map[i][j] == 1 and rw > 0: return -1
-            if map[i][j] == 1 and rw == 0: return 1
+            if i >= h or i < 0:
+                return 1
+            if j >= w or j < 0:
+                return 1
+            if map[i][j] == 1 and rw > 0:
+                return -1
+            if map[i][j] == 1 and rw == 0:
+                return 1
 
             return 0
 
-                   # i    j    st rw
+            # i    j    st rw
         start_pos = (0, 0, 0, k)
         q = collections.deque([])
         q.append(start_pos)

@@ -8,14 +8,15 @@ class Solution:
             for j in range(i + 1, n):
                 y = points[j]
                 heapq.heappush(queue, (abs(x[0] - y[0]) + abs(x[1] - y[1]), i, j))
-                
+
         parents = list(range(n))
         rank = [1] * n
+
         def find(x):
             if parents[x] != x:
                 parents[x] = find(parents[x])
             return parents[x]
-        
+
         def union(x, y):
             px, py = find(x), find(y)
             if px == py:
@@ -25,7 +26,7 @@ class Solution:
             parents[py] = px
             rank[px] += rank[px] == rank[py]
             return True
-                
+
         result = 0
         for _ in range(n - 1):
             while True:
@@ -34,5 +35,3 @@ class Solution:
                     result += dist
                     break
         return result
-            
-

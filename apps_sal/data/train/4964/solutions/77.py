@@ -1,2 +1,2 @@
 def is_uppercase(inp):
-    return True if inp=='' else inp.isupper()
+    return True if inp == '' else inp.isupper()

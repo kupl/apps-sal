@@ -7,27 +7,26 @@ class Solution:
 
             for i in range(1, len(position)):
 
-                if position[i]  - position[pos] >= num:
+                if position[i] - position[pos] >= num:
                     pos = i
                     Count += 1
-                if Count==m:
+                if Count == m:
                     return True
 
             return Count >= m
 
-        def search(left,right):
+        def search(left, right):
 
-            if left == right: 
+            if left == right:
                 return left
 
-            mid = (left + right)//2
+            mid = (left + right) // 2
 
             if possible(mid) and not possible(mid + 1):
                 return mid
-            elif possible(mid): 
-                
+            elif possible(mid):
+
                 return search(mid + 1, right)
             return search(left, mid - 1)
 
         return search(1, position[-1] - position[0])
-

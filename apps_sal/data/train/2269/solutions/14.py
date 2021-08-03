@@ -53,6 +53,3 @@ for i in range(n):
         ans = min(ans, i * (i - 1) // 2 + (n - i) * (n - i - 1) // 2)
 
 print(ans)
-
-
-

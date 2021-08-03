@@ -5,17 +5,17 @@ for x in range(n):
         print(1, 1)
     else:
         flag = True
-        for d in range(1, int(x**0.5)+2):
+        for d in range(1, int(x**0.5) + 2):
             if x % d == 0:
                 s = x // d
-                n = (s + d)//2
+                n = (s + d) // 2
                # if int(n) != n:
-                  #  continue
+                #  continue
                 nm = s - n
                 if nm == 0:
                     continue
-                m = n//nm
-                if (m>0) and (n**2 - (n//m)**2 == x):
+                m = n // nm
+                if (m > 0) and (n**2 - (n // m)**2 == x):
                     print(n, m)
                     flag = False
                     break

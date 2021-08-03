@@ -1,7 +1,7 @@
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
-        bank  = {5:0, 10:0, 20:0}
-        
+        bank = {5: 0, 10: 0, 20: 0}
+
         for bill in bills:
             bank[bill] += 1
             change = bill - 5
@@ -9,7 +9,7 @@ class Solution:
                 return False
             elif change == 15:
                 if bank[10]:
-                    bank[10] -=1
+                    bank[10] -= 1
                     bank[5] -= 1
                 elif bank[5] >= 3:
                     bank[5] -= 3
@@ -21,9 +21,3 @@ class Solution:
                 else:
                     return False
         return True
-                
-                    
-                    
-                
-                    
-

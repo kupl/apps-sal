@@ -8,6 +8,7 @@ def str_to_int(s):
     if s == "<":
         return 3
 
+
 inputlist = list(map(str_to_int, input().strip().split(" ")))
 start = inputlist[0]
 end = inputlist[1]

@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 T = int(input())
 for ____ in range(T):
     r = 0
@@ -16,4 +18,3 @@ for ____ in range(T):
         i += 1
         r += 1
     print(r)
-

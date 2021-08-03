@@ -36,4 +36,3 @@ while queue:
 print(K)
 for i in range(N - 1):
     print((edge_colors[i]))
-

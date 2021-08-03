@@ -8,4 +8,3 @@ for i in range(n - m):
 
 '''
 print(a.count(b))
-

@@ -19,4 +19,3 @@ if k:
     print(-1)
 else:
     print(-1)
-

@@ -1,4 +1,4 @@
-def compare(s1,s2):
+def compare(s1, s2):
     if not s1 or s1.isalpha() is False:
         s1 = ''
     if not s2 or s2.isalpha() is False:

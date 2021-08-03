@@ -10,9 +10,9 @@ def main():
     ws = [0] * W
     for _ in range(M):
         h, w = map(int, input().split())
-        bombs.append(tuple([h-1, w-1]))
-        hs[h-1] += 1
-        ws[w-1] += 1
+        bombs.append(tuple([h - 1, w - 1]))
+        hs[h - 1] += 1
+        ws[w - 1] += 1
     maxh = max(hs)
     maxw = max(ws)
     ans = maxh + maxw
@@ -26,9 +26,11 @@ def main():
             if (i, j) not in bombs:
                 print(ans)
                 return
-    print(ans-1)
+    print(ans - 1)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

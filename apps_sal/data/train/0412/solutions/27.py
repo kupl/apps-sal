@@ -2,6 +2,7 @@ class Solution:
     # Recursive memoized solution
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         memo = {}
+
         def num_rolls_util(level, target):
             if level == 0:
                 return target == 0
@@ -16,5 +17,5 @@ class Solution:
                 memo[(level, target)] = res
 
                 return res % (10 ** 9 + 7)
-        
+
         return num_rolls_util(d, target)

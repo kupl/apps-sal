@@ -6,6 +6,7 @@ import functools
 import collections
 import itertools
 
+
 class Solution:
     def __init__(self):
         self.N = 0
@@ -39,7 +40,7 @@ class Solution:
         # print(notAttacked)
         for r, c in chesses:
             for i, j in notAttacked:
-                impossibleMoves.add((i-r, j-c))
+                impossibleMoves.add((i - r, j - c))
         # print(impossibleMoves)
 
         # check whether there are any conflicts
@@ -54,12 +55,11 @@ class Solution:
                 if self.boards[i][j] == 'o':
                     continue
                 for r, c in chesses:
-                    if (i-r, j-c) not in impossibleMoves:
+                    if (i - r, j - c) not in impossibleMoves:
                         if self.boards[i][j] == '.':
                             print('NO')
                             return
                         self.boards[i][j] = 'v'
-
 
         # for r, c in chesses:
         #     for i in range(-N+1, N):
@@ -83,21 +83,18 @@ class Solution:
         #         if self.boards[r][c] != reboard[r][c]:
         #             print('NO')
         #             return
-        sys.stderr.write('Check Cost: {}\n'.format(datetime.datetime.now()-startTime))
+        sys.stderr.write('Check Cost: {}\n'.format(datetime.datetime.now() - startTime))
 
-
-
-        rn = 2*N-1
+        rn = 2 * N - 1
         res = [['.' for c in range(rn)] for r in range(rn)]
-        res[N-1][N-1] = 'o'
-        for i in range(-N+1, N):
-            for j in range(-N+1, N):
+        res[N - 1][N - 1] = 'o'
+        for i in range(-N + 1, N):
+            for j in range(-N + 1, N):
                 if not (i == 0 and j == 0) and (i, j) not in impossibleMoves:
-                    res[i+N-1][j+N-1] = 'x'
+                    res[i + N - 1][j + N - 1] = 'x'
         print('YES')
         for row in res:
             print(''.join(row))
-
 
 
 solution = Solution()

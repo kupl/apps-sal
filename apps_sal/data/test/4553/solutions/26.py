@@ -1,6 +1,6 @@
 a, b = map(int, input().split())
 s = input()
 if s[a] == '-' and s.count('-') == 1:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

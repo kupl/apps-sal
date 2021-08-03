@@ -6,4 +6,3 @@ for i, t in enumerate(x):
     if t == '1':
         res = (res + (1 << (n - 1 + i))) % MOD
 print(res)
-

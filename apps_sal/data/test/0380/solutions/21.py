@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from collections import namedtuple
-from itertools   import permutations
+from itertools import permutations
 
 Point = namedtuple("Point", "x y")
 
@@ -24,4 +24,3 @@ try:
 
 except EOFError:
     pass
-

@@ -1,5 +1,6 @@
 def readln(): return tuple(map(int, input().split()))
 
+
 s = input()
 k, = readln()
 w = readln()

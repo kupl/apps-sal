@@ -62,21 +62,23 @@ def main():
 
     paths_rev = defaultdict(list)
     edges = []
-    for a, b, c in zip(*[iter(tmp)]*3):
+    for a, b, c in zip(*[iter(tmp)] * 3):
         # 頂点nからの経路をdfsするため、辺の向きを逆にする
-        paths_rev[b-1].append(a-1)
-        edges.append((a-1, b-1, p-c))
+        paths_rev[b - 1].append(a - 1)
+        edges.append((a - 1, b - 1, p - c))
 
-    valid_paths = validate(paths_rev, n-1)
+    valid_paths = validate(paths_rev, n - 1)
     edges = [
         (a, b, c)
         for a, b, c in edges
         if a in valid_paths and b in valid_paths
     ]
-    res = bellman_ford(edges, n, 0, n-1)
+    res = bellman_ford(edges, n, 0, n - 1)
     print(res)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

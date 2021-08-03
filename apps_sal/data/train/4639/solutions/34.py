@@ -1,6 +1,6 @@
 def power_of_two(x):
     result = 0
-    i  = 0
+    i = 0
     while result < x:
         result = 2 ** i
         i += 1

@@ -16,4 +16,3 @@ else:
             st += x
 
     print((' '.join(map(str, ans))))
-

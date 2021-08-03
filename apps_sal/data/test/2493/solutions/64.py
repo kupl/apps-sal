@@ -39,10 +39,11 @@ def __starting_point():
 
     ans = []
     for i in range(1, N + 2):
-        val = comb(N+1, i)-comb(LR, i-1)
+        val = comb(N + 1, i) - comb(LR, i - 1)
         val = (val + mod) % mod
         ans.append(val)
 
     print(*ans, sep="\n")
+
 
 __starting_point()

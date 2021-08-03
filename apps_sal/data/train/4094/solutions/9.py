@@ -10,4 +10,3 @@ def count_positives_sum_negatives(arr):
         else:
             zer += 0
     return [pos, neg] if zer != len(arr) else []
-

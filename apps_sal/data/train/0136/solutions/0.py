@@ -15,4 +15,3 @@ class Solution:
                 total += new_height - grid[i][j]
 
         return total
-

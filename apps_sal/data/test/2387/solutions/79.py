@@ -6,6 +6,7 @@ def hoge(S):
         mi = min(mi, cum)
     return (-mi, cum - mi)
 
+
 N = int(input())
 S = [hoge(input()) for _ in range(N)]
 
@@ -29,4 +30,3 @@ for l, r in (plus + minus):
     M += r
 
 print(('Yes' if M == 0 else 'No'))
-

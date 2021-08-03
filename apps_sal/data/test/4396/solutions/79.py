@@ -5,4 +5,3 @@ for _ in range(n):
     x = float(x)
     res += x if u == 'JPY' else x * 380000.0
 print(res)
-

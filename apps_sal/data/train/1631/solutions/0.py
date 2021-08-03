@@ -12,4 +12,3 @@ def snail(array):
             for y in range(2 + n, size - n):
                 ret.append(array[-y][n])
     return ret
-

@@ -10,4 +10,3 @@ for i in range(len(balls) - 2):
         break
 else:
     print('NO')
-

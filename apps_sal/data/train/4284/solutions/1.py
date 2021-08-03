@@ -8,4 +8,5 @@ def array_leaders(numbers):
     res.reverse()
     return res
 
+
 arrayLeaders = array_leaders

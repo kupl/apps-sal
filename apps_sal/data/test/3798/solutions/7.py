@@ -3,6 +3,7 @@ import sys
 N = int(input())
 S = int(input())
 
+
 def tt(k, N):
     r = 0
     while N:
@@ -11,8 +12,9 @@ def tt(k, N):
 #    print(k, r)
     return r
 
+
 if N == S:
-    print((N+1))
+    print((N + 1))
     return
 
 for i in range(2, math.floor(N**0.5) + 2):
@@ -21,17 +23,17 @@ for i in range(2, math.floor(N**0.5) + 2):
         return
 
 for k in range(math.floor(N**0.5), 0, -1):
-    s = N//k
-    f = N//(k+1) + 1
-    si = k + N%k
-    fi = si + (s-f)*k
-    if N//(s**2) > 0:
+    s = N // k
+    f = N // (k + 1) + 1
+    si = k + N % k
+    fi = si + (s - f) * k
+    if N // (s**2) > 0:
         continue
 #    print("aaa", k, si, fi, s, f)
-    if si <= S <= fi and ((fi-S) % k == 0):
-#        print(k)
-#        print("cc", f, fi, S, f+(fi-S)//k)
-        print((f+(fi-S)//k))
+    if si <= S <= fi and ((fi - S) % k == 0):
+        #        print(k)
+        #        print("cc", f, fi, S, f+(fi-S)//k)
+        print((f + (fi - S) // k))
         return
 #    for i in range(f, s+1):
 #        tt(i, N)
@@ -40,4 +42,3 @@ for k in range(math.floor(N**0.5), 0, -1):
 #            return
 
 print((-1))
-

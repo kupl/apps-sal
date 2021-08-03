@@ -19,4 +19,3 @@ for case_num in range(t):
         a += lo * hi
         i += 1
     print(a)
-

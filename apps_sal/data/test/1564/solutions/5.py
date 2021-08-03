@@ -23,19 +23,14 @@ for i in range(n):
         b_a.append(i)
 
 ans = []
-for i in range(len(a_b)//2):
-    ans.append((a_b[2*i]+1, a_b[2*i+1]+1))
-for i in range(len(b_a)//2):
-    ans.append((b_a[2*i]+1, b_a[2*i+1]+1))  
+for i in range(len(a_b) // 2):
+    ans.append((a_b[2 * i] + 1, a_b[2 * i + 1] + 1))
+for i in range(len(b_a) // 2):
+    ans.append((b_a[2 * i] + 1, b_a[2 * i + 1] + 1))
 
 if len(a_b) % 2 == 1:
-    ans.append((a_b[-1]+1, a_b[-1]+1))
-    ans.append((a_b[-1]+1, b_a[-1]+1))
+    ans.append((a_b[-1] + 1, a_b[-1] + 1))
+    ans.append((a_b[-1] + 1, b_a[-1] + 1))
 print(len(ans))
 for i in ans:
     print(*i)
-
-
-    
-
-

@@ -14,14 +14,10 @@ class StockSpanner:
             return self.indx + 1
         result = self.stack[-1][0]
         self.stack.append([self.indx, price])
-        
+
         return self.indx - result
-            
-            
-        
 
 
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

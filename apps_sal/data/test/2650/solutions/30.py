@@ -3,22 +3,24 @@ import sys
 from heapq import heapify, heappop, heappush
 from collections import defaultdict
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N, Q = lr()
 top = []
 left_top = []
-infants = [[] for _ in range(2*10**5+1)]  # 1-indexed
-left = [[] for _ in range(2*10**5+1)]
+infants = [[] for _ in range(2 * 10**5 + 1)]  # 1-indexed
+left = [[] for _ in range(2 * 10**5 + 1)]
 dic = defaultdict(tuple)
-for i in range(1, N+1):
+for i in range(1, N + 1):
     a, b = lr()
     heappush(infants[b], (-a, i))
     dic[i] = (a, b)
 
-for i in range(1, 2*10**5+1):
+for i in range(1, 2 * 10**5 + 1):
     if infants[i]:
         rate, id = infants[i][0]
         heappush(top, (-rate, id))
@@ -45,7 +47,7 @@ for _ in range(Q):
     r2, id2 = infants[next][0]
     heappush(top, (-r2, id2))
     while left_top and top[0][1] == left_top[0][1]:
-        heappop(top); heappop(left_top)
+        heappop(top)
+        heappop(left_top)
     answer = top[0][0]
     print(answer)
-

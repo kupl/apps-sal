@@ -22,5 +22,3 @@ for a_cnt in range(n + 1):
     ans = max(ans, a_cnt + b_cnt)
 
 print(ans)
-
-

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         max_doubles = 0
@@ -11,7 +12,7 @@ class Solution:
                 continue
             doubles = 0
             while n:
-                if n % 2 == 1: # odd
+                if n % 2 == 1:  # odd
                     increments += c
                     n -= 1
                 else:

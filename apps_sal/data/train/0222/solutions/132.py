@@ -13,4 +13,3 @@ class Solution:
                 max_len = max(max_len, length)
 
         return 0 if max_len == 2 else max_len
-

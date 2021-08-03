@@ -1,9 +1,11 @@
 import sys
 from collections import deque
 
+
 def weather(temp):
     return temp >= 0
-    
+
+
 INF = int(1e+6)
 n, k = (int(x) for x in input().split())
 day_to_temp = [int(x) for x in input().split()]
@@ -50,7 +52,7 @@ elif curr_state == 2:
 else:
     print(0)
     return
-    
+
 mid_warms_deque = deque(sorted(mid_warms, reverse=True))
 cold_days_nr = sum(colds)
 free_days = k - cold_days_nr
@@ -67,13 +69,9 @@ elif len(mid_warms) > 0:
         if free_days - curr_warm_len >= 0:
             switches_made -= 2
             free_days -= curr_warm_len
-        
+
 if free_days - last_warm >= 0:
     switches_made -= 1
     free_days -= last_warm
-    
+
 print(switches_made)
-    
-
-    
-

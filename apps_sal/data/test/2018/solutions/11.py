@@ -14,4 +14,3 @@ def bsn(x, y):
 for _ in range(q):
     sx, sy, ex, ey = list(map(int, input().split()))
     print("YES" if bsn(sx, sy) == bsn(ex, ey) else "NO")
-

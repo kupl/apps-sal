@@ -3,6 +3,7 @@ import math
 sys.setrecursionlimit(500000)
 INF = float('inf')
 
+
 def main():
     n = int(input())
     for i in range(n, 1000):
@@ -17,7 +18,9 @@ def main():
         if flag:
             return i
 
+
 def __starting_point():
     print((main()))
+
 
 __starting_point()

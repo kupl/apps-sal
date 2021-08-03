@@ -1,10 +1,12 @@
 __author__ = 'ruckus'
 
+
 def haveLast(Chains, Name):
     for i in range(len(Chains)):
-        if Chains[i][len(Chains[i])-1] == Name:
+        if Chains[i][len(Chains[i]) - 1] == Name:
             return i
     return -1
+
 
 RepostNum = int(input())
 
@@ -29,8 +31,8 @@ for i in range(RepostNum):
         else:
             for j in range(len(Chains)):
                 if Reposts[i][2] in Chains[j]:
-                    Chains.append(Chains[j][:Chains[j].index(Reposts[i][2])+1])
-                    Chains[len(Chains)-1].append(Reposts[i][0])
+                    Chains.append(Chains[j][:Chains[j].index(Reposts[i][2]) + 1])
+                    Chains[len(Chains) - 1].append(Reposts[i][0])
 
 for Chain in Chains:
     if len(Chain) > MaxRepostLen:

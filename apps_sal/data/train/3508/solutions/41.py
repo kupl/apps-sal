@@ -1,4 +1,4 @@
-def halving_sum(n): 
+def halving_sum(n):
     m = n
     summ = 0
     count = 1
@@ -6,4 +6,3 @@ def halving_sum(n):
         summ += n // count
         count *= 2
     return summ
-

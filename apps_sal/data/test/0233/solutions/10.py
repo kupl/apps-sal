@@ -12,5 +12,3 @@ elif a < b:
     print('Chris')
 else:
     print('Friendship is magic!^^')
-    
-

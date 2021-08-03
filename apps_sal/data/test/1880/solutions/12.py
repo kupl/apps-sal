@@ -4,6 +4,9 @@ def main():
     z = x5 + 10 * (x4 + 10 * (x3 + 10 * (x2 + 10 * x1)))
     print(str(pow(z, 5, 100000)).zfill(5))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

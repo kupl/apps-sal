@@ -17,4 +17,3 @@ for i in range(r):
                 if col >= k:
                     ans += 1
 print(ans)
-

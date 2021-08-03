@@ -24,4 +24,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

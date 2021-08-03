@@ -23,4 +23,3 @@ for i in range(N - 1):
         count += C[j]
     print(count)
 print((0))
-

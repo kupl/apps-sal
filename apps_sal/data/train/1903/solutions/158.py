@@ -7,10 +7,10 @@ class Solution:
         if n == 1:
             return 0
         for i in range(n - 1):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append((i, j, dist))
-        edges.sort(key = lambda x : x[2])
+        edges.sort(key=lambda x: x[2])
         parent = [i for i in range(n)]
         cnt = 0
         ans = 0
@@ -26,7 +26,7 @@ class Solution:
             if cnt == n - 1:
                 break
         return ans
-        
+
     def find(self, x, parent):
         while parent[x] != x:
             parent[x] = parent[parent[x]]

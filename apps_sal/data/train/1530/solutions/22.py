@@ -7,7 +7,7 @@ for _ in range(int(input())):
         s = ''
 
         l = []
-        for j in range(j, j+i+1):
+        for j in range(j, j + i + 1):
             l.append(str(j))
 
         j += 1

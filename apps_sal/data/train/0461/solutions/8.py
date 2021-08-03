@@ -1,4 +1,4 @@
-  
+
 class Solution:
     # 1152
     def numOfMinutes(self, n, headID, manager, informTime):
@@ -7,6 +7,6 @@ class Solution:
             if manager[myBoss] > -1:
                 informTime[myBoss] += myTime(manager[myBoss])
                 manager[myBoss] = -1
-                
+
             return informTime[myBoss]
         return max(map(myTime, manager))

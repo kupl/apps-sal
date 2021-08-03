@@ -1,1 +1,1 @@
-repeat_str=__import__('operator').mul
+repeat_str = __import__('operator').mul

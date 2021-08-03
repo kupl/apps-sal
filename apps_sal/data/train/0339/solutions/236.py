@@ -9,9 +9,9 @@ class Solution:
                     if nums2[i] in count:
                         ans += count[nums2[i]]
 
-                    new = num*num
+                    new = num * num
                     if new % nums2[i] == 0:
-                        count[new//nums2[i]] += 1
+                        count[new // nums2[i]] += 1
 
             return ans
 

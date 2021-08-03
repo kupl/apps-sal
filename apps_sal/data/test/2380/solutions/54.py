@@ -5,7 +5,7 @@ for _ in range(m):
     b, c = map(int, input().split())
     bc.append([c, b])
 a.sort()
-bc.sort(reverse = True)
+bc.sort(reverse=True)
 x = [0] * n
 i, j = 0, 0
 while i < n:

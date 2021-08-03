@@ -1,8 +1,8 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     # your code here
-    s=first+second
+    s = first + second
     s.sort()
-    l=[]
+    l = []
     for i in s:
         if(i not in l):
             l.append(i)

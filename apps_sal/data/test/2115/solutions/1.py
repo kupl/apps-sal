@@ -12,4 +12,3 @@ for i in range(1, n):
 print(j)
 for i in range(j):
     print(b[i], end=' ')
-

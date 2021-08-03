@@ -4,10 +4,10 @@ class Solution:
             parent = p[u]
             if parent == u:
                 return parent
-            
+
             p[u] = find(p, parent)
             return p[u]
-        
+
         def union(p, rank, root_u, root_v):
             if rank[root_u] < rank[root_v]:
                 p[root_u] = root_v
@@ -16,10 +16,10 @@ class Solution:
             else:
                 p[root_u] = root_v
                 rank[root_v] += 1
-        
+
         p = list(range(n))
         rank = [0] * n
-        
+
         full_edges = set()
         partial_edges = set()
         partial_adj = {}
@@ -41,7 +41,7 @@ class Solution:
             if root_u != root_v:
                 union(p, rank, root_u, root_v)
                 nb_edges_in_mst += 1
-        
+
         for e in partial_edges:
             edge_type, u, v = e
             root_u, root_v = find(p, u), find(p, v)
@@ -68,7 +68,7 @@ class Solution:
                     break
             if found_needed_edge:
                 continue
-                
+
             for y in partial_adj[needed_edge_type][u]:
                 root_y = find(p, y)
                 if root_y == root_v:
@@ -78,16 +78,11 @@ class Solution:
                     union(p, rank, root_u, root_v)
                     nb_edges_in_mst += 2
                     break
-        
+
         uniq_roots = set()
         for u in range(len(p)):
             uniq_roots.add(find(p, u))
         if len(uniq_roots) != 1:
-            return -1  
-        
-        return len(edges) - nb_edges_in_mst
-            
-                
-            
-        
+            return -1
 
+        return len(edges) - nb_edges_in_mst

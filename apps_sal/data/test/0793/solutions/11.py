@@ -13,4 +13,3 @@ for i in range(N):
     np.cumsum(new_dp, out=new_dp)
     dp = new_dp % MOD
 print((dp[M]))
-

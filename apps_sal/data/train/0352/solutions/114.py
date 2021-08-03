@@ -1,6 +1,6 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        words.sort(key = len)
+        words.sort(key=len)
         ans = 1
         dp = [1 for i in range(len(words))]
         for r in range(1, len(words)):
@@ -19,9 +19,3 @@ class Solution:
                         dp[r] = max(dp[r], dp[l] + 1)
                         ans = max(ans, dp[r])
         return ans
-                
-                
-                
-            
-        
-

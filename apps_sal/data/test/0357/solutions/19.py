@@ -1,5 +1,5 @@
 s = input()
-data = ["Danil", "Olya", "Slava", "Ann",  "Nikita"]
+data = ["Danil", "Olya", "Slava", "Ann", "Nikita"]
 count = 0
 for i in range(5):
     if data[i] in s:

@@ -11,4 +11,3 @@ for i in range(len(a) - 2):
         return
 
 print("NO")
-

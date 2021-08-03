@@ -3,5 +3,5 @@ def powers_of_two(n):
     i = 0
     while i != n + 1:
         list_n.append(2 ** i)
-        i += 1   
+        i += 1
     return list_n

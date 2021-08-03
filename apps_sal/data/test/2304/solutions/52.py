@@ -47,10 +47,12 @@ UF = WeightedUnionFind(n)
 
 for i in range(m):
     l, r, d = map(int, input().split())
-    l -= 1;r -= 1
+    l -= 1
+    r -= 1
     if UF.same(l, r):
         if d != abs(UF.diff(l, r)):
-            print("No");return
+            print("No")
+            return
     else:
         UF.union(l, r, d)
 print("Yes")

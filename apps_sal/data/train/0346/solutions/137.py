@@ -12,10 +12,9 @@ class Solution:
                 start += 1
             count += end - start + 1
         return count
-    
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         if not nums or len(nums) == 0 or k > len(nums):
             return 0
         odds = 0
         return self.atMostK(nums, k) - self.atMostK(nums, k - 1)
-

@@ -27,4 +27,3 @@ while i < len(x):
         ch += x[i + 1][0] - x[i][1]
     i += 1
 print(best)
-

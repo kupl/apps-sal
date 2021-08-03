@@ -2,9 +2,9 @@ class Solution:
     def numTeams(self, rating: List[int]) -> int:
         i = 0
         j = i + 1
-        k = j+1
+        k = j + 1
         result = 0
-        while (i < len(rating)- 2):
+        while (i < len(rating) - 2):
             if k == len(rating):
                 j += 1
                 k = j
@@ -19,7 +19,5 @@ class Solution:
             elif rating[i] > rating[j] and rating[j] > rating[k]:
                 result += 1
 
-
-
-            k+= 1
+            k += 1
         return result

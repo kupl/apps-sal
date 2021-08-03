@@ -15,6 +15,7 @@ sys.setrecursionlimit(1000000)
 # """
 # sys.stdin = io.StringIO(_INPUT)
 
+
 def is_T_ok(T):
     if T[0] == 0:
         k = 0
@@ -34,6 +35,7 @@ def is_T_ok(T):
                 return False
 
     return True
+
 
 def solve(N, T):
 
@@ -60,7 +62,9 @@ def main():
     a = solve(N, T)
     print(a)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

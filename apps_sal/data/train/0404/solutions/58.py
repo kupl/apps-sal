@@ -10,9 +10,9 @@ class Solution:
             else:
                 max_avg = 0
                 for i in reversed(range(len(nums))):
-                    key = (tuple([num for num in nums[:i]]), k-1)
+                    key = (tuple([num for num in nums[:i]]), k - 1)
                     if key not in memo:
-                        memo[key] = fn([num for num in nums[:i]], k-1)
+                        memo[key] = fn([num for num in nums[:i]], k - 1)
                     avg = memo[key] + sum(nums[i:]) / (len(nums) - i)
                     max_avg = max(max_avg, avg)
                 return max_avg

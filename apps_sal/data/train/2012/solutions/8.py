@@ -20,7 +20,7 @@ while qt:
         break
     b = qt.popleft()
     for i in range(4):
-        mark.add(a) 
+        mark.add(a)
         mark.add(b)
         arr[a] = b
         arr[b] = n - a + 1
@@ -32,4 +32,3 @@ for i in range(1, n + 1):
         arr[i] = a
         break
 print(' '.join(map(str, arr[1:])))
-

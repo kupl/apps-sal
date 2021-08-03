@@ -18,8 +18,5 @@ class Solution:
                 counter -= 1
             else:
                 ans = c + ans
-                
-        
-        return ans
-                
 
+        return ans

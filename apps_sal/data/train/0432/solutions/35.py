@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         c = Counter(nums)
@@ -10,7 +12,5 @@ class Solution:
                     if c[n + i] == 0:
                         return False
                     c[n + i] -= 1
-                
-        return True
-            
 
+        return True

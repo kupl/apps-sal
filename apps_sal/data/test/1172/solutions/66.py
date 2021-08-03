@@ -16,4 +16,3 @@ for i in range(SLen):
             array[j][i + 1] = (array[j][i + 1] + array[j][i]) % MOD
 
 print((array[3][SLen]))
-

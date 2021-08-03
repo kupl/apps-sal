@@ -1,32 +1,33 @@
-##row, col, order = input().split(' ')    
+##row, col, order = input().split(' ')
 ##row = int(row)
 ##col = int(col)
 ##
 ##init_list = []
 ##
-##for i in range(row):
+# for i in range(row):
 ##    init_list.append(input().split(' '))
 ##
-##if order=='0':
-##    for i in range(row):
-##        print()
-##        for j in range(col,0,-1):
+# if order=='0':
+# for i in range(row):
+# print()
+# for j in range(col,0,-1):
 ##            print(init_list[i][j-1], end = ' ')
-##else:
-##    for i in range(row,0,-1):
-##        print()
-##        for j in range(col):
+# else:
+# for i in range(row,0,-1):
+# print()
+# for j in range(col):
 ##            print(init_list[i-1][j], end = ' ')
 
-def judge(_list:list) -> int:
+def judge(_list: list) -> int:
     number = -1
     for i in range(len(_list)):
-        if int(_list[i]) == i+1:
+        if int(_list[i]) == i + 1:
             number += 1
         else:
             pass
-    
+
     return number
+
 
 mat_num, chain_num = input().split(' ')
 mat_num, chain_num = int(mat_num), int(chain_num)
@@ -56,5 +57,4 @@ for i in range(chain_num):
     time += len(chain[i]) - 1
     count += len(chain[i])
 
-print(time + count -1)
-
+print(time + count - 1)

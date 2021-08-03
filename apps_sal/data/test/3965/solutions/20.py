@@ -6,4 +6,3 @@ for p in map(int, input().split()):
         break
 else:
     print("YES")
-

@@ -6,6 +6,6 @@ while colors[right] == colors[0]:
     right -= 1
 
 while colors[left] == colors[-1]:
-	left += 1
+    left += 1
 
 print(max(n - left - 1, right))

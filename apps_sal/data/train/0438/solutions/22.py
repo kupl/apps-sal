@@ -1,4 +1,4 @@
-class Solution:         
+class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if n == m:

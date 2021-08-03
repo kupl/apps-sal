@@ -8,4 +8,3 @@ for i in range(n):
         if j - i + 1 >= k:
             ans = max(ans, s / (j - i + 1))
 print("%.20f" % ans)
-

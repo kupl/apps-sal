@@ -1,9 +1,9 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        
+
         l = max(weights)
         r = sum(weights)
-        
+
         def calc(cap):
             cnt = 0
             cur = 0
@@ -13,7 +13,7 @@ class Solution:
                     cur = w
                     cnt += 1
             return cnt + 1 <= D
-        
+
         while l < r:
             mid = (l + r) // 2
             good = calc(mid)

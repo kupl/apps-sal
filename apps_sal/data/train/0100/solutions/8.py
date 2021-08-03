@@ -11,4 +11,3 @@ for t in range(T):
         b -= a - a // 2
         v += min(c, b)
     print(v)
-

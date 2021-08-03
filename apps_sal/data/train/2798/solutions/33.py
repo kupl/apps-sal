@@ -8,7 +8,6 @@ def to_alternating_case(string):
             c += k.upper()
         else:
             c += k
-    return c        
-        
-    #your code here
+    return c
 
+    # your code here

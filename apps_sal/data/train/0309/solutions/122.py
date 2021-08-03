@@ -11,4 +11,3 @@ class Solution:
                 else:
                     dp[i_key] = 2
         return max(dp.values())
-

@@ -1,10 +1,10 @@
 class Solution:
     def lenLongestFibSubseq1(self, A: List[int]) -> int:
         mp = {}
-        
+
         for v in A:
             mp[v] = set()
-        
+
         result = 0
         for i in range(len(A)):
             for j in range(i + 1, len(A)):
@@ -15,7 +15,7 @@ class Solution:
                     if b in mp[a]:
                         break
                     if l != 2:
-                        mp[a].add(b) 
+                        mp[a].add(b)
                     c = a + b
                     if c not in mp:
                         break

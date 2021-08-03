@@ -3,15 +3,14 @@ class Solution:
         self.weights = weights
         self.days = days
         left, right = max(weights), sum(weights)
-        while left < right: 
+        while left < right:
             mid = left + (right - left) // 2
             if self.isFit(mid):
                 right = mid
-            else: 
-                left = mid+1
+            else:
+                left = mid + 1
         return left
-            
-        
+
     def isFit(self, capacity):
         weight_index = 0
         for day in range(0, self.days):
@@ -26,9 +25,3 @@ class Solution:
                     current_capacity -= weight
                     weight_index += 1
         return False
-             
-                
-                
-            
-        
-

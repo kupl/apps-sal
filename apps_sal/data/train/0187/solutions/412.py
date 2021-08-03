@@ -1,9 +1,9 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        
+
         while len(customers) > 0 and customers[-1] == 0:
             customers.pop()
-            
+
         wait = 0
         ans = 0
         max_ans = 0

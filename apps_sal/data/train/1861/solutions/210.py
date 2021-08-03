@@ -14,4 +14,3 @@ class Solution:
                 else:
                     res = min(res, abs(x1 - x2) * abs(y1 - y2))
         return res if res != float('inf') else 0
-

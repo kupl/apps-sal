@@ -3,8 +3,10 @@ a = [int(t) for t in input().split(' ')]
 
 mask = (1 << k) - 1
 
+
 def c2(n):
     return (n * (n - 1)) // 2
+
 
 count = {}
 count[0] = 1
@@ -21,4 +23,3 @@ for [_, cnt] in list(count.items()):
     res += c2(k) + c2(cnt - k)
 
 print(c2(n + 1) - res)
-

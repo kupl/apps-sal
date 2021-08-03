@@ -32,4 +32,3 @@ for key, value in list(div_map.items()):
     res = res * (value + 1) % mod
 
 print((res % mod))
-

@@ -8,10 +8,9 @@ for _ in range(t):
             out.append(test)
             n //= test
         test += 1
-        
+
     if len(out) == 2 and n > out[1]:
         print('YES')
         print(out[0], out[1], n)
     else:
         print('NO')
-

@@ -7,4 +7,3 @@ while t:
     ans += min(n - 1, r) * (min(n - 1, r) + 1) // 2
     print(ans)
     t -= 1
-

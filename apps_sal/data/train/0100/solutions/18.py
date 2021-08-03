@@ -5,4 +5,3 @@ for i in range(t):
         print(r + g + b - max(r, g, b))
     else:
         print((r + g + b) // 2)
-

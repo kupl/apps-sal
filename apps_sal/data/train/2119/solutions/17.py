@@ -31,21 +31,19 @@ n = int(input())
 arr = [int(i) for i in input().split()]
 arr.insert(0, 0)
 sun = arr
-pre = [i for i in range(n+1)]
+pre = [i for i in range(n + 1)]
 ix = [int(i) for i in input().split()]
 
 
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     x = ix[i]
     ans[i] = mx
     vis[x] = True
-    if x != 1 and vis[x-1]:
-        unite(x-1, x)
-    if x != n and vis[x+1]:
-        unite(x, x+1)
+    if x != 1 and vis[x - 1]:
+        unite(x - 1, x)
+    if x != n and vis[x + 1]:
+        unite(x, x + 1)
     mx = max(mx, sun[find(x)])
 
 for i in range(n):
     print(ans[i])
-
-

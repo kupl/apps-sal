@@ -9,6 +9,6 @@ def ans168(N: str):
     if N[-1] in bon_list:
         return "bon"
 
-N=input()
-print((ans168(N)))
 
+N = input()
+print((ans168(N)))

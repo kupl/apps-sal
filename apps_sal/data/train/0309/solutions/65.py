@@ -9,4 +9,3 @@ class Solution:
                 if dp[i][diff] > max_l:
                     max_l = dp[i][diff]
         return max_l
-

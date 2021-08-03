@@ -22,4 +22,3 @@ while mi != ma:
     else:
         mi = mid + 1
 print(mi)
-

@@ -54,4 +54,3 @@ for x in list(xy.keys()):
 # すでにある辺が重複してる
 ans -= N
 print(ans)
-

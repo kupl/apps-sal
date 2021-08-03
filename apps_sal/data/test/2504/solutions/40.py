@@ -32,4 +32,3 @@ for i in range(Q):
     s, t = list(map(int, sys.stdin.readline().split()))
     s, t = s - 1, t - 1
     print((int(E[s][t] - 1) if E[s][t] != float('inf') else - 1))
-

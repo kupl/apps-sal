@@ -1,4 +1,4 @@
-def add_binary(a,b):
+def add_binary(a, b):
     out = a + b
     out = bin(out)
     out = out.split("b")

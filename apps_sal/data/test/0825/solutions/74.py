@@ -23,13 +23,15 @@ def abc169d_div_game():
     arr = factorization(n)
     cnt = 0
     for p, e in arr:
-        if p == 1: continue
-        for i in range(1, e+1):
+        if p == 1:
+            continue
+        for i in range(1, e + 1):
             if e >= i:
                 cnt += 1
                 e -= i
             else:
                 break
     print(cnt)
+
 
 abc169d_div_game()

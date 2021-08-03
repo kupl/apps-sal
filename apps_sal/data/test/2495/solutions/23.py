@@ -132,7 +132,7 @@ def main():
             if s2 + A[i] < 0:
                 s2 += A[i]
             else:
-                c2 += abs(s2 + A[i])+1
+                c2 += abs(s2 + A[i]) + 1
                 s2 = -1
         else:
             if s1 + A[i] < 0:
@@ -151,5 +151,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

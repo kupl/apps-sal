@@ -3,7 +3,7 @@ ps = list(map(int, input().split()))
 
 pos = [0] * n
 for i, p in enumerate(ps):
-    pos[p-1] = i
+    pos[p - 1] = i
 
 used = [False] * n
 

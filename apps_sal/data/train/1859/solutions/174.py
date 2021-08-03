@@ -2,30 +2,29 @@ class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
         if not matrix:
             return 0
-        
+
         m, n = len(matrix), len(matrix[0])
         squares = copy.deepcopy(matrix)
         count = 0
         ones_in_col = [0] * n
-        
+
         for row in range(m):
             ones_in_row = 0
-            
+
             for col in range(n):
                 ones_in_row = ones_in_row + 1 if matrix[row][col] else 0
                 ones_in_col[col] = ones_in_col[col] + 1 if matrix[row][col] else 0
                 top_left_res = 0 if row == 0 or col == 0 else squares[row - 1][col - 1]
-                
+
                 squares[row][col] = min(ones_in_row, ones_in_col[col], top_left_res + 1)
                 # print('row', row, 'col', col, 'res', ones_in_row, ones_in_col[col], squares[row][col])
 
                 count += squares[row][col]
-        
+
         # print(squares)
         return count
-            
-    
-    
+
+
 '''
 Brute-force: try all submatrices. O(n^2 * m^2)
 

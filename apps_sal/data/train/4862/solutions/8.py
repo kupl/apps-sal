@@ -7,7 +7,7 @@ def put_the_cat_on_the_table(cat, room):
             if place == 1:
                 aim = (row, col)
                 break
-    if not  aim:
+    if not aim:
         return 'NoTable'
     else:
         route = cat[0] - aim[0], cat[1] - aim[1]

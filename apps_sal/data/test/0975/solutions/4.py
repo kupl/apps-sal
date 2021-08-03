@@ -38,4 +38,3 @@ for i in sher:
             ans2 += 1
     morD[k] -= 1
 print(ans2)
-

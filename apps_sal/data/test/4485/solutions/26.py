@@ -22,4 +22,3 @@ for i in root_map[1]:
         break
 else:
     print("IMPOSSIBLE")
-

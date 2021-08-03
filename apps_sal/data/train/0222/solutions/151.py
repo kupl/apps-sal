@@ -3,10 +3,11 @@ class Solution:
         n = len(A)
         check = set(A)
         dp = {}
+
         def helper(i, j):
             if (i, j) in dp:
                 return dp[(i, j)]
-           
+
             total = i + j
             if total not in check:
                 result = 2
@@ -16,7 +17,7 @@ class Solution:
             dp[(i, j)] = result
             return result
         for i in range(n):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 helper(A[i], A[j])
         result = max(dp.values())
         return result if result > 2 else 0

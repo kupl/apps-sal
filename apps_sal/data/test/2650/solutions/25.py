@@ -1,22 +1,33 @@
+from collections import defaultdict, deque
+import sys
+import heapq
+from bisect import bisect_left, bisect_right
+import copy
+import math
+
+
 def getN():
     return int(input())
+
+
 def getNM():
     return list(map(int, input().split()))
+
+
 def getList():
     return list(map(int, input().split()))
+
+
 def getZList():
     return [int(x) - 1 for x in input().split()]
-from collections import defaultdict, deque
-import math
-import copy
-from bisect import bisect_left, bisect_right
-import heapq
-import sys
+
+
 input = sys.stdin.readline
 # sys.setrecursionlimit(1000000)
 INF = 10 ** 17
 MOD = 1000000007
- 
+
+
 class LazyHeap():
     def __init__(self, init_arr=[]):
         self.heap = []
@@ -25,36 +36,37 @@ class LazyHeap():
         for init_element in init_arr:
             heapq.heappush(self.heap, init_element)
             self.len += 1
- 
+
     def __len__(self):
         return self.len
- 
+
     def push(self, k):
         heapq.heappush(self.heap, k)
         self.len += 1
- 
+
     def pop(self):
         self._clear()
         return heapq.heappop(self.heap)
-        
+
     def get(self):
         self._clear()
         return self.heap[0]
- 
+
     def _clear(self):
         while True:
             cand = self.heap[0]
             if cand in self.lazy and self.lazy[cand] > 0:
                 heapq.heappop(self.heap)
                 self.lazy[cand] -= 1
- 
+
             else:
                 return
- 
+
     def remove(self, k):
         self.lazy[k] += 1
         self.len -= 1
- 
+
+
 N_KINDER = 200200
 # N_KINDER = 2 * (10 ** 5) + 1
 n, q = getList()
@@ -107,4 +119,3 @@ for i in range(q):
 
     print((saikyo.get()))
 # print(rate)
-

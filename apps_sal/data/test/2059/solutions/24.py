@@ -12,4 +12,3 @@ for i in range(len(arr)):
         sub2 = 1e10
     ans = min(ans, sub1, sub2)
 print(ans)
-

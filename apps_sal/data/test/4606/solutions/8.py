@@ -1,3 +1,3 @@
 s = input()
 
-print('ABC'+s)
+print('ABC' + s)

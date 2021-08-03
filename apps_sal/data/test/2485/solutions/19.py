@@ -28,4 +28,3 @@ else:
 
 # print(cnt_x, cnt_y, cnt)
 print(ans)
-

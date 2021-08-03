@@ -3,7 +3,7 @@ class Solution:
         seen = {}
         res = 0
         for i in range(len(A)):
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 diff = A[i] - A[j]
                 if diff not in seen:
                     seen[diff] = {}

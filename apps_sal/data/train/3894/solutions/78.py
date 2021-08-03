@@ -5,4 +5,4 @@ def solve(s):
             res += 1
         else:
             res -= 1
-    return s.lower() if res <= 0 else s.upper() 
+    return s.lower() if res <= 0 else s.upper()

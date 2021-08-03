@@ -11,4 +11,3 @@ for q in range(t):
             else:
                 b += 1
     print(max(a, b))
-

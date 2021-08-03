@@ -4,6 +4,7 @@ ans = 1
 total = 0
 for l in L:
     total += l
-    if total > X: break
+    if total > X:
+        break
     ans += 1
 print(ans)

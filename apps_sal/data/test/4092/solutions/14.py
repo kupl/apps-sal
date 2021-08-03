@@ -127,21 +127,17 @@ for i in range(t):
         ans=2*x
     print(ans)
 '''
-n=int(input())
-arr=list(map(int,input().split()))
-d={0}
-pre=0
-ans=0
+n = int(input())
+arr = list(map(int, input().split()))
+d = {0}
+pre = 0
+ans = 0
 for a in arr:
-    pre+=a
+    pre += a
     if pre in d:
-        ans+=1
-        pre=a
-        d={0,a}
+        ans += 1
+        pre = a
+        d = {0, a}
     else:
         d.add(pre)
 print(ans)
-                
-    
-
-

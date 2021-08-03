@@ -15,6 +15,6 @@ A = Counter(A).most_common()
 # 変える個数は、N-(変えない個数)
 s = 0
 for i in range(min(K, len(A))):
-  s += A[i][1]
-  
-print(N-s)
+    s += A[i][1]
+
+print(N - s)

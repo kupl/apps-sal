@@ -22,4 +22,3 @@ for i in range(enum):
         cur.add(events[i][1])
     max_l = max(max_l, len(cur))
 print(max_l)
-

@@ -5,8 +5,9 @@ N, M = list(map(int, input().split()))
 adjL = [set() for _ in range(N)]
 for _ in range(M):
     A, B = list(map(int, input().split()))
-    A, B = A-1, B-1
+    A, B = A - 1, B - 1
     adjL[A].add(B)
+
 
 def getCycle(adjL):
     def dfs(vNow):
@@ -30,11 +31,13 @@ def getCycle(adjL):
     anss = []
     for vSt in range(numV):
         isAvails = [False] * numV
-        if useds[vSt]: continue
+        if useds[vSt]:
+            continue
         vRet = dfs(vSt)
         if vRet == numV:
             return anss[::-1]
     return []
+
 
 cycle = getCycle(adjL)
 
@@ -46,7 +49,7 @@ isAvails = [False] * N
 v2s = [-1] * N
 for i in range(len(cycle)):
     isAvails[cycle[i]] = True
-    v2s[cycle[i-1]] = cycle[i]
+    v2s[cycle[i - 1]] = cycle[i]
 
 while True:
     adjL2 = [set() for _ in range(N)]
@@ -60,7 +63,7 @@ while True:
 
     if (a, b) == (-1, -1):
         print((len(cycle)))
-        print(('\n'.join([str(x+1) for x in cycle])))
+        print(('\n'.join([str(x + 1) for x in cycle])))
         break
 
     adjL = adjL2
@@ -73,4 +76,3 @@ while True:
         cycle.append(v)
         isAvails[v] = True
         v = v2s[v]
-

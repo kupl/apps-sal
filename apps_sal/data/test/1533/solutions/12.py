@@ -7,4 +7,3 @@ for i in range(n):
     else:
         print("NO")
         l2.append(l1[i])
-

@@ -8,4 +8,3 @@ elif c + b == a:
     print('Yes')
 else:
     print('No')
-

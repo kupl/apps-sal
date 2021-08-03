@@ -3,7 +3,7 @@ N, M = map(int, input().split())
 
 cand = []
 
-for i in range(1, int(sqrt(M))+1):
+for i in range(1, int(sqrt(M)) + 1):
     if M % i == 0:
         cand.append(i)
         u = M // i

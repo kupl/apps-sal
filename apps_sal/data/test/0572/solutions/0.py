@@ -21,6 +21,7 @@ def convert_to_binary(coef):
         i += 1
     return res, carry
 
+
 n, k = list(map(int, input().split()))
 coef = list(map(int, input().split()))
 
@@ -64,4 +65,3 @@ for i in range(0, n + 1):
 
 
 print(ans)
-

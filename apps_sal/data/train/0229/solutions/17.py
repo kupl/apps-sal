@@ -10,16 +10,16 @@ class Solution:
             else:
                 cnt[x] = cnt[x] + 1
 
-        while True :
+        while True:
             x = None
-            if negl != [] :
+            if negl != []:
                 x = negl.pop(0)
             else:
-                if posl != [] :
+                if posl != []:
                     x = posl.pop(0)
                 else:
                     break
-            if cnt[x] == 0 :
+            if cnt[x] == 0:
                 continue
             y = x * 2
             if y not in cnt:

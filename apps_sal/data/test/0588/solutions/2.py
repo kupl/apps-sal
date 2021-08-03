@@ -30,4 +30,5 @@ def __starting_point():
     answer = solve(n, x_y_list)
     print(answer)
 
+
 __starting_point()

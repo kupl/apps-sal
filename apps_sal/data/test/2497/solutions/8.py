@@ -3,6 +3,7 @@ import sys
 
 inf = float('inf')
 
+
 def solve(N: int, x: "List[int]", y: "List[int]", d: "List[str]"):
     D_xmin = [inf for dd in [-1, 0, 1]]
     D_xmax = [-inf for dd in [-1, 0, 1]]
@@ -10,13 +11,13 @@ def solve(N: int, x: "List[int]", y: "List[int]", d: "List[str]"):
     D_ymax = [-inf for dd in [-1, 0, 1]]
     trans_x = {'U': 1, 'D': 1, 'L': 0, 'R': 2}
     trans_y = {'U': 2, 'D': 0, 'L': 1, 'R': 1}
-    
+
     for xx, yy, dd in zip(x, y, d):
         D_xmin[trans_x[dd]] = min(D_xmin[trans_x[dd]], xx)
         D_xmax[trans_x[dd]] = max(D_xmax[trans_x[dd]], xx)
         D_ymin[trans_y[dd]] = min(D_ymin[trans_y[dd]], yy)
         D_ymax[trans_y[dd]] = max(D_ymax[trans_y[dd]], yy)
-    
+
     ts = [0]
     for D in [D_xmin, D_xmax, D_ymin, D_ymax]:
         ts.append(D[0] - D[1])
@@ -45,16 +46,18 @@ def main():
                 yield word
     tokens = iterate_tokens()
     N = int(next(tokens))  # type: int
-    x = [int()] * (N)  # type: "List[int]" 
-    y = [int()] * (N)  # type: "List[int]" 
-    d = [str()] * (N)  # type: "List[str]" 
+    x = [int()] * (N)  # type: "List[int]"
+    y = [int()] * (N)  # type: "List[int]"
+    d = [str()] * (N)  # type: "List[str]"
     for i in range(N):
         x[i] = int(next(tokens))
         y[i] = int(next(tokens))
         d[i] = next(tokens)
     solve(N, x, y, d)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

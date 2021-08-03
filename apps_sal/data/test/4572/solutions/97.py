@@ -7,5 +7,3 @@ while c <= "z":
     if c == "z":
         print("None")
     c = chr(ord(c) + 1)
-
-

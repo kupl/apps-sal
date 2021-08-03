@@ -7,4 +7,3 @@ train = [a, b]
 bus = [c, d]
 
 print((min(train) + min(bus)))
-

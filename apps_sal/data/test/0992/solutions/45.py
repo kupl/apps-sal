@@ -2,14 +2,16 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 MOD = 998244353
 N, S = lr()
 A = lr()
-dp = np.zeros(S+1, np.int64)
+dp = np.zeros(S + 1, np.int64)
 dp[0] = 1
 for a in A:
     prev = dp.copy()
@@ -18,5 +20,4 @@ for a in A:
     dp %= MOD
 
 answer = dp[S]
-print((answer%MOD))
-
+print((answer % MOD))

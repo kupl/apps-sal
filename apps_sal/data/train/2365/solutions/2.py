@@ -79,4 +79,3 @@ for l in range(t):
     buf.append(' '.join(map(str, result[::-1])))
 
 print('\n'.join(map(str, buf)))
-

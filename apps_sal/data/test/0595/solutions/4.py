@@ -3,6 +3,7 @@
 def is_leap(y):
     return bool(not y % 400 or (not y & 0x3 and y % 100))
 
+
 try:
     while True:
         y = int(input())
@@ -22,4 +23,3 @@ try:
 
 except EOFError:
     pass
-

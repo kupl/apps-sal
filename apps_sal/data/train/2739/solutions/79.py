@@ -14,7 +14,7 @@ def cube_odd(arr):
     if any(type(x) is not int for x in arr):
         return None
     return sum(x ** 3 for x in arr if x % 2 != 0)
-    
+
 
 # def cube_odd(arr):
 #     #your code here - return None if at least a value is not an integer
@@ -28,6 +28,5 @@ def cube_odd(arr):
 # def cube_odd(arr):
 #       if any(type(x) is not int for x in arr):
 #           return None
-          
-#       return sum(x ** 3 for x in arr if x % 2 != 0)
 
+#       return sum(x ** 3 for x in arr if x % 2 != 0)

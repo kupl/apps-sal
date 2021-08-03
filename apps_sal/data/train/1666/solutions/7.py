@@ -6,4 +6,3 @@ def solution(a):
         a.remove(max_a)
         a.add(max_a - max(a))
     return a.pop() * len_a
-

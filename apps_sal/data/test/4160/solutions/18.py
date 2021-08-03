@@ -7,4 +7,3 @@ while 1:
     if val >= x:
         break
 print(ans)
-

@@ -19,4 +19,3 @@ for line in sys.stdin:
         return
 
 print("Yes")
-

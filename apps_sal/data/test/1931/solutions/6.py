@@ -14,4 +14,3 @@ for q in range(0, t):
         n -= (3 * left * (left + 1) // 2 - left)
         number += 1
     print(number)
-

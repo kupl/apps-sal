@@ -4,4 +4,3 @@ def contamination(text, char):
         nw += char
     return nw
     # Flez
-

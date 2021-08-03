@@ -10,4 +10,4 @@ for _ in range(n):
         d = max(d, y)
     else:
         u = min(u, y)
-print(max(0, r-l) * max(0, u-d))
+print(max(0, r - l) * max(0, u - d))

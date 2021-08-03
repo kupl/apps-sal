@@ -5,5 +5,5 @@ def words_to_sentence(words):
             sentence += words[i]
         else:
             sentence += words[i] + " "
-        
+
     return sentence

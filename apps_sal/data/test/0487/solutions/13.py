@@ -14,5 +14,5 @@ def go():
         s2 += n
     return x
 
-print(go())
 
+print(go())

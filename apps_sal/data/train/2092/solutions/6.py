@@ -14,4 +14,3 @@ if d[home] == 0:
     print('home')
 else:
     print('contest')
-

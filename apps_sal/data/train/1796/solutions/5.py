@@ -1,4 +1,4 @@
-def to_postfix (infix):
+def to_postfix(infix):
     postfix = ""
     rop = []
     priority = []
@@ -11,7 +11,7 @@ def to_postfix (infix):
             priority.pop()
             postfix += rop.pop()
         else:
-            if len(rop) > 0 and (len(priority)==0 or len(rop)>priority[-1]):
+            if len(rop) > 0 and (len(priority) == 0 or len(rop) > priority[-1]):
                 if d in "+-":
                     postfix += "".join(rop[::-1])
                     rop = []

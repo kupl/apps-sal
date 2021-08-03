@@ -6,4 +6,3 @@ def covered_pawns(pawns):
             if any(f"{chr(ord(p[0]) + i)}{int(p[1]) - 1}" in pawn_pos for i in (-1, 1)):
                 count += 1
     return count
-

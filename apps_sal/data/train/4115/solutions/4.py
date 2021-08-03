@@ -6,7 +6,7 @@ def find_outlier(integers):
             listEven.append(n)
         else:
             listOdd.append(n)
-            
+
     if len(listEven) == 1:
         return listEven[0]
     else:

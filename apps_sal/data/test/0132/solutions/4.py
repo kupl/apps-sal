@@ -12,8 +12,8 @@ def main():
     print(res)
 
 
-
-
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,6 +1,7 @@
 from sys import setrecursionlimit, exit
 setrecursionlimit(1000000000)
 
+
 def main():
     n = int(input())
     ans = 0
@@ -28,5 +29,6 @@ def main():
                 dp += int(s[i])
             ans += dp * 2
     print(ans)
+
 
 main()

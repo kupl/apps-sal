@@ -4,7 +4,7 @@ mod = 1000000007
 
 for zz in range(int(input())):
     n = int(input())
-    a = [ int(i) for i in input().split()]
+    a = [int(i) for i in input().split()]
     b = [int(i) for i in input().split()]
     ha = True
     hp = False
@@ -32,4 +32,3 @@ for zz in range(int(input())):
         print('YES')
     else:
         print('NO')
-

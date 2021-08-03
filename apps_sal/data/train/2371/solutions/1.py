@@ -20,6 +20,7 @@ def solve():
             continue
     print(n - cnt)
 
+
 t = int(input())
 for _ in range(t):
     solve()

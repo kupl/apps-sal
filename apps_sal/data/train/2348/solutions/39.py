@@ -1,9 +1,10 @@
 import bisect
 
-def wantp(p,day):
+
+def wantp(p, day):
 
     for i in range(len(db)):
-        i = len(db)-1-i
+        i = len(db) - 1 - i
 
         if day & (2 ** i) > 0:
             p = db[i][p]
@@ -14,19 +15,19 @@ def wantp(p,day):
 
 
 N = int(input())
-x = list(map(int,input().split()))
+x = list(map(int, input().split()))
 L = int(input())
 
 able = []
 
 for i in range(N):
 
-    able.append(bisect.bisect_right(x,x[i] + L) - 1)
+    able.append(bisect.bisect_right(x, x[i] + L) - 1)
 
 
 db = [able]
 
-while min(db[-1]) != N-1:
+while min(db[-1]) != N - 1:
 
     new = []
 
@@ -41,7 +42,7 @@ Q = int(input())
 
 for loop in range(Q):
 
-    a,b = list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
     if a > b:
         t = a
         a = b
@@ -52,11 +53,11 @@ for loop in range(Q):
     l = 0
     r = 2 ** len(db)
 
-    while r-l != 1:
+    while r - l != 1:
 
-        m = (l+r) // 2
+        m = (l + r) // 2
 
-        np = wantp(a,m)
+        np = wantp(a, m)
         #print (a,m,np)
 
         if np < b:
@@ -64,5 +65,4 @@ for loop in range(Q):
         else:
             r = m
 
-    print (r)
-
+    print(r)

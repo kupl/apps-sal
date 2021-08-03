@@ -1,4 +1,4 @@
-#UnionFind
+# UnionFind
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -47,23 +47,23 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-n,m,k = map(int,input().split())
-V = [[] for i in range(n+1)]
-W = [0]*(n+1)
-uf = UnionFind(n+1)
+n, m, k = map(int, input().split())
+V = [[] for i in range(n + 1)]
+W = [0] * (n + 1)
+uf = UnionFind(n + 1)
 for _ in range(m):
-    a,b = map(int,input().split())
+    a, b = map(int, input().split())
     V[a].append(b)
     V[b].append(a)
-    uf.union(a,b)
+    uf.union(a, b)
 for _ in range(k):
-    c,d = map(int,input().split())
+    c, d = map(int, input().split())
     if uf.find(d) == uf.find(c):
         W[c] += 1
         W[d] += 1
-    
-for i in range(1,n+1):
+
+for i in range(1, n + 1):
     ans = uf.size(i) - len(V[i]) - W[i] - 1
-    print(ans,end="")
-    print(" ",end="")
+    print(ans, end="")
+    print(" ", end="")
 print()

@@ -11,4 +11,3 @@ def calculate(a, o, b):
 
 # one-liner
 #    return [a+b, a-b, a*b, a/b if b else None, None]["+-*/".find(o)]
-

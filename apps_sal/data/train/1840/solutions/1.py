@@ -23,4 +23,3 @@ class Solution:
                 else:
                     stack.append((node.right, 1, 'right'))
         return res
-

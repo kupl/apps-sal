@@ -1,6 +1,7 @@
 import sys
 import math
 
+
 def solve():
     k, n = list(map(int, input().split()))
     D = {}
@@ -15,7 +16,8 @@ def solve():
     center = 0
     for s in D:
         revs = s[::-1]
-        if not revs in D: continue
+        if not revs in D:
+            continue
         D[revs].sort()
         D[s].sort()
 
@@ -28,12 +30,12 @@ def solve():
             if len(D[s]) > 0:
                 center = max(center, D[s][-1])
         else:
-            while (len(D[s]) > 0 and len(D[revs]) > 0 and
-                   D[s][-1] + D[revs][-1] > 0):
+            while (len(D[s]) > 0 and len(D[revs]) > 0
+                   and D[s][-1] + D[revs][-1] > 0):
                 res += D[s].pop()
                 res += D[revs].pop()
 
     return res + center
 
-print(solve())
 
+print(solve())

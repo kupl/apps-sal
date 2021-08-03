@@ -19,6 +19,6 @@ for now in range(N):
             good = False
     if good:
         ans += 1
-        #print(now)
+        # print(now)
 
 print(ans)

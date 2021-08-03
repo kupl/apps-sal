@@ -29,4 +29,3 @@ for i in range(n):
             neighbours[right][0] = left
         turn += 1
 print(*team, sep="")
-

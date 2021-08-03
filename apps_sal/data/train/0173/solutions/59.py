@@ -1,10 +1,10 @@
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
-        from collections import Counter 
+        from collections import Counter
         mods = [a % k for a in arr]
-        
+
         c = Counter(mods)
-        
+
         possible = True
         print(c)
         for val, ct in c.items():

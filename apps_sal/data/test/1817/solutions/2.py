@@ -13,7 +13,7 @@ while l != r:
         r -= 1
     else:
         l += 1
-    
+
     label ^= 1
 
 stdout.write(str(values[l]))

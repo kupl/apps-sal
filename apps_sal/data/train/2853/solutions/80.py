@@ -1,5 +1,5 @@
 def solve(arr):
-    i, k = 0, len(arr) 
+    i, k = 0, len(arr)
     while k > i:
         if arr.count(arr[i]) != 1:
             del arr[i]

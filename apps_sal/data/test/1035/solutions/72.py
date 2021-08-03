@@ -19,4 +19,3 @@ def factorize(n):
 A, B = [int(x) for x in input().split()]
 V = factorize(math.gcd(A, B))
 print((len(V)))
-

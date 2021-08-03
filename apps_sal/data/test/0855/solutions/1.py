@@ -58,4 +58,3 @@ while r > 0:
     x, y = A[x][y], B[x][y]
     r -= 1
 print("{} {}".format(rsa, rsb))
-

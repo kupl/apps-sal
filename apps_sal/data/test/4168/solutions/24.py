@@ -5,4 +5,3 @@ while N != 0:
     N = (N - r) // (-2)
     ans += [r]
 print((''.join(map(str, ans[::-1])) if ans else 0))
-

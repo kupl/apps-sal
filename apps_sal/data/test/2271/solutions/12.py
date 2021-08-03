@@ -10,4 +10,3 @@ ans = 0
 for x in deg:
     ans += x * (x - 1) // 2
 print(ans)
-

@@ -25,4 +25,3 @@ class Solution:
         if cost[end] == float('-inf'):
             return 0
         return cost[end]
-

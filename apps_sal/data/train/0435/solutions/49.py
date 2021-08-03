@@ -4,7 +4,7 @@ class Solution:
         prefixsum = 0
         remain = collections.defaultdict(int)
         remain[0] = 1
-        
+
         res = 0
         for i in range(n):
             prefixsum += A[i]
@@ -12,5 +12,3 @@ class Solution:
             res += remain[re]
             remain[re] += 1
         return res
-            
-

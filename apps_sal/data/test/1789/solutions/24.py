@@ -12,5 +12,3 @@ for step in range(dif + 1):
         hollway = max(2 * (dif - step) - 1, 0)  # dif==stepのとき0未満になっちゃう
     ans = min(ans, x * hollway + y * step)
 print(ans)
-
-

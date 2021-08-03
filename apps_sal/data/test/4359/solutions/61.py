@@ -9,7 +9,7 @@ check = True
 for i in range(5):
     if (a[i] % 10) < min and (a[i] % 10 != 0):
         min = (a[i] % 10)
-        check=False
+        check = False
 
 if check:
     min = 0

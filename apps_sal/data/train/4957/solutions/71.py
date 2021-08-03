@@ -6,6 +6,7 @@ the example in [1], but this isn't very Pythonic, so I've subclassed instead.
 [1]: http://stackoverflow.com/a/33033631/149428
 """
 
+
 class Dog(object):
 
     def __init__(self, breed):

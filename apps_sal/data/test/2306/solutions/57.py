@@ -32,4 +32,3 @@ for i in reversed(list(range(len(va)))):
     v = va[i] + 0.5
 
 print(((np.array(va) / 2).sum()))
-

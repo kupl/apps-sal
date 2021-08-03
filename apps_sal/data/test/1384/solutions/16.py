@@ -4,7 +4,7 @@ n = int(input())
 a = list(map(int, input().split()))
 m = 0
 d = Counter(a)
-for i in range(d[0]+1):
+for i in range(d[0] + 1):
     j = 0
     k = 0
     while k != i:
@@ -15,6 +15,5 @@ for i in range(d[0]+1):
         if a[j] == 1:
             k += 1
         j += 1
-    m = max(m,k)
+    m = max(m, k)
 print(m)
-

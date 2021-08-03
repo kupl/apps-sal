@@ -12,7 +12,7 @@ class Solution:
             else:
                 num_of_people += i + wait_people
                 wait_people = 0
-            temp = num_of_people*boardingCost - c*runningCost
+            temp = num_of_people * boardingCost - c * runningCost
             l.append(temp)
         while(wait_people > 0):
             c += 1
@@ -22,10 +22,9 @@ class Solution:
             else:
                 num_of_people += wait_people
                 wait_people = 0
-            temp = num_of_people*boardingCost - c*runningCost
+            temp = num_of_people * boardingCost - c * runningCost
             l.append(temp)
         if max(l) > 0:
-            return l.index(max(l))+1
+            return l.index(max(l)) + 1
         else:
             return -1
-

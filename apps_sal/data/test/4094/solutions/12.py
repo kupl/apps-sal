@@ -13,4 +13,3 @@ while(num):
     mod[num] += 1
 
 print(ans)
-

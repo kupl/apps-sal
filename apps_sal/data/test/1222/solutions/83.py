@@ -5,7 +5,7 @@ k = int(input())
 q = deque([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 if k <= 9:
-    print(q[k-1])
+    print(q[k - 1])
     return
 
 i = 9

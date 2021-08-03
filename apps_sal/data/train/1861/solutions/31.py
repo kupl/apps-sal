@@ -13,6 +13,6 @@ class Solution:
                 for i in range(j):
                     y1 = column[i]
                     if (y1, y2) in seen:
-                        result = min(result, (x2 - seen[y1,y2]) * (y2 - y1))
+                        result = min(result, (x2 - seen[y1, y2]) * (y2 - y1))
                     seen[y1, y2] = x2
         return result if result != float('inf') else 0

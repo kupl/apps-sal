@@ -8,4 +8,3 @@ if s[2] == 'o':
     count += 100
 
 print(count)
-

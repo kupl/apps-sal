@@ -17,4 +17,3 @@ for i in range(m):
         print(x[0], i + 1)
         return
 print("NO")
-

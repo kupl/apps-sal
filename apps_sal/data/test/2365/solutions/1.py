@@ -1,9 +1,9 @@
 class Solution:
     def parseBoolExpr(self, expression: str) -> bool:
-        
+
         bool_stack = []
         expr_stack = []
-        
+
         curr = []
         for char in expression:
             if char == ',':

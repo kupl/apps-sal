@@ -18,4 +18,3 @@ for i in range(m):
             print('?')
         else:
             print(a[i][0][1], a[i][1][1])
-

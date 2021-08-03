@@ -9,7 +9,7 @@ class Solution:
                 val += 1
             else:
                 val -= 1
-                
+
             if val > 0:
                 result = i + 1
             else:
@@ -19,5 +19,5 @@ class Solution:
                     dist = i - table[val - 1]
                     if dist > result:
                         result = dist
-        
+
         return result

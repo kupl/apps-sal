@@ -1,5 +1,6 @@
 import re
 
+
 def reverse_words(text):
     wordList = re.findall("\S+", text)
     spaceList = re.findall("\s+", text)

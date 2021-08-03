@@ -1,6 +1,7 @@
-import sys, itertools
+import sys
+import itertools
 f = sys.stdin
-# f = open('H:\\Portable Python 3.2.5.1\\tests\\test_248B1.txt') 
+# f = open('H:\\Portable Python 3.2.5.1\\tests\\test_248B1.txt')
 n = int(f.readline().strip())
 v = [int(u) for u in f.readline().strip().split()]
 m = int(f.readline().strip())
@@ -12,12 +13,15 @@ us = list(itertools.accumulate(u))
 p = []
 for i in range(m):
     type, l, r = list(map(int, f.readline().strip().split()))
-    if type==1:
-        if l>1 :p.append( str(vs[r-1]-vs[l-2]) )
-        else :p.append( str(vs[r-1]) )
+    if type == 1:
+        if l > 1:
+            p.append(str(vs[r - 1] - vs[l - 2]))
+        else:
+            p.append(str(vs[r - 1]))
     else:
-        if l>1 :p.append( str(us[r-1]-us[l-2]) )
-        else :p.append( str(us[r-1]) )
+        if l > 1:
+            p.append(str(us[r - 1] - us[l - 2]))
+        else:
+            p.append(str(us[r - 1]))
 
 print('\n'.join(p))
-

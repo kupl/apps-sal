@@ -11,6 +11,6 @@ for i in s:
 if tmp:
     cnt += 1
 if cnt > 0:
-    print(min(x, y)*(cnt-1)+y)
+    print(min(x, y) * (cnt - 1) + y)
 else:
     print(0)

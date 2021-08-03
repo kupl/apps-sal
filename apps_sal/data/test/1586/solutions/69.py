@@ -15,4 +15,3 @@ while N > 0:
     N //= 5
 
 print(cnt)
-

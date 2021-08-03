@@ -27,4 +27,3 @@ for i, t in enumerate(T):
             ans += calc(t, r, s, p)
             d.append(t)
 print(ans)
-

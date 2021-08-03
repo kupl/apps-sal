@@ -1,18 +1,19 @@
 import sys
 from math import ceil
 input = sys.stdin.readline
-    
+
 n, m, req = map(int, input().split())
 e = [tuple(map(int, input().split())) for _ in range(m)]
 g = [[] for _ in range(n + 1)]
 for u, v in e:
     g[u].append(v)
     g[v].append(u)
-    
+
 # req = 1
 # while req * req < n:
 #     req += 1
-    
+
+
 def dfs():
     dep = [0] * (n + 1)
     par = [0] * (n + 1)
@@ -42,8 +43,9 @@ def dfs():
             iset.append(u)
             for v in g[u]:
                 mk[v] = 1
-    return (iset[:ceil(req/2)], None)
-    
+    return (iset[:ceil(req / 2)], None)
+
+
 iset, cyc = dfs()
 if iset:
     print(1)

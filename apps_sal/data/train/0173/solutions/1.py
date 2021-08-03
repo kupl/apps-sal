@@ -8,4 +8,4 @@ class Solution:
         for i in range(1, (k - 1) // 2 + 1):
             if rem[k - i] != rem[i]:
                 return False
-        return True  
+        return True

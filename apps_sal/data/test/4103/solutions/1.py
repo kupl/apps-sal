@@ -22,4 +22,5 @@ def main():
                 B -= 1
     return 0
 
+
 main()

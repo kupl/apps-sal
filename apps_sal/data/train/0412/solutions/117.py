@@ -11,21 +11,14 @@ class Solution:
         #             if 0<=j-num:
         #                 dp[j] += dp[j-num]
         # return dp[-1] % (10**9 + 7)
-        
-        
+
         # 2-d
-        dp = [[0]*(target+1) for i in range(d)]
-        for i in range(1,min(target+1,f+1)):
+        dp = [[0] * (target + 1) for i in range(d)]
+        for i in range(1, min(target + 1, f + 1)):
             dp[0][i] = 1
-        for i in range(1,d):
-            for j in range(1,target+1):
-                for num in range(1,f+1):
-                    if j-num >= 0:
-                        dp[i][j] += dp[i-1][j-num]
+        for i in range(1, d):
+            for j in range(1, target + 1):
+                for num in range(1, f + 1):
+                    if j - num >= 0:
+                        dp[i][j] += dp[i - 1][j - num]
         return dp[-1][-1] % (10**9 + 7)
-    
-    
-    
-    
-
-

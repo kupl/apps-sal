@@ -16,7 +16,7 @@ second = d[input()]
 months = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 for i in range(11):
-    m1, m2 = months[i], months[i+1]
+    m1, m2 = months[i], months[i + 1]
     if (m1 + first) % 7 == second:
         print('YES')
         break

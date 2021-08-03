@@ -1,4 +1,5 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 def is_good(tmp_arr):
     visited = set()
@@ -16,6 +17,7 @@ def is_good(tmp_arr):
         if tot < 0:
             return False
     return True
+
 
 n, m = R()
 arr = list(R())

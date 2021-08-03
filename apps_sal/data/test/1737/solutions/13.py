@@ -2,6 +2,7 @@ def read_pack():
     name, ver = input().split()
     return (name, int(ver))
 
+
 n = int(input())
 deps = dict()
 for i in range(n):

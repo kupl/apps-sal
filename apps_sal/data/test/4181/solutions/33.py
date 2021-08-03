@@ -8,8 +8,8 @@ for i in range(N):
     A[i] -= d
     B[i] -= d
     res += d
-    d = min(A[i+1], B[i])
-    A[i+1] -= d
+    d = min(A[i + 1], B[i])
+    A[i + 1] -= d
     res += d
 
 print(res)

@@ -7,4 +7,3 @@ if proper:
     print("YES")
 else:
     print("NO")
-

@@ -1,6 +1,7 @@
 n, k = map(int, input().split())
 t = list(map(int, input().split()))
-if k == 1: print(len(set(t)))
+if k == 1:
+    print(len(set(t)))
 else:
     p = [set() for i in range(30)]
     for i in t:

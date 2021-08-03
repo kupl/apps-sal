@@ -1,2 +1,2 @@
 import datetime
-get_calendar_week=lambda d:datetime.date(*map(int,d.split('-'))).isocalendar()[1]
+def get_calendar_week(d): return datetime.date(*map(int, d.split('-'))).isocalendar()[1]

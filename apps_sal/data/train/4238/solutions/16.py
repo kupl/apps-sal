@@ -3,5 +3,3 @@ def squares_needed(grains):
     while sum(2**i for i in range(n)) < grains:
         n += 1
     return n
-        
-

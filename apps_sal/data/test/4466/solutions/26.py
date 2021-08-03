@@ -8,9 +8,10 @@ def main():
             print(c)
             return
         elif rest == 0:
-            print((c+1))
+            print((c + 1))
             return
         else:
             c += 1
-main()
 
+
+main()

@@ -10,4 +10,3 @@ if len(O) != len(E):
     ans += O[-1]
 
 print(ans)
-

@@ -9,7 +9,7 @@ cnt = 0
 jj = 0
 for i in range(n):
     for j in range(jj, n - i):
-        if acsum[i+j+1] - acsum[i] >= k:
+        if acsum[i + j + 1] - acsum[i] >= k:
             cnt += n - i - j
             jj = j - 1
             break

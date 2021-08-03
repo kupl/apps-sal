@@ -29,6 +29,7 @@ class Combination:
             return 0
         return self.fact[n]
 
+
 N, M, K = list(map(int, input().split()))
 MOD = 10**9 + 7
 comb = Combination(N * M + 100)
@@ -41,4 +42,3 @@ for y in range(1, M):
 
 ans = S * comb.ncr(N * M - 2, K - 2)
 print((ans % MOD))
-

@@ -6,8 +6,8 @@ N = int(input().strip())
 V_array = []
 C_array = []
 
-V_array =[int(x) for x in input().split()]
-C_array =[int(x) for x in input().split()]
+V_array = [int(x) for x in input().split()]
+C_array = [int(x) for x in input().split()]
 
 ans = 0
 for j in range(N):

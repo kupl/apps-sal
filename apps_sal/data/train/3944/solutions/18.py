@@ -1,2 +1,2 @@
 def sum_triangular_numbers(n):
-    return sum([n*(n+1)/2 for n in range(n+1)])
+    return sum([n * (n + 1) / 2 for n in range(n + 1)])

@@ -12,4 +12,3 @@ for T in range(t):
         print(b - a)
     else:
         print(0)
-

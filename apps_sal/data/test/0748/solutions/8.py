@@ -22,7 +22,7 @@ sum0 = 0
 sum1 = 0
 sum2 = 0
 
-if mp[1] != n//3:
+if mp[1] != n // 3:
     print(-1)
 else:
     while True:
@@ -44,8 +44,8 @@ else:
             mp[6] = mp[6] - 1
         if flag == True:
             break
-        
-    if sum0 + sum1 + sum2 != n//3:
+
+    if sum0 + sum1 + sum2 != n // 3:
         print(-1)
     else:
         for i in range(sum0):
@@ -54,5 +54,3 @@ else:
             print(1, " ", 2, " ", 6)
         for i in range(sum2):
             print(1, " ", 3, " ", 6)
-        
-

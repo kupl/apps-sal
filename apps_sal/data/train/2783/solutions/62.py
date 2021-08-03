@@ -1,6 +1,6 @@
 def get_grade(*args):
     # Code here
-    score = sum(args)/len(args)
+    score = sum(args) / len(args)
     if 90 <= score <= 100:
         return 'A'
     elif 80 <= score < 90:

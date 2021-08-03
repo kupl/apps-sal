@@ -9,4 +9,3 @@ while (a1 >= 1 and a2 > 1) or (a1 > 1 and a2 >= 1):
         a2 += 1
     n += 1
 print(n)
-

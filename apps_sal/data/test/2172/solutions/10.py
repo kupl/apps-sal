@@ -5,7 +5,7 @@ for i in range(b):
     x, y = list(map(str, input().split(' ')))
     if len(y) < len(x):
         dictx[x] = y
-        dictx[y] =y
+        dictx[y] = y
     else:
         dictx[y] = x
         dictx[x] = x
@@ -13,4 +13,3 @@ for i in range(b):
 god = list(map(str, input().split(' ')))
 strx = [dictx[i] for i in god]
 print(' '.join(strx))
-

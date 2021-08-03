@@ -10,4 +10,3 @@ def to_pretty(seconds):
             return fmt('an' if num == 3600 else 'a', word, '')
         elif quo > 0:
             return fmt(quo, word, 's')
-

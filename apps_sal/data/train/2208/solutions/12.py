@@ -1,7 +1,7 @@
 from queue import Queue
 
 n, k = map(int, input().split())
-a = [tuple(sorted(list(map(lambda x: int(x)-1, input().split())))) for i in range(k)]
+a = [tuple(sorted(list(map(lambda x: int(x) - 1, input().split())))) for i in range(k)]
 a = list(set(a))
 a.sort()
 edges = [[] for i in range(n)]
@@ -64,4 +64,4 @@ for j in range(len(a)):
                     queue.put(i)
                     visited[i] = True
                     ans += 1
-print(abs(k-ans))
+print(abs(k - ans))

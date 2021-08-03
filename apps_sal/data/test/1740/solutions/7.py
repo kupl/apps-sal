@@ -2,7 +2,7 @@ class UnionFind(object):
     __slots__ = ["nodes"]
 
     def __init__(self, n: int) -> None:
-        self.nodes = [-1]*n
+        self.nodes = [-1] * n
 
     def get_root(self, x: int) -> int:
         if self.nodes[x] < 0:
@@ -24,7 +24,7 @@ def __starting_point():
     import sys
     n = int(input())
     queries = [tuple(map(int, l.split())) for l in sys.stdin]
-    uf = UnionFind(n+1)
+    uf = UnionFind(n + 1)
     get_root, unite = uf.get_root, uf.unite
     groups = {}
 
@@ -41,4 +41,6 @@ def __starting_point():
             groups[y_root].extend(groups[x_root])
 
     print(*groups[get_root(1)])
+
+
 __starting_point()

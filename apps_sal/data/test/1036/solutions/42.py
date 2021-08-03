@@ -44,10 +44,12 @@ def main(n, k, s):
 
     print((f(0, 0 % n, (1 << k), (1 << k) % n)))
 
+
 def __starting_point():
     nk = [int(x) for x in input().split()]
     n, k = nk[0], nk[1]
     s = input()
     main(n, k, s)
+
 
 __starting_point()

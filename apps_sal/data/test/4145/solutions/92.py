@@ -6,13 +6,16 @@ from bisect import bisect_left, bisect_right, bisect, insort_left, insort_right,
 from itertools import accumulate, product, permutations, combinations, combinations_with_replacement
 # }}} End Header
 # _________コーディングはここから！！___________
+
+
 def is_prime(t):
     k = 2
-    while k*k <= t:
-        if t%k == 0:
+    while k * k <= t:
+        if t % k == 0:
             return False
-        k+=1
+        k += 1
     return True
+
 
 x = int(input())
 while True:
@@ -20,4 +23,4 @@ while True:
         print(x)
         break
     else:
-        x+=1
+        x += 1

@@ -1,9 +1,10 @@
 from bisect import bisect_right
 
+
 def same_col_seq(val, k, col, seq=[], colors=[]):
     if not seq:
-        color = lambda v: {0: 'blue', 1: 'red', 2: 'yellow'}[v % 3]
-        next_val = lambda n: seq[-1] + n
+        def color(v): return {0: 'blue', 1: 'red', 2: 'yellow'}[v % 3]
+        def next_val(n): return seq[-1] + n
         seq.append(1)
         colors.append('red')
         n = 2
@@ -27,6 +28,7 @@ def same_col_seq(val, k, col, seq=[], colors=[]):
             break
         index += 1
     return res
+
 
 def find_gt(a, x):
     return bisect_right(a, x)

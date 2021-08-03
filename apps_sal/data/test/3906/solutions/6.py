@@ -7,4 +7,3 @@ for i in range(2, max(n, m)):
     x[i] = (x[i - 1] + x[i - 2]) % p
 
 print(2 * (x[n - 1] + x[m - 1] - 1) % p)
-

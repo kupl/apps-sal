@@ -1,5 +1,6 @@
 import re
 
+
 class Token(object):
     ARITH = 1
     POINTER = 2
@@ -7,10 +8,12 @@ class Token(object):
     PUTCHAR = 4
     OPEN = 5
     CLOSE = 6
+
     def __init__(self, mode=None, indent=None, value=None):
         self.mode = mode
         self.value = value
         self.indent = indent
+
     def __str__(self):
         if self.mode == self.ARITH:
             sign = '+' if self.value > 0 else '-'
@@ -28,6 +31,7 @@ class Token(object):
             return self.indent + '} while (*p);\n'
         return ''
 
+
 class BF(object):
     ARITH = 1
     POINTER = 2
@@ -35,12 +39,13 @@ class BF(object):
     PUTCHAR = 4
     OPEN = 5
     CLOSE = 6
+
     def __init__(self, source_code):
         self.indent = ''
         self.source_code = source_code
         self.tokens = [Token()]
         self.error = False
-        
+
     def convert_to_c(self):
         try:
             for c in self.source_code:
@@ -50,7 +55,7 @@ class BF(object):
         if self.indent:
             return 'Error!'
         return ''.join(map(str, self.tokens))
-    
+
     def convert_one_char(self, c):
         if c in '+-':
             if self.tokens[-1].mode != self.ARITH:
@@ -85,7 +90,8 @@ class BF(object):
                 del self.tokens[-1]
             else:
                 self.tokens.append(Token(self.CLOSE, self.indent, 0))
-    
+
+
 def brainfuck_to_c(source_code):
     bf = BF(source_code)
     return bf.convert_to_c()

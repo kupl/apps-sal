@@ -22,5 +22,3 @@ for i in range(n):
         ans = max(ans, prob)
 
 print(ans)
-
-

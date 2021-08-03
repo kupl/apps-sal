@@ -17,4 +17,3 @@ for c in range(26):
         cur = max(cur, len(list([x for x in cnt if x == 1])))
     ans += cur
 print(ans / l)
-

@@ -19,4 +19,3 @@ for _ in range(int(input())):
         for i in range(4):
             f(arr)
     print(*arr)
-

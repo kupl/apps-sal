@@ -7,7 +7,7 @@ for i in range(m):
     friendship[a].add(b)
     friendship[b].add(a)
 
-result = { }
+result = {}
 for x, friends in friendship.items():
     s = set()
     for y in friendship:

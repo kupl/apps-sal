@@ -1,4 +1,3 @@
 def square(n):
-    return n*n
+    return n * n
 #     pass
-

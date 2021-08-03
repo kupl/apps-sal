@@ -1,7 +1,7 @@
 class Solution:
     def maxJumps(self, arr: List[int], d: int) -> int:
         ans = [1] * len(arr)
-        
+
         def dp(i):
             nonlocal ans, arr, d
             if ans[i] != 1:
@@ -14,9 +14,7 @@ class Solution:
                         break
                     ans[i] = max(ans[i], 1 + dp(k))
             return ans[i]
-        
+
         for i in range(len(arr)):
             dp(i)
         return max(ans)
-                
-

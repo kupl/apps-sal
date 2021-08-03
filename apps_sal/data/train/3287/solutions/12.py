@@ -1,1 +1,1 @@
-mouth_size=lambda animal: ["wide","small"][animal.lower()=="alligator"]
+def mouth_size(animal): return ["wide", "small"][animal.lower() == "alligator"]

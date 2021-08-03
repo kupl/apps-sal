@@ -10,7 +10,7 @@ for d in range(1, n - 1):
     for _ in range((n - 1) // d):
         l += d
         r -= d
-        if l in passed or r in passed or l==r or r < d:
+        if l in passed or r in passed or l == r or r < d:
             break
         ten += s[l]
         ten += s[r]
@@ -19,4 +19,3 @@ for d in range(1, n - 1):
         if ten > ans:
             ans = ten
 print(ans)
-

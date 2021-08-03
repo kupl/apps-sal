@@ -19,4 +19,3 @@ for i in range(n):
                         used[xx][yy] = True
                         q.append((xx, yy))
 print(ans)
-

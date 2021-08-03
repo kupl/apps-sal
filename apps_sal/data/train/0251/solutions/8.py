@@ -8,14 +8,13 @@ class Solution:
                 x = stack.pop()
                 y = stack.pop()
                 if (j % 4 == 0):
-                    stack.append(x*y)
+                    stack.append(x * y)
                 elif (j % 4 == 1):
-                    stack.append(y//x)
+                    stack.append(y // x)
             j += 1
         res = stack[0]
-        for j in range(1,len(stack), 2):
+        for j in range(1, len(stack), 2):
             res += stack[j]
             if (j != len(stack) - 1):
-                res -= stack[j+1]
+                res -= stack[j + 1]
         return res
-

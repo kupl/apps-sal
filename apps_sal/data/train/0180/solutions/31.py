@@ -3,7 +3,7 @@ from functools import lru_cache
 
 class Solution:
     def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:
-        
+
         @lru_cache(None)
         def farthest_of_first_n_with_stops(n, stops):
             if n == 0 or stops == 0:
@@ -23,4 +23,3 @@ class Solution:
                 return stops
 
         return -1
-

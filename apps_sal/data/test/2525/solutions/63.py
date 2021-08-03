@@ -6,24 +6,24 @@ right = ""
 
 for i in range(n):
     q = input()
-    
+
     if q == "1":
         d *= -1
-        
+
     else:
-        _,f,c = q.split()
-        
+        _, f, c = q.split()
+
         if d == 1:
             if f == "1":
                 left += c
-                
+
             else:
                 right += c
-                
+
         else:
             if f == "2":
                 left += c
-                
+
             else:
                 right += c
 

@@ -2,7 +2,7 @@ class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         if n == 0:
             return 0
-        
+
         maxx = 0
         cache = {}
         for i in range(n):
@@ -14,7 +14,7 @@ class Solution:
                 if curr in cache:
                     count += cache[curr]
                     break
-            
+
             # print(i, count)
             cache[i] = count
             # print(cache)

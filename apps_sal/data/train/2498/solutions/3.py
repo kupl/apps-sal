@@ -5,10 +5,10 @@ class Solution:
         # and by iterating through every word and computing the sum of numbers,
         # when the number is smaller for earlier one, then terminate with False
         # if the loop finishes without returning False, then return True
-        
+
         if len(words) == 1:
             return True
-        
+
         i = 0
 
         lex_dict = {l: o for o, l in enumerate(order)}
@@ -18,7 +18,7 @@ class Solution:
 
         # instead of scrolling through each letter in all words,
         # just compare the pairs in the order (list is an ordered data structure anyway)
-        
+
         prev_word = words[0]
         for i in range(1, len(words)):
             word = words[i]
@@ -33,8 +33,6 @@ class Solution:
             else:  # amazing trick! if no breakpoint occurred in the above for-loop, then come here
                 if len(prev_word) > len(word):
                     return False
-            prev_word = word            
-            
-                    
-        return True
+            prev_word = word
 
+        return True

@@ -5,11 +5,12 @@ class Node:
         self.left = None
         self.right = None
 
+
 n, k = map(int, input().split())
 nums = list(map(int, input().split()))
 nodes = [Node(v, i) for i, v in enumerate(nums)]
 sort = [[v, i] for i, v in enumerate(nums)]
-sort = sorted(sort, key = lambda x: [x[0], x[1]],reverse=True)
+sort = sorted(sort, key=lambda x: [x[0], x[1]], reverse=True)
 for i in range(len(nodes)):
     if i < len(nodes) - 1:
         nodes[i].right = nodes[i + 1]

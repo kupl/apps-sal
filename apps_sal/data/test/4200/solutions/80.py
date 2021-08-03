@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
-j = sum(a)/4/m
+j = sum(a) / 4 / m
 p = 0
 for i in a:
     if i >= j:

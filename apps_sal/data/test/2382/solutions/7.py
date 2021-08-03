@@ -1,7 +1,8 @@
 import sys
 
+
 def main():
-    N,*S = map(int, open(0).read().split())
+    N, *S = map(int, open(0).read().split())
     S = sorted(S)
 
     g = [S.pop(-1)]
@@ -24,6 +25,9 @@ def main():
         g.sort(reverse=True)
     print('Yes')
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

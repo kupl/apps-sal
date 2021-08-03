@@ -13,4 +13,3 @@ def how_much_water(water,
     required_water = "%.2f" % (water * (1.1 ** (clothes - load)))
 
     return float(required_water)
-

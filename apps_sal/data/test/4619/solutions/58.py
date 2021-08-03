@@ -15,4 +15,4 @@ for num_list in num_lists:
 if x_min > x_max or y_min > y_max:
     print(0)
 else:
-    print((x_max-x_min)*(y_max-y_min))
+    print((x_max - x_min) * (y_max - y_min))

@@ -26,5 +26,4 @@ def divisors2(n):
 
 
 # same time with above but make short code via lambda expression
-divisors = lambda n: sum([n % x == 0 for x in range(1, n + 1)])
-
+def divisors(n): return sum([n % x == 0 for x in range(1, n + 1)])

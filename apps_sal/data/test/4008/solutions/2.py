@@ -24,4 +24,3 @@ else:
         s[a[i]].add(z)
         res.append(z)
     print(*res)
-

@@ -11,12 +11,12 @@ class Solution:
                 x -= 1
                 n_inc += 1
         return (n_inc, n_db)
-    
+
     def minOperations(self, nums: List[int]) -> int:
         tot_inc = 0
         tot_db = 0
         for n in nums:
-            x,y = self.minOpsSingle(n)
+            x, y = self.minOpsSingle(n)
             tot_inc += x
             tot_db = max(tot_db, y)
         return tot_inc + tot_db

@@ -5,4 +5,3 @@ for i in range(n):
     p, q = list(map(int, input().split()))
     ans = min(ans, p / q * m)
 print(ans)
-

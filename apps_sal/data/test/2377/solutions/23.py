@@ -30,7 +30,6 @@ for i in reversed(list(range(index, n))):
 
 # print(h)
 if h > 0:
-    ans += math.ceil(h/a_max)
+    ans += math.ceil(h / a_max)
 
 print(ans)
-

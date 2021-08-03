@@ -6,7 +6,7 @@ class Solution:
             c = customers[ops] if ops < len(customers) else 0
             ops += 1
             total += min(4, c + wait)
-            wait = max(wait + c - 4 , 0)
+            wait = max(wait + c - 4, 0)
             profit = total * boardingCost - ops * runningCost
             if profit > ma:
                 ma = profit

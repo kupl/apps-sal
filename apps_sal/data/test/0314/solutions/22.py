@@ -12,5 +12,3 @@ while k > 0:
     k -= x
     day += 1
 print(day)
-
-

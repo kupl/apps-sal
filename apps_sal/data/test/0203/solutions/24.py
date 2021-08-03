@@ -14,5 +14,3 @@ while len(set(a)) == 2:
             cnt -= 1
     a = new_a
 print(a[0])
-
-

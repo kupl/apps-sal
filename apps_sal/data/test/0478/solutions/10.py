@@ -6,7 +6,7 @@ from collections import Counter
 
 read = stdin.readline
 write = stdout.write
-writeln = lambda x: write(str(x) + "\n")
+def writeln(x): return write(str(x) + "\n")
 
 
 def reads(typ=int):
@@ -45,10 +45,10 @@ class Sol:
             if c != ch:
                 continue
             if i > 0 and s[i - 1] == chl:
-                self.s = s[:i] + s[i + 1 :]
+                self.s = s[:i] + s[i + 1:]
                 return True
             if i + 1 < len(self.s) and s[i + 1] == chl:
-                self.s = s[:i] + s[i + 1 :]
+                self.s = s[:i] + s[i + 1:]
                 return True
         return False
 
@@ -59,5 +59,6 @@ def __starting_point():
     except Exception as e:
         print("Got exception:", repr(e))
         print(traceback.format_exc())
+
 
 __starting_point()

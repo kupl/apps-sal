@@ -7,4 +7,3 @@ for i in range(math.ceil(a / 0.08), math.floor((a + 1) / 0.08) + 1):
         ans = i
         break
 print(ans)
-

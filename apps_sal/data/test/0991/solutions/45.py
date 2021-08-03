@@ -1,3 +1,4 @@
+import heapq
 n, m, s = map(int, input().split())
 rail = [[] for _ in range(n)]
 fare = [[] for _ in range(n)]
@@ -18,7 +19,7 @@ for _ in range(n):
     i, j = map(int, input().split())
     rate.append(i)
     TIME.append(j)
-    
+
 # Dijkstra's algorithm
 # 銀貨の枚数がlimit以上になったら捨てる
 limit = [max(i) for i in fare]
@@ -30,7 +31,6 @@ if s >= limit:
 dp = [[float('inf')] * limit for _ in range(n)]
 
 # candidateに(必要時間, 都市番号, 銀貨の枚数)を追加していく
-import heapq
 candidate = [(0, 0, s)]
 heapq.heapify(candidate)
 
@@ -50,7 +50,7 @@ while todo > 0:
     for l in range(len(rail[j])):
         if fare[j][l] <= k and dp[rail[j][l]][k - fare[j][l]] == float('inf'):
             heapq.heappush(candidate, (i + time[j][l], rail[j][l], k - fare[j][l]))
-    
+
     # 両替をcandidateに追加
     if k < limit - 1:
         heapq.heappush(candidate, (i + TIME[j], j, min([k + rate[j], limit - 1])))

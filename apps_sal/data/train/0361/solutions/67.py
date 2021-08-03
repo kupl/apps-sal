@@ -1,8 +1,10 @@
 import math
+
+
 class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
         grid = [[0 for _ in range(m)] for _ in range(n)]
-        
+
         def try_place(i: int, j: int, l: int) -> bool:
             ok = True
             xb, yb = None, None
@@ -26,12 +28,12 @@ class Solution:
                     if done:
                         break
             return ok
-        
+
         def un_place(i: int, j: int, l: int):
             for x in range(i, i + l):
                 for y in range(j, j + l):
                     grid[x][y] = 0
-                
+
         def search(i: int, j: int, sofar: int, ans: list):
             if sofar >= ans[0]:
                 return
@@ -48,7 +50,7 @@ class Solution:
                 if try_place(i, j, l):
                     search(i + 1, j, sofar + 1, ans)
                     un_place(i, j, l)
-        
+
         if len(grid) == len(grid[0]):
             return 1
         ans = [math.inf]

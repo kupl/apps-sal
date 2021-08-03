@@ -7,7 +7,7 @@ class Solution:
             if num % 2:
                 odds += 1
             if odds - k in cache:
-                cnt += len(cache[odds-k])
+                cnt += len(cache[odds - k])
             x = cache.setdefault(odds, [])
             x.append(odds)
         return cnt

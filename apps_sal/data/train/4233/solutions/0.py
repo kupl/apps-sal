@@ -10,4 +10,3 @@ def goldbach(n):
             sieve[i * i // 2::i] = [False] * ((l - i * i - 1) // (2 * i) + 1)
     primes = [(2 * i + 1) for i in range(1, l // 2) if sieve[i]]
     return [[p, n - p] for p in primes if (n - p) in primes and p <= (n - p)]
-

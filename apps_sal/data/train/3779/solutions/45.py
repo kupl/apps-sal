@@ -5,4 +5,3 @@ def past(h, m, s):
     mil = hr + mn + sec
     return mil
     # Good Luck!
-

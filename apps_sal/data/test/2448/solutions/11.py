@@ -1,19 +1,28 @@
 
-from collections import defaultdict,deque
-import sys,heapq,bisect,math,itertools,string,queue,copy,time
+from collections import defaultdict, deque
+import sys
+import heapq
+import bisect
+import math
+import itertools
+import string
+import queue
+import copy
+import time
 sys.setrecursionlimit(10**8)
 INF = float('inf')
-mod = 10**9+7
+mod = 10**9 + 7
 eps = 10**-7
 def inp(): return int(sys.stdin.readline())
 def inpl(): return list(map(int, sys.stdin.readline().split()))
 def inpl_str(): return list(sys.stdin.readline().split())
 
+
 t = inp()
 
 for _ in range(t):
     n = inp()
-    aa = inpl() # RPS
+    aa = inpl()  # RPS
     bb = input()
     ans = []
     for b in bb:
@@ -35,7 +44,7 @@ for _ in range(t):
                 ans.append("R")
             else:
                 ans.append(-1)
-    if n-sum(aa) < (n+1)//2:
+    if n - sum(aa) < (n + 1) // 2:
         print("NO")
     else:
         print("YES")
@@ -51,4 +60,3 @@ for _ in range(t):
                     ans[i] = "S"
                     aa[2] -= 1
         print("".join(ans))
-

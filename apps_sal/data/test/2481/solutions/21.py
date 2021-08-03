@@ -14,4 +14,3 @@ for h in range(H):
             v = A[h][w]
             ans += C[v][1]
 print(ans)
-

@@ -3,7 +3,7 @@ e = str(input())
 
 ans = ""
 judge = False
-if len(o)-len(e) == 1:
+if len(o) - len(e) == 1:
     judge = True
 
 for i in range(len(e)):

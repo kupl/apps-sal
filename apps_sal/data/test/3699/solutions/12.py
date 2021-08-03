@@ -1,9 +1,9 @@
-read = lambda : list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
 
 def dis(x1, y1, x2, y2):
 
     return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
-
 
 
 ax, ay, bx, by, tx, ty = read()
@@ -38,13 +38,11 @@ else:
 
     ans = min(a[0][0], b[0][0])
 
-    if (n > 1) :
+    if (n > 1):
 
         ans = min(a[0][0] + b[0][0], ans)
 
 print(ans + sum)
 
 
-
 # Made By Mostafa_Khaled
-

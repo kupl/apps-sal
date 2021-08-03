@@ -3,7 +3,7 @@ N = int(input())
 res = []
 sign = 1
 while N:
-    if N%2 == 0:
+    if N % 2 == 0:
         res.append(0)
     else:
         N -= sign
@@ -12,4 +12,4 @@ while N:
     sign *= -1
 if not res:
     res = [0]
-print(*reversed(res),sep='')
+print(*reversed(res), sep='')

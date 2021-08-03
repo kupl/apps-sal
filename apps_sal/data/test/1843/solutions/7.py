@@ -7,4 +7,3 @@ for i in range(t):
         sum -= (2 ** j) * 2
         j += 1
     print(sum)
-

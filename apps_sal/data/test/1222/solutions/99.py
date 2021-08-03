@@ -2,7 +2,7 @@ from collections import deque
 
 K = int(input())
 
-lunlun = deque([i for i in range(1,10)])
+lunlun = deque([i for i in range(1, 10)])
 
 for i in range(K):
     x = lunlun.popleft()

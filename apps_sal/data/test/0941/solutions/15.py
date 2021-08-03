@@ -14,4 +14,3 @@ else:
         print("even")
     else:
         print("odd")
-

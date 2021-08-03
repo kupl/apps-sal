@@ -1,4 +1,5 @@
-mi = lambda: [int(i) for i in input().split()]
+def mi(): return [int(i) for i in input().split()]
+
 
 n = int(input())
 t = mi()
@@ -21,4 +22,3 @@ r = 0
 for k in range(1, len(a)):
     r = max(r, min(a[k - 1], a[k]) * 2)
 print(r)
-

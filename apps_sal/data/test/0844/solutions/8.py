@@ -7,7 +7,7 @@ n = int(input())
 s = input()
 
 bal = n
-firstseen = [-1]*((n * 2) + 1)
+firstseen = [-1] * ((n * 2) + 1)
 firstseen[n] = 0
 
 ans = 0
@@ -23,4 +23,3 @@ for i in range(1, n + 1):
         firstseen[bal] = i
 
 print(ans)
-

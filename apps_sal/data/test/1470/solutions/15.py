@@ -1,7 +1,7 @@
 x = int(input())
-a = x//11
+a = x // 11
 a *= 2
-b = x%11
+b = x % 11
 if b == 0:
     None
 elif b <= 6:

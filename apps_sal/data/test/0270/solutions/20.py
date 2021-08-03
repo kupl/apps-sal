@@ -1,8 +1,8 @@
 N, M = list(map(int, input().split()))
-passages = [[] for i in range(N-1)]
+passages = [[] for i in range(N - 1)]
 for i in range(M):
     s, t = list(map(int, input().split()))
-    passages[s-1].append(t-1)
+    passages[s - 1].append(t - 1)
 
 prob = [0] * N
 prob[0] = 1
@@ -25,4 +25,3 @@ for n, dest in enumerate(passages):
     min_E = min(min_E, E[0] - (E[n] - new_E) * prob[n])
 
 print(min_E)
-

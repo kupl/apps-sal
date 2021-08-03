@@ -1,12 +1,12 @@
 from collections import deque
 
 N = int(input())
-S = list(map(int,input().split()))
+S = list(map(int, input().split()))
 S.sort()
 
 used = [S.pop()]
 for _ in range(N):
- 
+
     l, r = 0, len(used)
     reuse = deque()
     for i in range(len(S)):

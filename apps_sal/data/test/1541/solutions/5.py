@@ -1,10 +1,11 @@
 def get_sum(side):
     result = 0
-    
+
     for i in range(len(side)):
         result += side[i][0] * side[i][1]
 
     return result
+
 
 def main():
     left = []
@@ -32,7 +33,9 @@ def main():
     else:
         print("balance")
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

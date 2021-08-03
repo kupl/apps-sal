@@ -7,5 +7,5 @@ def numeric_formatter(template, nums="1234567890"):
         if char.isalpha():
             newlst[idx] = nums[i]
             i += 1
-            i = i%ln
+            i = i % ln
     return "".join(newlst)

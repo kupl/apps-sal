@@ -6,4 +6,5 @@ def distinct(seq):
 
     return result
 
-print(distinct([1,1,2]))
+
+print(distinct([1, 1, 2]))

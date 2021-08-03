@@ -11,4 +11,3 @@ class Solution:
                 count += 1
             head = head.__next__
         return count
-

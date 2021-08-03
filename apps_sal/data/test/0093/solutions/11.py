@@ -14,4 +14,3 @@ if ret:
     print("YES")
 else:
     print("NO")
-

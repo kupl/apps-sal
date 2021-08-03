@@ -6,18 +6,18 @@ class Solution:
             pos = neg = -1
             pre_prod = 1
             res = 0
-            for i,a in enumerate(arr):
+            for i, a in enumerate(arr):
                 pre_prod *= a
                 if pre_prod > 0:
                     if pos == -1:
                         pos = i
-                    res = i+1
+                    res = i + 1
                 else:
                     if neg == -1:
                         neg = i
-                    res = max(res, i-neg)
+                    res = max(res, i - neg)
             return res
-        
+
         res = i = j = 0
         while j < len(nums):
             while j < len(nums) and nums[j] == 0:
@@ -28,5 +28,3 @@ class Solution:
             # print(str(i)+'->'+str(j))
             res = max(res, check(nums[i:j]))
         return res
-        
-

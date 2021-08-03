@@ -13,4 +13,3 @@ for i in range(7):
     if j > mx:
         mx = j
 print(mn * 7 + mx)
-

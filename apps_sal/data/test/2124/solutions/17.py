@@ -1,8 +1,10 @@
 import sys
 import re
 
+
 def mentioned_usernames(line):
     return {x for x in re.split(r'[^A-Za-z0-9]+', line)}
+
 
 t = int(input())
 
@@ -24,12 +26,12 @@ for ti in range(t):
 
     # print(possible_users, file=sys.stderr)
 
-    for i in range(m-1):
+    for i in range(m - 1):
         if len(possible_users[i]) == 1:
-            possible_users[i+1].difference_update(possible_users[i])
-    for i in range(m-1, 0, -1):
+            possible_users[i + 1].difference_update(possible_users[i])
+    for i in range(m - 1, 0, -1):
         if len(possible_users[i]) == 1:
-            possible_users[i-1].difference_update(possible_users[i])
+            possible_users[i - 1].difference_update(possible_users[i])
 
     # print(possible_users, file=sys.stderr)
 
@@ -51,4 +53,3 @@ for ti in range(t):
             print('{}:{}'.format(res[i], messages[i]))
     else:
         print("Impossible")
-

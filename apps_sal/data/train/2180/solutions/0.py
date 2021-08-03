@@ -37,4 +37,6 @@ def solve():
             fl = 1
             # print(i,pred,sol,n,step,k, fl)
     print(sol)
+
+
 solve()

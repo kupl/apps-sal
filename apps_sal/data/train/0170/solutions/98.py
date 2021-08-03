@@ -1,6 +1,7 @@
 from collections import deque
 import bisect
 
+
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         l, r = deque([]), deque([])
@@ -21,6 +22,5 @@ class Solution:
         for i, x in enumerate(l):
             idx = bisect.bisect_left(r, x)
             ans = max(ans, i + 1 + b - idx)
-        
-        return len(arr) - ans
 
+        return len(arr) - ans

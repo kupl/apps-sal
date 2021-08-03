@@ -5,4 +5,4 @@ def evil(n):
     if num_of_1s % 2 == 0:
         return "It's Evil!"
     else:
-         return "It's Odious!"
+        return "It's Odious!"

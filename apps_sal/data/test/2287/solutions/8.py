@@ -16,4 +16,3 @@ for _ in range(N):
         if s[i] == '0':
             cnt += 1
     print(cnt)
-

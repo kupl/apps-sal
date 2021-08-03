@@ -1,6 +1,7 @@
 class Solution:
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         record = {}
+
         def to_mininute(time):
             h, m = [int(t) for t in time.split(':')]
             return h * 60 + m
@@ -20,6 +21,5 @@ class Solution:
                 if times[i] - times[i - 2] <= 60:
                     ans.add(name)
                     break
-            #print(sorted(list(ans)))
+            # print(sorted(list(ans)))
         return sorted(list(ans))
-

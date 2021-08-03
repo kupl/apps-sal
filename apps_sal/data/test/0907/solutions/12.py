@@ -36,4 +36,3 @@ if s is None or len(s) != 0:
     return
 
 print('NO')
-

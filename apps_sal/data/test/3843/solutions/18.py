@@ -31,4 +31,3 @@ for i in p(combination_number, n_length):
                 res += 1
 
 print(res)
-

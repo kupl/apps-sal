@@ -1,5 +1,6 @@
 import re
 
+
 def scramble_words(words):
     def sort_letters(match):
         s = match.group()

@@ -1,6 +1,5 @@
-#145-A
+# 145-A
 
 r = int(input())
 
 print((r**2))
-

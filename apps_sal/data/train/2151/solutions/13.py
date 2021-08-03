@@ -13,4 +13,3 @@ for i in range(n // 2, 0, -1):
         ans += a[i - 1] - a[i]
         a[i - 1] = a[i]
 print(ans)
-

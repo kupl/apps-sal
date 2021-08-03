@@ -6,9 +6,9 @@ ans_str = ''
 # 割り算の商を表す変数を定義
 n = N
 
-while (n>=K):
-    n = n//K
-    ans_str += str(n%K)
+while (n >= K):
+    n = n // K
+    ans_str += str(n % K)
     # print(f'n：{n}')
 ans_str += str(n)
 # print(ans_str[::-1])

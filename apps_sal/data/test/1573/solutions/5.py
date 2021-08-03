@@ -22,8 +22,7 @@ def main(n, d):
             while em != g and p[em][0] + d <= p[g][0]:
                 sum -= p[em][1]
                 em += 1
+
+
 n, d = list(map(int, input().split()))
 main(n, d)
-    
-    
-

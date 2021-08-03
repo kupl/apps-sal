@@ -21,5 +21,3 @@ def get_textliterals(pv_code):
             else:
                 start_index = index
     return all_index_store
-            
-

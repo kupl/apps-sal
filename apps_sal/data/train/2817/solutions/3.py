@@ -1,13 +1,13 @@
 def DNA_strand(dna):
     # code here
-    dnaComplement=""
+    dnaComplement = ""
     for string in dna:
-        if string=="A":
-            dnaComplement+="T"
-        elif string =="T":
-            dnaComplement+="A"
-        elif string =="G":
-            dnaComplement+="C"
+        if string == "A":
+            dnaComplement += "T"
+        elif string == "T":
+            dnaComplement += "A"
+        elif string == "G":
+            dnaComplement += "C"
         elif string == "C":
-            dnaComplement+="G"
+            dnaComplement += "G"
     return dnaComplement

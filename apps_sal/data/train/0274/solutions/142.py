@@ -1,4 +1,5 @@
-from sortedcontainers import SortedList 
+from sortedcontainers import SortedList
+
 
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
@@ -14,5 +15,3 @@ class Solution:
             if start <= end:
                 ans = max(ans, end - start + 1)
         return ans
-                
-

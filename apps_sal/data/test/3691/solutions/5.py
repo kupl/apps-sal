@@ -1,6 +1,7 @@
 def dist(x1, y1, x2, y2):
     return abs(x1 - x2) + abs(y1 - y2)
-    
+
+
 x0, y0, a1, a2, b1, b2 = list(map(int, input().split()))
 xs, ys, t = list(map(int, input().split()))
 arr = []
@@ -50,4 +51,3 @@ for i in range(N):
         now += 1
     ans = max(ans, now)
 print(ans)
-

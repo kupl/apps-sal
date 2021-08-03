@@ -14,28 +14,12 @@ class Solution:
                 m1[A[i1]] += 1
             if len(m1) < K:
                 return res
-            
+
             while i2 + 1 < len(A) and len(m2) < K + 1:
                 i2 += 1
                 m2[A[i2]] += 1
-            
-            
+
             res += i2 - i1 + int(len(m2) == K)
             remove(m1, n)
             remove(m2, n)
         return res
-            
-            
-            
-            
-                
-                    
-                
-
-            
-        
-        
-        
-        
-                                        
-

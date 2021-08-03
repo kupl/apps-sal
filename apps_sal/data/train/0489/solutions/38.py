@@ -21,15 +21,8 @@ class Solution:
                         l = m + 1
                     else:
                         r = m
-                    
+
                 if stack[l][0] <= a:
                     ans = max(ans, i - stack[l][1])
             # print(stack, ans)
         return ans
-                        
-                        
-                    
-       
-        
-
-

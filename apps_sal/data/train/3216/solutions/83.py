@@ -1,4 +1,6 @@
 import math
+
+
 def movie(card, ticket, perc):
     a = 0
     b = card

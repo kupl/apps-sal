@@ -1,6 +1,7 @@
 from array import array
 from itertools import repeat
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         length = len(A)

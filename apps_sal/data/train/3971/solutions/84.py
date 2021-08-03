@@ -5,4 +5,3 @@ def tidyNumber(n):
         return True
     else:
         return False
-

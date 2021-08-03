@@ -7,7 +7,6 @@ k = 0
 
 for x in l:
     a[x] = a[x - 1] + 1
-    k = max(k, a[x])    
+    k = max(k, a[x])
 
 print(n - k)
-

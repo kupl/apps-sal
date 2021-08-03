@@ -14,4 +14,3 @@ while h1 > 0 and h2 > 0:
 print(t)
 for i in range(len(a)):
     print(a[i])
-

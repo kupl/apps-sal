@@ -1,5 +1,6 @@
 import math
 
+
 def main():
 
     s, p = list(map(int, input().split()))
@@ -8,18 +9,17 @@ def main():
     except:
         print("No")
         return
-    
+
     for _ in range(-1, 2):
 
         ans_2 = s - ans_1
-        
+
         if ans_2 > 0 and ans_1 * ans_2 == p:
             print("Yes")
             return
-        
+
     print("No")
     return
 
+
 main()
-
-

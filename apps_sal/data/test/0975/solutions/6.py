@@ -32,4 +32,3 @@ while j != n:
 
 print(min_strikes)
 print(max_strikes)
-

@@ -19,4 +19,3 @@ N, *A = list(map(int, open(0).read().split()))
 A = np.array(A, dtype=np.int64)
 MOD = 1_000_000_007
 print((solve()))
-

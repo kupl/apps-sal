@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, = readln()
 a = readln()
@@ -15,4 +17,3 @@ for i in range(n - 1, -1, -1):
     if m[i] == '1':
         ans = max(ans, s[i] + sm[n] - sm[i + 1])
 print(ans)
-

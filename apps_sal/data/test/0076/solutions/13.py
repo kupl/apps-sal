@@ -7,4 +7,3 @@ cost_down = (n - down) * b
 cost_up = (up - n) * a
 
 print(min(cost_down, cost_up))
-

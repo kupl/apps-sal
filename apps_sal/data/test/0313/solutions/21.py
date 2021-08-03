@@ -22,4 +22,3 @@ for x in a:
             res += 2
 
 print(res)
-

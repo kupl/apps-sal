@@ -2,7 +2,7 @@ __author__ = 'Karolis'
 
 s = input()
 total = 1
-was=[]
+was = []
 have = 10
 
 for i in range(len(s)):
@@ -18,9 +18,7 @@ for i in range(len(s)):
             total *= 9
         else:
             total *= have
-        have-=1
-
+        have -= 1
 
 
 print(total)
-

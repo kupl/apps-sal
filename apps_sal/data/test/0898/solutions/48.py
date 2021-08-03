@@ -3,7 +3,7 @@ def LI():
 
 
 N, M = LI()
-x = M//N
+x = M // N
 for i in range(x, 0, -1):
     if M % i != 0:
         continue

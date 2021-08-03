@@ -5,5 +5,6 @@ def isFloat(x):
     except ValueError:
         return False
 
+
 def isDigit(string):
     return isFloat(string)

@@ -32,6 +32,3 @@ else:
         print(l)
         for item in d2:
             print(item, d2[item])
-            
-            
-

@@ -3,8 +3,7 @@ class VigenereCipher(object):
     def __init__(self, key, alphabet):
         self.key = key * 10
         self.alphabet = alphabet * 2
-        
-    
+
     def encode(self, text):
         encrypted = ""
         a = 0
@@ -16,8 +15,7 @@ class VigenereCipher(object):
                 encrypted += i
                 a += 1
         return encrypted
-        
-              
+
     def decode(self, text):
         decrypted = ""
         a = 0

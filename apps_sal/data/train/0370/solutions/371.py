@@ -3,12 +3,14 @@ class UnionFind:
         self.N = N
         self.rank = [1 for i in range(N)]
         self.parent = [i for i in range(N)]
+
     def find(self, x):
         y = x
         while x != self.parent[x]:
             x = self.parent[x]
         self.parent[y] = x
         return x
+
     def union(self, x, y):
         px = self.find(x)
         py = self.find(y)
@@ -21,14 +23,16 @@ class UnionFind:
             if self.rank[px] == self.rank[py]:
                 self.rank[px] += 1
         return True
+
+
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        #Union Find: union x to all of its factors. O(N^1.5)
+        # Union Find: union x to all of its factors. O(N^1.5)
         def union_all(x):
             for i in range(2, int(x**0.5) + 1):
                 if x % i == 0:
                     uf.union(x, i)
-                    uf.union(x, x//i)
+                    uf.union(x, x // i)
         uf = UnionFind(100001)
         max_size = 1
         for i in range(len(A)):
@@ -40,10 +44,3 @@ class Solution:
             # print(A[i], uf.find(A[i]))
 
         return max_size
-            
-            
-            
-            
-                
-        
-

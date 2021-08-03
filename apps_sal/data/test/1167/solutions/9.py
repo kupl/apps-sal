@@ -8,4 +8,3 @@ for i in range(t):
         print(first, second)
     else:
         print(-1)
-

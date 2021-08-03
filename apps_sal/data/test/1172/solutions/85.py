@@ -29,4 +29,3 @@ for i in range(n):
         next[j] %= mod
     dp = next
 print((dp[3]))
-

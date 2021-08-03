@@ -5,12 +5,13 @@ def main():
     b = sorted(map(int, input().split()))
     for i in range(n):
         a[i] *= (i + 1) * (n - i)
-    a.sort(reverse = 1)
+    a.sort(reverse=1)
     ans = 0
     for i in range(n):
         ans = (ans + a[i] * b[i]) % mod
     print(ans)
-    
+
     return 0
+
 
 main()

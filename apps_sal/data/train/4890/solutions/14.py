@@ -6,4 +6,4 @@ def find_difference(a, b):
         p *= nums
     for nums in b:
         q *= nums
-    return abs(p - q) 
+    return abs(p - q)

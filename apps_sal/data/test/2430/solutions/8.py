@@ -13,9 +13,9 @@ def seconds(l):
         time += 1
 
         # get down to the height of th enext tree
-        if h > l[i+1]:
-            time += h - l[i+1]
-            h -= h - l[i+1]
+        if h > l[i + 1]:
+            time += h - l[i + 1]
+            h -= h - l[i + 1]
 
         # jump to the next tree
         time += 1
@@ -30,6 +30,7 @@ def seconds(l):
 
     return time
 
+
 m = int(input())
 l = []
 for i in range(m):
@@ -38,4 +39,3 @@ print(seconds(l))
 
 # End 8:56
 # Total 17 min
-

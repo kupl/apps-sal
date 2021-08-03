@@ -19,12 +19,12 @@ class Solution:
         for p1 in V:
             for p2 in V:
                 if p1 != p2:
-                    E.append((tuple(p1),tuple(p2)))
+                    E.append((tuple(p1), tuple(p2)))
         W = {}
         for edge in E:
-            W[edge] = abs(edge[0][0]-edge[1][0]) + abs(edge[0][1]-edge[1][1])
+            W[edge] = abs(edge[0][0] - edge[1][0]) + abs(edge[0][1] - edge[1][1])
         sorted_W = {k: v for k, v in sorted(W.items(), key=lambda item: item[1])}
-    
+
         count = 0
         cost = 0
         for e in sorted_W:
@@ -34,6 +34,6 @@ class Solution:
                 union(x_set, y_set)
                 count += 1
                 cost += sorted_W[e]
-            if count ==  len(V) - 1:
+            if count == len(V) - 1:
                 break
         return cost

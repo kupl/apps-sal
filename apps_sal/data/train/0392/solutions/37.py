@@ -31,6 +31,3 @@ class Solution:
                 two_count += 1
 
         return one_count * two_count % M
-
-
-

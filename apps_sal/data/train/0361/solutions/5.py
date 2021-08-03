@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
 
@@ -16,11 +18,11 @@ class Solution:
                 side = end - start + 1
                 if minimum + side > n:
                     break
-                state[start:end+1] = [minimum + side]*side
+                state[start:end + 1] = [minimum + side] * side
                 res = min(res, dfs(tuple(state)))
             return res + 1
-        
-        inf = m*n
+
+        inf = m * n
         if m > n:
             m, n = n, m
-        return dfs(tuple([0]*m))
+        return dfs(tuple([0] * m))

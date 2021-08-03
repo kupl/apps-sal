@@ -6,5 +6,5 @@ def go():
     else:
         return a[n // 2 - 1]
 
-print(go())
 
+print(go())

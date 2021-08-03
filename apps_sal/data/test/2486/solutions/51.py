@@ -36,8 +36,8 @@ def solve(n, k, a):
         return n
     return lowest
 
+
 n, k = read_int_list()
 a = read_int_list()
 res = solve(n, k, a)
 print(res)
-

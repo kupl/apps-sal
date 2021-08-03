@@ -7,7 +7,7 @@ trinc = [-1 for i in range(0, n + 1)]
 trdec = [-1 for i in range(0, n + 1)]
 inc[0] = -inf
 dec[0] = inf
-#inc means last dec was in i and we want minimize last inc
+# inc means last dec was in i and we want minimize last inc
 for i in range(0, n - 1):
     if a[i + 1] < a[i]:
         if inc[i + 1] > inc[i]:
@@ -43,4 +43,3 @@ for i in range(n - 1, -1, -1):
             now_inc = True
 print("YES")
 print(" ".join(str(x) for x in ans))
-

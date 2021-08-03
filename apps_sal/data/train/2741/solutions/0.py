@@ -5,5 +5,5 @@ def russian_peasant_multiplication(x, y):
             product += x
         x += x
         y //= 2
-        
+
     return product

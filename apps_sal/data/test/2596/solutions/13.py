@@ -4,17 +4,17 @@
 #N,B = [int(x) for x in arr.split(' ')]
 
 arr = input()
-N,K,M,T = [int(x) for x in arr.split(' ')]
+N, K, M, T = [int(x) for x in arr.split(' ')]
 
-uni = [0]*N
+uni = [0] * N
 
-uni[K-1] = 1
+uni[K - 1] = 1
 
 for i in range(T):
     arr = input()
-    move,pos = [int(x) for x in arr.split(' ')]
-    
-    if move==0:
+    move, pos = [int(x) for x in arr.split(' ')]
+
+    if move == 0:
         u1 = uni[:pos]
         u2 = uni[pos:]
         if 1 in u1:
@@ -22,22 +22,16 @@ for i in range(T):
         else:
             uni = u2
             K -= len(u1)
-        
-        print(len(uni),K)
-        
+
+        print(len(uni), K)
+
     else:
-        p = pos-1
+        p = pos - 1
         u1 = uni[:p]
         u2 = uni[p:]
         uni = u1 + [0] + u2
-        
-        
+
         if 1 in u2:
             K += 1
-            
-        print(len(uni),K)
-        
-        
-            
-    
 
+        print(len(uni), K)

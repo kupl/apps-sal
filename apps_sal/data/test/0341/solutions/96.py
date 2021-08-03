@@ -1,12 +1,13 @@
-N,K = map(int,input().split())
-RSP = list(map(int,input().split()))
+N, K = map(int, input().split())
+RSP = list(map(int, input().split()))
 T = input()
 
 # dp[i][j]: i 回目に j を出したときの得点
 # 0: グー, 1: チョキ, 2: パー
-dp = [[0]*3 for _ in range(N+1)]
+dp = [[0] * 3 for _ in range(N + 1)]
 
-def judge(a,b):
+
+def judge(a, b):
     # パーで勝ったとき
     if a == 'r' and b == 2:
         return RSP[2]
@@ -18,8 +19,9 @@ def judge(a,b):
         return RSP[1]
     return 0
 
+
 # i 回目のじゃんけん
-for i in range(1,N+1):
+for i in range(1, N + 1):
     # i 回目に出した手
     for j in range(3):
         # i-K 回目に出した手
@@ -28,9 +30,9 @@ for i in range(1,N+1):
             if j == k:
                 continue
             # j を出したとき
-            dp[i][j] = max(dp[i][j],dp[i-K][k] + judge(T[i-1],j))
-            
+            dp[i][j] = max(dp[i][j], dp[i - K][k] + judge(T[i - 1], j))
+
 ans = 0
 for k in range(K):
-    ans += max(dp[N-k])
+    ans += max(dp[N - k])
 print(ans)

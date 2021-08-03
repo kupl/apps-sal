@@ -6,7 +6,7 @@ from collections import defaultdict
 n, m, r = list(map(int, input().split()))
 visiting_town = list(map(int, input().split()))
 
-edges = [[] for i in range(n+1)]
+edges = [[] for i in range(n + 1)]
 for _ in range(m):
     _from, to, distance = list(map(int, input().split()))
     edges[_from].append([to, distance])
@@ -15,7 +15,7 @@ for _ in range(m):
 
 comp_edges = defaultdict(dict)
 for _from in visiting_town:
-    seen = [False] * (n+1)
+    seen = [False] * (n + 1)
     todo = []
     for to, dist in edges[_from]:
         heapq.heappush(todo, [dist, to])
@@ -49,4 +49,3 @@ for route in itertools.permutations(visiting_town):
     candidates.append(result)
 
 print((min(candidates)))
-

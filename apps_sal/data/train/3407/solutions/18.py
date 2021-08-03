@@ -10,5 +10,5 @@ def palindrome_chain_length(n):
     while not is_palindrome(last_num):
         last_num = last_num + int(reverse_num(last_num))
         counter += 1
-        
+
     return counter

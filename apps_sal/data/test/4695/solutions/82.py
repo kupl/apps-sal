@@ -10,4 +10,3 @@ elif a in u and b in u:
     print("Yes")
 else:
     print("No")
-

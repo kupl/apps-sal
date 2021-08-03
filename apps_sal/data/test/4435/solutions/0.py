@@ -5,19 +5,19 @@ a = list(map(int, input().split()))
 edge = [[] for _ in range(n)]
 rev = [[] for _ in range(n)]
 inf = 10**9
-cost = [inf]*n
+cost = [inf] * n
 hq = []
 
 for i, x in enumerate(a):
-    if i+x < n:
-        edge[i].append(i+x)
-        rev[i+x].append(i)
-        if (a[i] ^ a[i+x]) & 1:
+    if i + x < n:
+        edge[i].append(i + x)
+        rev[i + x].append(i)
+        if (a[i] ^ a[i + x]) & 1:
             cost[i] = 1
-    if i-x >= 0:
-        edge[i].append(i-x)
-        rev[i-x].append(i)
-        if (a[i] ^ a[i-x]) & 1:
+    if i - x >= 0:
+        edge[i].append(i - x)
+        rev[i - x].append(i)
+        if (a[i] ^ a[i - x]) & 1:
             cost[i] = 1
 
     if cost[i] == 1:
@@ -38,4 +38,3 @@ for i in range(n):
         cost[i] = -1
 
 print(*cost)
-

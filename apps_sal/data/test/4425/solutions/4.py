@@ -7,6 +7,7 @@ def p(n, k):
         num += 1
     return 1 / 2 ** num
 
+
 N, K = map(int, input().split())
 
 ans = 0

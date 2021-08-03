@@ -22,4 +22,3 @@ def solve():
 
 
 solve()
-

@@ -28,4 +28,3 @@ else:
         b -= 1
 
 print(ans)
-

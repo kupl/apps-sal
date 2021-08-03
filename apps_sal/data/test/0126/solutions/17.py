@@ -22,6 +22,7 @@ number = list(map(int, list(input())))
 def add_offset(cell, offset):
     return (cell[0] + offset[0], cell[1] + offset[1])
 
+
 uniq = True
 
 for posible_starts in BOARD:
@@ -40,4 +41,3 @@ if uniq:
     print("YES")
 else:
     print("NO")
-

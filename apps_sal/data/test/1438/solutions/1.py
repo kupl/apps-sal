@@ -7,6 +7,7 @@ def can_make(a, b, k, n):
 
     return k2 >= 0
 
+
 def main():
     n, k = list(map(int, input().split()))
     a = list(map(int, input().split()))
@@ -23,5 +24,5 @@ def main():
 
     print(lo)
 
-main()
 
+main()

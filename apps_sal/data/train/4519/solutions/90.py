@@ -5,4 +5,3 @@ def max_number(n):
     x = "".join(sorted(nums, reverse=True))
     y = int(x)
     return y
-

@@ -14,4 +14,3 @@ elif A < B:
     print('Chris')
 else:
     print('Friendship is magic!^^')
-

@@ -11,6 +11,5 @@ class Solution:
             if MergedList[i][0] <= MergedList[i - 1][1]:
                 result.append([max(MergedList[i - 1][0], MergedList[i][0]), min(MergedList[i - 1][1], MergedList[i][1])])
                 MergedList[i][1] = max(MergedList[i - 1][1], MergedList[i][1])
-        
-        return result
 
+        return result

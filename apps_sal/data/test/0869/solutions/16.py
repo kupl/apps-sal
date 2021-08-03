@@ -1,3 +1,3 @@
 __author__ = 'dwliv_000'
-(a,b) = (int(i) for i in input().split())
-print(min(a,b),(max(a,b)-min(a,b))//2)
+(a, b) = (int(i) for i in input().split())
+print(min(a, b), (max(a, b) - min(a, b)) // 2)

@@ -1,5 +1,7 @@
 S = input()
 K = int(input())
+
+
 def main():
     cnt = 1
     for i in S:
@@ -12,4 +14,6 @@ def main():
         else:
             return i
         return '1'
+
+
 print(int(main()))

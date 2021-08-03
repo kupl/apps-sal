@@ -24,4 +24,3 @@ for i in range(N - 1):
 for i in range(N - 1):
     result = max(result, a1[i] - (C - x[N - 1 - i]) + a0[N - 1 - (i + 1)])
 print(result)
-

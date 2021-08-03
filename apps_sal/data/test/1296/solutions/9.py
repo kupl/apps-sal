@@ -42,4 +42,3 @@ while left <= right:
         cleft = cost_of(data, left)
 
 print(left, cost_of(data, left))
-

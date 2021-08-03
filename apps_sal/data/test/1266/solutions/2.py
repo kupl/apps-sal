@@ -41,8 +41,8 @@ def main():
     typneedrru.sort()
     typneedrld.sort()
     typneedrrd.sort()
-    #print(a)
-    #print(typneedrld)
+    # print(a)
+    # print(typneedrld)
     for i in range(len(typneedbql)):
         if typneedbql[i][1] == "R" or typneedbql[i][1] == "Q":
             print("YES")
@@ -92,5 +92,6 @@ def main():
         else:
             break
     print("NO")
-main()
 
+
+main()

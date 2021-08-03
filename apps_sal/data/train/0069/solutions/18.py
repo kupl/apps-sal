@@ -4,19 +4,25 @@ def read_generator():
         for t in tokens:
             yield t
 
+
 reader = read_generator()
+
 
 def readword():
     return next(reader)
 
+
 def readint():
     return int(next(reader))
+
 
 def readfloat():
     return float(next(reader))
 
+
 def readline():
     return input()
+
 
 def solve(a, b, m):
     o = []

@@ -35,49 +35,41 @@ for i in range(n):
 	for num in range(2,m+1):
 	       	if is_prime(num):
 	       		summ+=num 
-	print(summ%10)''' 
-def sumOfPrimes(n): 
+	print(summ%10)'''
 
 
-    prime = [True] * (n + 1) 
+def sumOfPrimes(n):
 
+    prime = [True] * (n + 1)
 
     p = 2
 
-    while p * p <= n: 
+    while p * p <= n:
 
-    
-
-        if prime[p] == True: 
-
-          
+        if prime[p] == True:
 
             i = p * 2
 
-            while i <= n: 
+            while i <= n:
 
                 prime[i] = False
 
-                i += p 
+                i += p
 
-        p += 1    
-
-           
-
-
+        p += 1
 
     sum = 0
 
-    for i in range (2, n + 1): 
+    for i in range(2, n + 1):
 
-        if(prime[i]): 
+        if(prime[i]):
 
-            sum += i 
+            sum += i
 
     return sum
 
-t=int(input())
-for i in range(t):
-	n=int(input())
-	print(sumOfPrimes(n)%10)
 
+t = int(input())
+for i in range(t):
+    n = int(input())
+    print(sumOfPrimes(n) % 10)

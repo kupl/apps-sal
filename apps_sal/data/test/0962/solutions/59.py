@@ -16,25 +16,30 @@ import copy
 import bisect
 import heapq
 
-#素因数を並べる
+# 素因数を並べる
+
+
 def prime_decomposition(n):
-  i = 2
-  table = []
-  while i * i <= n:
-    while n % i == 0:
-      n /= i
-      table.append(int(i))
-    i += 1
-  if n > 1:
-    table.append(int(n))
-  return table   
+    i = 2
+    table = []
+    while i * i <= n:
+        while n % i == 0:
+            n /= i
+            table.append(int(i))
+        i += 1
+    if n > 1:
+        table.append(int(n))
+    return table
 # 桁数を吐く
+
+
 def digit(i):
     if i > 0:
-        return digit(i//10) + [i%10]
+        return digit(i // 10) + [i % 10]
     else:
         return []
-    
+
+
 def getNearestValueIndex(list, num):
     """
     概要: リストからある値に最も近い値のインデックスを取得する関数
@@ -47,11 +52,13 @@ def getNearestValueIndex(list, num):
     idx = np.abs(np.asarray(list) - num).argmin()
     return idx
 
+
 def find_index(l, x, default=False):
     if x in l:
         return l.index(x)
     else:
         return default
+
 
 class UnionFind(object):
     def __init__(self, n=1):
@@ -95,7 +102,7 @@ class UnionFind(object):
         """
         x = self.find(x)
         return self.size[x]
-    
+
 
 """
 N, X = map(int, input().split())
@@ -173,23 +180,22 @@ print(new_list)
 """
 
 
-
 def bfs(n):
     clsd = set()
-    opnd = collections.deque()        
-    root = [None]*N
-    d_list = [0]*N
+    opnd = collections.deque()
+    root = [None] * N
+    d_list = [0] * N
     opnd.append(n)
-    
+
     #print("Let's BFS (", n, " times)")
     while len(opnd) != 0:
 
         #print("clsd: ", clsd)
         #print("opnd: ", opnd)
-        
+
         now = opnd.popleft()
         clsd.add(now)
-        
+
         for e in E[now]:
             if e in clsd:
                 if e == n:
@@ -201,27 +207,27 @@ def bfs(n):
                         #   print(res, dist)
                         res.append(root[res[-1]])
                     return [list(reversed(res)), dist]
-                
+
             else:
                 opnd.append(e)
                 root[e] = now
-                d_list[e] = d_list[root[e]]+1
-    return [[], inf] 
+                d_list[e] = d_list[root[e]] + 1
+    return [[], inf]
 
 
 N, M = list(map(int, input().split()))
 
 E = [[] for n in range(N)]
 
- 
+
 for m in range(M):
     e = list(map(int, input().split()))
-    E[e[0]-1].append(e[1]-1)
+    E[e[0] - 1].append(e[1] - 1)
 
 inf = 10**9
 
-    
-def main(): 
+
+def main():
     res = []
     d_min = inf
     for n in range(N):
@@ -230,19 +236,15 @@ def main():
             d_min = dist
             res = graph
     if d_min != inf:
-       print(d_min)
-       for n in range(d_min):
-           print((res[n]+1))
+        print(d_min)
+        for n in range(d_min):
+            print((res[n] + 1))
     else:
-       print((-1))
-        
-                
-            
-            
-                
+        print((-1))
 
-    
+
 def __starting_point():
     main()
+
 
 __starting_point()

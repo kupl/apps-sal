@@ -34,4 +34,3 @@ for i in range(W):
             Sum += 1
 
 print(Sum)
-

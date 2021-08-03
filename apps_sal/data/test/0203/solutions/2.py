@@ -26,4 +26,3 @@ def codeforces(votes):
 _ = input()
 votes = input()
 print(codeforces(votes))
-

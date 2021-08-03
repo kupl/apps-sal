@@ -11,8 +11,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n, k = inpmap()
 arr = inpmap()
@@ -29,4 +31,3 @@ for i, x in enumerate(arr):
         m = i + 1
 r[-1] += n - m
 print(*r)
-

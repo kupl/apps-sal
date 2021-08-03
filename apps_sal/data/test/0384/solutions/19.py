@@ -17,4 +17,3 @@ while i < len(s):
 print(len(gr_lg))
 for lg in gr_lg:
     print(lg, end=" ")
-

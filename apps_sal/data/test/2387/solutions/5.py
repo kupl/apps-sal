@@ -21,7 +21,6 @@ def f():
         else:
             DOWN.append((c - minC, c))
 
-
     c = 0
     for up in sorted(UP, reverse=True):
         if c + up[0] < 0:
@@ -41,8 +40,7 @@ def f():
     return True
 
 
-if  f():
+if f():
     print('Yes')
 else:
     print('No')
-

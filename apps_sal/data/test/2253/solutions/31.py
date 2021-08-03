@@ -8,4 +8,3 @@ for i in range(0, n):
         print("JAPANESE")
     elif "".join(st[-5:]) == "mnida":
         print("KOREAN")
-

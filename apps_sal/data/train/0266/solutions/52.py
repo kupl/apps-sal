@@ -3,7 +3,7 @@ class Solution:
         left = Counter()
         right = Counter(s)
         res = 0
-        for ch in s :
+        for ch in s:
             if right[ch] == 1:
                 del right[ch]
             else:
@@ -13,5 +13,3 @@ class Solution:
             if len(list(left.keys())) == len(list(right.keys())):
                 res += 1
         return res
-        
-

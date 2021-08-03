@@ -7,12 +7,14 @@ import numpy as np
 # from numba import njit
 # @njit('f8(i8,i8,i8,i8,f8[:,:,:])', cache=True)
 
+
 def lcm(a, b):
-    return a*b//math.gcd(a, b)
+    return a * b // math.gcd(a, b)
 
-MOD = 10**9+7
 
-n ,m, c = list(map(int, input().split()))
+MOD = 10**9 + 7
+
+n, m, c = list(map(int, input().split()))
 
 B = np.zeros(m)
 A = np.zeros((n, m))
@@ -25,7 +27,6 @@ for i in range(n):
 
 cnt = 0
 for i in range(n):
-    if np.dot(A[i],B)+c > 0:
+    if np.dot(A[i], B) + c > 0:
         cnt += 1
 print(cnt)
-

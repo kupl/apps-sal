@@ -12,4 +12,3 @@ for i in range(n):
     cnt += A[i] * B[i]
     cnt %= M
 print(cnt)
-

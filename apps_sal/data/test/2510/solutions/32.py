@@ -38,4 +38,3 @@ d = DSU(N)
 for a, b in zip(*[iter(AB)] * 2):
     d.merge(a - 1, b - 1)
 print((-min(d.parent_or_size)))
-

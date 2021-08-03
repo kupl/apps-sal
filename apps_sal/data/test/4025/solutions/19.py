@@ -18,7 +18,7 @@ for i in range(7):
 
     while True:
         eat = mode[(i + j) % 7]
-        
+
         if eat == 'a':
             if left_a == 0:
                 break
@@ -31,10 +31,9 @@ for i in range(7):
             if left_c == 0:
                 break
             left_c -= 1
-        
+
         j += 1
-    
+
     max_days = max(max_days, j)
 
 print(min_weeks * 7 + max_days)
-

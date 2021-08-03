@@ -1,12 +1,12 @@
 class Solution:
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        ns = len(stamp)        
+        ns = len(stamp)
         stamp_patterns = []
         for window_size in range(1, ns + 1):
             for i in range(ns - window_size + 1):
                 curr = '*' * i + stamp[i:i + window_size] + '*' * (ns - window_size - i)
                 stamp_patterns.append(curr)
-        stamp_patterns.reverse()        
+        stamp_patterns.reverse()
 
         res = []
         nt = len(target)
@@ -21,5 +21,5 @@ class Solution:
                     res.append(inx)
             if old_target == target:
                 return []
-        
+
         return reversed(res)

@@ -7,7 +7,7 @@ an = [int(x) for x in (sys.stdin.readline()).split()]
 if(n == 1 or n == 2):
     print(n)
     return
-    
+
 vmax = 2
 
 r = vmax
@@ -18,9 +18,8 @@ for i in range(2, n):
         if(r > vmax):
             vmax = r
         r = 2
-        
+
 if(r > vmax):
     vmax = r
-            
-print(vmax)
 
+print(vmax)

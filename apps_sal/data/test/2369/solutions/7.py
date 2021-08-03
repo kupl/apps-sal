@@ -38,4 +38,3 @@ for i in range(N - 1):
     ans += ci * (A[i + 1] - A[i])
     ans %= MOD
 print(ans)
-

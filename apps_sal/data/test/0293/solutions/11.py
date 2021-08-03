@@ -28,12 +28,12 @@ class Squares:
 
         result = []
         n = 1
-        while n*n*(n-1)//6 < self.n:
+        while n * n * (n - 1) // 6 < self.n:
             a = n * (n + 1) // 2
             b = n * (n - 1) * (n + 1) // 6
             m = self.n + b
             k = m // a
-            if n <= k and  m % a == 0:
+            if n <= k and m % a == 0:
                 result.append((n, k))
             n += 1
         result2 = list(result)
@@ -84,7 +84,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -97,7 +97,8 @@ class unitTests(unittest.TestCase):
         stop = timeit.default_timer()
         print(("\nTimelimit Test: " +
               "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -109,5 +110,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Squares().calculate())
+
 
 __starting_point()

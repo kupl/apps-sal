@@ -10,4 +10,3 @@ for i in range(0, m):
         print(total_time)
         return
 print(-1)
-

@@ -12,5 +12,5 @@ for i in range(T):
         if ones <= compare:
             ans = i
             break
-        compare += 2*(n-1-i)
+        compare += 2 * (n - 1 - i)
     print(ans)

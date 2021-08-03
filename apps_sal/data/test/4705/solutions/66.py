@@ -10,4 +10,3 @@ while count != N:
     x += 800
 
 print((x - y))
-

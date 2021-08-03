@@ -1,4 +1,6 @@
 import math
+
+
 def digits_average(num):
     a = str(num)
     b = []

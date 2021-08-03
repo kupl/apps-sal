@@ -4,8 +4,7 @@ def main():
         for i in range(n):
             need += max(0, a[i] * ans - b[i])
         return need <= k
-    
-    
+
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
@@ -18,4 +17,6 @@ def main():
         else:
             right = middle
     print(left)
+
+
 main()

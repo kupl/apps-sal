@@ -1,8 +1,10 @@
+import math
 from sys import stdin
 # stdin=open('input.txt')
 
+
 def input():
-	return stdin.readline().strip()
+    return stdin.readline().strip()
 
 
 # from sys import stdout
@@ -19,7 +21,6 @@ def input():
 
 # CODE BEGINS HERE.................
 
-import math
 
 n, x = list(map(int, input().split()))
 
@@ -30,16 +31,14 @@ seen[x] = True
 a = []
 pref_sum = 0
 for i in range(2**n):
-	if seen[i]:
-		continue
-	a.append(pref_sum ^ i)
-	pref_sum = i
-	seen[i] = True
-	seen[x^i] = True
+    if seen[i]:
+        continue
+    a.append(pref_sum ^ i)
+    pref_sum = i
+    seen[i] = True
+    seen[x ^ i] = True
 print(len(a))
 print(*a)
 
 # CODE ENDS HERE....................
 # stdout.close()
-
-

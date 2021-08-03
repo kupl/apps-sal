@@ -6,4 +6,3 @@ for i in range(4):
             if (n + i + 2 * j + 3 * k) % 4 == 0:
                 ans = min(ans, i * a + j * b + k * c)
 print(ans)
-

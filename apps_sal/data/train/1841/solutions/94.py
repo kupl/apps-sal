@@ -4,9 +4,9 @@ class Solution:
         temp = list(arr)
         temp.sort()
         median = 0
-        
-        median = temp[(len(temp) -1)  // 2]
-        
+
+        median = temp[(len(temp) - 1) // 2]
+
         l = 0
         r = len(arr) - 1
         res = []
@@ -18,5 +18,4 @@ class Solution:
                 res.append(temp[l])
                 l += 1
             k -= 1
-        return res;
-
+        return res

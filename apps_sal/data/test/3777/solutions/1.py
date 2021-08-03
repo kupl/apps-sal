@@ -4,18 +4,23 @@ E = []
 C = {}
 for i in range(M):
     u, v, w = map(int, input().split())
-    E.append((w, u-1, v-1))
+    E.append((w, u - 1, v - 1))
     C[w] = C.get(w, 0) + 1
 E.sort()
 
 *p, = range(N)
+
+
 def root(x):
     if x == p[x]:
         return x
     y = p[x] = root(p[x])
     return y
+
+
 def unite(x, y):
-    px = root(x); py = root(y)
+    px = root(x)
+    py = root(y)
     if px == py:
         return 0
     if px < py:
@@ -24,12 +29,13 @@ def unite(x, y):
         p[px] = py
     return 1
 
+
 MOD = 10**9 + 7
 
 G0 = [[] for i in range(N)]
 K = 0
 last = None
-U = [0]*M
+U = [0] * M
 cost = 0
 for i in range(M):
     w, u, v = E[i]
@@ -41,6 +47,8 @@ for i in range(M):
         G0[u].append((v, w))
         G0[v].append((u, w))
         last = w
+
+
 def dfs0(u, p, t, cost):
     if u == t:
         return 0
@@ -51,6 +59,8 @@ def dfs0(u, p, t, cost):
         if r is not None:
             return r | (w == cost)
     return None
+
+
 def dfs1(u, p, t):
     if u == t:
         return 0
@@ -61,6 +71,7 @@ def dfs1(u, p, t):
         if r is not None:
             return max(r, w)
     return None
+
 
 if X - cost < 0:
     print(0)
@@ -76,7 +87,7 @@ for i in range(M):
         K += 1
         U[i] = 1
 if cost == X:
-    ans = ((pow(2, K, MOD) - 2)*pow(2, M-K, MOD)) % MOD
+    ans = ((pow(2, K, MOD) - 2) * pow(2, M - K, MOD)) % MOD
     print(ans)
     return
 
@@ -96,5 +107,5 @@ for i in range(M):
         G -= 1
 
 #print(K, L, M, M-K-L, G)
-ans = (2*(pow(2, L, MOD)-1)*pow(2, M-G, MOD)) % MOD
+ans = (2 * (pow(2, L, MOD) - 1) * pow(2, M - G, MOD)) % MOD
 print(ans)

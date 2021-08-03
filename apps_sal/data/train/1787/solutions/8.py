@@ -12,6 +12,7 @@ def identity_matrix(n):
 
     return I
 
+
 def invert_matrix(A, tol=None):
     """
     Returns the inverse of the passed in matrix.
@@ -25,17 +26,17 @@ def invert_matrix(A, tol=None):
     IM = copy_matrix(I)
 
     # Section 3: Perform row operations
-    indices = list(range(n)) # to allow flexible row referencing ***
-    for fd in range(n): # fd stands for focus diagonal
+    indices = list(range(n))  # to allow flexible row referencing ***
+    for fd in range(n):  # fd stands for focus diagonal
         fdScaler = 1.0 / AM[fd][fd]
         # FIRST: scale fd row with fd inverse.
-        for j in range(n): # Use j to indicate column looping.
+        for j in range(n):  # Use j to indicate column looping.
             AM[fd][j] *= fdScaler
             IM[fd][j] *= fdScaler
         # SECOND: operate on all rows except fd row as follows:
-        for i in indices[0:fd] + indices[fd+1:]:
+        for i in indices[0:fd] + indices[fd + 1:]:
             # *** skip row with fd in it.
-            crScaler = AM[i][fd] # cr stands for "current row".
+            crScaler = AM[i][fd]  # cr stands for "current row".
             for j in range(n):
                 # cr - crScaler * fdRow, but one element at a time.
                 AM[i][j] = AM[i][j] - crScaler * AM[fd][j]
@@ -51,6 +52,7 @@ def zeros_matrix(rows, cols):
             A[-1].append(0.0)
     return A
 
+
 def copy_matrix(M):
     rows = len(M)
     cols = len(M[0])
@@ -63,7 +65,8 @@ def copy_matrix(M):
 
     return MC
 
-def matrix_multiply(A,B):
+
+def matrix_multiply(A, B):
     rowsA = len(A)
     colsA = len(A[0])
 
@@ -85,8 +88,10 @@ def matrix_multiply(A,B):
 
     return C
 
+
 def transposeMatrix(m):
-    return list(map(list,list(zip(*m))))
+    return list(map(list, list(zip(*m))))
+
 
 class Datamining:
     def __init__(self, train_set, n=6):
@@ -108,4 +113,3 @@ class Datamining:
     def predict(self, x):
         xs = [[x ** i for i in range(self.n)]]
         return matrix_multiply(xs, self.weights)[0][0]
-

@@ -3,11 +3,10 @@ class Solution:
         deq = deque()
         for index, val in enumerate(nums):
             nums[index] += deq[0] if deq else 0
-            while deq and nums[index]> deq[-1]:
+            while deq and nums[index] > deq[-1]:
                 deq.pop()
-            if nums[index]>0:
+            if nums[index] > 0:
                 deq.append(nums[index])
-            if index>=k and deq and deq[0] == nums[index-k]:
+            if index >= k and deq and deq[0] == nums[index - k]:
                 deq.popleft()
         return max(nums)
-

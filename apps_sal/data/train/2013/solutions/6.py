@@ -4,6 +4,7 @@ def findNot(string, char):
             return i
     return len(string) - 1
 
+
 s = input()
 beg = findNot(s, "a")
 res = s[0:beg]

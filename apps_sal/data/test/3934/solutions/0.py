@@ -23,12 +23,12 @@ def ria():
     return [int(i) for i in input().split()]
 
 
-n=ria()[0]
-ar=[0]*n
-for i in range(n-1):
-    a,b=ria()
-    a-=1
-    b-=1
-    ar[a]+=1
-    ar[b]+=1
+n = ria()[0]
+ar = [0] * n
+for i in range(n - 1):
+    a, b = ria()
+    a -= 1
+    b -= 1
+    ar[a] += 1
+    ar[b] += 1
 print('NO' if ar.count(2) else 'YES')

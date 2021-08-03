@@ -17,4 +17,3 @@ for i in range(a):
         cnt -= 1
     mx = max(mx, cnt)
 print(mx)
-

@@ -10,4 +10,3 @@ for i in range(n):
         return
 
 print('maybe' if rates == list(reversed(sorted(rates))) else 'unrated')
-

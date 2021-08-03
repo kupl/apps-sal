@@ -5,8 +5,9 @@ def mod3(n):
         c += 1
     return int(n % 3), c
 
+
 def triangle(row):
-    rgb = {'R':0, 'G':1, 'B':2}
+    rgb = {'R': 0, 'G': 1, 'B': 2}
     RGB = "RGB"
     n = len(row)
     x, y = 1, 0

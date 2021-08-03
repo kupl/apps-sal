@@ -1,4 +1,4 @@
-# return the sum of the two polynomials p1 and p2.  
+# return the sum of the two polynomials p1 and p2.
 def poly_add(p1, p2):
     # store the result here
     res = []

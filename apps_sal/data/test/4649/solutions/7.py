@@ -16,5 +16,5 @@ def user99():
                 ans = min(ans, diff)
         print(ans)
 
-user99()
 
+user99()

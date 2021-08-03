@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import sys
+
+
 def input():
     return sys.stdin.readline()[:-1]
+
 
 def main():
     A = input()
@@ -32,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

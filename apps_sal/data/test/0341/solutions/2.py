@@ -58,5 +58,5 @@ for i, c in enumerate(T):
         continue
     hands.append(win[c][0])
     tot += win[c][1]
-        
+
 print(tot)

@@ -7,5 +7,3 @@ S = [input() for _ in range(N)]
 counter = Counter(S)
 
 print((len(list(counter.keys()))))
-
-

@@ -12,6 +12,7 @@ def solve():
             return
     print('YES')
 
+
 t = int(input())
 for _ in range(t):
     solve()

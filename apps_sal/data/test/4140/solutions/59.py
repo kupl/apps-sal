@@ -1,9 +1,9 @@
 from collections import Counter
 moji = str(input())
-guall = len(moji)//2
+guall = len(moji) // 2
 kiall = guall + len(moji) % 2
-gucount=dict(Counter(moji[1::2]))
-kicount=dict(Counter(moji[0::2]))
+gucount = dict(Counter(moji[1::2]))
+kicount = dict(Counter(moji[0::2]))
 if len(moji) == 1:
     ans = 0
 elif max(gucount, key=gucount.get) != max(kicount, key=kicount.get):

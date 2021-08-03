@@ -11,4 +11,3 @@ for x in A:
     answer *= len(x) + 1
 
 print(answer)
-

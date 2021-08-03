@@ -17,11 +17,11 @@ if s > m:
     s = s - count + 1
     print(len(answer) - 1)
     for i in range(len(answer) - 1):
-        print(answer[i], end = ' ')
+        print(answer[i], end=' ')
 elif s == m:
     print(len(answer))
     for i in range(len(answer)):
-        print(answer[i], end = ' ')
+        print(answer[i], end=' ')
 else:
     while s <= m:
         s += count
@@ -30,9 +30,9 @@ else:
     if s == m:
         print(len(answer))
         for i in range(len(answer)):
-            print(answer[i], end = ' ')
+            print(answer[i], end=' ')
     else:
         s = s - count + 1
         print(len(answer) - 1)
         for i in range(len(answer) - 1):
-            print(answer[i], end = ' ')
+            print(answer[i], end=' ')

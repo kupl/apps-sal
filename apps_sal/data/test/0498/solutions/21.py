@@ -1,4 +1,5 @@
-import math, sys
+import math
+import sys
 
 fin = sys.stdin
 fout = sys.stdout
@@ -11,4 +12,3 @@ if x % 2 == 1:
 else:
     s = 'R'
 fout.write(str(r) + ' ' + str(d) + ' ' + str(s))
-

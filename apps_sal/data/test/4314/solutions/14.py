@@ -9,7 +9,7 @@ for i in range(h):
 box = [0] * w
 
 for colum in range(w):
-    if all(row[colum] == '.' for row in a) :
+    if all(row[colum] == '.' for row in a):
         box[colum] = 1
 
 for j in range(w):

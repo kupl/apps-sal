@@ -14,4 +14,3 @@ while q:
         q.append(a[v - 1])
     dp[a[v - 1]] = min(dp[a[v - 1]], dp[v] + 1)
 print(' '.join(map(str, dp[1:-1])))
-

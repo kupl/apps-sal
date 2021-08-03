@@ -25,4 +25,3 @@ for i in range(r1, r2 + 1):
     d2 = facts[i + c1] * invs[c1 - 1] % MOD
     ans = (ans + (d1 - d2) * invs[i + 1]) % MOD
 print(ans)
-

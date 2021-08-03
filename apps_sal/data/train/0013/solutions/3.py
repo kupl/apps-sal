@@ -11,4 +11,3 @@ def main():
 
 for i in range(int(input())):
     print(main())
-

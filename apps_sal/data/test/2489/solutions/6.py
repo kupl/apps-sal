@@ -1,8 +1,10 @@
+from collections import Counter
+import numpy as np
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-import numpy as np
-from collections import Counter
+
+
 def main():
     n, *a = list(map(int, read().split()))
 
@@ -29,7 +31,9 @@ def main():
     r = seq.sum()
     print(r)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

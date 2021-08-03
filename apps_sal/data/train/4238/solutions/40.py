@@ -8,4 +8,4 @@ def squares_needed(grains):
         total += base
         base *= 2
         square += 1
-    return square 
+    return square

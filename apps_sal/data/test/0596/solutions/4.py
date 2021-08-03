@@ -17,4 +17,5 @@ def __starting_point():
 
     print(abs((e - s).days))
 
+
 __starting_point()

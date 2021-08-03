@@ -32,4 +32,3 @@ for i in range(sizeOne):
             slon = min(slon, i + 2 * j)
 # print(tOne, tTwo)
 print(slon)
-

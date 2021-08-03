@@ -1,4 +1,4 @@
-N = contest_numer =int(input())
+N = contest_numer = int(input())
 if contest_numer > 999 and 1998 >= contest_numer:
     print("ABD")
 

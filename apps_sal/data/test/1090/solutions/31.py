@@ -13,7 +13,7 @@ def solve(S, N, K, LR):
     one = 0
     two = 0
     prev = None
-    for i in range(N+1):
+    for i in range(N + 1):
         s = S[i]
         if prev is None:
             prev = (s, i)
@@ -56,5 +56,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

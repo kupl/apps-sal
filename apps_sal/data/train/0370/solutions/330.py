@@ -76,4 +76,3 @@ class Solution:
                     union(num1, num2)
 
         return max(list(sizes.values()), default=1)
-

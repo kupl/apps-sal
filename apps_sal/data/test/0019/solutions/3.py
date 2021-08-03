@@ -13,9 +13,8 @@ for zz in range(int(input())):
             ha = False
         p1 = p
         c1 = c
-    
+
     if ha:
         print("YES")
     else:
         print("NO")
-

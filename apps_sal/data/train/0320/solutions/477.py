@@ -5,8 +5,7 @@ class Solution:
         for x in nums:
             ans += bin(x).count('1')
             _max = max(_max, x)
-        
-        ans += len(bin(_max)) - 3
-        
-        return ans
 
+        ans += len(bin(_max)) - 3
+
+        return ans

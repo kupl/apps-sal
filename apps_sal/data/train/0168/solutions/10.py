@@ -1,8 +1,8 @@
 class Solution:
-    
+
     def is_palindrome(self, s):
-        return bool(s == s[::-1])        
-    
+        return bool(s == s[::-1])
+
     def canConstruct(self, s: str, k: int) -> bool:
         r_map = dict()
         if k > len(s):

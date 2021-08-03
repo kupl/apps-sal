@@ -1,7 +1,7 @@
 t = int(input())
 while t > 0:
-    a, b = list(map(int,input().split()))
-    if a - b != 1 :
+    a, b = list(map(int, input().split()))
+    if a - b != 1:
         print("NO")
     else:
         num = a + b
@@ -17,4 +17,3 @@ while t > 0:
         else:
             print("YES")
     t -= 1
-

@@ -2,7 +2,6 @@ from typing import *
 from functools import lru_cache
 
 
-
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
 

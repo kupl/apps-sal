@@ -7,4 +7,3 @@ def index(array, n):
             return 1
     except:
         return -1
-

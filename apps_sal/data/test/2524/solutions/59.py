@@ -10,5 +10,5 @@ for i in range(60):
     cnt = sum((k & j) >> i for k in A)
     ans += (cnt * (N - cnt)) << i
     ans %= mod
-    
+
 print(ans)

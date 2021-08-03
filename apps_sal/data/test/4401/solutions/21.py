@@ -1,4 +1,5 @@
-x, y, z = map(int,input().split())
+x, y, z = map(int, input().split())
+
 
 def swap(a, b, c):
     i = 0
@@ -9,6 +10,7 @@ def swap(a, b, c):
     i = a
     a = c
     c = i
-    print(a,b,c)
+    print(a, b, c)
 
-swap(x,y,z)
+
+swap(x, y, z)

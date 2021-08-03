@@ -9,4 +9,3 @@ for j, x in enumerate(s[::-1]):
         break
 
 print((len(s) - i - j))
-

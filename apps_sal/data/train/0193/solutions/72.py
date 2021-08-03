@@ -1,8 +1,9 @@
 import collections
 
+
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        minSizeToRemove = len(arr) //2
+        minSizeToRemove = len(arr) // 2
         # print(minSizeToRemove)
         counter = collections.Counter(arr)
         # print(counter)
@@ -10,11 +11,11 @@ class Solution:
         sum = 0
         minSet = set()
         for i in sortedCounters:
-            
-            sum+=i[1]
+
+            sum += i[1]
             minSet.add(i[0])
             # print(i[0], i[1], sum, minSet)
             if sum >= minSizeToRemove:
                 break
-            
+
         return len(minSet)

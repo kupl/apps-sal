@@ -2,7 +2,7 @@ n = int(input())
 s = '?' + input() + '?'
 
 flag = False
-for x in range(1, len(s) - 1):    
+for x in range(1, len(s) - 1):
     if s[x] == '?':
         k = 0
         for y in ['C', 'Y', 'M']:
@@ -18,4 +18,3 @@ if flag:
     print("Yes")
 else:
     print("No")
-

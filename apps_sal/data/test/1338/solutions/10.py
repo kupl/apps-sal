@@ -18,4 +18,3 @@ for x in d:
         ans.append(x[1])
 ans.sort()
 print(' '.join(str(x) for x in ans[m - 1]))
-

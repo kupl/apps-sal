@@ -3,7 +3,7 @@ def solve(arr):
     count = 0
     for word in arr:
         for i in range(len(word)):
-            #print(ord(word[i]))
+            # print(ord(word[i]))
             if i == ord(word.lower()[i]) - 97:
                 count += 1
         res.append(count)

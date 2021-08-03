@@ -10,8 +10,8 @@ for _ in range(N):
         B.append(b - a)
     else:
         A.append(a - b)
-alu *= (N-1)
-A.sort(reverse = True)
-B.sort(reverse = True)
-alu += sum([i*j for i, j in enumerate(A)]) + sum([i*j for i, j in enumerate(B)])
+alu *= (N - 1)
+A.sort(reverse=True)
+B.sort(reverse=True)
+alu += sum([i * j for i, j in enumerate(A)]) + sum([i * j for i, j in enumerate(B)])
 print(alu)

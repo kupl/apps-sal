@@ -1,19 +1,20 @@
+from collections import deque
+from math import log
 import sys
 sys.setrecursionlimit(10000000)
 input = sys.stdin.readline
-from math import log
-from collections import deque
+
 
 def solve():
     N, Q = list(map(int, input().split()))
-    es = [[] for i in range(N+1)]
-    for i in range(N-1):
+    es = [[] for i in range(N + 1)]
+    for i in range(N - 1):
         u, v, c, d = list(map(int, input().split()))
         es[u].append([v, c, d])
         es[v].append([u, c, d])
     LOG_N = int(log(N, 2)) + 1
-    parent = [[-1] * (N+1) for i in range(LOG_N)]
-    level = [None] * (N+1)
+    parent = [[-1] * (N + 1) for i in range(LOG_N)]
+    level = [None] * (N + 1)
     level[1] = 0
     dq = deque()
     dq.append(1)
@@ -26,13 +27,13 @@ def solve():
                 parent[0][u] = v
                 level[u] = lv + 1
                 dq.append(u)
-    for k in range(LOG_N-1):
+    for k in range(LOG_N - 1):
         parentk = parent[k]
-        for v in range(1, N+1):
+        for v in range(1, N + 1):
             if parentk[v] < 0:
-                parent[k+1][v] = -1
+                parent[k + 1][v] = -1
             else:
-                parent[k+1][v] = parentk[parentk[v]]
+                parent[k + 1][v] = parentk[parentk[v]]
 
     def lca(u, v):
         if level[u] > level[v]:
@@ -47,7 +48,7 @@ def solve():
                 u, v = parent[k][u], parent[k][v]
         return parent[0][u]
 
-    qs = [[] for i in range(N+1)]
+    qs = [[] for i in range(N + 1)]
     for i in range(Q):
         x, y, u, v = list(map(int, input().split()))
         qs[u].append([i, x, y, 1])
@@ -73,7 +74,9 @@ def solve():
     for res in query:
         print(res)
 
+
 def __starting_point():
     solve()
+
 
 __starting_point()

@@ -13,9 +13,8 @@ class StreamChecker:
                     root[c] = dict()
                 root = root[c]
             root['$'] = '.'
-        
+
         self.searches = []
-        
 
     def query(self, letter: str) -> bool:
         self.searches.append(self.root)
@@ -32,12 +31,10 @@ class StreamChecker:
                 if '$' in search:
                     found = True
             i += 1
-        
+
         o = 0
         for i in failed:
             del self.searches[i - o]
             o += 1
-        
+
         return found
-
-

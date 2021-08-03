@@ -4,7 +4,7 @@ C = list(map(int, input().split()))
 C.sort()
 
 if N == 1:
-    print (2 * C[0] % MOD)
+    print(2 * C[0] % MOD)
     return
 
 
@@ -20,5 +20,5 @@ for i, c in enumerate(C):
 
 ANS *= lst[N - 2]
 ANS %= MOD
-ANS *= lst[N] 
-print (ANS % MOD)
+ANS *= lst[N]
+print(ANS % MOD)

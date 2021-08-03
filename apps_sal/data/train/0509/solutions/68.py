@@ -15,7 +15,7 @@ q = deque([1])
 while q:
     node = q.popleft()
     for nei, w in G[node]:
-        if ans[nei]: 
+        if ans[nei]:
             continue
         # 現在のノードに書き込まれた数と、辺の数字が一致
         if ans[node] == w:

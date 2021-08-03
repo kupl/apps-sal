@@ -9,4 +9,3 @@ for i in range(n):
     else:
         print("NO")
     w.add(s)
-

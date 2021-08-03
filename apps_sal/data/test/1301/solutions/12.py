@@ -6,11 +6,11 @@ def __starting_point():
         if len(x) == N:
             st = True
             for i in range(N):
-                if (nm[i]!='.') and (nm[i]!=x[i]):
+                if (nm[i] != '.') and (nm[i] != x[i]):
                     st = False
             if st:
                 print(x)
                 break
-                
+
 
 __starting_point()

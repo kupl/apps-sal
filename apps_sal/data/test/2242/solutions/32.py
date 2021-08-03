@@ -30,19 +30,19 @@ tmp += 7 * 100000000  => 7 * ( 2019*N + α) => 7 * α　と同じ
 """
 S = input()
 
-MOD = 2019 
+MOD = 2019
 
 counter = [0] * 2019
 counter[0] = 1
 t = 1
 tmp = 0
 for i in reversed(S):
-    tmp += int(i)*t
-    tmp %= MOD #累積和を効率化
+    tmp += int(i) * t
+    tmp %= MOD  # 累積和を効率化
     t *= 10
-    t %= MOD   #累乗を効率化 
-    #print(tmp)
+    t %= MOD  # 累乗を効率化
+    # print(tmp)
     counter[tmp] += 1
 
-ans = sum( i*(i-1)//2 for i in counter)
+ans = sum(i * (i - 1) // 2 for i in counter)
 print(ans)

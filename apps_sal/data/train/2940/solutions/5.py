@@ -7,4 +7,3 @@ def repeats(s):
         else:
             numbers.add(number)
     return sum(numbers)
-

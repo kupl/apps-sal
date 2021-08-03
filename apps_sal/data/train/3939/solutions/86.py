@@ -1,5 +1,5 @@
 def rps(p1, p2):
-    if p1[0] =="r" and p2[0] == "s":
+    if p1[0] == "r" and p2[0] == "s":
         soluzione = "Player 1 won!"
     elif p1[0] == "p" and p2[0] == "s":
         soluzione = "Player 2 won!"

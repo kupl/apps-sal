@@ -1,2 +1,2 @@
 from functools import reduce
-find_difference = lambda a,b: abs(reduce(lambda x, y:x*y, a) - reduce(lambda x, y:x*y, b))
+def find_difference(a, b): return abs(reduce(lambda x, y: x * y, a) - reduce(lambda x, y: x * y, b))

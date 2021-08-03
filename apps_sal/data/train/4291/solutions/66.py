@@ -1,1 +1,1 @@
-century=lambda y:(y//100)+(y%100!=0)
+def century(y): return (y // 100) + (y % 100 != 0)

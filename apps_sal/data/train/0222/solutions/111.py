@@ -4,7 +4,7 @@ class Solution:
         d = defaultdict(lambda: 2)
         ans = 0
         for k, n in enumerate(A):
-            for j in range(k-1, 0, -1):
+            for j in range(k - 1, 0, -1):
                 if (m := n - A[j]) not in indices:
                     continue
                 if (i := indices[m]) >= j:

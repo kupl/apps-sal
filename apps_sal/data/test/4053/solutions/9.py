@@ -8,6 +8,7 @@ def check(string, arr):
     narr = sorted(arr)
     return tmp == narr
 
+
 size = int(input())
 values = []
 tokens = []
@@ -35,4 +36,3 @@ for value in values:
     was.add(value)
 
 print(answer)
-

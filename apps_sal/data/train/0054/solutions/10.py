@@ -1,5 +1,6 @@
 import collections
 
+
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
@@ -14,9 +15,8 @@ def solve():
     else:
         print('NO')
 
+
 t = int(input())
 
 for _ in range(t):
     solve()
-
-

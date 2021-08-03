@@ -17,6 +17,7 @@ def is_palindrome(s):
             return False
     return True
 
+
 testcase = int(input())
 for z in range(testcase):
     s = input()
@@ -25,4 +26,3 @@ for z in range(testcase):
 
     else:
         print(2)
-

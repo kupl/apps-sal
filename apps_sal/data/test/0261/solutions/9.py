@@ -16,6 +16,6 @@ def main():
                 print('yes')
                 return
     print('no')
+
+
 main()
-
-

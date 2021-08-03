@@ -20,4 +20,3 @@ for i in range(n):
     else:
         prev[s[i]] = 1
 print(ans)
-

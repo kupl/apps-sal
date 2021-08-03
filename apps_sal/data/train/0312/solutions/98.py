@@ -1,3 +1,6 @@
+from heapq import *
+
+
 class Solution:
     def shortestSubarray(self, A, K):
         N, acc = len(A), [0]
@@ -11,8 +14,8 @@ class Solution:
                 ans = min(ans, size - monoq.popleft())
             monoq.append(size)
         return ans if ans != float('inf') else -1
-    
-from heapq import *
+
+
 class Solution:
     def shortestSubarray(self, A, K):
         heap, curS, ans = [(0, -1)], 0, float('inf')

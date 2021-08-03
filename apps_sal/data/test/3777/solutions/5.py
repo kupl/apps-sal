@@ -174,4 +174,3 @@ for line in sys.stdin:
     uvw.append((u, v, w))
 uvw.sort(key=itemgetter(2))
 print((solve(n, m, x, uvw)))
-

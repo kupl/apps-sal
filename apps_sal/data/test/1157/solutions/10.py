@@ -17,4 +17,3 @@ for i in range(n + 1):
         res_mn += plus
         minus += 1
 print(res_mn, res_pl)
-

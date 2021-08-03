@@ -13,13 +13,14 @@ for let in chars:
         chessboard[let + num] = [x, y]
         y += 1
 
+
 def bishop_diagonal(bishop1, bishop2):
     result = []
     same_diagonal = False
     bishop1_coord = chessboard[bishop1.lower()]
     bishop2_coord = chessboard[bishop2.lower()]
 
-    directions = [[1,1], [-1,1], [1,-1], [-1,-1]]
+    directions = [[1, 1], [-1, 1], [1, -1], [-1, -1]]
 
     for direction in directions:
         pos_coord = bishop1_coord[:]
@@ -58,4 +59,3 @@ def bishop_diagonal(bishop1, bishop2):
         result.append(bishop2)
         result.sort()
         return result
-

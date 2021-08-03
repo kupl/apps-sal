@@ -23,4 +23,3 @@ for i, num in enumerate(ns):
         skip[gcd] += 2
 
 print(' '.join(map(str, a)))
-

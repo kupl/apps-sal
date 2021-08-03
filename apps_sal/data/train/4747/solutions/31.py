@@ -5,5 +5,3 @@ def repeat_str(repeat, string):
         txt += string
         number += 1
     return txt
-        
-

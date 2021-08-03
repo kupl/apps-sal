@@ -12,15 +12,14 @@ def solve(x, y):
     else:
         return -t, 0, 0, -t
 
+
 def test():
     assert solve(10, 5) == (0, 15, 15, 0)
     assert solve(-10, 5) == (-15, 0, 0, 15)
     print("test passes")
 
+
 tmp = input()
 tmp = list(map(int, tmp.split()))
 for i in solve(tmp[0], tmp[1]):
     print(i, end=' ')
-    
-
-

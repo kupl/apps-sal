@@ -19,18 +19,17 @@ def dfs(i):
     if i == l:
         print("YES")
         return
-    if i+5 <= l and s[i:i+5] == s1:
-        dfs(i+5)
-    elif i+7 <= l and s[i:i+7] == s2:
-        dfs(i+7)
-    elif i+5 <= l and s[i:i+5] == s3:
-        dfs(i+5)
-    elif i+6 <= l and s[i:i+6] == s4:
-        dfs(i+6)
+    if i + 5 <= l and s[i:i + 5] == s1:
+        dfs(i + 5)
+    elif i + 7 <= l and s[i:i + 7] == s2:
+        dfs(i + 7)
+    elif i + 5 <= l and s[i:i + 5] == s3:
+        dfs(i + 5)
+    elif i + 6 <= l and s[i:i + 6] == s4:
+        dfs(i + 6)
     else:
         print("NO")
         return
 
 
 dfs(0)
-

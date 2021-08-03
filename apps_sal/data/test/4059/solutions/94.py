@@ -1,1 +1,2 @@
-N=int(input());print(sum(~-N//i for i in range(1,-~N)))
+N = int(input())
+print(sum(~-N // i for i in range(1, -~N)))

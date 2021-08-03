@@ -1,6 +1,7 @@
 import sys
 readline = sys.stdin.readline
 
+
 def main():
     s = readline()
     X, Y = list(map(int, readline().split()))
@@ -31,7 +32,8 @@ def main():
             horizontal.append(s)
 
     dp_h, dp_v = {}, {}
-    dp_h[right] = 1; dp_v[0] = 1
+    dp_h[right] = 1
+    dp_v[0] = 1
     for dx in horizontal:
         dp_h_temp = {}
         for x in dp_h:
@@ -60,7 +62,9 @@ def main():
 
     print(('Yes' if X in dp_h and Y in dp_v else 'No'))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

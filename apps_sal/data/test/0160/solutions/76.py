@@ -19,4 +19,3 @@ for divisor in divisors:
     if sum(M[sum(M) // divisor:]) <= K:
         print(divisor)
         return
-

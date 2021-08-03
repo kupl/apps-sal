@@ -12,4 +12,3 @@ for i in range(4, n):
         l = max(l, max(a[i - 4: i + 1]) + 1)
 
 print(int(l), int(r))
-

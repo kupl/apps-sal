@@ -6,7 +6,7 @@ for i in range(n):
 p = []
 possible = True
 col_swap = False
-#print('swaps:')
+# print('swaps:')
 for r in a:
     x = []
     j = 0
@@ -19,7 +19,7 @@ for r in a:
             swaps.append((j, tmp - 1))
         else:
             j += 1
-    #print(swaps)
+    # print(swaps)
     if len(swaps) > 2:
         possible = False
         break

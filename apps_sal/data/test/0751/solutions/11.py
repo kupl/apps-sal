@@ -10,6 +10,5 @@ for grupp in an:
     else:
         m2 = m - grupp
         avtobus += 1
-        
-print(avtobus + 1)
 
+print(avtobus + 1)

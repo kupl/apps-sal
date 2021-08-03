@@ -8,9 +8,9 @@ def procura_onze(n, i):  # i = 16 - pois será a ultima posição do vetor
     divisao = int(n / multiplos_de_onze[i])
     resto = n % multiplos_de_onze[i]
     if resto == 0:
-        return divisao*i
+        return divisao * i
     else:
-        return divisao*i + min(i + procura_onze(multiplos_de_onze[i] - resto, i - 1), procura_onze(resto, i - 1))
+        return divisao * i + min(i + procura_onze(multiplos_de_onze[i] - resto, i - 1), procura_onze(resto, i - 1))
 
 
 def divide():
@@ -20,4 +20,3 @@ def divide():
 
 
 divide()
-

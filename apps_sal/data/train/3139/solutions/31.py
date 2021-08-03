@@ -1,7 +1,7 @@
 def index(array, n):
-    if array==[]:
+    if array == []:
         return -1
-    if len(array)>n:
+    if len(array) > n:
         return array[n]**n
-    else: return -1
-
+    else:
+        return -1

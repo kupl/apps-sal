@@ -1,11 +1,13 @@
-from math import sqrt,ceil
+from math import gcd
+from math import sqrt, ceil
 from collections import defaultdict
 
 lim = 10**5
 
+
 def sieve(N):
     """Dumb sieve of Eratosthemes, O(N*log(log(N)))"""
-    b = [True]*(N+1)
+    b = [True] * (N + 1)
     b[0] = False
     b[1] = False
 
@@ -13,22 +15,25 @@ def sieve(N):
     i = 2
     while i <= lim:
         if b[i]:
-            for n in range(i**2,N+1,i):
+            for n in range(i**2, N + 1, i):
                 b[n] = False
-        i+=1
-    
-    return [i for i,b in enumerate(b) if b]
+        i += 1
+
+    return [i for i, b in enumerate(b) if b]
+
 
 P = sieve(lim)
 
+
 def factor(n):
     """Given prime list, factorize n. Format as dict of factors with counts."""
-    if n in P: return {n:1}
+    if n in P:
+        return {n: 1}
 
     F = []
     for p in P:
-        while n%p == 0:
-            n//=p
+        while n % p == 0:
+            n //= p
             F.append(p)
         if n in P:
             F.append(n)
@@ -45,48 +50,51 @@ def factor(n):
 
     return C
 
+
 def divisors(n):
     """Generate divisors."""
     return divisors_from_factors(factor(n))
+
 
 def divisors_from_factors(F):
     """Given factors, generate divisors."""
     D = {1}
     for f in F:
-        D |= {f**p*d for d in D for p in range(1,F[f]+1)}
+        D |= {f**p * d for d in D for p in range(1, F[f] + 1)}
     return D
 
 ###
 
-from math import gcd
 
-A,B = list(map(int,input().split()))
+A, B = list(map(int, input().split()))
 
-A,B = sorted((A,B))
+A, B = sorted((A, B))
 
-def lcm(a,b):
-    return a*b // gcd(a,b)
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
 
 #mn = 10**100
-#for k in range(0,1000000):
+# for k in range(0,1000000):
 #    a = A+k
 #    b = B+k
 #    l = lcm(a,b)
-#    
+#
 #    if l < mn:
 #        mn = l
 #        best = k
-#print(best,mn)
+# print(best,mn)
+
 
 if A == B:
     print(0)
 else:
     mn = 10**100
-    D = divisors(B-A)
+    D = divisors(B - A)
     for t in sorted(D):
         # A+X%T == 0
-        x = -A%t
-        l = lcm(A+x,B+x)
+        x = -A % t
+        l = lcm(A + x, B + x)
         if l < mn:
             mn = l
             best = x
@@ -94,16 +102,12 @@ else:
     print(best)
 
 
-
 #A,B = sorted((A,B))
 #d = B-A
-#if A%d == 0:
+# if A%d == 0:
 #    print(0)
-#else:
+# else:
 #    r = (A//d+1)*d - A
 #    a = A+r
 #    b = B+r
 #    print(r, a*b // gcd(a,b))
-
-
-

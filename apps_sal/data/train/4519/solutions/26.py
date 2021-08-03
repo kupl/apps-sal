@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def max_number(n):
     answer = []
     max_combo = max(list(permutations([int(i) for i in str(n)])))

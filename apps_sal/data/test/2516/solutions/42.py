@@ -13,7 +13,7 @@ d = [0] * (N + 1)
 ten = 1
 for i in range(N):
     a = int(S[i]) * ten % P
-    d[i+1] = (d[i] + a) % P
+    d[i + 1] = (d[i] + a) % P
     ten *= 10
     ten %= P
 
@@ -24,4 +24,3 @@ for i in range(N + 1):
     cnt[d[i]] += 1
 
 print(ans)
-

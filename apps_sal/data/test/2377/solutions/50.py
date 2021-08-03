@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 n, h = map(int, input().split())
-a, b = [0]*n, [0]*n
+a, b = [0] * n, [0] * n
 for i in range(n):
     a[i], b[i] = map(int, input().split())
 a_max = max(a)

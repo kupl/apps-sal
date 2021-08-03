@@ -47,4 +47,3 @@ for i in range(len(wires)):
                 ans += 1
 
 print(ans)
-

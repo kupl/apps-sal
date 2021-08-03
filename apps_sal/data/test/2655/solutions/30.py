@@ -13,4 +13,3 @@ for i in range(1, n):
     for _ in range(2):
         q.append(b)
 print(ans)
-

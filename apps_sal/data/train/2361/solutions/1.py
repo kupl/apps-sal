@@ -13,4 +13,3 @@ for _ in range(int(input())):
         if l <= j - 1:
             heappush(pq, (-((j - 1) - l + 1), l, j - 1))
     print(*a[1:])
-

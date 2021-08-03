@@ -7,21 +7,23 @@ def lis(a):
         else:
             l = 0
             r = len(b)
-            while l < r-1:
-                m = l+r>>1
+            while l < r - 1:
+                m = l + r >> 1
                 # if b[m] <= c: l = m
-                if b[m] < c: l = m
-                else: r = m
+                if b[m] < c:
+                    l = m
+                else:
+                    r = m
             # if b[l] <= c: l += 1
-            if b[l] < c: l += 1
+            if b[l] < c:
+                l += 1
             b[l] = c
-        
+
     return len(b)
-                    
+
 
 n = int(input())
 
 a = list(map(int, input().split()))
 
 print(lis(a))
-

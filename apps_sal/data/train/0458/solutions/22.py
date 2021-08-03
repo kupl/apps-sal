@@ -3,7 +3,7 @@ class Solution:
         total_divisor = sum(nums) % p
         if total_divisor == 0:
             return 0
-        last_position = collections.defaultdict(lambda:-math.inf)
+        last_position = collections.defaultdict(lambda: -math.inf)
         last_position[0] = -1
         res = math.inf
         cur_sum = 0

@@ -9,4 +9,3 @@ class Solution:
             if max_floors[K][t] >= N:
                 return t
         return N
-

@@ -12,4 +12,3 @@ for i in range(n - 1):
         if cur_set == ok_set:
             ans += 1
 print(ans)
-

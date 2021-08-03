@@ -1,6 +1,6 @@
 K = int(input())
 
-G = [((10*i % K, 0), ((i+1) % K, 1)) for i in range(K)]
+G = [((10 * i % K, 0), ((i + 1) % K, 1)) for i in range(K)]
 s = 1
 
 dist = [10**9] * K
@@ -13,8 +13,8 @@ while S:
     while S:
         v = S.pop()
         for w, c in G[v]:
-            if d+c < dist[w]:
-                dist[w] = d+c
+            if d + c < dist[w]:
+                dist[w] = d + c
                 if c:
                     T.append(w)
                 else:
@@ -22,4 +22,4 @@ while S:
     S, T = T, S
     d += 1
 
-print(dist[0]+1)
+print(dist[0] + 1)

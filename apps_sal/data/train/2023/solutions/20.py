@@ -8,4 +8,3 @@ answer = []
 for item in tmp:
     answer += item
 print(' '.join(str(item) for item in answer))
-

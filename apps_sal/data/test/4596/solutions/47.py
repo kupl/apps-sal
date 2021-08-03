@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 ans = 10**9
 for x in A:
     if x % 2 == 1:

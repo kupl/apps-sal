@@ -1,9 +1,9 @@
 def solve(a, b, s, n):
     if not a[0]:
         return "NO"
-    if a[s-1]:
+    if a[s - 1]:
         return "YES"
-    if b[s-1]:
+    if b[s - 1]:
         for i in range(s, n):
             if a[i] and b[i]:
                 return "YES"
@@ -18,4 +18,3 @@ def main():
 
 
 main()
-

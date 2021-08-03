@@ -3,7 +3,10 @@ from collections import Counter
 from scipy.sparse.csgraph import connected_components
 from scipy.sparse import csr_matrix
 
-int1 = lambda x: int(x) - 1
+
+def int1(x): return int(x) - 1
+
+
 N, K, L = map(int, input().split())
 roads = np.array([tuple(map(int1, input().split())) for _ in range(K)]).T
 railways = np.array([tuple(map(int1, input().split())) for _ in range(L)]).T

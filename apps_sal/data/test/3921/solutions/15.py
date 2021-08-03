@@ -15,23 +15,25 @@ from math import floor, sqrt
 
 def div(x):
     # Crivo de Erastótenes
-    primos = [1 for i in range(x+1)]
+    primos = [1 for i in range(x + 1)]
     p = 2
-    while p < x+1:
+    while p < x + 1:
         if primos[p] == 1:
-            for i in range(p*p,x+1,p):
+            for i in range(p * p, x + 1, p):
                 if primos[i] == 1:
                     primos[i] = p
             primos[p] = p
         p += 1
-    return primos             
+    return primos
 
-def fat(mindiv,x):
+
+def fat(mindiv, x):
     fat = []
-    while x!= 1:
+    while x != 1:
         fat.append(mindiv[x])
         x //= mindiv[x]
     return set(fat)
+
 
 def main():
     n = int(input())
@@ -42,20 +44,20 @@ def main():
 
     arr = input().split()
     arr = [int(x) for x in arr]
-     
+
     mindiv = div(arr[-1])
-    seq = [0 for i in range(arr[-1]+1)]  
- 
+    seq = [0 for i in range(arr[-1] + 1)]
+
     for num in arr:
-        fatores = fat(mindiv,num)
+        fatores = fat(mindiv, num)
         tam = 0
         for f in fatores:
-            tam = max(tam,seq[f])
+            tam = max(tam, seq[f])
         for f in fatores:
-            seq[f] = tam + 1    
-    
+            seq[f] = tam + 1
+
     print(max(seq))
     return
 
-main()
 
+main()

@@ -36,7 +36,7 @@ def expand(fc, maxd, k):
     def dfs(index, mul):
         if index >= len(fc):
             return [mul]
-        
+
         w, c = fc[index]
         d = k - (c % k) if c % k != 0 else 0
         x = []
@@ -45,11 +45,12 @@ def expand(fc, maxd, k):
             x.extend(dfs(index + 1, t))
             d += k
             t *= w**k
-        
+
         return x
-        
+
     return dfs(0, 1)
-    
+
+
 def solve(N, K, A):
     wc = collections.defaultdict(int)
     ans = 0
@@ -57,13 +58,14 @@ def solve(N, K, A):
         fc = factors(v)
         fc = [(f, c % K) for f, c in fc if c % K != 0]
         key = '_'.join(['{}+{}'.format(f, c) for f, c in fc])
-        cov = [(f, K-c) for f, c in fc]
+        cov = [(f, K - c) for f, c in fc]
         ckey = '_'.join(['{}+{}'.format(f, c) for f, c in cov])
         ans += wc[ckey]
         wc[key] += 1
 
     return ans
-    
+
+
 N, K = map(int, input().split())
 A = [int(x) for x in input().split()]
 print(solve(N, K, A))

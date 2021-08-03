@@ -10,4 +10,3 @@ for i in range(n):
     else:
         res += min(d[i][0], d[i][1])
 print(res)
-

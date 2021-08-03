@@ -31,4 +31,3 @@ for cur_point in spoints:
 
 for i in range(1, n + 1):
     print(density_stats.get(i, 0), end=' ')
-

@@ -1,10 +1,11 @@
+import math
 n = int(input())
 a = list(map(int, input().split()))
 
-import math
 
 def lcm(x, y):
     return (x * y) // math.gcd(x, y)
+
 
 l = 1
 for i in range(n):

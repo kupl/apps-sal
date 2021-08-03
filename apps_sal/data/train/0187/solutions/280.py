@@ -20,13 +20,11 @@ class Solution:
                 max_result = result
                 max_count = count
 
-
         full_batch = waiting // 4
         result += full_batch * 4 * boardingCost
         if full_batch > 0:
             result -= full_batch * runningCost
             count += full_batch
-
 
         if result > max_result:
             max_result = result

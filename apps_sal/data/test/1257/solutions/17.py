@@ -1,7 +1,7 @@
 n, k = input().split()
 n, k = int(n), int(k)
 
-cisel_vlavo = n * (k-1)
+cisel_vlavo = n * (k - 1)
 prve_v_k = cisel_vlavo + 1
 prve_vlavo = 1
 
@@ -15,7 +15,7 @@ print(su)
 
 for r in range(n):
     space = False
-    for c in range(1, n+1):
+    for c in range(1, n + 1):
         if space:
             print(" ", end="")
         else:
@@ -26,5 +26,5 @@ for r in range(n):
         else:
             print(prve_v_k, end="")
             prve_v_k += 1
-        
+
     print()

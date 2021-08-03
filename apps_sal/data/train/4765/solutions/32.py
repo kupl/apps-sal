@@ -5,5 +5,3 @@ class Hero(object):
         self.health = health
         self.position = pos
         self.damage = damage
-        
-

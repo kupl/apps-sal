@@ -14,4 +14,3 @@ if X == 1:
     print((1))
 else:
     print((cands[bisect_right(cands, X) - 1]))
-

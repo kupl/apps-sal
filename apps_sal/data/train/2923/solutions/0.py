@@ -5,4 +5,3 @@ REGEX = compile(r',+')
 
 def dad_filter(strng):
     return sub(REGEX, ',', strng).rstrip(' ,')
-

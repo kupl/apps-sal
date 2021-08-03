@@ -12,6 +12,8 @@ def MS(): return input().split()
 def LS(): return list(input())
 def LLS(rows_number): return [LS() for _ in range(rows_number)]
 def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
+
+
 INF = float('inf')
 # from math import ceil, floor, log2
 # from collections import deque
@@ -20,10 +22,12 @@ INF = float('inf')
 # import numpy as np
 # from numpy import cumsum  # accumulate
 
+
 def prime_factorization(n):
     res = []
-    for i in range(2, int(pow(n, 0.5))+1):
-        if n % i: continue
+    for i in range(2, int(pow(n, 0.5)) + 1):
+        if n % i:
+            continue
         ex = 0
         while n % i == 0:
             n = n // i
@@ -33,6 +37,7 @@ def prime_factorization(n):
         res.append((n, 1))
     return res
 
+
 def mcomb(n, k, mod):
     def mfac(l, r, mod):
         ans = l
@@ -41,11 +46,12 @@ def mcomb(n, k, mod):
             ans %= mod
         return ans
 
-    A = mfac(n, n-k+1, mod)
+    A = mfac(n, n - k + 1, mod)
     B = mfac(k, 1, mod)
     # B = mpow(B,mod-2,mod)
-    B = pow(B, mod-2, mod)
+    B = pow(B, mod - 2, mod)
     return A * B % mod
+
 
 def solve():
     N, M = MI()
@@ -58,12 +64,13 @@ def solve():
 
     ans = 1
     for num, ex in fact:
-        ans = ans * mcomb(ex+N-1, N-1, MOD)
+        ans = ans * mcomb(ex + N - 1, N - 1, MOD)
         ans %= MOD
     print(ans)
 
 
 def __starting_point():
     solve()
+
 
 __starting_point()

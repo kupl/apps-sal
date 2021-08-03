@@ -20,12 +20,11 @@ class Solution:
             index += 1
             stack.append((index, next.val))
             next = next.__next__
-        #add extra zeros
+        # add extra zeros
         for i in range(len(stack)):
             results[stack[i][0]] = 0
         result_arr = [0] * len(results)
         for j in range(len(result_arr)):
-            result_arr[j] =results[j]
+            result_arr[j] = results[j]
 
         return result_arr
-

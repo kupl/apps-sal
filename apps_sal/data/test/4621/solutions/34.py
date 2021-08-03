@@ -1,4 +1,4 @@
-h,w=map(int,input().split())
-c=[input() for i in range(h)]
+h, w = map(int, input().split())
+c = [input() for i in range(h)]
 for i in range(h):
-    print(c[i]+'\n'+c[i])
+    print(c[i] + '\n' + c[i])

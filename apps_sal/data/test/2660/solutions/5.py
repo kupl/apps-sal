@@ -41,4 +41,4 @@ for i in range(q):
             x = -heapq.heappop(ming)
             heapq.heappush(ming, -x)
     else:
-        print(x, a+b)
+        print(x, a + b)

@@ -8,7 +8,6 @@ class Solution:
                     return recur(val / 2) + 1
                 return recur((val * 3) + 1) + 1
             return recur(val)
-        out = [i for i in range(lo, hi+1)]
+        out = [i for i in range(lo, hi + 1)]
         out.sort(key=key_func)
-        return out[k-1]
-
+        return out[k - 1]

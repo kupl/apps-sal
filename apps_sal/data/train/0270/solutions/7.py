@@ -17,4 +17,3 @@ class Solution:
             N >>= 1
             k %= N
         return res
-

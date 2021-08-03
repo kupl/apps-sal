@@ -21,4 +21,3 @@ class Solution:
         if cur >= len(A):
             return True
         return False
-

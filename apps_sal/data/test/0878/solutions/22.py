@@ -21,4 +21,3 @@ for i in range(n - 1):
         val += 4
 print('Finite')
 print(val)
-

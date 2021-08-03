@@ -2,7 +2,7 @@
 def main():
     N = int(input())
     a = list(map(int, input().split()))
-    a.sort(reverse = True)
+    a.sort(reverse=True)
     ans = a[0]
     t = N - 2
 
@@ -12,8 +12,10 @@ def main():
                 ans += a[i]
                 t -= 1
     print(ans)
-        
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

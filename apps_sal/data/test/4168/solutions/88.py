@@ -25,7 +25,7 @@ while True:
     n += 1
 
 result = []
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     if i % 2 == 0:
         if N > max_pos_number(i):
             result.append(1)
@@ -39,4 +39,3 @@ for i in range(n-1, -1, -1):
         else:
             result.append(0)
 print((''.join([str(x) for x in result])))
-

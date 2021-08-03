@@ -1,8 +1,8 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-        
-        graph = {i : [] for i in range(1, N + 1)}
-        
+
+        graph = {i: [] for i in range(1, N + 1)}
+
         for dislike in dislikes:
             u, v = dislike
             graph[u].append(v)
@@ -25,5 +25,3 @@ class Solution:
                         if visited[nei] == clr:
                             return False
         return True
-                        
-

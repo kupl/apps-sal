@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -50,12 +51,14 @@ class UnionFind():
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
 
+
 def fact(n, mod=998244353):
     ans = 1
     for i in range(1, n + 1):
         ans *= i
         ans %= mod
     return ans
+
 
 mod = 998244353
 

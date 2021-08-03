@@ -2,7 +2,7 @@ class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         if len(A) < 3:
             return len(A)
-        d = {k:{} for k in set(A)}
+        d = {k: {} for k in set(A)}
         for j in range(len(A)):
             zero = d[A[j]].get(0, 0) + 1
             for step, l in list(d[A[j]].items()):
@@ -17,4 +17,3 @@ class Solution:
             # print(d)
         res = max([max(v.values()) for v in list(d.values())])
         return res
-

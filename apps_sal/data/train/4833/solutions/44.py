@@ -1,5 +1,5 @@
 def replace_exclamation(s):
-    vowels = ['a','e','i','o','u']
+    vowels = ['a', 'e', 'i', 'o', 'u']
     x = []
     for i in s:
         if i.lower() in vowels:

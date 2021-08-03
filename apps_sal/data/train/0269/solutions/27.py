@@ -4,7 +4,7 @@ class Solution:
         increment = False
         one_checked = False
         for i in nums:
-            if one_checked and i != 1:    
+            if one_checked and i != 1:
                 temp += 1
             print(temp, i)
             if i == 1:
@@ -13,5 +13,4 @@ class Solution:
                 temp = 0
                 one_checked = True
 
-            
         return True

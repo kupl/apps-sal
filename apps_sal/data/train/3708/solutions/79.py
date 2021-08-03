@@ -20,6 +20,6 @@ def hex_to_dec(s):
     j = 0
     decimal = 0
     for i in s:
-        decimal = decimal + dict[s[j]]*16**(len(s)-j-1)
+        decimal = decimal + dict[s[j]] * 16**(len(s) - j - 1)
         j += 1
     return decimal

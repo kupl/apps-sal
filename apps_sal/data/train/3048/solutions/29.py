@@ -11,4 +11,3 @@ def alternateCase(s):
         result += chr(ascii_value)
 
     return result
-

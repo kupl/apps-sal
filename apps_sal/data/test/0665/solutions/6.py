@@ -26,6 +26,5 @@ for _ in range(t):
         print(0)
     else:
         print(maxId + 1)
-    
-# inf.close()
 
+# inf.close()

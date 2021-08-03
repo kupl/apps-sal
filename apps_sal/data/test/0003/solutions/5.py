@@ -31,14 +31,14 @@ twos.append(0)
 ans = 0
 for i in range(q):
     for j in range(i + 1, q):
-        rem = 0;
+        rem = 0
         rem += ones[a[i][1]] - ones[a[i][0] - 1]
         rem += ones[a[j][1]] - ones[a[j][0] - 1]
 
         l, r = max(a[i][0], a[j][0]), min(a[i][1], a[j][1])
         if r >= l:
             rem += twos[r] - twos[l - 1]
-        
+
         ans = max(ans, s - rem)
 
 print(ans)

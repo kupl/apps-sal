@@ -20,4 +20,3 @@ for key, value in list(W.items()):
     ans += key * value
 # print(f'{ans=}')
 print((''.join(sorted(ans))))
-

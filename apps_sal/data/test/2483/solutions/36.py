@@ -21,14 +21,16 @@ for i in range(N):
         lst = []
         jdg2 = True
 
-        while p[0] == q[0] and p[2]>= q[1]:
+        while p[0] == q[0] and p[2] >= q[1]:
             if p[2] == q[1]:
 
                 jdg2 = False
             else:
                 lst.append(q)
-            if hq: q = heapq.heappop(hq)
-            else: break
+            if hq:
+                q = heapq.heappop(hq)
+            else:
+                break
         if jdg2:
             ans += 1
         if p[0] != q[0] or p[2] < q[1]:

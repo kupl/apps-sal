@@ -12,7 +12,6 @@ class Solution:
                 people[board] += trip[0]
 
         if max(people) > capacity:
-            return False        
+            return False
         else:
             return True
-

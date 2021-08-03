@@ -1,5 +1,5 @@
 def who_is_paying(name):
-    #your code here
+    # your code here
     if len(name) > 2:
         names = [name]
         names.append(name[:2])

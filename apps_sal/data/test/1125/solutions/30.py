@@ -7,7 +7,7 @@ s = sum(A[:2])
 if s < t or (s ^ t) & 1:
     print(-1)
     return
- 
+
 u = (s - t) // 2
 a = A[0]
 n = 0
@@ -23,7 +23,7 @@ for i in range(40)[::-1]:
     if b == 1 and c == 0:
         if n + (1 << i) <= a:
             n += 1 << i
- 
+
 if n > a or n == 0:
     print(-1)
 else:

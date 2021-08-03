@@ -5,10 +5,10 @@ ss.sort()
 c = Counter()
 mc = 0
 for s in ss:
-  c[s] += 1
-  mc = max(mc, c[s])
+    c[s] += 1
+    mc = max(mc, c[s])
 seen = set()
 for s in ss:
-  if c[s] == mc and s not in seen:
-    print(s)
-    seen.add(s)
+    if c[s] == mc and s not in seen:
+        print(s)
+        seen.add(s)

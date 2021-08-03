@@ -15,4 +15,3 @@ if len(alp) == 0:
     print("None")
 else:
     print((alp[0]))
-

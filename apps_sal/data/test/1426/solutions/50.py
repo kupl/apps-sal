@@ -1,7 +1,7 @@
 from collections import deque
 
 n, m = list(map(int, input().split()))
-uv  =[[] for _ in range(n)]
+uv = [[] for _ in range(n)]
 for _ in range(m):
     u, v = list(map(int, input().split()))
     uv[u - 1].append(v - 1)
@@ -31,4 +31,3 @@ while queue:
         queue.append(ans + 1)
         queue.append((kkp + 1) % 3)
 print((-1))
-

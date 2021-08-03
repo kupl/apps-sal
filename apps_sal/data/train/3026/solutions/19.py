@@ -4,4 +4,3 @@ def min_value(digits):
     for x in new_digs:
         a += str(x)
     return int(a)
-

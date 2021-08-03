@@ -9,7 +9,7 @@ count = {}
 for i in alpha:
     count[i] = 0
 
-n, f = list(map(int,input().split()))
+n, f = list(map(int, input().split()))
 
 balls = list(input().strip('\n'))
 
@@ -26,4 +26,3 @@ if (max > f):
     print("NO")
 else:
     print("YES")
-

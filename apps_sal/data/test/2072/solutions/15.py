@@ -15,5 +15,3 @@ while right - left > 0.0000001:
     else:
         right = mid
 print('%.7f' % right)
-    
-

@@ -1,6 +1,7 @@
 from itertools import count
 from math import log
 
+
 def decompose(n):
     r = []
     for x in count(2):

@@ -3,5 +3,6 @@ def solution(digits):
     mx = cur
     for i in range(5, len(digits)):
         cur = (cur % 10000) * 10 + int(digits[i])
-        if mx < cur: mx = cur
+        if mx < cur:
+            mx = cur
     return mx

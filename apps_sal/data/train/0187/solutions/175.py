@@ -8,7 +8,7 @@ class Solution:
             toBeBoarded = left + customers[i]
             if toBeBoarded > 4:
                 boarded = 4
-                left = toBeBoarded - 4                
+                left = toBeBoarded - 4
             else:
                 boarded = customers[i]
                 left = 0
@@ -42,4 +42,3 @@ class Solution:
                         return len(customers) + rotations + 1 if lastProfit > 0 else -1
             else:
                 return maxMid + 1 if maxProfit > 0 else -1
-

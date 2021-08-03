@@ -15,4 +15,3 @@ for x in range(n - 1):
     p2 = p3
 
 print(count)
-

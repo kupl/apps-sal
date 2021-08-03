@@ -14,5 +14,5 @@ def rps(p1, p2):
         result = "Player 2 won!"
     else:
         result = 'Draw!'
-    
+
     return result

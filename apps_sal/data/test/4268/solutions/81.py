@@ -8,8 +8,7 @@ for i in range(n):
         dist = 0
         for k in range(d):
             dist += (x[i][k] - x[j][k]) ** 2
-        dist = dist**(1/2)
+        dist = dist**(1 / 2)
         if dist - int(dist) == 0:
             ans += 1
 print(ans)
-

@@ -2,22 +2,24 @@ import sys
 from itertools import chain
 readline = sys.stdin.readline
 
-#非再帰
+# 非再帰
+
+
 def scc(Edge):
     N = len(Edge)
     Edgeinv = [[] for _ in range(N)]
     for vn in range(N):
         for vf in Edge[vn]:
             Edgeinv[vf].append(vn)
-    
-    used = [False]*N
+
+    used = [False] * N
     dim = [len(Edge[i]) for i in range(N)]
     order = []
     for st in range(N):
         if not used[st]:
             stack = [st, 0]
             while stack:
-                vn, i = stack[-2], stack[-1]   
+                vn, i = stack[-2], stack[-1]
                 if not i and used[vn]:
                     stack.pop()
                     stack.pop()
@@ -30,8 +32,8 @@ def scc(Edge):
                     else:
                         stack.pop()
                         order.append(stack.pop())
-    res = [None]*N
-    used = [False]*N
+    res = [None] * N
+    used = [False] * N
     cnt = -1
     for st in order[::-1]:
         if not used[st]:
@@ -46,7 +48,7 @@ def scc(Edge):
                         used[vf] = True
                         res[vf] = cnt
                         stack.append(vf)
-    M = cnt+1
+    M = cnt + 1
     components = [[] for _ in range(M)]
     for i in range(N):
         components[res[i]].append(i)
@@ -56,13 +58,14 @@ def scc(Edge):
         tn = res[vn]
         for vf in Edge[vn]:
             tf = res[vf]
-            if tn != tf and tn*M + tf not in teset:
-                teset.add(tn*M + tf)
+            if tn != tf and tn * M + tf not in teset:
+                teset.add(tn * M + tf)
                 tEdge[tn].append(tf)
     return res, components, tEdge
 
+
 N = int(readline())
-P = list([int(x)-1 for x in readline().split()])
+P = list([int(x) - 1 for x in readline().split()])
 
 Edge = [[] for _ in range(N)]
 for i in range(N):
@@ -71,16 +74,16 @@ for i in range(N):
 R, Com, _ = scc(Edge)
 
 Lord = list(chain(*Com[::-1]))
-val = [None]*N
+val = [None] * N
 for vn in Lord:
     if not R[vn]:
         break
     lvn = len(Edge[vn]) + 1
-    res = [0]*lvn
+    res = [0] * lvn
     for vf in Edge[vn]:
         if val[vf] < lvn:
             res[val[vf]] += 1
-    
+
     for k in range(lvn):
         if not res[k]:
             val[vn] = k
@@ -88,7 +91,7 @@ for vn in Lord:
 
 st = Lord[-1]
 lst = len(Edge[st]) + 2
-res = [0]*lst
+res = [0] * lst
 for vf in Edge[st]:
     if val[vf] is None:
         continue
@@ -118,19 +121,19 @@ for idx in range(2):
     vc = val[:]
     vc[st] = mc[idx]
     for vn in Ls:
-        lvn = len(Edge[vn])+1
-        res = [0]*lvn
+        lvn = len(Edge[vn]) + 1
+        res = [0] * lvn
         for vf in Edge[vn]:
             if vc[vf] < lvn:
                 res[vc[vf]] += 1
-        
+
         for k in range(lvn):
             if not res[k]:
                 vc[vn] = k
                 break
-    
+
     for vn in range(N):
-        res = [False]*vc[vn]
+        res = [False] * vc[vn]
         for vf in Edge[vn]:
             if vc[vn] == vc[vf]:
                 break
@@ -146,4 +149,3 @@ for idx in range(2):
     if ans:
         break
 print(('POSSIBLE' if ans else 'IMPOSSIBLE'))
-

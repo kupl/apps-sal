@@ -5,6 +5,7 @@ def isEven(a, b):
         return True
     return False
 
+
 i = input().split()
 a = int(i[0])
 b = int(i[1])

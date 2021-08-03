@@ -5,11 +5,11 @@ def solve(*args: str) -> str:
     A = tuple(map(int, args[1].split()))
 
     l, r = 0, max(A)
-    while l+1 < r:
-        m = (l+r)//2
+    while l + 1 < r:
+        m = (l + r) // 2
         cnt = 0
         for a in A:
-            cnt += -(-a//m)-1
+            cnt += -(-a // m) - 1
 
         if k < cnt:
             l = m
@@ -21,5 +21,6 @@ def solve(*args: str) -> str:
 
 def __starting_point():
     print((solve(*(open(0).read().splitlines()))))
+
 
 __starting_point()

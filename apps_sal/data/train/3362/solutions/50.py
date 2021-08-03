@@ -4,4 +4,3 @@ def sum_mix(arr):
     for i in arr:
         count += int(i)
     return count
-

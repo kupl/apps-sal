@@ -1,10 +1,12 @@
-read = lambda: list(map(int, input().split()))
+from collections import Counter as C
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 a = list(read())
 m = int(input())
 b = list(read())
 c = list(read())
-from collections import Counter as C
 d = C()
 for i in a:
     d[i] += 1
@@ -19,4 +21,3 @@ for i in range(m):
         mc = d[c[i]]
         ind = i + 1
 print(ind)
-

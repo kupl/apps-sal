@@ -7,4 +7,3 @@ for i in range(int(input())):
         print(min((k - n * b) // (a - b) - 1, n))
     else:
         print(min(int((k - n * b) / (a - b)), n))
-

@@ -50,4 +50,3 @@ for i in range(q):
         print(ans[m][0], ans[m][1])
     else:
         print(ans[(m - mxs) % (n - 1) + mxs][0], ans[(m - mxs) % (n - 1) + mxs][1])
-

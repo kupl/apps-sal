@@ -11,4 +11,3 @@ for t in range(int(input())):
             inf = min(inf, a)
             sup = max(sup, b)
     print(sup - inf + 1)
-

@@ -5,4 +5,3 @@ for i in range(t):
 list_to_tri.sort()
 for i in list_to_tri:
     print(i)
-

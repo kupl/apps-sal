@@ -2,7 +2,7 @@
 
 
 def f(string, w):
-    return sum([(i+1) * w[ord(string[i]) - ord('a')] for i in range(len(string))])
+    return sum([(i + 1) * w[ord(string[i]) - ord('a')] for i in range(len(string))])
 
 
 def main():
@@ -17,7 +17,10 @@ def main():
         res += (len(string) + i + 1) * maxw
 
     print(res)
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

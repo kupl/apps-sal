@@ -9,7 +9,7 @@ class StreamChecker:
                 trie = trie[letter]
             trie['$'] = ''
         print((self.trie))
-        self.queue = deque()    
+        self.queue = deque()
         self.max_len = max(len(word) for word in words)
 
     def query(self, letter: str) -> bool:
@@ -24,11 +24,8 @@ class StreamChecker:
             if '$' in trie:
                 return True
         return False
-        
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

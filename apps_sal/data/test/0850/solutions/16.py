@@ -1,7 +1,7 @@
 n = int(input())
 v = list(map(int, input().split()))
 
-cnt = [0]*101
+cnt = [0] * 101
 ans = list()
 
 v.sort()
@@ -27,7 +27,4 @@ if f10 + f100 == 0:
             break
 print(len(ans))
 for i in ans:
-    print (i, end=' ')
-
-
-
+    print(i, end=' ')

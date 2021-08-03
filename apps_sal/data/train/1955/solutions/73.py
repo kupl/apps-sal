@@ -1,11 +1,11 @@
 class UnionFind(object):
-    def __init__(self,n):
-        self._parent = [0]*n
-        self._size = [1]*n
+    def __init__(self, n):
+        self._parent = [0] * n
+        self._size = [1] * n
         self.count = n
         for i in range(n):
             self._parent[i] = i
-            
+
     def union(self, p, q):
         rootp = self.find(p)
         rootq = self.find(q)
@@ -18,42 +18,39 @@ class UnionFind(object):
         else:
             self._size[rootq] += self._size[rootp]
             self._parent[rootp] = self._parent[p] = rootq
-    
+
     def find(self, n):
         while self._parent[n] != n:
             self._parent[n] = self._parent[self._parent[n]]
             n = self._parent[n]
         return n
-    
+
     def connected(self, p, q):
         return self.find(p) == self.find(q)
-    
+
+
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         N = len(s)
-        if N < 2: return s
+        if N < 2:
+            return s
         uf = UnionFind(N)
         for pair in pairs:
-            uf.union(pair[0],pair[1])
-        
+            uf.union(pair[0], pair[1])
+
         dict = defaultdict(list)
         for i in range(N):
             r = uf.find(i)
             dict[r].append(i)
-            
-        res = [' ']*N
-        for lst in list(dict.values()):            
+
+        res = [' '] * N
+        for lst in list(dict.values()):
             subs = []
             for idx in lst:
                 subs.append(s[idx])
             subs.sort()
             i2 = 0
             for idx in lst:
-                res[idx]=subs[i2]
-                i2+=1
+                res[idx] = subs[i2]
+                i2 += 1
         return ''.join(res)
-            
-        
-        
-            
-

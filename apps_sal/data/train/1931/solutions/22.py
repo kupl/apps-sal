@@ -29,6 +29,6 @@ class Solution:
             return True
         if root is None:
             return False
-        if root.val==head.val:
+        if root.val == head.val:
             return self.dfs(head.next, root.left) or self.dfs(head.next, root.right)
         return False

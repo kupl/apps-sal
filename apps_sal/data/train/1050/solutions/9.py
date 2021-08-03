@@ -1,7 +1,7 @@
 t = int(input())
 
 while t:
-    t -= 1 
+    t -= 1
     s = input()
     count = 0
     a = 0

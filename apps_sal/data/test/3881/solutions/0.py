@@ -23,4 +23,3 @@ for i in range(6 ** n):
         ans += 1
 
 print(ans)
-

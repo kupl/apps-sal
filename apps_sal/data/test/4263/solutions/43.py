@@ -10,4 +10,3 @@ for i in range(len(s)):
     else:
         cnt = 0
 print(ans)
-

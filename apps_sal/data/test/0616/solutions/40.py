@@ -9,14 +9,15 @@ for i in range(m):
     keys.append((s, a))
 
 INF = 1001001001
-dp = [INF] * (1<<n)
+dp = [INF] * (1 << n)
 dp[0] = 0
-for s in range(1<<n):
+for s in range(1 << n):
     for k, v in keys:
         t = s | k
         cost = dp[s] + v
         dp[t] = min(dp[t], cost)
 
 ans = dp[-1]
-if ans == INF: ans = -1
+if ans == INF:
+    ans = -1
 print(ans)

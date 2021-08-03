@@ -1,6 +1,6 @@
 def calculate_grade(scores):
     for score in scores:
-        mean = sum(scores)/len(scores)
+        mean = sum(scores) / len(scores)
         if mean >= 90 and mean <= 100:
             return "A"
         elif mean >= 80 and mean < 90:

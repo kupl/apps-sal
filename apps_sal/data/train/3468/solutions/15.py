@@ -18,4 +18,3 @@ def scramble(s1, s2):
         except KeyError:
             return False
     return True
-

@@ -1,14 +1,16 @@
 n = int(input())
 
+
 def isprime(x):
     for i in range(2, x):
-        if x%i == 0:
+        if x % i == 0:
             return False
     else:
         return True
 
+
 l = []
-for i in range(2, n+1):
+for i in range(2, n + 1):
     if isprime(i) == True:
         l.append(i)
 
@@ -21,5 +23,4 @@ for i in l:
 
 print(len(l2))
 for i in l2:
-    print(i, end = ' ')
-
+    print(i, end=' ')

@@ -1,10 +1,10 @@
-n=int(input())
-s=input()
+n = int(input())
+s = input()
 
-c=n
+c = n
 
-for i in range(0,n-1):
-    if s[i]==s[i+1]:
-        c-=1
+for i in range(0, n - 1):
+    if s[i] == s[i + 1]:
+        c -= 1
 
 print(c)

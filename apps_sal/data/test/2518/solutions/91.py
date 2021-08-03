@@ -7,6 +7,7 @@ def check(T):
         res += tmp
     return True if res <= T else False
 
+
 N, A, B = list(map(int, input().split()))
 H = [int(input()) for _ in range(N)]
 H.sort(reverse=True)
@@ -20,4 +21,3 @@ while right != left:
     else:
         left = mid + 1
 print(left)
-

@@ -11,6 +11,3 @@ def count_change(money, coins):
             ways[i] += ways[i - coin]
 
     return ways[money]
-
-
-

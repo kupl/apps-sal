@@ -5,7 +5,7 @@ if n & 1:
 else:
     k = n // 2
     while True:
-        if a[:k] != a[k:k*2][::-1]:
+        if a[:k] != a[k:k * 2][::-1]:
             print(k * 2)
             break
         elif k & 1:

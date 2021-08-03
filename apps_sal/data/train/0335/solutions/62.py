@@ -8,5 +8,5 @@ class Solution:
                 ndif = abs(rod - dif)
                 dp[ndif] = max(dp[ndif], hi, lo + rod)
                 ndif = rod + dif
-                dp[ndif] = max(dp[ndif], rod + hi) 
+                dp[ndif] = max(dp[ndif], rod + hi)
         return dp[0]

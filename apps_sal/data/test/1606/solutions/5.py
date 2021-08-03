@@ -7,7 +7,7 @@ n = int(test[0])
 dot = 0
 j = 0
 for i in range(n):
-    if test[i+1][j] == '1':
+    if test[i + 1][j] == '1':
         dot ^= 1
     j += 2
 
@@ -20,4 +20,3 @@ for q in range(int(test[n + 1])):
         dot ^= 1
 
 print(''.join(map(str, out)))
-

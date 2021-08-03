@@ -59,6 +59,3 @@ else:
         print((" ".join(map(str, d))))
         for i in range(N):
             print((calc(X[i] + Y[i] - 1, X[i] - Y[i] - 1) + "R"))
-
-
-

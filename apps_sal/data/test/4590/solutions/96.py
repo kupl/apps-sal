@@ -23,4 +23,3 @@ for i in range(len(A)):
     ans = max(ans, i + j)
 
 print(ans)
-

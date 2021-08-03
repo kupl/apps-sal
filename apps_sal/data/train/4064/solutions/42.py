@@ -8,6 +8,5 @@ def count_by(x, n):
         if i % x == 0:
             lis.append(i)
         i += 1
-    
-    return lis
 
+    return lis

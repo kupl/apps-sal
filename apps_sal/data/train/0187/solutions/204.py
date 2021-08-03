@@ -14,6 +14,6 @@ class Solution:
         rotate += left // 4
         if left % 4 * boardingCost > runningCost:
             rotate += 1
-        if boardingCost*total - rotate*runningCost > 0:
+        if boardingCost * total - rotate * runningCost > 0:
             return rotate
         return -1

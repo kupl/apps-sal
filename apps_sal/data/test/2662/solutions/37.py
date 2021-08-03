@@ -8,7 +8,7 @@ for _ in range(N):
 
 buf = deque()
 for a in A:
-    i = bisect.bisect_right(buf, a-1)-1
+    i = bisect.bisect_right(buf, a - 1) - 1
     if i < 0:
         buf.appendleft(a)
     else:

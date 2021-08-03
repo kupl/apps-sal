@@ -16,7 +16,7 @@ class Solution:
                 if seq_len[i][0] in curr_two_types:
                     curr_most += seq_len[i][1]
                 else:
-                    curr_most = seq_len[i][1] + seq_len[i-1][1]
-                    curr_two_types = set([seq_len[i][0], seq_len[i-1][0]])
+                    curr_most = seq_len[i][1] + seq_len[i - 1][1]
+                    curr_two_types = set([seq_len[i][0], seq_len[i - 1][0]])
                 most = max(most, curr_most)
         return most

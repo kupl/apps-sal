@@ -21,4 +21,3 @@ def fun(plus, cnt):
 n = int(input())
 check = [[0 for _ in range(2 * n + 1)] for _ in range(2 * n + 1)]
 print(fun(1, 1) % (10 ** 9 + 7))
-

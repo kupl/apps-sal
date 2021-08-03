@@ -19,12 +19,12 @@
 # def am_i_wilson(n):
 #     if n <= 2:
 #         return False
-#     fact=math.factorial(n-1)        
+#     fact=math.factorial(n-1)
 #     if (fact+1)%n==0:
 #         if (fact+1)%(n**2)==0:
 #             return True
 #         return False
 #     return False
-    
-def am_i_wilson(n):   
+
+def am_i_wilson(n):
     return n in (5, 13, 563)

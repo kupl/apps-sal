@@ -15,14 +15,17 @@ if (sum(A) != sum(B)):
 neighbours = defaultdict(lambda: defaultdict(int))
 flow = defaultdict(int)
 
+
 def left(i):
     return 'l ' + str(i)
+
 
 def right(i):
     return 'r ' + str(i)
 
-for i in range(1, N+1):
-    for j in range(1, N+1):
+
+for i in range(1, N + 1):
+    for j in range(1, N + 1):
         flow[left(i), right(j)] = 0
         flow[right(i), left(j)] = 0
 
@@ -30,7 +33,7 @@ for i, capacity in enumerate(A):
     neighbours['source'][left(i + 1)] = capacity
 for i, capacity in enumerate(B):
     neighbours[right(i + 1)]['sink'] = capacity
-for i in range(1, N+1):
+for i in range(1, N + 1):
     neighbours[left(i)][right(i)] = float('inf')
 
 
@@ -40,8 +43,10 @@ for m in range(M):
     neighbours[left(p)][right(q)] = float('inf')
     neighbours[left(q)][right(p)] = float('inf')
 
+
 def search():
     visited = set()
+
     def dfs(v):
         if v in visited:
             return False
@@ -59,20 +64,23 @@ def search():
 
 total_flow = 0
 
+
 def augment_edge(a, b, amount):
     neighbours[a][b] -= amount
     neighbours[b][a] += amount
     flow[a, b] += amount
 
+
 def augment(path):
     capacity = float('inf')
     for i in range(len(path) - 1):
-        capacity = min(capacity, neighbours[path[i]][path[i+1]])
+        capacity = min(capacity, neighbours[path[i]][path[i + 1]])
     # print('augment', path, capacity)
     for i in range(len(path) - 1):
-        augment_edge(path[i], path[i+1], capacity)
+        augment_edge(path[i], path[i + 1], capacity)
     nonlocal total_flow
     total_flow += capacity
+
 
 while True:
     res = search()
@@ -83,8 +91,8 @@ while True:
 
 if (total_flow == sum(A)):
     print("YES")
-    for i in range(1, N+1):
-        for j in range(1, N+1):
+    for i in range(1, N + 1):
+        for j in range(1, N + 1):
             print(flow[left(i), right(j)] - flow[right(j), left(i)], end=" ")
         print()
 else:

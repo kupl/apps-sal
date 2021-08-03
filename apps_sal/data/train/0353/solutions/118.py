@@ -9,7 +9,7 @@ class Solution:
             else:
                 r -= 1
         return output % (10 ** 9 + 7)
-    
+
     # def numSubseq(self, A, target):
     #     A.sort()
     #     l, r = 0, len(A) - 1
@@ -22,4 +22,3 @@ class Solution:
     #             res += pow(2, r - l, mod)
     #             l += 1
     #     return res % mod
-

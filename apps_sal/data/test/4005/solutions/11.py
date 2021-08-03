@@ -9,8 +9,9 @@ b1 = [int(x) for x in b1]
 b2 = sin.readline().split()
 b2 = [int(x) for x in b2]
 
+
 def reduce(w, b):
-    #Fully covered:
+    # Fully covered:
     if b[0] <= w[0] and b[1] <= w[1] and b[2] >= w[2] and b[3] >= w[3]:
         return True
     if b[0] <= w[0] and b[1] <= w[1]:
@@ -23,6 +24,7 @@ def reduce(w, b):
             w[2] = b[0]
         if b[0] <= w[0] and b[1] <= w[3]:
             w[3] = b[1]
+
 
 flag = False
 if reduce(w, b1):

@@ -10,13 +10,13 @@ for t, v in zip(T, V):
 maxv[-1] = 0
 
 for i in range(len(maxv) - 1):
-    maxv[i + 1] = min(maxv[i + 1], maxv[i] + 0.5) 
-    
+    maxv[i + 1] = min(maxv[i + 1], maxv[i] + 0.5)
+
 for i in reversed(range(len(maxv) - 1)):
     maxv[i] = min(maxv[i], maxv[i + 1] + 0.5)
-    
+
 ans = 0
 for i in range(len(maxv) - 1):
     ans += (maxv[i] + maxv[i + 1]) * 0.5 / 2
-    
+
 print(ans)

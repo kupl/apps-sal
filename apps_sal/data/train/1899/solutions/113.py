@@ -2,7 +2,7 @@ class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
         # Find the first element of the first island
         x, y = self.get_first(A)
-        
+
         # Do DFS to find all elements in the first island
         q = collections.deque()
         self.dfs(A, x, y, q)
@@ -24,15 +24,15 @@ class Solution:
                             A[nx][ny] = -1
             step += 1
             q = new_q
-                
+
         return -1
-        
+
     def get_first(self, A):
         for i in range(len(A)):
             for j in range(len(A[0])):
                 if A[i][j] == 1:
                     return i, j
-                
+
     def dfs(self, A, x, y, q):
         A[x][y] = -1
         q.append([x, y])
@@ -40,5 +40,3 @@ class Solution:
             nx, ny = x + d[0], y + d[1]
             if 0 <= nx < len(A) and 0 <= ny < len(A[0]) and A[nx][ny] == 1:
                 self.dfs(A, nx, ny, q)
-        
-

@@ -29,7 +29,3 @@ class Solution:
         while heap:
             ans.append(heapq.heappop(heap)[1])
         return ans
-        
-                            
-                            
-

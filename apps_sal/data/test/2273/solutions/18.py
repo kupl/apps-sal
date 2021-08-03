@@ -1,10 +1,9 @@
-3
-
-import array
-import math
-import os
-import random
 import sys
+import random
+import os
+import math
+import array
+3
 
 
 DEBUG = 'DEBUG' in os.environ
@@ -67,5 +66,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

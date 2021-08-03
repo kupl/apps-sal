@@ -27,14 +27,13 @@ else:
     start = t[:2]
     if start == '11':
         if n % 3 == 0:
-            print((10**10 - n//3 + 1))
+            print((10**10 - n // 3 + 1))
         else:
-            print((10**10 - n//3))
+            print((10**10 - n // 3))
     elif start == '10':
-        print((10**10 - n//3))
+        print((10**10 - n // 3))
     else:
         if n % 3 == 2:
-            print((10**10 - n//3 - 1))
+            print((10**10 - n // 3 - 1))
         else:
-            print((10**10 - n//3))
-
+            print((10**10 - n // 3))

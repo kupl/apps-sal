@@ -11,4 +11,3 @@ for i in range(n):
     else:
         re += 1
 print(f'AC x {ac}\nWA x {wa}\nTLE x {tle}\nRE x {re}')
-

@@ -14,7 +14,7 @@ for i in range(r + 1):
     temp = [[0] * (b + 1) for j in range(g + 1)]
     dp.append(temp)
 
-answer = 0 
+answer = 0
 
 for i in range(0, r + 1):
     for j in range(0, g + 1):
@@ -25,6 +25,6 @@ for i in range(0, r + 1):
                 dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j][k - 1] + red[i - 1] * blue[k - 1])
             if j > 0 and k > 0:
                 dp[i][j][k] = max(dp[i][j][k], dp[i][j - 1][k - 1] + green[j - 1] * blue[k - 1])
-                
+
             answer = max(answer, dp[i][j][k])
 print(answer)

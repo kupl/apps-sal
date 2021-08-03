@@ -1,5 +1,5 @@
 n = int(input())
-m = 2*n + 1
+m = 2 * n + 1
 res = set([(0, 0)])
 for i in range(n):
     t, w = list(map(int, input().split()))
@@ -11,4 +11,3 @@ for i in range(n):
             nxt.add((a, b + w))
     res = nxt
 print(min(t for t, w in res if t >= w))
-

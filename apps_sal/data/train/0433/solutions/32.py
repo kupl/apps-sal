@@ -3,9 +3,10 @@ class Solution:
         ans = 0
         x = 0
         running_sum = sum(arr[0:k])
-        if running_sum/k >= threshold: ans+=1
-        for x in range(len(arr)-k):
-            running_sum+=arr[k+x]-arr[x]
-            if running_sum/k >= threshold: ans+=1
+        if running_sum / k >= threshold:
+            ans += 1
+        for x in range(len(arr) - k):
+            running_sum += arr[k + x] - arr[x]
+            if running_sum / k >= threshold:
+                ans += 1
         return ans
-

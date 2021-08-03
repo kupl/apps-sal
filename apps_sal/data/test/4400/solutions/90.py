@@ -6,7 +6,7 @@
 # RSR 1
 # RRS 2
 # RRR 3
-# 8toori 
+# 8toori
 
 
 S = input()
@@ -25,4 +25,3 @@ for i in range(len(S)):
         cnt = 0
 
 print(ans)
-

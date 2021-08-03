@@ -1,4 +1,7 @@
-import sys,math,copy
+import sys
+import math
+import copy
+
 
 def main():
     # import numpy as np
@@ -21,13 +24,13 @@ def main():
             for d in list10:
                 m = mod13_list[(d * mul)]
                 for pm in list13:
-                    dp[mod13_list[(pm+m)]] += dp_[pm]
+                    dp[mod13_list[(pm + m)]] += dp_[pm]
 
         else:
             si = int(s)
             m = mod13_list[(si * mul)]
             for pm in list13:
-                dp[mod13_list[(pm+m)]] = dp_[pm]
+                dp[mod13_list[(pm + m)]] = dp_[pm]
 
         # dp_ = dp % divisor
         # dp = dp * 0 # np.zeros((13), dtype=int)
@@ -36,5 +39,6 @@ def main():
             dp[j] = 0
         mul = mod13_list[(mul * 10)]
     print(dp_[5])
+
 
 main()

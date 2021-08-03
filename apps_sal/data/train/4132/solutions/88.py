@@ -4,5 +4,5 @@ def correct_tail(body, tail):
    # return True
    #     else:
    # return False
-    bodyList=list(body)
+    bodyList = list(body)
     return bodyList[-1] == tail

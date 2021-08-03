@@ -15,4 +15,3 @@ for ans in range(512):
     if poss == True:
         print(ans)
         break
-

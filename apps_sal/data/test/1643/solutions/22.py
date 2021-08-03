@@ -1,8 +1,8 @@
 s = input()
 t = list(s)
-stack =[]
+stack = []
 for i in range(len(s)):
-    if t[i]=='1':
+    if t[i] == '1':
         stack.append(i)
     elif len(stack):
         stack.pop()

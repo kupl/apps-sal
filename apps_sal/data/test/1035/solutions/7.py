@@ -1,5 +1,6 @@
 A, B = [int(x) for x in input().split()]
 
+
 def prime_factorization(n):
     i = 2
     factors = []
@@ -12,6 +13,7 @@ def prime_factorization(n):
     if n > 1:
         factors.append(n)
     return factors
+
 
 Aprimes = prime_factorization(A)
 Bprimes = set(prime_factorization(B))
@@ -26,5 +28,3 @@ for a in Aprimes:
         ans += 1
 
 print(ans)
-
-

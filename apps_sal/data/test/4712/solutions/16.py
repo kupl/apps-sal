@@ -9,4 +9,3 @@ for _ in range(h):
     print(('#' + input() + '#'))
 
 print(row)
-

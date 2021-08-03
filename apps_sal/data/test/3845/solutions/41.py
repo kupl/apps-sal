@@ -17,16 +17,20 @@ def main():
     whites = 1
     blacks = 1
     for i in range(1, 49, 2):
-        if blacks == B:break
+        if blacks == B:
+            break
         for j in range(1, 49, 2):
-            if blacks == B: break
+            if blacks == B:
+                break
             S[i][j] = '#'
             blacks += 1
 
     for i in range(1, 49, 2):
-        if whites == A: break
+        if whites == A:
+            break
         for j in range(51, 99, 2):
-            if whites == A: break
+            if whites == A:
+                break
             S[i][j] = '.'
             whites += 1
 
@@ -37,4 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

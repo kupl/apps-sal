@@ -1,4 +1,4 @@
-t=int(input())
+t = int(input())
 for i in range(t):
-    a=input()
+    a = input()
     print(a[::-1])

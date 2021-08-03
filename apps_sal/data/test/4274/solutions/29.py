@@ -1,5 +1,5 @@
-N,M = (int(x) for x in input().split())
+N, M = (int(x) for x in input().split())
 if N == M:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

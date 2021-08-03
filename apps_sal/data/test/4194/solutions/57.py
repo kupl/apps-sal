@@ -4,4 +4,3 @@ ans = -1
 if (sum(l) <= n):
     ans = n - sum(l)
 print(ans)
-

@@ -7,9 +7,8 @@ class Solution:
             return ans
 
         output = '0'
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             output += '1' + invert(output)[::-1]
             if len(output) >= k:
-                break   
+                break
         return output[k - 1]
-

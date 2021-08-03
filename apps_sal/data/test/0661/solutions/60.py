@@ -14,8 +14,8 @@ else:
     else:
         anss = []
         for A in range(2**M):
-            if A == K: continue
+            if A == K:
+                continue
             anss.append(A)
         anss = anss + [K] + anss[::-1] + [K]
         print((' '.join(map(str, anss))))
-

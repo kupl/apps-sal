@@ -9,4 +9,3 @@ for i in range(N):
     b = ans + K
     ans = min(a, b)
 print(ans)
-

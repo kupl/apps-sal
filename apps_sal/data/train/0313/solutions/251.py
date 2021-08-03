@@ -10,7 +10,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
+
     def getPossibleBouquetNum(self, bloomDay: List[int], k: int, day_threshold: int) -> int:
         bloom_count = 0
         bouquet_count = 0

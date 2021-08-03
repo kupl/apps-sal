@@ -23,7 +23,7 @@ def main():
 
     n = int(input())
     chessboard = [
-        [ int(x) for x in input().split() ]
+        [int(x) for x in input().split()]
         for row in range(n)
     ]
 
@@ -50,7 +50,7 @@ def main():
     for i in range(n):
         for j in range(n):
             points = (
-                mainDiagonalSums[i-j] + secondaryDiagonalSums[i+j]
+                mainDiagonalSums[i - j] + secondaryDiagonalSums[i + j]
                 - chessboard[i][j]
             )
 
@@ -64,10 +64,11 @@ def main():
                     maxPoints[0] = points
 
     print(sum(maxPoints))
-    print(' '.join([ f'{i+1} {j+1}' for i, j in bestPosition ]))
+    print(' '.join([f'{i+1} {j+1}' for i, j in bestPosition]))
 
 
 BUFSIZE = 8192
+
 
 class FastIO(IOBase):
     newlines = 0
@@ -102,6 +103,7 @@ class FastIO(IOBase):
             os.write(self._fd, self.buffer.getvalue())
             self.buffer.truncate(0), self.buffer.seek(0)
 
+
 class IOWrapper(IOBase):
     def __init__(self, file):
         self.buffer = FastIO(file)
@@ -111,7 +113,9 @@ class IOWrapper(IOBase):
         self.read = lambda: self.buffer.read().decode("ascii")
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
 
 def print(*args, **kwargs):
     """Prints the values to a stream, or to sys.stdout by default."""
@@ -129,7 +133,7 @@ def print(*args, **kwargs):
     if kwargs.pop("flush", False):
         file.flush()
 
+
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 main()
-

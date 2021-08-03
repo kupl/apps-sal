@@ -13,4 +13,3 @@ for i in range(m):
 
 largest_cc = max(nx.connected_components(G), key=len)
 print((len(largest_cc)))
-

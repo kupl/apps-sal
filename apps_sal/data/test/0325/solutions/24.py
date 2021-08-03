@@ -1,5 +1,5 @@
 def bellman_ford(s, n, G):
-    d = [float('inf')]*n
+    d = [float('inf')] * n
     d[s] = 0
     for i in range(n):
         update = False
@@ -13,6 +13,7 @@ def bellman_ford(s, n, G):
             return None
     return d
 
+
 def main():
     n, m, p = map(int, input().split())
     G = []
@@ -21,18 +22,18 @@ def main():
     dic = {}
     for _ in range(m):
         a, b, c = map(int, input().split())
-        if (a-1, b-1) in dic:
-            if dic[(a-1, b-1)] > -c+p:
-                dic[(a-1, b-1)] = -c+p
+        if (a - 1, b - 1) in dic:
+            if dic[(a - 1, b - 1)] > -c + p:
+                dic[(a - 1, b - 1)] = -c + p
         else:
-            dic[(a-1, b-1)] = -c+p
+            dic[(a - 1, b - 1)] = -c + p
     for v in dic.keys():
         G.append([v[0], v[1], dic[v]])
         U[v[1]].append(v[0])
         V[v[0]].append(v[1])
     st1 = set()
-    st1.add(n-1)
-    q = [n-1]
+    st1.add(n - 1)
+    q = [n - 1]
     while len(q) > 0:
         t = q.pop(-1)
         for v in U[t]:
@@ -57,8 +58,11 @@ def main():
     if ans is None:
         print(-1)
     else:
-        print(max(0, -ans[n-1]))
+        print(max(0, -ans[n - 1]))
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

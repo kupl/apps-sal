@@ -5,6 +5,8 @@ def f(m, s, g):
         else:
             s += i
     return s == g
+
+
 s = input()
 x, y = map(int, input().split())
 m = list(map(len, s.split('T')))

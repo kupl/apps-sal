@@ -11,4 +11,3 @@ for i in range(le - 1, -1, -1):
         k += 1
     ans += le - m[i]
 print(ans)
-

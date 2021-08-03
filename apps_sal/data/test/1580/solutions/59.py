@@ -60,7 +60,7 @@ class UnionFind:
 def main():
     n, m = geta(int)
 
-    uf = UnionFind(2*n)
+    uf = UnionFind(2 * n)
 
     ans = n
 
@@ -69,9 +69,9 @@ def main():
 
         united = False
         if z & 1 == 0:
-            united = uf.unite(2*x-2, 2*y-2) and uf.unite(2*x-1, 2*y-1)
+            united = uf.unite(2 * x - 2, 2 * y - 2) and uf.unite(2 * x - 1, 2 * y - 1)
         else:
-            united = uf.unite(2*x-2, 2*y-1) and uf.unite(2*x-1, 2*y-2)
+            united = uf.unite(2 * x - 2, 2 * y - 1) and uf.unite(2 * x - 1, 2 * y - 2)
 
         if united:
             ans -= 1
@@ -81,5 +81,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

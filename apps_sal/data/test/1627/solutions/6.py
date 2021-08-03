@@ -18,4 +18,3 @@ for i in range(n):
 
 for a, b in swaps:
     print(a, b)
-

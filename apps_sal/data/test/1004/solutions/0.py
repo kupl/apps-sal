@@ -8,7 +8,7 @@ A = list(map(int, readline().split()))
 S = set()
 
 ans = True
-Ans = [] 
+Ans = []
 cnt = 0
 for a in A:
     cnt += 1

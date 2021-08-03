@@ -1,6 +1,6 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        
+
         prod = 1
         pos, neg = -1, None
         ans = 0
@@ -17,5 +17,3 @@ class Solution:
                         neg = i
                     ans = max(ans, i - neg)
         return ans
-                        
-

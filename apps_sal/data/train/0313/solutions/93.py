@@ -1,7 +1,7 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         def canMake(bloomDay, m, k, day):
-            
+
             r, cur, cnt = 0, 0, 0
             while r < len(bloomDay):
                 if bloomDay[r] <= day:
@@ -15,7 +15,7 @@ class Solution:
                     cur = 0
                 r += 1
             return False
-        if m*k > len(bloomDay):
+        if m * k > len(bloomDay):
             return -1
         left, right = min(bloomDay), max(bloomDay)
         while left < right:
@@ -25,4 +25,3 @@ class Solution:
             else:
                 right = mid
         return left
-

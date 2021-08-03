@@ -1,5 +1,6 @@
 n, m = map(int, input().split())
-if (m >= n): print(n)
+if (m >= n):
+    print(n)
 else:
     c = n - m
     l = 0

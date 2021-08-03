@@ -1,7 +1,7 @@
 import math
 n, m, k, q = list(map(int, input().split()))
 right = [-1] * n
-left  = [-1] * n
+left = [-1] * n
 for i in range(k):
     row, col = list(map(int, input().split()))
     row -= 1
@@ -44,10 +44,10 @@ for i in range(1, n):
     right_1b = lup[right[lastn]]
     right_2b = rup[right[lastn]]
     ilen = right[i] - left[i]
-    ll1 : int
-    ll2 : int
-    rl1 : int
-    rl2 : int
+    ll1: int
+    ll2: int
+    rl1: int
+    rl2: int
     if left_1b != -1:
         ll1 = (left[lastn] - left_1b) + abs(right[i] - left_1b)
     else:
@@ -65,8 +65,8 @@ for i in range(1, n):
     else:
         rl2 = math.inf
     dleft_new = min(dleft + min(ll1, ll2), dright + min(rl1, rl2)) + ilen
-    lr1 : int
-    lr2 : int
+    lr1: int
+    lr2: int
     rr1: int
     rr2: int
     if left_1b != -1:
@@ -89,4 +89,3 @@ for i in range(1, n):
     dleft, dright = dleft_new, dright_new
     lastn = i
 print(min(dleft, dright) + lastn)
-

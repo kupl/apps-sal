@@ -12,13 +12,14 @@ def check(lst):
                 b = False
                 break
             sost = 1
-        else: 
+        else:
             sost = 2
     return b
+
+
 n = int(input())
 a = list(map(int, input().split()))
 if check(a):
     print('YES')
 else:
     print('NO')
-

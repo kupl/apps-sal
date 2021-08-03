@@ -1,9 +1,13 @@
+from heapq import heapify, heappop
+
+
 class Node:
     def __init__(self, parent, value):
         self.parent = parent
         self.rank = 0
         self.size = 1
         self.value = value
+
 
 class UnionFind:
     def __init__(self, nodes):
@@ -34,15 +38,15 @@ class UnionFind:
             self.subsets[i].parent = self.find(self.subsets[i].parent)
         return self.subsets[i].parent
 
-from heapq import heapify, heappop
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         for i in range(len(points)):
             x1, y1 = points[i]
-            for j in range(i+1, len(points), 1):
+            for j in range(i + 1, len(points), 1):
                 x2, y2 = points[j]
-                edges.append((abs(x1-x2)+abs(y1-y2), i, j))
+                edges.append((abs(x1 - x2) + abs(y1 - y2), i, j))
         heapify(edges)
         uf = UnionFind(range(len(points)))
         total = 0

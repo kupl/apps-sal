@@ -1,6 +1,8 @@
-import sys
-input = lambda: sys.stdin.readline().rstrip()
 from collections import deque
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 N = int(input())
 C, Y = [], []
 for _ in range(N):
@@ -13,10 +15,10 @@ if sum(Y):
     return
 
 X = [[] for i in range(N)]
-for i in range(N-1):
+for i in range(N - 1):
     x, y = list(map(int, input().split()))
-    X[x-1].append(y-1)
-    X[y-1].append(x-1)
+    X[x - 1].append(y - 1)
+    X[y - 1].append(x - 1)
 
 P = [-1] * N
 Q = deque([0])
@@ -40,4 +42,3 @@ for i in R[1:][::-1]:
     Y[P[i]] += Y[i]
 
 print(ans * 2)
-

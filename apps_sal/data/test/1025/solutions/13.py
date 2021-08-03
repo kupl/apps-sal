@@ -2,7 +2,7 @@ def main():
     import sys
     from collections import defaultdict
     from fractions import gcd
-    
+
     normalize = [[0] * 405 for i in range(405)]
     for x in range(-200, 201):
         for y in range(-200, 201):
@@ -18,14 +18,13 @@ def main():
             nx += 200
             ny += 200
             normalize[x][y] = nx * 401 + ny
-            
-    
+
     tokens = [int(i) for i in sys.stdin.read().split()]
     tokens.reverse()
-    
+
     n = tokens.pop()
     points = [(tokens.pop(), tokens.pop()) for i in range(n)]
-    
+
     result = 0
     angles = [0] * 170000
     for i in range(n):
@@ -38,10 +37,8 @@ def main():
             k = angles[normalize[x - x0][y - y0]]
             result += k * (n - i - 1 - k)
             angles[normalize[x - x0][y - y0]] = 0
-    
-    print(result // 2)
-        
-        
-    
-main()
 
+    print(result // 2)
+
+
+main()

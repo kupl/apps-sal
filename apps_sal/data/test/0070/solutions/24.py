@@ -17,4 +17,3 @@ else:
             p += 1
         i -= 1
     print(p)
-

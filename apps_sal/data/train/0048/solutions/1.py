@@ -14,11 +14,12 @@ INF = 10 ** 20
 MOD = 10 ** 9 + 7
 # MOD = 998244353
 
-ni = lambda: int(sys.stdin.readline().rstrip())
-ns = lambda: list(map(int, sys.stdin.readline().rstrip().split()))
-na = lambda: list(map(int, sys.stdin.readline().rstrip().split()))
-na1 = lambda: list([int(x) - 1 for x in sys.stdin.readline().rstrip().split()])
-flush = lambda: sys.stdout.flush()
+
+def ni(): return int(sys.stdin.readline().rstrip())
+def ns(): return list(map(int, sys.stdin.readline().rstrip().split()))
+def na(): return list(map(int, sys.stdin.readline().rstrip().split()))
+def na1(): return list([int(x) - 1 for x in sys.stdin.readline().rstrip().split()])
+def flush(): return sys.stdout.flush()
 
 
 # ===CODE===
@@ -36,5 +37,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

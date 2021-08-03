@@ -7,4 +7,5 @@ def resolve():
     else:
         print("Bob")
 
+
 resolve()

@@ -17,4 +17,3 @@ for i in range(len(s)):
         pass
 if z:
     print((-1, -1))
-

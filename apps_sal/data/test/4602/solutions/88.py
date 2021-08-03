@@ -11,4 +11,3 @@ for pos in X:
         result += 2 * abs(pos - K)
 
 print(result)
-

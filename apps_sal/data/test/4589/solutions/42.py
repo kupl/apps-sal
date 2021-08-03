@@ -21,4 +21,3 @@ for i in range(h):
         else:
             line += str(counter)
     print(line)
-

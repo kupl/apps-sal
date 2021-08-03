@@ -11,4 +11,3 @@ for i in range(n):
     else:
         res += abs(m[i] - mean - 1)
 print(res // 2)
-

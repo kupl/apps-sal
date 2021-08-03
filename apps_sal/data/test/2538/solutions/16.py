@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    
+
     s, i, e = map(int, input().split())
-    
+
     lo, hi, res = 0, e, 0
 
     if s + e <= i:
@@ -17,5 +17,5 @@ for _ in range(int(input())):
             hi = mi - 1
         else:
             lo = mi + 1
-    
+
     print(e - res + 1)

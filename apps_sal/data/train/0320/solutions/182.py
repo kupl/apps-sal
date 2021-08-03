@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         step = 0
@@ -14,8 +16,7 @@ class Solution:
                         nums[i] /= 2
         return step
 
-        
-        
+
 #         step = 0
 #         l = deque()
 #         l.append([0] * len(nums))
@@ -34,9 +35,8 @@ class Solution:
 #                     l.append(mul_next)
 #             step += 1
 #         return step
-                
-       
-        
+
+
 #     def add(self, cur: List[int], target: List[int], idx: int):
 #         if cur[idx] + 1 > target[idx]:
 #             return [], False
@@ -44,7 +44,7 @@ class Solution:
 #             new_list = cur.copy()
 #             new_list[idx] += 1
 #             return new_list, True
-    
+
 #     def multiply(self, cur: List[int], target: List[int]):
 #         new_list = cur.copy()
 #         for i in range(len(new_list)):
@@ -52,4 +52,3 @@ class Solution:
 #             if new_list[i] > target[i]:
 #                 return [], False
 #         return new_list, True
-

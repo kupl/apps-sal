@@ -1,13 +1,13 @@
 
-n,k=list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 
 
-s=input()
+s = input()
 
-a=0
-b=0
-p=0
-ind=0
+a = 0
+b = 0
+p = 0
+ind = 0
 
 for i in range(n):
 
@@ -21,43 +21,12 @@ for i in range(n):
             a -= 1
 
         else:
-            b-=1
+            b -= 1
 
         p += 1
 
-
     else:
-        ind+=1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ind += 1
 
 
 print(ind)
-
-
-                      
-            
-
-

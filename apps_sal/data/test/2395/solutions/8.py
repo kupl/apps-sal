@@ -9,4 +9,3 @@ for zz in range(int(input())):
         print(*[1] * n, sep='')
     else:
         print(*[0, 1] * (n), sep='')
-

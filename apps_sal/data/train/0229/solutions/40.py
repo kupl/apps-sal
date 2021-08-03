@@ -8,7 +8,7 @@ class Solution:
                 if -n not in neg:
                     neg[-n] = 0
                 neg[-n] += 1
-            elif n >0:
+            elif n > 0:
                 if n not in pos:
                     pos[n] = 0
                 pos[n] += 1
@@ -16,17 +16,16 @@ class Solution:
                 zero += 1
         if zero % 2 != 0:
             return False
-        #print(pos,neg)
+        # print(pos,neg)
+
         def helper(nums):
-            num_sorted = sorted(list(nums.keys()),reverse = True)
+            num_sorted = sorted(list(nums.keys()), reverse=True)
             while num_sorted:
                 a = num_sorted.pop()
                 if nums[a] == 0:
                     continue
-                if 2*a not in nums or nums[a]>nums[2*a]:
+                if 2 * a not in nums or nums[a] > nums[2 * a]:
                     return False
-                nums[2*a] -= nums[a]
+                nums[2 * a] -= nums[a]
             return True
         return helper(pos) and helper(neg)
-                
-

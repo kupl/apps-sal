@@ -1,4 +1,5 @@
-N = ['zero','one','two','three','four','five','six','seven','eight','nine']
+N = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+
 
 def average_string(s):
     try:

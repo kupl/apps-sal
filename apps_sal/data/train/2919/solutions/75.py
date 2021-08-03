@@ -6,7 +6,7 @@ def encode(message, key):
 
     numbers = [dic_letters[letter] for letter in message]
 
-    lst_key = len(message)*[int(x) for x in str(key)]
+    lst_key = len(message) * [int(x) for x in str(key)]
 
     lst_zip = list(zip(numbers, lst_key))
 

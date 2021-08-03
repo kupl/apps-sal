@@ -1,10 +1,10 @@
 def group_groceries(groceries):
     groups = ["fruit", "meat", "other", "vegetable"]
     d = {}
-    
+
     for item in groceries.split(','):
         g, i = item.split('_')
-        
+
         g = g if g in groups else "other"
         try:
             d[g].append(i)

@@ -6,7 +6,7 @@ class Solution:
             num_freq[num] = num_freq.get(num, 0) + 1
         for f in num_freq.values():
             freq_freq[f] = freq_freq.get(f, 0) + 1
-        
+
         n = len(nums)
         if len(freq_freq) == 2:
             key1, key2 = list(freq_freq.keys())
@@ -18,7 +18,7 @@ class Solution:
             key = list(freq_freq.keys())[0]
             if key == 1 or freq_freq[key] == 1:
                 return n
-        
+
         for i in range(n):
             num = nums[n - i - 1]
             prev_freq = num_freq[num]

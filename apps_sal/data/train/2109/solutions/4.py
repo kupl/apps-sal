@@ -1,12 +1,26 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**15
-mod = 10**9+7
+mod = 10**9 + 7
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -19,28 +33,24 @@ def main():
     n = I()
     rr = []
     for _ in range(n):
-        a,b = LI()
-        t = a*b
+        a, b = LI()
+        t = a * b
         s = int(t ** 0.5)
         if t < 3:
             rr.append(0)
         elif a == b:
-            if (a-1) * (b+1) < t:
-                rr.append((a-1)*2)
+            if (a - 1) * (b + 1) < t:
+                rr.append((a - 1) * 2)
             else:
-                rr.append((a-1)*2-1)
-        elif s*s == t:
-            rr.append((s-1)*2-1)
-        elif s*(s+1) < t:
-            rr.append(s*2-1)
+                rr.append((a - 1) * 2 - 1)
+        elif s * s == t:
+            rr.append((s - 1) * 2 - 1)
+        elif s * (s + 1) < t:
+            rr.append(s * 2 - 1)
         else:
-            rr.append((s-1)*2)
-
+            rr.append((s - 1) * 2)
 
     return '\n'.join(map(str, rr))
 
 
 print(main())
-
-
-

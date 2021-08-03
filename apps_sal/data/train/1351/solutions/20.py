@@ -6,5 +6,3 @@ for _ in range(int(input())):
     for i in range(n):
         m[a[i]] = a[i]
     print(*m)
-        
-

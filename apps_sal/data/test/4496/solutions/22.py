@@ -8,4 +8,3 @@ if a == 23:
     print('Christmas Eve Eve')
 if a == 22:
     print('Christmas Eve Eve Eve')
-

@@ -1,8 +1,8 @@
 def reverse(st):
-    st=st.split(" ")
+    st = st.split(" ")
     for i in st:
-        if i=="":
+        if i == "":
             st.remove(i)
-    st=st[::-1]
-    st=" ".join(st)
+    st = st[::-1]
+    st = " ".join(st)
     return st.strip()

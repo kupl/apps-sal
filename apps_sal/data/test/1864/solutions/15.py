@@ -1,7 +1,7 @@
 d = input()
 d = int(d)
 st1 = input()
-notes = [ int(i) for i in st1.split(" ") ]
+notes = [int(i) for i in st1.split(" ")]
 
 
 def unfortunate_sum(notes):
@@ -12,5 +12,5 @@ def unfortunate_sum(notes):
         print(1)
         return
 
-unfortunate_sum(notes)
 
+unfortunate_sum(notes)

@@ -10,11 +10,11 @@ for elem in a:
 if (len(c) == 0):
     print('-')
     #print('"' + ','.join(c) + '"')
-    print('"' + ','.join(d) + '"')    
+    print('"' + ','.join(d) + '"')
 elif (len(d) == 0):
     print('"' + ','.join(c) + '"')
-    #print('"' + ','.join(d) + '"')    
+    #print('"' + ','.join(d) + '"')
     print('-')
 else:
     print('"' + ','.join(c) + '"')
-    print('"' + ','.join(d) + '"')    
+    print('"' + ','.join(d) + '"')

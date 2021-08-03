@@ -18,4 +18,3 @@ if maxres < 0 or minres > w or minres > maxres:
     print(0)
 else:
     print(maxres - minres + 1)
-

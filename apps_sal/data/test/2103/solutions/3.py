@@ -32,4 +32,3 @@ while jokers:
     B[p] = current
 
 print(' '.join(map(str, B)))
-

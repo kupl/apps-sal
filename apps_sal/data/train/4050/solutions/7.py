@@ -6,8 +6,10 @@ d = {
     "NRN": "no reply necessary", "CTA": "call to action", "SWOT": "strengths, weaknesses, opportunities and threats"
 }
 
+
 def acronym_buster(s):
     a = []
+
     def f(x):
         x = x[0]
         if x.isupper() and len(x) > 2:

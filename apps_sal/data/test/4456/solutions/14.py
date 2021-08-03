@@ -39,5 +39,3 @@ else:
         ans[P[i]] = chr(min(25, color[i] - 1) + ord('a'))
     print('YES')
     print(''.join(ans))
-    
-

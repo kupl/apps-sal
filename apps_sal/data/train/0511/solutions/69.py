@@ -9,4 +9,3 @@ ans = []
 for i in a:
     ans.append(b ^ i)
 print((" ".join(map(str, ans))))
-

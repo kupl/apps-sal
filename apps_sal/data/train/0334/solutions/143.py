@@ -6,4 +6,4 @@ class Solution:
                 max_cost = 0
             fee += min(cst, max_cost)
             max_cost = max(cst, max_cost)
-        return fee    
+        return fee

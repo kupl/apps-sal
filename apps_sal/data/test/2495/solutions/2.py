@@ -1,6 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 
+
 def cost(a, neg=False):
     sign = -1 if neg else 1
     if sign * a[0] > 0:
@@ -19,5 +20,5 @@ def cost(a, neg=False):
             cum = sign
     return ret
 
-print((min(cost(a, False), cost(a, True))))
 
+print((min(cost(a, False), cost(a, True))))

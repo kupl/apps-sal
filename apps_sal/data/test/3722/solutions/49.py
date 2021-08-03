@@ -1,15 +1,16 @@
+from functools import lru_cache
+
+
 def f(n, table):
     s = {"ab"}
     tmp = set()
     for _ in range(n - 2):
         for ss in s:
             for i in range(len(ss) - 1):
-                tmp.add(ss[: i + 1] + table[ss[i : i + 2]] + ss[i + 1 :])
+                tmp.add(ss[: i + 1] + table[ss[i: i + 2]] + ss[i + 1:])
         s, tmp = tmp, set()
     return len(s)
 
-
-from functools import lru_cache
 
 M = 1_000_000_007
 
@@ -45,4 +46,3 @@ else:
         print((1))
     else:
         print((t(n - 3)))
-

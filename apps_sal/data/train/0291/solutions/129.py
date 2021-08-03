@@ -15,5 +15,5 @@ class Solution:
                 ans = (ans + even_count) % mod
                 seen_odd.add(psum)
                 odd_count += 1
-                
+
         return ans

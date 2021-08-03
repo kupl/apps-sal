@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def mean_vs_median(numbers):
     mean_v = np.mean(numbers)
     median_v = np.median(numbers)
@@ -9,4 +10,3 @@ def mean_vs_median(numbers):
         return 'mean'
     else:
         return 'same'
-

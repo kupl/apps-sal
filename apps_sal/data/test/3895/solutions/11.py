@@ -21,7 +21,3 @@ if ok:
 
 else:
     print(-1)
-
-
-
-

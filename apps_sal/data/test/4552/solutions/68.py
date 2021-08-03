@@ -21,4 +21,3 @@ for i in range(1, 1 << 10):
     res = max(res, tmp_res)
 
 print(res)
-

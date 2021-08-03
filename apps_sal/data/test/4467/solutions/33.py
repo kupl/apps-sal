@@ -1,4 +1,6 @@
-import collections, itertools, copy
+import collections
+import itertools
+import copy
 
 
 class MaximumFlow:
@@ -51,4 +53,3 @@ for a in G:
     for b in G[a]:
         if G_residue[b][a] > 0:
             flow_dict[a][b] = G_residue[b][a]
-

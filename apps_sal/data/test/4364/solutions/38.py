@@ -19,4 +19,3 @@ elif F <= 12 and B > 12:
     print('MMYY')
 else:
     print('NA')
-

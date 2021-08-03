@@ -2,7 +2,7 @@ import math
 import bisect
 import itertools
 import sys
-mod=10**9 +7
+mod = 10**9 + 7
 '''fact=[1]*1001
 ifact=[1]*1001
 for i in range(1,1001):
@@ -26,7 +26,7 @@ def npr(n,r):
     return a*b//math.gcd(a,b)
 
     '''
-    
+
 '''def merge(a,b):
     i=0;j=0
     c=0
@@ -67,15 +67,15 @@ def is_prime(num):
         a = 6 - a
     return True
  '''
-a1=[2,6]
-a2=[3,18]
-a=[]
+a1 = [2, 6]
+a2 = [3, 18]
+a = []
 for i in range(100000):
-    a2.append(((a2[-1]+a1[-1]+1)*3)%mod)
-    a1.append(((a1[-1]+1)*2)%mod)
+    a2.append(((a2[-1] + a1[-1] + 1) * 3) % mod)
+    a1.append(((a1[-1] + 1) * 2) % mod)
 for i in range(100000):
-    a.append(a1[i]+a2[i]+1)
-t=int(input())
+    a.append(a1[i] + a2[i] + 1)
+t = int(input())
 for i in range(t):
-    n=int(input())
-    print(a[n- 1])
+    n = int(input())
+    print(a[n - 1])

@@ -15,4 +15,4 @@ pqrlist = plist + qlist + rlist
 pqrlist.sort()
 pqrlist = pqrlist[::-1]
 
-print(sum(pqrlist[:X+Y]))
+print(sum(pqrlist[:X + Y]))

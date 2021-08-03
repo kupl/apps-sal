@@ -34,4 +34,3 @@ for i in range(n - 2):
         ans += c1 * c2
         ans %= mod
 print(ans)
-

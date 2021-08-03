@@ -10,4 +10,3 @@ if num1 == num3 and num2 == num4:
     print("YES")
 else:
     print("NO")
-

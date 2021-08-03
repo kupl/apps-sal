@@ -12,7 +12,7 @@ for el in a:
     else:
         nul += 1
 
-polov = n//2 + n%2
+polov = n // 2 + n % 2
 d = 0
 if pol >= polov:
     d = 1

@@ -12,4 +12,3 @@ for i in range(t):
     while b[j] <= n:
         j += 1
     print(j)
-

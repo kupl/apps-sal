@@ -7,7 +7,3 @@ class Solution:
             return 0
         else:
             return diff - coverage
-        
-                
-                
-

@@ -5,4 +5,3 @@ if y >= 2020:
 if y == 2019 and m >= 5:
     flg = False
 print(("Heisei" if flg else "TBD"))
-

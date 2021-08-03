@@ -1,4 +1,4 @@
-h, a = list(map(int,input().split()))
+h, a = list(map(int, input().split()))
 
 c = 0
 while h > 0:
@@ -6,4 +6,3 @@ while h > 0:
     c += 1
 
 print(c)
-

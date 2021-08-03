@@ -12,7 +12,7 @@ class Solution:
             if grumpy[i] == 1:
                 while q and i - q[0][1] >= X:
                     oneTotal -= q.popleft()[0]
-                q.append((customers[i],i))
+                q.append((customers[i], i))
                 oneTotal += customers[i]
                 largest = max(largest, oneTotal)
         return zeroTotal + largest

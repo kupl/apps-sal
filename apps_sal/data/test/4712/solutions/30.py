@@ -7,4 +7,3 @@ for i in range(H):
     print(('#' + input() + '#'))
 
 print((''.join(['#'] * (W + 2))))
-

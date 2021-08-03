@@ -14,12 +14,13 @@ def main():
         r1, c1, r2, c2 = list(map(int, input().split()))
         r1 -= 1
         c1 -= 1
-        res.append(str(ver[r2 - 1][c2] - ver[r1][c2] - ver[r2 - 1][c1] + ver[r1][c1] +
-                       hor[r2][c2 - 1] - hor[r1][c2 - 1] - hor[r2][c1] + hor[r1][c1]))
+        res.append(str(ver[r2 - 1][c2] - ver[r1][c2] - ver[r2 - 1][c1] + ver[r1][c1]
+                       + hor[r2][c2 - 1] - hor[r1][c2 - 1] - hor[r2][c1] + hor[r1][c1]))
     print('\n'.join(res))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

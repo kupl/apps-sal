@@ -1,1 +1,1 @@
-is_divisible = lambda l,p: 0 == l%p
+def is_divisible(l, p): return 0 == l % p

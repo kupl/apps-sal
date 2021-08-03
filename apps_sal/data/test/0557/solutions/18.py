@@ -17,4 +17,3 @@ if mar >= m:
     print('YES')
 else:
     print('NO')
-

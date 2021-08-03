@@ -8,4 +8,4 @@ y3 = y2 + a
 x4 = x2 - b - a
 y4 = y2 + a - b
 
-print(x3,y3,x4,y4)
+print(x3, y3, x4, y4)

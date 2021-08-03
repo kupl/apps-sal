@@ -11,7 +11,7 @@ class Solution:
         while head:
             answer.append(0)
             while len(stack) > 0 and stack[-1][0] < head.val:
-                number_and_index = stack.pop()                
+                number_and_index = stack.pop()
                 answer[number_and_index[1]] = head.val
             stack.append((head.val, index))
             index += 1

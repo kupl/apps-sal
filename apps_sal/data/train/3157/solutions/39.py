@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 def number(bus_stops):
     return -reduce(
         lambda x, y: y - x,
@@ -8,4 +9,3 @@ def number(bus_stops):
             bus_stops
         )
     )
-

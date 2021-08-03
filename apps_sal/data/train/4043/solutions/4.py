@@ -2,15 +2,15 @@ from itertools import combinations
 
 
 def calc(gamemap):
-    x_max, y_max = len(gamemap)-1, len(gamemap[0])-1
+    x_max, y_max = len(gamemap) - 1, len(gamemap[0]) - 1
     last_step = x_max + y_max - 1
     dynamic_table = {((0, 1), (1, 0)): gamemap[0][0] + gamemap[0][1] + gamemap[1][0] + gamemap[-2][-1] + gamemap[-1][-2] + gamemap[-1][-1]}
     for step in range(2, last_step):
         _dynamic_table = {}
-        x_lower_limit = max(0, step-y_max)
-        x_upper_limit = min(step+1, x_max+1)
+        x_lower_limit = max(0, step - y_max)
+        x_upper_limit = min(step + 1, x_max + 1)
         for x1, x2 in combinations(range(x_lower_limit, x_upper_limit), 2):
-            y1, y2 = step-x1, step-x2
+            y1, y2 = step - x1, step - x2
             # store potential previous steps
             previous_steps = set()
             d1 = []

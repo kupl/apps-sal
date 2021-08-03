@@ -17,4 +17,3 @@ for _ in range(int(input())):
             print(ans1)
         else:
             print(ans2)
-

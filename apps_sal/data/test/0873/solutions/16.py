@@ -21,4 +21,3 @@ for i in range(n):
         cnt2 += 1
     ans += min(cnt1, cnt2)
 print(ans)
-

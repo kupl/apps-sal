@@ -9,8 +9,8 @@ for i in range(n):
 for i in range(m):
     b.append(list(map(int, input().split())))
 
-a = sorted(a, key=lambda x: x[0] + (1- x[1] * 1e-10))
-b = sorted(b, key=lambda x: x[0] + (1- x[1] * 1e-10))
+a = sorted(a, key=lambda x: x[0] + (1 - x[1] * 1e-10))
+b = sorted(b, key=lambda x: x[0] + (1 - x[1] * 1e-10))
 
 tc, td = 0, 0
 
@@ -35,23 +35,23 @@ while ai > 0:
         continue
     else:
         break
-    
+
 cmax = tc
 
 while bi > 0:
     bi -= 1
     tc += b[bi][0]
     td += b[bi][1]
-    
+
     while td > d and ai < n:
         tc -= a[ai][0]
         td -= a[ai][1]
         ai += 1
-    
+
     if ai == n:
         break
-    
+
     if td <= d:
         cmax = max(cmax, tc)
-        
+
 print(cmax)

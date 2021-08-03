@@ -1,4 +1,4 @@
-def halving_sum(n): 
+def halving_sum(n):
     i = 0
     x = 0
     while True:

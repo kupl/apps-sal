@@ -1,3 +1,4 @@
+import heapq
 N = int(input())
 Xs = []
 Ys = []
@@ -9,10 +10,11 @@ Xs.sort()
 Ys.sort()
 Edges = []
 for i in range(1, N):
-    (x1, v1), (x2, v2) = Xs[i-1], Xs[i]
-    Edges.append((abs(x1-x2), v1, v2))
-    (y1, v1), (y2, v2) = Ys[i-1], Ys[i]
-    Edges.append((abs(y1-y2), v1, v2))
+    (x1, v1), (x2, v2) = Xs[i - 1], Xs[i]
+    Edges.append((abs(x1 - x2), v1, v2))
+    (y1, v1), (y2, v2) = Ys[i - 1], Ys[i]
+    Edges.append((abs(y1 - y2), v1, v2))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -52,7 +54,7 @@ class UnionFind():
     def roots(self):
         return [i for i, x in enumerate(self.parents) if x < 0]
 
-import heapq
+
 heapq.heapify(Edges)
 uf = UnionFind(N)
 ans = 0

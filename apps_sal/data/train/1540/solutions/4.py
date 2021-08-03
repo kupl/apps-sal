@@ -1,9 +1,9 @@
 T = int(input())
-while T>0:
+while T > 0:
     N = int(input())
     K = int(input())
-    if K %N ==0:
+    if K % N == 0:
         print("YES")
     else:
         print("NO")
-    T = T-1
+    T = T - 1

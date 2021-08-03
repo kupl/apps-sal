@@ -2,6 +2,8 @@ def app(s, alph):
     nonlocal cnt
     alph[s] = cnt
     cnt += 1
+
+
 def f(s, n, step, alph, used):
     if n == step:
         app(s, alph)
@@ -15,6 +17,8 @@ def f(s, n, step, alph, used):
         used[step][0] = False
         used[step][1] = False
     return
+
+
 def main():
     nonlocal cnt
     s = input()
@@ -24,5 +28,7 @@ def main():
         used = [[False, False] for i in range(i + 1)]
         f('', i + 1, 0, alph, used)
     print(alph[s])
+
+
 cnt = 1
 main()

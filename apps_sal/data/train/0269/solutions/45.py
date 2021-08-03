@@ -5,7 +5,7 @@ class Solution:
                 return nums.index(*argc)
             except ValueError:
                 return -1
-            
+
         prev = find(nums, 1)
         while prev != -1:
             cur = find(nums, 1, prev + 1)

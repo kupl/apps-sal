@@ -12,5 +12,3 @@ class Solution:
             start += 1
             end -= 1
         return ''.join(S)
-                
-

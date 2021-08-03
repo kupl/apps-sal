@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
 if "Y" in s:
-  print("Four")
+    print("Four")
 else:
-  print("Three")
+    print("Three")

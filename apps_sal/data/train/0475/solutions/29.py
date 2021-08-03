@@ -1,4 +1,6 @@
 from queue import PriorityQueue
+
+
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         pq = PriorityQueue()
@@ -14,6 +16,6 @@ class Solution:
             if i >= left:
                 ans = (ans + cur[0]) % mod
             if cur[1] < sz - 1:
-                pq.put((cur[0] + nums[cur[1]+1], cur[1] + 1))
+                pq.put((cur[0] + nums[cur[1] + 1], cur[1] + 1))
 
         return ans

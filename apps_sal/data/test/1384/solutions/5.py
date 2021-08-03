@@ -1,4 +1,4 @@
-n =  int(input())
+n = int(input())
 data = list(map(int, input().split()))
 data2 = [0] * n
 data2[0] = data[0]

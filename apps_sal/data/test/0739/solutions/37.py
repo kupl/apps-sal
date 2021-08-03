@@ -29,7 +29,7 @@ def f_takahashi_basics_in_education_and_learning(L, A, B, M, DIGIT_MAX=18):
             a = multiply(a, a)
             k >>= 1
         return ret
- 
+
     # 数列に対して、d桁の要素の個数を求める
     num_pow_d = [0] * (DIGIT_MAX + 1)
     for d in range(DIGIT_MAX + 1):
@@ -44,6 +44,7 @@ def f_takahashi_basics_in_education_and_learning(L, A, B, M, DIGIT_MAX=18):
         matrix = [[10**d, 0, 0], [1, 1, 0], [0, B, 1]]
         array = multiply(array, power(matrix, c_d))
     return array[0][0]
+
 
 L, A, B, M = [int(i) for i in input().split()]
 print(f_takahashi_basics_in_education_and_learning(L, A, B, M))

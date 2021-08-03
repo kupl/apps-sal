@@ -6,5 +6,4 @@ for _ in range(int(input())):
         if abc[-1] * abc[-1] == abc[0] * abc[0] + abc[1] * abc[1]:
             print("YES")
         else:
-            print("NO")    
-
+            print("NO")

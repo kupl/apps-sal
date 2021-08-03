@@ -26,6 +26,7 @@ def decide_hand2(T, hand, i, K, N):
             else:
                 hand[i] = "r"
 
+
 def main():
     N, K = map(int, input().split())
     R, S, P = map(int, input().split())
@@ -45,7 +46,10 @@ def main():
             ans += P
 
     print(ans)
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

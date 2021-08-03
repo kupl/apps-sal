@@ -13,8 +13,8 @@ def main():
     S = readline().strip()
 
     ans = 0
-    for i in range(N-1):
-        if S[i] == S[i+1]:
+    for i in range(N - 1):
+        if S[i] == S[i + 1]:
             ans += 1
 
     ans += 2 * K
@@ -27,5 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

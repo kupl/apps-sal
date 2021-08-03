@@ -4,6 +4,5 @@ def multi_table(number):
     for i in range(1, 11):
         ans += f'{i} * {number} = {i*number}\n'
         i += i
-        
-    return ans[:-1]
 
+    return ans[:-1]

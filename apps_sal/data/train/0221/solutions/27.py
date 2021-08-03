@@ -1,51 +1,49 @@
 class Solution:
-    def findRepSubstrGivenLength(self, nums: List[int], l:int, base:int, modulus:int) -> int:
-        
+    def findRepSubstrGivenLength(self, nums: List[int], l: int, base: int, modulus: int) -> int:
+
         n = len(nums)
-        
+
         h = 0
         for i in range(l):
             h = (h * base + nums[i]) % modulus
-            
+
         seen = {h}
-            
-        for start in range(1, n-l+1):
+
+        for start in range(1, n - l + 1):
             h = (h * base - nums[start - 1] * pow(base, l, modulus) + nums[start + l - 1]) % modulus
-            
+
             if h in seen:
                 return start
-            
+
             seen.add(h)
-            
-        return -1    
-    
-    
+
+        return -1
+
     def longestDupSubstring(self, S: str) -> str:
         if not S:
             return ''
-                
+
         nums = [ord(S[i]) - ord('a') for i in range(len(S))]
-        
+
         base = 26
         modulus = 2**32
-        
+
         left = 1
         right = len(S)
-        
+
         while left <= right:
             mid = left + (right - left) // 2
-            
+
             if self.findRepSubstrGivenLength(nums, mid, base, modulus) != -1:
                 left = mid + 1
             else:
-                right = mid -1
-                
-        start = self.findRepSubstrGivenLength(nums, left-1, base, modulus)
-        
-        return S[start: start + left -1]    
-        
-        
-        
+                right = mid - 1
+
+        start = self.findRepSubstrGivenLength(nums, left - 1, base, modulus)
+
+        return S[start: start + left - 1]
+
+
 '''
 class Solution:
     class Node:
@@ -112,4 +110,4 @@ class Solution:
         maxDepthDuplicates = self.getLongestDuplicate(root)
         
         return maxDepthDuplicates
-'''        
+'''

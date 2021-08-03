@@ -8,15 +8,15 @@ def input():
 
 n = int(input())
 e = [[] for _ in range(n)]
-for _ in range(n-1):
+for _ in range(n - 1):
     a, b = [int(i) - 1 for i in input().split()]
     e[a].append(b)
     e[b].append(a)
 
-mod = 10**9+7
+mod = 10**9 + 7
 
 kkai = [1]
-for i in range(1, 2*10 ** 5):
+for i in range(1, 2 * 10 ** 5):
     kkai.append(kkai[-1] * i % mod)
 
 
@@ -56,7 +56,7 @@ a = [0] * n
 
 
 def dfs2(i=0, r=-1):
-    s = kai(child[i]-1)
+    s = kai(child[i] - 1)
     t = 1
     for j in e[i]:
         if j == r:
@@ -80,7 +80,7 @@ def dfs3(i=0, r=-1):
         b[i] = a[i]
     else:
         s = b[r] * child[i] % mod
-        s *= pow(n-child[i], mod - 2, mod)
+        s *= pow(n - child[i], mod - 2, mod)
         s %= mod
         b[i] = s
 
@@ -92,4 +92,3 @@ def dfs3(i=0, r=-1):
 
 dfs3()
 print(("\n".join(map(str, b))))
-

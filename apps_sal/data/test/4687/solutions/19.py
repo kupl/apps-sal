@@ -7,7 +7,7 @@ def main():
         ab = list(map(int, input().split()))
         box.append(ab)
 
-    box.sort(key= lambda x: x[0])
+    box.sort(key=lambda x: x[0])
     ans = 0
     for b in box:
         if ans + b[1] < K:
@@ -19,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

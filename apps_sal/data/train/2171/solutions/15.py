@@ -1,5 +1,5 @@
-# Made By Mostafa_Khaled 
-bot = True 
+# Made By Mostafa_Khaled
+bot = True
 n = int(input())
 
 p = [[] for i in range(n + 1)]
@@ -49,4 +49,3 @@ print(len(q))
 print('\n'.join(map(str, q)))
 
 # Made By Mostafa_Khaled
-

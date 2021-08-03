@@ -1,10 +1,10 @@
-N,M = map(int, input().split())
+N, M = map(int, input().split())
 
 AC = [0] * N
 WA = [0] * N
 
 for _ in range(M):
-    p,S = input().split()
+    p, S = input().split()
     p = int(p) - 1
     if AC[p] == 1:
         continue
@@ -14,6 +14,6 @@ for _ in range(M):
         else:
             WA[p] += 1
 
-Pen = [x*y for (x, y) in zip(AC, WA)]
+Pen = [x * y for (x, y) in zip(AC, WA)]
 
 print(sum(AC), sum(Pen))

@@ -10,14 +10,14 @@ class Solution:
                 x2, y2 = points[j]
                 dist = abs(x1 - x2) + abs(y1 - y2)
                 dic[(i, j)] = dist
-        
+
         root = [i for i in range(n)]
-        
+
         def find(n):
             if root[n] != n:
                 root[n] = find(root[n])
             return root[n]
-        
+
         def union(x, y):
             s1 = find(x)
             s2 = find(y)
@@ -25,7 +25,7 @@ class Solution:
                 root[s2] = root[s1]
                 return 1
             return 0
-                
+
         dic_sorted = sorted(list(dic.items()), key=lambda x: x[1])
         res = 0
         for item in dic_sorted:
@@ -34,17 +34,3 @@ class Solution:
             if union(x, y) == 1:
                 res += dist
         return res
-            
-                
-                
-        
-                    
-                
-        
-        
-        
-                
-                
-                
-            
-

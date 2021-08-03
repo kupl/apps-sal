@@ -2,6 +2,6 @@ s = list(input())
 
 s.sort()
 if ''.join(s) == 'abc':
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

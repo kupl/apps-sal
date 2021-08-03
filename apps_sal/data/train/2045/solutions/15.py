@@ -26,4 +26,3 @@ while m:
         i = temp
 
 print(*ans[1:])
-

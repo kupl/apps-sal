@@ -1,5 +1,5 @@
 def power_of_two(x):
-    
+
     i = 0
     while True:
         num = 2**i

@@ -4,5 +4,3 @@ def sort_by_height(a):
         if a[i] != -1:
             a[i] = people.pop(0)
     return a
-        
-

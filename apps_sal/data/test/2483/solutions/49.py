@@ -31,13 +31,8 @@ def main():
     print(ans)
 
 
-
-
-
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

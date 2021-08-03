@@ -7,8 +7,8 @@ if "*" not in a:
     else:
         print("NO")
 else:
-    part1,part2 = a.split("*")
-    if b.startswith(part1) and b.endswith(part2) and len(part1)+len(part2)<=len(b):
+    part1, part2 = a.split("*")
+    if b.startswith(part1) and b.endswith(part2) and len(part1) + len(part2) <= len(b):
         print("YES")
-    else: 
+    else:
         print("NO")

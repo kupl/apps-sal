@@ -6,4 +6,3 @@ def add_binary(a, b):
         c = c // 2
     output.reverse()
     return "".join(output)
-

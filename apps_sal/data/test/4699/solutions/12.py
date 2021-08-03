@@ -11,7 +11,7 @@ while clear == 0:
         if not ans[i] in num:
             break
         if i == len(ans) - 1:
-            clear += 1  
+            clear += 1
     ans = str(int(ans) + 1)
 
 print(int(ans) - 1)

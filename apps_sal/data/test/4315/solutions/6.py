@@ -1,1 +1,1 @@
-print(int(input())*2*3.14159265)
+print(int(input()) * 2 * 3.14159265)

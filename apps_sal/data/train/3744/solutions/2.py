@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def oddity(n):
     if n == -1:
         return float('inf')
@@ -8,6 +9,7 @@ def oddity(n):
         odd += 1
         n //= 2
     return odd
+
 
 def oddest(a):
     result = defaultdict(list)

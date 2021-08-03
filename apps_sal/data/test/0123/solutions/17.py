@@ -1,4 +1,4 @@
-n,k = list(map(int, input().split()))
+n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 if k > 1:
@@ -14,4 +14,3 @@ else:
             print('Yes')
             return
 print('No')
-

@@ -2,7 +2,7 @@ n = int(input())
 pr = []
 flag = True
 for i in range(n):
-    pr.append(tuple(map(int,input().split())))
+    pr.append(tuple(map(int, input().split())))
 pr.sort()
 tel1, tel2 = -1, -1
 flag = True

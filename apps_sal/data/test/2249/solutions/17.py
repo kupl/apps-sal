@@ -22,6 +22,3 @@ for i in (a):
 
 
 print(total)
-
-
-

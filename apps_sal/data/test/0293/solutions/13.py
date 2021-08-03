@@ -18,6 +18,7 @@ import sys
 def solve(x):
     def find_p(n):
         return (6 * x // (n * (n + 1)) - 2 * n - 1) // 3
+
     def f(n, p):
         return n * (n + 1) * (2 * n + 3 * p + 1) - 6 * x
 
@@ -46,8 +47,8 @@ def main():
         print(*res)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -38,4 +38,3 @@ else:
     ans = 1
 
 print((RESULT_TEXT[ans]))
-

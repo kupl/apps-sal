@@ -4,6 +4,5 @@ seq = list(map(int, list(input())))
 c = 0
 
 for i in seq:
-    c+=game[i-1]
+    c += game[i - 1]
 print(c)
-

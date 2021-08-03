@@ -7,10 +7,11 @@
 #
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+from sys import stdin
 from math import gcd
-from itertools import combinations,permutations,accumulate, product, combinations_with_replacement # (string,3) 3回
-from collections import deque,defaultdict,Counter
+from itertools import combinations, permutations, accumulate, product, combinations_with_replacement  # (string,3) 3回
+from collections import deque, defaultdict, Counter
 import decimal
 import re
 import math
@@ -39,30 +40,31 @@ mod = 10**9 + 7
 # mod = 9982443453
 # mod = 998244353
 INF = float('inf')
-dx = [0,1,0,-1]
-dy = [1,0,-1,0]
-from sys import stdin
+dx = [0, 1, 0, -1]
+dy = [1, 0, -1, 0]
 readline = stdin.readline
+
+
 def readInts():
-  return list(map(int,readline().split()))
+    return list(map(int, readline().split()))
+
+
 def readTuples():
-    return tuple(map(int,readline().split()))
+    return tuple(map(int, readline().split()))
+
+
 def I():
     return int(readline())
+
+
 def f(n):
-    return int(math.ceil(n-0.5))
+    return int(math.ceil(n - 0.5))
+
+
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
-from math import gcd
-from itertools import combinations,permutations,accumulate, product, combinations_with_replacement # (string,3) 3回
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
 #from collections import deque
-from collections import deque,defaultdict,Counter
-import decimal
-import re
-import math
-import bisect
-import heapq
 #
 # set型だと、 | と & が使えるよ
 #
@@ -80,25 +82,34 @@ import heapq
 # 整数か判定する
 # nanka.is_integer()
 # ref https://atcoder.jp/contests/abc133/tasks/abc133_b
-import sys
 sys.setrecursionlimit(10000000)
 mod = 10**9 + 7
 # mod = 9982443453
 # mod = 998244353
 INF = float('inf')
-dx = [0,1,0,-1]
-dy = [1,0,-1,0]
-from sys import stdin
+dx = [0, 1, 0, -1]
+dy = [1, 0, -1, 0]
 readline = stdin.readline
+
+
 def readInts():
-  return list(map(int,readline().split()))
+    return list(map(int, readline().split()))
+
+
 def readTuples():
-    return tuple(map(int,readline().split()))
+    return tuple(map(int, readline().split()))
+
+
 def I():
     return int(readline())
+
+
 def f(n):
-    return int(math.ceil(n-0.5))
+    return int(math.ceil(n - 0.5))
+
+
 N, K = readInts()
+
 
 def calc(n):
     if n <= 0:
@@ -106,10 +117,10 @@ def calc(n):
     elif n > 2 * N:
         return 0
     else:
-        return min(2*N-n+1, n-1)
+        return min(2 * N - n + 1, n - 1)
+
 
 ans = 0
-for i in range(1,2*N+1):
-    ans += calc(i) * calc(i-K)
+for i in range(1, 2 * N + 1):
+    ans += calc(i) * calc(i - K)
 print(ans)
-

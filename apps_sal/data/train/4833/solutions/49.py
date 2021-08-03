@@ -4,5 +4,5 @@ def replace_exclamation(s):
         if i.lower() not in "aeiou":
             new += i
         else:
-            new+= '!'
+            new += '!'
     return new

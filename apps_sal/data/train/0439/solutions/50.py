@@ -7,8 +7,8 @@ class Solution:
         res = 0
         start = 0
         end = 0
-        for i in range(1, len(A)-1):
-            if A[i-1] < A[i] > A[i+1] or A[i-1] > A[i] < A[i+1]:
+        for i in range(1, len(A) - 1):
+            if A[i - 1] < A[i] > A[i + 1] or A[i - 1] > A[i] < A[i + 1]:
                 end = i + 1
                 res = max(res, end - start + 1)
             else:
@@ -19,9 +19,3 @@ class Solution:
             else:
                 return 1
         return res
-
-                
-                
-                
-                
-

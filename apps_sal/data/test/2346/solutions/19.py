@@ -1,9 +1,9 @@
+from copy import deepcopy
+from functools import reduce
+from collections import Counter
 import sys
 sys.setrecursionlimit(2000)
-from collections import Counter
-from functools import reduce
 # sys.stdin.readline()
-from copy import deepcopy
 
 
 def __starting_point():
@@ -11,32 +11,29 @@ def __starting_point():
     # single variables
     n = [int(val) for val in sys.stdin.readline().split()][0]
 
-    # On each step you select such a non-root vertex that it does not 
+    # On each step you select such a non-root vertex that it does not
     # respect its parent and none of its children respects it
 
-    tree = {i+1 : [[], []] for i in range(n)}
+    tree = {i + 1: [[], []] for i in range(n)}
     for i in range(n):
         p, c = [int(val) for val in sys.stdin.readline().split()]
-            
-        tree[i+1][0].append((p, c))
+
+        tree[i + 1][0].append((p, c))
         if(p != -1):
             tree[p][1].append((i, c))
 
     d = []
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         p, c = tree[i]
         if(p[0][1] == 1 and sum([x[1] for x in c]) == len(c)):
             d.append(i)
 
-   
     if(len(d) == 0):
         print(-1)
-    else: 
+    else:
         for val in d:
             print(val, end=' ')
         print('')
-
-
 
 
 __starting_point()

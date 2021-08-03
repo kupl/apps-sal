@@ -17,5 +17,3 @@ for i in range(n):
     print(b)
     b = 0
     li.clear()
-
-

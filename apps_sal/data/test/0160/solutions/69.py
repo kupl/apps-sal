@@ -26,5 +26,3 @@ for fac in reversed(smaller_factors):
     if k <= K:
         print(fac)
         return
-
-

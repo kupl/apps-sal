@@ -10,18 +10,20 @@ def count(p, s):
         except ValueError:
             return c
 
+
 s = input()
 n = int(input())
 
 pravs = []
 for i in range(n):
     p, l, r = input().split()
-    l = int(l); r = int(r)
+    l = int(l)
+    r = int(r)
     pravs.append((p, l, r))
 
 var = set()
 for l in range(len(s)):
-    for r in range(l+1, len(s)+1):
+    for r in range(l + 1, len(s) + 1):
         pods = s[l:r]
         for prav in pravs:
             if not prav[1] <= count(pods, prav[0]) <= prav[2]:
@@ -30,4 +32,3 @@ for l in range(len(s)):
             var.add(pods)
 
 print(len(var))
-

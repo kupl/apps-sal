@@ -37,24 +37,25 @@ class UFDS:
     def size(self, x):
         return self.sizes[self.find(x)]
 
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         s = set()
         res = -1
         d = [0] * (len(arr) + 1)
-        arr = [i-1 for i in arr]
+        arr = [i - 1 for i in arr]
         u = UFDS(len(arr))
         for i, val in enumerate(arr):
             s.add(val)
-            if (val > 0) and (val-1 in s):
-                d[u.size(val-1)] -= 1
-                u.union(val-1, val)
-            if (val < len(arr)-1) and (val+1 in s):
-                d[u.size(val+1)] -= 1
-                u.union(val, val+1)
+            if (val > 0) and (val - 1 in s):
+                d[u.size(val - 1)] -= 1
+                u.union(val - 1, val)
+            if (val < len(arr) - 1) and (val + 1 in s):
+                d[u.size(val + 1)] -= 1
+                u.union(val, val + 1)
             d[u.size(val)] += 1
-            #print(d)
+            # print(d)
             if d[m] >= 1:
-                res = max(res, i+1)
-        #print(\"------------\")
+                res = max(res, i + 1)
+        # print(\"------------\")
         return res

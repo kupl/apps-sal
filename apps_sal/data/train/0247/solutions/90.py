@@ -9,11 +9,10 @@ class Solution:
                 windsum -= arr[l]
                 l += 1
             if windsum == target:
-                if minlen[l-1] != float('inf'):
-                    temp = minlen[l-1] + r - l + 1
+                if minlen[l - 1] != float('inf'):
+                    temp = minlen[l - 1] + r - l + 1
                     res = min(res, temp)
-                minlen[r] = min(minlen[r-1], r - l + 1)
+                minlen[r] = min(minlen[r - 1], r - l + 1)
             else:
-                minlen[r] = minlen[r-1]
+                minlen[r] = minlen[r - 1]
         return res if res < float('inf') else -1
-

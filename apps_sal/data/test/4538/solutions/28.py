@@ -8,4 +8,4 @@ for i in range(n):
     if s <= d:
         ans += 1
 
-print(ans) 
+print(ans)

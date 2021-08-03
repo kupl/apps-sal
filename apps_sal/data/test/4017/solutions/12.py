@@ -17,4 +17,3 @@ print(len(r))
 
 if len(r) != 0:
     print(*r)
-

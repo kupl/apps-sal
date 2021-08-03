@@ -1,5 +1,6 @@
 import re
 
+
 def increment_string(s):
     if s.isalpha() or not len(s):
         return s + '1'

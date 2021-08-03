@@ -17,4 +17,3 @@ for i in range(n):
                     break
             ok &= check
 print("Yes" if ok else "No")
-

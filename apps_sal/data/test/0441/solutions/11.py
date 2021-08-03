@@ -3,7 +3,8 @@ def read_data():
     a = list(input().strip())
     return n, k, l, a
 
-def solve(k,l):
+
+def solve(k, l):
     tot = 0
     last = "*"
     for ch in a:
@@ -11,21 +12,21 @@ def solve(k,l):
             return tot
         if ch == ".":
             if last == "k":
-                if l>0:
+                if l > 0:
                     l -= 1
                     tot += 1
                     last = "l"
                 else:
                     last = "*"
             elif last == "l":
-                if k>0:
+                if k > 0:
                     k -= 1
                     tot += 1
                     last = "k"
                 else:
                     last = "*"
             elif last == "*":
-                if k>l:
+                if k > l:
                     k -= 1
                     last = "k"
                 else:
@@ -36,5 +37,6 @@ def solve(k,l):
             last = "*"
     return tot
 
+
 n, k, l, a = read_data()
-print(solve(k,l))
+print(solve(k, l))

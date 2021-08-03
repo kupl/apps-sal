@@ -24,5 +24,3 @@ elif n > 1 and l[0] == 0:
 
 ans = "".join(list(map(str, l)))
 print(ans)
-
-

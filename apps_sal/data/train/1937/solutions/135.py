@@ -1,8 +1,9 @@
 class people:
-    def __init__(self, name, dead = False, child = None):
+    def __init__(self, name, dead=False, child=None):
         self.name = name
         self.dead = dead
         self.child = []
+
 
 class ThroneInheritance:
 
@@ -21,16 +22,16 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self):
         self.res = []
+
         def dfs(pp):
             print((pp.name))
             if not pp.dead:
                 self.res.append(pp.name)
             for v in pp.child:
                 dfs(v)
-            
+
         dfs(self.king)
         return self.res
-        
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -38,4 +39,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

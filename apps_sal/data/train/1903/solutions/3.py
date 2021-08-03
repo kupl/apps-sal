@@ -14,11 +14,4 @@ class Solution:
             for i in range(len(points)):
                 if i not in seen and i != u:
                     heapq.heappush(edges, (manhattan(points[v], points[i]), v, i))
-        return ans                           
-                
-        
-                
-                
-            
-            
-
+        return ans

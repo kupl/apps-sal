@@ -2,6 +2,7 @@ class Solution:
     def maxWidthRamp(self, A: List[int]) -> int:
         # stack + binary search
         descends = [(A[0], 0)]
+
         def bs(t):
             lo, hi = 0, len(descends) - 1
             while lo < hi:

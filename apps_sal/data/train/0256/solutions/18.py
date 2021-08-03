@@ -5,7 +5,7 @@ class Solution:
             for pile in piles:
                 t += (pile - 1) // val
             return t
-            
+
         l, r = 1, max(piles)
         while l <= r:
             mid = l + (r - l) // 2

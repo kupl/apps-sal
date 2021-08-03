@@ -45,6 +45,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))
     if n % 2 == 1:
@@ -70,6 +71,3 @@ for _ in range(int(input())):
                 print("First")
             else:
                 print("Second")
-            
-            
-

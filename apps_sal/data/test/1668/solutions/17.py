@@ -24,4 +24,3 @@ for i in range(t):
                     break
     print(cou)
     print(*cards, sep="\n")
-

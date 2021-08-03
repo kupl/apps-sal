@@ -2,15 +2,14 @@ import sys
 n = int(sys.stdin.readline())
 e = dict()
 w = dict()
-for i in range(1, n+1):
+for i in range(1, n + 1):
     w[i] = -1
     e[i] = set()
 
-for i in range(n-1):
+for i in range(n - 1):
     (a, b) = map(int, sys.stdin.readline().split())
     e[a].add(b)
     e[b].add(a)
-
 
 
 first = 0
@@ -51,7 +50,7 @@ while len(sosed) > 0:
     sosed = sosed2.copy()
 ans = []
 lol = set()
-for i in range(1, n+1):
+for i in range(1, n + 1):
     ans.append(w[i])
     lol.add(w[i])
 print(len(lol))

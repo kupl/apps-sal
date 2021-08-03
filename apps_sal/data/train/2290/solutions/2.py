@@ -46,24 +46,25 @@ def main():
     for _ in range(H):
         grid.append(input().rstrip('\n'))
 
-    corner = [[0] * (W-1) for _ in range(H-1)]
-    for h in range(H-1):
-        for w in range(W-1):
+    corner = [[0] * (W - 1) for _ in range(H - 1)]
+    for h in range(H - 1):
+        for w in range(W - 1):
             cnt = 0
             if grid[h][w] == "#":
                 cnt += 1
-            if grid[h+1][w] == "#":
+            if grid[h + 1][w] == "#":
                 cnt += 1
-            if grid[h][w+1] == "#":
+            if grid[h][w + 1] == "#":
                 cnt += 1
-            if grid[h+1][w+1] == "#":
+            if grid[h + 1][w + 1] == "#":
                 cnt += 1
-            if cnt%2 == 0:
+            if cnt % 2 == 0:
                 corner[h][w] = 1
     print((max(largest_rectangle_grid(corner), H, W)))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

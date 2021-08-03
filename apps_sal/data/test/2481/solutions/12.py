@@ -14,7 +14,7 @@ for i in range(h):
         A[i, j] = a
 
 G = nx.DiGraph(C)
-d = {-1:0}
+d = {-1: 0}
 for i in range(10):
     d[i] = nx.shortest_path_length(G, i, 1, weight='weight')
 print(sum(d[a] for a in chain.from_iterable(A)))

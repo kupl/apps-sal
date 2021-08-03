@@ -1,27 +1,22 @@
 class Solution:
-     def findLUSlength(self, A):
-         """
-         :type A: List[str]
-         :rtype: int
-         """
-         
-         
-    #    public CONCISE solution....beat 95%
-    
-         def issubsequence(s, t):
-             t = iter(t)
-             return all(c in t for c in s)
-     
-         for s in sorted(A, key=len, reverse=True):
-             if sum(issubsequence(s, t) for t in A) == 1:
-                 return len(s)
-         return -1
-         
-         
-         
-         
-         
-         """
+    def findLUSlength(self, A):
+        """
+        :type A: List[str]
+        :rtype: int
+        """
+
+   #    public CONCISE solution....beat 95%
+
+        def issubsequence(s, t):
+            t = iter(t)
+            return all(c in t for c in s)
+
+        for s in sorted(A, key=len, reverse=True):
+            if sum(issubsequence(s, t) for t in A) == 1:
+                return len(s)
+        return -1
+
+        """
          def issub(w1, w2):
              i = 0
              for w in w2:
@@ -37,11 +32,8 @@ class Solution:
                  return len(s)
          return -1
          """
- 
-         
-         
-         
-         """
+
+        """
          def subseq(w1, w2):
              #True if word1 is a subsequence of word2.
              i = 0
@@ -76,6 +68,3 @@ class Solution:
          so we check candidates in descending order of length. 
          When we find a suitable one, we know it must be the best nonlocal answer.
          """
-         
-         
-

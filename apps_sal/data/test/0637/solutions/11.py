@@ -12,14 +12,14 @@ for i in line[1:]:
             print("NO")
             return
     if i != current:
-        if current_size !=  line_size and line_size!= -1:
+        if current_size != line_size and line_size != -1:
             print("NO")
             return
         line_size = current_size
         current = i
         current_size = 1
 
-if current_size != line_size and line_size!= -1:
+if current_size != line_size and line_size != -1:
     print("NO")
     return
 print("YES")

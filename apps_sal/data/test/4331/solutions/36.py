@@ -22,4 +22,3 @@ for i in s:
         res = "Yes"
 
 print(res)
-

@@ -9,4 +9,4 @@ for ss in s:
     else:
         ps += 1
 
-print(max(0,(gs - ps) // 2))
+print(max(0, (gs - ps) // 2))

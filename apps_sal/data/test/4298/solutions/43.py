@@ -1,4 +1,4 @@
-N, D = map(int,input().split())
+N, D = map(int, input().split())
 
 moniter = D * 2 + 1
 if N <= moniter:

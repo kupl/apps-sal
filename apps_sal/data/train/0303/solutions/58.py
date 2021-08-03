@@ -7,7 +7,6 @@ class Solution:
             else:
                 best = 0
                 for nk in range(1, K + 1):
-                    best = max(best, checkSum(i, i + nk, K) + checkSum(i+nk, j, K))
+                    best = max(best, checkSum(i, i + nk, K) + checkSum(i + nk, j, K))
             return best
         return checkSum(0, len(A), K)
-

@@ -13,10 +13,10 @@ while k <= ab:
     arem = a - t * aPeriod
     brem = b - t * bPeriod
     if aPeriod >= arem and bPeriod >= brem:
-    	validK = aPeriod + bPeriod - aLeft - bLeft + 1
-    	if (t + 1) * (aLeft + bLeft) == ab:
-    		validK -= 1
-    	if validK > 0:
-    		cnt += validK
+        validK = aPeriod + bPeriod - aLeft - bLeft + 1
+        if (t + 1) * (aLeft + bLeft) == ab:
+            validK -= 1
+        if validK > 0:
+            cnt += validK
     k = ab // t + 1
 print(cnt)

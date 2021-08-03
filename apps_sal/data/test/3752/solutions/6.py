@@ -1,11 +1,13 @@
 3
 
+
 def offcount(x, k, d):
     per = ((k + d - 1) // d) * d
     ans = (x // per) * (per - k)
     if x > (x // per) * per + k:
         ans += x - (x // per) * per - k
     return ans
+
 
 k, d, t = map(int, input().split())
 k *= 2
@@ -22,4 +24,3 @@ while lt < rt - 1:
         lt = mid
 
 print(rt // 2, ".", "0" if rt % 2 == 0 else "5", sep="")
-

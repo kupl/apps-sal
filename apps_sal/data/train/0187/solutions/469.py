@@ -14,8 +14,8 @@ class Solution:
             ans += min(w, 4) * bc - rc
             cnt += 1
             m.append((ans, cnt))
-            w = max(w - 4, 0) 
-            
+            w = max(w - 4, 0)
+
         res = max(m, key=lambda x: (x[0], -x[1]))
         # print(m)
         # print(res)

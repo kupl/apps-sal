@@ -12,7 +12,7 @@ class Solution:
         queue = deque([n])
         visited = set()
         steps = 0
-        
+
         # bfs中很经典的一个时间复杂度的优化就是利用visited数组
         while queue:
             q_len = len(queue)

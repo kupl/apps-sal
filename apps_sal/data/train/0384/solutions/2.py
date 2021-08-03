@@ -9,5 +9,5 @@ class Solution:
             ret += n * pow(2, i)
             ret -= n * pow(2, len(A) - i - 1)
             ret %= 10**9 + 7
-        
+
         return ret

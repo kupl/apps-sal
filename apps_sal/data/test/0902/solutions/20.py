@@ -14,4 +14,3 @@ for i in range(1, n):
         ans = tmp
         break
 print(ans)
-

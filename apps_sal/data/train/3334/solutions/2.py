@@ -1,4 +1,5 @@
-from math import gcd 
+from math import gcd
+
 
 def reduce_fraction(fraction):
     g = gcd(*fraction)

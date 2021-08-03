@@ -3,8 +3,8 @@ b = list(input())
 a.sort()
 b.sort()
 b.reverse()
-a=''.join(a)
-b=''.join(b)
+a = ''.join(a)
+b = ''.join(b)
 if a < b:
     print("Yes")
 else:

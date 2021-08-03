@@ -8,4 +8,3 @@ for i in range(n):
     else:
         b = d
 print(a, b)
-

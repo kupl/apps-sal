@@ -5,5 +5,5 @@ def cup_and_balls(b, arr):
             for x in turn:
                 if x != my_ball:
                     my_ball = x
-                    break;
+                    break
     return my_ball

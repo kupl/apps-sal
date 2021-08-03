@@ -27,7 +27,7 @@ class Solution:
 #                 pointer[\"@\"] = i+1
 #             else:
 #                 pointer[\"@\"] = max(i+1, pointer[\"@\"])
-                
+
 #         for j1, num1 in enumerate(A):
 #             for j2 in range(j1, ALen):
 #                 num2 = A[j2]
@@ -39,7 +39,7 @@ class Solution:
 #                         ans += ALen*2
 #                 else:
 #                     pointers = [bitsOneDict]
-#                     i = 0          
+#                     i = 0
 #                     subAns = set()
 #                     while i < 16:
 #                         if num12 & 1 == 0:
@@ -52,7 +52,7 @@ class Solution:
 #                                     if i > pointer[\"@\"]:
 #                                         if \"$\" in pointer:
 #                                             subAns |= pointer[\"$\"]
-#                                         pointers.pop(k)   
+#                                         pointers.pop(k)
 #                             pointers += newPointers
 #                         num12 >>= 1
 #                         i += 1
@@ -64,4 +64,3 @@ class Solution:
 #                     else:
 #                         ans += len(subAns)*2
 #         return ans
-

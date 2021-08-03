@@ -7,11 +7,10 @@ A.sort()
 A.reverse()
 
 ans = 0
-for i in range(N//2):
+for i in range(N // 2):
     ans += A[i]
 
-for i in range(N-N//2-1):
-    ans += A[i+1]
+for i in range(N - N // 2 - 1):
+    ans += A[i + 1]
 
 print(ans)
-

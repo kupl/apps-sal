@@ -2,6 +2,7 @@
 def ri():
     return list(map(int, input().split()))
 
+
 n = int(input())
 
 r = []
@@ -21,13 +22,10 @@ for i in range(1, n):
             T.append([tmp, r[i][1]])
             break
         else:
-            tmp = max(T[-1][0]+r[i][2], tmp)
+            tmp = max(T[-1][0] + r[i][2], tmp)
             T.pop()
     else:
         T.append([tmp, r[i][1]])
 
 
 print(max(T)[0])
-
-
-

@@ -1,4 +1,4 @@
-def final_grade(exam, projects):   
+def final_grade(exam, projects):
     '''Return grade based on input criteria'''
     grade = 0
     if exam > 90 or projects > 10:
@@ -7,5 +7,5 @@ def final_grade(exam, projects):
         grade = 90
     elif exam > 50 and projects >= 2:
         grade = 75
-  
+
     return grade

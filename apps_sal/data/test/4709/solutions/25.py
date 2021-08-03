@@ -1,2 +1,2 @@
-s=input()
+s = input()
 print(eval(s))

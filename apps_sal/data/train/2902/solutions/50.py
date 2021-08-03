@@ -3,4 +3,3 @@ def opposite(number):
         return -number
     else:
         return number * -1
-

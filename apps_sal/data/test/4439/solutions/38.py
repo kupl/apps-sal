@@ -1,4 +1,4 @@
-L = [1,2,3]
+L = [1, 2, 3]
 a = int(input())
 b = int(input())
 L.remove(a)

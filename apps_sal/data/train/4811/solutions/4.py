@@ -4,4 +4,3 @@ class Vector(object):
 
     def add(self, other):
         return Vector(self.x + other.x, self.y + other.y)
-

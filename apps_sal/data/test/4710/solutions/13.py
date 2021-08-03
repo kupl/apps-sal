@@ -6,8 +6,10 @@ def main():
         print('ABC')
     else:
         print('ARC')
-        
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

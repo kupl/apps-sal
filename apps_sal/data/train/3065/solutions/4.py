@@ -9,7 +9,6 @@ def comm_check(l, p_l, comm_started):
         return 2
     else:
         return comm_started
-    
 
 
 def get_textliterals(pv_code):
@@ -17,14 +16,16 @@ def get_textliterals(pv_code):
     open_i = -1
     comm_start = 0
     for i in range(0, len(pv_code)):
-        comm_start = comm_check(pv_code[i], pv_code[i-1], comm_start)
+        comm_start = comm_check(pv_code[i], pv_code[i - 1], comm_start)
         if pv_code[i] == '\'' and comm_start == 0:
             if open_i == -1:
                 open_i = i
             else:
-                if (i + 1 < len(pv_code) and i - 1 >= 0): 
-                    if (pv_code[i+1] == '\'' or pv_code[i-1] == '\''): continue
+                if (i + 1 < len(pv_code) and i - 1 >= 0):
+                    if (pv_code[i + 1] == '\'' or pv_code[i - 1] == '\''):
+                        continue
                 indices.append((open_i, i + 1))
                 open_i = -1
-    if open_i != -1: indices.append((open_i, len(pv_code)))
+    if open_i != -1:
+        indices.append((open_i, len(pv_code)))
     return indices

@@ -1,5 +1,5 @@
 def isValid(formula):
-    if 7 in formula or 8 in formula: 
+    if 7 in formula or 8 in formula:
         if 1 in formula and 2 in formula:
             return False
         if 3 in formula and 4 in formula:
@@ -14,5 +14,5 @@ def isValid(formula):
                 return True
             else:
                 return False
-        return True 
+        return True
     return False

@@ -1,5 +1,5 @@
 s = sorted(input())
-t = sorted(input(),reverse = True)
+t = sorted(input(), reverse=True)
 flag1 = True
 flag2 = False
 if len(s) < len(t):
@@ -19,4 +19,3 @@ if flag1 or flag2:
     print('Yes')
 else:
     print('No')
-

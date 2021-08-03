@@ -4,7 +4,7 @@ class Solution:
         # Corner cases
         if k > n:
             return 0
-        
+
         # We will use 4 pointers: p1, p2, p3, p4
         # p1 will initially start at -1. It will always point to the \"previous\" odd number
         # that we DONT want to include the in the current count
@@ -30,7 +30,7 @@ class Solution:
             # p4 < n, hence p4 must point to a 1, hence we can simply set p3 to p4.
             if p4 == -1:
                 p3 = p2
-                remaining = k-1
+                remaining = k - 1
                 while p3 < n and remaining:
                     p3 += 1
                     if p3 == n:
@@ -41,15 +41,14 @@ class Solution:
                 p3 = p4
             # p3 now points to the kth odd number
             # Now move p4 to the next odd number
-            p4 = p3 + 1 # p3 is at most n-1, because we would have returned otherwise.
+            p4 = p3 + 1  # p3 is at most n-1, because we would have returned otherwise.
             while p4 < n:
                 if nums[p4] % 2 == 1:
                     break
                 p4 += 1
             # p4 is now either n or the next odd number after p3
             # Now compute the number of nice subarrays in this window and add to ans
-            ans += (p2-p1)*(p4-p3)
+            ans += (p2 - p1) * (p4 - p3)
             # To set up for the next round, set p1 to p2
             p1 = p2
         return ans
-

@@ -48,7 +48,6 @@ class CodeforcesTask585ASolution:
                 #print([x[3] for x in self.child])
         self.result = "{0}\n{1}".format(cured, " ".join([str(x) for x in cured_order]))
 
-
     def get_result(self):
         return self.result
 
@@ -58,5 +57,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

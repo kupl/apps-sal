@@ -7,4 +7,3 @@ for i in range(n):
     res += (d - 1) // a + 1
 
 print(res)
-

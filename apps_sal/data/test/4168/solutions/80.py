@@ -8,13 +8,12 @@ if n == 0:
 
 ans = ''
 while abs(n) > 0:
-    r = n%2 
-    ans += str(r) 
+    r = n % 2
+    ans += str(r)
     n //= 2
     n = -n
 
-if abs(n)%2 == 1:
+if abs(n) % 2 == 1:
     print(ans)
 else:
     print((ans[::-1]))
-

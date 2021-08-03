@@ -6,7 +6,7 @@ while True:
         if int(i) in d:
             n += 1
             break
-    
+
     else:
         print(n)
         break

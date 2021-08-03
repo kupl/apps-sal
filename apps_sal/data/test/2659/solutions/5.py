@@ -22,4 +22,3 @@ for k in range(K - 1):
     ans.append(next_snuke)
 
 print(*ans, sep='\n')
-

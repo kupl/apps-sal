@@ -15,4 +15,3 @@ if s1 - A[-2][0] == A[-2][0]:
 print(len(res))
 for i in range(len(res)):
     print(res[i], end=' ')
-

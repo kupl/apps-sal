@@ -6,4 +6,4 @@ class Solution:
         _max = max(A)
         if _max - K <= _min + K:
             return 0
-        return _max - _min - 2*K
+        return _max - _min - 2 * K

@@ -10,4 +10,3 @@ for i in range(-1, -len(num) - 1, -1):
         best = num[:]
 s = ''.join(map(str, best)).lstrip('0')
 print(s)
-

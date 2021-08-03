@@ -1,9 +1,9 @@
-def next_item(xs, item): 
+def next_item(xs, item):
     it = iter(xs)
     try:
         while True:
             x = next(it)
-            if x==item:
+            if x == item:
                 x = next(it)
                 return x
     except StopIteration:

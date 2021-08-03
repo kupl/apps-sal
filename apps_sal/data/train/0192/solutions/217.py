@@ -1,7 +1,7 @@
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         length = len(piles)
-        sorted_piles = sorted(piles, reverse = True)
+        sorted_piles = sorted(piles, reverse=True)
         if length == 3:
             return sorted_piles[1]
         n = length / 3

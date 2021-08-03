@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def rearranger(k, *args):
     res = set([(int(''.join(map(str, p))), p) for p in permutations(args) if int(''.join(map(str, p))) % k == 0])
     if res:

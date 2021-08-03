@@ -1,5 +1,8 @@
-def takeClosest(myList, myNumber):
+from math import ceil
+from bisect import bisect_left
 
+
+def takeClosest(myList, myNumber):
     """
 
     Assumes myList is sorted. Returns closest value to myNumber.
@@ -30,22 +33,14 @@ def takeClosest(myList, myNumber):
 
     if after - myNumber < myNumber - before:
 
-       return after
+        return after
 
     else:
 
-       return before
-
-
-
-from bisect import bisect_left
-
-from math import ceil
-
+        return before
 
 
 n, m, n_stairs, n_elevators, v = map(int, input().split(" "))
-
 
 
 if n_stairs > 0:
@@ -84,8 +79,6 @@ for i in range(queries):
 
     time_stairs = abs(x1 - x2)
 
-
-
     mi = min(y1, y2)
 
     ma = max(y1, y2)
@@ -98,8 +91,6 @@ for i in range(queries):
 
         time_elevator += (next_elevator - ma) * 2
 
-
-
     if next_stairs < mi:
 
         time_stairs += (mi - next_stairs) * 2
@@ -107,8 +98,6 @@ for i in range(queries):
     elif next_stairs > ma:
 
         time_stairs += (next_stairs - ma) * 2
-
-
 
     dis = abs(y1 - y2)
 
@@ -129,7 +118,6 @@ for i in range(queries):
         res.append(ceil(dis))
 
 print(*res, sep="\n")
-
 
 
 # Made By Mostafa_Khaled

@@ -21,4 +21,3 @@ for i in range(0, t):
         print(ans + b[length - 1][1])
     else:
         print(ans)
-

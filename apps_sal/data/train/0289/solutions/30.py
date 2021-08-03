@@ -4,29 +4,28 @@ class Solution:
             windowMap = {}
             currSum = sum(A[:windowLength])
             windowMap[(0, windowLength - 1)] = currSum
-            
+
             for i in range(windowLength, len(A)):
                 currSum -= A[i - windowLength]
                 currSum += A[i]
                 windowMap[(i - windowLength + 1, i)] = currSum
-                
+
             return windowMap
-                
-        
+
         firstWindowMap = slidingWindow(L)
         secondWindowMap = slidingWindow(M)
-        
+
         first = []
         second = []
-        
+
         for x in firstWindowMap:
             first.append([firstWindowMap[x], x])
-            
+
         for x in secondWindowMap:
             second.append([secondWindowMap[x], x])
-        
+
         most = 0
-        
+
         for i in range(len(first)):
             for j in range(len(second)):
                 val1 = first[i][0]
@@ -39,5 +38,5 @@ class Solution:
                 r2y = range2[1]
                 if not ((r2x <= r1x <= r2y) or (r1x <= r2x <= r1y)):
                     most = max(most, val1 + val2)
-                    
+
         return most

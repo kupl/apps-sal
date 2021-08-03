@@ -6,7 +6,7 @@ class Solution:
         if res == sys.maxsize:
             return -1
         return res
-    
+
     def dfs(self, nums, K, ht):
         if K == 1:
             if len(nums) == 0:
@@ -19,9 +19,8 @@ class Solution:
         a = 0
         for i in range(len(nums)):
             a = max(a, nums[i])
-            b = self.dfs(nums[i+1:], K-1, ht)
+            b = self.dfs(nums[i + 1:], K - 1, ht)
             if a + b < res:
                 res = a + b
         ht[key] = res
         return res
-

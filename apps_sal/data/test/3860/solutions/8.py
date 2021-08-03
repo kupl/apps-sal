@@ -8,4 +8,4 @@ if n > b:
 if n > g:
     y = n - g
 
-print(n+1 - x - y)
+print(n + 1 - x - y)

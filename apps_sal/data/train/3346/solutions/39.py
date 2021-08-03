@@ -11,23 +11,23 @@ def prime(n):
             return False
         i = i + 6
     return True
+
+
 def gap(g, m, n):
-    answer=[]
-    i=0
-    while i+m<n:
-        if prime(i+m) and prime(i+m+g) and i+m+g<n:
+    answer = []
+    i = 0
+    while i + m < n:
+        if prime(i + m) and prime(i + m + g) and i + m + g < n:
             answer.extend([i + m, i + g + m])
-            flag=True
-            for j in range(1,g):
-                if prime(j+i+m):
-                    flag=False
-                    i+=j
-                    answer=[]
+            flag = True
+            for j in range(1, g):
+                if prime(j + i + m):
+                    flag = False
+                    i += j
+                    answer = []
                     break
                 else:
-                    flag=True
+                    flag = True
             if flag:
                 return answer
-        i+=1
-
-
+        i += 1

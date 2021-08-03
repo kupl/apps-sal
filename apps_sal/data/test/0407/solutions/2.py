@@ -25,7 +25,7 @@ for char in char_priority_dict.keys():
         if zero_is_permitted[char]:
             char_num_dict[char] = 0
             num_list.remove(0)
-        else :
+        else:
             char_num_dict[char] = num_list[1]
             num_list.remove(num_list[1])
     else:

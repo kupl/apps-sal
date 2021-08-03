@@ -23,7 +23,6 @@ def total_inc_dec(x):
             List[-1] = List1[-1] + x + 1
             return List
 
-
     if x == 0:
         return 1
     else:
@@ -32,4 +31,4 @@ def total_inc_dec(x):
         for i in range(0, len(List)):
             a += List[i] * combination(9, x - i)
         a = 1 + a - x * combination(9, 1)
-        return a 
+        return a

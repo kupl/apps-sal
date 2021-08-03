@@ -2,12 +2,12 @@ from collections import defaultdict
 
 dic = defaultdict(int)
 
-details = list(map(int,input().split()))
+details = list(map(int, input().split()))
 
 N = details[0]
 M = details[1]
 
-cards =  list(map(int,input().split()))
+cards = list(map(int, input().split()))
 
 ab = [list(map(int, input().split())) for _ in range(M)]
 
@@ -24,7 +24,7 @@ while (N):
     if dic[lst[-1]] > 0:
         dic[lst[-1]] -= 1
         ans += lst[-1]
-        N-=1
+        N -= 1
     else:
         lst.pop()
 print(ans)

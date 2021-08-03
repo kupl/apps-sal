@@ -10,5 +10,5 @@ def main():
         pp, p = p, s
     return (-1, -1)
 
-print((*main()))
 
+print((*main()))

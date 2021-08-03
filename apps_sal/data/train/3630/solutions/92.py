@@ -10,5 +10,5 @@ def arithmetic(a, b, operator):
         result = a / b
     else:
         print("No operator found")
-    
+
     return (result)

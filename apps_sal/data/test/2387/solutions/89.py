@@ -30,7 +30,7 @@ for _, l, f in C_m:
     if final + l < 0:
         flag = 1
     final += f
-    
+
 if final != 0:
     flag = 1
 

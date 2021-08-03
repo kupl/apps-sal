@@ -23,8 +23,6 @@ def main():
             return "Daenerys"
         else:
             return "Stannis"
+
+
 print(main())
-
-
-
-

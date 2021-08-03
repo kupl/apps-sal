@@ -1,10 +1,9 @@
 n = int(input())
 
 while n % 10 == 0:
-  n //= 10
+    n //= 10
 
 if str(n) == str(n)[::-1]:
-  print('YES')
+    print('YES')
 else:
-  print('NO')
-
+    print('NO')

@@ -3,12 +3,3 @@ def repeat_str(repeat, string):
         print((string * repeat))
         break
     return string * repeat
-
-
-    
-    
-
-
-
-    
-

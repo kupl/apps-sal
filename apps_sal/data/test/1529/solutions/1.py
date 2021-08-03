@@ -11,4 +11,3 @@ for i in range(n):
         print("Rainbow's")
     else:
         print("OMG>.< I don't know!")
-

@@ -1,4 +1,4 @@
-a, b, c, d = map(int,input().split())
+a, b, c, d = map(int, input().split())
 
 L = a + b
 R = c + d

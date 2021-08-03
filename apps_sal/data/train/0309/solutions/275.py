@@ -10,9 +10,5 @@ class Solution:
                 diff = A[i] - A[j]
                 tmp = dp[j].get(diff, 0)
                 dp[i][diff] = tmp + 1
-                ans = max(ans, tmp+1)
-        return ans+1
-                    
-                    
-        
-
+                ans = max(ans, tmp + 1)
+        return ans + 1

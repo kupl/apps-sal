@@ -1,6 +1,6 @@
 n = int(input())
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 c = {}
 for i in range(n):
     c[b[i]] = i
@@ -15,7 +15,7 @@ while True:
             for j in range(a[i], i):
                 if a[j] >= i:
                     a[i], a[j] = a[j], a[i]
-                    b += [(i+1, j+1)]
+                    b += [(i + 1, j + 1)]
                     break
             break
     else:
@@ -24,6 +24,3 @@ while True:
 print(len(b))
 for e in b:
     print(*e)
-
-
-

@@ -13,4 +13,3 @@ for _ in range(n):
         print(-1)
     else:
         print(c_e)
-

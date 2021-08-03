@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class Solution:
     def nthPersonGetsNthSeat(self, n: int) -> float:
         '''
@@ -10,9 +12,7 @@ class Solution:
                 currentsum = currentsum + currentsum/(n-i+1)
         return 1-currentsum
         '''
-        if n==1:
+        if n == 1:
             return 1
-        else: return 1/2.0
-                
-            
-
+        else:
+            return 1 / 2.0

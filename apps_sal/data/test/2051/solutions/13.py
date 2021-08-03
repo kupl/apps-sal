@@ -35,4 +35,3 @@ for c in components:
         counter[socks[v]] += 1
     out += len(c) - max(counter.values())
 print(out)
-

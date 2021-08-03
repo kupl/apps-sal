@@ -1,7 +1,7 @@
 from sys import stdin
 input = stdin.readline
 n = int(input())
-s1, s2 =  input(), input()
+s1, s2 = input(), input()
 mod = 1000000007
 flag1 = flag2 = flag3 = ans1 = ans2 = ans3 = cnt = 1
 for i in range(n):

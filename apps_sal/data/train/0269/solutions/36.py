@@ -8,4 +8,3 @@ class Solution:
                 else:
                     ones.append(i)
         return True
-

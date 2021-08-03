@@ -11,6 +11,7 @@ class Stack:
     slow).
     5. Clear - remove all elements from stack
     """
+
     def __init__(self, element=None):
         """
         self.length - length of the stack. When we append an element we increase it(length) by 1
@@ -76,6 +77,7 @@ class Stack:
         """
         self.__stack = []
 
+
 n = int(input())
 snekovik = Stack()
 wrong_snaks = set()
@@ -95,4 +97,3 @@ for i in sneks:
     else:
         wrong_snaks.add(i)
     print(*printing)
-

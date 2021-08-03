@@ -9,7 +9,7 @@ class Solution:
                 a = b
                 b = r
             return a
-        
+
         ret = []
         for deno in range(2, n + 1):
             for nume in range(1, deno):
@@ -20,5 +20,3 @@ class Solution:
                 if val not in ret:
                     ret.append(val)
         return ret
-                
-

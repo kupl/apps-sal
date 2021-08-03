@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     n = int(sys.stdin.readline())
 
@@ -15,5 +16,5 @@ def main():
             b_sum += r[1]
         n -= 1
 
-main()
 
+main()

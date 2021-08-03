@@ -12,7 +12,7 @@ for b in range(len(balls)):
     if(c is p):
         pairs.append((b - 1, b))
         if(c is x):
-            matches.append((b-1, b))
+            matches.append((b - 1, b))
     p = c
 
 max = 0
@@ -25,12 +25,12 @@ for m in matches:
     while(i >= 0 and j < len(balls)):
         if(balls[i] is balls[j]):
             toRemove = 0
-            if(j < len(balls)-1 and balls[j+1] is balls[j]):
+            if(j < len(balls) - 1 and balls[j + 1] is balls[j]):
                 toRemove += 1
-                j+=1
-            if(i >= 1 and balls[i-1] is balls[i]):
+                j += 1
+            if(i >= 1 and balls[i - 1] is balls[i]):
                 toRemove += 1
-                i-=1
+                i -= 1
             if(toRemove > 0):
                 removed += toRemove + 2
             else:
@@ -41,6 +41,6 @@ for m in matches:
         j += 1
     if(removed > max):
         max = removed
-            
+
 
 print(max)

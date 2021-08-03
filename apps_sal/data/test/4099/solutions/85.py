@@ -14,14 +14,14 @@
 # 最後のテストでの必要最低点または-1
 
 
-N,K,M = map(int,input().split())
-A = list(map(int,input().split()))
+N, K, M = map(int, input().split())
+A = list(map(int, input().split()))
 
-if 0 <= (N*M)-sum(A) <= K:
-    print((N*M)-sum(A))
+if 0 <= (N * M) - sum(A) <= K:
+    print((N * M) - sum(A))
 
-elif K < (N*M)-sum(A):
+elif K < (N * M) - sum(A):
     print(-1)
 
 else:  # 0でも達成
-   print(0)
+    print(0)

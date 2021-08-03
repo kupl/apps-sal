@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, p = f()
 s = [0] * n
 x, y = -p, 0
@@ -12,5 +14,6 @@ for a, b in s:
     if b * x > a * y:
         x -= a
         y -= b
-    else: break
+    else:
+        break
 print(y / x if x > 0 else -1)

@@ -6,4 +6,3 @@ if s == s[::-1] and s1 == s1[::-1] and s2 == s2[::-1]:
     print('Yes')
 else:
     print('No')
-

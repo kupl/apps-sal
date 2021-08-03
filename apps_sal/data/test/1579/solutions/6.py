@@ -32,6 +32,7 @@ class DGraph:
     def cost(self, src, dst):
         return self._vertice[src].get(dst, float('inf'))
 
+
 class Graph(DGraph):
     def __init__(self, n, edges):
         nd_edges = edges + [(d, s, c) for s, d, c in edges]
@@ -42,14 +43,15 @@ class Graph(DGraph):
 
 
 def solve(N: int, x: "List[int]", y: "List[int]"):
-    xs = {v:i for i, v in enumerate(set(x))}
-    ys = {v:i for i, v in enumerate(set(y), len(xs))}
-    
+    xs = {v: i for i, v in enumerate(set(x))}
+    ys = {v: i for i, v in enumerate(set(y), len(xs))}
+
     n = len(xs) + len(ys)
     es = [(xs[cx], ys[cy], 1) for cx, cy in zip(x, y)]
     g = Graph(n, es)
 
     visited = [False] * len(g)
+
     def dfs(g, src):
         nonlocal visited
         stack = [(src, 0)]
@@ -60,7 +62,7 @@ def solve(N: int, x: "List[int]", y: "List[int]"):
             visited[n] = True
 
             for _, d, _ in g.edges(n):
-                #yield d
+                # yield d
                 stack.append((d, c + 1))
             yield n
 
@@ -95,8 +97,8 @@ def main():
                 yield word
     tokens = iterate_tokens()
     N = int(next(tokens))  # type: int
-    x = [int()] * (N)  # type: "List[int]" 
-    y = [int()] * (N)  # type: "List[int]" 
+    x = [int()] * (N)  # type: "List[int]"
+    y = [int()] * (N)  # type: "List[int]"
     for i in range(N):
         x[i] = int(next(tokens))
         y[i] = int(next(tokens))
@@ -105,7 +107,9 @@ def main():
         result = '\n'.join([str(v) for v in result])
     print(result)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

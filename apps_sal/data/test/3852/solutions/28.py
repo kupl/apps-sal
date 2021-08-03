@@ -20,19 +20,19 @@ for i in range(N):
 ops = []
 # マイナスに寄せる
 if abs(min_a[0]) > abs(max_a[0]):
-    for i in range(N-1, -1, -1):
+    for i in range(N - 1, -1, -1):
         # 高々2回
         while A[i] > min_a[0]:
             A[i] += min_a[0]
-            ops.append((min_a[1]+1, i+1))
+            ops.append((min_a[1] + 1, i + 1))
         min_a = (A[i], i)
-        
+
 else:
     for i in range(N):
         # 高々2回
         while A[i] < max_a[0]:
             A[i] += max_a[0]
-            ops.append((max_a[1]+1, i+1))
+            ops.append((max_a[1] + 1, i + 1))
         max_a = (A[i], i)
 # print(A)
 

@@ -1,5 +1,6 @@
 # What's the point of the preloaded deck?
-D = {'S':"spades", 'D':"diamonds", 'H':"hearts", 'C':"clubs"}
+D = {'S': "spades", 'D': "diamonds", 'H': "hearts", 'C': "clubs"}
+
 
 def define_suit(card):
     return D[card[-1]]

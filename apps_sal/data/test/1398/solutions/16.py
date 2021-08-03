@@ -11,7 +11,7 @@ def solve(seq):
     ans = n
     for i in range(5001):
         if cnt[i] > 0:
-            n2remove = n - acc[min(2*i, 5000)] + acc[i-1]
+            n2remove = n - acc[min(2 * i, 5000)] + acc[i - 1]
             ans = min(ans, n2remove)
 
     return ans
@@ -30,5 +30,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

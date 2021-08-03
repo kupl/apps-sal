@@ -5,6 +5,6 @@ for _ in range(k):
     d = int(input())
     a = list(map(int, input().split()))
     for x in a:
-        s[x-1] = 1
+        s[x - 1] = 1
 
 print(s.count(0))

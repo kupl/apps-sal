@@ -1,15 +1,27 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**10
 mod = 998244353
-dd = [(-1,0),(0,1),(1,0),(0,-1)]
-ddn = [(-1,0),(-1,1),(0,1),(1,1),(1,0),(1,-1),(0,-1),(-1,-1)]
+dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+
 
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(): return [list(map(int, l.split())) for l in sys.stdin.readlines()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -52,6 +64,7 @@ class UnionFind:
                 a.append((i, -self.table[i]))
         return a
 
+
 def main():
     n = I()
     xy = [LI() for _ in range(n)]
@@ -60,7 +73,7 @@ def main():
 
     xi = 0
     yi = 0
-    for x,y in xy:
+    for x, y in xy:
         if x not in xd:
             xd[x] = xi
             xi += 1
@@ -68,23 +81,23 @@ def main():
             yd[y] = yi
             yi += 1
 
-    uf = UnionFind(xi+yi+n)
+    uf = UnionFind(xi + yi + n)
     ii = xi + yi
     for i in range(n):
-        x,y = xy[i]
+        x, y = xy[i]
         uf.union(xd[x], ii + i)
         uf.union(xi + yd[y], ii + i)
 
     dx = collections.defaultdict(set)
     dy = collections.defaultdict(set)
     for i in range(n):
-        x,y = xy[i]
+        x, y = xy[i]
         ui = uf.find(ii + i)
         dx[ui].add(x)
         dy[ui].add(y)
 
     r = -n
-    for k,xv in dx.items():
+    for k, xv in dx.items():
         yv = dy[k]
         r += len(xv) * len(yv)
 
@@ -92,5 +105,3 @@ def main():
 
 
 print(main())
-
-

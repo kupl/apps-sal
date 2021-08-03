@@ -25,4 +25,3 @@ for i in range(len(a)):
     if i in ans:
         print(' ', end='')
     print(a[i], end='')
-

@@ -22,7 +22,7 @@ st = int(t[n - 1] + 0.1)
 for i in range(st):
     if i >= t[k]:
         k += 1
-    
+
     ans += speed
 
     limit = min(v[k], v[k + 1] + t[k] - i - 1)

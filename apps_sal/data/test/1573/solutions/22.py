@@ -32,4 +32,3 @@ for iMinEl in range(len(m)):
         maxsSum = sSum
 
 print(maxsSum)
-

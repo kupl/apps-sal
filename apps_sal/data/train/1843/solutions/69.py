@@ -3,13 +3,14 @@ from sortedcontainers import SortedList
 from collections import defaultdict
 
 SECONDS_PER_MINUTE = 60
-SECONDS_PER_HOUR = 60*SECONDS_PER_MINUTE
-SECONDS_PER_DAY = 24*SECONDS_PER_HOUR
+SECONDS_PER_HOUR = 60 * SECONDS_PER_MINUTE
+SECONDS_PER_DAY = 24 * SECONDS_PER_HOUR
 INTERVAL_LENGTH = {
     'minute': SECONDS_PER_MINUTE,
     'hour': SECONDS_PER_HOUR,
     'day': SECONDS_PER_DAY,
 }
+
 
 class TweetCounts:
     def __init__(self):
@@ -34,11 +35,10 @@ class TweetCounts:
 
         counts = []
         for i in range(numIntervals):
-            intervalStart = startTime + i*intervalLength
+            intervalStart = startTime + i * intervalLength
             intervalEnd = min(intervalStart + intervalLength, endTime + 1)
             matchingTimes = self.tweets[tweetName].irange(minimum=intervalStart, maximum=intervalEnd, inclusive=(True, False))
             counts.append(len(list(matchingTimes)))
 
         # print(f'counts: {counts}')
         return counts
-

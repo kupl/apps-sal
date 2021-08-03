@@ -5,5 +5,4 @@ ma = max(arr)
 arr.remove(mi)
 arr.remove(ma)
 arr.sort()
-print(' '.join(map(str,[ma] + arr + [mi])))
-
+print(' '.join(map(str, [ma] + arr + [mi])))

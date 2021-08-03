@@ -5,4 +5,3 @@ def epidemic(tm, n, s0, i0, b, a):
         s, i, r = s - dt * b * s * i, i + dt * (b * s * i - a * i), r + dt * i * a
         imax = max(int(i), imax)
     return imax
-

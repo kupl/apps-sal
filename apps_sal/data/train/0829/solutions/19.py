@@ -1,10 +1,10 @@
 # cook your dish here
 N = int(input())
 l = list(map(int, input().strip().split(" ")))
-s=0
+s = 0
 for i in range(N):
-    for j in range(i+1, N):
-        s+= abs(l[j]-l[i])
+    for j in range(i + 1, N):
+        s += abs(l[j] - l[i])
 print(s)
 
 

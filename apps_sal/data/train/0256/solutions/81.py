@@ -3,17 +3,17 @@ class Solution:
         def condition(arr, k, h):
             res = 0
             for i in arr:
-                res += math.ceil(i/k)
+                res += math.ceil(i / k)
             if res <= h:
                 return True
             return False
-        
+
         l, r = 1, max(piles)
         while l < r:
-            m = l + (r-l)//2
+            m = l + (r - l) // 2
             if condition(piles, m, H):
                 r = m
             else:
                 l = m + 1
-        
+
         return l

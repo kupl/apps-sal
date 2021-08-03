@@ -1,6 +1,10 @@
 def gcd(a, b):
-    if b == 0: return a
-    else: return gcd(b, a % b)
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
 def __starting_point():
     n = int(input())
     A = list(map(int, input().split()))
@@ -11,5 +15,7 @@ def __starting_point():
             cnt += 1
         ans.append(A[i])
     print(cnt)
-    print(' '.join(str(i) for i in ans))        
+    print(' '.join(str(i) for i in ans))
+
+
 __starting_point()

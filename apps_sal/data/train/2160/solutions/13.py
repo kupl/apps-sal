@@ -5,7 +5,7 @@ if s % k != 0:
     print("No")
     return
 rvl = s // k
-vip =[]
+vip = []
 tvip = 0
 tvipl = 0
 for cv in range(n):
@@ -20,4 +20,3 @@ for cv in range(n):
         tvipl = 0
 print("Yes")
 print(*vip, sep=' ')
-

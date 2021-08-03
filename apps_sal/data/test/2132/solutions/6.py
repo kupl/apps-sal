@@ -2,9 +2,11 @@
 from sys import stdin, stdout
 from math import inf
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
+
 
 csp = 0
 ov = 1
@@ -37,4 +39,3 @@ for i in range(n):
     if sign[0] == 6:
         ovst.append(0)
 print(ans)
-

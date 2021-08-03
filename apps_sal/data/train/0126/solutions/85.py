@@ -3,7 +3,7 @@ class Solution:
         all_substrings = {}
         for i in range(minSize, maxSize + 1):
             for j in range(len(s) - i + 1):
-                ss = s[j:j+i]
+                ss = s[j:j + i]
                 if len(set(ss)) <= maxLetters:
                     if ss not in all_substrings:
                         all_substrings[ss] = 0

@@ -4,19 +4,18 @@ s = input()
 n = len(s)
 
 gaps = [0 for _ in range(10)]
-for i in range(n-1):
-	gaps[(int(s[i+1]) - int(s[i])) % 10] += 1
+for i in range(n - 1):
+    gaps[(int(s[i + 1]) - int(s[i])) % 10] += 1
 ans = [[0 for _ in range(10)] for _ in range(10)]
 for i in range(10):
-	for j in range(10):
-		if i > j:
-			ans[i][j] = ans[j][i]
-			continue
-		for g in range(10):
-			ans[i][j] += (adj[i][j][g]-1)*gaps[g]
-		if ans[i][j] > 10**20:
-			ans[i][j] = -1
+    for j in range(10):
+        if i > j:
+            ans[i][j] = ans[j][i]
+            continue
+        for g in range(10):
+            ans[i][j] += (adj[i][j][g] - 1) * gaps[g]
+        if ans[i][j] > 10**20:
+            ans[i][j] = -1
 
 for i in range(10):
-	print(*ans[i])
-
+    print(*ans[i])

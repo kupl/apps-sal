@@ -1,1 +1,1 @@
-types = lambda d: type(d).__name__
+def types(d): return type(d).__name__

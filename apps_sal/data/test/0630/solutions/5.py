@@ -6,4 +6,3 @@ for i in range(n):
     if a[i] != 0:
         ans[i] += ans[a[i] - 1] - max(0, min(n, a[i] + k) - max(1, i + 1 - k) + 1)
 print(*ans)
-

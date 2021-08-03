@@ -1,6 +1,7 @@
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
-        if d > len(jobDifficulty): return -1
+        if d > len(jobDifficulty):
+            return -1
         m = len(jobDifficulty)
         dp = [[float('inf') for _ in range(m)] for _ in range(d)]
         for i in range(0, d):
@@ -17,4 +18,3 @@ class Solution:
                         dp[i][j] = min(dp[i][j], dp[i - 1][k] + val)
         # print(dp)
         return dp[-1][-1]
-

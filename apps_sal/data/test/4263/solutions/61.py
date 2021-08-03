@@ -1,6 +1,7 @@
 
 target_a = ['A', 'C', 'G', 'T']
 
+
 def main():
     S = str(input())
 
@@ -17,6 +18,9 @@ def main():
         max_cnt = cnt
     print(max_cnt)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

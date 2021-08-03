@@ -12,4 +12,3 @@ for p in points:
         print("Yes")
     else:
         print("No")
-

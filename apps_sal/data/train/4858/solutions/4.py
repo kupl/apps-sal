@@ -3,12 +3,12 @@ from functools import lru_cache
 
 @lru_cache(maxsize=None)
 def j(n):
-    return n - a(j(n-1)) if n else 0
+    return n - a(j(n - 1)) if n else 0
 
 
 @lru_cache(maxsize=None)
 def a(n):
-    return n - j(a(n-1)) if n else 1
+    return n - j(a(n - 1)) if n else 1
 
 
 def john(n): return [j(i) for i in range(n)]

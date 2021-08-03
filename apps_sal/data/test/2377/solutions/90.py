@@ -2,7 +2,7 @@ N, H = list(map(int, input().split()))
 A = []
 B = []
 for i in range(N):
-    a, b = list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
     A.append(a)
     B.append(b)
 A_sorted = sorted(A, reverse=True)
@@ -18,8 +18,7 @@ for i in range(N):
         else:
             print(ans)
             return
-    else:break
+    else:
+        break
 ans += - (-(H - attack_sum) // A_sorted[0])
 print(ans)
-
-

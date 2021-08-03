@@ -4,4 +4,3 @@ def digits(n):
         sum += 1
     return sum
 # Subscribe to ScratchRunning
-

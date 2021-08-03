@@ -2,6 +2,7 @@
 def lucky(x, y):
     return '7' in str(x) + str(y)
 
+
 def take(hour, minutes, time):
     minutes = minutes - time
 
@@ -25,5 +26,6 @@ def __starting_point():
         total += 1
 
     print(total)
+
 
 __starting_point()

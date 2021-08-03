@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def factor(n):
     p = []
     if n == 1:
@@ -14,6 +15,7 @@ def factor(n):
     if m > 1:
         p.append(m)
     return p
+
 
 n = int(input())
 p = Counter(factor(n))

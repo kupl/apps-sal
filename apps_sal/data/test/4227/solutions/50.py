@@ -6,8 +6,10 @@ for a, b in AB:
     m[a].add(b)
     m[b].add(a)
 
+
 def main():
     ans = []
+
     def traverse(n, visits):
         visits = visits | set([n])
         if len(visits) == N:
@@ -17,5 +19,6 @@ def main():
             traverse(c, visits)
     traverse(1, set())
     return len(ans)
+
 
 print(main())

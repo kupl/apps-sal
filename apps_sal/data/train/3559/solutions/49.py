@@ -4,4 +4,3 @@ def chromosome_check(sperm):
     else:
         result = 'Congratulations! You\'re going to have a son.'
     return result
-

@@ -4,21 +4,20 @@ from sys import stdin
 
 def solve(tc):
     n = int(stdin.readline().strip())
-    li = list(map(int,stdin.readline().split()))
+    li = list(map(int, stdin.readline().split()))
 
     ans = 1
     mini = 1e9
     for i in range(n):
         k = li[i] // n
-        if li[i]%n>i:
+        if li[i] % n > i:
             k += 1
-        
-        if k<mini:
-            mini = k
-            ans = i+1
-    
-    print(ans)
 
+        if k < mini:
+            mini = k
+            ans = i + 1
+
+    print(ans)
 
 
 LOCAL_TEST = not __debug__

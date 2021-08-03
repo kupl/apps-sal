@@ -21,4 +21,3 @@ else:
     for i in a:
         ans += str(i[1]) + ' '
     print(ans)
-

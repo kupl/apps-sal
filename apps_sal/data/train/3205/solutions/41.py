@@ -1,17 +1,15 @@
-def is_divisible(n,x,y):
-
-  check = True
-
-  if n % x == 0 and n % y == 0:
+def is_divisible(n, x, y):
 
     check = True
 
+    if n % x == 0 and n % y == 0:
 
-    return check
+        check = True
 
-  else:
+        return check
 
-    check = False
+    else:
 
-    return check
+        check = False
 
+        return check

@@ -15,7 +15,7 @@ for i in range(m):
     deg[u] += 1
     deg[v] += 1
 order = [0] * n
-done = [False] * n 
+done = [False] * n
 stack = []
 cur = 0
 for i in range(n):
@@ -44,4 +44,3 @@ for i in range(m):
     sortEdges.append((order[u], order[v], i))
 print('ALIVE')
 print(' '.join([str(i[2] + 1) for i in sorted(sortEdges, reverse=True)]))
-

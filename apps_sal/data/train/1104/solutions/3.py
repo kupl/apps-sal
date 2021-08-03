@@ -21,7 +21,8 @@ def solve(n, k):
         ans = n * n + (2 * n) * (max(0, int((k - 1) / 2))) + int(int((k - 1) / 2) * int((k - 1) / 2 + 1))
     return ans % ((10 ** 9) + 7)
 
+
 t = int(input())
 for i in range(t):
-    n, k=map(int, input().split())
+    n, k = map(int, input().split())
     print(solve(n, k))

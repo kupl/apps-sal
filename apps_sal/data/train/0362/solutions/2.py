@@ -9,7 +9,7 @@ class Solution:
             for e in h:
                 rev[e].append(i)
         for i in range(40):
-            r = rev[i+1]
+            r = rev[i + 1]
             nx = {}
             for j in d:
                 nx[j] = (nx.get(j, 0) + d[j]) % MOD

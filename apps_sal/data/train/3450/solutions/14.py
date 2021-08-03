@@ -4,8 +4,7 @@ def array(string):
     print(string)
     if len(string) <= 2:
         return None
-    else: 
+    else:
         string = string[1:-1]
         print(string)
         return " ".join(string)
-

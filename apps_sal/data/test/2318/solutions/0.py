@@ -28,5 +28,3 @@ for _ in range(int(input())):
     s, t = input().strip(), input().strip()
     sc, tc = cnt(s), cnt(t)
     print('YES' if cmp(sc, tc) else 'NO')
-
-

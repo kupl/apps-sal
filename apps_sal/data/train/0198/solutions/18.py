@@ -1,6 +1,6 @@
 class Solution:
     def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
-        
+
         arr = [abs(ord(sc) - ord(tc)) for sc, tc in zip(s, t)]
         max_len = 0
         left, right = 0, 0

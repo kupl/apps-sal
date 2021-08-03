@@ -12,4 +12,3 @@ class Solution:
                     minn = min(cnt.keys())
             if minn >= cur:
                 return i + 1
-

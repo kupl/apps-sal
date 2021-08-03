@@ -1,9 +1,9 @@
 # coding: utf-8
 # Your code here!
-num=input().split()
-num2=int(num[0])*int(num[1])
+num = input().split()
+num2 = int(num[0]) * int(num[1])
 
-if num2%2==0:
-	print("Even")
+if num2 % 2 == 0:
+    print("Even")
 else:
-  	print("Odd")
+    print("Odd")

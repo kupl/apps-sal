@@ -22,7 +22,7 @@ anss = []
 
 for i, j in b.items():
     ansb.append((int(i), int(j)))
-ansb.sort(reverse = True)
+ansb.sort(reverse=True)
 
 for i, j in s.items():
     anss.append((int(i), int(j)))

@@ -23,4 +23,3 @@ for i in range(m):
 res = max(-1, n - tmp)
 
 print(res)
-

@@ -3,6 +3,7 @@ a = [int(t) for t in input().split(' ')]
 
 a.sort(reverse=True)
 
+
 def possible(d):
     total = 0
     for i in range(d):
@@ -13,7 +14,8 @@ def possible(d):
 
     return total >= m
 
-l, r = 0, n+1
+
+l, r = 0, n + 1
 
 while l < r:
     mid = (l + r) // 2
@@ -26,4 +28,3 @@ if possible(l):
     print(l)
 else:
     print(-1)
-

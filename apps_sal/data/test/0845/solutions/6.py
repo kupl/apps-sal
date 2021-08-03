@@ -2,6 +2,7 @@ s1 = "qwertyuiop"
 s2 = "asdfghjkl;"
 s3 = "zxcvbnm,./"
 
+
 def main():
     p = input()
     s = input()
@@ -18,5 +19,6 @@ def main():
                 q = min(len(j) - 1, q)
                 a += j[q]
     print(a)
+
 
 main()

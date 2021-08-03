@@ -8,7 +8,7 @@ for i in range(n):
     r, a, b = list(map(int, input().split()))
     if r not in bars:
         bars[r] = {}
-    for j in range(a, b+1):
+    for j in range(a, b + 1):
         bars[r][j] = -1
 
 bars[x0][y0] = 0
@@ -36,4 +36,3 @@ while q:
         break
 
 print(bars[x1][y1])
-

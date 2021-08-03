@@ -20,4 +20,3 @@ for i in range(n + 1):
     ans += n - (right - 1)
 
 print(ans)
-

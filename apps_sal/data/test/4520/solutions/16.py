@@ -2,7 +2,7 @@ n, k = map(int, input().split())
 s = []
 for i in range(n):
     l, r = map(int, input().split())
-    s.append([r, l, i]) # Greedy on largest right endpoint
+    s.append([r, l, i])  # Greedy on largest right endpoint
 s.sort()
 
 ans = []

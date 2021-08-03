@@ -8,6 +8,7 @@ def placeholdify(other):
         return Placeholder(lambda: other, 0)
     return other
 
+
 def make_bin_op(op):
     def __op__(self, other):
         other = placeholdify(other)
@@ -16,8 +17,8 @@ def make_bin_op(op):
             self.n + other.n
         )
     return __op__
-            
-        
+
+
 def make_bin_rop(op):
     def __rop__(self, other):
         other = placeholdify(other)
@@ -32,6 +33,7 @@ class Placeholder:
     def __init__(self, f, n):
         self.f = f
         self.n = n
+
     def __call__(self, *args):
         return self.f(*args)
     __add__ = make_bin_op(operator.add)
@@ -42,5 +44,6 @@ class Placeholder:
     __rsub__ = make_bin_rop(operator.sub)
     __rmul__ = make_bin_rop(operator.mul)
     __rfloordiv__ = make_bin_rop(operator.floordiv)
+
 
 x = Placeholder(lambda x: x, 1)

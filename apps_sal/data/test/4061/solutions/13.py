@@ -22,7 +22,6 @@ for i in range(len(s)):
         break
 
 
-
 ans = max(b[0], len(s) - f[-1] - 1)
 bbb = 0
 bbb ^= 1
@@ -30,7 +29,6 @@ bbb ^= 1
 bbb += 1
 
 for i in range(len(f) - 1):
-    ans = max(ans, abs(b[i +1] -1 - f[i]))
+    ans = max(ans, abs(b[i + 1] - 1 - f[i]))
 
 print(ans)
-

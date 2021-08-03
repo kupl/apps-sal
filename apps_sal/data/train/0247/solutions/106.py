@@ -8,10 +8,10 @@ class Solution:
         for i, a in enumerate(arr):
             cur += a
             p.append(cur)
-            if cur-target in m:
-                ans = min(ans, i-m[cur-target]+minLen[m[cur-target]+1])
-                best = min(i-m[cur-target], best)
+            if cur - target in m:
+                ans = min(ans, i - m[cur - target] + minLen[m[cur - target] + 1])
+                best = min(i - m[cur - target], best)
             minLen.append(best)
             m[cur] = i
-        
+
         return ans if ans != float('inf') else -1

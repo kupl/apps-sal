@@ -45,4 +45,3 @@ ans = []
 for a, b in AB:
     ans.append(solve(min(a, b), max(a, b)))
 print(*ans, sep='\n')
-

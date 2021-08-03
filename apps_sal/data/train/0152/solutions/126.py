@@ -3,6 +3,7 @@ class Solution:
         # sort balls
         position.sort()
         # max number of balls that can preserve a min difference of diff between any two balls
+
         def count_balls(diff):
             nballs, cur = 1, position[0]
             for i in range(1, len(position)):
@@ -18,6 +19,5 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid - 1
-                
-        return right
 
+        return right

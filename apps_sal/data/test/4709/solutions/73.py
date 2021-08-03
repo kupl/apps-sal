@@ -6,8 +6,7 @@ a, op, b = input().split()
 a, b = int(a), int(b)
 
 if op == '+':
-    ans = a+b
+    ans = a + b
 elif op == '-':
-    ans = a-b
+    ans = a - b
 print(ans)
-

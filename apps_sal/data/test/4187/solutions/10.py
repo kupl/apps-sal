@@ -11,4 +11,3 @@ for ai in a:
         ones = 0
 
 print(max_ones)
-

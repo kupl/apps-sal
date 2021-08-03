@@ -22,9 +22,9 @@ def main():
 
     print("YES" if i < method_a else "NO")
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

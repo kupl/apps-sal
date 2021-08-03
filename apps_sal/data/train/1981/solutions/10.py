@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         stCount = Counter([request[0] for request in requests])
@@ -10,10 +12,9 @@ class Solution:
             tmp.append([end, 'z', times])
         nums.sort(reverse=True)
         tmp.sort()
-        
+
         segments = []
-        
-        
+
         times = 0
         prev = 0
         MOD = (10 ** 9) + 7
@@ -26,19 +27,16 @@ class Solution:
                 segments.append([point[0] - prev + 1, times])
                 times -= point[2]
                 prev = point[0] + 1
-        
+
             # prev = point[0]
-        segments.sort(key=lambda element:element[1], reverse=True)
+        segments.sort(key=lambda element: element[1], reverse=True)
         st = 0
         ans = 0
-       
+
         for segment, times in segments:
             for i in range(st, st + segment):
                 ans += nums[i] * times
             ans %= MOD
             st = st + segment
-            
-        
-        
-            
+
         return ans

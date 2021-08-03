@@ -8,4 +8,4 @@ class Solution:
             mask ^= 1 << ord(ch) - ord('0')
             ans = max([ans, i - idxs[mask]] + [i - idxs[mask ^ (1 << j)] for j in range(10)])
             idxs[mask] = min(idxs[mask], i)
-        return ans;
+        return ans

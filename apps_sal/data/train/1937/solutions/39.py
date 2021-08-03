@@ -1,21 +1,23 @@
 class people:
-    
+
     def __init__(self, name):
         self.name = name
         self.alive = True
         self.children = []
-        
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
         self.kingName = kingName
         self.dic = {}
         self.dic[kingName] = people(kingName)
+
     def birth(self, parentName: str, childName: str) -> None:
         child = people(childName)
         self.dic[childName] = child
         self.dic[parentName].children.append(child)
-    
+
     def death(self, name: str) -> None:
         self.dic[name].alive = False
 
@@ -26,6 +28,7 @@ class ThroneInheritance:
             if o.alive is True:
                 res.append(o.name)
         return res
+
     def dfs(self, cur):
         res = []
         res.append(cur)
@@ -33,10 +36,9 @@ class ThroneInheritance:
             temp = self.dfs(child)
             res += temp
         return res
-            
+
 # Your ThroneInheritance object will be instantiated and called as such:
 # obj = ThroneInheritance(kingName)
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

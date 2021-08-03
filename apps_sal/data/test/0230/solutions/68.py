@@ -25,7 +25,7 @@ while r - l > 1:
         h = (h * b + atoi(S[i])) % mod
     memo[h] = 1
     for i in range(1, N - d + 1):
-        h = (h*b + atoi(S[i+d-1]) - t * atoi(S[i-1])) % mod
+        h = (h * b + atoi(S[i + d - 1]) - t * atoi(S[i - 1])) % mod
         if not memo[h]:
             memo[h] = i + 1
         elif memo[h] and i - memo[h] + 1 >= d:

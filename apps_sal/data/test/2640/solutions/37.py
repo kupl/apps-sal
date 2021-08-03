@@ -25,4 +25,3 @@ East = np.maximum.accumulate(East, axis=1)
 East = (W - np.fliplr(East)) * G
 
 print((np.amax(South - North + East - West) - 1))
-

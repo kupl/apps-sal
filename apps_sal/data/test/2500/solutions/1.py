@@ -13,5 +13,6 @@ def solve(n: int) -> int:
 
     return int(sum(dp[0]) % mod)
 
+
 n = int(input())
 print(solve(n))

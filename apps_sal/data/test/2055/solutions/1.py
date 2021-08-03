@@ -3,7 +3,7 @@ def main():
         n = int(input().strip())
         as_ = [int(t) for t in input().strip().split()]
         bs = [int(t) for t in input().strip().split()]
-        
+
         print(solve(as_=as_, bs=bs))
 
 
@@ -16,7 +16,7 @@ def solve(as_, bs):
 
     while gt > lt + 1:
         mid = (lt + gt) // 2
-        
+
         update_dir = get_update_dir(as_, bs, mid)
 
         if update_dir == 0:
@@ -43,7 +43,7 @@ def get_update_dir(as_, bs, x):
 
         if right > b:
             return +1
-        
+
         left = b - right
 
     if right + x > bs[-1]:
@@ -53,4 +53,3 @@ def get_update_dir(as_, bs, x):
 
 
 main()
-

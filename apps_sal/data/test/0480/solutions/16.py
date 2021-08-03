@@ -10,9 +10,7 @@ ans = abs(x2 - x1) * spp
 
 if vt > vp:
     if label == 1:
-        
-        
-        
+
         if x2 >= x1:
             if p <= x1:
                 t = (x1 - p) / (vt - vp)
@@ -28,7 +26,7 @@ if vt > vp:
             x1 -= t * vp
             ans = min(ans, t + max(x1 - x2, 0) * spt)
     else:
-        
+
         if x2 <= x1:
             if p >= x1:
                 t = (p - x1) / (vt - vp)
@@ -42,6 +40,6 @@ if vt > vp:
             t += (x1 + t * vp) / (vt - vp)
             x1 += t * vp
             ans = min(ans, t + max(x2 - x1, 0) * spt)
-            
-            
+
+
 stdout.write(str(int(ans)))

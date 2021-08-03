@@ -18,4 +18,3 @@ ans.sort()
 
 for i in ans:
     print(i)
-

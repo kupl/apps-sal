@@ -6,7 +6,7 @@ exp_mean = 0
 first_l, first_r = None, None
 last_good, last_all = None, None
 
-for i in range(n+1):
+for i in range(n + 1):
     l, r = None, None
     if i < n:
         l, r = [int(x) for x in input().split()]
@@ -31,4 +31,3 @@ for i in range(n+1):
     last_all = cur_all
 
 print(exp_mean)
-

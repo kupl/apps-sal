@@ -2,7 +2,7 @@ h, w = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-grid = [[-1]*w for i in range(h)]
+grid = [[-1] * w for i in range(h)]
 for i in range(h):
     if a[i] == 0:
         grid[i][0] = 0

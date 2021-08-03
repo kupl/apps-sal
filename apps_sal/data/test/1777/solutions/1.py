@@ -4,7 +4,7 @@ n = int(input())
 starts = []
 ends = []
 fulls = 0
-#Testing Validity
+# Testing Validity
 for _ in range(n):
     s = input()
     count = 0
@@ -44,8 +44,4 @@ while len(starts) > 0 and len(ends) > 0:
         starts.pop(0)
         ends.pop(0)
 
-print(out + fulls//2)
-            
-        
-        
-
+print(out + fulls // 2)

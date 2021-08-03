@@ -36,8 +36,7 @@ def solve(seq):
 
     return min(changes or [-1])
 
+
 if '__main__' == __name__:
     input()
     print(solve(list(map(int, input().strip().split()))))
-
-

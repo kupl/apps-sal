@@ -15,4 +15,3 @@ for _ in range(t):
             ans.append(ctime)
             ctime += 1
     print(' '.join(str(v) for v in ans))
-

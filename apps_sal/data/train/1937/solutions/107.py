@@ -18,22 +18,22 @@ class ThroneInheritance:
             newChild = Person(childName)
             self.persons[parentName].children.append(newChild)
             self.persons[childName] = newChild
-            
+
     def death(self, name: str) -> None:
         self.persons[name].isAlive = False
 
     def getInheritanceOrder(self) -> List[str]:
         ans = []
-        
+
         def dfs(person):
             stack = [person]
-            while(len(stack)>0):
+            while(len(stack) > 0):
                 current = stack.pop()
                 if current.isAlive:
                     ans.append(current.name)
                 for child in current.children[::-1]:
                     stack.append(child)
-        
+
         dfs(self.root)
         return ans
 
@@ -43,4 +43,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

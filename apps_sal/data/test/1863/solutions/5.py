@@ -2,7 +2,8 @@
 
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
-input = lambda: next(_data)
+def input(): return next(_data)
+
 
 def __starting_point():
     n = int(input())
@@ -17,5 +18,6 @@ def __starting_point():
             ans += 'G'
             sum_g += g
     print(ans)
+
 
 __starting_point()

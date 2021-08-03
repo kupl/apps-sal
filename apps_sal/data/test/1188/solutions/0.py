@@ -3,13 +3,11 @@ n = int(input())
 a = sorted(list(map(int, input().split())))
 
 
-
 maxe = max(a)
 
 cnt = []
 
 cur, k, i = 1, 0, 0
-
 
 
 while i < n:
@@ -39,7 +37,6 @@ cnt.append(0)
 cnt.append(0)
 
 maxe = len(cnt) - 1
-
 
 
 maxk = cnt[1]
@@ -79,11 +76,9 @@ for l in range(maxk):
         was = True
 
 
-
 if not was:
 
     print(-1)
-
 
 
 # Made By Mostafa_Khaled

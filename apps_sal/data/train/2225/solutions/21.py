@@ -1,18 +1,24 @@
 import sys
 readline = sys.stdin.readline
 
+
 class Node:
     def __init__(self, sigma, depth):
         self.end = False
         self.child = [None] * sigma
         self.depth = depth
+
     def __setitem__(self, i, x):
         self.child[i] = x
+
     def __getitem__(self, i):
         return self.child[i]
 
+
 sigma = 2
 root = Node(sigma, 0)
+
+
 def add_trie(S):
     vn = root
     for cs in S:
@@ -20,6 +26,7 @@ def add_trie(S):
             vn[cs] = Node(sigma, vn.depth + 1)
         vn = vn[cs]
     vn.end = True
+
 
 ans = 0
 
@@ -36,7 +43,7 @@ while stack:
     for i in range(2):
         if vn[i] is None:
             r = L - vn.depth
-            cnt ^= -r&r
+            cnt ^= -r & r
         else:
             stack.append(vn[i])
 

@@ -1,15 +1,15 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        #prims
+        # prims
         g = defaultdict(list)
         n = len(points)
-        #create graph
+        # create graph
         for i in range(n):
             for j in range(n):
                 if i != j:
-                    g[i].append((abs(points[j][0]-points[i][0])+abs(points[j][1]-points[i][1]), j))
+                    g[i].append((abs(points[j][0] - points[i][0]) + abs(points[j][1] - points[i][1]), j))
 
-        heap = [(0,0)]
+        heap = [(0, 0)]
         ans = 0
         visited = set()
         while heap:

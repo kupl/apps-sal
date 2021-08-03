@@ -8,6 +8,6 @@ class Solution:
             for j in range(1, target + 1):
                 for num in range(1, f + 1):
                     if j - num >= 0:
-                        dp[i][j] += dp[i-1][j-num]
-        
+                        dp[i][j] += dp[i - 1][j - num]
+
         return dp[d][target] % (10**9 + 7)

@@ -4,6 +4,7 @@
 import sys
 from collections import Counter
 
+
 def s2nn(s): return [int(c) for c in s.split(' ')]
 def ss2nn(ss): return [int(s) for s in list(ss)]
 def ss2nnn(ss): return [s2nn(s) for s in list(ss)]
@@ -23,12 +24,12 @@ def case():
     ans = any(v % 2 for v in list(cntr.values())) ^ (N % 2)
     print(('First' if ans else 'Second'))
 
-    
+
 def main():
     T = i2n()
     for _ in range(T):
         case()
     return
 
-main()
 
+main()

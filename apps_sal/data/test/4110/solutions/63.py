@@ -1,7 +1,7 @@
-D,G = list(map(int,input().split()))
+D, G = list(map(int, input().split()))
 pc = []
 for i in range(D):
-    pc.append(list(map(int,input().split())))
+    pc.append(list(map(int, input().split())))
 
 scoreList = [0 for i in range(D)]
 

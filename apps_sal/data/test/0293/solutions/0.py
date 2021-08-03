@@ -1,12 +1,13 @@
 x = int(input())
 
+
 def solve(x):
     count = 0
     lst = []
     x6 = x * 6
     for n in range(1, x + 1):
-        t, r = divmod(x6, n*(n+1))
-        if t < 2*n + 1:
+        t, r = divmod(x6, n * (n + 1))
+        if t < 2 * n + 1:
             break
         if r:
             continue
@@ -27,5 +28,5 @@ def solve(x):
     for n, m in lst[1:]:
         print(m, n)
 
-solve(x)
 
+solve(x)

@@ -9,15 +9,15 @@ else:
         if al[i] != num:
             i += 1
         else:
-            ans += i-j
-            j = i+1
+            ans += i - j
+            j = i + 1
             num += 1
             i += 1
 
     # print(i, j, ans)
 
     if num != 1 and j != n:
-        ans += i-j
+        ans += i - j
 
     if num == 1:
         print(-1)

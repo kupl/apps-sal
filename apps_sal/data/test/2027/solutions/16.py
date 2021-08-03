@@ -6,5 +6,4 @@ for i in range(len(A) - 1, - 1, -1):
         answer[i] = A[i]
     else:
         answer[i] = (A[i] + A[i + 1])
-print( ' '.join(map(str, answer)))
-
+print(' '.join(map(str, answer)))

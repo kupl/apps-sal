@@ -23,7 +23,7 @@ class Solution:
         # if root and root.val not in to_delete:
         #     res.append(root)
         # return res
-        
+
         stack = [(root, True)]
         res = []
         while stack:
@@ -32,8 +32,10 @@ class Solution:
                 if curr.val not in to_delete and toBeRoot:
                     res.append(curr)
                 toBeRoot = curr.val in to_delete
-                stack += [(curr.left,toBeRoot), (curr.right, toBeRoot)]
-                if curr.left and curr.left.val in to_delete: curr.left = None
-                if curr.right and curr.right.val in to_delete: curr.right = None
-                    
+                stack += [(curr.left, toBeRoot), (curr.right, toBeRoot)]
+                if curr.left and curr.left.val in to_delete:
+                    curr.left = None
+                if curr.right and curr.right.val in to_delete:
+                    curr.right = None
+
         return res

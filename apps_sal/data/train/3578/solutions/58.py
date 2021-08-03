@@ -3,5 +3,4 @@ def paperwork(n, m):
         return 0
     else:
         r = n * m
-        return r 
-
+        return r

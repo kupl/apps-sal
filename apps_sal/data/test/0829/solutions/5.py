@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 count1 = 0
 count0 = 0
-for i in range (n):
+for i in range(n):
     if s[i] == '0':
         count0 += 1
     else:

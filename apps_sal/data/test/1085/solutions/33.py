@@ -1,8 +1,8 @@
 def main():
     n = int(input())
     count = 2
-    sqrt = int(n ** (1/2))
-    for i in range(2,sqrt + 1):
+    sqrt = int(n ** (1 / 2))
+    for i in range(2, sqrt + 1):
         if n % i == 1:
             count += 2
         elif n % i == 0:
@@ -19,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

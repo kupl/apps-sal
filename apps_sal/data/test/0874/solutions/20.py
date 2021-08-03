@@ -10,4 +10,3 @@ if n % 2 == 0:
     print(''.join([str(num) + ' ' for num in li]))
 else:
     print('-1')
-

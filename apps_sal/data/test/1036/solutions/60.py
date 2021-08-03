@@ -22,8 +22,8 @@ def step(S, k):
     T = S + S
     tmp = ''
     for i in range(len(S)):
-        tmp += win(T[2*i], T[2*i+1])
-    return tmp, k-1
+        tmp += win(T[2 * i], T[2 * i + 1])
+    return tmp, k - 1
 
 
 n, k = list(map(int, input().split()))
@@ -35,4 +35,3 @@ while rem > 0:
     now, rem = step(now, rem)
 
 print((now[0]))
-

@@ -1,25 +1,28 @@
 from itertools import *
 
-def main(n,x,l,r):
+
+def main(n, x, l, r):
     s = 0
     curr = 1
     for i in range(n):
-        skip = (l[i]-curr) // x
-        s += r[i]-curr-skip*x+1
-        curr = r[i]+1
+        skip = (l[i] - curr) // x
+        s += r[i] - curr - skip * x + 1
+        curr = r[i] + 1
     print(s)
 
 
 def main_input(info=0):
-    n,x = list(map(int,input().split()))
+    n, x = list(map(int, input().split()))
     #t = [(int(x)-1,i+1) for i,x in enumerate(input().split())]
-    l,r = list(range(n)), list(range(n))
+    l, r = list(range(n)), list(range(n))
     for i in range(n):
-        l[i],r[i] = list(map(int,input().split()))
+        l[i], r[i] = list(map(int, input().split()))
 #    t = [map(int,input().split()) for x in range(n)]
-    main(n,x,l,r)
+    main(n, x, l, r)
+
 
 def __starting_point():
     main_input()
+
 
 __starting_point()

@@ -1,4 +1,4 @@
-def compare(s1,s2):
+def compare(s1, s2):
 
     if s1 == None or s1.isalpha() == False:
         s1 = ""

@@ -8,9 +8,9 @@ for a in A:
     x ^= a
 idx = 0
 for i in range(59, -1, -1):
-    if x>>i & 1 == 0:
+    if x >> i & 1 == 0:
         for j, a in enumerate(A[idx:], idx):
-            if a>>i & 1:
+            if a >> i & 1:
                 break
         else:
             continue
@@ -20,14 +20,13 @@ for i in range(59, -1, -1):
                 A[j] ^= a
         idx += 1
 s = 0
-#for a in A:
+# for a in A:
 #    print(bin(a))
 for a in A:
     s ^= a
-#print(f"s={bin(s)}")
+# print(f"s={bin(s)}")
 for i in range(60):
-    if x>>i & 1 == 1 and s>>i & 1:
-        s ^= 1<<i
+    if x >> i & 1 == 1 and s >> i & 1:
+        s ^= 1 << i
 #print(x, s)
-print((x + (s<<1)))
-
+print((x + (s << 1)))

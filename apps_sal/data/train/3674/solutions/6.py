@@ -1,5 +1,6 @@
-def add_binary(a,b):
+def add_binary(a, b):
     return convert_to_binary(a + b)[::-1]
+
 
 def convert_to_binary(num):
     if num == 0:

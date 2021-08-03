@@ -18,5 +18,5 @@ for _ in range(int(input())):
     l = [[t[a], a] for a in t]
     l.sort(reverse=True)
     b = l[0][0]
-    a = len(l)-1
-    print (max(min(a,b), min(a+1,b-1)))
+    a = len(l) - 1
+    print(max(min(a, b), min(a + 1, b - 1)))

@@ -13,4 +13,3 @@ if A <= 0:
     print('No')
 else:
     print('Yes')
-

@@ -6,8 +6,7 @@ class Solution:
             return arr
         arr.sort()
         n = len(arr)
-        median = arr[int((n-1)/2)]
-        arr = [(abs(i-median), i) for i in arr]
+        median = arr[int((n - 1) / 2)]
+        arr = [(abs(i - median), i) for i in arr]
         arr.sort(reverse=True)
         return [i[1] for i in arr[:k]]
-

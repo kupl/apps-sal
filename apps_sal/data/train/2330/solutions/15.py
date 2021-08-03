@@ -11,7 +11,7 @@ def main():
             print(-1)
             return
 
-    conn = [[]]*(n + 1)
+    conn = [[]] * (n + 1)
     children = []
     for i in range(1, n):
         if s[i - 1] == '0':
@@ -25,6 +25,9 @@ def main():
         for j in conn[i]:
             print(j, i)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

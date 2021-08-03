@@ -1,14 +1,14 @@
 s = input()
 cnt = 0
-m=10**9 + 7
+m = 10**9 + 7
 t = 0
 
 for i in range(len(s)):
-	if s[~i] == 'a':
-		cnt = (cnt+t)%m
-		t = (t*2)%m
-	else:
-		t += 1
+    if s[~i] == 'a':
+        cnt = (cnt + t) % m
+        t = (t * 2) % m
+    else:
+        t += 1
 print(cnt)
 
 """s = raw_input()
@@ -40,7 +40,7 @@ for char in s:
         ans = ans%(10**9+7)
 
 print ans%(10**9+7)"""
-        
+
 """
 for char in s:
     if char == "a":
@@ -62,4 +62,3 @@ else:
     ans += n*(twop-1)
     print ans
 """
-

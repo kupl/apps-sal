@@ -2,18 +2,19 @@ import re
 import itertools
 from collections import Counter, deque
 
+
 class Task:
     n, m = 0, 0
     graph = []
     answer = ""
-	
+
     def getData(self):
         self.n, self.m = [int(x) for x in input().split(' ')]
         for i in range(0, self.m):
             self.graph += [[int(x) for x in input().split(' ')]]
 
         #inFile = open('input.txt', 'r')
-        #inFile.readline().rstrip()
+        # inFile.readline().rstrip()
         #self.childs = inFile.readline().rstrip()
 
     def solve(self):
@@ -37,12 +38,12 @@ class Task:
 
     def printAnswer(self):
         print(re.sub(r'[\[\],]', '', str(self.answer)))
-        #print(self.answer[:6])
+        # print(self.answer[:6])
         #outFile = open('output.txt', 'w')
-        #outFile.write(self.answer)
+        # outFile.write(self.answer)
+
 
 task = Task()
 task.getData()
 task.solve()
 task.printAnswer()
-

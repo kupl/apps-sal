@@ -10,9 +10,9 @@ def solve(N, A, B):
     print((sum(nums)))
 
 
-
 def __starting_point():
     N, A, B = list(map(int, input().split()))
     solve(N, A, B)
+
 
 __starting_point()

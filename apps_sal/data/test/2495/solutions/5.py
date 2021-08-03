@@ -1,5 +1,6 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
+
 
 def calc(a, t):
     ans = 0
@@ -22,6 +23,7 @@ def calc(a, t):
 
     return ans, t
 
+
 ans_p = 0
 t_p = 0
 ans_m = 0
@@ -29,10 +31,10 @@ t_m = 0
 if A[0] > 0:
     ans_p = 0
     t_p = A[0]
-    ans_m = A[0]+1
+    ans_m = A[0] + 1
     t_m = -1
 elif A[0] < 0:
-    ans_p = -A[0]+1
+    ans_p = -A[0] + 1
     t_p = 1
     ans_m = 0
     t_m = A[0]
@@ -49,4 +51,3 @@ for i in range(1, N):
     ans_m += a
 
 print((min(ans_p, ans_m)))
-

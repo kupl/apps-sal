@@ -1,16 +1,18 @@
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 a = []
 for i in range(n):
-    a.append(list(map(int,input().split())))
+    a.append(list(map(int, input().split())))
 b = []
 for i in range(n):
     b.append([0] * m)
+
 
 def fill(x, y):
     for i in range(n):
         b[i][y] = 1
     for i in range(m):
         b[x][i] = 1
+
 
 def getv(c, x, y):
     res = False
@@ -19,6 +21,7 @@ def getv(c, x, y):
     for i in range(m):
         res = res or c[x][i]
     return res
+
 
 def getv2(c, x, y):
     res = True
@@ -29,10 +32,9 @@ def getv2(c, x, y):
     return res
 
 
-
 for i in range(n):
     for j in range(m):
-        if getv2(a,i,j):
+        if getv2(a, i, j):
             b[i][j] = 1
 
 
@@ -47,6 +49,6 @@ if good == False:
 else:
     print("YES")
     for i in range(n):
-        for j in range(m-1):
-            print(b[i][j],end=' ')
-        print(b[i][m-1])
+        for j in range(m - 1):
+            print(b[i][j], end=' ')
+        print(b[i][m - 1])

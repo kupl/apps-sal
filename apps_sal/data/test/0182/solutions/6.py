@@ -13,7 +13,7 @@ if b > y:
     have += (b - y) // 2
 else:
     need += y - b
-    
+
 if c > z:
     have += (c - z) // 2
 else:

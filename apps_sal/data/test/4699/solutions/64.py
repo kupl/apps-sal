@@ -1,8 +1,8 @@
-def price(N,K):
+def price(N, K):
     Kn = input().split()
     Flag = False
 
-    for i in range(N,10*N,1):
+    for i in range(N, 10 * N, 1):
         value = str(i)
         for j in range(K):
             if(Kn[j] not in value):
@@ -15,5 +15,6 @@ def price(N,K):
             print(i)
             break
 
-N,K = (int(x) for x in input().split())
-price(N,K)
+
+N, K = (int(x) for x in input().split())
+price(N, K)

@@ -15,4 +15,3 @@ elif False in list2:
     print('No')
 else:
     print('Yes')
-

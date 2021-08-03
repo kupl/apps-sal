@@ -1,6 +1,7 @@
 def iter(start, number, step):
-    for i in range(number-1):
-        yield float(start + step*i)
+    for i in range(number - 1):
+        yield float(start + step * i)
+
 
 def looper(start, stop, number):
     if number == 1:

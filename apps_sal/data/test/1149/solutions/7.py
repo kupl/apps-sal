@@ -1,8 +1,8 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 p = a[0]
 ps = a[1:]
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 q = a[0]
 qs = a[1:]
 s = set(ps) | set(qs)

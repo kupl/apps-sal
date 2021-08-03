@@ -3,7 +3,7 @@ l = []
 n = int(input())
 x = map(int, input().split())
 x1 = sum(x)
-for i in range(1, n+1):
+for i in range(1, n + 1):
     l.append(i)
 
 l1 = sum(l)

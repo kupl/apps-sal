@@ -1,6 +1,6 @@
 import sys
 
-a,b,x,y = map(int, input().split())
+a, b, x, y = map(int, input().split())
 
 diff = a - b
 if diff == 1 or diff == 0:

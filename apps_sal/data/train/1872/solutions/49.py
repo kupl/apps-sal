@@ -7,11 +7,13 @@
 import collections
 import heapq
 import sys
+
+
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
         lSums = dict()
         q = collections.deque()
-        
+
         level = 0
         q.append(root)
         while q:
@@ -25,19 +27,17 @@ class Solution:
                     q.append(node.left)
                 if node.right != None:
                     q.append(node.right)
-        
+
             lSums[level] = levelSum
-            
+
         minLevel = sys.maxsize
         maxSum = -sys.maxsize
-        
+
         for level in lSums:
             localSum = lSums[level]
-            #print(\"level %d sum %d maxSum %d minLel %d\" % (level, localSum, maxSum, minLevel))
-            if maxSum < localSum :
+            # print(\"level %d sum %d maxSum %d minLel %d\" % (level, localSum, maxSum, minLevel))
+            if maxSum < localSum:
                 minLevel = level
                 maxSum = localSum
-                
-        return minLevel
-            
 
+        return minLevel

@@ -1,5 +1,6 @@
 from heapq import *
 
+
 def sort(iterable):
     h = []
     for value in iter(iterable):

@@ -21,9 +21,9 @@ else:
         minAns += '9' * (m - pos)
     else:
         minAns += str(lost % 9) + '9' * (m - pos - 1)
-    
-    print(minAns, end = ' ')
-    
+
+    print(minAns, end=' ')
+
     maxAns = ''
     lost = s
     pos = 0
@@ -34,6 +34,5 @@ else:
     if m - pos > 0:
         maxAns += str(lost)
         maxAns += '0' * (m - pos - 1)
-    
-    print(maxAns)
 
+    print(maxAns)

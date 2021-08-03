@@ -46,4 +46,5 @@ def __starting_point():
     # メイン処理
     main(N, M, requests)
 
+
 __starting_point()

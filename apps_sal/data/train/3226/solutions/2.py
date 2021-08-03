@@ -4,4 +4,3 @@ def land_perimeter(arr):
         current = list(row)
         result += sum(a != b for a, b in zip(['O'] + current, current + ['O']))
     return 'Total land perimeter: {}'.format(result)
-

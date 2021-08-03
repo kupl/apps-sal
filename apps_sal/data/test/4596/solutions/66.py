@@ -8,7 +8,7 @@ while True:
             break
         A[i] = A[i] / 2
     else:
-        count+=1
+        count += 1
         continue
     break
 print(count)

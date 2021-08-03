@@ -14,4 +14,3 @@ for n, a in zip(N, A):
         print('First')
     else:
         print('Second')
-

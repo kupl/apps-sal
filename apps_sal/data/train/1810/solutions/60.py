@@ -1,5 +1,7 @@
 import re
 from collections import defaultdict
+
+
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
         mapping = defaultdict(lambda: -1)
@@ -8,7 +10,7 @@ class Solution:
             if name in mapping:
                 count = mapping[name] + 1
                 fname = f'{name}({count})'
-                while fname in mapping: 
+                while fname in mapping:
                     count += 1
                     fname = f'{name}({count})'
                 mapping[name] = count

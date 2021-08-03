@@ -1,4 +1,4 @@
-H,W,K = map(int, input().split())
+H, W, K = map(int, input().split())
 
 if W == 1:
     print(1 if K == 1 else 0)
@@ -12,7 +12,8 @@ for state in range(1, 1 << (W - 1)):
     for j in range(1, W - 1):
         if ((state >> j - 1) & 1) and ((state >> j) & 1):
             flag = False
-    if flag: states.append(state)
+    if flag:
+        states.append(state)
 
 dp = [[0] * W for _ in range(H + 1)]
 

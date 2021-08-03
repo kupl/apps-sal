@@ -1,2 +1,2 @@
 from math import log2, ceil
-print(ceil(log2(int(input())+1)))
+print(ceil(log2(int(input()) + 1)))

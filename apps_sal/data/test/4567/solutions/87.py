@@ -12,8 +12,7 @@ if m % 10 != 0:
 else:
     for e in l:
         if (m - e) % 10 != 0:
-            print((m-e))
+            print((m - e))
             return
 
     print((0))
-

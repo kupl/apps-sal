@@ -5,10 +5,10 @@ def modes(data):
             counts[value] += 1
         else:
             counts[value] = 1
-    #return counts
+    # return counts
     max_occurrence = max(counts.values())
     min_occurrence = min(counts.values())
-    
+
     if max_occurrence == min_occurrence:
         return []
     result = []

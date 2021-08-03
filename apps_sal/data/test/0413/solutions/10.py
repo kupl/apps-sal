@@ -14,4 +14,3 @@ while q:
         q.append(c - 1)
         mem[c - 1] = mem[c] + 1
 print(mem[m])
-

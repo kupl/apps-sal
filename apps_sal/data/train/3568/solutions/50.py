@@ -1,4 +1,4 @@
-def bumps( road ):
+def bumps(road):
     cnt1, cnt2 = 0, 0
     for c in road:
         if c == "_":
@@ -8,4 +8,3 @@ def bumps( road ):
         if cnt2 > 15:
             return "Car Dead"
     return "Woohoo!"
-

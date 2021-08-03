@@ -1,5 +1,5 @@
 def main():
-    n,x,m = list(map(int,input().split()))
+    n, x, m = list(map(int, input().split()))
     ans = x
     now = x
     used = [0] * (m + 1)
@@ -16,7 +16,6 @@ def main():
         used[now] = cnt
         ans += now
     start = used[now]
-
 
     ans = 0
     now = x
@@ -36,11 +35,14 @@ def main():
     roopCnt = rem // cycleCnt
     ans += roopCnt * cycle
     now = startNum
-    for i in range(roopCnt * cycleCnt + start, n+1):
+    for i in range(roopCnt * cycleCnt + start, n + 1):
         ans += now
         now = (now ** 2) % m
     print(ans)
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

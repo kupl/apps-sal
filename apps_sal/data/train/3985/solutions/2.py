@@ -10,4 +10,3 @@ def find_even_index(lst):
     else:
         result = -1
     return result
-

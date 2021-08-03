@@ -1,13 +1,13 @@
 def pawn_move_tracker(moves):
     board_state = [
-        [".",".",".",".",".",".",".","."],
-        ["p","p","p","p","p","p","p","p"],
-        [".",".",".",".",".",".",".","."],
-        [".",".",".",".",".",".",".","."],
-        [".",".",".",".",".",".",".","."],
-        [".",".",".",".",".",".",".","."],
-        ["P","P","P","P","P","P","P","P"],
-        [".",".",".",".",".",".",".","."]
+        [".", ".", ".", ".", ".", ".", ".", "."],
+        ["p", "p", "p", "p", "p", "p", "p", "p"],
+        [".", ".", ".", ".", ".", ".", ".", "."],
+        [".", ".", ".", ".", ".", ".", ".", "."],
+        [".", ".", ".", ".", ".", ".", ".", "."],
+        [".", ".", ".", ".", ".", ".", ".", "."],
+        ["P", "P", "P", "P", "P", "P", "P", "P"],
+        [".", ".", ".", ".", ".", ".", ".", "."]
     ]
 
     board = Board(board_state)
@@ -23,6 +23,7 @@ def pawn_move_tracker(moves):
 
     return board.get_state()
 
+
 class Pawn:
     def __init__(self, cell, player):
         self.cell = cell
@@ -30,7 +31,7 @@ class Pawn:
         self.player = player
         self.is_white = player == 'P'
         self.is_black = player == 'p'
-        self.forward_direction = -1 if self.is_white else 1;
+        self.forward_direction = -1 if self.is_white else 1
 
     def moveTo(self, cell):
         self.moved = True
@@ -63,6 +64,7 @@ class Pawn:
         cell_is_adjacent = abs(cell.col - self.cell.col)
         return cell_has_enemy and cell_is_ahead and cell_is_adjacent
 
+
 class Cell:
     def __init__(self, row, col, occupant):
         self.row = row
@@ -70,9 +72,9 @@ class Cell:
         self.occupant = occupant
 
         if(occupant != '.'):
-           self.pawn = Pawn(self, occupant)
+            self.pawn = Pawn(self, occupant)
         else:
-           self.pawn = None
+            self.pawn = None
 
     def is_occupied(self):
         return not self.pawn == None
@@ -85,6 +87,7 @@ class Cell:
         self.pawn = None
         self.occupant = '.'
 
+
 class Board:
     def __init__(self, board_array):
         self.board_state = []
@@ -92,7 +95,7 @@ class Board:
         for i, row in enumerate(board_array):
             board_row = []
             for j, occupant in enumerate(row):
-                board_row.append(Cell(i,j, occupant))
+                board_row.append(Cell(i, j, occupant))
 
             self.board_state.append(board_row)
 
@@ -108,9 +111,9 @@ class Board:
 
     def play(self, move, player):
         if(len(move) == 2):
-           return self.playMove(move, player)
-        else:           
-           return self.playCapture(move, player)
+            return self.playMove(move, player)
+        else:
+            return self.playCapture(move, player)
 
     def playMove(self, move, player):
         row, col = toCoords(move)
@@ -138,11 +141,12 @@ class Board:
     def get_state(self):
         return list([list([cell.occupant for cell in row]) for row in self.board_state])
 
+
 def toCoords(move):
     col = toCol(move[0])
     row = 8 - int(move[1])
     return [row, col]
 
+
 def toCol(move):
     return (ord(move) - 97)
-

@@ -4,7 +4,7 @@ if n == s:
     print(n + 1)
     return
 
-m = abs(n-s)
+m = abs(n - s)
 
 a = set()
 i = 1

@@ -8,4 +8,4 @@ for i in range(n):
     if a[i] in b:
         print(a[i])
         return
-print(min(a[0], b[0])*10 + max(a[0], b[0]))
+print(min(a[0], b[0]) * 10 + max(a[0], b[0]))

@@ -8,4 +8,3 @@ for i in range(n):
     a, b = lol
     kek.append(int(sqrt(arr[i][a] * arr[i][b] // arr[a][b])))
 print(' '.join(map(str, kek)))
-

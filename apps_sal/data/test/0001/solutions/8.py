@@ -1,5 +1,6 @@
 """ Created by Shahen Kosyan on 3/11/17 """
 
+
 def __starting_point():
     x = input()
 
@@ -42,5 +43,6 @@ def __starting_point():
     else:
         answer = [str(a) for a in answer]
         print(''.join(answer))
+
 
 __starting_point()

@@ -7,7 +7,7 @@ def main():
         print("-1")
     else:
         if n % 2 != 0:
-            n -=1
+            n -= 1
             res += 1
         shag_count2 = n / 2
         if (shag_count2 + res) % m == 0:
@@ -20,5 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

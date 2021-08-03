@@ -11,6 +11,7 @@ def pow(a, n):
         b = (b * b) % MOD
     return res
 
+
 assert pow(2, 10) == 1024
 assert pow(7, 1) == 7
 assert pow(7, 0) == 1
@@ -39,11 +40,13 @@ def egcd(a, b):
 
     return a, x0, y0
 
+
 if False:
     print(egcd(3, 5))
     print(egcd(2, 4))
     print(egcd(4, 2))
     print(egcd(5, 3))
+
 
 def solve(a, b, n, x):
     if a == 1:
@@ -57,6 +60,7 @@ def solve(a, b, n, x):
 
     return res
 
+
 if False:
     assert solve(3, 4, 2, 1) == 25
     assert solve(3, 4, 1, 1) == 7
@@ -66,4 +70,3 @@ if False:
 else:
     a, b, n, x = list(map(int, input().split()))
     print(solve(a, b, n, x))
-

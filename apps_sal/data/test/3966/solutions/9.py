@@ -1,4 +1,6 @@
-import sys, os
+import sys
+import os
+
 
 def myreadline():
 
@@ -12,32 +14,23 @@ def myreadline():
     else:
         return input()
 
+
 def myreadlineint():
     return [int(x) for x in myreadline().split()]
+
 
 n, = myreadlineint()
 l = myreadlineint()
 l.sort()
 
 sm = sum(l)
-#print(sm)
+# print(sm)
 res = 0
-res += sm*2
+res += sm * 2
 for x in l:
     sm -= x
-    #print(sm)
+    # print(sm)
     res += sm
-res -= l[len(l)-1]
+res -= l[len(l) - 1]
 
 print(res)
-
-
-
-
-
-
-
-
-
-
-

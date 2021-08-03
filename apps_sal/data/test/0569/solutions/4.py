@@ -8,5 +8,4 @@ for i in s:
 if len(s) > 26:
     print(-1)
 else:
-    print(len(s)-len(m))
-
+    print(len(s) - len(m))

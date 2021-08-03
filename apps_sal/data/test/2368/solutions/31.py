@@ -42,16 +42,17 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 uf = UnionFind(N)
 for _ in range(M):
     c, d = map(int, input().split())
-    uf.union(c-1, d-1)
+    uf.union(c - 1, d - 1)
 
-samu1 = [0]*N
-samu2 = [0]*N
+samu1 = [0] * N
+samu2 = [0] * N
 for i in range(N):
     r = uf.find(i)
     samu1[r] += A[i]

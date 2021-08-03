@@ -1,8 +1,11 @@
 from collections import defaultdict
-import queue 
+import queue
+
+
 class TrieNode():
     def __init__(self):
         self.children = defaultdict(TrieNode)
+
 
 class StreamChecker:
     def __init__(self, words: List[str]):
@@ -13,9 +16,9 @@ class StreamChecker:
             for c in word[::-1]:
                 curr = curr.children[c]
             curr = curr.children['$']
-    
+
     def query(self, letter: str) -> bool:
-        self.cstream.insert(0,letter)
+        self.cstream.insert(0, letter)
         curr = self.root
         for c in self.cstream:
             if '$' in curr.children:
@@ -30,4 +33,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -9,7 +9,7 @@ for _ in range(N):
     a, b, c = list(map(int, input().split()))
     for i in range(400, a - 1, -1):
         for j in range(400, b - 1, -1):
-            if lst[i- a][j - b] == INF:
+            if lst[i - a][j - b] == INF:
                 pass
             else:
                 lst[i][j] = min(lst[i][j], lst[i - a][j - b] + c)
@@ -22,8 +22,7 @@ for i in range(1, n + 1):
 if ans == INF:
     print((-1))
 else:
-    print (ans)
+    print(ans)
 
 # for i in range(7):
 #     print (lst[i][:7])
-

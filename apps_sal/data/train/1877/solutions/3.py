@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def sufficientSubset(self, root, limit):
-        
+
         def dfs(root, cur):
             if root is None:
                 return None
@@ -22,7 +22,5 @@ class Solution:
                 return None
             root.left, root.right = l, r
             return root
-        
-        return dfs(root, 0)
-        
 
+        return dfs(root, 0)

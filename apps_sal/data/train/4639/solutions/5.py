@@ -1,2 +1,2 @@
 def power_of_two(x):
-  return bin(x).count('1')==1
+    return bin(x).count('1') == 1

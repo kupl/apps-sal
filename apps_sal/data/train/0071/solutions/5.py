@@ -24,4 +24,5 @@ def __starting_point():
 
         print(str(abs(min_)))
 
+
 __starting_point()

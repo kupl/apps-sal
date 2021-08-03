@@ -14,4 +14,3 @@ for _ in range(int(input())):
     # a -= res3
     # c -= res3
     # print(res + res2 + res3)
-

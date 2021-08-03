@@ -16,4 +16,3 @@ def rec(x):
 for i in [3, 5, 7]:
     rec(i)
 print((len(a)))
-

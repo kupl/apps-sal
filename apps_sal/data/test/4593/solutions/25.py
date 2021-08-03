@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 lines = [s.rstrip("\n") for s in sys.stdin.readlines()]
 x, = [int(num) for num in lines.pop(0).split(" ")]
 max_base = int(math.sqrt(x))
@@ -14,4 +15,3 @@ for base in range(2, max_base + 1):
         else:
             break
 print(max)
-

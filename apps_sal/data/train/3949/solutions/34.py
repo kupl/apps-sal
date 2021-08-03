@@ -5,4 +5,3 @@ def calculate_tip(amount, rating):
         return math.ceil(tips[rating.lower()] * amount - amount)
     else:
         return 'Rating not recognised'
-

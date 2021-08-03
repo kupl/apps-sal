@@ -1,8 +1,8 @@
-def present(x,y):
+def present(x, y):
     if x == 'badpresent':
         return 'Take this back!'
     if x == 'goodpresent':
-        return ''.join(chr(ord(i)+y) for i in x)
+        return ''.join(chr(ord(i) + y) for i in x)
     if x == 'crap' or x == 'empty':
         return ''.join(sorted(x))
     if x == 'bang':

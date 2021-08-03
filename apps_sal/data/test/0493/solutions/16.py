@@ -25,7 +25,7 @@ else:
     D = n
 ans = 0
 if i > j:
-    B  = 1
+    B = 1
     C = 0
 else:
     B = a[i][1]

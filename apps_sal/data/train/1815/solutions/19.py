@@ -6,5 +6,5 @@ class Solution:
             index = ord(c) - ord('a')
             ans.append(chr(ord('a') + (index + X) % 26))
             X = (X - shifts[i]) % 26
-            
+
         return ''.join(ans)

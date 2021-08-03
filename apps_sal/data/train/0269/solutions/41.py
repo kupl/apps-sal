@@ -12,5 +12,5 @@ class Solution:
             elif counter != -1:
                 counter += 1
         return True
-    
+
     0, 1, 0, 1

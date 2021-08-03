@@ -15,4 +15,3 @@ try:
 
 except EOFError:
     pass
-

@@ -1,27 +1,34 @@
 import random
 
+
 def const(n):
     return lambda itp: itp.push(n)
+
 
 def unary(f):
     return lambda itp: itp.push(f(itp.pop()))
 
+
 def binary(f):
     return lambda itp: itp.push(f(itp.pop(), itp.pop()))
 
+
 def direction(x, y):
     return lambda itp: itp.set_vpc(x, y)
+
 
 def dup(itp):
     x = itp.pop()
     itp.push(x)
     itp.push(x)
 
+
 def swap(itp):
     x = itp.pop()
     y = itp.pop()
     itp.push(x)
     itp.push(y)
+
 
 opcodes = {
     '+': binary(lambda a, b: b + a),
@@ -31,34 +38,35 @@ opcodes = {
     '%': binary(lambda a, b: b % a),
     '!': unary(lambda a: not a),
     '`': binary(lambda a, b: b > a),
-    
+
     '>': direction(1, 0),
     '<': direction(-1, 0),
     'v': direction(0, 1),
     '^': direction(0, -1),
-    
+
     '?': lambda itp: itp.set_vpc(*random.choice(((1, 0), (-1, 0), (0, 1), (0, -1)))),
-                          
+
     '_': lambda itp: itp.set_vpc((-1)**(itp.pop() != 0), 0),
     '|': lambda itp: itp.set_vpc(0, (-1)**(itp.pop() != 0)),
-    
+
     ':': dup,
     '\\': swap,
-    
+
     '$': lambda itp: itp.pop(),
     '.': lambda itp: itp.output(str(itp.pop())),
     ',': lambda itp: itp.output(chr(itp.pop())),
-    
+
     'p': lambda itp: itp.put(itp.pop(), itp.pop(), itp.pop()),
     'g': lambda itp: itp.push(itp.get(itp.pop(), itp.pop())),
-    
+
     '#': lambda itp: itp.advance(),
-    '@': lambda itp: itp.end(), 
+    '@': lambda itp: itp.end(),
     ' ': lambda itp: None,
 }
 
 for i in range(10):
     opcodes[str(i)] = const(i)
+
 
 class Interpreter:
     def __init__(self, code):
@@ -69,40 +77,40 @@ class Interpreter:
         self.obuf = []
         self.ended = False
         self.stringmode = False
-    
+
     def run(self):
         while not self.ended:
             x, y = self.pc
             op = self.mem[y][x]
-        
+
             if op == '"':
                 self.stringmode = not self.stringmode
             elif self.stringmode:
                 self.push(ord(op))
             else:
                 opcodes[op](self)
-        
+
             self.advance()
-    
+
     def advance(self):
         x, y = self.pc
         vx, vy = self.vpc
         y = (y + vy) % len(self.mem)
         x = (x + vx) % len(self.mem[y])
         self.pc = x, y
-    
+
     def set_vpc(self, x, y):
         self.vpc = x, y
-    
+
     def push(self, x):
         self.stack.append(int(x))
-    
+
     def pop(self):
         try:
             return self.stack.pop(-1)
         except IndexError:
             return 0
-    
+
     def output(self, s):
         self.obuf.append(s)
 
@@ -115,9 +123,10 @@ class Interpreter:
     def put(self, y, x, n):
         self.mem[y][x] = chr(n)
 
+
 def interpret(code):
     itp = Interpreter(code)
-    
+
     itp.run()
-    
+
     return ''.join(itp.obuf)

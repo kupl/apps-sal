@@ -1,9 +1,9 @@
-n,m = map(int,input().split())
-ans = ["num"]*n
+n, m = map(int, input().split())
+ans = ["num"] * n
 for i in range(m):
-    s,c = map(int,input().split())
-    if ans[s-1] == "num" or ans[s-1] == c:
-        ans[s-1] = c
+    s, c = map(int, input().split())
+    if ans[s - 1] == "num" or ans[s - 1] == c:
+        ans[s - 1] = c
     else:
         print("-1")
         return
@@ -24,4 +24,4 @@ for j in range(n):
     if ans[j] == "num":
         ans[j] = 0
 
-[print(ans[k],end ="") for k in range(n)]
+[print(ans[k], end="") for k in range(n)]

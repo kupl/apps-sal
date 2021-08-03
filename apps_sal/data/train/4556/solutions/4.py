@@ -1,5 +1,6 @@
 from itertools import groupby
 
+
 def count_me(data):
     if not data.isdecimal():
         return ""

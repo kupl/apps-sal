@@ -4,5 +4,5 @@ def areYouPlayingBanjo(name):
         result += " plays banjo"
     else:
         result += " does not play banjo"
-        
-    return name+ result
+
+    return name + result

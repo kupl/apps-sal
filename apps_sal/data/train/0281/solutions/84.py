@@ -4,15 +4,15 @@ class Solution:
             return False
         valid = {}
         moves = []
-        for a,b in zip(s,t):
+        for a, b in zip(s, t):
             if a != b:
                 diff = ord(b) - ord(a)
                 if diff < 0:
                     diff += 26
                 if diff in valid:
-                    valid[diff].append(valid[diff][-1]+26)
+                    valid[diff].append(valid[diff][-1] + 26)
                 else:
-                    valid.setdefault(diff,[diff])
+                    valid.setdefault(diff, [diff])
                 moves.append(diff)
         for d in moves:
             num = valid[d]
@@ -21,4 +21,3 @@ class Solution:
             else:
                 num.pop()
         return True
-

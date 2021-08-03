@@ -1,6 +1,6 @@
 n, u = int(input()), list(map(int, input().split()))
 v = list(sorted(u))
-for i in range(n - 1): 
+for i in range(n - 1):
     u[i + 1] += u[i]
     v[i + 1] += v[i]
 u, v = [0] + u, [0] + v

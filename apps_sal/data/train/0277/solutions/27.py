@@ -6,10 +6,10 @@ class Solution:
         ans = 0
         for l in light:
             # print(on, first, l, last)
-            on[l-1] = True
+            on[l - 1] = True
             last = max(l, last)
             if first + 1 == l:
-                while first<len(light) and on[first]:
+                while first < len(light) and on[first]:
                     first += 1
                 if first == last:
                     ans += 1

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         # Depth First Search
@@ -8,6 +9,7 @@ class Solution:
         # Space complexity: O(N)
         N = len(graph)
         clean = set(range(N)) - set(initial)
+
         def dfs(u, seen):
             for v, adj in enumerate(graph[u]):
                 if adj and v in clean and v not in seen:
@@ -39,6 +41,3 @@ class Solution:
                 best = score, u
 
         return best[1]
-
-
-

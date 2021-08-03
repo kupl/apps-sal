@@ -13,4 +13,3 @@ while first / num < B / A:
     rst += 1
 print(rst)
 # print(after)
-

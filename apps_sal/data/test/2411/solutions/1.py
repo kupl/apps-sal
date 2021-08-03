@@ -22,20 +22,26 @@ def pointsToLine2d(p1, p2):
     return ((_p2[1] - _p1[1]) // g, (_p1[0] - _p2[0]) // g, (_p1[1] * _p2[0] - _p1[0] * _p2[1]) // g)
 
 
-dist = lambda p1, p2: sum((a - b) * (a - b) for a, b in zip(p1, p2))**0.5
+def dist(p1, p2): return sum((a - b) * (a - b) for a, b in zip(p1, p2))**0.5
 
-pointsToLines = lambda p1, p2: list(map(pointsToLine2d, itertools.combinations(p1, 2), itertools.combinations(p2, 2)))
 
-areParallel = lambda l1, l2: l1[0] * l2[1] == l2[0] * l1[1]
+def pointsToLines(p1, p2): return list(map(pointsToLine2d, itertools.combinations(p1, 2), itertools.combinations(p2, 2)))
 
-areSame = lambda l1, l2: areParallel(l1, l2) and (l1[1] * l2[2] == l2[1] * l1[2])
 
-collinear = lambda p1, p2, p3: areSame(pointsToLine2d(p1, p2), pointsToLine2d(p2, p3))
+def areParallel(l1, l2): return l1[0] * l2[1] == l2[0] * l1[1]
 
-intersect = lambda l1, l2: None if areParallel(l1, l2) else ((l2[1] * l1[2] - l1[1] * l2[2]) / (l2[0] * l1[1] - l1[
+
+def areSame(l1, l2): return areParallel(l1, l2) and (l1[1] * l2[2] == l2[1] * l1[2])
+
+
+def collinear(p1, p2, p3): return areSame(pointsToLine2d(p1, p2), pointsToLine2d(p2, p3))
+
+
+def intersect(l1, l2): return None if areParallel(l1, l2) else ((l2[1] * l1[2] - l1[1] * l2[2]) / (l2[0] * l1[1] - l1[
     0] * l2[1]), (l1[0] * l2[2] - l1[2] * l2[0]) / (l2[0] * l1[1] - l1[0] * l2[1]))
 
-rotate = lambda p, theta, origin=(0, 0): (origin[0] + (p[0] - origin[0]) * math.cos(theta) - (p[1] - origin[
+
+def rotate(p, theta, origin=(0, 0)): return (origin[0] + (p[0] - origin[0]) * math.cos(theta) - (p[1] - origin[
     1]) * math.sin(theta), origin[1] + (p[0] - origin[0]) * math.sin(theta) + (p[1] - origin[1]) * math.cos(theta))
 
 
@@ -71,7 +77,7 @@ def main():
 
     lines = set()
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             lines.add(pointsToLine2d(p[i], p[j]))
 
     k = len(lines)
@@ -84,5 +90,5 @@ def main():
         out += (k - x) * x
     write(out // 2)
 
-main()
 
+main()

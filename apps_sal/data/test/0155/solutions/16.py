@@ -1,6 +1,6 @@
 def main():
     n, m, k = [int(i) for i in input().split(' ')]
-   
+
     if k < n:
         print(k + 1, 1)
     else:
@@ -13,5 +13,5 @@ def main():
         else:
             print(n - h1 - 1, 1 + m - h2 % m)
 
-main()
 
+main()

@@ -12,4 +12,3 @@ class Solution:
                             next_dp[(cur, c + 1)] += v
             dp = next_dp
         return sum(dp.values()) % (10 ** 9 + 7)
-

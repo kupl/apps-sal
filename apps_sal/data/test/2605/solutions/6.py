@@ -15,7 +15,7 @@ for i in range(k):
     if (st[i] - 1) % n in useds:
         ans += prices[st[i]] * prices[st[i] - 1]
     if (st[i] + 1) % n in useds:
-        ans += prices[st[i]] * prices[(st[i] + 1) % n]    
+        ans += prices[st[i]] * prices[(st[i] + 1) % n]
     used += prices[st[i]]
     useds.add(st[i])
 print(ans)

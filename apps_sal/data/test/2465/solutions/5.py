@@ -13,7 +13,6 @@ for i in range(T):
     gg = 180 // g
     a = ang // g
     if gg - a == 1:
-        print(gg*2)
+        print(gg * 2)
     else:
         print(gg)
-

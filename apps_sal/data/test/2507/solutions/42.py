@@ -22,5 +22,3 @@ while right > left + 1:
 
 ans = right
 print(ans)
-
-

@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians, gcd
 from itertools import accumulate, permutations, combinations, product, groupby, combinations_with_replacement
@@ -13,25 +14,26 @@ def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 998244353
 
 N, K = MAP()
 LR = [LIST() for _ in range(K)]
-dp = [0]*(N+1)
-dp_acc = [0]*(N+1)
+dp = [0] * (N + 1)
+dp_acc = [0] * (N + 1)
 dp[1] = 1
 dp_acc[1] = 1
 
-for i in range(2, N+1):
+for i in range(2, N + 1):
     for L, R in LR:
-        l = max(0, i-R-1)
-        r = max(0, i-L)
-        dp[i] += dp_acc[r]-dp_acc[l]
+        l = max(0, i - R - 1)
+        r = max(0, i - L)
+        dp[i] += dp_acc[r] - dp_acc[l]
         dp[i] %= mod
-    dp_acc[i] = dp_acc[i-1] + dp[i]
+    dp_acc[i] = dp_acc[i - 1] + dp[i]
     dp_acc[i] %= mod
-    
-print((dp[-1]))
 
+print((dp[-1]))

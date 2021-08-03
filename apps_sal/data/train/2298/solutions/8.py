@@ -1,5 +1,5 @@
-N,T = map(int,input().split())
-A = list(map(int,input().split()))
+N, T = map(int, input().split())
+A = list(map(int, input().split()))
 
 cnt = max_profit = 0
 INF = float('inf')

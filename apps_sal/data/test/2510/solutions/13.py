@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10**7)
 
+
 def dfs(v, visited, counter):
     visited[v] = 1
     for nv in G[v]:
@@ -10,6 +11,7 @@ def dfs(v, visited, counter):
         counter.append(1)
         dfs(nv, visited, counter)
     return
+
 
 n, m = map(int, input().split())
 G = [[] for _ in range(n)]
@@ -26,6 +28,6 @@ for i in range(n):
         continue
     friends = []
     dfs(i, visited, friends)
-    max_friends  = max(max_friends, sum(friends) + 1)
+    max_friends = max(max_friends, sum(friends) + 1)
 
 print(max_friends)

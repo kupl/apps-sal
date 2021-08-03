@@ -11,4 +11,3 @@ def cube_odd(arr):
         if new_arr[i] % 2 == 1:
             value += new_arr[i]
     return value
-

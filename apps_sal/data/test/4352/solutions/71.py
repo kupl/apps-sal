@@ -17,4 +17,3 @@ elif card_A < card_B:
     print('Bob')
 elif card_A == card_B:
     print('Draw')
-

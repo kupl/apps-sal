@@ -51,4 +51,3 @@ while i <= j:
 
 print(len(ans))
 print(''.join(str(x) for x in ans))
-

@@ -14,4 +14,3 @@ def next_bigger(n):
 
     nums[suffix:] = nums[length:suffix - 1:-1]
     return int(''.join(nums))
-

@@ -13,8 +13,7 @@ for loop in range(tt):
         else:
             o += 1
 
-    if min(z,o) % 2 == 0:
-        print ("NET")
+    if min(z, o) % 2 == 0:
+        print("NET")
     else:
-        print ("DA")
-
+        print("DA")

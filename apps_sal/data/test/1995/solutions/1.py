@@ -14,18 +14,22 @@ import collections
 import math
 import sys
 
+
 def cycle_shift(s, k):
     n = len(s)
     k %= n
-    return s[(n-k):] + s[:(n-k)]
+    return s[(n - k):] + s[:(n - k)]
+
 
 def solve(triples, s, m):
     for (l, r, k) in triples:
-        s = s[:l-1] + cycle_shift(s[l-1:r], k) + s[r:]
+        s = s[:l - 1] + cycle_shift(s[l - 1:r], k) + s[r:]
     return s
+
 
 def p(*args, **kwargs):
     return print(*args, file=sys.stderr, **kwargs)
+
 
 def main():
     s = input()
@@ -38,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

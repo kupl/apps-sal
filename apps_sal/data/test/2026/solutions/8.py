@@ -15,4 +15,3 @@ for i in string:
                 r += 1
 
 print(r)
-

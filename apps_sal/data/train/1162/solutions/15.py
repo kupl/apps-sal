@@ -7,8 +7,10 @@ def __starting_point():
             if ((n - sevens) % 7 == 0) and (sevens % 4 == 0):
                 numberFound = True
                 print(n - sevens)
-                break;
+                break
             sevens += 1
         if not numberFound:
             print(-1)
+
+
 __starting_point()

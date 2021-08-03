@@ -5,11 +5,9 @@ left = 0
 ans = 0
 sum = 0
 for right in range(n):
-  sum += A[right]
-  while sum >= k:
-    sum -= A[left]
-    left+=1
-  ans += left
+    sum += A[right]
+    while sum >= k:
+        sum -= A[left]
+        left += 1
+    ans += left
 print(ans)
-
-

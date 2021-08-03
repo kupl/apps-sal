@@ -1,5 +1,7 @@
 def inpmap():
     return list(map(int, input().split()))
+
+
 n = int(input())
 arr = list(inpmap())
 s = sum(arr)
@@ -9,4 +11,3 @@ for i in range(n):
     if a >= s / 2:
         print(i + 1)
         break
-

@@ -17,4 +17,3 @@ while i < len(s):
     j += 1
     i = j
 print('YES')
-

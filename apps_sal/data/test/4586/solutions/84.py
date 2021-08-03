@@ -12,4 +12,3 @@ if my_list[0] == my_list[1] == my_list[2] or my_list[1] == my_list[2] == my_list
     print('Yes')
 else:
     print('No')
-

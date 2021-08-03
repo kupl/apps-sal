@@ -1,4 +1,4 @@
-#600_B
+# 600_B
 
 n = int(input())
 
@@ -36,4 +36,3 @@ if not f:
 else:
     print(len(pts))
     print(" ".join([str(i) for i in pts]))
-

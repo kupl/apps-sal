@@ -16,7 +16,5 @@ for i in range(n):
     if input() == 'f':
         flag = True
 
-##    print(a)
+# print(a)
 print(sum(a) % (10**9 + 7))
-    
-

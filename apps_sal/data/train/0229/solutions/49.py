@@ -23,18 +23,17 @@ class Solution:
         if not self.check(negative_heap, negative_d):
             return False
         return True
-    
+
     def check(self, h, d):
         for _ in range(len(h)):
             i = heappop(h)
             if d[i] == 0:
                 continue
-            if 2*i not in d:
+            if 2 * i not in d:
                 return False
-            elif d[2*i] < d[i]:
+            elif d[2 * i] < d[i]:
                 return False
             else:
-                d[2*i] -= d[i]
+                d[2 * i] -= d[i]
                 d[i] = 0
         return True
-

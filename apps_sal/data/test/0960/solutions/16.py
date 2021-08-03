@@ -6,4 +6,3 @@ for i in range(1, k):
         if m > x:
             m = x
 print(m)
-

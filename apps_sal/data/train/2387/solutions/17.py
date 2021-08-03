@@ -5,6 +5,7 @@ import itertools
 import random
 import re
 
+
 def solve(n):
     ans = 0
     while n:
@@ -16,12 +17,15 @@ def solve(n):
             n = n // 10 + n % 10
     return ans
 
+
 def main():
     for _ in range(int(input())):
         n = int(input())
         print(solve(n))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -24,8 +24,7 @@ if odd_dict_max[0] == even_dict_max[0] and N // 2 == odd_dict_max[1]:
 elif odd_dict_max[0] == even_dict_max[0]:
     odd_dict_max_t = odd_dict_sorted.pop()
     even_dict_max_t = even_dict_sorted.pop()
-    ans = N - odd_dict_max[1] - max(even_dict_max_t[1],odd_dict_max_t[1])
+    ans = N - odd_dict_max[1] - max(even_dict_max_t[1], odd_dict_max_t[1])
 else:
     ans = N - odd_dict_max[1] - even_dict_max[1]
 print(ans)
-

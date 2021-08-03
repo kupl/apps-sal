@@ -11,4 +11,3 @@ for i in range(1, n + 1):
     if not a[i]:
         f = 0
 print('I become the guy.' if f else 'Oh, my keyboard!')
-

@@ -9,6 +9,7 @@ def difference(ln, k, l):
 
     return count
 
+
 def difference2(ln):
     count = 0
     for i in range(len(ln)):
@@ -16,6 +17,7 @@ def difference2(ln):
             count += 1
 
     return count
+
 
 def __starting_point():
 
@@ -27,7 +29,7 @@ def __starting_point():
     for i in range(n):
         line = [int(i) for i in input().split(' ')]
         matrix.append(line)
-        
+
     res = False
 
     ans = True
@@ -54,4 +56,6 @@ def __starting_point():
         print('YES')
     else:
         print('NO')
+
+
 __starting_point()

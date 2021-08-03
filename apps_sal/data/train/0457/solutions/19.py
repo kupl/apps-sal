@@ -5,7 +5,8 @@ class Solution:
         dp[0] = 0
         for coin in coins:
             for i in range(coin, amount + 1):
-                if dp[i - coin] >= dp[i]: continue
+                if dp[i - coin] >= dp[i]:
+                    continue
                 dp[i] = dp[i - coin] + 1
         return -1 if dp[amount] == INVALID else dp[amount]
 
@@ -34,5 +35,3 @@ class Solution:
         #     memo[n] = res if res != float('inf') else -1
         #     return memo[n]
         # return dp(amount)
-
-

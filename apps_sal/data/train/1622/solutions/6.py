@@ -21,7 +21,8 @@ def bowling_score(frames_main):
     string = "".join(frames)
     string = string.replace('', ' ')[1: -1]
     frames = list(string.split(" "))
-    while '' in frames: frames.remove('')
+    while '' in frames:
+        frames.remove('')
     for i in range(0, len(frames) - len(last)):
         if frames[i] == 'X':
             add += frames[i + 1] + ' ' + frames[i + 2] + ' '
@@ -30,5 +31,6 @@ def bowling_score(frames_main):
     string = string.replace('V', '10')
     string = string.replace('X', '10')
     frames = list(string.split(" "))
-    while '' in frames: frames.remove('')
+    while '' in frames:
+        frames.remove('')
     return sum(list(map(int, frames)))

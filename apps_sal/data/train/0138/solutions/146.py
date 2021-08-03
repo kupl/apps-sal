@@ -12,7 +12,7 @@ class Solution:
                 if nums[i] < 0:
                     pos = not pos
                 if pos:
-                    res = max(res, i+1)
+                    res = max(res, i + 1)
                 else:
                     res = max(res, i - fn)
             return res
@@ -21,7 +21,7 @@ class Solution:
             try:
                 idx = nums.index(0)
                 ans = max(_getMaxLen(nums[:idx]), ans)
-                nums = nums[idx+1:]
+                nums = nums[idx + 1:]
             except:
                 ans = max(ans, _getMaxLen(nums))
                 break

@@ -24,4 +24,3 @@ ans = [-1] * n
 ans[0] = 0
 dfs(0, -1)
 print(*ans, sep="\n")
-

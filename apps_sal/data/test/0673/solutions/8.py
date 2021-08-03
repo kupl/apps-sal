@@ -1,3 +1,2 @@
-n,k = list(map(int,input().split()))
-print(n+k-n%k)
-
+n, k = list(map(int, input().split()))
+print(n + k - n % k)

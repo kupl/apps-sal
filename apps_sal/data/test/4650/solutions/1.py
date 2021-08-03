@@ -6,6 +6,6 @@ for _ in range(int(input())):
     for ai in a:
         f[ai % 3] += 1
     m = min(f[1], f[2])
-    f[1] -= m; f[2] -= m
+    f[1] -= m
+    f[2] -= m
     print(f[0] + m + (f[1] + f[2]) // 3)
-

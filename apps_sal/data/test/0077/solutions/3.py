@@ -13,5 +13,5 @@ else:
     for i in range(n):
         if a[i] % 2:
             m = min(m, abs(a[i]))
-            
+
     print(f - m)

@@ -1,4 +1,6 @@
-import sys, re
+from decimal import *
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees, log2, log
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
@@ -15,40 +17,43 @@ def INT(): return int(input())
 def MAP(): return map(int, input().split())
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return zip(*(MAP() for _ in range(n)))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10**9 + 7
-from decimal import *
- 
+
 N = INT()
-ab = [LIST() for _ in range(N-1)]
+ab = [LIST() for _ in range(N - 1)]
 graph = [[] for _ in range(N)]
 
 for a, b in ab:
-	graph[a-1].append(b-1)
-	graph[b-1].append(a-1)
+    graph[a - 1].append(b - 1)
+    graph[b - 1].append(a - 1)
 
 length = [len(x) for x in graph]
 ans = max(length)
 
 color = defaultdict(int)
 
-def coloring(n, previous, col): #頂点nにpreviousから色colで辿ってきた。
-	cnt = 1
-	for x in graph[n]:
-		if x == previous:
-			color[(n, x)] = col
-			color[(x, n)] = col #やってきた頂点との間における色
-		else:
-			if cnt == col:
-				cnt += 1
-			color[(x, n)] = cnt
-			color[(n, x)] = cnt
-			coloring(x, n, cnt)
-			cnt += 1
+
+def coloring(n, previous, col):  # 頂点nにpreviousから色colで辿ってきた。
+    cnt = 1
+    for x in graph[n]:
+        if x == previous:
+            color[(n, x)] = col
+            color[(x, n)] = col  # やってきた頂点との間における色
+        else:
+            if cnt == col:
+                cnt += 1
+            color[(x, n)] = cnt
+            color[(n, x)] = cnt
+            coloring(x, n, cnt)
+            cnt += 1
+
 
 coloring(0, -1, 0)
 
 print(ans)
 for a, b in ab:
-	print(color[(a-1, b-1)])
+    print(color[(a - 1, b - 1)])

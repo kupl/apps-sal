@@ -17,4 +17,3 @@ def ans(w, h):
 
 
 print(ans(width, height))
-

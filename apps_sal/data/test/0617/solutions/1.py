@@ -16,5 +16,5 @@ for i in range(n):
             if s[j] == '*':
                 _s = s[:j + 1] + '(' + s[j + 1:i] + ')' + s[i:]
                 ans = max(ans, eval(_s))
-        
+
 print(ans)

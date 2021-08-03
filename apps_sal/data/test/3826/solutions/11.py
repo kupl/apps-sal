@@ -1,4 +1,6 @@
 import collections
+
+
 def __starting_point():
     N = int(input())
     A = [int(a) for a in input().split(" ")]
@@ -22,7 +24,6 @@ def __starting_point():
                     ans = j + 1 - i
                     break
         print(str(ans))
-
 
 
 __starting_point()

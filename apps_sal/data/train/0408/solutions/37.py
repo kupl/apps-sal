@@ -32,4 +32,3 @@ class Solution:
             return l
         else:
             return h
-

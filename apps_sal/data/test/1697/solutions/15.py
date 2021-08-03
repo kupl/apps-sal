@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10000)
 
+
 def f(i, j):
     return -1 < i < n and -1 < j < m
 
@@ -13,10 +14,9 @@ def dfs(c, r, l):
                 prev[c + i][r + j] = (c, r)
                 dfs(c + i, r + j, l + 1)
             elif used[c + i][r + j] == 1 and prev[c][r] != (c + i, r + j):
-                nonlocal s 
+                nonlocal s
                 s = "Yes"
     used[i][j] = 2
-            
 
 
 n, m = map(int, input().split())

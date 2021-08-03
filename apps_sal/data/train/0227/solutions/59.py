@@ -4,7 +4,7 @@ class Solution:
             return 0
         if len(A) <= K:
             return K
-        
+
         left = 0
         flip = 0
         maxlength = 0
@@ -13,14 +13,10 @@ class Solution:
                 flip += 1
             if flip <= K:
                 maxlength = max(maxlength, i - left + 1)
-                
+
             while left < i and flip > K:
                 if A[left] == 0:
-                    flip -=1
+                    flip -= 1
                 left += 1
 
         return maxlength
-            
-            
-        
-

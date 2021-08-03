@@ -1,5 +1,5 @@
 w = input()
-char_map = { c: 0 for c in w }
+char_map = {c: 0 for c in w}
 for c in w:
     char_map[c] += 1
 
@@ -10,4 +10,3 @@ for val in list(char_map.values()):
         break
 
 print(('Yes' if flag else 'No'))
-

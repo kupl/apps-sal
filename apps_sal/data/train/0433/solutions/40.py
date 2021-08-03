@@ -7,12 +7,12 @@ class Solution:
             if i == 0:
                 cSums[0] = arr[0]
             else:
-                cSums[i] = cSums[i-1] + arr[i]
-            if i == k-1:
+                cSums[i] = cSums[i - 1] + arr[i]
+            if i == k - 1:
                 if cSums[i] >= goal:
                     c += 1
             elif i >= k:
-                if cSums[i] - cSums[i-k] >= goal:
+                if cSums[i] - cSums[i - k] >= goal:
                     c += 1
         print(cSums)
         return c

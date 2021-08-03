@@ -1,4 +1,6 @@
 import math
+
+
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         def division(divisor):
@@ -6,10 +8,10 @@ class Solution:
             for n in nums:
                 total += math.ceil(n / divisor)
             return total
-        
+
         total = sum(nums)
-        left = max(1, total//threshold)
-        right = math.ceil(total/(threshold-len(nums)))
+        left = max(1, total // threshold)
+        right = math.ceil(total / (threshold - len(nums)))
         while left < right:
             mid = (left + right) // 2
             if division(mid) > threshold:
@@ -17,4 +19,3 @@ class Solution:
             else:
                 right = mid
         return left
-

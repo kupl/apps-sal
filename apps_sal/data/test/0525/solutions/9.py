@@ -5,4 +5,3 @@ for _ in range(int(input())):
         print(len(arr))
     else:
         print(1)
-

@@ -1,6 +1,6 @@
-def sequence_sum(a,b,c):
+def sequence_sum(a, b, c):
     r = []
     while a <= b:
         r.append(a)
-        a+=c
+        a += c
     return sum(r)

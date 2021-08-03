@@ -1,7 +1,7 @@
+import math
 N = int(input())
 A = list(map(int, input().split()))
 
-import math
 L = [0] * (N + 1)
 R = [0] * (N + 1)
 
@@ -11,6 +11,6 @@ for i in range(N):
 
 ans = 0
 for i in range(N):
-    ans = max(ans, math.gcd(L[i], R[i+1]))
+    ans = max(ans, math.gcd(L[i], R[i + 1]))
 
 print(ans)

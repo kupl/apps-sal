@@ -7,10 +7,7 @@ class Solution:
             if total > 0:
                 res = i + 1
             if total - 1 in index:
-                res = max(res, i - index[total-1])
+                res = max(res, i - index[total - 1])
             index.setdefault(total, i)
-            
-        return res
-        
-        
 
+        return res

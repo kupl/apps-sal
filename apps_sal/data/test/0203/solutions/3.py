@@ -1,11 +1,14 @@
 # Author: Maharshi Gor
 from collections import deque
-def read(t:type=int):
+
+
+def read(t: type = int):
     return t(input())
 
 
 def read_arr(t=int):
     return [t(i) for i in str(input()).split()]
+
 
 D = deque()
 R = deque()
@@ -25,12 +28,11 @@ while R and D:
     r = R.popleft()
     d = D.popleft()
     if r < d:
-        R.append(r+n)
+        R.append(r + n)
     else:
-        D.append(d+n)
+        D.append(d + n)
 
 if R:
     print('R')
 else:
     print('D')
-

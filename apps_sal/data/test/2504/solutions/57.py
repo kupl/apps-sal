@@ -22,5 +22,3 @@ Q = int(input())
 for _ in range(Q):
     s, t = list(map(int, input().split()))
     print((int(dist2[s - 1, t - 1]) - 1))
-
-

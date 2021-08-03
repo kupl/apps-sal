@@ -17,4 +17,3 @@ for p in primes:
     if d + p <= n:
         answer = min(answer, d + 1)
 print(answer)
-

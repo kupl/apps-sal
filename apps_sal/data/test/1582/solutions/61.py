@@ -11,9 +11,12 @@ def main():
     for l in range(1, 10):
         for r in range(1, 10):
             res += comb_count[l][r] * comb_count[r][l]
-        
+
     print(res)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

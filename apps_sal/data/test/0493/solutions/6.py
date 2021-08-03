@@ -13,18 +13,17 @@ def run():
                 start = False
                 cnt = 0
             else:
-                ans += cnt%2
+                ans += cnt % 2
                 cnt = 0
-            last = 'L'    
+            last = 'L'
         else:
             start = False
             ans += cnt
             cnt = 0
-            last = 'R'       
+            last = 'R'
     if last != 'R':
         ans += cnt
-    print (ans)
+    print(ans)
 
 
 run()
-

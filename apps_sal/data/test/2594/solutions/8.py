@@ -6,6 +6,4 @@ t = int(sys.stdin.readline())
 
 for _ in range(t):
     n, m = list(map(int, sys.stdin.readline().split()))
-    print( (n*m + 1 )//2)
-
-
+    print((n * m + 1) // 2)

@@ -47,6 +47,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = list(map(int, input().split()))
 p = list(map(int, input().split()))
 xy = [list(map(int, input().split())) for _ in range(M)]
@@ -59,8 +60,7 @@ for x, y in xy:
 
 ans = 0
 for renketu_seibun in list(uf.all_group_members().values()):
-    can_reach = set([p[v]-1 for v in renketu_seibun])
+    can_reach = set([p[v] - 1 for v in renketu_seibun])
     for v in renketu_seibun:
         ans += v in can_reach
 print(ans)
-

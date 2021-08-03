@@ -6,6 +6,6 @@ s = Counter(S)
 t = Counter(T)
 
 if sorted(s.values()) == sorted(t.values()):
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

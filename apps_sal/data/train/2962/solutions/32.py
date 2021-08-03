@@ -6,4 +6,3 @@ def divisible_by(numbers, divisor):
         if y == 0:
             num.append(i)
     return num
-

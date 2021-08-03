@@ -1,13 +1,15 @@
 N = int(input())
 
+
 def f(c):
     return 'B' if c == 'A' else 'A'
+
 
 MOD = 10 ** 9 + 7
 
 cs = [input() for _ in range(4)]
 caa, cab, cba, cbb = cs
-    
+
 if N == 2 or N == 3:
     print(1)
     return

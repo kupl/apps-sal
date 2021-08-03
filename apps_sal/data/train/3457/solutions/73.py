@@ -8,4 +8,3 @@ def final_grade(exam, projects):
     elif e > 50 and p >= 2:
         return 75
     return 0
-

@@ -8,12 +8,12 @@ cx = 1
 cy = 1
 
 r = list()
-while hits < x+y:
-    if cx/x < cy/y:
+while hits < x + y:
+    if cx / x < cy / y:
         cx += 1
         hits += 1
         r.append('Vanya')
-    elif cx/x > cy/y:
+    elif cx / x > cy / y:
         cy += 1
         hits += 1
         r.append('Vova')
@@ -25,5 +25,4 @@ while hits < x+y:
         r.append('Both')
 
 for m in a:
-    print(r[(m-1) % (x+y)])
-
+    print(r[(m - 1) % (x + y)])

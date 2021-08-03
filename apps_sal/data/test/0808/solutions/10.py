@@ -1,11 +1,11 @@
 def task(n):
-    l,r = n.partition('.')[::2]
+    l, r = n.partition('.')[::2]
     l = l.lstrip('0')
 
     exp = None
     if l:
         exp = len(l) - 1
-        r = l[1:]+r
+        r = l[1:] + r
         l = l[0]
     else:
         strippedr = r.lstrip('0')
@@ -14,6 +14,7 @@ def task(n):
         r = strippedr[1:]
     r = r.rstrip('0')
     return l + (('.%s' % r) if r else '') + (('E%d' % exp) if exp else '')
+
 
 n = [input()]
 #n = ['16', '01.23400', '.100', '100.']

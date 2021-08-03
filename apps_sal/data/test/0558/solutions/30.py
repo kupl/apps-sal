@@ -8,4 +8,3 @@ for k in range(K + 1):
     comb *= (N - k - 1) * pow(k + 1, MOD - 2, MOD)
     comb %= MOD
 print(ans)
-

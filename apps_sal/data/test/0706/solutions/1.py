@@ -1,5 +1,6 @@
 A, B, n, x = map(int, input().split())
 
+
 def fast_exp(A, n, m):
     if n == 0:
         return 1
@@ -7,11 +8,13 @@ def fast_exp(A, n, m):
         return A * fast_exp(A, n - 1, m) % m
     return fast_exp(A * A % m, n // 2, m)
 
+
 def mod(a, m):
     a %= m
     if a < 0:
         a += m
     return a
+
 
 m = 10**9 + 7
 

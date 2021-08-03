@@ -1,16 +1,16 @@
 
-s=input()
-if s=='SUN':
+s = input()
+if s == 'SUN':
     print('7')
-elif s=='MON':
+elif s == 'MON':
     print('6')
-elif s=='TUE':
+elif s == 'TUE':
     print('5')
-elif s=='WED':
+elif s == 'WED':
     print('4')
-elif s=='THU':
+elif s == 'THU':
     print('3')
-elif s=='FRI':
+elif s == 'FRI':
     print('2')
 else:
     print('1')

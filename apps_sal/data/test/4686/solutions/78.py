@@ -11,4 +11,3 @@ for i in w:
     else:
         ans = 'Yes'
 print(ans)
-

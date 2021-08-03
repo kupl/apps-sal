@@ -1,7 +1,9 @@
 MIN = float('-inf')
+
+
 class Solution:
     def minOperationsMaxProfit(self, customers, boardingCost, runningCost):
-        
+
         n = len(customers)
         step, maxStep, maxProfit = 0, 0, MIN
         i, people, queue = 0, 0, 0
@@ -20,18 +22,3 @@ class Solution:
             if queue == 0 and i == n:
                 break
         return maxStep if maxProfit > 0 else -1
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-

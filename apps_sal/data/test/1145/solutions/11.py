@@ -11,5 +11,3 @@ for i in range(1, len(cool_factors)):
         cool_factors[i] = cool_factors[i - 1] + 1
         acc += diff
 print(acc)
-
-

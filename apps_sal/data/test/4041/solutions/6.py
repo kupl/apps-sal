@@ -1,11 +1,10 @@
-def remove(s,t,start,end):
+def remove(s, t, start, end):
     arr = []
     for i in range(start):
         arr.append(s[i])
 
-    for i in range(end+1,len(s)):
+    for i in range(end + 1, len(s)):
         arr.append(s[i])
-
 
     i = 0
     j = 0
@@ -21,21 +20,22 @@ def remove(s,t,start,end):
 
     return False
 
-def solve(s,t):
+
+def solve(s, t):
     n = len(s)
     ans = 0
     for i in range(n):
-        for j in range(i,n):
-            if remove(s,t,i,j):
-                ans = max(ans,j-i+1)
+        for j in range(i, n):
+            if remove(s, t, i, j):
+                ans = max(ans, j - i + 1)
 
     print(ans)
+
 
 def main():
     s = input()
     t = input()
-    solve(s,t)
+    solve(s, t)
 
 
 main()
-

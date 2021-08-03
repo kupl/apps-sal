@@ -8,4 +8,3 @@ while a <= 1000:
     fibs.add(a)
 
 print(''.join('O' if i in fibs else 'o' for i in range(1, n + 1)))
-

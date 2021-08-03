@@ -1,18 +1,22 @@
 import copy
 
 # 約数列挙
+
+
 def make_divisors(n):
-    lower_divisors , upper_divisors = [], []
+    lower_divisors, upper_divisors = [], []
     i = 2
-    while i*i <= n:
+    while i * i <= n:
         if n % i == 0:
             lower_divisors.append(i)
             if i != n // i:
-                upper_divisors.append(n//i)
+                upper_divisors.append(n // i)
         i += 1
     return lower_divisors + upper_divisors[::-1] + [n]
 
 # 素因数分解
+
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -35,7 +39,7 @@ if n == 2:
     print(1)
     return
 
-div1 = make_divisors(n-1)
+div1 = make_divisors(n - 1)
 cnt = len(div1)
 
 div2 = make_divisors(n)

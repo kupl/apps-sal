@@ -1,10 +1,10 @@
 def main():
     n = int(input())
-    ain = [input() for _ in range(2*n - 2)]
+    ain = [input() for _ in range(2 * n - 2)]
     a = sorted(ain, key=lambda x: len(x), reverse=True)
 
     s1 = a[0] + a[1][-1]
-    d = { k: [] for k in a }
+    d = {k: [] for k in a}
 
     next = False
     for i in range(1, n):
@@ -26,7 +26,7 @@ def main():
             return
 
     s1 = a[1] + a[0][-1]
-    d = { k: [] for k in a }
+    d = {k: [] for k in a}
 
     for i in range(1, n):
         d[s1[:i]].append('P')
@@ -42,7 +42,9 @@ def main():
         print(''.join(result))
         return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

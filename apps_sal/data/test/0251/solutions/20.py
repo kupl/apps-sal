@@ -10,26 +10,26 @@ i = 1
 c = 0
 l = 0
 while h > g and i < n:
-  if A[i] == A[p]:
-    p += 1
-    i += 1
-    continue
+    if A[i] == A[p]:
+        p += 1
+        i += 1
+        continue
 
-  for j in range(A[p] - A[i]):
-    c += p+1
-    l += 1
-    if c > k:
-      ans += 1
-      h -= l-1
-      c = p+1
-      l = 0
-      if h <= g:
-        break
-  
-  p = i
-  i += 1
+    for j in range(A[p] - A[i]):
+        c += p + 1
+        l += 1
+        if c > k:
+            ans += 1
+            h -= l - 1
+            c = p + 1
+            l = 0
+            if h <= g:
+                break
+
+    p = i
+    i += 1
 
 if h > g:
-  ans += 1
-  
+    ans += 1
+
 print(ans)

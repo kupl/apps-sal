@@ -4,4 +4,3 @@ def array(string):
         return string.strip()
     else:
         return None
-

@@ -30,7 +30,7 @@ def main():
         required = [0] + k.copy()
 
         end = 0
-        for d in range(1, days+1):
+        for d in range(1, days + 1):
             balance += 1
             if d in date_last_sales:
                 for t in date_last_sales[d]:
@@ -44,10 +44,10 @@ def main():
                     if r > 0:
                         end += r
 
-        return 2*end <= balance
+        return 2 * end <= balance
 
     total = sum(k)
-    hi = 2*total
+    hi = 2 * total
     lo = 1
 
     while lo + 1 < hi:
@@ -65,5 +65,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

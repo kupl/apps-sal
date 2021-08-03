@@ -8,6 +8,5 @@ class Solution:
                 last = s[i:]
                 max_char = s[i]
             else:
-                last = max(last,s[i:])
+                last = max(last, s[i:])
         return last
-

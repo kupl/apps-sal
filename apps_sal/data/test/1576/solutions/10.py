@@ -10,4 +10,3 @@ else:
         st += s[i] + s[len(s) - 1 - i]
     st += s[len(s) // 2]
     print(st[::-1])
-

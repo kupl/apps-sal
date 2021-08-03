@@ -1,4 +1,4 @@
-def lostSheep(friday,saturday,total):
+def lostSheep(friday, saturday, total):
     fritag = 0
     for number in friday:
         fritag = fritag + number
@@ -6,5 +6,3 @@ def lostSheep(friday,saturday,total):
     for number in saturday:
         samstag = samstag + number
     return int(str(total)) - (fritag + samstag)
-
-

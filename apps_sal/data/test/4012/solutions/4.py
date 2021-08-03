@@ -6,9 +6,9 @@ for _ in range(int(input())):
     ans = 10**18
     index = [0, 0, 0]
 
-    for x in range(1, c+1):
-        for y in range(x, c+100, x):
-            cost = abs(a-x) + abs(b-y)
+    for x in range(1, c + 1):
+        for y in range(x, c + 100, x):
+            cost = abs(a - x) + abs(b - y)
             if c % y < y - (c % y):
                 z = c - (c % y)
                 cost += c % y
@@ -21,4 +21,3 @@ for _ in range(int(input())):
 
     print(ans)
     print(*index)
-

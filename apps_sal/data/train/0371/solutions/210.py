@@ -2,7 +2,7 @@ class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
-        
+
         stopbusmap = collections.defaultdict(set)
         for bus, stops in enumerate(routes):
             for stop in stops:
@@ -21,5 +21,5 @@ class Solution:
                 else:
                     for nxt in stopbusmap[stop]:
                         if nxt not in taken:
-                            queue.append((routes[nxt], taken+[nxt]))
+                            queue.append((routes[nxt], taken + [nxt]))
         return -1

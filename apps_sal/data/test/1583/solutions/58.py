@@ -1,6 +1,6 @@
+import math
 a, b, x = map(int, input().split())
 
-import math
 if x <= ((a ** 2) * b) / 2:
     n = 2 * x / (a * b)
     ans = math.acos(n / (math.sqrt(b ** 2 + n ** 2)))

@@ -39,6 +39,7 @@ class PokerHand(object):
         _tie_breaker: To determine the outcome if self and other are of same
             type
     """
+
     def __init__(self, hand: str):
         self._hand = hand
         self._cards = self._hand_with_values()
@@ -100,7 +101,7 @@ class PokerHand(object):
             if self._first_pair == other._first_pair:
                 if self._second_pair == other._second_pair:
                     return 'Win' if self._hand_value > other._hand_value else \
-                     'Loss' if self._hand_value < other._hand_value else 'Tie'
+                        'Loss' if self._hand_value < other._hand_value else 'Tie'
                 else:
                     return 'Win' if self._second_pair > other._second_pair \
                         else 'Loss'
@@ -188,7 +189,7 @@ class PokerHand(object):
         Returns True or False.
         """
         for i in range(4):
-            if self._cards[i+1][0] - self._cards[i][0] != 1:
+            if self._cards[i + 1][0] - self._cards[i][0] != 1:
                 return False
         return True
 
@@ -207,7 +208,7 @@ class PokerHand(object):
         """
         kind = val1 = val2 = 0
         for i in range(4):
-            if self._cards[i][0] == self._cards[i+1][0]:
+            if self._cards[i][0] == self._cards[i + 1][0]:
                 if not val1:
                     val1 = self._cards[i][0]
                     kind += 1

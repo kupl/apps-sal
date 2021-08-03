@@ -6,23 +6,23 @@ A = []
 B = []
 
 for i in range(N):
-   A.append(input())
+    A.append(input())
 
 for i in range(M):
-   B.append(input())
+    B.append(input())
 
 if A == B:
-   print('Yes')
-   return
+    print('Yes')
+    return
 
-for x in range(N-M):
-   for y in range(N-M):
-      count = 1
-      for i in range(M):
-         if A[y+i][x:x+M] != B[i]:
-            count = 0
-      if count == 1:
-         print('Yes')
-         return
+for x in range(N - M):
+    for y in range(N - M):
+        count = 1
+        for i in range(M):
+            if A[y + i][x:x + M] != B[i]:
+                count = 0
+        if count == 1:
+            print('Yes')
+            return
 
 print('No')

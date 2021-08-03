@@ -28,4 +28,3 @@ c = min(c, len(BOTH))
 res += sum(BOTH[:c])
 
 print(str(a + b + c) + " " + str(res))
-

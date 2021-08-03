@@ -9,4 +9,3 @@ if yes:
     print('Correct')
 else:
     print('Too weak')
-

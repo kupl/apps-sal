@@ -1,13 +1,13 @@
-s=list(input())
+s = list(input())
 
 for i in range(len(s)):
-    if(s[i]=='A'):
-        a=i
+    if(s[i] == 'A'):
+        a = i
         break
 
-for i in range(len(s)-1,-1,-1):
-    if(s[i]=='Z'):
-        z=i
+for i in range(len(s) - 1, -1, -1):
+    if(s[i] == 'Z'):
+        z = i
         break
 
-print(z-a+1)
+print(z - a + 1)

@@ -8,5 +8,5 @@ def logical_calc(array, op):
             if i:
                 return True
         else:
-            val ^= i;
+            val ^= i
     return val

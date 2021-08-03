@@ -1,13 +1,15 @@
-n=int(input())
-a=list(map(int, input().split()))
+n = int(input())
+a = list(map(int, input().split()))
 
 for i in range(len(a)):
-    a[i] = a[i]-1
+    a[i] = a[i] - 1
 
-instack=[False]*n
-processed=[False]*n
+instack = [False] * n
+processed = [False] * n
 loopl = []
-inloop = [False]*n
+inloop = [False] * n
+
+
 def dfs1(v):
     if (instack[v]):
         cl = 1
@@ -15,7 +17,7 @@ def dfs1(v):
         inloop[v] = True
         while t != v:
             inloop[t] = True
-            cl = cl+1
+            cl = cl + 1
             t = a[t]
         loopl.append(cl)
         return
@@ -26,6 +28,8 @@ def dfs1(v):
     instack[v] = True
     dfs1(a[v])
     instack[v] = False
+
+
 for i in range(n):
     dfs1(i)
 maxdis = 0
@@ -37,19 +41,23 @@ for i in range(n):
         t = a[t]
     maxdis = max(maxdis, cl)
 
+
 def gcd(a, b):
     if a == 0:
         return b
-    return gcd(b%a, a)
+    return gcd(b % a, a)
+
+
 def mkd(a, b):
-    return (a*b)//gcd(a,b)
-mkl=1
+    return (a * b) // gcd(a, b)
+
+
+mkl = 1
 for i in loopl:
     mkl = mkd(mkl, i)
 ans = mkl
 while ans < maxdis:
     ans += mkl
 print(ans)
-#print(inloop)
-#print(loopl)
-
+# print(inloop)
+# print(loopl)

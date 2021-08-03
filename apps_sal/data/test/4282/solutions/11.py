@@ -6,7 +6,7 @@ for i in range(n):
 first = d[0][0]
 second = d[0][1]
 if (d[first][0] != second and d[first][1] != second):
-    t = first;
+    t = first
     first = second
     second = t
 ans = [1, first + 1]

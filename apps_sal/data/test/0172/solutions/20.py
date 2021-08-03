@@ -12,8 +12,8 @@ cnt = 0
 aa = 0
 bb = 0
 flag = False
-for i in range(1,6):
-    diff = a[i]-b[i]
+for i in range(1, 6):
+    diff = a[i] - b[i]
     if diff % 2 == 1:
         flag = True
         break
@@ -29,5 +29,3 @@ else:
         print(aa)
     else:
         print(-1)
-
-

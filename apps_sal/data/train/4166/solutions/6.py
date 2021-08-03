@@ -1,5 +1,6 @@
 from math import floor, sqrt
 
+
 def solve(p):
     def powmod(x, n):
         res, cur = 1, x
@@ -29,6 +30,7 @@ def solve(p):
     pcur = 1
     for j in range(0, p, BLOCK):
         ans = []
+
         def try_use(num, typ):
             if num in baby:
                 totnum = j + baby[num]
@@ -44,4 +46,3 @@ def solve(p):
             return '%d-%s' % min(ans)
 
         pcur = (pcur * step) % p
-

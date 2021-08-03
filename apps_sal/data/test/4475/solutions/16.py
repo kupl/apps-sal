@@ -1,5 +1,11 @@
-import sys, math, heapq, collections, itertools, bisect
+import sys
+import math
+import heapq
+import collections
+import itertools
+import bisect
 sys.setrecursionlimit(101000)
+
 
 def solve(a, b, x, y, n):
     diffa = a - x
@@ -10,7 +16,8 @@ def solve(a, b, x, y, n):
     second = min(diffa, n)
     a -= second
     n -= second
-    return a*b
+    return a * b
+
 
 t = int(input())
 for _ in range(t):

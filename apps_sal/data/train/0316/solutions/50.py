@@ -11,5 +11,3 @@ class Solution:
                 happy = i
             mul = mul * base % mod
         return s[:happy]
-
-

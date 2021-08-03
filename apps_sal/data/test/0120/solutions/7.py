@@ -25,4 +25,3 @@ else:
             elif T > 0:
                 print("T", end="")
                 T -= 1
-

@@ -3,6 +3,7 @@
 import sys
 from collections import defaultdict
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -15,9 +16,12 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 class UnionFind:
     """ Union-Find木 """
@@ -26,13 +30,13 @@ class UnionFind:
         self.n = n
         # 親要素のノード番号を格納。par[x] == xの時そのノードは根
         # 1-indexedのままでOK、その場合は[0]は未使用
-        self.par = [i for i in range(n+1)]
+        self.par = [i for i in range(n + 1)]
         # 木の高さを格納する（初期状態では0）
-        self.rank = [0] * (n+1)
+        self.rank = [0] * (n + 1)
         # あるノードを根とする集合に属するノード数
-        self.size = [1] * (n+1)
+        self.size = [1] * (n + 1)
         # あるノードを根とする集合が木かどうか
-        self.tree = [True] * (n+1)
+        self.tree = [True] * (n + 1)
 
     def find(self, x):
         """ 根の検索(グループ番号と言えなくもない) """
@@ -79,14 +83,15 @@ class UnionFind:
         else:
             """ 集合の数 """
             res = set()
-            for i in range(self.n+1):
+            for i in range(self.n + 1):
                 res.add(self.find(i))
             # グループ0の分を引いて返却
             return len(res) - 1
-    
+
     def is_tree(self, x):
         """ 木かどうかの判定 """
         return self.tree[self.find(x)]
+
 
 MAX = 10 ** 5
 N = INT()
@@ -95,7 +100,7 @@ edges = []
 for i in range(N):
     x, y = MAP()
     edges.append((x, y))
-    uf.union(x, y+MAX)
+    uf.union(x, y + MAX)
 
 # 連結成分Sが持つ辺の数i,xの頂点数j,yの頂点数k
 # D[S] = (i, j, k)
@@ -104,7 +109,7 @@ D = defaultdict(lambda: [0, 0, 0])
 for x, y in edges:
     D[uf.find(x)][0] += 1
 # 頂点の集計
-for x in range(1, MAX+1):
+for x in range(1, MAX + 1):
     y = x + MAX
     D[uf.find(x)][1] += 1
     D[uf.find(y)][2] += 1
@@ -115,4 +120,3 @@ for edgecnt, xcnt, ycnt in list(D.values()):
     # 追加できる辺の数 = 完全2部グラフの辺数 - 既にある辺の数
     ans += xcnt * ycnt - edgecnt
 print(ans)
-

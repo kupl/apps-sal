@@ -1,5 +1,5 @@
 def human_years_cat_years_dog_years(human_years):
-    cat_years  = 0
+    cat_years = 0
     dog_years = 0
     if human_years < 2:
         cat_years += 15

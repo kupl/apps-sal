@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     input = sys.stdin.readline
     inf = 10**8 + 1
@@ -38,7 +39,7 @@ def main():
     # 1. from decrease to constant.
     inflections.add(max(0, left_max - const_x_max))
     # 2. from decrease to increase.
-    inflections.add(max(0, (left_max - right_max)/2))
+    inflections.add(max(0, (left_max - right_max) / 2))
     # 3. from constant to increase.
     inflections.add(max(0, const_x_max - right_max))
 
@@ -46,7 +47,7 @@ def main():
     # 4. from increase to constatnt.
     inflections.add(max(0, const_x_min - right_min))
     # 5. from increase to decrease.
-    inflections.add(max(0, (left_min - right_min)/2))
+    inflections.add(max(0, (left_min - right_min) / 2))
     # 6. from constant to decrease.
     inflections.add(max(0, left_min - const_x_min))
 
@@ -54,7 +55,7 @@ def main():
     # 7. from decrease to constant.
     inflections.add(max(0, down_max - const_y_max))
     # 8. from decrease to increase.
-    inflections.add(max(0, (down_max - up_max)/2))
+    inflections.add(max(0, (down_max - up_max) / 2))
     # 9. from constant to increase.
     inflections.add(max(0, const_y_max - up_max))
 
@@ -62,10 +63,9 @@ def main():
     # 10. from increase to constatnt.
     inflections.add(max(0, const_y_min - up_min))
     # 11. from increase to decrease.
-    inflections.add(max(0, (down_min - up_min)/2))
+    inflections.add(max(0, (down_min - up_min) / 2))
     # 12. from constant to decrease.
     inflections.add(max(0, down_min - const_y_min))
-
 
     def get_val(t):
         x0 = max(const_x_max, right_max + t, left_max - t)
@@ -84,5 +84,6 @@ def main():
 
 def __starting_point():
     print((main()))
+
 
 __starting_point()

@@ -1,4 +1,9 @@
-GI = lambda: int(input()); GIS = lambda: list(map(int, input().split())); LGIS = lambda: list(GIS())
+def GI(): return int(input())
+
+
+def GIS(): return list(map(int, input().split()))
+def LGIS(): return list(GIS())
+
 
 def main():
     GI()
@@ -11,9 +16,9 @@ def main():
     if lendiff > 1:
         large = ps[1]
         large.sort()
-        print(sum(large[:lendiff-1]))
+        print(sum(large[:lendiff - 1]))
     else:
         print(0)
 
-main()
 
+main()

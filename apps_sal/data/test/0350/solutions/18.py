@@ -9,5 +9,4 @@ for i in range(n):
                 break
     else:
         ans.append(A[i])
-print(sum(ans))        
-
+print(sum(ans))

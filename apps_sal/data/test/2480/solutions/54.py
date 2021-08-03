@@ -20,4 +20,3 @@ while r <= N:
         d[Acc[l]] -= 1
         l += 1
 print(ans)
-

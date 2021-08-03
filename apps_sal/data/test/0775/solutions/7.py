@@ -26,4 +26,3 @@ else:
             break
     if not was:
         print(bone + 1)
-

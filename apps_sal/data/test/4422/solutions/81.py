@@ -1,3 +1,3 @@
-n,k = map(int,input().split())
+n, k = map(int, input().split())
 s = input()
-print(s[:k-1]+s[k-1].swapcase()+s[k:])
+print(s[:k - 1] + s[k - 1].swapcase() + s[k:])

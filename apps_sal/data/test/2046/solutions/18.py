@@ -4,7 +4,7 @@ k = []
 for i in range(len(a)):
     k.append((a[i], i + 1))
 k.sort()
-k=k[::-1]
+k = k[::-1]
 curdate = 0
 curpos = 0
 while curpos < len(k):
@@ -18,5 +18,3 @@ while curpos < len(k):
         res.append(k[curpos][0])
     curpos += 1
     print(*res)
-        
-

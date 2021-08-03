@@ -1,12 +1,13 @@
 COLUMNS, ROWS = 'ABCDEFG', range(6)
-LINES = [{(COLUMNS[i+k], ROWS[j]) for k in range(4)}
-           for i in range(len(COLUMNS) - 3) for j in range(len(ROWS))] \
-        + [{(COLUMNS[i], ROWS[j+k]) for k in range(4)}
-           for i in range(len(COLUMNS)) for j in range(len(ROWS) - 3)] \
-        + [{(COLUMNS[i+k], ROWS[j+k]) for k in range(4)}
-           for i in range(len(COLUMNS) - 3) for j in range(len(ROWS) - 3)] \
-        + [{(COLUMNS[i+k], ROWS[j-k]) for k in range(4)}
-           for i in range(len(COLUMNS) - 3) for j in range(3, len(ROWS))]
+LINES = [{(COLUMNS[i + k], ROWS[j]) for k in range(4)}
+         for i in range(len(COLUMNS) - 3) for j in range(len(ROWS))] \
+    + [{(COLUMNS[i], ROWS[j + k]) for k in range(4)}
+       for i in range(len(COLUMNS)) for j in range(len(ROWS) - 3)] \
+    + [{(COLUMNS[i + k], ROWS[j + k]) for k in range(4)}
+       for i in range(len(COLUMNS) - 3) for j in range(len(ROWS) - 3)] \
+    + [{(COLUMNS[i + k], ROWS[j - k]) for k in range(4)}
+       for i in range(len(COLUMNS) - 3) for j in range(3, len(ROWS))]
+
 
 def who_is_winner(pieces_positions):
     players = {}

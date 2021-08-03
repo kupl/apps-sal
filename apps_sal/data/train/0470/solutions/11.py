@@ -1,12 +1,13 @@
 from collections import Counter
 
+
 class Solution:
     def threeSumMulti(self, A: List[int], target: int) -> int:
         countA = Counter(A)
         ans = 0
         done = set()
         M = int(1e9 + 7)
-        
+
         for i, j in list(countA.items()):
             for k, l in list(countA.items()):
                 req = target - i - k
@@ -24,6 +25,5 @@ class Solution:
                     if i != k and k != req:
                         ans += j * l * countA[req]
                     ans %= M
-                    
-        return ans
 
+        return ans

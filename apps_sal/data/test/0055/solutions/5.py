@@ -31,4 +31,3 @@ else:
 
     for i in range(64, -100010, -1):
         print('{} '.format(i) * c[i], end='')
-

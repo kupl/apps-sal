@@ -15,7 +15,7 @@ for k in range(n):
             if p:
                 ot.add(i)
     ot = list(reversed(sorted(list(ot))))
-    print(len(ot), end = ' ')
+    print(len(ot), end=' ')
     for i in ot:
-        print(str(12//i)+'x'+str(i), end = ' ')
+        print(str(12 // i) + 'x' + str(i), end=' ')
     print()

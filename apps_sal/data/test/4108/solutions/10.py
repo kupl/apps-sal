@@ -16,4 +16,3 @@ if A_c == B_c:
     print("Yes")
 else:
     print("No")
-

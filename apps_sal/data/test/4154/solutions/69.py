@@ -5,4 +5,4 @@ for m in range(M):
     l, r = [int(n) for n in input().split()]
     L = max(L, l)
     R = min(R, r)
-print(R-L+1 if L<=R else 0)
+print(R - L + 1 if L <= R else 0)

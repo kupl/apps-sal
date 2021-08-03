@@ -10,4 +10,5 @@ def __starting_point():
         current += width
     print()
 
+
 __starting_point()

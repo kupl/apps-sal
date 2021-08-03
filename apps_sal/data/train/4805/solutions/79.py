@@ -3,5 +3,3 @@ def check(seq, elem):
         return True
     else:
         return False
-    
-

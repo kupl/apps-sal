@@ -1,7 +1,6 @@
-d,n = list(map(int,input().split()))
+d, n = list(map(int, input().split()))
 
 if n == 100:
-  print((100**d*(n+1)))
+    print((100**d * (n + 1)))
 else:
-	print((100**d*n))
-
+    print((100**d * n))

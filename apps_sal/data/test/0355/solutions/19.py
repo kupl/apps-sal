@@ -35,4 +35,3 @@ if A_mov > B_mov:
     print("B")
 else:
     print("A")
-

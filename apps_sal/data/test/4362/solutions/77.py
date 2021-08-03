@@ -1,4 +1,4 @@
-a=input()
+a = input()
 if a.islower():
     print("a")
 else:

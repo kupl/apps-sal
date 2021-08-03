@@ -2,6 +2,7 @@ import sys
 import numpy as np
 from itertools import combinations
 
+
 class UnionFind:
     def __init__(self, n):
         self.n = n
@@ -24,12 +25,13 @@ class UnionFind:
         self.parents[x] += self.parents[y]
         self.parents[y] = x
         return True
-    
+
     def roots_size(self):
         return [-x for x in self.parents if x < 0]
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+
 
 def main():
     mod = 998244353
@@ -57,4 +59,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

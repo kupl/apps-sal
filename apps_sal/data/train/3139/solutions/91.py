@@ -3,5 +3,7 @@ def index(array, n):
         return array[n]**n
     except:
         return -1
-array=[1,3,10,100]
-index(array,3)
+
+
+array = [1, 3, 10, 100]
+index(array, 3)

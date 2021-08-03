@@ -1,6 +1,7 @@
-R=lambda:list(map(int,input().split()))
+def R(): return list(map(int, input().split()))
 
-n, m  = R()
+
+n, m = R()
 
 a = list(R())
 
@@ -12,6 +13,5 @@ for i in range(m):
     if temp < ans:
         ans = temp
         ans_i = i
-        
-print(ans_i + 1, n//a[ans_i] )
 
+print(ans_i + 1, n // a[ans_i])

@@ -5,20 +5,19 @@ def solve():
         if n == 0 or m == 0:
             print(n, m)
             return
-        elif n >= 2*m:
-            n = n % (2*m)
+        elif n >= 2 * m:
+            n = n % (2 * m)
             continue
-        elif m >= 2*n:
-            m = m % (2*n)
+        elif m >= 2 * n:
+            m = m % (2 * n)
             continue
         else:
-            print(n,m)
+            print(n, m)
             return
 
 
 def __starting_point():
     solve()
-
 
 
 __starting_point()

@@ -2,7 +2,7 @@ N = int(input())
 p = [int(i) for i in input().split()]
 r = sorted(p)
 for i in range(N):
-    for j in range(i+1,N):
+    for j in range(i + 1, N):
         q = []
         for k in range(N):
             if(k == i):

@@ -34,9 +34,9 @@ class TestClass(unittest.TestCase):
 
 def resolve():
     A, B, C, D = list(map(int, input().split()))
-    if A+B > C+D:
+    if A + B > C + D:
         print("Left")
-    elif A+B < C+D:
+    elif A + B < C + D:
         print("Right")
     else:
         print("Balanced")
@@ -45,5 +45,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

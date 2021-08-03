@@ -6,7 +6,7 @@ class Solution:
         while idx < len(customers) or customer > 0:
             if idx < len(customers):
                 customer += customers[idx]
-            idx, cnt = idx+1, cnt+1
+            idx, cnt = idx + 1, cnt + 1
             tmp = profit + boardingCost * min(4, customer) - runningCost
             if tmp > profit:
                 res = cnt

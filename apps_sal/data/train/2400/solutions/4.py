@@ -11,25 +11,25 @@ def go():
     if n % 2 == 0:
         return '2\n' + ' '.join(['1', '2'] * (n // 2))
 
-    prev=x[-1]
-    done=False
-    ans=[]
-    cur=0
+    prev = x[-1]
+    done = False
+    ans = []
+    cur = 0
     for xx in x:
-        if prev==xx and not done:
-            done=True
+        if prev == xx and not done:
+            done = True
         else:
-            cur=(cur+1)%2
+            cur = (cur + 1) % 2
         ans.append(str(cur + 1))
-        prev=xx
+        prev = xx
 
     if not done:
-        ans[0]='3'
-        v='3'
+        ans[0] = '3'
+        v = '3'
     else:
-        v='2'
+        v = '2'
 
-    return v +'\n' + ' '.join(ans)
+    return v + '\n' + ' '.join(ans)
 
 
 # x,s = map(int,input().split())
@@ -41,4 +41,3 @@ for _ in range(t):
     ans.append(str(go()))
 
 print('\n'.join(ans))
-

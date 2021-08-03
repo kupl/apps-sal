@@ -8,4 +8,4 @@ tmp.sort(key=lambda x: (x[1], x[0]))
 m = tmp[-1][1]
 for i in range(len(dic)):
     if tmp[i][1] == m:
-        print (tmp[i][0])
+        print(tmp[i][0])

@@ -1,13 +1,14 @@
 def reverse_list(a):
     """Takes an list and returns the reverse of it. 
     If x is empty, return [].
-    
+
     >>> reverse_list([1])
     [1]
     >>> reverse_list([])
     []
     """
     return a[::-1]
+
 
 def sum_list(a):
     """Takes a list, and returns the sum of that list.
@@ -19,6 +20,7 @@ def sum_list(a):
     0
     """
     return sum(a)
+
 
 def head_of_list(a):
     """Takes a list, returns the first item in that list.

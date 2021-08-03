@@ -1,10 +1,10 @@
 a = input()
 b = input()
 
-c = a[2]+a[1]+a[0]
+c = a[2] + a[1] + a[0]
 
 if b == c:
-  print('YES')
-  
+    print('YES')
+
 else:
-  print('NO')
+    print('NO')

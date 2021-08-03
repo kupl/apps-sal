@@ -14,7 +14,7 @@ for i in range(n):
         mas[pos] = True
     if s[pos] == '<':
         if pos - l[pos] < 0:
-            ans =  'FINITE'
+            ans = 'FINITE'
         else:
             pos -= l[pos]
     else:

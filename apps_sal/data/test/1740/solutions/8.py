@@ -12,7 +12,7 @@ n = int(input())
 d = dict()
 point = dict()
 l = []
-for _ in range(n-1):
+for _ in range(n - 1):
     l += [list(map(int, input().split()))]
 
 
@@ -45,5 +45,3 @@ for pair in l:
         point[pp1] = pp0
 
 print(' '.join(map(str, d[get_point(1)])))
-
-

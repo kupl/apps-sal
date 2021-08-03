@@ -10,7 +10,7 @@ def main():
 
     pow3, pow2, pow1, pow0 = 0, 0, 0, 0
     if q_cnt >= 3:
-        pow3 = pow(3, q_cnt-3, mod)
+        pow3 = pow(3, q_cnt - 3, mod)
         pow2 = pow3 * 3 % mod
         pow1 = pow2 * 3 % mod
         pow0 = pow1 * 3 % mod
@@ -43,5 +43,6 @@ def main():
             q_num += 1
 
     print(ans)
+
 
 main()

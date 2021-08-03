@@ -5,5 +5,3 @@ class Solution:
             for val in vals:
                 if val % lo == 0:
                     return lo, val // lo
-        
-

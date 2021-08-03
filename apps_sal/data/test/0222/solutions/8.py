@@ -3,7 +3,7 @@ import itertools
 
 def try_sqrt(n):
     m = int(n**.5)
-    return True if abs(m*m - n) < 1e-6 else False
+    return True if abs(m * m - n) < 1e-6 else False
 
 
 N = int(input())
@@ -18,7 +18,7 @@ for i in reversed(range(1, len(L))):
             continue
         num = int("".join(num_l))
         if try_sqrt(num):
-            print(len(L)-i)
+            print(len(L) - i)
             quit()
 
 print(-1)

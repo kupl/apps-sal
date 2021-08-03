@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     input = sys.stdin.readline
     N = int(input())
@@ -11,13 +12,13 @@ def main():
         dp = [0] * n
         used = set([0])
         for k in range(1, n):
-            A = N - 1 - k*C
-            if A in used or k*C in used or A == k*C:
+            A = N - 1 - k * C
+            if A in used or k * C in used or A == k * C:
                 break
             used.add(A)
-            used.add(k*C)
+            used.add(k * C)
 
-            dp[k] = dp[k-1] + S[A] + S[k*C]
+            dp[k] = dp[k - 1] + S[A] + S[k * C]
 
         ans = max(ans, max(dp))
 
@@ -26,5 +27,6 @@ def main():
 
 def __starting_point():
     print((main()))
+
 
 __starting_point()

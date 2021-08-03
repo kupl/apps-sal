@@ -38,4 +38,3 @@ for i in range(0, len(sorted_uniq_a)):
                 max_fib_prefix = fib_prefix
 
 print(len(max_fib_prefix))
-

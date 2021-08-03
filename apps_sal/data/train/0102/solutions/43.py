@@ -7,4 +7,3 @@ for t in range(int(input())):
     else:
         s += int(n[0]) - 1
     print(s)
-

@@ -13,5 +13,3 @@ class Solution:
                 if itr > newbiggest:
                     newbiggest = itr
         return lenL
-
-

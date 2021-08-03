@@ -26,4 +26,3 @@ for qi in range(len(q)):
 print(N)
 for x1, x2, x3, x4 in ans_arr:
     print((x1 + 1, x2 + 1, x3 + 1, x4 + 1))
-

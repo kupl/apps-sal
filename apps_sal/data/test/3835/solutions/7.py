@@ -11,9 +11,9 @@ for i in range(n):
 
 res = []
 for i in range(n):
-    x = m[i][(i+1)%n]
-    y = m[i][(i+2)%n]
-    z = m[(i+1)%n][(i+2)%n]
-    res.append(str(int(sqrt(int(x*y/z)))))
+    x = m[i][(i + 1) % n]
+    y = m[i][(i + 2) % n]
+    z = m[(i + 1) % n][(i + 2) % n]
+    res.append(str(int(sqrt(int(x * y / z)))))
 
 print(' '.join(res))

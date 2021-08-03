@@ -11,11 +11,11 @@ for _ in range(T):
     # S は 1 日に倒せるモンスターの数の上限
 
     # L[n] := n 体倒せるヒーローの最大パワー
-    L = [0] * (N+1)
+    L = [0] * (N + 1)
     for p, s in PS:
         L[s] = max(L[s], p)
-    for i in range(N-1, -1, -1):
-        L[i] = max(L[i], L[i+1])
+    for i in range(N - 1, -1, -1):
+        L[i] = max(L[i], L[i + 1])
     ans = 1
     cnt = 1
     ma = 0
@@ -32,4 +32,3 @@ for _ in range(T):
     Ans.append(ans)
 
 print("\n".join(map(str, Ans)))
-

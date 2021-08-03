@@ -27,8 +27,6 @@ while i < n:
             else:
                 ans = (ans * 3) % mod
         i += 2
-        
-    
+
+
 print(ans)
-
-

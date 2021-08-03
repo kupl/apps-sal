@@ -1,11 +1,12 @@
 from collections import defaultdict
 
+
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         A_indices = {a: i for i, a in enumerate(A)}
-        lengths = defaultdict(lambda: 2)        
+        lengths = defaultdict(lambda: 2)
         best = 0
-        
+
         for k in range(len(A) - 1, 1, -1):
             i = 0
             j = k - 1

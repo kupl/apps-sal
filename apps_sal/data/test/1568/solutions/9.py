@@ -9,4 +9,3 @@ else:
     money = n * a
 
 print(money)
-

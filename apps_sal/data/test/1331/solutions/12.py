@@ -1,5 +1,5 @@
-n,m,k = list(map(int,input().split()))
-clock = list(map(int,input().split()))
+n, m, k = list(map(int, input().split()))
+clock = list(map(int, input().split()))
 clock.sort()
 unlock = [1] * n
 count = 0
@@ -17,8 +17,3 @@ else:
             k = 1
             unlock[i] = 0
 print(count)
-    
-    
-    
-    
-

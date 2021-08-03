@@ -1,4 +1,6 @@
 import math
+
+
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         def sort(start, stop):
@@ -8,6 +10,7 @@ class Solution:
             left = sort(start, mid)
             right = sort(mid + 1, stop)
             return merge(left, right)
+
         def merge(left, right):
             left_index = 0
             right_index = 0
@@ -19,7 +22,7 @@ class Solution:
                     left_index += 1
                     result.append(left_val)
                 else:
-                    right_index += 1    
+                    right_index += 1
                     result.append(right_val)
             if left_index >= len(left):
                 result.extend(right[right_index:])
@@ -27,5 +30,3 @@ class Solution:
                 result.extend(left[left_index:])
             return result
         return sort(0, len(nums) - 1)
-        
-

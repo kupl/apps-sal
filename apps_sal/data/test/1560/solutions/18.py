@@ -19,13 +19,13 @@ for i in range(n):
         if (i + 1) % 2 == 0:
             sbb += 1
         else:
-            srb += 1   
-            
+            srb += 1
+
 if (srr + srb) < (sbr + sbb):
     ansr, ansb = srr, srb
 else:
     ansr, ansb = sbr, sbb
 
 x = min(ansr, ansb)
-ans = x + (max(ansr, ansb) - x)   
+ans = x + (max(ansr, ansb) - x)
 print(ans)

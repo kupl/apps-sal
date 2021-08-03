@@ -47,4 +47,3 @@ if mn != INF:
         print((e + 1))
 else:
     print((-1))
-

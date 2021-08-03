@@ -2,6 +2,8 @@ n, m = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort(reverse=True)
 ans = []
+
+
 def bin(s):
     tmp = [[] for k in range(s)]
     cur = s
@@ -18,6 +20,8 @@ def bin(s):
         return 1
     else:
         return 0
+
+
 uk2 = n
 uk1 = 1
 while (uk2 - uk1 > 1):

@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
         def dfs(m, n, c_id):
@@ -25,7 +27,8 @@ class Solution:
         result = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if grid[i][j] > 0: continue
+                if grid[i][j] > 0:
+                    continue
                 children = [(i, j - 1), (i, j + 1), (i - 1, j), (i + 1, j)]
                 n_c = set()
                 for x, y in children:

@@ -1,4 +1,4 @@
 C = input()
 word = 'abcdefghijklmnopqrstuvwxyz'
 i = word.find(C)
-print(word[i+1])
+print(word[i + 1])

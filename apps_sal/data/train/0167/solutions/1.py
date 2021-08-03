@@ -3,23 +3,23 @@ class Solution:
         def aux(t, k):
             ret = 0
             r = 1
-            for i in range(1, K+1):
-                r *= t-i+1
+            for i in range(1, K + 1):
+                r *= t - i + 1
                 r //= i
                 ret += r
                 if ret >= N:
                     break
             return ret
-        
+
         l, r = 1, N
         while l < r:
             m = (l + r) // 2
             if aux(m, K) < N:
-                l = m+1
+                l = m + 1
             else:
                 r = m
         return l
-    
+
 #         memo = {}
 #         def dp(n, k):
 #             if (n, k) not in memo:
@@ -40,9 +40,8 @@ class Solution:
 #                         else:
 #                             lo = hi = x
 #                     ret = 1 + min(max(dp(n-x, k), dp(x-1, k-1)) for x in (lo, hi))
-                
+
 #                 memo[n, k] = ret
 #             return memo[n, k]
-        
-#         return dp(N, K)
 
+#         return dp(N, K)

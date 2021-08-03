@@ -1,5 +1,5 @@
 X = input()
-if X == X.upper() :
+if X == X.upper():
     print('A')
-else :
+else:
     print('a')

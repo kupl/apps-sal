@@ -7,5 +7,6 @@ for i in t:
     if i == '0':
         a += 1
         s += b
-    if i == '1': b -= 1
+    if i == '1':
+        b -= 1
 print(s)

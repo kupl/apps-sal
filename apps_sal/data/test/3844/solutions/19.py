@@ -17,4 +17,3 @@ for i in range(10**5, 0, -1):
         break
 else:
     print("Agasa")
-

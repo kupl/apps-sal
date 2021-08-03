@@ -2,7 +2,8 @@ from sys import setrecursionlimit as SRL, stdin
 
 SRL(10 ** 7)
 rd = stdin.readline
-rrd = lambda: map(int, rd().strip().split())
+def rrd(): return map(int, rd().strip().split())
+
 
 fa = [i for i in range(200005)]
 s = [1] * 200005
@@ -42,4 +43,3 @@ q = list(rrd())
 
 for x in q:
     print(ans[x], end=' ')
-

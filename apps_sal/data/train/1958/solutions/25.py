@@ -14,7 +14,3 @@ class Solution:
                         res.append(dic[size])
                         del dic[size]
         return res
-                    
-                
-                
-

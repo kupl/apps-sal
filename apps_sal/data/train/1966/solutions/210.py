@@ -17,4 +17,3 @@ class Solution:
                         x += 1
                     res += cur
         return res
-

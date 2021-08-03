@@ -18,4 +18,3 @@ def solve(arr):
 n = int(input())
 *arr, = list(map(int, input().split()))
 print(solve(arr))
-

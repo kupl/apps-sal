@@ -10,4 +10,3 @@ def how_many_dalmatians(n):
     else:
         return dogs[2]
     return response
-

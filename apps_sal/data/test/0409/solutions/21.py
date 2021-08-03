@@ -8,4 +8,3 @@ elif j != -1 and s.find('AB', j + 2) != -1:
     sys.stdout.write('YES\n')
 else:
     sys.stdout.write('NO\n')
-

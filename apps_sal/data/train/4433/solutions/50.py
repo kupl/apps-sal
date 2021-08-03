@@ -1,5 +1,6 @@
 import distutils
 
+
 def quick_op(op, old, new):
     if op == "AND":
         return old and new
@@ -7,6 +8,7 @@ def quick_op(op, old, new):
         return old or new
     elif op == "XOR":
         return old ^ new
+
 
 def logical_calc(array, op):
     latest_operation = array[0]

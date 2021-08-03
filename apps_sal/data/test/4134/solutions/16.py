@@ -1,4 +1,6 @@
-n,m,k = list(map(int, input().split()))
+from collections import defaultdict
+import itertools
+n, m, k = list(map(int, input().split()))
 A = [list(map(int, input().split())) for _ in range(n)]
 
 if n == 1 and m == 1:
@@ -8,20 +10,18 @@ if n == 1 and m == 1:
         print(0)
     return
 
-import itertools
 ans = 0
-s = (n-1+m-1)//2
-t = (n-1+m-1)-s
+s = (n - 1 + m - 1) // 2
+t = (n - 1 + m - 1) - s
 #print(s, t)
-from collections import defaultdict
-DS = [defaultdict(lambda :0) for key in range(n)]
+DS = [defaultdict(lambda:0) for key in range(n)]
 for i in range(2**s):
-    L = [0]*s
+    L = [0] * s
     for j in range(s):
         if (i >> j) & 1:
             L[j] = 1
     key = sum(L)
-    if key > n-1:
+    if key > n - 1:
         continue
     y = 0
     x = 0
@@ -37,21 +37,21 @@ for i in range(2**s):
             break
     else:
         DS[key][res] += 1
-#print(DS)
+# print(DS)
 ans = 0
 for i in range(2**t):
-    L = [0]*t
+    L = [0] * t
     for j in range(t):
         if (i >> j) & 1:
             L[j] = 1
     tkey = sum(L)
-    if tkey > n-1:
+    if tkey > n - 1:
         continue
-    y = n-1
-    x = m-1
-    res = A[n-1][m-1]
+    y = n - 1
+    x = m - 1
+    res = A[n - 1][m - 1]
     for idx, l in enumerate(L):
-        if idx == len(L)-1:
+        if idx == len(L) - 1:
             continue
         if l == 1:
             y -= 1
@@ -62,9 +62,8 @@ for i in range(2**t):
         else:
             break
     else:
-        skey = n-1-tkey
-        sres = res^k
+        skey = n - 1 - tkey
+        sres = res ^ k
         #print(skey, sres)
         ans += DS[skey][sres]
 print(ans)
-

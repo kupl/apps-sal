@@ -3,78 +3,88 @@ from itertools import*
 from timeit import*
 from typing import Optional
 
-S=lambda x:sum(map(int,str(x)))
 
-def ceil_s_divisible_a(x:int,a:int) -> Optional[int]:
-	z=S(x)%a
-	if z:
-		z=a-z
-		tail=[]
-		x=list(str(x))
-		while x:
-			digit=x.pop()
-			diff=min(z,9-int(digit))
-			z-=diff
-			tail.append(str(int(digit)+diff))
-			if z==0:break
-		else:
-			return ceil_s_divisible_a(10**len(tail),a)
-		x=''.join(x) + ''.join(reversed(tail))
+def S(x): return sum(map(int, str(x)))
 
-	assert S(x)%a==0
-	x=int(x)
-	return x
+
+def ceil_s_divisible_a(x: int, a: int) -> Optional[int]:
+    z = S(x) % a
+    if z:
+        z = a - z
+        tail = []
+        x = list(str(x))
+        while x:
+            digit = x.pop()
+            diff = min(z, 9 - int(digit))
+            z -= diff
+            tail.append(str(int(digit) + diff))
+            if z == 0:
+                break
+        else:
+            return ceil_s_divisible_a(10**len(tail), a)
+        x = ''.join(x) + ''.join(reversed(tail))
+
+    assert S(x) % a == 0
+    x = int(x)
+    return x
+
 
 def smooth25(a):
-	a=int(bin(a).rstrip('0'),2)
-	while a%5==0: a//=5
-	return a==1
+    a = int(bin(a).rstrip('0'), 2)
+    while a % 5 == 0:
+        a //= 5
+    return a == 1
+
 
 def solve(a):
-	for first in range(1,60): # 120
-		q=str((first*10**3000+a-1) // a) # 5000
-		for s1 in range(1,200):
-			i=1
-			s2=int(q[0])
-			while i<len(q) and s2<s1*a-10: s2+=int(q[i]); i+=1
-			for len1 in range(i,min(i+10,len(q))):
-				small=int(q[:len1])
-				for z in range(4): # 10
-					small=ceil_s_divisible_a(small,a)
-					if S(small*a)*a==S(small):
-						return small
-					small+=1
+    for first in range(1, 60):  # 120
+        q = str((first * 10**3000 + a - 1) // a)  # 5000
+        for s1 in range(1, 200):
+            i = 1
+            s2 = int(q[0])
+            while i < len(q) and s2 < s1 * a - 10:
+                s2 += int(q[i])
+                i += 1
+            for len1 in range(i, min(i + 10, len(q))):
+                small = int(q[:len1])
+                for z in range(4):  # 10
+                    small = ceil_s_divisible_a(small, a)
+                    if S(small * a) * a == S(small):
+                        return small
+                    small += 1
 
-	return None
+    return None
 
-def powform(x:int)->str:
-	s=str(x)
-	try:
-		i=s.find('00000')
-		return f'{s[:i]} * 10 ** {len(s)-i} + {int(s[i:])}'
-	except IndexError:
-		return str(x)
+
+def powform(x: int) -> str:
+    s = str(x)
+    try:
+        i = s.find('00000')
+        return f'{s[:i]} * 10 ** {len(s)-i} + {int(s[i:])}'
+    except IndexError:
+        return str(x)
+
 
 if 0:
-	#for a in (a for a in range(2,1000)):
-	for a in [999,909,813,777,957,921,855,933,831,942,891,846,807,783,888][1::3]:
-	#for a in [32]:
+    # for a in (a for a in range(2,1000)):
+    for a in [999, 909, 813, 777, 957, 921, 855, 933, 831, 942, 891, 846, 807, 783, 888][1::3]:
+        # for a in [32]:
 
-		def work():
-			nonlocal x
-			x=solve(a)
+        def work():
+            nonlocal x
+            x = solve(a)
 
-		t=timeit(work,number=1)
-		if t>0.5 or x==None:
-			if x!=None:
-				print(a,t,'>>',powform(a*x))
-			else:
-				print(a,t,'>> ?????')
+        t = timeit(work, number=1)
+        if t > 0.5 or x == None:
+            if x != None:
+                print(a, t, '>>', powform(a * x))
+            else:
+                print(a, t, '>> ?????')
 
-	#print(solve(int(input())))
+    # print(solve(int(input())))
 
 
-special='''
+special = '''
 660 0.5026652759997887 >> 3 * 10 ** 2640 + 35340
 803 0.5102322779994211 >> 3 * 10 ** 2678 + 1614
 912 0.5136937369998122 >> 3 * 10 ** 1825 + 240
@@ -185,14 +195,13 @@ special='''
 807 0.7532789589995446 >> 1 * 10 ** 3234 + 1307123
 '''
 
-a=int(input())
+a = int(input())
 for line in special.splitlines():
-	if line:
-		expr,out=line.split('>>')
-		expr=expr.split()[0]
-		if int(expr)==a:
-			print(-1 if out.strip()=='?????' else eval(out)//a)
-			break
+    if line:
+        expr, out = line.split('>>')
+        expr = expr.split()[0]
+        if int(expr) == a:
+            print(-1 if out.strip() == '?????' else eval(out) // a)
+            break
 else:
-	print(solve(a))
-
+    print(solve(a))

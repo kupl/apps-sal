@@ -36,6 +36,3 @@ else:
         print(s2)
         ans = [mn] * a2 + [mn + 1] * b2 + [mx] * c2
         print(*ans)
-
-
-

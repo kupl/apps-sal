@@ -13,4 +13,3 @@ while i > 0:
         print((-1))
         return
 print((' '.join(map(str, reversed(lst)))))
-

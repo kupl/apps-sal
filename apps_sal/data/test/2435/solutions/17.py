@@ -17,4 +17,3 @@ for case_num in range(t):
             lo = min(lo, l)
             hi = max(hi, r)
     print(hi - lo + 1)
-

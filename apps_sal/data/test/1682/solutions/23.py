@@ -4,7 +4,7 @@ b = list(map(int, input().split()))
 dif = []
 
 for i in range(n):
-    dif.append((a[i]-b[i], i))
+    dif.append((a[i] - b[i], i))
 
 dif.sort()
 s = 0
@@ -17,4 +17,3 @@ for i in range(len(a)):
     s += min(a[i], b[i])
 
 print(s)
-

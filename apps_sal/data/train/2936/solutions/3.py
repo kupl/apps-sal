@@ -12,6 +12,4 @@ def num_of_open_lockers(n):
 #  ...  a-ha, OK, gotcha:
 
 
-num_of_open_lockers = lambda n: int(n ** .5)
-
-
+def num_of_open_lockers(n): return int(n ** .5)

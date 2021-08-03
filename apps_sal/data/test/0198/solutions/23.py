@@ -7,6 +7,9 @@ def main():
     else:
         print(0)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -17,4 +17,4 @@ class Solution:
             if len(pool) == K:
                 ans = min(ans, ratio * sumq)
 
-        return float(ans)   
+        return float(ans)

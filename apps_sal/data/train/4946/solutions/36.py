@@ -4,5 +4,5 @@ def house_numbers_sum(inp):
         if i is 0:
             break
         sum += i
-        
+
     return sum

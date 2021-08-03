@@ -3,7 +3,7 @@ class Solution:
        # n = speed.len()
         ls = list(zip(speed, efficiency))
         ls.sort(key=lambda x: -x[1])
-        
+
         HEAP = []
         tsum = 0
         ans = 0
@@ -13,6 +13,6 @@ class Solution:
                 tsum -= speed
             heapq.heappush(HEAP, ls[i])
             tsum += ls[i][0]
-            ans = max(ans, tsum*ls[i][1])
-            
-        return ans%1_000_000_007
+            ans = max(ans, tsum * ls[i][1])
+
+        return ans % 1_000_000_007

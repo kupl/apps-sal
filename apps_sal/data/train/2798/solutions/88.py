@@ -4,7 +4,5 @@ def to_alternating_case(string):
         if string[i].isupper():
             string[i] = string[i].lower()
         elif string[i].islower():
-            string[i] = string[i].upper()       
+            string[i] = string[i].upper()
     return ''.join(string)
-
-

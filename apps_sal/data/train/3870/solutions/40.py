@@ -9,4 +9,3 @@ def solve(s):
         if el == ' ':
             d = d[:i] + el + d[i:]
     return d
-

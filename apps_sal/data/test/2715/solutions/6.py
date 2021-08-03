@@ -5,11 +5,10 @@ print(n)
 nums = list(reversed(list(range(n))))
 
 for i in range(n):
-    nums[i] += k//n
+    nums[i] += k // n
 
-for i in range(k%n):
+for i in range(k % n):
     nums[i] += 1
 
 t = list(map(str, nums))
 print((' '.join(t)))
-

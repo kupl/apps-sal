@@ -1,7 +1,7 @@
 # import math
 # import statistics
 # a=input()
-#b,c=int(input()),int(input())
+# b,c=int(input()),int(input())
 # c=[]
 # for i in a:
 #     c.append(i)
@@ -15,4 +15,4 @@
 a = int(input())
 b = int(input())
 h = int(input())
-print(int((a+b)*h/2))
+print(int((a + b) * h / 2))

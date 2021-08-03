@@ -26,8 +26,7 @@ for line in stdin:
         maxh2 = h
 
 for g in guys:
-    sq = (sumw - g.w)*(maxh1 if g.h != maxh1 else maxh2)
-    print (sq, end=' ')
+    sq = (sumw - g.w) * (maxh1 if g.h != maxh1 else maxh2)
+    print(sq, end=' ')
 
 print()
-

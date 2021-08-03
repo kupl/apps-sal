@@ -13,5 +13,3 @@ class Solution:
             bcache = tmp
         # print(f'{bcache} {kcache}')
         return res
-                    
-

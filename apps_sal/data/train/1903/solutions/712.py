@@ -1,5 +1,7 @@
 from collections import defaultdict
 from heapq import heappush, heappop
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         G = defaultdict(dict)
@@ -13,10 +15,12 @@ class Solution:
         while len(seen) < len(G):
             while pq:
                 cost, next_node = heappop(pq)
-                if next_node in seen: continue
+                if next_node in seen:
+                    continue
                 seen.add(next_node)
                 ans += cost
                 for nb, d in G[next_node].items():
-                    if nb in seen: continue
+                    if nb in seen:
+                        continue
                     heappush(pq, (d, nb))
         return ans

@@ -10,5 +10,5 @@ while parity:
         else:
             parity = False
     if parity:
-        ans += 1 
+        ans += 1
 print(ans)

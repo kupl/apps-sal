@@ -10,7 +10,7 @@ class Solution:
                     s = (i, j)
                 elif grid[i][j] == 'B':
                     b = (i, j)
-        
+
         dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]]
         q = [tuple(s + b)]
         seen = set(q)
@@ -18,7 +18,7 @@ class Solution:
         while q:
             nq = []
             for si, sj, bi, bj in q:
-                if t == (bi, bj): 
+                if t == (bi, bj):
                     return steps
                 for di, dj in dirs:
                     nsi, nsj = si + di, sj + dj
@@ -28,14 +28,14 @@ class Solution:
                     else:
                         nbi, nbj = bi, bj
                         ds = 0
-                    if not (0 <= nsi < n and 0 <= nsj < m): 
+                    if not (0 <= nsi < n and 0 <= nsj < m):
                         continue
-                    if not (0 <= nbi < n and 0 <= nbj < m): 
+                    if not (0 <= nbi < n and 0 <= nbj < m):
                         continue
-                    if grid[nsi][nsj] == '#' or grid[nbi][nbj] == '#': 
+                    if grid[nsi][nsj] == '#' or grid[nbi][nbj] == '#':
                         continue
                     nsb = (nsi, nsj, nbi, nbj)
-                    if nsb in seen: 
+                    if nsb in seen:
                         continue
                     seen.add(nsb)
                     if ds == 0:
@@ -45,4 +45,3 @@ class Solution:
             q = nq
             steps += 1
         return -1
-

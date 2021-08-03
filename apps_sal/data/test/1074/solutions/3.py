@@ -6,4 +6,3 @@ for c in n:
         ans += 1
 
 print(ans)
-

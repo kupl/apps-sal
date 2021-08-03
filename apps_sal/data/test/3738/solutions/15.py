@@ -1,4 +1,4 @@
-a, b =  list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 s = input()
 p = [[0, 0]]
 d = {'R': (1, 0), 'L': (-1, 0), 'U': (0, 1), 'D': (0, -1)}
@@ -16,4 +16,3 @@ for x, y in p:
         break
 else:
     print('No')
-

@@ -5,8 +5,10 @@ def main():
     x.sort()
     y.sort()
 
-    if X < x[len(x)-1] < y[0] < Y:
+    if X < x[len(x) - 1] < y[0] < Y:
         print('No War')
     else:
         print('War')
-main()  
+
+
+main()

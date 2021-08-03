@@ -7,7 +7,7 @@ if n < 0 or k < 0:
 else:
     rem = []
     found = False
-    for i in range(1, k+1):
+    for i in range(1, k + 1):
         check = n % i
         if check in rem:
             print("No\n")
@@ -16,4 +16,3 @@ else:
         rem.append(check)
     if not found:
         print("Yes\n")
-

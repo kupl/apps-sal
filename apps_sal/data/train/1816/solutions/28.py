@@ -7,17 +7,15 @@ class Solution:
             if name not in map:
                 map[name] = []
             map[name].append(get_time(time))
-        
+
         ans = []
         for name in sorted(map.keys()):
             times = sorted(map[name])
             # print(name, times)
-            
+
             for i in range(len(times) - 2):
-                if times[i+2] - times[i] <= 60:
+                if times[i + 2] - times[i] <= 60:
                     ans.append(name)
                     break
-            
-        return ans
-        
 
+        return ans

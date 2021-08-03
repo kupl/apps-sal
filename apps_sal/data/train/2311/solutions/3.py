@@ -38,4 +38,3 @@ while q:
     if index_r < len(pre_calc[x]) and pre_calc[x][index_r] <= r:
         index_r += 1
     print(max(index_r - index_l - 1, 0))
-

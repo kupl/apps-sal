@@ -13,9 +13,11 @@ for _ in range(N):
 X = np.array(X)
 Y = np.array(Y)
 
+
 def dist(cx, cy):
     tmp = ((X - cx) ** 2 + (Y - cy) ** 2) ** .5
     return max(tmp)
+
 
 def g(cx):
     ll, rr = 0, 1000
@@ -28,6 +30,7 @@ def g(cx):
         else:
             rr = crr
     return dist(cx, ll)
+
 
 l, r = 0, 1000
 
@@ -42,5 +45,3 @@ for _ in range(80):
 ans = g(l)
 
 print(ans)
-
-

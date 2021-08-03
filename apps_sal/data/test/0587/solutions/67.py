@@ -32,12 +32,15 @@ def main():
 
     ans = ret
     for d, t in dd[K:]:
-        if ~biggest[t]: continue
-        if not h: break
+        if ~biggest[t]:
+            continue
+        if not h:
+            break
         kinds += 1
         diff = d + kinds * 2 - 1 - h[0]
         ret += diff
-        if ans < ret: ans = ret
+        if ans < ret:
+            ans = ret
         biggest[t] = d
         heappop(h)
 
@@ -46,5 +49,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

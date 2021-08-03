@@ -13,5 +13,3 @@ for i in range(1, 10 ** 9 + 1):
         res.append(i)
 print(len(res))
 print(*res)
-
-

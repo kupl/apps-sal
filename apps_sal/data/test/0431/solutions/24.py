@@ -1,6 +1,7 @@
 from collections import Counter
 import sys
 
+
 def left_time(floor):
     light_counter = Counter(floor)
     # print(light_counter)
@@ -16,7 +17,7 @@ def left_time(floor):
                 break
             else:
                 last_light_search += 1
-        
+
 
 def right_time(floor):
     light_counter = Counter(floor)
@@ -30,6 +31,7 @@ def right_time(floor):
                 break
             else:
                 last_light_search += 1
+
 
 floors_nr, rooms_nr = (int(x) for x in input().split())
 building_scheme = []
@@ -45,30 +47,25 @@ for i in range(floors_nr):
 if len(building_scheme) == 0:
     print(0)
     return
-    
+
 optimal_time = [(-1, 10000)]
 
 last_floor = building_scheme[0]
 building_scheme = building_scheme[1:]
 for floor in building_scheme[::-1]:
     prefix_left, prefix_right = optimal_time[-1]
-    
+
     keep_right_left = rooms_nr + 1 + prefix_left + 1
     keep_right_right = right_time(floor) + prefix_right + 1
     keep_right = min(keep_right_left, keep_right_right)
-    
+
     keep_left_left = left_time(floor) + prefix_left + 1
     keep_left_right = rooms_nr + 1 + prefix_right + 1
     keep_left = min(keep_left_left, keep_left_right)
-    
+
     optimal_time.append((keep_left, keep_right))
 
 # print(optimal_time)
 
 last_floor_time = min(optimal_time[-1][0] + 1 + left_time(last_floor) // 2, optimal_time[-1][1] + 1 + right_time(last_floor) // 2)
 print(last_floor_time)
-    
-    
-
-
-

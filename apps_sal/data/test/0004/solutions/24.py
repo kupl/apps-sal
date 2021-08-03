@@ -16,17 +16,10 @@ while '7' not in hh and '7' not in mm:
         h -= 1
         if h < 0:
             h += 24
-            
+
     num_snooze += 1
 
     hh = str(h)
     mm = str(m)
 
 print(num_snooze)
-
-
-
-
-
-
-

@@ -15,6 +15,6 @@ class Solution:
             if k > 0:
                 k -= 1
                 y = s[j + 1] - s[k]
-                heapq.heappush(q,(y, j, k))
+                heapq.heappush(q, (y, j, k))
             i += 1
         return ans % (10 ** 9 + 7)

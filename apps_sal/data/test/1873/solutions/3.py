@@ -7,4 +7,3 @@ ans = 0
 for i in range(m):
     ans += p[i] * (n - p[i])
 print(ans // 2)
-

@@ -11,4 +11,3 @@ for c, i in s:
 print(len(ans))
 if ans:
     print(' '.join(map(str, ans)))
-

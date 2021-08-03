@@ -9,5 +9,3 @@ if r == 1:
 if r > 1:
     v += 2
 print(u, v)
-    
-

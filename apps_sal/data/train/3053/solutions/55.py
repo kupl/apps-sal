@@ -1,5 +1,5 @@
 def close_compare(a, b, margin=0):
-    dif=a-b
+    dif = a - b
 
     if abs(dif) <= margin:
         return 0
@@ -7,4 +7,3 @@ def close_compare(a, b, margin=0):
         return -1
     else:
         return 1
-

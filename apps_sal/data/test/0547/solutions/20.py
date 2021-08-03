@@ -22,4 +22,3 @@ while i < len(pwds) - 1:
     i += 1
 worst = time + 1
 print(str(best) + " " + str(worst))
-

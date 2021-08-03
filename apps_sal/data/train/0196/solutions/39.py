@@ -19,10 +19,8 @@ class Solution:
             curr += x
             revCumSum.append(curr)
         for i in range(1, len(A)):
-            revCumSum[i] = max(revCumSum[i-1], revCumSum[i])
-        for i in range(len(A)-1):
-            mx = max(mx, cumSum[i]+revCumSum[len(A)-2-i])
+            revCumSum[i] = max(revCumSum[i - 1], revCumSum[i])
+        for i in range(len(A) - 1):
+            mx = max(mx, cumSum[i] + revCumSum[len(A) - 2 - i])
         mx = max(mx, cumSum[-1])
         return mx
-        
-

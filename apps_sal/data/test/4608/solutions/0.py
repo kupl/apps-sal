@@ -16,7 +16,7 @@ import sys
 def main():
     N = int(input())
     A = [0]
-    visited = [0]*(N+1)
+    visited = [0] * (N + 1)
     for _ in range(N):
         A.append(int(input()))
     i = 1
@@ -31,8 +31,8 @@ def main():
     print((-1))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

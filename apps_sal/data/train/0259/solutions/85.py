@@ -1,23 +1,23 @@
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        #res=sum(nums)
-        #print(1//5)
-        #n=max(nums)+1
-        #print(int(1e6))
+        # res=sum(nums)
+        # print(1//5)
+        # n=max(nums)+1
+        # print(int(1e6))
         def dfs(m):
-            r=0
+            r = 0
             for i in nums:
-                r+=math.ceil(i/m)
-                if r>threshold:
+                r += math.ceil(i / m)
+                if r > threshold:
                     return False
             return True
-        l,r=1,int(1e6)
-        while l<=r:
-            m=(l+r)//2
+        l, r = 1, int(1e6)
+        while l <= r:
+            m = (l + r) // 2
             if dfs(m):
-                r=m-1
+                r = m - 1
             else:
-                l=m+1
+                l = m + 1
         return l
         '''
         for i in range(1,max(nums)):
@@ -31,5 +31,4 @@ class Solution:
             if r<=threshold:
                 return i
         '''
-        #return res
-
+        # return res

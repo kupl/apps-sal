@@ -19,4 +19,3 @@ class Solution:
                 stack.append((orig.right, clone.right))
             if orig.left:
                 stack.append((orig.left, clone.left))
-

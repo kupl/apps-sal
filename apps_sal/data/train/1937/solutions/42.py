@@ -1,12 +1,14 @@
 import copy
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
-        self.parent = collections.defaultdict(list) # child : parent
-        self.children = collections.defaultdict(list) # parent: children
+        self.parent = collections.defaultdict(list)  # child : parent
+        self.children = collections.defaultdict(list)  # parent: children
         self.king = kingName
         self.deathList = set()
-        
+
     def birth(self, parentName: str, childName: str) -> None:
         self.parent[childName].append(parentName)
         self.children[parentName].append(childName)
@@ -20,6 +22,7 @@ class ThroneInheritance:
         #print(self.parent, self.children)
         c = copy.deepcopy(self.children)
         p = copy.copy(self.parent)
+
         def Successor(x, curOrder):
             if x not in c or len(c[x]) == 0:
                 if x == self.king:
@@ -29,10 +32,10 @@ class ThroneInheritance:
             newx = c[x].pop(0)
             curOrder.append(newx)
             return newx
-            
+
         while current:
             current = Successor(current, order)
-            
+
         if not self.deathList:
             return order
         else:
@@ -47,4 +50,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

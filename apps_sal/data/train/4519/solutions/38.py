@@ -9,4 +9,3 @@ def max_number(n):
     for i in sorted(res2, reverse=True):
         ans += str(i)
     return int(ans)
-

@@ -1,4 +1,4 @@
-N, L = map(int,input().split())
+N, L = map(int, input().split())
 
 word = []
 count = 0

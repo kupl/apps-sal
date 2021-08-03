@@ -7,19 +7,23 @@ for possiblePrime in range(2, 10000):
             break
     if isPrime:
         primes.append(possiblePrime)
-plookup = set(primes)    
+plookup = set(primes)
 S = []
-prime = 10**9+7
-for i in range(2,1000):
-  if i in plookup:
-    S.append(primes[i-1])
+prime = 10**9 + 7
+for i in range(2, 1000):
+    if i in plookup:
+        S.append(primes[i - 1])
+
+
 def __starting_point():
-  T = int(input())
-  while T>0:
-    T-=1
-    N = int(input())
-    s = 0
-    for i in range(N):
-      s+=S[i]
-    print(s%prime)
+    T = int(input())
+    while T > 0:
+        T -= 1
+        N = int(input())
+        s = 0
+        for i in range(N):
+            s += S[i]
+        print(s % prime)
+
+
 __starting_point()

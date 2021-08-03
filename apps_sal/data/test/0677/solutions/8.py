@@ -1,8 +1,7 @@
-q=int(input())
+q = int(input())
 for i in range(q):
-    l,r,d=list(map(int,input().split()))
-    if d<l:
+    l, r, d = list(map(int, input().split()))
+    if d < l:
         print(d)
     else:
-        print(d*(r//d+1))
-
+        print(d * (r // d + 1))

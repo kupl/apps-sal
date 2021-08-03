@@ -45,4 +45,3 @@ if czy(pocz):
     print(pocz)
 else:
     print(-1)
-

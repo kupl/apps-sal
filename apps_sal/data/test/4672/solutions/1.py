@@ -1,5 +1,6 @@
 def get_avg(marks, student):
-    return (sum(marks[student])/len(marks[student]))
+    return (sum(marks[student]) / len(marks[student]))
+
 
 def __starting_point():
     n = int(input())
@@ -10,5 +11,6 @@ def __starting_point():
         student_marks[name] = scores
     query_name = input()
     print(("{:.2f}".format(get_avg(student_marks, query_name))))
+
 
 __starting_point()

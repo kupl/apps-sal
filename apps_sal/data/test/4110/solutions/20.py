@@ -8,7 +8,7 @@ ans = float("inf")
 for bit in range(1 << D):
     count = 0
     sum = 0
-    rest = list(range(1, D+1))
+    rest = list(range(1, D + 1))
 
     for i in range(D):
         if bit & (1 << i):
@@ -26,4 +26,3 @@ for bit in range(1 << D):
         ans = min(ans, count)
 
 print(ans)
-

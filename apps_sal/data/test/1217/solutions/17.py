@@ -16,6 +16,9 @@ def main():
         ans.append(more_then[b[i]])
     print(" ".join(map(str, ans)))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,8 +1,10 @@
+from collections import deque
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-from collections import deque
+
+
 def main():
     n, *a = list(map(int, read().split()))
     a.sort(reverse=True)
@@ -22,7 +24,9 @@ def main():
             flag = True
     print(r)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

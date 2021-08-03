@@ -10,7 +10,7 @@ for i in range(n):
     else:
         oMe += 1
     if oMe == 0 and i + 1 != n:
-        Bs.append(abs(a[i] - a[i+1]))
+        Bs.append(abs(a[i] - a[i + 1]))
 Bs = sorted(Bs)
 ans = 0
 for i in range(len(Bs)):
@@ -18,4 +18,3 @@ for i in range(len(Bs)):
         B -= Bs[i]
         ans += 1
 print(ans)
-

@@ -3,5 +3,5 @@ def repeater(string, n):
     while(n != 1):
         arr = arr + string
         n = n - 1
-        
+
     return arr

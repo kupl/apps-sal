@@ -8,6 +8,6 @@ for j in range(n):
     while x < n and (i & a[x]) == 0:
         i += a[x]
         x += 1
-    result += x-j
+    result += x - j
     i -= a[j]
 print(result)

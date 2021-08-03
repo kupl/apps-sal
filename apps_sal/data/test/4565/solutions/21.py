@@ -58,19 +58,20 @@ def resolve():
     for i in range(N):
         if S[i] == "W":
             L += 1
-        if S[N-1-i] == "E":
+        if S[N - 1 - i] == "E":
             R += 1
         W[i] = L
-        E[N-1-i] = R
+        E[N - 1 - i] = R
 
     ans = float("inf")
     for i in range(N):
-        ans = min(ans, E[i]+W[i]-1)
+        ans = min(ans, E[i] + W[i] - 1)
     print(ans)
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

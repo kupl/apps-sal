@@ -45,10 +45,10 @@ def get_sieve_of_eratosthenes(n):
 
 max_ = pow(10, 5) + 2
 primes = get_sieve_of_eratosthenes(max_)
-num_lile2017 = [0]*max_
+num_lile2017 = [0] * max_
 primes2 = []
 for prime in primes:
-    primes2.append(2*prime-1)
+    primes2.append(2 * prime - 1)
 like2017 = sorted(list(set(primes2) & set(primes)))
 for i in range(3, max_, 2):
     if (i in like2017):
@@ -59,5 +59,4 @@ num_lile2017 = list(accumulate(num_lile2017))
 Q = z()
 for i in range(Q):
     l, r = zz()
-    print((num_lile2017[r] - num_lile2017[l-1]))
-
+    print((num_lile2017[r] - num_lile2017[l - 1]))

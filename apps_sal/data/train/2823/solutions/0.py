@@ -3,9 +3,8 @@ def duplicates(array):
     dups = []
     for char in array:
         if char not in seen:
-             seen.append(char)
+            seen.append(char)
         elif char not in dups:
-             dups.append(char)
-    
-    return dups
+            dups.append(char)
 
+    return dups

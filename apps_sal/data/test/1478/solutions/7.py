@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 from collections import defaultdict
+
+
 def ri():
     return list(map(int, input().split()))
+
 
 temp = input().split(',')
 node = temp[0::2]
@@ -29,4 +32,3 @@ for j in range(len(node)):
 print(len(level))
 for l in level:
     print(' '.join([node[i] for i in level[l]]))
-

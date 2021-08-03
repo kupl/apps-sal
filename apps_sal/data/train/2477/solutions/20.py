@@ -1,7 +1,7 @@
 class Solution:
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         res, count, ct = 0, [], collections.Counter
-        
+
         for s in A:
             even = collections.defaultdict(int)
             odd = collections.defaultdict(int)
@@ -12,7 +12,7 @@ class Solution:
                 else:
                     odd[c] += 1
                 isEven = not isEven
-            count.append((even, odd))      
+            count.append((even, odd))
 
         while count:
             i, count2 = 1, []
@@ -21,5 +21,5 @@ class Solution:
                     count2.append(count[i])
             res += 1
             count = count2
-        
+
         return res

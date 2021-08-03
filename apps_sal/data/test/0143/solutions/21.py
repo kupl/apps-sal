@@ -8,4 +8,3 @@ for i in range(n):
         target += 1
 
 print(target)
-

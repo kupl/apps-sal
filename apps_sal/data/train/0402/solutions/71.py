@@ -4,7 +4,7 @@ class Solution:
             return True
         M, N = 10 ** 6, 10 ** 6
         blocked = set(map(tuple, blocked))
-        
+
         def bfs(src, tgt):
             q = collections.deque([tuple(src)])
             k = 0
@@ -19,5 +19,5 @@ class Solution:
                         seen.add((x, y))
                         q.append((x, y))
             return False
-        
+
         return bfs(source, target) and bfs(target, source)

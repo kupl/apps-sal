@@ -1,7 +1,9 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
 
-LI = lambda: list(map(int, input().split()))
+
+def LI(): return list(map(int, input().split()))
+
 
 N = int(input())
 AB = [LI() for _ in range(N - 1)]
@@ -41,7 +43,7 @@ def main():
     p2[0] = 1
     for i in range(N):
         p2[i + 1] = 2 * p2[i] % MOD
-    
+
     x = 0
     for i in range(N):
         s = p2[N - w[i]]
@@ -56,5 +58,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

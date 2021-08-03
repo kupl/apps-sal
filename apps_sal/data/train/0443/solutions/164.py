@@ -1,7 +1,7 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
-        #find all ascending and descending combos in order of length three
-        #o(n^3) solution
+        # find all ascending and descending combos in order of length three
+        # o(n^3) solution
         count = 0
         i = 0
         while i < len(rating):
@@ -15,5 +15,3 @@ class Solution:
                 j += 1
             i += 1
         return count
-            
-

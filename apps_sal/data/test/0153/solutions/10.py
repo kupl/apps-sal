@@ -9,15 +9,16 @@ def zhadnik(n, k, M, t):
         else:
             ans += n
             M -= n * t[i]
-        
+
         i += 1
     return ans
 
-n, k, M = map(int, input().split()) # n, k <= 45
+
+n, k, M = map(int, input().split())  # n, k <= 45
 t = list(map(int, input().split()))
 t.sort()
 
-all_task_time = sum(t) # время на решение целой задачи (всех подзадач)
+all_task_time = sum(t)  # время на решение целой задачи (всех подзадач)
 
 # если бы не было премии за решение всей задачи - тогда только жадник
 ans = zhadnik(n, k, M, t)

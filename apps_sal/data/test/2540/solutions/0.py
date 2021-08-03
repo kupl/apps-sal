@@ -18,6 +18,7 @@ class SumDefaultdict(defaultdict):
                 elif self[bb] == self.mx:
                     self.mx_sum += bb
 
+
 def go():
     n = int(input())
     c = list(map(int, input().split()))
@@ -59,4 +60,3 @@ def go():
 
 
 go()
-

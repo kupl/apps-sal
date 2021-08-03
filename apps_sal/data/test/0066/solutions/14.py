@@ -9,7 +9,7 @@ lcm = a * b // gcd(a, b)
 cnt = t // lcm
 lst = lcm * cnt
 
-ans = cnt * a + a - 1 
+ans = cnt * a + a - 1
 
 if lst + a > t + 1:
     ans -= lst + a - t - 1
@@ -22,5 +22,3 @@ num //= g
 den //= g
 
 print(num, den, sep='/')
-
-

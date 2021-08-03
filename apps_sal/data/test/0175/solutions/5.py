@@ -1,5 +1,6 @@
 a, b = map(int, input().split())
 
+
 def huh(a, b):
     if a * b == 0:
         return a, b
@@ -9,6 +10,7 @@ def huh(a, b):
         return huh(a, b % (2 * a))
     else:
         return a, b
+
 
 a, b = huh(a, b)
 

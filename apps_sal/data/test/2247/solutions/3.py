@@ -5,4 +5,3 @@ for t in range(T):
     x = s // c
     x += (x // a) * b
     print(x)
-

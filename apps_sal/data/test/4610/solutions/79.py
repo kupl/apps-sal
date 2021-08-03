@@ -1,12 +1,11 @@
-n, k= list(map(int, input().split()))
-a = list(map(int, input().split()))
 import collections
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
 a = collections.Counter(a)
 key = list(a.values())
-#print(key)
+# print(key)
 key.sort()
-#print(key)
-ans = sum(key[:len(key)-k])
+# print(key)
+ans = sum(key[:len(key) - k])
 print(ans)
-

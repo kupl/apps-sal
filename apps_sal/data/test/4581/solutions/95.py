@@ -7,4 +7,3 @@ for x in s:
         p += 100
 
 print(p)
-

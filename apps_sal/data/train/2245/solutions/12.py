@@ -19,5 +19,5 @@ def solve():
         array[i] += cum
     print(*array)
 
-solve()
 
+solve()

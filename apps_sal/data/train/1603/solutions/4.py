@@ -3,7 +3,8 @@ hosts = dict()
 for i in range(n):
     inp = input()
     pos = inp.find("/", 7)
-    if pos == -1: pos = len(inp)
+    if pos == -1:
+        pos = len(inp)
     hostName = inp[:pos]
     path = inp[pos:]
     if hostName not in hosts:

@@ -10,4 +10,3 @@ for j in range(m):
             l[a[i][j] - 1] = True
             a[i] = [0] * m
 print(*v, sep='\n')
-

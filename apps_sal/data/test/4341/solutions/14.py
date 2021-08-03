@@ -30,7 +30,3 @@ for v in G:
             break
     cycle_cnt += ok
 print(cycle_cnt)
-
-
-
-

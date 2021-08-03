@@ -8,4 +8,3 @@ while True:
     if x <= 0:
         break
 print(ans)
-

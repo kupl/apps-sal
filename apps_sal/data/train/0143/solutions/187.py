@@ -26,4 +26,3 @@ class Solution:
             cnt = max(hi - lo + 1, cnt)
             hi += 1
         return cnt
-

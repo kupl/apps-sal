@@ -13,4 +13,3 @@ for v in V:
 IDs.sort()
 for i in IDs:
     print((i[6:]))
-

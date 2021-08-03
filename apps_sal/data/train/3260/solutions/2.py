@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def rearranger(k, *args):
     arguments = []
     numbers = []
@@ -14,7 +15,7 @@ def rearranger(k, *args):
             if num < min_num:
                 min_num = num
                 numbers = [perm]
-                
+
     if len(numbers) == 0:
         answer = "There is no possible rearrangement"
     elif len(numbers) == 1:

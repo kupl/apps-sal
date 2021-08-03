@@ -1,21 +1,23 @@
-#copy for experience
+# copy for experience
 # E
 N = int(input())
 P_list = list(map(int, input().split()))
 X_list = list(map(int, input().split()))
 
 # graph
-child_list = [[] for _ in range(N+1)]
-for i in range(2, N+1):
-    child_list[P_list[i-2]].append(i)
+child_list = [[] for _ in range(N + 1)]
+for i in range(2, N + 1):
+    child_list[P_list[i - 2]].append(i)
 
 # from root
 # minimize local total weight
 
-color1 = [0]+X_list
-color2 = [0]*(N+1)
+color1 = [0] + X_list
+color2 = [0] * (N + 1)
 
 # solve knapsack
+
+
 def solve_knapsack(L, M):
     min_acc = sum([min(color1[j], color2[j]) for j in L])
     if min_acc > M:
@@ -30,9 +32,10 @@ def solve_knapsack(L, M):
                 if s + add_j <= add_can:
                     add_set_.add(s + add_j)
             add_set = add_set_
-        
-        total = sum([color1[j]+color2[j] for j in L])
+
+        total = sum([color1[j] + color2[j] for j in L])
         return total - max(add_set) - min_acc
+
 
 res = "POSSIBLE"
 
@@ -41,20 +44,19 @@ for i in range(N, 0, -1):
         pass
     elif len(child_list[i]) == 1:
         j = child_list[i][0]
-        if min(color1[j], color2[j]) > X_list[i-1]:
+        if min(color1[j], color2[j]) > X_list[i - 1]:
             res = "IMPOSSIBLE"
             break
-        elif max(color1[j], color2[j]) > X_list[i-1]:
+        elif max(color1[j], color2[j]) > X_list[i - 1]:
             color2[i] = max(color1[j], color2[j])
         else:
             color2[i] = min(color1[j], color2[j])
     else:
-        c2 = solve_knapsack(child_list[i], X_list[i-1])
+        c2 = solve_knapsack(child_list[i], X_list[i - 1])
         if c2 < 0:
             res = "IMPOSSIBLE"
             break
         else:
             color2[i] = c2
-    
-print(res)
 
+print(res)

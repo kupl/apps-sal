@@ -4,7 +4,7 @@ def filter_words(s):
         for w in ("bad", "mean", "ugly", "horrible", "hideous"):
             if w in sl:
                 i = sl.find(w)
-                s = s[:i]+'awesome' + s[i+len(w):]
-                sl = s.lower() #yuk
+                s = s[:i] + 'awesome' + s[i + len(w):]
+                sl = s.lower()  # yuk
     print(s)
     return s

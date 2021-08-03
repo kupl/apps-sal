@@ -4,8 +4,7 @@ class Solution:
         for i in dic:
             if dic[i] > 1:
                 return i
-            
-        
+
     def convert_to_dic(self, A):
         dic = {}
         for i in A:

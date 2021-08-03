@@ -6,4 +6,3 @@ for i in range(N * 2):
     q += y
 
 print(p // N, q // N)
-

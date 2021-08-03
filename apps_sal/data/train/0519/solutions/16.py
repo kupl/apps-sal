@@ -18,8 +18,8 @@ L = [int(x) for x in input().split()]
 
 N = L[0]
 K = L[1]
-V = L[2: 2+N]
-B = L[2+N:]
+V = L[2: 2 + N]
+B = L[2 + N:]
 
 
 bi = collections.defaultdict(list)
@@ -40,14 +40,14 @@ def dfs(l, r):
 
     ans = 0
     for i in range(l, r):
-        br = bi[B[i]+K]
+        br = bi[B[i] + K]
         jl, jr = bisect.bisect_left(br, i), bisect.bisect_right(br, r)
         for j in br[jl: jr]:
             if i < j <= r:
-                ans = max(ans, V[i]+V[j] + dfs(i+1, j-1) + dfs(j+1, r))
+                ans = max(ans, V[i] + V[j] + dfs(i + 1, j - 1) + dfs(j + 1, r))
     memo[k] = ans
 
     return ans
 
 
-print(dfs(0, N-1))
+print(dfs(0, N - 1))

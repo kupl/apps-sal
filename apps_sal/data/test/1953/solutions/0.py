@@ -9,4 +9,3 @@ for i in range(n):
         num += int(a[i])
     #print(res, a[i])
 print(res)
-

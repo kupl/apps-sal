@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees, log2, gcd
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
@@ -14,9 +15,11 @@ def MAP(): return map(int, input().split())
 def LIST(): return list(map(int, input().split()))
 def TUPLE(): return tuple(map(int, input().split()))
 def ZIP(n): return zip(*(MAP() for _ in range(n)))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
-#mod = 10 ** 9 + 7 
+#mod = 10 ** 9 + 7
 mod = 998244353
 #from decimal import *
 #import numpy as np
@@ -24,28 +27,28 @@ mod = 998244353
 
 N, X, M = MAP()
 
-check = [0]*(10**5+1)
+check = [0] * (10**5 + 1)
 sum_acc = [0]
 
 i = X
 cnt = 0
 while check[i] < 2 and cnt < N:
-	check[i] += 1
-	cnt += 1
-	sum_acc.append(sum_acc[-1]+i)
-	i = i**2%M
+    check[i] += 1
+    cnt += 1
+    sum_acc.append(sum_acc[-1] + i)
+    i = i**2 % M
 
 if cnt == N:
-	print(sum_acc[-1])
-	return
+    print(sum_acc[-1])
+    return
 
 cnt_1 = check.count(1)
 cnt_2 = check.count(2)
-loop_sum = (sum_acc[-1] - sum_acc[cnt_1])//2
+loop_sum = (sum_acc[-1] - sum_acc[cnt_1]) // 2
 
 
 ans = sum_acc[cnt_1]
-ans += loop_sum*((N-cnt_1)//cnt_2)
-ans += sum_acc[cnt_1+((N-cnt_1)%cnt_2)] - sum_acc[cnt_1]
+ans += loop_sum * ((N - cnt_1) // cnt_2)
+ans += sum_acc[cnt_1 + ((N - cnt_1) % cnt_2)] - sum_acc[cnt_1]
 
 print(ans)

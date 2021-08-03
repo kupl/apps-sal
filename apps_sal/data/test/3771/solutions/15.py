@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians, log
 from itertools import accumulate, permutations, combinations, product
@@ -15,6 +16,8 @@ def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10**10
 mod = 10 ** 9 + 7
@@ -22,25 +25,24 @@ mod = 10 ** 9 + 7
 H, W = MAP()
 a = [list(input()) for _ in range(H)]
 G = nx.Graph()
-G.add_nodes_from(list(range(0, H+W+2)))
+G.add_nodes_from(list(range(0, H + W + 2)))
 
 for i in range(H):
     for j in range(W):
         if a[i][j] == "S":
             sy, sx = i, j
-            G.add_edge(0, i+1, capacity=INF)
-            G.add_edge(0, H+j+1, capacity=INF)
+            G.add_edge(0, i + 1, capacity=INF)
+            G.add_edge(0, H + j + 1, capacity=INF)
         elif a[i][j] == "T":
             gy, gx = i, j
-            G.add_edge(i+1, H+W+1, capacity=INF)
-            G.add_edge(H+j+1, H+W+1, capacity=INF)
+            G.add_edge(i + 1, H + W + 1, capacity=INF)
+            G.add_edge(H + j + 1, H + W + 1, capacity=INF)
         elif a[i][j] == "o":
-            G.add_edge(i+1, H+j+1, capacity=1)
-            G.add_edge(H+j+1, i+1, capacity=1)
+            G.add_edge(i + 1, H + j + 1, capacity=1)
+            G.add_edge(H + j + 1, i + 1, capacity=1)
 
 if sy == gy or sx == gx:
-	print((-1))
-	return
+    print((-1))
+    return
 
-print((nx.maximum_flow_value(G, 0, H+W+1)))
-
+print((nx.maximum_flow_value(G, 0, H + W + 1)))

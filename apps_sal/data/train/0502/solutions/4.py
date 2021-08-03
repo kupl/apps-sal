@@ -40,8 +40,8 @@ class Solution(object):
                     ans = x
 
         return ans if ans < float('inf') else min(initial)
-    
-    
+
+
 # Algorithm
 
 # This algorithm has a few parts:
@@ -55,4 +55,3 @@ class Solution(object):
 # Choose answer: For each node with a unique color, find the size of that color. The largest size is selected, with ties broken by lowest node number.
 
 # If there is no node with a unique color, the answer is min(initial).
-

@@ -1,12 +1,15 @@
 import operator
+
+
 def basic_op(operator, value1, value2):
-    #your code here 
+    # your code here
     if operator == '+':
-        return value1+value2
+        return value1 + value2
     elif operator == '-':
-        return value1-value2
+        return value1 - value2
     elif operator == '/':
-        return value1/value2
+        return value1 / value2
     elif operator == '*':
-        return value1*value2
-    else: return
+        return value1 * value2
+    else:
+        return

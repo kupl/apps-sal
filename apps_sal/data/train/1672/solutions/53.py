@@ -15,5 +15,3 @@ for i in range(11):
         print("f(", varo[seqis], ') = ', '%.2f' % result, sep='')
     else:
         print("f(", varo[seqis], ") = MAGNA NIMIS!", sep='')
-
-

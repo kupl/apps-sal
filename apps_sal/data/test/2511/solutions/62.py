@@ -2,6 +2,7 @@
 
 MOD = 10 ** 9 + 7
 
+
 def main():
     n, k = list(map(int, input().split()))
     adj = [[] for i in range(n)]
@@ -25,6 +26,7 @@ def main():
             stack.append(c)
     print(res)
 
+
 def perm(t, s):
     res = 1
     for i in range(s):
@@ -33,7 +35,9 @@ def perm(t, s):
         t -= 1
     return res
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

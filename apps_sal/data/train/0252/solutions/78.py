@@ -17,16 +17,16 @@
 
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        furthest, cnt, cur = [0] * n, 0, 0  #做initialization
+        furthest, cnt, cur = [0] * n, 0, 0  # 做initialization
 
         for i in range(n + 1):
-            l = max(0, i - ranges[i])  #左边最远到哪里
-            r = min(n, i + ranges[i])  #n是自己
-            for j in range(l, r):   #在左右两边，表示右边能到的最远的地方，
-                furthest[j] = max(furthest[j], r)  #经过这个水龙头最多能走到哪里，跟自己无关（没那么有关），跟经过我最远到哪里有关系
-        while cur < n:  #从头到尾扫一遍，看看有米有没灌溉到的地方
-            if furthest[cur] == 0: return -1
+            l = max(0, i - ranges[i])  # 左边最远到哪里
+            r = min(n, i + ranges[i])  # n是自己
+            for j in range(l, r):  # 在左右两边，表示右边能到的最远的地方，
+                furthest[j] = max(furthest[j], r)  # 经过这个水龙头最多能走到哪里，跟自己无关（没那么有关），跟经过我最远到哪里有关系
+        while cur < n:  # 从头到尾扫一遍，看看有米有没灌溉到的地方
+            if furthest[cur] == 0:
+                return -1
             cur = furthest[cur]  # 比这个数值小的都是能扫到的部分，所以可以直接跳过去
             cnt += 1
-        return cnt  #左边有问题的话会-1
-
+        return cnt  # 左边有问题的话会-1

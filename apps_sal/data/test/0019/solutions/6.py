@@ -8,7 +8,7 @@ for _ in range(int(input())):
             continue
         if p2 < p1 or c2 < c1:
             flag = False
-        if p2-p1 < c2-c1:
+        if p2 - p1 < c2 - c1:
             flag = False
         p1 = p2
         c1 = c2
@@ -16,4 +16,3 @@ for _ in range(int(input())):
         print("YES")
     else:
         print("NO")
-

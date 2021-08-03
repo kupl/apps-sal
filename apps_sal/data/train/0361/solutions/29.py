@@ -7,6 +7,7 @@ class Solution:
         heights = [0] * n
         dp = {}
         final = [m * n]
+
         def helper(heights, counts):
             key = tuple(heights)
             if counts >= final[0]:
@@ -15,10 +16,10 @@ class Solution:
                 final[0] = min(final[0], counts)
                 return
             if key in dp and dp[key] <= counts:
-                return # dp[key]
-            
+                return  # dp[key]
+
             dp[key] = counts
-            
+
             min_val = min(heights)
             idx = heights.index(min_val)
             d = 0
@@ -31,7 +32,7 @@ class Solution:
             for i in range(d, 0, -1):
                 if heights[idx] + i <= m:
                     helper(heights[:idx] + [heights[idx] + i] * i + heights[idx + i:], counts + 1)
-                
+
             return
         helper(heights, 0)
         return final[0]

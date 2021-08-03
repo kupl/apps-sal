@@ -14,4 +14,3 @@ if mc % 2 == 0:
     print((sum(aL)))
 else:
     print((sum(aL) - (2 * min(aL))))
-

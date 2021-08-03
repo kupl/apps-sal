@@ -9,7 +9,7 @@ class Solution:
                 ballLeft -= 1
             i += 1
         return ballLeft == 0
-    
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         high = 1000000000

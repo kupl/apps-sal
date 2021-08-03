@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
+from collections import defaultdict
 import sys
 sys.setrecursionlimit(10**8)
-from collections import defaultdict
 INF = float("inf")
-MOD = 10**9+7
+MOD = 10**9 + 7
 
 
 class Graph(object):
@@ -17,15 +17,15 @@ class Graph(object):
 
 
 N = int(input())
-c = [x-1 for x in map(int, input().split())]
-A = [None]*(N-1)
-B = [None]*(N-1)
-for i in range(N-1):
+c = [x - 1 for x in map(int, input().split())]
+A = [None] * (N - 1)
+B = [None] * (N - 1)
+for i in range(N - 1):
     A[i], B[i] = list(map(int, input().split()))
 
 g = Graph(N)
 for a, b in zip(A, B):
-    g.add_edge(a-1, b-1)
+    g.add_edge(a - 1, b - 1)
 
 # k=1, 2, ..., Nに対して
 # 色kが塗られている頂点を一度以上通るような単純パスの数を求める
@@ -38,7 +38,7 @@ for a, b in zip(A, B):
 # o辞書は色iを通らずに到達不可能な頂点の数を持つ。
 
 # 回答用
-ans = [0]*N
+ans = [0] * N
 
 
 def f(curr, par=-1):
@@ -54,8 +54,8 @@ def f(curr, par=-1):
         size += sz
 
         # 自身の色と同じ場合、子の頂点の数から加算
-        n = sz-child[c[curr]]
-        ans[c[curr]] += n*(n+1)//2
+        n = sz - child[c[curr]]
+        ans[c[curr]] += n * (n + 1) // 2
 
         # マージ
         if len(ret) < len(child):
@@ -70,10 +70,9 @@ def f(curr, par=-1):
 sz, ret = f(0)
 for color in range(N):
     if color != c[0]:
-        n = sz-ret[color]
-        ans[color] += n*(n+1)//2
+        n = sz - ret[color]
+        ans[color] += n * (n + 1) // 2
 
-tot = N*(N+1)//2
+tot = N * (N + 1) // 2
 for a in ans:
-    print((tot-a))
-
+    print((tot - a))

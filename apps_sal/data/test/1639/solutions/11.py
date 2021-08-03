@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 count = 0
 ans = 0
@@ -16,4 +16,3 @@ for a in A:
     prev = a
 
 print(ans)
-

@@ -1,4 +1,7 @@
-S =input()
-if S=="Sunny":print("Cloudy")
-elif S=="Cloudy":print("Rainy")
-else : print("Sunny")
+S = input()
+if S == "Sunny":
+    print("Cloudy")
+elif S == "Cloudy":
+    print("Rainy")
+else:
+    print("Sunny")

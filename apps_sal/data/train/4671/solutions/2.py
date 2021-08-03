@@ -5,5 +5,5 @@ def isTree(matrix):
         if not visited[transit]:
             visited[transit] = True
             return all(traverse(transit, destination) for destination in matrix[transit] if destination != origin)
-        
+
     return traverse(None, 0) and all(visited)

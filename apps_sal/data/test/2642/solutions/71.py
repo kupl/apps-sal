@@ -11,8 +11,10 @@ for i in range(n):
     g = gcd(x, y)
     x //= g
     y //= g
-    if y < 0: x, y = -x, -y
-    if y==0 and x<0: x, y = -x, -y
+    if y < 0:
+        x, y = -x, -y
+    if y == 0 and x < 0:
+        x, y = -x, -y
     is_rotate90 = (x <= 0)
     if is_rotate90:
         x, y = y, x
@@ -39,5 +41,4 @@ ans = (cnt + zero - 1) % mod
 # print('cnt',cnt)
 # print('zero',zero)
 # print('ans',ans)
-print(((ans+mod) % mod))
-
+print(((ans + mod) % mod))

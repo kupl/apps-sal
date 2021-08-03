@@ -10,4 +10,3 @@ def mem_alloc(banks):
             banks[i] += 1
             num -= 1
     return len(seen)
-

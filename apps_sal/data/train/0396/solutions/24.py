@@ -5,13 +5,9 @@ class Solution:
 
         n = 1
         length = 1
-        
+
         while True:
             if int(n) % K == 0:
                 return length
-            n = n*10 + 1
+            n = n * 10 + 1
             length += 1
-            
-        
-        
-

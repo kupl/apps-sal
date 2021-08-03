@@ -17,4 +17,3 @@ while len(result) < len(a):
         ul += 1
         p = 1
 print(result[::-1])
-

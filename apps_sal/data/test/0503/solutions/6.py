@@ -1,6 +1,7 @@
 import collections
 import bisect
 
+
 def solve1(dp):
     count = 0
     for num in dp.values():
@@ -8,6 +9,7 @@ def solve1(dp):
         if n >= 3:
             count += n * (n - 1) * (n - 2) // 6
     return count
+
 
 def solve(n, k, As, dp):
     count = 0
@@ -25,6 +27,7 @@ def solve(n, k, As, dp):
     if n0 >= 3:
         count += n0 * (n0 - 1) * (n0 - 2) // 6
     return count
+
 
 n, k = map(int, input().split())
 As = list(map(int, input().split()))

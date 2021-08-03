@@ -5,4 +5,3 @@ def find_missing(nums):
         if d != a:
             return a
         a += diff
-

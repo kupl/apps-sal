@@ -18,4 +18,3 @@ for _ in range(even):
     print((even_left, even_right))
     even_left += 1
     even_right -= 1
-

@@ -1,14 +1,12 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for i in range(t):
-    n=int(input())
-    if n%2==0:
+    n = int(input())
+    if n % 2 == 0:
         print("B")
-    elif n==1:
+    elif n == 1:
         print("B")
-    elif n==3:
+    elif n == 3:
         print("A")
     else:
         print("B")
-        
-

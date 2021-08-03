@@ -9,19 +9,18 @@ for i in L:
 S = list(D.keys())
 S.sort()
 start = None
-for i in range(0,len(S)):
+for i in range(0, len(S)):
     if S[i] != 0:
         start = i
         break
-    
+
 s = 0
-for i in range(0,k):
+for i in range(0, k):
     if start == None or start >= len(S):
         print(0)
     elif S[start] <= s:
         print(0)
     else:
-        print(S[start]-s)
-        s += S[start]-s
-        start +=1
-
+        print(S[start] - s)
+        s += S[start] - s
+        start += 1

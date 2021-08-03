@@ -2,7 +2,7 @@ N, K = [int(n) for n in input().split()]
 R, S, P = [int(n) for n in input().split()]
 T = list(input())
 
-p = {'r':R, 's':S, 'p':P}
+p = {'r': R, 's': S, 'p': P}
 cnv = {'r': 'p', 's': 'r', 'p': 's'}
 
 score = 0
@@ -22,4 +22,3 @@ for i in range(K, N):
         score += p[human[i]]
 
 print(score)
-

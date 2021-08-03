@@ -7,7 +7,7 @@ def main():
         a = b
     if not l:
         print(n)
-        return 
+        return
     l.append(n)
     rapp, a = res.append, 0
     for b in l:
@@ -23,5 +23,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

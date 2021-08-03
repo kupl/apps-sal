@@ -36,6 +36,6 @@ dv = """0 1
 34 16970153984
 35 33940307968""".split('\n')
 for line in dv:
-	if line.split()[0] == n:
-		print(line.split()[1].strip())
-		break
+    if line.split()[0] == n:
+        print(line.split()[1].strip())
+        break

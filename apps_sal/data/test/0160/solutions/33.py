@@ -30,4 +30,3 @@ for ecd in cd:
             ans = max(ans, ecd)
 
 print(ans)
-

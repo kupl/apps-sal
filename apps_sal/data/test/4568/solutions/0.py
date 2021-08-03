@@ -41,7 +41,7 @@ def resolve():
     S = input()
 
     ans = 0
-    for i in range(1, N-1):
+    for i in range(1, N - 1):
         x = Counter(S[0:i])
         y = S[i:]
         tmp = 0
@@ -56,5 +56,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

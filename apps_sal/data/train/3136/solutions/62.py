@@ -9,4 +9,3 @@ def people_with_age_drink(a):
         if a < 14:
             return foo[0]
         return foo[1]
-

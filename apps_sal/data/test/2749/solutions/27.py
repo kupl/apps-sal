@@ -1,12 +1,12 @@
 import numpy as np
-H,W = map(int,input().split())
+H, W = map(int, input().split())
 N = int(input())
-lsa = list(map(int,input().split()))
+lsa = list(map(int, input().split()))
 ls2 = []
 for i in range(N):
-    ls2 += [i+1]*lsa[i]
+    ls2 += [i + 1] * lsa[i]
 arr = np.array(ls2)
-arr = arr.reshape(H,W).tolist()
+arr = arr.reshape(H, W).tolist()
 arr2 = []
 for i in range(H):
     if i % 2 == 0:

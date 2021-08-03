@@ -11,6 +11,5 @@ def count_positives_sum_negatives(arr):
             count_positive = count_positive + 1
         else:
             sum_negative = sum_negative + arr[i]
-    
-    return [count_positive, sum_negative]
 
+    return [count_positive, sum_negative]

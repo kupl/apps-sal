@@ -16,8 +16,8 @@ for _ in range(T):
 
     if N % 2 == 0:
         if tmp1 != tmp2:
-            print ("First")
+            print("First")
         else:
-            print ("Second")
+            print("Second")
     else:
-        print ("Second")
+        print("Second")

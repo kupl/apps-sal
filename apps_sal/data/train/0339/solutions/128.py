@@ -12,6 +12,5 @@ class Solution:
                         if n1 == n2:
                             res -= 1
             return res
-        
-        return int((helper(nums1, nums2) + helper(nums2, nums1)) / 2)
 
+        return int((helper(nums1, nums2) + helper(nums2, nums1)) / 2)

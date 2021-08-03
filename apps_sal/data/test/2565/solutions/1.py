@@ -13,5 +13,4 @@ for t in range(T):
         neg_ass = y1 - (x2 + y2)
     else:
         neg_ass = 0
-    print(2*(pos_ass-neg_ass))
-
+    print(2 * (pos_ass - neg_ass))

@@ -11,4 +11,3 @@ for tc in range(int(input())):
         print(-1)
     else:
         print(cnt[0])
-

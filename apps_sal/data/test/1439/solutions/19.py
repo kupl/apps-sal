@@ -9,7 +9,8 @@ def main():
         next = d[:]
         for j in range(m):
             k = j + i
-            if k >= m: k -= m
+            if k >= m:
+                k -= m
             next[k] = d[k] or d[j]
         d = next
         d[i] = True
@@ -17,8 +18,6 @@ def main():
         print("YES")
     else:
         print("NO")
-    
-    
-    
-main()
 
+
+main()

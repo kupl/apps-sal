@@ -14,4 +14,6 @@ def main():
         print('home')
     else:
         print('contest')
+
+
 main()

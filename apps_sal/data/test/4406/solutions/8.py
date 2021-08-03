@@ -14,4 +14,3 @@ for i in arr:
 
 print(len(nowlist))
 print(*nowlist)
-

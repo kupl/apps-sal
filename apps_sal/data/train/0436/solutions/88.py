@@ -16,16 +16,16 @@ class Solution:
                     next = i - 2 * i // 3
                     if next not in visited:
                         q.append(next)
-                        visited.add(next)       
+                        visited.add(next)
 
                 if i % 2 == 0:
                     next = i // 2
                     if next not in visited:
                         q.append(next)
                         visited.add(next)
-                
+
                 if (i - 1) not in visited:
-                    q.append(i-1)
-                    visited.add(i-1)
+                    q.append(i - 1)
+                    visited.add(i - 1)
             ans += 1
         return 0

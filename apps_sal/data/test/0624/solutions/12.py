@@ -10,7 +10,8 @@ for i in a:
     sumi -= i
     ct += 1
     n -= 1
-    if ct > m or n == 0: break
+    if ct > m or n == 0:
+        break
     add = min(k * n, m - ct)
     ans = max(ans, (sumi + add) / n)
 print(ans)

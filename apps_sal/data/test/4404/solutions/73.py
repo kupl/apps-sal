@@ -1,1 +1,1 @@
-print(['TBD','Heisei'][int(input()[5:7])<5])
+print(['TBD', 'Heisei'][int(input()[5:7]) < 5])

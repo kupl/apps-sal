@@ -1,4 +1,5 @@
 
+import sys
 from collections import deque
 
 
@@ -7,7 +8,7 @@ class Dinic:
         self.N = N
         self.inf = inf
         self.G = [[] for _ in range(N)]
-        self.level = [0]*N
+        self.level = [0] * N
 
     def add_edge(self, fr, to, cap):
         forward = [to, cap, None]
@@ -22,7 +23,7 @@ class Dinic:
         self.G[v2].append(edge2)
 
     def bfs(self, s):
-        self.level = [-1]*self.N
+        self.level = [-1] * self.N
         deq = deque([s])
         self.level[s] = 0
         while deq:
@@ -59,27 +60,25 @@ class Dinic:
                 flow += f
 
 
-import sys
 sys.setrecursionlimit(10**7)
 def I(): return int(sys.stdin.readline().rstrip())
-def LI(): return list(map(int,sys.stdin.readline().rstrip().split()))  #空白あり
+def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))  # 空白あり
 
 
 N = I()
 A = [0] + LI()
-ans = sum(A[i] for i in range(1,N+1) if A[i] > 0)
+ans = sum(A[i] for i in range(1, N + 1) if A[i] > 0)
 
 inf = 10**18
-Di = Dinic(N+2,inf)
-s,t = 0,N+1
+Di = Dinic(N + 2, inf)
+s, t = 0, N + 1
 
-for i in range(1,N+1):
-    Di.add_edge(s,i,max(0,-A[i]))
-    Di.add_edge(i,t,max(0,A[i]))
+for i in range(1, N + 1):
+    Di.add_edge(s, i, max(0, -A[i]))
+    Di.add_edge(i, t, max(0, A[i]))
 
-for i in range(1,N//2+1):
-    for j in range(2*i,N+1,i):
-        Di.add_edge(i,j,inf)
+for i in range(1, N // 2 + 1):
+    for j in range(2 * i, N + 1, i):
+        Di.add_edge(i, j, inf)
 
-print((ans-Di.flow(s,t)))
-
+print((ans - Di.flow(s, t)))

@@ -1,5 +1,5 @@
-k=input()
-n=int(k, base = 2)
+k = input()
+n = int(k, base=2)
 
 pw = 0
 s = 0

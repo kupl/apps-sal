@@ -11,4 +11,3 @@ for i in range(9):
     for j in range(9):
         ans += (keep[i][j] * keep[j][i])
 print(ans)
-

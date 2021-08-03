@@ -18,4 +18,3 @@ for i in range(n):
             a[j] = -1
     cnt += 1
 print(cnt)
-

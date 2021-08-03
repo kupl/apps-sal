@@ -7,5 +7,4 @@ for c in list(s):
 if ls % 2 == 1:
     ls -= 1
 
-print((ls//2-cnt[1]))
-
+print((ls // 2 - cnt[1]))

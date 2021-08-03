@@ -7,9 +7,9 @@ class Solution:
             if self.condition(mid, weights) <= D:
                 right = mid
             else:
-                left = mid+1
+                left = mid + 1
         return left
-    
+
     def condition(self, k, weights):
         d = 0
         cur_weight = 0
@@ -22,7 +22,7 @@ class Solution:
                 cur_weight = weight
             else:
                 cur_weight += weight
-        return d+1 if cur_weight > 0 else d
+        return d + 1 if cur_weight > 0 else d
         '''def count_days(k, w):
             curr_wt = 0
             count = 0
@@ -48,5 +48,3 @@ class Solution:
             else:
                 l = mid+1
         return l'''
-        
-

@@ -1,4 +1,6 @@
 import heapq
+
+
 class DinnerPlates:
     def __init__(self, capacity: int):
         # record values of all stack of plates, its last nonempty stack are the rightmost position
@@ -12,15 +14,15 @@ class DinnerPlates:
         # To push, we need to find the leftmost available position. first, let's remove any stacks on the left that are full
         while self.pq and self.pq[0] < len(self.stk) and len(self.stk[self.pq[0]]) == self.c:
             heapq.heappop(self.pq)
-        
+
         # if the q is empty, meaning there are no more available stacks
         if len(self.pq) == 0:
             heapq.heappush(self.pq, len(self.stk))
-        
+
         # for the newly added stack, add a new stack to self.stacks accordingly
         if self.pq[0] == len(self.stk):
             self.stk.append([])
-        
+
         # append the value to the leftmost available stack
         self.stk[self.pq[0]].append(val)
 
@@ -31,7 +33,7 @@ class DinnerPlates:
         # 2) the last stack is empty
         while len(self.stk) > 0 and len(self.stk[-1]) == 0:
             self.stk.pop()
-         
+
         return self.popAtStack(len(self.stk) - 1)
 
     def popAtStack(self, index: int) -> int:
@@ -56,4 +58,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

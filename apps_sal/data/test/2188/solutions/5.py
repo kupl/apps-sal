@@ -3,13 +3,13 @@ n = int(input())
 v = []
 u = []
 for i in range(n):
-	x = input().split(' ')
-	a = int(x[0])
-	b = int(x[1])
-	if a > b:
-		v.append((a,b,i + 1))
-	else:
-		u.append((a,b,i+1))
+    x = input().split(' ')
+    a = int(x[0])
+    b = int(x[1])
+    if a > b:
+        v.append((a, b, i + 1))
+    else:
+        u.append((a, b, i + 1))
 
 '''nr = 1
 sol = [str(v[0][2])]
@@ -40,18 +40,16 @@ while i < n:
 		act = u[i][1]
 		i += 1'''
 if len(u) > len(v):
-	u = sorted(u, key = lambda x:x[1], reverse = True)
-	print(len(u))
-	sol = []
-	for i in range(len(u)):
-		sol.append(str(u[i][2]))
-	print(' '.join(sol))
+    u = sorted(u, key=lambda x: x[1], reverse=True)
+    print(len(u))
+    sol = []
+    for i in range(len(u)):
+        sol.append(str(u[i][2]))
+    print(' '.join(sol))
 else:
-	v = sorted(v, key = lambda x:x[1], reverse = False)
-	print(len(v))
-	sol = []
-	for i in range(len(v)):
-		sol.append(str(v[i][2]))
-	print(' '.join(sol))
-
-
+    v = sorted(v, key=lambda x: x[1], reverse=False)
+    print(len(v))
+    sol = []
+    for i in range(len(v)):
+        sol.append(str(v[i][2]))
+    print(' '.join(sol))

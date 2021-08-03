@@ -6,4 +6,3 @@ def find_multiples(integer, limit):
         if x <= limit:
             aha.append(x)
     return aha
-

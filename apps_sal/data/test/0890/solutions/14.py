@@ -9,4 +9,4 @@ for i in range(len(variants)):
     sum_var = sum(variants[i])
     if sum_var >= l and sum_var <= r and (variants[i][-1] - variants[i][0]) >= x:
         counter += 1
-print (counter)
+print(counter)

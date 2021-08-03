@@ -3,6 +3,7 @@
 ENCODE = list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~\"")
 DECODE = dict(map(reversed, enumerate(ENCODE)))
 
+
 def b91encode(s):
     b, i = 0, 0
     r = ""
@@ -21,9 +22,11 @@ def b91encode(s):
             r += ENCODE[v % 91] + ENCODE[v // 91]
     if i:
         r += ENCODE[b % 91]
-        if i > 7 or b > 90: r += ENCODE[b // 91]
+        if i > 7 or b > 90:
+            r += ENCODE[b // 91]
 
     return r
+
 
 def b91decode(s):
     v, b, i = -1, 0, 0
@@ -39,9 +42,12 @@ def b91decode(s):
                 r += chr(b & 0xFF)
                 b >>= 8
                 i -= 8
-                if i < 8: break
+                if i < 8:
+                    break
             v = -1
-        else: v = c
-    if ~v: r += chr((b | v << i) & 0xFF)
+        else:
+            v = c
+    if ~v:
+        r += chr((b | v << i) & 0xFF)
 
     return r

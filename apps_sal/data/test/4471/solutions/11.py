@@ -1,8 +1,8 @@
 def solve(n, a):
     mn = min(a)
-    a = [i-mn for i in a]
+    a = [i - mn for i in a]
     for i in a:
-        if i%2:
+        if i % 2:
             return "NO"
     return "YES"
 
@@ -16,4 +16,3 @@ def main():
 
 
 main()
-

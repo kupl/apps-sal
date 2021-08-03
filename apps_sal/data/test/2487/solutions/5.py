@@ -19,4 +19,3 @@ for l in range(n):
     for v in present[l]:
         cur -= (n - v)
 print(ans)
-

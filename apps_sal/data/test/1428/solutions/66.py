@@ -1,5 +1,6 @@
 from itertools import product, permutations
 
+
 def main():
     N, C = list(map(int, input().split()))
     D = [list(map(int, input().split())) for _ in range(C)]
@@ -22,4 +23,3 @@ def main():
 
 
 print((main()))
-

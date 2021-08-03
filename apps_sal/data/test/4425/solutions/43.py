@@ -11,4 +11,3 @@ for x in range(N, 0, -1):
             j *= 2.0
         ans += (1.0 / j) * (1 / N)
 print(ans)
-

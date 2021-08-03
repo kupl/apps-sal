@@ -11,7 +11,7 @@ def main():
     s = 0
     # i means the first i items could be arranged well
     i = min(bisect_right(sat, sat[s] + d), k)
-    n_arrange = 1 if i - k >= 0 else 0 # arrange[0] == True | the first 0 items
+    n_arrange = 1 if i - k >= 0 else 0  # arrange[0] == True | the first 0 items
 
     while i <= n:
         if i - s >= k and n_arrange > 0:
@@ -34,4 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

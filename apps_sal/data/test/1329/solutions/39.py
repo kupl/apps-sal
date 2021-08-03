@@ -19,4 +19,3 @@ for i, j in permutations(d, 2):
 for i in d:
     ans += i - 74 >= 0
 print(ans)
-

@@ -30,4 +30,3 @@ ans = ""
 while out:
     ans += out.popleft()
 print(ans)
-

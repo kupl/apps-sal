@@ -10,4 +10,3 @@ if cnt == 2 or cnt == 0:
     print("YES")
 else:
     print("NO")
-

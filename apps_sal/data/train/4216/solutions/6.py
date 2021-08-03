@@ -1,1 +1,1 @@
-every=lambda arr,step=None,start=None:arr[start::step]
+def every(arr, step=None, start=None): return arr[start::step]

@@ -16,4 +16,3 @@ for b in B:
     c_count = N - bisect.bisect_right(C, b)
     ans += a_count * c_count
 print(ans)
-

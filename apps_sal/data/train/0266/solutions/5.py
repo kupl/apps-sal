@@ -9,7 +9,7 @@ class Solution:
         for i in range(1, len(s)):
             if s[i] not in left:
                 left.add(s[i])
-            if s[i] not in s[i+1:]:
+            if s[i] not in s[i + 1:]:
                 k += 1
             diff = len(left) - (len(right) - k)
             if diff == 0:

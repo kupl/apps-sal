@@ -10,20 +10,18 @@ class Solution:
                 end = pivot - 1
             else:
                 start = pivot + 1
-       
+
         return points
-            
-    
+
     def partition(self, points, start, end):
         pivot = start
-        for i in range(start, end+1):
+        for i in range(start, end + 1):
             if self.dist(points, i) < self.dist(points, end):
                 points[i], points[pivot] = points[pivot], points[i]
                 pivot += 1
-        
+
         points[end], points[pivot] = points[pivot], points[end]
         return pivot
-    
+
     def dist(self, points, i):
         return points[i][0]**2 + points[i][1]**2
-

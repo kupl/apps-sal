@@ -1,7 +1,9 @@
 import math
 
+
 def divide_and_sum(nums, divisor):
     return sum([math.ceil(x / divisor) for x in nums])
+
 
 class Solution:
     def smallestDivisor(self, nums, threshold):
@@ -32,10 +34,9 @@ class Solution:
                 # threshold is too large
                 start = mid - 1
         #print('case 2')
-        #loop exit condition:
+        # loop exit condition:
         #start < end
         #dsum(nums, start) <= threshold
         #dsum(nums, end)   >= threshold
         print((start, end, divide_and_sum(nums, start), divide_and_sum(nums, end)))
         return end
-

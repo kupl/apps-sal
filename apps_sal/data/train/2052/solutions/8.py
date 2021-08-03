@@ -16,7 +16,3 @@ if (n & 1) == 1 and ((n >> 1) + 1) in avai_y and ((n >> 1) + 1) in avai_x:
     result -= 1
 
 print(result)
-
-
-
-

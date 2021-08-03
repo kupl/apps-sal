@@ -1,4 +1,6 @@
 from collections import OrderedDict
+
+
 def get_strings(city):
     city = city.lower().replace(" ", "")
     city_short = "".join(OrderedDict.fromkeys(city))

@@ -26,4 +26,4 @@ class Solution:
                 total2 += nums2[i2]
                 i2 += 1
         res += max(total1, total2)
-        return res % KMAX        
+        return res % KMAX

@@ -58,7 +58,7 @@ try:
                 correct = False
             if a[v1][v2] == "<" and time1[v1] >= time2[v2]:
                 correct = False
-    if correct:    
+    if correct:
         print("Yes")
         print(*time1)
         print(*time2)
@@ -66,4 +66,3 @@ try:
         print("No")
 except RecursionError:
     print("No")
-

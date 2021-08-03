@@ -1,11 +1,12 @@
-import bisect, heapq
+import bisect
+import heapq
 N = int(input())
-A = list(map(int,input().split()))
-B = list(map(int,input().split()))
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 
-for i in range(1,N+1):
-    a = bisect.bisect_right(A,i) - bisect.bisect_left(A,i)
-    b = bisect.bisect_right(B,i) - bisect.bisect_left(B,i)
+for i in range(1, N + 1):
+    a = bisect.bisect_right(A, i) - bisect.bisect_left(A, i)
+    b = bisect.bisect_right(B, i) - bisect.bisect_left(B, i)
 
     if a + b > N:
         print("No")
@@ -27,5 +28,5 @@ for i in range(N):
 
 print("Yes")
 for b in B:
-    print(b,end=" ")
+    print(b, end=" ")
 print("")

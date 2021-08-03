@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def solve(s, k):
     occ = [0] * 26
     for i in range(len(s)):
@@ -15,6 +16,7 @@ def solve(s, k):
 
     return result * k
 
+
 def main():
     n, k = map(int, input().split())
     s = input()
@@ -23,4 +25,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

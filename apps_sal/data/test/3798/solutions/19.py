@@ -55,4 +55,5 @@ def __starting_point():
 
     print((-1))
 
+
 __starting_point()

@@ -1,6 +1,6 @@
 def to_alternating_case(string):
 
-    fs =""
+    fs = ""
     for x in string:
         if x.isupper():
             fs += x.lower()

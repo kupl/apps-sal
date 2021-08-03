@@ -48,14 +48,13 @@ while True:
         break
 
     # Minimum flow
-    min_flow = min([r[p[i]][p[i+1]] for i in range(len(p)-1)])
+    min_flow = min([r[p[i]][p[i + 1]] for i in range(len(p) - 1)])
     max_flow += min_flow
-    for i in range(len(p)-1):
-        r[p[i]][p[i+1]] -= min_flow
-        if p[i] in r[p[i+1]]:
-            r[p[i+1]][p[i]] += min_flow
+    for i in range(len(p) - 1):
+        r[p[i]][p[i + 1]] -= min_flow
+        if p[i] in r[p[i + 1]]:
+            r[p[i + 1]][p[i]] += min_flow
         else:
-            r[p[i+1]][p[i]] = min_flow
+            r[p[i + 1]][p[i]] = min_flow
 
 print((gain - max_flow))
-

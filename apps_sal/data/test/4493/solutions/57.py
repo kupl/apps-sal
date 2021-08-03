@@ -1,5 +1,5 @@
-#18 C - Takahashi's Information
-c = [list(map(int,input().split())) for _ in range(3)]
+# 18 C - Takahashi's Information
+c = [list(map(int, input().split())) for _ in range(3)]
 
 cnt = 0
 if (c[0][0] - c[1][0]) == (c[0][1] - c[1][1]) == (c[0][2] - c[1][2]):

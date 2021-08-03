@@ -8,4 +8,3 @@ else:
     answer = 'red'
 
 print(answer)
-

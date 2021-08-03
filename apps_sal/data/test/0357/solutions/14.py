@@ -4,4 +4,3 @@ res = 0
 for i in ns:
     res += s.count(i)
 print('YES' if res == 1 else 'NO')
-

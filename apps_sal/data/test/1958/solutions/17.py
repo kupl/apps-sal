@@ -9,6 +9,5 @@ for c in reversed(s):
     cnt *= 2
     if c == 'halfplus':
         cnt += 1
-        ans += p//2
+        ans += p // 2
 print(ans)
-

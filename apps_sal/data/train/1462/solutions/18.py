@@ -19,4 +19,3 @@ while t:
         continue
     else:
         print("Others")
-

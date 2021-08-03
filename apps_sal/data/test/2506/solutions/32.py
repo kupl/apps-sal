@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 
-import sys, heapq, bisect
+import sys
+import heapq
+import bisect
 sys.setrecursionlimit(300000)
+
 
 def _count(A, n, v):
     ret = 0
@@ -11,6 +14,7 @@ def _count(A, n, v):
         ret += n - idx
     return ret
 
+
 def _sum(A, n, v, sums):
     ss = 0
     for a in A:
@@ -18,8 +22,9 @@ def _sum(A, n, v, sums):
         idx = bisect.bisect_left(A, target)
         ss += sums[n] - sums[idx]
         ss += (n - idx) * a
-    #print(mins)
+    # print(mins)
     return ss
+
 
 def solve(N: int, M: int, A: "List[int]"):
     A.sort()
@@ -65,6 +70,7 @@ def solve_(N: int, M: int, A: "List[int]"):
     print(ret)
     return
 
+
 def main():
     def iterate_tokens():
         for line in sys.stdin:
@@ -76,7 +82,9 @@ def main():
     A = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(N, M, A)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -14,7 +14,9 @@ def main():
         length += 1
     print(length)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

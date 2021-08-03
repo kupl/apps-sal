@@ -12,15 +12,14 @@ class Solution:
 
         arr_idx = arr[index] - 1
 
-
-        if arr_idx > 0 and buffer[arr_idx-1] != -1:
-            start_idx = buffer[arr_idx-1]
+        if arr_idx > 0 and buffer[arr_idx - 1] != -1:
+            start_idx = buffer[arr_idx - 1]
             result[arr_idx - start_idx] -= 1
         else:
             start_idx = arr_idx
 
         if arr_idx < total - 1 and buffer[arr_idx + 1] != -1:
-            end_idx = buffer[arr_idx+1]
+            end_idx = buffer[arr_idx + 1]
             result[end_idx - arr_idx] -= 1
         else:
             end_idx = arr_idx
@@ -35,9 +34,8 @@ class Solution:
         buffer[end_idx] = start_idx
         buffer[start_idx] = end_idx
 
-        current_result = index+1 if result.get(m, 0) > 0 else -1
+        current_result = index + 1 if result.get(m, 0) > 0 else -1
         next_result = self.do_find(arr, m, total, index + 1, buffer, result)
         if next_result > 0:
             return next_result
         return current_result
-

@@ -7,16 +7,16 @@ for i in range(n):
         pos.append((x1, y1, i))
         pos.append((x2, y2, i))
 
-pos.sort(key=lambda v: v[0]) # top →
+pos.sort(key=lambda v: v[0])  # top →
 edge = [v[-1] for v in pos if v[1] == 0 and v[0] != 0]
 
-pos.sort(key=lambda v: v[1]) # left ↓
+pos.sort(key=lambda v: v[1])  # left ↓
 edge += [v[-1] for v in pos if v[0] == w and v[1] != 0]
 
-pos.sort(key=lambda v: v[0], reverse=True) # bottom ←
+pos.sort(key=lambda v: v[0], reverse=True)  # bottom ←
 edge += [v[-1] for v in pos if v[1] == h and v[0] != w]
 
-pos.sort(key=lambda v: v[1], reverse=True) # right ↑
+pos.sort(key=lambda v: v[1], reverse=True)  # right ↑
 edge += [v[-1] for v in pos if v[0] == 0 and v[1] != h]
 
 # for i in range(len(edge) - 1):
@@ -43,5 +43,3 @@ for v in edge:
         step -= 1
 else:
     print("YES")
-
-

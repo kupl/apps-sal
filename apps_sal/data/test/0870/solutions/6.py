@@ -3,5 +3,6 @@ def main():
     l -= d
     ans = l / (a + b)
     print(ans)
-    
+
+
 main()

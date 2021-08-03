@@ -4,5 +4,5 @@ class Solution:
         y = [arr1[i] + arr2[i] - i for i in range(len(arr1))]
         z = [arr1[i] - arr2[i] + i for i in range(len(arr1))]
         w = [arr1[i] - arr2[i] - i for i in range(len(arr1))]
-        
-        return max(map(lambda a: max(a) - min(a), (x,y,z,w)))
+
+        return max(map(lambda a: max(a) - min(a), (x, y, z, w)))

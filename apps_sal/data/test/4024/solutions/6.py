@@ -25,4 +25,5 @@ def __starting_point():
     else:
         print(cst)
 
+
 __starting_point()

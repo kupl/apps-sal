@@ -1,12 +1,12 @@
 def reverse_list(x):
     """Takes an list and returns the reverse of it. 
     If x is empty, return [].
-    
+
     >>> reverse_list([1, 2, 3])
     [3, 2, 1]
     >>> reverse_list([])
     []
-    """ 
+    """
     return x[::-1] if x else []
 
 
@@ -30,8 +30,6 @@ def head_of_list(x):
     1
     >>> head_of_list([]) is None
     True
-    """ 
+    """
 
     return x[0] if x else None
-
-

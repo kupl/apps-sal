@@ -23,7 +23,7 @@ for i in range(2 * m):
     else:
         ans[i] += tmp
     ans[i] -= diff[i]
-    
+
 max_ = 0
 for i in range(m):
     max_ = max(max_, ans[i] + ans[i + m])

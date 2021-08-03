@@ -6,7 +6,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     p = list(map(int, input().split()))
-    
+
     cnt = 0
     max_ = 0
     ans = []

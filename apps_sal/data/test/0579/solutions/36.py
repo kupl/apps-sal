@@ -10,16 +10,16 @@ from itertools import accumulate
 # In[19]:
 
 
-N,K = list(map(int, input().split()))
+N, K = list(map(int, input().split()))
 P = list(map(int, input().split()))
 C = list(map(int, input().split()))
-P = [p-1 for p in P]
+P = [p - 1 for p in P]
 
 
 # In[20]:
 
 
-check = [False]*N
+check = [False] * N
 ans = -float("inf")
 for i in range(N):
     if not check[i]:
@@ -37,18 +37,13 @@ for i in range(N):
                 score = score[1:] + [score[0]]
             ac = list(accumulate(score))
             if sum(score) <= 0:
-                ans = max(ans, max(ac[:min(K,length)]))
+                ans = max(ans, max(ac[:min(K, length)]))
             else:
-                if K%length == 0:
-                    ans = max(ans, ac[-1]*(K//length-1)+max(ac))
+                if K % length == 0:
+                    ans = max(ans, ac[-1] * (K // length - 1) + max(ac))
                 else:
-                    ans = max(ans, ac[-1]*(K//length) + max(ac[:K%length]))
+                    ans = max(ans, ac[-1] * (K // length) + max(ac[:K % length]))
 print(ans)
 
 
 # In[ ]:
-
-
-
-
-

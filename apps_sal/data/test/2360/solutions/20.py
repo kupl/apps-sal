@@ -5,7 +5,7 @@ for test_index in range(t):
     for i in range(n):
         l, r = map(int, input().split())
         list_of_students.append((i, l, r))
-    sorted_list = sorted(list_of_students, key = lambda x: (x[1], x[0]), reverse=True)
+    sorted_list = sorted(list_of_students, key=lambda x: (x[1], x[0]), reverse=True)
 #    print(sorted_list)
     current_time = 1
     answer = [0 for i in range(n)]
@@ -21,4 +21,3 @@ for test_index in range(t):
     for x in answer:
         print(x, end=" ")
     print()
-

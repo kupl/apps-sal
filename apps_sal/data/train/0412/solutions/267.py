@@ -13,7 +13,6 @@ class Solution:
                 res += helper(h, d - 1, target - i)       # check all possible combinations
             h[(d, target)] = res
             return h[(d, target)]
-        
+
         h = {}
         return helper(h, d, target) % (10 ** 9 + 7)
-

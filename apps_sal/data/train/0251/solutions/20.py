@@ -11,6 +11,6 @@ class Solution:
                 A.append('+')
             else:
                 A.append('-')
-                
+
         A.pop()
         return eval(''.join(A))

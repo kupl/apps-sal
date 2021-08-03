@@ -1,7 +1,7 @@
 class Solution:
     def countTriplets(self, A: List[int]) -> int:
         n = len(A)
-        n2 = n*n
+        n2 = n * n
         dp = {}
         ways = 0
         for i in range(n):

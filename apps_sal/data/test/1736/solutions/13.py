@@ -3,6 +3,7 @@ import math
 
 an = []
 
+
 def binary_s(st, key, z, ll):
     l = st
     r = ll
@@ -13,7 +14,8 @@ def binary_s(st, key, z, ll):
         else:
             r = m
 
-    return r - st;
+    return r - st
+
 
 n, t = list(map(int, input().split()))
 
@@ -26,8 +28,7 @@ for i in input().split():
 res = 0
 z = 0
 for i in range(n):
-    p = binary_s(i, t, z, n);
-
+    p = binary_s(i, t, z, n)
 
     if(p > res and an[i + p - 1] - z <= t):
         res = p

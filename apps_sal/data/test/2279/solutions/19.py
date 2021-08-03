@@ -12,4 +12,3 @@ for _, i, j in a:
         team[j] = i + 1
 
 print(' '.join(str(i) for i in team))
-

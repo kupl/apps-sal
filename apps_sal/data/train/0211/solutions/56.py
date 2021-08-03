@@ -4,17 +4,19 @@ def partition(s):
             res.append(list(path))
         else:
             path.append(s[index])
-            backtrack(index+1, path)
+            backtrack(index + 1, path)
             path.pop()
 
             if path:
                 path[-1] = path[-1] + s[index]
-                backtrack(index+1, path)
+                backtrack(index + 1, path)
     res = []
     backtrack(0, [])
     return res
+
+
 class Solution:
-    
+
     def maxUniqueSplit(self, s: str) -> int:
         ans = 0
         lst = partition(s)
@@ -23,7 +25,3 @@ class Solution:
                 ans = max(ans, len(prt))
         # print(lst)
         return ans
-    
-    
-       
-

@@ -33,6 +33,3 @@ else:
     print(len(M))
     for i in range(len(M)):
         print(*M[i])
-                
-                
-

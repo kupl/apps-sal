@@ -12,11 +12,10 @@ if s1 == s2:
 for i in range(1, n):
     if i % 2:
         s1 -= l[i]
-        s1 += l[i-1]
+        s1 += l[i - 1]
     else:
         s2 -= l[i]
-        s2 += l[i-1]
+        s2 += l[i - 1]
     if s1 == s2:
         count += 1
 print(count)
-

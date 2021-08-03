@@ -16,4 +16,3 @@ for i in range(n):
         z = z[1:]
 for el in ans:
     print(el, end=" ")
-

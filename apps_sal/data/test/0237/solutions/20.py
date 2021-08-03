@@ -1,5 +1,6 @@
-n,m,k = list(map(int,input().split()))
+n, m, k = list(map(int, input().split()))
 l, r = 1, 10 ** 9 + 1
+
 
 def ok(p):
     rs = 0
@@ -18,6 +19,7 @@ def ok(p):
         f = (p - 1) - (n - k)
         rs -= f * (f + 1) // 2
     return rs <= m
+
 
 while r - l > 1:
     mid = (l + r) // 2

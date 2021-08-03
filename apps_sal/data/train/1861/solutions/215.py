@@ -4,7 +4,7 @@ class Solution:
         diag = collections.defaultdict(set)
         for i, j in points:
             diag[i].add(j)
-        
+
         for i in range(len(points)):
             a1, a2 = points[i]
             for j in range(len(points)):
@@ -14,6 +14,5 @@ class Solution:
                 if b2 in diag[a1] and a2 in diag[b1]:
                     # print(\"?\")
                     res = min(res, abs(a1 - b1) * abs(a2 - b2))
-        
-        
+
         return res if res != sys.maxsize else 0

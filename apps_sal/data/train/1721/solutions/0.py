@@ -35,5 +35,3 @@ def create_number_class(alphabet):
             return cls(self.value)
 
     return Number
-
-

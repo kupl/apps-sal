@@ -3,9 +3,9 @@ class Solution:
         graph = collections.defaultdict(list)
         for i in range(len(points)):
             x0, y0 = points[i]
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 x1, y1 = points[j]
-                dist = abs(x1-x0)+abs(y1-y0)
+                dist = abs(x1 - x0) + abs(y1 - y0)
                 graph[i] += [(j, dist)]
                 graph[j] += [(i, dist)]
         res, visited, heap = 0, set(), [(0, 0)]

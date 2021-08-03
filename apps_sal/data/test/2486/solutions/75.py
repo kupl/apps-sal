@@ -4,7 +4,7 @@ import numpy as np
 def check(x):
     dp = np.zeros(k, np.bool)
     dp[0] = True
-    for e in a[:x] + a[x+1:]:
+    for e in a[:x] + a[x + 1:]:
         dp[e:] |= dp[:-e]
 
     return dp[-a[x]:].any()
@@ -25,4 +25,3 @@ while ub - lb > 1:
         lb = m
 
 print(ub)
-

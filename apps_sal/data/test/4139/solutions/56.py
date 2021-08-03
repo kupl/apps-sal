@@ -29,4 +29,3 @@ def dfs(a, depth):
 ans = dfs('', 0)
 print(ans)
 # print(t)
-

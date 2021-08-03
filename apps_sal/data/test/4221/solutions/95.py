@@ -1,7 +1,7 @@
 S = input()
 
-if len(S)>=1 and len(S)<=1000 and str.islower(S):
+if len(S) >= 1 and len(S) <= 1000 and str.islower(S):
     if S[-1] != 's':
-        print(S+'s')
+        print(S + 's')
     else:
-        print(S+'es')
+        print(S + 'es')

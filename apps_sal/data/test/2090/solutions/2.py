@@ -19,4 +19,3 @@ for i in range(n):
     # print(sumlength)
     ma = max(sumlength * music[i][0], ma)
 print(ma)
-

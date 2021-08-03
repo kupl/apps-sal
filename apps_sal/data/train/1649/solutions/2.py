@@ -19,6 +19,7 @@ d = {"CLOSED": {"APP_PASSIVE_OPEN": "LISTEN",
      "CLOSE_WAIT": {"APP_CLOSE": "LAST_ACK"},
      "LAST_ACK": {"RCV_ACK": "CLOSED"}}
 
+
 def traverse_TCP_states(events):
     state = "CLOSED"  # initial state, always
     for event in events:

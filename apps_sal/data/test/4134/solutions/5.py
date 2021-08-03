@@ -3,54 +3,54 @@ ans = 0
 for i in range(22):
     d[i] = {}
 
-#print(cnt)
+# print(cnt)
 
-n,m,k = list(map(int, input().split()))
+n, m, k = list(map(int, input().split()))
 arr = [list(map(int, input().split())) for i in range(n)]
 
 
-
-def check(x,y):
+def check(x, y):
     if x < 0 or x >= n or y < 0 or y >= m:
         return False
     else:
         return True
 
 
-def go(x,y,now):
-    if check(x,y) == False:
+def go(x, y, now):
+    if check(x, y) == False:
         return
 
     now ^= arr[x][y]
     if x + y == m - 1:
-        #print('yes')
+        # print('yes')
         if now in d[x]:
             d[x][now] += 1
         else:
             d[x][now] = 1
         return
 
-    go(x+1,y,now)
-    go(x,y+1,now)
+    go(x + 1, y, now)
+    go(x, y + 1, now)
 
-def goRev(x,y,now):
-    if check(x,y) == False:
+
+def goRev(x, y, now):
+    if check(x, y) == False:
         return
 
     if x + y == m - 1:
         cur = k ^ now
         if cur in d[x]:
             nonlocal ans
-            #print(ans)
+            # print(ans)
             ans += d[x][cur]
         return
 
     now ^= arr[x][y]
-    goRev(x-1,y,now)
-    goRev(x,y-1,now)
+    goRev(x - 1, y, now)
+    goRev(x, y - 1, now)
 
 
-go(0,0,0)
-goRev(n-1,m-1,0)
+go(0, 0, 0)
+goRev(n - 1, m - 1, 0)
 
 print(ans)

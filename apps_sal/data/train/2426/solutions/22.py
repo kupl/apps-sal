@@ -25,7 +25,7 @@ class Solution:
                     ks_left = True
         print((ks, A))
         return int(max(A) - min(A))
-        
+
         # if K == 0:
         #     return max(A) - min(A)
         # max_A = max(A)
@@ -35,4 +35,3 @@ class Solution:
         # if -K <= max_A - min_A <= K:
         #     A[max_I] -= (max_A - min_A) / 2
         #     A[min_I] += (max_A - min_A) / 2
-

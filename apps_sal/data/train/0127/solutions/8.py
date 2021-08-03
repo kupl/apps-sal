@@ -10,4 +10,3 @@ class Solution:
                 for j in range(G - g, -1, -1):
                     dp[min(i + p, P)][j + g] += dp[i][j]
         return sum(dp[-1]) % mod
-

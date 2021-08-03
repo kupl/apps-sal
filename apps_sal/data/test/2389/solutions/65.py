@@ -1,11 +1,13 @@
 3
 # -*- coding: utf-8 -*-
+
+
 def check(s):
     if dict_x[s[0]] == 0 and dict_x[s[1]] == 0:
         return "NOT"
-    elif  dict_x[s[0]] > 0 and dict_x[s[1]] == 0:
+    elif dict_x[s[0]] > 0 and dict_x[s[1]] == 0:
         return s[1]
-    elif  dict_x[s[0]] == 0 and dict_x[s[1]] > 0:
+    elif dict_x[s[0]] == 0 and dict_x[s[1]] > 0:
         return s[0]
     elif dict_x[s[0]] == 1 and dict_x[s[1]] == 1:
         return "EVEN"
@@ -13,7 +15,9 @@ def check(s):
         if dict_x[s[0]] > dict_x[s[1]]:
             return s[1]
         else:
-            return s[0] 
+            return s[0]
+
+
 def update(s, mozi):
     if s[1] == mozi:
         dict_x[s[0]] -= 1
@@ -21,6 +25,7 @@ def update(s, mozi):
     else:
         dict_x[s[0]] += 1
         dict_x[s[1]] -= 1
+
 
 n, a, b, c = map(int, input().split())
 dict_x = {"A": a, "B": b, "C": c}

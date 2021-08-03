@@ -25,5 +25,5 @@ else:
         print('No')
     else:
         rems = [n % i for i in range(1, k + 1)]
-        #print(rems)
+        # print(rems)
         print('Yes' if len(set(rems)) == len(rems) else 'No')

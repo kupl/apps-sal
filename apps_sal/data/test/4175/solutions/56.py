@@ -2,7 +2,7 @@ N = int(input())
 
 alter_str = input()
 str_list = [alter_str]
-for _ in range(N-1):
+for _ in range(N - 1):
     input_str = input()
     if input_str in str_list:
         print('No')

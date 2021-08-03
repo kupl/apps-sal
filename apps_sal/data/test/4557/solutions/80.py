@@ -1,7 +1,7 @@
-a,b,x=map(int,input().split())
+a, b, x = map(int, input().split())
 
-if a<=x and a+b>=x:
-    ans="YES"
+if a <= x and a + b >= x:
+    ans = "YES"
 else:
-    ans="NO"
+    ans = "NO"
 print(ans)

@@ -12,4 +12,3 @@ for i in range(n):
     for j in range(n, m + n):
         r.append(abs(lx[i] - lx[j]) + abs(ly[i] - ly[j]))
     print((r.index(min(r)) + 1))
-

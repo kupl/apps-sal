@@ -3,4 +3,5 @@ def greet(name):
     letter capitalised"""
     return 'Hello {}!'.format(name.capitalize())
 
+
 print(greet('riley'))

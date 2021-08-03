@@ -24,4 +24,3 @@ for t in G:
     if len(t) == k:
         ans = min(ans, sum(t))
 print(ans)
-

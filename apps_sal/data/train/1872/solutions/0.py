@@ -10,7 +10,7 @@ class Solution:
         ans = -1000000
         result = 1
         level = 1
-        
+
         while stack:
             curr = 0
             newStack = []
@@ -18,15 +18,15 @@ class Solution:
                 curr += x.val
                 if x.left:
                     newStack.append(x.left)
-                if x.right: 
+                if x.right:
                     newStack.append(x.right)
-            
+
             stack = newStack
-            
+
             if curr > ans:
                 ans = curr
                 result = level
-                
+
             level += 1
-            
+
         return result

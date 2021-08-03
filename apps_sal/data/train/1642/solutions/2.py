@@ -1,21 +1,23 @@
 from math import gcd, factorial
 from random import randint
 
+
 def primesfrom2to(n):
     # https://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n/3035188#3035188
     """
     Returns an array of primes, 2 <= p < n.
     """
-    sieve = [True]*(n//2)
-    for i in range(3, int(n**0.5)+1, 2):
-        if sieve[i//2]:
-            sieve[i*i//2::i] = [False]*((n- i*i -1)//(2*i) + 1)
-    return [2] + [2*i + 1 for i in range(1, n//2) if sieve[i]]
+    sieve = [True] * (n // 2)
+    for i in range(3, int(n**0.5) + 1, 2):
+        if sieve[i // 2]:
+            sieve[i * i // 2::i] = [False] * ((n - i * i - 1) // (2 * i) + 1)
+    return [2] + [2 * i + 1 for i in range(1, n // 2) if sieve[i]]
 
 
 bound = 7100
 small_primes = primesfrom2to(bound)
 small_primes_set = set(small_primes)
+
 
 def factorint(n):
     """
@@ -24,11 +26,11 @@ def factorint(n):
     """
     factors = dict()
 
-    limit = int(n**0.5)+1
+    limit = int(n**0.5) + 1
     for prime in small_primes:
         if prime > limit:
             break
-        while n%prime == 0:
+        while n % prime == 0:
             if prime in factors:
                 factors[prime] += 1
             else:
@@ -48,7 +50,7 @@ def large_factors(n, factors):
             else:
                 factors[n] = 1
             break
-        
+
         factor = pollard_brent(n)
         large_factors(factor, factors)
         n //= factor
@@ -59,56 +61,56 @@ def pollard_brent(n):
     """
     Returns a factor of n. The returned factor may be a composite number.
     """
-    if n%2 == 0:
+    if n % 2 == 0:
         return 2
 
-    y, c, m = randint(1, n-1), randint(1, n-1), randint(1, n-1)
+    y, c, m = randint(1, n - 1), randint(1, n - 1), randint(1, n - 1)
     g, r, q = 1, 1, 1
     while g == 1:
         x = y
         for i in range(r):
-            y = (pow(y, 2, n)+c)%n
+            y = (pow(y, 2, n) + c) % n
 
         k = 0
         while k < r and g == 1:
             ys = y
-            for i in range(min(m, r-k)):
-                y = (pow(y, 2, n)+c)%n
-                q = q*abs(x-y)%n
+            for i in range(min(m, r - k)):
+                y = (pow(y, 2, n) + c) % n
+                q = q * abs(x - y) % n
             g = gcd(q, n)
             k += m
         r *= 2
 
     if g == n:
         while True:
-            ys = (pow(ys, 2, n)+c)%n
-            g = gcd(abs(x-ys), n)
+            ys = (pow(ys, 2, n) + c) % n
+            g = gcd(abs(x - ys), n)
             if g > 1:
                 break
 
-    return g  
+    return g
 
 
 def isprime(n):
     # https://en.wikipedia.org/wiki/Miller–Rabin_primality_test#Deterministic_variants
-    if n%2 == 0:
+    if n % 2 == 0:
         return False
     elif n < bound:
         return n in small_primes_set
 
-    d, r = n-1, 0
-    while d%2 == 0:
+    d, r = n - 1, 0
+    while d % 2 == 0:
         d //= 2
         r += 1
 
     for a in (2, 3, 5, 7):
         x = pow(a, d, n)
-        if x == 1 or x == n-1:
+        if x == 1 or x == n - 1:
             continue
 
-        for i in range(r-1):
+        for i in range(r - 1):
             x = pow(x, 2, n)
-            if x == n-1:
+            if x == n - 1:
                 break
         else:
             return False
@@ -122,9 +124,9 @@ def partitions(n, k):
     integers. Order matters.
     """
     result = 1
-    for i in range(n+1, n+k):
+    for i in range(n + 1, n + k):
         result *= i
-    return result//factorial(k-1)
+    return result // factorial(k - 1)
 
 
 def multiply(n, k):
@@ -132,4 +134,3 @@ def multiply(n, k):
     for exponent in list(factors.values()):
         total *= partitions(exponent, k)
     return total
-

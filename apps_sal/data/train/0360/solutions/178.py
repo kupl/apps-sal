@@ -12,7 +12,7 @@ class Solution:
                 runningSum += weights[i]
 
         return totalDays <= D
-    
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         low = max(weights)
         high = sum(weights)
@@ -26,5 +26,3 @@ class Solution:
                 low = mid + 1
 
         return low
-        
-

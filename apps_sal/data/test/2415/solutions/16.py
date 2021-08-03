@@ -15,11 +15,9 @@ for i in range(n):
     if not dp[i]:
         continue
     for j in range(1, 3):
-        if r[i:i+j] in m:
-            dp[i+j] = 1
+        if r[i:i + j] in m:
+            dp[i + j] = 1
 if dp[n]:
     print('YES')
 else:
     print('NO')
-
-

@@ -1,7 +1,7 @@
 class Solution:
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         n = len(A)
-        
+
         i, j, total, res = 0, 0, 0, 0
         while j < n:
             total += A[j]

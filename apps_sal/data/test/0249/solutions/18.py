@@ -18,8 +18,8 @@ created by shhuan at 2020/1/13 20:48
 
 def solve(N, L, X, Y, A):
     vs = set(A)
-    mx = any([a+X in vs for a in A])
-    my = any([a+Y in vs for a in A])
+    mx = any([a + X in vs for a in A])
+    my = any([a + Y in vs for a in A])
     if mx and my:
         print(0)
     elif mx:

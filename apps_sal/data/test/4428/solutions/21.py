@@ -17,6 +17,3 @@ while L < R:
         L += 1
         S1 += x[L]
 print(MaxS)
-
-
-

@@ -9,5 +9,4 @@ def sequence_sum(begin_number, end_number, step):
             x += st
             st += step
 
-
         return x

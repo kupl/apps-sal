@@ -12,4 +12,3 @@ if len(ans_list) == 0:
     print(no_ans)
 else:
     print((ans_list[0]))
-

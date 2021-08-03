@@ -7,4 +7,3 @@ def parse_float(string):
             return floated_string
     except ValueError:
         return None
-

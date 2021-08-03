@@ -6,4 +6,5 @@ def main():
         pos += a * (k % 2)
         print(pos)
 
+
 main()

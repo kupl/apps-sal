@@ -2,6 +2,7 @@ import sys
 
 input = sys.stdin.readline
 
+
 class SegmentTree:
     a = ord('a')
 
@@ -28,11 +29,14 @@ class SegmentTree:
         s = self.data[r] | self.data[l]
 
         while l < r - 1:
-            if r & 1: s |= self.data[r - 1]
-            if not l & 1: s |= self.data[l + 1]
+            if r & 1:
+                s |= self.data[r - 1]
+            if not l & 1:
+                s |= self.data[l + 1]
             l >>= 1
             r >>= 1
         return s
+
 
 tree = SegmentTree()
 

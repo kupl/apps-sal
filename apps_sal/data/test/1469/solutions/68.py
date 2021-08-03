@@ -3,7 +3,8 @@ def graph(L):
     beki = 1
     for n in range(20):
         beki *= 2
-        if beki > L: break
+        if beki > L:
+            break
 
     ans = []
     Li = 1
@@ -30,4 +31,3 @@ def graph(L):
 
 L = int(input())
 graph(L)
-

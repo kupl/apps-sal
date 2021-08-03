@@ -1,4 +1,4 @@
-def uniq_c(seq): 
+def uniq_c(seq):
     new_seq = list()
     count = 0
     for i in range(len(seq)):
@@ -12,10 +12,8 @@ def uniq_c(seq):
             new_seq[-1] = (seq[i - 1], count)
             count = 1
             new_seq.append(seq[i])
-    
+
     if len(seq) != 0:
         new_seq[-1] = (seq[-1], count)
-    
-    return new_seq
-            
 
+    return new_seq

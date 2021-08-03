@@ -6,7 +6,7 @@ class Solution:
                 return True
             d += 1
         return False
-    
+
     def hasGroupsSizeX(self, deck: List[int]) -> bool:
         intCnt = {}
         for num in deck:
@@ -20,7 +20,7 @@ class Solution:
         leastDiff = None
         leastCnt = cnts[0]
         while i < n:
-            curDiff = cnts[i] - cnts[i-1]
+            curDiff = cnts[i] - cnts[i - 1]
             if leastDiff == None or curDiff < leastDiff:
                 leastDiff = curDiff
             if cnts[i] < leastCnt:

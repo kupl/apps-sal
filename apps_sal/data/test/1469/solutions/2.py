@@ -1,7 +1,7 @@
 def main():
     L = int(input())
     r = 0
-    while 2 ** (r+1) <= L:
+    while 2 ** (r + 1) <= L:
         r += 1
     assert r < 20
     N = r + 1
@@ -20,4 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

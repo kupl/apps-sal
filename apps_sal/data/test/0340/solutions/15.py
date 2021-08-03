@@ -4,10 +4,11 @@ def user99():
 
     N = 10**6
     prime = [True] * N
-    prime[0] = prime[1] = False;
+    prime[0] = prime[1] = False
 
     for i in range(2, N, 1):
-        if i * i > N: break
+        if i * i > N:
+            break
         if prime[i]:
             for j in range(i * i, N, i):
                 prime[j] = False
@@ -19,7 +20,8 @@ def user99():
 
     b = []
     for p in primes:
-        if n % p != 0: continue
+        if n % p != 0:
+            continue
         power = 0
         while n % p == 0:
             n //= p
@@ -43,5 +45,6 @@ def user99():
         steps += 1
 
     print(x, steps)
+
 
 user99()

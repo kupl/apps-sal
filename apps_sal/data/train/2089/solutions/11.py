@@ -15,6 +15,4 @@ for _ in range(n):
 print('2\n| {}\n^ {}'.format(a ^ b ^ 1023, a ^ 1023))
 
 
-
 # Made By Mostafa_Khaled
-

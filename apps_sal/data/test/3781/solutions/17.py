@@ -4,11 +4,14 @@
 def ri():
     return int(input())
 
+
 def rl():
     return list(input().split())
 
+
 def rli():
     return list(map(int, input().split()))
+
 
 def main():
     t = ri()
@@ -33,8 +36,8 @@ def main():
             print("First")
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

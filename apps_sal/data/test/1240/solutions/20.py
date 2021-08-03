@@ -1,5 +1,10 @@
-import math,sys,re,itertools,pprint,collections
-ri,rai=lambda:int(input()),lambda:list(map(int, input().split()))
+import math
+import sys
+import re
+import itertools
+import pprint
+import collections
+ri, rai = lambda: int(input()), lambda: list(map(int, input().split()))
 
 n = ri()
 a = [rai() for i in range(n)]
@@ -22,4 +27,3 @@ for i in range(n):
     s += l - r
 
 print(res)
-

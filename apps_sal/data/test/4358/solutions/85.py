@@ -3,4 +3,4 @@ al = [int(input()) for _ in range(n)]
 
 mm = max(al)
 
-print(sum(al)-mm//2)
+print(sum(al) - mm // 2)

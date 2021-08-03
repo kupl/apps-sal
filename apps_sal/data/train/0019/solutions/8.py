@@ -2,6 +2,7 @@ import math
 import collections
 arrK = [0] * 1000050
 
+
 def cleanK(q):
     while len(q):
         arrK[q.pop()] = 0
@@ -32,6 +33,7 @@ def test():
 # def print2d(a):
 #     for i in a:
 #       print(' '.join(list(map(str, i))))
+
 
 t = int(input())
 

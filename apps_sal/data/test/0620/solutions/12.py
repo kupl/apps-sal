@@ -11,8 +11,7 @@ ans.add((x2 + x1 - x3, y2 + y1 - y3))
 
 ans.add((x1 + x3 - x2, y1 + y3 - y2))
 ans.add((x1 + x2 - x3, y1 + y2 - y3))
-#print(ans)
+# print(ans)
 print(len(ans))
 for i in ans:
     print(' '.join(str(j) for j in i), end='\n')
-

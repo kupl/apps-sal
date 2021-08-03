@@ -11,6 +11,7 @@ def leap(year):
         else:
             return False
 
+
 def days(date, month, year):
     the_date = [24, 3, 2437]
 
@@ -35,7 +36,7 @@ def days(date, month, year):
     if year == the_date[2] and month == the_date[1]:
         result = the_date[0] - date
         return result
-    
+
     elif year == the_date[2] and month < the_date[1]:
         result = days_from_beginning - date
         for i in range(1, month):

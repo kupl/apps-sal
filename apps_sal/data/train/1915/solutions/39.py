@@ -3,7 +3,7 @@ class Solution:
         # abc??
         # ?abc?
         # ??abc
-        
+
         def num_match(stamp, target):
             ret = 0
             for (c1, c2) in zip(stamp, target):
@@ -14,7 +14,7 @@ class Solution:
             return ret
 
         remain = len(target)
-        ret= []
+        ret = []
         cur = list(target)
         while remain > 0:
             tmp = remain
@@ -28,9 +28,8 @@ class Solution:
                     cur[l:l + len(stamp)] = ['?'] * len(stamp)
                     ret.append(l)
                     remain -= match
-                    
+
             if tmp == remain:
                 return []
-        
-        return ret[::-1]
 
+        return ret[::-1]

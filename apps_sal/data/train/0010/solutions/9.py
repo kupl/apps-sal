@@ -1,10 +1,13 @@
 import sys
 
+
 def ii():
     return sys.stdin.readline().strip()
 
+
 def idata():
     return [int(x) for x in ii().split()]
+
 
 def solve_of_problem():
     n = int(ii())
@@ -16,6 +19,7 @@ def solve_of_problem():
     print(len(ans) + 1)
     print(*ans, data[-1])
     return
+
 
 for ______ in range(int(ii())):
     solve_of_problem()

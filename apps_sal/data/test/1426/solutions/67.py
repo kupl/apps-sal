@@ -22,7 +22,8 @@ def main():
     while dq:
         v = dq.popleft()
         for u in g[v]:
-            if ~dist[u]: continue
+            if ~dist[u]:
+                continue
             dist[u] = dist[v] + 1
             dq.append(u)
 
@@ -35,5 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

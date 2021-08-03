@@ -7,4 +7,3 @@ for i in range(1, 101):
             ans.append(i)
 ans = sorted(ans)
 print((ans[-k]))
-

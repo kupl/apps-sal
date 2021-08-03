@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def recoverFromPreorder(self, S: str) -> TreeNode:
-        
+
         def helper(current_depth, s):
             split_point1 = -1
             split_point2 = -1
@@ -37,5 +37,3 @@ class Solution:
                     root.right = None
             return root
         return helper(0, S)
-            
-

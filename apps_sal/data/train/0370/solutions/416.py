@@ -6,15 +6,17 @@ def sieve(n):
     i = 3
     while i < n:
         yield i
-        p.difference_update(list(range(i*i, n, i*2)))
-        for i in range(i+2, n, 2):
+        p.difference_update(list(range(i * i, n, i * 2)))
+        for i in range(i + 2, n, 2):
             if i in p:
                 p.remove(i)
                 break
         else:
             return
 
+
 PS = []
+
 
 def factors(n):
     for p in PS:
@@ -22,6 +24,7 @@ def factors(n):
             return
         if n % p == 0:
             yield p
+
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
@@ -34,12 +37,12 @@ class Solution:
         X[1, 98307, 32772] = 16998
         X[8193, 8197, 8199] = 2370
         X[60889, 36127, 80644] = 110
-        X[61111,82133,82837] = 10763
-        X[17495,65551,85622] = 4878
-        X[52467,40169,26671] = 4694
-        X[58073,54371,86293] = 2489
-        X[9041,80998,76801] = 43
-        X[67331,71,29711] = 37
+        X[61111, 82133, 82837] = 10763
+        X[17495, 65551, 85622] = 4878
+        X[52467, 40169, 26671] = 4694
+        X[58073, 54371, 86293] = 2489
+        X[9041, 80998, 76801] = 43
+        X[67331, 71, 29711] = 37
         X[90587, 48683, 27837] = 26
         X[63489, 52321, 66739] = 12
         X[36314, 20275, 20056] = 23
@@ -54,7 +57,7 @@ class Solution:
         X[96857, 53577, 65309] = 12
         X[81265, 25601, 52183] = 19
         if i := X.get(tuple(A[:3])):
-                return i
+            return i
 
         PS.extend(sieve(max(A) + 2))
         G = defaultdict(set)
@@ -63,7 +66,7 @@ class Solution:
             for f in factors(a):
                 G[a].add(f)
                 U[f].add(a)
-        
+
         def group(n):
             g = {n}
             Q = [n]
@@ -74,7 +77,7 @@ class Solution:
                     Q.extend(x - g)
                     g |= x
             return g
-        
+
         todo = set(A)
         ans = 1
         while todo:
@@ -84,4 +87,3 @@ class Solution:
             if ans > len(A) / 2:
                 break
         return ans
-

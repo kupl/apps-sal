@@ -12,6 +12,7 @@ class SegTree:
     update(k, x): k番目の値をxに更新 O(N)
     query(l, r): 区間[l, r)をsegfuncしたものを返す O(logN)
     """
+
     def __init__(self, init_val, segfunc, ide_ele):
         """
         init_val: 配列の初期値
@@ -120,5 +121,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

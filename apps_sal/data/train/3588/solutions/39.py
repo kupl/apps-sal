@@ -4,5 +4,3 @@ def quadratic(x1, x2):
     c = (-x2) * (-x1)
     coeff = (a, b, c)
     return coeff
-    
-

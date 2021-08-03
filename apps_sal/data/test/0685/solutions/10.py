@@ -1,9 +1,9 @@
-n,h = list(map(int,input().split()))
+n, h = list(map(int, input().split()))
 
 lis = []
 for i in range(n):
-    x,y = list(map(int,input().split()))
-    lis.append((x,y))
+    x, y = list(map(int, input().split()))
+    lis.append((x, y))
 
 ans = lis[0][1] - lis[0][0]
 end = 1
@@ -15,14 +15,14 @@ for x in range(len(lis)):
     if end >= n:
         break
     if x:
-        have += lis[x][0] - lis[x-1][1]
-        have = min(have,h)
-        tot -=  lis[x-1][1] - lis[x-1][0]
-        tot = max(tot,lis[x][1] - lis[x][0])
-        end = min(n-1,max(end,x+1))
+        have += lis[x][0] - lis[x - 1][1]
+        have = min(have, h)
+        tot -= lis[x - 1][1] - lis[x - 1][0]
+        tot = max(tot, lis[x][1] - lis[x][0])
+        end = min(n - 1, max(end, x + 1))
 
     while have:
-        need = lis[end][0] - lis[end-1][1]
+        need = lis[end][0] - lis[end - 1][1]
         if have > need:
             have -= need
             tot += lis[end][1] - lis[end][0]
@@ -31,20 +31,9 @@ for x in range(len(lis)):
 
         end += 1
         if end == n:
-           break
+            break
 
-    ans = max(ans,tot)
+    ans = max(ans, tot)
 
 
 print(ans + h)
-
-
-
-
-
-
-
-
-
-
-

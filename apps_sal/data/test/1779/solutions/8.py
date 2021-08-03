@@ -13,4 +13,3 @@ for ch in t:
     else:
         ans += ch
 print(ans)
-

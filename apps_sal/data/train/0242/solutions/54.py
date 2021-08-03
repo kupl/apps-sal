@@ -1,7 +1,6 @@
 class Solution:
     def maxEqualFreq(self, A: List[int]) -> int:
-        
-        
+
         count = collections.Counter()
         freq = [0 for _ in range(len(A) + 1)]
         res = 0

@@ -5,5 +5,3 @@ def remove_url_anchor(url):
         return newUrl
     else:
         return url
-    
-

@@ -3,7 +3,7 @@ def reverse_words(text):
     text = ""
     print(backwards)
     for word in backwards[::-1]:
-        text +=word
-        text +=" "
-  
+        text += word
+        text += " "
+
     return text[:-1]

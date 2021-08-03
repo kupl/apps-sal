@@ -1,2 +1,2 @@
 def cat_mouse(x):
-    return ["Escaped!",  "Caught!"][x.count('.') <= 3]
+    return ["Escaped!", "Caught!"][x.count('.') <= 3]

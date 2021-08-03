@@ -24,4 +24,3 @@ else:
     ans += ciclos
 
 print(ans)
-

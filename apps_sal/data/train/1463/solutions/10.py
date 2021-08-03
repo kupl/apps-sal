@@ -17,6 +17,5 @@ for _ in range(t):
         for i in range(4, n, 2):
             a.append("2 " + str(i) + " " + str(i + 1))
         if (n & 1) == 0:
-            a.append("1 "+str(n))
+            a.append("1 " + str(n))
         print(*a, sep="\n")
-

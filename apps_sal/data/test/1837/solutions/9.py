@@ -18,4 +18,3 @@ elif replacee != [-1] * n:
     print(cnt + 1)
 else:
     print(cnt)
-

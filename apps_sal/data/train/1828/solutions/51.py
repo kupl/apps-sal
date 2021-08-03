@@ -22,31 +22,24 @@ class Solution:
         # return barcode
         barcodes.sort()
         barcode = []
-        
-        heap = [(-y,x) for x,y in list(counts.items())]
+
+        heap = [(-y, x) for x, y in list(counts.items())]
         heapq.heapify(heap)
         print(heap)
-        
+
         while len(heap) > 0:
-            freq,digit = heapq.heappop(heap)
+            freq, digit = heapq.heappop(heap)
             if len(barcode) == 0 or barcode[-1] != digit:
                 barcode.append(digit)
                 if freq < -1:
                     freq += 1
-                    heapq.heappush(heap,(freq,digit))
+                    heapq.heappush(heap, (freq, digit))
             else:
-                nextFreq,nextDig = heapq.heappop(heap)
+                nextFreq, nextDig = heapq.heappop(heap)
                 barcode.append(nextDig)
-                heapq.heappush(heap,(freq,digit))
+                heapq.heappush(heap, (freq, digit))
                 if nextFreq < -1:
                     nextFreq += 1
-                    heapq.heappush(heap,(nextFreq,nextDig))
-                    
-        
-        
-        return barcode
-            
-                
-                
-                    
+                    heapq.heappush(heap, (nextFreq, nextDig))
 
+        return barcode

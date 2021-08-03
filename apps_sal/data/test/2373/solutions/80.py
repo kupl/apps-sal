@@ -1,5 +1,5 @@
 n = int(input())
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 cnt_1 = 0
 cnt_2 = 0
 TF = False

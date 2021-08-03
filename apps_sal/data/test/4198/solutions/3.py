@@ -1,7 +1,9 @@
 A, B, X = map(int, input().split(' '))
 
+
 def cost(N):
     return A * N + B * len(str(N))
+
 
 if cost(0) > X:
     print(0)

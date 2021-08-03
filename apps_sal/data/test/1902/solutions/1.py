@@ -35,8 +35,8 @@ class Trie:
                     # print(presses_saved)
                     if '$' in curr_node.letter___node:
                         return min(len(word) - 1,
-                            len(word) - 1 - presses_saved + 1
-                        )
+                                   len(word) - 1 - presses_saved + 1
+                                   )
                     else:
                         return len(word) - 1
                 if curr_state == 0:
@@ -52,20 +52,18 @@ class Trie:
             elif curr_node.words_nr == 0:
                 if curr_state == 1:
                     return min(len(word) - 1,
-                        len(word) - 1 - presses_saved + 1
-                    )
+                               len(word) - 1 - presses_saved + 1
+                               )
                 elif curr_state == 0:
                     return len(word) - 1
         if curr_node.words_nr == 0:
             presses_saved -= 1
             if curr_state == 1:
                 return min(len(word) - 1,
-                    len(word) - 1 - presses_saved + 1
-                )
+                           len(word) - 1 - presses_saved + 1
+                           )
             elif curr_state == 0:
                 return len(word) - 1
-
-
 
 
 text = ''
@@ -98,4 +96,3 @@ for word in idx___word:
         root.add_word(word)
 
 print(ans)
-

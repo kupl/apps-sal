@@ -20,4 +20,3 @@ else:
     k -= 1
     rearrange(0, n)
     print(' '.join(str(i) for i in lst))
-

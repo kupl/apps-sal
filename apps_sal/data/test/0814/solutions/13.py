@@ -1,3 +1,3 @@
-a=input()
-for i in sorted(list(map(int,input().split()))):
-    print(i,end=' ')
+a = input()
+for i in sorted(list(map(int, input().split()))):
+    print(i, end=' ')

@@ -44,8 +44,7 @@ offerTime = max(20 * 60 - time, 0)
 h, d, c, n = ria()
 mini = math.ceil(h / n) * c
 
-h+=offerTime*d
+h += offerTime * d
 
-mini = min(math.ceil(h / n) * c*0.8,mini)
+mini = min(math.ceil(h / n) * c * 0.8, mini)
 print(mini)
-

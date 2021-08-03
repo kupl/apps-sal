@@ -1,3 +1,6 @@
+import math
+
+
 def binary(x):
     result = []
     while True:
@@ -11,6 +14,7 @@ def binary(x):
     result.reverse()
     return "".join(result)
 
+
 def octal(x):
     result = []
     while True:
@@ -23,6 +27,7 @@ def octal(x):
 
     result.reverse()
     return "".join(result)
+
 
 def hexadecimal(x):
     result = []
@@ -51,7 +56,6 @@ def hexadecimal(x):
     result.reverse()
     return "".join(result)
 
-import math
 
 def func(l):
     average = math.floor(sum(l) / len(l))

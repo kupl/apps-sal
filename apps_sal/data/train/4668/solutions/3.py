@@ -13,10 +13,10 @@ def is_divisible_by_6(s):
 
     else:
         lst = []
-        for i in [0,2,4,6,8]:
+        for i in [0, 2, 4, 6, 8]:
             lst.append(s[:-1] + str(i))
         lst2 = []
         for x in range(len(lst)):
-             if int(lst[x]) % 3 == 0:
-                 lst2.append(lst[x])
+            if int(lst[x]) % 3 == 0:
+                lst2.append(lst[x])
         return lst2

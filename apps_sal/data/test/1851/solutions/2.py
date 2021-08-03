@@ -14,4 +14,3 @@ while i < a:
     i += 1
     k += 1
 print(k)
-

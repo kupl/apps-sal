@@ -8,7 +8,7 @@ V = list(map(int, input().split()))
 ans = 0
 counter = Counter(V)
 if len(counter) == 1:
-    ans = N//2
+    ans = N // 2
 elif N == 2:
     ans = 1
 else:

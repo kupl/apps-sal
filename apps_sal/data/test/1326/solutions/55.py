@@ -4,7 +4,6 @@ ans = 0
 for i in range(1, N + 1):
 
     cnt = N // i
-    ans += (cnt * (cnt + 1) * i // 2) 
+    ans += (cnt * (cnt + 1) * i // 2)
 
 print(ans)
-

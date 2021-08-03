@@ -8,11 +8,11 @@ dang = 1
 r = [(x, set()) for x in range(a)]
 
 for i in range(b):
-     x, y = list(map(int, input().split()))
-     x, y = x-1, y-1
+    x, y = list(map(int, input().split()))
+    x, y = x - 1, y - 1
 
-     r[x][1].add(y)
-     r[y][1].add(x)
+    r[x][1].add(y)
+    r[y][1].add(x)
 
 
 r = sorted(r, key=lambda x: len(x[1]), reverse=True)
@@ -36,4 +36,3 @@ while len(r) > 0:
         del r[0]
 
 print(dang)
-

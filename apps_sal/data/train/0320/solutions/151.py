@@ -1,10 +1,10 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         n = len(nums)
-        
+
         one = 0
         two_req = 0
-        
+
         for i in nums:
             two = 0
             i_copy = i

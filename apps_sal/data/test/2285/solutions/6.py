@@ -9,14 +9,14 @@ def f(s):
         if b:
             res.append("{:0>4}".format(b))
         if not b:
-            res.extend(("0000" for i in range(8-len(sp)+1)))
+            res.extend(("0000" for i in range(8 - len(sp) + 1)))
     return(":".join(res))
+
 
 for i in range(int(input())):
     tmp = input()
     print(f(tmp))
 
-#print(check("R23C55"))
-#print(check("R228C494"))
-#print(f("::"))
-
+# print(check("R23C55"))
+# print(check("R228C494"))
+# print(f("::"))

@@ -13,4 +13,4 @@ class Solution:
                     ans = max(ans, i - pos_map[another_tmp])
             if tmp not in pos_map:
                 pos_map[tmp] = i
-        return ans        
+        return ans

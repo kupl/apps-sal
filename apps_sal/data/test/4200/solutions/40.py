@@ -7,7 +7,7 @@ sums = sum(A)
 A.sort(reverse=True)
 
 
-if 4*M*A[M-1] >= sums:
+if 4 * M * A[M - 1] >= sums:
     print('Yes')
 else:
     print('No')

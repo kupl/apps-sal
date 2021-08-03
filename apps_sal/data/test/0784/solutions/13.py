@@ -14,4 +14,3 @@ if b == a:
     print('YES', len(arr), ' '.join(arr), sep='\n')
 else:
     print('NO')
-    

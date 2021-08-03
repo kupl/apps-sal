@@ -2,7 +2,7 @@ class Solution:
     def reverseOnlyLetters(self, S: str) -> str:
         if len(S) == 1:
             return S
-        
+
         start = 0
         end = len(S) - 1
         S = list(S)
@@ -16,6 +16,5 @@ class Solution:
                     end -= 1
             else:
                 start += 1
-        
-        return ''.join(S)
 
+        return ''.join(S)

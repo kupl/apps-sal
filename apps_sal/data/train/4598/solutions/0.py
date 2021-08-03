@@ -4,5 +4,5 @@ def calculate(n1, n2, o):
         "subtract": (lambda x, y: x - y),
         "multiply": (lambda x, y: x * y),
     }
-    
-    return "{:b}".format( operators[o]( int(n1, 2), int(n2, 2) ) )
+
+    return "{:b}".format(operators[o](int(n1, 2), int(n2, 2)))

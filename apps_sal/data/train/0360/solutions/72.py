@@ -10,7 +10,7 @@ class Solution:
                     k -= weights[i]
                     i += 1
             return days <= D
-        
+
         l, r = 1, sum(weights)
         while l < r:
             mid = (l + r) // 2
@@ -19,5 +19,3 @@ class Solution:
             else:
                 l = mid + 1
         return l
-                    
-

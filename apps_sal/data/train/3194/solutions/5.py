@@ -14,7 +14,7 @@ def berserk_rater(synopsis):
             scores.append(-2)
         else:
             scores.append(-1)
-        
+
     score = sum(scores)
     # Decode overall score
     if score < 0:

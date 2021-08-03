@@ -13,4 +13,3 @@ for c in s:
     ans += i
 
 print(ans)
-

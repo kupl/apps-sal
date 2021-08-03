@@ -3,7 +3,7 @@ class Solution:
         hi = 0
         if not customers:
             return 0
-        
+
         i = wait = tot = 0
         n = len(customers)
         r = 1
@@ -20,6 +20,5 @@ class Solution:
                 r += 1
                 if wait <= 0:
                     break
-            
-        return ans if hi > 0 else -1
 
+        return ans if hi > 0 else -1

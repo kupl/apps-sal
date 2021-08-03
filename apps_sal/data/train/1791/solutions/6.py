@@ -27,12 +27,12 @@ class Piece:
 
     def check_fork(self, x, y, direct=2):
         count = 0
-        for x_, y_ in ((x+1, y), (x-1, y), (x, y+1), (x, y-1)):
+        for x_, y_ in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
             if x_ >= 0 and x_ <= self.size[0] and y_ >= 0 and y_ <= self.size[1]:
                 if self.map[x_][y_] != '#':
                     count += 1
         fork = ((x, y), self.steps, self.direct)
-        for _ in range(count-direct):   # 四个方向有三个能通才是岔路口
+        for _ in range(count - direct):   # 四个方向有三个能通才是岔路口
             self.forks.append(fork)
 
     def draw_map(self, x, y):

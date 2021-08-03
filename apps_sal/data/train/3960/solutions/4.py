@@ -11,4 +11,3 @@ def align_right(text, width):
         answer.append(' ' * (width - len(temp)) + temp)
         temp = ''
     return '\n'.join(answer)
-

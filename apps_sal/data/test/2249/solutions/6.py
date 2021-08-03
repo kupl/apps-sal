@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def extract(a):
     d = dict()
     r = []
@@ -12,6 +13,7 @@ def extract(a):
             r.append(0)
 
     return r
+
 
 def sonyaAndRobots(n, a):
     t1 = extract(a)
@@ -26,11 +28,15 @@ def sonyaAndRobots(n, a):
 
     return result
 
+
 def main():
     n = int(input())
     a = [int(x) for x in input().split()]
     print(sonyaAndRobots(n, a))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

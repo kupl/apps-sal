@@ -16,6 +16,3 @@ for i in range(n - 1):
         cur_s += next_dist
 
 print(count)
-
-
-

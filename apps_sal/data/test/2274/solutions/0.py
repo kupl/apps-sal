@@ -14,4 +14,3 @@ for _ in range(int(input())):
         if s[i] != 'R':
             ans += 1
     print(ans)
-

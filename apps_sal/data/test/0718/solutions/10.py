@@ -8,4 +8,3 @@ while not '8' in str(cur):
     steps += 1
 
 print(steps)
-

@@ -39,9 +39,3 @@ if (sum(gg) <= places):
     print("YES")
 else:
     print("NO")
-
-    
-
-
-    
-

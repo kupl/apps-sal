@@ -9,4 +9,3 @@ t1_f = t1 + delta
 h1_f = t1_f // 60
 m1_f = t1_f % 60
 print('{:02d}:{:02d}'.format(h1_f, m1_f))
-

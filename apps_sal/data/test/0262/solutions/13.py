@@ -10,6 +10,7 @@ def check(a, t):
             return False
     return sum(a[i][i] for i in range(n)) == sum(a[i][-i - 1] for i in range(n)) == t
 
+
 def main():
     try:
         while True:
@@ -38,5 +39,5 @@ def main():
     except EOFError:
         pass
 
-main()
 
+main()

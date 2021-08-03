@@ -15,7 +15,7 @@ class Solution:
             else:
                 lo = mid + 1
         return lo
-    
+
     def can_make(self, day, bloomDay, m, k):
         cnt = 0
         for d in bloomDay:
@@ -29,4 +29,3 @@ class Solution:
             if m == 0:
                 return True
         return m == 0
-

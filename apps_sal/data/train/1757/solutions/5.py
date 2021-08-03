@@ -43,8 +43,7 @@ def tour(board, last_x, last_y, move_number):
 
     for move, _ in sorted(list(priorities.items()), key=by_value):
 
-
-    # for move in legal_moves:
+        # for move in legal_moves:
         board_copy = copy.deepcopy(board)
         board_copy[last_x][last_y] = move
         result, trace = tour(board_copy, last_x + move[0], last_y + move[1], move_number + 1)
@@ -64,10 +63,13 @@ def count_possible_moves(board, cx, cy):
 
     return sum([1 for (nx, ny) in moves if is_move_legal(board, len(board), cx + nx, cy + ny)])
 
+
 def by_value(item):
     return item[1]
 
+
 def __starting_point():
     print((knights_tour((0, 2), 6)))
+
 
 __starting_point()

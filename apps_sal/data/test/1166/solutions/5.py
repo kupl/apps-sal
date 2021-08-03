@@ -41,4 +41,3 @@ for x in range(len(positions), 0, -1):
         answers[position] = "B"
 
 print(''.join(answers))
-

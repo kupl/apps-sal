@@ -5,9 +5,9 @@ class Solution:
         remainder = 1
         N = 1
         i = 1
-        while remainder%K != 0:
-            N = N*10+1
-            remainder = N%K
+        while remainder % K != 0:
+            N = N * 10 + 1
+            remainder = N % K
             if remainder in seen:
                 return -1
             seen.add(remainder)

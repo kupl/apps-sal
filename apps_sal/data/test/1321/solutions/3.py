@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    height = [] 
+    height = []
     width = []
     for i in range(n):
         a, b = map(int, input().split())
@@ -14,7 +14,9 @@ def main():
     height[a] = m_h
     for i in range(n):
         if height[i] != m_h:
-            print((s_w -width[i]) * m_h, end=' ')
+            print((s_w - width[i]) * m_h, end=' ')
         else:
-            print(s_m * (s_w -width[i]), end=' ')
+            print(s_m * (s_w - width[i]), end=' ')
+
+
 main()

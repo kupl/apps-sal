@@ -1,6 +1,8 @@
-3
 import sys
-input = lambda: sys.stdin.readline().strip()
+3
+def input(): return sys.stdin.readline().strip()
+
+
 for _ in range(int(input())):
     n = int(input())
     a = [int(x) for x in input().split()]
@@ -8,4 +10,3 @@ for _ in range(int(input())):
         print(1, 2, len(a))
     else:
         print(-1)
-

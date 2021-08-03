@@ -10,7 +10,7 @@ def kill(left, a, right, x, k, y):
         return (g // k) * x + (g % k) * y
     else:
         if max(a) > max(left, right):
-            return x + (g-k)*y
+            return x + (g - k) * y
         else:
             return g * y
 
@@ -47,4 +47,3 @@ def main():
 
 # for _ in range(int(input())):
 main()
-

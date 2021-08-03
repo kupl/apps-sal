@@ -1,11 +1,11 @@
 def find_a(array, n):
-    if n in [0,1,2,3]:
+    if n in [0, 1, 2, 3]:
         return array[n]
-    b1 = 3*array[1] - array[0] - array[2]
-    b2 = 3*array[2] - array[1] - array[3]
+    b1 = 3 * array[1] - array[0] - array[2]
+    b2 = 3 * array[2] - array[1] - array[3]
     if n > 3:
         ak = array[3]
-        bk = 3*b2 - b1 - array[2]
+        bk = 3 * b2 - b1 - array[2]
         ap = array[2]
         bp = b2
         i = 3

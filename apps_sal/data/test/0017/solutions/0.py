@@ -1,10 +1,11 @@
 def read_ints():
-	return [int(i) for i in input().split()]
+    return [int(i) for i in input().split()]
+
 
 n, k, t = read_ints()
 if t <= k:
-	print(t)
+    print(t)
 elif t > n:
-	print(k + n - t)
+    print(k + n - t)
 else:
-	print(k)
+    print(k)

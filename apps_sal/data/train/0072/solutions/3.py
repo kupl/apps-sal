@@ -11,10 +11,8 @@ for _ in range(int(input())):
                 break
             if i not in temp:
                 temp.append(i)
-                
+
         for i in range(len(arr)):
             result.extend(temp)
         print(len(result))
         print(*result)
-        
-

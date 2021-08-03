@@ -1,3 +1,3 @@
 h = input()
-ans = 'x'*len(h)
+ans = 'x' * len(h)
 print(ans)

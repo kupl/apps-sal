@@ -1,7 +1,8 @@
 from typing import List
 
+
 class Solution:
-    
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         sorted_arrs = sorted(arr)
         n = len(arr)

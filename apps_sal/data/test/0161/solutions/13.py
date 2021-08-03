@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 def f(n):
     nonlocal l
     res = []
@@ -10,6 +11,7 @@ def f(n):
         n //= 2
         l += 1
     return res[::-1]
+
 
 n = int(input())
 l = 0
@@ -31,7 +33,7 @@ while n != 2 ** l - 1:
     #print(n, n + 1)
     n += 1
     s = f(n)
-    
+
 print(len(ans) * 2)
 for i in ans:
-    print(i, end = ' ')
+    print(i, end=' ')

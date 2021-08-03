@@ -5,9 +5,11 @@ class Solution:
         N = len(arr)
         while q:
             cur = q.popleft()
-            if cur in visited: continue
+            if cur in visited:
+                continue
             visited.add(cur)
-            if arr[cur] == 0: return True
+            if arr[cur] == 0:
+                return True
             if cur + arr[cur] < N:
                 q.append(cur + arr[cur])
             if cur - arr[cur] >= 0:

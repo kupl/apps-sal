@@ -1,5 +1,6 @@
 from math import floor
 
+
 def duty_free(price: int, discount: int, holiday_cost: int) -> int:
     """
     How many bottles of duty free whiskey you would have to buy such that the saving 

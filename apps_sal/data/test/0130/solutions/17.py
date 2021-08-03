@@ -13,26 +13,24 @@ for i in range(n):
             y2 = max(j, y2)
             sa += 1
         if i > 0:
-            C[i][j] += C[i-1][j]
+            C[i][j] += C[i - 1][j]
         C[i][j] += sa
 if x2 == -1:
     print(1)
 else:
-    a = max(x2-x1, y2-y1)
+    a = max(x2 - x1, y2 - y1)
     ans = 1000000
     for i in range(n):
         for j in range(m):
             if i + a < n and j + a < m and i <= x1 and x2 <= i + a and j <= y1 and y2 <= j + a:
-                s = C[i+a][j+a]
+                s = C[i + a][j + a]
                 if i > 0:
-                    s -= C[i-1][j]
+                    s -= C[i - 1][j]
                 if j > 0:
-                    s -= C[i][j-1]
+                    s -= C[i][j - 1]
                 if i > 0 and j > 0:
-                    s -= C[i-1][j-1]
-                ans = min((a+1)*(a+1) - s, ans)
+                    s -= C[i - 1][j - 1]
+                ans = min((a + 1) * (a + 1) - s, ans)
     if ans == 1000000:
         ans = -1
     print(ans)
-
-

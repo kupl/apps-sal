@@ -11,7 +11,6 @@ for i in range(n - 1, 0, -1):
 p.sort()
 p.reverse()
 res = s + a[0]
-for i in range(k-1):
+for i in range(k - 1):
     res += p[i]
 print(res)
-

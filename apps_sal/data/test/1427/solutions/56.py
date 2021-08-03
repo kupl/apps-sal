@@ -1,7 +1,8 @@
 import sys
 import math
 import fractions
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 mod = 10**9 + 7
 
@@ -58,5 +59,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

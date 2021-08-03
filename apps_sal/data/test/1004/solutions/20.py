@@ -31,4 +31,4 @@ if len(days) == 0 or len(inside) > 0:
 else:
     print(len(days))
     for n in days:
-        print(n, end = " ")
+        print(n, end=" ")

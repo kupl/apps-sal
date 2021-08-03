@@ -32,7 +32,7 @@ class TwoLayerSet:
         top_i = bisect_left(top, key)
         if top_i != len(top) and key == top[top_i]:
             top.pop(top_i)
-            bottom[top_i].extend(bottom.pop(top_i+1))
+            bottom[top_i].extend(bottom.pop(top_i + 1))
             return True
         block = bottom[top_i]
         block_i = bisect_left(block, key)
@@ -97,7 +97,7 @@ def main():
     for i in range(0, n):
         idx[i] = i
     idx.sort(key=lambda i: - p[i])
-    t = TwoLayerSet(1/100)
+    t = TwoLayerSet(1 / 100)
     t.insert(-1)
     t.insert(n)
     ans = 0
@@ -115,4 +115,3 @@ def main():
 
 
 main()
-

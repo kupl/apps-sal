@@ -5,4 +5,3 @@ if c2 == 0 or (c2 != 0 and c1 % c2 == 0):
     print("YES")
 else:
     print("NO")
-

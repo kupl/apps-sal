@@ -3,5 +3,3 @@ if n2 >= n1:
     print("Second")
 else:
     print("First")
-
-

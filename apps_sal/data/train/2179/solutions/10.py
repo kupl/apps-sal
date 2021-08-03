@@ -6,6 +6,6 @@ l = list(map(int, input().split()))
 
 moneys = 0
 for x in l:
-	if att_first < x < att_second:
-		moneys += 1
+    if att_first < x < att_second:
+        moneys += 1
 print(moneys)

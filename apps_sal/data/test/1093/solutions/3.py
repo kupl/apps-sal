@@ -11,4 +11,3 @@ for i in range(w - 1):
     mx = max(mx, high[i + 1] - high[i])
     mn = min(mn, high[i + 1] - high[i])
 print(abs(mx), abs(mn))
-

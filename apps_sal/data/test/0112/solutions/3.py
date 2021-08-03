@@ -1,8 +1,8 @@
 def f(m):
     m = list(map(int, list(str(m))))
-    #print(m)
+    # print(m)
     for k in range(dd[n]):
-        #print(d[k])
+        # print(d[k])
         cur = 0
         for j in range(n):
             kub = d[k][j] - 1
@@ -13,7 +13,7 @@ def f(m):
         if cur == len(m):
             return True
     return False
-                
+
 
 n = int(input())
 a = [[], [], []]
@@ -29,6 +29,5 @@ if n == 1:
 ans = 0
 while f(ans + 1):
     ans += 1
-#print(f(88))
+# print(f(88))
 print(ans)
-

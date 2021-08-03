@@ -1,4 +1,4 @@
-def array_madness(a,b):
+def array_madness(a, b):
     totalOfA = 0
     totalOfB = 0
     for number in a:
@@ -7,9 +7,8 @@ def array_madness(a,b):
     for number in b:
         newNumber = number ** 3
         totalOfB += newNumber
-    
+
     if totalOfA > totalOfB:
         return True
     else:
         return False
-

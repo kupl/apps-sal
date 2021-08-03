@@ -4,7 +4,7 @@ class Solution:
         w = n - k
         left, right = 0, w - 1
         ans = float('-inf')
-        
+
         win_sum = sum(cardPoints[:w])
         total = sum(cardPoints)
         while right < n:
@@ -18,4 +18,3 @@ class Solution:
                 win_sum += cardPoints[right]
 
         return ans
-

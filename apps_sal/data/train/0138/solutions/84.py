@@ -11,4 +11,4 @@ class Solution:
             else:
                 pos, neg = 0, 0
             res = max(res, pos)
-        return res  
+        return res

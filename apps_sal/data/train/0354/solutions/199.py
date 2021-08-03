@@ -27,4 +27,3 @@ class Solution:
         for i in range(6):
             ans += dp[n][i][rollMax[i]] % MOD
         return ans % MOD
-

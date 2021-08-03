@@ -13,7 +13,7 @@ def main():
         for ss in [1 if ss == '(' else -1 for ss in s]:
             dst += ss
             mini = min(dst, mini)
-        
+
         if dst >= 0:
             pq.append((mini, dst))
         elif dst < 0:
@@ -36,6 +36,9 @@ def main():
     else:
         print('Yes')
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -3,7 +3,7 @@ def answer(s: str, t: str) -> int:
     for i in range(len(s)):
         if s[i] != t[i]:
             count += 1
-            
+
     return count
 
 
@@ -15,5 +15,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -8,4 +8,3 @@ def find(n):
             ans.append(i)
         i += 1
     return sum(ans)
-

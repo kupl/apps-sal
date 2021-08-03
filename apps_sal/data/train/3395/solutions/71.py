@@ -7,4 +7,3 @@ def remove_duplicate_words(s):
             res.append(w)
             visited.add(w)
     return " ".join(res)
-

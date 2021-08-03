@@ -18,6 +18,6 @@ for i in range(k):
     if c == 5:
         c = 1
         row += 2
-        
+
 for i in range(6):
     print(''.join([ss for ss in s[i]]))

@@ -3,12 +3,14 @@ import heapq as hq
 
 readline = sys.stdin.readline
 
-ns = lambda: readline().rstrip()
-ni = lambda: int(readline().rstrip())
-nm = lambda: list(map(int, readline().split()))
-nl = lambda: list(map(int, readline().split()))
+
+def ns(): return readline().rstrip()
+def ni(): return int(readline().rstrip())
+def nm(): return list(map(int, readline().split()))
+def nl(): return list(map(int, readline().split()))
 
 # eps = 10**-7
+
 
 def solve():
     s = ns()
@@ -27,7 +29,7 @@ def solve():
                     cnt += 5
                     if nx not in d:
                         d[nx] = ''
-                    d[nx] += 'NEWS'[3-i]
+                    d[nx] += 'NEWS'[3 - i]
                     d[cur] += x
                 cur = nx
                 break
@@ -39,4 +41,3 @@ def solve():
 T = ni()
 for _ in range(T):
     solve()
-

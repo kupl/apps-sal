@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, k = read()
 s = input()
 i = j = 0
@@ -16,7 +18,7 @@ while j < n:
     i += 1
     j += 1
     while j < n and s[j] == 'b':
-        j += 1 
+        j += 1
     ans = max(ans, j - i)
 i = j = 0
 cur = k
@@ -36,4 +38,3 @@ while j < n:
         j += 1
     ans = max(ans, j - i)
 print(ans)
-

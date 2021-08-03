@@ -1,6 +1,7 @@
 from functools import reduce
 from operator import mul
 
+
 def digits_product(product):
     if product == 0:
         return 10
@@ -18,5 +19,5 @@ def digits_product(product):
             digits.append((i, exponent))
     res = ""
     for digit, occurances in digits:
-        res += str(digit)*occurances
+        res += str(digit) * occurances
     return int(res[::-1]) if res and reduce(mul, [int(i) for i in res]) == temp else -1

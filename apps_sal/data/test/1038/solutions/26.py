@@ -1,4 +1,6 @@
 a, b = map(int, input().split())
+
+
 def xor(x):
     num = [0 for i in range(41)]
     for i in range(41):
@@ -7,6 +9,8 @@ def xor(x):
         num[i] += temp * (2 ** i)
         num[i] += max(temp2 - 2 ** i, 0)
     return num
+
+
 temp = [0 for i in range(41)]
 temp2 = xor(b)
 temp3 = xor(a - 1)

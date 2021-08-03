@@ -2,7 +2,7 @@ n, k = map(int, input().split())
 k = abs(k)
 
 ans = 0
-for x in range(k + 2, 2*n + 1):
+for x in range(k + 2, 2 * n + 1):
     b = min(n, x - 1)
     a = x - b
     res1 = b - a + 1

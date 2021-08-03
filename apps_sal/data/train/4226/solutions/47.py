@@ -5,4 +5,3 @@ def remove_smallest(numbers):
     else:
         arr.remove(min(arr))
         return arr
-

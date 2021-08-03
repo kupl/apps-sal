@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    odds = [i for i in range(1, n+1) if i % 2 != 0]
+    odds = [i for i in range(1, n + 1) if i % 2 != 0]
     ans = 0
     for i in odds:
         count = 0

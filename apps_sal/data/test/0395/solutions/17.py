@@ -18,4 +18,3 @@ if isPossible:
     print("YES")
 else:
     print("NO")
-

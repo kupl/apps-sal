@@ -3,16 +3,15 @@ class Solution:
         dp = [False] * (160000)
         m = 400
         for i in range(1, m):
-            dp[i*i] = True
+            dp[i * i] = True
         # print(dp[0:n])
-        
+
         for i in range(1, n + 1):
             for j in range(1, m):
                 if i > j * j:
-                    if not dp[i - j*j]:
+                    if not dp[i - j * j]:
                         dp[i] = True
                         break
                     # dp[i] = max(-dp[i - j*j], dp[i])
         # print(dp[0:n])
         return dp[n]
-

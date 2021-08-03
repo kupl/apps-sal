@@ -7,4 +7,3 @@ for c in input():
         l.append(c)
 
 print('Yes' if len(l) == 0 else 'No')
-

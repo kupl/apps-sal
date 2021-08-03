@@ -19,16 +19,15 @@ for c in S:
         if lp == 0:
             l = la * pow(3, lp, MOD)
         else:
-            l = la * pow(3, lp, MOD) + lp * pow(3, lp-1, MOD)
+            l = la * pow(3, lp, MOD) + lp * pow(3, lp - 1, MOD)
         if rp == 0:
             r = rc * pow(3, rp, MOD)
         else:
-            r = rc * pow(3, rp, MOD) + rp * pow(3, rp-1, MOD)
-        ans += l*r
+            r = rc * pow(3, rp, MOD) + rp * pow(3, rp - 1, MOD)
+        ans += l * r
         ans %= MOD
     if c == 'A':
         la += 1
     if c == '?':
         lp += 1
 print(ans)
-

@@ -12,9 +12,9 @@ print((max(list(map(
                     [list(chain(
                         a[i][:j],
                         [min(a[i][j], a[i][k] + a[k][j])],
-                        a[i][j+1:],
+                        a[i][j + 1:],
                     ))],
-                    a[i+1:],
+                    a[i + 1:],
                 )),
                 list(range(n)),
                 a,
@@ -24,4 +24,3 @@ print((max(list(map(
         ),
         list(range(n)),
         list([list(map(int, input().split())) for i in range(n)])))))))
-

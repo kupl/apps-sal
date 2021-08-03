@@ -1,7 +1,7 @@
 def primeFactors(n):
     list = []
     for i in range(2, round(n**0.5)):
-        while (n/i).is_integer():
+        while (n / i).is_integer():
             n /= i
             list.append(i)
     if len(list) < 2:

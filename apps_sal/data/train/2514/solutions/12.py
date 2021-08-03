@@ -4,10 +4,10 @@ class Solution:
         for i in range(len(arr1)):
             is_dist = True
             for j in range(len(arr2)):
-                if abs(arr1[i]-arr2[j]) <= d:
+                if abs(arr1[i] - arr2[j]) <= d:
                     is_dist = False
-            
+
             if is_dist == True:
                 count += 1
-                
+
         return count

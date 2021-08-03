@@ -4,6 +4,7 @@ def main():
 
     # Dinic's algorithm
     from collections import deque
+
     class Dinic:
         def __init__(self, N):
             self.N = N
@@ -61,28 +62,30 @@ def main():
                     flow += f
             return flow
 
-    inf = 1<<40
+    inf = 1 << 40
     N = int(input())
     A = list(map(int, input().split()))
-    dinic = Dinic(N+2)
+    dinic = Dinic(N + 2)
     ans = 0
     for i, a in enumerate(A):
         if a > 0:
             ans += a
             #dinic.add_edge(0, i+1, 0)
-            dinic.add_edge(i+1, N+1, a)
+            dinic.add_edge(i + 1, N + 1, a)
         else:
-            dinic.add_edge(0, i+1, -a)
+            dinic.add_edge(0, i + 1, -a)
             #dinic.add_edge(i+1, N+1, 0)
-    for i in range(1, N+1):
-        for k in range(1, N+1):
-            if i*k > N:
+    for i in range(1, N + 1):
+        for k in range(1, N + 1):
+            if i * k > N:
                 break
-            dinic.add_edge(i, i*k, inf)
+            dinic.add_edge(i, i * k, inf)
 
-    print(ans - dinic.flow(0, N+1))
+    print(ans - dinic.flow(0, N + 1))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

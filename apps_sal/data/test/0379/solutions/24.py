@@ -33,4 +33,3 @@ for _ in range(rows):
     piece.append(line)
 
 print(codeforces(piece))
-

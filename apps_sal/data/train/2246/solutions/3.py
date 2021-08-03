@@ -1,4 +1,4 @@
-from queue import PriorityQueue 
+from queue import PriorityQueue
 N, K = tuple(map(int, input().split()))
 X = list(map(int, input().split()))
 A = int(input())
@@ -14,9 +14,8 @@ for i in range(N):
             if K >= X[i]:
                 break
         if K < X[i]:
-            m=-1
-            break    
+            m = -1
+            break
     else:
         m_q.put(C[i])
 print(m)
-

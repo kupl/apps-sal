@@ -10,26 +10,27 @@ def check_field(i, j, c):
     if get_field(i + 2, j, c) and get_field(i + 1, j, c):
         return True
     if get_field(i, j - 2, c) and get_field(i, j - 1, c):
-        return True    
+        return True
     if get_field(i, j + 2, c) and get_field(i, j + 1, c):
         return True
     if get_field(i - 1, j, c) and get_field(i + 1, j, c):
         return True
     if get_field(i, j - 1, c) and get_field(i, j + 1, c):
         return True
-    
+
     if get_field(i + 2, j + 2, c) and get_field(i + 1, j + 1, c):
-        return True    
+        return True
     if get_field(i - 2, j - 2, c) and get_field(i - 1, j - 1, c):
         return True
     if get_field(i + 2, j - 2, c) and get_field(i + 1, j - 1, c):
-        return True    
+        return True
     if get_field(i - 2, j + 2, c) and get_field(i - 1, j + 1, c):
-        return True    
+        return True
     if get_field(i + 1, j + 1, c) and get_field(i - 1, j - 1, c):
-        return True    
+        return True
     if get_field(i - 1, j + 1, c) and get_field(i + 1, j - 1, c):
         return True
+
 
 d = [[''] * 4 for i in range(4)]
 for i in range(4):

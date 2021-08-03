@@ -1,1 +1,1 @@
-cockroach_speed=.036 .__rfloordiv__
+cockroach_speed = .036 .__rfloordiv__

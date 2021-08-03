@@ -17,4 +17,3 @@ class TestSetAlarm(unittest.TestCase):
 
     def test_should_return_false_when_employed_is_true_and_vacation_is_false(self):
         self.assertEqual(set_alarm(employed=True, vacation=False), True)
-

@@ -1,3 +1,3 @@
-N=int(input())
+N = int(input())
 
-print((1+N)*N//2)
+print((1 + N) * N // 2)

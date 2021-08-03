@@ -4,7 +4,10 @@ def hex_color(s):
         if a == b == c == n:
             return r
     m = max(a, b, c)
-    if m == a == b: return "yellow"
-    if m == a == c: return "magenta"
-    if m == b == c: return "cyan"
+    if m == a == b:
+        return "yellow"
+    if m == a == c:
+        return "magenta"
+    if m == b == c:
+        return "cyan"
     return "red" if m == a else "green" if m == b else "blue"

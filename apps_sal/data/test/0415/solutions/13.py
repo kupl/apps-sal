@@ -19,4 +19,3 @@ for i in range(n + 1):
             max_len = len_
 
 print(max_len)
-

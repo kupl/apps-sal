@@ -1,6 +1,7 @@
 a = input()
 b = input()
 
+
 def delL(inp):
     out = ''
     flag = False
@@ -12,7 +13,8 @@ def delL(inp):
     if out == '':
         return '0'
     return out
-    
+
+
 a = delL(a)
 b = delL(b)
 
@@ -31,6 +33,5 @@ else:
             flag = True
             print('<')
             break
-    if flag == False: 
-        print('=') 
-
+    if flag == False:
+        print('=')

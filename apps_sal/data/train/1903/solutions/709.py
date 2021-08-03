@@ -1,5 +1,7 @@
 from collections import defaultdict
 import heapq
+
+
 class Solution:
     def minCostConnectPoints(self, points) -> int:
         edges = defaultdict(list)
@@ -7,7 +9,7 @@ class Solution:
         connected_pts = set([0])
         pending_edges = []
         for i in range(n):
-            for j in range(i+1,n):
+            for j in range(i + 1, n):
                 w = abs(points[j][1] - points[i][1]) + abs(points[j][0] - points[i][0])
                 edges[i].append((w, j))
                 edges[j].append((w, i))
@@ -33,4 +35,3 @@ class Solution:
                         heapq.heappush(pending_edges, (next_edge[0], next_edge[1]))
                         # pending_edges.append((next_edge[0], next_edge[1]))
         return res
-

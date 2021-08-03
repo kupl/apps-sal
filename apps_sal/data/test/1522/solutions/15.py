@@ -16,5 +16,5 @@ for i in range(2 * n - 2):
             if d[b[i].lower()] == 0:
                 a.remove(b[i].lower())
         else:
-            count += 1    
+            count += 1
 print(count)

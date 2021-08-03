@@ -1,5 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
+
+
 def md(x, d):
     res = 0
     dd = 1
@@ -7,6 +9,7 @@ def md(x, d):
         dd *= d
         res += 1
     return res
+
 
 def cmp(a, b):
     d3a = md(a, 3)
@@ -16,6 +19,8 @@ def cmp(a, b):
     if d3a == d3b:
         return d2a < d2b
     return d3a > d3b
+
+
 for i in range(n):
     for j in range(i, n):
         if cmp(a[j], a[i]):

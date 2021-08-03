@@ -9,7 +9,8 @@ class Solution:
                     reverse[pattern[i]] = word[i]
                 else:
                     valid = fwd[word[i]] == pattern[i] and reverse[pattern[i]] == word[i]
-                    if not valid: break
-            if valid: 
+                    if not valid:
+                        break
+            if valid:
                 output.append(word)
         return output

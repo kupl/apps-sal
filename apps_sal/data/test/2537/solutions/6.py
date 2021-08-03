@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def check(s, t, p):
     p = Counter(p)
     idx = 0
@@ -12,6 +13,7 @@ def check(s, t, p):
             return False
     return idx == len(s)
 
+
 q = int(input())
 for _ in range(q):
     s = input()
@@ -21,4 +23,3 @@ for _ in range(q):
         print("YES")
     else:
         print("NO")
-

@@ -23,4 +23,3 @@ for t in range(1, 1000):
                 cnt += 1
     ans = max(ans, cnt)
 print(ans)
-

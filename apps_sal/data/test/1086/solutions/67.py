@@ -29,4 +29,4 @@ for i in range(D2):
     if (tmp >> i) & 1:
         ans = min(ans, abs(i - D))
 
-print (ans)
+print(ans)

@@ -13,34 +13,33 @@
 import sys
 from collections import defaultdict as dd
 
-mod=10**9+7
+mod = 10**9 + 7
+
 
 def ri(flag=0):
-	if flag==0:
-		return [int(i) for i in sys.stdin.readline().split()]
-	else:
-		return int(sys.stdin.readline())
+    if flag == 0:
+        return [int(i) for i in sys.stdin.readline().split()]
+    else:
+        return int(sys.stdin.readline())
+
 
 n = ri(1)
 a = input()
 
-b= []
+b = []
 
 time = [0 for i in range(5030)]
 
 
 for i in range(n):
-	x,y = ri()
-	cur = int(a[i])
-	for j in range(y):
-		time[j] += cur
-	for j in range(5010):
-		if j%x==0:
-			cur = cur^1
-		time[y+j] += cur
-		
+    x, y = ri()
+    cur = int(a[i])
+    for j in range(y):
+        time[j] += cur
+    for j in range(5010):
+        if j % x == 0:
+            cur = cur ^ 1
+        time[y + j] += cur
+
 
 print(max(time))
-
-
-

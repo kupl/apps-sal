@@ -41,7 +41,7 @@ def resolve():
     a = list(map(int, input().split()))
     an = [0] * N
     for i in a:
-        an[i-1] += 1
+        an[i - 1] += 1
     an.sort(reverse=True)
     ans = 0
     for i in an:
@@ -55,5 +55,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

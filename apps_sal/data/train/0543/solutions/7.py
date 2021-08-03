@@ -1,13 +1,13 @@
 # cook your dish here
 for _ in range(int(input())):
     rt = int(input())
-    tr= list(map(int,input().split()))
+    tr = list(map(int, input().split()))
     rd = int(input())
-    dr = list(map(int,input().split()))
+    dr = list(map(int, input().split()))
     st = int(input())
-    ts = list(map(int,input().split()))
+    ts = list(map(int, input().split()))
     sd = int(input())
-    ds = list(map(int,input().split()))
+    ds = list(map(int, input().split()))
     l = []
     for i in ts:
         if i in tr:
@@ -22,4 +22,4 @@ for _ in range(int(input())):
     if "no" in l:
         print("no")
     else:
-        print("yes") 
+        print("yes")

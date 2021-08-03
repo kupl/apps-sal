@@ -6,4 +6,3 @@ if ans < wrong[0]:
     print(ans)
 else:
     print(-1)
-

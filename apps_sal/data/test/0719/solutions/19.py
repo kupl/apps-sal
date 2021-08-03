@@ -9,7 +9,7 @@ def next(x):
         r -= 1
     if (r == -len(x) - 1):
         y = ['1'] + ['0'] * (len(x) - 1) + ['9']
-        #print('\t\ty')
+        # print('\t\ty')
         return y
     x[r] = str(int(x[r]) + 1)
     x[len(x) + r + 1:] = ['0'] * (abs(r + 1))

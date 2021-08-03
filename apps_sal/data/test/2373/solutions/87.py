@@ -14,6 +14,8 @@ def input(): return sys.stdin.readline().strip()
 def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
@@ -23,7 +25,7 @@ P = LIST()
 
 P.append(-1)
 
-## pattern 1
+# pattern 1
 # ans = 0
 # i = 0
 #
@@ -36,13 +38,12 @@ P.append(-1)
 #
 # print(ans)
 
-## pattern 2
+# pattern 2
 ans = 0
 i = 0
 for i in range(N):
-    if P[i] == i+1:
-        P[i], P[i+1] = P[i+1], P[i]
+    if P[i] == i + 1:
+        P[i], P[i + 1] = P[i + 1], P[i]
         ans += 1
 
 print(ans)
-

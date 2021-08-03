@@ -6,7 +6,7 @@ class Component:
         self.max_row = float('-inf')
         self.min_col = float('inf')
         self.max_col = float('-inf')
-        
+
     def add_cell(self, u):
         self.cells.add(u)
         self.min_row = min(self.min_row, u[0])
@@ -17,10 +17,11 @@ class Component:
     def remove_cell(self, u):
         self.cells.remove(u)
 
+
 class Solution:
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
         grid = targetGrid
-        
+
         def discover_components():
             components = {}
             for i in range(len(grid)):
@@ -30,14 +31,14 @@ class Solution:
                         components[color] = Component(color)
                     components[color].add_cell((i, j))
             return components
-        
+
         def is_complete_rect(c):
             for i in range(c.min_row, c.max_row + 1):
                 for j in range(c.min_col, c.max_col + 1):
                     if grid[i][j] != c.color:
                         return False
             return True
-        
+
         def replace_holes(cx, marked_for_removal):
             # Go through cells from components marked for removal and see if the
             # holes in cx could be replaced with the cells that we will remove
@@ -71,9 +72,8 @@ class Solution:
                     break
             if not found_new_comp_to_remove:
                 return False
-            
+
             for c in list(components.keys()):
                 replace_holes(components[c], marked_for_removal)
 
         return True
-

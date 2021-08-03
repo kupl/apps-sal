@@ -7,12 +7,11 @@
 #a = [list(input()) for _ in range(n)]
 
 
-W,a,b = list(map(int, input().split()))
+W, a, b = list(map(int, input().split()))
 
-if (b+W < a):
-    print((a-(b+W)))
-elif (a+W < b):
-    print((b-(a+W)))
+if (b + W < a):
+    print((a - (b + W)))
+elif (a + W < b):
+    print((b - (a + W)))
 else:
     print((0))
-

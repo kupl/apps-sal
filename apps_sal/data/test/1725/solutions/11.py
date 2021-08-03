@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     (n, m, d) = list(map(int, sys.stdin.readline().split(' ')))
     nums = []
@@ -13,12 +14,10 @@ def main():
             return
     nums = sorted(nums)
     ret = 0
-    median = nums[k//2]
+    median = nums[k // 2]
     for i in range(k):
         ret += abs((nums[i] - median) // d)
     sys.stdout.write("{}\n".format(ret))
 
 
 main()
-
-

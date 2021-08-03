@@ -1,8 +1,9 @@
 from collections import deque
 
+
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
-        
+
         count = 0
         d = deque(arr)
         if k > len(arr):
@@ -19,4 +20,3 @@ class Solution:
             d.appendleft(winner)
             d.append(loser)
         return d[0]
-

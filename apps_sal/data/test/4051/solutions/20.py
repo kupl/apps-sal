@@ -9,11 +9,12 @@ def topple(a):
 
     return a
 
+
 def ravioli(a):
     res = []
     while a:
         a = topple(a)
-        best = 0 
+        best = 0
         for i in range(len(a)):
             if a[i] > a[best]:
                 best = i
@@ -21,6 +22,7 @@ def ravioli(a):
         a = a[:best] + a[best + 1:]
 
     return list(reversed(res))
+
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -32,4 +34,3 @@ if b == c:
     print('YES')
 else:
     print('NO')
-

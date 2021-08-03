@@ -1,4 +1,6 @@
 import re
+
+
 def wheres_wally(s):
     try:
         return [m.start() for m in
@@ -6,4 +8,3 @@ def wheres_wally(s):
                             s)][0]
     except:
         return -1
-

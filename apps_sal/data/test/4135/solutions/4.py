@@ -1,8 +1,7 @@
-n=int(input())
-s=input()
-for x in range(1,n+1):
-    if(n%x==0):
-        #print(x,s[:x])
-        s=s[:x][::-1]+s[x:]
+n = int(input())
+s = input()
+for x in range(1, n + 1):
+    if(n % x == 0):
+        # print(x,s[:x])
+        s = s[:x][::-1] + s[x:]
 print(s)
-

@@ -13,14 +13,14 @@ class ProductOfNumbers:
         if k >= len(self.nums):
             return 0
         return self.nums[-1] // self.nums[-k - 1]
-    
+
 
 class SlidingWindow:
     def __init__(self, k: int):
         self.k = k
         self.q = deque()
         self.zero_cnt = 0
-    
+
     def add(self, val: int) -> None:
         if val == 0:
             self.zero_cnt = self.k
@@ -43,4 +43,3 @@ class SlidingWindow:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

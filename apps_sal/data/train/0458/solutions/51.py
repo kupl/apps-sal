@@ -14,7 +14,7 @@ class Solution:
     #                 return remove
     #         remove += 1
     #     return -1
-    
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         n = result = len(nums)
         need = cur = 0
@@ -28,4 +28,3 @@ class Solution:
             want = (p - need + cur) % p
             result = min(result, i - last[want])
         return result if result < n else -1
-

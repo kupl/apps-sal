@@ -4,14 +4,18 @@ class Solution:
         for i in range(len(A)):
             for j in range(len(A[i])):
                 pos = A[i][j]
-                if pos != 1: continue
+                if pos != 1:
+                    continue
                 for x in range(len(B)):
                     for y in range(len(B[x])):
                         pos = B[x][y]
-                        if pos != 1: continue
+                        if pos != 1:
+                            continue
                         xdiff, ydiff = y - j, x - i
-                        if (xdiff,  ydiff) not in dic:
-                            dic[(xdiff,  ydiff)] = 1
-                        else: dic[(xdiff,  ydiff)] += 1
-        if len(dic) == 0: return 0
+                        if (xdiff, ydiff) not in dic:
+                            dic[(xdiff, ydiff)] = 1
+                        else:
+                            dic[(xdiff, ydiff)] += 1
+        if len(dic) == 0:
+            return 0
         return max(dic.values())

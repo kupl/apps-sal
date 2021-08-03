@@ -11,13 +11,11 @@ def get_strings(city):
             if index == (len(city) - 1) and i not in string:
                 string += i.lower() + ':' + ('*' * asterisks)
             if index != (len(city) - 1):
-                string += i.lower() + ':' + ('*' * asterisks) +','
+                string += i.lower() + ':' + ('*' * asterisks) + ','
                 index = index + 1
-    if string[-1] == ',':          
+    if string[-1] == ',':
         lst = list(string)
         lst[-1] = ''
         new = ''.join(lst)
         return new
     return string
-        
-

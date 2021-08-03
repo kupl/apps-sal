@@ -1,10 +1,12 @@
 def main():
     ast = []
+
     def fact(x):
         if x == 0:
             return 1
         return x * fact(x - 1)
     n = input()
+
     def helper(dc):
         a = 0
         temp = [dc[j] for j in dc if j != '0']
@@ -30,5 +32,6 @@ def main():
         dct[i] = n.count(i)
     print(helper(dct))
     return 0
-main()
 
+
+main()

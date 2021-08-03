@@ -7,6 +7,6 @@ cx -= ax
 by -= ay
 cy -= ay
 if bx * cx <= 0 or by * cy <= 0:
-	print("NO")
+    print("NO")
 else:
-	print("YES")
+    print("YES")

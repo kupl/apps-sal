@@ -1,6 +1,6 @@
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
-        
+
         n = len(stoneValue)
         dp = [float('-inf')] * n
         dp[-1] = stoneValue[-1]
@@ -10,9 +10,8 @@ class Solution:
                 s += stoneValue[j] if j < n else 0
                 nxt = dp[j + 1] if j + 1 < n else 0
                 dp[i] = max(dp[i], s - nxt)
-        
-                
-                
+
+
 #         @lru_cache(None)
 #         def dp(cur):
 #             if cur == len(stoneValue) - 1:
@@ -36,6 +35,3 @@ class Solution:
             return 'Bob'
         else:
             return 'Tie'
-
-            
-

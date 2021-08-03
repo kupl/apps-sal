@@ -6,6 +6,7 @@ import sys
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 
+
 def main():
     n, a, b = [int(x) for x in input().split()]
     dc = {}
@@ -34,4 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -9,4 +9,5 @@ class PartialKeysDict(dict):
             if q.startswith(key):
                 return super().__getitem__(q)
 
+
 partial_keys = PartialKeysDict

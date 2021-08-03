@@ -6,7 +6,7 @@ if '-' in S[:A]:
     result = 'No'
 if '-' not in S[A]:
     result = 'No'
-if '-' in S[A+1:]:
+if '-' in S[A + 1:]:
     result = 'No'
 
 print(result)

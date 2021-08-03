@@ -16,4 +16,3 @@ for i in range(n):
 print(s)
 for i in arr:
     print(*i)
-

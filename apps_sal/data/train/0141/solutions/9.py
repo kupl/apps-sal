@@ -10,7 +10,7 @@ class Solution:
         board_cnt = 0
 
         while left <= right:
-            #key
+            # key
             if left == right:
                 board_cnt += 1
                 break
@@ -22,5 +22,5 @@ class Solution:
             else:
                 right -= 1
                 board_cnt += 1
-            
-        return board_cnt        
+
+        return board_cnt

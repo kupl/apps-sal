@@ -3,6 +3,7 @@
 from math import ceil
 import heapq
 
+
 def main():
     n, d, a = list(map(int, input().split()))
     q = []
@@ -23,7 +24,9 @@ def main():
             bomb -= h
     print(res)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -24,4 +24,3 @@ for h, row in enumerate(a):
             tmp.append(element)
     if tmp:
         print(*tmp, sep="")
-

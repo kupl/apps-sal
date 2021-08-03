@@ -7,4 +7,3 @@ def bumps(road):
     if num_bumps > 15:
         return 'Car Dead'
     return 'Woohoo!'
-

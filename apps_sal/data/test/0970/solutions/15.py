@@ -10,5 +10,5 @@ for i in range(n):
     s_1 = s_1 + abs(nech - arr[i])
     nech += 2
     s_2 = s_2 + abs(chet - arr[i])
-    chet +=2
-print(min(s_1,s_2))
+    chet += 2
+print(min(s_1, s_2))

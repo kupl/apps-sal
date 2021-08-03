@@ -1,4 +1,4 @@
-t=int(input())
+t = int(input())
 for i in range(t):
-    s=input()
-    print(int(s,16))
+    s = input()
+    print(int(s, 16))

@@ -13,4 +13,3 @@ for _ in range(m):
     cost[a] = max(cost[a], x)
 
 print(sum(cost.values()))
-

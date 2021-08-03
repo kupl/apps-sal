@@ -8,4 +8,3 @@ def calc_digits(n: int, k: int) -> str:
 n, k = list(map(int, input().split()))
 
 print((len(calc_digits(n, k))))
-

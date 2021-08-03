@@ -3,6 +3,7 @@ inFile = stdin
 tokens = []
 tokens_next = 0
 
+
 def next_str():
     nonlocal tokens, tokens_next
     while tokens_next >= len(tokens):
@@ -11,8 +12,10 @@ def next_str():
     tokens_next += 1
     return tokens[tokens_next - 1]
 
+
 def nextInt():
     return int(next_str())
+
 
 def check(a, n):
     # a must be sorted in decresing order
@@ -31,12 +34,13 @@ def check(a, n):
             ind += 1
             ind %= len(l)
             if ind == starting_pos:
-#                 print(l, 0)
+                #                 print(l, 0)
                 return 0
         l[ind] += [i]
         allowed[ind] = min(i, allowed[ind] - 1)
 #     print(l, 1)
     return 1
+
 
 def solve(a):
     a.sort(reverse=1)
@@ -46,16 +50,13 @@ def solve(a):
     while low + 1 < high:
         m = (low + high) // 2
         if check(a, m):
-            high =  m
-        else :
+            high = m
+        else:
             low = m
     return high
+
 
 n = nextInt()
 a = [nextInt() for i in range(n)]
 
 print(solve(a))
-
-
-
-

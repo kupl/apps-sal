@@ -15,6 +15,3 @@ class Solution:
                 arr.append(second)
                 turns += 1
         return arr[0]
-            
-                
-

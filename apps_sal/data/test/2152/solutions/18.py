@@ -9,4 +9,3 @@ for i in range(n):
     min_price = min(min_price, price[i])
     ans += min_price * meat[i]
 print(ans)
-

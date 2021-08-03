@@ -3,6 +3,7 @@
 
 ans = set()
 
+
 def gen(cur, n, ops):
     if len(cur) == n:
         ans.add(cur)
@@ -19,4 +20,3 @@ for i in range(q):
 
 gen("a", n, ops)
 print(len(ans))
-

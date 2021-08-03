@@ -13,8 +13,9 @@ def check(x):
     cnt = 0
     for ri in R:
         if ri - x * b > 0:
-            cnt += (ri - x * b + a-b - 1) // (a-b)
+            cnt += (ri - x * b + a - b - 1) // (a - b)
     return cnt <= x
+
 
 while True:
     if r - l <= 1:
@@ -29,4 +30,3 @@ if check(l):
     print(l)
 else:
     print(r)
-

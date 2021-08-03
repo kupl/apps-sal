@@ -1,12 +1,12 @@
 def main():
     n = int(input())
-    sweets = list(map(int,input().split()))
+    sweets = list(map(int, input().split()))
     sweets.sort()
     kids = {}
 
     for i in range(n):
-        for j in range(i+1,n):
-            s = sweets[i]+sweets[j]
+        for j in range(i + 1, n):
+            s = sweets[i] + sweets[j]
             if s not in list(kids.keys()):
                 kids[s] = 1
             else:
@@ -18,7 +18,7 @@ def main():
         if kids[i] > max_kids:
             max_kids = kids[i]
 
-    print (max_kids)
+    print(max_kids)
+
 
 main()
-

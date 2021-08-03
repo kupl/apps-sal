@@ -17,4 +17,3 @@ class Solution:
                 boats += 1
                 r -= 1
         return boats
-

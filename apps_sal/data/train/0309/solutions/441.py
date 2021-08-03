@@ -14,4 +14,3 @@ class Solution:
                     self.memo[(j, diff)] = 2
                 self.res = max(self.res, self.memo[(j, diff)])
         return self.res
-

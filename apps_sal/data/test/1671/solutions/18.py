@@ -8,7 +8,7 @@ end = []
 for i in range(len(m)):
     m[i] = int(m[i])
 
-min_req = math.floor(sum(m)/len(m))
+min_req = math.floor(sum(m) / len(m))
 remainder = sum(m) % len(m)
 
 m.sort()

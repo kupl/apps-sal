@@ -9,7 +9,7 @@ for i in range(1, 21837):
     ends.append(ends[-1] + seq_l)
     template += str(i)
 
-    
+
 q = int(input())
 for _ in range(q):
     k = int(input())
@@ -19,4 +19,3 @@ for _ in range(q):
         print(str(i - 1)[-1])
     else:
         print(template[k - 1])
-

@@ -4,7 +4,7 @@ class Solution:
         coins.sort(reverse=True)
         self.dfs(coins, amount, 0)
         return -1 if type(self.smallest) is float else self.smallest
-    
+
     def dfs(self, coins, amount, prev_count):
         if len(coins) == 0:
             return

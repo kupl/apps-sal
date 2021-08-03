@@ -1,11 +1,12 @@
 from heapq import heappush, heappop
 
+
 class Solution:
     def longestSubarray(self, nums, limit):
         discard = -1
         res = 0
         minq, maxq = [], []
-        
+
         for i in range(len(nums)):
             while (minq and abs(nums[i] - minq[0][0]) > limit):
                 _, index = heappop(minq)
@@ -14,8 +15,8 @@ class Solution:
             while (maxq and abs(nums[i] + maxq[0][0]) > limit):
                 _, index = heappop(maxq)
                 discard = max(discard, index)
-            heappush(maxq, (-nums[i], i))            
-            
+            heappush(maxq, (-nums[i], i))
+
             res = max(res, i - discard)
-        
+
         return res

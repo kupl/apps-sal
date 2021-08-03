@@ -26,11 +26,11 @@ def solve(k, n, a):
         return False, None, None
     tsum = asum / k
     num_map = build_num_map(k, n, a)
-    masks = [None]*(1 << k)
-    simple = [False]*(1 << k)
-    answer = [False]*(1 << k)
-    left = [0]*(1 << k)
-    right = [0]*(1 << k)
+    masks = [None] * (1 << k)
+    simple = [False] * (1 << k)
+    answer = [False] * (1 << k)
+    left = [0] * (1 << k)
+    right = [0] * (1 << k)
     by_last_one = [[] for _ in range(k)]
     for i in range(k):
         for j in range(n[i]):
@@ -145,5 +145,6 @@ def calc_sums(k, n, a):
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -9,7 +9,7 @@ for _ in range(num_students):
     cats[cat_idx].append(skill)
 
 for cat in cats:
-    cat.sort(key=lambda x : -x)
+    cat.sort(key=lambda x: -x)
 
 entries = []
 
@@ -41,4 +41,3 @@ for entry in entries:
 best_skill = max(total_skill, best_skill)
 
 print(best_skill)
-

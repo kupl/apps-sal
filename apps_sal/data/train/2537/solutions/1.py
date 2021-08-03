@@ -8,15 +8,15 @@ class Solution:
                 i = 0
             else:
                 i += 1
-                
+
         i = start
         counterclockwise = 0
         while i != destination:
-            
+
             if i == 0:
                 i = len(distance) - 1
             else:
                 i -= 1
             counterclockwise += distance[i]
-            
+
         return min(clockwise, counterclockwise)

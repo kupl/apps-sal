@@ -6,7 +6,10 @@ from heapq import heappop, heappush
 from itertools import accumulate, permutations, combinations
 from sys import stdout
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n = int(input())
 dp = defaultdict(lambda: [0, 0])
 dp[0] = [1, 0]

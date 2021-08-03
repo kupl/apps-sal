@@ -1,7 +1,7 @@
 n, m = map(int, input().split())
 arr = [int(x) for x in input().split()]
 d = {}
-for i in range(1, n+1):
+for i in range(1, n + 1):
     d[i] = 0
 tmp = set()
 for i in arr:
@@ -17,6 +17,3 @@ for i in arr:
                 tmp.add(i)
     else:
         print('0', end='')
-    
-              
-    

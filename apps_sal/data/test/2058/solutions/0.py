@@ -25,4 +25,3 @@ for i in range(len(a)):
     lowest += 1
     highest += 1
 print(total)
-

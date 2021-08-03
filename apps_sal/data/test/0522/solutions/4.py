@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class EProductOrientedRecurrence:
     def solve(self):
@@ -46,8 +47,8 @@ class EProductOrientedRecurrence:
         ans %= MOD
         print(ans)
 
+
 solver = EProductOrientedRecurrence()
 input = sys.stdin.readline
 
 solver.solve()
-

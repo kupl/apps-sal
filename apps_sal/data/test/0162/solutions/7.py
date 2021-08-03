@@ -4,4 +4,3 @@ for i in sorted(a)[::-1]:
     if (k % i == 0):
         print(k // i)
         break
-

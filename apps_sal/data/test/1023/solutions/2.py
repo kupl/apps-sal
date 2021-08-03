@@ -20,4 +20,3 @@ for i in range(k + 1):
         return
 
 print(ans)
-

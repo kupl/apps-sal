@@ -5,10 +5,9 @@ class Solution:
         msk = 0
         ans = 1
         for i in range(len(s)):
-            msk ^= (1<<int(s[i]))
+            msk ^= (1 << int(s[i]))
             earliest_occ[msk] = min(i, earliest_occ[msk])
             for j in range(10):
-                ans = max(ans, i - earliest_occ[msk^(1<<j)])
+                ans = max(ans, i - earliest_occ[msk ^ (1 << j)])
             ans = max(ans, i - earliest_occ[msk])
         return ans
-

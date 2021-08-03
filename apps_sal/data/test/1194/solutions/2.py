@@ -24,11 +24,10 @@ def find(fen, k):
             prevsum += fen[curr]
     return ans + 1
 
-def Rank(x,BIT) :
 
-    return sum(BIT,x)
+def Rank(x, BIT):
 
-
+    return sum(BIT, x)
 
 
 n = int(input())
@@ -39,31 +38,24 @@ factp = []
 factq = []
 
 
-
-
 BIT = [0] * (n + 1)
 for j in range(n):
-    update(BIT,j+1,1)
+    update(BIT, j + 1, 1)
 
 
 for val in p:
-    factp.append(Rank(val+1,BIT)-1)
-    update(BIT,val+1,-1)
-
-
+    factp.append(Rank(val + 1, BIT) - 1)
+    update(BIT, val + 1, -1)
 
 
 BIT = [0] * (n + 1)
 for j in range(n):
-    update(BIT,j+1,1)
+    update(BIT, j + 1, 1)
 
 
 for val in q:
-    factq.append(Rank(val+1,BIT)-1)
-    update(BIT,val+1,-1)
-
-
-
+    factq.append(Rank(val + 1, BIT) - 1)
+    update(BIT, val + 1, -1)
 
 
 carry = 0
@@ -79,11 +71,11 @@ for i in range(n - 1, -1, -1):
 
 BIT = [0] * (n + 1)
 for j in range(n):
-    update(BIT,j+1,1)
-res=[]
+    update(BIT, j + 1, 1)
+res = []
 for i in range(n):
-    k = factp[i]+1
-    res.append(find(BIT,k)-1)
-    update(BIT,res[-1]+1,-1)
+    k = factp[i] + 1
+    res.append(find(BIT, k) - 1)
+    update(BIT, res[-1] + 1, -1)
 
 print(*res)

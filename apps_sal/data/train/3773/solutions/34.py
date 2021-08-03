@@ -12,4 +12,3 @@ def isValid(formula):
         if 5 not in formula:
             return False
     return True
-

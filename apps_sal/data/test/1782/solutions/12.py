@@ -16,4 +16,3 @@ else:
         ans.extend([i for i in range(k, 0, -1)])
     ans.extend([(k - (i % k)) for i in range(k * 3 + 1, n + 1)])
     print(*ans)
-

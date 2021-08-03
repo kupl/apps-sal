@@ -27,7 +27,8 @@ def main():
 
     count = 0
     for k in range(A, B + 1):
-        if (k > A) and (v[k - 1] != max_average): break
+        if (k > A) and (v[k - 1] != max_average):
+            break
         count += choose(contained[-1], contained[k])
 
     print(max_average)
@@ -43,5 +44,6 @@ def __starting_point():
 
 # v[:A]は一つの値からなる->平均値を下げずに要素を追加できる可能性
 # v[:A]は異なる値を含む->範囲外の値はより小さいので要素を追加できない
+
 
 __starting_point()

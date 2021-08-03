@@ -15,5 +15,3 @@ if t_count <= a_count:
     print('Yes')
 else:
     print('No')
-
-

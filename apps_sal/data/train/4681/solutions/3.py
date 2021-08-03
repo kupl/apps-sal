@@ -2,7 +2,9 @@ def xx_key(a):
     if a.islower():
         return ord(a)
     else:
-        return ord(a)+32
+        return ord(a) + 32
+
+
 def alphabetized(s):
     s = ''.join(s.split())
     m = sorted(s, key=xx_key)

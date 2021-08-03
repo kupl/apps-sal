@@ -1,5 +1,5 @@
-n = input();
-li = input();
+n = input()
+li = input()
 n = int(n)
 li = li.split()
 valid = "Yes"
@@ -8,4 +8,3 @@ for i in range(0, n - 1):
         valid = "No"
         break
 print(valid)
-

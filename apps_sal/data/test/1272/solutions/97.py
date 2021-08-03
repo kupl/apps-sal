@@ -90,4 +90,3 @@ for a, b in reversed(edge):
 ans.pop()
 for i in reversed(ans):
     print(i)
-

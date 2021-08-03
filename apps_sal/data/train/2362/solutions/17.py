@@ -19,12 +19,12 @@ for i in range(q):
         if f4 == 0:
             if b <= y:
                 b = y
-    cx,cy=None,None
+    cx, cy = None, None
     ans = 1
     if l <= r:
         cx = l
     else:
-        ans =0
+        ans = 0
     if b <= t:
         cy = b
     else:
@@ -33,5 +33,3 @@ for i in range(q):
         print(ans)
     else:
         print(ans, cx, cy)
-
-

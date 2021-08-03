@@ -9,7 +9,7 @@ if N == 1:
     return
 
 ans = 0
-coef = pow(2, N-1, mod)
+coef = pow(2, N - 1, mod)
 for c in C:
     ans += c * coef
     ans %= mod

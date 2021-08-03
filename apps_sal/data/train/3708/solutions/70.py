@@ -19,5 +19,5 @@ def hex_to_dec(s):
     }
     ans = 0
     for c in s:
-        ans = 16*ans + D[c]
+        ans = 16 * ans + D[c]
     return ans

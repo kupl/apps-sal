@@ -6,6 +6,8 @@ def dfs(i):
     if m1 + a[i * 2] < m2 + a[i * 2 + 1]:
         return x1 + x2 + m2 + a[i * 2 + 1] - m1 - a[i * 2], m2 + a[i * 2 + 1]
     return x1 + x2 + m1 + a[i * 2] - m2 - a[i * 2 + 1], m1 + a[i * 2]
+
+
 n = int(input())
 a = [0, 0] + [int(i) for i in input().split()]
 print(dfs(1)[0])

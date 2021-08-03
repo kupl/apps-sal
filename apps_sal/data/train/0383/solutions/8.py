@@ -1,5 +1,6 @@
 from collections import defaultdict, Counter
 
+
 class UF:
     def __init__(self, keys):
         self.uf = {}
@@ -18,6 +19,7 @@ class UF:
         xx = self.find(x)
         yy = self.find(y)
         self.uf[xx] = yy
+
 
 class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:

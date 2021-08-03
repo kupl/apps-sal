@@ -1,31 +1,31 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        if m==2:
-            return max(position)-min(position)
+        if m == 2:
+            return max(position) - min(position)
         position.sort()
-        l,r=1,(max(position)-min(position)+1)//(m-1)
-        #print(l,r)
+        l, r = 1, (max(position) - min(position) + 1) // (m - 1)
+        # print(l,r)
+
         def helper(mindist):
-            #print(mindist)
-            cnt=m-1
-            cur=min(position)
+            # print(mindist)
+            cnt = m - 1
+            cur = min(position)
             for i in position[1:]:
-                if i-cur>=mindist:
-                    cur=i
-                    cnt-=1
-                    if cnt==0:
+                if i - cur >= mindist:
+                    cur = i
+                    cnt -= 1
+                    if cnt == 0:
                         return True
             return False
         if helper(r):
             return r
-        while l<r:
-            mid=l+(r-l)//2
+        while l < r:
+            mid = l + (r - l) // 2
             if helper(mid):
-                l=mid+1
+                l = mid + 1
             else:
-                r=mid
-        #if helper(l):
-            #return l
-        #else:
-        return l-1
-
+                r = mid
+        # if helper(l):
+            # return l
+        # else:
+        return l - 1

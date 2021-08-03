@@ -8,7 +8,7 @@ ans = set()
 for i in range(len(A)):
     elem = A[i]
     summa += elem
-    
+
     try:
         d[elem].add(i)
     except:
@@ -17,14 +17,14 @@ for i in range(len(A)):
 
 for i in range(len(A)):
     elem = A[i]
-    
+
     if summa - elem <= elem:
         continue
-    
+
     x = summa - (elem * 2)
     if x in d.keys():
         s = d[x]
-        
+
         for j in s:
             if j != i:
                 ans.add(j)

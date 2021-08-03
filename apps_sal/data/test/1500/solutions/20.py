@@ -10,10 +10,8 @@ while (x[left_index] + k < x[-1]):
         right_index += 1
     right_index -= 1
     count += 1
-    if (count > n): 
+    if (count > n):
         count = -1
         break
     left_index = right_index
 print(count)
-
-

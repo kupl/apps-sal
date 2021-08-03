@@ -8,7 +8,7 @@ for i in range(num):
     b = f[1]
     tup = (a, b)
     l.append(tup)
-    
+
 l.sort()
 c = 0
 for el in l:
@@ -17,6 +17,6 @@ for el in l:
     if b >= c:
         c = b
     else:
-        c = a 
+        c = a
 
 print(c)

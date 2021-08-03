@@ -12,4 +12,3 @@ while e < n:
     z = e
     e += 1
 print(m)
-

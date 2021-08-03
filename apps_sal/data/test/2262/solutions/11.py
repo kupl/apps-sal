@@ -8,4 +8,3 @@ for i in s:
     else:
         final.append(i)
 print(len(final))
-

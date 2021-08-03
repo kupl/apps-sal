@@ -5,4 +5,5 @@ def divisors(n):
             counter += 1
     return counter
 
+
 divisors(2)

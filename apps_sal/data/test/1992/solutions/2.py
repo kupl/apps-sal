@@ -6,7 +6,7 @@ def foo():
         a[i] -= 1
         b[a[i]] = i
     c = list(map(int, input().split()))
-    answer = 0;
+    answer = 0
     for element in c:
         element -= 1
         answer += b[element] // k + 1
@@ -15,6 +15,6 @@ def foo():
             b[a[b[element]]] += 1
             b[element] -= 1
     return answer
-        
-print(foo())
 
+
+print(foo())

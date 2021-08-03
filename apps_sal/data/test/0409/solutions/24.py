@@ -6,5 +6,4 @@ if i != -1 and s.find('BA', i + 2) != -1:
 elif j != -1 and s.find('AB', j + 2) != -1:
     print('YES')
 else:
-   print('NO')
-
+    print('NO')

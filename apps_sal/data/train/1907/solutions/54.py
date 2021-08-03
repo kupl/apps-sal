@@ -12,7 +12,7 @@ class Solution:
                 yield node
                 yield from it(node.left)
                 yield from it(node.right)
-                
+
         for a, b in zip(it(original), it(cloned)):
             if a == target:
                 return b

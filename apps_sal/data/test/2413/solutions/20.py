@@ -12,4 +12,3 @@ for i in range(t):
     r = len(string.rstrip('0'))
     total = max(total, 2 * l, 2 * r)
     print(total)
-

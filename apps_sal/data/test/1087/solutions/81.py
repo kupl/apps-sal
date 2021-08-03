@@ -19,4 +19,3 @@ for d in range(60)[::-1]:
     eq += mask * (one if (K & mask == 0) else zero)
 
 print((max(less, eq)))
-

@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return list(map(int, input().split()))
+
 
 def main():
     inp = [input() for _ in range(4)]
@@ -10,7 +12,9 @@ def main():
     b = b.replace('X', '')
     print('YES' if a == b or a == b[1:] + b[0] or a == b[2] + b[:2] else 'NO')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

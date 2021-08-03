@@ -5,6 +5,5 @@ for i in range(n - 2, -1, -1):
         u[i] = u[i + 1] - 1
         if u[i + 1] == 0:
             u[i] = 0
-    
-print(sum(u))
 
+print(sum(u))

@@ -25,4 +25,3 @@ for i in range(1, len(b)):
     cur -= l
 
 print(ans)
-

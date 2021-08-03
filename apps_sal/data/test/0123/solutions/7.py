@@ -6,12 +6,12 @@ if k > 1:
 else:
     i = a.index(0)
     b = int(input())
-    
+
     f = True
     for j in range(1, n):
         if a[j] <= a[j - 1] and a[j] != 0:
             f = False
-            
+
     if f and a[i - 1] < b and a[i + 1] > b:
         print('No')
     else:

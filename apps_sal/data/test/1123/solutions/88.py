@@ -14,4 +14,3 @@ for i in range(k, 0, -1):
     ans += i * dp[i]
     ans %= mod
 print(ans)
-

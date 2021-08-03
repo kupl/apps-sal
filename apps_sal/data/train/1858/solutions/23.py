@@ -9,14 +9,15 @@ def revalue(n, v):
     if n is None:
         return
     n.val = v
-    revalue(n.left, 2*v + 1)
-    revalue(n.right, 2*v + 2)
-    
+    revalue(n.left, 2 * v + 1)
+    revalue(n.right, 2 * v + 2)
+
+
 class FindElements:
 
     def __init__(self, root: TreeNode):
         self.root = root
-        revalue(root, 0)        
+        revalue(root, 0)
 
     def find(self, target: int) -> bool:
         if target == 0:
@@ -38,11 +39,10 @@ class FindElements:
             if n is None:
                 return False
             if n.val == otarget:
-                return True                
+                return True
         return False
 
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

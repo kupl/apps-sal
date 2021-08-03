@@ -6,7 +6,7 @@ def get_strings(city):
     for char in characters:
         if char in char_dict.keys():
             char_dict[char] = char_dict[char] + "*"
-        else: 
+        else:
             char_dict[char] = char + ":*"
     for key in char_dict.values():
         final = final + (key + ",")

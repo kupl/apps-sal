@@ -14,6 +14,8 @@ def mex(array):
     for i in range(10000):
         if i not in set_:
             return i
+
+
 """
 res = 0
 for a, k in info:
@@ -30,7 +32,6 @@ else:
 """
 
 
-
 # a(3n)=n, otherwise a(n)=a(floor(2n/3))
 """
 def solve(n, k):
@@ -38,6 +39,7 @@ def solve(n, k):
         return n // k
     return solve(n * (k - 1) // k, k)
 """
+
 
 def solve(n, k):
     if n % k == 0:
@@ -48,6 +50,7 @@ def solve(n, k):
         return solve(target, k)
     n -= -((-(n - target)) // diff) * diff
     return solve(n, k)
+
 
 res = 0
 for a, k in info:

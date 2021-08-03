@@ -14,5 +14,5 @@ def my_very_own_split(string, delimiter=None):
     for m in re.finditer(delimiter, string):
         yield string[start:m.start()]
         start = m.end()
-    
+
     yield string[start:]

@@ -20,20 +20,21 @@ class Solution:
                 res += dfs(neighbor, visited|{neighbor})
             return res
         return dfs(-1, set())
-        '''        
+        '''
         candidates = collections.Counter(A)
-        graph = {x: [y for y in candidates if int((x+y)**0.5)**2==x+y] for x in candidates}
+        graph = {x: [y for y in candidates if int((x + y)**0.5)**2 == x + y] for x in candidates}
         # source node
         graph[-1] = [x for x in candidates]
+
         def dfs(node, node_left):
-            if node_left==0:
+            if node_left == 0:
                 return 1
             res = 0
             for n in graph[node]:
-                if candidates[n]==0:
+                if candidates[n] == 0:
                     continue
                 candidates[n] -= 1
-                res += dfs(n, node_left-1)
+                res += dfs(n, node_left - 1)
                 candidates[n] += 1
             return res
         return dfs(-1, len(A))

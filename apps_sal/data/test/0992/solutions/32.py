@@ -12,4 +12,3 @@ for i in range(N):
     dp[i + 1] %= MOD
 
 print((dp[N][S]))
-

@@ -1,7 +1,7 @@
+from functools import lru_cache
+import sys
 3
 
-import sys
-from functools import lru_cache
 
 MOD = 1000000007
 
@@ -21,4 +21,3 @@ for c in cs:
     ans = (ans * cnk[sm - 1][c - 1]) % MOD
 
 print(ans)
-

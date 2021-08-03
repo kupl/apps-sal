@@ -8,8 +8,10 @@ while 1:
     p = []
     for d in t:
         for s in d.split(q):
-            if len(s) > m: p += [s]
-    if not p: break
+            if len(s) > m:
+                p += [s]
+    if not p:
+        break
     r += q * k.count(q)
     i += 1
     t = p
@@ -17,10 +19,12 @@ y = chr(i)
 for d in t:
     i = 0
     for x in d:
-        if x == y: j = i
+        if x == y:
+            j = i
         if i == m:
             r += y
             i -= j
             j = 0
-        else: i += 1
+        else:
+            i += 1
 print(r)

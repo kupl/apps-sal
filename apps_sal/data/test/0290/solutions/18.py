@@ -5,6 +5,7 @@ def sq(x):
         if ts**2 <= x:
             return ts
 
+
 n = int(input())
 s = sq(n)
 
@@ -14,5 +15,3 @@ elif (s + 1) * s >= n:
     print(s * 2 + 1)
 else:
     print(s * 2 + 2)
-
-

@@ -7,4 +7,3 @@ for _ in range(K):
     ns -= set(map(int, input().split()))
 
 print((len(ns)))
-

@@ -24,4 +24,3 @@ while s < k and i < n:
 print(str(c))
 if c > 0:
     print(ans)
-

@@ -1,14 +1,18 @@
 import collections
+
+
 class Dinic:
     def __init__(self, vnum):
         self.edge = [[] for i in range(vnum)]
         self.n = vnum
         self.inf = float('inf')
+
     def addedge(self, st, en, c):
         self.edge[st].append([en, c, len(self.edge[en])])
-        self.edge[en].append([st, 0, len(self.edge[st])-1])
+        self.edge[en].append([st, 0, len(self.edge[st]) - 1])
+
     def bfs(self, vst):
-        dist = [-1]*self.n
+        dist = [-1] * self.n
         dist[vst] = 0
         Q = collections.deque([vst])
         while Q:
@@ -18,6 +22,7 @@ class Dinic:
                     dist[vt] = dist[nv] + 1
                     Q.append(vt)
         self.dist = dist
+
     def dfs(self, nv, en, nf):
         nextv = self.nextv
         if nv == en:
@@ -33,13 +38,14 @@ class Dinic:
                     return df
             nextv[nv] += 1
         return 0
+
     def getmf(self, st, en):
         mf = 0
         while True:
             self.bfs(st)
             if self.dist[en] == -1:
                 break
-            self.nextv = [0]*self.n
+            self.nextv = [0] * self.n
             while True:
                 fl = self.dfs(st, en, self.inf)
                 if fl > 0:
@@ -48,23 +54,24 @@ class Dinic:
                     break
         return mf
 
+
 H, W = map(int, input().split())
 G = [input() for _ in range(H)]
-T = Dinic(H+W)
-inf = 10**9+7
+T = Dinic(H + W)
+inf = 10**9 + 7
 SS = []
 for i in range(H):
     for j in range(W):
         if G[i][j] == '.':
             continue
         if G[i][j] == 'o':
-            T.addedge(i, H+j, 1)
-            T.addedge(H+j, i, 1)
+            T.addedge(i, H + j, 1)
+            T.addedge(H + j, i, 1)
             continue
         SS.append(i)
         SS.append(H + j)
-        T.addedge(i, H+j, inf)
-        T.addedge(H+j, i, inf)
+        T.addedge(i, H + j, inf)
+        T.addedge(H + j, i, inf)
 ans = T.getmf(SS[0], SS[-1])
 if ans >= 10**9:
     print(-1)

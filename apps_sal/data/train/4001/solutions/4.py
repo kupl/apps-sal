@@ -1,6 +1,7 @@
-def dot(n,m):
+def dot(n, m):
     sep = '+' + '+'.join(['---'] * n) + '+'
     bod = '|' + '|'.join([' o '] * n) + '|'
+
     def f():
         yield sep
         for i in range(m):

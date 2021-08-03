@@ -1,4 +1,4 @@
-def min_value(digits):                  
+def min_value(digits):
     newDigits = []
     for i in digits:
         if i not in newDigits:

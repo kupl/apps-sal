@@ -11,10 +11,10 @@ def input(): return sys.stdin.readline().strip()
 
 
 arr = [0]
-for i in range(1,5*10**4):
-    arr.append(arr[-1]+i)
+for i in range(1, 5 * 10**4):
+    arr.append(arr[-1] + i)
 
 for _ in range(int(input())):
     n = int(input())
-    ind = bisect.bisect_left(arr,n)
-    print(min(n-ind+1,ind*(ind-1)//2))
+    ind = bisect.bisect_left(arr, n)
+    print(min(n - ind + 1, ind * (ind - 1) // 2))

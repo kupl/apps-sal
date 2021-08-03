@@ -35,28 +35,29 @@ class UnionFind():
 
     def roots(self):
         return [i for i, x in enumerate(self.parents) if x < 0]
-    
-n,m = map(int, input().split())
+
+
+n, m = map(int, input().split())
 ab = [list(map(int, input().split())) for _ in range(m)]
 
 abb = ab[::-1]
 uf = UnionFind(n)
 
-ini = (n*(n-1))//2
+ini = (n * (n - 1)) // 2
 res = [ini]
-temp=0
-for i in range(m-1):
-    a = abb[i][0]-1
-    b = abb[i][1]-1
-    ax =uf.size(a)
-    bx =uf.size(b)
-    if uf.same(a,b):
+temp = 0
+for i in range(m - 1):
+    a = abb[i][0] - 1
+    b = abb[i][1] - 1
+    ax = uf.size(a)
+    bx = uf.size(b)
+    if uf.same(a, b):
         pass
     else:
-        uf.union(a,b)
-        temp += ax*bx
-    res.append(ini-temp)
-    
+        uf.union(a, b)
+        temp += ax * bx
+    res.append(ini - temp)
+
 ress = res[::-1]
 for i in range(m):
     print(ress[i])

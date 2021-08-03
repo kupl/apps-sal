@@ -1,5 +1,5 @@
 N = int(input())
-S = map(int,input().split())
+S = map(int, input().split())
 length_list = list(S)
 length_list.sort(reverse=True)
 # print(length_list)

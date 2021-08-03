@@ -19,4 +19,3 @@ for _ in range(int(input())):
     while mi < n:
         mi = f(a, mi)
     print(*a)
-

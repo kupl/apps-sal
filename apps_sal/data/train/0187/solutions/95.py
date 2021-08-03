@@ -17,7 +17,7 @@ class Solution:
                 if waiting < 4:
                     boarded = waiting
                 waiting -= boarded
-                profit += (boarded*boardingCost)
+                profit += (boarded * boardingCost)
             rotation_count += 1
             profit -= runningCost
             if profit > max_profit:
@@ -27,4 +27,3 @@ class Solution:
             return max_profit_count
         else:
             return -1
-

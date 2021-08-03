@@ -26,4 +26,3 @@ while n != 0:
                 break
 
 print((''.join(S[:max_i + 1])[::-1]))
-

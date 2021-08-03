@@ -8,7 +8,7 @@ from math import sqrt, factorial, gcd, ceil, atan, pi
 import string
 # string.ascii_lowercase
 from bisect import bisect_left
-MOD = int(1e9)+7
+MOD = int(1e9) + 7
 INF = float('inf')
 
 
@@ -20,7 +20,8 @@ def solve():
     for i in range(n):
         r = [int(x) for x in input().split()]
         for j in range(m):
-            if i + 1 == n and j + 1 == m: continue
+            if i + 1 == n and j + 1 == m:
+                continue
             if i % 2:
                 j = m - j - 1
             r[j] += c
@@ -45,7 +46,7 @@ def solve():
 
 t = 1
 # t = int(input())
-for case in range(1,t+1):
+for case in range(1, t + 1):
     ans = solve()
 
 
@@ -54,4 +55,3 @@ for case in range(1,t+1):
 azyxwvutsrqponmlkjihgfedcb
 
 """
-

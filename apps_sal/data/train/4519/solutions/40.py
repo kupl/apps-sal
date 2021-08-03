@@ -3,4 +3,3 @@ def max_number(n):
     numb = ''.join(sorted(array, reverse=True))
     s = int(numb)
     return s
-

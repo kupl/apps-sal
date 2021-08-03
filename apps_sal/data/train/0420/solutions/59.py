@@ -4,10 +4,10 @@ class Solution:
         masks = {0: -1}
         mask = 0
         match = {
-            'a' : 1,
-            'e' : 2,
-            'i' : 4,
-            'o' : 8,
+            'a': 1,
+            'e': 2,
+            'i': 4,
+            'o': 8,
             'u': 16
         }
         max_len = 0

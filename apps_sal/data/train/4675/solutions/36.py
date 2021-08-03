@@ -8,4 +8,3 @@ def set_alarm(em, va):
     elif em == False and va == True:
         return False
     # Your code here
-

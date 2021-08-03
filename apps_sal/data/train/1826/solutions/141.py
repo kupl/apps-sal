@@ -9,7 +9,7 @@ class Solution:
         for i in range(2, len(mat) + 1):
             for j in range(2, len(mat[0]) + 1):
                 cumMat[i][j] = mat[i - 1][j - 1] + cumMat[i - 1][j] + cumMat[i][j - 1] - cumMat[i - 1][j - 1]
-          
+
         answer = [[0 for _ in mat[0]] for _ in mat]
         for i in range(1, len(cumMat) - 1):
             for j in range(1, len(cumMat[0]) - 1):

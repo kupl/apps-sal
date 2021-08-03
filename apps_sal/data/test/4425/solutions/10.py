@@ -1,6 +1,6 @@
 n, k = list(map(int, input().split()))
 rate = 0
-for i in range(1,n+1):
+for i in range(1, n + 1):
     score = i
     prob = 1 / n
     while score < k:
@@ -8,4 +8,3 @@ for i in range(1,n+1):
         prob /= 2
     rate += prob
 print(rate)
-

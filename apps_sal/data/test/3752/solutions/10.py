@@ -14,4 +14,3 @@ else:
     else:
         c -= a
         print(tmp + a + c * 2)
-

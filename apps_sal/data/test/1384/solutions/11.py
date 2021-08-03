@@ -24,7 +24,7 @@ def main():
 
     max_leave = -INF
 
-    for i in range(n+1):
+    for i in range(n + 1):
         max_leave = max(max_leave, cutoff(games, i))
 
     print(max_leave)

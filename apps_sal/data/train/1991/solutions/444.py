@@ -6,10 +6,10 @@ class Solution:
         for j in range(fuel + 1):
             for i in range(len(locations)):
                 for k in range(len(locations)):
-                    if i == k: continue
+                    if i == k:
+                        continue
                     cost = abs(locations[i] - locations[k])
                     if cost <= j:
-                        dp[i][j] += dp[k][j - cost] #add ways k to i
-            
-        return dp[start][fuel]%(10**9 + 7)
+                        dp[i][j] += dp[k][j - cost]  # add ways k to i
 
+        return dp[start][fuel] % (10**9 + 7)

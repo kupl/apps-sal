@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
-st1 = { }
-st2 = { }
+st1 = {}
+st2 = {}
 for i in range(m):
     s = input().split()
     w1, w2 = s[0], s[1]
@@ -11,7 +11,7 @@ for x in test:
     w1 = x
     f = False
     if w1 in st1:
-        f = True # w1 - first lang
+        f = True  # w1 - first lang
         w2 = st1[w1]
     else:
         w2 = st2[w1]
@@ -21,5 +21,3 @@ for x in test:
         print(w2, end=' ')
     else:
         print(w1 if f else w2, end=' ')
-    
-

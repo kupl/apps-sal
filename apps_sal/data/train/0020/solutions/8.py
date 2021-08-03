@@ -10,8 +10,8 @@ for _ in range(Q):
             mn = max(mn - (t - lt), l)
             mx = min(mx + (t - lt), h)
             lt = t
-            if mn>mx:
-                ok=False
+            if mn > mx:
+                ok = False
 
         else:
             input()

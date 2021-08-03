@@ -17,4 +17,3 @@ for v in range(1, n + 1):
                     S.append(u)
                     used[u] = 1
 print(k - n + ans)
-

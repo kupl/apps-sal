@@ -21,10 +21,9 @@ for i in range(w):
 
 for i in range(w):
     for j in range(h):
-        third_matr[2*i][2*j] = third_matr[2*i+1][2*j] = third_matr[2*i][2*j+1] = third_matr[2*i+1][2*j+1] = second_matr[i][j]
+        third_matr[2 * i][2 * j] = third_matr[2 * i + 1][2 * j] = third_matr[2 * i][2 * j + 1] = third_matr[2 * i + 1][2 * j + 1] = second_matr[i][j]
 
 for k in third_matr:
     for j in k:
         print(j, end="")
     print()
-

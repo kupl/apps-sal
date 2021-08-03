@@ -7,4 +7,4 @@ def riders(stations):
             res += 1
         else:
             rdistance += i
-    return res+1
+    return res + 1

@@ -17,4 +17,3 @@ while dq:
                 d[nv] = c + 1
                 dq.append((d[nv], nv))
 print((d[0]))
-

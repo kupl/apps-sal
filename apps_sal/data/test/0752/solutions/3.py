@@ -11,4 +11,3 @@ for i in a:
         c -= 1
         b.remove(i)
 print(c)
-

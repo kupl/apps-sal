@@ -2,7 +2,7 @@ MOD = 10**9 + 7
 
 n, l, r = list(map(int, input().split()))
 
-lr_counts = [(r-l+1)//3]*3
+lr_counts = [(r - l + 1) // 3] * 3
 for i in range(l + sum(lr_counts), r + 1):
     lr_counts[i % 3] += 1
 
@@ -18,6 +18,3 @@ for _ in range(n):
 
 
 print(cur_counts[0])
-
-
-

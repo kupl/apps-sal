@@ -1,5 +1,6 @@
 import re
 
+
 def gap(num):
 
     n = 0

@@ -10,12 +10,12 @@ class Solution:
                 cnt += 1
                 consec = 0
         return cnt
-    
+
     def minDays(self, A, m, k):
         l, r = min(A), max(A)
         print(f'{l=} | {r=}')
         while r > l:
-            mid = (l+r) // 2
+            mid = (l + r) // 2
             if self.make_bouquets(A, mid, k) >= m:
                 r = mid
             else:
@@ -23,7 +23,5 @@ class Solution:
         print(f'{l=} | {r=}')
         if self.make_bouquets(A, l, k) >= m:
             return l
-        else: return -1
-
-        
-
+        else:
+            return -1

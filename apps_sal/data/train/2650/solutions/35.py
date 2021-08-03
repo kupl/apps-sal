@@ -3,5 +3,5 @@ array = [str(input()) for i in range(N)]
 array = sorted(array)
 ans = ''
 for j in array:
-  ans = ans + j
+    ans = ans + j
 print(ans)

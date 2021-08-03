@@ -6,4 +6,3 @@ for i in range(n - 1):
         l, r = r, l
     ans -= l * (n - r + 1)
 print(ans)
-

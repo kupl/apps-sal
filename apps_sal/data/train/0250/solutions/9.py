@@ -1,7 +1,7 @@
 class Solution(object):
     def mincostToHireWorkers(self, quality, wage, K):
         from fractions import Fraction
-        workers = sorted((w/q, q, w)
+        workers = sorted((w / q, q, w)
                          for q, w in zip(quality, wage))
         print(workers)
         ans = float('inf')

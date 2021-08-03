@@ -1,5 +1,7 @@
 import itertools
 from math import sqrt
+
+
 def chunk(a):
     i = 0
     res = []
@@ -10,6 +12,7 @@ def chunk(a):
         res.append(a[i] + 1)
         i += 1
     return res
+
 
 def augment(g, src, dest):
     o = [None] * len(g)
@@ -29,6 +32,7 @@ def augment(g, src, dest):
         g[i].add(o[i])
         i = o[i]
     return True
+
 
 def match(a):
     l = {}
@@ -53,11 +57,13 @@ def match(a):
         matches += 1
     return matches
 
+
 def prime(n):
     for i in range(2, min(n, int(sqrt(n) + 7))):
         if n % i == 0:
             return False
     return n > 1
+
 
 def pairs(b):
     c = []
@@ -66,6 +72,7 @@ def pairs(b):
             if i % 2 == 0 and j % 2 == 1 and prime(abs(i - j)):
                 c.append((i, j))
     return c
+
 
 n = int(input())
 a = list(map(int, input().split()))

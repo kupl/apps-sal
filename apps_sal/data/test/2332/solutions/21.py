@@ -16,4 +16,3 @@ for i in range(3, k + 3):
         a[j - 1] = mn
 
 print(sum([a[dict_[el] - 1] for el in s]))
-

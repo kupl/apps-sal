@@ -7,7 +7,8 @@ def choose_best_sum(t, k, ls):
     diff = float('inf')
     for x in itertools.combinations(ls, k):
         s = sum(x)
-        if s == t: return t
+        if s == t:
+            return t
         if t - s < diff and s < t:
             diff = abs(s - t)
     return t - diff if t - diff > 0 else None

@@ -1,6 +1,7 @@
 def read_line():
     return list(map(int, input().split()))
 
+
 T = int(input())
 for _ in range(T):
     n, x = list(map(int, input().split()))
@@ -20,5 +21,3 @@ for _ in range(T):
         print(1)
     else:
         print(2)
-
-

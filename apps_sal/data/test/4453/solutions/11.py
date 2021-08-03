@@ -11,4 +11,3 @@ for _ in range(int(input())):
             x = a[x]
         print(ans + 1, end=" ")
     print()
-

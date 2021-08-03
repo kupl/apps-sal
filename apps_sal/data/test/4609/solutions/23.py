@@ -1,4 +1,4 @@
-import collections 
+import collections
 N = int(input())
 lsA = []
 for i in range(N):
@@ -6,5 +6,5 @@ for i in range(N):
 counterA = collections.Counter(lsA)
 ans = 0
 for i in counterA.values():
-    ans += i%2
+    ans += i % 2
 print(ans)

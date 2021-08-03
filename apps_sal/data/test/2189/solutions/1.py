@@ -1,5 +1,7 @@
 from heapq import heappush, heappop
-q = lambda:map(int, input().split())
+def q(): return map(int, input().split())
+
+
 n, m = q()
 a = d = [0] * n
 e = [[] for _ in range(n)]

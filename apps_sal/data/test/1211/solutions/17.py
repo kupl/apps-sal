@@ -5,4 +5,3 @@ c = list([n // x for x in a])
 
 i = b.index(min(b))
 print(i + 1, c[i])
-

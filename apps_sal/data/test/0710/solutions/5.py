@@ -28,7 +28,6 @@ for i in range(len(st) - 3):
     cr = st[i:i + 4]
     crs = 0
     for j in range(4):
-        crs += min([abs(ord(cr[j]) - ord('ACTG'[j])-26),abs(ord(cr[j]) - ord('ACTG'[j])+26),abs(ord(cr[j]) - ord('ACTG'[j]))])
+        crs += min([abs(ord(cr[j]) - ord('ACTG'[j]) - 26), abs(ord(cr[j]) - ord('ACTG'[j]) + 26), abs(ord(cr[j]) - ord('ACTG'[j]))])
     mn = min(mn, crs)
 print(mn)
-

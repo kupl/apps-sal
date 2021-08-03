@@ -1,7 +1,7 @@
 n, m = map(int, input().split())
 
-a = [int(e)%2 for e in input().split()]
-b = [int(e)%2 for e in input().split()]
+a = [int(e) % 2 for e in input().split()]
+b = [int(e) % 2 for e in input().split()]
 
 a1 = sum(a)
 a0 = n - a1

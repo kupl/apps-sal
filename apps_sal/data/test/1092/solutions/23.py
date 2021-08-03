@@ -1,7 +1,7 @@
 import math
 
 
-def solve( n, list1):
+def solve(n, list1):
     list1.sort()
     inf = int(1e9 + 7)
     t1 = [list1[0] - 1, n - list1[-1]]
@@ -34,6 +34,8 @@ def solve( n, list1):
     num1 = num1 % inf
 
     return int(num1)
-n,m = map(int,input().split())
-list1 = list(map(int,input().split()))
-print(solve(n,list1))
+
+
+n, m = map(int, input().split())
+list1 = list(map(int, input().split()))
+print(solve(n, list1))

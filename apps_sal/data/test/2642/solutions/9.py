@@ -5,6 +5,7 @@ mod = 10 ** 9 + 7
 
 N, *AB = map(int, open(0).read().split())
 
+
 def std(a, b):
     if a == 0:
         return (0, int(b != 0))
@@ -12,6 +13,7 @@ def std(a, b):
     g = gcd(a, b)
     a, b = a // g, b // g
     return (a, b) if a > 0 else (-a, -b)
+
 
 C = Counter(std(a, b) for a, b in zip(*[iter(AB)] * 2))
 

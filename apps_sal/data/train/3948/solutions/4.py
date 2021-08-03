@@ -3,5 +3,5 @@ def sel_reverse(arr, l):
     return [
         x
         for i in range(0, len(arr), l)
-        for x in reversed(arr[i:i+l])
+        for x in reversed(arr[i:i + l])
     ]

@@ -1,19 +1,17 @@
 class Solution:
     def minOperations(self, n: int) -> int:
-        
-        
+
         sum_tot = 0
         for i in range(n):
-            val = 2*i+1
-            #print(val)
+            val = 2 * i + 1
+            # print(val)
             if val > n:
-                sum_tot += val-n
+                sum_tot += val - n
             else:
                 sum_tot += n - val
-        
-        return(int(sum_tot/2))
-        
-        
+
+        return(int(sum_tot / 2))
+
         '''
         if n%2  == 0:
             median = int((arr[int(n/2)] + arr[int(n/2)-1])/2)

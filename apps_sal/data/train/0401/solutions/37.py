@@ -6,5 +6,3 @@ class Solution:
                 mod = (i + a) % 3
                 dp[mod] = max(dp[mod], i + a)
         return dp[0]
-        
-

@@ -10,16 +10,15 @@ for i in range(n):
         if tmp % j == 0:
             if not j in ji:
                 ji[j] = 0
-            
+
             ji[j] += 1
             tmp /= j
         else:
-            j += 1 
+            j += 1
 
 for i in list(ji.values()):
     ans *= (i + 1)
     ans %= m
-    
+
 
 print(ans)
-

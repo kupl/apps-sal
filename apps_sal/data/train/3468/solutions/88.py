@@ -1,5 +1,5 @@
 def scramble(s1, s2):
-    list=[]
+    list = []
     for letter in s2:
         if letter in list:
             continue

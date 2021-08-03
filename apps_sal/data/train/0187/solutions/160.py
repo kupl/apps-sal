@@ -19,7 +19,7 @@ class Solution:
             if currProfit > maxProfit:
                 maxProfit = currProfit
                 index = op
-            
+
         while waiting > 0:
             op += 1
             boarding = min(waiting, 4)
@@ -29,7 +29,7 @@ class Solution:
             if currProfit > maxProfit:
                 maxProfit = currProfit
                 index = op
-            
+
         if maxProfit == -1:
             return -1
         else:

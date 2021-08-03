@@ -45,11 +45,12 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = map(int, input().split())
-Edge = [list(map(lambda x: int(x)-1, input().split())) for _ in range(M)][::-1]
+Edge = [list(map(lambda x: int(x) - 1, input().split())) for _ in range(M)][::-1]
 uf = UnionFind(N)
-cnt = N*(N-1)//2
-ans=[]
+cnt = N * (N - 1) // 2
+ans = []
 for a, b in Edge:
     ans.append(cnt)
     if uf.same(a, b):

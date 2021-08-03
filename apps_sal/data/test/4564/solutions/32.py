@@ -9,4 +9,3 @@ for s in S:
         ans = "yes"
 
 print(ans)
-

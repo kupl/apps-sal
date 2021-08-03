@@ -10,4 +10,3 @@ class Solution:
                 table[a] = 1
             ans = max(ans, table[a])
         return ans
-

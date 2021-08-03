@@ -11,20 +11,17 @@ class Solution:
     #         if x > -1:
     #             m = min(m, x)
     #     return m if m != amount + 1 else -1
-    
-    
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        
+
         store = [float('inf')] * (amount + 1)
         store[0] = 0
-        for i in range(amount+1):
+        for i in range(amount + 1):
             for coin in coins:
-                if i-coin >= 0 and store[i] > store[i-coin] + 1:
-                    store[i] = store[i-coin] + 1
+                if i - coin >= 0 and store[i] > store[i - coin] + 1:
+                    store[i] = store[i - coin] + 1
         return store[amount] if store[amount] != float('inf') else -1
-    
 
-    
     # def countChange(self, coins: List[int], amount: int, index: int, store) -> int:
     #     if amount == 0:
     #         return 0
@@ -42,8 +39,7 @@ class Solution:
     #                 m = min(m, x + i)
     #     store[amount] = m
     #     return m if m != float('inf') else -1
-        
-        
+
     # def countChange(self, coins: List[int], amount: int, index: int) -> int:
     #     if index >= len(coins):
     #         return 0
@@ -61,4 +57,3 @@ class Solution:
     #             return x + num
     #     else:
     #         return 0
-

@@ -1,4 +1,5 @@
-import collections, sys
+import collections
+import sys
 sys.setrecursionlimit(100005)
 N = int(input())
 A = [int(_) for _ in input().split()]
@@ -22,4 +23,3 @@ def c(start, res):
 
 
 print((c(0, N // 2)))
-

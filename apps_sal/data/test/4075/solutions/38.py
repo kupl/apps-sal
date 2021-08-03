@@ -12,10 +12,10 @@ for i in range(2**n):
     for j in range(m):
         sw = 0
         for s in S[j]:
-            if (i>>(s-1))&1:
+            if (i >> (s - 1)) & 1:
                 sw += 1
-        if sw%2 == p[j]:
-            light+=1
+        if sw % 2 == p[j]:
+            light += 1
     if light == m:
         ans += 1
 print(ans)

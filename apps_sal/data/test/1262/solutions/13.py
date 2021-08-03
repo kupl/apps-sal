@@ -15,16 +15,16 @@ for _ in range(n):
     for i in range(n):
         if i in covered:
             continue
-        c_l = (k[i]+k[idx])*(abs(cord[i][0]-cord[idx][0])+abs(cord[i][1]-cord[idx][1]))
-        if c_l <c[i]:
+        c_l = (k[i] + k[idx]) * (abs(cord[i][0] - cord[idx][0]) + abs(cord[i][1] - cord[idx][1]))
+        if c_l < c[i]:
             c[i] = c_l
             parent[i] = idx
 print('{}\n{}'.format(sum, len(plant)))
-print(*map(lambda x: x+1, plant))
+print(*map(lambda x: x + 1, plant))
 links = 0
 out = ''
 for i, _ in enumerate(parent):
     if _ != -1:
         links += 1
-        out += '\n' + str(_+1) + ' ' + str(i+1)
+        out += '\n' + str(_ + 1) + ' ' + str(i + 1)
 print(links, out)

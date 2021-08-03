@@ -27,4 +27,3 @@ for usage_info in itertools.product(list(range(4)), repeat=n):
     ans = min(ans, mp)
 
 print(ans)
-

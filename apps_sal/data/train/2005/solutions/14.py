@@ -4,10 +4,12 @@ import math
 data = sys.stdin.read().split()
 data_ptr = 0
 
+
 def data_next():
     nonlocal data_ptr, data
     data_ptr += 1
     return data[data_ptr - 1]
+
 
 S = data[0]
 N = len(S)
@@ -30,4 +32,3 @@ for l in range(3, 9):
                 ans += 1
                 break
 print(ans)
-

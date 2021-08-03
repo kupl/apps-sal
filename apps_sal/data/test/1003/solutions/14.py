@@ -14,5 +14,3 @@ for i in range(1, 300):
         k = i - 1
         break
 print(k)
-    
-

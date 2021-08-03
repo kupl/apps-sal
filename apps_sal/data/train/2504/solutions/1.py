@@ -5,5 +5,3 @@ class Solution:
         for i, j in enumerate(arr):
             ans += ((i + 1) * (n - i) + 1) // 2 * j
         return ans
-            
-

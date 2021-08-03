@@ -3,4 +3,3 @@ for _ in range(int(input())):
     p = list(map(int, input().split()))
     p.reverse()
     print(*p)
-

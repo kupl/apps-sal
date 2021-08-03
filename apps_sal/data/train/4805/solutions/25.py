@@ -4,4 +4,3 @@ def check(seq, elem):
             return 1
         else:
             return 0
-

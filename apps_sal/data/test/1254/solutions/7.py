@@ -20,4 +20,3 @@ for it in lst:
         best_score[students_num[sub][1]] += students_num[sub][0]
 
 print(max(best_score))
-

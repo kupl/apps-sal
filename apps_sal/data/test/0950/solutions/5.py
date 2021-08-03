@@ -13,13 +13,13 @@ A = []
 for _ in range(n):
     A += [input()]
 
-#print(A)
+# print(A)
 
 B = []
 for _ in range(3):
     B += [[INF] * n]
 
-#print(B)
+# print(B)
 
 for i in range(n):
     if A[i][0].isalpha():
@@ -64,12 +64,11 @@ for i in range(n):
 result = INF
 
 for pick in it.combinations(list(range(n)), 3):
-    #print(pick)
+    # print(pick)
     for perm in it.permutations(list(range(3))):
         #print("perm " + str(perm))
-        result = min([result, B[perm[0]][pick[0]] +
-                              B[perm[1]][pick[1]] +
-                              B[perm[2]][pick[2]]])
+        result = min([result, B[perm[0]][pick[0]]
+                              + B[perm[1]][pick[1]]
+                      + B[perm[2]][pick[2]]])
 
 print(result)
-

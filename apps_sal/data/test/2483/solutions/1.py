@@ -5,8 +5,8 @@ n, c = list(map(int, input().split()))
 # テレビ局の番組をチャンネルごとに登録
 r = [[0 for i in range(c)] for j in range(100000)]
 for _ in range(n):
-    s,t,c = list(map(int, input().split()))
-    for j in range(s-1, t):
+    s, t, c = list(map(int, input().split()))
+    for j in range(s - 1, t):
         r[j][c - 1] = 1
 # print(*r,sep='\n')
 
@@ -25,4 +25,3 @@ print(ans)
 #[1, 1, 0, 0]  <- この時間で2チャンネル録画が必要
 #[1, 1, 0, 0]
 #[1, 0, 0, 0]
-

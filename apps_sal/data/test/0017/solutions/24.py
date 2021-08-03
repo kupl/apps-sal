@@ -1,8 +1,8 @@
-n,t,k = map(int,input().split())
+n, t, k = map(int, input().split())
 
-if(t>k):
+if(t > k):
     print(k)
-elif(k>n):
-    print(t-(k-n))
+elif(k > n):
+    print(t - (k - n))
 else:
     print(t)

@@ -7,14 +7,14 @@ def score_hand(cards):
 
         elif x != 'A':
             k += 10
-            
+
         else:
             k += 1
-    
-    if k+10 > 21 and 'A' in cards:
+
+    if k + 10 > 21 and 'A' in cards:
         return k
     else:
-        if 'A' in cards and k+10 <= 21:
-            return k+10
-    
+        if 'A' in cards and k + 10 <= 21:
+            return k + 10
+
     return k

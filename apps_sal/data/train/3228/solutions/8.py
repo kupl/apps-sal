@@ -8,4 +8,3 @@ def get_pattern(iterable):
 
 def word_pattern(pattern, string):
     return get_pattern(pattern) == get_pattern(string.split())
-

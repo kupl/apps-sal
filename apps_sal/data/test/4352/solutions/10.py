@@ -12,4 +12,3 @@ elif B > A:
     print('Bob')
 else:
     print('Draw')
-

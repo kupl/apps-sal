@@ -9,4 +9,3 @@ for i, b in enumerate(a):
     if i + 1 in resolves:
         resolves.remove(i + 1)
 print(days)
-

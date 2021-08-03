@@ -24,4 +24,3 @@ if len(candi) == 1:
     print(chr(ord('A') + candi[0]))
 else:
     print("C")
-

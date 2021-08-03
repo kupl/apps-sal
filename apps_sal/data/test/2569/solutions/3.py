@@ -3,15 +3,19 @@ from collections import deque
 import bisect
 import heapq
 
+
 def ri():
     return int(input())
+
 
 def rl():
     return list(map(int, input().split()))
 
+
 cache = [0] * (2 * 10**6 + 1)
 cache[3] = 4
 cache[4] = 4
+
 
 def solve(last):
     n = ri()
@@ -36,11 +40,8 @@ def solve(last):
             cache[i] = b
         last = [n - 1, n]
 
-        print (b)
+        print(b)
         return last
-
-
-
 
 
 mode = 'T'
@@ -52,4 +53,3 @@ if mode == 'T':
         last = solve(last)
 else:
     solve()
-

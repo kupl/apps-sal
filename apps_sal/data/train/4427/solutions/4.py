@@ -1,5 +1,6 @@
 from itertools import groupby
 
+
 def sum_groups(arr):
     while True:
         n = len(arr)

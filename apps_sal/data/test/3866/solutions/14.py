@@ -6,6 +6,5 @@ print(*list(range(n)))
 print(*list(range(n)))
 res = []
 for i in range(n):
-    res += [(2*i) % n]
+    res += [(2 * i) % n]
 print(*res)
-

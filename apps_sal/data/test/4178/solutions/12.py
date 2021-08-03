@@ -3,7 +3,7 @@ import math
 import statistics
 import itertools
 # a,b=map(int,input().split())
-b=int(input())
+b = int(input())
 # c=[]
 # for i in a:
 #     c.append(int(i))
@@ -16,21 +16,19 @@ b=int(input())
 # a = [[0] for _ in range(H)]#nizigen
 # lis=[input() for i in range(a)]
 
-lis = list(map(int,input().split()))
-ans=lis[0]
-word=0
+lis = list(map(int, input().split()))
+ans = lis[0]
+word = 0
 
-for i in range(1,b):
-    word=lis[i]
-    if ans<=word:
-        ans=word
-        word=0
-    elif ans-1 == word:
-        word=0
+for i in range(1, b):
+    word = lis[i]
+    if ans <= word:
+        ans = word
+        word = 0
+    elif ans - 1 == word:
+        word = 0
     else:
         print("No")
         return
 
 print("Yes")
-
-

@@ -1,4 +1,6 @@
-from heapq import heappush,heappop
+from heapq import heappush, heappop
+
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         hashmap = {}
@@ -7,11 +9,11 @@ class Solution:
             if key not in hashmap:
                 hashmap[key] = 1
             else:
-                hashmap[key] = hashmap[key]+1
+                hashmap[key] = hashmap[key] + 1
         h = []
-        for key,val in list(hashmap.items()):
-            heappush(h,(-val,key))
-        result = [ ]
+        for key, val in list(hashmap.items()):
+            heappush(h, (-val, key))
+        result = []
         tlist = []
         while h:
             pending_lst = []
@@ -20,7 +22,7 @@ class Solution:
                     frequency, char = heappop(h)
                     positive_frequency = -frequency
                     if positive_frequency > 0:
-                        pending_lst.append((positive_frequency-1, char))
+                        pending_lst.append((positive_frequency - 1, char))
                         if result and char == result[-1]:
                             continue
                         result.append(char)
@@ -29,8 +31,3 @@ class Solution:
             for frequency, char in pending_lst:
                 heappush(h, (-frequency, char))
         return result
-                    
-        
-        
-            
-

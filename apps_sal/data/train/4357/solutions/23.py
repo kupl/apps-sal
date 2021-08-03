@@ -6,4 +6,3 @@ def nth_smallest(arr, pos):
             return i
         else:
             steps += 1
-

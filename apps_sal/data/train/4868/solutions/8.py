@@ -1,2 +1,2 @@
-from os import popen 
-get_output=lambda s:popen(s).read()
+from os import popen
+def get_output(s): return popen(s).read()

@@ -1,8 +1,8 @@
 class Solution:
     def minPushBox(self, grid: List[List[str]]) -> int:
-        check = lambda i, j: 0 <= i < m and 0 <= j < n and grid[i][j] != '#'
-        dist = lambda i, j: abs(i - ti) + abs(j - tj)
-        
+        def check(i, j): return 0 <= i < m and 0 <= j < n and grid[i][j] != '#'
+        def dist(i, j): return abs(i - ti) + abs(j - tj)
+
         m, n = len(grid), len(grid[0])
         dij = [[0, -1], [0, 1], [-1, 0], [1, 0]]
         pi, pj, bi, bj = 0, 0, 0, 0

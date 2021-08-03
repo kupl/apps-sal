@@ -4,12 +4,13 @@ from sys import setrecursionlimit
 setrecursionlimit(10**4)
 
 N, K = map(int, input().split())
-P = [0]+list(map(int, input().split()))
-C = [0]+list(map(int, input().split()))
+P = [0] + list(map(int, input().split()))
+C = [0] + list(map(int, input().split()))
+
 
 class Graph(list):
     def __init__(self, n):
-        super().__init__([None]*(n+1))
+        super().__init__([None] * (n + 1))
         self.directions = P
         self.points = C
         self.loops = []
@@ -30,7 +31,7 @@ class Graph(list):
         self.history.add(i)
         l, p = self.goto(self.directions[i])
         if self[i] == None:
-            self[i] = (l, p+1)
+            self[i] = (l, p + 1)
         return self[i]
 
     def addloop(self, j):
@@ -40,7 +41,7 @@ class Graph(list):
             loop.append(k)
             k = self.directions[k]
         self.loops.append(loop)
-        l = len(self.loops)-1
+        l = len(self.loops) - 1
         for i in loop:
             self[i] = (l, 0)
         return (l, 0)
@@ -68,27 +69,27 @@ class Graph(list):
         d, m = divmod(k, length)
         if m == 0:
             s = 0
-        elif j+m < length:
-            if leftmax[j] < leftmax[j+m]:
-                s = leftmax[j+m]-base[j]
-            elif rightmax[j+1] > rightmax[j+m+1]:
-                s = rightmax[j+1]-base[j]
+        elif j + m < length:
+            if leftmax[j] < leftmax[j + m]:
+                s = leftmax[j + m] - base[j]
+            elif rightmax[j + 1] > rightmax[j + m + 1]:
+                s = rightmax[j + 1] - base[j]
             else:
-                s = max(base[j+1:j+m+1])-base[j]
+                s = max(base[j + 1:j + m + 1]) - base[j]
         else:
-            s = max(loopscore+leftmax[j+m-length], rightmax[j+1])-base[j]
+            s = max(loopscore + leftmax[j + m - length], rightmax[j + 1]) - base[j]
         if d:
-            t = max(loopscore+leftmax[j], rightmax[j+1])-base[j]
-            return max(0, s, s+loopscore*d, t, t+loopscore*(d-1)) + p
+            t = max(loopscore + leftmax[j], rightmax[j + 1]) - base[j]
+            return max(0, s, s + loopscore * d, t, t + loopscore * (d - 1)) + p
         else:
-            return max(0, s, s+loopscore*d) + p
+            return max(0, s, s + loopscore * d) + p
 
     def evalloop(self):
         b, c, d = [], [], []
         for l in self.loops:
             bb, cc, dd = [0], [-inf], [-inf]
             for i in l:
-                bb.append(bb[-1]+self.points[i])
+                bb.append(bb[-1] + self.points[i])
             for v in bb:
                 cc.append(max(cc[-1], v))
             for v in reversed(bb):
@@ -99,7 +100,6 @@ class Graph(list):
         self.base = b
         self.leftmax = c
         self.rightmax = d
-
 
 
 g = Graph(N)

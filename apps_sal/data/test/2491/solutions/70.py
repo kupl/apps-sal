@@ -1,19 +1,21 @@
 import sys
 input = sys.stdin.readline
 
+
 def bellmanford(G, s):
     n = len(G)
     inf = -float('inf')
     dist = [inf] * n
     dist[s] = 0
-    for i in range(2*n):
+    for i in range(2 * n):
         for v in range(n):
             for w, c in G[v]:
                 if dist[w] < dist[v] + c:
                     dist[w] = dist[v] + c
-                    if i >= n - 1 and w == n-1:
+                    if i >= n - 1 and w == n - 1:
                         return -1
     return dist
+
 
 def main():
     N, M = map(int, input().split())
@@ -27,8 +29,11 @@ def main():
     if dist == -1:
         print("inf")
     else:
-        print(dist[N-1])
+        print(dist[N - 1])
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

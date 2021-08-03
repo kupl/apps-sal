@@ -7,7 +7,7 @@ class Solution:
             else:
                 break
         r = []
-        for i in range(len(arr)-1, -1, -1):
+        for i in range(len(arr) - 1, -1, -1):
             if not r or arr[i] <= r[-1]:
                 r.append(arr[i])
             else:
@@ -25,5 +25,5 @@ class Solution:
                 while j < len(r) and l[i] > r[j]:
                     j += 1
             # print(i, j)
-            sol = max(sol, i+len(r)-j)
+            sol = max(sol, i + len(r) - j)
         return len(arr) - sol

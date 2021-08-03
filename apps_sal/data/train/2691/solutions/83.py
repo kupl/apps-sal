@@ -13,4 +13,3 @@ def solve(s):
     lst = lst.split()
     lst = list(map(int, lst))
     return max(lst)
-

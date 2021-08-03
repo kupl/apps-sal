@@ -14,9 +14,8 @@ n, k, c = list(map(int, input().split()))
 s = input()
 a = assign(s, n, k, c)
 b = assign(s[::-1], n, k, c)[::-1]
-c = [n-x-1 for x in b]
+c = [n - x - 1 for x in b]
 
 for x, y in zip(a, c):
     if x == y:
         print((x + 1))
-

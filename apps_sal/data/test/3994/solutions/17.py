@@ -8,17 +8,16 @@ for i in range(n):
     if s[i] == "1":
         for j in range(b):
             on_time[j] += 1
-        sec = b+a
+        sec = b + a
         while sec <= 50000:
-            for j in range(sec, sec+a):
+            for j in range(sec, sec + a):
                 on_time[j] += 1
-            sec += 2*a
+            sec += 2 * a
     else:
         sec = b
         while sec <= 50000:
-            for j in range(sec, sec+a):
+            for j in range(sec, sec + a):
                 on_time[j] += 1
-            sec += 2*a
+            sec += 2 * a
 
 print(max(on_time))
-

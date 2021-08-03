@@ -1,5 +1,7 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
+
+
 def main():
     n = int(input())
     for a in range(1, 100):
@@ -10,6 +12,9 @@ def main():
     else:
         print(-1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

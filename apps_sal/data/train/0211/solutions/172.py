@@ -17,6 +17,6 @@ class Solution:
                 ans = max(ans, 1 + dfs(end, seen))
                 seen.discard(word)
 
-            return ans 
-            
+            return ans
+
         return dfs(0, set())

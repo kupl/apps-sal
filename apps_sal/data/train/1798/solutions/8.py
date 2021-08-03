@@ -72,14 +72,14 @@ class Game(List[List[bool]]):
         east = j == self.width - 1
 
         return int(
-            (self[i - 1][j - 1] if not north and not west else 0)
-            + (self[i - 1][j] if not north else 0)
-            + (self[i - 1][j + 1] if not north and not east else 0)
-            + (self[i][j - 1] if not west else 0)
-            + (self[i][j + 1] if not east else 0)
-            + (self[i + 1][j - 1] if not south and not west else 0)
-            + (self[i + 1][j] if not south else 0)
-            + (self[i + 1][j + 1] if not south and not east else 0)
+            (self[i - 1][j - 1] if not north and not west else 0) +
+            (self[i - 1][j] if not north else 0) +
+            (self[i - 1][j + 1] if not north and not east else 0) +
+            (self[i][j - 1] if not west else 0) +
+            (self[i][j + 1] if not east else 0) +
+            (self[i + 1][j - 1] if not south and not west else 0) +
+            (self[i + 1][j] if not south else 0) +
+            (self[i + 1][j + 1] if not south and not east else 0)
         )
 
     def iterate(self):
@@ -120,5 +120,3 @@ def get_generation(cells: List[List[str]], generations):
         board.iterate()
 
     return board.export()
-
-

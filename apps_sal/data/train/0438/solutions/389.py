@@ -1,12 +1,12 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-    
+
         class DisjointSet:
 
             def __init__(self, n):
                 self.parent = [-1] * n
                 self.size = [0] * n
-            
+
             def make_set(self, v):
                 self.parent[v] = v
                 self.size[v] = 1
@@ -23,7 +23,7 @@ class Solution:
                     a, b = b, a
                 self.parent[b] = a
                 self.size[a] += self.size[b]
-        
+
         n = len(arr)
         if n == m:
             return n
@@ -32,8 +32,8 @@ class Solution:
         for step, i in enumerate(arr):
             i -= 1
             ds.make_set(i)
-            for j in (i-1, i+1):
-                if 0 <= j <= n-1 and ds.parent[j] > -1:
+            for j in (i - 1, i + 1):
+                if 0 <= j <= n - 1 and ds.parent[j] > -1:
                     rep = ds.find_set(j)
                     if ds.size[rep] == m:
                         ans = step

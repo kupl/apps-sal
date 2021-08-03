@@ -2,7 +2,7 @@ def validate_ean(code):
     checksum = int(code[-1:])
     code = list(map(int, code[:-1]))
     odd = sum([code[i] for i in range(0, len(code), 2)])
-    even = sum([code[i]*3 for i in range(1, len(code), 2)])
+    even = sum([code[i] * 3 for i in range(1, len(code), 2)])
     total = odd + even
     if total % 10 == 0:
         if checksum == 0:
@@ -15,4 +15,3 @@ def validate_ean(code):
             return True
         else:
             return False
-

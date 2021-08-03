@@ -1,4 +1,4 @@
-s = list(map(int,input()))
+s = list(map(int, input()))
 k = int(input())
 
 for i in range(k):

@@ -43,18 +43,7 @@ class Solution:
             b0, b1 = box
             for i, j in [(b0 - 1, b1), (b0 + 1, b1), (b0, b1 - 1), (b0, b1 + 1)]:
                 if 0 <= i < M and 0 <= j < N and grid[i][j] != '#' and ((i, j), player) not in seen and reach(player, (
-                b0 * 2 - i, b1 * 2 - j), box):
+                        b0 * 2 - i, b1 * 2 - j), box):
                     seen.add(((i, j), player))
                     heapq.heappush(hp, (heuristic((i, j)) + step + 1, step + 1, (i, j), box))
         return -1
-                    
-                
-                
-                
-                
-                
-                
-                
-                
-                
-

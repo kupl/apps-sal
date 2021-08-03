@@ -14,7 +14,6 @@ for _ in range(t):
             else:
                 left = mid
 
-        n -= f((left+right + 1)//2)
+        n -= f((left + right + 1) // 2)
         ans += 1
     print(ans)
-

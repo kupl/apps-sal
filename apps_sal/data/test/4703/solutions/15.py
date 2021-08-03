@@ -12,4 +12,3 @@ def dfs(i, x):
 
 ans = dfs(0, s[0])
 print(ans)
-

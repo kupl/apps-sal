@@ -1,5 +1,5 @@
-#python3
-#utf-8
+# python3
+# utf-8
 
 pieces_nr = int(input())
 piece_idx___deg = [int(x) for x in input().split()]
@@ -15,4 +15,3 @@ for left_cl in range(pieces_nr):
         ans = min(curr_ans, ans)
         # print(curr_ans)
 print(ans)
-

@@ -1,6 +1,7 @@
 from itertools import groupby
 
-def repeating_fractions(numerator,denominator):
+
+def repeating_fractions(numerator, denominator):
     int_number, fraction = str(numerator / float(denominator)).split('.')
     group = []
     for i, j in groupby(fraction):
@@ -11,5 +12,3 @@ def repeating_fractions(numerator,denominator):
         except StopIteration:
             group.append(i)
     return '{}.{}'.format(int_number, ''.join(group))
-
-

@@ -17,12 +17,12 @@ class Solution:
                 ans += 1
         return ans
     '''
-    
+
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
         shift = 0
         for k in nums:
             strk = bin(k)[2:]
             ans += strk.count('1')
-            shift = max(shift, len(strk)-1)
+            shift = max(shift, len(strk) - 1)
         return ans + shift

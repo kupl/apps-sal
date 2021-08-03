@@ -1,5 +1,10 @@
+from itertools import groupby
+import sys
+from collections import Counter
+
+
 def prime_decomposition(n):
-    
+
     i = 2
     table = []
     while i * i <= n:
@@ -14,10 +19,9 @@ def prime_decomposition(n):
         table.append((n, 1))
     return table
 
-from itertools import groupby
-from collections import Counter
-import sys
+
 input = sys.stdin.readline
+
 
 def main():
     N = int(input())
@@ -32,5 +36,6 @@ def main():
             ans += 1
 
     print(ans)
+
 
 main()

@@ -11,7 +11,3 @@ if min(a) < min(b):
     print(str(min(a)) + str(min(b)))
 else:
     print(str(min(b)) + str(min(a)))
-    
-
-
-

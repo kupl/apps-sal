@@ -15,4 +15,3 @@ except ValueError:
     pos = -1
 
 print(pos if pos == -1 else pos + 1)
-

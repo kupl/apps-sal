@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def strange_coach(players):
     first_letters = (player[0] for player in players)
     counts = Counter(first_letters)

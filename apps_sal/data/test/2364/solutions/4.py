@@ -18,9 +18,8 @@ while len(g) < n:
 for i in range(n):
     if i > 0:
         a[i] = (a[i] + a[i - 1]) % mod
-    ans += a[i] * g[n-1-i]
+    ans += a[i] * g[n - 1 - i]
     if ans > mod:
         ans %= mod
 
 print(ans)
-

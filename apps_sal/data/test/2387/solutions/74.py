@@ -17,6 +17,7 @@ def key(v):
     else:
         return -1, a - m, a
 
+
 N = int(input())
 S = [input() for _ in range(N)]
 
@@ -31,4 +32,3 @@ if c == 0:
     print('Yes')
 else:
     print('No')
-

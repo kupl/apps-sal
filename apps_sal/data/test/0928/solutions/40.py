@@ -19,4 +19,3 @@ while t <= n:
         t += 1
 
 print(ans)
-

@@ -7,9 +7,6 @@
 #a = [list(input()) for _ in range(n)]
 #a = [int(input()) for _ in range(n)]
 
-a,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 
-print((max(a+b,a-b,a*b)))
-
-
-
+print((max(a + b, a - b, a * b)))

@@ -7,10 +7,9 @@ for _ in range(t):
         print(-1)
         continue
     l = list(set(a))
-    l.extend([1]*(k - len(l)))
+    l.extend([1] * (k - len(l)))
 
-    print(n*k)
+    print(n * k)
     for _ in range(n):
         print(*l, end=" ")
     print()
-

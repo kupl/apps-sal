@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         def _len(cnt): return 1 if cnt == 1 else 2 if cnt <= 9 else 3 if cnt <= 99 else 4
@@ -9,7 +11,7 @@ class Solution:
                 return float('inf')
             # remove s[0:left+1]
             if left + 1 == k:
-#                 print(93, left -1, k )
+                #                 print(93, left -1, k )
                 return 0
             # 1. keep s[left], regard no repeating
             # 2. remove s[left]
@@ -24,8 +26,7 @@ class Solution:
                     k -= 1
                 else:
                     cnt += 1
-                    res = min(res, solve(j - 1, k) + _len(cnt)) 
+                    res = min(res, solve(j - 1, k) + _len(cnt))
 #                 print(110, j -1, k )
             return res
         return solve(len(s) - 1, k)
-

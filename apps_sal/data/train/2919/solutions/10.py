@@ -2,14 +2,14 @@ def encode(message, key):
     base_dict = {}
     alpha = "abcdefghijklmnopqrstuvwxyz"
     for i in range(26):
-        base_dict[alpha[i]]  =  i + 1
+        base_dict[alpha[i]] = i + 1
 
     key_extended = []
     count = 0
     for i in range(len(message)):
-        try :
+        try:
             key_extended.append(int(str(key)[count]))
-        except IndexError :
+        except IndexError:
             count = 0
             key_extended.append(int(str(key)[count]))
         count += 1

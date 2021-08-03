@@ -2,7 +2,7 @@ class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         self.memo = {}
         return self.helper(n)
-    
+
     def helper(self, n):
         if n == 0:
             return False
@@ -16,4 +16,3 @@ class Solution:
             i += 1
         self.memo[n] = False
         return False
-

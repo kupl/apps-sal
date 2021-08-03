@@ -28,4 +28,3 @@ for i in range(len(dp) - 1):
             dp[i + 1][j + minus[i].b] = max(dp[i + 1][j + minus[i].b], dp[i][j] + 1)
 ans += max(dp[-1])
 print(ans)
-

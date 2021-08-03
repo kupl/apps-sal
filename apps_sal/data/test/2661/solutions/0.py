@@ -10,13 +10,13 @@ def main():
     V = list(map(int, input().split()))
 
     range_N = list(range(N))
-    ans = [[0]*N for _ in range_N]
+    ans = [[0] * N for _ in range_N]
     # 論理積
     for i in range_N:
         if S[i] == 0:
             for j in range_N:
                 ans[i][j] = ans[i][j] | U[i]
-        if T[i] == 0:   
+        if T[i] == 0:
             for j in range_N:
                 ans[j][i] = ans[j][i] | V[i]
     for i in range_N:
@@ -54,7 +54,7 @@ def main():
         y_sum = ans[0][y]
         for x in range_N:
             y_sum = y_sum | ans[x][y]
-        if y_sum == V[y]: 
+        if y_sum == V[y]:
             continue
         up = V[y] - y_sum
         for x in range_N:
@@ -83,14 +83,14 @@ def main():
             check_xm = check_xm & ans[i][j]
             check_ym = check_ym & ans[j][i]
         if (S[i] and U[i] != check_xs) \
-        or (T[i] and V[i] != check_ys) \
-        or (S[i] == 0 and U[i] != check_xm) \
-        or (T[i] == 0 and V[i] != check_ym) :
+                or (T[i] and V[i] != check_ys) \
+                or (S[i] == 0 and U[i] != check_xm) \
+                or (T[i] == 0 and V[i] != check_ym):
             print((-1))
-            return       
+            return
 
     for i in range_N:
         print((*ans[i]))
 
-main()
 
+main()

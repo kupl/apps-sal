@@ -29,4 +29,3 @@ while abs(ok - ng) > 1:
         ng = x
 
 print((s - (c - m) * ok))
-

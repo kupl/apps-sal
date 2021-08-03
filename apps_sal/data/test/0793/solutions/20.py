@@ -12,8 +12,8 @@ for i in range(N):
 
 for i in range(M):
     if T[i] in S:
-        B.append(T[i])        
-        
+        B.append(T[i])
+
 l1 = [1] * (N + 1)
 
 for i, t in enumerate(T):

@@ -13,4 +13,3 @@ for i in range(N):
     acc[i + 1] = acc[i] + dp[i]
     acc[i + 1] %= MOD
 print((dp[-1]))
-

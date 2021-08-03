@@ -65,4 +65,3 @@ for i in range(q):
         print(last_j)
     else:
         print(-1)
-

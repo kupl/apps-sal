@@ -13,11 +13,12 @@ graph = []
 for i in range(n):
     graph.append(input())
 
+
 def dfs(visited):
     reachable = []
     stack = []
     stack.append((0, 0))
-    
+
     while stack:
         node_r, node_c = stack.pop()
         if not visited[node_r][node_c]:
@@ -29,8 +30,9 @@ def dfs(visited):
                 stack.append((node_r, node_c + 1))
             if node_r == n - 1 and node_c == m - 1:
                 break
-    
+
     return reachable
+
 
 '''           
 def dfs_reverse():
@@ -65,4 +67,3 @@ else:
         print(2)
     else:
         print(1)
-

@@ -7,4 +7,3 @@ for i in range(n, 1000):
     if a == b == c:
         print(i)
         return
-

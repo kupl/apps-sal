@@ -2,7 +2,7 @@ n = int(input())
 a = 0
 b = 0
 ans = 0
-for i in range (n):
+for i in range(n):
     x, y = list(map(int, input().split()))
     if (x + y) % 2 == 1:
         ans = 1
@@ -16,4 +16,3 @@ elif ans == 0:
     print(-1)
 else:
     print(1)
-

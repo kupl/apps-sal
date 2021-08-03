@@ -9,4 +9,3 @@ elif 1 <= r <= 12:
     print('YYMM')
 else:
     print('NA')
-

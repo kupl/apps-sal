@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         def dfs(curr, curr_color):
@@ -9,7 +11,7 @@ class Solution:
                 elif color[next] == curr_color:
                     return False
             return True
-        
+
         graph = collections.defaultdict(list)
         color = [None] * (N + 1)
         for u, v in dislikes:

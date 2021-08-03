@@ -13,4 +13,3 @@ for a in list(counter.keys()):
         ans += counter[a] ** 3
 
 print(ans)
-

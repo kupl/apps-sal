@@ -6,6 +6,7 @@ def rotate(p, w, h):
         rot[i] = list(reversed(rot[i]))
     return rot
 
+
 def double():
     nonlocal mas, r
     p = 0
@@ -15,12 +16,14 @@ def double():
             s += j * 2
         mas[p] = s
         mas[p + 1] = s
-        p += 2   
+        p += 2
+
 
 def reverse():
     nonlocal r
     for i in range(h):
-        r[i] = list(reversed(r[i]))    
+        r[i] = list(reversed(r[i]))
+
 
 w, h = map(int, input().split())
 p = [[] for i in range(h)]
@@ -35,4 +38,3 @@ mas = [['.' for i in range(w * 2)] for i in range(h * 2)]
 double()
 for i in range(h * 2):
     print(*mas[i], sep='')
-

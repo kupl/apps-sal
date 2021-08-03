@@ -8,7 +8,7 @@ class Solution:
             t = (len(s) - 1) * (len(s) - 2) // 2
             return t % MOD
         n //= 3
-        
+
         def f(s, n):
             i = 0
             while n:
@@ -19,5 +19,5 @@ class Solution:
                 k += 1
                 i += 1
             return k
-        
+
         return f(s, n) * f(''.join(reversed(s)), n) % MOD

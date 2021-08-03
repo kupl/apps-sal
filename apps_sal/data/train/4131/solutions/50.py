@@ -5,4 +5,4 @@ def how_much_water(water, load, clothes):
         return 'Not enough clothes'
     else:
         need = water * (1.1 ** (clothes - load))
-        return round (need, 2)
+        return round(need, 2)

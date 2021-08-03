@@ -11,6 +11,5 @@ for k, v in list(c.items()):
         ans += v
     if k < v:
         ans += v - k
-    
-print(ans)
 
+print(ans)

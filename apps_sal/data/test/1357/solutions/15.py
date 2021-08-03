@@ -6,4 +6,3 @@ ans = 0
 for i, j in zip(a[:-1], a[1:]):
     ans += j - i if j >= i else n - i + j
 print(ans)
-

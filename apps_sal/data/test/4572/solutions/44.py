@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 S = set(input())
-az = [chr(i) for i in range(ord('a'),ord('z')+1)]
+az = [chr(i) for i in range(ord('a'), ord('z') + 1)]
 
 if len(S) >= 26:
     print("None")
@@ -13,7 +13,3 @@ for i in az:
     else:
         print(i)
         return
-
-
-
-

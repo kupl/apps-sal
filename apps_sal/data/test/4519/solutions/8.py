@@ -3,7 +3,7 @@ while q > 0:
     q -= 1
     n, d = list(map(int, input().split()))
     s = input()
-    l =[]
+    l = []
     for c in s:
         l.append(c)
     j = 0
@@ -13,10 +13,10 @@ while q > 0:
             if i - j <= d:
                 ans[j] = "0"
                 l[i] = "*"
-                d -= (i-j)
+                d -= (i - j)
                 j += 1
             else:
-                ans[i-d] = "0"
+                ans[i - d] = "0"
                 l[i] = "*"
                 break
     i = 0
@@ -33,12 +33,7 @@ while q > 0:
             index += 1
         i += 1
     for k in ans:
-        print(k, end = "")
+        print(k, end="")
     print()
 
-    
-    
     print()
-    
-
-        

@@ -1,5 +1,6 @@
 import re
 
+
 def my_very_own_split(string, delimiter=None):
     if delimiter == '':
         raise ValueError('empty separator')

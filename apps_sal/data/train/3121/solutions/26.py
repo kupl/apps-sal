@@ -4,4 +4,3 @@ def solve(arr):
             pass
         else:
             return num
-

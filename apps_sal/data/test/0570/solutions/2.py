@@ -14,9 +14,9 @@ def main():
         b -= cur + 1
         cur += 2
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

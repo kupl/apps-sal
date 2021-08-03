@@ -12,6 +12,7 @@ def findO(s):
             i += 1
     return s
 
+
 s = input()
 s = findO(s)
 print(s)

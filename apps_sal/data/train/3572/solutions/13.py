@@ -1,1 +1,1 @@
-invite_more_women = lambda x: sum(x) > 0
+def invite_more_women(x): return sum(x) > 0

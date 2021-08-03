@@ -2,7 +2,7 @@ import math
 
 w, h, a = list(map(int, input().strip().split()))
 
-if h >   w:
+if h > w:
     w, h = h, w
 
 if a > 90:
@@ -22,5 +22,3 @@ if a < 2 * math.atan2(h, w):
     print(area - 2 * bigger_area - 2 * lower_area)
 else:
     print(h * h / math.sin(a))
-
-

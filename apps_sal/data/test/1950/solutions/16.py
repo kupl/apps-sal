@@ -2,7 +2,7 @@ class heap:
     def __init__(self, maxn):
         self.a = [0] * maxn
         self.size = 0
-    
+
     def shift_down(self, i):
         while 2 * i + 1 < self.size:
             l = 2 * i + 1
@@ -47,4 +47,3 @@ while s.size > 1:
     ans += t
     s.insert(t)
 print(ans)
-

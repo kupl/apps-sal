@@ -1,15 +1,17 @@
 d = {
-     '> Y':  (0,  1, max),
-     '>= Y': (0,  0, max),
-     '< N':  (0,  0, max),
-     '<= N': (0,  1, max),
-     '< Y':  (1, -1, min),
-     '<= Y': (1,  0, min),
-     '> N':  (1,  0, min),
-     '>= N': (1, -1, min),
+    '> Y': (0, 1, max),
+    '>= Y': (0, 0, max),
+    '< N': (0, 0, max),
+    '<= N': (0, 1, max),
+    '< Y': (1, -1, min),
+    '<= Y': (1, 0, min),
+    '> N': (1, 0, min),
+    '>= N': (1, -1, min),
 }
 ran = [-2000000000, 2000000000]
 possible = True
+
+
 def analyse(s):
     ls = s.split(' ')
     op = d.get(' '.join((ls[0], ls[2])))
@@ -28,4 +30,3 @@ if possible:
     print(ran[0])
 else:
     print('Impossible')
-

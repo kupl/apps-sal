@@ -1,5 +1,5 @@
 def bmi(weight, height):
-    b = weight/(height**2)
+    b = weight / (height**2)
     if b > 30:
         return 'Obese'
     else:

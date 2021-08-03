@@ -29,4 +29,3 @@ for i, e1 in enumerate(acc[0]):
             ans = max(ans, val)
 
 print(ans)
-

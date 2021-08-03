@@ -9,8 +9,7 @@ s1 = o[0]
 o[0] = 0
 o.sort()
 count = 0
-while(s1*a < b*s):
+while(s1 * a < b * s):
     s -= o.pop()
-    count+=1
+    count += 1
 print(count)
-

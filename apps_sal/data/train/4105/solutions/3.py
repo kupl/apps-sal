@@ -1,2 +1,2 @@
-from itertools import cycle as c,islice as isl
-sumDig_nthTerm=lambda ini,p,n:sum(map(int,str(ini+sum(list(isl(c(p),n-1))))))
+from itertools import cycle as c, islice as isl
+def sumDig_nthTerm(ini, p, n): return sum(map(int, str(ini + sum(list(isl(c(p), n - 1))))))

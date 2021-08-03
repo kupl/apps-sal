@@ -16,6 +16,3 @@ for i in range(m):
             print((sum(a)))
             return
 print((sum(a)))
-            
-
-

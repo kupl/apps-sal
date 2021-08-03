@@ -1,5 +1,6 @@
 class Solution:
     dp = [dict.fromkeys('aeiou', 1)]
+
     def countVowelPermutation(self, n: int) -> int:
         MOD = 10 ** 9 + 7
         follows = {'a': 'e', 'e': 'ai', 'i': 'aeou', 'o': 'iu', 'u': 'a'}

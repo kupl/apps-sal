@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     @staticmethod
     def binary_search(arr, i):
@@ -11,15 +13,14 @@ class Solution:
             else:
                 hi = mid
         return lo
-        
-        
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         mapping = collections.defaultdict(list)
         for i in range(len(startTime)):
             mapping[endTime[i]].append([startTime[i], profit[i]])
 
-        tasks = sorted(list(mapping.items()), key=lambda x : x[0])
-        
+        tasks = sorted(list(mapping.items()), key=lambda x: x[0])
+
         dp = [[0, 0]]
         for group in tasks:
             for task in group[1]:
@@ -30,4 +31,3 @@ class Solution:
                     else:
                         dp.append([group[0], task[1] + dp[idx][1]])
         return dp[-1][1]
-

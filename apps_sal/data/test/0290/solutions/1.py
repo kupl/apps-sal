@@ -11,4 +11,3 @@ if (r - 1) * r >= n:
     print(2 * r - 1)
 else:
     print(2 * r)
-

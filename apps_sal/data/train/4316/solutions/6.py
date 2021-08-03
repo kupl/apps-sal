@@ -3,4 +3,4 @@ def reverse_by_center(s):
     if len(s) % 2 == 0:
         return s[l:] + s[:l]
     else:
-        return s[l+1:] + s[l] + s[:l]
+        return s[l + 1:] + s[l] + s[:l]

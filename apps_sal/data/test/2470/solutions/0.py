@@ -40,4 +40,3 @@ class Solution:
             last_success = ops
 
         return last_success
-

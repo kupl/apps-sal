@@ -20,7 +20,7 @@ class Solution:
             elif res == 1:
                 ans += d
         return ans
-    
+
     def join(self, ds, a, b, N):
         idx1 = -1
         for i in range(len(ds)):

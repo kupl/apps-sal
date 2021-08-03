@@ -8,7 +8,7 @@ for i in range(n):
     for j in range(n):
         if s in (data[i] + data[j]):
             mark = 1
-            
+
 if mark:
     print("YES")
 else:

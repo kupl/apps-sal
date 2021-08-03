@@ -1,4 +1,4 @@
-class Solution:    
+class Solution:
     def longestAwesome(self, s: str) -> int:
         known_positions = {0: 0}
 
@@ -19,8 +19,8 @@ class Solution:
 
             if mask in known_positions:
                 max_size = max(max_size, idx - known_positions[mask] + 1)
-                
+
             else:
                 known_positions[mask] = idx + 1
-                    
+
         return max(max_size, 1)

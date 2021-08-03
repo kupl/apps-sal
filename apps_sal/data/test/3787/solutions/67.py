@@ -3,16 +3,16 @@ def main():
     if N < A:
         print((-1))
         return
-    x = -(-N//A)
-    if B < x or (N-A+1) < B:
+    x = -(-N // A)
+    if B < x or (N - A + 1) < B:
         print((-1))
         return
-    lst = list(range(1, N+1))
+    lst = list(range(1, N + 1))
     seq = [lst[:A]]
     idx = A
-    for i in range(B-1):
-        rem = B-1-i
-        nidx = idx - (-(N-idx)//rem)
+    for i in range(B - 1):
+        rem = B - 1 - i
+        nidx = idx - (-(N - idx) // rem)
         seq.append(lst[idx:nidx])
         idx = nidx
     ans = []
@@ -23,5 +23,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

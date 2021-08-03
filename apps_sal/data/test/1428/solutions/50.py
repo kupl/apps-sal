@@ -3,9 +3,11 @@ import sys
 import numpy as np
 from itertools import permutations
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N, C = lr()
 feeling = np.array([lr() for _ in range(C)])
@@ -13,7 +15,7 @@ Cij = [lr() for _ in range(N)]
 three = [[0] * C for _ in range(3)]
 for i in range(N):
     for j in range(N):
-        remain = (i+j) % 3
+        remain = (i + j) % 3
         num = Cij[i][j] - 1
         three[remain][num] += 1
 
@@ -31,4 +33,3 @@ for X in permutations(list(range(C)), 3):
 
 print(answer)
 # 13
-

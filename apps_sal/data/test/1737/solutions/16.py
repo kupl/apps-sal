@@ -56,9 +56,8 @@ while k1 < len(temp1) or k2 < len(temp2):
         temp2 = []
         k2 = 1
         k1 = 0
-        
+
 lst.sort()
 print(len(lst))
 for (a, b) in lst:
     print(a, b)
-

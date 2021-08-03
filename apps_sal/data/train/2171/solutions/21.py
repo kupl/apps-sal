@@ -1,6 +1,7 @@
 # Target - Expert on CF
 # Be Humblefool
 
+from collections import deque, Counter, OrderedDict, defaultdict
 import sys
 
 # inf = float("inf")
@@ -14,56 +15,55 @@ sys.setrecursionlimit(10000000)
 # dx,dy=[0,1,0,-1],[1,0,-1,0]
 
 # import random
-from collections import deque, Counter, OrderedDict,defaultdict
 # from heapq import nsmallest, nlargest, heapify,heappop ,heappush, heapreplace
 # from math import ceil,floor,log,sqrt,factorial,pi,gcd
 # from bisect import bisect,bisect_left,bisect_right,insort,insort_left,insort_right
+
 
 def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
 def get_ints(): return map(int, sys.stdin.readline().strip().split())
 def input(): return sys.stdin.readline().strip()
 
+
 def dfs(current_node, xor, change_zero, change_one):
-    stack = [(current_node,xor,change_zero,change_one)]
-    nonlocal visited,ans,store
+    stack = [(current_node, xor, change_zero, change_one)]
+    nonlocal visited, ans, store
 
     while stack:
-        current_node,xor,change_zero,change_one = stack.pop()
-        visited[current_node-1] = True
-        if xor==0:
-            if change[current_node-1]!=current[current_node-1]:
-                if ~change_zero&1:
-                    change_zero+=1
-                    ans+=1
+        current_node, xor, change_zero, change_one = stack.pop()
+        visited[current_node - 1] = True
+        if xor == 0:
+            if change[current_node - 1] != current[current_node - 1]:
+                if ~change_zero & 1:
+                    change_zero += 1
+                    ans += 1
                     store.append(current_node)
             else:
-                if change_zero&1:
-                    change_zero+=1
-                    ans+=1
+                if change_zero & 1:
+                    change_zero += 1
+                    ans += 1
                     store.append(current_node)
         else:
-            if change[current_node-1]!=current[current_node-1]:
-                if ~change_one&1:
-                    change_one+=1
-                    ans+=1
+            if change[current_node - 1] != current[current_node - 1]:
+                if ~change_one & 1:
+                    change_one += 1
+                    ans += 1
                     store.append(current_node)
             else:
-                if change_one&1:
-                    change_one+=1
-                    ans+=1
+                if change_one & 1:
+                    change_one += 1
+                    ans += 1
                     store.append(current_node)
-        new_xor = xor^1
+        new_xor = xor ^ 1
         for child in mydict[current_node]:
-            if not visited[child-1]:
+            if not visited[child - 1]:
                 stack.append((child, new_xor, change_zero, change_one))
-
-
 
 
 n = int(input())
 mydict = defaultdict(list)
-for i in range(n-1):
-    x,y = get_ints()
+for i in range(n - 1):
+    x, y = get_ints()
     mydict[x].append(y)
     mydict[y].append(x)
 
@@ -74,8 +74,8 @@ change = get_array()
 ans = 0
 current_node = 1
 store = []
-visited = [False]*(n)
-dfs(current_node,1,0,0)
+visited = [False] * (n)
+dfs(current_node, 1, 0, 0)
 print(ans)
 for i in store:
     print(i)

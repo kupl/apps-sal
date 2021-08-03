@@ -6,6 +6,3 @@ def remove_duplicate_words(s):
             newlist.append(i)
     newstring = " ".join(newlist)
     return newstring
-            
-
-

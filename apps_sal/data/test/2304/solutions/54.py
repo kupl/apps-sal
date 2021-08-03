@@ -49,7 +49,8 @@ for i in range(m):
     l, r, d = map(int, input().split())
     if UF.same(l, r):
         if d != abs(UF.diff(l, r)):
-            print("No");return
+            print("No")
+            return
     else:
         UF.union(l, r, d)
 print("Yes")

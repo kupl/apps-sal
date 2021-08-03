@@ -9,4 +9,3 @@ if count > c:
     count = c
 
 print(count)
-

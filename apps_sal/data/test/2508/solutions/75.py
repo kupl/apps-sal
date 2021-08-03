@@ -45,4 +45,3 @@ field = ''.join(field)
 s = x1 * w2 + y1
 t = x2 * w2 + y2
 print((solve(field, s, t, k)))
-

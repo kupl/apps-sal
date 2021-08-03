@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
-x = sum(a[:n//2])
+x = sum(a[:n // 2])
 # print(x)
 print(x**2 + (sum(a) - x)**2)

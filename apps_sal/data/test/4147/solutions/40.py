@@ -21,18 +21,17 @@ def test(n, a, b, c, na, nb, nc):
             return 10**9
         else:
             mp = 0
-            mp += (na-1) * 10 if na else 0
-            mp += (nb-1) * 10 if nb else 0
-            mp += (nc-1) * 10 if nc else 0
-            mp += abs(A-a) + abs(B-b) + abs(C-c)
+            mp += (na - 1) * 10 if na else 0
+            mp += (nb - 1) * 10 if nb else 0
+            mp += (nc - 1) * 10 if nc else 0
+            mp += abs(A - a) + abs(B - b) + abs(C - c)
             return mp
     else:
-        mp1 = test(n+1, a, b, c, na, nb, nc)  # 使用しない
-        mp2 = test(n+1, a+L[n], b, c, na+1, nb, nc)  # 竹aに適用
-        mp3 = test(n+1, a, b+L[n], c, na, nb+1, nc)  # 竹bに適用
-        mp4 = test(n+1, a, b, c+L[n], na, nb, nc+1)  # 竹cに適用
+        mp1 = test(n + 1, a, b, c, na, nb, nc)  # 使用しない
+        mp2 = test(n + 1, a + L[n], b, c, na + 1, nb, nc)  # 竹aに適用
+        mp3 = test(n + 1, a, b + L[n], c, na, nb + 1, nc)  # 竹bに適用
+        mp4 = test(n + 1, a, b, c + L[n], na, nb, nc + 1)  # 竹cに適用
         return min(mp1, mp2, mp3, mp4)
 
 
 print((test(0, 0, 0, 0, 0, 0, 0)))
-

@@ -14,9 +14,9 @@ for i in range(N):
         TLE += 1
     else:
         RE += 1
-    
-    
-print("AC x",AC)
-print("WA x",WA)
-print("TLE x",TLE)
-print("RE x",RE)
+
+
+print("AC x", AC)
+print("WA x", WA)
+print("TLE x", TLE)
+print("RE x", RE)

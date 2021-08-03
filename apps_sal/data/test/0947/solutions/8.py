@@ -2,9 +2,12 @@ import sys
 from collections import deque
 import heapq
 
-input = lambda: sys.stdin.readline().strip()
+
+def input(): return sys.stdin.readline().strip()
+
+
 ipnut = input
-pprint = lambda x: print(' '.join(map(lambda t: str(t + 1), x)))
+def pprint(x): return print(' '.join(map(lambda t: str(t + 1), x)))
 
 
 def mex():
@@ -29,4 +32,3 @@ for _ in range(int(input())):
         print(1, n - 1)
     # n, m = map(int, input().split())
     # a = list(map(int, input().split()))
-

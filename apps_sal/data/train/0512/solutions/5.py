@@ -66,8 +66,8 @@ def f_colorful_tree(N, Q, Edges, Queries):
     def dfs2(parent, current):
         nonlocal color_distance
         for i, x, y, coefficient in v_need[current]:
-            ans[i] += (coefficient * (distance_from_root[current]
-                                      - color_distance[x] + y * color_appear[x]))
+            ans[i] += (coefficient * (distance_from_root[current] -
+                                      color_distance[x] + y * color_appear[x]))
         for child, x, y in tree[current]:
             if child == parent:
                 continue
@@ -81,6 +81,7 @@ def f_colorful_tree(N, Q, Edges, Queries):
 
     dfs2(-1, 0)
     return '\n'.join(map(str, ans))
+
 
 N, Q = [int(i) for i in input().split()]
 Edges = [[int(i) for i in input().split()] for j in range(N - 1)]

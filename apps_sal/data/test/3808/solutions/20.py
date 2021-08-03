@@ -20,4 +20,3 @@ if res == "":
         res = "No"
 
 print(res)
-

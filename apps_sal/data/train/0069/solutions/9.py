@@ -10,7 +10,9 @@ def chek(m, b, c, li):
 
 
 # 113759
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 f = int(input())
 for _ in range(f):
     a, b = list(map(int, input().split()))
@@ -44,4 +46,3 @@ for _ in range(f):
                 ans += b * mas[i]
                 ans -= a
     print(ans)
-

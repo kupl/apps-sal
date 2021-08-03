@@ -1,7 +1,23 @@
-import array, bisect, collections, copy, fractions, functools, heapq, itertools, math, random, re, string, sys, time, os, timeit
+import array
+import bisect
+import collections
+import copy
+import fractions
+import functools
+import heapq
+import itertools
+import math
+import random
+import re
+import string
+import sys
+import time
+import os
+import timeit
 
 sys.setrecursionlimit(10000000)
 inf = float('inf')
+
 
 def li(): return [int(x) for x in sys.stdin.readline().split()]
 def li_(): return [int(x) - 1 for x in sys.stdin.readline().split()]

@@ -4,10 +4,13 @@ Institute : JIIT
 """
 
 
-import itertools, os, sys, threading
+import itertools
+import os
+import sys
+import threading
 from collections import deque, Counter, OrderedDict, defaultdict
 import heapq
-from math import ceil,floor,log,sqrt,factorial,pow,pi,gcd
+from math import ceil, floor, log, sqrt, factorial, pow, pi, gcd
 # from bisect import bisect_left,bisect_right
 # from decimal import *,threading
 """from io import BytesIO, IOBase
@@ -61,7 +64,7 @@ def print(*args, **kwargs):
 
 def ii(): return int(input())
 def si(): return str(input())
-def mi(): return list(map(int,input().split()))
+def mi(): return list(map(int, input().split()))
 def li(): return list(mi())
 
 
@@ -77,6 +80,8 @@ def d2(n, m, num): return [[num for x in range(m)] for y in range(n)]
 def isPowerOfTwo(x): return (x and (not (x & (x - 1))))
 def decimalToBinary(n): return bin(n).replace("0b", "")
 def ntl(n): return [int(i) for i in str(n)]
+
+
 def powerMod(x, y, p):
     res = 1
     x %= p
@@ -86,6 +91,8 @@ def powerMod(x, y, p):
         y = y >> 1
         x = (x * x) % p
     return res
+
+
 def gcd(x, y):
     while y:
         x, y = y, x % y
@@ -96,9 +103,12 @@ def gcd(x, y):
 # Printing the Output to output.txt file
 # sys.stdout = open('output.txt', 'w')
 
+
 graph = defaultdict(list)
 visited = [0] * 1000000
 col = [-1] * 1000000
+
+
 def dfs(v, c):
     if visited[v]:
         if col[v] != c:
@@ -110,26 +120,28 @@ def dfs(v, c):
     for i in graph[v]:
         dfs(i, c ^ 1)
 
-def bfs(d,v):
-    q=[]
+
+def bfs(d, v):
+    q = []
     q.append(v)
-    visited[v]=1
-    while len(q)!=0:
-        x=q[0]
+    visited[v] = 1
+    while len(q) != 0:
+        x = q[0]
         q.pop(0)
         for i in d[x]:
-            if visited[i]!=1:
-                visited[i]=1
+            if visited[i] != 1:
+                visited[i] = 1
                 q.append(i)
         print(x)
     print(l)
 
+
 def make_graph(e):
-    d={}
+    d = {}
     for i in range(e):
-        x,y=mi()
+        x, y = mi()
         if x not in list(d.keys()):
-            d[x]=[y]
+            d[x] = [y]
         else:
             d[x].append(y)
         if y not in list(d.keys()):
@@ -137,31 +149,35 @@ def make_graph(e):
         else:
             d[y].append(x)
     return d
+
+
 def gr2(n):
-    d={}
+    d = {}
     for i in range(n):
-        x,y=mi()
+        x, y = mi()
         if x not in list(d.keys()):
-            d[x]=[y]
+            d[x] = [y]
         else:
             d[x].append(y)
     return d
 
+
 def connected_components(graph):
     seen = set()
+
     def dfs(v):
         vs = set([v])
-        component=[]
+        component = []
         while vs:
             v = vs.pop()
             seen.add(v)
             vs |= set(graph[v]) - seen
             component.append(v)
         return component
-    ans=[]
+    ans = []
     for v in graph:
         if v not in seen:
-            d=dfs(v)
+            d = dfs(v)
             ans.append(d)
     return ans
 
@@ -176,5 +192,3 @@ while g:
     v.append(x)
     g += Counter()
 print(' '.join(map(str, v)))
-
-

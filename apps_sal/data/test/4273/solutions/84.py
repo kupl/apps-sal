@@ -1,3 +1,4 @@
+from itertools import combinations
 n = int(input())
 s = []
 for i in range(n):
@@ -10,8 +11,5 @@ c = (
     s.count("C"),
     s.count("H"),
 )
-from itertools import combinations
-a = sum(x*y*z for x, y, z in combinations(c, 3))
+a = sum(x * y * z for x, y, z in combinations(c, 3))
 print(a, flush=True)
-
-

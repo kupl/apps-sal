@@ -2,8 +2,9 @@ class Node:
     def __init__(self, val='.'):
         self.val = val
         self.children = {}
-        self.is_word = False    
-    
+        self.is_word = False
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -21,8 +22,8 @@ class StreamChecker:
                 if child_node.is_word:
                     found = True
         self.q = new_q
-        return found    
-    
+        return found
+
     def __init_trie(self, words):
         root = Node()
         for word in words:
@@ -37,4 +38,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

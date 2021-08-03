@@ -4,7 +4,7 @@ class Solution:
             return 0
         unused_keys = set()
         boxes = set([i for i in initialBoxes if status[i] == 0])
-        
+
         Q = collections.deque([i for i in initialBoxes if status[i] == 1])
         res = 0
         while Q:

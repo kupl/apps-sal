@@ -3,12 +3,12 @@ class Solution:
         queue = deque([0])
         visited = set([0])
         map = defaultdict(list)
-        
+
         for idx, num in enumerate(arr):
             map[num].append(idx)
-            
+
         step = 0
-        
+
         while queue:
             size = len(queue)
             for _ in range(size):
@@ -27,7 +27,6 @@ class Solution:
                 #  避免TLE ,第一次已经把所有值相同的加到了queue，之后访问到和当前值相同的idx时 不需要再apply 第三条规则
                 # 即for neighbor in map[arr[pos]]
                 del map[arr[pos]]
-            
+
             step += 1
         return -1
-

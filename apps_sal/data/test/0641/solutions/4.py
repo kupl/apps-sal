@@ -1,6 +1,6 @@
 ch = str(input())
 n = len(ch)
-t = ch[n-1]
+t = ch[n - 1]
 e = ch.index(" ")
 m = int(ch[:e])
 if t == "k":
@@ -15,4 +15,3 @@ else:
         print(11)
     elif m == 31:
         print(7)
-

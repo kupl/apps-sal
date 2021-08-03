@@ -1,6 +1,7 @@
 # coding=utf-8
 import sys
 
+
 def __starting_point():
     bingo = [[0] * 3 for i in range(3)]
 
@@ -21,7 +22,6 @@ def __starting_point():
 
     #print(bingo, ans)
 
-
     for i in range(3):
         if (ans[0][i] + ans[1][i] + ans[2][i]) == 3:
             print("Yes")
@@ -32,7 +32,7 @@ def __starting_point():
             print("Yes")
             return
 
-    #naname
+    # naname
     if (ans[0][0] + ans[1][1] + ans[2][2]) == 3:
         print("Yes")
         return
@@ -42,5 +42,6 @@ def __starting_point():
         return
 
     print('No')
+
 
 __starting_point()

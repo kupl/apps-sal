@@ -2,6 +2,7 @@ from collections import Counter, defaultdict
 
 N = int(input())
 
+
 def primeFactorization(N):
     primes = Counter()
     R = int(N**(0.5)) + 1
@@ -9,9 +10,10 @@ def primeFactorization(N):
         while N % num == 0:
             N //= num
             primes[num] += 1
-    if N > 1 :
+    if N > 1:
         primes[N] = 1
     return primes
+
 
 primes = Counter()
 for i in range(1, N + 1):
@@ -30,4 +32,3 @@ ans += cnt[25] * (cnt[3] - 1)
 ans += cnt[15] * (cnt[5] - 1)
 ans += cnt[75]
 print(ans)
-

@@ -7,5 +7,3 @@ if log:
     print("YES")
 else:
     print("NO")
-
-

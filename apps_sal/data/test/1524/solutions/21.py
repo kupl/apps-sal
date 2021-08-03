@@ -20,7 +20,7 @@ for c in rle:
             ans[j] += c // 2
         else:
             ans[j] += c // 2 + 1
-        ans[j+1] += c // 2
+        ans[j + 1] += c // 2
         i += c
         y = 'L'
     else:
@@ -28,7 +28,7 @@ for c in rle:
             ans[i] += c // 2
         else:
             ans[i] += c // 2 + 1
-        ans[i-1] += c // 2
+        ans[i - 1] += c // 2
         i += c
         y = 'R'
-print(' '.join(map(str,ans)))
+print(' '.join(map(str, ans)))

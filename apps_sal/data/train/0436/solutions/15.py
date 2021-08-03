@@ -1,4 +1,6 @@
 from queue import Queue
+
+
 class Solution:
     def minDays(self, n: int) -> int:
         q = Queue()

@@ -10,4 +10,3 @@ else:
     ans.append(2 * c * y)
 
 print((min(ans)))
-

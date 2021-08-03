@@ -1,3 +1,2 @@
 def penultimate(a):
-  return a[-2]
-
+    return a[-2]

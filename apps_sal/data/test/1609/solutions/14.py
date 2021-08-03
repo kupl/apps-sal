@@ -16,6 +16,5 @@ for i in lst:
     if i not in ans and i <= n:
         ans.add(i)
         sp.append(i)
-    
-print(*sp)    
 
+print(*sp)

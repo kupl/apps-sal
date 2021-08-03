@@ -3,7 +3,7 @@ def row_weights(array):
     Returns a tuple of total weights for 'team 1' and 'team 2,' where
     the first person of array is in team 1, the second team 2, the third
     in team 1, etc...
-    
+
     Args:
         array: List of at least two positive integers, which represents 
         peoples' weights.

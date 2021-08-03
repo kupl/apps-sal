@@ -6,4 +6,3 @@ def cube_odd(arr):
         elif x**3 % 2 == 1:
             s += x**3
     return s
-

@@ -2,11 +2,13 @@ def primes_set():
     primes, sieve = {2}, [True] * 50000
     for i in range(3, 317, 2):
         if sieve[i // 2]:
-            sieve[i * i // 2 :: i] = [False] * ((100000 - i * i - 1) // (2 * i) + 1)
+            sieve[i * i // 2:: i] = [False] * ((100000 - i * i - 1) // (2 * i) + 1)
     primes.update((2 * i + 1) for i in range(1, 50000) if sieve[i])
     return primes
 
+
 primes = primes_set()
+
 
 def prime_product(n):
     if n % 2 or n == 4:

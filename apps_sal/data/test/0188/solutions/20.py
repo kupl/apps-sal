@@ -4,12 +4,14 @@ n, k = map(int, input().split())
 a = list(map(int, input().split()))
 
 mid = n
-side = n*2
+side = n * 2
+
 
 def removeZeroes(a):
     return [x for x in a if x > 0]
 
-#FOR 4 
+
+# FOR 4
 for i in range(len(a)):
     if a[i] >= 4:
         while a[i] >= 4 and (mid > 0 or side > 1):
@@ -19,9 +21,9 @@ for i in range(len(a)):
             else:
                 side -= 2
 
-#FOR 3
+# FOR 3
 for i in range(len(a)):
-    if not(mid > 0 or side > 1): 
+    if not(mid > 0 or side > 1):
         break
     if a[i] == 3:
         if mid > 0:
@@ -29,8 +31,8 @@ for i in range(len(a)):
         else:
             side -= 2
         a[i] = 0
-            
-#REMOVE GROUPS WITH 0 REMAINED
+
+# REMOVE GROUPS WITH 0 REMAINED
 a = removeZeroes(a)
 
 if a.count(2) + a.count(1) != len(a):
@@ -53,7 +55,7 @@ while len(a) > 0 and a[0] == 1 and a[-1] == 2 and mid > 0:
     a = a[1:-1]
     mid -= 1
 if len(a) > 0 and a[0] == 1:
-    if (a.count(1)+1) // 2 <= mid:
+    if (a.count(1) + 1) // 2 <= mid:
         print("YES")
         return
     else:

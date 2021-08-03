@@ -1,5 +1,6 @@
 import functools
 
+
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         max_remaining = sum(rollMax)
@@ -20,4 +21,3 @@ class Solution:
             return sequences_from_here % (10 ** 9 + 7)
 
         return sum(count_sequences(i, rollMax[i] - 1, n - 1) for i in range(len(rollMax))) % (10 ** 9 + 7)
-

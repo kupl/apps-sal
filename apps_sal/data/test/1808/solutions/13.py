@@ -6,4 +6,3 @@ for i in range(n - k):
     partial_sum += nums[i]
 
 print(partial_sum + k * x)
-

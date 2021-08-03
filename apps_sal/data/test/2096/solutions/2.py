@@ -35,4 +35,3 @@ for i in range(2 * N):
         Counts[Num] += 1
 print((Duo + (Mono // 2)) * (Duo + ((Mono + 1) // 2)))
 print(*Good)
-

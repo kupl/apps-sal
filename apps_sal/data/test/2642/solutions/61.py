@@ -43,4 +43,3 @@ for a, b in t:
 result += d[0][0] - 1
 result %= m
 print(result)
-

@@ -5,4 +5,3 @@ result = 0
 for data in range(k):
     result += l[data]
 print(result)
-

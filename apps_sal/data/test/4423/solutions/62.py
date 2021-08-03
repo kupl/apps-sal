@@ -21,9 +21,10 @@ def main():
     data = [mapt(Atom, input().split(" ")) for _ in range(n)]
     for i in range(n):
         data[i].append(i)
-    data = sorted(data, key=lambda x:x[1], reverse=True)
-    data = sorted(data, key = lambda x:x[0])
+    data = sorted(data, key=lambda x: x[1], reverse=True)
+    data = sorted(data, key=lambda x: x[0])
     for row in data:
-        print(row[2]+1)
+        print(row[2] + 1)
+
 
 main()

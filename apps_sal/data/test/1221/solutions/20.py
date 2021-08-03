@@ -15,5 +15,3 @@ for i in range(len(b)):
         if b[i] * c[j] > a:
             a = b[i] * c[j]
 print(a)
-        
-

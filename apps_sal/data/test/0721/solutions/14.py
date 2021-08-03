@@ -16,4 +16,5 @@ def __starting_point():
     import sys
     main(sys.stdin)
 
+
 __starting_point()

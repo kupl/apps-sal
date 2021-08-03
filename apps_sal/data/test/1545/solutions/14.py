@@ -9,7 +9,7 @@ a = ord('a')
 INF = int(10**10)
 md = [INF for i in range(n + 1)]
 md[0] = 0
-for i in range(1,n + 1):
+for i in range(1, n + 1):
     l = alf[ord(s[i - 1]) - a]
     minlen = l
     for j in range(l):
@@ -25,4 +25,3 @@ for i in range(1,n + 1):
 print(d[n])
 print(maxlen)
 print(md[n])
-

@@ -1,9 +1,9 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for ts in range(t):
- n=set(input().split())
- m=set(input().split())
- if len(n.intersection(m)) >= 2:
-  print("similar")
- else: 
-  print("dissimilar")
+    n = set(input().split())
+    m = set(input().split())
+    if len(n.intersection(m)) >= 2:
+        print("similar")
+    else:
+        print("dissimilar")

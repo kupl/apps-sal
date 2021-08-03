@@ -1,5 +1,5 @@
 def hero(bullets, dragons):
-    x = bullets 
+    x = bullets
     y = dragons
     if x >= (2 * y):
         return True

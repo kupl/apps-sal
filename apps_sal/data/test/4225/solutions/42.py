@@ -10,4 +10,3 @@ else:
     ans = a + ((k - a - b) * (-1))
 
 print(ans)
-

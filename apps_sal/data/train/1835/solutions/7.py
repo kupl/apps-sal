@@ -15,4 +15,3 @@ class Solution:
         for i in range(1, 10):
             solve(i)
         return result
-

@@ -5,11 +5,10 @@ for i in range(t):
     s = input()
 
     l = s.find("1")
-    r = n-1-s.rfind("1")
+    r = n - 1 - s.rfind("1")
 
     if l < 0:
         print(n)
     else:
         mn = min(l, r)
-        print((n-mn) * 2)
-
+        print((n - mn) * 2)

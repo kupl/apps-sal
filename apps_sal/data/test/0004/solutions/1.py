@@ -1,5 +1,7 @@
 def lucky(x):
     return (x % 10 == 7)
+
+
 x = int(input())
 h, m = list(map(int, input().split()))
 t = 60 * h + m
@@ -16,7 +18,6 @@ for hh in range(24):
             if r % x != 0:
                 continue
 
-            ans = min(ans,  r // x)
+            ans = min(ans, r // x)
 
 print(ans)
-

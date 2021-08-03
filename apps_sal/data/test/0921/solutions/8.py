@@ -12,7 +12,8 @@ def solve():
         ans[i][1] = t
         w -= t
         mi = t
-    if w < 0:print(-1)
+    if w < 0:
+        print(-1)
     else:
         for i in range(-1, -n - 1, -1):
             if w > mp[i][0] - ans[i][1]:
@@ -25,6 +26,9 @@ def solve():
         for i in range(n):
             print(ans[i][1], end=' ')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

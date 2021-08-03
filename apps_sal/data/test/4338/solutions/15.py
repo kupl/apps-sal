@@ -1,4 +1,4 @@
-def read(type = 1):
+def read(type=1):
     if type:
         file = open("input.dat", "r")
         line = int(file.readline())
@@ -15,9 +15,9 @@ def read(type = 1):
 def solve():
     sol = 0
     for i in range(len(a)):
-        if a[len(a)-1-i] + y > x:
-            pos = len(a)-1-i
-            pos = len(a)-1-i
+        if a[len(a) - 1 - i] + y > x:
+            pos = len(a) - 1 - i
+            pos = len(a) - 1 - i
             break
     for i in range(len(a)):
         if a[i] <= x:

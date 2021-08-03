@@ -1,8 +1,8 @@
 def men_from_boys(arr):
-    even=list()
-    odd=list()
+    even = list()
+    odd = list()
     for k in arr:
-        if k%2==0:
+        if k % 2 == 0:
             if k in even:
                 continue
             even.append(k)
@@ -12,5 +12,5 @@ def men_from_boys(arr):
             odd.append(k)
     even.sort()
     odd.sort(reverse=True)
-    new=even+odd
+    new = even + odd
     return new

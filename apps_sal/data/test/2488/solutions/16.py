@@ -16,14 +16,14 @@ for pos, hp in ms:
     while bombs and bombs[0][0] < pos:
         bomb_border, bomb_cnt = bombs.popleft()
         valid_bomb -= bomb_cnt
-    
+
     # 还需新加多少bomb才能灭掉当前怪物
     bomb_cnt = max(0, hp - valid_bomb)
     valid_bomb += bomb_cnt
     ans += bomb_cnt
-    
+
     # 新加的bomb放入队列
     if bomb_cnt > 0:
         bombs.append([pos + d * 2, bomb_cnt])
- 
-print(ans)    
+
+print(ans)

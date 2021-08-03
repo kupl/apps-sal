@@ -18,5 +18,3 @@ class Solution:
             sr.append([A[j], count])
         # print(left,right)
         return sum(a * l * r for a, l, r in zip(A, left, right)) % 1_000_000_007
-        
-

@@ -1,4 +1,6 @@
 from math import gcd
+
+
 def min_price(coins):
     if 1 in coins:
         return 1
@@ -23,4 +25,3 @@ def min_price(coins):
         return -1
 
     return max(n) - coins[0] + 1
-

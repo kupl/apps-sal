@@ -31,4 +31,3 @@ class PokeScan(object):
         infos = {"name": self.name, "type": str(self.pkmntype),
                  "strength": self.strength}
         return "{name}, a {type} and {strength} Pokemon.".format(**infos)
-

@@ -15,4 +15,3 @@ for i in range(2, n):
             ans = 'POSSIBLE'
             break
 print(ans)
-

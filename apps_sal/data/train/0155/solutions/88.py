@@ -21,4 +21,3 @@ class Solution:
             stack.append(i)
         dp.pop()
         return max(dp)
-

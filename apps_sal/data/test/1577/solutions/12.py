@@ -1,5 +1,11 @@
-import math,sys,re,itertools,pprint,collections,copy
-rs,ri,rai,raf=input,lambda:int(input()),lambda:list(map(int, input().split())),lambda:list(map(float, input().split()))
+import math
+import sys
+import re
+import itertools
+import pprint
+import collections
+import copy
+rs, ri, rai, raf = input, lambda: int(input()), lambda: list(map(int, input().split())), lambda: list(map(float, input().split()))
 
 n = ri()
 s = rs()
@@ -11,4 +17,3 @@ elif d > a:
     print('Danik')
 else:
     print('Friendship')
-

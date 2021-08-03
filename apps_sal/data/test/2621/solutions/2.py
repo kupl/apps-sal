@@ -13,8 +13,8 @@ def solve():
                 m -= max(0, a[i + 1] - k - a[i])
     print('YES')
 
+
 t = int(input())
 
 for _ in range(t):
     solve()
-

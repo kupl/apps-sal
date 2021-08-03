@@ -15,4 +15,3 @@ for i in range(0, length):
         others = True
         st1 += str(chr(ord(st[i]) - 1))
 print(st1)
-

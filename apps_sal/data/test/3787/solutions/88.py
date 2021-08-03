@@ -1,6 +1,6 @@
 N, A, B = map(int, input().split())
 
-if N-B+1 < A or A < (N + B-1) // B:
+if N - B + 1 < A or A < (N + B - 1) // B:
     print(-1)
     return
 
@@ -8,8 +8,8 @@ res = []
 r = []
 cnt = 0
 for i in range(N):
-    r.append(N-i)
-    if N-i <= A-cnt or len(r) == B:
+    r.append(N - i)
+    if N - i <= A - cnt or len(r) == B:
         res.append(r)
         r = []
         cnt += 1

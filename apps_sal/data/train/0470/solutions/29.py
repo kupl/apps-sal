@@ -10,5 +10,4 @@ class Solution:
                 res += c[i] * (c[i] - 1) / 2 * c[k]
             elif k > i and k > j:
                 res += c[i] * c[j] * c[k]
-        return int(res % (10**9+7))
-
+        return int(res % (10**9 + 7))

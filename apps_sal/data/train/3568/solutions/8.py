@@ -1,1 +1,1 @@
-bumps=lambda road: 'CWaoro hDoeoa!d'[(road.count('n')<16)::2]
+def bumps(road): return 'CWaoro hDoeoa!d'[(road.count('n') < 16)::2]

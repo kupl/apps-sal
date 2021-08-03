@@ -1,4 +1,6 @@
 from string import punctuation
+
+
 def pig_it(text):
     words = text.split(' ')
     return ' '.join(

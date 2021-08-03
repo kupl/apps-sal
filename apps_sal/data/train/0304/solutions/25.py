@@ -82,47 +82,48 @@ PASS
 [16,16]
 '''
 
+
 class Solution:
     def firstLTE(self, lowerBound, ages, endIndex):
         if endIndex < 0:
             return 0
-        
+
         l = 0
         r = endIndex
-        
+
         while l < r:
             m = (l + r) // 2  # originally ages[l], ages[r] instead of l, r -- I'm very compromised today.
-            
+
             if ages[m] <= lowerBound:
                 l = m + 1
             else:
                 r = m
-                
+
         if l <= r and ages[l] > lowerBound:
             return l
-                
+
         return endIndex + 1
-    
+
     def findEarliest(self, key, ages, endIndex):
         if endIndex < 0:
             return -1
-        
+
         l = 0
         r = endIndex
-        
+
         while l < r:
             m = (l + r) // 2
-            
+
             if ages[m] >= key:
                 r = m
             else:
                 l = m + 1
-        
+
         if l <= endIndex and ages[l] == key:
             return l
-        
+
         return -1
-    
+
     '''
     [16, 16]
      l
@@ -135,30 +136,29 @@ class Solution:
            l
            r
     '''
-    
+
     def numFriendRequests(self, ages: List[int]) -> int:
         if not ages:
             return 0
-        
+
         numRequests = 0
-        
+
         ages.sort()  # O(n log n)/O(n)
-        
+
         for i, a in enumerate(ages):
-            lowerBound = a*0.5 + 7  # divided instead of multiplied originally
+            lowerBound = a * 0.5 + 7  # divided instead of multiplied originally
             startIndex = self.firstLTE(lowerBound, ages, i - 1)
             #print('i = {}, startIndex = {}, delta = {}'.format(i, startIndex, i - startIndex))
             numRequests += i - startIndex
-            
+
             if a > lowerBound:
                 startIndex = self.findEarliest(a, ages, i - 1)
                 if startIndex >= 0 and startIndex < i:
                     numRequests += i - startIndex
-        
+
         return numRequests
-    
+
+
 '''
 [73,106,39,6,26,15,30,100,71,35,46,112,6,60,110]
-'''   
-        
-
+'''

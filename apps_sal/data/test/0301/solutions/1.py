@@ -4,7 +4,7 @@ count = [0] * 100
 index = 0
 
 works = True
-while u >= 0 and v >=0 and (v > 0 or u > 0):
+while u >= 0 and v >= 0 and (v > 0 or u > 0):
     u2 = u & 1
     v2 = v & 1
     if u2 != v2:
@@ -31,9 +31,6 @@ if works and u >= 0 and v >= 0:
         for j in range(count[i]):
             out[j] ^= 1 << i
     print(len(out))
-    print(' '.join(map(str,out)))
+    print(' '.join(map(str, out)))
 else:
     print(-1)
-        
-        
-

@@ -9,6 +9,7 @@ class BIT():
     get_val: i番目の値を求める
     i, l, rは0-indexed
     """
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -36,15 +37,17 @@ class BIT():
 r, c, n = map(int, input().split())
 info = [list(map(int, input().split())) for i in range(n)]
 
+
 def solve(x1, y1):
     if y1 == 0:
         return x1
     if x1 == r:
         return r + y1
     if y1 == c:
-        return r + c + (r-x1)
+        return r + c + (r - x1)
     if x1 == 0:
-        return r + c + r + (c-y1)
+        return r + c + r + (c - y1)
+
 
 li = []
 for i in range(n):

@@ -1,1 +1,1 @@
-next_perfect_square=lambda n:(n>=0and int(n**.5)+1)**2
+def next_perfect_square(n): return (n >= 0 and int(n**.5) + 1)**2

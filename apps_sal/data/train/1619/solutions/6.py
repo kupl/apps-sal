@@ -1,5 +1,5 @@
 def dec(r, d):
-    for i in range(d-1, 0, -1):
+    for i in range(d - 1, 0, -1):
         if r < i * i:
             continue
         if r == i * i:
@@ -8,5 +8,7 @@ def dec(r, d):
         if a:
             return a + [i]
     return None
+
+
 def decompose(n):
-    return  dec(n * n, n)
+    return dec(n * n, n)

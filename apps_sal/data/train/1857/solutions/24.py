@@ -4,7 +4,7 @@ class Solution:
         seat_map = collections.defaultdict(set)
         for s in reservedSeats:
             seat_map[s[0]].add(s[1])
-        
+
         count = 0
         for row in seat_map:
             seats_taken = seat_map[row]
@@ -12,4 +12,4 @@ class Solution:
                 if not cand.intersection(seats_taken):
                     count += 1
                     seats_taken = cand.union(seats_taken)
-        return count + 2 * (n-len(seat_map.keys()))
+        return count + 2 * (n - len(seat_map.keys()))

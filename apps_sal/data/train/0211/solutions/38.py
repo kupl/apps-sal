@@ -6,5 +6,6 @@ class Solution:
             if candidate not in seen:
                 maximum = max(maximum, 1 + self.max_unique_substrings(s[i:], {candidate, *seen}))
         return maximum
+
     def maxUniqueSplit(self, s: str) -> int:
         return self.max_unique_substrings(s)

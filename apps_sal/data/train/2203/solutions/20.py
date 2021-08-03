@@ -11,7 +11,7 @@ ans = []
 
 while n > 0:
     done = False
-    for i in chain(range(1, n-1), [0, n-1]):
+    for i in chain(range(1, n - 1), [0, n - 1]):
         if done:
             break
         b = True
@@ -21,7 +21,7 @@ while n > 0:
                     continue
                 if dx == 0 and dy == 0:
                     continue
-                nx, ny = i+dx, i+dy
+                nx, ny = i + dx, i + dy
                 if nx < 0 or nx >= n:
                     continue
                 if ny < 0 or ny >= n:
@@ -31,12 +31,12 @@ while n > 0:
             ans.append(a[i][i])
 #            print(ans)
             if i < n - 1:
-                a = a[:i] + a[i+1:]
+                a = a[:i] + a[i + 1:]
             else:
                 a = a[:i]
             for j in range(len(a)):
                 if i < n - 1:
-                    a[j] = a[j][:i] + a[j][i+1:]
+                    a[j] = a[j][:i] + a[j][i + 1:]
                 else:
                     a[j] = a[j][:i]
             for x in range(len(a)):
@@ -59,5 +59,4 @@ for i in range(len(ans)):
     ret[ans[i]] = i + 1
 
 for i in ret:
-    print(i, end = ' ')
-
+    print(i, end=' ')

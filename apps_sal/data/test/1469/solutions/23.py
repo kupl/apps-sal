@@ -24,4 +24,3 @@ for i in reversed(list(range(len(byte_list)))):
 print((node_count, len(branches)))
 for u, v, w in branches:
     print((u + 1, v + 1, w))
-

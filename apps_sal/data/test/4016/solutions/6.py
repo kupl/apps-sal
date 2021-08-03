@@ -8,4 +8,3 @@ for i in range(1, n):
         break
 
 print(''.join(st) + (''.join(st[n - p:])) * (k - 1))
-

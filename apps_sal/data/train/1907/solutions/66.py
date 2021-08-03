@@ -7,7 +7,7 @@
 
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        
+
         def inorder(root1, root2, target):
             if root1 == target:
                 return root2
@@ -20,5 +20,5 @@ class Solution:
                 if right:
                     return right
             return None
-        
+
         return inorder(original, cloned, target)

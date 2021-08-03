@@ -4,16 +4,16 @@ class Solution:
             return -1
         self.memo = {}
         return self.recurse(jobDifficulty, len(jobDifficulty) - 1, d)
-        
+
     def recurse(self, jd, start, remain):
         # if start == 0:
         #     return jd[0]
         if remain == 1:
             return max(jd[:start + 1])
-        
+
         if (start, remain) in self.memo:
             return self.memo[(start, remain)]
-        
+
         mx = 0
         mn = float('inf')
         total = float('inf')

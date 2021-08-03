@@ -7,5 +7,3 @@ for i in range(len(m)):
 for i in products:
     time += [15 * len(i) + sum(i) * 5]
 print(min(time))
-    
-

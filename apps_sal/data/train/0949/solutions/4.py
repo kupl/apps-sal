@@ -9,10 +9,10 @@ for _ in range(t):
         i = j
         count = 0
         while i < len(lst):
-            if i+1 < N and lst[i] == lst[i+1]:
+            if i + 1 < N and lst[i] == lst[i + 1]:
                 count += 1
                 i += 1
-            elif i+2 <= N-1 and lst[i] == lst[i+2]:
+            elif i + 2 <= N - 1 and lst[i] == lst[i + 2]:
                 count += 1
                 i += 2
             else:

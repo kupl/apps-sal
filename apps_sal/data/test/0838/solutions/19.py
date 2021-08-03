@@ -1,7 +1,10 @@
 from math import factorial
+
+
 def c(n, k):
     return factorial(n) // (factorial(k) * factorial(n - k))
-    
+
+
 n, m = map(int, input().split())
 ans = 0
 a = [list(map(int, input().split())) for i in range(n)]

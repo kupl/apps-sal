@@ -4,4 +4,4 @@ def rental_car_cost(d):
     elif 2 < d < 7:
         return d * 40 - 20
     else:
-        return 40 * d -50
+        return 40 * d - 50

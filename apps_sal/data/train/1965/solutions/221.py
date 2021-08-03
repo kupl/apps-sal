@@ -21,17 +21,19 @@ class DSU:
 
     def size(self, x):
         return self.sz[self.find(x)]
+
+
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         '''
         for vertex
             if has type3 edge remove all other edges
             else:
-                 
+
         '''
-        dsuA = DSU(n+1)
-        dsuB = DSU(n+1)
-        
+        dsuA = DSU(n + 1)
+        dsuB = DSU(n + 1)
+
         ans = 0
         for t, u, v in edges:
             if t == 3:
@@ -82,4 +84,3 @@ class Solution:
 #                 ans += 1
 
 #         return max(len(edges) - ans+1, 0)
-

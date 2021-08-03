@@ -40,12 +40,11 @@ for i in range(m):
     C.append(c)
     D.append(d)
 
-dist = [[0]*m for i in range(n)]
+dist = [[0] * m for i in range(n)]
 for i in range(n):
     for j in range(m):
         dist[i][j] = abs(A[i] - C[j]) + abs(B[i] - D[j])
 
 
 for i in range(n):
-    print((np.argmin(dist[i])+1))
-
+    print((np.argmin(dist[i]) + 1))

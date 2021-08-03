@@ -12,5 +12,5 @@ class Solution:
                     i += 1
                 ans.append(f'{n}({i})')
                 folders[f'{n}({i})'] = 1
-                folders[n] = i+1
+                folders[n] = i + 1
         return ans

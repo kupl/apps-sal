@@ -4,4 +4,4 @@ for i in range(m):
     (a, b) = list(map(int, input().split()))
     s = s + min(f[a - 1], f[b - 1])
 
-print( s )
+print(s)

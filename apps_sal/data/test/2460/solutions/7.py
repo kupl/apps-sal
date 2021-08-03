@@ -18,6 +18,4 @@ for person in range(len(taxi)):
         else:
             dists[d[start + 1]] += 1
 for d in dists:
-    print(dists[d] if d!=10**11 else '', end=' ')
-
-
+    print(dists[d] if d != 10**11 else '', end=' ')

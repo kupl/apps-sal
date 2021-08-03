@@ -28,4 +28,3 @@ for i in sorted(capitales):
     past_sub_weight += cities[i]
 
 print(weight)
-

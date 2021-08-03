@@ -2,7 +2,8 @@ class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         children = [[] for i in range(n)]
         for i, m in enumerate(manager):
-            if m >= 0: children[m].append(i)
+            if m >= 0:
+                children[m].append(i)
 
         def dfs(i):
             return max([dfs(j) for j in children[i]] or [0]) + informTime[i]
@@ -20,8 +21,8 @@ class Solution:
 #             if subs:
 #                 for k in subs: helper(k, time)
 #             else:
-#                 res[id] = time               
-        
+#                 res[id] = time
+
 #         helper(headID, 0)
 #         return max(res)
 #         queue = deque([(manager.index(-1), 0)])
@@ -31,4 +32,3 @@ class Solution:
 #                 res[j] = t
 #                 queue.append((j, t + informTime[i]))
 #         return max(res)
-

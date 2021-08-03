@@ -3,4 +3,3 @@ p = (n // 2) // (k + 1)
 g = p * k
 o = n - p - g
 print(p, g, o)
-

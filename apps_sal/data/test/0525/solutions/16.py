@@ -3,10 +3,10 @@ for _ in range(int(input())):
     a = list(map(int, input().split()))
     c = 0
     for i in a:
-        if(i!=a[0]):
-            c+=1
+        if(i != a[0]):
+            c += 1
             break
-    if(c!=0):
+    if(c != 0):
         print(1)
     else:
         print(n)

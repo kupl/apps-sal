@@ -10,5 +10,3 @@ for i in s:
     else:
         t = 1
 print(ans)
-            
-

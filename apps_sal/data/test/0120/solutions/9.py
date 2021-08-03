@@ -19,7 +19,7 @@ else:
     if ca > av or cb > av or cc > av or cd > av:
         print('===')
     else:
-        aa, ab, ac, ad = av - ca, av - cb, av - cc, av -cd
+        aa, ab, ac, ad = av - ca, av - cb, av - cc, av - cd
         ss = aa * 'A' + ab * 'C' + ac * 'G' + ad * 'T'
         cnt = 0
         for i in range(len(st)):
@@ -28,6 +28,3 @@ else:
                 cnt += 1
             else:
                 print(st[i], end='')
-            
-            
-

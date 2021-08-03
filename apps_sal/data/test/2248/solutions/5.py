@@ -19,6 +19,7 @@ for _ in range(m):
     graph[u].append(v)
     graph[v].append(u)
 
+
 def dfs(v, pr):
     nonlocal ans
     for to in graph[v]:
@@ -28,9 +29,11 @@ def dfs(v, pr):
         ans = max(ans, sz[pr] + sz[v])
         sz[pr] = max(sz[pr], sz[v] + 1)
 
+
 def main():
     dfs(1, -1)
     print(ans + 1)
-    
+
+
 th = threading.Thread(target=main)
 th.start()

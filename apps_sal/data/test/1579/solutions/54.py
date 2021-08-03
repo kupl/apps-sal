@@ -1,11 +1,12 @@
 import sys
 sys.setrecursionlimit(10**6)
 
+
 def main():
     input = sys.stdin.readline
     V = 10**5  # max size of x
     N = int(input())
-    bgraph = [[] for _ in range(2*V)]
+    bgraph = [[] for _ in range(2 * V)]
     for _ in range(N):
         x, y = list(map(int, input().split()))
         x -= 1
@@ -17,12 +18,12 @@ def main():
         if visited[i]:
             return cnt
         visited[i] = True
-        cnt[i//V] += 1
+        cnt[i // V] += 1
         for j in bgraph[i]:
             dfs(j)
         return cnt
 
-    visited = [False] * (2*V)
+    visited = [False] * (2 * V)
     ans = 0
     for i in range(V):
         if visited[i]:
@@ -37,5 +38,6 @@ def main():
 
 def __starting_point():
     print((main()))
+
 
 __starting_point()

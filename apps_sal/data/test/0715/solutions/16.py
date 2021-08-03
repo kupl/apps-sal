@@ -6,12 +6,11 @@ for i in range(4):
 
 var = []
 for i in range(4):
-    if length[i] >= 2*max(length[:i] + length[i+1:]) or \
-       length[i] <= min(length[:i] + length[i+1:])//2:
+    if length[i] >= 2 * max(length[:i] + length[i + 1:]) or \
+       length[i] <= min(length[:i] + length[i + 1:]) // 2:
         var.append(i)
 
 if len(var) == 1:
     print(chr(ord('A') + var[0]))
 else:
     print('C')
-

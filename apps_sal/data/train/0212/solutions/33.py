@@ -6,13 +6,13 @@ class Solution:
         index_map = {}
         for index in range(N):
             index_map[A[index]] = index
-        
+
         for k in range(N):
             for i in range(k):
                 if A[k] % A[i] == 0:
-                    num_to_look = A[k]//A[i]
+                    num_to_look = A[k] // A[i]
                     if num_to_look in index_map:
                         j = index_map[num_to_look]
-                        dp[k] += dp[i]*dp[j] # okay why is this not giving me the right number?
-         
-        return sum(dp) % (10**9 +7)
+                        dp[k] += dp[i] * dp[j]  # okay why is this not giving me the right number?
+
+        return sum(dp) % (10**9 + 7)

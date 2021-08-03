@@ -4,4 +4,3 @@ def avoid_obstacles(arr):
     for step in range(1, limit):
         if not (set(range(0, limit, step)) & obstacles):
             return step
-

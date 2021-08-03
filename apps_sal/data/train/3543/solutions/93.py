@@ -9,7 +9,7 @@ def increment_string(s):
     if len(l) != 0:
         p = ''.join(map(str, l))
         q = p.lstrip('0')
-        if len(q)>0:
+        if len(q) > 0:
             r = int(q) + 1
             s = s[:len(s) - len(l)] + str(r).zfill(len(l))
         else:

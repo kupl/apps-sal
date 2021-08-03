@@ -11,22 +11,22 @@ class Solution:
                 board = 4
             else:
                 board = c
-                
+
             if board < 4:
                 needed = 4 - board
                 if waiting >= needed:
-                    waiting -= needed 
+                    waiting -= needed
                     board = 4
                 else:
-                    board += waiting 
-                    waiting = 0 
+                    board += waiting
+                    waiting = 0
             index += 1
 
             profit += board * boardingCost - runningCost
             if profit > max_profit:
                 max_profit = max(max_profit, profit)
                 rotation = index
-        
+
         while waiting > 0:
             remain = waiting
             index += 1
@@ -39,7 +39,7 @@ class Solution:
             if profit > max_profit:
                 max_profit = max(max_profit, profit)
                 rotation = index
-            
+
         if max_profit >= 0:
             return rotation
         else:

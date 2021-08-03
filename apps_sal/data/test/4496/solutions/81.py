@@ -1,12 +1,12 @@
 n = int(input())
 
-if n ==25:
+if n == 25:
     print("Christmas")
 
-elif n ==24:
+elif n == 24:
     print("Christmas Eve")
 
-elif n ==23:
+elif n == 23:
     print("Christmas Eve Eve")
 
 else:

@@ -9,4 +9,3 @@ x = x % 500
 ans += (x // 5) * 5
 
 print(ans)
-

@@ -1,5 +1,5 @@
 
-def bin (a, b, c, n, m, k, pn, pm, pk, r):
+def bin(a, b, c, n, m, k, pn, pm, pk, r):
     [L, R] = [0, (r + n + m + k) * 100]
     while R - L > 1:
         M = (R + L) // 2
@@ -11,6 +11,7 @@ def bin (a, b, c, n, m, k, pn, pm, pk, r):
         else:
             R = M
     return L
+
 
 str = input()
 [a, b, c] = [0, 0, 0]
@@ -25,4 +26,3 @@ for i in str:
 [pn, pm, pk] = [int(i) for i in input().split()]
 r = int(input())
 print(bin(a, b, c, n, m, k, pn, pm, pk, r))
-

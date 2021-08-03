@@ -6,6 +6,6 @@ for i in range(1, n):
 current = 1
 for i in range(n):
     page = a[i] // m + 1
-    print(page - current, end = " ")
+    print(page - current, end=" ")
     current = page
 print()

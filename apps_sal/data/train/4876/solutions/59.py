@@ -4,5 +4,5 @@ def hello(*name):
     elif(name[0] == ""):
         return "Hello, World!"
     else:
-         
-        return 'Hello, '+name[0].lower().capitalize()+'!'
+
+        return 'Hello, ' + name[0].lower().capitalize() + '!'

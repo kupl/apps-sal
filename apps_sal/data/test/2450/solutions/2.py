@@ -22,4 +22,3 @@ for case_num in range(t):
             else:
                 white += 1
     print(cost)
-

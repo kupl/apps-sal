@@ -2,6 +2,7 @@ from functools import reduce
 # https://drken1215.hatenablog.com/entry/2020/01/26/164200
 # bit_pathの参考にした
 
+
 def main():
     from collections import namedtuple
     from functools import reduce
@@ -14,7 +15,8 @@ def main():
         if curr == goal:
             return 0
         for e in g[curr]:
-            if e.to == par: continue
+            if e.to == par:
+                continue
             res = bit_path(curr=e.to, goal=goal, par=curr)
             if ~res:  # -1以外
                 return res | (1 << e.edge_id)
@@ -46,5 +48,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

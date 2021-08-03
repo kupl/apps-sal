@@ -7,9 +7,10 @@ N, M, K = map(int, input().split())
 F = [list(map(int, input().split())) for _ in range(M)]
 B = [list(map(int, input().split())) for _ in range(K)]
 
+
 class UFTree():
     def __init__(self, n):
-        self.length = n+1
+        self.length = n + 1
         self.roots = list(range(self.length))
 
     def union(self, a, b):
@@ -33,7 +34,8 @@ class UFTree():
         self.findall()
         d = defaultdict(set)
         for i, r in enumerate(self.roots):
-            if i: d[r].add(i)
+            if i:
+                d[r].add(i)
         return list(d.values())
 
     def sameroot(self, a, b):
@@ -41,11 +43,12 @@ class UFTree():
         s = self.find(b)
         return r == s
 
+
 t = UFTree(N)
 for a, b in F:
     t.union(a, b)
 
-s = [0]*(N+1)
+s = [0] * (N + 1)
 for a, b in F:
     s[a] -= 1
     s[b] -= 1
@@ -56,6 +59,7 @@ for c, d in B:
 
 for u in t.setli():
     l = len(u)
-    for i in u: s[i] += l-1
+    for i in u:
+        s[i] += l - 1
 
 print(*s[1:])

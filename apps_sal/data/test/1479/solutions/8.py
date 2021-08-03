@@ -1,6 +1,7 @@
 Rows, Columns = 0, 0
 Spiders = []
 
+
 def ReadInput():
     nonlocal Rows, Columns, Spiders
     Rows, Columns, spiderCount = map(int, input().split())
@@ -18,14 +19,17 @@ def ReadInput():
                 if x % 2 == 0:
                     Spiders[y] += 1
 
+
 def PrintOutput():
     nonlocal Rows, Columns, Spiders
     for y in range(0, Columns):
-        print(Spiders[y], end = " ")
+        print(Spiders[y], end=" ")
     print("\n")
+
 
 def main():
     ReadInput()
     PrintOutput()
+
 
 main()

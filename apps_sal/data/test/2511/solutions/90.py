@@ -34,6 +34,7 @@ def dfs(K, u, p):
         case_num %= mod
     return case_num
 
+
 ans = K * dfs(K, 0, -1)
 ans %= mod
 print(ans)

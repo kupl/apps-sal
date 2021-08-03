@@ -1,1 +1,1 @@
-find_next_power=lambda n,p:int(n**(1./p)+1)**p
+def find_next_power(n, p): return int(n**(1. / p) + 1)**p

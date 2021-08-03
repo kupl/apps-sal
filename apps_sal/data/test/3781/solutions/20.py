@@ -9,11 +9,9 @@ for qi in range(t):
         a.sort()
         f = True
         for i in range(0, n, 2):
-            if a[i] != a[i+1]:
+            if a[i] != a[i + 1]:
                 f = False
                 print("First")
                 break
         if f:
             print("Second")
-                
-

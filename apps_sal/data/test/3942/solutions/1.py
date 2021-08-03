@@ -20,6 +20,3 @@ for i, c in enumerate(s):
 else:
     for t in ans:
         print(t)
-    
-
-

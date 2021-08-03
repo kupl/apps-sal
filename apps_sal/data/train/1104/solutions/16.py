@@ -1,22 +1,25 @@
-#dt = {} for i in x: dt[i] = dt.get(i,0)+1
-ipnl = lambda n: [int(input()) for _ in range(n)]
-inp = lambda :int(input())
-ip = lambda :[int(w) for w in input().split()]
+# dt = {} for i in x: dt[i] = dt.get(i,0)+1
+def ipnl(n): return [int(input()) for _ in range(n)]
 
-M = 10**9+7
+
+def inp(): return int(input())
+def ip(): return [int(w) for w in input().split()]
+
+
+M = 10**9 + 7
 for _ in range(inp()):
-    n,k = ip()
+    n, k = ip()
     if n == 0:
-        t = k*(k-1)
-        print(t%M)
+        t = k * (k - 1)
+        print(t % M)
         continue
     if k == 1:
-        print(n*n)
+        print(n * n)
         continue
-    kk = k//2
-    t = (n+kk)*(n+kk)
-    if k%2:
+    kk = k // 2
+    t = (n + kk) * (n + kk)
+    if k % 2:
         t += kk
     else:
         t -= kk
-    print(t%M)
+    print(t % M)

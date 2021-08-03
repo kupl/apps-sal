@@ -13,4 +13,3 @@ class Solution:
                         min_ones = min(min_ones, dp[k][j])
                         res += min_ones
         return res
-

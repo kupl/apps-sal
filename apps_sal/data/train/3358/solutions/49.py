@@ -10,4 +10,3 @@ def correct(string):
         else:
             new = new + i
     return new
-

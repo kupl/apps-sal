@@ -7,11 +7,11 @@ class Dinic:
             self.to = to
             self.cap = cap
             self.rev = rev
-        
+
         def __repr__(self):
             return "(to: {0} cap: {1} rev: {2})".format(self.to, self.cap, self. rev)
 
-    def __init__(self,V):
+    def __init__(self, V):
         self.V = V
         self.size = [0 for i in range(V)]
         self.G = [[] for i in range(V)]
@@ -22,7 +22,7 @@ class Dinic:
         self.size[_from] += 1
         self.size[to] += 1
 
-    def bfs(self,s):
+    def bfs(self, s):
         level = [-1 for i in range(self.V)]
         level[s] = 0
         q = []
@@ -36,7 +36,8 @@ class Dinic:
         return level
 
     def dfs(self, v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         while self.iterator[v] < self.size[v]:
             edge = self.G[v][self.iterator[v]]
             if edge.cap > 0 and self.level[v] < self.level[edge.to]:
@@ -61,32 +62,33 @@ class Dinic:
                     break
                 flow += f
 
-N,M = list(map(int,input().split()))
-A = list(map(int,input().split()))
-B = list(map(int,input().split()))
+
+N, M = list(map(int, input().split()))
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 
 # ff = Ford_Fulkerson(N*2+2)
-ff = Dinic(N*2+2)
+ff = Dinic(N * 2 + 2)
 S = 1
 T = N + 1
 
 for i in range(M):
-    p,q = list(map(int, input().split()))
-    ff.add_edge(p,T+q-1,10**9)
-    ff.add_edge(q,T+p-1,10**9)
+    p, q = list(map(int, input().split()))
+    ff.add_edge(p, T + q - 1, 10**9)
+    ff.add_edge(q, T + p - 1, 10**9)
 
 for i in range(N):
-    ff.add_edge(i+1,T+i,10**9)
-    ff.add_edge(0,S+i,A[i])
-    ff.add_edge(T+i,2*N+1,B[i])
+    ff.add_edge(i + 1, T + i, 10**9)
+    ff.add_edge(0, S + i, A[i])
+    ff.add_edge(T + i, 2 * N + 1, B[i])
 
-ans = [[0  for i in range(N)] for j in range(N)]
-ff.max_flow(0,2*N+1)
+ans = [[0 for i in range(N)] for j in range(N)]
+ff.max_flow(0, 2 * N + 1)
 
-for i in range(1,N+1):
+for i in range(1, N + 1):
     for v in ff.G[i]:
         if v.to != 0:
-            ans[i-1][v.to-T] = ff.G[v.to][v.rev].cap
+            ans[i - 1][v.to - T] = ff.G[v.to][v.rev].cap
 
 if sum(A) != sum(B):
     print('NO')
@@ -94,7 +96,6 @@ if sum(A) != sum(B):
 if [sum([ans[i][j] for i in range(N)]) for j in range(N)] == B:
     print('YES')
     for a in ans:
-        print(' '.join(map(str,a)))
+        print(' '.join(map(str, a)))
 else:
     print('NO')
-

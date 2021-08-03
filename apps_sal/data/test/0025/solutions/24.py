@@ -2,11 +2,10 @@ import math
 import re
 
 
+n, k = list(map(int, input().split()))
 
-n, k  = list(map(int, input().split()))
 
-
-if k > n*n:
+if k > n * n:
     print(-1)
     return
 
@@ -20,13 +19,13 @@ for i in range(n):
     if k == 0:
         break
     elif k == 1:
-        a[i+1][i+1] = 1
+        a[i + 1][i + 1] = 1
         break
     else:
-        for j in range(i+1, min(n, i + 1 + k//2)):
-                       a[i][j] = 1
-                       a[j][i] = 1
-                       k -= 2
+        for j in range(i + 1, min(n, i + 1 + k // 2)):
+            a[i][j] = 1
+            a[j][i] = 1
+            k -= 2
 
 
 for i in range(n):
@@ -49,4 +48,3 @@ for i in range(n):
 #         b.add(el)
 #
 # print(len(b))
-

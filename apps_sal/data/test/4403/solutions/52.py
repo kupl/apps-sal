@@ -6,4 +6,3 @@ for i in word:
     else:
         ans -= 1
 print(ans)
-

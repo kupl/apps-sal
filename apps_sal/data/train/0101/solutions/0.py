@@ -11,4 +11,3 @@ for i in range(int(input())):
         print(b - a - (right - left))
     else:
         print(b - a)
-

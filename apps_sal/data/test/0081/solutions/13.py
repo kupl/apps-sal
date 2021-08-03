@@ -30,4 +30,3 @@ for i in arr:
     if temp == value:
         answer = min(answer, plus)
 print(answer)
-

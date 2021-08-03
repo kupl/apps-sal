@@ -1,15 +1,15 @@
 import sys
 input = sys.stdin.readline
 N = int(input())
-tree = [[] for i in range(N+1)]
+tree = [[] for i in range(N + 1)]
 
-for i in range(N-1):
+for i in range(N - 1):
     a, b = list(map(int, input().split()))
     tree[a].append(b)
     tree[b].append(a)
 
-dist_fennec = [100001] * (N+1)
-dist_snuke = [100001] * (N+1)
+dist_fennec = [100001] * (N + 1)
+dist_snuke = [100001] * (N + 1)
 q = [1]
 dist_fennec[1] = 0
 while q:
@@ -29,7 +29,7 @@ while q:
             q.append(next)
 
 fennec, snuke = 0, 0
-for i in range(1, N+1):
+for i in range(1, N + 1):
     if dist_snuke[i] >= dist_fennec[i]:
         fennec += 1
     else:
@@ -39,4 +39,3 @@ if fennec > snuke:
     print("Fennec")
 else:
     print("Snuke")
-

@@ -7,7 +7,7 @@ class Solution:
         # 'aabb' 2
         # 'abba' 1
         # 'abaaba'
-        
+
         if len(s) == 0:
             return 0
         if s == s[::-1]:

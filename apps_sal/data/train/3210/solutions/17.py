@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def get_strings(city):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     city_str = ''

@@ -5,10 +5,12 @@ A = [int(input()) for _ in range(Q)]
 # 開始時点の全員のポイントはK-Qとする
 # Q回の正解それぞれに対し、正解者のポイントを1増やす
 # するとO(Q+N)で解け、間に合う
-p = [K-Q]*N
+p = [K - Q] * N
 for i in range(Q):
-  p[A[i]-1] += 1
-  
+    p[A[i] - 1] += 1
+
 for i in range(N):
-  if p[i] > 0: print('Yes')
-  else: print('No')
+    if p[i] > 0:
+        print('Yes')
+    else:
+        print('No')

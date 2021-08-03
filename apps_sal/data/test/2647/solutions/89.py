@@ -15,7 +15,7 @@ for f in field:
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 sh, sw = (0, 0)
-gh, gw = (H-1, W-1)
+gh, gw = (H - 1, W - 1)
 dist[sh][sw] = 0
 q = deque()
 q.append((sh, sw))

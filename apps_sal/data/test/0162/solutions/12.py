@@ -7,4 +7,3 @@ for i in a:
         ans = max(ans, i)
 
 print(k // ans)
-

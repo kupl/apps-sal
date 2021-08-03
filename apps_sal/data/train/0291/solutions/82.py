@@ -3,11 +3,9 @@ class Solution:
         ans, odd, even = 0, 0, 0
         for i in arr:
             if i & 1:
-                odd, even = even + 1, odd                
+                odd, even = even + 1, odd
             else:
                 even = even + 1
             ans += odd
-                
-        return ans % (10**9 + 7)
-                    
 
+        return ans % (10**9 + 7)

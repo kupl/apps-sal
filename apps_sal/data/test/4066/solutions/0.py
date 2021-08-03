@@ -16,7 +16,7 @@ def main():
 
     primes = []
     p = 2
-    sieve = [True] * (MAX_P+1)
+    sieve = [True] * (MAX_P + 1)
     while p < MAX_P:
         if sieve[p]:
             primes.append(p)
@@ -77,10 +77,11 @@ def main():
                     x, y = ind1[d], ind2[d]
                     res = cand1[d] // d * cand2[d]
 
-    print(min(x+1, y+1), max(x+1, y+1))
+    print(min(x + 1, y + 1), max(x + 1, y + 1))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -21,12 +21,12 @@ class Solution:
             elif waits * boardingCost > runningCost:
                 cur += boardingCost * waits - runningCost
                 # rotate += 1
-                if cur>ans:
+                if cur > ans:
                     ans = cur
                     nrotate = rotate
                 waits = 0
             # print(cur)
-        while  waits * boardingCost > runningCost:
+        while waits * boardingCost > runningCost:
             if waits > 4:
                 waits -= 4
                 cur += boardingCost * 4 - runningCost
@@ -37,7 +37,7 @@ class Solution:
             elif waits * boardingCost > runningCost:
                 cur += boardingCost * waits - runningCost
                 rotate += 1
-                if cur>ans:
+                if cur > ans:
                     ans = cur
                     nrotate = rotate
                 waits = 0

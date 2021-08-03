@@ -22,4 +22,3 @@ for ti in t:
         else:
             ans += 2
 print(ans)
-

@@ -1,15 +1,16 @@
 MOD = 10**9 + 7
 
+
 class Combination:
     def __init__(self, size, MOD):
         self.size = size + 2
 
         f = 1
         self.fact = fact = [f]
-        for i in range(1, size+1):
+        for i in range(1, size + 1):
             f = f * i % MOD
             fact.append(f)
-        f = pow(f, MOD-2, MOD)
+        f = pow(f, MOD - 2, MOD)
         self.factInv = factInv = [f]
         for i in range(size, 0, -1):
             f = f * i % MOD
@@ -28,6 +29,7 @@ class Combination:
 
     def nhr(self, n, r):  # 重複組合せ: x_1 + ... + x_n = r
         return self.ncr(n + r - 1, n - 1)
+
 
 def sol():
     K = int(input())
@@ -48,4 +50,6 @@ def sol():
         R = R * inv26 % MOD
 
     print(ans)
+
+
 sol()

@@ -64,4 +64,3 @@ for i, j, c in edges:
             break
 
 print(ans)
-

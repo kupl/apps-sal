@@ -1,6 +1,6 @@
 def pick_peaks(arr):
     print(arr)
-    peaks = {'pos':[], 'peaks': []}
+    peaks = {'pos': [], 'peaks': []}
     enum_arr = list(enumerate(arr))
     possible_peaks = enum_arr[1:-1]
     for point in possible_peaks:

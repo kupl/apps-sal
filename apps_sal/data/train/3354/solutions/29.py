@@ -1,3 +1,3 @@
 def boolean_to_string(b):
-    a = lambda x: "True" if x else "False"
+    def a(x): return "True" if x else "False"
     return a(b)

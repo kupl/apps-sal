@@ -23,11 +23,10 @@ maxi = 0
 if N < 3:
     maxi = N
 while right < len(nums):
-    if sums[right+1] - sums[left] > maxi:
-        maxi = sums[right+1] - sums[left]
+    if sums[right + 1] - sums[left] > maxi:
+        maxi = sums[right + 1] - sums[left]
     right += 2
     left += 2
 if maxi == 0:
     maxi = sum(nums)
 print(maxi)
-

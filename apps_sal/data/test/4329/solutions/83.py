@@ -8,4 +8,3 @@ if len(s) + 1 == len(t):
         if i == len(s) - 1:
             ans = 'Yes'
 print(ans)
-

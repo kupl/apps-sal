@@ -9,6 +9,6 @@ for i in S:
     else:
         ans -= 1
     if highest <= ans:
-        highest = ans 
+        highest = ans
 
 print(highest)

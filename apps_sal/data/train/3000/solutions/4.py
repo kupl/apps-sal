@@ -7,8 +7,10 @@ def mul_power(n, k):
             n //= simple_number
             i += 1
         if i != 0:
-            if k < i:    stepen = i % k
-            else:        stepen = i
+            if k < i:
+                stepen = i % k
+            else:
+                stepen = i
             if stepen % k != 0:
                 result_number *= simple_number ** (k - stepen)
         simple_number += 1

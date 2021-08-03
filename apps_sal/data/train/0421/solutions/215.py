@@ -2,21 +2,21 @@ class Solution:
     def lastSubstring(self, s: str) -> str:
         if not s:
             return None
-        
+
         # get max char from s
         max_char = max(s)
         max_idxs = []
-        
+
         # get all max_char indexs to append into max_idxs
         for i in range(len(s)):
             if s[i] != max_char:
                 continue
             if not max_idxs or s[i - 1] != max_char:
                 max_idxs.append(i)
-                
+
         # also append the length of s into the max_idxs for compersion
         max_idxs.append(len(s))
-        
+
         # initialize the temp max letter
         max_letter = s[max_idxs[0]:max_idxs[1]]
         ans_idx = max_idxs[0]
@@ -27,5 +27,5 @@ class Solution:
             if max_letter < cur:
                 max_letter = cur
                 ans_idx = max_idxs[i]
-                
+
         return s[ans_idx:]

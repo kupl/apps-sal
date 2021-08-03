@@ -1,19 +1,21 @@
 from itertools import combinations
 from fractions import gcd
 
+
 def main():
     n = int(input())
     p = [list(map(int, input().split())) for _ in range(n)]
     print(solve(n, p))
 
+
 def solve(n, p):
     if n < 5:
         return "YES"
     p5 = p[:5]
-##    for p1, p2 in combinations(p5, 2):
+# for p1, p2 in combinations(p5, 2):
 ##        print(p1, p2, line(p1, p2), nb_points(line(p1, p2), p5))
     lines = set(line(p1, p2) for p1, p2 in combinations(p5, 2))
-##    for l in lines:
+# for l in lines:
 ##        print(l, nb_points(l, p5))
     l0 = None
     for l in lines:
@@ -26,6 +28,7 @@ def solve(n, p):
     if colinear(pr):
         return "YES"
     return "NO"
+
 
 def line(p1, p2):
     x1, y1 = p1
@@ -59,17 +62,21 @@ def line(p1, p2):
                 a, b, c = a // g, b // g, c // g
     return a, b, c
 
+
 def belongs(pi, l):
     a, b, c = l
     return a * pi[0] + b * pi[1] + c == 0
 
+
 def nb_points(l, p):
     return sum(1 for pi in p if belongs(pi, l))
+
 
 def colinear(p):
     if len(p) <= 2:
         return True
     l = line(p[0], p[1])
     return all(belongs(pi, l) for pi in p[2:])
+
 
 main()

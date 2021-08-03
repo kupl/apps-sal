@@ -3,5 +3,6 @@ statements = {
     'conor mcgregor': "I'd like to take this chance to apologize.. To absolutely NOBODY!"
 }
 
+
 def quote(fighter):
     return statements[fighter.lower()]

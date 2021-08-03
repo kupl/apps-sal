@@ -7,5 +7,3 @@ for i in range(8):
                 yes = False
                 break
 print("YES" if yes else "NO")
-
-

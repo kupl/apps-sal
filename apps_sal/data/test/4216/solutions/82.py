@@ -13,13 +13,13 @@ def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
 
 # Const
-MAXSIZE = ( 1 << 31 ) -1
-MINSIZE = -( 1 << 31) + 1
+MAXSIZE = (1 << 31) - 1
+MINSIZE = -(1 << 31) + 1
 
 
 def solver(input_int):
     result = len(str(input_int))
-    for j in range(1, int(input_int**0.5) +1 , +1):
+    for j in range(1, int(input_int**0.5) + 1, +1):
         divide_check = (input_int % j) != 0
         if divide_check:
             continue
@@ -34,5 +34,6 @@ def solver(input_int):
 def __starting_point():
     N = II()
     print(("{}".format(solver(N))))
+
 
 __starting_point()

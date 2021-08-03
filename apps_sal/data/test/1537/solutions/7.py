@@ -32,7 +32,7 @@ def main():
             res += 1
 
     rows_plus = [[0 for _ in range(n)] for _ in range(n)]
-    for c in range(n-k+1):
+    for c in range(n - k + 1):
         added = 0
         for r in range(k):
             if row_min[r] >= c and row_max[r] <= c + k - 1:
@@ -40,15 +40,15 @@ def main():
         rows_plus[0][c] = added
         r = 1
         while r + k - 1 < n:
-            if row_min[r-1] >= c and row_max[r-1] <= c + k - 1:
+            if row_min[r - 1] >= c and row_max[r - 1] <= c + k - 1:
                 added -= 1
-            if row_min[r+k-1] >= c and row_max[r+k-1] <= c+k-1:
+            if row_min[r + k - 1] >= c and row_max[r + k - 1] <= c + k - 1:
                 added += 1
             rows_plus[r][c] = added
             r += 1
 
     cols_plus = [[0 for _ in range(n)] for _ in range(n)]
-    for r in range(n-k+1):
+    for r in range(n - k + 1):
         added = 0
         for c in range(k):
             if col_min[c] >= r and col_max[c] <= r + k - 1:
@@ -56,9 +56,9 @@ def main():
         cols_plus[r][0] = added
         c = 1
         while c + k - 1 < n:
-            if col_min[c-1] >= r and col_max[c-1] <= r + k - 1:
+            if col_min[c - 1] >= r and col_max[c - 1] <= r + k - 1:
                 added -= 1
-            if col_min[c+k-1] >= r and col_max[c+k-1] <= r+k-1:
+            if col_min[c + k - 1] >= r and col_max[c + k - 1] <= r + k - 1:
                 added += 1
             cols_plus[r][c] = added
             c += 1
@@ -67,10 +67,11 @@ def main():
         for c in range(n):
             max_added = max(max_added, rows_plus[r][c] + cols_plus[r][c])
 
-    print(res+max_added)
+    print(res + max_added)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

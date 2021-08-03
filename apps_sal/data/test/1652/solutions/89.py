@@ -15,4 +15,3 @@ while now < len(S):
         return
 
 print('YES')
-

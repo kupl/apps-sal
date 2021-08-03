@@ -1,7 +1,7 @@
 class Solution:
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         self.cache = {}
-        
+
         def helper(arr, k, start):
             if start in self.cache:
                 return self.cache[start]
@@ -18,5 +18,5 @@ class Solution:
 
             self.cache[start] = ans
             return ans
-    
+
         return helper(arr, k, 0)

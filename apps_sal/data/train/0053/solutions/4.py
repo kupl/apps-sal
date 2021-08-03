@@ -16,13 +16,13 @@ def solve(N, S):
     shortest = list(reversed(list(range(1, N + 1))))
     for ch, count in repeat:
         if ch == ">":
-            longest[curr : curr + count + 1] = reversed(
-                longest[curr : curr + count + 1]
+            longest[curr: curr + count + 1] = reversed(
+                longest[curr: curr + count + 1]
             )
         else:
             assert ch == "<"
-            shortest[curr : curr + count + 1] = reversed(
-                shortest[curr : curr + count + 1]
+            shortest[curr: curr + count + 1] = reversed(
+                shortest[curr: curr + count + 1]
             )
         curr += count
 
@@ -37,5 +37,6 @@ def __starting_point():
         N = int(N)
         ans = solve(N, S)
         print(ans)
+
 
 __starting_point()

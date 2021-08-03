@@ -16,7 +16,7 @@ def main():
 
     ans = 0
     for i in A:
-        ans += lcm * pow(i, mod-2, mod)
+        ans += lcm * pow(i, mod - 2, mod)
         ans %= mod
 
     print(ans)

@@ -1,12 +1,13 @@
-N = int(1e5+3)
+N = int(1e5 + 3)
 n = int(input())
 adj = list([] for i in range(N))
-for _ in range(n-1):
+for _ in range(n - 1):
     u, v = list(map(int, input().split()))
     adj[u].append(v)
     adj[v].append(u)
 a = [0] + list(map(int, input().split()))
 b = [0] + list(map(int, input().split()))
+
 
 def dfs(u, p, c_lvl, p_lvl, d):
     stk = [(u, p, c_lvl, p_lvl)]
@@ -19,9 +20,9 @@ def dfs(u, p, c_lvl, p_lvl, d):
             if v != p:
                 stk += [(v, u, p_lvl, c_lvl)]
 
+
 d = [i ^ j for (i, j) in zip(a, b)]
 res = []
 dfs(1, 0, 0, 0, d)
 print(len(res))
 print('\n'.join(res))
-

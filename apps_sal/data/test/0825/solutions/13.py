@@ -1,5 +1,6 @@
 import copy
-n=int(input())
+n = int(input())
+
 
 def prime_factorize(n):
     a = []
@@ -17,17 +18,17 @@ def prime_factorize(n):
         a.append(n)
     return a
 
-L=prime_factorize(n)
-M=L.copy()
-M=list(set(M))
 
-cnt=0
+L = prime_factorize(n)
+M = L.copy()
+M = list(set(M))
+
+cnt = 0
 for x in M:
-    m=L.count(x)
+    m = L.count(x)
     for i in range(L.count(x)):
-        if m-i-1 >= 0:
-            m -= i+1
+        if m - i - 1 >= 0:
+            m -= i + 1
             cnt += 1
 
 print(cnt)
-

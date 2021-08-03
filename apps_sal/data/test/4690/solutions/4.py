@@ -1,7 +1,7 @@
 # 052
 
 # 1.値を正しく取得
-a,b,c,d=(int(x) for x in input().split())
+a, b, c, d = (int(x) for x in input().split())
 
 # 2.正しく処理
 
@@ -14,6 +14,5 @@ if menseki1 > menseki2:
 elif menseki1 < menseki2:
     print(menseki2)
 
-else :
+else:
     print(menseki1)
-

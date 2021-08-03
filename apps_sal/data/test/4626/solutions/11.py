@@ -17,4 +17,3 @@ for _ in range(Q):
         ans = min(ans, abs(a - b) + abs(a - c) + abs(b - c))
 
     print(ans)
-

@@ -4,4 +4,3 @@ if c in correct:
     print("vowel")
 else:
     print("consonant")
-

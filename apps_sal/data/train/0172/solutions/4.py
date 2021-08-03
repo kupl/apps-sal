@@ -1,7 +1,7 @@
 class Solution:
     def maxDiff(self, num: int) -> int:
         return self.findMax(num) - self.findMin(num)
-        
+
     def findMax(self, num):
         s = str(num)
         org = None
@@ -17,13 +17,13 @@ class Solution:
             else:
                 new_s += c
         return int(new_s)
-    
+
     def findMin(self, num):
         s = str(num)
         org = None
         rep = None
         new_s = ''
-        
+
         for i in range(len(s)):
             if s[i] == '0':
                 new_s += s[i]
@@ -44,6 +44,5 @@ class Solution:
                     new_s += rep
                 else:
                     new_s += s[i]
-        
-        return int(new_s)
 
+        return int(new_s)

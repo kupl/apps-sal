@@ -1,5 +1,5 @@
 def contamination(text, char):
-    st=''
+    st = ''
     for c in text:
-        st+=char
+        st += char
     return st

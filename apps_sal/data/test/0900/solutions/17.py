@@ -10,9 +10,8 @@ for v in s:
     dp += dp
     for j in range(13):
         if v == '?':
-            ans[j] = sum(dp[j+4:j+14])
+            ans[j] = sum(dp[j + 4:j + 14])
         else:
             ans[j] = dp[j - int(v)]
 
 print((ans[5] % 1000000007))
-

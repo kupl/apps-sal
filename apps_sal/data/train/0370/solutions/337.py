@@ -27,9 +27,8 @@ class Solution:
         for x in A:
             xp = _find(x)
             cache[xp] = 1 + cache.get(xp, 0)
-            
+
         cache1 = sorted(list(cache.items()), key=lambda x: x[1])
         maxi = cache1[-1][0]
-        
-        return cache[maxi]
 
+        return cache[maxi]

@@ -1,9 +1,9 @@
-n=int(input())
-s,t=map(str,input().split())
+n = int(input())
+s, t = map(str, input().split())
 
-ans=''
+ans = ''
 for i in range(n):
-  ans+=s[i]
-  ans+=t[i]
-  
+    ans += s[i]
+    ans += t[i]
+
 print(ans)

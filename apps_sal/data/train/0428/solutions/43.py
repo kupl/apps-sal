@@ -1,5 +1,7 @@
 from collections import defaultdict, deque
-import heapq, itertools
+import heapq
+import itertools
+
 
 class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
@@ -49,10 +51,8 @@ class Solution:
 
         # return ans if ans < float(\"inf\") else -1
 
-
-
         # Points of Interest + Dijkstra
-        # Time  complexity: O(RC(2A + 1) + ElogN), where R, C are the dimensions of the grid, 
+        # Time  complexity: O(RC(2A + 1) + ElogN), where R, C are the dimensions of the grid,
         # and A is the maximum number of keys, N = (2A + 1) x 2^A is the number of nodes when we
         # perform Dijkstra's, and E = N x (2A + 1) is the maximum number of edges.
         # Space complexity: ON(N)
@@ -80,30 +80,32 @@ class Solution:
                 r, c, d = queue.popleft()
                 if source != grid[r][c] != '.':
                     dist[grid[r][c]] = d
-                    continue # Stop walking from here if we reach a point of interest
+                    continue  # Stop walking from here if we reach a point of interest
                 for cr, cc in neighbors(r, c):
                     if grid[cr][cc] != '#' and not seen[cr][cc]:
                         seen[cr][cc] = True
                         queue.append((cr, cc, d + 1))
-            return dist        
+            return dist
 
         dists = {place: bfs_from(place) for place in location}
         target_state = 2 ** sum(p.islower() for p in location) - 1
 
-        #Dijkstra
+        # Dijkstra
         pq = [(0, '@', 0)]
         final_dist = defaultdict(lambda: float('inf'))
         final_dist['@', 0] = 0
         while pq:
             d, place, state = heapq.heappop(pq)
-            if final_dist[place, state] < d: continue
-            if state == target_state: return d
+            if final_dist[place, state] < d:
+                continue
+            if state == target_state:
+                return d
             for destination, d2 in list(dists[place].items()):
                 state2 = state
-                if destination.islower(): #key
+                if destination.islower():  # key
                     state2 |= 1 << ord(destination) - ord('a')
-                elif destination.isupper(): #lock
-                    if not(state & (1 << ord(destination) - ord('A'))): #no key
+                elif destination.isupper():  # lock
+                    if not(state & (1 << ord(destination) - ord('A'))):  # no key
                         continue
 
                 if d + d2 < final_dist[destination, state2]:
@@ -111,4 +113,3 @@ class Solution:
                     heapq.heappush(pq, (d + d2, destination, state2))
 
         return -1
-

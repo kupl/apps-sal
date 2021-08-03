@@ -8,6 +8,8 @@ for i in range(1, n):
     child[par[i]].append(i)
 
 size = [1] * n
+
+
 def dfs():
     stack = [0]
     visit = [False] * n
@@ -22,8 +24,11 @@ def dfs():
                 size[u] += size[v]
             stack.pop()
 
+
 ans = [0] * n
 ans[0] = 1
+
+
 def dfs2():
     stack = [0]
     while stack:
@@ -35,9 +40,7 @@ def dfs2():
             ans[v] = (sm - size[v]) * 0.5 + 1 + ans[u]
             stack.append(v)
 
+
 dfs()
 dfs2()
 print(*ans)
-
-
-

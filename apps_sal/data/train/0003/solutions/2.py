@@ -9,4 +9,3 @@ for wewq in range(rw):
     for i in range(k + 1):
         f += a[i]
     print(f)
-

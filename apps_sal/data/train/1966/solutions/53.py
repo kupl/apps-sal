@@ -2,6 +2,7 @@ class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         a = mat
         m, n = len(a), len(a[0])
+
         def hist(h):
             ret = [0] * n
             s = []
@@ -22,4 +23,3 @@ class Solution:
                 h[j] = row[j] + h[j] if row[j] else 0
             ans += hist(h)
         return ans
-

@@ -16,4 +16,3 @@ while k > 0:
     now = a
     idx += 1
 print(now)
-

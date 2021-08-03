@@ -10,8 +10,8 @@ class Solution:
             if not node:
                 return False
             value += node.val
-            l_side = dfs(node.left,value)
-            r_side = dfs(node.right,value)
+            l_side = dfs(node.left, value)
+            r_side = dfs(node.right, value)
             if not node.left and not node.right:
                 if value < limit:
                     return False
@@ -25,5 +25,4 @@ class Solution:
             return False
         if dfs(root, 0):
             return root
-        return           
-
+        return

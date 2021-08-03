@@ -2,12 +2,13 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-def main():
-    n = int( input() )
-    input_a = list ( map( int, input().split() ) )
-    a = deque( input_a )
 
-    while( len(a) != 1 ):
+def main():
+    n = int(input())
+    input_a = list(map(int, input().split()))
+    a = deque(input_a)
+
+    while(len(a) != 1):
         x = a.popleft()
         y = a.popleft()
         z = x ^ y
@@ -19,8 +20,7 @@ def main():
         ans.append(x)
 
     for i in ans:
-        print( i , end = ' ' )
-
+        print(i, end=' ')
 
 
 main()

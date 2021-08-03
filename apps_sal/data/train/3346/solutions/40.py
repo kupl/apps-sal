@@ -1,11 +1,13 @@
 import math
 
+
 def is_prime(num):
     max_num_to_check = int(math.sqrt(num)) + 1
     for number in range(2, max_num_to_check):
         if num % number == 0 and num != number:
             return False
     return True
+
 
 def gap(g, m, n):
     first_num = -1
@@ -22,4 +24,3 @@ def gap(g, m, n):
                 sec_num = -1
                 first_num = num
     return None
-

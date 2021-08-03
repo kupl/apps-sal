@@ -104,4 +104,3 @@ for i in range(1, 1024):
         m = n - 1 - j
 
 print(res)
-

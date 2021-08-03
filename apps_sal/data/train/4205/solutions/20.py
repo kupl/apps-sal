@@ -6,4 +6,3 @@ def cannons_ready(gunners):
             break
     else:
         return "Fire!"
-

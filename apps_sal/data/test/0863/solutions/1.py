@@ -1,6 +1,6 @@
-a,ta = list(map(int,input().split()))
-b,tb = list(map(int,input().split()))
-h,m = list(map(int,input().split(":")))
+a, ta = list(map(int, input().split()))
+b, tb = list(map(int, input().split()))
+h, m = list(map(int, input().split(":")))
 m += h * 60
 mint = m - tb
 maxt = m + ta
@@ -11,4 +11,3 @@ while 1440 > m2:
         ans += 1
     m2 += b
 print(ans)
-

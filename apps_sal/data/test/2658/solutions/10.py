@@ -18,4 +18,3 @@ if k <= len(pre):
     print((pre[k] + 1))
 else:
     print((loop[count] + 1))
-

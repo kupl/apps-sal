@@ -1,6 +1,6 @@
-#B
+# B
 n = int(input())
-a = [list(map(int,input().split())) for j in range(n)]
+a = [list(map(int, input().split())) for j in range(n)]
 
 if n == 1:
     print(1)

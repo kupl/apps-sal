@@ -23,8 +23,8 @@ def solve():
         idx___message_count.append(curr_message_count)
     print(*idx___message_count)
 
+
 t = 1
 # t = int(input())
 for _ in range(t):
     solve()
-

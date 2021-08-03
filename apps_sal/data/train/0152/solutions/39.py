@@ -8,7 +8,7 @@ class Solution:
                     pre = position[ii]
                     num += 1
             return num >= m
-            
+
         N = len(position)
         position = sorted(position)
         left, right, res = 0, position[-1] - position[0], -1
@@ -20,4 +20,3 @@ class Solution:
             else:
                 right = mid - 1
         return res
-

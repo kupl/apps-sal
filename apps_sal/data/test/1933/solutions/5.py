@@ -1,4 +1,4 @@
-n,m,k = [int(i) for i in input().split()]
+n, m, k = [int(i) for i in input().split()]
 s = []
 o = 0
 for i in range(m):
@@ -12,13 +12,13 @@ result = 0
 c = 0
 for x in s:
     count = 0
-    for i in range(n-k+1):
-        #print(i)
-        count = max(count, sum(x[i:i+k]))
+    for i in range(n - k + 1):
+        # print(i)
+        count = max(count, sum(x[i:i + k]))
         if count == k:
             break
-    for i in range(n-k+1):
-        if sum(x[i:i+k]) == count:
+    for i in range(n - k + 1):
+        if sum(x[i:i + k]) == count:
             c += sum(x[:i])
             break
     result += count

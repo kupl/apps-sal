@@ -17,7 +17,7 @@ N, K, M = list(map(int, input().split()))
 
 nums = [int(x) for x in input().split()]
 
-nums = [(x%M, x) for x in nums]
+nums = [(x % M, x) for x in nums]
 
 sv = collections.defaultdict(list)
 for r, v in nums:
@@ -28,8 +28,3 @@ for r, v in nums:
         return
 
 print('No')
-
-
-
-
-

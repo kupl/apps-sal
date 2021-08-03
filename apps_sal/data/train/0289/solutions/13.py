@@ -13,8 +13,7 @@ class Solution:
                     continue
                 max_v = max(max_v, dpA[i] + dpB[m])
         return max_v
-        
-        
+
     def sumArray(self, lst, length):
         result = []
         for i in range(len(lst) - length + 1):

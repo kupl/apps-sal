@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees, log2, gcd
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
@@ -14,6 +15,8 @@ def MAP(): return map(int, input().split())
 def LIST(): return list(map(int, input().split()))
 def TUPLE(): return tuple(map(int, input().split()))
 def ZIP(n): return zip(*(MAP() for _ in range(n)))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
@@ -25,29 +28,27 @@ mod = 10 ** 9 + 7
 N = INT()
 P = LIST()
 
-Q = [0]*N 
+Q = [0] * N
 for i, p in enumerate(P):
-	Q[p-1] = i
+    Q[p - 1] = i
 
-check = [0]*N
+check = [0] * N
 ans = []
 
 for i in range(N):
-	p = Q[i]
-	if i < p:
-		for j in range(p-1, i-1, -1):
-			if check[j]:
-				print(-1)
-				return
-			check[j] = 1
-			ans.append(j+1)
-			P[j], P[j+1] = P[j+1], P[j]
-			Q[P[j]-1] -= 1
-			Q[P[j+1]-1] += 1
+    p = Q[i]
+    if i < p:
+        for j in range(p - 1, i - 1, -1):
+            if check[j]:
+                print(-1)
+                return
+            check[j] = 1
+            ans.append(j + 1)
+            P[j], P[j + 1] = P[j + 1], P[j]
+            Q[P[j] - 1] -= 1
+            Q[P[j + 1] - 1] += 1
 
-if len(ans) < N-1:
-	print(-1)
+if len(ans) < N - 1:
+    print(-1)
 else:
-	print(*ans, sep="\n")
-
-
+    print(*ans, sep="\n")

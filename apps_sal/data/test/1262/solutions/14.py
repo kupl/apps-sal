@@ -5,13 +5,16 @@ import sys
 from collections import defaultdict
 
 # input = sys.stdin.readline
-rt = lambda: map(int, input().split())
-ri = lambda: int(input())
-rl = lambda: list(map(int, input().split()))
+
+
+def rt(): return map(int, input().split())
+def ri(): return int(input())
+def rl(): return list(map(int, input().split()))
 
 
 def dist(x1, y1, x2, y2):
-    return abs(x1-x2)+abs(y1-y2)
+    return abs(x1 - x2) + abs(y1 - y2)
+
 
 def main():
     n = ri()
@@ -36,10 +39,10 @@ def main():
 
         used[min_index] = True
         if link[min_index] == -1:
-            to_build.append(min_index+1)
+            to_build.append(min_index + 1)
         for i in range(n):
             if not used[i]:
-                to_link  = (k[i]+k[min_index])*dist(x[i], y[i], x[min_index], y[min_index])
+                to_link = (k[i] + k[min_index]) * dist(x[i], y[i], x[min_index], y[min_index])
                 if to_link < val[i]:
                     val[i] = to_link
                     link[i] = min_index
@@ -50,8 +53,11 @@ def main():
     print(len([x for x in link if x > -1]))
     for i in range(n):
         if link[i] > -1:
-            print(i+1, link[i]+1)
+            print(i + 1, link[i] + 1)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -2,7 +2,5 @@ alpha = "abcdefghijklmnopqrstuvwxyz"
 t = int(input())
 for test in range(t):
     # n = int(input())
-    n,k = (list(map(int, input().split())))
-    print(alpha[0:k]*(n//k)+alpha[:n%k])
-
-
+    n, k = (list(map(int, input().split())))
+    print(alpha[0:k] * (n // k) + alpha[:n % k])

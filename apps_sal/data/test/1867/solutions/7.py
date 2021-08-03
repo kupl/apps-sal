@@ -11,7 +11,7 @@ for i in range(num):
     else:
         data[lst[i]] = [1, i, i]
 
-m = 1;
+m = 1
 newlst = []
 for n in data.keys():
     info = data[n]

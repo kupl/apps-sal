@@ -20,4 +20,3 @@ for idx in range(n):
         # a[idx] = b[idx]
 
 print(count)
-

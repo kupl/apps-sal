@@ -13,5 +13,5 @@ else:
         fac.append(fac[i - 1] * i % MOD)
         inv.append(MOD - inv[MOD % i] * (MOD // i) % MOD)
         finv.append(finv[i - 1] * inv[i] % MOD)
-    
-    print(fac[n+m] * (finv[n] * finv[m] % MOD) % MOD)
+
+    print(fac[n + m] * (finv[n] * finv[m] % MOD) % MOD)

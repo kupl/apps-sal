@@ -24,11 +24,10 @@ for ecd in cd:
     r.sort()
     acc = [0] + list(accumulate(r))
     for i in range(1, n + 1):
-        sub = acc[i-1]
-        add = ecd * (n - i + 1) - (acc[n] - acc[i-1])
+        sub = acc[i - 1]
+        add = ecd * (n - i + 1) - (acc[n] - acc[i - 1])
         if sub == add:
             if sub <= k:
                 ans = max(ans, ecd)
 
 print(ans)
-

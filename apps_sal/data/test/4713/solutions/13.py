@@ -10,4 +10,3 @@ for i in range(N):
         tmp -= 1
     ans = max(tmp, ans)
 print(ans)
-

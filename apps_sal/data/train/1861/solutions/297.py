@@ -11,5 +11,3 @@ class Solution:
                     curArea = abs(p2[0] - p1[0]) * abs(p2[1] - p1[1])
                     minArea = min(minArea, curArea)
         return minArea if minArea != float('inf') else 0
-
-

@@ -5,5 +5,6 @@ def connect_four_place(columns):
         mat[col].append('YR'[ply])
         ply ^= 1
     for col in mat:
-        while len(col) < 6: col.append('-')
+        while len(col) < 6:
+            col.append('-')
     return [list(row) for row in zip(*mat)][::-1]

@@ -2,7 +2,7 @@ class Trie:
     def __init__(self):
         self.children = {}
         self.endSymbol = '*'
-    
+
     def insert(self, word):
         children = self.children
         for char in word[::-1]:
@@ -10,8 +10,8 @@ class Trie:
                 children[char] = {}
             children = children[char]
         children[self.endSymbol] = word
-    
-    
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -34,4 +34,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

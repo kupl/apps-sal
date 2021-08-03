@@ -16,6 +16,4 @@ class Solution:
             right_max = findMaxDiff(node.right, max_sf, min_sf)
             return max(cur_max, left_max, right_max)
 
-        return findMaxDiff(root, root.val, root.val)        
-
-
+        return findMaxDiff(root, root.val, root.val)

@@ -17,4 +17,3 @@ class Solution:
             q1, q2 = q2, []
             ans += 1
         return ans
-

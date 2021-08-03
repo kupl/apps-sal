@@ -1,6 +1,8 @@
 from math import log, ceil
+
+
 def fold_to(d):
-    if d < 0: 
+    if d < 0:
         return None
     if d == 0:
         return 0

@@ -1,7 +1,7 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
 
-from collections import deque
 
 class Factorial:
     def __init__(self, n, mod):
@@ -13,10 +13,13 @@ class Factorial:
         for j in range(n, 0, -1):
             self.i.append(self.i[-1] * j % mod)
         self.i.reverse()
+
     def factorial(self, j):
         return self.f[j]
+
     def ifactorial(self, j):
         return self.i[j]
+
     def comb(self, n, k):
         return self.f[n] * self.i[n - k] % self.mod * self.i[k] % self.mod if n >= k else 0
 
@@ -39,7 +42,7 @@ edge_num = [len(G[i]) for i in range(N + 1)]
 que = deque()
 check = [0] * (N + 1)
 order = []
-o_append =order.append
+o_append = order.append
 q_pop = que.pop
 q_append = que.append
 
@@ -55,7 +58,7 @@ while que:
 
 # print (order)
 
-size1 = [0] * (N + 1) #自身を頂点とする部分木のサイズ、木の根は頂点0
+size1 = [0] * (N + 1)  # 自身を頂点とする部分木のサイズ、木の根は頂点0
 dp1 = [1] * (N + 1)
 for child, parent in order[::-1]:
     dp1[child] *= c.factorial(size1[child])
@@ -78,7 +81,7 @@ for child, parent in order[1:]:
     x *= dp2[parent]
     x *= c.ifactorial(size1[parent])
     x *= c.factorial(size1[child] + 1)
-    x *= pow(dp1[child], MOD - 2, MOD) #割り算
+    x *= pow(dp1[child], MOD - 2, MOD)  # 割り算
     x *= c.factorial(size2[child])
     x *= c.ifactorial(size2[parent] + 1)
     dp2[child] = x % MOD
@@ -88,4 +91,4 @@ for child, parent in order[1:]:
 for x1, x2, s1, s2 in zip(dp1[1:], dp2[1:], size1[1:], size2[1:]):
     s2 += 1
     x = x1 * x2 * c.factorial(s1 + s2) * c.ifactorial(s1) * c.ifactorial(s2) % MOD
-    print (x)
+    print(x)

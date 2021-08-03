@@ -9,4 +9,3 @@ def sum_mul(n, m):
                 subtotal = subtotal + i
                 grandtotal.append(i)
         return sum(grandtotal)
-

@@ -10,7 +10,7 @@ pair = []
 for i in range(n):
     for j in range(m):
         pair.append([a[i], b[j]])
-pair.sort(key = lambda x: x[0] * x[1])
+pair.sort(key=lambda x: x[0] * x[1])
 i = -2
 if d[pair[-1][0]] > 1:
     print(pair[-1][0] * pair[-1][1])

@@ -1,8 +1,8 @@
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
-        transMap = dict() # name: [time, city, t]
+        transMap = dict()  # name: [time, city, t]
         invalids = set()
-        
+
         for t in transactions:
             name, time, amount, city = t.split(',')
             if int(amount) > 1000:
@@ -16,4 +16,3 @@ class Solution:
                 transMap[name] = []
             transMap[name].append((time, city, t))
         return list(invalids)
-

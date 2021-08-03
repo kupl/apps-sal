@@ -10,5 +10,3 @@ for i in a:
     m -= (maxs - i)
 
 print(maxs + max(math.ceil(m / n), 0), maxs + m1)
-
-

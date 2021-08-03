@@ -1,9 +1,9 @@
-n=int(input())
-k=int(input())
-ans=1
+n = int(input())
+k = int(input())
+ans = 1
 for i in range(n):
-    if ans<k:
-        ans*=2
+    if ans < k:
+        ans *= 2
     else:
-        ans+=k
+        ans += k
 print(ans)

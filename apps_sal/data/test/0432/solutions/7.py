@@ -40,4 +40,3 @@ for i in range(n):
 
 res = sum(min(c[i] for i in ring) for ring in rings)
 print(res)
-

@@ -20,7 +20,7 @@ for i in range(k + 1):
         carry = 0
 
 carry = 0
-for i in reversed(list(range(k+1))):
+for i in reversed(list(range(k + 1))):
     value = carry * 26 + cc[i]
     carry = value % 2
     cc[i] = value // 2
@@ -29,5 +29,3 @@ answer = ""
 for x in reversed(cc[:-1]):
     answer += chr(x + 97)
 print(answer)
-
-

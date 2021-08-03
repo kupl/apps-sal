@@ -1,3 +1,3 @@
-x,y,z = input().split()
+x, y, z = input().split()
 
-print(z+" "+x+" "+y)
+print(z + " " + x + " " + y)

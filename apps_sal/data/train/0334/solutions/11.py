@@ -37,6 +37,8 @@ items contains only lowercase English letters.
 
 Accepted 3,761 / 7,000 submissions.
 '''
+
+
 class Solution:
     def minCost(self, items: str, costs: List[int]) -> int:
         '''
@@ -46,7 +48,7 @@ class Solution:
         size = len(items)
         if size < 2:
             return 0
-            
+
         result = 0
         prv_item = items[0]
         prv_cost = costs[0]

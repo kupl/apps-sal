@@ -10,7 +10,7 @@ for i in L:
         D[i] += 1
     else:
         D[i] = 1
-        
+
 P = {}
 
 for i in range(n):
@@ -21,7 +21,7 @@ index = 0
 for i in range(n):
     if i <= index:
         if D[L[i]] > 1:
-            index = max(P[L[i]],index)
+            index = max(P[L[i]], index)
     else:
         ans *= 2
         ans = ans % 998244353

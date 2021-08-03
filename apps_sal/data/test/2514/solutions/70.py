@@ -13,12 +13,12 @@ def main():
         b, c = list(map(int, input().split()))
         if d.get(b, 0) != 0:
 
-            temp = d[b]         
+            temp = d[b]
             d[b] -= temp
             d[c] = d.get(c, 0) + temp
 
             sum_a += (c - b) * temp
         print(sum_a)
-        
-main()
 
+
+main()

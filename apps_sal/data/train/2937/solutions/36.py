@@ -1,4 +1,4 @@
-def between(a,b):
+def between(a, b):
     # good luck
     array = []
     current = a

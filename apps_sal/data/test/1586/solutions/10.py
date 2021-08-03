@@ -1,5 +1,7 @@
 n = int(input())
-if n % 2: print(0); return
+if n % 2:
+    print(0)
+    return
 n //= 2
 ans = 0
 

@@ -12,4 +12,3 @@ def to_alternating_case(s):
     #     else:
     #         a += c
     # return a
-

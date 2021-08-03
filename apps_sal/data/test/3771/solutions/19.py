@@ -1,9 +1,12 @@
 from collections import deque
 
+
 class EDOMONDS_KARP():
     def __init__(self, N, s, t):
-        self.N = N; self.s = s; self.t = t
-        self.cap = [[0]*N for _ in range(N)]
+        self.N = N
+        self.s = s
+        self.t = t
+        self.cap = [[0] * N for _ in range(N)]
         self.link = [[] for _ in range(N)]
 
     def add_edge(self, u, v, c):
@@ -12,9 +15,11 @@ class EDOMONDS_KARP():
         self.link[v].append(u)
 
     def max_flow(self):
-        N = self.N; s = self.s; t = self.t
+        N = self.N
+        s = self.s
+        t = self.t
         f = 0
-        flow = [[0]*N for _ in range(N)]
+        flow = [[0] * N for _ in range(N)]
         while True:
             m, prev = self.bfs(flow)
             if m == 0:
@@ -24,16 +29,20 @@ class EDOMONDS_KARP():
             while v != s:
                 u = prev[v]
                 flow[u][v] += m
-                flow[v][u] -=m
+                flow[v][u] -= m
                 v = u
         return (f, flow)
 
     def bfs(self, flow):
-        N = self.N; s = self.s; t = self.t
+        N = self.N
+        s = self.s
+        t = self.t
         cap = self.cap
         link = self.link
-        prev = [-1]*N; prev[s] = -2
-        m = [0]*N; m[s] = float('inf')
+        prev = [-1] * N
+        prev[s] = -2
+        m = [0] * N
+        m[s] = float('inf')
         q = deque([s])
         while q:
             u = q.popleft()
@@ -46,6 +55,7 @@ class EDOMONDS_KARP():
                     else:
                         return (m[t], prev)
         return (0, prev)
+
 
 H, W = list(map(int, input().split()))
 board = [input() for _ in range(H)]
@@ -65,4 +75,3 @@ for h in range(H):
 
 f, _ = EK.max_flow()
 print((f if f < float('inf') else -1))
-

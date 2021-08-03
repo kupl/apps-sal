@@ -1,4 +1,6 @@
 import functools
+
+
 def logical_calc(array, op):
     if op == "AND":
         return functools.reduce(lambda prev, curr: prev and curr, array)

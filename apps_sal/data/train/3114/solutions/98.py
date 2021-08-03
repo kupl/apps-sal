@@ -10,8 +10,8 @@ def is_leap(year):
     else:
         return False
 
-def year_days(year):
-   if is_leap(abs(year)):
-       return '{} has {} days'.format(year, 366)
-   return '{} has {} days'.format(year, 365)   
 
+def year_days(year):
+    if is_leap(abs(year)):
+        return '{} has {} days'.format(year, 366)
+    return '{} has {} days'.format(year, 365)

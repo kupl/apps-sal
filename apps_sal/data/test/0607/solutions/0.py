@@ -4,7 +4,7 @@ fact = [1]
 
 for i in range(1, n + 1):
     fact.append((fact[-1] * i) % m)
-    
+
 out = 0
 
 for size in range(1, n + 1):
@@ -12,4 +12,3 @@ for size in range(1, n + 1):
     out %= m
 
 print(out)
-

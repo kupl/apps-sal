@@ -45,16 +45,16 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-    def read(self,m):
+    def read(self, m):
         for i in range(m):
-            a,b=list(map(int,input().split()))
-            self.union(a-1,b-1)
+            a, b = list(map(int, input().split()))
+            self.union(a - 1, b - 1)
 
     def solve(self):
         print((max([self.size(i) for i in self.roots()])))
 
-n,m=list(map(int,input().split()))
-a=UnionFind(n)
+
+n, m = list(map(int, input().split()))
+a = UnionFind(n)
 a.read(m)
 a.solve()
-

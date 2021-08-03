@@ -37,6 +37,7 @@ class UnionFind:
     def roots(self):
         return [self.root(i) for i in range(self.N)]
 
+
 N, K, L = map(int, input().split())
 
 road = UnionFind(N)
@@ -55,7 +56,7 @@ for _ in range(L):
     rail.unite(r, s)
 
 pair = {}
-for i,j in zip(road.roots(), rail.roots()):
+for i, j in zip(road.roots(), rail.roots()):
     t = (i, j)
 
     if t in pair:
@@ -63,5 +64,5 @@ for i,j in zip(road.roots(), rail.roots()):
     else:
         pair[t] = 1
 
-ans = ' '.join([str(pair[(i, j)]) for i,j in zip(road.roots(), rail.roots())])
+ans = ' '.join([str(pair[(i, j)]) for i, j in zip(road.roots(), rail.roots())])
 print(ans)

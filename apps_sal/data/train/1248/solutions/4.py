@@ -7,11 +7,10 @@ for i in range(0, t):
     elif n == 1:
         print("INFINITY")
     else:
-        for j in range(3, n+1):
+        for j in range(3, n + 1):
             a = n
             while a >= j:
-                a = int(a/j)
+                a = int(a / j)
             if a == 1:
-                c = c+1
+                c = c + 1
         print(c)
-        

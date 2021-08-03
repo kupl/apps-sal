@@ -1,17 +1,17 @@
-Blue=[]
-Red=[]
+Blue = []
+Red = []
 
-n=int(input())
+n = int(input())
 for i in range(n):
-    s=input()
+    s = input()
     Blue.append(s)
-    
-m=int(input())
+
+m = int(input())
 for i in range(m):
-    t=input()
+    t = input()
     Red.append(t)
 
-ans=0
+ans = 0
 for a in Blue:
     plus = Blue.count(a)
     minus = Red.count(a)

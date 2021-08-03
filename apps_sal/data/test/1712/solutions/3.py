@@ -7,7 +7,7 @@ for i in range(n):
 ox = x
 oy = y
 loop = x + y
-hits = [2]*(loop+1)
+hits = [2] * (loop + 1)
 i = 1
 while i <= loop:
     if y < x:
@@ -20,7 +20,7 @@ while i <= loop:
         i += 1
     else:
         hits[i] = 2
-        hits[i+1] = 2
+        hits[i + 1] = 2
         x += ox
         y += oy
         i += 2
@@ -37,4 +37,3 @@ for inp in inpu:
     i += 1
 
 print("\n".join(final))
-

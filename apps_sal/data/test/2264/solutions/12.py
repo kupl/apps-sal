@@ -8,4 +8,3 @@ for _ in range(int(input())):
         max_l = max(max_l, l)
         min_r = min(min_r, r)
     print(max(max_l - min_r, 0))
-

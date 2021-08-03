@@ -5,8 +5,8 @@ class Solution:
             if i == temp:
                 return i
             temp = i
-            
+
         if A[0] == A[-2] or A[0] == A[-1]:
             return A[0]
-        elif  A[-1] == A[-3]:
+        elif A[-1] == A[-3]:
             return A[-1]

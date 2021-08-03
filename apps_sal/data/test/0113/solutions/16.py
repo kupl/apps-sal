@@ -4,8 +4,10 @@ def gcd(a, b):
     else:
         return(gcd(b, a % b))
 
+
 def lcm(a, b):
     return a // gcd(a, b) * b
+
 
 a, b = map(int, input().split())
 b = 10**b

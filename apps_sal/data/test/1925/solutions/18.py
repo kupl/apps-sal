@@ -11,13 +11,15 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10**8)
 inf = 10**18
 MOD = 1000000007
-ri = lambda : int(input())
-rs = lambda : input().strip()
-rl = lambda : list(map(int, input().split()))
+def ri(): return int(input())
+def rs(): return input().strip()
+def rl(): return list(map(int, input().split()))
+
+
 mod = 998244353
 
-a,b,n = rl()
-if n/b>=1:
-    print(math.floor(a*(b-1)/b))
+a, b, n = rl()
+if n / b >= 1:
+    print(math.floor(a * (b - 1) / b))
 else:
-    print(math.floor(a*n/b))
+    print(math.floor(a * n / b))

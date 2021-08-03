@@ -11,9 +11,9 @@ for _ in range(int(input())):
     k = 2**m - n
     k = (k - 1) // 2
     ans = -1
-    for num in range(2**(m-1)-2*n-20, 2**(m-1)+2*n+20):
-        if 0<=num<2**m:
-            lol = num - bisect_left(A, num+1)
+    for num in range(2**(m - 1) - 2 * n - 20, 2**(m - 1) + 2 * n + 20):
+        if 0 <= num < 2**m:
+            lol = num - bisect_left(A, num + 1)
             if lol == k and num not in G:
                 ans = num
                 break

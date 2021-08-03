@@ -1,6 +1,6 @@
 def alternateCase(s):
     myList = []
-    
+
     for i in s:
         if i.isupper():
             myList.append(i.lower())
@@ -8,5 +8,5 @@ def alternateCase(s):
             myList.append(i.upper())
         else:
             myList.append(i)
-            
+
     return ''.join(myList)

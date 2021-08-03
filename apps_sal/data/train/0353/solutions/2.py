@@ -8,7 +8,7 @@ class Solution:
             if nums[l] + nums[r] > target:
                 r -= 1
             else:
-                result = result + pow(2, r-l, mod)
+                result = result + pow(2, r - l, mod)
                 l += 1
-                
+
         return result % mod

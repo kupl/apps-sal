@@ -9,5 +9,5 @@ def min_value(digits):
     ans.sort()
     for i in ans:
         s += str(i)
-        
+
     return int(s)

@@ -14,7 +14,7 @@ else:
     rev = numbers[i: j + 1]
     rev.reverse()
     sd = numbers[:i] + rev + numbers[j + 1:]
-    if  sd == sorted(numbers):
+    if sd == sorted(numbers):
         print('yes')
         print(i + 1, j + 1)
     else:

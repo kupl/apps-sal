@@ -11,4 +11,3 @@ for i in range(n):
     if k <= r[i]:
         ans += 1
 print(ans)
-

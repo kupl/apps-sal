@@ -7,12 +7,11 @@ ans = float("inf")
 for i in range(n):
     for j in range(i + k - 1, n):
         width = xy[j][0] - xy[i][0]
-        y = [e for _, e in xy[i:j+1]]
+        y = [e for _, e in xy[i:j + 1]]
         y.sort()
-        for e1, e2 in zip(y, y[k-1:]):
+        for e1, e2 in zip(y, y[k - 1:]):
             height = e2 - e1
             area = width * height
             ans = min(ans, area)
 
 print(ans)
-

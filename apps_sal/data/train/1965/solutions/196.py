@@ -6,6 +6,7 @@ Krustal O(ElogE)
 rank[node]: the longth depth of node's children
 '''
 
+
 class Solution:
     def maxNumEdgesToRemove(self, n, edges):
         # Union find
@@ -16,15 +17,16 @@ class Solution:
 
         def union(node1, node2):
             parent1, parent2 = find(node1), find(node2)
-            if parent1 == parent2: return 0
+            if parent1 == parent2:
+                return 0
             if rank[parent1] > rank[parent2]:
                 parent[parent2] = parent1
             elif rank[parent1] == rank[parent2]:
                 parent[parent2] = parent1
                 rank[parent1] += 1
             else:
-                parent[parent1] = parent2 
-            
+                parent[parent1] = parent2
+
             return 1
 
         res = union_times_A = union_times_B = 0
@@ -32,7 +34,7 @@ class Solution:
         # Alice and Bob
         parent = [node for node in range(n + 1)]
         rank = [0 for node in range(n + 1)]
-        
+
         for t, node1, node2 in edges:
             if t == 3:
                 if union(node1, node2):

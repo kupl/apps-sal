@@ -35,10 +35,11 @@ def main():
             if j > cost[k]:
                 ans += 1
 
-    print((ans//2))
+    print((ans // 2))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

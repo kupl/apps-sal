@@ -1,8 +1,7 @@
-calEach=input().split()
-squares=list(input())
-calTot=0
+calEach = input().split()
+squares = list(input())
+calTot = 0
 for i in squares:
-    n=int(i)-1
-    calTot+=int(calEach[n])
+    n = int(i) - 1
+    calTot += int(calEach[n])
 print(calTot)
-

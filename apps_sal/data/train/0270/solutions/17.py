@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def getHappyString(self, n: int, k: int) -> str:
         chars = ['a', 'b', 'c']
@@ -24,4 +25,3 @@ class Solution:
                     queue.append(string + char)
 
         return ''
-

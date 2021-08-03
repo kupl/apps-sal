@@ -6,16 +6,16 @@ r = 0
 for i in range(n):
     t, x, y = map(int, input().split())
     if(t == 1):
-        q+=x
-        w+=10
+        q += x
+        w += 10
     else:
-        e+=x
-        r+=10
-if(q < w//2):
+        e += x
+        r += 10
+if(q < w // 2):
     print("DEAD")
 else:
     print("LIVE")
-if(e < r//2):
+if(e < r // 2):
     print("DEAD")
 else:
     print("LIVE")

@@ -6,4 +6,3 @@ def counting_valleys(s):
         level += {'U': 1, 'F': 0, 'D': -1}[step]
 
     return valleys
-

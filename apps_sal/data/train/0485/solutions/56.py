@@ -6,7 +6,7 @@ class Solution:
             while flips and flips[0] <= i - K:
                 flips.popleft()
             curtStatus = A[i] + len(flips)
-            
+
             if curtStatus % 2 == 0:
                 if i > len(A) - K:
                     return -1
@@ -14,5 +14,3 @@ class Solution:
                     flips.append(i)
                     cnt += 1
         return cnt
-            
-

@@ -12,4 +12,3 @@ class Solution:
             if hours_needed <= H:
                 return K
             K += 1
-

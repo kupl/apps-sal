@@ -30,4 +30,3 @@ for _ in range(int(input())):
         if k in list(i2.keys()):
             res = min(res, i1[k] + i2[k])
     print(res)
-

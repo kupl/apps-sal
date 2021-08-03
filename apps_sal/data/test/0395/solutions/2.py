@@ -18,9 +18,9 @@ def ria():
 
 
 ar = ria()
-hf=sum(ar)/2
-for i in itertools.combinations(ar,3):
-    if sum(i)==hf:
+hf = sum(ar) / 2
+for i in itertools.combinations(ar, 3):
+    if sum(i) == hf:
         print('YES')
         return
 print('NO')

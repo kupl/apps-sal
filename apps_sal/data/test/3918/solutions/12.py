@@ -17,4 +17,3 @@ if sum(d) > k:
 
 else:
     print((k - sum(d)) % 2)
-

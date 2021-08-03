@@ -1,5 +1,6 @@
 mod = 10 ** 9 + 7
 
+
 def solve(N, X):
     return sum((2 * k - N + 1) * x for k, x in enumerate(X)) % mod
 

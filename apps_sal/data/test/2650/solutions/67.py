@@ -1,13 +1,14 @@
-import sys
-def input():return sys.stdin.readline().strip()
 from collections import defaultdict
 from heapq import heappop, heappush, heapify
+import sys
+def input(): return sys.stdin.readline().strip()
+
 
 def main():
     N, Q = map(int, input().split())
     infant_info = [tuple(map(int, input().split())) for _ in range(N)]
     queries = [tuple(map(int, input().split())) for _ in range(Q)]
-    
+
     num_kd = 2 * 10 ** 5
     nums = [0] * num_kd
     h = [[] for _ in range(num_kd)]
@@ -24,7 +25,7 @@ def main():
         nums[b] += 1
 
         kd_max[b] = max(kd_max[b], a)
-    
+
     # rate, id, timestamp
     min_max_h = [(val, kd, 0) for kd, val in kd_max.items()]
 
@@ -47,10 +48,9 @@ def main():
                     heappush(h[from_kd], (rate, infant))
                     heappush(min_max_h, (-rate, from_kd, t))
                     break
-        
+
         min_max_timestamp[from_kd] = t
 
-        
         # to
         nums[to_kd] += 1
 
@@ -63,20 +63,21 @@ def main():
                 heappush(h[to_kd], (rate, infant))
                 heappush(min_max_h, (-rate, to_kd, t))
                 break
-        
+
         min_max_timestamp[to_kd] = t
-
-
 
         # equality
         # print("pos", pos)
         while True:
-            rate, kd, ts = heappop(min_max_h) 
+            rate, kd, ts = heappop(min_max_h)
             if min_max_timestamp[kd] == ts:
                 print(rate)
                 heappush(min_max_h, (rate, kd, ts))
                 break
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -9,7 +9,7 @@ class Solution:
                     prev_pos = position[i]
                 i += 1
             return b == 0
-        
+
         position.sort()
         n = len(position)
         low = 1
@@ -21,5 +21,3 @@ class Solution:
             else:
                 high = mid - 1
         return low
-                
-

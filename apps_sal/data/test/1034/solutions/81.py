@@ -18,27 +18,27 @@ hq = []
 hqAns = []
 d = defaultdict(int)
 
-heapq.heappush(hq, ((A[0]+B[0]+C[0])*-1,(0,0,0)))
-d[(0,0,0)] = 1
+heapq.heappush(hq, ((A[0] + B[0] + C[0]) * -1, (0, 0, 0)))
+d[(0, 0, 0)] = 1
 
-while len(hqAns)<k :
+while len(hqAns) < k:
     val, key = heapq.heappop(hq)
     heapq.heappush(hqAns, val)
- 
-    if d[(key[0]+1, key[1], key[2])]==0 and key[0]+1 < x:
-        heapq.heappush(hq, ((A[key[0]+1]+B[key[1]]+C[key[2]])*-1, ((key[0]+1, key[1], key[2]))))
-        d[(key[0]+1, key[1], key[2])] = 1
 
-    if d[(key[0], key[1]+1, key[2])]==0 and key[1]+1 < y:
-        heapq.heappush(hq, ((A[key[0]]+B[key[1]+1]+C[key[2]])*-1, ((key[0], key[1]+1, key[2]))))
-        d[(key[0], key[1]+1, key[2])] = 1
- 
-    if d[(key[0], key[1], key[2]+1)]==0 and key[2]+1 < z:
-        heapq.heappush(hq, ((A[key[0]]+B[key[1]]+C[key[2]+1])*-1, ((key[0], key[1], key[2]+1))))
-        d[(key[0], key[1], key[2]+1)] = 1
+    if d[(key[0] + 1, key[1], key[2])] == 0 and key[0] + 1 < x:
+        heapq.heappush(hq, ((A[key[0] + 1] + B[key[1]] + C[key[2]]) * -1, ((key[0] + 1, key[1], key[2]))))
+        d[(key[0] + 1, key[1], key[2])] = 1
+
+    if d[(key[0], key[1] + 1, key[2])] == 0 and key[1] + 1 < y:
+        heapq.heappush(hq, ((A[key[0]] + B[key[1] + 1] + C[key[2]]) * -1, ((key[0], key[1] + 1, key[2]))))
+        d[(key[0], key[1] + 1, key[2])] = 1
+
+    if d[(key[0], key[1], key[2] + 1)] == 0 and key[2] + 1 < z:
+        heapq.heappush(hq, ((A[key[0]] + B[key[1]] + C[key[2] + 1]) * -1, ((key[0], key[1], key[2] + 1))))
+        d[(key[0], key[1], key[2] + 1)] = 1
 
 for i in range(k):
-    print((heapq.heappop(hqAns)*-1))
+    print((heapq.heappop(hqAns) * -1))
 
 '''
 # ans.2 #
@@ -81,4 +81,3 @@ for _ in range(k):
     print(heapq.heappop(hq)*-1)
 
 '''
-

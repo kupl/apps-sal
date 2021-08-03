@@ -1,4 +1,4 @@
-n, k = [ int(a) for a in input().split() ]
+n, k = [int(a) for a in input().split()]
 s = input()
 
 freq = {}
@@ -19,5 +19,3 @@ for x in s:
         run = 0
 
 print(max(freq.values()))
-
-

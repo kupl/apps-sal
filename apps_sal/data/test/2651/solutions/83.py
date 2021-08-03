@@ -17,4 +17,3 @@ for i, ey in enumerate(y, 1):
 
 ans = xsm * ysm % mod
 print(ans)
-

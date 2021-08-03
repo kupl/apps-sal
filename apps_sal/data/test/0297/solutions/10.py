@@ -1,10 +1,12 @@
 inp = input()
 n, m, k = [int(x) for x in inp.split()]
 
+
 def gcd(x, y):
     if y == 0:
         return x
     return gcd(y, x % y)
+
 
 if 2 * n * m % k != 0:
     print('NO')
@@ -27,4 +29,3 @@ else:
     print(0, 0)
     print(x, 0)
     print(0, y)
-

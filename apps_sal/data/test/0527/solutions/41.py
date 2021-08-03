@@ -1,4 +1,4 @@
-from bisect import bisect_left,bisect
+from bisect import bisect_left, bisect
 s = list(input())
 sn = len(s)
 t = list(input())
@@ -15,9 +15,9 @@ for i in range(26):
 cou = 0
 now = -1
 for i in range(tn):
-    u = ord(t[i])-ord("a")
+    u = ord(t[i]) - ord("a")
     if kouho[u]:
-        tugi = bisect(kouho[u],now)
+        tugi = bisect(kouho[u], now)
         if tugi == len(kouho[u]):
             cou += 1
             now = kouho[u][0]
@@ -27,4 +27,4 @@ for i in range(tn):
         print(-1)
         return
 
-print(cou*sn + now + 1)
+print(cou * sn + now + 1)

@@ -11,7 +11,7 @@ take = [False] * (n + 1)
 edge = dict()
 inputs = []
 for i in range(n):
-    edge[i+1] = []
+    edge[i + 1] = []
 for i in range(m):
     u, v = map(int, input().split())
     inputs.append((u, v))
@@ -54,4 +54,3 @@ for u, v in inputs:
     else:
         print(0, end="")
 print()
-

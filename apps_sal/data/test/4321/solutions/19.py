@@ -8,7 +8,7 @@ def main():
 
     for _ in range(y):
         if str(x).endswith('0'):
-            x = x//10
+            x = x // 10
         else:
             x = x - 1
 
@@ -29,5 +29,6 @@ def stdin_get_string_from_line():
 
 def __starting_point():
     main()
+
 
 __starting_point()

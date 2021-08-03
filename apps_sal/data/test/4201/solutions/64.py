@@ -1,6 +1,7 @@
 import copy
 
-def count(w,h):
+
+def count(w, h):
     Dtemp = copy.deepcopy(Data)
 
     for i in range(W):
@@ -18,7 +19,8 @@ def count(w,h):
                 c += 1
     return c
 
-H,W,K = map(int,input().split())
+
+H, W, K = map(int, input().split())
 Data = []
 for _ in range(H):
     s = input()
@@ -28,8 +30,8 @@ for _ in range(H):
     Data.append(l)
 
 ans = 0
-for w in range(0,2**W):
-    for h in range(0,2**H):
-        if count(w,h) == K:
+for w in range(0, 2**W):
+    for h in range(0, 2**H):
+        if count(w, h) == K:
             ans += 1
 print(ans)

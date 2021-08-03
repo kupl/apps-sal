@@ -1,5 +1,4 @@
 n, k = list(map(int, input().split()))
 s = input()
 
-print((s[:k-1] + s[k-1].lower() + s[k:]))
-
+print((s[:k - 1] + s[k - 1].lower() + s[k:]))

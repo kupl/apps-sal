@@ -3,9 +3,9 @@ class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
 
-        parent = [-1]*100001
+        parent = [-1] * 100001
 
-        def _find (x):
+        def _find(x):
 
             if parent[x] == -1:
 
@@ -33,11 +33,9 @@ class Solution:
 
                     _union(i, x)
 
-                    _union(x, x//i)
+                    _union(x, x // i)
 
-        
-
-        count = 0;
+        count = 0
 
         cache = {}
 
@@ -51,7 +49,4 @@ class Solution:
 
         return count
 
-    
-
     # O(N * sqrt*max(A[i]))
-

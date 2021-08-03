@@ -3,6 +3,6 @@ def remove_exclamation_marks(s):
 
     for word in s:
         if word != "!":
-            no_mark+=word
-            
+            no_mark += word
+
     return no_mark

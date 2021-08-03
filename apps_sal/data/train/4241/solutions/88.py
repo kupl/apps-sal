@@ -6,4 +6,3 @@ def sequence_sum(begin_number, end_number, step):
         for i in range(begin_number, end_number + 1, step):
             out += i
         return out
-

@@ -1,5 +1,5 @@
 n, k = map(int, input().split())
-ans = [[0]*n for i in range(n)]
+ans = [[0] * n for i in range(n)]
 q = 0
 for i in range(n):
     for j in range(n):

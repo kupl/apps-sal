@@ -1,27 +1,27 @@
 # cook your dish here
 import math
- 
- 
+
+
 def findX(list, int):
     # Sort the given array
     list.sort()
- 
+
     # Get the possible X
-    x = list[0]*list[int-1]
- 
+    x = list[0] * list[int - 1]
+
     # Container to store divisors
     vec = []
- 
+
     # Find the divisors of x
     i = 2
     while(i * i <= x):
         # Check if divisor
         if(x % i == 0):
             vec.append(i)
-            if ((x//i) != i):
-                vec.append(x//i)
+            if ((x // i) != i):
+                vec.append(x // i)
         i += 1
- 
+
     # sort the vec because a is sorted
         # and we have to compare all the elements
     vec.sort()
@@ -40,18 +40,16 @@ def findX(list, int):
             else:
                 j += 1
     return x
- 
- 
+
+
 # Driver code
 try:
-    
+
     m = int(input())
-    for i in range (m):
+    for i in range(m):
         n = int(input())
         x = list(map(int, input().split()))
- 
 
         print(findX(x, n))
-except EOFError as e: 
+except EOFError as e:
     print(e)
-

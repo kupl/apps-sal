@@ -12,12 +12,12 @@ for _ in range(int(input())):
             seg = (curr[0], curr[1], 1)
             curr[1] += 1
         elif e == "W":
-            seg = (curr[0]-1, curr[1], 0)
+            seg = (curr[0] - 1, curr[1], 0)
             curr[0] -= 1
         elif e == "S":
-            seg = (curr[0], curr[1]-1, 1)
+            seg = (curr[0], curr[1] - 1, 1)
             curr[1] -= 1
-        
+
         if seg in se:
             total += 1
         else:

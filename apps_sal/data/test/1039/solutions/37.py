@@ -1,5 +1,7 @@
 
 from heapq import heappush, heappop
+
+
 def resolve():
     INF = 1 << 60
     N = int(input())
@@ -34,5 +36,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

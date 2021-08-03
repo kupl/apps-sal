@@ -8,18 +8,21 @@ def get_int(): return int(sys.stdin.readline().strip())
 def get_print_int(x): sys.stdout.write(str(x) + '\n')
 def get_print(x): sys.stdout.write(x + '\n')
 
+
 def solve():
     for _ in range(get_int()):
-        n,k = get_ints()
+        n, k = get_ints()
         arr = get_list()
         pre = 0
-        s=0
+        s = 0
         for i in range(k):
             pre += arr[i]
         ans = pre
-        for i in range(k,n,1):
+        for i in range(k, n, 1):
             pre = pre + arr[i] - arr[s]
             s += 1
-            ans = max(ans,pre)
+            ans = max(ans, pre)
         get_print_int(ans)
+
+
 solve()

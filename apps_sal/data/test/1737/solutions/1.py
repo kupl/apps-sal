@@ -64,4 +64,3 @@ BFS(PP)
 
 print(len(ans))
 print('\n'.join([' '.join(map(str, el)) for el in sorted(ans, key=lambda x: x[0])]))
-

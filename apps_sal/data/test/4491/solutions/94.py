@@ -12,4 +12,3 @@ for i in range(1, n):
     dp[1][i] = max(dp[0][i] + a2[i], dp[1][i - 1] + a2[i])
 
 print((dp[1][-1]))
-

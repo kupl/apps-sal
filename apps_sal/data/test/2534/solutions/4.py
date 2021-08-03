@@ -16,7 +16,7 @@ for i in range(r):
 for j in range(c):
     b = k[0][j]
     for i in range(r):
-        if b<k[i][j]:
+        if b < k[i][j]:
             b = k[i][j]
     cmax.append(b)
 
@@ -24,4 +24,3 @@ if(set(rmin).intersection(set(cmax))):
     print(*set(rmin).intersection(set(cmax)))
 else:
     print('GUESS')
-

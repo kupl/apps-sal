@@ -21,5 +21,3 @@ class Solution:
                 count += 1
             if count == k:
                 return win
-                
-

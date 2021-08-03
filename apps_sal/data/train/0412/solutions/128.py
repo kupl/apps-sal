@@ -1,26 +1,26 @@
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
-        
+
         memo = {}
-        
+
         def dpWays(d, target):
-            
+
             if d == 0:
-                
+
                 return(0 if target > 0 else 1)
-            
+
             if (d, target) in memo:
-                
+
                 return(memo[(d, target)])
-            
+
             to_return = 0
-            
+
             for k in range(max(0, target - f), target):
-                
-                to_return += dpWays(d-1, k)
-                
+
+                to_return += dpWays(d - 1, k)
+
             memo[(d, target)] = to_return
-            
+
             return(to_return)
-        
+
         return(dpWays(d, target) % (10**9 + 7))

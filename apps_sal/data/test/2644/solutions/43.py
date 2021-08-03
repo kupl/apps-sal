@@ -8,20 +8,20 @@ tag = 1
 prev = 0
 
 for i in range(N):
-    if P[i]==tag:
-        for j in range(i-1, prev-1, -1):
-            P[j], P[j+1] = P[j+1], P[j]
-            ans.append(j+1)
-        
+    if P[i] == tag:
+        for j in range(i - 1, prev - 1, -1):
+            P[j], P[j + 1] = P[j + 1], P[j]
+            ans.append(j + 1)
+
         for j in range(prev, i):
-            if P[j]!=j+1:
+            if P[j] != j + 1:
                 print(-1)
                 return
-            
-        tag = i+1
+
+        tag = i + 1
         prev = i
-    
-if len(ans)!=N-1:
+
+if len(ans) != N - 1:
     print(-1)
     return
 

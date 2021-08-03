@@ -13,4 +13,3 @@ for i in range(n):
         print(A_max)
     elif A[i] == A_max:
         print(A_max2)
-

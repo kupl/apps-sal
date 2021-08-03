@@ -9,7 +9,7 @@ class Solution:
         output = []
         stack = [(0, root)]
         # delete_set = set(to_delete)
-        
+
         def stackChildren(level, node):
             if node.right:
                 stack.append((level, node.right))
@@ -19,7 +19,7 @@ class Solution:
                 stack.append((level, node.left))
                 if level > 0 and node.left.val in to_delete:
                     node.left = None
-            
+
         while stack:
             level, node = stack.pop()
             if node.val in to_delete:
@@ -28,6 +28,6 @@ class Solution:
             else:
                 if level == 0:
                     output.append(node)
-                stackChildren(level+1, node)
-                
+                stackChildren(level + 1, node)
+
         return output

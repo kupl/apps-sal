@@ -16,8 +16,9 @@ def match(d1, d2, case):
         d2[case(c)] -= m
     return ans
 
+
 sd = process(input())
 td = process(input())
-yay = match(sd, td, lambda x : x)
-whoops = match(sd, td, lambda x : x.lower() if x.isupper() else x.upper())
+yay = match(sd, td, lambda x: x)
+whoops = match(sd, td, lambda x: x.lower() if x.isupper() else x.upper())
 print(yay, whoops)

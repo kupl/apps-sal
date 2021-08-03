@@ -7,4 +7,4 @@ class Solution:
             if K < 0:
                 K += 1 - A[l]
                 l += 1
-        return h-l+1
+        return h - l + 1

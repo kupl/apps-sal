@@ -1,9 +1,8 @@
 def alternateCase(s):
-    news=[]
+    news = []
     for i in range(len(s)):
         if s[i].islower():
             news.append(s[i].upper())
         else:
-            news+=s[i].lower()
+            news += s[i].lower()
     return(''.join(news))
-

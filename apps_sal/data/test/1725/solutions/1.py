@@ -1,7 +1,8 @@
 def f(t):
     t.sort()
     return t[len(t) // 2]
-    
+
+
 n, m, d = map(int, input().split())
 t, p = [], [0] * (n * m)
 for i in range(n):
@@ -11,8 +12,10 @@ for i, v in enumerate(t):
     if u != v % d:
         p = []
         break
-    else: p[i] = v // d
+    else:
+        p[i] = v // d
 if p:
     s = f(p)
     print(sum(abs(i - s) for i in p))
-else: print(-1)
+else:
+    print(-1)

@@ -19,4 +19,4 @@ for i in range(K + 1):
     ans += i * lst[i]
     ans %= MOD
 
-print (ans)
+print(ans)

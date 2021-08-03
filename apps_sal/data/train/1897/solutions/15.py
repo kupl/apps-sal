@@ -5,4 +5,4 @@ class Solution:
         for i in arr:
             x ^= i
             xors.append(x)
-        return [xors[i[1]]^xors[i[0]]^arr[i[0]] for i in queries]
+        return [xors[i[1]] ^ xors[i[0]] ^ arr[i[0]] for i in queries]

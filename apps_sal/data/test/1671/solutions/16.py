@@ -28,5 +28,6 @@ def main():
         ans += cntscd - cnt
         ans = ans // 2
     print(ans)
-main()
 
+
+main()

@@ -1,8 +1,8 @@
 # import math
 # import statistics
 # import itertools
-a=int(input())
-#b,c=int(input()),int(input())
+a = int(input())
+# b,c=int(input()),int(input())
 # c=[]
 # for i in a:
 #     c.append(int(i))
@@ -12,4 +12,4 @@ g = [int(input()) for _ in range(a)]
 
 ma = max(g)
 del g[g.index(ma)]
-print(int(sum(g)+ma/2))
+print(int(sum(g) + ma / 2))

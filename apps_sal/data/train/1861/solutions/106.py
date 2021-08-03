@@ -4,16 +4,15 @@ class Solution:
             return 0
         group_x_coords = collections.defaultdict(list)
         group_y_coords = collections.defaultdict(set)
-        
+
         # Form the grouping
         for point in points:
             group_x_coords[point[0]].append(point[1])
             group_y_coords[point[1]].add(point[0])
-        
-        
+
         # Pick element from x coords
         # Then pick another element from it
-        # Do the intersection on the group_y_coords 
+        # Do the intersection on the group_y_coords
         # Find the maximum in the intersection
         min_area = float('inf')
         for key in group_x_coords.keys():

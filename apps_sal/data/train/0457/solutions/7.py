@@ -8,4 +8,3 @@ class Solution:
                     continue
                 dp[a] = dp[a - coin] + 1
         return dp[amount] if dp[amount] < float('inf') else -1
-

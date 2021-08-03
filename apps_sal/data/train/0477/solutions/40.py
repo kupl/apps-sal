@@ -1,6 +1,6 @@
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
-        
+
         def revert(s):
             ans = ''
             for x in s:
@@ -9,7 +9,7 @@ class Solution:
                 else:
                     ans += '1'
             return ans
-        
+
         def helper(n):
             if n == 1:
                 return '0'

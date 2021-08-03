@@ -1,8 +1,8 @@
 def get_score(dice):
-    freq = {e:dice.count(e) for e in set(dice)}
+    freq = {e: dice.count(e) for e in set(dice)}
     score = 0
 
-    if all(e in freq for e in range(1,7)):
+    if all(e in freq for e in range(1, 7)):
         return 1000
 
     if len(freq) is 3 and all(e is 2 for e in freq.values()):
@@ -22,6 +22,6 @@ def get_score(dice):
             del freq[d]
 
     score += freq[1] * 100 if 1 in freq else 0
-    score += freq[5] * 50  if 5 in freq else 0
+    score += freq[5] * 50 if 5 in freq else 0
 
     return "Zonk" if score is 0 else score

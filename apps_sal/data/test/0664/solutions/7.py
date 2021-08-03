@@ -4,6 +4,7 @@ def is_sorted(a):
             return False
     return True
 
+
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
@@ -15,5 +16,6 @@ def solve():
                 return n - i
             else:
                 return -1
+
 
 print(solve())

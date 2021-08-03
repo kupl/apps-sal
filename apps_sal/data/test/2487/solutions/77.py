@@ -13,4 +13,3 @@ se = 0
 for u, v in es:
     se += (u + 1) * (n - v)
 print((sv - se))
-

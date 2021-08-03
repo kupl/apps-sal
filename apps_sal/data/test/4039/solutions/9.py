@@ -14,13 +14,13 @@ for x in pos:
         flg = 0
     else:
         r += x[1]
-neg.sort(key=lambda k: k[0]+k[1], reverse=True)
+neg.sort(key=lambda k: k[0] + k[1], reverse=True)
 for x in neg:
-    if r < x[0] or r<0:
+    if r < x[0] or r < 0:
         flg = 0
     else:
         r += x[1]
-if flg == 1 and r>=0:
+if flg == 1 and r >= 0:
     print('YES')
 else:
     print('NO')

@@ -35,8 +35,12 @@ elif sum(first) < sum(second):
     print('second')
 else:
     res = compare(first, second)
-    if res == 's1': print('first')
-    elif res == 's2': print('second')
+    if res == 's1':
+        print('first')
+    elif res == 's2':
+        print('second')
     else:
-        if int(L[-1]) >= 0: print('first')
-        else: print('second')
+        if int(L[-1]) >= 0:
+            print('first')
+        else:
+            print('second')

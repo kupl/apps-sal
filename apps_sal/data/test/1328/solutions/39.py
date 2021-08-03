@@ -15,4 +15,3 @@ for a, b, c in ABC:
             dp[-1][df + d] = min(c + dp[-2][d], dp[-2][df + d], dp[-1][df + d])
 
 print(("-1" if dp[N][W] == INF else dp[N][W]))
-

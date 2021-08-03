@@ -4,4 +4,3 @@ for i in range(t):
     ak = (k + 1) // 2
     bk = k - ak
     print(ak * a - bk * b)
-

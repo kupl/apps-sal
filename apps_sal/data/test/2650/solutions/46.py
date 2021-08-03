@@ -5,25 +5,25 @@ input = sys.stdin.readline
 N, Q = list(map(int, input().split()))
 AB = [tuple(map(int, input().split())) for _ in range(N)]
 CD = [tuple(map(int, input().split())) for _ in range(Q)]
-H = 2*10**5 # 幼稚園
+H = 2 * 10**5  # 幼稚園
 
 INF = 10**18
 rates = [[] for _ in range(H)]
 members = [set() for _ in range(H)]
-belongs = [-1]*N
-for i,(a,b) in enumerate(AB):
+belongs = [-1] * N
+for i, (a, b) in enumerate(AB):
     b -= 1
-    heapq.heappush(rates[b], (-a,i))
+    heapq.heappush(rates[b], (-a, i))
     members[b].add(i)
     belongs[i] = b
 
 mxrates = []
-for num,r in enumerate(rates):
+for num, r in enumerate(rates):
     if len(r) > 0:
-        heapq.heappush(mxrates, (-r[0][0], num)) # 幼稚園ごとの最大値をいれる
+        heapq.heappush(mxrates, (-r[0][0], num))  # 幼稚園ごとの最大値をいれる
 
-for c,d in CD:
-    c, d = c-1, d-1
+for c, d in CD:
+    c, d = c - 1, d - 1
     old = belongs[c]
     belongs[c] = d
     members[old].remove(c)
@@ -45,4 +45,3 @@ for c,d in CD:
         else:
             print(rate)
             break
-

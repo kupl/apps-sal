@@ -1,6 +1,6 @@
+from fractions import gcd
 3
 
-from fractions import gcd
 
 def main():
     n = int(input())
@@ -10,7 +10,6 @@ def main():
     k = 1
     for x in m:
         k = (x * k) // gcd(x, k)
-
 
     a = 0
     for i in range(k):
@@ -23,5 +22,5 @@ def main():
 
     print(a / k)
 
-main()
 
+main()

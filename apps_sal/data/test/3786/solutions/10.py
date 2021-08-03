@@ -1,8 +1,10 @@
 # 930A
 import collections
+
+
 def do():
     n = int(input())
-    nums = [0] + [int(c)-1 for c in input().split(" ")]
+    nums = [0] + [int(c) - 1 for c in input().split(" ")]
     g = collections.defaultdict(list)
     for i, j in enumerate(nums):
         if i != j:
@@ -17,5 +19,6 @@ def do():
                 next.append(nei)
         cur = next
     return res
+
 
 print(do())

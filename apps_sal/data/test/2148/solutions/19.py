@@ -9,7 +9,7 @@ disks = []
 for x in disk_xs:
     y = R
     for (x0, y0) in disks:
-        sq = 4*(R**2) - (x0 - x)**2
+        sq = 4 * (R**2) - (x0 - x)**2
         if sq >= 0:
             y1 = y0 + sqrt(sq)
             y = max(y, y1)

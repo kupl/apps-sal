@@ -8,4 +8,3 @@ def replace_exclamation(astr):
         else:
             emptystring = emptystring + eachletter
     return emptystring
-

@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     arr = list(s)
     for i in ind:
         if i <= len(arr):

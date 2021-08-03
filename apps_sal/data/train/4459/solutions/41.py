@@ -1,5 +1,5 @@
 def nth_even(n):
-    return (n * 2) -2 
+    return (n * 2) - 2
 #    if n = 0:
  #       return 0
   #  elif n == 1:
@@ -11,4 +11,3 @@ def nth_even(n):
  #   elif n 4:
   #      return 6
    # elif
-

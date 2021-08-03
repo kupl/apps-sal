@@ -10,4 +10,3 @@ res = 10 ** 1000
 for i in num:
     res = min(res, str.count(i) // num.count(i))
 print(res)
-

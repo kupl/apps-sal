@@ -1,6 +1,6 @@
-A, B, C = list(map(int,input().split()))
+A, B, C = list(map(int, input().split()))
 K = int(input())
-Numbers = [A,B,C]
+Numbers = [A, B, C]
 
 Numbers.sort(reverse=True)
 
@@ -9,5 +9,3 @@ for i in range(K):
     Numbers[0] = twice
 
 print((sum(Numbers)))
-
-

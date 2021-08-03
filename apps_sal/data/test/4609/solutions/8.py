@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-N =int(input())
+N = int(input())
 A = {}
 for i in range(N):
     val = int(input())

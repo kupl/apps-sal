@@ -16,6 +16,5 @@ for zz in range(int(input())):
                 break
             x -= 1
         v += 1
-    
-    print(v)
 
+    print(v)

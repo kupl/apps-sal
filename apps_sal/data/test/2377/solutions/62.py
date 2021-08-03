@@ -1,10 +1,11 @@
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+from sys import stdin
 from fractions import gcd
-from itertools import combinations,permutations,accumulate, product # (string,3) 3回
+from itertools import combinations, permutations, accumulate, product  # (string,3) 3回
 #from collections import deque
-from collections import deque,defaultdict,Counter
+from collections import deque, defaultdict, Counter
 import decimal
 import re
 import math
@@ -28,36 +29,42 @@ sys.setrecursionlimit(10000000)
 mod = 10**9 + 7
 #mod = 9982443453
 #mod = 998244353
-from sys import stdin
 readline = stdin.readline
+
+
 def readInts():
-  return list(map(int,readline().split()))
+    return list(map(int, readline().split()))
+
+
 def readTuples():
-    return tuple(map(int,readline().split()))
+    return tuple(map(int, readline().split()))
+
+
 def I():
-  return int(readline())
-n,h = readInts()
+    return int(readline())
+
+
+n, h = readInts()
 A = [0] * n
 B = [0] * n
 for i in range(n):
-    a,b = readInts()
+    a, b = readInts()
     A[i] = a
     B[i] = b
-A = sorted(A, reverse = True)
-B = sorted(B, reverse = True)
+A = sorted(A, reverse=True)
+B = sorted(B, reverse=True)
 MAX = A[0]
 ans = 0
 for v in B:
     # 投げれるMAXより大きい物はぶん投げろ
     if h <= 0:
         break
-    if v > MAX: # 投げろ
+    if v > MAX:  # 投げろ
         # いつ投げても一緒だねえ
         ans += 1
         h -= v
     else:
         break
 if h > 0:
-    ans += (h + MAX - 1) // MAX # 振れるやつ限界まで振ってやろう
+    ans += (h + MAX - 1) // MAX  # 振れるやつ限界まで振ってやろう
 print(ans)
-

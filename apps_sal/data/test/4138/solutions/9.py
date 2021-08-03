@@ -19,7 +19,7 @@ for z in range(t):
     k = int(input())
     for i in range(max_d):
         if k <= num_dig_all_until[i]:
-            
+
             x = num_dig_last[i - 1]
             p = k - num_dig_all_until[i - 1]
             # x + i / x + 2i / x + 3i
@@ -33,23 +33,22 @@ for z in range(t):
                     r = curr - 1
                 else:
                     l = curr + 1
-          
+
             prev = res - 1
-            
+
             q = p - (prev * x + i * prev * (prev + 1) // 2)
-            
+
             for j in range(max_d):
                 if q <= num_dig_last[j]:
-                    w = q -  num_dig_last[j - 1]
-                    r = w % j 
+                    w = q - num_dig_last[j - 1]
+                    r = w % j
                     x = w // j
                     if r != 0:
                         x += 1
                         r -= 1
                     else:
                         r = j - 1
-                    number =   10 ** (j - 1)  + x - 1 
+                    number = 10 ** (j - 1) + x - 1
                     print(str(number)[r])
                     break
             break
-

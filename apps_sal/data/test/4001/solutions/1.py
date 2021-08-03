@@ -8,4 +8,3 @@ for y in a:
         print(x, y)
         break
     y1 = y
-

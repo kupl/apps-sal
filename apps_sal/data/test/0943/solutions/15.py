@@ -12,5 +12,3 @@ for i in range(n):
     else:
         flag = False
 print(ans)
-
-

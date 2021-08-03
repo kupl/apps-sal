@@ -9,13 +9,13 @@ class Solution:
                     i += 1
                 res += 1
             return res
-        
+
         end = start = 0
         for i in arr:
             end += i
             start = max(start, i)
         while start <= end:
-            mid = start + (end - start)//2
+            mid = start + (end - start) // 2
             if count(arr, mid) > D:
                 start = mid + 1
             else:

@@ -21,4 +21,4 @@ for i in range(n):
             tmp += vt[i][j]
     ans = max(ans, tmp)
 
-print (ans)
+print(ans)

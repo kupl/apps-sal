@@ -54,4 +54,3 @@ for z in kouho:
         temp = max(temp, abs(z - z1))
     ans = min(ans, temp)
 print(ans)
-

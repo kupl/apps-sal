@@ -4,7 +4,7 @@ allBanban = sorted(list(map(int, input().split(" "))))
 allValues = []
 for i in allTommy:
     for j in allBanban:
-        allValues.append([i*j, i, j])
+        allValues.append([i * j, i, j])
 allValues.sort()
 i = 0
 while i < len(allTommy):
@@ -15,6 +15,6 @@ while i < len(allTommy):
 newValues = []
 for i in allTommy:
     for j in allBanban:
-        newValues.append(i*j)
+        newValues.append(i * j)
 newValues.sort()
 print(newValues[-1])

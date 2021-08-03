@@ -23,12 +23,12 @@ if len(odd) <= 1:
     print(x + y + x[::-1])
 
 else:
-    ratio = len(even)//len(odd)
+    ratio = len(even) // len(odd)
     max_length = 1
-    for i in range(1,ratio+2,2):
+    for i in range(1, ratio + 2, 2):
         if n % i == 0 and max_length < i:
             max_length = i
-    parts = n//max_length
+    parts = n // max_length
     print(parts)
     x = []
     indx = 0

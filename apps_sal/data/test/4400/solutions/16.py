@@ -1,6 +1,6 @@
-s=input()
-if s[1]=="S":
-    if s[0]=="S" and s[2]=="S":
+s = input()
+if s[1] == "S":
+    if s[0] == "S" and s[2] == "S":
         print(0)
     else:
         print(1)

@@ -10,4 +10,3 @@ for a, b in ab:
         ans = max(ans, sm - b)
 
 print(ans)
-

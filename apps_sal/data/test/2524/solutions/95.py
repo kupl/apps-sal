@@ -8,9 +8,9 @@ max_bit_num_length = len(max_bit_num)
 ans = 0
 radix = 1
 for i in range(max_bit_num_length):
-  new_num_list = (num_list >> i) & 1
-  one_amount = np.count_nonzero(new_num_list == 1)
-  zero_amount = len(num_list) - one_amount
-  ans += (one_amount*zero_amount)*radix
-  radix *= 2
-print(ans%(10**9+7))
+    new_num_list = (num_list >> i) & 1
+    one_amount = np.count_nonzero(new_num_list == 1)
+    zero_amount = len(num_list) - one_amount
+    ans += (one_amount * zero_amount) * radix
+    radix *= 2
+print(ans % (10**9 + 7))

@@ -25,7 +25,4 @@ for i, x in enumerate(c):
         print("col", i + 1)
 
 
-
-
 # Made By Mostafa_Khaled
-

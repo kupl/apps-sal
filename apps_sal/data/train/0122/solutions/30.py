@@ -15,5 +15,5 @@ class Solution:
             temp = min(temp, curr)
             curr -= cardPoints[left]
             left += 1
-        
+
         return total - temp

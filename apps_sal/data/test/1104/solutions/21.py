@@ -8,6 +8,7 @@ def my(a, b, c):
             return []
     return c
 
+
 n = int(input())
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
@@ -19,5 +20,4 @@ for i in range(4):
         print(*t)
         break
 else:
-    print('NO')        
-
+    print('NO')

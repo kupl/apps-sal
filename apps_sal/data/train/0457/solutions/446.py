@@ -5,7 +5,7 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
-        
+
         q = queue.Queue()
         q.put(amount)
         q.put(None)
@@ -24,11 +24,6 @@ class Solution:
                     q.put(num - coin)
                     visited.add(num - coin)
                 elif num - coin == 0:
-                    return level+1
-        
-        return -1
-        
-        
-        
-        
+                    return level + 1
 
+        return -1

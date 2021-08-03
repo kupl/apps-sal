@@ -54,24 +54,24 @@ alpdic = {}
 for i in range(26):
     alpdic[alp[i]] = i
 
-allcol = [0] * (len(A)+1)
-apnum =  [ [0] * 26 for i in range(len(A)+1) ]
-lastap = [ [0] * 26 for i in range(len(A)+1) ]
+allcol = [0] * (len(A) + 1)
+apnum = [[0] * 26 for i in range(len(A) + 1)]
+lastap = [[0] * 26 for i in range(len(A) + 1)]
 
 for i in range(len(A)):
 
     for j in range(26):
-        apnum[i+1][j] = apnum[i][j]
-        lastap[i+1][j] = lastap[i][j]
-        allcol[i+1] = allcol[i]
+        apnum[i + 1][j] = apnum[i][j]
+        lastap[i + 1][j] = lastap[i][j]
+        allcol[i + 1] = allcol[i]
 
-    apnum[i+1][alpdic[A[i]]] |= 1
-    if 0 not in apnum[i+1]:
-        apnum[i+1] = [0] * 26
-        allcol[i+1] += 1
-    lastap[i+1][alpdic[A[i]]] = i+1
+    apnum[i + 1][alpdic[A[i]]] |= 1
+    if 0 not in apnum[i + 1]:
+        apnum[i + 1] = [0] * 26
+        allcol[i + 1] += 1
+    lastap[i + 1][alpdic[A[i]]] = i + 1
 
-anslen = allcol[-1]+1
+anslen = allcol[-1] + 1
 ans = []
 nind = len(A)
 
@@ -86,7 +86,7 @@ for i in range(anslen):
             break
     ans.append(alp[minind])
 
-    nind = lastap[nind][minind]-1
+    nind = lastap[nind][minind] - 1
 
-#ans.reverse()
-print ("".join(ans))
+# ans.reverse()
+print("".join(ans))

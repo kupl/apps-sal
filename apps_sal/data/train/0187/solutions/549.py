@@ -3,46 +3,46 @@ class Solution:
         cur = 0
         total = 0
 
-        profit1 = [0,0]
-        profit2 = [0,0]
-        
+        profit1 = [0, 0]
+        profit2 = [0, 0]
+
         stop = False
-        
-        left =0
-        
-        if 4*boardingCost-runningCost<=0:
+
+        left = 0
+
+        if 4 * boardingCost - runningCost <= 0:
             return -1
-        while cur<len(customers):
-            left+=customers[cur]
-            if left>=4:
-                left-=4
+        while cur < len(customers):
+            left += customers[cur]
+            if left >= 4:
+                left -= 4
                 customer = 4
             else:
                 customer = left
                 left = 0
-            if (customer*boardingCost-runningCost)+profit1[0]>profit1[0]:
-                profit2[0]=(customer*boardingCost-runningCost)+profit1[0]
-                profit2[1]=profit1[1]+1
-            
-            profit1[0]=(customer*boardingCost-runningCost)+profit1[0]
-            profit1[1]=profit1[1]+1
-            cur+=1
-                
+            if (customer * boardingCost - runningCost) + profit1[0] > profit1[0]:
+                profit2[0] = (customer * boardingCost - runningCost) + profit1[0]
+                profit2[1] = profit1[1] + 1
+
+            profit1[0] = (customer * boardingCost - runningCost) + profit1[0]
+            profit1[1] = profit1[1] + 1
+            cur += 1
+
         if left:
-            profit1[0]+=(left//4)*(customer*boardingCost-runningCost)
-            profit1[1]+=(left//4)
-            
-            if (left%4)*boardingCost-runningCost>0:
-                profit1[0]+=(left%4)*boardingCost-runningCost
-                profit1[1]+=1
-        
-        if profit1[0]>profit2[0]:
+            profit1[0] += (left // 4) * (customer * boardingCost - runningCost)
+            profit1[1] += (left // 4)
+
+            if (left % 4) * boardingCost - runningCost > 0:
+                profit1[0] += (left % 4) * boardingCost - runningCost
+                profit1[1] += 1
+
+        if profit1[0] > profit2[0]:
             return profit1[1]
-        elif profit1[0]<profit2[0]:
+        elif profit1[0] < profit2[0]:
             return profit2[1]
         else:
-            return min(profit1[1],profit2[1])
-                
+            return min(profit1[1], profit2[1])
+
         '''
         while cur<len(customers):
             current = customers[cur]

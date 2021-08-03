@@ -13,4 +13,3 @@ for i in range(n):
     else:
         o += 20
 print(o)
-

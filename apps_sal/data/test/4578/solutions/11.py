@@ -6,4 +6,4 @@ for i in range(N):
     X = X - a[i]
 if X / min(a) >= 1:
     count += X // min(a)
-print(N+count)
+print(N + count)

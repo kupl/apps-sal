@@ -1,7 +1,7 @@
 
 def resolve():
     N, M = map(int, input().split())
-    
+
     ans = 1
     for A in range(1, int(M ** 0.5) + 1):
         # 約数判定
@@ -18,4 +18,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

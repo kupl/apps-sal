@@ -17,4 +17,3 @@ elif (a + n) % 4 == b:
     print('cw')
 else:
     print('ccw')
-

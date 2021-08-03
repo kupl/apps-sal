@@ -14,13 +14,14 @@ def partsolve(A, x, positive, zero, negative):
     Pc = np.searchsorted(A, P, side='right')
     count += Pc.sum()
 
-    N = (-x-1) // -negative
+    N = (-x - 1) // -negative
     Nc = np.searchsorted(A, N, side='right')
     Nc = len(A) - Nc
     count += Nc.sum()
 
     count -= np.count_nonzero(A * A <= x)
     return count // 2
+
 
 def solve(N, K, As):
     A = np.array(sorted(As), np.int64)
@@ -38,7 +39,6 @@ def solve(N, K, As):
         else:
             right = mid
     return right
-
 
 
 def __starting_point():

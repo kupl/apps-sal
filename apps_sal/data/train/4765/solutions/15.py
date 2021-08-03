@@ -5,8 +5,8 @@ class Hero(object):
         self.health = 100
         self.damage = 5
         self.experience = 0
-            
-    
+
+
 '''define a Hero prototype to be used in a terminal game. 
 The hero should have the following attributes:
 

@@ -17,6 +17,5 @@ else:
         A_y = A
     else:
         A_y = B
-    
-print("%d %d %d %d" % (A_x, A_y, B_x, B_y))
 
+print("%d %d %d %d" % (A_x, A_y, B_x, B_y))

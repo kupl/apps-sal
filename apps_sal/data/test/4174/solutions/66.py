@@ -5,4 +5,4 @@ d = 0
 for i in llist:
     d += i
     dlist.append(d)
-print(sum([i<=x for i in dlist]))
+print(sum([i <= x for i in dlist]))

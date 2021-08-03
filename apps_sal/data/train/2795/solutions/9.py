@@ -1,1 +1,1 @@
-cockroach_speed = lambda s: int(27.7778*s)
+def cockroach_speed(s): return int(27.7778 * s)

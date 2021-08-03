@@ -9,4 +9,3 @@ while h > 0:
         w = max(0, w - u2)
     h -= 1
 print(w)
-

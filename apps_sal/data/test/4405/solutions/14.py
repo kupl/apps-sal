@@ -14,13 +14,12 @@ lts.sort(reverse=True)
 mt = [lts[0]]
 pl = lts[0]
 
-for i in range(1,len(lts)):
-    cl = min(pl//2,lts[i])
+for i in range(1, len(lts)):
+    cl = min(pl // 2, lts[i])
     if cl == 0:
         break
-    cs = cl*(2**(i+1)-1)
+    cs = cl * (2**(i + 1) - 1)
     mt.append(cs)
     pl = cl
 
 print(max(mt))
-

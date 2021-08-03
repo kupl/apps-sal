@@ -1,6 +1,6 @@
 N = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-distance = max(a)-min(a)
+distance = max(a) - min(a)
 
 print(distance)

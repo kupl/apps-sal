@@ -3,11 +3,11 @@ class Solution:
         boxes = set(initialBoxes)
         openedBox = set()
         bfs = [i for i in boxes if status[i]]
-        
-#BFS every open box
+
+# BFS every open box
         while bfs:
             size = len(bfs)
-            
+
             for _ in range(size):
                 box = bfs.pop(0)
                 openedBox.add(box)
@@ -20,8 +20,8 @@ class Solution:
                 for eachKey in keys[box]:
                     if status[eachKey] == 0 and eachKey in boxes:
                         bfs.append(eachKey)
-                    
+
 #                 it's necessary to update status, because above you need use status[eachKey] == 0 to filter out the box that you have alreay taken candies
                     status[eachKey] = 1
-                        
+
         return sum(candies[box] for box in openedBox)

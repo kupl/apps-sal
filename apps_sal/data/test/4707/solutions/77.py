@@ -11,4 +11,5 @@ def __starting_point():
 
     print(count)
 
+
 __starting_point()

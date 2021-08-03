@@ -6,4 +6,3 @@ for _ in range(m):
     have[person_2] -= owns_
 
 print(sum(i for i in have if i > 0))
-

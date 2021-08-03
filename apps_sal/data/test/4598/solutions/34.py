@@ -1,4 +1,4 @@
 N = int(input())
 
-L = list(range(N+1))
+L = list(range(N + 1))
 print(sum(L))

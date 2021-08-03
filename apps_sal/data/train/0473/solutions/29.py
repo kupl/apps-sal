@@ -7,8 +7,8 @@ class Solution:
             xors[i] ^= xors[i - 1]
         ans = 0
         for j in range(1, len(xors)):
-            cnt = Counter([xors[j - 1]^xors[i - 1] for i in range(1, j)])
+            cnt = Counter([xors[j - 1] ^ xors[i - 1] for i in range(1, j)])
             cnt[xors[j - 1]] = cnt.get(xors[j - 1], 0) + 1
             for k in range(j, len(xors)):
-                ans += cnt.get(xors[k]^xors[j - 1], 0)
+                ans += cnt.get(xors[k] ^ xors[j - 1], 0)
         return ans

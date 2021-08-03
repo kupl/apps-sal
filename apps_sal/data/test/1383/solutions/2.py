@@ -9,4 +9,3 @@ for item in arr2:
     if sorted(new) == arr2:
         best = min(best, diff)
 print(best)
-

@@ -12,14 +12,14 @@ class Solution:
             else:
                 product = 1
                 dp.append(0)
-        
+
         print(dp)
         res = 0
-        d = {1:0, 0:float('inf'), -1:float('inf')}
-        
+        d = {1: 0, 0: float('inf'), -1: float('inf')}
+
         if nums[0] == 0:
             d[1] = float('inf')
-        
+
         for i, p in enumerate(dp):
             if p == 1:
                 d[1] = min(d[1], i)
@@ -30,6 +30,5 @@ class Solution:
             else:
                 d[1] = i + 1
                 d[-1] = float('inf')
-        
-        return res
 
+        return res

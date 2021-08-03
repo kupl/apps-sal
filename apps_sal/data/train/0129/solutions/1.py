@@ -7,9 +7,8 @@ class Solution:
             value = current + A[i] + current_pos - i
             if value > result:
                 result = value
-            if current <= A[i] + i-current_pos:
+            if current <= A[i] + i - current_pos:
                 current = A[i]
                 current_pos = i
 
         return result
-

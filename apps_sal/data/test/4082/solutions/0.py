@@ -19,4 +19,3 @@ for i in range(n):
     mx = max(mx, left[i])
     mx = max(mx, right[i])
 print(mx)
-

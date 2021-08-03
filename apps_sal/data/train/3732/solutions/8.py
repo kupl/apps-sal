@@ -4,9 +4,9 @@ def is_madhav_array(arr):
     i, k = 0, 1
     while i + k <= len(arr):
         if arr[0] != sum(arr[i: i + k]):
-             return False
+            return False
         if i + k == len(arr):
-             return True
+            return True
         i += k
         k += 1
     return False

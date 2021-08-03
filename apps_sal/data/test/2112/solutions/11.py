@@ -1,6 +1,8 @@
 from math import ceil
+
+
 def func(values, left, right, x, k, y, left_val, right_val):
-    copy = values[left+1:right]
+    copy = values[left + 1:right]
     if len(copy) == 0:
         return 0
     copy.sort()
@@ -54,4 +56,6 @@ def main():
             else:
                 ans += a
                 print(ans)
+
+
 main()

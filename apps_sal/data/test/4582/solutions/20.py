@@ -8,4 +8,3 @@ if a == b:
     print("H")
 else:
     print("D")
-

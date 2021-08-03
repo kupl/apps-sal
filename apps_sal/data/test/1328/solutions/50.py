@@ -21,4 +21,3 @@ if dic.get(0):
     print((dic[0]))
 else:
     print((-1))
-

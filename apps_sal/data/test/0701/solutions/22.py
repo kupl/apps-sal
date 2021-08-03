@@ -28,4 +28,3 @@ else:
             print('both')
     else:
         print('need tree')
-

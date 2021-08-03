@@ -1,6 +1,5 @@
 
 
-
 n, l = list(map(int, input().split()))
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
@@ -27,5 +26,3 @@ if found:
     print("YES")
 else:
     print("NO")
-
-

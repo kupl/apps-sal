@@ -8,7 +8,7 @@ for i in range(n):
         d[s[i]] = 1
 
 m = max(d.values())
-l=[]
+l = []
 for i in d:
     if d[i] == m:
         l.append(i)

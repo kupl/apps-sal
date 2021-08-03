@@ -1,22 +1,24 @@
 import math
 import re
 
+
 def f(n):
     if n - math.floor(n) < 0.5:
         return n
-    else :
+    else:
         return math.ceil(n)
+
 
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 n1 = n
 s = sum(a)
-sred = s/n
+sred = s / n
 while f(sred) != k:
     s += k
     n += 1
-    sred = s/n
+    sred = s / n
 
 print(n - n1)
 
@@ -40,7 +42,7 @@ print(n - n1)
 #
 # print(A[n - 1][m])
 
-    # arr = list(map(int, input().split()))
+# arr = list(map(int, input().split()))
 # res = 0
 # a = {math.pow(2, i) for i in range(35)}
 # for i in range(n-1):
@@ -58,4 +60,3 @@ print(n - n1)
 # arr1 = sorted(arr, reverse=True)
 # a = [n - arr1.index(arr[el - 1]) for el in spis]
 # print(' '.join(map(str, a)))
-

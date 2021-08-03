@@ -12,4 +12,3 @@ if(len(d) == 26):
     print("YES")
 else:
     print("NO")
-

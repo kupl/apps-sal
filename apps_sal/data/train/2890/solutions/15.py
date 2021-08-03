@@ -7,7 +7,7 @@ def multiples(m, n):
         multi = n * i
         print(multi)
         list1.append(multi)
-        
+
         i += 1
     print(list1)
     return(list1)

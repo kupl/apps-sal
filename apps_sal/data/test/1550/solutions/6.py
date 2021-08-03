@@ -8,7 +8,7 @@ for i in num:
         break
 if status == 0:
     for i in range(n):
-        print(0,end="")
+        print(0, end="")
     print()
 else:
     maximum = 0
@@ -24,29 +24,28 @@ else:
             if dum[j] != '0':
                 if cur > count:
                     count = cur
-                    ind = [j-count]
+                    ind = [j - count]
                 elif cur == count:
-                    ind.append(j-count)
+                    ind.append(j - count)
                 cur = 0
             else:
                 cur += 1
         if cur != 0:
             if cur > count:
                 count = cur
-                ind = [j-count+1]
+                ind = [j - count + 1]
             elif cur == count:
-                ind.append(j-count+1)
+                ind.append(j - count + 1)
         if count > maximum:
             consider = []
             for i in ind:
-                consider.append([dum,i])
+                consider.append([dum, i])
                 maximum = count
         elif count == maximum:
             for i in ind:
-                consider.append([dum,i])
+                consider.append([dum, i])
     out = []
 
     for i in range(len(consider)):
         out.append(consider[i][0][consider[i][1]:] + consider[i][0][:consider[i][1]])
     print(min(out))
-

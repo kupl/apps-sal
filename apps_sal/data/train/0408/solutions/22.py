@@ -18,8 +18,7 @@ class Solution:
             elif helper(mid) >= target:
                 right = mid
 
-        if abs(helper(left) - target) < abs(helper(left-1) - target):
+        if abs(helper(left) - target) < abs(helper(left - 1) - target):
             return left
         else:
-            return left-1
-
+            return left - 1

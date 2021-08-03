@@ -3,7 +3,7 @@ class Solution:
         temp = []
         for i in range(len(efficiency)):
             temp.append([efficiency[i], speed[i]])
-        temp.sort(reverse = True)
+        temp.sort(reverse=True)
         heap = []
         cur_sum = 0
         result = 0

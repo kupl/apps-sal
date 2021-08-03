@@ -15,4 +15,3 @@ for i in range(n - k, -1, -1):
         print((s[:i].replace('?', 'a') + t + s[i + k:].replace('?', 'a')))
         return
 print('UNRESTORABLE')
-

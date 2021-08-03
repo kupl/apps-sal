@@ -20,14 +20,16 @@
 import sys
 from sys import stdin
 
-#重みのないグラフでの最短経路問題
+# 重みのないグラフでの最短経路問題
 #隣接リストと始点を与えると始点からの距離のリスト & 親のリストを返す
 from collections import deque
-def NC_Dij(lis,start):
+
+
+def NC_Dij(lis, start):
 
     ret = [float("inf")] * len(lis)
     ret[start] = 0
-    
+
     q = deque([start])
     plis = [i for i in range(len(lis))]
 
@@ -41,41 +43,42 @@ def NC_Dij(lis,start):
                 plis[nex] = now
                 q.append(nex)
 
-    return ret,plis
+    return ret, plis
 
-mod = 10**9+7
+
+mod = 10**9 + 7
 
 N = int(stdin.readline())
 
-lis = [ [] for i in range(N) ]
+lis = [[] for i in range(N)]
 
-for i in range(N-1):
-    a,b = list(map(int,stdin.readline().split()))
+for i in range(N - 1):
+    a, b = list(map(int, stdin.readline().split()))
     a -= 1
     b -= 1
     lis[a].append(b)
     lis[b].append(a)
 
-D0,tmp = NC_Dij(lis,0)
+D0, tmp = NC_Dij(lis, 0)
 p1 = 0
 for i in range(N):
     if D0[i] > D0[p1]:
         p1 = i
 
-D1,tmp = NC_Dij(lis,p1)
+D1, tmp = NC_Dij(lis, p1)
 p2 = p1
 for i in range(N):
     if D1[i] > D1[p2]:
         p2 = i
 
-D2,tmp = NC_Dij(lis,p2)
+D2, tmp = NC_Dij(lis, p2)
 
 DL1 = []
 for i in range(N):
-    DL1.append( (D1[i],i) )
+    DL1.append((D1[i], i))
 DL2 = []
 for i in range(N):
-    DL2.append( (D2[i],i) )
+    DL2.append((D2[i], i))
 
 DL1.sort()
 DL1.reverse()
@@ -85,12 +88,12 @@ DL2.reverse()
 
 anslis = [0] * N
 visit = [0] * N
-two  = 0
+two = 0
 zero = N
 for X in range(N):
 
     while len(DL1) > 0 and DL1[-1][0] == X:
-        tmp,v = DL1[-1]
+        tmp, v = DL1[-1]
         del DL1[-1]
 
         if visit[v] == 0:
@@ -100,7 +103,7 @@ for X in range(N):
         visit[v] += 1
 
     while len(DL2) > 0 and DL2[-1][0] == X:
-        tmp,v = DL2[-1]
+        tmp, v = DL2[-1]
         del DL2[-1]
 
         if visit[v] == 0:
@@ -110,12 +113,11 @@ for X in range(N):
         visit[v] += 1
 
     if two == N:
-        anslis[X] = pow(2,N,mod)
+        anslis[X] = pow(2, N, mod)
     elif zero == 0:
-        anslis[X] = 2 * pow(2,two,mod)
+        anslis[X] = 2 * pow(2, two, mod)
 
 ans = 0
-for i in range(1,N):
-    ans += (anslis[i]-anslis[i-1]) * i
+for i in range(1, N):
+    ans += (anslis[i] - anslis[i - 1]) * i
 print((ans % mod))
-

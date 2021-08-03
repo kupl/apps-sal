@@ -1,8 +1,8 @@
 n, x, m = list(map(int, input().split()))
 mn = min(n, m)
-P = [] # pre_sum
-sum_p = 0 # sum of pre + cycle
-X = [-1] * m # for cycle check & pre_len
+P = []  # pre_sum
+sum_p = 0  # sum of pre + cycle
+X = [-1] * m  # for cycle check & pre_len
 for i in range(mn):
     if X[x] > -1:
         cyc_len = len(P) - X[x]
@@ -14,6 +14,5 @@ for i in range(mn):
     P.append(sum_p)
     sum_p += x
     X[x] = i
-    x = x*x % m
+    x = x * x % m
 print(sum_p)
-

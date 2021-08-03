@@ -6,4 +6,3 @@ def next_item(xs, item):
         if i == item:
             done = True
     return None
-

@@ -16,4 +16,3 @@ for x in range(W):
             A_[y] += a[x]
 for a in A_:
     print(a)
-

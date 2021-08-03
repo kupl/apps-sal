@@ -10,24 +10,23 @@ class Solution:
             return 'Bob'
         else:
             return 'Tie'
-    
+
     def helper(self, stoneValue, index):
         if self.cache[index]:
             return self.cache[index]
-        
+
         n = len(stoneValue)
         if index == n:
             return 0
-        
+
         cur = 0
         best = -sys.maxsize
         for i in range(3):
             if index + i >= n:
                 break
-            
+
             cur += stoneValue[index + i]
             best = max(best, cur - self.helper(stoneValue, index + i + 1))
-        
+
         self.cache[index] = best
         return best
-

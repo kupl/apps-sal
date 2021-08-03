@@ -1,4 +1,4 @@
-N = int(input()) 
+N = int(input())
 time = sorted(map(int, input().split()))
 ans = 0
 tsum = 0
@@ -7,5 +7,3 @@ for t in time:
         ans += 1
         tsum += t
 print(ans)
-        
-

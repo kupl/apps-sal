@@ -1,20 +1,20 @@
 def switch_it_up(number):
     if (number == 0):
-        return "Zero";
+        return "Zero"
     elif (number == 1):
-        return "One";
+        return "One"
     elif (number == 2):
-        return "Two";
+        return "Two"
     elif (number == 3):
-        return "Three";
+        return "Three"
     elif (number == 4):
-        return "Four";
+        return "Four"
     elif (number == 5):
-        return "Five";
+        return "Five"
     elif (number == 6):
-        return "Six";
+        return "Six"
     elif (number == 7):
-        return "Seven";
+        return "Seven"
     elif (number == 8):
-        return "Eight";
-    return "Nine";
+        return "Eight"
+    return "Nine"

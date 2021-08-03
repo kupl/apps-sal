@@ -6,4 +6,3 @@ for i in range(int(100 / 0.08)):
         print(i)
         return
 print((-1))
-

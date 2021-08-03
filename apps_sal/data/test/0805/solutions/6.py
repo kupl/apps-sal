@@ -3,18 +3,18 @@ import io
 import math
 import random
 
+
 def timer(f):
     def tmp(*args, **kwargs):
         t = time.time()
         res = f(*args, **kwargs)
-        print("Time : %f" % (time.time()-t))
+        print("Time : %f" % (time.time() - t))
         return res
 
     return tmp
 
 
-
-n = int(input());
+n = int(input())
 array = []
 for i in range(n):
     str = input().split(' ')
@@ -23,16 +23,14 @@ for i in range(n):
 summ = 0
 x = array[0][0]
 y = array[0][1]
-for i in range(x*100, y*100):
-    coord = i/100
+for i in range(x * 100, y * 100):
+    coord = i / 100
     f = True
     for j in range(1, len(array)):
         if array[j][0] <= coord <= array[j][1]:
             f = False
     if f:
-        #print(coord)
-        summ = summ+1
+        # print(coord)
+        summ = summ + 1
 
-print(int(round(summ/100)))
-
-
+print(int(round(summ / 100)))

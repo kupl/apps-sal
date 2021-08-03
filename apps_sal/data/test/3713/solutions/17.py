@@ -1,10 +1,8 @@
-n=int(input())
+n = int(input())
 
-a=input()
+a = input()
 
-print(min(n,3+a.count('01')+a.count('10')))
-
+print(min(n, 3 + a.count('01') + a.count('10')))
 
 
 # Made By Mostafa_Khaled
-

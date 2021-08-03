@@ -14,4 +14,3 @@ else:
             print("NO")
             return
     print("YES")
-

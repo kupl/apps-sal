@@ -3,11 +3,15 @@ import sys
 
 # print(help(deque))
 # 26
-input = lambda: sys.stdin.readline().strip()
+
+
+def input(): return sys.stdin.readline().strip()
+
+
 ipnut = input
 for i in range(int(input())):
-    n,m = map(int,ipnut().split())
-    if n==m==2 or min(n,m)==1:
+    n, m = map(int, ipnut().split())
+    if n == m == 2 or min(n, m) == 1:
         print("YES")
     else:
         print("NO")

@@ -13,4 +13,3 @@ for i in range(2, N):
     ans = gcd(ans, A[i])
 
 print(ans)
-

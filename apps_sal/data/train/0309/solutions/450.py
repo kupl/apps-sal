@@ -8,10 +8,8 @@ class Solution:
                     currLen = table[j][A[i] - A[j]] + 1
                 else:
                     currLen = 2
-                
+
                 ans = max(ans, currLen)
-                table[i][A[i]-A[j]] = max(table[i][A[i]-A[j]], currLen)
+                table[i][A[i] - A[j]] = max(table[i][A[i] - A[j]], currLen)
         # print(table)
         return ans
-                    
-

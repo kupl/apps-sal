@@ -1,10 +1,12 @@
 # fast io
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
-input = lambda: next(_data)
+def input(): return next(_data)
+
 
 N = 101
 MOD = 1000000007
+
 
 def mul_vec_mat(v, a):
     c = [0] * N
@@ -12,11 +14,13 @@ def mul_vec_mat(v, a):
         c[i] = sum(a[j][i] * v[j] % MOD for j in range(N)) % MOD
     return c
 
+
 def mul_vec_sparse_mat(v, a):
     c = [0] * N
     for i in range(N):
         c[i] = sum(x * v[j] % MOD for j, x in a[i]) % MOD
     return c
+
 
 _, x = [int(v) for v in input().split()]
 a = [[0] * N for i in range(N)]

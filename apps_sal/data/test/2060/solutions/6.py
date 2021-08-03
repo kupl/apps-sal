@@ -8,4 +8,3 @@ for i in range(n):
             if s * 3 + l * 7 == x:
                 possible = True
     print("YES" if possible else "NO")
-

@@ -1,7 +1,7 @@
 N, K = map(int, input().split())
 A = list(map(lambda x: int(x) - 1, input().split()))
 
-done = [-1]*N
+done = [-1] * N
 done[0] = 0
 
 tmp = 0

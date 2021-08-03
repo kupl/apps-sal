@@ -6,8 +6,10 @@ def gcd(x, y):
             y %= x
     return x + y
 
+
 def lcm(x, y):
     return x * y / gcd(x, y)
+
 
 n = int(input())
 m = [int(i) for i in input().split()]
@@ -22,5 +24,3 @@ for i in range(n):
     for j in range(t):
         s.add(r[i] + m[i] * j)
 print(len(s) / l)
-
-

@@ -12,5 +12,3 @@ class Solution:
             best_till[i] = best
             prefix[curr] = i
         return -1 if ans == math.inf else ans
-        
-

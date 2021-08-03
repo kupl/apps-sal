@@ -1,4 +1,6 @@
 from copy import deepcopy
+
+
 def main():
     n, k = list(map(int, input().split()))
     arr = [
@@ -90,5 +92,5 @@ def main():
 
     # # print(arr)
 
-main()
 
+main()

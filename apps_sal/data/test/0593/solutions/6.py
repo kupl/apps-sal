@@ -12,5 +12,3 @@ for i in range(n):
     if ma == won[i]:
         print(i + 1)
         return
-        
-

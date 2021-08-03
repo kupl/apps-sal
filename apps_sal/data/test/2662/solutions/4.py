@@ -1,4 +1,4 @@
-#「与えられた数列の、広義単調減少列の長さの最大値 L」
+# 「与えられた数列の、広義単調減少列の長さの最大値 L」
 from bisect import bisect_left, bisect_right
 n = int(input())
 INF = 1010101010

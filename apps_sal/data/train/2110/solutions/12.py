@@ -1,4 +1,4 @@
-N = int(1e6+3)
+N = int(1e6 + 3)
 n = int(input())
 arr = list(map(int, input().split()))
 cnt = [0] * N
@@ -13,4 +13,3 @@ while s > 0:
     res += s % 2
     s //= 2
 print(res)
-

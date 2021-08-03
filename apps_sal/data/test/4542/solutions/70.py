@@ -11,6 +11,9 @@ def main():
             put_stone = 'B'
     print(count)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

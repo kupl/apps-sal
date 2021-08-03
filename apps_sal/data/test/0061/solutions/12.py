@@ -7,6 +7,7 @@ def convert(digits, base):
         power *= base
     return res
 
+
 n, base_a = [int(x) for x in input().split()]
 digits_a = [int(x) for x in input().split()]
 a = convert(digits_a, base_a)
@@ -21,4 +22,3 @@ elif a > b:
     print(">")
 else:
     print("=")
-

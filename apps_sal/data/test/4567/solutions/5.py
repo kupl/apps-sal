@@ -10,4 +10,3 @@ if grade == 0:
             return
 
 print(grade)
-

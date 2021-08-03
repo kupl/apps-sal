@@ -1,4 +1,4 @@
-import sys 
+import sys
 input = sys.stdin.readline
 
 MOD = 10**9 + 7
@@ -20,13 +20,13 @@ for _ in range(t):
     for i in range(x):
         tmp = pos
         if tmp <= x:
-            for j in range(memo[i]-1):
-                for k in range(i+1, pos):
+            for j in range(memo[i] - 1):
+                for k in range(i + 1, pos):
                     memo[tmp] = memo[k]
                     tmp += 1
             pos = tmp
             ans = tmp
         else:
-            ans = ans + (ans - i-1) * (memo[i] - 1)
+            ans = ans + (ans - i - 1) * (memo[i] - 1)
             ans %= MOD
-    print(ans%MOD)
+    print(ans % MOD)

@@ -13,4 +13,3 @@ for i in range(N):
             res.append(str(d))
 
 print(" ".join(res))
-

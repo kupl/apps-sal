@@ -11,4 +11,3 @@ while a and b:
         b = b % a
 
 print(ans)
-

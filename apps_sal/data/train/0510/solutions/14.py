@@ -19,7 +19,7 @@ class SegTree:
 
     #####segfunc######
     def segfunc(self, x, y):
-        return x|y
+        return x | y
 
     def update(self, k, x):
         k += self.num - 1
@@ -34,8 +34,8 @@ class SegTree:
         if a <= l and r <= b:
             return self.seg[k]
         else:
-            vl = self.query(a, b, k*2+1, l, (l+r)//2)
-            vr = self.query(a, b, k*2+2, (l+r)//2, r)
+            vl = self.query(a, b, k * 2 + 1, l, (l + r) // 2)
+            vr = self.query(a, b, k * 2 + 2, (l + r) // 2, r)
             return self.segfunc(vl, vr)
 
 
@@ -51,12 +51,11 @@ for _ in range(Q):
     i = int(i)
     l = int(l)
     if i == 1:
-        seg_tree.update(l-1, 1 << (ord(r) - ord('a')))
+        seg_tree.update(l - 1, 1 << (ord(r) - ord('a')))
     else:
         r = int(r)
-        num = seg_tree.query(l-1, r, 0, 0, seg_tree.num)
+        num = seg_tree.query(l - 1, r, 0, 0, seg_tree.num)
         ans.append(bin(num).count('1'))
 
 for a in ans:
     print(a)
-

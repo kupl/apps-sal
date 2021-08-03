@@ -18,6 +18,9 @@ def abc144_e():
             up = v
     print(up)
 
+
 def __starting_point():
     abc144_e()
+
+
 __starting_point()

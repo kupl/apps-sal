@@ -2,6 +2,7 @@ n = int(input())
 
 S = list([list(map(int, input().split())) for i in range(n)])
 
+
 def shortest_path(target, queue, visited):
     dist, element = min(queue)
     queue.remove((dist, element))
@@ -24,5 +25,4 @@ def shortest_path(target, queue, visited):
 
 
 #print(shortest_path(2, {(0, 0)}, set()))
-print(max([shortest_path(x % n, { (0, x // n) }, set()) for x in range(n * n)]))
-
+print(max([shortest_path(x % n, {(0, x // n)}, set()) for x in range(n * n)]))

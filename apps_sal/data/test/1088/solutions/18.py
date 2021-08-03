@@ -1,23 +1,24 @@
-n,k=map(int,input().split())
-a=[list(map(int,input().split())) for i in range(n)]
-
-retu=[]
-gyou=[]
-
-for i in range(n-1):
-    for j in range(i+1,n):
-        for p in range(n):
-            if a[i][p]+a[j][p]>k:
-                break
-        else:
-            gyou.append([i,j])
-        for q in range(n):
-            if a[q][i]+a[q][j]>k:
-                break
-        else:
-            retu.append([i,j])
-
+import math
 from collections import defaultdict
+n, k = map(int, input().split())
+a = [list(map(int, input().split())) for i in range(n)]
+
+retu = []
+gyou = []
+
+for i in range(n - 1):
+    for j in range(i + 1, n):
+        for p in range(n):
+            if a[i][p] + a[j][p] > k:
+                break
+        else:
+            gyou.append([i, j])
+        for q in range(n):
+            if a[q][i] + a[q][j] > k:
+                break
+        else:
+            retu.append([i, j])
+
 
 class UnionFind():
     def __init__(self, n):
@@ -70,25 +71,24 @@ class UnionFind():
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
 
 
-retuuf=UnionFind(n)
-gyouuf=UnionFind(n)
+retuuf = UnionFind(n)
+gyouuf = UnionFind(n)
 
 for i in retu:
-    retuuf.union(i[0],i[1])
+    retuuf.union(i[0], i[1])
 for i in gyou:
-    gyouuf.union(i[0],i[1])
+    gyouuf.union(i[0], i[1])
 
-gyouans=1
-retuans=1
+gyouans = 1
+retuans = 1
 
-retulist=list(retuuf.all_group_members().values())
-gyoulist=list(gyouuf.all_group_members().values())
+retulist = list(retuuf.all_group_members().values())
+gyoulist = list(gyouuf.all_group_members().values())
 
-import math
 
 for i in retulist:
-    retuans*=math.factorial(len(i))
+    retuans *= math.factorial(len(i))
 for i in gyoulist:
-    gyouans*=math.factorial(len(i))
+    gyouans *= math.factorial(len(i))
 
-print(retuans*gyouans%998244353)
+print(retuans * gyouans % 998244353)

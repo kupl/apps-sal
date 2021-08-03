@@ -1,4 +1,6 @@
 import re
+
+
 def siegfried(week, txt):
     if week == 1:
         txt = re.sub('ci', matchcase('si'), txt, flags=re.I)
@@ -23,17 +25,17 @@ def siegfried(week, txt):
         txt = re.sub(r'ing\b', matchcase('ink'), txt, flags=re.I)
         txt = re.sub(r'\bsm', matchcase('schm'), txt, flags=re.I)
     return txt
-    
-def matchcase(word):
-        def replace(m):
-            text = m.group()
-            if text.isupper():
-                return word.upper()
-            elif text.islower():
-                return word.lower()
-            elif text[0].isupper():
-                return word.capitalize()
-            else:
-                return word
-        return replace
 
+
+def matchcase(word):
+    def replace(m):
+        text = m.group()
+        if text.isupper():
+            return word.upper()
+        elif text.islower():
+            return word.lower()
+        elif text[0].isupper():
+            return word.capitalize()
+        else:
+            return word
+    return replace

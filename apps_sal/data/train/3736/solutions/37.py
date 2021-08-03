@@ -1,7 +1,8 @@
 def minimum(arr):
-    #your code here...\
-    x=list(map(int,arr))
-    return min(sorted (x))
+    # your code here...\
+    x = list(map(int, arr))
+    return min(sorted(x))
+
 
 def maximum(arr):
     #...and here

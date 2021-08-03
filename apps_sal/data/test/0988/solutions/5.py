@@ -10,7 +10,7 @@ for i in range(6):
     b[i] = [b[i][0][0], b[i][0][1], b[i][1][0], b[i][1][1], b[i][2][0], b[i][2][1]]
 mx = 0
 mi = 0
-mj = 0;
+mj = 0
 for i in range(6):
     for j in range(6):
         if b[i][j] == '.':
@@ -21,7 +21,3 @@ for i in range(6):
 b[mi][mj] = 'P'
 for i in range(6):
     print(b[i][0] + b[i][1] + '-' + b[i][2] + b[i][3] + '-' + b[i][4] + b[i][5])
-
-    
-
-

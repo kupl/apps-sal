@@ -11,6 +11,7 @@ def can(n, k):
 
     return s * 2 >= total
 
+
 n = int(input())
 
 le = 0
@@ -25,4 +26,3 @@ while rg - le > 1:
         le = mid
 
 print(rg)
-

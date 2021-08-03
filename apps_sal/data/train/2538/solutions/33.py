@@ -1,7 +1,7 @@
 class Solution:
     def countLargestGroup(self, n: int) -> int:
         d = {}
-        for num in range(1, n+1):
+        for num in range(1, n + 1):
             sumn = 0
             for char in str(num):
                 sumn += int(char)

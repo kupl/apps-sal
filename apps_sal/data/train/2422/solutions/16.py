@@ -13,4 +13,3 @@ class Solution:
                     max = product
                 j += 1
         return max
-

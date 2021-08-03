@@ -7,23 +7,23 @@ class Solution:
             self.parent = [n for i in range(n)]
             self.counts = [0] * n
             self.counts_num = [0] * 100005
-            
+
         def set(self, idx):
             self.rank[idx] = 1
             self.parent[idx] = idx
             self.counts[idx] = 1
             self.counts_num[self.counts[idx]] += 1
-            if self.find(idx-1) != self.n:
-                self.unite(idx, idx-1)
-            if self.find(idx+1) != self.n:
-                self.unite(idx, idx+1)
-            
+            if self.find(idx - 1) != self.n:
+                self.unite(idx, idx - 1)
+            if self.find(idx + 1) != self.n:
+                self.unite(idx, idx + 1)
+
         def find(self, idx):
             if idx == self.n or self.parent[idx] == idx:
                 return idx
             self.parent[idx] = self.find(self.parent[idx])
             return self.parent[idx]
-            
+
         def unite(self, idx, idx2):
             if idx < 0 or idx2 < 0 or idx >= self.n or idx2 >= self.n:
                 return
@@ -54,6 +54,5 @@ class Solution:
             uf.set(num - 1)
             if uf.counts_num[m] > 0:
                 ans = max(ans, i)
-            
-        return ans + 1
 
+        return ans + 1

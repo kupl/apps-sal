@@ -9,5 +9,4 @@ else:
     count += n // smallest
     if n % smallest != 0:
         count += 1
-    print((count + 4)) 
-
+    print((count + 4))

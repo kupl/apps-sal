@@ -1,4 +1,4 @@
-a,b,c,d = list(map(int, input().split(' ')))
+a, b, c, d = list(map(int, input().split(' ')))
 
 MXV = 10 ** 18
 
@@ -19,12 +19,11 @@ for i in range(len(apows)):
 vlist = list(vals)
 vlist.sort()
 ans = 0
-last = c-1 
+last = c - 1
 for v in vlist:
     if c <= v and v <= d:
         ans = max(ans, v - last - 1)
         last = v
-ans = max(ans, d-last)
+ans = max(ans, d - last)
 
 print(ans)
-

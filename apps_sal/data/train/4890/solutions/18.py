@@ -1,6 +1,7 @@
 from operator import mul, sub
 from typing import List
 
+
 def find_difference(a: List[int], b: List[int]) -> int:
     """
     Find the difference of the cuboids' volumes regardless of which is bigger

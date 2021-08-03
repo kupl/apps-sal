@@ -4,5 +4,6 @@ strokes = {
     for c in s
 }
 
+
 def unlock(message):
     return ''.join(map(strokes.get, message.lower()))

@@ -7,4 +7,5 @@ def e_red_scarf():
     ans = [a ^ total for a in A]
     return ' '.join(map(str, ans))
 
+
 print(e_red_scarf())

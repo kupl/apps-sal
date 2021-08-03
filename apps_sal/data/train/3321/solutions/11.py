@@ -4,7 +4,7 @@ def evil(n):
     for i in bin_number:
         if i == '1':
             count += 1
-    if count%2==0:
+    if count % 2 == 0:
         return "It's Evil!"
     else:
         return "It's Odious!"

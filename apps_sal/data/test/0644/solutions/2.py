@@ -21,4 +21,3 @@ for _ in range(l):
         m *= a
 
 print(ans)
-

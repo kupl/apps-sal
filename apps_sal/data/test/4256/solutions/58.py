@@ -1,4 +1,4 @@
-a,b,c = map(int,input().split())
+a, b, c = map(int, input().split())
 y = 0
 
 for i in range(1000):

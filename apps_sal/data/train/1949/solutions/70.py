@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def explore(self, grid, row, col):
         if row < 0 or row >= len(grid) or col < 0 or col >= len(grid[0]) or grid[row][col] == 0:
             return 0
@@ -9,7 +9,7 @@ class Solution:
             max_gold = max(max_gold, self.explore(grid, row + row_offset, col + col_offset))
         grid[row][col] = curr_gold
         return total + max_gold
-    
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         max_gold = 0
         for row in range(len(grid)):

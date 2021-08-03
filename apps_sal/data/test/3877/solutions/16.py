@@ -8,7 +8,7 @@ def main():
         c //= 2
     c = 2 ** h - 1
 
-    print(ones(n, c, l-1, r-1))
+    print(ones(n, c, l - 1, r - 1))
 
 
 def ones(n, c, l, r):
@@ -18,7 +18,7 @@ def ones(n, c, l, r):
     if n == 0:
         return 0
 
-    if l == 0 and r == c-1:
+    if l == 0 and r == c - 1:
         return n
 
     m = c // 2
@@ -51,5 +51,6 @@ def ones(n, c, l, r):
 
 def __starting_point():
     main()
+
 
 __starting_point()

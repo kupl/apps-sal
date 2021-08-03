@@ -12,4 +12,3 @@ for _ in range(int(input())):
             adj.append(ai + aj + 1)
     min_adj, max_adj = (min(adj), max(adj)) if adj else (0, 0)
     print(max(ans, (max_adj - min_adj + 1) // 2), (min_adj + max_adj) // 2)
-

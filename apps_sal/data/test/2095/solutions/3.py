@@ -7,10 +7,9 @@ for i in range(N):
         if mat[i][j] == 3 or mat[i][j] == 1:
             flag = False
     if flag == True:
-        ans.append(i+1)
+        ans.append(i + 1)
 if len(ans) == 0:
     print(0)
 else:
     print(len(ans))
     print(*ans)
-

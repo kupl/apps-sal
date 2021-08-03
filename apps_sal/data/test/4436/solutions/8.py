@@ -7,10 +7,10 @@ for z in range(T):
     nums = []
     found = 0
     s = int(sqrt(N))
-    while i<= s:
+    while i <= s:
         if num % i == 0:
             nums.append(i)
-            num = num //i
+            num = num // i
             found += 1
             if found == 2:
                 if num not in nums:
@@ -23,5 +23,3 @@ for z in range(T):
         print(*nums)
     else:
         print("NO")
-
-

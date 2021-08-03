@@ -3,10 +3,11 @@ import re
 from fractions import Fraction
 from collections import Counter
 
+
 class Task:
     a, b, c, d = 0, 0, 0, 0
     answer = 0
-    
+
     def __init__(self):
         self.a, self.b, self.c, self.d = [int(x) for x in input().split()]
 
@@ -20,7 +21,7 @@ class Task:
     def printAnswer(self):
         print(self.answer)
 
+
 task = Task()
 task.solve()
 task.printAnswer()
-

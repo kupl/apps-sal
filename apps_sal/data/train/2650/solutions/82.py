@@ -1,5 +1,5 @@
 
-N,L = map(int,input().split())
+N, L = map(int, input().split())
 
 l = []
 for _ in range(N):
@@ -9,5 +9,4 @@ for _ in range(N):
 l.sort()
 
 for i in l:
-    print(i,end='')
-
+    print(i, end='')

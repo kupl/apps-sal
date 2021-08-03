@@ -1,14 +1,14 @@
 n, a, b = map(int, input().split())
-c = a-b
+c = a - b
 h = sorted([int(input()) for _i in range(n)], reverse=True)
 left, right = 0, 10**9
 while left < right:
-    middle = (left+right)//2
+    middle = (left + right) // 2
     counter = 0
-    checker = middle*b
+    checker = middle * b
     i = 0
     while checker < h[i]:
-        counter -= (-h[i]+checker)//c
+        counter -= (-h[i] + checker) // c
         i += 1
         if i >= n:
             break

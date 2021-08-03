@@ -21,5 +21,4 @@ class Solution:
             ans += b.count('1')
             if x:
                 bns = max(bns, len(b) - 2)
-        return ans + max(bns-1,0)
-
+        return ans + max(bns - 1, 0)

@@ -1,6 +1,6 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        
+
         n = len(arr)
         su = 0
         s = 0
@@ -12,7 +12,7 @@ class Solution:
             while su > target:
                 su -= arr[s]
                 s += 1
-                
+
             if su == target:
                 cur_len = e - s + 1
                 if s > 0 and min_lens[s - 1] != float('inf'):

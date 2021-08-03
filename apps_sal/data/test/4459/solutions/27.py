@@ -29,7 +29,7 @@ def main():
     cnt = 0
     for i in list(A.keys()):
         if i < A[i]:
-            cnt += A[i]-i
+            cnt += A[i] - i
         elif i > A[i]:
             cnt += A[i]
 
@@ -38,5 +38,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

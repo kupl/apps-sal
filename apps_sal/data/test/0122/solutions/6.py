@@ -1,6 +1,7 @@
 import sys
 from itertools import accumulate
 
+
 def solve():
     n = int(input())
     a = [int(i) for i in input().split()]
@@ -37,7 +38,7 @@ def solve():
                 return
         else:
             x *= -1
-            
+
             if x in f_a and f_a[x] < k:
                 print('YES')
                 return
@@ -47,4 +48,6 @@ def solve():
 
 def __starting_point():
     solve()
+
+
 __starting_point()

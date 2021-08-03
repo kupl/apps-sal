@@ -14,7 +14,7 @@ def solve():
         print(X)
         return
 
-    for i in range(min(P)-1, max(P)+2):
+    for i in range(min(P) - 1, max(P) + 2):
         if i not in P:
             d = abs(i - X)
             if d == m:
@@ -22,11 +22,12 @@ def solve():
             elif d < m:
                 m = d
                 n = i
-    
-    print(n)
 
+    print(n)
 
 
 def __starting_point():
     solve()
+
+
 __starting_point()

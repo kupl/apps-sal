@@ -9,11 +9,11 @@ def solve2():
     L = list(map(int, input().split()))
     ans = float('inf')
     ans_x = -1
-    for i in range(n-k):
+    for i in range(n - k):
         l = L[i]
-        r = L[i+k]
-        tmp = (r+l)//2
-        tmp_ans = max(r-tmp, tmp-l)
+        r = L[i + k]
+        tmp = (r + l) // 2
+        tmp_ans = max(r - tmp, tmp - l)
         if ans > tmp_ans:
             ans = tmp_ans
             ans_x = tmp
@@ -23,4 +23,3 @@ def solve2():
 n = int(input())
 for _ in range(n):
     solve2()
-

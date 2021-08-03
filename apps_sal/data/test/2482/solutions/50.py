@@ -83,4 +83,3 @@ ans = []
 for i in range(N):
     ans.append(dic[(find_road(i), find_train(i))])
 print((*ans))
-

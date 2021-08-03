@@ -21,4 +21,3 @@ if t % 2 == 0:
     print((AA ^ BB))
 else:
     print((AA ^ BB ^ 1))
-

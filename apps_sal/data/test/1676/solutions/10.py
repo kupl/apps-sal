@@ -2,7 +2,6 @@
 import sys
 
 
-
 def main():
     n, b = [int(tok) for tok in sys.stdin.readline().split()]
 
@@ -14,7 +13,6 @@ def main():
     finish = [-1 for i in range(n)]
 
     for i, (t, d) in enumerate(td_list):
-
 
         if len(queue) > 0:
             if queue[0] <= t:
@@ -29,11 +27,11 @@ def main():
             finish[i] = queue[-1] + d
             queue.append(queue[-1] + d)
 
-
     print(" ".join([str(f) for f in finish]))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

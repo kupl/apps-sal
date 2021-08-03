@@ -8,8 +8,7 @@ if k == -1 or n > m + 1:
     else:
         print("NO")
 else:
-    if s[:k] == t[:k] and s[k+1:] == t[m - (n - k - 1):]:
+    if s[:k] == t[:k] and s[k + 1:] == t[m - (n - k - 1):]:
         print("YES")
     else:
         print("NO")
-

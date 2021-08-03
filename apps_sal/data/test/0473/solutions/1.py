@@ -7,4 +7,3 @@ if t < 0:
 a, b = t // 60, t % 60
 
 print(str(a // 10) + str(a % 10) + ':' + str(b // 10) + str(b % 10))
-

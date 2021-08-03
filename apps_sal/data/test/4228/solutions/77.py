@@ -1,6 +1,6 @@
 N, L = map(int, input().split(" "))
 
-apple = [L+i-1 for i in range(1, N+1)]
+apple = [L + i - 1 for i in range(1, N + 1)]
 
 abs_apple = list(map(abs, apple))
 

@@ -9,12 +9,14 @@ Codeforces
 
 import itertools
 
+
 def solve(xs):
     mmm = 10000000000
     neighbour_dist = [mmm] + [y - x for (x, y) in zip(xs, xs[1:])] + [mmm]
     min_dists = [min(a, b) for (a, b) in zip(neighbour_dist, neighbour_dist[1:])]
     max_dists = [max(xs[-1] - x, x - xs[0]) for x in xs]
     return list(zip(min_dists, max_dists))
+
 
 def main():
     n = int(input())
@@ -27,5 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

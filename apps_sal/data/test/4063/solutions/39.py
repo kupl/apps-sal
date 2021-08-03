@@ -14,4 +14,3 @@ else:
         print((0))
     else:
         print((d[mr] - d[ml]))
-

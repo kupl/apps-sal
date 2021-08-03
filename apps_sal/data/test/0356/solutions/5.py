@@ -34,4 +34,5 @@ def __starting_point():
                 ans += 1
         print(ans)
 
+
 __starting_point()

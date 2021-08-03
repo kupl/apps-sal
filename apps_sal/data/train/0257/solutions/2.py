@@ -1,6 +1,6 @@
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
-        weights = list(map(lambda x:-math.log2(x), succProb))
+        weights = list(map(lambda x: -math.log2(x), succProb))
         g = defaultdict(list)
         for (u, v), w in zip(edges, weights):
             g[u].append([v, w])

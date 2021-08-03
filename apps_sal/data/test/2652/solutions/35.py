@@ -12,6 +12,7 @@ for i in range(N):
     X_L[i] = [_x, i]
     Y_L[i] = [_y, i]
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -83,28 +84,29 @@ class UnionFind():
 #             if self.rank[p_x] == self.rank[p_y]:
 #                 self.rank[p_x] += 1
 #         return True
-    
+
 #     def same(self, x, y):
 #         if self.find(x) == self.find(y):
 #             return True
 #         else:
 #             return False
 
+
 X_L.sort()
 Y_L.sort()
-dx_l = [None] * (N-1)
-dy_l = [None] * (N-1)
-for i in range(N-1):
-    dx_l[i] = [X_L[i+1][0] - X_L[i][0], X_L[i][1], X_L[i+1][1]]
-    dy_l[i] = [Y_L[i+1][0] - Y_L[i][0], Y_L[i][1], Y_L[i+1][1]]
+dx_l = [None] * (N - 1)
+dy_l = [None] * (N - 1)
+for i in range(N - 1):
+    dx_l[i] = [X_L[i + 1][0] - X_L[i][0], X_L[i][1], X_L[i + 1][1]]
+    dy_l[i] = [Y_L[i + 1][0] - Y_L[i][0], Y_L[i][1], Y_L[i + 1][1]]
 
-tmp_l = dx_l+dy_l
+tmp_l = dx_l + dy_l
 tmp_l.sort()
 
 UF = UnionFind(N)
 ans = 0
 
-for _ in range(2*N-2):
+for _ in range(2 * N - 2):
     _d, _i, _j = tmp_l[_]
     if UF.same(_i, _j):
         continue
@@ -114,7 +116,4 @@ for _ in range(2*N-2):
     #     print(_,ans)
 
 
-
 print(ans)
-
-

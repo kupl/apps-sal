@@ -1,19 +1,21 @@
 from collections import Counter
 
+
 class Window:
     def __init__(self):
         self.count = Counter()
         self.nonzero = 0
-        
+
     def add(self, val):
         self.count[val] += 1
         if self.count[val] == 1:
             self.nonzero += 1
-    
+
     def remove(self, val):
         self.count[val] -= 1
         if self.count[val] == 0:
-           self.nonzero -= 1 
+            self.nonzero -= 1
+
 
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
@@ -31,4 +33,3 @@ class Solution:
                 l2 += 1
             ans += l2 - l1
         return ans
-

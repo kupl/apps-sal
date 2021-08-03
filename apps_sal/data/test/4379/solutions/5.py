@@ -19,4 +19,3 @@ while i != 0:
     rsseq.append(i)
     i = D[i][1]
 print(' '.join(map(str, reversed(rsseq))))
-

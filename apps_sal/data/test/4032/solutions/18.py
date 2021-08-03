@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 
 n, m = map(int, input().split())
 

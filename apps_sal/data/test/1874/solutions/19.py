@@ -1,3 +1,4 @@
+import math
 3
 # Copyright (C) 2016 Sayutin Dmitry.
 #
@@ -13,7 +14,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; If not, see <http://www.gnu.org/licenses/>.
 
-import math
 
 a, b, c = list(map(int, input().split()))
 v1 = (a ** 3) * (2 ** 0.5) / 12
@@ -24,4 +24,3 @@ L = c / ((2 - 2 * math.cos(phi)) ** 0.5)
 v3 = 2.5 * L * L * math.sin(phi) * ((c * c - L * L) ** 0.5) / 3
 
 print(v1 + v2 + v3)
-

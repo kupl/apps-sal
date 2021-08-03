@@ -13,4 +13,3 @@ if len(answer) == 0:
     print('-1')
 else:
     print(" ".join(map(str, answer)))
-

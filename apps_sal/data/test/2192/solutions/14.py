@@ -12,17 +12,22 @@ for i in range(size):
         B[i][j] = (w[i][j] - w[j][i]) / 2
         A[j][i] = A[i][j]
         B[j][i] = -B[i][j]
+
+
 def pr(A):
     nonlocal size
     for row in A:
         for i in range(size):
-            print("{0:.8f}".format(row[i]), end = sep(i))
+            print("{0:.8f}".format(row[i]), end=sep(i))
+
+
 def sep(i):
     nonlocal size
     if i >= size - 1:
         return '\n'
     else:
         return ' '
-            
+
+
 pr(A)
 pr(B)

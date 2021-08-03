@@ -12,4 +12,3 @@ if g < n:
     mn = n - g
 
 print(mx - mn + 1)
-

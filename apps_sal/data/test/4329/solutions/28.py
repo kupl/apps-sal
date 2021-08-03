@@ -22,4 +22,3 @@ if s == t[:-1]:
     res = "Yes"
 
 print(res)
-

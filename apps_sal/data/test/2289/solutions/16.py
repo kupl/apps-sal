@@ -2,11 +2,12 @@ n, q = map(int, input().split())
 a = list(map(int, input().split()))
 k = list(map(int, input().split()))
 
+
 def bins(arr, start, end, v):
     # find index of biggest value less than or equal to v
     s, e = start, end
     result = -1
-    
+
     while s < e:
         m = (s + e) // 2
 
@@ -17,6 +18,7 @@ def bins(arr, start, end, v):
             s = m + 1
 
     return s if a[s] <= v else s - 1
+
 
 for i in range(1, len(a)):
     a[i] += a[i - 1]

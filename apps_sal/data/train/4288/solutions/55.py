@@ -3,4 +3,3 @@ def quote(fighter):
         return(f"I am not impressed by your performance.")
     if fighter.lower() == 'conor mcgregor':
         return(f"I'd like to take this chance to apologize.. To absolutely NOBODY!")
-

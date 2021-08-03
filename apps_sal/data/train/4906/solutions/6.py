@@ -30,12 +30,12 @@ def traffic_lights(road, n):
     def f():
         car_pos = 0
         units = [TrafficUnit(c.replace('C', '.')) for c in road + '.']
-        for i in range(n+1):
+        for i in range(n + 1):
             xs = list(map(str, units))
             if car_pos < len(road):
                 xs[car_pos] = 'C'
             yield ''.join(xs[:-1])
             units = [unit.step() for unit in units]
-            if car_pos < len(road) and units[car_pos+1].can_pass():
+            if car_pos < len(road) and units[car_pos + 1].can_pass():
                 car_pos += 1
     return list(f())

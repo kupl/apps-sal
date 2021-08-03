@@ -232,19 +232,23 @@ class SortedList:
         """Return string representation of sorted list."""
         return 'SortedList({0})'.format(list(self))
 
+
 n, q = list(map(int, input().split()))
-p = SortedList(list(map(int,input().split())))
+p = SortedList(list(map(int, input().split())))
 
 gaps = SortedList()
 for i in range(n - 1):
-    gaps.add(p[i] - p[i+1])
+    gaps.add(p[i] - p[i + 1])
 
 out = []
+
+
 def ret(p, gaps):
     if len(p) > 1:
         out.append(p[len(p) - 1] - p[0] + gaps[0])
     else:
         out.append(0)
+
 
 ret(p, gaps)
 for i in range(q):
@@ -255,7 +259,7 @@ for i in range(q):
             if ind == 0:
                 gaps.add(x - p[0])
             elif ind == len(p):
-                gaps.add(p[len(p)-1] - x)
+                gaps.add(p[len(p) - 1] - x)
             else:
                 gaps.remove(p[ind - 1] - p[ind])
                 gaps.add(p[ind - 1] - x)
@@ -268,14 +272,12 @@ for i in range(q):
             if ind == 0:
                 gaps.remove(x - p[0])
             elif ind == len(p):
-                gaps.remove(p[len(p)-1] - x)
+                gaps.remove(p[len(p) - 1] - x)
             else:
                 gaps.add(p[ind - 1] - p[ind])
                 gaps.remove(p[ind - 1] - x)
                 gaps.remove(x - p[ind])
-        
-            
+
     ret(p, gaps)
 
-print('\n'.join(map(str,out)))
-
+print('\n'.join(map(str, out)))

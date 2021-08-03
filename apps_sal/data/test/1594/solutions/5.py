@@ -5,6 +5,7 @@ for i in range(1, n + 1):
     d[i] = d[i - 1] + a * b
 i = 1
 for j, v in enumerate(map(int, input().split())):
-    while v > d[i]: i += 1      
+    while v > d[i]:
+        i += 1
     t[j] = i
 print('\n'.join(str(i) for i in t))

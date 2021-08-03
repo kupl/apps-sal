@@ -1,8 +1,11 @@
 USE_STDIO = False
 
 if not USE_STDIO:
-    try: import mypc
-    except: pass
+    try:
+        import mypc
+    except:
+        pass
+
 
 def count_bits(x):
     ans = 0
@@ -11,8 +14,9 @@ def count_bits(x):
         x &= x - 1
     return ans
 
+
 def main():
-    t,  = list(map(int, input().split(' ')))
+    t, = list(map(int, input().split(' ')))
     for _ in range(t):
         a, = list(map(int, input().split(' ')))
         c = count_bits(a)
@@ -22,8 +26,6 @@ def main():
 
 def __starting_point():
     main()
-
-
 
 
 __starting_point()

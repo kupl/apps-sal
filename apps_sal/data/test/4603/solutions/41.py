@@ -10,4 +10,3 @@ bus_list = [C, D]
 answer = min(train_list) + min(bus_list)
 
 print(answer)
-

@@ -9,4 +9,3 @@ if (p1 and (r1 or s1 or l1 or r4 or l2 or s3)) or (p2 and (r2 or s2 or l2 or l3 
     print('YES')
 else:
     print('NO')
-

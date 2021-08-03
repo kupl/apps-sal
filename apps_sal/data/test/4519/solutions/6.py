@@ -26,5 +26,3 @@ for qi in range(q):
         res = [0] * zc
         res += [1] * oc
         print(''.join(str(x) for x in res))
-
-

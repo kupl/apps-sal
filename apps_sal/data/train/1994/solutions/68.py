@@ -12,7 +12,7 @@ class Solution:
             if cur.val in G:
                 if not cons:
                     cons = True
-                    count +=1
+                    count += 1
             else:
                 cons = False
             cur = cur.next

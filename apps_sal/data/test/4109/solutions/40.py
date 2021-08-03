@@ -1,17 +1,16 @@
 
-url = "https://atcoder.jp//contests/abc160/tasks/abc160_c"
-
 import itertools
+url = "https://atcoder.jp//contests/abc160/tasks/abc160_c"
 
 
 def main():
-    n, m , X = list(map(int, input().split()))
+    n, m, X = list(map(int, input().split()))
     books = []
     ans = -1
     for _ in range(n):
         books.append(list(map(int, input().split())))
     for i in range(n):
-        for row in itertools.combinations(list(range(0, n)), i+1):
+        for row in itertools.combinations(list(range(0, n)), i + 1):
             cost = 0
             rikai = [0] * m
             for idx in row:
@@ -23,13 +22,8 @@ def main():
     print(ans)
 
 
-
-
-
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

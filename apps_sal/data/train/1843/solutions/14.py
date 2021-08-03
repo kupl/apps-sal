@@ -1,13 +1,14 @@
 from collections import defaultdict
 
+
 class TweetCounts:
     def __init__(self):
         self.data = defaultdict(list)
-        
+
     def recordTweet(self, tweetName, time):
         self.data[tweetName].append(time)
-        
-    def getTweetCountsPerFrequency(self, freq, tweetName, startTime, endTime):     
+
+    def getTweetCountsPerFrequency(self, freq, tweetName, startTime, endTime):
         delta = 60 if freq == 'minute' else 3600 if freq == 'hour' else 86400
         start = startTime
         res = []
@@ -22,10 +23,10 @@ class TweetCounts:
 # class TweetCounts:
 #     def __init__(self):
 #         self.data = defaultdict(list)
-        
+
 #     def recordTweet(self, tweetName, time):
 #         bisect.insort(self.data[tweetName], time)
-        
+
 #     def getTweetCountsPerFrequency(self, freq, tweetName, startTime, endTime):
 #         delta = 60 if freq == 'minute' else 3600 if freq == 'hour' else 86400
 #         i = startTime
@@ -42,11 +43,11 @@ class TweetCounts:
 
 #     def __init__(self):
 #         self.a = defaultdict(list)
-        
+
 
 #     def recordTweet(self, tweetName: str, time: int) -> None:
 #         bisect.insort(self.a[tweetName], time)
-        
+
 
 #     def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
 #         delta = 60 if freq == 'minute' else 3600 if freq == 'hour' else 86400
@@ -57,11 +58,9 @@ class TweetCounts:
 #             res.append(bisect_left(self.a[tweetName], j) - bisect_left(self.a[tweetName], i))
 #             i += delta
 #         return res
-        
 
 
 # Your TweetCounts object will be instantiated and called as such:
 # obj = TweetCounts()
 # obj.recordTweet(tweetName,time)
 # param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-

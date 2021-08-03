@@ -10,7 +10,7 @@ for _ in range(student_number):
 
 for key, value in sorted(competiton_description.items()):
     value.sort(key=lambda s: (-s[0], s[1]))
-    #print(value)
+    # print(value)
     if len(value) > 2 and value[1][0] == value[2][0]:
         print('?')
     else:

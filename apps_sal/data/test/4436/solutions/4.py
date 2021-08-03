@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 def divide(n, start):
     for k in range(start, int(sqrt(n)) + 1):
         if n % k == 0:
@@ -24,4 +25,3 @@ for _ in range(int(input())):
         continue
     print('YES')
     print(a, b, n)
-

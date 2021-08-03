@@ -7,4 +7,3 @@ for i in range(25 - k):
             break
 
 print(max(rs) - 25)
-

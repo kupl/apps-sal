@@ -1,15 +1,15 @@
 import heapq
-N, K = map(int,input().split())
+N, K = map(int, input().split())
 L1 = []
 L2 = []
 S = set()
 val = 0
 
 for _ in range(N):
-    t, d = map(int,input().split())
+    t, d = map(int, input().split())
     L1.append((d, t))
 
-L1.sort(reverse = True)
+L1.sort(reverse=True)
 
 for i in range(K):
     val += L1[i][0]

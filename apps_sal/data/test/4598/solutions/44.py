@@ -5,4 +5,4 @@ count = N
 while count > 0:
     doces += count
     count -= 1
-print (doces)
+print(doces)

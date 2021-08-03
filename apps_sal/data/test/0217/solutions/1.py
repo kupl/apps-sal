@@ -32,4 +32,3 @@ while len(ff) > 0:
         break
 
 print(stops)
-

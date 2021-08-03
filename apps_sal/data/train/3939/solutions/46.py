@@ -7,4 +7,4 @@ def rps(p1, p2):
         return "Player 1 won!"
     elif p1 == "paper" and p2 == 'rock':
         return "Player 1 won!"
-    return  "Player 2 won!"
+    return "Player 2 won!"

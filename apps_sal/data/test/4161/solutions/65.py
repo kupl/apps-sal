@@ -1,19 +1,23 @@
 k = int(input())
-def gcd1 (a, b):
+
+
+def gcd1(a, b):
     while True:
         if (a < b):
             a, b = b, a
-        c = a%b
+        c = a % b
         if (c == 0):
             return (b)
         else:
             a = b
             b = c
 
-def gcd2 (a, b, c):
+
+def gcd2(a, b, c):
     tmp = gcd1(a, b)
     ans = gcd1(tmp, c)
     return (ans)
+
 
 count = 0
 for i in range(k):
@@ -23,8 +27,7 @@ for i in range(k):
             if (i == j == l):
                 count = count + tmp
             elif (i == j or j == l):
-                count = count + tmp*3
+                count = count + tmp * 3
             else:
-                count = count + tmp*6
+                count = count + tmp * 6
 print(count)
-

@@ -6,7 +6,7 @@ u = 0
 d = 0
 l = 0
 r = 0
-if len(s)%2!=0:
+if len(s) % 2 != 0:
     print('-1')
 else:
     for i in s:
@@ -25,4 +25,4 @@ else:
     # print(l)
     # print(abs(r-l))
     # print(abs(u-d))
-    print(int((abs(r-l)+abs(u-d))/2))
+    print(int((abs(r - l) + abs(u - d)) / 2))

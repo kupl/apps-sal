@@ -1,2 +1,1 @@
-smash = lambda a: ' '.join(a)
-
+def smash(a): return ' '.join(a)

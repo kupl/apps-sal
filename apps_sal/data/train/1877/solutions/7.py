@@ -16,5 +16,5 @@ class Solution:
             if not check(node.right, pathsum):
                 node.right = None
             return node.left or node.right if had_children else pathsum >= limit
-        
+
         return root if check(root, 0) else None

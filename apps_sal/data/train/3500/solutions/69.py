@@ -1,6 +1,6 @@
 def remove_exclamation_marks(s):
-    k=''
+    k = ''
     for i in s:
-        if i!="!":
-            k+=i
+        if i != "!":
+            k += i
     return k

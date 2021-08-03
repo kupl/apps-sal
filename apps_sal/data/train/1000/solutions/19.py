@@ -2,51 +2,65 @@ from collections import Counter
 import string
 import math
 import sys
-# sys.setrecursionlimit(10**6) 
+# sys.setrecursionlimit(10**6)
 from fractions import Fraction
+
+
 def array_int():
     return [int(i) for i in sys.stdin.readline().split()]
+
+
 def vary(arrber_of_variables):
-    if arrber_of_variables==1:
+    if arrber_of_variables == 1:
         return int(sys.stdin.readline())
-    if arrber_of_variables>=2:
-        return list(map(int,sys.stdin.readline().split())) 
+    if arrber_of_variables >= 2:
+        return list(map(int, sys.stdin.readline().split()))
+
+
 def makedict(var):
     return dict(Counter(var))
 # i am noob wanted to be better and trying hard for that
-def printDivisors(n): 
-    divisors=[]  
-    # Note that this loop runs till square root 
+
+
+def printDivisors(n):
+    divisors = []
+    # Note that this loop runs till square root
     i = 1
     while i <= math.sqrt(n):
         if (n % i == 0):
-            # If divisors are equal, print only one 
-            if (n//i == i) : 
-                divisors.append(i) 
-            else : 
-                # Otherwise print both 
-                divisors.extend((i,n//i)) 
+            # If divisors are equal, print only one
+            if (n // i == i):
+                divisors.append(i)
+            else:
+                # Otherwise print both
+                divisors.extend((i, n // i))
         i = i + 1
     return divisors
+
+
 def countTotalBits(num):
-     binary = bin(num)[2:]
-     return(len(binary))
+    binary = bin(num)[2:]
+    return(len(binary))
+
+
 def isPrime(n):
-    # Corner cases 
-    if (n <= 1) : 
+    # Corner cases
+    if (n <= 1):
         return False
-    if (n <= 3) : 
+    if (n <= 3):
         return True
-    # This is checked so that we can skip  
-    # middle five numbers in below loop 
-    if (n % 2 == 0 or n % 3 == 0) : 
+    # This is checked so that we can skip
+    # middle five numbers in below loop
+    if (n % 2 == 0 or n % 3 == 0):
         return False
     i = 5
-    while(i * i <= n) : 
-        if (n % i == 0 or n % (i + 2) == 0) : 
+    while(i * i <= n):
+        if (n % i == 0 or n % (i + 2) == 0):
             return False
         i = i + 6
     return True
+
+
 """ mod=10**9+7
 def ncr(n,r):
     if n<r:
@@ -71,11 +85,13 @@ mod=10**9+7
 for i in range(1,1001):
     fact[i]=(fact[i-1]*i)%mod """
 # print(fact)
+
+
 def comp(x):
     return x[1]
+
+
 for _ in range(vary(1)):
-    n=vary(1)
-    num=array_int()
-    print(math.ceil(n/min(num)))
-
-
+    n = vary(1)
+    num = array_int()
+    print(math.ceil(n / min(num)))

@@ -7,10 +7,10 @@ class Solution:
         ret = 0
         # 当前是odd和是even的prefix sums个数
         odds, evens = 0, 1
-        cur = 0 # 当前的prefix sum
-        
+        cur = 0  # 当前的prefix sum
+
         for num in arr:
-            cur ^= num&1    # 查看奇偶
+            cur ^= num & 1    # 查看奇偶
             if cur:         # 奇数
                 # 如果当前prefix sum是奇数，查看在此之前有多少个偶数的prefix sum
                 # 用cur减去之前所有是偶数的prefix sum，都可以得到一段奇数的substring
@@ -20,18 +20,18 @@ class Solution:
                 # vice versa
                 ret += odds
                 evens += 1
-        
+
         return ret % (10**9 + 7)
-        
-        
+
+
 #     def numOfSubarrays(self, arr: List[int]) -> int:
 #         n = len(arr)
 #         ret = 0
-        
+
 #         presum = [0 for i in range(n)]
 #         for i in range(n):
 #             presum[i] = (arr[i] + (presum[i-1] if i > 0 else 0))&1
-        
+
 #         for i in range(n):
 #             for j in range(i, n):
 #                 if i == j:
@@ -42,4 +42,3 @@ class Solution:
 #                     if presum[j]^presum[i-1]: ret += 1
 
 #         return ret
-

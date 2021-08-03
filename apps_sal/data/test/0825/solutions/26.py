@@ -1,8 +1,10 @@
+from math import sqrt, floor
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
 #import numpy as np
-from math import sqrt, floor
+
+
 def main():
     def factorization(n):
         l = []
@@ -34,7 +36,9 @@ def main():
             r += 1
     print(r)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

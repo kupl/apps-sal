@@ -6,5 +6,5 @@ class Solution:
                     return True
             else:
                 if arr.count(num * 2) != 0:
-                    return True           
+                    return True
         return False

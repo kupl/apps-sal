@@ -1,5 +1,6 @@
 from itertools import product
 
+
 def generate_name(S):
     for i in range(1, 9):
         for letters in product('abcdefghijklmnopqrstuvwxyz', repeat=i):

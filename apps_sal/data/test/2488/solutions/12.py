@@ -14,7 +14,7 @@ x.sort()
 
 l = 0
 ret = 0
-ai = [0] * (n+1)
+ai = [0] * (n + 1)
 anow = 0
 while l < n:
     xl = x[l]
@@ -22,11 +22,10 @@ while l < n:
     anow += ai[l]
     hl -= a * anow
     if hl > 0:
-        r = bisect_right(x, xl+2*d)
-        k = (hl+(a-1))//a
+        r = bisect_right(x, xl + 2 * d)
+        k = (hl + (a - 1)) // a
         ret += k
         anow += k
         ai[r] -= k
     l += 1
 print(ret)
-

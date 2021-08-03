@@ -9,4 +9,3 @@ for j in range(k):
         ans = j + 1
         break
 print(ans)
-

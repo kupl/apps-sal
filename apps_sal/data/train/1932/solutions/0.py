@@ -11,6 +11,7 @@ class Solution:
                 return 0
             return 1 + count(node.left) + count(node.right)
         xNode = [0, 0]
+
         def process(node):
             if node:
                 if node.val == x:
@@ -20,7 +21,7 @@ class Solution:
                     process(node.left)
                     process(node.right)
             return
-        
+
         process(root)
-        player2 = max(xNode[0], xNode[1], n - (xNode[0] + xNode[1] + 1)) # the maximum nodes I can color
+        player2 = max(xNode[0], xNode[1], n - (xNode[0] + xNode[1] + 1))  # the maximum nodes I can color
         return player2 > n // 2

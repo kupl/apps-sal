@@ -14,7 +14,6 @@ for i in range(n - 1, -1, -1):
             may[i] = 0
 
 
-
 ans = INF
 
 cnt = 0
@@ -23,14 +22,14 @@ value = 0
 for i in range(n - 1, -1, -1):
     if not may[i]:
         continue
-    
+
     v = l - value
-    
+
     if not v % (2 ** i):
         ans = min(ans, cnt + v * c[i] // (2 ** i))
     else:
         ans = min(ans, cnt + (v // (2 ** i) + 1) * c[i])
-    
+
     cnt += v // (2 ** i) * c[i]
     value += (v // (2 ** i)) * (2 ** i)
 

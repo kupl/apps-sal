@@ -14,7 +14,3 @@ class Solution:
             if not discarded[i]:
                 kount = kount + 1
         return kount
-                
-                    
-            
-

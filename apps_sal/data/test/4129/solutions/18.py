@@ -1,10 +1,11 @@
 from collections import defaultdict
 
+
 def topo_sort_variant(graph, n):
     result = []
-    visited = [False] * (n+1)
+    visited = [False] * (n + 1)
 
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         if not visited[i]:
             stack = [i]
             while stack:
@@ -17,7 +18,6 @@ def topo_sort_variant(graph, n):
                 else:
                     result.append(stack.pop())
     return result
-
 
 
 def __starting_point():
@@ -48,7 +48,6 @@ def __starting_point():
             else:
                 stack.pop()
 
-
     topo_dfs(capital)
     for i in reversed(topo_sort_variant(g, ncities)):
         if not visited[i]:
@@ -56,4 +55,6 @@ def __starting_point():
             min_roads_required += 1
 
     print(min_roads_required)
+
+
 __starting_point()

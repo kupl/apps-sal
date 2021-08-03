@@ -7,4 +7,3 @@ if top - bottom > 0:
     print((top - bottom))
 else:
     print((0))
-

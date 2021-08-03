@@ -15,4 +15,3 @@ def com_interest(n: int) -> int:
 
 
 print((com_interest(int(input()))))
-

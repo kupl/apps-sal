@@ -1,8 +1,10 @@
 import sys
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N, M = lr()
 S = list(sr())[::-1]
@@ -14,7 +16,7 @@ while True:
     for i in range(M, 0, -1):
         if cur + i > N:
             continue
-        if S[cur+i] == '0':
+        if S[cur + i] == '0':
             count += 1
             next = cur + i
             answer.append(i)
@@ -22,11 +24,11 @@ while True:
         else:
             continue
     if next == cur:
-        print((-1)); return
+        print((-1))
+        return
     cur = next
     if next == N:
         break
 
 answer = answer[::-1]
 print((*answer))
-

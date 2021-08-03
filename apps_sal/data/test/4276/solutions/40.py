@@ -10,4 +10,3 @@ if res < 10 ** 9:
     print(res)
 else:
     print("TLE")
-

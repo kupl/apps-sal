@@ -6,5 +6,5 @@ for _ in range(int(input())):
 
     n = n + d1
     k -= 1
-    n += k*2
+    n += k * 2
     print(n)

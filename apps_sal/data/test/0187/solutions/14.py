@@ -12,7 +12,6 @@ if len(S) == 2:
         print('YES')
         print(M[0], M[1])
     else:
-        print('NO')    
+        print('NO')
 else:
     print('NO')
-

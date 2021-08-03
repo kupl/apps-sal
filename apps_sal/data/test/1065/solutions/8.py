@@ -1,4 +1,4 @@
-n,k,M,D = input().split()
+n, k, M, D = input().split()
 n = int(n)
 k = int(k)
 M = int(M)
@@ -8,11 +8,11 @@ high = M
 i = 1
 an = 0
 while i <= D:
-    lo = low-1
+    lo = low - 1
     hi = high
     while lo != hi:
         mi = (lo + hi + 1) // 2
-        if (i-1)*k*mi + mi <= n:
+        if (i - 1) * k * mi + mi <= n:
             lo = mi
         else:
             hi = mi - 1

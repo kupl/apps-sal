@@ -5,5 +5,5 @@ class Solution:
         for value in nums:
             digit = len(str(value))
             if digit % 2 == 0:
-                ec += 1                
+                ec += 1
         return ec

@@ -2,7 +2,7 @@ n, l, r = list(map(int, input().split()))
 ln = 0
 ans = 0
 curr = 1
-while curr <= n :
+while curr <= n:
     curr *= 2
     ln += 1
 ln -= 1
@@ -17,4 +17,3 @@ for i in range(l, r + 1):
             msk = n & (1 << (ln - res2))
             ans += (msk != 0)
 print(ans)
-

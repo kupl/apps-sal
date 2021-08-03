@@ -8,4 +8,3 @@ for i in range(r):
     sm += 2 ** i
 sm += 2 ** (r - 1) * (n - r)
 print(sm)
-

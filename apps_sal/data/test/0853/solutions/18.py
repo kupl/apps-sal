@@ -20,4 +20,3 @@ elif num_5 // 9 < 0:
 else:
     result = '5' * ((num_5 // 9) * 9) + '0' * num_0
     print(int(result))
-

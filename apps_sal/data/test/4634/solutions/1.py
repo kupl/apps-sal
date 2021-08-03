@@ -1,6 +1,6 @@
 def solve():
     n = int(input())
-    lst = list(map(int,input().split()))
+    lst = list(map(int, input().split()))
     while len(lst) > 0 and lst[-1] == 0:
         lst.pop()
     od = False
@@ -11,5 +11,7 @@ def solve():
         if i == 1:
             od = True
     print(ans)
+
+
 for i in range(int(input())):
     solve()

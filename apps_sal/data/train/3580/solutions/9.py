@@ -7,5 +7,6 @@ def ternary(n):
         nums.append(str(r))
     return ''.join(reversed(nums))
 
+
 def get_positions(n):
     return tuple(int(d) for d in ternary(n)[-3:].zfill(3)[::-1])

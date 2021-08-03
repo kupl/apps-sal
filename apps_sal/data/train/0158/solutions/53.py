@@ -3,7 +3,7 @@ class Solution:
 
         def dist(a, b):
             # count number of differing characters
-            return sum( (1 if c!=d else 0 for (c,d) in zip(a,b) ) )
+            return sum((1 if c != d else 0 for (c, d) in zip(a, b)))
 
         def find_wrong_letters(working):
             # given a working string, return two dicts that track work to be done:
@@ -26,19 +26,19 @@ class Solution:
             # assert i != j
             if i > j:
                 i, j = j, i
-            return s[:i] + s[j] + s[i+1:j] + s[i] + s[j+1:]
+            return s[:i] + s[j] + s[i + 1:j] + s[i] + s[j + 1:]
 
         def extend(working):
             wrongs, needs = find_wrong_letters(working)
             for letter, wrong_set in list(wrongs.items()):
-                return ( swap(working, i, j) for i in wrong_set for j in needs[letter] )
+                return (swap(working, i, j) for i in wrong_set for j in needs[letter])
 
         # greedy BFS
         #    only search
         # q holds triples:
         #   (estimate, swap_count_so_far, the_working_string)
         q = deque()
-        q.append( (0, 0, B) )
+        q.append((0, 0, B))
         seen = dict()
         best = len(A)
         while q:
@@ -46,7 +46,7 @@ class Solution:
             if estimate >= best or k >= best:
                 return best
             if working == A:
-                best = min( best, k)
+                best = min(best, k)
                 continue
 
             improves_one, improves_two = [], []
@@ -58,9 +58,7 @@ class Solution:
                 else:
                     improves_one.append(extension)
             for extension in improves_two or improves_one:
-                if extension not in seen or seen[extension] > k+1:
-                    seen[extension] = k+1
-                    q.append( (0, k+1, extension) )
+                if extension not in seen or seen[extension] > k + 1:
+                    seen[extension] = k + 1
+                    q.append((0, k + 1, extension))
         return best
-
-

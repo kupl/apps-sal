@@ -28,4 +28,3 @@ for i in range(256):
 print(len(ans))
 for elem in ans:
     print(elem[0], elem[1])
-

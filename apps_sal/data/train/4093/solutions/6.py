@@ -26,7 +26,7 @@ def find_a(array, n):
         for i in range(-n):
             A = ["undefined"] + A
             B = ["undefined"] + B
-        for i in range(-n-1, -1, -1):
+        for i in range(-n - 1, -1, -1):
             A[i] = 3 * A[i + 1] - A[i + 2] - B[i + 1]
             B[i] = 3 * B[i + 1] - B[i + 2] - A[i + 1]
         return A[0]

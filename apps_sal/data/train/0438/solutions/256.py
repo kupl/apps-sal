@@ -7,6 +7,7 @@ def getGroup(groupsByNum, n):
         groupsByNum[x] = n
     return n
 
+
 def joinGroups(a, b, groupsByNum, sizeByGroup, groupBySize):
     try:
         b = getGroup(groupsByNum, b)
@@ -17,7 +18,7 @@ def joinGroups(a, b, groupsByNum, sizeByGroup, groupBySize):
             if aSize > bSize:
                 a, b = b, a
                 aSize, bSize = bSize, aSize
-            
+
             groupsByNum[a] = b
             del sizeByGroup[a]
             sizeByGroup[b] += aSize
@@ -27,8 +28,7 @@ def joinGroups(a, b, groupsByNum, sizeByGroup, groupBySize):
                 groupBySize[sizeByGroup[b]].add(b)
             except KeyError:
                 groupBySize[sizeByGroup[b]] = {b}
-            
-            
+
             return True
         else:
             return False
@@ -41,7 +41,6 @@ class Solution:
         sizeByGroup = dict()
         groupBySize = {1: set()}
         groupsByNum = dict()
-        
 
         result = -1
         for step, x in enumerate(arr, 1):
@@ -55,9 +54,5 @@ class Solution:
                     result = step
             except KeyError:
                 pass
-                
-            
-        return result
-        
-        
 
+        return result

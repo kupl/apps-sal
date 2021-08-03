@@ -25,43 +25,47 @@ def s_row(N): return [s_input for _ in range(N)]
 def s_row_str(N): return [s_list() for _ in range(N)]
 def s_row_list(N): return [list(s_input()) for _ in range(N)]
 def lcm(a, b): return a * b // gcd(a, b)
+
+
 sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
 MOD = 10 ** 9 + 7
 num_list = []
 str_list = []
 
+
 def main():
-	S_dush = s_input()
-	T = s_input()
+    S_dush = s_input()
+    T = s_input()
 
-	answer_list = []
+    answer_list = []
 
-	for i in range(0,len(S_dush)-len(T)+1):
-		flag = True
-		count = 0
-		for j in range(0,len(T)):
-			if(S_dush[i+j]!="?" and S_dush[i+j] != T[j]):
-				count = j
-				flag = False
-		if(flag):
-			tmp = ""
-			for j in range(0,len(S_dush)):
-				if(S_dush[j]=="?"):
-					tmp = tmp + "a"
-				else:
-					tmp = tmp + S_dush[j]
-			tmp = tmp[0:i] + T + tmp[i+len(T):len(S_dush)]
-			answer_list.append(tmp)
-	
-	if(len(answer_list) ==0):
-		print("UNRESTORABLE")
-	else:
-		answer_list.sort()
-		print(answer_list[0])
+    for i in range(0, len(S_dush) - len(T) + 1):
+        flag = True
+        count = 0
+        for j in range(0, len(T)):
+            if(S_dush[i + j] != "?" and S_dush[i + j] != T[j]):
+                count = j
+                flag = False
+        if(flag):
+            tmp = ""
+            for j in range(0, len(S_dush)):
+                if(S_dush[j] == "?"):
+                    tmp = tmp + "a"
+                else:
+                    tmp = tmp + S_dush[j]
+            tmp = tmp[0:i] + T + tmp[i + len(T):len(S_dush)]
+            answer_list.append(tmp)
 
+    if(len(answer_list) == 0):
+        print("UNRESTORABLE")
+    else:
+        answer_list.sort()
+        print(answer_list[0])
 
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

@@ -1,22 +1,23 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
-        if len(s)<=1: return 0
+        if len(s) <= 1:
+            return 0
         res = 0
         start = 0
         while True:
-            if start>=len(s):
+            if start >= len(s):
                 break
-            temp = start+1
+            temp = start + 1
             for i in range(temp, len(s)):
-                if s[i]!=s[start]:
+                if s[i] != s[start]:
                     start += 1
                 else:
                     break
-            if start==len(s)-1:
+            if start == len(s) - 1:
                 break
-            end = start+2
-            while end<len(s):
-                if s[end]==s[start]:
+            end = start + 2
+            while end < len(s):
+                if s[end] == s[start]:
                     end += 1
                 else:
                     break

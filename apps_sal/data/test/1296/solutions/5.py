@@ -1,12 +1,13 @@
 import sys
 from itertools import accumulate
 
+
 def solve():
     def check(m):
         if m == 0:
             return 0
 
-        b = [ai + (i + 1)*m for i, ai in enumerate(a)]
+        b = [ai + (i + 1) * m for i, ai in enumerate(a)]
         b.sort()
 
         return sum(b[:m])
@@ -30,6 +31,9 @@ def solve():
 
     print(k, T)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

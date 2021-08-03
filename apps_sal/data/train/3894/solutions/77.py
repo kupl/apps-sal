@@ -7,4 +7,3 @@ def solve(s):
         else:
             lower_count += 1
     return s.lower() if lower_count >= upper_count else s.upper()
-

@@ -20,4 +20,3 @@ for i in range(3, n + 1):
 
 # print(arr)
 print(reduce(xor, arr) ^ reduce(xor, a))
-

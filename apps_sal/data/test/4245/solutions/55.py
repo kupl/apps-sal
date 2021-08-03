@@ -6,4 +6,3 @@ while k < b:
     k += a
     ans += 1
 print(ans)
-

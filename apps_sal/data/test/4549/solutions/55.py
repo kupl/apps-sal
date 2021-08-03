@@ -10,11 +10,11 @@ for i in range(h):
         flag_r = True
         if j < w - 1 and s_list[i][j + 1] == "#":
             flag_r = iso_flag[i][j + 1] = False
-        
+
         flag_d = True
         if i < h - 1 and s_list[i + 1][j] == "#":
             flag_d = iso_flag[i + 1][j] = False
-        
+
         if iso_flag[i][j] and flag_r and flag_d:
             print("No")
             return

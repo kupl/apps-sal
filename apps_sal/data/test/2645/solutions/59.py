@@ -30,21 +30,19 @@ import sys
 # from fractions import gcd                    # for Python 3.4 (previous contest @AtCoder)
 
 
-
 def main():
     mod = 1000000007                # 10^9+7
     inf = float('inf')              # sys.float_info.max = 1.79...e+308
     # inf = 2 ** 64 - 1             # (for fast JIT compile in PyPy) 1.84...e+19
     sys.setrecursionlimit(10**6)    # 1000 -> 1000000
     def input(): return sys.stdin.readline().rstrip()
-    def ii():    return int(input())
-    def mi():    return list(map(int, input().split()))
-    def mi_0():  return [int(x)-1 for x in input().split()]
-    def lmi():   return list(map(int, input().split()))
-    def lmi_0(): return list([int(x)-1 for x in input().split()])
-    def li():    return list(input())
-    
-    
+    def ii(): return int(input())
+    def mi(): return list(map(int, input().split()))
+    def mi_0(): return [int(x) - 1 for x in input().split()]
+    def lmi(): return list(map(int, input().split()))
+    def lmi_0(): return list([int(x) - 1 for x in input().split()])
+    def li(): return list(input())
+
     s = input()
     n = len(s)
     par_counter = s.count('p')
@@ -53,5 +51,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

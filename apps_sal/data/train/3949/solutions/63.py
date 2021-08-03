@@ -8,8 +8,8 @@ rates = {
     'excellent': 0.2
 }
 
+
 def calculate_tip(amount, rating):
     rating = rating.lower()
-    
-    return math.ceil(amount * rates[rating]) if rating in rates else 'Rating not recognised'
 
+    return math.ceil(amount * rates[rating]) if rating in rates else 'Rating not recognised'

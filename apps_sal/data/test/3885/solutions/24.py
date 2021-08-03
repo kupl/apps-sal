@@ -23,7 +23,6 @@ else:
     i = 0
     wyn = 0
     while i < len(q) - 1:
-           wyn += (q[i] + q[i+1]) % (a + 1)
-           i += 1
+        wyn += (q[i] + q[i + 1]) % (a + 1)
+        i += 1
     print(wyn)
-

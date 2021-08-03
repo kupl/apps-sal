@@ -1,5 +1,6 @@
 import calendar
 
+
 def whatday(num):
     ll = ['Sunday'] + list(calendar.day_name)[:-1]
     print(num, ll)

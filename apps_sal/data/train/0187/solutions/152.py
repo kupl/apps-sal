@@ -13,11 +13,10 @@ class Solution:
                 i += 1
             group = min(4, total)
             total -= group
-            profit = profit + group*boardingCost - runningCost
+            profit = profit + group * boardingCost - runningCost
             run += 1
             if profit > maxProfit:
                 maxProfit = profit
                 maxRun = run
-                
-        return maxRun if maxProfit > 0 else -1
 
+        return maxRun if maxProfit > 0 else -1

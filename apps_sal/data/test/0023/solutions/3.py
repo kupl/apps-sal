@@ -1,9 +1,9 @@
+from collections import Counter
 b = [int(i) for i in list(input())]
 a = [int(i) for i in list(input())]
 if len(b) < len(a):
     print(''.join([str(i) for i in sorted(b, key=lambda x: -x)]))
     return
-from collections import Counter
 bs = Counter(b)
 mp = 0
 while mp < len(a) and bs[a[mp]] > 0:
@@ -14,7 +14,7 @@ if mp == len(a):
     return
 
 ms = 0
-for s in range(1, mp+1):
+for s in range(1, mp + 1):
     bs = Counter(b)
     for i in range(s):
         bs[a[i]] -= 1

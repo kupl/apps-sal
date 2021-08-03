@@ -1,5 +1,6 @@
 from contextlib import ContextDecorator
 
+
 class Swallower:
     def __init__(self, exns): self.exns = exns
     def __enter__(self): return self
@@ -14,13 +15,13 @@ class Swallower:
         else:
             return False
 
+
 def handle(func, success, failure, *exceptions):
     swallower = Swallower(exceptions)
     with swallower:
         val = func()
-    
+
     if swallower.fail:
         failure(func, swallower.fail)
     else:
         success(func, val)
-

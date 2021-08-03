@@ -7,6 +7,6 @@ class Solution:
                 counter[num] += 1
             else:
                 counter[num] = 1
-            
-            if counter[num] == N//2:
+
+            if counter[num] == N // 2:
                 return num

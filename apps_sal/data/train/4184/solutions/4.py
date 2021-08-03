@@ -1,6 +1,7 @@
 primes = [2, 3, 5]
 lastCheck = [6]
 
+
 def is_prime(x):
     f = lastCheck[0]
     if x <= f:

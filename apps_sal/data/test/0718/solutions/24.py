@@ -2,7 +2,7 @@ n = int(input())
 n += 1
 s = str(n)
 flag = False
-su =1
+su = 1
 while flag == False:
     for char in s:
         if char == '8':
@@ -10,5 +10,4 @@ while flag == False:
             return
     n += 1
     s = str(n)
-    su+=1
-
+    su += 1

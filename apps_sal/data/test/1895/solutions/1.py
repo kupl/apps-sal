@@ -1,5 +1,6 @@
 import time
 
+
 def find_max_clique(remain, size, max_, index, maxs):
     # print(remain, size, max_)
     result = max_
@@ -20,7 +21,7 @@ def find_max_clique(remain, size, max_, index, maxs):
             return result
         remain.remove(candidate)
         # print('entering...')
-        sub_result = find_max_clique(remain & index[candidate], size + 1 , result, index, maxs)
+        sub_result = find_max_clique(remain & index[candidate], size + 1, result, index, maxs)
         if sub_result > result:
             # print('{} > {}, existing...'.format(sub_result, result))
             result = sub_result
@@ -28,11 +29,12 @@ def find_max_clique(remain, size, max_, index, maxs):
     # print('result:', result)
     return result
 
+
 def test_find():
     # index = {1: {2, 3, 4}, 2: {1, 3, 4}, 3: {1, 2}, 4: {1, 2}}
     index = [{2, 4, 5, 7}, {4, 5, 6}, {0, 5, 6, 7},
-        {5, 6 ,7}, {0, 1, 6, 7}, {0, 1, 2, 3}, {1, 2, 3, 4},
-        {0, 2, 3, 4}]
+             {5, 6, 7}, {0, 1, 6, 7}, {0, 1, 2, 3}, {1, 2, 3, 4},
+             {0, 2, 3, 4}]
     m = 8
     maxs = [0] * m
     whole = set()
@@ -43,6 +45,7 @@ def test_find():
         maxs[i] = max(maxs[i - 1], find_max_clique(whole & index[i], 1, maxs[i - 1], index, maxs))
         # print()
     # print(maxs)
+
 
 def solve(events, m):
     index = [set() for _ in range(m)]
@@ -78,8 +81,9 @@ def test():
     tick = time.time()
     print(solve(events, m))
     tock = time.time()
-    print('T:', round(tock - tick, 5)) 
-    
+    print('T:', round(tock - tick, 5))
+
+
 def main():
     # Deal input here.
     n, m = list(map(int, input().split()))
@@ -95,7 +99,7 @@ def main():
                 d[line] = id_
                 id_ += 1
             events.append(d[line])
-    
+
     # tick = time.time()
     print(solve(events, m))
     # tock = time.time()
@@ -104,5 +108,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

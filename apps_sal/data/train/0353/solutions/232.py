@@ -1,7 +1,7 @@
 class Solution:
-    #Version 1: Sliding window
-    #Count the mismatch count
-    #TC: O(nlogn), SC: O(1)
+    # Version 1: Sliding window
+    # Count the mismatch count
+    # TC: O(nlogn), SC: O(1)
     '''
     def numSubseq(self, nums: List[int], target: int) -> int:
         M = 10**9 + 7
@@ -17,7 +17,7 @@ class Solution:
                 mismatch += pow(2, k-base, M)
         return (pow(2, len(nums), M) - 1 - mismatch) % M
     '''
-    
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         M = 10**9 + 7
         ans = 0
@@ -27,10 +27,9 @@ class Solution:
         while left <= right:
             total = nums[left] + nums[right]
             if total <= target:
-                ans += pow(2, right-left, M)
+                ans += pow(2, right - left, M)
             if total > target:
                 right -= 1
             else:
                 left += 1
         return ans % M
-

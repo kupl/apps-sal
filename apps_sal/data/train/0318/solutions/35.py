@@ -33,9 +33,6 @@ class Solution:
 
         return max(dfs(1, len(slices) - 1, 0), dfs(0, len(slices) - 2, 0))
 
-
-
-
     def maxSizeSlicesBruteForce(self, slices: List[int]) -> int:
         slices_nodes = [DoublyLinkedListNode(pos) for pos in range(len(slices))]
 
@@ -90,8 +87,7 @@ class TestSolution:
         self.sol = Solution()
 
     def test_case1(self) -> None:
-        assert self.sol.maxSizeSlices([1,2,3,4,5,6]) == 10
+        assert self.sol.maxSizeSlices([1, 2, 3, 4, 5, 6]) == 10
 
     def test_case2(self) -> None:
-        assert self.sol.maxSizeSlices([6,3,1,2,6,2,4,3,10,4,1,4,6,5,5,3,4,7,6,5,8,7,3,8,8,1,7,1,7,8]) == 10
-
+        assert self.sol.maxSizeSlices([6, 3, 1, 2, 6, 2, 4, 3, 10, 4, 1, 4, 6, 5, 5, 3, 4, 7, 6, 5, 8, 7, 3, 8, 8, 1, 7, 1, 7, 8]) == 10

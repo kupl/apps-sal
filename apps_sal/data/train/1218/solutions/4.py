@@ -4,7 +4,6 @@ for i in range(t):
     x = int(x)
     n = int(n)
     s = 0
-    for j in range(x,n,x):
+    for j in range(x, n, x):
         s = s + j
     print(s)
-

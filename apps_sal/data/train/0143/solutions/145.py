@@ -16,5 +16,3 @@ class Solution:
             res = max(res, i - start + 1)
 
         return res
-
-

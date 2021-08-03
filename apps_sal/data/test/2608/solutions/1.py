@@ -13,8 +13,8 @@ def main():
         a, b, c, d = list(map(int, input().split()))
         e, f, g, h = list(map(int, input().split()))
         j, k, l, q = max(a, e), max(b, f), min(c, g), min(d, h)
-        black = calc(1, 1, n, m) - calc(a, b, c, d) - calc(e, f, g, h) + (h - f + 1) * (g - e + 1) + calc(j,k,l,q)
+        black = calc(1, 1, n, m) - calc(a, b, c, d) - calc(e, f, g, h) + (h - f + 1) * (g - e + 1) + calc(j, k, l, q)
         print(n * m - black, black)
 
-main()
 
+main()

@@ -1,8 +1,8 @@
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-d = { }
-d2 = { }
+d = {}
+d2 = {}
 result = 0
 
 for x in a:
@@ -15,4 +15,3 @@ for x in a:
     d[k * x] = d.get(k * x, 0) + 1
 
 print(result)
-

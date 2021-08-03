@@ -11,7 +11,9 @@ def main():
         x = (b - a) % abs(c)
         print('YES' if x == 0 and n * c > 0 else 'NO')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

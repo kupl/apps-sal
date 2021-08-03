@@ -7,7 +7,7 @@ class Solution:
         for ch in S:
             for i in range(len(mods)):
                 hsh[i].append((hsh[i][-1] + ord(ch) * pows[i][-1]) % mods[i])
-                pows[i].append((pows[i][-1] * p) % mods[i])               
+                pows[i].append((pows[i][-1] * p) % mods[i])
         l = 0
         r = len(S)
         substrs = {}

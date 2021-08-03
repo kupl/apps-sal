@@ -7,10 +7,10 @@ class Solution:
             i = 0
             for j in range(len(A)):
                 k -= A[j]
-                
+
                 while k < 0:
                     k += A[i]
                     i += 1
-                num += j-i+1
+                num += j - i + 1
             return num
-        return helper(S)-helper(S-1)
+        return helper(S) - helper(S - 1)

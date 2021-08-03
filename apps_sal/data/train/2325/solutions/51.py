@@ -3,7 +3,7 @@
 s = input()
 t = input()
 q = int(input())
-C = [list(map(int,input().split())) for i in range(q)]
+C = [list(map(int, input().split())) for i in range(q)]
 
 S = [0]
 T = [0]
@@ -13,7 +13,7 @@ for i in range(len(s)):
     else:
         S.append(2)
 for i in range(1, len(S)):
-    S[i] = (S[i-1] + S[i]) % 3
+    S[i] = (S[i - 1] + S[i]) % 3
 
 for i in range(len(t)):
     if t[i] == "A":
@@ -21,7 +21,7 @@ for i in range(len(t)):
     else:
         T.append(2)
 for i in range(1, len(T)):
-    T[i] = (T[i-1] + T[i]) % 3
+    T[i] = (T[i - 1] + T[i]) % 3
 
 for i in range(q):
     ss = (S[C[i][1]] - S[C[i][0] - 1]) % 3

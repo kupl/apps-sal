@@ -4,6 +4,7 @@ r = int(r)
 
 dp = [[[-1 for k in range(2)] for j in range(2)] for i in range(64)]
 
+
 def bbin(num):
     res = []
     while num:
@@ -12,10 +13,12 @@ def bbin(num):
 
     return res
 
+
 numr = bbin(r)
 numl = bbin(l)
 while len(numl) < len(numr):
     numl.append(0)
+
 
 def rec(pos, brr, brl):
     nonlocal numl, numr, dp
@@ -55,6 +58,7 @@ def rec(pos, brr, brl):
 
     dp[pos][brr][brl] = res % (10**9 + 7)
     return dp[pos][brr][brl]
+
 
 c = 0
 for i in range(len(numl) - 1, -1, -1):

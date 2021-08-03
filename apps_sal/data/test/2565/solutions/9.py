@@ -9,4 +9,3 @@ for _ in range(t):
     tmp = max(tmp, 0)
     ans -= tmp * 2
     print(ans)
-

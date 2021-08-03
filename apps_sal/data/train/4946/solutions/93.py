@@ -5,5 +5,5 @@ def house_numbers_sum(inp):
 
     for i in range(0, hardstop):
         house_sum += inp[i]
-    
+
     return house_sum

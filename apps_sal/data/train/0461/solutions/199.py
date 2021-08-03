@@ -8,6 +8,7 @@ class Solution:
         for i, x in enumerate(manager):
             if x != -1:
                 dic[x].append(i)
+
         def dfs(node):
             time = 0
             if not dic[node]:
@@ -16,6 +17,3 @@ class Solution:
                 time = max(time, informTime[node] + dfs(sub))
             return time
         return dfs(headID)
-                
-                
-

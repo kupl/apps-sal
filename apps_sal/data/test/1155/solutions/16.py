@@ -5,4 +5,3 @@ for i in range(n):
     mn = min((a / b) * m, mn)
 
 print(mn)
-

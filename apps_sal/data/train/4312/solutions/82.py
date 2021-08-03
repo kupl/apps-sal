@@ -107,7 +107,7 @@ def pick_peaks(arr):
                     plateaus = False
                     print(f"[{position}] {current} - Plateus End after peak - Rising...")
             elif plateaus:
-                if position + 1 == len(arr) - 1: #jesli nie jest przedostatni
+                if position + 1 == len(arr) - 1:  # jesli nie jest przedostatni
                     if not plateaus_after_peak:
                         fall = False
                         peak = True

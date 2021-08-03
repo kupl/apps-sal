@@ -12,4 +12,3 @@ for i in range(n):
         tmp, p[i] = [], p[i - 1]
 res += [p[i]]
 print(*(ans if res == lst else[-1]), sep='\n')
-

@@ -1,6 +1,7 @@
 import heapq
 from collections import Counter
 
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         counts = Counter(barcodes)
@@ -21,5 +22,3 @@ class Solution:
             if elem2[0] < 0:
                 heapq.heappush(arr, elem2)
         return newBarcodes
-            
-

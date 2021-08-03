@@ -8,21 +8,19 @@ class Solution:
         currentWaiting = 0
         totalBoarded = 0
         i = 0
-        while i<len(customers) or currentWaiting>0:
-            if i<len(customers):
+        while i < len(customers) or currentWaiting > 0:
+            if i < len(customers):
                 currentWaiting += customers[i]
             totalBoarded += min(4, currentWaiting)
-            currentProfit = totalBoarded * boardingCost - timesStopped*runningCost
+            currentProfit = totalBoarded * boardingCost - timesStopped * runningCost
             currentWaiting -= min(4, currentWaiting)
-            #print(currentProfit)
-            if currentProfit>highestProfitSoFar:
+            # print(currentProfit)
+            if currentProfit > highestProfitSoFar:
                 highestProfitSoFar = currentProfit
                 stoppedForMaxProft = timesStopped
-            timesStopped+=1
-            i+=1
-        #print(highestProfitSoFar)
-        if stoppedForMaxProft==0:
+            timesStopped += 1
+            i += 1
+        # print(highestProfitSoFar)
+        if stoppedForMaxProft == 0:
             return -1
         return stoppedForMaxProft
-            
-

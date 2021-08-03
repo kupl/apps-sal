@@ -20,4 +20,4 @@ for k in s:
 horizontal = abs(horizontal)
 vertical = abs(vertical)
 
-print((horizontal+vertical)//2)
+print((horizontal + vertical) // 2)

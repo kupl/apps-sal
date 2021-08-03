@@ -6,4 +6,3 @@ for i in range(N):
 restaurants.sort()
 for i in restaurants:
     print((i[2] + 1))
-

@@ -1,3 +1,3 @@
-def main (verb, noun):
+def main(verb, noun):
     res = verb + noun
     return res

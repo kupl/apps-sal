@@ -1,4 +1,4 @@
-s=input()
+s = input()
 c1, c2, x, y = list(map(int, s.split()))
 
 l = 0
@@ -25,4 +25,3 @@ while r - l > 1:
         l = m
 
 print(r)
-

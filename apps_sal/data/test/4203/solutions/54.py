@@ -9,7 +9,7 @@ if S.startswith('A'):
                 count_C += 1
             if s.islower():
                 count_lower += 1
-        if count_C == 1 and count_lower == len(S)-4:
+        if count_C == 1 and count_lower == len(S) - 4:
             print('AC')
         else:
             print('WA')

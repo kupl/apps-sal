@@ -1,9 +1,10 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n, k = R()
 a = list(R())
 b = sorted(a)
-b = b[n-k:]
+b = b[n - k:]
 ans = []
 
 print(sum(b))

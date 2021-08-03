@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 MOD = 10 ** 9 + 7
 
+
 def main():
     string = input().strip()
     n = len(string)
@@ -31,5 +32,6 @@ def main():
         for j in range(4):
             dp[i + 1][j] %= MOD
     print(dp[-1][-1] % MOD)
-    
+
+
 main()

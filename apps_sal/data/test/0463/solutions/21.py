@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return map(int, stdin.readline().split())
 #lines = stdin.readlines()
@@ -22,16 +23,16 @@ if n > len(a_dict):
     return
 
 for i in range(n):
-    if a[i]&x in a_dict:
-        if a[i]&x == a[i]:
-            if a_dict[a[i]&x] >= 2:
+    if a[i] & x in a_dict:
+        if a[i] & x == a[i]:
+            if a_dict[a[i] & x] >= 2:
                 print("1")
                 return
         else:
             print("1")
             return
 
-ax = [a[i]&x for i in range(n)]
+ax = [a[i] & x for i in range(n)]
 
 ax_set = set(ax)
 

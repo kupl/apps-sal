@@ -5,12 +5,13 @@ def f(n):
         if n % d == 0:
             A.append(d)
             n = n // d
-            
+
         else:
             d += 1
     if n != 1:
         A.append(n)
     return A
+
 
 n = int(input())
 a, b = map(int, input().split())

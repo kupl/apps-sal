@@ -3,5 +3,5 @@ def sum_of_intervals(intervals):
     for start, stop in intervals:
         for x in range(start, stop):
             result.add(x)
-            
+
     return len(result)

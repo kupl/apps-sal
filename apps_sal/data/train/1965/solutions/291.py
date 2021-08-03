@@ -1,7 +1,7 @@
 class DisjointSet:
     def __init__(self, number_of_sites):
-        self.parent = [i for i in range(number_of_sites+1)]
-        self.children_site_count = [1 for _ in range(number_of_sites+1)]
+        self.parent = [i for i in range(number_of_sites + 1)]
+        self.children_site_count = [1 for _ in range(number_of_sites + 1)]
         self.component_count = number_of_sites
 
     def find_root(self, site):
@@ -54,11 +54,11 @@ class Solution:
                 redundant += 1
 
         for _, u, v in bob_edges:
-            if not bob_disjoint_set.union(u,v):
+            if not bob_disjoint_set.union(u, v):
                 redundant += 1
-                
+
         for _, u, v in alice_edges:
             if not alice_disjoint_set.union(u, v):
                 redundant += 1
-        
+
         return redundant if alice_disjoint_set.component_count == 1 and bob_disjoint_set.component_count == 1 else -1

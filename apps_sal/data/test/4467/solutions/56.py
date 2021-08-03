@@ -2,13 +2,13 @@ n = int(input())
 ab = [list(map(int, input().split())) for _ in range(n)]
 cd = [list(map(int, input().split())) for _ in range(n)]
 
-g = [[0 for _ in range(2*n+2)] for _ in range(2*n+2)]
+g = [[0 for _ in range(2 * n + 2)] for _ in range(2 * n + 2)]
 
 for (i, (a, b)) in enumerate(ab):
-    fr = i+2
+    fr = i + 2
     g[0][fr] = 1
     for (j, (c, d)) in enumerate(cd):
-        to = n+j+2
+        to = n + j + 2
         g[to][1] = 1
         if a < c and b < d:
             g[fr][to] = 1
@@ -16,7 +16,7 @@ for (i, (a, b)) in enumerate(ab):
 used = [False for _ in range(2 * n + 2)]
 path = []
 goal = 1
-flow = [[0 for _ in range(2*n+2)] for _ in range(2*n+2)]
+flow = [[0 for _ in range(2 * n + 2)] for _ in range(2 * n + 2)]
 
 
 def bfs(v):
@@ -44,4 +44,3 @@ while bfs(0):
     path = []
     ans += 1
 print(ans)
-

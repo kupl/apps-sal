@@ -8,7 +8,7 @@ ans = 0
 for a, b in c:
     dist = 0
     for j in range(d):
-        dist += (x[a][j]-x[b][j])**2
-    if dist**(1/2) % 1 == 0:
+        dist += (x[a][j] - x[b][j])**2
+    if dist**(1 / 2) % 1 == 0:
         ans += 1
 print(ans)

@@ -47,16 +47,3 @@ if len(d) == 0 or d[len(d) - 1][1] < n:
     print(-1)
 else:
     print(2 * (n - 1))
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -10,4 +10,3 @@ class Solution:
                         res = area
             seen.add((x1, y1))
         return res if res < float('inf') else 0
-

@@ -24,4 +24,3 @@ class Solution:
             if c > counts[most] or (c == counts[most] and i < most):
                 most = i
         return most
-

@@ -34,4 +34,5 @@ def d_pairs():
             lower = x
     return upper
 
+
 print(d_pairs())

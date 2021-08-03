@@ -13,7 +13,6 @@ for l in range(n):
         r += 1
     if s < k:
         break
-    ans += n-r+1
+    ans += n - r + 1
     s -= a[l]
 print(ans)
-

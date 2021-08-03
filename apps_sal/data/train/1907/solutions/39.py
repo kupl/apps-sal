@@ -14,5 +14,5 @@ class Solution:
             if original == target:
                 return copy
             return match(original.left, copy.left) or match(original.right, copy.right)
-        
+
         return match(original, cloned)

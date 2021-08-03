@@ -7,9 +7,8 @@ X = list(map(int, input().split()))
 
 ans = 0
 for x in X:
-    if x > abs(K-x):
-        ans += abs(K-x)*2
+    if x > abs(K - x):
+        ans += abs(K - x) * 2
     else:
-        ans += x*2
+        ans += x * 2
 print(ans)
-

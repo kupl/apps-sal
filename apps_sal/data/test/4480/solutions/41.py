@@ -3,7 +3,7 @@ class Solution:
         s = sum(A)
         if s % 3 != 0:
             return False
-        target = s//3
+        target = s // 3
         current = 0
         count = 0
         for v in A:

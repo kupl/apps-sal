@@ -5,5 +5,5 @@ def main():
     else:
         print(((n // k) + 1) * k)
 
-main()
 
+main()

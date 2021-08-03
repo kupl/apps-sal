@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
+from collections import deque
 import sys
 input = sys.stdin.readline
-from collections import deque
+
 
 class DirectedGraph:
     def __init__(self, adj):
@@ -44,6 +45,7 @@ class DirectedGraph:
             self.is_asyclic = False
             return None
 
+
 t = int(input())
 for case in range(t):
     n, m = map(int, input().split())
@@ -53,13 +55,14 @@ for case in range(t):
     seen = set()
     for _ in range(m):
         u, v = map(int, input().split())
-        u -= 1; v -= 1
+        u -= 1
+        v -= 1
         if (u, v) in seen:
             continue
         seen.add((u, v))
         forward[u].append(v)
         backward[v].append(u)
-    
+
     DG = DirectedGraph(forward)
     tps = DG.topological_sort()
     state = [-1] * n
@@ -69,7 +72,7 @@ for case in range(t):
             state[v] = 0
         for pv in backward[v]:
             state[v] = max(state[v], (state[pv] + 1) % 3)
-    
+
     ans = []
     for i, color in enumerate(state):
         if color == 2:

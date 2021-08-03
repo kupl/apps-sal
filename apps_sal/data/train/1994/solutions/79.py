@@ -16,4 +16,3 @@ class Solution:
             else:
                 curr_node = curr_node.__next__
         return no
-

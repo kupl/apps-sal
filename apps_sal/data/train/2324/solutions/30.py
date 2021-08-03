@@ -22,13 +22,13 @@ def bfs(s, d):
 
 
 def main():
-    for i in range(N-1):
+    for i in range(N - 1):
         a, b = list(map(int, input().split()))
-        G[a-1].append(b-1)
-        G[b-1].append(a-1)
+        G[a - 1].append(b - 1)
+        G[b - 1].append(a - 1)
 
     bfs(0, dist1)
-    bfs(N-1, dist2)
+    bfs(N - 1, dist2)
 
     cnt_f = 0
     for i in range(N):
@@ -43,5 +43,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

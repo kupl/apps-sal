@@ -31,4 +31,3 @@ if a != 0 and b != 0:
 
 print(min(res1, res2, res3, res4, res5))
 # print(res1, res2, res3, res4, res5)
-

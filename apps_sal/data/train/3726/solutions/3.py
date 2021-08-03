@@ -4,4 +4,3 @@ def sort_array(source_array):
         if item % 2 == 0:
             result.insert(index, item)
     return result
-

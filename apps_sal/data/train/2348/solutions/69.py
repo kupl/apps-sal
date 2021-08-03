@@ -18,6 +18,7 @@ for k in range(LOGN + 1):
         else:
             parent[k][i] = parent[k - 1][parent[k - 1][i]]
 
+
 def find(a, b):
     num = 0
     u = a
@@ -27,14 +28,15 @@ def find(a, b):
             if parent[i][u] >= b:
                 k = i
                 break
-                
+
         if k == 0:
             num += 1
             break
         num += pow(2, k - 1)
         u = parent[k - 1][u]
-        
+
     return num
+
 
 for a, b in Y:
     a -= 1
@@ -42,4 +44,3 @@ for a, b in Y:
     if a > b:
         a, b = b, a
     print((find(a, b)))
-

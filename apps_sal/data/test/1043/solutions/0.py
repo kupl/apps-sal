@@ -16,6 +16,3 @@ while N > 2:
     ans += heappop(H)
 
 print(ans)
-
-
-

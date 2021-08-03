@@ -12,14 +12,14 @@ class Solution:
         uni_nums = sorted(uni_nums)
         N = len(uni_nums)
         i = 0
-        while i<N:
+        while i < N:
             if hm[uni_nums[i]] == 0:
                 i += 1
             else:
                 pick = uni_nums[i]
                 for j in range(k):
-                    if pick+j not in hm or hm[pick+j] == 0:
+                    if pick + j not in hm or hm[pick + j] == 0:
                         return False
                     else:
-                        hm[pick+j] -= 1
+                        hm[pick + j] -= 1
         return True

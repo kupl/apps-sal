@@ -8,7 +8,7 @@
 n, m, p = list(map(int, input().split()))
 s = list(map(int, input().split()))
 
-q = [[] for _ in range(p)] # fromnt of each palyer
+q = [[] for _ in range(p)]  # fromnt of each palyer
 counts = [0] * p
 
 field = []
@@ -24,7 +24,8 @@ for i in range(n):
             # player
             pi = int(c)
             field[i][j] = pi
-            counts[pi-1] += 1
+            counts[pi - 1] += 1
+
 
 def get_neibs(i, j):
     up = (i - 1, j) if i > 0 else None
@@ -35,16 +36,16 @@ def get_neibs(i, j):
     return [a for a in nbs if a is not None]
 
 
-
 def init_bounds(field, q):
     for i in range(n):
         for j in range(m):
             if field[i][j] > 0:
-                index  = field[i][j]-1
+                index = field[i][j] - 1
                 nbs = get_neibs(i, j)
                 neib_vals = [field[a[0]][a[1]] for a in nbs]
                 if 0 in neib_vals:
                     q[index].append((i, j))
+
 
 def step_one(index, field, front: list):
     new_front = []
@@ -55,19 +56,15 @@ def step_one(index, field, front: list):
         for a in nbs:
             if field[a[0]][a[1]] == 0:
                 # if not yet added
-                field[a[0]][a[1]] = index+1
+                field[a[0]][a[1]] = index + 1
                 counts[index] += 1
                 total_add += 1
                 new_front.append(a)
 
-
     return new_front, total_add
 
 
-
-
-
-def  step(index, field, front, speed):
+def step(index, field, front, speed):
     added_len = 0
     while speed > 0:
         front, added_len = step_one(index, field, front)
@@ -77,6 +74,7 @@ def  step(index, field, front, speed):
 
     q[index] = front
     return front, added_len
+
 
 init_bounds(field, q)
 
@@ -92,8 +90,6 @@ while True:
         break
 
 
-
 print(" ".join(map(str, counts)))
 
 # f.close()
-

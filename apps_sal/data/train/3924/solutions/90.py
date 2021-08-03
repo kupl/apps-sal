@@ -9,7 +9,7 @@ def reverse_words(text):
         while text[index + count] == ' ':
             spacer += ' '
             count += 1
-            
+
     for item in word_list:
         item = item[::-1]
         if len(reversed_str) < 1:

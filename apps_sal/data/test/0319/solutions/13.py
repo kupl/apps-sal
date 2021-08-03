@@ -1,4 +1,4 @@
-m, n = map(int,input().split()) 
+m, n = map(int, input().split())
 D1 = {}
 D2 = {}
 

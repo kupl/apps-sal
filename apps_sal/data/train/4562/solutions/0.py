@@ -7,6 +7,7 @@ def round(flash_pile, turtle_pile):
                 flash_pile.extend(faceup_pile)
                 return True
 
+
 def snap(flash_pile, turtle_pile):
     for i in range(26):
         if not round(flash_pile, turtle_pile):

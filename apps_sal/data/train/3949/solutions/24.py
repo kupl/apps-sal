@@ -1,5 +1,6 @@
 import math
 
+
 def calculate_tip(amount, rating):
     service_perc = {
         "terrible": 0,

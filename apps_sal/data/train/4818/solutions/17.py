@@ -1,1 +1,1 @@
-solution=lambda a,b:(a+b+a,b+a+b)[len(a)>len(b)]
+def solution(a, b): return (a + b + a, b + a + b)[len(a) > len(b)]

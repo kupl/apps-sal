@@ -9,14 +9,12 @@ class Solution:
 
         dp = [float('inf')] * (n + 1)
         dp[0] = 0
-        
+
         for [start, end] in coords:
             if start > n:
                 break
             prev = dp[start]
             for i in range(start, min(end, n)):
                 dp[i + 1] = min(prev + 1, dp[i + 1])
-            
 
-        return  dp[-1] if dp[-1] < float('inf') else -1
-
+        return dp[-1] if dp[-1] < float('inf') else -1

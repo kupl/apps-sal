@@ -17,4 +17,3 @@ for i, a in enumerate(arr):
             min_dist = d
         last = i
 print(min_dist)
-

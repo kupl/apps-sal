@@ -13,4 +13,3 @@ while n > 0 and rem - z >= 0:
     z += 5
 
 print(ans)
-

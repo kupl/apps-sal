@@ -2,7 +2,8 @@ import sys
 from operator import itemgetter
 
 mod = 10**9 + 7
-inf = 1<<30
+inf = 1 << 30
+
 
 def solve():
     N, M = map(int, sys.stdin.readline().split())
@@ -39,7 +40,7 @@ def solve():
 class FenwickTree:
     def __init__(self, size):
         self.n = size
-        self.data = [0]*(size + 1)
+        self.data = [0] * (size + 1)
 
     def add(self, i, x):
         while i <= self.n:
@@ -55,6 +56,9 @@ class FenwickTree:
 
         return res
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

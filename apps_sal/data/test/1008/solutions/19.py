@@ -11,4 +11,3 @@ else:
             break
     else:
         print('YES')
-

@@ -5,5 +5,5 @@ def remove_duplicate_words(x):
             pass
         else:
             y.append(i)
-    
+
     return ' '.join(y)

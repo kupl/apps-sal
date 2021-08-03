@@ -14,4 +14,3 @@ for i in range(n):
     spare += a[i] % 3
 
 print(ans)
-

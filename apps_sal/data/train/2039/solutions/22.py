@@ -1,12 +1,12 @@
 n, m = map(int, input().split())
 arr = list(map(int, input().split()))
-l, r = 0, m-1
+l, r = 0, m - 1
 while l < r:
-    mid = (l+r)//2
+    mid = (l + r) // 2
     p = 0
     f = True
     for x in arr:
-        step = (m-x+p)%m
+        step = (m - x + p) % m
         if step > mid:
             if x < p:
                 f = False
@@ -15,5 +15,5 @@ while l < r:
     if f is True:
         r = mid
     else:
-        l = mid+1
+        l = mid + 1
 print(l)

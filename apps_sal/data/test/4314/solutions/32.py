@@ -7,7 +7,7 @@ for i in range(h):
 
 h = len(a)
 
-w_pass =[]
+w_pass = []
 for i in range(w):
     for j in range(h):
         if a[j][i] != ".":
@@ -23,4 +23,3 @@ for i in range(h):
         else:
             line += a[i][j]
     print(line)
-

@@ -7,4 +7,3 @@ while idx < n:
     idx += cur
     cur += 1
 print(d)
-

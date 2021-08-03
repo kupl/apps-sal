@@ -12,5 +12,3 @@ if sminus == 0 or splus >= sminus:
     print('Yes')
 else:
     print('No')
-
-

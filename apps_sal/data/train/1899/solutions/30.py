@@ -5,6 +5,7 @@ class Solution:
         cols = len(A[0])
         directions = ((1, 0), (-1, 0), (0, 1), (0, -1))
         # Function to check if a given location is an edge.
+
         def edge_check(ro, co):
             r = []
             for y, x in directions:
@@ -52,6 +53,6 @@ class Solution:
         # Find/return the min distance between points.
         for x1, x2 in c1[:250]:
             for y1, y2 in c2[:250]:
-                minn = min(minn, abs(x1-y1)+abs(x2-y2)-1)
+                minn = min(minn, abs(x1 - y1) + abs(x2 - y2) - 1)
 
         return minn

@@ -24,4 +24,5 @@ def f_contrast():
     ret = ' '.join(map(str, ans))
     return f'Yes\n{ret}'
 
+
 print(f_contrast())

@@ -11,4 +11,3 @@ for c in input() + "+":
         sign = -1
     cur = cur * 10 + ord(c) - ord('0')
 print(res)
-

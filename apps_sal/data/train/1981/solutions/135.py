@@ -8,7 +8,7 @@ class Solution:
         for i in range(n):
             imos[i + 1] += imos[i]
         del imos[-1]
-        
+
         ans = 0
         for i, v in zip(sorted(nums), sorted(imos)):
             ans += i * v

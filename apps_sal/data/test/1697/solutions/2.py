@@ -6,6 +6,7 @@ in_dt = []
 for i in range(ln):
     in_dt.append(input())
 
+
 def is_adj(x_1, y_1, x_2, y_2):
     if math.abs(x_2 - x_1) == 1 and y_2 - y_1 == 0:
         return True
@@ -13,7 +14,9 @@ def is_adj(x_1, y_1, x_2, y_2):
         return True
     return False
 
+
 ch_dt = [[0 for x in range(55)] for y in range(55)]
+
 
 def neighb(x, y, ln, cl, lst):
     res = []
@@ -27,7 +30,9 @@ def neighb(x, y, ln, cl, lst):
         res.append((x, y + 1))
     return res
 
+
 path = []
+
 
 def go_path(lst, path):
     nonlocal ln
@@ -41,7 +46,7 @@ def go_path(lst, path):
         #print (cur_x, cur_y)
         #print (path)
         neighbours = neighb(cur_x, cur_y, ln, cl, lst)
-        #print(neighbours)
+        # print(neighbours)
         if len(neighbours) != 0:
             for neighbour in neighbours:
                 if neighbour in path:
@@ -50,19 +55,20 @@ def go_path(lst, path):
                 #print (ch_dt)
                 #print (neighbour)
                 #print ("+++++++")
-                if ch_dt[neighbour[0]][neighbour[1]] == 0: 
+                if ch_dt[neighbour[0]][neighbour[1]] == 0:
                     path.append(neighbour)
                     ch_dt[neighbour[0]][neighbour[1]] = 1
-        #print(path)
+        # print(path)
     #print (False)
     return False
+
+
 for i in range(ln):
     for j in range(cl):
         if ch_dt[i][j] == 0:
             ch_dt[i][j] = 1
             path.append((i, j))
             if go_path(in_dt, path):
-                print ("Yes")
+                print("Yes")
                 return
 print("No")
-

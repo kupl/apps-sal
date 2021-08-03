@@ -9,12 +9,12 @@ class Solution:
         level = 0
         max_level = 0
         max_sum = float('-inf')
-        
+
         q = []
         q.append(root)
-        
+
         while q:
-            level +=1
+            level += 1
             curr = 0
             for _ in range(len(q)):
                 node = q.pop(0)
@@ -27,7 +27,3 @@ class Solution:
                 max_sum = curr
                 max_level = level
         return max_level
-                
-            
-        
-

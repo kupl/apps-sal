@@ -39,4 +39,3 @@ for i in range(q - 1):
             t = total - (cnt1[r1 + 1] - cnt1[l1]) - (cnt1[r2 + 1] - cnt1[l2])
             ans = max(ans, t)
 print(ans)
-

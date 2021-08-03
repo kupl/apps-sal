@@ -1,4 +1,4 @@
-N,K = map(int,input().split())
+N, K = map(int, input().split())
 d = []
 A = []
 for i in range(K):
@@ -6,8 +6,8 @@ for i in range(K):
     q = [int(i) for i in input().split()]
     d.append(p)
     A.append(q)
-S = [False]*N
+S = [False] * N
 for i in range(K):
     for j in range(d[i]):
-        S[A[i][j]-1] = True
+        S[A[i][j] - 1] = True
 print(S.count(False))

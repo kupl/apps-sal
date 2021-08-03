@@ -3,10 +3,10 @@ class Solution:
         def toMinutes(time):
             hour, minute = time.split(':')
             return int(hour) * 60 + int(minute)
-        
+
         book = collections.defaultdict(list)
         n = len(keyName)
-        res = set() 
+        res = set()
         for i in range(n):
             q = book[keyName[i]]
             time = toMinutes(keyTime[i])
@@ -15,17 +15,10 @@ class Solution:
             window = collections.deque()
             while v:
                 window.append(heapq.heappop(v))
-                if len(window) >= 3 and (window[-1] - window[0]) <= 60: 
+                if len(window) >= 3 and (window[-1] - window[0]) <= 60:
                     res.add(k)
-                while window and window[-1] - window[0] > 60: window.popleft()
+                while window and window[-1] - window[0] > 60:
+                    window.popleft()
                 #print(k, window)
-        
-        return sorted(res)
-                
-                
-                
-                
-        
-        
-        
 
+        return sorted(res)

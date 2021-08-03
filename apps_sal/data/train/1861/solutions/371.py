@@ -8,6 +8,7 @@
 6. Return res
 '''
 
+
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
         base_x_to_y = collections.defaultdict(dict)
@@ -15,15 +16,15 @@ class Solution:
         base_x = -1
         min_area = float('inf')
         for x, y in sorted(points):
-            if x != base_x: # 1
-                base_x = x # 1
-                y_for_base_x = [] # 2
-            for prev_base_x in y_for_base_x: # 3
-                if y in base_x_to_y[prev_base_x]: # 3
+            if x != base_x:  # 1
+                base_x = x  # 1
+                y_for_base_x = []  # 2
+            for prev_base_x in y_for_base_x:  # 3
+                if y in base_x_to_y[prev_base_x]:  # 3
                     w = x - base_x_to_y[prev_base_x][y]
                     h = y - prev_base_x
                     area = w * h
-                    min_area = min(min_area, area) # 3
-                base_x_to_y[prev_base_x][y] = x # 4
-            y_for_base_x.append(y) # 5
-        return min_area if min_area < float('inf') else 0 # 6
+                    min_area = min(min_area, area)  # 3
+                base_x_to_y[prev_base_x][y] = x  # 4
+            y_for_base_x.append(y)  # 5
+        return min_area if min_area < float('inf') else 0  # 6

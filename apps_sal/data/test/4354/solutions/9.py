@@ -1,6 +1,7 @@
 import itertools
 url = "https://atcoder.jp//contests/abc057/tasks/abc057_a"
 
+
 def main():
     n, m = list(map(int, input().split()))
     ab = [list(map(int, input().split())) for _ in range(n)]
@@ -15,4 +16,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

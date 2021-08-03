@@ -16,6 +16,6 @@ def greet(lang):
         'polish': 'Witamy',
         'spanish': 'Bienvenido',
         'swedish': 'Valkommen',
-        'welsh': 'Croeso'        
+        'welsh': 'Croeso'
     }
     return db.get(lang, 'Welcome')

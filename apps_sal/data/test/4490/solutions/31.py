@@ -7,4 +7,3 @@ for i, s in enumerate(s0):
     if s == b:
         print((s1[i]))
         break
-

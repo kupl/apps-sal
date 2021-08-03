@@ -9,6 +9,6 @@ for i in range(t):
     cnt = 0
     while cnt < len(b) and cnt < len(a) and cnt < k:
         if b[len(b) - cnt - 1] > a[cnt]:
-            s +=b[len(b) - cnt - 1] - a[cnt]
+            s += b[len(b) - cnt - 1] - a[cnt]
         cnt += 1
     print(s)

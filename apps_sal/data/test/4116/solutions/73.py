@@ -1,9 +1,9 @@
-#for 文はどこまで含むのか、どこで抜けるのかってこと
+# for 文はどこまで含むのか、どこで抜けるのかってこと
 N = int(input())
 calculation = []
 
-for i in range(1,10):
-    for j in range(1,10):
+for i in range(1, 10):
+    for j in range(1, 10):
         ans = i * j
         calculation.append(ans)
 

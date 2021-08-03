@@ -1,7 +1,9 @@
 from random import choice
 
+
 def median(lst):
     return quickselect(lst, len(lst) // 2, len(lst) % 2 == 0)
+
 
 def quickselect(lst, nth, even):
     # O(n) but what a pain to get right.

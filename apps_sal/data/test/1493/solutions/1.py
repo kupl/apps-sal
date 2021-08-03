@@ -1,20 +1,18 @@
-n,m=map(int,input().split())
+n, m = map(int, input().split())
 for i in range(n):
-    s=input().strip()
+    s = input().strip()
     for j in range(m):
-        if s[j]=='.':
-            if i%2==0:
-                if j%2==0:
-                    print('B',end='')
+        if s[j] == '.':
+            if i % 2 == 0:
+                if j % 2 == 0:
+                    print('B', end='')
                 else:
-                    print('W',end='')
+                    print('W', end='')
             else:
-                if j%2==0:
-                    print('W',end='')
+                if j % 2 == 0:
+                    print('W', end='')
                 else:
-                    print('B',end='')
+                    print('B', end='')
         else:
-            print('-',end='')
+            print('-', end='')
     print('')
-
-                

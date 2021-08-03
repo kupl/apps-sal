@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    a, d =map(float, input().split(' '))
+    a, d = map(float, input().split(' '))
     a *= 10000
     d *= 10000
     ans = []
@@ -27,6 +27,9 @@ def main():
         ans.append('{} {}'.format(x, y))
     print('\n'.join(ans))
 
+
 def __starting_point():
     return(main())
+
+
 __starting_point()

@@ -4,6 +4,7 @@ n, k = list(map(int, input().split(' ')))
 
 s = input()
 
+
 def max_streak(s):
     result = 0
 
@@ -15,6 +16,7 @@ def max_streak(s):
         result = max(result, j - i)
 
     return result
+
 
 for i in range(n - k + 1):
     cur = list(s)
@@ -35,4 +37,3 @@ for i in range(n - k + 1):
         return
 
 print('NO')
-

@@ -1,6 +1,6 @@
+import sys
 3
 
-import sys
 
 x1, y1, x2, y2 = [int(x) for x in sys.stdin.readline().split()]
 
@@ -22,4 +22,3 @@ else:
     (x3, y3), (x4, y4) = [p for p in points if p not in [(x1, y1), (x2, y2)]]
 
 print(x3, y3, x4, y4)
-

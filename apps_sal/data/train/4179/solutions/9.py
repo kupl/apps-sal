@@ -3,4 +3,3 @@ def game(n):
         return [n**2 // 2]
     else:
         return [n**2, 2]
-

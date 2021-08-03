@@ -15,8 +15,8 @@ for name in names:
     i = 0
     while i < len(lst):
         letter = lst[i]
-        for j in range(i+1, len(lst)):
-            if lst[j].find(lst[i], (len(lst[j])-len(lst[i]))) >= 0:
+        for j in range(i + 1, len(lst)):
+            if lst[j].find(lst[i], (len(lst[j]) - len(lst[i]))) >= 0:
                 lst.remove(lst[i])
                 i -= 1
                 break
@@ -25,7 +25,7 @@ for name in names:
 
 print(len(names))
 for name in names:
-    print('%s %d '%(name, len(names[name])),end='')
+    print('%s %d ' % (name, len(names[name])), end='')
     for ent in names[name]:
-        print('%s '%ent, end='')
+        print('%s ' % ent, end='')
     print()

@@ -47,6 +47,7 @@ def d_robot_arms(N, Pos):
     ans = '\n'.join(ans_tmp)
     return ans
 
+
 N = int(input())
 Pos = [[int(i) for i in input().split()] for j in range(N)]
 print(d_robot_arms(N, Pos))

@@ -1,2 +1,2 @@
 def char_to_ascii(string):
-    return {c:ord(c) for c in string if c.isalpha()} or None
+    return {c: ord(c) for c in string if c.isalpha()} or None

@@ -1,10 +1,12 @@
 n, A, C = list(map(int, input().split()))
 
+
 def Ro(x, y):
     return A * x - y + C
- 
+
+
 huh = []
- 
+
 for i in range(n):
     z, x, y = list(map(int, input().split()))
     huh.append((Ro(x + z, z * A + y), x))
@@ -16,11 +18,11 @@ prev = (-9999999999999, -999999999999999)
 g = []
 
 huh.append((-9999999999999, -999999999999999))
-#print(huh)
+# print(huh)
 for huhh in huh:
     if huhh[0] != prev[0]:
         g.append(c1)
-        #print(g)
+        # print(g)
         for j in g:
             anss += (c2 - j) * j
         g = []
@@ -35,4 +37,3 @@ for huhh in huh:
         prev = (huhh[0], huhh[1])
     c1 += 1
 print(anss)
-

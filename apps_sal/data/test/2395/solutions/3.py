@@ -4,4 +4,3 @@ for _ in range(int(input())):
         print(s)
     else:
         print('01' * len(s))
-

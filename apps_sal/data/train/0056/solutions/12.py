@@ -1,7 +1,7 @@
+import math
 import sys
 input = sys.stdin.readline
 
-import math
 
 T = int(input())
 
@@ -23,6 +23,7 @@ def f(M):
 
     return (maxR - minR)**2 + (maxC - minC)**2
 
+
 for t in range(T):
     N, K = [int(_) for _ in input().split()]
     M = [[0] * N for i in range(N)]
@@ -32,9 +33,8 @@ for t in range(T):
     for i in range(K):
         # assert (i%N, (i//N + i)%N) not in save
         # save.add((i%N, (i//N + i)%N))
-        M[i%N][(i//N + i)%N] = 1
+        M[i % N][(i // N + i) % N] = 1
 
     print(f(M))
     for row in M:
         print(''.join(map(str, row)))
-

@@ -89,10 +89,10 @@ def part(ra, rb, d2):
     part_b = rb ** 2 * b - rb * rb * sin(b) * cos(b)
     return part_a + part_b
 
+
 x1, y1, r1 = list(map(int, input().split()))
 x2, y2, r2 = list(map(int, input().split()))
 dist2 = (x1 - x2) ** 2 + (y1 - y2) ** 2
-
 
 
 if dist2 > (r1 + r2) ** 2:
@@ -101,4 +101,3 @@ elif dist2 <= (r1 - r2) ** 2:
     print(pi * min(r1, r2) ** 2)
 else:
     print(part(r1, r2, dist2))
-

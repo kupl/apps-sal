@@ -1,6 +1,5 @@
 
 
-
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
 
@@ -10,28 +9,19 @@ class Solution:
         res = 0
         for num in nums:
             curr = prev + num
-            
+
             if curr - target in prefixsum:
                 res += 1
                 prefixsum = {}
                 prefixsum[0] = True
                 prev = 0
-            
+
             else:
                 prefixsum[curr] = True
                 prev = curr
-            
+
         print(res)
         return res
-        
-        
-        
-        
-        
-
-
-
-
 
 
 '''
@@ -58,4 +48,3 @@ class Solution:
 
 
 '''
-

@@ -39,4 +39,3 @@ for i in range(b, max(b, batas + 1)):
             luas = lenmin * i
 
 print("%d\n%d %d" % (p * l, p, l))
-

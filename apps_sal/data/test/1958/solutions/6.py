@@ -10,4 +10,3 @@ for i in a[-2::-1]:
         cur *= 2
         cnt += cur
 print(cnt * p // 2)
-

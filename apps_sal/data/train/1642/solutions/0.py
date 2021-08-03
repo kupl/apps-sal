@@ -1,5 +1,6 @@
 from scipy.special import comb
 
+
 def multiply(n, k):
     r, d = 1, 2
     while d * d <= n:
@@ -9,6 +10,6 @@ def multiply(n, k):
             n //= d
         r *= comb(i + k - 1, k - 1, exact=True)
         d += 1
-    if n > 1: 
+    if n > 1:
         r *= k
     return r

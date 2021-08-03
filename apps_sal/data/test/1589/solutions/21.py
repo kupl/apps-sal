@@ -8,4 +8,3 @@ for k in range(n):
             sum += 1
         i += 2
 print(sum)
-

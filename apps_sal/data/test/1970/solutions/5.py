@@ -5,6 +5,7 @@ import collections
 class GetOutOfLoop(Exception):
     pass
 
+
 def __starting_point():
 
     n_cases = int(sys.stdin.readline())
@@ -43,4 +44,6 @@ def __starting_point():
         except GetOutOfLoop:
             pass
         sys.stdin.readline()
+
+
 __starting_point()

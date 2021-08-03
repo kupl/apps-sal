@@ -66,4 +66,3 @@ elif S == 1:
     solve1([A, B, C])
 else:
     solve2([A, B, C])
-

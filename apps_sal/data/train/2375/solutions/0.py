@@ -8,7 +8,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    
+
     ruiseki = [[0] * MAX_A for i in range(n + 1)]
     for i in range(n):
         for j in range(MAX_A):

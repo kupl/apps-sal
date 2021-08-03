@@ -9,6 +9,6 @@ for like in likes:
     else:
         counter[like] = 1
     if max_like_count < counter[like]:
-        most_liked = like 
+        most_liked = like
         max_like_count = counter[like]
 print(int(most_liked))

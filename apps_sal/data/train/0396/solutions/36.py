@@ -10,4 +10,3 @@ class Solution:
                 return -1
             track[rem] = True
             N = N * 10 + 1
-

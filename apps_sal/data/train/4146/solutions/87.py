@@ -13,4 +13,3 @@ def is_sorted_and_how(arr):
         return 'yes, descending'
     else:
         return 'no'
-

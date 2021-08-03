@@ -14,4 +14,3 @@ for i in range(N):
         else:
             ans = ('(' + ans + ')')
 print((ans + ')' * keep))
-

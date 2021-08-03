@@ -30,7 +30,9 @@ def main():
 
     print((int(tmp) if flg else -1))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

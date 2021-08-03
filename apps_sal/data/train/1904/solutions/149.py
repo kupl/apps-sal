@@ -5,14 +5,14 @@ class Solution:
         target = K - 1
         while (left <= right):
             rand_pivot = random.randint(left, right)
-            pivot = self.partition(left, right, rand_pivot, points) 
+            pivot = self.partition(left, right, rand_pivot, points)
             if (pivot == target):
-                return points[0 : pivot + 1]
+                return points[0: pivot + 1]
             elif (pivot < target):
                 left = pivot + 1
             else:
                 right = pivot - 1
-    
+
     def partition(self, i, j, pivot, arr):
         pivot_element = self.distFromOrigin(arr[pivot])
         self.swap(pivot, j, arr)
@@ -23,13 +23,11 @@ class Solution:
                 result += 1
         self.swap(result, j, arr)
         return result
-        
-    
-    def swap(self, i, j , arr):
+
+    def swap(self, i, j, arr):
         temp = arr[i]
         arr[i] = arr[j]
         arr[j] = temp
-    
+
     def distFromOrigin(self, point):
         return math.sqrt((point[0] ** 2 + point[1] ** 2))
-

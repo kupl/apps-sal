@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import math
 
+
 def solve(A: int, B: int, X: int):
     left = 1
     right = 10 ** 9
@@ -24,7 +25,9 @@ def main():
     ans = solve(A, B, X)
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

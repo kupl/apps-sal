@@ -19,6 +19,5 @@ class Solution:
                 pdp[i] = 0
                 ndp[i] = 0
             b = max(b, pdp[i])
-            
-        return b
 
+        return b

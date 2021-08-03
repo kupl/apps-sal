@@ -3,6 +3,7 @@ from collections import defaultdict
 
 tbl = str.maketrans('!?', '?!')
 
+
 def replace(s):
     xs = [''.join(grp) for _, grp in groupby(s)]
     stacks = defaultdict(list)

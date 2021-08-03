@@ -15,4 +15,3 @@ for i in range(1, N + 1):
     dp[i] %= MOD
 
 print((dp[N][S]))
-

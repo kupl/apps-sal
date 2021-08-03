@@ -12,12 +12,12 @@ extra = '1'
 numzero = 0
 
 for ai in a:
-	if ai == '0':
-		print(0)
-		return
-	elif p.match(ai):
-		numzero += len(ai) - 1
-	else:
-		extra = ai
+    if ai == '0':
+        print(0)
+        return
+    elif p.match(ai):
+        numzero += len(ai) - 1
+    else:
+        extra = ai
 
 print(extra + '0' * numzero)

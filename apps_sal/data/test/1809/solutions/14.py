@@ -14,4 +14,4 @@ for x in b:
     else:
         a = [x] + a
     ans += cur_sum
-print(ans) 
+print(ans)

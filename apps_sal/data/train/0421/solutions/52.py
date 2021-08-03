@@ -2,21 +2,21 @@ class Solution:
     def lastSubstring(self, s: str) -> str:
         lastc = max(s)
         n = len(s)
-        q = [i for i,val in enumerate(s) if val==lastc]
+        q = [i for i, val in enumerate(s) if val == lastc]
         if len(q) == len(s):
             return s
         res = s[q[0]]
         while q:
             qq = []
             for i in q:
-                if i+1 < n:
-                    qq += [i+1]
+                if i + 1 < n:
+                    qq += [i + 1]
             if not qq:
                 break
             c = max(s[i] for i in qq)
             res += c
             q = [i for i in qq if s[i] == c]
-        
+
         return res
     # def lastSubstring(self, s: str) -> str:
     # \tS, L, a = [ord(i) for i in s] + [0], len(s), 1
@@ -28,7 +28,7 @@ class Solution:
     # \t\tM, a = max(b), a + 1
     # \t\tI = [I[i] for i, j in enumerate(b) if j == M]
     # \treturn s[I[0]:]
-        
+
         #ans = [s[i:] for i in lead]
         # print(ans)
         # start = s.index(lastc)
@@ -42,4 +42,3 @@ class Solution:
         #         start += s[start+1:].index(lastc) + 1
         # print(ans)
         return sorted(ans)[-1]
-

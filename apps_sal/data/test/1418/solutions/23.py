@@ -18,4 +18,6 @@ def main():
         else:
             print(now, end=' ')
             now += 1
+
+
 main()

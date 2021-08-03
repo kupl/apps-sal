@@ -5,7 +5,7 @@ m = int(input())
 for i in range(m):
     line = input()
     st = set()
-    flag = False # 无效
+    flag = False  # 无效
     for i in range(n):
         if s[i] == '*':
             st.add(line[i])
@@ -28,6 +28,5 @@ for i in range(30):
     if x[i] == len(a):
         ans += 1
 print(ans)
-#print(x)
-#print(a)
-
+# print(x)
+# print(a)

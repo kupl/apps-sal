@@ -12,8 +12,8 @@ for i in l:
     b.append(int(i))
 
 m = 0
-for i in range(len(b)-1):
-    if b[i] - b[i+1] - c > m:
-        m = b[i] - b[i+1] - c
+for i in range(len(b) - 1):
+    if b[i] - b[i + 1] - c > m:
+        m = b[i] - b[i + 1] - c
 
 print(m)

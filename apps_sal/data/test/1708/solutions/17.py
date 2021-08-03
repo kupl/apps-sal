@@ -1,4 +1,6 @@
 def inpl(): return list(map(int, input().split()))
+
+
 N, M = inpl()
 A = inpl()
 C = inpl()
@@ -20,12 +22,12 @@ for _ in range(M):
     k = min(d, ACi[t][2])
     ACi[t][2] -= k
     d -= k
-    ans += k*ACi[t][0]
+    ans += k * ACi[t][0]
     while d > 0:
         k = min(d, ACi[ctr][2])
         ACi[ctr][2] -= k
         d -= k
-        ans += k*ACi[ctr][0]
+        ans += k * ACi[ctr][0]
         if not ACi[ctr][2]:
             ctr += 1
     print(ans)

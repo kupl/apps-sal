@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def play_if_enough(hand, play):
     c1, c2 = Counter(hand), Counter(play)
     if not c2 - c1:

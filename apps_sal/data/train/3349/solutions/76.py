@@ -13,7 +13,7 @@ def find_missing_number(sequence):
     result.sort()
     start = 0
     for i in range(len(result)):
-        if result[i] == start+1:
+        if result[i] == start + 1:
             start = start + 1
         else:
             prev = start
@@ -21,4 +21,4 @@ def find_missing_number(sequence):
     else:
         return 0
 
-    return prev+1
+    return prev + 1

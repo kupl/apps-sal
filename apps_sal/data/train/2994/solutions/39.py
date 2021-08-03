@@ -1,8 +1,8 @@
 def find_digit(num, nth):
-    
+
     if nth <= 0:
-        return -1 
-    else: 
+        return -1
+    else:
         num = str(num)
         num_digits = ""
 

@@ -20,6 +20,4 @@ else:
             else:
                 best = best[1:] + [cnt]
 
-
     print(' '.join(map(str, d)))
-

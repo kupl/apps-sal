@@ -13,8 +13,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n, m = inpmap()
 a = inpmap()
@@ -35,4 +37,3 @@ for i in range(n - 1):
     print(a[i])
 print(*b[:-1], end=(' ' if len(b) > 1 else ''))
 print(x)
-

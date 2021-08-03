@@ -5,4 +5,3 @@ if N % 1000 == 0:
 else:
     n = str(N)
     print((1000 - int(n[-3:])))
-

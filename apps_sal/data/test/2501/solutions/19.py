@@ -17,4 +17,3 @@ ans = 0
 for i in l:
     ans += cnt[i]
 print(ans)
-

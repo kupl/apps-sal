@@ -1,10 +1,9 @@
 n = int(input())
-t = list(map(int,input().split()))
+t = list(map(int, input().split()))
 m = int(input())
 for i in range(m):
-  p,x = list(map(int,input().split()))
-  save = t[p-1]
-  t[p-1] = x
-  print((sum(t)))
-  t[p-1] = save
-
+    p, x = list(map(int, input().split()))
+    save = t[p - 1]
+    t[p - 1] = x
+    print((sum(t)))
+    t[p - 1] = save

@@ -6,5 +6,3 @@ if t:
     print('NO')
 else:
     print('YES')
-
-

@@ -8,15 +8,15 @@ class Solution:
             temp = []
             start = hand[0]
             temp.append(start)
-            for i in range(1,W):
-                if start+i in hand:
-                    temp.append(start+i)
+            for i in range(1, W):
+                if start + i in hand:
+                    temp.append(start + i)
                 else:
                     flag = 1
-                    break     
+                    break
             for x in temp:
                 hand.remove(x)
-            
+
         if flag == 0:
             return True
         else:

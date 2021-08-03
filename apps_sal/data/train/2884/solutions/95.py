@@ -3,6 +3,6 @@ def stringify(node):
     while not node == None:
         res += str(node.data) + " -> "
         node = node.next
-        
+
     res += "None"
     return res

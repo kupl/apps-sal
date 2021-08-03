@@ -17,37 +17,41 @@ class Solution:
                 for stops in bus_routes[buses]:
                     if stops not in seen:
                         if stops == end:
-                            return bus_count+1
+                            return bus_count + 1
                         seen.add(stops)
-                        bfs.append((stops, bus_count+1))
+                        bfs.append((stops, bus_count + 1))
                 bus_routes[buses] = []
         return -1
 
     def approach_2(self, bus_routes, start, end):
-        if start == end: return 0
+        if start == end:
+            return 0
         graph = defaultdict(set)
         bus_routes = list(map(set, bus_routes))
         start_set = set()
         end_set = set()
         for bus, stops in enumerate(bus_routes):
-            for other_buses in range(bus+1, len(bus_routes)):
+            for other_buses in range(bus + 1, len(bus_routes)):
                 other_bus_route = bus_routes[other_buses]
                 if not other_bus_route.isdisjoint(stops):
                     graph[bus].add(other_buses)
                     graph[other_buses].add(bus)
-        for bus,route in enumerate(bus_routes):
-            if start in route: start_set.add(bus)
-            if end in route: end_set.add(bus)
+        for bus, route in enumerate(bus_routes):
+            if start in route:
+                start_set.add(bus)
+            if end in route:
+                end_set.add(bus)
 
         queue = [(node, 1) for node in start_set]
         for bus, changes in queue:
-            if bus in end_set: return changes
+            if bus in end_set:
+                return changes
             for nei in graph[bus]:
                 if nei not in start_set:
                     start_set.add(nei)
-                    queue.append((nei, changes+1))
+                    queue.append((nei, changes + 1))
         return -1
-    
+
     def approach_3(self, buses, start, end):
         on_stop = defaultdict(set)
         for bus, stops in enumerate(buses):
@@ -62,10 +66,8 @@ class Solution:
             for bus in on_stop[stop]:
                 for stops in buses[bus]:
                     if end == start:
-                        return dist+1
+                        return dist + 1
                     if stops not in seen:
                         seen.add(stops)
-                        bfs.append((stops, dist+1))
+                        bfs.append((stops, dist + 1))
         return -1
-
-

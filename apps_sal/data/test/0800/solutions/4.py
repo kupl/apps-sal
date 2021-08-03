@@ -3,6 +3,7 @@
 from sys import stdin
 from math import atan2, pi, degrees
 
+
 def main():
     num_points = int(stdin.readline())
     angles = []
@@ -18,10 +19,13 @@ def main():
         best = min(best, 360.0 - abs(angles[i] - angles[i - 1]))
     print(best)
 
+
 def atan2_deg(y, x):
     return degrees(atan2(y, x) + pi)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

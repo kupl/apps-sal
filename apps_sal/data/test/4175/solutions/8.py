@@ -5,9 +5,8 @@ if len(set(w)) != n:
     print('No')
     return
 # 末尾と先頭の文字が同じ（しりとり）
-for i in range(1,n):
-    if w[i-1][-1] != w[i][0]:
+for i in range(1, n):
+    if w[i - 1][-1] != w[i][0]:
         print('No')
         return
 print('Yes')
-

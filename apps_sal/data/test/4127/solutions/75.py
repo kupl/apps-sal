@@ -1,4 +1,18 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+from decimal import Decimal
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 #from operator import itemgetter
 #from heapq import heappush, heappop
 #import numpy as np
@@ -13,12 +27,13 @@ mod = 10**9 + 7
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-nf = lambda: float(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-nb = lambda: list(map(float, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
 
-from decimal import Decimal
+def ni(): return int(ns())
+def nf(): return float(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def nb(): return list(map(float, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+
+
 a, b = map(Decimal, input().split())
-print(int(a*b))
+print(int(a * b))

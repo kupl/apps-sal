@@ -1,11 +1,11 @@
 import numpy as np
 
-n,s = list(map(int,input().split()))
-a = list(map(int,input().split()))
+n, s = list(map(int, input().split()))
+a = list(map(int, input().split()))
 mod = 998244353
 
 res = 0
-dp = np.zeros(s + 1, dtype = int)
+dp = np.zeros(s + 1, dtype=int)
 
 for i in range(n):
     dp[0] += 1
@@ -15,4 +15,3 @@ for i in range(n):
     res %= mod
 
 print(res)
-

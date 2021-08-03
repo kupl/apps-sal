@@ -6,32 +6,37 @@ from bisect import bisect_left as bl, bisect_right as br, bisect
 mod = pow(10, 9) + 7
 mod2 = 998244353
 def inp(): return stdin.readline().strip()
-def out(var, end="\n"): stdout.write(str(var)+"\n")
+def out(var, end="\n"): stdout.write(str(var) + "\n")
 def outa(*var, end="\n"): stdout.write(' '.join(map(str, var)) + end)
 def lmp(): return list(mp())
 def mp(): return map(int, inp().split())
 def smp(): return map(str, inp().split())
 def l1d(n, val=0): return [val for i in range(n)]
 def l2d(n, m, val=0): return [l1d(n, val) for j in range(m)]
-def remadd(x, y): return 1 if x%y else 0
-def ceil(a,b): return (a+b-1)//b
+def remadd(x, y): return 1 if x % y else 0
+def ceil(a, b): return (a + b - 1) // b
+
 
 def isprime(x):
-    if x<=1: return False
-    if x in (2, 3): return True
-    if x%2 == 0: return False
-    for i in range(3, int(sqrt(x))+1, 2):
-        if x%i == 0: return False
+    if x <= 1:
+        return False
+    if x in (2, 3):
+        return True
+    if x % 2 == 0:
+        return False
+    for i in range(3, int(sqrt(x)) + 1, 2):
+        if x % i == 0:
+            return False
     return True
-    
+
+
 n = int(inp())
 arr = lmp()
 for i in range(n):
-    if arr[i]==2:
+    if arr[i] == 2:
         print(1, end=" ")
-    elif arr[i]^2<arr[i]:
-        print(arr[i]-2, end=" ")
+    elif arr[i] ^ 2 < arr[i]:
+        print(arr[i] - 2, end=" ")
     else:
-        print(arr[i]+2, end=" ")
+        print(arr[i] + 2, end=" ")
 print()
-    

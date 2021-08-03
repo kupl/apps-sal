@@ -3,11 +3,11 @@ import copy
 n, k, x = map(int, input().split())
 c = list(map(int, input().split()))
 for i in range(n):
-    c[i] = (c[i],0)
+    c[i] = (c[i], 0)
 ans = 0
 for i in range(n + 1):
     c2 = copy.deepcopy(c)
-    c2.insert(i, (x,1))
+    c2.insert(i, (x, 1))
     while True:
         dq = False
         for i in range(len(c2) - 2):
@@ -22,8 +22,8 @@ for i in range(n + 1):
         if not dq:
             break
     cntdel = 0
-    for a,b in c2:
-        if b==0:
-            cntdel+=1
+    for a, b in c2:
+        if b == 0:
+            cntdel += 1
     ans = max(ans, n - cntdel)
 print(ans)

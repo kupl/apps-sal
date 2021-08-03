@@ -20,4 +20,3 @@ for case_num in range(t):
             ans += 1
     binary = '{:b}'.format(ans)
     print(binary.rjust(m, '0'))
-

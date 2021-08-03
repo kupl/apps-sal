@@ -11,4 +11,3 @@ for i in range(n):
     ans = min(ans, new_num)
 
 print(ans)
-

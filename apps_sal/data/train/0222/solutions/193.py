@@ -1,9 +1,11 @@
 from collections import defaultdict
 
+
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         A_indices = {a: i for i, a in enumerate(A)}
         lengths = defaultdict(lambda: 2)
+
         def get_value(i, j):
             if (i, j) in memo:
                 return memo[i, j]
@@ -14,9 +16,9 @@ class Solution:
             else:
                 memo[i, j] = 2
             return memo[i, j]
-        
+
         best = 2
-        
+
         for i in range(len(A) - 3, -1, -1):
             for j in range(len(A) - 2, i, -1):
                 if A[i] + A[j] in A_indices:

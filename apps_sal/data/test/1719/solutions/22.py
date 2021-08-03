@@ -20,4 +20,3 @@ for i in range(N):
                         dp[i + 1][q][r][s] %= MOD
 
 print((sum(sum(sum(y) for y in x) for x in dp[N]) % MOD))
-

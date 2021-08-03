@@ -13,4 +13,3 @@ else:
         if r == 0:
             break
     print(*b)
-

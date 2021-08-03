@@ -1,5 +1,6 @@
 from itertools import product
 
+
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp = [[0 for i in range(target + 1)] for j in range(d + 1)]
@@ -12,4 +13,3 @@ class Solution:
                     dp[i][j] = (dp[i][j] + dp[i - 1][j - k]) % mod
                     k += 1
         return dp[d][target] % mod
-

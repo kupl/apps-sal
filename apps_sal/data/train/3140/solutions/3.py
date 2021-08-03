@@ -27,4 +27,3 @@ def happy_numbers(n):
         if _is_happy_number(num):
             result.append(num)
     return result
-

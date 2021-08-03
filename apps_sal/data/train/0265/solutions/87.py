@@ -13,5 +13,4 @@ class Solution:
                 lookup = set([0])
             else:
                 lookup.add(summ)
-        return count 
-
+        return count

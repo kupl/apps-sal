@@ -11,4 +11,3 @@ for i in range(m):
     s += d * (a if d > 0 else b)
 
 print(s / n)
-

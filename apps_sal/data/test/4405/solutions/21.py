@@ -19,7 +19,7 @@ for k in m:
     count.append(m[k])
 count.sort()
 
-k = len(count)-1
+k = len(count) - 1
 ans = 0
 
 if k == 0:
@@ -30,8 +30,8 @@ for i in range(count[-1], 0, -1):
     tmp = i
     res = i
     pos = k
-    while tmp %2 == 0 and pos > 0:
-        tmp = tmp //2
+    while tmp % 2 == 0 and pos > 0:
+        tmp = tmp // 2
         pos -= 1
         if count[pos] < tmp:
             break
@@ -39,7 +39,3 @@ for i in range(count[-1], 0, -1):
     ans = max(res, ans)
 
 print(ans)
-
-
-
-

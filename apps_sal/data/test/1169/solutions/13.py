@@ -10,6 +10,4 @@ while m > 0:
 max_v = n - in_clique + (in_clique == 1)
 
 
-
 print(min_v, max_v)
-

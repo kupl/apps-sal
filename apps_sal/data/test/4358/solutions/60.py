@@ -3,4 +3,4 @@ p = []
 
 for i in range(N):
     p.append(int(input()))
-print(sum(p)-max(p)//2)
+print(sum(p) - max(p) // 2)

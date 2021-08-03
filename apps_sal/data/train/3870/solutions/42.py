@@ -9,8 +9,8 @@ def solve(s):
             print(s[x], 'coo')
             ml.insert(x + y, s[x])
 #             y += 1
-        
+
     print(s)
     print(s[::-1])
     print(ml)
-    return  ''.join(ml)
+    return ''.join(ml)

@@ -1,6 +1,7 @@
 import sys
 # sys.stdin = open('in.txt')
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n = int(input())
 s = input()
@@ -11,11 +12,11 @@ cc = s.count('C')
 ct = s.count('T')
 mx = max(ca, cg, cc, ct)
 
-sum = (ca==mx)+(cg==mx)+(cc==mx)+(ct==mx)
+sum = (ca == mx) + (cg == mx) + (cc == mx) + (ct == mx)
 
 ans = 1
 
 for i in range(n):
-    ans = (ans*sum)%1000000007
+    ans = (ans * sum) % 1000000007
 
 print(ans)

@@ -23,4 +23,3 @@ def get_planet_name(id):
     if id is 8:
         name = "Neptune"
         return name
-

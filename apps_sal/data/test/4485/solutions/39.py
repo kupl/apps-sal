@@ -1,10 +1,10 @@
 from collections import deque
 
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 
 e = [[] for i in range(n)]
 for i in range(m):
-    f, t = map(int,input().split())
+    f, t = map(int, input().split())
     f -= 1
     t -= 1
     e[f].append(t)
@@ -23,5 +23,5 @@ while d:
     for t in e[f]:
         if c + 1 < dist[t]:
             dist[t] = c + 1
-            d.appendleft([t, c+1])
-print('POSSIBLE') if dist[n-1] <= 2 else print('IMPOSSIBLE')
+            d.appendleft([t, c + 1])
+print('POSSIBLE') if dist[n - 1] <= 2 else print('IMPOSSIBLE')

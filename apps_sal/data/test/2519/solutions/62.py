@@ -6,9 +6,9 @@ raw = input().split(" ")
 for i in range(n):
     elem = float(raw[i])
     if(len(pref) == 0):
-        pref.append((elem + 1)/2)
+        pref.append((elem + 1) / 2)
     else:
-        pref.append(pref[-1] + (elem + 1)/2)
+        pref.append(pref[-1] + (elem + 1) / 2)
 
 best = 0
 idx = k - 1

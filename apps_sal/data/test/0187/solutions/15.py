@@ -3,6 +3,7 @@
 
 from collections import Counter
 
+
 def main():
     N = int(input())
     A = [int(input()) for _ in range(N)]
@@ -20,6 +21,8 @@ def main():
     print("YES")
     print(ps[0][0], ps[1][0])
 
+
 def __starting_point(): main()
+
 
 __starting_point()

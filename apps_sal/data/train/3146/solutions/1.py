@@ -4,5 +4,4 @@ def to_utf8_binary(string):
 
 def from_utf8_binary(bitstring):
     import re
-    return  bytes(int(b, 2) for b in re.split('(........)', bitstring) if b).decode('utf-8')
-
+    return bytes(int(b, 2) for b in re.split('(........)', bitstring) if b).decode('utf-8')

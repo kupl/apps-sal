@@ -75,4 +75,3 @@ ans_tmp, M_th_num, M_plus_alpha_th = \
     meguru_bisect(2 * 10 ** 5 + 1, 0)
 # print(ans_tmp, M_th_num, M_plus_alpha_th)
 print((ans_tmp - (M_plus_alpha_th - M) * M_th_num))
-

@@ -23,4 +23,3 @@ while ans == "":
         dfs(str(i), digit)
     digit += 1
 print(ans)
-

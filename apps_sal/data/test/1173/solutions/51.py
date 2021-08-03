@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-from collections import defaultdict,deque
+import time
+from collections import defaultdict, deque
 from heapq import heappush, heappop
 from bisect import bisect_left, bisect_right
-import sys, random, itertools, math
+import sys
+import random
+import itertools
+import math
 sys.setrecursionlimit(10**5)
 input = sys.stdin.readline
 sqrt = math.sqrt
 def LI(): return list(map(int, input().split()))
 def LF(): return list(map(float, input().split()))
-def LI_(): return list([int(x)-1 for x in input().split()])
+def LI_(): return list([int(x) - 1 for x in input().split()])
 def II(): return int(input())
 def IF(): return float(input())
 def LS(): return list(map(list, input().split()))
@@ -20,11 +24,14 @@ def LFR(n): return [LI() for _ in range(n)]
 def LIR_(n): return [LI_() for _ in range(n)]
 def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
+
+
 mod = 1000000007
 inf = float('INF')
-import time
 
-#A
+# A
+
+
 def A():
     s = S()
     t = S()
@@ -35,7 +42,9 @@ def A():
     print(ans)
     return
 
-#B
+# B
+
+
 def B():
     a, b = LI()
     ans = 0
@@ -47,14 +56,16 @@ def B():
 
     return
 
-#C
+# C
+
+
 def C():
     n = II()
     h = LI()
     i = 0
     ans = 0
     while i < n:
-        down = i+1
+        down = i + 1
         while down < n:
             if h[down - 1] >= h[down]:
                 down += 1
@@ -65,13 +76,17 @@ def C():
     print(ans)
     return
 
-#D
+# D
+
+
 def D():
     n = II()
     print((n * (n - 1) // 2))
     return
 
-#E
+# E
+
+
 def E():
     start = time.time()
     n = II()
@@ -103,19 +118,24 @@ def E():
             return
         if f:
             if tern == [n - 1] * n:
-                print((ans-1))
+                print((ans - 1))
                 return
             else:
                 print((-1))
                 return
     return
 
-#F
+# F
+
+
 def F():
     return
 
-#Solve
+# Solve
+
+
 def __starting_point():
     E()
+
 
 __starting_point()

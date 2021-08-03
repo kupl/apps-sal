@@ -4,5 +4,5 @@ def pre_fizz(n):
     while i <= n:
         #num = num[i]
         num.append(i)
-        i +=1
+        i += 1
     return num

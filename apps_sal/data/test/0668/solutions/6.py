@@ -17,6 +17,7 @@ def run():
     else:
         print(-1)
 
+
 def __starting_point():
     run()
 

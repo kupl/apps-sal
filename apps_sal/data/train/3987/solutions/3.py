@@ -8,4 +8,3 @@ def spin_words(sentence):
             new.append(word)
     string = " ".join(new)
     return string
-

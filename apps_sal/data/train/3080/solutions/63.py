@@ -1,6 +1,6 @@
 def who_is_paying(name):
     final_list = [name]
-    if len (name) <= 2:
+    if len(name) <= 2:
         return final_list
     if len(name) > 2:
         name_list = list(name)

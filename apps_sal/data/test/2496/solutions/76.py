@@ -8,9 +8,9 @@ def main():
     if maxA == 1:
         print('pairwise coprime')
         return
-    prime = [i if i % 2 != 0 else 2 for i in range(maxA+1)]
-    f = [False] * (maxA+1)
-    for i in range(3, int(maxA**.5)+1):
+    prime = [i if i % 2 != 0 else 2 for i in range(maxA + 1)]
+    f = [False] * (maxA + 1)
+    for i in range(3, int(maxA**.5) + 1):
         if prime[i] != i:
             continue
         p = i * 2
@@ -61,6 +61,9 @@ def main():
     else:
         print('not coprime')
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

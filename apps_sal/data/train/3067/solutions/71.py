@@ -1,4 +1,4 @@
 def getVolumeOfCubiod(length, width, height):
-    
-    volume= height*width*length
+
+    volume = height * width * length
     return volume

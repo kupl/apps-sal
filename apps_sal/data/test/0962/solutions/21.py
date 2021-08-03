@@ -1,13 +1,16 @@
 import sys
 sys.setrecursionlimit(10**7)
+
+
 def main():
     N, M = list(map(int, input().split()))
     l = [[] for _ in range(N)]
     for _ in range(M):
         a, b = list(map(int, input().split()))
-        l[a-1].append(b-1)
+        l[a - 1].append(b - 1)
     c = [0] * N
     loop = []
+
     def cyclic(n):
         if c[n] == 2:
             return False
@@ -29,5 +32,6 @@ def main():
         return
     print((0))
     return
-main()
 
+
+main()

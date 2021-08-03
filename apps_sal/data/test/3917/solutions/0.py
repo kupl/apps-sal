@@ -12,13 +12,13 @@ class Point:
 def distance(p1, p2):
     x = p1.x - p2.x
     y = p1.y - p2.y
-    return x*x + y*y
+    return x * x + y * y
 
 
 def bruteForce(point_set, left, right):
     min_dist = INF
     for i in range(left, right):
-        for j in range(i+1, right):
+        for j in range(i + 1, right):
             min_dist = min(min_dist, distance(point_set[i], point_set[j]))
     return min_dist
 
@@ -33,7 +33,7 @@ def stripClosest(point_set, left, right, mid, min_dist):
     l = len(splitted_points)
     smallest = INF
     for i in range(l):
-        for j in range(i+1, l):
+        for j in range(i + 1, l):
             if (splitted_points[i].y - splitted_points[j].y) ** 2 >= min_dist:
                 break
             d = distance(splitted_points[i], splitted_points[j])
@@ -47,7 +47,7 @@ def closestUtil(point_set, left, right):
 
     mid = (left + right) // 2
     dist_left = closestUtil(point_set, left, mid)
-    dist_right = closestUtil(point_set, mid+1, right)
+    dist_right = closestUtil(point_set, mid + 1, right)
     dist_min = min(dist_left, dist_right)
 
     return min(dist_min, stripClosest(point_set, left, right, mid, dist_min))
@@ -62,8 +62,7 @@ for i in range(n):
 
 point_set = []
 for i in range(n):
-    point_set.append(Point(i, pref[i+1]))
+    point_set.append(Point(i, pref[i + 1]))
 
 ans = closestUtil(point_set, 0, n)
 stdout.write(str(ans))
-

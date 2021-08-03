@@ -1,8 +1,8 @@
 import bisect
 
-N,Q = list(map(int,input().split()))
-ws = list(map(int,input().split()))
-qs = list(map(int,input().split()))
+N, Q = list(map(int, input().split()))
+ws = list(map(int, input().split()))
+qs = list(map(int, input().split()))
 
 cums = [0]
 for w in ws:
@@ -15,6 +15,5 @@ for q in qs:
         damage = 0
         print(N)
     else:
-        i = bisect.bisect(cums,damage)
-        print(N-i+1)
-
+        i = bisect.bisect(cums, damage)
+        print(N - i + 1)

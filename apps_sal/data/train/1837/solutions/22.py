@@ -8,9 +8,6 @@ class Solution:
         foods = sorted(meal)
         result = [['Table'] + [food for food in foods]]
 
-        for table in sorted(desk,key = int):
+        for table in sorted(desk, key=int):
             result.append([table] + [str(desk[table][food]) for food in foods])
         return result
-        
-        
-

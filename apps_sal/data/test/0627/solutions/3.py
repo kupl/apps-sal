@@ -1,7 +1,10 @@
-import sys, math
+import sys
+import math
+
 
 def mp():
     return list(map(int, input().split()))
+
 
 def main():
     n = int(input())
@@ -11,4 +14,6 @@ def main():
             print(a[:i] + a[i + 1:])
             return
     print(a[:len(a) - 1])
+
+
 main()

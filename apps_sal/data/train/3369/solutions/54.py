@@ -3,6 +3,6 @@ def move(position, roll):
         position += roll * 2
     elif roll < 0:
         position -= roll * 2
-    else: 
+    else:
         position = position
     return position

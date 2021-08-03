@@ -15,6 +15,8 @@ def f(a, ind):
         if b[j] % 2 == 0:
             res += b[j]
     return res
+
+
 a = list(map(int, input().split()))
 ans = 0
 for i in range(14):

@@ -27,10 +27,9 @@ for i in range(1, n):
         curh -= 1
 for line in zip(*ans):
     for i in range(len(line)):
-        if ((i > 0 and line[i - 1] == '+') or
-          (i < len(line) - 1 and line[i + 1] == '+')) and line[i] == ' ':
+        if ((i > 0 and line[i - 1] == '+')
+                or (i < len(line) - 1 and line[i + 1] == '+')) and line[i] == ' ':
             print('-', end='')
         else:
             print(line[i], end='')
     print()
-

@@ -2,7 +2,7 @@ def main():
     # import sys
     # readline = sys.stdin.readline
     # readlines = sys.stdin.readlines
-    
+
     A = input()
     N = len(A)
     a = ord('a')
@@ -46,5 +46,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

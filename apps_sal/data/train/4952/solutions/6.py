@@ -8,4 +8,3 @@ def partial_keys(d):
                 if re.match(item, key):
                     return d[key]
     return MyDict(**d)
-

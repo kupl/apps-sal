@@ -1,4 +1,4 @@
-def counting_valleys(s): 
+def counting_valleys(s):
     res = current = 0
     for c in s:
         if c == 'U':

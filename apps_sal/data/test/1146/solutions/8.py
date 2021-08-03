@@ -8,6 +8,3 @@ if len(s) == m:
     print("YES")
 else:
     print("NO")
-
-
-

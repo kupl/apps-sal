@@ -1,17 +1,19 @@
 from collections import Counter
 from heapq import heappop, heapify
 
+
 def create_pairs(A):
     sorted_A = sorted(A)
     prev = sorted_A[0]
     pairs = [[prev, 1]]
     for curr in sorted_A[1:]:
-        if curr !=  prev:
+        if curr != prev:
             pairs.append([curr, 1])
             prev = curr
         else:
             pairs[-1][1] += 1
     return [tuple(x) for x in pairs]
+
 
 def is_possible_divide(heap, k):
     if len(heap) == 0:
@@ -35,6 +37,7 @@ def is_possible_divide(heap, k):
         heapify(heap)
         return is_possible_divide(heap, k)
 
+
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
@@ -44,4 +47,3 @@ class Solution:
         print(heap)
         heapify(heap)
         return is_possible_divide(heap, k)
-

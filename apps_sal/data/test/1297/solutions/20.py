@@ -9,4 +9,5 @@ def __starting_point():
 
     print(result)
 
+
 __starting_point()

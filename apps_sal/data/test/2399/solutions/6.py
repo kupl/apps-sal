@@ -21,11 +21,11 @@ def solve():
 
     if tmp is not 0:
         win = False
-        for i in range(tmp+1):
+        for i in range(tmp + 1):
             part2 = tmp - i - a
             if i > part2 or i >= 2 * b:
                 break
-            if 2*b <= part2 or b <= i < a or b <= part2 < a:
+            if 2 * b <= part2 or b <= i < a or b <= part2 < a:
                 continue
             ncnt = cnt
             if i >= a:
@@ -41,4 +41,3 @@ def solve():
 
 for _ in range(test_case):
     print(solve())
-

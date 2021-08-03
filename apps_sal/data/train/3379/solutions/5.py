@@ -1,1 +1,1 @@
-encrypter=lambda s: "".join(["mlkjihgfedcbazyxwvutsrqpon"["abcdefghijklmnopqrstuvwxyz".index(a)] if a in "abcdefghijklmnopqrstuvwxyz" else a for a in s])
+def encrypter(s): return "".join(["mlkjihgfedcbazyxwvutsrqpon"["abcdefghijklmnopqrstuvwxyz".index(a)] if a in "abcdefghijklmnopqrstuvwxyz" else a for a in s])

@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, m = rd(), rd()[0]
 r = m
 for x in rd() + rd():
@@ -9,4 +11,3 @@ for x in rd() + rd():
         print(-1)
         return
 print(r - m)
-

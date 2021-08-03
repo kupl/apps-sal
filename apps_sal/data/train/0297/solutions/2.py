@@ -1,6 +1,6 @@
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
-        
+
         def freq(tiles):
             d = {}
             for c in tiles:
@@ -9,7 +9,7 @@ class Solution:
                 else:
                     d[c] = 1
             return d
-        
+
         def build(d, s):
             new_d = {}
             for key, value in d.items():
@@ -18,7 +18,7 @@ class Solution:
                 else:
                     new_d[key] = value
             return new_d
-        
+
         def generate(options):
             sol = []
             for key, value in options.items():
@@ -27,6 +27,6 @@ class Solution:
                     fringe = generate(build(options, key))
                     sol += fringe
                     sol += [key + f for f in fringe]
-            return sol        
-        
+            return sol
+
         return len(set(generate(freq(tiles))))

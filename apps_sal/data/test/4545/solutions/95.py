@@ -1,3 +1,3 @@
-a,b=[int(input()) for i in range(2)]
+a, b = [int(input()) for i in range(2)]
 
-print(a**2-b)
+print(a**2 - b)

@@ -9,7 +9,7 @@ class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         queue = [cloned]
         visited = set()
-        
+
         while queue:
             node = queue.pop()
             if node:
@@ -20,6 +20,3 @@ class Solution:
                     queue.append(node.left)
                     queue.append(node.right)
         return False
-
-        
-

@@ -10,9 +10,9 @@ for i in range(26):
     a.append(0)
     b.append(-1)
 for i in range(len(s)):
-    a[ord(s[i])-ord('a')] += 1
-    if b[ord(s[i])-ord('a')] == -1:
-        b[ord(s[i])-ord('a')] = i
+    a[ord(s[i]) - ord('a')] += 1
+    if b[ord(s[i]) - ord('a')] == -1:
+        b[ord(s[i]) - ord('a')] = i
     #print(s[i], i)
 num = 0
 c = []
@@ -20,7 +20,7 @@ for i in range(26):
     if a[i] != 0:
         num += 1
         c.append(b[i])
-#print(c)
+# print(c)
 i = 0
 lastNum = 0
 if num < n:
@@ -50,8 +50,7 @@ else:
         n -= 1
     print(s[lastNum:])
     #print(c, lastNum)
-#if num >= n:
+# if num >= n:
 
 
 #print(a, b)
-

@@ -1,4 +1,5 @@
-r = lambda: map(int, input().split())
+def r(): return map(int, input().split())
+
 
 n, = r()
 a = sorted(tuple(r()) for _ in range(n))[::-1]

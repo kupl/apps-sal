@@ -6,14 +6,14 @@ al = int(alr[0])
 ar = int(alr[1])
 at = ar - al
 
-for i in range(n-1):
+for i in range(n - 1):
     lr = input().split()
     l = (int(lr[0]), 'l')
     r = (int(lr[1]), 'r')
     lrs.append(l)
     lrs.append(r)
 
-slrs = sorted(lrs, key = lambda x: x[0])
+slrs = sorted(lrs, key=lambda x: x[0])
 
 c = 0
 lt = 101
@@ -42,4 +42,3 @@ for i in range(2 * (n - 1)):
             lt = 101
 
 print(at)
-

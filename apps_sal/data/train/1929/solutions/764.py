@@ -4,7 +4,7 @@ class StreamChecker:
         self.trie = collections.defaultdict(dict)
         self.construct_trie(words)
         self.l = []
-        
+
     def construct_trie(self, words):
         for word in words:
             t = self.trie
@@ -13,13 +13,13 @@ class StreamChecker:
                     t[w] = {}
                 t = t[w]
             t['$'] = True
-        
+
         print((self.trie))
-        
+
     def query(self, letter: str) -> bool:
         t = self.trie
-        ans  = False
-        
+        ans = False
+
         temp = []
         for d in self.l:
             if(letter in d):
@@ -35,4 +35,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

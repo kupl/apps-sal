@@ -1,1 +1,1 @@
-is_even = lambda n: not n % 2
+def is_even(n): return not n % 2

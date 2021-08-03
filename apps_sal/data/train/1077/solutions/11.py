@@ -1,23 +1,23 @@
-t=int(input())
-listd=[]
-listr=[]
+t = int(input())
+listd = []
+listr = []
 while(t):
-    n=int(input())
-    x=n
+    n = int(input())
+    x = n
     while(n):
-        a,b=input().split(' on ')
+        a, b = input().split(' on ')
         listd.append(a)
         listr.append(b)
-        n=n-1
-    print('Begin on '+listr.pop())
+        n = n - 1
+    print('Begin on ' + listr.pop())
     listd.pop(0)
-    x=x-1
+    x = x - 1
     while(x):
-        temp=listd.pop()
-        if(temp=='Left'):
-            print('Right on '+listr.pop())
+        temp = listd.pop()
+        if(temp == 'Left'):
+            print('Right on ' + listr.pop())
         else:
-            print('Left on '+listr.pop())
-        x=x-1
+            print('Left on ' + listr.pop())
+        x = x - 1
     print('')
-    t=t-1
+    t = t - 1

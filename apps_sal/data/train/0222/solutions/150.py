@@ -20,10 +20,10 @@ class Solution:
             b = A[i]
             for j in range(i):
                 a = A[j]
-                if (b-a, a) not in dp:
+                if (b - a, a) not in dp:
                     dp[(a, b)] = 2
-                elif b-a < a:
-                    dp[(a, b)] = dp[(b-a, a)]+1
+                elif b - a < a:
+                    dp[(a, b)] = dp[(b - a, a)] + 1
         res = max(dp.values())
-        #print(dp)
-        return res if res!=2 else 0
+        # print(dp)
+        return res if res != 2 else 0

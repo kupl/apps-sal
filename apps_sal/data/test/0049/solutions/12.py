@@ -13,4 +13,3 @@ while True:
     else:
         decimal = int(str(limit_int) * (count + 1))
         limit += int(str(limit_int) + '0' * count) * (count + 1)
-

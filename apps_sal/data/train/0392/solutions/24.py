@@ -2,7 +2,7 @@ class Solution:
     def numWays(self, s: str) -> int:
         # 000 ==> 1
         # 111 ===> 1
-        nums = [0]*len(s)
+        nums = [0] * len(s)
         cum = 0
         hh = Counter()
         for i in range(len(s)):
@@ -13,8 +13,7 @@ class Solution:
         if cum % 3 != 0:
             return 0
         if cum == 0:
-            return int(math.comb(hh[0]-1,2))  % (1000000007)
-        each = cum//3 
+            return int(math.comb(hh[0] - 1, 2)) % (1000000007)
+        each = cum // 3
         print((hh, each))
-        return int(hh[each]*hh[2*each] % (1000000007))
-
+        return int(hh[each] * hh[2 * each] % (1000000007))

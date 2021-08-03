@@ -9,7 +9,3 @@ while q <= a[-1]:
     q += 1
     sum += 1
 print(sum)
-
-
-    
-

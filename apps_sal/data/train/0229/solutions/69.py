@@ -15,7 +15,3 @@ class Solution:
             table[num] -= 1
             table[pair] -= 1
         return True
-            
-            
-                
-

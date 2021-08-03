@@ -1,2 +1,2 @@
-a=list(sorted(map(int,input().split(" "))))
-print(a[2]-a[0])
+a = list(sorted(map(int, input().split(" "))))
+print(a[2] - a[0])

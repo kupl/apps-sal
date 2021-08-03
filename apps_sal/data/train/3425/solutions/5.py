@@ -1,9 +1,10 @@
 import math
 
+
 def word_square(letters):
     length = int(math.sqrt(len(letters)))
     if length ** 2 != len(letters):
-        return False;
+        return False
     dic = {}
     for i in letters:
         if i not in dic:

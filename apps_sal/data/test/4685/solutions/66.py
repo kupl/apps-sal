@@ -1,8 +1,7 @@
-A,B,C = sorted(map(int,input().split()))
-K=int(input())
+A, B, C = sorted(map(int, input().split()))
+K = int(input())
 
 for i in range(K):
-	C*=2
+    C *= 2
 
-print((A+B+C))
-
+print((A + B + C))

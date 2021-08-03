@@ -19,9 +19,9 @@ else:
                     ss.remove(y)
                     bb = True
                     break
-            if not bb:                
+            if not bb:
                 bb1 = False
-                break                
+                break
         if bb1:
             if len(s) > len(t):
                 print('both')
@@ -31,4 +31,3 @@ else:
             print('need tree')
     else:
         print('need tree')
-

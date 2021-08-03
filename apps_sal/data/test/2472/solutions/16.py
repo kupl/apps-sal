@@ -3,8 +3,8 @@ n = int(input())
 work_lst = []
 
 for _ in range(n):
-    a,b = map(int,input().split())
-    work_lst.append((a,b))
+    a, b = map(int, input().split())
+    work_lst.append((a, b))
 
 work_lst.sort(key=lambda x: x[1])
 work_acc = [i[0] for i in work_lst]

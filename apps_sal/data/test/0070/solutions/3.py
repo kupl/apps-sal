@@ -13,6 +13,5 @@ while ptr >= 0 and zerocount < k:
 if ptr == -1:
     print(len(n) - 1)
 else:
-    
-    print(ans)
 
+    print(ans)

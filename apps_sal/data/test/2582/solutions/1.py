@@ -1,5 +1,5 @@
-n=int(input())
-ns=[int(x) for x in input().split()]
+n = int(input())
+ns = [int(x) for x in input().split()]
 # n=200000
 # ns=[x+1 for x in range(n)]
 
@@ -37,101 +37,105 @@ def get_sum(l,r):
 # ns=[5, 8, 4, 1, 6, 7, 2, 3]
 # n=len(ns)
 
-maxx=max(ns)+10
-lst=[None]*n
-nxt=[None]*n
-tmp=[(-1,maxx)]
-mp=[False]*n
-wh=[None]*(n+1)
+maxx = max(ns) + 10
+lst = [None] * n
+nxt = [None] * n
+tmp = [(-1, maxx)]
+mp = [False] * n
+wh = [None] * (n + 1)
 for i in range(n):
-    c=ns[i]
-    while tmp[-1][1]<=c:
+    c = ns[i]
+    while tmp[-1][1] <= c:
         tmp.pop()
-    lst[i]=tmp[-1][0]
-    tmp.append((i,c))
-tmp=[(n,maxx)]
+    lst[i] = tmp[-1][0]
+    tmp.append((i, c))
+tmp = [(n, maxx)]
 for i in range(n):
-    i=n-i-1
-    c=ns[i]
-    while tmp[-1][1]<=c:
+    i = n - i - 1
+    c = ns[i]
+    while tmp[-1][1] <= c:
         tmp.pop()
-    nxt[i]=tmp[-1][0]
-    tmp.append((i,c))
-lm={}
+    nxt[i] = tmp[-1][0]
+    tmp.append((i, c))
+lm = {}
 for i in range(n):
-    lm[(lst[i]+1,nxt[i]-1)]=ns[i]
+    lm[(lst[i] + 1, nxt[i] - 1)] = ns[i]
 # print(lm)
 
 
 for i in range(n):
-    wh[ns[i]]=i
+    wh[ns[i]] = i
 
-def check(i,m,lm):
-    f=ns[m]-ns[i]
-    f=wh[f]
-    if lm[0]<=f<=lm[1]:
+
+def check(i, m, lm):
+    f = ns[m] - ns[i]
+    f = wh[f]
+    if lm[0] <= f <= lm[1]:
         return True
     return False
+
+
 # print(wh)
-ans=0
-rec=[(0,n-1)]
+ans = 0
+rec = [(0, n - 1)]
+
 
 def get():
-    if len(rec)==0:
+    if len(rec) == 0:
         return False
-    l,r=rec.pop()
-    if r-l+1<=2:
+    l, r = rec.pop()
+    if r - l + 1 <= 2:
         return True
     nonlocal ans
-    x=lm[(l,r)]
-    lc=wh[x]
-    if lc<(l+r)//2:
-        for i in range(l,lc):
-            c=ns[i]
-            c=ns[lc]-c
-            c=wh[c]
-            if lc<=c<=r:
-                ans+=1
+    x = lm[(l, r)]
+    lc = wh[x]
+    if lc < (l + r) // 2:
+        for i in range(l, lc):
+            c = ns[i]
+            c = ns[lc] - c
+            c = wh[c]
+            if lc <= c <= r:
+                ans += 1
     else:
-        for i in range(lc+1,r+1):
-            c=ns[i]
-            c=ns[lc]-c
-            c=wh[c]
-            if l<=c<=lc:
-                ans+=1
-    rec.append((l,lc-1))
-    rec.append((lc+1,r))
-while len(rec)>0:
+        for i in range(lc + 1, r + 1):
+            c = ns[i]
+            c = ns[lc] - c
+            c = wh[c]
+            if l <= c <= lc:
+                ans += 1
+    rec.append((l, lc - 1))
+    rec.append((lc + 1, r))
+
+
+while len(rec) > 0:
     get()
 print(ans)
 quit()
 
 
-
-
-get(0,n-1)
+get(0, n - 1)
 print(ans)
 quit()
 
 
-x=n
-while x>=1:
-    lc=wh[x]
-    mp[lc]=True
-    l,r=lc-1,lc+1
-    while l>lst[lc] and (not mp[l]) :
-        l-=1
-    while r<nxt[lc] and (not mp[r]):
-        r+=1
-    if lc-l<r-lc:
-        for i in range(l+1,lc):
-            if check(i,lc,(lc+1,r-1)):
-                ans+=1
+x = n
+while x >= 1:
+    lc = wh[x]
+    mp[lc] = True
+    l, r = lc - 1, lc + 1
+    while l > lst[lc] and (not mp[l]):
+        l -= 1
+    while r < nxt[lc] and (not mp[r]):
+        r += 1
+    if lc - l < r - lc:
+        for i in range(l + 1, lc):
+            if check(i, lc, (lc + 1, r - 1)):
+                ans += 1
     else:
-        for i in range(lc+1,r):
-            if check(i,lc,(l+1,lc-1)):
-                ans+=1
-    x-=1
+        for i in range(lc + 1, r):
+            if check(i, lc, (l + 1, lc - 1)):
+                ans += 1
+    x -= 1
 print(ans)
 #
 # # print(lst)
@@ -151,4 +155,3 @@ print(ans)
 #     print('True')
 # else:
 #     print('False')
-

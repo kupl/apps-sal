@@ -8,7 +8,8 @@ for i in range(M):
 
 dp[0] = 1
 for i in range(1, N + 1):
-    if dp[i] == -1: continue
+    if dp[i] == -1:
+        continue
     tmp = 0
     if dp[i - 1] != -1:
         tmp += dp[i - 1]

@@ -4,4 +4,3 @@ if 1 in c:
     print(-1)
 else:
     print(1)
-

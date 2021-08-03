@@ -2,6 +2,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         dp = {}
         M = 10 ** 9 + 7
+
         def go(now, f):
             if (now, f) in dp:
                 return dp[(now, f)]

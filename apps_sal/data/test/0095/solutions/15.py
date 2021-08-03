@@ -14,4 +14,3 @@ for i in range(len(a) - 1):
     else:
         st = 2
 print(ans)
-

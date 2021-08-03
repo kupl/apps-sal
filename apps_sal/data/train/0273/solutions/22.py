@@ -13,7 +13,7 @@ class Solution:
                 if (nxt_pos, nxt_speed) not in visited:
                     visited.add((nxt_pos, nxt_speed))
                     nxt.append((nxt_pos, nxt_speed))
-                
+
                 nxt_pos = pos
                 nxt_speed = -1 if speed > 0 else 1
                 if (nxt_pos, nxt_speed) not in visited:
@@ -21,4 +21,3 @@ class Solution:
                     nxt.append((nxt_pos, nxt_speed))
             q = nxt
             steps += 1
-

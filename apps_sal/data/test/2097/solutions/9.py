@@ -12,4 +12,3 @@ for i in range(t):
         print(arr + 1)
     else:
         print(arr)
-

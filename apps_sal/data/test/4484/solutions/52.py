@@ -20,4 +20,3 @@ elif n == m - 1 or n == m + 1:
     print(res)
 else:
     print((0))
-

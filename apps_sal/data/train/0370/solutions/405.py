@@ -7,22 +7,23 @@ class Solution:
                     m[i].append(idx)
                     m[f].append(idx)
             return
-        
+
         n = len(A)
         m = defaultdict(list)
         for idx, val in enumerate(A):
             factorize(m, val, idx)
-        
+
         al = [[] for _ in range(n)]
         for k in m:
-            if k == 1: continue
+            if k == 1:
+                continue
             vals = m[k]
             for idx in range(len(vals) - 1):
-                al[vals[idx]].append(vals[idx+1])
-                al[vals[idx+1]].append(vals[idx])
-                
-        v = [False]*n
-            
+                al[vals[idx]].append(vals[idx + 1])
+                al[vals[idx + 1]].append(vals[idx])
+
+        v = [False] * n
+
         def dfs(val):
             # print(f\"dfs: {val}\")
             if v[val]:
@@ -32,7 +33,7 @@ class Solution:
             for nei in al[val]:
                 res += dfs(nei)
             return res
-        
+
         max_csize = 0
         # print(al)
         for idx in range(n):
@@ -41,6 +42,3 @@ class Solution:
                 max_csize = max(max_csize, dfs(idx))
                 # print(f\"{idx}: {max_csize}\")
         return max_csize
-        
-        
-

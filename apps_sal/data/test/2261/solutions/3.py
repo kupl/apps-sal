@@ -1,5 +1,6 @@
 import sys
 
+
 def check(arr):
     n = len(arr)
     for i in range(n):
@@ -14,17 +15,20 @@ def check(arr):
                 return (arr[i], arr[j])
     return False
 
+
 def inv(arr):
     return [(not x) for x in arr]
+
 
 def gen(n):
     if n == 1:
         return [[True]]
     curr = gen(n // 2)
     ans = []
-    ans.extend((x +     x  for x in curr))
+    ans.extend((x + x for x in curr))
     ans.extend((x + inv(x) for x in curr))
     return ans
+
 
 k = int(input())
 ans = gen(2 ** k)

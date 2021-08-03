@@ -3,6 +3,7 @@ MOD = 998244353
 N, K = list(map(int, input().split()))
 AMat = [list(map(int, input().split())) for _ in range(N)]
 
+
 class UnionFind:
     def __init__(self, N):
         self.parent = list(range(N))
@@ -10,7 +11,7 @@ class UnionFind:
         self.size = [1] * N
 
     def find(self, x):
-        if self.parent[x]==x:
+        if self.parent[x] == x:
             return x
         else:
             self.parent[x] = self.find(self.parent[x])
@@ -36,9 +37,10 @@ class UnionFind:
     def get_size(self, x):
         return self.size[self.find(x)]
 
+
 uf_x = UnionFind(N)
-for i in range(N-1):
-    for j in range(i+1, N):
+for i in range(N - 1):
+    for j in range(i + 1, N):
         flag = True
         for y in range(N):
             if AMat[y][i] + AMat[y][j] > K:
@@ -48,8 +50,8 @@ for i in range(N-1):
             uf_x.unite(i, j)
 
 uf_y = UnionFind(N)
-for i in range(N-1):
-    for j in range(i+1, N):
+for i in range(N - 1):
+    for j in range(i + 1, N):
         flag = True
         for x in range(N):
             if AMat[i][x] + AMat[j][x] > K:
@@ -70,9 +72,8 @@ ans_list = ans_list1 + ans_list2
 ans = 1
 for a in ans_list:
     if a >= 1:
-        for x in range(1, a+1):
+        for x in range(1, a + 1):
             ans *= x
             ans %= MOD
 
-print((ans%MOD))
-
+print((ans % MOD))

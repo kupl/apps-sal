@@ -12,9 +12,9 @@ def solve(seq):
     for i in range(5001):
         if cnt[i] > 0:
             if 2 * i < 5001:
-                n2remove = n - acc[2*i] + acc[i-1]
+                n2remove = n - acc[2 * i] + acc[i - 1]
             else:
-                n2remove = n - acc[-1] + acc[i-1]
+                n2remove = n - acc[-1] + acc[i - 1]
             ans = min(ans, n2remove)
 
     return ans
@@ -33,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

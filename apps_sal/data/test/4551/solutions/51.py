@@ -12,4 +12,3 @@ elif diff > 0:
     print("Left")
 else:
     print("Right")
-

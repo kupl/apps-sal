@@ -1,6 +1,6 @@
 from collections import deque
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 b_1 = deque()
 b_2 = deque()
 switch = 0
@@ -16,7 +16,6 @@ for i in a:
 b_1 = list(b_1)
 b_2 = list(b_2)
 if switch == 0:
-    print((' '.join(list(map(str,b_1)))))
+    print((' '.join(list(map(str, b_1)))))
 else:
-    print((' '.join(list(map(str,b_2)))))
-
+    print((' '.join(list(map(str, b_2)))))

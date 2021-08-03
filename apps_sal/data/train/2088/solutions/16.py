@@ -3,6 +3,7 @@ c = [*map(int, input().split())]
 inf = n + 1
 dp = [[inf for _ in range(n)] for __ in range(n)]
 
+
 def find(l, r):
     if l > r:
         return 0
@@ -19,6 +20,7 @@ def find(l, r):
         m = min(m, find(l + 2, r) + 1)
     dp[l][r] = m
     return m
+
 
 mi = inf
 for i in range(n):

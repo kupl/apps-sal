@@ -7,4 +7,3 @@ for x in a:
         ans += 1
         divs.append(x)
 print(ans)
-

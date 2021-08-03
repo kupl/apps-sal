@@ -4,4 +4,4 @@ def square_it(digits):
     if n != int(n):
         return "Not a perfect square!"
     n = int(n)
-    return "\n".join(s[i*n:i*n+n] for i in range(int(n)))
+    return "\n".join(s[i * n:i * n + n] for i in range(int(n)))

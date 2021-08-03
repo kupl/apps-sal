@@ -1,19 +1,21 @@
 import collections
+
+
 def doit():
     N = int(input())
     graph = dict()
-    for n in range(N) :
+    for n in range(N):
         graph[n] = list()
 
     for n in range(N - 1):
         a, b = map(int, input().split())
-        graph[a-1].append(b-1)
-        graph[b-1].append(a-1)
+        graph[a - 1].append(b - 1)
+        graph[b - 1].append(a - 1)
 
     msize = 0
     for k in graph:
         msize = max(msize, len(graph[k]))
-    print(msize+1)
+    print(msize + 1)
 
     root = 0
 
@@ -42,5 +44,6 @@ def doit():
             colors[neighbour] = next(color)
             queue.append(neighbour)
     print(" ".join(map(str, colors)))
+
 
 doit()

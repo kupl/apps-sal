@@ -7,7 +7,7 @@ class Solution:
     def foo(self, i, j, p):
         if i == j:
             return p[i]
-        
+
         key = str(i) + str(j)
         if key in self.mp:
             return self.mp[key]
@@ -15,7 +15,6 @@ class Solution:
             p[i] + self.foo(i + 1, j, p),
             p[j] + self.foo(i, j - 1, p),
         )
-        
+
         self.mp[key] = v
         return v
-

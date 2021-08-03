@@ -15,4 +15,3 @@ for num in a:
             counts[progress[num] - 1] -= 1
             counts[progress[num]] += 1
 print(n - counts[5] * 6)
-

@@ -5,4 +5,3 @@ class Solution:
             right = max(right, a)
             res += right == i
         return res
-

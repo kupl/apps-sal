@@ -5,6 +5,6 @@ A, B, C = (sorted(map(int, input().split())) for _ in range(3))
 
 ans = 0
 for b in B:
-  ans += bisect_left(A, b) * (N - bisect(C, b))
+    ans += bisect_left(A, b) * (N - bisect(C, b))
 
 print(ans)

@@ -1,6 +1,6 @@
 l, r, k = map(int, input().split())
 ans = []
-nowa = 1;
+nowa = 1
 while (nowa <= r):
     if (nowa >= l):
         ans.append(nowa)

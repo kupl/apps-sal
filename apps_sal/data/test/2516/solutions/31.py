@@ -9,6 +9,7 @@ i番目に2、5の倍数が出てきたら、
 '''
 from collections import defaultdict
 
+
 def solve2(s):
     ans = 0
     for i, c in enumerate(s):
@@ -16,12 +17,14 @@ def solve2(s):
             ans += i + 1
     return ans
 
+
 def solve5(s):
     ans = 0
     for i, c in enumerate(s):
         if c in '05':
             ans += i + 1
     return ans
+
 
 def solve_other(s, p):
     reminders = defaultdict(lambda: 0)
@@ -37,6 +40,7 @@ def solve_other(s, p):
     for r, cnt in reminders.items():
         ans += cnt * (cnt - 1) // 2
     return ans
+
 
 n, p = list(map(int, input().split()))
 s = input()

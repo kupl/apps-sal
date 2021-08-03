@@ -11,15 +11,13 @@ for i in range(26):
     updated = True
     while updated:
         updated = False
-        for idx in range(len(s)-1, -1, -1):
+        for idx in range(len(s) - 1, -1, -1):
             if s[idx] == char:
-                if idx < len(s)-1 and s[idx+1] == prev:
+                if idx < len(s) - 1 and s[idx + 1] == prev:
                     s.pop(idx)
                     updated = True
-                elif idx > 0 and s[idx-1] == prev:
+                elif idx > 0 and s[idx - 1] == prev:
                     s.pop(idx)
                     updated = True
 
-print( n - len(s))
-
-
+print(n - len(s))

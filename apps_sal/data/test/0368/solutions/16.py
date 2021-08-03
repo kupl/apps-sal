@@ -25,4 +25,3 @@ elif b != w:
     print('Black')
 else:
     print('Draw')
-

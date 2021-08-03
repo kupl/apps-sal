@@ -5,4 +5,3 @@ dx = abs(x1 - x2)
 dy = abs(y1 - y2)
 
 print(max(dx, dy))
-

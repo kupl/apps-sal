@@ -13,6 +13,7 @@ def isqrt(n):
     else:
         raise ValueError("square root not defined for negative numbers")
 
+
 def count_divisors(n):
     s = isqrt(n)
-    return 2*sum(n//i for i in range(1,s+1))-s*s
+    return 2 * sum(n // i for i in range(1, s + 1)) - s * s

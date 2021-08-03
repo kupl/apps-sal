@@ -1,3 +1,3 @@
-T,X=map(int, input().split())
+T, X = map(int, input().split())
 
-print(T/X)
+print(T / X)

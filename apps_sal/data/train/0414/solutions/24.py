@@ -6,13 +6,12 @@ class Solution:
         for num in arr[1:]:
             if winner > num:
                 streak += 1
-            
+
             else:
                 winner = num
                 streak = 1
-            
+
             if streak == k:
                 return winner
-        
-        return winner
 
+        return winner

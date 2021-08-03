@@ -2,7 +2,7 @@ class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         q = collections.deque()
         n = len(status)
-        
+
         for i in initialBoxes:
             q.append(i)
         key = set()
@@ -13,7 +13,7 @@ class Solution:
             for i in range(length):
                 box = q.popleft()
 
-                if status[box]==0 and box not in key:
+                if status[box] == 0 and box not in key:
                     q.append(box)
                 else:
                     hasOpen = True

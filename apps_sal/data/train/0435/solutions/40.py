@@ -1,9 +1,8 @@
 class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
-        #O(n^2) solutions: build all sub, find sum, divisible by K
-        
-        #O(n): store something with value % K
-        
+        # O(n^2) solutions: build all sub, find sum, divisible by K
+
+        # O(n): store something with value % K
         '''
         #Running sum
         a - b = n * k, a is curr_sum, b is prev_sum
@@ -11,7 +10,7 @@ class Solution:
         b = a - n * k 
         b % k = a % k
         -> see if running total % k -> find the prev_sum % k
-        
+
         '''
         dp = [1] + [0] * K
         result = 0
@@ -20,5 +19,5 @@ class Solution:
             running_sum += num
             result += dp[running_sum % K]
             dp[running_sum % K] += 1
-            
+
         return result

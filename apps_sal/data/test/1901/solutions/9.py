@@ -15,6 +15,7 @@ for _ in range(m):
     chars[p].append(q)
     chars[q].append(p)
 
+
 def dfs(i, nodes):
     if Visited[i]:
         return
@@ -22,6 +23,7 @@ def dfs(i, nodes):
     nodes.append(i)
     for j in chars[i]:
         dfs(j, nodes)
+
 
 Visited = [False for i in range(n)]
 Graph = []

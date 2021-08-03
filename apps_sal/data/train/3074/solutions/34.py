@@ -1,6 +1,6 @@
 def growing_plant(u, d, h):
     days = growth = 0
-    
+
     while True:
         # day
         days += 1
@@ -8,6 +8,6 @@ def growing_plant(u, d, h):
 
         if growth >= h:
             return days
-        
+
         # night
         growth -= d

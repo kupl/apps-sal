@@ -13,8 +13,8 @@ class Solution:
             elif bill == 20:
                 if amount[1] > 0 and amount[0] > 0:
                     amount[1] -= 1
-                    amount[0] -= 1 
-                elif amount[0]>2:
+                    amount[0] -= 1
+                elif amount[0] > 2:
                     amount[0] -= 3
                 else:
                     return False

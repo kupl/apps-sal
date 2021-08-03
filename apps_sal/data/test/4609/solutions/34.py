@@ -12,4 +12,3 @@ for value in list(paper.values()):
     if value == 1:
         res += 1
 print(res)
-

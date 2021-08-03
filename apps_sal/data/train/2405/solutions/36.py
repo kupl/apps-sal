@@ -16,10 +16,11 @@ class Solution:
                         break
             else:
                 if num == -1:
-                    i = (i+1) % 4
+                    i = (i + 1) % 4
                 elif num == -2:
-                    i = i-1 
-                    if i < 0: i = 3
-            
-            max_dis = max(max_dis, pos[0]**2+pos[1]**2)
+                    i = i - 1
+                    if i < 0:
+                        i = 3
+
+            max_dis = max(max_dis, pos[0]**2 + pos[1]**2)
         return max_dis

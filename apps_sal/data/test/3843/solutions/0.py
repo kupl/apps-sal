@@ -1,4 +1,6 @@
 from itertools import *
+
+
 def f(x):
     x -= 1
     ret = 0
@@ -10,12 +12,12 @@ def f(x):
             x //= 7
     return ret
 
+
 def g(d):
     ret = 0
     for v in d:
         ret = ret * 7 + v
     return ret
-
 
 
 n, m = list(map(int, input().split()))
@@ -29,6 +31,3 @@ else:
         if g(p[:a]) < n and g(p[a:]) < m:
             ans += 1
     print(ans)
-
-
-

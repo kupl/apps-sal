@@ -1,9 +1,11 @@
-r, D, x = map(int,input().split())
+r, D, x = map(int, input().split())
+
 
 def function(y):
     y = r * y - D
 
     return y
+
 
 z = 1
 while z <= 10:

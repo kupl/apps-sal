@@ -13,10 +13,8 @@ class StockSpanner:
                 self.spanStk.pop()
             self.spanStk.append((price, new_weight))
         return self.spanStk[-1][1]
-                
 
 
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

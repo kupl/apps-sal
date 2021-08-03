@@ -26,4 +26,3 @@ if m % 3 == 0:
         ans = "YES"
 
 print(ans)
-

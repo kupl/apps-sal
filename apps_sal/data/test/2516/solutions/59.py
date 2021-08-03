@@ -1,7 +1,9 @@
-3
-import sys
 from collections import Counter
-input = lambda: sys.stdin.readline().strip()
+import sys
+3
+def input(): return sys.stdin.readline().strip()
+
+
 n, p = [int(x) for x in input().split()]
 s = input()
 ans = 0
@@ -24,4 +26,3 @@ else:
         delta = (delta * 10) % p
 
 print(ans)
-

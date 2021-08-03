@@ -2,10 +2,10 @@ ncases = int(input())
 
 for cases in range(ncases):
     nlen = int(input())
-    testlist = list( map( int, input().split()))
+    testlist = list(map(int, input().split()))
     if not testlist:
         continue
-    #if len(testlist) != nlen:
+    # if len(testlist) != nlen:
     #    continue
     mydict = set()
     beautiful = True
@@ -18,5 +18,3 @@ for cases in range(ncases):
         print("prekrasnyy")
     else:
         print("ne krasivo")
-    
-

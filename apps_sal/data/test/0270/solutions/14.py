@@ -38,4 +38,5 @@ def f_fork_in_the_road():
         ans = min(ans, expected_value[0] + probability[v] * expected_diff)
     return round(ans, 10)
 
+
 print(f_fork_in_the_road())

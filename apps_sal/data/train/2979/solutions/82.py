@@ -1,6 +1,6 @@
 def get_age(age):
-    str=""
+    str = ""
     for i in age:
         if i.isnumeric():
-            str=str+i       
+            str = str + i
     return int(str)

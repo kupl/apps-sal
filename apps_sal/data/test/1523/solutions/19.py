@@ -3,7 +3,8 @@ class Worker():
         self.job = j
         self.cost = c
 
-def read(type = 1):
+
+def read(type=1):
     if type:
         file = open("input.dat", "r")
         line = list(map(int, file.readline().split()))
@@ -22,19 +23,20 @@ def read(type = 1):
 
 def solve():
     sols = [0 for i in range(k)]
-    c = sorted(a, key = lambda x : x.cost, reverse=True)
+    c = sorted(a, key=lambda x: x.cost, reverse=True)
     jobs = 0
     mins = []
     for i in range(n):
-        if sols[c[i].job-1]:
+        if sols[c[i].job - 1]:
             mins.append(c[i].cost)
         else:
             jobs += 1
-            sols[c[i].job-1] = 1
+            sols[c[i].job - 1] = 1
     sol = 0
-    for i in range(k-jobs):
-        sol += mins[len(mins)-i-1]
+    for i in range(k - jobs):
+        sol += mins[len(mins) - i - 1]
     return sol
+
 
 n, k, a = read(0)
 sol = solve()

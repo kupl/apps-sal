@@ -8,4 +8,3 @@ def hor_mirror(strng: str):
 
 def oper(fct, s):
     return fct(s)
-

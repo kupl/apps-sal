@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def solve(slimes):
     if len(slimes) == 1:
         return slimes[0]
@@ -25,6 +26,7 @@ def solve(slimes):
     else:
         return 0
 
+
 def main():
     n = int(input())
     slimes = list(map(int, input().split()))
@@ -33,4 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

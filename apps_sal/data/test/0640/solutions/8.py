@@ -16,8 +16,10 @@ def main():
             draw += 1
 
     print(a_wins, draw, b_wins)
-    
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

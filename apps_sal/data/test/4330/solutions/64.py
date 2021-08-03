@@ -12,4 +12,3 @@ if abs(a - k) != abs(b - k):
     print(no)
 else:
     print(k)
-

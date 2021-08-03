@@ -23,11 +23,12 @@ def main():
     for i in range(N):
         add_elements(w, i)
         ans = (ans + w[S]) % MOD
-    
+
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

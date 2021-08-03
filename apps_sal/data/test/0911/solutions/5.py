@@ -11,6 +11,7 @@ def score(P, T, c):
         s += max(0, p - c * x)
     return s
 
+
 Limak = score(P, T, c)
 Radewoosh = score(reversed(P), reversed(T), c)
 
@@ -18,5 +19,5 @@ if Limak > Radewoosh:
     print("Limak")
 elif Limak < Radewoosh:
     print("Radewoosh")
-else: print("Tie")
-
+else:
+    print("Tie")

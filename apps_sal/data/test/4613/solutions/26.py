@@ -1,6 +1,7 @@
 from collections import Counter
 N, M = map(int, input().split())
 
+
 class UnionFind:
     def __init__(self, N):
         self.root = list(range(N + 1))

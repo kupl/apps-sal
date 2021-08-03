@@ -15,4 +15,3 @@ m = min(ls)
 ans = ls.index(m) + 1
 
 print(ans)
-

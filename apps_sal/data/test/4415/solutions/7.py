@@ -14,7 +14,8 @@ r1 = []
 r2 = []
 for key, value in d.items():
     r1.append(key)
-    if value > 1: r2.append(key)
+    if value > 1:
+        r2.append(key)
 
 r1.sort()
 r2.sort(reverse=True)
@@ -27,4 +28,3 @@ print()
 print(len(r2))
 for x in r2:
     print(x, end=' ')
-

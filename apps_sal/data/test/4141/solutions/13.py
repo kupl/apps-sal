@@ -9,4 +9,3 @@ for _ in num_list:
         break
 else:
     print("APPROVED")
-

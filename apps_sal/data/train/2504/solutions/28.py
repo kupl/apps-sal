@@ -15,8 +15,7 @@ class Solution:
             if r > len(arr) - 1:
                 l += 1
                 r = l
-            result += getSum(arr, l, r+1)
+            result += getSum(arr, l, r + 1)
             r += 2
 
         return result
-

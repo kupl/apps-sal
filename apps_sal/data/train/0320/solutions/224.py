@@ -5,7 +5,8 @@ class Solution:
         mul = mul[0]
         add = sum([item[1] for item in lst])
         return add + mul
-        
+
+
 def find_op(n):
     mul, add = 0, 0
     while n > 0:

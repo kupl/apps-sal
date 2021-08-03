@@ -1,20 +1,19 @@
-n=int(input())
-s=input()
-a=[0]*10
+n = int(input())
+s = input()
+a = [0] * 10
 for i in s:
-    if i=='L':
+    if i == 'L':
         for j in range(10):
-            if a[j]==0:
-                a[j]=1
+            if a[j] == 0:
+                a[j] = 1
                 break
-    elif i=='R':
+    elif i == 'R':
         for j in range(10):
-            if a[-j-1]==0:
-                a[-j-1]=1
+            if a[-j - 1] == 0:
+                a[-j - 1] = 1
                 break
     else:
-        k=int(i)
-        a[k]=0
+        k = int(i)
+        a[k] = 0
 for i in range(10):
-    print(a[i],end="")
-    
+    print(a[i], end="")

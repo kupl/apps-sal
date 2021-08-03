@@ -6,8 +6,9 @@ class Solution:
             p[1] -= 1
             g[p[0]].append(p[1])
             g[p[1]].append(p[0])
-            
+
         col = [0] * N
+
         def dfs(v, c):
             col[v] = c
             for to in g[v]:

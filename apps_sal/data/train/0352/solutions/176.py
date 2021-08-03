@@ -6,7 +6,7 @@ class Solution:
         for word in sorted(words, key=lambda x: -len(x)):
             dp[word] = 1
 
-            for i in range(len(word)+1):
+            for i in range(len(word) + 1):
                 for c in 'abcdefghijklmnopqrstuvwxyz':
                     next_word = word[:i] + c + word[i:]
 

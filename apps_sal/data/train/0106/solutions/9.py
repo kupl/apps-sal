@@ -9,10 +9,10 @@ for k in range(t):
         skl.append((b, 1, i))
     skl.sort()
     m = 0
-    ans = ['0']*n
+    ans = ['0'] * n
     for i, p in enumerate(skl):
         if m == 0 and i != 0:
-            for j in range(i, 2*n):
+            for j in range(i, 2 * n):
                 ans[skl[j][2]] = '2'
             break
 

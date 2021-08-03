@@ -47,4 +47,3 @@ if not deletion:
     print('-1')
 else:
     print(' '.join(map(str, deletion)))
-

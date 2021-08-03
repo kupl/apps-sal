@@ -25,5 +25,3 @@ for tc in range(int(input())):
             b += '0'
     print(a)
     print(b)
-        
-

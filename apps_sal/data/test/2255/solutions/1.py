@@ -22,7 +22,7 @@ def solve():
         if node in visited:
             continue
 
-        seq.append(node+1)
+        seq.append(node + 1)
         visited.add(node)
         for neighbor in adjs[node]:
             if neighbor not in visited:
@@ -32,4 +32,3 @@ def solve():
 
 
 solve()
-

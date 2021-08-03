@@ -2,7 +2,7 @@ def main():
     n = int(input())
     AB = [list(map(int, input().split())) for _ in range(n)]
     YesFlag = True
-    arr = [True]*(2*n+1)
+    arr = [True] * (2 * n + 1)
     cnt = 0
     for a, b in AB:
         if a != -1 and b != -1 and a > b:
@@ -17,20 +17,20 @@ def main():
             arr[b] = False
         if a == -1 and b == -1:
             cnt += 1
-    dp = [-1]*(2*n+1)
+    dp = [-1] * (2 * n + 1)
     dp[0] = cnt
-    for i in range(0, 2*n+1, 2):
+    for i in range(0, 2 * n + 1, 2):
         if dp[i] < 0:
             continue
-        for j in range(i+2, 2*n+1, 2):
-            fs = [True]*(2*n+1)
-            lngth = (j-i)//2
+        for j in range(i + 2, 2 * n + 1, 2):
+            fs = [True] * (2 * n + 1)
+            lngth = (j - i) // 2
             sf = True
             for a, b in AB:
                 if (a == -1 and b == -1) or (a != -1 and (a <= i or j < a)) or (b != -1 and (b <= i or j < b)):
                     continue
                 if a != -1 and b != -1:
-                    if b-a != lngth or a <= i or j < b:
+                    if b - a != lngth or a <= i or j < b:
                         sf = False
                         break
                     else:
@@ -64,11 +64,11 @@ def main():
                         fs[q] = False
             if sf:
                 c = 0
-                for k in range(i+1, j+1):
+                for k in range(i + 1, j + 1):
                     if fs[k]:
                         c += 1
-                if dp[j] < dp[i] - c//2:
-                    dp[j] = dp[i] - c//2
+                if dp[j] < dp[i] - c // 2:
+                    dp[j] = dp[i] - c // 2
     if dp[-1] != 0:
         YesFlag = False
     if YesFlag:
@@ -76,6 +76,9 @@ def main():
     else:
         print("No")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

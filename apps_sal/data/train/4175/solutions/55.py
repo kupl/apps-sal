@@ -3,5 +3,5 @@ def repeater(string, n):
     NyttOrd = ""
     while i < n:
         NyttOrd += string
-        i +=1
+        i += 1
     return NyttOrd

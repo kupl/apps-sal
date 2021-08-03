@@ -1,6 +1,7 @@
 def valid(i, j):
     return 0 <= i < n and 0 <= j < n
 
+
 n, m = map(int, input().split())
 
 a = [list(map(int, input().split())) for _ in range(n)]
@@ -14,10 +15,14 @@ for _ in range(m):
 
     for i in range(p + 1):
         for j in range(p - i + 1):
-            if valid(x + i, y + j): g[x + i][y + j] = 0
-            if valid(x - i, y + j): g[x - i][y + j] = 0
-            if valid(x + i, y - j): g[x + i][y - j] = 0
-            if valid(x - i, y - j): g[x - i][y - j] = 0
+            if valid(x + i, y + j):
+                g[x + i][y + j] = 0
+            if valid(x - i, y + j):
+                g[x - i][y + j] = 0
+            if valid(x + i, y - j):
+                g[x + i][y - j] = 0
+            if valid(x - i, y - j):
+                g[x - i][y - j] = 0
 
 if g[0][0] != 0:
     print('NO')
@@ -38,9 +43,8 @@ for i in range(n):
 
             g[i][j] = k + a[i][j]
 
-if g[n-1][n-1] == float('-inf'):
+if g[n - 1][n - 1] == float('-inf'):
     print('NO')
 else:
     print('YES')
     print(g[-1][-1])
-

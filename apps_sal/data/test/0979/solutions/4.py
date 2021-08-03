@@ -14,4 +14,3 @@ for i in range(n):
         ans *= abs(a[i] - a[j])
         ans %= MOD
 print(ans)
-

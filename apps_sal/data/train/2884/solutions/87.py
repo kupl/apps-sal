@@ -5,6 +5,3 @@ def stringify(node):
         node = node.__next__
     st = st + 'None'
     return st
-
-
-

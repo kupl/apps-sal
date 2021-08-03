@@ -11,4 +11,3 @@ def movie(card, ticket, perc):
         total_ticket += ticket
         total_card += movieprice_bycard
     return count
-

@@ -4,4 +4,3 @@ def get_mean(arr, x, y):
         return mean((mean(arr[:x]), mean(arr[-y:])))
     else:
         return -1
-

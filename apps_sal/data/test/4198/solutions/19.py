@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 A, B, X = list(map(int, input().split()))
@@ -15,9 +15,11 @@ for i in range(1, 20):
     if A * t + B * i > X:
         break
 
+
 def is_ok(arg):
     a = len(str(arg))
     return A * arg + B * a <= X
+
 
 def meguru_bisect(ok, ng):
     while abs(ok - ng) > 1:
@@ -28,9 +30,5 @@ def meguru_bisect(ok, ng):
             ng = mid
     return ok
 
+
 print((meguru_bisect(min(t // 10, 10**8), min(t + 1, 10**9 + 1))))
-
-
-
-
-

@@ -1,7 +1,8 @@
-import sys, math
+import sys
+import math
 
 
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
 
 
 def gcd(n, f):
@@ -24,10 +25,9 @@ for _ in range(int(input())):
     for i in range(n):
         a, b = list(map(int, input().split()))
         v, c = list(map(int, input().split()))
-        if  b == v:
+        if b == v:
             ans = "YES"
     if m % 2 == 0:
         print(ans)
     else:
         print("NO")
-

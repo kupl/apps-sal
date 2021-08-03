@@ -1,4 +1,4 @@
-def how_much_water(L,X,N):
+def how_much_water(L, X, N):
     if (N > X * 2):
         return 'Too much clothes'
     elif (N < X):

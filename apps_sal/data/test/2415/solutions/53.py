@@ -128,17 +128,17 @@ ele = strs.upper().split("\n")
 # print(ele)
 inp = input()
 n = len(inp)
-dp = [False] * (n+1)
+dp = [False] * (n + 1)
 dp[0] = True
-for i in range(1, n+1):
-  if dp[i-1] == True and inp[i-1:i] in ele:
-    dp[i] = True
-  elif i > 1 and dp[i-2] == True and inp[i-2:i] in ele:
-    dp[i] = True
-  elif i > 2 and dp[i-3] == True and inp[i-3:i] in ele:
-    dp[i] = True
- 
+for i in range(1, n + 1):
+    if dp[i - 1] == True and inp[i - 1:i] in ele:
+        dp[i] = True
+    elif i > 1 and dp[i - 2] == True and inp[i - 2:i] in ele:
+        dp[i] = True
+    elif i > 2 and dp[i - 3] == True and inp[i - 3:i] in ele:
+        dp[i] = True
+
 if dp[n]:
-  print("YES")
+    print("YES")
 else:
-  print("NO")
+    print("NO")

@@ -11,11 +11,7 @@ class Solution:
                 i += 1
             res += 1
         return res <= d
-                
-                
-                
-                
-    
+
     def shipWithinDays(self, w: List[int], D: int) -> int:
         if len(w) == 0:
             return 0
@@ -27,11 +23,5 @@ class Solution:
                 end = mid
             else:
                 start = mid + 1
-        
-        return start
-        
-        
-        
-        
-        
 
+        return start

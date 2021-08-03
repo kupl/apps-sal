@@ -10,7 +10,7 @@ Sample Output:
 for _ in range(int(input())):
     ans = 0
     for i in str(input()):
-        if i in ["2","4","6","8","0"]:
+        if i in ["2", "4", "6", "8", "0"]:
             ans = 1
             break
-    print(ans)        
+    print(ans)

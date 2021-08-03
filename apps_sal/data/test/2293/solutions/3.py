@@ -25,4 +25,3 @@ for i in range(m):
             print('impossible')
             quit()
 print('possible')
-

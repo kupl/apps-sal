@@ -3,5 +3,4 @@ class Solution:
         maxcb = Counter()
         for b in B:
             maxcb |= Counter(b)
-        return [a for a in A if Counter(a) & maxcb == maxcb]     
-
+        return [a for a in A if Counter(a) & maxcb == maxcb]

@@ -1,11 +1,12 @@
 from collections import deque
 
-def BFS(graph,a,b):
-    
+
+def BFS(graph, a, b):
+
     q = deque()
     q.append(a)
-    visited = [ False for _ in range(len(graph))]
-    
+    visited = [False for _ in range(len(graph))]
+
     while len(q):
         v = q.pop()
 
@@ -27,11 +28,11 @@ for i in range(m):
     v1, v2, c = map(int, input().split())
 
     if c not in color:
-        color[c] = [ [] for _ in range(n+1) ]
+        color[c] = [[] for _ in range(n + 1)]
 
     color[c][v1].append(v2)
     color[c][v2].append(v1)
-        
+
 q = int(input())
 for _ in range(q):
     a, b = map(int, input().split())

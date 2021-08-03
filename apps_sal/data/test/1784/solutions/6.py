@@ -2,11 +2,13 @@ n, colors = map(int, input().split())
 lens = list(map(int, input().split()))
 q = [[] for i in range(n)]
 
+
 def end():
     for i in range(n):
         if lens[i] != len(q[i]):
             return False
     return True
+
 
 mi = min(lens)
 for i in range(n):

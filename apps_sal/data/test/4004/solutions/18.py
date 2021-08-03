@@ -20,4 +20,3 @@ else:
         print(p[2] - p[1])
     else:
         print(-1)
-

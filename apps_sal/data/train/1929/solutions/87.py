@@ -14,17 +14,13 @@ class StreamChecker:
                 curr = curr[ch]
             curr['.'] = True
         return trie
-            
-        
+
     def query(self, letter: str) -> bool:
         self.l.append(self.trie)
         self.l = [trie[letter] for trie in self.l if letter in trie]
         return any('.' in trie for trie in self.l)
-                
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

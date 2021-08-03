@@ -4,6 +4,7 @@ from heapq import *
 answer = []
 n = int(input())
 
+
 def main():
     h = []
 
@@ -32,9 +33,11 @@ def main():
 
         answer.append(q)
 
+
 def print_answer():
     print(len(answer))
     print("".join(answer))
+
 
 main()
 print_answer()

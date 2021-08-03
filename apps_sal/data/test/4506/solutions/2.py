@@ -4,7 +4,7 @@ a = [*map(int, input().split())]
 b = [*map(int, input().split())]
 for i in range(n):
     a[i] = (a[i] * (n - i) * (i + 1))
-a.sort(reverse = True)
+a.sort(reverse=True)
 b.sort()
 res = 0
 for i in range(n):

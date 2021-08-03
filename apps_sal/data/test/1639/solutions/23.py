@@ -15,4 +15,3 @@ for a in ax:
 
 cmax = max(c, cmax)
 print(cmax)
-

@@ -9,6 +9,6 @@ class Solution:
             if A[l] + A[r] > target:
                 r -= 1
             else:
-                res += pow(2,r - l,mod)
+                res += pow(2, r - l, mod)
                 l += 1
         return res % mod

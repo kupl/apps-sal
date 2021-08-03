@@ -19,4 +19,3 @@ for i in range(n):
             operations += 1
         colors.append(color)
 print(operations)
-

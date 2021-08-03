@@ -2,17 +2,18 @@ import sys
 
 readline = sys.stdin.readline
 readall = sys.stdin.read
-ns = lambda: readline().rstrip()
-ni = lambda: int(readline().rstrip())
-nm = lambda: map(int, readline().split())
-nl = lambda: list(map(int, readline().split()))
-prn = lambda x: print(*x, sep='\n')
+def ns(): return readline().rstrip()
+def ni(): return int(readline().rstrip())
+def nm(): return map(int, readline().split())
+def nl(): return list(map(int, readline().split()))
+def prn(x): return print(*x, sep='\n')
+
 
 def solve():
     n = ni()
     a = n
-    for i in range(n-1):
-        a += (i+1) * (n-i)
+    for i in range(n - 1):
+        a += (i + 1) * (n - i)
         u, v = nm()
         if u > v:
             u, v = v, u
@@ -20,5 +21,5 @@ def solve():
     print(a)
     return
 
-solve()
 
+solve()

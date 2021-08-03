@@ -11,4 +11,3 @@ def time_correct(t):
         m = m % 60
         h = h % 24
         return str(h).zfill(2) + ':' + str(m).zfill(2) + ':' + str(s).zfill(2)
-

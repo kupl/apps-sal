@@ -11,4 +11,3 @@ while 2 * s / n < 9:
     ans += 1
 
 print(ans)
-

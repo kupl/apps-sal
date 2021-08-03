@@ -8,4 +8,3 @@ def is_palindrome(s):
         if deq.popleft() != deq.pop():
             return False
     return palFlag
-

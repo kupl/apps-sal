@@ -65,4 +65,3 @@ all_cnt += both_zero
 all_cnt %= MOD
 
 print(((all_cnt - 1) % MOD))
-

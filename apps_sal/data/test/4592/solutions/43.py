@@ -34,4 +34,3 @@ for i in range(2, N + 1):
     if ans[i] >= 1:
         ans_num *= ans[i] + 1 % mod
 print((ans_num % mod))
-

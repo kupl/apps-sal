@@ -1,5 +1,6 @@
 import math
 
+
 def round_it(n):
     s = str(n).split('.')
     if len(s[0]) < len(s[1]):
@@ -8,4 +9,3 @@ def round_it(n):
         return math.floor(n)
     else:
         return round(n, 0)
-

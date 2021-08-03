@@ -14,7 +14,7 @@ for x in pos:
         flg = 0
     else:
         r += x[1]
-neg.sort(key=lambda k: k[0]+k[1], reverse=True)
+neg.sort(key=lambda k: k[0] + k[1], reverse=True)
 for x in neg:
     if r < x[0]:
         flg = 0

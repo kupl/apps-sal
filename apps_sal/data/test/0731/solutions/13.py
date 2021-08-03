@@ -1,4 +1,4 @@
-w, m, k = tuple(map(int,input().split()))
+w, m, k = tuple(map(int, input().split()))
 s = len(str(m))
 t = m
 n = 10 ** s
@@ -13,8 +13,10 @@ if w != 0:
     n //= 10
     if n < m:
         n = 0
-    else: n -= m
+    else:
+        n -= m
     r = s * k
     n += w // r
-else: n = n // 10 - m
+else:
+    n = n // 10 - m
 print(n)

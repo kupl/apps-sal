@@ -1,5 +1,5 @@
 def greet(name):
-    h= "Hello, "
-    s= " how are you doing today?"
-    a= (h + name + s )
+    h = "Hello, "
+    s = " how are you doing today?"
+    a = (h + name + s)
     return (a)

@@ -4,4 +4,3 @@ def pre_fizz(n):
     n.append(x)
     del n[0]
     return n
-

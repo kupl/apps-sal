@@ -1,7 +1,7 @@
 def next_item(xs, item):
     idx = None
     cnt = 0
-    for i,e in enumerate(xs):
+    for i, e in enumerate(xs):
         if cnt == 1:
             break
         if e == item:

@@ -1,5 +1,6 @@
 import itertools
 
+
 def classify(subset, l, r, x):
     li = []
     for i in subset:
@@ -15,13 +16,14 @@ def classify(subset, l, r, x):
     if s <= r:
         f2 = True
     li.sort()
-    t =  li[len(li)-1] - li[0]
+    t = li[len(li) - 1] - li[0]
     if t >= x:
         f3 = True
     if f1 and f2 and f3:
         return True
     else:
         return False
+
 
 s = input()
 s = s.split()
@@ -36,13 +38,12 @@ arr = []
 for i in a:
     arr.append(int(i))
 
-count  = 0
-for i in range(2, len(arr)+1):
+count = 0
+for i in range(2, len(arr) + 1):
     for subset in itertools.combinations(arr, i):
-        #print(subset)
+        # print(subset)
         if classify(subset, l, r, x):
-            #print(subset)
+            # print(subset)
             count += 1
 
 print(count)
-

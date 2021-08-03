@@ -1,1 +1,1 @@
-print(pow(int(input())/3,3))
+print(pow(int(input()) / 3, 3))

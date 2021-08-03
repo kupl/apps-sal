@@ -1,4 +1,4 @@
-def count_zeros_n_double_fact(n): 
+def count_zeros_n_double_fact(n):
     if n % 2 != 0:
         return 0
     k = 0

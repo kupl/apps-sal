@@ -13,4 +13,3 @@ for i in range(M):
                 ans += C[a] * C[b] * C[c]
 
 print(ans)
-

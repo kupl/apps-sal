@@ -9,4 +9,3 @@ class Solution:
             if not flag:
                 count += 1
         return count
-

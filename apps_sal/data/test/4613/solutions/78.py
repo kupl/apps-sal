@@ -12,6 +12,8 @@ def MS(): return input().split()
 def LS(): return list(input())
 def LLS(rows_number): return [LS() for _ in range(rows_number)]
 def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
+
+
 INF = float('inf')
 # from math import ceil, floor, log2
 # from collections import deque, defaultdict
@@ -35,6 +37,8 @@ group_count(): グループの数を返す
 all_group_members(): 辞書を返す。　key = ルート要素, value = そのグループに含まれる要素のリスト
 __str__(): print()での表示用。ルート要素: [そのグループに含まれる要素のリスト]を文字列で返す
 """
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -104,6 +108,7 @@ def solve():
         if uf.group_count() > 1:
             ans += 1
     print(ans)
+
 
 def __starting_point():
     solve()

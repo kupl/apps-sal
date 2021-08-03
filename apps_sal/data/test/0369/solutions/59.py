@@ -7,7 +7,7 @@ while cur != 0:
     for step in range(M, 0, -1):
         if cur - step < 0:
             continue
-        if s[cur-step] == '1':
+        if s[cur - step] == '1':
             continue
         ans.append(step)
         cur -= step
@@ -16,4 +16,3 @@ while cur != 0:
         print((-1))
         return
 print((*ans[::-1]))
-

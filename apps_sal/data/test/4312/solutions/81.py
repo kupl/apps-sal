@@ -1,4 +1,4 @@
-tkhp, tkat, aohp, aoat = map(int,input().split())
+tkhp, tkat, aohp, aoat = map(int, input().split())
 
 while True:
     aohp -= tkat

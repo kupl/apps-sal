@@ -1,18 +1,14 @@
-#rOkY
-#FuCk
+# rOkY
+# FuCk
 
 ################################## kOpAl #######################################
 
-t=int(input())
+t = int(input())
 
-while(t>0):
+while(t > 0):
 
-    
-    a=int(input())
+    a = int(input())
 
-    
-    print(a//2 +1)
+    print(a // 2 + 1)
 
-    
-    t-=1
-
+    t -= 1

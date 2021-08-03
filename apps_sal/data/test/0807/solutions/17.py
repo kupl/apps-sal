@@ -4,4 +4,3 @@ ret = 0
 for i in range(n - 1):
     ret = max(ret, v[i] - v[i + 1] - c)
 print(ret)
-

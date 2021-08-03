@@ -3,5 +3,5 @@ def automorphic(n):
               False: 'Not!!'}
     square = str(n**2)
     number = str(n)
-     
+
     return result[number == square[-len(number):]]

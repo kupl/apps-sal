@@ -11,4 +11,3 @@ while n:
     n >>= 1
 
 print()
-

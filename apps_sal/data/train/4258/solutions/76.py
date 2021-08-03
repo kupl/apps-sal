@@ -3,14 +3,8 @@ def series_sum(n):
     total = 0.00
     count = 0
     while count < n:
-        total = total + 1/denom
+        total = total + 1 / denom
         count = count + 1
         denom = denom + 3
         print(("%.2f" % total))
     return "%.2f" % total
-    
-        
-    
-            
-            
-

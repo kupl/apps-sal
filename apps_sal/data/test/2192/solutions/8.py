@@ -1,7 +1,7 @@
 n = int(input())
 W = [[int(s) for s in input().split()] for _ in range(n)]
 A = [[0 for _ in range(n)] for _ in range(n)]
-B  = [[0 for _ in range(n)] for _ in range(n)]
+B = [[0 for _ in range(n)] for _ in range(n)]
 
 for i in range(n):
     for j in range(i, n):

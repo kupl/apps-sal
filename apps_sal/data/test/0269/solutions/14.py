@@ -24,4 +24,3 @@ for i in range(len(s)):
         else:
             y += 1
 print(r, b, y, g)
-

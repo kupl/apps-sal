@@ -2,16 +2,18 @@ import sys
 import math
 
 
-inint = lambda: int(sys.stdin.readline())
-inintm = lambda: map(int, sys.stdin.readline().split())
-inintl = lambda: list(inintm())
-instrm = lambda: map(str, sys.stdin.readline().split())
-instrl = lambda: list(instrm())
+def inint(): return int(sys.stdin.readline())
+def inintm(): return map(int, sys.stdin.readline().split())
+def inintl(): return list(inintm())
+def instrm(): return map(str, sys.stdin.readline().split())
+def instrl(): return list(instrm())
+
 
 n = inint()
 
-z = {():0}
+z = {(): 0}
 ans = 0
+
 
 def combinations(n, r):
     if n < r:
@@ -19,8 +21,9 @@ def combinations(n, r):
     else:
         return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
+
 for i in range(n):
-    c = [0]*123
+    c = [0] * 123
     s = input()
     for j in range(len(s)):
         c[ord(s[j])] += 1
@@ -30,6 +33,6 @@ for i in range(n):
         z[tuple(c)] = 1
 
 for i in z:
-    ans += combinations(z[i],2)
+    ans += combinations(z[i], 2)
 
 print(ans)

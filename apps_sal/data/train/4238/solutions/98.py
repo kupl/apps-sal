@@ -6,9 +6,7 @@ def squares_needed(grains):
         boxes = 1
         i = 1
         while i < grains:
-            i += p * 2 
+            i += p * 2
             p *= 2
             boxes += 1
         return boxes
-            
-

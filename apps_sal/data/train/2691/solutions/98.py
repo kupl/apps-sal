@@ -4,7 +4,7 @@ def solve(s):
         if char.isdigit():
             pass
         else:
-            s = s.replace(char,' ')
+            s = s.replace(char, ' ')
     result_list = s.split()
     for i in range(len(result_list)):
         result_list[i] = int(result_list[i])

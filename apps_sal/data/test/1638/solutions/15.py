@@ -19,4 +19,3 @@ for j in range(idx - 1, -1, -1):
 for j in range(idx + 1, n):
     a[j] = min(m[j], a[j - 1])
 print(*a)
-

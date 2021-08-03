@@ -17,4 +17,3 @@ for c in input():
 if cur:
     len_out = max(len_out, cur)
 print(len_out, count_in)
-

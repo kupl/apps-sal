@@ -6,4 +6,3 @@ for _ in range(int(input())):
         ans -= 2 * i
         i <<= 1
     print(ans)
-

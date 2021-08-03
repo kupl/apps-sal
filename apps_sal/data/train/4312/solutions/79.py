@@ -1,13 +1,13 @@
 def pick_peaks(a):
-    #your code here
-    
-    previous = 0 
+    # your code here
+
+    previous = 0
     current = 0
-    
+
     pos = []
     peaks = []
-    
-    for next in range(1,len(a)):
+
+    for next in range(1, len(a)):
         if a[next] > a[current]:
             previous = current
             current = next
@@ -18,11 +18,5 @@ def pick_peaks(a):
                     peaks.append(a[current])
                 previous = current
                 current = next
-            
-    
-    
-            
-    return {"pos": pos, "peaks": peaks}
-    
-    
 
+    return {"pos": pos, "peaks": peaks}

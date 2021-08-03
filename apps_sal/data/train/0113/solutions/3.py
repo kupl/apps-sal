@@ -1,5 +1,5 @@
 t = int(input())
-for _ in range (t):
+for _ in range(t):
     a, b = list(map(int, input().split()))
 
     d = abs(b - a)
@@ -12,4 +12,3 @@ for _ in range (t):
     d %= 1
 
     print(ans)
-

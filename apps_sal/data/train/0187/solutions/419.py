@@ -14,7 +14,7 @@ class Solution:
                 i += 1
             if q > 0:
                 customers_served += min(q, 4)
-                profit =  customers_served * boardingCost - rotation * runningCost
+                profit = customers_served * boardingCost - rotation * runningCost
                 q = max(0, q - 4)
                 if profit > best_profit:
                     min_rotation = rotation

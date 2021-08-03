@@ -4,6 +4,7 @@ class Solution:
         for index, managerId in enumerate(manager):
             graph[managerId].append(index)
         result = 0
+
         def dfs(node, currentTime):
             nonlocal graph, result
             if node not in graph:

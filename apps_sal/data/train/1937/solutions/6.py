@@ -4,7 +4,8 @@ class Node:
         self.is_dead = False
         self.children = []
 
-class ThroneInheritance:    
+
+class ThroneInheritance:
     def __init__(self, kingName: str):
         self.king_name = kingName
         self.nodes = {kingName: Node(kingName)}
@@ -18,9 +19,10 @@ class ThroneInheritance:
     def death(self, name: str) -> None:
         node = self.nodes[name]
         node.is_dead = True
-        
+
     def getInheritanceOrder(self) -> List[str]:
         acc = []
+
         def getInheritanceOrderRecursive(node):
             if not node.is_dead:
                 acc.append(node.name)
@@ -34,4 +36,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

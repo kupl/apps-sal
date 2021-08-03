@@ -7,6 +7,9 @@ def solve():
     else:
         print('Bob')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

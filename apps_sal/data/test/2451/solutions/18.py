@@ -15,7 +15,6 @@ for query in queries:
         distance += abs(f2 - f1)
     elif f1 < a:
         distance += (a - f1) + abs(f2 - a)
-    else: # f2 > b:
+    else:  # f2 > b:
         distance += (f1 - b) + abs(f2 - b)
     print(distance)
-

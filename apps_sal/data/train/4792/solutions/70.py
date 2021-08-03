@@ -13,6 +13,7 @@ def parse_float(string):
         return None
     return res
 
+
 class Parser(object):
     """Base parser class
     Meant to be inherited by other classes
@@ -23,6 +24,7 @@ class Parser(object):
         - if self.failed == True, should halt any parsing
         -   You shouldn't need to constantly check for failure
     """
+
     def __init__(self, string):
         self.string = string
         self.failed = False
@@ -51,7 +53,7 @@ class Parser(object):
         if self.failed:
             return None
         self.failed = len(self.string) > 0
-    
+
     def satisfy(self, func):
         """Consumes and returns the next character, if it satisfies the specified predicate
         func :: char -> bool
@@ -100,7 +102,7 @@ class Parser(object):
         while not self.failed:
             res = func(self)
             if self.failed:
-                self.failed = False # can be dangerous if you don't know what previous state was?
+                self.failed = False  # can be dangerous if you don't know what previous state was?
                 break
             results.append(res)
         return results
@@ -115,10 +117,12 @@ class Parser(object):
         results.extend(self.many(methodname, *args, **kwargs))
         return results
 
+
 class NumParser(Parser):
     """A basic example of a Parser subclass
     Parses numbers (ints and floats)
     """
+
     def parse_int(self, signed=True):
         """Parses an integer
         If signed is True, allows a leading (-), otherwise it doesn't
@@ -132,7 +136,7 @@ class NumParser(Parser):
     def parse_float(self):
         """Parses floats"""
         intpart = self.parse_int()
-        if self.failed: # need a failure check here because sign requires intpart to exist
+        if self.failed:  # need a failure check here because sign requires intpart to exist
             return None
         sign = -1 if intpart < 0 else 1
         self.option(None, "char", ".")
@@ -145,4 +149,3 @@ class NumParser(Parser):
         if self.failed:
             return None
         return (intpart + sign * floatpart) * 10**exppart
-

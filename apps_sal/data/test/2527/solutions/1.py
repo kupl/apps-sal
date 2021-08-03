@@ -1,14 +1,13 @@
-t="iloveyou"
-p=1
-s=input()
+t = "iloveyou"
+p = 1
+s = input()
 for i in t:
- if i not in s:
-  p=0
-  break
+    if i not in s:
+        p = 0
+        break
 
 
-
-if p is 1 :
- print("happy")
+if p is 1:
+    print("happy")
 else:
- print('sad')
+    print('sad')

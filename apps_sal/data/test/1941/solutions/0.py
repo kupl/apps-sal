@@ -3,8 +3,10 @@ import math
 
 
 a, b, n = list(map(int, str.split(sys.stdin.readline())))
-s = lambda i: a + (i - 1) * b
-S = lambda i: a * i + b * i * (i - 1) // 2
+def s(i): return a + (i - 1) * b
+def S(i): return a * i + b * i * (i - 1) // 2
+
+
 for _ in range(n):
 
     l, t, m = list(map(int, str.split(sys.stdin.readline())))
@@ -33,4 +35,3 @@ for _ in range(n):
     else:
 
         print(r)
-

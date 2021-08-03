@@ -1,9 +1,9 @@
 w = int(input())
-a = [[]]*w
-b = [[]]*w
+a = [[]] * w
+b = [[]] * w
 for i in range(w):
-    a[i] = list(map(int,input().split()))
-    b[i] = [0]*w
+    a[i] = list(map(int, input().split()))
+    b[i] = [0] * w
 for i in range(w):
     for j in range(w):
         if i < j:
@@ -13,9 +13,9 @@ for i in range(w):
             a[i][j] = a[j][i] = ac
 for i in range(w):
     for j in range(w):
-        print('%.8f'%a[i][j],end=' ')
+        print('%.8f' % a[i][j], end=' ')
     print('')
 for i in range(w):
     for j in range(w):
-        print('%.8f'%b[i][j],end=' ')
+        print('%.8f' % b[i][j], end=' ')
     print('')

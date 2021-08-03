@@ -5,6 +5,6 @@ L.sort()
 
 ans = 0
 for x in L[::2]:
-  ans += x
+    ans += x
 
 print(ans)

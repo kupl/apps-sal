@@ -10,4 +10,3 @@ def mormons(starting_number, reach, target):
 #     if start >= target:
 #         return missions
 #     return mormons(start + (start * reach), reach, target, missions + 1)
-

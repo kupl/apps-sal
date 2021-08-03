@@ -12,5 +12,3 @@ while t:
     if t:
         ans += 1
 print(ans)
-
-

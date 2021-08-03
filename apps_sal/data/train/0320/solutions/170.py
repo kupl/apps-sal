@@ -19,4 +19,3 @@ class Solution:
                             zeroIndexes.add(i)
                 isEven = True
         return result
-

@@ -1,5 +1,6 @@
 from string import ascii_lowercase
 
+
 def abacaba(k):
     for i, c in enumerate(reversed(ascii_lowercase)):
         p = 2 ** (25 - i)
@@ -7,4 +8,3 @@ def abacaba(k):
             return c
         if k > p:
             k -= p
-

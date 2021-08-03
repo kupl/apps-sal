@@ -6,7 +6,7 @@ for i in range(n):
         a[i] = "++" + a[i][2:]
         ans = True
         continue
-    if ((a[i][3] == "O" and a[i][4] == "O")and not ans):
+    if ((a[i][3] == "O" and a[i][4] == "O") and not ans):
         a[i] = a[i][:3] + "++"
         ans = True
         continue

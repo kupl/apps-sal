@@ -21,4 +21,3 @@ for i in range(n):
             b1 += 1
 ans -= b0 * b1
 print(ans)
-

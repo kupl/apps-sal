@@ -4,4 +4,3 @@ for i, c in enumerate(sorted((int(input()) for i in range(n)), reverse=True)):
     if v >= m:
         print(i + 1)
         break
-

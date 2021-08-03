@@ -14,8 +14,8 @@ for (i, c) in enumerate(A):
 
 start = 0
 pointer = p - 1
-left = list(range(-1, n-1))
-right = list(range(1, n+1))
+left = list(range(-1, n - 1))
+right = list(range(1, n + 1))
 left[0] = None
 right[-1] = None
 
@@ -45,7 +45,6 @@ for c in B:
             else:
                 start = right[pair[pointer]]
 
-
             if right[pair[pointer]] is None:
                 pointer = left[pointer]
             else:
@@ -53,7 +52,6 @@ for c in B:
 
 i = start
 while right[i] is not None:
-    print(A[i], end = '')
+    print(A[i], end='')
     i = right[i]
 print(A[i])
-

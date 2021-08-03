@@ -8,7 +8,7 @@ NO = "No"  # type: str
 def solve(a: int, b: int):
     c = int(str(a) + str(b))
     for i in range(400):
-        if c == i*i:
+        if c == i * i:
             print(YES)
             break
     else:
@@ -27,7 +27,9 @@ def main():
     b = int(next(tokens))  # type: int
     solve(a, b)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

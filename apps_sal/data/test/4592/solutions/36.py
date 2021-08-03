@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def factor(n):
     Ret = []
     for i in range(2, n + 1):
@@ -10,6 +11,7 @@ def factor(n):
         return [n, ]
     else:
         return Ret
+
 
 n = int(input())
 fact = []

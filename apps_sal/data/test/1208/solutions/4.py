@@ -24,4 +24,3 @@ for i in range(n):
     if col >= max:
         max = col
 print(max)
-

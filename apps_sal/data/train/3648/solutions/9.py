@@ -1,1 +1,1 @@
-summy = lambda s: sum(int(e) for e in s.split())
+def summy(s): return sum(int(e) for e in s.split())

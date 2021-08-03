@@ -4,5 +4,3 @@ def remove_duplicate_words(s):
         if w not in final:
             final.append(w)
     return ' '.join(final)
-        
-

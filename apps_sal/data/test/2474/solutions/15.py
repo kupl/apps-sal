@@ -10,4 +10,3 @@ for i, c in enumerate(C, start=1):
     ans %= MOD
 ans *= pow(4, N - 1, MOD)
 print((ans % MOD))
-

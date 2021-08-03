@@ -8,12 +8,13 @@ def tv_remote(word):
     ]
     result = 0
     coordinates1 = [0, 0]
-    
+
     for letter in word:
         coordinates2 = find_symbol_coordinates(letter, keyboard)
         result += abs(coordinates2[1] - coordinates1[1]) + abs(coordinates2[0] - coordinates1[0]) + 1
-        coordinates1 = find_symbol_coordinates(letter, keyboard)        
+        coordinates1 = find_symbol_coordinates(letter, keyboard)
     return result
+
 
 def find_symbol_coordinates(symbol, array):
     x = 0

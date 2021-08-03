@@ -7,14 +7,15 @@ def read_data():
         LRs.append((L, R))
     return n, q, As, LRs
 
+
 def solve(n, q, As, LRs):
     difs = calc_difs(As)
     Ls = get_Ls(difs)
     Rs = get_Rs_allow_ties(difs)
     for L, R in LRs:
-        print(calc(L-1, R-2, Ls, Rs, difs))
+        print(calc(L - 1, R - 2, Ls, Rs, difs))
 
-    
+
 def calc_difs(As):
     difs = [abs(a0 - a1) for a0, a1 in zip(As, As[1:])]
     return difs
@@ -33,6 +34,7 @@ def get_Ls(Vs):
         st.append(i)
     return L
 
+
 def get_Ls_allow_ties(Vs):
     L = []
     st = []
@@ -45,6 +47,7 @@ def get_Ls_allow_ties(Vs):
             L.append(0)
         st.append(i)
     return L
+
 
 def get_Rs(Vs):
     n = len(Vs)
@@ -61,11 +64,13 @@ def get_Rs_allow_ties(Vs):
     revRs.reverse()
     return [n - 1 - R for R in revRs]
 
+
 def calc(L, R, Ls, Rs, difs):
     ans = 0
     for i in range(L, R + 1):
         ans += difs[i] * (i - max(Ls[i], L) + 1) * (min(Rs[i], R) - i + 1)
     return ans
+
 
 n, q, As, LRs = read_data()
 solve(n, q, As, LRs)

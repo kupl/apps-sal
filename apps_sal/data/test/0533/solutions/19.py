@@ -6,12 +6,12 @@ k2 = int(input())
 n = int(input())
 
 
-#最小人数
+# 最小人数
 min_ans = 0
 kyoyou = a1 * (k1 - 1) + a2 * (k2 - 1)
-min_ans = min(a1+a2, max(n - kyoyou, 0))
+min_ans = min(a1 + a2, max(n - kyoyou, 0))
 
-#最大人数
+# 最大人数
 li = []
 for i in range(a1):
     li.append(k1)
@@ -22,9 +22,7 @@ max_ans = 0
 for i in range(len(li)):
     if li[i] <= n:
         max_ans += 1
-        n = n-li[i]
+        n = n - li[i]
     else:
         break
 print(min_ans, max_ans)
-            
-

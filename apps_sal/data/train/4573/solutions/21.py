@@ -1,8 +1,8 @@
 def over_the_road(address, n):
-    return 2*n-address+1
-                
+    return 2 * n - address + 1
 
-# a n o 10(3*n+1)                
+
+# a n o 10(3*n+1)
 # 1 3 6
 # 2 3 5
 # 3 3 4
@@ -18,4 +18,3 @@ def over_the_road(address, n):
 # 5 5 6
 # 7 5 4
 # 9 5 2
-

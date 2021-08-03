@@ -27,8 +27,8 @@ comps = []
 for i in range(m):
     f, t = list(map(int, input().split()))
     # f, t = i + 1, i + 2
-    es[f-1].append(t-1)
-    es[t-1].append(f-1)
+    es[f - 1].append(t - 1)
+    es[t - 1].append(f - 1)
 
 for v in range(n):
     if visited[v]:
@@ -54,4 +54,3 @@ for comp in comps:
     res += min(vs[i] for i in comp)
 
 print(res)
-

@@ -3,4 +3,3 @@ def meeting(rooms):
         return rooms.index('O')
     except ValueError:
         return 'None available!'
-

@@ -1,5 +1,6 @@
 import re
 
+
 def pete_talk(speech, ok=()):
     oks = [w.lower() for w in ok]
     upper_first = re.sub('^[a-z]', lambda c: c.group().upper(), speech, 1)

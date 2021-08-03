@@ -6,12 +6,13 @@
 #         self.right = right
 from collections import deque
 
+
 class Solution:
     def bfs(self, root, col_table):
         min_col = 0
         max_col = 0
         queue = deque([(root, 0, 0)])
-        
+
         while queue:
             node, col, row = queue.popleft()
             col_value = col_table.get(col, [])
@@ -24,13 +25,13 @@ class Solution:
             if node.right:
                 queue.append((node.right, col + 1, row + 1))
         return min_col, max_col
-                
+
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []
         col_table = dict()
         min_col, max_col = self.bfs(root, col_table)
-        
+
         res = []
         for col_idx in range(min_col, max_col + 1):
             col_res = []

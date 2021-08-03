@@ -1,1 +1,1 @@
-print('YNEOS'[''.join(sorted(input().split()))!='557'::2])
+print('YNEOS'[''.join(sorted(input().split())) != '557'::2])

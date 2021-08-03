@@ -12,7 +12,5 @@ for x in a:
     if ans > m:
         print((-1))
         return
- 
+
 print(ans)
-
-

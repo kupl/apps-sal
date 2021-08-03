@@ -6,5 +6,6 @@ for i in range(m):
     a[x] = True
     b[y] = True
 s = a[2: n].count(False) + b[2: n].count(False)
-if n & 1 and not (a[k // 2] or b[k // 2]): s -= 1
+if n & 1 and not (a[k // 2] or b[k // 2]):
+    s -= 1
 print(s)

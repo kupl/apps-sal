@@ -12,7 +12,7 @@ def solve(A: int, B: int, C: int):
     elif o == 1:
         for i in range(3):
             a[i] += 1 - (a[i] & 1)
-    print(((2*a[2] - a[1] - a[0]) // 2 + c))
+    print(((2 * a[2] - a[1] - a[0]) // 2 + c))
 
 
 def main():
@@ -26,7 +26,9 @@ def main():
     C = int(next(tokens))  # type: int
     solve(A, B, C)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

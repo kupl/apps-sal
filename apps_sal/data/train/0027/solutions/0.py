@@ -16,4 +16,3 @@ for test in range(tests):
     for i in list(d.keys()):
         s += d[i]
     print(s)
-

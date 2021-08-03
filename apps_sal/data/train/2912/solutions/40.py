@@ -5,4 +5,3 @@ def find_multiples(integer, limit):
         result = result + integer
         arr.append(result)
     return arr
-

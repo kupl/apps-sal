@@ -16,5 +16,3 @@ for x in a:
         r += 1
 
 print(r)
-    
-

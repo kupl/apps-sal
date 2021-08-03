@@ -18,5 +18,3 @@ class Solution:
                     res.append(i)
                     Q.append(i)
         return sorted(res)
-        
-

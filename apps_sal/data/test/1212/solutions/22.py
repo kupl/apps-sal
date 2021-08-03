@@ -4,9 +4,8 @@ s = sum(h[: k])
 res = s
 pos = 0
 for i in range(n - k):
-	s += h[i + k] - h[i]
-	if s < res:
-		res = s
-		pos = i + 1
+    s += h[i + k] - h[i]
+    if s < res:
+        res = s
+        pos = i + 1
 print(pos + 1)
-

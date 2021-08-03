@@ -1,16 +1,19 @@
 class Solution:
     def minDays(self, n: int) -> int:
-        ans = 1 
+        ans = 1
         queue = [n]
         seen = set()
         while queue:
             newq = []
             for x in queue:
-                if x == 1: return ans
+                if x == 1:
+                    return ans
                 seen.add(x)
-                if x - 1 not in seen: newq.append(x - 1)
-                if x % 2 == 0 and x // 2 not in seen: newq.append(x // 2)
-                if x % 3 == 0 and x // 3 not in seen: newq.append(x // 3)
+                if x - 1 not in seen:
+                    newq.append(x - 1)
+                if x % 2 == 0 and x // 2 not in seen:
+                    newq.append(x // 2)
+                if x % 3 == 0 and x // 3 not in seen:
+                    newq.append(x // 3)
             ans += 1
             queue = newq
-

@@ -9,10 +9,7 @@ def sum_array(arr):
             return sum
         else:
             array = arr
-            array = array[1:len(array)-1]
+            array = array[1:len(array) - 1]
             for x in array:
                 sum += x
             return sum
-        
-        
-

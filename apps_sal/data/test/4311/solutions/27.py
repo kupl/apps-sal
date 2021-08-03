@@ -4,7 +4,7 @@ i = 1
 while True:
     if s % 2 == 0:
         i += 1
-        s = s//2
+        s = s // 2
         S.append(str(s))
         if S.count(str(s)) == 2:
             print(i)
@@ -17,4 +17,3 @@ while True:
             print(i)
             return
 pass
-

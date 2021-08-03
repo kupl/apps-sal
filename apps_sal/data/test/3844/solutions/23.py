@@ -11,4 +11,3 @@ if f:
     print("Conan")
 else:
     print("Agasa")
-

@@ -1,2 +1,2 @@
 def square(n):
-    return n*n if isinstance(n,int) else None
+    return n * n if isinstance(n, int) else None

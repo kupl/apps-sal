@@ -9,7 +9,7 @@ class Solution:
                 pivot = int(num ** 0.5)
                 temp = 1 + num
                 len_t = 2
-                for i in range(2, pivot+1):
+                for i in range(2, pivot + 1):
                     divisor, rem = divmod(num, i)
                     if not rem:
                         if i == divisor:
@@ -22,4 +22,3 @@ class Solution:
                 if len_t == 4:
                     result += temp
         return result
-

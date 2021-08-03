@@ -9,5 +9,3 @@ class Solution:
                 sSum -= heapq.heappop(h)
             res = max(res, sSum * e)
         return res % (10**9 + 7)
-
-

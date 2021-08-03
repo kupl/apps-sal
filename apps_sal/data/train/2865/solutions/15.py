@@ -1,5 +1,4 @@
 def solution(string):
-  return string[::-1]
-  
-# ok znam z poprzednich lekcji
+    return string[::-1]
 
+# ok znam z poprzednich lekcji

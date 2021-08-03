@@ -8,7 +8,7 @@ def fuel_price(litres, price_per_liter):
         discount = 0.20
     elif 8 < litres:
         discount = 0.25
-        
+
     print(litres, price_per_liter, discount)
-    
+
     return litres * price_per_liter - litres * discount

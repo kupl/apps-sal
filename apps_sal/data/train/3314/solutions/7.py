@@ -7,8 +7,10 @@ for i in range(2, N):
             a[j] = 0
 a = [i for i, x in enumerate(a) if x]
 
+
 def solve(n, m):
     return all(not n % x for x in f(m))
+
 
 def f(n):
     s = set()

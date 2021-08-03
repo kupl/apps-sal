@@ -12,12 +12,10 @@ else:
     l = p[0]
     r = (p[1:] + q).rstrip('0')
 if l:
-    print(l, end = '')
+    print(l, end='')
 else:
-    print(0, end = '')
+    print(0, end='')
 if r:
-    print('.' + r, end = '')
+    print('.' + r, end='')
 if e:
-    print('E%d' % e, end = '')
-
-  	 	   			      	 				   	 			
+    print('E%d' % e, end='')

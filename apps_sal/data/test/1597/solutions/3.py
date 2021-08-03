@@ -1,5 +1,6 @@
 import sys
 
+
 class Node:
     def __init__(self, d):
         nonlocal nodes
@@ -7,6 +8,7 @@ class Node:
         self.a = [[], []]
         self.d = d
         nodes += [self]
+
 
 nodes = []
 pairs = []
@@ -41,4 +43,3 @@ for n in reversed(nodes):
 
 print(res)
 print('\n'.join(pairs))
-

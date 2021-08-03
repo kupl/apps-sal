@@ -33,6 +33,3 @@ class Solution:
                             return True
                         uf.union((i, j), (x, y))
         return False
-                        
-            
-

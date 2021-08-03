@@ -8,14 +8,9 @@ class Solution:
                 c.pop(i)
                 helper(curr.copy(), c)
                 curr.pop()
-            
+
         tiles = list(tiles)
         pos = set()
-                
+
         helper([], tiles)
         return len(pos)
-        
-                
-            
-            
-

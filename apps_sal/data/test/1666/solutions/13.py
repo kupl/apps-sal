@@ -7,4 +7,3 @@ for i in range(a, x + 1):
 
 print(len(ans))
 [print(x[0], x[1]) for x in ans]
-

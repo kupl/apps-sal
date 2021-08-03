@@ -3,11 +3,11 @@ class Solution:
         l = len(s)
         r = set()
         target = 2 ** k
-        for i in range(0, l-k+1):
+        for i in range(0, l - k + 1):
             r.add(
-                s[i:i+k]
+                s[i:i + k]
             )
-        
+
             if len(r) == target:
                 return True
         # else:

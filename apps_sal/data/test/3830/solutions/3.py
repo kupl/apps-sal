@@ -12,4 +12,3 @@ for _ in range(t):
             if s[i - 1] == '-' or s[i] == '-':
                 ans += 1
         print(ans)
-

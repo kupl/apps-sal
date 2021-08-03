@@ -7,6 +7,6 @@ L = Counter(A)
 
 ans = N
 for a, cnt in L.most_common(K):
-  ans -= cnt
+    ans -= cnt
 
 print(ans)

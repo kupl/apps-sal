@@ -6,4 +6,3 @@ else:
     x = n - k * m
     y = 2 * k * m - n
     print(x + y)
-

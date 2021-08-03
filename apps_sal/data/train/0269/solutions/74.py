@@ -5,9 +5,8 @@ class Solution:
             if(nums[i]):
                 array_one.append(i)
         print(array_one)
-        for i in range(1,len(array_one)):
-            if(array_one[i] - array_one[i-1] - 1 < k):
+        for i in range(1, len(array_one)):
+            if(array_one[i] - array_one[i - 1] - 1 < k):
                 return False
-        
-        return True
 
+        return True

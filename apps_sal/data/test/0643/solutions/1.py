@@ -4,24 +4,26 @@ def gcd(a, b):
     else:
         return gcd(b, a % b)
 
+
 class solution:
     def __init__(self, a=0, b=0):
         self.x = a
         self.y = b
 
-def eu (a, b, sol):
+
+def eu(a, b, sol):
     if a == 0:
         sol.x = 0
         sol.y = 1
         return b
     sol2 = solution()
-    d = eu (b%a, a, sol2)
+    d = eu(b % a, a, sol2)
     sol.x = sol2.y - (b // a) * sol2.x
     sol.y = sol2.x
     return d
 
 
-def find_any_solution (a, b, c, sol):
+def find_any_solution(a, b, c, sol):
     g = eu(abs(a), abs(b), sol)
     if c % g != 0:
         return -1
@@ -34,7 +36,7 @@ def find_any_solution (a, b, c, sol):
     return g
 
 
-def shift_solution (sol, a, b, cnt):
+def shift_solution(sol, a, b, cnt):
     sol.x += cnt * b
     sol.y -= cnt * a
 
@@ -57,36 +59,37 @@ def find_all_solution(a, b, c, minx, maxx, miny, maxy):
 
     shift_solution(sol, a, b, (minx - sol.x) // b)
     if sol.x < minx:
-        shift_solution (sol, a, b, sign_b)
+        shift_solution(sol, a, b, sign_b)
     if sol.x > maxx:
         return (-1, -1)
     lx1 = sol.x
 
-    shift_solution (sol, a, b, (maxx - sol.x) // b)
+    shift_solution(sol, a, b, (maxx - sol.x) // b)
     if sol.x > maxx:
-        shift_solution (sol, a, b, -sign_b)
+        shift_solution(sol, a, b, -sign_b)
     rx1 = sol.x
 
-    shift_solution (sol, a, b, - (miny - sol.y) // a)
+    shift_solution(sol, a, b, - (miny - sol.y) // a)
     if sol.y < miny:
-        shift_solution (sol, a, b, -sign_a)
+        shift_solution(sol, a, b, -sign_a)
     if sol.y > maxy:
         return (-1, -1)
     lx2 = sol.x
 
-    shift_solution (sol, a, b, - (maxy - sol.y) // a)
+    shift_solution(sol, a, b, - (maxy - sol.y) // a)
     if sol.y > maxy:
-        shift_solution (sol, a, b, sign_a)
+        shift_solution(sol, a, b, sign_a)
     rx2 = sol.x
 
     if lx2 > rx2:
         lx2, rx2 = rx2, lx2
-    lx = max (lx1, lx2)
-    rx = min (rx1, rx2)
+    lx = max(lx1, lx2)
+    rx = min(rx1, rx2)
 
     if lx > rx:
         return (-1, -1)
     return (lx, rx)
+
 
 def solve():
     s = input().split()
@@ -96,7 +99,7 @@ def solve():
     q = int(s[3])
 
     # x, y, p, q = 3, 10, 1, 2
- 
+
     if p == 0:
         if x == 0:
             return 0
@@ -130,6 +133,7 @@ def solve():
         return -1
     return sum1
 # print(solve())
+
 
 t = int(input())
 for i in range(t):

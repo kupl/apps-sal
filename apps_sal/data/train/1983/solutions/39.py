@@ -1,4 +1,6 @@
 import math
+
+
 class ProductOfNumbers:
 
     def __init__(self):
@@ -15,4 +17,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

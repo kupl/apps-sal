@@ -11,4 +11,3 @@ for y in range(H):
         return
     L.add(i_sweet - i_gnome)
 print(len(L))
-

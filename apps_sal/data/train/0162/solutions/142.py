@@ -22,4 +22,3 @@ class Solution:
             ans = max(self.compute(mem, ptr1 + 1, ptr2, text1, text2), self.compute(mem, ptr1, ptr2 + 1, text1, text2))
             mem[ptr1][ptr2] = ans
             return ans
-

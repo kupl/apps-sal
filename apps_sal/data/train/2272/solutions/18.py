@@ -1,5 +1,6 @@
 from bisect import bisect_left, bisect_right
 
+
 def solve():
     maxD = 30
 
@@ -17,10 +18,10 @@ def solve():
         iA = bisect_left(As, m1)
         iB = bisect_left(Bs, m1)
 
-        num1 = N * (N-iA + N-iB)
+        num1 = N * (N - iA + N - iB)
 
-        As = As[:iA] + [A-m1 for A in As[iA:]]
-        Bs = Bs[:iB] + [B-m1 for B in Bs[iB:]]
+        As = As[:iA] + [A - m1 for A in As[iA:]]
+        Bs = Bs[:iB] + [B - m1 for B in Bs[iB:]]
 
         As.sort()
         Bs.sort(reverse=True)
@@ -40,4 +41,3 @@ def solve():
 
 
 solve()
-

@@ -7,4 +7,3 @@ for i in range(n):
 
 for j in range(1, m, 1):
     print(1, j + 1)
-

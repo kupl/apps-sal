@@ -1,10 +1,12 @@
 from collections import Counter
 from math import inf
 
+
 def oddest(arr):
     c = Counter(map(oddness, arr))
     return max(arr, key=oddness) if c and c[max(c)] == 1 else None
-    
+
+
 def oddness(n):
     if n == -1:
         return inf

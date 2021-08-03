@@ -18,6 +18,6 @@ class Solution:
                     r -= 1
             helper(start, r)
             helper(l, end)
-        
+
         helper(0, len(nums) - 1)
         return nums

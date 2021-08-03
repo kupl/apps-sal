@@ -7,14 +7,15 @@
 
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        p=[]
-        ok=0
+        p = []
+        ok = 0
+
         def dfs(i):
             if not i:
                 return
             nonlocal ok
-            if i==target:
-                ok=1
+            if i == target:
+                ok = 1
                 return
             p.append(0)
             dfs(i.left)
@@ -29,10 +30,10 @@ class Solution:
             else:
                 p.pop()
         dfs(original)
-        i=cloned
+        i = cloned
         for x in p:
-            if x==0:
-                i=i.left
+            if x == 0:
+                i = i.left
             else:
-                i=i.right
+                i = i.right
         return i

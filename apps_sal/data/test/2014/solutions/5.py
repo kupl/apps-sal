@@ -2,12 +2,12 @@
 #       ||        //  \\        ||     ||   // ||
 #       ||       //====\\       ||     ||  //  ||
 #       ||      //      \\      ||     || //   ||
-#   ========== //        \\  ========  ||//====|| 
+#   ========== //        \\  ========  ||//====||
 #  code
 
 def solve():
     n, k = map(int, input().split())
-    c = [ [-1 for i in range(n + 1)] for i in range(k)]
+    c = [[-1 for i in range(n + 1)] for i in range(k)]
     dp = [0 for i in range(n + 1)]
     a = []
 
@@ -17,7 +17,6 @@ def solve():
             c[i][v] = j
         a.append(b)
 
-    
     for i in range(n):
         curpos = a[0][i]
         dp[i] = 1
@@ -33,12 +32,16 @@ def solve():
     print(max(dp))
     return
 
+
 def main():
     t = 1
     # t = int(input())
     for _ in range(t):
         solve()
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

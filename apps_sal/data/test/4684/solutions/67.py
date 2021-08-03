@@ -1,9 +1,9 @@
 n = ''
 
 for s in input().split():
-   n += s
+    n += s
 
 if int(n) % 4 == 0:
-   print('YES')
+    print('YES')
 else:
-   print('NO')
+    print('NO')

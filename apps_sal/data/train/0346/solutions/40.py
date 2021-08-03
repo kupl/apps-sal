@@ -11,4 +11,3 @@ class Solution:
                 count += 1
             res += count
         return res
-

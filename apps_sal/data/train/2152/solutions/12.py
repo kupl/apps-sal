@@ -13,6 +13,7 @@ def simple_div(x):
     if x != 1:
         yield x
 
+
 def __main__():
     n = int(input())
     a = list(map(int, input().split()))
@@ -32,5 +33,5 @@ def __main__():
             res = tmp
     print(res)
 
-__main__()
 
+__main__()

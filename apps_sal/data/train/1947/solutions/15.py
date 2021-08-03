@@ -15,7 +15,7 @@ class Solution:
                 i += 1
             else:
                 A.pop(i)
-                
+
         i, seen = 0, set()
         while i < len(B):
             if B[i] not in seen:
@@ -30,7 +30,7 @@ class Solution:
                 i += 1
             else:
                 B.pop(i)
-        
+
         # 2) merge all the dicts of B into one dict
         while len(B) > 1:
             for key in B[1]:
@@ -41,7 +41,7 @@ class Solution:
                     B[1][key] = B[0][key]
             B.pop(0)
         B_dct = B[0]
-        
+
         # 3)
         ans, A_len, B_len = [], len(A), len(B)
         for i in range(A_len):

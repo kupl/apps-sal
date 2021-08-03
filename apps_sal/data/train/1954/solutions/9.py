@@ -25,6 +25,3 @@ class Solution:
                     dp[new_skill] = v + [i]
 
         return dp[(1 << N) - 1]
-
-
-

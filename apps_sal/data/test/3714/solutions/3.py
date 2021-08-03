@@ -2,13 +2,16 @@ n = int(input())
 
 L = list(map(int, input().split()))
 
+
 def gcd(a, b):
     while b != 0:
         a, b = b, a % b
     return a
 
+
 def lcm(a, b):
     return a // gcd(a, b) * b
+
 
 if len(set(L)) < n:
     print(-1)
@@ -16,7 +19,8 @@ else:
     a = 1
 
     for i in range(n):
-        if L[i] == 0: continue
+        if L[i] == 0:
+            continue
         u = i
         c = 0
         while L[u] != 0:
@@ -31,5 +35,3 @@ else:
         a = lcm(a, c)
 
     print(a)
-
-

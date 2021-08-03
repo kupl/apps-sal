@@ -17,10 +17,10 @@ for i in range(2):
 
         visited[x][y] = True
 
-        if fields[x+1][y] != '#' and not visited[x+1][y]:
-            q.append((x+1, y))
-        if fields[x][y+1] != '#' and not visited[x][y+1]:
-            q.append((x, y+1))
+        if fields[x + 1][y] != '#' and not visited[x + 1][y]:
+            q.append((x + 1, y))
+        if fields[x][y + 1] != '#' and not visited[x][y + 1]:
+            q.append((x, y + 1))
 
         if x == n and y == m:
             break
@@ -33,10 +33,3 @@ for i in range(2):
     visited[n][m] = False
 
 print(2)
-
-
-
-
-
-
-

@@ -1,8 +1,8 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-#         binary search
+        #         binary search
         def validable(days):
-#             how many booms in days, and how many bouquet can make
+            #             how many booms in days, and how many bouquet can make
             bloom = 0
             bouquet = 0
             for b in bloomDay:
@@ -13,7 +13,7 @@ class Solution:
                 else:
                     bloom = 0
             return bouquet >= m
-                    
+
         if len(bloomDay) < m * k:
             return -1
         left = min(bloomDay)
@@ -25,9 +25,8 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
-    
-    
+
+
 #     def minDays(bloomDay: List[int], m: int, k: int) -> int:
 #     def feasible(days) -> bool:
 #         bonquets, flowers = 0, 0
@@ -49,4 +48,3 @@ class Solution:
 #         else:
 #             left = mid + 1
 #     return left
-

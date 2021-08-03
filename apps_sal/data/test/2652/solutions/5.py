@@ -1,3 +1,6 @@
+import heapq
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -44,31 +47,30 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-    
-import heapq    
-    
+
+
 n = int(input())
 a = []
 b = []
 for i in range(n):
-    x,y= map(int, input().split())
-    a.append((x,y,i))
-    b.append((y,x,i))
+    x, y = map(int, input().split())
+    a.append((x, y, i))
+    b.append((y, x, i))
 a.sort()
 b.sort()
 edgea = []
 edgeb = []
-for i in range(n-1):
-    edgea.append((a[i+1][0]-a[i][0],a[i][2],a[i+1][2]))
-    edgeb.append((b[i+1][0]-b[i][0],b[i][2],b[i+1][2]))
-edge = edgea+edgeb
+for i in range(n - 1):
+    edgea.append((a[i + 1][0] - a[i][0], a[i][2], a[i + 1][2]))
+    edgeb.append((b[i + 1][0] - b[i][0], b[i][2], b[i + 1][2]))
+edge = edgea + edgeb
 heapq.heapify(edge)
 
 uf = UnionFind(n)
 ans = 0
 while len(edge):
-    x,y,z = heapq.heappop(edge)
-    if not uf.same(y,z):
+    x, y, z = heapq.heappop(edge)
+    if not uf.same(y, z):
         ans += x
-        uf.union(y,z)
+        uf.union(y, z)
 print(ans)

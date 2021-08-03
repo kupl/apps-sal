@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     s = input()
 
@@ -13,16 +14,22 @@ def solve():
 
     print(ans)
 
+
 def is_pali(s):
     return s == s[::-1]
 
+
 def mintotime(m):
     return '{:02d}:{:02d}'.format(m // 60, m % 60)
+
 
 def timetomin(s):
     h, m = map(int, s.split(':'))
     return h * 60 + m
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

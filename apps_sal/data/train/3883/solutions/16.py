@@ -18,5 +18,5 @@ def solve(s):
             out_string += c + v
     else:
         return 'failed'
-    
+
     return out_string

@@ -14,4 +14,3 @@ if x in lst:
     print(k + 1)
 else:
     print(k)
-

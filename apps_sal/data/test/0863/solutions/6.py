@@ -14,4 +14,3 @@ for i in range(cnt + 1):
         ans += 1
 
 print(ans)
-

@@ -1,7 +1,7 @@
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         i = max(stones)
-        weights = [0]*(i+1)
+        weights = [0] * (i + 1)
         for stone in stones:
             weights[stone] += 1
         current = 0
@@ -18,5 +18,5 @@ class Solution:
                     weights[current] += 1
                     current = 0
             else:
-                i -=1
+                i -= 1
         return current

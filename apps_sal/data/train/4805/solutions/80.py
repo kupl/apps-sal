@@ -3,9 +3,3 @@ def check(seq, elem):
         return True
     if not elem in seq:
         return False
-    
-    
-        
-        
-        
-

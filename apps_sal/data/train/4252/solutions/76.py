@@ -1,4 +1,4 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     final = set()
     for i in first:
         final.update(first)

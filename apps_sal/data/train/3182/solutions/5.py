@@ -9,4 +9,3 @@ def LDTA(n):
                 res.append(digit)
             if len(res) >= 10:
                 return int(res[-1])
-

@@ -3,9 +3,10 @@
 from collections import deque
 from bisect import bisect_left
 
+
 def main():
-    N, Q = list(map( int, input().split()))
-    Query = [ tuple( map( int, input().split())) for _ in range(Q)]
+    N, Q = list(map(int, input().split()))
+    Query = [tuple(map(int, input().split())) for _ in range(Q)]
     LX = 1
     X = deque([N])
     VX = deque([N])
@@ -19,19 +20,19 @@ def main():
     for i, x in Query:
         if i == 1:
             if x < my:
-                ans += mx-2
+                ans += mx - 2
                 # Y.appendleft(x)
                 # VY.appendleft(mx)
                 X.appendleft(x)
                 VX.appendleft(mx)
                 my = x
             else:
-                ans += VX[bisect_left(X,x)-1]-2
+                ans += VX[bisect_left(X, x) - 1] - 2
                 # print("x", x, bisect_left(X,x))
                 # print(X, VX)
         else:
             if x < mx:
-                ans += my-2
+                ans += my - 2
                 Y.appendleft(x)
                 VY.appendleft(my)
 
@@ -39,7 +40,7 @@ def main():
                 # VX.appendleft(my)
                 mx = x
             else:
-                ans += VY[bisect_left(Y,x)-1]-2
+                ans += VY[bisect_left(Y, x) - 1] - 2
                 # print("y",x, bisect_left(Y,x))
                 # print(Y, VY)
 
@@ -49,8 +50,11 @@ def main():
     #     print(i, x, ans)
     # print(X, VX)
     # print(Y,VY)
-    print(((N-2)**2-ans))
+    print(((N - 2)**2 - ans))
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

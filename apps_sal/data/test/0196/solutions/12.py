@@ -7,4 +7,3 @@ elif (x == 0):
 else:
     ans = ((2 * x - 1) * pow(2, k, mod) + 1) % mod
     print(ans)
-

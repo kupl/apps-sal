@@ -12,7 +12,7 @@ class Solution:
             for link in links:
                 stateList.append([link, -color])
         return True
-            
+
     def generateGraph(self, dislikes):
         graph = {}
         for a, b in dislikes:
@@ -23,10 +23,10 @@ class Solution:
             graph[a].append(b)
             graph[b].append(a)
         return graph
-    
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = self.generateGraph(dislikes)
-        
+
         visited = {}
         for key in graph:
             if key not in visited:

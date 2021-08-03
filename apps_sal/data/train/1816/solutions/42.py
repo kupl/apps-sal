@@ -9,7 +9,6 @@ class Solution:
         #print(t1, t2, hdiff, sdiff, hdiff * 60 + sdiff)
         return (hdiff * 60 + sdiff) <= 60
 
-
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
 
         d = {}
@@ -27,5 +26,3 @@ class Solution:
                     result.append(k)
                     break
         return sorted(result)
-        
-

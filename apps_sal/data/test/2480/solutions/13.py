@@ -8,13 +8,13 @@ total = 0
 s = [0] * (n + 1)
 for i in range(n):
     total += a[i]
-    s[i+1] = total % k
+    s[i + 1] = total % k
 
 queue = deque()
 mp = {}
 
 ans = 0
-for j in range(n+1):
+for j in range(n + 1):
     rem = s[j]
     queue.append(rem)
     if rem in mp:
@@ -22,7 +22,7 @@ for j in range(n+1):
         mp[rem] += 1
     else:
         mp[rem] = 1
-    
+
     if len(queue) == k:
         mp[queue.popleft()] -= 1
 

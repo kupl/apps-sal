@@ -15,6 +15,3 @@ elif n <= k:
     for i in range(n):
         cost += x
     print(cost)
-
-
-

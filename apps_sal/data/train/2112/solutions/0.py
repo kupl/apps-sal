@@ -15,7 +15,7 @@ for i in range(32):
                 opp += curr[v ^ 1]
             else:
                 same += curr[v ^ 1]
-            
+
         if v not in curr:
             curr[v] = 0
         curr[v] += 1
@@ -30,6 +30,3 @@ for i in range(32):
         out += mult
     mult *= 2
 print(inv, out)
-    
-    
-

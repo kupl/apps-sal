@@ -13,21 +13,21 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         trie, curs = self.trie, self.curs
-        
+
         ans = False
-        
+
         new_curs = []
         for cur in curs:
             if letter in cur:
                 new_cur = cur[letter]
                 ans = ans or '.' in new_cur
                 new_curs.append(new_cur)
-                
+
         if letter in trie:
             new_cur = trie[letter]
             ans = ans or '.' in new_cur
             new_curs.append(new_cur)
-        
+
         self.curs = new_curs
 
         return ans

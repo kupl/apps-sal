@@ -1,18 +1,22 @@
 import numpy as np
+
+
 def sequence(n):
     return ter2dec(dec2bin(n))
-    
+
+
 def dec2bin(n):
     bin = np.array([])
     while n > 0:
-        bin = np.append(bin, [n%2])
-        n = n//2
+        bin = np.append(bin, [n % 2])
+        n = n // 2
     return bin
+
 
 def ter2dec(ter):
     dec = 0
     for i in range(len(ter)):
-        dec += ter[i]*3**i
+        dec += ter[i] * 3**i
     return dec
 
 # Induction hypothesis:
@@ -23,11 +27,9 @@ def ter2dec(ter):
 # If m has no 2's, consider A and B such that A,B,m is an arithmetic sequence and B is in S(m).
 # Comparing the rightmost digits of B and m which are different. A must have a 2 in this position to form an arithmetic sequence.
 #     Hence A is not in S(m) and m will be the next number in the sequence.
-# 
+#
 # Therefore the next number in the sequence has no 2's in it's ternary form.
 #
 # Base case: S(1) is 0, S(2) is 0,1.
 #
 # There is a trivial bijection between the nth numbers ternary form and the binary form of n.
-
-

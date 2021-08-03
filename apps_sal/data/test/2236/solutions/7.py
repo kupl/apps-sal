@@ -10,9 +10,7 @@ ans = n - 1
 
 for i in range(n):
     t = A[i]
-    s += t;
+    s += t
     d[s] += 1
     ans = min(ans, n - d[s])
 print(ans)
-    
-

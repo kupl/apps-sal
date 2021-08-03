@@ -5,7 +5,7 @@ alp = list('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ')
 for i in range(len(s)):
     for j in range(26):
         if s[i] == alp[j]:
-            s[i] = alp[j+n]
+            s[i] = alp[j + n]
             break
 
 print(''.join(s))

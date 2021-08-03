@@ -11,7 +11,6 @@ for pair in a:
     hours += pair[0]
     deadline = pair[1]
 
-
     if hours > deadline:
         ans = "No"
         break

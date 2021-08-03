@@ -1,6 +1,6 @@
 def compound_array(a, b):
-    r=[]
+    r = []
     while a or b:
-        r+=a[:1]+b[:1]
-        a,b=a[1:],b[1:]
+        r += a[:1] + b[:1]
+        a, b = a[1:], b[1:]
     return r

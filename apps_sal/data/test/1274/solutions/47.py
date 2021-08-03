@@ -1,14 +1,24 @@
-import bisect, collections, copy, heapq, itertools, math, string, sys
-input = lambda: sys.stdin.readline().rstrip() 
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = float('inf')
 def I(): return int(input())
 def F(): return float(input())
 def SS(): return input()
 def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x)-1 for x in input().split()]
+def LI_(): return [int(x) - 1 for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LSS(): return input().split()
+
 
 def resolve():
     N, M = LI()
@@ -17,7 +27,7 @@ def resolve():
     W = [[] for _ in range(M + 1)]
     for a, b in AB:
         if 0 <= M - a:
-            W[M-a].append(b)
+            W[M - a].append(b)
     # print(W)
 
     # 選択肢の少ない後ろの日付から決めていく
@@ -31,7 +41,9 @@ def resolve():
 
     print(ans)
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

@@ -5,4 +5,3 @@ if X % fX == 0:
     print("Yes")
 else:
     print("No")
-

@@ -36,4 +36,3 @@ for h in range(H, 0, -1):
 
 ans = north + south + east + west
 print((ans.max() + 1))
-

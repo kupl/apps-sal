@@ -6,27 +6,27 @@ import sys
 # mod,MOD=1000000007,998244353
 # vow=['a','e','i','o','u']
 # dx,dy=[-1,1,0,0],[0,0,1,-1]
-#sys.setrecursionlimit(1000000)
+# sys.setrecursionlimit(1000000)
 #from cmath import sqrt
 #from collections import deque, Counter, OrderedDict,defaultdict
 #from heapq import nsmallest, nlargest, heapify,heappop ,heappush, heapreplace
 #from math import ceil,floor,log,sqrt,factorial,pow,pi,gcd
-from bisect import bisect_left,bisect_right
+from bisect import bisect_left, bisect_right
 #import numpy as np
-def get_array(): return list(map(int , sys.stdin.readline().strip().split()))
+def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
 def get_ints(): return list(map(int, sys.stdin.readline().strip().split()))
 def input(): return sys.stdin.readline().strip()
+
 
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
 
-n=int(input())
-arr=get_array()
+n = int(input())
+arr = get_array()
 arr.sort()
-maxi=-1
+maxi = -1
 for i in range(n):
-    x=bisect_right(arr,2*arr[i])
-    x-=1
-    maxi=max(maxi,x-i+1)
-print(n-maxi)
-
+    x = bisect_right(arr, 2 * arr[i])
+    x -= 1
+    maxi = max(maxi, x - i + 1)
+print(n - maxi)

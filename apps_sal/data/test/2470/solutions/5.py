@@ -1,5 +1,6 @@
 from bisect import bisect
 
+
 class Solution:
     def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:
         d = {float('-inf'): 0}
@@ -19,15 +20,9 @@ class Solution:
                         d2[j] = min(d2[j], v + 1)
                     else:
                         d2[j] = v + 1
-            
+
             d = d2
-        
+
         if d:
             return min(d.values())
         return -1
-                        
-        
-        
-        
-        
-

@@ -5,9 +5,9 @@ cols = [[0, 0] for i in range(m)]
 for i in range(k):
     typ, p, x = list(map(int, input().split()))
     if typ == 1:
-        rows[p-1] = [x, i+1]
+        rows[p - 1] = [x, i + 1]
     elif typ == 2:
-        cols[p-1] = [x, i+1]
+        cols[p - 1] = [x, i + 1]
     else:
         print('WTF?!')
 
@@ -19,4 +19,3 @@ for i in range(n):
         else:
             line.append(cols[j][0])
     print(' '.join(map(str, line)))
-

@@ -1,5 +1,6 @@
 def fold_to(B):
-    if B < 0: return None
+    if B < 0:
+        return None
     B *= 10_000
     L = 1
     M = 0
@@ -7,5 +8,3 @@ def fold_to(B):
         L *= 2
         M += 1
     return M
-        
-

@@ -1,5 +1,5 @@
-def get_char(c):   
-#def get_char(c):
+def get_char(c):
+    # def get_char(c):
     '''
     Accepts decimal input
     returns extended ascii character representation of input

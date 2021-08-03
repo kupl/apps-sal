@@ -15,5 +15,3 @@ MOD = 1000000007
 ans %= MOD
 
 print(ans)
-
-

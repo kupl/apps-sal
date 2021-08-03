@@ -37,4 +37,3 @@ for i in range(mid + 1):
     if (ans & (1 << (mid - i))) or (ans & (1 << (mid + i))):
         print(i)
         return
-

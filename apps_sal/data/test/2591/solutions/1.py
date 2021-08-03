@@ -11,10 +11,10 @@ for _ in range(Q):
 for N, A in Query:
     A.sort()
     l = 0
-    r = N-1
+    r = N - 1
     ans = []
     for i in range(N):
-        if i%2 == 0:
+        if i % 2 == 0:
             ans.append(str(A[l]))
             l += 1
         else:

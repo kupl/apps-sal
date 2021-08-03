@@ -13,5 +13,4 @@ for i in range(1, 2 ** N):
 
 print(len(ans) - 1)
 for i in range(1, len(ans)):
-    print(ans[i] ^ ans[i-1], end=" ")
-
+    print(ans[i] ^ ans[i - 1], end=" ")

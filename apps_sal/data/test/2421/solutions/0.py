@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     x, y = list(map(int, input().split()))
     clst = list(map(int, input().split()))
@@ -21,7 +22,7 @@ def main():
             continue
         ans = min(ans, clst[i] * a + clst[(i + 1) % 6] * b)
     print(ans)
-    
+
+
 for _ in range(int(input())):
     main()
-

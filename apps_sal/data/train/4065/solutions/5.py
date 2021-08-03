@@ -1,5 +1,6 @@
 END = 9876543211
 
+
 def get_sequence(offset, size):
     number = 1023456789
     sequence = []
@@ -12,14 +13,12 @@ def get_sequence(offset, size):
             sequence.append(element)
 
         if len(sequence) == size:
-            break 
+            break
 
     return sequence
-    
+
+
 def check_number(number):
-   seq = set(str(number))
+    seq = set(str(number))
 
-
-   return len(seq) == 10
-
-
+    return len(seq) == 10

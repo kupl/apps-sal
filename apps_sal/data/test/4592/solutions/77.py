@@ -10,21 +10,17 @@ def bunkai(n):
         fct.append(n)
     return fct
 
-n=int(input())
-s=[0]*(n+1)
-for i in range(1,n+1):
-    fact=bunkai(i)
-    for j in fact:
-        s[j]+=1
-ans=1
 
-for i in range(0,n+1):
-    ans*=(s[i]+1)
-    ans%=10**9+7
+n = int(input())
+s = [0] * (n + 1)
+for i in range(1, n + 1):
+    fact = bunkai(i)
+    for j in fact:
+        s[j] += 1
+ans = 1
+
+for i in range(0, n + 1):
+    ans *= (s[i] + 1)
+    ans %= 10**9 + 7
 
 print(ans)
-
-
-
-
-

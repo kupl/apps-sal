@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     ans = []
     arr.reverse()
     for i in arr:

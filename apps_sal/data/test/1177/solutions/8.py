@@ -14,4 +14,3 @@ for a in A:
     ans += dp[S]
 
 print((ans % MOD))
-

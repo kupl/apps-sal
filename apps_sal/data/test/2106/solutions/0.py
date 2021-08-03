@@ -5,7 +5,8 @@ for i in range(n):
     l[i] -= a[i]
 L, A = [l[0]], [a[0]]
 for i in range(1, n):
-    if a[i] <= A[-1]: L[-1] += l[i]
+    if a[i] <= A[-1]:
+        L[-1] += l[i]
     else:
         A.append(a[i])
         L.append(l[i])

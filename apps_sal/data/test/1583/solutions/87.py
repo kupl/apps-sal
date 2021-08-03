@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
-#import
+# import
 import math
 #import numpy as np
-#= int(input())
-#= input()
-a, b, x= list(map(int, input().split()))
-#= list(map(int, input().split()))
-#= [input(), input()]
-#= [list(map(int, input().split())) for _ in range(N)]
-#= [int(input()) for _ in range(N)]
-#= {i:[] for i in range(N)}
+# = int(input())
+# = input()
+a, b, x = list(map(int, input().split()))
+# = list(map(int, input().split()))
+# = [input(), input()]
+# = [list(map(int, input().split())) for _ in range(N)]
+# = [int(input()) for _ in range(N)]
+# = {i:[] for i in range(N)}
 
 d = a * a * b
 
@@ -25,5 +25,3 @@ else:
     xx = 2 * x / (a * b * b)
     theta = math.atan(xx)
     print((90 - theta * 180 / math.pi))
-
-

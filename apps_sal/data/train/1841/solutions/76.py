@@ -1,7 +1,7 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
-        m = arr[floor((len(arr)-1)/2)]
+        m = arr[floor((len(arr) - 1) / 2)]
         res = []
         while len(res) < k:
             if abs(arr[-1] - m) >= abs(arr[0] - m):

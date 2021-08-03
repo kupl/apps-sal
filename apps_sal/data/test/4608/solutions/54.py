@@ -12,12 +12,9 @@ for i in range(n):
         print(cnt)
         return
     if bool[A[j]] == True:
-        bool[A[j]] = False        
+        bool[A[j]] = False
         j = A[j]
         cnt += 1
-    else :
+    else:
         print((-1))
         return
-
-
-

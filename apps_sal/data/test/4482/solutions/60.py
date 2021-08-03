@@ -8,4 +8,4 @@ b = 0
 for i in range(len(A)):
     a += (A[i] - avg)**2
     b += (A[i] - avg - 1)**2
-print(min(a,b))
+print(min(a, b))

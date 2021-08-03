@@ -3,7 +3,7 @@ def evil(n):
     while(n):
         c += n & 1
         n >>= 1
-    
+
     if c & 1:
         return("It's Odious!")
     else:

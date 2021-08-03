@@ -21,9 +21,8 @@ def maxSum(arr, n, k):
 
     return res
 
+
 for _ in range(int(input())):
-    n,k=list(map(int,input().split()))
-    l=list(map(int,input().split()))
+    n, k = list(map(int, input().split()))
+    l = list(map(int, input().split()))
     print(maxSum(l, n, k))
-
-

@@ -5,7 +5,8 @@ class Solution:
 
         def _dfs(p, f):
             cost = abs(locations[finish] - locations[p])
-            if cost > f: return 0
+            if cost > f:
+                return 0
             # if cost == f: return 1
             if dp[p][f] < 0:
                 dp[p][f] = sum(

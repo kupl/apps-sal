@@ -1,2 +1,2 @@
-X=list(map(int,input().split()))
-print(max(X)-min(X))
+X = list(map(int, input().split()))
+print(max(X) - min(X))

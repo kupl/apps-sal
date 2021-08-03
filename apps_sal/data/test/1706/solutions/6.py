@@ -1,22 +1,26 @@
 import sys
 
+
 def minp():
-	return sys.stdin.readline().strip()
+    return sys.stdin.readline().strip()
+
 
 def mint():
-	return int(minp())
+    return int(minp())
+
 
 def mints():
-	return list(map(int, minp().split()))
+    return list(map(int, minp().split()))
+
 
 def solve():
-	s = minp()
-	n = len(s)
-	print(3)
-	print('R', n-1)
-	print('L', n)
-	print('L', 2)
+    s = minp()
+    n = len(s)
+    print(3)
+    print('R', n - 1)
+    print('L', n)
+    print('L', 2)
 
-#for i in range(mint()):
+
+# for i in range(mint()):
 solve()
-

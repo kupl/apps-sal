@@ -2,7 +2,7 @@ import sys
 sys.setrecursionlimit(10**7)
 input = sys.stdin.readline
 
-a,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 
 bt = 0
 if b % 2:
@@ -19,4 +19,3 @@ else:
     at ^= (a - 1)
 
 print((bt ^ at))
-

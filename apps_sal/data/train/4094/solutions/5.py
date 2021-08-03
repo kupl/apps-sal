@@ -9,4 +9,3 @@ def count_positives_sum_negatives(input):
         elif element < 0:
             sum_ += element
     return [count_, sum_]
-

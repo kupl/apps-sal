@@ -5,13 +5,12 @@ bn = 0
 ib = 0
 
 for i in p:
-    if ib+i>m:
-        ib=i
-        bn+=1
+    if ib + i > m:
+        ib = i
+        bn += 1
     else:
-        ib+=i
+        ib += i
 if ib > 0:
     bn += 1
 
 print(bn)
-

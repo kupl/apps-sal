@@ -44,4 +44,3 @@ class Solution:
                         continue
 
         return counter
-

@@ -9,6 +9,7 @@ def LS(): return sys.stdin.readline().split()
 def II(): return int(sys.stdin.readline())
 def SI(): return input()
 
+
 def main():
     N = II()
     S = LI()
@@ -23,5 +24,6 @@ def main():
             ans = max(ans, tmp)
             L += C
     return ans
+
 
 print(main())

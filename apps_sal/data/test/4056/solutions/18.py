@@ -1,9 +1,10 @@
-#579_C
+# 579_C
 
 def gcd(a, b):
     if b == 0:
         return a
     return gcd(b, a % b)
+
 
 n = int(input())
 
@@ -23,4 +24,3 @@ for i in range(1, int(m ** 0.5) + 1):
             d -= 1
 
 print(d)
-

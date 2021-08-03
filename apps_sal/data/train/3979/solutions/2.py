@@ -7,7 +7,6 @@ def match_arrays(v, r):
             cnt += 1
     return cnt
 
+
 # DON'T remove
-verbose = False # set to True to diplay arrays being tested in the random tests
-
-
+verbose = False  # set to True to diplay arrays being tested in the random tests

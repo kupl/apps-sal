@@ -5,18 +5,18 @@ class Solution:
         bus_to_stop = defaultdict(set)
         for bus, stops in enumerate(routes):
             bus_to_stop[bus] = set(stops)
-        
+
         def update_buses_used():
             for bus in range(num_buses):
                 if bus in buses_used:
                     continue
                 if stops_reached & bus_to_stop[bus]:
                     buses_used.add(bus)
-        
+
         def update_stops_reached():
             for bus in buses_used:
                 stops_reached.update(bus_to_stop[bus])
-        
+
         buses_used = set()
         stops_reached = {S}
         pre_stop_count = 0
@@ -28,16 +28,15 @@ class Solution:
             update_buses_used()
             update_stops_reached()
             bus_count += 1
-            
+
         return -1
 
-        
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         stop_to_bus = defaultdict(set)
         for bus, stops in enumerate(routes):
             for stop in stops:
                 stop_to_bus[stop].add(bus)
-        
+
         q = deque([(S, 0)])
         seen = {S}
         while q:
@@ -51,5 +50,3 @@ class Solution:
                     seen.add(stop_new)
                     q.append((stop_new, bus_count + 1))
         return -1
-        
-

@@ -16,5 +16,3 @@ def past(h, m, s):
         ms += 0
 
     return ms
-    
-

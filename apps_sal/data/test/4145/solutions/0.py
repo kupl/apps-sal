@@ -16,8 +16,6 @@ def solve(X: int):
                 return prime
 
 
-
-
 def main():
     X = int(input())  # type: int
     answer = solve(X)
@@ -26,5 +24,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

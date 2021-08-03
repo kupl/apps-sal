@@ -17,5 +17,4 @@ prod_sum(1, 0, 2)
 
 
 def productsum(n):
-    return sum(list(set(factors[2:n+1])))
-
+    return sum(list(set(factors[2:n + 1])))

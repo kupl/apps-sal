@@ -19,5 +19,3 @@ if d[k[0]] != d[k[1]]:
 else:
     print("YES")
     print(str(k[0]) + " " + str(k[1]))
-
-

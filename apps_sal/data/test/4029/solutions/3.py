@@ -2,7 +2,7 @@ inf = float('inf')
 
 
 def find_right(s, c, j=-1):
-    for i in range(len(s)-1, -1, -1):
+    for i in range(len(s) - 1, -1, -1):
         if i != j and s[i] == c:
             return i
     return inf
@@ -43,4 +43,3 @@ def swaps(s, c1, c2):
 n = input().strip()
 ans = min(swaps(n, "0", "0"), swaps(n, "2", "5"), swaps(n, "5", "0"), swaps(n, "7", "5"))
 print(ans if ans != inf else -1)
-

@@ -1,8 +1,8 @@
 #a = [int(i) for i in input().split()]
 #n = input()
-n,s = map(int,input().split())
+n, s = map(int, input().split())
 
-if s%n==0:
-	print(s//n)
+if s % n == 0:
+    print(s // n)
 else:
-	print(s//n+1)
+    print(s // n + 1)

@@ -28,4 +28,3 @@ for i in range(10 ** n):
         return
 
 print((-1))
-

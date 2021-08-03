@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, m = read()
 f = list(read())
 s = list(read())
@@ -20,4 +22,3 @@ while i < n or j < m:
         y += s[j]
         # print(2, y)
 print(r)
-

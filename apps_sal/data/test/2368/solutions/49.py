@@ -2,6 +2,7 @@
 # https://note.nkmk.me/python-union-find/
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -53,16 +54,16 @@ class UnionFind():
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
 
 
-N,M = map(int, input().split())
-A = list(map(int, input().split())) 
-B = list(map(int, input().split())) 
-C = [0]*N
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+C = [0] * N
 for i in range(N):
-    C[i]=A[i]-B[i]
+    C[i] = A[i] - B[i]
 uf = UnionFind(N)
 for i in range(M):
-    A,B = map(int, input().split())
-    uf.union(A-1,B-1)
+    A, B = map(int, input().split())
+    uf.union(A - 1, B - 1)
 M = uf.all_group_members()
 ans = True
 for v in M.values():
@@ -70,7 +71,7 @@ for v in M.values():
     for c in v:
         su += C[c]
 
-    ans = ans and su==0
+    ans = ans and su == 0
 
 
 if ans:

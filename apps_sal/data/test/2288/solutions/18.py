@@ -40,4 +40,3 @@ for _ in range(int(input())):
         else:
             print("No")
 '''
-

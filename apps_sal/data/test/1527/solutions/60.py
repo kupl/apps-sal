@@ -19,6 +19,5 @@ for i in range(H * W):
                 A += [i]
                 B += [nx * W + ny]
                 C += [1]
-F = floyd_warshall(csr_matrix((C, (A, B)), shape=(H*W, H*W)))
-print((int(np.max(F[F!=np.inf]))))
-
+F = floyd_warshall(csr_matrix((C, (A, B)), shape=(H * W, H * W)))
+print((int(np.max(F[F != np.inf]))))

@@ -13,6 +13,4 @@ for i in range(1, n):
 print('\n'.join(str(len(i)) + ' ' + ' '.join(map(str, i)) for i in t[: k]))
 
 
-
 # Made By Mostafa_Khaled
-

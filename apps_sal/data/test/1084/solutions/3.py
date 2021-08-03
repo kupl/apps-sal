@@ -11,7 +11,8 @@ def read_data():
         a.append(line)
     return n, m, a
 
-def get_step(i,j):
+
+def get_step(i, j):
     rows = []
     cols = []
     for k in range(m):
@@ -36,17 +37,18 @@ def get_step(i,j):
                 a[row][col] = 0
     return "Ok"
 
+
 def solve():
     for i in range(n):
         for j in range(m):
             if a[i][j] == 1:
-                step = get_step(i,j)
+                step = get_step(i, j)
                 if step == "No":
                     return "No"
     return "Yes"
+
 
 n, m, a = read_data()
 usedr = []
 usedc = []
 print(solve())
-

@@ -23,4 +23,3 @@ while len(results) != query_number:
             ignored_query = queries.popleft()
             results[ignored_query.time] = -1
 print(" ".join(str(results[time]) for time in sorted(results.keys())))
-

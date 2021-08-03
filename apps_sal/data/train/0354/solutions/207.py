@@ -3,7 +3,7 @@ class Solution:
         mod = 10 ** 9 + 7
         dp = [[0] * (n + 1) for _ in range(7)]
         for j in range(1, n + 1):
-            tot = sum(dp[k][j - 1] for k in range(1, 7)) 
+            tot = sum(dp[k][j - 1] for k in range(1, 7))
             for i in range(1, 7):
                 if j == 1:
                     dp[i][j] = 1

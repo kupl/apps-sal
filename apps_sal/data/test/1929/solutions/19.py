@@ -1,5 +1,6 @@
 import sys
 
+
 def __starting_point():
     n, t, c = list(map(int, sys.stdin.readline().split()))
     prisoners = list(map(int, sys.stdin.readline().split()))

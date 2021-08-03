@@ -20,18 +20,18 @@ class Place():
     def __repr__(self):
         return "{} {}".format(self.max_, self.i)
 
+
 def __starting_point():
     lines = sys.stdin.readlines()
     n = int(lines[0])
     visitors = []
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         ci, pi = lines[i].split()
         visitors.append(Visitor(int(pi), int(ci), i))
 
     places = []
-    for i, place in enumerate(lines[n+2].split()):
-        places.append(Place(i+1, place))
-
+    for i, place in enumerate(lines[n + 2].split()):
+        places.append(Place(i + 1, place))
 
     visitors = sorted(visitors, key=lambda x: x.pi)[::-1]
     places = sorted(places, key=lambda x: x.max_)
@@ -54,5 +54,6 @@ def __starting_point():
     # print(visitors)
     # print(places)
     # print(visited)
+
 
 __starting_point()

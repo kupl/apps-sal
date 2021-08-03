@@ -1,3 +1,4 @@
+import numpy as np
 n = int(input())
 
 # n % k = 1 の数
@@ -19,7 +20,6 @@ ans -= 1
 # n % k = 0 の場合
 # nを素因数分解する
 m = n
-import numpy as np
 i = 2
 factor = []
 while i * i <= n:

@@ -1,2 +1,2 @@
 def find_average(n):
-    return sum(n)/len(n) if n else 0
+    return sum(n) / len(n) if n else 0

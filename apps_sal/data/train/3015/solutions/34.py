@@ -8,5 +8,5 @@ def get_issuer(number):
         return 'Discover'
     if str(number)[0:2] in ['34', '37'] and len(str(number)) == 15:
         return 'AMEX'
-    
+
     return 'Unknown'

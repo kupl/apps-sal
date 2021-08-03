@@ -26,4 +26,3 @@ print((''.join(ans)))
 # minlen = min(map(len, answers))
 # ans = min(filter(lambda ans: len(ans) == minlen, answers))
 # print(ans)
-

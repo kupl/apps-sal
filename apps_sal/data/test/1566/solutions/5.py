@@ -19,4 +19,3 @@ for i in range(x1, x2 + 1):
         else:
             need[i][j] = 4
 print("Yes" if need == s else "No")
-

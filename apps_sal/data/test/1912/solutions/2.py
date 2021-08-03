@@ -1,4 +1,6 @@
 mod = 10**9 + 7
+
+
 def solve():
     r, g, b, w = map(int, input().split())
     ok = False
@@ -11,6 +13,8 @@ def solve():
         b -= mn
         w += 3 * mn
     print('Yes' if ok else 'No')
+
+
 t = 1
 t = int(input())
 for _ in range(t):

@@ -29,10 +29,9 @@ else:
     else:
         ind = 0
         for i in range(len(s)):
-            if s[i] == r[ind] and ind < len(r)-1:
+            if s[i] == r[ind] and ind < len(r) - 1:
                 ind += 1
-        if ind == len(r)-1:
+        if ind == len(r) - 1:
             print('automaton')
         else:
             print('both')
-

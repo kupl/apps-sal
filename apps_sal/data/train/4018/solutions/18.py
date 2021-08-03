@@ -3,5 +3,4 @@ def isDigit(str):
         float(str)
     except ValueError:
         return False
-    return True 
-
+    return True

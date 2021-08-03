@@ -11,4 +11,3 @@ for i in range(len(S)):
     if S[i] != '1':
         print((S[i]))
         return
-

@@ -46,7 +46,7 @@ def main():
 
     lines = set()
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             lines.add(pointsToLine2d(p[i], p[j]))
 
     k = len(lines)
@@ -58,5 +58,5 @@ def main():
         out += (k - x) * x
     write(out // 2)
 
-main()
 
+main()

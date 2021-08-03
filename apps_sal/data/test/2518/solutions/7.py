@@ -4,11 +4,10 @@ ok = 10**9
 ng = 0
 while ng + 1 < ok:
     c = ok + ng >> 1
-    G = [max(0, h-c*B) for h in H]
-    n = sum(-(-g//(A-B)) for g in G)
+    G = [max(0, h - c * B) for h in H]
+    n = sum(-(-g // (A - B)) for g in G)
     if c >= n:
         ok = c
     else:
         ng = c
 print(ok)
-

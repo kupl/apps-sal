@@ -2,6 +2,7 @@ import sys
 
 sys.setrecursionlimit(100000)
 
+
 def main():
     n = int(input())
     G = [[] for _ in range(n)]
@@ -14,11 +15,14 @@ def main():
         ID[b][a] = i
     m = max(len(g) for g in G)
     ans = [0] * (n - 1)
-    def bfs(a, pre = -1, pre_c = -1):
+
+    def bfs(a, pre=-1, pre_c=-1):
         color = 1
         for b in G[a]:
-            if b == pre: continue
-            if color == pre_c: color += 1
+            if b == pre:
+                continue
+            if color == pre_c:
+                color += 1
             ans[ID[a][b]] = color
             bfs(b, a, color)
             color += 1
@@ -26,8 +30,10 @@ def main():
     bfs(0)
     print(m)
     [print(a) for a in ans]
-      
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

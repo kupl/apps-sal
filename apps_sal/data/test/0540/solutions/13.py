@@ -9,6 +9,7 @@ sj -= 1
 ti -= 1
 tj -= 1
 
+
 def count_ok(i, j):
     r = 0
     for di, dj in ds:
@@ -17,6 +18,7 @@ def count_ok(i, j):
            or (ni, nj) == (si, sj):
             r += 1
     return r
+
 
 if (si, sj) == (ti, tj):
     print('YES' if count_ok(si, sj) >= 1 else 'NO')
@@ -32,7 +34,7 @@ while q:
     i, j = q.popleft()
     for di, dj in ds:
         ni, nj = i + di, j + dj
-        if 0 <= ni  < n and 0 <= nj < m and\
+        if 0 <= ni < n and 0 <= nj < m and\
            a[ni][nj] != 'X' and (ni, nj) not in used:
             used.add((ni, nj))
             q.append((ni, nj))
@@ -43,7 +45,3 @@ else:
         print('YES')
     else:
         print('YES' if count_ok(ti, tj) >= 2 else 'NO')
-
-          
-        
-

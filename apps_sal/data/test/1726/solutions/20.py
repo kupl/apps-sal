@@ -7,8 +7,8 @@ sums = []
 
 for i in a:
     sums.append(86400 - i)
-    
+
 while sum(sums[0:ans]) < t:
     ans += 1
-    
+
 print(ans)

@@ -14,7 +14,7 @@ for i in range(N):
     doubling[i][0] = j
 for l in range(1, log + 1):
     for i in range(N):
-        doubling[i][l] = doubling[doubling[i][l-1]][l-1]
+        doubling[i][l] = doubling[doubling[i][l - 1]][l - 1]
 Q = int(input())
 for _ in range(Q):
     a, b = list(map(int, input().split()))
@@ -28,4 +28,3 @@ for _ in range(Q):
             ans += 1 << l
             a = doubling[a][l]
     print((ans + 1))
-

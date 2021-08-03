@@ -4,4 +4,3 @@ if can_listen >= c:
     print(c)
 else:
     print(can_listen)
-

@@ -11,4 +11,3 @@ class Solution:
                     if ps[i] ^ ps[j] == ps[j] ^ ps[k + 1]:
                         res += 1
         return res
-

@@ -3,6 +3,7 @@ from functools import reduce
 
 N, *A = list(map(int, open(0).read().split()))
 
+
 def f():
     t = [0] * (10 ** 6 + 1)
     for a in A:
@@ -23,10 +24,10 @@ def f():
 
     return True
 
+
 if f():
     print('pairwise coprime')
 elif reduce(gcd, A) == 1:
     print('setwise coprime')
 else:
     print('not coprime')
-

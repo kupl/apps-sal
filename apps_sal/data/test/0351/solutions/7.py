@@ -10,4 +10,3 @@ for ai in a:
     d = max(d, ai)
 
 print(ans)
-

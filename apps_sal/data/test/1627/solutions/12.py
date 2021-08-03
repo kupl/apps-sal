@@ -6,4 +6,3 @@ for i in reversed(list(range(len(a)))):
         if a[j - 1] > a[j]:
             a[j], a[j - 1] = a[j - 1], a[j]
             print(j, j + 1)
-

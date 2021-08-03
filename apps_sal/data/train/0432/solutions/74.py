@@ -3,7 +3,7 @@ class Solution:
         M: Mapping[int, int] = {}
         for n in nums:
             if n in M:
-                M[n] = M[n]+1
+                M[n] = M[n] + 1
             else:
                 M[n] = 1
 
@@ -23,4 +23,3 @@ class Solution:
                 return True
 
             n = sorted(M.keys())[0]
-

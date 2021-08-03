@@ -1,9 +1,9 @@
 def get_planet_name(id):
     # This doesn't work; Fix it!
     if id == 1:
-        return  "Mercury"
+        return "Mercury"
     elif id == 2:
-        return  "Venus"
+        return "Venus"
     elif id == 3:
         return "Earth"
     elif id == 4:
@@ -13,7 +13,7 @@ def get_planet_name(id):
     elif id == 6:
         return "Saturn"
     elif id == 7:
-        return "Uranus"  
+        return "Uranus"
     elif id == 8:
-        return  "Neptune"
+        return "Neptune"
     return None

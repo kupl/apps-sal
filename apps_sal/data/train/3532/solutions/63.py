@@ -1,7 +1,6 @@
 def apple(x):
-    x=float(x)
-    if x*x > 1000 :
+    x = float(x)
+    if x * x > 1000:
         return "It's hotter than the sun!!"
-    else :
+    else:
         return "Help yourself to a honeycomb Yorkie for the glovebox."
-

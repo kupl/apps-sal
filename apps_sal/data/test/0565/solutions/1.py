@@ -6,4 +6,5 @@ def main():
     else:
         print(mn * 3 + 3)
 
+
 main()

@@ -1,4 +1,6 @@
-I = lambda : map(int, input().split())
+def I(): return map(int, input().split())
+
+
 n, = I()
 arr = []
 for i in range(0, n):

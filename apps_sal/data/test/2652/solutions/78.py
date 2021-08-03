@@ -18,6 +18,7 @@ class UnionFind():
         if x != y:
             self.parents[y] = x
 
+
 N = int(input())
 q = []
 ans = 0
@@ -26,22 +27,22 @@ x = []
 y = []
 
 for i in range(N):
-    p,r = map(int, input().split())
-    x.append([p,i])
-    y.append([r,i])
+    p, r = map(int, input().split())
+    x.append([p, i])
+    y.append([r, i])
 
 x.sort()
 y.sort()
-for i in range(N-1):
+for i in range(N - 1):
     x1, i1 = x[i]
     y1, j1 = y[i]
-    x2, i2 = x[i+1]
-    y2, j2 = y[i+1]
-    heappush(q, (abs(x1-x2), i1, i2))
-    heappush(q, (abs(y1-y2), j1, j2))
+    x2, i2 = x[i + 1]
+    y2, j2 = y[i + 1]
+    heappush(q, (abs(x1 - x2), i1, i2))
+    heappush(q, (abs(y1 - y2), j1, j2))
 
-heappush(q, (abs(x[N-1][0]-x[0][0]), x[N-1][1], x[0][1]))
-heappush(q, (abs(y[N-1][0]-y[0][0]), y[N-1][1], y[0][1]))
+heappush(q, (abs(x[N - 1][0] - x[0][0]), x[N - 1][1], x[0][1]))
+heappush(q, (abs(y[N - 1][0] - y[0][0]), y[N - 1][1], y[0][1]))
 # クラスカル法
 while len(q) > 0:
     d, a, b = heappop(q)

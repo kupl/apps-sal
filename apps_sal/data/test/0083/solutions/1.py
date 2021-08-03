@@ -12,4 +12,3 @@ elif 2 * o >= n:
     print(-1)
 else:
     print(0)
-

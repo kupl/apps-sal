@@ -64,7 +64,7 @@ inc = {
     # chr(97+i):0 for i in range(26)
 
 }
-l = [None for i in range(n*m)]
+l = [None for i in range(n * m)]
 
 for i in range(n):
     t = int(input())
@@ -72,8 +72,9 @@ for i in range(n):
     for j in range(m):
         # tmp.append(input())
         ipt = input()
-        l[t*m+j] = ipt
-        if len(inc)==26:continue
+        l[t * m + j] = ipt
+        if len(inc) == 26:
+            continue
         for q in ipt:
             inc.setdefault(q, 0)
     # d[t] = tmp
@@ -98,10 +99,10 @@ for p, i in enumerate(l[1:]):
     for j in range(min(len(l[p]), len(i))):
         if l[p][j] != i[j]:
             # if len(l[p])-1 != j:
-                # ae(l[p][j],i[j])
+            # ae(l[p][j],i[j])
             ae(i[j], l[p][j])
             break
-        if len(i)-1==j and len(l[p])-1 > j:
+        if len(i) - 1 == j and len(l[p]) - 1 > j:
             print("IMPOSSIBLE")
             return
 
@@ -148,4 +149,3 @@ if len(inc):
     return
 
 print(*reversed(ans), sep='')
-

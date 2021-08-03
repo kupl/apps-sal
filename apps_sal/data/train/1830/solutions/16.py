@@ -2,8 +2,8 @@ class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         fill = {}
         dry = []
-        ans = [0]*len(rains)
-        for i,v in enumerate(rains):
+        ans = [0] * len(rains)
+        for i, v in enumerate(rains):
             if v == 0:
                 dry.append(i)
                 continue
@@ -11,7 +11,7 @@ class Solution:
                 fill[v] = i
                 ans[i] = -1
             elif v in fill:
-                idx = bisect.bisect_left(dry,fill[v])
+                idx = bisect.bisect_left(dry, fill[v])
                 if idx == len(dry):
                     return []
                 else:

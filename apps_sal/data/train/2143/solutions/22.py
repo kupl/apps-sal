@@ -2,6 +2,7 @@ import operator
 import itertools
 import bisect
 
+
 def maxl(l, m, mx):
     l.sort(key=operator.itemgetter(1))
     lp = [p for(b, p) in l]
@@ -14,7 +15,7 @@ def maxl(l, m, mx):
                 mx = x
     return mx
 
- 
+
 fc = []
 fd = []
 
@@ -35,4 +36,3 @@ mx = maxl(fc, c, mx)
 mx = maxl(fd, d, mx)
 
 print(mx)
-

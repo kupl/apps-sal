@@ -39,7 +39,7 @@ def __starting_point():
             if total_len + cntnum[str(maxn)] <= k:
                 if str(maxn - 1) not in cntnum:
                     cntnum[str(maxn - 1)] = 0
-                cntnum[str(maxn-1)] += 2 * cntnum[str(maxn)]
+                cntnum[str(maxn - 1)] += 2 * cntnum[str(maxn)]
                 total_len += cntnum[str(maxn)]
                 cntnum[str(maxn)] = 0
                 maxn -= 1
@@ -60,5 +60,6 @@ def __starting_point():
         ans.sort(reverse=True)
 
         print(" ".join([str(x) for x in ans]))
+
 
 __starting_point()

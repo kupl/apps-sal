@@ -76,13 +76,13 @@ def slv(N, AB):
         else:
             used.add(b)
 
-    AB = [(a-1, b-1) for a, b in AB]
+    AB = [(a - 1, b - 1) for a, b in AB]
 
     @lru_cache(maxsize=None)
     def f(s):
-        if s == 2*N:
+        if s == 2 * N:
             return True
-        for r in range(s+2, 2*N+1, 2):
+        for r in range(s + 2, 2 * N + 1, 2):
             l = r - s
             l2 = l // 2
             r2 = s + l2
@@ -91,18 +91,18 @@ def slv(N, AB):
             for a, b in AB:
                 if a >= 0 and r2 <= a < r:
                     break
-                if b >= 0 and  s <= b < r2:
+                if b >= 0 and s <= b < r2:
                     break
                 if s <= a < r2 and r2 <= b < r and b - a != l2:
                     break
                 if s <= a < r2:
                     used[a] += 1
                     if b < 0:
-                        used[a+l2] += 1
+                        used[a + l2] += 1
                 if r2 <= b < r:
                     used[b] += 1
                     if a < 0:
-                        used[b-l2] += 1
+                        used[b - l2] += 1
 
             else:
                 if used and used.most_common()[0][1] > 1:
@@ -116,8 +116,6 @@ def slv(N, AB):
     return 'Yes' if f(0) else 'No'
 
 
-
-
 def main():
     N = read_int()
     AB = [read_int_n() for _ in range(N)]
@@ -126,5 +124,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

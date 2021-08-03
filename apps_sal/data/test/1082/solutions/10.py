@@ -60,5 +60,4 @@ result = number_dic[0]
 for j in range(number[0] + sum_time):
     result *= 2
     result %= module
-print(result-1)
-
+print(result - 1)

@@ -14,4 +14,3 @@ if i == n:
     print("YES")
 else:
     print("NO")
-

@@ -7,7 +7,7 @@ for _ in range(n):
     p, start, end = input().split()
 
     start = int(start) - 1
-    end = int(end) # end == 366
+    end = int(end)  # end == 366
 
     if p == "F":
         females[start] += 1
@@ -24,9 +24,6 @@ max_count = 0
 for day in range(366):
     cur_m_count += males[day]
     cur_f_count += females[day]
-    max_count = max(max_count, 2*min(cur_f_count, cur_m_count))
+    max_count = max(max_count, 2 * min(cur_f_count, cur_m_count))
 
 print(max_count)
-
-
-

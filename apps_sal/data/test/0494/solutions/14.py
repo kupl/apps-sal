@@ -1,6 +1,7 @@
 def R():
     return list(map(int, input().split()))
 
+
 n, m = R()
 l = list(R())
 
@@ -23,6 +24,5 @@ for i in range(m - 1):
 else:
     for i in range(n):
         if a[i] is None:
-            a[i] = c.pop()            
+            a[i] = c.pop()
     print(*a)
-

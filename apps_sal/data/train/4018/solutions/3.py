@@ -4,4 +4,4 @@ def isDigit(string):
     except ValueError:
         return False
 
-    return True    
+    return True

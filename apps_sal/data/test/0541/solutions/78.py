@@ -10,4 +10,3 @@ for a, b in AB[1:]:
     else:
         r = min(r, b)
 print(ans)
-

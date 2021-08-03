@@ -2,6 +2,7 @@ import sys
 
 input = sys.stdin.readline
 
+
 def main():
     ans = []
     b = "#"
@@ -17,22 +18,22 @@ def main():
     for y in range(h):
         for x in range(w):
             if s[y][x] == b:
-                if y > 0 and x > 0 and ans[y-1][x-1] != b:
-                    ans[y-1][x-1] += 1
-                if y > 0 and ans[y-1][x] != b:
-                    ans[y-1][x] += 1
-                if y > 0 and x < w - 1 and ans[y-1][x+1] != b:
-                    ans[y-1][x+1] += 1
-                if x > 0 and ans[y][x-1] != b:
-                    ans[y][x-1] += 1
-                if x < w - 1 and ans[y][x+1] != b:
-                    ans[y][x+1] += 1
-                if y < h - 1 and x > 0 and ans[y+1][x-1] != b:
-                    ans[y+1][x-1] += 1
-                if y < h - 1 and ans[y+1][x] != b:
-                    ans[y+1][x] += 1
-                if y < h - 1 and x < w - 1 and ans[y+1][x+1] != b:
-                    ans[y+1][x+1] += 1
+                if y > 0 and x > 0 and ans[y - 1][x - 1] != b:
+                    ans[y - 1][x - 1] += 1
+                if y > 0 and ans[y - 1][x] != b:
+                    ans[y - 1][x] += 1
+                if y > 0 and x < w - 1 and ans[y - 1][x + 1] != b:
+                    ans[y - 1][x + 1] += 1
+                if x > 0 and ans[y][x - 1] != b:
+                    ans[y][x - 1] += 1
+                if x < w - 1 and ans[y][x + 1] != b:
+                    ans[y][x + 1] += 1
+                if y < h - 1 and x > 0 and ans[y + 1][x - 1] != b:
+                    ans[y + 1][x - 1] += 1
+                if y < h - 1 and ans[y + 1][x] != b:
+                    ans[y + 1][x] += 1
+                if y < h - 1 and x < w - 1 and ans[y + 1][x + 1] != b:
+                    ans[y + 1][x + 1] += 1
     for y in range(h):
         for x in range(w):
             if ans[y][x] == 0 and s[y][x] == b:
@@ -41,6 +42,9 @@ def main():
                 ans[y][x] = str(ans[y][x])
         print(''.join(ans[y]))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

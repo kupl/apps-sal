@@ -10,15 +10,18 @@ m2 = 0
 m3 = 0
 l = len(one)
 
+
 def f(q):
     if q == l and n == 1:
-        return l - 1 
+        return l - 1
     if q == l:
         return l
     if q + n <= l:
         return q + n
     else:
         return l
+
+
 for i in range(len(one)):
     try:
         d1[one[i]] += 1

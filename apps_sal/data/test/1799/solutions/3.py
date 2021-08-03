@@ -1,12 +1,12 @@
+from heapq import heappop, heappush, heapify
 import sys
 input = sys.stdin.readline
-from heapq import heappop, heappush, heapify
 
 n = int(input())
 b, _ = list(map(int, input().split()))
 heap = []
 heap2 = []
-for _ in range(n-1):
+for _ in range(n - 1):
     t, w = list(map(int, input().split()))
     if t > b:
         heap.append(w + 1 - t)
@@ -28,4 +28,3 @@ while heap:
     cur = len(heap) + 1
     ans = min(ans, cur)
 print(ans)
-

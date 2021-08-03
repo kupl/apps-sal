@@ -7,7 +7,7 @@ class Solution:
             if parents[node] != node:
                 parents[node] = find(parents, parents[node])
             return parents[node]
-        
+
         def union(parents, a, b):
             ra = find(parents, a)
             rb = find(parents, b)
@@ -15,7 +15,7 @@ class Solution:
                 parents[ra] = rb
                 return True
             return False
-        
+
         def count(parents, n):
             res = 0
             root = find(parents, 1)
@@ -23,9 +23,9 @@ class Solution:
                 if find(parents, i) == root:
                     res += 1
             return res
-        
+
         res = 0
-        edges.sort(reverse = True)
+        edges.sort(reverse=True)
         for t, u, v in edges:
             if t == 1 and not union(p1, u, v):
                 res += 1

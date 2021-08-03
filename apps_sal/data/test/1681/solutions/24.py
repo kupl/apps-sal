@@ -6,7 +6,7 @@ Created on Feb 13, 2015
 a1 = input()
 a2 = input()
 slon = 0
-for i in range(ord('a') , ord('z') + 1):
+for i in range(ord('a'), ord('z') + 1):
     x = chr(i)
     count1 = a1.count(x)
     count2 = a2.count(x)
@@ -19,4 +19,3 @@ for i in range(ord('a') , ord('z') + 1):
         else:
             slon += count1
 print(slon)
-

@@ -17,7 +17,7 @@ for i in range(n):
     if curMin > curMax:
         print(-1)
         return
-    
+
     #mins[i] = curMin
     maxs[i] = curMax
 
@@ -28,4 +28,3 @@ for i in range(n - 1, -1, -1):
 
 print(sum(res) - sum(ss))
 print(*res)
-

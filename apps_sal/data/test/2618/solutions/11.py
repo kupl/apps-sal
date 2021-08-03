@@ -1,8 +1,10 @@
 def gcd(a, b):
     return (a if b == 0 else gcd(b, a % b))
 
+
 def nk(a, b):
     return (a * b) // gcd(a, b)
+
 
 def check(arr, x, y, a, b, mid, k):
     GdCN = mid // nk(a, b)
@@ -24,6 +26,7 @@ def check(arr, x, y, a, b, mid, k):
         return True
     else:
         return False
+
 
 n = int(input())
 for i in range(n):
@@ -47,5 +50,4 @@ for i in range(n):
         print(right)
     else:
         print(-1)
-    #print('--------------------------------------------------')
-
+    # print('--------------------------------------------------')

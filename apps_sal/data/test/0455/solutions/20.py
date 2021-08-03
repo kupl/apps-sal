@@ -13,7 +13,7 @@ for i in range(1, n):
         print(-1)
         imp = True
         break
-        
+
 if not imp:
     if mod2 == 0:
         x = [i + 1 for i in x]
@@ -42,5 +42,5 @@ if not imp:
             ui = ui // 2
             vl = vi % 2
             vi = vi // 2
-            w += mode[ul * 2+ vl]
+            w += mode[ul * 2 + vl]
         print(w)

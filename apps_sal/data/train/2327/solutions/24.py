@@ -2,7 +2,8 @@ import sys
 from operator import itemgetter
 
 mod = 10**9 + 7
-inf = 1<<30
+inf = 1 << 30
+
 
 def solve():
     N, M = map(int, sys.stdin.readline().split())
@@ -21,7 +22,7 @@ def solve():
 
     left = 0
 
-    ft = FenwickTree([0]*(M + 1))
+    ft = FenwickTree([0] * (M + 1))
 
     for d in range(2, M + 1):
         for j in range(left, N):
@@ -38,8 +39,9 @@ def solve():
         # print(ft.data)
 
         ans = N - left + sum(ft.get_sum(j) for j in range(d, M + 1, d))
-        
+
         print(ans)
+
 
 class FenwickTree:
     def __init__(self, a):
@@ -52,7 +54,7 @@ class FenwickTree:
 
     def add(self, i, x):
         ''' a[i] += x '''
-        i += 1 # 0-oringn -> 1-origin
+        i += 1  # 0-oringn -> 1-origin
 
         while i <= self.n:
             self.data[i] += x
@@ -71,4 +73,6 @@ class FenwickTree:
 
 def __starting_point():
     solve()
+
+
 __starting_point()

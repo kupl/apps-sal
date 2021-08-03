@@ -8,4 +8,3 @@ i = N * N
 result = i - A
 
 print(result)
-

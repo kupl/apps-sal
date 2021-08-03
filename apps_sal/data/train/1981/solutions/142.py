@@ -1,5 +1,7 @@
 import collections
 import heapq
+
+
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         heapq.heapify(requests)
@@ -18,4 +20,3 @@ class Solution:
         for counts in sorted(list(counter.values()), reverse=True):
             total = (total - heapq.heappop(heap) * counts) % mod
         return total
-

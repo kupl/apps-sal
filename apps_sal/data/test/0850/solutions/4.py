@@ -25,25 +25,25 @@ _01_ = len(_01)
 _11_ = len(_11)
 _10_ = len(_10)
 if _00_ == k or k == 1:
-    print (k)
+    print(k)
     for val in d:
-        print (val)
+        print(val)
 else:
     if _00_ + 1 == k:
-        print (k)
+        print(k)
         for val in d:
-            print (val)
+            print(val)
     else:
         if _01_ > 0 and _10_ > 0:
             print(_00_ + 2)
             for val in _00:
-                print (val)
+                print(val)
             print(_01[0])
             print(_10[0])
         else:
             print(_00_ + 1)
             for val in _00:
-                print (val)
+                print(val)
             if _01_ > 0:
                 print(_01[0])
             else:
@@ -52,4 +52,3 @@ else:
                 else:
                     if _11_ > 0:
                         print(_11[0])
-

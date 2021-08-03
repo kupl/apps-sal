@@ -41,6 +41,3 @@ class Solution:
                 ans[idxes[j]] = chars[j]
 
         return ''.join(ans)
-
-
-

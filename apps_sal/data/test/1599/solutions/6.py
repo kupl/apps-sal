@@ -10,4 +10,3 @@ m = int(fin.readline())
 for _ in range(m):
     l, r = list(map(int, fin.readline().split()))
     print(table[r - 2] - (table[l - 2] if l > 1 else 0))
-

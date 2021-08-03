@@ -19,4 +19,3 @@ for i in range(n):
                 ans += 1
                 break
 print(ans)
-

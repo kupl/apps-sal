@@ -74,12 +74,13 @@ def resolve():
         ans.append(S)
         ans.append(S)
 
-    for i in range(2*H):
+    for i in range(2 * H):
         print((ans[i]))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

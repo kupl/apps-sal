@@ -6,6 +6,7 @@ def blokovi(x):
             ret.append(i + 1)
     return ret + [len(x)]
 
+
 s = input()
 t = input()
 
@@ -21,6 +22,7 @@ if t[-1] == 'a':
     t += 'b'
 else:
     t += 'a'
+
 
 def greedy(x, y, rev=False):
     i, j = len(x) - 1, len(y) - 1
@@ -40,12 +42,14 @@ def greedy(x, y, rev=False):
         i, j = j, i
     return swaps
 
+
 def solve(x, y):
     p = greedy(x, y)
     q = greedy(y, x, True)
     if len(p) < len(q):
         return p
     return q
+
 
 probao = set()
 
@@ -65,7 +69,7 @@ for b, i in enumerate(ss):
             probao.add(proba)
             s2 = t[:j] + s[i:-1]
             t2 = s[:i] + t[j:-1]
-            if i + j > 0: 
+            if i + j > 0:
                 if i + j == len(s) + len(t) - 2:
                     cand = solve(t2, s2)
                 else:
@@ -78,4 +82,3 @@ for b, i in enumerate(ss):
 print(len(sol))
 for i, j in sol:
     print(i, j)
-

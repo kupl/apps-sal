@@ -1,9 +1,9 @@
-n,m=map(int,input().split())
-L=list(map(int,input().split()))
+n, m = map(int, input().split())
+L = list(map(int, input().split()))
 
-A=sum(L)
+A = sum(L)
 
-if n>=A:
-  print(n-A)
+if n >= A:
+    print(n - A)
 else:
-  print(-1)
+    print(-1)

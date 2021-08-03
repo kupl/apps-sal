@@ -7,7 +7,7 @@ def main():
 
     for i in range(len(s)):
         if n > 0 and s[i] not in d:
-            if len(substring) > 0 :
+            if len(substring) > 0:
                 result.append(''.join(substring))
                 substring = []
             substring.append((s[i]))
@@ -16,7 +16,7 @@ def main():
         else:
             substring.append((s[i]))
 
-    if len(substring) > 0 :
+    if len(substring) > 0:
         result.append(''.join(substring))
     if n > 0:
         print('NO')
@@ -27,10 +27,8 @@ def main():
             print(s)
 
 
-
-
-
-
 def __starting_point():
     main()
+
+
 __starting_point()

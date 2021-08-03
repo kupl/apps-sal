@@ -1,4 +1,6 @@
-from collections import Counter 
+from collections import Counter
+
+
 class Solution:
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):

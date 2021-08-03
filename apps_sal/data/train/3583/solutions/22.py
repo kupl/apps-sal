@@ -1,1 +1,1 @@
-binary_array_to_number = lambda a : int(''.join(map(str,a)),2)
+def binary_array_to_number(a): return int(''.join(map(str, a)), 2)

@@ -8,7 +8,7 @@ for i in range(m):
 
     while l < x:
 
-        if p[l]: 
+        if p[l]:
 
             k = d[l]
 
@@ -16,7 +16,7 @@ for i in range(m):
 
             l = k
 
-        else: 
+        else:
 
             d[l], p[l] = x, x
 
@@ -26,11 +26,12 @@ for i in range(m):
 
     r += 1
 
-    while p[r]: r = d[r]
+    while p[r]:
+        r = d[r]
 
     while l < r:
 
-        if p[l]: 
+        if p[l]:
 
             k = d[l]
 

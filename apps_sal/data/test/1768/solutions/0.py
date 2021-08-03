@@ -1,7 +1,6 @@
 import sys
 
 
-
 n = int(sys.stdin.readline().strip())
 s = sys.stdin.readline().strip()
 
@@ -13,10 +12,11 @@ for c in range(26):
         tst = 1 if s[j] == chr(c + 97) else 0
         dp[c][1 - tst] = max(dp[c][1 - tst], 1)
         for k in range(j + 1, n):
-            if s[k] == chr(c + 97):tst += 1
+            if s[k] == chr(c + 97):
+                tst += 1
             dp[c][k - j + 1 - tst] = max(dp[c][k - j + 1 - tst], k - j + 1)
 
-#for c in range(26):
+# for c in range(26):
 #    for j in range(n):
 #        dp[c][j + 1] = max(dp[c][j], dp[c][j + 1])
 

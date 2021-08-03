@@ -11,4 +11,3 @@ for _ in range(n):
             break
     else:
         print('YES')
-

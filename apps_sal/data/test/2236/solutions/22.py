@@ -15,5 +15,5 @@ def main():
             ans = cnt[k]
     print(n - ans)
 
-main()
 
+main()

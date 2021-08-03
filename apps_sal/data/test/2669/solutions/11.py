@@ -6,7 +6,7 @@ try:
     c = brr[0]
     test.append(0)
     for i in range(n):
-        if arr[i]>=c:
+        if arr[i] >= c:
             test.append(i)
             c = brr[i]
     result = map(str, test)

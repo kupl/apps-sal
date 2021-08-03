@@ -7,4 +7,3 @@ for x in range(n):
     for y in a[1:]:
         s.add(int(y))
 print("YES" if len(s) == m else "NO")
-

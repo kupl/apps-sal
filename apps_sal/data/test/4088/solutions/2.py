@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     s = input()
     m = int(input())
-    b = list(map(int,input().split()))
+    b = list(map(int, input().split()))
     values = {}
     for num in b:
         if num not in values:
@@ -27,7 +27,7 @@ for _ in range(int(input())):
                 continue
             for j in range(m):
                 if ans[j] != "":
-                    dist += abs(i-j)
+                    dist += abs(i - j)
             if dist == b[i]:
                 toChange.append(i)
         if len(toChange) == 0:
@@ -39,4 +39,3 @@ for _ in range(int(input())):
             ans[i] = sortedLetters[-1][0]
         sortedLetters.pop(-1)
     print("".join(ans))
-

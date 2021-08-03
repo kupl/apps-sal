@@ -1,4 +1,6 @@
 from math import sqrt
+
+
 def consecutive_sum(n):
     cnt = 0
     lim = int(sqrt(2 * n))
@@ -9,4 +11,3 @@ def consecutive_sum(n):
             cnt += 1
         m += 1
     return cnt
-

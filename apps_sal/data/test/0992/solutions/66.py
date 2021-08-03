@@ -5,7 +5,7 @@ def main():
     sys.setrecursionlimit(10**6)
     N, S = [int(x) for x in input().strip().split()]
     An = [int(x) for x in input().strip().split()]
-    dp = np.zeros((S+1), dtype=int)
+    dp = np.zeros((S + 1), dtype=int)
     dp[0] = 2
     if An[0] <= S:
         dp[An[0]] = 1
@@ -16,7 +16,10 @@ def main():
         dp %= 998244353
 
     print(dp[S])
-                
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

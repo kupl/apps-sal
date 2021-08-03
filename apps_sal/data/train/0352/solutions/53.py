@@ -5,13 +5,14 @@ class Solution:
                 if word2[0:i] + word2[i + 1:] == word1:
                     return True
             return False
-        words.sort(key = len)
+        words.sort(key=len)
         words_sort = {}
         for i in words:
             if len(i) in words_sort:
                 words_sort[len(i)].append(i)
             else:
                 words_sort[len(i)] = [i]
+
         def dfs(words, words_sort):
             max_chain = 1
             stack = [(1, word) for word in words[::-1]]
@@ -30,4 +31,3 @@ class Solution:
             return max_chain
         max_chain = dfs(words, words_sort)
         return max_chain
-

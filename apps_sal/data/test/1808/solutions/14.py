@@ -8,5 +8,3 @@ for i in range(n):
     else:
         ans += a[i]
 print(ans)
-
-

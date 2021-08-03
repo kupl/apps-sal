@@ -18,4 +18,3 @@ for _ in range(T):
 
         for c in ans:
             print("".join(map(str, c)))
-

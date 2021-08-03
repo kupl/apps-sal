@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def get_strings(word):
     return ','.join(
         f'{letter}:{"*" * count}'

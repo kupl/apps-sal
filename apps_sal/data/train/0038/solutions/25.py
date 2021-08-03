@@ -6,5 +6,7 @@ def case():
         print("YES")
     else:
         print("NO")
+
+
 for _ in range(int(input())):
     case()

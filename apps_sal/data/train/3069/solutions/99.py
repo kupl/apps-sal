@@ -16,9 +16,9 @@ def greet(language):
         'polish': 'Witamy',
         'spanish': 'Bienvenido',
         'swedish': 'Valkommen',
-        'welsh': 'Croeso' 
+        'welsh': 'Croeso'
     }
-    
+
     if language not in x:
         return "Welcome"
     else:

@@ -5,4 +5,3 @@ def zeros(n):
         count += n // i
         i *= 5
     return count
-

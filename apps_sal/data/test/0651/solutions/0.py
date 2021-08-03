@@ -1,5 +1,6 @@
 import itertools
 
+
 def valid(grid, path, perm, start, goal):
     x, y = start
     n = len(grid)
@@ -15,6 +16,7 @@ def valid(grid, path, perm, start, goal):
 
     return False
 
+
 def main():
     n, m = list(map(int, input().split()))
     grid = [list(input()) for _ in range(n)]
@@ -27,7 +29,6 @@ def main():
                 gx, gy = i, j
                 grid[i][j] = '.'
 
-
     path = input()
     moves = [(1, 0), (-1, 0), (0, 1), (0, -1)]
     ans = 0
@@ -37,5 +38,5 @@ def main():
 
     print(ans)
 
-main()
 
+main()

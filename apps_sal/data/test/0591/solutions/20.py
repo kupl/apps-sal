@@ -1,20 +1,20 @@
-F=open('input.txt','r')
+F = open('input.txt', 'r')
 
-I=lambda:list(map(int,F.readline().split()))
 
-n,k=I()
+def I(): return list(map(int, F.readline().split()))
 
-a=I()
 
-m=sorted(list(range(1,n+1)),key=lambda x:a[x-1])[-k:]
+n, k = I()
 
-W=open('output.txt','w')
+a = I()
 
-W.write(str(a[m[0]-1])+'\n'+' '.join(map(str,m)))
+m = sorted(list(range(1, n + 1)), key=lambda x: a[x - 1])[-k:]
+
+W = open('output.txt', 'w')
+
+W.write(str(a[m[0] - 1]) + '\n' + ' '.join(map(str, m)))
 
 W.close()
 
 
-
 # Made By Mostafa_Khaled
-

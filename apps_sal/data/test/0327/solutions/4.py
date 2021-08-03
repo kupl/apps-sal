@@ -9,4 +9,3 @@ else:
         nn //= 2
         p += 1
     print(2**p - 1)
-

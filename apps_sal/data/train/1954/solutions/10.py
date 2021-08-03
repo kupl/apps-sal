@@ -21,4 +21,3 @@ class Solution:
                 if new_skills != k and len(dp[new_skills]) > len(v) + 1:
                     dp[new_skills] = v + [i]
         return dp[(1 << n) - 1]
-

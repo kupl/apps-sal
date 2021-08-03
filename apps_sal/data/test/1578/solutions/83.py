@@ -1,4 +1,4 @@
-#ABC139 D
+# ABC139 D
 
 N = int(input())
-print(int(N*(N-1)//2))
+print(int(N * (N - 1) // 2))

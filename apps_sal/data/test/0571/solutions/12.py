@@ -4,7 +4,7 @@ S = input()
 if S[0] == ')' or S[-1] == '(' or N % 2 == 1:
     print(':(')
     return
-L = [0]*N
+L = [0] * N
 posi = 0
 nega = 0
 for i, s in enumerate(S):
@@ -18,8 +18,8 @@ for i, s in enumerate(S):
         continue
 rem = N - posi - nega
 sp = nega - posi
-pi = (rem + sp)//2
-ni = (rem - sp)//2
+pi = (rem + sp) // 2
+ni = (rem - sp) // 2
 if pi < 0 or ni < 0:
     print(':(')
     return

@@ -1,2 +1,2 @@
 def camel_case(s):
-    return s.title().replace(' ','')
+    return s.title().replace(' ', '')

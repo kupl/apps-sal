@@ -18,8 +18,8 @@ class Solution:
 
         for i in range(N):
             for j in range(N):
-                count[A[i]&A[j]] += 1
-                
+                count[A[i] & A[j]] += 1
+
         for k in range(N):
             for v in count:
                 if A[k] & v == 0:

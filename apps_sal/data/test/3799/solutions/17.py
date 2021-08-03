@@ -2,10 +2,9 @@
 s = input()
 n = len(s)
 
-if n%2==0 and s[0]!=s[n-1]:
+if n % 2 == 0 and s[0] != s[n - 1]:
     print("Second")
-elif n%2==1 and s[0]==s[n-1]:
+elif n % 2 == 1 and s[0] == s[n - 1]:
     print("Second")
 else:
     print("First")
-

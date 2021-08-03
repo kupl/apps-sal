@@ -10,4 +10,3 @@ for a in aa:
     k = max(k, a)
 
 print(answ)
-

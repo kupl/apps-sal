@@ -1,6 +1,6 @@
 from collections import defaultdict, deque
- 
- 
+
+
 def bfs(start):
     q = deque([start])
     dist = [-1] * N
@@ -13,11 +13,11 @@ def bfs(start):
             dist[nv] = (dist[v] + nw) % 2
             q.append(nv)
     return dist
- 
- 
+
+
 N, *UVW = map(int, open(0).read().split())
 g = defaultdict(set)
- 
+
 ans = [0] * N
 for u, v, w in zip(*[iter(UVW)] * 3):
     u -= 1

@@ -13,11 +13,10 @@ class Solution:
                 last1 = max(last1, last2)
                 last2 = i
             else:
-                start = min(last1, last2)+1
+                start = min(last1, last2) + 1
                 if last1 < last2:
                     last1 = i
                 else:
                     last2 = i
-            res = max(res, i-start+1)
+            res = max(res, i - start + 1)
         return res
-

@@ -7,7 +7,7 @@ for i in range(N):
     for j in range(len(B)):
         AB += B[j] * A[i][j]
         j += 1
-    if AB+C > 0:
+    if AB + C > 0:
         S += 1
     i += 1
 print(S)

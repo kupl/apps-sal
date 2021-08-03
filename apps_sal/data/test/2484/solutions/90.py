@@ -9,7 +9,7 @@ def bin20(x):
     bin_x = bin(x)[2:]
     x_len = len(bin_x)
 
-    return list(map(int, "0" * (20-x_len) + bin_x))
+    return list(map(int, "0" * (20 - x_len) + bin_x))
 
 
 def main():
@@ -38,10 +38,9 @@ def main():
             right += 1
 
         if right == N:
-            ans += (N-left) * (N-left+1) // 2
+            ans += (N - left) * (N - left + 1) // 2
 
             return ans
 
 
 print((main()))
-

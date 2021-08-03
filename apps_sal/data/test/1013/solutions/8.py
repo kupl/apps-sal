@@ -10,4 +10,3 @@ for i in range(n):
             print(2)
             return
 print(4)
-

@@ -6,10 +6,10 @@ def brainfuck_to_c(source_code):
     op_count = 0
     source_code = ''.join(letter for letter in source_code if letter in possible)
     while '[]' in source_code or '+-' in source_code or '<>' in source_code or '-+' in source_code or '><' in source_code:
-        source_code = source_code.replace('[]','').replace('+-','').replace('<>','').replace('-+','').replace('><','')
+        source_code = source_code.replace('[]', '').replace('+-', '').replace('<>', '').replace('-+', '').replace('><', '')
     if source_code.count('[') != source_code.count(']'):
         return 'Error!'
-    for index,letter in enumerate(source_code):
+    for index, letter in enumerate(source_code):
         if letter == '[':
             braces_count += 1
             result += ' ' * spacing + 'if (*p) do {\n'

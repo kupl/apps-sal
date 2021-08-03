@@ -1,14 +1,15 @@
-# @author 
+# @author
 
 import sys
+
 
 class BDreamoonLikesPermutations:
     def solve(self):
         for _ in range(int(input())):
-            
+
             def is_perm(a):
                 return len(set(a)) == len(a) and min(a) == 1 and max(a) == len(a)
-            
+
             n = int(input())
             a = [int(_) for _ in input().split()]
             done = set()
@@ -18,7 +19,7 @@ class BDreamoonLikesPermutations:
                 if a[i] in done:
                     break
                 done.add(a[i])
-            
+
             if is_perm(a[:i]) and is_perm(a[i:]):
                 ans.add((i, n - i))
 
@@ -35,8 +36,8 @@ class BDreamoonLikesPermutations:
             for sol in ans:
                 print(*sol)
 
+
 solver = BDreamoonLikesPermutations()
 input = sys.stdin.readline
 
 solver.solve()
-

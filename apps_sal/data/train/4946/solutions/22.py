@@ -3,5 +3,6 @@ def house_numbers_sum(inp):
     for i in inp:
         if i == 0:
             break
-        else:l.append(i)
+        else:
+            l.append(i)
     return sum(l)

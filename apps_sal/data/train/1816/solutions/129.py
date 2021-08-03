@@ -4,7 +4,7 @@ class Solution:
             h, m = list(map(int, s.split(':')))
             return h * 60 + m
         kt = list(map(hm_to_min, keyTime))
-        #print(kt)
+        # print(kt)
         c = defaultdict(list)
         for i, k in enumerate(keyName):
             bisect.insort(c[k], kt[i])
@@ -16,4 +16,3 @@ class Solution:
                     res.append(k)
                     break
         return sorted(res)
-

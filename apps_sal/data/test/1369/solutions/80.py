@@ -51,4 +51,3 @@ else:
     rx, ry, ans = sannbunn_second(0, 1000, 0, 1000)
     # ans = calc_kyori(complex(rx, ry), C)
 print(ans)
-

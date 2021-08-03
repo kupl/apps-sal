@@ -17,10 +17,9 @@ for i in range(n):
         d.add(c[index])
         index += 1
         count += 1
-    if i == n-1:
+    if i == n - 1:
         stri += str(count)
     else:
-        stri += str(count)+" "
+        stri += str(count) + " "
     count = 0
 print(stri)
-

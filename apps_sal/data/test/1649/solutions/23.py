@@ -12,4 +12,3 @@ elif sum(delic[0:3]) == delic[3]:
     print("Yes")
 else:
     print("No")
-

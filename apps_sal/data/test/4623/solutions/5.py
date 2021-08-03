@@ -14,5 +14,3 @@ for _ in range(int(input())):
                 d1[s - u[i] - 1] -= 1
         ans = max(ans, cnt)
     print(ans // 2)
-        
-

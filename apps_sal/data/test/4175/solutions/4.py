@@ -5,7 +5,7 @@ ok = True
 t = input()
 p = t[-1]
 s.add(t)
-for i in range(n-1):
+for i in range(n - 1):
     t = input()
     if t in s:
         ok = False
@@ -15,4 +15,3 @@ for i in range(n-1):
     p = t[-1]
 
 print(('Yes' if ok else 'No'))
-

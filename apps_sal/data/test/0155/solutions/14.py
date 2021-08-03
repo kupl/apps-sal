@@ -1,13 +1,12 @@
-H,W,K = list(map(int,input().split()))
+H, W, K = list(map(int, input().split()))
 if K < H:
-    print(K+1,1)
+    print(K + 1, 1)
     return
 K -= H
 W -= 1
-d,m = divmod(K,(W*2))
+d, m = divmod(K, (W * 2))
 if m < W:
-    print(H-2*d, 2+m)
+    print(H - 2 * d, 2 + m)
 else:
     m -= W
-    print(H-1-2*d, W-m+1)
-
+    print(H - 1 - 2 * d, W - m + 1)

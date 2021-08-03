@@ -5,5 +5,4 @@ for _ in range(int(input())):
         print(i * "*", end='')
         print(i)
 
-    #print("________________")# cook your dish here
-
+    # print("________________")# cook your dish here

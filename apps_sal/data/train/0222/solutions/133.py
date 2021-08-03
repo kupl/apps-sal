@@ -12,8 +12,5 @@ class Solution:
                     del dp[(A[j], A[i])]
                 #print(A[i], A[j], dp)
         longest = max(dp.values())
-        
-        return longest if longest > 2 else 0
-        
-        
 
+        return longest if longest > 2 else 0

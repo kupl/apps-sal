@@ -5,13 +5,13 @@ class Solution:
         weights = [0 for i in range(n + 1)]
         size_set = collections.defaultdict(int)
         ans = -1
-        
+
         def find(i: int) -> int:
             while ids[i] != i:
                 ids[i] = ids[ids[i]]
                 i = ids[i]
             return i
-        
+
         def union(i: int, j: int):
             i_id, j_id = find(i), find(j)
             i_weight, j_weight = weights[i_id], weights[j_id]
@@ -25,7 +25,7 @@ class Solution:
             size_set[i_weight] -= 1
             size_set[j_weight] -= 1
             size_set[new_weight] += 1
-        
+
         for i, index in enumerate(arr):
             weights[index] = 1
             size_set[1] += 1

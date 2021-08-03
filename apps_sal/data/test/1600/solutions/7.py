@@ -15,7 +15,6 @@ import math
 import sys
 
 
-
 def solve(xs, n):
     max_upto = []
     maxval = 0
@@ -32,7 +31,7 @@ def solve(xs, n):
 
     count = 1
     for i in range(1, n):
-        if max_upto[i-1] <= min_after[i]:
+        if max_upto[i - 1] <= min_after[i]:
             count += 1
 
     return count
@@ -72,5 +71,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

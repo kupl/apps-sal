@@ -18,4 +18,3 @@ elif c < a:
         return
 else:
     print((0))
-

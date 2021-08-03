@@ -23,6 +23,7 @@ def main1():
         student.sort()
     print(' '.join(list(map(str, minimum))))
 
+
 def main2():
     buf = input()
     buflist = buf.split()
@@ -50,8 +51,10 @@ def main2():
         bucket[t[i]] += 1
     print(' '.join(list(map(str, minimum))))
 
+
 def __starting_point():
-    #main1() # for C1
-    main2() # for C2
+    # main1() # for C1
+    main2()  # for C2
+
 
 __starting_point()

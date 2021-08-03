@@ -1,7 +1,8 @@
+from decimal import Decimal
 import sys
 import math
 def input(): return sys.stdin.readline().rstrip()
-from decimal import Decimal
+
 
 M = 10 ** 6 + 5
 N = int(input())
@@ -15,11 +16,11 @@ for a in A:
     for i in range(1, M):
         if i * a >= M:
             break
-        count[a*i] += 1
+        count[a * i] += 1
 
 ans = 0
 for a in A:
     if count[a] == 1:
         ans += 1
-    
+
 print(ans)

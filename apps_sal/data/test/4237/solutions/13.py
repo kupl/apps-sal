@@ -2,8 +2,10 @@
 
 
 def gcd(m, n):
-    if n == 0: return m
+    if n == 0:
+        return m
     return gcd(n, m % n)
+
 
 def main():
     A, B, C, D = list(map(int, input().split()))
@@ -17,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

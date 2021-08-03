@@ -7,8 +7,3 @@ if len(B) % 2 == 0:
     print((len(B) - 1))
 else:
     print((len(B)))
-
-
-        
-
-

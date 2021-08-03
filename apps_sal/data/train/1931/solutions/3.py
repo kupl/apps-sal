@@ -20,7 +20,7 @@ class Solution:
             return TNode.val == lNode.val and (
                 helper(lNode.next, TNode.left) or helper(lNode.next, TNode.right)
             )
-        
+
         if not head:
             return True
         if not root:

@@ -13,4 +13,3 @@ for i in range(t):
                 break
     if (f == 0):
         print('YES')
-

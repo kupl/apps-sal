@@ -9,5 +9,7 @@ def solve():
             n1 -= 1
         n1 = max(n1, 0)
     print(n1)
+
+
 for i in range(int(input())):
     solve()

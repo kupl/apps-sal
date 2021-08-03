@@ -24,4 +24,3 @@ a = (length_less_than_or_equal_to_password - 1) // k
 spent = length_less_than_or_equal_to_password + a * 5
 
 print(spent)
-

@@ -1,7 +1,7 @@
 from math import gcd
 for _ in range(int(input())):
     n = int(input())
-    p2 = list(map(int,input().split()))
+    p2 = list(map(int, input().split()))
     p = sorted(p2, reverse=True)
     x, a = list(map(int, input().split()))
     y, b = list(map(int, input().split()))
@@ -17,7 +17,7 @@ for _ in range(int(input())):
         if x > y:
             res += sum(p[m_cnt3:m_cnt1 + m_cnt3]) // 100 * x + sum(p[m_cnt1 + m_cnt3:m_cnt1 + m_cnt2 + m_cnt3]) // 100 * y
         else:
-            res += sum(p[m_cnt3:m_cnt2 + m_cnt3]) // 100 * y + sum(p[m_cnt2+m_cnt3:m_cnt1 + m_cnt2 + m_cnt3]) // 100 * x
+            res += sum(p[m_cnt3:m_cnt2 + m_cnt3]) // 100 * y + sum(p[m_cnt2 + m_cnt3:m_cnt1 + m_cnt2 + m_cnt3]) // 100 * x
         if res < k:
             l = mid
         else:
@@ -26,4 +26,3 @@ for _ in range(int(input())):
         print(-1)
     else:
         print(r)
-

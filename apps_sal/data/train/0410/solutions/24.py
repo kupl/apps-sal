@@ -7,11 +7,11 @@ class Solution:
                     # x /= 2
                     x >>= 1
                 else:
-                    x = 3*x + 1
+                    x = 3 * x + 1
                 r += 1
             return r
-        
-        array = (i for i in range(lo, hi+1))
+
+        array = (i for i in range(lo, hi + 1))
         array = sorted(array, key=lambda x: power(x))
-        
-        return array[k-1]
+
+        return array[k - 1]

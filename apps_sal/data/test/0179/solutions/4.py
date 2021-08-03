@@ -13,11 +13,14 @@ invfact[N - 1] = pow(fact[N - 1], MOD - 2, MOD)
 
 for i in range(N - 2, -1, -1):
     invfact[i] = invfact[i + 1] * (i + 1) % MOD
+
+
 def nCk(n, k):
     if k < 0 or n < k:
         return 0
     else:
         return fact[n] * invfact[k] * invfact[n - k] % MOD
+
 
 def main():
     n, x, pos = map(int, input().split())
@@ -35,12 +38,13 @@ def main():
             r = m
             if m != pos:
                 b += 1
-        
+
     b_cnt = n - x
     s_cnt = x - 1
     c = n - 1 - b - s
     ans = fact[c] * nCk(b_cnt, b) * nCk(s_cnt, s) * fact[b] * fact[s]
     print(ans % MOD)
-    
+
+
 for _ in range(1):
     main()

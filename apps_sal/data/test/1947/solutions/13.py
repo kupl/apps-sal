@@ -24,7 +24,3 @@ for i in range(q):
                 else:
                     pass
             s[p] = True
-   
-        
-        
-

@@ -1,4 +1,4 @@
-def fight_resolve(defender, attacker): 
+def fight_resolve(defender, attacker):
 
     if defender.isupper() == attacker.isupper():
         return -1

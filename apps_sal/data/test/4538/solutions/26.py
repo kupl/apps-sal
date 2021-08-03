@@ -1,5 +1,5 @@
 import math
-a,b = map(int,input().split())
+a, b = map(int, input().split())
 x = ""
 y = 0
 for i in range(a):

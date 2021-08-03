@@ -11,4 +11,3 @@ for i in range(n - 1):
     ret = (ret * 4) % mod
 
 print(ret)
-

@@ -9,8 +9,8 @@ def solve_e(a1, a2, a3, b1, b2, b3):
     loses = max(0, a1 - b1 - b3) + max(0, a2 - b2 - b1) + max(0, a3 - b2 - b3)
     return loses, wins
 
+
 n = int(input())
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 print(*solve_e(*a, *b))
-

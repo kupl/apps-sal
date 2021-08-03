@@ -70,7 +70,8 @@ def main():
     # コスト昇順ソート済みの辺リストを使用する
     ret = 0
     for cost, a, b in sorted(xes + yes, key=itemgetter(0)):
-        if uf.same(a, b): continue
+        if uf.same(a, b):
+            continue
         uf.unite(a, b)
         ret += cost
     print(ret)
@@ -78,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

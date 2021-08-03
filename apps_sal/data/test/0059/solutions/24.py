@@ -13,10 +13,10 @@ while i >= 0:
     if s[i] == 0:
         right[i] = i
     else:
-        if s[i+1] == 0:
+        if s[i + 1] == 0:
             right[i] = i + 1
         else:
-            right[i] = right[i+1]
+            right[i] = right[i + 1]
     i -= 1
 
 ans = True

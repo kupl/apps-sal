@@ -19,4 +19,3 @@ else:
         else:
             r = mid
     print(l)
-

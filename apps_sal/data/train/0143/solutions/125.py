@@ -1,7 +1,7 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         i, j = 0, 0
-        
+
         max_fruit = 0
         baskets = defaultdict(int)
         while j <= len(tree) and i < len(tree):
@@ -16,4 +16,3 @@ class Solution:
                 i += 1
             max_fruit = max(sum(baskets.values()), max_fruit)
         return max_fruit
-

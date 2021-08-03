@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         '''
@@ -33,7 +35,7 @@ class Solution:
                             reachable[i].add(neighbor)
                             if shortest_distance[cur] + graph[cur][neighbor] < shortest_distance[neighbor]:
                                 shortest_distance[neighbor] = shortest_distance[cur] + graph[cur][neighbor]
-           
+
                 cur = None
                 for city in unvisited:
                     if shortest_distance[city] != float('inf'):
@@ -49,5 +51,5 @@ class Solution:
             if len(reachable[i]) <= res_reachable:
                 res_reachable = len(reachable[i])
                 res = i
-                
+
         return res

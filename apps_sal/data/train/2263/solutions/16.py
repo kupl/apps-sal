@@ -42,5 +42,5 @@ def main():
             break
     print(((sum(dp[n - 1][r][1]) + d) % md))
 
-main()
 
+main()

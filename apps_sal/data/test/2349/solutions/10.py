@@ -1,4 +1,4 @@
-#603_C
+# 603_C
 
 t = int(input())
 
@@ -24,4 +24,3 @@ for i in range(0, t):
         ln.append(1)
     print(len(ln))
     print(" ".join([str(j) for j in sorted(ln)]))
-

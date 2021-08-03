@@ -1,6 +1,5 @@
 class Solution(object):
-       
-    
+
     def mincostToHireWorkers(self, quality, wage, K):
         from fractions import Fraction
         workers = sorted((Fraction(w, q), q, w)
@@ -12,17 +11,11 @@ class Solution(object):
         for ratio, q, w in workers:
             heapq.heappush(pool, -q)
             sumq += q
-            
-           
+
             if len(pool) > K:
                 sumq += heapq.heappop(pool)
-                
+
             if len(pool) == K:
                 ans = min(ans, ratio * sumq)
-           
 
-            
-
-        
-            
         return float(ans)

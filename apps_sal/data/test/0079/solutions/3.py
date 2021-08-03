@@ -12,6 +12,7 @@ Suppose there is a sequence of independent Bernoulli trials. Thus, each trial ha
 
 N = 100010
 
+
 def gen_mobius_function():
     mu = [1] * N
     mu[0] = 0
@@ -30,17 +31,19 @@ def gen_mobius_function():
                 j += i * i
     return mu
 
+
 m = int(input())
 mu = gen_mobius_function()
 
 MOD = 10**9 + 7
 
+
 def mod_inv(x):
     return pow(x, MOD - 2, MOD)
+
 
 E = 1
 for i in range(2, N):
     p = m // i * mod_inv(m)
-    E += -mu[i] * p * mod_inv(1 - p) #mobius, Negative binomial function
+    E += -mu[i] * p * mod_inv(1 - p)  # mobius, Negative binomial function
 print(E % MOD)
-

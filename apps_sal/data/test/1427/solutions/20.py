@@ -2,10 +2,12 @@ def gcd(m, n):
     r = m % n
     return gcd(n, r) if r else n
 
-def lcm(m, n):
-    return m//gcd(m, n)*n
 
-MOD = 10**9+7
+def lcm(m, n):
+    return m // gcd(m, n) * n
+
+
+MOD = 10**9 + 7
 n = int(input())
 a = list(map(int, input().split()))
 l = a[0]
@@ -15,6 +17,5 @@ l %= MOD
 
 ans = 0
 for x in a:
-    ans = (ans + l * pow(x, MOD-2, MOD)%MOD)%MOD
+    ans = (ans + l * pow(x, MOD - 2, MOD) % MOD) % MOD
 print(ans)
-

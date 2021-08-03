@@ -7,4 +7,3 @@ ans = S.count("+") - S.count("-")
 
 # 結果出力
 print(ans)
-

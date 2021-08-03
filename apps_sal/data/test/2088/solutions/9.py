@@ -9,9 +9,10 @@ def countleaf(tree, n, leafs):
 
     for i in tree[n]:
         leafs[n] += countleaf(tree, i, leafs)
-    
+
     return leafs[n]
-    
+
+
 n = int(input())
 edges = list(map(int, input().split()))
 tree = [[] for i in range(n)]
@@ -21,7 +22,8 @@ leafs = [0] * n
 for i, e in enumerate(edges):
     tree[e - 1] += [i + 1]
 
-if test: print(tree)
+if test:
+    print(tree)
 
 for i in range(n - 1, -1, -1):
     if not tree[i]:
@@ -30,4 +32,3 @@ for i in range(n - 1, -1, -1):
         leafs[i] = sum(leafs[j] for j in tree[i])
 
 print(*sorted(leafs))
-

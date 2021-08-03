@@ -26,4 +26,3 @@ for case in range(int(input())):
         print(s)
     else:
         print(-1)
-

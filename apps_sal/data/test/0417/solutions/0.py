@@ -5,15 +5,15 @@ def solve():
         if X == 0:
             print((1))
         else:
-            print((N+1))
+            print((N + 1))
         return
 
     LRss = {}
-    for k in range(N+1):
-        m = X*k
-        rem = m%D
-        minCoef = m//D + k*(k-1)//2
-        maxCoef = m//D + k*(2*N-k-1)//2
+    for k in range(N + 1):
+        m = X * k
+        rem = m % D
+        minCoef = m // D + k * (k - 1) // 2
+        maxCoef = m // D + k * (2 * N - k - 1) // 2
         if rem not in LRss:
             LRss[rem] = [(minCoef, maxCoef)]
         else:
@@ -36,4 +36,3 @@ def solve():
 
 
 solve()
-

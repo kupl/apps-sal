@@ -16,13 +16,13 @@ for i in range(q):
 start = time.time()
 
 str = ['a']
-for i in range(n-1):
+for i in range(n - 1):
     newstr = []
     for j in range(len(str)):
         l = str[j][0]
         if l in list(pat.keys()):
             for k in pat[l]:
-                newstr.append(k+str[j][1:])
+                newstr.append(k + str[j][1:])
 
     str = newstr
     if len(str) == 0:
@@ -31,4 +31,3 @@ for i in range(n-1):
 print(len(str))
 finish = time.time()
 #print(finish - start)
-

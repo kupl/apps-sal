@@ -21,4 +21,3 @@ for _ in range(int(input())):
             L = m
             ans = a.index(max(a[:m]))
     print(ans + 1)
-

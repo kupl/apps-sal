@@ -7,4 +7,3 @@ elif A < B:
     print('LESS')
 else:
     print('EQUAL')
-

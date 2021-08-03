@@ -7,11 +7,11 @@ for i in range(n):
     s = input()
     for j in range(m):
         if s[j] in a:
-            ans0[i] = min(ans0[i], (j, i), (m-j, i))
+            ans0[i] = min(ans0[i], (j, i), (m - j, i))
         elif '0' <= s[j] <= '9':
-            ans1[i] = min(ans1[i], (j, i), (m-j, i))
+            ans1[i] = min(ans1[i], (j, i), (m - j, i))
         else:
-            ans2[i] = min(ans2[i], (j, i), (m-j, i))
+            ans2[i] = min(ans2[i], (j, i), (m - j, i))
 ans0.sort()
 ans1.sort()
 ans2.sort()

@@ -65,7 +65,7 @@ def main():
     if reverse:
         for i in range(100):
             for j in range(100):
-                if ans[i][j] ==  "#":
+                if ans[i][j] == "#":
                     print(".", end="")
                 else:
                     print("#", end="")
@@ -73,9 +73,6 @@ def main():
     else:
         for a in ans:
             print("".join(a))
-
-
-
 
 
 def __starting_point():

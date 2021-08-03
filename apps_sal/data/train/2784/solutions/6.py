@@ -1,1 +1,1 @@
-spam = lambda n:"hue"*n
+def spam(n): return "hue" * n

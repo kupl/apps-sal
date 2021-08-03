@@ -1,5 +1,6 @@
 from math import gcd
 
+
 def f(a, b, x):
     x += 1
     p = a * b // gcd(a, b)
@@ -7,6 +8,7 @@ def f(a, b, x):
     ans = n * b
     ans += min(b, x - n * p)
     return ans
+
 
 for _ in range(int(input())):
     a, b, q = map(int, input().split())

@@ -1,6 +1,7 @@
 def read_nums():
     return list(map(int, input().split()))
 
+
 w, l = read_nums()
 rocks = read_nums()
 
@@ -12,4 +13,3 @@ for i in range(l, len(rocks)):
     min_sum = min(min_sum, cur_sum)
 
 print(min_sum)
-

@@ -69,4 +69,3 @@ for i, a in enumerate(an):
     for j in range(2 * i, n + 1, i):
         mf.add_link(i, j, float('inf'))
 print((max_value - mf.max_flow(0, n + 1)))
-

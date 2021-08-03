@@ -14,7 +14,7 @@ answer = int(20000000000)
 for i in range(x + 1):
     k, b = 0, int(20000000000)
     for j in range(len(data[i])):
-        while k != len(data[x - i]) and( data[i][j][0] > data[x - i][k][1] ):
+        while k != len(data[x - i]) and (data[i][j][0] > data[x - i][k][1]):
             b = min(b, data[x - i][k][2])
             k += 1
         answer = min(answer, b + data[i][j][2])

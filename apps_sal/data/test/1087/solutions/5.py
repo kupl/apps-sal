@@ -13,4 +13,3 @@ for i in range(40, -1, -1):
     else:
         ans += cnt0 * d
 print(ans)
-

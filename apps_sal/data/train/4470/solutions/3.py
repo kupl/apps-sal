@@ -7,4 +7,3 @@ def nb_year(p0, percent, aug, p):
     _p = percent / 100.00
     p0 = p0 + round(p0 * _p) + aug  # growth of population formula
     return 1 + nb_year(p0, percent, aug, p)
-

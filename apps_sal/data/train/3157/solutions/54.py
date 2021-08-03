@@ -6,7 +6,7 @@ def number(bus_stops):
         total_people_out = 0
 
         for first_item, second_item in bus_stops:
-            total_people_in +=  first_item
+            total_people_in += first_item
             total_people_out += second_item
 
     except:

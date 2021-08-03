@@ -31,4 +31,3 @@ def testCase():
 for i in range(int(input())):
     input()
     testCase()
-

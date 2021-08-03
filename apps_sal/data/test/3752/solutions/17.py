@@ -4,7 +4,7 @@ import math
 def main():
     k, d, t = [int(x) for x in input().split()]
     time = 0.0
-    k = (k, 2 * t)[k > 2*t]
+    k = (k, 2 * t)[k > 2 * t]
 
     val = d * (math.ceil(k / d))
 
@@ -26,5 +26,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

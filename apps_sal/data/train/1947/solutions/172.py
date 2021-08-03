@@ -8,7 +8,7 @@ class Solution:
                     bdict[let] = val
                 else:
                     bdict[let] = max(bdict[let], val)
-            
+
         i = 0
         while i < len(A):
             tempdict = collections.Counter(A[i])

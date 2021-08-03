@@ -51,7 +51,7 @@ def dfs_visit(graph, root, color, pi, u, v):
                     cicle.append(current_node)
                     current_node = pi[current_node]
                 cicle.append(adj)
-                return cicle  
+                return cicle
     return None
 
 
@@ -69,5 +69,6 @@ def __starting_point():
                 break
         else:
             print("NO")
+
 
 __starting_point()

@@ -1,3 +1,2 @@
-a=input()
+a = input()
 print((a.count('1')))
-

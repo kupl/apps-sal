@@ -14,5 +14,6 @@ def i_row(N): return [int(input()) for _ in range(N)]
 
 def i_row_list(N): return [list(map(int, input().split())) for _ in range(N)]
 
-a,b=map(decimal.Decimal, input().split())
-print(int(a*b))
+
+a, b = map(decimal.Decimal, input().split())
+print(int(a * b))

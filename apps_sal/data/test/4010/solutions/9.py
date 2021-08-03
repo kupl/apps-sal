@@ -10,5 +10,3 @@ for i in range(t):
         met.append(i)
     else:
         print("NO")
-    
-

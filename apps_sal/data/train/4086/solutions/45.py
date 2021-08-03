@@ -8,4 +8,4 @@ def first_non_consecutive(arr):
             return arr[index + 1]
             break
     if is_consecutive == True:
-            return None
+        return None

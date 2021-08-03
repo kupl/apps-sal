@@ -1,9 +1,8 @@
 s = input()
 t = input()
 
-if (s + t[-1]) == t :
+if (s + t[-1]) == t:
     print("Yes")
 
-else :
+else:
     print("No")
-

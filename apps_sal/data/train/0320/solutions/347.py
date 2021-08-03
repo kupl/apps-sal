@@ -2,6 +2,7 @@ class Solution:
     def minOperations(self, nums: List[int]) -> int:
         self.count = 0
         all_even = False
+
         def reduce():
             nonlocal all_even
             zero = 0
@@ -19,15 +20,9 @@ class Solution:
                         nums[i] -= 1
                 all_even = True
             return zero
-        
+
         while True:
             n = reduce()
             if n == len(nums):
                 break
         return self.count - 1
-            
-                    
-            
-                    
-                    
-

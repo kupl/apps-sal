@@ -1,7 +1,7 @@
 from collections import deque
-K = int( input())
-V = [0]*K
-d = deque([(1,1)])
+K = int(input())
+V = [0] * K
+d = deque([(1, 1)])
 while 1:
     w, v = d.popleft()
     if v == 0:
@@ -10,13 +10,13 @@ while 1:
     if V[v] == 1:
         continue
     V[v] = 1
-    if V[ (v+1)%K] == 0:
+    if V[(v + 1) % K] == 0:
         # if (v+1)%K == 0:
         #     ans = w+1
         #     break
-        d.append((w+1 ,(v+1)%K))
-    if V[ (v*10)%K] == 0:
-        d.appendleft((w, (v*10)%K))
+        d.append((w + 1, (v + 1) % K))
+    if V[(v * 10) % K] == 0:
+        d.appendleft((w, (v * 10) % K))
         # if (v*10)%K == 0:
         #     ans = w
         #     break

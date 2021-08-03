@@ -13,4 +13,3 @@ for i in range(N):
 
 # 結果出力
 print(ans)
-

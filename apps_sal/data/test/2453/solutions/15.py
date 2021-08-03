@@ -32,4 +32,3 @@ for i, cur_point in enumerate(spoints):
 
 for i in range(1, n + 1):
     print(dwd.get(i, 0), end=' ')
-

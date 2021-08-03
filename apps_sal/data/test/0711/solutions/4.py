@@ -1,25 +1,27 @@
 MAX = 10**6
-MOD = 10**9+7
+MOD = 10**9 + 7
 
-fac = [0] * (MAX+1)
-finv = [0] * (MAX+1)
-inv = [0] * (MAX+1)
+fac = [0] * (MAX + 1)
+finv = [0] * (MAX + 1)
+inv = [0] * (MAX + 1)
+
 
 def comb_init():
     fac[0] = fac[1] = 1
     finv[0] = finv[1] = 1
     inv[1] = 1
-    for i in range(2, MAX+1):
-        fac[i] = fac[i-1] * i % MOD
-        inv[i] = MOD - inv[MOD%i] * (MOD // i) % MOD
-        finv[i] = finv[i-1] * inv[i] % MOD
+    for i in range(2, MAX + 1):
+        fac[i] = fac[i - 1] * i % MOD
+        inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD
+        finv[i] = finv[i - 1] * inv[i] % MOD
+
 
 def comb(n, k):
     if n < k:
         return 0
     if n < 0 or k < 0:
         return 0
-    return fac[n] * (finv[k] * finv[n-k] % MOD) % MOD
+    return fac[n] * (finv[k] * finv[n - k] % MOD) % MOD
 
 
 def prime_factorize(n):
@@ -45,8 +47,9 @@ def __starting_point():
     prime_factor = prime_factorize(m)
     res = 1
     for v in list(prime_factor.values()):
-        res *= comb(v+n-1, n-1)
+        res *= comb(v + n - 1, n - 1)
         res %= MOD
     print(res)
+
 
 __starting_point()

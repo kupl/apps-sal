@@ -16,11 +16,13 @@ class Deadfish:
     def o(self): self.outputs.append(self.value)
 
     def apply(self, command):
-        try: Deadfish.commands[command](self)
-        except KeyError: pass
+        try:
+            Deadfish.commands[command](self)
+        except KeyError:
+            pass
+
 
 def parse(commands):
     df = Deadfish()
     [df.apply(c) for c in commands]
     return df.outputs
-

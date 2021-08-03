@@ -10,7 +10,10 @@ def solve(x1, y1, x2, y2):
         else:
             return (y1 - 1) // m1 == (y2 - 1) // n1
 
-gcd = lambda a, b: a if b == 0 else gcd(b, a % b)
+
+def gcd(a, b): return a if b == 0 else gcd(b, a % b)
+
+
 n, m, q = map(int, input().split())
 k = gcd(n, m)
 n1 = n // k

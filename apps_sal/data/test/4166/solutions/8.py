@@ -9,7 +9,7 @@ for _ in range(m):
 if n == 1:
     ans = ["0"]
 else:
-    ans = list(str(10**(n-1)))
+    ans = list(str(10**(n - 1)))
 
 check = [0] * n
 
@@ -27,4 +27,3 @@ if n > 1 and ans[0] == "0":
     print((-1))
 else:
     print(("".join(ans)))
-

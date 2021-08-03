@@ -1,4 +1,4 @@
-N,M = list(map(int, input().split()))
+N, M = list(map(int, input().split()))
 day = list(map(int, input().split()))
 total = 0
 for i in range(M):
@@ -8,5 +8,3 @@ if N >= total:
     print((N - total))
 else:
     print('-1')
-
-

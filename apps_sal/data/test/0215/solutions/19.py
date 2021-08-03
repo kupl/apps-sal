@@ -12,7 +12,6 @@ for i in n:
     elif ord(i) < 96:
         rez = []
         yet = 0
-    ans = max(ans,yet)
+    ans = max(ans, yet)
 
 print(ans)
-

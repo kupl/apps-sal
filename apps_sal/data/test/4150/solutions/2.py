@@ -1,16 +1,16 @@
 N, K = list(map(int, input().split()))
-A = [int(a)-1 for a in input().split()]
+A = [int(a) - 1 for a in input().split()]
 T = [0] * N
 inv = [0] * N
 for i in range(N):
     inv[A[i]] = i
 
-L = [a-1 for a in range(N)]
-R = [a+1 for a in range(N)]
+L = [a - 1 for a in range(N)]
+R = [a + 1 for a in range(N)]
 
 c = 0
 t = 2
-i = N-1
+i = N - 1
 while c < N and i >= 0:
     j = inv[i]
     if T[j]:
@@ -23,7 +23,7 @@ while c < N and i >= 0:
     pj = j
     while True:
         nj = L[pj]
-        if k==0 or nj < 0:
+        if k == 0 or nj < 0:
             break
         T[nj] = t
         c += 1
@@ -34,7 +34,7 @@ while c < N and i >= 0:
     pj = j
     while True:
         nj = R[pj]
-        if k==0 or nj >= N:
+        if k == 0 or nj >= N:
             break
         T[nj] = t
         c += 1
@@ -48,4 +48,3 @@ while c < N and i >= 0:
     i -= 1
 
 print("".join(map(str, T)))
-

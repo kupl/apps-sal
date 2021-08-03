@@ -1,1 +1,1 @@
-could_be=lambda a,b,s=set:s()<s(b.split())<=s(a.split())>s()
+def could_be(a, b, s=set): return s() < s(b.split()) <= s(a.split()) > s()

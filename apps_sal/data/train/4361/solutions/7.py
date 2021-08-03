@@ -1,5 +1,6 @@
 from itertools import permutations, count
 
+
 def next_perfectsq_perm(lower_limit, k):
     for i in count(int(lower_limit ** 0.5) + 1):
         j = i ** 2

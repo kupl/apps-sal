@@ -17,4 +17,3 @@ for _ in range(int(input())):
             for c in cycle:
                 r[c] = len(cycle)
     print(*r)
-

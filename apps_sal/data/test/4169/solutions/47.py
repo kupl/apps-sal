@@ -8,12 +8,10 @@ last_cnt = 0
 for a, b in sAB:
     cnt += b
     if cnt < M:
-        ans += a*b
+        ans += a * b
         last_cnt = cnt
     else:
-        ans += a*(M-last_cnt)
+        ans += a * (M - last_cnt)
         break
 
 print(ans)
-
-

@@ -5,8 +5,8 @@ left = 1
 segments = []
 for i in range(1, n):
     if A[i] in s:
-        segments.append((left, i+1))
-        left = i+2
+        segments.append((left, i + 1))
+        left = i + 2
         s.clear()
     else:
         s.add(A[i])
@@ -17,4 +17,3 @@ else:
     print(len(segments))
     for l, r in segments:
         print(l, r)
-

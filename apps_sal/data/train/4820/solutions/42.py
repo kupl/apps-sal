@@ -1,7 +1,7 @@
 class Cat(Animal):
 
-    def __init__(self,name):
+    def __init__(self, name):
         self.name = name
-    
+
     def speak(self):
-        return str.format("{} meows.",self.name)
+        return str.format("{} meows.", self.name)

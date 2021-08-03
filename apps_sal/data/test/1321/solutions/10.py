@@ -23,4 +23,3 @@ for i in range(n):
         print((w - A[i]) * h2, end=' ')
     else:
         print((w - A[i]) * h1, end=' ')
-

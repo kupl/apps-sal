@@ -18,5 +18,3 @@ for i in range(len(t)):
         checked[i] = True
     ans += 1
 print(ans)
-
-

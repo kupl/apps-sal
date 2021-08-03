@@ -4,7 +4,7 @@ class Solution:
         diff = position[-1] - position[0]
         right = diff // (m - 1)
         left = 1
-        
+
         def condition(num):
             k = m - 1
             prev = position[0]
@@ -15,7 +15,7 @@ class Solution:
                 if k == 0:
                     return True
             return False
-        
+
         while left < right:
             mid = left + (right - left) // 2
             # print(mid, condition(mid))

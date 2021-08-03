@@ -40,5 +40,3 @@ for i, level in enumerate(levels):
 
 assert out % 2 == 0
 print(out // 2)
-
-

@@ -15,5 +15,4 @@ for i in commands:
         left += 1
     else:
         raise ValueError
-print(2*min(right, left) + 2*min(up, down))
-
+print(2 * min(right, left) + 2 * min(up, down))

@@ -1,6 +1,7 @@
+import heapq
 import sys
 input = sys.stdin.readline
-import heapq
+
 
 def dijkstra(n, s, edges):
     hq = [(0, s)]
@@ -16,6 +17,7 @@ def dijkstra(n, s, edges):
                 cost[u] = tmp
                 heapq.heappush(hq, (tmp, u))
     return cost[-1]
+
 
 def main():
     xs, ys, xt, yt = map(int, input().split())
@@ -37,5 +39,6 @@ def main():
 
     ans = dijkstra(n + 2, 0, edges)
     print(ans)
-    
+
+
 main()

@@ -11,5 +11,4 @@ for j in reversed(list(range(n))):
     if A[j] != A[0]:
         break
 
-print(max(j+1, n-i)-1)
-
+print(max(j + 1, n - i) - 1)

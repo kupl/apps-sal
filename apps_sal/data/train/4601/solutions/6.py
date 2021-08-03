@@ -4,4 +4,3 @@ def mormons(followers, reach, target):
         followers *= (reach + 1)
         mission += 1
     return mission
-

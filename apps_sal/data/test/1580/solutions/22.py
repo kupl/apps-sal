@@ -9,7 +9,7 @@ class Graph():
 
     def __init__(self):
         self.adjacency_dict = {}
-    
+
     def add_vertex(self, v):
         self.adjacency_dict[v] = []
 
@@ -21,7 +21,7 @@ class Graph():
         self.adjacency_dict[v1].remove(v2)
         self.adjacency_dict[v2].remove(v1)
 
-    def remove_vertex(self,v):
+    def remove_vertex(self, v):
         while self.adjacency_dict[v] != []:
             adjacency_vertex = self.adjacency_dict[v][-1]
             self.remove_edge(v, adjacency_vertex)
@@ -44,7 +44,7 @@ g = Graph()
 for i in range(n):
     g.add_vertex(i)
 for i in range(m):
-    g.add_edge(xyz[i][0]-1, xyz[i][1]-1)
+    g.add_edge(xyz[i][0] - 1, xyz[i][1] - 1)
 
 res = 0
 reached_nodes = [0 for _ in range(n)]
@@ -63,4 +63,3 @@ for i in g.get_vertexes():
             reached_nodes[v] = 1
 
 print(res)
-

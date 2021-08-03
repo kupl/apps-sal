@@ -8,4 +8,3 @@ while fib[-1] < n:
 fib = set(fib)
 
 print(''.join([('o', 'O')[i in fib] for i in range(1, n + 1)]))
-

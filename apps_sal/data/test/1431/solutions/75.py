@@ -1,6 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-res = [-1]*N
+res = [-1] * N
 
 for i in reversed(range(1, N + 1)):
     p = (N // i) * i

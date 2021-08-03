@@ -1,5 +1,7 @@
 from collections import defaultdict
 from collections import deque
+
+
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) == 1:
@@ -12,8 +14,8 @@ class Solution:
                 indexes[v].append(i)
 
         queue = deque([(0, True), (len(arr) - 1, False)])
-        minimum_steps = {0:0}
-        minimum_steps_negative = {len(arr) - 1:0}
+        minimum_steps = {0: 0}
+        minimum_steps_negative = {len(arr) - 1: 0}
         while queue:
             curPos, direction = queue.popleft()
 

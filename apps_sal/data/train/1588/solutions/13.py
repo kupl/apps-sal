@@ -1,9 +1,9 @@
 for _ in range(int(input())):
-    n=int(input())
-    goes=[]
+    n = int(input())
+    goes = []
     for u in range(n):
-        z=input().split()
-        goes.append((int(z[1]),z[0]))
+        z = input().split()
+        goes.append((int(z[1]), z[0]))
 
     goes.sort()
     res = 'Nobody wins.'
@@ -23,4 +23,3 @@ for _ in range(int(input())):
     if win:
         res = lastnm
     print(res)
-

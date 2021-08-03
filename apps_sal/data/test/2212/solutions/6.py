@@ -7,13 +7,13 @@ for i in range(1, m + 1):
         ch += [i]
     else:
         nech += [i]
-line = []  
+line = []
 for i in range(n):
     line += [[]]
 for i in range(n):
     for j in range(n):
         if i < n // 2:
-            if j < n // 2 - i or j > n//2 + i:
+            if j < n // 2 - i or j > n // 2 + i:
                 line[i] += [ch[-1]]
                 ch.pop()
             else:
@@ -24,12 +24,11 @@ for i in range(n):
             nech.pop()
         else:
             i1 = n - i - 1
-            if j < n // 2 - i1 or j > n//2 + i1:
+            if j < n // 2 - i1 or j > n // 2 + i1:
                 line[i] += [ch[-1]]
                 ch.pop()
             else:
                 line[i] += [nech[-1]]
-                nech.pop()         
+                nech.pop()
 for i in range(n):
     print(" ".join(map(str, line[i])))
-

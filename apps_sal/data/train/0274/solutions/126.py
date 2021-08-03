@@ -9,18 +9,18 @@ class Solution:
         # 10, 10 -> 10, 1 -> 1, 2 -> 1, 4 -> 1, 7 -> 2, 7 -> 2, 2 -> end
         # turns out i need a list of max and min elements + indexes
         # [8, 11, 5, 7, 9, 10, 8, 7, 6];
-        # (8, 11) -> (11, 5) -> 
+        # (8, 11) -> (11, 5) ->
         # The list of max elements must contain elements in window, descending order
         # The list of min elements must contain elements in window, ascending order
-        
+
         # (6, 8) (7, 7) (9, 6)
         # (9, 6)
         # i = 3, j = 10
         # res = 6
-        
+
         if limit < 0:
             return 0
-        
+
         i, j = 0, 1
         res = 0
         max_q, min_q = collections.deque(), collections.deque()
@@ -45,5 +45,3 @@ class Solution:
                     i = max_i + 1
                     max_q.popleft()
         return j - i if j - i > res else res
-                
-

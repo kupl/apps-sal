@@ -12,7 +12,7 @@ class Solution:
                 min_q.pop()
             max_q.append(r)
             min_q.append(r)
-            
+
             while nums[max_q[0]] - nums[min_q[0]] > limit:
                 l += 1
                 if l > max_q[0]:
@@ -20,6 +20,5 @@ class Solution:
                 if l > min_q[0]:
                     min_q.popleft()
             ans = max(ans, r - l + 1)
-            r+=1
+            r += 1
         return ans
-

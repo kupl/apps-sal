@@ -1,7 +1,8 @@
 n = int(input())
 for i in range(n):
     a, b = list(map(int, input().split()))
-    m = a; bits = str(a).count('1')
+    m = a
+    bits = str(a).count('1')
     x = 0
     while a <= b:
         a |= (1 << x)
@@ -13,4 +14,3 @@ for i in range(n):
             m = a
         x += 1
     print(m)
-

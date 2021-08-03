@@ -10,4 +10,3 @@ for i in range(n):
     b_bit |= int(b[i])
 
 print(a_bit + b_bit)
-

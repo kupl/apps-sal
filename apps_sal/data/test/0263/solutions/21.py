@@ -16,6 +16,3 @@ if max_sum < sum + m:
     min_k += m // n + (1 if m % n != 0 else 0)
 
 print(min_k, max_k)
-
-
-

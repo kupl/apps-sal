@@ -1,5 +1,5 @@
 N, k = map(int, input().split())
-a = [ [0] * (N + 1) for i in range(N + 1) ]
+a = [[0] * (N + 1) for i in range(N + 1)]
 x = N * (k - 1) + 1
 S = 0
 for i in range(1, N + 1):

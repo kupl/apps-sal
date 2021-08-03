@@ -39,5 +39,4 @@ for i in range(M):
     money //= 2
     money *= -1
     heapq.heappush(A, money)
-print((sum(A)*-1))
-
+print((sum(A) * -1))

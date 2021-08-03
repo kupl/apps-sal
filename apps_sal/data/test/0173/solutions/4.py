@@ -15,4 +15,3 @@ elif h[-1] == ">" and v[-1] == "v":
     print("NO")
 else:
     print("YES")
-

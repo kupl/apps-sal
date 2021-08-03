@@ -1,4 +1,4 @@
-    
+
 def is_pre(s1, s2):
     c = 0
     i = 0
@@ -9,9 +9,10 @@ def is_pre(s1, s2):
             i += 1
     return c == 1
 
+
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        words.sort(key= len)
+        words.sort(key=len)
         n = len(words)
         m = {}
         incount = {}
@@ -21,7 +22,7 @@ class Solution:
             if i not in incount:
                 q.append(i)
             wn = len(words[i])
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 jn = len(words[j])
                 if jn > wn + 1:
                     break
@@ -38,9 +39,3 @@ class Solution:
                         q.append(v)
                         seen.add(v)
         return lev
-            
-            
-            
-            
-            
-

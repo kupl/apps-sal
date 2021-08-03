@@ -75,5 +75,5 @@ def main():
     ans = [uf.set_size(i) for i in range(n)]
     write(*ans)
 
-main()
 
+main()

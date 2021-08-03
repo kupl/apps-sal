@@ -9,7 +9,7 @@ d = [[1]]
 for i in range(n - m):
     nd = d[-1][1:] + [0] * 2
     for j in range(1, i + 2):
-        nd[j] = (nd[j] + d[-1][j-1]) % mod
+        nd[j] = (nd[j] + d[-1][j - 1]) % mod
     d.append(nd)
 ans = 0
 for i in range(n - m + 1):
@@ -17,4 +17,3 @@ for i in range(n - m + 1):
     for j in range(-b, min(l - c, i) + 1):
         ans = (ans + d[i][j] * d[l][j + c]) % mod
 print(ans)
-

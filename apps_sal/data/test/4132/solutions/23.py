@@ -6,4 +6,3 @@ ans = 0
 for i in a:
     ans = gcd(ans, i)
 print(ans)
-

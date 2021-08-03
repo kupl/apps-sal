@@ -1,8 +1,11 @@
 n, s = [int(input()) for _ in range(2)]
+
+
 def f(b, n):
     if n < b:
         return n
     return f(b, n // b) + n % b
+
 
 if n == s:
     print(n + 1)

@@ -12,4 +12,3 @@ for _ in range(t):
             break
     ans_l.append(ans)
 print(*ans_l, sep='\n')
-

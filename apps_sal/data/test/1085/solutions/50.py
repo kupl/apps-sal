@@ -42,4 +42,3 @@ for _, i in factorization(N - 1):
     ans2 *= (1 + i)
 ans += ans2
 print(ans)
-

@@ -13,4 +13,3 @@ elif u < v:
     print('Chris')
 else:
     print('Friendship is magic!^^')
-

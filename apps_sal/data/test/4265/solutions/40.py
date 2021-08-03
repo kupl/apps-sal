@@ -7,4 +7,3 @@ for i in range(len(s)):
         cnt += 1
 
 print(cnt)
-

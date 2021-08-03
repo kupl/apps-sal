@@ -1,5 +1,6 @@
 from collections import deque, defaultdict
 
+
 def BFS(graph, source, visited):
     # Generator which yields all vertices connected to source (includes source)
     n = len(graph)
@@ -16,11 +17,13 @@ def BFS(graph, source, visited):
                 visited[v] = True
                 queue.append(v)
 
+
 def get_components(adjacency_list, n):
     visited = [False] * n
     for i in range(n):
         if not visited[i]:
             yield list(BFS(adjacency_list, i, visited))
+
 
 def __starting_point():
     n, m, k = list(map(int, input().split()))
@@ -46,5 +49,6 @@ def __starting_point():
         changes += len(component) - max_count
 
     print(changes)
+
 
 __starting_point()

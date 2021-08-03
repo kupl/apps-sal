@@ -5,5 +5,5 @@ a = list(map(int, input().split()))
 
 a = np.array(a)
 
-ans = min(len(a[a<x]), len(a[a>x]))
+ans = min(len(a[a < x]), len(a[a > x]))
 print(ans)

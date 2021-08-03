@@ -5,10 +5,12 @@ Do Not Wake Me Again.
 
 import sys
 
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(mi())
-si = lambda: input()
+
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(mi())
+def si(): return input()
+
 
 n, m = mi()
 f = []
@@ -18,16 +20,16 @@ for i in range(n):
 
 lm = li()
 
-l = len(f[lm[0]-1])
-z = ['']*l
+l = len(f[lm[0] - 1])
+z = [''] * l
 
 for v in lm:
-    if len(f[v-1]) != l:
+    if len(f[v - 1]) != l:
         print("No")
         return
     else:
         for i in range(len(z)):
-            z[i] += f[v-1][i]
+            z[i] += f[v - 1][i]
 
 x = ''
 
@@ -38,11 +40,12 @@ for i in range(len(z)):
         x += '?'
 
 for i, j in enumerate(f):
-    if i+1 in lm or len(j) != l: continue
+    if i + 1 in lm or len(j) != l:
+        continue
     else:
         b = 1
         for p in range(len(j)):
-            if x[p]!='?' and (x[p] != j[p]):
+            if x[p] != '?' and (x[p] != j[p]):
                 b = 0
         if b == 1:
             print("No")

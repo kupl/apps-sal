@@ -68,4 +68,3 @@ t = read_int()
 for case_num in range(t):
     n, k = read_ints()
     print(more(n, k))
-

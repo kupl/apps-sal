@@ -1,7 +1,7 @@
 N, M, X = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
-for i , a in enumerate(A):
+for i, a in enumerate(A):
     if X < a:
         break
 
@@ -11,4 +11,3 @@ else:
     ans = len(A[:i])
 
 print(ans)
-

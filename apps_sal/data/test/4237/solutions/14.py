@@ -3,7 +3,8 @@ A, B, C, D = list(map(int, input().split()))
 
 lcm = C * D // math.gcd(C, D)
 
-def num_multi(num, lb, ub): # [lb, ub]にnumの倍数がいくつあるのかを返す
+
+def num_multi(num, lb, ub):  # [lb, ub]にnumの倍数がいくつあるのかを返す
     lR = lb // num
     lQ = lb % num
 
@@ -16,5 +17,5 @@ def num_multi(num, lb, ub): # [lb, ub]にnumの倍数がいくつあるのかを
 
     return ans
 
-print(((B-A+1) - num_multi(C, A, B) - num_multi(D, A, B) + num_multi(lcm, A, B)))
 
+print(((B - A + 1) - num_multi(C, A, B) - num_multi(D, A, B) + num_multi(lcm, A, B)))

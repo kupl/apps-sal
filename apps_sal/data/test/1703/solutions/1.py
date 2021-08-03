@@ -1,12 +1,26 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**10
 mod = 998244353
 
+
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -53,10 +67,7 @@ def main():
             continue
         r += d[k] * d[-k]
 
-
     return r
 
 
 print(main())
-
-

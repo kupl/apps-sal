@@ -15,4 +15,3 @@ for turns_val in value_lists:
     turns_val.sort()
     mindist = min(mindist, sum(turns_val[:k]))
 print(mindist)
-

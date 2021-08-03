@@ -1,7 +1,7 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         graph = defaultdict(list)
-        result = {} 
+        result = {}
 
         # build the adjacency list
         for edge in edges:
@@ -15,10 +15,10 @@ class Solution:
         # {0: [(1, 3)], 1: [(2, 1), (3, 4)], 2: [(3, 1)]}
         # get the number of vertices that can be reached starting from vertex i. Also, the vertices
         # that can be reached should have a distance below the threshold.
-        for i in range(n): # 0
-            num_vertices = self.get_num_vertices_less_than_threshold(graph, i, distanceThreshold) # g, 0, 4
+        for i in range(n):  # 0
+            num_vertices = self.get_num_vertices_less_than_threshold(graph, i, distanceThreshold)  # g, 0, 4
             result[i] = num_vertices
-        
+
         # pprint.pprint(result)
         min_vertex_val = min(result.values())
         # pprint.pprint(min_vertex_val)
@@ -31,26 +31,25 @@ class Solution:
         # pprint.pprint(min_vertex)
 
         return max(index)
-    
-    def get_num_vertices_less_than_threshold(self, graph, vertex, thresh): # g, 0, 4
-        queue = [] 
-        queue.append((0, vertex)) # (0, 0) 
-        reachable_nodes = [] # []
 
-        while queue: # (3, 1)
-            dist, node = heapq.heappop(queue) # 3, 1
+    def get_num_vertices_less_than_threshold(self, graph, vertex, thresh):  # g, 0, 4
+        queue = []
+        queue.append((0, vertex))  # (0, 0)
+        reachable_nodes = []  # []
+
+        while queue:  # (3, 1)
+            dist, node = heapq.heappop(queue)  # 3, 1
 
             if node in reachable_nodes:
                 continue
-            
-            reachable_nodes.append(node) # [0, 1]
 
-            for vert in graph[node]: # (2, 1), (3, 4)
-                neigh_vert = vert[0] # 2
-                neigh_cost = vert[1] # 1
+            reachable_nodes.append(node)  # [0, 1]
 
-                if dist + neigh_cost <= thresh: # 3 + 1 <= 4
-                    heapq.heappush(queue, (dist + neigh_cost, neigh_vert)) # [(4, 1)]
+            for vert in graph[node]:  # (2, 1), (3, 4)
+                neigh_vert = vert[0]  # 2
+                neigh_cost = vert[1]  # 1
 
-        return len(reachable_nodes) - 1 
+                if dist + neigh_cost <= thresh:  # 3 + 1 <= 4
+                    heapq.heappush(queue, (dist + neigh_cost, neigh_vert))  # [(4, 1)]
 
+        return len(reachable_nodes) - 1

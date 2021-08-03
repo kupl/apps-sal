@@ -2,7 +2,7 @@ import sys
 
 H, W = map(int, sys.stdin.readline().split())
 N = int(sys.stdin.readline())
-A =  list(map(int, sys.stdin.readline().split()))
+A = list(map(int, sys.stdin.readline().split()))
 
 grid = [[0 for _ in range(W)] for _ in range(H)]
 point = A[0]

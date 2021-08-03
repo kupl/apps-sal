@@ -1,5 +1,5 @@
-n,k = map(int,input().split())
-a = list(map(int,input().split()))
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
 left = 0
 x = 0
 ans = 0

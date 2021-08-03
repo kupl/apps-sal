@@ -1,10 +1,12 @@
 import copy
+
+
 def main():
     N = int(input())
     if N == 3:
         return 61
     mod = 10**9 + 7
-    d = {'A':0, 'C':1, 'G':2, 'T':3}
+    d = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
     AGC = [[[1] * 4 for _ in range(4)] for _ in range(4)]
     AGC[d['A']][d['G']][d['C']] = 0
     AGC[d['A']][d['C']][d['G']] = 0
@@ -31,5 +33,6 @@ def main():
                     NAGC[i1][i2][i3] = t
         AGC = copy.deepcopy(NAGC)
     return sum(sum(sum(j) for j in i) for i in AGC) % mod
-print((main()))
 
+
+print((main()))

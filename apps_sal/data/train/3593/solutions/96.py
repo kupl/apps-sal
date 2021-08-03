@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     str_lst = [letter for letter in s]
     for index in ind:
         try:

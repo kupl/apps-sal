@@ -3,7 +3,7 @@ s = input()
 
 ans = "no"
 for i in range(len(s)):
-    if(s[i]=='.'):
+    if(s[i] == '.'):
         continue
     for d in range(1, 100):
         cnt = 1
@@ -13,13 +13,12 @@ for i in range(len(s)):
                 break
             if(s[j] == '.'):
                 break
-            cnt+=1
-            j+=d
-        if(cnt==5):
+            cnt += 1
+            j += d
+        if(cnt == 5):
             ans = "yes"
             break
-    if(ans=="yes"):
+    if(ans == "yes"):
         break
-                
-print(ans)
 
+print(ans)

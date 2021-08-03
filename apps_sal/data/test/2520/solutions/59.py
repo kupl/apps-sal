@@ -44,7 +44,8 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-        
+
+
 n, m, k = map(int, input().split())
 ans = [-1 for _ in range(n)]
 UF = UnionFind(n)
@@ -55,7 +56,7 @@ for _ in range(m):
     UF.union(a, b)
     ans[a] -= 1
     ans[b] -= 1
-    
+
 for i in range(n):
     ans[i] += UF.size(i)
 

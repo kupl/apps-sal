@@ -9,9 +9,8 @@ def hull_method(points):
 
     # Sort the points lexicographically (tuples are compared lexicographically).
     # Remove duplicates to detect the case we have just one unique point.
-    points =  sorted(points)
+    points = sorted(points)
 #     points = sorted(set(points))
-    
 
     # Boring case: no points or a single point, possibly repeated multiple times.
     if len(points) <= 1:
@@ -23,7 +22,7 @@ def hull_method(points):
     def cross(o, a, b):
         return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
 
-    # Build lower hull 
+    # Build lower hull
     lower = []
     for p in points:
         while len(lower) >= 2 and cross(lower[-2], lower[-1], p) <= 0:
@@ -38,10 +37,9 @@ def hull_method(points):
         upper.append(p)
 
     # Concatenation of the lower and upper hulls gives the convex hull.
-    # Last point of each list is omitted because it is repeated at the beginning of the other list. 
+    # Last point of each list is omitted because it is repeated at the beginning of the other list.
     return lower[:-1] + upper[:-1]
 
 # def hull_method(pointlist):
 
 #     pass
-

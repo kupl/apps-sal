@@ -5,4 +5,3 @@ def smash(words):
         if i != words[-1]:
             text += ' '
     return text
-

@@ -1,4 +1,4 @@
-#python3
+# python3
 # utf-8
 
 a, b, f, k = (int(x) for x in input().split())
@@ -39,4 +39,3 @@ while curr_races_made < 2 * k:
         curr_save = curr_races_made
 
 print(ans)
-

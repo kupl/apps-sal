@@ -15,6 +15,6 @@ for s in S[::-1]:
 
 ans = 0
 for c in cnt:
-    ans += c * (c-1) // 2
+    ans += c * (c - 1) // 2
 
 print(ans)

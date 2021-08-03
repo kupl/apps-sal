@@ -1,7 +1,7 @@
+from collections import Counter
 n = int(input())
 A = tuple(map(int, input().split()))
 A = sorted(A, reverse=True)
-from collections import Counter
 CA = Counter(A)
 
 b = 0
@@ -13,8 +13,7 @@ for a in A:
 
 c = 0
 for a in A:
-    if CA[a] >=2:
+    if CA[a] >= 2:
         c = a
         break
-print((b*c))
-
+print((b * c))

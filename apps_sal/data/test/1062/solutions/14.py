@@ -5,6 +5,7 @@ Created on Sat Mar 21 00:34:22 2015
 @author: NEC-PCuser
 """
 
+
 def solve(n, S, T):
     st = dict()
     ts = dict()
@@ -27,6 +28,7 @@ def solve(n, S, T):
             j = t[si]
             return dist - 1, min(i, j), max(i, j)
     return dist, -1, -1
+
 
 n = int(input())
 S = input()

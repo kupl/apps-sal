@@ -81,4 +81,3 @@ for i in range(n):
 for i in range(m):
     for j in range(min_col[i]):
         print("col", i + 1)
-

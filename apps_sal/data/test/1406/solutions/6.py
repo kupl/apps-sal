@@ -6,8 +6,11 @@ def f(t):
         i -= 1
         t[i] += 1
     return list(map(str, t))
+
+
 n, k, d = map(int, input().split())
-if k ** d < n: print(-1)
+if k ** d < n:
+    print(-1)
 else:
     t = [1] * d
     t[-1] = 0

@@ -29,4 +29,3 @@ for rs, cs in dfs(r2, c2):
     for rt, ct in dfs1:
         res = min(res, (rs - rt) ** 2 + (cs - ct) ** 2)
 print(res)
-

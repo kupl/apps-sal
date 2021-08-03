@@ -8,16 +8,16 @@ class Solution:
                 speed, pos = queue.popleft()
                 if pos < 0:
                     continue
-                if pos > 2*target:
+                if pos > 2 * target:
                     continue
-                
+
                 if target == pos:
                     return count
-                
-                if (speed*2, pos+speed) not in visited:
-                    visited.add((speed*2, pos+speed))
-                    queue.append((speed*2, pos+speed))
-                
+
+                if (speed * 2, pos + speed) not in visited:
+                    visited.add((speed * 2, pos + speed))
+                    queue.append((speed * 2, pos + speed))
+
                 if speed > 0:
                     if (-1, pos) not in visited:
                         visited.add((-1, pos))

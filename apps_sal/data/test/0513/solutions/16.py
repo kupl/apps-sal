@@ -66,8 +66,8 @@ def solve():
         return 0
     return 1
 
+
 if solve() == 1:
     print('respectable')
 else:
     print('ugly')
-

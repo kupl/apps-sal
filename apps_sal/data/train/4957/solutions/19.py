@@ -8,4 +8,3 @@ class Dog:
 
 
 snoopy, scoobydoo = Dog("Beagle"), Dog("Great Dane")
-

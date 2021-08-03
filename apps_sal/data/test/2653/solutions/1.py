@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
 
+
 def solve():
     N, Q = list(map(int, input().split()))
     graph = [[] for _ in range(N)]
@@ -13,6 +14,7 @@ def solve():
         p, x = list(map(int, input().split()))
         p -= 1
         ans[p] += x
+
     def dfs(cur, pre):
         for to in graph[cur]:
             if to == pre:
@@ -23,5 +25,5 @@ def solve():
     print((*ans))
     return
 
-solve()
 
+solve()

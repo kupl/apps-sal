@@ -11,4 +11,3 @@ for i in range(n):
 
 
 open('output.txt', 'w').write(str(res))
-

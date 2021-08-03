@@ -19,7 +19,10 @@ def solve():
     free_chars += n - tail
     return powmod(free_chars)
 
+
 ok_set = set()
+
+
 def is_consistent(p, margin):
     nonlocal ok_set
     if margin in ok_set:
@@ -46,4 +49,3 @@ def powmod(p):
 
 
 print(solve())
-

@@ -1,4 +1,4 @@
-a, b = map( int, input().split() )
-
 import math
-print( a * b // math.gcd( a, b ) )
+a, b = map(int, input().split())
+
+print(a * b // math.gcd(a, b))

@@ -26,7 +26,7 @@ def main():
             n = 0
         else:
             n = 1
-        
+
         if not lower_K:
             if d == 1 and n == 0:
                 lower_K = True
@@ -41,5 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -8,6 +8,7 @@ def main(A):
 
     return ans
 
+
 def __starting_point():
     N = int(input())
     A = list(map(int, input().split()))

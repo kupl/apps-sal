@@ -1,8 +1,10 @@
 import sys
 from bisect import insort
 
+
 def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
 def get_ints(): return map(int, sys.stdin.readline().strip().split())
+
 
 n = int(input())
 Arr = []

@@ -1,6 +1,7 @@
 s = input()
 t = input()
 
+
 def f(x):
     dic = {}
     for c in x:
@@ -9,6 +10,7 @@ def f(x):
         else:
             dic[c] = 1
     return dic
+
 
 d1 = f(s)
 d2 = f(t)

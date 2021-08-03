@@ -7,6 +7,7 @@ def key(v):
         v //= 2
         r += 1
     return r
+
+
 input()
 print(*sorted(map(int, input().split()), key=key))
-

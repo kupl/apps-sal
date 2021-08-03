@@ -1,17 +1,18 @@
 from collections import deque
 
+
 def main():
     n = int(input())
-    adj = [[]for i in range(n+1)]
-    ab = [list(map(int, input().split())) for i in range(n-1)]
+    adj = [[]for i in range(n + 1)]
+    ab = [list(map(int, input().split())) for i in range(n - 1)]
     for a, b in ab:
         adj[a].append(b)
         adj[b].append(a)
     # dequeを使ったキューによるBFS
     # 子をindexで、親ノードを要素で
     # 今回は彩色のためにどんな順番でpopされたかも保持しておく
-    order  = []
-    parent = [None] * (n+1)
+    order = []
+    parent = [None] * (n + 1)
     q = deque([1])
     while q:
         par = q.popleft()
@@ -23,7 +24,7 @@ def main():
             q.append(chl)
     # 彩色
     # 親と同じにならないように若い番号を割り当てて行く
-    cl = [None] * (n+1)
+    cl = [None] * (n + 1)
     for par in order:
         # 親の色
         pc = cl[par]
@@ -41,15 +42,18 @@ def main():
             #　他の子は色を変える必要がある
             color += 1
     # 木グラフなので単純に次数最大で考えて問題ない
-    g = max([len(i) for i in adj]) 
-    print(g)   
+    g = max([len(i) for i in adj])
+    print(g)
     for a, b in ab:
-        # 親子関係が逆転しない出力ならこれでいいがそうとも限らない 
+        # 親子関係が逆転しない出力ならこれでいいがそうとも限らない
         if parent[a] != b:
             print(cl[b])
         else:
-            print(cl[a])    
-    
+            print(cl[a])
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

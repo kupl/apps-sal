@@ -22,4 +22,3 @@ for i in range(n):
 
 for i in range(n):
     print((w_sum - w[i]) * (h_max if not has_single_max or i != h_max_index else h_second), end=' ')
-

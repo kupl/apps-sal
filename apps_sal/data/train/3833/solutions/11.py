@@ -8,4 +8,3 @@ def longest(s1, s2):
             results.append(records)
     results = sorted(results)
     return "".join(results)
-

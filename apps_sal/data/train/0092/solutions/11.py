@@ -1,9 +1,9 @@
-n=int(input())
+n = int(input())
 for i in range(n):
-    s=input()
-    t=input()
+    s = input()
+    t = input()
     s1 = set()
-    s2=set()
+    s2 = set()
     for q in s:
         s1.add(q)
     for q in t:

@@ -1,15 +1,17 @@
 from typing import Dict
 
+
 class Node:
     def __init__(self, char=None):
         self.char = char
         self.is_complete_word = False
         self.children: Dict[str, 'Node'] = dict()
 
+
 class Trie:
     def __init__(self):
         self.root = Node()
-        
+
     def insert(self, word: str):
         current = self.root
         for char in word:
@@ -17,6 +19,7 @@ class Trie:
                 current.children[char] = Node(char)
             current = current.children[char]
         current.is_complete_word = True
+
 
 class StreamChecker:
     def __init__(self, words: List[str]):
@@ -43,4 +46,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -4,4 +4,4 @@ def digits(n):
     k = list(k)
     for num in k:
         count += 1
-    return count 
+    return count

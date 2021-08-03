@@ -10,4 +10,3 @@ for i in range(n):
     res2 += (a[i] - m2) ** 2
 
 print((min(res1, res2)))
-

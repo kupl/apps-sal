@@ -6,4 +6,4 @@ for i in range(len(s)):
     elif s[i] == 'Z':
         z = max(i, z)
 
-print(z-a+1)
+print(z - a + 1)

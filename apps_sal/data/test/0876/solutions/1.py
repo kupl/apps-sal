@@ -14,16 +14,16 @@ elif alc <= 20:
         m = (l + r) // 2
         s = 0
         for i in range(n):
-          if A[i] > 0:
-            s2 = 1
-            for j in range(n - i - 1):
-                s2 *= m + j
-                s2 //= j + 1
-                if s2 >= k:
+            if A[i] > 0:
+                s2 = 1
+                for j in range(n - i - 1):
+                    s2 *= m + j
+                    s2 //= j + 1
+                    if s2 >= k:
+                        break
+                s += s2 * A[i]
+                if s >= k:
                     break
-            s += s2 * A[i]
-            if s >= k:
-                break
         if s >= k:
             r = m
         else:
@@ -38,5 +38,3 @@ else:
         if A[-1] >= k:
             break
     print(ans)
-           
-

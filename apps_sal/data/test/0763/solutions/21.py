@@ -15,5 +15,3 @@ for i in range(n):
         ans = i
 
 print(e)
-
-

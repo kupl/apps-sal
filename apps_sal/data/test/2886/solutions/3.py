@@ -22,7 +22,7 @@ def first_match_of_pattern(text, pattern):
 
 def _main():
     s = std_in()
-    az = [chr(i) for i in range(97, 97+26)]
+    az = [chr(i) for i in range(97, 97 + 26)]
     for c in az:
         p = r"[" + c + r"][a-z][" + c + "]"
         mt = first_match_of_pattern(s, p)
@@ -45,5 +45,6 @@ def _main():
 
 def __starting_point():
     _main()
+
 
 __starting_point()

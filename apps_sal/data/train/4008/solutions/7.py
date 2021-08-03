@@ -1,5 +1,5 @@
 def string_to_int_list(s):
-    def isint(j):    
+    def isint(j):
         try:
             int(j)
             return True

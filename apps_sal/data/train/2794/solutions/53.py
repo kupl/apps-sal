@@ -7,7 +7,5 @@ def calculate_age(year_of_birth, current_year):
         return "You are " + str(current_year - year_of_birth) + " years old."
     elif year_of_birth - current_year > 0:
         return "You will be born in " + str(year_of_birth - current_year) + " years."
-    elif year_of_birth == current_year: 
+    elif year_of_birth == current_year:
         return "You were born this very year!"
-  
-

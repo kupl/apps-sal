@@ -11,10 +11,8 @@ class Solution:
         for i, n in enumerate(arr):
             left, right = length[n - 1], length[n + 1]
             if left == m or right == m:
-                #update res for each time satisfying conditiong. so return the latest one.
+                # update res for each time satisfying conditiong. so return the latest one.
                 res = i
             # update edge. [0111010], change middle 0 t0 1. left = 3, right = 1.total length = 3 + 1 + 1 = 5. edge, length[1] = 5, length[6] = 5
             length[n - left] = length[n + right] = left + right + 1
         return res
-            
-

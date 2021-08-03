@@ -53,4 +53,3 @@ for n in map(int, input().split()):
     result.append("%s" % answer(n))
 
 print(" ".join(result))
-

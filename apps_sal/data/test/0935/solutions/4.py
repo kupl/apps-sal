@@ -4,4 +4,3 @@ if x & 1:
     print('Akshat')
 else:
     print('Malvika')
-

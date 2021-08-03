@@ -5,10 +5,10 @@ input = sys.stdin.readline
 
 def main():
     n, m, q = map(int, input().split())
-    counts = np.zeros((n+1, n+1), dtype=np.int32)
+    counts = np.zeros((n + 1, n + 1), dtype=np.int32)
     for _ in range(m):
         from_, to = map(int, input().split())
-        counts[:from_+1, to] += 1
+        counts[:from_ + 1, to] += 1
 
     counts = np.cumsum(counts, axis=1)
 
@@ -21,5 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

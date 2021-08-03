@@ -6,5 +6,5 @@ def difference_in_ages(ages):
             smallest = age
         if(largest < age):
             largest = age
-    
-    return smallest, largest, largest-smallest
+
+    return smallest, largest, largest - smallest

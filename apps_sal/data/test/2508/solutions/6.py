@@ -50,4 +50,3 @@ while que:
 
 ans = minDist[tx][ty]
 print((ans if ans < INF else -1))
-

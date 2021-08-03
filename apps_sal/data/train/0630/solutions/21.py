@@ -1,6 +1,7 @@
 # cook your dish here
 dt, a = None, None
 
+
 def dfs(z):
     r = [{}, {}]
 
@@ -34,6 +35,7 @@ def dfs(z):
                 r[0][m0 | m1] = min(r[0][m0 | m1], l0[1][m0] + l1[1][m1]) if m0 | m1 in r[0] else l0[1][m0] + l1[1][m1]
 
     return r
+
 
 t = int(input())
 for i in range(t):

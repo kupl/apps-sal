@@ -4,4 +4,3 @@ if turns % 2 == 0:
     print("NO")
 else:
     print("YES")
-

@@ -2,6 +2,7 @@ import sys
 from math import sqrt, floor
 from collections import Counter
 
+
 def factorize(n):
     limit = floor(sqrt(n))
     factor = Counter()
@@ -20,6 +21,7 @@ def factorize(n):
 
     return factor
 
+
 def make_divisors(n):
     result = [1]
 
@@ -27,6 +29,7 @@ def make_divisors(n):
         result = [x * p**i for i in range(e + 1) for x in result]
 
     return sorted(result)
+
 
 n, k = map(int, input().split())
 

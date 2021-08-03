@@ -8,12 +8,11 @@ class Solution:
         mxProfitRotate = 0
         while rotate < ln or folks > 0:
             folks += customers[rotate] if rotate < ln else 0
-            profit += min(folks, 4)*boardingCost - runningCost
+            profit += min(folks, 4) * boardingCost - runningCost
             folks -= min(folks, 4)
             if profit > mxProfit:
                 mxProfit = profit
                 mxProfitRotate = rotate + 1
             rotate += 1
-            
-            
+
         return -1 if mxProfit < 0 else mxProfitRotate

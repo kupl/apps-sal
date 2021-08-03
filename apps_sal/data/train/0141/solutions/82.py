@@ -10,4 +10,3 @@ class Solution:
             left += 1
             boats += 1
         return boats
-

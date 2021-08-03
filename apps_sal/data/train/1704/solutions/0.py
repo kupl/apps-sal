@@ -10,6 +10,6 @@ class PokerHand(object):
         self.score = (2 * sum(values.count(card) for card in values)
                       + 13 * is_straight + 15 * is_flush,
                       [self.CARD.index(card) for card in values[::-1]])
-        
+
     def compare_with(self, other):
         return self.RESULT[(self.score > other.score) - (self.score < other.score) + 1]

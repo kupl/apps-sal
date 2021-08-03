@@ -3,8 +3,8 @@ s = []
 k = 0
 ans = []
 for i in range(n):
-    l, r= map(int,input().split())
-    s.append((l ,r))
+    l, r = map(int, input().split())
+    s.append((l, r))
 for i in range(1, m + 1):
     flag = True
     for j in range(n):

@@ -19,6 +19,3 @@ for i in range(n):
     if dic[st[0]] > maxim:
         maxim = dic[st[0]]
 print(maxim)
-
-
-

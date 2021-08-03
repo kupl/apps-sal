@@ -20,4 +20,4 @@ for i in range(1, n + 1):
         dp2[i] = min(dp2[i], dp2[f] + 1)
         l = max(l, i - f)
         f -= 1
-print(dp[n], l, dp2[n], sep = '\n')
+print(dp[n], l, dp2[n], sep='\n')

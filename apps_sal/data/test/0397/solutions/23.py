@@ -1,19 +1,25 @@
 import sys
 
+
 def input():
     return sys.stdin.readline().strip()
+
 
 def dinput():
     return int(input())
 
+
 def tinput():
     return input().split()
+
 
 def rinput():
     return map(int, tinput())
 
+
 def rt(x1, x2, y3):
     print(0.5 * (x2 + x1) * y3)
+
 
 def main():
     n, k = rinput()
@@ -29,4 +35,6 @@ def main():
         i += t + 1
         c -= 1
     print(c)
+
+
 main()

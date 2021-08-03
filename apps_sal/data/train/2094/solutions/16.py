@@ -12,5 +12,3 @@ for w in S:
 
 foo = ['1' for _ in range(num_ones)] + ['0' for _ in range(num_zeros)]
 print(" ".join(foo))
-
-

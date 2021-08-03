@@ -4,13 +4,15 @@ import sys
 # sys.stdin = open('data/B.in', 'r')
 T = 1
 
+
 def process():
     N, M = list(map(int, input().split()))
     f = list(map(int, input().split()))
     b = list(map(int, input().split()))
 
     fc = {}
-    for idx, fv in enumerate(f): fc[fv] = (1, idx) if not fc.get(fv) else (fc[fv][0] + 1, idx)
+    for idx, fv in enumerate(f):
+        fc[fv] = (1, idx) if not fc.get(fv) else (fc[fv][0] + 1, idx)
 
     a = []
     failed = False
@@ -33,11 +35,5 @@ def process():
         print(' '.join(map(str, a)))
 
 
-
-
-
-
-
 for _ in range(T):
     process()
-

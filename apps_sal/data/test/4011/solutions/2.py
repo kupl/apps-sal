@@ -34,4 +34,5 @@ class Main:
 def __starting_point():
     Main().solve()
 
+
 __starting_point()

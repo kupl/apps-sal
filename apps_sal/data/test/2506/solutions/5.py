@@ -33,4 +33,3 @@ total, num = calc(left)
 ans = total
 ans -= (num - M) * left
 print(ans)
-

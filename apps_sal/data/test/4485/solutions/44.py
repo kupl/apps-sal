@@ -28,4 +28,5 @@ def __starting_point():
     inputs = read()
     print((solve(*inputs)))
 
+
 __starting_point()

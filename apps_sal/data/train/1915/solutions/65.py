@@ -1,6 +1,6 @@
 class Solution:
     def movesToStamp(self, stamp, target):
-        ns = len(stamp)        
+        ns = len(stamp)
         stamp_patterns = []
         for window_size in range(1, ns + 1):
             for i in range(ns - window_size + 1):
@@ -19,5 +19,5 @@ class Solution:
                     res.append(inx)
             if old_target == target:
                 return []
-        
+
         return res[::-1]

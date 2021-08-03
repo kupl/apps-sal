@@ -27,4 +27,3 @@ for i in range(2**m - 1, -1, -1):
     A.append(i)
 
 print((*A))
-

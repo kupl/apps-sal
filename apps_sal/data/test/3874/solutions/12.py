@@ -2,7 +2,7 @@ n, m = [int(x) for x in input().split()]
 slova = []
 for i in range(n):
     slova.append(input())
-na_zmazanie = [int(x)-1 for x in input().split()]
+na_zmazanie = [int(x) - 1 for x in input().split()]
 
 dlzka_zmazanych = len(slova[na_zmazanie[0]])
 for i in na_zmazanie:
@@ -13,7 +13,7 @@ for i in na_zmazanie:
 zmaz = [False] * n
 for i in na_zmazanie:
     zmaz[i] = True
-matchujuce_nie_na_zmazanie = [i for i in range(n) if zmaz[i] == False and len(slova[i]) == dlzka_zmazanych] 
+matchujuce_nie_na_zmazanie = [i for i in range(n) if zmaz[i] == False and len(slova[i]) == dlzka_zmazanych]
 
 pattern = ""
 for i in range(0, dlzka_zmazanych):
@@ -26,7 +26,7 @@ for i in range(0, dlzka_zmazanych):
         pattern += znak_prveho
         nove_matchujuce = []
         for y in matchujuce_nie_na_zmazanie:
-            if slova[y][i] == znak_prveho: 
+            if slova[y][i] == znak_prveho:
                 nove_matchujuce.append(y)
         matchujuce_nie_na_zmazanie = nove_matchujuce
 
@@ -35,4 +35,3 @@ if len(matchujuce_nie_na_zmazanie) == 0:
     print(pattern)
 else:
     print("No")
-

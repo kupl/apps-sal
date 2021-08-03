@@ -9,5 +9,5 @@ def isTree(matrix):
                     if not traverse(to_node, next_node):
                         return False
             return True
-        
+
     return traverse(None, 0) and all(seen)

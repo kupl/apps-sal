@@ -11,4 +11,3 @@ class Solution:
                 flips.popleft()
 
         return result if len(flips) == 0 else -1
-

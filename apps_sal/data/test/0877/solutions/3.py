@@ -38,6 +38,4 @@ else:
                 if i > max_div2 and i < min_div1:
                     ans += 1
 
-
     print(ans)
-

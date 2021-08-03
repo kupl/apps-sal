@@ -2,6 +2,7 @@ import sys
 
 inf = 1 << 30
 
+
 def solve():
     def check(mid):
         tot = 1
@@ -51,6 +52,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

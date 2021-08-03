@@ -1,6 +1,7 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         MOD = 7 + 1e9
+
         @lru_cache(maxsize=None)
         def helper(idx, roll, turn):
             if roll > rollMax[idx]:

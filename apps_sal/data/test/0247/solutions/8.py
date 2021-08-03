@@ -66,4 +66,3 @@ if len(set(v_s_)) >= 2:
     return
 
 print('YES')
-

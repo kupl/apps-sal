@@ -1,1 +1,1 @@
-number_format='{:,}'.format
+number_format = '{:,}'.format

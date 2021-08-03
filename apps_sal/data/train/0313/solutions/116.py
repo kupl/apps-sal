@@ -14,18 +14,17 @@ class Solution:
                     conse_day = 0
             print(bouquets_count)
             return bouquets_count
-        
+
         if len(bloomDay) < m * k:
             return -1
-        
+
         left = min(bloomDay)
         right = max(bloomDay)
-        
+
         while left < right:
-            mid = left + ( right - left)//2
+            mid = left + (right - left) // 2
             if bouquets_possible(mid) < m:
                 left = mid + 1
             else:
                 right = mid
         return left
-

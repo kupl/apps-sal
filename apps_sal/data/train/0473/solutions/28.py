@@ -1,9 +1,9 @@
 class Solution:
     def countTriplets(self, arr: List[int]) -> int:
         res = 0
-        
+
         dp = [[0 for i in range(len(arr))] for j in range(len(arr))]
-        
+
         for i in range(len(arr)):
             for j in range(i, len(arr)):
                 a = 0

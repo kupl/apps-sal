@@ -12,4 +12,3 @@ for user in reversed(messages):
         users_set.add(user)
 
 print('\n'.join(order))
-

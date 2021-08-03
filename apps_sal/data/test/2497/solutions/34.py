@@ -72,4 +72,3 @@ for option in options:
         ans = min(ans, diff_xy(option))
 
 print(ans)
-

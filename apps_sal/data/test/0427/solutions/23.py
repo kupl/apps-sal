@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 c1, c2, x, y = R()
 l, r = c1 + c2, 2 * 10**9 + 7
 while l < r:

@@ -15,4 +15,4 @@ class Solution:
                 i += 1
             if len(window) == 1 or c[sorted(window, key=window.get)[1]] > 0:
                 ans = max(ans, j - i + 1)
-        return ans       
+        return ans

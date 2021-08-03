@@ -1,5 +1,5 @@
-a=input()
+a = input()
 if '9' in a:
-  print('Yes')
+    print('Yes')
 else:
-   print('No')
+    print('No')

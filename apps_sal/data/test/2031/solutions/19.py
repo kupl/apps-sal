@@ -8,4 +8,3 @@ m = int(input())
 for _ in range(m):
     x, y = list(map(int, input().split()))
     print(a[x][y - 1][1])
-

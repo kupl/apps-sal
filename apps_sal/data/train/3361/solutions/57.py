@@ -4,4 +4,3 @@ def sum_of_minimums(numbers):
         x = min(el)
         here.append(x)
     return sum(here)
-

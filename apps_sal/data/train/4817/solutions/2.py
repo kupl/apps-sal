@@ -1,1 +1,1 @@
-spread=apply
+spread = apply

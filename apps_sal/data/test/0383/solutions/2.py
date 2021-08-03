@@ -15,6 +15,6 @@ def count(n, k):
 
     return m[n]
 
+
 n, k, d = tuple(map(int, str.split(input())))
 print((count(n, k) - count(n, d - 1)) % (10 ** 9 + 7))
-

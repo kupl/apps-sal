@@ -7,4 +7,4 @@ class Solution:
             for y in range(n):
                 tmp[y] = min(dp[py] for py in range(n) if y != py) + A[x][y]
             dp, tmp = tmp, dp
-        return min(dp)  
+        return min(dp)

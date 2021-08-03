@@ -3,25 +3,24 @@ class Solution:
         columns = defaultdict(list)
         lastx = {}
         ans = sys.maxsize
-        
+
         for x, y in points:
             columns[x].append(y)
-        
+
         for x in sorted(columns):
             y_list = columns[x]
             y_list.sort()
             for i, y1 in enumerate(y_list):
                 for j in range(i):
                     y2 = y_list[j]
-                    
+
                     if (y1, y2) in lastx:
-                        ans = min(ans, (x - lastx[(y1,y2)]) * (y1-y2))
-                    
-                    lastx[(y1,y2)] = x
-        
+                        ans = min(ans, (x - lastx[(y1, y2)]) * (y1 - y2))
+
+                    lastx[(y1, y2)] = x
+
         return ans if ans < sys.maxsize else 0
-        
-        
+
         '''
         seen = set()
         ans = sys.maxsize
@@ -36,4 +35,3 @@ class Solution:
         
         return ans if ans < sys.maxsize else 0
         '''
-

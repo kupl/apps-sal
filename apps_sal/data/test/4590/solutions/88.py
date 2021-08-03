@@ -17,7 +17,7 @@ A = [0] + [int(x) for x in input().split()]
 B = [0] + [int(x) for x in input().split()]
 
 s_b = 0
-for i in range(M+1):
+for i in range(M + 1):
     s_b += B[i]
     if s_b > K:
         s_b -= B[i]
@@ -26,15 +26,15 @@ for i in range(M+1):
 else:
     best = M
 res = best
-#print(res)
+# print(res)
 s_a = 0
-for i in range(N+1):
+for i in range(N + 1):
    # print("i", i)
     s_a += A[i]
     if s_a > K:
         break
-    for j in reversed(range(best+1)):
-        #print("j",j)
+    for j in reversed(range(best + 1)):
+        # print("j",j)
         if s_b <= K - s_a:
             if i + j > res:
                 res = i + j
@@ -43,5 +43,5 @@ for i in range(N+1):
             break
         else:
             s_b -= B[j]
-        
+
 print(res)

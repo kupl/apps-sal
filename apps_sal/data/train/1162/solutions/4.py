@@ -4,10 +4,9 @@
 t = int(input())
 for t1 in range(t):
     n = int(input())
-    while n%7:
+    while n % 7:
         n -= 4
-    if n<0:
+    if n < 0:
         print(-1)
     else:
         print(n)
-

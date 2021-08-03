@@ -2,18 +2,19 @@
 # encoding:utf-8
 import copy
 import random
-import bisect #bisect_left　これで二部探索の大小検索が行える
-import fractions #最小公倍数などはこっち
+import bisect  # bisect_left　これで二部探索の大小検索が行える
+import fractions  # 最小公倍数などはこっち
 import math
 import sys
 import collections
-from decimal import Decimal # 10進数で考慮できる
+from decimal import Decimal  # 10進数で考慮できる
 
-mod = 10**9+7
-sys.setrecursionlimit(mod) # 再帰回数上限はでdefault1000
+mod = 10**9 + 7
+sys.setrecursionlimit(mod)  # 再帰回数上限はでdefault1000
 
 d = collections.deque()
 def LI(): return list(map(int, sys.stdin.readline().split()))
+
 
 N = int(input())
 weights = {}
@@ -25,8 +26,8 @@ for i in range(N - 1):
     b -= 1
     roots[a].append(b)
     roots[b].append(a)
-    weights[(a,b)] = c
-    weights[(b,a)] = c
+    weights[(a, b)] = c
+    weights[(b, a)] = c
 
 Q, K = LI()
 K -= 1
@@ -47,7 +48,7 @@ queue = collections.deque()
 queue.append(K)
 visited[K] = 0
 
-while len(queue)> 0:
+while len(queue) > 0:
     node = queue.popleft()
     cnt = visited[node]
     for n_node in roots[node]:
@@ -57,4 +58,3 @@ while len(queue)> 0:
 
 for x, y in xy:
     print((visited[x] + visited[y]))
-

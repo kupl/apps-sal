@@ -1,7 +1,7 @@
 s = input().split()
 a = int(s[0])
 b = int(s[1])
-if a==b:
-	print(a)
+if a == b:
+    print(a)
 else:
-	print(1)
+    print(1)

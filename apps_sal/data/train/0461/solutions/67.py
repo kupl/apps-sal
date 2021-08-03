@@ -4,6 +4,7 @@ def inform(head, subs, informTime) -> int:
         return 0
     return informTime[head] + max(inform(sub, subs, informTime) for sub in subordinates)
 
+
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         subs = [[] for _ in range(n)]

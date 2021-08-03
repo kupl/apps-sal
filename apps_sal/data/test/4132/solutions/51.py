@@ -11,4 +11,3 @@ def lgcd(l):
 
 n = int(input())
 print((lgcd(list(map(int, input().split())))))
-

@@ -10,10 +10,10 @@ class Solution:
             else:
                 if n < 0:
                     curr = 1 - curr
-            
-                if curr == 0:    
+
+                if curr == 0:
                     ret = max(ret, i - pos)
-                
+
                 if curr == 1:
                     if neg is not None:
                         ret = max(ret, i - neg)

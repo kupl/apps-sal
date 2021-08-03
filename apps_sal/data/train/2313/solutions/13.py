@@ -16,7 +16,7 @@ def CF319C():
     hull = [0] * N  # Make hull considering total minimum cost and charge of individual trees
 
     left = 0
-    right = 1 # Index of items in hull
+    right = 1  # Index of items in hull
     for i in range(1, N):
         # Find the last cut tree which incurs minimum cost for ith tree
         while left + 1 < right and dot(i, hull[left], a, b, cost) >= dot(i, hull[left + 1], a, b, cost):
@@ -37,4 +37,6 @@ def CF319C():
 def __starting_point():
     res = CF319C()
     print(res)
+
+
 __starting_point()

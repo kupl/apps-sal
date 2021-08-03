@@ -3,20 +3,22 @@
 
 import time
 
+
 def func(y):
-    if (y % 400 == 0 ) or ((y % 4 == 0) and (y%100 != 0)) :
+    if (y % 400 == 0) or ((y % 4 == 0) and (y % 100 != 0)):
         return 2
     return 1
 
-y   = int(input())
+
+y = int(input())
 
 start = time.time()
 
 sum = 0
 now = func(y)
-f   = 0
+f = 0
 
-while ((sum %7 != 0) or (now != f)):
+while ((sum % 7 != 0) or (now != f)):
     y = y + 1
     f = func(y)
     sum = sum + f
@@ -24,4 +26,3 @@ while ((sum %7 != 0) or (now != f)):
 print(y)
 finish = time.time()
 #print(finish - start)
-

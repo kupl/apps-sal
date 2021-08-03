@@ -1,3 +1,6 @@
+import random
+
+
 class Node(object):
     def __init__(self, val):
         self.val = val
@@ -5,7 +8,7 @@ class Node(object):
         self.right = None
         self.down = None
 
-import random
+
 class Skiplist:
 
     def __init__(self):
@@ -33,7 +36,7 @@ class Skiplist:
             else:
                 p = p.down
         return False
-            
+
     def add(self, num: int) -> None:
         p = self.root
         path = []
@@ -83,4 +86,3 @@ class Skiplist:
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

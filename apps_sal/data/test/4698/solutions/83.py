@@ -14,4 +14,3 @@ for i in range(M):
         else:
             sum_num += T[j]
     print(sum_num)
-

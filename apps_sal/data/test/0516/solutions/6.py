@@ -20,4 +20,3 @@ for j in range(sl):
 print(sl - best)
 for i in mask:
     print(i, end=' ')
-

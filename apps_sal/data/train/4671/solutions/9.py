@@ -4,10 +4,11 @@ def s(m, b, e, v):
         return v
     for i in range(len(m[b])):
         if m[b][i] != e:
-            v = s(m,m[b][i],b,v)
+            v = s(m, m[b][i], b, v)
     return v
 
+
 def isTree(m):
-    v = [0]*len(m)
+    v = [0] * len(m)
     v = s(m, 0, -1, v)
-    return v == [1]*len(v)
+    return v == [1] * len(v)

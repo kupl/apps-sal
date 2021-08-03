@@ -76,7 +76,7 @@ while q:
         else:
             rr = m
     ll -= 1
-    k -= cnt[cal(ll) - 1] + cal(ll) * (ll-10**(cal(ll)-1)+1)
+    k -= cnt[cal(ll) - 1] + cal(ll) * (ll - 10**(cal(ll) - 1) + 1)
 
     # print("-3-", k)
     c = rv(ll + 1)
@@ -84,4 +84,3 @@ while q:
     print(c[k])
 
     q -= 1
-

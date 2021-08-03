@@ -11,6 +11,7 @@ def __starting_point():
                     arr[j] = cnt
             cnt += 1
 
-    print(" ".join(map(str, arr[2:n+1])))
+    print(" ".join(map(str, arr[2:n + 1])))
+
 
 __starting_point()

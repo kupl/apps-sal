@@ -20,5 +20,3 @@ for r in row:
         else:
             print(r[0], end=' ')
     print()
-
-

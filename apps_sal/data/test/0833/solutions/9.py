@@ -1,7 +1,7 @@
-n, v = list(map(int,input().split()))
+n, v = list(map(int, input().split()))
 f = list()
 for i in range(n):
-    f.append(list(map(int,input().split())))
+    f.append(list(map(int, input().split())))
 f.sort()
 sum = 0
 today = 0
@@ -14,7 +14,7 @@ for tree in f:
         tomor = tree[1]
         sum += min(tomor, v)
         rest = v - min(tomor, v)
-        tomor -= min(tomor,v)
+        tomor -= min(tomor, v)
         day = tree[0]
     elif tree[0] == day + 1:
         sum += min(tomor, v)
@@ -25,7 +25,7 @@ for tree in f:
         rest -= t
         tomor -= t
         day = tree[0]
-    else :
+    else:
         tomor += tree[1]
         t = min(tomor, rest)
         sum += t
@@ -33,4 +33,3 @@ for tree in f:
         tomor -= t
 sum += min(tomor, v)
 print(sum)
-

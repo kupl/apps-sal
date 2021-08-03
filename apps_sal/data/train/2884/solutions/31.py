@@ -7,5 +7,3 @@ def stringify(node):
         #a = node_data + ' -> '
         #a += stringify(node.next)
         return node_data + ' -> ' + stringify(node.__next__)
-        
-

@@ -19,5 +19,3 @@ class Solution:
                     heapq.heappush(hp, (-tmp, nei))
                     seen[nei] = tmp
         return 0
-                    
-

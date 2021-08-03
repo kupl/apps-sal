@@ -1,5 +1,6 @@
 import re
 
+
 def increment_string(strng):
     pattern = re.compile(r'[0-9]+')
     match = re.findall(pattern, strng)

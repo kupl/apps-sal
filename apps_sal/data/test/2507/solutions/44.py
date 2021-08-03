@@ -9,8 +9,10 @@ F = np.array(F, np.int64)
 
 Asum = sum(A)
 
+
 def test(X):
-    return (Asum - np.minimum(A, X//F).sum() <= K)
+    return (Asum - np.minimum(A, X // F).sum() <= K)
+
 
 l = -1
 r = 10**12
@@ -24,4 +26,3 @@ while (l + 1 < r):
 
 ans = r
 print(ans)
-

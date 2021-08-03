@@ -18,4 +18,3 @@ for i in range(1, n):
         stack[index] = a[i]
 
 print((len(stack)))
-

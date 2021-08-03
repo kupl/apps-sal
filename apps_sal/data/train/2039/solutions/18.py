@@ -42,7 +42,6 @@ def solve(N, M, A):
     return lo
 
 
-
 N, M = map(int, input().split())
 A = [int(x) for x in input().split()]
 print(solve(N, M, A))

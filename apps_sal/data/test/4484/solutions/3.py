@@ -23,4 +23,3 @@ else:
     Sum *= 2
     Sum %= mod
     print(Sum)
-

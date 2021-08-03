@@ -27,4 +27,3 @@ res = " "
 for i in solved:
     res += str(i) + " "
 print(res.strip())
-

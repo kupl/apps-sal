@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def points(dice):
     cnt = Counter(dice)
     val = set(cnt.values())

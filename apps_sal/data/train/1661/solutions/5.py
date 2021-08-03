@@ -293,4 +293,3 @@ def execute(code: str) -> str:
     Executor(grid).do_actions(expand_code(BufferedIterator(iter(code))))
 
     return grid.serialize()
-

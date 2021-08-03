@@ -14,4 +14,3 @@ class TestSumMix(unittest.TestCase):
 
     def test_sum_mix_with_elements_are_integers_or_string(self):
         self.assertEqual(sum_mix(["1", 2, "3", 4, "5"]), 15)
-

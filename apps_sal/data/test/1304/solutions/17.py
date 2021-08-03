@@ -29,9 +29,7 @@ if not isset:
                         field[x][y][i][j] = '!'
 for i in range(3):
     for j in range(3):
-        for k in range(3): 
+        for k in range(3):
             print(*field[i][k][j], sep='', end=' ')
         print()
     print()
-
-

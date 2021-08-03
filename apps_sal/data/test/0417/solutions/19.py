@@ -31,7 +31,7 @@ for k in range(n + 1):
         min_memo[k] = min_acc - offset
         max_memo[k] = max_acc - offset
         ans += max_acc - min_acc + 1
-      
+
         continue
 
     kk = k % back_k
@@ -49,7 +49,5 @@ for k in range(n + 1):
         min_memo[kk] = min(min_acc, back_min) - offset
         max_memo[kk] = max(max_acc, back_max) - offset
 
-    
 
 print(ans)
-

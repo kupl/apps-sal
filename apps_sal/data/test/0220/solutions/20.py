@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 s, x = R()
 if s < x or (s - x) & 1:
     print(0)

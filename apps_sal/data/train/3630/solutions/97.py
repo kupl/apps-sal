@@ -1,15 +1,15 @@
 def arithmetic(a, b, operator):
-    if operator == 'add' :
-       result = a + b
+    if operator == 'add':
+        result = a + b
     elif operator == 'subtract':
         result = a - b
     elif operator == 'multiply':
         result = a * b
     elif operator == 'divide':
         result = a / b
-    
+
     return result
+
 
 result = arithmetic(5, 2, "divide")
 print(result)
-

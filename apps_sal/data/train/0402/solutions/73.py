@@ -18,4 +18,3 @@ class Solution:
             return False
 
         return bfs(source, target) and bfs(target, source)
-

@@ -22,4 +22,3 @@ for h in mxH:
             print(ans)
             return
 print(ans)
-

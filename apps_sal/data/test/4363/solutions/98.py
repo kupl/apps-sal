@@ -6,4 +6,3 @@ for x in range(k + 1):
             counter += 1
 
 print(counter)
-

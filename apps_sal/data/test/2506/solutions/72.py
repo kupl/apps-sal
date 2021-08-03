@@ -1,10 +1,14 @@
 import bisect
+
+
 def judge(k, N, A):
     t = 0
     for i in A:
         j = bisect.bisect_left(A, k - i)
         t += N - j
     return t
+
+
 def main():
     N, M = list(map(int, input().split()))
     A = list(map(int, input().split()))
@@ -13,7 +17,7 @@ def main():
     b = 0
     X = None
     while t - b > 1:
-        m = (t + b)//2
+        m = (t + b) // 2
         i = judge(m, N, A)
         if i == M:
             X = m
@@ -50,5 +54,6 @@ def main():
             break
         r += A[i] * (N - j) + B[j]
     return r - (tot - M) * X
-print((main()))
 
+
+print((main()))

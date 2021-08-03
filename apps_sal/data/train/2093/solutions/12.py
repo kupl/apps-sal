@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 groups = []
 groupTail = []
 
@@ -28,4 +28,4 @@ for elem in a:
             groupTail[m] = elem
 
 for line in groups:
-    print(" ".join(map(str,line)))
+    print(" ".join(map(str, line)))

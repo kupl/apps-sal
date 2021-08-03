@@ -6,5 +6,4 @@ def isDigit(string):
             k = float(string)
         except:
             k = 'nope'
-    return True if type(k)==int or type(k)==float else False 
-
+    return True if type(k) == int or type(k) == float else False

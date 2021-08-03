@@ -9,9 +9,9 @@ class StreamChecker:
                     curr[c] = {}
                 curr = curr[c]
             curr[''] = None
-            
+
         self.cursor = []
-        
+
     def query(self, letter: str) -> bool:
         self.cursor = [x[letter] for x in self.cursor if letter in x]
         if letter in self.t:
@@ -25,4 +25,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

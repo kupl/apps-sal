@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 h, w = list(map(int, input().split()))
-f = [ input() for y in range(h) ]
+f = [input() for y in range(h)]
 ly = 0
 while 'B' not in f[ly]:
     ly += 1
@@ -16,4 +16,3 @@ while rx < w and 'B' == f[ly][rx]:
 y = (ly + ry) // 2
 x = (lx + rx) // 2
 print(y + 1, x + 1)
-

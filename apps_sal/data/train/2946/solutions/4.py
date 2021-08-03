@@ -1,1 +1,1 @@
-reverse_sentence = lambda s: ' '.join(x[::-1] for x in s.split())
+def reverse_sentence(s): return ' '.join(x[::-1] for x in s.split())

@@ -6,4 +6,3 @@ if len(a) == len(an):
     print("YES")
 else:
     print("NO")
-

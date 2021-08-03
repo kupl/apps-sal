@@ -1,9 +1,9 @@
-h,w = map(int, input().split())
+h, w = map(int, input().split())
 cell = []
 
 for i in range(h):
     row = list(input())
-    if row != ["."]*w:
+    if row != ["."] * w:
         cell.append(row)
 
 counter = []
@@ -14,7 +14,7 @@ for i in range(w):
             flag = 1
             break
     if flag == 1:
-            counter.append(i)
+        counter.append(i)
 
 for a in cell:
     ans = ''

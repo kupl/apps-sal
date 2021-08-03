@@ -3,6 +3,7 @@
 # 成約により、w1以上は必ず前のjを見ることに注意するとテーブルのサイズがぐっと減ることに気がつくがこれを実装するのはなかなかめんどくさそう。
 # defaltdictを利用した再帰メモ化なら比較的実装可能では？
 
+from collections import defaultdict
 import sys
 sys.setrecursionlimit(1 << 25)
 read = sys.stdin.readline
@@ -29,7 +30,6 @@ def read_col(H, n_cols):
 N, W = read_ints()
 w, v = read_col(N, 2)
 
-from collections import defaultdict
 dp = defaultdict(lambda: -1)
 
 
@@ -47,4 +47,3 @@ def f(i, j):  # i番目を含んで考慮したとき重さjまでで達成で�
 
 
 print((f(N - 1, W)))
-

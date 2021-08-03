@@ -1,5 +1,5 @@
-def is_divisible(n,x,y):
-    #your code here
+def is_divisible(n, x, y):
+    # your code here
     num = int(n)
     numx = int(x)
     numy = int(y)

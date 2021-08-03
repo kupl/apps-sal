@@ -51,4 +51,5 @@ def __starting_point():
     ABs = [[int(i) for i in input().split()] for _ in range(N - 1)]
     solve(N, ABs)
 
+
 __starting_point()

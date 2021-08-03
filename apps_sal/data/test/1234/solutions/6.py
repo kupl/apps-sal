@@ -13,15 +13,14 @@ b = sorted([(a[i], i) for i in range(n)])
 ok = [0] * n
 ans = 0
 for x, i in b[-k * m:]:
-	ok[i] = 1
-	ans += x
+    ok[i] = 1
+    ans += x
 # print(ok)
 t = 0
 li = []
 for i in range(n):
-	t += ok[i]
-	if ok[i] and t % m == 0:
-		li += [i + 1]
+    t += ok[i]
+    if ok[i] and t % m == 0:
+        li += [i + 1]
 print(ans)
 print(*li[:-1])
-

@@ -29,4 +29,3 @@ for _ in range(M):
     X, Y, Z = list(map(int, input().split()))
     unite(parent, X - 1, Y - 1)
 print((len([x for x in parent if x < 0])))
-

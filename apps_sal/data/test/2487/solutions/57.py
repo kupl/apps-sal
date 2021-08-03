@@ -10,4 +10,3 @@ for i in range(N - 1):
     edges += u * (N - v + 1)
 
 print((nodes - edges))
-

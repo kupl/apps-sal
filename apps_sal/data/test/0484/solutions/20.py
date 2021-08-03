@@ -14,15 +14,15 @@ for i in range(n):
         continue
 
     cur = [s[i][0], s[i][1]]
-    
+
     for orientation in range(2):
         cur[0], cur[1] = cur[1], cur[0]
         rest = [(a - cur[0], b), (a, b - cur[1])]
-        
+
         if cur[0] <= a and cur[1] <= b:
             for j in range(i + 1, n):
                 cur2 = [s[j][0], s[j][1]]
-                
+
                 for orientation2 in range(2):
                     cur2[0], cur2[1] = cur2[1], cur2[0]
                     for pair in rest:

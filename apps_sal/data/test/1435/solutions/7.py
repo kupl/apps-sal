@@ -25,4 +25,3 @@ for i in range(1, len(a)):
 ans *= run[lst]
 
 print(ans)
-

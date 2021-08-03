@@ -12,5 +12,4 @@ for i in range(n):
 if not f:
     print((0))
 else:
-    print((s-res))
-
+    print((s - res))

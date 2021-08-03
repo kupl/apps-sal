@@ -1,4 +1,4 @@
-N, K=list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 S = str(input())
 
 # count sequence man and memo the cnt in group
@@ -38,12 +38,6 @@ for i in range(1, len(man_groups)):
         end_pos = next_end_pos
     sum_list.append(last_max)
 
-#print(sum_list)
-#print(sum_list)
+# print(sum_list)
+# print(sum_list)
 print((max(sum_list)))
-
-
-
-
-
-

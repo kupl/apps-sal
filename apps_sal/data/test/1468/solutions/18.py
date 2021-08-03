@@ -13,5 +13,5 @@ while b > -1:
     if array[b + 1] >= array[b]:
         b = b - 1
     else:
-        array[b] = cut_to_lexicographic(array[b], array[b+1])
+        array[b] = cut_to_lexicographic(array[b], array[b + 1])
 print("\n".join(array))

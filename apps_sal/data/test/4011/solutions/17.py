@@ -9,7 +9,7 @@ r = ""
 flag = -1
 for c in a:
 
-    k = f[int(c)-1]
+    k = f[int(c) - 1]
     if flag == -1:
         if k > int(c):
             flag = 0
@@ -27,4 +27,3 @@ for c in a:
         r += c
 
 print(r)
-

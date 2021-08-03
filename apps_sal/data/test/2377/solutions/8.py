@@ -24,4 +24,4 @@ h -= atack * max_A
 if h <= 0:
     print(cnt)
 else:
-    print(cnt+1)
+    print(cnt + 1)

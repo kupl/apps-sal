@@ -9,4 +9,3 @@ for i in range(q):
         if n % 2 == 1:
             ans -= 1
         print(ans)
-

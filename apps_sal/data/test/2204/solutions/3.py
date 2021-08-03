@@ -8,13 +8,13 @@ for _ in range(t):
     for i in range(m):
         a, b = list(map(int, input().split()))
         flowers.append((a, b))
-    
+
     flowers.sort()
     flowers_b = []
     for i in range(m):
         flowers_a.append(flowers[i][0])
         flowers_b.append(flowers[i][1])
-    
+
     val = 0
     prefix_sum = [0]
     for x in flowers_a:
@@ -33,12 +33,10 @@ for _ in range(t):
                 temp += flowers_b[i] * remaining
             else:
                 temp += flowers_a[i] + flowers_b[i] * (remaining - 1)
-            
+
             val = max(val, temp)
-                
 
     print(val)
-    
+
     if _ != t - 1:
         blank_line = input()
-

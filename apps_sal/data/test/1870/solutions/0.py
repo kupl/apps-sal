@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, c = read()
 t = list(read())
 cnt = 1
@@ -8,4 +10,3 @@ for i in range(1, n):
     else:
         cnt += 1
 print(cnt)
-

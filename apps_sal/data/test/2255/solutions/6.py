@@ -1,5 +1,6 @@
 import queue
 
+
 def __starting_point():
     n, m = list(map(int, input().split()))
     g = [set() for _ in range(n)]
@@ -25,5 +26,6 @@ def __starting_point():
             q.put(nxt)
 
     print(" ".join(list([str(x + 1) for x in sq])))
+
 
 __starting_point()

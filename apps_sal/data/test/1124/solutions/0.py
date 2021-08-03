@@ -16,4 +16,3 @@ for i in A:
 ans = min(ans, math.gcd(Amin, ans))
 
 print(ans)
-

@@ -34,4 +34,3 @@ if ans == None:
     print(-1)
 else:
     print(ans)
-

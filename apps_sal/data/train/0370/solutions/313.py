@@ -1,9 +1,8 @@
 class Solution:
-    
-    
-            
+
     def largestComponentSize(self, A: List[int]) -> int:
         p = {}
+
         def find(i):
             if i not in p:
                 p[i] = i
@@ -24,7 +23,7 @@ class Solution:
                         p[pa] = p[pi]
 
                     pa2 = find(a)
-                    pi2 = find(a//i)
+                    pi2 = find(a // i)
 
                     if pa2 in p and pi2 in p:
                         p[pa2] = p[pi2]
@@ -40,5 +39,3 @@ class Solution:
             ans[v] += 1
 
         return max(list(ans.values()))
-
-

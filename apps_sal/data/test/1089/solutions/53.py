@@ -41,18 +41,18 @@ class ModInt:
 
 
 def comb(n, k):
-    return fact[n] * inv[n-k] * inv[k]
+    return fact[n] * inv[n - k] * inv[k]
 
 
 fact = [None] * (MAX + 1)
 fact[0] = ModInt(1)
 for i in range(1, MAX + 1):
-    fact[i] = fact[i-1] * ModInt(i)
+    fact[i] = fact[i - 1] * ModInt(i)
 
 inv = [None] * (MAX + 1)
 inv[MAX] = fact[MAX].pow(mod - 2)
 for i in range(MAX, 0, -1):
-    inv[i-1] = inv[i] * ModInt(i)
+    inv[i - 1] = inv[i] * ModInt(i)
 
 ans = ModInt(0)
 for i in range(n):
@@ -65,4 +65,3 @@ for i in range(n):
 
 ans *= comb(n * m - 2, k - 2)
 print(ans)
-

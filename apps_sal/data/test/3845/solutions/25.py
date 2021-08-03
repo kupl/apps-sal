@@ -1,6 +1,6 @@
 def main():
     A, B = (int(i) for i in input().split())
-    grid = [["#" if i < 50 else "."]*100 for i in range(100)]
+    grid = [["#" if i < 50 else "."] * 100 for i in range(100)]
 
     for h in range(49):
         if h % 2 == 1:
@@ -27,5 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -10,7 +10,7 @@ class Solution:
             if i < n:
                 rem += a[i]
                 # print(f'{rem = }')
-            boarding = min(rem, cap)                
+            boarding = min(rem, cap)
             # print(f'{boarding = }')
             rem = max(0, rem - cap)
             profit += boarding * boardingCost - runningCost
@@ -18,13 +18,12 @@ class Solution:
             # print(f'{rem = }')
             # print(f'{profits = }')
             i += 1
-            
+
         argmax = -1
         mx = -float('inf')
         for i, x in enumerate(profits):
             if x > mx:
                 mx = x
                 argmax = i
-                
-        return argmax + 1 if profits[argmax] > 0 else -1
 
+        return argmax + 1 if profits[argmax] > 0 else -1

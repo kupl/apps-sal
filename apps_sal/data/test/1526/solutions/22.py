@@ -5,7 +5,7 @@ lis.sort(reverse=True)
 maxi = lis[0]
 mid = lis[1]
 mini = lis[2]
-cnt = 0 
+cnt = 0
 
 
 while maxi > mid:
@@ -14,7 +14,7 @@ while maxi > mid:
     mid += 1
 
 if (maxi - mini) % 2 == 0:
-    cnt += (maxi-mini) // 2
+    cnt += (maxi - mini) // 2
 else:
     cnt += (maxi - mini + 1) // 2 + 1
 

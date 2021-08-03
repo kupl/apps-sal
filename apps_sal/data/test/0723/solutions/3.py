@@ -3,7 +3,7 @@ d = []
 for i in range(n):
     w, h = list(map(int, input().rstrip().split()))
     d.append([w, h])
-s = '.'    
+s = '.'
 for i in range(len(d)):
     h = d[i][0]
     w = d[i][1]
@@ -36,6 +36,5 @@ for i in range(len(d)):
                 f = 0
     if not f == 0:
         if s == '.' or h * w < s:
-            s = h * w            
-print(s)                
-
+            s = h * w
+print(s)

@@ -1,11 +1,13 @@
 from collections import defaultdict
 
+
 def getdiff(l):
     diff = []
     for i in range(m):
         if l[i] != i + 1:
             diff.append(l[i])
     return diff
+
 
 n, m = list(map(int, input().split()))
 t = [list(map(int, input().split())) for i in range(n)]
@@ -34,4 +36,3 @@ for j in range(m):
             print('YES')
             return
 print('NO')
-

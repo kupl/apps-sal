@@ -1,5 +1,6 @@
 from itertools import product
 
+
 def operator_insertor(n):
     op = []
     k = []
@@ -11,8 +12,7 @@ def operator_insertor(n):
     l = []
     for e in s:
         g = ''.join(e)
-        if eval(g) == n: 
+        if eval(g) == n:
             l.append(len(g) - 9)
             print(g)
     return min(l) if l else None
-

@@ -4,12 +4,11 @@ def cube_odd(arr):
     try:
         for i in arr:
             if type(i) == bool:
-                return  None
+                return None
             else:
                 if i % 2 != 0:
                     result = i**3
                     arr1.append(result)
-        return sum(arr1)  
+        return sum(arr1)
     except TypeError:
         return None
-

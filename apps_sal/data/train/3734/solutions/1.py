@@ -1,5 +1,6 @@
 from random import randint
 
+
 def roll(desc, verbose=False):
     try:
         a, x, *d = desc.replace(' ', '').replace('-', '+-').replace('+', 'd').split('d')

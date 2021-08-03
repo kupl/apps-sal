@@ -9,5 +9,3 @@ class Solution:
                 else:
                     dp[i, d] = 2
         return max(dp.values())
-                
-

@@ -16,4 +16,3 @@ for _ in range(t):
     for ta in range(0, min(a, b // 2) + 1):
         mx = max(mx, 3 * ta + 3 * min(b - 2 * ta, c // 2))
     print(mx)
-

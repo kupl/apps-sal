@@ -2,9 +2,9 @@ def longest_palindrome(s):
     n = len(s)
     if n <= 1:
         return s
-    max, index = 0,  -1
+    max, index = 0, -1
     max2, index2 = 0, -1
-    d1 = [0]*n
+    d1 = [0] * n
     i, l, r = 0, 0, -1
     while i < n:
         if i > r:
@@ -21,7 +21,7 @@ def longest_palindrome(s):
             l, r = i - k, i + k
         i += 1
 
-    d2 = [0]*n
+    d2 = [0] * n
     i, l, r = 0, 0, -1
     while i < n:
         if i > r:
@@ -53,4 +53,3 @@ def longest_palindrome(s):
     else:
         start, ln = index2, max2
     return s[start: start + ln]
-

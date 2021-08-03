@@ -2,7 +2,7 @@
 
 # Python program to find sum of primes
 # in range from 1 to n.
-#code on gfg
+# code on gfg
 # Returns sum of primes in range from
 # 1 to n
 
@@ -38,9 +38,7 @@ def sumOfPrimes(n):
 
 # Driver code
 for _ in range(int(input())):
-    n=int(input())
-    ans=sumOfPrimes(n)
-    ans=str(ans)
+    n = int(input())
+    ans = sumOfPrimes(n)
+    ans = str(ans)
     print(ans[-1])
-
-

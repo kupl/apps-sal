@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     l, r = map(int, input().split())
 
@@ -10,6 +11,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

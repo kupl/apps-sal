@@ -1,6 +1,6 @@
 s = list(input())
 for i in s:
     if i == ',':
-        print(" ", end = '')
+        print(" ", end='')
     else:
-        print(i, end = '')
+        print(i, end='')

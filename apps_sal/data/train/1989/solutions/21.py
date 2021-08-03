@@ -19,5 +19,3 @@ class Solution:
                     res = max(res, j - i)
             first.setdefault(pj, j)
         return res
-    
-

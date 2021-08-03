@@ -17,4 +17,3 @@ for a, b, c, d in G:
     score += d * cond
 
 print((score.max()))
-

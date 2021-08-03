@@ -5,7 +5,7 @@ sys.setrecursionlimit(10**6)
 buff_readline = sys.stdin.readline
 readline = sys.stdin.readline
 
-INF = 2**62-1
+INF = 2**62 - 1
 
 
 def read_int():
@@ -64,7 +64,7 @@ class Mod:
         return ((a % self.m) * (b % self.m)) % self.m
 
     def div(self, a, b):
-        return self.mul(a, pow(b, self.m-2, self.m))
+        return self.mul(a, pow(b, self.m - 2, self.m))
 
     def pow(self, a, b):
         return pow(a, b, self.m)
@@ -76,20 +76,20 @@ class Bisect:
 
     def bisect_left(self, x, lo, hi):
         while lo < hi:
-            mid = (lo+hi)//2
+            mid = (lo + hi) // 2
             if self.__func(mid) < x:
-                lo = mid+1
+                lo = mid + 1
             else:
                 hi = mid
         return lo
 
     def bisect_right(self, x, lo, hi):
         while lo < hi:
-            mid = (lo+hi)//2
+            mid = (lo + hi) // 2
             if x < self.__func(mid):
                 hi = mid
             else:
-                lo = mid+1
+                lo = mid + 1
         return lo
 
 
@@ -97,14 +97,15 @@ class Bisect:
 def slv(N, M, S):
 
     from functools import lru_cache
+
     @lru_cache(maxsize=None)
     def dfs(x):
         if x == 0:
             return []
 
         for i in range(M, 0, -1):
-            if 0 <= x-i and S[x-i] == '0':
-                r = dfs(x-i)
+            if 0 <= x - i and S[x - i] == '0':
+                r = dfs(x - i)
                 if r is not None:
                     r.append(i)
                     return r
@@ -115,8 +116,6 @@ def slv(N, M, S):
     return ans
 
 
-
-
 def main():
     N, M = read_int_n()
     S = read_str()
@@ -125,5 +124,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

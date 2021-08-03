@@ -1,2 +1,2 @@
 def max_multiple(divisor, bound):
-    return divisor * int(bound/divisor)
+    return divisor * int(bound / divisor)

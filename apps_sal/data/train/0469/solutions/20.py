@@ -1,6 +1,6 @@
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
-        graph = [set() for _ in range(n)] 
+        graph = [set() for _ in range(n)]
         degree = [0] * n
         for i in range(n):
             if leftChild[i] != -1:
@@ -15,7 +15,8 @@ class Solution:
                 q.append(i)
             if degree[i] > 1:
                 return False
-        if len(q) > 1 or len(q) == 0: return False      
+        if len(q) > 1 or len(q) == 0:
+            return False
         visited = set()
         while q:
             node = q.pop()
@@ -27,5 +28,3 @@ class Solution:
                 if degree[neigh] == 0:
                     q.append(neigh)
         return len(visited) == n
-            
-

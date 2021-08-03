@@ -33,11 +33,11 @@ elif a + b + c == 1:
     for i, item in enumerate(s):
         if t[item] == 1:
             t[item] = 0
-            t[(item+1) % 3] = 1
-            put(ret, (item+1) % 3)
-        elif t[(item+1) % 3] == 1:
+            t[(item + 1) % 3] = 1
+            put(ret, (item + 1) % 3)
+        elif t[(item + 1) % 3] == 1:
             t[item] = 1
-            t[(item+1) % 3] = 0
+            t[(item + 1) % 3] = 0
             put(ret, item)
         else:
             print('No')
@@ -48,33 +48,33 @@ elif a + b + c == 2:
     t.append(b)
     t.append(c)
     for i, item in enumerate(s):
-        if t[item] == 0 and t[(item+1) % 3] == 0:
+        if t[item] == 0 and t[(item + 1) % 3] == 0:
             print('No')
             return
-        if t[item] > t[(item+1) % 3]:
+        if t[item] > t[(item + 1) % 3]:
             t[item] -= 1
-            t[(item+1) % 3] += 1
-            put(ret, (item+1) % 3)
-        elif t[item] < t[(item+1) % 3]:
+            t[(item + 1) % 3] += 1
+            put(ret, (item + 1) % 3)
+        elif t[item] < t[(item + 1) % 3]:
             t[item] += 1
-            t[(item+1) % 3] -= 1
+            t[(item + 1) % 3] -= 1
             put(ret, item)
         elif t[item] == 0:
             print('No')
             return
         elif t[item] == 2:
             t[item] -= 1
-            t[(item+1) % 3] += 1
-            put(ret, (item+1) % 3)
+            t[(item + 1) % 3] += 1
+            put(ret, (item + 1) % 3)
         else:
             if len(s) > i + 1:
-                if s[i+1] == (item + 1) % 3:
+                if s[i + 1] == (item + 1) % 3:
                     t[item] -= 1
-                    t[(item+1) % 3] += 1
-                    put(ret, (item+1) % 3)
+                    t[(item + 1) % 3] += 1
+                    put(ret, (item + 1) % 3)
                 else:
                     t[item] += 1
-                    t[(item+1) % 3] -= 1
+                    t[(item + 1) % 3] -= 1
                     put(ret, item)
             else:
                 put(ret, item)
@@ -85,19 +85,18 @@ else:
     t.append(b)
     t.append(c)
     for i, item in enumerate(s):
-        if t[item] == 0 and t[(item+1) % 3] == 0:
+        if t[item] == 0 and t[(item + 1) % 3] == 0:
             print('No')
             return
-        if t[item] > t[(item+1) % 3]:
+        if t[item] > t[(item + 1) % 3]:
             t[item] -= 1
-            t[(item+1) % 3] += 1
-            put(ret, (item+1) % 3)
+            t[(item + 1) % 3] += 1
+            put(ret, (item + 1) % 3)
         else:
             t[item] += 1
-            t[(item+1) % 3] -= 1
+            t[(item + 1) % 3] -= 1
             put(ret, item)
 
 print('Yes')
 for item in ret:
     print(item)
-

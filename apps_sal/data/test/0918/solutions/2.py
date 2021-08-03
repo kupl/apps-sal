@@ -19,11 +19,3 @@ for i in range(m):
         print("?")
     else:
         print(regions[i][-1][1] + " " + regions[i][-2][1])
-
-
-
-
-
-
-
-

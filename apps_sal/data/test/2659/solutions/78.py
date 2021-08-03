@@ -33,6 +33,7 @@ def __starting_point():
     N = 1
     for _ in range(K):
         print(N)
-        N = f(N+1)
+        N = f(N + 1)
+
 
 __starting_point()

@@ -9,4 +9,3 @@ for c in a:
     else:
         y += 1
 print(min(x, y))
-

@@ -1,7 +1,7 @@
 _ = input()
 string = input()
 lasts = {
-0: -1
+    0: -1
 }
 curr_count = 0
 best_best = 0

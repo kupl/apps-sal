@@ -4,6 +4,7 @@ class Solution:
             def __init__(self, n):
                 self.p = list(range(n))
                 self.sizes = [0 for i in range(n)]
+
             def union(self, x, y):
                 x = self.find(x)
                 y = self.find(y)
@@ -13,14 +14,15 @@ class Solution:
                     x, y = y, x
                 self.p[y] = x
                 self.sizes[x] += self.sizes[y]
+
             def find(self, x):
                 if x != self.p[x]:
                     self.p[x] = self.find(self.p[x])
                 return self.p[x]
-    
+
         uf = UF(len(s))
-        for x,y in pairs: 
-            uf.union(x,y)
+        for x, y in pairs:
+            uf.union(x, y)
         m = defaultdict(list)
         for i in range(len(s)):
             m[uf.find(i)].append(s[i])
@@ -30,5 +32,3 @@ class Solution:
         for i in range(len(s)):
             res.append(m[uf.find(i)].pop())
         return ''.join(res)
-                
-

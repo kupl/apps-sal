@@ -5,12 +5,13 @@ class Solution:
         rec = defaultdict(list)
         out = []
         for n, t in cands:
-            if n in out: continue
-            
+            if n in out:
+                continue
+
             if n not in rec:
                 rec[n].append(t)
             else:
-                if 0<= abs(t - rec[n][0]) <= 60:
+                if 0 <= abs(t - rec[n][0]) <= 60:
                     rec[n].append(t)
                 else:
                     while rec[n] and abs(t - rec[n][0]) > 60:
@@ -19,5 +20,5 @@ class Solution:
                     rec[n].sort()
             if len(rec[n]) == 3:
                 out.append(n)
-        
+
         return sorted(out)

@@ -10,4 +10,3 @@ for i in s:
     else:
         c -= 1
 print(c)
-

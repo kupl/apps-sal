@@ -1,7 +1,7 @@
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
         if len(nums) == 0:
-            return 0 
+            return 0
 
         # left - on the first 1 of the island
         # right - on the last 1 of that island
@@ -9,7 +9,7 @@ class Solution:
         while left < len(nums) and nums[left] != 1:
             left += 1
 
-        right = left 
+        right = left
         while right + 1 < len(nums) and nums[right + 1] == 1:
             right += 1
 
@@ -23,19 +23,18 @@ class Solution:
             while left < len(nums) and nums[left] != 1:
                 left += 1
 
-            right = left 
+            right = left
             while right + 1 < len(nums) and nums[right + 1] == 1:
                 right += 1
 
             maxOnes = max(maxOnes, right - left + 1)
 
         return maxOnes
-    
-    
+
     def longestOnes(self, A: List[int], K: int) -> int:
         if K == 0:
             return self.findMaxConsecutiveOnes(A)
-        
+
         if len(A) == 0:
             return 0
 
@@ -52,7 +51,7 @@ class Solution:
             if A[right] == 0:
                 K -= 1
 
-        # Move more if there are 1s to the right of K-th zero    
+        # Move more if there are 1s to the right of K-th zero
         while right + 1 < len(A) and A[right + 1] == 1:
             right += 1
 
@@ -67,12 +66,11 @@ class Solution:
             else:
                 return maxSize
 
-
-            # Move right to include one more zero   
+            # Move right to include one more zero
             right += 1
             while right + 1 < len(A) and A[right + 1] == 1:
                 right += 1
 
             maxSize = max(maxSize, right - left + 1)
-            
-        return maxSize 
+
+        return maxSize

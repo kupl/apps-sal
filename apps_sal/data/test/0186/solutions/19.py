@@ -17,4 +17,3 @@ while True:
     if need <= k6:
         print(i)
         return
-

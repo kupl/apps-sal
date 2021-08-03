@@ -1,1 +1,1 @@
-get_new_notes = lambda s, b: max(s - sum(b), 0) // 5
+def get_new_notes(s, b): return max(s - sum(b), 0) // 5

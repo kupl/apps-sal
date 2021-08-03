@@ -3,5 +3,6 @@ def shorten_to_date(long_date):
     for i in long_date:
         if i != ",":
             x += i
-        else: break
+        else:
+            break
     return x

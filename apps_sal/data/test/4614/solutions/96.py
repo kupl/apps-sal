@@ -1,7 +1,7 @@
-a=list(map(int,input().split()))
+a = list(map(int, input().split()))
 a.sort()
 
-if a[0]==a[1]:
-  print(a[2])
+if a[0] == a[1]:
+    print(a[2])
 else:
-  print(a[0])
+    print(a[0])

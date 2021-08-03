@@ -5,9 +5,8 @@ for _ in range(int(input())):
     ma = min(a)
     mb = min(b)
     ans = 0
-    for i in range(0,n):
-        ta = a[i]-ma
-        tb = b[i]-mb
-        ans += max(ta,tb)
+    for i in range(0, n):
+        ta = a[i] - ma
+        tb = b[i] - mb
+        ans += max(ta, tb)
     print(ans)
-

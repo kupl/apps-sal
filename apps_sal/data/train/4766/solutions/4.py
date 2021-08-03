@@ -11,7 +11,6 @@ def n_closestPairs_tonum(upper_lim, k):
             elif ((second_num + i) ** 0.5).is_integer():
                 solution.append([i, second_num])
                 count += 1
-                if count ==k:
+                if count == k:
                     return solution
             square_num += 1
-

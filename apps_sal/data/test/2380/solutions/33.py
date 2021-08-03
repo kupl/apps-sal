@@ -20,10 +20,10 @@ key = sorted(d)[::-1]
 for i in key:
     qty = d[i]
     if qty < n:
-        ans += qty*i
+        ans += qty * i
         n -= qty
     else:
-        ans += n*i
+        ans += n * i
         break
 
 print(ans)

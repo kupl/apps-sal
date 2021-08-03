@@ -2,6 +2,8 @@ from collections import Counter
 n = int(input())
 a = list(map(int, input().split()))
 mod = 10 ** 9 + 7
+
+
 class nCr():
     def __init__(self, n):
         self.n = n
@@ -10,10 +12,15 @@ class nCr():
         for i in range(1, self.n + 1):
             self.fa[i] = self.fa[i - 1] * i % mod
             self.fi[i] = pow(self.fa[i], mod - 2, mod)
+
     def comb(self, n, r):
-        if n < r:return 0
-        if n < 0 or r < 0:return 0
+        if n < r:
+            return 0
+        if n < 0 or r < 0:
+            return 0
         return self.fa[n] * self.fi[r] % mod * self.fi[n - r] % mod
+
+
 comb = nCr(2 * n)
 c = Counter(a)
 num = c.most_common()[0][0]

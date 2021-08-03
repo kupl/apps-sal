@@ -13,8 +13,10 @@ if b[1] < a[1]:
 if c[1] < b[1]:
     b[1], c[1] = c[1], b[1]
 
+
 def man_dist(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1]) + 1
+
 
 dist = man_dist(a, b) + man_dist(b, c) - 1
 s.sort()
@@ -23,14 +25,14 @@ a = set()
 for i in range(s[0][0], s[1][0] + 1):
     a.add((i, s[0][1]))
 
-    
+
 if s[0][1] < s[1][1]:
     for i in range(s[0][1], s[1][1] + 1):
         a.add((s[1][0], i))
 else:
     for i in range(s[1][1], s[0][1] + 1):
-        a.add((s[1][0], i)) 
-        
+        a.add((s[1][0], i))
+
 x = man_dist(s[1], s[2])
 y = man_dist((s[1][0], s[0][1]), s[2])
 z = man_dist((s[1][0], s[2][1]), s[2])
@@ -50,8 +52,8 @@ if int_point[1] < s[2][1] + 1:
         a.add((s[2][0], i))
 else:
     for i in range(s[2][1], int_point[1] + 1):
-        a.add((s[2][0], i))   
-        
+        a.add((s[2][0], i))
+
 print(dist)
 for i in a:
     print(*i)

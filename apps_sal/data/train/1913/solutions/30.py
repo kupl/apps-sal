@@ -11,6 +11,5 @@ class Solution:
         f = smallest
         while A[smallest] == A[f]:
             f -= 1
-        A[f + 1], A[largest] =  A[largest],A[f + 1]
+        A[f + 1], A[largest] = A[largest], A[f + 1]
         return A
-

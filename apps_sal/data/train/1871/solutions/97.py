@@ -7,12 +7,12 @@
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         return self.maxAncestorDiffHelper(root, [], 0)
-    
+
     def maxAncestorDiffHelper(self, root: TreeNode, ancestors, maxV: int) -> int:
         if root is None:
             return 0
         for a in ancestors:
-            maxV = max(maxV, abs(a-root.val))
+            maxV = max(maxV, abs(a - root.val))
         ancestors.append(root.val)
         maxV = max(
             maxV,
@@ -21,6 +21,5 @@ class Solution:
         )
         ancestors.pop()
         return maxV
-    
-    #TODO should be able to make this faster
 
+    # TODO should be able to make this faster

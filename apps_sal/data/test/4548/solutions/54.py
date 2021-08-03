@@ -3,8 +3,8 @@
 n, m, x = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-goto_goal_0 = 0 # 0までのコスト
-goto_goal_n = 0 # nまでのコスト
+goto_goal_0 = 0  # 0までのコスト
+goto_goal_n = 0  # nまでのコスト
 
 # x から 0 へ向かうコストを計算
 for i in range(x - 1, 0, -1):   # x-1 番目から順番にデクリメントしながらforループ
@@ -22,4 +22,3 @@ if goto_goal_0 < goto_goal_n:
     print(goto_goal_0)
 else:
     print(goto_goal_n)
-

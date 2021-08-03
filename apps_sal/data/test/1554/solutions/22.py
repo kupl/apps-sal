@@ -8,8 +8,8 @@ mark = set([a[0]])
 for i in range(1, n):
     if a[i] in mark:
         mark = set()
-        ans.append([s+1, i+1])
-        s = i+1
+        ans.append([s + 1, i + 1])
+        s = i + 1
     else:
         mark.add(a[i])
 
@@ -20,4 +20,3 @@ else:
     print(len(ans))
     for line in ans:
         print(line[0], line[1])
-

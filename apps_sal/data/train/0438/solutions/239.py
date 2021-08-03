@@ -22,4 +22,4 @@ class Solution:
                 count[right[x] - left[x] + 1] += 1
             if count[m] > 0:
                 ans = i + 1
-        return ans 
+        return ans

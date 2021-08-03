@@ -1,6 +1,7 @@
 def is_palindrome(s):
     return s == s[::-1]
 
+
 def build_palindrome(s):
     for i in range(len(s)):
         x = s + s[:i][::-1]

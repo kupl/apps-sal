@@ -9,19 +9,19 @@ def main():
 
     for i in range(n):
         if t[i] == "r":
-            if i >= k and c[i-k] == 'p':
+            if i >= k and c[i - k] == 'p':
                 c += 'x'
             else:
                 c += "p"
                 ans += p
         elif t[i] == "s":
-            if i >= k and c[i-k] == 'r':
+            if i >= k and c[i - k] == 'r':
                 c += 'x'
             else:
                 c += "r"
                 ans += r
         else:
-            if i >= k and c[i-k] == 's':
+            if i >= k and c[i - k] == 's':
                 c += 'x'
             else:
                 c += "s"
@@ -31,5 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

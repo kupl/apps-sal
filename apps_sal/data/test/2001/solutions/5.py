@@ -3,6 +3,7 @@ input = sys.stdin.readline
 out = sys.stdout
 MOD = 1000000007
 
+
 def main():
     n, q = list(map(int, input().split()))
     s = input()
@@ -21,12 +22,14 @@ def main():
         li -= 1
         ri -= 1
         if li == 0:
-            answer = (pow(2, d[ri][0], MOD) - 1)*(pow(2, d[ri][1], MOD))
+            answer = (pow(2, d[ri][0], MOD) - 1) * (pow(2, d[ri][1], MOD))
         else:
-            answer = (pow(2, d[ri][0]-d[li-1][0], MOD) - 1)*(pow(2, d[ri][1]-d[li-1][1], MOD))
+            answer = (pow(2, d[ri][0] - d[li - 1][0], MOD) - 1) * (pow(2, d[ri][1] - d[li - 1][1], MOD))
         out.write(str(answer % MOD) + '\n')
-                      
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

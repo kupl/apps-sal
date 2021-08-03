@@ -36,4 +36,3 @@ class Solution:
             if 2**k - 1 - t < t:
                 dp[t] = min(dp[t], dp[2**k - 1 - t] + k + 1)
         return dp[target]
-

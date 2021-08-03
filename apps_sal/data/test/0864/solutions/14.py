@@ -16,4 +16,3 @@ while l + 1 < r:
     else:
         r = c
 print(l)
-

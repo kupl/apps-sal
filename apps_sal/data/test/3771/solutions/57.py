@@ -15,6 +15,7 @@ class MaxFlow:
         print(fr, to, flow)
 
     """
+
     def __init__(self, n):
         self.n = n
         self.graph = [[] for _ in range(n)]
@@ -130,4 +131,3 @@ if ans >= INF:
     print((-1))
 else:
     print(ans)
-

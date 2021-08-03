@@ -15,4 +15,3 @@ for i in range(len(t)):
         # print(min(i + 2 * k + 1, len(t) - 1))
         ans = max(ans, t[min(i + 2 * k + 1, len(t) - 1)] - t[i])
 print(ans)
-

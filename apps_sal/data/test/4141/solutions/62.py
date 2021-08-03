@@ -1,4 +1,4 @@
-  
+
 # 155b
 
 def atc_155b(input_value: str) -> str:
@@ -9,7 +9,7 @@ def atc_155b(input_value: str) -> str:
             return "DENIED"
     return "APPROVED"
 
+
 N = input()
 Ai = input()
 print((atc_155b([N, Ai])))
-

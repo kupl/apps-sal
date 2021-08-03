@@ -27,4 +27,3 @@ while i1 < n:
         break
     i1 += 1
 print(ans - s)
-

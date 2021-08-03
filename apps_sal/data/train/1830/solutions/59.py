@@ -3,7 +3,7 @@ from sortedcontainers import SortedList
 
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
-        ans = [-1]*len(rains)
+        ans = [-1] * len(rains)
         zeros, todry = SortedList(), {}
         for i, r in enumerate(rains):
             if r == 0:
@@ -21,4 +21,3 @@ class Solution:
             if rains[i] == 0 and ans[i] == -1:
                 ans[i] = 1
         return ans
-

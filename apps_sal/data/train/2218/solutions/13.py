@@ -8,7 +8,7 @@ n_operations = int(read())
 
 minis = []
 next_mini = 0
-changed_before = [0] * (len(balance)+1)
+changed_before = [0] * (len(balance) + 1)
 
 for n_op in range(n_operations):
     operation = list(map(int, read().split(" ")))

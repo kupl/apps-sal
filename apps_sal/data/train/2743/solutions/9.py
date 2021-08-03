@@ -4,6 +4,7 @@ def avg(seq):
     for i in seq:
         sum += i
         count += 1
-    return sum/count if count != 0 else 0
+    return sum / count if count != 0 else 0
 
-sum_average = lambda arr: __import__('math').floor(sum(avg(i) for i in arr))
+
+def sum_average(arr): return __import__('math').floor(sum(avg(i) for i in arr))

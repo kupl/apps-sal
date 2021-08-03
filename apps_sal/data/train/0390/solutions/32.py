@@ -1,6 +1,6 @@
-def is_winning (n):
+def is_winning(n):
     winning = []
-    for val in range (0, n+1):
+    for val in range(0, n + 1):
         if val == 0:
             ans = False
         else:
@@ -11,8 +11,9 @@ def is_winning (n):
                     ans = True
                     break
                 i += 1
-        winning.append (ans)
+        winning.append(ans)
     return winning[n]
+
 
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:

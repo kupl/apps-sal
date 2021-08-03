@@ -11,8 +11,8 @@ cst = 0
 i = 0
 while t < m:
     t += ll[i][1]
-    cst += ll[i][0]*ll[i][1]
+    cst += ll[i][0] * ll[i][1]
     if t > m:
-        cst -= ll[i][0]*(t-m)
+        cst -= ll[i][0] * (t - m)
     i += 1
 print(cst)

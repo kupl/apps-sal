@@ -4,11 +4,11 @@ for q in range(w):
     n = int(input())
     a = list(map(int, input().split()))
     a.append(a[0] - 1)
-    e = [1] * (n+1)
+    e = [1] * (n + 1)
     ei = 1
     r = [0] * n
     for i in range(n):
-        if a[i] == a[i-1]:
+        if a[i] == a[i - 1]:
             while e[ei] == 0 and ei < n:
                 ei += 1
             if ei > a[i]:
@@ -27,10 +27,3 @@ for q in range(w):
                 break
     if fr:
         print(*r)
-
-
-
-
-
-
-

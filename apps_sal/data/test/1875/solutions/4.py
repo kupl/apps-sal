@@ -27,4 +27,3 @@ for i in range(len(a) - 1):
             area = max(area, positive - negative)
 
 print(area)
-

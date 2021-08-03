@@ -5,4 +5,3 @@ if B < C:
     for time in t:
         ans += (T - time) * (C - B)
 print(ans)
-

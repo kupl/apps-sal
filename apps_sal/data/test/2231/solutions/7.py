@@ -61,4 +61,3 @@ for _ in range(n):
     results.append("{0} {0} {1} {1}".format(min_sticks_el[0], min_sticks_el[1]))
 
 print('\n'.join(results))
-

@@ -21,16 +21,16 @@ def main():
     ans = A_ac[-1]
     for i, ac in enumerate(A_ac):
         if i == 0:
-            ans = abs(2*ac-A_ac[-1])
-        if i == N-1:
+            ans = abs(2 * ac - A_ac[-1])
+        if i == N - 1:
             break
-        if abs(2*ac-A_ac[-1]) < ans:
-            ans = abs(2*ac-A_ac[-1])
+        if abs(2 * ac - A_ac[-1]) < ans:
+            ans = abs(2 * ac - A_ac[-1])
     print(ans)
-
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

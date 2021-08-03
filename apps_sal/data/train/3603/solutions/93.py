@@ -1,4 +1,4 @@
-def lovefunc( flower1, flower2 ):
+def lovefunc(flower1, flower2):
     c = 0
     if flower1 % 2 == 0 and flower2 % 2 != 0:
         c = c + 1

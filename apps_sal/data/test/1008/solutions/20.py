@@ -12,11 +12,12 @@ unit_length = sl // n
 newlist = []
 
 for i in range(n):
-    newlist.append(s[i*unit_length:i*unit_length+unit_length])
+    newlist.append(s[i * unit_length:i * unit_length + unit_length])
 
 
 def is_p(word):
     return word == word[::-1]
+
 
 res = True
 for word in newlist:
@@ -30,4 +31,3 @@ if res and sl % n == 0:
     print('YES')
 else:
     print('NO')
-

@@ -6,4 +6,3 @@ for i in range(int(input())):
         k = min(k, f[j] - f[j - 1])
 
     print(k)
-

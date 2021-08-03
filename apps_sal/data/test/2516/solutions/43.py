@@ -5,11 +5,11 @@ ans = 0
 if P == 2:
     for i in range(N):
         if int(S[i]) % 2 == 0:
-            ans += i+1
+            ans += i + 1
 elif P == 5:
     for i in range(N):
         if int(S[i]) == 0 or int(S[i]) == 5:
-            ans += i+1
+            ans += i + 1
 else:
     cnt = [0 for _ in range(P)]
     cnt[0] = 1
@@ -21,5 +21,5 @@ else:
         bai %= P
         cnt[v] += 1
     for i in range(P):
-        ans += ((cnt[i] - 1 ) * cnt[i]) // 2
+        ans += ((cnt[i] - 1) * cnt[i]) // 2
 print(ans)

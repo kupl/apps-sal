@@ -16,8 +16,7 @@ vv = True
 for i in range(len(s)):
     if s[i] in '123':
         vv = False
-if (pr or  vn or le or vv):
+if (pr or vn or le or vv):
     print('NO')
 else:
     print('YES')
-

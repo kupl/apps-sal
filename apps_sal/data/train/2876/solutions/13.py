@@ -1,3 +1,3 @@
-def check(a, x): 
-    contains = x in a 
+def check(a, x):
+    contains = x in a
     return contains

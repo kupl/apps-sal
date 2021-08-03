@@ -1,26 +1,26 @@
 class UnionFind:
-    
+
     def __init__(self, n):
         self.parent = list(range(n))
-        self.rank = [0]*n
-        self.size = [0]*n
-        self.groupCount = [0]*(n+1)
-    
+        self.rank = [0] * n
+        self.size = [0] * n
+        self.groupCount = [0] * (n + 1)
+
     def find(self, x):
         if x != self.parent[x]:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def add(self, x):
         self.size[x] = 1
         self.groupCount[1] += 1
-    
+
     def union(self, x, y):
         px = self.find(x)
         py = self.find(y)
         if px == py:
             return False
-        if self.groupCount[self.size[px]] > 0: 
+        if self.groupCount[self.size[px]] > 0:
             self.groupCount[self.size[px]] -= 1
         if self.groupCount[self.size[py]] > 0:
             self.groupCount[self.size[py]] -= 1
@@ -40,24 +40,25 @@ class UnionFind:
         self.groupCount[self.size[px]] += 1
         self.groupCount[self.size[py]] += 1
         return True
-    
+
     def getSize(self, i):
         px = self.find(i)
         return self.size[px]
-    
+
+
 class Solution:
-    
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         disjoint = UnionFind(len(arr))
         ans = - 1
-        val = [0]*len(arr)
+        val = [0] * len(arr)
         for k in range(len(arr)):
             index = arr[k] - 1
             val[index] += 1
             disjoint.add(index)
-            if index > 0 and val[index] == val[index-1]:
+            if index > 0 and val[index] == val[index - 1]:
                 disjoint.union(index, index - 1)
-            if index + 1 < len(val) and val[index] == val[index+1]:
+            if index + 1 < len(val) and val[index] == val[index + 1]:
                 disjoint.union(index, index + 1)
             #print(k, disjoint.groupCount)
             if disjoint.groupCount[m] > 0:
@@ -72,8 +73,8 @@ class Solution:
                 i += 1
             '''
             #print(k, disjoint.size, val)
-        return ans 
-    
+        return ans
+
     '''
     def findLatestStep(self, arr: List[int], m: int) -> int:
         def check(i):
@@ -108,4 +109,3 @@ class Solution:
         else:
             return left
     '''
-

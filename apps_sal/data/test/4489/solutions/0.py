@@ -28,4 +28,6 @@ def resolve():
         print(0)
     else:
         print(cards_points[-1])
+
+
 resolve()

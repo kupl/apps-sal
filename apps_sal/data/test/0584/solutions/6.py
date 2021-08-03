@@ -19,7 +19,7 @@ for sym in s:
         if sym == '(':
             sib += '_'
 t = swb.split('_')
-print(max([len(elem) for elem in t]), end = ' ')
+print(max([len(elem) for elem in t]), end=' ')
 t = sib.split('_')
 t1 = []
 for lem in t:

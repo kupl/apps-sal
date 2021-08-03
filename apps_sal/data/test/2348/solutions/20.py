@@ -1,7 +1,7 @@
-n=str(input())
-s=str(n)
-n=int(s[1:])
-if(n%2==0):
-	print(0)
+n = str(input())
+s = str(n)
+n = int(s[1:])
+if(n % 2 == 0):
+    print(0)
 else:
-	print(1)
+    print(1)

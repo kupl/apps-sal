@@ -28,4 +28,3 @@ for i in range(mxN - 1):
 #         steps += 1
 #
 print(steps)
-

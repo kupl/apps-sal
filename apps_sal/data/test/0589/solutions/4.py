@@ -15,4 +15,3 @@ elif s[0] in string.ascii_uppercase:
 else:
     ans = pow(10, r) * math.factorial(10) // math.factorial(10 - pr)
 print(ans)
-

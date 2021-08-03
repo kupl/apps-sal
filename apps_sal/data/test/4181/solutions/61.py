@@ -1,10 +1,11 @@
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+from sys import stdin
 from math import gcd
-from itertools import combinations,permutations,accumulate, product # (string,3) 3回
+from itertools import combinations, permutations, accumulate, product  # (string,3) 3回
 #from collections import deque
-from collections import deque,defaultdict,Counter
+from collections import deque, defaultdict, Counter
 import decimal
 import re
 import math
@@ -30,14 +31,21 @@ mod = 10**9 + 7
 #mod = 9982443453
 #mod = 998244353
 INF = float('inf')
-from sys import stdin
 readline = stdin.readline
+
+
 def readInts():
-  return list(map(int,readline().split()))
+    return list(map(int, readline().split()))
+
+
 def readTuples():
-    return tuple(map(int,readline().split()))
+    return tuple(map(int, readline().split()))
+
+
 def I():
     return int(readline())
+
+
 n = I()
 A = readInts()
 B = readInts()
@@ -49,8 +57,7 @@ for i in range(n):
     A[i] -= nya
     v -= nya
     ans += nya
-    nya = min(A[i+1], v)
+    nya = min(A[i + 1], v)
     ans += nya
-    A[i+1] -= nya
+    A[i + 1] -= nya
 print(ans)
-

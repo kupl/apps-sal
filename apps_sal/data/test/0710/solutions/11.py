@@ -9,4 +9,3 @@ for i in range(n - 3):
         val += min(kek, 26 - kek)
     res = min(res, val)
 print(res)
-

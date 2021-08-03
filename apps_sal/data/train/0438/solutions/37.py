@@ -2,9 +2,9 @@ class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == len(arr):
             return m
-        
-        groups = [(0, len(arr)+1)] # both start and end are exclusive
-        for i in range(len(arr)-1, -1, -1):
+
+        groups = [(0, len(arr) + 1)]  # both start and end are exclusive
+        for i in range(len(arr) - 1, -1, -1):
             temp = []
             for start, end in groups:
                 if start <= arr[i] < end:
@@ -18,7 +18,7 @@ class Solution:
                     temp.append((start, end))
             groups = temp
         return -1
-    
+
 # [3,5,1,2,4]
 # 1
 # [3,5,1,2,4]
@@ -29,4 +29,3 @@ class Solution:
 # 1
 # [2,1]
 # 2
-

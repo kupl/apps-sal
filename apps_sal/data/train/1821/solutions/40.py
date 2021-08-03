@@ -3,12 +3,12 @@ class Solution:
         if len(nums) < 2:
             return nums
         else:
-            mid = len(nums)//2
+            mid = len(nums) // 2
             left = nums[:mid]
             right = nums[mid:]
             self.sortArray(left)
             self.sortArray(right)
-            i,j,k = 0,0,0
+            i, j, k = 0, 0, 0
             while i < len(left) and j < len(right):
                 if left[i] <= right[j]:
                     nums[k] = left[i]

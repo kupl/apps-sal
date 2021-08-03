@@ -7,9 +7,9 @@ def main():
         h = A[i - 1] - A[i]
         if h > 0:
             A[i] += h
-            dp[i] = dp[i-1] + h
+            dp[i] = dp[i - 1] + h
         else:
-            dp[i] = dp[i-1]
+            dp[i] = dp[i - 1]
 
     print((dp[-1]))
     return
@@ -17,5 +17,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

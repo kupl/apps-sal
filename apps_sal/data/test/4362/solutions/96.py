@@ -4,4 +4,3 @@ if α.islower():
 
 else:
     print('A')
-

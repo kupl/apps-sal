@@ -20,4 +20,3 @@ for i in a:
     if i == 3:
         cur = {0: 0, 1: 2, 2: 1}[cur]
 print(ans)
-

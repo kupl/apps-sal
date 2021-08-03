@@ -25,8 +25,9 @@ def f(symb):
     if cnt > 0:
         local_ans *= arr[cnt]
         local_ans %= M
-    #print(local_ans)
+    # print(local_ans)
     return local_ans
+
 
 ans = 1
 s = input()
@@ -34,5 +35,3 @@ if s.count('w') or s.count('m'):
     print(0)
 else:
     print(f('u') * f('n') % M)
-
-

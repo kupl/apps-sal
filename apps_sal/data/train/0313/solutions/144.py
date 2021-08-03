@@ -7,18 +7,18 @@ class Solution:
                 end = mid
             else:
                 start = mid
-        
+
         if self.helper(bloomDay, m, k, start):
             return start
         elif self.helper(bloomDay, m, k, end):
             return end
         else:
             return -1
-    
+
     def helper(self, bloomDay, m, k, day):
         consecutive = 0
         count = 0
-        
+
         for bloomday in bloomDay:
             if bloomday > day:
                 consecutive = 0
@@ -27,6 +27,5 @@ class Solution:
                 if consecutive == k:
                     count += 1
                     consecutive = 0
-        
-        return count >= m
 
+        return count >= m

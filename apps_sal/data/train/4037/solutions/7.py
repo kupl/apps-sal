@@ -13,5 +13,6 @@ operators = {
     "099": "MTS"
 }
 
+
 def detect_operator(num):
     return operators.get(str(num)[1:4], 'no info')

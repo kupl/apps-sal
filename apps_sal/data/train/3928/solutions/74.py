@@ -1,5 +1,5 @@
 def billboard(name, price=30):
-    t=0
+    t = 0
     for l in name:
-        t+=price
+        t += price
     return t

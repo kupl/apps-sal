@@ -1,5 +1,5 @@
-n, t = map(int,input().split())
-a = list(map(int,input().split()))
+n, t = map(int, input().split())
+a = list(map(int, input().split()))
 j = ans = sumition = 0
 for i in range(n):
     sumition += a[i]

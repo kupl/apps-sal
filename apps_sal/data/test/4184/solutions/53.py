@@ -1,6 +1,7 @@
 
 url = "https://atcoder.jp//contests/abc129/tasks/abc129_b"
 
+
 def main():
     n = int(input())
     t = list(map(int, input().split()))
@@ -8,11 +9,12 @@ def main():
     sums = sum(t)
     for v in t:
         sums -= v
-        ans = min(abs((sum(t)-sums)-sums), ans)
+        ans = min(abs((sum(t) - sums) - sums), ans)
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

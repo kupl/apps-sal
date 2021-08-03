@@ -9,7 +9,7 @@ class Solution:
         while head:
             nums.append(head.val)
             head = head.next
-        
+
         n = len(nums)
         idx = [n] * n
         ans = [0] * n

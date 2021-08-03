@@ -1,5 +1,6 @@
 from fractions import Fraction
 
+
 def expand(x, digit):
     step = 0
     fact = 1

@@ -3,7 +3,7 @@ def main():
 
     need = avg * n
 
-    d = sorted([list(map(int, input().split())) for _ in range(n)], key = lambda x: x[1])
+    d = sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x: x[1])
     cur = sum(x[0] for x in d)
     #print(d, cur)
     ret = 0
@@ -16,5 +16,6 @@ def main():
         left -= can
         if left == 0:
             return ret
+
 
 print(main())

@@ -1,2 +1,2 @@
-X,Y = map(int, input().split())
-print(int(X + (Y/2)))
+X, Y = map(int, input().split())
+print(int(X + (Y / 2)))

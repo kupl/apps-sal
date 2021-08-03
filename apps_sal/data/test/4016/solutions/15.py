@@ -12,5 +12,3 @@ if not res:
     print(string * k)
 else:
     print(res)
-
-

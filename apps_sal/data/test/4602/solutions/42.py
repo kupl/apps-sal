@@ -10,5 +10,4 @@ for x in X:
         ans += diff
     else:
         ans += x
-print((2*ans))
-
+print((2 * ans))

@@ -3,7 +3,7 @@ class Solution:
         left, right, mid = set(), set(), set()
         count = 0
         for row, col in reservedSeats:
-  
+
             # if row in left and row in right and row in mid:
             #     continue
             if col < 6 and col > 1:

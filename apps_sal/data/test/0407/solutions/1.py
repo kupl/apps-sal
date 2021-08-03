@@ -18,6 +18,6 @@ mul[max_zero_idx] = 10 ** 20
 
 mul.sort()
 ans = 0
-for i in range(10): ans += (9 - i) * mul[i]
+for i in range(10):
+    ans += (9 - i) * mul[i]
 print(ans)
-

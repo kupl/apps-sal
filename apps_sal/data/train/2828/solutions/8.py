@@ -1,5 +1,6 @@
 from math import log
 
+
 def power_law(x1y1, x2y2, x3):
     try:
         k = (log(x1y1[1]) - log(x2y2[1])) / (log(x1y1[0]) - log(x2y2[0]))

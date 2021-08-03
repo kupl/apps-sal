@@ -9,4 +9,3 @@ def is_anagram(test, original):
     else:
         print(f'Characters do not match for test case {test}, {original}')
         return False
-

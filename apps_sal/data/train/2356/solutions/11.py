@@ -1,5 +1,10 @@
 # region header
-import sys, bisect, math, itertools, heapq, collections
+import sys
+import bisect
+import math
+import itertools
+import heapq
+import collections
 from operator import itemgetter
 # a.sort(key=itemgetter(i)) # i番目要素でsort
 from functools import lru_cache
@@ -51,4 +56,3 @@ for i in range(1, n + 1):
         b = dp[i][2 * j] if 2 * j < n + 1 else 0
         dp[i][j] = (a + b) % mod
 print((dp[n][k] % mod))
-

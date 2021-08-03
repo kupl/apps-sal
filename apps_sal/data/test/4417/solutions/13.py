@@ -1,4 +1,4 @@
-#570_B
+# 570_B
 
 cases = int(input())
 
@@ -12,4 +12,3 @@ for i in range(0, cases):
         print(-1)
     else:
         print(max(n1 + k, n2 - k))
-

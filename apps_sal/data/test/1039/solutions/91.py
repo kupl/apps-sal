@@ -2,14 +2,14 @@ from collections import deque
 
 n = int(input())
 e = [[] for i in range(n)]
-for i in range(n-1):
-    a, b, c = map(int,input().split())
+for i in range(n - 1):
+    a, b, c = map(int, input().split())
     a -= 1
     b -= 1
     e[a].append([b, c])
     e[b].append([a, c])
 
-m, k = map(int,input().split())
+m, k = map(int, input().split())
 k -= 1
 
 d = [-1] * n
@@ -24,7 +24,7 @@ while q:
             q.append([t, d[t]])
 
 for i in range(m):
-    f, t = map(int,input().split())
+    f, t = map(int, input().split())
     f -= 1
     t -= 1
     print(d[f] + d[t])

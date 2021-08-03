@@ -9,7 +9,7 @@ class CustomStack:
         if self.curSize < self.maxSize:
             self.stack.append(x)
             self.curSize += 1
-            
+
     def pop(self) -> int:
         if self.stack:
             self.curSize -= 1
@@ -29,4 +29,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

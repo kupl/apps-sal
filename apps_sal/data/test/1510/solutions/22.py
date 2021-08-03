@@ -1,6 +1,6 @@
-n, m  = list(map(int, input().split()))
-a  = list(map(int, input().split()))
-b  = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 a_min = min(a)
 b_max = max(b)
 if a_min >= b_max:
@@ -21,7 +21,7 @@ else:
     j = 0
     while i < n or j < m:
         if i == n:
-            k =  b[j]
+            k = b[j]
         elif j == m:
             k = a[i]
         else:
@@ -32,5 +32,3 @@ else:
             j += 1
         output = min(output, k * (i - m + j) - aa[i] + bb[j])
     print(int(output))
-
-

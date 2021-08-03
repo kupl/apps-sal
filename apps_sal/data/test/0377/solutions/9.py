@@ -9,4 +9,5 @@ def main():
         print(n - m)
     return 0
 
+
 main()

@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def findTheLongestSubstring(self, string: str) -> int:
         vowels = 'aeiou'

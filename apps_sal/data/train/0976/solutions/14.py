@@ -1,7 +1,7 @@
 def solve(s, op, cl):
     if op not in s:
         return 0
-    
+
     st = []
     le = mle = 0
 
@@ -50,9 +50,9 @@ def alt_solve(s):
 
     return ma
 
+
 n = int(input())
 x = '()[]'
 s = ''.join(x[i - 1] for i in list(map(int, input().split())))
 
 print(alt_solve(s), solve(s, '(', ')'), solve(s, '[', ']'))
-

@@ -16,4 +16,3 @@ for s in S:
             point -= 1
             cg += 1
 print(point)
-

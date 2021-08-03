@@ -11,7 +11,7 @@
 # 1 ≦ a, b, c ≦ 100
 
 # 標準入力から、a, b, c の値を取得する
-a, b, c = list(map(int,input().split()))
+a, b, c = list(map(int, input().split()))
 
 result = "ret"
 if (a + b) == c:
@@ -24,4 +24,3 @@ else:
     result = "No"
 
 print(result)
-

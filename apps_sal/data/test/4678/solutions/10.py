@@ -13,4 +13,3 @@ for i in range(1, N):
     m = max(m, AN[i])
 
 print(ans)
-

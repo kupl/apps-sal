@@ -14,6 +14,7 @@ def solve():
     for i in a:
         print(*i, sep='')
 
+
 t = int(input())
 for _ in range(t):
     solve()

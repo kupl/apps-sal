@@ -26,6 +26,7 @@ class UnionFind():
     def size(self, x):
         return -self.parents[self.find(x)]
 
+
 n, m = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(m)]
 ans = 0
@@ -33,7 +34,7 @@ for i in range(m):
     uf = UnionFind(n)
     for j in range(m):
         if i != j:
-            uf.union(a[j][0]-1, a[j][1]-1)
+            uf.union(a[j][0] - 1, a[j][1] - 1)
     if uf.size(0) != n:
         ans += 1
 print(ans)

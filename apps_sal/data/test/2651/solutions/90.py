@@ -30,4 +30,5 @@ def __starting_point():
 # x0として数えられるのは、
 # 相方のx1の候補数 = 1-indexedのN-x0のインデックス = N-i
 
+
 __starting_point()

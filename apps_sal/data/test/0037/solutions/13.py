@@ -7,7 +7,7 @@ for i in range(c // a + 1):
             break
     if not f:
         break
-if not f :
+if not f:
     print("Yes")
 else:
     print("No")

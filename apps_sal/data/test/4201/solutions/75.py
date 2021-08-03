@@ -16,4 +16,3 @@ for row_bit in product(list(range(2)), repeat=h):
             ans += 1
 
 print(ans)
-

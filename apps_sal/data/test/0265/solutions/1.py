@@ -1,5 +1,6 @@
 import sys
 
+
 def popcount(i):
     assert 0 <= i < 0x100000000
     i = i - ((i >> 1) & 0x55555555)
@@ -8,48 +9,48 @@ def popcount(i):
 
 
 N, M = list(map(int, sys.stdin.readline().split()))
-table = [0]*(2**9)
+table = [0] * (2**9)
 for _ in range(N):
     S = tuple(map(int, sys.stdin.readline().split()))
-    table[sum(2**(a-1) for a in S[1:])] += 1
+    table[sum(2**(a - 1) for a in S[1:])] += 1
 
-dp = [0]*(2**9)
+dp = [0] * (2**9)
 for s in range(2**9):
     ppc = popcount(s)
     res = table[s]
-    t = s&(s-1)
+    t = s & (s - 1)
     for _ in range(2**ppc - 1):
         res += table[t]
-        t = (t-1)&s
-    dp[s] = res                        
+        t = (t - 1) & s
+    dp[s] = res
 
-table = [False]*(2**9)
+table = [False] * (2**9)
 cost = [[] for _ in range(2**9)]
 idx = [[] for _ in range(2**9)]
 for i in range(M):
     T = tuple(map(int, sys.stdin.readline().split()))
-    x = sum(2**(a-1) for a in T[2:])
+    x = sum(2**(a - 1) for a in T[2:])
     table[x] = True
     cost[x].append(T[0])
-    idx[x].append(i+1)
+    idx[x].append(i + 1)
 
 minidx = [cost[x].index(min(cost[x])) if cost[x] else -1 for x in range(2**9)]
-mincost = [10**10]*(2**9)
+mincost = [10**10] * (2**9)
 mincostidx = [(0, 0) for _ in range(2**9)]
-reachable = [False]*(2**9)
+reachable = [False] * (2**9)
 for i in range(2**9):
     if not table[i]:
         continue
     for j in range(2**9):
         if not table[j]:
             continue
-        reachable[i|j] = True
+        reachable[i | j] = True
         if i != j:
             mi = min(cost[i])
             mj = min(cost[j])
-            if mincost[i|j] > mi + mj:
-                mincost[i|j] = mi + mj
-                mincostidx[i|j] = (idx[i][minidx[i]], idx[j][minidx[j]])
+            if mincost[i | j] > mi + mj:
+                mincost[i | j] = mi + mj
+                mincostidx[i | j] = (idx[i][minidx[i]], idx[j][minidx[j]])
 ctr = -1
 candi = []
 for i in range(2**9):
@@ -85,4 +86,3 @@ for c in candi:
         ans = mincost[c]
         Ans = mincostidx[c]
 print(*Ans)
-

@@ -11,6 +11,8 @@ for u in range(n):
             g[u].append(v)
 
 memo = [-1] * n
+
+
 def dfs(v):
     if memo[v] != -1:
         return memo[v]
@@ -20,6 +22,5 @@ def dfs(v):
     memo[v] = r
     return r
 
-print(max(dfs(s) for s in range(n)))
-        
 
+print(max(dfs(s) for s in range(n)))

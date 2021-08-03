@@ -8,7 +8,3 @@ class Solution:
                     total += 1
                     break
         return len(arr1) - total
-                
-                
-            
-

@@ -1,10 +1,9 @@
-s=(input())[::-1]
-T=["dream", "dreamer", "erase","eraser"]
-T=[x[::-1] for x in T]
-cur=""
+s = (input())[::-1]
+T = ["dream", "dreamer", "erase", "eraser"]
+T = [x[::-1] for x in T]
+cur = ""
 for e in s:
-    cur+=e
+    cur += e
     if(cur in T):
-        cur=""
-print(("YES" if cur=="" else "NO"))
-
+        cur = ""
+print(("YES" if cur == "" else "NO"))

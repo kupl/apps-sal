@@ -6,4 +6,4 @@ for a in A:
     total ^= a
 
 for a in A:
-    print(total^a, end=" ")
+    print(total ^ a, end=" ")

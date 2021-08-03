@@ -1,4 +1,5 @@
-from heapq import heappop, heappush, heapify 
+from heapq import heappop, heappush, heapify
+
 
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
@@ -11,7 +12,3 @@ class Solution:
             j += 2
             ans += piles[-j]
         return ans
-            
-        
-            
-

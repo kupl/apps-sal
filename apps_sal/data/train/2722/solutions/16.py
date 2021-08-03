@@ -1,10 +1,9 @@
 def remove_url_anchor(url):
-    list=[]
+    list = []
     for x in url:
         a = list.append(x)
         if x == '#':
-            break  
+            break
     y = ''.join(list).replace('#', '')
-    return ( y )
+    return (y)
     # TODO: complete
-

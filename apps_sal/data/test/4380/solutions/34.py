@@ -1,8 +1,7 @@
 # A ABC333
 A, B = list(map(int, input().split()))
-if (A * B) % 2 ==0:
+if (A * B) % 2 == 0:
     print("No")
 else:
     print("Yes")
 pass
-

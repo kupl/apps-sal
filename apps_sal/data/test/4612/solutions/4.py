@@ -11,7 +11,7 @@ def Input():
 
 def main():
     a, b = Input()
-    print(math.ceil((a+b)/2))
+    print(math.ceil((a + b) / 2))
 
 
 main()

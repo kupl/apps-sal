@@ -3,5 +3,6 @@ def get_value(s):
         return 0
     return sum(ord(c) for c in s.upper())
 
-def compare(s1,s2):
-    return get_value(s1)==get_value(s2)
+
+def compare(s1, s2):
+    return get_value(s1) == get_value(s2)

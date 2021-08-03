@@ -6,10 +6,13 @@ t = [tuple(map(int, input().split())) for i in range(n)]
 for j, s in enumerate(zip(*t), 1):
     q = [[] for i in range(k)]
     for core, ceil in enumerate(s):
-        if dead[core] == 0: q[ceil].append(core)
+        if dead[core] == 0:
+            q[ceil].append(core)
     for ceil in range(1, k):
-        if not q[ceil]: continue
+        if not q[ceil]:
+            continue
         if block[ceil] or len(q[ceil]) > 1:
-            for core in q[ceil]: dead[core] = j
+            for core in q[ceil]:
+                dead[core] = j
             block[ceil] = True
 print('\n'.join(map(str, dead)))

@@ -26,5 +26,5 @@ class Solution:
                     right[i] = i - s[-1] - 1
             s.append(i)
         for i in range(l):
-            res += A[l-1-i] * (left[i]+1) * (right[l-1-i]+1)
+            res += A[l - 1 - i] * (left[i] + 1) * (right[l - 1 - i] + 1)
         return res % (10**9 + 7)

@@ -6,12 +6,13 @@
 #         self.right = right
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
-        if not root: return 0
-        
+        if not root:
+            return 0
+
         queue = [root]
         maxLevel = level = 1
         maxSum = root.val
-        
+
         while queue:
             nextLevel = []
             s = 0

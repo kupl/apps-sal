@@ -5,9 +5,9 @@ def main():
     m = int(input())
     print(m % (1 << n) if m >> n else m)
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

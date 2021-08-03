@@ -10,7 +10,7 @@ for a in arr:
         narr[-1] += 1
 
 res = 0
-for i in range(len(narr)-1):
-     res = max(res, min(narr[i], narr[i+1]))
+for i in range(len(narr) - 1):
+    res = max(res, min(narr[i], narr[i + 1]))
 
-print(res*2)
+print(res * 2)

@@ -9,6 +9,7 @@ lenT = len(t)
 yes = 0
 no = 0
 
+
 def change_register(l):
     if ord(l) > 96:
         return chr(ord(l) - 32)
@@ -66,4 +67,4 @@ for w in map1:
         map2[i] -= map1[w]
         map1[w] = 0
 
-print(str(yes)+' '+str(no))
+print(str(yes) + ' ' + str(no))

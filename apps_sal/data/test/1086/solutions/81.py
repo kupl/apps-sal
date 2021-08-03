@@ -21,4 +21,3 @@ for a in (dp[H][W - 1], dp[H - 1][W]):
         if a & (1 << d) != 0:
             ans = min(ans, abs(d - Z))
 print(ans)
-

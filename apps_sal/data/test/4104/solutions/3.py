@@ -3,15 +3,15 @@ now = 0
 n = len(s)
 ans = []
 while (now < n) and (s[now] != '-') and (s[now] != '+'):
-    ans.append(ord(s[now])-48)
+    ans.append(ord(s[now]) - 48)
     now += 1
 ans.reverse()
 while now < n:
     opt = s[now]
     now += 1
-    a = [ord(opt)-48]
+    a = [ord(opt) - 48]
     while (now < n) and (s[now] != '-') and (s[now] != '+'):
-        a.append(ord(s[now])-48)
+        a.append(ord(s[now]) - 48)
         now += 1
     a.reverse()
     if len(a) <= len(ans):
@@ -30,4 +30,3 @@ ans.reverse()
 for i in range(len(ans)):
     ret = ret * 10 + ans[i]
 print(ret)
-

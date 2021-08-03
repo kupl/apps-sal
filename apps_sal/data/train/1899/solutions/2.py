@@ -21,7 +21,6 @@ class Solution:
                 continue
             break
 
-        
         directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         step = 0
         while queue:
@@ -39,5 +38,3 @@ class Solution:
                     A[_x][_y] = 2
                     queue.append((_x, _y))
             step += 1
-
-

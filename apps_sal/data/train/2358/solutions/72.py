@@ -20,7 +20,8 @@ def main():
 
     for i, p1 in enumerate(ps):
         for j, p2 in enumerate(ps):
-            if i <= j: break  # 自己辺なし
+            if i <= j:
+                break  # 自己辺なし
             adj[i][j] = adj[j][i] = dist(p1, p2)
 
     def dijkstra(s):
@@ -33,13 +34,16 @@ def main():
         for _ in range(N + 1):
             for u, dc in enumerate(adj[v]):
                 nc = c + dc
-                if dist[u] <= nc: continue
+                if dist[u] <= nc:
+                    continue
                 dist[u] = nc
 
             c, v = -1, -1
             for u, d in enumerate(dist):
-                if det[u]: continue
-                if ~v and c <= d: continue
+                if det[u]:
+                    continue
+                if ~v and c <= d:
+                    continue
                 c, v = d, u
             det[v] = 1
 
@@ -50,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

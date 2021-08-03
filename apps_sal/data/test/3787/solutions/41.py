@@ -1,55 +1,51 @@
 
-max2 = lambda x,y: x if x > y else y
+from itertools import permutations
+def max2(x, y): return x if x > y else y
 
-def solve(N,A,B):
-    if A+B > N+1:
+
+def solve(N, A, B):
+    if A + B > N + 1:
         return None
-    if A*B < N:
+    if A * B < N:
         return None
 
-
-    res = [-1]*N
+    res = [-1] * N
     rem = A
 
     i = 0
-    while i+B+rem-1 < N:
+    while i + B + rem - 1 < N:
         rem -= 1
-        o = i+B
+        o = i + B
         for k in range(B):
-            res[i+k] = o-k-1
+            res[i + k] = o - k - 1
         i += B
 
-    p = N-i-rem+1
+    p = N - i - rem + 1
     for k in range(p):
-        res[i+k] = i+p-k-1
+        res[i + k] = i + p - k - 1
     i += p
     rem -= 1
-    for k in range(i,N):
+    for k in range(i, N):
         res[k] = k
     return res
 
 
-
-
-
-
-from itertools import permutations
-def naive(N,A,B):
+def naive(N, A, B):
 
     for p in permutations(range(N)):
-        dp = [1]*N
+        dp = [1] * N
         for i in range(N):
             for j in range(i):
                 if p[j] < p[i]:
-                    dp[i] = max2(dp[i],dp[j]+1)
+                    dp[i] = max2(dp[i], dp[j] + 1)
 
         a = max(dp)
 
-        dp = [1]*N
+        dp = [1] * N
         for i in range(N):
             for j in range(i):
                 if p[j] > p[i]:
-                    dp[i] = max2(dp[i],dp[j]+1)
+                    dp[i] = max2(dp[i], dp[j] + 1)
 
         b = max(dp)
 
@@ -57,11 +53,14 @@ def naive(N,A,B):
             return p
     return None
 
+
 def __starting_point():
-    N,A,B = map(int,input().split())
-    res = solve(N,A,B)
+    N, A, B = map(int, input().split())
+    res = solve(N, A, B)
     if res is None:
         print(-1)
     else:
-        print(*(v+1 for v in res))
+        print(*(v + 1 for v in res))
+
+
 __starting_point()

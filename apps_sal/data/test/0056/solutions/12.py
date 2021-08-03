@@ -36,6 +36,7 @@ def calculate(glass: Glass):
     if glass.right is not None:
         calculate(glass.right)
 
+
 n, t = list(map(int, input().split()))
 
 a = []
@@ -46,15 +47,14 @@ for _ in range(n):
 for i in range(n, 0, -1):
     # a[i-1].extend([Glass()] * i)
     for _ in range(i):
-        a[i-1].append(Glass())
+        a[i - 1].append(Glass())
     if i != n:
-        for j, g in enumerate(a[i-1]):
+        for j, g in enumerate(a[i - 1]):
             g.left = a[i][j]
-            g.right = a[i][j+1]
+            g.right = a[i][j + 1]
 
 a[0][0].add_wine(t)
 
 calculate(a[0][0])
 
 print(RESULT)
-

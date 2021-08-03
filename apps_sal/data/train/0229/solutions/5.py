@@ -15,7 +15,7 @@ class Solution:
             i += 1
             while i < len(A) and A[i] is None:
                 i += 1
-                
+
         while i < len(A):
             while j < len(A) and A[j] < 2 * A[i]:
                 j += 1

@@ -2,11 +2,12 @@ import sys
 import math
 
 
-inint = lambda: int(sys.stdin.readline())
-inintm = lambda: map(int, sys.stdin.readline().split())
-inintl = lambda: list(inintm())
-instrm = lambda: map(str, sys.stdin.readline().split())
-instrl = lambda: list(instrm())
+def inint(): return int(sys.stdin.readline())
+def inintm(): return map(int, sys.stdin.readline().split())
+def inintl(): return list(inintm())
+def instrm(): return map(str, sys.stdin.readline().split())
+def instrl(): return list(instrm())
+
 
 n = inint()
 
@@ -21,6 +22,6 @@ for i in range(n):
         z[s] = 1
 
 for i in z:
-    ans += z[i]*(z[i]-1)//2
+    ans += z[i] * (z[i] - 1) // 2
 
 print(ans)

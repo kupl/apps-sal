@@ -2,7 +2,6 @@ a = int(input())
 s = input()
 
 if a >= 3200:
-  print(s)
+    print(s)
 else:
-  print('red')
-
+    print('red')

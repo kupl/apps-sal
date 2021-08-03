@@ -3,6 +3,6 @@ x = int(input())
 
 # レートに沿ったメッセージを出力
 if x < 1200:
-  print("ABC")
+    print("ABC")
 else:
-  print("ARC")
+    print("ARC")

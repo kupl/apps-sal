@@ -32,4 +32,3 @@ if isValid:
     print(total)
 else:
     print(0)
-

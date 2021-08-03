@@ -14,5 +14,3 @@ for i in range(h):
                 print("No")
                 return
 print("Yes")
-
-

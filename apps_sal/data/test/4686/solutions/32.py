@@ -4,9 +4,8 @@ w = list(input())
 cnt = collections.Counter(w)
 ans = "Yes"
 for v in list(cnt.values()):
-    if v%2!=0:
+    if v % 2 != 0:
         ans = "No"
         break
-        
-print(ans)
 
+print(ans)

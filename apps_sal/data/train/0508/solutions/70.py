@@ -42,4 +42,3 @@ while queue:
                 stop, construction = x, n
         else:
             stop, construction = x, n
-

@@ -12,6 +12,7 @@ for i, (a, b) in enumerate(zip(*[iter(AB)] * 2)):
 
 X = [0] * N
 
+
 def dfs(u, p):
     res = 1
     for v, c in E[u]:
@@ -19,6 +20,7 @@ def dfs(u, p):
             res += dfs(v, c)
     X[p] = res
     return res
+
 
 dfs(0, -1)
 

@@ -19,4 +19,3 @@ def solution(roman):
             total += dict[c]
         last = dict[c]
     return total
-

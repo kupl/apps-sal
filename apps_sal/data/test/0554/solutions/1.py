@@ -9,4 +9,3 @@ for i in range(m):
     if (sm > 0):
         ans += sm
 print(ans)
-

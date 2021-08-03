@@ -1,9 +1,11 @@
 from collections import defaultdict, OrderedDict
+
+
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         trips = sorted(trips, key=lambda x: x[1])
         passengers = 0
-        
+
         dropoffs = defaultdict(int)
         for i in range(len(trips)):
             dropoffs[trips[i][2]] += trips[i][0]
@@ -19,6 +21,3 @@ class Solution:
             if passengers > capacity:
                 return False
         return True
-            
-        
-

@@ -5,4 +5,4 @@ def name_score(name):
             if c.upper() in k:
                 score += v
                 break
-    return {name:score}
+    return {name: score}

@@ -9,6 +9,6 @@ for j in range(N):
         dic[a] = 1
     else:
         dic[a] += 1
-        ans += dic[a]-1
+        ans += dic[a] - 1
 
 print(ans)

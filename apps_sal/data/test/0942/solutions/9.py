@@ -7,7 +7,7 @@ d = {}
 try:
     for k, v in c.items():
         if v % k == 0:
-            d[k] = v//k
+            d[k] = v // k
         else:
             raise ValueError()
     print('Possible')

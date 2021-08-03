@@ -6,7 +6,7 @@ class Solution:
         res = []
         for i, lake in enumerate(rains):
             locs[lake].append(i)
-        for i,rain in enumerate(rains):
+        for i, rain in enumerate(rains):
             # print(closest, rain)
             if closest and closest[0] == i:
                 return []

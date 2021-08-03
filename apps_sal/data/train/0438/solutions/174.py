@@ -4,7 +4,7 @@ class Solution:
         length = [0] * (len(arr) + 2)
         ans = -1
         for i, a in enumerate(arr):
-            left, right = length[a-1], length[a+1]
+            left, right = length[a - 1], length[a + 1]
             length[a] = left + right + 1
             length[a - left] = length[a]
             length[a + right] = length[a]
@@ -13,5 +13,4 @@ class Solution:
             count[left + right + 1] += 1
             if count[m] > 0:
                 ans = i + 1
-        return ans        
-
+        return ans

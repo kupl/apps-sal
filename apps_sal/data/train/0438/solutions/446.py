@@ -10,12 +10,12 @@ class UnionFind:
             return src
         self.parents[src] = self.find(self.parents[src])
         return self.parents[src]
-    
+
     def union(self, src: int, dest: int) -> bool:
         rootSrc, rootDest = self.find(src), self.find(dest)
         if rootDest == rootSrc:
             return False
-        
+
         if self.ranks[rootSrc] > self.ranks[rootDest]:
             self.parents[rootDest] = rootSrc
             self.ranks[rootSrc] += self.ranks[rootDest]
@@ -23,7 +23,8 @@ class UnionFind:
             self.parents[rootSrc] = rootDest
             self.ranks[rootDest] += self.ranks[rootSrc]
         return True
-    
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n, result = len(arr), -1

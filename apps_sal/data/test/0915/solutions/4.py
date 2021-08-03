@@ -1,13 +1,16 @@
 from math import *
 
+
 def rr(t):
     zzz = [t(i) for i in input().split()]
     if len(zzz) == 1:
         return zzz[0]
     return zzz
 
+
 def r3(t):
     return [t(i) for i in input()]
+
 
 k = int(input())
 cnt = 1
@@ -20,6 +23,5 @@ while cnt < k:
     ci = (ci + 1) % len(s)
 
 for i in range(len(ts)):
-    print(s[i]*ts[i], end='')
+    print(s[i] * ts[i], end='')
 print()
-

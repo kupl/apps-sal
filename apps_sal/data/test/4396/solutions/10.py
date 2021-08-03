@@ -11,6 +11,5 @@ for x, u in zip(X, U):
     if u == 'JPY':
         ans += x
     else:
-        ans += x*380000.
+        ans += x * 380000.
 print(ans)
-

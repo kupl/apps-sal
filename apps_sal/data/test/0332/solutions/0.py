@@ -14,4 +14,3 @@ if input_matrix() == input_matrix():
     print("YES")
 else:
     print("NO")
-

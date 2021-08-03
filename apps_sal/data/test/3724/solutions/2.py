@@ -35,4 +35,3 @@ for i, c in enumerate(s[p:], start=p):
     xor ^= c
 
 print((sum(dp) % MOD))
-

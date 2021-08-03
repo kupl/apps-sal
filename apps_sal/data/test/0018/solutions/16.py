@@ -26,4 +26,3 @@ for curr in letters():
             res.append(s.pop(-1))
 res += reversed(stack)
 print(''.join(res))
-

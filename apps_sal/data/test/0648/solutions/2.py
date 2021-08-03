@@ -17,4 +17,3 @@ while True:
     ans = max(ans, rans)
     y += 1
 print(ans)
-

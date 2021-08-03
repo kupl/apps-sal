@@ -41,4 +41,3 @@ class Solution:
             return -1
         else:
             return index + 1
-

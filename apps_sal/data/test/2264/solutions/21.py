@@ -13,4 +13,3 @@ for _ in range(t):
         print(res)
     else:
         print(0)
-

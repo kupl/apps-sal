@@ -1,2 +1,1 @@
-main =lambda *a:''.join(a)
-
+main = lambda *a: ''.join(a)

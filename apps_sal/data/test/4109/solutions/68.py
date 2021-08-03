@@ -8,7 +8,7 @@ for i in range(N):
     A.append(a)
 
 ans = float('INF')
-for i in range(1,N+1):
+for i in range(1, N + 1):
     for li in combinations(list(range(N)), i):
         cost = 0
         skill = [0] * M

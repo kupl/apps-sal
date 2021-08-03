@@ -1,10 +1,12 @@
 from collections import defaultdict
 
+
 def word_problem(rules, from_str, to_str, applications):
     d = defaultdict(list)
     for x, y in rules:
         d[y].append(x)
     b, visited = False, set()
+
     def dfs(s, p=0):
         nonlocal b
         if s == from_str:
@@ -13,7 +15,7 @@ def word_problem(rules, from_str, to_str, applications):
         if p >= len(to_str) or s in visited:
             return
         for i in range(0, len(s)):
-            for j in range(i+1, len(s)+1):
+            for j in range(i + 1, len(s) + 1):
                 k = s[i:j]
                 if k in d:
                     for v in d[k]:

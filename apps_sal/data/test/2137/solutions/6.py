@@ -1,6 +1,8 @@
 from sys import stdin
-rd = lambda: list(map(int, input().split()))
-g = lambda x, i: x.get(i, 0)
+def rd(): return list(map(int, input().split()))
+def g(x, i): return x.get(i, 0)
+
+
 n, a, b = rd()
 c, d = {}, {}
 r = 0
@@ -11,4 +13,3 @@ for z in range(n):
     c[i] = g(c, i) + 1
     d[j] = g(d, j) + 1
 print(2 * r)
-

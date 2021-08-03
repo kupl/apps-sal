@@ -1,5 +1,5 @@
 def solve(s):
-    wordSizes = [ len(x) for x in s.split() ]
+    wordSizes = [len(x) for x in s.split()]
     reversedS = s.replace(" ", "")[::-1]
     o = []
     for x in wordSizes:

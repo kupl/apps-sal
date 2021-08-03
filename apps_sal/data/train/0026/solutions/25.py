@@ -7,4 +7,3 @@ for _ in range(int(input())):
         print("YES")
         continue
     print("NO")
-

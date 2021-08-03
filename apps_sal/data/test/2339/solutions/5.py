@@ -11,4 +11,3 @@ for _ in range(int(input())):
         for i in range(len(arr)):
             arr[i] = (gcd(arr[i][0], x[0]), arr[i][1])
     print(*res)
-

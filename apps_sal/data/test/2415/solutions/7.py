@@ -121,6 +121,7 @@ elements = {
 
 res = False
 
+
 def test(s):
     if s == '':
         nonlocal res
@@ -130,8 +131,7 @@ def test(s):
     if s[:2] in elements:
         test(s[2:])
 
+
 s = input()
 test(s)
 print(['NO', 'YES'][res])
-
-

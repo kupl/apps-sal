@@ -1,12 +1,13 @@
 from itertools import permutations
 
+
 class Solution:
     digitMap = {}
     wordsRev = []
     resultRev = []
     limit = 0
-    
-    def findSolution(self, n, carry = 0):
+
+    def findSolution(self, n, carry=0):
         if n == self.limit:
             # Check leading zero policy
             leadingDigitChars = [w[len(w) - 1] for w in self.wordsRev]
@@ -36,7 +37,7 @@ class Solution:
             if resultDigit >= 0 and s == resultDigit:
                 for i, v in enumerate(d):
                     self.digitMap[unknownDigitChars[i]] = v
-                if self.findSolution(n+1, c):
+                if self.findSolution(n + 1, c):
                     return True
                 else:
                     # Fallback
@@ -54,7 +55,7 @@ class Solution:
                             del self.digitMap[unknownDigitChars[i]]
                     continue
 
-                if self.findSolution(n+1, c):
+                if self.findSolution(n + 1, c):
                     return True
                 else:
                     # Fallback
@@ -64,7 +65,7 @@ class Solution:
                     if resultChar in self.digitMap:
                         del self.digitMap[resultChar]
         return False
-            
+
     def isSolvable(self, words: List[str], result: str) -> bool:
         self.digitMap = {}
         self.wordsRev = [w[::-1] for w in words]

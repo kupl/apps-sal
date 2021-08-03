@@ -9,7 +9,3 @@ class Solution:
                 value = max(A[i + j - 1], value)
                 dp[i + j] = max(dp[i] + value * j, dp[i + j])
         return dp[-1]
-       
-        
-            
-

@@ -9,6 +9,3 @@ for i in range(2, round(math.sqrt(n)) + 1):
 if n != 0:
     res *= n
 print(res)
-
-
-

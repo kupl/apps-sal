@@ -12,10 +12,10 @@ while tmp <= N:
     K += 1
 
 parent = [[None] * N for _ in range(K)]
-parent[0][N-1] = N-1
-for i in range(N-1):
+parent[0][N - 1] = N - 1
+for i in range(N - 1):
     d = bisect_right(x, x[i] + L)
-    parent[0][i] = d-1
+    parent[0][i] = d - 1
 
 # print(parent[0])
 #     print(depth)
@@ -29,7 +29,7 @@ for k in range(1, K):
 Q = int(input())
 for _ in range(Q):
     ans = 0
-    a, b = [int(x)-1 for x in input().split()]
+    a, b = [int(x) - 1 for x in input().split()]
     if a > b:
         a, b = b, a
     # print(a, b)
@@ -37,5 +37,4 @@ for _ in range(Q):
         if parent[i][a] < b:
             a = parent[i][a]
             ans += pow(2, i)
-    print((ans+1))
-
+    print((ans + 1))

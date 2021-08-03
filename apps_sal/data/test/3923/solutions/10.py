@@ -21,4 +21,3 @@ for i in range(y):
     for j in range(b - 1):
         print(pos + j, end=' ')
     pos += b
-

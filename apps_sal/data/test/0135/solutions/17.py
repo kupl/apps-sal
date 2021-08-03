@@ -1,7 +1,10 @@
 from fractions import gcd
+
+
 def lcm(a, b):
     return (a // gcd(a, b)) * b
-    
+
+
 n, k = map(int, input().split())
 if k == 1:
     print("Yes")

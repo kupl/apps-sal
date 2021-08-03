@@ -15,4 +15,3 @@ if cnt.count(0) == 25:
     print('Yes')
 else:
     print('No')
-

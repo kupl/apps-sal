@@ -5,4 +5,6 @@ def __starting_point():
         ans += a // b
         a = a // b + a % b
     print(ans)
+
+
 __starting_point()

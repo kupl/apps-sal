@@ -6,11 +6,10 @@ for i in range(2, n + 1):
     if siv[i] == 0:
         for j in range(i + i, n + 1, i):
             siv[j] = i
-    siv[i] = i - siv[i] + 1;
+    siv[i] = i - siv[i] + 1
 
 ans = n
 for i in range(siv[n], n + 1):
     ans = min(ans, siv[i])
 
 print(ans)
-

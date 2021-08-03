@@ -1,1 +1,1 @@
-to_bits=lambda s:list(map(set(map(int,s.split('\n'))).__contains__,range(5000)))
+def to_bits(s): return list(map(set(map(int, s.split('\n'))).__contains__, range(5000)))

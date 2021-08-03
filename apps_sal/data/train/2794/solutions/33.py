@@ -12,6 +12,3 @@ def calculate_age(year_of_birth, current_year):
             return 'You will be born in ' + str(-d) + ' years.'
     else:
         return 'You were born this very year!'
-    
-    
-

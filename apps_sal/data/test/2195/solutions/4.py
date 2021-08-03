@@ -6,4 +6,3 @@ for _ in range(int(input())):
         print((x + y) * a)
     else:
         print(min(x, y) * b + (max(x, y) - min(x, y)) * a)
-

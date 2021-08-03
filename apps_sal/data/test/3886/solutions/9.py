@@ -8,64 +8,63 @@ b = list(map(len, a))
 
 q = int(input())
 
-f = lambda n: 143 * 2**min(n, 54) - 68
 
-	
+def f(n): return 143 * 2**min(n, 54) - 68
+
 
 for _ in range(q):
 
-	n, k = map(int, input().split())
+    n, k = map(int, input().split())
 
-	ans = ""
+    ans = ""
 
-	while n > 0 and b[0] < k < b[0] + f(n-1):
+    while n > 0 and b[0] < k < b[0] + f(n - 1):
 
-		k -= b[0]
+        k -= b[0]
 
-		n -= 1
+        n -= 1
 
-	while not ans:
+    while not ans:
 
-		w = f(n-1)
+        w = f(n - 1)
 
-		if k > f(n):
+        if k > f(n):
 
-			ans = "."
+            ans = "."
 
-		elif n == 0:
+        elif n == 0:
 
-			ans = f0[k-1]
+            ans = f0[k - 1]
 
-		elif k <= b[0]:
+        elif k <= b[0]:
 
-			ans = a[0][k-1]
+            ans = a[0][k - 1]
 
-		elif k <= b[0] + w:
+        elif k <= b[0] + w:
 
-			k -= b[0]
+            k -= b[0]
 
-			n -= 1
+            n -= 1
 
-		elif k <= b[0] + w + b[1]:
+        elif k <= b[0] + w + b[1]:
 
-			k -= b[0] + w
+            k -= b[0] + w
 
-			ans = a[1][k-1]
+            ans = a[1][k - 1]
 
-		elif k <= b[0] + w + b[1] + w:
+        elif k <= b[0] + w + b[1] + w:
 
-			k -= b[0] + w + b[1]
+            k -= b[0] + w + b[1]
 
-			n -= 1
+            n -= 1
 
-		else:
+        else:
 
-			k -= b[0] + w + b[1] + w
+            k -= b[0] + w + b[1] + w
 
-			ans = a[2][k-1]
+            ans = a[2][k - 1]
 
-	print(ans, end="")
-
+    print(ans, end="")
 
 
 # Made By Mostafa_Khaled

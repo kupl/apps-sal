@@ -13,10 +13,9 @@ for i in range(n):
     else:
         selq[p] += q
 a = sorted(selq.keys())
-for i in a[min(s, len(selq))-1::-1]:
+for i in a[min(s, len(selq)) - 1::-1]:
     print("S", i, selq[i])
 
 b = sorted(buyq.keys())
 for i in b[::-1][:min(s, len(buyq)):]:
     print("B", i, buyq[i])
-

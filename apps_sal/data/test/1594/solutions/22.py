@@ -16,4 +16,4 @@ for i in range(1, n):
 
 for i in range(len(m)):
     i = bisect.bisect_left(T, m[i], 0, n)
-    print(i+1)
+    print(i + 1)

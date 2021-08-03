@@ -33,11 +33,11 @@ class Solution:
 
 
 class KMPTable:
-    
+
     def __init__(self, s):
         self.s = s
         self._init_table()
-        
+
     def _init_table(self):
         self.table = [0, 0]
         for i in range(1, len(self.s)):
@@ -49,4 +49,3 @@ class KMPTable:
         if c == self.s[idx]:
             return idx + 1
         return self.match(c, self.table[idx]) if idx > 0 else 0
-

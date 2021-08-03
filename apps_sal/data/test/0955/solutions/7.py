@@ -21,4 +21,3 @@ if dp[7] == 1e9:
     print(-1)
 else:
     print(dp[7])
-

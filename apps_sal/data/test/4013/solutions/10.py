@@ -9,4 +9,3 @@ if (y2 - x1) > (y1 - x2):
     print(y1 - x2)
 else:
     print(y2 - x1)
-

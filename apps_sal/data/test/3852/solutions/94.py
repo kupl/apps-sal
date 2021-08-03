@@ -1,5 +1,7 @@
 # でつoO(YOU PLAY WITH THE CARDS YOU'RE DEALT..)
 import sys
+
+
 def main(N, A):
     mxi = -1
     mxa = 0
@@ -26,10 +28,12 @@ def main(N, A):
     for a in ans:
         print((*a))
 
+
 def __starting_point():
     input = sys.stdin.readline
     N = int(input())
     *A, = list(map(int, input().split()))
     main(N, A)
+
 
 __starting_point()

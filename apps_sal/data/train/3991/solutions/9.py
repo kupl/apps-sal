@@ -6,7 +6,7 @@ def highest_rank(arr):
             freq[num] += 1
         else:
             freq[num] = 1
-            mx = [0,0]
+            mx = [0, 0]
     maxes = []
     for num in freq:
         if freq[num] > mx[1]:
@@ -17,4 +17,3 @@ def highest_rank(arr):
             maxes.append(num)
 
     return max(maxes)
-

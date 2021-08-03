@@ -1,5 +1,6 @@
 list_keys = ['A', 'B', 'C', 'AB', 'BC', 'AC', 'ABC', '1', '2']
 
+
 def sortStr(s):
     res = ''
     s = sorted(s)
@@ -7,9 +8,11 @@ def sortStr(s):
         res += c
     return res
 
-def check(s1, s2 ,s3):
+
+def check(s1, s2, s3):
     s = s1 + s2 + s3
     return 'A' in s and 'B' in s and 'C' in s
+
 
 val = {}
 INF = 1e9

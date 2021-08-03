@@ -5,4 +5,3 @@ p1 = (n * v2 - dif) * L
 p2 = (n * v1 + dif) * v2
 ans = p1 / p2
 print(ans)
-

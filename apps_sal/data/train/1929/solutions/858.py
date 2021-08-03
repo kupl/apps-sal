@@ -1,9 +1,9 @@
 class Trie:
-    
+
     def __init__(self):
         self.root = {}
         self.curr = self.root
-    
+
     def add(self, word):
         node = self.root
         for char in word:
@@ -11,7 +11,7 @@ class Trie:
                 node[char] = {}
             node = node[char]
         node['.'] = True
-        
+
     def search(self, char):
         node = self.curr
         if char in node:
@@ -21,6 +21,7 @@ class Trie:
         else:
             self.curr = self.root
             return False
+
 
 class StreamChecker:
 
@@ -41,6 +42,7 @@ class StreamChecker:
             else:
                 break
         return False
+
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)

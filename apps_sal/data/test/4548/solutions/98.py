@@ -16,4 +16,3 @@ for i in range(x, n + 1):
         r_cost += 1
 
 print((min(l_cost, r_cost)))
-

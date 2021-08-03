@@ -4,4 +4,4 @@ def nth_even(n):
     elif n == 2:
         return n
     else:
-        return n * 2 - 2 
+        return n * 2 - 2

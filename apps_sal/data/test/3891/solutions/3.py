@@ -11,4 +11,3 @@ for i in reversed(list(range(n))):
         if matrix[i][j] == "B":
             rd = (i, j)
 print((lu[0] + rd[0]) // 2 + 1, (lu[1] + rd[1]) // 2 + 1)
-

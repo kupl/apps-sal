@@ -30,7 +30,6 @@ if(k == 2):
     res += 1
 elif(k > 2):
     print(-1)
-    return  
-    
-print(res)      
+    return
 
+print(res)

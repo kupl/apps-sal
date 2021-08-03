@@ -1,19 +1,24 @@
 import sys
- 
+
+
 def input():
     return sys.stdin.readline()
- 
+
+
 def iinput():
     return int(input())
- 
+
+
 def rinput():
     return input().split()
- 
+
+
 def rlinput():
     return [int(i) for i in input().split()]
- 
+
+
 def main():
-    #q = rlinput() rinput() iinput() input()
+    # q = rlinput() rinput() iinput() input()
     q = [0] * 100
     u, v = rlinput()
     if u <= v:
@@ -28,14 +33,14 @@ def main():
             print(-1)
             return 0
         fl = True
-        
+
         for i in range(70):
             if (v - u) & (1 << i):
                 q[i - 1] += 1
                 if u & (1 << (i - 1)):
                     fl = False
         w = [u, 0]
-        
+
         if fl:
             for i in range(70):
                 if q[i]:
@@ -46,15 +51,14 @@ def main():
             for i in range(70):
                 if q[i]:
                     w[1] += 1 << i
-                    w[2] += 1 << i  
-                    
+                    w[2] += 1 << i
+
         print(len(w))
         print(*w)
-        
+
     else:
         print(-1)
-    
-    
-    
+
+
 for i in range(1):
     main()

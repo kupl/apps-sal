@@ -45,7 +45,7 @@ while len(proc) > 0:
         lowerBound[r] = max(lowerBound[node], v)
         if not (lowerBound[r] <= nodes[r][0] <= upperBound[r]):
             broken[r] = True
-        
+
 s = set([])
 for v, b in zip(values, broken):
     if not b:

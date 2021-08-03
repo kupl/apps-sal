@@ -4,7 +4,7 @@ class Solution:
         for u, v in edges:
             neighbors[u].append(v)
             neighbors[v].append(u)
-        
+
         def dfs(u, tt, r):
             if tt > t or u in visited:
                 return 0
@@ -16,7 +16,7 @@ class Solution:
             visited.add(u)
             m = 0
             for v in neighbors[u]:
-                m = max(m, dfs(v, tt+1, False))
+                m = max(m, dfs(v, tt + 1, False))
             visited.remove(u)
             if r and neighbors[u]:
                 return m / len(neighbors[u])
@@ -24,8 +24,6 @@ class Solution:
                 return m / (len(neighbors[u]) - 1)
             else:
                 return 0
-        
+
         visited = set()
         return dfs(1, 0, True)
-            
-

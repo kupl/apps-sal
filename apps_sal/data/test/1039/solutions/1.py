@@ -1,10 +1,11 @@
-import sys
-def input():return sys.stdin.readline().strip()
 from collections import deque
+import sys
+def input(): return sys.stdin.readline().strip()
+
 
 def main():
     N = int(input())
-    info = [tuple(map(int, input().split())) for _ in range(N-1)]
+    info = [tuple(map(int, input().split())) for _ in range(N - 1)]
     Q, K = map(int, input().split())
     queries = [tuple(map(int, input().split())) for _ in range(Q)]
 
@@ -14,9 +15,10 @@ def main():
         b -= 1
         to[a].append((b, c))
         to[b].append((a, c))
-    
+
     INF = 10**18
-    dist = [INF]*N
+    dist = [INF] * N
+
     def dfs(s):
         stack = deque()
         push = stack.append
@@ -35,7 +37,6 @@ def main():
                 dist[nv] = now_cost + c
                 push(nv)
 
-
     # query
     K -= 1
     dfs(K)
@@ -47,6 +48,10 @@ def main():
         ans.append(xy)
 
     print(*ans, sep="\n")
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

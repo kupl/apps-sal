@@ -18,8 +18,8 @@ def main():
         while now > 0:
             for i in range(M, 0, -1):
                 j = now - i
-                if j>=0:
-                    if S[j]=='0':
+                if j >= 0:
+                    if S[j] == '0':
                         ans.append(i)
                         now = j
                         break
@@ -34,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

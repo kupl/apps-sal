@@ -10,7 +10,7 @@ def main():
     a, b = Input()
     s = input()
 
-    if all(chr == "-" if index==a else chr.isdigit() for index, chr in enumerate(s)):
+    if all(chr == "-" if index == a else chr.isdigit() for index, chr in enumerate(s)):
         print("Yes")
     else:
         print("No")

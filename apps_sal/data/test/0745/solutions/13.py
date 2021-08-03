@@ -1,5 +1,6 @@
 class Combination:
     """階乗とその逆元のテーブルをO(N)で事前作成し、組み合わせの計算をO(1)で行う"""
+
     def __init__(self, n, MOD):
         self.fact = [1]
         for i in range(1, n + 1):
@@ -30,9 +31,9 @@ class Combination:
             return 0
         return (self.fact[k] * self.inv_fact[k - r] * self.inv_fact[r]) % self.MOD
 
-      
+
 n, k = map(int, input().split())
-MOD = 998244353 
+MOD = 998244353
 comb = Combination(10 ** 6, MOD)
 
 ball = n

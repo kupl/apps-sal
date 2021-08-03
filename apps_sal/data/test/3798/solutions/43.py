@@ -16,7 +16,7 @@ def digit_sum(n, s):
         b = (n - s) // p + 1
         if b > 1 and f(b, n) == s:
             return b
-        
+
         p -= 1
 
     return -1
@@ -28,11 +28,12 @@ def f(b, n):
 
     return f(b, n // b) + (n % b)
 
+
 def solve():
     n = int(input())
     s = int(input())
     result = digit_sum(n, s)
     print(result)
 
-solve()
 
+solve()

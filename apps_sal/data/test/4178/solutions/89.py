@@ -1,9 +1,9 @@
 N = int(input())
 H = list(map(int, input().split()))
-border = H[N-1]
+border = H[N - 1]
 
 ans = True
-for i in range(N-2, -1, -1):
+for i in range(N - 2, -1, -1):
     if H[i] <= border:
         border = H[i]
     else:

@@ -30,10 +30,10 @@ def COMinit():
     fac[1] = 1
     finv[0] = 1
     finv[1] = 1
-    inv[1] = 1;
+    inv[1] = 1
     for i in range(2, MAX):
         fac[i] = fac[i - 1] * i % MOD
-        inv[i] = MOD - inv[MOD%i] * (MOD // i) % MOD
+        inv[i] = MOD - inv[MOD % i] * (MOD // i) % MOD
         finv[i] = finv[i - 1] * inv[i] % MOD
     return None
 
@@ -59,7 +59,7 @@ COMinit()
 dp = [0] * N
 
 for n in range(1, N):
-    dp[n] = dp[n-1]
+    dp[n] = dp[n - 1]
     for i in range(n):
         if i == 0:
             dp[n] = (dp[n] + COM(n - i - 1, A[i] - 1)) % MOD

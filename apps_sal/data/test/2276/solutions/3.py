@@ -10,6 +10,7 @@ for i in range(1, n + 1):
 
 res = {}
 
+
 @lru_cache(None)
 def score(s):
     length = len(s)

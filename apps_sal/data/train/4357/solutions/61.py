@@ -1,2 +1,2 @@
 def nth_smallest(arr, k):
-    return sorted(arr)[k-1]
+    return sorted(arr)[k - 1]

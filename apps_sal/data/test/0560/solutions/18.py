@@ -8,7 +8,7 @@ new_table = []
 for line in table:
     if "S" in line:
         new_table.append(line)
-res = (len(table) - len(new_table))*c
+res = (len(table) - len(new_table)) * c
 r -= len(table) - len(new_table)
 for col in range(c):
     for row in range(r):

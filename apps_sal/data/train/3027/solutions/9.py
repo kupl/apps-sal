@@ -7,4 +7,3 @@ def is_solved(board):
         return True
     else:
         return False
-

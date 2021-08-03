@@ -61,4 +61,5 @@ def __starting_point():
     # メイン処理
     main(D, G, p, c)
 
+
 __starting_point()

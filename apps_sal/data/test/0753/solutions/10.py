@@ -8,7 +8,7 @@ def gcd(a, b):
 
 
 class Fraction:
-    def __init__(self, p = 0, q = 1, reduced = True):
+    def __init__(self, p=0, q=1, reduced=True):
         if type(p) == int:
             self.p = p
             if type(q) == int:
@@ -212,8 +212,9 @@ class Fraction:
     def __float__(self):
         return self.p / self.q
 
-    def __round__(self, digits = 0):
+    def __round__(self, digits=0):
         return round(float(self), digits)
+
 
 a, b, c, d = list(map(int, input().split()))
 product = a * c
@@ -227,4 +228,3 @@ if ans != 0:
     print(abs(ans))
 else:
     print("0/1")
-

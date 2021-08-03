@@ -12,4 +12,3 @@ class Solution:
                 if not counters[j] ^ counters[j - length]:
                     return length
         return 0
-

@@ -2,7 +2,7 @@ import sys
 from collections import deque
 # wtfffffffffffff
 for case in range(int(input())):
-    n, m = map(int, sys.stdin.readline().split()) #fast io
+    n, m = map(int, sys.stdin.readline().split())  # fast io
     g = [[] for i in range(n + 1)]
     for i in range(m):
         x, y = map(int, sys.stdin.readline().split())
@@ -24,10 +24,10 @@ for case in range(int(input())):
                     col[To] = 1
                 ans[col[To] % 2].append(To)
                 Q.append(To)
- 
+
     if len(ans[0]) < len(ans[1]):
         print(len(ans[0]))
-        #print(*ans[0])
+        # print(*ans[0])
         for each in ans[0]:
             print(each)
     else:

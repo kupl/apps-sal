@@ -4,6 +4,6 @@ def run_length_encoding(s):
     while i < len(s):
         while j < len(s) and s[i] == s[j]:
             j += 1
-        result.append([j-i, s[i]])
+        result.append([j - i, s[i]])
         i = j
     return result

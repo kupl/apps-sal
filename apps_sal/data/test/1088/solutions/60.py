@@ -45,30 +45,31 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,k = map(int,input().split())
+
+n, k = map(int, input().split())
 a = []
 for i in range(n):
-    ai = list(map(int,input().split()))
+    ai = list(map(int, input().split()))
     a.append(ai)
 
 u = UnionFind(n)
 mod = 998244353
 
-for i in range(n-1):
-    for j in range(i+1,n):
+for i in range(n - 1):
+    for j in range(i + 1, n):
         ai = a[i]
         aj = a[j]
         bit = False
-        aij = [i+j for i,j in zip(ai,aj)]
-        if max(aij)<=k:
+        aij = [i + j for i, j in zip(ai, aj)]
+        if max(aij) <= k:
             bit = True
         if bit:
-            u.union(i,j)
+            u.union(i, j)
 ans = 1
 for i in u.all_group_members():
     li = len(u.members(i))
     res = 1
-    for j in range(1,li+1):
+    for j in range(1, li + 1):
         res *= j
         res %= mod
     ans *= res
@@ -77,23 +78,23 @@ o = UnionFind(n)
 mod = 998244353
 b = list(map(list, zip(*a)))
 
-for i in range(n-1):
-    for j in range(i+1,n):
+for i in range(n - 1):
+    for j in range(i + 1, n):
         bi = b[i]
         bj = b[j]
         bit = False
-        bij = [i+j for i,j in zip(bi,bj)]
-        if max(bij)<=k:
+        bij = [i + j for i, j in zip(bi, bj)]
+        if max(bij) <= k:
             bit = True
         if bit:
-            o.union(i,j)
+            o.union(i, j)
 
 for i in o.all_group_members():
     li = len(o.members(i))
     res = 1
-    for j in range(1,li+1):
+    for j in range(1, li + 1):
         res *= j
         res %= mod
     ans *= res
 
-print(ans%mod)
+print(ans % mod)

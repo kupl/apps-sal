@@ -9,4 +9,3 @@ ans = A[0]
 for a in A[1:]:
     ans = gcd(ans, a)
 print(ans)
-

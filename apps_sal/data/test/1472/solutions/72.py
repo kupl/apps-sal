@@ -13,4 +13,3 @@ for i in range(1, N):
         d[a] += 1
 for ans in d[1:]:
     print(ans)
-

@@ -3,5 +3,3 @@ class Solution:
         piles.sort()
         piles = piles[::-1]
         return sum(piles[x] for x in range(1, 2 * len(piles) // 3, 2))
-        
-

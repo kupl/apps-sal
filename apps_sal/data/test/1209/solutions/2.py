@@ -3,7 +3,7 @@
 
 
 import sys
-from math import ceil,floor
+from math import ceil, floor
 
 ###Defines...###
 mod = 1000000007
@@ -18,8 +18,8 @@ def nospace(l):
 ##### Main ####
 t = 1
 for tt in range(t):
-    n=int(input())
-    a=[]
+    n = int(input())
+    a = []
 
     for i in range(n):
         a.append(float(input()))
@@ -27,27 +27,27 @@ for tt in range(t):
     intcnt = 0
 
     for num in a:
-        if(ceil(num)==floor(num)):
-            intcnt+=1
+        if(ceil(num) == floor(num)):
+            intcnt += 1
 
-    non_int = n-intcnt
+    non_int = n - intcnt
 
-    minsum=0
-    ans=[]
+    minsum = 0
+    ans = []
 
     for num in a:
-        minsum+=floor(num)
+        minsum += floor(num)
         ans.append(floor(num))
 
-    if(abs(minsum)<=non_int ):
+    if(abs(minsum) <= non_int):
         cnt = abs(minsum)
 
         for i in range(n):
             if cnt == 0:
                 break
-            if(floor(a[i])!=ceil(a[i])):
-                ans[i]+=1
-                cnt-=1
+            if(floor(a[i]) != ceil(a[i])):
+                ans[i] += 1
+                cnt -= 1
         for num in ans:
             print(num)
 
@@ -56,20 +56,17 @@ for tt in range(t):
         newans = []
 
         for num in a:
-            maxsum+=ceil(num)
+            maxsum += ceil(num)
             ans.append(ceil(num))
 
-        assert(maxsum<=non_int)
+        assert(maxsum <= non_int)
 
         for i in range(n):
             if maxsum == 0:
                 break
-            if(floor(a[i])!=ceil(a[i])):
-                ans[i]-=1
-                maxsum-=1
+            if(floor(a[i]) != ceil(a[i])):
+                ans[i] -= 1
+                maxsum -= 1
 
         for num in ans:
             print(num)
-
-
-

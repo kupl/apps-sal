@@ -9,7 +9,7 @@ s = 1
 for x in MXusL(MXusl, MXuso().split()):
     l = 0
     r = s
-    while r-l > 1:
+    while r - l > 1:
         m = (l + r) >> 1
         if a[m] < x:
             l = m
@@ -18,4 +18,3 @@ for x in MXusL(MXusl, MXuso().split()):
     s += r == s
     a[r] = MXusr(a[r], x)
 MXusI(s - 1)
-

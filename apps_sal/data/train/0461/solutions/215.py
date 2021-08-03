@@ -5,7 +5,7 @@ class Solution:
         res = 0
         for i, v in enumerate(manager):
             subordinates[v].append(i)
-            
+
         while q:
             u, time = q.popleft()
             res = max(res, time)

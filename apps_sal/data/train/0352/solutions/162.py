@@ -4,13 +4,12 @@ class Solution:
         lengths = [1] * len(words)
         for i in range(len(words)):
             for j in range(i):
-                if self.checkifSuccessor(words[j],words[i]):
+                if self.checkifSuccessor(words[j], words[i]):
                     lengths[i] = max(lengths[i], lengths[j] + 1)
         return max(lengths)
-                    
-                
+
     def checkifSuccessor(self, word1, word2):
-        if len(word1) + 1 !=  len(word2):
+        if len(word1) + 1 != len(word2):
             return False
         else:
             indexOfword1 = 0
@@ -26,6 +25,3 @@ class Solution:
                     else:
                         differentReached = True
             return True
-            
-                    
-

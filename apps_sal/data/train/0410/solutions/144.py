@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
         d = defaultdict(list)
@@ -8,7 +10,7 @@ class Solution:
             while res != 1:
                 if res % 2 == 0:
                     res /= 2
-                elif res %2 == 1:
+                elif res % 2 == 1:
                     res = res * 3 + 1
                 cnt += 1
             d[cnt].append(integer)
@@ -16,4 +18,4 @@ class Solution:
         ans = []
         for key in keys:
             ans += sorted(d[key])
-        return ans[k-1]
+        return ans[k - 1]

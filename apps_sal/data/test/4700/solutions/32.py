@@ -4,10 +4,10 @@ h = list(map(int, input().split()))
 all_dict = {}
 for m in range(M):
     a, b = list(map(int, input().split()))
-    
+
     a -= 1
     b -= 1
-    
+
     all_dict.setdefault(a, [])
     all_dict.setdefault(b, [])
 
@@ -25,6 +25,3 @@ for i in range(N):
     total_good += is_good
 
 print(total_good)
-
-
-

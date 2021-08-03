@@ -5,11 +5,11 @@ from collections import deque
 
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-input = lambda: sys.stdin.readline().strip()
-NI = lambda: int(input())
-NMI = lambda: map(int, input().split())
-NLI = lambda: list(NMI())
-SI = lambda: input()
+def input(): return sys.stdin.readline().strip()
+def NI(): return int(input())
+def NMI(): return map(int, input().split())
+def NLI(): return list(NMI())
+def SI(): return input()
 
 
 def main():
@@ -18,8 +18,8 @@ def main():
     ls = len(S)
     lt = len(T)
     R = []
-    for i in range(ls-lt+1):
-        SS = S[i:i+lt]
+    for i in range(ls - lt + 1):
+        SS = S[i:i + lt]
         is_ok = True
         for s, t in zip(SS, T):
             if s != "?" and s != t:
@@ -30,7 +30,7 @@ def main():
         for j, s in enumerate(S):
             if j == i:
                 r += T
-            elif i < j < i+lt:
+            elif i < j < i + lt:
                 pass
             elif s == "?":
                 r += "a"
@@ -44,7 +44,8 @@ def main():
         print("UNRESTORABLE")
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

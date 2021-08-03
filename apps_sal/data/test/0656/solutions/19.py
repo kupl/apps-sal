@@ -2,7 +2,10 @@ import math
 from collections import Counter, defaultdict
 from itertools import accumulate
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n, k = R()
 ts = list(R()) + [-1]
 k -= sum(1 if t < 0 else 0 for t in ts[:n])

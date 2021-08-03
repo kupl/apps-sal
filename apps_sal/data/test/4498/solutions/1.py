@@ -7,4 +7,3 @@ if (a_b and b_c) or c_a:
     print('Yes')
 else:
     print('No')
-

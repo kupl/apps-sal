@@ -12,4 +12,3 @@ class Solution:
             if count[m]:
                 ans = i + 1
         return ans
-

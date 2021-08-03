@@ -8,7 +8,7 @@ for i in range(n):
         break
 else:
     for i in range(n):
-        print(i+1, d[i].index('.')+1)
+        print(i + 1, d[i].index('.') + 1)
     return
 
 for i in range(n):
@@ -22,7 +22,7 @@ else:
     for i in range(n):
         for j in range(n):
             if d[j][i] == '.':
-                print(j+1, i+1)
+                print(j + 1, i + 1)
                 break
     return
 print(-1)

@@ -26,4 +26,3 @@ else:
            abs(make_y(A[0]) - A[1]) + abs(make_x(B[1]) - B[0]) + ro([A[0], make_y(A[0])], [make_x(B[1]), B[1]]),
            abs(make_x(A[1]) - A[0]) + abs(make_x(B[1]) - B[0]) + ro([make_x(A[1]), A[1]], [make_x(B[1]), B[1]])]
     print(min(ans))
-

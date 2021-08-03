@@ -18,4 +18,3 @@ for x, v in list(s.items()):
     ans = max(ans, now)
 
 print(ans)
-

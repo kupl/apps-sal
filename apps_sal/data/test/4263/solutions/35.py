@@ -1,6 +1,6 @@
 S = input()
 
-lst = ['A', 'C', 'G',  'T']
+lst = ['A', 'C', 'G', 'T']
 count = 0
 top = 0
 

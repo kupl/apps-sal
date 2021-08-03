@@ -26,4 +26,3 @@ class Solution:
                 if not connected[j]:
                     heapq.heappush(min_cost_pq, (dist[i][j], j))
         return res
-

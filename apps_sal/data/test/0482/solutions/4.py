@@ -6,4 +6,3 @@ str = string.ascii_lowercase[:k]
 ans = str * (n // k) + str[:(n % k)]
 
 print(ans)
-

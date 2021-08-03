@@ -34,5 +34,5 @@ def main():
     write(n - len(out))
     write(''.join(out))
 
-main()
 
+main()

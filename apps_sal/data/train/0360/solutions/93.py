@@ -28,4 +28,3 @@ class Solution:
             else:
                 lo = mi + 1
         return ans
-

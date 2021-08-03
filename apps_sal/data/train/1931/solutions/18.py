@@ -25,7 +25,7 @@ class Solution:
             cool.append(head.__next__)
             if cool[-1] == None:
                 return True
-        
+
         l = r = False
         if root.left:
             l = self.isSubPath(head, root.left, path.copy(), cool)
@@ -39,4 +39,3 @@ class Solution:
         if root.left is None and root.right is None:
             cool = []
         return False
-

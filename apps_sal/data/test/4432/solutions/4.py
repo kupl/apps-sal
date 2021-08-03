@@ -19,4 +19,3 @@ for _ in range(int(input())):
         s += max(bb)
 
     print(s)
-

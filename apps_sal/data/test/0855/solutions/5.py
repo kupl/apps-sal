@@ -2,21 +2,19 @@
 # encoding: utf-8
 
 
-
-#----------
+# ----------
 # Constants
-#----------
+# ----------
 
 
-
-#----------
+# ----------
 # Functions
-#----------
+# ----------
 
 # Reads a string from stdin, splits it by space chars, converts each
 # substring to int, adds it to a list and returns the list as a result.
 def get_ints():
-    return [ int(n) for n in input().split() ]
+    return [int(n) for n in input().split()]
 
 
 def move(matrix, a, b):
@@ -33,14 +31,14 @@ def game(a, b):
         return (0, 0)
 
 
-#----------
+# ----------
 # Execution start point
-#----------
+# ----------
 
 def __starting_point():
     z = get_ints()
     assert len(z) == 3
-    k, a, b = z[0], z[1]-1, z[2]-1
+    k, a, b = z[0], z[1] - 1, z[2] - 1
 
     alice = list()
     for i in range(3):
@@ -94,5 +92,6 @@ def __starting_point():
         bpoint += db
 
     print(apoint, bpoint)
+
 
 __starting_point()

@@ -22,4 +22,3 @@ for order in sell_orders[-s:]:
     print('S', order[0], order[1])
 for order in buy_orders[:s]:
     print('B', order[0], order[1])
-

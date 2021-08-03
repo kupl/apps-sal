@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         array = [char for char in s]
@@ -24,8 +25,6 @@ class Solution:
                 array[components[parent][k]] = tmp[k]
         return ''.join(array)
 
-        
-    
     def union(self, i, j, parents):
         if not parents.get(i):
             parents[i] = i
@@ -34,22 +33,9 @@ class Solution:
         pi, pj = self.find(i, parents), self.find(j, parents)
         parents[pj] = pi
         parents[i] = pi
-    
+
     def find(self, i, parents):
         while parents[i] != i:
             parents[i] = parents[parents[i]]
             i = parents[i]
         return parents[i]
-        
-                
-                
-                    
-            
-    
-        
-        
-                    
-                    
-            
-        
-

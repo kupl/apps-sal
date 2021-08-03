@@ -17,5 +17,3 @@ else:
             money -= p[i + 2]
         i += mind + 2
     print(money)
-    
-

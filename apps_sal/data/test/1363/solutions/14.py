@@ -1,5 +1,6 @@
 import bisect
 
+
 def binom(n, k):
     if k > n:
         return 0
@@ -12,10 +13,12 @@ def binom(n, k):
     else:
         assert False
 
+
 def get_len(arr, a, b):
     lo = bisect.bisect_left(arr, a)
     hi = bisect.bisect_right(arr, b)
     return hi - lo
+
 
 def solve(gs, ds, fs):
     ans = 0
@@ -54,6 +57,7 @@ def solve(gs, ds, fs):
 
     return ans
 
+
 _, _, _ = [int(v) for v in input().split()]
 gs = [int(v) for v in input().split()]
 ds = [int(v) for v in input().split()]
@@ -65,4 +69,3 @@ fs.sort()
 
 ans = solve(gs, ds, fs)
 print(ans)
-

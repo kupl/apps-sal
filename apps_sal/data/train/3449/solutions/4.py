@@ -10,4 +10,3 @@ def categorize_study(p_value, requirements):
         return "Needs review"
     if score >= .015:
         return "Pants on fire"
-

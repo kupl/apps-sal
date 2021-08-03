@@ -1,1 +1,1 @@
-count_squareable=lambda n:int(n*.75+0.25)
+def count_squareable(n): return int(n * .75 + 0.25)

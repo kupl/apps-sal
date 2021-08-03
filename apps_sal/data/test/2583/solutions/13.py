@@ -1,12 +1,12 @@
+from functools import lru_cache
+
+
 def read_int():
     return int(input())
 
 
 def read_ints():
     return list(map(int, input().split(' ')))
-
-
-from functools import lru_cache
 
 
 @lru_cache(None)
@@ -35,4 +35,3 @@ t = read_int()
 for case_num in range(t):
     n = read_int()
     print("Ashishgup" if solve(n) else "FastestFinger")
-

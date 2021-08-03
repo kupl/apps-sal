@@ -31,9 +31,9 @@ class AVL:
             p.left = new_node
         else:
             p.right = new_node
-            
+
         return self.rebalance(p, new_node, key)
-            
+
     def rebalance(self, u, v, key):
         while u.key != 'nil':
             if u.key > v.key:
@@ -67,7 +67,7 @@ class AVL:
                     u.balance = 'R'
                     v = u
                     u = u.parent
-              
+
     def replace(self, u, v):
         if u.parent.left == u:
             u.parent.left = v
@@ -75,35 +75,35 @@ class AVL:
             u.parent.right = v
         v.parent = u.parent
         if v.parent.key == 'nil':
-            self.root = v   
+            self.root = v
 
     def rotate_R(self, u, v):
         w = v.right
 
         self.replace(u, v)
         v.right = u
-        u.parent = v        
-        u.left = w        
+        u.parent = v
+        u.left = w
         if w:
             w.parent = u
         u.balance = 'E'
-        v.balance = 'E'           
+        v.balance = 'E'
 
     def rotate_L(self, u, v):
         w = v.left
-        
+
         self.replace(u, v)
         v.left = u
         u.parent = v
-        u.right = w        
+        u.right = w
         if w:
             w.parent = u
         u.balance = 'E'
-        v.balance = 'E' 
+        v.balance = 'E'
 
     def rotate_LR(self, u, v):
         w = v.right
-        
+
         self.replace(u, w)
         if w.left:
             v.right = w.left
@@ -124,16 +124,16 @@ class AVL:
             u.balance = 'E'
             v.balance = 'L'
         elif w.balance == 'L':
-            u.balance ='R'
+            u.balance = 'R'
             v.balance = 'E'
         else:
             u.balance = 'E'
             v.balance = 'E'
-        w.balance = 'E'        
+        w.balance = 'E'
 
     def rotate_RL(self, u, v):
         w = v.left
-        
+
         self.replace(u, w)
         if w.left:
             w.left.parent = u
@@ -148,13 +148,13 @@ class AVL:
         u.parent = w
         w.left = u
         v.parent = w
-        w.right = v       
-        
+        w.right = v
+
         if w.balance == 'R':
             u.balance = 'L'
             v.balance = 'E'
         elif w.balance == 'L':
-            u.balance ='E'
+            u.balance = 'E'
             v.balance = 'R'
         else:
             u.balance = 'E'
@@ -171,7 +171,7 @@ class AVL:
             else:
                 cursor = cursor.right
         return None
-    
+
     def next_greater_key(self, cursor):
         if cursor is None:
             return
@@ -189,10 +189,10 @@ class AVL:
                 return cursor.parent
         else:
             return None
-        
+
     def next_smaller_key(self, cursor):
         if cursor is None:
-            return 
+            return
         if cursor.left:
             cursor = cursor.left
             while cursor.right:
@@ -205,7 +205,7 @@ class AVL:
                 cursor = cursor.parent
             if cursor.parent.key != 'nil':
                 return cursor.parent
-        
+
     def get_smaller_key(self, key):
         cursor = self.find(key)
         l1 = self.next_smaller_key(cursor)
@@ -215,7 +215,7 @@ class AVL:
         else:
             l2 = l2.key
         return l1.key, l2
-    
+
     def get_greater_key(self, key):
         cursor = self.find(key)
         r1 = self.next_greater_key(cursor)
@@ -228,47 +228,50 @@ class AVL:
 
 
 def main():
-#    import random
+    #    import random
     import sys
 
 #    N = 100000
 #    P = list(range(1, N + 1))
 #    random.shuffle(P)
-    
+
     input = sys.stdin.readline
     N = int(input())
-    P = map(int, input().split())    
-    
+    P = map(int, input().split())
+
     idx = [-1] * (N + 1)
     for i, v in enumerate(P, 1):
         idx[v] = i
     avl = AVL()
-    for i in [0, idx[N], N+1]:
+    for i in [0, idx[N], N + 1]:
         avl.insert(i)
     total = 0
     for j in range(N - 1, 0, -1):
         n = idx[j]
         avl.insert(n)
-        
-        l1_idx , l2_idx = avl.get_smaller_key(n)
+
+        l1_idx, l2_idx = avl.get_smaller_key(n)
         l1 = n - l1_idx
         if l1_idx != 0:
             l2 = l1_idx - l2_idx
         else:
             l2 = 0
-            
+
         r1_idx, r2_idx = avl.get_greater_key(n)
         r1 = r1_idx - n
         if r1_idx != N + 1:
             r2 = r2_idx - r1_idx
         else:
             r2 = 0
-            
+
         cnt = (l1 * r2 + r1 * l2) * j
         total += cnt
-    
+
     print(total)
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

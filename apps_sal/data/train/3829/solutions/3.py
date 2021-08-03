@@ -3,5 +3,4 @@ def build_square(blocks):
     b3 = min(x3, x1)
     b2 = min(x2 % 2, (x1 - b3) // 2)
     b1 = (x1 - b3 - b2 * 2) // 4
-    return x4 + b3 + x2 // 2 + b2 + b1 > 3 
-
+    return x4 + b3 + x2 // 2 + b2 + b1 > 3

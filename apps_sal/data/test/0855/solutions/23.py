@@ -56,4 +56,3 @@ for win in ['a', 'b', 'd']:
 # print('rem:', rem, 'per:', per, 'period:', period, 'end score:', end_score)
 
 print(score['a'], score['b'])
-

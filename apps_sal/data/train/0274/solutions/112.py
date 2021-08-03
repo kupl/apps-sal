@@ -7,14 +7,12 @@ class Solution:
             curMax = max(curMax, nums[r])
             curMin = min(curMin, nums[r])
             if curMax - curMin <= limit:
-                maxLen = max(maxLen, r-l+1)
+                maxLen = max(maxLen, r - l + 1)
             else:
                 if nums[l] == curMin:
-                    curMin = min(nums[l+1:r+1])
+                    curMin = min(nums[l + 1:r + 1])
                 if nums[l] == curMax:
-                    curMax = max(nums[l+1:r+1])
+                    curMax = max(nums[l + 1:r + 1])
                 l += 1
             r += 1
         return maxLen
-        
-

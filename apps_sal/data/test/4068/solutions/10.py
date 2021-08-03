@@ -4,9 +4,9 @@ def main():
     pos = 0
     ans = 1
 
-    fib = [1 for _ in range(N+1)]
-    for i in range(2, N+1):
-        fib[i] = fib[i-1] + fib[i-2]
+    fib = [1 for _ in range(N + 1)]
+    for i in range(2, N + 1):
+        fib[i] = fib[i - 1] + fib[i - 2]
 
     for _ in range(M):
 
@@ -28,7 +28,8 @@ def main():
     print(ans % 1_000_000_007)
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

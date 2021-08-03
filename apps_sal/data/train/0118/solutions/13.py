@@ -4,7 +4,7 @@ for kek in range(int(input())):
     a.sort()
     for i in range(n):
         f = 0
-        if  x % a[i] != 0:
+        if x % a[i] != 0:
             f += 1
         a[i] = x // a[i] + f
     a.sort()

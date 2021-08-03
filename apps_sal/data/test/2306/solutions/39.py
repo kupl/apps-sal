@@ -6,9 +6,9 @@
 def solve(T, V, velocity):
     accT = 1
     for t, max_v in zip(T, V):
-        for i in range(accT, accT+2*t):
-            velocity[i] = min(velocity[i], velocity[i-1]+0.5, max_v)
-        accT += 2*t
+        for i in range(accT, accT + 2 * t):
+            velocity[i] = min(velocity[i], velocity[i - 1] + 0.5, max_v)
+        accT += 2 * t
 
 
 def main():
@@ -19,7 +19,7 @@ def main():
 
     INF = 10**10
 
-    velocity = [INF]*(sum(T)*2+1)
+    velocity = [INF] * (sum(T) * 2 + 1)
     velocity[0] = 0
     velocity[-1] = 0
     solve(T, V, velocity)
@@ -37,5 +37,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -6,13 +6,12 @@ for i in range(n):
         a = int(b)
         if a == 0:
             hasz += 1
-        if a%2 == 0:
+        if a % 2 == 0:
             hasd += 1
         ans += a
     if hasz:
         hasd -= 1
-    if hasz and hasd and ans%3 == 0:
+    if hasz and hasd and ans % 3 == 0:
         print('red')
     else:
         print('cyan')
-

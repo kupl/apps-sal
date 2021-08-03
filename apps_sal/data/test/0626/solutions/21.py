@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 n = int(input())
-C = list(map(int,input().split()))
+C = list(map(int, input().split()))
+
 
 def check(init):
     d = init
@@ -25,5 +26,5 @@ def check(init):
             changed += 1
     return changed
 
-print(check(0))
 
+print(check(0))

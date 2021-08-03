@@ -24,4 +24,3 @@ a = list(reversed(a))
 for i in range(k - 1, n):
     ans -= a[i] * c(i, k - 1) % mod
 print(((ans + mod) % mod))
-

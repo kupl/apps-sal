@@ -69,17 +69,19 @@ class Dijkstra(object):
             path.append(node)
             node = self.prev[node]
         return path[::-1]
-h,w = map(int,input().split())
+
+
+h, w = map(int, input().split())
 g = Graph()
 for i in range(10):
-    c = list(map(int,input().split()))
+    c = list(map(int, input().split()))
     for j in range(10):
-        src,dst,weight = i,j,c[j]
+        src, dst, weight = i, j, c[j]
         g.add_edge(src, dst, weight)
 
 ans = 0
 for y in range(h):
-    tmp = list(map(int,input().split()))
+    tmp = list(map(int, input().split()))
     for x in range(w):
         if tmp[x] != -1 and tmp[x] != 1:
             d = Dijkstra(g, tmp[x])

@@ -1,6 +1,7 @@
 import sys
 # input = sys.stdin.readline
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 n = int(input())
 s = [input() for _ in range(n)]
@@ -42,4 +43,3 @@ for fi, mi in l:
 
 ans = 'Yes' if v == 0 else 'No'
 print(ans)
-

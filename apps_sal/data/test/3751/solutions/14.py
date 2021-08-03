@@ -9,4 +9,3 @@ for i in range(len(x)):
         lastletter = chr(ord(lastletter) + 1)
     used.add(x[i])
 print("YES")
-

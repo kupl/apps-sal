@@ -6,7 +6,7 @@ sdg = 0
 fdg = 0
 tg = 0
 fplp = 0
-for d in range(n-1):
+for d in range(n - 1):
     fdg = a[d]
     cp = sdg // k + (0 if sdg % k == 0 else 1)
     fplp = k - sdg % k
@@ -17,7 +17,6 @@ for d in range(n-1):
     fdg -= (fdg // k) * k
     p += cp
     sdg = fdg
-fdg = a[n-1]
+fdg = a[n - 1]
 p += (sdg + fdg) // k + (0 if (sdg + fdg) % k == 0 else 1)
 print(p)
-

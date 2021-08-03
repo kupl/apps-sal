@@ -31,7 +31,6 @@ def solve(n):
                 return c_1, c_2, c_3
 
 
-
 n = int(input())
 min_1, max_1 = map(int, input().split())
 min_2, max_2 = map(int, input().split())

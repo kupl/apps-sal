@@ -1,5 +1,6 @@
 import sys
 
+
 def ff(q, s):
     c = 0
     su = 1
@@ -19,6 +20,7 @@ def ff(q, s):
         return c
     else:
         return -1
+
 
 _ = input()
 b = list(map(int, input().split()))
@@ -68,4 +70,3 @@ if(cc == []):
     print(-1)
 else:
     print(min(cc))
-

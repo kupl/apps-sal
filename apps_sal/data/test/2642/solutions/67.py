@@ -20,4 +20,3 @@ for x, y in S:
     ans *= pow(2, C[(x, y)], p) + pow(2, C[(-y, x)], p) - 1
     ans %= p
 print(((ans + C[(0, 0)] - 1) % p))
-

@@ -8,4 +8,3 @@ class Solution:
             else:
                 cnt = 0
         return sum
-

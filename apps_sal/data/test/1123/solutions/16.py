@@ -28,4 +28,3 @@ for i in range(k, 0, -1):
     ret += tmp * i % mod
 
 print((ret % mod))
-

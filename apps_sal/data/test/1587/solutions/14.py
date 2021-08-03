@@ -1,6 +1,8 @@
+from collections import Counter
 import sys
 def input(): return sys.stdin.readline().rstrip()
-from collections import Counter
+
+
 def main():
     n = int(input())
     C = input()
@@ -12,6 +14,9 @@ def main():
             ans += 1
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

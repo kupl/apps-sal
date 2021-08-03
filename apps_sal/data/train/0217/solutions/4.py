@@ -5,5 +5,5 @@ class Solution:
         for x in A:
             curr = {x | y for y in curr} | {x}
             ans |= curr
-        
+
         return len(ans)

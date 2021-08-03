@@ -7,5 +7,3 @@ for i in range(31):
         if 2 ** i * 3 ** j >= n and 2 ** i * 3 ** j <= m:
             ans = ans + 1
 print(ans)
-        
-

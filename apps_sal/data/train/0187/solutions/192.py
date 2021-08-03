@@ -13,13 +13,13 @@ class Solution:
         for i in range(len(customers)):
             remind += customers[i]
             served += min(remind, 4)
-            remind = max(0, remind-4)
-            cur = served * boardingCost - (i+ 1) *runningCost
+            remind = max(0, remind - 4)
+            cur = served * boardingCost - (i + 1) * runningCost
             if cur > curM:
                 curM = cur
                 res = i + 1
 
-        if remind  * boardingCost - runningCost <= 0:
+        if remind * boardingCost - runningCost <= 0:
             return res
         res = len(customers)
         while min(4, remind) * boardingCost - runningCost > 0:
@@ -28,7 +28,6 @@ class Solution:
         return res
 
         total = sum(customers)
-        if (total%4)  *  boardingCost <= runningCost:
+        if (total % 4) * boardingCost <= runningCost:
             return total // 4
         return total // 4 + 1
-

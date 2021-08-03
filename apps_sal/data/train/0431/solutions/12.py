@@ -11,7 +11,7 @@ class Solution:
                 left = loc - stack[-1]
                 right = i - loc
                 width = i - stack[-1] - 1
-                #print(height, left*right)#*(width+1)//2)
-                tot += height*left*right#*(width+1)//2
+                # print(height, left*right)#*(width+1)//2)
+                tot += height * left * right  # *(width+1)//2
             stack.append(i)
         return tot % (10 ** 9 + 7)

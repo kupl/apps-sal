@@ -8,7 +8,7 @@ class Solution:
                 deq.popleft()
             while deq and nums[i] + dp[deq[0]] > dp[deq[-1]]:
                 a = deq.pop()
-            dp[i] = max(nums[i],nums[i] + dp[deq[0]] if deq else nums[i] + dp[a])
+            dp[i] = max(nums[i], nums[i] + dp[deq[0]] if deq else nums[i] + dp[a])
             deq.append(i)
 
         return max(dp)

@@ -1,7 +1,7 @@
 # Bartek Kostka
 #  You are not prepared!
 
-#include "bits/stdc++.h"
+# include "bits/stdc++.h"
 
 n = int(input())
 W = {}
@@ -34,4 +34,3 @@ print(res)
 for key, ele in list(E.items()):
     if len(ele) > 1:
         print(" ".join(ele))
-

@@ -8,4 +8,3 @@ for x in a:
     s += 1
     d.add(x)
 print(len(d))
-

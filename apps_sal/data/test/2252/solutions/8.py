@@ -10,5 +10,7 @@ for _ in range(m):
     for i in range(l, r + 1):
         if p[i] < t:
             a += 1
-    if a == x - l: print("Yes")
-    else: print("No")
+    if a == x - l:
+        print("Yes")
+    else:
+        print("No")

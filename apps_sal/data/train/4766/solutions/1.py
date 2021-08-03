@@ -1,6 +1,6 @@
 def n_closestPairs_tonum(n, k):
     found = []
-    for number in range(n-1, 1, -1):
+    for number in range(n - 1, 1, -1):
         i, limit = 1, int(number ** .5)
         while i <= limit and len(found) < k:
             sq = i * i
@@ -9,5 +9,6 @@ def n_closestPairs_tonum(n, k):
             if sq1.is_integer() and diff:
                 found.append([number, diff])
             i += 1
-        if len(found) == k : break
+        if len(found) == k:
+            break
     return found

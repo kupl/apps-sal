@@ -1,3 +1,5 @@
+import numpy as np    # cumsum
+from math import ceil, floor, log2
 import sys
 sys.setrecursionlimit(10 ** 9)
 # input = sys.stdin.readline    ####
@@ -12,26 +14,26 @@ def MS(): return input().split()
 def LS(): return list(input())
 def LLS(rows_number): return [LS() for _ in range(rows_number)]
 def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
+
+
 INF = float('inf')
-from math import ceil, floor, log2
 # from collections import deque, defaultdict
 # from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
 # from heapq import heapify, heappop, heappush
-import numpy as np    # cumsum
 # from bisect import bisect_left, bisect_right
+
 
 def solve():
     N = II()
     A = LI()
     for i in range(N):
-        A[i] = A[i] - (i+1)
+        A[i] = A[i] - (i + 1)
     med = int(np.median(A))
     # print(med)
     ans = 0
     for a in A:
         ans += abs(a - med)
     print(ans)
-
 
 
 def __starting_point():

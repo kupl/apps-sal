@@ -16,17 +16,17 @@ class Solution:
                 break
 
         queue = [(0, r, c)]
-        
+
         while queue:
             d, r, c = heapq.heappop(queue)
 
             for dr, dc in directs:
-                nr, nc = r+dr, c+dc
+                nr, nc = r + dr, c + dc
                 if not (0 <= nr < R and 0 <= nc < C):
                     continue
                 enqueue = False
                 if A[nr][nc] == 1 and A[r][c] == 1:
-                    if  d < dist[nr][nc]:
+                    if d < dist[nr][nc]:
                         dist[nr][nc] = d
                         enqueue = True
                 else:
@@ -41,6 +41,6 @@ class Solution:
         for r in range(R):
             for c in range(C):
                 if A[r][c] == 1 and dist[r][c] > 0:
-                    ans = min(ans, dist[r][c]-1)
+                    ans = min(ans, dist[r][c] - 1)
 
         return ans

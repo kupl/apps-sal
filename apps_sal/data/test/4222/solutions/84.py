@@ -9,5 +9,5 @@ for i in range(K):
         A.extend(a)
     else:
         A.append(int(input()))
-        
+
 print(N - len(set(A)))

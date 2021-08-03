@@ -58,4 +58,3 @@ for c, d in cd:
         ans = heapq.heappop(thq)
     heapq.heappush(thq, ans)
     print(ans)
-

@@ -9,4 +9,3 @@ for t in range(test_cases):
         r = r + str(int(password[i]) - 2)
 
     print(r)
-

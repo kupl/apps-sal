@@ -12,6 +12,5 @@ for _ in range(n):
 
     if s not in g:
         g.add(s)
-        
-print(len(g))
 
+print(len(g))

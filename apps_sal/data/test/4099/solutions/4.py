@@ -1,4 +1,4 @@
-N,K,M = list(map(int, input().split()))
+N, K, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 Point = M * N - sum(A)
@@ -9,4 +9,3 @@ elif Point > K:
     print((-1))
 else:
     print((0))
-

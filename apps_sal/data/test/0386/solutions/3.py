@@ -3,6 +3,7 @@
 
 import math
 
+
 def reverse_sign(sign):
     if sign == '>=':
         return '<'
@@ -13,9 +14,10 @@ def reverse_sign(sign):
     else:
         return '>='
 
+
 N = int(input())
-mn = int(-1.5 * math.pow(10,9))
-mx = int(1.5 * math.pow(10,9))
+mn = int(-1.5 * math.pow(10, 9))
+mx = int(1.5 * math.pow(10, 9))
 for n in range(N):
     (sign, num, flag) = input().split()
     num = int(num)
@@ -34,11 +36,8 @@ for n in range(N):
     elif sign == '<=':
         mx = min(mx, num)
     # print("mn, mx = ", mn, mx)
-        
-if mn > mx:
-    print ('Impossible')
-else:
-    print (mn)
-        
-        
 
+if mn > mx:
+    print('Impossible')
+else:
+    print(mn)

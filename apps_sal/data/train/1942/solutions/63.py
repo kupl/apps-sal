@@ -5,7 +5,7 @@ class Solution:
         for i, com in enumerate(coms):
             com1, oi = com
             is_sub = False
-            for com2, _ in coms[i+1:]:
+            for com2, _ in coms[i + 1:]:
                 if not com1 - com2:
                     is_sub = True
                     break

@@ -17,4 +17,3 @@ for i in range(n):
 
 flag |= cur != 0
 print('YES' if not flag else 'NO')
-

@@ -6,7 +6,7 @@
 #         queue = [[0, 0]]
 #         visited = {0}
 #         step = 0
-        
+
 #         for node, step in queue:
 #             for coin in coins:
 #                 if node + coin in visited:
@@ -17,7 +17,7 @@
 #                     queue.append([node + coin, step + 1])
 #                     visited.add(node + coin)
 #         return -1
-    
+
 # BSF No.2
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
@@ -40,5 +40,4 @@ class Solution:
     #     level = {a+c for a in level for c in coins if a+c <= amount} - seen
     #     seen |= level
     #     number += 1
-    # return -1 
-
+    # return -1

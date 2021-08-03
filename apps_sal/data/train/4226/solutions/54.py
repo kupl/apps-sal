@@ -5,4 +5,4 @@ def remove_smallest(numbers):
     smolest = list(set(numbers))
     smolest.sort()
     result.remove(smolest[0])
-    return result 
+    return result

@@ -37,25 +37,26 @@ class UnionFind:
     def members(self):
         ret = dict()
         for i in range(self.n):
-          x = self.find(i)
-          if x in ret:
-            ret[x].add(i)
-          else:
-            ret[x] = {i}
+            x = self.find(i)
+            if x in ret:
+                ret[x].add(i)
+            else:
+                ret[x] = {i}
         return ret
 
-N,M=map(int,input().split())
-p=list(map(int,input().split()))
+
+N, M = map(int, input().split())
+p = list(map(int, input().split()))
 uf = UnionFind(N)
 for _ in range(M):
-  x,y =map(int,input().split())
-  uf.union(x-1,y-1)
+    x, y = map(int, input().split())
+    uf.union(x - 1, y - 1)
 # uf上のgroupごとに、groupのindexとその要素の積集合のサイズをとる
 ans = 0
 for id_s in uf.members().values():
-  val_s = set()
-  for i in id_s:
-    val_s.add(p[i]-1)
-  ans += len(id_s & val_s)
-  #print(id_s,val_s)
+    val_s = set()
+    for i in id_s:
+        val_s.add(p[i] - 1)
+    ans += len(id_s & val_s)
+    # print(id_s,val_s)
 print(ans)

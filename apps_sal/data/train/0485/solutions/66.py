@@ -8,15 +8,13 @@ class Solution:
             while dq and i >= dq[0]:
                 dq.popleft()
                 flips -= 1
-            if (A[i] + flips) %2 == 1:
+            if (A[i] + flips) % 2 == 1:
                 i += 1
             else:
                 if i + K > len(A):
                     return -1
-                dq.append(i+K)
+                dq.append(i + K)
                 flips += 1
                 i += 1
                 ans += 1
         return ans
-                
-

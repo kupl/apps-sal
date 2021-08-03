@@ -18,13 +18,13 @@ class Solution:
                 while desc and desc[-1][0] < n:
                     desc.pop()
                 desc.append([n, i])
-                
+
             while desc[0][0] - asc[0][0] > limit:
                 if desc[0][1] < asc[0][1]:
                     left = desc.popleft()[1] + 1
                 else:
                     left = asc.popleft()[1] + 1
-            
-            longest = max(longest, i-left+1)
-            
+
+            longest = max(longest, i - left + 1)
+
         return longest

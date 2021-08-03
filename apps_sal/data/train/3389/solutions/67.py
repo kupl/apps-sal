@@ -7,9 +7,8 @@ def domain_name(url):
         s = url.find("//") + 2
     else:
         s = 0
-    
+
     # finds end of url
     e = url.find(".", s)
-    
-    return url[s:e]
 
+    return url[s:e]

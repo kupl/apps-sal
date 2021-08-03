@@ -7,17 +7,17 @@ class Solution:
             for neigh in g[i]:
                 cache[i] = max(cache[i], 1 + dfs(neigh))
             return cache[i]
-        
+
         g = defaultdict(set)
         for i in range(len(arr)):
-            for x in range(1, d+1):
-                if i-x >= 0 and arr[i-x] < arr[i]:
-                    g[i].add(i-x)
+            for x in range(1, d + 1):
+                if i - x >= 0 and arr[i - x] < arr[i]:
+                    g[i].add(i - x)
                 else:
                     break
-            for x in range(1, d+1):
-                if i+x < len(arr) and arr[i+x] < arr[i]:
-                    g[i].add(i+x)
+            for x in range(1, d + 1):
+                if i + x < len(arr) and arr[i + x] < arr[i]:
+                    g[i].add(i + x)
                 else:
                     break
         cache = {}
@@ -49,7 +49,3 @@ class Solution:
         
         return mjump
         '''
-                
-            
-            
-

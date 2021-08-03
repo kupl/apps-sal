@@ -3,4 +3,4 @@ for _ in range(int(input())):
     binstr = input()
     a = binstr.count('1')
     b = binstr.count('0')
-    print(a*b)
+    print(a * b)

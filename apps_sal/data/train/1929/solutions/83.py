@@ -38,4 +38,3 @@ class StreamChecker:
             if cur.end:
                 return True
         return False
-

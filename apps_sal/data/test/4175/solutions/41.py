@@ -20,5 +20,3 @@ if good:
     print("Yes")
 else:
     print("No")
-        
-

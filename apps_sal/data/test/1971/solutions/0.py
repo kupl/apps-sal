@@ -7,7 +7,8 @@ a = [int(_) - 1 for _ in input().split()]
 vis = [False] * n
 cycles = [[] for _ in range(n + 1)]
 for i in range(n):
-    if vis[i]: continue
+    if vis[i]:
+        continue
     cur = i
     cycle = []
     while not vis[cur]:
@@ -27,7 +28,6 @@ for i in range(n + 1):
             return
         for j in range(0, len(cycles[i]), 2):
             for k in range(i):
-                p[cycles[i][j][k]] = cycles[i][j + 1][k] 
+                p[cycles[i][j][k]] = cycles[i][j + 1][k]
                 p[cycles[i][j + 1][k]] = cycles[i][j][(k + 1) % i]
 print(' '.join([str(i + 1) for i in p]))
-

@@ -18,9 +18,8 @@ class Solution:
         dp = [1] * n
         for a, i in sorted([a, i] for i, a in enumerate(arr)):
             for di in [-1, 1]:
-                for j in range(i+di, i+d*di+di, di):
+                for j in range(i + di, i + d * di + di, di):
                     if not (0 <= j < n and arr[j] < arr[i]):
                         break
                     dp[i] = max(dp[i], dp[j] + 1)
-        return max(dp) 
-
+        return max(dp)

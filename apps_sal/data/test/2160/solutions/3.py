@@ -7,7 +7,7 @@ r = {i: -1 for i in range(n)}
 for i, a in enumerate(s):
     l[a - 1] = min(i, l[a - 1])
     r[a - 1] = max(i, r[a - 1])
-    
+
 count = 0
 for i in range(n):
     for j in range(3):

@@ -1,5 +1,6 @@
 from itertools import combinations_with_replacement as c
 
+
 def find(arr, n):
     return sum(
         sum(xs) == n

@@ -1,6 +1,9 @@
 import sys
-read = lambda f=int: list(map(f, sys.stdin.readline().split()))
+def read(f=int): return list(map(f, sys.stdin.readline().split()))
+
+
 array = lambda *ds: [array(*ds[1:]) for _ in range(ds[0])] if ds else 0
+
 
 def main():
     N, = read()
@@ -18,7 +21,7 @@ def main():
 
     vs = [Node(i) for i in range(N)]
     for v, w in es:
-        vs[v-1].adj.append(vs[w-1])
+        vs[v - 1].adj.append(vs[w - 1])
 
     i = 0
     stack = []
@@ -26,7 +29,7 @@ def main():
     comps = []
     for v in vs:
         if v.index is None:
-            call_stack.append((v,0))
+            call_stack.append((v, 0))
             while call_stack:
                 v, pi = call_stack.pop()
                 if pi == 0:
@@ -37,7 +40,7 @@ def main():
                     v.on_stack = True
                 # If we just recursed on something
                 if pi > 0:
-                    prev = v.adj[pi-1]
+                    prev = v.adj[pi - 1]
                     v.lowlink = min(v.lowlink, prev.lowlink)
                 # Find the next thing to recurse on
                 while pi < len(v.adj) and v.adj[pi].index is not None:
@@ -49,21 +52,21 @@ def main():
                 if pi < len(v.adj):
                     w = v.adj[pi]
                     assert w.index is None
-                    call_stack.append((v,pi+1))
-                    call_stack.append((w,0))
+                    call_stack.append((v, pi + 1))
+                    call_stack.append((w, 0))
                     continue
                 if v.lowlink == v.index:
                     comp = []
                     while True:
                         w = stack.pop()
-                        w.on_stack = False # This is important, since later nodes may see it
+                        w.on_stack = False  # This is important, since later nodes may see it
                         comp.append(w.name)
                         if w is v:
                             break
                     comps.append(comp)
 
-    #print(stack)
-    #print(comps)
+    # print(stack)
+    # print(comps)
     res = 0
     ways = 1
     for comp in comps:
@@ -73,5 +76,5 @@ def main():
         ways %= 10**9 + 7
     print(res, ways)
 
-main()
 
+main()

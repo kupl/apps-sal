@@ -7,10 +7,9 @@ class Solution:
         for i in range(len(graph)):
             if status[i] == 0:
                 self.dfs(i, graph, status, ans)
-        ans.sort();
+        ans.sort()
         return ans
-                
-    
+
     def dfs(self, i, graph, status, ans):
         status[i] = 1
         for neighbor in graph[i]:
@@ -18,7 +17,7 @@ class Solution:
                 return False
             if status[neighbor] == 0 and not self.dfs(neighbor, graph, status, ans):
                 return False
-        
+
         status[i] = 2
         ans.append(i)
         return True

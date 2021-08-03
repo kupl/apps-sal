@@ -1,12 +1,12 @@
 n = int(input())
 a = list(map(int, input().split()))
-d = [0]*n
+d = [0] * n
 for q in range(len(a)):
-    d[a[q]-1] = q
+    d[a[q] - 1] = q
 s = list(map(int, input().split()))
 for q in range(len(s)):
-    s[q] = d[s[q]-1]
-f = [0]*n
+    s[q] = d[s[q] - 1]
+f = [0] * n
 ans = q1 = 0
 for q in range(len(s)):
     f[s[q]] = 1
@@ -16,4 +16,3 @@ for q in range(len(s)):
     if s[q] > q1:
         ans += 1
 print(ans)
-

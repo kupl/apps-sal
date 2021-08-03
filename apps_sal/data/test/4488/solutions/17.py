@@ -1,9 +1,9 @@
-a=int(input())
-b=int(input())
+a = int(input())
+b = int(input())
 
-if a<b:
+if a < b:
     print("LESS")
-elif a>b:
+elif a > b:
     print("GREATER")
 else:
     print("EQUAL")

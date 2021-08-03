@@ -5,7 +5,7 @@ def cube_odd(arr):
     def _is_none_condition():
         return any(True if not isinstance(ele, int)
                            or ele is True
-                           or ele is False
+                   or ele is False
                    else False for ele in arr)
     if _is_none_condition():
         return
@@ -22,4 +22,3 @@ class TestCubeOdd(unittest.TestCase):
         arr = [1, 2, 3, 4]
         actual = cube_odd(arr)
         self.assertEqual(actual, 28)
-

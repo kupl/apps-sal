@@ -1,7 +1,7 @@
 a = input()
 b = int(a)
 while True:
-    su  = 0
+    su = 0
     a = str(b)
     for i in a:
         su += int(i)
@@ -10,4 +10,3 @@ while True:
         break
     else:
         b += 1
-

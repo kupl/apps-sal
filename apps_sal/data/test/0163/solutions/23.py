@@ -4,7 +4,7 @@ line = input()
 
 for x in range(n):
     if line[x] == "G":
-        g = x    
+        g = x
     elif line[x] == "T":
         t = x
 
@@ -32,4 +32,3 @@ if (g - t) % k == 0:
 else:
     print("NO")
     return
-

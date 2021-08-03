@@ -1,5 +1,6 @@
 def readln(): return tuple(map(int, input().split()))
 
+
 n, = readln()
 a = b = c = 0
 for _ in range(n):
@@ -13,4 +14,3 @@ elif (a % 2) == (b % 2) and c:
     print(1)
 else:
     print(-1)
-

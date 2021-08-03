@@ -25,7 +25,7 @@ for idx in range(n):
         right_left_max = right_left_tmp
     if right_left_tmp < right_left_min:
         right_left_min = right_left_tmp
-        
+
     r3_tmp = y - x
     if r3_tmp > r3_max:
         r3_max = r3_tmp

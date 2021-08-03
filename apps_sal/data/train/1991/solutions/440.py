@@ -18,4 +18,3 @@ class Solution:
         for this_fuel in range(fuel + 1):
             total_num_paths = (total_num_paths + num_paths[this_fuel][start]) % mod_constant
         return total_num_paths
-

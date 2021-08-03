@@ -8,13 +8,13 @@ class Solution:
                 if company not in dic:
                     dic[company] = ind
                     ind += 1
-        
+
         for companies in favoriteCompanies:
             val = 0
             for company in companies:
                 val += 2**dic[company]
             profile.append(val)
-        
+
         res = []
         for i in range(len(profile)):
             flag = True
@@ -27,4 +27,3 @@ class Solution:
             if flag:
                 res.append(i)
         return res
-

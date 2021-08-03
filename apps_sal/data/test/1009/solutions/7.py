@@ -11,7 +11,7 @@ for i in range(colvo_1_cor):
     data.pop()
 if len(data) > 0:
     index1 = 0
-    index2 = len(data) - 1    
+    index2 = len(data) - 1
     while index1 != len(data) // 2 + 1:
         answer.append(data[index1] + data[index2])
         index1 += 1

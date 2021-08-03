@@ -16,7 +16,6 @@ def main():
         if number >= 2 and l <= s <= r and maximal - minimal >= x:
             result += 1
     print(result)
-    
-    
-main()
 
+
+main()

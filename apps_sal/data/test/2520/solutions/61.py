@@ -50,4 +50,3 @@ for a in range(N + 1):
     answer[a] = n
 
 print((' '.join(map(str, answer[1:]))))
-

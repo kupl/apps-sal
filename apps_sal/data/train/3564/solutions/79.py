@@ -4,6 +4,6 @@ def stringy(size):
     while size > len(x):
         x = x + '1'
         while size > len(x):
-                x = x + '0'
-                break
+            x = x + '0'
+            break
     return x

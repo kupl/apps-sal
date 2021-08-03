@@ -1,15 +1,17 @@
 import functools
+
+
 class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
         # 谷歌面经。给定你一个矩形。问你最少需要多少个正方形来填满。
         '''
         INF = n * m
-        
+
         @functools.lru_cache(None)
         def dp(state):   # state是一个tuple, m个元素
             if n == min(state):
                 return 0
-            
+
             state = list(state)   # 从左到右铺
             mn = min(state)
             start = state.index(mn)
@@ -117,17 +119,17 @@ class Solution:
                 return j
             if j == 1:
                 return i
-            
+
             res = i * j     # 最多也就x*y这么多个，作为最大值先赋res
             for x in range(1, i // 2 + 1):
                 res = min(res, dfs(x, j) + dfs(i - x, j))
             for y in range(1, j // 2 + 1):
                 res = min(res, dfs(i, y) + dfs(i, j - y))
-            
-            #https://blog.csdn.net/qq_17550379/article/details/102787329?ops_request_misc=&request_id=&biz_id=102&utm_term=leetcode%E9%93%BA%E7%93%B7%E7%A0%96&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-102787329
+
+            # https://blog.csdn.net/qq_17550379/article/details/102787329?ops_request_misc=&request_id=&biz_id=102&utm_term=leetcode%E9%93%BA%E7%93%B7%E7%A0%96&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-102787329
             for leng in range(1, min(x, y)):  # 中间正方形的大小
                 for x in range(1, i - leng):    # 正方形的左上角位置,保证不会贴合四个大边
                     for y in range(1, j - leng):
                         res = min(res, dfs(x + leng, y) + dfs(i - (x + leng), y + leng) + dfs(x, j - y) + dfs(i - x, j - (y + leng)) + 1)
             return res
-        return dfs(m, n) # dfs矩形大小，用长宽两个变量来表示
+        return dfs(m, n)  # dfs矩形大小，用长宽两个变量来表示

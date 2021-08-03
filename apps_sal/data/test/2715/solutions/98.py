@@ -10,4 +10,3 @@ for i in range(r):
 
 print((len(ans)))
 print((*ans))
-

@@ -1,4 +1,4 @@
-a ,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 if a == 0 and b == 0:
     print('NO')
 else:
@@ -6,4 +6,3 @@ else:
         print('YES')
     else:
         print('NO')
-

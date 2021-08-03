@@ -5,4 +5,3 @@ def sort_string(s, ordering):
             result += i * s.count(i)
 
     return result + ''.join([c for c in s if c not in ordering])
-

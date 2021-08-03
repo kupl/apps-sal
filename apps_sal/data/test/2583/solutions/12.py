@@ -13,7 +13,7 @@ for _ in range(t):
     elif cnt2 == 1:
         isNPrime = True
         rangeLoop = int(math.sqrt(n)) + 1
-        for i in range(3,rangeLoop,2):
+        for i in range(3, rangeLoop, 2):
             if n % i == 0:
                 isNPrime = False
                 break

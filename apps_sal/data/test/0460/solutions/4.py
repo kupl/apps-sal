@@ -13,6 +13,7 @@ repeat 25 times:
 
     return i_indices
 
+
 def reachable_by_unsuccessful_hacks(wanted_place, orig_score, min_place):
     score = orig_score
     while score >= min_place:
@@ -23,6 +24,7 @@ def reachable_by_unsuccessful_hacks(wanted_place, orig_score, min_place):
     if wanted_place in calc_T_shirt_winner_places(score) and score >= min_place:
         return True
     return False
+
 
 def calc_number_of_successful_hacks_needed(wanted_place, orig_score):
     hacks = 0
@@ -35,10 +37,9 @@ def calc_number_of_successful_hacks_needed(wanted_place, orig_score):
         score_by_50 += 100
         score_by_100 += 100
 
+
 codecraft_place, curr_score, min_place = [int(p) for p in input().split()]
 if reachable_by_unsuccessful_hacks(codecraft_place, curr_score, min_place):
     print(0)
 else:
     print(calc_number_of_successful_hacks_needed(codecraft_place, curr_score))
-
-

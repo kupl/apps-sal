@@ -1,5 +1,5 @@
-#ABC139 B
+# ABC139 B
 
-A,B = map(int,input().split())
 import math
-print(int(math.ceil((B-1)/(A-1))))
+A, B = map(int, input().split())
+print(int(math.ceil((B - 1) / (A - 1))))

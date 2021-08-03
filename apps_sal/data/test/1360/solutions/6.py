@@ -9,10 +9,9 @@ for i in range(n):
     cek.append(temp)
 cek.sort()
 now = cek[0][1]
-for i in range(1,n):
+for i in range(1, n):
     if(cek[i][1] >= now):
         now = cek[i][1]
     else:
         now = cek[i][0]
 print(now)
-

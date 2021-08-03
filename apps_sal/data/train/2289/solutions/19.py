@@ -1,5 +1,6 @@
 import string
 
+
 def __starting_point():
     A = input()
 
@@ -28,5 +29,6 @@ def __starting_point():
         i = tb[i][2]
 
     print(("".join(ans)))
+
 
 __starting_point()

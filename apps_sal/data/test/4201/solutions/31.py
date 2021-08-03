@@ -1,10 +1,12 @@
+from itertools import product
 import sys
 def input(): return sys.stdin.readline().rstrip()
-from itertools import product
+
+
 def main():
-    h, w, k = map(int,input().split())
+    h, w, k = map(int, input().split())
     C = [input() for _ in range(h)]
-    comb_list = list(product([False, True], repeat = h + w))
+    comb_list = list(product([False, True], repeat=h + w))
     ans = 0
     for comb in comb_list:
         cunt = 0
@@ -12,7 +14,7 @@ def main():
             if not comb[i]:
                 continue
             for j in range(w):
-                if not comb[h+j]:
+                if not comb[h + j]:
                     continue
                 if C[i][j] == '#':
                     cunt += 1
@@ -21,7 +23,8 @@ def main():
     print(ans)
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -40,4 +40,3 @@ for i in range(N):
             return
 
 print(0, 0)
-

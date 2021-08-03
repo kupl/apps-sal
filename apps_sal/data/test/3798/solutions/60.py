@@ -3,6 +3,7 @@ import math
 N = int(input())
 S = int(input())
 
+
 def f(B, N):
     X, res = N, 0
     while 0 < X:

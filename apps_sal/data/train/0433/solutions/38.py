@@ -7,13 +7,13 @@ class Solution:
         else:
             for i in range(k):
                 total += arr[i]
-            if float(total/k) >= threshold:
-                ans += 1    
-                
+            if float(total / k) >= threshold:
+                ans += 1
+
             i = k
-            while i < len(arr):                
-                total += arr[i] - arr[i-k]
-                if float(total/k) >= threshold:
+            while i < len(arr):
+                total += arr[i] - arr[i - k]
+                if float(total / k) >= threshold:
                     ans += 1
                 i += 1
             return ans

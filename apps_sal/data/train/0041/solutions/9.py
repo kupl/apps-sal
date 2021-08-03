@@ -38,4 +38,3 @@ for i in range(t):
     print(len(operations))
     if len(operations):
         print(*operations, sep='\n')
-

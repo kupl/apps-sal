@@ -2,7 +2,7 @@ EPS = 1e-11
 INF = float("inf")
 
 
-def multiply ( a , b ):
+def multiply(a, b):
     m = INF
     M = -INF
     for i in range(2):
@@ -12,7 +12,8 @@ def multiply ( a , b ):
 
     return (m, M)
 
-def intersect ( a , b ):
+
+def intersect(a, b):
     return (a[0] <= b[1] and b[0] <= a[1])
 
 
@@ -30,7 +31,7 @@ while nIters < 1000 and abs(lo - hi) > EPS:
     i1 = multiply((a - mi, a + mi), (d - mi, d + mi))
     i2 = multiply((b - mi, b + mi), (c - mi, c + mi))
 
-    if ( intersect(i1, i2) ):
+    if (intersect(i1, i2)):
         hi = mi
     else:
         lo = mi
@@ -38,4 +39,3 @@ while nIters < 1000 and abs(lo - hi) > EPS:
     nIters += 1
 
 print("{:.10f}".format(hi))
-

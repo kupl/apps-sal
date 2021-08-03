@@ -1,5 +1,5 @@
 a = list(input())
 if int(a[-1]) % 2 == 0:
-  print(0)
+    print(0)
 else:
-  print(1)
+    print(1)

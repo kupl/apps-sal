@@ -1,4 +1,3 @@
-x,t = map(int,input().split())
+x, t = map(int, input().split())
 
-print(x-t) if x > t else print(0)
-
+print(x - t) if x > t else print(0)

@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        
+
         def count(n):
             a = b = 0
             while n:
@@ -17,5 +17,3 @@ class Solution:
             maxA = max(maxA, a)
             sumB += b
         return maxA + sumB
-            
-

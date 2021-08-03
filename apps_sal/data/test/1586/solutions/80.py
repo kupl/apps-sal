@@ -16,7 +16,7 @@ else:
     while n // 5**k > 0:
         div5 += n // 5**k
         k += 1
-    
+
     ans = min(div2, div5)
 
 print(ans)

@@ -11,8 +11,7 @@ while w > 0:
         m = ceiling
         digitCount += 1
     else:
-        answer += w / (k*digitCount)
+        answer += w / (k * digitCount)
         break
 
 print('%d' % answer)
-

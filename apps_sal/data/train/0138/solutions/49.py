@@ -23,4 +23,3 @@ class Solution:
             while end < len(nums) and nums[end] == 0:
                 end += 1
         return ret
-

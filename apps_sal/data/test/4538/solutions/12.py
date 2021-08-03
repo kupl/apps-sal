@@ -7,4 +7,3 @@ for _ in range(N):
     if X * X + Y * Y <= D * D:
         result += 1
 print(result)
-

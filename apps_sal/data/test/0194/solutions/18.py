@@ -20,6 +20,6 @@ def __starting_point():
             else:
                 deny += 2
     print(deny)
-                
+
 
 __starting_point()

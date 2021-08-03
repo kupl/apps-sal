@@ -13,4 +13,3 @@ class Solution:
             else:
                 L = m
         return U
-

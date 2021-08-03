@@ -1,9 +1,9 @@
 input()
 pos = [(c == 'X') for c in input()]
 
-b = pos.count(True) - len(pos)//2
+b = pos.count(True) - len(pos) // 2
 
-print (abs(b))
+print(abs(b))
 
 if b < 0:
     for p in range(len(pos)):

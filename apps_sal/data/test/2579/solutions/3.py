@@ -7,4 +7,3 @@ for b in range(x, y + 1):
         ans = "YES"
         break
 print(ans)
-

@@ -1,4 +1,6 @@
-#A
-cin=lambda:map(int,input().split())
-n,k=cin()
-print((n//k)*k+k)
+# A
+def cin(): return map(int, input().split())
+
+
+n, k = cin()
+print((n // k) * k + k)

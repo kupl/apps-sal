@@ -13,4 +13,3 @@ for i in range(1, N):
     runTot = (runTot[0] + tot[0], runTot[1] + tot[1])
 
 print(runTot[0], runTot[1])
-

@@ -1,1 +1,1 @@
-count_char=lambda s,c:s.lower().count(c.lower())
+def count_char(s, c): return s.lower().count(c.lower())

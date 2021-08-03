@@ -10,4 +10,3 @@ for m in range(1, 1001):
     if not prime(n * m + 1):
         print(m)
         return
-

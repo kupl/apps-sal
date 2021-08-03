@@ -2,7 +2,7 @@
 import sys
 
 
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
 
 
 def f(l, r):
@@ -10,7 +10,6 @@ def f(l, r):
 
     a1 = sorted(a[l:r + 1])
     a2 = sorted(a[:l] + a[r + 1:], reverse=True)
-
 
     for i in range(min(k, len(a1), len(a2))):
         m = min(a1)
@@ -25,4 +24,4 @@ n, k = R()
 
 a = R()
 
-print(max(f(l,r) for l in range(n) for r in range(l,n)))
+print(max(f(l, r) for l in range(n) for r in range(l, n)))

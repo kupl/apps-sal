@@ -1,4 +1,4 @@
-n, k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 s = input()
 
 res = n
@@ -8,4 +8,4 @@ for i in range(1, n):
         break
 overlap = n - res
 
-print(s + (k-1) * s[overlap:])
+print(s + (k - 1) * s[overlap:])

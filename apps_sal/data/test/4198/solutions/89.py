@@ -22,7 +22,5 @@ def main():
     return buy_an_integer(a, b, x, 0, 10 ** 9)
 
 
-if __name__  == '__main__':
+if __name__ == '__main__':
     print((main()))
-
-

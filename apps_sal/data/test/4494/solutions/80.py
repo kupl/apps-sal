@@ -1,2 +1,2 @@
 S = input()
-print("ARC") if S=="ABC" else print("ABC")
+print("ARC") if S == "ABC" else print("ABC")

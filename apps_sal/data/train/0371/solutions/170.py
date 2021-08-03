@@ -1,8 +1,11 @@
 from collections import deque
+
+
 class Solution:
     def numBusesToDestination(self, routes, S, T):
-        if S == T: return 0
-        stopBoard = {} 
+        if S == T:
+            return 0
+        stopBoard = {}
         for bus, stops in enumerate(routes):
             for stop in stops:
                 if stop not in stopBoard:
@@ -18,9 +21,11 @@ class Solution:
             for _ in range(pre_num_stops):
                 curStop = queue.popleft()
                 for bus in stopBoard[curStop]:
-                    if bus in visited: continue
+                    if bus in visited:
+                        continue
                     visited.add(bus)
                     for stop in routes[bus]:
-                        if stop == T: return res
+                        if stop == T:
+                            return res
                         queue.append(stop)
         return -1

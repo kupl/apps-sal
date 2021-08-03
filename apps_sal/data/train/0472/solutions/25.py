@@ -2,7 +2,8 @@ class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
         n = len(arr)
         visited = [False] * n
-        def dfs(index:int)->bool:
+
+        def dfs(index: int) -> bool:
             if index < 0 or index >= n:
                 return False
             if visited[index]:
@@ -17,4 +18,3 @@ class Solution:
             return dfs(right)
         return dfs(start)
         return ans
-

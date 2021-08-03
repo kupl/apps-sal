@@ -1,13 +1,13 @@
 class Solution:
-    
+
     def maxUniqueSplit(self, s: str) -> int:
         res = 1
 
         def dfs(pos, path):
-            
+
             nonlocal res
             if pos == len(s):
-                #print(path)
+                # print(path)
                 res = max(res, len(set(path)))
 
             for i in range(pos + 1, len(s) + 1):

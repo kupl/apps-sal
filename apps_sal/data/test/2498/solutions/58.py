@@ -1,7 +1,10 @@
 import math
+
+
 def LCM(a, b):
     g = math.gcd(a, b)
     return a * b // g
+
 
 N, M = list(map(int, input().split()))
 A = list(map(int, input().split()))
@@ -36,4 +39,3 @@ if ans % 2 == 1:
     print((ans // 2 + 1))
 else:
     print((ans // 2))
-

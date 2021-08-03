@@ -1,4 +1,4 @@
-def hello(name = ''):
+def hello(name=''):
     if name == '' or type(name) != str:
         return 'Hello, World!'
     else:

@@ -13,7 +13,7 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.deaths[name] = True
-        
+
     def getInheritanceOrder(self) -> List[str]:
         ret = []
         q = [self.start]
@@ -24,7 +24,6 @@ class ThroneInheritance:
             for nxt in self.relat[cur][::-1]:
                 q.append(nxt)
         return ret
-                
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -32,4 +31,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

@@ -24,4 +24,5 @@ def problem():
 def __starting_point():
     problem()
 
+
 __starting_point()

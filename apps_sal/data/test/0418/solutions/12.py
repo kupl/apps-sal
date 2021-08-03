@@ -1,6 +1,7 @@
 def is_red(x):
     return x >= 2400
 
+
 n = int(input())
 for i in range(n):
     s = input().split()

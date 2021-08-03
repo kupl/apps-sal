@@ -6,4 +6,3 @@ def distribute(m, n):
             for j in range(m):
                 lst[j % n] += 1
     return lst
-

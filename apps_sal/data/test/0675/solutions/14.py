@@ -1,9 +1,10 @@
-m,t,r = map(int, input().split())
+m, t, r = map(int, input().split())
 w = list(map(int, input().split()))
 
 if r > t:
-    print(-1); return;
-    
+    print(-1)
+    return
+
 candles = []
 for i in range(m):
     ct = 0

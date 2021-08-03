@@ -12,4 +12,3 @@ for i in range(t):
     if ((a + b) % 2 == 0) and ((a + d) > 0):
         ans[3] = 'Ya'
     print(' '.join(ans))
-

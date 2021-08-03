@@ -1,6 +1,7 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         ans = [0]
+
         def split(curr, ind):
             if ind >= len(s):
                 return len(curr)
@@ -12,5 +13,3 @@ class Solution:
             return len(curr)
         split(set(), 0)
         return ans[0]
-                
-

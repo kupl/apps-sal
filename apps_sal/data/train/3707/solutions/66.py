@@ -1,3 +1,3 @@
 def sorter(textbooks):
-    a = sorted(textbooks, key = str.lower)
+    a = sorted(textbooks, key=str.lower)
     return a

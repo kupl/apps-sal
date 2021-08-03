@@ -1,2 +1,2 @@
-def is_even(n): 
-    return float(int(n % 2 ==0))
+def is_even(n):
+    return float(int(n % 2 == 0))

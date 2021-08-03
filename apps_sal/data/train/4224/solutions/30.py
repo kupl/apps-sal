@@ -8,4 +8,3 @@ def dont_give_me_five(start, end):
         if not '5' in str(i):
             new_l.append(i)
     return len(new_l)
-

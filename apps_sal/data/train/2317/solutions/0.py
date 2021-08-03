@@ -6,7 +6,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    
+
     ans = 0
     for i in range(n - 1):
         diff = a[i] - a[i + 1]
@@ -16,4 +16,3 @@ for _ in range(t):
             ans = max(len(bin(diff)) - 2, ans)
             a[i + 1] = a[i]
     print(ans)
-

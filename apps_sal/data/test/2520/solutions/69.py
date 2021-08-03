@@ -45,20 +45,21 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m,k=map(int,input().split())
-friend=[[] for _ in range(n)]
-block=[[] for _ in range(n)]
-a=UnionFind(n)
+
+n, m, k = map(int, input().split())
+friend = [[] for _ in range(n)]
+block = [[] for _ in range(n)]
+a = UnionFind(n)
 for i in range(m):
-    x,y=map(int,input().split())
-    friend[x-1].append(y-1)
-    friend[y-1].append(x-1)
-    a.union(x-1,y-1)
+    x, y = map(int, input().split())
+    friend[x - 1].append(y - 1)
+    friend[y - 1].append(x - 1)
+    a.union(x - 1, y - 1)
 for i in range(k):
-    x,y=map(int,input().split())
-    block[x-1].append(y-1)
-    block[y-1].append(x-1)
-ans=[]
+    x, y = map(int, input().split())
+    block[x - 1].append(y - 1)
+    block[y - 1].append(x - 1)
+ans = []
 for i in range(n):
-    ans.append(a.size(i)-len(friend[i])-sum(a.same(i,j) for j in block[i])-1)
+    ans.append(a.size(i) - len(friend[i]) - sum(a.same(i, j) for j in block[i]) - 1)
 print(*ans)

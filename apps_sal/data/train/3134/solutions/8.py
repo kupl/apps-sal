@@ -1,2 +1,1 @@
-is_valid=lambda idn: bool(__import__("re").match("^[a-zA-Z_$][\w$]*$",idn))
-
+def is_valid(idn): return bool(__import__("re").match("^[a-zA-Z_$][\w$]*$", idn))

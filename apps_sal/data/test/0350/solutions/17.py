@@ -9,4 +9,3 @@ for i in range(len(a)):
     occ.add(a[i])
 
 print(sum(a))
-

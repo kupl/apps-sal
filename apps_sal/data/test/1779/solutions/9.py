@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     a = sys.stdin.readline().rstrip()
     b = sys.stdin.readline().rstrip()
@@ -9,7 +10,7 @@ def main():
         x[a[i]] = b[i]
         x[a[i].upper()] = b[i].upper()
 
-    s = [0]*len(c)
+    s = [0] * len(c)
 
     for i in range(len(c)):
         if c[i] in x:
@@ -19,6 +20,5 @@ def main():
 
     print("".join(s))
 
-    
-main()
 
+main()

@@ -9,10 +9,10 @@ class UnionFind():
         # root[x]<0ならそのノードが根かつその値が木の要素数
         # rootノードでその木の要素数を記録する
         # root[x]>=0の場合は、特に直接的な意味を持たない気がする。計算に寄与するので意味はあるのだろうが。
-        self.root = [-1]*(n+1)
+        self.root = [-1] * (n + 1)
         # 木をくっつける時にアンバランスにならないように調整する
         # 無結合の時はRank=0,結合して1つ木が深くなると根がRank+=1
-        self.rnk = [0]*(n+1)
+        self.rnk = [0] * (n + 1)
 
     # ノードxのrootノードを見つける
     #
@@ -55,17 +55,18 @@ class UnionFind():
     # ノードxが属する木のサイズを返す
     def Count(self, x):
         return -self.root[self.Find_Root(x)]
-    
+
+
 #######################################################
-N,M=map(int,input().split())
-UN=UnionFind(N)
+N, M = map(int, input().split())
+UN = UnionFind(N)
 for _ in range(M):
-    s,t,u = map(int,input().split())
-    UN.Unite(s,t)
-    
-#print(UN.root)
-ans=0
+    s, t, u = map(int, input().split())
+    UN.Unite(s, t)
+
+# print(UN.root)
+ans = 0
 for i in UN.root:
-    if i<0:
-        ans +=1
-print(ans-1)
+    if i < 0:
+        ans += 1
+print(ans - 1)

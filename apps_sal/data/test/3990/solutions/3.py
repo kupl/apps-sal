@@ -1,4 +1,4 @@
-#http://codeforces.com/contest/601/problem/A
+# http://codeforces.com/contest/601/problem/A
 import sys
 from collections import deque
 
@@ -10,7 +10,7 @@ for i in range(m):
     y -= 1
     g |= {(x, y), (y, x)}
 
-cut = (0, n-1) in g
+cut = (0, n - 1) in g
 
 q = deque()
 q.append(0)
@@ -24,5 +24,4 @@ while len(q):
             d[y] = d[x] + 1
             q.append(y)
 
-print(d[n-1])
-
+print(d[n - 1])

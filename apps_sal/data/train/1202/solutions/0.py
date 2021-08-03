@@ -1,6 +1,6 @@
 # cook your dish here
 
-d = { 'D': 238, 'T': 244, 'M': 138, 'B': 279, 'C': 186 }
+d = {'D': 238, 'T': 244, 'M': 138, 'B': 279, 'C': 186}
 
 s = list(input())
 totalCal = 0

@@ -9,4 +9,3 @@ for i in range(N):
     ans += math.ceil(D / A)
 
 print((ans + X))
-

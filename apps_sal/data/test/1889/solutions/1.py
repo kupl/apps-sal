@@ -3,6 +3,7 @@ n, m, q = list(map(int, input().split()))
 s = []
 t = []
 
+
 def getMax(line):
     cur = 0
     res = 0
@@ -14,6 +15,7 @@ def getMax(line):
             cur = 0
     res = max(res, cur)
     return res
+
 
 for i in range(n):
     si = list(map(int, input().split()))
@@ -31,4 +33,3 @@ for qi in range(q):
     # print(t)
     res = max(t)
     print(res)
-

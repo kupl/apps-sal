@@ -3,7 +3,7 @@ import math
 
 n = int(input())
 
-mod = 10**9+7
+mod = 10**9 + 7
 
 data = {}
 zero_zero = 0
@@ -15,7 +15,7 @@ for i in range(n):
         zero_zero += 1
         continue
     gcd = math.gcd(a, b)
-    a, b = a//gcd, b//gcd
+    a, b = a // gcd, b // gcd
     if a < 0:
         a, b = -a, -b
 
@@ -43,14 +43,14 @@ for i in range(n):
 # print(zero_zero)
 
 power_2 = [1]
-for i in range(1, 2*10**5+100):
-    power_2.append(power_2[i-1]*2 % mod)
+for i in range(1, 2 * 10**5 + 100):
+    power_2.append(power_2[i - 1] * 2 % mod)
 
 ans = 1
 # print(ans)
 # print()
 for (a, b), (l, m) in list(data.items()):
-    ans *= (power_2[l]+power_2[m]-1) % mod
+    ans *= (power_2[l] + power_2[m] - 1) % mod
     # print(power_2[l]+power_2[m]-1)
     # print(ans)
     # print()
@@ -108,4 +108,3 @@ print((ans % mod))
 # count -= (negative) % mod
 
 # print(count % mod)
-

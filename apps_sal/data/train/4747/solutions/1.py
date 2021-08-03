@@ -1,4 +1,4 @@
-def repeat_str(a,b):
+def repeat_str(a, b):
     '''crazy
 i am a crazy
 i am a crazy
@@ -3154,6 +3154,6 @@ i am a crazy
 i am a crazy
 i am a crazy
 i am a crazy'''
-    return b*a
+    return b * a
 
     return

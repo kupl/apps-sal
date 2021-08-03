@@ -9,11 +9,11 @@ from fractions import gcd
 #         return gcd(b,a/b)
 #     else:
 #         return gcd(b,a)
-t=int(input())
+t = int(input())
 while t:
-    x,y=[int(i) for i in input().split(' ')]
-    if gcd(x,y)==1:
+    x, y = [int(i) for i in input().split(' ')]
+    if gcd(x, y) == 1:
         print("YES")
     else:
         print("NO")
-    t-=1
+    t -= 1

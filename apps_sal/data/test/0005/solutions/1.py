@@ -1,6 +1,7 @@
 from sys import stdin as cin
 from sys import stdout as cout
 
+
 def main():
     n, pos, l, r = list(map(int, cin.readline().split()))
     if l == 1 and r == n:
@@ -17,5 +18,5 @@ def main():
         return
     print(2 + min(abs(r - pos), abs(l - pos)) + r - l)
 
-main()
 
+main()

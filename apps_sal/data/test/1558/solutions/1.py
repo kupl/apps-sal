@@ -26,4 +26,3 @@ else:
         i += 1
 
     print(res)
-

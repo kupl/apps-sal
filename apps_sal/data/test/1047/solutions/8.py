@@ -1,8 +1,8 @@
 def main():
     n = [int(i) for i in input()]
-    
+
     number = max(n)
-    
+
     print(number)
     for i in range(number):
         k = []
@@ -14,5 +14,5 @@ def main():
         print(''.join(str(i) for i in k), end=' ')
     print()
 
-main()
 
+main()

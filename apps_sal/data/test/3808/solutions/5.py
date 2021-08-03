@@ -6,19 +6,17 @@ n = int(input())
 S = input().strip()
 
 NOW = 0
-SC=[]
+SC = []
 
 for s in S:
-    if s=="(":
-        NOW+=1
+    if s == "(":
+        NOW += 1
     else:
-        NOW-=1
+        NOW -= 1
     SC.append(NOW)
 
 
-    
-if SC[-1]==0 and min(SC)>=-1:
+if SC[-1] == 0 and min(SC) >= -1:
     print("Yes")
 else:
     print("No")
-

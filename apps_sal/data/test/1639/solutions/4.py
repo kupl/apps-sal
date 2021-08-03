@@ -9,4 +9,3 @@ for i in range(1, n):
         m = max(m, k)
         k = 1
 print(max(m, k))
-

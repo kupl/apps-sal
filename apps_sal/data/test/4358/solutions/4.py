@@ -12,4 +12,3 @@ my_list[0] = int(my_list[0] / 2)
 answer = sum(my_list)
 
 print(answer)
-

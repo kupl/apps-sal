@@ -1,7 +1,7 @@
 powers = list(map(int, input().split()))
 for first in range(len(powers)):
-    for second in range(first+1,len(powers)):
-        for third in range(second + 1,len(powers)):
+    for second in range(first + 1, len(powers)):
+        for third in range(second + 1, len(powers)):
             sum1 = powers[first] + powers[second] + powers[third]
             used = set([first, second, third])
             sum2 = 0

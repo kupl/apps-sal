@@ -8,7 +8,7 @@ for i in range(len(S) - 1, -1, -1):
     if last_ind - i > 7 or i == 0:
         yes = False
         break
-        
+
 if yes:
     print("YES")
 else:

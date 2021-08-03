@@ -9,17 +9,14 @@ class Solution:
         return optimalMax(piles)>sum(piles)/2
         '''
         # actual list: piles[i:j]
-        def optimalMax(piles: List[int], dpTable, i,j,sum_):
-            if j-i==1:
-                dpTable[i][j-1]=piles[i]
+        def optimalMax(piles: List[int], dpTable, i, j, sum_):
+            if j - i == 1:
+                dpTable[i][j - 1] = piles[i]
                 return piles[i]
-            if dpTable[i][j-1]<=0:
-                dpTable[i][j-1]=max(sum_-optimalMax(piles,dpTable,i+1,j,sum_-piles[i]),
-                   sum_-optimalMax(piles,dpTable,i,j-1,sum_-piles[j-1]))
-            return dpTable[i][j-1]
-        dpTable=[[0 for _ in piles] for _ in piles]
-        #print(dpTable)
-        return optimalMax(piles, dpTable,0,len(piles),sum(piles))>sum(piles)/2
-    
-    
-
+            if dpTable[i][j - 1] <= 0:
+                dpTable[i][j - 1] = max(sum_ - optimalMax(piles, dpTable, i + 1, j, sum_ - piles[i]),
+                                        sum_ - optimalMax(piles, dpTable, i, j - 1, sum_ - piles[j - 1]))
+            return dpTable[i][j - 1]
+        dpTable = [[0 for _ in piles] for _ in piles]
+        # print(dpTable)
+        return optimalMax(piles, dpTable, 0, len(piles), sum(piles)) > sum(piles) / 2

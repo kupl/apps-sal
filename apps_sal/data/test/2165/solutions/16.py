@@ -1,4 +1,6 @@
-rd = lambda: map(int, input().split())
+def rd(): return map(int, input().split())
+
+
 n, t = rd()
 a = list(rd())
 b = list(rd())

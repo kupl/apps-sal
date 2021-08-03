@@ -6,4 +6,3 @@ elif t >= k and t <= n:
     print(k)
 else:
     print(k - t + n)
-

@@ -2,8 +2,8 @@ class Solution:
     def pathInZigZagTree(self, label: int) -> List[int]:
         h = 1
         symmetry = [2]
-        while 2**h - 1 < label//2:
-            symmetry.append(symmetry[-1]*2 + 1)
+        while 2**h - 1 < label // 2:
+            symmetry.append(symmetry[-1] * 2 + 1)
             h += 1
         path = [label]
         while label > 1:
@@ -12,4 +12,3 @@ class Solution:
             path.append(label)
             symmetry.pop()
         return reversed(path)
-

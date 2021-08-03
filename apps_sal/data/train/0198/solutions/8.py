@@ -12,6 +12,5 @@ class Solution:
             else:
                 cost -= abs(ord(s[start]) - ord(t[start]))
                 start += 1
-            max_length = max(max_length, end - start) 
-        return max_length 
-
+            max_length = max(max_length, end - start)
+        return max_length

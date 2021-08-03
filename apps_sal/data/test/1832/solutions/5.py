@@ -10,5 +10,3 @@ for _ in range(int(input())):
         else:
             ans[n] = 'a'
         print(''.join(ans))
-
-

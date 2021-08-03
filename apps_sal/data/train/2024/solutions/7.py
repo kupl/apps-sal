@@ -22,8 +22,9 @@ def __starting_point():
     e = [0.0 for i in range(n)]
     d[0] = e[0] = p[0]
     for i in range(1, n):
-        d[i] = p[i] * (d[i-1] + 1.0)
-        e[i] = e[i-1] + p[i] * (2.0 * d[i-1] + 1)
-    print(e[n-1])
+        d[i] = p[i] * (d[i - 1] + 1.0)
+        e[i] = e[i - 1] + p[i] * (2.0 * d[i - 1] + 1)
+    print(e[n - 1])
+
 
 __starting_point()

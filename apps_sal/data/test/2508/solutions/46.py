@@ -7,6 +7,7 @@ def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return [LIST() for _ in range(n)]
 
+
 def main():
     H, W, K = MAP()
     HH = max(H, W) + 2
@@ -55,5 +56,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

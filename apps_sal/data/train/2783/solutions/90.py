@@ -20,4 +20,3 @@ def get_grade(s1,
         return "D"
 
     return "F"
-

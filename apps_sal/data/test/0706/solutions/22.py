@@ -20,5 +20,5 @@ ans = (pow(a, n, mod) * x % mod) % mod
 if a != 1:
     ans2 = ((b * (pow(a, n, mod) - 1) % mod) * modinv(a - 1, mod)) % mod
 else:
-    ans2 = (b*(n*a)%mod)%mod
+    ans2 = (b * (n * a) % mod) % mod
 print((ans + ans2) % mod)

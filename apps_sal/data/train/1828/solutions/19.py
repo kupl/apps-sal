@@ -7,21 +7,21 @@ class Solution:
             freq[code] += 1
             if freq[code] > freq[maxFreqCode]:
                 maxFreqCode = code
-        
+
         i = 0
         ans = [0] * len_
-        
+
         for _ in range(freq[maxFreqCode]):
             ans[i] = maxFreqCode
             i += 2
-        freq[maxFreqCode] = 0    
-        
-        for code in freq:    
+        freq[maxFreqCode] = 0
+
+        for code in freq:
             for _ in range(freq[code]):
                 if i >= len_:
                     i = 1
                 ans[i] = code
                 i += 2
-            freq[code] = 0    
-            
+            freq[code] = 0
+
         return ans

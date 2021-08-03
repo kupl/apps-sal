@@ -5,4 +5,3 @@ def pre_fizz(n):
         list_n.append(i)
         i += 1
     return list_n
-

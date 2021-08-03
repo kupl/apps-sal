@@ -5,7 +5,6 @@ twice = 2**64
 for i in a:
     twice |= (once & i)
     once |= i
-a = sorted([(i & ~twice,i) for i in a],reverse=True)
-a = [j for i,j in a]
+a = sorted([(i & ~twice, i) for i in a], reverse=True)
+a = [j for i, j in a]
 print(*a)
-

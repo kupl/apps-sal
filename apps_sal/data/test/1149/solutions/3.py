@@ -12,7 +12,7 @@ y = list(map(int, inp.readline().strip().split()))[1:]
 
 x_set = set(x)
 y_set = set(y)
-all_set = set(range(1, n+1))
+all_set = set(range(1, n + 1))
 
 new_set = x_set.union(y_set)
 

@@ -9,9 +9,9 @@ else:
     current = 1
     while n != 1:
         if n % 2 != 0:
-            z = (n//2) + 1
+            z = (n // 2) + 1
         else:
-            z = n//2
+            z = n // 2
         for i in range(z):
             out.write(str(current) + ' ')
         n -= z
@@ -23,8 +23,8 @@ else:
         q = 2**(step - 1)
         ans = 0
         for i in range(1, 1000):
-            if q*i <= tmp:
-                ans = max(ans, q*i)
+            if q * i <= tmp:
+                ans = max(ans, q * i)
             else:
                 break
         out.write(str(ans))

@@ -8,4 +8,3 @@ class Solution:
             s += '1' + ''.join(chars)
             # print('i = {0}, s = {1}'.format(i, s))
         return s[k - 1]
-

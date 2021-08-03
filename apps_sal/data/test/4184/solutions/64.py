@@ -5,6 +5,6 @@ ans, ww = 1001001001, 0
 for w in wl:
     ww += w
     sw -= w
-    ans = min(ans, abs(ww-sw))
+    ans = min(ans, abs(ww - sw))
 
 print(ans)

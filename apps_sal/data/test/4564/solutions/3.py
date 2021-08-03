@@ -1,6 +1,6 @@
-s=input()
-t=True
+s = input()
+t = True
 for i in s:
     if s.count(i) != 1:
-        t=False
+        t = False
 print("yes" if t else "no")

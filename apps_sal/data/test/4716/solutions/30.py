@@ -4,4 +4,3 @@ ans = 0
 for i in range(K):
     ans += L[i]
 print(ans)
-

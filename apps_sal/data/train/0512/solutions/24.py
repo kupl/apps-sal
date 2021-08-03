@@ -7,6 +7,7 @@ class SegmentTree1():
     """
     1-indexed Segment Tree
     """
+
     def __init__(self, n_, ele_id, operation_func):
         self.n = 1 << (n_ - 1).bit_length()  # size
         self.data = [ele_id] * (2 * self.n)  # binary tree
@@ -66,7 +67,7 @@ class Tree():
 
         depth_list = [(di, i) for i, di in enumerate(self.euler_depth_topo)]
         INF = (2 * self.n, -1)
-        operation_func = lambda a, b: a if a[0] < b[0] else b
+        def operation_func(a, b): return a if a[0] < b[0] else b
         self.st_rmq = SegmentTree1(2 * self.n - 1, INF, operation_func)
         self.st_rmq.build(depth_list)
 
@@ -158,4 +159,3 @@ for x, y, u, v, lca in query:
 
     ans = depth_u + depth_v - 2 * depth_lca
     print(ans)
-

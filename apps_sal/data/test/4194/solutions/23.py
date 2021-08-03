@@ -5,4 +5,3 @@ if sum(A) > N:
     print((-1))
 else:
     print((N - sum(A)))
-

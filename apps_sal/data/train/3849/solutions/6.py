@@ -5,8 +5,8 @@ def spacify(string):
         if i == 0:
             s = s + string[i]
         else:
-        
-            s = s + " " + string[i] 
+
+            s = s + " " + string[i]
         i += 1
-    
+
     return s

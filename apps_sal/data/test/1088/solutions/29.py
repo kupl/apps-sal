@@ -1,3 +1,6 @@
+from itertools import combinations
+
+
 class DisjointSetUnion():
     def __init__(self, n):
         self.n = n
@@ -8,8 +11,10 @@ class DisjointSetUnion():
         #assert 0 <= b < self.n
         x = self.leader(a)
         y = self.leader(b)
-        if x == y: return x
-        if -self.par_size[x] < -self.par_size[y]: x, y = y, x
+        if x == y:
+            return x
+        if -self.par_size[x] < -self.par_size[y]:
+            x, y = y, x
         self.par_size[x] += self.par_size[y]
         self.par_size[y] = x
         return x
@@ -33,6 +38,7 @@ class DisjointSetUnion():
         #assert 0 <= a < self.n
         return -self.par_size[self.leader(a)]
 
+
 def build_factorial(n):
     fct = [0] * (n + 1)
     inv = [0] * (n + 1)
@@ -44,8 +50,8 @@ def build_factorial(n):
         inv[i] = inv[i + 1] * (i + 1) % MOD
     return fct, inv
 
+
 MOD = 998244353
-from itertools import combinations
 
 N, K = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
@@ -59,7 +65,7 @@ for i, j in combinations(range(N), 2):
             break
     else:
         uf1.merge(i, j)
-        
+
     for k in range(N):
         if A[k][i] + A[k][j] > K:
             break

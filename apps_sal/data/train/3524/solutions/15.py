@@ -1,5 +1,5 @@
 def dna_to_rna(dna):
-    results=[]
+    results = []
     for x in dna:
         if x == "T":
             results.append("U")

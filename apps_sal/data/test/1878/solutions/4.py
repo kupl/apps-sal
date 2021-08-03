@@ -8,4 +8,6 @@ def __starting_point():
         total += w * h
 
     print(total)
+
+
 __starting_point()

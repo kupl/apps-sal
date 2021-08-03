@@ -8,9 +8,7 @@ for a in A[1:]:
         res.append(a)
     else:
         if res[idx] == a:
-            insort_right(res, a)   
+            insort_right(res, a)
         else:
             res[idx] = a
 print((len(res)))
-    
-

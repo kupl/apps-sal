@@ -1,5 +1,5 @@
 a = list(map(str, input().replace(';', ',').split(',')))
-#print(a)
+# print(a)
 c = []
 d = []
 for i in a:
@@ -24,6 +24,3 @@ else:
     for i in d:
         ans += i + ','
     print('"' + ans[:-1] + '"')
-    
-    
-

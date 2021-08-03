@@ -5,6 +5,7 @@ def s(x):
         x //= 10
     return res
 
+
 a, b, c = list(map(int, input().split()))
 ans = []
 for i in range(100):
@@ -12,10 +13,9 @@ for i in range(100):
     if x < 0:
         continue
     if s(x) == i and 0 < x < 10**9:
-        ans.append(x);
+        ans.append(x)
 
 ans.sort()
 print(len(ans))
 if len(ans) != 0:
     print(*ans)
-

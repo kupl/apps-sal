@@ -4,7 +4,7 @@ for it in range(q):
     if a * b <= 2:
         print((0))
         continue
-    lo, hi = 1, a*b - 1
+    lo, hi = 1, a * b - 1
     while lo < hi:
         x = (lo + hi + 1) // 2
         #l = list(range(max(1, x // 2 - 2), x // 2 + 3))
@@ -13,7 +13,7 @@ for it in range(q):
             r1, r2 = x // 2, x // 2 + 1
             l1, l2 = x // 2, x // 2 + 1
         else:
-            l, r = (x + 1) // 2, (x + 1) // 2 
+            l, r = (x + 1) // 2, (x + 1) // 2
             if a <= l:
                 l += 1
             if b <= r:
@@ -26,18 +26,17 @@ for it in range(q):
         if b <= r1:
             r1 += 1
             r2 += 1
-        #elif b >= r2 and b <= x:
+        # elif b >= r2 and b <= x:
         #    r1 -= 1
         #    r2 -= 1
         if a <= l1:
             l1 += 1
             l2 += 1
-        #elif a >= l2 and a <= x:
+        # elif a >= l2 and a <= x:
         #    l1 -= 1
         #    l2 -= 1
-        if l1 * r2 < a*b and l2 * r1 < a*b:
+        if l1 * r2 < a * b and l2 * r1 < a * b:
             lo = x
         else:
             hi = x - 1
     print(lo)
-

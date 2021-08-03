@@ -6,5 +6,5 @@ for v in range(n):
     while s > t:
         s -= c[u]
         u += 1
-    z = max(z, v-u+1)
+    z = max(z, v - u + 1)
 print(z)

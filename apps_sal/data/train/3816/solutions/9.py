@@ -3,6 +3,6 @@ def move_ten(st):
     output = ""
     for letter in st:
         index = alphabet.index(letter)
-        letter = alphabet[index+10]
+        letter = alphabet[index + 10]
         output += letter
     return output

@@ -17,4 +17,3 @@ for _ in range(int(input())):
             unlocked_idx += 1
         arr_idx += 1
     print(*arr)
-

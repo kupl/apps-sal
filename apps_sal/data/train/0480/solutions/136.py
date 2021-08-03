@@ -5,16 +5,15 @@ class Solution:
         dp = [[0] * (maxPos + 1) for _ in range(steps + 1)]
         dp[1][0] = 1
         dp[1][1] = 1
-        
+
         for s in range(2, steps + 1):
             for p in range(maxPos):
-                dp[s][p] = dp[s-1][p] + dp[s-1][p+1]
-                dp[s][p] += dp[s-1][p-1] if p > 0 else 0
+                dp[s][p] = dp[s - 1][p] + dp[s - 1][p + 1]
+                dp[s][p] += dp[s - 1][p - 1] if p > 0 else 0
                 dp[s][p] %= mod
-        
+
         return dp[steps][0]
-    
+
 # initial state is critical
 # 0 step is meaningless
 # 1 step could be set manually
-

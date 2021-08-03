@@ -34,4 +34,3 @@ minnum = f[n][m]
 sergei = f[x][y]
 
 print(maxnum, minnum, sergei)
-

@@ -11,4 +11,3 @@ for word in S:
     ans = ans + alphabet[new_index]
 
 print(ans)
-

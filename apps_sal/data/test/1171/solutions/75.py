@@ -2,7 +2,9 @@ import sys
 import copy
 import heapq
 from collections import deque
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 INF = 10**9 + 7
 
 
@@ -45,5 +47,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

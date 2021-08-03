@@ -1,1 +1,1 @@
-print(f"A%sC"%input()[8])
+print(f"A%sC" % input()[8])

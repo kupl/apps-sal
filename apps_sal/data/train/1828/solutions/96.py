@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         if barcodes is None or len(barcodes) == 0:
@@ -7,7 +9,7 @@ class Solution:
             return barcodes
 
         counter = Counter(barcodes)
-        num_occurrences = sorted(counter, key = lambda x: counter.get(x), reverse=True)
+        num_occurrences = sorted(counter, key=lambda x: counter.get(x), reverse=True)
         elements = dict()
 
         for elem in num_occurrences:
@@ -17,7 +19,7 @@ class Solution:
         item_index = 0
         index = 0
         value = num_occurrences[0]
-        value_index= 0
+        value_index = 0
         for i in range(len(barcodes)):
             while output[index] is not None or output[index - 1] == value:
                 index += 1

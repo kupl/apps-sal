@@ -1,4 +1,6 @@
 import time
+
+
 def pack_bagpack(scores, weights, capacity):
     """
     求最大分数
@@ -38,11 +40,11 @@ def pack_bagpack(scores, weights, capacity):
 
             # 缓存当前的位置和剩余重量的值, 让以后的递归不再重复计算类似结果
             cache_dict[cache_key] = max(score_with_current, score_no_current)
-            
+
         return cache_dict[cache_key]
 
     final_score = calc_item(0, capacity)
 
-    print("score: {}  duration---> {}".format(final_score,time.time() - start_time))
+    print("score: {}  duration---> {}".format(final_score, time.time() - start_time))
     # 3) 得出最优
     return final_score

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 from collections import namedtuple
-from functools   import reduce
-from operator    import itemgetter
+from functools import reduce
+from operator import itemgetter
 
 Point = namedtuple("Point", "x y d1 d2")
 
@@ -28,4 +28,3 @@ try:
 
 except EOFError:
     pass
-

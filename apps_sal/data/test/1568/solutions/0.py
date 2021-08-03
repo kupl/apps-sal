@@ -13,5 +13,3 @@ else:
     acc *= (c - b)
     acc += n * a
     print(acc)
-    
-

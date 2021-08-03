@@ -31,4 +31,3 @@ for _ in range(Q):
     R -= 1
     path = acc[L % D]
     print((path[R // D] - path[L // D]))
-

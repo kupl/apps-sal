@@ -1,5 +1,6 @@
 def solve(x, y, p, q):
-    if p == 0: return 0 if x == 0 else -1
+    if p == 0:
+        return 0 if x == 0 else -1
     pp = (x - 1) // p + 1 if p != 0 else 0
     L = max((y - 1) // q + 1, pp) - 1
     L = max(L, -1)
@@ -21,7 +22,10 @@ def solve(x, y, p, q):
         return -1
     return R * q - y
 
-read = lambda: map(int, input().split())
+
+def read(): return map(int, input().split())
+
+
 t = int(input())
 for i in range(t):
     x, y, p, q = read()

@@ -5,8 +5,5 @@ def find_gatecrashers(people, invitations):
         ok.add(a)
         for ii in b:
             ok.add(ii)
-            
-    return sorted(list(set(people) - ok))
-            
-            
 
+    return sorted(list(set(people) - ok))

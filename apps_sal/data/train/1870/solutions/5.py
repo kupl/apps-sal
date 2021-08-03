@@ -10,9 +10,9 @@ class Solution:
                 sumValues += i * value
             if value == max(count):
                 mode = i
-                
+
         mean = sumValues / sum(count)
-        
+
         if len(count) % 2 == 0:
             lowMid = sum(count) // 2
             upMid = lowMid + 1
@@ -34,6 +34,5 @@ class Solution:
                 if currentCount >= mid:
                     median += i
                     break
-        
-        return [minimum, maximum,  mean, median, mode]
 
+        return [minimum, maximum, mean, median, mode]

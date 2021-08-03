@@ -5,7 +5,7 @@ class Solution:
         deq = deque(customers)
         curr_customers = 0
         #rev_list = reversed(customers)
-        max_profit , count_spin = 0,0
+        max_profit, count_spin = 0, 0
         count = 0
         while True:
             count += 1
@@ -17,14 +17,11 @@ class Solution:
             else:
                 if curr_customers >= 4:
                     curr_customers -= 4
-                    current_profit += boardingCost * 4 -  runningCost
+                    current_profit += boardingCost * 4 - runningCost
                 else:
-                    current_profit += boardingCost * curr_customers -  runningCost
+                    current_profit += boardingCost * curr_customers - runningCost
                     curr_customers = 0
             if max_profit < current_profit:
                 max_profit = current_profit
                 count_spin = count
         return count_spin if max_profit > 0 else -1
-        
-        
-

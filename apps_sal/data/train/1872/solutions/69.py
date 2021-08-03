@@ -20,5 +20,5 @@ class Solution:
                 if node.right:
                     q.append(node.right)
             if max < sum:
-                max, maxLevel = sum, level        
+                max, maxLevel = sum, level
         return maxLevel

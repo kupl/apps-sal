@@ -18,7 +18,9 @@ class Bit:
             self.tree[i] += x
             i |= i + 1
 
+
 a = ord('a')
+
 
 def make_index(s):
 
@@ -27,6 +29,7 @@ def make_index(s):
         index[ord(ch) - a].append(i)
 
     return index
+
 
 def solve(s):
 

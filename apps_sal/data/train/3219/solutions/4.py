@@ -15,5 +15,6 @@ result = [[7, 11, 13, 17, 19, 23],
           [3400207, 3400211, 3400213, 3400217, 3400219, 3400223],
           [6005887, 6005891, 6005893, 6005897, 6005899, 6005903]]
 
+
 def find_primes_sextuplet(sum_limit):
     return result[bisect(sums, sum_limit)]

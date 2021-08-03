@@ -4,8 +4,8 @@ def solve(s):
     last = 0
     for i in range(len(s)):
         if s[i].isnumeric():
-            if last == i-1:
-                number = number*10 + int(s[i])
+            if last == i - 1:
+                number = number * 10 + int(s[i])
                 last = i
             else:
                 lst.append(number)

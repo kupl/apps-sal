@@ -19,7 +19,8 @@ class Solution:
 
         def union(u: int, v: int) -> bool:
             i, j = find(u), find(v)
-            if i == j: return False
+            if i == j:
+                return False
             if j > i:
                 i, j = j, i
             path[j] = i
@@ -32,4 +33,3 @@ class Solution:
                 costs += w
                 union(u, v)
         return costs
-

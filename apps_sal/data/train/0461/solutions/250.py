@@ -3,9 +3,9 @@ class Solution:
         # DFS Stack
         self.max = 0
         directSub = self.makeDirectSub(manager)
-        self.dfs(headID,directSub,informTime)
+        self.dfs(headID, directSub, informTime)
         return self.max
-        
+
     def makeDirectSub(self, manager):
         d = {new_list: [] for new_list in range(len(manager))}
 
@@ -13,15 +13,13 @@ class Solution:
             if manager[employee] != -1:
                 d[manager[employee]].append(employee)
         return d
-            
-        
-    def dfs(self, headID, directSub,informTime):
-        stk = [(headID,0)]
+
+    def dfs(self, headID, directSub, informTime):
+        stk = [(headID, 0)]
         while stk:
             employee, time = stk.pop()
-            self.max = max(self.max,time)
+            self.max = max(self.max, time)
             # add all subemployees and record the time it took them to get the information
             for subEmp in directSub[employee]:
-                stk.append((subEmp,time+informTime[employee]))
+                stk.append((subEmp, time + informTime[employee]))
         return
-

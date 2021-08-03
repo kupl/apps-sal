@@ -25,4 +25,3 @@ for i in range(N - 1):
         t = max(S[j], int(math.ceil(t / F[j])) * F[j]) + C[j]
     print(t)
 print((0))
-

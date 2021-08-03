@@ -15,5 +15,3 @@ for x in c:
         break
 if not no:
     print("YES")
-
-

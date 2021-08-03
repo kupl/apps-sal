@@ -3,12 +3,14 @@ read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 
+
 def main():
     N = int(readline())
     a = list(map(int, readline().split()))
 
     ans = []
-    MAX = max(a); MIN = min(a)
+    MAX = max(a)
+    MIN = min(a)
     if MIN >= 0:
         for i in range(1, N):
             ans.append((i, i + 1))
@@ -34,7 +36,9 @@ def main():
     for i, j in ans:
         print((i, j))
 
+
 def __starting_point():
-   main()
+    main()
+
 
 __starting_point()

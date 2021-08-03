@@ -2,7 +2,7 @@ class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         dp = [float('inf') for i in range(len(arr))]
         curr_sum = 0
-        hist = {0:-1}
+        hist = {0: -1}
         res = float('inf')
         shortest_length = float('inf')
         for i, num in enumerate(arr):
@@ -19,4 +19,3 @@ class Solution:
             dp[i] = shortest_length
         # print(dp)
         return res if res != float('inf') else -1
-

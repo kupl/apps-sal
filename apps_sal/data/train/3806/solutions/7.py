@@ -21,9 +21,10 @@ def black_and_white(height, width, compressed):
                     line = []
                     if(compressed[i] <= 0):
                         line.append(0)
-    if(len(img[height-1]) % 2 != 0):
-        img[height-1].append(0)
+    if(len(img[height - 1]) % 2 != 0):
+        img[height - 1].append(0)
     return img
+
 
 def line_empty_size(line, width):
     size = width

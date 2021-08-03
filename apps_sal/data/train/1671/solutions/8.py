@@ -18,4 +18,5 @@ def __starting_point():
         ans = solve(N,)
         print(ans)
 
+
 __starting_point()

@@ -1,6 +1,7 @@
 def solve(arr):
     return list(map(helper, arr))
-    
+
+
 def helper(str):
     count = 0
     i = 0

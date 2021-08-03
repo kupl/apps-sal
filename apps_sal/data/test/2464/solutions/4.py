@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def colour(a, graph, cur, i):
     top = set()
     top.add(i)
@@ -10,6 +11,7 @@ def colour(a, graph, cur, i):
             if a[y] == 0:
                 top.add(y)
 
+
 def colour_graph(a, graph, n):
     cur = 0
     for i in range(1, n + 1):
@@ -19,12 +21,14 @@ def colour_graph(a, graph, n):
             cur += 1
             colour(a, graph, cur, i)
 
+
 def count(col):
     ans = 0
     for el in col:
         if col[el] > 1:
-            ans += col[el]*(col[el] - 1)
+            ans += col[el] * (col[el] - 1)
     return ans
+
 
 n = int(input())
 
@@ -35,8 +39,8 @@ graph1 = defaultdict(set)
 
 vertex0 = set()
 
-a0 = [0]*(n + 1)  
-a1 = [0]*(n + 1)
+a0 = [0] * (n + 1)
+a1 = [0] * (n + 1)
 
 for i in range(n - 1):
     x, y, c = list(map(int, input().split()))
@@ -70,7 +74,6 @@ for v in vertex0:
     col[a1[v]] += col0[a0[v]] - 1
 for el in col:
     if el:
-        answer += col[el]*(col1[el] - 1)
-        
-print(answer)
+        answer += col[el] * (col1[el] - 1)
 
+print(answer)

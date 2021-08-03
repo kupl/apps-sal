@@ -1,4 +1,4 @@
-def subsets_parity(n,k):
+def subsets_parity(n, k):
     string_set = "{:02b}".format(n)
     length = len(string_set)
     string_subset = "{:02b}".format(k).zfill(length)

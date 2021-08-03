@@ -14,7 +14,7 @@ class Solution:
                 self.dfs(i, a, b, types)
                 ans += 1
         return ans
-        
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         a = []
         for i in range(n):

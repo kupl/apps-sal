@@ -1,7 +1,6 @@
 def alternateCase(s):
     cout = []
-    
-        
+
     for letter in s:
         if letter == letter.upper():
             cout.append(letter.lower())

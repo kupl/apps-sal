@@ -6,4 +6,3 @@ for i in range(1, len(A)):
     if A[i] != A[i - 1]:
         res += 1
 print(min(res + 2, n))
-

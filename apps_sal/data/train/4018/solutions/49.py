@@ -1,8 +1,8 @@
 def isDigit(string):
     try:
-      float(string)
+        float(string)
     except:
-      string = False
+        string = False
     else:
-      string = True
+        string = True
     return string

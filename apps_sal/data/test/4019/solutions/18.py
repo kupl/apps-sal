@@ -1,7 +1,10 @@
 # ---------------------------iye ha aam zindegi---------------------------------------------
+from io import BytesIO, IOBase
+import os
 import math
 import random
-import heapq, bisect
+import heapq
+import bisect
 import sys
 from collections import deque, defaultdict
 from fractions import Fraction
@@ -13,9 +16,6 @@ mod = 10 ** 9 + 7
 mod1 = 998244353
 
 # ------------------------------warmup----------------------------
-import os
-import sys
-from io import BytesIO, IOBase
 sys.setrecursionlimit(300000)
 
 BUFSIZE = 8192
@@ -66,7 +66,7 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
 # -------------------game starts now----------------------------------------------------import math
@@ -523,9 +523,12 @@ def countdig(n):
         n //= 10
         c += 1
     return c
+
+
 def binary(x, length):
     y = bin(x)[2:]
     return y if len(y) >= length else "0" * (length - len(y)) + y
+
 
 def countGreater(arr, n, k):
     l = 0
@@ -554,59 +557,62 @@ def countGreater(arr, n, k):
 
 # --------------------------------------------------binary------------------------------------
 def main():
-    er=[]
-    graph=defaultdict(list)
+    er = []
+    graph = defaultdict(list)
     n, m, d = map(int, input().split())
-    vis=[0]*n
-    pre=[-1]*n
-    def dfs(v,p):
-        pre[v]=p
-        vis[v]=1
+    vis = [0] * n
+    pre = [-1] * n
+
+    def dfs(v, p):
+        pre[v] = p
+        vis[v] = 1
         for i in graph[v]:
-            if vis[i]==0:
-                dfs(i,v)
+            if vis[i] == 0:
+                dfs(i, v)
     for i in range(m):
-        a,b=map(int,input().split())
-        if a==1:
-            er.append(b-1)
+        a, b = map(int, input().split())
+        if a == 1:
+            er.append(b - 1)
         elif b == 1:
-            er.append(a-1)
+            er.append(a - 1)
         else:
-            graph[a-1].append(b-1)
-            graph[b-1].append(a-1)
+            graph[a - 1].append(b - 1)
+            graph[b - 1].append(a - 1)
     for i in range(len(er)):
-        if vis[er[i]]==0:
-            dfs(er[i],-1)
-    t=0
+        if vis[er[i]] == 0:
+            dfs(er[i], -1)
+    t = 0
     for i in range(len(er)):
-        if pre[er[i]]==-1:
-            pre[er[i]]=0
-            t+=1
-    if t>d:
+        if pre[er[i]] == -1:
+            pre[er[i]] = 0
+            t += 1
+    if t > d:
         print("NO")
         return
     for i in range(len(er)):
-        if pre[er[i]]==0:
+        if pre[er[i]] == 0:
             continue
-        if t<d:
-            pre[er[i]]=0
-            t+=1
+        if t < d:
+            pre[er[i]] = 0
+            t += 1
         else:
             break
-    if t<d:
+    if t < d:
         print("NO")
         return
-    rt=0
+    rt = 0
     for i in range(n):
-        if pre[i]==-1:
-            rt+=1
-        if rt>=2:
+        if pre[i] == -1:
+            rt += 1
+        if rt >= 2:
             print("NO")
             return
     print("YES")
     for i in range(n):
-        if pre[i]!=-1:
-            print(pre[i]+1,i+1)
+        if pre[i] != -1:
+            print(pre[i] + 1, i + 1)
+
+
 t = threading.Thread(target=main)
 t.start()
 t.join()

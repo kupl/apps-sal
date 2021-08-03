@@ -12,6 +12,3 @@ def inverseMod(a, m):
         return None
     else:
         return x % m
-    
-
-

@@ -3,10 +3,10 @@ import collections
 
 def temp(list1):
     list2 = list(list1)
-    list3=[]
+    list3 = []
     cnt = collections.Counter()
     for i in range(len(list1)):
-        cnt[list1[i]]+=1
+        cnt[list1[i]] += 1
     tep = max(list1)
     if cnt[tep] != 1:
         if cnt[tep] <= 5:
@@ -30,11 +30,9 @@ def temp(list1):
     return list3
 
 
-
-
 n = int(input())
 intgrade = list(map(int, input().split()))
-bitlists=[]
+bitlists = []
 
 if len(set(intgrade)) == 1:
     print(intgrade[0])
@@ -43,20 +41,19 @@ if len(set(intgrade)) == 1:
 else:
     while len(set(intgrade)) != 1:
         listA = temp(intgrade)
-        bitlist=''
+        bitlist = ''
 
         for i in range(len(listA)):
             if intgrade[listA[i]] > 0:
-                intgrade[listA[i]]-=1
+                intgrade[listA[i]] -= 1
 
         for i in range(n):
             if i in listA:
-                bitlist+="1"
+                bitlist += "1"
             else:
-                bitlist+="0"
+                bitlist += "0"
         bitlists.append(bitlist)
     print(intgrade[0])
     print(len(bitlists))
     for i in range(len(bitlists)):
         print(bitlists[i])
-

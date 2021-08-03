@@ -29,15 +29,16 @@ max = 4
 
 '''
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         maps = [{} for i in range(len(A))]
         maxlen = 0
-        for i in range(len(A)-1, -1, -1):
-            for j in range(i+1, len(A)):
+        for i in range(len(A) - 1, -1, -1):
+            for j in range(i + 1, len(A)):
                 diff = A[j] - A[i]
                 if diff in maps[j]:
-                    length = maps[j][diff]+1
+                    length = maps[j][diff] + 1
                 else:
                     length = 2
                 maxlen = max(maxlen, length)
@@ -47,9 +48,10 @@ class Solution:
                 else:
                     maps[i][diff] = length
         return maxlen
-                
+
+
 def search(vals, start, target, length):
-    for i in range(start+1, len(vals)):
+    for i in range(start + 1, len(vals)):
         if vals[i] - vals[start] == target:
-            return search(vals, i, target, length+1)
+            return search(vals, i, target, length + 1)
     return length

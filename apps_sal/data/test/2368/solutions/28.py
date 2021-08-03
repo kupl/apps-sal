@@ -45,6 +45,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))

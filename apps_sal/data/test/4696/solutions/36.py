@@ -8,7 +8,7 @@ def Input():
 
 def main():
     a, b = Input()
-    print("Even" if (a*b)%2==0 else "Odd")
+    print("Even" if (a * b) % 2 == 0 else "Odd")
 
 
 main()

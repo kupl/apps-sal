@@ -19,5 +19,5 @@ while(n > 0):
         ans += cur + a[i - 1]
     i += 1
     cur *= 2
-    
+
 print(ans)

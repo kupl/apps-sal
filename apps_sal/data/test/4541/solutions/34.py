@@ -1,5 +1,5 @@
 x = input()
 if x in "aiueo":
-  print("vowel")
+    print("vowel")
 else:
-  print("consonant")
+    print("consonant")

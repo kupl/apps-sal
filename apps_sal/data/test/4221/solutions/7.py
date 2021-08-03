@@ -1,8 +1,8 @@
-n=  input()
+n = input()
 
 if n[-1] == "s":
-  n = n + "es"
+    n = n + "es"
 else:
-  n = n + "s"
+    n = n + "s"
 
 print(n)

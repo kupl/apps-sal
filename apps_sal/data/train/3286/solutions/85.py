@@ -5,5 +5,3 @@ def enough(cap, on, wait):
     if spots >= wait:
         return 0
     return wait - spots
-
-

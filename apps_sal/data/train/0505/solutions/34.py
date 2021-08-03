@@ -17,13 +17,14 @@ class Stack:
         except IndexError:
             return True
 
+
 class Solution:
-        
+
     def minRemoveToMakeValid(self, s: str) -> str:
 
         stack = Stack()
 
-        remove_indices = [ ]
+        remove_indices = []
 
         for i, char in enumerate(s):
 
@@ -34,8 +35,8 @@ class Solution:
                 if stack.empty():
                     remove_indices.append(i)
                 else:
-                    stack.pop( )
-                    
+                    stack.pop()
+
         while not stack.empty():
             remove_indices.append(stack.pop())
 
@@ -51,4 +52,3 @@ class Solution:
                 res += s[i]
 
         return res
-

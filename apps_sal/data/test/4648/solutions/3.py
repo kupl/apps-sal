@@ -24,4 +24,3 @@ for case_num in range(t):
             print(-1)
         else:
             print(three * 2 - two)
-

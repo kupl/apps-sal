@@ -49,4 +49,3 @@ for ind, cur in enumerate(cs):
         ans += area(cur)
 
 print(ans)
-

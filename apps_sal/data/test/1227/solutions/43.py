@@ -33,4 +33,3 @@ def F(N, K):
 
 
 print((F(N, K)))
-

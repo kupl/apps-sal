@@ -10,5 +10,5 @@ def areYouPlayingBanjo(name):
         return name + " does not play banjo"
     elif list[0] != 'r':
         return name + " does not play banjo"
-    else: 
+    else:
         return 'please try again michelle'

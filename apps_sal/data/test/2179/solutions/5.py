@@ -1,5 +1,7 @@
 from collections import defaultdict, deque, Counter, OrderedDict
-import bisect, sys, threading
+import bisect
+import sys
+import threading
 from heapq import *
 
 
@@ -18,7 +20,8 @@ def main():
 
     while Q:
         w, lew, u, ei = heappop(Q)
-        if visited[u]: continue
+        if visited[u]:
+            continue
         visited[u] = 1
         ans.append(str(ei + 1))
         tw += lew
@@ -35,5 +38,6 @@ def __starting_point():
     threading.stack_size(10240000)"""
     thread = threading.Thread(target=main)
     thread.start()
+
 
 __starting_point()

@@ -4,7 +4,7 @@ def build_solver(limit):
     reducers = [(2, 0), (3, 0), (5, 0)]
     # Intermediate values known to end in a non-terminating sequence
     known_failures = {2, 3, 5}
-    
+
     def reduces_to_1(p):
         # Determine if successive summation of digit squares reduces to 1
         seq = set()
@@ -21,7 +21,7 @@ def build_solver(limit):
             # Add to the set of known failing intermeduiate states
             known_failures.update(seq)
         return n == 1
-    
+
     # Build primes up to limit
     prime_candidate = reducers[-1][0]
     root = int(prime_candidate ** 0.5) + 1
@@ -35,7 +35,7 @@ def build_solver(limit):
             if p > root:
                 reducers.append((prime_candidate, reduces_to_1(prime_candidate)))
                 break
-    
+
     # Keep only those primes that reduce to 1
     reducers = [p for p, r in reducers if r]
 
@@ -48,7 +48,8 @@ def build_solver(limit):
                 break
             result += 1
         return result
-    
+
     return solve
-        
+
+
 solve = build_solver(50_000)

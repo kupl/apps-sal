@@ -25,4 +25,3 @@ class Solution:
             for b in opened:
                 boxHold.discard(b)
         return sum([c for idx, c in enumerate(candies) if idx in opened])
-

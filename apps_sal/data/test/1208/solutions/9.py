@@ -16,5 +16,4 @@ for i in range(n):
         else:
             l[visitor] = 0
             cur -= 1
-print (capacity)
-
+print(capacity)

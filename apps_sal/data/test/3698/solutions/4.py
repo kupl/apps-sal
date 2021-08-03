@@ -21,19 +21,21 @@ if cnt == 0:
 res = 0
 
 for i in range(1, MX):
-    if dp[i] != cnt - 1: continue
+    if dp[i] != cnt - 1:
+        continue
     n = len(num) - 1
     k = i
     for pos in range(len(num)):
         if num[pos] == 1:
             # print(n, k)
-            #if we put 0 here
+            # if we put 0 here
             res += c[n][k]
             res %= M
             k -= 1
-        n -= 1  
-    # print(k)   
+        n -= 1
+    # print(k)
     if n == -1 and k == 0:
         res += 1
-if cnt == 1: res -= 1
+if cnt == 1:
+    res -= 1
 print(res)

@@ -18,7 +18,6 @@ for j in range(N):
         ref.append(A[j][0])
 ref = sorted(ref)
 if len(ref) >= 2:
-    ans.append(ref[-2]*ref[-1])
+    ans.append(ref[-2] * ref[-1])
 
 print((max(ans)))
-

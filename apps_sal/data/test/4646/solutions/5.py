@@ -14,4 +14,3 @@ for _ in range(tests):
         if i % 2 != sp[i] % 2:
             count += 1
     print(count // 2)
-

@@ -1,6 +1,7 @@
 from math import factorial, ceil, sqrt
 from functools import lru_cache
 
+
 @lru_cache(maxsize=None)
 def is_prime(n):
     if n < 2:
@@ -12,6 +13,7 @@ def is_prime(n):
         if n % x == 0:
             return False
     return True
+
 
 @lru_cache(maxsize=None)
 def fact(n):
@@ -25,7 +27,7 @@ def am_i_wilson(P):
     if P - 1 <= 0:
         return False
     try:
-        x = (fact(P-1) + 1) % (P * P) == 0
+        x = (fact(P - 1) + 1) % (P * P) == 0
         return x
     except OverflowError:
         return False

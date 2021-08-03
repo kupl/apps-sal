@@ -1,5 +1,6 @@
 from math import hypot, sqrt
 
+
 def how_to_find_them(t):
     if 'c' in t:
         x, y = 'ab' if 'b' in t else ('ba')

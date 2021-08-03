@@ -6,4 +6,3 @@ def days_until_christmas(day):
     if day > christmas:
         christmas = date(day.year + 1, 12, 25)
     return (christmas - day).days
-

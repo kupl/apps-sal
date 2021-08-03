@@ -1,4 +1,4 @@
-def group_cities(seq): 
+def group_cities(seq):
     result = []
     for element in sorted(list(dict.fromkeys(seq)), key=str.lower):
         for group in result:
@@ -9,4 +9,3 @@ def group_cities(seq):
             result.append([element])
 
     return sorted(result, key=len, reverse=True)
-

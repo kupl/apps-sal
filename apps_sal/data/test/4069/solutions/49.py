@@ -17,4 +17,3 @@ else:
         print((abs(x - D)))
     else:
         print(x)
-

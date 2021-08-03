@@ -17,4 +17,3 @@ class Solution:
                 tmp = max(tmp, dp[j] + 1)
             dp[i] = tmp
         return max(dp)
-

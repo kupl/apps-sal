@@ -19,4 +19,3 @@ while k > 0:
     k -= 1
     can_bake[min_index] = int(has[min_index] / needs[min_index])
 print(min(can_bake))
-

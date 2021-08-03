@@ -19,8 +19,9 @@ else:
             cards[i] = None
 
     for i in range(len(cards) - 1, -1, -1):
-        if cards[i] == None: continue
-        
+        if cards[i] == None:
+            continue
+
         if cards[i] < mycards[-1]:
             mycards.append(cards[i])
             cards[i] = None
@@ -29,4 +30,3 @@ else:
     for i in range(len(mycards) - 1):
         print(mycards[i], end=" ")
     print(mycards[-1], end="\n")
-

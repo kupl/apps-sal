@@ -16,5 +16,5 @@ class Solution:
             for f in foods:
                 tmp += [str(v.get(f)) if v.get(f) else '0']
             out.append(tmp)
-        
+
         return out

@@ -11,4 +11,3 @@ for i in range(len(a)):
             mm = max(mm, len(x))
 
 print(mm)
-

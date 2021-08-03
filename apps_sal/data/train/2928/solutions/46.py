@@ -4,9 +4,9 @@ def alphabet_war(fight):
     for i in "sbpw":
         l += fight.count(i) * c
         c += 1
-    c = 1  
+    c = 1
     for i in "zdqm":
-        r += fight.count(i)*c
+        r += fight.count(i) * c
         c += 1
     if l > r:
         return "Left side wins!"

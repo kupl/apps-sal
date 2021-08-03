@@ -6,7 +6,7 @@ for i in range(t):
         if skip == True:
             skip = False
             continue
-        if s[j] == "B" and s[j+1] == "G":
-            s[j], s[j+1] = "G", "B"
+        if s[j] == "B" and s[j + 1] == "G":
+            s[j], s[j + 1] = "G", "B"
             skip = True
 print("".join(c for c in s))

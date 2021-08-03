@@ -1,8 +1,8 @@
 n, a = int(input()), [int(i) for i in input().split()] + [0]
-ans, inc, dec = [0 for _ in range(n)], -1,float('inf')
+ans, inc, dec = [0 for _ in range(n)], -1, float('inf')
 for i in range(n):
     if inc < a[i] < dec:
-        if a[i] < a[i+1]:
+        if a[i] < a[i + 1]:
             inc = a[i]
         else:
             dec = a[i]
@@ -18,4 +18,3 @@ for i in range(n):
 else:
     print('YES')
     print(*ans)
-

@@ -5,6 +5,3 @@ for i in range(1000):
     y = x - i
     if a - y == b - x:
         print((y - a))
-
-
-

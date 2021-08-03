@@ -16,9 +16,11 @@ def main():
                 sp = m.span()
                 print('{} {}'.format(sp[0] + 1, sp[1]))
                 return
-    print('{} {}'.format(-1,-1))
+    print('{} {}'.format(-1, -1))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

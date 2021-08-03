@@ -25,6 +25,3 @@ class Solution:
             for j in range(N):
                 count += count_submatrices(i, j)
         return count
-
-
-

@@ -21,4 +21,3 @@ for el in mi:
 if items_to_del != 0:
     ans += 1
 print(ans)
-

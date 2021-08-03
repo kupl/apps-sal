@@ -7,4 +7,3 @@ for l in range(1, len(string) + 1):
     cur += s[-l] - s[l - 1]
     result += cur / l
 print(result)
-

@@ -1,5 +1,6 @@
 from math import floor
 
+
 def nb_year(p0, percent, aug, p):
     i = 1
     mult = 1 + percent / 100.0

@@ -10,4 +10,3 @@ if len(set(b)) == n:
     print(*a)
 else:
     print(-1)
-

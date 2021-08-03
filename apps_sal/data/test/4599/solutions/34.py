@@ -12,4 +12,3 @@ for i in range(N):
     else:
         bob += a[i]
 print((alice - bob))
-

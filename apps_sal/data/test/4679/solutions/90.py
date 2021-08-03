@@ -42,4 +42,3 @@ while 1:
             turn = 'C'
         indexC += 1
 print(winner)
-

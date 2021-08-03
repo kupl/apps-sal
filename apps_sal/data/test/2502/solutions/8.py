@@ -1,13 +1,14 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 def SI(): return sys.stdin.readline()[:-1]
+
 
 def LcpByZ(target):
     len_t = len(target)
@@ -37,26 +38,32 @@ def LcpByZ(target):
         left = 0  # これも本当は不要
     return lcp
 
-def dfs(i,si):
-    dp[i]=0
-    ni=(i+tn)%sn
-    if lcp[tn+1+ni]!=tn:return False
-    if ni==si:return True
-    if dp[ni]==-1 and dfs(ni,si):return True
-    dp[i]=dp[ni]+1
 
-s=SI()
-t=SI()
+def dfs(i, si):
+    dp[i] = 0
+    ni = (i + tn) % sn
+    if lcp[tn + 1 + ni] != tn:
+        return False
+    if ni == si:
+        return True
+    if dp[ni] == -1 and dfs(ni, si):
+        return True
+    dp[i] = dp[ni] + 1
+
+
+s = SI()
+t = SI()
 ss = s
-while len(ss) < len(s) + len(t): ss += s
+while len(ss) < len(s) + len(t):
+    ss += s
 lcp = LcpByZ(t + "@" + ss)
 sn = len(s)
 tn = len(t)
-dp=[-1]*sn
+dp = [-1] * sn
 for i in range(sn):
-    if dp[i]!=-1:continue
-    if dfs(i,i):
+    if dp[i] != -1:
+        continue
+    if dfs(i, i):
         print(-1)
         return
 print(max(dp))
-

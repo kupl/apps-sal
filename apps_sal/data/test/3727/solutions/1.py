@@ -57,4 +57,3 @@ try:
     print(*ans)
 except AssertionError:
     print("NO")
-

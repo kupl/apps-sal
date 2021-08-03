@@ -1,4 +1,4 @@
-def multiples(m, n): 
+def multiples(m, n):
     result = []
     i = 1
     while i <= m:

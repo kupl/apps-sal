@@ -23,5 +23,5 @@ for i in range(N):
         break
 
 for i in range(K):
-    if work_day_min[i] == work_day_max[K-i-1]:
-        print(work_day_min[i]+1)
+    if work_day_min[i] == work_day_max[K - i - 1]:
+        print(work_day_min[i] + 1)

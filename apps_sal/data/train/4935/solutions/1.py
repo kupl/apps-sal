@@ -6,9 +6,8 @@ def infected(s):
         if "1" in population:
             infected += len(population)
         total += len(population)
-    
+
     try:
         return (100 * infected) / total
     except ZeroDivisionError:
         return 0
-

@@ -1,5 +1,6 @@
 from sys import stdin as cin
 
+
 def main():
     n = int(cin.readline())
     k = int(cin.readline())
@@ -23,5 +24,5 @@ def main():
         #print(n, o)
     print(o)
 
-main()
 
+main()

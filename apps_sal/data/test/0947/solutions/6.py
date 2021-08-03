@@ -16,7 +16,3 @@ for _ in range(int(input())):
     else:
         v = n // g - 1
         print(g, g * v)
-
-
-
-

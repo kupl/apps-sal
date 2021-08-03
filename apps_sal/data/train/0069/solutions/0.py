@@ -20,4 +20,3 @@ for case in range(t):
                 z = 0
 
     print(total)
-

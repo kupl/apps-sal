@@ -151,4 +151,5 @@ def __starting_point():
     for _ in range(getint()):
         solve()
 
+
 __starting_point()

@@ -24,7 +24,7 @@ for i in range(N):
         mp = max(mp, i)
     else:
         st = i
-    
+
     stack = [i]
     while stack:
         vn = stack.pop()

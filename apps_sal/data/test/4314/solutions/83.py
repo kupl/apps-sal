@@ -13,4 +13,3 @@ for t in table2:
 table3 = list(zip(*table3))
 for t in table3:
     print(("".join(t)))
-

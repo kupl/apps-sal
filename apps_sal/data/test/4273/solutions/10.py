@@ -3,7 +3,7 @@ from itertools import combinations
 n = int(input())
 s = [input() for _ in range(n)]
 
-letters = {"M":0, "A":0, "R":0, "C":0, "H":0, }
+letters = {"M": 0, "A": 0, "R": 0, "C": 0, "H": 0, }
 to_check = combinations([i for i in "MARCH"], 3)
 
 for word in s:

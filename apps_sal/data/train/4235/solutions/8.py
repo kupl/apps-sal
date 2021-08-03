@@ -6,4 +6,4 @@ def make_sentences(parts):
             n = n[:-1] + ', '
         else:
             n += i + ' '
-    return n[:-1]+'.'
+    return n[:-1] + '.'

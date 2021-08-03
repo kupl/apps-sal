@@ -10,4 +10,3 @@ for t in range(int(input())):
             ans = 'NO'
 
     print(ans)
-

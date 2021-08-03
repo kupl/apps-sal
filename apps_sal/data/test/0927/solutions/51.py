@@ -38,18 +38,19 @@ def main():
     if 8 in a:
         l.append((7, '8'))
 
-    dp = [None] * (n+1)
+    dp = [None] * (n + 1)
     dp[0] = ''
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         for cost, char in l:
-            if i - cost < 0 or dp[i-cost] is None:
+            if i - cost < 0 or dp[i - cost] is None:
                 continue
-            candidate = max(dp[i-cost] + char, char + dp[i-cost])
+            candidate = max(dp[i - cost] + char, char + dp[i - cost])
             if dp[i] is None:
                 dp[i] = candidate
             else:
                 dp[i] = bigger(dp[i], candidate)
 
     print(dp[n])
+
 
 main()

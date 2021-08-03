@@ -1,20 +1,21 @@
 n = int(input())
 a = list(map(int, input().split()))
-D = {i: [0] for i in range(1, n+1)}
-for i in range(n+1):
-  D[a[i]][0] += 1
-  D[a[i]].append(i)
+D = {i: [0] for i in range(1, n + 1)}
+for i in range(n + 1):
+    D[a[i]][0] += 1
+    D[a[i]].append(i)
 pl, pr = 0, 0
 for i in D:
-  if D[i][0] == 2:
-    pl = D[i][1]
-    pr = D[i][2]
-    break
+    if D[i][0] == 2:
+        pl = D[i][1]
+        pr = D[i][2]
+        break
 L = pl
 M = pr - pl - 1
 N = n - pr
-mod = int(1e9) + 7 # <-- input modulo
-maxf = n+11          # <-- input factional limitation
+mod = int(1e9) + 7  # <-- input modulo
+maxf = n + 11          # <-- input factional limitation
+
 
 def make_fact(n, k):
     tmp = n
@@ -25,10 +26,11 @@ def make_fact(n, k):
         tmp //= i + 1
     LL = [0 for _ in range(k)]
     for i in range(k):
-        LL[i] = perm[L[-i-1]]
-        for j in range(L[-i-1]+1, k):
-            perm[j-1] = perm[j]
+        LL[i] = perm[L[-i - 1]]
+        for j in range(L[-i - 1] + 1, k):
+            perm[j - 1] = perm[j]
     return LL
+
 
 def doubling(n, m, modulo=mod):
     y = 1
@@ -45,6 +47,7 @@ def doubling(n, m, modulo=mod):
         tmp //= 2
     return y
 
+
 def inved(a, modulo=mod):
     x, y, u, v, k, l = 1, 0, 0, 1, a, modulo
     while l != 0:
@@ -52,19 +55,19 @@ def inved(a, modulo=mod):
         k, l = l, k % l
     return x % modulo
 
-fact = [1 for _ in range(maxf+1)]
-invf = [1 for _ in range(maxf+1)]
+
+fact = [1 for _ in range(maxf + 1)]
+invf = [1 for _ in range(maxf + 1)]
 
 for i in range(maxf):
-    fact[i+1] = (fact[i] * (i+1)) % mod
+    fact[i + 1] = (fact[i] * (i + 1)) % mod
 invf[-1] = inved(fact[-1])
 for i in range(maxf, 0, -1):
-    invf[i-1] = (invf[i] * i) % mod
+    invf[i - 1] = (invf[i] * i) % mod
 
-for i in range(1, n+2):
-  S = fact[n+1]*invf[i]*invf[n-i+1]%mod
-  if i <= n-M:
-    S -= fact[n-1-M]*invf[i-1]*invf[n-M-i]%mod
-    S %= mod
-  print(S)
-
+for i in range(1, n + 2):
+    S = fact[n + 1] * invf[i] * invf[n - i + 1] % mod
+    if i <= n - M:
+        S -= fact[n - 1 - M] * invf[i - 1] * invf[n - M - i] % mod
+        S %= mod
+    print(S)

@@ -9,4 +9,3 @@ def bits_battle(nums):
     if odds == evens:
         return 'tie'
     return '{} win'.format('odds' if odds > evens else 'evens')
-

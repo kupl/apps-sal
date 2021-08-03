@@ -6,7 +6,7 @@ class Solution:
                 d[num] += 1
             else:
                 d[num] = 1
-        
+
         for key, value in sorted(d.items(), key=lambda item: item[1]):
             if k >= value:
                 k -= value

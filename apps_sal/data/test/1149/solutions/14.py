@@ -10,8 +10,8 @@ q_l = q_l[1:]
 ll = set(p_l + q_l)
 sucess = False
 
-n_sum = (n * (n+1)) // 2
+n_sum = (n * (n + 1)) // 2
 if n_sum == sum(ll):
-	print("I become the guy.")
+    print("I become the guy.")
 else:
-	print("Oh, my keyboard!")
+    print("Oh, my keyboard!")

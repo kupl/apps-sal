@@ -8,14 +8,14 @@ class Solution:
                     V[row][col] = A[row][col]
                 else:
                     V[row][col] = 0 if A[row][col] == 0 else V[row - 1][col] + 1
-        
+
         for row in range(n):
             for col in range(m):
                 if col == 0:
                     H[row][col] = A[row][col]
                 else:
                     H[row][col] = 0 if A[row][col] == 0 else H[row][col - 1] + 1
-        
+
         res = 0
         for row in range(n):
             for col in range(m):
@@ -25,6 +25,5 @@ class Solution:
                         res = small
                         break
                     small -= 1
-        
-        return res * res
 
+        return res * res

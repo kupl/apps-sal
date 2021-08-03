@@ -21,24 +21,30 @@ def LSR(n): return [LS() for i in range(n)]
 def SRL(n): return [list(S()) for i in range(n)]
 def MSRL(n): return [[int(j) for j in list(S())] for i in range(n)]
 def SERIES(n): return np.fromstring(sys.stdin.buffer.read(), dtype=np.int32, sep=' ')
-def GRID(h,w): return np.fromstring(sys.stdin.buffer.read(), dtype=np.int32, sep=' ').reshape(h,-1)[:,:w]
-def GRIDfromString(h,w): return np.frombuffer(sys.stdin.buffer.read(), 'S1').reshape(h,-1)[:,:w]
+def GRID(h, w): return np.fromstring(sys.stdin.buffer.read(), dtype=np.int32, sep=' ').reshape(h, -1)[:, :w]
+def GRIDfromString(h, w): return np.frombuffer(sys.stdin.buffer.read(), 'S1').reshape(h, -1)[:, :w]
+
+
 MOD = 1000000007
 
+
 def main():
-	s_list = list(S())
-	for t in range(2,min(len(s_list)+1,4)):
-		for i in range(len(s_list)-t+1):
-			c = Counter(s_list[i:i+t])
-			if c.most_common()[0][1] / t  > 0.5:
-				print(i+1, i+t)
-				break
-		else:
-			continue
-		break
-	else:
-		print(-1, -1)
+    s_list = list(S())
+    for t in range(2, min(len(s_list) + 1, 4)):
+        for i in range(len(s_list) - t + 1):
+            c = Counter(s_list[i:i + t])
+            if c.most_common()[0][1] / t > 0.5:
+                print(i + 1, i + t)
+                break
+        else:
+            continue
+        break
+    else:
+        print(-1, -1)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

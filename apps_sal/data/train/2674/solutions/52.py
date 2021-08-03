@@ -7,4 +7,3 @@ def two_sort(array):
     for x in lst:
         new_str = new_str + x + '***'
     return new_str[0:-3]
-

@@ -100,4 +100,3 @@ print((dp[-1][K][0] % MOD))
 #     if abs(np.array(li) - np.arange(N)).sum() == K:
 #         print(np.array(li) + 1)
 # print(ans)
-

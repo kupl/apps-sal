@@ -25,4 +25,3 @@ for i in range(n):
         res += tmp - A[i]
 
 print(res)
-

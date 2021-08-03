@@ -8,4 +8,3 @@ def parse_float(string):
         return to_int
     except ValueError:
         return None
-

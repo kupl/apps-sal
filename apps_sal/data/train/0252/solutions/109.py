@@ -1,7 +1,7 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        areas = [(x - ranges[x], x + ranges[x]) for x in range(n+1)]
-        areas = sorted(areas, key= lambda x: x[0])
+        areas = [(x - ranges[x], x + ranges[x]) for x in range(n + 1)]
+        areas = sorted(areas, key=lambda x: x[0])
 
         def get_intersections(current, intervals):
             results = []

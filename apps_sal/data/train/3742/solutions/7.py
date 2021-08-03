@@ -6,7 +6,7 @@ def modes(data):
             most = res
             l = []
             l.append(x)
-            length = len(data)-most
+            length = len(data) - most
         elif most == res:
             l.append(x)
             length -= most

@@ -5,4 +5,3 @@ if c <= 25:
     print(0)
 else:
     print(c - 25)
-

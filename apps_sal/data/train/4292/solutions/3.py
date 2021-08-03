@@ -1,1 +1,1 @@
-string_clean = lambda s: __import__('re').sub(r'\d', '', s)
+def string_clean(s): return __import__('re').sub(r'\d', '', s)

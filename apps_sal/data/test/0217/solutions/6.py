@@ -33,4 +33,3 @@ if now < 0:
     print(-1)
     return
 print(ans)
-

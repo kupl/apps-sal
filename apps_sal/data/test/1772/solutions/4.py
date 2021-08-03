@@ -18,4 +18,3 @@ if (odd > 0):
     res += odd // 3
 
 print(res)
-

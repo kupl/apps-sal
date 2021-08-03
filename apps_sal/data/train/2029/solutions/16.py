@@ -35,25 +35,26 @@ for kek in range(100):
         print('NO')
         quit()
 '''
+
+
 def sdvig():
-    tmp=A[2*(n//2)+1]
-    for i in range(2*(n//2)+2,2*n,2):
-        tArr.append(A[i+1])
-    for i in range(1,2*n-2*(n//2),2):
-        A[i+2*(n//2)]=A[i]
-    A[2*n-1]=tmp
+    tmp = A[2 * (n // 2) + 1]
+    for i in range(2 * (n // 2) + 2, 2 * n, 2):
+        tArr.append(A[i + 1])
+    for i in range(1, 2 * n - 2 * (n // 2), 2):
+        A[i + 2 * (n // 2)] = A[i]
+    A[2 * n - 1] = tmp
     for i in range(len(tArr)):
-        A[i*2+1]=tArr[i]
+        A[i * 2 + 1] = tArr[i]
 
 
-n=int(input())
-A=[int(i) for i in range(1,2*n+1)]
-tArr=[]
-if(n%2):
+n = int(input())
+A = [int(i) for i in range(1, 2 * n + 1)]
+tArr = []
+if(n % 2):
     sdvig()
     print('YES')
     for i in A:
-        print(i,end=' ')
+        print(i, end=' ')
 else:
     print('NO')
-    

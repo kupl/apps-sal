@@ -24,4 +24,3 @@ for bj in b:
         print(-1)
     else:
         print(ans)
-

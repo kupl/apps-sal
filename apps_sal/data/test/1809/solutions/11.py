@@ -7,7 +7,7 @@ b = list(map(int, input().split()))
 ans = 0
 for i in range(m):
     flag = dict()
-    for j in range(i-1, -1, -1):
+    for j in range(i - 1, -1, -1):
         if b[j] == b[i]:
             break
         if flag.get(b[j], True):
@@ -15,4 +15,3 @@ for i in range(m):
             flag[b[j]] = False
 
 print(ans)
-

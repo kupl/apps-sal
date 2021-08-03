@@ -14,4 +14,4 @@ while '0' in (bin(x)[2:]):
 
 print(op)
 for a in ans:
-    print(a, end= ' ')
+    print(a, end=' ')

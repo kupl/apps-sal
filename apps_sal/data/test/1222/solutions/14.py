@@ -21,4 +21,3 @@ for i in range(1, 10):
 
 al.sort()
 print((al[k - 1]))
-

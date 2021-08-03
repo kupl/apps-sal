@@ -1,11 +1,11 @@
 for _ in range(int(input())):
     a, b, c, d = map(int, input().split())
     x, y, x1, y1, x2, y2 = map(int, input().split())
-    if x != x1 or x!=x2:
+    if x != x1 or x != x2:
         temp = min(a, b)
         a -= temp
         b -= temp
-    if y != y1 or y!=y2:
+    if y != y1 or y != y2:
         temp = min(c, d)
         c -= temp
         d -= temp

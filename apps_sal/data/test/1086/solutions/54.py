@@ -19,4 +19,3 @@ for h, w in it:
     table[h][w][d:0:-1] += table[h - 1][w][:d] + table[h][w - 1][:d]
 
 print((np.amin(*np.where(table[H - 1][W - 1]))))
-

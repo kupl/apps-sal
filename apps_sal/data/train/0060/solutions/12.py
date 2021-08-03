@@ -24,13 +24,13 @@ from bisect import bisect
 # sys.setrecursionlimit(100000000)
 mod = 1000000007
 # ---------------------------------------------------Helper Functions---------------------------------------------------
-iinp = lambda: int(sys.stdin.readline())
-inp = lambda: sys.stdin.readline().strip()
-strl = lambda: list(inp().strip().split(" "))
-intl = lambda: list(map(int, inp().split(" ")))
-mint = lambda: list(map(int, inp().split()))
-flol = lambda: list(map(float, inp().split(" ")))
-flush = lambda: stdout.flush()
+def iinp(): return int(sys.stdin.readline())
+def inp(): return sys.stdin.readline().strip()
+def strl(): return list(inp().strip().split(" "))
+def intl(): return list(map(int, inp().split(" ")))
+def mint(): return list(map(int, inp().split()))
+def flol(): return list(map(float, inp().split(" ")))
+def flush(): return stdout.flush()
 
 
 def permute(nums):
@@ -93,9 +93,12 @@ def bs(arr, l, r, x):
 
 
 def isPrime(n):
-    if n <= 1: return False
-    if n <= 3: return True
-    if n % 2 == 0 or n % 3 == 0: return False
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
     p = int(sqrt(n))
     for i in range(5, p + 1, 6):
         if n % i == 0 or n % (i + 2) == 0:
@@ -106,11 +109,10 @@ def isPrime(n):
 # -------------------------------------------------------Functions------------------------------------------------------
 
 def solve():
-    a,b=mint()
-    print(a^b)
+    a, b = mint()
+    print(a ^ b)
 
 
 # -------------------------------------------------------Main Code------------------------------------------------------
 for _ in range(iinp()):
     solve()
-

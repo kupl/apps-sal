@@ -1,6 +1,5 @@
-def between(a,b):
+def between(a, b):
     cadena = []
-    for i in range(a,b+1):
+    for i in range(a, b + 1):
         cadena.append(i)
     return cadena
-

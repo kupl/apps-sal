@@ -24,7 +24,3 @@ a[2] -= t // 2 * 3
 if a[1] > 0 and a[1] + a[2] >= 3:
     ans += 1
 print(str(ans), file=fout)
-
-
-
-

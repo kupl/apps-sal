@@ -1,4 +1,4 @@
-#592_D
+# 592_D
 
 import sys
 
@@ -60,4 +60,3 @@ if f:
     print(" ".join([str(i) for i in ms]))
 else:
     print(-1)
-

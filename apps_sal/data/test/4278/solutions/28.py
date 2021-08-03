@@ -10,7 +10,7 @@ d = dict()
 for i in range(N):
     S = input()
     S = ''.join(sorted(list(S)))
-    #print(S)
+    # print(S)
     if S in d.keys():
         d[S] += 1
     else:
@@ -18,5 +18,5 @@ for i in range(N):
 
 ans = 0
 for n in d.values():
-    ans += n*(n-1)//2
+    ans += n * (n - 1) // 2
 print(ans)

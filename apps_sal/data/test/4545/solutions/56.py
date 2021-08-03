@@ -1,4 +1,3 @@
-n=int(input())
-a=int(input())
-print((n*n-a))
-
+n = int(input())
+a = int(input())
+print((n * n - a))

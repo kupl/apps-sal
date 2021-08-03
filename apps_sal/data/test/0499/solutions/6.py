@@ -9,7 +9,7 @@ if R and B and G:
     print("BGR")
 elif (R >= 2 and B >= 2) or (G >= 2 and R >= 2) or (G >= 2 and B >= 2):
     print("BGR")
-elif R >= 2 and (B == 1 or G == 1): 
+elif R >= 2 and (B == 1 or G == 1):
     print("BG")
 elif B >= 2 and (R == 1 or G == 1):
     print("GR")
@@ -27,8 +27,3 @@ elif G:
     print("G")
 else:
     print("R")
-
-
-
-
-

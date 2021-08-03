@@ -15,4 +15,3 @@ class Solution:
             else:
                 return False
         return True
-

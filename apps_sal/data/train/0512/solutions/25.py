@@ -121,4 +121,3 @@ for line in lines[n - 1:]:
 ans = solve(n, links, queries)
 
 print(('\n'.join(map(str, ans))))
-

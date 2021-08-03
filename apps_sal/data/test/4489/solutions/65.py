@@ -1,8 +1,8 @@
 n = int(input())
-s_l = [ str(input()) for _ in range(n)  ]
+s_l = [str(input()) for _ in range(n)]
 
 m = int(input())
-t_l = [ str(input()) for _ in range(m)  ]
+t_l = [str(input()) for _ in range(m)]
 d = {}
 for s in s_l:
     if s not in d:

@@ -17,4 +17,3 @@ for i in range(n):
     s += 5
 
 print(result)
-

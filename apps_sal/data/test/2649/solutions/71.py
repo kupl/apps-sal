@@ -13,5 +13,4 @@ for [x, y] in XY:
     plus.append(x + y)
     minus.append(x - y)
 
-print((max(max(plus)- min(plus), max(minus) - min(minus))))
-
+print((max(max(plus) - min(plus), max(minus) - min(minus))))

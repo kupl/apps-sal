@@ -11,10 +11,10 @@ o1 = 0
 res = z1 + o2
 i = 0
 while i < n:
-	z2 -= (1-a[i])
-	z1 += (1-a[i])
-	o2 -= (a[i])
-	o1 += (a[i])
-	res = max(res, z1+o2)
-	i+=1
+    z2 -= (1 - a[i])
+    z1 += (1 - a[i])
+    o2 -= (a[i])
+    o1 += (a[i])
+    res = max(res, z1 + o2)
+    i += 1
 print(res)

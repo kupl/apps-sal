@@ -26,4 +26,3 @@ while True:
         else:
             turn = sc[0]
             sc = sc[1:]
-

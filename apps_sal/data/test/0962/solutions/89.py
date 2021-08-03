@@ -4,7 +4,7 @@ N, M = list(map(int, input().split()))
 table = [[] for _ in range(N)]
 for _ in range(M):
     a, b = list(map(int, input().split()))
-    table[a-1].append(b-1)
+    table[a - 1].append(b - 1)
 
 visit = [False] * N
 visit2 = [False] * N
@@ -37,4 +37,3 @@ print((0))
 # ans = [v+1 for v in g[g.index(g[-1]):-1]]
 # print(len(ans))
 # print(*ans, sep="\n")
-

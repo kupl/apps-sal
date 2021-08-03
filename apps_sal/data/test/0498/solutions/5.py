@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split()) #4, 3
+n, m, k = map(int, input().split())  # 4, 3
 # # # #
 # # # #
 # # # #

@@ -10,4 +10,3 @@ else:
         print(X[N // 2 - 1])
     elif left > right:
         print(X[N // 2])
-

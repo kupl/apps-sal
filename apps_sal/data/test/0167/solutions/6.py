@@ -65,6 +65,3 @@ else:
     if le != -1:
         result += s2[le:re]
     print(result if len(result) > 0 else '-')
-
-
-

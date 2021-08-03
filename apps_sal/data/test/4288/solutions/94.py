@@ -1,5 +1,5 @@
-A, B, C = map(int,input().split())
+A, B, C = map(int, input().split())
 if (A != B and A != C and B != C) or (A == B and B == C):
-  print("No")
+    print("No")
 else:
-  print("Yes")
+    print("Yes")

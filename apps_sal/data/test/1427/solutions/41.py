@@ -1,13 +1,14 @@
 from functools import reduce
 from fractions import gcd
-from collections import defaultdict,Counter
+from collections import defaultdict, Counter
 import copy
 
 n = int(input())
-a = list(map(int,input().split()))
-mod = 10**9+7
+a = list(map(int, input().split()))
+mod = 10**9 + 7
 
 dic = defaultdict(int)
+
 
 def prime_factorize(n):
     a = []
@@ -25,22 +26,23 @@ def prime_factorize(n):
         a.append(n)
     return a
 
+
 for i in a:
     c = Counter(prime_factorize(i))
-    for j,k in c.items():
+    for j, k in c.items():
         if dic[j] < k:
             dic[j] = k
 
 l = 1
 
-for i,j in dic.items():
-    l *= pow(i,j,mod)
+for i, j in dic.items():
+    l *= pow(i, j, mod)
     l %= mod
 
 point = 0
 
 for i in a:
-    point += l*pow(i,mod-2,mod)
+    point += l * pow(i, mod - 2, mod)
     point %= mod
 
-print(point%mod)
+print(point % mod)

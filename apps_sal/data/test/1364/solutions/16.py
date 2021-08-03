@@ -17,4 +17,3 @@ for i, j in zip(newList, newList[1:]):
     maxSushi = max(maxSushi, min(i, j))
 
 print(maxSushi * 2)
-

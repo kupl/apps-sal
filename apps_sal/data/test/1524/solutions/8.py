@@ -17,4 +17,3 @@ for start, end in zip(divs, divs[1:]):
                 ans[start + j] = (M + 1) // 2
             ans[start + j + 1] = M - ans[start + j]
 print((" ".join(map(str, ans))))
-

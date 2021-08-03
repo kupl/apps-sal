@@ -4,4 +4,3 @@ def min_value(digits):
     for member in sorted_digits:
         result += str(member)
     return int(result)
-

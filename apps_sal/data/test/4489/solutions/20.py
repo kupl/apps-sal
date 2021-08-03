@@ -12,4 +12,3 @@ ans = 0
 for k, v in list(d1.items()):
     ans = max(ans, v - d2[k])
 print(ans)
-

@@ -11,8 +11,7 @@ def my_very_own_split(string, delimiter=None):
 
     last, l = 0, len(delimiter)
     for i in range(len(string)):
-        if string[i:i+l] == delimiter:
+        if string[i:i + l] == delimiter:
             yield string[last:i]
-            last = i+l
+            last = i + l
     yield string[last:]
-

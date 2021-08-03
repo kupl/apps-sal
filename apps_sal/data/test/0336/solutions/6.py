@@ -8,4 +8,3 @@ for i in range(1, n + 1):
     if max(x2, x3, x4) <= n and min(x2, x3, x4) >= 1:
         ans += n
 print(ans)
-

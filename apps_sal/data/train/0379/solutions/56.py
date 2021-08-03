@@ -3,25 +3,25 @@ class Solution:
         ret = s1 = s2 = 0
         n1, n2 = len(nums1), len(nums2)
         i = j = 0
-        while i < n1 or j < n2 :
-            if i == n1 :
+        while i < n1 or j < n2:
+            if i == n1:
                 s2 += nums2[j]
                 j += 1
-            elif j == n2 :
+            elif j == n2:
                 s1 += nums1[i]
                 i += 1
-            else :
-                if nums1[i] < nums2[j] :
+            else:
+                if nums1[i] < nums2[j]:
                     s1 += nums1[i]
                     i += 1
-                elif nums1[i] > nums2[j] :
+                elif nums1[i] > nums2[j]:
                     s2 += nums2[j]
                     j += 1
-                else :
+                else:
                     ret += max(s1, s2) + nums1[i]
                     s1 = s2 = 0
                     i += 1
                     j += 1
-        
+
         ret += max(s1, s2)
         return ret % 1000000007

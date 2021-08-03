@@ -6,4 +6,4 @@ def is_happy(n):
     return n == 1
 
 
-happy_numbers = lambda n: list(filter(is_happy, range(1, n+1)))
+def happy_numbers(n): return list(filter(is_happy, range(1, n + 1)))

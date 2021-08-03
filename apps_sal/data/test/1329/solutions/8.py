@@ -1,5 +1,7 @@
 from collections import defaultdict
 import math
+
+
 def main():
     def factorization(num):
         nonlocal d
@@ -15,7 +17,8 @@ def main():
                 d[prime] += count
 
     def generate_primes(num):
-        if num == 1: return []
+        if num == 1:
+            return []
         primes = list(range(2, num + 1))
         i, p = 0, 1
         while p <= math.sqrt(num):
@@ -26,25 +29,33 @@ def main():
         return set(p for p in primes if p != 0)
 
     n = int(input())
-    d = defaultdict(lambda :1)
+    d = defaultdict(lambda: 1)
     primes = generate_primes(100)
     for i in range(1, n + 1):
         factorization(i)
     c = [0] * 6
     for v in list(d.values()):
-        if v >= 3: c[0] += 1
-        if v >= 75: c[5] -= 1
-        elif v >= 25: c[4] -= 1
-        elif v >= 15: c[3] -= 1
-        elif v >= 5: c[2] -= 1
-        elif v >= 3: c[1] -= 1
+        if v >= 3:
+            c[0] += 1
+        if v >= 75:
+            c[5] -= 1
+        elif v >= 25:
+            c[4] -= 1
+        elif v >= 15:
+            c[3] -= 1
+        elif v >= 5:
+            c[2] -= 1
+        elif v >= 3:
+            c[1] -= 1
     s = 0
     for i in range(6):
         s += c[i]
         c[i] = s
     print((c[1] * (c[1] - 1) * (c[0] - 2) // 2 + c[3] * (c[0] - 1) + c[2] * (c[1] - 1) + c[4]))
-    
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,4 +1,6 @@
 from itertools import permutations
+
+
 def get_words(hash_of_letters):
     string = ''
     for i in hash_of_letters:

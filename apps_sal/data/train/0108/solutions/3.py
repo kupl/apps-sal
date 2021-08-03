@@ -1,7 +1,9 @@
 def f(a):
     for i in range(len(a)):
-        if a[i] < i: return i-1
-    return len(a)-1
+        if a[i] < i:
+            return i - 1
+    return len(a) - 1
+
 
 def solve(a):
     i = f(a)

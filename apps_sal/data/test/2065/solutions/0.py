@@ -1,3 +1,4 @@
+from collections import deque
 n, m = map(int, input().split())
 adj = [[] for _ in range(n)]
 cp = [-1] * n
@@ -10,7 +11,8 @@ for i in range(m):
 pres = [i - 1 for i in map(int, input().split())]
 
 level = [0] * n
-from collections import deque
+
+
 def bfs(v):
     q = deque([v])
     while q:
@@ -19,6 +21,7 @@ def bfs(v):
             level[v] = level[cp[v]] + 1
         for nv in adj[v]:
             q.append(nv)
+
 
 for i in range(n):
     if cp[i] == -1:
@@ -32,7 +35,7 @@ for i in range(n):
             return
 
 pres = list(set(pres))
-pres = sorted(pres, key = lambda i : level[i], reverse = True)
+pres = sorted(pres, key=lambda i: level[i], reverse=True)
 
 print(len(pres))
 pres = [i + 1 for i in pres]

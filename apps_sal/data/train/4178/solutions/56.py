@@ -4,7 +4,5 @@ def min_sum(arr):
     arr2 = arr[1::2][::-1]
     a = []
     for i in range(len(arr1)):
-        a.append(arr1[i]*arr2[i])
+        a.append(arr1[i] * arr2[i])
     return sum(a)
-        
-

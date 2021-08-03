@@ -4,17 +4,17 @@ class Solution:
         posSorted = position
         low = 1
         high = posSorted[-1]
-        mid = (low+high)//2
+        mid = (low + high) // 2
 
         while low < high:
             if self.validForce(posSorted, m, mid):
-               low = mid
+                low = mid
             else:
-                high = mid-1
+                high = mid - 1
 
-            mid = high-(high-low)//2
-        
-        return low 
+            mid = high - (high - low) // 2
+
+        return low
 
     def validForce(self, positions, m, mid):
         used = 0
@@ -24,7 +24,7 @@ class Solution:
                 used += 1
                 continue
             if (pos - positions[lastpos]) >= mid:
-                lastpos = i  
+                lastpos = i
                 used += 1
         if used >= m:
             return True

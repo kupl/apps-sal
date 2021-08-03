@@ -10,4 +10,3 @@ class Solution:
             else:
                 r = max(r, i - d[n])
         return r
-

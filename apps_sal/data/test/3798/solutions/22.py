@@ -1,6 +1,7 @@
 def f(b, n):
     return n if n < b else n % b + f(b, n // b)
 
+
 def solve():
     N, S = map(int, open(0))
 

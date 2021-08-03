@@ -3,9 +3,9 @@
 
 import time
 
-n   = int(input())
-m   = int(input())
-a   = []
+n = int(input())
+m = int(input())
+a = []
 
 for i in range(n):
     x = int(input())
@@ -13,15 +13,14 @@ for i in range(n):
 
 start = time.time()
 
-a   = sorted(a, key = lambda x: -x)
+a = sorted(a, key=lambda x: -x)
 ans = 0
 
 while(m > 0):
-    m   -= a[ans]
+    m -= a[ans]
     ans += 1
 
 
 print(ans)
 finish = time.time()
 #print(finish - start)
-

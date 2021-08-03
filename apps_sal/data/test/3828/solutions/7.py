@@ -17,4 +17,3 @@ for i in range(1, n):
     ans = max(ans, cur)
 
 print(n - ans)
-

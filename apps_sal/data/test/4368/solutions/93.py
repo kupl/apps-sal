@@ -6,4 +6,3 @@ while n != 0:
     ans += 1
 
 print(ans)
-

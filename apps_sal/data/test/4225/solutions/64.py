@@ -1,9 +1,9 @@
-A,B,C,K=map(int,input().split())
+A, B, C, K = map(int, input().split())
 
-if K<=A:
+if K <= A:
     print(K)
-elif K<=A+B:
+elif K <= A + B:
     print(A)
 else:
-    m=K-(A+B)
-    print(A-m)
+    m = K - (A + B)
+    print(A - m)

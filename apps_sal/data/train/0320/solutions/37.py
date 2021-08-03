@@ -6,8 +6,8 @@ class Solution:
             res += 1 if num > 0 else 0
             div = 0
             while num > 1:
-                res += 1 if num%2 else 0
+                res += 1 if num % 2 else 0
                 num //= 2
                 div += 1
             maxi = max(div, maxi)
-        return res+maxi
+        return res + maxi

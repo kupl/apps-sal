@@ -45,4 +45,5 @@ def __starting_point():
     for l, r in vals:
         print(l + 1, r + 1)
 
+
 __starting_point()

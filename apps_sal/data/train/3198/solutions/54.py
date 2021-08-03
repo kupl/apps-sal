@@ -11,4 +11,3 @@ def check_exam(arr1: list, arr2: list) -> int:
         elif arr2[i] != arr1[i] and not len(arr2[i]) == 0:
             count -= 1
     return count if count > 0 else 0
-

@@ -5,4 +5,3 @@ if (1 <= x & x <= 3000):
         print('ABC')
     else:
         print('ARC')
-

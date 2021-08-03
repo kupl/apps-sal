@@ -12,7 +12,7 @@ class Solution:
                 if pop_index >= length or len(stack) == 0:
                     break
                 continue
-        
+
         if len(stack) != 0:
             return False
         else:

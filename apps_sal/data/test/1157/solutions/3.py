@@ -7,10 +7,9 @@ for q in a:
         last += 1
 ans = last
 for q in range(1, len(a)):
-    if a[q-1] > 0:
+    if a[q - 1] > 0:
         last -= 1
     else:
-        last = n-q-last
+        last = n - q - last
     ans += last
-print(n*(n+1)//2-ans, ans)
-
+print(n * (n + 1) // 2 - ans, ans)

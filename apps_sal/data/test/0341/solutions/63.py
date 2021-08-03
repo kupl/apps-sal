@@ -31,4 +31,3 @@ for i, t in enumerate(T):
             ans += win(t)
             record[i] = t
 print(ans)
-

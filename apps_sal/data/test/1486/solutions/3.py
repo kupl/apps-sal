@@ -8,4 +8,3 @@ for i in range(a):
         print(b[a - 1] - b[a - 2], b[a - 1] - b[0])
     else:
         print(min(b[i + 1] - b[i], b[i] - b[i - 1]), max(b[i] - b[0], b[a - 1] - b[i]))
-

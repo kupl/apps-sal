@@ -1,13 +1,12 @@
-#n,m,k=map(int,input().split())
-n=int(input())
-l=list(map(int,input().split()))
-d={}
+# n,m,k=map(int,input().split())
+n = int(input())
+l = list(map(int, input().split()))
+d = {}
 for i in range(n):
     for j in range(n):
-        if i==j:
+        if i == j:
             continue
-        d.setdefault(l[i]+l[j],0)
-        d[l[i]+l[j]]+=1
-#print(d)
-print(sorted(d.values())[-1]//2)
-
+        d.setdefault(l[i] + l[j], 0)
+        d[l[i] + l[j]] += 1
+# print(d)
+print(sorted(d.values())[-1] // 2)

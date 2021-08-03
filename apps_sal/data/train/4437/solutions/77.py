@@ -6,4 +6,3 @@ def cookie(x):
         bool: "the dog!"
     }
     return "Who ate the last cookie? It was " + switcher.get(type(x))
-

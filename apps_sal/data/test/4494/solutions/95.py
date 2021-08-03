@@ -1,1 +1,1 @@
-print(*({"ABC","ARC"}-{input()}))
+print(*({"ABC", "ARC"} - {input()}))

@@ -12,4 +12,3 @@ while True:
     s = x
 
 print(ans)
-

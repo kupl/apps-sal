@@ -22,4 +22,6 @@ def main():
             od.remove(i)
             fk += 1
     print('NO')
+
+
 main()

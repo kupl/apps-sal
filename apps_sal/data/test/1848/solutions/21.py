@@ -12,4 +12,3 @@ while count != c:
             count[i] -= 1
             res += 1
 print(res)
-

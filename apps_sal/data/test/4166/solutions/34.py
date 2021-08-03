@@ -13,4 +13,3 @@ for i in range(1000):
         break
 else:
     print((-1))
-

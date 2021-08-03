@@ -5,6 +5,7 @@
 
 import sys
 
+
 def main():
     t = int(input())
     for _ in range(t):
@@ -19,9 +20,12 @@ def main():
             n -= temp
             ans += 1
         print(ans)
-        
+
     return
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

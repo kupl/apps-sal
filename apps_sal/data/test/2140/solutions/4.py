@@ -13,4 +13,6 @@ def __starting_point():
         tr = not tr
 
     print(''.join(s))
+
+
 __starting_point()

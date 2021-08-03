@@ -3,6 +3,5 @@ def leaderboard_sort(L, C):
         n, m = c.split()
         i = L.index(n)
         L.pop(i)
-        L.insert(i-eval(m), n)
+        L.insert(i - eval(m), n)
     return L
-

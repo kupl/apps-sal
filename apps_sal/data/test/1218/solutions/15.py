@@ -36,4 +36,3 @@ else:
         print(-1)
     else:
         print(binary_search(k, n))
-

@@ -6,7 +6,7 @@ y = list(map(int, input().split()))
 x = sorted(x, reverse=True)
 y = sorted(y)
 ANS = []
-ans = x[0]+1
+ans = x[0] + 1
 while True:
     if ans <= y[0]:
         ANS.append(ans)

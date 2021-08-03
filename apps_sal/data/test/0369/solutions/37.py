@@ -14,4 +14,3 @@ while pos > 0:
         break
     prev = pos
 print((*ans[::-1]))
-

@@ -21,7 +21,7 @@ for k in w:
         visited.add((p[0] + 1, p[1]))
         d[-p[0] - 1] = (p[0] + 1, 0)
     else:
-        if (p[0] + 1, p[1] - 1) in visited and (p[0]+1, p[1]) in l:
+        if (p[0] + 1, p[1] - 1) in visited and (p[0] + 1, p[1]) in l:
             visited.add((p[0] + 1, p[1]))
             d[p[1] - p[0] - 1] = (p[0] + 1, p[1])
     if p[0] == 0 and (0, p[1] + 1) in l:
@@ -30,9 +30,7 @@ for k in w:
     else:
         if (p[0] - 1, p[1] + 1) in visited and (p[0], p[1] + 1) in l:
             visited.add((p[0], p[1] + 1))
-            d[p[1]-p[0] + 1] = (p[0], p[1] + 1)
+            d[p[1] - p[0] + 1] = (p[0], p[1] + 1)
 
 print("YES")
-print(s,end="")
-
-     	 		 		   	   	  		 	  	 	
+print(s, end="")

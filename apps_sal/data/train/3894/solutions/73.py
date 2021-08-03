@@ -3,7 +3,7 @@ def solve(s):
     for c in s:
         if c.isupper():
             cup += 1
-            if cup > len(s) / 2 :
+            if cup > len(s) / 2:
                 return s.upper()
         else:
             clw += 1

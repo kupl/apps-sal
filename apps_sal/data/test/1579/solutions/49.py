@@ -6,6 +6,7 @@ class UnionFindTree:
           find, unite, same: O(alpha(n))
        used in SRM505 div.2 900, ATC001 A, DSL1A(AOJ)
     """
+
     def __init__(self, n):
         self.par = list(range(n))  # parent
         self.rank = [0] * n  # depth of tree
@@ -38,7 +39,7 @@ uft = UnionFindTree(N + 2 * M)
 
 for i in range(N):
     x, y = list(map(int, input().split()))
-    x, y = x-1, y-1
+    x, y = x - 1, y - 1
     uft.unite(i, x + N)
     uft.unite(i, y + N + M)
 x_dict, y_dict = dict(), dict()
@@ -52,4 +53,3 @@ ans = -N
 for r in list(x_dict.keys()):
     ans += x_dict.get(r, 0) * y_dict.get(r, 0)
 print(ans)
-

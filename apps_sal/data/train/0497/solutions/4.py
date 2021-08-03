@@ -2,7 +2,7 @@ class Solution:
     def binSearch(self, stack: List[int], target: int) -> List[int]:
         left = 0
         right = len(stack) - 1
-        #[1,2,3] target= 4
+        # [1,2,3] target= 4
         while left <= right:
             mid = (left + right + 1) // 2
             if stack[mid][1] > target:
@@ -12,10 +12,11 @@ class Solution:
             else:
                 left = mid
         return None
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         n = len(startTime)
         jobs = [[startTime[i], endTime[i], profit[i]] for i in range(n)]
-        jobs.sort(key = lambda x : x[1])
+        jobs.sort(key=lambda x: x[1])
         stack = []
         for i in range(n):
             job = jobs[i]

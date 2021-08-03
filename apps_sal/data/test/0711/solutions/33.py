@@ -1,5 +1,6 @@
 MOD = 10**9 + 7
 
+
 class Combination:
     def __init__(self, size):
         self.size = size + 2
@@ -25,8 +26,10 @@ class Combination:
     def nhr(self, n, r):  # 重複組合せ: x_1 + ... + x_n = r
         return self.ncr(n + r - 1, n - 1)
 
+
 N, M = list(map(int, input().split()))
 comb = Combination(N + 100)
+
 
 def primeCount(N):
     R = int(N**(0.5)) + 1  # 素数の範囲
@@ -37,13 +40,13 @@ def primeCount(N):
         while n % num == 0:
             n //= num
             primes[num] += 1
-    if n > 1 :
+    if n > 1:
         primes[n] = 1
-    return { key : val for key, val in list(primes.items()) if val > 0}  # フィルターをかける
+    return {key: val for key, val in list(primes.items()) if val > 0}  # フィルターをかける
+
 
 ans = 1
 for c in list(primeCount(M).values()):
     ans *= comb.nhr(N, c)
     ans %= MOD
 print(ans)
-

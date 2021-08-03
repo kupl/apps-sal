@@ -3,11 +3,11 @@ import sys
 
 # > 0 anti-clock, < 0 clockwise, == 0 same line
 def orientation(p1, p2, p3):
-    return (p2[0] - p1[0])*(p3[1] - p1[1]) - (p2[1] - p1[1])*(p3[0] - p1[0])
+    return (p2[0] - p1[0]) * (p3[1] - p1[1]) - (p2[1] - p1[1]) * (p3[0] - p1[0])
 
 
 def dot(p1, p2, p3, p4):
-    return (p2[0]-p1[0])*(p4[0]-p3[0]) + (p2[1]-p1[1])*(p4[1]-p3[1])
+    return (p2[0] - p1[0]) * (p4[0] - p3[0]) + (p2[1] - p1[1]) * (p4[1] - p3[1])
 
 
 def theta(p1, p2):
@@ -16,7 +16,7 @@ def theta(p1, p2):
     if abs(dx) < 0.1 and abs(dy) < 0.1:
         t = 0
     else:
-        t = dy/(abs(dx) + abs(dy))
+        t = dy / (abs(dx) + abs(dy))
         if abs(t) < 0.1 ** 10:
             t = 0
     if dx < 0:
@@ -24,11 +24,11 @@ def theta(p1, p2):
     elif dy < 0:
         t = 4 + t
 
-    return t*90
+    return t * 90
 
 
 def dist_sq(p1, p2):
-    return (p1[0] - p2[0])*(p1[0] - p2[0]) + (p1[1] - p2[1])*(p1[1] - p2[1])
+    return (p1[0] - p2[0]) * (p1[0] - p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1])
 
 
 def chull(points):
@@ -53,7 +53,7 @@ def chull(points):
             unique.append(pi[i])
         else:
             if dist_sq(points[pi[0]], points[unique[-1]]) < dist_sq(points[pi[0]], points[pi[i]]):
-                unique[-1] = pi[i] # put max
+                unique[-1] = pi[i]  # put max
     pi = unique
     stack = []
     for i in range(min(len(pi), 3)):
@@ -78,18 +78,22 @@ def chull(points):
 
 def z_func(s):
     slen, l, r = len(s), 0, 0
-    z = [0]*slen
+    z = [0] * slen
     z[0] = slen
     for i in range(1, slen):
-        if i <= r: z[i] = min(r-i+1, z[i-l])
-        while i+z[i] < slen and s[z[i]] == s[i+z[i]]: z[i] += 1
-        if i+z[i]-1 > r: l, r = i, i+z[i]-1
+        if i <= r:
+            z[i] = min(r - i + 1, z[i - l])
+        while i + z[i] < slen and s[z[i]] == s[i + z[i]]:
+            z[i] += 1
+        if i + z[i] - 1 > r:
+            l, r = i, i + z[i] - 1
     return z
 
-n,m = map(int, sys.stdin.readline().strip().split())
+
+n, m = map(int, sys.stdin.readline().strip().split())
 a = []
 for _ in range(n):
-    x,y = map(int, sys.stdin.readline().strip().split())
+    x, y = map(int, sys.stdin.readline().strip().split())
     a.append((x, y))
 b = []
 for _ in range(m):
@@ -107,12 +111,12 @@ if len(ah) == len(bh):
     else:
         da = []
         for i in range(len(ah)):
-            dot_a = dot(ah[i-2], ah[i-1], ah[i-1], ah[i])
-            da.append((dist_sq(ah[i], ah[i-1]), dot_a))
+            dot_a = dot(ah[i - 2], ah[i - 1], ah[i - 1], ah[i])
+            da.append((dist_sq(ah[i], ah[i - 1]), dot_a))
         db = []
         for i in range(len(bh)):
             dot_b = dot(bh[i - 2], bh[i - 1], bh[i - 1], bh[i])
-            db.append((dist_sq(bh[i], bh[i-1]), dot_b))
+            db.append((dist_sq(bh[i], bh[i - 1]), dot_b))
         l = r = 0
         daab = []
         daab.extend(db)
@@ -121,7 +125,7 @@ if len(ah) == len(bh):
         daab.extend(da)
         zab = z_func(daab)
         found = False
-        for i in range(len(db)+1, len(daab)-len(db)+1):
+        for i in range(len(db) + 1, len(daab) - len(db) + 1):
             if zab[i] == len(db):
                 found = True
                 break

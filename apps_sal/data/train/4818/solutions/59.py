@@ -5,4 +5,3 @@ def solution(a, b):
     else:
         k = ''.join(b) + ''.join(a) + ''.join(b)
     return k
-

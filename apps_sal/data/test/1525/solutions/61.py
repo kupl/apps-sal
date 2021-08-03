@@ -10,9 +10,12 @@ for i in range(8):
 
 
 MOD = 10 ** 9 + 7
+
+
 class modint:
     def __init__(self, x):
         self.x = x.x if isinstance(x, modint) else x % MOD
+
     def __str__(self): return str(self.x)
     __repr__ = __str__
     def __int__(self): return self.x
@@ -42,4 +45,3 @@ for h in range(H):
         dp[h + 1][w - 1] += dp[h][w] * kakekata[1][l] * kakekata[0][r]
 
 print((dp[H][K]))
-

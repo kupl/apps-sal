@@ -9,8 +9,8 @@ class Solution:
         #             ok_b = abs(arr[j] - arr[k]) <= b
         #             ok_c = abs(arr[i] - arr[k]) <= c
         #             if all((ok_a, ok_b, ok_c)):
-        #                 res += 1   
+        #                 res += 1
         # return res
-        
-        res = (1 for i,j,k in combinations(arr,3) if abs(i-j)<=a and abs(j-k)<=b and abs(i-k)<=c)
+
+        res = (1 for i, j, k in combinations(arr, 3) if abs(i - j) <= a and abs(j - k) <= b and abs(i - k) <= c)
         return sum(res)

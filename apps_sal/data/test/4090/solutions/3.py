@@ -32,7 +32,7 @@ for i in range(n):
                 cnt += 1
                 pos += j
             pos += 1
-        cur = allsum - sx*cnt + (j + 1)*cnt - j*cnt
+        cur = allsum - sx * cnt + (j + 1) * cnt - j * cnt
         if cnt > 1 and ans > cur:
             ans = cur
         j += 1

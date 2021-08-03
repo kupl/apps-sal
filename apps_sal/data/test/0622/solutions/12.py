@@ -8,5 +8,6 @@ def rec(depth, pos):
         rec(depth - 1, pos)
     return
 
+
 n, k = [int(i) for i in input().split()]
 rec(n, k)

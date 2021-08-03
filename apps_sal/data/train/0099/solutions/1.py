@@ -22,4 +22,3 @@ for _ in range(int(input())):
     u1 = '0' * i1 + '0' + '1' * (n - i2 - 1)
     ans.append(u1)
 print('\n'.join(ans))
-

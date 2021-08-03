@@ -1,20 +1,24 @@
-from collections import deque   
+from collections import deque
+
+
 class TrieNode:
     def __init__(self):
         self.children, self.end_node = {}, 0
 
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-    
+
     def insert(self, word):
         root = self.root
         for symbol in word:
             root = root.children.setdefault(symbol, TrieNode())
         root.end_node = 1
-     
+
+
 class StreamChecker:
-    ## trie, reverse?
+    # trie, reverse?
     def __init__(self, words: List[str]):
         self.trie = Trie()
         self.Stream = deque()
@@ -44,4 +48,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

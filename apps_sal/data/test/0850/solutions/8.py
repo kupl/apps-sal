@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 k = int(input())
-ds = list(map(int,input().split()))
+ds = list(map(int, input().split()))
 es = []
 bs = [False, False, False]
 for d in ds:
@@ -27,4 +27,3 @@ for d in ds:
             es.append(d)
 print(len(es))
 print(*es)
-

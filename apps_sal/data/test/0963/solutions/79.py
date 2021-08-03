@@ -18,4 +18,3 @@ for i in range(n - 1):
     s[i + 1] = s[i] + d[i + 1]
     s[i + 1] %= mod
 print((d[n - 1]))
-

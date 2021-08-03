@@ -1,9 +1,9 @@
 def cookie(x):
-    if type(x)==str:
+    if type(x) == str:
         return "Who ate the last cookie? It was Zach!"
-    elif type(x)==int:
+    elif type(x) == int:
         return "Who ate the last cookie? It was Monica!"
-    elif type(x)==float:
+    elif type(x) == float:
         return "Who ate the last cookie? It was Monica!"
-    elif type(x)==bool:
+    elif type(x) == bool:
         return "Who ate the last cookie? It was the dog!"

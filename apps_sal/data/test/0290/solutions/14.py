@@ -9,4 +9,3 @@ if dif > sq:
 elif dif != 0:
     add = 1
 print(2 * sq + add)
-

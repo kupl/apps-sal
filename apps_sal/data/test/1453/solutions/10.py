@@ -1,7 +1,6 @@
-3
-
-import os
 import sys
+import os
+3
 
 
 def main():
@@ -49,5 +48,6 @@ def dprint(*value, sep=' ', end='\n'):
 
 def __starting_point():
     main()
+
 
 __starting_point()

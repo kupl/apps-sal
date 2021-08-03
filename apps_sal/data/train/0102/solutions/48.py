@@ -11,5 +11,3 @@ for i in range(t):
 
 for i in answer:
     print(i)
-        
-

@@ -36,6 +36,7 @@ def main():
 
     solve(n, d, da, q, qa)
 
+
 def __starting_point():
     main()
 

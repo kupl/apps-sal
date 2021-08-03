@@ -19,4 +19,3 @@ for c in s:
         ans += 1
     pred = cur
 print(ans)
-

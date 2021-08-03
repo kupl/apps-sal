@@ -23,4 +23,3 @@ while i < len(sortedTotalCost) and k > 0 and sortedTotalCost[i][0] > f:
     k -= 1
     i += 1
 print(total)
-

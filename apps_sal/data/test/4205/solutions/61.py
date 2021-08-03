@@ -7,11 +7,14 @@ p = list(map(int, input().split()))
 # k=1 にはならない
 # k=2 のとき p_i != i である2つの要素を1回スワップすることでpを昇順にできる
 
-q = list(range(1, N+1))
+q = list(range(1, N + 1))
 
 k = 0
 for i in range(N):
-  if p[i] != q[i]: k += 1
-    
-if k <= 2: print('YES')
-else: print('NO')
+    if p[i] != q[i]:
+        k += 1
+
+if k <= 2:
+    print('YES')
+else:
+    print('NO')

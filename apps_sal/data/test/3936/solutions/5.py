@@ -30,4 +30,3 @@ while i < n:
             i += 2
             continue
 print(ans)
-

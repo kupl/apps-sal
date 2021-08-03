@@ -14,4 +14,3 @@ for i in range(50):
     total.append(total[-1] * 2 + 3)
     patties.append(patties[-1] * 2 + 1)
 print((f(N, X)))
-

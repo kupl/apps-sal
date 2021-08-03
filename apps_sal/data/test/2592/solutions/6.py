@@ -21,7 +21,6 @@ for _ in range(TC):
         nums[2] -= 1
         nums[0] -= 1
 
-
     if nums[1] > 0 and nums[0] > 0:
         cnt += 1
         nums[1] -= 1
@@ -31,4 +30,3 @@ for _ in range(TC):
         cnt += 1
 
     print(cnt)
-

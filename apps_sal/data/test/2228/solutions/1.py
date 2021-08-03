@@ -35,20 +35,19 @@ def findMaxGuests(arrl, exit, n):
             guests_in = guests_in - 1
             j = j + 1
 
-    print( time,max_guests)
+    print(time, max_guests)
 
 
 # Driver Code
-t=int(input())
-arrl=[]
-exit=[]
+t = int(input())
+arrl = []
+exit = []
 for _ in range(t):
-    a,b=list(map(int,input().strip().split(" ")))
+    a, b = list(map(int, input().strip().split(" ")))
     arrl.append(a)
-    exit.append(b-1)
+    exit.append(b - 1)
 n = len(arrl)
 findMaxGuests(arrl, exit, n)
 
 # This code is contributed
 # by Shivi_Aggarwal
-

@@ -8,4 +8,3 @@ n2 = min(n - (n1 + min3), max2)
 n3 = min(n - (n1 + n2), max3)
 
 print('{} {} {}'.format(n1, n2, n3))
-

@@ -9,4 +9,3 @@ for d in reversed(s):
         r = 'yes'
 
 print(r)
-

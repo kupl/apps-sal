@@ -15,7 +15,7 @@ for i in range(m):
 
 real = []
 so_far = 0
-for i in range(m-1,-1,-1):
+for i in range(m - 1, -1, -1):
     if b[i][1] > so_far:
         real.append(b[i])
         so_far = b[i][1]
@@ -23,7 +23,7 @@ for i in range(m-1,-1,-1):
 real.reverse()
 
 answer = [0] * n
-b= a[0:mx]
+b = a[0:mx]
 b.sort()
 d = deque(b)
 

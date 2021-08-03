@@ -11,6 +11,7 @@ def prime(b):
                 count += 1
         i += 1
     return count
+
+
 b = int(input())
 print(prime(b))
-

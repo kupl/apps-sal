@@ -1,9 +1,9 @@
-n, m = map(int,input().split())
+n, m = map(int, input().split())
 
 ab = []
 for i in range(n):
     ab.append(list(map(int, input().split())))
-    
+
 cd = []
 for i in range(m):
     cd.append(list(map(int, input().split())))
@@ -17,5 +17,5 @@ for i in range(n):
     dm = min(dist)
     for j in range(m):
         if dist[j] == dm:
-            print(j+1)
+            print(j + 1)
             break

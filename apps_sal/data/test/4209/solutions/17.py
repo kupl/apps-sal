@@ -43,4 +43,3 @@ for el in list(d.keys()):
 print(len(ar))
 for i in ar:
     print(*i)
-

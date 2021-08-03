@@ -19,4 +19,6 @@ def BellmanFord():
     edge = [[x - 1, y - 1, -z] for x, y, z in edge]
     l = BF(0, n, edge)
     print(l[-1] if l[-1] < inf else "inf")
+
+
 BellmanFord()

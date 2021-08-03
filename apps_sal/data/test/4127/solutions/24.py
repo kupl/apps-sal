@@ -8,4 +8,3 @@ for b in B:
     ans += int(b) * a * 10 ** i
     i -= 1
 print((ans // 100))
-

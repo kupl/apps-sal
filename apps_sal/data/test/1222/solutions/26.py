@@ -18,10 +18,9 @@ for i in range(k):
         que.append(x * 10 + 8)
         que.append(x * 10 + 9)
     # others are remain or remain-1 or remain+1
-    else :
+    else:
         que.append(x * 10 + x % 10 - 1)
         que.append(x * 10 + x % 10)
         que.append(x * 10 + x % 10 + 1)
 
 print(x)
-

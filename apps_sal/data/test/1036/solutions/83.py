@@ -25,4 +25,3 @@ for k in range(K):
 memo = [["?"] * (N + 1) for _ in range(K + 1)]
 rec(K, 0)
 print((memo[K][0]))
-

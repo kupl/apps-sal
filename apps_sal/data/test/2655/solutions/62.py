@@ -12,4 +12,3 @@ for i in range(N - 2):
         heapq.heappush(A, feel * -1)
 
 print(conf)
-

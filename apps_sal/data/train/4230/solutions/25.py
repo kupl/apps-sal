@@ -1,4 +1,6 @@
 import array
+
+
 def reverse_letter(string):
     a = array.array('u', string)
     a.reverse()

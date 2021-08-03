@@ -6,4 +6,3 @@ def sum_str(a, b):
     if not a:
         return b
     return a
-

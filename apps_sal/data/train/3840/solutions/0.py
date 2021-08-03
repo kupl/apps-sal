@@ -4,8 +4,8 @@ def largest_power(n):
         if n == 1:
             return (0, -1)
         return (1, -1)
-    
-    #num_of_occurances
+
+    # num_of_occurances
     freq = 0
     x = []
     largest = 0
@@ -19,5 +19,5 @@ def largest_power(n):
         j -= 1
         x.append(j**i)
         j = 0
-    
+
     return (max(x), x.count(max(x)))

@@ -1,6 +1,7 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         dp = {}
+
         def dfs(i, j, Alex, Lee, who):
             if (i, j) not in dp:
                 if i > j:
@@ -27,4 +28,3 @@ class Solution:
             return True
         else:
             return False
-

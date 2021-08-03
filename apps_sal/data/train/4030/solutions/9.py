@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 def splitAlong(xs, ys):
     i = 0
     try:
@@ -8,6 +9,7 @@ def splitAlong(xs, ys):
     except IndexError:
         pass
     return (xs[:i], xs[i:], ys[i:])
+
 
 def insert(tree, word):
     for key, val in tree.items():

@@ -3,7 +3,8 @@
 
 M = 998244353
 
-def powmod(a, x, m = M):
+
+def powmod(a, x, m=M):
     y = 1
     while 0 < x:
         if x % 2 == 1:
@@ -39,7 +40,6 @@ def solve(s):
             tf = False
         left = ch
 
-
     if tf:
         return 1
     if n == 3:
@@ -54,6 +54,7 @@ def solve(s):
             return (powmod(3, n - 1) + M - (powmod(2, n - 1) - powmod(2, n // 3 - 1)) + (1 if sf else 0)) % M
         else:
             return (powmod(3, n - 1) + M - (powmod(2, n // 3) + 4 * powmod(8, n // 3 - 1)) + (1 if sf else 0)) % M
+
 
 def main():
     s = input()

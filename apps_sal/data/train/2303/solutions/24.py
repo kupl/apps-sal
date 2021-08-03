@@ -6,27 +6,36 @@ F_C_of_S = [{} for i in range(N)]
 C_of_S = {}
 
 # def Union-find
-parent = [-1]*M
+parent = [-1] * M
+
+
 def root(x):
-    if (parent[x] < 0): return x
+    if (parent[x] < 0):
+        return x
     else:
         parent[x] = y = root(parent[x])
         return y
 
+
 def unite(x, y):
-    px = root(x); py = root(y);
-    if (px == py): return False
+    px = root(x)
+    py = root(y)
+    if (px == py):
+        return False
     if (parent[px] > parent[py]):
-        px = root(y); py = root(x);
+        px = root(y)
+        py = root(x)
     parent[px] += parent[py]
     parent[py] = px
     return True
+
 
 # Union-find
 pqcs = []
 for i in range(M):
     p, q, c = map(int, input().split())
-    p -= 1; q -= 1;
+    p -= 1
+    q -= 1
     pqcs += [(p, q, c)]
     # The first
     if not c in F_C_of_S[p]:
@@ -48,7 +57,8 @@ S_of_C = {}
 for i in range(M):
     p, q, c = pqcs[i]
     c_set = S_of_C.setdefault(root(i), set())
-    c_set.add(p); c_set.add(q);
+    c_set.add(p)
+    c_set.add(q)
 
 Q = deque([(0, 0, 0)])
 # cost to go to the stations from station_0

@@ -35,4 +35,3 @@ for a in A:
         del cnt[i]
 
 print((sum(cnt.values())))
-

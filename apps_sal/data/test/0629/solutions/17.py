@@ -11,7 +11,7 @@ for i in range(n):
     cur = vert[i]
     cur += sum(row2[i:])
     cur += sum(row1[:i])
-    #print(cur)
+    # print(cur)
     if cur < lo:
         firstcross = i
         lo = cur
@@ -24,16 +24,14 @@ for i in range(n):
     for j in range(i):
         #print("j row1", j)
         cur += row1[j]
-    for j in range(i, n-1):
+    for j in range(i, n - 1):
         #print("j row2", j)
         cur += row2[j]
-    #print(cur)
+    # print(cur)
     if cur < lo and i != firstcross:
         lo = cur
         secondcross = i
 #print("cross", secondcross)
-        
+
 res += lo
 print(res)
-        
-

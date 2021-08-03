@@ -18,5 +18,5 @@ def do_it():
                 return
     print('NO')
 
-do_it()
 
+do_it()

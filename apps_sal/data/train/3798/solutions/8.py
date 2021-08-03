@@ -1,12 +1,12 @@
 def cards_and_pero(s):
     c = 0
-    d =''
+    d = ''
     rtr = [13, 13, 13, 13]
     for i in range(len(s)):
         d = d + s[i]
         c += 1
         if c == 3:
-            if d in s[i+1:] or d in s [:i-1]:
+            if d in s[i + 1:] or d in s[:i - 1]:
                 return [-1, -1, -1, -1]
             if d[0] == 'P':
                 rtr[0] -= 1
@@ -18,4 +18,4 @@ def cards_and_pero(s):
                 rtr[3] -= 1
             d = ''
             c = 0
-    return rtr     
+    return rtr

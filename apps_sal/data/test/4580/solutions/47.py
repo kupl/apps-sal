@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 cnt = [0] * 9
 for i in a:
@@ -14,5 +14,5 @@ if sum(cnt[:8]) == 0:
     r = cnt[8]
 else:
     l = sum(cnt[:8])
-    r = l+cnt[8]
+    r = l + cnt[8]
 print(l, r)

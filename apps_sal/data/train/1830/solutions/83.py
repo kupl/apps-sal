@@ -20,5 +20,6 @@ class Solution(object):
                 if len(aux[rains[i]]) > 1:
                     aux[rains[i]].popleft()
                     heapq.heappush(q, (aux[rains[i]][0], rains[i]))
-        if len(q):  return []
+        if len(q):
+            return []
         return ans

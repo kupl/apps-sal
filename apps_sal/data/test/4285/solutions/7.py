@@ -1,4 +1,4 @@
-mod = 10**9+7
+mod = 10**9 + 7
 
 n = int(input())
 
@@ -14,11 +14,11 @@ for cur_c in s:
     new_a = 0
     new_ab = 0
     new_abc = 0
-    
+
     opts = [cur_c]
-    if cur_c=="?":
+    if cur_c == "?":
         opts = ['a', 'b', 'c']
-        
+
     for c in opts:
         new_em += em
         new_a += a
@@ -35,5 +35,4 @@ for cur_c in s:
     ab = new_ab % mod
     abc = new_abc % mod
 
-print(abc)            
-
+print(abc)

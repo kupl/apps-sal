@@ -1,8 +1,8 @@
 from collections import Counter
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 q = int(input())
-bc = [list(map(int,input().split())) for _ in range(q)]
+bc = [list(map(int, input().split())) for _ in range(q)]
 count = dict(Counter(a))
 ans = sum(a)
 for i in bc:

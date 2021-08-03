@@ -27,4 +27,3 @@ for i in range(1, w):
     kouho.sort()
     ans = min(ans, kouho[-1] - kouho[0])
 print(ans)
-

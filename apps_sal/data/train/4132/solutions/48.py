@@ -1,2 +1,1 @@
-correct_tail = lambda body, tail: body[-1:] == tail
-
+def correct_tail(body, tail): return body[-1:] == tail

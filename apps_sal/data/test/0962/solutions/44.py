@@ -44,4 +44,5 @@ def f_pure():
         return -1  # 閉路がなかった。条件を満たす頂点集合はない
     return ' '.join(map(str, [len(ans)] + sorted(v + 1 for v in ans)))
 
+
 print(f_pure())

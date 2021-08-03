@@ -8,4 +8,3 @@ if x + y >= z:
     can_buy += 1
     ans = z - max(x, y)
 print("{} {}".format(can_buy, ans))
-

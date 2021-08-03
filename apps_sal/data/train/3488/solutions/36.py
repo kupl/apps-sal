@@ -9,4 +9,3 @@ def eval_object(v):
     }
 
     return operations.get(v['operation'], 1)
-

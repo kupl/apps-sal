@@ -2,7 +2,9 @@ inf = int(1e9)
 M = mod = 1000000007
 mod2inv = 500000004
 pt = lambda *a, **k: print(*a, **k, flush=True)
-rd = lambda: map(int, input().split())
+def rd(): return map(int, input().split())
+
+
 n = int(input())
 a = list(rd())
 b = input()
@@ -29,4 +31,3 @@ for i in range(4, n):
         if x == '1':
             f -= 1
 print(min(l1, l2), max(r1, r2))
-

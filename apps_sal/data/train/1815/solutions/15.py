@@ -11,4 +11,3 @@ class Solution:
             S_lst[i] = chr(temp)
 
         return ''.join(S_lst)
-

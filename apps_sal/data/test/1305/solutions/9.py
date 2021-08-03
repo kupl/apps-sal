@@ -16,4 +16,3 @@ for i in map(int, input().split()):
         else:
             can = False
 print('YES' if can else 'NO')
-

@@ -24,4 +24,3 @@ for i in range(n):
 res = res // 2 % MOD
 
 print(res)
-

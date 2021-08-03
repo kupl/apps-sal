@@ -1,25 +1,24 @@
 class Solution:
     def stoneGameIII(self, stones: List[int]) -> str:
-        rowlen=len(stones)
-        dp=[0] * (rowlen+1)
-        i=rowlen-1
-        
-        
+        rowlen = len(stones)
+        dp = [0] * (rowlen + 1)
+        i = rowlen - 1
+
         while i >= 0:
-            
-            answer=-float('inf')
-            
-            answer=max(answer,stones[i] - dp[i+1])
-            
-            if i+1 < rowlen:
-                answer=max(answer,stones[i]+stones[i+1] - dp[i+2])  
-                
-            if i+2 < rowlen:
-                answer=max(answer,stones[i]+stones[i+1]+stones[i+2] - dp[i+3])
-        
-            dp[i] = answer 
-            i-=1
-        
+
+            answer = -float('inf')
+
+            answer = max(answer, stones[i] - dp[i + 1])
+
+            if i + 1 < rowlen:
+                answer = max(answer, stones[i] + stones[i + 1] - dp[i + 2])
+
+            if i + 2 < rowlen:
+                answer = max(answer, stones[i] + stones[i + 1] + stones[i + 2] - dp[i + 3])
+
+            dp[i] = answer
+            i -= 1
+
         print(dp)
         if dp[0] > 0:
             return 'Alice'
@@ -27,10 +26,7 @@ class Solution:
             return 'Bob'
         else:
             return 'Tie'
-        
-        
-        
-        
+
         '''
         # Recursion + TopDown
         rowlen=len(stones)
@@ -65,4 +61,4 @@ class Solution:
         else:
             return 'Tie'
             
-        '''      
+        '''

@@ -8,4 +8,3 @@ for c in s:
     else:
         t.append(c)
 print(''.join(t))
-

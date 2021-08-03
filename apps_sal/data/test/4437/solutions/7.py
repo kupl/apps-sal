@@ -10,4 +10,3 @@ for i in range(0, n, 2):
         s[i] = 'a'
 print(cnt)
 print(''.join(s))
-

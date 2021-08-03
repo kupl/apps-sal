@@ -1,6 +1,6 @@
 class Solution:
     def longestPrefix(self, s: str) -> str:
-        #KMP
+        # KMP
         lps = [0] * len(s)
         j = 0
         for i in range(1, len(s)):
@@ -10,4 +10,3 @@ class Solution:
                 lps[i] = j + 1
                 j += 1
         return s[:lps[-1]]
-

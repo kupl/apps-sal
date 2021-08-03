@@ -3,6 +3,7 @@ class Solution:
         if b == 0:
             return a
         return self.gcd(b, a % b)
+
     def mirrorReflection(self, p: int, q: int) -> int:
         if q == 0:
             return 0

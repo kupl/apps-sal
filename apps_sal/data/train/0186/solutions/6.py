@@ -7,5 +7,5 @@ class Solution:
                 c = cost[9 - i]
                 if c <= j:
                     dp[j] = max(dp[j - c] * 10 + (10 - i), dp[j])
-                    
+
         return str(dp[target]) if str(dp[target]) != '-inf' else '0'

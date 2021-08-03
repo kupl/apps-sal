@@ -1,1 +1,1 @@
-sortme=lambda w:sorted(w,key=lambda x:x.lower())
+def sortme(w): return sorted(w, key=lambda x: x.lower())

@@ -1,4 +1,4 @@
-N,Ma,Mb = list(map(int,input().split()))
+N, Ma, Mb = list(map(int, input().split()))
 
 INF = 10000
 
@@ -9,20 +9,19 @@ dp[0][0] = 0
 sum_a = 0
 sum_b = 0
 
-for i in range(1,N+1):
-    ai,bi,ci = list(map(int,input().split()))
+for i in range(1, N + 1):
+    ai, bi, ci = list(map(int, input().split()))
     sum_a += ai
     sum_b += bi
-    for a in range(sum_a+1,-1,-1):
-        for b in range(sum_b+1,-1,-1):
-            if a-ai >= 0 and b-bi >= 0:
-                dp[a][b] = min(dp[a][b],dp[a-ai][b-bi]+ci)
+    for a in range(sum_a + 1, -1, -1):
+        for b in range(sum_b + 1, -1, -1):
+            if a - ai >= 0 and b - bi >= 0:
+                dp[a][b] = min(dp[a][b], dp[a - ai][b - bi] + ci)
 
 
 ans = INF
-for j in range(1,401):
-    if Ma*j > 400 or Mb*j > 400:
+for j in range(1, 401):
+    if Ma * j > 400 or Mb * j > 400:
         break
-    ans = min(ans,dp[Ma*j][Mb*j])
+    ans = min(ans, dp[Ma * j][Mb * j])
 print((ans if ans != INF else -1))
-

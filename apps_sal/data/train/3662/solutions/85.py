@@ -1,4 +1,4 @@
-def xor(a,b):
+def xor(a, b):
     answer = 0
     if a == True:
         answer += 1
@@ -8,5 +8,3 @@ def xor(a,b):
         return True
     else:
         return False
-        
-

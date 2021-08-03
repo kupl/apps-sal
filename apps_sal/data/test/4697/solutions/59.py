@@ -6,4 +6,3 @@ if 2 * N <= M:
     print((A + M // 4))
 else:
     print((M // 2))
-

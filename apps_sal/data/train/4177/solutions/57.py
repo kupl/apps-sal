@@ -10,5 +10,5 @@ def men_from_boys(arr):
         if n not in b:
             b.append(n)
     m.sort()
-    b.sort(reverse = True)
+    b.sort(reverse=True)
     return m + b

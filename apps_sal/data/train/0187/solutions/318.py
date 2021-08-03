@@ -6,35 +6,35 @@ class Solution:
         # print(\"total cust \",totalCust)
         n = len(customers)
         ct = 0
-        curr =0
-        profit=0
+        curr = 0
+        profit = 0
         res = 0
         maxx = -999999
         pt = 0
         while True:
             ct += 1
-            #print()
+            # print()
             if pt < n:
                 totalCust += customers[pt]
                 pt += 1
             if totalCust < 4:
                 curr += totalCust
                 totalCust = 0
-                profit = curr*boardingCost - ct*runningCost
+                profit = curr * boardingCost - ct * runningCost
                 if maxx < profit:
-                    #print(\"dfffdfds\",res)
+                    # print(\"dfffdfds\",res)
                     maxx = profit
                     res = ct
-                #print(profit,ct)
+                # print(profit,ct)
                 if pt == n:
                     break
-                #break
+                # break
             else:
                 totalCust -= 4
                 curr += 4
-                profit = curr*boardingCost - ct*runningCost
+                profit = curr * boardingCost - ct * runningCost
                 if maxx < profit:
-                    #print(\"hhbbajskd\")
+                    # print(\"hhbbajskd\")
                     maxx = profit
                     res = ct
         if profit > 0:
@@ -42,9 +42,3 @@ class Solution:
             return res
         else:
             return -1
-        
-            
-            
-        
-        
-

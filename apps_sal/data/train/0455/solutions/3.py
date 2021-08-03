@@ -15,6 +15,7 @@ class Solution:
                             gr[p].add(targetGrid[i][j])
         visited = set()
         inp = set()
+
         def dfs(k):
             inp.add(k)
             for x in gr[k]:
@@ -29,4 +30,3 @@ class Solution:
             if i not in visited and not dfs(i):
                 return False
         return True
-

@@ -4,6 +4,7 @@ def check(m):
         need += max(0, ax * m - bx)
     return need <= k
 
+
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
@@ -17,4 +18,3 @@ while r - l > 1:
     else:
         r = m
 print(l)
-

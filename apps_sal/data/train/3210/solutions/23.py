@@ -10,11 +10,10 @@ def get_strings(city):
                 dicti[i] += 1
             else:
                 dicti[i] = 1
-    
+
     for i in dicti:
-        strres = strres + i + ":" + ("*"*dicti[i]) + ","
-        
+        strres = strres + i + ":" + ("*" * dicti[i]) + ","
+
     strres = strres[:-1]
 
     return strres
-

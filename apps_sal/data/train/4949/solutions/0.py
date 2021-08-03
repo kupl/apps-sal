@@ -1,5 +1,6 @@
 from math import cos, sin, radians
 
+
 def crusoe(n, d, ang, dist_mult, ang_mult):
     x, y, a = 0, 0, radians(ang)
     for i in range(n):

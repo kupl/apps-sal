@@ -11,7 +11,5 @@ def count_positives_sum_negatives(arr):
             if arr[i] < 0:
                 summ_otric = summ_otric + arr[i]
             a = [kol_polozh, summ_otric]
-        
 
     return a
-

@@ -32,4 +32,5 @@ def __starting_point():
     S = input()
     solve(S)
 
+
 __starting_point()

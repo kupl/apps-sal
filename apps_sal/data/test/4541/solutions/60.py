@@ -12,4 +12,3 @@ elif c == 'o':
 
 else:
     print('consonant')
-

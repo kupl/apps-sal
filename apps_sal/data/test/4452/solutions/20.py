@@ -13,8 +13,7 @@ for case_num in range(t):
     s = str(n)
     l = len(s)
     for i in range(l):
-        if s[-i-1] != '0':
-            ans.append(int(s[-i-1]) * (10 ** i))
+        if s[-i - 1] != '0':
+            ans.append(int(s[-i - 1]) * (10 ** i))
     print(len(ans))
     print(' '.join(map(str, ans)))
-

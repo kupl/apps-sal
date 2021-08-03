@@ -5,4 +5,3 @@ for i in range(k):
     h -= 4
     w -= 4
 print(ans)
-

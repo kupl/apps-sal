@@ -1,8 +1,8 @@
-def generate_good_string(subs : list):
+def generate_good_string(subs: list):
     In, Out, S = {}, {}, set()
     for s in subs:
         if len(s) == 1:
-            S.add(s) 
+            S.add(s)
         for fr, to in zip(s, s[1:]):
             if fr != In.get(to, fr) or to != Out.get(fr, to):
                 return(print('NO'))
@@ -14,5 +14,7 @@ def generate_good_string(subs : list):
             s += Out.pop(s[-1])
         S.add(s)
     print('NO' if Out else ''.join(sorted(S)))
+
+
 substrings = [input() for _ in range(int(input()))]
 generate_good_string(substrings)

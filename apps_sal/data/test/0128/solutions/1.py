@@ -6,5 +6,6 @@ def main():
     for i in range(k):
         ans += 2 * (n - 2 * i - 2) + 1
     print(ans)
-    
+
+
 main()

@@ -35,4 +35,3 @@ for a, b in AB[::-1]:
         inconvenience -= parent[pa] * parent[pb]
     unite(parent, a, b)
 print((*result[::-1]))
-

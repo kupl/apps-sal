@@ -6,10 +6,10 @@ s = d * d
 
 a = 0
 
-for i in range(1, m+1):
-    for j in range(1, m+1):
-        if (i*i+j*j) % m  == 0:
-            a += d*d
+for i in range(1, m + 1):
+    for j in range(1, m + 1):
+        if (i * i + j * j) % m == 0:
+            a += d * d
             if i <= r:
                 a += d
             if j <= r:
@@ -18,4 +18,3 @@ for i in range(1, m+1):
                 a += 1
 
 print(a)
-

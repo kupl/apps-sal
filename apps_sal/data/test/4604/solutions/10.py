@@ -7,7 +7,7 @@ for i in range(n):
     if l[i] > 2:
         print(0)
         return
-    if l[i] > 0 and (i + n) % 2 == 0: 
+    if l[i] > 0 and (i + n) % 2 == 0:
         print(0)
         return
 if n % 2 == 1 and l[0] > 1:

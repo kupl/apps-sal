@@ -1,6 +1,9 @@
 import sys
-import heapq, functools, collections
-import math, random
+import heapq
+import functools
+import collections
+import math
+import random
 from collections import Counter, defaultdict
 
 # available on Google, not available on Codeforces
@@ -14,13 +17,13 @@ def solve(lst):  # fix inputs here
     console(lst)
 
     if len(lst) > 40:
-        return sum(lst) - len(lst)   
+        return sum(lst) - len(lst)
 
     base = 0
     minres = 10**11
     while base**len(lst) < (10**15):
         req = [base**i for i in range(len(lst))]
-        diff = [abs(r-x) for r,x in zip(req, lst)]
+        diff = [abs(r - x) for r, x in zip(req, lst)]
         # console(req, base, diff, sum(diff))
         minres = min(minres, sum(diff))
         base += 1
@@ -35,6 +38,7 @@ def console(*args):  # the judge will not read these print statement
 # fast read all
 # sys.stdin.readlines()
 
+
 # for case_num in range(int(input())):
 for _ in range(1):
     # read line as a string
@@ -42,12 +46,12 @@ for _ in range(1):
 
     # read line as an integer
     _ = int(input())
-    
+
     # read one line and parse each word as a string
     # lst = input().split()
 
     # read one line and parse each word as an integer
-    lst = list(map(int,input().split()))
+    lst = list(map(int, input().split()))
 
     # read matrix and parse as integers (after reading read nrows)
     # lst = list(map(int,input().split()))
@@ -57,10 +61,9 @@ for _ in range(1):
     #     grid.append(list(map(int,input().split())))
 
     res = solve(lst)  # please change
-    
+
     # Google - case number required
     # print("Case #{}: {}".format(case_num+1, res))
 
     # Codeforces - no case number required
     print(res)
-

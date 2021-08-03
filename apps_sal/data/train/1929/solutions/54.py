@@ -5,9 +5,9 @@ class StreamChecker:
         for w in words:
             node = self.trie
             for char in w:
-                node.setdefault(char,{})
+                node.setdefault(char, {})
                 node = node[char]
-            node.setdefault('*',w)
+            node.setdefault('*', w)
         self.curr = deque([self.trie])
 
     def query(self, letter: str) -> bool:
@@ -26,4 +26,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

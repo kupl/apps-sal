@@ -5,7 +5,7 @@ if l == 1:
 elif l == 2:
     print(9)
 elif l == 3:
-    print(9 + int(n) - 99 )
+    print(9 + int(n) - 99)
 elif l == 4:
     print(909)
 elif l == 5:

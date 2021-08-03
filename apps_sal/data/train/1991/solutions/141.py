@@ -7,6 +7,7 @@ class Solution:
         locations.sort()'''
         mod = 10 ** 9 + 7
         n = len(locations)
+
         @lru_cache(None)
         def dfs(cur, remain):
             if abs(locations[finish] - locations[cur]) > remain:
@@ -17,7 +18,7 @@ class Solution:
             for i in range(n):
                 if i == cur:
                     continue
-                temp =  abs(locations[i] - locations[cur])
+                temp = abs(locations[i] - locations[cur])
                 if temp <= remain:
                     res = (res + dfs(i, remain - temp)) % mod
             return res

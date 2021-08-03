@@ -1,4 +1,4 @@
-def f(n,k):
+def f(n, k):
     md = 10 ** 9 + 7
     if k % 2:
         print((0))
@@ -19,6 +19,6 @@ def f(n,k):
                 dp[i][j][s] = tmp % md
     print((dp[n][0][k]))
 
-n, k = list(map(int, input().split()))
-f(n,k)
 
+n, k = list(map(int, input().split()))
+f(n, k)

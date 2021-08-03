@@ -12,5 +12,3 @@ elif A < B:
     print("Bob")
 else:
     print("Alice")
-
-

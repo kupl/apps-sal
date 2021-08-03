@@ -1,16 +1,15 @@
 def final_grade(exam, projects):
-      if exam > 90 or projects > 10:
-          return 100
+    if exam > 90 or projects > 10:
+        return 100
 #       elif exam >= 90:
 #           return 100
 #       elif projects >= 10:
 #           return 100
-      elif exam > 75 and projects >= 5:
-          return 90
-      elif exam > 50 and projects >= 2:
-          return 75
+    elif exam > 75 and projects >= 5:
+        return 90
+    elif exam > 50 and projects >= 2:
+        return 75
 #       elif exam == 0:
 #           return 0
-      else:
-          return 0
-
+    else:
+        return 0

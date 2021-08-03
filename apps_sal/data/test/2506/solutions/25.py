@@ -28,7 +28,7 @@ while ok - ng > 1:
 rui = [0] * (n + 1)
 
 for i in range(n):
-    rui[i+1] = rui[i] + a[i]
+    rui[i + 1] = rui[i] + a[i]
 
 cnt = 0
 ret = 0
@@ -42,4 +42,3 @@ for val in a:
 ret += (m - cnt) * ng
 
 print(ret)
-

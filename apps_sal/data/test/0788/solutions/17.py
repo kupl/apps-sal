@@ -10,4 +10,3 @@ for i in range(len(s)):
             x = 9
     f += x
 print(f)
-

@@ -24,4 +24,3 @@ for i, s in enumerate(S[::-1]):
 
 ans.reverse()
 print((*ans))
-

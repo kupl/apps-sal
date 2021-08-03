@@ -5,10 +5,10 @@ b = input().split()
 b = b[:x1 - 1] + b[x2:]
 check = True
 for i in range(len(a)):
-	if (a[i] != b[i]):
-		check = False
-		break
+    if (a[i] != b[i]):
+        check = False
+        break
 if (check):
-	print("TRUTH")
+    print("TRUTH")
 else:
-	print("LIE")
+    print("LIE")

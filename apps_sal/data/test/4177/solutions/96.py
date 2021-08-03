@@ -1,3 +1,3 @@
 s = str(input())
-for out in range (len(s)):
-	print("x", end="")
+for out in range(len(s)):
+    print("x", end="")

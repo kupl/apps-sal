@@ -10,12 +10,12 @@ left = ind1
 right = N - ind1 - 1
 ans = 0
 
-a, b = divmod(left, K-1)
+a, b = divmod(left, K - 1)
 a += 1 if b > 0 else 0
 ans += a
 if b > 0:
     right -= (K - 1 - b)
-a, b = divmod(right, K-1)
+a, b = divmod(right, K - 1)
 a += 1 if b > 0 else 0
 ans += a
 

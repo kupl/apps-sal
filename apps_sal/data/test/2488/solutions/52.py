@@ -23,4 +23,3 @@ for i in range(n):
     bsum[i] += bnum
     ans += bnum
 print(ans)
-

@@ -1,6 +1,7 @@
 import sys
 import functools
 
+
 def sdiff(a, b):
     nas, nah, nbs, nbh = 0, 0, 0, 0
 
@@ -18,6 +19,7 @@ def sdiff(a, b):
 
     return nbs * nah - nas * nbh
 
+
 n = int(sys.stdin.readline().strip())
 s = sorted(sys.stdin.readlines(), key=functools.cmp_to_key(sdiff))
 
@@ -31,4 +33,3 @@ for ss in s:
             r += rs
 
 print(r)
-

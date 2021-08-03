@@ -1,9 +1,12 @@
 import functools
+
+
 class Solution:
 
     def minDifficulty(self, A, d):
         n = len(A)
-        if n < d: return -1
+        if n < d:
+            return -1
 
         @functools.lru_cache(None)
         def dfs(i, d):

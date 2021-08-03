@@ -9,4 +9,3 @@ class Solution:
                 del c[counts[freq].pop()]
                 k -= freq
         return len(c)
-

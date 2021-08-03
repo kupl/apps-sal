@@ -46,4 +46,3 @@ if r > (n + 1) or pen2 or pen3:
 else:
     print(len(ans))
     print('\n'.join(' '.join(map(str, x)) for x in ans))
-

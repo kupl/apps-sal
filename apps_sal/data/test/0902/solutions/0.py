@@ -1,11 +1,11 @@
-tmp = list(map(int,input().split()))
-n,k = tmp[0],tmp[1]
-a = list(map(int,input().split()))
+tmp = list(map(int, input().split()))
+n, k = tmp[0], tmp[1]
+a = list(map(int, input().split()))
 
 cur = a[0]
 w = 0
 OK = False
-for i in range(1,10000):
+for i in range(1, 10000):
     op = a[i]
     if cur > op:
         a.append(op)

@@ -6,7 +6,7 @@ class Solution:
             nums_sorted = sorted(nums)
             diff = []
             for i in range(1, len(nums)):
-                diff.append(nums_sorted[i] - nums_sorted[i-1])
+                diff.append(nums_sorted[i] - nums_sorted[i - 1])
             return min(diff)
         else:
             largest_four = []
@@ -27,4 +27,3 @@ class Solution:
                         largest_four[2] - smallest_four[2]]
 
         return min(diff_arr)
-

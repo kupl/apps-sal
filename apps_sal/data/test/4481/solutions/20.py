@@ -11,4 +11,3 @@ for a, b in sss:
     if maxa != a:
         break
     print(b)
-

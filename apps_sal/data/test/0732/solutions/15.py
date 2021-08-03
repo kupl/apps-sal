@@ -1,5 +1,5 @@
-n=int(input())
-array=set()
+n = int(input())
+array = set()
 array.add(10**9)
 for x in range(10):
     for y in range(10):
@@ -11,5 +11,5 @@ for x in range(10):
                     array.add(u)
 array.remove(0)
 # print (sorted(list(array)))
-array=[u for u in array if u <= n]
+array = [u for u in array if u <= n]
 print(len(array))

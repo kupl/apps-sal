@@ -17,4 +17,3 @@ for _ in range(int(input())):
         print(-1)
     else:
         print(a + b + c)
-

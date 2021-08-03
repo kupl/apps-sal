@@ -1,7 +1,7 @@
 from itertools import accumulate
-H, n = list(map( int, input().split()))
-D = list( map( int, input().split()))
-accD = list( accumulate(D))
+H, n = list(map(int, input().split()))
+D = list(map(int, input().split()))
+accD = list(accumulate(D))
 d = sum(D)
 m = min(accD)
 ans = 0
@@ -15,8 +15,8 @@ if H + m <= 0:
 elif d >= 0:
     ans = -1
 else:
-    ans = ((H+m)//(-d))*n
-    now = H + (H+m)//(-d)*d
+    ans = ((H + m) // (-d)) * n
+    now = H + (H + m) // (-d) * d
     while now > 0:
         for i in range(n):
             ans += 1
@@ -24,4 +24,3 @@ else:
             if now <= 0:
                 break
 print(ans)
-

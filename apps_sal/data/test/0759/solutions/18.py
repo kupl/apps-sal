@@ -8,4 +8,3 @@ else:
     no_wait = C * ceil(H / N)
     with_wait = 0.8 * C * ceil((H + D * minutes) / N)
     print(min(with_wait, no_wait))
-

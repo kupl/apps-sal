@@ -13,4 +13,3 @@ if intersection_right >= intersection_left:
     answer += intersection_right - intersection_left + 1
 
 print(answer)
-

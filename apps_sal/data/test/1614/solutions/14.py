@@ -4,4 +4,3 @@ for s in input().split():
     if int(s) > h:
         pr += 1
 print(n + pr)
-

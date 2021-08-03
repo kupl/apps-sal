@@ -6,7 +6,7 @@ class Solution:
         for x, edge in enumerate(graph[i]):
             if edge:
                 self.dfs(x, visited, graph)
-    
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         numInfected = float('inf')
         minVal = None
@@ -18,6 +18,5 @@ class Solution:
             if len(visited) < numInfected:
                 numInfected = len(visited)
                 minVal = i
-        
-        return minVal
 
+        return minVal

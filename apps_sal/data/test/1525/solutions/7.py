@@ -4,11 +4,11 @@ from collections import deque
 
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-input = lambda: sys.stdin.readline().strip()
-NI = lambda: int(input())
-NMI = lambda: map(int, input().split())
-NLI = lambda: list(NMI())
-SI = lambda: input()
+def input(): return sys.stdin.readline().strip()
+def NI(): return int(input())
+def NMI(): return map(int, input().split())
+def NLI(): return list(NMI())
+def SI(): return input()
 
 
 def make_grid(h, w, num): return [[int(num)] * w for _ in range(h)]
@@ -16,15 +16,15 @@ def make_grid(h, w, num): return [[int(num)] * w for _ in range(h)]
 
 def main():
     H, W, K = NMI()
-    dp = make_grid(H+1, W, 0)
+    dp = make_grid(H + 1, W, 0)
     move = make_grid(W, W, 0)
 
     dp[0][0] = 1
 
-    for case in range(2**(W-1)):
+    for case in range(2**(W - 1)):
         bad_case = False
         prev_bit = -1
-        for i in range(W-1):
+        for i in range(W - 1):
             now_bit = (case >> i) & 1
             if now_bit == prev_bit == 1:
                 bad_case = True
@@ -54,14 +54,16 @@ def main():
                 else:
                     move[b][b] += 1
 
-    for h in range(1, H+1):
+    for h in range(1, H + 1):
         for w in range(W):
             for i in range(W):
-                dp[h][w] += dp[h-1][i] * move[i][w]
+                dp[h][w] += dp[h - 1][i] * move[i][w]
 
-    print(dp[H][K-1]%MOD)
+    print(dp[H][K - 1] % MOD)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

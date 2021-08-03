@@ -10,9 +10,9 @@ class Solution:
             for i in range(n):
                 for j in range(n):
                     graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
-        
+
         print(graph)
-        
+
         currmin = float('inf')
         currv = -1
         for i in range(n):
@@ -27,9 +27,3 @@ class Solution:
                 currmin = curr
                 currv = i
         return currv
-                    
-        
-                
-                
-            
-

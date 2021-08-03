@@ -27,4 +27,3 @@ while stack:
         p = bisect.bisect_left(dp, q)
         stack += [(j, k, p, q, 0)]
 print(*ans[1:], sep='\n')
-

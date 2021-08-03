@@ -1,5 +1,6 @@
 M = 9999999999879998
 
+
 def str_hash(s):
     h = 0
     p = 1
@@ -8,17 +9,18 @@ def str_hash(s):
         p = (p * 197) % M
     return h
 
-n,m = [int(i) for i in input().split()]
+
+n, m = [int(i) for i in input().split()]
 a = set()
 for i in range(n):
     s = input()
     h = str_hash(s)
     p = 1
     for j in range(len(s)):
-       for k in range(97,100):
-           if ord(s[j]) != k:
-               a.add((h + p * (k - ord(s[j]))) % M)
-       p = (p * 197) % M
+        for k in range(97, 100):
+            if ord(s[j]) != k:
+                a.add((h + p * (k - ord(s[j]))) % M)
+        p = (p * 197) % M
 ans = []
 for i in range(m):
     s = input()
@@ -27,4 +29,4 @@ for i in range(m):
         ans.append('YES')
     else:
         ans.append('NO')
-print ('\n'.join(ans))
+print('\n'.join(ans))

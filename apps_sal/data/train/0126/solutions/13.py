@@ -17,4 +17,3 @@ class Solution:
                     m = cur
                 end += 1
         return freq[m]
-

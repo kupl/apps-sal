@@ -5,4 +5,4 @@ def find_difference(a, b):
         x = x * i
     for i in b:
         y = y * i
-    return x-y if x-y>0 else y-x
+    return x - y if x - y > 0 else y - x

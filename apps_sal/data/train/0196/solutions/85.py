@@ -3,7 +3,7 @@ class Solution:
         def kadane(gen):
             #ans = None
             #cur = None
-            #for x in gen:
+            # for x in gen:
             #    if cur:
             #        cur = x + max(cur, 0)
             #    else:
@@ -12,11 +12,11 @@ class Solution:
             #        ans = max(ans, cur)
             #    else:
             #        ans = cur
-            #return ans
-            
+            # return ans
+
             size = len(gen)
             ans = cur = gen[0]
-            for i in range(1,size):
+            for i in range(1, size):
                 cur = max(gen[i], cur + gen[i])
                 ans = max(ans, cur)
             return ans
@@ -28,4 +28,3 @@ class Solution:
             return max(ans1, ans2, ans3)
         else:
             return ans1
-

@@ -17,4 +17,3 @@ if s == "":
 else:
     # reverse
     print((s[::-1]))
-

@@ -6,9 +6,8 @@ class Solution:
         for i in range(d):
             ndp = {}
             for k, v in list(dp.items()):
-                for w in range(1, f+1):
-                    if k + w <= target: 
-                        ndp[k+w] = (ndp.get(k+w, 0) + dp[k] ) % MOD
+                for w in range(1, f + 1):
+                    if k + w <= target:
+                        ndp[k + w] = (ndp.get(k + w, 0) + dp[k]) % MOD
             dp = ndp.copy()
         return dp.get(target, 0)
-

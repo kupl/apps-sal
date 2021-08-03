@@ -1,9 +1,9 @@
-t=int(input())
-for i in range(0,t):
-    n=int(input())
-    p=1
-    for j in range(0,n):
-        for k in range(0,n):
-            print(p,end="")
-            p=p+1
+t = int(input())
+for i in range(0, t):
+    n = int(input())
+    p = 1
+    for j in range(0, n):
+        for k in range(0, n):
+            print(p, end="")
+            p = p + 1
         print(" ")

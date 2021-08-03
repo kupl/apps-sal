@@ -35,4 +35,5 @@ def __starting_point():
     # Bs = [int(i) for i in input().split()]
     solve(N, Ss)
 
+
 __starting_point()

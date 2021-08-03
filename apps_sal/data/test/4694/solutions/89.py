@@ -9,4 +9,3 @@ descending_a = sorted(a, reverse=True)
 
 # 座標の最大値から最小値を引く→移動距離を求める
 print((descending_a[0] - descending_a[-1]))
-

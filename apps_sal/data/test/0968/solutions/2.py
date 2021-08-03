@@ -13,4 +13,3 @@ for i in range(1, n):
         min_curr = min(p[i][0], p[i][1])
         curr_handle = min_curr if curr_handle <= min_curr else max(p[i][0], p[i][1])
 print("YES")
-

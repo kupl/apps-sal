@@ -17,7 +17,7 @@ def main():
                 best = val
             else:
                 best = min(best, val)
-        
+
         j = mid - i
         if j > 0 and x[j] != '0':
             val = do(x, j)

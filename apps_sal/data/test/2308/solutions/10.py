@@ -16,4 +16,3 @@ for t in range(T):
     pos_y = -len(y) + pos_y
     k = pos_y - pos_x
     print(k)
-

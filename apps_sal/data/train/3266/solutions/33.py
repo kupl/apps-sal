@@ -1,4 +1,4 @@
-def my_first_kata(a,b):
+def my_first_kata(a, b):
     try:
         if type(a) == str or type(b) == str:
             return False

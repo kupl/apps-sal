@@ -1,5 +1,5 @@
 def derive(coefficient,
-           exponent): 
+           exponent):
 
     new_coeff = coefficient * exponent
     result = "%dx^%d"
@@ -7,4 +7,3 @@ def derive(coefficient,
 
     return result % (new_coeff,
                      new_exp)
-

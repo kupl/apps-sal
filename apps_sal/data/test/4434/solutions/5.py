@@ -6,10 +6,3 @@ for _ in range(int(input())):
         summa += 4 * (n // 2) + 4 * (n - 2) * (n // 2)
         n -= 2
     print(summa)
-
-
-
-
-
-
-

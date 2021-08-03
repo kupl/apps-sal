@@ -6,6 +6,7 @@ def _sum_squares(number):
         number = carry
     return result
 
+
 def _is_happy_number(number):
     seens = set()
     while number > 1:
@@ -18,6 +19,7 @@ def _is_happy_number(number):
         # print('seens:', seens)
         number = sum_squares
     return True
+
 
 def happy_numbers(n):
     result = []

@@ -7,11 +7,10 @@ class Solution:
         for qu in range(len(time_table)):
             find = 0
 
-            for f in range(qu-1,-1,-1):
+            for f in range(qu - 1, -1, -1):
                 if time_table[f][0] <= time_table[qu][1]:
                     find = cumul_profit[f]
                     break
 
-            cumul_profit[qu] = max(cumul_profit[qu-1], find + time_table[qu][2])
-        return cumul_profit[len(profit)-1]
-
+            cumul_profit[qu] = max(cumul_profit[qu - 1], find + time_table[qu][2])
+        return cumul_profit[len(profit) - 1]

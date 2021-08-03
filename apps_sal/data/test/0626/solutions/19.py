@@ -10,7 +10,7 @@ while zap != n:
         if not used[i] and zap >= lst[i]:
             used[i] = True
             zap += 1
-      
+
     if zap == n:
         break
     ans += 1
@@ -19,5 +19,4 @@ while zap != n:
             used[i] = True
             zap += 1
 
-print(ans)    
-
+print(ans)

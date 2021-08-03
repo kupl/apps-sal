@@ -1,17 +1,17 @@
 import heapq
-n=int(input())
-fa=[i for i in range(n)]
-ls=[]
-rs=[]
+n = int(input())
+fa = [i for i in range(n)]
+ls = []
+rs = []
 for i in range(n):
-    l,r=[int(x) for x in input().split()]
-    ls.append((l,i))
-    rs.append((r,i))
+    l, r = [int(x) for x in input().split()]
+    ls.append((l, i))
+    rs.append((r, i))
 ls.sort()
 rs.sort()
-ans=n
+ans = n
 for i in range(n):
-    ans+=max(ls[i][0],rs[i][0])
+    ans += max(ls[i][0], rs[i][0])
 # heapq.heapify(ls)
 # heapq.heapify(rs)
 #

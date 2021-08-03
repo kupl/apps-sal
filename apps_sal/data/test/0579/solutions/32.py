@@ -8,26 +8,26 @@ for i in range(N):
     P[i] -= 1
     C[i] = _c[P[i]]
 
-m = 31 # bit数
+m = 31  # bit数
 
 # ダブリング
 vertex = list()
 score = list()
 vertex.append(P)
 score.append(C)
-for b in range(1, m+1):
+for b in range(1, m + 1):
     p_bth = [0] * N
     c_bth = [0] * N
     for i in range(N):
-        p_bth[i] = vertex[b-1][vertex[b-1][i]]
-        c_bth[i] = score[b-1][i] + score[b-1][vertex[b-1][i]]
+        p_bth[i] = vertex[b - 1][vertex[b - 1][i]]
+        c_bth[i] = score[b - 1][i] + score[b - 1][vertex[b - 1][i]]
     vertex.append(p_bth)
     score.append(c_bth)
 
 # 桁DP
-MIN = -(1 << 63) 
+MIN = -(1 << 63)
 prv = [[MIN, 0] for _ in range(N)]
-nxt = [[MIN, MIN] for _ in range(N)] 
+nxt = [[MIN, MIN] for _ in range(N)]
 for b in range(m, -1, -1):
     for i in range(N):
         if (K >> b) & 1:

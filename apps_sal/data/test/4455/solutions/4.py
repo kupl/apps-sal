@@ -18,4 +18,3 @@ for i in range(n):
     t = bisect_left(sa, a[i])
     ans[i] += t
     print(ans[i], end=' ')
-

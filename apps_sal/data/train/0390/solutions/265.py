@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         dp = [None] * (n + 1)
@@ -10,17 +12,18 @@ class Solution:
         # print(dp)
         sq = 1
         for i in range(2, n + 1):
-            if dp[i]: continue
-                
+            if dp[i]:
+                continue
+
             dp[i] = False
             sq = int(math.sqrt(i))
             for k in range(sq, 0, -1):
                 if not dp[i - k**2]:
                     dp[i] = True
                     break
-                        
+
         return dp[n]
-    
+
 #     def winnerSquareGame(self, n: int) -> bool:
 #         def dp(i):
 #             if i == 0: return False
@@ -32,8 +35,7 @@ class Solution:
 #                     if not dp(i - k**2):
 #                         memo[i] = True
 #             return memo[i]
-        
-#         memo = {}
-        
-#         return dp(n)
 
+#         memo = {}
+
+#         return dp(n)

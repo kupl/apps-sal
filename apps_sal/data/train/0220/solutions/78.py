@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Solution:
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         customers = np.array(customers)
@@ -17,7 +18,7 @@ class Solution:
 
             else:
                 best_case = best_case - customers[i - 1] + customers[i + X - 1]
-                diff = diff - grumpy[i - 1]*customers[i - 1] + grumpy[i + X - 1]*customers[i + X - 1]
+                diff = diff - grumpy[i - 1] * customers[i - 1] + grumpy[i + X - 1] * customers[i + X - 1]
 
                 grump_days = best_case - diff
                 l.append(grump_days)

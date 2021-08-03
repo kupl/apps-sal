@@ -1,2 +1,1 @@
-group_by_commas="{:,}".format
-
+group_by_commas = "{:,}".format

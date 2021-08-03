@@ -46,4 +46,3 @@ while pos_x < x_C:
     count += 1
 print(count)
 print(ans[:-1])
-

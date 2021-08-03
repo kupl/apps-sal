@@ -41,4 +41,3 @@ else:
         i += 1
     print('YES')
     print(' '.join(list(map(str, ns))))
-

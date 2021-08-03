@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, m, k = f()
 s = d = 0
 for t in zip(*[f() for i in range(n)]):
@@ -6,7 +8,8 @@ for t in zip(*[f() for i in range(n)]):
     for a, b in zip(t[:n - k], t[k:]):
         p += b - a
         q += a
-        if p > x: x, y = p, q
+        if p > x:
+            x, y = p, q
     s += x
     d += y
 print(s, d)

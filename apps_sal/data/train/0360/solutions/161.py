@@ -2,10 +2,10 @@ class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         left = max(weights)
         right = sum(weights)
-        
+
         res = right
         while left <= right:
-            mid = left + (right - left)//2
+            mid = left + (right - left) // 2
             d = self.get_day(weights, mid)
             #print(left, right, mid, d)
             if d <= D:
@@ -15,7 +15,6 @@ class Solution:
                 left = mid + 1
         return res
 
-    
     def get_day(self, weights, cap):
         cur = 0
         res = 0
@@ -26,4 +25,3 @@ class Solution:
             cur += x
 
         return res + 1
-

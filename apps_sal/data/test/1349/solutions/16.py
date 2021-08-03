@@ -2,7 +2,7 @@ t = int(input())
 
 for _ in range(t):
     n, k = list(map(int, input().split()))
-    x = [int(x)-1 for x in input().split()]
+    x = [int(x) - 1 for x in input().split()]
 
     b = [False] * n
     tn = 0
@@ -13,4 +13,3 @@ for _ in range(t):
             for j in range(max(0, i - (tn - 1)), min(i + (tn - 1) + 1, n)):
                 b[j] = True
     print(tn)
-

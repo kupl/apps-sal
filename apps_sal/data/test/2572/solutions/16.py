@@ -21,4 +21,3 @@ for wewq in range(rw):
             c.append(abs(b[3] - b[1]) + abs(b[3] - b[2]) + abs(b[3] - b[0]))
             f += min(c)
     print(f)
-

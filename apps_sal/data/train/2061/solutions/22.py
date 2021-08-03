@@ -26,7 +26,6 @@ def solve(x, y, xd, yd):
                 return 1
 
 
-
 def main():
 
     t = int(input())
@@ -44,4 +43,3 @@ def main():
 
 
 main()
-

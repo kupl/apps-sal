@@ -8,16 +8,16 @@ class Solution:
             else:
                 checker[keyName[i]].append(keyTime[i])
         ans = []
-        for a,b in checker.items():
+        for a, b in checker.items():
             l = len(b)
-            if l>2:
+            if l > 2:
                 b.sort()
-                for i in range(l-2):
+                for i in range(l - 2):
                     t = b[i].split(':')
-                    t = str(int(t[0])+1)+':'+t[1]
-                    if len(t)==4:
-                        t = '0'+t
-                    if t>=b[i+2]:
+                    t = str(int(t[0]) + 1) + ':' + t[1]
+                    if len(t) == 4:
+                        t = '0' + t
+                    if t >= b[i + 2]:
                         ans.append(a)
                         break
         ans.sort()

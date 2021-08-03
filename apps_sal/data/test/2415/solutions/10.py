@@ -3,30 +3,29 @@ for i in range(len(lip)):
     lip[i] = lip[i].upper()
 
 s = input()
-dp = [False]*(len(s))
+dp = [False] * (len(s))
 
 for i in range(len(dp)):
-    #print(i)
+    # print(i)
     if (s[i] in lip):
-        #print('here1')
+        # print('here1')
         if (i - 1 >= 0):
             if (dp[i - 1]):
                 dp[i] = True
         else:
             dp[i] = True
     if i > 0:
-        #print('here2')
+        # print('here2')
         a = s[i - 1] + s[i]
-        #print(a)
+        # print(a)
         if (a in lip):
             if (i - 2 >= 0):
                 if (dp[i - 2]):
                     dp[i] = True
             else:
                 dp[i] = True
-#print(dp)
+# print(dp)
 if (dp[len(s) - 1]):
     print('YES')
 else:
     print('NO')
-

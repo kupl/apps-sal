@@ -11,5 +11,5 @@ def cube_odd(arr):
             res.append(i)
     res2 = []
     for i in res:
-        res2.append(i*i*i)
+        res2.append(i * i * i)
     return sum(res2)

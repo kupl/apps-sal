@@ -1,6 +1,7 @@
 def yep(s):
     return (s[0] == "1" and s[1:] == "0" * (len(s) - 1))
 
+
 def main():
     n = int(input())
     arr = list(map(str, input().split()))
@@ -17,6 +18,7 @@ def main():
     if (ann == 0):
         print("1" + "0" * sm)
     else:
-        print(ann, "0" * sm, sep = "")
+        print(ann, "0" * sm, sep="")
+
 
 main()

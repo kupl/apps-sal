@@ -10,4 +10,3 @@ elif b + c == a:
     print('Yes')
 else:
     print('No')
-

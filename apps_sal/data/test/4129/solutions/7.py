@@ -7,6 +7,7 @@ ar = []
 vis = [0 for i in range(500005)]
 sys.setrecursionlimit(6000)
 
+
 def dfs(s):
     vis[s] = 1
     for i in range(len(adj[s])):
@@ -33,4 +34,3 @@ for i in range(n - 1, -1, -1):
         dfs(ar[i])
 
 print(res)
-

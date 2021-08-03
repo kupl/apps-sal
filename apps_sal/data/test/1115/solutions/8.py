@@ -11,5 +11,3 @@ for _ in range(m):
         break
 else:
     print('-1')
-
-

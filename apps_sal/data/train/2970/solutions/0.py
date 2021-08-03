@@ -4,6 +4,8 @@ def prod_int_part(n, min_=2):
         if not n % d:
             count, sub = prod_int_part(n // d, d)
             total += count + 1
-            if not count: sub = [n // d]
-            if not fac: fac = [d] + sub
+            if not count:
+                sub = [n // d]
+            if not fac:
+                fac = [d] + sub
     return [total, fac]

@@ -14,13 +14,15 @@ q = deque([n])
 while q:
     a = q.popleft()
     for b, k, i in g[a]:
-        if v[b] == 1e9: q.append(b)
+        if v[b] == 1e9:
+            q.append(b)
         if v[b] > v[a] and u[b] < u[a] + k:
             v[b] = v[a] + 1
             u[b] = u[a] + k
             x[b], y[b] = a, i
 a, t = 1, [0] * m
-while a != n: t[y[a]], a = 1, x[a]
+while a != n:
+    t[y[a]], a = 1, x[a]
 l = []
 for j in range(m):
     i = 3 * j + 2
@@ -28,4 +30,3 @@ for j in range(m):
         l.append(' '.join([s[i], s[i + 1], str(t[j])]))
 print(len(l))
 print('\n'.join(l))
-

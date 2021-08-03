@@ -28,4 +28,3 @@ while count < (n + 1) // 2:
     idx += 1
 
 print(operations)
-

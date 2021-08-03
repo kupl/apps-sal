@@ -10,4 +10,3 @@ for n in range(1, 101):
         ret[1] = temp
 
 print(ret[0], ret[1])
-

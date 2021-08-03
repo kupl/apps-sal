@@ -1,4 +1,6 @@
-f = lambda x: str(n + 1).rstrip('0')
+def f(x): return str(n + 1).rstrip('0')
+
+
 n = int(input())
 s = set()
 while n not in s:

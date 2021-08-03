@@ -1,5 +1,6 @@
 import heapq
 
+
 class DinnerPlates:
 
     def __init__(self, capacity: int):
@@ -19,19 +20,19 @@ class DinnerPlates:
             self.stacks[ind].append(val)
             if len(self.stacks[ind]) == self.K:
                 heapq.heappop(self.leftmost)
-            
+
     def pop(self) -> int:
         if len(self.stacks) == 0:
             return -1
-            
+
         while len(self.stacks[-1]) == 0:
             self.stacks.pop()
             if len(self.stacks) == 0:
                 return -1
-            
+
         if len(self.stacks[-1]) == self.K:
-            heapq.heappush(self.leftmost,len(self.stacks)-1)
-            
+            heapq.heappush(self.leftmost, len(self.stacks) - 1)
+
         return self.stacks[-1].pop()
 
     def popAtStack(self, index: int) -> int:
@@ -41,12 +42,11 @@ class DinnerPlates:
             stack = self.stacks[index]
             if len(stack) == 0:
                 return -1
-            
+
             if len(stack) == self.K:
-                heapq.heappush(self.leftmost,index)
-            
+                heapq.heappush(self.leftmost, index)
+
             return stack.pop()
-        
 
 
 # Your DinnerPlates object will be instantiated and called as such:
@@ -54,4 +54,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

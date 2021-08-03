@@ -6,9 +6,9 @@ class Solution:
         # count from back
         most = 0
         count = 0
-        for i in range(len(times)-1 ,-1, -1):
+        for i in range(len(times) - 1, -1, -1):
             if times[i] > most:
                 most = times[i]
                 count += 1
-                
+
         return count

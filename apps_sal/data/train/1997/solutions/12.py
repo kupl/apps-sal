@@ -4,10 +4,10 @@ class Solution:
             if interval1[0] > interval2[0]:
                 interval1, interval2 = interval2, interval1
             return interval1[1] >= interval2[1]
-        
-        intervals.sort(key = lambda x: (x[0], -x[1]))
+
+        intervals.sort(key=lambda x: (x[0], -x[1]))
         print(intervals)
-        
+
         count = 0
 
         res = [intervals[0]]
@@ -17,4 +17,3 @@ class Solution:
                 res.append(i)
 
         return len(res)
-

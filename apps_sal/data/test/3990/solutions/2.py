@@ -1,6 +1,7 @@
 from queue import Queue
 import sys
 
+
 def __starting_point():
 
     def bfs(flag):
@@ -11,12 +12,12 @@ def __starting_point():
 
         while not q.empty():
             u, dis = q.get()
-            for v in range(1, n+1):
+            for v in range(1, n + 1):
                 if (v not in vis) and (((u, v) in h) == flag):
                     vis |= {v}
-                    q.put((v, dis+1))
+                    q.put((v, dis + 1))
                     if v == n:
-                        return dis+1
+                        return dis + 1
         return -1
 
     n, m = list(map(int, input().split()))
@@ -33,5 +34,6 @@ def __starting_point():
         print(-1)
     else:
         print(max(dist1, dist2))
+
 
 __starting_point()

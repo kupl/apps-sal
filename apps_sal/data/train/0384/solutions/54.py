@@ -9,4 +9,3 @@ class Solution:
         for ii, jj in enumerate(A):
             res = (res + (pow2[ii] - pow2[N - ii - 1]) * jj) % MODS
         return res
-

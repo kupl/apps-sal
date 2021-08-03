@@ -14,4 +14,3 @@ for i in x:
             return
 
 print(r)
-

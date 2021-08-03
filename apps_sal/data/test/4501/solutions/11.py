@@ -11,4 +11,3 @@ for i, x in enumerate(xxx):
             dp[j + 1][k + x] += dp[j][k]
 
 print((sum(dp[i][i * a] for i in range(1, n + 1))))
-

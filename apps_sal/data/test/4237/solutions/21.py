@@ -12,8 +12,8 @@ num.append(C)
 num.append(D)
 a = A - 1
 
-x_B = B - (B//C) - (B//D) + (B//lcm(num))
-x_A = a - (a//C) - (a//D) + (a//lcm(num))
+x_B = B - (B // C) - (B // D) + (B // lcm(num))
+x_A = a - (a // C) - (a // D) + (a // lcm(num))
 
 ans = x_B - x_A
 

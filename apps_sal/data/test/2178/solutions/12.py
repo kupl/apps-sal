@@ -18,4 +18,3 @@ for op in seq:
             break
     result.append(cnt)
 print(*result)
-

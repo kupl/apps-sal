@@ -1,4 +1,4 @@
-def compare(s1,s2):
+def compare(s1, s2):
 
     import string
 
@@ -12,8 +12,7 @@ def compare(s1,s2):
     else:
         s2 = s2.upper()
 
-    
     lst1 = [ord(char) for char in s1]
     lst2 = [ord(char) for char in s2]
-    
+
     return sum(lst1) == sum(lst2)

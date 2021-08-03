@@ -1,9 +1,10 @@
 from collections import defaultdict
 
+
 class Solution(object):
     def minAreaRect(self, points):
         x_points = defaultdict(list)
-        for x,y in points:
+        for x, y in points:
             x_points[x].append(y)
         min_area = float('inf')
         vert_lines = {}
@@ -15,8 +16,8 @@ class Solution(object):
                 y2 = y_list[i]
                 for j in range(i):
                     y1 = y_list[j]
-                    if (y1,y2) in vert_lines:
-                        x2 = vert_lines[(y1,y2)]
-                        min_area = min(min_area, abs(x - x2)* abs(y1-y2))
-                    vert_lines[(y1,y2)] = x
+                    if (y1, y2) in vert_lines:
+                        x2 = vert_lines[(y1, y2)]
+                        min_area = min(min_area, abs(x - x2) * abs(y1 - y2))
+                    vert_lines[(y1, y2)] = x
         return min_area if min_area != float('inf') else 0

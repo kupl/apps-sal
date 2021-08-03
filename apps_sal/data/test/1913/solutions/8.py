@@ -20,4 +20,3 @@ if a:
 else:
     ans = '1' + ('0' * zero)
 print(ans)
-

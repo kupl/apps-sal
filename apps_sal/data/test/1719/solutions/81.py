@@ -14,6 +14,5 @@ for i in range(3, n + 2):
     dp[i][2] -= 3 * dp[i - 3][0]  # すでに取り除いているものに注意する.結果的にAGGC,ATGC,AGTCを取り除く.
 
     for j in range(4):
-        dp[i][j]%mod
-print((sum(dp[-1])%mod))
-
+        dp[i][j] % mod
+print((sum(dp[-1]) % mod))

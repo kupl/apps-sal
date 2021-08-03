@@ -5,4 +5,3 @@ for _ in range(int(input())):
     for i in a:
         d[i] = d[i] + 1
     print(min(d.values()))
-

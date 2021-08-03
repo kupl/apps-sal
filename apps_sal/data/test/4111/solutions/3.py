@@ -28,4 +28,3 @@ for i in range(n):
     else:
         answer += int(sum_left_odd[i] + sum_right_odd[n - i - 1] == sum_left_even[i] + sum_right_even[n - i - 1])
 print(answer)
-

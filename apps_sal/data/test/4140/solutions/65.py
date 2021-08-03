@@ -9,4 +9,4 @@ count = 0
 for i, j in zip(S, ans1):
     if i != j:
         count += 1
-print(min(count, n-count))
+print(min(count, n - count))

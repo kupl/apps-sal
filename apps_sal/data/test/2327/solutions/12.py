@@ -7,6 +7,5 @@ for testcase in range(int(input())):
         i *= 2
     unfair = 0
     for log in logs:
-        unfair += n  // log
+        unfair += n // log
     print(unfair)
-

@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 d = {}
 for i in a:
@@ -7,7 +7,7 @@ for i in a:
         d[i] += 1
     else:
         d[i] = 1
-d = sorted(d.items(), key=lambda x:x[0], reverse=True)
+d = sorted(d.items(), key=lambda x: x[0], reverse=True)
 
 m = len(d)
 ans = 0
@@ -26,4 +26,3 @@ for i in range(m):
         flg = True
         break
 print(ans) if flg else print(0)
-        

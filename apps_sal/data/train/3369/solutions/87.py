@@ -1,1 +1,1 @@
-move = lambda x, n :  x + 2 * n
+def move(x, n): return x + 2 * n

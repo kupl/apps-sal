@@ -4,7 +4,7 @@ class Solution:
 
         # Stores [difference, index] -> length
         # for each position j:
-        #   the arithmetic sequence 
+        #   the arithmetic sequence
         hash = {}
 
         for i in range(length):

@@ -1,5 +1,5 @@
-n = int( input() )
-r = 0;
+n = int(input())
+r = 0
 for i in range(0, n):
     str = input()
     if str[1] == "+":
@@ -8,4 +8,3 @@ for i in range(0, n):
         r -= 1
 
 print(r)
-

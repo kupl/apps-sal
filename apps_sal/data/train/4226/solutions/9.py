@@ -11,4 +11,3 @@ def remove_smallest(numbers):
         return(numbers[0:smindex] + numbers[(smindex + 1):len(numbers)])
     else:
         return(list())
-

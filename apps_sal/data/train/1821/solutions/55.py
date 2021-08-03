@@ -14,7 +14,6 @@ class Solution:
             res.extend(right[right_p:])
             return res
 
-        
         if len(nums) <= 1:
             return nums
         middle = len(nums) // 2
@@ -24,6 +23,3 @@ class Solution:
             return merge_sort(right, left)
         else:
             return merge_sort(left, right)
-        
-
-

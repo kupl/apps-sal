@@ -10,6 +10,6 @@ class Solution:
                 if a[j] == 0:
                     K += 1
                 j += 1
-            ml = max(ml, i-j+1)
+            ml = max(ml, i - j + 1)
             i += 1
         return ml

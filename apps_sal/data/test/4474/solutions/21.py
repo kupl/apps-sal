@@ -35,4 +35,3 @@ for i in range(q):
             balance -= 3 ** (len(s) - i - 1)
             s[i] = '0'
     print(int(''.join(s), 3))
-

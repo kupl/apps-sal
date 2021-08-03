@@ -1,1 +1,1 @@
-set_alarm=lambda e,v:e>v
+def set_alarm(e, v): return e > v

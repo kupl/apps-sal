@@ -7,4 +7,3 @@ elif xv >= xp + yp:
     print("Polycarp")
 else:
     print("Vasiliy")
-

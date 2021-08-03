@@ -1,10 +1,11 @@
 class Solution:
     def minCostConnectPoints(self, points):
         N = len(points)
-        dist = lambda p1, p2: abs(p1[0]-p2[0]) + abs(p1[1]-p2[1])
-        connections = [[u, v, dist(points[u], points[v])] for u in range(N-1) for v in range(u+1, N)]
-        connections.sort(key = lambda x:x[2])
-        parent, cnt, res = [i for i in range(N+1)], N-1, 0
+        def dist(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+        connections = [[u, v, dist(points[u], points[v])] for u in range(N - 1) for v in range(u + 1, N)]
+        connections.sort(key=lambda x: x[2])
+        parent, cnt, res = [i for i in range(N + 1)], N - 1, 0
+
         def find(v):
             while parent[v] != parent[parent[v]]:
                 parent[v] = parent[parent[v]]
@@ -18,11 +19,12 @@ class Solution:
                 if cnt == 0:
                     break
         return res
-    
+
+
 class Solution:
     def minCostConnectPoints(self, points):
-        distance = lambda p1, p2: abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
-        points.sort(key = lambda p: p[0] + p[1])   # points.sort(key = lambda p: abs(p[0]) + abs(p[1]))
+        def distance(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+        points.sort(key=lambda p: p[0] + p[1])   # points.sort(key = lambda p: abs(p[0]) + abs(p[1]))
         total_cost = 0
         points = [[p, distance(p, points[0])] for p in points]
         while points:

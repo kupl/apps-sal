@@ -6,10 +6,8 @@ def solve(eq):
              .replace('/', ' / ')
              .replace('+', ' + ')
              .replace('-', ' - ')
-             .split(' ')) 
+             .split(' '))
 
     out = ''.join(leq[::-1])
 
     return out
-
-

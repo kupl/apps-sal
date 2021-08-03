@@ -7,7 +7,7 @@ class Solution:
             d[table][dish] += 1
         meal = sorted(meal)
         result = [['Table'] + [food for food in meal]]
-        
-        for table in sorted(d, key = int):
+
+        for table in sorted(d, key=int):
             result.append([table] + [str(d[table][food]) for food in meal])
         return result

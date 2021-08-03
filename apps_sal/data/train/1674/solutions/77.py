@@ -26,7 +26,7 @@ class Solution:
         suffix_sum.reverse()
 
         return suffix_sum
-    
+
     def stoneGameII(self, piles: List[int]) -> int:
         suffix_sum = self._suffix_sum(piles)
 

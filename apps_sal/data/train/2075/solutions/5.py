@@ -26,5 +26,3 @@ if i + 1 + balance > 0:
     print('YES')
 else:
     print('NO')
-
-

@@ -13,7 +13,7 @@ def main():
             return
         if s == 'AB':
             if (D['BC'] < D['AC']) or \
-                (i < N - 1 and S[i + 1] == 'BC' and D['BC'] == D['AC'] == 1):
+                    (i < N - 1 and S[i + 1] == 'BC' and D['BC'] == D['AC'] == 1):
                 ans.append('B')
                 D['BC'] += 1
                 D['AC'] -= 1
@@ -23,7 +23,7 @@ def main():
                 D['AC'] += 1
         elif s == 'BC':
             if (D['AB'] < D['AC']) or \
-                (i < N - 1 and S[i + 1] == 'AB' and D['AB'] == D['AC'] == 1):
+                    (i < N - 1 and S[i + 1] == 'AB' and D['AB'] == D['AC'] == 1):
                 ans.append('B')
                 D['AB'] += 1
                 D['AC'] -= 1
@@ -33,7 +33,7 @@ def main():
                 D['AC'] += 1
         else:  # s == 'AC'
             if (D['AB'] < D['BC']) or \
-                (i < N - 1 and S[i + 1] == 'AB' and D['AB'] == D['BC'] == 1):
+                    (i < N - 1 and S[i + 1] == 'AB' and D['AB'] == D['BC'] == 1):
                 ans.append('A')
                 D['AB'] += 1
                 D['BC'] -= 1
@@ -45,6 +45,9 @@ def main():
     for a in ans:
         print(a)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

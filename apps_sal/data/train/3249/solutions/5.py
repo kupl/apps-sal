@@ -4,4 +4,4 @@ def regressionLine(x, y):
     Ex = sum(x)
     Ey = sum(y)
     n = len(x)
-    return round((Ex2*Ey-Ex*Exy)/(n*Ex2-Ex**2),4),round((n*Exy-Ex*Ey)/(n*Ex2-Ex**2),4)
+    return round((Ex2 * Ey - Ex * Exy) / (n * Ex2 - Ex**2), 4), round((n * Exy - Ex * Ey) / (n * Ex2 - Ex**2), 4)

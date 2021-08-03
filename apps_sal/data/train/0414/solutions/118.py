@@ -6,12 +6,12 @@ class Solution:
                 largestFound = arr[i]
                 can = True
                 if i == 0:
-                    for j in range(i+1,min(i+k+1,len(arr))):
+                    for j in range(i + 1, min(i + k + 1, len(arr))):
                         if arr[j] > arr[i]:
                             can = False
                             break
                 else:
-                    for j in range(i+1,min(i+k,len(arr))):
+                    for j in range(i + 1, min(i + k, len(arr))):
                         if arr[j] > arr[i]:
                             can = False
                             break

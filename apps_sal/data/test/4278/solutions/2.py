@@ -8,5 +8,5 @@ for i in range(N):
         ans += dic[a]
         dic[a] += 1
     else:
-        dic[a] =1
+        dic[a] = 1
 print(ans)

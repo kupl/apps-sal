@@ -8,9 +8,9 @@ class Solution:
             if len(a) == len(b):
                 cntr += 1
         return cntr
-    
+
     def numSplits(self, s: str) -> int:
-        
+
         a = collections.defaultdict(int)
         a[s[0]] = 1
         b = collections.Counter(s[1:])

@@ -1,8 +1,10 @@
 for i in range(int(input())):
     n, u, a, b = map(int, input().split())
-    if n % 3: print('no')
+    if n % 3:
+        print('no')
     else:
-        if a > b: a, b = b, a
+        if a > b:
+            a, b = b, a
         p, q = a + b, 2 * b - a
         s, r, v = p + a, p + b, n - u
         t = [(p, q), (q, p), (s, r), (r, s)]

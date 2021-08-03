@@ -1,1 +1,1 @@
-greet = lambda a, b: f"Hello {'boss' if a == b else 'guest'}"
+def greet(a, b): return f"Hello {'boss' if a == b else 'guest'}"

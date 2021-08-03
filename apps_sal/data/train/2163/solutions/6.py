@@ -14,7 +14,7 @@ i = 0
 while i < n and S[i] == '0':
     i += 1
 if i == n:
-    print (n)
+    print(n)
     return
 j = n
 while j and S[j - 1] == '0':
@@ -43,4 +43,4 @@ for i in reversed(range(n)):
         ways0 = red(ways0 + ways1)
     else:
         ways1 = red(ways1 + ways0)
-print (ways1 * fac % MOD)
+print(ways1 * fac % MOD)

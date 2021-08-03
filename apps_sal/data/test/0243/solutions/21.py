@@ -4,13 +4,15 @@ input = sys.stdin.readline
 n, m, k = list(map(int, input().split()))
 x = list(map(int, input().split()))
 
-uf = [-1 for _ in range(n+1)]
+uf = [-1 for _ in range(n + 1)]
+
 
 def find(p, uf):
     if uf[p] < 0:
         return p
     uf[p] = find(uf[p], uf)
     return uf[p]
+
 
 def union(p, q, uf, specials):
     proot = find(p, uf)
@@ -25,6 +27,7 @@ def union(p, q, uf, specials):
         uf[proot] += uf[qroot]
         uf[qroot] = proot
         specials[proot] = specials[qroot] or specials[proot]
+
 
 edges = []
 for _ in range(m):
@@ -45,4 +48,3 @@ for w, u, v in edges:
 
 res = [ans] * k
 print(' '.join(map(str, res)))
-

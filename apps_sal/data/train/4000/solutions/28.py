@@ -1,5 +1,6 @@
 import math
 
+
 def strong_num(number):
 
     fact = 0

@@ -4,6 +4,7 @@ class Person:
         self.alive = True
         self.children = []
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -24,13 +25,12 @@ class ThroneInheritance:
         res = []
         self.preorder_dfs(self.king, res)
         return res
-    
+
     def preorder_dfs(self, person, res):
         if person.alive:
             res.append(person.name)
         for child in person.children:
             self.preorder_dfs(child, res)
-        
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -38,4 +38,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

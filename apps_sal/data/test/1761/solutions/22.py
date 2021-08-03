@@ -10,11 +10,12 @@ def werify_message(words, message):
         else:
             # Дошли до конца исходного сообщения и не нашли вставок
             return 'yes'
-                
+
     if i == len(true_message):
         return 'yes'
     else:
         return 'no'
+
 
 n = int(input())
 words = list()

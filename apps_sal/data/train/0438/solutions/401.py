@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == 0:
@@ -15,24 +17,25 @@ class Solution:
                 res = step - 1
 #             print(uf.cnt.items(), step, num)
 #             print(uf.length_list, res)
-        
+
         if uf.cnt.get(m):
             return step
         return res
-        
+
+
 class UF:
     def __init__(self, n, m):
         self.max_length = n + 1
         self.target = m
-        self.length_list = [0 for _ in range(self.max_length)] # length of each idx. Always check root node length.
-        self.cnt = defaultdict(int) # Save length we have.
+        self.length_list = [0 for _ in range(self.max_length)]  # length of each idx. Always check root node length.
+        self.cnt = defaultdict(int)  # Save length we have.
         self.par = defaultdict(int)
-        
+
     def find(self, x):
         if self.par[x] != x:
             self.par[x] = self.find(self.par[x])
         return self.par[x]
-        
+
     def union(self, x, y):
         par_x = self.find(x)
         par_y = self.find(y)
@@ -49,13 +52,11 @@ class UF:
         self.par[x] = x
         self.length_list[x] = 1
         self.cnt[1] += 1
-        if x >= 2 and self.length_list[x-1] > 0:
-            self.union(x, x-1)
-        if x <= self.max_length - 2 and self.length_list[x+1] > 0:
-            self.union(x, x+1)
+        if x >= 2 and self.length_list[x - 1] > 0:
+            self.union(x, x - 1)
+        if x <= self.max_length - 2 and self.length_list[x + 1] > 0:
+            self.union(x, x + 1)
         # print(tmp, self.cnt[self.target], self.target)
         if tmp and self.cnt[self.target] == 0:
             return True
         return False
-        
-

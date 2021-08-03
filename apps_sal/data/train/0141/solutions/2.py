@@ -17,5 +17,5 @@ class Solution:
 
         if i == j:
             n += 1
-        
+
         return n

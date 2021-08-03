@@ -18,4 +18,3 @@ if d:
     print(d)
 else:
     print(n)
-

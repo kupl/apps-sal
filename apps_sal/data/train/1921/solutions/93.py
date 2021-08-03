@@ -16,7 +16,7 @@ class DinnerPlates:
             stack_idx += 1
         self._start = stack_idx
         if stack_idx == len(self._stacks):
-            self._stacks.append([])        
+            self._stacks.append([])
         self._stacks[stack_idx].append(val)
 
     def pop(self) -> int:
@@ -41,4 +41,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

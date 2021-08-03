@@ -1,10 +1,13 @@
-from math import sqrt 
+from math import sqrt
 n = int(input())
+
+
 def prost(n):
     for i in range(2, int(sqrt(n)) + 1):
         if n % i == 0:
             return False
     return True
+
 
 f = n
 while not prost(f):
@@ -19,4 +22,3 @@ while f:
     print(1 + g - 1, n - g)
     g += 1
     f -= 1
-

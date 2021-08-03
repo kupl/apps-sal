@@ -5,7 +5,7 @@ s, e = 0, [()] * m
 for i in range(m):
     x, y = map(int, input().split())
     e[i] = (x, y, min(v[x], v[y]))
-e.sort(key = lambda x: x[2], reverse = True)
+e.sort(key=lambda x: x[2], reverse=True)
 q = [[i] for i in range(n + 1)]
 for l, r, v in e:
     l, r = p[l], p[r]

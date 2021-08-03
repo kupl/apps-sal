@@ -23,8 +23,9 @@ class UnionFind:
     def count(self, x):
         return self.size[self.root(x)]
 
+
 N, M = list(map(int, input().split()))
-AB = [list([int(x)-1 for x in input().split()]) for _ in range(M)]
+AB = [list([int(x) - 1 for x in input().split()]) for _ in range(M)]
 ans = 0
 for i in range(M):
     un = UnionFind(N)
@@ -34,4 +35,3 @@ for i in range(M):
     if un.count(0) != N:
         ans += 1
 print(ans)
-

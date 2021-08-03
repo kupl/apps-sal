@@ -1,5 +1,6 @@
 def main():
     from collections import defaultdict
+
     def f(x):
         inc = [0 for i in range(n + w)]
         cur_inc = 0
@@ -14,11 +15,10 @@ def main():
                 days -= x - v
                 inc[i + w] += x - v
         return True
-    
-    
+
     n, m, w = [int(i) for i in input().split()]
     arr = [int(i) for i in input().split()]
-    
+
     left, right = min(arr), max(arr) + m + 1
     while right - left > 1:
         middle = (left + right) // 2
@@ -26,9 +26,8 @@ def main():
             left = middle
         else:
             right = middle
-    
+
     print(left)
 
 
 main()
-

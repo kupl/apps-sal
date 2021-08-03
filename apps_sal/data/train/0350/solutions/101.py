@@ -34,4 +34,3 @@ class Solution:
                         end += 1
                     sum += (end - begin + 1)
         return sum
-

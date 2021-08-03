@@ -12,10 +12,10 @@ class StreamChecker:
         self.check.append(self.trie)
         self.check = [trie[letter] for trie in self.check if letter in trie]
         for trie in self.check:
-            if ' ' in trie: return True
+            if ' ' in trie:
+                return True
         return False
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -15,8 +15,5 @@ class Solution:
                 one_count += 1
             elif cnt == K * 2:
                 two_count += 1
-        
+
         return (one_count * two_count) % M
-
-
-

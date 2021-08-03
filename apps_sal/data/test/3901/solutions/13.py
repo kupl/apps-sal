@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     n = int(input())
     A = list(map(int, input().split()))
@@ -23,7 +24,9 @@ def main():
                 ans = min(ans, j - i)
     print(ans + n - 1)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

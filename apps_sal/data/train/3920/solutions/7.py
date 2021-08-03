@@ -12,4 +12,3 @@ def hamming_distance(a, b):
         if c[i] != d[i]:
             count += 1
     return count
-

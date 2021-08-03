@@ -5,5 +5,4 @@ n = 0
 for i in range(10000000):
     n += 1
 for i in b:
-    print(i, end = " ")
-
+    print(i, end=" ")

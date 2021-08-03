@@ -27,4 +27,3 @@ class Solution:
         for i in range(1, len(arr) - 1):
             res = min(res, prefix[i] + suffix[i])
         return res if res <= len(arr) else -1
-

@@ -6,8 +6,8 @@ reds.sort(key=lambda x: -x[1])
 blues.sort(key=lambda x: x[0])
 
 ans = 0
-usedreds = [False]*N
-usedblues = [False]*N
+usedreds = [False] * N
+usedblues = [False] * N
 for i in range(N):
     if usedreds[i]:
         continue

@@ -1,5 +1,5 @@
 def power_sumDigTerm(n):
-    
+
     def sum_d(x):
         L = [int(d) for d in str(x)]
         res = 0
@@ -8,15 +8,13 @@ def power_sumDigTerm(n):
         return res
 
     r_list = []
-    
+
     for j in range(2, 50):
-        for i in range(7, 100): 
+        for i in range(7, 100):
             a = i**j
-            if sum_d(a) == i:     
+            if sum_d(a) == i:
                 r_list.append(a)
                 r_list = list(set(r_list))
-                
-    r_list = sorted((r_list))
-    return r_list[n-1]
-                        
 
+    r_list = sorted((r_list))
+    return r_list[n - 1]

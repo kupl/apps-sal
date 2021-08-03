@@ -6,5 +6,4 @@ bOR = 0
 for i in range(n):
     aOR |= a[i]
     bOR |= b[i]
-print(aOR+bOR)
-
+print(aOR + bOR)

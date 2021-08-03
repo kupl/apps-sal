@@ -11,9 +11,9 @@ class CombinationIterator:
         print((self.inds))
         ans = ''.join([self.chars[i] for i in self.inds])
         c = 1
-        i = self.n -1
+        i = self.n - 1
         while i >= 0 and c == 1:
-            if self.inds[i] == self.iMax-self.n+i:
+            if self.inds[i] == self.iMax - self.n + i:
                 c = 1
             else:
                 c = 0
@@ -21,11 +21,11 @@ class CombinationIterator:
         if i == -1 and c == 1:
             self.gotNext = False
         else:
-            self.inds[i+1] += 1
-            for j in range(i+2, self.n):
-                self.inds[j] =  self.inds[j-1] +1
-        
-        
+            self.inds[i + 1] += 1
+            for j in range(i + 2, self.n):
+                self.inds[j] = self.inds[j - 1] + 1
+
+
 #         for i in range(self.n-1, -1 ,-1):
 #             self.inds[i] += c
 #             if self.inds[i] == self.iMax-self.n+i+1:
@@ -46,4 +46,3 @@ class CombinationIterator:
 # obj = CombinationIterator(characters, combinationLength)
 # param_1 = obj.next()
 # param_2 = obj.hasNext()
-

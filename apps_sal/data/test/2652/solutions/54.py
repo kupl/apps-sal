@@ -29,4 +29,3 @@ matr = csr_matrix((length, (frm, to)), shape=(N, N))
 
 T = minimum_spanning_tree(matr).astype(int)
 print((sum(T.data)))
-

@@ -12,6 +12,6 @@ for elem in s:
     if elem == "v" and prev == "v":
         n += 1
     if elem == "o":
-        ans += n*(cnt-n)
+        ans += n * (cnt - n)
     prev = elem
 print(ans)

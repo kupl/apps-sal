@@ -4,4 +4,4 @@ def find_slope(points):
     if x == 0:
         return "undefined"
     else:
-        return str(int(y/x))
+        return str(int(y / x))

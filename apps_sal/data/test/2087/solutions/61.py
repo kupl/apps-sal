@@ -6,4 +6,3 @@ Sb = B * (B + 1) // 2
 Sc = C * (C + 1) // 2
 
 print((Sa * Sb * Sc % MOD))
-

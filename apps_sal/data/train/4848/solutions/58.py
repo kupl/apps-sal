@@ -4,5 +4,5 @@ def char_freq(message):
     map = {}
     for key in keys:
         map[key] = char_list.count(key)
-    
+
     return map

@@ -4,7 +4,7 @@ def read_nums():
 
 def is_good(strings):
     for i in range(1, len(strings)):
-        if strings[i-1] not in strings[i]:
+        if strings[i - 1] not in strings[i]:
             return False
     return True
 
@@ -26,5 +26,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

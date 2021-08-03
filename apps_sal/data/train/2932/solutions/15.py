@@ -1,1 +1,1 @@
-colour_association = lambda array: [{color: meaning} for color, meaning in array]
+def colour_association(array): return [{color: meaning} for color, meaning in array]

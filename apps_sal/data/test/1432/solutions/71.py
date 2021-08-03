@@ -9,6 +9,6 @@ for i in range(N):
 ansList.append(ans_1)
 
 for A in As[:-1]:
-    ansList.append(2 *A - ansList[-1])
+    ansList.append(2 * A - ansList[-1])
 
 print(' '.join(map(str, ansList)))

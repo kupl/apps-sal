@@ -1,4 +1,3 @@
 def to_alternating_case(s):
-    n=s.swapcase()
+    n = s.swapcase()
     return n
-

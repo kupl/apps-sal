@@ -15,4 +15,3 @@ for i in range(n):
     if check[i] == -1:
         check[i] = max(maxx, li[i])
 print(*check)
-

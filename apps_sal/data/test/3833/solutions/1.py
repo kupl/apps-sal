@@ -18,11 +18,11 @@ if (zro >= zro_tum and mek >= mek_tum):
     zro -= zro_tum
     mek -= mek_tum
 if zro_toxum:
-    k = zro//zro_toxum
+    k = zro // zro_toxum
 else:
     k = 10000000000
 if mek_toxum:
-    n = mek//mek_toxum
+    n = mek // mek_toxum
 else:
     n = 10000000000
 ans = min(n, k)

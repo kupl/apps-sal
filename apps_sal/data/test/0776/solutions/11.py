@@ -51,4 +51,3 @@ while C > 0:
     C -= 1
 
 print("{} {}".format(usb_cur + ps2_cur, cost))
-

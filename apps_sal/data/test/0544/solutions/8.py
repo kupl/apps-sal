@@ -4,6 +4,8 @@ def move(c):
     elif c == 'z':
         return ['y']
     return [chr(ord(c) - 1), chr(ord(c))]
+
+
 def solve(s):
     l = 0
     r = len(s) - 1
@@ -14,6 +16,8 @@ def solve(s):
         l += 1
         r -= 1
     return True
+
+
 n = int(input())
 for i in range(n):
     l = input()

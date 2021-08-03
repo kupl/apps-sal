@@ -7,11 +7,13 @@ def f():
             cnt = 0
             for x in range(m):
                 for y in range(m):
-                    if a[x+p][y+q] == b[x][y]:
+                    if a[x + p][y + q] == b[x][y]:
                         cnt += 1
-                        if cnt == m*m:
+                        if cnt == m * m:
                             return "Yes"
                     else:
                         break
     return "No"
+
+
 print(f())

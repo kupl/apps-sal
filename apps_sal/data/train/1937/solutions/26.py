@@ -9,7 +9,7 @@ class ThroneInheritance:
     def birth(self, parentName: str, childName: str) -> None:
         self.children[parentName].append(childName)
         self.parent[childName] = parentName
-        
+
     def successor(self, name):
         for child in self.children[name]:
             if child not in self.order_set:
@@ -37,4 +37,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

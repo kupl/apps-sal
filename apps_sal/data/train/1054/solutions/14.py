@@ -24,4 +24,3 @@ for _ in range(int(input())):
         print(''.join(x for x in s))
     else:
         print(-1)
-

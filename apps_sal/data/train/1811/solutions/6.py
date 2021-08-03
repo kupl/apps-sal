@@ -1,13 +1,13 @@
 class StockSpanner:
     # Description
     # - Collect daily price quotes for some stock
-    # - Return the span of that stock's price for the 
+    # - Return the span of that stock's price for the
     #   current day
     #   - max number of consecutive days (starting from
     #     today and going backwards) for which the price of
     #     the stock was less than or equal to today's price
     # [1,2,3,3,3,4] => span = [1,2,3,4,5,6]
-    # 
+    #
     # conditions
     # - Calls to StockSpanner.next(int price) will have 1 <= price <= 10^5
     # - calls <= 10000 to StockSpanner.next per test
@@ -31,4 +31,3 @@ class StockSpanner:
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

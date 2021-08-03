@@ -10,4 +10,3 @@ while N != 0:
         a = "0" + a
     N = N // -2
 print(a)
-

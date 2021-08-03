@@ -77,4 +77,3 @@ else:
     else:
         f1 = p1 * m + (q1 - p1) * ra
     print(f1)
-

@@ -12,7 +12,7 @@ for u, v, c in uvc:
     g[v].append((u, c))
 
 children = [[] for _ in range(N)]
-appeared = [False]*N
+appeared = [False] * N
 q = [0]
 appeared[0] = True
 while q:
@@ -23,7 +23,7 @@ while q:
             q.append(v)
             appeared[v] = True
 
-colors = [None]*N
+colors = [None] * N
 colors[0] = 1
 q = [0]
 while q:
@@ -33,4 +33,3 @@ while q:
         colors[v] = c_edge + (c_edge == c_u)
         q.append(v)
 print(('\n'.join(map(str, colors))))
-

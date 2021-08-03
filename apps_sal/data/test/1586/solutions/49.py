@@ -6,8 +6,7 @@ else:
     ans = 0
     n //= 2
     while n:
-        ans += n//5
+        ans += n // 5
         n //= 5
-    
-    
+
     print(int(ans))

@@ -7,6 +7,7 @@ def Split(a):
         no.append((i, x))
     yield no
 
+
 for sq in Split((i + 1, int(input())) for i in range(int(input()))):
     tb = [0, 0]
     for np, goal in sq:

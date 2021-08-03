@@ -7,12 +7,12 @@ class Solution:
         base = 26
         # mod value for the rolling hash function to avoid overflow
         MOD = 2**32
-    
+
         # compute the hash of string S[:L]
         hash_ = 0
         for i in range(mid):
             hash_ = (hash_ * base + self.nums[i]) % MOD
-              
+
         # already visited hashes of strings of length L
         visited = {hash_}
         # const value to be used often : a**L % mod
@@ -24,7 +24,7 @@ class Solution:
                 return start
             visited.add(hash_)
         return -1
-        
+
     def longestDupSubstring(self, S: str) -> str:
         n = len(S)
         # convert string to array of integers to implement constant time slice
@@ -33,7 +33,7 @@ class Solution:
         base = 26
         # mod value for the rolling hash function to avoid overflow
         MOD = 2**32
-        
+
         # binary search, L = repeating string length
         left, right = 1, n
         while left <= right:
@@ -42,11 +42,6 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid - 1
-               
+
         start = self.search(S, left - 1)
         return S[start: start + left - 1]
-    
-    
-    
-    
-

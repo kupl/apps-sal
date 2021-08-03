@@ -5,6 +5,7 @@ def dels(n):
         c1 = c1 * 2 + 1
     return c1
 
+
 def recursion(n, l, r):
     if l > r:
         return 0
@@ -20,5 +21,3 @@ def recursion(n, l, r):
 
 n, l, r = list(map(int, input().split()))
 print(recursion(n, l, r))
-
-

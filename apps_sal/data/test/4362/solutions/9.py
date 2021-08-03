@@ -23,4 +23,3 @@ else:
     res = "A"
 
 print(res)
-

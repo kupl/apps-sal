@@ -30,6 +30,7 @@ def solve(x):
 def p(*args, **kwargs):
     return print(*args, file=sys.stderr, **kwargs)
 
+
 def main():
     t = int(input())
     xs = [int(input()) for _ in range(t)]
@@ -41,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

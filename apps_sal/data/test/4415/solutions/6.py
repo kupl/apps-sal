@@ -1,16 +1,16 @@
 from collections import defaultdict
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 l1 = []
 l2 = []
 da = defaultdict(int)
 db = defaultdict(int)
 work = True
 for i in a:
-    if da[i]==0:
+    if da[i] == 0:
         l1.append(i)
         da[i] = 1
-    elif db[i]==0:
+    elif db[i] == 0:
         l2.append(i)
         db[i] = 1
     else:

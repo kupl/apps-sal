@@ -15,7 +15,7 @@ def main():
         Q.append((t, a))
     Q.sort(key=itemgetter(0))
 
-    #print(Q)
+    # print(Q)
     prev = 0
     m = 0
     M = X
@@ -26,12 +26,12 @@ def main():
             r = t - prev
             R_cs -= r * flg
             if flg == -1:
-                m = max(0, m-r)
-                M = max(0, M-r)
+                m = max(0, m - r)
+                M = max(0, M - r)
                 flg = 1
             else:
-                m = min(X, m+r)
-                M = min(X, M+r)
+                m = min(X, m + r)
+                M = min(X, M + r)
                 flg = -1
             prev = t
         else:
@@ -63,5 +63,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

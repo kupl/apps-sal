@@ -7,4 +7,3 @@ for i1 in range(t):
         b = min(d, b)
         a = max(a, c)
     print(max(0, a - b))
-

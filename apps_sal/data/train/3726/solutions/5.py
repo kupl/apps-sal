@@ -6,5 +6,5 @@ def sort_array(source_array):
             l.append(odd[c])
             c += 1
         else:
-            l.append(i)    
+            l.append(i)
     return l

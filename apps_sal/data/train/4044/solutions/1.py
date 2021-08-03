@@ -6,6 +6,6 @@ def similarity(strng1, strng2):
         result += 1
     return result
 
+
 def string_suffix(strng):
     return sum(similarity(strng[i:], strng) for i in range(len(strng)))
-

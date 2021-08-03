@@ -1,5 +1,5 @@
 def bowling_score(frames):
-    rolls = list(frames.replace(' ',''))
+    rolls = list(frames.replace(' ', ''))
     for i, hit in enumerate(rolls):
         if hit == 'X':
             rolls[i] = 10

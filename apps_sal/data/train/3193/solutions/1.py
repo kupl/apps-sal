@@ -1,5 +1,6 @@
 from itertools import chain
 
+
 def stairs(n):
     if n < 1:
         return " "

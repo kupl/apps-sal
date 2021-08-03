@@ -10,5 +10,4 @@ def lose_weight(gender, weight, duration):
     elif duration <= 0:
         return "Invalid duration"
     else:
-        return round(weight * (1 - rate[gender]) ** duration,1)
-
+        return round(weight * (1 - rate[gender]) ** duration, 1)

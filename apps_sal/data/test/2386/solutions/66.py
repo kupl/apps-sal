@@ -8,9 +8,11 @@ for i in range(n):
     r = max(r, a[i] - stairs[i])
     l = min(l, a[i] - stairs[i])
 
+
 def pos(b):
     return sum(abs(i - b - j) for i, j in zip(a, stairs))
-    
+
+
 while l + 2 < r:
     c1 = l + (r - l) // 3
     c2 = r - (r - l) // 3

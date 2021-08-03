@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 odd = []
 even = []
 for i in a:
-    if i%2:
+    if i % 2:
         odd.append(i)
     else:
         even.append(i)
@@ -13,7 +13,6 @@ if abs(len(odd) - len(even)) <= 1:
     print(0)
 else:
     if len(odd) > len(even):
-        print(sum(odd[:len(odd)-len(even)-1]))
+        print(sum(odd[:len(odd) - len(even) - 1]))
     else:
-        print(sum(even[:len(even) - len(odd)-1]))
-
+        print(sum(even[:len(even) - len(odd) - 1]))

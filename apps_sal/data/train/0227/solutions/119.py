@@ -10,13 +10,12 @@ class Solution:
                     numZeros += 1
                     j += 1
                 else:
-                    maxValue = max(maxValue, j-i)
+                    maxValue = max(maxValue, j - i)
                     while i <= j and A[i]:
                         i += 1
                     i += 1
                     j += 1
             else:
                 j += 1
-        maxValue = max(maxValue, j-i)
+        maxValue = max(maxValue, j - i)
         return maxValue
-

@@ -1,7 +1,7 @@
 def main():
     n = int(input())
-    a = list(map(int,input().split()))
-    l = list(map(int,input().split()))
+    a = list(map(int, input().split()))
+    l = list(map(int, input().split()))
     new_lst = []
     for i in range(n):
         if not l[i]:
@@ -17,9 +17,11 @@ def main():
         print(i, end=" ")
     print()
 
+
 def __starting_point():
     t = int(input())
     for i in range(t):
         main()
+
 
 __starting_point()

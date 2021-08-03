@@ -10,6 +10,8 @@ def solve():
             m += 1
         print(m)
         print(' '.join('1' * (m)))
+
+
 t = int(input())
 for _ in range(t):
     solve()

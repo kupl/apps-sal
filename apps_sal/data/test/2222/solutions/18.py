@@ -4,8 +4,8 @@ n = int(input())
 minmax = list(map(int, input().split()))
 childs = [[] for i in range(n)]
 
-for idx, father in enumerate(list(map(int,input().split()))):
-    childs[father-1].append(idx+1)
+for idx, father in enumerate(list(map(int, input().split()))):
+    childs[father - 1].append(idx + 1)
 
 stack = []
 stack.append(0)
@@ -18,7 +18,7 @@ while len(stack):
     if not vis[index]:
         vis[index] = True
         if len(childs[index]) == 0:
-            ans[index] = (0,1)
+            ans[index] = (0, 1)
             stack.pop()
         else:
             for child in childs[index]:
@@ -30,8 +30,7 @@ while len(stack):
         if minmax[index] == 1:
             ans[index] = min([ele[0] for ele in res]), total
         else:
-            bigger_than = sum([ele[1] - ele[0] - 1 for ele in res])    
+            bigger_than = sum([ele[1] - ele[0] - 1 for ele in res])
             ans[index] = total - bigger_than - 1, total
 
 print(ans[0][1] - ans[0][0])
-

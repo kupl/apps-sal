@@ -1,7 +1,7 @@
-S = input()*2
+S = input() * 2
 T = input()
 
 if T in S:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

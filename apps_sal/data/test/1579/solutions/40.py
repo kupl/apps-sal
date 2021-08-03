@@ -7,16 +7,16 @@ COR = [tuple((list(map(int, input().split())))) for _ in range(N)]
 
 
 class Group:
-    
+
     def __init__(self):
         self.n = 0
         self.x = 0
         self.y = 0
         self.xy = {}
-        
+
     def new_cor_n(self):
         return self.x * self.y - self.n
-        
+
 
 def grouping(group, x, xcor, ycor):
     x_list = []
@@ -38,6 +38,7 @@ def grouping(group, x, xcor, ycor):
             xcor[x_][1] = True
             x_list.append(x_)
     return x_list
+
 
 if N <= 2:
     print((0))
@@ -71,4 +72,3 @@ else:
     for group in group_list:
         s += group.new_cor_n()
     print(s)
-

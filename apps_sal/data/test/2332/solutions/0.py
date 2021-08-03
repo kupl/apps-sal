@@ -22,4 +22,3 @@ for word in let:
     res += m[gr[lk[word]]]
 
 print(res)
-

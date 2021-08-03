@@ -4,5 +4,4 @@ n, m = [int(s) for s in input().split()]
 a = [int(s) for s in input().split()]
 a.sort()
 for i in input().split():
-    print(bisect(a, int(i)), end = " ")
-
+    print(bisect(a, int(i)), end=" ")

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def read_int():
     return int(input())
 

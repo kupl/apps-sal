@@ -3,8 +3,8 @@ na, nb = list(map(int, sys.stdin.readline().split()))
 
 al, bl = list(map(int, sys.stdin.readline().split())), list(map(int, sys.stdin.readline().split()))
 
-a = [set((al[2*i], al[2*i+1])) for i in range(na)]
-b = [set((bl[2*i], bl[2*i+1])) for i in range(nb)]
+a = [set((al[2 * i], al[2 * i + 1])) for i in range(na)]
+b = [set((bl[2 * i], bl[2 * i + 1])) for i in range(nb)]
 
 aposs, bposs = set(), set()
 possible_shared = set()
@@ -37,4 +37,3 @@ elif i_know_a_knows and i_know_b_knows:
     print(0)
 else:
     print(-1)
-

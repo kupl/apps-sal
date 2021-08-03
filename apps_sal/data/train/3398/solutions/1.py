@@ -18,7 +18,7 @@ def solve(arr):
 
     for j in range(len(arr)):
         for k in range(len(lst)):
-            if j>2 and isProgression(lst[k][:j-1]) is not True:
+            if j > 2 and isProgression(lst[k][:j - 1]) is not True:
                 continue
             lstp1 = lst[k][:j] + [lst[k][j] + 1] + lst[k][j + 1:]
             lst.append(lstp1)

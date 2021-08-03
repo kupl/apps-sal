@@ -24,6 +24,5 @@ for _ in range(n2):
     if e2 < end2:
         end2 = e2
 
-gap = max(0, start2-end1, start1-end2)
+gap = max(0, start2 - end1, start1 - end2)
 print(gap)
-

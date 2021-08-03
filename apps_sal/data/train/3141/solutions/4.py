@@ -1,5 +1,6 @@
 from heapq import heapify, heappush, heappop
 
+
 def comb(fruits):
     energy = 0
     heapify(fruits)

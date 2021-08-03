@@ -6,4 +6,5 @@ def __starting_point():
     else:
         print("ARC")
 
+
 __starting_point()

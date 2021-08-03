@@ -1,9 +1,12 @@
 from collections import defaultdict
-import sys, os, math
+import sys
+import os
+import math
+
 
 def __starting_point():
     #n, m = list(map(int, input().split()))
-    #sys.stdout.flush()
+    # sys.stdout.flush()
     n, c = list(map(int, input().split()))
     time = list(map(int, input().split()))
     ans = 1
@@ -13,5 +16,6 @@ def __starting_point():
         else:
             ans = 1
     print(ans)
+
 
 __starting_point()

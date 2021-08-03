@@ -9,8 +9,8 @@ i = 1
 if LEN > 1:
     while i < n:
         if str[i] == prev:
-            S+=1
+            S += 1
         else:
             prev = str[i]
-        i +=1 
-print (S)
+        i += 1
+print(S)

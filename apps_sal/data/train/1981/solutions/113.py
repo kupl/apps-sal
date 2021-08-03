@@ -13,5 +13,3 @@ class Solution:
         height.sort()
         nums.sort()
         return sum(n * h for n, h in zip(nums, height)) % (10 ** 9 + 7)
-
-

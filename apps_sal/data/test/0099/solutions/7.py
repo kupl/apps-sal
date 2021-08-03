@@ -13,4 +13,3 @@ if 32 < len(Bs):
     print('inf')
 else:
     print(len(Bs))
-

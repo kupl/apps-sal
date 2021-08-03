@@ -2,8 +2,8 @@ import heapq
 
 q = int(input())
 
-minheap = [] # right
-maxheap = [] # left
+minheap = []  # right
+maxheap = []  # left
 heapq.heapify(minheap)
 heapq.heapify(maxheap)
 
@@ -26,4 +26,3 @@ for _ in range(0, q):
             heapq.heappush(maxheap, -minv)
     else:
         print(('{} {}'.format(-maxheap[0], s + m)))
-

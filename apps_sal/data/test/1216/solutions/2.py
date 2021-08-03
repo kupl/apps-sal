@@ -16,10 +16,9 @@ for c in s:
             if c == 'e' or c == 'o':
                 if (i + 1 >= l or s[i + 1] != c) and (i < 2 or s[i - 2] != c):
                     ans += c
-    
+
     last_c = c
-    
+
     i += 1
 
 print(ans)
-

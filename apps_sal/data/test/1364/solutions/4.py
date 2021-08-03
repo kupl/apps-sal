@@ -12,4 +12,3 @@ while r < n:
     ans = max(ans, min(t2 - t, r - left) * 2)
     left, r = t, t2
 print(ans)
-

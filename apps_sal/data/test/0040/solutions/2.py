@@ -6,4 +6,3 @@ elif sorted(ratings, reverse=True) == ratings:
     print("maybe")
 else:
     print("unrated")
-

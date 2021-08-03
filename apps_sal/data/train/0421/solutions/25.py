@@ -14,4 +14,3 @@ class Solution:
             i += 1
             indexes = new
         return s[indexes[0]:]
-

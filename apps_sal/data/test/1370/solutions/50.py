@@ -53,4 +53,3 @@ def solve(h, w, k, choco):
 h, w, k = list(map(int, input().split()))
 choco = [input() for _ in range(h)]
 print((solve(h, w, k, choco)))
-

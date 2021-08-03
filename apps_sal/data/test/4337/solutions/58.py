@@ -6,4 +6,3 @@ if len(s) == 3:
     print("Three")
 else:
     print("Four")
-

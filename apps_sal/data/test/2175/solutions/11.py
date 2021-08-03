@@ -25,5 +25,4 @@ for i in range(m):
     else:
         l.append(v[q[1] - 1])
 
-print(*l,sep='\n')
-
+print(*l, sep='\n')

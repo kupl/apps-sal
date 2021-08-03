@@ -19,4 +19,3 @@ class Solution:
                 elif cur < 0 and fneg != -1:
                     best = max(best, i - fneg)
         return best
-

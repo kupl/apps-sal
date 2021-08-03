@@ -1,4 +1,6 @@
-f = lambda: list(map(int, input().split()))
+def f(): return list(map(int, input().split()))
+
+
 m, t, r = f()
 p, s = [], 0
 for w in f():
@@ -7,4 +9,3 @@ for w in f():
     p += [w + t - i for i in range(d)]
     s += d
 print(-1 if t < r else s)
-

@@ -20,4 +20,3 @@ for i, s in enumerate(S[::-1]):
         ans[-i + 1] += x + cnt % 2
         cnt = 0
 print((*ans))
-

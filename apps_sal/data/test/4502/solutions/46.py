@@ -11,4 +11,3 @@ for i in range(n):
         d.append(a[i])
 
 print((*d))
-

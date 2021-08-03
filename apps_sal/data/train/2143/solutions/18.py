@@ -1,5 +1,6 @@
 import operator
 
+
 def maxl(l, m, mx):
     for i in range(len(l) - 1):
         b1, p1 = l[i]
@@ -14,7 +15,7 @@ def maxl(l, m, mx):
                 break
     return mx
 
-   
+
 fc = []
 fd = []
 
@@ -34,4 +35,3 @@ mx = maxl(fc, c, mx)
 mx = maxl(fd, d, mx)
 
 print(mx)
-

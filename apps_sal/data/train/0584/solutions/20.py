@@ -5,4 +5,3 @@ for _ in range(int(input())):
         print(len(m[1]))
     else:
         print(0)
-

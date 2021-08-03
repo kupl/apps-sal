@@ -40,7 +40,7 @@ for people in range(1, 1 << n):
 
 people = (1 << n) - 1
 
-for s in range(1 << (n-1)):
+for s in range(1 << (n - 1)):
     ans = 0
     for i in range(n):
         ans += dp[people][i][s]

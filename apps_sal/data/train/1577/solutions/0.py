@@ -10,9 +10,9 @@ class Dsu:
             self.speed[i].append(i)
 
     def find(self, i):
-    #     if parent[i] == -1:
-    #         return i
-    #     else: return self.find_parent(parent, parent[i])
+        #     if parent[i] == -1:
+        #         return i
+        #     else: return self.find_parent(parent, parent[i])
         if i != self.par[i][0]:
             org = self.par[i][0]
             self.par[i][0] = self.find(self.par[i][0])
@@ -31,12 +31,12 @@ class Dsu:
         self.ry = self.find(y)
         self.sign = -self.dr[x] * self.dr[y]
         if self.rx != self.ry:
-            if (self.par[self.rx][1]<self.par[self.ry][1]):
-                mx=self.ry
-                mn=self.rx
-            if (self.par[self.rx][1]>self.par[self.ry][1]):
-                mx=self.rx
-                mn=self.ry
+            if (self.par[self.rx][1] < self.par[self.ry][1]):
+                mx = self.ry
+                mn = self.rx
+            if (self.par[self.rx][1] > self.par[self.ry][1]):
+                mx = self.rx
+                mn = self.ry
             if self.par[self.rx][1] != self.par[self.ry][1]:
                 self.par[mn][0] = mx
                 if self.zero[mn] or self.zero[mx] or self.zero[x] or self.zero[y]:
@@ -69,7 +69,7 @@ class Dsu:
 
 def optwo(x, y, D):
     if (D.find(x) == D.find(y) and D.dr[x] == D.dr[y]):
-            D.zero[x] = D.zero[y] = True
+        D.zero[x] = D.zero[y] = True
     D.union(x, y)
 
 
@@ -85,7 +85,7 @@ def opthree(x, y, v, D):
         print(0)
     else:
         g = gcd(v * speed[x], speed[y])
-        flag=(D.dr[x] * D.dr[y])//abs(D.dr[x] * D.dr[y])
+        flag = (D.dr[x] * D.dr[y]) // abs(D.dr[x] * D.dr[y])
         print(str(flag * v * speed[x] // g) + "/" + str(speed[y] // g))
 
 
@@ -103,4 +103,3 @@ for i in range(M):
         optwo(T[1] - 1, T[2] - 1, D)
     elif (T[0] == 3):
         opthree(T[1] - 1, T[2] - 1, T[3], D)
-

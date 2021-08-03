@@ -1,2 +1,2 @@
 import math
-print(2*math.pi*int(input()))
+print(2 * math.pi * int(input()))

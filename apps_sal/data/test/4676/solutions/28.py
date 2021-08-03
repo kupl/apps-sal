@@ -1,10 +1,10 @@
-O=input()
-E=input()
-ans=""
+O = input()
+E = input()
+ans = ""
 for i in range(len(E)):
-  ans+=O[i]
-  ans+=E[i]
+    ans += O[i]
+    ans += E[i]
 
-if len(O)!=len(E):
-  ans+=O[-1]
+if len(O) != len(E):
+    ans += O[-1]
 print(ans)

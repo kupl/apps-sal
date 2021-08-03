@@ -6,7 +6,9 @@ def main():
     ans = sum(list(map(int, input().split()))) - N
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

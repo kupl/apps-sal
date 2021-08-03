@@ -1,19 +1,25 @@
 import cProfile
+
+
 def FADS(x):
     from math import sqrt
     array, y = {x}, 2
     while y <= sqrt(x):
-        if x%y == 0:
+        if x % y == 0:
             array.add(y)
-            array.add(x//y)
+            array.add(x // y)
         y += 1
     return array
+
+
 def FAD(x):
     array = set()
     for y in s:
-        if x%y == 0:
+        if x % y == 0:
             array.add(y)
     return array
+
+
 def main():
     n = int(input())
     a1, b1 = map(int, input().split())
@@ -44,4 +50,6 @@ def main():
                     break
         if len(s) != 0:
             print(list(s)[0])
+
+
 main()

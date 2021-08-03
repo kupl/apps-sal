@@ -9,12 +9,12 @@ def solve(N: int, K: int):
     for k in range(K, 0, -1):
         num_select = K // k
         num_gcd_k = pow(num_select, N, MOD)
-        for multiple in range(2, num_select+1):
+        for multiple in range(2, num_select + 1):
             num_gcd_k -= num_gcd[k * multiple]
         num_gcd[k] = num_gcd_k
 
     result = 0
-    for k in range(1, K+1):
+    for k in range(1, K + 1):
         result += (k * num_gcd[k]) % MOD
     print((result % MOD))
     return
@@ -31,7 +31,9 @@ def main():
     K = int(next(tokens))  # type: int
     solve(N, K)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

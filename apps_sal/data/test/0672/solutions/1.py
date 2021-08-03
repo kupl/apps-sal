@@ -6,12 +6,12 @@ if a == 0 and b == 0:
     print("infinity")
 elif a == 0:
     print("0")
-elif a== b:
+elif a == b:
     print("infinity")
 elif a < b:
     print("0")
 else:
-    c = a- b;
+    c = a - b
     out = 0
     cek = [1]
     dum = c
@@ -23,7 +23,7 @@ else:
                 cek.append(cek[i] * 2)
     cek = list(set(cek))
     border = int(math.sqrt(dum))
-    for i in range(3,border+1,2):
+    for i in range(3, border + 1, 2):
         if dum % i == 0:
             cek.append(i)
             while dum % i == 0:
@@ -45,4 +45,3 @@ else:
                 break
             out += 1
     print(out)
-

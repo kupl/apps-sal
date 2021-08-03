@@ -6,11 +6,13 @@ while a != 0:
 
 ans = 0
 
+
 def gao(n):
     f = 1
     for i in range(1, n + 1):
         f *= i
     return f
+
 
 def shit(n, arr):
     nonlocal ans

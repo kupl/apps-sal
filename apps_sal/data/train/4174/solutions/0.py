@@ -7,4 +7,3 @@ def smallest(n):
         else:
             x += y
     return x
-

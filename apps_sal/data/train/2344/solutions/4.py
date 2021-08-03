@@ -13,11 +13,11 @@ def main():
         m = next(it)
 
         total_node = 3 * n
-        is_node_covered = [False for _ in range(total_node+1)]
-        is_edge_in_matching = [False for _ in range(m+1)]
+        is_node_covered = [False for _ in range(total_node + 1)]
+        is_edge_in_matching = [False for _ in range(m + 1)]
         matching_edge_count = 0
 
-        for i in range(1, m+1):
+        for i in range(1, m + 1):
             u = next(it)
             v = next(it)
 
@@ -30,19 +30,21 @@ def main():
         if matching_edge_count >= n:
             ansL.append('Matching\n')
             edge_taken = 0
-            for i in range(1, m+1):
+            for i in range(1, m + 1):
                 if is_edge_in_matching[i]:
                     ansL.append(str(i) + ' ')
                     edge_taken += 1
-                    if edge_taken == n: break
+                    if edge_taken == n:
+                        break
         else:
             ansL.append('IndSet\n')
             node_taken = 0
-            for i in range(1, total_node+1):
+            for i in range(1, total_node + 1):
                 if not is_node_covered[i]:
                     ansL.append(str(i) + ' ')
                     node_taken += 1
-                    if node_taken == n: break
+                    if node_taken == n:
+                        break
 
         ansL.append('\n')
         sys.stdout.write(''.join(ansL))
@@ -50,4 +52,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -68,4 +68,3 @@ parent, subtree_count = dfs1(root, links)
 # print(subtree_count)
 ans = dfs2(root, parent, subtree_count, d2, d2s)
 print(ans)
-

@@ -12,5 +12,5 @@ class Solution:
             element = A[index]
             A.pop(index)
             A.insert(0, element)
-        
+
         return res

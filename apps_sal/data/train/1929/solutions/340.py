@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -13,14 +15,12 @@ class StreamChecker:
             node[True] = True
             self.max_word_len = max(self.max_word_len, len(word))
         self.queue = deque()
-            
 
-            
     def query(self, letter: str) -> bool:
         self.queue.appendleft(letter)
         if len(self.queue) > self.max_word_len:
             self.queue.pop()
-            
+
         node = self.trie
         for char in self.queue:
             if True in node:
@@ -33,5 +33,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-
-

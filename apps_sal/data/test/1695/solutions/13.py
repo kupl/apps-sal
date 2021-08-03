@@ -1,5 +1,5 @@
 n, m = map(int, input().split())
-d = [{'A': 0, 'B':0, 'C':0, 'D':0, 'E':0} for i in range(m)]
+d = [{'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0} for i in range(m)]
 for i in range(n):
     s = input()
     for j in range(len(s)):
@@ -11,5 +11,5 @@ for i in range(m):
     for el in d[i]:
         if d[i][el] > ma:
             ma = d[i][el]
-    s += ma*array[i]
+    s += ma * array[i]
 print(s)

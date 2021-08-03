@@ -9,8 +9,8 @@ for i in range(hei):
     temp = list(temp)
     photo.append(temp)
     photo.append(temp)
-    
-for i in range(hei*2):
+
+for i in range(hei * 2):
     for j in range(wei):
-        print(photo[i][j],end="")
-    print("\n",end="")
+        print(photo[i][j], end="")
+    print("\n", end="")

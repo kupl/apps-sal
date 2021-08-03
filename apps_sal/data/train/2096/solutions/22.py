@@ -3,13 +3,16 @@ a = list(map(int, input().split()))
 
 sorted_a = sorted(a)
 d = {}
-for i in range(len(a)): d[sorted_a[i]] = i
-for i in range(len(a)): a[i] = d[a[i]]
+for i in range(len(a)):
+    d[sorted_a[i]] = i
+for i in range(len(a)):
+    a[i] = d[a[i]]
 
 res = []
-done = [False]*n
+done = [False] * n
 for i in a:
-    if done[i]: continue
+    if done[i]:
+        continue
     done[i] = True
     curr_subseq = set([i])
     next_item = a[i]
@@ -21,6 +24,6 @@ for i in a:
 
 print(len(res))
 for i in res:
-    curr = [str(j+1) for j in list(i)]
+    curr = [str(j + 1) for j in list(i)]
     print(len(curr), end=' ')
     print(' '.join(curr))

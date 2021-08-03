@@ -20,4 +20,3 @@ for s, t in Query:
         print((-1))
     else:
         print((int(A[s - 1][t - 1] - 1)))
-

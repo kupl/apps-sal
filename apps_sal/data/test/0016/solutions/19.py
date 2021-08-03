@@ -3,4 +3,3 @@ int(input())
 c = int(input())
 d = int(input())
 print(1 - int(a != d or (a == 0 and not (a == c == d))))
-

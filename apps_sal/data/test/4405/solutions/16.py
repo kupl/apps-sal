@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     a = list(map(int, input().split()))
@@ -8,7 +9,7 @@ def main():
     for i in range(n):
         t = data_stat.get(a[i], 0) + 1
         data_stat[a[i]] = t
-    current = sorted(list(data_stat.items()), key = lambda x: x[1])
+    current = sorted(list(data_stat.items()), key=lambda x: x[1])
     answer = 0
     for i in range(1, current[-1][1] + 1):
         pos = len(current) - 1
@@ -23,8 +24,10 @@ def main():
         answer = max(answer, res)
     print(answer)
     return
-    
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

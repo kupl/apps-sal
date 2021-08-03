@@ -1,5 +1,5 @@
 n = int(input())
-s_l = [ input() for _ in range(n) ]
+s_l = [input() for _ in range(n)]
 
 d = {}
 for i in list(s_l[0]):

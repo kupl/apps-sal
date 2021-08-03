@@ -1,17 +1,18 @@
 def maxcount(lst):
-    op = [0]*max(lst)
+    op = [0] * max(lst)
     for i in lst:
-        op[i-1]+=1
-        
-    return op.index(max(op))+1, max(op)
+        op[i - 1] += 1
 
-t= int(input())
+    return op.index(max(op)) + 1, max(op)
 
-while (t>0):
+
+t = int(input())
+
+while (t > 0):
     input()
     lst = [int(i) for i in input().split(' ')]
     counts = maxcount(lst)
     for i in counts:
-        print(i, end=' ')    
-    print("")    
-    t-=1 
+        print(i, end=' ')
+    print("")
+    t -= 1

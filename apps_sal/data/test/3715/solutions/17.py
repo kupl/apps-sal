@@ -25,4 +25,3 @@ for event in events:
         elif last == 2:
             last = 1
 print(rests)
-

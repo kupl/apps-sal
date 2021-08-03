@@ -18,4 +18,3 @@ while i < n and b[i] > a[0]:
     i += 1
 
 print((ans + (h + a[0] - 1) // a[0]))
-

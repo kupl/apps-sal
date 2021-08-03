@@ -6,4 +6,3 @@ for x in a:
         b.add(x)
 print(len(b))
 print(' '.join(map(str, b)))
-

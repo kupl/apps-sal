@@ -7,7 +7,7 @@ class Solution:
             waiting -= boarding
             profit += (boardingCost * boarding) - runningCost
             if profit > curr:
-                curr, ans = profit, turn+1
+                curr, ans = profit, turn + 1
         else:
             j = turn
             while waiting > 0:

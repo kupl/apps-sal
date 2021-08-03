@@ -3,6 +3,7 @@
 import sys
 from heapq import heapify, heappush, heappop
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -15,6 +16,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
@@ -41,7 +44,7 @@ for a, i in A2[:N]:
 heapify(que2)
 
 ans = sm1 - sm2
-for i in range(N, N*2):
+for i in range(N, N * 2):
     # 前半
     heappush(que1, (A[i], i))
     sm1 += A[i]
@@ -58,4 +61,3 @@ for i in range(N, N*2):
                 break
     ans = max(ans, sm1 - sm2)
 print(ans)
-

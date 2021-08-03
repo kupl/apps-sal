@@ -3,6 +3,6 @@ S = str(input())
 
 N = len(S)
 if(N <= K):
-  print(S)
+    print(S)
 else:
-  print(S[:K] + '...')
+    print(S[:K] + '...')

@@ -25,4 +25,3 @@ else:
     ans[idx[1]] = unused[1]
 
 print(' '.join(map(str, ans)))
-

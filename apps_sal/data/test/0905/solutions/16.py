@@ -12,7 +12,7 @@ for letter in x:
             s += letter
 lol = False
 n = int(n)
-s = 100*int(s)
+s = 100 * int(s)
 change = ''
 sugars = []
 price = ''
@@ -27,14 +27,14 @@ for i in range(n):
                 price += letter
             if lol == True:
                 change += letter
-    sugars.append(100*int(price)+ int(change))
+    sugars.append(100 * int(price) + int(change))
     lol = False
     change = ''
     price = ''
 for item in sugars:
     if s >= item:
-        left = (item-1)%100
-        right = 99-left
+        left = (item - 1) % 100
+        right = 99 - left
         changes.append(right)
 if len(changes) == 0:
     ans = -1

@@ -1,15 +1,16 @@
-ai = lambda: list(map(int,input().split()))
-ai_ = lambda: [int(x)-1 for x in input().split()]
+from collections import deque
+def ai(): return list(map(int, input().split()))
+def ai_(): return [int(x) - 1 for x in input().split()]
+
 
 n = int(input())
 
 path = [[] for _ in range(n)]
-for _ in range(n-1):
-    a,b = ai_()
+for _ in range(n - 1):
+    a, b = ai_()
     path[a].append(b)
     path[b].append(a)
 
-from collections import deque
 q = deque()
 q.append(0)
 
@@ -26,10 +27,10 @@ while q:
 
 
 q = deque()
-q.append(n-1)
+q.append(n - 1)
 
 dn = [float('inf') for _ in range(n)]
-dn[n-1] = 0
+dn[n - 1] = 0
 w = set()
 while q:
     v = q.popleft()
@@ -46,4 +47,3 @@ if sum(d) > 0:
     print('Fennec')
 else:
     print('Snuke')
-

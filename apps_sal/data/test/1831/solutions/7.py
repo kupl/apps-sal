@@ -1,12 +1,18 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, m = f()
 p = list(range(n))
 
+
 def g(i):
     j = i
-    while j != p[j]: j = p[j]
-    while i != j: i, p[i] = p[i], j
+    while j != p[j]:
+        j = p[j]
+    while i != j:
+        i, p[i] = p[i], j
     return j
+
 
 for j in range(m):
     a, b = f()

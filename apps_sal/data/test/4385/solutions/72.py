@@ -5,4 +5,3 @@ _ = int(input())
 e = int(input())
 k = int(input())
 print(("Yay!" if e - a <= k else ":("))
-

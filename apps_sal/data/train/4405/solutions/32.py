@@ -5,4 +5,3 @@ def is_palindrome(string):
         if string[i] != string[string_length - 1 - i]:
             return False
     return True
-

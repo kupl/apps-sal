@@ -23,4 +23,3 @@ for u in range(10):
         return
 
 print('YES')
-

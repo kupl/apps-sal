@@ -2,7 +2,7 @@ class Solution:
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
         mod = 10 ** 9 + 7
         dp = [[0] * (L + 1) for _ in range(N + 1)]
-        
+
         for i in range(1, N + 1):
             for j in range(i, L + 1):
                 if i == K + 1 or i == j:
@@ -14,4 +14,3 @@ class Solution:
                 dp[i][j] %= mod
         # print(dp)
         return dp[N][L]
-

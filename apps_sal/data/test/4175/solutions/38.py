@@ -15,4 +15,3 @@ for i in range(n - 1):
         break
 
 print(ans)
-

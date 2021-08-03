@@ -1,6 +1,6 @@
 n, k, x = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
-p1, i =  [], 0
+p1, i = [], 0
 while i < k:
     a.sort()
     p1 = a.copy()

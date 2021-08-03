@@ -12,6 +12,3 @@ else:
         print(mn1 * 10 + mn2)
     else:
         print(mn2 * 10 + mn1)
-
-
-

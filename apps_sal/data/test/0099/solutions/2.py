@@ -11,16 +11,19 @@ elif b1 == 0:
 else:
     ans = int(b1 not in a)
     if q == 0:
-        if 0 not in a : ans = "inf"
+        if 0 not in a:
+            ans = "inf"
     elif q == 1:
-        if ans > 0 : ans = "inf"
+        if ans > 0:
+            ans = "inf"
     elif q == -1:
-        if ans > 0 or -b1 not in a: ans = "inf"
+        if ans > 0 or -b1 not in a:
+            ans = "inf"
     else:
         while 1:
             b1 *= q
-            if abs(b1) > l: break
+            if abs(b1) > l:
+                break
             ans += b1 not in a
 
 print(ans)
-

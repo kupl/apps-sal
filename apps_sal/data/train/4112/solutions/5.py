@@ -1,6 +1,6 @@
 def penultimate(a):
     """Return the penultimate element from a given list.
-    
+
     args:
         a: the input list
     """

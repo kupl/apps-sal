@@ -39,4 +39,3 @@ while la < n:
             d[f[b[i]]] -= 1
     i += 1
 print(*a)
-

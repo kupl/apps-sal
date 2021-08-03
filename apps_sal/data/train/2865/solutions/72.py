@@ -1,3 +1,2 @@
-def solution( param):
+def solution(param):
     return param[::-1]
-

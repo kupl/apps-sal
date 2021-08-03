@@ -4,4 +4,3 @@ Mi = n % m
 Ma = m - Mi
 Min = Ma * (n // m) * (n // m - 1) // 2 + Mi * (n // m) * (n // m + 1) // 2
 print(Min, Max)
-

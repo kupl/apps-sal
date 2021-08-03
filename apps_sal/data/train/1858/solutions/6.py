@@ -9,6 +9,7 @@ class FindElements:
     def __init__(self, root: TreeNode):
         self.root = root
         values = set()
+
         def recover(head, val):
             if head is None:
                 return
@@ -21,9 +22,8 @@ class FindElements:
 
     def find(self, target: int) -> bool:
         return target in self.values
-            
+
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

@@ -7,7 +7,7 @@ class Solution:
             for j in range(i):
                 dif = A[i] - A[j]
                 dp[dif].setdefault(i, 0)
-                dp[dif][i] = max(dp[dif][i], dp[dif].get(j,0) + 1)
+                dp[dif][i] = max(dp[dif][i], dp[dif].get(j, 0) + 1)
                 max_val = max(dp[dif][i], max_val)
-        #print(dp)
+        # print(dp)
         return max_val + 1

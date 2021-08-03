@@ -4,5 +4,5 @@ def find_next_power(val, pow_):
     while val > next_power_value:
         next_power_value = num ** pow_
         num += 1
-    
+
     return next_power_value

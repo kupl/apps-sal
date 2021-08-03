@@ -1,8 +1,8 @@
 def make_negative(number):
-    negative = 0 #define main var
-    if number>0:
-        negative=-number
+    negative = 0  # define main var
+    if number > 0:
+        negative = -number
     else:
-        negative=number
-    
+        negative = number
+
     return negative

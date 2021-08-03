@@ -1,3 +1,3 @@
-#78B
-x,y,z=map(int,input().split())
-print((x-z)//(z+y))
+# 78B
+x, y, z = map(int, input().split())
+print((x - z) // (z + y))

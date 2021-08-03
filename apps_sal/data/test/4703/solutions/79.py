@@ -1,5 +1,5 @@
 S = input()
-n = len(S)-1
+n = len(S) - 1
 result = 0
 for i in range(2 ** n):
     sum = 0
@@ -9,6 +9,6 @@ for i in range(2 ** n):
         if (i >> j) & 1:
             sum += int(temp)
             temp = ''
-    sum += int(temp+S[-1])
+    sum += int(temp + S[-1])
     result += sum
 print(result)

@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
         q = deque(arr)

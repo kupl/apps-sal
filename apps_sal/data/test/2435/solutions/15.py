@@ -10,8 +10,9 @@ for _ in range(t):
     maxima = x
     for _ in range(m):
         l, r = map(int, input().split())
-        l -= 1; r -= 1
-        if r >= minima: 
+        l -= 1
+        r -= 1
+        if r >= minima:
             minima = min(l, minima)
         if l <= maxima:
             maxima = max(r, maxima)

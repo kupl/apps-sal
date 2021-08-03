@@ -6,6 +6,7 @@ def solve(N, As):
             return False
     return True
 
+
 def find_core(a):
     while a % 2 == 0:
         a //= 2
@@ -13,10 +14,10 @@ def find_core(a):
         a //= 3
     return a
 
+
 N = int(input())
 As = list(map(int, input().split()))
 if solve(N, As):
     print('Yes')
 else:
     print('No')
-

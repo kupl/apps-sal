@@ -13,4 +13,3 @@ c = int(input())
 d = b + c
 
 print(a * b / d)
-

@@ -21,4 +21,3 @@ else:
     result = 'consonant'
 
 print(result)
-

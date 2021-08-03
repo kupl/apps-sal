@@ -38,7 +38,7 @@ def main():
         c += 1
         inv_counts[x] = c
         counts.setdefault(c, set()).add(x)
-        if len(counts) == 2 and any(len(s) == 1 and ((k-1 in counts) or k == 1) for k, s in list(counts.items())):
+        if len(counts) == 2 and any(len(s) == 1 and ((k - 1 in counts) or k == 1) for k, s in list(counts.items())):
             out = i + 1
         elif len(counts) == 1:
             k = next(iter(list(counts.keys())))
@@ -46,5 +46,5 @@ def main():
                 out = i + 1
     write(out)
 
-main()
 
+main()

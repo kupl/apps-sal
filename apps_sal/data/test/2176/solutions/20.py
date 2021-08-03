@@ -16,7 +16,7 @@ def facmod(n):
 def main():
     n = int(input())
     s = [tuple(int(s) for s in input().split()) for _ in range(n)]
-    
+
     count = defaultdict(int)
 
     for a, _ in s:
@@ -38,10 +38,10 @@ def main():
         second %= MOD
 
     count = defaultdict(int)
-    
+
     for t in s:
         count[t] += 1
-    
+
     both = 1
     for c in list(count.values()):
         both *= facmod(c)
@@ -53,11 +53,12 @@ def main():
         if b > s[i + 1][1]:
             both = 0
             break
-    
+
     print((facmod(n) - (first + second - both)) % MOD)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

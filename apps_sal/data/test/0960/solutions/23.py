@@ -5,4 +5,3 @@ for i in range(k - 1, 0, -1):
         break
 n //= r
 print(n * k + r)
-

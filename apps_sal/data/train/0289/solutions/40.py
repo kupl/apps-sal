@@ -23,5 +23,3 @@ class Solution:
         backward_sum = findMaxSum(A, L, M)
 
         return max(forward_sum, backward_sum)
-
-

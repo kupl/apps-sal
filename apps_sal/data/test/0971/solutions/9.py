@@ -8,5 +8,4 @@ for i in range(n):
     if othodes > d:
         result += 1
         othodes = 0
-print(result)        
-
+print(result)

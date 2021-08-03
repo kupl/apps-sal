@@ -8,14 +8,16 @@ from heapq import heapify, heappush, heappop
 def solve():
     sys.setrecursionlimit(int(1e5))
     MOD = int(1e9) + 7
-    alphabets = string.ascii_lowercase; digits = string.digits
-    glo = globals; loc = locals;
-    get_arr = lambda type_=int: list(map(type_, sys.stdin.readline().rstrip('\n').split()))
-    inp = lambda type_=int: type_(sys.stdin.readline().rstrip('\n'))
-    pair = lambda type_=int: list(map(type_, sys.stdin.readline().rstrip('\n').split(' ')))
-    debug = lambda *args: [(args[i], eval(args[i], args[-1])) for i in range(len(args)-1)]
-    filter_ = lambda fn, arr: list(filter(fn, arr))
-    map_ = lambda fn, arr: list(map(fn, arr))
+    alphabets = string.ascii_lowercase
+    digits = string.digits
+    glo = globals
+    loc = locals
+    def get_arr(type_=int): return list(map(type_, sys.stdin.readline().rstrip('\n').split()))
+    def inp(type_=int): return type_(sys.stdin.readline().rstrip('\n'))
+    def pair(type_=int): return list(map(type_, sys.stdin.readline().rstrip('\n').split(' ')))
+    debug = lambda *args: [(args[i], eval(args[i], args[-1])) for i in range(len(args) - 1)]
+    def filter_(fn, arr): return list(filter(fn, arr))
+    def map_(fn, arr): return list(map(fn, arr))
     t = inp()
     for _ in range(t):
         n = inp()
@@ -32,7 +34,7 @@ def solve():
                     d[i] = j
                     l.append(j)
                     break
-        #print(d)
+        # print(d)
         # print(l)
         for i in range(len(grid)):
             my_set = set()
@@ -46,4 +48,3 @@ def solve():
 
 
 solve()
-

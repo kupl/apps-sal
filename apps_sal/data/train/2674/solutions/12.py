@@ -5,5 +5,6 @@ def intersperse(delim, s):
         yield delim
         yield t
 
+
 def two_sort(array):
     return ''.join(intersperse('***', sorted(array)[0]))

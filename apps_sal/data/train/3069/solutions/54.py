@@ -1,5 +1,5 @@
 def greet(language):
-    
+
     l = {
         'english': 'Welcome',
         'czech': 'Vitejte',
@@ -19,11 +19,10 @@ def greet(language):
         'swedish': 'Valkommen',
         'welsh': 'Croeso'
     }
-    
+
     try:
         language == l[language]
         return l.get(language)
     except KeyError:
         return 'Welcome'
-    #your code here
-
+    # your code here

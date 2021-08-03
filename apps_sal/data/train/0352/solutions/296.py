@@ -4,7 +4,7 @@ class Solution:
         len_words = len(words)
         dp = [1] * len_words
         res = 0
-        words.sort(key = len)
+        words.sort(key=len)
         for i in range(len_words):
             max_value = 0
             for j in range(i):

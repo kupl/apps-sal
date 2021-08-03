@@ -46,4 +46,5 @@ def __starting_point():
     Solution.process_task()
     print(Solution.get_result())
 
+
 __starting_point()

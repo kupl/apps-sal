@@ -8,5 +8,6 @@ issuers = (
     ('Unknown', '.*')
 )
 
+
 def get_issuer(number):
     return next(name for name, regex in issuers if re.fullmatch(regex, str(number)))

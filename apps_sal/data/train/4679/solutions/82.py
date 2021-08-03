@@ -1,1 +1,1 @@
-to_freud=lambda s:('sex '*len(s.split())).rstrip()
+def to_freud(s): return ('sex ' * len(s.split())).rstrip()

@@ -18,4 +18,3 @@ for i in range(n):
         a = bisect_left(l, l[i] + l[j])
         ans += a - 1 - j
 print(ans)
-

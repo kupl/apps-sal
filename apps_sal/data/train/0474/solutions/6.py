@@ -9,18 +9,16 @@ class Solution:
             for combine in combinations:
                 tempScore = self.calculateScore(''.join(combine), letters, score)
                 ans = max(tempScore, ans)
-        
-        
+
         return ans
-    
+
     def calculateScore(self, s, letters, score):
         counter = collections.Counter(s)
         ans = 0
         for ch in counter:
             if counter[ch] > letters[ch]:
                 return float('-inf')
-            
-            ans += counter[ch] * score[ord(ch) - ord('a')]
-            
-        return ans
 
+            ans += counter[ch] * score[ord(ch) - ord('a')]
+
+        return ans

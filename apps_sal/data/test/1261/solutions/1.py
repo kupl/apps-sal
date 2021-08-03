@@ -37,12 +37,11 @@ for i in range(30):
 sd = 0
 for i in range(30):
     if sd == n - 1:
-        if n==(2**i):
+        if n == (2**i):
             print(2**i)
         else:
-            print(n-n%(2**(i-1)))
+            print(n - n % (2**(i - 1)))
         return
     for j in range(ar[i]):
         print(2 ** i, end=' ')
         sd += 1
-

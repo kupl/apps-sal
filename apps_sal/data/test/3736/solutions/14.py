@@ -10,5 +10,5 @@ def main():
         return
     print('YES')
 
-main()
 
+main()

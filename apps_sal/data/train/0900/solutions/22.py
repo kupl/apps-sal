@@ -10,18 +10,18 @@ def bigpow(n, p, m):
         return ((tmp * tmp) % m)
     else:
         return ((n * (bigpow(n, p - 1, m) % m)) % m)
-    
+
 
 def __starting_point():
     tc = int(input().strip())
 
     for t in range(tc):
         k = int(input().strip())
-     
+
         m = int(1e9 + 7)
         ans = (10 * bigpow(2, k - 1, m)) % m
 
         print(ans)
-            
+
 
 __starting_point()

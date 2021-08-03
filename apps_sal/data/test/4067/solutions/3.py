@@ -44,4 +44,3 @@ if cs[1] < n // 3:
             cs[0] += 1
 
 print(''.join(list(map(str, a))))
-

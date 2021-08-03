@@ -1,25 +1,27 @@
 from collections import deque
 import numpy as np
+
+
 def main():
-    H,W = map(int,input().split())
+    H, W = map(int, input().split())
     maze = [input() for _ in range(H)]
 
     ans = 0
     for x in range(H):
         for y in range(W):
-            #壁からはスタートできない
+            # 壁からはスタートできない
             if maze[x][y] == "#":
                 continue
 
-            #初期化
-            distance = [[0]*W for _ in range(H)]
-            #start位置
-            stack = deque([[x,y]])
+            # 初期化
+            distance = [[0] * W for _ in range(H)]
+            # start位置
+            stack = deque([[x, y]])
 
             while stack:
-                h,w = stack.popleft()
+                h, w = stack.popleft()
                 for i, j in [[1, 0], [-1, 0], [0, 1], [0, -1]]:
-                    new_h, new_w = h+i, w+j
+                    new_h, new_w = h + i, w + j
                     if new_h < 0 or new_w < 0 or new_h >= H or new_w >= W:
                         continue
                     elif maze[new_h][new_w] != '#' and distance[new_h][new_w] == 0:
@@ -30,5 +32,6 @@ def main():
             ans = max(ans, np.max(distance))
 
     print(ans)
+
 
 main()

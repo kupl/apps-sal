@@ -6,7 +6,7 @@ for v in l:
     currVal = v
     currSize = 1
     div = v
-    
+
     while stack:
         nex, nexS, nDiv = stack[-1]
 
@@ -25,6 +25,5 @@ for a, b, d in stack:
     thingy = str(d)
     for _ in range(b):
         out.append(thingy)
-        
-print('\n'.join(out))
 
+print('\n'.join(out))

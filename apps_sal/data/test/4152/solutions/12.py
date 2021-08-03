@@ -1,29 +1,29 @@
 from math import *
-dict1={}
-n=int(input())
-arr=list(map(int,input().split()))
+dict1 = {}
+n = int(input())
+arr = list(map(int, input().split()))
 for i in range(n):
     try:
-        dict1[arr[i]]+=1
+        dict1[arr[i]] += 1
     except:
         KeyError
-        dict1[arr[i]]=1
-ans=0
-#print(dict1)
+        dict1[arr[i]] = 1
+ans = 0
+# print(dict1)
 for i in range(n):
-    flag=0
-    for j in range(ceil(log2(arr[i])),32):
+    flag = 0
+    for j in range(ceil(log2(arr[i])), 32):
         try:
-            if(pow(2,j)==2*arr[i]):
-                if(dict1[pow(2,j)-arr[i]]>1):
-                    flag=1
+            if(pow(2, j) == 2 * arr[i]):
+                if(dict1[pow(2, j) - arr[i]] > 1):
+                    flag = 1
                     break
-            elif(dict1[pow(2,j)-arr[i]]>0):
-                flag=1
+            elif(dict1[pow(2, j) - arr[i]] > 0):
+                flag = 1
                 break
         except:
             KeyError
-    if(flag==0):
-        #print(arr[i])
-        ans+=1
+    if(flag == 0):
+        # print(arr[i])
+        ans += 1
 print(ans)

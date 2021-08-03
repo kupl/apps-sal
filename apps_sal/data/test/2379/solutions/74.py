@@ -8,6 +8,7 @@ def do_solve(n, k, c, s):
             dp[i] = max(dp[i], dp[i - 1])
     return dp
 
+
 def solve(n, k, c, s):
     dp1 = do_solve(n, k, c, s)
     dp2 = do_solve(n, k, c, s[::-1])[::-1]
@@ -29,6 +30,7 @@ def solve(n, k, c, s):
     # print res
     return res
 
+
 assert solve(16, 4, 3, 'ooxxoxoxxxoxoxxo') == [11, 16]
 assert solve(11, 3, 2, 'ooxxxoxxxoo') == [6]
 assert solve(5, 1, 0, 'ooooo') == []
@@ -39,5 +41,3 @@ s = input().strip()
 
 for num in solve(n, k, c, s):
     print(num)
-
-

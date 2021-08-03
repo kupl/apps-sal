@@ -1,7 +1,7 @@
 def increment_string(strng):
     if strng == '':
         return '1'
-    
+
     print(strng)
     # no number
     num_start = 0
@@ -12,13 +12,11 @@ def increment_string(strng):
 
     if num_start == len(strng):
         return strng + '1'
-            
+
     orig_str = strng[0:num_start]
     num_str = strng[num_start::]
-    
+
     digits = len(num_str)
     suffix_num = str(int(num_str) + 1)
-    
-    return orig_str + ('0' * (digits - len(suffix_num))) + str(suffix_num)
-        
 
+    return orig_str + ('0' * (digits - len(suffix_num))) + str(suffix_num)

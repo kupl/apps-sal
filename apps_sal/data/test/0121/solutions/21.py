@@ -11,7 +11,7 @@ diags = []
 diags.append("".join([rows[i][i] for i in range(4)]))
 diags.append("".join([rows[0][1], rows[1][2], rows[2][3]]))
 diags.append("".join([rows[1][0], rows[2][1], rows[3][2]]))
-diags.append("".join([rows[i][3-i] for i in range(4)]))
+diags.append("".join([rows[i][3 - i] for i in range(4)]))
 diags.append("".join([rows[0][2], rows[1][1], rows[2][0]]))
 diags.append("".join([rows[1][3], rows[2][2], rows[3][1]]))
 
@@ -25,4 +25,3 @@ for winstr in winstrs:
             print("YES")
             return
 print("NO")
-

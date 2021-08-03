@@ -1,5 +1,6 @@
 import collections
 
+
 def main():
     s = input()
 
@@ -8,7 +9,7 @@ def main():
         return
 
     ct = collections.Counter(s)
-    print( (abs(ct['L'] - ct['R']) + abs(ct['U'] - ct['D']))//2 )
+    print((abs(ct['L'] - ct['R']) + abs(ct['U'] - ct['D'])) // 2)
+
 
 main()
-

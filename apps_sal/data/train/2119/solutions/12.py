@@ -7,10 +7,12 @@ parent = [0] * n
 size = [0] * n
 stat = [0] * n
 
+
 def find(x):
     while parent[x] != x:
         x = parent[x]
     return x
+
 
 def union(a, b):
     x = find(a)
@@ -26,6 +28,7 @@ def union(a, b):
         size[x] += size[y]
         stat[x] += stat[y]
 
+
 ans = [0]
 
 for i in range(n - 1, 0, -1):
@@ -37,7 +40,7 @@ for i in range(n - 1, 0, -1):
         union(k, k - 1)
     if k < n - 1 and valid[k + 1]:
         union(k, k + 1)
-    
+
     t = stat[find(k)]
     m = max(ans[-1], t)
     ans.append(m)

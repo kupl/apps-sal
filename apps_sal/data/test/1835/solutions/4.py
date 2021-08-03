@@ -8,9 +8,8 @@ for _ in range(Q):
         s = input()
         odds += len(s) % 2
         zeros += s.count("0")
-    
+
     if odds or (zeros % 2 == 0):
         print(N)
     else:
-        print(N-1)
-
+        print(N - 1)

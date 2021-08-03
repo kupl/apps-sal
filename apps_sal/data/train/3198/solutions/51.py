@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     n = len(arr1)
     score = 0
     while n > 0:
@@ -7,5 +7,6 @@ def check_exam(arr1,arr2):
             score = score
         elif arr2[n] == arr1[n]:
             score += 4
-        else: score -= 1
-    return max(score,0)
+        else:
+            score -= 1
+    return max(score, 0)

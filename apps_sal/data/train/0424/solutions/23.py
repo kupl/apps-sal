@@ -11,13 +11,13 @@ class Solution:
                 sliders.add((-i, j))
                 sliders.add((i, -j))
                 sliders.add((-i, -j))
-        
+
         def slide_and_count(slide):
             res = 0
             left, down = slide
-            for i in range(min(N, N-left)):
+            for i in range(min(N, N - left)):
                 i2 = i + left
-                for j in range(min(N, N-down)):
+                for j in range(min(N, N - down)):
                     j2 = j + down
                     if i2 < 0 or j2 < 0:
                         continue
@@ -26,8 +26,8 @@ class Solution:
                             res += 1
                     except:
                         pass
-                    
+
             print(slide, res)
             return res
-        
+
         return max(slide_and_count(slide) for slide in sliders)

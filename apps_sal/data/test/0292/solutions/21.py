@@ -21,4 +21,3 @@ for i in range(h):
             ans += 2 ** (h - i)
 
 print(ans)
-

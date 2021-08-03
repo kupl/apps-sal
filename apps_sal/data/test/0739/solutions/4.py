@@ -29,5 +29,6 @@ def f_takahashi_basics_in_education_and_learning(L, A, B, M, DIGIT_MAX=18):
         ans = ans.dot(m) % M
     return ans[0]
 
+
 L, A, B, M = [int(i) for i in input().split()]
 print(f_takahashi_basics_in_education_and_learning(L, A, B, M))

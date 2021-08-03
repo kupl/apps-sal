@@ -1,5 +1,7 @@
 from functools import partial
 import re
+
+
 def gym_slang(phrase):
     def repl(match):
         def check_upper(word, match):
@@ -16,5 +18,5 @@ def gym_slang(phrase):
         if match.group() == match.group(5):
             return check("gonna")
         if match.group() == match.group(6):
-            return check("combo")    
+            return check("combo")
     return re.sub(r"(?i)(probably)|(i am)|(instagram)|(do not)|(going to)|(combination)", repl, phrase)

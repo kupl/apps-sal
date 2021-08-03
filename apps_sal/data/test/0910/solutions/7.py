@@ -63,7 +63,6 @@ def task(a, b, n):
                     line += str(guest_d) + " "
                     guest_d += 2
 
-
         print(line)
 
 
@@ -77,5 +76,5 @@ def main():
     # list of guests
     task(a, b, n)
 
-main()
 
+main()

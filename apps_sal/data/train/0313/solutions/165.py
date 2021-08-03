@@ -10,7 +10,8 @@ class Solution:
                     flowers = (flowers + 1) % k
             return bouquets >= m
 
-        if len(bloomDay) < m * k: return -1
+        if len(bloomDay) < m * k:
+            return -1
         low, high = 1, max(bloomDay)
         while low < high:
             mid = low + (high - low) // 2
@@ -19,6 +20,3 @@ class Solution:
             else:
                 low = mid + 1
         return low
-
-
-

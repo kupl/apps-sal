@@ -9,9 +9,12 @@ class Solution:
         for i in range(0, n - 1):
             for j in range(i + 1, n):
                 d = abs(arr[j] - arr[i])
-                if d <= a: ij_idx[i].add(j)
-                if d <= b: jk_ids[i].add(j)
-                if d <= c: ik_ids[j].add(i)
+                if d <= a:
+                    ij_idx[i].add(j)
+                if d <= b:
+                    jk_ids[i].add(j)
+                if d <= c:
+                    ik_ids[j].add(i)
 
         result = 0
 
@@ -22,4 +25,3 @@ class Solution:
                         result += 1
 
         return result
-

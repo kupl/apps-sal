@@ -7,5 +7,3 @@ def array(string):
         print((listed[1:][:-1]))
         listed = listed[1:][:-1]
         return ' '.join(listed)
-    
-

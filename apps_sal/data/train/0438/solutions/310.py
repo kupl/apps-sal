@@ -5,23 +5,24 @@ class Solution:
             return n
         arr.insert(0, 0)
         day = [0] * (n + 1)
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             day[arr[i]] = i
         ans = -1
         max_q = MaxQueue(m)
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             max_q.pop_expired(i)
             max_q.push(day[i], i)
             if i < m:
                 continue
             left = right = math.inf
             if i - m >= 1:
-                left = day[i-m]
+                left = day[i - m]
             if i + 1 <= n:
-                right = day[i+1]
+                right = day[i + 1]
             if max_q.max() < (d := min(left, right)):
                 ans = max(ans, d - 1)
         return ans
+
 
 class MaxQueue:
     def __init__(self, size):

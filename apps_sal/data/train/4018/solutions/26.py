@@ -3,6 +3,3 @@ def isDigit(s):
         return 0.1 != float(s)
     except:
         return False
-    
-
-

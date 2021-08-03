@@ -6,6 +6,5 @@ def merge_arrays(arr1, arr2):
     for el in arr1:
         if el not in arr:
             arr.append(el)
-    
-    return sorted(arr)
 
+    return sorted(arr)

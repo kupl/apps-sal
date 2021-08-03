@@ -14,5 +14,3 @@ class Solution:
                 continue
             sum_set.add(temp)
         return count
-
-

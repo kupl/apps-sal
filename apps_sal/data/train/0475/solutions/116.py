@@ -11,4 +11,3 @@ class Solution:
             if i >= left:
                 ret_num += cur
         return ret_num % (10**9 + 7)
-

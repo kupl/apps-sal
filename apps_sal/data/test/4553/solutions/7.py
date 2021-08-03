@@ -1,5 +1,5 @@
 import re
-a,b = input().split()
+a, b = input().split()
 s = input()
 if re.match(r'\d{' + a + '}-\d{' + b + '}', s):
     print('Yes')

@@ -13,4 +13,3 @@ for i in range(n - 2):
                 continue
             ans += 1
 print(ans)
-

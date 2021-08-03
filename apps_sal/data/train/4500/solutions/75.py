@@ -7,4 +7,3 @@ def define_suit(card):
         return "hearts"
     elif card[-1] == "S":
         return "spades"
-

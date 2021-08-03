@@ -8,7 +8,7 @@
 class Solution:
 
     def find(self, copy, target):
-        
+
         if not copy:
             return None
 
@@ -19,6 +19,4 @@ class Solution:
         return a or self.find(copy.right, target)
 
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        return self.find(cloned, target.val) 
-
-
+        return self.find(cloned, target.val)

@@ -19,5 +19,3 @@ if p % 2 == 0:
     print("Karen")
 else:
     print("Koyomi")
-
-

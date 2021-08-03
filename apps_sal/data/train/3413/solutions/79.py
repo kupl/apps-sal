@@ -5,4 +5,3 @@ def solution(nums):
     else:
         nums.sort()
         return nums
-

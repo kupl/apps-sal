@@ -1,14 +1,14 @@
-n=int(input())
+n = int(input())
 
-a=list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-p=[]
+p = []
 
-q=[]
+q = []
 
-r=0
+r = 0
 
-ls=-1
+ls = -1
 
 for i in a:
 
@@ -16,15 +16,18 @@ for i in a:
 
         p.append(r)
 
-        if j:q.append(r-(ls>1))
+        if j:
+            q.append(r - (ls > 1))
 
-        else:q.append(r)
+        else:
+            q.append(r)
 
-    r+=i
+    r += i
 
-    ls=i
+    ls = i
 
-if p==q:print('perfect')
+if p == q:
+    print('perfect')
 
 else:
 
@@ -35,6 +38,4 @@ else:
     print(*q)
 
 
-
 # Made By Mostafa_Khaled
-

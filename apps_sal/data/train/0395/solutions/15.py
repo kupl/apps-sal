@@ -1,14 +1,13 @@
 class Solution:
 
-    
     def oddEvenJumps(self, a: List[int]) -> int:
-                
+
         b = list(sorted(list(range(len(a))), key=lambda i: a[i]))
         c = list(sorted(list(range(len(a))), key=lambda i: -a[i]))
-        
+
         # print(b)
         # print(c)
-        
+
         odd_next = {}
         even_next = {}
         i = 1
@@ -19,7 +18,7 @@ class Solution:
             if b[j] > b[i - 1]:
                 odd_next[b[i - 1]] = b[j]
             i += 1
-        
+
         i = 1
         while i < len(c):
             j = i
@@ -28,12 +27,11 @@ class Solution:
             if c[j] > c[i - 1]:
                 even_next[c[i - 1]] = c[j]
             i += 1
-        
-        
+
         paths = 0
-        
+
         for start in list(odd_next.keys()):
-            
+
             index = start
             can_go = True
             odd = True
@@ -55,8 +53,5 @@ class Solution:
 
         if len(a) - 1 not in list(odd_next.keys()):
             paths += 1
-        
-        
-        return paths
-    
 
+        return paths

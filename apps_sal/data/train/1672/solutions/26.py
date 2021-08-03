@@ -91,11 +91,14 @@ if sys.version_info[0] < 3:
 else:
     sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 # endregion
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

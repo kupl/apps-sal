@@ -1,7 +1,7 @@
 class UnionFind:
     def __init__(self, n):
-        self.par = [i for i in range(n+1)]
-        self.rank = [0] * (n+1)
+        self.par = [i for i in range(n + 1)]
+        self.rank = [0] * (n + 1)
 
     # 検索
     def find(self, x):
@@ -26,30 +26,28 @@ class UnionFind:
     def same_check(self, x, y):
         return self.find(x) == self.find(y)
 
-N,M=list(map(int,input().split()))
 
-S=list(map(int,input().split()))
+N, M = list(map(int, input().split()))
 
-ans=0
-TA=[]
-TB=[]
+S = list(map(int, input().split()))
+
+ans = 0
+TA = []
+TB = []
 for i in range(M):
-    a,b=list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
     TA.append(a)
     TB.append(b)
 
-uni=UnionFind(N)
+uni = UnionFind(N)
 for i in range(M):
-    uni.union(TA[i],TB[i])
+    uni.union(TA[i], TB[i])
 
-    
+
 for i in range(N):
-    if uni.same_check(i+1,S[i])==True:
-        ans+=1
-        #print("mohu",i)
-        
-        
-    
-    
-print(ans)
+    if uni.same_check(i + 1, S[i]) == True:
+        ans += 1
+        # print("mohu",i)
 
+
+print(ans)

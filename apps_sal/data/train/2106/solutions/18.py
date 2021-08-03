@@ -15,12 +15,12 @@ jiroTotal = 0
 mids = []
 
 for x in piles:
-    cielTotal += sum(x[:len(x)//2])
-    jiroTotal += sum(x[len(x)//2+len(x)%2:])
-    #print(x)
-    #print(cielTotal,jiroTotal)
-    if len(x)%2 == 1:
-        mids.append(x[len(x)//2])
+    cielTotal += sum(x[:len(x) // 2])
+    jiroTotal += sum(x[len(x) // 2 + len(x) % 2:])
+    # print(x)
+    # print(cielTotal,jiroTotal)
+    if len(x) % 2 == 1:
+        mids.append(x[len(x) // 2])
 
 mids.sort(reverse=True)
 
@@ -31,7 +31,4 @@ for x in mids:
     else:
         jiroTotal += x
     turn = not turn
-print(cielTotal,jiroTotal)
-
-    
-
+print(cielTotal, jiroTotal)

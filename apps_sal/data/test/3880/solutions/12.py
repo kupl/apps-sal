@@ -6,4 +6,3 @@ result = sum(values)
 if n % 2 == 0 and x % 2 == 1:
     result -= 2 * values[0]
 print(result)
-

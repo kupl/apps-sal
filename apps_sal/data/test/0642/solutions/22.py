@@ -9,9 +9,9 @@ if n in d or 1 in d:
     return
 d.sort()
 i = 0
-while i < m-2:
-    if d[i+2]-d[i+1]==1:
-        if d[i+1]-d[i]==1:
+while i < m - 2:
+    if d[i + 2] - d[i + 1] == 1:
+        if d[i + 1] - d[i] == 1:
             print('NO')
             break
         else:
@@ -20,4 +20,3 @@ while i < m-2:
         i += 2
 else:
     print('YES')
-

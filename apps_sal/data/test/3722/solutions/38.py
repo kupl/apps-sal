@@ -1,4 +1,4 @@
-MOD = 10**9+7
+MOD = 10**9 + 7
 n = int(input())
 a, b, c, d = [0 if input() == 'A' else 1 for _ in range(4)]
 if (a, b, c, d) in ((0, 0, 0, 0), (0, 0, 0, 1), (0, 0, 1, 0), (0, 0, 1, 1), (0, 1, 0, 1), (0, 1, 1, 1), (1, 1, 0, 1), (1, 1, 1, 1)):
@@ -13,4 +13,3 @@ else:
     for i in range(n - 2):
         a, b = b, (a + b) % MOD
     print(a)
-

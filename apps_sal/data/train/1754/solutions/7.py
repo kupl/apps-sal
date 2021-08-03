@@ -4,7 +4,7 @@ def valid(a):
         for j in i:
             for k in j:
                 golfers[k] = []
-    for days in a: 
+    for days in a:
         for group in days:
             for person in golfers:
                 if person in group:
@@ -18,4 +18,3 @@ def valid(a):
         if len(golfers[i]) != length:
             return False
     return True
-

@@ -6,4 +6,3 @@ def number(lines):
         n1.append(x)
         n = n + 1
     return n1
-

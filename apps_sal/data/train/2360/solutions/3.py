@@ -4,6 +4,7 @@ k = int(input())
 edges = [['N' for i in range(1010)] for j in range(1010)]
 vertices = 2
 
+
 def add_edge(a, b):
     nonlocal edges
     edges[a][b] = edges[b][a] = 'Y'
@@ -36,5 +37,4 @@ if 0:
                 print(j, end=' ')
         print('')
 else:
-    print('\n'.join(map(lambda x: ''.join(x[1:vertices+1]), edges[1:vertices + 1])))
-
+    print('\n'.join(map(lambda x: ''.join(x[1:vertices + 1]), edges[1:vertices + 1])))

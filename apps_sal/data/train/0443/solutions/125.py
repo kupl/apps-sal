@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
         result = 0
@@ -7,4 +8,3 @@ class Solution:
             if (tupl[0] < tupl[1] < tupl[2]) or (tupl[0] > tupl[1] > tupl[2]):
                 result += 1
         return result
-

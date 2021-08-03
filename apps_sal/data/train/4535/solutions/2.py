@@ -1,5 +1,6 @@
 def zfunc(s):
-    if not s: return []
+    if not s:
+        return []
     n = len(s)
     Z = [n] * n
     l = r = 0

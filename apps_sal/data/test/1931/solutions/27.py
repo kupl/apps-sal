@@ -12,6 +12,7 @@ def pyramid(n, l, r):
     else:
         return pyramid(n, mid, r)
 
+
 for _ in range(int(input())):
     n = int(input())
     cnt = 0
@@ -20,4 +21,3 @@ for _ in range(int(input())):
         n -= (3 * x * x + x) // 2
         cnt += 1
     print(cnt)
-

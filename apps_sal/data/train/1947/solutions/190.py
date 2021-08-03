@@ -38,10 +38,3 @@ class Solution:
         #     if rt == True:
         #         res.append(w)
         # return res
-                
-                
-        
-                
-                
-                
-

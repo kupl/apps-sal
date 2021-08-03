@@ -4,7 +4,7 @@ class Solution:
             return (0, -1)
         if n == 1:
             return (1, 0)
-        
+
         inc = 0
         mul = 0
         i = n
@@ -19,12 +19,12 @@ class Solution:
 
     def minOperations(self, nums: List[int]) -> int:
         pows = [self.getPow(n) for n in nums]
-        
+
         num_incs = 0
         num_mults = 0
-        
+
         max_pow = 0
-        
+
         for i in range(0, len(nums)):
             if nums[i] == 0:
                 continue
@@ -36,8 +36,6 @@ class Solution:
                 num_incs += inc
                 if power > max_pow:
                     max_pow = power
-                    
+
         num_incs += max_pow
         return num_incs
-        
-

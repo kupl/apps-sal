@@ -1,7 +1,7 @@
 
+import itertools
 url = "https://atcoder.jp//contests/abc137/tasks/abc137_c"
 
-import itertools
 
 def main():
     n = int(input())
@@ -16,7 +16,9 @@ def main():
         count += maps[k] * (maps[k] - 1) // 2
     print(count)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -51,11 +51,10 @@ ABS = [[int(i) for i in input().split()] for _ in range(M)]
 
 cnt = 0
 for i in range(M):
-  uf = UnionFind(N+1)
-  for a, b in [*ABS[:i], *ABS[i+1:]]:
-    uf.union(a, b)
-  if uf.group_count() > 2:
-    cnt += 1
+    uf = UnionFind(N + 1)
+    for a, b in [*ABS[:i], *ABS[i + 1:]]:
+        uf.union(a, b)
+    if uf.group_count() > 2:
+        cnt += 1
 
 print(cnt)
-

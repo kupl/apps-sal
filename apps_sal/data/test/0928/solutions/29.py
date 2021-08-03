@@ -15,4 +15,3 @@ while l < n:
         r += 1
     l += 1
 print(unko)
-

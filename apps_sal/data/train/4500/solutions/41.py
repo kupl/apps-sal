@@ -5,14 +5,14 @@ def define_suit(card):
         return 'spades'
     elif card[1] == 'D':
         return 'diamonds'
-    elif card[1] =='H':
+    elif card[1] == 'H':
         return 'hearts'
-    elif card[1] =='0':
+    elif card[1] == '0':
         if card[2] == 'C':
             return 'clubs'
         elif card[2] == 'S':
             return 'spades'
         elif card[2] == 'D':
             return 'diamonds'
-        elif card[2] =='H':
+        elif card[2] == 'H':
             return 'hearts'

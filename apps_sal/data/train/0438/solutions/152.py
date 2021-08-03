@@ -1,13 +1,15 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         parents = [i for i in range(len(arr) + 1)]
-        cnt = [1] * (len(arr) + 1)#initial 1
+        cnt = [1] * (len(arr) + 1)  # initial 1
         groupCnt = [0] * (len(arr) + 1)
         rank = [0] * (len(arr) + 1)
+
         def find(x):
             if x != parents[x]:
                 parents[x] = find(parents[x])
             return parents[x]
+
         def union(x, y):
             px, py = find(x), find(y)
             if px != py:

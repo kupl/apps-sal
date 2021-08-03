@@ -6,7 +6,7 @@ for i in range(14):
     else:
         n -= 1
         ans += chr(ord("a") + n % 26)
-        n = n//26
+        n = n // 26
 
 rslt = ans[::-1]
 print(rslt)

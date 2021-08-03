@@ -19,10 +19,10 @@ sorted_p = sorted(p)
 # pから2つの要素を入れ替えて昇順になったら、YESにする
 count = 0
 for i in range(N):
-  if p[i] != sorted_p[i]:
-    count += 1
+    if p[i] != sorted_p[i]:
+        count += 1
 if count <= 2:
-  result = 'YES'
+    result = 'YES'
 
 # 出力する
 print(result)

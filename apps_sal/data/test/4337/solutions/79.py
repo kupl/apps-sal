@@ -1,5 +1,5 @@
 N = input()
-arare = list(map(str,input().split()))
+arare = list(map(str, input().split()))
 
 if "Y" in arare:
     print("Four")

@@ -1,10 +1,12 @@
 import sys
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
+
 
 def solve():
     n, m = map(int, sys.stdin.readline().split())
@@ -25,13 +27,16 @@ def solve():
     ans = []
 
     for l, r in querys:
-        if r-1 <= f[l-1]:
+        if r - 1 <= f[l - 1]:
             ans.append('Yes')
         else:
             ans.append('No')
 
     print(*ans, sep='\n')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

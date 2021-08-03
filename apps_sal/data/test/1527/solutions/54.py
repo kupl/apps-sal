@@ -5,6 +5,7 @@ for i in range(H):
     S[i] = input()
 dests = ((-1, 0), (0, -1), (1, 0), (0, 1))
 
+
 def maze(sx, sy):
     d = deque()
     dist = [[-1] * W for i in range(H)]
@@ -17,11 +18,14 @@ def maze(sx, sy):
             if nx >= 0 and nx < H and ny >= 0 and ny < W and S[nx][ny] == '.' and dist[nx][ny] == -1:
                 d.append((nx, ny))
                 dist[nx][ny] = dist[x][y] + 1
-        if not d: return dist[x][y]
+        if not d:
+            return dist[x][y]
+
 
 ans = 0
 for i in range(H):
     for j in range(W):
-        if S[i][j] == '#': continue
+        if S[i][j] == '#':
+            continue
         ans = max(ans, maze(i, j))
 print(ans)

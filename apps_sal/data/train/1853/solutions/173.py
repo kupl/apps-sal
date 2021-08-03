@@ -4,7 +4,7 @@ class Solution:
         for f, t, w in edges:
             g[f].append((t, w))
             g[t].append((f, w))
-        
+
         def bfs(i):
             q = [(0, i)]
             dist = [distanceThreshold + 1] * n
@@ -20,5 +20,5 @@ class Solution:
                         heapq.heappush(q, (d, k))
                         dist[k] = d
             return len(visited)
-        
+
         return -min([(bfs(i), -i) for i in range(n)])[1]

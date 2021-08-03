@@ -25,4 +25,3 @@ for i in range(len(L)):
         else:
             print(L[i])
         k += 1
-

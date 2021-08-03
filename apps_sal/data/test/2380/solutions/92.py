@@ -1,7 +1,7 @@
+import copy
+from collections import Counter
 N, M = map(int, input().split())
 A = list(map(int, input().split()))
-from collections import Counter
-import copy
 counter = Counter(A)
 for _ in range(M):
     B, C = map(int, input().split())

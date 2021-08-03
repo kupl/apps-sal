@@ -6,7 +6,7 @@ elif s[:-1] != s[-2::-1]:
     print((-1))
 else:
     half = len(s) // 2
-    one_indices = [i+1 for i in range(1, half) if s[i] == '1'] # not including 0 or larger than n//2
+    one_indices = [i + 1 for i in range(1, half) if s[i] == '1']  # not including 0 or larger than n//2
 
     parents = [0] * (len(s) + 1)
     parent_index = 1
@@ -21,7 +21,6 @@ else:
         parents[index] = root
 
     for node, parent in enumerate(parents):
-        if parent == 0: # This means node is 0 or the root of the tree.
+        if parent == 0:  # This means node is 0 or the root of the tree.
             continue
         print((node, parent))
-

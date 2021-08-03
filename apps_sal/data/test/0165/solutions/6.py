@@ -12,4 +12,3 @@ ans = min(get(a, b, c),
           get(a - 1, b, c - 1),
           )
 print(ans)
-

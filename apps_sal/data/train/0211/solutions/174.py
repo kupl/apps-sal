@@ -6,12 +6,12 @@ class Solution:
 
             res = 0
             for i, c in enumerate(s):
-                candidate = s[:i+1]
+                candidate = s[:i + 1]
                 if candidate not in seen:
                     seen.add(candidate)
-                    res = max(res, 1 + builder(s[i+1:], seen))
+                    res = max(res, 1 + builder(s[i + 1:], seen))
                     seen.remove(candidate)
-                    
+
             return res
-        
+
         return builder(s, set())

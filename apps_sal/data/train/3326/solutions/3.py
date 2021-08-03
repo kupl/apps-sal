@@ -1,11 +1,14 @@
 import itertools
 
+
 def reverse_in_parentheses(string):
     stream = iter(string)
     return _recurse(stream)
 
+
 def safe_rev(s):
     return s[::-1].translate(str.maketrans('()', ')('))
+
 
 def _recurse(stream):
     ret = ''
@@ -18,4 +21,3 @@ def _recurse(stream):
         else:
             ret += c
     return ret
-

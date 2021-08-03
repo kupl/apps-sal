@@ -1,2 +1,2 @@
 def solution(str):
-  return str[::-1]
+    return str[::-1]

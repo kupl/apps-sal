@@ -1,7 +1,7 @@
-a,b,c=map(str,input().split())
+a, b, c = map(str, input().split())
 
-a=a.upper()
-b=b.upper()
-c=c.upper()
+a = a.upper()
+b = b.upper()
+c = c.upper()
 
-print(str(a[0])+b[0]+c[0])
+print(str(a[0]) + b[0] + c[0])

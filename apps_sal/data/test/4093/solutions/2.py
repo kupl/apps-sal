@@ -5,4 +5,4 @@ for _ in range(int(input())):
     elif n == 2:
         print(m)
     else:
-        print(m*2)
+        print(m * 2)

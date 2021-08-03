@@ -9,4 +9,3 @@ for c in s:
         z += 1
 
 print((min(o, z) * 2))
-

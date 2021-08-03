@@ -18,4 +18,3 @@ for i in range(N):
     idx = bisect_right(B, A[i])
     ans += B_to_C[N] - B_to_C[idx]
 print(ans)
-

@@ -3,10 +3,12 @@ def input(): return sys.stdin.readline().rstrip()
 
 
 def main():
-    S=input()
-    print(S.count('+')-S.count('-'))
+    S = input()
+    print(S.count('+') - S.count('-'))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

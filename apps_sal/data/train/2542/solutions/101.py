@@ -4,13 +4,11 @@ class Solution:
             return True
         asc = None
         for i in range(1, len(A)):
-            if A[i] == A[i-1]:
+            if A[i] == A[i - 1]:
                 continue
             if asc is None:
-                asc = A[i-1] < A[i]
+                asc = A[i - 1] < A[i]
             else:
-                if asc != (A[i-1] < A[i]):
+                if asc != (A[i - 1] < A[i]):
                     return False
         return True
-                
-

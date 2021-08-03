@@ -1,5 +1,7 @@
 pt = lambda *a, **k: print(*a, **k, flush=True)
-rd = lambda: map(int, input().split())
+def rd(): return map(int, input().split())
+
+
 n, m = rd()
 an = list(rd())
 bn = list(rd())
@@ -19,4 +21,3 @@ for i in an:
         if i * j > r:
             r = i * j
 pt(r)
-

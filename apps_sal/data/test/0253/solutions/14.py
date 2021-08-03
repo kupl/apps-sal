@@ -15,4 +15,3 @@ if has_solution:
     print("YES")
 else:
     print("NO")
-

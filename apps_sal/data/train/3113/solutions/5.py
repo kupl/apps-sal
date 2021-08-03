@@ -7,10 +7,10 @@ def distribute(m, n):
             for i in range(n):
                 list.append(0)
         else:
-            number = int(m/n)
-            mod = m%n
+            number = int(m / n)
+            mod = m % n
             for i in range(mod):
-                list.append(number+1)
-            for j in range(mod,n):
+                list.append(number + 1)
+            for j in range(mod, n):
                 list.append(number)
-    return list            
+    return list

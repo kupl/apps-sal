@@ -7,6 +7,3 @@ def to_freud(sentence):
         s = s + "sex "
         wordcount -= 1
     return s[:-1]
-    
-    
-

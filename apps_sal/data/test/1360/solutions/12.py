@@ -11,4 +11,3 @@ for i in range(n):
         L.append(days[i][0])
 
 print(L[-1])
-

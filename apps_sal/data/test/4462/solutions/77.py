@@ -7,8 +7,7 @@ for a in A:
         cnt_odd += 1
     elif a % 4 == 0:
         cnt_4 += 1
-if cnt_odd + cnt_4 == N and cnt_odd -1 == cnt_4:
+if cnt_odd + cnt_4 == N and cnt_odd - 1 == cnt_4:
     print('Yes')
 else:
     print(('Yes' if cnt_4 >= cnt_odd else 'No'))
-

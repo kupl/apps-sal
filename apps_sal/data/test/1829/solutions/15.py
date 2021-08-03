@@ -13,10 +13,8 @@ else:
     for i in range(m):
         s2.append(input())
         r.add(s2[-1])
-    t = len(s2)+len(s1)-len(r)
-    if t%2 == 1:
+    t = len(s2) + len(s1) - len(r)
+    if t % 2 == 1:
         print("YES")
     else:
         print("NO")
-
-

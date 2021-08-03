@@ -66,7 +66,9 @@ def main():
     print(' '.join(map(str, solve(*getinput()))))
     # print('\n'.join(map(str, solve(*getinput()))))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

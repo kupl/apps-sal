@@ -1,5 +1,5 @@
 def main():
-    mod = 10**9+7
+    mod = 10**9 + 7
     n, k = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort(key=lambda x: -abs(x))
@@ -20,7 +20,7 @@ def main():
     if minus % 2 == 0:
         ans = 1
         for i in kouho:
-            ans = ans*i % mod
+            ans = ans * i % mod
         print(ans)
         return
     change_plus = None
@@ -45,30 +45,29 @@ def main():
     if change_plus == None and change_minus == None:
         ans = 1
         for i in range(k):
-            ans = ans*a[-i-1] % mod
+            ans = ans * a[-i - 1] % mod
     elif change_plus == None:
         ans = change_minus
         for i in kouho:
-            ans = ans*i % mod
-        ans = ans*pow(last_minus, mod-2, mod) % mod
+            ans = ans * i % mod
+        ans = ans * pow(last_minus, mod - 2, mod) % mod
     elif change_minus == None:
         ans = change_plus
         for i in kouho:
-            ans = ans*i % mod
-        ans = ans*pow(last_plus, mod-2, mod) % mod
+            ans = ans * i % mod
+        ans = ans * pow(last_plus, mod - 2, mod) % mod
     else:
-        if abs(change_plus*last_minus) < abs(change_minus*last_plus):
+        if abs(change_plus * last_minus) < abs(change_minus * last_plus):
             ans = change_minus
             for i in kouho:
-                ans = ans*i % mod
-            ans = ans*pow(last_minus, mod-2, mod) % mod
+                ans = ans * i % mod
+            ans = ans * pow(last_minus, mod - 2, mod) % mod
         else:
             ans = change_plus
             for i in kouho:
-                ans = ans*i % mod
-            ans = ans*pow(last_plus, mod-2, mod) % mod
+                ans = ans * i % mod
+            ans = ans * pow(last_plus, mod - 2, mod) % mod
     print(ans)
 
 
 main()
-

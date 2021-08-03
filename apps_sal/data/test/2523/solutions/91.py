@@ -31,21 +31,23 @@ def main():
     cumsum_seq_cnt[0] = seq_cnt[0]
     rev_cumsum_seq_cnt[0] = seq_cnt[-1]
     for i in range(1, len(seq_cnt)):
-        cumsum_seq_cnt[i] = cumsum_seq_cnt[i-1] + seq_cnt[i]
-        rev_cumsum_seq_cnt[i] = rev_cumsum_seq_cnt[i-1] + seq_cnt[-1-i]
+        cumsum_seq_cnt[i] = cumsum_seq_cnt[i - 1] + seq_cnt[i]
+        rev_cumsum_seq_cnt[i] = rev_cumsum_seq_cnt[i - 1] + seq_cnt[-1 - i]
     # search
     max_k = cumsum_seq_cnt[0]
-    rev_max_k= rev_cumsum_seq_cnt[0]
+    rev_max_k = rev_cumsum_seq_cnt[0]
     for i in range(1, len(seq_cnt)):
         k = cumsum_seq_cnt[i]
-        if k <= N - cumsum_seq_cnt[i-1]:
+        if k <= N - cumsum_seq_cnt[i - 1]:
             max_k = k
         rev_k = rev_cumsum_seq_cnt[i]
-        if rev_k <= N - rev_cumsum_seq_cnt[i-1]:
+        if rev_k <= N - rev_cumsum_seq_cnt[i - 1]:
             rev_max_k = rev_k
     print(max([max_k, rev_max_k]))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

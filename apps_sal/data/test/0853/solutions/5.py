@@ -13,6 +13,6 @@ else:
             print(-1)
     else:
         for j in range(i - i % 9):
-            print('5', end = '')
+            print('5', end='')
         for j in range(n - i):
-            print('0', end = '')
+            print('0', end='')

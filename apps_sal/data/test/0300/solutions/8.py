@@ -8,6 +8,3 @@ for i in range(n + 1):
     if cur_sum * 10 >= n * 45:
         print(i)
         break
-
-
-

@@ -14,14 +14,14 @@ for i, x in enumerate(C):
     l = 0
     r = 0
 
-    j = i-1
+    j = i - 1
     while j >= 0:
         if C[j] > C[i]:
             l = l + 1
-            
+
         j = j - 1
 
-    j = i+1
+    j = i + 1
     while j < N:
         if C[j] > C[i]:
             r = r + 1
@@ -33,9 +33,7 @@ for i, x in enumerate(C):
         return
 
 print("YES")
-for i in range(0, N-1):
+for i in range(0, N - 1):
     print(C[i], end=" ")
 
-print(C[N-1])
-
-
+print(C[N - 1])

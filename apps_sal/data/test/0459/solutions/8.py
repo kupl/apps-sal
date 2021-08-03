@@ -29,4 +29,3 @@ for i, j in pairs:
             ans = 'YES'
 
 print(ans)
-

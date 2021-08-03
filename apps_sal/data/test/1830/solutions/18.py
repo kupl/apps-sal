@@ -9,13 +9,12 @@ C = R.copy()
 for i in range(M):
     a, b = map(int, input().split())
 
-    if not R[a-1]:
+    if not R[a - 1]:
         r -= 1
-        R[a-1] = True
+        R[a - 1] = True
 
-    if not C[b-1]:
+    if not C[b - 1]:
         c -= 1
-        C[b-1] = True
+        C[b - 1] = True
 
-    print(r*c, end=' ')
-
+    print(r * c, end=' ')

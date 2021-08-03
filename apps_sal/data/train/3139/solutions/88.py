@@ -6,4 +6,3 @@ def index(array, n):
         return x
     else:
         return -1
-

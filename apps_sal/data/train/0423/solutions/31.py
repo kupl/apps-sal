@@ -4,7 +4,7 @@ class Solution:
             return 0
         dp = dict()
         for num in arr:
-            prev = num - difference 
+            prev = num - difference
             if prev in dp:
                 dp[num] = 1 + dp.get(prev, 0)
             else:

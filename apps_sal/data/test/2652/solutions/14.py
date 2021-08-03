@@ -1,7 +1,7 @@
 class UnionFind():
     # 初めは全ての頂点が別々の木の根
     def __init__(self, n):  # n要素で初期化
-        self.parent = list(range(n)) # 親
+        self.parent = list(range(n))  # 親
         self.rank = [0] * n   # 木の深さ
 
     def root_of(self, x):
@@ -20,7 +20,7 @@ class UnionFind():
         ry = self.root_of(y)
         if rx == ry:
             return
-        if self.rank[rx] < self.rank[ry]: # ランクの小さい木から大きい木の根に辺を張る
+        if self.rank[rx] < self.rank[ry]:  # ランクの小さい木から大きい木の根に辺を張る
             self.parent[rx] = ry  # rxをryの子とする
         else:
             self.parent[ry] = rx
@@ -61,7 +61,8 @@ E.sort()
 uf = UnionFind(N)
 cost = 0
 for c, (e1, e2) in E:
-    if uf.same(e1, e2): continue
+    if uf.same(e1, e2):
+        continue
     cost += c
     uf.union(e1, e2)
 

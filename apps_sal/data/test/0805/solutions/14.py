@@ -30,7 +30,7 @@ def on_segments_own_points(segment_list) -> int:
         start = alexey_l
     non_overlapped = 0
     # print(start, segment_list[i], segment_list[i+1])
-    for j in range(i+1, len(segment_list)):
+    for j in range(i + 1, len(segment_list)):
         l_curr, r_curr = segment_list[j]
         # print(start, l_curr, r_curr, alexey_r)
         if start < l_curr:
@@ -64,5 +64,6 @@ def __starting_point():
     segments = [tuple(map(int, input().split())) for i in range(n)]
 
     print(on_segments_own_points(segments))
+
 
 __starting_point()

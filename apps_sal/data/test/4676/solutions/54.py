@@ -6,6 +6,7 @@ def actual(O, E):
 
     return s
 
+
 O = input()
 E = input()
 

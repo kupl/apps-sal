@@ -6,8 +6,5 @@ def automorphic(n):
     ends = int(squared_str[-int(len_n):])
 
     val = 'Automorphic' if ends == n else 'Not!!'
-    
+
     return val
-
-
-

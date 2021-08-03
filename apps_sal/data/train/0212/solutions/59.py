@@ -11,4 +11,3 @@ class Solution:
                     O[a] += v * O[a // k]
             ans += O[a]
         return ans % 1000000007
-

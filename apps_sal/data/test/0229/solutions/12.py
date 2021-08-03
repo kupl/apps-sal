@@ -1,5 +1,5 @@
 n, a = int(input()), set(map(int, input().split()))
-if (len(a) <3):
+if (len(a) < 3):
     print("YES")
 elif len(a) == 3:
     a = sorted(list(a))

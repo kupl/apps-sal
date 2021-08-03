@@ -16,9 +16,9 @@ if A[0] != 0:
                 ans1 += (A_sum) - (-1)
                 A_sum = -1
 else:
-    ans1 = max(A)*N
+    ans1 = max(A) * N
 
-ans2 = abs(1-A[0])
+ans2 = abs(1 - A[0])
 A_sum = 1
 for i in range(1, N):
     if A_sum < 0:
@@ -32,7 +32,7 @@ for i in range(1, N):
             ans2 += (A_sum) - (-1)
             A_sum = -1
 
-ans3 = abs(A[0]-(-1))
+ans3 = abs(A[0] - (-1))
 A_sum = -1
 for i in range(1, N):
     if A_sum < 0:
@@ -48,4 +48,3 @@ for i in range(1, N):
 
 
 print((min(ans1, ans2, ans3)))
-

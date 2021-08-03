@@ -1,6 +1,8 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        l = 1; r = max(bloomDay)
+        l = 1
+        r = max(bloomDay)
+
         def check(days, k):
             made = 0
             soFar = 0
@@ -14,11 +16,11 @@ class Solution:
                     made += 1
             return made
         while(l < r):
-            mid = l+((r-l)>>1)
+            mid = l + ((r - l) >> 1)
             if(check(mid, k) >= m):
                 r = mid
             else:
-                l = mid+1
+                l = mid + 1
         if(check(l, k) >= m):
             return l
         return -1

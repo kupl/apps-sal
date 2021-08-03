@@ -5,6 +5,7 @@ r2, i2 = map(float, input().split())
 c1 = complex(r1, i1)
 c2 = complex(r2, i2)
 
+
 def printer(c):
     real = c.real
     imag = c.imag
@@ -12,8 +13,10 @@ def printer(c):
     sign = '+' if imag >= 0 else '-'
     print('{:.2f}{}{:.2f}i'.format(real, sign, abs(imag)))
 
+
 def mod(c):
     return (c.real * c.real + c.imag * c.imag) ** 0.5
+
 
 printer(c1 + c2)
 printer(c1 - c2)

@@ -6,4 +6,3 @@ ma = max(a) + m
 m -= max(a) * n - sum(a)
 mi = max(a) + max(0, (m + n - 1) // n)
 print(mi, ma)
-

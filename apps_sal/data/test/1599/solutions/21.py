@@ -14,12 +14,11 @@ a = [0] * slen
 
 count = 0
 for i in range(1, slen):
-    if s[i] == s[i-1]:
+    if s[i] == s[i - 1]:
         count += 1
     a[i] = count
 
 for [l, r] in data:
     ll = l - 1
     rr = r - 1
-    print(a[rr]-a[ll])
-
+    print(a[rr] - a[ll])

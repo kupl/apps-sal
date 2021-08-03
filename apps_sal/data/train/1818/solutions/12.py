@@ -6,9 +6,10 @@
 #         self.right = right
 class Solution:
     def smallestFromLeaf(self, root: TreeNode) -> str:
-        lists = self.recursiveSmallest(root) 
+        lists = self.recursiveSmallest(root)
         min_list = min(lists)
         return ''.join(min_list)
+
     def recursiveSmallest(self, node: TreeNode) -> List[str]:
         if node is None:
             return []
@@ -22,7 +23,7 @@ class Solution:
             smallest_right = self.recursiveSmallest(node.right)
             lists.extend(smallest_right)
         return [l + self.convert(node.val) for l in lists]
-    
+
     def convert(self, value: int) -> str:
         a_value = ord('a')
         return chr(a_value + value)

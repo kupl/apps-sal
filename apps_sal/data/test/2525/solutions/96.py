@@ -30,4 +30,3 @@ if rev == 0:
 else:
     S.reverse()
     print((''.join(S)))
-

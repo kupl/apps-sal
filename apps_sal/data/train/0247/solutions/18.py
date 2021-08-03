@@ -1,10 +1,10 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        #    h[key] stores list of indices, let ind = h[key][-1] 
-        #    Here, run[ind] == key (INCLUDING arr[ind - 1]) 
+        #    h[key] stores list of indices, let ind = h[key][-1]
+        #    Here, run[ind] == key (INCLUDING arr[ind - 1])
         run = [0, arr[0]]
         h = {0: 0, arr[0]: 1}
-        prefix = [len(arr)] 
+        prefix = [len(arr)]
         for i in range(1, len(arr)):
             if run[i] - target in h:
                 prefix.append(min(prefix[-1], i - h[run[i] - target]))

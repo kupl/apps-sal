@@ -20,10 +20,9 @@ for _ in range(t):
         if (x, y) in cnt and i - cnt[(x, y)] < ans[0]:
             ans[0] = i - cnt[(x, y)]
             ans[1], ans[2] = cnt[(x, y)], i
-        cnt[(x, y)] = i+1
+        cnt[(x, y)] = i + 1
 
     if ans[0] < inf:
         print(ans[1], ans[2])
     else:
         print(-1)
-

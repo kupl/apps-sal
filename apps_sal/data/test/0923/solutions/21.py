@@ -5,10 +5,11 @@ def inp(s):
     for i in range(len(s)):
         if s[i] == " ":
             a.append(int(s[j:i]))
-            j = i+1
-        if i == len(s)-1:
+            j = i + 1
+        if i == len(s) - 1:
             a.append(int(s[j:]))
     return a
+
 
 def chk(a):
     f = 0
@@ -29,25 +30,12 @@ for i in range(n):
         f = 1
         break
     for i in range(len(a)):
-        if i%2 == 0:
-            a[i] = (a[i]-1)%n
+        if i % 2 == 0:
+            a[i] = (a[i] - 1) % n
         else:
-            a[i] = (a[i]+1)%n
+            a[i] = (a[i] + 1) % n
 
 if f == 1:
-    print ("Yes")
+    print("Yes")
 else:
-    print ("No")
-        
-
-
-
-
-
-
-
-
-
-
-
-
+    print("No")

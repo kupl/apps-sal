@@ -7,8 +7,6 @@ while n != 0:
     p.append(1)
     n -= 1
 while len(p) >= 2 and p[-2] == p[-1]:
-        p[-2] += 1
-        p.pop()
+    p[-2] += 1
+    p.pop()
 print(*p)
-        
-

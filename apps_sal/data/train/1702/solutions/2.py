@@ -1,5 +1,6 @@
 import math
 
+
 class Sudoku(object):
     def __init__(self, board):
         self.board = board
@@ -34,11 +35,11 @@ class Sudoku(object):
         return self.check_seq(squares)
 
     def is_valid(self):
-        if (self.is_square() and
-                self.check_number() and
-                self.check_rows() and
-                self.check_cols() and
-                self.check_little_squares()):
+        if (self.is_square()
+                and self.check_number()
+                and self.check_rows()
+                and self.check_cols()
+                and self.check_little_squares()):
             return True
         else:
             return False

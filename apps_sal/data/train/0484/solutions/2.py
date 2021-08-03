@@ -9,18 +9,18 @@ class Solution:
                     return False
 
             return True
-        
+
         def makePal(ni):
             n = str(ni)
             l = len(n)
             hn = n[:l // 2]
             rhn = ''.join(reversed(hn))
-            
+
             if l % 2 != 0:
                 return int(hn + n[l // 2] + rhn)
             else:
                 return int(hn + rhn)
-                
+
         def nextPal(n):
             n = n + 10 ** (len(str(n)) // 2)
             return makePal(n)

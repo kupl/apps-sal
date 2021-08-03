@@ -6,16 +6,16 @@ def edge_intersects(edge, l):
             return True
     return False
 
-    
 
 def intersects(l):
     # Form the edges
-    edges = [(l[i], l[i+1]) for i in range(0, len(l)-1)]
-    
+    edges = [(l[i], l[i + 1]) for i in range(0, len(l) - 1)]
+
     for i in range(len(edges) - 1):
-        if edge_intersects(edges[i], edges[i+1:]) == True:
+        if edge_intersects(edges[i], edges[i + 1:]) == True:
             return True
     return False
+
 
 n = input()
 l = [int(item) for item in input().split()]
@@ -27,24 +27,5 @@ else:
     print("no")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##l = [int(item) for item in input().split()]
-##print(l)
-
+# print(l)

@@ -4,5 +4,4 @@ def multiply(n):
         return n * 5**len(a)
     elif n < 0:
         a = str(n)
-        return n * 5**(len(a)-1)
-
+        return n * 5**(len(a) - 1)

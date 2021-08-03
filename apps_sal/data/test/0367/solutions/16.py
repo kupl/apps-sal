@@ -2,6 +2,8 @@
 letters = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
 
 # Constructs the alphabetically smallest palindrome based on letter frequencies for a palindrome.
+
+
 def getPalindrome(counts):
     returnString = ""
 
@@ -18,6 +20,8 @@ def getPalindrome(counts):
             return (returnString + letters[i] + returnString[::-1])
 
 # Changes the counts of each letter in preparation for constructing a palindrome.
+
+
 def changeCounts(counts):
     allEven = True
 
@@ -38,6 +42,7 @@ def changeCounts(counts):
                         counts[25 - i] -= 1
                         break
         return counts
+
 
 inputArg = list(input())
 

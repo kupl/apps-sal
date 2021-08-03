@@ -1,8 +1,11 @@
 from collections import Counter
+
+
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
-        if len(arr) % 2 == 1: return False
-        
+        if len(arr) % 2 == 1:
+            return False
+
         lookup = collections.defaultdict(int)
         count = 0
         for i, num in enumerate(arr):
@@ -14,4 +17,3 @@ class Solution:
             else:
                 lookup[(num % k) or k] += 1
         return count == len(arr) // 2
-

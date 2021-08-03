@@ -1,9 +1,9 @@
 def main():
-    K,N = map(int,input().split())
+    K, N = map(int, input().split())
 
     if K % 2 == 0:
-        ans = [K//2]
-        for i in range(N-1):
+        ans = [K // 2]
+        for i in range(N - 1):
             ans.append(K)
     else:
         back = N // 2
@@ -18,6 +18,9 @@ def main():
                     ans.append(K)
     print(' '.join(map(str, ans)))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

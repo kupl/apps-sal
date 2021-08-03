@@ -1,7 +1,7 @@
-H, W = map(int,input().split())
+H, W = map(int, input().split())
 A = [input() for i in range(H)]
-row = [False]*H
-col = [False]*W
+row = [False] * H
+col = [False] * W
 for i in range(H):
     for j in range(W):
         if A[i][j] == '#':
@@ -11,5 +11,5 @@ for i in range(H):
     if row[i]:
         for j in range(W):
             if col[j]:
-                print(A[i][j], end = '')
+                print(A[i][j], end='')
         print()

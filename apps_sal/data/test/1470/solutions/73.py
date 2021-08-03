@@ -4,7 +4,6 @@ y = x % 11
 if y == 0:
     print(ans)
 elif y <= 6:
-    print((ans+1))
+    print((ans + 1))
 else:
-    print((ans+2))
-
+    print((ans + 2))

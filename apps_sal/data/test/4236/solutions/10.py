@@ -13,5 +13,6 @@ def go():
             c += 1
     print(c)
     return o.strip()
-print(go())
 
+
+print(go())

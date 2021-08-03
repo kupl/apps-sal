@@ -8,32 +8,32 @@ class Solution:
         for customer in customers:
             customer += waiting
             rotation += 1
-            if customer>=4:
-                profit += 4*boardingCost - runningCost
-                waiting = customer-4
+            if customer >= 4:
+                profit += 4 * boardingCost - runningCost
+                waiting = customer - 4
             else:
-                profit = customer*boardingCost - runningCost
+                profit = customer * boardingCost - runningCost
                 waiting = 0
-            
-            if max_profit<profit:
+
+            if max_profit < profit:
                 max_pprofit = profit
                 ans = rotation
-        
-        if waiting>0:
-            if waiting>4:
-                while waiting>4:
-                    profit += 4*boardingCost - runningCost
-                    waiting = waiting-4
+
+        if waiting > 0:
+            if waiting > 4:
+                while waiting > 4:
+                    profit += 4 * boardingCost - runningCost
+                    waiting = waiting - 4
                     rotation += 1
-                    #print(profit)
-                    if max_profit<profit:
+                    # print(profit)
+                    if max_profit < profit:
                         max_pprofit = profit
                         ans = rotation
-            
-        profit = waiting*boardingCost - runningCost
-        rotation+=1
-        if max_profit<profit:
+
+        profit = waiting * boardingCost - runningCost
+        rotation += 1
+        if max_profit < profit:
             max_pprofit = profit
             ans = rotation
-        
+
         return ans if ans else -1

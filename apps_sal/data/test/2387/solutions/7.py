@@ -2,13 +2,16 @@ import sys
 
 input = sys.stdin.readline
 
+
 def check(s):
     h = 0
     for p in s:
         b = h + p[0]
-        if b < 0: return False
+        if b < 0:
+            return False
         h += p[1]
     return True
+
 
 N = int(input())
 S = [input().strip() for i in range(N)]
@@ -26,7 +29,7 @@ for s in S:
     if h > 0:
         ps.append([b, h])
     else:
-        ms.append([b-h, -h])
+        ms.append([b - h, -h])
     total += h
 
 ps.sort(reverse=True)

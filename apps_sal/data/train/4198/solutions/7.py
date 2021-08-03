@@ -1,6 +1,7 @@
 import re
 from collections import Counter
 
+
 def prime_factor(n):
     if n == 1:
         return Counter([1])

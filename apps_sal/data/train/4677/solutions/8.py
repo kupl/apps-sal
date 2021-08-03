@@ -1,5 +1,6 @@
 from hashlib import md5
 
+
 def crack(hash):
     for i in range(10 ** 5):
         s = b"%05d" % i

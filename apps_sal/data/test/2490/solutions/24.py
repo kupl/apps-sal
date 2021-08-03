@@ -18,4 +18,3 @@ for i in range(len(digits)):
         ans += 10 - digits[i]
 
 print(ans)
-

@@ -1,1 +1,1 @@
-group_by_commas = lambda n:'{:,}'.format(n)
+def group_by_commas(n): return '{:,}'.format(n)

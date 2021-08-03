@@ -1,4 +1,4 @@
-def am_I_afraid(day,num):
+def am_I_afraid(day, num):
     if day == "Monday" and num == 12:
         return True
     if day == "Tuesday" and num > 95:

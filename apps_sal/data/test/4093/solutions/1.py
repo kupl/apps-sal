@@ -8,4 +8,3 @@ for _ in range(t):
     else:
         res = 2 * m
     print(res)
-

@@ -3,4 +3,4 @@ class Solution:
         if n == 0 or n == 1:
             return 0
         else:
-            return (int(n/2)) + self.minOperations(n-1)
+            return (int(n / 2)) + self.minOperations(n - 1)

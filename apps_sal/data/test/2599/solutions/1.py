@@ -3,5 +3,5 @@ ans = [[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], [1, 0, -1, -1, -1, -1, -1, -1, 
 
 T = int(input())
 for t in range(T):
-	n,k = [int(x) for x in input().split(' ')]
-	print(ans[n][k])
+    n, k = [int(x) for x in input().split(' ')]
+    print(ans[n][k])

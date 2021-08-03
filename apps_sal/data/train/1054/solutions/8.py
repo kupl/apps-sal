@@ -6,7 +6,7 @@ while t > 0:
     s = list(input())
     res = True
     l = 0
-    r = len(s)-1
+    r = len(s) - 1
     while l <= r:
         if s[l].isalpha() and s[r].isalpha():
             if s[l] != s[r]:
@@ -25,5 +25,3 @@ while t > 0:
         print("".join(s))
     else:
         print(-1)
-
-

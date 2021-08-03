@@ -22,4 +22,3 @@ for start in range(7):
     max_num_additional_days = max(max_num_additional_days, num_additional_days)
 
 print(max_num_additional_days + num_weeks * 7)
-

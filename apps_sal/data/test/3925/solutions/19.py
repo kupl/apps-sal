@@ -29,4 +29,3 @@ if s[0] != s[-1]:
         j += 1
     ans = max(ans, i + j)
 print(ans)
-

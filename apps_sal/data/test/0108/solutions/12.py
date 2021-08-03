@@ -10,19 +10,17 @@ ia = 0
 done = False
 
 for i, c in enumerate(s):
-	if c <= alph[ia]:
-		res.append(alph[ia])
-		ia += 1
-		if ia == len(alph):
-			done = True
-			idone = i
-			break
-	else:
-		res.append(c)
+    if c <= alph[ia]:
+        res.append(alph[ia])
+        ia += 1
+        if ia == len(alph):
+            done = True
+            idone = i
+            break
+    else:
+        res.append(c)
 
 if done:
-	print(''.join(res) + s[idone +1:])
+    print(''.join(res) + s[idone + 1:])
 else:
-	print ('-1')
-
-
+    print('-1')

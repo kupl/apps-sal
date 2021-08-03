@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 R, C, N = map(int, input().split())
 X = {0, R}
 Y = {0, C}
@@ -18,6 +20,7 @@ DX = {a: i for i, a in enumerate(sorted(list(X)))}
 DY = {a: i for i, a in enumerate(sorted(list(Y)))}
 R, C = DX[R], DY[C]
 
+
 def calc(a, b):
     if b == 0:
         return a
@@ -28,13 +31,14 @@ def calc(a, b):
     if a == 0:
         return R + C + R + (C - b)
 
+
 A = []
 for i, (x1, y1, x2, y2) in enumerate(Z):
     x3, y3, x4, y4 = DX[x1], DY[y1], DX[x2], DY[y2]
     A.append((calc(x3, y3), i))
     A.append((calc(x4, y4), i))
 
-A = [l[1] for l in sorted(A, key = lambda x: x[0])]
+A = [l[1] for l in sorted(A, key=lambda x: x[0])]
 B = []
 
 while A:

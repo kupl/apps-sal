@@ -8,7 +8,7 @@ class Solution:
     def longestZigZag(self, root: TreeNode) -> int:
         _, max_depth = self.zigzag(root)
         return max_depth
-    
+
     def zigzag(self, node: TreeNode, return_left=False) -> int:
         if node is None:
             return -1, 0

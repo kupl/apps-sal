@@ -5,7 +5,7 @@ class Solution:
         waiting = 0
         line_count = 0
         runtime = 1
-       
+
         while line_count < len(customers) or waiting != 0:
             if line_count < len(customers):
                 if customers[line_count] + waiting > 4:
@@ -25,6 +25,7 @@ class Solution:
             profit.append(curr_ppl_ttl * boardingCost - runningCost * runtime)
             line_count += 1
             runtime += 1
-        
-        if all(i < 0 for i in profit): return -1
+
+        if all(i < 0 for i in profit):
+            return -1
         return profit.index(max(profit)) + 1

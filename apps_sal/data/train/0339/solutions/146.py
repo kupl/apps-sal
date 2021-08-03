@@ -1,5 +1,7 @@
 from collections import Counter
 from itertools import combinations
+
+
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         def helper(nums1, nums2):

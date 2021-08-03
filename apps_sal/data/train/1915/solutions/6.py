@@ -1,11 +1,12 @@
 from collections import deque
 
+
 class Solution:
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        #if not sol return []
-        
-        #start from target and trace back, use dfs each time change slice in stamp to ??? or ??X
-        
+        # if not sol return []
+
+        # start from target and trace back, use dfs each time change slice in stamp to ??? or ??X
+
         list_s, list_t = list(stamp), list(target)
         res = []
 
@@ -16,21 +17,20 @@ class Solution:
                 changed = changed or self.remove_stamp(list_s, list_t, i, res)
 
         return res[::-1] if list_t == ['?'] * len(list_t) else []
-    
-    
+
     def remove_stamp(self, list_s, list_t, i, res):
         changed = False
-    
+
         for j in range(len(list_s)):
-            if list_t[i + j] == '?': 
+            if list_t[i + j] == '?':
                 continue
-            if list_t[i + j] != list_s[j]: 
+            if list_t[i + j] != list_s[j]:
                 return False
             changed = True
-            
+
         if changed:
             list_t[i:i + len(list_s)] = ['?'] * len(list_s)
-            
+
             res.append(i)
-            
+
         return changed

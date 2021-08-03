@@ -14,5 +14,3 @@ s = []
 for i in b:
     s.append(l[i])
 print(' '.join(map(str, s)))
-
-

@@ -6,5 +6,6 @@ def solve(s):
         x += s1[ord(ch) - ord('0')]
         y += s2[ord(ch) - ord('0')]
     return x == x[::-1] and y == y[::-1]
-print('Yes' if solve(input()) else 'No')
 
+
+print('Yes' if solve(input()) else 'No')

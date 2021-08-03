@@ -30,4 +30,3 @@ def binary_search(bad, good, key):
 
 K = int(input())
 print((binary_search(0, 3234566667, K)))
-

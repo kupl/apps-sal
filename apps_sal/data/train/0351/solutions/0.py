@@ -5,4 +5,3 @@ class Solution:
             res += Y % 2 + 1
             Y = int((Y + 1) / 2)
         return res + X - Y
-

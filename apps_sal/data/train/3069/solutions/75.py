@@ -17,5 +17,6 @@ welcome = {
     'welsh': 'Croeso'
 }
 
+
 def greet(language):
     return 'Welcome' if language not in welcome else welcome[language]

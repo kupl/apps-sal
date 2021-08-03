@@ -5,4 +5,3 @@ def target_game(values):
         sum1 = max(sum1 + value, sum2)
         sum1, sum2 = sum2, sum1
     return max(sum1, sum2)
-

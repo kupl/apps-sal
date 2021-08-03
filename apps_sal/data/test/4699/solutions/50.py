@@ -11,5 +11,4 @@ while True:
     if f:
         print(v)
         return
-    v+=1
-
+    v += 1

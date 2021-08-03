@@ -6,4 +6,3 @@ class Hero(object):
         self.damage = 5
         self.experience = 0
         return
-

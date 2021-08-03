@@ -7,11 +7,11 @@ def number(bus_stops):
     '''
     passengersOn = 0
     passengersOff = 0
-    
+
     try:
-        res = sum(i[0] for i in bus_stops)- sum(i[1] for i in bus_stops) 
-            
-    except: 
+        res = sum(i[0] for i in bus_stops) - sum(i[1] for i in bus_stops)
+
+    except:
         print("There was an error")
-        
+
     return res

@@ -20,4 +20,3 @@ while i < n:
     v_prev, i_prev = aa[i]
 
 print(*ans, sep="\n")
-

@@ -3,9 +3,9 @@ def riders(stations, station_x):
     d = 0
     for i, e in enumerate(stations, 1):
         d += e
-        if i+1 == station_x:
+        if i + 1 == station_x:
             r += 1
-            d = 2*e
+            d = 2 * e
             if d > 100:
                 d = e
                 r += 1

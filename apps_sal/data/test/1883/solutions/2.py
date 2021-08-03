@@ -9,8 +9,9 @@ for i in range(1, n + 1):
         x = b[i]
         while p[x] == 1:
             t.append(x)
-            x = b[x]            
-        if len(t) > len(ans): ans = t[:]
+            x = b[x]
+        if len(t) > len(ans):
+            ans = t[:]
 ans.reverse()
 print(len(ans))
 print(' '.join(str(x) for x in ans))

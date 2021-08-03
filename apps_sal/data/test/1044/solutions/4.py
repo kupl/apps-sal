@@ -8,7 +8,8 @@ def main():
         print(2 - (s & 1))
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

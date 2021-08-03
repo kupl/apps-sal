@@ -7,7 +7,7 @@ for j in range(n):
     ans, res = 0, 1001001001
     for i in range(m):
         c, d = cd[i][0], cd[i][1]
-        if abs(a-c)+abs(b-d) < res:
-            res = abs(a-c)+abs(b-d)
-            ans = i+1
+        if abs(a - c) + abs(b - d) < res:
+            res = abs(a - c) + abs(b - d)
+            ans = i + 1
     print(ans)

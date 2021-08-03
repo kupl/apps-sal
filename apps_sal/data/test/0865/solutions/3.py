@@ -7,4 +7,3 @@ for w, v in sorted(zip(*[iter(AB)] * 2)):
     dp[w:T + w] = maximum(dp[w:T + w], dp[:T] + v)
 
 print((dp.max()))
-

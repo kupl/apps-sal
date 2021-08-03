@@ -6,4 +6,3 @@ for word in input().split('heavy'):
     i += 1
 
 print(res)
-

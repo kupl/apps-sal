@@ -6,7 +6,7 @@ if not K:
 
 ans = 0
 
-for b in range(1, N+1):
+for b in range(1, N + 1):
     if b - 1 < K:
         continue
 

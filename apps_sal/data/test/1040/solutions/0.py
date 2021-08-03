@@ -12,21 +12,21 @@ ans = N
 stack = []
 
 for s in S:
-  if s == "f":
-    stack.append(0)
-  elif s == "o":
-    if stack and stack[-1] == 0:
-      stack[-1] = 1
+    if s == "f":
+        stack.append(0)
+    elif s == "o":
+        if stack and stack[-1] == 0:
+            stack[-1] = 1
+        else:
+            # 最後がfでない状態でoが来た時、このoが消えることはない。
+            stack = []
+    elif s == "x":
+        if stack and stack[-1] == 1:
+            stack.pop()
+            ans -= 3
+        else:
+            stack = []
     else:
-      # 最後がfでない状態でoが来た時、このoが消えることはない。
-      stack = []
-  elif s == "x":
-    if stack and stack[-1] == 1:
-      stack.pop()
-      ans -= 3
-    else:
-      stack = []
-  else:
-    stack = []
-      
+        stack = []
+
 print(ans)

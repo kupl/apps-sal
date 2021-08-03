@@ -16,10 +16,10 @@ class Solution:
                     cur = stack.pop()
                 if stack:
                     left = stack[-1]
-                    dp[right] = dp[left] + heights[right] * (right - left) 
+                    dp[right] = dp[left] + heights[right] * (right - left)
                 else:
                     left = -1
-                    dp[right] = heights[right] * (right - left) 
+                    dp[right] = heights[right] * (right - left)
                 stack.append(right)
             res += sum(dp)
         return res

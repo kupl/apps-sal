@@ -1,6 +1,6 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
-from  collections import deque
 
 
 d = deque()
@@ -14,4 +14,4 @@ for l in s:
         d.pop()
         c += 1
 
-print("Yes" if c%2 else "No")
+print("Yes" if c % 2 else "No")

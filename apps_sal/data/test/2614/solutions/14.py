@@ -2,6 +2,7 @@
 
 import collections
 
+
 def main():
     for _ in range(int(input())):
         n = int(input())
@@ -16,7 +17,9 @@ def main():
         rem = sum(a[1:])
         print(rem // bins)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

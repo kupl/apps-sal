@@ -9,14 +9,14 @@ l = [int(i) for i in input().split()]
 o = []
 e = []
 for i in l:
-    if i%2==0:
+    if i % 2 == 0:
         e.append(i)
     else:
         o.append(i)
 o.sort()
 e.sort()
 if len(e) > len(o):
-    o, e = e, o #o
+    o, e = e, o  # o
 for i in range(len(e)):
     e.pop(-1)
     o.pop(-1)

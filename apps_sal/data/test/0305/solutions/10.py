@@ -15,4 +15,3 @@ else:
     d -= min(b, c, d)
     ans += e * min(a, d)
     print(ans)
-

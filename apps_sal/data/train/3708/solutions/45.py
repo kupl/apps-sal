@@ -2,7 +2,7 @@ def hex_digit_to_dec(s):
     if s.isdigit():
         return int(s)
     return ord(s) - ord('a') + 10
-    
+
 
 def hex_to_dec(s):
     res = 0

@@ -1,3 +1,2 @@
-make_upper_case = lambda a : a.upper()
-    # Code here
-
+def make_upper_case(a): return a.upper()
+# Code here

@@ -26,7 +26,7 @@ def isValid(formula):
                     return True
                 else:
                     return False
-    else: 
+    else:
         if f1.find('8') != -1:
             for i in f1:
                 b = i
@@ -52,7 +52,5 @@ def isValid(formula):
                         return False
         else:
             return False
-            
-            
-    return True
 
+    return True

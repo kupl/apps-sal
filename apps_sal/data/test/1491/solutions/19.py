@@ -25,5 +25,3 @@ else:
     a.sort()
     ans = sum(a[:delta])
 print(ans)
-        
-

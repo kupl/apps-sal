@@ -1,5 +1,6 @@
 def nQueen(n):
-    if n in [2, 3]: return []
+    if n in [2, 3]:
+        return []
 
     odds = [*range(1, n, 2)]
     evens = [*range(0, n, 2)]

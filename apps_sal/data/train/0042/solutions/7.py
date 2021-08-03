@@ -1,6 +1,6 @@
 t = int(input())
 
-for _ in [0]*t:
+for _ in [0] * t:
     s = input()
     stack = []
     zero_count = 0
@@ -25,4 +25,3 @@ for _ in [0]*t:
         stack = new_stack
 
     print(ans)
-

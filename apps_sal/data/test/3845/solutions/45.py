@@ -11,10 +11,10 @@ f = [['#' for _ in range(100)] for __ in range(100)]
 
 i, j = (0, 0)
 
-for _ in range(b-1):
-    f[i][j+1] = '.'
-    f[i+1][j+1] = '.'
-    f[i+1][j] = '.'
+for _ in range(b - 1):
+    f[i][j + 1] = '.'
+    f[i + 1][j + 1] = '.'
+    f[i + 1][j] = '.'
 
     j += 2
 
@@ -27,7 +27,7 @@ i, j = (99, 0)
 if b == 1:
     a += 1
 
-for _ in range(a-1):
+for _ in range(a - 1):
     f[i][j] = '.'
     j += 2
 
@@ -41,4 +41,3 @@ if flip:
 
 for row in f:
     print((''.join(row)))
-

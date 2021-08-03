@@ -43,4 +43,3 @@ for i in range(len(t)):
     base = n_base
 
 print((loop * len(s) + base + 1))
-

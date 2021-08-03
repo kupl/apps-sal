@@ -1,4 +1,4 @@
-(x,y,z,t1,t2,t3) = map(int, input().split(' '))
+(x, y, z, t1, t2, t3) = map(int, input().split(' '))
 
 
 diff = abs(x - y)

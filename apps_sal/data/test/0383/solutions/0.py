@@ -1,6 +1,7 @@
 ans = {}
 
-def gen(n, k, d, used = False):
+
+def gen(n, k, d, used=False):
     if not ans.get((n, k, d, used)):
         if not n and used:
             ans[(n, k, d, used)] = 1
@@ -10,5 +11,4 @@ def gen(n, k, d, used = False):
 
 
 n, k, d = list(map(int, input().split()))
-print(gen(n, k, d)  % 1000000007)
-
+print(gen(n, k, d) % 1000000007)

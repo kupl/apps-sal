@@ -15,4 +15,3 @@ elif len(arr) == 3:
         print(-1)
 else:
     print(-1)
-

@@ -24,7 +24,7 @@ class Solution:
 
             if v2 != 0:
                 heapq.heappush(items, (v2, k2))
-                
+
         if len(items) == 1:
             res.append(items[0][1])
 

@@ -4,7 +4,7 @@ n, m, p = [int(v) for v in input().split()]
 s = [int(v) for v in input().split()]
 
 d = {'.': 0, '#': 10}
-d.update({str(v) : v for v in range(1, p + 1)})
+d.update({str(v): v for v in range(1, p + 1)})
 
 field = [[d[c] for c in input().strip()] for _ in range(n)]
 
@@ -22,10 +22,12 @@ for i in range(n):
 off = [(1, 0), (0, 1), (-1, 0), (0, -1)]
 curr_lim = s[:]
 
+
 def dump():
     for line in field:
         print(line)
     print()
+
 
 while True:
     was = False
@@ -57,4 +59,3 @@ while True:
         break
 
 print(' '.join(str(v) for v in ans))
-

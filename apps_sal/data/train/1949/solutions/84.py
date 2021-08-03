@@ -10,11 +10,10 @@ class Solution:
                 max_count = max(max_gold(ni, nj), max_count)
             grid[i][j] = origin
             return max_count + origin
-        
+
         mx = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 mx = max(mx, max_gold(i, j))
-        
-        return mx
 
+        return mx

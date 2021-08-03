@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     n = int(sys.stdin.readline().strip())
     #n, m = map(int, sys.stdin.readline().split())
@@ -34,41 +35,7 @@ def main():
         ans -= 1
         #print(" ", i, res)
     print(max(ans, res))
-    
-   
-        
-        
-            
-        
-                
-            
-            
-        
-            
-    
-    
-    
-    
-    
-    
-            
-                
-        
-    
-            
-        
 
-            
-        
-    
-                
-    
-    
-    
-            
-    
-        
-    
 
 for i in range(int(sys.stdin.readline().strip())):
     main()

@@ -6,4 +6,3 @@ def find_multiples(integer, limit):
         lst.append(var)
         count += 1
     return lst
-

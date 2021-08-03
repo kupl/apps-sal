@@ -9,5 +9,3 @@ for i, d in enumerate(data):
     alc *= 2
     alc %= MOD
 print(ans * (pow(alc, k, MOD) - 1) * pow(alc - 1, MOD - 2, MOD) % MOD)
-
-

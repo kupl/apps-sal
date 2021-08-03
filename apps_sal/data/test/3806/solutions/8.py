@@ -13,6 +13,7 @@ class vector:
     def cross_product(self, v):
         return self.x * v.y - self.y * v.x
 
+
 class line:
     def __init__(self, a, b):
         self.a = a
@@ -20,6 +21,7 @@ class line:
 
     def distance(self, p):
         return abs(vector(p.x - self.a.x, p.y - self.a.y).cross_product(vector(p.x - self.b.x, p.y - self.b.y)) / vector(self.a.x - self.b.x, self.a.y - self.b.y).length())
+
 
 class ray:
     def __init__(self, a, b):
@@ -30,6 +32,7 @@ class ray:
         if dot_product(vector(self.b.x - self.a.x, self.b.y - self.a.y), vector(p.x - self.a.x, p.y - self.a.y)) >= 0:
             return line(self.a, self.b).distance(p)
         return vector(self.a.x - p.x, self.a.y - p.y).length()
+
 
 class segment:
     def __init__(self, a, b):

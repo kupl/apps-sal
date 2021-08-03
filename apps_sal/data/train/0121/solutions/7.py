@@ -8,10 +8,11 @@ def main():
         A = list(map(int, input().split()))
 
         A.sort()
-        print(A[N] - A[N-1])
+        print(A[N] - A[N - 1])
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

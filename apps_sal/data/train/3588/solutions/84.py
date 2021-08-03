@@ -4,4 +4,3 @@ def quadratic(x1, x2):
     else:
         b = (x1 ** 2 - x2 ** 2) / (x2 - x1)
         return (1, int(b), int(-1 * (x1 ** 2) - b * x1))
-

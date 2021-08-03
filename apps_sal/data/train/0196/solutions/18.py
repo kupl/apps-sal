@@ -6,7 +6,7 @@ class Solution:
         for num in a:
             current = num + max(0, current)
             ans = max(ans, current)
-        
+
         right_sum = [0] * n
         right_sum[-1] = a[-1]
         right_most = [float('-inf')] * n
@@ -19,4 +19,3 @@ class Solution:
             left_sum += a[i]
             ans = max(ans, left_sum + right_most[i + 2])
         return ans
-

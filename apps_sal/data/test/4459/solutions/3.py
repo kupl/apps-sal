@@ -12,17 +12,16 @@ def main():
             adic[a] += 1
         if adic[a] > a:
             ans += 1
-    
+
     for num in adic:
         if adic[num] < num:
             ans += adic[num]
 
     print(ans)
-            
-
-        
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

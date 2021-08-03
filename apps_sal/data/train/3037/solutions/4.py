@@ -6,6 +6,6 @@ def obtain_max_number(arr):
             if arr.count(n) > 1:
                 arr.remove(n)
                 arr.remove(n)
-                arr.append(n*2)
-    
+                arr.append(n * 2)
+
     return max(arr)

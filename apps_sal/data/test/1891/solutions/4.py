@@ -5,6 +5,7 @@ a_is = [int(x) - 1 for x in input().split()]
 
 a_is.sort()
 
+
 def how_many(i, j):
     count = bisect.bisect_left(a_is, j) - bisect.bisect_left(a_is, i)
     # print('i, j, count', i, j, count)
@@ -33,4 +34,3 @@ def get_cost(i, j):
 
 
 print(get_cost(0, 2**n))
-

@@ -1,12 +1,12 @@
 class Solution:
     def countRoutes(self, L: List[int], start: int, finish: int, fuel: int) -> int:
-        
-        cost = lambda x, y: abs(L[x] - L[y])
+
+        def cost(x, y): return abs(L[x] - L[y])
         ways = {}
-        
+
         def numWays(s, f):
             if (s, f) not in ways:
-                
+
                 if f < cost(s, finish):
                     return 0
 
@@ -17,8 +17,5 @@ class Solution:
 
                 ways[(s, f)] = total + (s == finish)
             return ways[(s, f)]
-            
-        return numWays(start, fuel) % (10 ** 9 + 7)
-            
-        
 
+        return numWays(start, fuel) % (10 ** 9 + 7)

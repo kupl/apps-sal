@@ -9,4 +9,3 @@ for i in range(n - 1):
 for i in range(n - 1, 0, -1):
     r[i - 1] = gcd(r[i], a[i])
 print((max(gcd(l[i], r[i]) for i in range(n))))
-

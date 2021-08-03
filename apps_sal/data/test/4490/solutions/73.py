@@ -7,4 +7,3 @@ elif b == "G":
     print("C")
 else:
     print("A")
-

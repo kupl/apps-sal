@@ -17,4 +17,3 @@ for ai in a:
         s -= heapq.heappop(coins)
 
 print(*[c for i, c in sorted(ans)])
-

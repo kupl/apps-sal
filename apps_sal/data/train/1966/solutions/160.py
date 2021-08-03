@@ -19,4 +19,3 @@ class Solution:
             # print(height)
             # print(ret)
         return ret
-

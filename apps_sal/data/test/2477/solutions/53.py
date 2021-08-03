@@ -11,7 +11,8 @@ while right - left > 1:
     jk = 0
     for i in range(N):
         jk += A[i] // mid - 1
-        if A[i] % mid != 0: jk += 1
+        if A[i] % mid != 0:
+            jk += 1
     if jk <= K:
         right = mid
     else:

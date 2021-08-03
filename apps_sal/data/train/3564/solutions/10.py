@@ -1,1 +1,1 @@
-stringy = lambda size: ('10' * size)[:size]
+def stringy(size): return ('10' * size)[:size]

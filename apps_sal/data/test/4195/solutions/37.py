@@ -1,17 +1,17 @@
-d,n = map(int,input().split())
+d, n = map(int, input().split())
 
-if d ==0:
-    if n ==100:
+if d == 0:
+    if n == 100:
         print(101)
     else:
         print(n)
-elif d==1:
-    if n==100:
+elif d == 1:
+    if n == 100:
         print(10100)
     else:
-        print(100*n)
+        print(100 * n)
 else:
-    if n==100:
+    if n == 100:
         print(1010000)
     else:
-        print(10000*n)
+        print(10000 * n)

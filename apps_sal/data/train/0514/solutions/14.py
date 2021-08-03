@@ -4,5 +4,5 @@ y = int(input())
 if x > y:
     c = x - y
 else:
-    c = x + y 
+    c = x + y
 print(c)

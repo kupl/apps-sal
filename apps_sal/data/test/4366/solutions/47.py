@@ -1,6 +1,6 @@
-a,b=map(int,input().split())
+a, b = map(int, input().split())
 
-if a+b>=24:
-    print(a+b-24)
+if a + b >= 24:
+    print(a + b - 24)
 else:
-    print(a+b)
+    print(a + b)

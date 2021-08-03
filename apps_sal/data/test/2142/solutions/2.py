@@ -12,21 +12,20 @@ def lcm(a, b):
 
 
 for _ in range(int(input())):
-    n,m=list(map(int,input().split()))
+    n, m = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-    f=-1
+    f = -1
     a.sort()
     b.sort()
-    d={}
+    d = {}
     for i in a:
-        d[i]=1
+        d[i] = 1
     for i in b:
         if i in d:
-            f=i
-    if (f==-1):
+            f = i
+    if (f == -1):
         print('NO')
     else:
         print('YES')
-        print(1,f)
-
+        print(1, f)

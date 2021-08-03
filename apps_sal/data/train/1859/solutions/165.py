@@ -10,7 +10,7 @@ class Solution:
                 elif i == 0 or j == 0:
                     count += 1
                 else:
-                    matrix[i][j] = min(matrix[i-1][j-1], matrix[i-1][j], matrix[i][j-1]) + 1
+                    matrix[i][j] = min(matrix[i - 1][j - 1], matrix[i - 1][j], matrix[i][j - 1]) + 1
                     count += matrix[i][j]
-                
+
         return count

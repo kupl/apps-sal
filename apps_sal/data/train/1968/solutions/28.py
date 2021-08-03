@@ -2,12 +2,12 @@ class TrieNode:
     def __init__(self):
         self.children = {}
         self.isEnd = False
-        
-        
+
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-        
+
     def insert(self, word):
         node = self.root
         for char in word:
@@ -15,15 +15,15 @@ class Trie:
                 node.children[char] = TrieNode()
             node = node.children[char]
         node.isEnd = True
-        
+
     def find(self):
         def dfs(path, node):
             if node.isEnd:
                 ans.append('/' + '/'.join(path))
-                return 
+                return
             for c in node.children:
                 dfs(path + [c], node.children[c])
-                
+
         ans = []
         dfs([], self.root)
         return ans

@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
-        ##转化成stack 来做
+        # 转化成stack 来做
         if not head:
             return head
         val_list = []
@@ -19,9 +19,3 @@ class Solution:
                 res[stack.pop()] = val_list[i]
             stack.append(i)
         return res
-
-    
-    
-            
-            
-

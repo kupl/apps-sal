@@ -6,6 +6,3 @@ for i in alphabet:
         print(i)
         return
 print("None")
-
-
-

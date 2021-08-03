@@ -1,7 +1,7 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         mem = {}
-        
+
         for idx, x in enumerate(A):
             for i2 in range(idx):
                 v2 = A[i2]

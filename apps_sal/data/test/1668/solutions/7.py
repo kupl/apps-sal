@@ -12,13 +12,14 @@ def run_length_compress(string):
         if string[begin] == string[end]:
             end += 1
             cnt += 1
-        else: 
+        else:
             ans.append((cnt, string[begin]))
             begin = end
             end = begin + 1
             cnt = 1
-    
+
     return ans
+
 
 t = int(input())
 for _ in range(t):
@@ -44,7 +45,7 @@ for _ in range(t):
                     ans_num += 1
                 break
             else:
-                p[i] = str((int(p[i][0])+1) % 10) + p[i][1:]
+                p[i] = str((int(p[i][0]) + 1) % 10) + p[i][1:]
                 flag = True
     print(ans_num)
     for i in ans:

@@ -6,10 +6,13 @@ def path_finder(maze):
         x, y = min(bag, key=bag.get)
         rounds = bag.pop((x, y))
         seen.add((x, y))
-        if (x, y) == end: return rounds
+        if (x, y) == end:
+            return rounds
         for u, v in (-1, 0), (0, 1), (1, 0), (0, -1):
             m, n = x + u, y + v
-            if (m, n) in seen or not (0 <= m <= h and 0 <= n <= w) or grid[m][n] != '.': continue
+            if (m, n) in seen or not (0 <= m <= h and 0 <= n <= w) or grid[m][n] != '.':
+                continue
             new_rounds = rounds + 1
-            if new_rounds < bag.get((m, n), float('inf')): bag[m, n] = new_rounds
+            if new_rounds < bag.get((m, n), float('inf')):
+                bag[m, n] = new_rounds
     return False

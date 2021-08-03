@@ -10,4 +10,3 @@ for i in range(N - 1, M):
     ans = min(ans, puzzles[i] - puzzles[i - N + 1])
 
 print(ans)
-

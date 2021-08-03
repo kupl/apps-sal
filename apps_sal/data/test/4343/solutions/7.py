@@ -10,7 +10,7 @@ for i in range(k):
 
 num3 = [0] * k
 rem = 0
-for i in range(k-1,-1,-1):
+for i in range(k - 1, -1, -1):
     num3[i] = num2[i] - num[i] - rem
     if num3[i] < 0:
         num3[i] += 26
@@ -24,9 +24,9 @@ while j < k:
     num3[j] = (num3[j] + rem) // 2
     rem = 26 * rem2
     j += 1
-    
+
 rem = 0
-for i in range(k-1,-1,-1):
+for i in range(k - 1, -1, -1):
     num[i] += num3[i] + rem
     if num[i] > 25:
         num[i] -= 26
@@ -34,5 +34,4 @@ for i in range(k-1,-1,-1):
     else:
         rem = 0
 for i in num:
-    print(alth[i],end="")
-
+    print(alth[i], end="")

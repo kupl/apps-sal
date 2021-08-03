@@ -1,1 +1,1 @@
-is_digit = lambda n: (False, n.isdigit())[len(n)==1]
+def is_digit(n): return (False, n.isdigit())[len(n) == 1]

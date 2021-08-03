@@ -5,7 +5,7 @@ def encode(message, key):
     letters = list(message)
     alphabet = list('abcdefghijklmnopqrstuvwxyz')
     for i in range(len(alphabet)):
-        dict_ = {alphabet[i]: i+1}
+        dict_ = {alphabet[i]: i + 1}
         dicti.update(dict_)
     for letter in letters:
         for k, v in dicti.items():
@@ -21,5 +21,5 @@ def encode(message, key):
             ans.append(new_code)
         elif j == len(message):
             break
-    #print(ans)
+    # print(ans)
     return ans

@@ -7,6 +7,7 @@ def sub(A):
         else:
             A[i] += 1
 
+
 def main():
     K = int(input())
     if K == 0:
@@ -20,11 +21,8 @@ def main():
     for _ in range(50 - (K % 50)):
         sub(t)
     return 50, t
-    
-
 
 
 N, A = main()
 print(N)
 print((*A))
-

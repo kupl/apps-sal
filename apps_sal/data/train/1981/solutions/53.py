@@ -22,5 +22,5 @@ class Solution:
         for k in sorted(c.elements(), reverse=True):
             res += k * n[ni]
             ni += 1
-            
+
         return res % (10**9 + 7)

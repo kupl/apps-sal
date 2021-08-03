@@ -27,4 +27,3 @@ while th > 0:
     th = th // 2
 
 print(str(ans - 2))
-

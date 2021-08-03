@@ -1,8 +1,10 @@
+from itertools import product
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7 # 998244353
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
-input = lambda:sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 class MaxFlow(object):
     def __init__(self, n):
@@ -60,7 +62,7 @@ class MaxFlow(object):
                 res += f
         return res
 
-from itertools import product
+
 def resolve():
     m, n = map(int, input().split())
     grid = [input() for _ in range(m)]
@@ -86,4 +88,6 @@ def resolve():
     if ans > 10 << 30:
         ans = -1
     print(ans)
+
+
 resolve()

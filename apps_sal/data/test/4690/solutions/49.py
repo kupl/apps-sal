@@ -19,6 +19,5 @@
 # 標準入力から A, B, C, D の値を取得する
 a, b, c, d = list(map(int, input().split()))
 
-result = [a * b, c * d] # 結果格納用リスト
+result = [a * b, c * d]  # 結果格納用リスト
 print((max(result)))
-

@@ -1,8 +1,8 @@
-S=input()
-T=input()
+S = input()
+T = input()
 
-dict_S={}
-dict_T={}
+dict_S = {}
+dict_T = {}
 
 for x, y in zip(S, T):
     if x not in dict_S:

@@ -28,4 +28,3 @@ for result in results:
         mR = result[0]
         mN = result[1]
 fout.write(str(mN + 1))
-

@@ -6,7 +6,8 @@ def main():
         print(0)
         return
     if m == 1:
-        q = n // 6; r = n % 6
+        q = n // 6
+        r = n % 6
         if r == 4:
             print(n - 2)
         elif r == 5:
@@ -21,4 +22,6 @@ def main():
         print(n * m)
         return
     print(n * m - 1)
+
+
 main()

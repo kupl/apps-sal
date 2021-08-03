@@ -1,6 +1,6 @@
 def __starting_point():
-    
-    n = int( input() )
+
+    n = int(input())
 
     visitors = set()
     basevisitors = set()
@@ -8,27 +8,27 @@ def __starting_point():
     log = []
     for _ in range(n):
 
-        sign , ID = input().split()
-        log.append( ( sign , ID ) )
+        sign, ID = input().split()
+        log.append((sign, ID))
 
         if sign == "+":
-            visitors.add( ID )
+            visitors.add(ID)
         else:
             if ID in visitors:
-                visitors.remove( ID )
+                visitors.remove(ID)
             else:
-                basevisitors.add( ID )
+                basevisitors.add(ID)
 
-
-    res = len( basevisitors )
+    res = len(basevisitors)
     for aLog in log:
 
         if aLog[0] == "+":
-            basevisitors.add( aLog[1] )
-            res = max( res , len(basevisitors) )
+            basevisitors.add(aLog[1])
+            res = max(res, len(basevisitors))
         else:
-            basevisitors.remove( aLog[1] )
+            basevisitors.remove(aLog[1])
 
-    print( res )
+    print(res)
+
 
 __starting_point()

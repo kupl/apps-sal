@@ -19,4 +19,3 @@ for i in range(len(arr)):
     if t[i] != 1:
         taxi3[j] += 1
 print(" ".join(map(str, taxi3)))
-

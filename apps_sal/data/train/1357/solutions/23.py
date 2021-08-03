@@ -3,7 +3,7 @@ n = int(input())
 while n > 0:
 
     t = int(input())
-    d = {5: 0, 10:0}
+    d = {5: 0, 10: 0}
 
     arr = list(map(int, input().split()))
 
@@ -36,4 +36,4 @@ while n > 0:
             break
     else:
         print("YES")
-    n-=1
+    n -= 1

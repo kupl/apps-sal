@@ -1,3 +1,1 @@
-reverseWords = lambda s: " ".join(reversed(s.split(" ")))
-
-
+def reverseWords(s): return " ".join(reversed(s.split(" ")))

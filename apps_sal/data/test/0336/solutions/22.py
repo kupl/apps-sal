@@ -1,6 +1,6 @@
 import sys
 
-n, a, b, c, d = list(map(int,sys.stdin.readline().split()))
+n, a, b, c, d = list(map(int, sys.stdin.readline().split()))
 
 c1 = 0
 for x11 in range(n):
@@ -11,4 +11,3 @@ for x11 in range(n):
     if x13 >= 1 and x13 <= n and x31 >= 1 and x31 <= n and x33 >= 1 and x33 <= n:
         c1 = c1 + 1
 print(c1 * n)
-

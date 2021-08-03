@@ -7,81 +7,79 @@ isA = False
 d = {}
 
 for i in range(n):
-	line = input()
+    line = input()
 
-	c = int(line.split(' ')[0])
-	s = line.split(' ')[1]
+    c = int(line.split(' ')[0])
+    s = line.split(' ')[1]
 
-	if 'A' in s:
-		isA = True
+    if 'A' in s:
+        isA = True
 
-	if 'B' in s:
-		isB = True
+    if 'B' in s:
+        isB = True
 
-	if 'C' in s:
-		isC = True
+    if 'C' in s:
+        isC = True
 
-	# print(s)
+    # print(s)
 
-	name = ''.join(sorted(s))
+    name = ''.join(sorted(s))
 
-	try:
-		d[name] = min(c, d[name])
+    try:
+        d[name] = min(c, d[name])
 
-	except:
-		d[name] = c
+    except:
+        d[name] = c
 
 if not isA or not isB or not isC:
-	print(-1)
+    print(-1)
 
 else:
-	arr = []
+    arr = []
 
-	try:
-		arr.append(d['A'] + d['B'] + d['C'])
-	except:
-		pass
+    try:
+        arr.append(d['A'] + d['B'] + d['C'])
+    except:
+        pass
 
-	try:
-		arr.append(d['A'] + d['BC'])
-	except:
-		pass
+    try:
+        arr.append(d['A'] + d['BC'])
+    except:
+        pass
 
-	try:
-		arr.append(d['AB'] + d['C'])
-	except:
-		pass
+    try:
+        arr.append(d['AB'] + d['C'])
+    except:
+        pass
 
-	try:
-		arr.append(d['AC'] + d['B'])
-	except:
-		pass
+    try:
+        arr.append(d['AC'] + d['B'])
+    except:
+        pass
 
-	try:
-		arr.append(d['AB'] + d['BC'])
-	except:
-		pass
+    try:
+        arr.append(d['AB'] + d['BC'])
+    except:
+        pass
 
-	try:
-		arr.append(d['AC'] + d['BC'])
-	except:
-		pass
+    try:
+        arr.append(d['AC'] + d['BC'])
+    except:
+        pass
 
-	try:
-		arr.append(d['AB'] + d['AC'])
-	except:
-		pass
+    try:
+        arr.append(d['AB'] + d['AC'])
+    except:
+        pass
 
-	try:
-		arr.append(d['ABC'])
-	except:
-		pass
+    try:
+        arr.append(d['ABC'])
+    except:
+        pass
 
-	try:
-		arr.append(d['ABC'])
-	except:
-		pass
+    try:
+        arr.append(d['ABC'])
+    except:
+        pass
 
-	print(min(arr))
-
-
+    print(min(arr))

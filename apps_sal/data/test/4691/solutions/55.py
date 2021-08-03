@@ -1,5 +1,5 @@
 n = int(input())
-ac, wa, tle, re = 0, 0, 0, 0;
+ac, wa, tle, re = 0, 0, 0, 0
 
 for i in range(n):
     s = input()

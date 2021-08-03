@@ -2,7 +2,7 @@ n = int(input())
 l1 = []
 l2 = []
 for i in range(n):
-    a,b = map(int,input().split())
+    a, b = map(int, input().split())
     l1.append(a)
     l2.append(b)
 
@@ -22,6 +22,6 @@ while l1:
             ans = t
     else:
         l2.pop()
-        cur-=1
+        cur -= 1
 
-print(ans,mx)
+print(ans, mx)

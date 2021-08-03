@@ -1,4 +1,6 @@
 from math import *
+
+
 def IsPrime(n):
     for i in range(2, ceil(sqrt(n)) + 1):
         if not (n % i):

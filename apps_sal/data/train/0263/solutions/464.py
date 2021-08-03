@@ -13,5 +13,5 @@ class Solution:
                 for z in dirs:
                     rz, cz = r + z[0], c + z[1]
                     if (rz, cz) in d:
-                        dp[(r, c)][n] = (dp[(r, c)][n] + dp[(rz, cz)][n - 1]) %m
+                        dp[(r, c)][n] = (dp[(r, c)][n] + dp[(rz, cz)][n - 1]) % m
         return sum(x[N] for x in dp.values()) % m

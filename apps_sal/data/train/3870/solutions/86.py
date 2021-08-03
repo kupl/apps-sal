@@ -3,7 +3,7 @@ def solve(s):
     revs = "".join(revs.split())
     output = ""
     count = 0
-    
+
     for letter in s:
         if letter != " ":
             output = output + revs[count]

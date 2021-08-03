@@ -60,14 +60,14 @@ def mt(f):
 def slv(N, M, S, T):
 
     MOD = 10**9 + 7
-    dp0 = [1] * (M+1)
+    dp0 = [1] * (M + 1)
     for s in S:
         dp1 = dp0[:]
         k = 0
         for j, t in enumerate(T):
             if s == t:
                 k += dp0[j]
-            dp1[j+1] = (dp0[j+1] + k) % MOD
+            dp1[j + 1] = (dp0[j + 1] + k) % MOD
         dp0 = dp1
 
     return dp0[-1]
@@ -82,5 +82,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

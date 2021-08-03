@@ -20,4 +20,3 @@ for _ in range(q):
         print(moves)
     else:
         print(-1)
-

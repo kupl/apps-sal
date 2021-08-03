@@ -1,2 +1,2 @@
 def row_sum_odd_numbers(n):
-    return n * (n + (n*(n - 1)))
+    return n * (n + (n * (n - 1)))

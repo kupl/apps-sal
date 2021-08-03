@@ -75,4 +75,3 @@ print(dr[-1])
 #         sum += max(b)*num[ii]
 #     if num[ii] < 0:
 #         sum += min(b)*num[ii]
-

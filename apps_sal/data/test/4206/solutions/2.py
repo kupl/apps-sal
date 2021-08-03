@@ -14,19 +14,18 @@ for i in range(len(n)):
         mrk = -1
         for j in range(2):
             if i + j + 1 < len(n):
-                if (int(n[i+j+1])% 3 != 0):
-                    if (tmpcnt + int(n[i+j+1]) )%3 == 0:
+                if (int(n[i + j + 1]) % 3 != 0):
+                    if (tmpcnt + int(n[i + j + 1])) % 3 == 0:
                         cntr += 1
-                        mrk = i+j+1
+                        mrk = i + j + 1
                        # print(i, cntr, marks)
                         break
                     else:
-                        tmpcnt += int(n[i+j+1])
+                        tmpcnt += int(n[i + j + 1])
                 else:
                     break
         if mrk != -1:
             for k in range(i + 1, mrk + 1):
-          #      print(i,k)
+              #      print(i,k)
                 marks[k] = 1
 print(cntr)
-

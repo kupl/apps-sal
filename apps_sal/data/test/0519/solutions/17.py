@@ -3,4 +3,3 @@ p = int(input())
 q = int(input())
 
 print(l * p / (p + q))
-

@@ -1,5 +1,6 @@
 geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
 
+
 def goose_filter(birds):
     n = []
     for bird in birds:
@@ -8,4 +9,3 @@ def goose_filter(birds):
     return n
     # go through birds list if matches any in list drop string
     # loop through all birds match place in lists
-

@@ -1,8 +1,9 @@
 def main():
-    law =  998244353
+    law = 998244353
     a, b, c = list(map(int, input().split()))
     print(((sum_mod(a, law) * sum_mod(b, law) * sum_mod(c, law)) % law))
     return
+
 
 def sum_mod(max, law):
     x = max
@@ -15,7 +16,9 @@ def sum_mod(max, law):
     y = y % law
     return (x * y) % law
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

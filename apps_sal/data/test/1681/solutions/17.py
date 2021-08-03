@@ -15,8 +15,8 @@ def main():
         result = 0
         while counter <= SIZE:
             saver += [scheme[counter]]
-            if (scheme.count(scheme[counter]) <=
-                material.count(scheme[counter])):
+            if (scheme.count(scheme[counter])
+                    <= material.count(scheme[counter])):
                 result += scheme.count(scheme[counter])
             else:
                 result += material.count(scheme[counter])
@@ -27,5 +27,6 @@ def main():
                     print(result)
                     return
         print(result)
+
 
 main()

@@ -2,7 +2,7 @@ class Solution:
     def sumSubseqWidths(self, A: List[int]) -> int:
         A.sort()
         total = 0
-        
+
         powerSum = 2**0
         counter = 2
         currSum = A[0]
@@ -12,5 +12,5 @@ class Solution:
             currSum += A[i]
             powerSum += counter
             counter *= 2
-       
-        return total % (10 ** 9 + 7)  
+
+        return total % (10 ** 9 + 7)

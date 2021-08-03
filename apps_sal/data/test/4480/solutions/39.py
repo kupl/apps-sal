@@ -7,4 +7,3 @@ class Solution:
                 cnt += 1
                 part = 0
         return cnt >= 3
-

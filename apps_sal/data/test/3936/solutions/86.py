@@ -7,10 +7,10 @@ if S1[0] == S2[0]:
     t = 1
 else:
     ans = 6
-    t = 2 
+    t = 2
 
 for i in range(1, N):
-    if S1[i] == S1[i-1]:
+    if S1[i] == S1[i - 1]:
         continue
     if S1[i] == S2[i]:
         if t == 1:
@@ -25,4 +25,3 @@ for i in range(1, N):
     ans %= 10 ** 9 + 7
 
 print(ans)
-

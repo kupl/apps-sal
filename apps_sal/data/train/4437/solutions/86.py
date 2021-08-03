@@ -6,4 +6,3 @@ def cookie(x):
         return template + ' It was Monica!'
     else:
         return template + ' It was the dog!'
-

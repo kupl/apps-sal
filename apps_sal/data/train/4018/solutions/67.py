@@ -1,8 +1,7 @@
 def isDigit(string):
     string = string.strip()
-    try: 
+    try:
         float(string)
     except ValueError:
         return False
     return True
-

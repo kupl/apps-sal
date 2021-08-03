@@ -10,4 +10,3 @@ class Solution:
                     if rating[i] < rating[j] < rating[k]:
                         cnt += 1
         return cnt
-

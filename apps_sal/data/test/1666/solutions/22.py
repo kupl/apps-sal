@@ -8,6 +8,6 @@ def main():
     print(len(l))
     for ll in l:
         print("{} {}".format(*ll))
+
+
 main()
-
-

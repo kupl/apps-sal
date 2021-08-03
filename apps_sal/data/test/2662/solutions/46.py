@@ -3,6 +3,7 @@ import bisect
 N = int(input())
 A = [int(input()) for i in range(N)]
 
+
 def lis(S):
     from bisect import bisect_right
     L = [S[0]]
@@ -13,5 +14,6 @@ def lis(S):
         else:
             L[bisect_right(L, s)] = s
     return len(L)
+
 
 print(lis(A[::-1]))

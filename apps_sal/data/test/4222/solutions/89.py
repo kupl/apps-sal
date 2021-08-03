@@ -1,7 +1,8 @@
 import sys
 def input(): return sys.stdin.readline().rstrip()
 
-N, K = list(map(int,input().split()))
+
+N, K = list(map(int, input().split()))
 
 d = []
 A = []
@@ -9,7 +10,7 @@ A = []
 for i in range(K):
     x = int(input())
     d.append(x)
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     A.append(a)
 
 vec = [0] * N
@@ -25,8 +26,3 @@ for i in range(N):
         ans += 1
 
 print(ans)
-        
-    
-
-
-

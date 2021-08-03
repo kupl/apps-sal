@@ -2,13 +2,15 @@ n, m = map(int, input().split())
 K = list(set(input() for _ in range(n)))
 n = len(K)
 
+
 def is_pal(S):
     nonlocal m
     ret = True
-    for i in range(m//2+1):
-        if S[i] != S[-i-1]:
+    for i in range(m // 2 + 1):
+        if S[i] != S[-i - 1]:
             ret = False
     return ret
+
 
 ans = ""
 

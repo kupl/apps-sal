@@ -7,4 +7,3 @@ for _ in range(m):
         x[u] = min(xi ** 2, x[u])
 
 print(sum(x))
-

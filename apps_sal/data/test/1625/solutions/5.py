@@ -16,4 +16,3 @@ n, a, s = int(input()), arr_inp(), 0
 a = sorted(a, reverse=True)
 solve(n)
 print(int(s))
-

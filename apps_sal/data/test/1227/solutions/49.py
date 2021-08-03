@@ -39,4 +39,3 @@ def rec(i, smaller, count):
 
 
 print((rec(0, False, 0)))
-

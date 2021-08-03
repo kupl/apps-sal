@@ -13,4 +13,3 @@ elif dict_num[x] > dict_num[y]:
     print('>')
 else:
     print('<')
-

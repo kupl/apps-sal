@@ -10,13 +10,13 @@ class Solution:
         for i in range(n):
             s += arr[i]
             presum[s] = i
-            
+
             if s - target in presum:
                 j = presum[s - target]
                 best_so_far = min(best_so_far, i - j)
                 if j >= 0:
                     ans = min(ans, dp[j] + i - j)
-            
+
             dp[i] = best_so_far
-        
+
         return ans if ans < 100001 else -1

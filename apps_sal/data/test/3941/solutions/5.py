@@ -6,7 +6,7 @@ state = list(map(int, input().split()))
 
 graph = defaultdict(list)
 
-connected = [list() for _ in range(n + 1)] #Each node connected to which 2 edges
+connected = [list() for _ in range(n + 1)]  # Each node connected to which 2 edges
 for i in range(m):
     for j in list(map(int, input().split()))[1:]:
         connected[j].append(i)
@@ -51,4 +51,3 @@ if yes:
 # print(queue)
 # print(switch_visited)
 # print(switch_color)
-

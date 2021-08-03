@@ -6,7 +6,7 @@ class Solution:
         cnt = [0] * (len(nums) + 1)
         for r in requests:
             cnt[r[0]] += 1
-            cnt[r[-1] + 1] -= 1 
+            cnt[r[-1] + 1] -= 1
         for i in range(1, len(nums)):
             cnt[i] += cnt[i - 1]
         cnt = cnt[:-1]

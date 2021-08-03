@@ -1,18 +1,18 @@
-a,r,l,m = list(map(int,input().split()))
-_l = list(map(int,input().split()))
+a, r, l, m = list(map(int, input().split()))
+_l = list(map(int, input().split()))
 s = set(_l)
-if(abs(a)>l):
+if(abs(a) > l):
     print(0)
     return
-if(a==0):
+if(a == 0):
     if(0 in s):
         print(0)
         return
     else:
         print("inf")
         return
-if(r==0):
-    if(a==0):
+if(r == 0):
+    if(a == 0):
         if(0 in s):
             print(0)
             return
@@ -21,7 +21,7 @@ if(r==0):
             return
     else:
         if(a not in s):
-            if(abs(a)<=l):
+            if(abs(a) <= l):
                 if(0 in s):
                     print(1)
                     return
@@ -38,40 +38,35 @@ if(r==0):
             else:
                 print("inf")
                 return
-if(r==1):
-    if(a in s or abs(a)>l):
+if(r == 1):
+    if(a in s or abs(a) > l):
         print(0)
         return
     else:
         print("inf")
         return
-if(r==-1):
+if(r == -1):
     if(a in s):
-        if(0-a in s):
+        if(0 - a in s):
             print(0)
             return
         else:
-            if(abs(a)<=l):
+            if(abs(a) <= l):
                 print("inf")
                 return
             else:
                 print(0)
                 return
     else:
-        if(abs(a)<=l):
+        if(abs(a) <= l):
             print("inf")
             return
         else:
             print(0)
             return
 tot = 0
-while(abs(a)<=l):
+while(abs(a) <= l):
     if(a not in s):
-        tot+=1
-    a*=r
+        tot += 1
+    a *= r
 print(tot)
-
-
-        
-
-

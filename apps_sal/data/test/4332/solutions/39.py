@@ -1,11 +1,11 @@
-N=str(input())
-S=0
+N = str(input())
+S = 0
 for i in range(len(N)):
-    S+=int(N[i])
+    S += int(N[i])
 
-N=int(N)
-if N%S==0:
-    ans="Yes"
+N = int(N)
+if N % S == 0:
+    ans = "Yes"
 else:
-    ans="No"
+    ans = "No"
 print(ans)

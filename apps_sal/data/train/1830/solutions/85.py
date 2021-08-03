@@ -4,7 +4,7 @@ class Solution:
         lastrain = collections.defaultdict(int)
         res = []
         dry = []
-        for k,v in enumerate(rains):
+        for k, v in enumerate(rains):
             if v > 0:
                 if not lakes[v]:
                     lakes[v] = True
@@ -35,4 +35,3 @@ class Solution:
                 res.append(1)
                 dry.append(k)
         return res
-

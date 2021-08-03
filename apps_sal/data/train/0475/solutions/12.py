@@ -7,5 +7,4 @@ class Solution:
             for j in range(i, n):
                 a.append(pre[j] - pre[i] + nums[i])
         a = sorted(a)
-        return sum(a[left-1:right])%N
-
+        return sum(a[left - 1:right]) % N

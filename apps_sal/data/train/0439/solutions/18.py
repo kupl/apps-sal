@@ -14,4 +14,3 @@ class Solution:
                 cnt = 1 if A[i] != A[i + 1] else 0
         max_cnt = max(max_cnt, cnt + 1)
         return max_cnt if max_cnt != 0 else 1
-

@@ -18,4 +18,6 @@ def main():
         ans[x], ans[y] = y + 1, x + 1
 
     print(' '.join(map(str, ans)))
+
+
 main()

@@ -15,4 +15,3 @@ ans = 0
 for i in range(n):
     ans += nCr(n // (i + 1) - 1, k - 1)
 print(ans % MOD)
-

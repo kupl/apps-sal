@@ -17,12 +17,12 @@ class StreamChecker:
             if node.isword:
                 return True
         return False
-        
-        
+
+
 class Trie:
     def __init__(self):
         self.root = TrieNode('')
-    
+
     def add(self, word):
         node = self.root
         for char in word:
@@ -30,7 +30,7 @@ class Trie:
                 node.c[char] = TrieNode(char)
             node = node.c[char]
         node.isword = True
-            
+
 
 class TrieNode:
     def __init__(self, v):
@@ -41,4 +41,3 @@ class TrieNode:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

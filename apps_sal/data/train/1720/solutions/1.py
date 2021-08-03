@@ -36,4 +36,3 @@ class RomanNumerals(object):
                 decimal -= number
                 result.append(roman)
         return ''.join(result)
-

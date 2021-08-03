@@ -12,5 +12,3 @@ ans = float("inf")
 for d in divs:
     ans = min(ans, (d - 1) + (N // d - 1))
 print(ans)
-
-

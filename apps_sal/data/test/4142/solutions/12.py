@@ -7,7 +7,6 @@ for index, char in enumerate(string):
     else:
         if char not in 'LUD':
             main.append('No')
-            
+
 main.append('Yes')
 print((main[0]))
-

@@ -11,4 +11,3 @@ else:
     ans = 'NO'
 
 print(ans)
-

@@ -24,4 +24,3 @@ for c in m:
             b = max(0, b - (c + 1) // 2)
             a = max(0, a - c // 2)
 print(sm - a - b)
-

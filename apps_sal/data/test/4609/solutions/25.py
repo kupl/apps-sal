@@ -8,4 +8,3 @@ for i in range(n):
     else:
         li.add(x)
 print((len(li)))
-

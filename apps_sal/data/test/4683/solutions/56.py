@@ -7,7 +7,7 @@ ans = 0
 
 for i in range(N):
     sa -= A[i]
-    ans += A[i]*sa    
-    ans %= (10**9+7)
+    ans += A[i] * sa
+    ans %= (10**9 + 7)
 
 print(ans)

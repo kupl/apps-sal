@@ -1,2 +1,2 @@
-def move(p,r):
-    return p+(r*2)
+def move(p, r):
+    return p + (r * 2)

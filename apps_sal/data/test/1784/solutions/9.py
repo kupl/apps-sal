@@ -7,4 +7,3 @@ else:
     m = min(a)
     for num in a:
         print(*[1] * m + list(range(1, 1 + num - m)))
-

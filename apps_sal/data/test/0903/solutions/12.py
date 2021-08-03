@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 n, k = mp()
 a = list(mp())
 a.sort()

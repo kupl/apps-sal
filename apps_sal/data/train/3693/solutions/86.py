@@ -1,3 +1,3 @@
-def make_negative( number ):
+def make_negative(number):
     print(-abs(number))
     return -abs(number)

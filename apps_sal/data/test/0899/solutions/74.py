@@ -35,4 +35,3 @@ for i in range(n):
                     heapq.heappush(D, (cost + c, ans[g], b, g))
 
 print((m - (sum(ans) - 1)))
-

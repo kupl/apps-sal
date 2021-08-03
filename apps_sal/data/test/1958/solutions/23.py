@@ -8,4 +8,3 @@ for s in a:
         apple += 1
     ans += p * apple // 2
 print(ans)
-

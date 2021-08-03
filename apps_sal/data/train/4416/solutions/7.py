@@ -1,4 +1,6 @@
 from math import floor
+
+
 def loose_change(cents):
     change_dict = {}
     cents = 0 if cents < 0 else floor(cents)

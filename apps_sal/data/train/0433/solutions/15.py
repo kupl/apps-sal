@@ -4,10 +4,8 @@ class Solution:
         ans = 0
         for i in range(len(arr)):
             cur += arr[i]
-            if i>=k:
-                cur -= arr[i-k]
-            if i>=k-1 and cur >= k*t:
+            if i >= k:
+                cur -= arr[i - k]
+            if i >= k - 1 and cur >= k * t:
                 ans += 1
         return ans
-                
-

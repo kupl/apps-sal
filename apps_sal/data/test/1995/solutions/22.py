@@ -9,7 +9,7 @@ numQ = int(sys.stdin.readline())
 for i in range(numQ):
     ls = sys.stdin.readline().split()
     l = int(ls[0]) - 1
-    r = int(ls[1]) -1
+    r = int(ls[1]) - 1
     k = int(ls[2])
 
     diff = r - l + 1
@@ -18,9 +18,7 @@ for i in range(numQ):
         newpos = ((j + k) % diff) + l
         s2[newpos] = s[j + l]
 
-    s = list(s2) 
-    
+    s = list(s2)
+
 
 sys.stdout.write("".join(s2))
-    
-

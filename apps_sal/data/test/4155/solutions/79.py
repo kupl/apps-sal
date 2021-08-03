@@ -3,6 +3,7 @@ import math
 sys.setrecursionlimit(500000)
 INF = float('inf')
 
+
 def solve(h, water):
     left = 0
     while left < len(h) - 1 and h[left] == 0:
@@ -17,16 +18,19 @@ def solve(h, water):
         h[left] = h[left] - 1
     else:
         return water
-        
+
     water = solve(h, water + 1)
     return water
+
 
 def main():
     n = int(input())
     h = list(map(int, input().split()))
     return solve(h, 0)
 
+
 def __starting_point():
     print((main()))
+
 
 __starting_point()

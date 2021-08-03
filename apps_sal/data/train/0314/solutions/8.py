@@ -1,7 +1,7 @@
 class Solution:
     def numSub(self, s: str) -> int:
         self.s = s
-        
+
         modulo = 1000000007
 
         def numSub(s):
@@ -26,5 +26,5 @@ class Solution:
             len_sOne = len(sOne)
             num_sOne += ((len_sOne * (len_sOne + 1)) // 2) % modulo
         num_sOne %= modulo
-        
+
         return int(num_sOne)

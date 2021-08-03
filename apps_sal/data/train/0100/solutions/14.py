@@ -4,7 +4,7 @@ for i in range(a):
     x, y, z = sorted([x, y, z])
     k = z - y
     if k == 0:
-        y += x//2
+        y += x // 2
         print(y)
     elif k > x:
         y += x
@@ -12,5 +12,5 @@ for i in range(a):
     else:
         x -= z - y
         y = z
-        z += x//2
+        z += x // 2
         print(z)

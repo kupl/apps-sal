@@ -14,6 +14,8 @@ def input(): return sys.stdin.readline().strip()
 def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
@@ -29,7 +31,7 @@ else:
     x = A[0]
     y = sum(A[1:])
 
-    for i in range(1, N-2):
+    for i in range(1, N - 2):
         x = x + A[i]
         y = y - A[i]
 
@@ -37,4 +39,3 @@ else:
         if tmp < ans:
             ans = tmp
     print(ans)
-

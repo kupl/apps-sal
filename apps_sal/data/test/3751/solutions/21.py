@@ -1,6 +1,6 @@
 alpha = "abcdefghijklmnopqrstuvwxyz"
 s = input()
-line= []
+line = []
 for i in range(len(s)):
     line += [False]
 yes = True
@@ -20,4 +20,3 @@ if yes:
     print("YES")
 else:
     print("NO")
-

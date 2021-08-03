@@ -17,6 +17,5 @@ def solve():
 
     return y == 20000
 
-print('YES' if solve() else 'NO')
-        
 
+print('YES' if solve() else 'NO')

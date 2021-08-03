@@ -21,5 +21,3 @@ for q in range(len(a)):
     k -= num - i
     i += 1
 print(a)
-    
-

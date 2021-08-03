@@ -1,9 +1,11 @@
+import networkx as nx
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7 # 998244353
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
-input = lambda:sys.stdin.readline().rstrip()
-import networkx as nx
+def input(): return sys.stdin.readline().rstrip()
+
+
 def resolve():
     n = int(input())
     A = [tuple(map(int, input().split())) for _ in range(n)]
@@ -18,6 +20,8 @@ def resolve():
             if ax < bx and ay < by:
                 G.add_edge(i, n + j)
 
-    A = nx.algorithms.bipartite.matching.hopcroft_karp_matching(G, top_nodes = range(n))
+    A = nx.algorithms.bipartite.matching.hopcroft_karp_matching(G, top_nodes=range(n))
     print(len(A) // 2)
+
+
 resolve()

@@ -16,5 +16,3 @@ class Solution:
             all_results |= curr_results
             prev_results = curr_results
         return len(all_results)
-
-

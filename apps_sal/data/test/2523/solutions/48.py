@@ -15,4 +15,3 @@ while l >= 0 and r < L and s[l] == s[r] == p:
     r += 1
 
 print((cnt + L // 2))
-

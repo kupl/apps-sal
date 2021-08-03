@@ -15,4 +15,3 @@ for ch in input() + ' ':
         cur.append(ch)
 for lx in l:
     print('<', lx, '>', sep='')
-

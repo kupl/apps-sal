@@ -1,6 +1,5 @@
 
 
-
 def solve(matrix, col, N, M):
     if col == M:
         '''
@@ -24,17 +23,18 @@ def solve(matrix, col, N, M):
         return solve(matrix, col + 1, N, M)
 
     ans = solve(matrix, col + 1, N, M)
-    for _ in range(N-1):
+    for _ in range(N - 1):
         tmp = matrix[0][col]
         for n in range(1, N):
-            matrix[n-1][col] = matrix[n][col]
-        matrix[N-1][col] = tmp
+            matrix[n - 1][col] = matrix[n][col]
+        matrix[N - 1][col] = tmp
 
         local_ans = solve(matrix, col + 1, N, M)
         if local_ans > ans:
             ans = local_ans
 
     return ans
+
 
 def main():
     T = int(input())
@@ -71,5 +71,5 @@ def main():
         ans = solve(simplified, 0, N, min(N, M))
         print(ans)
 
-main()
 
+main()

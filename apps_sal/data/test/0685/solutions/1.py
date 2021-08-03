@@ -11,7 +11,7 @@ for i in range(1, n):
     M.append(a - L[-2][1])
     sum += M[-1]
     if sum >= h and f:
-        x = i 
+        x = i
         f = False
     N.append(sum)
 if sum < h:

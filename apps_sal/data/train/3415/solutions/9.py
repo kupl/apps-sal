@@ -5,4 +5,3 @@ def build_palindrome(s):
         if string == string[::-1]:
             p.append(string)
     return min(p, key=lambda i: len(i))
-

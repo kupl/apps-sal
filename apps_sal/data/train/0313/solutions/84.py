@@ -7,15 +7,15 @@ class Solution:
                 if bloom <= day:
                     a += 1
                 else:
-                    b += a//k
+                    b += a // k
                     a = 0
-            b += a//k
+            b += a // k
             return b >= m
-        
+
         if len(bloomDay) < m * k:
             return -1
-        
-        left, right = 1, max(bloomDay) # could be [0, n], [1, n] etc. Depends on problem
+
+        left, right = 1, max(bloomDay)  # could be [0, n], [1, n] etc. Depends on problem
         while left < right:
             mid = (left + right) // 2
             if condition(mid):

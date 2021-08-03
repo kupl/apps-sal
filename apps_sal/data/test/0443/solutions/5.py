@@ -5,7 +5,7 @@ if n == 1:
     return
 
 x = min(a)
-t =  a.index(x)
+t = a.index(x)
 d = []
 c = []
 for i in range(n):

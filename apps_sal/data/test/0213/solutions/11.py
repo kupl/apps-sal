@@ -23,9 +23,9 @@ for i in range(m):
         t = False
 if t:
     an += [n]
-    
+
 for k in range(2, 10001):
-    #print(k)
+    # print(k)
     t = True
     for i in range(m):
         f = data[i][0] // k + min(1, data[i][0] % k)
@@ -34,12 +34,11 @@ for k in range(2, 10001):
             break
     if not t:
         continue
-    
+
     an += [n // k + min(1, n % k)]
-    #print(an)
+    # print(an)
 
 if len(set(an)) == 1:
     print(an[0])
 else:
     print(-1)
-

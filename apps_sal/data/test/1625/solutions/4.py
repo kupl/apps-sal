@@ -1,6 +1,7 @@
 def arr_inp():
     return [float(x) for x in input().split()]
 
+
 def solve(n):
     nonlocal s
     if n == 1:
@@ -19,4 +20,3 @@ while (a):
     a = a[:n]
 
 print(int(s))
-

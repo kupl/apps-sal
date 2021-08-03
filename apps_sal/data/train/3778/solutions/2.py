@@ -1,1 +1,1 @@
-find_smallest_int = min   
+find_smallest_int = min

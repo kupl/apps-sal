@@ -7,4 +7,3 @@ for _ in range(H):
 
 for i in L:
     print(i)
-

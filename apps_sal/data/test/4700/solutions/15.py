@@ -22,7 +22,3 @@ for i in range(n):
     ans += cnt
 
 print(ans)
-
-
-
-

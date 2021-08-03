@@ -14,7 +14,7 @@ class Solution:
                 tree[i].append(right)
         if len(notroots) == n:
             return False
-            
+
         def helper(node):
             if node not in tree:
                 path.add(node)
@@ -29,8 +29,7 @@ class Solution:
                 if not helper(child):
                     return False
             return True
-        
-        
+
         path = set()
         for i in range(n):
             if i not in notroots:

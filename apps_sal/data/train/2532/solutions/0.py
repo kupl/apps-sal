@@ -11,6 +11,5 @@ class Solution:
             else:
                 arr.append('.')
                 count = 0
-                
-        return ''.join(arr[::-1])
 
+        return ''.join(arr[::-1])

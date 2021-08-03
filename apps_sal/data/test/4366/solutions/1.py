@@ -34,11 +34,12 @@ class TestClass(unittest.TestCase):
 
 def resolve():
     A, B = list(map(int, input().split()))
-    print(((A+B) % 24))
+    print(((A + B) % 24))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

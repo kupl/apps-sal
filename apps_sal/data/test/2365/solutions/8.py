@@ -28,4 +28,3 @@ class Solution:
         expr = ' '.join(expression).replace('t', 'True').replace('f', 'False').replace('!', 'not').replace(',', 'and')
 
         return eval(expr)
-

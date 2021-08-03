@@ -15,4 +15,3 @@ for i in range(1440):
         break
 
 print(ans)
-

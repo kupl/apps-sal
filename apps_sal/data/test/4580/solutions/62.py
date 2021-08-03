@@ -6,7 +6,7 @@ pin = 0
 flag = 0
 for i in A:
     if i < 3200:
-        cin[i//400] += 1
+        cin[i // 400] += 1
         pin = 1
     else:
         kin += 1
@@ -14,4 +14,4 @@ for i in A:
 if pin == 0:
     print(1, kin)
 else:
-    print(8-cin.count(0), 8-cin.count(0)+kin)
+    print(8 - cin.count(0), 8 - cin.count(0) + kin)

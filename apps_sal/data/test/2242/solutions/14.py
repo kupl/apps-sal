@@ -12,5 +12,5 @@ for i in reversed(range(len(s))):
     d %= mod
     dic[tmp] += 1
 
-ans = [i * (i-1) / 2 for i in dic]
+ans = [i * (i - 1) / 2 for i in dic]
 print(int(sum(ans)))

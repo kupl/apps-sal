@@ -5,9 +5,9 @@ class Solution:
         for j in range(n):
             for i in range(1, m):
                 if mat[i][j]:
-                    mat[i][j] += mat[i-1][j]
+                    mat[i][j] += mat[i - 1][j]
         print(mat)
-        for j in range(n-1, -1, -1):
+        for j in range(n - 1, -1, -1):
             for i in range(m):
                 if mat[i][j]:
                     minval = mat[i][j]
@@ -20,4 +20,3 @@ class Solution:
         print(mat)
 
         return res
-

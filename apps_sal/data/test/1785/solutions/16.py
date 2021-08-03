@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
+from collections import defaultdict
 n = int(input())
 s = input()
 
-from collections import defaultdict
 count = defaultdict(int)
 for c in s:
     count[c] += 1
@@ -17,4 +17,3 @@ for i in range(n):
     answer = answer * k % mod
 
 print(answer)
-

@@ -1,5 +1,5 @@
 class Solution:
-    def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:  
+    def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         dict2 = {}
         for i2 in B:
             dict3 = {}
@@ -15,15 +15,15 @@ class Solution:
         result = []
         for i in A:
             dict1 = {}
-            is_subset =True
+            is_subset = True
             for l1 in i:
                 if l1 in dict1.keys():
-                    dict1[l1] +=1
+                    dict1[l1] += 1
                 else:
                     dict1[l1] = 1
             for key in dict2.keys():
                 if key in dict1.keys():
-                    if dict1[key]<dict2[key]:
+                    if dict1[key] < dict2[key]:
                         is_subset = False
                 else:
                     is_subset = False

@@ -9,8 +9,7 @@ while end < n:
         end += 1
     mx = max(mx, end - start)
     start += 1
-    
+
 mx = max(mx, n - start)
 
 print(n - mx)
-

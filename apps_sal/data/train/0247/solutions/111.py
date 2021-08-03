@@ -22,6 +22,6 @@ class Solution:
                 _min_till_now = min(_min_till_now, suffix_map[cur_sum - target] - i)
             suffix_sum[i] = _min_till_now
             suffix_map[cur_sum] = i
-        
-        ans = min([x+y for x, y in zip(prefix_sum, suffix_sum)])
+
+        ans = min([x + y for x, y in zip(prefix_sum, suffix_sum)])
         return ans if ans != float('inf') else -1

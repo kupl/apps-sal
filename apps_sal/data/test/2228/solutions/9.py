@@ -20,4 +20,3 @@ for i in range(len(masb)):
     if k > mx[1]:
         mx = [y, k]
 print(*mx)
-

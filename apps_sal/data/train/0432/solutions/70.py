@@ -36,4 +36,3 @@ class Solution:
             last_num = num
 
         return all(cc == 0 for cc in c)
-

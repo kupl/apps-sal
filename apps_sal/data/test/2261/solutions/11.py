@@ -4,6 +4,7 @@ def f(k):
     else:
         return '+'
 
+
 def g(k):
     s = []
     for c in k:
@@ -22,6 +23,7 @@ def solve(k):
             h.append(h[i] + g(h[i]))
             h[i] += h[i]
         return h
+
 
 k = int(input())
 h = solve(k)

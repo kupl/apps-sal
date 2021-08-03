@@ -11,4 +11,3 @@ while k <= N:
     i = A[i]
     k += 1
 print((-1))
-

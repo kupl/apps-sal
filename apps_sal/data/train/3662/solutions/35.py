@@ -1,4 +1,4 @@
-def xor(a,b):
+def xor(a, b):
     count = 0
     if a == True:
         count += 1

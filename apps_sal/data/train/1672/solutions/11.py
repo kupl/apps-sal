@@ -12,5 +12,3 @@ for i in range(11):
     else:
         print(f"f({x[i]}) = ", end='')
         print("{:.2f}".format(round(a + b, 2)))
-
-

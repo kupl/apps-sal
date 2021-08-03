@@ -22,4 +22,3 @@ P = sorted(P)
 res = sum(P[:k])
 
 print(res)
-

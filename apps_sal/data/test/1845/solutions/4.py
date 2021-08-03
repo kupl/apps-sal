@@ -11,4 +11,3 @@ for el1 in d:
                 if el1 % x == 0:
                     min_ans = min(min_ans, el1 // x + el2 * x - el1 - el2)
 print(sum(arr) + min_ans)
-

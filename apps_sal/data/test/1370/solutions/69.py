@@ -1,6 +1,5 @@
 
 
-
 def solve(choco, cut_pos, k):
     cuts = len(cut_pos) - 2
     blocks = [0] * (len(cut_pos) - 1)
@@ -10,7 +9,7 @@ def solve(choco, cut_pos, k):
         for i, blk in enumerate(zip(cut_pos, cut_pos[1:])):
             s, e = blk
             white = sum(col[s:e])
-    
+
             if white > k:
                 return float('inf')
 
@@ -36,8 +35,8 @@ def main():
     choco = [[int(s) for s in list(input())] for _ in range(h)]
     min_cuts = float('inf')
 
-    for cuts in range(1 << (h-1)):
-        cut_pos = [0] + [i+1 for i in range(h-1) if cuts & (1 << i)] + [h]
+    for cuts in range(1 << (h - 1)):
+        cut_pos = [0] + [i + 1 for i in range(h - 1) if cuts & (1 << i)] + [h]
         min_cuts = min(min_cuts, solve(choco, cut_pos, k))
 
     print(min_cuts)
@@ -45,5 +44,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -17,8 +17,7 @@ for i in range(len(line)):
             res.append('1')
         one += 1
 
-            
-for i in range(len(res)):
-    print(res[len(res) - 1 - i], end = '')
-print('\n', end = '')
 
+for i in range(len(res)):
+    print(res[len(res) - 1 - i], end='')
+print('\n', end='')

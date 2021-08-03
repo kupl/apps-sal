@@ -8,19 +8,19 @@ class Segment:
         self.y1 = y1
         self.x2 = x2
         self.y2 = y2
-    
+
     def dx(self):
         return self.x2 - self.x1
-    
+
     def dy(self):
         return self.y2 - self.y1
-    
+
     def pt_cnt(self):
         return gcd(abs(self.dx()), abs(self.dy())) + 1
-    
+
     def A(self):
         return self.y1 - self.y2
-    
+
     def B(self):
         return self.x2 - self.x1
 
@@ -33,14 +33,14 @@ class Segment:
         if l > r:
             l, r = r, l
         return l <= x <= r
-    
+
     def inner_y(self, y):
         l = self.y1
         r = self.y2
         if l > r:
             l, r = r, l
         return l <= y <= r
-    
+
     def inner(self, x, y):
         return self.inner_x(x) and self.inner_y(y)
 
@@ -62,6 +62,7 @@ class Segment:
 def det(a, b, c, d):
     return a * d - b * c
 
+
 def main():
     n = int(input())
     segments = []
@@ -76,9 +77,12 @@ def main():
             if result:
                 pt.add((x, y))
         ans -= len(pt)
-        segments.append(segment)  
+        segments.append(segment)
     print(ans)
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

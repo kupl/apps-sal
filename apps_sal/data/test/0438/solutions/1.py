@@ -11,4 +11,3 @@ else:
     ans.append(n)
 print(len(ans))
 print(*ans)
-

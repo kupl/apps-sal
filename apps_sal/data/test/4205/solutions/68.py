@@ -8,4 +8,3 @@ for i in range(n):
             ans = True
         p[i], p[j] = p[j], p[i]
 print((["NO", "YES"][ans]))
-

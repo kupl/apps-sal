@@ -60,14 +60,14 @@ S2.reverse()
 
 ans = 0
 seq.reverse()
-bit1 = Bit(N+1)
+bit1 = Bit(N + 1)
 for i in range(N):
     ans += bit1.sum(seq[i])
     bit1.add(seq[i], 1)
 
 char2idx = defaultdict(list)
 for i, s1 in enumerate(S1):
-    char2idx[s1].append(i+1)
+    char2idx[s1].append(i + 1)
 for x in list(char2idx.keys()):
     char2idx[x].reverse()
 
@@ -75,11 +75,10 @@ seq_ = []
 for i, s2 in enumerate(S2):
     seq_.append(char2idx[s2].pop())
 
-bit2 = Bit(N+1)
+bit2 = Bit(N + 1)
 seq_.reverse()
 for i in range(len(seq_)):
     ans += bit2.sum(seq_[i])
     bit2.add(seq_[i], 1)
 
 print(ans)
-

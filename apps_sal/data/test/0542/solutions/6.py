@@ -15,16 +15,15 @@ if (fs != ss):
     print('first' if fs > ss else 'second')
 else:
     sm1won = False
-    
+
     for i in range(min(fl, sl)):
         if (f[i] != s[i]):
             sm1won = True
             print('first' if f[i] > s[i] else 'second')
             break
-        
+
     if (not sm1won):
         if (fl != sl):
             print('first' if fl > sl else 'second')
         else:
             print('first' if pts > 0 else 'second')
-

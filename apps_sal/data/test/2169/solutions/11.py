@@ -24,4 +24,3 @@ q = int(input())
 for i in range(q):
     l, r = list(map(int, input().split()))
     print((dist[r] - dist[l]))
-

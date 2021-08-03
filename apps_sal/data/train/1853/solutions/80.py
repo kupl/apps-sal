@@ -1,5 +1,7 @@
 from collections import defaultdict
 import heapq
+
+
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         results = []
@@ -10,11 +12,11 @@ class Solution:
         for i in range(n):
             results.append(self.traverse(graph, distanceThreshold, i, n))
         min_result = min(results)
-        for i in range(n-1, -1, -1):
+        for i in range(n - 1, -1, -1):
             if results[i] == min_result:
                 return i
-        return 
-    
+        return
+
     def traverse(self, graph, threshold, start, n):
         q = [[start, 0]]
         count = 0
@@ -29,6 +31,3 @@ class Solution:
                     heapq.heappush(q, [key, dist + graph[city][key]])
         count = sum([1 for x in distances if x <= threshold])
         return count - 1
-                    
-        
-

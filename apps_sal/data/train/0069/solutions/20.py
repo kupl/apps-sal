@@ -19,5 +19,3 @@ for case in range(t):
             c -= a
             c += len(z) * b
     print(c)
-
-

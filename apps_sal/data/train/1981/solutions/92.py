@@ -5,18 +5,18 @@ class Solution:
         for i, j in requests:
             counts[i] += 1
             if j + 1 < n:
-                counts[j+1] -= 1
-        
+                counts[j + 1] -= 1
+
         for i in range(1, n):
-            counts[i] += counts[i-1]
-        
+            counts[i] += counts[i - 1]
+
         nums.sort()
         counts.sort()
-        
+
         mod = 10 ** 9 + 7
         r = 0
-        
+
         for i in range(n):
             r += nums[i] * counts[i]
-        
+
         return r % mod

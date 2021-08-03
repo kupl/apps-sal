@@ -1,6 +1,8 @@
+import collections
 N, K, L = map(int, input().split())
 
 par = [i for i in range(N)]
+
 
 def find(x, P):
     if P[x] == x:
@@ -10,6 +12,7 @@ def find(x, P):
         P[x] = b
         return b
 
+
 def unite(x, y, P):
     root_x = find(x, P)
     root_y = find(y, P)
@@ -18,28 +21,28 @@ def unite(x, y, P):
     else:
         P[root_y] = root_x
 
+
 par2 = [i for i in range(N)]
 
 for _ in range(K):
     p, q = map(int, input().split())
-    unite(p-1, q-1, par)
+    unite(p - 1, q - 1, par)
 
 for _ in range(L):
     p, q = map(int, input().split())
-    unite(p-1, q-1, par2)
-#print(par2)
+    unite(p - 1, q - 1, par2)
+# print(par2)
 
-r=[]
+r = []
 for i in range(N):
-    r.append((find(i,par), find(i, par2)))
+    r.append((find(i, par), find(i, par2)))
 
-import collections
 count = collections.Counter(r)
-#print(count)
+# print(count)
 
 for i in range(N):
-  ans = count[r[i]]
-  if i == N-1:
-    print(ans)
-  else:
-    print(ans, end=' ')
+    ans = count[r[i]]
+    if i == N - 1:
+        print(ans)
+    else:
+        print(ans, end=' ')

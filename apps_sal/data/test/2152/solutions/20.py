@@ -16,4 +16,3 @@ for i in range(1, n):
     else:
         s += a[i]
 print(result + prev_price * s)
-

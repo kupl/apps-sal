@@ -3,7 +3,7 @@ table = []
 a = 1
 for i in range(5):
     x = list(map(int, input().split()))
-    if a in x :
+    if a in x:
         row_in = i + 1
         col_in = x.index(a) + 1
     table.append(x)

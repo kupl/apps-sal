@@ -6,8 +6,10 @@ for i in range(2, 20000):
             a[j] = 0
 a = [i for i, x in enumerate(a) if x]
 
+
 def ds_multof_pfs(a, b):
     return [i for i in range(a, b + 1) if not divisors(i) % primes(i)]
+
 
 def divisors(n):
     r = 0
@@ -17,6 +19,7 @@ def divisors(n):
             if i * i != n:
                 r += n // i
     return r
+
 
 def primes(n):
     r = 0

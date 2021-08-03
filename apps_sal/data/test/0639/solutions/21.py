@@ -12,4 +12,3 @@ for i in data:
     if i == x:
         pad = 1
 print(x + pad - count)
-

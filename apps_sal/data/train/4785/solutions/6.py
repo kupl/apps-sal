@@ -1,4 +1,6 @@
-import urllib.request, re
+import urllib.request
+import re
+
 
 def get_member_since(user):
     URL = "https://www.codewars.com/users/"

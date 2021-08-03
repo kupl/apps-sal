@@ -7,7 +7,7 @@ class Solution:
                     goodA = abs(arr[i] - arr[j]) <= a
                     goodB = abs(arr[j] - arr[k]) <= b
                     goodC = abs(arr[i] - arr[k]) <= c
-                    
+
                     if all((goodA, goodB, goodC)):
                         count += 1
         return count

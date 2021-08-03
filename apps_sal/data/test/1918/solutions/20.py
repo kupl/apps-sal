@@ -8,7 +8,8 @@ sumb = 0
 for i in range(n):
     if(s[i] == 'A'):
         suma += P[i]
-    else:sumb += P[i]
+    else:
+        sumb += P[i]
     if(suma - sumb > maxdiff):
         maxdiff = suma - sumb
 
@@ -17,9 +18,9 @@ sumb = 0
 for i in range(n)[::-1]:
     if(s[i] == 'A'):
         suma += P[i]
-    else:sumb += P[i]
+    else:
+        sumb += P[i]
     if(suma - sumb > maxdiff):
         maxdiff = suma - sumb
 
 print(res + maxdiff)
-

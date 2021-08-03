@@ -3,7 +3,7 @@ def exteuc(a, b):
     if b == 0:
         return 1, 0, a
     y, x, v = exteuc(b, a % b)
-    y -= (a//b) * x
+    y -= (a // b) * x
     return x, y, v
 
 
@@ -47,4 +47,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

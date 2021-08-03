@@ -1,7 +1,6 @@
 h, a = list(map(int, input().split()))
 
 if h % a != 0:
-    print((h//a+1))
+    print((h // a + 1))
 else:
-    print((h//a))
-
+    print((h // a))

@@ -15,7 +15,7 @@ class Solution:
         while rotCnt < maxRot:
             if rotCnt < len(customers):
                 c += customers[rotCnt]
-            roundP = min(c , 4) * boardingCost
+            roundP = min(c, 4) * boardingCost
             c -= min(c, 4)
             roundP -= runningCost
             profit += roundP
@@ -24,7 +24,3 @@ class Solution:
                 m_[profit] = rotCnt + 1
             rotCnt += 1
         return m_[maxP]
-            
-            
-            
-

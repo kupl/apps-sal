@@ -4,25 +4,25 @@ second = []
 last = 0
 for i in range(n):
     a = int(input())
-    if a>0:
+    if a > 0:
         first.append(a)
     else:
         second.append(abs(a))
-    if i==n-1:
+    if i == n - 1:
         last = a
-if abs(sum(first))>abs(sum(second)):
+if abs(sum(first)) > abs(sum(second)):
     print('first')
     quit()
-if abs(sum(first))<abs(sum(second)):
+if abs(sum(first)) < abs(sum(second)):
     print('second')
 else:
-    if first>second:
+    if first > second:
         print('first')
         quit()
-    if first<second:
+    if first < second:
         print('second')
     else:
-        if last>0:
+        if last > 0:
             print('first')
         else:
             print('second')

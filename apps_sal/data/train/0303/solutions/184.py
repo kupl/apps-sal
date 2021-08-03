@@ -10,4 +10,3 @@ class Solution:
                 dp[i] = max(dp[i], dp[i - d - 1] + m * (d + 1))
                 d += 1
         return dp[n]
-

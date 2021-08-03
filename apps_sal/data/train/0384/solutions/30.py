@@ -12,6 +12,5 @@ class Solution:
             currSum += A[i]
             powerSum += counter
             counter *= 2
-           
-       
+
         return total % MOD

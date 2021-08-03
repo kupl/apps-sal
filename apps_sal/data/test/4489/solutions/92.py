@@ -8,4 +8,3 @@ for _ in range(int(input())):
     cnt[input()] -= 1
 ans = max(cnt.values())
 print(ans)
-

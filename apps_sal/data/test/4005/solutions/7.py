@@ -15,11 +15,10 @@ def is_inside(r_in, r_out):
 
 
 def bisects(r_in, r_out):
-    return ((r_out[0] <= r_in[0] <= r_out[2]) and
-            (r_out[0] <= r_in[2] <= r_out[2])) or (
+    return ((r_out[0] <= r_in[0] <= r_out[2])
+            and (r_out[0] <= r_in[2] <= r_out[2])) or (
                 (r_out[1] <= r_in[1] <= r_out[3]) and (
                     r_out[1] <= r_in[3] <= r_out[3]))
-
 
 
 if is_inside(w, b1) or is_inside(w, b2):
@@ -53,4 +52,3 @@ if is_inside(w, b1) or is_inside(w, b2):
     return
 
 print('YES')
-

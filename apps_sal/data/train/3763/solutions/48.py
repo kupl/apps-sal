@@ -1,5 +1,5 @@
-def calculator(x,y,op):
-    if str(x).isnumeric() and  str(y).isnumeric():
+def calculator(x, y, op):
+    if str(x).isnumeric() and str(y).isnumeric():
         if op == '+':
             res = x + y
             return res
@@ -11,5 +11,5 @@ def calculator(x,y,op):
             return res
         if op == '/':
             res = x / y
-            return res   
+            return res
     return "unknown value"

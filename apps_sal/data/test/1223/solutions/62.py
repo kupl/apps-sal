@@ -6,7 +6,7 @@ pos = [0] * (N + 1)
 for i in range(N):
     pos[P[i]] = i + 1
 
-l = [0]+[i for i in range(N + 1)]
+l = [0] + [i for i in range(N + 1)]
 r = [i + 1 for i in range(N + 1)] + [N + 1]
 
 # 1から順番に見ていく

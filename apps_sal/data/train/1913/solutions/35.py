@@ -1,13 +1,13 @@
 class Solution:
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         i = len(A) - 2
-        
+
         while i >= 0 and A[i + 1] >= A[i]:
             i -= 1
-        
+
         if i == -1:
             return A
-        
+
         # find largest number just under A[i]
         k = i + 1
         j = i + 1
@@ -17,7 +17,3 @@ class Solution:
             j += 1
         A[i], A[k] = A[k], A[i]
         return A
-
-        
-        
-

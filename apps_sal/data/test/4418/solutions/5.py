@@ -1,4 +1,4 @@
-n = int(input())   
+n = int(input())
 cnt = {i: 0 for i in range(1, 7)}
 cnt[0] = float('inf')
 f = {x: i + 1 for i, x in enumerate((4, 8, 15, 16, 23, 42))}

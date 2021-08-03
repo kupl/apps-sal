@@ -15,6 +15,6 @@ def main():
     print(str(len(users)))
     for j in range(len(users)):
         print(users[j] + " " + newusers[j])
-    
-main()
 
+
+main()

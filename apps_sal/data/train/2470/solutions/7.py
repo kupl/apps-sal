@@ -12,14 +12,14 @@ class Solution:
         #     else:
         #         d[str([i,j])]=0
         # return res
-        d={}
-        res=0
+        d = {}
+        res = 0
         for i in dominoes:
-            i=sorted(i)
+            i = sorted(i)
             if(str(i) not in d):
-                d[str(i)]=0
-            d[str(i)]+=1
-            if(d[str(i)]>1):
-                res+=d[str(i)]-1
+                d[str(i)] = 0
+            d[str(i)] += 1
+            if(d[str(i)] > 1):
+                res += d[str(i)] - 1
         print(d)
         return res

@@ -18,4 +18,3 @@ class Solution:
                 outnode = self.getTargetCopy(original.right, cloned.right, target)
                 if outnode:
                     return outnode
-

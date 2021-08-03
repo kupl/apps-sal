@@ -6,4 +6,3 @@ def remove_url_anchor(url):
         pos += 1
     # print(url[:pos])
     return url[:pos]
-

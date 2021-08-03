@@ -2,9 +2,9 @@ class Solution:
     def circularPermutation(self, n: int, start: int) -> List[int]:
         answer = [start]
         visited = set(answer)
-        
+
         next = start
-        while (next != None): 
+        while (next != None):
             previous = next
             next = None
             for i in range(n):
@@ -15,5 +15,5 @@ class Solution:
                     answer.append(newNum)
                     next = newNum
                     break
-            
+
         return answer

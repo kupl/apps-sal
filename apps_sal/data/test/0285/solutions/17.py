@@ -17,9 +17,10 @@ import sys
 
 EPSILON = 0.000000001
 
+
 def solve(x1, x2, kbs):
-    at_x1 = [k*(x1 + EPSILON) + b for (k, b) in kbs]
-    at_x2 = [k*(x2 - EPSILON) + b for (k, b) in kbs]
+    at_x1 = [k * (x1 + EPSILON) + b for (k, b) in kbs]
+    at_x2 = [k * (x2 - EPSILON) + b for (k, b) in kbs]
     order1 = [i for i, _ in sorted(enumerate(at_x1), key=operator.itemgetter(1))]
     # print_stderr('at_x1:', at_x1)
     # print_stderr('at_x2:', at_x2)
@@ -44,5 +45,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

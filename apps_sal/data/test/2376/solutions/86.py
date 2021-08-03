@@ -24,4 +24,3 @@ for i, e1 in enumerate(acc[0]):
                     ans = max(ans, e1 + e2 + e3 + e4)
 
 print(ans)
-

@@ -16,5 +16,4 @@ for no in r:
             red_no_eat += 1
         else:
             green_no_eat += 1
-print((sum(p[:X-red_no_eat]) + sum(q[:Y-green_no_eat]) + sum(r[:red_no_eat+green_no_eat])))
-
+print((sum(p[:X - red_no_eat]) + sum(q[:Y - green_no_eat]) + sum(r[:red_no_eat + green_no_eat])))

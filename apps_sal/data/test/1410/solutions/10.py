@@ -9,7 +9,7 @@ def main():
         graph[i] = []
 
     num_adjs = [0 for i in range(n)]
-    for _ in range(n-1):
+    for _ in range(n - 1):
         p, q = map(int, input().split(" "))
         p -= 1
         q -= 1
@@ -33,11 +33,11 @@ def main():
     parent = first_node
     jibun = graph[first_node][0]
     count = 0
-    for i in range(n-1):
+    for i in range(n - 1):
         junban.append(jibun)
         #print(end_node, jibun)
 
-        if i == n-2:
+        if i == n - 2:
             #assert jibun == end_node
             pass
         kids = graph[jibun]
@@ -47,8 +47,7 @@ def main():
                 jibun = kid
                 break
         count += 1
-        
-    
+
     colors = [color1, color2, color3]
     min_tensu = sum(color1) + sum(color2) + sum(color3)
 
@@ -60,7 +59,7 @@ def main():
             i = i % 3
             node_color = color_order[i]
             cost = colors[node_color][node_i]
-            node_colors[node_i] = node_color 
+            node_colors[node_i] = node_color
             cur_tensu += cost
         if cur_tensu < min_tensu:
             min_ci = ci
@@ -68,8 +67,7 @@ def main():
             min_node_colors = node_colors
 
     print(min_tensu)
-    print(" ".join([str(elm+1) for elm in min_node_colors]))
-
+    print(" ".join([str(elm + 1) for elm in min_node_colors]))
 
 
 main()

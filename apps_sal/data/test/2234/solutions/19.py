@@ -12,8 +12,8 @@ def lcm(a, b):
 
 
 for _ in range(int(input())):
-    n,k= map(int, input().split())
-    if n>=k:
-        print((n+k)%2)
+    n, k = map(int, input().split())
+    if n >= k:
+        print((n + k) % 2)
     else:
-        print(k-n)
+        print(k - n)

@@ -1,19 +1,19 @@
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
-        
+
         def closest(i, arr):
             for j in arr:
                 if j > i:
                     return j
             return -1
-        
-        ans = [1]*len(rains)
+
+        ans = [1] * len(rains)
         visited = dict()
         zeros = deque()
         x = 0
-        while x<len(rains) and rains[x] == 0:
+        while x < len(rains) and rains[x] == 0:
             x += 1
-        
+
         for i in range(x, len(rains)):
             if rains[i] in visited:
                 if not zeros:
@@ -33,5 +33,3 @@ class Solution:
             else:
                 zeros.append(i)
         return ans
-        
-

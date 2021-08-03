@@ -10,7 +10,7 @@ for ch in s:
         cur += 1
     else:
         cur -= 1
-    
+
     if cur == -2:
         print("No")
         return

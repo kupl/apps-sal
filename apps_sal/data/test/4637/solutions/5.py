@@ -3,10 +3,10 @@ t = int(input())
 
 for loop in range(t):
 
-    n,k = list(map(int,input().split()))
+    n, k = list(map(int, input().split()))
 
-    a = list(map(int,input().split()))
-    b = list(map(int,input().split()))
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
 
     for i in range(k):
 
@@ -20,4 +20,3 @@ for loop in range(t):
             b[-1] = tmp
 
     print(sum(a))
-

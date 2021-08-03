@@ -4,9 +4,9 @@ class Solution:
         n = len(mat[0])
 
         for i in range(m):
-            for j in reversed(range(n-1)):
+            for j in reversed(range(n - 1)):
                 if mat[i][j] == 1:
-                    mat[i][j] = mat[i][j+1] + 1               
+                    mat[i][j] = mat[i][j + 1] + 1
 
         def countSubmat(i, j):
             top = i
@@ -18,11 +18,11 @@ class Solution:
                 bound = min(bound, mat[i][j])
                 i += 1
             return counter
-        
+
         total = 0
         for i in range(m):
             for j in range(n):
                 if mat[i][j] > 0:
                     total += countSubmat(i, j)
-        
+
         return total

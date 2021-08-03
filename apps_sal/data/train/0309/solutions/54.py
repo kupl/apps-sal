@@ -6,8 +6,10 @@ class Solution:
         for i in range(n):
             for j in range(i):
                 v = A[i] - A[j]
-                if v not in d[j]: d[j][v] = 1
-                if v not in d[i]: d[i][v] = 0
-                d[i][v] = max(d[i][v] ,d[j][v] + 1)
+                if v not in d[j]:
+                    d[j][v] = 1
+                if v not in d[i]:
+                    d[i][v] = 0
+                d[i][v] = max(d[i][v], d[j][v] + 1)
                 res = max(res, d[i][v])
         return res

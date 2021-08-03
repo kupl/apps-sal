@@ -18,7 +18,7 @@ else:
         m1 = (maxi + mini) // 2
         m2 = (maxi + mini + 1) // 2
         ar = []
-        
+
         k = 0
         flag = True
         for x in range(1, n):
@@ -103,4 +103,3 @@ else:
             print(min(ar))
         else:
             print(-1)
-

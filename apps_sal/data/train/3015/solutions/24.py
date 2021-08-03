@@ -1,8 +1,8 @@
 def get_issuer(number):
-    
+
     number = [int(x) for x in str(number)]
     length = len(number)
-    
+
     if number[0] == 4 and length == 13 or number[0] == 4 and length == 16:
         return "VISA"
     elif (number[0] == 3 and number[1] == 4) or (number[0] == 3 and number[1] == 7) and length == 15:

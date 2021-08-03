@@ -15,4 +15,3 @@ for i in range(n):
     else:
         d[int(u[i])] = 0
 print(''.join(map(str, d)))
-

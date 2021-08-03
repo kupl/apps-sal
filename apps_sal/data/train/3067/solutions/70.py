@@ -1,3 +1,3 @@
 def getVolumeOfCubiod(length, width, height):
-     p = lambda l,w,h : l * w * h
-     return p(length,width,height)
+    def p(l, w, h): return l * w * h
+    return p(length, width, height)

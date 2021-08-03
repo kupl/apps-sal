@@ -1,5 +1,6 @@
 from math import floor
 
+
 class Solution:
     def is_min_dis_possible(self, positions, m, min_dis):
         prev = 0

@@ -15,7 +15,7 @@ class Solution:
 
                 while len(Q_2) and abs(v - Q_2[0][1]) > limit:
                     j, _ = Q_2.popleft()
-                
+
                 if len(Q) and len(Q_2):
                     r = i - max(Q[0][0], Q_2[0][0]) + 1
                     # print(r, Q, Q_2)
@@ -35,7 +35,7 @@ class Solution:
                 Q_2.append((ni, v))
 
             return result
-        
+
         r1 = helper(nums, limit)
 
         return r1

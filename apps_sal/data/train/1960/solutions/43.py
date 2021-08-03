@@ -1,8 +1,9 @@
 import bisect
 
+
 class Solution:
     def processQueries(self, queries: List[int], m: int) -> List[int]:
-        perm = list(range(1, m+1))
+        perm = list(range(1, m + 1))
         res = []
         for e in queries:
             idx = perm.index(e)

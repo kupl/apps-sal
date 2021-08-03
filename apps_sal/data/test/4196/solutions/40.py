@@ -13,12 +13,12 @@ gcd = []
 
 gcd.append(fromleft[1])
 
-for i in range(1, n-1):
-  gcd.append(math.gcd(fromright[i-1], fromleft[i+1]))
+for i in range(1, n - 1):
+    gcd.append(math.gcd(fromright[i - 1], fromleft[i + 1]))
 
-gcd.append(fromright[n-2])
+gcd.append(fromright[n - 2])
 
 if n == 2:
-  print(max(a))
+    print(max(a))
 else:
-  print(max(gcd))
+    print(max(gcd))

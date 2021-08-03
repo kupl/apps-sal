@@ -1,1 +1,1 @@
-print(max(map(len,input().split("S"))))
+print(max(map(len, input().split("S"))))

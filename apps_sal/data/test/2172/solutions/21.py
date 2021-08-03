@@ -1,4 +1,4 @@
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 s = {}
 for i in range(m):
     stemp = input().split()
@@ -6,16 +6,13 @@ for i in range(m):
     s[stemp[1]] = stemp[0]
 st = input().split()
 for i in range(len(st)):
-    if(i == len(st)-1):
+    if(i == len(st) - 1):
         if(len(s[st[i]]) >= len(st[i])):
             print(st[i])
         else:
             print(s[st[i]])
     else:
         if(len(s[st[i]]) >= len(st[i])):
-            print(st[i],end=' ')
+            print(st[i], end=' ')
         else:
-            print(s[st[i]],end=' ')
-    
-
-
+            print(s[st[i]], end=' ')

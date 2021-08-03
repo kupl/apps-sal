@@ -2,6 +2,7 @@ __author__ = "House"
 
 import bisect
 
+
 def __starting_point():
     n = int(input())
     s = [int(i) for i in input().split()]
@@ -23,5 +24,6 @@ def __starting_point():
         f[idx:idx] = [now]
         outp.append(str(ans))
     print(" ".join(outp))
+
 
 __starting_point()

@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 prime, cnt = [1] * 10001, [0] * 10001
 pms = []
 for i in range(2, 10001):

@@ -2,10 +2,10 @@ n = int(input())
 ans = [0] * (n * 2 + 1)
 used = [False] * (n * 2 + 1)
 arr = []
-for i in range(2, n * 2+1):
+for i in range(2, n * 2 + 1):
     qwe = [0] + [int(x) for x in input().split()]
     for j in range(1, i):
-        arr.append((qwe[j], i, j))     
+        arr.append((qwe[j], i, j))
 
 arr.sort(reverse=True)
 for x in arr:

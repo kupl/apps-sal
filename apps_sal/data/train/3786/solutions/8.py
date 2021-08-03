@@ -4,10 +4,10 @@ def siegfried(week, txt):
 
     if week >= 1:
         rules = [['ci', 'si'], ['Ci', 'Si'],
-                ['ce', 'se'], ['Ce', 'Se'],
-                ['ch', '$$'], ['Ch', '$%'],
-                ['c', 'k'], ['C', 'K'],
-                ['$$', 'ch'], ['$%', 'Ch']]
+                 ['ce', 'se'], ['Ce', 'Se'],
+                 ['ch', '$$'], ['Ch', '$%'],
+                 ['c', 'k'], ['C', 'K'],
+                 ['$$', 'ch'], ['$%', 'Ch']]
         for translation in rules:
             txt = txt.replace(translation[0], translation[1])
 

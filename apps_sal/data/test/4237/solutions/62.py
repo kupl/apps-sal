@@ -18,5 +18,3 @@ pacd = pacd - 1 if qacd != 0 else pacd
 
 ans = (pbc + pbd - pbcd) - (pac + pad - pacd)
 print((B - A - ans + 1))
-
-

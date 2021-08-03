@@ -1,3 +1,4 @@
+from collections import deque
 H, W = map(int, input().split())
 G = [input() for _ in range(H)]
 sy, sx, gy, gx = 0, 0, H - 1, W - 1
@@ -7,7 +8,6 @@ if G[sy][sx] == '#' or G[gy][gx] == '#':
     print(-1)
     return
 
-from collections import deque
 que = deque()
 que.append([sy, sx])
 seen[sy][sx] = 0
@@ -37,6 +37,6 @@ else:
         for j in range(W):
             if G[i][j] == '#':
                 black += 1
-    #start point = 0,0 
+    # start point = 0,0
     ans = all - black - seen[gy][gx] - 1
 print(ans)

@@ -6,13 +6,12 @@ for t in set(mass):
         fol = 1
 for t in range(n):
     mass[t] = [mass[t], t]
-psi = [0]*n
+psi = [0] * n
 mass.sort()
 if len(mass) < k or fol:
     print('NO')
 else:
     print('YES')
     for t in range(n):
-        psi[mass[t][1]] = t%k+1
+        psi[mass[t][1]] = t % k + 1
     print(' '.join(list(map(str, psi))))
-

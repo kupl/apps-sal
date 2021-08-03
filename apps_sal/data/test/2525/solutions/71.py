@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def main():
 
     s = deque(input())
@@ -13,7 +14,7 @@ def main():
         if len(temp) == 1:
             flag += 1
         else:
-            query.append(temp + [flag%2])
+            query.append(temp + [flag % 2])
 
     for q in query:
         if q[-1] == 0:
@@ -32,5 +33,5 @@ def main():
     else:
         print(("".join(s)))
 
-main()
 
+main()

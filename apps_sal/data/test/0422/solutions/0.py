@@ -1,8 +1,10 @@
 def max(a, b):
-	if a > b:
-		return a
-	else:
-		return b
+    if a > b:
+        return a
+    else:
+        return b
+
+
 n, k = map(int, input().split())
 x = [int(t) for t in input().split()]
 y = [int(t) for t in input().split()]

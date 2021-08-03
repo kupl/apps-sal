@@ -14,7 +14,7 @@ def find_set(v):
 
 
 sys.stdin = StringIO(sys.stdin.read())
-input = lambda: sys.stdin.readline().rstrip('\r\n')
+def input(): return sys.stdin.readline().rstrip('\r\n')
 
 
 n, m = list(map(int, input().split(' ')))
@@ -51,4 +51,3 @@ for edge in sorted(edges, key=lambda edge: edge[2]):
         parent[find_v] = find_u
 
 print(cost)
-

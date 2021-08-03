@@ -9,7 +9,9 @@ def main():
 
     print(lst[(n - 1) % len(lst)])
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

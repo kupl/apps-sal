@@ -55,9 +55,9 @@ def bisect_left(a, x, lo=0, hi=None):
     if hi is None:
         hi = len(a)
     while lo < hi:
-        mid = (lo+hi)//2
+        mid = (lo + hi) // 2
         if a[mid] < x:
-            lo = mid+1
+            lo = mid + 1
         else:
             hi = mid
     return lo
@@ -72,4 +72,3 @@ k = bisect_left(Solution(), 1, 0, 100000000000000000)
 if k == 100000000000000000:
     k = -1
 print(k)
-

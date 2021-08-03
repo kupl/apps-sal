@@ -7,4 +7,3 @@ def isValid(formula):
     if 3 in f and 4 in f:
         return False
     return (5 in f) == (6 in f)
-

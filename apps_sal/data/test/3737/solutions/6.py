@@ -7,4 +7,3 @@ for x in a:
     if x > mn and x < mx:
         ans += 1
 print(ans)
-

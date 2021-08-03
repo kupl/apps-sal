@@ -5,16 +5,17 @@ from collections import deque
 
 inf = float('inf')
 
+
 def solve(N: int, a: "List[int]", b: "List[int]"):
     adj = [set() for _ in range(N)]
     for u, v in zip(a, b):
         adj[u].add(v)
         adj[v].add(u)
-    
+
     dist_F = [inf for _ in range(N)]
     dist_F[0] = 0
     dist_S = [inf for _ in range(N)]
-    dist_S[N-1] = 0
+    dist_S[N - 1] = 0
 
     Q = deque([(0, 0)], N)
     while len(Q) > 0:
@@ -23,17 +24,16 @@ def solve(N: int, a: "List[int]", b: "List[int]"):
             if dist_F[v] < inf:
                 continue
             dist_F[v] = du + 1
-            Q.append((du+1, v))
-    
+            Q.append((du + 1, v))
 
-    Q = deque([(0, N-1)], N)
+    Q = deque([(0, N - 1)], N)
     while len(Q) > 0:
         du, u = Q.pop()
         for v in adj[u]:
             if dist_S[v] < inf:
                 continue
             dist_S[v] = du + 1
-            Q.append((du+1, v))
+            Q.append((du + 1, v))
 
     c_S = 0
     c_F = 0
@@ -47,7 +47,7 @@ def solve(N: int, a: "List[int]", b: "List[int]"):
     if c_F <= c_S:
         print('Snuke')
     else:
-        print('Fennec')    
+        print('Fennec')
 
     return
 
@@ -60,14 +60,16 @@ def main():
                 yield word
     tokens = iterate_tokens()
     N = int(next(tokens))  # type: int
-    a = [int()] * (N-1)  # type: "List[int]" 
-    b = [int()] * (N-1)  # type: "List[int]" 
-    for i in range(N-1):
+    a = [int()] * (N - 1)  # type: "List[int]"
+    b = [int()] * (N - 1)  # type: "List[int]"
+    for i in range(N - 1):
         a[i] = int(next(tokens)) - 1
         b[i] = int(next(tokens)) - 1
     solve(N, a, b)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,7 +1,7 @@
+import operator
 N = int(input())
 x = [int(i) for i in input().split()]
 
-import operator
 iters = 0
 
 while True:
@@ -12,4 +12,3 @@ while True:
     x[i + 1] -= 1
     x[0] += 1
     iters += 1
-

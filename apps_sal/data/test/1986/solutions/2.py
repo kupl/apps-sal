@@ -11,6 +11,6 @@ for i in my_file.readlines():
     if rest[0] > max:
         if rest[1] <= k:
             max = rest[0]
-        elif rest[0]-(rest[1]-k) > max:
-            max = rest[0]-(rest[1]-k)
+        elif rest[0] - (rest[1] - k) > max:
+            max = rest[0] - (rest[1] - k)
 print(max)

@@ -1,27 +1,29 @@
 import sys
+
+
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:        
-        
-        res = self.helper(sorted(coins, reverse = True), amount, {})
+    def coinChange(self, coins: List[int], amount: int) -> int:
+
+        res = self.helper(sorted(coins, reverse=True), amount, {})
         if res == float('inf'):
             return -1
         return res
-    
+
     def helper(self, coins, amount, dAmounts):
         if amount < 0:
             return float('inf')
-        
+
         if amount == 0:
             return 0
-        
+
         if amount in dAmounts:
             return dAmounts[amount]
-        
+
         for c in coins:
-            pathCount = 1 + self.helper(coins, amount-c, dAmounts)
+            pathCount = 1 + self.helper(coins, amount - c, dAmounts)
             dAmounts[amount] = min(dAmounts.get(amount, pathCount), pathCount)
         return dAmounts[amount]
-            
+
     '''def helper(self, coins, amount, dp):
         if amount < 0:
             return float('inf')
@@ -43,4 +45,3 @@ class Solution:
         dp = {}
         result = self.helper(coins, amount, dp)
         return -1 if result == float('inf') else result'''
-

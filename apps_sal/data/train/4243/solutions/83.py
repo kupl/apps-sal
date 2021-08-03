@@ -1,5 +1,5 @@
 def find_average(a):
-    sum=0
+    sum = 0
     for i in a:
-        sum+=i
-    return sum/i
+        sum += i
+    return sum / i

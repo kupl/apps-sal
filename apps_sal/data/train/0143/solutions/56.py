@@ -16,8 +16,3 @@ class Solution:
                 l += 1
             ans = max(ans, r - l)
         return ans
-
-
-
-
-

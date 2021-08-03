@@ -1,14 +1,14 @@
-s=input()
-odd=["R","U","D"]
-even=["L","U","D"]
-ans="Yes"
+s = input()
+odd = ["R", "U", "D"]
+even = ["L", "U", "D"]
+ans = "Yes"
 
 for i in range(len(s)):
-    if  i%2==0:
+    if i % 2 == 0:
         if s[i] not in odd:
-            ans="No"
+            ans = "No"
     else:
         if s[i] not in even:
-            ans="No"
+            ans = "No"
 
 print(ans)

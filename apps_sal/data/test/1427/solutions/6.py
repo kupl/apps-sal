@@ -22,5 +22,3 @@ for key, value in list(dd.items()):
     ans *= pow(key, value, MOD)
     ans %= MOD
 print(ans)
-
-

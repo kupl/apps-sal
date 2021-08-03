@@ -8,4 +8,3 @@ for i in range(n):
     else:
         c2 += 1
 print(min(c1, c2))
-

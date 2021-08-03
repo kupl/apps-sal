@@ -10,9 +10,9 @@ class Solution:
             res = self.validate(weights, D, mid)
             if res == 1:
                 ans = mid
-                hi = mid-1
+                hi = mid - 1
             else:
-                lo = mid+1
+                lo = mid + 1
         return ans
 
     def validate(self, weights, D, capacity):
@@ -32,5 +32,3 @@ class Solution:
             return 1
         else:
             return -1
-
-

@@ -4,5 +4,3 @@ def playerRankUp(pts):
     else:
         response = False
     return response
-  
-

@@ -1,7 +1,7 @@
 import numpy as np
 
-n, m = map(int,input().split())
-a = list(map(int,input().split()))
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
 
 a.sort()
 na = np.zeros(2**18)
@@ -10,13 +10,13 @@ for i in a:
 
 fa = np.fft.fft(na)
 
-c = np.round(np.fft.ifft(fa*fa)).astype(int)
+c = np.round(np.fft.ifft(fa * fa)).astype(int)
 
 ans = 0
 cm = 0
 for i in range(2**18 - 1, 1, -1):
     cm += c[i]
-    ans += i*c[i]
+    ans += i * c[i]
     if cm > m:
         ans -= i * (cm - m)
     if cm >= m:

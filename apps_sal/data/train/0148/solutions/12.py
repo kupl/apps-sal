@@ -19,4 +19,3 @@ class Solution:
             result += max_profit
 
         return result
-

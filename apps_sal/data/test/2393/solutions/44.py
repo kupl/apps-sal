@@ -24,4 +24,3 @@ for string in strings:
                     continue
         i += 1
     print(*answers)
-

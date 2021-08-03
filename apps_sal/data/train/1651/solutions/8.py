@@ -20,13 +20,13 @@ def solution(args: List[int]) -> str:
 
 def isRange(rng: List[int], idx: int) -> bool:
     # a range spans at least 3 integers
-    if len(rng)-3 < idx:
+    if len(rng) - 3 < idx:
         return False
 
     n: int = rng[idx]
-    nn: int = rng[idx+1]
-    nnn: int = rng[idx+2]
-    if n+1 == nn and nn+1 == nnn:
+    nn: int = rng[idx + 1]
+    nnn: int = rng[idx + 2]
+    if n + 1 == nn and nn + 1 == nnn:
         return True
 
     return False
@@ -37,9 +37,9 @@ def showRange(rng: List[int], idx: int) -> Tuple[str, int]:
     # determine if range spans until the end (for separator!)
     curr: int = idx
     length: int = len(rng)
-    while rng[curr]+1 == rng[curr+1]:
+    while rng[curr] + 1 == rng[curr + 1]:
         curr += 1
-        if (curr+1 == length):
+        if (curr + 1 == length):
             break
 
     res: str = str(rng[idx]) + "-" + str(rng[curr])
@@ -60,4 +60,4 @@ def showInt(rng: List[int], idx: int) -> str:
 
 
 def atEnd(lst: List, idx: int) -> bool:
-    return len(lst)-1 == idx
+    return len(lst) - 1 == idx

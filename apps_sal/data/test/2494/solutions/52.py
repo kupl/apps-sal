@@ -1,7 +1,7 @@
 import queue
 
 
-def bfs01(s: int, t: int, V: int, graph: list)->int:
+def bfs01(s: int, t: int, V: int, graph: list) -> int:
     INF = float('inf')
 
     q = queue.deque([])
@@ -27,12 +27,12 @@ def bfs01(s: int, t: int, V: int, graph: list)->int:
     return l[t]
 
 
-def small_multiple(K: int)->int:
+def small_multiple(K: int) -> int:
     graph = []
     for k in range(K):
         graph.append([])
-        v1 = k+1 if k+1 < K else 0
-        v10 = (k*10) % K
+        v1 = k + 1 if k + 1 < K else 0
+        v10 = (k * 10) % K
 
         graph[k].append((v1, 1))
         if v10 != k:
@@ -45,5 +45,6 @@ def __starting_point():
     K = int(input())
     ans = small_multiple(K)
     print(ans)
+
 
 __starting_point()

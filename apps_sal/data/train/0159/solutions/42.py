@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+
 class Solution:
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         res = -float('inf')
@@ -14,4 +15,3 @@ class Solution:
             heappush(queue, [-x, i])
             res = max(res, x)
         return res
-

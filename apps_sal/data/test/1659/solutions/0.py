@@ -10,4 +10,3 @@ for _ in range(n):
         else:
             r += 1
 print(x, r)
-

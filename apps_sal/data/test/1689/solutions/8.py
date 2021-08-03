@@ -18,4 +18,3 @@ else:
     print("YES")
     for row in rows:
         print("{}|{}".format(row[0], row[1]))
-

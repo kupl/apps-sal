@@ -1,6 +1,6 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        lengths = [len(arr) + 1]*(len(arr) + 1)
+        lengths = [len(arr) + 1] * (len(arr) + 1)
         i = 0
         j = 0
         s = 0
@@ -26,4 +26,3 @@ class Solution:
         if min_two_sum > len(arr):
             min_two_sum = -1
         return min_two_sum
-

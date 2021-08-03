@@ -17,4 +17,3 @@ for case_num in range(t):
         remain = a - b
         extra = ((remain - 1) // (c - d) + 1) * c
         print(b + extra)
-

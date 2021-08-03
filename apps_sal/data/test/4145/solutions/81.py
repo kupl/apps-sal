@@ -5,16 +5,18 @@ Created on Tue Sep  8 20:09:25 2020
 @author: liang
 """
 
+
 def Eratosthenes(x):
-    lis = [int(i) for i in range(2,x)]
-    #print(lis)
+    lis = [int(i) for i in range(2, x)]
+    # print(lis)
     res = list()
     while lis:
         a = lis.pop(0)
         res.append(a)
-        lis = [i for i in lis if i%a != 0]
-        #print(lis)
+        lis = [i for i in lis if i % a != 0]
+        # print(lis)
     return res
+
 
 N = int(input())
 #lis = Eratosthenes(N)

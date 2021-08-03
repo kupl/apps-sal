@@ -9,7 +9,7 @@ class DinnerPlates:
         while self.q and self.q[0] < len(self.stacks) and len(self.stacks[self.q[0]]) == self.c:
             heapq.heappop(self.q)
         if not self.q:
-            heapq.heappush(self.q,len(self.stacks))
+            heapq.heappush(self.q, len(self.stacks))
         if self.q[0] == len(self.stacks):
             self.stacks.append([])
         self.stacks[self.q[0]].append(val)
@@ -21,7 +21,7 @@ class DinnerPlates:
 
     def popAtStack(self, index: int) -> int:
         if 0 <= index < len(self.stacks) and self.stacks[index]:
-            heapq.heappush(self.q,index)
+            heapq.heappush(self.q, index)
             return self.stacks[index].pop()
         return -1
 
@@ -31,4 +31,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

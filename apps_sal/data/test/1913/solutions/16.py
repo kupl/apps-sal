@@ -17,5 +17,5 @@ def main():
 
     print(start + '0' * zer_num)
 
-main()
 
+main()

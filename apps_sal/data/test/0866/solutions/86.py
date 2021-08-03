@@ -39,4 +39,3 @@ for i in range(k - 1, 0, -1):
     b = b * i % MOD
 ans = a * mod_pow(b, MOD - 2) % MOD
 print(ans)
-

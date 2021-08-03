@@ -1,6 +1,6 @@
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
-        ans = [-1]*len(rains)
+        ans = [-1] * len(rains)
         spares = []
         full = {}
         for i in range(len(rains)):

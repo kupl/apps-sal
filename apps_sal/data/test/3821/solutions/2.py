@@ -24,4 +24,3 @@ for i in range(1, n + 1):
     p = max(p, calc(x[:i], nx[:i], i))
 
 print(float(p))
-

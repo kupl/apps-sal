@@ -9,4 +9,3 @@ class Solution:
                        dp(i + 1, s + rods[i]) + rods[i])
 
         return dp(0, 0)
-

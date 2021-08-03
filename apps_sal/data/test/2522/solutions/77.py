@@ -20,10 +20,10 @@ def main():
         return None
     return B
 
+
 t = main()
 if t is None:
     print('No')
 else:
     print('Yes')
     print((' '.join(map(str, t))))
-

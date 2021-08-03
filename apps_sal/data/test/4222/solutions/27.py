@@ -16,5 +16,5 @@ ans = 0
 for j in range(N):
     if num_people[j] not in num_people_snacks:
         ans += 1
-        
+
 print(ans)

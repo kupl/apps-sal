@@ -24,7 +24,7 @@ A = [0] + readlist() + [M]
 
 on_time = []
 off_time = []
-for i in range(1, N+2):
+for i in range(1, N + 2):
     if i % 2 == 1:
         on_time.append(A[i] - A[i - 1])
     else:

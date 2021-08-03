@@ -7,7 +7,7 @@ class Solution:
         from collections import Counter
         n = len(tree)
         record = []
-        
+
         for i in range(n):
             a = len(Counter(tree[:i+1]))
             record.append(a)
@@ -20,16 +20,16 @@ class Solution:
                 dic[record[i]] = [i,i]
             else:
                 dic[record[i]][1] = i
-            
+
             if record[i]-2 in dic.keys():
                 print(i,dic[record[i]],dic[record[i]-2])
                 ans = max(ans,dic[record[i]][1]-dic[record[i]-2][1])
                 print('ans=',ans)
-            
-        
+
+
         return ans
         '''
-        #sliding  window, two pointers:x,i
+        # sliding  window, two pointers:x,i
         n = len(tree)
         dic = {}
         x = 0
@@ -38,10 +38,10 @@ class Solution:
                 dic[tree[i]] = 1
             else:
                 dic[tree[i]] += 1
-            
+
             if len(dic) > 2:
                 dic[tree[x]] -= 1
-                if dic[tree[x]]==0 :
+                if dic[tree[x]] == 0:
                     del dic[tree[x]]
-                x +=1
-        return i-x+1
+                x += 1
+        return i - x + 1

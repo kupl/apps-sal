@@ -14,4 +14,3 @@ for _ in range(M // 2):
     r -= 1
 ans = ans[:2 * M]
 print(('\n'.join(f'{a} {b}' for a, b in zip(ans[::2], ans[1::2]))))
-

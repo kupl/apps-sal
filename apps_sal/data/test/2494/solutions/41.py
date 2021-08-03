@@ -28,4 +28,3 @@ while True:
         distances[mod_k * 10 % K] = d
         remains.appendleft((d, mod_k * 10 % K))
 print((distances[0]))
-

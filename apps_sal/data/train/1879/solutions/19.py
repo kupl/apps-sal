@@ -22,7 +22,5 @@ class Solution:
                     queue.append(node.right)
 
             l_sum, last_t = 0, l_sum
-            
-        return last_t
-        
 
+        return last_t

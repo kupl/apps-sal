@@ -4,16 +4,17 @@ class Solution:
             output = 0
             for n in nums:
                 if n % div == 0:
-                    output += n//div
+                    output += n // div
                 else:
-                    output += n//div+1
-            if output <= threshold: return True
+                    output += n // div + 1
+            if output <= threshold:
+                return True
             return False
-    
+
         nums.sort()
         l, r = 1, max(nums)
         while l < r:
-            mid = l + (r-l)//2
+            mid = l + (r - l) // 2
             if helper(mid):
                 r = mid
             else:

@@ -17,19 +17,19 @@ else:
 
 best = 5 * len(y)
 y = y[::-1]
-for xx in [['5','2'], ['0','0'], ['5','7'], ['0','5'] ]:
+for xx in [['5', '2'], ['0', '0'], ['5', '7'], ['0', '5']]:
     z = y
     count = 0
-    for x in xx:        
+    for x in xx:
         if not x in z:
             count = 5 * len(y)
             break
         f = z.index(x)
-        z = z[:f] + z[f+1:]        
-        
+        z = z[:f] + z[f + 1:]
+
         count += f
     if len(z) > 2 and z[-1] == '0':
-        valid = False 
+        valid = False
         for x in z[::-1]:
             if x == '0':
                 count += 1

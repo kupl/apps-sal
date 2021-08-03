@@ -18,6 +18,5 @@ for i in t:
     ans += lens * (cnt == 0)
     num = bisect(alp[i], cnt)
     ans += lens * (num == len(alp[i]))
-    cnt = (alp[i][num % len(alp[i])] + 1) % lens 
+    cnt = (alp[i][num % len(alp[i])] + 1) % lens
 print((ans + (cnt - 1) % lens))
-

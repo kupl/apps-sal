@@ -28,4 +28,3 @@ else:
     print(len(actions))
     for line in actions:
         print(line)
-

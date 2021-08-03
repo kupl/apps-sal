@@ -2,26 +2,26 @@ class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
         def getDivs(num):
             result = []
-            for div in range(1,int(num**(1/2))+1):
+            for div in range(1, int(num**(1 / 2)) + 1):
                 if num % div == 0:
                     result.append(div)
                     result.append(num // div)
                 if len(result) > 4:
-                    print(num,result)
+                    print(num, result)
                     return 0
-                
-            if (int(num**(1/2))) * (int(num**(1/2))) == num:
+
+            if (int(num**(1 / 2))) * (int(num**(1 / 2))) == num:
                 # result.append(int(num**(1/2)))
                 result.pop()
-                
+
             # print(result,num)
             if len(result) == 4:
                 return sum(result)
             else:
                 return 0
-        
+
         total = 0
         for num in nums:
             total += getDivs(num)
-        
+
         return total

@@ -41,4 +41,3 @@ class Solution:
             prev_prev, prev = prev, cur
 
         return max_turbulent_subarray
-

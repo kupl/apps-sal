@@ -9,6 +9,7 @@ def max2pow(number):
             answer.append(y)
     return max(answer)
 
+
 ans = []
 for x in numbers:
     ans.append(max2pow(x))
@@ -18,4 +19,3 @@ for x in numbers:
     if x % ans == 0:
         ans1 += 1
 print(ans, ans1)
-

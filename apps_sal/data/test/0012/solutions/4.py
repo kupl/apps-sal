@@ -1,5 +1,5 @@
 n = int(input())
-ks  =input().strip()
+ks = input().strip()
 
 prev_g_seq_len = 0
 cur__g_seq_len = 0
@@ -14,15 +14,10 @@ for j in ks:
     else:
         cur__g_seq_len += 1
         # prev_is_s = False
-    res = max (res, prev_g_seq_len + cur__g_seq_len + 1)
+    res = max(res, prev_g_seq_len + cur__g_seq_len + 1)
 
 mmm = ks.count('G')
 res = min(mmm, res)
 
 
-
-
 print(res)
-
-
-

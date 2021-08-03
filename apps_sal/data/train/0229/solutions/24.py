@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
         a = np.array(sorted(A))
@@ -12,13 +13,13 @@ class Solution:
         a = a[non_pos_idx:]
         if len(b) % 2 != 0:
             return False
-        
+
         if not self.check_doubled(a):
             return False
         if not self.check_doubled(b):
             return False
         return True
-    
+
     def check_doubled(self, a):
         if len(a) == 0:
             return True
@@ -32,4 +33,3 @@ class Solution:
             if val > 0:
                 return False
         return True
-

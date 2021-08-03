@@ -2,6 +2,6 @@ def stringify(node):
     list = []
     while node:
         list.append(node.data)
-        node=node.next
+        node = node.next
     list.append('None')
-    return ' -> '.join(map(str,list))
+    return ' -> '.join(map(str, list))

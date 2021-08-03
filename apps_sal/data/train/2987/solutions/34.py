@@ -1,10 +1,9 @@
 def is_divide_by(number, a, b):
-    if number % a == 0 : 
-        if number % b == 0 : 
+    if number % a == 0:
+        if number % b == 0:
             return (True)
-        else : 
+        else:
             return (False)
-    else : 
+    else:
         return (False)
-    #return number % b == 0
-
+    # return number % b == 0

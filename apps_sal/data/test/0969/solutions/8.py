@@ -43,7 +43,6 @@ def find_max_substr(t, s):
         return s.find(t[:l2][::-1]) + l2, s.find(t[:l2][::-1]) + 1
 
 
-
 s = input()
 
 t = input()
@@ -71,8 +70,4 @@ for l, r in a:
     print(l, r)
 
 
-
-
-
 # Made By Mostafa_Khaled
-

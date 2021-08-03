@@ -1,11 +1,17 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 def calc(a, b):
-    if b == 0: return a
-    if a == R: return b + R
-    if b == C: return R + C + (R - a)
-    if a == 0: return R + C + R + (C - b)
+    if b == 0:
+        return a
+    if a == R:
+        return b + R
+    if b == C:
+        return R + C + (R - a)
+    if a == 0:
+        return R + C + R + (C - b)
+
 
 R, C, N = map(int, input().split())
 A = []
@@ -15,7 +21,7 @@ for i in range(N):
         A.append((calc(x1, y1), i))
         A.append((calc(x2, y2), i))
 
-A = [l[1] for l in sorted(A, key = lambda x: x[0])]
+A = [l[1] for l in sorted(A, key=lambda x: x[0])]
 B = []
 
 while A:

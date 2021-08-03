@@ -9,4 +9,3 @@ for i in range(1, k + 1):
     ss += num
     ss %= p
 print(ss)
-

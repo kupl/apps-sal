@@ -9,7 +9,6 @@ def get_neighbors(i, j):
     return neighbors
 
 
-
 def lights_out(lst):
     res = [x[:] for x in lst]
     for i in range(len(lst)):
@@ -18,6 +17,7 @@ def lights_out(lst):
                 res[i][j] += lst[x][y]
 
     return res
+
 
 def __starting_point():
     lst = [0, 0, 0]
@@ -28,5 +28,6 @@ def __starting_point():
         for entry in line:
             print((entry + 1) % 2, end='')
         print()
+
 
 __starting_point()

@@ -3,7 +3,7 @@ ans = 0
 
 
 for i in range(len(S)):
-    if i%2 == 1:
+    if i % 2 == 1:
         if S[i] == 'R':
             print('No')
             return

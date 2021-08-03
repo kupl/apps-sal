@@ -31,4 +31,3 @@ def main(K, N):
 
 K, N = list(map(int, input().split()))
 print((main(K, N)))
-

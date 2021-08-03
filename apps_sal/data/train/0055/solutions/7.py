@@ -1,7 +1,6 @@
-#list(map(int,input().split()))
+# list(map(int,input().split()))
 
-t=int(input())
+t = int(input())
 for _ in range(t):
-    n=int(input())
-    print((n+1)//2)
-
+    n = int(input())
+    print((n + 1) // 2)

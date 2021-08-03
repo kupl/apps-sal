@@ -21,8 +21,8 @@ def comb(n, k):
     x *= inverse[n - k]
     x %= mod
     return x
-  
-  
+
+
 ans = 0
 for i in range(H - A):
     x = comb(B - 1 + i, i)
@@ -33,4 +33,3 @@ for i in range(H - A):
     ans += x
 ans %= mod
 print(ans)
-

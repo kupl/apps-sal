@@ -6,6 +6,7 @@ def check_prime(n):
         i += 1
     return True
 
+
 t = int(input())
 for tnum in range(t):
     a, b = map(int, input().split())

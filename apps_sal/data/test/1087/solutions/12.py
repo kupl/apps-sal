@@ -11,7 +11,7 @@ for i, col in enumerate(zip(*A_bin)):
         continue
     if first:
         zero_cnt = col.count('0')
-        one_cnt = n-zero_cnt
+        one_cnt = n - zero_cnt
         if one_cnt < zero_cnt:
             X += '1'
         else:
@@ -20,7 +20,7 @@ for i, col in enumerate(zip(*A_bin)):
         continue
 
     zero_cnt = col.count('0')
-    one_cnt = n-zero_cnt
+    one_cnt = n - zero_cnt
     if one_cnt < zero_cnt:
         X += '1'
     else:
@@ -32,4 +32,3 @@ ans = 0
 for a in A:
     ans += X ^ a
 print(ans)
-

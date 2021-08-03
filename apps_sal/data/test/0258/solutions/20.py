@@ -1,6 +1,6 @@
 def winner(s, n):
-    s1 = s[:n//2]
-    s2 = s[n//2:]
+    s1 = s[:n // 2]
+    s2 = s[n // 2:]
     turns = s.count('?') // 2
     l1 = r1 = l2 = r2 = 0
     for c in s1:
@@ -24,4 +24,3 @@ def winner(s, n):
 n = int(input())
 s = input()
 print('Monocarp' if winner(s, n) else 'Bicarp')
-

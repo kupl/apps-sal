@@ -1,5 +1,6 @@
 import math
 
+
 def process_test_case(i_test):
     n = int(input())
     n_days = math.floor(math.log2(n))
@@ -26,4 +27,3 @@ def process_test_case(i_test):
 n_tests = int(input())
 for i_test in range(1, n_tests + 1):
     process_test_case(i_test)
-

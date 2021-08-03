@@ -8,23 +8,23 @@ for loop in range(tt):
     Query = []
     ans = []
 
-    n,m = list(map(int,stdin.readline().split()))
-    lis = [ [] for i in range(n) ]
+    n, m = list(map(int, stdin.readline().split()))
+    lis = [[] for i in range(n)]
     inum = [0] * n
     ilis = inum
     index = [None] * n
 
     for i in range(m):
 
-        st,x,y = list(map(int,stdin.readline().split()))
+        st, x, y = list(map(int, stdin.readline().split()))
         x -= 1
         y -= 1
         if st == 1:
             ilis[y] += 1
             lis[x].append(y)
-            ans.append((x,y))
+            ans.append((x, y))
         else:
-            Query.append( (x,y) )
+            Query.append((x, y))
 
     endnum = 0
     q = deque([])
@@ -42,15 +42,13 @@ for loop in range(tt):
                 q.append(nex)
 
     if endnum != n:
-        print ("NO")
+        print("NO")
     else:
-        print ("YES")
-        for x,y in Query:
+        print("YES")
+        for x, y in Query:
             if index[x] < index[y]:
-                print(x+1,y+1)
+                print(x + 1, y + 1)
             else:
-                print(y+1,x+1)
-        for x,y in ans:
-            print(x+1,y+1)
-        
-
+                print(y + 1, x + 1)
+        for x, y in ans:
+            print(x + 1, y + 1)

@@ -11,12 +11,13 @@ def __starting_point():
         max_num = max(a)
         min_odd = max_num + 1
         for aa in a:
-            if aa%2 == 1 and aa < min_odd:
+            if aa % 2 == 1 and aa < min_odd:
                 min_odd = aa
 
         if min_odd == max_num + 1:
             print(0)
         else:
-            print( the_sum -  min_odd )
+            print(the_sum - min_odd)
+
 
 __starting_point()

@@ -5,4 +5,4 @@ class Solution:
             for j in range(i):
                 dp[(i, A[i] - A[j])] = dp.get((j, A[i] - A[j]), 1) + 1
 
-        return max(dp.values())        
+        return max(dp.values())

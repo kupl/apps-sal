@@ -17,10 +17,9 @@ for q in list(d.values()):
     for q1 in range(len(q)):
         sum1 += q[q1]
         q[q1] = sum1
-f = [0]*(len(max(list(d.values()), key=lambda x: len(x)))+1)
+f = [0] * (len(max(list(d.values()), key=lambda x: len(x))) + 1)
 for q in list(d.values()):
     for q1 in range(len(q)):
         if q[q1] > 0:
             f[q1] += q[q1]
 print(max(f))
-

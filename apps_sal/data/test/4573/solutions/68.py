@@ -50,7 +50,7 @@ X = list(map(int, input().split()))
 #         arr.append([n, 1])
 #     return arr
 
-#def make_divisors(n):
+# def make_divisors(n):
 #    lower_divisors , upper_divisors = [], []
 #    i = 1
 #    while i*i <= n:
@@ -72,7 +72,7 @@ X = list(map(int, input().split()))
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:
@@ -80,10 +80,10 @@ X = list(map(int, input().split()))
 #    p += 1
 
 X = [[i, x] for i, x in enumerate(X)]
-X = sorted(X, reverse=False, key=lambda x:x[1])
+X = sorted(X, reverse=False, key=lambda x: x[1])
 X_ranked = copy.copy(X)
 X = [[l[0], i, l[1]] for i, l in enumerate(X)]
-X = sorted(X, reverse=False, key=lambda x:x[0])
+X = sorted(X, reverse=False, key=lambda x: x[0])
 
 med = len(X) // 2
 
@@ -92,4 +92,3 @@ for l in X:
         print((X_ranked[med][1]))
     else:
         print((X_ranked[med - 1][1]))
-

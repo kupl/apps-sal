@@ -12,6 +12,6 @@ T = [int(input()) for i in range(N)]
 ans = 1
 
 for i in range(N):
-    ans = ans*T[i]//gcd(ans,T[i])
+    ans = ans * T[i] // gcd(ans, T[i])
 
 print(ans)

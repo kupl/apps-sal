@@ -14,4 +14,3 @@ for i in range(1, 10 ** 9 + 1):
 
 print(len(b))
 print(' '.join(map(str, b)))
-

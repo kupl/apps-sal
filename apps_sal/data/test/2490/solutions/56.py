@@ -12,4 +12,3 @@ def solve(N):
 
 
 solve(N)
-

@@ -5,5 +5,3 @@ def nth_smallest(arr, pos):
         smallest.append(min(arr))
         arr.pop(arr.index(min(arr)))
     return smallest[pos]
-        
-

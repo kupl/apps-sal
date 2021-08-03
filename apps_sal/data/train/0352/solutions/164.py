@@ -8,7 +8,7 @@ class Solution:
                 if self.is_predecessor(words[i], words[j]):
                     dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)
-    
+
     def is_predecessor(self, word1, word2):
         if len(word1) - len(word2) != 1:
             return False
@@ -25,4 +25,3 @@ class Solution:
                 if diff > 1:
                     return False
         return True
-

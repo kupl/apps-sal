@@ -31,4 +31,3 @@ while True:
     p_idx += 1
 
 print(' '.join([str(x) for x in a_is]))
-

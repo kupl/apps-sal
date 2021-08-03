@@ -3,7 +3,7 @@ curr = 1
 cnt = 0
 while (curr <= r):
     if (curr >= l):
-        print(curr, end = ' ')
+        print(curr, end=' ')
         cnt += 1
     curr *= k
 if (cnt == 0):

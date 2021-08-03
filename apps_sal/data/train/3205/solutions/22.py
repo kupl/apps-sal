@@ -1,1 +1,1 @@
-is_divisible = lambda n,x,y: (n%x==0)&(n%y==0)
+def is_divisible(n, x, y): return (n % x == 0) & (n % y == 0)

@@ -51,6 +51,9 @@ def main():
                 answer.append('-1')
     print(' '.join(answer))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

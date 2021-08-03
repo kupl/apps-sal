@@ -58,4 +58,4 @@ for i in range(1, N):
     X.append(2 * A[i - 1] - X[i - 1])
 
 for x in X:
-    print(x, end = ' ')
+    print(x, end=' ')

@@ -1,6 +1,6 @@
 S = input()
 if S.startswith('S'):
-     print('Cloudy')
+    print('Cloudy')
 elif S.startswith('C'):
     print('Rainy')
 else:

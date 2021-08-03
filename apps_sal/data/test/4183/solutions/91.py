@@ -24,15 +24,14 @@ def gcd(a, b):
 def main():
     n = int(input())
     ans = int(input())
-    for _ in range(n-1):
+    for _ in range(n - 1):
         t = int(input())
-        ans = ans*t//gcd(max(ans, t), min(ans, t))
+        ans = ans * t // gcd(max(ans, t), min(ans, t))
     print(ans)
-
-
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

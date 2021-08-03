@@ -1,5 +1,5 @@
 N = int(input())
-S,T = input().split()
+S, T = input().split()
 
 ans = ""
 for i in range(N):

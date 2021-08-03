@@ -1,2 +1,2 @@
-def main (verb, noun):
+def main(verb, noun):
     return str(verb) + str(noun)

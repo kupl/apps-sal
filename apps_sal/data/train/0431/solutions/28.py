@@ -4,14 +4,14 @@ class Solution:
         left = [-1 for _ in range(length)]
         right = [length for _ in range(length)]
         stack, res, N = [], 0, 10 ** 9 + 7
-        
+
         for i in range(length):
             while stack and A[stack[-1]] > A[i]:
                 right[stack.pop()] = i
-            if stack: left[i] = stack[-1]
+            if stack:
+                left[i] = stack[-1]
             stack.append(i)
-        
+
         for i in range(length):
             res += (i - left[i]) * (right[i] - i) * A[i]
         return res % N
-

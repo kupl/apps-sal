@@ -29,7 +29,7 @@ def get_answer(i, j):
     el = arr[i][j]
     index1 = rows[i][el]
     index2 = columns[j][el]
-    return max(index1, index2) + max(len(rows[i]) - index1,  len(columns[j]) - index2)
+    return max(index1, index2) + max(len(rows[i]) - index1, len(columns[j]) - index2)
 
 
 for i in range(n):
@@ -37,4 +37,3 @@ for i in range(n):
     for j in range(m):
         answer.append(str(get_answer(i, j)))
     print(' '.join(answer))
-

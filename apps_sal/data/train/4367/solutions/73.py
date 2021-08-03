@@ -1,4 +1,4 @@
-def area_or_perimeter(l,w):
+def area_or_perimeter(l, w):
 
     s = l * w
     p = (l + w) * 2
@@ -6,6 +6,3 @@ def area_or_perimeter(l,w):
         return (s)
     else:
         return (p)
-
-
-

@@ -3,7 +3,7 @@ readline = sys.stdin.readline
 
 
 T = int(readline())
-Ans = [None]*T
+Ans = [None] * T
 
 for qu in range(T):
     N = int(readline())
@@ -19,10 +19,10 @@ for qu in range(T):
     elif A[-1] > sum(A[:-1]):
         Ans[qu] = 'T'
     else:
-        if sum(A) %2 == 0:
+        if sum(A) % 2 == 0:
             Ans[qu] = 'HL'
         else:
             Ans[qu] = 'T'
-        
-        
+
+
 print('\n'.join(Ans))

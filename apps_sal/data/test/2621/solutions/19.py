@@ -12,4 +12,3 @@ for _ in range(int(input())):
         hi = hi1
     else:
         print("YES")
-

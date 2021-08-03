@@ -7,4 +7,3 @@ for i in range(n):
             if (ar[j] or ar[j + 1]):
                 sum1 += 1
 print(sum1)
-

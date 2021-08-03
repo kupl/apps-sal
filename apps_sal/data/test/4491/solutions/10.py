@@ -7,7 +7,7 @@ def main():
     tmp = 1
     while tmp <= n:
         a1_tmp = a_lst1[:tmp]
-        a2_tmp = a_lst2[tmp-1:]
+        a2_tmp = a_lst2[tmp - 1:]
         a1 = sum(a1_tmp)
         a2 = sum(a2_tmp)
 
@@ -21,4 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

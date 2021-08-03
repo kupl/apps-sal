@@ -1,6 +1,6 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
-        
+
         def dfs(graph, node):
             if not graph[node]:
                 return True
@@ -14,11 +14,10 @@ class Solution:
                 if self.dp[node] == -1:
                     return False
             return self.dp[node]
-        
+
         self.dp = {}
         res = []
         for i in range(len(graph)):
             if dfs(graph, i):
                 res.append(i)
         return res
-

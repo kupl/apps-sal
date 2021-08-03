@@ -1,18 +1,18 @@
 
 import sys
-#sys.stdin=open("data.txt")
-input=sys.stdin.readline
-mii=lambda:list(map(int,input().split()))
+# sys.stdin=open("data.txt")
+input = sys.stdin.readline
+def mii(): return list(map(int, input().split()))
 
-n=int(input())
 
-a=0
-b=0
+n = int(input())
 
-for _ in range(2*n):
-    u,v=mii()
-    a+=u
-    b+=v
+a = 0
+b = 0
 
-print("%d %d"%(a//n,b//n))
+for _ in range(2 * n):
+    u, v = mii()
+    a += u
+    b += v
 
+print("%d %d" % (a // n, b // n))

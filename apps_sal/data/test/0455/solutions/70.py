@@ -4,7 +4,7 @@ N = int(input())
 XY = [tuple(map(int, input().split())) for _ in range(N)]
 
 mod = sum(XY[0]) % 2
-if any(mod != ((x+y)%2) for x, y in XY):
+if any(mod != ((x + y) % 2) for x, y in XY):
     print(-1)
     return
 

@@ -1,6 +1,7 @@
 import sys
 import re
 
+
 def main():
     a = int(input())
     b = input().split()
@@ -17,5 +18,5 @@ def main():
     print(e)
     return
 
-main()
 
+main()

@@ -10,4 +10,3 @@ def first_tooth(some_list):
         if answer_list.count(max(answer_list)) > 1:
             return -1
         return answer_list.index(max(answer_list))
-

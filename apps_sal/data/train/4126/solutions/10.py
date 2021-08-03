@@ -1,5 +1,6 @@
 from math import floor
 
+
 def what_time_is_it(angle):
     hr, mt = divmod(12 * angle, 360)
     if hr < 1:

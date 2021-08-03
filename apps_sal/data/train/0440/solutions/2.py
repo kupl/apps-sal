@@ -48,11 +48,10 @@ class Solution:
                     wall = 1
                 else:
                     y = temp
-            if (round(x, 2), round(y,2)) == (p, 0):
+            if (round(x, 2), round(y, 2)) == (p, 0):
                 return 0
-            if (round(x, 2), round(y,2)) == (p, p):
+            if (round(x, 2), round(y, 2)) == (p, p):
                 return 1
-            if (round(x, 2), round(y,2)) == (0, p):
+            if (round(x, 2), round(y, 2)) == (0, p):
                 return 2
             m = -m
-

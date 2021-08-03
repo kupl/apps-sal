@@ -11,4 +11,3 @@ if (1 <= A & A <= 13) & (1 <= B & B <= 13):
         print('Alice')
     elif A < B:
         print('Bob')
-

@@ -7,11 +7,11 @@ for i in range(q):
     ii += 1
     l -= 1
     r -= 1
-    for j in range(l, r+1):
+    for j in range(l, r + 1):
         if C[j] <= 2:
             C[j] += 1
             if C[j] <= 2:
-                X[j][C[j]-1] = i
+                X[j][C[j] - 1] = i
 s = len([c for c in C if c > 0])
 
 ma = 0
@@ -29,8 +29,7 @@ for i in range(q):
                 y += 1
             else:
                 Y[X[j][0]] += 1
-            
-    ma = max(ma, s-min(Y)-y)
+
+    ma = max(ma, s - min(Y) - y)
 
 print(ma)
-

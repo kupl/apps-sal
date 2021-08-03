@@ -8,5 +8,4 @@ def tax_calculator(total):
             if total > limit:
                 tax += rate * (total - limit)
                 total = limit
-    return round(tax)/100
-
+    return round(tax) / 100

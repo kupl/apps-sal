@@ -1,10 +1,10 @@
-#zdelano dobrim chelovekom vnizy :D
+# zdelano dobrim chelovekom vnizy :D
 s, x, pfx = input(), 0, []
 a, b = list(map(int, input().split()))
 try:
     for i, c in enumerate(s, 1):
-        x = (x * 10 + int(c) ) % a
-        
+        x = (x * 10 + int(c)) % a
+
         if not x and s[i] != '0':
             pfx.append(i)
 except IndexError:
@@ -20,4 +20,3 @@ for stop in reversed(pfx):
         print(s[i:])
         return
 print("NO")
-

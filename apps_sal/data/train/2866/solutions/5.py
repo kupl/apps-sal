@@ -18,6 +18,7 @@ def prime_factors(n):
     factors.append(n)
     return factors
 
+
 def mobius(n):
     factors = prime_factors(n)
     l = len(factors)
@@ -26,4 +27,3 @@ def mobius(n):
             return -1
         return 1
     return 0
-

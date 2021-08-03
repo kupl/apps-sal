@@ -42,7 +42,7 @@ for _ in range(t):
     p = list(map(int, input().split()))
     h = list(map(int, input().split()))
     edges = [list(map(int, input().split())) for i in range(n - 1)]
-    
+
     tree = [[] for i in range(n)]
     for a, b in edges:
         a -= 1
@@ -70,7 +70,7 @@ for _ in range(t):
             break
         g = (sum_p + h[v]) // 2
         b = (sum_p - h[v]) // 2
-        
+
         inc_g = g - good
         if 0 <= inc_g <= p[v] + bad:
             cnts[v] = g, b

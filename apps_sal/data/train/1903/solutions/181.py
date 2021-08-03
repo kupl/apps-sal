@@ -2,8 +2,8 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         res = 0
         n = len(points)
-        mst = [False]*n
-        dist = [None]*n       
+        mst = [False] * n
+        dist = [None] * n
         i = 0
         dist[i] = 0
         mst[i] = True
@@ -24,4 +24,3 @@ class Solution:
             res += dist[i]
             mst[i] = True
         return res
-

@@ -2,6 +2,7 @@ from functools import lru_cache
 from operator import iconcat
 from functools import reduce
 
+
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
         MOD = 10**9 + 7
@@ -22,6 +23,3 @@ class Solution:
             return total % MOD
 
         return dp(0, 0)
-
-
-

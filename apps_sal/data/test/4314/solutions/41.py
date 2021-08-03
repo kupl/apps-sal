@@ -1,5 +1,5 @@
-h, w = map(int,input().split())
-a_l = [ list(input()) for _ in range(h) ]
+h, w = map(int, input().split())
+a_l = [list(input()) for _ in range(h)]
 sub_array = []
 for i in range(h):
     if '#' in a_l[i]:

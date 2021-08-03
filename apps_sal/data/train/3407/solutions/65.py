@@ -5,5 +5,5 @@ def palindrome_chain_length(n):
         if n == rev:
             return count
         else:
-            n+=rev
-            count+=1
+            n += rev
+            count += 1

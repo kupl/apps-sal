@@ -1,6 +1,6 @@
 import itertools
 
-N,M = list(map(int, input().split()))
+N, M = list(map(int, input().split()))
 A = []
 
 for m in range(M):
@@ -9,7 +9,7 @@ for m in range(M):
 
 P = list(map(int, input().split()))
 
-S = itertools.product([0,1],repeat=N)
+S = itertools.product([0, 1], repeat=N)
 ans = 0
 
 for s in S:
@@ -17,11 +17,10 @@ for s in S:
     for i in range(M):
         temp = 0
         for a in A[i]:
-            temp += s[a-1]
+            temp += s[a - 1]
         if temp % 2 != P[i]:
             flag = False
     if flag == True:
         ans += 1
 
 print(ans)
-

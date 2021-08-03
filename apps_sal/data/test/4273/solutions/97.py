@@ -17,7 +17,6 @@ for _ in range(n):
     elif s[0] == "H":
         h += 1
 
-#print(m,a,r,c,h)
-ans = m*(a*r+a*c+a*h+r*c+r*h+c*h)+a*(r*c+r*h+c*h)+r*c*h
+# print(m,a,r,c,h)
+ans = m * (a * r + a * c + a * h + r * c + r * h + c * h) + a * (r * c + r * h + c * h) + r * c * h
 print(ans)
-

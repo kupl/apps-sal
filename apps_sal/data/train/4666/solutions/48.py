@@ -1,4 +1,4 @@
-def array_plus_array(arr1,arr2):
+def array_plus_array(arr1, arr2):
     result1 = 0
     result2 = 0
     result = 0

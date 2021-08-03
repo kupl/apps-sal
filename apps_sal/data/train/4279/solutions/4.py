@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def group_in_10s(*xs):
     d = defaultdict(list)
     for x in xs:

@@ -2,10 +2,10 @@ def relations(family_list, target_pair):
     tree = {}
     for parent, child in family_list:
         tree[child] = parent
-        
+
     a = tree.get(target_pair[0], 0)
     b = tree.get(target_pair[1], 0)
-    if a==b:
+    if a == b:
         return 'Sister'
     elif a == target_pair[1]:
         return 'Mother'
@@ -24,7 +24,7 @@ def relations(family_list, target_pair):
 
     if a and not b and cnt_a == 1:
         return 'Grandmother'
-    elif not a and not b and cnt_a==cnt_b:
+    elif not a and not b and cnt_a == cnt_b:
         return 'Cousin'
     elif not a and not b and cnt_a < cnt_b:
         return 'Niece'

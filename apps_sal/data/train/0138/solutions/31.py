@@ -1,6 +1,7 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
+
         def get_val(nums):
             # print(nums)
             if len(nums) == 0:
@@ -12,9 +13,9 @@ class Solution:
                 product *= nums[i]
                 products.append(product)
             for j in range(length, 0, -1):
-                for k in range(length-j+1):
-                    value = products[k+j]//products[k]
-                    if value>0:
+                for k in range(length - j + 1):
+                    value = products[k + j] // products[k]
+                    if value > 0:
                         return j
             return 0
         index = 0
@@ -25,14 +26,14 @@ class Solution:
                     index += 1
                     continue
                 value = get_val(nums[index:i])
-                if value>maximum:
+                if value > maximum:
                     maximum = value
-                index = i+1
-            elif nums[i]>0:
+                index = i + 1
+            elif nums[i] > 0:
                 nums[i] = 1
             else:
                 nums[i] = -1
         value = get_val(nums[index:n])
-        if value>maximum:
+        if value > maximum:
             maximum = value
         return maximum

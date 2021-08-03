@@ -10,6 +10,6 @@ for _ in x:
         break
 
 for _ in range(k):
-    count_list.append((count-1-_-0.1)//(k-1)+(n-count+_-0.1)//(k-1)+2)
+    count_list.append((count - 1 - _ - 0.1) // (k - 1) + (n - count + _ - 0.1) // (k - 1) + 2)
 
 print(int(min(count_list)))

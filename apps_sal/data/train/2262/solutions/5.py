@@ -1,9 +1,13 @@
+from operator import itemgetter
+
+
 class BIT():
     """区間加算、一点取得クエリをそれぞれO(logN)で答える
     add: 区間[l, r)にvalを加える
     get_val: i番目の値を求める
     i, l, rは0-indexed
     """
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -28,9 +32,6 @@ class BIT():
         self._add(l, -val)
 
 
-from operator import itemgetter
-
-
 def compress(array):
     """座標圧縮したリストを返す"""
     set_ = set()
@@ -43,8 +44,10 @@ def compress(array):
         array[i] = (memo[array[i][0]], memo[array[i][1]])
     return array
 
+
 def on_line(x, y):
     return x == 0 or x == r or y == 0 or y == c
+
 
 def val(x, y):
     if y == 0:
@@ -55,6 +58,7 @@ def val(x, y):
         return r + c + (r - x)
     if x == 0:
         return r + c + r + (c - y)
+
 
 r, c, n = list(map(int, input().split()))
 info = [list(map(int, input().split())) for i in range(n)]
@@ -81,6 +85,3 @@ for left, right in res:
     else:
         bit.add(left, right + 1, 1)
 print("YES")
-
-
-

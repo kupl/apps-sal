@@ -7,14 +7,13 @@ read = stdin.readline
 for testcase in range(int(read())):
     length = int(read())
     string = read().strip()
-    
+
     counts = Counter(string)
-    
+
     odd_counts = 0
-    
+
     for count in list(counts.values()):
         # print(count, counts)
-        odd_counts += count%2
-        
-    print(max(odd_counts-1, 0))
+        odd_counts += count % 2
 
+    print(max(odd_counts - 1, 0))

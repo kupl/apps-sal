@@ -9,6 +9,7 @@ dp = [0] * (n + 1)
 for i in range(1, n + 1):
     dp[i] = max(dp[j] + A[i - j] for j in range(0, i))
 
+
 @lru_cache(None)
 def score(s):
     length = len(s)

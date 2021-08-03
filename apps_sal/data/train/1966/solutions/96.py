@@ -2,7 +2,7 @@ class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         n = len(mat)
         m = len(mat[0])
-        
+
         ones = [[0] * (m + 1) for _ in range(n)]
         for i in range(n):
             for j in range(m - 1, -1, -1):
@@ -17,4 +17,3 @@ class Solution:
                     width = min(width, ones[k][j])
                     res += width
         return res
-

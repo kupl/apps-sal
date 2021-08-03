@@ -1,6 +1,6 @@
 def max_product(lst, n_largest_elements):
     sort = sorted(lst)
-    res=[]
+    res = []
     for i in range(n_largest_elements):
         res.append(sort.pop())
     ans = 1

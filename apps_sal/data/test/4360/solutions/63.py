@@ -7,11 +7,14 @@ def Input():
 
 
 def aaa(num):
-    return 1/num
+    return 1 / num
+
 
 def main():
     n = int(input())
     a = Input()
     ans = 1 / sum(aaa(i) for i in a)
     print(ans)
+
+
 main()

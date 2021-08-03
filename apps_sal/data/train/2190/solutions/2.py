@@ -10,6 +10,6 @@ for v in map(int, input().split()):
     if not len(stk) or stk[-1][0] < v:
         stk.append((v, 0))
     else:
-        stk.append((v, last + 1));
+        stk.append((v, last + 1))
         ans = max(ans, last + 1)
 print(ans)

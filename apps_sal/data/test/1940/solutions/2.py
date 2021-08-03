@@ -10,4 +10,3 @@ if ans % 2 == 0:
     print(ans // 2)
 else:
     print(ans // 2 + 1)
-

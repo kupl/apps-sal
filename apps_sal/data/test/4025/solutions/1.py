@@ -11,6 +11,7 @@ def f(a, b, c):
         ans = max(ans, j - i)
     return ans
 
+
 def main():
     a, b, c = map(int, input().split())
     d = min(a // 3, b >> 1, c >> 1)
@@ -21,5 +22,6 @@ def main():
     ans += f(a, b, c)
     print(ans)
     return 0
+
 
 main()

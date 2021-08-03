@@ -1,7 +1,7 @@
 N = int(input())
-dp = [[0]*64 for i in range(N-2)]
+dp = [[0] * 64 for i in range(N - 2)]
 # 3進数で管理
-mod = 10**9+7
+mod = 10**9 + 7
 
 d = dict()
 d2 = dict()
@@ -26,7 +26,7 @@ for i in range(64):
         dp[0][i] = 1
 
 
-for i in range(N-3):
+for i in range(N - 3):
     for j in range(64):
         if dp[i][j] == 0:
             continue
@@ -36,8 +36,7 @@ for i in range(N-3):
             if d[idx] == "AGC" or d[idx] == 'ACG' or d[idx] == "GAC" or (d[j][0] == 'A' and d[j][1] == 'G' and k == 2) or (d[j][0] == 'A' and d[j][2] == 'G' and k == 2):
                 #print(d[j] + d2[k])
                 continue
-            dp[i+1][idx] += dp[i][j]
+            dp[i + 1][idx] += dp[i][j]
 
 
 print((sum(dp[-1]) % mod))
-

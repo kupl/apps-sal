@@ -11,4 +11,4 @@ d = list(map(int, input().split()))
 x, y = np.array(list(cmb(d, 2))).T
 
 # 体力の回復量の総和を求めて表示
-print(np.sum(x*y))
+print(np.sum(x * y))

@@ -1,4 +1,4 @@
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 lst = [-1 for i in range(n + 1)]
 for i in range(m):
     x = int(input())
@@ -12,7 +12,6 @@ for i in range(1, n + 1):
     elif (lst[i] == 0):
         pass
     else:
-        lst[i] = (lst[i - 1] + lst[i - 2])%(1000000007)
+        lst[i] = (lst[i - 1] + lst[i - 2]) % (1000000007)
 
 print((lst[n]))
-

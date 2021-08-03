@@ -33,4 +33,3 @@ for k in range(1, N + 1):
     while i > 0 and L[i] < k:
         i -= 1
     print(i)
-

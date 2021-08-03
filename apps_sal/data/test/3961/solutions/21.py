@@ -16,6 +16,5 @@ dp = [-1] * (n + 1)
 dp[1] = 2
 mod = 10 ** 9 + 7
 for i in range(2, n + 1):
-	dp[i] = (sum(dp[arr[i - 1] : i]) + 2) % mod
+    dp[i] = (sum(dp[arr[i - 1]: i]) + 2) % mod
 print(sum(dp[1:]) % (10 ** 9 + 7))
-

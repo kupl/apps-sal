@@ -26,6 +26,5 @@ for i in range(0, n, 2):
     ans[i] = cur
     if cur in a:
         cur = a[cur]
-    
-print(*ans)
 
+print(*ans)

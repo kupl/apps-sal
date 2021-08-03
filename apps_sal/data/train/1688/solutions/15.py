@@ -1,3 +1,3 @@
-for _ in range (int(input())) :
+for _ in range(int(input())):
     n = int(input())
-    print(*list(map(int, input().split())), sep = '')
+    print(*list(map(int, input().split())), sep='')

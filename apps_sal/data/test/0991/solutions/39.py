@@ -9,8 +9,8 @@ input = sys.stdin.readline
 N, M, S = map(int, input().split())
 S = min(S, 2500)
 
-row = []    #start
-col = []    #end
+row = []  # start
+col = []  # end
 data = []
 
 for _ in range(M):
@@ -36,9 +36,9 @@ for u in range(N):
         col.append(N * i + u)
         data.append(d)
 
-graph = csr_matrix((data, (row, col)), shape = (2501*N, 2501*N))
+graph = csr_matrix((data, (row, col)), shape=(2501 * N, 2501 * N))
 
-times = dijkstra(graph, directed  = True, indices = N * S)
+times = dijkstra(graph, directed=True, indices=N * S)
 
 for end in range(1, N):
     print(int(min(times[N * i + end] for i in range(2501))))

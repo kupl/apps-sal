@@ -19,7 +19,7 @@ def solve(A, N):
         best = max(best, (result, j))
 
     j = best[1]
-    A = [A[j]] + A[:j] + A[j + 1 :]
+    A = [A[j]] + A[:j] + A[j + 1:]
     return ' '.join(map(str, A))
 
 
@@ -28,5 +28,6 @@ def __starting_point():
     A = list(map(int, input().split()))
     ans = solve(A, N)
     print(ans)
+
 
 __starting_point()

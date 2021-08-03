@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         B = A + A
@@ -15,5 +17,4 @@ class Solution:
             while queue and pre_sum[queue[-1]] >= pre_sum[j]:
                 queue.pop()
             queue.append(j)
-        return ans 
-
+        return ans

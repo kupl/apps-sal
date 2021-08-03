@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         step = 0
@@ -18,4 +20,3 @@ class Solution:
 
     def trim(self, nums):
         return [e for e in nums if e]
-

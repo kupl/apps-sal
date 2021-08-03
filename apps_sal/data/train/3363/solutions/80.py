@@ -4,6 +4,6 @@ def evaporator(content, evap_per_day, threshold):
     days = 0
     while content > maxthresh:
         percentage = evap_per_day / 100
-        content = content - (content*percentage)
+        content = content - (content * percentage)
         days += 1
     return days

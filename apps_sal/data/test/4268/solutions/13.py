@@ -21,4 +21,3 @@ for i in range(size):
             result += 1
 
 print(result)
-

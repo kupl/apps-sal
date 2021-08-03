@@ -57,14 +57,14 @@ class UnionFind():
 
 def solve(n, edges):
     if n % 2 == 1:
-        numedge = (n*(n-1))//2 - len(edges)
+        numedge = (n * (n - 1)) // 2 - len(edges)
         return 'First' if numedge % 2 == 1 else 'Second'
     else:
         uf = UnionFind(n)
         for a, b in edges:
-            uf.union(a-1, b-1)
+            uf.union(a - 1, b - 1)
         zerolen = uf.size(0) % 2
-        nlen = uf.size(n-1) % 2
+        nlen = uf.size(n - 1) % 2
         if zerolen != nlen:
             return 'First'
         else:
@@ -74,7 +74,7 @@ def solve(n, edges):
                     oddsize += 1
             if nlen == 1:
                 oddsize -= 2
-            numedge = (n*(n-1))//2 - len(edges)
+            numedge = (n * (n - 1)) // 2 - len(edges)
             if numedge % 2 == 1:
                 sente_mokuteki = (0, 0)
             else:
@@ -83,14 +83,15 @@ def solve(n, edges):
 
 
 def main():
-    t=int(input())
+    t = int(input())
     for _ in range(t):
-        n,m=list(map(int, input().split()))
-        edges=[list(map(int, input().split())) for i in range(m)]
-        print((solve(n,edges)))
+        n, m = list(map(int, input().split()))
+        edges = [list(map(int, input().split())) for i in range(m)]
+        print((solve(n, edges)))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

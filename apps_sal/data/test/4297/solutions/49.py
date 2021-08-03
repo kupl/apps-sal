@@ -1,5 +1,5 @@
 N = int(input())
 if N % 2 == 0:
-  print(N)
+    print(N)
 else:
-  print(N*2)
+    print(N * 2)

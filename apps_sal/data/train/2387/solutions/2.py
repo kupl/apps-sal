@@ -7,4 +7,3 @@ for i in range(t):
         n = n // 10 + n % 10
     res += n
     print(res)
-

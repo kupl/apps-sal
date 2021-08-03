@@ -9,7 +9,7 @@ class Solution:
         #         res += count[presum - S]
         #     count[presum] = count.get(presum, 0) + 1
         # return res
-        
+
         # two pointers
         # def atMost(k):
         #     n = len(A)
@@ -22,7 +22,7 @@ class Solution:
         #         res += right - left + 1
         #     return res
         # return atMost(S) - atMost(S - 1)
-        
+
         left = res = cur_sum = count = 0
         for right in range(len(A)):
             cur_sum += A[right]

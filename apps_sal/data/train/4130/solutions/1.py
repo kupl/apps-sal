@@ -1,4 +1,5 @@
 from re import match, search
 
-is_valid_HK_phone_number = lambda n: match('^\d{4} \d{4}$', n) is not None
-has_valid_HK_phone_number = lambda n: search('\d{4} \d{4}', n) is not None
+
+def is_valid_HK_phone_number(n): return match('^\d{4} \d{4}$', n) is not None
+def has_valid_HK_phone_number(n): return search('\d{4} \d{4}', n) is not None

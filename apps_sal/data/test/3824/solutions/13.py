@@ -16,4 +16,3 @@ xf += 1
 yf += 1
 
 print(2 * (xf - xs) + 2 * (yf - ys))
-

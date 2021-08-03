@@ -8,4 +8,3 @@ for bank in banks:
     if b < bank < c:
         ans += 1
 print(ans)
-

@@ -16,4 +16,3 @@ else:
             remaining -= 1
         ans[-inserted:] = reversed(ans[-inserted:])
     print((*ans))
-

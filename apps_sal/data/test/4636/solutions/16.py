@@ -5,10 +5,10 @@ for loop in range(t):
 
     n = int(input())
 
-    lis = list(map(int,input().split()))
+    lis = list(map(int, input().split()))
 
     ai = 0
-    bi = n-1
+    bi = n - 1
 
     A = [0]
     B = [0]
@@ -44,6 +44,4 @@ for loop in range(t):
         if nb > 0:
             move += 1
 
-    print(move,sum(A),sum(B))
-                
-
+    print(move, sum(A), sum(B))

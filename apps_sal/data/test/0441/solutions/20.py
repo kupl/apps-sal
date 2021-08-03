@@ -39,4 +39,4 @@ if c >= 0:
     res += c2 - c
 else:
     res += c2
-print(res)      
+print(res)

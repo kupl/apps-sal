@@ -3,6 +3,7 @@ import sys
 inf = float('inf')
 ans = inf
 
+
 def solve():
     n, m = map(int, input().split())
     s = [None] * n
@@ -45,7 +46,7 @@ def solve():
                     kr = j
                     break
 
-            left = 2*kr
+            left = 2 * kr
             right = m + 1
 
         # print(left, right)
@@ -66,7 +67,7 @@ def solve():
                         kl = j
                         break
 
-                left, right = min(left + 1 + 2*kr, right + m + 2), min(right + 1 + 2*(m + 1 - kl), left + m + 2)
+                left, right = min(left + 1 + 2 * kr, right + m + 2), min(right + 1 + 2 * (m + 1 - kl), left + m + 2)
 
             # print(left, right)
 
@@ -86,6 +87,9 @@ def solve():
 
         print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

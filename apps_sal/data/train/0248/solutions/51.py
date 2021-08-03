@@ -14,12 +14,9 @@ class Solution:
         parents = {(i, j): (i, j) for i in range(rows) for j in range(cols)}
         for i, row in enumerate(grid):
             for j, letter in enumerate(row):
-                if i > 0 and j > 0 and grid[i-1][j] == grid[i][j-1] == letter and find((i-1, j)) == find((i, j-1)):
+                if i > 0 and j > 0 and grid[i - 1][j] == grid[i][j - 1] == letter and find((i - 1, j)) == find((i, j - 1)):
                     return True
                 for r, c in (i - 1, j), (i, j - 1):
                     if 0 <= r < rows and 0 <= c < cols and grid[r][c] == letter:
                         union((i, j), (r, c))
         return False
-    
-        
-

@@ -7,7 +7,7 @@ for _ in range(T):
         else:
             print("Bob")
     else:
-        loop = k+1
+        loop = k + 1
         idx = n % loop
         if idx == k:
             print("Alice")

@@ -28,21 +28,20 @@ for ai in range(1, a + 1):
                 while prime[n_ai - 1] is not None:
                     cd[prime[n_ai - 1]] += 1
                     n_ai //= prime[n_ai - 1]
-                
+
                 n_bi = bi
                 while prime[n_bi - 1] is not None:
                     cd[prime[n_bi - 1]] += 1
                     n_bi //= prime[n_bi - 1]
-                
+
                 n_ci = ci
                 while prime[n_ci - 1] is not None:
                     cd[prime[n_ci - 1]] += 1
                     n_ci //= prime[n_ci - 1]
-                
+
                 res = reduce(mul, [x + 1 for x in list(cd.values())], 1)
                 d[n] = res
-            
+
             result += res
 
 print(result % mod)
-

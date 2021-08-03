@@ -29,4 +29,3 @@ class Solution:
             return total, nodes_below_i
 
         return [dfs(i)[0] for i in range(N)]
-

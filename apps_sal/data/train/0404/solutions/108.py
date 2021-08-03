@@ -3,8 +3,9 @@ class Solution:
         suffix_sums = [0] * (len(A) + 1)
         for i in range(len(A) - 1, -1, -1):
             suffix_sums[i] = A[i] + suffix_sums[i + 1]
-            
+
         memo = {}
+
         def largest_starting_at(i, new_k):
             if i == len(A):
                 return 0
@@ -20,5 +21,5 @@ class Solution:
                 )
             memo[i, new_k] = best
             return memo[i, new_k]
-        
+
         return largest_starting_at(0, K)

@@ -5,10 +5,15 @@ def base3(n):
         array.append(n % 3)
         n //= 3
     return array
+
+
 def good(n):
     return 2 not in base3(n)
+
+
 def convert(array):
     return sum(array[i] * 3 ** i for i in range(len(array)))
+
 
 for _ in range(int(input())):
     n = base3(int(input()))
@@ -40,4 +45,3 @@ for _ in range(int(input())):
         i += 1
     print(convert(n))
     # print()
-

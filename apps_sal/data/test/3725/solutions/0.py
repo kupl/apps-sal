@@ -1,5 +1,6 @@
 import fractions
 
+
 def read_data():
     m = int(input())
     h1, a1 = map(int, input().split())
@@ -7,6 +8,7 @@ def read_data():
     h2, a2 = map(int, input().split())
     x2, y2 = map(int, input().split())
     return m, h1, a1, x1, y1, h2, a2, x2, y2
+
 
 def solve(m, h1, a1, x1, y1, h2, a2, x2, y2):
     t = 0
@@ -38,6 +40,7 @@ def solve(m, h1, a1, x1, y1, h2, a2, x2, y2):
         return t
     return retrieve(a1, a2, t1, s1, t2, s2, h1s, h2s)
 
+
 def retrieve(a1, a2, t1, s1, t2, s2, h1s, h2s):
     u1 = h1s[a1]
     u2 = h2s[a2]
@@ -55,19 +58,22 @@ def retrieve(a1, a2, t1, s1, t2, s2, h1s, h2s):
             return -1
     return find_time(u1, s1, u2, s2)
 
+
 def guess(hs, u, t, s, a):
     if u <= t:
         return hs[a] == u
     tt = t + (u - t) % s
     return hs[a] == tt
 
+
 def find_time(u1, s1, u2, s2):
     g = fractions.gcd(s1, s2)
     if abs(u1 - u2) % g:
         return -1
-    k1, k2 = extended_euclid(s1, s2, u2-u1, g)
+    k1, k2 = extended_euclid(s1, s2, u2 - u1, g)
     b = s2 // g
     return (k1 % b) * s1 + u1
+
 
 def egcd(a, b):
     x, lastx = 0, 1
@@ -78,6 +84,7 @@ def egcd(a, b):
         x, lastx = lastx - q * x, x
         y, lasty = lasty - q * y, y
     return lastx, lasty
+
 
 def extended_euclid(a, b, c, g):
     x, y = egcd(a, b)

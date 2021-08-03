@@ -11,7 +11,7 @@ class Solution:
                     last = position[i]
                     balls -= 1
             return balls == 0
-                                  
+
         position.sort()
         hi = position[-1]
         lo = 1
@@ -23,4 +23,3 @@ class Solution:
             else:
                 hi = mi - 1
         return lo
-

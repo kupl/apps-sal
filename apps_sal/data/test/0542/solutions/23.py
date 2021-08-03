@@ -43,4 +43,3 @@ if last > 0:
     print("first")
 else:
     print("second")
-

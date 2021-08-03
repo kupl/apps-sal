@@ -4,8 +4,8 @@ def byte_v(a, n):
         ans.append(a % 2)
         a //= 2
     ans.reverse()
-    
-    ans = (n - len(ans))  * [0] + ans
+
+    ans = (n - len(ans)) * [0] + ans
 
     return ans
 
@@ -19,7 +19,7 @@ phill = players[-1]
 ans = 0
 for i in range(m):
     curr = 0
-    
+
     for j in range(n):
         if phill[j] != players[i][j]:
             curr += 1

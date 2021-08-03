@@ -1,6 +1,7 @@
 import itertools
 import sys
 
+
 def __starting_point():
     n, q = map(int, input().split())
     blocks = list(map(int, input().split()))
@@ -23,10 +24,12 @@ def __starting_point():
         if dif[blocks[i]][2] >= maxi:
             maxi = dif[blocks[i]][2]
         if i == end:
-            rez  = rez + maxi
+            rez = rez + maxi
             maxi = 0
     rez = (-1) * rez
     for i in dif:
         rez = rez + dif[i][2]
     print(rez)
+
+
 __starting_point()

@@ -1,4 +1,5 @@
-SEQUENCE = [2,  1]
+SEQUENCE = [2, 1]
+
 
 def lucasnum(n):
     try:

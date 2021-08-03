@@ -10,12 +10,12 @@ def main():
         aran -= x
         bran += x
         if bran >= K:
-            print(n+1)
+            print(n + 1)
             return
 
     print(-1)
     return
-        
+
 
 def __starting_point():
     # nonlocal stime

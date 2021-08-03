@@ -1,5 +1,6 @@
 import re
 
+
 def validate_number(s):
     if not s:
         return "Plenty more fish in the sea"

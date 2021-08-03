@@ -6,9 +6,9 @@ s = input()
 t = ''
 
 for c in s:
-  t += c
+    t += c
 
-  if t.endswith('fox'):
-    t = t[:len(t)-3]
+    if t.endswith('fox'):
+        t = t[:len(t) - 3]
 
 print(len(t))

@@ -7,7 +7,7 @@ class Solution:
             dp[min1] = float('inf')
             min2 = dp.index(min(dp))
             dp[min1] = minNb
-            
+
             for c in range(len(row)):
                 if c != min1:
                     row[c] += dp[min1]

@@ -1,1 +1,1 @@
-reverser = lambda x: ' '.join([i[::-1] for i in x.split(' ')])
+def reverser(x): return ' '.join([i[::-1] for i in x.split(' ')])

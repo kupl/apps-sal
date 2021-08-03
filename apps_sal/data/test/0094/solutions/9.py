@@ -6,23 +6,23 @@ def solve(n, k):
     while idx >= 0:
         if k[idx] != '0':
             for shift in range(1, len(k) - idx + 1):
-                ok = int(k[idx:idx+shift]) < n_num
+                ok = int(k[idx:idx + shift]) < n_num
                 if ok:
                     dp[idx] = min(
-                        dp[idx], 1 + dp[idx+shift]
+                        dp[idx], 1 + dp[idx + shift]
                     )
                 else:
                     break
         else:
-            dp[idx] = 1 + dp[idx+1]
+            dp[idx] = 1 + dp[idx + 1]
         idx -= 1
     digits = list()
     idx = 0
     while idx < len(k):
         shift = 1
         while idx + shift <= len(k):
-            if dp[idx+shift]+1 == dp[idx]:
-                digits.append(int(k[idx:idx+shift]))
+            if dp[idx + shift] + 1 == dp[idx]:
+                digits.append(int(k[idx:idx + shift]))
                 break
             else:
                 shift += 1
@@ -33,7 +33,7 @@ def solve(n, k):
         n_pow *= n_num
     return tot_res
 
+
 N = input()
 K = input()
 print(solve(N, K))
-

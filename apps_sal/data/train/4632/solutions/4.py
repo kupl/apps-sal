@@ -11,6 +11,5 @@ def decode(string):
         '8': '2',
         '9': '1',
     }
-    
-    return ''.join([cipher_map[s] for s in string])
 
+    return ''.join([cipher_map[s] for s in string])

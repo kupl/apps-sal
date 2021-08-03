@@ -8,10 +8,8 @@ for x in a:
     else:
         ready = (x - h + moulin + k - 1) // k
         passed = min(ready, (moulin + k - 1) // k)
-        ans += passed 
+        ans += passed
         moulin = max(0, moulin - k * passed)
         moulin += x
 ans += (moulin + k - 1) // k
 print(ans)
-
-

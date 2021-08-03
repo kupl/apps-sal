@@ -10,4 +10,3 @@ for _ in range(int(input())):
             else:
                 ans2 += 1
     print(max(ans1, ans2))
-

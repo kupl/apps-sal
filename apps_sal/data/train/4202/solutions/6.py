@@ -4,7 +4,7 @@ def ulam_sequence(u0, u1, n):
     u0 = first number
     u1 = second numberr
     n  = number of elements in sequence
-    
+
     Return
     Ulam Sequence (u0, u1, u2...) with n-terms
     """
@@ -14,7 +14,7 @@ def ulam_sequence(u0, u1, n):
         count = 0
         index = 0
         for number in U:
-            if next_num - number in U and number != next_num/2:
+            if next_num - number in U and number != next_num / 2:
                 count += 1
             if count >= 3:
                 break

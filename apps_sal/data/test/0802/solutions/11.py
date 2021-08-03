@@ -14,8 +14,7 @@ for i in range(n):
     while counter[flats[j]] > 1:
         counter[flats[j]] -= 1
         j += 1
-    menor = min(menor, i-j+1)
+    menor = min(menor, i - j + 1)
     if menor == len(types):
         break
 print(menor)
-

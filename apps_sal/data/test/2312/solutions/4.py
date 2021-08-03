@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     blst = list(map(int, input().split()))
@@ -12,6 +13,7 @@ def main():
             return
         bef = b
     print("NO")
-    
+
+
 for _ in range(int(input())):
     main()

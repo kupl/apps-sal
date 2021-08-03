@@ -32,16 +32,16 @@ for i in range(Q):
     members[D].add(C)
     while len(rates[old]) > 0 and rates[old][0][1] not in members[old]:
         heapq.heappop(rates[old])
-    
+
     if len(rates[old]) > 0:
         heapq.heappush(max_rates, (-rates[old][0][0], old))
-        
+
     heapq.heappush(rates[D], (-rate_list[C], C))
     heapq.heappush(max_rates, (rate_list[C], D))
 
     while max_rates:
         rate, num = max_rates[0]
-        if len(rates[num])==0 or - rates[num][0][0] != rate:
+        if len(rates[num]) == 0 or - rates[num][0][0] != rate:
             heapq.heappop(max_rates)
         else:
             print(rate)

@@ -4,12 +4,10 @@ class Solution:
         mem[0] = 1
         for i in range(d):
             curr = collections.defaultdict(int)
-            for face in range(1,f+1):
-                for val,count in list(mem.items()):
+            for face in range(1, f + 1):
+                for val, count in list(mem.items()):
                     newVal = face + val
                     if newVal <= target:
-                        curr[newVal] += count 
+                        curr[newVal] += count
             mem = curr
-        return mem[target]%(10**9+7)
-            
-
+        return mem[target] % (10**9 + 7)

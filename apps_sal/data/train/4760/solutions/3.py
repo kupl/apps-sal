@@ -1,13 +1,15 @@
 class T:
-    def __init__(self,value,left=None,right=None):
-        self.value=value
-        self.left=left
-        self.right=right
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
 
 def preorder(self):
     if not self:
         return []
     return [self.value] + preorder(self.left) + preorder(self.right)
+
 
 def is_bst(T):
     if not (T and (T.left or T.right)):

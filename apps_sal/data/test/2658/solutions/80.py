@@ -1,9 +1,9 @@
-N,K = map(int,input().split())
-lsA = [0]+list(map(int,input().split()))
+N, K = map(int, input().split())
+lsA = [0] + list(map(int, input().split()))
 ls = []
 set1 = set()
 a = 1
-for i in range(N+1):
+for i in range(N + 1):
     if a in set1:
         loop = ls[ls.index(a):]
         lenloop = len(loop)
@@ -15,5 +15,5 @@ for i in range(N+1):
 if K < len(startls):
     ans = startls[K]
 else:
-    ans = loop[(K-len(startls))%lenloop]
+    ans = loop[(K - len(startls)) % lenloop]
 print(ans)

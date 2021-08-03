@@ -3,10 +3,10 @@ import sys
 
 
 def solve(N: int, M: int, L: int, A: "List[int]", B: "List[int]", C: "List[int]", Q: int, s: "List[int]", t: "List[int]"):
-    import numpy as np    
-    from scipy.sparse import coo_matrix    
+    import numpy as np
+    from scipy.sparse import coo_matrix
     from scipy.sparse.csgraph import floyd_warshall
-    mat = floyd_warshall(coo_matrix((C, (A, B)), shape=(N+1, N+1), dtype=np.int32).tocsr(), directed=False)
+    mat = floyd_warshall(coo_matrix((C, (A, B)), shape=(N + 1, N + 1), dtype=np.int32).tocsr(), directed=False)
     mat = floyd_warshall(mat <= L, directed=False)
     for ss, tt in zip(s, t):
         yield -1 if np.isinf(mat[ss][tt]) else int(mat[ss][tt]) - 1
@@ -37,12 +37,15 @@ def main():
         t[i] = int(next(tokens))
     print(*solve(N, M, L, A, B, C, Q, s, t), sep="\n")
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
-    #test()
+    # test()
     main()
+
 
 __starting_point()

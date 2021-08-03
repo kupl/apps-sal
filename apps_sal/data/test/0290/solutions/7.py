@@ -1,4 +1,4 @@
-n = int( input() )
+n = int(input())
 
 a = 0
 b = 0
@@ -9,5 +9,4 @@ while a * b < n:
     else:
         b += 1
 
-print( a + b )
-
+print(a + b)

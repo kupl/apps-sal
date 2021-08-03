@@ -6,4 +6,3 @@ for i in range(1, 4):
         return
     prev = s[i]
 print('Good')
-

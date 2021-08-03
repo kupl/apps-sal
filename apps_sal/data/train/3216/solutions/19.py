@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def movie(card, ticket, perc):
     # your code
     discount_ticket = ticket
@@ -12,4 +13,3 @@ def movie(card, ticket, perc):
         system_a_price = days * ticket
         system_b_price = system_b_price + discount_ticket
     return days
-

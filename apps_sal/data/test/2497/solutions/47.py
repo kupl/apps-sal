@@ -33,6 +33,7 @@ for i in range(N):
         update_x(0, x)
         update_y(-1, y)
 
+
 def area(t):
     xmin, xmax, ymin, ymax = INF, -INF, INF, -INF
     for (v, x) in list(x1.items()):
@@ -44,6 +45,7 @@ def area(t):
     for (v, y) in list(y2.items()):
         ymax = max(ymax, y + v * t)
     return (xmax - xmin) * (ymax - ymin)
+
 
 ans = area(0)
 
@@ -64,4 +66,3 @@ for i in range(len(y3)):
                 ans = min(ans, area(t))
 
 print((ans / 4))
-

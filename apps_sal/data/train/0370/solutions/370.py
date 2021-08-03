@@ -4,7 +4,7 @@ class Solution:
             if num % i == 0:
                 u.union(num, i)
                 u.union(num, num // i)
-    
+
     def largestComponentSize(self, A: List[int]) -> int:
         u = UnionFind(max(A) + 1)
         for item in A:
@@ -19,7 +19,7 @@ class Solution:
                 temp_dict[parent] += 1
             o = max(o, temp_dict[parent])
         return o
-    
+
 
 class UnionFind:
     def __init__(self, len_: int):

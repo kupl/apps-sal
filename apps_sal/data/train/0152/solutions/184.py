@@ -15,9 +15,9 @@ class Solution:
             return right
         elif self.ok(position, m, left):
             return left
-        
+
     def ok(self, position, m, force):
-        # first one at the 
+        # first one at the
         n = len(position)
         stack = [position[0]]
         i = 0
@@ -26,4 +26,3 @@ class Solution:
                 stack.append(position[i])
             i += 1
         return len(stack) >= m
-

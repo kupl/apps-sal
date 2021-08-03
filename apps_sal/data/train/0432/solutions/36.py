@@ -12,7 +12,7 @@ class Solution:
         #             else:
         #                 return False
         # return True
-    
+
         c = Counter(nums)
         for i in sorted(c):
             if c[i] > 0:
@@ -21,6 +21,3 @@ class Solution:
                     if c[i + j] < 0:
                         return False
         return True
-                
-                    
-

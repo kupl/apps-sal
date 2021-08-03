@@ -12,6 +12,3 @@ def permute_a_palindrome(string):
     if (len(string) % 2 != 0 and odd == 1) or (len(string) % 2 == 0 and odd == 0):
         return True
     return False
-        
-    
-

@@ -8,6 +8,4 @@ def solution(a, b):
         string += a
         string += b
         string += a
-    return string 
-        
-
+    return string

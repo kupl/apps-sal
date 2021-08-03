@@ -25,4 +25,3 @@ for i in range(2, N + 1):
         dp[i] %= MOD
     dpsum[i] = dpsum[i - 1] + dp[i]
 print((dp[N]))
-

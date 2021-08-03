@@ -8,9 +8,8 @@ if s[a] == s[b]:
 else:
     print(1)
     #i = a
-    #while s[i] != s[b]:
-        #i += 1
+    # while s[i] != s[b]:
+    #i += 1
    # j = a
-    #while j > 0 and s[i] != s[b]:
-        #j -= a
-
+    # while j > 0 and s[i] != s[b]:
+    #j -= a

@@ -23,4 +23,3 @@ for i, x in enumerate(r):
 for i, x in enumerate(c):
     for j in range(x):
         print("col", i + 1)
-

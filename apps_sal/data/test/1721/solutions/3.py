@@ -50,10 +50,10 @@ def main():
         A[idx[si][cnt[si]]] = i
         cnt[si] += 1
 
-    a2i = {a: i+1 for i, a in enumerate(A)}
+    a2i = {a: i + 1 for i, a in enumerate(A)}
     bit = Bit(N)
     ans = 0
-    for a in range(N-1, -1, -1):
+    for a in range(N - 1, -1, -1):
         ans += bit.sum(a2i[a])
         bit.add(a2i[a], 1)
     print(ans)
@@ -61,5 +61,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

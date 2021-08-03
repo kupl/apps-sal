@@ -1,7 +1,7 @@
 
 N = int(input())
 
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 end = [False] * N
 give = []
@@ -26,8 +26,8 @@ for i in range(N):
 for i in range(len(give) - 1):
 
     if give[i] == want[i]:
-        t = want[i+1]
-        want[i+1] = want[i]
+        t = want[i + 1]
+        want[i + 1] = want[i]
         want[i] = t
 
 if give[-1] == want[-1]:
@@ -39,5 +39,4 @@ for i in range(len(give)):
 
     a[give[i]] = want[i] + 1
 
-print(" ".join(map(str,a)))
-
+print(" ".join(map(str, a)))

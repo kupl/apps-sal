@@ -1,6 +1,6 @@
 inflos = int(input())
 roots = [int(x) - 1 for x in input().split()]
- 
+
 
 depth = [0]
 for v in range(inflos - 1):
@@ -15,6 +15,5 @@ for d in depth:
         freq[d] = 1
 res = 0
 for d in freq:
-    res+= freq[d]%2
+    res += freq[d] % 2
 print(res)
-

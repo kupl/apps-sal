@@ -6,11 +6,11 @@ g = []
 for i in range(n):
     To = set()
     if i < n - 1:
-        To.add(i+1)
+        To.add(i + 1)
     if i > 0:
-        To.add(i-1)
+        To.add(i - 1)
     if a[i] - 1 != i:
-        To.add(a[i]-1)
+        To.add(a[i] - 1)
     g.append(To)
 
 q = [0]
@@ -32,4 +32,3 @@ while len(q) > 0:
 
 for r in d:
     print(r, end=' ')
-

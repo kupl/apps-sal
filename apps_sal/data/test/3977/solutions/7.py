@@ -1,8 +1,8 @@
 class Union:
 
     def __init__(self, n):
-        self.ancestors = [i for i in range(n+1)]
-        self.size = [0]*(n+1)
+        self.ancestors = [i for i in range(n + 1)]
+        self.size = [0] * (n + 1)
 
     def get_root(self, node):
         if self.ancestors[node] == node:
@@ -28,7 +28,7 @@ for _ in range(m):
     a, b = map(int, input().split())
     union.merge(a, b)
 
-for i in range(1, n+1):
+for i in range(1, n + 1):
     union.size[union.get_root(i)] += 1
 
 for home in homes:

@@ -5,8 +5,8 @@ class Solution:
             return False
         if k == 0:
             return s == t
-        
-        # record how many letters need to be changed, autobump step if step is found 
+
+        # record how many letters need to be changed, autobump step if step is found
         steps = collections.defaultdict(int)
         for sc, tc in zip(s, t):
             if sc != tc:
@@ -16,18 +16,13 @@ class Solution:
                     step = idx_t - idx_s
                 else:
                     step = idx_t - idx_s + 26
-               
+
                 if step > k:
                     return False
                 steps[step] += 1
-                
-                
+
         for step in steps:
             if (steps[step] - 1) * 26 + step > k:
                 return False
-          
 
         return True
-                    
-        
-

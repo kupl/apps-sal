@@ -7,7 +7,7 @@ a = []
 b = []
 for i in range(N):
     i1, i2 = list(map(int, input().split()))
-    g = math.gcd(i1,i2)
+    g = math.gcd(i1, i2)
     if g == 0:
         a.append(i1)
         b.append(i2)
@@ -16,7 +16,7 @@ for i in range(N):
     y = i2 // g
     if x < 0:
         x = - x
-        y = - y 
+        y = - y
     a.append(x)
     b.append(y)
 
@@ -31,30 +31,28 @@ for i in range(N):
         a[i] = b[i]
         b[i] = 0
         sgn = 1
-    else :
+    else:
         sgn = 0
 
-    if (a[i],b[i]) in P:
-        P[(a[i],b[i])][sgn]=P[(a[i],b[i])][sgn] + 1
-    elif sgn == 0 :
-        P[(a[i],b[i])]=[1,0]
-    else :
-        P[(a[i],b[i])]=[0,1]
+    if (a[i], b[i]) in P:
+        P[(a[i], b[i])][sgn] = P[(a[i], b[i])][sgn] + 1
+    elif sgn == 0:
+        P[(a[i], b[i])] = [1, 0]
+    else:
+        P[(a[i], b[i])] = [0, 1]
 
 
 MOD = 1000000007
-a1 = 1 
-ans0=0
+a1 = 1
+ans0 = 0
 for k in P:
-    if k == (0,0):
+    if k == (0, 0):
         ans0 = P[k][0]
     else:
-        a1 = a1*(pow(2,P[k][0],MOD)+pow(2,P[k][1],MOD) - 1) % MOD
+        a1 = a1 * (pow(2, P[k][0], MOD) + pow(2, P[k][1], MOD) - 1) % MOD
 
 if ans0 != 0:
-    ans = ans0 + a1 -1
+    ans = ans0 + a1 - 1
 else:
-    ans = a1 -1
-print((ans%MOD))
-
-
+    ans = a1 - 1
+print((ans % MOD))

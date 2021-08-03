@@ -13,4 +13,3 @@ for i in A:
         result = 'APPROVED'
 
 print(result)
-

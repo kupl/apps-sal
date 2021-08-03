@@ -7,9 +7,9 @@ a = [int(i) for i in a]
 g = a[0]
 
 for i in a:
-	g = gcd(i, g)
+    g = gcd(i, g)
 
 if g in a:
-	print(g)
+    print(g)
 else:
-	print(-1)
+    print(-1)

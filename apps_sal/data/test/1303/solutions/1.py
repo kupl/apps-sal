@@ -22,4 +22,3 @@ for t in range(l, r + 1):
             cnt += 1
             break
 print(cnt)
-

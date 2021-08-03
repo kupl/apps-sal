@@ -11,4 +11,3 @@ for i1 in range(25):
         if cl > best:
             best = cl
 print(best)
-

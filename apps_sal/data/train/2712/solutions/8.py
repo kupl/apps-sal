@@ -21,7 +21,7 @@ def loneliest(n):
         if lst[i] == 1:
             if lone_list[i] < min_1:
                 min_1 = lone_list[i]
-  
+
     if min(lone_list) == min_1:
         return True
     return False

@@ -8,4 +8,3 @@ else:
     mn = min(v)
     r = min(mn, sm // n)
     print(r)
-

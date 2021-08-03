@@ -41,7 +41,7 @@ def cal(l, output):
     for i in range(c):
         s = 0
         for j in l.items():
-            s += a[j[0]-1][i-1] * j[1]
+            s += a[j[0] - 1][i - 1] * j[1]
         output.append(s)
 
 

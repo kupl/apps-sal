@@ -1,17 +1,16 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         return self.dfs(n)
-    
+
     @lru_cache(None)
     def dfs(self, remain):
         sqrt_root = int(math.sqrt(remain))
-        for i in range(1, sqrt_root+1):
-            if not self.dfs(remain - i*i):
+        for i in range(1, sqrt_root + 1):
+            if not self.dfs(remain - i * i):
                 return True
 
         return False
 
-        
     '''
         return self.helper(n, True)
     

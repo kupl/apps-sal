@@ -4,6 +4,7 @@ class Solution:
         self.N = len(locations)
         self.finish = finish
         self.M = dict()
+
         def dfs(i, f):
             if (i, f) not in self.M:
                 res = 0
@@ -14,5 +15,5 @@ class Solution:
                         res += dfs(j, f - abs(locations[i] - locations[j]))
                 self.M[(i, f)] = res
             return self.M[(i, f)]
-        
-        return dfs(start, fuel) % (10**9 + 7) 
+
+        return dfs(start, fuel) % (10**9 + 7)

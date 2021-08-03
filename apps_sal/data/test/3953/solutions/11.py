@@ -24,12 +24,11 @@ if row == 0:
     for i in range(n):
         for j in range(n):
             if s[i][j] == '.':
-                print(i+1, j+1)
+                print(i + 1, j + 1)
                 break
 else:
     for i in range(n):
         for j in range(n):
             if s[j][i] == '.':
-                print(j+1, i+1)
+                print(j + 1, i + 1)
                 break
-

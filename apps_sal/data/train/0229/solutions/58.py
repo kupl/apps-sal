@@ -6,4 +6,3 @@ class Solution:
                 c[n] -= 1
                 c[double] -= 1
         return all(not v for v in list(c.values()))
-

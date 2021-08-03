@@ -10,4 +10,3 @@ numindex = [4, 7]
 for i in range(lenlucky):
     acc += numindex.index(int(lucky[i])) * 2**(lenlucky - i - 1)
 print(acc)
-

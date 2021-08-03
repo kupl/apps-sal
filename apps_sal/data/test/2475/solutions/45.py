@@ -15,6 +15,7 @@ def f_frog_jump(N, S):
     return ans
     # 参考: http://sigma1113.hatenablog.com/entry/2019/05/27/181729
 
+
 N = int(input())
 S = [int(i) for i in input().split()]
 print(f_frog_jump(N, S))

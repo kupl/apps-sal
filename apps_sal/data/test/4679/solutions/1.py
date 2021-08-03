@@ -25,4 +25,3 @@ while True:
             next_turn = S_B.popleft()
         elif next_turn == 'c':
             next_turn = S_C.popleft()
-

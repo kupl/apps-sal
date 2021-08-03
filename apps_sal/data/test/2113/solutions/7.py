@@ -1,18 +1,19 @@
 import sys
 
+
 def main():
     numNodes = [int(x) for x in sys.stdin.readline().rsplit()][0]
     adjList = {}
     nodeColors = {}
     unmarked = {}
-    for i in range(1, numNodes+1):
+    for i in range(1, numNodes + 1):
         adjList[i] = []
         unmarked[i] = True
     for line in sys.stdin.read().split("\n"):
         lineUnpacked = [int(x) for x in line.rsplit()]
         if (len(lineUnpacked) < 2):
             continue
-        node1,node2 = lineUnpacked
+        node1, node2 = lineUnpacked
         adjList[node1].append(node2)
         adjList[node2].append(node1)
     bfsList = []
@@ -36,8 +37,8 @@ def main():
             set1.extend(newNodes)
     count = 0
     for node in set1:
-        count = count + len(set2) - len(adjList[node])                
+        count = count + len(set2) - len(adjList[node])
     return(count)
-                    
-print(main())
 
+
+print(main())

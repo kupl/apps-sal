@@ -14,4 +14,3 @@ def scramble(string_to_rearrange, string_to_match):
         except KeyError:
             return False
     return True
-

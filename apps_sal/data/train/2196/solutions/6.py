@@ -10,4 +10,3 @@ for i in range(1, n):
     c += i - p
 ans = n * n * (m - 1) - c
 print(ans)
-

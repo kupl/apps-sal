@@ -32,4 +32,3 @@ for i in ans:
         d1.update({i[1]: i[0]})
 for i in l:
     print(d1.get(i))
-

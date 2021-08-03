@@ -12,7 +12,7 @@ for i in range(a):
         if matrix[i][j] == 0:
             row0.append(i)
             col0.append(j)
-            
+
 row0 = list(set(row0))
 col0 = list(set(col0))
 for i in row0:
@@ -41,4 +41,3 @@ if match == orig:
 
 else:
     print("NO")
-

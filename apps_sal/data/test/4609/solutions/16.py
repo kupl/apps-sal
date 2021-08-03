@@ -2,7 +2,7 @@ N = int(input())
 ans = {}
 for i in range(N):
     A = input()
-    if  A in ans:
+    if A in ans:
         ans[A] += 1
     else:
         ans[A] = 1

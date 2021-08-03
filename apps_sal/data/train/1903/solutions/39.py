@@ -4,6 +4,7 @@ https://leetcode.com/problems/min-cost-to-connect-all-points/
 from typing import List
 import heapq
 
+
 class Solution:
     '''
     Minimum Spanning Tree (Kruskal)
@@ -20,23 +21,26 @@ class Solution:
     The complexity when using sort is O(n * n log (n * n)) - we have n * n edges. Using a min heap is O(k log (n * n)),
     where k is the number of edges we need to pull to complete the tree. It's much smaller than n * n in the average case.
     '''
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
         n, cost = len(points), 0
         p = list(range(n))
         arr = []
         for i in range(n):
-            for j in range(i+1, n):
-                heapq.heappush(arr, [abs(points[i][0]-points[j][0])+abs(points[i][1]-points[j][1]), i, j])
+            for j in range(i + 1, n):
+                heapq.heappush(arr, [abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j])
 
         def find(x):
-            if x != p[x]: p[x] = find(p[p[x]])
+            if x != p[x]:
+                p[x] = find(p[p[x]])
             return p[x]
 
         while arr:
             w, i, j = heapq.heappop(arr)
             i, j = find(i), find(j)
-            if i == j: continue
+            if i == j:
+                continue
             cost += w
             p[i] = j
 

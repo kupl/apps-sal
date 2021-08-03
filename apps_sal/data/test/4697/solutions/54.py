@@ -1,4 +1,4 @@
-N, M= map(int, input().split())
+N, M = map(int, input().split())
 
 if N >= M // 2:
     print(M // 2)

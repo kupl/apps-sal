@@ -9,4 +9,4 @@ for i in range(n):
 if cnt % 2 == 0:
     print(sum(b))
 else:
-    print(sum(b)-min(b)*2)
+    print(sum(b) - min(b) * 2)

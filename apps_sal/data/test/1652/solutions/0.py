@@ -19,4 +19,3 @@ if is_OK:
     print("YES")
 else:
     print("NO")
-

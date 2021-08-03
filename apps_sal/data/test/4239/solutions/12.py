@@ -15,17 +15,17 @@ def count(val1, val2):
             cnt += 1
         else:
             digit -= 1
-        
-        if digit== 0:
+
+        if digit == 0:
             break
 
-    return cnt,val1
+    return cnt, val1
 
 
 N = int(input())
 ans = N
 
-for i in range(0,N+1):
+for i in range(0, N + 1):
     n = i
     m = N - i
     res = 0
@@ -42,4 +42,3 @@ for i in range(0,N+1):
     ans = min(ans, res)
 
 print(ans)
-

@@ -23,4 +23,3 @@ while True:
 
 ans = -1 if ans >= inf else ans
 print(ans)
-

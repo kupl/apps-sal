@@ -26,6 +26,8 @@ def solve():
         print('-1')
         return
     print(''.join(map(str, w)))
+
+
 t = int(input())
 for _ in range(t):
     solve()

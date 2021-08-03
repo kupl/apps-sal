@@ -7,4 +7,3 @@ for _ in range(n):
     else:
         ans += k
 print(ans)
-

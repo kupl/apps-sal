@@ -1,11 +1,18 @@
-import bisect,collections,copy,itertools,math,string
+import bisect
+import collections
+import copy
+import itertools
+import math
+import string
 import sys
 def I(): return int(sys.stdin.readline().rstrip())
-def LI(): return list(map(int,sys.stdin.readline().rstrip().split()))
+def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def S(): return sys.stdin.readline().rstrip()
 def LS(): return list(sys.stdin.readline().rstrip().split())
+
+
 def main():
-    n,k = LI()
+    n, k = LI()
     a = [None] + LI()
     explored = {1}
     lst = [1]
@@ -13,7 +20,7 @@ def main():
     start = 0
     junkan = []
     now = 1
-    while lenth==0:
+    while lenth == 0:
         nxt = a[now]
         if nxt in explored:
             index = lst.index(nxt)
@@ -25,14 +32,13 @@ def main():
             lst.append(nxt)
         now = nxt
     ans = 0
-    if k<start:
+    if k < start:
         ans = lst[k]
     else:
-        r = (k-start+1)%lenth
+        r = (k - start + 1) % lenth
         ans = junkan[r]
 
     print(ans)
 
 
-main()            
-
+main()

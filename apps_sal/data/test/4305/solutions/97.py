@@ -8,4 +8,3 @@ while h > 0:
         break
 
 print(count)
-

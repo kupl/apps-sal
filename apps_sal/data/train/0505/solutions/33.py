@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
         # forward pass to find invalid closed paren
@@ -28,6 +29,3 @@ class Solution:
             if i not in toremove:
                 ret += s[i]
         return ret
-            
-                
-

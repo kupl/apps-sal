@@ -8,6 +8,7 @@ def generate_board(size, color):
         board.append(row)
     return board
 
+
 def distance_from(have, need):
     paint = 0
     for have_row, need_row in zip(have, need):
@@ -15,6 +16,7 @@ def distance_from(have, need):
             if h != n:
                 paint += 1
     return paint
+
 
 def solution(n, pieces):
     white = generate_board(n, 0)
@@ -24,20 +26,21 @@ def solution(n, pieces):
         for p in pieces
     ]
     combinations = [
-        [0,0,1,1],
-        [0,1,0,1],
-        [1,0,0,1],
-        [0,1,1,0],
-        [1,0,1,0],
-        [1,1,0,0]
+        [0, 0, 1, 1],
+        [0, 1, 0, 1],
+        [1, 0, 0, 1],
+        [0, 1, 1, 0],
+        [1, 0, 1, 0],
+        [1, 1, 0, 0]
     ]
 
     return min(sum(
-            grid[i][c]
-            for i, c in enumerate(combo)
-        )
+        grid[i][c]
+        for i, c in enumerate(combo)
+    )
         for combo in combinations
     )
+
 
 def __starting_point():
     n = int(input())
@@ -50,5 +53,6 @@ def __starting_point():
         if _ < 3:
             input()
     print(solution(n, pieces))
+
 
 __starting_point()

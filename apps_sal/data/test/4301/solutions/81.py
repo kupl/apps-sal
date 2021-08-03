@@ -1,7 +1,7 @@
+import copy
 n = int(input())
 alist = [int(input()) for _ in range(n)]
 
-import copy
 alist_copy = copy.copy(alist)
 
 alist_copy.sort()

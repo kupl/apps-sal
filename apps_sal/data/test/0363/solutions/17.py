@@ -9,5 +9,3 @@ while (n > 0):
     s *= 10
 ans += n * (i - 1)
 print(ans)
-    
-

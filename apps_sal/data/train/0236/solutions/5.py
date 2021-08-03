@@ -13,7 +13,7 @@ class Solution:
         #         one[i] = min(one[i-1], zero[i-1]) + 1
         #         zero[i] = zero[i-1]
         # return min(zero[n-1], one[n-1])
-        
+
         flip, one = 0, 0
         for i in S:
             if i == '1':

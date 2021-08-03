@@ -12,4 +12,3 @@ for i, (a, b) in enumerate(C):
     new_dp[a:] = np.maximum(dp[a:], dp[:-a] + b)
     dp = new_dp
 print(ans)
-

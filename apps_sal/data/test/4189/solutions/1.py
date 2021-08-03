@@ -12,4 +12,3 @@ for k in range(100):
     if soft <= a and hard <= b or soft <= b and hard <= a:
         print(k)
         break
-

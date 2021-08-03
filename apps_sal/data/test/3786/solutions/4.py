@@ -4,7 +4,7 @@ a = list(map(int, input().split()))
 
 to = {}
 for i, node in enumerate(a):
-    to[i+2] = node
+    to[i + 2] = node
 
 layers = collections.defaultdict(list)
 for k, v in to.items():
@@ -13,7 +13,7 @@ for k, v in to.items():
 queue = [1]
 ans = 0
 while queue:
-    ans += len(queue)%2
+    ans += len(queue) % 2
     n = len(queue)
     for _ in range(n):
         node = queue.pop(0)

@@ -5,14 +5,14 @@ def main():
 
     _, k = list(map(int, input().split()))
     s = list(input())
-    new_s =[]
+    new_s = []
 
     for i in range(k):
 
         if len(s) % 2 == 1:
             s = s * 2
 
-        s = [s[2*i:2*i+2] for i in range(len(s) // 2)]
+        s = [s[2 * i:2 * i + 2] for i in range(len(s) // 2)]
 
         for l in s:
             if l[0] == "R":
@@ -36,6 +36,5 @@ def main():
 
     print((s[0]))
 
+
 main()
-
-

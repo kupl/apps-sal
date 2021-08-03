@@ -37,7 +37,7 @@ tms = []
 t1 = max(0, xDescMax - xConstMax)
 t2 = max(0, xConstMax - xAscMax)
 if t1 >= t2:
-    t = max(0, (xDescMax-xAscMax)/2)
+    t = max(0, (xDescMax - xAscMax) / 2)
     tms.append(t)
 else:
     tms.append(t1)
@@ -46,7 +46,7 @@ else:
 t1 = max(0, xConstMin - xAscMin)
 t2 = max(0, xDescMin - xConstMin)
 if t1 >= t2:
-    t = max(0, (xDescMin-xAscMin)/2)
+    t = max(0, (xDescMin - xAscMin) / 2)
     tms.append(t)
 else:
     tms.append(t1)
@@ -55,7 +55,7 @@ else:
 t1 = max(0, yDescMax - yConstMax)
 t2 = max(0, yConstMax - yAscMax)
 if t1 >= t2:
-    t = max(0, (yDescMax-yAscMax)/2)
+    t = max(0, (yDescMax - yAscMax) / 2)
     tms.append(t)
 else:
     tms.append(t1)
@@ -64,7 +64,7 @@ else:
 t1 = max(0, yConstMin - yAscMin)
 t2 = max(0, yDescMin - yConstMin)
 if t1 >= t2:
-    t = max(0, (yDescMin-yAscMin)/2)
+    t = max(0, (yDescMin - yAscMin) / 2)
     tms.append(t)
 else:
     tms.append(t1)
@@ -72,24 +72,26 @@ else:
 
 ans = INF
 for tm in tms:
-    if tm == INF: continue
+    if tm == INF:
+        continue
 
-    xs = [xConstMin, xConstMax, xAscMin+tm, xAscMax+tm, xDescMin-tm, xDescMax-tm]
-    ys = [yConstMin, yConstMax, yAscMin+tm, yAscMax+tm, yDescMin-tm, yDescMax-tm]
+    xs = [xConstMin, xConstMax, xAscMin + tm, xAscMax + tm, xDescMin - tm, xDescMax - tm]
+    ys = [yConstMin, yConstMax, yAscMin + tm, yAscMax + tm, yDescMin - tm, yDescMax - tm]
 
     xMin, xMax = INF, -INF
     for x in xs:
-        if x == INF or x == -INF: continue
+        if x == INF or x == -INF:
+            continue
         xMin = min(xMin, x)
         xMax = max(xMax, x)
 
     yMin, yMax = INF, -INF
     for y in ys:
-        if y == INF or y == -INF: continue
+        if y == INF or y == -INF:
+            continue
         yMin = min(yMin, y)
         yMax = max(yMax, y)
 
-    ans = min(ans, (xMax-xMin)*(yMax-yMin))
+    ans = min(ans, (xMax - xMin) * (yMax - yMin))
 
 print(ans)
-

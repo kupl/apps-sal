@@ -29,4 +29,3 @@ else:
         tmp = (a - 1) ^ ((a - 1) // 2 % 2)
     ans = ans ^ tmp
     print(ans)
-

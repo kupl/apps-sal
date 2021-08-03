@@ -35,7 +35,7 @@ def main():
     cw += 1
     dh += 1
     dw += 1
-    
+
     ans[ch][cw] = 0
     move1 = [[1, 0], [-1, 0], [0, 1], [0, -1]]
     move2 = [
@@ -75,7 +75,6 @@ def main():
 
 def __starting_point():
     main()
-
 
 
 __starting_point()

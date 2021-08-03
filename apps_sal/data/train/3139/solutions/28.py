@@ -1,8 +1,8 @@
 def index(array, n):
-    
+
     if n < len(array):
-        x = array[n] **n;
+        x = array[n] ** n
     else:
-        x = -1;
-        
-    return x;
+        x = -1
+
+    return x

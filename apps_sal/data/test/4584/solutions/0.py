@@ -14,12 +14,9 @@ def i_row_list(N): return [list(map(int, input().split())) for _ in range(N)]
 
 
 n = i_input()
-aa=i_list()
-shain=[0]*n
+aa = i_list()
+shain = [0] * n
 for a in aa:
-    shain[a-1]+=1
+    shain[a - 1] += 1
 for s in shain:
     print(s)
-
-
-

@@ -1,4 +1,4 @@
-n,d = list(map(int, input().split()))
+n, d = list(map(int, input().split()))
 
 consecutiveDays = 0
 
@@ -12,4 +12,3 @@ for item in range(d):
         currentMax = 0
 
 print(consecutiveDays)
-

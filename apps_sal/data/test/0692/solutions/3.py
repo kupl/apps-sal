@@ -8,4 +8,3 @@ for x in range(N):
         P += 1
 
 print(P * 1.0 / N)
-

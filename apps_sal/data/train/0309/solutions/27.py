@@ -9,10 +9,8 @@ class Solution:
                 diff = A[i] - A[j]
                 if diff not in outdict:
                     outdict[diff] = [1] * n
-                pointer = outdict[diff] 
+                pointer = outdict[diff]
                 pointer[i] = max(pointer[i], pointer[j] + 1)
                 longseq = max(longseq, pointer[i])
         # print(longseq)
         return longseq
-                
-

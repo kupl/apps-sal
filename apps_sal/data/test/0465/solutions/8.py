@@ -8,5 +8,3 @@ for i in range(n - a * b):
     l[i][i + 1] = l[i + 1][i] = o
 print(('YES', 'NO')[not n])
 print('\n'.join(map(''.join, l)))
-
-

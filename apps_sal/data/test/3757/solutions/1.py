@@ -1,5 +1,6 @@
 def main():
     from itertools import product
+
     def f(a):
         x = int((a * 2. + .25) ** .5 + .51)
         if x * (x - 1) != a * 2:
@@ -29,5 +30,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

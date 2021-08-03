@@ -12,4 +12,3 @@ for i in range(1, mi + 1):
     t[dic[i]] = '1'
 
 print("".join(map(str, t)))
-

@@ -1,8 +1,8 @@
-A,B,X=map(int,input().split())
-if A+B>=X:
-    if X<A :
+A, B, X = map(int, input().split())
+if A + B >= X:
+    if X < A:
         print('NO')
-    else :
+    else:
         print('YES')
-else :
+else:
     print('NO')

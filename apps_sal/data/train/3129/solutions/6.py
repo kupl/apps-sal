@@ -1,4 +1,4 @@
-def divisible_by_three(st): 
+def divisible_by_three(st):
     num_str = str(st)
     sum = 0
     # iterate and add the numbers up

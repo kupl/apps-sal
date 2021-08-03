@@ -1,6 +1,7 @@
 s = input()
 even = []
 
+
 def listtostring(some):
     str1 = ""
 
@@ -8,6 +9,7 @@ def listtostring(some):
         str1 += ele
 
     print(str1)
+
 
 for i in range(len(s)):
     moji = s[i]

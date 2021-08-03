@@ -18,11 +18,11 @@ class Solution:
                 max_profit = curr_profit
                 min_rotations = i + 1
         left_rounds, remainder = divmod(curr_customers, 4)
-        
+
         max_profit1 = max_profit
         max_profit2 = curr_profit + 4 * left_rounds * boardingCost - left_rounds * runningCost
         max_profit3 = curr_profit + curr_customers * boardingCost - (left_rounds + 1) * runningCost
-        
+
         MAX = max(max_profit1, max_profit2, max_profit3)
         if MAX == max_profit1:
             min_rotations = min_rotations
@@ -30,7 +30,5 @@ class Solution:
             min_rotations = len(customers) + left_rounds
         else:
             min_rotations = len(customers) + left_rounds + 1
-        
-        return min_rotations if max_profit > 0 else -1
-            
 
+        return min_rotations if max_profit > 0 else -1

@@ -6,4 +6,3 @@ for _ in range(int(input())):
     d = set(s)
 
     print(int(all(i in a for i in d)))
-

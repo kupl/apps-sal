@@ -11,4 +11,3 @@ else:
         x = abs(x - d)
     ans = x
 print(ans)
-

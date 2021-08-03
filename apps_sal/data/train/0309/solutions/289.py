@@ -21,4 +21,3 @@ class Solution:
                 counters[idx] = counter
             # return
         return ret_val
-

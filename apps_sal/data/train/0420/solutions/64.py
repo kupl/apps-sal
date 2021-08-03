@@ -7,6 +7,5 @@ class Solution:
             if c in digits:
                 counter ^= 1 << digits[c]
             seen.setdefault(counter, i)
-            ans = max(ans, i - seen[counter]) 
+            ans = max(ans, i - seen[counter])
         return ans
-

@@ -15,4 +15,3 @@ k = min(len(k1), len(k2), len(k3))
 print(k)
 for i in range(k):
     print(k1[i], k2[i], k3[i])
-

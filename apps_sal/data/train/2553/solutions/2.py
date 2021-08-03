@@ -2,33 +2,32 @@ class Solution:
     def numPrimeArrangements(self, n: int) -> int:
         p_nums = []
         c_nums = []
-        dp = [True for _ in range(n+1)]
+        dp = [True for _ in range(n + 1)]
         dp[0] = False
         dp[1] = False
-        for i in range(2, n+1):
+        for i in range(2, n + 1):
             if dp[i] == True:
                 cnt = 2
-                while i*cnt < n+1:
-                    dp[i*cnt] = False
+                while i * cnt < n + 1:
+                    dp[i * cnt] = False
                     cnt += 1
-        
-        for i in range(1, n+1):
+
+        for i in range(1, n + 1):
             if dp[i]:
                 p_nums += [i]
             else:
                 c_nums += [i]
 
-        #return (self.fact(len(p_nums))*self.fact(len(c_nums)))%(10**9+7)  ===ok
-        #模运算规则：(a * b) % m = ((a % m) * b) % m 证明方法请自行搜索
-        return (self.fact(len(p_nums) % (10**9+7))*self.fact(len(c_nums)) % (10**9+7) )
-    
+        # return (self.fact(len(p_nums))*self.fact(len(c_nums)))%(10**9+7)  ===ok
+        # 模运算规则：(a * b) % m = ((a % m) * b) % m 证明方法请自行搜索
+        return (self.fact(len(p_nums) % (10**9 + 7)) * self.fact(len(c_nums)) % (10**9 + 7))
+
     def fact(self, n):
         if n <= 1:
             return 1
         else:
-            return n*self.fact(n-1)
+            return n * self.fact(n - 1)
 
-        
     '''
     题目描述
 
@@ -48,4 +47,3 @@ class Solution:
 假设有 p个质数，答案就是 p!⋅(n−p)!
 
      '''
-

@@ -1,5 +1,5 @@
 from collections import defaultdict
-primes = list(range(2,101))
+primes = list(range(2, 101))
 for i in range(len(primes)):
     if primes[i]:
         j = i
@@ -13,7 +13,7 @@ fact = defaultdict(int)
 for p in primes:
     i = p
     while i <= N:
-        fact[p] += N//i
+        fact[p] += N // i
         i *= p
 f2 = set()
 f4 = set()
@@ -33,7 +33,7 @@ for p in fact:
         f74.add(p)
 ans = 0
 ans += len(f74)
-ans += len(f24)*(len(f2)-1)
-ans += len(f14)*(len(f4)-1)
-ans += (len(f2)-2)*len(f4)*(len(f4)-1)//2
+ans += len(f24) * (len(f2) - 1)
+ans += len(f14) * (len(f4) - 1)
+ans += (len(f2) - 2) * len(f4) * (len(f4) - 1) // 2
 print(ans)

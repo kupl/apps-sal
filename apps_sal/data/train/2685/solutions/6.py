@@ -1,5 +1,6 @@
 from string import ascii_lowercase
 
+
 def keyword_cipher(msg, keyword):
     msg = msg.lower()
     keyword = keyword.lower()

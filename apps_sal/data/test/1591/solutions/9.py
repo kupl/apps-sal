@@ -10,4 +10,3 @@ for i in range(k):
     ans += cnt[i] // 2 * 2
 ans += (n + 1) // 2 - p
 print(ans)
-

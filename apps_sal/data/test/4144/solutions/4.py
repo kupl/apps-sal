@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def __starting_point():
 
     input_str = input()
@@ -11,4 +12,6 @@ def __starting_point():
     ans = a0_subset + a9_subset + anti_subset - peterns
     ans %= (10**9 + 7)
     print(ans)
+
+
 __starting_point()

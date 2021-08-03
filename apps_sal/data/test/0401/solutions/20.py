@@ -9,9 +9,8 @@ if inter:
 else:
     mina = min(a)
     minb = min(b)
-    
+
     if mina > minb:
         mina, minb = minb, mina
 
     print('{}{}'.format(mina, minb))
-

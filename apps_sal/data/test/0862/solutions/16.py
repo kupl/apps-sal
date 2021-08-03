@@ -6,5 +6,5 @@ for i in range(1, n):
     k = i + (data[i] - i + n - 1) // n * n
     if k < ans_sum:
         ans = i + 1
-        ans_sum = k 
+        ans_sum = k
 print(ans)

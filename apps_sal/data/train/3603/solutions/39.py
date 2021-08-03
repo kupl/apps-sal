@@ -1,7 +1,7 @@
-def lovefunc( flower1, flower2 ):
-    if flower1%2==flower2%2==0:
+def lovefunc(flower1, flower2):
+    if flower1 % 2 == flower2 % 2 == 0:
         return False
-    elif flower1%2==flower2%2==1:
+    elif flower1 % 2 == flower2 % 2 == 1:
         return False
     else:
         return True

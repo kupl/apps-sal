@@ -15,5 +15,4 @@ for i in range(len(l)):
     if (ps[s] > m):
         m = ps[s]
 
-print(n-m)
-
+print(n - m)

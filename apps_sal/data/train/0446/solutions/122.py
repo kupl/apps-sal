@@ -6,7 +6,7 @@ class Solution:
                 d[arr[i]] += 1
             else:
                 d[arr[i]] = 1
-                
+
         m = sorted(d.values())
         ans = len(m)
         for c in m:
@@ -14,4 +14,3 @@ class Solution:
                 k -= c
                 ans -= 1
         return ans
-

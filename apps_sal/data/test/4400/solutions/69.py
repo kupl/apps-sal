@@ -1,4 +1,4 @@
-s=input()
+s = input()
 if "RRR" in s:
     print(3)
 elif "RR" in s:

@@ -10798,10 +10798,8 @@ if k % 2 != 0:
     print((0))
     return
 
-if k//2 >= len(row[n]):
+if k // 2 >= len(row[n]):
     print((0))
     return
 
-print((row[n][k//2] % mod))
-
-
+print((row[n][k // 2] % mod))

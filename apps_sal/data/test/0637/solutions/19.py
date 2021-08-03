@@ -18,5 +18,6 @@ def solve():
         print('YES')
     else:
         print('NO')
- 
+
+
 solve()

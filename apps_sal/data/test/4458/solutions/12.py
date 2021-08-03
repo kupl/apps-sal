@@ -16,4 +16,3 @@ for i in range(N):
     m = min(m, P[i])
 
 print(cnt)
-

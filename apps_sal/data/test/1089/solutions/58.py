@@ -22,4 +22,3 @@ for i in range(k - 2):
     ans = ans * (n * m - 2 - i) * inv(i + 1) % mod
 
 print(ans)
-

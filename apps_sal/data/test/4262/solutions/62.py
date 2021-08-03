@@ -1,9 +1,9 @@
 import itertools
 N = int(input())
-P = list(map(int,input().split()))
-Q = list(map(int,input().split()))
+P = list(map(int, input().split()))
+Q = list(map(int, input().split()))
 
-n = [i+1 for i in range(N)]
+n = [i + 1 for i in range(N)]
 
 a = 0
 b = 0

@@ -6,6 +6,6 @@ x_max = max(x)
 z = min(y)
 
 if X < z <= Y and x_max < z:
-  print('No War')
+    print('No War')
 else:
-  print('War')
+    print('War')

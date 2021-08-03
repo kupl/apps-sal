@@ -5,8 +5,8 @@ class Solution:
         for i, companies in enumerate(favoriteCompanies):
             g[i] = set(companies)
         for i in range(len(favoriteCompanies)):
-            for j in range(i+1,len(favoriteCompanies)):
-                a,b = self.find(i),self.find(j)
+            for j in range(i + 1, len(favoriteCompanies)):
+                a, b = self.find(i), self.find(j)
                 if a != b:
                     if g[a] >= g[b]:
                         self.parent[b] = a
@@ -16,10 +16,9 @@ class Solution:
         for i in range(len(favoriteCompanies)):
             res.add(self.find(i))
         return sorted(res)
-        
-    def find(self,i):
+
+    def find(self, i):
         while self.parent[i] != i:
             self.parent[i] = self.parent[self.parent[i]]
             i = self.parent[i]
         return i
-

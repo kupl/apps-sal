@@ -13,6 +13,7 @@ rect_bottom_left = 0 - c / 2, 0 - d
 
 theta = atan2(vx, vy)
 
+
 def work(pt):
     init_theta = atan2(pt[0], pt[1])
     new_theta = init_theta + theta
@@ -21,6 +22,7 @@ def work(pt):
     y = cos(new_theta) * rad + py
     return str(x) + ' ' + str(y)
 
+
 print(work(tri_top))
 print(work(tri_left))
 print(work(rect_top_left))
@@ -28,4 +30,3 @@ print(work(rect_bottom_left))
 print(work(rect_bottom_right))
 print(work(rect_top_right))
 print(work(tri_right))
-

@@ -29,4 +29,3 @@ for i in b:
 
 
 print(res)
-

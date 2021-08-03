@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 a = list(read())
 m = max(a) + 5
@@ -21,4 +23,3 @@ for i in range(n):
         q.append((x // 2, y + 1))
 ans = min(step[x] for x in range(m) if cnt[x] == n)
 print(ans)
-

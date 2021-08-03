@@ -10,7 +10,7 @@ class Solution:
                 else:
                     alice.union(u, v)
                     bob.union(u, v)
-                    
+
         for t, u, v in edges:
             if t == 1:
                 if alice.find(u) == alice.find(v):
@@ -19,26 +19,27 @@ class Solution:
                     alice.union(u, v)
             if t == 2:
                 if bob.find(u) == bob.find(v):
-                    res += 1       
+                    res += 1
                 else:
                     bob.union(u, v)
-                    
+
         if max(bob.count.values()) != n or max(alice.count.values()) != n:
             return -1
-        
+
         return res
-        
+
+
 class DSU:
     def __init__(self):
         self.father = {}
-        self.count = defaultdict(lambda:1)
-    
+        self.count = defaultdict(lambda: 1)
+
     def find(self, a):
         self.father.setdefault(a, a)
         if a != self.father[a]:
             self.father[a] = self.find(self.father[a])
         return self.father[a]
-    
+
     def union(self, a, b):
         _a = self.find(a)
         _b = self.find(b)

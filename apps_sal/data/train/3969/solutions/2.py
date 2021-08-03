@@ -18,6 +18,5 @@ def graceful_tipping(bill):
         multiple = 500000
     elif tip < 100000000:
         multiple = 5000000
-    
-    return math.ceil(float(tip) / multiple) * multiple
 
+    return math.ceil(float(tip) / multiple) * multiple

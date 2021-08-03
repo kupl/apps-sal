@@ -1,12 +1,12 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 g = [[] for i in range(n)]
 dg = [0 for i in range(n)]
 for i in range(m):
-    u,v = list(map(int, input().split()))
-    g[u-1].append(v-1)
-    g[v-1].append(u-1)
-    dg[u-1] +=1
-    dg[v-1]+=1
+    u, v = list(map(int, input().split()))
+    g[u - 1].append(v - 1)
+    g[v - 1].append(u - 1)
+    dg[u - 1] += 1
+    dg[v - 1] += 1
 vis = [0 for i in range(n)]
 ans = 0
 for i in range(n):
@@ -28,4 +28,3 @@ for i in range(n):
         del q[0]
     ans += ans1
 print(ans)
-

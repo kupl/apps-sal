@@ -9,4 +9,3 @@ elif B == 0:
 else:
     q, mod = divmod(N, A + B)
     print((min(mod, A) + q * A))
-

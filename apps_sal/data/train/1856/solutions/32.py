@@ -1,7 +1,7 @@
 class Solution:
     def minimumMoves(self, grid: List[List[int]]) -> int:
         # BFS
-        orientation = 'h' # horizontal
+        orientation = 'h'  # horizontal
         head, tail = (0, 1), (0, 0)
         q = collections.deque()
         q.append((head, tail, orientation))
@@ -9,8 +9,8 @@ class Solution:
         visited.add((head, tail, orientation))
         moves = 0
         n = len(grid)
-        target_head, target_tail = (n-1, n-1), (n-1, n-2)
-        
+        target_head, target_tail = (n - 1, n - 1), (n - 1, n - 2)
+
         while q:
             for _ in range(len(q)):
                 head, tail, orientation = q.popleft()
@@ -37,7 +37,7 @@ class Solution:
                         if node not in visited:
                             q.append(node)
                             visited.add(node)
-                        
+
                 else:
                     # move right
                     if head_y + 1 < n and grid[head_x][head_y + 1] == 0 and grid[tail_x][tail_y + 1] == 0:
@@ -58,6 +58,5 @@ class Solution:
                             q.append(node)
                             visited.add(node)
             moves += 1
-            
-        return -1
 
+        return -1

@@ -11,4 +11,3 @@ for i in range(n):
         break
     h -= b[i]
 print((n - (-h // a)))
-

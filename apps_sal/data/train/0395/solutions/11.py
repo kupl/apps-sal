@@ -2,10 +2,9 @@ class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
         n = len(A)
         next_large = [None] * n
-        
+
         next_small = [None] * n
-        
-        
+
         arr1 = sorted([a, i] for i, a in enumerate(A))
         stack = []
         for a, i in arr1:
@@ -22,6 +21,7 @@ class Solution:
             stack.append(i)
 
         dp = [[None for _ in range(2)] for _ in range(n)]
+
         def dfs(i, is_odd):
             if i == n - 1:
                 return True
@@ -33,10 +33,9 @@ class Solution:
             else:
                 dp[i][is_odd] = dfs(idx, is_odd ^ 1)
             return dp[i][is_odd]
-        
+
         res = 0
         for i in range(n):
             if dfs(i, 1):
                 res += 1
         return res
-

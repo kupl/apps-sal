@@ -75,7 +75,11 @@ ZYXYZ
 →ペア通り数 * H * H * W
 """
 
-def pair(end,lis):
+from sys import stdin
+import sys
+
+
+def pair(end, lis):
     if len(lis) == 0:
         p.append(end)
         return
@@ -83,12 +87,10 @@ def pair(end,lis):
         end.append(lis[0])
         del lis[0]
         for j in range(len(lis)):
-            pair( end+[lis[j]] , lis[:j]+lis[j+1:])
+            pair(end + [lis[j]], lis[:j] + lis[j + 1:])
 
-from sys import stdin
-import sys
 
-H,W = map(int,stdin.readline().split())
+H, W = map(int, stdin.readline().split())
 
 S = []
 for i in range(H):
@@ -96,14 +98,14 @@ for i in range(H):
     S.append(s[:-1])
 #print (S)
 
-#ペア列挙
+# ペア列挙
 p = []
 if W % 2 == 0:
-    pair([],[i for i in range(W)])
+    pair([], [i for i in range(W)])
 else:
     tmp = [i for i in range(W)]
     for i in range(W):
-        pair([i,i] , tmp[:i] + tmp[i+1:])
+        pair([i, i], tmp[:i] + tmp[i + 1:])
 
 #print (p)
 
@@ -113,13 +115,13 @@ for pl in p:
 
     for i in range(H):
         if able[i]:
-            for j in range(i+1,H):
+            for j in range(i + 1, H):
                 if not able[j]:
                     continue
 
                 tmpf = True
-                for w in range((W+1)//2):
-                    if S[i][pl[2*w]] != S[j][pl[2*w+1]] or S[j][pl[2*w]] != S[i][pl[2*w+1]]:
+                for w in range((W + 1) // 2):
+                    if S[i][pl[2 * w]] != S[j][pl[2 * w + 1]] or S[j][pl[2 * w]] != S[i][pl[2 * w + 1]]:
                         tmpf = False
                         break
                 if tmpf:
@@ -130,8 +132,8 @@ for pl in p:
                 if H % 2 == 0 or flag == 1:
                     flag = 2
                     break
-                for w in range((W+1)//2):
-                    if S[i][pl[2*w]] != S[i][pl[2*w+1]]:
+                for w in range((W + 1) // 2):
+                    if S[i][pl[2 * w]] != S[i][pl[2 * w + 1]]:
                         flag = 2
                         break
                 else:
@@ -139,9 +141,9 @@ for pl in p:
                     able[i] = False
                 if flag == 2:
                     break
-                
+
     if flag != 2:
-        print ("YES")
+        print("YES")
         break
 else:
-    print ("NO")
+    print("NO")

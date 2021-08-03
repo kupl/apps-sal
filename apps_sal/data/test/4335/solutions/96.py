@@ -1,5 +1,5 @@
 n = int(input())
-n1 = n//2
+n1 = n // 2
 s = input()
 s1 = s[n1:]
 s2 = s[:n1]

@@ -14,6 +14,5 @@ for _ in range(t):
     g = gcd(r, b)
     seq = (b - g - 1) // r + 1
     print('OBEY' if seq < k else 'REBEL')
-    
-# inf.close()
 
+# inf.close()

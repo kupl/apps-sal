@@ -22,5 +22,4 @@ class Solution:
             if len(curr) >= minSize:
                 strMap[curr] += 1
             r += 1
-        return max(list(strMap.values()) or (0,0))
-
+        return max(list(strMap.values()) or (0, 0))

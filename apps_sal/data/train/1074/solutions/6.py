@@ -3,8 +3,8 @@ t = int(input())
 
 for _ in range(t):
     n = int(input())
-    arr = list(map( int, str(input()).split() ))
-    
+    arr = list(map(int, str(input()).split()))
+
     visited = set()
     doubles = []
     for i in arr:
@@ -13,5 +13,4 @@ for _ in range(t):
             doubles.append(i)
         else:
             visited.add(i)
-    print(len(doubles)//2)
-
+    print(len(doubles) // 2)

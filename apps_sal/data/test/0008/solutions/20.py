@@ -49,5 +49,3 @@ elif b[1][0] == b[2][0]:
         print(2)
 else:
     print(2)
-    
-

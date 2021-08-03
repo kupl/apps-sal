@@ -1,5 +1,6 @@
 class Solution:
     dp = {0: 0}
+
     def racecar(self, target: int) -> int:
         if target in self.dp:
             return self.dp[target]

@@ -7,15 +7,13 @@ for i in range(int(input())):
     for i in range(len(s)):
         if s[i] == "<":
             stack.append(s[i])
-            c+=1
+            c += 1
         else:
-            if (len(stack) == 0) or (stack[-1]!="<"):
+            if (len(stack) == 0) or (stack[-1] != "<"):
                 break
             else:
                 stack.pop()
                 if len(stack) == 0:
-                    ans+=(2*c)
+                    ans += (2 * c)
                     c = 0
     print(ans)
-        
-

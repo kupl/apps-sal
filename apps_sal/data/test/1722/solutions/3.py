@@ -24,4 +24,4 @@ for m in M:
             ans += l * (l - 1) // 2
         if r >= 2:
             ans += r * (r - 1) // 2
-print(ans)        
+print(ans)

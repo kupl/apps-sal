@@ -10,6 +10,6 @@ for i in range(N):
 
 res = 0
 for ai, bi in bottles:
-    if count[ai] == 0 or (count[ai]==1 and bi==ai):
+    if count[ai] == 0 or (count[ai] == 1 and bi == ai):
         res += 1
 print(res)

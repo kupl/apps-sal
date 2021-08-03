@@ -7,12 +7,12 @@ class Solution:
         for i in range(1, bound):
             if x % i == 0:
                 out.append(i)
-                if x//i != i:
-                    out.append(x//i)
+                if x // i != i:
+                    out.append(x // i)
             if len(out) > 4:
                 break
         return out
-        
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         divisors = {}
         sum_four = 0
@@ -26,4 +26,3 @@ class Solution:
                     sum_four += sum(x_div)
                 divisors[x] = x_div
         return sum_four
-

@@ -6,4 +6,3 @@ for i in range(len(s) - 1):
         return
 
 print("Good")
-

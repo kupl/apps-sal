@@ -14,57 +14,79 @@
 #    UUID     : dhIFbAnMq2yrA0IR
 #    ------------------------------------------------
 #
+import collections
+import math
+import sys
 production = True
 
-import sys, math, collections
 
-def input(input_format = 0, multi = 0):
+def input(input_format=0, multi=0):
 
-    if multi > 0: return [input(input_format) for i in range(multi)]
+    if multi > 0:
+        return [input(input_format) for i in range(multi)]
     else:
         next_line = sys.stdin.readline()[:-1]
 
         if input_format >= 10:
             use_list = False
             input_format = int(str(input_format)[-1])
-        else: use_list = True
+        else:
+            use_list = True
 
-        if input_format == 0: formatted_input = [next_line]
-        elif input_format == 1: formatted_input = list(map(int, next_line.split()))
-        elif input_format == 2: formatted_input = list(map(float, next_line.split()))
-        elif input_format == 3: formatted_input = list(next_line)
-        elif input_format == 4: formatted_input = list(map(int, list(next_line)))
-        elif input_format == 5: formatted_input = next_line.split()
-        else: formatted_input = [next_line]
+        if input_format == 0:
+            formatted_input = [next_line]
+        elif input_format == 1:
+            formatted_input = list(map(int, next_line.split()))
+        elif input_format == 2:
+            formatted_input = list(map(float, next_line.split()))
+        elif input_format == 3:
+            formatted_input = list(next_line)
+        elif input_format == 4:
+            formatted_input = list(map(int, list(next_line)))
+        elif input_format == 5:
+            formatted_input = next_line.split()
+        else:
+            formatted_input = [next_line]
 
         return formatted_input if use_list else formatted_input[0]
 
-def out(output_line, output_format = 0, newline = True):
+
+def out(output_line, output_format=0, newline=True):
 
     formatted_output = ""
 
-    if output_format == 0: formatted_output = str(output_line)
-    elif output_format == 1: formatted_output = " ".join(map(str, output_line))
-    elif output_format == 2: formatted_output = "\n".join(map(str, output_line))
-    elif output_format == 3: formatted_output = "".join(map(str, output_line))
+    if output_format == 0:
+        formatted_output = str(output_line)
+    elif output_format == 1:
+        formatted_output = " ".join(map(str, output_line))
+    elif output_format == 2:
+        formatted_output = "\n".join(map(str, output_line))
+    elif output_format == 3:
+        formatted_output = "".join(map(str, output_line))
 
-    print(formatted_output, end = "\n" if newline else "")
+    print(formatted_output, end="\n" if newline else "")
+
 
 def log(*args):
     if not production:
-        print("$$$", end = "")
+        print("$$$", end="")
         print(*args)
 
-enu = enumerate
-ter = lambda a, b, c: b if a else c
-ceil = lambda a, b: -(-a // b)
-flip = lambda a: (a + 1) & 1
 
-def mapl(iterable, format = 0):
-    
-    if format == 0: return list(map(int, iterable))
-    elif format == 1: return list(map(str, iterable))
-    elif format == 2: return list(map(list, iterable))
+enu = enumerate
+def ter(a, b, c): return b if a else c
+def ceil(a, b): return -(-a // b)
+def flip(a): return (a + 1) & 1
+
+
+def mapl(iterable, format=0):
+
+    if format == 0:
+        return list(map(int, iterable))
+    elif format == 1:
+        return list(map(str, iterable))
+    elif format == 2:
+        return list(map(list, iterable))
 #
 #   >>>>>>>>>>>>>>> START OF SOLUTION <<<<<<<<<<<<<<
 #
@@ -82,7 +104,7 @@ def solve():
 
     log(f)
 
-    t =  list(range(k, -1, -1)) + list(range(1, k))
+    t = list(range(k, -1, -1)) + list(range(1, k))
     log("t", t)
     p = [(0, 2 * k - 1)]
 
@@ -107,9 +129,9 @@ def solve():
     return
 
 
-for i in range(input(11)): solve()
+for i in range(input(11)):
+    solve()
 
 #
 #   >>>>>>>>>>>>>>>> END OF SOLUTION <<<<<<<<<<<<<<<
 #
-

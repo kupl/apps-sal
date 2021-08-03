@@ -17,6 +17,4 @@ for i in range(int(input())):
 print('YES')
 
 
-
 # Made By Mostafa_Khaled
-

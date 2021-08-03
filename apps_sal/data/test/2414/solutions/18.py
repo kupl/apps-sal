@@ -1,4 +1,3 @@
 for ii in range(int(input())):
-	a, b = list(map(int , input().split()))
-	print(a+b)
-
+    a, b = list(map(int, input().split()))
+    print(a + b)

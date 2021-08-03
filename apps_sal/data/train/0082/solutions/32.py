@@ -5,7 +5,7 @@ def solve():
     print(*A)
     return
 
+
 T = int(input())
 for t in range(T):
     solve()
-

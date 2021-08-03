@@ -8,7 +8,7 @@ a.sort()
 
 price = 0
 for i in range(n):
-  if i % (c+2) < c:
-    price += a[n-1-i]
-  
+    if i % (c + 2) < c:
+        price += a[n - 1 - i]
+
 print(price)

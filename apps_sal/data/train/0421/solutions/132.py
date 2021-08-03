@@ -7,7 +7,5 @@ class Solution:
         indices = [i for i, x in enumerate(old) if x == chars[-1]]
         Max = s[indices[0]:]
         for i in range(len(indices)):
-            Max = max(Max,s[indices[i]:])
+            Max = max(Max, s[indices[i]:])
         return Max
-            
-

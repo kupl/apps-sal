@@ -5,8 +5,8 @@ class Solution:
         best = 0
         for i in range(dishes):
             sum = 0
-            tmp = satisfaction[-i-1:dishes]
-            for j,val in enumerate(tmp):
-                sum+=(j+1)*val
-            best = max(best,sum)
+            tmp = satisfaction[-i - 1:dishes]
+            for j, val in enumerate(tmp):
+                sum += (j + 1) * val
+            best = max(best, sum)
         return best

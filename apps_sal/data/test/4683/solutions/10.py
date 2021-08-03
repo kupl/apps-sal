@@ -1,6 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-mod = 10**9+7
+mod = 10**9 + 7
 
 # result = 0
 # for i in range(N):

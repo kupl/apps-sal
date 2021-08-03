@@ -17,4 +17,3 @@ while n >= a or n >= b:
         n -= a * nl
 
 print(l)
-

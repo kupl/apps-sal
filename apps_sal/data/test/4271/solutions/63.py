@@ -1,9 +1,9 @@
 # ABC140
 # Buffet
 n = int(input())
-A = list(map(int,input().split()))
-B = list(map(int,input().split()))
-C = list(map(int,input().split()))
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+C = list(map(int, input().split()))
 ct = 0
 h = 25
 for i in range(n):
@@ -14,4 +14,3 @@ for i in range(n):
     else:
         h = A[i]
 print(ct)
-

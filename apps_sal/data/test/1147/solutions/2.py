@@ -8,23 +8,23 @@ def imrin(n): return [int(input()) for _ in range(n)]
 
 
 def c(n, k):
-    if n<k:
+    if n < k:
         return 0
     s = 1
-    for i in range(1, k+1):
-        s *= n-i+1
+    for i in range(1, k + 1):
+        s *= n - i + 1
         s //= i
     return s
 
 
 n, x, k = impin()
 arr = irrin()
-if k==0:
+if k == 0:
     trr = {}
     frr = {}
     for a in arr:
-        if a%x!=0:
-            p = a//x
+        if a % x != 0:
+            p = a // x
             if p in trr:
                 trr[p] += 1
             else:
@@ -36,7 +36,7 @@ if k==0:
     s = 0
     # print(trr)
     for p in trr:
-        s += c(trr[p]+1, 2)
+        s += c(trr[p] + 1, 2)
         # print(trr[p], s)
     for a in frr:
         s += c(frr[a], 2)
@@ -45,8 +45,8 @@ else:
     urr = {}
     lrr = {}
     for a in arr:
-        u = (a-1)//x+1
-        l = a//x
+        u = (a - 1) // x + 1
+        l = a // x
         # print(a, u, l)
         if u in urr:
             urr[u] += 1
@@ -59,10 +59,10 @@ else:
     s = 0
     for u in urr:
         # print(urr[u])
-        l = u+k-1
+        l = u + k - 1
         # print(u, l)
         if l in lrr:
-            s += urr[u]*lrr[l]
+            s += urr[u] * lrr[l]
     print(s)
 
 
@@ -79,4 +79,3 @@ else:
 #             print(arr[i], arr[j])
 #             s += 1
 # print(s)
-

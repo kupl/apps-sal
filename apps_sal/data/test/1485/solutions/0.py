@@ -2,16 +2,19 @@
 n, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
+
 def gcd(x, y):
     while y:
         x, y = y, x % y
     return x
+
 
 g = 0
 for x in a:
     g = gcd(g, x - 1)
 
 answer = 0
+
 
 def process(x):
     nonlocal answer
@@ -23,6 +26,7 @@ def process(x):
             break
         answer += m - v
 
+
 for i in range(1, g + 1):
     if i * i > g:
         break
@@ -33,4 +37,3 @@ for i in range(1, g + 1):
         process(g // i)
 
 print(answer)
-

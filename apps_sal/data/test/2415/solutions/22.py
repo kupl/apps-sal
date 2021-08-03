@@ -7,8 +7,7 @@ f = [True] + [False] * n
 
 for i in range(n):
     for element in elements:
-        if i + 1 >= len(element) and inp[i-len(element)+1 : i+1] == element:
+        if i + 1 >= len(element) and inp[i - len(element) + 1: i + 1] == element:
             f[i + 1] |= f[i - len(element) + 1]
 
 print("YES" if f[-1] else "NO")
-

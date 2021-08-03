@@ -1,5 +1,5 @@
-N, M, X = list(map(int,input().split()))
-S = list(map(int,input().split()))
+N, M, X = list(map(int, input().split()))
+S = list(map(int, input().split()))
 Fees = list(S)
 Goal1 = []
 Goal2 = []
@@ -12,7 +12,7 @@ for i in range(X):
     Goal1.append(point0)
 # print(Goal1)
 
-for j in range(N-X):
+for j in range(N - X):
     X += 1
     Goal2.append(X)
 # print(Goal2)
@@ -27,20 +27,6 @@ if count1 >= count2:
     print(count2)
 if count1 < count2:
     print(count1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Fee = list(S)
@@ -61,4 +47,3 @@ if count1 < count2:
 #     print(count1)
 # if count1 > count2:
 #     print(count2)
-

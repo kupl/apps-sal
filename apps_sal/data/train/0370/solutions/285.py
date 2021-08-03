@@ -1,3 +1,7 @@
+import math
+from collections import defaultdict
+
+
 class DisjointSetUnion():
     def __init__(self, size):
         self.parents = [i for i in range(size + 1)]
@@ -19,8 +23,7 @@ class DisjointSetUnion():
         self.size[py] += self.size[px]
         return py
 
-import math
-from collections import defaultdict
+
 class Solution:
     def largestComponentSize(self, A) -> int:
         dsu = DisjointSetUnion(max(A))

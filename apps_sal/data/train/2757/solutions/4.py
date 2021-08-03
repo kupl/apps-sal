@@ -1,5 +1,5 @@
 def check_password(s):
-    c1 = 8 <= len(s) <=20
+    c1 = 8 <= len(s) <= 20
     c2 = any([i.isupper() for i in s])
     c3 = any([i.islower() for i in s])
     c4 = any([i.isdigit() for i in s])

@@ -9,5 +9,3 @@ for i in range(n):
                 pos = [a] + pos
                 d += j + 1
 print(d)
-                
-

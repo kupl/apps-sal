@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
 N, M, Q = map(int, input().split())
-Q = [list(map(int,input().split())) for _ in range(Q)]
+Q = [list(map(int, input().split())) for _ in range(Q)]
 ans = 0
 A = []
 

@@ -73,4 +73,3 @@ lasts = p[0][:-1]
 for i in range(1, len(p)):
     lasts = mult(lasts, p[i])
 print(lasts[-2])
-

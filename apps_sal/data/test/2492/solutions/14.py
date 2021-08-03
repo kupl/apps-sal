@@ -1,5 +1,7 @@
 
 import numpy as np
+
+
 def resolve():
     n, k = list(map(int, input().split()))
     a = np.array(input().split(), dtype=np.int64)
@@ -28,7 +30,9 @@ def resolve():
             ng = cen
     print(ok)
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

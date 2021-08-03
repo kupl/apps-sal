@@ -9,4 +9,3 @@ if each * M > N:
     print(-1)
 else:
     print(each)
-

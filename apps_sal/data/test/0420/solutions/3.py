@@ -7,8 +7,10 @@ def check(n, m, a):
         return 0
     return 1
 
+
 def new(n, a):
     return a[:(n + 1) // 2]
+
 
 n, m = map(int, input().split())
 a = []

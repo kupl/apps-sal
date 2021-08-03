@@ -14,8 +14,8 @@ n = int(input())
 a = list(inp())
 a.sort()
 
-for i in range(n-2):
-    if is_tr(a[i], a[i+1], a[i+2]):
+for i in range(n - 2):
+    if is_tr(a[i], a[i + 1], a[i + 2]):
         print('YES')
         return
 print('NO')

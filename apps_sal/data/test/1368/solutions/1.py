@@ -3,6 +3,7 @@
 from copy import deepcopy
 from fractions import Fraction
 
+
 def main():
     n, a, b = list(map(int, input().split()))
     v = list(map(int, input().split()))
@@ -28,7 +29,9 @@ def main():
     print((float(maxave)))
     print(ways)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

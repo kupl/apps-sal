@@ -7,4 +7,3 @@ def distribution_of(gold):
         else:
             beggargold[1] += (gold.pop(0) if gold[0] >= gold[-1] else gold.pop())
     return beggargold
-

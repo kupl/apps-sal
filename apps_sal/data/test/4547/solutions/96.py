@@ -1,4 +1,4 @@
 if '9' in input():
- print('Yes')
+    print('Yes')
 else:
- print('No')
+    print('No')

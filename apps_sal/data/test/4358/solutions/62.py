@@ -14,4 +14,3 @@ list_price = sum(descending_p[1:])
 
 total_price = discount_price + list_price
 print(total_price)
-

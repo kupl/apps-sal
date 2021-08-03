@@ -15,4 +15,3 @@ if last == INF:
     print((0))
 else:
     print((s - last))
-

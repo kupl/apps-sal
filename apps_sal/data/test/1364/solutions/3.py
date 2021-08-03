@@ -3,7 +3,7 @@
 
 
 def main():
-    n = int(input()) 
+    n = int(input())
     nums = list(map(int, input().split()))
     pre = []
     st = 0
@@ -20,5 +20,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

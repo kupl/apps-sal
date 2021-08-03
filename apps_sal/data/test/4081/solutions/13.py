@@ -31,4 +31,3 @@ while i <= j:
 
 print(len(s))
 print(''.join(ans))
-

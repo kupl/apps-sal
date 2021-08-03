@@ -3,4 +3,3 @@ def tribonacci(signature, n):
     while len(s) < n:
         s.append(sum(s[-3:]))
     return s[:n]
-

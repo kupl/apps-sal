@@ -22,7 +22,7 @@ for i in enumerate(l):
             nd[x] = i[0]
         used.add(i[1])
 
-d = {i:0 for i in range(n)}
+d = {i: 0 for i in range(n)}
 
 for i in range(k):
     a, b = map(lambda x: int(x) - 1, input().split(' '))

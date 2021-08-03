@@ -1,8 +1,7 @@
 def integrate(coefficient, exponent):
-    exp=exponent+1
-    cof=int(coefficient/exp)
-    list=[str(cof),"x^",str(exp)]
+    exp = exponent + 1
+    cof = int(coefficient / exp)
+    list = [str(cof), "x^", str(exp)]
     return "".join(list)
-    
-    # write your code here
 
+    # write your code here

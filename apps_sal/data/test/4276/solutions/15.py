@@ -2,7 +2,7 @@ n, t = map(int, input().split())
 
 c = []
 
-for i in range(0,n):
+for i in range(0, n):
     c_i, t_i = map(int, input().split())
 
     if t_i <= t:

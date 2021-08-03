@@ -1,1 +1,1 @@
-print(6-int(input())-int(input()))
+print(6 - int(input()) - int(input()))

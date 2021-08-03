@@ -1,5 +1,5 @@
-#ARC104
+# ARC104
 
-x,y = list(map(int,input().split()))
+x, y = list(map(int, input().split()))
 
-print((x+y)//2, (x-y)//2)
+print((x + y) // 2, (x - y) // 2)

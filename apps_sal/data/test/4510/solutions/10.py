@@ -1,4 +1,6 @@
 from collections import OrderedDict
+
+
 class LRUCache:
 
     def __init__(self, capacity):
@@ -9,6 +11,7 @@ class LRUCache:
         if len(self.cache) == self.capacity:
             self.cache.popitem(last=False)
         self.cache[key] = value
+
 
 n, k = map(int, input().strip().split())
 ids = map(int, input().strip().split())

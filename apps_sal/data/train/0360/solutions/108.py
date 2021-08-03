@@ -13,16 +13,15 @@ class Solution:
         if w > 0:
             ret += 1
         return ret <= self.D
-        
-        
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         self.weights = weights
         self.D = D
-        
+
         # print(self.possible(15))
         lo, hi = 1, 0x3f3f3f3f
         while lo <= hi:
-            mid = lo + ((hi-lo) >> 1)
+            mid = lo + ((hi - lo) >> 1)
 
             if self.possible(mid):
                 hi = mid - 1
@@ -31,6 +30,3 @@ class Solution:
         if self.possible(lo):
             return lo
         return lo + 1
-                
-        
-

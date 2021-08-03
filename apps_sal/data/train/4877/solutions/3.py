@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def love_language(partner, weeks):
     c = Counter()
     for i in range(7 * weeks // 5):

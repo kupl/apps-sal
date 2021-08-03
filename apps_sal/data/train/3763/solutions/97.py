@@ -1,4 +1,4 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     signs = ['+', '-', '*', '/']
     if op not in signs or type(x) == str or type(y) == str:
         return "unknown value"
@@ -11,4 +11,3 @@ def calculator(x,y,op):
             return x * y
         else:
             return x / y
-

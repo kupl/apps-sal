@@ -11,4 +11,3 @@ for _ in range(int(input())):
     x = (a - 1) // (c - d) + 1
     ans.append(b + x * c)
 print('\n'.join(map(str, ans)))
-

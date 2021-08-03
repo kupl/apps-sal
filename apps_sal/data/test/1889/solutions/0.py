@@ -10,6 +10,7 @@ def cons(l):
             res = 0
     return m
 
+
 n, m, q = list(map(int, input().split()))
 grid = []
 curr = [0] * n
@@ -24,4 +25,3 @@ for _ in range(q):
     grid[i][j] = 0 if grid[i][j] else 1
     curr[i] = cons(grid[i])
     print(max(curr))
-

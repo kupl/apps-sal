@@ -12,4 +12,3 @@ for i in range(n - 1):
         new += d
     last = new
 print(last)
-

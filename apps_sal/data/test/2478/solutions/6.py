@@ -8,11 +8,10 @@ q = 0
 
 for s in S:
     if s == '(':
-        b +=1
+        b += 1
     else:
-        if b>0:
+        if b > 0:
             b -= 1
         else:
             q += 1
-print(('('*q+S+')'*b))
-
+print(('(' * q + S + ')' * b))

@@ -1,14 +1,14 @@
-n=int(input())
-c=input()
+n = int(input())
+c = input()
 
-r_cnt=c.count('R')
-w_cnt=c.count('W')
+r_cnt = c.count('R')
+w_cnt = c.count('W')
 
-last_c='R'*r_cnt+'W'*w_cnt
+last_c = 'R' * r_cnt + 'W' * w_cnt
 
-num=0
+num = 0
 for i in range(n):
-  if c[i]!=last_c[i]:
-    num+=1
+    if c[i] != last_c[i]:
+        num += 1
 
-print((num+2-1)//2)
+print((num + 2 - 1) // 2)

@@ -21,7 +21,7 @@ for i, c in enumerate(cnt, 1):
         if bin_k[i - 1] == "1":
             dp[i][0] = dp[i - 1][0] + base * (N - c)
             dp[i][1] = max(dp[i - 1][0] + base * c, dp[i - 1][1] + base * c,
-                        dp[i - 1][1] + base * (N - c))
+                           dp[i - 1][1] + base * (N - c))
         else:
             dp[i][0] = dp[i - 1][0] + base * c
             dp[i][1] = max(dp[i - 1][1] + base * c, dp[i - 1][1] + base * (N - c))
@@ -29,7 +29,7 @@ for i, c in enumerate(cnt, 1):
         if bin_k[i - 1] == "1":
             dp[i][0] = dp[i - 1][0] + base * (N - c)
             tmp1 = dp[i - 1][0] + base * c
-            tmp2 =  dp[i - 1][1] + base * c
+            tmp2 = dp[i - 1][1] + base * c
             tmp3 = dp[i - 1][1] + base * (N - c)
             if tmp3 <= tmp1 and tmp3 <= tmp2:
                 dp[i][1] = max(tmp1, tmp2)

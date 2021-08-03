@@ -1,1 +1,1 @@
-possible_positions=lambda p,m='abcdefgh':(lambda x,y:sorted([m[e[0]+x]+str(e[1]+y)for e in[(-2,1),(-1,2),(1,2),(2,1),(-2,-1),(-1,-2),(1,-2),(2,-1)]if 8>e[0]+x>=0and 9>e[1]+y>0]))(m.find(p[0]),int(p[1]))
+possible_positions = lambda p, m='abcdefgh': (lambda x, y: sorted([m[e[0] + x] + str(e[1] + y)for e in [(-2, 1), (-1, 2), (1, 2), (2, 1), (-2, -1), (-1, -2), (1, -2), (2, -1)]if 8 > e[0] + x >= 0 and 9 > e[1] + y > 0]))(m.find(p[0]), int(p[1]))

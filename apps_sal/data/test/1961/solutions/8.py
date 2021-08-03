@@ -2,23 +2,30 @@ import sys
 import copy
 lines = iter(sys.stdin)
 
+
 def nexts():
     return next(lines)
+
 
 def nextint():
     return int(nexts())
 
+
 def snexts():
     return next(lines).split(' ')
+
 
 def snextint():
     return map(int, snexts())
 
+
 def array(length, base=0):
     return [base] * length
 
+
 def matrix(length, width, base=0):
     return [[base] * width for _ in range(length)]
+
 
 n, m = snextint()
 grid = array(n, [])

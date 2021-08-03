@@ -5,4 +5,3 @@ for i in range(n - 1):
     m[u - 1] += 1
     m[v - 1] += 1
 print(m.count(1))
-

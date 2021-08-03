@@ -7,13 +7,13 @@ B = []
 for i, a in enumerate(A):
     B.append((i, a))
 
-B.sort(reverse=True, key = itemgetter(1))
+B.sort(reverse=True, key=itemgetter(1))
 
 score = 0
 for n, (i, b) in enumerate(B):
-    score += b*n+1
+    score += b * n + 1
 
 print(score)
 for i, _ in B:
-    print(i+1, end=' ')
+    print(i + 1, end=' ')
 print()

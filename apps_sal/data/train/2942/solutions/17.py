@@ -12,4 +12,3 @@ def fold_to(distance):
         res *= 2
         folds += 1
     return folds
-

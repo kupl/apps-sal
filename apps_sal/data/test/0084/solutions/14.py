@@ -16,7 +16,7 @@ if nines < 1:
     print(cnt)
     return
 
-price_suffix = "9"*nines
+price_suffix = "9" * nines
 cnt = 0
 
 
@@ -39,4 +39,3 @@ for d in range(0, 10):
         add_pairs(n, price)
 
 print(cnt)
-

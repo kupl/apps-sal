@@ -6,6 +6,7 @@ def cnt_inv(a):
                 ans += 1
     return ans
 
+
 for testcase in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -18,8 +19,9 @@ for testcase in range(int(input())):
         if sorted_a[i] == sorted_a[i + 1]:
             last_eq = i + 1
 
-    # print("last_eq", last_eq) 
+    # print("last_eq", last_eq)
     ans = []
+
     def shift(pos):
         nonlocal inv
         inv -= int(a[pos] > a[pos + 1]) + int(a[pos] > a[pos + 2]) + int(a[pos + 1] > a[pos + 2])
@@ -29,7 +31,7 @@ for testcase in range(int(input())):
 
     for i in range(n - 3):
         pos = min(list(range(i, n)), key=lambda x: a[x])
-        # print(a, val, pos) 
+        # print(a, val, pos)
         while pos > i + 1:
             shift(pos - 2)
             pos -= 2
@@ -43,14 +45,14 @@ for testcase in range(int(input())):
     last_min = min(*a[-3:])
     while a[-3] != last_min:
         shift(n - 3)
-    
+
     if n - 3 == last_eq and inv % 2 == 1:
         shift(n - 3)
         shift(n - 4)
-        
+
     cnt = 0
     while not (a[-3] <= a[-2] <= a[-1]):
-        shift(n - 3) 
+        shift(n - 3)
         cnt += 1
         if cnt > 5:
             break
@@ -59,5 +61,3 @@ for testcase in range(int(input())):
     else:
         print(len(ans))
         print(' '.join(map(str, ans)))
-
-

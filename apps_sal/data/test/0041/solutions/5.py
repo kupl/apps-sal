@@ -2,6 +2,7 @@ import sys
 
 inf = 1 << 30
 
+
 def solve():
     n = int(input())
     a = [inf if ai != '0' else 0 for ai in input().split()]
@@ -22,6 +23,9 @@ def solve():
 
     print(*a)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

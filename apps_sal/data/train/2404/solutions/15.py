@@ -4,8 +4,8 @@ class Solution:
             lo = 0
             hi = len(arr)
             while lo <= hi:
-                mid = lo + (hi-lo)//2
-                if mid >=len(arr):
+                mid = lo + (hi - lo) // 2
+                if mid >= len(arr):
                     return False
                 if arr[mid] == t:
                     return True
@@ -16,9 +16,9 @@ class Solution:
                     lo = mid + 1
             return False
         count = 0
-        for num in range(1, arr[-1]+k+1):
+        for num in range(1, arr[-1] + k + 1):
             if not binary_search(num):
-                count+=1
+                count += 1
                 if count == k:
                     return num
         return -1

@@ -38,4 +38,3 @@ def update_point_status(lines, point, status):
 
 
 main()
-

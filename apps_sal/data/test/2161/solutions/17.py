@@ -19,5 +19,3 @@ for i in range(n):
 
 print(len(phones))
 print('\n'.join([' '.join([name, ' '.join([str(len(numbers)), ' '.join(numbers)])]) for name, numbers in list(phones.items())]))
-
-

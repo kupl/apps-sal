@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 mod = 10 ** 9 + 7
 maxn = 1001
 c = [[0 for j in range(maxn)] for i in range(maxn)]

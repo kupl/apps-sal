@@ -16,5 +16,5 @@ def main():
 
     print(p[0] + 1)
 
-main()
 
+main()

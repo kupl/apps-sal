@@ -13,7 +13,7 @@ pos_su = 0
 for x in arr:
     if x == prsu[0][:len(x)]:
         pos_pr += 1
-    if x == prsu[1][n-len(x):]:
+    if x == prsu[1][n - len(x):]:
         pos_su += 1
 if pos_su >= n - 1 and pos_pr >= n - 1:
     prsu.reverse()
@@ -66,4 +66,3 @@ for i in range(len(arr)):
             kek[i] = 'S'
             ab_su[len(arr[i]) - 1] = 1
 print(''.join(kek))
-

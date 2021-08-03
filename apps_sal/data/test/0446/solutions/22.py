@@ -10,4 +10,3 @@ for i in range(len(a) - 1, -1, -1):
     if n % a[i] == 0:
         print(a[i])
         return
-

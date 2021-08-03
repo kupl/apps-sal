@@ -10,4 +10,3 @@ print(("AC x " + str(nac)))
 print(("WA x " + str(nwa)))
 print(("TLE x " + str(ntle)))
 print(("RE x " + str(nre)))
-

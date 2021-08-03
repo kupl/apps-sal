@@ -13,7 +13,7 @@ prefix_sum[1] = 1
 for i in range(2, N + 1):
     for j in range(K):
         l, r = LR[j]
-        
+
         l1 = max(i - r - 1, 0)
         r1 = max(i - l, 0)
 

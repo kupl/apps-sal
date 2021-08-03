@@ -1,8 +1,8 @@
 counts = [int(x) for x in input().split()]
 n = int(input())
 sizes = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL']
-size_to_i = {size:i for i, size in enumerate(sizes)}
-two_sizes = {(x,y): [] for x, y in zip(list(range(6)), list(range(1, 7)))}
+size_to_i = {size: i for i, size in enumerate(sizes)}
+two_sizes = {(x, y): [] for x, y in zip(list(range(6)), list(range(1, 7)))}
 
 decision = [''] * n
 
@@ -21,11 +21,13 @@ for smaller, larger in zip(list(range(5)), list(range(1, 6))):
         counts[to_give] -= 1
         decision[part] = sizes[to_give]
 
+
 def possible():
     for c in counts:
         if c < 0:
             return False
     return True
+
 
 if possible():
     print('YES')
@@ -33,5 +35,3 @@ if possible():
         print(d)
 else:
     print('NO')
-
-

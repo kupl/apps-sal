@@ -4,10 +4,11 @@ class Solution:
         mod = 10 ** 9 + 7
         nums.sort()
         temp = 0
-        def bina(i,low,high):
-            ans = low - 1 
-            while(low<=high):
-                mid = (low + high)//2
+
+        def bina(i, low, high):
+            ans = low - 1
+            while(low <= high):
+                mid = (low + high) // 2
                 if nums[i] + nums[mid] <= target:
                     low = mid + 1
                     ans = mid
@@ -16,13 +17,8 @@ class Solution:
             return ans - i
 
         for i in range(len(nums)):
-            if nums[i]*2 > target:
+            if nums[i] * 2 > target:
                 break
-            ans = (ans + int(pow( 2,bina(i,i,len(nums)-1) ,mod) ))%mod
+            ans = (ans + int(pow(2, bina(i, i, len(nums) - 1), mod))) % mod
             print(ans)
         return ans
-        
-        
-        
-                
-

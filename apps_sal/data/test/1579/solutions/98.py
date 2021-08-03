@@ -15,6 +15,7 @@ for x, y in xy:
     else:
         ytox[y].append(x)
 
+
 def doit(x, xs, ys, xtoy, ytox):
     ret = 0
     if x in xtoy:
@@ -24,6 +25,7 @@ def doit(x, xs, ys, xtoy, ytox):
         for y in yl:
             ret += doit(y, ys, xs, ytox, xtoy)
     return ret
+
 
 ret = 0
 while len(xtoy) > 0:

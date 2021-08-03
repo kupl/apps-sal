@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-k = 1 + n%2
+k = 1 + n % 2
 dp = [[-float('inf')] * (k + 2) for i in range(n + 1)]
 dp[0][0] = 0
 for i in range(n):

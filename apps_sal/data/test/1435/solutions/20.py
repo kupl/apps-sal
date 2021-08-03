@@ -12,8 +12,7 @@ for i in range(1, len(s)):
 if num != 0:
     nine.append(num + 1)
 for i in range(len(nine)):
-    x= nine[i]
+    x = nine[i]
     if x % 2 != 0:
-        ans = ans * (int((x + 1)/2))
+        ans = ans * (int((x + 1) / 2))
 print(ans)
-

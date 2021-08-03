@@ -10,4 +10,3 @@ class Solution:
                 elif interval[0] >= other[0] and interval[1] <= other[1]:
                     deleted.add(str(interval))
         return len(intervals) - len(deleted)
-

@@ -25,5 +25,5 @@ for i in range(n):
                 ans += 1
     if(len(mb - no) == 1 or len(mb) == 1):
         mark = True
-        
+
 print(ans)

@@ -1,6 +1,7 @@
 from sys import setrecursionlimit
 setrecursionlimit(10 * 9)
 
+
 def solve(i):
     if i + k >= n:
         return 1
@@ -9,7 +10,7 @@ def solve(i):
         return dp[i]
 
     mini = float('inf')
-    for j in range(i+1, min(n, i+k+1)):
+    for j in range(i + 1, min(n, i + k + 1)):
         if i == -1 or a[i] == a[j]:
             mini = min(mini, solve(j) + 1)
 
@@ -24,12 +25,12 @@ for _ in range(int(input())):
     le = lo = -1
     se = so = -1
 
-    for i in range(n-k, n):
+    for i in range(n - k, n):
         if a[i] == 0:
             le = i
             break
 
-    for i in range(n-k, n):
+    for i in range(n - k, n):
         if a[i] == 1:
             lo = i
             break

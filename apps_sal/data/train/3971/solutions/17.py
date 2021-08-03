@@ -5,9 +5,8 @@ def tidyNumber(n):
         s = n % 10
         print((i, s, n))
         n = n // 10
-        if i < s: 
+        if i < s:
             return False
         i = s
     return True
-    #pass
-
+    # pass

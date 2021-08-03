@@ -54,4 +54,3 @@ for i in ans:
     for j in range(li + 1):
         print(i[j], end="")
     print()
-

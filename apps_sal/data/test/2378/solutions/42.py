@@ -2,8 +2,8 @@
 from collections import deque
 import sys
 sys.setrecursionlimit(10 ** 9)
-import sys
 input = sys.stdin.readline
+
 
 def dfs(v):
     visited[v] = True
@@ -19,12 +19,14 @@ def dfs(v):
 def anaaki(v):
     ret = powp - 1
     for ch in AL[v][CHILDREN]:
-        if ch is None: continue
+        if ch is None:
+            continue
         ret -= pow(2, AL[ch][SIZE], p) - 1
         ret %= p
     ret -= pow(2, n - AL[v][SIZE], p) - 1
     ret %= p
     return ret
+
 
 n = int(input())
 SIZE = 0

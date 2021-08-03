@@ -1,1 +1,1 @@
-get_score=lambda n: n*(n+1)*25
+def get_score(n): return n * (n + 1) * 25

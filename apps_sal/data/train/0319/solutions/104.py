@@ -1,9 +1,11 @@
 from functools import lru_cache
 
+
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         vals = stoneValue
         n = len(vals)
+
         @lru_cache(None)
         def play(i):
             if i == n:
@@ -18,7 +20,7 @@ class Solution:
                     p1 = p2_
                     p2 = p1_
             return p1, p2
-        
+
         p1, p2 = play(0)
         # print(p1, p2)
         # p2 = sum(vals) - p1

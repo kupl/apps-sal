@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs(s):
     q = deque()
     q.append(s)
@@ -12,6 +13,7 @@ def bfs(s):
                 dist[i] = dist[p] + 1
                 q.append(i)
     return dist
+
 
 n, u, v = map(int, input().split())
 G = [[] for _ in range(n + 1)]

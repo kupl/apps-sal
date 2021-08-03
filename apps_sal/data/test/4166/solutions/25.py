@@ -52,7 +52,7 @@ def resolve():
             continue
         for sc in SC:
             s, c = sc
-            if si[s-1] != str(c):
+            if si[s - 1] != str(c):
                 break
         else:
             ans = i
@@ -64,5 +64,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

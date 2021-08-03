@@ -1,6 +1,6 @@
 import collections
 
-li = list(map(int,input().split()))
+li = list(map(int, input().split()))
 
 c = collections.Counter(li)
 

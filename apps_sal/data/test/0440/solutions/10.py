@@ -1,8 +1,10 @@
 input()
 s = list(input())
 
+
 def isGlasnaya(char):
     return char in ['a', 'e', 'i', 'o', 'u', 'y']
+
 
 i = 0
 while i + 1 < len(s):
@@ -12,4 +14,3 @@ while i + 1 < len(s):
     else:
         i += 1
 print(''.join(s))
-

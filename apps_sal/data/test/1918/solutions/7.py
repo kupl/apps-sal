@@ -6,6 +6,7 @@ n = int(input())
 p = list(map(int, input().split()))
 s = input()
 
+
 def solve(p, s):
     a, b = [0] * n, [0] * n
     m = 0
@@ -27,4 +28,6 @@ def solve(p, s):
         if m - b[i] + a[i] > ans:
             ans = m - b[i] + a[i]
     return ans
+
+
 print(max(solve(p, s), solve(p[::-1], s[::-1])))

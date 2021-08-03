@@ -14,5 +14,3 @@ def tax_calculator(total):
         tax += chunk * rate
         residue -= chunk
     return round(tax, 2)
-        
-

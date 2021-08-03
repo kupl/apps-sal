@@ -1,3 +1,4 @@
+from collections import deque
 n = int(input())
 adj = [[] for _ in range(n)]
 
@@ -6,7 +7,7 @@ for _ in range(n - 1):
     adj[u - 1].append(v - 1)
     adj[v - 1].append(u - 1)
 
-from collections import deque
+
 def bfs(v):
     vis = [i == v for i in range(n)]
     paths = deque([[v]])
@@ -16,9 +17,10 @@ def bfs(v):
         for nv in adj[p[-1]]:
             if not vis[nv]:
                 vis[nv] = True
-                paths.append(p + [nv]) 
+                paths.append(p + [nv])
 
     return p
+
 
 diameter = bfs(0)
 diameter = bfs(diameter[-1])
@@ -26,7 +28,8 @@ p = diameter[len(diameter) // 2]
 
 start = (0, 0)
 move = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-gpt = lambda pt, i, dis : (pt[0] + move[i][0] * dis, pt[1] + move[i][1] * dis)
+def gpt(pt, i, dis): return (pt[0] + move[i][0] * dis, pt[1] + move[i][1] * dis)
+
 
 vis = [False] * n
 dis = 2 ** (len(diameter) + 1)
@@ -42,13 +45,13 @@ while q:
     if len(adj[p]) > 4:
         print("NO")
         return
-    
+
     if dr == -1:
         drs = [i for i in range(4)]
     else:
         drs = [i for i in range(4) if gpt(move[i], dr, 1) != (0, 0)]
 
-    for nv in adj[p]:       
+    for nv in adj[p]:
         if not vis[nv]:
             vis[nv], dr = True, drs.pop()
             npt = gpt(start, dr, dis)
@@ -58,7 +61,3 @@ while q:
 print("YES")
 for pt in ans:
     print(*pt)
-
-
-
-

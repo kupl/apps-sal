@@ -5,6 +5,7 @@ MAZE = []
 for i in range(H):
     MAZE.append(list(input()))
 
+
 def bfs(start_x, start_y):
     d = [[-1] * W for i in range(H)]
 
@@ -23,10 +24,11 @@ def bfs(start_x, start_y):
             if 0 <= nx < H and 0 <= ny < W and MAZE[nx][ny] != '#' and d[nx][ny] == -1:
                 que.append((nx, ny))
                 d[nx][ny] = d[p[0]][p[1]] + 1
-            
+
                 cnt = max(cnt, d[p[0]][p[1]] + 1)
-        
+
     return cnt
+
 
 max_count = 0
 for i in range(H):

@@ -12,6 +12,7 @@ req = 1
 while req * req < n:
     req += 1
 
+
 def dfs():
     dep = [0] * (n + 1)
     par = [0] * (n + 1)
@@ -42,6 +43,7 @@ def dfs():
                     mk[v] = 1
     return ([u for u in range(1, n + 1) if not mk[u]][:req], None)
 
+
 iset, cyc = dfs()
 if iset:
     print(1)
@@ -50,4 +52,3 @@ else:
     print(2)
     print(len(cyc))
     print(*cyc)
-

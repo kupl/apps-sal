@@ -5,10 +5,10 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    
+
     # 自己写的
     def longestZigZag(self, root: TreeNode) -> int:
-        
+
         # return longest zigzig path of current node from right / left
         def dfs(node):
             if not node.left and not node.right:
@@ -22,7 +22,7 @@ class Solution:
             # res[0] = max(res[0], max(left, right))
             self.res = max(self.res, max(left, right))
             return (left, right)
-        
+
         # 这样反而会让时间变长
         # res = [0]
         # res = []

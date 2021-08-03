@@ -13,16 +13,15 @@ S['p'] = -1
 S['k'] = 0
 
 score = 0
-for i in range(8) :
+for i in range(8):
     x = input()
-    for j in x :
-        if j in S :
+    for j in x:
+        if j in S:
             score += S[j]
 
-if score > 0 :
+if score > 0:
     print("White")
-elif score == 0 :
+elif score == 0:
     print("Draw")
-else :
+else:
     print("Black")
-

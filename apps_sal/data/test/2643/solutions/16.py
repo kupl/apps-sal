@@ -19,4 +19,3 @@ for n, x, m in nxm:
     ans -= last // m - x // m
 
     print(ans)
-

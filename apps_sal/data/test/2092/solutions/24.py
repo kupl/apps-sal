@@ -1,26 +1,27 @@
 class Traps():
-    def __init__(self,l,r,d):
+    def __init__(self, l, r, d):
         self.before_l = l - 1
         self.r = r
         self.d = d
 
-def qujianbingji(x,y):
-    if y[0]<x[0]:
-        if y[1]<x[0]:
-            return [y,x]
-        elif y[1]<=x[1]:
-            z = [y[0],x[1]]
+
+def qujianbingji(x, y):
+    if y[0] < x[0]:
+        if y[1] < x[0]:
+            return [y, x]
+        elif y[1] <= x[1]:
+            z = [y[0], x[1]]
             return [z]
         else:
             return [y]
-    elif y[0]<x[1]:
-        if y[1]<=x[1]:
+    elif y[0] < x[1]:
+        if y[1] <= x[1]:
             return [x]
         else:
-            z = [x[0],y[1]]
+            z = [x[0], y[1]]
             return [z]
     else:
-        return [x,y]
+        return [x, y]
 
 
 def main():
@@ -30,13 +31,13 @@ def main():
     list_traps = []
     for i in range(k):
         l, r, d = map(int, input().split())
-        list_traps.append(Traps(l,r,d))
-    list_traps.sort(key=lambda x:x.before_l)
+        list_traps.append(Traps(l, r, d))
+    list_traps.sort(key=lambda x: x.before_l)
     T = 0
     left, right = -1, m
-    while right-left>1:#？？？？？？？
+    while right - left > 1:  # ？？？？？？？
         dangerous_traps = []
-        mid = (left+right)//2
+        mid = (left + right) // 2
 
         for trap in list_traps:
             if trap.d > lista[mid]:
@@ -113,5 +114,6 @@ def main():
     #         left,right = left, mid
     #         count = i+1
     # print(count)
+
 
 main()

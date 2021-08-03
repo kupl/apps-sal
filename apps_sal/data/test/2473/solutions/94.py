@@ -18,14 +18,13 @@ for i in range(N - K + 1):
     for j in range(i + K - 1, N):
         dx = x_sort[j][0] - xl
 
-        points = sorted(x_sort[i: j+1], key=lambda x: x[1])
+        points = sorted(x_sort[i: j + 1], key=lambda x: x[1])
 
         rest = j - i + 1
         for p in range(rest - K + 1):
             yd = points[p][1]
             for q in range(p + K - 1, rest):
                 dy = points[q][1] - yd
-                ans = min(ans, dx*dy)
+                ans = min(ans, dx * dy)
 
 print(ans)
-

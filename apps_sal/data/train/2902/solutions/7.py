@@ -1,2 +1,2 @@
 def opposite(number):
-  return -1*number
+    return -1 * number

@@ -26,7 +26,6 @@ class Combination:
         return (self.fact[k] * self.inv_fact[k - r] * self.inv_fact[r]) % self.MOD
 
 
-
 n, m = map(int, input().split())
 MOD = 998244353
 comb = Combination(2 * 10 ** 5 + 10, MOD)

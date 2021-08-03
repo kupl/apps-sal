@@ -24,4 +24,3 @@ for s, t, x in stx:
             l = nxt[l]
 
 print(*ans, sep="\n")
-

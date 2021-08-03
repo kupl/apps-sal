@@ -10,5 +10,5 @@ for i in range(x):
     L.append(a)
     l.append(b)
 for j in range(x):
-    c = int(L[j])+ int(l[j])
+    c = int(L[j]) + int(l[j])
     print(c)

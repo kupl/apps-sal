@@ -4,7 +4,7 @@ c = list(map(int, input().split()))
 
 vc = []
 for i, j in zip(v, c):
-    vc.append(i-j)
+    vc.append(i - j)
 vc = sorted(vc, reverse=True)
 ans = 0
 for i in vc:

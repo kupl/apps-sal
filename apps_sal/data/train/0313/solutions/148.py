@@ -19,10 +19,13 @@ class Solution:
                 left = mid + 1
         return left
 '''
+
+
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
-        if n < m*k :return -1
+        if n < m * k:
+            return -1
         l, r = 1, max(bloomDay)
         while l < r:
             mid = l + (r - l) // 2
@@ -30,12 +33,13 @@ class Solution:
             cnt = 0
             for n in bloomDay:
                 temp = 0 if n > mid else temp + 1
-                if temp >=k:
+                if temp >= k:
                     temp = 0
-                    cnt+=1
-                    if cnt==m:break
-            if cnt == m : r= mid
-            else: l = mid+1
+                    cnt += 1
+                    if cnt == m:
+                        break
+            if cnt == m:
+                r = mid
+            else:
+                l = mid + 1
         return l
-
-

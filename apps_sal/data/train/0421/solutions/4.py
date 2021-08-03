@@ -12,34 +12,28 @@ class Solution:
                 if i == j:
                     j += 1
                 offset = 0
-        return s[i :]
-        
-        
-        
+        return s[i:]
+
+
 #         maxchar = 'a'
 #         index = []
-        
+
 #         for i in range(len(s)):
 #             if s[i] > maxchar:
 #                 maxchar = s[i]
 #                 index.append(i)
 #         # print(index)
 #         maxstring = \"\"
-        
+
 #         for i in range(len(index)):
 #             if s[index[i]:] > maxstring:
 #                 maxstring = s[index[i]:]
-                
+
 #         return maxstring
-        
-        
-        
-        
-#         m = \"\" 
-#         for i in range(len(s)): 
-#             m = max(m, s[i:]) 
-  
+
+
+#         m = \"\"
+#         for i in range(len(s)):
+#             m = max(m, s[i:])
+
 #         return m
-
-
-

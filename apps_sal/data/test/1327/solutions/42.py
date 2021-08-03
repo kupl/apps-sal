@@ -15,4 +15,3 @@ for s in product([1, -1], repeat=3):
         cz += z
     result = max(result, abs(cx) + abs(cy) + abs(cz))
 print(result)
-

@@ -4,4 +4,4 @@ def find_average(nums):
     for i in nums:
         count += 1
         total += i
-    return (total/count)
+    return (total / count)

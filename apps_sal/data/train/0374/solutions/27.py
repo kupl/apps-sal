@@ -11,9 +11,9 @@ class Solution:
                     if w1[-k:] == w2[:k]:
                         break
                     k -= 1
-                
+
                 self.cost[i][j] = k
-        
+
         self.cache = {}
         ans = ''
         for i in range(n):
@@ -22,25 +22,24 @@ class Solution:
                 ans = candidate
 
         return ans
-    
+
     def dfs(self, A, index, cur):
         if (index, cur) in self.cache:
             return self.cache[(index, cur)]
 
         if not ((1 << index) & cur):
             return ''
-    
+
         if cur == (1 << index):
             return A[index]
-        
+
         self.cache[(index, cur)] = ''
         for i in range(len(A)):
             if i == index or not ((1 << i) & cur):
                 continue
-            
+
             temp = self.dfs(A, i, cur - (1 << index)) + A[index][self.cost[i][index]:]
             if self.cache[(index, cur)] == '' or len(temp) < len(self.cache[(index, cur)]):
                 self.cache[(index, cur)] = temp
-        
-        return self.cache[(index, cur)]
 
+        return self.cache[(index, cur)]

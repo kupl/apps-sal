@@ -6,14 +6,14 @@ for i in range(m):
     u, v = list(map(int, input().split()))
     u -= 1
     v -= 1
-    graph[u].append([i,v])
-    graph[v].append([i,u])
-    
+    graph[u].append([i, v])
+    graph[v].append([i, u])
+
 cnt = 0
 for i in range(m):
     d = deque()
     d.append(0)
-    visited = [False]*n
+    visited = [False] * n
     visited[0] = True
     while d:
         cf = d.pop()
@@ -26,4 +26,3 @@ for i in range(m):
     if False in visited:
         cnt += 1
 print(cnt)
-

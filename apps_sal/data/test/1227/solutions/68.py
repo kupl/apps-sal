@@ -21,4 +21,3 @@ for i in range(len(N)):
                     is_smaller_ = 1
                 dp[i_][j_][is_smaller_] += dp[i][j][is_smaller]
 print((dp[len(N)][K][0] + dp[len(N)][K][1]))
-

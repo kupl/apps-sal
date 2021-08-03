@@ -2,20 +2,21 @@ import sys
 
 input = sys.stdin.readline
 
+
 def main():
     H, W = list(map(int, input().split()))
     field = []
     for _ in range(H):
         tmp = list(input()[:-1])
         field.append(tmp)
-    
+
     # import
     from collections import deque
-    
+
     # digtmp
     digtmp = [(0, 1), (1, 0), (0, -1), (-1, 0)]
     #digtmp = [(0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1), (1, 0), (1, 1)]
-    
+
     # BFS
     # please prefer objects:
     #  H: height.
@@ -41,7 +42,9 @@ def main():
                 return
     print('Yes')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

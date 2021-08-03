@@ -1,12 +1,11 @@
 class ProductOfNumbers:
 
     def __init__(self):
-        self.hundreds = list()  
+        self.hundreds = list()
         self.nums = []
         self.hund_prods = 1
         self.hund_res = 0
-        
-        
+
     def add(self, num: int) -> None:
         self.nums.append(num)
         self.hund_prods *= num
@@ -21,7 +20,7 @@ class ProductOfNumbers:
         for x in self.nums[f:t]:
             ret *= x
         return ret
-    
+
     def getProduct(self, k: int) -> int:
         prod_tail = 1
         if k < 100 + self.hund_res:
@@ -33,21 +32,14 @@ class ProductOfNumbers:
             while k - account > 100:
                 account += 100
                 p1 = p1 * self.hundreds[idx]
-                idx = idx -1
+                idx = idx - 1
             while account <= k:
                 p1 = p1 * self.nums[-account]
                 account += 1
             return p1
-                
-            
-            
-            
-            
-            
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

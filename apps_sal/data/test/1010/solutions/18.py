@@ -13,4 +13,3 @@ if 1 in lst:
     print(ans)
 else:
     print(0)
-

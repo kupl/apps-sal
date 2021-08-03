@@ -18,7 +18,7 @@ def synth(bit):
 
 ans = 1 << 60
 for bit1 in range(1, 1 << N):
-    if popcnt(bit1) >= N-1:
+    if popcnt(bit1) >= N - 1:
         continue
     length1 = synth(bit1)
 
@@ -36,9 +36,8 @@ for bit1 in range(1, 1 << N):
             length3 = synth(bit3)
             c, b, a = sorted([length1, length2, length3])
 
-            cost = 10*(popcnt(bit1 | bit2 | bit3)-3) + abs(C-c) + abs(B-b) + abs(A-a)
+            cost = 10 * (popcnt(bit1 | bit2 | bit3) - 3) + abs(C - c) + abs(B - b) + abs(A - a)
             if cost < ans:
                 ans = cost
 
 print(ans)
-

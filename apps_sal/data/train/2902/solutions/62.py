@@ -7,4 +7,3 @@ def opposite(number):
         return number
     else:
         return 0
-

@@ -1,5 +1,6 @@
 import heapq
 
+
 def solve():
     N = int(input())
     que = []
@@ -14,8 +15,8 @@ def solve():
             return False
     return True
 
+
 if solve():
     print("Yes")
 else:
     print("No")
-

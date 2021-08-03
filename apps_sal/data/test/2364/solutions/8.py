@@ -2,6 +2,7 @@
 
 MOD = 998244353
 
+
 def solve(N, A):
     ans = 0
 
@@ -27,5 +28,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

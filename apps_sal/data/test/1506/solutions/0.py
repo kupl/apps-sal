@@ -1,10 +1,10 @@
 
-        
+
 def main():
-    f= [1]
-    for i in range(1,1000002):
-        f.append((f[-1] * i)%1000000007)
-    
+    f = [1]
+    for i in range(1, 1000002):
+        f.append((f[-1] * i) % 1000000007)
+
     n = int(input())
     a = sorted(int(x) for x in input().split())
     sol = 0
@@ -19,8 +19,10 @@ def main():
             s = sq
 
     print(sol % 1000000007)
-            
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

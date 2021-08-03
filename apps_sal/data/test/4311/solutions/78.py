@@ -20,11 +20,10 @@ now = 0 + s
 i = 1
 while True:
     i += 1
-    now = now / 2 if now % 2 == 0 else 3*now + 1
+    now = now / 2 if now % 2 == 0 else 3 * now + 1
     if now in vs:
         break
     else:
         vs.add(now)
 
 print(i)
-

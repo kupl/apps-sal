@@ -6,12 +6,13 @@ A = list(map(int, input().split()))
 number_to_prime = [0] * (10**6 + 1)
 
 # preprocess
-for i in range(2, 10**6+1):
+for i in range(2, 10**6 + 1):
     if not number_to_prime[i]:
         j = 1
-        while j*i <= 10**6:
-            number_to_prime[j*i] = i
+        while j * i <= 10**6:
+            number_to_prime[j * i] = i
             j += 1
+
 
 def is_pairwise():
     used_primes = [False] * (10**6 + 1)
@@ -27,11 +28,13 @@ def is_pairwise():
             used_primes[prime] = 1
     return True
 
+
 def is_setwise(*A):
     import math
     from functools import reduce
 
     return reduce(math.gcd, A) == 1
+
 
 if is_pairwise():
     print("pairwise coprime")

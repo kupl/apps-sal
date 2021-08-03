@@ -16,4 +16,3 @@ for q in range(q):
         print(-1)
     else:
         print(ans)
-

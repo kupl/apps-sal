@@ -1,8 +1,11 @@
 USE_STDIO = False
 
 if not USE_STDIO:
-    try: import mypc
-    except: pass
+    try:
+        import mypc
+    except:
+        pass
+
 
 def main():
     n, h, a, b, k = list(map(int, input().split(' ')))
@@ -12,7 +15,8 @@ def main():
             ans = abs(fa - fb)
         else:
             ans = abs(ta - tb)
-            if fa > fb: fa, fb = fb, fa
+            if fa > fb:
+                fa, fb = fb, fa
             if a <= fa <= b or fa <= a <= fb:
                 ans += fb - fa
             elif fa >= b:
@@ -24,8 +28,6 @@ def main():
 
 def __starting_point():
     main()
-
-
 
 
 __starting_point()

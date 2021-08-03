@@ -1,12 +1,13 @@
 md = 10 ** 9 + 7
 
+
 def cnk(n, k):
-    if k > n//2:
+    if k > n // 2:
         k = n - k
     ans = 1
-    for i in range(n-k+1, n+1):
+    for i in range(n - k + 1, n + 1):
         ans *= i
-    for i in range(2, k+1):
+    for i in range(2, k + 1):
         ans //= i
     ans = ans % md
     return ans
@@ -49,4 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -14,4 +14,3 @@ for i in range(len(d)):
     if d[i] > 0 and d[i] % 2 == 0:
         two += 1
 print((varies if two % 2 == 0 else varies - 1))
-

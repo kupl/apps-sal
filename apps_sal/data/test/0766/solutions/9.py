@@ -18,4 +18,3 @@ elif ln == 4:
 
 else:
     exit(100500)
-

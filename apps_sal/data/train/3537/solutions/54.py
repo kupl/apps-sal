@@ -1,3 +1,2 @@
 def is_even(n):
-    return n % 2 == 0 or type(n) == type(float)        
-
+    return n % 2 == 0 or type(n) == type(float)

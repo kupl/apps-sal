@@ -11,6 +11,4 @@ for x in range(m):
     roomsT -= a[currD]
     currD -= 1
     tempR = toFind - roomsT
-    print(currD +2, tempR)
-
-
+    print(currD + 2, tempR)

@@ -1,5 +1,5 @@
 def alan(arr):
-    a = ['Rejection','Disappointment','Backstabbing Central','Shattered Dreams Parkway']
+    a = ['Rejection', 'Disappointment', 'Backstabbing Central', 'Shattered Dreams Parkway']
     s = 0
     r = 0
     d = 0
@@ -17,8 +17,7 @@ def alan(arr):
                     b += 1
                 else:
                     sd += 1
-    if s >= 4 and r>0 and d>0 and b>0 and sd>0:
+    if s >= 4 and r > 0 and d > 0 and b > 0 and sd > 0:
         return 'Smell my cheese you mother!'
     else:
         return 'No, seriously, run. You will miss it.'
-

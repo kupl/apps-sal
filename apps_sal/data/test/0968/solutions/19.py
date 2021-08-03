@@ -1,4 +1,4 @@
-import sys 
+import sys
 import queue
 
 #file = open("in.txt", "r")
@@ -18,14 +18,14 @@ for i in range(0, n):
 
 permutation = [int(x) for x in sys.stdin.readline().split()]
 
-p = permutation[0]-1
+p = permutation[0] - 1
 last = min(first[p], second[p])
 
 
 can = True
 
 for i in range(1, n):
-    p = permutation[i]-1
+    p = permutation[i] - 1
     if last < min(first[p], second[p]):
         last = min(first[p], second[p])
     elif last < max(first[p], second[p]):
@@ -37,8 +37,3 @@ if can:
     print("YES")
 else:
     print("NO")
-
-
-
-
-

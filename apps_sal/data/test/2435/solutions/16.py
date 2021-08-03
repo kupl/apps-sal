@@ -8,6 +8,7 @@ def solve():
             ar = max(ar, r)
     print(ar - al + 1)
 
+
 t = int(input())
 for _ in range(t):
     solve()

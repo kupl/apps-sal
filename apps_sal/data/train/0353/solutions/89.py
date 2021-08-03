@@ -4,13 +4,13 @@ class Solution:
         l = 0
         r = len(nums) - 1
         res = 0
-        while True :
-            while r >= l and (nums[l] + nums[r]) > target :
+        while True:
+            while r >= l and (nums[l] + nums[r]) > target:
                 r = r - 1
             #print(l, r)
-            if l <= r :
+            if l <= r:
                 res = res + (2 ** (r - l))
-            else :
+            else:
                 break
             l = l + 1
         return res % (10 ** 9 + 7)

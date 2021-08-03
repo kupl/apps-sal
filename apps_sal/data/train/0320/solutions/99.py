@@ -11,4 +11,3 @@ class Solution:
                     nums[i] //= 2
                 count += 1
         return count
-

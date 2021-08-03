@@ -1,8 +1,8 @@
-q=int(input())
+q = int(input())
 for i in range(q):
-    test=set()
-    s=list(input())
-    t=list(input())
+    test = set()
+    s = list(input())
+    t = list(input())
     for item in s:
         test.add(item)
     for item in t:
@@ -10,5 +10,4 @@ for i in range(q):
             print('YES')
             break
     else:
-            print('NO')
-
+        print('NO')

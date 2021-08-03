@@ -2,6 +2,7 @@ import re
 
 pattern = re.compile('o(.*?)d(.*?)d')
 
+
 def odd(s):
     n = 0
     while pattern.search(s):

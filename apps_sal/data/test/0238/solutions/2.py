@@ -1,5 +1,6 @@
-n,m,k = [int(w) for w in input().split()]
+n, m, k = [int(w) for w in input().split()]
 a = [int(w) for w in input().split()]
+
 
 def f(o):
     r = e = 0
@@ -15,5 +16,5 @@ def f(o):
             r = e
     return r
 
-print(max(f(o) for o in range(m)))
 
+print(max(f(o) for o in range(m)))

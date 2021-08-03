@@ -15,4 +15,3 @@ for i in range(n):
             nearest_t = cur_t
             ans = i + 1
 print(ans)
-

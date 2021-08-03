@@ -9,9 +9,8 @@ class Solution:
             if v % 2 == 1:
                 changed = True
                 curr += 1
-                A_next[i] = v-1
+                A_next[i] = v - 1
         if not changed:
-            return 1 + self.minOperations([v//2 for v in A])
+            return 1 + self.minOperations([v // 2 for v in A])
         else:
             return curr + self.minOperations(A_next)
-

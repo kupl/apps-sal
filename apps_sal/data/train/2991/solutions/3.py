@@ -1,4 +1,4 @@
-def not_so_random(b,w):
+def not_so_random(b, w):
     if b == 1 and w == 1:
         return 'Black'
     elif b == w:
@@ -7,9 +7,7 @@ def not_so_random(b,w):
         return 'Black'
     else:
         return 'White'
-    
-  
+
   # b & w => black
   # b & b => white
   # w & w => white
-

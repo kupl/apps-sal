@@ -10,11 +10,13 @@
 
 """
 
+
 def good(nums):
     for num in nums:
         if nums[num] > 1:
             return True
     return False
+
 
 n = int(input())
 
@@ -60,9 +62,9 @@ while r < n:
 
 length = len(s)
 
-last = s[length-1]
+last = s[length - 1]
 
-for i in range(last[0], last[1]+1):
+for i in range(last[0], last[1] + 1):
     num = a[i]
     if num in nums:
         print(length)
@@ -72,13 +74,11 @@ for i in range(last[0], last[1]+1):
 else:
     s.pop()
 
-    s[length-2][1] = n-1
+    s[length - 2][1] = n - 1
 
-    print(length-1)
+    print(length - 1)
 
 for st in s:
     for c in st:
-        print(c+1, end=" ")
+        print(c + 1, end=" ")
     print()
-
-

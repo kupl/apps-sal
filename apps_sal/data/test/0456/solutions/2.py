@@ -13,5 +13,4 @@ while i < n:
         else:
             print(s[i], end='')
         i = j - 1
-    i+=1
-
+    i += 1

@@ -18,4 +18,3 @@ for i in range(n):
     mochi_set.add(size)
 
 print((len(mochi_set)))
-

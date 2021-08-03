@@ -1,6 +1,7 @@
+from itertools import permutations
 import sys
 input = sys.stdin.readline
-from itertools import permutations
+
 
 def main():
     N, C = map(int, input().split())
@@ -29,6 +30,9 @@ def main():
         ans = min(ans, tmp)
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

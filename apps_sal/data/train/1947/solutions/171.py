@@ -1,7 +1,7 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         ret = []
-        
+
         bdict = dict()
         for word in B:
             temp = collections.Counter(word)
@@ -10,7 +10,7 @@ class Solution:
                     bdict[let] = val
                 else:
                     bdict[let] = max(bdict[let], val)
-            
+
         i = 0
         while i < len(A):
             tempdict = collections.Counter(A[i])

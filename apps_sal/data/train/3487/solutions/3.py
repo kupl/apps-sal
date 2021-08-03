@@ -3,5 +3,6 @@ def beeramid(bonus, price):
     while bonus > 0:
         i += 1
         bonus -= price * i**2
-        if bonus < 0: i -= 1
+        if bonus < 0:
+            i -= 1
     return i

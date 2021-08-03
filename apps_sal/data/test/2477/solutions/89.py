@@ -26,4 +26,3 @@ while (right - left) > 1:
         left = _q
 
 print(right)
-

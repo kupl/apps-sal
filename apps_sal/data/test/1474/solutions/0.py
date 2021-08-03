@@ -10,4 +10,3 @@ for i in range(n):
     ans %= mod
     x %= mod
 print(ans)
-

@@ -1,4 +1,6 @@
-f = lambda i: (i + 1) % 3
+def f(i): return (i + 1) % 3
+
+
 for TT in range(1, int(input()) + 1):
     n = int(input())
     l = [*map(int, input().split())]
@@ -14,15 +16,16 @@ for TT in range(1, int(input()) + 1):
             l[j] -= 1
             res[i] = j
             cnt += 1
-    
+
     # now assign the leftovers randomly
     j = 0
     for i in range(n):
-        if res[i] != -1: continue
-        while j < 3 and l[j] == 0: j += 1
+        if res[i] != -1:
+            continue
+        while j < 3 and l[j] == 0:
+            j += 1
         res[i] = j
         l[j] -= 1
-
 
     valid &= cnt >= ((n + 1) // 2)
     if valid:

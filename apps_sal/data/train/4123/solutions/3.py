@@ -7,5 +7,6 @@ def lcm_cardinality(n):
                 mul += 1
                 n //= d
             card *= 2 * mul + 1
-    if n > 1: card *= 3
+    if n > 1:
+        card *= 3
     return (card + 1) // 2

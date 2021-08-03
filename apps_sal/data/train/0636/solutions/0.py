@@ -9,4 +9,3 @@ for i in q:
     if sum(i) == t:
         total += 1
 print(total)
-

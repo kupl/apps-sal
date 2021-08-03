@@ -6,12 +6,11 @@ count = X // D
 ans = 0
 
 if count >= K:
-  ans = X - (K * D)
+    ans = X - (K * D)
 else:
-  if (K - count) % 2 == 0:
-    ans = X - (count * D)
-  else:
-    ans = X - (count + 1) * D
+    if (K - count) % 2 == 0:
+        ans = X - (count * D)
+    else:
+        ans = X - (count + 1) * D
 
 print((abs(ans)))
-

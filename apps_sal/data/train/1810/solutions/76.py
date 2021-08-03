@@ -15,5 +15,5 @@ class Solution:
                 ans.append(tmp)
                 if tmp not in used:
                     used[tmp] = 1
-                used[name] = max(used[name]+1, num)
+                used[name] = max(used[name] + 1, num)
         return ans

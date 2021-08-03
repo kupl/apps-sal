@@ -61,4 +61,3 @@ for a, b in C:
     ans += b
 
 print(ans)
-

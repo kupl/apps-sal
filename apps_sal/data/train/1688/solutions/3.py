@@ -8,4 +8,6 @@ def __starting_point():
         n = input()
         _list = list(map(int, input().split()))
         print(longest_subsequence(_list))
+
+
 __starting_point()

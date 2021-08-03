@@ -1,4 +1,4 @@
-li = ['MON','TUE','WED','THU','FRI','SAT','SUN']
+li = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 
 n = input()
 

@@ -14,8 +14,7 @@ class Solution:
                 q.pop()
             q.append((i, cur))
         return max(ans)
-        
-        
+
         # n = len(A)
         # A *= 2
         # ans = [A[0]] + [0] * (len(A) - 1)
@@ -30,4 +29,3 @@ class Solution:
         #         q.pop()
         #     q.append((i, cur))
         # return max(ans)
-

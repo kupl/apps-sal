@@ -15,5 +15,3 @@ if a[0] in 'ABCDEFGHIJ':
     l1 //= 10
     l1 *= 9
 print(l1 * q)
-    
-

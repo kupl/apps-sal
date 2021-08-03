@@ -15,4 +15,3 @@ while True:
     else:
         print("NO")
         return
-

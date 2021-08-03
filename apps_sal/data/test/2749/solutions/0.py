@@ -10,11 +10,11 @@ for i, a in enumerate(A):
     for _ in range(a):
         M[ij][ii] = i
 
-        if ij%2 == 0:
+        if ij % 2 == 0:
             ii += 1
             if ii == w:
                 ij += 1
-                ii = w-1
+                ii = w - 1
         else:
             ii -= 1
             if ii == -1:

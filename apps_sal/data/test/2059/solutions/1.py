@@ -30,9 +30,9 @@ def main():
     for i in range(1, n):
         out = min(out, min(nums[i], first) // i)
     last = nums[-1]
-    for i in range(n-2, 0, -1):
-        out = min(out, min(nums[i], last) // (n-1 - i))
+    for i in range(n - 2, 0, -1):
+        out = min(out, min(nums[i], last) // (n - 1 - i))
     write(out)
 
-main()
 
+main()

@@ -2,13 +2,15 @@
 
 [t, w, b] = [int(x) for x in input().split()]
 
+
 def gcd(a, b):
-    if (b==0):
+    if (b == 0):
         return a
     else:
-        return gcd(b, a%b)
+        return gcd(b, a % b)
 
-d = w*b // gcd(w, b)
+
+d = w * b // gcd(w, b)
 m = min(w, b)
 
 dint = t // d
@@ -16,7 +18,7 @@ dint = t // d
 count = m * dint
 
 count += m - 1
-    
+
 d = dint * d + m - 1
 
 if (d > t):

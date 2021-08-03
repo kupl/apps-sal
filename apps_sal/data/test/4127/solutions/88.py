@@ -5,4 +5,4 @@ a, b = input().split()
 a = Decimal(a)
 b = Decimal(b)
 
-print(int(a*b))
+print(int(a * b))

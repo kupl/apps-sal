@@ -6,6 +6,5 @@ def reverse_words(text):
         for letter in word:
             reversedWord = letter + reversedWord
         reversedArray.append(reversedWord)
-        
-    return " ".join(reversedArray)
 
+    return " ".join(reversedArray)

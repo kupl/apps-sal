@@ -1,10 +1,12 @@
 from math import *
 
+
 def r(x1, y1, x2, y2):
     return (abs(x1 - x2) ** 2 + abs(y1 - y2) ** 2) ** 0.5
 
-a, b, c = map(int,input().split())
-x1, y1, x2, y2 = map(int,input().split())
+
+a, b, c = map(int, input().split())
+x1, y1, x2, y2 = map(int, input().split())
 r1 = abs(x1 - x2) + abs(y1 - y2)
 if (a == 0 or b == 0):
     print(r1)

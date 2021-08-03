@@ -4,6 +4,7 @@ class Node:
         self.children = []
         self.isAlive = True
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -26,7 +27,7 @@ class ThroneInheritance:
                 ordering.append(node.name)
             for c in node.children:
                 preOrder(c)
-            
+
         preOrder(self.king)
         return ordering
 
@@ -36,4 +37,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

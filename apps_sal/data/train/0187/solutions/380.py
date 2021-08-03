@@ -10,7 +10,7 @@ class Solution:
             if c + waited >= 4:
                 profit += 4 * boardingCost
             else:
-                profit += (c + waited) * boardingCost 
+                profit += (c + waited) * boardingCost
             waited = max(0, c + waited - 4)
             profit -= runningCost
             rotate += 1
@@ -24,5 +24,5 @@ class Solution:
                 profit -= runningCost
                 if (waited % 4) * boardingCost > runningCost:
                     rotate += 1
-            
+
         return rotate if profit > 0 else -1

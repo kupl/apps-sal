@@ -7,4 +7,3 @@ if ans == 0:
     print(n)
 else:
     print(ans)
-

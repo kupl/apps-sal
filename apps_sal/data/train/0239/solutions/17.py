@@ -11,4 +11,3 @@ class Solution:
                 if len(ans) == num_wanted:
                     break
         return sum(ans)
-

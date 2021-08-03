@@ -32,6 +32,7 @@ def main():
 def check_power_of_2(x):
     return (x != 0) and ((x & (x - 1)) == 0)
 
+
 def prime_factorization(number):
     n = number
     i = 2
@@ -41,18 +42,19 @@ def prime_factorization(number):
             if i in factor:
                 factor[i] += 1
             else:
-                factor.update({i : 1})
+                factor.update({i: 1})
             n //= i
         i += 1
     if n > 1 or not factor:
         if n in factor:
             factor[n] += 1
         else:
-            factor.update({n : 1})
+            factor.update({n: 1})
     return factor
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -9,7 +9,7 @@ for i in range(N):
     if i == 0:
         pass
     else:
-        cnt = cnt - A_lst_c[i-1]
+        cnt = cnt - A_lst_c[i - 1]
     A_lst_c.append(cnt)
 A_lst_c_min = min(A_lst_c)
 print(A_lst_c_min)

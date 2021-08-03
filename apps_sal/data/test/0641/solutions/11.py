@@ -5,7 +5,7 @@ s = input().split()
 n = int(s[0])
 i = (s[2] == 'week')
 if i:
-    print(366//7 + (5 <= n <= 6))
+    print(366 // 7 + (5 <= n <= 6))
 else:
     if n <= 29:
         print(12)
@@ -13,4 +13,3 @@ else:
         print(11)
     else:
         print(7)
-

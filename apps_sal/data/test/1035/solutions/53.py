@@ -1,7 +1,8 @@
 # a, bを素因数分解する。O(ルートa + ルートb)
 # 共通の素因数を見つける。O(loga + logb)
 
-a,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
+
 
 def prime_factorize(n):
     a = []
@@ -18,13 +19,14 @@ def prime_factorize(n):
     if n != 1:
         a.append(n)
     return a
+
+
 a_prime = set(prime_factorize(a))
 b_prime = set(prime_factorize(b))
 ans = 0
 for ap in a_prime:
-  for bp in b_prime:
-    if ap == bp:
-      ans += 1
-      break
-print((ans+1))
-
+    for bp in b_prime:
+        if ap == bp:
+            ans += 1
+            break
+print((ans + 1))

@@ -2,9 +2,9 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         l = 0
-        r = (position[-1]-1) // (m-1) * 2
+        r = (position[-1] - 1) // (m - 1) * 2
         while l < r:
-            intrv = (l+r) // 2
+            intrv = (l + r) // 2
             c = 0
             prev = float('-inf')
             for p in position:
@@ -17,4 +17,3 @@ class Solution:
             else:
                 r = intrv
         return best
-

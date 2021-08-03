@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, k = map(int, input().split())
     a = [int(i) - 1 for i in input().split()]
@@ -48,6 +49,9 @@ def solve():
 
     print(cost)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

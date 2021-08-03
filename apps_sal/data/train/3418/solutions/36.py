@@ -1,5 +1,5 @@
 def reverse_list(l):
-    v=[];
+    v = []
     for i in reversed(l):
-        v.append(i);
-    return v;
+        v.append(i)
+    return v

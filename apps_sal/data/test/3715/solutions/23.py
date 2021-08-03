@@ -24,4 +24,5 @@ def __starting_point():
             num[i + 1][2] = min(num[i][0], num[i][1])
     print(min(num[n]))
 
+
 __starting_point()

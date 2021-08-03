@@ -37,4 +37,3 @@ else:
             cnt += 1
         s *= r
     print(cnt)
-

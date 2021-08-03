@@ -23,4 +23,3 @@ for i in bingo_list:
     count = 0
 
 print(ans)
-

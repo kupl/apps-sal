@@ -20,4 +20,3 @@ elif flag_right:
     print('ccw')
 else:
     print('undefined')
-

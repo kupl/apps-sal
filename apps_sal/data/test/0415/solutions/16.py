@@ -21,4 +21,3 @@ for k in range(n, -1, -1):
     if check(k):
         print(k)
         break
-

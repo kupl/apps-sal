@@ -6,4 +6,3 @@ if (n % 2 == 1):
 while n > 0:
     print(2, end=" ")
     n -= 2
-

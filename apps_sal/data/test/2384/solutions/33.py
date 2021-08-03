@@ -6,7 +6,7 @@ def resolve():
 
     # 取る 取らない 取る 取らない ... を貪欲にやっていくと 1 + n % 2 個余って、
     # 1 + n % 2 回飛ばせることがわかる
-    skip = 1 + N % 2;
+    skip = 1 + N % 2
 
     # dp[i][j] := a[0, i) を j 要素無視して1つ飛びに取ったときの最大値
     dp = [[INF] * (skip + 1) for _ in range(N + 2)]
@@ -24,5 +24,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

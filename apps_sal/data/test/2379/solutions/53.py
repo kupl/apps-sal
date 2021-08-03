@@ -14,7 +14,7 @@ while i < n:
             break
         i += c
     i += 1
-p = k-1
+p = k - 1
 # for i in range(n - 1, -1, -1):
 i = n - 1
 while i >= 0:
@@ -28,5 +28,4 @@ while i >= 0:
 #print(l, r)
 for i in range(k):
     if l[i] == r[i]:
-        print((l[i]+1))
-
+        print((l[i] + 1))

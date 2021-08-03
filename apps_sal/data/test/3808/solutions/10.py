@@ -7,7 +7,7 @@ for i in s:
         st += 1
     else:
         st -= 1
-    
+
     neg = min(neg, st)
 
 if st != 0 or neg < -1:

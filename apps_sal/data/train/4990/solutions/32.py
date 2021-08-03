@@ -5,6 +5,7 @@ def solution(string, ending):
         return True
     return string[-ending_length:] == ending
 
+
 def solution_endswith(string, ending):
     """Proper solution using `endswith()`."""
     return string.endswith(ending)

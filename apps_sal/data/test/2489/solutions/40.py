@@ -2,11 +2,11 @@ import numpy as np
 from collections import Counter
 
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 cnt = Counter(A)
 
-b = np.array([0]*(max(A)+1))
+b = np.array([0] * (max(A) + 1))
 
 A.sort()
 ans = 0

@@ -17,4 +17,4 @@ class Solution:
                     new_starts.append(start)
             offset += 1
             starts = new_starts
-        return s[starts[0]:]  
+        return s[starts[0]:]

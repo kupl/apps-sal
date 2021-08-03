@@ -8,5 +8,5 @@ for i in n:
 binary.reverse()
 ans = 0
 for i in range(len(binary)):
-    ans +=  2 ** i * (binary[i] + 1)
-print (ans)
+    ans += 2 ** i * (binary[i] + 1)
+print(ans)

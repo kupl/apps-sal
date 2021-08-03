@@ -28,6 +28,7 @@ class Solution:
     Space O(E)
 
     '''
+
     def maxNumEdgesToRemove(self, n, edges):
         # Union find
         def find(i):
@@ -37,7 +38,8 @@ class Solution:
 
         def uni(x, y):
             x, y = find(x), find(y)
-            if x == y: return 0
+            if x == y:
+                return 0
             root[x] = y
             return 1
 
@@ -72,4 +74,3 @@ class Solution:
                     res += 1
 
         return res if e1 == e2 == n - 1 else -1
-

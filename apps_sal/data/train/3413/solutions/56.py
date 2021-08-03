@@ -1,5 +1,5 @@
 def solution(nums):
-    lst=[]
+    lst = []
     if nums == None:
         return lst
     nums = sorted(nums)

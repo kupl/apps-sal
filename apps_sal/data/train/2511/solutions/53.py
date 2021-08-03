@@ -4,5 +4,3 @@ class Solution:
         for key, value in list(count_dict.items()):
             if value == len(A) / 2:
                 return key
-            
-

@@ -1,1 +1,1 @@
-count_by = lambda x,y: [x*i for i in range(1,y+1)]
+def count_by(x, y): return [x * i for i in range(1, y + 1)]

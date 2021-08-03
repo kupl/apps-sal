@@ -16,7 +16,3 @@ def two_highest(arg1):
         max_2 = max(arg1)
         x.append(max_2)
         return x
-    
-    
-    
-

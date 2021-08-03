@@ -8,8 +8,8 @@ for i in range(3, n + 2):
     for j in range(4):
         for k in range(4):
             dp[i][j] += dp[i - 1][k]
-    dp[i][2] -= dp[i - 2][0] # AGCを取り除く.
-    dp[i][2] -= dp[i - 2][1] # GACを取り除く.
-    dp[i][1] -= dp[i - 2][0] - dp[i - 3][1] # ACGを取り除く. ただしGACGはすでに取り除いている.
-    dp[i][2] -= 3 * dp[i - 3][0] # すでに取り除いているものに注意する.結果的にAGGC,ATGC,AGTCを取り除く.
+    dp[i][2] -= dp[i - 2][0]  # AGCを取り除く.
+    dp[i][2] -= dp[i - 2][1]  # GACを取り除く.
+    dp[i][1] -= dp[i - 2][0] - dp[i - 3][1]  # ACGを取り除く. ただしGACGはすでに取り除いている.
+    dp[i][2] -= 3 * dp[i - 3][0]  # すでに取り除いているものに注意する.結果的にAGGC,ATGC,AGTCを取り除く.
 print(sum(dp[-1]) % mod)

@@ -62,4 +62,3 @@ for _ in range(n - 1):
 colors = [c == 'B' for c in input()]
 
 print((solve(links, colors)))
-

@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 a, n, m = rd()
 s = set()
 u = {}
@@ -37,4 +39,3 @@ for i in range(1, len(k)):
         print(-1)
         return
 print(dp[a][0])
-

@@ -13,15 +13,15 @@ class Solution:
                 if made == m:
                     return True
             return False
-        
-        if len(bloomDay) < k*m:
+
+        if len(bloomDay) < k * m:
             return -1
         left, right = 1, max(bloomDay)
         while left < right:
-            mid = (left+right) // 2
+            mid = (left + right) // 2
             if feasible(mid):
                 right = mid
             else:
-                left = mid+1
-        
+                left = mid + 1
+
         return left

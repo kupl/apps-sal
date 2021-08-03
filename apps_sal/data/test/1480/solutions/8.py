@@ -19,4 +19,3 @@ for k in ak:
         current = pos
 
 print(" ".join(map(str, leaved)))
-

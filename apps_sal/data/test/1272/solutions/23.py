@@ -1,5 +1,8 @@
 # Union Find
 # xの根を求める
+import sys
+
+
 def find(x):
     if par[x] < 0:
         return x
@@ -34,7 +37,6 @@ def size(x):
     return -par[find(x)]
 
 
-import sys
 input = sys.stdin.readline
 n, m = map(int, input().split())
 par = [-1] * n

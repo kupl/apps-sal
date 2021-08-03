@@ -1,7 +1,8 @@
-from sys import stdin, stdout # only need for big input
+from sys import stdin, stdout  # only need for big input
+
 
 def solve():
-    s = input() 
+    s = input()
     left = 0
     right = len(s) - 1
     count = 0
@@ -11,10 +12,13 @@ def solve():
         right -= 1
     print(count)
 
+
 def main():
     solve()
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

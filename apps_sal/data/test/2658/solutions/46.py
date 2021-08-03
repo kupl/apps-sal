@@ -1,8 +1,9 @@
 from collections import deque
 
+
 def solve(A, K):
-    a = deque() # 繰り返し部分
-    seen = [False for _ in range(len(A))] # 一度見たかどうか
+    a = deque()  # 繰り返し部分
+    seen = [False for _ in range(len(A))]  # 一度見たかどうか
     cur = 0
     while True:
         # 一度通った頂点を見つけたときの処理
@@ -20,8 +21,9 @@ def solve(A, K):
         # 最初は愚直にシミュレーションしつつ、履歴をメモしていく
         a.append(cur)
         seen[cur] = True
-        cur = A[cur]        
+        cur = A[cur]
     return a[K % len(a)] + 1
+
 
 N, K = map(int, input().split())
 A = list(map(int, input().split()))

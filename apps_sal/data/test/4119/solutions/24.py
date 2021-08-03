@@ -6,8 +6,7 @@ if n >= m:
 
 else:
     x.sort()
-    for i in range(m-1):
+    for i in range(m - 1):
         d.append(abs(x[i] - x[i + 1]))
     d.sort()
-    print((sum(d[:m-n])))
-
+    print((sum(d[:m - n])))

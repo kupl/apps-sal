@@ -23,4 +23,3 @@ if satis:
     print("YES")
 else:
     print("NO")
-

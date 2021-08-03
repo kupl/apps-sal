@@ -24,4 +24,3 @@ for _ in range(T):
             continue
 
     print(f"{ans:0{M}b}")
-

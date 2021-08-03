@@ -7,7 +7,3 @@ for a in arr:
     cnt = curname // M
     curname = curname % M
     print(cnt, end=' ')
-    
-
-
-

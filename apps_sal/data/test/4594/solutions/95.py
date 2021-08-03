@@ -6,6 +6,10 @@ def kagami_mochi():
     d.sort()
     d_unique = list(set(d))
     print(len(d_unique))
+
+
 def __starting_point():
     kagami_mochi()
+
+
 __starting_point()

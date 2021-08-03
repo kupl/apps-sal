@@ -7,4 +7,3 @@ for x in a:
     else:
         ans += 1
 print(ans)
-

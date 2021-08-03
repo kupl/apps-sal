@@ -10,7 +10,7 @@ class Solution:
         else:
             sumOdd[0] = 0
             sumEven[0] = 1
-        for i in range(1,len(sumOdd)):
+        for i in range(1, len(sumOdd)):
             if arr[i] % 2 == 0:
                 sumOdd[i] = sumOdd[i - 1]
                 sumEven[i] = sumEven[i - 1] + 1
@@ -18,4 +18,3 @@ class Solution:
                 sumOdd[i] = sumEven[i - 1] + 1
                 sumEven[i] = sumOdd[i - 1]
         return sum(sumOdd) % mod
-

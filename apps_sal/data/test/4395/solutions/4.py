@@ -21,4 +21,3 @@ for tes in ls:
     # print(tes, seq, ans, cur)
 print(ans)
 print(strans)
-

@@ -12,5 +12,5 @@ class Solution:
                     ans.add(trans)
                     ans.add(trans2)
             dic[name].append(trans)
-        
+
         return ans

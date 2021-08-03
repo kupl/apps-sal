@@ -4,10 +4,9 @@ mod = 1000000007
 l = [0] * 100001
 l[0] = 1
 for i in range(1, 100001):
-	l[i] = (l[i - 1] + (l[i - k] if i - k >= 0 else 0)) % mod
+    l[i] = (l[i - 1] + (l[i - k] if i - k >= 0 else 0)) % mod
 for i in range(1, 100001):
-	l[i] = (l[i] + l[i - 1]) % mod
+    l[i] = (l[i] + l[i - 1]) % mod
 for line in sys.stdin.readlines():
-	a, b = (int(x) for x in line.split())
-	print((l[b] - l[a - 1] + mod) % mod)
-
+    a, b = (int(x) for x in line.split())
+    print((l[b] - l[a - 1] + mod) % mod)

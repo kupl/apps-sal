@@ -4,7 +4,7 @@ import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
 
-x,y = list(map(int,readline().split()))
+x, y = list(map(int, readline().split()))
 
 ans = 0
 while x <= y:
@@ -12,7 +12,3 @@ while x <= y:
     ans += 1
 
 print(ans)
-
-
-
-

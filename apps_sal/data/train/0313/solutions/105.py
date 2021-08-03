@@ -14,13 +14,17 @@ class Solution:
                         kk = 0
             return mm >= m
         days = sorted(list(set(bloomDay)))
+
         def binarysearch(i, j):
-            if j <= i: return -1
+            if j <= i:
+                return -1
             if j - i <= 2:
                 for ii in range(i, j):
-                    if check(days[ii]): return days[ii]
+                    if check(days[ii]):
+                        return days[ii]
                 return -1
             mid = (i + j) // 2
-            if check(days[mid]): return binarysearch(i, mid+1)
-            return binarysearch(mid+1, j)
+            if check(days[mid]):
+                return binarysearch(i, mid + 1)
+            return binarysearch(mid + 1, j)
         return binarysearch(0, len(days))

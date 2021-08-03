@@ -66,4 +66,3 @@ level_node_count.reverse()
 
 pow2 = get_pow()
 print((sum(b[1] * pow2(n - l + 1) % mod for l, b in zip(level_node_count, balls[0])) % mod))
-

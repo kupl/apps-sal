@@ -40,6 +40,7 @@ class UnionFind:
     def groupcount(self):
         return len(set(self.roots()))
 
+
 N, M = map(int, input().split())
 edges = [[int(x) - 1 for x in input().split()] for _ in range(M)]
 
@@ -51,7 +52,7 @@ for i in range(M):
     forest = UnionFind(N)
 
     # i番目のエッジを除いたものをつなぐ
-    for i, j in edges[:i] + edges[i+1:]:
+    for i, j in edges[:i] + edges[i + 1:]:
         forest.unite(i, j)
 
     # 全てのノードがつながっている <=> グループ数は1

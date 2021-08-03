@@ -16,4 +16,3 @@ while i < n:
         else:
             a[i] -= 1
 print(str(sum(a)))
-

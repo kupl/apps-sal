@@ -10,12 +10,12 @@ if n % 3 != 0:
     f1 = False
 else:
     for i in range(3):
-        if A[n//3 * i][0] in colors:
-            qq = A[n//3 * i][0]
-            colors.remove(A[n//3 * i][0])
+        if A[n // 3 * i][0] in colors:
+            qq = A[n // 3 * i][0]
+            colors.remove(A[n // 3 * i][0])
         else:
             f1 = False
-        for j in range(n//3 * i, n//3 *(i + 1) ):
+        for j in range(n // 3 * i, n // 3 * (i + 1)):
             if A[j][0] != qq:
                 f1 = False
                 break
@@ -33,8 +33,8 @@ else:
             colors.remove(A[0][m // 3 * i])
         else:
             f2 = False
-        
-        for j in range(m//3 * i, m//3 *(i + 1) ):
+
+        for j in range(m // 3 * i, m // 3 * (i + 1)):
             if A[0][j] != qq:
                 f2 = False
                 break
@@ -42,7 +42,6 @@ else:
                 if A[k][j] != A[0][j]:
                     f2 = False
                     break
-
 
 
 if f1 or f2:

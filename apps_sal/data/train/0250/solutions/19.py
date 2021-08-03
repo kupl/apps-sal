@@ -7,6 +7,8 @@ class Solution:
         for avg, q in wq:
             qSum += q
             heapq.heappush(heap, -q)
-            if len(heap) > K: qSum += heapq.heappop(heap)
-            if len(heap) == K: res = min(res, avg * qSum)
+            if len(heap) > K:
+                qSum += heapq.heappop(heap)
+            if len(heap) == K:
+                res = min(res, avg * qSum)
         return res

@@ -2,20 +2,20 @@ import copy
 
 N = int(input())
 A = []
-for i in range(N) :
+for i in range(N):
     A.append(int(input()))
 
 amax = max(A)
 amaxindex = A.index(amax)
-#print(A,amax,amaxindex)
+# print(A,amax,amaxindex)
 B = copy.deepcopy(A)
 del B[amaxindex]
 bmax = max(B)
-#print(B,bmax)
+# print(B,bmax)
 
-#print(amax,bmax)
-for i in range(N) :
-    if i == amaxindex :
+# print(amax,bmax)
+for i in range(N):
+    if i == amaxindex:
         print(bmax)
-    else :
+    else:
         print(amax)

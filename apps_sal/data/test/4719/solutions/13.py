@@ -17,4 +17,3 @@ for ch in alpha:
     for i in range(dic[ch]):
         ans += ch
 print(ans)
-

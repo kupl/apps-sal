@@ -5,7 +5,7 @@ class Solution:
         start = 0
         for i in range(1, len(tree)):
             if prev != tree[i]:
-                block.append((prev, i-start))
+                block.append((prev, i - start))
                 start = i
                 prev = tree[i]
         block.append((prev, len(tree) - start))
@@ -33,4 +33,3 @@ class Solution:
             res = max(res, val)
             tail += 1
         return res
-

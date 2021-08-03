@@ -15,7 +15,7 @@ created by shhuan at 2018/12/15 22:40
 
 
 def check(val):
-    l, r = 0, len(val)-1
+    l, r = 0, len(val) - 1
 
     while l < r:
         if val[l] != val[r]:
@@ -24,6 +24,7 @@ def check(val):
         r -= 1
 
     return False
+
 
 T = int(input())
 for ti in range(T):

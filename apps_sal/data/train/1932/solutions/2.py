@@ -20,12 +20,12 @@ class Solution:
                 graph[node.val].append(node.right.val)
                 graph[node.right.val].append(node.val)
                 stack.append(node.right)
-        
-        # for each possible y, we do DFS from x to find how many nodes our 
+
+        # for each possible y, we do DFS from x to find how many nodes our
         # opponent can reach from x. Note that our opponent will not be able to
-        # reach any nodes in the subtree rooted at y. If our opponent cannot 
+        # reach any nodes in the subtree rooted at y. If our opponent cannot
         # reach at least half of all nodes (i.e. n//2), we will win for sure.
-        for y in range(1, n+1):
+        for y in range(1, n + 1):
             if y != x:
                 visited = set()
                 stack = [x]
@@ -36,15 +36,7 @@ class Solution:
                         if nei not in visited and nei != y:
                             stack.append(nei)
 
-                if len(visited) <= n//2:
+                if len(visited) <= n // 2:
                     return True
-        
-        return False
-                        
-                    
-            
-                
-        
-            
-            
 
+        return False

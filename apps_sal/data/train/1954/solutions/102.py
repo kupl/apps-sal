@@ -3,7 +3,7 @@ class Solution:
         s2i = {}
         for i, skill in enumerate(req_skills):
             s2i[skill] = i
-        
+
         n = len(people)
         p2n = [0] * n
         for i, p in enumerate(people):
@@ -11,7 +11,7 @@ class Solution:
             for skill in p:
                 temp |= 1 << s2i[skill]
             p2n[i] = temp
-        
+
         goal = (1 << len(req_skills)) - 1
         dp = [sys.maxsize] * (goal + 1)
         dp[0] = 0
@@ -25,6 +25,5 @@ class Solution:
                     dp[new_skill] = dp[skillset] + 1
                     saves[new_skill] = list(saves[skillset])
                     saves[new_skill].append(i)
-                    
-        return saves[goal]
 
+        return saves[goal]

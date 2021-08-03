@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 def sum_for_list(lst):
 
     def factors(x):
@@ -11,11 +13,11 @@ def sum_for_list(lst):
             else:
                 i += 1
         return list(set(p_facs))
-    
+
     fac_dict = defaultdict(int)
-    
+
     for i in lst:
         for fac in factors(i):
             fac_dict[fac] += i
-            
-    return sorted([[k,v] for k,v in fac_dict.items()])
+
+    return sorted([[k, v] for k, v in fac_dict.items()])

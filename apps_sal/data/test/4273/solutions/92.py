@@ -7,6 +7,6 @@ C = Counter(S)
 
 ans = 0
 for x, y, z in combinations("MARCH", 3):
-  ans += C[x]*C[y]*C[z]
+    ans += C[x] * C[y] * C[z]
 
 print(ans)

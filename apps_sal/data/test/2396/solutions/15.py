@@ -1,14 +1,13 @@
-n = int (input ())
-l=[]
-d={}
-for i in range (n) :
+n = int(input())
+l = []
+d = {}
+for i in range(n):
     ch = input()
-    c= eval(ch)
+    c = eval(ch)
     l.append(c)
-    if (c in d ) :
-        d[c]+=1
-    else :
-        d[c]=1
-for i in range ( n) :
-    print (d[l[i]] ,end=" ")
-
+    if (c in d):
+        d[c] += 1
+    else:
+        d[c] = 1
+for i in range(n):
+    print(d[l[i]], end=" ")

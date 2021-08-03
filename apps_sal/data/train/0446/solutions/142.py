@@ -1,9 +1,11 @@
 from typing import List
 from heapq import *
 
+
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         hashmap = {}
+
         def insert(num):
             if num in hashmap:
                 hashmap[num] += 1
@@ -13,7 +15,7 @@ class Solution:
         for num in arr:
             insert(num)
 
-        valkeys = [ (hashmap[key], key) for key in list(hashmap.keys()) ] 
+        valkeys = [(hashmap[key], key) for key in list(hashmap.keys())]
 
         kSmallest = nsmallest(k, valkeys)
         uniqueCount = len(valkeys)
@@ -27,10 +29,3 @@ class Solution:
                 break
 
         return uniqueCount
-
-
-
-
-            
-
-

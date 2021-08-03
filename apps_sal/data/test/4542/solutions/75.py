@@ -17,12 +17,15 @@ def main():
     S = next(tokens)  # type: str
     print((solve(S)))
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
-    #test()
+    # test()
     main()
+
 
 __starting_point()

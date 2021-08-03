@@ -1,5 +1,5 @@
 def greet(name):
-    
+
     if name.title() == "Johnny":
         return "Hello, my love!"
     else:

@@ -11,6 +11,7 @@ def imos(x1, y1, x2, y2):
     Mij[y2][x1] -= 1
     Mij[y1][x2] -= 1
 
+
 for _ in range(N):
     ls = input().split()
     x = int(ls[0]) % K2

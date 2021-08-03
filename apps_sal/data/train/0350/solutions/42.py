@@ -13,13 +13,13 @@ class Window:
         if self.count[x] == 0:
             self.nonzero -= 1
 
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         window1 = Window()
         window2 = Window()
         ans = left1 = left2 = 0
 
-        
         for x in A:
             #print(right, x)
             window1.add(x)
@@ -35,4 +35,4 @@ class Solution:
 
             ans += left2 - left1
 
-        return ans       
+        return ans

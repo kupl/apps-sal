@@ -4,12 +4,9 @@ class Solution:
         for b in B[1:]:
             B_dt = B_dt | collections.Counter(b)
         ans = []
-        
+
         for a in A:
             if collections.Counter(a) & B_dt == B_dt:
                 ans.append(a)
-    
-        return ans
-            
-        
 
+        return ans

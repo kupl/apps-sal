@@ -34,4 +34,3 @@ for x, y in C:
     ans %= p
     C[(x, y)] = 0
 print(((ans + z - 1) % p))
-

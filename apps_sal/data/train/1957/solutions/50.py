@@ -7,10 +7,10 @@ class Solution:
         seen.add((0, 0, k))
         steps = 0
         direction = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-        
+
         if 0 == m - 1 and 0 == n - 1:
             return 0
-        
+
         while q:
             for i in range(len(q)):
                 r, c, k = q.popleft()
@@ -33,5 +33,5 @@ class Solution:
                             q.append((R, C, k))
                             seen.add((R, C, k))
             steps += 1
-        
+
         return -1

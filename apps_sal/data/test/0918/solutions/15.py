@@ -20,4 +20,3 @@ for i in range(1, m + 1):
         print('?')
     else:
         print(regions[i][0][0], regions[i][1][0])
-

@@ -6,17 +6,21 @@ import collections
 import itertools
 import sys
 import random
-#Union-Find
+# Union-Find
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
         self.par = [-1 for i in range(self.n)]
+
     def find(self, x):
         if self.par[x] < 0:
             return x
         else:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
+
     def unite(self, x, y):
         p = self.find(x)
         q = self.find(y)
@@ -26,12 +30,16 @@ class UnionFind():
             p, q = q, p
         self.par[p] += self.par[q]
         self.par[q] = p
+
     def same(self, x, y):
         return self.find(x) == self.find(y)
+
     def size(self, x):
         return -self.par[self.find(x)]
 
-#素数関連
+# 素数関連
+
+
 def prime_numbers(x):
     if x < 2:
         return []
@@ -45,6 +53,8 @@ def prime_numbers(x):
         for composite_number in range(2 * prime_number, x, prime_number):
             prime_numbers[composite_number] = 0
     return [prime_number for prime_number in prime_numbers if prime_number != 0]
+
+
 def is_prime(x):
     if x < 2:
         return False
@@ -60,7 +70,9 @@ def is_prime(x):
         prime_number += difference
         difference = 6 - difference
     return True
-#Prime-Factorize
+# Prime-Factorize
+
+
 def prime_factorize(n):
     res = []
     while n % 2 == 0:
@@ -76,8 +88,12 @@ def prime_factorize(n):
     if n != 1:
         res.append(n)
     return res
-#nCr
+
+
+# nCr
 mod = 10 ** 9 + 7
+
+
 class nCr():
     def __init__(self, n):
         self.n = n
@@ -86,12 +102,17 @@ class nCr():
         for i in range(1, self.n + 1):
             self.fa[i] = self.fa[i - 1] * i % mod
             self.fi[i] = pow(self.fa[i], mod - 2, mod)
+
     def comb(self, n, r):
-        if n < r:return 0
-        if n < 0 or r < 0:return 0
+        if n < r:
+            return 0
+        if n < 0 or r < 0:
+            return 0
         return self.fa[n] * self.fi[r] % mod * self.fi[n - r] % mod
-#拡張Euclidの互除法
-def extgcd(a, b, d = 0):
+# 拡張Euclidの互除法
+
+
+def extgcd(a, b, d=0):
     g = a
     if b == 0:
         x, y = 1, 0
@@ -99,26 +120,33 @@ def extgcd(a, b, d = 0):
         x, y, g = extgcd(b, a % b)
         x, y = y, x - a // b * y
     return x, y, g
-#BIT
+# BIT
+
+
 class BinaryIndexedTree():
     def __init__(self, n):
         self.n = n
         self.BIT = [0] * (self.n + 1)
+
     def add(self, i, x):
         while i <= self.n:
             self.BIT[i] += x
             i += i & -i
+
     def query(self, i):
         res = 0
         while i > 0:
             res += self.BIT[i]
             i -= i & -i
         return res
-#Associative Array
+# Associative Array
+
+
 class AssociativeArray():
     def __init__(self, q):
         self.dic = dict()
         self.q = q
+
     def solve(self):
         for i in range(self.q):
             Query = list(map(int, input().split()))
@@ -131,7 +159,9 @@ class AssociativeArray():
                     print(self.dic[y])
                 else:
                     print(0)
-#Floor Sum
+# Floor Sum
+
+
 def floor_sum(n, m, a, b):
     res = 0
     if a >= m:
@@ -147,7 +177,9 @@ def floor_sum(n, m, a, b):
     res += y_max * (n + (-x_max // a))
     res += floor_sum(y_max, a, m, (a - x_max % a) % a)
     return res
-#Z-Algorithm
+# Z-Algorithm
+
+
 def z_algorithm(s):
     str_len = len(s)
     res = [0] * str_len
@@ -167,11 +199,14 @@ def z_algorithm(s):
         i += k
         j -= k
     return res
+
+
 class Manacher():
     def __init__(self, s):
         self.s = s
+
     def coustruct(self):
-        i, j = 0, 0 
+        i, j = 0, 0
         s_len = len(self.s)
         res = [0] * s_len
         while i < s_len:
@@ -183,7 +218,9 @@ class Manacher():
                 k += 1
             i += k
             j -= k
-#mod-sqrt
+# mod-sqrt
+
+
 def mod_sqrt(a, p):
     if a == 0:
         return 0
@@ -211,6 +248,8 @@ def mod_sqrt(a, p):
         z %= p
         k >>= 1
     return y
+
+
 mod = 10 ** 9 + 7
 n = int(input())
 zeros = 0

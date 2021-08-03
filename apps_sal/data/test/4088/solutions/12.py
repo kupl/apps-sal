@@ -31,7 +31,6 @@ def main():
                 for z in zero:
                     B[i] -= abs(i + 1 - z)
 
-
         for i in range(M):
             if ans_rank[i] == -1:
                 ans_rank[i] = current
@@ -55,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

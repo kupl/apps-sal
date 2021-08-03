@@ -79,12 +79,12 @@ def solve(n, k, a_list):
     a_arr_p.sort()
     a_arr_n.sort()
 
-    while left<right:
-        center=(left+right)//2
+    while left < right:
+        center = (left + right) // 2
         if query(center, n, a_arr_p, a_arr_n, n_zeros, k):
-            right=center
+            right = center
         else:
-            left=center+1
+            left = center + 1
 
     return right
 
@@ -111,7 +111,8 @@ def test():
 
 
 def __starting_point():
-    #test()
+    # test()
     main()
+
 
 __starting_point()

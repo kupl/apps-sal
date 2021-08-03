@@ -13,7 +13,6 @@ for i in range(n):
     else:
         l += 1
 
-ans += (")"*l)
+ans += (")" * l)
 
 print(ans)
-

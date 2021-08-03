@@ -9,4 +9,3 @@ if alphabets:
     print((alphabets[0]))
 else:
     print("None")
-

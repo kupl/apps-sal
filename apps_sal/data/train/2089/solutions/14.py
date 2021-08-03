@@ -15,7 +15,7 @@ for i in range(n):
     elif oper == '^':
         y ^= x
 
-AND = (1<<10) - 1
+AND = (1 << 10) - 1
 OR = 0
 XOR = 0
 
@@ -29,21 +29,18 @@ for k in range(10):
             cur |= x
         elif oper == '^':
             cur ^= x
-    res0 = y & (1<<k)
-    res1 = cur & (1<<k)
+    res0 = y & (1 << k)
+    res1 = cur & (1 << k)
     if not res0 and not res1:
-        AND ^= (1<<k)
+        AND ^= (1 << k)
     elif not res0 and res1:
         pass
     elif res0 and not res1:
-        XOR ^= (1<<k)
+        XOR ^= (1 << k)
     else:
-        OR ^= (1<<k)
+        OR ^= (1 << k)
 
 print(3)
 print('& ', AND)
 print('| ', OR)
 print('^ ', XOR)
-
-
-

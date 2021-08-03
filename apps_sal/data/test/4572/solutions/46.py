@@ -8,12 +8,10 @@ for keyword in list("abcdefghijklmnopqrstuvwxyz"):
     for s in S:
         if s == keyword:
             hit = True
-            break 
-    
+            break
+
     if hit == False:
         ans = keyword
         break
 
 print(ans)
-
-

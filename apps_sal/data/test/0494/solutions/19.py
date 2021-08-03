@@ -6,7 +6,8 @@ a = [-1] * n
 
 for i in range(m - 1):
     p = l[i + 1] - l[i]
-    if p <= 0: p += n
+    if p <= 0:
+        p += n
     if a[l[i] - 1] != -1 and a[l[i] - 1] != p:
         print(-1)
         return
@@ -21,4 +22,3 @@ if -1 in a or len(set(a)) != n:
     print(-1)
 else:
     print(*a)
-

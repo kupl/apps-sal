@@ -7,16 +7,13 @@ class Solution:
                 totalSatisfied += tmpCustomers[i]
 
                 tmpCustomers[i] = 0
-                
-        
+
         window = 0
         best = 0
-        
+
         for i in range(len(tmpCustomers)):
             window += tmpCustomers[i]
             if i >= X:
-                window -= tmpCustomers[i-X]
-            best = max(window,best)
-        return totalSatisfied+best
-                
-
+                window -= tmpCustomers[i - X]
+            best = max(window, best)
+        return totalSatisfied + best

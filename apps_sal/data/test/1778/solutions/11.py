@@ -27,5 +27,3 @@ while ai >= 0 or bi >= 0:
         ai -= 1
 
 print(res)
-
-

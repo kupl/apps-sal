@@ -9,4 +9,3 @@ for i in range(len(A) - 1):
         mx = dis
 
 print((K - mx))
-

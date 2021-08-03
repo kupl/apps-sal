@@ -14,4 +14,3 @@ for i in range(len(S)):
         ans -= 1
         g += 1
 print(ans)
-

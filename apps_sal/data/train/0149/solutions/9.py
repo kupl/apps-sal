@@ -1,14 +1,14 @@
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
-        
+
         ns = []
-        deleted= True
+        deleted = True
         while deleted:
             deleted = False
             i = 0
             ns = []
             while i < len(s):
-                if i <= len(s) - k and s[i+1:i+k] == s[i]*(k-1):
+                if i <= len(s) - k and s[i + 1:i + k] == s[i] * (k - 1):
                     deleted = True
                     i += k
                 else:

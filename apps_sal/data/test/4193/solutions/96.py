@@ -1,7 +1,7 @@
-A = [list(map(int,input().split())) for i in range(3)]
+A = [list(map(int, input().split())) for i in range(3)]
 n = int(input())
 B = [int(input()) for i in range(n)]
-C = [[0,0,0] for _ in range(3)]
+C = [[0, 0, 0] for _ in range(3)]
 
 for b in B:
     for i in range(3):
@@ -24,4 +24,3 @@ elif(C[0][2] == 1 and C[1][1] == 1 and C[2][0] == 1):
     return
 print("No")
 return
-

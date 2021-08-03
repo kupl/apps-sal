@@ -4,9 +4,11 @@ import sys
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
+
+def ni(): return int(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+
 
 n = ni()
 a = na()
@@ -27,4 +29,3 @@ for d in range(n):  # d: d-th trial is passed.
         done[j] = True
     b.sort(reverse=True)
 print("Yes")
-

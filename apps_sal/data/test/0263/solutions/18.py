@@ -9,4 +9,3 @@ if m > 0:
     mx += m // n
     mx += 1 if m % n else 0
 print(mx, mx_k)
-

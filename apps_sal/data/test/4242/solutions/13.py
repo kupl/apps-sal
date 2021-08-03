@@ -1,4 +1,4 @@
-A, B, K = map(int,input().split())
+A, B, K = map(int, input().split())
 
 i_list = []
 for i in range(1, A + 1):

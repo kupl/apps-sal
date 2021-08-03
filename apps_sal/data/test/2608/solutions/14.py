@@ -45,6 +45,7 @@ def winrect(rect):
     ow = (e1 and e2) or (not e1 and not e2)
     return a // 2 + 1 if ow else a // 2
 
+
 ans = []
 for ti in range(T):
     N, M = map(int, input().split())
@@ -67,6 +68,6 @@ for ti in range(T):
         w -= winrect(b)
         w -= area(c) - winrect(c)
 
-    ans.append((w, N*M-w))
+    ans.append((w, N * M - w))
 
 print('\n'.join(['{} {}'.format(a, b) for a, b in ans]))

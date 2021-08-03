@@ -2,7 +2,9 @@
 
 from collections import deque
 
-LI = lambda: list(map(int, input().split()))
+
+def LI(): return list(map(int, input().split()))
+
 
 # input
 N, M = LI()
@@ -30,7 +32,7 @@ def main():
     x = N
     while x > 0:
         d = w[x][1]
-        ans.append(d) 
+        ans.append(d)
         x -= d
     ans = ans[::-1]
     print((*ans))
@@ -38,5 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

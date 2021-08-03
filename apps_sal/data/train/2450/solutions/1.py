@@ -9,7 +9,5 @@ class Solution:
                 mx = i
             if i < mn:
                 mn = i
-        print((mn , mx))
-        return ( sum(salary) - (mn+mx) )/ n
-    
-
+        print((mn, mx))
+        return (sum(salary) - (mn + mx)) / n

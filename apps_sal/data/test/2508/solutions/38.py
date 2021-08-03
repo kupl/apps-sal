@@ -36,4 +36,3 @@ for i in range(H):
 visited = [[-1] * W for i in range(H)]
 bfs(visited, x1, y1, x2, y2)
 print((visited[x2][y2]))
-

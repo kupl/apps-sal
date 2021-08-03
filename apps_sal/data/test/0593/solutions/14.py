@@ -1,7 +1,7 @@
-n,m = map(int,input().split())
-b = [0] * (n+1)
+n, m = map(int, input().split())
+b = [0] * (n + 1)
 for i in range(m):
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     max_ = -1
     index_max = -1
     for j in range(len(a)):
@@ -11,8 +11,8 @@ for i in range(m):
     b[index_max] += 1
 max_ = -1
 index_max = -1
-for i in range(len(b)-1):
+for i in range(len(b) - 1):
     if (b[i] > max_):
         max_ = b[i]
         index_max = i
-print(index_max+1)
+print(index_max + 1)

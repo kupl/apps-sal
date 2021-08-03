@@ -4,7 +4,7 @@ input = sys.stdin.readline
 n = int(input())
 a = list(map(int, input().split()))
 
-    
+
 if n % 2 == 0:
     for i in range(n):
         if a[i] >= 0:
@@ -22,5 +22,3 @@ else:
             min_ind = i
     a[min_ind] = -a[min_ind] - 1
     print(" ".join(map(str, a)))
-
-

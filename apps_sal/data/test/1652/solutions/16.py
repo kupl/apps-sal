@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def solve(s):
     stack = deque()
     stack.append(s)
@@ -19,5 +20,5 @@ def solve(s):
                 stack.append(top[5:])
     return 'NO'
 
-print((solve(input())))
 
+print((solve(input())))

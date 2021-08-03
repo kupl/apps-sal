@@ -1,2 +1,2 @@
 n = int(input())
-print(n*9,n*8)
+print(n * 9, n * 8)

@@ -3,7 +3,5 @@ arr = list(map(int, input().split()))
 s = 0
 for i in arr:
     s += i
-    print(s // m, end = " ")
+    print(s // m, end=" ")
     s = s % m
-
-

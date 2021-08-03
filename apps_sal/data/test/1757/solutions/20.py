@@ -8,4 +8,3 @@ for i in fib:
     if 0 < i <= n:
         ans[i - 1] = 'O'
 print(''.join(ans))
-

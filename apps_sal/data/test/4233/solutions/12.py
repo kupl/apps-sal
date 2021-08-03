@@ -18,7 +18,9 @@ from statistics import mean, mode, median, median_low, median_high
 # CONFIG
 sys.setrecursionlimit(10**9)
 
-# LOG 
+# LOG
+
+
 def log(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
@@ -52,9 +54,9 @@ def sortId(arr):
 
 # MAIN
 
-n,m = ni()
+n, m = ni()
 
-s = [0]*n
+s = [0] * n
 
 for i in range(n):
     ss = input()
@@ -68,23 +70,24 @@ dd = [['.' for j in range(m)] for i in range(n)]
 res = deque()
 for i in range(n):
     for j in range(m):
-        if s[i][j] == '*':            
+        if s[i][j] == '*':
             # print(i,j)
             k = 1
-            while 0 <= i - k < n and 0 <= i + k < n and 0 <= j - k < m and 0 <= j + k < m and s[i-k][j] == "*" and s[i+k][j] == "*" and s[i][j-k] == "*" and s[i][j+k] == "*":
-                dd[i-k][j] = "*"
-                dd[i+k][j] = "*"
-                dd[i][j-k] = "*"
-                dd[i][j+k] = "*"
+            while 0 <= i - k < n and 0 <= i + k < n and 0 <= j - k < m and 0 <= j + k < m and s[i - k][j] == "*" and s[i + k][j] == "*" and s[i][j - k] == "*" and s[i][j + k] == "*":
+                dd[i - k][j] = "*"
+                dd[i + k][j] = "*"
+                dd[i][j - k] = "*"
+                dd[i][j + k] = "*"
                 if k == 1:
                     dd[i][j] = "*"
-                    res.append((i+1, j+1, k))
+                    res.append((i + 1, j + 1, k))
                 else:
-                    res[-1] = (i+1, j+1, k)
+                    res[-1] = (i + 1, j + 1, k)
                 # print(i,j,k)
-                k+=1
+                k += 1
 
 # pprint(dd)
+
 
 def check():
     for i in range(n):
@@ -93,6 +96,7 @@ def check():
                 return False
     return True
 
+
 if check():
     lres = len(res)
     print(lres)
@@ -100,4 +104,3 @@ if check():
         print("\n".join((" ".join(str(y) for y in x)) for x in res))
 else:
     print(-1)
-

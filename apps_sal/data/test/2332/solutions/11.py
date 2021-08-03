@@ -21,4 +21,3 @@ c = 0
 for e in s:
     c += G[dico[e]]
 print(c)
-

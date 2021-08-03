@@ -6,6 +6,7 @@ levels = {
     for x in ([xs] if isinstance(xs, str) else xs)
 }
 
+
 def minor_or_major(chord):
     xs = [levels.get(c) for c in chord.split()]
     if None in xs:

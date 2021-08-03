@@ -19,4 +19,3 @@ while floor > a[0] - 1:
     ans += 1
     count = 0
 print(ans)
-

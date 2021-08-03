@@ -1,4 +1,6 @@
 n = int(input())
+
+
 def cross_plots(x1, x2, y1, y2, r):
     dx, dy = x2 - x1, y2 - y1
     d = dx ** 2 + dy ** 2
@@ -8,6 +10,7 @@ def cross_plots(x1, x2, y1, y2, r):
     return ((x1 + x2) / 2 + nx, (y1 + y2) / 2 + ny),\
            ((x1 + x2) / 2 - nx, (y1 + y2) / 2 - ny)
 
+
 plots = [tuple(map(int, input().split())) for _ in range(n)]
 l, r = 0, 2000
 while r - l > 10 ** -7:
@@ -15,7 +18,7 @@ while r - l > 10 ** -7:
     cross = []
     flg = False
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             x1, y1 = plots[i]
             x2, y2 = plots[j]
             dx, dy = x2 - x1, y2 - y1
@@ -40,7 +43,6 @@ while r - l > 10 ** -7:
         r = R
     else:
         l = R
-
 
 
 print(r)

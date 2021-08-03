@@ -19,4 +19,3 @@ for i in range(n):
             cmax += 1
 
 print(cmax)
-

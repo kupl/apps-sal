@@ -3,9 +3,9 @@ L = len(n)
 s = 0
 
 for i in range(L):
-  s += int(n[i])
+    s += int(n[i])
 
 if s % 9 == 0:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

@@ -6,7 +6,7 @@ class Solution:
         # arrive at node (mouse, cat, turn) ?
         def parents(mouse, cat, turn):
             prev_turn = 3 - turn
-            if prev_turn == MOUSE: 
+            if prev_turn == MOUSE:
                 for m2 in graph[mouse]:
                     yield m2, cat, prev_turn
             else:
@@ -45,10 +45,10 @@ class Solution:
                 # if this parent is not colored :
                 if colors[prev_mouse, prev_cat, prev_turn] is DRAW:
                     # if the parent can make a winning move (ie. mouse to MOUSE), do so
-                    if prev_turn == color: # winning move
+                    if prev_turn == color:  # winning move
                         colors[prev_mouse, prev_cat, prev_turn] = color
                         queue.append((prev_mouse, prev_cat, prev_turn, color))
-                        if prev_mouse == 1 and prev_cat == 2 and prev_turn == MOUSE: 
+                        if prev_mouse == 1 and prev_cat == 2 and prev_turn == MOUSE:
                             return color
                     # else, this parent has degree[parent]--, and enqueue if all children
                     # of this parent are colored as losing moves
@@ -57,7 +57,7 @@ class Solution:
                         if degree[prev_mouse, prev_cat, prev_turn] == 0:
                             colors[prev_mouse, prev_cat, prev_turn] = 3 - prev_turn
                             queue.append((prev_mouse, prev_cat, prev_turn, 3 - prev_turn))
-                            if prev_mouse == 1 and prev_cat == 2 and prev_turn == MOUSE: 
+                            if prev_mouse == 1 and prev_cat == 2 and prev_turn == MOUSE:
                                 return color
 
-        return colors[1, 2, 1] # mouse at 1, cat at 2, MOUSE turn
+        return colors[1, 2, 1]  # mouse at 1, cat at 2, MOUSE turn

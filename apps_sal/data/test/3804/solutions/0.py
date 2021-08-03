@@ -18,5 +18,6 @@ else:
             if t - c <= l - i - 1:
                 ans += f[l - i - 1][t - c]
             c += 1
-    if t == 1: ans -= 1
+    if t == 1:
+        ans -= 1
 print(ans)

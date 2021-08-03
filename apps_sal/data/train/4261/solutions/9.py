@@ -3,15 +3,15 @@ def robot_walk(ds):
     x, y = 0, 0
     dx, dy = 0, 1
     for d in ds:
-        x, y = x + d*dx, y + d*dy
+        x, y = x + d * dx, y + d * dy
         xs.add(x)
         ys.add(y)
-        dx, dy = -dy, dx 
+        dx, dy = -dy, dx
     x, y = 0, 0
     dx, dy = 0, 1
     visited = {(0, 0)}
     for d in ds:
-        x1, y1 = x + d*dx, y + d*dy
+        x1, y1 = x + d * dx, y + d * dy
         (bx, by), (ex, ey) = sorted(((x + dx, y + dy), (x1, y1)))
         if dy == 0:
             for cx in xs:
@@ -26,4 +26,3 @@ def robot_walk(ds):
         x, y = x1, y1
         dx, dy = -dy, dx
     return False
-

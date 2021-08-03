@@ -23,8 +23,10 @@ pq = []
 heappush(pq, (0, S))
 while pq:
     c, vNow = heappop(pq)
-    if c > cost[vNow]: continue
-    if c > cost[T]: break
+    if c > cost[vNow]:
+        continue
+    if c > cost[T]:
+        break
     vs += [vNow]
 
     for v2, wt in adjList[vNow]:
@@ -60,10 +62,10 @@ for v in vs[:iVLim]:
             ans = (ans - x * y) % MOD
 
 for v in vs[iVLim:]:
-    if cost[v] * 2 > cST: break
+    if cost[v] * 2 > cST:
+        break
     x = (numRouteS[v] ** 2) % MOD
     y = (numRouteT[v] ** 2) % MOD
     ans = (ans - x * y) % MOD
 
 print(ans)
-

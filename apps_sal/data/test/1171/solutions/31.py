@@ -19,4 +19,3 @@ for l in range(0, k + 1):
             minus += 1
         ans = max(ans, sum(get[minus:]))
 print(ans)
-

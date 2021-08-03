@@ -4,9 +4,9 @@ def lucas_lehmer(n):
     m = 2**n - 1
     s = 4
     for i in range(2, n):
-        sqr = s*s
+        sqr = s * s
         s = (sqr & m) + (sqr >> n)
         if s >= m:
             s -= m
         s -= 2
-    return s == 0    
+    return s == 0

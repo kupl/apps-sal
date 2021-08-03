@@ -11,9 +11,7 @@ def solve(s):
         return "balance"
     else:
         return "right"
-    
+
 
 s = input()
 print(solve(s))
-
-

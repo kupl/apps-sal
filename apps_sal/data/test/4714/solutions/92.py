@@ -7,4 +7,3 @@ for i in range(a, b + 1):
         cnt += 1
 
 print(cnt)
-

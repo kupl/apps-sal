@@ -1,8 +1,9 @@
+import sys
+from functools import lru_cache
 n, m, mod = [int(x) for x in input().split()]
 
-from functools import lru_cache
-import sys
 sys.setrecursionlimit(100000000)
+
 
 @lru_cache(maxsize=None)
 def rec(twos, ones):
@@ -15,18 +16,19 @@ def rec(twos, ones):
         count = 0
         # we can pick two from ones if there are at least two:
         if (ones >= 2):
-            a = ones*(ones-1)//2
-            b = rec(twos, ones-2)
-            count += (a*b) % mod
+            a = ones * (ones - 1) // 2
+            b = rec(twos, ones - 2)
+            count += (a * b) % mod
         if (ones >= 1 and twos >= 1):
-            a = ones*twos
-            b = rec(twos-1, ones)
-            count += (a*b) % mod
+            a = ones * twos
+            b = rec(twos - 1, ones)
+            count += (a * b) % mod
         if (twos >= 2):
-            a = twos*(twos-1)//2
-            b = rec(twos-2, ones+2)
-            count += (a*b) % mod
+            a = twos * (twos - 1) // 2
+            b = rec(twos - 2, ones + 2)
+            count += (a * b) % mod
         return count % mod
+
 
 # we read the beginning matrix and calculate the starting position
 matrix = []
@@ -51,4 +53,3 @@ ones = onecount
 twos = n - onecount - twocount
 
 print(rec(twos, ones))
-

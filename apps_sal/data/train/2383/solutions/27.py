@@ -10,5 +10,3 @@ for _ in range(int(input())):
     a *= 2
     ans = max(a, b)**2
     print(ans)
-
-

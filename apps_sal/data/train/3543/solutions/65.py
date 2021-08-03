@@ -1,5 +1,6 @@
 import re
 
+
 def increment_string(strng):
     end_num = re.search("\d+$", strng)
     if end_num:
@@ -7,4 +8,3 @@ def increment_string(strng):
         return re.sub(end_num.group() + "$", new_num, strng)
     else:
         return strng + "1"
-

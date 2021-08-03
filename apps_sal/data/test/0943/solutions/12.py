@@ -13,4 +13,3 @@ while ans % 2 == 1:
     i += 1
 
 print(ans)
-

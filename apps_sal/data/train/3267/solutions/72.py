@@ -1,6 +1,6 @@
 def well(x):
-    
-    if x.count("good") in [1,2]:
+
+    if x.count("good") in [1, 2]:
         return "Publish!"
     elif x.count("good") == 0:
         return "Fail!"
@@ -8,4 +8,3 @@ def well(x):
         return "I smell a series!"
     else:
         return "?"
-

@@ -14,4 +14,6 @@ def __starting_point():
     a = xxx(l - 1)
     b = (n - 10 ** (l - 1) + 1) * l
     print(a + b)
+
+
 __starting_point()

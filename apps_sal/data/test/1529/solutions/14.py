@@ -16,5 +16,3 @@ for line in sys.stdin:
             print("Rainbow's")
         else:
             pass
-
-

@@ -7,8 +7,7 @@ for a in A:
 
 res = 0
 for i in range(N):
-    if i^x < N:
-        res += B[i] * B[i^x]
+    if i ^ x < N:
+        res += B[i] * B[i ^ x]
 
 print((res - n) // 2 if x == 0 else res // 2)
-

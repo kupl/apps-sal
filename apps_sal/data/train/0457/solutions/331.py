@@ -6,11 +6,7 @@ class Solution:
         d = set([0])
         while d or round == 0:
             round += 1
-            d = set([coin+s for coin in coins for s in d if coin+s<=amount and coin+s not in d])
+            d = set([coin + s for coin in coins for s in d if coin + s <= amount and coin + s not in d])
             if amount in d:
                 return round
         return -1
-                        
-                        
-                
-

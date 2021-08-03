@@ -20,4 +20,3 @@ for x in a[1:]:
 
 a, b = list(zip(*pairs))
 print((min(len(set(a)), len(set(b)))))
-

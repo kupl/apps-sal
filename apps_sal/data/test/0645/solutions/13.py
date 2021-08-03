@@ -9,4 +9,3 @@ for c in s:
     if c in '13579':
         ans += 1
 print(ans)
-

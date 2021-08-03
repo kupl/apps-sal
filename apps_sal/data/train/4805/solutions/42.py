@@ -1,5 +1,5 @@
-def check(seq,elem):
+def check(seq, elem):
     if seq.count(elem) >= 1:
-      return True
+        return True
     return False
-    check ([10,1],5)
+    check([10, 1], 5)

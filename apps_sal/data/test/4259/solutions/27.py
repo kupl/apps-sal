@@ -23,4 +23,3 @@ for i in range(a, b + 1):
         res = "OK"
 
 print(res)
-

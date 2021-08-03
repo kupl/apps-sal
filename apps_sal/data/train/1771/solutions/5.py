@@ -1,16 +1,18 @@
 import heapq
 
+
 def closure_gen(*s):
-    if not s: raise StopIteration()
-    
+    if not s:
+        raise StopIteration()
+
     h = set(s)  # set of queued elements (for faster inclusion tests)
     q = list(h)
     heapq.heapify(q)
-    
+
     if q == [1]:
         yield 1
         raise StopIteration()
-    
+
     while True:
         x = heapq.heappop(q)
         h.remove(x)

@@ -14,7 +14,7 @@ class Solution:
                 parent[parent_x] = parent_y
 
         primes = []
-        for x in range(2, int(max(A)**0.5)+1):
+        for x in range(2, int(max(A)**0.5) + 1):
             for y in primes:
                 if x % y == 0:
                     break  # break
@@ -25,7 +25,7 @@ class Solution:
         for a in A:
             x = a
             for p in primes:
-                if p*p > x:
+                if p * p > x:
                     break  # break
                 if x % p == 0:
                     factors[a].append(p)
@@ -51,4 +51,3 @@ class Solution:
         count = Counter(
             find(primes_idx[factors[a][0]]) for a in A if factors[a])
         return max(count.values())
-

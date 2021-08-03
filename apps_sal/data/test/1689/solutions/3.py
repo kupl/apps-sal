@@ -10,7 +10,7 @@ for i in range(n):
             line[0] = '++'
         else:
             line[1] = '++'
-        res.append(line[0]+'|'+line[1])
+        res.append(line[0] + '|' + line[1])
     else:
         res.append(line)
 if not fl:

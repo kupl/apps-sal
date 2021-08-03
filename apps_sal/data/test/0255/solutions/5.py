@@ -15,4 +15,3 @@ while i < n and j < m:
     else:
         j += 1
 print(sum1)
-

@@ -42,7 +42,7 @@ n, k, d = map(int, input().split())
 a = list(map(int, input().split()))
 a = sorted(a)
 
-st = SegmentTree(n + 1, lambda a, b : a | b, 0)
+st = SegmentTree(n + 1, lambda a, b: a | b, 0)
 st.update(0, 1)
 for i in range(n):
     tmp = bisect.bisect_left(a, a[i] - d)

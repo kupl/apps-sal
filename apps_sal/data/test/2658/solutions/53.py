@@ -1,13 +1,13 @@
 
-url = "https://atcoder.jp/contests/abc162/tasks/abc162_d"
 import itertools
+url = "https://atcoder.jp/contests/abc162/tasks/abc162_d"
 
 
 def main():
     n, k = list(map(int, input().split()))
     a = list(map(int, input().split()))
     route = []
-    istuka = [0] * (n+1)
+    istuka = [0] * (n + 1)
     next = 1
     # 同じ街に訪れるまでループ
     for _ in range(k):
@@ -25,7 +25,8 @@ def main():
     print(ans[idx])
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

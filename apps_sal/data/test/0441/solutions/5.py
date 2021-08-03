@@ -23,5 +23,5 @@ for i in range(lena):
         ans += min(a[i] // 2 + a[i] % 2, s)
         s -= min(a[i] // 2 + a[i] % 2, s)
         ans += min(a[i] // 2, p)
-        p -= min(a[i] // 2, p)        
+        p -= min(a[i] // 2, p)
 print(ans)

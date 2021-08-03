@@ -1,6 +1,6 @@
 import sys
 import math
-  
+
 n, k = [int(x) for x in (sys.stdin.readline()).split()]
 
 if(k == 1 and n == 1):
@@ -18,7 +18,7 @@ if(n % 2 != 0):
 t = 2
 for i in range(n - (k - 2), n):
     res[i] = (chr(t + 97))
-    t += 1   
+    t += 1
 
 """t = 2
 for i in range(n):
@@ -30,5 +30,5 @@ for i in range(n):
     else:
         res.append(chr(t + 97))
         t += 1"""
-        
+
 print("".join(res))

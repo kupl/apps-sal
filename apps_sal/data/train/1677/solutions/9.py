@@ -30,5 +30,3 @@ mxs.append(second_mx + B_prefix[-1])
 #
 # print(*B_prefix)
 print(max(mxs))
-
-

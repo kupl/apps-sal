@@ -11,4 +11,3 @@ while k > 0 and cur <= n // 2:
     k -= 1
 
 print(ans)
-

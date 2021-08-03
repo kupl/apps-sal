@@ -10,4 +10,3 @@ for i in range(N - 1):
     print((cur_node, i + 2))
     if S[i] == '1':
         cur_node = i + 2
-

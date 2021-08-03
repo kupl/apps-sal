@@ -37,5 +37,5 @@ def to_alternating_case(string):
             s = s + str("!")
         if i == ":":
             s = s + str(":")
-      
+
     return s

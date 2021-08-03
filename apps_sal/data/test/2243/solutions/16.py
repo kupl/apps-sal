@@ -21,5 +21,3 @@ for i in range(q):
                 if friends[on - 1] < friends[minelem - 1]:
                     minelem = on
             online.remove(minelem)
-            
-

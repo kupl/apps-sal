@@ -29,12 +29,14 @@ def main():
 
     ans = 0
     for a, b, c in es:
-        if dist[a][b] == c: continue
+        if dist[a][b] == c:
+            continue
         ans += 1
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def subarraysWithKDistinct(self, A, K: int) -> int:
         def atMostK(nums, k):
@@ -17,4 +19,4 @@ class Solution:
                 res += right - left
                 # print(counter, res)
             return res
-        return atMostK(A, K) - atMostK(A, K-1)
+        return atMostK(A, K) - atMostK(A, K - 1)

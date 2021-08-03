@@ -1,5 +1,5 @@
 def reverse_words(text):
-  #go for it
+  # go for it
     t_list = text.split(' ')
     for i, t_ele in enumerate(t_list):
         if t_ele == '':

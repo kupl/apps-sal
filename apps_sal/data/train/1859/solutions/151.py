@@ -7,15 +7,13 @@ class Solution:
         f = [[0] * col for _ in range(row)]
         for i in range(row):
             for j in range(col):
-                if matrix[i][j] == 0: 
+                if matrix[i][j] == 0:
                     f[i][j] = 0
                     continue
                 if i == 0 or j == 0:
                     f[i][j] = matrix[i][j]
                     continue
-                
-                f[i][j] = min(f[i-1][j], f[i][j-1], f[i-1][j-1]) + 1
-      
-        return sum([sum(f[i]) for i in range(row)])
-                
 
+                f[i][j] = min(f[i - 1][j], f[i][j - 1], f[i - 1][j - 1]) + 1
+
+        return sum([sum(f[i]) for i in range(row)])

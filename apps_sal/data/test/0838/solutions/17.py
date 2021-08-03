@@ -23,4 +23,3 @@ for j in range(m):
 
 res -= n * m
 print(res)
-

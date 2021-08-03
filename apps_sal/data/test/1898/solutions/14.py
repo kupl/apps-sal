@@ -9,5 +9,5 @@ def solve(i, n):
     else:
         return s + " that " + solve(i + 1, n)
 
-print(solve(1, n))
 
+print(solve(1, n))

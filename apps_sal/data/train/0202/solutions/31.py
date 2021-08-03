@@ -2,10 +2,10 @@ class Solution:
     def longestMountain(self, A: List[int]) -> int:
         up = down = ans = 0
         for i in range(1, len(A)):
-            if A[i-1]==A[i]:
+            if A[i - 1] == A[i]:
                 up = down = 0
-            elif A[i-1]<A[i]:
-                if down or up==0:
+            elif A[i - 1] < A[i]:
+                if down or up == 0:
                     up = 2
                     down = 0
                 else:
@@ -13,10 +13,9 @@ class Solution:
             else:
                 down += 1
             if up and down:
-                ans = max(ans, up+down)
+                ans = max(ans, up + down)
         return ans
-    
-        
+
         '''
         up = down = ans = 0
         for i in range(1, len(A)):
@@ -31,7 +30,7 @@ class Solution:
 
         return ans
         '''
-        
+
         '''
         l = ans = 0
         phase = 0 #0:ascend, 1: descend
@@ -53,4 +52,4 @@ class Solution:
                     phase = 0
                           
         return ans
-        ''' 
+        '''

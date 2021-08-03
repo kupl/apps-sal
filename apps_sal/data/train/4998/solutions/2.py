@@ -7,4 +7,3 @@ def wanted_words(n, m, forbid_let):
         if vowels == n and len(word) == m + n:
             result.append(word)
     return result
-

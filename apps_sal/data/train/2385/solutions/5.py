@@ -24,7 +24,7 @@ def findCycle(source, getNbr):
 def markTime(cycle, getNbr):
     cycleLen = len(cycle)
     q = deque(cycle)
-    dist = {x: cycleLen - 1 - i for i, x in enumerate(cycle)} # distance to reach cycle[-1]
+    dist = {x: cycleLen - 1 - i for i, x in enumerate(cycle)}  # distance to reach cycle[-1]
     while q:
         node = q.popleft()
         d = dist[node]
@@ -97,5 +97,6 @@ def __starting_point():
 
         ans = solve(R, C, grid, directions)
         print(ans)
+
 
 __starting_point()

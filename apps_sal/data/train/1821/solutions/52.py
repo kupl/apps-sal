@@ -10,6 +10,7 @@ class Solution:
                 else:
                     result.append(left.pop(0))
             return result + left + right
+
         def mergeSort(arr):
             if len(arr) < 2:
                 return arr[:]
@@ -18,5 +19,5 @@ class Solution:
                 left = mergeSort(arr[:mid])
                 right = mergeSort(arr[mid:])
                 return merge(left, right)
-        
+
         return mergeSort(nums)

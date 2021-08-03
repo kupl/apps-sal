@@ -1,6 +1,7 @@
 n, k = list(map(int, input().split()))
 s = list(input().split())
 
+
 def generate_name(n):
     s = ''
     for i in range(10):
@@ -13,6 +14,7 @@ def generate_name(n):
                 return s.title()
         s += 'Z'
     return s.title()
+
 
 names = []
 t = 1
@@ -29,4 +31,3 @@ for word in s:
         names.append(names[-min(k - 1, len(names))])
 
 print(' '.join(names))
-

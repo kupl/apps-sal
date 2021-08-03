@@ -10,18 +10,17 @@ for x in sorted(list(set(X))):
     c += 1
 sx.append(10**18)
 
-count = [0]*(c+1)
+count = [0] * (c + 1)
 for x in X:
     count[d[x]] += 1
-for i in range(c-1, -1, -1):
-    count[i] += count[i+1]
+for i in range(c - 1, -1, -1):
+    count[i] += count[i + 1]
 
-count2 = [0]*(c+1)
-for i in range(c-1, -1, -1):
-    count2[i] = count[i+1]*(sx[i+1]-sx[i])
-for i in range(c-1, -1, -1):
-    count2[i] += count2[i+1]
-
+count2 = [0] * (c + 1)
+for i in range(c - 1, -1, -1):
+    count2[i] = count[i + 1] * (sx[i + 1] - sx[i])
+for i in range(c - 1, -1, -1):
+    count2[i] += count2[i + 1]
 
 
 Y = []
@@ -39,16 +38,13 @@ while Y:
             R.append((d[y], j))
 
 
-
-RR = [0]*N
+RR = [0] * N
 b = 0
 bi = 0
 for y, i in R[:]:
-    RR[bi] = count2[y]-b
+    RR[bi] = count2[y] - b
     b = count2[y]
     bi = i
-RR[0] = sum(X)-sum(RR[1:])
+RR[0] = sum(X) - sum(RR[1:])
 for r in RR:
     print(r)
-
-

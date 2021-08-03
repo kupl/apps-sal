@@ -9,20 +9,19 @@ class Solution:
         #                 to_remove.add((c, d))
         # return len(interval_set) - len(to_remove)
         mx = max(list(map(max, intervals)))
-        max_from = [0]*mx
+        max_from = [0] * mx
         for a, b in intervals:
             max_from[a] = max(max_from[a], b)
-        
+
         # print(max_from)
         mx = 0
         for i in range(len(max_from)):
             mx = max(mx, max_from[i])
             max_from[i] = mx
         # print(max_from)
-        
+
         cnt = len(intervals)
         for a, b in intervals:
-            if max_from[a] > b or (a > 0 and max_from[a-1] >= b):
+            if max_from[a] > b or (a > 0 and max_from[a - 1] >= b):
                 cnt -= 1
         return cnt
-

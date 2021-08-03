@@ -1,6 +1,6 @@
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 
-data = list( map(int,input().split()))
+data = list(map(int, input().split()))
 
 answer = [0 for i in range(n)]
 
@@ -11,9 +11,8 @@ for el in data:
     val = prev + el
     t = val // m
     prev = val % m
-    
+
     answer[ind] = t
     ind += 1
 
 print(" ".join(str(el) for el in answer))
-

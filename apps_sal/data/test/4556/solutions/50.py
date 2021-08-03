@@ -35,11 +35,12 @@ class TestClass(unittest.TestCase):
 def resolve():
     S = list(input().split())
 
-    print(("A"+S[1][0]+"C"))
+    print(("A" + S[1][0] + "C"))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

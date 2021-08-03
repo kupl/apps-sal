@@ -6,7 +6,7 @@ MAX = n
 
 fact = [1] * (MAX + 1)
 for i in range(1, MAX + 1):
-    fact[i] = (fact[i-1] * i) % mod
+    fact[i] = (fact[i - 1] * i) % mod
 
 inv = [1] * (MAX + 1)
 for i in range(2, MAX + 1):
@@ -14,7 +14,7 @@ for i in range(2, MAX + 1):
 
 fact_inv = [1] * (MAX + 1)
 for i in range(1, MAX + 1):
-    fact_inv[i] = fact_inv[i-1] * inv[i] % mod
+    fact_inv[i] = fact_inv[i - 1] * inv[i] % mod
 
 
 adj = [[] for _ in range(n + 1)]
@@ -40,7 +40,7 @@ dp_d = [1] * (n + 1)
 for v in order[::-1]:
     dp_d[v] *= fact[size_d[v]]
     dp_d[v] %= mod
-    
+
     s = size_d[v] + 1
     p = par[v]
     size_d[p] += s
@@ -64,4 +64,3 @@ for eu, su, ed, sd in zip(dp_u[1:], size_u[1:], dp_d[1:], size_d[1:]):
     su += 1
     ans = eu * ed * fact[su + sd] * fact_inv[su] * fact_inv[sd] % mod
     print(ans)
-

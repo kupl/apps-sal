@@ -24,13 +24,13 @@ while i < len(seq) - 1:
                 max_len = cur_len
 
             if seq[i] == carry:
-                #result.extend([carry]*cur_len)
-                result[carry_id : i : 1] = [carry] * cur_len
+                # result.extend([carry]*cur_len)
+                result[carry_id: i: 1] = [carry] * cur_len
             else:
-                #result.extend([carry]*(cur_len//2))
-                #result.extend([seq[i]]*(cur_len//2))
-                result[carry_id : carry_id + cur_len//2 : 1] = [carry]*(cur_len//2)
-                result[carry_id + cur_len//2 : i : 1] = [seq[i]]*(cur_len//2)
+                # result.extend([carry]*(cur_len//2))
+                # result.extend([seq[i]]*(cur_len//2))
+                result[carry_id: carry_id + cur_len // 2: 1] = [carry] * (cur_len // 2)
+                result[carry_id + cur_len // 2: i: 1] = [seq[i]] * (cur_len // 2)
 
             result[i] = seq[i]
             mark = False
@@ -47,19 +47,19 @@ while i < len(seq) - 1:
 
 if mark:
     if cur_len > max_len:
-            max_len = cur_len
+        max_len = cur_len
 
     if seq[i] == carry:
-        #result.extend([carry]*cur_len)
-        result[carry_id : i] = [carry]*cur_len
+        # result.extend([carry]*cur_len)
+        result[carry_id: i] = [carry] * cur_len
     else:
-        #result.extend([carry]*(cur_len//2))
-        #result.extend([seq[i]]*(cur_len//2))
-        result[carry_id : carry_id + cur_len//2] = [carry]*(cur_len//2)
-        result[carry_id + cur_len//2 : i] = [seq[i]]*(cur_len//2)
+        # result.extend([carry]*(cur_len//2))
+        # result.extend([seq[i]]*(cur_len//2))
+        result[carry_id: carry_id + cur_len // 2] = [carry] * (cur_len // 2)
+        result[carry_id + cur_len // 2: i] = [seq[i]] * (cur_len // 2)
 
 result[i] = seq[i]
 
-print((max_len + 1)//2)
+print((max_len + 1) // 2)
 for x in result:
     print(x, end=' ')

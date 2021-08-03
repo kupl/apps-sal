@@ -1,10 +1,10 @@
-a, b, c, k = map(int,input().split())
+a, b, c, k = map(int, input().split())
 
-if k <= a + b :
+if k <= a + b:
     if k >= a:
         print(a)
-    else :
+    else:
         print(k)
-else :
+else:
     c_ans = k - a - b
     print(a - c_ans)

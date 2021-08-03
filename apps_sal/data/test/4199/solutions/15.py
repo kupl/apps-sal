@@ -1,5 +1,5 @@
-N, K = map(int,input().split())
-S = map(int,input().split())
+N, K = map(int, input().split())
+S = map(int, input().split())
 
 height_list = list(S)
 ride_person = 0

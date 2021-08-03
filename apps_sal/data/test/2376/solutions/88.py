@@ -10,5 +10,5 @@ def main():
             cur[k + w] = max(cur[k] + v, cur.get(k + w, 0))
     return max(cur.values())
 
-print((main()))
 
+print((main()))

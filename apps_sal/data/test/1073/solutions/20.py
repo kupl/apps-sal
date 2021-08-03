@@ -15,17 +15,15 @@ for c in l:
         h += [-1]
     else:
         h += [0]
-for i in range(1,n):
-    v[i] += v[i-1]
-    h[i] += h[i-1]
+for i in range(1, n):
+    v[i] += v[i - 1]
+    h[i] += h[i - 1]
 
 v = [0] + v
 h = [0] + h
 a = 0
 for i in range(n):
-    for j in range(i,n):
-        if h[j+1] == h[i] and v[j+1] == v[i]:
+    for j in range(i, n):
+        if h[j + 1] == h[i] and v[j + 1] == v[i]:
             a += 1
 print(a)
-    
-

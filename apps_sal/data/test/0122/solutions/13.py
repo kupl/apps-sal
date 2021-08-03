@@ -1,10 +1,12 @@
 from functools import reduce
 
+
 def solve():
     sum_ = a[:]
     for i in range(1, n):
         sum_[i] += sum_[i - 1]
-    if (sum_[n - 1] % 2):  return False
+    if (sum_[n - 1] % 2):
+        return False
     half = int(sum_[n - 1] / 2)
     st = set([0])
     for i in range(n):
@@ -22,6 +24,7 @@ def solve():
         st.add(a[i])
     return False
 
+
 while True:
     try:
         n = int(input())
@@ -29,5 +32,3 @@ while True:
         break
     a = [int(x) for x in input().split(' ')]
     print('YES' if solve() else "NO")
-    
-

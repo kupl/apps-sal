@@ -4,7 +4,7 @@ class Solution:
         children.add(0)
         for i in range(n):
             l = [leftChild[i], rightChild[i]]
-            
+
             for c in l:
                 if c != -1:
                     if i in children:
@@ -17,7 +17,5 @@ class Solution:
                             children.add(i)
                         else:
                             return False
-                
-        
-        
+
         return len(children) == n

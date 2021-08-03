@@ -9,8 +9,3 @@ for i in a:
         ved -= len(c)
     print(c[ved], end=" ")
     c.pop(ved)
-    
-    
-    
-    
-

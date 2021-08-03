@@ -9,22 +9,22 @@ parent = list(range(n))
 
 root = []
 for i in range(n):
-  x, d = robot[i]
-  while root:
-    r = heapq.heappop(root)
-    if r[0] < x + d:
-      parent[r[1]] = i
-    else:
-      heapq.heappush(root, r)
-      break
-  heapq.heappush(root, (x, i))
-  
+    x, d = robot[i]
+    while root:
+        r = heapq.heappop(root)
+        if r[0] < x + d:
+            parent[r[1]] = i
+        else:
+            heapq.heappush(root, r)
+            break
+    heapq.heappush(root, (x, i))
+
 count = 1
 dp = [1] * n
 for i in range(n):
-  p = parent[i]
-  if p == i:
-    count = count * (dp[i] + 1) % mod
-  else:
-    dp[p] = dp[p] * (dp[i] + 1) % mod
+    p = parent[i]
+    if p == i:
+        count = count * (dp[i] + 1) % mod
+    else:
+        dp[p] = dp[p] * (dp[i] + 1) % mod
 print(count)

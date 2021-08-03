@@ -12,4 +12,3 @@ if cnt <= 2:
     print("YES")
 else:
     print("NO")
-

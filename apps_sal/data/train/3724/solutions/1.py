@@ -7,8 +7,7 @@ def hero(bullets, dragons):
     Returns:
         True (Survive) or False (Hero gets killed)
     '''
-    if bullets >= 2*dragons:
+    if bullets >= 2 * dragons:
         return True
-    elif bullets < 2*dragons:
+    elif bullets < 2 * dragons:
         return False
-

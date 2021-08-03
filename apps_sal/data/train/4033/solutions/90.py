@@ -1,4 +1,4 @@
-def contamination(text,char):
+def contamination(text, char):
     if text == "":
         return text
     elif char == "":
@@ -6,4 +6,3 @@ def contamination(text,char):
     else:
         count_of_characters = len(text)
         return (char * count_of_characters)
-

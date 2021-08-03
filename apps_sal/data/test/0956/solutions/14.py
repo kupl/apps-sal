@@ -34,6 +34,4 @@ for i in range(len(people)):
             ans[people[i]].append(people[j])
 
 for i in range(len(people)):
-    print(str(people[i])+ ": " + str(len(ans[people[i]])) + " " + " ".join(list(map(str, ans[people[i]]))))
-            
-
+    print(str(people[i]) + ": " + str(len(ans[people[i]])) + " " + " ".join(list(map(str, ans[people[i]]))))

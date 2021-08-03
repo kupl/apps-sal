@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-a = [a[i] - 1 for i in range(2 * n)] 
+a = [a[i] - 1 for i in range(2 * n)]
 f = [-1] * n
 l = [-1] * n
 for i in range(2 * n):

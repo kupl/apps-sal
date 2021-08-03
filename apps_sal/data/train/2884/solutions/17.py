@@ -6,6 +6,7 @@ def recursive(node, string):
     node = node.next
     return recursive(node, string)
 
+
 def stringify(node):
     string = ""
     ans = recursive(node, string)

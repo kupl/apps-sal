@@ -8,7 +8,7 @@ for i in range(n):
 # Continuous sequences of 16-bit zero blocks can be shortened to "::"
 
 
-answers = [[]  for x in range(n)]
+answers = [[] for x in range(n)]
 ans_id = -1
 for ip in short_ips:
     ans_id += 1
@@ -17,17 +17,17 @@ for ip in short_ips:
     for segment in segments:
         if len(segment) == 0:
             if visited:
-                answers[ans_id].append("0"*4)
+                answers[ans_id].append("0" * 4)
                 continue
             visited = True
             missing = 8 - len(segments)
-            for i in range(missing+1):
-                answers[ans_id].append("0"*4)
+            for i in range(missing + 1):
+                answers[ans_id].append("0" * 4)
         elif len(segment) == 4:
             answers[ans_id].append(segment)
         else:
             leading = 4 - len(segment)
-            answers[ans_id].append("0" *leading + segment)
+            answers[ans_id].append("0" * leading + segment)
 
 for restored in answers:
     print(':'.join(restored))

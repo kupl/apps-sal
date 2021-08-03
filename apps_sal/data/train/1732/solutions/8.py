@@ -30,7 +30,7 @@ def decode_equation(equation):
     variables, variables2 = [decode_eq_side(side) for side in equation.split("=")]
     for var, factor in variables2.items():
         variables[var] = variables.get(var, 0) - factor
-    variables[""] = -1*variables.get("", 0)
+    variables[""] = -1 * variables.get("", 0)
     return variables
 
 
@@ -52,13 +52,13 @@ def solve(*equations):
         if abs(chosen_row[i]) < 1e-10:
             return None
         equations_matrix.remove(chosen_row)
-        gauss_matrix.append([0]*i + [param/chosen_row[i] for param in chosen_row[i:]])
+        gauss_matrix.append([0] * i + [param / chosen_row[i] for param in chosen_row[i:]])
         for row_i, row in enumerate(equations_matrix):
-            equations_matrix[row_i] = [0]*(i+1) + [param - row[i]*gauss_matrix[-1][i+j+1] for j, param in enumerate(row[i+1:])]
+            equations_matrix[row_i] = [0] * (i + 1) + [param - row[i] * gauss_matrix[-1][i + j + 1] for j, param in enumerate(row[i + 1:])]
     # check if there are no solution
     if any(abs(row[-1]) > 1e-10 for row in equations_matrix):
         return None
     solution = []
     for equation in reversed(gauss_matrix):
-        solution.append(equation[-1] - sum([equation[-(2+i)]*param for i, param in enumerate(solution)]))
+        solution.append(equation[-1] - sum([equation[-(2 + i)] * param for i, param in enumerate(solution)]))
     return dict(zip(variable_names, reversed(solution)))

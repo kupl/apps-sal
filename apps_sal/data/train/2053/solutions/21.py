@@ -1,9 +1,9 @@
-#https://codeforces.com/contest/1158/problem/A
+# https://codeforces.com/contest/1158/problem/A
 
 n, m = map(int, input().split())
 
-boys = list(map(int,input().split()))
-girls = list(map(int,input().split()))
+boys = list(map(int, input().split()))
+girls = list(map(int, input().split()))
 
 boys.sort()
 girls.sort()
@@ -13,7 +13,7 @@ if boys[-1] > girls[0]:
     return
 
 for b in boys:
-    res += (b*len(girls))
+    res += (b * len(girls))
 if boys[-1] == girls[0]:
     for g in girls:
         res += (g - boys[-1])

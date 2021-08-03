@@ -13,7 +13,7 @@ for i in range(q):
     s = input().split()
     x = int(s[1])
     cnt4 -= b[x] // 4
-    cnt2 -= b[x] // 2    
+    cnt2 -= b[x] // 2
     if s[0] == "+":
         b[x] += 1
     else:

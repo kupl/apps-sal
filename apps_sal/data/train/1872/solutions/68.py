@@ -14,9 +14,9 @@ class Solution:
             n, l = q.popleft()
             res[l] += n.val
             if n.left:
-                q.append((n.left, l+1))
+                q.append((n.left, l + 1))
             if n.right:
-                q.append((n.right, l+1))
+                q.append((n.right, l + 1))
         argmax = 1
         vmax = root.val
         for k, v in list(res.items()):
@@ -24,8 +24,3 @@ class Solution:
                 argmax = k
                 vmax = v
         return argmax
-            
-            
-            
-            
-

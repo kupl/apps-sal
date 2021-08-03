@@ -8,11 +8,11 @@ class Solution:
             if tree[j] in hm:
                 hm[tree[j]] += 1
             else:
-                if len(hm)<2:
+                if len(hm) < 2:
                     hm[tree[j]] = 1
                 else:
-                    maxL = max(maxL, j-i)
-                    while i<j and len(hm)>1:
+                    maxL = max(maxL, j - i)
+                    while i < j and len(hm) > 1:
                         hm[tree[i]] -= 1
                         if hm[tree[i]] == 0:
                             del hm[tree[i]]
@@ -21,6 +21,5 @@ class Solution:
 
             j += 1
 
-        maxL = max(maxL,j-i)
+        maxL = max(maxL, j - i)
         return maxL
-

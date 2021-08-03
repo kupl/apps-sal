@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def rep(cand, succ):
     ret = set()
     for word in cand:
@@ -7,6 +8,7 @@ def rep(cand, succ):
             ret.add(r + word[1:])
 
     return ret
+
 
 n, q = list(map(int, input().split()))
 succ = defaultdict(list)
@@ -19,4 +21,3 @@ cand = set("a")
 for _ in range(n - 1):
     cand = rep(cand, succ)
 print(len(cand))
-

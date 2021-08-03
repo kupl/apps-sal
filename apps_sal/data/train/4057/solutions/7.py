@@ -24,7 +24,7 @@ def score_hand(cards):
             total += 10
         if str == "A":
             Ace += 1
-    
+
     if Ace == 1:
         if total < 11:
             total += 11

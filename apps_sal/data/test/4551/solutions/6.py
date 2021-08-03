@@ -1,9 +1,9 @@
 a, b, c, d = map(int, input().split())
-l = a+b
-r = c+d
+l = a + b
+r = c + d
 if l > r:
-  print('Left')
+    print('Left')
 elif l < r:
-  print('Right')
+    print('Right')
 else:
-  print('Balanced')
+    print('Balanced')

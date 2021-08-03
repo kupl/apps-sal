@@ -9,4 +9,3 @@ for _ in range(n):
         print("Rainbow's")
     else:
         print("Freda's")
-

@@ -29,5 +29,5 @@ def main():
 
     print(res)
 
-main()
 
+main()

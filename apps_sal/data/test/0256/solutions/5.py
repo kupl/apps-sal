@@ -1,5 +1,7 @@
 import sys
-read = lambda: list(map(int, sys.stdin.readline().split()))
+def read(): return list(map(int, sys.stdin.readline().split()))
+
+
 a0, d0 = read()
 a1, d1 = read()
 
@@ -22,4 +24,3 @@ elif (w20 or w30) and (w21 or w31):
     print("Team 2")
 else:
     print("Draw")
-

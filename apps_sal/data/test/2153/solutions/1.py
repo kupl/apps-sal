@@ -49,19 +49,20 @@ class SegmentTree:
     def __repr__(self):
         return "SegmentTree({0})".format(self.data)
 
+
 n = int(input())
 l = list(map(int, input().split()))
 
 stMax = SegmentTree(l)
-stMin = SegmentTree(l, default = 10**10,func=min)
+stMin = SegmentTree(l, default=10**10, func=min)
 
 nexSmol = [-1] * n
 nexTol = [-1] * n
 
-smolS = [n-1]
-tolS = [n-1]
+smolS = [n - 1]
+tolS = [n - 1]
 
-for i in range(n - 2, -1 ,-1):
+for i in range(n - 2, -1, -1):
     while smolS and l[smolS[-1]] >= l[i]:
         smolS.pop()
     if smolS:
@@ -82,23 +83,22 @@ for i in range(n - 1):
 
     if l[i + 1] > l[i]:
         reach = i + 1
-        best[i+1] = min(curr + 1, best[i+1])
+        best[i + 1] = min(curr + 1, best[i + 1])
         while nexSmol[reach] != -1:
             reach = nexSmol[reach]
-            if stMin.query(i+1,reach) < l[i]:
+            if stMin.query(i + 1, reach) < l[i]:
                 break
             best[reach] = min(curr + 1, best[reach])
-        
+
     elif l[i + 1] < l[i]:
         reach = i + 1
-        best[i+1] = min(curr + 1, best[i+1])
+        best[i + 1] = min(curr + 1, best[i + 1])
         while nexTol[reach] != -1:
             reach = nexTol[reach]
-            if stMax.query(i+1,reach) > l[i]:
+            if stMax.query(i + 1, reach) > l[i]:
                 break
             best[reach] = min(curr + 1, best[reach])
-            
-    else:
-        best[i+1] = min(curr + 1, best[i+1])
-print(best[-1])
 
+    else:
+        best[i + 1] = min(curr + 1, best[i + 1])
+print(best[-1])

@@ -31,10 +31,9 @@ while len(unreached) > 0:
                 queue.append(node)
                 sum_a += a[node]
                 sum_b += b[node]
-    
+
     if sum_a != sum_b:
         judge = "No"
         break
 
 print(judge)
-

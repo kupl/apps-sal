@@ -1,16 +1,14 @@
 def lsb(i):
-    return bool(i & (1<< 0))
+    return bool(i & (1 << 0))
 
 
-
-
-t= int(input())
+t = int(input())
 for _ in range(t):
     n = int(input())
-    m=list(map(int,input().split()))
-    res=[]
+    m = list(map(int, input().split()))
+    res = []
     for i in m:
-        result= lsb(i)
+        result = lsb(i)
         if result:
             continue
         else:

@@ -12,7 +12,7 @@ for i in range(n):
 # horizontally
 for r, row in enumerate(board):
     for i in range(len(board) - k + 1):
-        if row[i:i+k] == '.' * k:
+        if row[i:i + k] == '.' * k:
             for x in range(i, i + k):
                 result[r][x] += 1
 

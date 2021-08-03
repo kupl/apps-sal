@@ -12,7 +12,7 @@ while True:
                 break
             else:
                 print("NO")
-                return                
+                return
         else:
             b = int(str(b)[:-1])
     else:

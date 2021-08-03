@@ -14,12 +14,12 @@ flag_set.add((0, 0, 0))
 for _ in range(k):
     d, ai, bi, ci = heappop(hq)
     print(-d)
-    
+
     temp = (ai + 1, bi, ci)
     if temp[0] < x and temp not in flag_set:
         heappush(hq, (a_list[ai + 1] + b_list[bi] + c_list[ci], ai + 1, bi, ci))
         flag_set.add(temp)
-    
+
     temp = (ai, bi + 1, ci)
     if temp[1] < y and temp not in flag_set:
         heappush(hq, (a_list[ai] + b_list[bi + 1] + c_list[ci], ai, bi + 1, ci))

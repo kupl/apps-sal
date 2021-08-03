@@ -9,4 +9,3 @@ for i in range(a + 1):
             if i * 500 + j * 100 + k * 50 == x:
                 ans += 1
 print(ans)
-

@@ -7,8 +7,8 @@ for i in new_colour:
     if i not in list:
         list += i
 for i in list:
-    a = colour.count(i)  
-    b = new_colour.count(i) 
+    a = colour.count(i)
+    b = new_colour.count(i)
     if a > b:
         sum += b
     else:
@@ -19,4 +19,3 @@ if k > 0:
     print(-1)
 else:
     print(sum)
-

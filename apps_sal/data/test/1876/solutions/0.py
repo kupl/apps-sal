@@ -1,14 +1,17 @@
-rr = lambda: input().strip()
-rri = lambda: int(rr())
-rrm = lambda: list(map(int, rr().split()))
+def rr(): return input().strip()
+def rri(): return int(rr())
+def rrm(): return list(map(int, rr().split()))
+
+
 MOD = 10**9 + 7
+
 
 class DSU:
     def __init__(self, N):
-        #R * C is the source, and isn't a grid square
-        self.par = list(range(N+1))
-        self.rnk = [0] * (N+1)
-        self.sz = [1] * (N+1)
+        # R * C is the source, and isn't a grid square
+        self.par = list(range(N + 1))
+        self.rnk = [0] * (N + 1)
+        self.sz = [1] * (N + 1)
 
     def find(self, x):
         if self.par[x] != x:
@@ -17,7 +20,8 @@ class DSU:
 
     def union(self, x, y):
         xr, yr = self.find(x), self.find(y)
-        if xr == yr: return
+        if xr == yr:
+            return
         if self.rnk[xr] < self.rnk[yr]:
             xr, yr = yr, xr
         if self.rnk[xr] == self.rnk[yr]:
@@ -28,13 +32,15 @@ class DSU:
 
     def size(self, x):
         return self.sz[self.find(x)]
-        
+
+
 def solve(N, K, edges):
     graph = [[] for _ in range(N)]
     dsu = DSU(N)
-    for u,v,w in edges:
-        u-=1;v-=1
-        if w==0: #red
+    for u, v, w in edges:
+        u -= 1
+        v -= 1
+        if w == 0:  # red
             dsu.union(u, v)
 
     ans = pow(N, K, MOD)
@@ -44,8 +50,8 @@ def solve(N, K, edges):
             ans %= MOD
     return ans
 
-for tc in range(1):#rri()):
-    N, K = rrm()
-    edges = [rrm() for _ in range(N-1)]
-    print(solve(N, K, edges))
 
+for tc in range(1):  # rri()):
+    N, K = rrm()
+    edges = [rrm() for _ in range(N - 1)]
+    print(solve(N, K, edges))

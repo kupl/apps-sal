@@ -11,7 +11,7 @@ class Solution:
             elif now_sum > S:
                 if now_sum - S in numToFreq:
                     ans += (numToFreq[now_sum - S])
-            
+
             if now_sum not in numToFreq:
                 numToFreq[now_sum] = 0
             numToFreq[now_sum] += 1

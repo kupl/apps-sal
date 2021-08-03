@@ -8,6 +8,7 @@ TO_KELVIN = {
     'Ro': (40.0 / 21, -7.5 * 40 / 21 + 273.15),
 }
 
+
 def convert_temp(temp, from_scale, to_scale):
     if from_scale == to_scale:
         return temp
@@ -18,4 +19,3 @@ def convert_temp(temp, from_scale, to_scale):
             return int(round(temp))
     (a, b) = TO_KELVIN[to_scale]
     return int(round((temp - b) / a))
-

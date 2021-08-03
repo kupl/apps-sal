@@ -1,19 +1,19 @@
 serch_table = []
 
 for i in range(100):
-    for j in range(1,1000):
-        x = str(j) + '9'*i
+    for j in range(1, 1000):
+        x = str(j) + '9' * i
         x = int(x)
         serch_table.append(x)
-#print(serch_table)
+# print(serch_table)
 
 L = []
 for i in serch_table:
     l = [x for x in str(i)]
-    x = sum(map(int,l))
-    l = [i/x,i]
+    x = sum(map(int, l))
+    l = [i / x, i]
     L.append(l)
-L= sorted(L)
+L = sorted(L)
 M = []
 tmp = -1
 for i in L:
@@ -24,4 +24,3 @@ for i in L:
 N = int(input())
 for i in range(N):
     print((M[i]))
-

@@ -1,7 +1,7 @@
 class Solution:
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         move_pos = [[1, 0], [0, 1], [-1, 0], [0, -1]]
-        
+
         now_pos = move_pos[0]
         idx_now_pos = 0
         obstacles = set(map(tuple, obstacles))
@@ -9,7 +9,7 @@ class Solution:
         row_now = 0
         col_now = 0
         answer = 0
-        
+
         for command in commands:
             if command > 0:
                 for _ in range(command):
@@ -23,11 +23,11 @@ class Solution:
                 if command == -1:
                     idx_now_pos += 1
                     if idx_now_pos > 3:
-                        idx_now_pos = 0 
+                        idx_now_pos = 0
                 elif command == -2:
                     idx_now_pos -= 1
                     if idx_now_pos < 0:
-                        idx_now_pos = 3 
-                now_pos = move_pos[idx_now_pos] 
-        
+                        idx_now_pos = 3
+                now_pos = move_pos[idx_now_pos]
+
         return answer

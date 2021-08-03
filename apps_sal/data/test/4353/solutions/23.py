@@ -8,9 +8,11 @@ def main():
 
 
 def solve(stdIn):
-    return stdIn.replace(',',' ')
+    return stdIn.replace(',', ' ')
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

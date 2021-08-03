@@ -12,4 +12,3 @@ for _ in range(n):
         s2 = new
 
 print(s1, s2)
-

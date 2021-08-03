@@ -4,11 +4,13 @@ n, m = list(map(int, input().split()))
 
 def check(i):
     se = ((m + i) * (i - m + 1)) // 2
-    pr = m * (i -  m + 1)
+    pr = m * (i - m + 1)
     if (n >= (se - pr)):
         return True
     else:
         return False
+
+
 if m >= n:
     print(n)
     return
@@ -23,4 +25,3 @@ while (right - left > 1):
     else:
         right = mid
 print(left)
-

@@ -12,4 +12,3 @@ for members in A:
         sunuke[member - 1] = 1
 
 print((N - sum(sunuke)))
-

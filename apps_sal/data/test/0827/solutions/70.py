@@ -46,4 +46,3 @@ else:
         ans = 10 ** 10 - len(ans)
 
     print(ans)
-

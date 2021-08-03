@@ -3,7 +3,7 @@ Author: Q.E.D
 Time: 2020-05-31 09:41:24
 """
 T = int(input())
-for _ in range(T):    
+for _ in range(T):
     s = input()
     one = [0]
     zero = [0]

@@ -9,5 +9,4 @@ for x, y in sorted(p):
 
 for x, y in p:
     z = bisect(a[x], y)
-    print(("%06d%06d"%(x, z)))
-
+    print(("%06d%06d" % (x, z)))

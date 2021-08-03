@@ -16,12 +16,11 @@ def dp(i, j, k):
         return 0
     else:
         return mod(
-            (2 * j + 1) * dp(i - 1, j, k - 2 * j)
-            + (j + 1) * (j + 1) * dp(i - 1, j + 1, k - 2 * j)
-            + dp(i - 1, j - 1, k - 2 * j)
+            (2 * j + 1) * dp(i - 1, j, k - 2 * j) +
+            (j + 1) * (j + 1) * dp(i - 1, j + 1, k - 2 * j) +
+            dp(i - 1, j - 1, k - 2 * j)
         )
 
 
 n, k = list(map(int, input().split()))
 print((dp(n, 0, k)))
-

@@ -9,4 +9,3 @@ class Solution:
                     area = (x2 - x1) * (y2 - y1)
                     smallest = min(smallest, area)
         return smallest if smallest != float('inf') else 0
-

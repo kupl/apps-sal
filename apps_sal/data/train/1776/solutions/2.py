@@ -1,4 +1,4 @@
-def roll_dice (rolls, sides, threshold):    
+def roll_dice(rolls, sides, threshold):
     divisor = sides ** rolls
 
     stack = [1 for i in range(sides)]
@@ -10,10 +10,10 @@ def roll_dice (rolls, sides, threshold):
                 start = 0
             end = j
             if end >= len(stack):
-                end = len(stack) - 1    
+                end = len(stack) - 1
             nstack[j] = sum(stack[start: end + 1])
         stack = nstack
-    
+
     divend = sum(stack[threshold - rolls:])
-    
+
     return divend / divisor

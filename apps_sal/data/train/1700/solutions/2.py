@@ -20,6 +20,6 @@ class DynamicConnectivity:
             a, b = b, a
         self.roots[b] = a
         self.sizes[a] += self.sizes[b]
-    
+
     def connected(self, a, b):
         return self.find_root(a) == self.find_root(b)

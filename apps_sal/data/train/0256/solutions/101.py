@@ -8,7 +8,7 @@ class Solution:
                 else:
                     sum += math.ceil(piles[i] / mid)
             return sum <= H
-        
+
         ok = sum(piles)
         ng = 0
         while (abs(ok - ng) > 1):

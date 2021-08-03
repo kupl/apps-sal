@@ -22,4 +22,3 @@ print(ans)
 if ans == "Yes":
     for i in range(r):
         print(''.join(cells[i]))
-

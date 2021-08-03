@@ -18,4 +18,5 @@ def slove():
 def __starting_point():
     slove()
 
+
 __starting_point()

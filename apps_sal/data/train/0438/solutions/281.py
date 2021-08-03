@@ -10,13 +10,14 @@ class Solution:
         for i, idx in enumerate(arr):
             s[idx] = '1'
             uf.sz_count[1] += 1
-            if idx > 0 and s[idx-1] == '1':
-                uf.find_and_union(idx, idx-1)
-            if idx < n-1 and s[idx+1] == '1':
-                uf.find_and_union(idx, idx+1)
+            if idx > 0 and s[idx - 1] == '1':
+                uf.find_and_union(idx, idx - 1)
+            if idx < n - 1 and s[idx + 1] == '1':
+                uf.find_and_union(idx, idx + 1)
             if uf.sz_count[m] > 0:
                 steps = i + 1
         return steps
+
 
 class UnionFind:
     def __init__(self, n):

@@ -15,7 +15,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         nps = []
-        for p in self.ps+[self.d]:
+        for p in self.ps + [self.d]:
             if letter in p:
                 nps.append(p[letter])
         self.ps = nps
@@ -24,4 +24,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

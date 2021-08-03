@@ -1,10 +1,10 @@
 class Solution:
-     def firstUniqChar(self, s):
-         """
-         :type s: str
-         :rtype: int
-         """
-         """
+    def firstUniqChar(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        """
          dict1 = {}
          dict2 = {}
          lst = []
@@ -23,10 +23,10 @@ class Solution:
              return lst[0]
          return -1
          """
-         # Don't get count for each word in s. Get the freq for each letters in 26 lower case char instead.
-         letters = 'abcdefghijklmnopqrstuvwxyz'
-         lst = [s.index(l) for l in letters if s.count(l) == 1]
-         if len(lst) > 0:
-             return min(lst)
-         else:
-             return -1
+        # Don't get count for each word in s. Get the freq for each letters in 26 lower case char instead.
+        letters = 'abcdefghijklmnopqrstuvwxyz'
+        lst = [s.index(l) for l in letters if s.count(l) == 1]
+        if len(lst) > 0:
+            return min(lst)
+        else:
+            return -1

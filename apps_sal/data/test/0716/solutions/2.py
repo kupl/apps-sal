@@ -8,4 +8,3 @@ if s[a] == s[b]:
     print(0)
 else:
     print(1)
-

@@ -24,4 +24,3 @@ for i in range(n):
         row[i] += simple[a[i][j]] - a[i][j]
         col[j] += simple[a[i][j]] - a[i][j]
 print(min(row + col))
-

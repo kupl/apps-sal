@@ -17,4 +17,3 @@ if ans % 10 == 0 and ans == sum(s):
     print((0))
 else:
     print(ans)
-

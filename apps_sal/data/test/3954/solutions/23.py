@@ -5,10 +5,10 @@ ans = -2e18
 for i in range(n):
     for j in range(i, n):
         k = kr
-        sub = l[i:j+1]
+        sub = l[i:j + 1]
         sub_sum = sum(sub)
         sub.sort()
-        chk = l[0:i] + l[j+1:]
+        chk = l[0:i] + l[j + 1:]
         chk.sort()
         chk.reverse()
         ans = max(ans, sub_sum)

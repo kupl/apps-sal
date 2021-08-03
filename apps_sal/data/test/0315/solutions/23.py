@@ -23,4 +23,6 @@ def __starting_point():
     for c in a:
         res = res + str(c) + ' '
     print(res)
+
+
 __starting_point()

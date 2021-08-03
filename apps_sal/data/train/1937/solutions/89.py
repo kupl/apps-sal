@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -12,15 +14,16 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.dead.add(name)
-        return 
-    
+        return
+
     def getInheritanceOrder(self) -> List[str]:
         ans = []
+
         def p(root):
             nonlocal ans
             if root not in self.dead:
                 ans.append(root)
-            
+
             for i in self.d[root]:
                 p(i)
         p(self.root)
@@ -32,4 +35,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

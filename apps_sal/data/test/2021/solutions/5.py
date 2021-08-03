@@ -1,4 +1,5 @@
-mi = lambda: [int(i) for i in input().split()]
+def mi(): return [int(i) for i in input().split()]
+
 
 n = int(input())
 a = sorted(mi())
@@ -9,4 +10,3 @@ s = sum(a)
 
 for i in q:
     print(s - a[-i])
-

@@ -1,5 +1,6 @@
 from itertools import count
 
+
 def count_deaf_rats(town):
     deaf = 0
     piper = False

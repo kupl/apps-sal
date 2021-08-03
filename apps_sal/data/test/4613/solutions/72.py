@@ -33,4 +33,5 @@ def br(n: int, m: int, g: List[Tuple[int, int]]):
 def __starting_point():
     main()
 
+
 __starting_point()

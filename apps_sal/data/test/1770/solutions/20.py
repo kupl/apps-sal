@@ -4,7 +4,7 @@ for i in range(n):
     c1, c2, c3 = 1e11, 1e11, 1e11
     n, x, y, d = list(map(int, input().split()))
     if (abs(y - x) % d == 0):
-        c3 = abs((y - x))//d
+        c3 = abs((y - x)) // d
     else:
         if (abs(y - 1) % d == 0):
             c1 = math.ceil((x - 1) / d) + ((y - 1) // d)
@@ -15,5 +15,3 @@ for i in range(n):
         print(-1)
     else:
         print(m)
-        
-

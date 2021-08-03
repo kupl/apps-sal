@@ -4,13 +4,12 @@ for _ in range(t):
     l1 = [int(x) for x in input().split()]
     ans = 0
     for i in range(n):
-        if i==0:
+        if i == 0:
             old = l1[0]
         else:
-            if old>l1[i]:
-                ans+=old-l1[i]
+            if old > l1[i]:
+                ans += old - l1[i]
                 old = l1[i]
             else:
                 old = l1[i]
     print(ans)
-

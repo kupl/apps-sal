@@ -7,38 +7,45 @@ import sys
 #import numpy as np
 
 sys.setrecursionlimit(10 ** 9)
-#def input():
+# def input():
 #    return sys.stdin.readline()[:-1]
-mod = 10**9+7
+mod = 10**9 + 7
 
 N = int(input())
 #X, Y = map(int,input().split())
 #ab = [list(map(int,input().split())) for i in range(N-1)]
 
-fact = [1, 1] # 元テーブル
-fact_inv = [1, 1] # 逆元テーブル
-tmp_inv = [0, 1] # 逆元テーブル計算用テーブル
-for i in range(2, N+1):
+fact = [1, 1]  # 元テーブル
+fact_inv = [1, 1]  # 逆元テーブル
+tmp_inv = [0, 1]  # 逆元テーブル計算用テーブル
+for i in range(2, N + 1):
     fact.append((fact[-1] * i) % mod)
-    tmp_inv.append((-tmp_inv[mod % i] * (mod//i)) % mod)
+    tmp_inv.append((-tmp_inv[mod % i] * (mod // i)) % mod)
     fact_inv.append((fact_inv[-1] * tmp_inv[-1]) % mod)
+
+
 def cmb(n, r, mod):
     if (r < 0 or r > n):
         return 0
-    r = min(r, n-r)
-    return fact[n] * fact_inv[r] * fact_inv[n-r] % mod
-#逆元作成
-def inv(a,mod):
-    return pow(a,mod-2,mod)
+    r = min(r, n - r)
+    return fact[n] * fact_inv[r] * fact_inv[n - r] % mod
+# 逆元作成
 
-graph = [[] for _ in range(N+1)]
-for _ in range(N-1):
-    a, b = map(lambda x : int(x)-1, input().split())
+
+def inv(a, mod):
+    return pow(a, mod - 2, mod)
+
+
+graph = [[] for _ in range(N + 1)]
+for _ in range(N - 1):
+    a, b = map(lambda x: int(x) - 1, input().split())
     graph[a].append(b)
     graph[b].append(a)
 
 dp = [1] * (N + 0)
 size = [0] * (N + 0)
+
+
 def dfs(par, v):
     for u in graph[v]:
         if par == u:
@@ -49,16 +56,20 @@ def dfs(par, v):
     dp[v] = dp[v] * fact[size[v]] % mod
     size[v] += 1
 
+
 ans = [0] * (N + 0)
+
+
 def reroot(par, val_par, size_par, v):
-    ans[v] = val_par * dp[v] * cmb(N-1, size_par, mod) % mod
+    ans[v] = val_par * dp[v] * cmb(N - 1, size_par, mod) % mod
     for u in graph[v]:
         if par == u:
             continue
-        val = ans[v] * inv(dp[u] * cmb(N-1, size[u],mod),mod) % mod
+        val = ans[v] * inv(dp[u] * cmb(N - 1, size[u], mod), mod) % mod
         reroot(v, val, N - size[u], u)
 
-dfs(-1,1)
-reroot(-1,1,0,1)
+
+dfs(-1, 1)
+reroot(-1, 1, 0, 1)
 for i in range(N):
     print(ans[i])

@@ -22,6 +22,5 @@ for k in sorted(occ.keys()):
             break
     if valid:
         out += (str(k) + " " + str(diff) + "\n")
-        t += 1    
+        t += 1
 print(str(t) + "\n" + out)
-

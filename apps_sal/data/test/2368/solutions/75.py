@@ -47,4 +47,3 @@ sums = [0] * (N + 1)
 for i in range(1, N + 1):
     sums[uf.find(i)] += B[i - 1] - A[i - 1]
 print(('Yes' if all(x == 0 for x in sums) else 'No'))
-

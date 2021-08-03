@@ -23,7 +23,6 @@ def check(k):
             got = False
     xy = [x, y]
     return got
-                
 
 
 n, y, x = map(int, input().split())

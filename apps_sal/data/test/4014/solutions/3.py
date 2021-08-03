@@ -26,7 +26,7 @@ for d in days:
     if d != -1:
         exam_q.append(d)
 
-#print(rel_on_day)
+# print(rel_on_day)
 
 for i in range(n):
     if i in rel_on_day:
@@ -34,15 +34,14 @@ for i in range(n):
 
  #   print(waiting)
 
-
-    if days[i] != -1: #exam
+    if days[i] != -1:  # exam
         if prep[days[i]] == 0:
             ans.append(m + 1)
             waiting.remove(days[i])
         else:
             print(-1)
             return
-    else: #choose closest unstudied exam
+    else:  # choose closest unstudied exam
         chosen = None
         for ex in exam_q:
             if prep[ex] > 0 and ex in waiting:
@@ -55,4 +54,3 @@ for i in range(n):
             ans.append(0)
 
 print(" ".join(list(map(str, ans))))
-

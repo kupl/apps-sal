@@ -24,7 +24,7 @@ class Solution:
             if degrees[node] == 0:
                 safe.add(node)
                 for another in adj[node]:
-                    degrees[another] -= 1 
+                    degrees[another] -= 1
                     if degrees[another] == 0 and another not in safe:
                         queue.append(another)
             else:
@@ -32,13 +32,3 @@ class Solution:
         safe = list(safe)
         safe.sort()
         return safe
-                
-                
-                
-                
-        
-
-                
-            
-                
-

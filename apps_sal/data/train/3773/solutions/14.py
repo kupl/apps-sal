@@ -1,5 +1,6 @@
 from typing import List
 
+
 def isValid(f: List[int]):
     """ Check if choosen package of paterials is valid according to the rules. """
     return all(

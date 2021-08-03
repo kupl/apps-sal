@@ -5,6 +5,7 @@ powers = {
     'm': +4, 'q': +3, 'd': +2, 'z': +1,
 }
 
+
 def alphabet_war(fight):
     fight = re.sub('.(?=\*)|(?<=\*).', '', fight)
     result = sum(powers.get(c, 0) for c in fight)

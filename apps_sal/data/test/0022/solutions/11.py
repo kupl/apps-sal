@@ -1,10 +1,10 @@
 s = list(input())
 if len(s) % 2 == 0:
-    s1 = s[0 : len(s) // 2 : ]
-    s2 = s[len(s) // 2 : len(s) : ]
+    s1 = s[0: len(s) // 2:]
+    s2 = s[len(s) // 2: len(s):]
 else:
-    s1 = s[0 : len(s) // 2 + 1 : ]
-    s2 = s[len(s) // 2 : len(s) : ]
+    s1 = s[0: len(s) // 2 + 1:]
+    s2 = s[len(s) // 2: len(s):]
 s2.reverse()
 d = dict()
 d['A'] = 'A'
@@ -28,11 +28,10 @@ d['p'] = 'q'
 d['q'] = 'p'
 f = True
 for i in range(len(s1)):
-   if not(s1[i] in d and d[s1[i]] == s2[i]):
-       f = False
-       break
+    if not(s1[i] in d and d[s1[i]] == s2[i]):
+        f = False
+        break
 if f:
     print('TAK')
 else:
     print('NIE')
-

@@ -1,35 +1,35 @@
 class Solution:
-     def minWindow(self, s, t):
-         """
-         :type s: str
-         :type t: str
-         :rtype: str
-         """
-         table = {}
-         for c in t:
-             table[c] = table[c] + 1 if c in table else 1
-         start, end, count = 0, 0, len(t)
-         min_start, min_end = None, None
-         for i in range(len(s)):
-             if s[i] in table:
-                 if table[s[i]] > 0:
-                     count -= 1
-                 table[s[i]] -= 1
-             if count == 0:
-                 while count == 0:
-                     if s[start] in table:
-                         if table[s[start]] >= 0:
-                             count += 1
-                             if min_start == None or i - start < min_end - min_start:
-                                 min_start, min_end = start, i
-                         table[s[start]] += 1
-                     start += 1
-         if min_start == None:
-             return ""
-         else:
-             return s[min_start:(min_end + 1)]
-         
-         '''
+    def minWindow(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: str
+        """
+        table = {}
+        for c in t:
+            table[c] = table[c] + 1 if c in table else 1
+        start, end, count = 0, 0, len(t)
+        min_start, min_end = None, None
+        for i in range(len(s)):
+            if s[i] in table:
+                if table[s[i]] > 0:
+                    count -= 1
+                table[s[i]] -= 1
+            if count == 0:
+                while count == 0:
+                    if s[start] in table:
+                        if table[s[start]] >= 0:
+                            count += 1
+                            if min_start == None or i - start < min_end - min_start:
+                                min_start, min_end = start, i
+                        table[s[start]] += 1
+                    start += 1
+        if min_start == None:
+            return ""
+        else:
+            return s[min_start:(min_end + 1)]
+
+        '''
          def check(m, n, mode=1):
              table = dict(zip(t, [0]*len(t)))
              for i in range(m, n+1):
@@ -60,4 +60,3 @@ class Solution:
          
          return s[a:(b+1)]
          '''
-

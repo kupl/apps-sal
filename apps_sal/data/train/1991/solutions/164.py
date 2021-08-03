@@ -1,16 +1,16 @@
 class Solution:
     def countRoutes(self, A: List[int], start: int, finish: int, fuel: int) -> int:
-        
+
         mod = 10 ** 9 + 7
-        
+
         d = {}
         t = {}
         for i, ele in enumerate(A):
             d[i] = ele
             t[ele] = i
-        
+
         nums = sorted(A)
-        
+
         @lru_cache(None)
         def dp(i, j, f):
             if not f:
@@ -22,5 +22,5 @@ class Solution:
                 if ele != loc:
                     res += dp(t[ele], j, f - abs(ele - loc)) % mod
             return res
-        
+
         return dp(start, finish, fuel) % mod

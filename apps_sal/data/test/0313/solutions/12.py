@@ -13,5 +13,3 @@ for seg in re.split("00+", S):
     ret += len(seg)
 
 print(ret)
-
-

@@ -14,9 +14,8 @@ class Solution:
             elif r == 2:
                 new_r0 = max(r1 + val, r0) if r1 else r0
                 new_r1 = max(r2 + val, r1) if r2 else r1
-                new_r2 = max(r0 + val, r2) 
-                
-            r0, r1, r2 = new_r0, new_r1, new_r2
-        
-        return r0
+                new_r2 = max(r0 + val, r2)
 
+            r0, r1, r2 = new_r0, new_r1, new_r2
+
+        return r0

@@ -3,49 +3,54 @@ import math
 
 n = int(input())
 
-x = [0]*n
-y = [0]*n
+x = [0] * n
+y = [0] * n
 
 for i in range(n):
     x[i], y[i] = list(map(int, input().split()))
 
 sx = sum(x)
 sy = sum(y)
-    
+
 for i in range(n):
     x[i] = n * x[i] - sx
     y[i] = n * y[i] - sy
 
 m = int(input())
 
-d = [0]*n
-e = [0]*n
+d = [0] * n
+e = [0] * n
 
 HD = 0
+
 
 def check(a, b):
     nonlocal HD
     HE = 0
     for i in range(n):
-        HE ^= hash((a-x[i])*(a-x[i])+(b-y[i])*(b-y[i]))
+        HE ^= hash((a - x[i]) * (a - x[i]) + (b - y[i]) * (b - y[i]))
     return HD == HE
+
 
 def sqrt(x):
     nn = int(x)
     if nn == 0:
         return 0
     fa, fb = divmod(nn.bit_length(), 2)
-    x = 2**(fa+fb)
+    x = 2**(fa + fb)
     while True:
-        y = (x + nn//x)//2
+        y = (x + nn // x) // 2
         if y >= x:
             return x
         x = y
 
+
 def hash(x):
     return x * 9991 + 43
 
+
 pans = []
+
 
 def solve():
     nonlocal d
@@ -115,20 +120,19 @@ def solve():
                 qx = (qx + sx) // n
                 qy = (qy + sy) // n
                 ans.append([qx, qy])
-                
+
     ans.sort()
-    buf=[]
+    buf = []
     buf.append(len(ans))
     for p in ans:
-            buf.append(p[0])
-            buf.append(p[1])
+        buf.append(p[0])
+        buf.append(p[1])
     nonlocal pans
-    pans.append(" ".join(map(str,buf)))
+    pans.append(" ".join(map(str, buf)))
+
 
 while m > 0:
     m -= 1
     solve()
-    
-sys.stdout.write("\n".join(pans))
-       
 
+sys.stdout.write("\n".join(pans))

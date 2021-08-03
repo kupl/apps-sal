@@ -3,10 +3,12 @@ import sys
 data = sys.stdin.read().split()
 data_ptr = 0
 
+
 def data_next():
     nonlocal data_ptr, data
     data_ptr += 1
     return data[data_ptr - 1]
+
 
 N = int(data_next())
 K = int(data_next())
@@ -23,5 +25,3 @@ else:
             ans[pos - 1] = ans[pos + 1] = ans[pos + 2] = i
         pos += 3
     print(*ans)
-
-

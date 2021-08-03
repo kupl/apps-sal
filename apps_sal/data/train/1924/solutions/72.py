@@ -1,7 +1,7 @@
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         res = set()
-        
+
         for i in range(len(transactions) - 1):
             t1 = transactions[i].split(',')
             # transaction over $1000
@@ -15,11 +15,5 @@ class Solution:
                     res.add(transactions[j])
                 if int(t2[2]) > 1000:
                     res.add(transactions[j])
-                    
-        return list(res)
-                
-                    
-                
-                
-                
 
+        return list(res)

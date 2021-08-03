@@ -7,5 +7,5 @@ class Solution:
             return 0
         elif p % 2 == 1 and q % 2 == 1:
             return 1
-        else :
-            return 2        
+        else:
+            return 2

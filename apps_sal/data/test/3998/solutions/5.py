@@ -28,9 +28,9 @@ while max(L) != min(L):
 
                 s += '0'
 
-        M.append(s)    
+        M.append(s)
 
-    else:      
+    else:
 
         max_1 = 0
 
@@ -85,6 +85,4 @@ for i in M:
     print(i)
 
 
-
 # Made By Mostafa_Khaled
-

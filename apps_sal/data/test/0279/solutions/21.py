@@ -6,8 +6,8 @@ dist = v1   # distance after the first interval [0, 1)
 i = 1       # interval
 
 # check the intervals [i, i+1)
-while(i <= t-2):
-    dist += min(v1 + i*d, (v2 + (t-1)*d) - i*d)
+while(i <= t - 2):
+    dist += min(v1 + i * d, (v2 + (t - 1) * d) - i * d)
     i += 1
 
 dist += v2  # last interval [t-1, t)

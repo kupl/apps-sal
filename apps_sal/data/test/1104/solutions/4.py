@@ -8,7 +8,7 @@ for k in range(4):
     for i in range(1, n):
         x = False
         for j in range(4):
-            if a[i-1] == (j | t[i - 1]) and b[i-1] == (j & t[i - 1]):
+            if a[i - 1] == (j | t[i - 1]) and b[i - 1] == (j & t[i - 1]):
                 t[i] = j
                 x = True
         if not x:

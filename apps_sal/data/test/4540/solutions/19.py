@@ -24,12 +24,13 @@ def main():
         else:
             start = abs(A[0])
             end = abs(A[-1])
-            print((total - abs(A[i - 1] - A[i]) -
-                  abs(A[i] - A[i + 1]) + abs(A[i + 1] - A[i - 1])
+            print((total - abs(A[i - 1] - A[i])
+                  - abs(A[i] - A[i + 1]) + abs(A[i + 1] - A[i - 1])
                   + start + end))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

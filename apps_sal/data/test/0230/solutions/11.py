@@ -1,9 +1,9 @@
-N=int(input())
-S=input()
+N = int(input())
+S = input()
 
-lb=0
-rb=N+1
-while rb-lb>1:
+lb = 0
+rb = N + 1
+while rb - lb > 1:
     mid = (lb + rb) // 2
     x = 0
     for i, s in enumerate(S[:mid]):
@@ -24,8 +24,7 @@ while rb-lb>1:
             f = 1
             break
     if f:
-        lb=mid
+        lb = mid
     else:
-        rb=mid
+        rb = mid
 print(lb)
-

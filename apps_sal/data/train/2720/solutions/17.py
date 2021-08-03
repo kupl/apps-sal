@@ -5,5 +5,5 @@ def solution(digits):
             return max
         else:
             max -= 1
-        
-    return 0;
+
+    return 0

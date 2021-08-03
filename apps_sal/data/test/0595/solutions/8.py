@@ -1,10 +1,15 @@
 import datetime
 
+
 def tot_days(year):
-    if year % 400 == 0: return 366
-    if year % 100 == 0: return 365
-    if year % 4 == 0: return 366
+    if year % 400 == 0:
+        return 366
+    if year % 100 == 0:
+        return 365
+    if year % 4 == 0:
+        return 366
     return 365
+
 
 year = int(input())
 
@@ -21,4 +26,3 @@ while True:
     if first_day == days and tot == tot_days(cyear):
         print(cyear)
         break
-

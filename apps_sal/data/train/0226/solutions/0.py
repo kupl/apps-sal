@@ -21,4 +21,3 @@ class Solution:
 
         dfs(A, [])
         return self.ans
-

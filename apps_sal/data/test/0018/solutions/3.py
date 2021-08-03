@@ -1,6 +1,8 @@
+import string
 from queue import deque
 
 dp = {}
+
 
 def sol_1():
     idx = 0
@@ -13,8 +15,9 @@ def sol_1():
             u.append(t.pop())
         else:
             # take up to min_idx
-            t.extend(s[idx:min_idx+1])
-            idx = min_idx+1
+            t.extend(s[idx:min_idx + 1])
+            idx = min_idx + 1
+
 
 def efficient_sol():
     nonlocal u, t, s
@@ -56,6 +59,7 @@ def efficient_sol():
     while curr_idx < len(s):
         pass
 
+
 def get_min_char_idx(s: str, start_idx: int):
     nonlocal dp
     if start_idx >= len(s):
@@ -72,8 +76,8 @@ def get_min_char_idx(s: str, start_idx: int):
     dp[start_idx] = min_idx
     return min_idx
 
+
 # aaaczbgjs
-import string
 s = input()
 # s = 'abcadc'
 # s = string.ascii_lowercase + string.ascii_lowercase
@@ -89,4 +93,3 @@ efficient_sol()
 # abaaabababacba
 # print(t)
 print(''.join(u + list(reversed(t))))
-

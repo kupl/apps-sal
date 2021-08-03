@@ -13,4 +13,3 @@ for (x, y) in list(d.items()):
     maxi = max(maxi, y)
 
 print(maxi)
-

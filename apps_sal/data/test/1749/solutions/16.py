@@ -15,4 +15,3 @@ if ans == 0:
     print('LIE')
 else:
     print('TRUTH')
-

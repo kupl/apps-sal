@@ -14,4 +14,3 @@ for c in cd:
         ab.remove(ac)
 
 print(p)
-

@@ -1,9 +1,9 @@
 s = input()
 n = len(s)
-ans  = 0
+ans = 0
 for i in range(n):
     for j in range(i, n):
-        a = s[i : j + 1]
+        a = s[i: j + 1]
         b = ""
         for item in a:
             b = item + b

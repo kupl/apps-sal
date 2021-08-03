@@ -1,7 +1,7 @@
-r,D,x0=map(int,input().split())
+r, D, x0 = map(int, input().split())
 
-ans=x0
+ans = x0
 
 for i in range(10):
-  ans=r*ans-D
-  print(ans)
+    ans = r * ans - D
+    print(ans)

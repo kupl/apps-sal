@@ -17,7 +17,7 @@ for i in a:
         flag = True
 
 if not flag:
-    if neg%2 == 1:
+    if neg % 2 == 1:
         count += 2
 
 print(count)

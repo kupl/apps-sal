@@ -9,4 +9,3 @@ for ele in arr:
         print(sc)
     else:
         print(mx)
-

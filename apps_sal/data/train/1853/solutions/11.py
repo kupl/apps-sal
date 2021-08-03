@@ -1,20 +1,20 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        dis=[[float(inf)] * n for _ in range(n)]
-        for i,j,w in edges:
-            dis[i][j]=w
-            dis[j][i]=w
+        dis = [[float(inf)] * n for _ in range(n)]
+        for i, j, w in edges:
+            dis[i][j] = w
+            dis[j][i] = w
         for i in range(n):
             dis[i][i] = 0
         for k in range(n):
             for i in range(n):
                 for j in range(n):
-                    dis[i][j] = min(dis[i][j], dis[i][k]+dis[k][j])
-        
-        res = {sum(d<=distanceThreshold for d in dis[i]) : i for i in range(n)}
+                    dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
+
+        res = {sum(d <= distanceThreshold for d in dis[i]): i for i in range(n)}
         print(res)
         return res[min(res)]
-        
+
         ''' dfs not working, https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/discuss/490555/The-Reason-of-DFS-Not-Working-(Explain-Graph-and-Example)
         d = collections.defaultdict(list)
         lookup = dict({})

@@ -1,6 +1,6 @@
 a, b = list(map(int, input().split()))
 if a == b:
-    print(a*10, a*10 + 1)
+    print(a * 10, a * 10 + 1)
 else:
     if a != 9:
         if b - a == 1:

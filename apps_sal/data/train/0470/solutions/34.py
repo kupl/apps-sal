@@ -11,15 +11,10 @@ class Solution:
             elif max(n0, n1) < n2:
                 res += m[n0] * m[n1] * m[n2]
             # print((n0, n1, n2), 'res', res)
-            
+
         return res % (10**9 + 7)
-                
-        
-        
-        
-        
-        
-        
+
+
 #         m = collections.Counter(A)
 #         keys = sorted(m.keys())
 #         def twoSums(left, target):
@@ -33,7 +28,7 @@ class Solution:
 #                     break
 #                 res += m[n] * m[target - n]
 #             return res
-        
+
 #         res = 0
 #         for i, n in enumerate(keys):
 #             if n * 3 > target:
@@ -41,11 +36,8 @@ class Solution:
 #             if n * 3 == target:
 #                 res += m[n] * (m[n] - 1) * (m[n] - 2) // 6
 #                 break
-            
+
 #             res += (m[n] * (m[n] - 1) // 2) * m[target - n * 2]
 #             count, m[n] = m[n], 0
 #             res += count * twoSums(i + 1, target - n)
 #         return res % (10**9 + 7)
-        
-        
-

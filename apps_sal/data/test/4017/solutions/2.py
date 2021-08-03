@@ -14,4 +14,3 @@ for i, j in enumerate(a):
         ans.append(i + 1)
 print(len(ans))
 print(' '.join(str(e) for e in ans))
-

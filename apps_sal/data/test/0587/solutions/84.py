@@ -5,7 +5,7 @@ def main():
     for _ in range(N):
         t, d = list(map(int, input().split()))
         l.append((t, d))
-    l.sort(key=lambda x:x[1], reverse=True)
+    l.sort(key=lambda x: x[1], reverse=True)
     s = set()
     e = []
     t = 0
@@ -29,5 +29,6 @@ def main():
         ei += 1
         rl.append(t + len(s) * len(s))
     return max(rl)
-print((main()))
 
+
+print((main()))

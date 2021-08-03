@@ -3,4 +3,3 @@ def find_next_square(sq):
     if root.is_integer():
         return (root + 1)**2
     return -1
-

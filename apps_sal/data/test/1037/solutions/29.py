@@ -10,4 +10,3 @@ for i, (val, pos) in enumerate(A):
     dp = [max(L, R) for L, R in zip(ldp + [0], [0] + rdp)]
 
 print((max(dp)))
-

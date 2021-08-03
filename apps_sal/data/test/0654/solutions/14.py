@@ -10,4 +10,3 @@ for i in range(2, N + 2):
         if (i + j) % 2 == 1:
             ans = (ans + dp[i][j]) % MOD
 print(ans)
-

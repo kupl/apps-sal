@@ -2,8 +2,10 @@ N = int(input())
 XY = [complex(*list(map(int, input().split()))) for _ in range(N)]
 ans = 10**18
 
+
 def calc(center):
     return max(abs(center - x) for x in XY)
+
 
 for A in XY:
     for B in XY:
@@ -25,4 +27,3 @@ for A in XY:
             ans = min(ans, calc(T / S))
 
 print(ans)
-

@@ -1,7 +1,8 @@
 def fight(green, blue):
-    xs = [(max(g-b, 0), max(b-g, 0)) for g, b in zip(green, blue)]
+    xs = [(max(g - b, 0), max(b - g, 0)) for g, b in zip(green, blue)]
     return ([x for x in ys if x] for ys in zip(*xs))
-    
+
+
 def lemming_battle(battlefield, green, blue):
     while green and blue:
         green = sorted(green, reverse=True)

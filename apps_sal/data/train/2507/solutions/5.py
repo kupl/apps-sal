@@ -6,4 +6,3 @@ class Solution:
             if collections.Counter(word) == (collections.Counter(word) & chars_map):
                 count += len(word)
         return count
-

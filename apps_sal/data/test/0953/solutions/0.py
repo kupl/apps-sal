@@ -5,7 +5,8 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-################################################### SOLUTION
+# SOLUTION
+
 
 def main():
     n, = read()
@@ -30,11 +31,12 @@ def main():
                     indices.append(j)
                     elements.append(p[j])
             elements.sort()
-            for i,e in zip(indices, elements):
+            for i, e in zip(indices, elements):
                 res[i] = e
     write(res)
 
-#################################################### HELPERS
+# HELPERS
+
 
 class DSU(object):
     """
@@ -70,7 +72,8 @@ class DSU(object):
     def union(self, x, y):
         xr = self.find(x)
         yr = self.find(y)
-        if xr == yr: return
+        if xr == yr:
+            return
         if self._rank[xr] < self._rank[yr]:
             self._parent[xr] = yr
         elif self._rank[yr] < self._rank[xr]:
@@ -85,19 +88,27 @@ class DSU(object):
             s += str(i) + " in set " + str(self.find(i)) + " with rank " + str(self._rank[self.find(i)]) + "\n"
         return s
 
+
 def read(mode=2):
     # 0: String
     # 1: List of strings
     # 2: List of integers
     inputs = input().strip()
-    if mode == 0: return inputs
-    if mode == 1: return inputs.split()
-    if mode == 2: return list(map(int, inputs.split()))
+    if mode == 0:
+        return inputs
+    if mode == 1:
+        return inputs.split()
+    if mode == 2:
+        return list(map(int, inputs.split()))
+
 
 def write(s="\n"):
-    if s is None: s = ""
-    if isinstance(s, list): s = " ".join(map(str, s))
+    if s is None:
+        s = ""
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
+
 
 write(main())

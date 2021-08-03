@@ -13,6 +13,7 @@ for _ in range(int(input())):
         else:
             l.append('*' + factor * ' ' + '*')
             factor += 1
-    for i in l: print(i)
+    for i in l:
+        print(i)
     for i in range(len(l) - 2, -1, -1):
         print(l[i])

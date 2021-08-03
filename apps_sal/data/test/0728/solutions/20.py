@@ -15,7 +15,3 @@ while count <= max(nrs):
 
 
 print(str(count - startcount))
-    
-
-
-

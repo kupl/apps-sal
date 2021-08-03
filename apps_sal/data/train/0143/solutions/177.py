@@ -6,7 +6,7 @@ class Solution:
         while back < len(tree):
             fruit = tree[back]
             if fruit in buckets:
-                buckets[fruit] += 1  
+                buckets[fruit] += 1
             else:
                 buckets[fruit] = 1
                 while len(list(buckets.keys())) > 2:
@@ -20,8 +20,3 @@ class Solution:
             maxCount = max(maxCount, count)
             back += 1
         return maxCount
-                
-                    
-                    
-            
-

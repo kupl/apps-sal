@@ -7,7 +7,6 @@ ans = ''
 for i in range(26):
     cnt = float('inf')
     for _sc in sc:
-        cnt = min(cnt, _sc[chr(ord('a')+i)])
-    ans+=chr(ord('a')+i)*cnt
+        cnt = min(cnt, _sc[chr(ord('a') + i)])
+    ans += chr(ord('a') + i) * cnt
 print(ans)
-

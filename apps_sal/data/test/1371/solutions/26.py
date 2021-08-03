@@ -1,5 +1,6 @@
 from sys import stdin
 
+
 def main():
     input = stdin.readline
 
@@ -16,4 +17,6 @@ def main():
             else:
                 break
     print(dp[s])
+
+
 main()

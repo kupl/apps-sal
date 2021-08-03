@@ -4,5 +4,3 @@ def number(bus_stops):
     for i in bus_stops:
         totalPeople += i[1] - i[0]
     return abs(totalPeople)
-    
-

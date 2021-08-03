@@ -2,10 +2,10 @@ class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         n = len(nums)
         pref_sum = [0 for _ in range(n + 1)]
-        
+
         for i in range(n):
             pref_sum[i + 1] = pref_sum[i] + nums[i]
-        
+
         dp = collections.defaultdict(lambda: -1)
         cur_max = 0
         dp[0] = 0

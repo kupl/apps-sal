@@ -8,7 +8,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.sb.append(letter)
-        i = len(self.sb)-1
+        i = len(self.sb) - 1
         node = self.trie
         while i >= 0:
             if node.is_word:
@@ -18,15 +18,15 @@ class StreamChecker:
                 i -= 1
             else:
                 return False
-        return node.is_word    
-            
+        return node.is_word
+
 
 class Trie:
     def __init__(self):
         self.is_word = False
         self.prefix = ''
         self.words = {}
-    
+
     def add(self, word):
         if not word:
             self.is_word = True
@@ -40,8 +40,6 @@ class Trie:
             self.words[word[0]].add(word[1:])
 
 
-
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

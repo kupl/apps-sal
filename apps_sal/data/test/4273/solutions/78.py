@@ -1,11 +1,11 @@
-#import
+# import
 import math
 #import numpy as np
 N = int(input())
 
 first = "MARCH"
 
-dic = {s:0 for s in first}
+dic = {s: 0 for s in first}
 
 for _ in range(N):
     s = input()
@@ -34,6 +34,5 @@ else:
                 tans *= t[i]
 
             ans += tans
-    
-    print(ans)
 
+    print(ans)

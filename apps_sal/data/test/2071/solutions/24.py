@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -80,7 +82,8 @@ def all_factors(n):
 
 
 def fibonacci_modP(n, MOD):
-    if n < 2: return 1
+    if n < 2:
+        return 1
     return (cached_fn(fibonacci_modP, (n + 1) // 2, MOD) * cached_fn(fibonacci_modP, n // 2, MOD) + cached_fn(
         fibonacci_modP, (n - 1) // 2, MOD) * cached_fn(fibonacci_modP, (n - 2) // 2, MOD)) % MOD
 
@@ -134,7 +137,8 @@ factorial_modP = []
 
 def warm_up_fac(MOD):
     nonlocal factorial_modP, fac_warm_up
-    if fac_warm_up: return
+    if fac_warm_up:
+        return
     factorial_modP = [1 for _ in range(fac_warm_up_size + 1)]
     for i in range(2, fac_warm_up_size):
         factorial_modP[i] = (factorial_modP[i - 1] * i) % MOD
@@ -189,7 +193,7 @@ def ncr(n, r):
 
 
 def binary_search(i, li):
-    fn = lambda x: li[x] - x // i
+    def fn(x): return li[x] - x // i
     x = -1
     b = len(li)
     while b >= 1:
@@ -210,28 +214,28 @@ def main():
     n = get_int()
     li1 = get_list()
     li2 = get_list()
-    processed = [0 for _ in range(n+1)]
-    sums = [0 for _ in range(n+1)]
-    for i in range(n-1,-1,-1):
-        sums[i] = sums[i+1] + li1[i] + li2[i]
-    if n%2==0:
-        processed[n-1] = li1[n-1]
+    processed = [0 for _ in range(n + 1)]
+    sums = [0 for _ in range(n + 1)]
+    for i in range(n - 1, -1, -1):
+        sums[i] = sums[i + 1] + li1[i] + li2[i]
+    if n % 2 == 0:
+        processed[n - 1] = li1[n - 1]
     else:
-        processed[n-1] = li2[n-1]
-    for i in range(n-3 if n%2==1 else n-2, -1, -2):
-        k = 2*(n-i-1)
-        processed[i] = li1[i+1] + processed[i+2] + 2*sums[i+2] + k*li2[i+1] + (k+1)*li2[i]
-    for i in range(n-3 if n%2==0 else n-2, -1, -2):
-        k = 2*(n-i-1)
-        processed[i] = li2[i+1] + processed[i+2] + 2*sums[i+2] + k*li1[i+1] + (k+1)*li1[i]
+        processed[n - 1] = li2[n - 1]
+    for i in range(n - 3 if n % 2 == 1 else n - 2, -1, -2):
+        k = 2 * (n - i - 1)
+        processed[i] = li1[i + 1] + processed[i + 2] + 2 * sums[i + 2] + k * li2[i + 1] + (k + 1) * li2[i]
+    for i in range(n - 3 if n % 2 == 0 else n - 2, -1, -2):
+        k = 2 * (n - i - 1)
+        processed[i] = li2[i + 1] + processed[i + 2] + 2 * sums[i + 2] + k * li1[i + 1] + (k + 1) * li1[i]
     #print(processed, sums)
     mul = 0
     curr_prefix = 0
     res = 0
     for i in range(n):
-        res = max(res, processed[i] + sums[i]*2*i + curr_prefix)
-        if i%2==0:
-            curr_prefix += li1[i]*mul + li2[i] * (mul+1)
+        res = max(res, processed[i] + sums[i] * 2 * i + curr_prefix)
+        if i % 2 == 0:
+            curr_prefix += li1[i] * mul + li2[i] * (mul + 1)
         else:
             curr_prefix += li2[i] * mul + li1[i] * (mul + 1)
         mul += 2
@@ -245,4 +249,3 @@ if TestCases:
         main()
 else:
     main() if not optimise_for_recursion else threading.Thread(target=main).start()
-

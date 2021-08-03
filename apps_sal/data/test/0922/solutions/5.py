@@ -9,4 +9,3 @@ for x in ns:
     res.append(low + x - high)
 
 print(str.join(" ", list(map(str, res))))
-

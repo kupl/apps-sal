@@ -1,3 +1,3 @@
 import math
 a = int(input())
-print(a*2//math.gcd(a, 2))
+print(a * 2 // math.gcd(a, 2))

@@ -28,4 +28,3 @@ def solve(s, x, y):
 s = input()
 x, y = list(map(int, input().split()))
 print(('Yes' if solve(s, x, y) else 'No'))
-

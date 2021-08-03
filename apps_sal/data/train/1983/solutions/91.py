@@ -6,7 +6,7 @@ class ProductOfNumbers:
         self.product_array = []
         self.zero_idx = set()
 
-    def add(self, num: int) -> None:  
+    def add(self, num: int) -> None:
         self.nums.append(num)
         if self.curr_prod == None or self.curr_prod == 0:
             self.product_array.append(num)
@@ -16,7 +16,7 @@ class ProductOfNumbers:
         if num == 0:
             self.zero_idx.add(len(self.nums) - 1)
 
-    def getProduct(self, k: int) -> int:    
+    def getProduct(self, k: int) -> int:
         if k == 1:
             return self.nums[-1]
         n = len(self.nums)
@@ -27,11 +27,9 @@ class ProductOfNumbers:
             return self.product_array[n - 1]
         else:
             return int(self.product_array[n - 1] / self.product_array[n - k - 1])
-        
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

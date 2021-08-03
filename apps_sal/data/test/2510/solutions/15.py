@@ -65,4 +65,3 @@ ans = 0
 for i in range(N):
     ans = max(ans, uf.size(i))
 print(ans)
-

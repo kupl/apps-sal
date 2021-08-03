@@ -11,4 +11,3 @@ for i in idx[1:]:
         print('NO')
         return
 print('YES')
-

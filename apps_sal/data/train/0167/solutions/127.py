@@ -1,5 +1,5 @@
 # class Solution:
-#     def superEggDrop(self, K: int, N: int) -> int:    
+#     def superEggDrop(self, K: int, N: int) -> int:
 #         def segment_sum(x,k):
 #             # x is worst case, k is number of eggs available
 #             # returns max N for worst case x, eggs k
@@ -17,7 +17,7 @@
 #         drops = 0                           # the number of eggs dropped
 #         floors = [0 for _ in range(K + 1)]  # floors[i] is the number of floors that can be checked with i eggs
 
-#         while floors[K] < N:                # until we can reach N floors with K eggs 
+#         while floors[K] < N:                # until we can reach N floors with K eggs
 
 #             for eggs in range(K, 0, -1):
 #                 floors[eggs] += 1 + floors[eggs - 1]
@@ -49,23 +49,27 @@
 from scipy.special import comb, factorial, hyp2f1
 from math import log2, floor
 
-def h(k,n):
-    return round(2**n-1-comb(n,k+1)*hyp2f1(1,k-n+1,k+2,-1))
 
-def h2(k,n):
-    return sum(comb(n,j) for j in range(1,k+1))
+def h(k, n):
+    return round(2**n - 1 - comb(n, k + 1) * hyp2f1(1, k - n + 1, k + 2, -1))
+
+
+def h2(k, n):
+    return sum(comb(n, j) for j in range(1, k + 1))
+
 
 def e(k, n):
     if k == 1:
         return n
-    return sum(e(k-1, j)+1 for j in range(n))
+    return sum(e(k - 1, j) + 1 for j in range(n))
+
 
 class Solution:
     def superEggDrop(self, k: int, n: int) -> int:
-        best_case = floor(log2(n)+1)
+        best_case = floor(log2(n) + 1)
         if k >= best_case:
             return best_case
         l = 0
         while h2(k, l) < n:
-            l+=1
+            l += 1
         return l

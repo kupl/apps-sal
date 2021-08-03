@@ -19,11 +19,9 @@ for i in range(m):
 
     pid = str(py[i][0]).zfill(6)
     xid = str(x).zfill(6)
-    ans.append([pid+xid, py[i][2]])
+    ans.append([pid + xid, py[i][2]])
 
 ans = sorted(ans, key=lambda x: x[1])
 
 for a, i in ans:
     print(a)
-
-

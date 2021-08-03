@@ -4,7 +4,7 @@ def alphabet_war(fight):
 
     left_score = 0
     right_score = 0
-    
+
     for char in fight:
         if char in left_scores.keys():
             left_score += left_scores[char]

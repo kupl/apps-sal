@@ -13,7 +13,6 @@ def debug(*args, **kwargs):
     return None
 
 
-
 def main():
     n = int(input())
 
@@ -67,4 +66,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

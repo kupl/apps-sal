@@ -8,14 +8,14 @@ ans = []
 for i in range(row):
     minVal = 10**12
     for j in range(col):
-        if(minVal>=m[i][j]):
+        if(minVal >= m[i][j]):
             minVal = m[i][j]
     minL.append(minVal)
 
 for i in range(col):
     maxVal = 0
     for j in range(row):
-        if(maxVal<=m[j][i]):
+        if(maxVal <= m[j][i]):
             maxVal = m[j][i]
     maxL.append(maxVal)
 

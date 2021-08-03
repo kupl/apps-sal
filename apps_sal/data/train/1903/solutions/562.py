@@ -5,7 +5,7 @@ class Solution:
                 root[i] = root[root[i]]
                 i = root[i]
             return i
-        
+
         def union(i, j):
             if rank[i] < rank[j]:
                 root[i] = j
@@ -14,15 +14,15 @@ class Solution:
             else:
                 root[j] = i
                 rank[i] += 1
-            
+
         n = len(points)
-        graph = [] 
+        graph = []
         for i in range(n):
-            for j in range(i+1, n):
-                distance = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]) 
+            for j in range(i + 1, n):
+                distance = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 graph.append((distance, i, j))
         graph.sort()
-        
+
         min_cost = 0
         root = list(range(n))
         rank = [0] * n

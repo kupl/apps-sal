@@ -15,12 +15,14 @@ def main():
         else:
             d, m = divmod(n, K)
             if d != 0 and m == 0:
-                nst[n][2] += nst[n//K][1]
-                nst[n][1] += nst[n//K][0]
+                nst[n][2] += nst[n // K][1]
+                nst[n][1] += nst[n // K][0]
             nst[n][0] += 1
     print(functools.reduce(lambda x, y: x + y[2], nst.values(), 0))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

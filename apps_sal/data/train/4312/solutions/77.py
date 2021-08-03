@@ -9,6 +9,5 @@ def pick_peaks(arr):
             if arr[i - 1] < arr[i] and arr[i] > arr[k + 1]:
                 pos.append(i)
                 peaks.append(arr[i])
-    
-    return {"pos": pos, "peaks": peaks}
 
+    return {"pos": pos, "peaks": peaks}

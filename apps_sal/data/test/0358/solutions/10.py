@@ -36,9 +36,9 @@ a, b, k = [int(i) for i in input().split()]
 
 prims = []
 pc = pir(a, b, prims)
-if pc!= 0 and prims[0] == 1:
+if pc != 0 and prims[0] == 1:
     prims.remove(1)
-    pc-=1
+    pc -= 1
 
 if pc < k:
     print(-1)

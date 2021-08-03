@@ -5,4 +5,3 @@ if h <= sum(a):
     print('Yes')
 else:
     print('No')
-

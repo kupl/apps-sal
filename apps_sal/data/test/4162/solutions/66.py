@@ -1,3 +1,3 @@
 N = int(input())
-S = list(map(int,input().split()))
-print(sum(S)-len(S))
+S = list(map(int, input().split()))
+print(sum(S) - len(S))

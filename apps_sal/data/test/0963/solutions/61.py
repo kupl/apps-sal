@@ -17,4 +17,3 @@ for i in range(2, n + 1):
 
 
 print(((accsum[n] - accsum[n - 1]) % 998244353))
-

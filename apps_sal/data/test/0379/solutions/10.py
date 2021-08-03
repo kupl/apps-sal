@@ -1,4 +1,4 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 x_count = 0
 start_x = 0
 start_y = 0
@@ -35,4 +35,3 @@ for i in range(start_x, start_x + x_len):
             print("NO")
             return
 print("YES")
-

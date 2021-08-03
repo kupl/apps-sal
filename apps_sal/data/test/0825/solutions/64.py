@@ -1,10 +1,10 @@
 import math
- 
+
 N = int(input())
- 
+
 M = int(math.sqrt(N))
 
-ans = 0 
+ans = 0
 check = [True for _ in range(M + 1)]
 e = [0 for _ in range(M + 1)]
 
@@ -16,8 +16,8 @@ for p in range(2, M + 1):
         while N % p == 0:
             N = N // p
             e[p] += 1
-        
-        ans += int((math.sqrt(1 + 8 * e[p]) - 1)/2)
+
+        ans += int((math.sqrt(1 + 8 * e[p]) - 1) / 2)
 
 if N > 1:
     ans += 1

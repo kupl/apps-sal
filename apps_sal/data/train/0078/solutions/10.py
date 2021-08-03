@@ -21,7 +21,7 @@ def usearch(x, a):
 def main():
     q = int(input())
     for i in range(q):
-        n,m = list(map(int, input().split()))
+        n, m = list(map(int, input().split()))
         a = [input() for i in range(n)]
         h = 0
         h_a = []
@@ -50,7 +50,7 @@ def main():
                 if a[j][i] == '.':
                     flag = 1
                     break
-        print(n+m-h-w-flag)
+        print(n + m - h - w - flag)
+
 
 main()
-

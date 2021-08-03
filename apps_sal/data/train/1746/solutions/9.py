@@ -7,6 +7,7 @@ playerDirections = {
 }
 items = ("X", "K", "H", "S", "C")
 
+
 def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int, int, int, List[str]]:
     player = {
         "x": 0,
@@ -21,7 +22,7 @@ def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], in
         "coinsCounter": 0
     }
     demonLord = 10
-    
+
     for y, str in enumerate(field):
         for x, char in enumerate(str):
             if char in playerDirections:
@@ -30,14 +31,15 @@ def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], in
                 player["direction"] = playerDirections[char]
                 player["char"] = char
                 break
-        else: continue
+        else:
+            continue
         break
-    
+
     for action in actions:
         if action in playerDirections:
             player["direction"] = playerDirections[action]
             player["char"] = action
-            
+
         elif action == "F":
             enemiesClose = []
             for dir in playerDirections.values():
@@ -49,42 +51,54 @@ def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], in
                     adjacent = ""
                 if adjacent == "E" or adjacent == "D":
                     player["health"] -= max(0, (2 if adjacent == "E" else 3) - player["defense"])
-        
+
             field[player["y"]][player["x"]] = " "
             player["x"] += player["direction"][0]
             player["y"] += player["direction"][1]
-            
+
             if(player["x"] < 0 or player["y"] < 0 or
-               player["y"] >= len(field) or player["x"] >= len(field[player["y"]])): return None
+               player["y"] >= len(field) or player["x"] >= len(field[player["y"]])):
+                return None
             nextTile = field[player["y"]][player["x"]]
-            if(not nextTile in items and nextTile != " "): return None
+            if(not nextTile in items and nextTile != " "):
+                return None
             if(nextTile in items):
-                if nextTile == "X": player["attack"] += 1
-                elif nextTile == "S": player["defense"] += 1
-                else: player["inventory"].append(nextTile)     
-            
+                if nextTile == "X":
+                    player["attack"] += 1
+                elif nextTile == "S":
+                    player["defense"] += 1
+                else:
+                    player["inventory"].append(nextTile)
+
         elif action in player["inventory"]:
             if action == "H":
-                if player["health"]< 3: player["health"] = 3
-                else: return None
+                if player["health"] < 3:
+                    player["health"] = 3
+                else:
+                    return None
             elif action == "K":
                 nextTilePos = (player["y"] + player["direction"][1], player["x"] + player["direction"][0])
                 if(nextTilePos[1] < 0 or nextTilePos[0] < 0 or
-                   nextTilePos[0] >= len(field) or nextTilePos[1] >= len(field[nextTilePos[0]])): return None
+                   nextTilePos[0] >= len(field) or nextTilePos[1] >= len(field[nextTilePos[0]])):
+                    return None
                 nextTile = field[nextTilePos[0]][nextTilePos[1]]
-                if(nextTile == "-" or nextTile == "|"): field[nextTilePos[0]][nextTilePos[1]] = " "
-                else: return None
+                if(nextTile == "-" or nextTile == "|"):
+                    field[nextTilePos[0]][nextTilePos[1]] = " "
+                else:
+                    return None
             else:
                 nextTilePos = (player["y"] + player["direction"][1], player["x"] + player["direction"][0])
                 if(nextTilePos[1] < 0 or nextTilePos[0] < 0 or
-                   nextTilePos[0] >= len(field) or nextTilePos[1] >= len(field[nextTilePos[0]])): return None
+                   nextTilePos[0] >= len(field) or nextTilePos[1] >= len(field[nextTilePos[0]])):
+                    return None
                 if field[nextTilePos[0]][nextTilePos[1]] == "M":
                     player["coinsCounter"] += 1
                     if player["coinsCounter"] >= 3:
                         field[nextTilePos[0]][nextTilePos[1]] = " "
-                else: return None
+                else:
+                    return None
             player["inventory"].remove(action)
-        
+
         elif action == "A":
             nextTilePos = (player["y"] + player["direction"][1], player["x"] + player["direction"][0])
             nextTile = field[nextTilePos[0]][nextTilePos[1]]
@@ -98,10 +112,12 @@ def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], in
                 demonLord -= player["attack"]
                 if demonLord <= 0:
                     field[nextTilePos[0]][nextTilePos[1]] = " "
-            else: return None
-        
-        else: return None
-        
+            else:
+                return None
+
+        else:
+            return None
+
         if action == "A" or action == "H" or action in playerDirections:
             for dir in playerDirections.values():
                 adjacent = ""
@@ -112,8 +128,9 @@ def rpg(field: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], in
                     adjacent = "X"
                 if adjacent == "E" or adjacent == "D":
                     player["health"] -= max(0, (2 if adjacent == "E" else 3) - player["defense"])
-        
-        if player["health"] <= 0: return None
-    
+
+        if player["health"] <= 0:
+            return None
+
     field[player["y"]][player["x"]] = player["char"]
     return (field, player["health"], player["attack"], player["defense"], sorted(player["inventory"]))

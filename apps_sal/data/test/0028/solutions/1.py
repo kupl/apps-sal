@@ -1,4 +1,6 @@
 import random
+
+
 def genTemp():
     sl = ""
     firstTime = True
@@ -49,17 +51,17 @@ while preToChange or postToChange:
             preWrong.discard(x)
             ans.append(("move", x, temp))
             preToChange.add(temp)
-            #postMissing.discard(x)
+            # postMissing.discard(x)
             if x in postAns:
-                postFree.add(x)            
+                postFree.add(x)
         else:
             x = postToChange.pop()
             ans.append(("move", x, temp))
             postWrong.discard(x)
             postToChange.add(temp)
-            #preMissing.discard(x)   
+            # preMissing.discard(x)
             if x in postAns:
-                preFree.add(x)            
+                preFree.add(x)
     elif preFree:
         if preWrong:
             x = preWrong.pop()
@@ -76,7 +78,7 @@ while preToChange or postToChange:
             x = postWrong.pop()
             postToChange.discard(x)
         else:
-            x = postToChange.pop()  
+            x = postToChange.pop()
         y = postFree.pop()
         ans.append(("move", x, y))
         postMissing.discard(y)

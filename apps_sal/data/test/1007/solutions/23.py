@@ -1,18 +1,16 @@
 #k, p = 10, 10000
 
-k, p = list(map(int,input().strip().split()))
+k, p = list(map(int, input().strip().split()))
 
 
 res = 0
 
-for i in range(1,k+1):
+for i in range(1, k + 1):
 
-  x = str(i)
+    x = str(i)
 
-  x = x + x[::-1]
+    x = x + x[::-1]
 
-
-  res = (res+ int(x)) % p
+    res = (res + int(x)) % p
 
 print(res)
-

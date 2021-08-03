@@ -3,4 +3,4 @@ def find_longest(arr):
     res = []
     for i in arr:
         res.append(len(str(i)))
-    return arr[res.index(sorted(res,reverse=True)[0])]
+    return arr[res.index(sorted(res, reverse=True)[0])]

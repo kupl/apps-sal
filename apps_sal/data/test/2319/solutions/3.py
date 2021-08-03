@@ -47,4 +47,3 @@ for case_num in range(t):
                     dp[i][j] = min(dp[i][j], dp[i][j - 1])
                 dp[i][j] = min(dp[i][j], dp[i - 1][j] + 1)
         print(dp[r][r])
-

@@ -45,5 +45,5 @@ def main():
 
     print(fuels)
 
-main()
 
+main()

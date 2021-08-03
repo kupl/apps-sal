@@ -1,5 +1,5 @@
 N = int(input())
-vec = list(map(int,input().split()))
+vec = list(map(int, input().split()))
 vec2 = [i for i in vec]
 vec2.sort()
 cnt = 0

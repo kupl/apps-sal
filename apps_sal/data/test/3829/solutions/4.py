@@ -6,4 +6,3 @@ for i in range(1, m + 1):
     ans += i * (var - pvar)
     pvar = var
 print(ans)
-

@@ -13,4 +13,3 @@ elif plus >= n // 2 + n % 2:
     print(-1)
 else:
     print(0)
-

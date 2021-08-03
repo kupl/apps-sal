@@ -2,13 +2,13 @@ import functools as ft
 
 
 class Solution:
-    
+
     BASE = 10 ** 9 + 7
-    
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         self.roll_max = rollMax
         return self.count(n, 1, 0)
-    
+
     @ft.lru_cache(None)
     def count(self, remaining: int, last_roll: int, streak: int) -> int:
         if remaining == 0:

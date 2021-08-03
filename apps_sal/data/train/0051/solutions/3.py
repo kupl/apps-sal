@@ -19,4 +19,3 @@ while q > 0:
     else:
         print('no')
     q -= 1
-

@@ -2,11 +2,13 @@ import sys
 import copy
 from collections import Counter
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
+
 
 def solve():
     n = int(input())
@@ -21,7 +23,7 @@ def solve():
     # max-win
     maxwin = 0
     for d in Sn:
-        for a in range(d+1, 10):
+        for a in range(d + 1, 10):
             if cntM1[a] > 0:
                 cntM1[a] -= 1
                 maxwin += 1
@@ -52,4 +54,6 @@ def solve():
 
 def __starting_point():
     solve()
+
+
 __starting_point()

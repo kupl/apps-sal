@@ -14,5 +14,5 @@ if getpass.getuser().lower() == 'frohe' and files:
     sys.stdin = open('test.in')
     # sys.stdout = open('test.out', 'w')
 
-n=ria()[0]
-print(int(round(n/10)*10))
+n = ria()[0]
+print(int(round(n / 10) * 10))

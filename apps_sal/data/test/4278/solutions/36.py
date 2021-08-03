@@ -11,6 +11,6 @@ for i in range(n):
         cnt_dic[str(s[i])] = 1
 
 for n in cnt_dic.values():
-    sum_cnt += int( n * (n-1) / 2)
+    sum_cnt += int(n * (n - 1) / 2)
 
 print(sum_cnt)

@@ -11,7 +11,8 @@ while que:
     now, dis = que.popleft()
     for next in edge[now]:
         if next == t - 1 and (dis + 1) % 3 == 0:
-            print((dis + 1) // 3);return
+            print((dis + 1) // 3)
+            return
         if not kkp[next] & (2 ** ((dis + 1) % 3)):
             kkp[next] = kkp[next] | (2 ** ((dis + 1) % 3))
             que.append((next, dis + 1))

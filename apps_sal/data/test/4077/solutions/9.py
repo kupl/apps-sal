@@ -3,9 +3,11 @@ import sys
 from collections import defaultdict
 
 # input = sys.stdin.readline
-rt = lambda: list(map(int, input().split()))
-ri = lambda: int(input())
-rl = lambda: list(map(int, input().split()))
+
+
+def rt(): return list(map(int, input().split()))
+def ri(): return int(input())
+def rl(): return list(map(int, input().split()))
 
 
 def main():
@@ -29,10 +31,11 @@ def main():
             sums[s] += 1
         return res
 
-    print(greaterCount(m) - greaterCount(m+1))
+    print(greaterCount(m) - greaterCount(m + 1))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -16,4 +16,3 @@ for i in range(x):
 ans = sorted(ans)[::-1]
 for i in range(K):
     print((ans[i]))
-

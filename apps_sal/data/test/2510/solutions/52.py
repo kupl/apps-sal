@@ -1,5 +1,6 @@
 import sys
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -55,7 +56,7 @@ uf = UnionFind(N)
 ans = 1
 for i in range(M):
     a, b = list(map(int, input().split()))
-    uf.union(a-1, b-1)
-    ans = max(ans, uf.size(a-1))
+    uf.union(a - 1, b - 1)
+    ans = max(ans, uf.size(a - 1))
 
 print(ans)

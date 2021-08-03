@@ -74,4 +74,3 @@ for i in range(N):
     res = max(res, gcd(left, right))
 
 print(res)
-

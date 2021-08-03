@@ -1,11 +1,11 @@
-N=int(input())
-K=int(input())
+N = int(input())
+K = int(input())
 
-ans=1
+ans = 1
 for i in range(N):
-    if ans<=K:
-        ans*=2
+    if ans <= K:
+        ans *= 2
     else:
-        ans+=K
+        ans += K
 
 print(ans)

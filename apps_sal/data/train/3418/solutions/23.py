@@ -1,5 +1,5 @@
 def reverse_list(l):
-    output=[]
+    output = []
     for i in l:
-        output=[i]+output
+        output = [i] + output
     return output

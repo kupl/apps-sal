@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, = readln()
 var = {}
@@ -19,4 +21,3 @@ for x, v in list(var.items()):
             ans.append((x, d.pop()))
 print(len(ans))
 print('\n'.join('%d %d' % f for f in sorted(ans)))
-

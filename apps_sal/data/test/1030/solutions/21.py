@@ -1,7 +1,7 @@
 n, p, k = list(map(int, input().split()))
 
 s = '({})'.format(p)
-for i in range(1,k + 1):
+for i in range(1, k + 1):
     # if p - i == 0:
     #     s = '<< ' + s
     if p - i > 0:

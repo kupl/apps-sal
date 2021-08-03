@@ -1,7 +1,7 @@
-n=int(input())
-A=[]
+import numpy as np
+n = int(input())
+A = []
 for i in range(n):
     A.append(int(input()))
 
-import numpy as np
 print(np.lcm.reduce(A))

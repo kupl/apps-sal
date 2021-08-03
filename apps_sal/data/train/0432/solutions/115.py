@@ -9,4 +9,3 @@ class Solution:
                     if c[i + j] < 0:
                         return False
         return True
-

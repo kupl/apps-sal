@@ -19,6 +19,5 @@ class Solution:
                     result[i] = '_'
                 else:
                     level -= 1
-        
-        return ''.join([x for i, x in enumerate(result) if x != '_' and not i in open_pos])
 
+        return ''.join([x for i, x in enumerate(result) if x != '_' and not i in open_pos])

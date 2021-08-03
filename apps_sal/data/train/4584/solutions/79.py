@@ -6,4 +6,3 @@ def invert(lst):
         else:
             list.append(-abs(l))
     return list
-

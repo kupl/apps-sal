@@ -7,4 +7,3 @@ class Solution:
             psum += cardPoints[n - i - 1] - cardPoints[k - i - 1]
             res = max(res, psum)
         return res
-

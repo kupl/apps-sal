@@ -13,4 +13,3 @@ if k1 > k2:
     print('YES')
 else:
     print('NO')
-

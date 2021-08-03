@@ -4,6 +4,7 @@ import sys
 def read(func=int):
     return func(sys.stdin.readline().strip())
 
+
 def readList(func=int):
     return list(map(func, sys.stdin.readline().strip().split()))
 
@@ -15,4 +16,3 @@ for _ in range(t):
     for i in range(len(str(num))):
         tot += i + 1
     print(tot)
-

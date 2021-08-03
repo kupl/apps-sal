@@ -18,4 +18,3 @@ for n in ns:
             largest -= 1
 
         print()
-

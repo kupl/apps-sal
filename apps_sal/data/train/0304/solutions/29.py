@@ -21,7 +21,7 @@ class Solution:
                 start = mid
             else:
                 end = mid
-        
+
         if ages[start] >= target:
             return start
         if ages[end] >= target:

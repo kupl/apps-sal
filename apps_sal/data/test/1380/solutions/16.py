@@ -6,7 +6,8 @@ for h in t:
     s = h - d
     if s > 0:
         p[s] += 1
-        if p[s] > x: x, y = p[s], s
+        if p[s] > x:
+            x, y = p[s], s
     d += k
 d = 0
 for i, h in enumerate(t):

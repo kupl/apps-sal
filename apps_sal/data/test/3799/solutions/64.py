@@ -2,9 +2,9 @@ ar = list(input())
 b = 0
 while True:
     count = 0
-    for i in range(1,len(ar)-1):
-        if ar[i-1] != ar[i+1]:
-            count +=1
+    for i in range(1, len(ar) - 1):
+        if ar[i - 1] != ar[i + 1]:
+            count += 1
             del ar[i]
             b += 1
             break

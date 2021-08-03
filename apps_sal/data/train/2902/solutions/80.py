@@ -3,8 +3,8 @@ def opposite(number):
     if number < 0:
         convert = str(number)[1:]
     else:
-      convert = '-' + str(number)
+        convert = '-' + str(number)
     try:
-      return int(convert)
+        return int(convert)
     except:
-      return float(convert)
+        return float(convert)

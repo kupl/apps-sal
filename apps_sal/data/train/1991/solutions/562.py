@@ -1,6 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 1000000007
+
         @functools.lru_cache(maxsize=None)
         def calc(start, fuel):
             ret = 0
@@ -14,5 +15,5 @@ class Solution:
                     continue
                 ret = (ret + calc(i, fuel - d)) % MOD
             return ret
-        
+
         return calc(start, fuel)

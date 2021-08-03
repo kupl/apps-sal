@@ -47,4 +47,3 @@ while len(blocks) > 1:
     blocks = temp
 
 print(counter)
-

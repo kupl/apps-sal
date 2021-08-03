@@ -9,4 +9,3 @@ a = sorted(a)
 k_smallest = sum(a[:k])
 
 print(k_smallest)
-

@@ -7,7 +7,7 @@ class Solution:
             routes[b] = set(routes[b])
             for s in routes[b]:
                 s2b[s].add(b)
-        
+
         visited = set()
         q = [(1, b) for b in s2b[S]]
         while q:
@@ -22,5 +22,5 @@ class Solution:
                 bs |= s2b[s]
             for bn in bs:
                 q.append((n + 1, bn))
-            
+
         return -1

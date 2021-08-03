@@ -1,10 +1,14 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
+
 
 def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
-mod=10**9+7
+
+
+mod = 10**9 + 7
 
 
 """
@@ -30,7 +34,7 @@ ad-bcef
 ufとかで上手い感じに管理できるかな?
 """
 
-from collections import defaultdict
+
 class UnionFind:
     def __init__(self, N: int):
         """
@@ -99,7 +103,7 @@ class UnionFind:
         """{ルート要素: [そのグループに含まれる要素のリスト], ...}のデフォルトディクトを返す"""
         dd = defaultdict(list)
         for i in range(N):
-            root=self.find(i)
+            root = self.find(i)
             dd[root].append(i)
         return dd
 
@@ -111,12 +115,12 @@ class Scc_graph:
         self.edges = []
 
     def csr(self):
-        start = [0]*(self.N+1)
-        elist = [0]*len(self.edges)
+        start = [0] * (self.N + 1)
+        elist = [0] * len(self.edges)
         for v, w in self.edges:
-            start[v+1] += 1
-        for i in range(1, self.N+1):
-            start[i] += start[i-1]
+            start[v + 1] += 1
+        for i in range(1, self.N + 1):
+            start[i] += start[i - 1]
         counter = start.copy()
         for v, w in self.edges:
             elist[counter[v]] = w
@@ -132,10 +136,10 @@ class Scc_graph:
         N = self.N
         now_ord = group_num = 0
         visited = []
-        low = [0]*N
-        order = [-1]*N
-        ids = [0]*N
-        parent = [-1]*N
+        low = [0] * N
+        order = [-1] * N
+        ids = [0] * N
+        parent = [-1] * N
         stack = []
         for i in range(N):
             if order[i] == -1:
@@ -148,7 +152,7 @@ class Scc_graph:
                             low[v] = order[v] = now_ord
                             now_ord += 1
                             visited.append(v)
-                            for i in range(self.start[v], self.start[v+1]):
+                            for i in range(self.start[v], self.start[v + 1]):
                                 to = self.elist[i]
                                 if order[to] == -1:
                                     stack.append(~to)
@@ -169,7 +173,7 @@ class Scc_graph:
                         if parent[v] != -1:
                             low[parent[v]] = min(low[parent[v]], low[v])
         for i, x in enumerate(ids):
-            ids[i] = group_num-1-x
+            ids[i] = group_num - 1 - x
 
         return group_num, ids
 
@@ -185,18 +189,19 @@ class Two_sat:
     def __init__(self, N):
         self.N = N
         self.answer = []
-        self.scc = Scc_graph(2*N)
+        self.scc = Scc_graph(2 * N)
 
     """
     A[i]=a,A[j]=b
     (a∨b)を追加したいとき，(f,g)=(1,1)
     否定したものを入れたい時fやgを0に変更する
     """
+
     def add_clause(self, i, f, j, g):
         # assert 0 <= i < self.N
         # assert 0 <= j < self.N
-        self.scc.add_edge(2*i+(f == 0), 2*j+(g == 1))
-        self.scc.add_edge(2*j+(g == 0), 2*i+(f == 1))
+        self.scc.add_edge(2 * i + (f == 0), 2 * j + (g == 1))
+        self.scc.add_edge(2 * j + (g == 0), 2 * i + (f == 1))
 
     def satisfiable(self):
         _, ids = self.scc.scc_ids()
@@ -205,7 +210,7 @@ class Two_sat:
             if ids[2 * i] == ids[2 * i + 1]:
                 self.answer.clear()
                 return False
-            self.answer.append(ids[2*i] < ids[2*i+1])
+            self.answer.append(ids[2 * i] < ids[2 * i + 1])
         return True
 
 # def warshall_floyd(d):
@@ -219,18 +224,18 @@ class Two_sat:
 #################################################
 
 
-N,M=MI()
-inf = N+5
-d=[[inf]*N for _ in range(N)]
+N, M = MI()
+inf = N + 5
+d = [[inf] * N for _ in range(N)]
 for i in range(N):
-    d[i][i]=0
+    d[i][i] = 0
 
 for _ in range(M):
-    a,b=MI()
-    a-=1
-    b-=1
-    d[a][b]=1
-    d[b][a]=1
+    a, b = MI()
+    a -= 1
+    b -= 1
+    d[a][b] = 1
+    d[b][a] = 1
 
 # 距離が1か否かだけわかれば良いので，これいらない
 # d=warshall_floyd(d)
@@ -238,39 +243,39 @@ for _ in range(M):
 # for i in range(N):
 #     print(d[i])
 
-def calc(x):
-    return (x*(x-1))//2
 
-uf=UnionFind(N)
+def calc(x):
+    return (x * (x - 1)) // 2
+
+
+uf = UnionFind(N)
 for i in range(N):
-    for j in range(i+1,N):
-        if d[i][j]>1:
-            uf.union(i,j)
+    for j in range(i + 1, N):
+        if d[i][j] > 1:
+            uf.union(i, j)
             # print(i,j)
 
-roots=uf.roots()
-Nr=len(roots)
-G=[[]for _ in range(Nr)]
+roots = uf.roots()
+Nr = len(roots)
+G = [[]for _ in range(Nr)]
 
-from collections import defaultdict
 dd = defaultdict(int)
-cnt=0
+cnt = 0
 for v in roots:
-    dd[v]=cnt
-    cnt+=1
-    
+    dd[v] = cnt
+    cnt += 1
+
 # print(roots,Nr)
 
 for i in range(N):
-    r=uf.find(i)
-    rnum=dd[r]
-    
+    r = uf.find(i)
+    rnum = dd[r]
+
     # print(i,r,rnum)
     G[rnum].append(i)
 
 
-
-allOK=0#A,Bどちらのグループに入れても問題ないもの
+allOK = 0  # A,Bどちらのグループに入れても問題ないもの
 
 """
 とりあえず，連結成分毎に2SATする．
@@ -280,93 +285,83 @@ a個,b個(a<=b)
 
 両方にaを加算して，差分(b-a)を記憶しておき，あとでどっちに振り分けるか考える
 """
-D=[]#A,Bグループの差
-S1=0
-S2=0
-
+D = []  # A,Bグループの差
+S1 = 0
+S2 = 0
 
 
 for g in G:
-    Ng=len(g)
-    if Ng==1:
-        allOK+=1
+    Ng = len(g)
+    if Ng == 1:
+        allOK += 1
         continue
-    
+
     g.sort()
-    ts=Two_sat(Ng)
-    
+    ts = Two_sat(Ng)
+
     # print(g)
-    
+
     for i in range(Ng):
-        for j in range(i+1,Ng):
-            a=g[i]
-            b=g[j]
-            if d[a][b]!=1:
-                ts.add_clause(i,0,j,0)
-                ts.add_clause(i,1,j,1)
-            
+        for j in range(i + 1, Ng):
+            a = g[i]
+            b = g[j]
+            if d[a][b] != 1:
+                ts.add_clause(i, 0, j, 0)
+                ts.add_clause(i, 1, j, 1)
+
     if not ts.satisfiable():
         print((-1))
         return
-        
-    a=sum(ts.answer)
-    b=Ng-a
-    
-    S1+=min(a,b)
-    S2+=min(a,b)
-    
-    if a!=b:
-        D.append(abs(a-b))
-    
-    
+
+    a = sum(ts.answer)
+    b = Ng - a
+
+    S1 += min(a, b)
+    S2 += min(a, b)
+
+    if a != b:
+        D.append(abs(a - b))
+
+
 # あとはDをどう割り振るか．
 # これは，D内の数字を+/-のどちらか符号を選んで足していき，その結果を0に近づけたいという問題に帰着．数字が小さいのでdpでできる.
-Nd=len(D)
+Nd = len(D)
 
-geta=1000
-dp=[[0]*(geta*2+1) for _ in range(Nd+1)]
-dp[0][geta]=1
-for i,num in enumerate(D):
-    for j in range(geta*2+1):
+geta = 1000
+dp = [[0] * (geta * 2 + 1) for _ in range(Nd + 1)]
+dp[0][geta] = 1
+for i, num in enumerate(D):
+    for j in range(geta * 2 + 1):
         if dp[i][j]:
-            dp[i+1][j-num]=1
-            dp[i+1][j+num]=1
-            
-diff=geta
-for j in range(geta+1):
+            dp[i + 1][j - num] = 1
+            dp[i + 1][j + num] = 1
+
+diff = geta
+for j in range(geta + 1):
     if dp[-1][j]:
-        diff=min(diff,
-                 abs(j-geta))
-        
+        diff = min(diff,
+                   abs(j - geta))
+
 # print(D)
 # print(diff)
 
-Sd=sum(D)
-s11=(Sd-diff)//2
-s12=Sd-s11
+Sd = sum(D)
+s11 = (Sd - diff) // 2
+s12 = Sd - s11
 
 
 # S1<=S2
-S1+=s11
-S2+=s12
+S1 += s11
+S2 += s12
 
-ds=S2-S1
-if ds>allOK:
-    ans=calc(S2)+calc(S1+allOK)
+ds = S2 - S1
+if ds > allOK:
+    ans = calc(S2) + calc(S1 + allOK)
 else:
-    aa=N//2
-    bb=N-aa
-    ans=calc(aa)+calc(bb)
-    
-    
-# 
+    aa = N // 2
+    bb = N - aa
+    ans = calc(aa) + calc(bb)
+
+
+#
 print(ans)
-    
-
-
-
-
-
-
-
-

@@ -15,4 +15,3 @@ for i in a:
     if (l == 0) or (r == 0):
         print(cnt)
         return
-

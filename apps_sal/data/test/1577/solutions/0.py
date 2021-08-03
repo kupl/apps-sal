@@ -3,8 +3,8 @@ s = input()
 a = s.count('A')
 d = s.count('D')
 if a > d:
-	print("Anton")
+    print("Anton")
 elif d > a:
-	print("Danik")
+    print("Danik")
 else:
-	print("Friendship")
+    print("Friendship")

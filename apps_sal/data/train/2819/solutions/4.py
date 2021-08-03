@@ -2,8 +2,11 @@ from functools import wraps
 
 # very rudimentary implementation of a cache decorator
 # python 3's functools.lru_cache or its backport should be favored
+
+
 def cache(f):
     _cache = {}
+
     @wraps(f)
     def wrapped(n):
         if n in _cache:
@@ -13,7 +16,8 @@ def cache(f):
             _cache[n] = result
             return result
     return wrapped
-    
+
+
 @cache
 def fibonacci(n):
     if n in [0, 1]:

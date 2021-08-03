@@ -10,5 +10,5 @@ if cnt1 >= (n + 1) // 2:
     print(1)
 elif cnt2 >= (n + 1) // 2:
     print(-1)
-else:print(0)
-
+else:
+    print(0)

@@ -8,13 +8,13 @@ a.sort()
 l = []
 
 for i in range(n):
-    li = abs(i - (n-1-i))
+    li = abs(i - (n - 1 - i))
     l.append(li)
-    
+
 l.sort()
 
 
-for ai, li in zip(l,a):
+for ai, li in zip(l, a):
     if ai != li:
         print((0))
         return
@@ -24,9 +24,8 @@ mod = 10 ** 9 + 7
 ans = 1
 
 for li in d:
-    for j in range(1,d[li]+1):
+    for j in range(1, d[li] + 1):
         ans *= j
         ans %= mod
 
 print(ans)
-

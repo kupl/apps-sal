@@ -1,8 +1,10 @@
+from itertools import accumulate
+from bisect import bisect, bisect_left
 import sys
 read = sys.stdin.read
 #readlines = sys.stdin.readlines
-from bisect import bisect, bisect_left
-from itertools import accumulate
+
+
 def main():
     data = list(map(int, read().split()))
     n = data[0]
@@ -18,6 +20,9 @@ def main():
     ans = sum([b2a[bisect_left(b, ce)] for ce in c])
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

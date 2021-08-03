@@ -11,5 +11,5 @@ for i in range(h):
     if row[i]:
         for j in range(w):
             if col[j]:
-                print(A[i][j], end = '')
+                print(A[i][j], end='')
         print()

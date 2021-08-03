@@ -4,7 +4,7 @@ n = int(input())
 if n > 0:
     visitors = list(map(int, input().split()))
 else:
-    visitors=[]
+    visitors = []
 
 min_wait_time = float("inf")
 min_arrive_time = -1
@@ -23,4 +23,3 @@ while t <= e:
 print(min_arrive_time - 1)
 
 # 1535294397513
-

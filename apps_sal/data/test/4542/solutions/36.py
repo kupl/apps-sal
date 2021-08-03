@@ -6,4 +6,3 @@ for i in range(1, len(s)):
         counter += 1
 
 print(counter)
-

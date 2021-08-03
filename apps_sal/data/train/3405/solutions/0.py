@@ -2,6 +2,7 @@ def is_pandigital(n):
     s = str(n)
     return not '0' in s and len(set(s)) == len(s)
 
+
 def pow_root_pandigit(val, n, k):
     res = []
     current = int(round(val ** (1.0 / n), 5)) + 1

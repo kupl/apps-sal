@@ -18,4 +18,3 @@ elif abs(y) % 2 == 1:
     print(-1)
 else:
     print(abs(x) // 2 + abs(y) // 2)
-

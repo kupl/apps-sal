@@ -8,4 +8,3 @@ for n in a:
     b //= 4
     c.append(str(b % mod))
 print(' '.join(c))
-

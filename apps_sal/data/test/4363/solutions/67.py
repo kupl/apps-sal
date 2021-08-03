@@ -8,4 +8,3 @@ for x in range(k + 1):
             cnt += 1
 
 print(cnt)
-

@@ -1,6 +1,6 @@
 fib = [1, 1]
 for i in range(39):
-    fib.append(fib[i] + fib[i+1])
+    fib.append(fib[i] + fib[i + 1])
 
 
 def mysterious_pattern(l, m):

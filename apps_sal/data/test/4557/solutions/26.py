@@ -1,5 +1,5 @@
-a,b,x=map(int,input().split())
-if a<=x<=a+b:
-  print("YES")
+a, b, x = map(int, input().split())
+if a <= x <= a + b:
+    print("YES")
 else:
-  print("NO")
+    print("NO")

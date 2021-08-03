@@ -7,5 +7,4 @@ for i in a:
         s.remove(j)
         j += 1
     s.add(j)
-print(max(s)-len(s)+1)
-
+print(max(s) - len(s) + 1)

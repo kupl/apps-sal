@@ -26,7 +26,6 @@ def main():
         print('DOWN')
 
 
-
 def stdin_get_ints_from_line():
     return (int(x) for x in stdin.readline().strip().split(' '))
 
@@ -41,5 +40,6 @@ def stdin_get_string_from_line():
 
 def __starting_point():
     main()
+
 
 __starting_point()

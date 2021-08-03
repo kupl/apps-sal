@@ -9,7 +9,7 @@ class Solution:
 
         for windowEnd in range(a_length):
             curr_str = A[windowEnd]
-            
+
             if curr_str in hashMap:
                 hashMap[curr_str] += 1
             else:
@@ -23,5 +23,5 @@ class Solution:
                 while hashMap[A[checker]] > 1:
                     hashMap[A[checker]] -= 1
                     checker += 1
-                result += checker - windowStart +1
+                result += checker - windowStart + 1
         return result

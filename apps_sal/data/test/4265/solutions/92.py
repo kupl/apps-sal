@@ -8,4 +8,3 @@ for i in range(len(s)):
         ans += 1
 
 print(ans)
-

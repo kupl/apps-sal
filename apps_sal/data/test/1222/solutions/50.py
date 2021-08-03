@@ -17,4 +17,3 @@ K = int(input())
 ans = []
 [dfs(i) for i in range(1, 10)]
 print((sorted(ans)[K - 1]))
-

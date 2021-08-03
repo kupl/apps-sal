@@ -1,5 +1,6 @@
 a, b = map(int, input().split())
-if a == b == 0: print('Yes')
+if a == b == 0:
+    print('Yes')
 else:
     ans = 'No'
     t = input()
@@ -10,13 +11,14 @@ else:
         h[k] += j
         p[i] = (h[0], h[1])
     if h[0] == h[1] == 0:
-        if (a, b) in p: ans = 'Yes'
-    elif h[0]:      
+        if (a, b) in p:
+            ans = 'Yes'
+    elif h[0]:
         for x, y in p:
             if (a - x) * h[1] == (b - y) * h[0] and (a - x) % h[0] == 0 and (a - x) * h[0] >= 0:
                 ans = 'Yes'
                 break
-    else:      
+    else:
         for x, y in p:
             if a == x and (b - y) % h[1] == 0 and (b - y) * h[1] >= 0:
                 ans = 'Yes'

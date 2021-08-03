@@ -1,9 +1,9 @@
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
         ALen = len(A)
-        moves = [[None, None] for i in range(ALen)] # [odd move, even move]
-        sortedNum = [[A[-1], ALen-1]]
-        
+        moves = [[None, None] for i in range(ALen)]  # [odd move, even move]
+        sortedNum = [[A[-1], ALen - 1]]
+
         def insertAt(x):
             l = 0
             r = len(sortedNum) - 1
@@ -17,12 +17,11 @@ class Solution:
                     l = m + 1
                 elif x < sortedNum[m][0]:
                     r = m
-                else: 
+                else:
                     return m
             return l
-        
-        
-        for i in range(ALen-2, -1, -1):
+
+        for i in range(ALen - 2, -1, -1):
             i1 = insertAt(A[i])
             if i1 < len(sortedNum) and sortedNum[i1][0] == A[i]:
                 moves[i] = [sortedNum[i1][1], sortedNum[i1][1]]
@@ -35,14 +34,14 @@ class Solution:
                     moves[i][0] = None
                     moves[i][1] = sortedNum[-1][1]
                 else:
-                    moves[i] = [sortedNum[i1][1], sortedNum[i1-1][1]]
+                    moves[i] = [sortedNum[i1][1], sortedNum[i1 - 1][1]]
                 sortedNum.insert(i1, [A[i], i])
         # print(sortedNum)
         # print(moves)
-        goodMoveList = [[False, False] for i in range(ALen)] # [odd move, even move]
+        goodMoveList = [[False, False] for i in range(ALen)]  # [odd move, even move]
         goodMoveList[-1] = [True, True]
         ans = 1
-        for i in range(ALen-2, -1, -1):
+        for i in range(ALen - 2, -1, -1):
             if moves[i][0] != None and goodMoveList[moves[i][0]][1]:
                 goodMoveList[i][0] = True
                 ans += 1
@@ -50,9 +49,3 @@ class Solution:
                 goodMoveList[i][1] = True
         # print(goodMoveList)
         return ans
-        
-        
-        
-        
-        
-

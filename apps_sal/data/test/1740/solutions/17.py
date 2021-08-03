@@ -1,14 +1,14 @@
 n = int(input())
 
 # 要素iの親（マージ先）を指す
-parent = [i for i in range(n+1)]
+parent = [i for i in range(n + 1)]
 
 # 各要素をここにマージしていく
-group = [[i] for i in range(n+1)]
+group = [[i] for i in range(n + 1)]
 
-for i in range(n-1):
+for i in range(n - 1):
     x, y = map(int, input().split())
-    
+
     # xのマージ先の配列の要素数 >= yのマージ先の配列の要素数となるようにxとyを入れ替える（マージテクの前処理）
     if len(group[parent[x]]) < len(group[parent[y]]):
         x, y = y, x

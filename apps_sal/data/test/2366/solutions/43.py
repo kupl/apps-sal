@@ -1,8 +1,10 @@
 import collections
 import math
 
+
 def cmb_factorial(s):
     return math.factorial(s) // (math.factorial(2) * math.factorial(s - 2))
+
 
 n = int(input())
 a = list(map(int, input().split()))

@@ -11,4 +11,3 @@ class Solution:
                     counts[ch] -= 1
             asc = not asc
         return ''.join(res)
-

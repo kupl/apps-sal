@@ -1,4 +1,4 @@
-def max_product(a):    
+def max_product(a):
     first_max = 0
     second_max = 0
     for x in a:
@@ -7,4 +7,4 @@ def max_product(a):
             first_max = x
         elif x > second_max:
             second_max = x
-    return first_max*second_max
+    return first_max * second_max

@@ -7,7 +7,7 @@ r = 0
 for i in range(n):
     for j in range(12):
         t = 0
-        t = (j != 0 and z[i][j-1] == 'S') + (j != 11 and z[i][j+1] == 'S')
+        t = (j != 0 and z[i][j - 1] == 'S') + (j != 11 and z[i][j + 1] == 'S')
         if z[i][j] == 'P' or z[i][j] == 'S':
             r += t
         elif z[i][j] == '.':

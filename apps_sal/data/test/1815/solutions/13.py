@@ -6,11 +6,11 @@ n = int(input())
 colors = list(map(int, sys.stdin.readline().split()))
 
 total = 0
-freqs = {colors[0] : 1}
-freqs_of_freqs = {1:1}
+freqs = {colors[0]: 1}
+freqs_of_freqs = {1: 1}
 max_length = 1
 
-for index, color in enumerate( colors[1:] ):
+for index, color in enumerate(colors[1:]):
 
     if color not in freqs:
         freqs[color] = 1
@@ -33,5 +33,3 @@ for index, color in enumerate( colors[1:] ):
             max_length = index + 2
 
 print(max_length)
-
-

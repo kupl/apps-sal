@@ -7,4 +7,3 @@ while np.all(A % 2 == 0):
     A = A // 2
     cnt += 1
 print(cnt)
-

@@ -3,7 +3,7 @@
 n, m = [int(x) for x in input().split()]
 dancers = {}
 for i in range(m):
-    dance = [int (x) for x in input().split()]
+    dance = [int(x) for x in input().split()]
     for j in range(3):
         if dance[j] not in dancers:
             dancers[dance[j]] = j
@@ -13,4 +13,3 @@ for i in range(m):
             break
 
 print(*[x + 1 for x in list(dancers.values())])
-

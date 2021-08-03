@@ -11,10 +11,10 @@ if tmp >= n:
     print(5)
     return
 
-cnt = n//tmp
-mod = n%tmp
+cnt = n // tmp
+mod = n % tmp
 
 if mod > 0:
-    print(5+cnt)
+    print(5 + cnt)
 else:
-    print(5+cnt-1)
+    print(5 + cnt - 1)

@@ -9,7 +9,8 @@ def battle():
     res = "Yes"
     if attackT < attackA:
         res = "No"
-        
+
     print(res)
-    
+
+
 battle()

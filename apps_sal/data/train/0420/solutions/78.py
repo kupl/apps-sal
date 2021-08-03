@@ -12,6 +12,3 @@ class Solution:
                 helper[state] = i
             res = max(res, i - helper[state])
         return res
-                
-            
-

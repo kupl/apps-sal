@@ -11,8 +11,8 @@ for i in range(pearl_count):
     else:
         recorded.add(pearls[i])
 if intervals:
-   intervals[-1][-1] = pearl_count
-   print(len(intervals))
-   [print(' '.join(map(str, interval))) for interval in intervals]
+    intervals[-1][-1] = pearl_count
+    print(len(intervals))
+    [print(' '.join(map(str, interval))) for interval in intervals]
 else:
     print(-1)

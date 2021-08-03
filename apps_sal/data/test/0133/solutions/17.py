@@ -1,15 +1,21 @@
-import sys, math, bisect
+import sys
+import math
+import bisect
+
 
 def input():
     return sys.stdin.readline()[:-1]
 
+
 def main():
     MOD = 10**9 + 7
-    n, m = list(map(int,input().split()))
-    t = pow(2,m,MOD)-1
-    print(pow(t,n,MOD))
+    n, m = list(map(int, input().split()))
+    t = pow(2, m, MOD) - 1
+    print(pow(t, n, MOD))
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

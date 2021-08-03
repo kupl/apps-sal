@@ -8,4 +8,3 @@ for a_i in a:
         cnt += 1
 
 print(cnt)
-

@@ -1,5 +1,5 @@
-def area_or_perimeter(l , w):
+def area_or_perimeter(l, w):
     if l == w:
-        return pow(l,2)
+        return pow(l, 2)
     else:
-        return (l+w) *2
+        return (l + w) * 2

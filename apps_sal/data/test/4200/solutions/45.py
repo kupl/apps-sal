@@ -1,8 +1,8 @@
 def __starting_point():
 
-    n,m = list(map(int,input().split()))
+    n, m = list(map(int, input().split()))
 
-    A = list(map(int,input().split()))
+    A = list(map(int, input().split()))
     get_A = sum(A) / (4 * m)
 
     ans = 0

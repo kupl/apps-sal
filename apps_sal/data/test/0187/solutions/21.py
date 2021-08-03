@@ -14,4 +14,3 @@ if not a and x[1] == y[1]:
     print(x[0], y[0])
 else:
     print('NO')
-

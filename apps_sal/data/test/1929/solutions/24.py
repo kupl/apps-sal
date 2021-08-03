@@ -15,5 +15,3 @@ if current_length >= c:
     res += current_length - c + 1
 
 print(res)
-
-

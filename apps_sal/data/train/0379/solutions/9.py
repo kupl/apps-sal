@@ -14,9 +14,3 @@ class Solution:
                 i += 1
                 j += 1
         return max(a, b) % mod
-
-                
-        
-            
-            
-

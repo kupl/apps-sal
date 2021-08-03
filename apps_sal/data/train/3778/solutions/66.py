@@ -5,5 +5,3 @@ def find_smallest_int(arr):
         if arr[i] < smallest:
             smallest = arr[i]
     return smallest
-         
-

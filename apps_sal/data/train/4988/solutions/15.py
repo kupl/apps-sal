@@ -1,3 +1,3 @@
 def square(n):
-    c = n*n
+    c = n * n
     return c

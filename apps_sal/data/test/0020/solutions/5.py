@@ -19,4 +19,3 @@ while True:
     if hh > 23:
         hh = 0
     cnt += 1
-

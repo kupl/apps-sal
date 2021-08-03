@@ -3,6 +3,7 @@ s = [input().strip() for i in range(8)]
 d1 = []
 d2 = []
 
+
 def check(x, y):
     if s[x][y] == 'B':
         for i in range(x + 1, 8):
@@ -13,6 +14,7 @@ def check(x, y):
             if s[i][y] == 'B':
                 return False
     return True
+
 
 for i in range(8):
     for j in range(8):
@@ -26,4 +28,3 @@ if min(d1) < min(d2):
     print("B")
 else:
     print("A")
-

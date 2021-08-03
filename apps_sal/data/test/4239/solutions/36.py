@@ -10,7 +10,7 @@ def base(x, y):
         x //= y
     ret += x
     return ret
-        
+
 
 def main():
     ans = INF
@@ -22,5 +22,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

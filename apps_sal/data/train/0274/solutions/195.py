@@ -1,13 +1,13 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         n = len(nums)
-        res = 0 
+        res = 0
         left, right = 0, 0
         minimum, maximum = [], []
         while right < n:
             heapq.heappush(minimum, (nums[right], right))
             heapq.heappush(maximum, (-nums[right], right))
-            right += 1            
+            right += 1
             while -maximum[0][0] - minimum[0][0] > limit:
                 # print(\"pop\", left, right, res, minimum, maximum, )
                 while minimum and minimum[0][1] <= left:

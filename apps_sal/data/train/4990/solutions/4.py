@@ -1,3 +1,2 @@
-solution=str.endswith
+solution = str.endswith
 # Easy peasy
-

@@ -44,24 +44,24 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-        
+
 
 N, M = map(int, input().split())
 AB = []
 for i in range(M):
     AB.append(list(map(int, input().split())))
 AB.reverse()
-    
+
 uf = UnionFind(N)
-ans = [N*(N-1)//2]
-for i in range(M-1):
+ans = [N * (N - 1) // 2]
+for i in range(M - 1):
     A, B = AB[i]
-    if uf.find(A-1) == uf.find(B-1):
+    if uf.find(A - 1) == uf.find(B - 1):
         ans.append(ans[i])
     else:
-        ans.append(ans[i] - uf.size(A-1) * uf.size(B-1))
-    uf.union(A-1, B-1)
-    
+        ans.append(ans[i] - uf.size(A - 1) * uf.size(B - 1))
+    uf.union(A - 1, B - 1)
+
 ans.reverse()
 for i in range(M):
     print(ans[i])

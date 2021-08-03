@@ -1,3 +1,2 @@
-## KALAM
-print(["Mahmoud" , "Ehab"][(int(input())) & 1])
-
+# KALAM
+print(["Mahmoud", "Ehab"][(int(input())) & 1])

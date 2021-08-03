@@ -16,6 +16,6 @@ for x in reversed(s):
 
 ans = 0
 for x in m:
-    ans += x * (x-1) // 2
+    ans += x * (x - 1) // 2
 
 print(ans)

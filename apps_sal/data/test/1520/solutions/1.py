@@ -4,6 +4,7 @@ readline = sys.stdin.readline
 N = int(readline())
 S = [readline().strip() for i in range(N)]
 
+
 def calc(s):
     res = []
     last = s[0]
@@ -18,21 +19,23 @@ def calc(s):
     if cnt > 0:
         res.append((last, cnt))
     return res
-rr = calc(S[N-1])
+
+
+rr = calc(S[N - 1])
 if len(rr) > 1:
     ans = max(x for c, x in rr)
     c0, x0 = rr[0]
     c1, x1 = rr[-1]
     m0 = m1 = 0
-    for i in range(N-1):
+    for i in range(N - 1):
         s = S[i]
         for c in s:
             if c1 == c == c0:
-                ans = max(ans, x0+x1+1)
+                ans = max(ans, x0 + x1 + 1)
             elif c == c0:
-                ans = max(ans, x0+1)
+                ans = max(ans, x0 + 1)
             elif c == c1:
-                ans = max(ans, x1+1)
+                ans = max(ans, x1 + 1)
 else:
     c0, x0 = rr[0]
     rr0 = calc(S[0])
@@ -40,12 +43,12 @@ else:
     for c, x in rr0:
         if c0 == c:
             r = max(r, x)
-    for i in range(1, N-1):
+    for i in range(1, N - 1):
         rr1 = calc(S[i])
         if len(rr1) == 1:
             c1, x1 = rr1[0]
             if c0 == c1:
-                r = (r+1)*x1 + r
+                r = (r + 1) * x1 + r
             else:
                 r = +(r > 0)
         else:
@@ -62,5 +65,5 @@ else:
             for d, y in rr1:
                 if d == c0:
                     r = max(r, y)
-    ans = (r+1)*x0 + r
+    ans = (r + 1) * x0 + r
 print(ans)

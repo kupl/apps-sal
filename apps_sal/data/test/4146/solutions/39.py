@@ -1,6 +1,6 @@
 from collections import Counter
 n = int(input())
-v = list(map(int,input().split()))
+v = list(map(int, input().split()))
 a = Counter(v[::2])
 b = Counter(v[1::2])
 a = a.most_common()
@@ -16,6 +16,6 @@ if len(b) == 1:
 else:
     b2 = b[1][1]
 if a[0][0] != b[0][0]:
-    print(n-(a1+b1))
+    print(n - (a1 + b1))
 else:
-    print(min(n-(a1+b2),n-(a2+b1)))
+    print(min(n - (a1 + b2), n - (a2 + b1)))

@@ -1,9 +1,9 @@
-a, b, c =map(int, input().split())
+a, b, c = map(int, input().split())
 
 
-if a==b:
+if a == b:
     print(c)
-elif b ==c:
+elif b == c:
     print(a)
 else:
     print(b)

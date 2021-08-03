@@ -44,14 +44,14 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-      
-      
-N,M = map(int,input().split())
 
-uf = UnionFind(N+1)
 
-for s in range (M):
-  X,Y,Z = map(int,input().split())
-  uf.union(X,Y)
+N, M = map(int, input().split())
 
-print(uf.group_count() -1)
+uf = UnionFind(N + 1)
+
+for s in range(M):
+    X, Y, Z = map(int, input().split())
+    uf.union(X, Y)
+
+print(uf.group_count() - 1)

@@ -34,4 +34,3 @@ while Q and possible:
             for i in adj[cur]:
                 Q.append((i, s[i] - curs, s[i]))
 print(ans)
-

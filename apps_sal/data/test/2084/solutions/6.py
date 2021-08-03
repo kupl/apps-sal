@@ -7,4 +7,3 @@ for i in range(k):
     s += a[i]
 
 print(s)
-

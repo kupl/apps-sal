@@ -5,6 +5,7 @@ def findSumOfDigits(n):
         n //= 10
     return sum
 
+
 ans = 0
 n = int(input())
 total = findSumOfDigits(n)

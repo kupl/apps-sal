@@ -9,4 +9,3 @@ def goose_filter(birds):
         else:
             new.append(i)
     return new
-

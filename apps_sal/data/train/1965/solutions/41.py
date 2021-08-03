@@ -1,15 +1,19 @@
 from typing import List
+
+
 class Solution:
-    def find(self,i):
+    def find(self, i):
         if i != self.root[i]:
             self.root[i] = self.find(self.root[i])
         return self.root[i]
 
-    def uni(self,x, y):
+    def uni(self, x, y):
         x, y = self.find(x), self.find(y)
-        if x == y: return 0
+        if x == y:
+            return 0
         self.root[x] = y
         return 1
+
     def maxNumEdgesToRemove(self, n, edges):
         # Union find
 

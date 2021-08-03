@@ -1,4 +1,6 @@
 import datetime
+
+
 def unlucky_days(year):
     total = 0
     month = 1
@@ -8,6 +10,6 @@ def unlucky_days(year):
             total += 1
             month += 1
         else:
-            month +=1
+            month += 1
             continue
     return total

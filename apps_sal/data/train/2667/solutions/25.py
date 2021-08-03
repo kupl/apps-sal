@@ -1,8 +1,8 @@
 def zero_fuel(distance_to_pump, mpg, fuel_left):
-    #Happy Coding! ;)
-    
-    a=distance_to_pump*(1/mpg)-fuel_left
-    if a<=0 :
+    # Happy Coding! ;)
+
+    a = distance_to_pump * (1 / mpg) - fuel_left
+    if a <= 0:
         return True
     else:
         return False

@@ -1,6 +1,7 @@
 CATEGORIES = ['fruit', 'meat', 'other', 'vegetable']
 KNOWN = {c: c for c in CATEGORIES if c != 'other'}
 
+
 def group_groceries(groceries):
     d = {key: [] for key in CATEGORIES}
     for item in groceries.split(','):

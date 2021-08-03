@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def isTree(matrix):
     graph = defaultdict(set)
     for node, connections in enumerate(matrix):
@@ -8,7 +9,7 @@ def isTree(matrix):
         for connection in connections:
             graph[connection].add(node)
             graph[node].add(connection)
-            
+
     N = len(matrix)
     for node in graph.keys():
         stack, seen = [node], set()

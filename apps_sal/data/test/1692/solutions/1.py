@@ -10,4 +10,3 @@ for i in range(len(s)):
     if s[i] % 4 == 0:
         answer += 1
 print(answer)
-

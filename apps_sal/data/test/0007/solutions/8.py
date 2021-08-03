@@ -10,8 +10,6 @@ else:
         summ = mid * (mid + 1) // 2
         if summ >= n - m:
             r = mid
-        else: 
+        else:
             l = mid
     print(r + m)
-
-

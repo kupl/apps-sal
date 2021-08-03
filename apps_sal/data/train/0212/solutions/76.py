@@ -9,7 +9,6 @@ class Solution:
             for p, pCount in list(treeCount.items()):
                 q, rem = divmod(num, p)
                 if rem == 0:
-                    count += pCount * treeCount.get(q, 0) 
+                    count += pCount * treeCount.get(q, 0)
             treeCount[num] = count
         return sum(treeCount.values()) % (1000_000_000 + 7)
-

@@ -22,5 +22,3 @@ class Solution:
                 dp[i] = sum(t[v] for v in jumps[i]) % MOD
 
         return sum(dp) % MOD
-
-

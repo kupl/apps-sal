@@ -9,5 +9,4 @@ while a > 0:
         l += 1
     a -= 1
 
-print(2*min(l, r))
-
+print(2 * min(l, r))

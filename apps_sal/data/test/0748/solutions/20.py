@@ -1,8 +1,8 @@
 n = int(input())
-a = list(map(int,input().split()))
-c = [0]*8
+a = list(map(int, input().split()))
+c = [0] * 8
 for i in a:
-    c[i]+=1
+    c[i] += 1
 if c[5] or c[7]:
     print(-1)
     return
@@ -18,7 +18,7 @@ t3 = c[4]
 c[4] = 0
 c[2] -= t3
 c[1] -= t3
-if c.count(0) != 8 or t1<0 or t2<0 or t3<0:
+if c.count(0) != 8 or t1 < 0 or t2 < 0 or t3 < 0:
     print(-1)
 else:
     for i in range(t1):

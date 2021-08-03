@@ -1,8 +1,20 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
 
 sys.setrecursionlimit(10**7)
 inf = 10**10
 mod = 10**9 + 7
+
 
 def f():
     r = 0
@@ -13,12 +25,12 @@ def f():
     for si in s:
         sc = ord(si) - ai
         if sc > c:
-            t = min(26+c-sc, sc-c)
+            t = min(26 + c - sc, sc - c)
         else:
-            t = min(c-sc, sc+26-c)
+            t = min(c - sc, sc + 26 - c)
         r += t
         c = sc
     return r
 
-print(f())
 
+print(f())

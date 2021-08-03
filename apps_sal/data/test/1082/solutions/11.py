@@ -1,5 +1,7 @@
 from collections import defaultdict
-            #from collections import defaultdict
+#from collections import defaultdict
+
+
 def getmask(x):
     ans = 0
     for i in range(2, x + 1):
@@ -7,7 +9,8 @@ def getmask(x):
             x //= i
             ans ^= 1 << i
     return ans
- 
+
+
 def main():
     maxn = 71
     #maxn = 71
@@ -27,9 +30,7 @@ def main():
             if i ^ fixed < i:
                 masks[i ^ fixed] += masks[i]
                 masks[i] = 0
-    print(pow(2, masks[0], 10**9+7) - 1)
-    
-    
-    
-main()
+    print(pow(2, masks[0], 10**9 + 7) - 1)
 
+
+main()

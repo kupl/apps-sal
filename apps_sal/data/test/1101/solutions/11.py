@@ -1,6 +1,6 @@
 
 def main():
-    n,k = list(map(int, input().split()))
+    n, k = list(map(int, input().split()))
     cowLocations = input()
     #n,k = 7,2
     #cowLocations = "0100100"
@@ -12,26 +12,26 @@ def main():
     j = k
     fJohn = 0
     wic = len(whereIsCow)
-    #print(whereIsCow)
+    # print(whereIsCow)
     smallest = 1000000
     while i < wic and j < wic and fJohn < wic:
-        maxDist = max(whereIsCow[j]-whereIsCow[fJohn],
-                                   whereIsCow[fJohn]-whereIsCow[i])
-        #print(maxDist)
-        while fJohn <= j and max(whereIsCow[j]-whereIsCow[fJohn+1],
-                                   whereIsCow[fJohn+1]-whereIsCow[i]) < maxDist:
+        maxDist = max(whereIsCow[j] - whereIsCow[fJohn],
+                      whereIsCow[fJohn] - whereIsCow[i])
+        # print(maxDist)
+        while fJohn <= j and max(whereIsCow[j] - whereIsCow[fJohn + 1],
+                                 whereIsCow[fJohn + 1] - whereIsCow[i]) < maxDist:
             fJohn += 1
-            maxDist = max(whereIsCow[j]-whereIsCow[fJohn],
-                                   whereIsCow[fJohn]-whereIsCow[i])
+            maxDist = max(whereIsCow[j] - whereIsCow[fJohn],
+                          whereIsCow[fJohn] - whereIsCow[i])
         if maxDist < smallest:
             smallest = maxDist
         j += 1
         i += 1
     print(smallest)
 
+
 def __starting_point():
     main()
-    
 
 
 __starting_point()

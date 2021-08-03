@@ -5,6 +5,7 @@ def ans():
 
     print(ans)
 
+
 tc = int(input())
 for _ in range(tc):
     ans()

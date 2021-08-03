@@ -5,7 +5,7 @@ class Solution:
         prefix[0] = arr[0]
         for i in range(1, n):
             prefix[i] = prefix[i - 1] ^ arr[i]
-        
+
         ans = 0
         for i in range(n - 1):
             for j in range(i + 1, n):
@@ -15,4 +15,3 @@ class Solution:
                         # print(i, j, k, prefix[i - 1], prefix[j - 1], prefix[k])
                         ans += 1
         return ans
-

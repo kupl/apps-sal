@@ -1,8 +1,8 @@
-a, b, c = map(int,input().split())
+a, b, c = map(int, input().split())
 
 if int(a) == int(b):
-  print(c)
+    print(c)
 if int(a) == int(c):
-  print(b)
+    print(b)
 if int(b) == int(c):
-  print(a)
+    print(a)

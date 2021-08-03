@@ -4,10 +4,10 @@ def answer(puzzlebox):
 
 
 print((type(dir(puzzlebox))))
-for i in dir(puzzlebox):  
+for i in dir(puzzlebox):
     print(i)
-      
-      
+
+
 x = Puzzlebox()
 print(x)
 print((x.answer))
@@ -16,4 +16,3 @@ print((x.hint_two))
 print((x.key))
 print((x.lock(x.key)))
 # x.lock(x.key)
-

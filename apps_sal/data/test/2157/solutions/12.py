@@ -1,34 +1,40 @@
-#python3
-import sys, threading, os.path
-import collections, heapq, math,bisect
+# python3
+import sys
+import threading
+import os.path
+import collections
+import heapq
+import math
+import bisect
 import string
 from platform import python_version
 import itertools
 sys.setrecursionlimit(10**6)
-threading.stack_size(2**27)     
+threading.stack_size(2**27)
+
 
 def main():
     if os.path.exists('input.txt'):
         input = open('input.txt', 'r')
     else:
         input = sys.stdin
-    #--------------------------------INPUT---------------------------------
-    n,q = list(map(int, input.readline().split()))
+    # --------------------------------INPUT---------------------------------
+    n, q = list(map(int, input.readline().split()))
     lis = list(map(int, input.readline().split()))
     lis.sort()
-    val = [0]*(n+1)
+    val = [0] * (n + 1)
     for i in range(q):
-        l,r = list(map(int, input.readline().split()))
-        val[l-1] += 1
+        l, r = list(map(int, input.readline().split()))
+        val[l - 1] += 1
         val[r] -= 1
     for i in range(n):
-        val[i+1]+=val[i]
+        val[i + 1] += val[i]
     val.sort()
-    sum=0
+    sum = 0
     for i in range(n):
-        sum+=val[i+1]*lis[i]
+        sum += val[i + 1] * lis[i]
     output = sum
-    #-------------------------------OUTPUT----------------------------------
+    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('output.txt'):
         open('output.txt', 'w').writelines(str(output))
     else:
@@ -37,6 +43,7 @@ def main():
 
 def __starting_point():
     main()
-#threading.Thread(target=main).start()
+# threading.Thread(target=main).start()
+
 
 __starting_point()

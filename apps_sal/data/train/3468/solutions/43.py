@@ -11,7 +11,7 @@ def scramble(s1, s2):
             s2_dict[i] += 1
         else:
             s2_dict[i] = 1
-    for k, v in  s2_dict.items():
+    for k, v in s2_dict.items():
         if k not in s1_dict or s1_dict[k] < v:
             return False
     return True

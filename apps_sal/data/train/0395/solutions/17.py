@@ -16,17 +16,17 @@ class Solution:
             stack.append(i)
 
         def jump(index, jump_num):
-            if index == n-1:
+            if index == n - 1:
                 return 1
-            
+
             next_index = 0
             if jump_num % 2 == 1:
                 next_index = next_higher[index]
             else:
                 next_index = next_lower[index]
-        
-            return jump(next_index, jump_num+1) if next_index else 0
-        
+
+            return jump(next_index, jump_num + 1) if next_index else 0
+
         result = 0
         for start in range(n):
             result += jump(start, 1)

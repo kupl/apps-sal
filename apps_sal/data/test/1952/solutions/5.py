@@ -21,4 +21,3 @@ for i in range(ans):
     res = [str(ms[j]) for j in range(n - 1 - i, -1, -ans)]
     print(len(res), end=" ")
     print(" ".join(res))
-

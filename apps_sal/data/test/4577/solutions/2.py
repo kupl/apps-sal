@@ -9,4 +9,3 @@ if A <= C <= B:
     result = 'Yes'
 
 print(result)
-

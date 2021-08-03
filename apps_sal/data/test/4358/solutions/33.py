@@ -14,4 +14,3 @@ for i in range(len(data)):
 
 kei = kei - max / 2
 print((int(kei)))
-

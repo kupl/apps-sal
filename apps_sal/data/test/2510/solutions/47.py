@@ -37,4 +37,3 @@ for ab in AB_M:
 ans = - min(parents)
 
 print(ans)
-

@@ -1,5 +1,5 @@
 def bfs(source):
-    q = [0] * (n + 1);
+    q = [0] * (n + 1)
     fa = [-1] * n
     l, r = [1] * 2
     fa[source] = source
@@ -8,11 +8,11 @@ def bfs(source):
         x = q[l]
         l += 1
         for y in e[x]:
-            if  fa[y] == -1:
+            if fa[y] == -1:
                 fa[y] = x
                 r += 1
                 q[r] = y
-    i = r;
+    i = r
     while i >= 1:
         x = q[i]
         for y in e[x]:
@@ -21,7 +21,8 @@ def bfs(source):
                 dp[x] += dp[y] + min(sum[y], m - sum[y])
         i -= 1
 
-n, m =[int(x) for x in input().split()]
+
+n, m = [int(x) for x in input().split()]
 m <<= 1
 t = [int(x) for x in input().split()]
 e = [list() for i in range(n)]

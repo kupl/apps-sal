@@ -15,16 +15,15 @@ class ThroneInheritance:
         ans = []
         self.recur(self.king, ans)
         return ans
-        
-    def recur(self, name:str, ans:List[str]) -> None :
+
+    def recur(self, name: str, ans: List[str]) -> None:
         if name not in self.deathset:
             ans.append(name)
-        for child in self.pc[name] :
-            self.recur (child, ans)
+        for child in self.pc[name]:
+            self.recur(child, ans)
 
 # Your ThroneInheritance object will be instantiated and called as such:
 # obj = ThroneInheritance(kingName)
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

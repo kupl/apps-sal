@@ -5,11 +5,12 @@ class Solution:
         best_profit = 0
         curr_enqueued = 0
         curr_profit = 0
+
         def get_customers(i):
             if i >= len(customers):
                 return 0
             return customers[i]
-        
+
         i = 0
         best_turns = -1
         while curr_enqueued > 0 or i < len(customers):

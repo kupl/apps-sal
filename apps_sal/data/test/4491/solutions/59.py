@@ -14,4 +14,3 @@ for i in range(n):
     res = max(tmp, res)
 
 print(res)
-

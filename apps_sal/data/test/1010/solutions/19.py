@@ -1,4 +1,4 @@
-def solve( n , nuts ):
+def solve(n, nuts):
 
     try:
         i = nuts.index("1")
@@ -15,7 +15,7 @@ def solve( n , nuts ):
     cur = start + 1
     while cur <= ri:
         if nuts[cur] == "1":
-            res *= (cur-start)
+            res *= (cur - start)
             start = cur
             cur = start + 1
         else:
@@ -27,6 +27,7 @@ def __starting_point():
 
     n = int(input())
     nuts = "".join(input().split())
-    print( solve( n , nuts ) )
+    print(solve(n, nuts))
+
 
 __starting_point()

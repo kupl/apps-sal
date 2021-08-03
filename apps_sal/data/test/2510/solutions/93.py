@@ -1,6 +1,7 @@
 from sys import stdin
-nii=lambda:map(int,stdin.readline().split())
-lnii=lambda:list(map(int,stdin.readline().split()))
+def nii(): return map(int, stdin.readline().split())
+def lnii(): return list(map(int, stdin.readline().split()))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -49,17 +50,18 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m=nii()
-uf=UnionFind(n)
-for i in range(m):
-  a,b=nii()
-  a-=1
-  b-=1
-  uf.union(a,b)
 
-root=uf.roots()
-ans=0
+n, m = nii()
+uf = UnionFind(n)
+for i in range(m):
+    a, b = nii()
+    a -= 1
+    b -= 1
+    uf.union(a, b)
+
+root = uf.roots()
+ans = 0
 for i in root:
-  ans=max(ans,uf.size(i))
+    ans = max(ans, uf.size(i))
 
 print(ans)

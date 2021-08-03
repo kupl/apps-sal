@@ -39,4 +39,3 @@ else:
                 l, r = li, ri
 
 print(ans)
-

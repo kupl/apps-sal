@@ -3,7 +3,7 @@ class Solution:
         if len(arr) <= 1:
             return 0
         bfs = []
-        heapq.heappush(bfs, (0,0))
+        heapq.heappush(bfs, (0, 0))
         seen = {}
         seen[0] = 0
         G = defaultdict(list)

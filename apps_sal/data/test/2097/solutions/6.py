@@ -6,6 +6,6 @@ while(t):
     ans = a.count(0)
     summ = sum(a) + ans
     if(summ == 0):
-        print(ans+1)
+        print(ans + 1)
     else:
         print(ans)

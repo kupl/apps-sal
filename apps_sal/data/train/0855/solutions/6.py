@@ -1,6 +1,6 @@
 # cook your dish here
-n=int(input())
+n = int(input())
 while(n):
-    s=input()
+    s = input()
     print(s[::-1])
-    n-=1
+    n -= 1

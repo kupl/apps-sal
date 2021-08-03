@@ -5,6 +5,6 @@ A2 = [A[0]]
 for a in A[1:]:
     A2.extend([a, a])
 ans = 0
-for a in A2[:n-1]:
+for a in A2[:n - 1]:
     ans += a
 print(ans)

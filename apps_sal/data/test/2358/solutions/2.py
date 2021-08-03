@@ -23,4 +23,3 @@ if out:
     print(' '.join([str(x + 1) for x in sorted(out)]))
 else:
     print(0)
-

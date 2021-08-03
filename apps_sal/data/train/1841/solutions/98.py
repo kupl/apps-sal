@@ -3,7 +3,7 @@ class Solution:
         a = arr
         a.sort()
         n = len(a)
-        m = a[(n - 1)>> 1]
+        m = a[(n - 1) >> 1]
         ans = []
         l, h = 0, n - 1
         while len(ans) < k:

@@ -5,4 +5,3 @@ if n == m:
     result = 'Yes'
 
 print(result)
-

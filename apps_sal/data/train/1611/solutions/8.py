@@ -1,11 +1,12 @@
 UPPER_BOUND = 1000000000
 
-def test_call (current_function: str, functions: dict, stack: set):
+
+def test_call(current_function: str, functions: dict, stack: set):
     min_n = UPPER_BOUND
     max_n = 0
 
     stack.add(current_function)
-    #print("    " * len(stack), current_function, ' ', functions,
+    # print("    " * len(stack), current_function, ' ', functions,
     #        current_function in stack, sep='')
     for next_funcion in functions[current_function]:
         if next_funcion in stack:
@@ -14,7 +15,7 @@ def test_call (current_function: str, functions: dict, stack: set):
 
         else:
             current_min, current_max = \
-                    test_call(next_funcion, functions, stack)
+                test_call(next_funcion, functions, stack)
             current_min += 1
             current_max += 1
             if current_min < min_n:
@@ -30,12 +31,13 @@ def test_call (current_function: str, functions: dict, stack: set):
         max_n = min_n
     return (min_n, max_n)
 
+
 def read_function(s: str):
     """
     return:
         (function_#, [functions called])
     """
-    i = 0;
+    i = 0
     while (s[i] in "0123456789"):
         i += 1
 
@@ -47,7 +49,7 @@ def read_function(s: str):
     while 1:
         i = s.find('P', i)
         if i < 0:
-            break;
+            break
         nums = i + 1
         i += 1
         while i < len(s) and s[i] in "0123456789":
@@ -59,8 +61,9 @@ def read_function(s: str):
 
     return (function_no, function_calls)
 
-def parse_program (program_s: str):
-    i = 0;
+
+def parse_program(program_s: str):
+    i = 0
     functions = {}
 
     while 1:
@@ -73,9 +76,8 @@ def parse_program (program_s: str):
         func_no, fun_calls = read_function(program_s[funs:fune])
         functions[func_no] = fun_calls
 
-
     #print("Finish parsing")
-    i = 0;
+    i = 0
     min_n, max_n = UPPER_BOUND, 0
 
     while 1:
@@ -89,7 +91,7 @@ def parse_program (program_s: str):
         while 1:
             i = program_s.find('P', i)
             if i < 0 or i >= next_sof:
-                break;
+                break
             nums = i + 1
             i += 1
             while i < len(program_s) and program_s[i] in "0123456789":
@@ -107,7 +109,6 @@ def parse_program (program_s: str):
             break
         i = next_eof + 1
 
-
     if min_n == UPPER_BOUND:
         min_n = 0
         max_n = 0
@@ -117,6 +118,3 @@ def parse_program (program_s: str):
 
 def magic_call_depth_number(pattern):
     return parse_program(pattern)
-
-
-

@@ -1,7 +1,7 @@
 # Задача про банковский счет. от 30.05.13
 inner_data = input()
 if int(inner_data) >= 0:
-    print (inner_data)
+    print(inner_data)
 else:
     inner_data = inner_data[1:]
     ee = ''
@@ -15,16 +15,16 @@ else:
     if int(inner_data[-1]) > int(inner_data[-2]):
         if (int(inner_data[-1]) == 0):
             if int(inner_data[-2]) != 0:
-                print (0)
+                print(0)
         elif int(inner_data[-1]) != 0:
-            print ('-' + inner_data[0:-1])
-            
+            print('-' + inner_data[0:-1])
+
     elif int(inner_data[-1]) < int(inner_data[-2]):
         if (int(ee[::-1]) == 0):
-            print (0)
+            print(0)
         else:
-            print ('-' + ee[::-1])
+            print('-' + ee[::-1])
     elif int(inner_data[-1]) == int(inner_data[-2]):
-        print ('-' + ee[::-1])
+        print('-' + ee[::-1])
     else:
-        print (0)
+        print(0)

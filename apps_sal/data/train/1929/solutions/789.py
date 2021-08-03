@@ -6,24 +6,24 @@ class StreamChecker:
             t = self.trie
             for c in w:
                 if c not in t:
-                    t[c]={}
+                    t[c] = {}
                 t = t[c]
-            t['#']='#'
+            t['#'] = '#'
         self.poss = []
-                    
+
     def query(self, letter: str) -> bool:
-        
+
         waitlist = []
-        
+
         if letter in self.trie:
             waitlist.append(self.trie[letter])
-            
+
         for t in self.poss:
             if letter in t:
                 waitlist.append(t[letter])
         self.poss = waitlist
         return any('#' in t for t in waitlist)
-    
+
 #         ans = False
 #         popthis = set()
 #         if letter in self.trie:
@@ -41,15 +41,10 @@ class StreamChecker:
 #             if i not in popthis:
 #                 new.append(x)
 #         self.poss = new
-        
+
 #         return ans
-        
-        
-       
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamC'hecker(words)
 # param_1 = obj.query(letter)
-

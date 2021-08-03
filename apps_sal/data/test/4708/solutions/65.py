@@ -2,8 +2,8 @@ N = int(input())
 K = int(input())
 X = int(input())
 Y = int(input())
- 
-if N<=K:
-  print(X*N)
+
+if N <= K:
+    print(X * N)
 else:
-  print(K * X + (N - K) * Y)
+    print(K * X + (N - K) * Y)

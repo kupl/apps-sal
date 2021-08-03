@@ -5,6 +5,7 @@ def gcd(a, b):
         b = tmp % a
     return a
 
+
 input()
 x = sorted([int(i) + 1000000001 for i in input().split()])
 
@@ -17,4 +18,3 @@ for i in range(1, len(x)):
     res += (x[i] - x[i - 1]) // ans - 1
 
 print(res)
-

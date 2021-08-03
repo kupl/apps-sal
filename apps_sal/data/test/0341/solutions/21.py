@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 N, K = list(map(int, input().split()))
@@ -26,4 +26,3 @@ for i in range(K):
         last = T[j]
 
 print(ans)
-

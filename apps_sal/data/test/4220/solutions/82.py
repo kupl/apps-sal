@@ -5,4 +5,3 @@ if len(S) > K:
     print((S[:K] + "..."))
 else:
     print(S)
-

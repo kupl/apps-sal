@@ -11,4 +11,3 @@ def scramble(s1, s2):
         else:
             s1_dict[char] = s1_dict[char] - 1
     return True
-

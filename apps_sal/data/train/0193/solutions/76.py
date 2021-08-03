@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
         sz = len(arr)
@@ -7,8 +9,7 @@ class Solution:
         numElems = 0
         for e in d:
             numElems += e[1]
-            if numElems < sz//2:
+            if numElems < sz // 2:
                 num += 1
             else:
-                return num+1
-
+                return num + 1

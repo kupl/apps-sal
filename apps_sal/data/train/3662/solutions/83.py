@@ -1,4 +1,4 @@
-def xor(a,b):
+def xor(a, b):
     xor = False
     if a == True and b == True:
         xor = False

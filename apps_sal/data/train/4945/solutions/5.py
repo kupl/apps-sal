@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def two_by_two(animals):
     if not animals:
         return False

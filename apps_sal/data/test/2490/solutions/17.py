@@ -10,4 +10,3 @@ for n in N:
     eq, ov = a, b
 
 print(eq)
-

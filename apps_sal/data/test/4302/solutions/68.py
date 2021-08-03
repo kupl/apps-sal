@@ -1,4 +1,4 @@
-a,b = map(int,input().split())
+a, b = map(int, input().split())
 c = 0
 
 if a > b:

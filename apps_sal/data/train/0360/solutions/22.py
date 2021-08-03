@@ -1,9 +1,9 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        
+
         lo = max(weights)
         hi = sum(weights)
-        
+
         def calculate_capacity(n):
             num_day = 1
             curr_capacity = 0
@@ -14,7 +14,7 @@ class Solution:
                     num_day += 1
                     curr_capacity = weight
             return num_day
-        
+
         while lo < hi:
             mid = lo + (hi - lo) // 2
             day = calculate_capacity(mid)
@@ -23,4 +23,3 @@ class Solution:
             else:
                 hi = mid
         return lo
-

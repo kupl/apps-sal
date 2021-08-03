@@ -19,6 +19,4 @@ ans3 = reduce(lambda x, y: (x * y) % 1000000007, [10 if s1[i] == '?' and s2[i] =
 print((10 ** s - (not b2) * ans1 - (not b1) * ans2 + (not b1 and not b2) * ans3) % 1000000007)
 
 
-
 # Made By Mostafa_Khaled
-

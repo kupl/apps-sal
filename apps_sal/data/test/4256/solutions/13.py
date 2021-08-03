@@ -3,4 +3,3 @@ if b // a < c:
     print((b // a))
 else:
     print(c)
-

@@ -54,4 +54,3 @@ if cop != 0:
     if cop < 10:
         print(0, end='')
     print(cop, end='')
-

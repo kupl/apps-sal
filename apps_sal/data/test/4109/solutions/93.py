@@ -12,7 +12,7 @@ for i in range(1 << N):
         if (i >> j) & 1:
             # print(j, "entry")
             for k in range(M):
-                s[k] += a[j][k+1]
+                s[k] += a[j][k + 1]
             c += a[j][0]
 
     # print(s, c, d)
@@ -28,6 +28,3 @@ if len(d) == 0:
     print("-1")
 else:
     print((min(d)))
-
-
-

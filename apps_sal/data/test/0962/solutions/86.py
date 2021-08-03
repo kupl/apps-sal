@@ -64,4 +64,3 @@ while True:
         print((len(v)))
         print(('\n'.join(map(str, v))))
         return
-

@@ -3,7 +3,7 @@ for test in range(tests):
     n = int(input())
     a = [int(i) for i in input().split()]
     x = -1
-    for i in range(n-2, -1, -1):
+    for i in range(n - 2, -1, -1):
         if a[i] < a[i + 1]:
             x = i
             break
@@ -19,5 +19,3 @@ for test in range(tests):
         print(0)
         continue
     print(y + 1)
-        
-

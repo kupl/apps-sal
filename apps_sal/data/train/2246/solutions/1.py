@@ -1,19 +1,21 @@
 from heapq import *
+
+
 def main():
     n, k = input().split()
     n = int(n)
     k = int(k)
-    req = list(map(lambda x:int(x),input().split()))
+    req = list(map(lambda x: int(x), input().split()))
     each = int(input())
-    prices = list(map(lambda x:int(x),input().split()))
+    prices = list(map(lambda x: int(x), input().split()))
     total = 0
     hp = []
     heapify(hp)
     for i in range(n):
-        heappush(hp,prices[i])
+        heappush(hp, prices[i])
         #print(f"day{i}, max{k}")
-        needed = (req[i] - k + each -1) // each
-        needed = max(0,needed)
+        needed = (req[i] - k + each - 1) // each
+        needed = max(0, needed)
         if len(hp) < needed:
             print(-1)
             return
@@ -21,5 +23,6 @@ def main():
             total += heappop(hp)
             k += each
     print(total)
+
 
 main()

@@ -1,12 +1,14 @@
-#create date: 2020-07-03 22:02
+# create date: 2020-07-03 22:02
 
+from itertools import groupby, accumulate
 import sys
 stdin = sys.stdin
-from itertools import groupby, accumulate
+
 
 def ns(): return stdin.readline().rstrip()
 def ni(): return int(ns())
 def na(): return list(map(int, stdin.readline().split()))
+
 
 def main():
     n, k = na()
@@ -21,18 +23,21 @@ def main():
         a.append(0)
     acum = list(accumulate(a))
     m = len(acum)
-    l = 2*k + 1
+    l = 2 * k + 1
     if m == 1:
         print(acum[0])
         return
     if l > m:
         print(acum[-1])
         return
-    ans = acum[l-1]
-    for i in range(0, m-l+1, 2):
-        ans = max(ans, acum[i+l-1] - acum[i-1])
+    ans = acum[l - 1]
+    for i in range(0, m - l + 1, 2):
+        ans = max(ans, acum[i + l - 1] - acum[i - 1])
     print(ans)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

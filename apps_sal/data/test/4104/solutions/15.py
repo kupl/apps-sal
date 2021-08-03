@@ -3,7 +3,7 @@ val = eval(s)
 for i in range(len(s)):
     if s[i] == '+':
         c = -5
-        j = i+1
+        j = i + 1
         while j < len(s) and s[j] != '+' and s[j] != '-':
             j += 1
             c *= 10

@@ -15,8 +15,8 @@ class Solution:
             right = 0
             if node.right:
                 right = countNodes(node.right)
-            return left+right+1
-        
+            return left + right + 1
+
         def searchNode(node, x):
             if node.val == x:
                 return node
@@ -29,11 +29,11 @@ class Solution:
                 if tmp:
                     return tmp
             return None
-        
+
         node = searchNode(root, x)
         left = countNodes(node.left)
         right = countNodes(node.right)
-        parent = n - left - right -1
-        if parent > n-parent or left > n- left or right > n - right:
+        parent = n - left - right - 1
+        if parent > n - parent or left > n - left or right > n - right:
             return True
         return False

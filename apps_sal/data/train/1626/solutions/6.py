@@ -1,6 +1,8 @@
 import math
 
+
 def seq_len_formula(s, b, n, i): return s + i * b + n * (i * (i + 1) // 2)
+
 
 def point_gen():
     num_len, block_len, seq_len = 0, 0, 0
@@ -10,13 +12,16 @@ def point_gen():
         num_len += 1
         seq_len = seq_len_formula(seq_len, block_len, num_len, num_of_blocks)
         block_len = block_len + num_len * num_of_blocks
-        
+
+
 def linear_search(index, parameter):
     params = {'block_len': 1, 'seq_len': 2}
     required_point = 0, 0, 0
     for point in point_gen():
-        if point[params[parameter]] >= index: return required_point
+        if point[params[parameter]] >= index:
+            return required_point
         required_point = point
+
 
 def index_for_block(num_len, block_len, index):
     corrector = num_of_blocks = 9 * 10 ** (num_len - 1)
@@ -26,6 +31,7 @@ def index_for_block(num_len, block_len, index):
         num_of_blocks = num_of_blocks - corrector if seq_len >= index else num_of_blocks + corrector
         seq_len = seq_len_formula(0, block_len, num_len, num_of_blocks)
     return index - seq_len
+
 
 def solve(index):
     initial_len, initial_block_len, initial_seq_len = linear_search(index, 'seq_len')

@@ -1,12 +1,14 @@
-R = lambda : map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n = int(input())
 a = list(R())
-s,f = R()
+s, f = R()
 
-d = f-s
+d = f - s
 
-def solve(a,d,n,s):
+
+def solve(a, d, n, s):
     if (n < d + 1):
         return s
 
@@ -20,17 +22,18 @@ def solve(a,d,n,s):
         t += a[(i + d - 1) % n] - a[i - 1]
         if t > m:
             m = t
-            res = gr(i,s,n)
+            res = gr(i, s, n)
         elif t == m:
-            res = min(res, gr(i,s,n))
-    
-    return res
-    
+            res = min(res, gr(i, s, n))
 
-def gr(i,s,n):
-    res = (s-i) % n
+    return res
+
+
+def gr(i, s, n):
+    res = (s - i) % n
     if (res <= 0):
-        return n-res
+        return n - res
     return res
 
-print(solve(a,d,n,s))
+
+print(solve(a, d, n, s))

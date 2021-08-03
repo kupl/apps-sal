@@ -1,18 +1,15 @@
 class Solution:
     def maxSatisfaction(self, satisfaction: List[int]) -> int:
         satisfaction.sort(reverse=True)
-        s=0
-        res=0
+        s = 0
+        res = 0
         for a in satisfaction:
-            s+=a
-            if s<=0:
+            s += a
+            if s <= 0:
                 break
-            res+=s
+            res += s
         return res
-    
-    
-    
-    
+
     '''
     将所有大于的的前缀子串都加上
     大数尽可能多家几次，所以先倒序

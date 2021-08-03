@@ -14,7 +14,7 @@ class Solution:
                 level -= 1
             elif ch == ',' and level == 0:
                 boolean_list.append(self.parseBoolExpr(expression[start:i]))
-                start = i+1
+                start = i + 1
             elif ch not in '&|!' and level == 0:
                 boolean_list.append(True if ch == 't' else False)
         boolean_list.append(self.parseBoolExpr(expression[start:-1]))
@@ -24,4 +24,3 @@ class Solution:
             return all(boolean_list)
         else:
             return any(boolean_list)
-

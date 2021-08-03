@@ -19,4 +19,3 @@ else:
             print('ring topology')
         else:
             print('unknown topology')
-

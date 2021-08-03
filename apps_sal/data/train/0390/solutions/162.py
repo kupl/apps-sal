@@ -1,7 +1,10 @@
 import math
+
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         result = dict()
+
         def canWin(n):
             bound = math.ceil(math.sqrt(n))
             if bound * bound == n:

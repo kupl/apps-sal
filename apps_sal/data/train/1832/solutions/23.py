@@ -5,8 +5,8 @@ class Solution:
             costs[i][j] = c
             costs[j][i] = c
         visited = set()
-        spans = defaultdict(int) # (i, j): inner_nodes_visited, i < j
-        q = [(0, 0)] # total_cost, node
+        spans = defaultdict(int)  # (i, j): inner_nodes_visited, i < j
+        q = [(0, 0)]  # total_cost, node
         while q:
             dist, a = heapq.heappop(q)
             if a in visited:
@@ -19,6 +19,3 @@ class Solution:
                 spk = (min(a, b), max(a, b))
                 spans[spk] = min(spans[spk] + M - dist, cost)
         return len(visited) + sum(spans.values())
-        
-        
-

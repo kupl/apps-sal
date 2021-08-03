@@ -2,9 +2,6 @@ def isDigit(string):
     try:
         float(string)
         return True
-    except ValueError: 
+    except ValueError:
         return False
     # wasn't numeric
-
-
-

@@ -7,9 +7,9 @@ class Solution:
             predecessors[words[i]] = []
             for j in range(i):
                 if self.isPredecessor(words[i], words[j]):
-                    predecessors[words[i]].append((words[j],j))
-        #print(words)
-        #print(predecessors)
+                    predecessors[words[i]].append((words[j], j))
+        # print(words)
+        # print(predecessors)
         T = [0] * len(words)
         T[0] = 1
         for i in range(1, len(words)):
@@ -18,7 +18,7 @@ class Solution:
             else:
                 T[i] = 1
         return max(T)
-            
+
     def isPredecessor(self, word, candidate):
         if len(candidate) + 1 != len(word):
             return False
@@ -34,4 +34,4 @@ class Solution:
                     wildcard = False
                 else:
                     return False
-        return i+1 == len(word) or i == len(word) if wildcard else i == len(word)
+        return i + 1 == len(word) or i == len(word) if wildcard else i == len(word)

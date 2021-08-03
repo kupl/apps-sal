@@ -7,4 +7,3 @@ for _ in range(t):
             if (int(str(j) * i) <= n):
                 ans += 1
     print(ans)
-

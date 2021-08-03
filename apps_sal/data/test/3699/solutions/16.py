@@ -25,12 +25,12 @@ def solve(posa, posb, posc, bottles, N):
     if N == 1:
         print(min(dist(posa, bottles[0]), dist(posb, bottles[0])) + dist(posc, bottles[0]))
         return
-    
+
     bottledist = [dist(posc, b) for b in bottles]
     da = [(dist(posa, bottles[i]) - bottledist[i], i) for i in range(N)]
     db = [(dist(posb, bottles[i]) - bottledist[i], i) for i in range(N)]
     d = 2 * sum(bottledist)
-    
+
     heapq.heapify(da)
     heapq.heapify(db)
     a0 = heapq.heappop(da)
@@ -43,10 +43,10 @@ def solve(posa, posb, posc, bottles, N):
         b1 = heapq.heappop(db)
         e = min(a0[0] + b1[0], a1[0] + b0[0])
         ans = min(ans, d + e)
-    
+
     print(ans)
-    
-    
+
+
 ax, ay, bx, by, cx, cy = list(map(int, input().split()))
 N = int(input())
 bottles = []
@@ -55,4 +55,3 @@ for i in range(N):
     bottles.append((x, y))
 
 solve((ax, ay), (bx, by), (cx, cy), bottles, N)
-

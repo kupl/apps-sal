@@ -1,4 +1,4 @@
-arr = list(map(int , input().split()))
+arr = list(map(int, input().split()))
 if len(set(arr)) == 2:
     print("Yes")
 else:

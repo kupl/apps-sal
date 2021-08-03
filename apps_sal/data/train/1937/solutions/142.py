@@ -4,7 +4,8 @@ class Node:
         self.children = []
         self.parent = None
         self.isDead = False
-        
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -16,7 +17,7 @@ class ThroneInheritance:
         curr = Node()
         curr.name = childName
         curr.parent = parentName
-        
+
         self.lookup[parentName].children.append(curr)
         self.lookup[childName] = curr
 
@@ -25,7 +26,7 @@ class ThroneInheritance:
 
     def getInheritanceOrder(self) -> List[str]:
         return self.dfs(self.root)
-        
+
     def dfs(self, node):
         if node.isDead:
             result = []
@@ -33,7 +34,7 @@ class ThroneInheritance:
             result = [node.name]
         for c in node.children:
             result += self.dfs(c)
-                
+
         return result
 
 
@@ -42,4 +43,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

@@ -11,4 +11,3 @@ class Solution:
                     dic[A[i]] += dic[q] * dic[A[j]]
 
         return sum(dic.values()) % (10**9 + 7)
-

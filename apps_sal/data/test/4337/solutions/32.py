@@ -1,5 +1,5 @@
 N = int(input())
-color = list(map(str,input().split()))
+color = list(map(str, input().split()))
 
 pp = 0
 wp = 0
@@ -21,4 +21,3 @@ if (pp + wp + gp + yp) == 3:
     print('Three')
 else:
     print('Four')
-

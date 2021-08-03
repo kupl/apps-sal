@@ -21,6 +21,4 @@ class Solution:
         for friend in chosenFriends:
             for video in watchedVideos[friend]:
                 videoFrequency[video] += 1
-        return [video[0] for video in sorted(list(videoFrequency.items()), key = lambda x : (x[1], x[0]))]
-                
-
+        return [video[0] for video in sorted(list(videoFrequency.items()), key=lambda x: (x[1], x[0]))]

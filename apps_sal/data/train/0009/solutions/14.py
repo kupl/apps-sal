@@ -17,4 +17,3 @@ while t:
         ans += arr[i]
     print(ans)
     t -= 1
-

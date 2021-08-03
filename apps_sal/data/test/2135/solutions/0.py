@@ -18,11 +18,10 @@ for y in range(h):
         subVerts[y + 1][x + 1] = subVerts[y + 1][x] + subVerts[y][x + 1] - subVerts[y][x]
         if field[y][x] and field[y - 1][x]:
             subVerts[y + 1][x + 1] += 1
-        
+
         subHoriz[y + 1][x + 1] = subHoriz[y + 1][x] + subHoriz[y][x + 1] - subHoriz[y][x]
         if field[y][x] and field[y][x - 1]:
             subHoriz[y + 1][x + 1] += 1
-
 
 
 q = int(input())
@@ -31,4 +30,3 @@ for i in range(q):
     ansHoriz = subHoriz[y2 + 1][x2 + 1] - subHoriz[y1][x2 + 1] - subHoriz[y2 + 1][x1 + 1] + subHoriz[y1][x1 + 1]
     ansVerts = subVerts[y2 + 1][x2 + 1] - subVerts[y1 + 1][x2 + 1] - subVerts[y2 + 1][x1] + subVerts[y1 + 1][x1]
     print(ansHoriz + ansVerts)
-

@@ -7,6 +7,5 @@ for i in range(1, int(sqrt(m) + 2)):
             ans = max(ans, i)
         if m // i <= m / n:
             ans = max(ans, m // i)
-            
-print(ans)
 
+print(ans)

@@ -7,12 +7,13 @@ class Solution:
 
         def uni(x, y):
             x, y = find(x), find(y)
-            if x == y: return 0
+            if x == y:
+                return 0
             root[x] = y
             return 1
-        
+
         res = e1 = e2 = 0
-        
+
         # Alice and Bob
         root = [_ for _ in range(n + 1)]
         for t, i, j in edges:
@@ -31,10 +32,10 @@ class Solution:
                     e1 += 1
                 else:
                     res += 1
-        
+
         if e1 != n - 1:
             return -1
-        
+
         # only Bob
         root = root0
         for t, i, j in edges:
@@ -45,5 +46,3 @@ class Solution:
                     res += 1
 
         return res if e2 == n - 1 else -1
-        
-

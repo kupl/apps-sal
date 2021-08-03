@@ -1,8 +1,11 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, m, w = R()
 ws = list(R())
 bs = list(R())
 anc = [-1] * n
+
 
 def get(x):
     if anc[x] < 0:
@@ -10,10 +13,12 @@ def get(x):
     anc[x] = get(anc[x])
     return anc[x]
 
+
 def join(x1, x2):
     x1, x2 = get(x1), get(x2)
     if x1 != x2:
         anc[x1] = x2
+
 
 for i in range(m):
     x1, x2 = R()

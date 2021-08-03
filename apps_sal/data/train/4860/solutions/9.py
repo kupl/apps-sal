@@ -3,5 +3,5 @@ def amidakuji(ar):
     for row in ar:
         for i, col in enumerate(row):
             if col == "1":
-                elements[i], elements[i+1] = elements[i+1], elements[i]
+                elements[i], elements[i + 1] = elements[i + 1], elements[i]
     return elements

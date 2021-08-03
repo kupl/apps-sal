@@ -1,25 +1,25 @@
 class ThroneInheritance:
-    class FamilyMember:       
+    class FamilyMember:
         def __init__(self, name: str):
             self.name = name
             self.children = []
             self.is_alive = True
-        
+
         def newChild(self, name: str):
             child = ThroneInheritance.FamilyMember(name)
             self.children.append(child)
             return child
-        
+
         def kill(self):
             self.is_alive = False
-        
+
     king = None
     family = {}
     inheritenceOrder = []
+
     def __init__(self, kingName: str):
         self.king = self.FamilyMember(kingName)
         self.family[kingName] = self.king
-    
 
     def birth(self, parentName: str, childName: str) -> None:
         child = self.family[parentName].newChild(childName)
@@ -35,8 +35,8 @@ class ThroneInheritance:
             self.inheritenceOrder.append(root.name)
         for child in root.children:
             self.buildInheritanceOrder(child)
-        return   
-        
+        return
+
     def getInheritanceOrder(self) -> List[str]:
         self.inheritenceOrder = []
         self.buildInheritanceOrder(self.king)
@@ -48,4 +48,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

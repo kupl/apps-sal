@@ -23,7 +23,7 @@ pos = [(0, 0)] + [None] * n
 for i, dir in enumerate(dirs):
     old_pos = pos[i]
     diff = diffs[dir]
-    pos[i+1] = (old_pos[0] + diff[0], old_pos[1] + diff[1])
+    pos[i + 1] = (old_pos[0] + diff[0], old_pos[1] + diff[1])
 
 final_pos = pos[n]
 
@@ -100,4 +100,3 @@ print(current_best)
 #             pass
 #         else:
 #             pass
-

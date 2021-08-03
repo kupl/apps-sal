@@ -8,7 +8,7 @@ import sys
 r = 100000
 prev = 1
 s = set()
-for i in range(1, r+1):
+for i in range(1, r + 1):
     now = i ^ prev
     s.add(now)
     prev = now
@@ -20,13 +20,12 @@ while t > 0:
 
     if n > 3:
         if n % 2 == 0:
-            size = (n//2) + 2
+            size = (n // 2) + 2
         else:
-            size = ((n-1)//2) + 2
+            size = ((n - 1) // 2) + 2
     else:
         size = n
     if size - k >= 0:
-        print(s[size-k])
+        print(s[size - k])
     else:
         print(-1)
-

@@ -1,5 +1,6 @@
 K = int(input())
 
+
 def calc_sunuke(num):
     st = str(num)
     s_num = 0
@@ -7,26 +8,26 @@ def calc_sunuke(num):
         s_num += int(c)
     return num / s_num
 
+
 def search_sunuke(num):
     num_sunuke = calc_sunuke(num)
     if num >= 100:
         digits = len(str(num))
         if digits < 12:
-            for i in range(count + 10**(digits-2), 10**digits, 10**(digits-2)):
+            for i in range(count + 10**(digits - 2), 10**digits, 10**(digits - 2)):
                 if num_sunuke > calc_sunuke(i):
                     return False
             return True
         else:
-            for i in range(count + 10**(digits-3), 10**digits, 10**(digits-3)):
+            for i in range(count + 10**(digits - 3), 10**digits, 10**(digits - 3)):
                 if num_sunuke > calc_sunuke(i):
                     return False
             return True
     else:
-        for i in range(count+1, 100):
+        for i in range(count + 1, 100):
             if num_sunuke > calc_sunuke(i):
                 return False
         return True
-
 
 
 count = 1
@@ -55,6 +56,3 @@ while sunuke_num != K:
                     break
             if r_count == count:
                 count += 10**(digits - 2)
-        
-
-

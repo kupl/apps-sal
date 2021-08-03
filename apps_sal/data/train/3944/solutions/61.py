@@ -10,11 +10,10 @@ def sum_triangular_numbers(n):
         result = 1
 
         while(max <= n):
-            num+=1
-            cont+=1
+            num += 1
+            cont += 1
             if cont == max:
-                result+=num
-                max+=1
-                cont=0
+                result += num
+                max += 1
+                cont = 0
         return result
-

@@ -6,4 +6,3 @@ elif n % 4 == 0:
     print(6)
 else:
     print(arr[n % 4])
-

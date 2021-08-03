@@ -3,7 +3,7 @@ class DSU:
         self.parent = [i for i in range(count)]
         self.size = [1 for _ in range(count)]
         self.max = 0
-    
+
     def find(self, x):
         root = x
         while root != self.parent[root]:
@@ -13,7 +13,7 @@ class DSU:
             self.parent[x] = root
             x = next_root
         return root
-    
+
     def union(self, x, y):
         r1, r2 = self.find(x), self.find(y)
         if r1 == r2:
@@ -25,11 +25,13 @@ class DSU:
             self.size[r1] += self.size[r2]
             self.parent[r2] = r1
         self.max = max(self.max, self.size[r1], self.size[r2])
-        
+
+
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         dsu = DSU(len(A))
-        def getPrimeFactors( n):
+
+        def getPrimeFactors(n):
             res = set()
             while n % 2 == 0:
                 res.add(2)

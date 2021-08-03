@@ -9,4 +9,3 @@ for i in range(a, b):
     cnt += 1
 
 print(cnt)
-

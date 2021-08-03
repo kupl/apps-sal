@@ -1,6 +1,5 @@
 # cook your dish here
-x=int(input())
+x = int(input())
 for i in range(x):
-    y=input()
+    y = input()
     print(y[::-1].lstrip('0'))
-

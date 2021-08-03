@@ -1,4 +1,4 @@
-#Author: Tanya Cheremkhina
+# Author: Tanya Cheremkhina
 n = int(input())
 s = list(input())
 for i in range(len(s) - 1):

@@ -19,4 +19,3 @@ class Solution:
                     else:
                         res += c1[x // n1]
         return res // 2
-

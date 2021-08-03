@@ -5,11 +5,11 @@ if nota % 2 != 0:
 else:
     if nota == 0:
         print(s)
-    elif s[-nota//2:].count("a") > 0:
+    elif s[-nota // 2:].count("a") > 0:
         print(":(")
     else:
         s1 = s.replace("a", "")
-        if s1[:nota//2] != s1[nota//2:]:
+        if s1[:nota // 2] != s1[nota // 2:]:
             print(":(")
         else:
-            print(s[:-nota//2])
+            print(s[:-nota // 2])

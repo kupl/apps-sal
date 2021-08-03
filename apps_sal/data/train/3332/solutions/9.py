@@ -1,2 +1,2 @@
 import re
-autocorrect=lambda s: re.sub(r'(?i)\b(u|you+)\b', 'your sister', s)
+def autocorrect(s): return re.sub(r'(?i)\b(u|you+)\b', 'your sister', s)

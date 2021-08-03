@@ -3,10 +3,9 @@
 # b-a = c-bを満たしていればYes, そうでなければNoを出力する
 
 
-a,b,c = list(map(int,input().split()))
+a, b, c = list(map(int, input().split()))
 
-if b-a == c-b:
+if b - a == c - b:
     print('YES')
 else:
     print('NO')
-

@@ -1,5 +1,7 @@
-ans=[]
-#code on gfg
+ans = []
+# code on gfg
+
+
 def printMaxActivities(s, f):
     n = len(f)
     # The first activity is always selected
@@ -13,11 +15,10 @@ def printMaxActivities(s, f):
         if s[j] >= f[i]:
             ans.append(j)
             i = j
+
         # Driver program to test above function
-n=int(input())
-s=list(map(int,input().split()))
-f=list(map(int,input().split()))
+n = int(input())
+s = list(map(int, input().split()))
+f = list(map(int, input().split()))
 printMaxActivities(s, f)
 print(*ans)
-
-

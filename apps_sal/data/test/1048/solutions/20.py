@@ -8,4 +8,3 @@ for c in d:
 for c in s:
     cnt[c] += 1
 print(2 * (min(cnt['U'], cnt['D']) + min(cnt['L'], cnt['R'])))
-

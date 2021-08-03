@@ -5,7 +5,7 @@ class Solution:
         bitmap = 0
         for i, digit in enumerate(s):
             bitmap ^= 1 << int(digit)
-            
+
             for j in range(10):
                 key = bitmap ^ (1 << j)
                 if key in memo:

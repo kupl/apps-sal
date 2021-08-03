@@ -49,4 +49,3 @@ for message in messages:
 
 if not got:
     print(-1)
-

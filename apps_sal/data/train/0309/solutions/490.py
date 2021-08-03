@@ -3,10 +3,10 @@ class Solution:
         # dp[i][k] = longestArithSeqLength(A[:i+1]) with step size k
         largest = max(A)
         smallest = min(A)
-    
+
         dp = dict()
         res = 0
-    
+
         for i in range(1, len(A)):
             for prev_i in range(i):
                 step = A[i] - A[prev_i]
@@ -15,7 +15,7 @@ class Solution:
                     dp[(i, step)] = prev_step + 1
                 else:
                     dp[(i, step)] = max(prev_step + 1, dp[(i, step)])
-                
+
                 res = max(res, dp[(i, step)])
-        
+
         return res

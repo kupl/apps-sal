@@ -17,7 +17,7 @@ for idx in range(n):
     left_right_tmp = x + y
     if left_right_tmp > left_right_max:
         left_right_max = left_right_tmp
-      
+
     if left_right_tmp < left_right_min:
         left_right_min = left_right_tmp
         #res_lr[2] = (x, y)
@@ -29,7 +29,7 @@ for idx in range(n):
     if right_left_tmp < right_left_min:
         right_left_min = right_left_tmp
         #res_rl[2] = (x, y)
-        
+
     r3_tmp = y - x
     if r3_tmp > r3_max:
         r3_max = r3_tmp
@@ -43,4 +43,3 @@ resrl_dist = right_left_max - right_left_min
 res3_dist = r3_max - r3_min
 
 print((max(resrl_dist, reslr_dist, res3_dist)))
-

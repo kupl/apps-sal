@@ -5,4 +5,3 @@ def lowercase_count(strng):
             if ord(letter) <= ord('z') and ord(letter) >= ord('a'):
                 count += 1
     return count
-

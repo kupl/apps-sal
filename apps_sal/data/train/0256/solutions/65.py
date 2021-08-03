@@ -5,12 +5,12 @@ class Solution:
             return max(piles)
         elif sum(piles) <= H:
             return 1
-        
+
         cntr = collections.Counter(piles)
         lst = set()
         for key in cntr.keys():
             lst.add((key, cntr[key]))
-        
+
         s = 2
         e = max(piles) - 1
         while s <= e:
@@ -22,15 +22,15 @@ class Solution:
                     total += (q + 1) * n
                 else:
                     total += q * n
-                
+
                 if total > H:
                     break
-                    
+
             # fast
             if total <= H:
                 e = K - 1
-            #slow
+            # slow
             else:
                 s = K + 1
-        
+
         return s

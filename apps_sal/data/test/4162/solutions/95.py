@@ -1,10 +1,10 @@
-[n]=[int(i) for i in input().split()]
-li=[int(i) for i in input().split()]
+[n] = [int(i) for i in input().split()]
+li = [int(i) for i in input().split()]
 
-#print(li)
+# print(li)
 
-ans=0
+ans = 0
 for i in li:
-    ans+=i
+    ans += i
 
-print(ans-n)
+print(ans - n)

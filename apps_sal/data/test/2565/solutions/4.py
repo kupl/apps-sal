@@ -5,8 +5,8 @@ for _ in range(int(input())):
     m = min(a[2], b[1])
     a[2] -= m
     b[1] -= m
-    res += 2*m
-    
+    res += 2 * m
+
     m = min(a[1], b[0])
     a[1] -= m
     b[0] -= m
@@ -23,4 +23,3 @@ for _ in range(int(input())):
 
     res -= min(a[1], b[2]) * 2
     print(res)
-

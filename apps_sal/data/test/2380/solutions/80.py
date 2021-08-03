@@ -1,28 +1,28 @@
+import bisect
 import sys
 input = sys.stdin.readline
-import bisect
-n,m = map(int,input().split())
-A = list(map(int,input().split()))
+n, m = map(int, input().split())
+A = list(map(int, input().split()))
 A.sort()
 
 minA = A[0]
 Query = []
 for _ in range(m):
-    b,c = map(int,input().split())
+    b, c = map(int, input().split())
     if c > minA:
-        Query.append([b,c])
-Query = sorted(Query, key=lambda x:(x[1], x[0]), reverse=True)
+        Query.append([b, c])
+Query = sorted(Query, key=lambda x: (x[1], x[0]), reverse=True)
 
 ans = 0
 index = 0
-for b,c in Query:
+for b, c in Query:
     if index >= n:
         break
-    #print("----")
+    # print("----")
     cnt = 0
     Flag = True
     while Flag:
-        #print(A,b,c,index)
+        # print(A,b,c,index)
         if A[index] < c:
             A[index] = c
             cnt += 1

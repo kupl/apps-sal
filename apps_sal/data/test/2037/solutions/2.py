@@ -8,7 +8,7 @@ for i in range(m):
     if q[a] == 0:
         need += 1
     q[a] += 1
-    
+
     if need == n:
         print(1, end='')
         for j in range(n):
@@ -17,4 +17,3 @@ for i in range(m):
                 need -= 1
     else:
         print(0, end='')
-

@@ -6,8 +6,9 @@
 #         self.right = right
 class Solution:
     def longestZigZag(self, root: TreeNode) -> int:
-        
+
         self.res = 0
+
         def dfs(node):
             if not node:
                 return -1, -1

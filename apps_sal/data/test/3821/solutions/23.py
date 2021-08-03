@@ -1,5 +1,5 @@
 import sys
-n = int(input()) 
+n = int(input())
 index = [i for i in range(n)]
 tmp = list(map(float, sys.stdin.readline().split()))
 ans = []
@@ -15,7 +15,7 @@ while len(index):
     ans.append(tmp[j])
     tp = 0
     for i in range(len(ans)):
-        q  = ans[i]
+        q = ans[i]
         for k in range(len(ans)):
             if i != k:
                 q *= 1 - ans[k]
@@ -26,5 +26,3 @@ while len(index):
         ans.remove(tmp[j])
 
 print("{0:.9f}".format(maxP))
-
-

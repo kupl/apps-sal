@@ -1,6 +1,6 @@
 class Solution:
     DP: List[int] = [0, 1, 1]
-    
+
     def tribonacci(self, n: int) -> int:
         if n >= 0:
             if n < len(self.DP):
@@ -13,4 +13,3 @@ class Solution:
                 return self.DP[n]
         else:
             raise ValueError
-

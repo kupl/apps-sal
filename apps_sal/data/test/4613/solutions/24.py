@@ -1,5 +1,5 @@
 n, m = map(int, input().split())
-list_AB = [ list(map(int,input().split(" "))) for _ in range(m)]
+list_AB = [list(map(int, input().split(" "))) for _ in range(m)]
 ans = 0
 
 for i in range(m):
@@ -7,8 +7,8 @@ for i in range(m):
     for j in range(m):
         if j != i:
             a, b = list_AB[j][0], list_AB[j][1]
-            route[a-1].append(b-1)
-            route[b-1].append(a-1)
+            route[a - 1].append(b - 1)
+            route[b - 1].append(a - 1)
 
     q = [0]
     l = {0}

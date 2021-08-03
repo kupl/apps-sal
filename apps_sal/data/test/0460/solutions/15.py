@@ -11,25 +11,20 @@ def generator(s):
         a.append(26 + i)
     return a
 
+
 p, x, y = list(map(int, input().split()))
 
 ans = 10000000000000
 
 for a in range(2000):
     for b in range(2000):
-        k = x + 100 * a - 50 * b;
+        k = x + 100 * a - 50 * b
         if k >= y and p in generator(k):
-            ans = min(ans, a);
+            ans = min(ans, a)
             print(ans)
             return
 
 print(ans)
-
-
-
-
-
-
 
 
 # def func(arr, qb, allb, res):
@@ -56,10 +51,6 @@ print(ans)
 # print(res % (pow(10, 9) + 7))
 
 
-
-
-
-
 # n = int(input())
 #
 #
@@ -67,13 +58,6 @@ print(ans)
 #     print(n//2 - 1)
 # else:
 #     print(n//2)
-
-
-
-
-
-
-
 
 
 #n = int(input())
@@ -87,24 +71,11 @@ print(ans)
 # print(res)
 
 
-
-
-
-
 # l, r = map(int, input().split())
 # if l == r and l % 2 != 0:
 #     print(l)
 # else:
 #     print(2)
-
-
-
-
-
-
-
-
-
 
 
 # n = int(input())
@@ -117,11 +88,6 @@ print(ans)
 #
 #
 # print(' '.join(map(str, a)))
-
-
-
-
-
 
 
 # n = int(input())
@@ -179,14 +145,6 @@ print(ans)
 #print('2 1 0 1 0 0 1 2 3 ')
 
 
-
-
-
-
-
-
-
-
 # n, k  = map(int, input().split())
 #
 #
@@ -233,4 +191,3 @@ print(ans)
 #         b.add(el)
 #
 # print(len(b))
-

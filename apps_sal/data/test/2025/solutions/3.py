@@ -12,4 +12,3 @@ for i in range(n):
         print(((a - 15) // 4) + 2)
     else:
         print(-1)
-

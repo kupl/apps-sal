@@ -7,12 +7,12 @@
 # print("{} {}".format(a+b+c, s))
 
 
+from math import gcd
 N = int(input())
 a = list(map(int, input().split()))
 
 ans = a[0]
 
-from math import gcd
 
 for aval in a:
     ans = gcd(ans, aval)

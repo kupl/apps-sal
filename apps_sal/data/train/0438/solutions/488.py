@@ -2,12 +2,12 @@ class UnionFindSet:
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [0] * n
-        
+
     def find(self, u):
         if u != self.parents[u]:
             self.parents[u] = self.find(self.parents[u])
         return self.parents[u]
-    
+
     def union(self, u, v):
         pu, pv = self.find(u), self.find(v)
         if pu == pv:
@@ -22,11 +22,13 @@ class UnionFindSet:
             self.parents[pu] = pv
             self.ranks[pv] += self.ranks[pu]
         return True
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n, ans = len(arr), -1
         uf = UnionFindSet(n)
-        
+
         for step, i in enumerate(arr):
             i -= 1
             uf.ranks[i] = 1
@@ -36,34 +38,33 @@ class Solution:
                         ans = step
                     if uf.ranks[j]:
                         uf.union(i, j)
-        
+
         for i in range(n):
             if uf.ranks[uf.find(i)] == m:
                 return n
-            
+
         return ans
-    
-        d = set([0,len(arr) + 1])
-        if m == len(arr): return m
-        for i in range(len(arr)-1,-1,-1):
-            if arr[i] - m-1 in d:
+
+        d = set([0, len(arr) + 1])
+        if m == len(arr):
+            return m
+        for i in range(len(arr) - 1, -1, -1):
+            if arr[i] - m - 1 in d:
                 exit = True
-                for j in range(arr[i] -m,arr[i]):
+                for j in range(arr[i] - m, arr[i]):
                     if j in d:
                         exit = False
                         break
                 if exit:
                     return i
-            if arr[i] + m+1 in d:
+            if arr[i] + m + 1 in d:
                 exit = True
-                for j in range(arr[i]+1,arr[i]+m+1):
+                for j in range(arr[i] + 1, arr[i] + m + 1):
                     if j in d:
                         exit = False
                         break
                 if exit:
                     return i
             d.add(arr[i])
-        
-        return -1
-                
 
+        return -1

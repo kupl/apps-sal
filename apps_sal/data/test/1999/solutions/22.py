@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int , input().split()))
+a = list(map(int, input().split()))
 idx = {}
 for i in range(n):
     x = a[i]

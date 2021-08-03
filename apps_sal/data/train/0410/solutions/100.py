@@ -28,5 +28,3 @@ class Solution:
         res = sorted(res, key=lambda _: _[1])
         # print(res)
         return res[k - 1][0]
-
-

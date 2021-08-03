@@ -1,4 +1,4 @@
-#578_A
+# 578_A
 
 n = int(input())
 
@@ -21,4 +21,3 @@ for i in l:
         a[int(i)] = 0
 
 print("".join([str(i) for i in a]))
-

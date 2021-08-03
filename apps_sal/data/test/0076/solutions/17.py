@@ -4,4 +4,3 @@ res = (n % m) * b
 res = min(res, ((m - (n % m)) % m) * a)
 
 print(res)
-

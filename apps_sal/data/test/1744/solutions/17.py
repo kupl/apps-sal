@@ -14,4 +14,3 @@ for x in arr:
     d[x] = 1 if x not in d else d[x] + 1
     curr_sum = tot_sum
     print(curr_res, end=' ')
-

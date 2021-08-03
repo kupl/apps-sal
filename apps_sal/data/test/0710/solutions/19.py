@@ -16,4 +16,3 @@ for i in range(n - 4 + 1):
     z = min(z, c)
 
 print(z)
-

@@ -85,8 +85,8 @@ def do_math(s):
             z_list.append(pairs[1])
 
     output_list = a_list + b_list + c_list + d_list + e_list + f_list + g_list + h_list + i_list + j_list + \
-                  k_list + l_list + m_list + n_list + o_list + p_list + q_list + r_list + s_list + t_list + u_list + v_list + \
-                  w_list + x_list + y_list + z_list
+        k_list + l_list + m_list + n_list + o_list + p_list + q_list + r_list + s_list + t_list + u_list + v_list + \
+        w_list + x_list + y_list + z_list
 
     duplicates = []
     right_strings = []
@@ -131,4 +131,3 @@ def do_math(s):
 
 # print(do_math("111a 222c 444y 777u 999a 888p"))
 print((do_math("2j 87j 169a 1275c 834f 683v")))
-

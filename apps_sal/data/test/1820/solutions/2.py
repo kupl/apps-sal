@@ -10,4 +10,3 @@ for t in range(T):
         print(1, 2, N)
     else:
         print(-1)
-

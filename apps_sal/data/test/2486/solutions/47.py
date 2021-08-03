@@ -62,4 +62,3 @@ def is_necessary(ai):
 A.sort()
 unnecessary = bisect_left_callable(is_necessary, 1, lo=0, hi=N)
 print(unnecessary)
-

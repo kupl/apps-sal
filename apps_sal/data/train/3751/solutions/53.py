@@ -5,4 +5,6 @@ def bool_to_word(boolean):
     elif boolean == False:
         n = 'No'
         return n
-bool_to_word(True)    
+
+
+bool_to_word(True)

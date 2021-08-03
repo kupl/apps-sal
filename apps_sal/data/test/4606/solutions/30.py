@@ -1,3 +1,3 @@
-N=input()
-res="ABC"+N
+N = input()
+res = "ABC" + N
 print(res)

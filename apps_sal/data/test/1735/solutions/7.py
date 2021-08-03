@@ -10,7 +10,6 @@ for c in s:
         l.append(c)
 
 if n % 2 == 0:
-    print( "No" )
+    print("No")
 else:
     print("Yes")
-

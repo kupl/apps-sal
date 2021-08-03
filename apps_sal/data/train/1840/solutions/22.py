@@ -6,22 +6,20 @@
 #         self.right = right
 class Solution:
     def longestZigZag(self, root: TreeNode) -> int:
-        
+
         def aux(root):
             if not root:
                 return [-1, -1, -1]
             left = aux(root.left)
             right = aux(root.right)
-            ans = max(max(left[1], right[0])+1, left[2], right[2])
-            return [left[1]+1, right[0]+1, ans]
-        
+            ans = max(max(left[1], right[0]) + 1, left[2], right[2])
+            return [left[1] + 1, right[0] + 1, ans]
+
         return aux(root)[2]
-        
-        
-        
-        
+
+
 #         ans = [-1]
-        
+
 #         def aux(root, isleft, ans):
 #             if not root:
 #                 return -1
@@ -32,12 +30,12 @@ class Solution:
 #                 return right
 #             else:
 #                 return left
-            
+
 #         if not root:
 #             return 0
 #         aux(root, 0, ans)
 #         return ans[0]
-        
+
 #         def aux(root, isleft, memo):
 #             if not root:
 #                 return 0
@@ -54,10 +52,9 @@ class Solution:
 #                 return memo[root][1]
 #             else:
 #                 return memo[root][0]
-            
+
 #         if not root:
 #             return 0
 #         memo = {}
 #         aux(root, 0, memo)
 #         return self.ans - 1
-

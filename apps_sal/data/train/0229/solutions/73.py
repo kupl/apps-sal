@@ -2,23 +2,21 @@ class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
         # Array of Doubled Pairs 9/24 8/31/20
         # 1:43 9/1/2020
-#         c = collections.Counter(A)
-#         for x in sorted(c, key=abs):
-#             if c[x] > c[x * 2]:
-#                 return False
-#             c[x*2] -= c[x]
-        
-#         return True
-        
+        #         c = collections.Counter(A)
+        #         for x in sorted(c, key=abs):
+        #             if c[x] > c[x * 2]:
+        #                 return False
+        #             c[x*2] -= c[x]
 
-    
-        A = [abs(num) for num in A ]
+        #         return True
+
+        A = [abs(num) for num in A]
         A.sort()
         dic = collections.defaultdict(collections.deque)
         for i, num in enumerate(A):
             dic[num].append(i)
-        
-        visited = [0]*len(A)
+
+        visited = [0] * len(A)
         cnt = 0
         i = 0
         # while cnt < len(A) // 2 :
@@ -35,20 +33,20 @@ class Solution:
                     return False
                 index = dic[val_double].popleft()
                 visited[index] = 1
-                
+
             else:
                 return False
             i += 1
             # cnt += 1
-            
+
         return True
-    
+
 #         A = [abs(num) for num in A ]
 #         A.sort()
 #         dic = collections.defaultdict(int)
 #         for num in A:
 #             dic[num] += 1
-        
+
 #         visited = [0]*len(A)
 #         cnt = 0
 #         i = 0
@@ -70,10 +68,5 @@ class Solution:
 #                 return False
 #             i += 1
 #             cnt += 1
-            
+
 #         return True
-                
-
-            
-        
-

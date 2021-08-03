@@ -29,5 +29,3 @@ class Solution:
                 return max(cal_with_cache(i - 1, j), cal_with_cache(i, j - 1))
 
         return cal_with_cache(len(text1) - 1, len(text2) - 1)
-
-

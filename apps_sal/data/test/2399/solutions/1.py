@@ -11,15 +11,15 @@ for _ in range(Q):
         if S[i] == "X":
             if s < b:
                 pass
-            elif a <= s < 2*b:
+            elif a <= s < 2 * b:
                 x += 1
-            elif a < 2*b and (3*a <= s < a+3*b-1 or 2*a <= s < a+2*b-1):
+            elif a < 2 * b and (3 * a <= s < a + 3 * b - 1 or 2 * a <= s < a + 2 * b - 1):
                 xx += 1
-            elif a < 2*b and 3*a <= s < a+4*b-1:
+            elif a < 2 * b and 3 * a <= s < a + 4 * b - 1:
                 x3 += 1
-            elif a < 2*b and 2*a <= s < a+3*b-1:
+            elif a < 2 * b and 2 * a <= s < a + 3 * b - 1:
                 x2 += 1
-            elif a <= s < a+2*b-1:
+            elif a <= s < a + 2 * b - 1:
                 x1 += 1
             else:
                 # print("a, b, s =", a, b, s)
@@ -30,12 +30,11 @@ for _ in range(Q):
             s += 1
     else:
         # print("x, x1, x2, x3 =", x, x1, x2, x3)
-        if xx+x1+x2+x3 >= 2:
+        if xx + x1 + x2 + x3 >= 2:
             print("NO")
         elif xx:
             print("YES")
-        elif (x + x1 + x2*2 + x3*3) % 2 == 0:
+        elif (x + x1 + x2 * 2 + x3 * 3) % 2 == 0:
             print("NO")
         else:
             print("YES")
-

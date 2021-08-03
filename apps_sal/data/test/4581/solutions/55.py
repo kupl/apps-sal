@@ -1,5 +1,4 @@
-s=input();
-cnt=s.count('o')
+s = input()
+cnt = s.count('o')
 
-print((700+100*cnt))
-
+print((700 + 100 * cnt))

@@ -3,7 +3,7 @@ class Solution:
         h = defaultdict(int)
         result = -1
         counter = defaultdict(int)
-        
+
         for i in range(len(arr)):
             n = arr[i] - 1
 
@@ -27,4 +27,3 @@ class Solution:
                 result = i + 1
             # print(counter)
         return result
-

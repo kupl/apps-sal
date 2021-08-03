@@ -10,4 +10,4 @@ def encode(bird):
 
 
 def bird_code(birds):
-    return list(map(encode, birds))    
+    return list(map(encode, birds))

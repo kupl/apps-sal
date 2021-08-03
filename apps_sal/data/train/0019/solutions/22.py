@@ -1,4 +1,6 @@
 3
+
+
 def main():
     t = int(input())
     for _ in range(t):
@@ -11,8 +13,8 @@ def main():
         n = b
         for i in range(d, n1):
             ai = a[i]
-            aid = a[i-d]
-            s[ai] = s.get(ai,0)+1
+            aid = a[i - d]
+            s[ai] = s.get(ai, 0) + 1
             if s[ai] == 1:
                 n += 1
             s[aid] -= 1
@@ -24,5 +26,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

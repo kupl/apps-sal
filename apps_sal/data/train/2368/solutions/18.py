@@ -8,6 +8,7 @@ def solve():
         ans += max(a[i] - ma, b[i] - mb)
     print(ans)
 
+
 t = int(input())
 for _ in range(t):
     solve()

@@ -13,7 +13,7 @@ def main():
             elif a[i] == 2:
                 count += 3
             else:
-                count +=4
+                count += 4
     return count
 
 

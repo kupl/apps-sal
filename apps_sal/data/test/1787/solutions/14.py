@@ -13,4 +13,3 @@ while i < l:
     i += 1
 
 print(r)
-

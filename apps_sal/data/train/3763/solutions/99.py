@@ -1,10 +1,10 @@
-def calculator(x,y,op):
-    
-    try :
-        dic = {'+' : y + x, '-' : x - y,
-               '*' : y * x, '/' : x / y}
-    
+def calculator(x, y, op):
+
+    try:
+        dic = {'+': y + x, '-': x - y,
+               '*': y * x, '/': x / y}
+
         return dic[op]
-    
-    except :
+
+    except:
         return 'unknown value'

@@ -14,7 +14,7 @@ class Solution:
 
         for i in range(k):
             start = min(cardCount.keys())
-            
+
             for j in range(W):
                 if not start + j in cardCount:
                     return False
@@ -25,5 +25,3 @@ class Solution:
                     cardCount.pop(start + j)
 
         return True
-
-

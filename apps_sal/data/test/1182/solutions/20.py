@@ -6,7 +6,8 @@ violas = []
 for _ in range(n):
     x, y = input().split()
     x, y = int(x) - 1, int(y) - 1
-    violas.append((y,x))
+    violas.append((y, x))
+
 
 def count_violas(x1, y1, x2, y2):
     nonlocal violas
@@ -15,6 +16,7 @@ def count_violas(x1, y1, x2, y2):
         if x >= x1 and x <= x2 and y >= y1 and y <= y2:
             s += 1
     return s
+
 
 ans = 0
 for x1 in range(c):

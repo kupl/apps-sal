@@ -4,10 +4,10 @@ class Solution:
         flips = [0] * n
         flip = 0
         ans = 0
-        
+
         def mapping(a: int, flip: int) -> int:
             return 1 - a if flip % 2 == 1 else a
-            
+
         for i, a in enumerate(A):
             flip += flips[i]
             if mapping(a, flip) == 0:

@@ -5,7 +5,7 @@ A = [x]
 res = 1
 for i in range(n - 1):
     y = input().split()
-    if y == A [-1]:
+    if y == A[-1]:
         res += 1
     else:
         res = 1

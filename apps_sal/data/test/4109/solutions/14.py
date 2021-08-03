@@ -22,4 +22,3 @@ while D:
         D.append((num, money, skill))
 
 print((ans if ans != 10**9 else -1))
-

@@ -29,6 +29,3 @@ for _ in range(t):
     for el in r:
         print(el, end=' ')
     print()
-
-
-

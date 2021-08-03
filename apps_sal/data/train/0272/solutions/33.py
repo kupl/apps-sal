@@ -1,18 +1,18 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        
+
         N = len(status)
         scores = [0] * N
         for i in range(N):
             scores[i] += status[i]
-        
+
         level = []
         for b in initialBoxes:
             scores[b] += N + 1
             if scores[b] >= N + 2:
                 level.append(b)
                 scores[b] = -sys.maxsize
-        
+
         res = 0
         while level:
             n_level = []

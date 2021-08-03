@@ -28,6 +28,7 @@ class Combination:
             return 0
         return self.fac[n] * self._modinv(self.fac[k]) % self.MOD * self._modinv(self.fac[n - k]) % self.MOD
 
+
 MOD = 1000000007
 comb = Combination(2 * 1000000 + 10, MOD)
 

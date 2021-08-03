@@ -2,6 +2,7 @@
 import sys
 input = sys.stdin.readline
 
+
 class UnionFind():
     def __init__(self, n):
         self.rank = [0] * n
@@ -37,6 +38,7 @@ class UnionFind():
 
     def size(self, x):
         return self._size[self.find(x)]
+
 
 N, M = [int(x) for x in input().split()]
 E = [tuple(int(x) - 1 for x in input().split()) for _ in range(M)]

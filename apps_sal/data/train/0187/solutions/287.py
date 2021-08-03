@@ -9,9 +9,8 @@ class Solution:
             total_profit += board * boardingCost - runningCost
             if max_profit < total_profit:
                 max_profit = total_profit
-                if max_profit > 0 :
+                if max_profit > 0:
                     result = i
             queue -= board
             i += 1
         return result if result < 0 else result + 1
-

@@ -10,4 +10,3 @@ if (a + b) >= 24:
 else:
     answer = a + b
 print(answer)
-

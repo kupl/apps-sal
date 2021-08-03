@@ -42,4 +42,5 @@ def __starting_point():
     # sys.stdin = open("C.txt")
     main()
 
+
 __starting_point()

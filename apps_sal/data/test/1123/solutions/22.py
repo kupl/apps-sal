@@ -7,6 +7,7 @@ dict_x = {}
 
 mod = 10 ** 9 + 7
 
+
 def pow(x, y):
     nonlocal mod
     a = 1
@@ -18,6 +19,7 @@ def pow(x, y):
         b = (b * b) % mod
         c = c >> 1
     return a
+
 
 answer = 0
 for x in xs:

@@ -1,13 +1,16 @@
 import math
 import collections
-ii = lambda : int(input())
-mi = lambda : map(int,input().split())
-li = lambda : list(map(int,input().split()))
+def ii(): return int(input())
 
-w,h,x,y = mi()
+
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
+
+w, h, x, y = mi()
 ans = w * h / 2
 check = 0
 if x == w / 2 and y == h / 2:
     check = 1
 
-print('{} {}'.format(ans,check))
+print('{} {}'.format(ans, check))

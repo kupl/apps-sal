@@ -15,5 +15,3 @@ class Solution:
                     dist[nei] = graph[node][nei] + t
                     heapq.heappush(pq, (dist[nei], nei))
         return max(dist.values())
-        
-

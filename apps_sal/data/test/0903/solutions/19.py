@@ -3,6 +3,7 @@ array = list(map(int, input().split()))
 array.sort()
 med = n // 2
 
+
 def key(m):
     s = 10**10
     ind = None
@@ -15,7 +16,7 @@ def key(m):
     if ind < med:
         return False
     else:
-        for i in range(ind-1, med-1, -1):
+        for i in range(ind - 1, med - 1, -1):
             s += m - array[i]
         return s <= k
 

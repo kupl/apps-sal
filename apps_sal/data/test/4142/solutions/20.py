@@ -6,4 +6,3 @@ for i in range(len(S)):
     if i % 2 == 0 and S[i] == 'L':
         ok = 0
 print(('Yes' if ok else 'No'))
-

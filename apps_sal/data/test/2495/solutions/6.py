@@ -1,7 +1,7 @@
 from itertools import accumulate
 
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 a = list(accumulate(a))
 
@@ -27,5 +27,5 @@ for i in range(n):
         tmp2 += -1 - b
         ans2 += 1 + b
 
-ans = min(ans1,ans2)
+ans = min(ans1, ans2)
 print(ans)

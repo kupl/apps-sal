@@ -13,25 +13,25 @@ AND, OR, XOR = [], [], []
 for i in range(10):
     res1 = 0
     res2 = 1
-    
+
     for s, n in com:
-        b = (n>>i)&1
-        
-        if s=='&':
+        b = (n >> i) & 1
+
+        if s == '&':
             res1 &= b
             res2 &= b
-        elif s=='|':
+        elif s == '|':
             res1 |= b
             res2 |= b
-        elif s=='^':
+        elif s == '^':
             res1 ^= b
             res2 ^= b
-        
-    if (res1, res2)==(0, 0):
+
+    if (res1, res2) == (0, 0):
         AND.append(i)
-    elif (res1, res2)==(1, 1):
+    elif (res1, res2) == (1, 1):
         OR.append(i)
-    elif (res1, res2)==(1, 0):
+    elif (res1, res2) == (1, 0):
         XOR.append(i)
 
 AND_n = 0

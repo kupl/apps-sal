@@ -9,16 +9,15 @@ class Solution:
                 curr_len = 0
                 s = A[i]
                 l = A[j]
-                if (s,l) in used_tuples: 
+                if (s, l) in used_tuples:
                     continue
-                while s+l in hist:
+                while s + l in hist:
                     curr_len += 1
-                    used_tuples.add((s,l))
+                    used_tuples.add((s, l))
                     old_s = s
                     s = l
                     l = s + old_s
-                    
-                max_len = max(max_len, curr_len)
-        
-        return max_len + 2 if max_len > 0 else 0
 
+                max_len = max(max_len, curr_len)
+
+        return max_len + 2 if max_len > 0 else 0

@@ -1,7 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        totpos = sum(customers)*boardingCost
-        
+        totpos = sum(customers) * boardingCost
+
         n = len(customers)
         currwaiting = 0
         rotat = 0
@@ -19,18 +19,14 @@ class Solution:
             else:
                 gone += currwaiting
                 currwaiting = 0
-                
-            
+
             # print(currwaiting)
-                
+
             i += 1
-            currprof = gone*boardingCost - i*runningCost
+            currprof = gone * boardingCost - i * runningCost
             # print(currprof)
             if currprof > highestprof:
                 highestprof = currprof
                 imax = i
-            
-        return imax if highestprof >= 0 else -1
-                
-            
 
+        return imax if highestprof >= 0 else -1

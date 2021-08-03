@@ -2,12 +2,13 @@ n = int(input())
 left = 1
 right = n
 
+
 def modulate(k):
     e = n
     Vasya = 0
     Petya = 0
     while e > 0:
-        #print(e)
+        # print(e)
         if e <= k:
             Vasya += e
             break
@@ -15,7 +16,7 @@ def modulate(k):
         Vasya += k
         e -= k
         if e >= 10:
-            Petya +=  diff // 10
+            Petya += diff // 10
             e -= diff // 10
         #print(e, ' left')
     #print(Vasya, 'ate Vasya overall')
@@ -24,6 +25,7 @@ def modulate(k):
         return True
     else:
         return False
+
 
 while right - left > 1:
     middle = (right + left) // 2
@@ -36,4 +38,3 @@ if modulate(left):
     print(left)
 else:
     print(right)
-

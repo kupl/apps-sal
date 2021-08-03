@@ -1,5 +1,5 @@
 n = int(input())
-a = [list(map(int,input().split())) for _ in range(2)]
+a = [list(map(int, input().split())) for _ in range(2)]
 s = 0
 for i in range(n):
     s += a[0][i]

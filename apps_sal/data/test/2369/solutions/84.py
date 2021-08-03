@@ -26,4 +26,3 @@ for i, a in enumerate(A):
     MIN %= MOD
 
 print(((MAX - MIN) % MOD))
-

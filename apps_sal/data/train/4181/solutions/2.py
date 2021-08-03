@@ -1,1 +1,1 @@
-filter_numbers = lambda s: "".join(x for x in s if not x.isdigit())
+def filter_numbers(s): return "".join(x for x in s if not x.isdigit())

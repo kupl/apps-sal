@@ -7,8 +7,8 @@ triple = []
 indexes = [[] for _ in range(n)]
 cnt = [0] * n
 abc = []
-for i in range(n-2):
-    a, b, c = [int(item)-1 for item in input().split()]
+for i in range(n - 2):
+    a, b, c = [int(item) - 1 for item in input().split()]
     abc.append((a, b, c))
     indexes[a].append(i)
     indexes[b].append(i)
@@ -31,7 +31,7 @@ while True:
     a, b, c = abc[nxt]
     if cnt[a] == 1 and cnt[b] == 1 and cnt[c] == 1:
         break
-    ans.append(node+1)
+    ans.append(node + 1)
     cnt[a] -= 1
     cnt[b] -= 1
     cnt[c] -= 1

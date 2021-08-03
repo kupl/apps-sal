@@ -1,5 +1,4 @@
-a,b,c = input().split()
+a, b, c = input().split()
 
-n = a[0]+b[0]+c[0]
+n = a[0] + b[0] + c[0]
 print((n.upper()))
-

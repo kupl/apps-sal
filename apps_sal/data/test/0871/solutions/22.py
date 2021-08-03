@@ -1,9 +1,9 @@
 def preobr(s):
-    h, m = list(map(int,s.split()))
+    h, m = list(map(int, s.split()))
     return h * 60 + m
 
 
-n, s = list(map(int,input().split()))
+n, s = list(map(int, input().split()))
 t = preobr(input())
 s += 1
 fl = False
@@ -22,5 +22,3 @@ for i in range(n - 1):
 if not fl:
     res = t + s
 print(res // 60, res % 60)
-        
-

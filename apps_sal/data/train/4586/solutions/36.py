@@ -8,8 +8,7 @@ def tv_remote(word):
         for key in remote:
             if let in key:
                 x = key.find(let)
-                move += abs(y-c_pos[0]) + abs(x-c_pos[1])
+                move += abs(y - c_pos[0]) + abs(x - c_pos[1])
                 c_pos = [y, x]
             y += 1
     return move
-

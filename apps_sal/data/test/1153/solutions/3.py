@@ -20,4 +20,3 @@ while i < n and j < m:
 if i < n or j < m:
     ans += 1
 print(ans)
-

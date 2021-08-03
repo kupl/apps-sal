@@ -18,9 +18,12 @@ class Calc:
 
     def nCr(self, n, r):
         r = min(n - r, r)
-        if r < 0: return 0
-        if r == 0: return 1
-        if r == 1: return n
+        if r < 0:
+            return 0
+        if r == 0:
+            return 1
+        if r == 1:
+            return n
         return self.fact[n] * self.invs[r] * self.invs[n - r] % self.mod
 
     def nHr(self, n, r):
@@ -51,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

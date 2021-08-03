@@ -8,4 +8,3 @@ def people_with_age_drink(age):
         return 'drink beer'
     if age >= c:
         return 'drink whisky'
-

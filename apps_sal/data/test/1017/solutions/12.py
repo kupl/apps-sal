@@ -6,6 +6,6 @@ def __starting_point():
         print(2 * (n // 3))
     else:
         print(2 * (n // 3) + 1)
-    
+
 
 __starting_point()

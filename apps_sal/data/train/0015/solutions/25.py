@@ -7,4 +7,3 @@ while t:
     area3 = (a - 1 - x) * b
     area4 = a * (b - 1 - y)
     print(max(area1, area2, area3, area4))
-

@@ -34,5 +34,3 @@ for _ in range(t):
     else:
         out.append('NO')
 print('\n'.join(out))
-            
-

@@ -5,11 +5,12 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-        
+
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
 
         to_delete = set(to_delete)
         res = []
+
         def walk(root, parent_exist):
             if root is None:
                 return None

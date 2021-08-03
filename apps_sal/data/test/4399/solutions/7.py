@@ -1,1 +1,1 @@
-print('YNeos'[len(set([*input()]))<2::2])
+print('YNeos'[len(set([*input()])) < 2::2])

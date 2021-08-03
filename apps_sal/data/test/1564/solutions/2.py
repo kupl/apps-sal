@@ -31,15 +31,15 @@ while lenTb > 1:
 if lenTa and lenTb:
     res.append((ta[-1], ta[-1]))
     res.append((ta[-1], tb[-1]))
-    
+
     print(len(res))
-    
+
     for i in res:
-        print(i[0]+1, i[1]+1)
+        print(i[0] + 1, i[1] + 1)
 elif lenTa or lenTb:
     print(-1)
 else:
     print(len(res))
-    
+
     for i in res:
-        print(i[0]+1, i[1]+1)
+        print(i[0] + 1, i[1] + 1)

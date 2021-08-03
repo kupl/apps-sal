@@ -18,4 +18,3 @@ stones = {
 missing = set(stones.keys()) - names
 print(len(missing))
 print('\n'.join(stones[v] for v in missing))
-

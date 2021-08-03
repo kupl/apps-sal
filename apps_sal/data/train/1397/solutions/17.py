@@ -20,4 +20,3 @@ for _ in range(int(input())):
             ans += 1
             l = r[t[i]][0]
     print(ans)
-

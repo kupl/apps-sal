@@ -6,4 +6,3 @@ YIN_YANG = {'hhh': '----o----', 'hht': '---- ----',
 def oracle(arr):
     return '\n'.join(YIN_YANG[''.join(sorted(a[1:]))] for a in
                      sorted(arr, key=lambda b: ORDER.index(b[0])))
-

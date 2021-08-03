@@ -24,7 +24,7 @@ def interpreter(code, tape):
                         if open == 0:
                             pos_code = i
                             break
-                            
+
         elif instruction == ']':
             if tape[pos] != 0:
                 closed = 1

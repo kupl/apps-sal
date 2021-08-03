@@ -1,6 +1,7 @@
 # Give me AC!!!
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -50,17 +51,20 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
+
+
 n, m = map(int, input().split())
 unionfind = UnionFind(n)
 a, b = list(map(int, input().split())), list(map(int, input().split()))
 for i in range(m):
-  x, y = map(int, input().split())
-  unionfind.union(x - 1, y - 1)
+    x, y = map(int, input().split())
+    unionfind.union(x - 1, y - 1)
 for i in unionfind.all_group_members().values():
-  sum_a, sum_b = 0, 0
-  for j in i:
-    sum_a += a[j]
-    sum_b += b[j]
-  if sum_a != sum_b:
-    print('No');return
+    sum_a, sum_b = 0, 0
+    for j in i:
+        sum_a += a[j]
+        sum_b += b[j]
+    if sum_a != sum_b:
+        print('No')
+        return
 print('Yes')

@@ -11,7 +11,7 @@ for i in range(n):
             queue.append(time + during)
         else:
             queue.append(queue[-1] + during)
-        print(queue[-1], end = ' ')
+        print(queue[-1], end=' ')
         tail += 1
     else:
-        print('-1', end = ' ')
+        print('-1', end=' ')

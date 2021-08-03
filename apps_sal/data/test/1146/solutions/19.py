@@ -6,7 +6,7 @@ for _ in range(n):
         v[x] = 1
 
 correct = True
-for x in range(1, m+1):
+for x in range(1, m + 1):
     if not v[x]:
         correct = False
         break
@@ -15,4 +15,3 @@ if correct:
     print("YES")
 else:
     print("NO")
-

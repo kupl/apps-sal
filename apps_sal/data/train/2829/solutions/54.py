@@ -1,4 +1,4 @@
-def array_madness(a,b):
+def array_madness(a, b):
     result_a = 0
     result_b = 0
     for i in a:

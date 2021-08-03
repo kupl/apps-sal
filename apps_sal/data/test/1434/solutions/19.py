@@ -6,7 +6,7 @@ for i in range(n):
     v.append([a, b, i])
 
 g = dict()
-for i in range(n+20):
+for i in range(n + 20):
     g[i] = set()
 for i in v:
     if i[0] in g:
@@ -26,16 +26,15 @@ while len(g[1]) > 0:
     b = v[i][1]
 
     g[v[a][0]].discard(v[a][2])
-    g[v[a][0]-1].add(v[a][2])
+    g[v[a][0] - 1].add(v[a][2])
     v[a][0] -= 1
 
     g[v[b][0]].discard(v[b][2])
-    g[v[b][0]-1].add(v[b][2])
+    g[v[b][0] - 1].add(v[b][2])
     v[b][0] -= 1
 
     v[b][1] ^= a
     ans.append((a, b))
-
 
 
 print(len(ans))

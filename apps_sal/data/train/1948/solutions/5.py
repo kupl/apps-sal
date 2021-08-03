@@ -31,9 +31,11 @@ class Solution:
             cnt, res = 1, 1
             for angle in angles:
                 # entry angle
-                if angle[1] == 0: cnt += 1
+                if angle[1] == 0:
+                    cnt += 1
                 # exit angle
-                else: cnt -= 1
+                else:
+                    cnt -= 1
 
                 res = max(cnt, res)
 

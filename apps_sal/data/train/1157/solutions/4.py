@@ -6,8 +6,8 @@ for _ in range(int(input())):
     total = 0
     for i in range(k):
         a = arr_k[i]
-        x = (a-1) // m + 1
-        y = (a-1) % m + 1
-        total += (x*y)*(n-x+1)*(m-y+1)
-    res = total/total_p
+        x = (a - 1) // m + 1
+        y = (a - 1) % m + 1
+        total += (x * y) * (n - x + 1) * (m - y + 1)
+    res = total / total_p
     print(f'{res:.10f}')

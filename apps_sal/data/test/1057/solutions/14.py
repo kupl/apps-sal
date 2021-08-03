@@ -15,5 +15,5 @@ for s in S[::-1]:
         break
     m += 1
 
-ans = (n+1) * (m+1) if S[0] == S[-1] else n + m + 1
+ans = (n + 1) * (m + 1) if S[0] == S[-1] else n + m + 1
 print(ans % 998244353)

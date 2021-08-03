@@ -1,4 +1,6 @@
 from sortedcontainers import SortedList
+
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         # we keep two pointers and we keep track of min and max between those pointers
@@ -15,12 +17,9 @@ class Solution:
             while s and s[-1] - s[0] > limit:
                 s.remove(nums[j])
                 j += 1
-            max_length = max(max_length,i-j + 1)
+            max_length = max(max_length, i - j + 1)
         return max_length
-        
-        
-        
-        
+
         # for the following approach also the time limit gets exceeded because although operations on dictionary are O(logn) we are doing them for more number of times then expected
         '''
         # i.e. if min is our problem then we need to increase i till we find new min 
@@ -107,8 +106,4 @@ class Solution:
                     Max = max(nums[i:j+1])
                     #print('c',i,j,Max,Min)
         return max_length
-        '''            
-        
-        
-        
-
+        '''

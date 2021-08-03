@@ -11,4 +11,3 @@ for a in range(2, 100001):
         tab[-2] + num_counter[a] * a
     ))
 print(tab[100000])
-

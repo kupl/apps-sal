@@ -18,4 +18,3 @@ for p, y in q:
     pn = "00000" + str(p)
     cn = "00000" + c[p][y]
     print((pn[-6:] + cn[-6:]))
-

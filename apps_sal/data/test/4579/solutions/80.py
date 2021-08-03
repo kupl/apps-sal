@@ -6,4 +6,3 @@ for i in range(N):
     dic[S[i]] = 0
 
 print((len(list(dic.keys()))))
-

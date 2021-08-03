@@ -3,13 +3,13 @@ class Solution:
         power = {}
         power[1] = 0
         current = {}
-        nums = list(range(lo, hi+1))
+        nums = list(range(lo, hi + 1))
         for i in nums:
             self.get_power_value(power, current, i)
-        value = sorted(list(current.items()), key= lambda x:x[1])
+        value = sorted(list(current.items()), key=lambda x: x[1])
         arr = list([x[0] for x in value])
-        return arr[k-1]
-    
+        return arr[k - 1]
+
     def get_power_value(self, power, current, num):
         arr = []
         start = num
@@ -32,8 +32,3 @@ class Solution:
                 power[start] = len(arr) - i + found_power
                 start = arr[i]
             current[num] = power[num]
-            
-    
-            
-                
-

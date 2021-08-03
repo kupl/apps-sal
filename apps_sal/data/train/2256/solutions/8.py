@@ -1,7 +1,7 @@
 
 n, m = map(int, input().split())
 buf = []
-for i in range(n//2):
+for i in range(n // 2):
     for j in range(m):
         buf.append(f'{i + 1} {j + 1}\n')
         buf.append(f'{n - i} {m - j}\n')

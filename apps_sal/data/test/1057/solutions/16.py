@@ -30,4 +30,3 @@ else:
     ans += l + r + 1
     ans %= mod
 print(ans)
-

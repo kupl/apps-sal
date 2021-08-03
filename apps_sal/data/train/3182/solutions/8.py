@@ -1,5 +1,6 @@
 from itertools import islice
 
+
 def iter_powers(n):
     x = n
     while True:

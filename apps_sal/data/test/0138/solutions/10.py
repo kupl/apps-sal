@@ -8,4 +8,3 @@ elif k == 2:
     print(min(2 * a, b, 2 * c))
 elif k == 3:
     print(min(3 * a, c, b + a))
-

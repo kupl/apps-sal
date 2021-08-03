@@ -1,1 +1,1 @@
-set_alarm = lambda employed,vacation: (employed,vacation) == (True,False)
+def set_alarm(employed, vacation): return (employed, vacation) == (True, False)

@@ -6,7 +6,8 @@ while k:
 
     for i in range(n):
 
-        if i > k: break
+        if i > k:
+            break
 
         p[n][i] = p[i][n] = '1'
 
@@ -16,5 +17,5 @@ while k:
 
 print(n)
 
-for i in range(n): print(''.join(p[i][:n]))
-
+for i in range(n):
+    print(''.join(p[i][:n]))

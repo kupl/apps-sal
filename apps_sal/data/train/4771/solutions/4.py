@@ -1,9 +1,9 @@
-def encryptor (key, mess):
+def encryptor(key, mess):
     lst = []
     for i in mess:
         if i.isalpha():
             C = 97 - 32 * i.isupper()
-            lst.append (chr ((ord (i) - C + key)%26 + C))
+            lst.append(chr((ord(i) - C + key) % 26 + C))
         else:
-            lst.append (i)
-    return ''.join (lst)
+            lst.append(i)
+    return ''.join(lst)

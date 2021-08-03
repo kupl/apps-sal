@@ -1,8 +1,11 @@
 USE_STDIO = False
 
 if not USE_STDIO:
-    try: import mypc
-    except: pass
+    try:
+        import mypc
+    except:
+        pass
+
 
 def main():
     a = sorted(map(int, input().split(' ')))
@@ -12,10 +15,9 @@ def main():
     else:
         print(- x + 1)
 
+
 def __starting_point():
     main()
-
-
 
 
 __starting_point()

@@ -16,4 +16,3 @@ for i in range(n - 1):
         if t == set('face'):
             ans += 1
 print(ans)
-

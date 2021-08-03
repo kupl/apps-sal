@@ -28,5 +28,3 @@ for z in range(int(input())):
         print((max(abs(X - 1), abs(Y - 1)) + 1))
     else:
         print((max(abs(X - 1), abs(Y - 1))))
-
-

@@ -8,7 +8,7 @@ class Solution:
     def solve(self, lst, root):
         max_current = lst[-1][1]
         min_current = lst[-1][0]
-        if root is not None:          
+        if root is not None:
             current_value = root.val
             if current_value > max_current:
                 max_current = current_value
@@ -17,7 +17,7 @@ class Solution:
             lst.append((min_current, max_current))
             return max(self.solve(lst[:], root.left), self.solve(lst[:], root.right))
         else:
-            max_val =  max_current - min_current
+            max_val = max_current - min_current
             return max_val
 
     def maxAncestorDiff(self, root: TreeNode) -> int:

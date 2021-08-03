@@ -19,4 +19,3 @@ while l < N:
         xo ^= A[l]
         l += 1
 print(ans)
-

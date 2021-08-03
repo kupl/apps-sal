@@ -16,4 +16,3 @@ for i in range(1, N):
     dp[i + 1] += dp[i]  # 累積和（＝現在の数字＋一つ前の累積和）にするために一つ前のdpを足す
     dp[i + 1] %= MOD
 print(((dp[N] - dp[N - 1]) % MOD))
-

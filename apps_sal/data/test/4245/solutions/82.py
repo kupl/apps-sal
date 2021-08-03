@@ -1,3 +1,3 @@
-A,B=map(int,input().split())
 import math
-print(math.ceil((B-1)/(A-1)))
+A, B = map(int, input().split())
+print(math.ceil((B - 1) / (A - 1)))

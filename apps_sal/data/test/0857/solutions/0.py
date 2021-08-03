@@ -5,4 +5,3 @@ for x in a:
     if x in b:
         print(x, end=' ')
 print()
-

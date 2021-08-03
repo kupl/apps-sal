@@ -7,5 +7,5 @@ def missing_alphabets(s):
     result = []
     for letter in alphabet:
         if s.count(letter) != sets:
-            result.append(letter*(sets-s.count(letter)))
+            result.append(letter * (sets - s.count(letter)))
     return(''.join(result))

@@ -39,4 +39,3 @@ if not found:
                 cnt += 1
     answer = (2 ** cnt) % 1000000007
 print(answer)
-

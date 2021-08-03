@@ -1,5 +1,6 @@
 from string import ascii_lowercase
 
+
 def high(x):
     letter_worth = {letter: int(index) for index, letter in enumerate(ascii_lowercase, start=1)}
     words = x.split()

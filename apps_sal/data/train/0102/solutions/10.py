@@ -5,5 +5,6 @@ for _ in range(int(input())):
         s = ''
         for j in range(10):
             s += str(i)
-            if int(s) <= n: ans += 1
+            if int(s) <= n:
+                ans += 1
     print(ans)

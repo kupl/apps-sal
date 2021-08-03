@@ -1,7 +1,11 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip("\r\n")
-inp = lambda: list(map(int,sys.stdin.readline().rstrip("\r\n").split()))
-#______________________________________________________________________________________________________
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
+
+def inp(): return list(map(int, sys.stdin.readline().rstrip("\r\n").split()))
+
+
+# ______________________________________________________________________________________________________
 # from math import *
 # from bisect import *
 # from heapq import *
@@ -76,10 +80,10 @@ tc, = inp()
 #     a.append(a[-1]+a[-2])
 for _ in range(tc):
     n, = inp()
-    b = (n*(n+1))//2
-    a = [i+1 for i in range(b+1)]
+    b = (n * (n + 1)) // 2
+    a = [i + 1 for i in range(b + 1)]
     # print(a)
     start = 0
-    for i in range(n,0,-1):
-        print(*a[start:start+i],sep = "")
-        start+=i
+    for i in range(n, 0, -1):
+        print(*a[start:start + i], sep="")
+        start += i

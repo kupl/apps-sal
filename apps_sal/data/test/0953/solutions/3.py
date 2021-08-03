@@ -32,10 +32,9 @@ for g in groups:
     while i > 0:
         j = 0
         while j < i - 1:
-            if p[g[j]] > p[g[j+1]]:
-                p[g[j]], p[g[j+1]] = p[g[j+1]], p[g[j]]
+            if p[g[j]] > p[g[j + 1]]:
+                p[g[j]], p[g[j + 1]] = p[g[j + 1]], p[g[j]]
             j += 1
         i -= 1
 
 print(' '.join(map(str, p)))
-

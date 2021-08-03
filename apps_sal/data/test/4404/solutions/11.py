@@ -8,4 +8,3 @@ elif int(S[0:4]) == 2019:
         print('TBD')
         return
 print('Heisei')
-

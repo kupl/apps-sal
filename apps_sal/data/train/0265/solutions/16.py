@@ -8,7 +8,6 @@ class Solution:
             tot += num
             if (tot - target) in sums:
                 count += 1
-                sums=set()
+                sums = set()
             sums.add(tot)
         return count
-

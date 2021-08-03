@@ -4,7 +4,7 @@ for i in range(t):
     ans = 0
     while n > 0:
         if n % k == 0:
-            n//=k
+            n //= k
             ans += 1
         else:
             ans += n % k

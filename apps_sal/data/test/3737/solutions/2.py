@@ -7,4 +7,3 @@ for i in range(len(line)):
     if line[i] < m2 and line[i] > m1:
         ans += 1
 print(ans)
-

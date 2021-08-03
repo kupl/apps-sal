@@ -8,7 +8,6 @@ while a <= r:
 
 if ans:
     for num in ans:
-        print(num, end = ' ')
+        print(num, end=' ')
 else:
     print(-1)
-

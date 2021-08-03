@@ -1,3 +1,2 @@
-N=float(eval(input()))
+N = float(eval(input()))
 print(25)
-

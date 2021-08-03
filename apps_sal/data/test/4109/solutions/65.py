@@ -35,4 +35,3 @@ if res == inf:
     res = -1
 
 print(res)
-

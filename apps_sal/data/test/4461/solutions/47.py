@@ -59,19 +59,26 @@ print(next(generator))
 
 
 def readInts():
-  return list(map(int,input().split()))
+    return list(map(int, input().split()))
+
+
 mod = 10**9 + 7
+
+
 def main():
-  H,W = readInts()
-  LIST = [H//2 + W//3 + 1, W//3 + H//2 + 1, H, W]
-  if H%3 == 0 or W % 3 == 0:
-    LIST += [0]
-  if H % 2 == 0:
-    LIST += [H//2]
-  if W % 2 == 0:
-    LIST += [W//2]
-  print(min(LIST))
-  
+    H, W = readInts()
+    LIST = [H // 2 + W // 3 + 1, W // 3 + H // 2 + 1, H, W]
+    if H % 3 == 0 or W % 3 == 0:
+        LIST += [0]
+    if H % 2 == 0:
+        LIST += [H // 2]
+    if W % 2 == 0:
+        LIST += [W // 2]
+    print(min(LIST))
+
+
 def __starting_point():
-  main()
+    main()
+
+
 __starting_point()

@@ -3,12 +3,12 @@ class Solution:
         Lsum = [(sum(A[:L]), 0)]
         Msum = [(sum(A[:M]), 0)]
         for i in range(1, len(A) - L + 1):
-            Lsum.append((Lsum[-1][0] - A[i-1] + A[i+L-1], i))
+            Lsum.append((Lsum[-1][0] - A[i - 1] + A[i + L - 1], i))
         for i in range(1, len(A) - M + 1):
-            Msum.append((Msum[-1][0] - A[i-1] + A[i+M-1], i))
+            Msum.append((Msum[-1][0] - A[i - 1] + A[i + M - 1], i))
         Lsum.sort(reverse=True)
         Msum.sort(reverse=True)
-        ret = sum(A[:L+M])
+        ret = sum(A[:L + M])
         for li in range(len(Lsum)):
             breakFlag = True
             for mi in range(len(Msum)):
@@ -20,4 +20,3 @@ class Solution:
             if breakFlag:
                 break
         return ret
-

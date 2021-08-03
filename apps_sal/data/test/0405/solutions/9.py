@@ -17,4 +17,3 @@ for c in reversed(s):
         break
 
 print(ans)
-

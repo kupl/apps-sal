@@ -4,9 +4,9 @@ class Solution:
         l = []
         x = 0
 
-        while x <= len(rating)-2:
+        while x <= len(rating) - 2:
             y = x + 1
-            while y <= len(rating)-1:
+            while y <= len(rating) - 1:
                 z = y + 1
                 while z < len(rating):
                     if rating[x] < rating[y] and rating[y] < rating[z]:
@@ -20,7 +20,4 @@ class Solution:
                 y += 1
             x += 1
 
-    
         return teams
-    
-

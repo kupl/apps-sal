@@ -26,4 +26,3 @@ if same_range:
         B[i], B[j] = B[j], B[i]
 print("Yes")
 print((" ".join(map(str, B))))
-

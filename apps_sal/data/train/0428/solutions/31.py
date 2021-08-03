@@ -42,8 +42,10 @@ class Solution:
         final_dist['@', 0] = 0
         while pq:
             d, place, state = heapq.heappop(pq)
-            if final_dist[place, state] < d: continue
-            if state == target_state: return d
+            if final_dist[place, state] < d:
+                continue
+            if state == target_state:
+                return d
             for destination, d2 in dists[place].items():
                 state2 = state
                 if destination.islower():  # key

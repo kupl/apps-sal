@@ -20,4 +20,3 @@ for _ in range(int(input())):
     else:
         print('YES')
         print(6, 10, 15, y)
-

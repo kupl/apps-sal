@@ -32,4 +32,3 @@ for i in range(N - 1, -1, -1):
         else:
             r -= 1
 print((''.join(d)))
-

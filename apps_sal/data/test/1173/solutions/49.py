@@ -1,4 +1,5 @@
-import sys, collections
+import sys
+import collections
 input = sys.stdin.readline
 
 n = int(input())

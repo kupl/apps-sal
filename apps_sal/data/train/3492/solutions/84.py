@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     pol = {'ą': 'a',
            'ć': 'c',
            'ę': 'e',
@@ -8,14 +8,14 @@ def correct_polish_letters(st):
            'ś': 's',
            'ź': 'z',
            'ż': 'z'}
-    
+
     st2 = ""
-    
+
     for c in st:
         if c in pol:
             st2 += pol[c]
-        
+
         else:
             st2 += c
-    
+
     return st2

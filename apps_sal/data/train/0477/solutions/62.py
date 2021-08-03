@@ -4,4 +4,4 @@ class Solution:
         s = '0'
         while len(s) < k:
             s = s + '1' + ''.join(switch[i] for i in reversed(s))
-        return s[k-1]
+        return s[k - 1]

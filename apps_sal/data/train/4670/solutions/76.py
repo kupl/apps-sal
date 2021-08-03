@@ -6,5 +6,3 @@ def string_to_number(s):
     except e:
         print("not an integer")
         pass
-        
-

@@ -32,4 +32,3 @@ for i in range(N - 3):
     d = t
 
 print((sum(d.values()) % m))
-

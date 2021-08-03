@@ -1,5 +1,6 @@
 def stringify(node):
-    if node == None: return 'None'
+    if node == None:
+        return 'None'
     i = node
     t = ''
     while i.next != None:

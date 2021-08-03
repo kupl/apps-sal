@@ -13,18 +13,18 @@ for i in range(n):
     xor ^= A[i][0]
     ans.append(1)
 
-if xor==0:
+if xor == 0:
     found = 0
-    for trial in range(n-1, -1, -1):
-        newxor = xor^A[trial][0]
-        if found==1:
+    for trial in range(n - 1, -1, -1):
+        newxor = xor ^ A[trial][0]
+        if found == 1:
             break
         for j in range(m):
-            if A[trial][j]^newxor!=0:
-                ans[trial] = j+1
+            if A[trial][j] ^ newxor != 0:
+                ans[trial] = j + 1
                 found = 1
                 break
-        if found==1:
+        if found == 1:
             break
     if found:
         print('TAK')
@@ -34,4 +34,3 @@ if xor==0:
 else:
     print('TAK')
     print(*ans)
-

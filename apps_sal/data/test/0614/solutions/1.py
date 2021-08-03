@@ -1,6 +1,7 @@
 import sys
 from itertools import accumulate
 
+
 def solve():
     n, m = map(int, input().split())
     w = [[] for i in range(3)]
@@ -13,8 +14,8 @@ def solve():
     for i in range(3):
         w[i].sort(reverse=True)
 
-    dp = [0]*(m + 1)
-    used = [[0]*2 for i in range(m + 1)]
+    dp = [0] * (m + 1)
+    used = [[0] * 2 for i in range(m + 1)]
 
     s0 = len(w[0])
     s1 = len(w[1])
@@ -39,10 +40,13 @@ def solve():
 
     pf = [0] + list(accumulate(w[2]))
 
-    ans = max(pf[k] + dp[m - 3*k] for k in range(min(len(pf),m // 3 + 1)))
+    ans = max(pf[k] + dp[m - 3 * k] for k in range(min(len(pf), m // 3 + 1)))
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

@@ -23,10 +23,10 @@ def main():
             if not (s[1] == 'A' and s[0] == 'C'):
                 dp[i]['G' + s[:2]] = (dp[i]['G' + s[:2]] + v) % MOD
             if (
-                not (s[1] == 'A' and s[0] == 'G')
-                and not (s[1] == 'G' and s[0] == 'A')
-                and not (s[2] == 'A' and s[1] == 'G')
-                and not (s[2] == 'A' and s[0] == 'G')
+                not (s[1] == 'A' and s[0] == 'G') and
+                not (s[1] == 'G' and s[0] == 'A') and
+                not (s[2] == 'A' and s[1] == 'G') and
+                not (s[2] == 'A' and s[0] == 'G')
             ):
                 dp[i]['C' + s[:2]] = (dp[i]['C' + s[:2]] + v) % MOD
 
@@ -38,5 +38,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

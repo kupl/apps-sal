@@ -7,4 +7,3 @@ class Solution:
                 tmp = elem + '/'
                 res.append(elem)
         return res
-

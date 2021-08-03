@@ -8,4 +8,3 @@ for i in range(n):
     if int(s[i]) % 4 == 0:
         ans += 1
 print(ans)
-

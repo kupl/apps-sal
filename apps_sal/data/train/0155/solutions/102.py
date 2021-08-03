@@ -22,5 +22,3 @@ class Solution:
         for i in range(len(arr)):
             ans = max(helper(i), ans)
         return ans
-
-

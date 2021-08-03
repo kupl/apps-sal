@@ -1,4 +1,6 @@
 from queue import PriorityQueue
+
+
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         pq = PriorityQueue()
@@ -13,10 +15,10 @@ class Solution:
                 # if distance < furthest:
                 pq.put((distance, p))
                 pq.get()
-        
+
         ans = []
         while pq.qsize():
             (distance, p) = pq.get()
             ans.append(p)
-        
+
         return ans

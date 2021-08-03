@@ -18,4 +18,3 @@ for lp in range(n):
                 lf = 0
         ans = max(ans, (x ** 2 + y ** 2) ** .5)
 print(ans)
-

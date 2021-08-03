@@ -11,6 +11,3 @@ class Solution:
                 n_add += 1
             n_mul = max(n_mul, c_mul)
         return n_add + n_mul
-                
-            
-

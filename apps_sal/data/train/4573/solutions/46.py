@@ -4,4 +4,4 @@ def over_the_road(address, n):
     Returns: int, number of the house across from your house. 
     '''
 
-    return (2*n + 1 - address) 
+    return (2 * n + 1 - address)

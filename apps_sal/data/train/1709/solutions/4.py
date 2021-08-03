@@ -1,8 +1,9 @@
 from collections import defaultdict
 
+
 def sum_for_list(lst):
 
-    primes = [2,]
+    primes = [2, ]
     # Use list instaed of int to account for zero sums
     factors_dict = defaultdict(list)
     answer = []
@@ -13,7 +14,7 @@ def sum_for_list(lst):
         if all(x % d for d in range(3, int(x ** .5) + 1, 2)):
             primes += [x]
         x += 2
-               
+
     # Dictionary, keys are prime numbers, values are zero
     for k in primes:
         factors_dict[k]
@@ -28,7 +29,6 @@ def sum_for_list(lst):
     # Sum the values from lst (get those pesky zero sums)
     for k, v in list(factors_dict.items()):
         if v:
-            answer += [[k,sum(v)]]
+            answer += [[k, sum(v)]]
 
     return answer
-

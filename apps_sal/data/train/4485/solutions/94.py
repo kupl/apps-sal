@@ -9,4 +9,3 @@ def HQ9(code):
 
     else:
         return None
-
