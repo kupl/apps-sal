@@ -1,4 +1,4 @@
-def arr(n = 0): 
+def arr(n=0):
     List = []
     for x in range(n):
         List.append(x)

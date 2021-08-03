@@ -1,6 +1,6 @@
-def arr(n = None):
+def arr(n=None):
     res = []
-    
+
     if n == None:
         return res
     else:
@@ -8,6 +8,4 @@ def arr(n = None):
             res.append(i)
         return res
 
-
     # [ the numbers 0 to N-1 ]
-

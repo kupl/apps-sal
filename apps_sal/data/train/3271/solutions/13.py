@@ -1,1 +1,1 @@
-arr=lambda a=0:[*range(a)]
+def arr(a=0): return [*range(a)]

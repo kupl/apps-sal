@@ -1,4 +1,4 @@
-def arr(n=0): 
+def arr(n=0):
     if n == 0:
         return []
     else:
@@ -6,4 +6,3 @@ def arr(n=0):
             return list(print(-1))
         else:
             return list(range(n))
-

@@ -5,6 +5,6 @@ def arr(n=''):
         lista = []
         n = int(n)
         for i in range(n):
-            caracter =int(i)
+            caracter = int(i)
             lista.append(caracter)
         return lista

@@ -1,4 +1,4 @@
-def arr(n = 0): 
+def arr(n=0):
     lst = []
     if n == 0:
         return []

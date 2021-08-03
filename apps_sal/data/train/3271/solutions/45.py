@@ -1,4 +1,4 @@
-def arr(n = []):
+def arr(n=[]):
     if n == []:
         return []
     a = range(0, n)

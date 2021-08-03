@@ -1,1 +1,1 @@
-arr = lambda n=0: [i for i in range(n)]
+def arr(n=0): return [i for i in range(n)]

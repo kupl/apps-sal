@@ -1,3 +1,4 @@
 import numpy as np
 
-find_average = lambda x: np.mean(x or 0)
+
+def find_average(x): return np.mean(x or 0)

@@ -1,6 +1,6 @@
-def arr(n=0): 
+def arr(n=0):
     # [ the numbers 0 to N-1 ]
     if(n):
-        return list(range(0,n))
+        return list(range(0, n))
     else:
         return []

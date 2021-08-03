@@ -1,5 +1,6 @@
 import re
 
+
 def s(m):
     n, w = m.groups()
     n = int(n)
@@ -12,6 +13,7 @@ def s(m):
         return '{} {}zo'.format(n, w)
     else:
         return '{} ga{}ga'.format(n, w)
+
 
 def sursurungal(txt):
     return re.sub('(\d+) (\w+)', s, txt)

@@ -4,4 +4,3 @@ def arr(n=0):
     for i in range(n):
         tomb.append(i)
     return tomb
-

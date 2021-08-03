@@ -5,4 +5,4 @@ def find_average(nums):
     else:
         for i in range(len(nums)):
             s = s + nums[i]
-        return s/len(nums)
+        return s / len(nums)

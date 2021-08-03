@@ -1,4 +1,4 @@
-def arr(n = None): 
+def arr(n=None):
     array = []
     if n is None:
         return array

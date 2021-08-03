@@ -1,12 +1,11 @@
 def find_average(nums):
-    #your code here
+    # your code here
     total = 0
     if len(nums) > 0:
         for i in nums:
-            total += i 
+            total += i
         le = len(nums)
-        print((total/le))
-        return total/le
-    else: 
+        print((total / le))
+        return total / le
+    else:
         return 0
-

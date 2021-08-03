@@ -1,4 +1,4 @@
-def arr(n = 0):
+def arr(n=0):
     content = []
     if(n > 0):
         for i in range(n):

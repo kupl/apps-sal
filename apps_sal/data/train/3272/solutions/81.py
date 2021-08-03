@@ -3,8 +3,8 @@ def find_average(nums):
         return 0
 
     total = 0
-    
+
     for num in nums:
-        total+= num
-        
-    return total/len(nums)
+        total += num
+
+    return total / len(nums)

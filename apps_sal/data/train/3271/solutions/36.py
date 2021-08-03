@@ -1,4 +1,4 @@
-def arr(n=0): 
+def arr(n=0):
     solution = []
     x = -1
     if n == 0:
@@ -8,4 +8,3 @@ def arr(n=0):
             x += 1
             solution.append(x)
     return solution
-

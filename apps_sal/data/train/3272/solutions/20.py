@@ -1,1 +1,1 @@
-find_average = lambda a: __import__("numpy").mean(a) if a else 0
+def find_average(a): return __import__("numpy").mean(a) if a else 0

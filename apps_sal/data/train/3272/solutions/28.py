@@ -10,4 +10,3 @@ def find_average(nums):
 # def find_average(nums):
     # length = len(nums)
     # return sum(nums) / float(length) if length > 0 else 0
-

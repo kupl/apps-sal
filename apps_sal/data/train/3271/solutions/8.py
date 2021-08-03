@@ -1,4 +1,4 @@
-def arr(n = ''): 
+def arr(n=''):
     # [ the numbers 0 to N-1 ]
     n = str(n)
     if len(n) == 0:
@@ -8,4 +8,3 @@ def arr(n = ''):
     for i in range(n):
         array.append(i)
     return(array)
-

@@ -1,1 +1,1 @@
-arr=lambda a=0:list(range(a))
+def arr(a=0): return list(range(a))

@@ -1,1 +1,1 @@
-find_average = lambda n: sum(n) / float(len(n)) if len(n) > 0 else 0
+def find_average(n): return sum(n) / float(len(n)) if len(n) > 0 else 0
