@@ -1,4 +1,5 @@
-l = []; s = 12
+l = []
+s = 12
 for i in range(int(input())):
     y = input()
     s = min({sum(a != b for a, b in zip(x, y)) - 1 for x in l} | {s})

@@ -73,7 +73,8 @@ class Unionfind:
         u = self.root(x)
         v = self.root(y)
 
-        if u == v: return
+        if u == v:
+            return
 
         if self.rank[u] < self.rank[v]:
             self.p[u] = v

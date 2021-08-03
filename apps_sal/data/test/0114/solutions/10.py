@@ -1,6 +1,8 @@
 ''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
 # codeforces1207B_live
-gi = lambda: list(map(int, input().split()))
+def gi(): return list(map(int, input().split()))
+
+
 n, m = gi()
 a = [gi() for _ in range(n)]
 b = [[0] * m for _ in range(n)]

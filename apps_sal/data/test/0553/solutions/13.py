@@ -20,8 +20,10 @@ def fnd(a, m, key):  # next
 
 
 def F(a, m, key=True):
-    if (m[0] > a) and key: return m[0]
-    if (m[-1] < a) and not key: return m[-1]
+    if (m[0] > a) and key:
+        return m[0]
+    if (m[-1] < a) and not key:
+        return m[-1]
     return fnd(a, m, key)
 
 

@@ -7,7 +7,8 @@ total = a + b
 s = input().strip()
 
 for val, g in groupby(s):
-    if val == '*': continue
+    if val == '*':
+        continue
     length = len(list(g))
     b -= (length + 1) // 2
     a -= length // 2

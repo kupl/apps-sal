@@ -1,7 +1,10 @@
 import sys
 import os
 
-f = lambda: list(map(int, input().split()))
+
+def f(): return list(map(int, input().split()))
+
+
 if 'local' in os.environ:
     sys.stdin = open('./input.txt', 'r')
 

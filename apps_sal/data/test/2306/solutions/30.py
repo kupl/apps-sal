@@ -16,6 +16,7 @@ for i in range(2 * Tsum - 1, 0, -1):
     vtmax[i] = min(vtmax[i], vtmax[i + 1] + 0.5)
 area = 0
 for i, vt in enumerate(vtmax):
-    if i == 0: continue
+    if i == 0:
+        continue
     area += 0.5 * (vt + vtmax[i - 1]) / 2
 print(area)

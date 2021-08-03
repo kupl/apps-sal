@@ -3,7 +3,8 @@ import sys
 
 def main(N, P):
     I = [-1] * N
-    for i, p in enumerate(P): I[p] = i
+    for i, p in enumerate(P):
+        I[p] = i
     p = 0
     s = 0
     ans = []

@@ -103,8 +103,10 @@ class nCr():
             self.fi[i] = pow(self.fa[i], mod - 2, mod)
 
     def comb(self, n, r):
-        if n < r: return 0
-        if n < 0 or r < 0: return 0
+        if n < r:
+            return 0
+        if n < 0 or r < 0:
+            return 0
         return self.fa[n] * self.fi[r] % mod * self.fi[n - r] % mod
 # 拡張Euclidの互除法
 

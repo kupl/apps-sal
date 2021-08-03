@@ -54,8 +54,10 @@ def update(root, start, value):
 
 
 def query(root, start, end):
-    if root.start >= start and root.end <= end: return root.val
-    elif root.start > end or root.end < start: return -float('inf')
+    if root.start >= start and root.end <= end:
+        return root.val
+    elif root.start > end or root.end < start:
+        return -float('inf')
     else:
         temp1 = query(root.left, start, end)
         temp2 = query(root.right, start, end)

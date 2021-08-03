@@ -41,8 +41,10 @@ def next(y, wh):
 
 for i in range(n):
     y = heapq.heappop(v2)
-    if ans[y[1]][0] == -1: next(y, True)
-    if ans[y[1]][1] == -1: next(y, False)
+    if ans[y[1]][0] == -1:
+        next(y, True)
+    if ans[y[1]][1] == -1:
+        next(y, False)
 answer = 0
 for i in range(n):
     h = min((t[i] + sum(ans[i])) / 2, v[i])

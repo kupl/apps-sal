@@ -26,7 +26,8 @@ def main():
         # print(sol)
         s1 = [i for i, j in sol]
         a1 = [j for i, j in sol]
-        for i in range(n - 2, -1, -1): a1[i] = max(a1[i], a1[i + 1])
+        for i in range(n - 2, -1, -1):
+            a1[i] = max(a1[i], a1[i + 1])
         # print(a1, s1)
         ans = max(sol, key=lambda x: x[1])[1]
         for i in range(n):

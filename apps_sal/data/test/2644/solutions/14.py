@@ -9,7 +9,8 @@ ans = []
 i = 1
 while(i < N):
     j = Q[i]
-    if j <= i: break
+    if j <= i:
+        break
     for k in range(j - 1, i - 1, -1):
         ans.append(k)
         P[k], P[k - 1] = P[k - 1], P[k]

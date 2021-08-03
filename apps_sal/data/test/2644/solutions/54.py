@@ -10,7 +10,8 @@ i = 1
 ans = []
 while(i < N):
     j = pos[i]
-    if j <= i: break
+    if j <= i:
+        break
     for k in range(j - 1, i - 1, -1):
         ans.append(k)
         P[k - 1], P[k] = P[k], P[k - 1]

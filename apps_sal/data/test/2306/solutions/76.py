@@ -1,4 +1,4 @@
-f = lambda line, x: line[0] * x + line[1]
+def f(line, x): return line[0] * x + line[1]
 
 
 def _add_line(line, k, l, r):
@@ -11,10 +11,14 @@ def _add_line(line, k, l, r):
     if left and right:
         data[k] = line
         return
-    if not left and not right: return
-    if mid: data[k], line = line, data[k]
-    if left != mid: _add_line(line, 2 * k + 1, l, m)
-    else: _add_line(line, 2 * k + 2, m, r)
+    if not left and not right:
+        return
+    if mid:
+        data[k], line = line, data[k]
+    if left != mid:
+        _add_line(line, 2 * k + 1, l, m)
+    else:
+        _add_line(line, 2 * k + 2, m, r)
 
 
 def add_line(line, a, b):
@@ -42,7 +46,8 @@ def query(k):
     while k >= 0:
         if data[k]:
             t = f(data[k], x)
-            if t < s: s = t
+            if t < s:
+                s = t
         k = (k - 1) // 2
     return s
 

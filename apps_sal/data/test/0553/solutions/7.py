@@ -21,8 +21,10 @@ def solve(promos):
             d = dist(promos[i], promos[j])
 
             k = dist_list[d]
-            if k < min_k: min_k = k
-            if k == 0: break
+            if k < min_k:
+                min_k = k
+            if k == 0:
+                break
 
     return min_k
 

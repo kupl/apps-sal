@@ -3,7 +3,7 @@ s = input().split('*')
 rslt = 0
 for segment in s:
     less = len(segment) // 2
-    more = len(segment) - less;
+    more = len(segment) - less
     x = 0
     y = 0
     if a > b:

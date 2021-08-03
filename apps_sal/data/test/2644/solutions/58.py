@@ -11,5 +11,6 @@ for i in range(N):
         l = r
 
 if P != sorted(P) or len(ans) != N - 1:
-    print(-1); return
+    print(-1)
+    return
 print(*ans, sep="\n")

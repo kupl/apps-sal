@@ -6,7 +6,8 @@ def dist(w1, w2):
     assert len(w1) == len(w2)
     d = 0
     for i in range(len(w1)):
-        if w1[i] != w2[i]: d += 1
+        if w1[i] != w2[i]:
+            d += 1
     return max(0, (d - 1) // 2)
 
 
