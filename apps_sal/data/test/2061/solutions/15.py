@@ -1,10 +1,12 @@
 def mark(z):
-    while z: z = z[0]
+    while z:
+        z = z[0]
     return z
 
 
 def mark2(z):
-    while z and type(z) == list: z = z[0]
+    while z and type(z) == list:
+        z = z[0]
     return z
 
 
@@ -54,27 +56,37 @@ no = 1
 for i in range(1, n - 1):
     for k in range(1, m - 1):
         if data[i][k] == '.':
-            if __debug: print(i, end=" ")
-            if __debug: print(k, end=": ")
+            if __debug:
+                print(i, end=" ")
+            if __debug:
+                print(k, end=": ")
             z = mark2(work[m * i + k])
             if z:
                 isl[z].append((i, k))
-                if __debug: print(z, end=", old")
+                if __debug:
+                    print(z, end=", old")
             elif z is not ocean:
                 z.append(no)
-                if __debug: print(no, end=", new")
+                if __debug:
+                    print(no, end=", new")
                 isl[no] = [(i, k)]
                 no += 1
-            if __debug: print()
+            if __debug:
+                print()
 
-if __debug: print(isl)
+if __debug:
+    print(isl)
 isl_s = list(isl.values())
-if __debug: print(isl_s)
+if __debug:
+    print(isl_s)
 isl_s.sort(key=len)
-if __debug: print(isl_s)
+if __debug:
+    print(isl_s)
 delta = len(isl_s) - kk
-if __debug: print(len(isl_s), end=" ")
-if __debug: print(kk)
+if __debug:
+    print(len(isl_s), end=" ")
+if __debug:
+    print(kk)
 for t in range(delta):
     for i, k in isl_s[t]:
         data[i][k] = '*'

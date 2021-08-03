@@ -1,5 +1,7 @@
 from collections import*
-F = lambda: map(int, input().split())
+def F(): return map(int, input().split())
+
+
 N = int(input())
 abc = [[*F()]for _ in range(N - 1)]
 Q, K = F()

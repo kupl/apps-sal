@@ -1,6 +1,8 @@
 from sys import setrecursionlimit
-corr = lambda x, y: 0 <= x < n and 0 <= y < m and a[x][y] == '.'
-ocean = lambda x, y: x in (0, n - 1) or y in (0, m - 1)
+def corr(x, y): return 0 <= x < n and 0 <= y < m and a[x][y] == '.'
+def ocean(x, y): return x in (0, n - 1) or y in (0, m - 1)
+
+
 D = (0, 1), (0, -1), (1, 0), (-1, 0)
 setrecursionlimit(10 ** 5)
 
@@ -9,14 +11,17 @@ def dfs(x, y):
     nonlocal size, flag
     was[x][y] = clr
     size += 1
-    if ocean(x, y): flag = True
+    if ocean(x, y):
+        flag = True
     for dx, dy in D:
         nx, ny = x + dx, y + dy
         if corr(nx, ny) and not was[nx][ny]:
             dfs(nx, ny)
 
 
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n, m, k = read()
 a = [input() for i in range(n)]
 s = []

@@ -41,8 +41,8 @@ for cc in range(n):
     for i in range(len(datamap)):
         for j in range(len(datamap[i])):
             if datamap[i][j] == 'K':
-                ans.append(i);
-                ans.append(j);
+                ans.append(i)
+                ans.append(j)
 
     ans = bfs(datamap, ans[0], ans[1], ans[2], ans[3])
     #print (ans)

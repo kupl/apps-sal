@@ -21,7 +21,8 @@ def abc070_d():
     def dfs(x: int, d: int):
         dist[x] = d
         for nx, nd in adjlist[x]:
-            if dist[nx] != -1: continue
+            if dist[nx] != -1:
+                continue
             dfs(nx, d + nd)
 
     dfs(k, 0)

@@ -17,7 +17,8 @@ def bfs(k):
     while q:
         V, P, cnt = q.popleft()
         for nv, d in G[V - 1]:
-            if nv == P: continue
+            if nv == P:
+                continue
             dis[nv - 1] = cnt + d
             q.append((nv, V, cnt + d))
 

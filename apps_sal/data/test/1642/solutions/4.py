@@ -2,7 +2,7 @@ import math
 
 
 def dist(a, b, c):
-    return abs((c[1] - a[1]) * b[0] - (c[0] - a[0]) * b[1] + c[0] * a[1] - c[1] * a[0]) / math.hypot(c[0] - a[0], c[1] - a[1]);
+    return abs((c[1] - a[1]) * b[0] - (c[0] - a[0]) * b[1] + c[0] * a[1] - c[1] * a[0]) / math.hypot(c[0] - a[0], c[1] - a[1])
 
 
 N = int(input())

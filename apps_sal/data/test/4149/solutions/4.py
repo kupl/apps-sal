@@ -11,7 +11,8 @@ class DRecoverIt:
 
     def sieve(self, prime):
         for i in range(2, int(len(prime) ** .5) + 1):
-            if not prime[i]: continue
+            if not prime[i]:
+                continue
             m = 2
             while m * i < len(prime):
                 prime[m * i] = False

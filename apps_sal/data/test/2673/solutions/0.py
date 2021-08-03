@@ -60,15 +60,19 @@ def main():
 
 
 def add(a, b, c):
-    res = a + b;
-    if (res >= c): return res - c;
-    else: return res;
+    res = a + b
+    if (res >= c):
+        return res - c
+    else:
+        return res
 
 
 def mod(a, b, c):
     res = a * b
-    if (res >= c): return res % c
-    else: return res
+    if (res >= c):
+        return res % c
+    else:
+        return res
 
 
 def gcd(a, b):
@@ -95,7 +99,8 @@ def expo(a, b):
 def power(a, b, m):
     x, y = 1,
     while (b > 0):
-        if (b & 1): x = mod(x, y, m)
+        if (b & 1):
+            x = mod(x, y, m)
         y = mod(y, y, m)
         b >>= 1
     return x

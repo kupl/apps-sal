@@ -15,7 +15,8 @@ def bfs(s):
     seen[s] = 1
     todo.append(s)
     while 1:
-        if len(todo) == 0: break
+        if len(todo) == 0:
+            break
         a = todo.popleft()
         for b in G[a].keys():
             if seen[b] == 0:

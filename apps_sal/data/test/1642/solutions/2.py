@@ -8,7 +8,8 @@ for i in range(n):
 
 def cnt(m):
     l = m - 1
-    if (l < 0): l = n - 1
+    if (l < 0):
+        l = n - 1
     r = (m + 1) % n
     lol = Decimal(2)
     a = ((d[l][0] - d[m][0])**lol + (d[l][1] - d[m][1]) ** 2)**(Decimal(1 / 2))

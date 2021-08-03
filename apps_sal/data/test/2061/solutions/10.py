@@ -14,7 +14,8 @@ def bfs(m, i, j):
         ax, ay = q.pop()
         m[ax][ay] = 0
         s += 1
-        if ax == 0 or ay == 0 or ax == x - 1 or ay == y - 1: f = 0
+        if ax == 0 or ay == 0 or ax == x - 1 or ay == y - 1:
+            f = 0
         if ax < x - 1 and m[ax + 1][ay]:
             q.add((ax + 1, ay))
         if ax > 0 and m[ax - 1][ay]:

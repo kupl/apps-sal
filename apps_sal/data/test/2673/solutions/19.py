@@ -14,7 +14,8 @@ def maps(): return map(str, input().split())
 
 def print(arg, *argv, end=None):
     sys.stdout.write(str(arg))
-    for i in argv: sys.stdout.write(" " + str(i))
+    for i in argv:
+        sys.stdout.write(" " + str(i))
     sys.stdout.write(end) if end else sys.stdout.write("\n")
 #---------------------------------------------------------------#
 

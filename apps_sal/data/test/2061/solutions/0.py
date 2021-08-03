@@ -48,10 +48,14 @@ def f():
         for j in range(1, m + 1):
             if a[i][j] == '.':
                 mc = [inf]
-                if a[i - 1][j] != '.': mc.append(a[i - 1][j])
-                if a[i + 1][j] != '.': mc.append(a[i + 1][j])
-                if a[i][j + 1] != '.': mc.append(a[i][j + 1])
-                if a[i][j - 1] != '.': mc.append(a[i][j - 1])
+                if a[i - 1][j] != '.':
+                    mc.append(a[i - 1][j])
+                if a[i + 1][j] != '.':
+                    mc.append(a[i + 1][j])
+                if a[i][j + 1] != '.':
+                    mc.append(a[i][j + 1])
+                if a[i][j - 1] != '.':
+                    mc.append(a[i][j - 1])
                 mm = min(mc)
                 if mm < inf:
                     a[i][j] = mm

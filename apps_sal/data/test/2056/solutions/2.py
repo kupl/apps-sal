@@ -7,7 +7,8 @@ digits = [0 for _ in range(21)]
 for a in arr:
     b = bin(a)[2:]
     for i in range(1, len(b) + 1):
-        if b[-i] == '1': digits[i - 1] += 1
+        if b[-i] == '1':
+            digits[i - 1] += 1
 final = []
 for i in range(n):
     tmp = 0

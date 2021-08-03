@@ -2,7 +2,8 @@ n = int(input())
 
 for t in range(n):
 
-    if t: input()
+    if t:
+        input()
 
     board = [[c for c in input()] for i in range(8)]
 

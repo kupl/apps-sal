@@ -18,7 +18,8 @@ SD = [0] * N
 def DFS(v, p, d):
     SD[v] = d
     for i, co in G[v]:
-        if i == p: continue
+        if i == p:
+            continue
         DFS(i, v, d + co)
     return
 

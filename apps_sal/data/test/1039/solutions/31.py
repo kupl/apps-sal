@@ -20,7 +20,8 @@ depth = [0] * N
 
 def dfs(v):
     for u in G[v]:
-        if dist[u] > 0 or u == r: continue
+        if dist[u] > 0 or u == r:
+            continue
         dist[u] = dist[v] + length[(v, u)]
         depth[u] = depth[v] + 1
         prv[u] = v
@@ -72,9 +73,11 @@ def lca(u, v, kprv, depth):
         return u
 
     for k in range(LV - 1, -1, -1):
-        pu = kprv[k][u]; pv = kprv[k][v]
+        pu = kprv[k][u]
+        pv = kprv[k][v]
         if pu != pv:
-            u = pu; v = pv
+            u = pu
+            v = pv
 
     # assert kprv[0][u] == kprv[0][v]
     return kprv[0][u]

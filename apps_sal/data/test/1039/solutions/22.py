@@ -35,7 +35,8 @@ def solve():
     def dfs(v, f, dis):
         d[v] = dis
         for to, xd in g[v]:
-            if to == f: continue
+            if to == f:
+                continue
             dfs(to, v, dis + xd)
 
     dfs(k, -1, 0)

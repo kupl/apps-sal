@@ -28,7 +28,10 @@ for _ in range(t):
     ok = False
     for _ in range(4):
         if r > 0 and g > 0 and b > 0:
-            r -= 1; g -= 1; b -= 1; w += 1
+            r -= 1
+            g -= 1
+            b -= 1
+            w += 1
             ok = is_ok(r, g, b, w)
         if ok:
             break

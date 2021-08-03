@@ -52,7 +52,7 @@ for v in a:
         for i in range(2, limit):
             if v % i == 0:
                 need = v // i
-                m[need] += 1;
+                m[need] += 1
                 dic2[next] = need
                 arr2.append(v)
                 break

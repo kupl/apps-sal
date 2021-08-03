@@ -5,7 +5,8 @@ l = [-1] * N
 tree = [[] for i in range(N)]
 for i in range(N - 1):
     A, B, C = list(map(int, input().split()))
-    A -= 1; B -= 1
+    A -= 1
+    B -= 1
     tree[A].append((B, C))
     tree[B].append((A, C))
 Q, V = list(map(int, input().split()))
@@ -23,5 +24,6 @@ def DFS(now, past, dis):
 DFS(V - 1, -1, 0)
 for i in range(Q):
     s, e = list(map(int, input().split()))
-    s -= 1; e -= 1
+    s -= 1
+    e -= 1
     print(l[s] + l[e])

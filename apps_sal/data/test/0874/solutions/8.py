@@ -1,5 +1,6 @@
 a = int(input())
-if a % 2 == 1: print(-1)
+if a % 2 == 1:
+    print(-1)
 else:
     i = -1
     while i < a - 1:

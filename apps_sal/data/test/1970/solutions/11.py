@@ -49,4 +49,5 @@ for _c in range(t):
     else:
         print("NO")
 
-    if _c != t - 1: m = input()
+    if _c != t - 1:
+        m = input()
