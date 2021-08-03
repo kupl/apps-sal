@@ -13,12 +13,12 @@ for i in range(m):
         pos[sp1[1] - 1] = i
     else:
         m1 = max(m1, sp1[1])
-        
+
 maxs = [-1] * (m + 1)
 
 for i in range(m - 1, -1, -1):
     sp1 = mem[i]
-    
+
     if (sp1[0] == 2):
         if (i == m - 1 or sp1[1] > maxs[i + 1]):
             maxs[i] = sp1[1]
@@ -32,4 +32,3 @@ for i in range(n):
     elif pos[i] == -1:
         sp[i] = max(sp[i], maxs[0])
 print(*sp)
-

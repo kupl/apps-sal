@@ -1,12 +1,12 @@
 import sys
 import math
- 
+
 s = input()
 
 k = [[0, 0, 0]]
 v = [0] * 3
 
-for i in range(len(s)): 
+for i in range(len(s)):
     v[ord(s[i]) - ord('x')] += 1
     k.append(list(v))
 

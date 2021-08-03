@@ -7,8 +7,8 @@ for i in range(a):
         ans = 0
         if d % l != 0:
             ans += 1
-        ans += d//l
-        if d//l == 0 and d %l != 0:
+        ans += d // l
+        if d // l == 0 and d % l != 0:
             ans += 1
         ui = min(ui, ans)
     print(int(ui))

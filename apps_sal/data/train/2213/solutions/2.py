@@ -1,7 +1,7 @@
 def main():
     import sys
     input = sys.stdin.readline
-    
+
     for _ in range(int(input())):
         a, b, n = map(int, input().split())
         n %= 3
@@ -10,8 +10,9 @@ def main():
         elif n == 1:
             print(b)
         else:
-            print(a^b)
-    
+            print(a ^ b)
+
     return 0
+
 
 main()
