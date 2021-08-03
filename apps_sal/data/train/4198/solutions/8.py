@@ -1,5 +1,6 @@
 import re
 
+
 def simplify(n: int) -> str:
     def inner(n):
         for i in range(2, n):
@@ -17,6 +18,7 @@ def simplify(n: int) -> str:
         return f'{a} sqrt {b}'
     else:
         return f'sqrt {b}'
+
 
 def desimplify(s: str) -> int:
     m = re.match(r'(?P<INT>\d+)?(?: )?(?:sqrt (?P<SQRT>\d+))?', s)
