@@ -1,5 +1,6 @@
 from math import log
 
+
 def decompose(num):
     ns = []
     for i in range(2, 100):

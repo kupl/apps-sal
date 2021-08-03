@@ -1,5 +1,6 @@
 from math import log
 
+
 def decompose(num):
     res = []
     i = 2

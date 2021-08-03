@@ -1,5 +1,5 @@
 def quidditch_scoreboard(teams, actions):
-    teams = {i:0 for i in teams.split(' vs ')}
+    teams = {i: 0 for i in teams.split(' vs ')}
     for i in actions.split(', '):
         team, action = i.split(': ')
         if 'goal' in action:

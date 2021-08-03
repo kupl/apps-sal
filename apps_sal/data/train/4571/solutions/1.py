@@ -1,5 +1,6 @@
 from math import log
 
+
 def decompose(num):
     i, res = 2, []
     while i**2 <= num:
@@ -8,4 +9,3 @@ def decompose(num):
         num -= i**n
         i += 1
     return [res, num]
-

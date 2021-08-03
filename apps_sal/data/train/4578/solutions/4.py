@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def quidditch_scoreboard(teams, actions):
     ts = teams.split(' vs ')
     scores = dict.fromkeys(ts, 0)

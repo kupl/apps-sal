@@ -11,6 +11,7 @@ _TEAMS = re.compile(r'(.+) vs (.+)')
 
 _ACTION = re.compile(r'(.+): \S+ (\S+)')
 
+
 def quidditch_scoreboard(teams, actions):
     scores = {team: 0 for team in _TEAMS.match(teams).groups()}
     for action in actions.split(', '):
@@ -19,4 +20,3 @@ def quidditch_scoreboard(teams, actions):
         if event == 'Snitch':
             break
     return '{}: {}, {}: {}'.format(*chain.from_iterable(list(scores.items())))
-

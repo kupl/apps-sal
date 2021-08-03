@@ -1,5 +1,6 @@
 import re
 
+
 def quidditch_scoreboard(teams, actions):
     points = {"goal": 10, "foul": -30, "Caught": 150}
     teams = teams.split(" vs ")

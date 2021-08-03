@@ -1,5 +1,6 @@
 from math import log
 
+
 def decompose(num):
     k, ks = 2, []
     while num:

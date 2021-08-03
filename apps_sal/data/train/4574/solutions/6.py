@@ -1,9 +1,9 @@
-def build_a_wall(x=0,y=0):
+def build_a_wall(x=0, y=0):
     brick = "■"
-    if isinstance(x, int) and isinstance(y,int):
-        if x <1 or y < 1:
+    if isinstance(x, int) and isinstance(y, int):
+        if x < 1 or y < 1:
             return None
-        elif x*y>10000:
+        elif x * y > 10000:
             return "Naah, too much...here's my resignation."
         else:
             brick = "■"
@@ -17,7 +17,7 @@ def build_a_wall(x=0,y=0):
             line1 = "|".join(line1)
             line2 = "|".join(line2)
             total = []
-            odd = (x+1)%2
+            odd = (x + 1) % 2
             for i in range(odd, x + odd):
                 if i % 2 == 1:
                     total.append(line1)
@@ -27,5 +27,3 @@ def build_a_wall(x=0,y=0):
             return total
     else:
         return None
-
-

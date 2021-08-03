@@ -1,2 +1,2 @@
-def debug (s):
-    return s.replace('bugs', '####').replace('bug','').replace('####', 'bugs');
+def debug(s):
+    return s.replace('bugs', '####').replace('bug', '').replace('####', 'bugs')

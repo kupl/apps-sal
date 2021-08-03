@@ -6,4 +6,3 @@ def over_the_road(address,
     target = 1 + gap
 
     return target
-
