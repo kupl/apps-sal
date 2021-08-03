@@ -12,7 +12,7 @@ class Solution:
             base = 0
             i = 0
             q = []
-            while i < K-1:
+            while i < K - 1:
                 base += worker[i][1]
                 heappush(q, - worker[i][1])
                 i += 1
@@ -30,4 +30,3 @@ class Solution:
             return res
         else:
             return -1.0
-

@@ -1,7 +1,9 @@
 import math
 
+
 def divide_and_sum(nums, divisor):
     return sum([math.ceil(x / divisor) for x in nums])
+
 
 class Solution:
     def smallestDivisor(self, nums, threshold):
@@ -32,4 +34,3 @@ class Solution:
                 start = mid - 1
         #print('case 2')
         return end
-

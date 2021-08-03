@@ -5,12 +5,12 @@ class Solution:
             s, t = edge
             graph[s][t] = prob
             graph[t][s] = prob
-        
+
         heap = [(-1, start)]
         prob = [0] * n
         prob[start] = 1
         visited = [False] * n
-        
+
         while heap:
             curr_prob, node = heapq.heappop(heap)
             if visited[node]:
@@ -26,5 +26,5 @@ class Solution:
                 if p > prob[neighbor]:
                     prob[neighbor] = p
                     heapq.heappush(heap, (-p, neighbor))
-        
+
         return prob[end]

@@ -1,6 +1,6 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        open_ranges = sorted([(idx-span, idx+span) for idx, span in enumerate(ranges)])
+        open_ranges = sorted([(idx - span, idx + span) for idx, span in enumerate(ranges)])
         start, end, count = 0, 0, 0
         i = 0
         while i < len(ranges):
@@ -16,4 +16,3 @@ class Solution:
             if start == end:
                 return -1
             start = end
-

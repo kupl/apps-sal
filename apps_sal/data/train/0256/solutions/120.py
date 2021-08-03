@@ -6,4 +6,3 @@ class Solution:
             if sum([pile // K + (pile % K != 0) for pile in piles]) <= H:
                 return K
             K += 1
-

@@ -5,7 +5,7 @@ class Solution:
         for i in range(len(ranges)):
             idx = 0
             if i - ranges[i] > 0:
-                idx = i - ranges[i] 
+                idx = i - ranges[i]
             if idx < len(opens):
                 opens[idx].append(i)
             if i + ranges[i] < n:

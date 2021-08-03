@@ -1,5 +1,6 @@
 import heapq
 
+
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], probs: List[float], s: int, t: int) -> float:
         # first build the graph

@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
         workers = sorted([float(w) / q, q] for w, q in zip(wage, quality))
@@ -12,13 +14,11 @@ class Solution:
             qsum += q
             # print(\"sum:\", qsum)
             # print(heap)
-            if len(heap) > K: 
+            if len(heap) > K:
                 # print(\"popping from heap\")
                 qsum += heapq.heappop(heap)
                 # print(\"qsum: \", qsum)
-            if len(heap) == K: 
+            if len(heap) == K:
                 res = min(res, qsum * r)
                 # print(\"min: \", res)
         return res
-        
-

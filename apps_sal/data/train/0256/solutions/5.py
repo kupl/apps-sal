@@ -10,8 +10,8 @@ class Solution:
                 else:
                     hrs += (i // n) + 1
             return hrs <= H
-        
-        l,r = 1,sum(piles)
+
+        l, r = 1, sum(piles)
         while l < r:
             m = (l + r) // 2
             if not enough(m):

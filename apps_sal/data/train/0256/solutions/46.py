@@ -9,9 +9,9 @@ class Solution:
                 ans = mid
                 hi = mid - 1
             else:
-                lo = mid + 1  
+                lo = mid + 1
         return ans
-    
+
     def check(self, mid, piles, H):
         i = 0
         count = 0
@@ -28,16 +28,3 @@ class Solution:
         if count > H:
             return False
         return True
-                
-                
-            
-            
-            
-            
-            
-            
-            
-    
-    
-        
-

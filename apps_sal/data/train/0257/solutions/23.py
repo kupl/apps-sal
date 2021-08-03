@@ -6,7 +6,7 @@ class Solution:
         stack = deque([start])
         paths = {i: 0 for i in range(n)}
         paths[start] = 1
-        
+
         graph = defaultdict(dict)
         for (source, dstn), weight in zip(edges, succProb):
             graph[source][dstn] = weight
@@ -18,5 +18,4 @@ class Solution:
                 if paths[current] * graph[current][v] > paths[v]:
                     stack.append(v)
                     paths[v] = max(paths[current] * graph[current][v], paths[v])
-        return paths[end] 
-
+        return paths[end]

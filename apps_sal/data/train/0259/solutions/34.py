@@ -2,7 +2,7 @@ class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         nums.sort()
         n = len(nums)
-        
+
         start, end = 1, nums[-1]
         while start < end:
             mid = (start + end) // 2
@@ -33,7 +33,7 @@ class Solution:
         # else:
         #     start = 1
         #     end = i
-        # # print(start, end)   
+        # # print(start, end)
         # for i in range(end, start - 1, -1):
         #     j = n - 1
         #     s = n
@@ -44,4 +44,3 @@ class Solution:
         #     if s > threshold:
         #         return i + 1
         # return 1
-

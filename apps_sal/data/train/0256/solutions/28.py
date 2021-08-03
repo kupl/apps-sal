@@ -9,8 +9,8 @@ class Solution:
             else:
                 right = mid
         return left
-    
-    def get_total_days(self, piles: List[int], num_eat: int)-> int:
+
+    def get_total_days(self, piles: List[int], num_eat: int) -> int:
         if num_eat == 0:
             return 0
         total_days = 0

@@ -3,11 +3,10 @@ class Solution:
         left, right = 1, max(nums)
         while left < right:
             mid = left + (right - left) // 2
-            divided = sum([num//mid + int(num%mid > 0) for num in nums])
+            divided = sum([num // mid + int(num % mid > 0) for num in nums])
             # print(mid, divided, threshold)
             if divided > threshold:
                 left = mid + 1
             else:
                 right = mid
         return right
-

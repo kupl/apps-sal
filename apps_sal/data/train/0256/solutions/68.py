@@ -4,16 +4,16 @@ class Solution:
             numHours = 0
             for pile in piles:
                 numHours += ceil(pile / eatRate)
-            
+
             return numHours <= H
-        
+
         left, right = 1, max(piles)
         while left < right:
             mid = left + (right - left) // 2
-            
+
             if finishable(piles, H, mid):
                 right = mid
             else:
                 left = mid + 1
-            
+
         return left

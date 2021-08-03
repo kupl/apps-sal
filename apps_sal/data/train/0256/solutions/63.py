@@ -8,12 +8,12 @@ class Solution:
                 if hour > H:
                     return False
             return hour <= H
-            
+
         l = 1
         r = sum(piles)
-            
+
         while l < r:
-            mid = (l+r)>>1
+            mid = (l + r) >> 1
             if feasible(mid):
                 r = mid
             else:

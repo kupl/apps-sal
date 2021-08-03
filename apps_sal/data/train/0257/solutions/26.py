@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def maxProbability(self, n: int, edges, succProb, start: int, end: int) -> float:
 
@@ -17,6 +18,7 @@ class Solution:
             prob, cur = -tmp[0], tmp[1]
             res[cur] = prob
             for nxt, np in m[cur].items():
-                if res[nxt] != 0: continue
+                if res[nxt] != 0:
+                    continue
                 heapq.heappush(q, [-np * prob, nxt])
         return res[end]

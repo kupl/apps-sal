@@ -39,6 +39,7 @@ The answer is guaranteed to fit within a 32-bit integer.
 Accepted 11, 010 / 20, 603 submissions.
 '''
 
+
 class SolutionWhile:
     '''
     Runtime: 36 ms, faster than 77.40% of Python3 online submissions for Clumsy Factorial.
@@ -47,6 +48,7 @@ class SolutionWhile:
     Runtime: 40 ms, faster than 68.26% in Python3.
     Memory Usage: 12.8 MB, less than 100.00% in Python3.
     '''
+
     def clumsy(self, N: int) -> int:
         '''
         1006. Clumsy Factorial
@@ -65,10 +67,10 @@ class SolutionWhile:
                     N -= 1
         while N:
             if N > 2:
-                R -= N*(N-1)//(N-2)
+                R -= N * (N - 1) // (N - 2)
                 N -= 3
             elif N > 1:
-                R -= N*(N-1)
+                R -= N * (N - 1)
                 N -= 2
             elif N > 0:
                 R -= N
@@ -81,9 +83,11 @@ class SolutionWhile:
         return R
 
 ###############################################################################
+
+
 class Solution:
     pass
 
+
 Solution = SolutionWhile
 # Solution = SolutionMathTricks
-

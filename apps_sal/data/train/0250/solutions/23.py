@@ -1,4 +1,6 @@
 import heapq as hq
+
+
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
         if K == 1:
@@ -19,5 +21,3 @@ class Solution:
                 _sum = _sum + poped + quality[k]
                 hq.heappush(min_K_queue, -quality[k])
         return _min
-            
-

@@ -1,4 +1,6 @@
 import math
+
+
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         '''
@@ -15,18 +17,16 @@ class Solution:
                 hi = mi
         return lo
         '''
-        
-        
+
         # solution: use binary guess
-        
-        
+
         le = 1
         ri = sum(piles)
-        
+
         def checkHours(speed):
             s = 0
             for item in piles:
-                s+=math.ceil(item/speed)
+                s += math.ceil(item / speed)
             return s
             '''
             sum_hours = 0
@@ -41,21 +41,18 @@ class Solution:
                 sum_hours += hours
             return sum_hours
             '''
-                        
-        
+
         while le + 1 < ri:
-            mid = le + (ri - le)//2
+            mid = le + (ri - le) // 2
             result = checkHours(mid)
-            if result <= H : # decrease speed
+            if result <= H:  # decrease speed
                 ri = mid
-            else: # increase speed
-                le =  mid
-                
+            else:  # increase speed
+                le = mid
+
         result = checkHours(le)
- 
-        if result <= H: # changed to <= H
+
+        if result <= H:  # changed to <= H
             return le
         else:
             return ri
-
-

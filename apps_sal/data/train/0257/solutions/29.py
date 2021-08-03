@@ -3,34 +3,33 @@ class Solution:
         # undirected graph
         # weighted positive edges
         # single start
-        
+
         # shortest path <-> longest path
-        
+
         # 最短路 正边权 稀疏图 -》 stack dijkstra
 
         N = 100010
-        dist = [2 for i in range(N)] 
+        dist = [2 for i in range(N)]
         seen = set()
-        
+
         h = [-1 for i in range(N)]
         e = {}
         ne = {}
         w = {}
         idx = 0
-        
+
         # build singly linked list graph
         def add(a, b, c, idx):
             e[idx], w[idx] = b, c
-            ne[idx] = h[a] 
+            ne[idx] = h[a]
             h[a] = idx
-            
+
         for edge, prob in zip(edges, succProb):
             add(edge[0], edge[1], prob, idx)
             idx += 1
             add(edge[1], edge[0], prob, idx)
             idx += 1
-        
-        
+
         def heap_dijkstra():
             dist[start] = 1
             heap = []
@@ -41,10 +40,10 @@ class Solution:
                 vertex, distance = t[1], -t[0]
                 if vertex in seen:
                     continue
-                    
+
                 seen.add(vertex)
-                    
-                i = h[vertex] # idx
+
+                i = h[vertex]  # idx
                 while i != -1:
                     j = e[i]
                     if dist[j] == 2 or dist[j] < distance * w[i]:
@@ -53,7 +52,7 @@ class Solution:
 
                     i = ne[i]
             return dist[end]
-        
+
         '''
         graph = [[1e-6 for i in range(N)] for j in range(N)]
 
@@ -77,9 +76,7 @@ class Solution:
             return dist[end]
         
         '''
-        
 
-        
         output = heap_dijkstra()
 
         if output == 2 or output < 1e-5:

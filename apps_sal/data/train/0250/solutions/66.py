@@ -7,6 +7,8 @@ class Solution:
         for r, q in workers:
             heapq.heappush(heap, -q)
             qsum += q
-            if len(heap) > K: qsum += heapq.heappop(heap)
-            if len(heap) == K: res = min(res, qsum * r)
+            if len(heap) > K:
+                qsum += heapq.heappop(heap)
+            if len(heap) == K:
+                res = min(res, qsum * r)
         return res

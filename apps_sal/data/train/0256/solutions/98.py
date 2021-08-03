@@ -10,7 +10,7 @@ class Solution:
                 if curr > H:
                     return False
             return True
-            
+
         l, r = 1, max(piles)
         res = -1
         while l <= r:

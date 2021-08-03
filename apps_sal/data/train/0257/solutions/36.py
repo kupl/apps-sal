@@ -19,6 +19,5 @@ class Solution:
                # print(v, pp, seen)
                 if v not in seen:
                     heapq.heappush(q, (p * pp, v))
-                    #seen.add(v)
+                    # seen.add(v)
         return 0
-

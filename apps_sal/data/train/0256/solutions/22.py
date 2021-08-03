@@ -5,8 +5,7 @@ class Solution:
         while True:
             time = sum([math.ceil(x / speed) if speed else float('inf') for x in piles])
             print(f'{speed=}, {time=}, {H=}')
-            if time <= H: break
+            if time <= H:
+                break
             speed += 1
         return speed
-
-

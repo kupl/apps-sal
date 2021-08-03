@@ -3,7 +3,7 @@ class Solution:
         extra_worker_heap = list()
         for i in range(len(quality)):
             heappush(extra_worker_heap, (wage[i] / quality[i], quality[i]))
-        
+
         hired_worker_heap = list()
         hired_quality = 0
         wage_to_quality = 0

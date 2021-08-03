@@ -6,9 +6,10 @@ class Solution:
             mid = (right + left) // 2
             acc = 0
             for n in nums:
-                acc += math.ceil(n/mid)
+                acc += math.ceil(n / mid)
             # print(left, mid, right, '|', acc)
-            if acc > threshold: left = mid + 1
-            elif acc <= threshold: right = mid
+            if acc > threshold:
+                left = mid + 1
+            elif acc <= threshold:
+                right = mid
         return left
-

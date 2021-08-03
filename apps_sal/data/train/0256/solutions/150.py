@@ -8,7 +8,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
+
     def __getEatHours(self, piles, speed):
         hours = 0
         for p in piles:

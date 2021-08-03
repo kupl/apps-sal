@@ -16,7 +16,7 @@ class Solution:
 
             if idx < len(intervals) and self.aContainsB(intervals[idx], newInterval):
                 continue
-            elif idx > 0 and self.aContainsB(intervals[idx-1], newInterval):
+            elif idx > 0 and self.aContainsB(intervals[idx - 1], newInterval):
                 continue
             else:
                 change = True
@@ -26,11 +26,11 @@ class Solution:
                     if idx < len(intervals) and self.aContainsB(newInterval, intervals[idx]):
                         del intervals[idx]
                         change = True
-                    elif idx > 0 and self.aContainsB(newInterval, intervals[idx-1]):
-                        del intervals[idx-1]
+                    elif idx > 0 and self.aContainsB(newInterval, intervals[idx - 1]):
+                        del intervals[idx - 1]
                         change = True
-                    elif idx > 1 and self.overlaps(newInterval, intervals[idx-2]):
-                        del intervals[idx-1]
+                    elif idx > 1 and self.overlaps(newInterval, intervals[idx - 2]):
+                        del intervals[idx - 1]
                         change = True
                 intervals.add(newInterval)
 
@@ -55,4 +55,3 @@ class Solution:
         a_start, a_end = a
         b_start, b_end = b
         return a_end >= b_start and b_end >= a_start
-

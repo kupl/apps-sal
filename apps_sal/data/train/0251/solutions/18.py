@@ -6,8 +6,6 @@ class Solution:
         result = str(N)
         while idx > 1:
             idx -= 1
-            op_idx = (op_idx+1)%4
+            op_idx = (op_idx + 1) % 4
             result += op[op_idx] + str(idx)
         return eval(result)
-            
-

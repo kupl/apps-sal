@@ -8,7 +8,7 @@ class Solution:
                 else:
                     res += n // k + 1
             return res
-            
+
         l, r = max(sum(nums) // threshold, 1), max(1, sum(nums))
         while l < r:
             m = (l + r) // 2

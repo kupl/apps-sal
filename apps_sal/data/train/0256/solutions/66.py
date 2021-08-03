@@ -1,5 +1,6 @@
 from math import ceil
 
+
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         hi_fail = 0
@@ -24,7 +25,6 @@ class Solution:
             else:
                 low_pass = speed
 
-
             speed = (low_pass + hi_fail) // 2
 
         return low_pass
@@ -42,4 +42,3 @@ class Solution:
             return False
 
         return True
-

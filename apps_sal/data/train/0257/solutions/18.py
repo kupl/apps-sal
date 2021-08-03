@@ -11,20 +11,20 @@ from sortedcontainers import SortedList
 #             s, e = edge
 #             m[s][e] = m[e][s] = d
 
-#         seen = {start: 1}       
+#         seen = {start: 1}
 #         sorted_e = SortedList([m[start][k], k] for k in m[start])
-        
+
 #         while sorted_e:
-            
-#             if end in seen: break        
+
+#             if end in seen: break
 #             p, e = sorted_e.pop()
 #             seen[e] = p
-    
+
 #             for tmp_e, tmp_p in m[e].items():
 #                 if tmp_e in seen: continue
 #                 new_p = tmp_p * p
 #                 sorted_e.add([new_p, tmp_e])
-        
+
 #         return seen.get(end, 0)
 
 class Solution:

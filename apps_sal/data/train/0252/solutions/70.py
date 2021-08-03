@@ -12,12 +12,12 @@ class Solution:
             while i < len(items) and items[i][0] <= right:
                 farreach = max(farreach, items[i][1])
                 i += 1
-            
+
             if farreach == right:
                 return -1
             res += 1
             if farreach >= n:
                 return res
             right = farreach
-        
+
         return -1

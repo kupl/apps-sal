@@ -2,6 +2,7 @@ class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         end = 1
         start = end
+
         def findSum(div):
             return sum([math.ceil(n / div) for n in nums])
         while True:
@@ -18,5 +19,3 @@ class Solution:
             else:
                 end = mid
         return end
-                
-

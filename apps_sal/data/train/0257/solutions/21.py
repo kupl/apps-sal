@@ -6,7 +6,7 @@ class Solution:
         stack = deque([start])
         paths = {i: 0 for i in range(n)}
         paths[start] = 1
-        
+
         graph = {i: {} for i in range(n)}
         for (source, dstn), weight in zip(edges, succProb):
             graph[source][dstn] = graph[dstn][source] = weight
@@ -17,5 +17,4 @@ class Solution:
                 if paths[current] * graph[current][v] > paths[v]:
                     stack.append(v)
                     paths[v] = max(paths[current] * graph[current][v], paths[v])
-        return paths[end] 
-
+        return paths[end]

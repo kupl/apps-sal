@@ -1,5 +1,6 @@
 from math import ceil
 
+
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         left, right = 1, max(nums)
@@ -11,8 +12,6 @@ class Solution:
             else:
                 left = m + 1
         return ans
-    
-    def check(self, nums, m, threshold):
-        return sum([ceil(x/m) for x in nums]) <= threshold
-    
 
+    def check(self, nums, m, threshold):
+        return sum([ceil(x / m) for x in nums]) <= threshold

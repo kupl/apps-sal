@@ -21,5 +21,3 @@ class Solution:
             i = maxIndex
             counter += 1
         return -1
-
-

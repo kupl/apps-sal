@@ -3,7 +3,7 @@ class Solution(object):
         from fractions import Fraction
         workers = sorted((Fraction(w, q), q, w)
                          for q, w in zip(quality, wage))
-        
+
         ans = float('inf')
         pool = []
         sumq = 0
@@ -16,6 +16,5 @@ class Solution(object):
 
             if len(pool) == K:
                 ans = min(ans, ratio * sumq)
-        
-        return float(ans)
 
+        return float(ans)

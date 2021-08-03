@@ -3,13 +3,13 @@ class Solution:
         def condition(mid):
             sum_nums = 0
             for num in nums:
-                sum_nums += ceil(num/mid)
+                sum_nums += ceil(num / mid)
             return sum_nums <= threshold
-        
+
         left = 1
         right = max(nums)
         while left < right:
-            mid = (left + right)//2
+            mid = (left + right) // 2
             if condition(mid):
                 right = mid
             else:

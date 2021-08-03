@@ -18,9 +18,3 @@ class Solution:
                 if v not in dist or dist[v] > dist[u] + w:
                     heapq.heappush(q, (dist[u] + w, v))
         return 2 ** (-dist[end]) if end in dist else 0.0
-                
-                
-            
-            
-            
-

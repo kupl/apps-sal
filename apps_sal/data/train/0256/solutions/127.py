@@ -2,7 +2,7 @@ class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         def can_finish(piles, K, H):
             return sum([(p + K - 1) // K for p in piles]) <= H
-        
+
         low = 1
         high = max(piles)
         while low < high:

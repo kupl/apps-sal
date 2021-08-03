@@ -1,6 +1,6 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        r, R = 0, sorted([x-r, x+r] for x, r in enumerate(ranges)) + [[9**9]]
+        r, R = 0, sorted([x - r, x + r] for x, r in enumerate(ranges)) + [[9**9]]
         did = can = count = 0
         for x in range(n):
             while R[r][0] <= x:
@@ -14,4 +14,3 @@ class Solution:
                 if did == n:
                     break
         return count
-

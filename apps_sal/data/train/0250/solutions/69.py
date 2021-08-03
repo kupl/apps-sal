@@ -18,7 +18,7 @@ class Solution(object):
                 ans = min(ans, ratio * sumq)
 
         return float(ans)
-    
+
 #     def mincostToHireWorkers(self, quality, wage, K):
 #         from fractions import Fraction
 #         workers = sorted((Fraction(w, q), q, w)
@@ -38,4 +38,3 @@ class Solution(object):
 #                 ans = min(ans, ratio * sumq)
 
 #         return float(ans)
-

@@ -11,11 +11,10 @@ class Solution:
                 taps = 1
             else:
                 taps = dp[i - ranges[i]] + 1
-            
+
             lo = max(i - ranges[i], 0)
             hi = min(i + ranges[i], n)
             for j in range(lo, hi + 1):
                 dp[j] = min(dp[j], taps)
-        
-        return dp[-1] if dp[-1] != float('inf') else -1
 
+        return dp[-1] if dp[-1] != float('inf') else -1

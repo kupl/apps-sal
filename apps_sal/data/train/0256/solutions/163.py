@@ -3,19 +3,20 @@ class Solution:
         if H == len(piles):
             return max(piles)
         else:
-            if sum(piles)%H == 0:
-                tempMin = sum(piles)//H
+            if sum(piles) % H == 0:
+                tempMin = sum(piles) // H
             else:
-                tempMin = sum(piles)//H+1
+                tempMin = sum(piles) // H + 1
             tempMax = max(piles)
             while tempMin != tempMax:
-                tempMid = (tempMax-tempMin)//2+tempMin
-                if self.ifOk(piles,H,tempMid):
+                tempMid = (tempMax - tempMin) // 2 + tempMin
+                if self.ifOk(piles, H, tempMid):
                     tempMax = tempMid
                 else:
                     tempMin = tempMid + 1
             return tempMin
-    def ifOk(self,piles,H,K):
+
+    def ifOk(self, piles, H, K):
         hourNeed = 0
         for pile in piles:
             if pile % K == 0:
